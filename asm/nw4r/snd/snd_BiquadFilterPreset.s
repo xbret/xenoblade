@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global GetCoef__Q44nw4r3snd6detail15BiquadFilterLpfCFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
-GetCoef__Q44nw4r3snd6detail15BiquadFilterLpfCFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef:
+.fn GetCoef__Q44nw4r3snd6detail15BiquadFilterLpfCFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef, global
 /* 80413B14 003DD0D4  38 80 00 6F */	li r4, 0x6f
 /* 80413B18 003DD0D8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80413B1C 003DD0DC  3C 00 43 30 */	lis r0, 0x4330
@@ -40,10 +39,10 @@ GetCoef__Q44nw4r3snd6detail15BiquadFilterLpfCFifPQ44nw4r3snd20BiquadFilterCallba
 /* 80413B90 003DD150  B0 05 00 08 */	sth r0, 8(r5)
 /* 80413B94 003DD154  38 21 00 20 */	addi r1, r1, 0x20
 /* 80413B98 003DD158  4E 80 00 20 */	blr
+.endfn GetCoef__Q44nw4r3snd6detail15BiquadFilterLpfCFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
 
 
-.global GetCoef__Q44nw4r3snd6detail15BiquadFilterHpfCFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
-GetCoef__Q44nw4r3snd6detail15BiquadFilterHpfCFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef:
+.fn GetCoef__Q44nw4r3snd6detail15BiquadFilterHpfCFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef, global
 /* 80413B9C 003DD15C  38 80 00 60 */	li r4, 0x60
 /* 80413BA0 003DD160  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80413BA4 003DD164  3C 00 43 30 */	lis r0, 0x4330
@@ -80,10 +79,10 @@ GetCoef__Q44nw4r3snd6detail15BiquadFilterHpfCFifPQ44nw4r3snd20BiquadFilterCallba
 /* 80413C18 003DD1D8  B0 05 00 08 */	sth r0, 8(r5)
 /* 80413C1C 003DD1DC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80413C20 003DD1E0  4E 80 00 20 */	blr
+.endfn GetCoef__Q44nw4r3snd6detail15BiquadFilterHpfCFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
 
 
-.global GetCoef__Q44nw4r3snd6detail18BiquadFilterBpf512CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
-GetCoef__Q44nw4r3snd6detail18BiquadFilterBpf512CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef:
+.fn GetCoef__Q44nw4r3snd6detail18BiquadFilterBpf512CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef, global
 /* 80413C24 003DD1E4  C0 02 C3 80 */	lfs f0, float_8066C700@sda21(r2)
 /* 80413C28 003DD1E8  38 80 00 79 */	li r4, 0x79
 /* 80413C2C 003DD1EC  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -123,10 +122,10 @@ GetCoef__Q44nw4r3snd6detail18BiquadFilterBpf512CFifPQ44nw4r3snd20BiquadFilterCal
 /* 80413CAC 003DD26C  B0 05 00 08 */	sth r0, 8(r5)
 /* 80413CB0 003DD270  38 21 00 20 */	addi r1, r1, 0x20
 /* 80413CB4 003DD274  4E 80 00 20 */	blr
+.endfn GetCoef__Q44nw4r3snd6detail18BiquadFilterBpf512CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
 
 
-.global GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf1024CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
-GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf1024CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef:
+.fn GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf1024CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef, global
 /* 80413CB8 003DD278  C0 02 C3 80 */	lfs f0, float_8066C700@sda21(r2)
 /* 80413CBC 003DD27C  38 80 00 5C */	li r4, 0x5c
 /* 80413CC0 003DD280  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -166,10 +165,10 @@ GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf1024CFifPQ44nw4r3snd20BiquadFilterCa
 /* 80413D40 003DD300  B0 05 00 08 */	sth r0, 8(r5)
 /* 80413D44 003DD304  38 21 00 20 */	addi r1, r1, 0x20
 /* 80413D48 003DD308  4E 80 00 20 */	blr
+.endfn GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf1024CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
 
 
-.global GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf2048CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
-GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf2048CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef:
+.fn GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf2048CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef, global
 /* 80413D4C 003DD30C  C0 02 C3 80 */	lfs f0, float_8066C700@sda21(r2)
 /* 80413D50 003DD310  38 80 00 5C */	li r4, 0x5c
 /* 80413D54 003DD314  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -209,6 +208,7 @@ GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf2048CFifPQ44nw4r3snd20BiquadFilterCa
 /* 80413DD4 003DD394  B0 05 00 08 */	sth r0, 8(r5)
 /* 80413DD8 003DD398  38 21 00 20 */	addi r1, r1, 0x20
 /* 80413DDC 003DD39C  4E 80 00 20 */	blr 
+.endfn GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf2048CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

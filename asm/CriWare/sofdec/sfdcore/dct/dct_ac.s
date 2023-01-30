@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global DCT_AcInit
-DCT_AcInit:
+.fn DCT_AcInit, global
 /* 803B9AC8 00383088  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 803B9ACC 0038308C  7C 08 02 A6 */	mflr r0
 /* 803B9AD0 00383090  90 01 00 64 */	stw r0, 0x64(r1)
@@ -71,9 +70,9 @@ DCT_AcInit:
 /* 803B9BB4 00383174  7C 08 03 A6 */	mtlr r0
 /* 803B9BB8 00383178  38 21 00 60 */	addi r1, r1, 0x60
 /* 803B9BBC 0038317C  4E 80 00 20 */	blr 
+.endfn DCT_AcInit
 
-.global DCT_AcIdctDouble
-DCT_AcIdctDouble:
+.fn DCT_AcIdctDouble, global
 /* 803B9BC0 00383180  3C A0 80 60 */	lis r5, lbl_80607B80@ha
 /* 803B9BC4 00383184  38 A5 7B 80 */	addi r5, r5, lbl_80607B80@l
 /* 803B9BC8 00383188  48 00 00 04 */	b .L_803B9BCC
@@ -218,6 +217,7 @@ DCT_AcIdctDouble:
 /* 803B9DE0 003833A0  CB A1 02 08 */	lfd f29, 0x208(r1)
 /* 803B9DE4 003833A4  38 21 02 20 */	addi r1, r1, 0x220
 /* 803B9DE8 003833A8  4E 80 00 20 */	blr 
+.endfn DCT_AcIdctDouble
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

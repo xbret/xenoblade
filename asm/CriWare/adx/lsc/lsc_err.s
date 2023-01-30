@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global LSC_EntryErrFunc
-LSC_EntryErrFunc:
+.fn LSC_EntryErrFunc, global
 /* 803917A8 0035AD68  2C 03 00 00 */	cmpwi r3, 0
 /* 803917AC 0035AD6C  40 82 00 1C */	bne .L_803917C8
 /* 803917B0 0035AD70  38 00 00 00 */	li r0, 0
@@ -18,9 +17,9 @@ LSC_EntryErrFunc:
 /* 803917D0 0035AD90  90 66 B2 70 */	stw r3, lbl_805EB270@l(r6)
 /* 803917D4 0035AD94  90 85 B2 74 */	stw r4, lbl_805EB274@l(r5)
 /* 803917D8 0035AD98  4E 80 00 20 */	blr 
+.endfn LSC_EntryErrFunc
 
-.global LSC_CallErrFunc_
-LSC_CallErrFunc_:
+.fn LSC_CallErrFunc_, global
 /* 803917DC 0035AD9C  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 803917E0 0035ADA0  7C 08 02 A6 */	mflr r0
 /* 803917E4 0035ADA4  90 01 00 94 */	stw r0, 0x94(r1)
@@ -75,6 +74,7 @@ LSC_CallErrFunc_:
 /* 803918A0 0035AE60  7C 08 03 A6 */	mtlr r0
 /* 803918A4 0035AE64  38 21 00 90 */	addi r1, r1, 0x90
 /* 803918A8 0035AE68  4E 80 00 20 */	blr 
+.endfn LSC_CallErrFunc_
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

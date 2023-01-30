@@ -2,14 +2,13 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global SJRBF_Error
-SJRBF_Error:
+.fn SJRBF_Error, global
 /* 803942F0 0035D8B0  3C 60 80 52 */	lis r3, lbl_8051C208@ha
 /* 803942F4 0035D8B4  38 63 C2 08 */	addi r3, r3, lbl_8051C208@l
 /* 803942F8 0035D8B8  48 00 26 A0 */	b SJERR_CallErr
+.endfn SJRBF_Error
 
-.global SJRBF_Init
-SJRBF_Init:
+.fn SJRBF_Init, global
 /* 803942FC 0035D8BC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80394300 0035D8C0  7C 08 02 A6 */	mflr r0
 /* 80394304 0035D8C4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -34,9 +33,9 @@ SJRBF_Init:
 /* 8039434C 0035D90C  7C 08 03 A6 */	mtlr r0
 /* 80394350 0035D910  38 21 00 10 */	addi r1, r1, 0x10
 /* 80394354 0035D914  4E 80 00 20 */	blr 
+.endfn SJRBF_Init
 
-.global SJRBF_Finish
-SJRBF_Finish:
+.fn SJRBF_Finish, global
 /* 80394358 0035D918  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039435C 0035D91C  7C 08 02 A6 */	mflr r0
 /* 80394360 0035D920  90 01 00 14 */	stw r0, 0x14(r1)
@@ -58,9 +57,9 @@ SJRBF_Finish:
 /* 8039439C 0035D95C  7C 08 03 A6 */	mtlr r0
 /* 803943A0 0035D960  38 21 00 10 */	addi r1, r1, 0x10
 /* 803943A4 0035D964  4E 80 00 20 */	blr 
+.endfn SJRBF_Finish
 
-.global SJRBF_Create
-SJRBF_Create:
+.fn SJRBF_Create, global
 /* 803943A8 0035D968  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803943AC 0035D96C  7C 08 02 A6 */	mflr r0
 /* 803943B0 0035D970  90 01 00 24 */	stw r0, 0x24(r1)
@@ -85,9 +84,9 @@ SJRBF_Create:
 /* 803943FC 0035D9BC  7C 08 03 A6 */	mtlr r0
 /* 80394400 0035D9C0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80394404 0035D9C4  4E 80 00 20 */	blr 
+.endfn SJRBF_Create
 
-.global sjrbf_Create
-sjrbf_Create:
+.fn sjrbf_Create, global
 /* 80394408 0035D9C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039440C 0035D9CC  7C 08 02 A6 */	mflr r0
 /* 80394410 0035D9D0  3C C0 80 5F */	lis r6, sjrbf_obj@ha
@@ -169,9 +168,9 @@ sjrbf_Create:
 /* 80394530 0035DAF0  7C 08 03 A6 */	mtlr r0
 /* 80394534 0035DAF4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80394538 0035DAF8  4E 80 00 20 */	blr 
+.endfn sjrbf_Create
 
-.global SJRBF_Destroy
-SJRBF_Destroy:
+.fn SJRBF_Destroy, global
 /* 8039453C 0035DAFC  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 80394540 0035DB00  7C 08 02 A6 */	mflr r0
 /* 80394544 0035DB04  90 01 00 94 */	stw r0, 0x94(r1)
@@ -226,9 +225,9 @@ SJRBF_Destroy:
 /* 803945FC 0035DBBC  7C 08 03 A6 */	mtlr r0
 /* 80394600 0035DBC0  38 21 00 90 */	addi r1, r1, 0x90
 /* 80394604 0035DBC4  4E 80 00 20 */	blr 
+.endfn SJRBF_Destroy
 
-.global SJRBF_GetUuid
-SJRBF_GetUuid:
+.fn SJRBF_GetUuid, global
 /* 80394608 0035DBC8  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 8039460C 0035DBCC  7C 08 02 A6 */	mflr r0
 /* 80394610 0035DBD0  90 01 00 94 */	stw r0, 0x94(r1)
@@ -281,9 +280,9 @@ SJRBF_GetUuid:
 /* 803946C0 0035DC80  7C 08 03 A6 */	mtlr r0
 /* 803946C4 0035DC84  38 21 00 90 */	addi r1, r1, 0x90
 /* 803946C8 0035DC88  4E 80 00 20 */	blr 
+.endfn SJRBF_GetUuid
 
-.global SJRBF_EntryErrFunc
-SJRBF_EntryErrFunc:
+.fn SJRBF_EntryErrFunc, global
 /* 803946CC 0035DC8C  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 803946D0 0035DC90  7C 08 02 A6 */	mflr r0
 /* 803946D4 0035DC94  90 01 00 A4 */	stw r0, 0xa4(r1)
@@ -340,9 +339,9 @@ SJRBF_EntryErrFunc:
 /* 80394794 0035DD54  7C 08 03 A6 */	mtlr r0
 /* 80394798 0035DD58  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 8039479C 0035DD5C  4E 80 00 20 */	blr 
+.endfn SJRBF_EntryErrFunc
 
-.global SJRBF_Reset
-SJRBF_Reset:
+.fn SJRBF_Reset, global
 /* 803947A0 0035DD60  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803947A4 0035DD64  7C 08 02 A6 */	mflr r0
 /* 803947A8 0035DD68  90 01 00 14 */	stw r0, 0x14(r1)
@@ -357,9 +356,9 @@ SJRBF_Reset:
 /* 803947CC 0035DD8C  7C 08 03 A6 */	mtlr r0
 /* 803947D0 0035DD90  38 21 00 10 */	addi r1, r1, 0x10
 /* 803947D4 0035DD94  4E 80 00 20 */	blr 
+.endfn SJRBF_Reset
 
-.global sjrbf_Reset
-sjrbf_Reset:
+.fn sjrbf_Reset, global
 /* 803947D8 0035DD98  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 803947DC 0035DD9C  7C 08 02 A6 */	mflr r0
 /* 803947E0 0035DDA0  2C 03 00 00 */	cmpwi r3, 0
@@ -415,9 +414,9 @@ sjrbf_Reset:
 /* 8039489C 0035DE5C  7C 08 03 A6 */	mtlr r0
 /* 803948A0 0035DE60  38 21 00 90 */	addi r1, r1, 0x90
 /* 803948A4 0035DE64  4E 80 00 20 */	blr 
+.endfn sjrbf_Reset
 
-.global SJRBF_GetNumData
-SJRBF_GetNumData:
+.fn SJRBF_GetNumData, global
 /* 803948A8 0035DE68  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803948AC 0035DE6C  7C 08 02 A6 */	mflr r0
 /* 803948B0 0035DE70  90 01 00 14 */	stw r0, 0x14(r1)
@@ -438,9 +437,9 @@ SJRBF_GetNumData:
 /* 803948EC 0035DEAC  7C 08 03 A6 */	mtlr r0
 /* 803948F0 0035DEB0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803948F4 0035DEB4  4E 80 00 20 */	blr 
+.endfn SJRBF_GetNumData
 
-.global sjrbf_GetNumData
-sjrbf_GetNumData:
+.fn sjrbf_GetNumData, global
 /* 803948F8 0035DEB8  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 803948FC 0035DEBC  7C 08 02 A6 */	mflr r0
 /* 80394900 0035DEC0  2C 03 00 00 */	cmpwi r3, 0
@@ -507,9 +506,9 @@ sjrbf_GetNumData:
 /* 803949DC 0035DF9C  7C 08 03 A6 */	mtlr r0
 /* 803949E0 0035DFA0  38 21 00 90 */	addi r1, r1, 0x90
 /* 803949E4 0035DFA4  4E 80 00 20 */	blr 
+.endfn sjrbf_GetNumData
 
-.global SJRBF_GetChunk
-SJRBF_GetChunk:
+.fn SJRBF_GetChunk, global
 /* 803949E8 0035DFA8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803949EC 0035DFAC  7C 08 02 A6 */	mflr r0
 /* 803949F0 0035DFB0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -536,9 +535,9 @@ SJRBF_GetChunk:
 /* 80394A44 0035E004  7C 08 03 A6 */	mtlr r0
 /* 80394A48 0035E008  38 21 00 20 */	addi r1, r1, 0x20
 /* 80394A4C 0035E00C  4E 80 00 20 */	blr 
+.endfn SJRBF_GetChunk
 
-.global sjrbf_GetChunk
-sjrbf_GetChunk:
+.fn sjrbf_GetChunk, global
 /* 80394A50 0035E010  94 21 FF 30 */	stwu r1, -0xd0(r1)
 /* 80394A54 0035E014  7C 08 02 A6 */	mflr r0
 /* 80394A58 0035E018  2C 03 00 00 */	cmpwi r3, 0
@@ -688,9 +687,9 @@ sjrbf_GetChunk:
 /* 80394C70 0035E230  7C 08 03 A6 */	mtlr r0
 /* 80394C74 0035E234  38 21 00 D0 */	addi r1, r1, 0xd0
 /* 80394C78 0035E238  4E 80 00 20 */	blr 
+.endfn sjrbf_GetChunk
 
-.global SJRBF_PutChunk
-SJRBF_PutChunk:
+.fn SJRBF_PutChunk, global
 /* 80394C7C 0035E23C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80394C80 0035E240  7C 08 02 A6 */	mflr r0
 /* 80394C84 0035E244  90 01 00 24 */	stw r0, 0x24(r1)
@@ -713,9 +712,9 @@ SJRBF_PutChunk:
 /* 80394CC8 0035E288  7C 08 03 A6 */	mtlr r0
 /* 80394CCC 0035E28C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80394CD0 0035E290  4E 80 00 20 */	blr 
+.endfn SJRBF_PutChunk
 
-.global sjrbf_PutChunk
-sjrbf_PutChunk:
+.fn sjrbf_PutChunk, global
 /* 80394CD4 0035E294  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 80394CD8 0035E298  7C 08 02 A6 */	mflr r0
 /* 80394CDC 0035E29C  2C 03 00 00 */	cmpwi r3, 0
@@ -848,9 +847,9 @@ sjrbf_PutChunk:
 /* 80394EAC 0035E46C  7C 08 03 A6 */	mtlr r0
 /* 80394EB0 0035E470  38 21 00 90 */	addi r1, r1, 0x90
 /* 80394EB4 0035E474  4E 80 00 20 */	blr 
+.endfn sjrbf_PutChunk
 
-.global SJRBF_UngetChunk
-SJRBF_UngetChunk:
+.fn SJRBF_UngetChunk, global
 /* 80394EB8 0035E478  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80394EBC 0035E47C  7C 08 02 A6 */	mflr r0
 /* 80394EC0 0035E480  90 01 00 24 */	stw r0, 0x24(r1)
@@ -873,9 +872,9 @@ SJRBF_UngetChunk:
 /* 80394F04 0035E4C4  7C 08 03 A6 */	mtlr r0
 /* 80394F08 0035E4C8  38 21 00 20 */	addi r1, r1, 0x20
 /* 80394F0C 0035E4CC  4E 80 00 20 */	blr 
+.endfn SJRBF_UngetChunk
 
-.global sjrbf_UngetChunk
-sjrbf_UngetChunk:
+.fn sjrbf_UngetChunk, global
 /* 80394F10 0035E4D0  94 21 FF 30 */	stwu r1, -0xd0(r1)
 /* 80394F14 0035E4D4  7C 08 02 A6 */	mflr r0
 /* 80394F18 0035E4D8  2C 03 00 00 */	cmpwi r3, 0
@@ -1033,9 +1032,9 @@ sjrbf_UngetChunk:
 /* 8039514C 0035E70C  7C 08 03 A6 */	mtlr r0
 /* 80395150 0035E710  38 21 00 D0 */	addi r1, r1, 0xd0
 /* 80395154 0035E714  4E 80 00 20 */	blr 
+.endfn sjrbf_UngetChunk
 
-.global SJRBF_IsGetChunk
-SJRBF_IsGetChunk:
+.fn SJRBF_IsGetChunk, global
 /* 80395158 0035E718  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039515C 0035E71C  7C 08 02 A6 */	mflr r0
 /* 80395160 0035E720  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1064,9 +1063,9 @@ SJRBF_IsGetChunk:
 /* 803951BC 0035E77C  7C 08 03 A6 */	mtlr r0
 /* 803951C0 0035E780  38 21 00 20 */	addi r1, r1, 0x20
 /* 803951C4 0035E784  4E 80 00 20 */	blr 
+.endfn SJRBF_IsGetChunk
 
-.global sjrbf_IsGetChunk
-sjrbf_IsGetChunk:
+.fn sjrbf_IsGetChunk, global
 /* 803951C8 0035E788  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 803951CC 0035E78C  7C 08 02 A6 */	mflr r0
 /* 803951D0 0035E790  2C 03 00 00 */	cmpwi r3, 0
@@ -1169,9 +1168,9 @@ sjrbf_IsGetChunk:
 /* 80395334 0035E8F4  7C 08 03 A6 */	mtlr r0
 /* 80395338 0035E8F8  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 8039533C 0035E8FC  4E 80 00 20 */	blr 
+.endfn sjrbf_IsGetChunk
 
-.global SJRBF_GetBufPtr
-SJRBF_GetBufPtr:
+.fn SJRBF_GetBufPtr, global
 /* 80395340 0035E900  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 80395344 0035E904  7C 08 02 A6 */	mflr r0
 /* 80395348 0035E908  90 01 00 94 */	stw r0, 0x94(r1)
@@ -1224,9 +1223,9 @@ SJRBF_GetBufPtr:
 /* 803953F8 0035E9B8  7C 08 03 A6 */	mtlr r0
 /* 803953FC 0035E9BC  38 21 00 90 */	addi r1, r1, 0x90
 /* 80395400 0035E9C0  4E 80 00 20 */	blr 
+.endfn SJRBF_GetBufPtr
 
-.global SJRBF_GetBufSize
-SJRBF_GetBufSize:
+.fn SJRBF_GetBufSize, global
 /* 80395404 0035E9C4  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 80395408 0035E9C8  7C 08 02 A6 */	mflr r0
 /* 8039540C 0035E9CC  90 01 00 94 */	stw r0, 0x94(r1)
@@ -1279,9 +1278,9 @@ SJRBF_GetBufSize:
 /* 803954BC 0035EA7C  7C 08 03 A6 */	mtlr r0
 /* 803954C0 0035EA80  38 21 00 90 */	addi r1, r1, 0x90
 /* 803954C4 0035EA84  4E 80 00 20 */	blr 
+.endfn SJRBF_GetBufSize
 
-.global SJRBF_GetXtrSize
-SJRBF_GetXtrSize:
+.fn SJRBF_GetXtrSize, global
 /* 803954C8 0035EA88  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 803954CC 0035EA8C  7C 08 02 A6 */	mflr r0
 /* 803954D0 0035EA90  90 01 00 94 */	stw r0, 0x94(r1)
@@ -1334,9 +1333,9 @@ SJRBF_GetXtrSize:
 /* 80395580 0035EB40  7C 08 03 A6 */	mtlr r0
 /* 80395584 0035EB44  38 21 00 90 */	addi r1, r1, 0x90
 /* 80395588 0035EB48  4E 80 00 20 */	blr 
+.endfn SJRBF_GetXtrSize
 
-.global SJRBF_GetFlowCnt
-SJRBF_GetFlowCnt:
+.fn SJRBF_GetFlowCnt, global
 /* 8039558C 0035EB4C  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 80395590 0035EB50  7C 08 02 A6 */	mflr r0
 /* 80395594 0035EB54  90 01 00 A4 */	stw r0, 0xa4(r1)
@@ -1399,6 +1398,7 @@ SJRBF_GetFlowCnt:
 /* 8039566C 0035EC2C  7C 08 03 A6 */	mtlr r0
 /* 80395670 0035EC30  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 80395674 0035EC34  4E 80 00 20 */	blr
+.endfn SJRBF_GetFlowCnt
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

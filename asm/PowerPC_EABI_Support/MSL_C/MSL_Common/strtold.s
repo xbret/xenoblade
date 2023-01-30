@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __strtold
-__strtold:
+.fn __strtold, global
 /* 802C2A2C 0028BFEC  94 21 FF 10 */	stwu r1, -0xf0(r1)
 /* 802C2A30 0028BFF0  7C 08 02 A6 */	mflr r0
 /* 802C2A34 0028BFF4  90 01 00 F4 */	stw r0, 0xf4(r1)
@@ -1420,10 +1419,10 @@ __strtold:
 /* 802C3D44 0028D304  7C 08 03 A6 */	mtlr r0
 /* 802C3D48 0028D308  38 21 00 F0 */	addi r1, r1, 0xf0
 /* 802C3D4C 0028D30C  4E 80 00 20 */	blr 
+.endfn __strtold
 
 #might be strtod
-.global strtof
-strtof:
+.fn strtof, global
 /* 802C3D50 0028D310  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802C3D54 0028D314  7C 08 02 A6 */	mflr r0
 /* 802C3D58 0028D318  3C 80 80 2C */	lis r4, __StringRead@ha
@@ -1448,6 +1447,7 @@ strtof:
 /* 802C3DA0 0028D360  7C 08 03 A6 */	mtlr r0
 /* 802C3DA4 0028D364  38 21 00 20 */	addi r1, r1, 0x20
 /* 802C3DA8 0028D368  4E 80 00 20 */	blr 
+.endfn strtof
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 

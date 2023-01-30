@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global WaitMicroTime
-WaitMicroTime:
+.fn WaitMicroTime, global
 /* 80366A00 0032FFC0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80366A04 0032FFC4  7C 08 02 A6 */	mflr r0
 /* 80366A08 0032FFC8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -40,10 +39,10 @@ WaitMicroTime:
 /* 80366A7C 0033003C  7C 08 03 A6 */	mtlr r0
 /* 80366A80 00330040  38 21 00 20 */	addi r1, r1, 0x20
 /* 80366A84 00330044  4E 80 00 20 */	blr 
+.endfn WaitMicroTime
 
 .balign 16, 0
-.global sendSlaveAddr
-sendSlaveAddr:
+.fn sendSlaveAddr, global
 /* 80366A90 00330050  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80366A94 00330054  7C 08 02 A6 */	mflr r0
 /* 80366A98 00330058  90 01 00 34 */	stw r0, 0x34(r1)
@@ -270,10 +269,10 @@ sendSlaveAddr:
 /* 80366DCC 0033038C  7C 08 03 A6 */	mtlr r0
 /* 80366DD0 00330390  38 21 00 30 */	addi r1, r1, 0x30
 /* 80366DD4 00330394  4E 80 00 20 */	blr 
+.endfn sendSlaveAddr
 
 .balign 16, 0
-.global __VISendI2CData
-__VISendI2CData:
+.fn __VISendI2CData, global
 /* 80366DE0 003303A0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80366DE4 003303A4  7C 08 02 A6 */	mflr r0
 /* 80366DE8 003303A8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -634,6 +633,7 @@ __VISendI2CData:
 /* 80367308 003308C8  7C 08 03 A6 */	mtlr r0
 /* 8036730C 003308CC  38 21 00 30 */	addi r1, r1, 0x30
 /* 80367310 003308D0  4E 80 00 20 */	blr 
+.endfn __VISendI2CData
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 

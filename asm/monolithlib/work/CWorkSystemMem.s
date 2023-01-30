@@ -2,8 +2,9 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_804448B8
-func_804448B8:
+
+
+.fn func_804448B8, global
 /* 804448B8 0040DE78  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804448BC 0040DE7C  7C 08 02 A6 */	mflr r0
 /* 804448C0 0040DE80  38 C0 00 01 */	li r6, 1
@@ -28,9 +29,9 @@ func_804448B8:
 /* 8044490C 0040DECC  7C 08 03 A6 */	mtlr r0
 /* 80444910 0040DED0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80444914 0040DED4  4E 80 00 20 */	blr 
+.endfn func_804448B8
 
-.global func_80444918
-func_80444918:
+.fn func_80444918, global
 /* 80444918 0040DED8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044491C 0040DEDC  7C 08 02 A6 */	mflr r0
 /* 80444920 0040DEE0  2C 03 00 00 */	cmpwi r3, 0
@@ -54,19 +55,19 @@ func_80444918:
 /* 80444964 0040DF24  7C 08 03 A6 */	mtlr r0
 /* 80444968 0040DF28  38 21 00 10 */	addi r1, r1, 0x10
 /* 8044496C 0040DF2C  4E 80 00 20 */	blr 
+.endfn func_80444918
 
-.global func_80444970
-func_80444970:
+.fn func_80444970, global
 /* 80444970 0040DF30  80 6D BD 80 */	lwz r3, lbl_80667F00@sda21(r13)
 /* 80444974 0040DF34  80 63 01 C4 */	lwz r3, 0x1c4(r3)
 /* 80444978 0040DF38  4E 80 00 20 */	blr 
+.endfn func_80444970
 
-.global func_8044497C
-func_8044497C:
+.fn func_8044497C, global
 /* 8044497C 0040DF3C  4B FF 40 7C */	b func_804389F8
+.endfn func_8044497C
 
-.global func_80444980
-func_80444980:
+.fn func_80444980, global
 /* 80444980 0040DF40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80444984 0040DF44  7C 08 02 A6 */	mflr r0
 /* 80444988 0040DF48  90 01 00 14 */	stw r0, 0x14(r1)
@@ -109,9 +110,12 @@ func_80444980:
 /* 80444A0C 0040DFCC  7C 08 03 A6 */	mtlr r0
 /* 80444A10 0040DFD0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80444A14 0040DFD4  4E 80 00 20 */	blr 
+.endfn func_80444980
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
 
 .global CWorkSystemMem_typestr
 CWorkSystemMem_typestr:
@@ -119,6 +123,8 @@ CWorkSystemMem_typestr:
 	.balign 4
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
 
 .global __vt__CWorkSystemMem
 __vt__CWorkSystemMem:
@@ -175,6 +181,8 @@ CWorkSystemMem_hierarchy:
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 
+
+
 .global __RTTI__CWorkSystemMem
 __RTTI__CWorkSystemMem:
 	.4byte CWorkSystemMem_typestr
@@ -182,41 +190,60 @@ __RTTI__CWorkSystemMem:
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+
+
 .global lbl_80667F00
 lbl_80667F00:
 	.skip 0x8
 
-.section extab_, "a"  # 0x800066E0 - 0x80021020
+.section extab, "a" # 0x800066E0 - 0x80021020
 
-.global lbl_8001C870
-lbl_8001C870:
+.balign 4
+
+.obj "@etb_8001C870", local
+.hidden "@etb_8001C870"
 	.4byte 0x08080000
 	.4byte 0x00000038
 	.4byte 0x00030010
-	.4byte 0
+	.4byte 0x00000000
 	.4byte 0x8680001F
-	.4byte 0
+	.4byte 0x00000000
 	.4byte func_80437AC8
+.endobj "@etb_8001C870"
 
-.global lbl_8001C88C
-lbl_8001C88C:
+.obj "@etb_8001C88C", local
+.hidden "@etb_8001C88C"
 	.4byte 0x10080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001C88C"
 
-.global lbl_8001C894
-lbl_8001C894:
+.obj "@etb_8001C894", local
+.hidden "@etb_8001C894"
 	.4byte 0x08080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001C894"
 
+.section extabindex, "a" # 0x80021020 - 0x80039220
 
-.section extabindex_, "a"  # 0x80021020 - 0x80039220
+.balign 4
 
-.4byte func_804448B8
+.obj "@eti_80034484", local
+.hidden "@eti_80034484"
+	.4byte func_804448B8
 	.4byte 0x00000060
-	.4byte lbl_8001C870
+	.4byte "@etb_8001C870"
+.endobj "@eti_80034484"
+
+.obj "@eti_80034490", local
+.hidden "@eti_80034490"
 	.4byte func_80444918
 	.4byte 0x00000058
-	.4byte lbl_8001C88C
+	.4byte "@etb_8001C88C"
+.endobj "@eti_80034490"
+
+.obj "@eti_8003449C", local
+.hidden "@eti_8003449C"
 	.4byte func_80444980
 	.4byte 0x00000098
-	.4byte lbl_8001C894
+	.4byte "@etb_8001C894"
+.endobj "@eti_8003449C"

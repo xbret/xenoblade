@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global __SCF1
-__SCF1:
+.fn __SCF1, global
 /* 803613D0 0032A990  3C C0 73 B6 */	lis r6, 0x73B5DBFA@ha
 /* 803613D4 0032A994  38 00 00 80 */	li r0, 0x80
 /* 803613D8 0032A998  39 66 DB FA */	addi r11, r6, 0x73B5DBFA@l
@@ -109,10 +108,10 @@ __SCF1:
 .L_80361538:
 /* 80361538 0032AAF8  38 60 00 00 */	li r3, 0
 /* 8036153C 0032AAFC  4E 80 00 20 */	blr 
+.endfn __SCF1
 
 
-.global SCGetProductArea
-SCGetProductArea:
+.fn SCGetProductArea, global
 /* 80361540 0032AB00  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80361544 0032AB04  7C 08 02 A6 */	mflr r0
 /* 80361548 0032AB08  38 6D 9B 50 */	addi r3, r13, lbl_80665CD0@sda21
@@ -151,10 +150,10 @@ SCGetProductArea:
 /* 803615B8 0032AB78  7C 08 03 A6 */	mtlr r0
 /* 803615BC 0032AB7C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803615C0 0032AB80  4E 80 00 20 */	blr 
+.endfn SCGetProductArea
 
 .balign 16, 0
-.global SCGetProductSN
-SCGetProductSN:
+.fn SCGetProductSN, global
 /* 803615D0 0032AB90  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803615D4 0032AB94  7C 08 02 A6 */	mflr r0
 /* 803615D8 0032AB98  38 6D 9B 58 */	addi r3, r13, lbl_80665CD8@sda21
@@ -193,6 +192,7 @@ SCGetProductSN:
 /* 80361648 0032AC08  7C 08 03 A6 */	mtlr r0
 /* 8036164C 0032AC0C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80361650 0032AC10  4E 80 00 20 */	blr 
+.endfn SCGetProductSN
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

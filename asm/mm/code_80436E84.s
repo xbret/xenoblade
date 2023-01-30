@@ -2,8 +2,9 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global sinit_80436E84
-sinit_80436E84:
+
+
+.fn sinit_80436E84, global
 /* 80436E84 00400444  3C C0 80 66 */	lis r6, lbl_80659FE8@ha
 /* 80436E88 00400448  3C 80 80 66 */	lis r4, lbl_8065A028@ha
 /* 80436E8C 0040044C  C0 22 C6 D8 */	lfs f1, float_8066CA58@sda21(r2)
@@ -43,12 +44,17 @@ sinit_80436E84:
 /* 80436F14 004004D4  D0 23 00 38 */	stfs f1, 0x38(r3)
 /* 80436F18 004004D8  D0 03 00 3C */	stfs f0, 0x3c(r3)
 /* 80436F1C 004004DC  4E 80 00 20 */	blr
+.endfn sinit_80436E84
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.balign 4
 
 .4byte sinit_80436E84
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
 
 .global float_8066CA58
 float_8066CA58:

@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global CompleteTransfer
-CompleteTransfer:
+.fn CompleteTransfer, global
 /* 80361660 0032AC20  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80361664 0032AC24  7C 08 02 A6 */	mflr r0
 /* 80361668 0032AC28  90 01 00 24 */	stw r0, 0x24(r1)
@@ -206,9 +205,10 @@ CompleteTransfer:
 /* 80361948 0032AF08  7C 08 03 A6 */	mtlr r0
 /* 8036194C 0032AF0C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80361950 0032AF10  4E 80 00 20 */	blr
+.endfn CompleteTransfer
 
 .balign 16, 0
-SIInterruptHandler:
+.fn SIInterruptHandler, local
 /* 80361960 0032AF20  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80361964 0032AF24  7C 08 02 A6 */	mflr r0
 /* 80361968 0032AF28  90 01 00 54 */	stw r0, 0x54(r1)
@@ -479,10 +479,10 @@ SIInterruptHandler:
 /* 80361D40 0032B300  7C 08 03 A6 */	mtlr r0
 /* 80361D44 0032B304  38 21 00 50 */	addi r1, r1, 0x50
 /* 80361D48 0032B308  4E 80 00 20 */	blr 
+.endfn SIInterruptHandler
 
 .balign 16, 0
-.global SIInit
-SIInit:
+.fn SIInit, global
 /* 80361D50 0032B310  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80361D54 0032B314  7C 08 02 A6 */	mflr r0
 /* 80361D58 0032B318  90 01 00 14 */	stw r0, 0x14(r1)
@@ -533,10 +533,10 @@ SIInit:
 /* 80361E04 0032B3C4  7C 08 03 A6 */	mtlr r0
 /* 80361E08 0032B3C8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80361E0C 0032B3CC  4E 80 00 20 */	blr 
+.endfn SIInit
 
 .balign 16, 0
-.global __SITransfer
-__SITransfer:
+.fn __SITransfer, global
 /* 80361E10 0032B3D0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80361E14 0032B3D4  7C 08 02 A6 */	mflr r0
 /* 80361E18 0032B3D8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -651,27 +651,27 @@ __SITransfer:
 /* 80361FB4 0032B574  7C 08 03 A6 */	mtlr r0
 /* 80361FB8 0032B578  38 21 00 20 */	addi r1, r1, 0x20
 /* 80361FBC 0032B57C  4E 80 00 20 */	blr 
+.endfn __SITransfer
 
 .balign 16, 0
-.global SISetCommand
-SISetCommand:
+.fn SISetCommand, global
 /* 80361FC0 0032B580  1C 63 00 0C */	mulli r3, r3, 0xc
 /* 80361FC4 0032B584  3C 00 CD 00 */	lis r0, 0xcd00
 /* 80361FC8 0032B588  7C 60 1A 14 */	add r3, r0, r3
 /* 80361FCC 0032B58C  90 83 64 00 */	stw r4, 0x6400(r3)
 /* 80361FD0 0032B590  4E 80 00 20 */	blr 
+.endfn SISetCommand
 
 .balign 16, 0
-.global SITransferCommands
-SITransferCommands:
+.fn SITransferCommands, global
 /* 80361FE0 0032B5A0  3C 60 CD 00 */	lis r3, 0xCD006438@ha
 /* 80361FE4 0032B5A4  3C 00 80 00 */	lis r0, 0x8000
 /* 80361FE8 0032B5A8  90 03 64 38 */	stw r0, 0xCD006438@l(r3)
 /* 80361FEC 0032B5AC  4E 80 00 20 */	blr 
+.endfn SITransferCommands
 
 .balign 16, 0
-.global SISetXY
-SISetXY:
+.fn SISetXY, global
 /* 80361FF0 0032B5B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80361FF4 0032B5B4  7C 08 02 A6 */	mflr r0
 /* 80361FF8 0032B5B8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -695,9 +695,10 @@ SISetXY:
 /* 80362040 0032B600  7C 08 03 A6 */	mtlr r0
 /* 80362044 0032B604  38 21 00 10 */	addi r1, r1, 0x10
 /* 80362048 0032B608  4E 80 00 20 */	blr
+.endfn SISetXY
 
 .balign 16, 0
-AlarmHandler:
+.fn AlarmHandler, local
 /* 80362050 0032B610  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80362054 0032B614  7C 08 02 A6 */	mflr r0
 /* 80362058 0032B618  3C C0 80 5E */	lis r6, lbl_805DD7A0@ha
@@ -734,10 +735,10 @@ AlarmHandler:
 /* 803620D0 0032B690  7C 08 03 A6 */	mtlr r0
 /* 803620D4 0032B694  38 21 00 10 */	addi r1, r1, 0x10
 /* 803620D8 0032B698  4E 80 00 20 */	blr 
+.endfn AlarmHandler
 
 .balign 16, 0
-.global SITransfer
-SITransfer:
+.fn SITransfer, global
 /* 803620E0 0032B6A0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803620E4 0032B6A4  7C 08 02 A6 */	mflr r0
 /* 803620E8 0032B6A8  90 01 00 44 */	stw r0, 0x44(r1)
@@ -836,9 +837,10 @@ SITransfer:
 /* 80362240 0032B800  7C 08 03 A6 */	mtlr r0
 /* 80362244 0032B804  38 21 00 40 */	addi r1, r1, 0x40
 /* 80362248 0032B808  4E 80 00 20 */	blr
+.endfn SITransfer
 
 .balign 16, 0
-GetTypeCallback:
+.fn GetTypeCallback, local
 /* 80362250 0032B810  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80362254 0032B814  7C 08 02 A6 */	mflr r0
 /* 80362258 0032B818  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1024,10 +1026,10 @@ GetTypeCallback:
 /* 803624F8 0032BAB8  7C 08 03 A6 */	mtlr r0
 /* 803624FC 0032BABC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80362500 0032BAC0  4E 80 00 20 */	blr 
+.endfn GetTypeCallback
 
 .balign 16, 0
-.global SIGetType
-SIGetType:
+.fn SIGetType, global
 /* 80362510 0032BAD0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80362514 0032BAD4  7C 08 02 A6 */	mflr r0
 /* 80362518 0032BAD8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1143,6 +1145,7 @@ SIGetType:
 /* 803626B8 0032BC78  7C 08 03 A6 */	mtlr r0
 /* 803626BC 0032BC7C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803626C0 0032BC80  4E 80 00 20 */	blr 
+.endfn SIGetType
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

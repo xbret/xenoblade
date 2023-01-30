@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global AHXSBF_Synthesize
-AHXSBF_Synthesize:
+.fn AHXSBF_Synthesize, global
 /* 8038C368 00355928  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038C36C 0035592C  7C 08 02 A6 */	mflr r0
 /* 8038C370 00355930  90 01 00 24 */	stw r0, 0x24(r1)
@@ -55,6 +54,7 @@ AHXSBF_Synthesize:
 /* 8038C420 003559E0  7C 08 03 A6 */	mtlr r0
 /* 8038C424 003559E4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038C428 003559E8  4E 80 00 20 */	blr
+.endfn AHXSBF_Synthesize
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

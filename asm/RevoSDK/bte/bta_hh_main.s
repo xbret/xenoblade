@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global bta_hh_sm_execute
-bta_hh_sm_execute:
+.fn bta_hh_sm_execute, global
 /* 802E3C00 002AD1C0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802E3C04 002AD1C4  7C 08 02 A6 */	mflr r0
 /* 802E3C08 002AD1C8  90 01 00 44 */	stw r0, 0x44(r1)
@@ -252,9 +251,9 @@ bta_hh_sm_execute:
 /* 802E3F48 002AD508  7C 08 03 A6 */	mtlr r0
 /* 802E3F4C 002AD50C  38 21 00 40 */	addi r1, r1, 0x40
 /* 802E3F50 002AD510  4E 80 00 20 */	blr 
+.endfn bta_hh_sm_execute
 
-.global bta_hh_hdl_event
-bta_hh_hdl_event:
+.fn bta_hh_hdl_event, global
 /* 802E3F54 002AD514  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E3F58 002AD518  7C 08 02 A6 */	mflr r0
 /* 802E3F5C 002AD51C  38 C0 00 10 */	li r6, 0x10
@@ -351,9 +350,9 @@ bta_hh_hdl_event:
 /* 802E4094 002AD654  7C 08 03 A6 */	mtlr r0
 /* 802E4098 002AD658  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E409C 002AD65C  4E 80 00 20 */	blr 
+.endfn bta_hh_hdl_event
 
-.global bta_hh_evt_code
-bta_hh_evt_code:
+.fn bta_hh_evt_code, global
 /* 802E40A0 002AD660  38 03 E9 00 */	addi r0, r3, -5888
 /* 802E40A4 002AD664  3C 80 80 54 */	lis r4, lbl_805446C0@ha
 /* 802E40A8 002AD668  28 00 00 0F */	cmplwi r0, 0xf
@@ -416,6 +415,7 @@ switch_802E4144:
 .L_802E414C:
 /* 802E414C 002AD70C  38 64 02 84 */	addi r3, r4, 0x284
 /* 802E4150 002AD710  4E 80 00 20 */	blr 
+.endfn bta_hh_evt_code
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 .global lbl_805446C0

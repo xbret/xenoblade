@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global AXFXDelayExpGetMemSize
-AXFXDelayExpGetMemSize:
+.fn AXFXDelayExpGetMemSize, global
 /* 802D65F0 0029FBB0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D65F4 0029FBB4  C0 22 BA A0 */	lfs f1, float_8066BE20@sda21(r2)
 /* 802D65F8 0029FBB8  C0 03 00 38 */	lfs f0, 0x38(r3)
@@ -15,10 +14,10 @@ AXFXDelayExpGetMemSize:
 /* 802D660C 0029FBCC  1C 60 00 0C */	mulli r3, r0, 0xc
 /* 802D6610 0029FBD0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D6614 0029FBD4  4E 80 00 20 */	blr 
+.endfn AXFXDelayExpGetMemSize
 
 .balign 16, 0
-.global AXFXDelayExpInit
-AXFXDelayExpInit:
+.fn AXFXDelayExpInit, global
 /* 802D6620 0029FBE0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D6624 0029FBE4  7C 08 02 A6 */	mflr r0
 /* 802D6628 0029FBE8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -216,10 +215,10 @@ AXFXDelayExpInit:
 /* 802D68E4 0029FEA4  7C 08 03 A6 */	mtlr r0
 /* 802D68E8 0029FEA8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D68EC 0029FEAC  4E 80 00 20 */	blr 
+.endfn AXFXDelayExpInit
 
 .balign 16, 0
-.global AXFXDelayExpSettings
-AXFXDelayExpSettings:
+.fn AXFXDelayExpSettings, global
 /* 802D68F0 0029FEB0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D68F4 0029FEB4  7C 08 02 A6 */	mflr r0
 /* 802D68F8 0029FEB8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -326,10 +325,10 @@ AXFXDelayExpSettings:
 /* 802D6A6C 002A002C  7C 08 03 A6 */	mtlr r0
 /* 802D6A70 002A0030  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D6A74 002A0034  4E 80 00 20 */	blr 
+.endfn AXFXDelayExpSettings
 
 .balign 16, 0
-.global AXFXDelayExpSettingsUpdate
-AXFXDelayExpSettingsUpdate:
+.fn AXFXDelayExpSettingsUpdate, global
 /* 802D6A80 002A0040  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D6A84 002A0044  7C 08 02 A6 */	mflr r0
 /* 802D6A88 002A0048  90 01 00 24 */	stw r0, 0x24(r1)
@@ -401,10 +400,10 @@ AXFXDelayExpSettingsUpdate:
 /* 802D6B7C 002A013C  7C 08 03 A6 */	mtlr r0
 /* 802D6B80 002A0140  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D6B84 002A0144  4E 80 00 20 */	blr 
+.endfn AXFXDelayExpSettingsUpdate
 
 .balign 16, 0
-.global AXFXDelayExpShutdown
-AXFXDelayExpShutdown:
+.fn AXFXDelayExpShutdown, global
 /* 802D6B90 002A0150  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D6B94 002A0154  7C 08 02 A6 */	mflr r0
 /* 802D6B98 002A0158  90 01 00 14 */	stw r0, 0x14(r1)
@@ -452,10 +451,10 @@ AXFXDelayExpShutdown:
 /* 802D6C34 002A01F4  7C 08 03 A6 */	mtlr r0
 /* 802D6C38 002A01F8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D6C3C 002A01FC  4E 80 00 20 */	blr 
+.endfn AXFXDelayExpShutdown
 
 .balign 16, 0
-.global AXFXDelayExpCallback
-AXFXDelayExpCallback:
+.fn AXFXDelayExpCallback, global
 /* 802D6C40 002A0200  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802D6C44 002A0204  7C 08 02 A6 */	mflr r0
 /* 802D6C48 002A0208  90 01 00 44 */	stw r0, 0x44(r1)
@@ -623,9 +622,10 @@ AXFXDelayExpCallback:
 /* 802D6EAC 002A046C  7C 08 03 A6 */	mtlr r0
 /* 802D6EB0 002A0470  38 21 00 40 */	addi r1, r1, 0x40
 /* 802D6EB4 002A0474  4E 80 00 20 */	blr 
+.endfn AXFXDelayExpCallback
 
 .balign 16, 0
-__InitParams:
+.fn __InitParams, local
 /* 802D6EC0 002A0480  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802D6EC4 002A0484  7C 08 02 A6 */	mflr r0
 /* 802D6EC8 002A0488  90 01 00 34 */	stw r0, 0x34(r1)
@@ -766,6 +766,7 @@ __InitParams:
 /* 802D70A8 002A0668  7C 08 03 A6 */	mtlr r0
 /* 802D70AC 002A066C  38 21 00 30 */	addi r1, r1, 0x30
 /* 802D70B0 002A0670  4E 80 00 20 */	blr 
+.endfn __InitParams
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

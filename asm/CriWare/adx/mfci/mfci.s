@@ -2,16 +2,15 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global mfCiGetInterface
-mfCiGetInterface:
+.fn mfCiGetInterface, global
 /* 8039281C 0035BDDC  3C 80 80 52 */	lis r4, mfci_build@ha
 /* 80392820 0035BDE0  3C 60 80 57 */	lis r3, mfci_vtbl@ha
 /* 80392824 0035BDE4  80 04 BE 80 */	lwz r0, mfci_build@l(r4)
 /* 80392828 0035BDE8  38 63 92 70 */	addi r3, r3, mfci_vtbl@l
 /* 8039282C 0035BDEC  4E 80 00 20 */	blr 
+.endfn mfCiGetInterface
 
-.global mfci_str_to_uint_ptr
-mfci_str_to_uint_ptr:
+.fn mfci_str_to_uint_ptr, global
 /* 80392830 0035BDF0  38 E0 00 00 */	li r7, 0
 .L_80392834:
 /* 80392834 0035BDF4  88 03 00 00 */	lbz r0, 0(r3)
@@ -46,23 +45,23 @@ mfci_str_to_uint_ptr:
 /* 80392898 0035BE58  90 64 00 00 */	stw r3, 0(r4)
 /* 8039289C 0035BE5C  7C E3 3B 78 */	mr r3, r7
 /* 803928A0 0035BE60  4E 80 00 20 */	blr 
+.endfn mfci_str_to_uint_ptr
 
 #mfCiExecHndl or mfCiExecServer
-.global func_803928A4
-func_803928A4:
+.fn func_803928A4, global
 /* 803928A4 0035BE64  4E 80 00 20 */	blr 
+.endfn func_803928A4
 
-.global mfCiEntryErrFunc
-mfCiEntryErrFunc:
+.fn mfCiEntryErrFunc, global
 /* 803928A8 0035BE68  3C C0 80 5F */	lis r6, mfci_err_func@ha
 /* 803928AC 0035BE6C  3C A0 80 5F */	lis r5, mfci_err_obj@ha
 /* 803928B0 0035BE70  90 66 FA 90 */	stw r3, mfci_err_func@l(r6)
 /* 803928B4 0035BE74  90 85 FA 94 */	stw r4, mfci_err_obj@l(r5)
 /* 803928B8 0035BE78  4E 80 00 20 */	blr 
+.endfn mfCiEntryErrFunc
 
 #mfCiGetFileSize or mfci_reset_hn
-.global func_803928BC
-func_803928BC:
+.fn func_803928BC, global
 /* 803928BC 0035BE7C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803928C0 0035BE80  7C 08 02 A6 */	mflr r0
 /* 803928C4 0035BE84  90 01 00 24 */	stw r0, 0x24(r1)
@@ -118,9 +117,9 @@ func_803928BC:
 /* 80392980 0035BF40  7C 08 03 A6 */	mtlr r0
 /* 80392984 0035BF44  38 21 00 20 */	addi r1, r1, 0x20
 /* 80392988 0035BF48  4E 80 00 20 */	blr 
+.endfn func_803928BC
 
-.global mfCiOpen
-mfCiOpen:
+.fn mfCiOpen, global
 /* 8039298C 0035BF4C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80392990 0035BF50  7C 08 02 A6 */	mflr r0
 /* 80392994 0035BF54  2C 03 00 00 */	cmpwi r3, 0
@@ -263,9 +262,9 @@ mfCiOpen:
 /* 80392B84 0035C144  7C 08 03 A6 */	mtlr r0
 /* 80392B88 0035C148  38 21 00 20 */	addi r1, r1, 0x20
 /* 80392B8C 0035C14C  4E 80 00 20 */	blr 
+.endfn mfCiOpen
 
-.global mfCiClose
-mfCiClose:
+.fn mfCiClose, global
 /* 80392B90 0035C150  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80392B94 0035C154  7C 08 02 A6 */	mflr r0
 /* 80392B98 0035C158  2C 03 00 00 */	cmpwi r3, 0
@@ -308,9 +307,9 @@ mfCiClose:
 /* 80392C20 0035C1E0  7C 08 03 A6 */	mtlr r0
 /* 80392C24 0035C1E4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80392C28 0035C1E8  4E 80 00 20 */	blr 
+.endfn mfCiClose
 
-.global mfCiSeek
-mfCiSeek:
+.fn mfCiSeek, global
 /* 80392C2C 0035C1EC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80392C30 0035C1F0  7C 08 02 A6 */	mflr r0
 /* 80392C34 0035C1F4  2C 03 00 00 */	cmpwi r3, 0
@@ -378,9 +377,9 @@ mfCiSeek:
 /* 80392D10 0035C2D0  7C 08 03 A6 */	mtlr r0
 /* 80392D14 0035C2D4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80392D18 0035C2D8  4E 80 00 20 */	blr 
+.endfn mfCiSeek
 
-.global mfCiTell
-mfCiTell:
+.fn mfCiTell, global
 /* 80392D1C 0035C2DC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80392D20 0035C2E0  7C 08 02 A6 */	mflr r0
 /* 80392D24 0035C2E4  2C 03 00 00 */	cmpwi r3, 0
@@ -408,9 +407,9 @@ mfCiTell:
 /* 80392D70 0035C330  7C 08 03 A6 */	mtlr r0
 /* 80392D74 0035C334  38 21 00 10 */	addi r1, r1, 0x10
 /* 80392D78 0035C338  4E 80 00 20 */	blr 
+.endfn mfCiTell
 
-.global mfCiReqRd
-mfCiReqRd:
+.fn mfCiReqRd, global
 /* 80392D7C 0035C33C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80392D80 0035C340  7C 08 02 A6 */	mflr r0
 /* 80392D84 0035C344  2C 03 00 00 */	cmpwi r3, 0
@@ -593,9 +592,9 @@ mfCiReqRd:
 /* 80393008 0035C5C8  7C 08 03 A6 */	mtlr r0
 /* 8039300C 0035C5CC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80393010 0035C5D0  4E 80 00 20 */	blr 
+.endfn mfCiReqRd
 
-.global mfCiStopTr
-mfCiStopTr:
+.fn mfCiStopTr, global
 /* 80393014 0035C5D4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80393018 0035C5D8  7C 08 02 A6 */	mflr r0
 /* 8039301C 0035C5DC  2C 03 00 00 */	cmpwi r3, 0
@@ -627,9 +626,9 @@ mfCiStopTr:
 /* 8039307C 0035C63C  7C 08 03 A6 */	mtlr r0
 /* 80393080 0035C640  38 21 00 10 */	addi r1, r1, 0x10
 /* 80393084 0035C644  4E 80 00 20 */	blr 
+.endfn mfCiStopTr
 
-.global mfCiGetStat
-mfCiGetStat:
+.fn mfCiGetStat, global
 /* 80393088 0035C648  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039308C 0035C64C  7C 08 02 A6 */	mflr r0
 /* 80393090 0035C650  2C 03 00 00 */	cmpwi r3, 0
@@ -658,9 +657,9 @@ mfCiGetStat:
 /* 803930E0 0035C6A0  7C 08 03 A6 */	mtlr r0
 /* 803930E4 0035C6A4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803930E8 0035C6A8  4E 80 00 20 */	blr 
+.endfn mfCiGetStat
 
-.global mfCiGetSctLen
-mfCiGetSctLen:
+.fn mfCiGetSctLen, global
 /* 803930EC 0035C6AC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803930F0 0035C6B0  7C 08 02 A6 */	mflr r0
 /* 803930F4 0035C6B4  2C 03 00 00 */	cmpwi r3, 0
@@ -688,9 +687,9 @@ mfCiGetSctLen:
 /* 80393140 0035C700  7C 08 03 A6 */	mtlr r0
 /* 80393144 0035C704  38 21 00 10 */	addi r1, r1, 0x10
 /* 80393148 0035C708  4E 80 00 20 */	blr 
+.endfn mfCiGetSctLen
 
-.global mfCiSetSctLen
-mfCiSetSctLen:
+.fn mfCiSetSctLen, global
 /* 8039314C 0035C70C  2C 03 00 00 */	cmpwi r3, 0
 /* 80393150 0035C710  40 82 00 38 */	bne .L_80393188
 /* 80393154 0035C714  3C 60 80 5F */	lis r3, mfci_err_func@ha
@@ -722,9 +721,9 @@ mfCiSetSctLen:
 /* 803931B8 0035C778  90 A3 00 10 */	stw r5, 0x10(r3)
 /* 803931BC 0035C77C  90 03 00 14 */	stw r0, 0x14(r3)
 /* 803931C0 0035C780  4E 80 00 20 */	blr 
+.endfn mfCiSetSctLen
 
-.global mfCiGetNumTr
-mfCiGetNumTr:
+.fn mfCiGetNumTr, global
 /* 803931C4 0035C784  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803931C8 0035C788  7C 08 02 A6 */	mflr r0
 /* 803931CC 0035C78C  2C 03 00 00 */	cmpwi r3, 0
@@ -752,9 +751,9 @@ mfCiGetNumTr:
 /* 80393218 0035C7D8  7C 08 03 A6 */	mtlr r0
 /* 8039321C 0035C7DC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80393220 0035C7E0  4E 80 00 20 */	blr 
+.endfn mfCiGetNumTr
 
-.global mfCiOptFn1
-mfCiOptFn1:
+.fn mfCiOptFn1, global
 /* 80393224 0035C7E4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80393228 0035C7E8  7C 08 02 A6 */	mflr r0
 /* 8039322C 0035C7EC  2C 83 00 00 */	cmpwi cr1, r3, 0
@@ -939,6 +938,7 @@ mfCiOptFn1:
 /* 80393490 0035CA50  7C 08 03 A6 */	mtlr r0
 /* 80393494 0035CA54  38 21 00 20 */	addi r1, r1, 0x20
 /* 80393498 0035CA58  4E 80 00 20 */	blr
+.endfn mfCiOptFn1
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

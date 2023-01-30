@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __ct__Q34nw4r2ut10PackedFontFv
-__ct__Q34nw4r2ut10PackedFontFv:
+.fn __ct__Q34nw4r2ut10PackedFontFv, global
 /* 8042DAE0 003F70A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8042DAE4 003F70A4  7C 08 02 A6 */	mflr r0
 /* 8042DAE8 003F70A8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -26,9 +25,9 @@ __ct__Q34nw4r2ut10PackedFontFv:
 /* 8042DB2C 003F70EC  7C 08 03 A6 */	mtlr r0
 /* 8042DB30 003F70F0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042DB34 003F70F4  4E 80 00 20 */	blr 
+.endfn __ct__Q34nw4r2ut10PackedFontFv
 
-.global __dt__Q34nw4r2ut10PackedFontFv
-__dt__Q34nw4r2ut10PackedFontFv:
+.fn __dt__Q34nw4r2ut10PackedFontFv, global
 /* 8042DB38 003F70F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8042DB3C 003F70FC  7C 08 02 A6 */	mflr r0
 /* 8042DB40 003F7100  2C 03 00 00 */	cmpwi r3, 0
@@ -52,9 +51,9 @@ __dt__Q34nw4r2ut10PackedFontFv:
 /* 8042DB84 003F7144  7C 08 03 A6 */	mtlr r0
 /* 8042DB88 003F7148  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042DB8C 003F714C  4E 80 00 20 */	blr 
+.endfn __dt__Q34nw4r2ut10PackedFontFv
 
-.global GetRequireBufferSize__Q34nw4r2ut10PackedFontFPCvPCcf
-GetRequireBufferSize__Q34nw4r2ut10PackedFontFPCvPCcf:
+.fn GetRequireBufferSize__Q34nw4r2ut10PackedFontFPCvPCcf, global
 /* 8042DB90 003F7150  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8042DB94 003F7154  7C 08 02 A6 */	mflr r0
 /* 8042DB98 003F7158  90 01 00 74 */	stw r0, 0x74(r1)
@@ -189,9 +188,9 @@ GetRequireBufferSize__Q34nw4r2ut10PackedFontFPCvPCcf:
 /* 8042DD8C 003F734C  7C 08 03 A6 */	mtlr r0
 /* 8042DD90 003F7350  38 21 00 70 */	addi r1, r1, 0x70
 /* 8042DD94 003F7354  4E 80 00 20 */	blr 
+.endfn GetRequireBufferSize__Q34nw4r2ut10PackedFontFPCvPCcf
 
-.global StreamingConstruct__Q34nw4r2ut10PackedFontFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPCvUl
-StreamingConstruct__Q34nw4r2ut10PackedFontFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPCvUl:
+.fn StreamingConstruct__Q34nw4r2ut10PackedFontFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPCvUl, global
 /* 8042DD98 003F7358  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8042DD9C 003F735C  7C 08 02 A6 */	mflr r0
 /* 8042DDA0 003F7360  90 01 00 24 */	stw r0, 0x24(r1)
@@ -388,9 +387,9 @@ switch_8042DF38:
 /* 8042E040 003F7600  7C 08 03 A6 */	mtlr r0
 /* 8042E044 003F7604  38 21 00 20 */	addi r1, r1, 0x20
 /* 8042E048 003F7608  4E 80 00 20 */	blr 
+.endfn StreamingConstruct__Q34nw4r2ut10PackedFontFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPCvUl
 
-.global Construct__Q34nw4r2ut10PackedFontFPvUlPCvPCc
-Construct__Q34nw4r2ut10PackedFontFPvUlPCvPCc:
+.fn Construct__Q34nw4r2ut10PackedFontFPvUlPCvPCc, global
 /* 8042E04C 003F760C  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 8042E050 003F7610  7C 08 02 A6 */	mflr r0
 /* 8042E054 003F7614  90 01 00 94 */	stw r0, 0x94(r1)
@@ -442,9 +441,9 @@ Construct__Q34nw4r2ut10PackedFontFPvUlPCvPCc:
 /* 8042E10C 003F76CC  7C 08 03 A6 */	mtlr r0
 /* 8042E110 003F76D0  38 21 00 90 */	addi r1, r1, 0x90
 /* 8042E114 003F76D4  4E 80 00 20 */	blr 
+.endfn Construct__Q34nw4r2ut10PackedFontFPvUlPCvPCc
 
-.global Destroy__Q34nw4r2ut10PackedFontFv
-Destroy__Q34nw4r2ut10PackedFontFv:
+.fn Destroy__Q34nw4r2ut10PackedFontFv, global
 /* 8042E118 003F76D8  38 00 00 00 */	li r0, 0
 /* 8042E11C 003F76DC  B0 03 00 2A */	sth r0, 0x2a(r3)
 /* 8042E120 003F76E0  90 03 00 2C */	stw r0, 0x2c(r3)
@@ -452,9 +451,9 @@ Destroy__Q34nw4r2ut10PackedFontFv:
 /* 8042E128 003F76E8  90 03 00 34 */	stw r0, 0x34(r3)
 /* 8042E12C 003F76EC  90 03 00 38 */	stw r0, 0x38(r3)
 /* 8042E130 003F76F0  4B FF ED 10 */	b RemoveResourceBuffer__Q44nw4r2ut6detail15ArchiveFontBaseFv
+.endfn Destroy__Q34nw4r2ut10PackedFontFv
 
-.global GetGlyph__Q34nw4r2ut10PackedFontCFPQ34nw4r2ut5GlyphUs
-GetGlyph__Q34nw4r2ut10PackedFontCFPQ34nw4r2ut5GlyphUs:
+.fn GetGlyph__Q34nw4r2ut10PackedFontCFPQ34nw4r2ut5GlyphUs, global
 /* 8042E134 003F76F4  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8042E138 003F76F8  7C 08 02 A6 */	mflr r0
 /* 8042E13C 003F76FC  90 01 00 34 */	stw r0, 0x34(r1)
@@ -569,9 +568,9 @@ GetGlyph__Q34nw4r2ut10PackedFontCFPQ34nw4r2ut5GlyphUs:
 /* 8042E2E0 003F78A0  7C 08 03 A6 */	mtlr r0
 /* 8042E2E4 003F78A4  38 21 00 30 */	addi r1, r1, 0x30
 /* 8042E2E8 003F78A8  4E 80 00 20 */	blr 
+.endfn GetGlyph__Q34nw4r2ut10PackedFontCFPQ34nw4r2ut5GlyphUs
 
-.global CalcCopySize__Q34nw4r2ut10PackedFontFRCQ54nw4r2ut6detail15ArchiveFontBase18FontGlyphGroupsAcsPCcPi
-CalcCopySize__Q34nw4r2ut10PackedFontFRCQ54nw4r2ut6detail15ArchiveFontBase18FontGlyphGroupsAcsPCcPi:
+.fn CalcCopySize__Q34nw4r2ut10PackedFontFRCQ54nw4r2ut6detail15ArchiveFontBase18FontGlyphGroupsAcsPCcPi, global
 /* 8042E2EC 003F78AC  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8042E2F0 003F78B0  7C 08 02 A6 */	mflr r0
 /* 8042E2F4 003F78B4  90 01 00 44 */	stw r0, 0x44(r1)
@@ -888,9 +887,9 @@ CalcCopySize__Q34nw4r2ut10PackedFontFRCQ54nw4r2ut6detail15ArchiveFontBase18FontG
 /* 8042E744 003F7D04  7C 08 03 A6 */	mtlr r0
 /* 8042E748 003F7D08  38 21 00 40 */	addi r1, r1, 0x40
 /* 8042E74C 003F7D0C  4E 80 00 20 */	blr 
+.endfn CalcCopySize__Q34nw4r2ut10PackedFontFRCQ54nw4r2ut6detail15ArchiveFontBase18FontGlyphGroupsAcsPCcPi
 
-.global AssignMemory__Q34nw4r2ut10PackedFontFPUcUlUlUlUl
-AssignMemory__Q34nw4r2ut10PackedFontFPUcUlUlUlUl:
+.fn AssignMemory__Q34nw4r2ut10PackedFontFPUcUlUlUlUl, global
 /* 8042E750 003F7D10  54 C6 08 3C */	slwi r6, r6, 1
 /* 8042E754 003F7D14  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8042E758 003F7D18  38 06 00 01 */	addi r0, r6, 1
@@ -979,9 +978,9 @@ AssignMemory__Q34nw4r2ut10PackedFontFPUcUlUlUlUl:
 /* 8042E890 003F7E50  83 A1 00 14 */	lwz r29, 0x14(r1)
 /* 8042E894 003F7E54  38 21 00 20 */	addi r1, r1, 0x20
 /* 8042E898 003F7E58  4E 80 00 20 */	blr 
+.endfn AssignMemory__Q34nw4r2ut10PackedFontFPUcUlUlUlUl
 
-.global MakeGlyph__Q34nw4r2ut10PackedFontCFPQ34nw4r2ut5GlyphUsi
-MakeGlyph__Q34nw4r2ut10PackedFontCFPQ34nw4r2ut5GlyphUsi:
+.fn MakeGlyph__Q34nw4r2ut10PackedFontCFPQ34nw4r2ut5GlyphUsi, global
 /* 8042E89C 003F7E5C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8042E8A0 003F7E60  7C 08 02 A6 */	mflr r0
 /* 8042E8A4 003F7E64  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1040,9 +1039,9 @@ MakeGlyph__Q34nw4r2ut10PackedFontCFPQ34nw4r2ut5GlyphUsi:
 /* 8042E978 003F7F38  7C 08 03 A6 */	mtlr r0
 /* 8042E97C 003F7F3C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8042E980 003F7F40  4E 80 00 20 */	blr 
+.endfn MakeGlyph__Q34nw4r2ut10PackedFontCFPQ34nw4r2ut5GlyphUsi
 
-.global ConstructOpAnalyzeGLGRPacked__Q34nw4r2ut10PackedFontFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
-ConstructOpAnalyzeGLGRPacked__Q34nw4r2ut10PackedFontFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader:
+.fn ConstructOpAnalyzeGLGRPacked__Q34nw4r2ut10PackedFontFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader, global
 /* 8042E984 003F7F44  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8042E988 003F7F48  7C 08 02 A6 */	mflr r0
 /* 8042E98C 003F7F4C  90 01 00 74 */	stw r0, 0x74(r1)
@@ -1346,9 +1345,9 @@ ConstructOpAnalyzeGLGRPacked__Q34nw4r2ut10PackedFontFPQ54nw4r2ut6detail15Archive
 /* 8042EDD8 003F8398  7C 08 03 A6 */	mtlr r0
 /* 8042EDDC 003F839C  38 21 00 70 */	addi r1, r1, 0x70
 /* 8042EDE0 003F83A0  4E 80 00 20 */	blr 
+.endfn ConstructOpAnalyzeGLGRPacked__Q34nw4r2ut10PackedFontFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
 
-.global ConstructOpPrepairCopyPackedSheet__Q34nw4r2ut10PackedFontFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
-ConstructOpPrepairCopyPackedSheet__Q34nw4r2ut10PackedFontFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader:
+.fn ConstructOpPrepairCopyPackedSheet__Q34nw4r2ut10PackedFontFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader, global
 /* 8042EDE4 003F83A4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8042EDE8 003F83A8  7C 08 02 A6 */	mflr r0
 /* 8042EDEC 003F83AC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1418,6 +1417,7 @@ ConstructOpPrepairCopyPackedSheet__Q34nw4r2ut10PackedFontFPQ54nw4r2ut6detail15Ar
 /* 8042EED4 003F8494  7C 08 03 A6 */	mtlr r0
 /* 8042EED8 003F8498  38 21 00 20 */	addi r1, r1, 0x20
 /* 8042EEDC 003F849C  4E 80 00 20 */	blr 
+.endfn ConstructOpPrepairCopyPackedSheet__Q34nw4r2ut10PackedFontFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

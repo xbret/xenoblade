@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global AU_GetInfo
-AU_GetInfo:
+.fn AU_GetInfo, global
 /* 80397F70 00361530  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80397F74 00361534  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80397F78 00361538  93 C1 00 08 */	stw r30, 8(r1)
@@ -153,9 +152,9 @@ AU_GetInfo:
 /* 80398184 00361744  83 C1 00 08 */	lwz r30, 8(r1)
 /* 80398188 00361748  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039818C 0036174C  4E 80 00 20 */	blr 
+.endfn AU_GetInfo
 
-.global ADXB_CheckAu
-ADXB_CheckAu:
+.fn ADXB_CheckAu, global
 /* 80398190 00361750  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80398194 00361754  7C 08 02 A6 */	mflr r0
 /* 80398198 00361758  38 A0 00 04 */	li r5, 4
@@ -187,9 +186,9 @@ ADXB_CheckAu:
 /* 803981F4 003617B4  7C 08 03 A6 */	mtlr r0
 /* 803981F8 003617B8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803981FC 003617BC  4E 80 00 20 */	blr 
+.endfn ADXB_CheckAu
 
-.global ADX_DecodeInfoAu
-ADX_DecodeInfoAu:
+.fn ADX_DecodeInfoAu, global
 /* 80398200 003617C0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80398204 003617C4  7C 08 02 A6 */	mflr r0
 /* 80398208 003617C8  2C 04 00 08 */	cmpwi r4, 8
@@ -260,9 +259,9 @@ ADX_DecodeInfoAu:
 /* 803982FC 003618BC  7C 08 03 A6 */	mtlr r0
 /* 80398300 003618C0  38 21 00 40 */	addi r1, r1, 0x40
 /* 80398304 003618C4  4E 80 00 20 */	blr 
+.endfn ADX_DecodeInfoAu
 
-.global ADXB_DecodeHeaderAu
-ADXB_DecodeHeaderAu:
+.fn ADXB_DecodeHeaderAu, global
 /* 80398308 003618C8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8039830C 003618CC  7C 08 02 A6 */	mflr r0
 /* 80398310 003618D0  90 01 00 34 */	stw r0, 0x34(r1)
@@ -326,9 +325,9 @@ ADXB_DecodeHeaderAu:
 /* 803983F0 003619B0  7C 08 03 A6 */	mtlr r0
 /* 803983F4 003619B4  38 21 00 30 */	addi r1, r1, 0x30
 /* 803983F8 003619B8  4E 80 00 20 */	blr
+.endfn ADXB_DecodeHeaderAu
 
-.global ADXB_ExecOneAu16
-ADXB_ExecOneAu16:
+.fn ADXB_ExecOneAu16, global
 /* 803983FC 003619BC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80398400 003619C0  7C 08 02 A6 */	mflr r0
 /* 80398404 003619C4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -597,9 +596,9 @@ ADXB_ExecOneAu16:
 /* 803987E8 00361DA8  7C 08 03 A6 */	mtlr r0
 /* 803987EC 00361DAC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803987F0 00361DB0  4E 80 00 20 */	blr
+.endfn ADXB_ExecOneAu16
 
-.global ADXB_ExecOneAu8
-ADXB_ExecOneAu8:
+.fn ADXB_ExecOneAu8, global
 /* 803987F4 00361DB4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803987F8 00361DB8  7C 08 02 A6 */	mflr r0
 /* 803987FC 00361DBC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -838,9 +837,9 @@ ADXB_ExecOneAu8:
 /* 80398B68 00362128  7C 08 03 A6 */	mtlr r0
 /* 80398B6C 0036212C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80398B70 00362130  4E 80 00 20 */	blr
+.endfn ADXB_ExecOneAu8
 
-.global ADXB_ExecOneAuUlaw
-ADXB_ExecOneAuUlaw:
+.fn ADXB_ExecOneAuUlaw, global
 /* 80398B74 00362134  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80398B78 00362138  7C 08 02 A6 */	mflr r0
 /* 80398B7C 0036213C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1114,9 +1113,9 @@ ADXB_ExecOneAuUlaw:
 /* 80398F74 00362534  7C 08 03 A6 */	mtlr r0
 /* 80398F78 00362538  38 21 00 10 */	addi r1, r1, 0x10
 /* 80398F7C 0036253C  4E 80 00 20 */	blr 
+.endfn ADXB_ExecOneAuUlaw
 
-.global ADXB_ExecOneAu
-ADXB_ExecOneAu:
+.fn ADXB_ExecOneAu, global
 /* 80398F80 00362540  A8 03 00 9C */	lha r0, 0x9c(r3)
 /* 80398F84 00362544  2C 00 00 02 */	cmpwi r0, 2
 /* 80398F88 00362548  40 82 00 08 */	bne .L_80398F90
@@ -1127,6 +1126,7 @@ ADXB_ExecOneAu:
 /* 80398F98 00362558  4B FF F8 5C */	b ADXB_ExecOneAu8
 .L_80398F9C:
 /* 80398F9C 0036255C  4B FF F4 60 */	b ADXB_ExecOneAu16
+.endfn ADXB_ExecOneAu
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

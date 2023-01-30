@@ -2,20 +2,19 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global AHXDCD_SetupFtbl
-AHXDCD_SetupFtbl:
+.fn AHXDCD_SetupFtbl, global
 /* 8038C42C 003559EC  3C 80 80 5F */	lis r4, lbl_805E9AF8@ha
 /* 8038C430 003559F0  90 64 9A F8 */	stw r3, lbl_805E9AF8@l(r4)
 /* 8038C434 003559F4  4E 80 00 20 */	blr
+.endfn AHXDCD_SetupFtbl
 
-.global AHXDCD_SetupWtbl
-AHXDCD_SetupWtbl:
+.fn AHXDCD_SetupWtbl, global
 /* 8038C438 003559F8  3C 80 80 5F */	lis r4, lbl_805E9AFC@ha
 /* 8038C43C 003559FC  90 64 9A FC */	stw r3, lbl_805E9AFC@l(r4)
 /* 8038C440 00355A00  4E 80 00 20 */	blr 
+.endfn AHXDCD_SetupWtbl
 
-.global AHXSBF_Init
-AHXSBF_Init:
+.fn AHXSBF_Init, global
 /* 8038C444 00355A04  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8038C448 00355A08  7C 08 02 A6 */	mflr r0
 /* 8038C44C 00355A0C  3C 60 80 5F */	lis r3, lbl_805E9AF0@ha
@@ -33,9 +32,9 @@ AHXSBF_Init:
 /* 8038C478 00355A38  7C 08 03 A6 */	mtlr r0
 /* 8038C47C 00355A3C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038C480 00355A40  4E 80 00 20 */	blr 
+.endfn AHXSBF_Init
 
-.global ahxsbf_init_filter
-ahxsbf_init_filter:
+.fn ahxsbf_init_filter, global
 /* 8038C484 00355A44  3C 60 80 5F */	lis r3, lbl_805E9AE8@ha
 /* 8038C488 00355A48  38 63 9A E8 */	addi r3, r3, lbl_805E9AE8@l
 /* 8038C48C 00355A4C  80 03 00 0C */	lwz r0, 0xc(r3)
@@ -189,17 +188,17 @@ ahxsbf_init_filter:
 /* 8038C6D0 00355C90  7C 85 41 AE */	stbx r4, r5, r8
 /* 8038C6D4 00355C94  90 03 00 0C */	stw r0, 0xc(r3)
 /* 8038C6D8 00355C98  4E 80 00 20 */	blr
+.endfn ahxsbf_init_filter
 
-.global AHXSBF_Finish
-AHXSBF_Finish:
+.fn AHXSBF_Finish, global
 /* 8038C6DC 00355C9C  3C 80 80 5F */	lis r4, lbl_805E9AF0@ha
 /* 8038C6E0 00355CA0  80 64 9A F0 */	lwz r3, lbl_805E9AF0@l(r4)
 /* 8038C6E4 00355CA4  38 03 FF FF */	addi r0, r3, -1
 /* 8038C6E8 00355CA8  90 04 9A F0 */	stw r0, lbl_805E9AF0@l(r4)
 /* 8038C6EC 00355CAC  4E 80 00 20 */	blr 
+.endfn AHXSBF_Finish
 
-.global AHXSBF_Create
-AHXSBF_Create:
+.fn AHXSBF_Create, global
 /* 8038C6F0 00355CB0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8038C6F4 00355CB4  7C 08 02 A6 */	mflr r0
 /* 8038C6F8 00355CB8  7C 85 23 78 */	mr r5, r4
@@ -225,12 +224,13 @@ AHXSBF_Create:
 /* 8038C748 00355D08  7C 08 03 A6 */	mtlr r0
 /* 8038C74C 00355D0C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038C750 00355D10  4E 80 00 20 */	blr 
+.endfn AHXSBF_Create
 
-.global AHXSBF_Destroy
-AHXSBF_Destroy:
+.fn AHXSBF_Destroy, global
 /* 8038C754 00355D14  38 80 00 00 */	li r4, 0
 /* 8038C758 00355D18  38 A0 10 14 */	li r5, 0x1014
 /* 8038C75C 00355D1C  4B C7 7B F4 */	b memset
+.endfn AHXSBF_Destroy
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

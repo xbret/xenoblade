@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global MPV_GetPicAtr
-MPV_GetPicAtr:
+.fn MPV_GetPicAtr, global
 /* 803A6504 0036FAC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A6508 0036FAC8  7C 08 02 A6 */	mflr r0
 /* 803A650C 0036FACC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -38,9 +37,9 @@ MPV_GetPicAtr:
 /* 803A6574 0036FB34  7C 08 03 A6 */	mtlr r0
 /* 803A6578 0036FB38  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A657C 0036FB3C  4E 80 00 20 */	blr 
+.endfn MPV_GetPicAtr
 
-.global MPV_GetBitRate
-MPV_GetBitRate:
+.fn MPV_GetBitRate, global
 /* 803A6580 0036FB40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A6584 0036FB44  7C 08 02 A6 */	mflr r0
 /* 803A6588 0036FB48  90 01 00 14 */	stw r0, 0x14(r1)
@@ -67,9 +66,9 @@ MPV_GetBitRate:
 /* 803A65D4 0036FB94  7C 08 03 A6 */	mtlr r0
 /* 803A65D8 0036FB98  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A65DC 0036FB9C  4E 80 00 20 */	blr 
+.endfn MPV_GetBitRate
 
-.global MPV_GetVbvBufSiz
-MPV_GetVbvBufSiz:
+.fn MPV_GetVbvBufSiz, global
 /* 803A65E0 0036FBA0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A65E4 0036FBA4  7C 08 02 A6 */	mflr r0
 /* 803A65E8 0036FBA8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -124,6 +123,7 @@ MPV_GetVbvBufSiz:
 /* 803A669C 0036FC5C  7C 08 03 A6 */	mtlr r0
 /* 803A66A0 0036FC60  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A66A4 0036FC64  4E 80 00 20 */	blr 
+.endfn MPV_GetVbvBufSiz
 
 .global MPV_GetLinkFlg
 MPV_GetLinkFlg:

@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global GetInstance__Q44nw4r3snd6detail20RemoteSpeakerManagerFv
-GetInstance__Q44nw4r3snd6detail20RemoteSpeakerManagerFv:
+.fn GetInstance__Q44nw4r3snd6detail20RemoteSpeakerManagerFv, global
 /* 80419354 003E2914  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80419358 003E2918  7C 08 02 A6 */	mflr r0
 /* 8041935C 003E291C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -44,16 +43,16 @@ GetInstance__Q44nw4r3snd6detail20RemoteSpeakerManagerFv:
 /* 804193E0 003E29A0  7C 08 03 A6 */	mtlr r0
 /* 804193E4 003E29A4  38 21 00 20 */	addi r1, r1, 0x20
 /* 804193E8 003E29A8  4E 80 00 20 */	blr 
+.endfn GetInstance__Q44nw4r3snd6detail20RemoteSpeakerManagerFv
 
-.global GetRemoteSpeaker__Q44nw4r3snd6detail20RemoteSpeakerManagerFi
-GetRemoteSpeaker__Q44nw4r3snd6detail20RemoteSpeakerManagerFi:
+.fn GetRemoteSpeaker__Q44nw4r3snd6detail20RemoteSpeakerManagerFi, global
 /* 804193EC 003E29AC  1C 04 00 A8 */	mulli r0, r4, 0xa8
 /* 804193F0 003E29B0  7C 63 02 14 */	add r3, r3, r0
 /* 804193F4 003E29B4  38 63 00 38 */	addi r3, r3, 0x38
 /* 804193F8 003E29B8  4E 80 00 20 */	blr 
+.endfn GetRemoteSpeaker__Q44nw4r3snd6detail20RemoteSpeakerManagerFi
 
-.global Setup__Q44nw4r3snd6detail20RemoteSpeakerManagerFv
-Setup__Q44nw4r3snd6detail20RemoteSpeakerManagerFv:
+.fn Setup__Q44nw4r3snd6detail20RemoteSpeakerManagerFv, global
 /* 804193FC 003E29BC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80419400 003E29C0  7C 08 02 A6 */	mflr r0
 /* 80419404 003E29C4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -94,9 +93,9 @@ Setup__Q44nw4r3snd6detail20RemoteSpeakerManagerFv:
 /* 8041948C 003E2A4C  7C 08 03 A6 */	mtlr r0
 /* 80419490 003E2A50  38 21 00 10 */	addi r1, r1, 0x10
 /* 80419494 003E2A54  4E 80 00 20 */	blr 
+.endfn Setup__Q44nw4r3snd6detail20RemoteSpeakerManagerFv
 
-.global Shutdown__Q44nw4r3snd6detail20RemoteSpeakerManagerFv
-Shutdown__Q44nw4r3snd6detail20RemoteSpeakerManagerFv:
+.fn Shutdown__Q44nw4r3snd6detail20RemoteSpeakerManagerFv, global
 /* 80419498 003E2A58  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041949C 003E2A5C  7C 08 02 A6 */	mflr r0
 /* 804194A0 003E2A60  90 01 00 14 */	stw r0, 0x14(r1)
@@ -115,9 +114,9 @@ Shutdown__Q44nw4r3snd6detail20RemoteSpeakerManagerFv:
 /* 804194D0 003E2A90  7C 08 03 A6 */	mtlr r0
 /* 804194D4 003E2A94  38 21 00 10 */	addi r1, r1, 0x10
 /* 804194D8 003E2A98  4E 80 00 20 */	blr
+.endfn Shutdown__Q44nw4r3snd6detail20RemoteSpeakerManagerFv
 
-.global RemoteSpeakerAlarmProc__Q44nw4r3snd6detail20RemoteSpeakerManagerFP7OSAlarmP9OSContext
-RemoteSpeakerAlarmProc__Q44nw4r3snd6detail20RemoteSpeakerManagerFP7OSAlarmP9OSContext:
+.fn RemoteSpeakerAlarmProc__Q44nw4r3snd6detail20RemoteSpeakerManagerFP7OSAlarmP9OSContext, global
 /* 804194DC 003E2A9C  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 804194E0 003E2AA0  7C 08 02 A6 */	mflr r0
 /* 804194E4 003E2AA4  90 01 00 74 */	stw r0, 0x74(r1)
@@ -185,6 +184,7 @@ RemoteSpeakerAlarmProc__Q44nw4r3snd6detail20RemoteSpeakerManagerFP7OSAlarmP9OSCo
 /* 804195C8 003E2B88  7C 08 03 A6 */	mtlr r0
 /* 804195CC 003E2B8C  38 21 00 70 */	addi r1, r1, 0x70
 /* 804195D0 003E2B90  4E 80 00 20 */	blr 
+.endfn RemoteSpeakerAlarmProc__Q44nw4r3snd6detail20RemoteSpeakerManagerFP7OSAlarmP9OSContext
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

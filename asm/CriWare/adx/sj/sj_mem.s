@@ -2,14 +2,13 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global SJMEM_Error
-SJMEM_Error:
+.fn SJMEM_Error, global
 /* 8039349C 0035CA5C  3C 60 80 52 */	lis r3, lbl_8051C0A8@ha
 /* 803934A0 0035CA60  38 63 C0 A8 */	addi r3, r3, lbl_8051C0A8@l
 /* 803934A4 0035CA64  48 00 34 F4 */	b SJERR_CallErr
+.endfn SJMEM_Error
 
-.global SJMEM_Init
-SJMEM_Init:
+.fn SJMEM_Init, global
 /* 803934A8 0035CA68  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803934AC 0035CA6C  7C 08 02 A6 */	mflr r0
 /* 803934B0 0035CA70  90 01 00 14 */	stw r0, 0x14(r1)
@@ -34,9 +33,9 @@ SJMEM_Init:
 /* 803934F8 0035CAB8  7C 08 03 A6 */	mtlr r0
 /* 803934FC 0035CABC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80393500 0035CAC0  4E 80 00 20 */	blr 
+.endfn SJMEM_Init
 
-.global SJMEM_Finish
-SJMEM_Finish:
+.fn SJMEM_Finish, global
 /* 80393504 0035CAC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80393508 0035CAC8  7C 08 02 A6 */	mflr r0
 /* 8039350C 0035CACC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -58,9 +57,9 @@ SJMEM_Finish:
 /* 80393548 0035CB08  7C 08 03 A6 */	mtlr r0
 /* 8039354C 0035CB0C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80393550 0035CB10  4E 80 00 20 */	blr 
+.endfn SJMEM_Finish
 
-.global SJMEM_Create
-SJMEM_Create:
+.fn SJMEM_Create, global
 /* 80393554 0035CB14  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80393558 0035CB18  7C 08 02 A6 */	mflr r0
 /* 8039355C 0035CB1C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -81,9 +80,9 @@ SJMEM_Create:
 /* 80393598 0035CB58  7C 08 03 A6 */	mtlr r0
 /* 8039359C 0035CB5C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803935A0 0035CB60  4E 80 00 20 */	blr 
+.endfn SJMEM_Create
 
-.global sjmem_Create
-sjmem_Create:
+.fn sjmem_Create, global
 /* 803935A4 0035CB64  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 803935A8 0035CB68  7C 08 02 A6 */	mflr r0
 /* 803935AC 0035CB6C  3C A0 80 5F */	lis r5, sjmem_obj@ha
@@ -200,9 +199,9 @@ sjmem_Create:
 /* 8039374C 0035CD0C  7C 08 03 A6 */	mtlr r0
 /* 80393750 0035CD10  38 21 00 90 */	addi r1, r1, 0x90
 /* 80393754 0035CD14  4E 80 00 20 */	blr 
+.endfn sjmem_Create
 
-.global SJMEM_Destroy
-SJMEM_Destroy:
+.fn SJMEM_Destroy, global
 /* 80393758 0035CD18  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 8039375C 0035CD1C  7C 08 02 A6 */	mflr r0
 /* 80393760 0035CD20  90 01 00 94 */	stw r0, 0x94(r1)
@@ -257,9 +256,9 @@ SJMEM_Destroy:
 /* 80393818 0035CDD8  7C 08 03 A6 */	mtlr r0
 /* 8039381C 0035CDDC  38 21 00 90 */	addi r1, r1, 0x90
 /* 80393820 0035CDE0  4E 80 00 20 */	blr 
+.endfn SJMEM_Destroy
 
-.global SJMEM_GetUuid
-SJMEM_GetUuid:
+.fn SJMEM_GetUuid, global
 /* 80393824 0035CDE4  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 80393828 0035CDE8  7C 08 02 A6 */	mflr r0
 /* 8039382C 0035CDEC  90 01 00 94 */	stw r0, 0x94(r1)
@@ -312,9 +311,9 @@ SJMEM_GetUuid:
 /* 803938DC 0035CE9C  7C 08 03 A6 */	mtlr r0
 /* 803938E0 0035CEA0  38 21 00 90 */	addi r1, r1, 0x90
 /* 803938E4 0035CEA4  4E 80 00 20 */	blr 
+.endfn SJMEM_GetUuid
 
-.global SJMEM_EntryErrFunc
-SJMEM_EntryErrFunc:
+.fn SJMEM_EntryErrFunc, global
 /* 803938E8 0035CEA8  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 803938EC 0035CEAC  7C 08 02 A6 */	mflr r0
 /* 803938F0 0035CEB0  90 01 00 A4 */	stw r0, 0xa4(r1)
@@ -371,9 +370,9 @@ SJMEM_EntryErrFunc:
 /* 803939B0 0035CF70  7C 08 03 A6 */	mtlr r0
 /* 803939B4 0035CF74  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 803939B8 0035CF78  4E 80 00 20 */	blr 
+.endfn SJMEM_EntryErrFunc
 
-.global SJMEM_Reset
-SJMEM_Reset:
+.fn SJMEM_Reset, global
 /* 803939BC 0035CF7C  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 803939C0 0035CF80  7C 08 02 A6 */	mflr r0
 /* 803939C4 0035CF84  90 01 00 94 */	stw r0, 0x94(r1)
@@ -426,9 +425,9 @@ SJMEM_Reset:
 /* 80393A74 0035D034  7C 08 03 A6 */	mtlr r0
 /* 80393A78 0035D038  38 21 00 90 */	addi r1, r1, 0x90
 /* 80393A7C 0035D03C  4E 80 00 20 */	blr 
+.endfn SJMEM_Reset
 
-.global SJMEM_GetNumData
-SJMEM_GetNumData:
+.fn SJMEM_GetNumData, global
 /* 80393A80 0035D040  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80393A84 0035D044  7C 08 02 A6 */	mflr r0
 /* 80393A88 0035D048  90 01 00 14 */	stw r0, 0x14(r1)
@@ -449,9 +448,9 @@ SJMEM_GetNumData:
 /* 80393AC4 0035D084  7C 08 03 A6 */	mtlr r0
 /* 80393AC8 0035D088  38 21 00 10 */	addi r1, r1, 0x10
 /* 80393ACC 0035D08C  4E 80 00 20 */	blr 
+.endfn SJMEM_GetNumData
 
-.global sjmem_GetNumData
-sjmem_GetNumData:
+.fn sjmem_GetNumData, global
 /* 80393AD0 0035D090  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 80393AD4 0035D094  7C 08 02 A6 */	mflr r0
 /* 80393AD8 0035D098  2C 03 00 00 */	cmpwi r3, 0
@@ -518,9 +517,9 @@ sjmem_GetNumData:
 /* 80393BB4 0035D174  7C 08 03 A6 */	mtlr r0
 /* 80393BB8 0035D178  38 21 00 90 */	addi r1, r1, 0x90
 /* 80393BBC 0035D17C  4E 80 00 20 */	blr 
+.endfn sjmem_GetNumData
 
-.global SJMEM_GetChunk
-SJMEM_GetChunk:
+.fn SJMEM_GetChunk, global
 /* 80393BC0 0035D180  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80393BC4 0035D184  7C 08 02 A6 */	mflr r0
 /* 80393BC8 0035D188  90 01 00 24 */	stw r0, 0x24(r1)
@@ -547,9 +546,9 @@ SJMEM_GetChunk:
 /* 80393C1C 0035D1DC  7C 08 03 A6 */	mtlr r0
 /* 80393C20 0035D1E0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80393C24 0035D1E4  4E 80 00 20 */	blr 
+.endfn SJMEM_GetChunk
 
-.global sjmem_GetChunk
-sjmem_GetChunk:
+.fn sjmem_GetChunk, global
 /* 80393C28 0035D1E8  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 80393C2C 0035D1EC  7C 08 02 A6 */	mflr r0
 /* 80393C30 0035D1F0  2C 03 00 00 */	cmpwi r3, 0
@@ -633,9 +632,9 @@ sjmem_GetChunk:
 /* 80393D50 0035D310  7C 08 03 A6 */	mtlr r0
 /* 80393D54 0035D314  38 21 00 90 */	addi r1, r1, 0x90
 /* 80393D58 0035D318  4E 80 00 20 */	blr 
+.endfn sjmem_GetChunk
 
-.global SJMEM_PutChunk
-SJMEM_PutChunk:
+.fn SJMEM_PutChunk, global
 /* 80393D5C 0035D31C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80393D60 0035D320  7C 08 02 A6 */	mflr r0
 /* 80393D64 0035D324  90 01 00 24 */	stw r0, 0x24(r1)
@@ -658,9 +657,9 @@ SJMEM_PutChunk:
 /* 80393DA8 0035D368  7C 08 03 A6 */	mtlr r0
 /* 80393DAC 0035D36C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80393DB0 0035D370  4E 80 00 20 */	blr 
+.endfn SJMEM_PutChunk
 
-.global sjmem_PutChunk
-sjmem_PutChunk:
+.fn sjmem_PutChunk, global
 /* 80393DB4 0035D374  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 80393DB8 0035D378  7C 08 02 A6 */	mflr r0
 /* 80393DBC 0035D37C  2C 03 00 00 */	cmpwi r3, 0
@@ -728,9 +727,9 @@ sjmem_PutChunk:
 /* 80393EA4 0035D464  7C 08 03 A6 */	mtlr r0
 /* 80393EA8 0035D468  38 21 00 90 */	addi r1, r1, 0x90
 /* 80393EAC 0035D46C  4E 80 00 20 */	blr 
+.endfn sjmem_PutChunk
 
-.global SJMEM_UngetChunk
-SJMEM_UngetChunk:
+.fn SJMEM_UngetChunk, global
 /* 80393EB0 0035D470  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80393EB4 0035D474  7C 08 02 A6 */	mflr r0
 /* 80393EB8 0035D478  90 01 00 24 */	stw r0, 0x24(r1)
@@ -753,9 +752,9 @@ SJMEM_UngetChunk:
 /* 80393EFC 0035D4BC  7C 08 03 A6 */	mtlr r0
 /* 80393F00 0035D4C0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80393F04 0035D4C4  4E 80 00 20 */	blr 
+.endfn SJMEM_UngetChunk
 
-.global sjmem_UngetChunk
-sjmem_UngetChunk:
+.fn sjmem_UngetChunk, global
 /* 80393F08 0035D4C8  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 80393F0C 0035D4CC  7C 08 02 A6 */	mflr r0
 /* 80393F10 0035D4D0  2C 03 00 00 */	cmpwi r3, 0
@@ -862,9 +861,9 @@ sjmem_UngetChunk:
 /* 80394088 0035D648  7C 08 03 A6 */	mtlr r0
 /* 8039408C 0035D64C  38 21 00 90 */	addi r1, r1, 0x90
 /* 80394090 0035D650  4E 80 00 20 */	blr 
+.endfn sjmem_UngetChunk
 
-.global SJMEM_IsGetChunk
-SJMEM_IsGetChunk:
+.fn SJMEM_IsGetChunk, global
 /* 80394094 0035D654  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80394098 0035D658  7C 08 02 A6 */	mflr r0
 /* 8039409C 0035D65C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -893,9 +892,9 @@ SJMEM_IsGetChunk:
 /* 803940F8 0035D6B8  7C 08 03 A6 */	mtlr r0
 /* 803940FC 0035D6BC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80394100 0035D6C0  4E 80 00 20 */	blr 
+.endfn SJMEM_IsGetChunk
 
-.global sjmem_IsGetChunk
-sjmem_IsGetChunk:
+.fn sjmem_IsGetChunk, global
 /* 80394104 0035D6C4  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 80394108 0035D6C8  7C 08 02 A6 */	mflr r0
 /* 8039410C 0035D6CC  2C 03 00 00 */	cmpwi r3, 0
@@ -976,10 +975,10 @@ sjmem_IsGetChunk:
 /* 80394220 0035D7E0  7C 08 03 A6 */	mtlr r0
 /* 80394224 0035D7E4  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 80394228 0035D7E8  4E 80 00 20 */	blr 
+.endfn sjmem_IsGetChunk
 
 #may also be SJMEM_GetBufPtr
-.global SJMEM_GetBufSize
-SJMEM_GetBufSize:
+.fn SJMEM_GetBufSize, global
 /* 8039422C 0035D7EC  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 80394230 0035D7F0  7C 08 02 A6 */	mflr r0
 /* 80394234 0035D7F4  90 01 00 94 */	stw r0, 0x94(r1)
@@ -1032,6 +1031,7 @@ SJMEM_GetBufSize:
 /* 803942E4 0035D8A4  7C 08 03 A6 */	mtlr r0
 /* 803942E8 0035D8A8  38 21 00 90 */	addi r1, r1, 0x90
 /* 803942EC 0035D8AC  4E 80 00 20 */	blr
+.endfn SJMEM_GetBufSize
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

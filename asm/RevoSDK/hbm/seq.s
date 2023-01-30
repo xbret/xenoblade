@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_803420C0
-func_803420C0:
+.fn func_803420C0, global
 /* 803420C0 0030B680  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803420C4 0030B684  7C 08 02 A6 */	mflr r0
 /* 803420C8 0030B688  3D 00 80 52 */	lis r8, lbl_80518B90@ha
@@ -200,10 +199,10 @@ func_803420C0:
 /* 80342378 0030B938  7C 08 03 A6 */	mtlr r0
 /* 8034237C 0030B93C  38 21 00 30 */	addi r1, r1, 0x30
 /* 80342380 0030B940  4E 80 00 20 */	blr 
+.endfn func_803420C0
 
 .balign 16, 0
-.global func_80342390
-func_80342390:
+.fn func_80342390, global
 /* 80342390 0030B950  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 80342394 0030B954  7C 08 02 A6 */	mflr r0
 /* 80342398 0030B958  90 01 00 74 */	stw r0, 0x74(r1)
@@ -279,10 +278,10 @@ func_80342390:
 /* 803424A0 0030BA60  7C 08 03 A6 */	mtlr r0
 /* 803424A4 0030BA64  38 21 00 70 */	addi r1, r1, 0x70
 /* 803424A8 0030BA68  4E 80 00 20 */	blr 
+.endfn func_80342390
 
 .balign 16, 0
-.global func_803424B0
-func_803424B0:
+.fn func_803424B0, global
 /* 803424B0 0030BA70  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803424B4 0030BA74  7C 08 02 A6 */	mflr r0
 /* 803424B8 0030BA78  38 C4 00 0E */	addi r6, r4, 0xe
@@ -320,10 +319,10 @@ func_803424B0:
 /* 8034252C 0030BAEC  7C 08 03 A6 */	mtlr r0
 /* 80342530 0030BAF0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80342534 0030BAF4  4E 80 00 20 */	blr 
+.endfn func_803424B0
 
 .balign 16, 0
-.global func_80342540
-func_80342540:
+.fn func_80342540, global
 /* 80342540 0030BB00  3C A0 80 5D */	lis r5, lbl_805CE3BC@ha
 /* 80342544 0030BB04  80 05 E3 BC */	lwz r0, lbl_805CE3BC@l(r5)
 /* 80342548 0030BB08  2C 00 00 00 */	cmpwi r0, 0
@@ -334,20 +333,20 @@ func_80342540:
 /* 8034255C 0030BB1C  90 83 E3 B8 */	stw r4, lbl_805CE3B8@l(r3)
 /* 80342560 0030BB20  90 05 E3 BC */	stw r0, lbl_805CE3BC@l(r5)
 /* 80342564 0030BB24  4E 80 00 20 */	blr 
+.endfn func_80342540
 
 .balign 16, 0
-.global func_80342570
-func_80342570:
+.fn func_80342570, global
 /* 80342570 0030BB30  3C 80 80 5D */	lis r4, lbl_805CE3B8@ha
 /* 80342574 0030BB34  3C 60 80 5D */	lis r3, lbl_805CE3BC@ha
 /* 80342578 0030BB38  38 00 00 00 */	li r0, 0
 /* 8034257C 0030BB3C  90 04 E3 B8 */	stw r0, lbl_805CE3B8@l(r4)
 /* 80342580 0030BB40  90 03 E3 BC */	stw r0, lbl_805CE3BC@l(r3)
 /* 80342584 0030BB44  4E 80 00 20 */	blr 
+.endfn func_80342570
 
 .balign 16, 0
-.global func_80342590
-func_80342590:
+.fn func_80342590, global
 /* 80342590 0030BB50  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80342594 0030BB54  7C 08 02 A6 */	mflr r0
 /* 80342598 0030BB58  3C 60 80 5D */	lis r3, lbl_805CE3BC@ha
@@ -460,10 +459,10 @@ func_80342590:
 /* 8034270C 0030BCCC  7C 08 03 A6 */	mtlr r0
 /* 80342710 0030BCD0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80342714 0030BCD4  4E 80 00 20 */	blr 
+.endfn func_80342590
 
 .balign 16, 0
-.global func_80342720
-func_80342720:
+.fn func_80342720, global
 /* 80342720 0030BCE0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80342724 0030BCE4  7C 08 02 A6 */	mflr r0
 /* 80342728 0030BCE8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -502,10 +501,10 @@ func_80342720:
 /* 803427A4 0030BD64  7C 08 03 A6 */	mtlr r0
 /* 803427A8 0030BD68  38 21 00 20 */	addi r1, r1, 0x20
 /* 803427AC 0030BD6C  4E 80 00 20 */	blr 
+.endfn func_80342720
 
 .balign 16, 0
-.global HBMSEQRemoveSequence
-HBMSEQRemoveSequence:
+.fn HBMSEQRemoveSequence, global
 /* 803427B0 0030BD70  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803427B4 0030BD74  7C 08 02 A6 */	mflr r0
 /* 803427B8 0030BD78  90 01 00 24 */	stw r0, 0x24(r1)
@@ -549,10 +548,10 @@ HBMSEQRemoveSequence:
 /* 8034283C 0030BDFC  7C 08 03 A6 */	mtlr r0
 /* 80342840 0030BE00  38 21 00 20 */	addi r1, r1, 0x20
 /* 80342844 0030BE04  4E 80 00 20 */	blr 
+.endfn HBMSEQRemoveSequence
 
 .balign 16, 0
-.global HBMSEQSetState
-HBMSEQSetState:
+.fn HBMSEQSetState, global
 /* 80342850 0030BE10  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80342854 0030BE14  7C 08 02 A6 */	mflr r0
 /* 80342858 0030BE18  90 01 00 34 */	stw r0, 0x34(r1)
@@ -643,18 +642,19 @@ HBMSEQSetState:
 /* 80342988 0030BF48  7C 08 03 A6 */	mtlr r0
 /* 8034298C 0030BF4C  38 21 00 30 */	addi r1, r1, 0x30
 /* 80342990 0030BF50  4E 80 00 20 */	blr 
+.endfn HBMSEQSetState
 
 .balign 16, 0
-.global func_803429A0
-func_803429A0:
+.fn func_803429A0, global
 /* 803429A0 0030BF60  80 63 00 04 */	lwz r3, 4(r3)
 /* 803429A4 0030BF64  4E 80 00 20 */	blr 
+.endfn func_803429A0
 
 .balign 16, 0
-.global func_803429B0
-func_803429B0:
+.fn func_803429B0, global
 /* 803429B0 0030BF70  38 63 00 14 */	addi r3, r3, 0x14
 /* 803429B4 0030BF74  4B FF E4 8C */	b func_80340E40
+.endfn func_803429B0
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0

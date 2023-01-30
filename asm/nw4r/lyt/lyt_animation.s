@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 #GetStepCurveValue__Q34nw4r3lyt27@unnamed@lyt_animation_cpp@FfPCQ44nw4r3lyt3res7StepKeyUl
-.global GetStepCurveValue__Q34nw4r3lyt27_unnamed_lyt_animation_cpp_FfPCQ44nw4r3lyt3res7StepKeyUl
-GetStepCurveValue__Q34nw4r3lyt27_unnamed_lyt_animation_cpp_FfPCQ44nw4r3lyt3res7StepKeyUl:
+.fn GetStepCurveValue__Q34nw4r3lyt27_unnamed_lyt_animation_cpp_FfPCQ44nw4r3lyt3res7StepKeyUl, global
 /* 8040871C 003D1CDC  28 04 00 01 */	cmplwi r4, 1
 /* 80408720 003D1CE0  41 82 00 14 */	beq .L_80408734
 /* 80408724 003D1CE4  C0 03 00 00 */	lfs f0, 0(r3)
@@ -72,10 +71,10 @@ GetStepCurveValue__Q34nw4r3lyt27_unnamed_lyt_animation_cpp_FfPCQ44nw4r3lyt3res7S
 /* 804087F8 003D1DB8  7C 63 02 14 */	add r3, r3, r0
 /* 804087FC 003D1DBC  A0 63 00 04 */	lhz r3, 4(r3)
 /* 80408800 003D1DC0  4E 80 00 20 */	blr 
+.endfn GetStepCurveValue__Q34nw4r3lyt27_unnamed_lyt_animation_cpp_FfPCQ44nw4r3lyt3res7StepKeyUl
 
 #GetHermiteCurveValue__Q34nw4r3lyt27@unnamed@lyt_animation_cpp@FfPCQ44nw4r3lyt3res10HermiteKeyUl
-.global GetHermiteCurveValue__Q34nw4r3lyt27_unnamed_lyt_animation_cpp_FfPCQ44nw4r3lyt3res10HermiteKeyUl
-GetHermiteCurveValue__Q34nw4r3lyt27_unnamed_lyt_animation_cpp_FfPCQ44nw4r3lyt3res10HermiteKeyUl:
+.fn GetHermiteCurveValue__Q34nw4r3lyt27_unnamed_lyt_animation_cpp_FfPCQ44nw4r3lyt3res10HermiteKeyUl, global
 /* 80408804 003D1DC4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80408808 003D1DC8  DB E1 00 10 */	stfd f31, 0x10(r1)
 /* 8040880C 003D1DCC  F3 E1 00 18 */	psq_st f31, 24(r1), 0, qr0
@@ -198,24 +197,24 @@ GetHermiteCurveValue__Q34nw4r3lyt27_unnamed_lyt_animation_cpp_FfPCQ44nw4r3lyt3re
 /* 804089B4 003D1F74  CB E1 00 10 */	lfd f31, 0x10(r1)
 /* 804089B8 003D1F78  38 21 00 20 */	addi r1, r1, 0x20
 /* 804089BC 003D1F7C  4E 80 00 20 */	blr 
+.endfn GetHermiteCurveValue__Q34nw4r3lyt27_unnamed_lyt_animation_cpp_FfPCQ44nw4r3lyt3res10HermiteKeyUl
 
-.global GetFrameSize__Q34nw4r3lyt13AnimTransformCFv
-GetFrameSize__Q34nw4r3lyt13AnimTransformCFv:
+.fn GetFrameSize__Q34nw4r3lyt13AnimTransformCFv, global
 /* 804089C0 003D1F80  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 804089C4 003D1F84  A0 63 00 08 */	lhz r3, 8(r3)
 /* 804089C8 003D1F88  4E 80 00 20 */	blr 
+.endfn GetFrameSize__Q34nw4r3lyt13AnimTransformCFv
 
-.global IsLoopData__Q34nw4r3lyt13AnimTransformCFv
-IsLoopData__Q34nw4r3lyt13AnimTransformCFv:
+.fn IsLoopData__Q34nw4r3lyt13AnimTransformCFv, global
 /* 804089CC 003D1F8C  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 804089D0 003D1F90  88 63 00 0A */	lbz r3, 0xa(r3)
 /* 804089D4 003D1F94  7C 03 00 D0 */	neg r0, r3
 /* 804089D8 003D1F98  7C 00 1B 78 */	or r0, r0, r3
 /* 804089DC 003D1F9C  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 804089E0 003D1FA0  4E 80 00 20 */	blr 
+.endfn IsLoopData__Q34nw4r3lyt13AnimTransformCFv
 
-.global __ct__Q34nw4r3lyt18AnimTransformBasicFv
-__ct__Q34nw4r3lyt18AnimTransformBasicFv:
+.fn __ct__Q34nw4r3lyt18AnimTransformBasicFv, global
 /* 804089E4 003D1FA4  C0 02 C2 70 */	lfs f0, float_8066C5F0@sda21(r2)
 /* 804089E8 003D1FA8  3C 80 80 57 */	lis r4, lbl_8056D558@ha
 /* 804089EC 003D1FAC  38 00 00 00 */	li r0, 0
@@ -229,9 +228,9 @@ __ct__Q34nw4r3lyt18AnimTransformBasicFv:
 /* 80408A0C 003D1FCC  90 03 00 18 */	stw r0, 0x18(r3)
 /* 80408A10 003D1FD0  B0 03 00 1C */	sth r0, 0x1c(r3)
 /* 80408A14 003D1FD4  4E 80 00 20 */	blr 
+.endfn __ct__Q34nw4r3lyt18AnimTransformBasicFv
 
-.global __dt__Q34nw4r3lyt18AnimTransformBasicFv
-__dt__Q34nw4r3lyt18AnimTransformBasicFv:
+.fn __dt__Q34nw4r3lyt18AnimTransformBasicFv, global
 /* 80408A18 003D1FD8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80408A1C 003D1FDC  7C 08 02 A6 */	mflr r0
 /* 80408A20 003D1FE0  2C 03 00 00 */	cmpwi r3, 0
@@ -268,17 +267,17 @@ __dt__Q34nw4r3lyt18AnimTransformBasicFv:
 /* 80408A90 003D2050  7C 08 03 A6 */	mtlr r0
 /* 80408A94 003D2054  38 21 00 10 */	addi r1, r1, 0x10
 /* 80408A98 003D2058  4E 80 00 20 */	blr 
+.endfn __dt__Q34nw4r3lyt18AnimTransformBasicFv
 
-.global SetResource__Q34nw4r3lyt18AnimTransformBasicFPCQ44nw4r3lyt3res14AnimationBlockPQ34nw4r3lyt16ResourceAccessor
-SetResource__Q34nw4r3lyt18AnimTransformBasicFPCQ44nw4r3lyt3res14AnimationBlockPQ34nw4r3lyt16ResourceAccessor:
+.fn SetResource__Q34nw4r3lyt18AnimTransformBasicFPCQ44nw4r3lyt3res14AnimationBlockPQ34nw4r3lyt16ResourceAccessor, global
 /* 80408A9C 003D205C  81 83 00 00 */	lwz r12, 0(r3)
 /* 80408AA0 003D2060  A0 C4 00 0E */	lhz r6, 0xe(r4)
 /* 80408AA4 003D2064  81 8C 00 10 */	lwz r12, 0x10(r12)
 /* 80408AA8 003D2068  7D 89 03 A6 */	mtctr r12
 /* 80408AAC 003D206C  4E 80 04 20 */	bctr 
+.endfn SetResource__Q34nw4r3lyt18AnimTransformBasicFPCQ44nw4r3lyt3res14AnimationBlockPQ34nw4r3lyt16ResourceAccessor
 
-.global SetResource__Q34nw4r3lyt18AnimTransformBasicFPCQ44nw4r3lyt3res14AnimationBlockPQ34nw4r3lyt16ResourceAccessorUs
-SetResource__Q34nw4r3lyt18AnimTransformBasicFPCQ44nw4r3lyt3res14AnimationBlockPQ34nw4r3lyt16ResourceAccessorUs:
+.fn SetResource__Q34nw4r3lyt18AnimTransformBasicFPCQ44nw4r3lyt3res14AnimationBlockPQ34nw4r3lyt16ResourceAccessorUs, global
 /* 80408AB0 003D2070  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80408AB4 003D2074  7C 08 02 A6 */	mflr r0
 /* 80408AB8 003D2078  90 01 00 34 */	stw r0, 0x34(r1)
@@ -380,9 +379,9 @@ SetResource__Q34nw4r3lyt18AnimTransformBasicFPCQ44nw4r3lyt3res14AnimationBlockPQ
 /* 80408C08 003D21C8  7C 08 03 A6 */	mtlr r0
 /* 80408C0C 003D21CC  38 21 00 30 */	addi r1, r1, 0x30
 /* 80408C10 003D21D0  4E 80 00 20 */	blr 
+.endfn SetResource__Q34nw4r3lyt18AnimTransformBasicFPCQ44nw4r3lyt3res14AnimationBlockPQ34nw4r3lyt16ResourceAccessorUs
 
-.global Bind__Q34nw4r3lyt18AnimTransformBasicFPQ34nw4r3lyt4Panebb
-Bind__Q34nw4r3lyt18AnimTransformBasicFPQ34nw4r3lyt4Panebb:
+.fn Bind__Q34nw4r3lyt18AnimTransformBasicFPQ34nw4r3lyt4Panebb, global
 /* 80408C14 003D21D4  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80408C18 003D21D8  7C 08 02 A6 */	mflr r0
 /* 80408C1C 003D21DC  90 01 00 34 */	stw r0, 0x34(r1)
@@ -516,9 +515,9 @@ Bind__Q34nw4r3lyt18AnimTransformBasicFPQ34nw4r3lyt4Panebb:
 /* 80408DD0 003D2390  7C 08 03 A6 */	mtlr r0
 /* 80408DD4 003D2394  38 21 00 30 */	addi r1, r1, 0x30
 /* 80408DD8 003D2398  4E 80 00 20 */	blr 
+.endfn Bind__Q34nw4r3lyt18AnimTransformBasicFPQ34nw4r3lyt4Panebb
 
-.global Bind__Q34nw4r3lyt18AnimTransformBasicFPQ34nw4r3lyt8Materialb
-Bind__Q34nw4r3lyt18AnimTransformBasicFPQ34nw4r3lyt8Materialb:
+.fn Bind__Q34nw4r3lyt18AnimTransformBasicFPQ34nw4r3lyt8Materialb, global
 /* 80408DDC 003D239C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80408DE0 003D23A0  7C 08 02 A6 */	mflr r0
 /* 80408DE4 003D23A4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -599,9 +598,9 @@ Bind__Q34nw4r3lyt18AnimTransformBasicFPQ34nw4r3lyt8Materialb:
 /* 80408EE4 003D24A4  7C 08 03 A6 */	mtlr r0
 /* 80408EE8 003D24A8  38 21 00 20 */	addi r1, r1, 0x20
 /* 80408EEC 003D24AC  4E 80 00 20 */	blr 
+.endfn Bind__Q34nw4r3lyt18AnimTransformBasicFPQ34nw4r3lyt8Materialb
 
-.global Animate__Q34nw4r3lyt18AnimTransformBasicFUlPQ34nw4r3lyt4Pane
-Animate__Q34nw4r3lyt18AnimTransformBasicFUlPQ34nw4r3lyt4Pane:
+.fn Animate__Q34nw4r3lyt18AnimTransformBasicFUlPQ34nw4r3lyt4Pane, global
 /* 80408EF0 003D24B0  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80408EF4 003D24B4  7C 08 02 A6 */	mflr r0
 /* 80408EF8 003D24B8  90 01 00 64 */	stw r0, 0x64(r1)
@@ -738,10 +737,10 @@ Animate__Q34nw4r3lyt18AnimTransformBasicFUlPQ34nw4r3lyt4Pane:
 /* 804090D0 003D2690  7C 08 03 A6 */	mtlr r0
 /* 804090D4 003D2694  38 21 00 60 */	addi r1, r1, 0x60
 /* 804090D8 003D2698  4E 80 00 20 */	blr
+.endfn Animate__Q34nw4r3lyt18AnimTransformBasicFUlPQ34nw4r3lyt4Pane
 
 
-.global Animate__Q34nw4r3lyt18AnimTransformBasicFUlPQ34nw4r3lyt8Material
-Animate__Q34nw4r3lyt18AnimTransformBasicFUlPQ34nw4r3lyt8Material:
+.fn Animate__Q34nw4r3lyt18AnimTransformBasicFUlPQ34nw4r3lyt8Material, global
 /* 804090DC 003D269C  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 804090E0 003D26A0  7C 08 02 A6 */	mflr r0
 /* 804090E4 003D26A4  90 01 00 84 */	stw r0, 0x84(r1)
@@ -954,18 +953,18 @@ Animate__Q34nw4r3lyt18AnimTransformBasicFUlPQ34nw4r3lyt8Material:
 /* 804093CC 003D298C  7C 08 03 A6 */	mtlr r0
 /* 804093D0 003D2990  38 21 00 80 */	addi r1, r1, 0x80
 /* 804093D4 003D2994  4E 80 00 20 */	blr
+.endfn Animate__Q34nw4r3lyt18AnimTransformBasicFUlPQ34nw4r3lyt8Material
 
-.global __ct__Q34nw4r3lyt12AnimResourceFv
-__ct__Q34nw4r3lyt12AnimResourceFv:
+.fn __ct__Q34nw4r3lyt12AnimResourceFv, global
 /* 804093D8 003D2998  38 00 00 00 */	li r0, 0
 /* 804093DC 003D299C  90 03 00 00 */	stw r0, 0(r3)
 /* 804093E0 003D29A0  90 03 00 04 */	stw r0, 4(r3)
 /* 804093E4 003D29A4  90 03 00 08 */	stw r0, 8(r3)
 /* 804093E8 003D29A8  90 03 00 0C */	stw r0, 0xc(r3)
 /* 804093EC 003D29AC  4E 80 00 20 */	blr 
+.endfn __ct__Q34nw4r3lyt12AnimResourceFv
 
-.global Set__Q34nw4r3lyt12AnimResourceFPCv
-Set__Q34nw4r3lyt12AnimResourceFPCv:
+.fn Set__Q34nw4r3lyt12AnimResourceFPCv, global
 /* 804093F0 003D29B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804093F4 003D29B4  7C 08 02 A6 */	mflr r0
 /* 804093F8 003D29B8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1043,9 +1042,9 @@ Set__Q34nw4r3lyt12AnimResourceFPCv:
 /* 804094F4 003D2AB4  7C 08 03 A6 */	mtlr r0
 /* 804094F8 003D2AB8  38 21 00 20 */	addi r1, r1, 0x20
 /* 804094FC 003D2ABC  4E 80 00 20 */	blr 
+.endfn Set__Q34nw4r3lyt12AnimResourceFPCv
 
-.global GetGroupNum__Q34nw4r3lyt12AnimResourceCFv
-GetGroupNum__Q34nw4r3lyt12AnimResourceCFv:
+.fn GetGroupNum__Q34nw4r3lyt12AnimResourceCFv, global
 /* 80409500 003D2AC0  80 63 00 08 */	lwz r3, 8(r3)
 /* 80409504 003D2AC4  2C 03 00 00 */	cmpwi r3, 0
 /* 80409508 003D2AC8  41 82 00 0C */	beq .L_80409514
@@ -1054,9 +1053,9 @@ GetGroupNum__Q34nw4r3lyt12AnimResourceCFv:
 .L_80409514:
 /* 80409514 003D2AD4  38 60 00 00 */	li r3, 0
 /* 80409518 003D2AD8  4E 80 00 20 */	blr 
+.endfn GetGroupNum__Q34nw4r3lyt12AnimResourceCFv
 
-.global GetGroupArray__Q34nw4r3lyt12AnimResourceCFv
-GetGroupArray__Q34nw4r3lyt12AnimResourceCFv:
+.fn GetGroupArray__Q34nw4r3lyt12AnimResourceCFv, global
 /* 8040951C 003D2ADC  80 63 00 08 */	lwz r3, 8(r3)
 /* 80409520 003D2AE0  2C 03 00 00 */	cmpwi r3, 0
 /* 80409524 003D2AE4  41 82 00 10 */	beq .L_80409534
@@ -1066,9 +1065,9 @@ GetGroupArray__Q34nw4r3lyt12AnimResourceCFv:
 .L_80409534:
 /* 80409534 003D2AF4  38 60 00 00 */	li r3, 0
 /* 80409538 003D2AF8  4E 80 00 20 */	blr 
+.endfn GetGroupArray__Q34nw4r3lyt12AnimResourceCFv
 
-.global IsDescendingBind__Q34nw4r3lyt12AnimResourceCFv
-IsDescendingBind__Q34nw4r3lyt12AnimResourceCFv:
+.fn IsDescendingBind__Q34nw4r3lyt12AnimResourceCFv, global
 /* 8040953C 003D2AFC  80 63 00 08 */	lwz r3, 8(r3)
 /* 80409540 003D2B00  2C 03 00 00 */	cmpwi r3, 0
 /* 80409544 003D2B04  41 82 00 10 */	beq .L_80409554
@@ -1078,9 +1077,9 @@ IsDescendingBind__Q34nw4r3lyt12AnimResourceCFv:
 .L_80409554:
 /* 80409554 003D2B14  38 60 00 00 */	li r3, 0
 /* 80409558 003D2B18  4E 80 00 20 */	blr 
+.endfn IsDescendingBind__Q34nw4r3lyt12AnimResourceCFv
 
-.global GetAnimationShareInfoNum__Q34nw4r3lyt12AnimResourceCFv
-GetAnimationShareInfoNum__Q34nw4r3lyt12AnimResourceCFv:
+.fn GetAnimationShareInfoNum__Q34nw4r3lyt12AnimResourceCFv, global
 /* 8040955C 003D2B1C  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 80409560 003D2B20  2C 03 00 00 */	cmpwi r3, 0
 /* 80409564 003D2B24  41 82 00 0C */	beq .L_80409570
@@ -1089,9 +1088,9 @@ GetAnimationShareInfoNum__Q34nw4r3lyt12AnimResourceCFv:
 .L_80409570:
 /* 80409570 003D2B30  38 60 00 00 */	li r3, 0
 /* 80409574 003D2B34  4E 80 00 20 */	blr 
+.endfn GetAnimationShareInfoNum__Q34nw4r3lyt12AnimResourceCFv
 
-.global GetAnimationShareInfoArray__Q34nw4r3lyt12AnimResourceCFv
-GetAnimationShareInfoArray__Q34nw4r3lyt12AnimResourceCFv:
+.fn GetAnimationShareInfoArray__Q34nw4r3lyt12AnimResourceCFv, global
 /* 80409578 003D2B38  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 8040957C 003D2B3C  2C 03 00 00 */	cmpwi r3, 0
 /* 80409580 003D2B40  41 82 00 10 */	beq .L_80409590
@@ -1101,9 +1100,9 @@ GetAnimationShareInfoArray__Q34nw4r3lyt12AnimResourceCFv:
 .L_80409590:
 /* 80409590 003D2B50  38 60 00 00 */	li r3, 0
 /* 80409594 003D2B54  4E 80 00 20 */	blr 
+.endfn GetAnimationShareInfoArray__Q34nw4r3lyt12AnimResourceCFv
 
-.global CalcAnimationNum__Q34nw4r3lyt12AnimResourceCFPQ34nw4r3lyt4Paneb
-CalcAnimationNum__Q34nw4r3lyt12AnimResourceCFPQ34nw4r3lyt4Paneb:
+.fn CalcAnimationNum__Q34nw4r3lyt12AnimResourceCFPQ34nw4r3lyt4Paneb, global
 /* 80409598 003D2B58  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8040959C 003D2B5C  7C 08 02 A6 */	mflr r0
 /* 804095A0 003D2B60  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1162,9 +1161,9 @@ CalcAnimationNum__Q34nw4r3lyt12AnimResourceCFPQ34nw4r3lyt4Paneb:
 /* 80409664 003D2C24  7C 08 03 A6 */	mtlr r0
 /* 80409668 003D2C28  38 21 00 20 */	addi r1, r1, 0x20
 /* 8040966C 003D2C2C  4E 80 00 20 */	blr 
+.endfn CalcAnimationNum__Q34nw4r3lyt12AnimResourceCFPQ34nw4r3lyt4Paneb
 
-.global CalcAnimationNum__Q34nw4r3lyt12AnimResourceCFPQ34nw4r3lyt5Groupb
-CalcAnimationNum__Q34nw4r3lyt12AnimResourceCFPQ34nw4r3lyt5Groupb:
+.fn CalcAnimationNum__Q34nw4r3lyt12AnimResourceCFPQ34nw4r3lyt5Groupb, global
 /* 80409670 003D2C30  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80409674 003D2C34  7C 08 02 A6 */	mflr r0
 /* 80409678 003D2C38  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1193,9 +1192,9 @@ CalcAnimationNum__Q34nw4r3lyt12AnimResourceCFPQ34nw4r3lyt5Groupb:
 /* 804096CC 003D2C8C  7C 08 03 A6 */	mtlr r0
 /* 804096D0 003D2C90  38 21 00 20 */	addi r1, r1, 0x20
 /* 804096D4 003D2C94  4E 80 00 20 */	blr 
+.endfn CalcAnimationNum__Q34nw4r3lyt12AnimResourceCFPQ34nw4r3lyt5Groupb
 
-.global Init__Q44nw4r3lyt6detail12AnimPaneTreeFv
-Init__Q44nw4r3lyt6detail12AnimPaneTreeFv:
+.fn Init__Q44nw4r3lyt6detail12AnimPaneTreeFv, global
 /* 804096D8 003D2C98  38 00 00 00 */	li r0, 0
 /* 804096DC 003D2C9C  B0 03 00 12 */	sth r0, 0x12(r3)
 /* 804096E0 003D2CA0  B0 03 00 10 */	sth r0, 0x10(r3)
@@ -1210,9 +1209,9 @@ Init__Q44nw4r3lyt6detail12AnimPaneTreeFv:
 /* 80409704 003D2CC4  B0 03 00 22 */	sth r0, 0x22(r3)
 /* 80409708 003D2CC8  B0 03 00 24 */	sth r0, 0x24(r3)
 /* 8040970C 003D2CCC  4E 80 00 20 */	blr 
+.endfn Init__Q44nw4r3lyt6detail12AnimPaneTreeFv
 
-.global Set__Q44nw4r3lyt6detail12AnimPaneTreeFPQ34nw4r3lyt4PaneRCQ34nw4r3lyt12AnimResource
-Set__Q44nw4r3lyt6detail12AnimPaneTreeFPQ34nw4r3lyt4PaneRCQ34nw4r3lyt12AnimResource:
+.fn Set__Q44nw4r3lyt6detail12AnimPaneTreeFPQ34nw4r3lyt4PaneRCQ34nw4r3lyt12AnimResource, global
 /* 80409710 003D2CD0  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80409714 003D2CD4  7C 08 02 A6 */	mflr r0
 /* 80409718 003D2CD8  90 01 00 64 */	stw r0, 0x64(r1)
@@ -1382,9 +1381,9 @@ Set__Q44nw4r3lyt6detail12AnimPaneTreeFPQ34nw4r3lyt4PaneRCQ34nw4r3lyt12AnimResour
 /* 80409964 003D2F24  7C 08 03 A6 */	mtlr r0
 /* 80409968 003D2F28  38 21 00 60 */	addi r1, r1, 0x60
 /* 8040996C 003D2F2C  4E 80 00 20 */	blr 
+.endfn Set__Q44nw4r3lyt6detail12AnimPaneTreeFPQ34nw4r3lyt4PaneRCQ34nw4r3lyt12AnimResource
 
-.global Bind__Q44nw4r3lyt6detail12AnimPaneTreeCFPQ34nw4r3lyt6LayoutPQ34nw4r3lyt4PanePQ34nw4r3lyt16ResourceAccessor
-Bind__Q44nw4r3lyt6detail12AnimPaneTreeCFPQ34nw4r3lyt6LayoutPQ34nw4r3lyt4PanePQ34nw4r3lyt16ResourceAccessor:
+.fn Bind__Q44nw4r3lyt6detail12AnimPaneTreeCFPQ34nw4r3lyt6LayoutPQ34nw4r3lyt4PanePQ34nw4r3lyt16ResourceAccessor, global
 /* 80409970 003D2F30  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80409974 003D2F34  7C 08 02 A6 */	mflr r0
 /* 80409978 003D2F38  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1522,10 +1521,10 @@ Bind__Q44nw4r3lyt6detail12AnimPaneTreeCFPQ34nw4r3lyt6LayoutPQ34nw4r3lyt4PanePQ34
 /* 80409B48 003D3108  7C 08 03 A6 */	mtlr r0
 /* 80409B4C 003D310C  38 21 00 30 */	addi r1, r1, 0x30
 /* 80409B50 003D3110  4E 80 00 20 */	blr
+.endfn Bind__Q44nw4r3lyt6detail12AnimPaneTreeCFPQ34nw4r3lyt6LayoutPQ34nw4r3lyt4PanePQ34nw4r3lyt16ResourceAccessor
 
 #FindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList<Q34nw4r3lyt13AnimationLink,0>PQ34nw4r3lyt13AnimTransform
-.global FindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList_Q34nw4r3lyt13AnimationLink_0_PQ34nw4r3lyt13AnimTransform
-FindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList_Q34nw4r3lyt13AnimationLink_0_PQ34nw4r3lyt13AnimTransform:
+.fn FindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList_Q34nw4r3lyt13AnimationLink_0_PQ34nw4r3lyt13AnimTransform, global
 /* 80409B54 003D3114  80 A3 00 04 */	lwz r5, 4(r3)
 /* 80409B58 003D3118  38 03 00 04 */	addi r0, r3, 4
 /* 80409B5C 003D311C  48 00 00 1C */	b .L_80409B78
@@ -1542,10 +1541,10 @@ FindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList_Q34nw4r3lyt13Animati
 /* 80409B7C 003D313C  40 82 FF E4 */	bne .L_80409B60
 /* 80409B80 003D3140  38 60 00 00 */	li r3, 0
 /* 80409B84 003D3144  4E 80 00 20 */	blr
+.endfn FindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList_Q34nw4r3lyt13AnimationLink_0_PQ34nw4r3lyt13AnimTransform
 
 #FindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList<Q34nw4r3lyt13AnimationLink,0>RCQ34nw4r3lyt12AnimResource
-.global FindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList_Q34nw4r3lyt13AnimationLink_0_RCQ34nw4r3lyt12AnimResource
-FindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList_Q34nw4r3lyt13AnimationLink_0_RCQ34nw4r3lyt12AnimResource:
+.fn FindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList_Q34nw4r3lyt13AnimationLink_0_RCQ34nw4r3lyt12AnimResource, global
 /* 80409B88 003D3148  80 A3 00 04 */	lwz r5, 4(r3)
 /* 80409B8C 003D314C  38 03 00 04 */	addi r0, r3, 4
 /* 80409B90 003D3150  48 00 00 24 */	b .L_80409BB4
@@ -1564,10 +1563,10 @@ FindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList_Q34nw4r3lyt13Animati
 /* 80409BB8 003D3178  40 82 FF DC */	bne .L_80409B94
 /* 80409BBC 003D317C  38 60 00 00 */	li r3, 0
 /* 80409BC0 003D3180  4E 80 00 20 */	blr 
+.endfn FindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList_Q34nw4r3lyt13AnimationLink_0_RCQ34nw4r3lyt12AnimResource
 
 #UnbindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList<Q34nw4r3lyt13AnimationLink,0>PQ34nw4r3lyt13AnimTransform
-.global UnbindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList_Q34nw4r3lyt13AnimationLink_0_PQ34nw4r3lyt13AnimTransform
-UnbindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList_Q34nw4r3lyt13AnimationLink_0_PQ34nw4r3lyt13AnimTransform:
+.fn UnbindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList_Q34nw4r3lyt13AnimationLink_0_PQ34nw4r3lyt13AnimTransform, global
 /* 80409BC4 003D3184  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80409BC8 003D3188  7C 08 02 A6 */	mflr r0
 /* 80409BCC 003D318C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1604,6 +1603,7 @@ UnbindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList_Q34nw4r3lyt13Anima
 /* 80409C3C 003D31FC  7C 08 03 A6 */	mtlr r0
 /* 80409C40 003D3200  38 21 00 30 */	addi r1, r1, 0x30
 /* 80409C44 003D3204  4E 80 00 20 */	blr 
+.endfn UnbindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList_Q34nw4r3lyt13AnimationLink_0_PQ34nw4r3lyt13AnimTransform
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global ProbeBarnacle
-ProbeBarnacle:
+.fn ProbeBarnacle, global
 /* 803159F0 002DEFB0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803159F4 002DEFB4  7C 08 02 A6 */	mflr r0
 /* 803159F8 002DEFB8  2C 03 00 02 */	cmpwi r3, 2
@@ -105,10 +104,10 @@ ProbeBarnacle:
 /* 80315B5C 002DF11C  7C 08 03 A6 */	mtlr r0
 /* 80315B60 002DF120  38 21 00 20 */	addi r1, r1, 0x20
 /* 80315B64 002DF124  4E 80 00 20 */	blr 
+.endfn ProbeBarnacle
 
 .balign 16, 0
-.global __OSEnableBarnacle
-__OSEnableBarnacle:
+.fn __OSEnableBarnacle, global
 /* 80315B70 002DF130  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80315B74 002DF134  7C 08 02 A6 */	mflr r0
 /* 80315B78 002DF138  90 01 00 24 */	stw r0, 0x24(r1)
@@ -229,6 +228,7 @@ __OSEnableBarnacle:
 /* 80315D20 002DF2E0  7C 08 03 A6 */	mtlr r0
 /* 80315D24 002DF2E4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80315D28 002DF2E8  4E 80 00 20 */	blr 
+.endfn __OSEnableBarnacle
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

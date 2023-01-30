@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global TRKMessageSend
-TRKMessageSend:
+.fn TRKMessageSend, global
 /* 802CD420 002969E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CD424 002969E4  7C 08 02 A6 */	mflr r0
 /* 802CD428 002969E8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -31,6 +30,7 @@ TRKMessageSend:
 /* 802CD478 00296A38  7C 08 03 A6 */	mtlr r0
 /* 802CD47C 00296A3C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CD480 00296A40  4E 80 00 20 */	blr 
+.endfn TRKMessageSend
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

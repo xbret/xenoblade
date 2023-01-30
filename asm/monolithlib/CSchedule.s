@@ -3,10 +3,11 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
+
+
 #likely contains other files
 
-.global func_804E3294
-func_804E3294:
+.fn func_804E3294, global
 /* 804E3294 004AC854  3C A0 80 57 */	lis r5, __vt__CSchedule@ha
 /* 804E3298 004AC858  38 80 00 00 */	li r4, 0
 /* 804E329C 004AC85C  38 A5 38 B0 */	addi r5, r5, __vt__CSchedule@l
@@ -50,9 +51,9 @@ func_804E3294:
 /* 804E3334 004AC8F4  B0 03 00 D4 */	sth r0, 0xd4(r3)
 /* 804E3338 004AC8F8  B0 03 00 D6 */	sth r0, 0xd6(r3)
 /* 804E333C 004AC8FC  4E 80 00 20 */	blr 
+.endfn func_804E3294
 
-.global func_804E3340
-func_804E3340:
+.fn func_804E3340, global
 /* 804E3340 004AC900  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804E3344 004AC904  7C 08 02 A6 */	mflr r0
 /* 804E3348 004AC908  2C 03 00 00 */	cmpwi r3, 0
@@ -121,9 +122,9 @@ func_804E3340:
 /* 804E3428 004AC9E8  7C 08 03 A6 */	mtlr r0
 /* 804E342C 004AC9EC  38 21 00 20 */	addi r1, r1, 0x20
 /* 804E3430 004AC9F0  4E 80 00 20 */	blr 
+.endfn func_804E3340
 
-.global func_804E3434
-func_804E3434:
+.fn func_804E3434, global
 /* 804E3434 004AC9F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804E3438 004AC9F8  7C 08 02 A6 */	mflr r0
 /* 804E343C 004AC9FC  2C 04 00 00 */	cmpwi r4, 0
@@ -247,9 +248,9 @@ func_804E3434:
 /* 804E3608 004ACBC8  7C 08 03 A6 */	mtlr r0
 /* 804E360C 004ACBCC  38 21 00 10 */	addi r1, r1, 0x10
 /* 804E3610 004ACBD0  4E 80 00 20 */	blr 
+.endfn func_804E3434
 
-.global func_804E3614
-func_804E3614:
+.fn func_804E3614, global
 /* 804E3614 004ACBD4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804E3618 004ACBD8  7C 08 02 A6 */	mflr r0
 /* 804E361C 004ACBDC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -307,9 +308,12 @@ func_804E3614:
 /* 804E36D0 004ACC90  7C 08 03 A6 */	mtlr r0
 /* 804E36D4 004ACC94  38 21 00 20 */	addi r1, r1, 0x20
 /* 804E36D8 004ACC98  4E 80 00 20 */	blr 
+.endfn func_804E3614
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
 
 .global CSchedule_typestr
 CSchedule_typestr:
@@ -318,6 +322,8 @@ CSchedule_typestr:
 	.4byte 0
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
 
 .global __vt__CSchedule
 __vt__CSchedule:
@@ -328,37 +334,56 @@ __vt__CSchedule:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+
+
 .global __RTTI__CSchedule
 __RTTI__CSchedule:
 	.4byte CSchedule_typestr
 	.4byte 0
 
-.section extab_, "a"  # 0x800066E0 - 0x80021020
+.section extab, "a" # 0x800066E0 - 0x80021020
 
-.global lbl_80020B08
-lbl_80020B08:
+.balign 4
+
+.obj "@etb_80020B08", local
+.hidden "@etb_80020B08"
 	.4byte 0x28080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_80020B08"
 
-.global lbl_80020B10
-lbl_80020B10:
+.obj "@etb_80020B10", local
+.hidden "@etb_80020B10"
 	.4byte 0x100A0000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_80020B10"
 
-.global lbl_80020B18
-lbl_80020B18:
+.obj "@etb_80020B18", local
+.hidden "@etb_80020B18"
 	.4byte 0x18080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_80020B18"
 
+.section extabindex, "a" # 0x80021020 - 0x80039220
 
-.section extabindex_, "a"  # 0x80021020 - 0x80039220
+.balign 4
 
-.4byte func_804E3340
+.obj "@eti_80038C0C", local
+.hidden "@eti_80038C0C"
+	.4byte func_804E3340
 	.4byte 0x000000F4
-	.4byte lbl_80020B08
+	.4byte "@etb_80020B08"
+.endobj "@eti_80038C0C"
+
+.obj "@eti_80038C18", local
+.hidden "@eti_80038C18"
 	.4byte func_804E3434
 	.4byte 0x000001E0
-	.4byte lbl_80020B10
+	.4byte "@etb_80020B10"
+.endobj "@eti_80038C18"
+
+.obj "@eti_80038C24", local
+.hidden "@eti_80038C24"
 	.4byte func_804E3614
 	.4byte 0x000000C8
-	.4byte lbl_80020B18
+	.4byte "@etb_80020B18"
+.endobj "@eti_80038C24"

@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global SFXZ_Init
-SFXZ_Init:
+.fn SFXZ_Init, global
 /* 803D5DC4 0039F384  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D5DC8 0039F388  7C 08 02 A6 */	mflr r0
 /* 803D5DCC 0039F38C  38 80 00 00 */	li r4, 0
@@ -23,9 +22,9 @@ SFXZ_Init:
 /* 803D5E04 0039F3C4  7C 08 03 A6 */	mtlr r0
 /* 803D5E08 0039F3C8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D5E0C 0039F3CC  4E 80 00 20 */	blr 
+.endfn SFXZ_Init
 
-.global SFXZ_Create
-SFXZ_Create:
+.fn SFXZ_Create, global
 /* 803D5E10 0039F3D0  3C 60 80 62 */	lis r3, lbl_8061D498@ha
 /* 803D5E14 0039F3D4  38 63 D4 98 */	addi r3, r3, lbl_8061D498@l
 /* 803D5E18 0039F3D8  80 03 00 08 */	lwz r0, 8(r3)
@@ -61,9 +60,9 @@ SFXZ_Create:
 /* 803D5E80 0039F440  90 85 D4 98 */	stw r4, lbl_8061D498@l(r5)
 /* 803D5E84 0039F444  90 03 00 00 */	stw r0, 0(r3)
 /* 803D5E88 0039F448  4E 80 00 20 */	blr 
+.endfn SFXZ_Create
 
-.global SFXZ_Destroy
-SFXZ_Destroy:
+.fn SFXZ_Destroy, global
 /* 803D5E8C 0039F44C  2C 03 00 00 */	cmpwi r3, 0
 /* 803D5E90 0039F450  4D 82 00 20 */	beqlr 
 /* 803D5E94 0039F454  38 00 00 00 */	li r0, 0
@@ -73,18 +72,19 @@ SFXZ_Destroy:
 /* 803D5EA4 0039F464  38 03 FF FF */	addi r0, r3, -1
 /* 803D5EA8 0039F468  90 04 D4 98 */	stw r0, lbl_8061D498@l(r4)
 /* 803D5EAC 0039F46C  4E 80 00 20 */	blr 
+.endfn SFXZ_Destroy
 
 
-.global SFXZ_SetTagInf
-SFXZ_SetTagInf:
+.fn SFXZ_SetTagInf, global
 /* 803D5EB0 0039F470  38 00 00 01 */	li r0, 1
 /* 803D5EB4 0039F474  90 83 00 0C */	stw r4, 0xc(r3)
 /* 803D5EB8 0039F478  90 03 00 08 */	stw r0, 8(r3)
 /* 803D5EBC 0039F47C  90 A3 00 10 */	stw r5, 0x10(r3)
 /* 803D5EC0 0039F480  48 00 00 04 */	b sfxzmv_SetTagGrp
+.endfn SFXZ_SetTagInf
 
 
-sfxzmv_SetTagGrp:
+.fn sfxzmv_SetTagGrp, local
 /* 803D5EC4 0039F484  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803D5EC8 0039F488  7C 08 02 A6 */	mflr r0
 /* 803D5ECC 0039F48C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -139,9 +139,9 @@ sfxzmv_SetTagGrp:
 /* 803D5F88 0039F548  7C 08 03 A6 */	mtlr r0
 /* 803D5F8C 0039F54C  38 21 00 30 */	addi r1, r1, 0x30
 /* 803D5F90 0039F550  4E 80 00 20 */	blr 
+.endfn sfxzmv_SetTagGrp
 
-.global SFXZ_GetZfrmRange
-SFXZ_GetZfrmRange:
+.fn SFXZ_GetZfrmRange, global
 /* 803D5F94 0039F554  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803D5F98 0039F558  7C 08 02 A6 */	mflr r0
 /* 803D5F9C 0039F55C  3C E0 80 52 */	lis r7, lbl_80520B6C@ha
@@ -235,9 +235,9 @@ SFXZ_GetZfrmRange:
 /* 803D60D8 0039F698  7C 08 03 A6 */	mtlr r0
 /* 803D60DC 0039F69C  38 21 00 50 */	addi r1, r1, 0x50
 /* 803D60E0 0039F6A0  4E 80 00 20 */	blr 
+.endfn SFXZ_GetZfrmRange
 
-.global sfxzmv_MakeOrgZ32TblByDirect
-sfxzmv_MakeOrgZ32TblByDirect:
+.fn sfxzmv_MakeOrgZ32TblByDirect, global
 /* 803D60E4 0039F6A4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D60E8 0039F6A8  3C 05 80 00 */	addis r0, r5, 0x8000
 /* 803D60EC 0039F6AC  28 00 00 00 */	cmplwi r0, 0
@@ -448,9 +448,9 @@ sfxzmv_MakeOrgZ32TblByDirect:
 /* 803D6408 0039F9C8  83 A1 00 14 */	lwz r29, 0x14(r1)
 /* 803D640C 0039F9CC  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D6410 0039F9D0  4E 80 00 20 */	blr 
+.endfn sfxzmv_MakeOrgZ32TblByDirect
 
-.global sfxzmv_MakeOrgZ32TblByCCIR
-sfxzmv_MakeOrgZ32TblByCCIR:
+.fn sfxzmv_MakeOrgZ32TblByCCIR, global
 /* 803D6414 0039F9D4  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 803D6418 0039F9D8  7C 08 02 A6 */	mflr r0
 /* 803D641C 0039F9DC  90 01 00 74 */	stw r0, 0x74(r1)
@@ -916,9 +916,9 @@ sfxzmv_MakeOrgZ32TblByCCIR:
 /* 803D6B2C 003A00EC  7C 08 03 A6 */	mtlr r0
 /* 803D6B30 003A00F0  38 21 00 70 */	addi r1, r1, 0x70
 /* 803D6B34 003A00F4  4E 80 00 20 */	blr 
+.endfn sfxzmv_MakeOrgZ32TblByCCIR
 
-.global SFXZ_MakeCnvZTbl
-SFXZ_MakeCnvZTbl:
+.fn SFXZ_MakeCnvZTbl, global
 /* 803D6B38 003A00F8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803D6B3C 003A00FC  7C 08 02 A6 */	mflr r0
 /* 803D6B40 003A0100  90 01 00 34 */	stw r0, 0x34(r1)
@@ -983,9 +983,9 @@ SFXZ_MakeCnvZTbl:
 /* 803D6C18 003A01D8  7C 08 03 A6 */	mtlr r0
 /* 803D6C1C 003A01DC  38 21 00 30 */	addi r1, r1, 0x30
 /* 803D6C20 003A01E0  4E 80 00 20 */	blr 
+.endfn SFXZ_MakeCnvZTbl
 
-.global sfxzmv_MakeZ16TblFromOrgZ32
-sfxzmv_MakeZ16TblFromOrgZ32:
+.fn sfxzmv_MakeZ16TblFromOrgZ32, global
 /* 803D6C24 003A01E4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D6C28 003A01E8  3C C0 80 62 */	lis r6, lbl_8061D498@ha
 /* 803D6C2C 003A01EC  38 C6 D4 98 */	addi r6, r6, lbl_8061D498@l
@@ -1112,9 +1112,9 @@ sfxzmv_MakeZ16TblFromOrgZ32:
 .L_803D6DFC:
 /* 803D6DFC 003A03BC  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D6E00 003A03C0  4E 80 00 20 */	blr 
+.endfn sfxzmv_MakeZ16TblFromOrgZ32
 
-.global sfxzmv_MakeZ32TblFromOrgZ32
-sfxzmv_MakeZ32TblFromOrgZ32:
+.fn sfxzmv_MakeZ32TblFromOrgZ32, global
 /* 803D6E04 003A03C4  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 803D6E08 003A03C8  7C 08 02 A6 */	mflr r0
 /* 803D6E0C 003A03CC  90 01 00 84 */	stw r0, 0x84(r1)
@@ -1250,6 +1250,7 @@ sfxzmv_MakeZ32TblFromOrgZ32:
 /* 803D7000 003A05C0  7C 08 03 A6 */	mtlr r0
 /* 803D7004 003A05C4  38 21 00 80 */	addi r1, r1, 0x80
 /* 803D7008 003A05C8  4E 80 00 20 */	blr 
+.endfn sfxzmv_MakeZ32TblFromOrgZ32
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

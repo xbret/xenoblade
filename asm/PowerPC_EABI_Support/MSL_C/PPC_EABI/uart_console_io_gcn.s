@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __write_console
-__write_console:
+.fn __write_console, global
 /* 802C7110 002906D0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802C7114 002906D4  7C 08 02 A6 */	mflr r0
 /* 802C7118 002906D8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -60,11 +59,12 @@ __write_console:
 /* 802C71D4 00290794  7C 08 03 A6 */	mtlr r0
 /* 802C71D8 00290798  38 21 00 20 */	addi r1, r1, 0x20
 /* 802C71DC 0029079C  4E 80 00 20 */	blr 
+.endfn __write_console
 
-.global __close_console
-__close_console:
+.fn __close_console, global
 /* 802C71E0 002907A0  38 60 00 00 */	li r3, 0
 /* 802C71E4 002907A4  4E 80 00 20 */	blr 
+.endfn __close_console
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 .skip 0x4

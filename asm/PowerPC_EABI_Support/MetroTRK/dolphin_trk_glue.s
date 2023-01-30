@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global TRKLoadContext
-TRKLoadContext:
+.fn TRKLoadContext, global
 /* 802CC224 002957E4  80 03 00 00 */	lwz r0, 0(r3)
 /* 802CC228 002957E8  80 23 00 04 */	lwz r1, 4(r3)
 /* 802CC22C 002957EC  80 43 00 08 */	lwz r2, 8(r3)
@@ -40,9 +39,9 @@ TRKLoadContext:
 /* 802CC2A0 00295860  80 9F 01 9C */	lwz r4, 0x19c(r31)
 /* 802CC2A4 00295864  83 FF 00 7C */	lwz r31, 0x7c(r31)
 /* 802CC2A8 00295868  48 00 33 24 */	b TRKInterruptHandler
+.endfn TRKLoadContext
 
-.global TRKEXICallBack
-TRKEXICallBack:
+.fn TRKEXICallBack, global
 /* 802CC2AC 0029586C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CC2B0 00295870  7C 08 02 A6 */	mflr r0
 /* 802CC2B4 00295874  90 01 00 14 */	stw r0, 0x14(r1)
@@ -57,9 +56,9 @@ TRKEXICallBack:
 /* 802CC2D8 00295898  7C 08 03 A6 */	mtlr r0
 /* 802CC2DC 0029589C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CC2E0 002958A0  4E 80 00 20 */	blr 
+.endfn TRKEXICallBack
 
-.global InitMetroTRKCommTable
-InitMetroTRKCommTable:
+.fn InitMetroTRKCommTable, global
 /* 802CC2E4 002958A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CC2E8 002958A8  7C 08 02 A6 */	mflr r0
 /* 802CC2EC 002958AC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -141,13 +140,13 @@ InitMetroTRKCommTable:
 /* 802CC410 002959D0  7C 08 03 A6 */	mtlr r0
 /* 802CC414 002959D4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CC418 002959D8  4E 80 00 20 */	blr 
+.endfn InitMetroTRKCommTable
 
-.global TRKUARTInterruptHandler
-TRKUARTInterruptHandler:
+.fn TRKUARTInterruptHandler, global
 /* 802CC41C 002959DC  4E 80 00 20 */	blr 
+.endfn TRKUARTInterruptHandler
 
-.global TRKInitializeIntDrivenUART
-TRKInitializeIntDrivenUART:
+.fn TRKInitializeIntDrivenUART, global
 /* 802CC420 002959E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CC424 002959E4  7C 08 02 A6 */	mflr r0
 /* 802CC428 002959E8  3C 80 80 2D */	lis r4, TRKEXICallBack@ha
@@ -169,9 +168,9 @@ TRKInitializeIntDrivenUART:
 /* 802CC468 00295A28  7C 08 03 A6 */	mtlr r0
 /* 802CC46C 00295A2C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CC470 00295A30  4E 80 00 20 */	blr
+.endfn TRKInitializeIntDrivenUART
 
-.global EnableEXI2Interrupts
-EnableEXI2Interrupts:
+.fn EnableEXI2Interrupts, global
 /* 802CC474 00295A34  88 0D B3 F8 */	lbz r0, lbl_80667578@sda21(r13)
 /* 802CC478 00295A38  2C 00 00 00 */	cmpwi r0, 0
 /* 802CC47C 00295A3C  4C 82 00 20 */	bnelr 
@@ -183,17 +182,17 @@ EnableEXI2Interrupts:
 /* 802CC494 00295A54  7D 89 03 A6 */	mtctr r12
 /* 802CC498 00295A58  4E 80 04 20 */	bctr 
 /* 802CC49C 00295A5C  4E 80 00 20 */	blr 
+.endfn EnableEXI2Interrupts
 
-.global TRKPollUART
-TRKPollUART:
+.fn TRKPollUART, global
 /* 802CC4A0 00295A60  3C 60 80 58 */	lis r3, gDBCommTable@ha
 /* 802CC4A4 00295A64  38 63 B8 88 */	addi r3, r3, gDBCommTable@l
 /* 802CC4A8 00295A68  81 83 00 0C */	lwz r12, 0xc(r3)
 /* 802CC4AC 00295A6C  7D 89 03 A6 */	mtctr r12
 /* 802CC4B0 00295A70  4E 80 04 20 */	bctr 
+.endfn TRKPollUART
 
-.global TRKReadUARTN
-TRKReadUARTN:
+.fn TRKReadUARTN, global
 /* 802CC4B4 00295A74  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CC4B8 00295A78  7C 08 02 A6 */	mflr r0
 /* 802CC4BC 00295A7C  3C A0 80 58 */	lis r5, gDBCommTable@ha
@@ -209,9 +208,9 @@ TRKReadUARTN:
 /* 802CC4E4 00295AA4  7C 08 03 A6 */	mtlr r0
 /* 802CC4E8 00295AA8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CC4EC 00295AAC  4E 80 00 20 */	blr 
+.endfn TRKReadUARTN
 
-.global TRKWriteUARTN
-TRKWriteUARTN:
+.fn TRKWriteUARTN, global
 /* 802CC4F0 00295AB0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CC4F4 00295AB4  7C 08 02 A6 */	mflr r0
 /* 802CC4F8 00295AB8  3C A0 80 58 */	lis r5, gDBCommTable@ha
@@ -227,34 +226,34 @@ TRKWriteUARTN:
 /* 802CC520 00295AE0  7C 08 03 A6 */	mtlr r0
 /* 802CC524 00295AE4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CC528 00295AE8  4E 80 00 20 */	blr 
+.endfn TRKWriteUARTN
 
-.global ReserveEXI2Port
-ReserveEXI2Port:
+.fn ReserveEXI2Port, global
 /* 802CC52C 00295AEC  3C 60 80 58 */	lis r3, gDBCommTable@ha
 /* 802CC530 00295AF0  38 63 B8 88 */	addi r3, r3, gDBCommTable@l
 /* 802CC534 00295AF4  81 83 00 24 */	lwz r12, 0x24(r3)
 /* 802CC538 00295AF8  7D 89 03 A6 */	mtctr r12
 /* 802CC53C 00295AFC  4E 80 04 20 */	bctr 
+.endfn ReserveEXI2Port
 
-.global UnreserveEXI2Port
-UnreserveEXI2Port:
+.fn UnreserveEXI2Port, global
 /* 802CC540 00295B00  3C 60 80 58 */	lis r3, gDBCommTable@ha
 /* 802CC544 00295B04  38 63 B8 88 */	addi r3, r3, gDBCommTable@l
 /* 802CC548 00295B08  81 83 00 20 */	lwz r12, 0x20(r3)
 /* 802CC54C 00295B0C  7D 89 03 A6 */	mtctr r12
 /* 802CC550 00295B10  4E 80 04 20 */	bctr 
+.endfn UnreserveEXI2Port
 
-.global TRK_board_display
-TRK_board_display:
+.fn TRK_board_display, global
 /* 802CC554 00295B14  3C A0 80 54 */	lis r5, lbl_8053FD80@ha
 /* 802CC558 00295B18  7C 64 1B 78 */	mr r4, r3
 /* 802CC55C 00295B1C  38 A5 FD 80 */	addi r5, r5, lbl_8053FD80@l
 /* 802CC560 00295B20  38 65 00 DD */	addi r3, r5, 0xdd
 /* 802CC564 00295B24  4C C6 31 82 */	crclr 6
 /* 802CC568 00295B28  48 08 89 88 */	b OSReport
+.endfn TRK_board_display
 
-.global InitializeProgramEndTrap
-InitializeProgramEndTrap:
+.fn InitializeProgramEndTrap, global
 /* 802CC56C 00295B2C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CC570 00295B30  7C 08 02 A6 */	mflr r0
 /* 802CC574 00295B34  38 82 BA 30 */	addi r4, r2, lbl_8066BDB0@sda21
@@ -276,6 +275,7 @@ InitializeProgramEndTrap:
 /* 802CC5B4 00295B74  7C 08 03 A6 */	mtlr r0
 /* 802CC5B8 00295B78  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CC5BC 00295B7C  4E 80 00 20 */	blr 
+.endfn InitializeProgramEndTrap
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

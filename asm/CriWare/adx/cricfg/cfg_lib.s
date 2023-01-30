@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global CRICFG_Read
-CRICFG_Read:
+.fn CRICFG_Read, global
 /* 8038F4E0 00358AA0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038F4E4 00358AA4  7C 08 02 A6 */	mflr r0
 /* 8038F4E8 00358AA8  3C A0 80 5F */	lis r5, lbl_805E9D20@ha
@@ -57,6 +56,7 @@ CRICFG_Read:
 /* 8038F588 00358B48  7C 08 03 A6 */	mtlr r0
 /* 8038F58C 00358B4C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038F590 00358B50  4E 80 00 20 */	blr
+.endfn CRICFG_Read
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global adxt_trap_entry_lps
-adxt_trap_entry_lps:
+.fn adxt_trap_entry_lps, global
 /* 80384748 0034DD08  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038474C 0034DD0C  7C 08 02 A6 */	mflr r0
 /* 80384750 0034DD10  90 01 00 24 */	stw r0, 0x24(r1)
@@ -44,9 +43,9 @@ adxt_trap_entry_lps:
 /* 803847DC 0034DD9C  7C 08 03 A6 */	mtlr r0
 /* 803847E0 0034DDA0  38 21 00 20 */	addi r1, r1, 0x20
 /* 803847E4 0034DDA4  4E 80 00 20 */	blr
+.endfn adxt_trap_entry_lps
 
-.global adxt_trap_entry
-adxt_trap_entry:
+.fn adxt_trap_entry, global
 /* 803847E8 0034DDA8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803847EC 0034DDAC  7C 08 02 A6 */	mflr r0
 /* 803847F0 0034DDB0  90 01 00 34 */	stw r0, 0x34(r1)
@@ -147,9 +146,9 @@ adxt_trap_entry:
 /* 8038495C 0034DF1C  7C 08 03 A6 */	mtlr r0
 /* 80384960 0034DF20  38 21 00 30 */	addi r1, r1, 0x30
 /* 80384964 0034DF24  4E 80 00 20 */	blr
+.endfn adxt_trap_entry
 
-.global adxt_eos_entry
-adxt_eos_entry:
+.fn adxt_eos_entry, global
 /* 80384968 0034DF28  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8038496C 0034DF2C  7C 08 02 A6 */	mflr r0
 /* 80384970 0034DF30  90 01 00 14 */	stw r0, 0x14(r1)
@@ -203,9 +202,9 @@ adxt_eos_entry:
 /* 80384A1C 0034DFDC  7C 08 03 A6 */	mtlr r0
 /* 80384A20 0034DFE0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80384A24 0034DFE4  4E 80 00 20 */	blr
+.endfn adxt_eos_entry
 
-.global adxt_nlp_trap_entry
-adxt_nlp_trap_entry:
+.fn adxt_nlp_trap_entry, global
 /* 80384A28 0034DFE8  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80384A2C 0034DFEC  7C 08 02 A6 */	mflr r0
 /* 80384A30 0034DFF0  90 01 00 54 */	stw r0, 0x54(r1)
@@ -432,9 +431,9 @@ adxt_nlp_trap_entry:
 /* 80384D7C 0034E33C  7C 08 03 A6 */	mtlr r0
 /* 80384D80 0034E340  38 21 00 50 */	addi r1, r1, 0x50
 /* 80384D84 0034E344  4E 80 00 20 */	blr 
+.endfn adxt_nlp_trap_entry
 
-.global adxt_stat_decinfo
-adxt_stat_decinfo:
+.fn adxt_stat_decinfo, global
 /* 80384D88 0034E348  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80384D8C 0034E34C  7C 08 02 A6 */	mflr r0
 /* 80384D90 0034E350  90 01 00 54 */	stw r0, 0x54(r1)
@@ -724,9 +723,9 @@ adxt_stat_decinfo:
 /* 803851AC 0034E76C  7C 08 03 A6 */	mtlr r0
 /* 803851B0 0034E770  38 21 00 50 */	addi r1, r1, 0x50
 /* 803851B4 0034E774  4E 80 00 20 */	blr 
+.endfn adxt_stat_decinfo
 
-.global adxt_stat_prep
-adxt_stat_prep:
+.fn adxt_stat_prep, global
 /* 803851B8 0034E778  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803851BC 0034E77C  7C 08 02 A6 */	mflr r0
 /* 803851C0 0034E780  90 01 00 34 */	stw r0, 0x34(r1)
@@ -825,9 +824,9 @@ adxt_stat_prep:
 /* 80385314 0034E8D4  7C 08 03 A6 */	mtlr r0
 /* 80385318 0034E8D8  38 21 00 30 */	addi r1, r1, 0x30
 /* 8038531C 0034E8DC  4E 80 00 20 */	blr 
+.endfn adxt_stat_prep
 
-.global func_80385320
-func_80385320:
+.fn func_80385320, global
 /* 80385320 0034E8E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80385324 0034E8E4  7C 08 02 A6 */	mflr r0
 /* 80385328 0034E8E8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -914,9 +913,9 @@ func_80385320:
 /* 80385458 0034EA18  7C 08 03 A6 */	mtlr r0
 /* 8038545C 0034EA1C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80385460 0034EA20  4E 80 00 20 */	blr 
+.endfn func_80385320
 
-.global adxt_stat_playing
-adxt_stat_playing:
+.fn adxt_stat_playing, global
 /* 80385464 0034EA24  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80385468 0034EA28  7C 08 02 A6 */	mflr r0
 /* 8038546C 0034EA2C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -981,9 +980,9 @@ adxt_stat_playing:
 /* 80385544 0034EB04  7C 08 03 A6 */	mtlr r0
 /* 80385548 0034EB08  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038554C 0034EB0C  4E 80 00 20 */	blr 
+.endfn adxt_stat_playing
 
-.global ADXT_ExecRdCompChk
-ADXT_ExecRdCompChk:
+.fn ADXT_ExecRdCompChk, global
 /* 80385550 0034EB10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80385554 0034EB14  7C 08 02 A6 */	mflr r0
 /* 80385558 0034EB18  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1021,9 +1020,9 @@ ADXT_ExecRdCompChk:
 /* 803855CC 0034EB8C  7C 08 03 A6 */	mtlr r0
 /* 803855D0 0034EB90  38 21 00 10 */	addi r1, r1, 0x10
 /* 803855D4 0034EB94  4E 80 00 20 */	blr 
+.endfn ADXT_ExecRdCompChk
 
-.global ADXT_ExecHndl
-ADXT_ExecHndl:
+.fn ADXT_ExecHndl, global
 /* 803855D8 0034EB98  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803855DC 0034EB9C  7C 08 02 A6 */	mflr r0
 /* 803855E0 0034EBA0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1038,9 +1037,9 @@ ADXT_ExecHndl:
 /* 80385604 0034EBC4  7C 08 03 A6 */	mtlr r0
 /* 80385608 0034EBC8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038560C 0034EBCC  4E 80 00 20 */	blr 
+.endfn ADXT_ExecHndl
 
-.global adxt_ExecHndl
-adxt_ExecHndl:
+.fn adxt_ExecHndl, global
 /* 80385610 0034EBD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80385614 0034EBD4  7C 08 02 A6 */	mflr r0
 /* 80385618 0034EBD8  2C 03 00 00 */	cmpwi r3, 0
@@ -1116,6 +1115,7 @@ adxt_ExecHndl:
 /* 80385714 0034ECD4  7C 08 03 A6 */	mtlr r0
 /* 80385718 0034ECD8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038571C 0034ECDC  4E 80 00 20 */	blr
+.endfn adxt_ExecHndl
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

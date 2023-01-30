@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global hidd_pm_set_now
-hidd_pm_set_now:
+.fn hidd_pm_set_now, global
 /* 802F37C8 002BCD88  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F37CC 002BCD8C  7C 08 02 A6 */	mflr r0
 /* 802F37D0 002BCD90  3C 80 80 5C */	lis r4, lbl_805C2570@ha
@@ -135,9 +134,9 @@ hidd_pm_set_now:
 /* 802F3994 002BCF54  7C 08 03 A6 */	mtlr r0
 /* 802F3998 002BCF58  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F399C 002BCF5C  4E 80 00 20 */	blr 
+.endfn hidd_pm_set_now
 
-.global hidd_pm_proc_mode_change
-hidd_pm_proc_mode_change:
+.fn hidd_pm_proc_mode_change, global
 /* 802F39A0 002BCF60  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F39A4 002BCF64  7C 08 02 A6 */	mflr r0
 /* 802F39A8 002BCF68  90 01 00 24 */	stw r0, 0x24(r1)
@@ -230,9 +229,9 @@ hidd_pm_proc_mode_change:
 /* 802F3AEC 002BD0AC  7C 08 03 A6 */	mtlr r0
 /* 802F3AF0 002BD0B0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F3AF4 002BD0B4  4E 80 00 20 */	blr
+.endfn hidd_pm_proc_mode_change
 
-.global hidd_pm_inact_timeout
-hidd_pm_inact_timeout:
+.fn hidd_pm_inact_timeout, global
 /* 802F3AF8 002BD0B8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F3AFC 002BD0BC  7C 08 02 A6 */	mflr r0
 /* 802F3B00 002BD0C0  38 A0 00 0A */	li r5, 0xa
@@ -252,6 +251,7 @@ hidd_pm_inact_timeout:
 /* 802F3B38 002BD0F8  7C 08 03 A6 */	mtlr r0
 /* 802F3B3C 002BD0FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F3B40 002BD100  4E 80 00 20 */	blr 
+.endfn hidd_pm_inact_timeout
 
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

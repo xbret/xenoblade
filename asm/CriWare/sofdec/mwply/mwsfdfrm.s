@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global mwPlyGetCurFrm
-mwPlyGetCurFrm:
+.fn mwPlyGetCurFrm, global
 /* 8039BBFC 003651BC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8039BC00 003651C0  7C 08 02 A6 */	mflr r0
 /* 8039BC04 003651C4  90 01 00 34 */	stw r0, 0x34(r1)
@@ -188,9 +187,9 @@ mwPlyGetCurFrm:
 /* 8039BE90 00365450  7C 08 03 A6 */	mtlr r0
 /* 8039BE94 00365454  38 21 00 30 */	addi r1, r1, 0x30
 /* 8039BE98 00365458  4E 80 00 20 */	blr 
+.endfn mwPlyGetCurFrm
 
-.global mwl_convFrmInfFromSFD
-mwl_convFrmInfFromSFD:
+.fn mwl_convFrmInfFromSFD, global
 /* 8039BE9C 0036545C  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8039BEA0 00365460  7C 08 02 A6 */	mflr r0
 /* 8039BEA4 00365464  90 01 00 64 */	stw r0, 0x64(r1)
@@ -447,9 +446,9 @@ mwl_convFrmInfFromSFD:
 /* 8039C218 003657D8  7C 08 03 A6 */	mtlr r0
 /* 8039C21C 003657DC  38 21 00 60 */	addi r1, r1, 0x60
 /* 8039C220 003657E0  4E 80 00 20 */	blr 
+.endfn mwl_convFrmInfFromSFD
 
-.global mwsffrm_SetPicUsrInf
-mwsffrm_SetPicUsrInf:
+.fn mwsffrm_SetPicUsrInf, global
 /* 8039C224 003657E4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039C228 003657E8  7C 08 02 A6 */	mflr r0
 /* 8039C22C 003657EC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -490,9 +489,9 @@ mwsffrm_SetPicUsrInf:
 /* 8039C2A8 00365868  7C 08 03 A6 */	mtlr r0
 /* 8039C2AC 0036586C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039C2B0 00365870  4E 80 00 20 */	blr 
+.endfn mwsffrm_SetPicUsrInf
 
-.global mwsffrm_SetSudDatInf
-mwsffrm_SetSudDatInf:
+.fn mwsffrm_SetSudDatInf, global
 /* 8039C2B4 00365874  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039C2B8 00365878  7C 08 02 A6 */	mflr r0
 /* 8039C2BC 0036587C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -531,9 +530,9 @@ mwsffrm_SetSudDatInf:
 /* 8039C338 003658F8  7C 08 03 A6 */	mtlr r0
 /* 8039C33C 003658FC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039C340 00365900  4E 80 00 20 */	blr 
+.endfn mwsffrm_SetSudDatInf
 
-.global mwPlyCalcYccPlane
-mwPlyCalcYccPlane:
+.fn mwPlyCalcYccPlane, global
 /* 8039C344 00365904  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039C348 00365908  7C 08 02 A6 */	mflr r0
 /* 8039C34C 0036590C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -558,9 +557,9 @@ mwPlyCalcYccPlane:
 /* 8039C398 00365958  7C 08 03 A6 */	mtlr r0
 /* 8039C39C 0036595C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039C3A0 00365960  4E 80 00 20 */	blr 
+.endfn mwPlyCalcYccPlane
 
-.global mwPlyRelCurFrm
-mwPlyRelCurFrm:
+.fn mwPlyRelCurFrm, global
 /* 8039C3A4 00365964  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039C3A8 00365968  7C 08 02 A6 */	mflr r0
 /* 8039C3AC 0036596C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -616,9 +615,9 @@ mwPlyRelCurFrm:
 /* 8039C464 00365A24  7C 08 03 A6 */	mtlr r0
 /* 8039C468 00365A28  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039C46C 00365A2C  4E 80 00 20 */	blr 
+.endfn mwPlyRelCurFrm
 
-.global mwPlyGetTotalFrmNum
-mwPlyGetTotalFrmNum:
+.fn mwPlyGetTotalFrmNum, global
 /* 8039C470 00365A30  80 83 00 C8 */	lwz r4, 0xc8(r3)
 /* 8039C474 00365A34  54 80 E8 04 */	slwi r0, r4, 0x1d
 /* 8039C478 00365A38  54 84 0F FE */	srwi r4, r4, 0x1f
@@ -635,9 +634,9 @@ mwPlyGetTotalFrmNum:
 .L_8039C4A4:
 /* 8039C4A4 00365A64  80 63 00 F0 */	lwz r3, 0xf0(r3)
 /* 8039C4A8 00365A68  4E 80 00 20 */	blr 
+.endfn mwPlyGetTotalFrmNum
 
-.global MWSFFRM_InitSfhInfTable
-MWSFFRM_InitSfhInfTable:
+.fn MWSFFRM_InitSfhInfTable, global
 /* 8039C4AC 00365A6C  38 A0 00 00 */	li r5, 0
 /* 8039C4B0 00365A70  38 80 00 11 */	li r4, 0x11
 /* 8039C4B4 00365A74  38 00 00 02 */	li r0, 2
@@ -762,17 +761,18 @@ MWSFFRM_InitSfhInfTable:
 /* 8039C68C 00365C4C  38 63 01 00 */	addi r3, r3, 0x100
 /* 8039C690 00365C50  42 00 FE FC */	bdnz .L_8039C58C
 /* 8039C694 00365C54  4E 80 00 20 */	blr 
+.endfn MWSFFRM_InitSfhInfTable
 
-.global MWSFFRM_SetShfCbFn
-MWSFFRM_SetShfCbFn:
+.fn MWSFFRM_SetShfCbFn, global
 /* 8039C698 00365C58  7C 65 1B 78 */	mr r5, r3
 /* 8039C69C 00365C5C  3C 80 80 3A */	lis r4, func_8039C6AC@ha
 /* 8039C6A0 00365C60  80 63 00 48 */	lwz r3, 0x48(r3)
 /* 8039C6A4 00365C64  38 84 C6 AC */	addi r4, r4, func_8039C6AC@l
 /* 8039C6A8 00365C68  48 02 FF DC */	b func_803CC684
+.endfn MWSFFRM_SetShfCbFn
 
 
-func_8039C6AC:
+.fn func_8039C6AC, local
 /* 8039C6AC 00365C6C  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 8039C6B0 00365C70  7C 08 02 A6 */	mflr r0
 /* 8039C6B4 00365C74  2C 05 08 00 */	cmpwi r5, 0x800
@@ -990,9 +990,9 @@ switch_8039C878:
 /* 8039C99C 00365F5C  7C 08 03 A6 */	mtlr r0
 /* 8039C9A0 00365F60  38 21 00 90 */	addi r1, r1, 0x90
 /* 8039C9A4 00365F64  4E 80 00 20 */	blr 
+.endfn func_8039C6AC
 
-.global mwsffrm_AnalyAudioInfo
-mwsffrm_AnalyAudioInfo:
+.fn mwsffrm_AnalyAudioInfo, global
 /* 8039C9A8 00365F68  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8039C9AC 00365F6C  7C 08 02 A6 */	mflr r0
 /* 8039C9B0 00365F70  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1094,9 +1094,9 @@ mwsffrm_AnalyAudioInfo:
 /* 8039CAFC 003660BC  7C 08 03 A6 */	mtlr r0
 /* 8039CB00 003660C0  38 21 00 40 */	addi r1, r1, 0x40
 /* 8039CB04 003660C4  4E 80 00 20 */	blr 
+.endfn mwsffrm_AnalyAudioInfo
 
-.global func_8039CB08
-func_8039CB08:
+.fn func_8039CB08, global
 /* 8039CB08 003660C8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8039CB0C 003660CC  7C 08 02 A6 */	mflr r0
 /* 8039CB10 003660D0  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1270,9 +1270,9 @@ func_8039CB08:
 /* 8039CD70 00366330  7C 08 03 A6 */	mtlr r0
 /* 8039CD74 00366334  38 21 00 30 */	addi r1, r1, 0x30
 /* 8039CD78 00366338  4E 80 00 20 */	blr 
+.endfn func_8039CB08
 
-.global func_8039CD7C
-func_8039CD7C:
+.fn func_8039CD7C, global
 /* 8039CD7C 0036633C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8039CD80 00366340  7C 08 02 A6 */	mflr r0
 /* 8039CD84 00366344  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1331,6 +1331,7 @@ func_8039CD7C:
 /* 8039CE4C 0036640C  7C 08 03 A6 */	mtlr r0
 /* 8039CE50 00366410  38 21 00 30 */	addi r1, r1, 0x30
 /* 8039CE54 00366414  4E 80 00 20 */	blr 
+.endfn func_8039CD7C
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __dynamic_cast
-__dynamic_cast:
+.fn __dynamic_cast, global
 /* 802B9D84 00283344  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802B9D88 00283348  7C 08 02 A6 */	mflr r0
 /* 802B9D8C 0028334C  2C 03 00 00 */	cmpwi r3, 0
@@ -183,9 +182,9 @@ __dynamic_cast:
 /* 802B9FD4 00283594  7C 08 03 A6 */	mtlr r0
 /* 802B9FD8 00283598  38 21 00 20 */	addi r1, r1, 0x20
 /* 802B9FDC 0028359C  4E 80 00 20 */	blr
+.endfn __dynamic_cast
 
-.global __dt__Q23std8bad_castFv
-__dt__Q23std8bad_castFv:
+.fn __dt__Q23std8bad_castFv, global
 /* 802B9FE0 002835A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802B9FE4 002835A4  7C 08 02 A6 */	mflr r0
 /* 802B9FE8 002835A8  2C 03 00 00 */	cmpwi r3, 0
@@ -203,12 +202,13 @@ __dt__Q23std8bad_castFv:
 /* 802BA014 002835D4  7C 08 03 A6 */	mtlr r0
 /* 802BA018 002835D8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802BA01C 002835DC  4E 80 00 20 */	blr 
+.endfn __dt__Q23std8bad_castFv
 
-.global what__Q23std8bad_castCFv
-what__Q23std8bad_castCFv:
+.fn what__Q23std8bad_castCFv, global
 /* 802BA020 002835E0  3C 60 80 54 */	lis r3, lbl_8053F05C@ha
 /* 802BA024 002835E4  38 63 F0 5C */	addi r3, r3, lbl_8053F05C@l
 /* 802BA028 002835E8  4E 80 00 20 */	blr 
+.endfn what__Q23std8bad_castCFv
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 .global lbl_8053F040
@@ -272,24 +272,36 @@ lbl_8050CE30:
 	.asciz "!std::exception!!std::bad_typeid!!"
 	.asciz "!std::exception!!std::bad_cast!!"
 
-.section extab_, "a"  # 0x800066E0 - 0x80021020
+.section extab, "a" # 0x800066E0 - 0x80021020
 
-.global lbl_8001BF30
-lbl_8001BF30:
+.balign 4
+
+.obj "@etb_8001BF30", local
+.hidden "@etb_8001BF30"
 	.4byte 0x08080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001BF30"
 
-.global lbl_8001BF38
-lbl_8001BF38:
+.obj "@etb_8001BF38", local
+.hidden "@etb_8001BF38"
 	.4byte 0x08080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001BF38"
 
+.section extabindex, "a" # 0x80021020 - 0x80039220
 
-.section extabindex_, "a"  # 0x80021020 - 0x80039220
+.balign 4
 
-.4byte __dynamic_cast
+.obj "@eti_80033AB8", local
+.hidden "@eti_80033AB8"
+	.4byte __dynamic_cast
 	.4byte 0x0000025C
-	.4byte lbl_8001BF30
+	.4byte "@etb_8001BF30"
+.endobj "@eti_80033AB8"
+
+.obj "@eti_80033AC4", local
+.hidden "@eti_80033AC4"
 	.4byte __dt__Q23std8bad_castFv
 	.4byte 0x00000040
-	.4byte lbl_8001BF38
+	.4byte "@etb_8001BF38"
+.endobj "@eti_80033AC4"

@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global l2c_init
-l2c_init:
+.fn l2c_init, global
 /* 802F9B38 002C30F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F9B3C 002C30FC  7C 08 02 A6 */	mflr r0
 /* 802F9B40 002C3100  38 80 00 00 */	li r4, 0
@@ -73,9 +72,9 @@ l2c_init:
 /* 802F9C40 002C3200  7C 08 03 A6 */	mtlr r0
 /* 802F9C44 002C3204  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F9C48 002C3208  4E 80 00 20 */	blr 
+.endfn l2c_init
 
-.global l2c_rcv_acl_data
-l2c_rcv_acl_data:
+.fn l2c_rcv_acl_data, global
 /* 802F9C4C 002C320C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802F9C50 002C3210  7C 08 02 A6 */	mflr r0
 /* 802F9C54 002C3214  90 01 00 34 */	stw r0, 0x34(r1)
@@ -298,9 +297,9 @@ l2c_rcv_acl_data:
 /* 802F9F70 002C3530  7C 08 03 A6 */	mtlr r0
 /* 802F9F74 002C3534  38 21 00 30 */	addi r1, r1, 0x30
 /* 802F9F78 002C3538  4E 80 00 20 */	blr 
+.endfn l2c_rcv_acl_data
 
-.global process_l2cap_cmd
-process_l2cap_cmd:
+.fn process_l2cap_cmd, global
 /* 802F9F7C 002C353C  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 802F9F80 002C3540  7C 08 02 A6 */	mflr r0
 /* 802F9F84 002C3544  90 01 00 A4 */	stw r0, 0xa4(r1)
@@ -1017,9 +1016,9 @@ switch_802FA998:
 /* 802FA9E0 002C3FA0  7C 08 03 A6 */	mtlr r0
 /* 802FA9E4 002C3FA4  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 802FA9E8 002C3FA8  4E 80 00 20 */	blr 
+.endfn process_l2cap_cmd
 
-.global l2c_process_timeout
-l2c_process_timeout:
+.fn l2c_process_timeout, global
 /* 802FA9EC 002C3FAC  A0 03 00 14 */	lhz r0, 0x14(r3)
 /* 802FA9F0 002C3FB0  2C 00 00 04 */	cmpwi r0, 4
 /* 802FA9F4 002C3FB4  41 82 00 3C */	beq .L_802FAA30
@@ -1044,9 +1043,9 @@ l2c_process_timeout:
 /* 802FAA30 002C3FF0  38 60 00 01 */	li r3, 1
 /* 802FAA34 002C3FF4  48 00 00 08 */	b l2c_process_held_packets
 /* 802FAA38 002C3FF8  4E 80 00 20 */	blr 
+.endfn l2c_process_timeout
 
-.global l2c_process_held_packets
-l2c_process_held_packets:
+.fn l2c_process_held_packets, global
 /* 802FAA3C 002C3FFC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FAA40 002C4000  7C 08 02 A6 */	mflr r0
 /* 802FAA44 002C4004  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1129,6 +1128,7 @@ l2c_process_held_packets:
 /* 802FAB5C 002C411C  7C 08 03 A6 */	mtlr r0
 /* 802FAB60 002C4120  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FAB64 002C4124  4E 80 00 20 */	blr
+.endfn l2c_process_held_packets
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

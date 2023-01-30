@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global ADX_DecodeMono4
-ADX_DecodeMono4:
+.fn ADX_DecodeMono4, global
 /* 8038940C 003529CC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80389410 003529D0  39 80 00 00 */	li r12, 0
 /* 80389414 003529D4  BF 21 00 14 */	stmw r25, 0x14(r1)
@@ -94,9 +93,9 @@ ADX_DecodeMono4:
 /* 8038953C 00352AFC  BB 21 00 14 */	lmw r25, 0x14(r1)
 /* 80389540 00352B00  38 21 00 30 */	addi r1, r1, 0x30
 /* 80389544 00352B04  4E 80 00 20 */	blr 
+.endfn ADX_DecodeMono4
 
-.global ADX_DecodeSte4AsMono
-ADX_DecodeSte4AsMono:
+.fn ADX_DecodeSte4AsMono, global
 /* 80389548 00352B08  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 8038954C 00352B0C  54 80 0F FE */	srwi r0, r4, 0x1f
 /* 80389550 00352B10  3D 60 80 52 */	lis r11, lbl_8051AA98@ha
@@ -304,9 +303,9 @@ ADX_DecodeSte4AsMono:
 /* 80389818 00352DD8  BA 01 00 10 */	lmw r16, 0x10(r1)
 /* 8038981C 00352DDC  38 21 00 50 */	addi r1, r1, 0x50
 /* 80389820 00352DE0  4E 80 00 20 */	blr 
+.endfn ADX_DecodeSte4AsMono
 
-.global ADX_DecodeSte4AsSte
-ADX_DecodeSte4AsSte:
+.fn ADX_DecodeSte4AsSte, global
 /* 80389824 00352DE4  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80389828 00352DE8  54 80 0F FE */	srwi r0, r4, 0x1f
 /* 8038982C 00352DEC  3D 60 80 52 */	lis r11, lbl_8051AA98@ha
@@ -470,9 +469,9 @@ ADX_DecodeSte4AsSte:
 /* 80389A5C 0035301C  BA 21 00 14 */	lmw r17, 0x14(r1)
 /* 80389A60 00353020  38 21 00 50 */	addi r1, r1, 0x50
 /* 80389A64 00353024  4E 80 00 20 */	blr 
+.endfn ADX_DecodeSte4AsSte
 
-.global ADX_DecodeSte4
-ADX_DecodeSte4:
+.fn ADX_DecodeSte4, global
 /* 80389A68 00353028  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80389A6C 0035302C  7C 08 02 A6 */	mflr r0
 /* 80389A70 00353030  3D 60 80 5F */	lis r11, lbl_805F60B0@ha
@@ -498,6 +497,7 @@ ADX_DecodeSte4:
 /* 80389AB8 00353078  7C 08 03 A6 */	mtlr r0
 /* 80389ABC 0035307C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80389AC0 00353080  4E 80 00 20 */	blr 
+.endfn ADX_DecodeSte4
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

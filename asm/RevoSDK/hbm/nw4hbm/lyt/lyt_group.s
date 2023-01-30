@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global __ct__Q36nw4hbm3lyt5GroupFPCQ46nw4hbm3lyt3res5GroupPQ36nw4hbm3lyt4Pane
-__ct__Q36nw4hbm3lyt5GroupFPCQ46nw4hbm3lyt3res5GroupPQ36nw4hbm3lyt4Pane:
+.fn __ct__Q36nw4hbm3lyt5GroupFPCQ46nw4hbm3lyt3res5GroupPQ36nw4hbm3lyt4Pane, global
 /* 8032D4E0 002F6AA0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8032D4E4 002F6AA4  7C 08 02 A6 */	mflr r0
 /* 8032D4E8 002F6AA8  90 01 00 44 */	stw r0, 0x44(r1)
@@ -74,10 +73,10 @@ __ct__Q36nw4hbm3lyt5GroupFPCQ46nw4hbm3lyt3res5GroupPQ36nw4hbm3lyt4Pane:
 /* 8032D5D8 002F6B98  7C 08 03 A6 */	mtlr r0
 /* 8032D5DC 002F6B9C  38 21 00 40 */	addi r1, r1, 0x40
 /* 8032D5E0 002F6BA0  4E 80 00 20 */	blr 
+.endfn __ct__Q36nw4hbm3lyt5GroupFPCQ46nw4hbm3lyt3res5GroupPQ36nw4hbm3lyt4Pane
 
 .balign 16, 0
-.global __dt__Q36nw4hbm3lyt5GroupFv
-__dt__Q36nw4hbm3lyt5GroupFv:
+.fn __dt__Q36nw4hbm3lyt5GroupFv, global
 /* 8032D5F0 002F6BB0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8032D5F4 002F6BB4  7C 08 02 A6 */	mflr r0
 /* 8032D5F8 002F6BB8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -124,10 +123,10 @@ __dt__Q36nw4hbm3lyt5GroupFv:
 /* 8032D68C 002F6C4C  7C 08 03 A6 */	mtlr r0
 /* 8032D690 002F6C50  38 21 00 30 */	addi r1, r1, 0x30
 /* 8032D694 002F6C54  4E 80 00 20 */	blr 
+.endfn __dt__Q36nw4hbm3lyt5GroupFv
 
 .balign 16, 0
-.global __dt__Q36nw4hbm3lyt14GroupContainerFv
-__dt__Q36nw4hbm3lyt14GroupContainerFv:
+.fn __dt__Q36nw4hbm3lyt14GroupContainerFv, global
 /* 8032D6A0 002F6C60  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8032D6A4 002F6C64  7C 08 02 A6 */	mflr r0
 /* 8032D6A8 002F6C68  90 01 00 34 */	stw r0, 0x34(r1)
@@ -182,10 +181,10 @@ __dt__Q36nw4hbm3lyt14GroupContainerFv:
 /* 8032D75C 002F6D1C  7C 08 03 A6 */	mtlr r0
 /* 8032D760 002F6D20  38 21 00 30 */	addi r1, r1, 0x30
 /* 8032D764 002F6D24  4E 80 00 20 */	blr 
+.endfn __dt__Q36nw4hbm3lyt14GroupContainerFv
 
 .balign 16, 0
-.global AppendGroup__Q36nw4hbm3lyt14GroupContainerFPQ36nw4hbm3lyt5Group
-AppendGroup__Q36nw4hbm3lyt14GroupContainerFPQ36nw4hbm3lyt5Group:
+.fn AppendGroup__Q36nw4hbm3lyt14GroupContainerFPQ36nw4hbm3lyt5Group, global
 /* 8032D770 002F6D30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8032D774 002F6D34  7C 08 02 A6 */	mflr r0
 /* 8032D778 002F6D38  7C 85 23 78 */	mr r5, r4
@@ -199,10 +198,10 @@ AppendGroup__Q36nw4hbm3lyt14GroupContainerFPQ36nw4hbm3lyt5Group:
 /* 8032D798 002F6D58  7C 08 03 A6 */	mtlr r0
 /* 8032D79C 002F6D5C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8032D7A0 002F6D60  4E 80 00 20 */	blr 
+.endfn AppendGroup__Q36nw4hbm3lyt14GroupContainerFPQ36nw4hbm3lyt5Group
 
 .balign 16, 0
-.global FindGroupByName__Q36nw4hbm3lyt14GroupContainerFPCc
-FindGroupByName__Q36nw4hbm3lyt14GroupContainerFPCc:
+.fn FindGroupByName__Q36nw4hbm3lyt14GroupContainerFPCc, global
 /* 8032D7B0 002F6D70  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8032D7B4 002F6D74  7C 08 02 A6 */	mflr r0
 /* 8032D7B8 002F6D78  90 01 00 24 */	stw r0, 0x24(r1)
@@ -238,6 +237,7 @@ FindGroupByName__Q36nw4hbm3lyt14GroupContainerFPCc:
 /* 8032D820 002F6DE0  7C 08 03 A6 */	mtlr r0
 /* 8032D824 002F6DE4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8032D828 002F6DE8  4E 80 00 20 */	blr 
+.endfn FindGroupByName__Q36nw4hbm3lyt14GroupContainerFPCc
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

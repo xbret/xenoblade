@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global btm_cback
-btm_cback:
+.fn btm_cback, global
 /* 802F08A0 002B9E60  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F08A4 002B9E64  7C 08 02 A6 */	mflr r0
 /* 802F08A8 002B9E68  3C E0 80 54 */	lis r7, lbl_805463A0@ha
@@ -139,21 +138,21 @@ switch_802F0A04:
 /* 802F0A6C 002BA02C  7C 08 03 A6 */	mtlr r0
 /* 802F0A70 002BA030  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F0A74 002BA034  4E 80 00 20 */	blr
+.endfn btm_cback
 
-.global gap_btm_cback0
-gap_btm_cback0:
+.fn gap_btm_cback0, global
 /* 802F0A78 002BA038  7C 64 1B 78 */	mr r4, r3
 /* 802F0A7C 002BA03C  38 60 00 00 */	li r3, 0
 /* 802F0A80 002BA040  4B FF FE 20 */	b btm_cback
+.endfn gap_btm_cback0
 
-.global gap_btm_cback1
-gap_btm_cback1:
+.fn gap_btm_cback1, global
 /* 802F0A84 002BA044  7C 64 1B 78 */	mr r4, r3
 /* 802F0A88 002BA048  38 60 00 01 */	li r3, 1
 /* 802F0A8C 002BA04C  4B FF FE 14 */	b btm_cback
+.endfn gap_btm_cback1
 
-.global gap_find_addr_name_cb
-gap_find_addr_name_cb:
+.fn gap_find_addr_name_cb, global
 /* 802F0A90 002BA050  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F0A94 002BA054  7C 08 02 A6 */	mflr r0
 /* 802F0A98 002BA058  90 01 00 24 */	stw r0, 0x24(r1)
@@ -314,8 +313,9 @@ switch_802F0C5C:
 /* 802F0C9C 002BA25C  7C 08 03 A6 */	mtlr r0
 /* 802F0CA0 002BA260  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F0CA4 002BA264  4E 80 00 20 */	blr
+.endfn gap_find_addr_name_cb
 
-gap_find_addr_inq_cb:
+.fn gap_find_addr_inq_cb, local
 /* 802F0CA8 002BA268  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F0CAC 002BA26C  7C 08 02 A6 */	mflr r0
 /* 802F0CB0 002BA270  90 01 00 24 */	stw r0, 0x24(r1)
@@ -449,9 +449,10 @@ switch_802F0E10:
 /* 802F0E50 002BA410  7C 08 03 A6 */	mtlr r0
 /* 802F0E54 002BA414  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F0E58 002BA418  4E 80 00 20 */	blr
+.endfn gap_find_addr_inq_cb
 
 #unreferenced?
-gap_convert_btm_status:
+.fn gap_convert_btm_status, local
 /* 802F0E5C 002BA41C  28 03 00 08 */	cmplwi r3, 8
 /* 802F0E60 002BA420  41 81 00 54 */	bgt switch_802F0EB4
 /* 802F0E64 002BA424  3C 80 80 54 */	lis r4, lbl_8054666C@ha
@@ -484,6 +485,7 @@ switch_802F0EAC:
 switch_802F0EB4:
 /* 802F0EB4 002BA474  38 60 01 14 */	li r3, 0x114
 /* 802F0EB8 002BA478  4E 80 00 20 */	blr
+.endfn gap_convert_btm_status
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

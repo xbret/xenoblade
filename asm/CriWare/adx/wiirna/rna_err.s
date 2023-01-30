@@ -2,16 +2,15 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global RNAERR_EntryErrFunc
-RNAERR_EntryErrFunc:
+.fn RNAERR_EntryErrFunc, global
 /* 80398FA8 00362568  3C C0 80 5F */	lis r6, lbl_805F60B8@ha
 /* 80398FAC 0036256C  3C A0 80 5F */	lis r5, lbl_805F60BC@ha
 /* 80398FB0 00362570  90 66 60 B8 */	stw r3, lbl_805F60B8@l(r6)
 /* 80398FB4 00362574  90 85 60 BC */	stw r4, lbl_805F60BC@l(r5)
 /* 80398FB8 00362578  4E 80 00 20 */	blr 
+.endfn RNAERR_EntryErrFunc
 
-.global RNAERR_CallErrFunc
-RNAERR_CallErrFunc:
+.fn RNAERR_CallErrFunc, global
 /* 80398FBC 0036257C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80398FC0 00362580  7C 08 02 A6 */	mflr r0
 /* 80398FC4 00362584  7C 64 1B 78 */	mr r4, r3
@@ -35,6 +34,7 @@ RNAERR_CallErrFunc:
 /* 80399008 003625C8  7C 08 03 A6 */	mtlr r0
 /* 8039900C 003625CC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80399010 003625D0  4E 80 00 20 */	blr
+.endfn RNAERR_CallErrFunc
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

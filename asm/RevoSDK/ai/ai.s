@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global AIRegisterDMACallback
-AIRegisterDMACallback:
+.fn AIRegisterDMACallback, global
 /* 802D10A0 0029A660  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D10A4 0029A664  7C 08 02 A6 */	mflr r0
 /* 802D10A8 0029A668  90 01 00 14 */	stw r0, 0x14(r1)
@@ -22,10 +21,10 @@ AIRegisterDMACallback:
 /* 802D10D8 0029A698  7C 08 03 A6 */	mtlr r0
 /* 802D10DC 0029A69C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D10E0 0029A6A0  4E 80 00 20 */	blr 
+.endfn AIRegisterDMACallback
 
 .balign 16, 0
-.global AIInitDMA
-AIInitDMA:
+.fn AIInitDMA, global
 /* 802D10F0 0029A6B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D10F4 0029A6B4  7C 08 02 A6 */	mflr r0
 /* 802D10F8 0029A6B8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -57,60 +56,60 @@ AIInitDMA:
 /* 802D1160 0029A720  7C 08 03 A6 */	mtlr r0
 /* 802D1164 0029A724  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D1168 0029A728  4E 80 00 20 */	blr 
+.endfn AIInitDMA
 
 .balign 16, 0
-.global AIStartDMA
-AIStartDMA:
+.fn AIStartDMA, global
 /* 802D1170 0029A730  3C 60 CC 00 */	lis r3, 0xCC005036@ha
 /* 802D1174 0029A734  A0 03 50 36 */	lhz r0, 0xCC005036@l(r3)
 /* 802D1178 0029A738  60 00 80 00 */	ori r0, r0, 0x8000
 /* 802D117C 0029A73C  B0 03 50 36 */	sth r0, 0x5036(r3)
 /* 802D1180 0029A740  4E 80 00 20 */	blr 
+.endfn AIStartDMA
 
 .balign 16, 0
-.global AIStopDMA
-AIStopDMA:
+.fn AIStopDMA, global
 /* 802D1190 0029A750  3C 60 CC 00 */	lis r3, 0xCC005036@ha
 /* 802D1194 0029A754  A0 03 50 36 */	lhz r0, 0xCC005036@l(r3)
 /* 802D1198 0029A758  54 00 04 7E */	clrlwi r0, r0, 0x11
 /* 802D119C 0029A75C  B0 03 50 36 */	sth r0, 0x5036(r3)
 /* 802D11A0 0029A760  4E 80 00 20 */	blr 
+.endfn AIStopDMA
 
 .balign 16, 0
-.global AIGetDMABytesLeft
-AIGetDMABytesLeft:
+.fn AIGetDMABytesLeft, global
 /* 802D11B0 0029A770  3C 60 CC 00 */	lis r3, 0xCC00503A@ha
 /* 802D11B4 0029A774  A0 03 50 3A */	lhz r0, 0xCC00503A@l(r3)
 /* 802D11B8 0029A778  54 03 2B 34 */	rlwinm r3, r0, 5, 0xc, 0x1a
 /* 802D11BC 0029A77C  4E 80 00 20 */	blr 
+.endfn AIGetDMABytesLeft
 
 .balign 16, 0
-.global AIGetDMAStartAddr
-AIGetDMAStartAddr:
+.fn AIGetDMAStartAddr, global
 /* 802D11C0 0029A780  3C 60 CC 00 */	lis r3, 0xCC005030@ha
 /* 802D11C4 0029A784  A0 83 50 30 */	lhz r4, 0xCC005030@l(r3)
 /* 802D11C8 0029A788  A0 03 50 32 */	lhz r0, 0x5032(r3)
 /* 802D11CC 0029A78C  54 03 04 34 */	rlwinm r3, r0, 0, 0x10, 0x1a
 /* 802D11D0 0029A790  50 83 80 DE */	rlwimi r3, r4, 0x10, 3, 0xf
 /* 802D11D4 0029A794  4E 80 00 20 */	blr 
+.endfn AIGetDMAStartAddr
 
 .balign 16, 0
-.global AIGetDMALength
-AIGetDMALength:
+.fn AIGetDMALength, global
 /* 802D11E0 0029A7A0  3C 60 CC 00 */	lis r3, 0xCC005036@ha
 /* 802D11E4 0029A7A4  A0 03 50 36 */	lhz r0, 0xCC005036@l(r3)
 /* 802D11E8 0029A7A8  54 03 2B 34 */	rlwinm r3, r0, 5, 0xc, 0x1a
 /* 802D11EC 0029A7AC  4E 80 00 20 */	blr 
+.endfn AIGetDMALength
 
 .balign 16, 0
-.global AICheckInit
-AICheckInit:
+.fn AICheckInit, global
 /* 802D11F0 0029A7B0  80 6D B4 48 */	lwz r3, lbl_806675C8@sda21(r13)
 /* 802D11F4 0029A7B4  4E 80 00 20 */	blr 
+.endfn AICheckInit
 
 .balign 16, 0
-.global AIInit
-AIInit:
+.fn AIInit, global
 /* 802D1200 0029A7C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D1204 0029A7C4  7C 08 02 A6 */	mflr r0
 /* 802D1208 0029A7C8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -209,10 +208,10 @@ AIInit:
 /* 802D1374 0029A934  7C 08 03 A6 */	mtlr r0
 /* 802D1378 0029A938  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D137C 0029A93C  4E 80 00 20 */	blr
+.endfn AIInit
 
 .balign 16, 0
-.global __AIDHandler
-__AIDHandler:
+.fn __AIDHandler, global
 /* 802D1380 0029A940  94 21 FD 20 */	stwu r1, -0x2e0(r1)
 /* 802D1384 0029A944  7C 08 02 A6 */	mflr r0
 /* 802D1388 0029A948  3C C0 CC 00 */	lis r6, 0xCC00500A@ha
@@ -258,10 +257,10 @@ __AIDHandler:
 /* 802D141C 0029A9DC  7C 08 03 A6 */	mtlr r0
 /* 802D1420 0029A9E0  38 21 02 E0 */	addi r1, r1, 0x2e0
 /* 802D1424 0029A9E4  4E 80 00 20 */	blr 
+.endfn __AIDHandler
 
 .balign 16, 0
-.global __AICallbackStackSwitch
-__AICallbackStackSwitch:
+.fn __AICallbackStackSwitch, global
 /* 802D1430 0029A9F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D1434 0029A9F4  7C 08 02 A6 */	mflr r0
 /* 802D1438 0029A9F8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -287,10 +286,10 @@ __AICallbackStackSwitch:
 /* 802D1488 0029AA48  7D 41 53 78 */	mr r1, r10
 /* 802D148C 0029AA4C  7C 08 03 A6 */	mtlr r0
 /* 802D1490 0029AA50  4E 80 00 20 */	blr 
+.endfn __AICallbackStackSwitch
 
 .balign 16, 0
-.global __AI_SRC_INIT
-__AI_SRC_INIT:
+.fn __AI_SRC_INIT, global
 /* 802D14A0 0029AA60  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D14A4 0029AA64  7C 08 02 A6 */	mflr r0
 /* 802D14A8 0029AA68  90 01 00 24 */	stw r0, 0x24(r1)
@@ -413,6 +412,7 @@ __AI_SRC_INIT:
 /* 802D1660 0029AC20  7C 08 03 A6 */	mtlr r0
 /* 802D1664 0029AC24  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D1668 0029AC28  4E 80 00 20 */	blr
+.endfn __AI_SRC_INIT
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
@@ -432,7 +432,7 @@ lbl_8053FFB8:
 	.balign 4
 	
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
-.skip 0x4 #needed to align DebuggerDriver.c
+#.skip 0x4 #needed to align DebuggerDriver.c
 
 .global lbl_806675C8
 lbl_806675C8:

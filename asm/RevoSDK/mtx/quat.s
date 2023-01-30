@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global PSQUATMultiply
-PSQUATMultiply:
+.fn PSQUATMultiply, global
 /* 8034E2C0 00317880  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
 /* 8034E2C4 00317884  E0 23 00 08 */	psq_l f1, 8(r3), 0, qr0
 /* 8034E2C8 00317888  10 A0 00 50 */	ps_neg f5, f0
@@ -28,10 +27,10 @@ PSQUATMultiply:
 /* 8034E310 003178D0  F0 E5 00 00 */	psq_st f7, 0(r5), 0, qr0
 /* 8034E314 003178D4  F0 A5 00 08 */	psq_st f5, 8(r5), 0, qr0
 /* 8034E318 003178D8  4E 80 00 20 */	blr 
+.endfn PSQUATMultiply
 
 .balign 16, 0
-.global PSQUATScale
-PSQUATScale:
+.fn PSQUATScale, global
 /* 8034E320 003178E0  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
 /* 8034E324 003178E4  E0 43 00 08 */	psq_l f2, 8(r3), 0, qr0
 /* 8034E328 003178E8  10 00 00 58 */	ps_muls0 f0, f0, f1
@@ -39,10 +38,10 @@ PSQUATScale:
 /* 8034E330 003178F0  F0 04 00 00 */	psq_st f0, 0(r4), 0, qr0
 /* 8034E334 003178F4  F0 44 00 08 */	psq_st f2, 8(r4), 0, qr0
 /* 8034E338 003178F8  4E 80 00 20 */	blr 
+.endfn PSQUATScale
 
 .balign 16, 0
-.global PSQUATDotProduct
-PSQUATDotProduct:
+.fn PSQUATDotProduct, global
 /* 8034E340 00317900  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
 /* 8034E344 00317904  E0 24 00 00 */	psq_l f1, 0(r4), 0, qr0
 /* 8034E348 00317908  E0 43 00 08 */	psq_l f2, 8(r3), 0, qr0
@@ -51,10 +50,10 @@ PSQUATDotProduct:
 /* 8034E354 00317914  10 22 08 3A */	ps_madd f1, f2, f0, f1
 /* 8034E358 00317918  10 21 08 54 */	ps_sum0 f1, f1, f1, f1
 /* 8034E35C 0031791C  4E 80 00 20 */	blr 
+.endfn PSQUATDotProduct
 
 .balign 16, 0
-.global PSQUATNormalize
-PSQUATNormalize:
+.fn PSQUATNormalize, global
 /* 8034E360 00317920  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
 /* 8034E364 00317924  C0 82 BD F0 */	lfs f4, float_8066C170@sda21(r2)
 /* 8034E368 00317928  10 40 00 32 */	ps_mul f2, f0, f0
@@ -76,10 +75,10 @@ PSQUATNormalize:
 /* 8034E3A8 00317968  F0 04 00 00 */	psq_st f0, 0(r4), 0, qr0
 /* 8034E3AC 0031796C  F0 24 00 08 */	psq_st f1, 8(r4), 0, qr0
 /* 8034E3B0 00317970  4E 80 00 20 */	blr
+.endfn PSQUATNormalize
 
 .balign 16, 0
-.global C_QUATMtx
-C_QUATMtx:
+.fn C_QUATMtx, global
 /* 8034E3C0 00317980  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8034E3C4 00317984  7C 08 02 A6 */	mflr r0
 /* 8034E3C8 00317988  90 01 00 44 */	stw r0, 0x44(r1)
@@ -200,10 +199,10 @@ C_QUATMtx:
 /* 8034E580 00317B40  7C 08 03 A6 */	mtlr r0
 /* 8034E584 00317B44  38 21 00 40 */	addi r1, r1, 0x40
 /* 8034E588 00317B48  4E 80 00 20 */	blr 
+.endfn C_QUATMtx
 
 .balign 16, 0
-.global C_QUATSlerp
-C_QUATSlerp:
+.fn C_QUATSlerp, global
 /* 8034E590 00317B50  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8034E594 00317B54  7C 08 02 A6 */	mflr r0
 /* 8034E598 00317B58  C0 83 00 00 */	lfs f4, 0(r3)
@@ -310,6 +309,7 @@ C_QUATSlerp:
 /* 8034E720 00317CE0  7C 08 03 A6 */	mtlr r0
 /* 8034E724 00317CE4  38 21 00 60 */	addi r1, r1, 0x60
 /* 8034E728 00317CE8  4E 80 00 20 */	blr 
+.endfn C_QUATSlerp
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

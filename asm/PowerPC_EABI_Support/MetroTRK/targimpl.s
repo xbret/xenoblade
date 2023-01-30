@@ -2,18 +2,17 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __TRK_get_MSR
-__TRK_get_MSR:
+.fn __TRK_get_MSR, global
 /* 802CEDA0 00298360  7C 60 00 A6 */	mfmsr r3
 /* 802CEDA4 00298364  4E 80 00 20 */	blr 
+.endfn __TRK_get_MSR
 
-.global __TRK_set_MSR
-__TRK_set_MSR:
+.fn __TRK_set_MSR, global
 /* 802CEDA8 00298368  7C 60 01 24 */	mtmsr r3
 /* 802CEDAC 0029836C  4E 80 00 20 */	blr 
+.endfn __TRK_set_MSR
 
-.global TRKValidMemory32
-TRKValidMemory32:
+.fn TRKValidMemory32, global
 /* 802CEDB0 00298370  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CEDB4 00298374  7C 08 02 A6 */	mflr r0
 /* 802CEDB8 00298378  7C 84 1A 14 */	add r4, r4, r3
@@ -83,9 +82,9 @@ TRKValidMemory32:
 /* 802CEE9C 0029845C  7C 08 03 A6 */	mtlr r0
 /* 802CEEA0 00298460  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CEEA4 00298464  4E 80 00 20 */	blr 
+.endfn TRKValidMemory32
 
-.global TRK_ppc_memcpy
-TRK_ppc_memcpy:
+.fn TRK_ppc_memcpy, global
 /* 802CEEA8 00298468  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802CEEAC 0029846C  7C 08 02 A6 */	mflr r0
 /* 802CEEB0 00298470  90 01 00 34 */	stw r0, 0x34(r1)
@@ -139,9 +138,9 @@ TRK_ppc_memcpy:
 /* 802CEF68 00298528  7C 08 03 A6 */	mtlr r0
 /* 802CEF6C 0029852C  38 21 00 30 */	addi r1, r1, 0x30
 /* 802CEF70 00298530  4E 80 00 20 */	blr 
+.endfn TRK_ppc_memcpy
 
-.global TRKTargetReadInstruction
-TRKTargetReadInstruction:
+.fn TRKTargetReadInstruction, global
 /* 802CEF74 00298534  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802CEF78 00298538  7C 08 02 A6 */	mflr r0
 /* 802CEF7C 0029853C  3D 00 80 54 */	lis r8, lbl_8053FFA8@ha
@@ -230,9 +229,9 @@ TRKTargetReadInstruction:
 /* 802CF0B8 00298678  7C 08 03 A6 */	mtlr r0
 /* 802CF0BC 0029867C  38 21 00 40 */	addi r1, r1, 0x40
 /* 802CF0C0 00298680  4E 80 00 20 */	blr 
+.endfn TRKTargetReadInstruction
 
-.global TRKTargetAccessDefault
-TRKTargetAccessDefault:
+.fn TRKTargetAccessDefault, global
 /* 802CF0C4 00298684  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CF0C8 00298688  7C 08 02 A6 */	mflr r0
 /* 802CF0CC 0029868C  28 04 00 24 */	cmplwi r4, 0x24
@@ -300,9 +299,9 @@ TRKTargetAccessDefault:
 /* 802CF1B0 00298770  7C 08 03 A6 */	mtlr r0
 /* 802CF1B4 00298774  38 21 00 20 */	addi r1, r1, 0x20
 /* 802CF1B8 00298778  4E 80 00 20 */	blr 
+.endfn TRKTargetAccessDefault
 
-.global TRKTargetAccessFP
-TRKTargetAccessFP:
+.fn TRKTargetAccessFP, global
 /* 802CF1BC 0029877C  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802CF1C0 00298780  7C 08 02 A6 */	mflr r0
 /* 802CF1C4 00298784  28 04 00 21 */	cmplwi r4, 0x21
@@ -390,9 +389,9 @@ TRKTargetAccessFP:
 /* 802CF2EC 002988AC  7C 08 03 A6 */	mtlr r0
 /* 802CF2F0 002988B0  38 21 00 40 */	addi r1, r1, 0x40
 /* 802CF2F4 002988B4  4E 80 00 20 */	blr 
+.endfn TRKTargetAccessFP
 
-.global TRKTargetAccessExtended1
-TRKTargetAccessExtended1:
+.fn TRKTargetAccessExtended1, global
 /* 802CF2F8 002988B8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CF2FC 002988BC  7C 08 02 A6 */	mflr r0
 /* 802CF300 002988C0  28 04 00 60 */	cmplwi r4, 0x60
@@ -489,9 +488,9 @@ TRKTargetAccessExtended1:
 /* 802CF450 00298A10  7C 08 03 A6 */	mtlr r0
 /* 802CF454 00298A14  38 21 00 20 */	addi r1, r1, 0x20
 /* 802CF458 00298A18  4E 80 00 20 */	blr 
+.endfn TRKTargetAccessExtended1
 
-.global TRKTargetAccessExtended2
-TRKTargetAccessExtended2:
+.fn TRKTargetAccessExtended2, global
 /* 802CF45C 00298A1C  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802CF460 00298A20  7C 08 02 A6 */	mflr r0
 /* 802CF464 00298A24  28 04 00 1F */	cmplwi r4, 0x1f
@@ -592,10 +591,10 @@ TRKTargetAccessExtended2:
 /* 802CF5C0 00298B80  7C 08 03 A6 */	mtlr r0
 /* 802CF5C4 00298B84  38 21 00 40 */	addi r1, r1, 0x40
 /* 802CF5C8 00298B88  4E 80 00 20 */	blr
+.endfn TRKTargetAccessExtended2
 
 
-.global TRKInterruptHandler
-TRKInterruptHandler:
+.fn TRKInterruptHandler, global
 /* 802CF5CC 00298B8C  7C 5A 03 A6 */	mtspr 0x1a, r2
 /* 802CF5D0 00298B90  7C 9B 03 A6 */	mtspr 0x1b, r4
 /* 802CF5D4 00298B94  7C 93 42 A6 */	mfspr r4, 0x113
@@ -741,9 +740,9 @@ TRKInterruptHandler:
 /* 802CF7F0 00298DB0  7C 51 42 A6 */	mfspr r2, 0x111
 /* 802CF7F4 00298DB4  7C 72 42 A6 */	mfspr r3, 0x112
 /* 802CF7F8 00298DB8  4C 00 00 64 */	rfi
+.endfn TRKInterruptHandler
 
-.global TRKPostInterruptEvent
-TRKPostInterruptEvent:
+.fn TRKPostInterruptEvent, global
 /* 802CF7FC 00298DBC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CF800 00298DC0  7C 08 02 A6 */	mflr r0
 /* 802CF804 00298DC4  3C 60 80 58 */	lis r3, lbl_8057D350@ha
@@ -796,9 +795,9 @@ TRKPostInterruptEvent:
 /* 802CF8A8 00298E68  7C 08 03 A6 */	mtlr r0
 /* 802CF8AC 00298E6C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802CF8B0 00298E70  4E 80 00 20 */	blr 
+.endfn TRKPostInterruptEvent
 
-.global TRKSwapAndGo
-TRKSwapAndGo:
+.fn TRKSwapAndGo, global
 /* 802CF8B4 00298E74  3C 60 80 57 */	lis r3, lbl_8057D350@h
 /* 802CF8B8 00298E78  60 63 D3 50 */	ori r3, r3, lbl_8057D350@l
 /* 802CF8BC 00298E7C  BC 03 00 00 */	stmw r0, 0(r3)
@@ -849,9 +848,9 @@ TRKSwapAndGo:
 /* 802CF96C 00298F2C  80 22 00 04 */	lwz r1, 4(r2)
 /* 802CF970 00298F30  80 42 00 08 */	lwz r2, 8(r2)
 /* 802CF974 00298F34  4C 00 00 64 */	rfi
+.endfn TRKSwapAndGo
 
-.global TRKInterruptHandlerEnableInterrupts
-TRKInterruptHandlerEnableInterrupts:
+.fn TRKInterruptHandlerEnableInterrupts, global
 /* 802CF978 00298F38  3C 40 80 57 */	lis r2, lbl_8057D350@h
 /* 802CF97C 00298F3C  60 42 D3 50 */	ori r2, r2, lbl_8057D350@l
 /* 802CF980 00298F40  80 02 00 8C */	lwz r0, 0x8c(r2)
@@ -873,9 +872,9 @@ TRKInterruptHandlerEnableInterrupts:
 /* 802CF9C0 00298F80  80 22 00 04 */	lwz r1, 4(r2)
 /* 802CF9C4 00298F84  80 42 00 08 */	lwz r2, 8(r2)
 /* 802CF9C8 00298F88  4B FF FE 34 */	b TRKPostInterruptEvent
+.endfn TRKInterruptHandlerEnableInterrupts
 
-.global TRKTargetInterrupt
-TRKTargetInterrupt:
+.fn TRKTargetInterrupt, global
 /* 802CF9CC 00298F8C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CF9D0 00298F90  7C 08 02 A6 */	mflr r0
 /* 802CF9D4 00298F94  90 01 00 14 */	stw r0, 0x14(r1)
@@ -900,9 +899,9 @@ TRKTargetInterrupt:
 /* 802CFA1C 00298FDC  7C 08 03 A6 */	mtlr r0
 /* 802CFA20 00298FE0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CFA24 00298FE4  4E 80 00 20 */	blr 
+.endfn TRKTargetInterrupt
 
-.global TRKTargetAddStopInfo
-TRKTargetAddStopInfo:
+.fn TRKTargetAddStopInfo, global
 /* 802CFA28 00298FE8  94 21 FB 90 */	stwu r1, -0x470(r1)
 /* 802CFA2C 00298FEC  7C 08 02 A6 */	mflr r0
 /* 802CFA30 00298FF0  38 80 00 00 */	li r4, 0
@@ -1035,9 +1034,9 @@ TRKTargetAddStopInfo:
 /* 802CFC1C 002991DC  7C 08 03 A6 */	mtlr r0
 /* 802CFC20 002991E0  38 21 04 70 */	addi r1, r1, 0x470
 /* 802CFC24 002991E4  4E 80 00 20 */	blr 
+.endfn TRKTargetAddStopInfo
 
-.global TRKTargetAddExceptionInfo
-TRKTargetAddExceptionInfo:
+.fn TRKTargetAddExceptionInfo, global
 /* 802CFC28 002991E8  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 802CFC2C 002991EC  7C 08 02 A6 */	mflr r0
 /* 802CFC30 002991F0  38 80 00 00 */	li r4, 0
@@ -1077,9 +1076,9 @@ TRKTargetAddExceptionInfo:
 /* 802CFCB8 00299278  7C 08 03 A6 */	mtlr r0
 /* 802CFCBC 0029927C  38 21 00 60 */	addi r1, r1, 0x60
 /* 802CFCC0 00299280  4E 80 00 20 */	blr 
+.endfn TRKTargetAddExceptionInfo
 
-.global TRKTargetCheckStep
-TRKTargetCheckStep:
+.fn TRKTargetCheckStep, global
 /* 802CFCC4 00299284  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CFCC8 00299288  7C 08 02 A6 */	mflr r0
 /* 802CFCCC 0029928C  3C 60 80 58 */	lis r3, lbl_8057D290@ha
@@ -1160,9 +1159,9 @@ TRKTargetCheckStep:
 /* 802CFDDC 0029939C  7C 08 03 A6 */	mtlr r0
 /* 802CFDE0 002993A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CFDE4 002993A4  4E 80 00 20 */	blr 
+.endfn TRKTargetCheckStep
 
-.global TRKTargetSingleStep
-TRKTargetSingleStep:
+.fn TRKTargetSingleStep, global
 /* 802CFDE8 002993A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CFDEC 002993AC  7C 08 02 A6 */	mflr r0
 /* 802CFDF0 002993B0  2C 04 00 00 */	cmpwi r4, 0
@@ -1201,9 +1200,9 @@ TRKTargetSingleStep:
 /* 802CFE64 00299424  7C 08 03 A6 */	mtlr r0
 /* 802CFE68 00299428  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CFE6C 0029942C  4E 80 00 20 */	blr 
+.endfn TRKTargetSingleStep
 
-.global TRKTargetStepOutOfRange
-TRKTargetStepOutOfRange:
+.fn TRKTargetStepOutOfRange, global
 /* 802CFE70 00299430  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CFE74 00299434  7C 08 02 A6 */	mflr r0
 /* 802CFE78 00299438  2C 05 00 00 */	cmpwi r5, 0
@@ -1236,16 +1235,16 @@ TRKTargetStepOutOfRange:
 /* 802CFED8 00299498  7C 08 03 A6 */	mtlr r0
 /* 802CFEDC 0029949C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CFEE0 002994A0  4E 80 00 20 */	blr 
+.endfn TRKTargetStepOutOfRange
 
-.global TRKTargetGetPC
-TRKTargetGetPC:
+.fn TRKTargetGetPC, global
 /* 802CFEE4 002994A4  3C 60 80 58 */	lis r3, gTRKCPUState@ha
 /* 802CFEE8 002994A8  38 63 D3 F8 */	addi r3, r3, gTRKCPUState@l
 /* 802CFEEC 002994AC  80 63 00 80 */	lwz r3, 0x80(r3)
 /* 802CFEF0 002994B0  4E 80 00 20 */	blr 
+.endfn TRKTargetGetPC
 
-.global TRKTargetSupportRequest
-TRKTargetSupportRequest:
+.fn TRKTargetSupportRequest, global
 /* 802CFEF4 002994B4  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802CFEF8 002994B8  7C 08 02 A6 */	mflr r0
 /* 802CFEFC 002994BC  3C E0 80 58 */	lis r7, gTRKCPUState@ha
@@ -1381,32 +1380,32 @@ TRKTargetSupportRequest:
 /* 802D00DC 0029969C  7C 08 03 A6 */	mtlr r0
 /* 802D00E0 002996A0  38 21 00 30 */	addi r1, r1, 0x30
 /* 802D00E4 002996A4  4E 80 00 20 */	blr 
+.endfn TRKTargetSupportRequest
 
-.global TRKTargetStopped
-TRKTargetStopped:
+.fn TRKTargetStopped, global
 /* 802D00E8 002996A8  3C 60 80 58 */	lis r3, lbl_8057D350@ha
 /* 802D00EC 002996AC  38 63 D3 50 */	addi r3, r3, lbl_8057D350@l
 /* 802D00F0 002996B0  80 63 00 98 */	lwz r3, 0x98(r3)
 /* 802D00F4 002996B4  4E 80 00 20 */	blr 
+.endfn TRKTargetStopped
 
-.global TRKTargetSetStopped
-TRKTargetSetStopped:
+.fn TRKTargetSetStopped, global
 /* 802D00F8 002996B8  3C 80 80 58 */	lis r4, lbl_8057D350@ha
 /* 802D00FC 002996BC  38 84 D3 50 */	addi r4, r4, lbl_8057D350@l
 /* 802D0100 002996C0  90 64 00 98 */	stw r3, 0x98(r4)
 /* 802D0104 002996C4  4E 80 00 20 */	blr 
+.endfn TRKTargetSetStopped
 
-.global TRKTargetStop
-TRKTargetStop:
+.fn TRKTargetStop, global
 /* 802D0108 002996C8  3C 80 80 58 */	lis r4, lbl_8057D350@ha
 /* 802D010C 002996CC  38 00 00 01 */	li r0, 1
 /* 802D0110 002996D0  38 84 D3 50 */	addi r4, r4, lbl_8057D350@l
 /* 802D0114 002996D4  38 60 00 00 */	li r3, 0
 /* 802D0118 002996D8  90 04 00 98 */	stw r0, 0x98(r4)
 /* 802D011C 002996DC  4E 80 00 20 */	blr 
+.endfn TRKTargetStop
 
-.global TRKPPCAccessSPR
-TRKPPCAccessSPR:
+.fn TRKPPCAccessSPR, global
 /* 802D0120 002996E0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802D0124 002996E4  7C 08 02 A6 */	mflr r0
 /* 802D0128 002996E8  2C 05 00 00 */	cmpwi r5, 0
@@ -1464,9 +1463,9 @@ TRKPPCAccessSPR:
 /* 802D01F0 002997B0  7C 08 03 A6 */	mtlr r0
 /* 802D01F4 002997B4  38 21 00 40 */	addi r1, r1, 0x40
 /* 802D01F8 002997B8  4E 80 00 20 */	blr 
+.endfn TRKPPCAccessSPR
 
-.global TRKPPCAccessPairedSingleRegister
-TRKPPCAccessPairedSingleRegister:
+.fn TRKPPCAccessPairedSingleRegister, global
 /* 802D01FC 002997BC  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802D0200 002997C0  7C 08 02 A6 */	mflr r0
 /* 802D0204 002997C4  3C C0 80 51 */	lis r6, lbl_8050DEE0@ha
@@ -1510,9 +1509,9 @@ TRKPPCAccessPairedSingleRegister:
 /* 802D0298 00299858  7C 08 03 A6 */	mtlr r0
 /* 802D029C 0029985C  38 21 00 40 */	addi r1, r1, 0x40
 /* 802D02A0 00299860  4E 80 00 20 */	blr 
+.endfn TRKPPCAccessPairedSingleRegister
 
-.global ReadFPSCR
-ReadFPSCR:
+.fn ReadFPSCR, global
 /* 802D02A4 00299864  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802D02A8 00299868  DB E1 00 10 */	stfd f31, 0x10(r1)
 /* 802D02AC 0029986C  F3 E1 00 20 */	psq_st f31, 32(r1), 0, qr0
@@ -1522,9 +1521,9 @@ ReadFPSCR:
 /* 802D02BC 0029987C  CB E1 00 10 */	lfd f31, 0x10(r1)
 /* 802D02C0 00299880  38 21 00 40 */	addi r1, r1, 0x40
 /* 802D02C4 00299884  4E 80 00 20 */	blr 
+.endfn ReadFPSCR
 
-.global WriteFPSCR
-WriteFPSCR:
+.fn WriteFPSCR, global
 /* 802D02C8 00299888  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802D02CC 0029988C  DB E1 00 10 */	stfd f31, 0x10(r1)
 /* 802D02D0 00299890  F3 E1 00 20 */	psq_st f31, 32(r1), 0, qr0
@@ -1534,9 +1533,9 @@ WriteFPSCR:
 /* 802D02E0 002998A0  CB E1 00 10 */	lfd f31, 0x10(r1)
 /* 802D02E4 002998A4  38 21 00 40 */	addi r1, r1, 0x40
 /* 802D02E8 002998A8  4E 80 00 20 */	blr 
+.endfn WriteFPSCR
 
-.global TRKPPCAccessFPRegister
-TRKPPCAccessFPRegister:
+.fn TRKPPCAccessFPRegister, global
 /* 802D02EC 002998AC  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 802D02F0 002998B0  7C 08 02 A6 */	mflr r0
 /* 802D02F4 002998B4  28 04 00 20 */	cmplwi r4, 0x20
@@ -1660,9 +1659,9 @@ TRKPPCAccessFPRegister:
 /* 802D04A8 00299A68  7C 08 03 A6 */	mtlr r0
 /* 802D04AC 00299A6C  38 21 00 70 */	addi r1, r1, 0x70
 /* 802D04B0 00299A70  4E 80 00 20 */	blr 
+.endfn TRKPPCAccessFPRegister
 
-.global TRKPPCAccessSpecialReg
-TRKPPCAccessSpecialReg:
+.fn TRKPPCAccessSpecialReg, global
 /* 802D04B4 00299A74  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D04B8 00299A78  7C 08 02 A6 */	mflr r0
 /* 802D04BC 00299A7C  3C A0 4E 80 */	lis r5, 0x4E800020@ha
@@ -1689,21 +1688,21 @@ TRKPPCAccessSpecialReg:
 /* 802D0510 00299AD0  7C 08 03 A6 */	mtlr r0
 /* 802D0514 00299AD4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D0518 00299AD8  4E 80 00 20 */	blr 
+.endfn TRKPPCAccessSpecialReg
 
-.global TRKTargetSetInputPendingPtr
-TRKTargetSetInputPendingPtr:
+.fn TRKTargetSetInputPendingPtr, global
 /* 802D051C 00299ADC  3C 80 80 58 */	lis r4, lbl_8057D350@ha
 /* 802D0520 00299AE0  38 84 D3 50 */	addi r4, r4, lbl_8057D350@l
 /* 802D0524 00299AE4  90 64 00 A0 */	stw r3, 0xa0(r4)
 /* 802D0528 00299AE8  4E 80 00 20 */	blr 
+.endfn TRKTargetSetInputPendingPtr
 
-.global ConvertAddress
-ConvertAddress:
+.fn ConvertAddress, global
 /* 802D052C 00299AEC  64 63 80 00 */	oris r3, r3, 0x8000
 /* 802D0530 00299AF0  4E 80 00 20 */	blr 
+.endfn ConvertAddress
 
-.global GetThreadInfo
-GetThreadInfo:
+.fn GetThreadInfo, global
 /* 802D0534 00299AF4  38 00 00 01 */	li r0, 1
 /* 802D0538 00299AF8  90 03 00 00 */	stw r0, 0(r3)
 /* 802D053C 00299AFC  38 00 00 00 */	li r0, 0
@@ -1745,6 +1744,7 @@ GetThreadInfo:
 .L_802D05BC:
 /* 802D05BC 00299B7C  90 C3 00 00 */	stw r6, 0(r3)
 /* 802D05C0 00299B80  4E 80 00 20 */	blr 
+.endfn GetThreadInfo
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global ReadNextCharUTF8__Q34nw4r2ut14CharStrmReaderFv
-ReadNextCharUTF8__Q34nw4r2ut14CharStrmReaderFv:
+.fn ReadNextCharUTF8__Q34nw4r2ut14CharStrmReaderFv, global
 /* 8042B5F0 003F4BB0  80 E3 00 00 */	lwz r7, 0(r3)
 /* 8042B5F4 003F4BB4  88 C7 00 00 */	lbz r6, 0(r7)
 /* 8042B5F8 003F4BB8  54 C0 06 31 */	rlwinm. r0, r6, 0, 0x18, 0x18
@@ -37,9 +36,9 @@ ReadNextCharUTF8__Q34nw4r2ut14CharStrmReaderFv:
 .L_8042B660:
 /* 8042B660 003F4C20  7C C3 33 78 */	mr r3, r6
 /* 8042B664 003F4C24  4E 80 00 20 */	blr 
+.endfn ReadNextCharUTF8__Q34nw4r2ut14CharStrmReaderFv
 
-.global ReadNextCharUTF16__Q34nw4r2ut14CharStrmReaderFv
-ReadNextCharUTF16__Q34nw4r2ut14CharStrmReaderFv:
+.fn ReadNextCharUTF16__Q34nw4r2ut14CharStrmReaderFv, global
 /* 8042B668 003F4C28  7C 65 1B 78 */	mr r5, r3
 /* 8042B66C 003F4C2C  80 63 00 00 */	lwz r3, 0(r3)
 /* 8042B670 003F4C30  80 85 00 00 */	lwz r4, 0(r5)
@@ -47,9 +46,9 @@ ReadNextCharUTF16__Q34nw4r2ut14CharStrmReaderFv:
 /* 8042B678 003F4C38  38 04 00 02 */	addi r0, r4, 2
 /* 8042B67C 003F4C3C  90 05 00 00 */	stw r0, 0(r5)
 /* 8042B680 003F4C40  4E 80 00 20 */	blr 
+.endfn ReadNextCharUTF16__Q34nw4r2ut14CharStrmReaderFv
 
-.global ReadNextCharCP1252__Q34nw4r2ut14CharStrmReaderFv
-ReadNextCharCP1252__Q34nw4r2ut14CharStrmReaderFv:
+.fn ReadNextCharCP1252__Q34nw4r2ut14CharStrmReaderFv, global
 /* 8042B684 003F4C44  7C 65 1B 78 */	mr r5, r3
 /* 8042B688 003F4C48  80 63 00 00 */	lwz r3, 0(r3)
 /* 8042B68C 003F4C4C  80 85 00 00 */	lwz r4, 0(r5)
@@ -57,6 +56,7 @@ ReadNextCharCP1252__Q34nw4r2ut14CharStrmReaderFv:
 /* 8042B694 003F4C54  38 04 00 01 */	addi r0, r4, 1
 /* 8042B698 003F4C58  90 05 00 00 */	stw r0, 0(r5)
 /* 8042B69C 003F4C5C  4E 80 00 20 */	blr 
+.endfn ReadNextCharCP1252__Q34nw4r2ut14CharStrmReaderFv
 
 .global ReadNextCharSJIS__Q34nw4r2ut14CharStrmReaderFv
 ReadNextCharSJIS__Q34nw4r2ut14CharStrmReaderFv:

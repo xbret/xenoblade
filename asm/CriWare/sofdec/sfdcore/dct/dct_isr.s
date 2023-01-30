@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global DCT_IsrInit
-DCT_IsrInit:
+.fn DCT_IsrInit, global
 /* 803B9DEC 003833AC  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 803B9DF0 003833B0  7C 08 02 A6 */	mflr r0
 /* 803B9DF4 003833B4  90 01 00 64 */	stw r0, 0x64(r1)
@@ -101,25 +100,25 @@ DCT_IsrInit:
 /* 803B9F4C 0038350C  7C 08 03 A6 */	mtlr r0
 /* 803B9F50 00383510  38 21 00 60 */	addi r1, r1, 0x60
 /* 803B9F54 00383514  4E 80 00 20 */	blr 
+.endfn DCT_IsrInit
 
-.global DCT_IsrInitScaleTbl
-DCT_IsrInitScaleTbl:
+.fn DCT_IsrInitScaleTbl, global
 /* 803B9F58 00383518  3C 80 80 61 */	lis r4, sfsd_scale_tbl@ha
 /* 803B9F5C 0038351C  38 A0 00 80 */	li r5, 0x80
 /* 803B9F60 00383520  38 84 81 88 */	addi r4, r4, sfsd_scale_tbl@l
 /* 803B9F64 00383524  4B C4 A0 9C */	b memcpy
+.endfn DCT_IsrInitScaleTbl
 
-.global DCT_IsrTrans
-DCT_IsrTrans:
+.fn DCT_IsrTrans, global
 /* 803B9F68 00383528  2C 04 00 00 */	cmpwi r4, 0
 /* 803B9F6C 0038352C  40 80 00 0C */	bge .L_803B9F78
 /* 803B9F70 00383530  7C 84 00 D0 */	neg r4, r4
 /* 803B9F74 00383534  48 00 05 24 */	b MSID_JRevDctDense
 .L_803B9F78:
 /* 803B9F78 00383538  48 00 03 7C */	b MSID_JRevDctSparse
+.endfn DCT_IsrTrans
 
-.global initSparseTbl
-initSparseTbl:
+.fn initSparseTbl, global
 /* 803B9F7C 0038353C  94 21 FB 10 */	stwu r1, -0x4f0(r1)
 /* 803B9F80 00383540  7C 08 02 A6 */	mflr r0
 /* 803B9F84 00383544  90 01 04 F4 */	stw r0, 0x4f4(r1)
@@ -361,9 +360,9 @@ initSparseTbl:
 /* 803BA2E8 003838A8  7C 08 03 A6 */	mtlr r0
 /* 803BA2EC 003838AC  38 21 04 F0 */	addi r1, r1, 0x4f0
 /* 803BA2F0 003838B0  4E 80 00 20 */	blr
+.endfn initSparseTbl
 
-.global MSID_JRevDctSparse
-MSID_JRevDctSparse:
+.fn MSID_JRevDctSparse, global
 /* 803BA2F4 003838B4  2C 04 00 00 */	cmpwi r4, 0
 /* 803BA2F8 003838B8  40 82 00 B8 */	bne .L_803BA3B0
 /* 803BA2FC 003838BC  A8 83 00 00 */	lha r4, 0(r3)
@@ -481,9 +480,9 @@ MSID_JRevDctSparse:
 /* 803BA48C 00383A4C  34 A5 FF FF */	addic. r5, r5, -1
 /* 803BA490 00383A50  40 82 FF 40 */	bne .L_803BA3D0
 /* 803BA494 00383A54  4E 80 00 20 */	blr
+.endfn MSID_JRevDctSparse
 
-.global MSID_JRevDctDense
-MSID_JRevDctDense:
+.fn MSID_JRevDctDense, global
 /* 803BA498 00383A58  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803BA49C 00383A5C  7C 08 02 A6 */	mflr r0
 /* 803BA4A0 00383A60  3D 20 80 52 */	lis r9, lbl_8051F928@ha
@@ -994,13 +993,13 @@ switch_803BAA40:
 /* 803BABFC 003841BC  7C 08 03 A6 */	mtlr r0
 /* 803BAC00 003841C0  38 21 00 50 */	addi r1, r1, 0x50
 /* 803BAC04 003841C4  4E 80 00 20 */	blr 
+.endfn MSID_JRevDctDense
 
-.global IdctColumn_0000_0
-IdctColumn_0000_0:
+.fn IdctColumn_0000_0, global
 /* 803BAC08 003841C8  4E 80 00 20 */	blr 
+.endfn IdctColumn_0000_0
 
-.global IdctColumn_0000_1
-IdctColumn_0000_1:
+.fn IdctColumn_0000_1, global
 /* 803BAC0C 003841CC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803BAC10 003841D0  3C C0 FF FF */	lis r6, 0xFFFF3C11@ha
 /* 803BAC14 003841D4  3C A0 00 03 */	lis r5, 0x00029CF6@ha
@@ -1072,9 +1071,9 @@ IdctColumn_0000_1:
 /* 803BAD14 003842D4  83 81 00 10 */	lwz r28, 0x10(r1)
 /* 803BAD18 003842D8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803BAD1C 003842DC  4E 80 00 20 */	blr 
+.endfn IdctColumn_0000_1
 
-.global IdctColumn_0001_0
-IdctColumn_0001_0:
+.fn IdctColumn_0001_0, global
 /* 803BAD20 003842E0  3C 80 00 01 */	lis r4, 0x00016A0A@ha
 /* 803BAD24 003842E4  39 20 00 08 */	li r9, 8
 /* 803BAD28 003842E8  38 A4 6A 0A */	addi r5, r4, 0x00016A0A@l
@@ -1106,9 +1105,9 @@ IdctColumn_0001_0:
 /* 803BAD8C 0038434C  38 63 00 02 */	addi r3, r3, 2
 /* 803BAD90 00384350  4B FF FF 9C */	b .L_803BAD2C
 /* 803BAD94 00384354  4E 80 00 20 */	blr 
+.endfn IdctColumn_0001_0
 
-.global IdctColumn_0001_1
-IdctColumn_0001_1:
+.fn IdctColumn_0001_1, global
 /* 803BAD98 00384358  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803BAD9C 0038435C  3C E0 FF FF */	lis r7, 0xFFFF3C11@ha
 /* 803BADA0 00384360  3C A0 00 01 */	lis r5, 0x00016A0A@ha
@@ -1187,9 +1186,9 @@ IdctColumn_0001_1:
 /* 803BAEBC 0038447C  BB 21 00 14 */	lmw r25, 0x14(r1)
 /* 803BAEC0 00384480  38 21 00 30 */	addi r1, r1, 0x30
 /* 803BAEC4 00384484  4E 80 00 20 */	blr 
+.endfn IdctColumn_0001_1
 
-.global IdctColumn_0010_0
-IdctColumn_0010_0:
+.fn IdctColumn_0010_0, global
 /* 803BAEC8 00384488  38 C0 00 08 */	li r6, 8
 .L_803BAECC:
 /* 803BAECC 0038448C  A8 83 00 40 */	lha r4, 0x40(r3)
@@ -1212,9 +1211,9 @@ IdctColumn_0010_0:
 /* 803BAF10 003844D0  38 63 00 02 */	addi r3, r3, 2
 /* 803BAF14 003844D4  4B FF FF B8 */	b .L_803BAECC
 /* 803BAF18 003844D8  4E 80 00 20 */	blr 
+.endfn IdctColumn_0010_0
 
-.global IdctColumn_0010_1
-IdctColumn_0010_1:
+.fn IdctColumn_0010_1, global
 /* 803BAF1C 003844DC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803BAF20 003844E0  3C E0 FF FF */	lis r7, 0xFFFF3C11@ha
 /* 803BAF24 003844E4  3C A0 00 03 */	lis r5, 0x00029CF6@ha
@@ -1290,9 +1289,9 @@ IdctColumn_0010_1:
 /* 803BB034 003845F4  BB 61 00 0C */	lmw r27, 0xc(r1)
 /* 803BB038 003845F8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803BB03C 003845FC  4E 80 00 20 */	blr 
+.endfn IdctColumn_0010_1
 
-.global IdctColumn_0100_0
-IdctColumn_0100_0:
+.fn IdctColumn_0100_0, global
 /* 803BB040 00384600  3C 80 FF FF */	lis r4, 0xFFFE95F6@ha
 /* 803BB044 00384604  39 20 00 08 */	li r9, 8
 /* 803BB048 00384608  38 A4 95 F6 */	addi r5, r4, 0xFFFE95F6@l
@@ -1325,9 +1324,9 @@ IdctColumn_0100_0:
 /* 803BB0B0 00384670  38 63 00 02 */	addi r3, r3, 2
 /* 803BB0B4 00384674  4B FF FF 98 */	b .L_803BB04C
 /* 803BB0B8 00384678  4E 80 00 20 */	blr 
+.endfn IdctColumn_0100_0
 
-.global IdctColumn_0100_1
-IdctColumn_0100_1:
+.fn IdctColumn_0100_1, global
 /* 803BB0BC 0038467C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803BB0C0 00384680  3D 00 FF FF */	lis r8, 0xFFFE95F6@ha
 /* 803BB0C4 00384684  3C A0 00 03 */	lis r5, 0x00029CF6@ha
@@ -1407,9 +1406,9 @@ IdctColumn_0100_1:
 /* 803BB1E4 003847A4  BB 01 00 10 */	lmw r24, 0x10(r1)
 /* 803BB1E8 003847A8  38 21 00 30 */	addi r1, r1, 0x30
 /* 803BB1EC 003847AC  4E 80 00 20 */	blr 
+.endfn IdctColumn_0100_1
 
-.global IdctColumn_1000_0
-IdctColumn_1000_0:
+.fn IdctColumn_1000_0, global
 /* 803BB1F0 003847B0  38 A0 00 08 */	li r5, 8
 .L_803BB1F4:
 /* 803BB1F4 003847B4  A8 03 00 00 */	lha r0, 0(r3)
@@ -1429,9 +1428,9 @@ IdctColumn_1000_0:
 /* 803BB22C 003847EC  38 63 00 02 */	addi r3, r3, 2
 /* 803BB230 003847F0  4B FF FF C4 */	b .L_803BB1F4
 /* 803BB234 003847F4  4E 80 00 20 */	blr 
+.endfn IdctColumn_1000_0
 
-.global IdctColumn_1000_1
-IdctColumn_1000_1:
+.fn IdctColumn_1000_1, global
 /* 803BB238 003847F8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803BB23C 003847FC  3C E0 FF FF */	lis r7, 0xFFFF3C11@ha
 /* 803BB240 00384800  3C A0 00 03 */	lis r5, 0x00029CF6@ha
@@ -1512,9 +1511,9 @@ IdctColumn_1000_1:
 /* 803BB364 00384924  83 81 00 10 */	lwz r28, 0x10(r1)
 /* 803BB368 00384928  38 21 00 20 */	addi r1, r1, 0x20
 /* 803BB36C 0038492C  4E 80 00 20 */	blr 
+.endfn IdctColumn_1000_1
 
-.global IdctColumn_1010_0
-IdctColumn_1010_0:
+.fn IdctColumn_1010_0, global
 /* 803BB370 00384930  38 E0 00 08 */	li r7, 8
 .L_803BB374:
 /* 803BB374 00384934  A8 83 00 00 */	lha r4, 0(r3)
@@ -1541,9 +1540,9 @@ IdctColumn_1010_0:
 /* 803BB3C8 00384988  38 63 00 02 */	addi r3, r3, 2
 /* 803BB3CC 0038498C  4B FF FF A8 */	b .L_803BB374
 /* 803BB3D0 00384990  4E 80 00 20 */	blr 
+.endfn IdctColumn_1010_0
 
-.global IdctColumn_1010_1
-IdctColumn_1010_1:
+.fn IdctColumn_1010_1, global
 /* 803BB3D4 00384994  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803BB3D8 00384998  3C E0 FF FF */	lis r7, 0xFFFF3C11@ha
 /* 803BB3DC 0038499C  3C A0 00 03 */	lis r5, 0x00029CF6@ha
@@ -1623,9 +1622,9 @@ IdctColumn_1010_1:
 /* 803BB4FC 00384ABC  BB 41 00 08 */	lmw r26, 8(r1)
 /* 803BB500 00384AC0  38 21 00 20 */	addi r1, r1, 0x20
 /* 803BB504 00384AC4  4E 80 00 20 */	blr 
+.endfn IdctColumn_1010_1
 
-.global IdctColumn_1111_0
-IdctColumn_1111_0:
+.fn IdctColumn_1111_0, global
 /* 803BB508 00384AC8  3C 80 00 01 */	lis r4, 0x00016A0A@ha
 /* 803BB50C 00384ACC  39 60 00 08 */	li r11, 8
 /* 803BB510 00384AD0  38 84 6A 0A */	addi r4, r4, 0x00016A0A@l
@@ -1670,9 +1669,9 @@ IdctColumn_1111_0:
 /* 803BB5A8 00384B68  38 63 00 02 */	addi r3, r3, 2
 /* 803BB5AC 00384B6C  4B FF FF 68 */	b .L_803BB514
 /* 803BB5B0 00384B70  4E 80 00 20 */	blr 
+.endfn IdctColumn_1111_0
 
-.global IdctColumn_1111_1
-IdctColumn_1111_1:
+.fn IdctColumn_1111_1, global
 /* 803BB5B4 00384B74  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803BB5B8 00384B78  3C E0 FF FF */	lis r7, 0xFFFF3C11@ha
 /* 803BB5BC 00384B7C  3C A0 00 01 */	lis r5, 0x00016A0A@ha
@@ -1764,6 +1763,7 @@ IdctColumn_1111_1:
 /* 803BB70C 00384CCC  BB 01 00 10 */	lmw r24, 0x10(r1)
 /* 803BB710 00384CD0  38 21 00 30 */	addi r1, r1, 0x30
 /* 803BB714 00384CD4  4E 80 00 20 */	blr 
+.endfn IdctColumn_1111_1
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

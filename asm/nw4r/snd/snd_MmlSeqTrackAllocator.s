@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global AllocTrack__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPQ44nw4r3snd6detail9SeqPlayer
-AllocTrack__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPQ44nw4r3snd6detail9SeqPlayer:
+.fn AllocTrack__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPQ44nw4r3snd6detail9SeqPlayer, global
 /* 8041883C 003E1DFC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80418840 003E1E00  7C 08 02 A6 */	mflr r0
 /* 80418844 003E1E04  90 01 00 14 */	stw r0, 0x14(r1)
@@ -33,10 +32,10 @@ AllocTrack__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPQ44nw4r3snd6detail9SeqPlay
 /* 80418898 003E1E58  7C 08 03 A6 */	mtlr r0
 /* 8041889C 003E1E5C  38 21 00 10 */	addi r1, r1, 0x10
 /* 804188A0 003E1E60  4E 80 00 20 */	blr
+.endfn AllocTrack__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPQ44nw4r3snd6detail9SeqPlayer
 
 
-.global FreeTrack__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPQ44nw4r3snd6detail8SeqTrack
-FreeTrack__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPQ44nw4r3snd6detail8SeqTrack:
+.fn FreeTrack__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPQ44nw4r3snd6detail8SeqTrack, global
 /* 804188A4 003E1E64  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804188A8 003E1E68  7C 08 02 A6 */	mflr r0
 /* 804188AC 003E1E6C  2C 04 00 00 */	cmpwi r4, 0
@@ -64,26 +63,26 @@ FreeTrack__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPQ44nw4r3snd6detail8SeqTrack
 /* 80418900 003E1EC0  7C 08 03 A6 */	mtlr r0
 /* 80418904 003E1EC4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80418908 003E1EC8  4E 80 00 20 */	blr 
+.endfn FreeTrack__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPQ44nw4r3snd6detail8SeqTrack
 
-.global Create__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPvUl
-Create__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPvUl:
+.fn Create__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPvUl, global
 /* 8041890C 003E1ECC  38 C0 00 CC */	li r6, 0xcc
 /* 80418910 003E1ED0  38 63 00 08 */	addi r3, r3, 8
 /* 80418914 003E1ED4  4B FF E3 94 */	b CreateImpl__Q44nw4r3snd6detail8PoolImplFPvUlUl
+.endfn Create__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPvUl
 
-.global Destroy__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPvUl
-Destroy__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPvUl:
+.fn Destroy__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPvUl, global
 /* 80418918 003E1ED8  38 63 00 08 */	addi r3, r3, 8
 /* 8041891C 003E1EDC  4B FF E4 D0 */	b DestroyImpl__Q44nw4r3snd6detail8PoolImplFPvUl
+.endfn Destroy__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPvUl
 
-.global GetAllocatableTrackCount__Q44nw4r3snd6detail20MmlSeqTrackAllocatorCFv
-GetAllocatableTrackCount__Q44nw4r3snd6detail20MmlSeqTrackAllocatorCFv:
+.fn GetAllocatableTrackCount__Q44nw4r3snd6detail20MmlSeqTrackAllocatorCFv, global
 /* 80418920 003E1EE0  38 63 00 08 */	addi r3, r3, 8
 /* 80418924 003E1EE4  4B FF E5 48 */	b CountImpl__Q44nw4r3snd6detail8PoolImplCFv
+.endfn GetAllocatableTrackCount__Q44nw4r3snd6detail20MmlSeqTrackAllocatorCFv
 
 #__dt__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFv or __dt__Q44nw4r3snd6detail17SeqTrackAllocatorFv
-.global func_80418928
-func_80418928:
+.fn func_80418928, global
 /* 80418928 003E1EE8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041892C 003E1EEC  7C 08 02 A6 */	mflr r0
 /* 80418930 003E1EF0  2C 03 00 00 */	cmpwi r3, 0
@@ -101,6 +100,7 @@ func_80418928:
 /* 8041895C 003E1F1C  7C 08 03 A6 */	mtlr r0
 /* 80418960 003E1F20  38 21 00 10 */	addi r1, r1, 0x10
 /* 80418964 003E1F24  4E 80 00 20 */	blr 
+.endfn func_80418928
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

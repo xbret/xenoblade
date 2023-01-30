@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global L2CA_Register
-L2CA_Register:
+.fn L2CA_Register, global
 /* 802F6904 002BFEC4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F6908 002BFEC8  7C 08 02 A6 */	mflr r0
 /* 802F690C 002BFECC  3C A0 80 5C */	lis r5, lbl_805C2AC0@ha
@@ -116,9 +115,9 @@ L2CA_Register:
 /* 802F6A94 002C0054  7C 08 03 A6 */	mtlr r0
 /* 802F6A98 002C0058  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F6A9C 002C005C  4E 80 00 20 */	blr 
+.endfn L2CA_Register
 
-.global L2CA_Deregister
-L2CA_Deregister:
+.fn L2CA_Deregister, global
 /* 802F6AA0 002C0060  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F6AA4 002C0064  7C 08 02 A6 */	mflr r0
 /* 802F6AA8 002C0068  3C 80 80 5C */	lis r4, lbl_805C2AC0@ha
@@ -158,9 +157,9 @@ L2CA_Deregister:
 /* 802F6B24 002C00E4  7C 08 03 A6 */	mtlr r0
 /* 802F6B28 002C00E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F6B2C 002C00EC  4E 80 00 20 */	blr 
+.endfn L2CA_Deregister
 
-.global L2CA_ConnectReq
-L2CA_ConnectReq:
+.fn L2CA_ConnectReq, global
 /* 802F6B30 002C00F0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F6B34 002C00F4  7C 08 02 A6 */	mflr r0
 /* 802F6B38 002C00F8  3C A0 80 5C */	lis r5, lbl_805C2AC0@ha
@@ -318,9 +317,9 @@ L2CA_ConnectReq:
 /* 802F6D58 002C0318  7C 08 03 A6 */	mtlr r0
 /* 802F6D5C 002C031C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F6D60 002C0320  4E 80 00 20 */	blr 
+.endfn L2CA_ConnectReq
 
-.global L2CA_ConnectRsp
-L2CA_ConnectRsp:
+.fn L2CA_ConnectRsp, global
 /* 802F6D64 002C0324  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802F6D68 002C0328  7C 08 02 A6 */	mflr r0
 /* 802F6D6C 002C032C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -433,9 +432,9 @@ L2CA_ConnectRsp:
 /* 802F6EE8 002C04A8  7C 08 03 A6 */	mtlr r0
 /* 802F6EEC 002C04AC  38 21 00 30 */	addi r1, r1, 0x30
 /* 802F6EF0 002C04B0  4E 80 00 20 */	blr 
+.endfn L2CA_ConnectRsp
 
-.global L2CA_ConfigReq
-L2CA_ConfigReq:
+.fn L2CA_ConfigReq, global
 /* 802F6EF4 002C04B4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F6EF8 002C04B8  7C 08 02 A6 */	mflr r0
 /* 802F6EFC 002C04BC  3C A0 80 5C */	lis r5, lbl_805C2AC0@ha
@@ -486,9 +485,9 @@ L2CA_ConfigReq:
 /* 802F6FA0 002C0560  7C 08 03 A6 */	mtlr r0
 /* 802F6FA4 002C0564  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F6FA8 002C0568  4E 80 00 20 */	blr 
+.endfn L2CA_ConfigReq
 
-.global L2CA_ConfigRsp
-L2CA_ConfigRsp:
+.fn L2CA_ConfigRsp, global
 /* 802F6FAC 002C056C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F6FB0 002C0570  7C 08 02 A6 */	mflr r0
 /* 802F6FB4 002C0574  3C A0 80 5C */	lis r5, lbl_805C2AC0@ha
@@ -547,9 +546,9 @@ L2CA_ConfigRsp:
 /* 802F7070 002C0630  7C 08 03 A6 */	mtlr r0
 /* 802F7074 002C0634  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F7078 002C0638  4E 80 00 20 */	blr 
+.endfn L2CA_ConfigRsp
 
-.global L2CA_DisconnectReq
-L2CA_DisconnectReq:
+.fn L2CA_DisconnectReq, global
 /* 802F707C 002C063C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F7080 002C0640  7C 08 02 A6 */	mflr r0
 /* 802F7084 002C0644  3C 80 80 5C */	lis r4, lbl_805C2AC0@ha
@@ -595,9 +594,9 @@ L2CA_DisconnectReq:
 /* 802F7114 002C06D4  7C 08 03 A6 */	mtlr r0
 /* 802F7118 002C06D8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F711C 002C06DC  4E 80 00 20 */	blr 
+.endfn L2CA_DisconnectReq
 
-.global L2CA_DisconnectRsp
-L2CA_DisconnectRsp:
+.fn L2CA_DisconnectRsp, global
 /* 802F7120 002C06E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F7124 002C06E4  7C 08 02 A6 */	mflr r0
 /* 802F7128 002C06E8  3C 80 80 5C */	lis r4, lbl_805C2AC0@ha
@@ -643,9 +642,9 @@ L2CA_DisconnectRsp:
 /* 802F71B8 002C0778  7C 08 03 A6 */	mtlr r0
 /* 802F71BC 002C077C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F71C0 002C0780  4E 80 00 20 */	blr 
+.endfn L2CA_DisconnectRsp
 
-.global L2CA_DataWrite
-L2CA_DataWrite:
+.fn L2CA_DataWrite, global
 /* 802F71C4 002C0784  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F71C8 002C0788  7C 08 02 A6 */	mflr r0
 /* 802F71CC 002C078C  3C A0 80 5C */	lis r5, lbl_805C2AC0@ha
@@ -725,9 +724,9 @@ L2CA_DataWrite:
 /* 802F72DC 002C089C  7C 08 03 A6 */	mtlr r0
 /* 802F72E0 002C08A0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F72E4 002C08A4  4E 80 00 20 */	blr 
+.endfn L2CA_DataWrite
 
-.global L2CA_SetIdleTimeout
-L2CA_SetIdleTimeout:
+.fn L2CA_SetIdleTimeout, global
 /* 802F72E8 002C08A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F72EC 002C08AC  7C 08 02 A6 */	mflr r0
 /* 802F72F0 002C08B0  2C 05 00 00 */	cmpwi r5, 0
@@ -784,9 +783,9 @@ L2CA_SetIdleTimeout:
 /* 802F73A4 002C0964  7C 08 03 A6 */	mtlr r0
 /* 802F73A8 002C0968  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F73AC 002C096C  4E 80 00 20 */	blr 
+.endfn L2CA_SetIdleTimeout
 
-.global L2CA_SetIdleTimeoutByBdAddr
-L2CA_SetIdleTimeoutByBdAddr:
+.fn L2CA_SetIdleTimeoutByBdAddr, global
 /* 802F73B0 002C0970  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F73B4 002C0974  7C 08 02 A6 */	mflr r0
 /* 802F73B8 002C0978  38 A0 00 06 */	li r5, 6
@@ -858,9 +857,9 @@ L2CA_SetIdleTimeoutByBdAddr:
 /* 802F74A4 002C0A64  7C 08 03 A6 */	mtlr r0
 /* 802F74A8 002C0A68  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F74AC 002C0A6C  4E 80 00 20 */	blr 
+.endfn L2CA_SetIdleTimeoutByBdAddr
 
-.global L2CA_SetTraceLevel
-L2CA_SetTraceLevel:
+.fn L2CA_SetTraceLevel, global
 /* 802F74B0 002C0A70  28 03 00 FF */	cmplwi r3, 0xff
 /* 802F74B4 002C0A74  41 82 00 0C */	beq .L_802F74C0
 /* 802F74B8 002C0A78  3C 80 80 5C */	lis r4, lbl_805C2AC0@ha
@@ -869,10 +868,11 @@ L2CA_SetTraceLevel:
 /* 802F74C0 002C0A80  3C 60 80 5C */	lis r3, lbl_805C2AC0@ha
 /* 802F74C4 002C0A84  88 63 2A C0 */	lbz r3, lbl_805C2AC0@l(r3)
 /* 802F74C8 002C0A88  4E 80 00 20 */	blr 
+.endfn L2CA_SetTraceLevel
 
-.global L2CA_RegisterCompression
-L2CA_RegisterCompression:
+.fn L2CA_RegisterCompression, global
 /* 802F74CC 002C0A8C  4E 80 00 20 */	blr
+.endfn L2CA_RegisterCompression
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

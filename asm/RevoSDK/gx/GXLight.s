@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global GXInitLightAttn
-GXInitLightAttn:
+.fn GXInitLightAttn, global
 /* 8031B950 002E4F10  D0 23 00 10 */	stfs f1, 0x10(r3)
 /* 8031B954 002E4F14  D0 43 00 14 */	stfs f2, 0x14(r3)
 /* 8031B958 002E4F18  D0 63 00 18 */	stfs f3, 0x18(r3)
@@ -12,26 +11,26 @@ GXInitLightAttn:
 /* 8031B960 002E4F20  D0 A3 00 20 */	stfs f5, 0x20(r3)
 /* 8031B964 002E4F24  D0 C3 00 24 */	stfs f6, 0x24(r3)
 /* 8031B968 002E4F28  4E 80 00 20 */	blr 
+.endfn GXInitLightAttn
 
 .balign 16, 0
-.global GXInitLightAttnA
-GXInitLightAttnA:
+.fn GXInitLightAttnA, global
 /* 8031B970 002E4F30  D0 23 00 10 */	stfs f1, 0x10(r3)
 /* 8031B974 002E4F34  D0 43 00 14 */	stfs f2, 0x14(r3)
 /* 8031B978 002E4F38  D0 63 00 18 */	stfs f3, 0x18(r3)
 /* 8031B97C 002E4F3C  4E 80 00 20 */	blr 
+.endfn GXInitLightAttnA
 
 .balign 16, 0
-.global GXInitLightAttnK
-GXInitLightAttnK:
+.fn GXInitLightAttnK, global
 /* 8031B980 002E4F40  D0 23 00 1C */	stfs f1, 0x1c(r3)
 /* 8031B984 002E4F44  D0 43 00 20 */	stfs f2, 0x20(r3)
 /* 8031B988 002E4F48  D0 63 00 24 */	stfs f3, 0x24(r3)
 /* 8031B98C 002E4F4C  4E 80 00 20 */	blr 
+.endfn GXInitLightAttnK
 
 .balign 16, 0
-.global GXInitLightSpot
-GXInitLightSpot:
+.fn GXInitLightSpot, global
 /* 8031B990 002E4F50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031B994 002E4F54  7C 08 02 A6 */	mflr r0
 /* 8031B998 002E4F58  C0 02 BC 58 */	lfs f0, float_8066BFD8@sda21(r2)
@@ -145,10 +144,10 @@ GXInitLightSpot:
 /* 8031BB20 002E50E0  7C 08 03 A6 */	mtlr r0
 /* 8031BB24 002E50E4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031BB28 002E50E8  4E 80 00 20 */	blr 
+.endfn GXInitLightSpot
 
 .balign 16, 0
-.global GXInitLightDistAttn
-GXInitLightDistAttn:
+.fn GXInitLightDistAttn, global
 /* 8031BB30 002E50F0  C0 02 BC 58 */	lfs f0, float_8066BFD8@sda21(r2)
 /* 8031BB34 002E50F4  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 8031BB38 002E50F8  40 80 00 08 */	bge .L_8031BB40
@@ -206,18 +205,18 @@ GXInitLightDistAttn:
 /* 8031BBE8 002E51A8  D0 63 00 20 */	stfs f3, 0x20(r3)
 /* 8031BBEC 002E51AC  D0 83 00 24 */	stfs f4, 0x24(r3)
 /* 8031BBF0 002E51B0  4E 80 00 20 */	blr 
+.endfn GXInitLightDistAttn
 
 .balign 16, 0
-.global GXInitLightPos
-GXInitLightPos:
+.fn GXInitLightPos, global
 /* 8031BC00 002E51C0  D0 23 00 28 */	stfs f1, 0x28(r3)
 /* 8031BC04 002E51C4  D0 43 00 2C */	stfs f2, 0x2c(r3)
 /* 8031BC08 002E51C8  D0 63 00 30 */	stfs f3, 0x30(r3)
 /* 8031BC0C 002E51CC  4E 80 00 20 */	blr 
+.endfn GXInitLightPos
 
 .balign 16, 0
-.global GXGetLightPos
-GXGetLightPos:
+.fn GXGetLightPos, global
 /* 8031BC10 002E51D0  C0 03 00 28 */	lfs f0, 0x28(r3)
 /* 8031BC14 002E51D4  D0 04 00 00 */	stfs f0, 0(r4)
 /* 8031BC18 002E51D8  C0 03 00 2C */	lfs f0, 0x2c(r3)
@@ -225,10 +224,10 @@ GXGetLightPos:
 /* 8031BC20 002E51E0  C0 03 00 30 */	lfs f0, 0x30(r3)
 /* 8031BC24 002E51E4  D0 06 00 00 */	stfs f0, 0(r6)
 /* 8031BC28 002E51E8  4E 80 00 20 */	blr 
+.endfn GXGetLightPos
 
 .balign 16, 0
-.global GXInitLightDir
-GXInitLightDir:
+.fn GXInitLightDir, global
 /* 8031BC30 002E51F0  FC 80 08 50 */	fneg f4, f1
 /* 8031BC34 002E51F4  FC 20 10 50 */	fneg f1, f2
 /* 8031BC38 002E51F8  FC 00 18 50 */	fneg f0, f3
@@ -236,10 +235,10 @@ GXInitLightDir:
 /* 8031BC40 002E5200  D0 23 00 38 */	stfs f1, 0x38(r3)
 /* 8031BC44 002E5204  D0 03 00 3C */	stfs f0, 0x3c(r3)
 /* 8031BC48 002E5208  4E 80 00 20 */	blr 
+.endfn GXInitLightDir
 
 .balign 16, 0
-.global GXGetLightDir
-GXGetLightDir:
+.fn GXGetLightDir, global
 /* 8031BC50 002E5210  C0 03 00 34 */	lfs f0, 0x34(r3)
 /* 8031BC54 002E5214  C0 23 00 38 */	lfs f1, 0x38(r3)
 /* 8031BC58 002E5218  FC 40 00 50 */	fneg f2, f0
@@ -250,10 +249,10 @@ GXGetLightDir:
 /* 8031BC6C 002E522C  D0 25 00 00 */	stfs f1, 0(r5)
 /* 8031BC70 002E5230  D0 06 00 00 */	stfs f0, 0(r6)
 /* 8031BC74 002E5234  4E 80 00 20 */	blr 
+.endfn GXGetLightDir
 
 .balign 16, 0
-.global GXInitSpecularDir
-GXInitSpecularDir:
+.fn GXInitSpecularDir, global
 /* 8031BC80 002E5240  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8031BC84 002E5244  7C 08 02 A6 */	mflr r0
 /* 8031BC88 002E5248  FC C0 18 50 */	fneg f6, f3
@@ -322,17 +321,17 @@ GXInitSpecularDir:
 /* 8031BD80 002E5340  7C 08 03 A6 */	mtlr r0
 /* 8031BD84 002E5344  38 21 00 70 */	addi r1, r1, 0x70
 /* 8031BD88 002E5348  4E 80 00 20 */	blr 
+.endfn GXInitSpecularDir
 
 .balign 16, 0
-.global GXInitLightColor
-GXInitLightColor:
+.fn GXInitLightColor, global
 /* 8031BD90 002E5350  80 04 00 00 */	lwz r0, 0(r4)
 /* 8031BD94 002E5354  90 03 00 0C */	stw r0, 0xc(r3)
 /* 8031BD98 002E5358  4E 80 00 20 */	blr 
+.endfn GXInitLightColor
 
 .balign 16, 0
-.global GXLoadLightObjImm
-GXLoadLightObjImm:
+.fn GXLoadLightObjImm, global
 /* 8031BDA0 002E5360  7C 80 00 34 */	cntlzw r0, r4
 /* 8031BDA4 002E5364  3C 80 CC 01 */	lis r4, 0xCC008000@ha
 /* 8031BDA8 002E5368  20 A0 00 1F */	subfic r5, r0, 0x1f
@@ -365,10 +364,10 @@ GXLoadLightObjImm:
 /* 8031BE14 002E53D4  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
 /* 8031BE18 002E53D8  B0 03 00 02 */	sth r0, 2(r3)
 /* 8031BE1C 002E53DC  4E 80 00 20 */	blr 
+.endfn GXLoadLightObjImm
 
 .balign 16, 0
-.global GXSetChanAmbColor
-GXSetChanAmbColor:
+.fn GXSetChanAmbColor, global
 /* 8031BE20 002E53E0  2C 03 00 00 */	cmpwi r3, 0
 /* 8031BE24 002E53E4  41 82 00 30 */	beq .L_8031BE54
 /* 8031BE28 002E53E8  2C 03 00 01 */	cmpwi r3, 1
@@ -430,10 +429,10 @@ GXSetChanAmbColor:
 /* 8031BEEC 002E54AC  90 06 05 FC */	stw r0, 0x5fc(r6)
 /* 8031BEF0 002E54B0  90 E3 00 A8 */	stw r7, 0xa8(r3)
 /* 8031BEF4 002E54B4  4E 80 00 20 */	blr 
+.endfn GXSetChanAmbColor
 
 .balign 16, 0
-.global GXSetChanMatColor
-GXSetChanMatColor:
+.fn GXSetChanMatColor, global
 /* 8031BF00 002E54C0  2C 03 00 00 */	cmpwi r3, 0
 /* 8031BF04 002E54C4  41 82 00 30 */	beq .L_8031BF34
 /* 8031BF08 002E54C8  2C 03 00 01 */	cmpwi r3, 1
@@ -495,10 +494,10 @@ GXSetChanMatColor:
 /* 8031BFCC 002E558C  90 06 05 FC */	stw r0, 0x5fc(r6)
 /* 8031BFD0 002E5590  90 E3 00 B0 */	stw r7, 0xb0(r3)
 /* 8031BFD4 002E5594  4E 80 00 20 */	blr 
+.endfn GXSetChanMatColor
 
 .balign 16, 0
-.global GXSetNumChans
-GXSetNumChans:
+.fn GXSetNumChans, global
 /* 8031BFE0 002E55A0  80 82 BC 20 */	lwz r4, lbl_8066BFA0@sda21(r2)
 /* 8031BFE4 002E55A4  80 04 02 54 */	lwz r0, 0x254(r4)
 /* 8031BFE8 002E55A8  50 60 26 76 */	rlwimi r0, r3, 4, 0x19, 0x1b
@@ -508,10 +507,10 @@ GXSetNumChans:
 /* 8031BFF8 002E55B8  60 00 00 04 */	ori r0, r0, 4
 /* 8031BFFC 002E55BC  90 04 05 FC */	stw r0, 0x5fc(r4)
 /* 8031C000 002E55C0  4E 80 00 20 */	blr 
+.endfn GXSetNumChans
 
 .balign 16, 0
-.global GXSetChanCtrl
-GXSetChanCtrl:
+.fn GXSetChanCtrl, global
 /* 8031C010 002E55D0  2C 09 00 00 */	cmpwi r9, 0
 /* 8031C014 002E55D4  39 40 00 00 */	li r10, 0
 /* 8031C018 002E55D8  50 8A 0F BC */	rlwimi r10, r4, 1, 0x1e, 0x1e
@@ -555,6 +554,7 @@ GXSetChanCtrl:
 /* 8031C0A8 002E5668  60 00 A0 00 */	ori r0, r0, 0xa000
 /* 8031C0AC 002E566C  90 05 05 FC */	stw r0, 0x5fc(r5)
 /* 8031C0B0 002E5670  4E 80 00 20 */	blr 
+.endfn GXSetChanCtrl
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

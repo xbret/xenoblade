@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global WUDHidHostCallback
-WUDHidHostCallback:
+.fn WUDHidHostCallback, global
 /* 8037BFE0 003455A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8037BFE4 003455A4  7C 08 02 A6 */	mflr r0
 /* 8037BFE8 003455A8  28 03 00 0F */	cmplwi r3, 0xf
@@ -396,10 +395,10 @@ switch_8037C540:
 /* 8037C554 00345B14  7C 08 03 A6 */	mtlr r0
 /* 8037C558 00345B18  38 21 00 20 */	addi r1, r1, 0x20
 /* 8037C55C 00345B1C  4E 80 00 20 */	blr 
+.endfn WUDHidHostCallback
 
 .balign 16, 0
-.global bta_hh_co_data
-bta_hh_co_data:
+.fn bta_hh_co_data, global
 /* 8037C560 00345B20  28 08 00 03 */	cmplwi r8, 3
 /* 8037C564 00345B24  3C C0 80 5E */	lis r6, __rvl_wudcb@ha
 /* 8037C568 00345B28  38 C6 12 80 */	addi r6, r6, __rvl_wudcb@l
@@ -416,28 +415,29 @@ bta_hh_co_data:
 /* 8037C590 00345B50  4C C6 31 82 */	crclr 6
 /* 8037C594 00345B54  48 00 00 3C */	b WUD_DEBUGPrint
 /* 8037C598 00345B58  4E 80 00 20 */	blr 
+.endfn bta_hh_co_data
 
 .balign 16, 0
-.global bta_hh_co_open
-bta_hh_co_open:
+.fn bta_hh_co_open, global
 /* 8037C5A0 00345B60  3C 60 80 56 */	lis r3, lbl_805636E0@ha
 /* 8037C5A4 00345B64  38 63 36 E0 */	addi r3, r3, lbl_805636E0@l
 /* 8037C5A8 00345B68  4C C6 31 82 */	crclr 6
 /* 8037C5AC 00345B6C  48 00 00 24 */	b WUD_DEBUGPrint
+.endfn bta_hh_co_open
 
 .balign 16, 0
-.global bta_hh_co_close
-bta_hh_co_close:
+.fn bta_hh_co_close, global
 /* 8037C5B0 00345B70  3C 60 80 56 */	lis r3, lbl_805636F4@ha
 /* 8037C5B4 00345B74  38 63 36 F4 */	addi r3, r3, lbl_805636F4@l
 /* 8037C5B8 00345B78  4C C6 31 82 */	crclr 6
 /* 8037C5BC 00345B7C  48 00 00 14 */	b WUD_DEBUGPrint
+.endfn bta_hh_co_close
 
 .balign 16, 0
-.global bta_dm_co_get_compress_memory
-bta_dm_co_get_compress_memory:
+.fn bta_dm_co_get_compress_memory, global
 /* 8037C5C0 00345B80  38 60 00 00 */	li r3, 0
 /* 8037C5C4 00345B84  4E 80 00 20 */	blr 
+.endfn bta_dm_co_get_compress_memory
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

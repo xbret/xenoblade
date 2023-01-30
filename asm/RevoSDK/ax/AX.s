@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global AXInitSpecifyMem
-AXInitSpecifyMem:
+.fn AXInitSpecifyMem, global
 /* 802D2050 0029B610  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D2054 0029B614  7C 08 02 A6 */	mflr r0
 /* 802D2058 0029B618  90 01 00 14 */	stw r0, 0x14(r1)
@@ -27,10 +26,10 @@ AXInitSpecifyMem:
 /* 802D2098 0029B658  7C 08 03 A6 */	mtlr r0
 /* 802D209C 0029B65C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D20A0 0029B660  4E 80 00 20 */	blr 
+.endfn AXInitSpecifyMem
 
 .balign 16, 0
-.global AXQuit
-AXQuit:
+.fn AXQuit, global
 /* 802D20B0 0029B670  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D20B4 0029B674  7C 08 02 A6 */	mflr r0
 /* 802D20B8 0029B678  90 01 00 14 */	stw r0, 0x14(r1)
@@ -50,12 +49,13 @@ AXQuit:
 /* 802D20EC 0029B6AC  7C 08 03 A6 */	mtlr r0
 /* 802D20F0 0029B6B0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D20F4 0029B6B4  4E 80 00 20 */	blr 
+.endfn AXQuit
 
 .balign 16, 0
-.global AXIsInit
-AXIsInit:
+.fn AXIsInit, global
 /* 802D2100 0029B6C0  80 6D B4 88 */	lwz r3, lbl_80667608@sda21(r13)
 /* 802D2104 0029B6C4  4E 80 00 20 */	blr 
+.endfn AXIsInit
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

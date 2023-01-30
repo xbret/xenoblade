@@ -2,8 +2,9 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_804DB0F0
-func_804DB0F0:
+
+
+.fn func_804DB0F0, global
 /* 804DB0F0 004A46B0  90 83 00 00 */	stw r4, 0(r3)
 /* 804DB0F4 004A46B4  38 00 00 00 */	li r0, 0
 /* 804DB0F8 004A46B8  90 A3 00 04 */	stw r5, 4(r3)
@@ -13,9 +14,9 @@ func_804DB0F0:
 /* 804DB108 004A46C8  98 04 00 00 */	stb r0, 0(r4)
 /* 804DB10C 004A46CC  90 06 00 00 */	stw r0, 0(r6)
 /* 804DB110 004A46D0  4E 80 00 20 */	blr 
+.endfn func_804DB0F0
 
-.global func_804DB114
-func_804DB114:
+.fn func_804DB114, global
 /* 804DB114 004A46D4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DB118 004A46D8  7C 08 02 A6 */	mflr r0
 /* 804DB11C 004A46DC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -96,9 +97,9 @@ func_804DB114:
 /* 804DB21C 004A47DC  7C 08 03 A6 */	mtlr r0
 /* 804DB220 004A47E0  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DB224 004A47E4  4E 80 00 20 */	blr
+.endfn func_804DB114
 
-.global sinit_804DB228
-sinit_804DB228:
+.fn sinit_804DB228, global
 /* 804DB228 004A47E8  38 6D C1 48 */	addi r3, r13, lbl_806682C8@sda21
 /* 804DB22C 004A47EC  48 00 00 04 */	b .L_804DB230
 .L_804DB230:
@@ -106,12 +107,17 @@ sinit_804DB228:
 /* 804DB234 004A47F4  38 84 35 F0 */	addi r4, r4, __vt__CNReqtaskReaddir@l
 /* 804DB238 004A47F8  90 83 00 00 */	stw r4, 0(r3)
 /* 804DB23C 004A47FC  4E 80 00 20 */	blr
+.endfn sinit_804DB228
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.balign 4
 
 .4byte sinit_804DB228
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
 
 .global CNReqtaskReaddir_typestr
 CNReqtaskReaddir_typestr:
@@ -120,6 +126,8 @@ CNReqtaskReaddir_typestr:
 	.4byte 0
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
 
 .global __vt__CNReqtaskReaddir
 __vt__CNReqtaskReaddir:
@@ -137,6 +145,8 @@ CNReqtaskReaddir_hierarchy:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+
+
 .global __RTTI__CNReqtaskReaddir
 __RTTI__CNReqtaskReaddir:
 	.4byte CNReqtaskReaddir_typestr
@@ -144,20 +154,29 @@ __RTTI__CNReqtaskReaddir:
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+
+
 .global lbl_806682C8
 lbl_806682C8:
 	.skip 0x8
 
-.section extab_, "a"  # 0x800066E0 - 0x80021020
+.section extab, "a" # 0x800066E0 - 0x80021020
 
-.global lbl_80020778
-lbl_80020778:
+.balign 4
+
+.obj "@etb_80020778", local
+.hidden "@etb_80020778"
 	.4byte 0x08080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_80020778"
 
+.section extabindex, "a" # 0x80021020 - 0x80039220
 
-.section extabindex_, "a"  # 0x80021020 - 0x80039220
+.balign 4
 
-.4byte func_804DB114
+.obj "@eti_80038780", local
+.hidden "@eti_80038780"
+	.4byte func_804DB114
 	.4byte 0x00000114
-	.4byte lbl_80020778
+	.4byte "@etb_80020778"
+.endobj "@eti_80038780"

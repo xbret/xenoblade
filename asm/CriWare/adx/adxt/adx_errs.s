@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global ADXERR_Init
-ADXERR_Init:
+.fn ADXERR_Init, global
 /* 8038A188 00353748  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8038A18C 0035374C  7C 08 02 A6 */	mflr r0
 /* 8038A190 00353750  38 80 00 00 */	li r4, 0
@@ -22,9 +21,9 @@ ADXERR_Init:
 /* 8038A1C4 00353784  7C 08 03 A6 */	mtlr r0
 /* 8038A1C8 00353788  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038A1CC 0035378C  4E 80 00 20 */	blr 
+.endfn ADXERR_Init
 
-.global ADXERR_Finish
-ADXERR_Finish:
+.fn ADXERR_Finish, global
 /* 8038A1D0 00353790  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8038A1D4 00353794  7C 08 02 A6 */	mflr r0
 /* 8038A1D8 00353798  38 80 00 00 */	li r4, 0
@@ -43,9 +42,9 @@ ADXERR_Finish:
 /* 8038A20C 003537CC  7C 08 03 A6 */	mtlr r0
 /* 8038A210 003537D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038A214 003537D4  4E 80 00 20 */	blr 
+.endfn ADXERR_Finish
 
-.global ADXERR_CallErrFunc1_
-ADXERR_CallErrFunc1_:
+.fn ADXERR_CallErrFunc1_, global
 /* 8038A218 003537D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8038A21C 003537DC  7C 08 02 A6 */	mflr r0
 /* 8038A220 003537E0  2C 03 00 00 */	cmpwi r3, 0
@@ -82,9 +81,9 @@ ADXERR_CallErrFunc1_:
 /* 8038A290 00353850  7C 08 03 A6 */	mtlr r0
 /* 8038A294 00353854  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038A298 00353858  4E 80 00 20 */	blr 
+.endfn ADXERR_CallErrFunc1_
 
-.global ADXERR_CallErrFunc2_
-ADXERR_CallErrFunc2_:
+.fn ADXERR_CallErrFunc2_, global
 /* 8038A29C 0035385C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8038A2A0 00353860  7C 08 02 A6 */	mflr r0
 /* 8038A2A4 00353864  2C 03 00 00 */	cmpwi r3, 0
@@ -132,9 +131,9 @@ ADXERR_CallErrFunc2_:
 /* 8038A33C 003538FC  7C 08 03 A6 */	mtlr r0
 /* 8038A340 00353900  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038A344 00353904  4E 80 00 20 */	blr 
+.endfn ADXERR_CallErrFunc2_
 
-.global ADXERR_ItoA
-ADXERR_ItoA:
+.fn ADXERR_ItoA, global
 /* 8038A348 00353908  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8038A34C 0035390C  7C 08 02 A6 */	mflr r0
 /* 8038A350 00353910  3C C0 66 66 */	lis r6, 0x66666667@ha
@@ -308,9 +307,9 @@ ADXERR_ItoA:
 /* 8038A5C0 00353B80  7C 08 03 A6 */	mtlr r0
 /* 8038A5C4 00353B84  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038A5C8 00353B88  4E 80 00 20 */	blr 
+.endfn ADXERR_ItoA
 
-.global ADXERR_ItoA2
-ADXERR_ItoA2:
+.fn ADXERR_ItoA2, global
 /* 8038A5CC 00353B8C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038A5D0 00353B90  7C 08 02 A6 */	mflr r0
 /* 8038A5D4 00353B94  90 01 00 24 */	stw r0, 0x24(r1)
@@ -350,6 +349,7 @@ ADXERR_ItoA2:
 /* 8038A65C 00353C1C  7C 08 03 A6 */	mtlr r0
 /* 8038A660 00353C20  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038A664 00353C24  4E 80 00 20 */	blr 
+.endfn ADXERR_ItoA2
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

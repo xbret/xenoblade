@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __ct__Q34nw4r3snd18MemorySoundArchiveFv
-__ct__Q34nw4r3snd18MemorySoundArchiveFv:
+.fn __ct__Q34nw4r3snd18MemorySoundArchiveFv, global
 /* 80417168 003E0728  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041716C 003E072C  7C 08 02 A6 */	mflr r0
 /* 80417170 003E0730  90 01 00 14 */	stw r0, 0x14(r1)
@@ -23,9 +22,9 @@ __ct__Q34nw4r3snd18MemorySoundArchiveFv:
 /* 804171A8 003E0768  7C 08 03 A6 */	mtlr r0
 /* 804171AC 003E076C  38 21 00 10 */	addi r1, r1, 0x10
 /* 804171B0 003E0770  4E 80 00 20 */	blr 
+.endfn __ct__Q34nw4r3snd18MemorySoundArchiveFv
 
-.global __dt__Q34nw4r3snd18MemorySoundArchiveFv
-__dt__Q34nw4r3snd18MemorySoundArchiveFv:
+.fn __dt__Q34nw4r3snd18MemorySoundArchiveFv, global
 /* 804171B4 003E0774  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804171B8 003E0778  7C 08 02 A6 */	mflr r0
 /* 804171BC 003E077C  2C 03 00 00 */	cmpwi r3, 0
@@ -49,9 +48,9 @@ __dt__Q34nw4r3snd18MemorySoundArchiveFv:
 /* 80417200 003E07C0  7C 08 03 A6 */	mtlr r0
 /* 80417204 003E07C4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80417208 003E07C8  4E 80 00 20 */	blr 
+.endfn __dt__Q34nw4r3snd18MemorySoundArchiveFv
 
-.global Setup__Q34nw4r3snd18MemorySoundArchiveFPCv
-Setup__Q34nw4r3snd18MemorySoundArchiveFPCv:
+.fn Setup__Q34nw4r3snd18MemorySoundArchiveFPCv, global
 /* 8041720C 003E07CC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80417210 003E07D0  7C 08 02 A6 */	mflr r0
 /* 80417214 003E07D4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -82,15 +81,15 @@ Setup__Q34nw4r3snd18MemorySoundArchiveFPCv:
 /* 80417278 003E0838  7C 08 03 A6 */	mtlr r0
 /* 8041727C 003E083C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80417280 003E0840  4E 80 00 20 */	blr 
+.endfn Setup__Q34nw4r3snd18MemorySoundArchiveFPCv
 
-.global Shutdown__Q34nw4r3snd18MemorySoundArchiveFv
-Shutdown__Q34nw4r3snd18MemorySoundArchiveFv:
+.fn Shutdown__Q34nw4r3snd18MemorySoundArchiveFv, global
 /* 80417284 003E0844  38 00 00 00 */	li r0, 0
 /* 80417288 003E0848  90 03 01 08 */	stw r0, 0x108(r3)
 /* 8041728C 003E084C  48 00 55 70 */	b Shutdown__Q34nw4r3snd12SoundArchiveFv
+.endfn Shutdown__Q34nw4r3snd18MemorySoundArchiveFv
 
-.global detail_GetFileAddress__Q34nw4r3snd18MemorySoundArchiveCFUl
-detail_GetFileAddress__Q34nw4r3snd18MemorySoundArchiveCFUl:
+.fn detail_GetFileAddress__Q34nw4r3snd18MemorySoundArchiveCFUl, global
 /* 80417290 003E0850  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80417294 003E0854  7C 08 02 A6 */	mflr r0
 /* 80417298 003E0858  38 A0 00 00 */	li r5, 0
@@ -140,9 +139,9 @@ detail_GetFileAddress__Q34nw4r3snd18MemorySoundArchiveCFUl:
 /* 80417334 003E08F4  7C 08 03 A6 */	mtlr r0
 /* 80417338 003E08F8  38 21 00 50 */	addi r1, r1, 0x50
 /* 8041733C 003E08FC  4E 80 00 20 */	blr 
+.endfn detail_GetFileAddress__Q34nw4r3snd18MemorySoundArchiveCFUl
 
-.global detail_GetWaveDataFileAddress__Q34nw4r3snd18MemorySoundArchiveCFUl
-detail_GetWaveDataFileAddress__Q34nw4r3snd18MemorySoundArchiveCFUl:
+.fn detail_GetWaveDataFileAddress__Q34nw4r3snd18MemorySoundArchiveCFUl, global
 /* 80417340 003E0900  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80417344 003E0904  7C 08 02 A6 */	mflr r0
 /* 80417348 003E0908  38 A0 00 00 */	li r5, 0
@@ -192,9 +191,9 @@ detail_GetWaveDataFileAddress__Q34nw4r3snd18MemorySoundArchiveCFUl:
 /* 804173E4 003E09A4  7C 08 03 A6 */	mtlr r0
 /* 804173E8 003E09A8  38 21 00 50 */	addi r1, r1, 0x50
 /* 804173EC 003E09AC  4E 80 00 20 */	blr 
+.endfn detail_GetWaveDataFileAddress__Q34nw4r3snd18MemorySoundArchiveCFUl
 
-.global OpenStream__Q34nw4r3snd18MemorySoundArchiveCFPviUlUl
-OpenStream__Q34nw4r3snd18MemorySoundArchiveCFPviUlUl:
+.fn OpenStream__Q34nw4r3snd18MemorySoundArchiveCFPviUlUl, global
 /* 804173F0 003E09B0  80 03 01 08 */	lwz r0, 0x108(r3)
 /* 804173F4 003E09B4  2C 00 00 00 */	cmpwi r0, 0
 /* 804173F8 003E09B8  40 82 00 0C */	bne .L_80417404
@@ -221,27 +220,27 @@ OpenStream__Q34nw4r3snd18MemorySoundArchiveCFPviUlUl:
 /* 80417444 003E0A04  90 E4 00 18 */	stw r7, 0x18(r4)
 /* 80417448 003E0A08  91 04 00 1C */	stw r8, 0x1c(r4)
 /* 8041744C 003E0A0C  4E 80 00 20 */	blr 
+.endfn OpenStream__Q34nw4r3snd18MemorySoundArchiveCFPviUlUl
 
-.global OpenExtStream__Q34nw4r3snd18MemorySoundArchiveCFPviPCcUlUl
-OpenExtStream__Q34nw4r3snd18MemorySoundArchiveCFPviPCcUlUl:
+.fn OpenExtStream__Q34nw4r3snd18MemorySoundArchiveCFPviPCcUlUl, global
 /* 80417450 003E0A10  38 60 00 00 */	li r3, 0
 /* 80417454 003E0A14  4E 80 00 20 */	blr 
+.endfn OpenExtStream__Q34nw4r3snd18MemorySoundArchiveCFPviPCcUlUl
 
-.global detail_GetRequiredStreamBufferSize__Q34nw4r3snd18MemorySoundArchiveCFv
-detail_GetRequiredStreamBufferSize__Q34nw4r3snd18MemorySoundArchiveCFv:
+.fn detail_GetRequiredStreamBufferSize__Q34nw4r3snd18MemorySoundArchiveCFv, global
 /* 80417458 003E0A18  38 60 00 20 */	li r3, 0x20
 /* 8041745C 003E0A1C  4E 80 00 20 */	blr 
+.endfn detail_GetRequiredStreamBufferSize__Q34nw4r3snd18MemorySoundArchiveCFv
 
-.global Close__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFv
-Close__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFv:
+.fn Close__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFv, global
 /* 80417460 003E0A20  38 00 00 00 */	li r0, 0
 /* 80417464 003E0A24  90 03 00 14 */	stw r0, 0x14(r3)
 /* 80417468 003E0A28  90 03 00 18 */	stw r0, 0x18(r3)
 /* 8041746C 003E0A2C  90 03 00 1C */	stw r0, 0x1c(r3)
 /* 80417470 003E0A30  4E 80 00 20 */	blr 
+.endfn Close__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFv
 
-.global Read__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFPvUl
-Read__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFPvUl:
+.fn Read__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFPvUl, global
 /* 80417474 003E0A34  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80417478 003E0A38  7C 08 02 A6 */	mflr r0
 /* 8041747C 003E0A3C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -265,9 +264,9 @@ Read__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFPvUl:
 /* 804174C0 003E0A80  7C 08 03 A6 */	mtlr r0
 /* 804174C4 003E0A84  38 21 00 10 */	addi r1, r1, 0x10
 /* 804174C8 003E0A88  4E 80 00 20 */	blr 
+.endfn Read__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFPvUl
 
-.global Seek__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFlUl
-Seek__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFlUl:
+.fn Seek__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFlUl, global
 /* 804174CC 003E0A8C  2C 05 00 01 */	cmpwi r5, 1
 /* 804174D0 003E0A90  41 82 00 28 */	beq .L_804174F8
 /* 804174D4 003E0A94  40 80 00 10 */	bge .L_804174E4
@@ -292,58 +291,58 @@ Seek__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFlUl:
 /* 80417510 003E0AD0  90 03 00 1C */	stw r0, 0x1c(r3)
 /* 80417514 003E0AD4  4E 80 00 20 */	blr 
 /* 80417518 003E0AD8  4E 80 00 20 */	blr
+.endfn Seek__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFlUl
 
 
-.global GetRuntimeTypeInfo__Q34nw4r2ut10FileStreamCFv
-GetRuntimeTypeInfo__Q34nw4r2ut10FileStreamCFv:
+.fn GetRuntimeTypeInfo__Q34nw4r2ut10FileStreamCFv, global
 /* 8041751C 003E0ADC  38 6D BC A8 */	addi r3, r13, lbl_80667E28@sda21
 /* 80417520 003E0AE0  4E 80 00 20 */	blr 
+.endfn GetRuntimeTypeInfo__Q34nw4r2ut10FileStreamCFv
 
 
-.global GetSize__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
-GetSize__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv:
+.fn GetSize__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv, global
 /* 80417524 003E0AE4  80 63 00 18 */	lwz r3, 0x18(r3)
 /* 80417528 003E0AE8  4E 80 00 20 */	blr 
+.endfn GetSize__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
 
 
-.global Tell__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
-Tell__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv:
+.fn Tell__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv, global
 /* 8041752C 003E0AEC  80 63 00 1C */	lwz r3, 0x1c(r3)
 /* 80417530 003E0AF0  4E 80 00 20 */	blr 
+.endfn Tell__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
 
 
-.global CanWrite__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
-CanWrite__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv:
+.fn CanWrite__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv, global
 /* 80417534 003E0AF4  38 60 00 00 */	li r3, 0
 /* 80417538 003E0AF8  4E 80 00 20 */	blr 
+.endfn CanWrite__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
 
 
-.global CanRead__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
-CanRead__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv:
+.fn CanRead__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv, global
 /* 8041753C 003E0AFC  38 60 00 01 */	li r3, 1
 /* 80417540 003E0B00  4E 80 00 20 */	blr 
+.endfn CanRead__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
 
 
-.global CanAsync__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
-CanAsync__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv:
+.fn CanAsync__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv, global
 /* 80417544 003E0B04  38 60 00 00 */	li r3, 0
 /* 80417548 003E0B08  4E 80 00 20 */	blr 
+.endfn CanAsync__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
 
 
-.global CanCancel__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
-CanCancel__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv:
+.fn CanCancel__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv, global
 /* 8041754C 003E0B0C  38 60 00 01 */	li r3, 1
 /* 80417550 003E0B10  4E 80 00 20 */	blr 
+.endfn CanCancel__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
 
 
-.global CanSeek__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
-CanSeek__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv:
+.fn CanSeek__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv, global
 /* 80417554 003E0B14  38 60 00 01 */	li r3, 1
 /* 80417558 003E0B18  4E 80 00 20 */	blr 
+.endfn CanSeek__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
 
 
-.global __dt__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFv
-__dt__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFv:
+.fn __dt__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFv, global
 /* 8041755C 003E0B1C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80417560 003E0B20  7C 08 02 A6 */	mflr r0
 /* 80417564 003E0B24  2C 03 00 00 */	cmpwi r3, 0
@@ -361,6 +360,7 @@ __dt__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFv:
 /* 80417590 003E0B50  7C 08 03 A6 */	mtlr r0
 /* 80417594 003E0B54  38 21 00 10 */	addi r1, r1, 0x10
 /* 80417598 003E0B58  4E 80 00 20 */	blr
+.endfn __dt__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFv
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

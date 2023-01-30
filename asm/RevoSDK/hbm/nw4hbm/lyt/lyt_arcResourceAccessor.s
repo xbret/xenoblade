@@ -4,7 +4,7 @@
 
 .balign 16, 0
 #FindNameResource__37@unnamed@lyt_arcResourceAccessor_cpp@FP9ARCHandlePCc
-FindNameResource__37_unnamed_lyt_arcResourceAccessor_cpp_FP9ARCHandlePCc:
+.fn FindNameResource__37_unnamed_lyt_arcResourceAccessor_cpp_FP9ARCHandlePCc, local
 /* 8032C070 002F5630  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8032C074 002F5634  7C 08 02 A6 */	mflr r0
 /* 8032C078 002F5638  3C C0 80 55 */	lis r6, lbl_8054D638@ha
@@ -64,10 +64,11 @@ FindNameResource__37_unnamed_lyt_arcResourceAccessor_cpp_FP9ARCHandlePCc:
 /* 8032C140 002F5700  7C 08 03 A6 */	mtlr r0
 /* 8032C144 002F5704  38 21 00 40 */	addi r1, r1, 0x40
 /* 8032C148 002F5708  4E 80 00 20 */	blr
+.endfn FindNameResource__37_unnamed_lyt_arcResourceAccessor_cpp_FP9ARCHandlePCc
 
 .balign 16, 0
 #GetResourceSub__37@unnamed@lyt_arcResourceAccessor_cpp@FP9ARCHandlePCcUlPCcPUl
-GetResourceSub__37_unnamed_lyt_arcResourceAccessor_cpp_FP9ARCHandlePCcUlPCcPUl:
+.fn GetResourceSub__37_unnamed_lyt_arcResourceAccessor_cpp_FP9ARCHandlePCcUlPCcPUl, local
 /* 8032C150 002F5710  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8032C154 002F5714  7C 08 02 A6 */	mflr r0
 /* 8032C158 002F5718  90 01 00 44 */	stw r0, 0x44(r1)
@@ -156,10 +157,10 @@ GetResourceSub__37_unnamed_lyt_arcResourceAccessor_cpp_FP9ARCHandlePCcUlPCcPUl:
 /* 8032C28C 002F584C  7C 08 03 A6 */	mtlr r0
 /* 8032C290 002F5850  38 21 00 40 */	addi r1, r1, 0x40
 /* 8032C294 002F5854  4E 80 00 20 */	blr 
+.endfn GetResourceSub__37_unnamed_lyt_arcResourceAccessor_cpp_FP9ARCHandlePCcUlPCcPUl
 
 .balign 16, 0
-.global __ct__Q36nw4hbm3lyt19ArcResourceAccessorFv
-__ct__Q36nw4hbm3lyt19ArcResourceAccessorFv:
+.fn __ct__Q36nw4hbm3lyt19ArcResourceAccessorFv, global
 /* 8032C2A0 002F5860  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8032C2A4 002F5864  7C 08 02 A6 */	mflr r0
 /* 8032C2A8 002F5868  90 01 00 14 */	stw r0, 0x14(r1)
@@ -181,10 +182,10 @@ __ct__Q36nw4hbm3lyt19ArcResourceAccessorFv:
 /* 8032C2E8 002F58A8  7C 08 03 A6 */	mtlr r0
 /* 8032C2EC 002F58AC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8032C2F0 002F58B0  4E 80 00 20 */	blr 
+.endfn __ct__Q36nw4hbm3lyt19ArcResourceAccessorFv
 
 .balign 16, 0
-.global Attach__Q36nw4hbm3lyt19ArcResourceAccessorFPvPCc
-Attach__Q36nw4hbm3lyt19ArcResourceAccessorFPvPCc:
+.fn Attach__Q36nw4hbm3lyt19ArcResourceAccessorFPvPCc, global
 /* 8032C300 002F58C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8032C304 002F58C4  7C 08 02 A6 */	mflr r0
 /* 8032C308 002F58C8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -218,10 +219,10 @@ Attach__Q36nw4hbm3lyt19ArcResourceAccessorFPvPCc:
 /* 8032C370 002F5930  7C 08 03 A6 */	mtlr r0
 /* 8032C374 002F5934  38 21 00 20 */	addi r1, r1, 0x20
 /* 8032C378 002F5938  4E 80 00 20 */	blr 
+.endfn Attach__Q36nw4hbm3lyt19ArcResourceAccessorFPvPCc
 
 .balign 16, 0
-.global GetResource__Q36nw4hbm3lyt19ArcResourceAccessorFUlPCcPUl
-GetResource__Q36nw4hbm3lyt19ArcResourceAccessorFUlPCcPUl:
+.fn GetResource__Q36nw4hbm3lyt19ArcResourceAccessorFUlPCcPUl, global
 /* 8032C380 002F5940  7C 88 23 78 */	mr r8, r4
 /* 8032C384 002F5944  7C A0 2B 78 */	mr r0, r5
 /* 8032C388 002F5948  7C C7 33 78 */	mr r7, r6
@@ -230,10 +231,10 @@ GetResource__Q36nw4hbm3lyt19ArcResourceAccessorFUlPCcPUl:
 /* 8032C394 002F5954  7C 06 03 78 */	mr r6, r0
 /* 8032C398 002F5958  38 63 00 04 */	addi r3, r3, 4
 /* 8032C39C 002F595C  4B FF FD B4 */	b GetResourceSub__37_unnamed_lyt_arcResourceAccessor_cpp_FP9ARCHandlePCcUlPCcPUl
+.endfn GetResource__Q36nw4hbm3lyt19ArcResourceAccessorFUlPCcPUl
 
 .balign 16, 0
-.global GetFont__Q36nw4hbm3lyt24MultiArcResourceAccessorFPCc
-GetFont__Q36nw4hbm3lyt24MultiArcResourceAccessorFPCc:
+.fn GetFont__Q36nw4hbm3lyt24MultiArcResourceAccessorFPCc, global
 /* 8032C3A0 002F5960  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8032C3A4 002F5964  7C 08 02 A6 */	mflr r0
 /* 8032C3A8 002F5968  90 01 00 24 */	stw r0, 0x24(r1)
@@ -266,6 +267,7 @@ GetFont__Q36nw4hbm3lyt24MultiArcResourceAccessorFPCc:
 /* 8032C404 002F59C4  7C 08 03 A6 */	mtlr r0
 /* 8032C408 002F59C8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8032C40C 002F59CC  4E 80 00 20 */	blr 
+.endfn GetFont__Q36nw4hbm3lyt24MultiArcResourceAccessorFPCc
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

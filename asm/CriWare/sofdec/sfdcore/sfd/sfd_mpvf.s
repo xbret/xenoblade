@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global SFMPVF_InitPool
-SFMPVF_InitPool:
+.fn SFMPVF_InitPool, global
 /* 803C7BB0 00391170  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803C7BB4 00391174  7C 08 02 A6 */	mflr r0
 /* 803C7BB8 00391178  38 80 00 00 */	li r4, 0
@@ -28,9 +27,9 @@ SFMPVF_InitPool:
 /* 803C7C00 003911C0  7C 08 03 A6 */	mtlr r0
 /* 803C7C04 003911C4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803C7C08 003911C8  4E 80 00 20 */	blr 
+.endfn SFMPVF_InitPool
 
-.global SFD_SetMpvParaTbl
-SFD_SetMpvParaTbl:
+.fn SFD_SetMpvParaTbl, global
 /* 803C7C0C 003911CC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803C7C10 003911D0  3D 60 80 62 */	lis r11, lbl_8061CD58@ha
 /* 803C7C14 003911D4  39 6B CD 58 */	addi r11, r11, lbl_8061CD58@l
@@ -123,9 +122,9 @@ SFD_SetMpvParaTbl:
 /* 803C7D4C 0039130C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 803C7D50 00391310  38 21 00 10 */	addi r1, r1, 0x10
 /* 803C7D54 00391314  4E 80 00 20 */	blr 
+.endfn SFD_SetMpvParaTbl
 
-.global sfmpvf_CheckMpvPara
-sfmpvf_CheckMpvPara:
+.fn sfmpvf_CheckMpvPara, global
 /* 803C7D58 00391318  3C 80 80 62 */	lis r4, lbl_8061CD58@ha
 /* 803C7D5C 0039131C  38 84 CD 58 */	addi r4, r4, lbl_8061CD58@l
 /* 803C7D60 00391320  38 64 00 00 */	addi r3, r4, 0
@@ -174,9 +173,9 @@ sfmpvf_CheckMpvPara:
 .L_803C7DF0:
 /* 803C7DF0 003913B0  38 60 00 00 */	li r3, 0
 /* 803C7DF4 003913B4  4E 80 00 20 */	blr 
+.endfn sfmpvf_CheckMpvPara
 
-.global SFMPVF_ReadGlobalMpvPara
-SFMPVF_ReadGlobalMpvPara:
+.fn SFMPVF_ReadGlobalMpvPara, global
 /* 803C7DF8 003913B8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803C7DFC 003913BC  7C 08 02 A6 */	mflr r0
 /* 803C7E00 003913C0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -229,9 +228,9 @@ SFMPVF_ReadGlobalMpvPara:
 /* 803C7EB4 00391474  7C 08 03 A6 */	mtlr r0
 /* 803C7EB8 00391478  38 21 00 10 */	addi r1, r1, 0x10
 /* 803C7EBC 0039147C  4E 80 00 20 */	blr 
+.endfn SFMPVF_ReadGlobalMpvPara
 
-.global SFMPVF_WriteGlobalMpvPara
-SFMPVF_WriteGlobalMpvPara:
+.fn SFMPVF_WriteGlobalMpvPara, global
 /* 803C7EC0 00391480  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803C7EC4 00391484  7C 08 02 A6 */	mflr r0
 /* 803C7EC8 00391488  38 A0 00 08 */	li r5, 8
@@ -279,9 +278,9 @@ SFMPVF_WriteGlobalMpvPara:
 /* 803C7F70 00391530  7C 08 03 A6 */	mtlr r0
 /* 803C7F74 00391534  38 21 00 10 */	addi r1, r1, 0x10
 /* 803C7F78 00391538  4E 80 00 20 */	blr 
+.endfn SFMPVF_WriteGlobalMpvPara
 
-.global SFD_CalcYccPlane
-SFD_CalcYccPlane:
+.fn SFD_CalcYccPlane, global
 /* 803C7F7C 0039153C  38 84 00 0F */	addi r4, r4, 0xf
 /* 803C7F80 00391540  38 05 00 0F */	addi r0, r5, 0xf
 /* 803C7F84 00391544  7C 84 26 70 */	srawi r4, r4, 4
@@ -314,9 +313,9 @@ SFD_CalcYccPlane:
 /* 803C7FF0 003915B0  7C 03 02 14 */	add r0, r3, r0
 /* 803C7FF4 003915B4  90 06 00 04 */	stw r0, 4(r6)
 /* 803C7FF8 003915B8  4E 80 00 20 */	blr 
+.endfn SFD_CalcYccPlane
 
-.global SFD_SetPicUsrBuf
-SFD_SetPicUsrBuf:
+.fn SFD_SetPicUsrBuf, global
 /* 803C7FFC 003915BC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803C8000 003915C0  7C 08 02 A6 */	mflr r0
 /* 803C8004 003915C4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -351,18 +350,18 @@ SFD_SetPicUsrBuf:
 /* 803C8070 00391630  7C 08 03 A6 */	mtlr r0
 /* 803C8074 00391634  38 21 00 20 */	addi r1, r1, 0x20
 /* 803C8078 00391638  4E 80 00 20 */	blr 
+.endfn SFD_SetPicUsrBuf
 
-.global SFMPVF_ResetPicUsrBuf
-SFMPVF_ResetPicUsrBuf:
+.fn SFMPVF_ResetPicUsrBuf, global
 /* 803C807C 0039163C  3C C0 80 62 */	lis r6, lbl_8061CD58@ha
 /* 803C8080 00391640  38 C6 CD 58 */	addi r6, r6, lbl_8061CD58@l
 /* 803C8084 00391644  80 86 00 70 */	lwz r4, 0x70(r6)
 /* 803C8088 00391648  80 A6 00 74 */	lwz r5, 0x74(r6)
 /* 803C808C 0039164C  80 C6 00 78 */	lwz r6, 0x78(r6)
 /* 803C8090 00391650  48 00 00 04 */	b sfmpvf_SetPicUsrBuf
+.endfn SFMPVF_ResetPicUsrBuf
 
-.global sfmpvf_SetPicUsrBuf
-sfmpvf_SetPicUsrBuf:
+.fn sfmpvf_SetPicUsrBuf, global
 /* 803C8094 00391654  2C 04 00 00 */	cmpwi r4, 0
 /* 803C8098 00391658  39 03 38 D0 */	addi r8, r3, 0x38d0
 /* 803C809C 0039165C  41 82 00 14 */	beq .L_803C80B0
@@ -446,9 +445,9 @@ sfmpvf_SetPicUsrBuf:
 /* 803C81BC 0039177C  41 80 FF D8 */	blt .L_803C8194
 /* 803C81C0 00391780  38 60 00 00 */	li r3, 0
 /* 803C81C4 00391784  4E 80 00 20 */	blr 
+.endfn sfmpvf_SetPicUsrBuf
 
-.global SFMPVF_InitPicUsr
-SFMPVF_InitPicUsr:
+.fn SFMPVF_InitPicUsr, global
 /* 803C81C8 00391788  38 00 00 00 */	li r0, 0
 /* 803C81CC 0039178C  90 03 00 00 */	stw r0, 0(r3)
 /* 803C81D0 00391790  90 03 00 04 */	stw r0, 4(r3)
@@ -488,10 +487,10 @@ SFMPVF_InitPicUsr:
 /* 803C8258 00391818  90 03 00 8C */	stw r0, 0x8c(r3)
 /* 803C825C 0039181C  90 03 00 90 */	stw r0, 0x90(r3)
 /* 803C8260 00391820  4E 80 00 20 */	blr
+.endfn SFMPVF_InitPicUsr
 
 #SFMPVF_GetRead?
-.global SFMPVF_GetRead
-SFMPVF_GetRead:
+.fn SFMPVF_GetRead, global
 /* 803C8264 00391824  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803C8268 00391828  7C 08 02 A6 */	mflr r0
 /* 803C826C 0039182C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -597,9 +596,9 @@ SFMPVF_GetRead:
 /* 803C83D0 00391990  7C 08 03 A6 */	mtlr r0
 /* 803C83D4 00391994  38 21 00 20 */	addi r1, r1, 0x20
 /* 803C83D8 00391998  4E 80 00 20 */	blr
+.endfn SFMPVF_GetRead
 
-.global SFMPVF_AddRead
-SFMPVF_AddRead:
+.fn SFMPVF_AddRead, global
 /* 803C83DC 0039199C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803C83E0 003919A0  7C 08 02 A6 */	mflr r0
 /* 803C83E4 003919A4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -769,20 +768,20 @@ SFMPVF_AddRead:
 /* 803C8614 00391BD4  7C 08 03 A6 */	mtlr r0
 /* 803C8618 00391BD8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803C861C 00391BDC  4E 80 00 20 */	blr 
+.endfn SFMPVF_AddRead
 
-.global SFMPVF_TermDec
-SFMPVF_TermDec:
+.fn SFMPVF_TermDec, global
 /* 803C8620 00391BE0  38 00 00 01 */	li r0, 1
 /* 803C8624 00391BE4  90 03 28 48 */	stw r0, 0x2848(r3)
 /* 803C8628 00391BE8  4E 80 00 20 */	blr 
+.endfn SFMPVF_TermDec
 
-.global SFMPVF_IsTermDec
-SFMPVF_IsTermDec:
+.fn SFMPVF_IsTermDec, global
 /* 803C862C 00391BEC  80 63 28 48 */	lwz r3, 0x2848(r3)
 /* 803C8630 00391BF0  4E 80 00 20 */	blr 
+.endfn SFMPVF_IsTermDec
 
-.global func_803C8634
-func_803C8634:
+.fn func_803C8634, global
 /* 803C8634 00391BF4  80 A3 28 44 */	lwz r5, 0x2844(r3)
 /* 803C8638 00391BF8  38 83 28 50 */	addi r4, r3, 0x2850
 /* 803C863C 00391BFC  38 00 00 01 */	li r0, 1
@@ -801,9 +800,9 @@ func_803C8634:
 /* 803C8664 00391C24  38 84 01 08 */	addi r4, r4, 0x108
 /* 803C8668 00391C28  42 00 FF E4 */	bdnz .L_803C864C
 /* 803C866C 00391C2C  4E 80 00 20 */	blr 
+.endfn func_803C8634
 
-.global SFMPVF_GetNumFrm
-SFMPVF_GetNumFrm:
+.fn SFMPVF_GetNumFrm, global
 /* 803C8670 00391C30  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803C8674 00391C34  7C 08 02 A6 */	mflr r0
 /* 803C8678 00391C38  90 01 00 24 */	stw r0, 0x24(r1)
@@ -849,9 +848,9 @@ SFMPVF_GetNumFrm:
 /* 803C8704 00391CC4  7C 08 03 A6 */	mtlr r0
 /* 803C8708 00391CC8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803C870C 00391CCC  4E 80 00 20 */	blr 
+.endfn SFMPVF_GetNumFrm
 
-.global SFMPVF_AllocFrm
-SFMPVF_AllocFrm:
+.fn SFMPVF_AllocFrm, global
 /* 803C8710 00391CD0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803C8714 00391CD4  7C 08 02 A6 */	mflr r0
 /* 803C8718 00391CD8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -892,33 +891,33 @@ SFMPVF_AllocFrm:
 /* 803C8794 00391D54  7C 08 03 A6 */	mtlr r0
 /* 803C8798 00391D58  38 21 00 20 */	addi r1, r1, 0x20
 /* 803C879C 00391D5C  4E 80 00 20 */	blr 
+.endfn SFMPVF_AllocFrm
 
-.global SFMPVF_FreeFrm
-SFMPVF_FreeFrm:
+.fn SFMPVF_FreeFrm, global
 /* 803C87A0 00391D60  2C 03 00 00 */	cmpwi r3, 0
 /* 803C87A4 00391D64  4D 82 00 20 */	beqlr 
 /* 803C87A8 00391D68  38 00 00 00 */	li r0, 0
 /* 803C87AC 00391D6C  90 03 00 00 */	stw r0, 0(r3)
 /* 803C87B0 00391D70  4E 80 00 20 */	blr 
+.endfn SFMPVF_FreeFrm
 
-.global SFMPVF_StbyFrm
-SFMPVF_StbyFrm:
+.fn SFMPVF_StbyFrm, global
 /* 803C87B4 00391D74  2C 03 00 00 */	cmpwi r3, 0
 /* 803C87B8 00391D78  4D 82 00 20 */	beqlr 
 /* 803C87BC 00391D7C  38 00 00 02 */	li r0, 2
 /* 803C87C0 00391D80  90 03 00 00 */	stw r0, 0(r3)
 /* 803C87C4 00391D84  4E 80 00 20 */	blr 
+.endfn SFMPVF_StbyFrm
 
-.global SFMPVF_RefStbyFrm
-SFMPVF_RefStbyFrm:
+.fn SFMPVF_RefStbyFrm, global
 /* 803C87C8 00391D88  2C 03 00 00 */	cmpwi r3, 0
 /* 803C87CC 00391D8C  4D 82 00 20 */	beqlr 
 /* 803C87D0 00391D90  38 00 00 04 */	li r0, 4
 /* 803C87D4 00391D94  90 03 00 00 */	stw r0, 0(r3)
 /* 803C87D8 00391D98  4E 80 00 20 */	blr 
+.endfn SFMPVF_RefStbyFrm
 
-.global SFMPVF_EndRefFrm
-SFMPVF_EndRefFrm:
+.fn SFMPVF_EndRefFrm, global
 /* 803C87DC 00391D9C  2C 03 00 00 */	cmpwi r3, 0
 /* 803C87E0 00391DA0  4D 82 00 20 */	beqlr 
 /* 803C87E4 00391DA4  80 03 00 00 */	lwz r0, 0(r3)
@@ -931,9 +930,9 @@ SFMPVF_EndRefFrm:
 /* 803C87FC 00391DBC  38 00 00 00 */	li r0, 0
 /* 803C8800 00391DC0  90 03 00 00 */	stw r0, 0(r3)
 /* 803C8804 00391DC4  4E 80 00 20 */	blr 
+.endfn SFMPVF_EndRefFrm
 
-.global SFMPVF_HoldFrm
-SFMPVF_HoldFrm:
+.fn SFMPVF_HoldFrm, global
 /* 803C8808 00391DC8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803C880C 00391DCC  7C 08 02 A6 */	mflr r0
 /* 803C8810 00391DD0  90 01 00 34 */	stw r0, 0x34(r1)
@@ -988,9 +987,9 @@ SFMPVF_HoldFrm:
 /* 803C88C0 00391E80  7C 08 03 A6 */	mtlr r0
 /* 803C88C4 00391E84  38 21 00 30 */	addi r1, r1, 0x30
 /* 803C88C8 00391E88  4E 80 00 20 */	blr 
+.endfn SFMPVF_HoldFrm
 
-.global SFD_IsNextFrmReady
-SFD_IsNextFrmReady:
+.fn SFD_IsNextFrmReady, global
 /* 803C88CC 00391E8C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803C88D0 00391E90  7C 08 02 A6 */	mflr r0
 /* 803C88D4 00391E94  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1049,9 +1048,9 @@ SFD_IsNextFrmReady:
 /* 803C8998 00391F58  7C 08 03 A6 */	mtlr r0
 /* 803C899C 00391F5C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803C89A0 00391F60  4E 80 00 20 */	blr 
+.endfn SFD_IsNextFrmReady
 
-.global sfmpvf_SearchStbyFrm
-sfmpvf_SearchStbyFrm:
+.fn sfmpvf_SearchStbyFrm, global
 /* 803C89A4 00391F64  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803C89A8 00391F68  7C 08 02 A6 */	mflr r0
 /* 803C89AC 00391F6C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1122,9 +1121,9 @@ sfmpvf_SearchStbyFrm:
 /* 803C8A90 00392050  7C 08 03 A6 */	mtlr r0
 /* 803C8A94 00392054  38 21 00 30 */	addi r1, r1, 0x30
 /* 803C8A98 00392058  4E 80 00 20 */	blr 
+.endfn sfmpvf_SearchStbyFrm
 
-.global sfmpvf_IsChkFirst
-sfmpvf_IsChkFirst:
+.fn sfmpvf_IsChkFirst, global
 /* 803C8A9C 0039205C  2C 03 00 00 */	cmpwi r3, 0
 /* 803C8AA0 00392060  40 82 00 0C */	bne .L_803C8AAC
 /* 803C8AA4 00392064  38 60 00 01 */	li r3, 1
@@ -1171,9 +1170,9 @@ sfmpvf_IsChkFirst:
 /* 803C8B2C 003920EC  7C 00 18 50 */	subf r0, r0, r3
 /* 803C8B30 003920F0  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 803C8B34 003920F4  4E 80 00 20 */	blr 
+.endfn sfmpvf_IsChkFirst
 
-.global SFMPVF_ChkImageSize
-SFMPVF_ChkImageSize:
+.fn SFMPVF_ChkImageSize, global
 /* 803C8B38 003920F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803C8B3C 003920FC  7C 08 02 A6 */	mflr r0
 /* 803C8B40 00392100  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1206,6 +1205,7 @@ SFMPVF_ChkImageSize:
 /* 803C8B9C 0039215C  7C 08 03 A6 */	mtlr r0
 /* 803C8BA0 00392160  38 21 00 10 */	addi r1, r1, 0x10
 /* 803C8BA4 00392164  4E 80 00 20 */	blr 
+.endfn SFMPVF_ChkImageSize
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

@@ -3,8 +3,9 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global __ct__CMenuBattleMode
-__ct__CMenuBattleMode:
+
+
+.fn __ct__CMenuBattleMode, global
 /* 801A0374 00169934  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801A0378 00169938  7C 08 02 A6 */	mflr r0
 /* 801A037C 0016993C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -78,23 +79,26 @@ __ct__CMenuBattleMode:
 /* 801A0480 00169A40  7C 08 03 A6 */	mtlr r0
 /* 801A0484 00169A44  38 21 00 20 */	addi r1, r1, 0x20
 /* 801A0488 00169A48  4E 80 00 20 */	blr 
+.endfn __ct__CMenuBattleMode
 
-.global func_801A048C
-func_801A048C:
+.fn func_801A048C, global
 /* 801A048C 00169A4C  38 63 FF A8 */	addi r3, r3, -88
 /* 801A0490 00169A50  4B FF F9 C0 */	b func_8019FE50
+.endfn func_801A048C
 
-.global func_801A0494
-func_801A0494:
+.fn func_801A0494, global
 /* 801A0494 00169A54  38 63 FF A4 */	addi r3, r3, -92
 /* 801A0498 00169A58  4B FF FE 28 */	b func_801A02C0
+.endfn func_801A0494
 
-.global func_801A049C
-func_801A049C:
+.fn func_801A049C, global
 /* 801A049C 00169A5C  38 63 FF A4 */	addi r3, r3, -92
 /* 801A04A0 00169A60  4B FF F9 B0 */	b func_8019FE50
+.endfn func_801A049C
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
 
 .global CMenuBattleMode_typestr
 CMenuBattleMode_typestr:
@@ -111,6 +115,8 @@ lbl_804FF5A8:
 	.4byte 0
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
 
 .global __vt__CMenuBattleMode
 __vt__CMenuBattleMode:
@@ -185,6 +191,8 @@ CMenuBattleMode_hierarchy:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+
+
 .global __RTTI__CMenuBattleMode
 __RTTI__CMenuBattleMode:
 	.4byte CMenuBattleMode_typestr
@@ -192,18 +200,22 @@ __RTTI__CMenuBattleMode:
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+
+
 .global lbl_80666C08
 lbl_80666C08:
 	.skip 0x8
 
-.section extab_, "a"  # 0x800066E0 - 0x80021020
+.section extab, "a" # 0x800066E0 - 0x80021020
 
-.global lbl_8000F600
-lbl_8000F600:
+.balign 4
+
+.obj "@etb_8000F600", local
+.hidden "@etb_8000F600"
 	.4byte 0x20080000
 	.4byte 0x000000CC
 	.4byte 0x00000010
-	.4byte 0
+	.4byte 0x00000000
 	.4byte 0x0680001E
 	.4byte 0x0000005C
 	.4byte func_8004031C
@@ -211,13 +223,17 @@ lbl_8000F600:
 	.4byte 0x00000058
 	.4byte __dt__IWorkEvent
 	.4byte 0x8680001E
-	.4byte 0
+	.4byte 0x00000000
 	.4byte func_800FED0C
+.endobj "@etb_8000F600"
 
+.section extabindex, "a" # 0x80021020 - 0x80039220
 
+.balign 4
 
-.section extabindex_, "a"  # 0x80021020 - 0x80039220
-
+.obj "@eti_8002A4AC", local
+.hidden "@eti_8002A4AC"
 	.4byte __ct__CMenuBattleMode
 	.4byte 0x00000118
-	.4byte lbl_8000F600
+	.4byte "@etb_8000F600"
+.endobj "@eti_8002A4AC"

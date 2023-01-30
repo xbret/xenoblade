@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global SFPLY_Init
-SFPLY_Init:
+.fn SFPLY_Init, global
 /* 803C901C 003925DC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803C9020 003925E0  7C 08 02 A6 */	mflr r0
 /* 803C9024 003925E4  3C 80 FF 00 */	lis r4, 0xFF000201@ha
@@ -18,9 +17,9 @@ SFPLY_Init:
 /* 803C9048 00392608  7C 08 03 A6 */	mtlr r0
 /* 803C904C 0039260C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803C9050 00392610  4E 80 00 20 */	blr 
+.endfn SFPLY_Init
 
-.global SFD_VbIn
-SFD_VbIn:
+.fn SFD_VbIn, global
 /* 803C9054 00392614  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803C9058 00392618  7C 08 02 A6 */	mflr r0
 /* 803C905C 0039261C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -33,9 +32,9 @@ SFD_VbIn:
 /* 803C9078 00392638  7C 08 03 A6 */	mtlr r0
 /* 803C907C 0039263C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803C9080 00392640  4E 80 00 20 */	blr 
+.endfn SFD_VbIn
 
-.global SFD_IsHnSvrWait
-SFD_IsHnSvrWait:
+.fn SFD_IsHnSvrWait, global
 /* 803C9084 00392644  80 03 00 50 */	lwz r0, 0x50(r3)
 /* 803C9088 00392648  2C 00 00 01 */	cmpwi r0, 1
 /* 803C908C 0039264C  41 82 00 24 */	beq .L_803C90B0
@@ -58,9 +57,9 @@ SFD_IsHnSvrWait:
 /* 803C90C8 00392688  7C 00 00 34 */	cntlzw r0, r0
 /* 803C90CC 0039268C  54 03 D9 7E */	srwi r3, r0, 5
 /* 803C90D0 00392690  4E 80 00 20 */	blr 
+.endfn SFD_IsHnSvrWait
 
-.global func_803C90D4
-func_803C90D4:
+.fn func_803C90D4, global
 /* 803C90D4 00392694  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803C90D8 00392698  7C 08 02 A6 */	mflr r0
 /* 803C90DC 0039269C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -109,9 +108,9 @@ func_803C90D4:
 /* 803C9178 00392738  7C 08 03 A6 */	mtlr r0
 /* 803C917C 0039273C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803C9180 00392740  4E 80 00 20 */	blr 
+.endfn func_803C90D4
 
-.global sfply_ExecOne
-sfply_ExecOne:
+.fn sfply_ExecOne, global
 /* 803C9184 00392744  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803C9188 00392748  7C 08 02 A6 */	mflr r0
 /* 803C918C 0039274C  90 01 00 44 */	stw r0, 0x44(r1)
@@ -438,9 +437,9 @@ switch_803C95C8:
 /* 803C95F8 00392BB8  7C 08 03 A6 */	mtlr r0
 /* 803C95FC 00392BBC  38 21 00 40 */	addi r1, r1, 0x40
 /* 803C9600 00392BC0  4E 80 00 20 */	blr 
+.endfn sfply_ExecOne
 
-.global sfply_StatPrep
-sfply_StatPrep:
+.fn sfply_StatPrep, global
 /* 803C9604 00392BC4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803C9608 00392BC8  7C 08 02 A6 */	mflr r0
 /* 803C960C 00392BCC  38 80 00 05 */	li r4, 5
@@ -663,9 +662,9 @@ sfply_StatPrep:
 /* 803C9904 00392EC4  7C 08 03 A6 */	mtlr r0
 /* 803C9908 00392EC8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803C990C 00392ECC  4E 80 00 20 */	blr 
+.endfn sfply_StatPrep
 
-.global sfply_AdjustEtrg
-sfply_AdjustEtrg:
+.fn sfply_AdjustEtrg, global
 /* 803C9910 00392ED0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803C9914 00392ED4  7C 08 02 A6 */	mflr r0
 /* 803C9918 00392ED8  38 80 00 00 */	li r4, 0
@@ -730,9 +729,9 @@ sfply_AdjustEtrg:
 /* 803C99E0 00392FA0  7C 08 03 A6 */	mtlr r0
 /* 803C99E4 00392FA4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803C99E8 00392FA8  4E 80 00 20 */	blr 
+.endfn sfply_AdjustEtrg
 
-.global sfply_IsBpaOn
-sfply_IsBpaOn:
+.fn sfply_IsBpaOn, global
 /* 803C99EC 00392FAC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803C99F0 00392FB0  7C 08 02 A6 */	mflr r0
 /* 803C99F4 00392FB4  38 80 00 43 */	li r4, 0x43
@@ -927,9 +926,9 @@ sfply_IsBpaOn:
 /* 803C9C98 00393258  7C 08 03 A6 */	mtlr r0
 /* 803C9C9C 0039325C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803C9CA0 00393260  4E 80 00 20 */	blr 
+.endfn sfply_IsBpaOn
 
-.global sfply_IsBpaOff
-sfply_IsBpaOff:
+.fn sfply_IsBpaOff, global
 /* 803C9CA4 00393264  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803C9CA8 00393268  7C 08 02 A6 */	mflr r0
 /* 803C9CAC 0039326C  38 80 00 05 */	li r4, 5
@@ -1080,9 +1079,9 @@ sfply_IsBpaOff:
 /* 803C9EBC 0039347C  7C 08 03 A6 */	mtlr r0
 /* 803C9EC0 00393480  38 21 00 20 */	addi r1, r1, 0x20
 /* 803C9EC4 00393484  4E 80 00 20 */	blr 
+.endfn sfply_IsBpaOff
 
-.global sfply_IsEtrg
-sfply_IsEtrg:
+.fn sfply_IsEtrg, global
 /* 803C9EC8 00393488  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803C9ECC 0039348C  7C 08 02 A6 */	mflr r0
 /* 803C9ED0 00393490  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1155,9 +1154,9 @@ sfply_IsEtrg:
 /* 803C9FB4 00393574  7C 08 03 A6 */	mtlr r0
 /* 803C9FB8 00393578  38 21 00 20 */	addi r1, r1, 0x20
 /* 803C9FBC 0039357C  4E 80 00 20 */	blr 
+.endfn sfply_IsEtrg
 
-.global func_803C9FC0
-func_803C9FC0:
+.fn func_803C9FC0, global
 /* 803C9FC0 00393580  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803C9FC4 00393584  7C 08 02 A6 */	mflr r0
 /* 803C9FC8 00393588  38 80 00 01 */	li r4, 1
@@ -1201,9 +1200,9 @@ func_803C9FC0:
 /* 803CA04C 0039360C  7C 08 03 A6 */	mtlr r0
 /* 803CA050 00393610  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CA054 00393614  4E 80 00 20 */	blr 
+.endfn func_803C9FC0
 
-.global sfply_IsPlayTimeAutoStop
-sfply_IsPlayTimeAutoStop:
+.fn sfply_IsPlayTimeAutoStop, global
 /* 803CA058 00393618  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CA05C 0039361C  7C 08 02 A6 */	mflr r0
 /* 803CA060 00393620  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1261,9 +1260,9 @@ sfply_IsPlayTimeAutoStop:
 /* 803CA118 003936D8  7C 08 03 A6 */	mtlr r0
 /* 803CA11C 003936DC  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CA120 003936E0  4E 80 00 20 */	blr 
+.endfn sfply_IsPlayTimeAutoStop
 
-.global func_803CA124
-func_803CA124:
+.fn func_803CA124, global
 /* 803CA124 003936E4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CA128 003936E8  7C 08 02 A6 */	mflr r0
 /* 803CA12C 003936EC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1348,9 +1347,9 @@ func_803CA124:
 /* 803CA244 00393804  7C 08 03 A6 */	mtlr r0
 /* 803CA248 00393808  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CA24C 0039380C  4E 80 00 20 */	blr 
+.endfn func_803CA124
 
-.global SFD_Create
-SFD_Create:
+.fn SFD_Create, global
 /* 803CA250 00393810  94 21 FD C0 */	stwu r1, -0x240(r1)
 /* 803CA254 00393814  7C 08 02 A6 */	mflr r0
 /* 803CA258 00393818  90 01 02 44 */	stw r0, 0x244(r1)
@@ -1526,9 +1525,9 @@ SFD_Create:
 /* 803CA4BC 00393A7C  7C 08 03 A6 */	mtlr r0
 /* 803CA4C0 00393A80  38 21 02 40 */	addi r1, r1, 0x240
 /* 803CA4C4 00393A84  4E 80 00 20 */	blr 
+.endfn SFD_Create
 
-.global sfply_InitHn
-sfply_InitHn:
+.fn sfply_InitHn, global
 /* 803CA4C8 00393A88  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CA4CC 00393A8C  7C 08 02 A6 */	mflr r0
 /* 803CA4D0 00393A90  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1701,9 +1700,9 @@ sfply_InitHn:
 /* 803CA748 00393D08  7C 08 03 A6 */	mtlr r0
 /* 803CA74C 00393D0C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CA750 00393D10  4E 80 00 20 */	blr 
+.endfn sfply_InitHn
 
-.global sfply_InitPlyInf
-sfply_InitPlyInf:
+.fn sfply_InitPlyInf, global
 /* 803CA754 00393D14  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CA758 00393D18  7C 08 02 A6 */	mflr r0
 /* 803CA75C 00393D1C  38 80 00 00 */	li r4, 0
@@ -1754,9 +1753,9 @@ sfply_InitPlyInf:
 /* 803CA810 00393DD0  7C 08 03 A6 */	mtlr r0
 /* 803CA814 00393DD4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CA818 00393DD8  4E 80 00 20 */	blr 
+.endfn sfply_InitPlyInf
 
-.global SFPLY_AddDecPic
-SFPLY_AddDecPic:
+.fn SFPLY_AddDecPic, global
 /* 803CA81C 00393DDC  80 03 09 58 */	lwz r0, 0x958(r3)
 /* 803CA820 00393DE0  81 83 0D 64 */	lwz r12, 0xd64(r3)
 /* 803CA824 00393DE4  7C 00 22 14 */	add r0, r0, r4
@@ -1769,9 +1768,9 @@ SFPLY_AddDecPic:
 /* 803CA840 00393E00  7D 89 03 A6 */	mtctr r12
 /* 803CA844 00393E04  4E 80 04 20 */	bctr 
 /* 803CA848 00393E08  4E 80 00 20 */	blr 
+.endfn SFPLY_AddDecPic
 
-.global SFPLY_AddSkipPic
-SFPLY_AddSkipPic:
+.fn SFPLY_AddSkipPic, global
 /* 803CA84C 00393E0C  80 03 09 5C */	lwz r0, 0x95c(r3)
 /* 803CA850 00393E10  81 83 0D 6C */	lwz r12, 0xd6c(r3)
 /* 803CA854 00393E14  7C 00 22 14 */	add r0, r0, r4
@@ -1784,9 +1783,9 @@ SFPLY_AddSkipPic:
 /* 803CA870 00393E30  7D 89 03 A6 */	mtctr r12
 /* 803CA874 00393E34  4E 80 04 20 */	bctr 
 /* 803CA878 00393E38  4E 80 00 20 */	blr 
+.endfn SFPLY_AddSkipPic
 
-.global SFD_Destroy
-SFD_Destroy:
+.fn SFD_Destroy, global
 /* 803CA87C 00393E3C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CA880 00393E40  7C 08 02 A6 */	mflr r0
 /* 803CA884 00393E44  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1937,9 +1936,9 @@ SFD_Destroy:
 /* 803CAA88 00394048  7C 08 03 A6 */	mtlr r0
 /* 803CAA8C 0039404C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CAA90 00394050  4E 80 00 20 */	blr 
+.endfn SFD_Destroy
 
-.global SFD_Start
-SFD_Start:
+.fn SFD_Start, global
 /* 803CAA94 00394054  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CAA98 00394058  7C 08 02 A6 */	mflr r0
 /* 803CAA9C 0039405C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2004,10 +2003,10 @@ SFD_Start:
 /* 803CAB70 00394130  7C 08 03 A6 */	mtlr r0
 /* 803CAB74 00394134  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CAB78 00394138  4E 80 00 20 */	blr 
+.endfn SFD_Start
 
 #SFPLY_Stop or SFD_Stop
-.global func_803CAB7C
-func_803CAB7C:
+.fn func_803CAB7C, global
 /* 803CAB7C 0039413C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CAB80 00394140  7C 08 02 A6 */	mflr r0
 /* 803CAB84 00394144  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2106,16 +2105,16 @@ func_803CAB7C:
 /* 803CACD4 00394294  7C 08 03 A6 */	mtlr r0
 /* 803CACD8 00394298  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CACDC 0039429C  4E 80 00 20 */	blr 
+.endfn func_803CAB7C
 
-.global SFPLY_GetResetFlg
-SFPLY_GetResetFlg:
+.fn SFPLY_GetResetFlg, global
 /* 803CACE0 003942A0  3C 60 80 61 */	lis r3, SFLIB_libwork@ha
 /* 803CACE4 003942A4  38 63 A2 E4 */	addi r3, r3, SFLIB_libwork@l
 /* 803CACE8 003942A8  80 63 02 04 */	lwz r3, 0x204(r3)
 /* 803CACEC 003942AC  4E 80 00 20 */	blr 
+.endfn SFPLY_GetResetFlg
 
-.global sfply_ResetHn
-sfply_ResetHn:
+.fn sfply_ResetHn, global
 /* 803CACF0 003942B0  94 21 FC B0 */	stwu r1, -0x350(r1)
 /* 803CACF4 003942B4  7C 08 02 A6 */	mflr r0
 /* 803CACF8 003942B8  38 A3 FF FC */	addi r5, r3, -4
@@ -2531,9 +2530,9 @@ sfply_ResetHn:
 /* 803CB2D4 00394894  7C 08 03 A6 */	mtlr r0
 /* 803CB2D8 00394898  38 21 03 50 */	addi r1, r1, 0x350
 /* 803CB2DC 0039489C  4E 80 00 20 */	blr 
+.endfn sfply_ResetHn
 
-.global SFD_RequestStop
-SFD_RequestStop:
+.fn SFD_RequestStop, global
 /* 803CB2E0 003948A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CB2E4 003948A4  7C 08 02 A6 */	mflr r0
 /* 803CB2E8 003948A8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2601,9 +2600,9 @@ SFD_RequestStop:
 /* 803CB3D4 00394994  7C 08 03 A6 */	mtlr r0
 /* 803CB3D8 00394998  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CB3DC 0039499C  4E 80 00 20 */	blr 
+.endfn SFD_RequestStop
 
-.global SFD_TermSupply
-SFD_TermSupply:
+.fn SFD_TermSupply, global
 /* 803CB3E0 003949A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CB3E4 003949A4  7C 08 02 A6 */	mflr r0
 /* 803CB3E8 003949A8  3C 80 80 61 */	lis r4, lbl_8060A2D8@ha
@@ -2671,9 +2670,9 @@ SFD_TermSupply:
 /* 803CB4CC 00394A8C  7C 08 03 A6 */	mtlr r0
 /* 803CB4D0 00394A90  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CB4D4 00394A94  4E 80 00 20 */	blr 
+.endfn SFD_TermSupply
 
-.global SFD_GetFrm
-SFD_GetFrm:
+.fn SFD_GetFrm, global
 /* 803CB4D8 00394A98  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CB4DC 00394A9C  7C 08 02 A6 */	mflr r0
 /* 803CB4E0 00394AA0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2809,9 +2808,9 @@ SFD_GetFrm:
 /* 803CB6B8 00394C78  7C 08 03 A6 */	mtlr r0
 /* 803CB6BC 00394C7C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CB6C0 00394C80  4E 80 00 20 */	blr 
+.endfn SFD_GetFrm
 
-.global SFD_RelFrm
-SFD_RelFrm:
+.fn SFD_RelFrm, global
 /* 803CB6C4 00394C84  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CB6C8 00394C88  7C 08 02 A6 */	mflr r0
 /* 803CB6CC 00394C8C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2898,9 +2897,9 @@ SFD_RelFrm:
 /* 803CB7EC 00394DAC  7C 08 03 A6 */	mtlr r0
 /* 803CB7F0 00394DB0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CB7F4 00394DB4  4E 80 00 20 */	blr 
+.endfn SFD_RelFrm
 
-.global SFD_SetSupplySj
-SFD_SetSupplySj:
+.fn SFD_SetSupplySj, global
 /* 803CB7F8 00394DB8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CB7FC 00394DBC  7C 08 02 A6 */	mflr r0
 /* 803CB800 00394DC0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2927,6 +2926,7 @@ SFD_SetSupplySj:
 /* 803CB84C 00394E0C  7C 08 03 A6 */	mtlr r0
 /* 803CB850 00394E10  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CB854 00394E14  4E 80 00 20 */	blr 
+.endfn SFD_SetSupplySj
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

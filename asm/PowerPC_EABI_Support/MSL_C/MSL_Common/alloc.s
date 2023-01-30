@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global Block_link
-Block_link:
+.fn Block_link, global
 /* 802BBDB8 00285378  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802BBDBC 0028537C  7C 08 02 A6 */	mflr r0
 /* 802BBDC0 00285380  90 01 00 14 */	stw r0, 0x14(r1)
@@ -95,9 +94,9 @@ Block_link:
 /* 802BBEFC 002854BC  7C 08 03 A6 */	mtlr r0
 /* 802BBF00 002854C0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802BBF04 002854C4  4E 80 00 20 */	blr 
+.endfn Block_link
 
-.global SubBlock_merge_next
-SubBlock_merge_next:
+.fn SubBlock_merge_next, global
 /* 802BBF08 002854C8  80 C3 00 00 */	lwz r6, 0(r3)
 /* 802BBF0C 002854CC  54 C7 00 38 */	rlwinm r7, r6, 0, 0, 0x1c
 /* 802BBF10 002854D0  7C A3 38 2E */	lwzx r5, r3, r7
@@ -145,9 +144,9 @@ SubBlock_merge_next:
 /* 802BBFA4 00285564  80 08 00 0C */	lwz r0, 0xc(r8)
 /* 802BBFA8 00285568  90 03 00 0C */	stw r0, 0xc(r3)
 /* 802BBFAC 0028556C  4E 80 00 20 */	blr 
+.endfn SubBlock_merge_next
 
-.global deallocate_from_fixed_pools
-deallocate_from_fixed_pools:
+.fn deallocate_from_fixed_pools, global
 /* 802BBFB0 00285570  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802BBFB4 00285574  7C 08 02 A6 */	mflr r0
 /* 802BBFB8 00285578  3C C0 80 51 */	lis r6, lbl_8050CF00@ha
@@ -284,9 +283,9 @@ deallocate_from_fixed_pools:
 /* 802BC190 00285750  7C 08 03 A6 */	mtlr r0
 /* 802BC194 00285754  38 21 00 10 */	addi r1, r1, 0x10
 /* 802BC198 00285758  4E 80 00 20 */	blr 
+.endfn deallocate_from_fixed_pools
 
-.global free
-free:
+.fn free, global
 /* 802BC19C 0028575C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802BC1A0 00285760  7C 08 02 A6 */	mflr r0
 /* 802BC1A4 00285764  90 01 00 14 */	stw r0, 0x14(r1)
@@ -372,6 +371,7 @@ free:
 /* 802BC2C0 00285880  7C 08 03 A6 */	mtlr r0
 /* 802BC2C4 00285884  38 21 00 10 */	addi r1, r1, 0x10
 /* 802BC2C8 00285888  4E 80 00 20 */	blr
+.endfn free
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

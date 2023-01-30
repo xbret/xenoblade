@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global __VISetYUVSEL
-__VISetYUVSEL:
+.fn __VISetYUVSEL, global
 /* 80367320 003308E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80367324 003308E4  7C 08 02 A6 */	mflr r0
 /* 80367328 003308E8  3C 80 80 00 */	lis r4, 0x800000CC@ha
@@ -50,10 +49,10 @@ __VISetYUVSEL:
 /* 803673B4 00330974  7C 08 03 A6 */	mtlr r0
 /* 803673B8 00330978  38 21 00 10 */	addi r1, r1, 0x10
 /* 803673BC 0033097C  4E 80 00 20 */	blr 
+.endfn __VISetYUVSEL
 
 .balign 16, 0
-.global __VISetFilter4EURGB60
-__VISetFilter4EURGB60:
+.fn __VISetFilter4EURGB60, global
 /* 803673C0 00330980  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803673C4 00330984  7C 08 02 A6 */	mflr r0
 /* 803673C8 00330988  38 A0 00 02 */	li r5, 2
@@ -70,10 +69,10 @@ __VISetFilter4EURGB60:
 /* 803673F4 003309B4  7C 08 03 A6 */	mtlr r0
 /* 803673F8 003309B8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803673FC 003309BC  4E 80 00 20 */	blr 
+.endfn __VISetFilter4EURGB60
 
 .balign 16, 0
-.global __VISetCGMS
-__VISetCGMS:
+.fn __VISetCGMS, global
 /* 80367400 003309C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80367404 003309C4  7C 08 02 A6 */	mflr r0
 /* 80367408 003309C8  38 E0 00 05 */	li r7, 5
@@ -96,10 +95,10 @@ __VISetCGMS:
 /* 8036744C 00330A0C  7C 08 03 A6 */	mtlr r0
 /* 80367450 00330A10  38 21 00 10 */	addi r1, r1, 0x10
 /* 80367454 00330A14  4E 80 00 20 */	blr 
+.endfn __VISetCGMS
 
 .balign 16, 0
-.global __VISetWSS
-__VISetWSS:
+.fn __VISetWSS, global
 /* 80367460 00330A20  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80367464 00330A24  7C 08 02 A6 */	mflr r0
 /* 80367468 00330A28  38 E0 00 08 */	li r7, 8
@@ -125,10 +124,10 @@ __VISetWSS:
 /* 803674B8 00330A78  7C 08 03 A6 */	mtlr r0
 /* 803674BC 00330A7C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803674C0 00330A80  4E 80 00 20 */	blr 
+.endfn __VISetWSS
 
 .balign 16, 0
-.global __VISetClosedCaption
-__VISetClosedCaption:
+.fn __VISetClosedCaption, global
 /* 803674D0 00330A90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803674D4 00330A94  7C 08 02 A6 */	mflr r0
 /* 803674D8 00330A98  39 20 00 7A */	li r9, 0x7a
@@ -156,10 +155,10 @@ __VISetClosedCaption:
 /* 80367530 00330AF0  7C 08 03 A6 */	mtlr r0
 /* 80367534 00330AF4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80367538 00330AF8  4E 80 00 20 */	blr 
+.endfn __VISetClosedCaption
 
 .balign 16, 0
-.global __VISetMacrovision
-__VISetMacrovision:
+.fn __VISetMacrovision, global
 /* 80367540 00330B00  94 21 FE 70 */	stwu r1, -0x190(r1)
 /* 80367544 00330B04  7C 08 02 A6 */	mflr r0
 /* 80367548 00330B08  3C 60 80 56 */	lis r3, lbl_8055FFF8@ha
@@ -1039,10 +1038,10 @@ __VISetMacrovision:
 /* 803682AC 0033186C  7C 08 03 A6 */	mtlr r0
 /* 803682B0 00331870  38 21 01 90 */	addi r1, r1, 0x190
 /* 803682B4 00331874  4E 80 00 20 */	blr 
+.endfn __VISetMacrovision
 
 .balign 16, 0
-.global __VISetGammaImm
-__VISetGammaImm:
+.fn __VISetGammaImm, global
 /* 803682C0 00331880  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803682C4 00331884  7C 08 02 A6 */	mflr r0
 /* 803682C8 00331888  38 A0 00 22 */	li r5, 0x22
@@ -1131,28 +1130,28 @@ __VISetGammaImm:
 /* 80368414 003319D4  7C 08 03 A6 */	mtlr r0
 /* 80368418 003319D8  38 21 00 30 */	addi r1, r1, 0x30
 /* 8036841C 003319DC  4E 80 00 20 */	blr 
+.endfn __VISetGammaImm
 
 .balign 16, 0
-.global __VISetGamma1_0
-__VISetGamma1_0:
+.fn __VISetGamma1_0, global
 /* 80368420 003319E0  3C 60 80 56 */	lis r3, lbl_8055FFF8@ha
 /* 80368424 003319E4  38 63 FF F8 */	addi r3, r3, lbl_8055FFF8@l
 /* 80368428 003319E8  38 63 01 54 */	addi r3, r3, 0x154
 /* 8036842C 003319EC  4B FF FE 94 */	b __VISetGammaImm
+.endfn __VISetGamma1_0
 
 .balign 16, 0
-.global __VISetGamma
-__VISetGamma:
+.fn __VISetGamma, global
 /* 80368430 003319F0  80 0D BA DC */	lwz r0, lbl_80667C5C@sda21(r13)
 /* 80368434 003319F4  3C 60 80 56 */	lis r3, lbl_8055FFF8@ha
 /* 80368438 003319F8  38 63 FF F8 */	addi r3, r3, lbl_8055FFF8@l
 /* 8036843C 003319FC  1C 00 00 22 */	mulli r0, r0, 0x22
 /* 80368440 00331A00  7C 63 02 14 */	add r3, r3, r0
 /* 80368444 00331A04  4B FF FE 7C */	b __VISetGammaImm
+.endfn __VISetGamma
 
 .balign 16, 0
-.global VISetGamma
-VISetGamma:
+.fn VISetGamma, global
 /* 80368450 00331A10  80 0D BA DC */	lwz r0, lbl_80667C5C@sda21(r13)
 /* 80368454 00331A14  7C 00 18 00 */	cmpw r0, r3
 /* 80368458 00331A18  4D 82 00 20 */	beqlr 
@@ -1161,10 +1160,10 @@ VISetGamma:
 /* 80368464 00331A24  60 00 00 10 */	ori r0, r0, 0x10
 /* 80368468 00331A28  90 0D BA D0 */	stw r0, lbl_80667C50@sda21(r13)
 /* 8036846C 00331A2C  4E 80 00 20 */	blr 
+.endfn VISetGamma
 
 .balign 16, 0
-.global __VISetTrapFilter
-__VISetTrapFilter:
+.fn __VISetTrapFilter, global
 /* 80368470 00331A30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80368474 00331A34  7C 08 02 A6 */	mflr r0
 /* 80368478 00331A38  38 60 00 03 */	li r3, 3
@@ -1190,10 +1189,10 @@ __VISetTrapFilter:
 /* 803684C0 00331A80  7C 08 03 A6 */	mtlr r0
 /* 803684C4 00331A84  38 21 00 10 */	addi r1, r1, 0x10
 /* 803684C8 00331A88  4E 80 00 20 */	blr 
+.endfn __VISetTrapFilter
 
 .balign 16, 0
-.global VISetTrapFilter
-VISetTrapFilter:
+.fn VISetTrapFilter, global
 /* 803684D0 00331A90  88 0D 9B B7 */	lbz r0, lbl_80665D37@sda21(r13)
 /* 803684D4 00331A94  7C 00 18 40 */	cmplw r0, r3
 /* 803684D8 00331A98  4D 82 00 20 */	beqlr 
@@ -1202,10 +1201,10 @@ VISetTrapFilter:
 /* 803684E4 00331AA4  60 00 00 20 */	ori r0, r0, 0x20
 /* 803684E8 00331AA8  90 0D BA D0 */	stw r0, lbl_80667C50@sda21(r13)
 /* 803684EC 00331AAC  4E 80 00 20 */	blr 
+.endfn VISetTrapFilter
 
 .balign 16, 0
-.global __VISetRGBOverDrive
-__VISetRGBOverDrive:
+.fn __VISetRGBOverDrive, global
 /* 803684F0 00331AB0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803684F4 00331AB4  7C 08 02 A6 */	mflr r0
 /* 803684F8 00331AB8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1241,18 +1240,18 @@ __VISetRGBOverDrive:
 /* 80368568 00331B28  7C 08 03 A6 */	mtlr r0
 /* 8036856C 00331B2C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80368570 00331B30  4E 80 00 20 */	blr 
+.endfn __VISetRGBOverDrive
 
 .balign 16, 0
-.global VISetRGBModeImm
-VISetRGBModeImm:
+.fn VISetRGBModeImm, global
 /* 80368580 00331B40  80 0D BA D0 */	lwz r0, lbl_80667C50@sda21(r13)
 /* 80368584 00331B44  60 00 00 80 */	ori r0, r0, 0x80
 /* 80368588 00331B48  90 0D BA D0 */	stw r0, lbl_80667C50@sda21(r13)
 /* 8036858C 00331B4C  4E 80 00 20 */	blr 
+.endfn VISetRGBModeImm
 
 .balign 16, 0
-.global __VISetRGBModeImm
-__VISetRGBModeImm:
+.fn __VISetRGBModeImm, global
 /* 80368590 00331B50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80368594 00331B54  7C 08 02 A6 */	mflr r0
 /* 80368598 00331B58  38 C0 00 03 */	li r6, 3
@@ -1271,10 +1270,10 @@ __VISetRGBModeImm:
 /* 803685CC 00331B8C  7C 08 03 A6 */	mtlr r0
 /* 803685D0 00331B90  38 21 00 10 */	addi r1, r1, 0x10
 /* 803685D4 00331B94  4E 80 00 20 */	blr 
+.endfn __VISetRGBModeImm
 
 .balign 16, 0
-.global __VISetRevolutionModeSimple
-__VISetRevolutionModeSimple:
+.fn __VISetRevolutionModeSimple, global
 /* 803685E0 00331BA0  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 803685E4 00331BA4  7C 08 02 A6 */	mflr r0
 /* 803685E8 00331BA8  38 60 00 E0 */	li r3, 0xe0
@@ -1586,6 +1585,7 @@ __VISetRevolutionModeSimple:
 /* 80368A80 00332040  7C 08 03 A6 */	mtlr r0
 /* 80368A84 00332044  38 21 00 70 */	addi r1, r1, 0x70
 /* 80368A88 00332048  4E 80 00 20 */	blr
+.endfn __VISetRevolutionModeSimple
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

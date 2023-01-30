@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global __AXGetCurrentProfile
-__AXGetCurrentProfile:
+.fn __AXGetCurrentProfile, global
 /* 802D56D0 0029EC90  80 0D B5 B8 */	lwz r0, lbl_80667738@sda21(r13)
 /* 802D56D4 0029EC94  2C 00 00 00 */	cmpwi r0, 0
 /* 802D56D8 0029EC98  41 82 00 30 */	beq .L_802D5708
@@ -22,6 +21,7 @@ __AXGetCurrentProfile:
 .L_802D5708:
 /* 802D5708 0029ECC8  38 60 00 00 */	li r3, 0
 /* 802D570C 0029ECCC  4E 80 00 20 */	blr 
+.endfn __AXGetCurrentProfile
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 .global lbl_80667738

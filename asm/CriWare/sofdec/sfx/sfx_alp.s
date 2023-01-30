@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global SFXA_Init
-SFXA_Init:
+.fn SFXA_Init, global
 /* 803D5C18 0039F1D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D5C1C 0039F1DC  7C 08 02 A6 */	mflr r0
 /* 803D5C20 0039F1E0  38 80 00 00 */	li r4, 0
@@ -21,9 +20,9 @@ SFXA_Init:
 /* 803D5C50 0039F210  7C 08 03 A6 */	mtlr r0
 /* 803D5C54 0039F214  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D5C58 0039F218  4E 80 00 20 */	blr 
+.endfn SFXA_Init
 
-.global SFXA_Create
-SFXA_Create:
+.fn SFXA_Create, global
 /* 803D5C5C 0039F21C  3C 60 80 62 */	lis r3, sfxa_work@ha
 /* 803D5C60 0039F220  38 63 D3 70 */	addi r3, r3, sfxa_work@l
 /* 803D5C64 0039F224  80 03 00 04 */	lwz r0, 4(r3)
@@ -63,9 +62,9 @@ SFXA_Create:
 /* 803D5CDC 0039F29C  90 05 D3 70 */	stw r0, sfxa_work@l(r5)
 /* 803D5CE0 0039F2A0  90 C3 00 00 */	stw r6, 0(r3)
 /* 803D5CE4 0039F2A4  4E 80 00 20 */	blr 
+.endfn SFXA_Create
 
-.global SFXA_Destroy
-SFXA_Destroy:
+.fn SFXA_Destroy, global
 /* 803D5CE8 0039F2A8  2C 03 00 00 */	cmpwi r3, 0
 /* 803D5CEC 0039F2AC  4D 82 00 20 */	beqlr 
 /* 803D5CF0 0039F2B0  38 00 00 00 */	li r0, 0
@@ -75,9 +74,9 @@ SFXA_Destroy:
 /* 803D5D00 0039F2C0  38 03 FF FF */	addi r0, r3, -1
 /* 803D5D04 0039F2C4  90 04 D3 70 */	stw r0, sfxa_work@l(r4)
 /* 803D5D08 0039F2C8  4E 80 00 20 */	blr 
+.endfn SFXA_Destroy
 
-.global SFXA_MakeAlpLumiTbl
-SFXA_MakeAlpLumiTbl:
+.fn SFXA_MakeAlpLumiTbl, global
 /* 803D5D0C 0039F2CC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D5D10 0039F2D0  7C 08 02 A6 */	mflr r0
 /* 803D5D14 0039F2D4  7C A6 2B 78 */	mr r6, r5
@@ -101,9 +100,9 @@ SFXA_MakeAlpLumiTbl:
 /* 803D5D58 0039F318  7C 08 03 A6 */	mtlr r0
 /* 803D5D5C 0039F31C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D5D60 0039F320  4E 80 00 20 */	blr 
+.endfn SFXA_MakeAlpLumiTbl
 
-.global SFXA_MakeAlp3110Tbl
-SFXA_MakeAlp3110Tbl:
+.fn SFXA_MakeAlp3110Tbl, global
 /* 803D5D64 0039F324  81 83 00 1C */	lwz r12, 0x1c(r3)
 /* 803D5D68 0039F328  88 83 00 14 */	lbz r4, 0x14(r3)
 /* 803D5D6C 0039F32C  2C 0C 00 00 */	cmpwi r12, 0
@@ -115,9 +114,9 @@ SFXA_MakeAlp3110Tbl:
 /* 803D5D84 0039F344  7D 89 03 A6 */	mtctr r12
 /* 803D5D88 0039F348  4E 80 04 20 */	bctr 
 /* 803D5D8C 0039F34C  4E 80 00 20 */	blr 
+.endfn SFXA_MakeAlp3110Tbl
 
-.global SFXA_MakeAlp3211Tbl
-SFXA_MakeAlp3211Tbl:
+.fn SFXA_MakeAlp3211Tbl, global
 /* 803D5D90 0039F350  81 83 00 20 */	lwz r12, 0x20(r3)
 /* 803D5D94 0039F354  88 83 00 14 */	lbz r4, 0x14(r3)
 /* 803D5D98 0039F358  2C 0C 00 00 */	cmpwi r12, 0
@@ -129,11 +128,12 @@ SFXA_MakeAlp3211Tbl:
 /* 803D5DB0 0039F370  7D 89 03 A6 */	mtctr r12
 /* 803D5DB4 0039F374  4E 80 04 20 */	bctr 
 /* 803D5DB8 0039F378  4E 80 00 20 */	blr 
+.endfn SFXA_MakeAlp3211Tbl
 
-.global SFXA_IsNeedUpdateLumiTbl
-SFXA_IsNeedUpdateLumiTbl:
+.fn SFXA_IsNeedUpdateLumiTbl, global
 /* 803D5DBC 0039F37C  80 63 00 04 */	lwz r3, 4(r3)
 /* 803D5DC0 0039F380  4E 80 00 20 */	blr 
+.endfn SFXA_IsNeedUpdateLumiTbl
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global __DVDFSInit
-__DVDFSInit:
+.fn __DVDFSInit, global
 /* 80309DA0 002D3360  3C 60 80 00 */	lis r3, 0x80000038@ha
 /* 80309DA4 002D3364  90 6D B6 44 */	stw r3, lbl_806677C4@sda21(r13)
 /* 80309DA8 002D3368  80 63 00 38 */	lwz r3, 0x80000038@l(r3)
@@ -17,10 +16,10 @@ __DVDFSInit:
 /* 80309DC4 002D3384  7C 03 02 14 */	add r0, r3, r0
 /* 80309DC8 002D3388  90 0D B6 3C */	stw r0, lbl_806677BC@sda21(r13)
 /* 80309DCC 002D338C  4E 80 00 20 */	blr 
+.endfn __DVDFSInit
 
 .balign 16, 0
-.global DVDConvertPathToEntrynum
-DVDConvertPathToEntrynum:
+.fn DVDConvertPathToEntrynum, global
 /* 80309DD0 002D3390  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80309DD4 002D3394  7C 08 02 A6 */	mflr r0
 /* 80309DD8 002D3398  90 01 00 34 */	stw r0, 0x34(r1)
@@ -253,10 +252,10 @@ DVDConvertPathToEntrynum:
 /* 8030A0CC 002D368C  7C 08 03 A6 */	mtlr r0
 /* 8030A0D0 002D3690  38 21 00 30 */	addi r1, r1, 0x30
 /* 8030A0D4 002D3694  4E 80 00 20 */	blr 
+.endfn DVDConvertPathToEntrynum
 
 .balign 16, 0
-.global DVDFastOpen
-DVDFastOpen:
+.fn DVDFastOpen, global
 /* 8030A0E0 002D36A0  2C 03 00 00 */	cmpwi r3, 0
 /* 8030A0E4 002D36A4  41 80 00 24 */	blt .L_8030A108
 /* 8030A0E8 002D36A8  80 0D B6 38 */	lwz r0, lbl_806677B8@sda21(r13)
@@ -285,10 +284,10 @@ DVDFastOpen:
 /* 8030A13C 002D36FC  90 04 00 38 */	stw r0, 0x38(r4)
 /* 8030A140 002D3700  90 04 00 0C */	stw r0, 0xc(r4)
 /* 8030A144 002D3704  4E 80 00 20 */	blr 
+.endfn DVDFastOpen
 
 .balign 16, 0
-.global DVDOpen
-DVDOpen:
+.fn DVDOpen, global
 /* 8030A150 002D3710  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 8030A154 002D3714  7C 08 02 A6 */	mflr r0
 /* 8030A158 002D3718  90 01 00 A4 */	stw r0, 0xa4(r1)
@@ -487,10 +486,10 @@ DVDOpen:
 /* 8030A3F8 002D39B8  7C 08 03 A6 */	mtlr r0
 /* 8030A3FC 002D39BC  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 8030A400 002D39C0  4E 80 00 20 */	blr 
+.endfn DVDOpen
 
 .balign 16, 0
-.global DVDClose
-DVDClose:
+.fn DVDClose, global
 /* 8030A410 002D39D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030A414 002D39D4  7C 08 02 A6 */	mflr r0
 /* 8030A418 002D39D8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -500,9 +499,10 @@ DVDClose:
 /* 8030A428 002D39E8  7C 08 03 A6 */	mtlr r0
 /* 8030A42C 002D39EC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030A430 002D39F0  4E 80 00 20 */	blr 
+.endfn DVDClose
 
 .balign 16, 0
-entryToPath:
+.fn entryToPath, local
 /* 8030A440 002D3A00  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8030A444 002D3A04  7C 08 02 A6 */	mflr r0
 /* 8030A448 002D3A08  90 01 00 24 */	stw r0, 0x24(r1)
@@ -635,10 +635,10 @@ entryToPath:
 /* 8030A5FC 002D3BBC  7C 08 03 A6 */	mtlr r0
 /* 8030A600 002D3BC0  38 21 00 20 */	addi r1, r1, 0x20
 /* 8030A604 002D3BC4  4E 80 00 20 */	blr 
+.endfn entryToPath
 
 .balign 16, 0
-.global DVDReadAsyncPrio
-DVDReadAsyncPrio:
+.fn DVDReadAsyncPrio, global
 /* 8030A610 002D3BD0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8030A614 002D3BD4  7C 08 02 A6 */	mflr r0
 /* 8030A618 002D3BD8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -695,20 +695,20 @@ DVDReadAsyncPrio:
 /* 8030A6D4 002D3C94  7C 08 03 A6 */	mtlr r0
 /* 8030A6D8 002D3C98  38 21 00 20 */	addi r1, r1, 0x20
 /* 8030A6DC 002D3C9C  4E 80 00 20 */	blr
+.endfn DVDReadAsyncPrio
 
 .balign 16, 0
-.global cbForReadAsync
-cbForReadAsync:
+.fn cbForReadAsync, global
 /* 8030A6E0 002D3CA0  81 84 00 38 */	lwz r12, 0x38(r4)
 /* 8030A6E4 002D3CA4  2C 0C 00 00 */	cmpwi r12, 0
 /* 8030A6E8 002D3CA8  4D 82 00 20 */	beqlr 
 /* 8030A6EC 002D3CAC  7D 89 03 A6 */	mtctr r12
 /* 8030A6F0 002D3CB0  4E 80 04 20 */	bctr 
 /* 8030A6F4 002D3CB4  4E 80 00 20 */	blr 
+.endfn cbForReadAsync
 
 .balign 16, 0
-.global DVDReadPrio
-DVDReadPrio:
+.fn DVDReadPrio, global
 /* 8030A700 002D3CC0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8030A704 002D3CC4  7C 08 02 A6 */	mflr r0
 /* 8030A708 002D3CC8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -794,16 +794,16 @@ DVDReadPrio:
 /* 8030A81C 002D3DDC  7C 08 03 A6 */	mtlr r0
 /* 8030A820 002D3DE0  38 21 00 20 */	addi r1, r1, 0x20
 /* 8030A824 002D3DE4  4E 80 00 20 */	blr 
+.endfn DVDReadPrio
 
 .balign 16, 0
-.global cbForReadSync
-cbForReadSync:
+.fn cbForReadSync, global
 /* 8030A830 002D3DF0  38 6D B6 30 */	addi r3, r13, lbl_806677B0@sda21
 /* 8030A834 002D3DF4  48 05 1F 2C */	b OSWakeupThread
+.endfn cbForReadSync
 
 .balign 16, 0
-.global DVDGetTransferredSize
-DVDGetTransferredSize:
+.fn DVDGetTransferredSize, global
 /* 8030A840 002D3E00  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 8030A844 002D3E04  2C 00 00 02 */	cmpwi r0, 2
 /* 8030A848 002D3E08  41 82 00 40 */	beq .L_8030A888
@@ -831,6 +831,7 @@ DVDGetTransferredSize:
 .L_8030A890:
 /* 8030A890 002D3E50  80 63 00 20 */	lwz r3, 0x20(r3)
 /* 8030A894 002D3E54  4E 80 00 20 */	blr
+.endfn DVDGetTransferredSize
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

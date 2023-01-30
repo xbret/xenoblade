@@ -2,8 +2,9 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_8049DD8C
-func_8049DD8C:
+
+
+.fn func_8049DD8C, global
 /* 8049DD8C 0046734C  C0 62 CF E4 */	lfs f3, float_8066D364@sda21(r2)
 /* 8049DD90 00467350  3C C0 80 57 */	lis r6, __vt__CScnFogMan@ha
 /* 8049DD94 00467354  C0 02 CF F0 */	lfs f0, float_8066D370@sda21(r2)
@@ -43,9 +44,9 @@ func_8049DD8C:
 /* 8049DE1C 004673DC  D0 63 00 6C */	stfs f3, 0x6c(r3)
 /* 8049DE20 004673E0  D0 63 00 70 */	stfs f3, 0x70(r3)
 /* 8049DE24 004673E4  4E 80 00 20 */	blr 
+.endfn func_8049DD8C
 
-.global func_8049DE28
-func_8049DE28:
+.fn func_8049DE28, global
 /* 8049DE28 004673E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049DE2C 004673EC  7C 08 02 A6 */	mflr r0
 /* 8049DE30 004673F0  2C 03 00 00 */	cmpwi r3, 0
@@ -63,18 +64,18 @@ func_8049DE28:
 /* 8049DE5C 0046741C  7C 08 03 A6 */	mtlr r0
 /* 8049DE60 00467420  38 21 00 10 */	addi r1, r1, 0x10
 /* 8049DE64 00467424  4E 80 00 20 */	blr 
+.endfn func_8049DE28
 
-.global func_8049DE68
-func_8049DE68:
+.fn func_8049DE68, global
 /* 8049DE68 00467428  90 83 00 08 */	stw r4, 8(r3)
 /* 8049DE6C 0046742C  4E 80 00 20 */	blr 
+.endfn func_8049DE68
 
-.global func_8049DE70
-func_8049DE70:
+.fn func_8049DE70, global
 /* 8049DE70 00467430  48 00 00 54 */	b func_8049DEC4
+.endfn func_8049DE70
 
-.global func_8049DE74
-func_8049DE74:
+.fn func_8049DE74, global
 /* 8049DE74 00467434  81 05 00 00 */	lwz r8, 0(r5)
 /* 8049DE78 00467438  80 E5 00 04 */	lwz r7, 4(r5)
 /* 8049DE7C 0046743C  80 C5 00 08 */	lwz r6, 8(r5)
@@ -95,9 +96,9 @@ func_8049DE74:
 /* 8049DEB8 00467478  D0 43 00 1C */	stfs f2, 0x1c(r3)
 /* 8049DEBC 0046747C  D0 23 00 20 */	stfs f1, 0x20(r3)
 /* 8049DEC0 00467480  4E 80 00 20 */	blr
+.endfn func_8049DE74
 
-.global func_8049DEC4
-func_8049DEC4:
+.fn func_8049DEC4, global
 /* 8049DEC4 00467484  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 8049DEC8 00467488  7C 08 02 A6 */	mflr r0
 /* 8049DECC 0046748C  90 01 00 A4 */	stw r0, 0xa4(r1)
@@ -412,9 +413,9 @@ func_8049DEC4:
 /* 8049E344 00467904  7C 08 03 A6 */	mtlr r0
 /* 8049E348 00467908  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 8049E34C 0046790C  4E 80 00 20 */	blr 
+.endfn func_8049DEC4
 
-.global func_8049E350
-func_8049E350:
+.fn func_8049E350, global
 /* 8049E350 00467910  80 E4 00 00 */	lwz r7, 0(r4)
 /* 8049E354 00467914  80 C4 00 04 */	lwz r6, 4(r4)
 /* 8049E358 00467918  80 A4 00 08 */	lwz r5, 8(r4)
@@ -424,14 +425,17 @@ func_8049E350:
 /* 8049E368 00467928  90 A3 00 14 */	stw r5, 0x14(r3)
 /* 8049E36C 0046792C  90 03 00 18 */	stw r0, 0x18(r3)
 /* 8049E370 00467930  4E 80 00 20 */	blr 
+.endfn func_8049E350
 
-.global func_8049E374
-func_8049E374:
+.fn func_8049E374, global
 /* 8049E374 00467934  D0 23 00 20 */	stfs f1, 0x20(r3)
 /* 8049E378 00467938  D0 43 00 1C */	stfs f2, 0x1c(r3)
 /* 8049E37C 0046793C  4E 80 00 20 */	blr 
+.endfn func_8049E374
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
 
 .global CScnFogMan_typestr
 CScnFogMan_typestr:
@@ -440,6 +444,8 @@ CScnFogMan_typestr:
 	.4byte 0
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
 
 .global __vt__CScnFogMan
 __vt__CScnFogMan:
@@ -486,12 +492,16 @@ lbl_805724A8:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+
+
 .global __RTTI__CScnFogMan
 __RTTI__CScnFogMan:
 	.4byte CScnFogMan_typestr
 	.4byte 0
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
 
 .global float_8066D360
 float_8066D360:
@@ -542,24 +552,37 @@ float_8066D380:
 .global double_8066D388
 double_8066D388:
 	.8byte 0x4330000000000000 #unsigned int to float constant
-.section extab_, "a"  # 0x800066E0 - 0x80021020
 
-.global lbl_8001F698
-lbl_8001F698:
+.section extab, "a" # 0x800066E0 - 0x80021020
+
+.balign 4
+
+.obj "@etb_8001F698", local
+.hidden "@etb_8001F698"
 	.4byte 0x08080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001F698"
 
-.global lbl_8001F6A0
-lbl_8001F6A0:
+.obj "@etb_8001F6A0", local
+.hidden "@etb_8001F6A0"
 	.4byte 0x290A0000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001F6A0"
 
+.section extabindex, "a" # 0x80021020 - 0x80039220
 
-.section extabindex_, "a"  # 0x80021020 - 0x80039220
+.balign 4
 
-.4byte func_8049DE28
+.obj "@eti_80037160", local
+.hidden "@eti_80037160"
+	.4byte func_8049DE28
 	.4byte 0x00000040
-	.4byte lbl_8001F698
+	.4byte "@etb_8001F698"
+.endobj "@eti_80037160"
+
+.obj "@eti_8003716C", local
+.hidden "@eti_8003716C"
 	.4byte func_8049DEC4
 	.4byte 0x0000048C
-	.4byte lbl_8001F6A0
+	.4byte "@etb_8001F6A0"
+.endobj "@eti_8003716C"

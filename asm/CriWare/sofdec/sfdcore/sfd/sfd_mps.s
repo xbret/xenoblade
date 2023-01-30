@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global SFD_SetElementOutSj
-SFD_SetElementOutSj:
+.fn SFD_SetElementOutSj, global
 /* 803C0EF0 0038A4B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803C0EF4 0038A4B4  7C 08 02 A6 */	mflr r0
 /* 803C0EF8 0038A4B8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -44,9 +43,9 @@ SFD_SetElementOutSj:
 /* 803C0F70 0038A530  7C 08 03 A6 */	mtlr r0
 /* 803C0F74 0038A534  38 21 00 20 */	addi r1, r1, 0x20
 /* 803C0F78 0038A538  4E 80 00 20 */	blr 
+.endfn SFD_SetElementOutSj
 
-.global SFMPS_Init
-SFMPS_Init:
+.fn SFMPS_Init, global
 /* 803C0F7C 0038A53C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803C0F80 0038A540  7C 08 02 A6 */	mflr r0
 /* 803C0F84 0038A544  3C 80 80 61 */	lis r4, sfmps_libwork@ha
@@ -71,9 +70,9 @@ SFMPS_Init:
 /* 803C0FC8 0038A588  7C 08 03 A6 */	mtlr r0
 /* 803C0FCC 0038A58C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803C0FD0 0038A590  4E 80 00 20 */	blr 
+.endfn SFMPS_Init
 
-.global SFMPS_Finish
-SFMPS_Finish:
+.fn SFMPS_Finish, global
 /* 803C0FD4 0038A594  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803C0FD8 0038A598  7C 08 02 A6 */	mflr r0
 /* 803C0FDC 0038A59C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -83,9 +82,9 @@ SFMPS_Finish:
 /* 803C0FEC 0038A5AC  7C 08 03 A6 */	mtlr r0
 /* 803C0FF0 0038A5B0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803C0FF4 0038A5B4  4E 80 00 20 */	blr 
+.endfn SFMPS_Finish
 
-.global SFMPS_ExecServer
-SFMPS_ExecServer:
+.fn SFMPS_ExecServer, global
 /* 803C0FF8 0038A5B8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803C0FFC 0038A5BC  7C 08 02 A6 */	mflr r0
 /* 803C1000 0038A5C0  3C 80 80 61 */	lis r4, lbl_8060A2D8@ha
@@ -306,9 +305,9 @@ SFMPS_ExecServer:
 /* 803C1314 0038A8D4  7C 08 03 A6 */	mtlr r0
 /* 803C1318 0038A8D8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803C131C 0038A8DC  4E 80 00 20 */	blr 
+.endfn SFMPS_ExecServer
 
-.global sfmps_DecodeSomeUnit
-sfmps_DecodeSomeUnit:
+.fn sfmps_DecodeSomeUnit, global
 /* 803C1320 0038A8E0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803C1324 0038A8E4  7C 08 02 A6 */	mflr r0
 /* 803C1328 0038A8E8  38 80 00 4B */	li r4, 0x4b
@@ -406,9 +405,9 @@ sfmps_DecodeSomeUnit:
 /* 803C1484 0038AA44  7C 08 03 A6 */	mtlr r0
 /* 803C1488 0038AA48  38 21 00 40 */	addi r1, r1, 0x40
 /* 803C148C 0038AA4C  4E 80 00 20 */	blr 
+.endfn sfmps_DecodeSomeUnit
 
-.global func_803C1490
-func_803C1490:
+.fn func_803C1490, global
 /* 803C1490 0038AA50  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803C1494 0038AA54  7C 08 02 A6 */	mflr r0
 /* 803C1498 0038AA58  90 01 00 44 */	stw r0, 0x44(r1)
@@ -469,17 +468,17 @@ func_803C1490:
 /* 803C1564 0038AB24  7C 08 03 A6 */	mtlr r0
 /* 803C1568 0038AB28  38 21 00 40 */	addi r1, r1, 0x40
 /* 803C156C 0038AB2C  4E 80 00 20 */	blr 
+.endfn func_803C1490
 
-.global func_803C1570
-func_803C1570:
+.fn func_803C1570, global
 /* 803C1570 0038AB30  2C 03 00 00 */	cmpwi r3, 0
 /* 803C1574 0038AB34  4D 82 00 20 */	beqlr 
 /* 803C1578 0038AB38  90 83 39 74 */	stw r4, 0x3974(r3)
 /* 803C157C 0038AB3C  90 A3 39 78 */	stw r5, 0x3978(r3)
 /* 803C1580 0038AB40  4E 80 00 20 */	blr 
+.endfn func_803C1570
 
-.global func_803C1584
-func_803C1584:
+.fn func_803C1584, global
 /* 803C1584 0038AB44  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803C1588 0038AB48  7C 08 02 A6 */	mflr r0
 /* 803C158C 0038AB4C  90 01 00 44 */	stw r0, 0x44(r1)
@@ -709,9 +708,9 @@ func_803C1584:
 /* 803C18B0 0038AE70  7C 08 03 A6 */	mtlr r0
 /* 803C18B4 0038AE74  38 21 00 40 */	addi r1, r1, 0x40
 /* 803C18B8 0038AE78  4E 80 00 20 */	blr
+.endfn func_803C1584
 
-.global sfmps_pesfn
-sfmps_pesfn:
+.fn sfmps_pesfn, global
 /* 803C18BC 0038AE7C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803C18C0 0038AE80  7C 08 02 A6 */	mflr r0
 /* 803C18C4 0038AE84  90 01 00 24 */	stw r0, 0x24(r1)
@@ -734,9 +733,9 @@ sfmps_pesfn:
 /* 803C1904 0038AEC4  7C 08 03 A6 */	mtlr r0
 /* 803C1908 0038AEC8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803C190C 0038AECC  4E 80 00 20 */	blr 
+.endfn sfmps_pesfn
 
-.global sfmps_SkipNext
-sfmps_SkipNext:
+.fn sfmps_SkipNext, global
 /* 803C1910 0038AED0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803C1914 0038AED4  7C 08 02 A6 */	mflr r0
 /* 803C1918 0038AED8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -838,9 +837,9 @@ sfmps_SkipNext:
 /* 803C1A60 0038B020  7C 08 03 A6 */	mtlr r0
 /* 803C1A64 0038B024  38 21 00 20 */	addi r1, r1, 0x20
 /* 803C1A68 0038B028  4E 80 00 20 */	blr 
+.endfn sfmps_SkipNext
 
-.global sfmps_CopyPketData
-sfmps_CopyPketData:
+.fn sfmps_CopyPketData, global
 /* 803C1A6C 0038B02C  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 803C1A70 0038B030  7C 08 02 A6 */	mflr r0
 /* 803C1A74 0038B034  90 01 00 74 */	stw r0, 0x74(r1)
@@ -1067,9 +1066,9 @@ sfmps_CopyPketData:
 /* 803C1D90 0038B350  7C 08 03 A6 */	mtlr r0
 /* 803C1D94 0038B354  38 21 00 70 */	addi r1, r1, 0x70
 /* 803C1D98 0038B358  4E 80 00 20 */	blr 
+.endfn sfmps_CopyPketData
 
-.global sfmps_CopyAudio
-sfmps_CopyAudio:
+.fn sfmps_CopyAudio, global
 /* 803C1D9C 0038B35C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803C1DA0 0038B360  7C 08 02 A6 */	mflr r0
 /* 803C1DA4 0038B364  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1182,9 +1181,9 @@ sfmps_CopyAudio:
 /* 803C1F24 0038B4E4  7C 08 03 A6 */	mtlr r0
 /* 803C1F28 0038B4E8  38 21 00 30 */	addi r1, r1, 0x30
 /* 803C1F2C 0038B4EC  4E 80 00 20 */	blr 
+.endfn sfmps_CopyAudio
 
-.global sfmps_CopyVideo
-sfmps_CopyVideo:
+.fn sfmps_CopyVideo, global
 /* 803C1F30 0038B4F0  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803C1F34 0038B4F4  7C 08 02 A6 */	mflr r0
 /* 803C1F38 0038B4F8  90 01 00 54 */	stw r0, 0x54(r1)
@@ -1340,9 +1339,9 @@ sfmps_CopyVideo:
 /* 803C2140 0038B700  7C 08 03 A6 */	mtlr r0
 /* 803C2144 0038B704  38 21 00 50 */	addi r1, r1, 0x50
 /* 803C2148 0038B708  4E 80 00 20 */	blr 
+.endfn sfmps_CopyVideo
 
-.global sfmps_CopyPrvate
-sfmps_CopyPrvate:
+.fn sfmps_CopyPrvate, global
 /* 803C214C 0038B70C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803C2150 0038B710  7C 08 02 A6 */	mflr r0
 /* 803C2154 0038B714  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1384,9 +1383,9 @@ sfmps_CopyPrvate:
 /* 803C21D8 0038B798  7C 08 03 A6 */	mtlr r0
 /* 803C21DC 0038B79C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803C21E0 0038B7A0  4E 80 00 20 */	blr 
+.endfn sfmps_CopyPrvate
 
-.global sfmps_CopyUsrSj
-sfmps_CopyUsrSj:
+.fn sfmps_CopyUsrSj, global
 /* 803C21E4 0038B7A4  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803C21E8 0038B7A8  7C 08 02 A6 */	mflr r0
 /* 803C21EC 0038B7AC  90 01 00 54 */	stw r0, 0x54(r1)
@@ -1507,14 +1506,14 @@ sfmps_CopyUsrSj:
 /* 803C2394 0038B954  7C 08 03 A6 */	mtlr r0
 /* 803C2398 0038B958  38 21 00 50 */	addi r1, r1, 0x50
 /* 803C239C 0038B95C  4E 80 00 20 */	blr 
+.endfn sfmps_CopyUsrSj
 
-.global sfmps_CopyPadding
-sfmps_CopyPadding:
+.fn sfmps_CopyPadding, global
 /* 803C23A0 0038B960  38 60 00 01 */	li r3, 1
 /* 803C23A4 0038B964  4E 80 00 20 */	blr 
+.endfn sfmps_CopyPadding
 
-.global sfmps_CopyDstBuft
-sfmps_CopyDstBuft:
+.fn sfmps_CopyDstBuft, global
 /* 803C23A8 0038B968  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 803C23AC 0038B96C  7C 08 02 A6 */	mflr r0
 /* 803C23B0 0038B970  90 01 00 94 */	stw r0, 0x94(r1)
@@ -1640,9 +1639,9 @@ sfmps_CopyDstBuft:
 /* 803C2568 0038BB28  7C 08 03 A6 */	mtlr r0
 /* 803C256C 0038BB2C  38 21 00 90 */	addi r1, r1, 0x90
 /* 803C2570 0038BB30  4E 80 00 20 */	blr 
+.endfn sfmps_CopyDstBuft
 
-.global sfmps_ChkSupply
-sfmps_ChkSupply:
+.fn sfmps_ChkSupply, global
 /* 803C2574 0038BB34  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803C2578 0038BB38  7C 08 02 A6 */	mflr r0
 /* 803C257C 0038BB3C  2C 05 00 04 */	cmpwi r5, 4
@@ -1825,9 +1824,9 @@ sfmps_ChkSupply:
 /* 803C27DC 0038BD9C  7C 08 03 A6 */	mtlr r0
 /* 803C27E0 0038BDA0  38 21 00 20 */	addi r1, r1, 0x20
 /* 803C27E4 0038BDA4  4E 80 00 20 */	blr 
+.endfn sfmps_ChkSupply
 
-.global sfmps_GetStmNum
-sfmps_GetStmNum:
+.fn sfmps_GetStmNum, global
 /* 803C27E8 0038BDA8  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803C27EC 0038BDAC  7C 08 02 A6 */	mflr r0
 /* 803C27F0 0038BDB0  90 01 00 54 */	stw r0, 0x54(r1)
@@ -1869,9 +1868,9 @@ sfmps_GetStmNum:
 /* 803C2874 0038BE34  7C 08 03 A6 */	mtlr r0
 /* 803C2878 0038BE38  38 21 00 50 */	addi r1, r1, 0x50
 /* 803C287C 0038BE3C  4E 80 00 20 */	blr 
+.endfn sfmps_GetStmNum
 
-.global sfmps_SetMvInf
-sfmps_SetMvInf:
+.fn sfmps_SetMvInf, global
 /* 803C2880 0038BE40  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803C2884 0038BE44  7C 08 02 A6 */	mflr r0
 /* 803C2888 0038BE48  90 01 00 54 */	stw r0, 0x54(r1)
@@ -1919,9 +1918,9 @@ sfmps_SetMvInf:
 /* 803C2920 0038BEE0  7C 08 03 A6 */	mtlr r0
 /* 803C2924 0038BEE4  38 21 00 50 */	addi r1, r1, 0x50
 /* 803C2928 0038BEE8  4E 80 00 20 */	blr 
+.endfn sfmps_SetMvInf
 
-.global sfmps_SetMpsHd
-sfmps_SetMpsHd:
+.fn sfmps_SetMpsHd, global
 /* 803C292C 0038BEEC  80 A3 26 C8 */	lwz r5, 0x26c8(r3)
 /* 803C2930 0038BEF0  2C 05 00 00 */	cmpwi r5, 0
 /* 803C2934 0038BEF4  40 82 00 0C */	bne .L_803C2940
@@ -1980,9 +1979,9 @@ sfmps_SetMpsHd:
 /* 803C29FC 0038BFBC  80 08 00 30 */	lwz r0, 0x30(r8)
 /* 803C2A00 0038BFC0  90 05 00 2C */	stw r0, 0x2c(r5)
 /* 803C2A04 0038BFC4  4E 80 00 20 */	blr 
+.endfn sfmps_SetMpsHd
 
-.global sfmps_SetMpsRaw
-sfmps_SetMpsRaw:
+.fn sfmps_SetMpsRaw, global
 /* 803C2A08 0038BFC8  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803C2A0C 0038BFCC  7C 08 02 A6 */	mflr r0
 /* 803C2A10 0038BFD0  90 01 00 44 */	stw r0, 0x44(r1)
@@ -2045,9 +2044,9 @@ sfmps_SetMpsRaw:
 /* 803C2AD8 0038C098  7C 08 03 A6 */	mtlr r0
 /* 803C2ADC 0038C09C  38 21 00 40 */	addi r1, r1, 0x40
 /* 803C2AE0 0038C0A0  4E 80 00 20 */	blr 
+.endfn sfmps_SetMpsRaw
 
-.global SFMPS_Create
-SFMPS_Create:
+.fn SFMPS_Create, global
 /* 803C2AE4 0038C0A4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803C2AE8 0038C0A8  7C 08 02 A6 */	mflr r0
 /* 803C2AEC 0038C0AC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2098,9 +2097,9 @@ SFMPS_Create:
 /* 803C2B94 0038C154  7C 08 03 A6 */	mtlr r0
 /* 803C2B98 0038C158  38 21 00 20 */	addi r1, r1, 0x20
 /* 803C2B9C 0038C15C  4E 80 00 20 */	blr 
+.endfn SFMPS_Create
 
-.global sfmps_InitInf
-sfmps_InitInf:
+.fn sfmps_InitInf, global
 /* 803C2BA0 0038C160  3C 80 80 00 */	lis r4, 0x7FFFFFFF@ha
 /* 803C2BA4 0038C164  38 A0 FF FF */	li r5, -1
 /* 803C2BA8 0038C168  38 C0 00 00 */	li r6, 0
@@ -2172,13 +2171,13 @@ sfmps_InitInf:
 /* 803C2CAC 0038C26C  90 83 01 54 */	stw r4, 0x154(r3)
 /* 803C2CB0 0038C270  90 03 01 58 */	stw r0, 0x158(r3)
 /* 803C2CB4 0038C274  4E 80 00 20 */	blr
+.endfn sfmps_InitInf
 
-.global sfmps_ErrFn
-sfmps_ErrFn:
+.fn sfmps_ErrFn, global
 /* 803C2CB8 0038C278  4B FF DF 9C */	b SFLIB_SetErr
+.endfn sfmps_ErrFn
 
-.global SFMPS_Destroy
-SFMPS_Destroy:
+.fn SFMPS_Destroy, global
 /* 803C2CBC 0038C27C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803C2CC0 0038C280  7C 08 02 A6 */	mflr r0
 /* 803C2CC4 0038C284  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2202,53 +2201,53 @@ SFMPS_Destroy:
 /* 803C2D04 0038C2C4  7C 08 03 A6 */	mtlr r0
 /* 803C2D08 0038C2C8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803C2D0C 0038C2CC  4E 80 00 20 */	blr 
+.endfn SFMPS_Destroy
 
-.global SFMPS_RequestStop
-SFMPS_RequestStop:
+.fn SFMPS_RequestStop, global
 /* 803C2D10 0038C2D0  38 60 00 00 */	li r3, 0
 /* 803C2D14 0038C2D4  4E 80 00 20 */	blr 
+.endfn SFMPS_RequestStop
 
-.global SFMPS_Start
-SFMPS_Start:
+.fn SFMPS_Start, global
 /* 803C2D18 0038C2D8  38 60 00 00 */	li r3, 0
 /* 803C2D1C 0038C2DC  4E 80 00 20 */	blr 
+.endfn SFMPS_Start
 
-.global SFMPS_Stop
-SFMPS_Stop:
+.fn SFMPS_Stop, global
 /* 803C2D20 0038C2E0  38 60 00 00 */	li r3, 0
 /* 803C2D24 0038C2E4  4E 80 00 20 */	blr 
+.endfn SFMPS_Stop
 
-.global SFMPS_Pause
-SFMPS_Pause:
+.fn SFMPS_Pause, global
 /* 803C2D28 0038C2E8  38 60 00 00 */	li r3, 0
 /* 803C2D2C 0038C2EC  4E 80 00 20 */	blr 
+.endfn SFMPS_Pause
 
-.global SFMPS_GetWrite
-SFMPS_GetWrite:
+.fn SFMPS_GetWrite, global
 /* 803C2D30 0038C2F0  3C 80 FF 00 */	lis r4, 0xFF000D0B@ha
 /* 803C2D34 0038C2F4  38 84 0D 0B */	addi r4, r4, 0xFF000D0B@l
 /* 803C2D38 0038C2F8  4B FF DF 1C */	b SFLIB_SetErr
+.endfn SFMPS_GetWrite
 
-.global SFMPS_AddWrite
-SFMPS_AddWrite:
+.fn SFMPS_AddWrite, global
 /* 803C2D3C 0038C2FC  3C 80 FF 00 */	lis r4, 0xFF000D0B@ha
 /* 803C2D40 0038C300  38 84 0D 0B */	addi r4, r4, 0xFF000D0B@l
 /* 803C2D44 0038C304  4B FF DF 10 */	b SFLIB_SetErr
+.endfn SFMPS_AddWrite
 
-.global SFMPS_GetRead
-SFMPS_GetRead:
+.fn SFMPS_GetRead, global
 /* 803C2D48 0038C308  3C 80 FF 00 */	lis r4, 0xFF000D0B@ha
 /* 803C2D4C 0038C30C  38 84 0D 0B */	addi r4, r4, 0xFF000D0B@l
 /* 803C2D50 0038C310  4B FF DF 04 */	b SFLIB_SetErr
+.endfn SFMPS_GetRead
 
-.global SFMPS_AddRead
-SFMPS_AddRead:
+.fn SFMPS_AddRead, global
 /* 803C2D54 0038C314  3C 80 FF 00 */	lis r4, 0xFF000D0B@ha
 /* 803C2D58 0038C318  38 84 0D 0B */	addi r4, r4, 0xFF000D0B@l
 /* 803C2D5C 0038C31C  4B FF DE F8 */	b SFLIB_SetErr
+.endfn SFMPS_AddRead
 
-.global SFMPS_Seek
-SFMPS_Seek:
+.fn SFMPS_Seek, global
 /* 803C2D60 0038C320  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803C2D64 0038C324  7C 08 02 A6 */	mflr r0
 /* 803C2D68 0038C328  90 01 00 34 */	stw r0, 0x34(r1)
@@ -2334,12 +2333,13 @@ SFMPS_Seek:
 /* 803C2E80 0038C440  7C 08 03 A6 */	mtlr r0
 /* 803C2E84 0038C444  38 21 00 30 */	addi r1, r1, 0x30
 /* 803C2E88 0038C448  4E 80 00 20 */	blr 
+.endfn SFMPS_Seek
 
-.global SFMPS_GetConcatCnt
-SFMPS_GetConcatCnt:
+.fn SFMPS_GetConcatCnt, global
 /* 803C2E8C 0038C44C  80 63 20 1C */	lwz r3, 0x201c(r3)
 /* 803C2E90 0038C450  80 63 00 20 */	lwz r3, 0x20(r3)
 /* 803C2E94 0038C454  4E 80 00 20 */	blr 
+.endfn SFMPS_GetConcatCnt
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

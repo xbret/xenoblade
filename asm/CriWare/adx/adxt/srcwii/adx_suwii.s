@@ -2,13 +2,12 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global adxwii_err_dvd
-adxwii_err_dvd:
+.fn adxwii_err_dvd, global
 /* 8039B290 00364850  7C 83 23 78 */	mr r3, r4
 /* 8039B294 00364854  4B FE EF 84 */	b ADXERR_CallErrFunc1_
+.endfn adxwii_err_dvd
 
-.global ADXWII_SetupDvdFs
-ADXWII_SetupDvdFs:
+.fn ADXWII_SetupDvdFs, global
 /* 8039B298 00364858  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039B29C 0036485C  7C 08 02 A6 */	mflr r0
 /* 8039B2A0 00364860  3C 80 80 52 */	lis r4, lbl_8051CD84@ha
@@ -61,6 +60,7 @@ ADXWII_SetupDvdFs:
 /* 8039B354 00364914  7C 08 03 A6 */	mtlr r0
 /* 8039B358 00364918  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039B35C 0036491C  4E 80 00 20 */	blr
+.endfn ADXWII_SetupDvdFs
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

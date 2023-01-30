@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global drawLine___Q210homebutton3guiFfffffUcR8_GXColor
-drawLine___Q210homebutton3guiFfffffUcR8_GXColor:
+.fn drawLine___Q210homebutton3guiFfffffUcR8_GXColor, global
 /* 8031F560 002E8B20  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 8031F564 002E8B24  7C 08 02 A6 */	mflr r0
 /* 8031F568 002E8B28  90 01 00 94 */	stw r0, 0x94(r1)
@@ -118,10 +117,10 @@ drawLine___Q210homebutton3guiFfffffUcR8_GXColor:
 /* 8031F718 002E8CD8  7C 08 03 A6 */	mtlr r0
 /* 8031F71C 002E8CDC  38 21 00 90 */	addi r1, r1, 0x90
 /* 8031F720 002E8CE0  4E 80 00 20 */	blr 
+.endfn drawLine___Q210homebutton3guiFfffffUcR8_GXColor
 
 .balign 16, 0
-.global update__Q310homebutton3gui9ComponentFiffUlUlUlPv
-update__Q310homebutton3gui9ComponentFiffUlUlUlPv:
+.fn update__Q310homebutton3gui9ComponentFiffUlUlUlPv, global
 /* 8031F730 002E8CF0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8031F734 002E8CF4  7C 08 02 A6 */	mflr r0
 /* 8031F738 002E8CF8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -256,28 +255,28 @@ update__Q310homebutton3gui9ComponentFiffUlUlUlPv:
 /* 8031F92C 002E8EEC  7C 08 03 A6 */	mtlr r0
 /* 8031F930 002E8EF0  38 21 00 30 */	addi r1, r1, 0x30
 /* 8031F934 002E8EF4  4E 80 00 20 */	blr 
+.endfn update__Q310homebutton3gui9ComponentFiffUlUlUlPv
 
 .balign 16, 0
-.global isVisible__Q310homebutton3gui9ComponentFv
-isVisible__Q310homebutton3gui9ComponentFv:
+.fn isVisible__Q310homebutton3gui9ComponentFv, global
 /* 8031F940 002E8F00  38 60 00 01 */	li r3, 1
 /* 8031F944 002E8F04  4E 80 00 20 */	blr 
+.endfn isVisible__Q310homebutton3gui9ComponentFv
 
 .balign 16, 0
-.global isPointed__Q310homebutton3gui9ComponentFi
-isPointed__Q310homebutton3gui9ComponentFi:
+.fn isPointed__Q310homebutton3gui9ComponentFi, global
 /* 8031F950 002E8F10  7C 63 22 14 */	add r3, r3, r4
 /* 8031F954 002E8F14  88 63 00 04 */	lbz r3, 4(r3)
 /* 8031F958 002E8F18  4E 80 00 20 */	blr 
+.endfn isPointed__Q310homebutton3gui9ComponentFi
 
 .balign 16, 0
-.global onMove__Q310homebutton3gui9ComponentFff
-onMove__Q310homebutton3gui9ComponentFff:
+.fn onMove__Q310homebutton3gui9ComponentFff, global
 /* 8031F960 002E8F20  4E 80 00 20 */	blr 
+.endfn onMove__Q310homebutton3gui9ComponentFff
 
 .balign 16, 0
-.global onEvent__Q310homebutton3gui7ManagerFUlUlPv
-onEvent__Q310homebutton3gui7ManagerFUlUlPv:
+.fn onEvent__Q310homebutton3gui7ManagerFUlUlPv, global
 /* 8031F970 002E8F30  80 63 00 04 */	lwz r3, 4(r3)
 /* 8031F974 002E8F34  2C 03 00 00 */	cmpwi r3, 0
 /* 8031F978 002E8F38  4D 82 00 20 */	beqlr 
@@ -286,38 +285,38 @@ onEvent__Q310homebutton3gui7ManagerFUlUlPv:
 /* 8031F984 002E8F44  7D 89 03 A6 */	mtctr r12
 /* 8031F988 002E8F48  4E 80 04 20 */	bctr 
 /* 8031F98C 002E8F4C  4E 80 00 20 */	blr 
+.endfn onEvent__Q310homebutton3gui7ManagerFUlUlPv
 
 .balign 16, 0
-.global onEvent__Q310homebutton3gui12EventHandlerFUlUlPv
-onEvent__Q310homebutton3gui12EventHandlerFUlUlPv:
+.fn onEvent__Q310homebutton3gui12EventHandlerFUlUlPv, global
 /* 8031F990 002E8F50  4E 80 00 20 */	blr 
+.endfn onEvent__Q310homebutton3gui12EventHandlerFUlUlPv
 
 .balign 16, 0
-.global getID__Q310homebutton3gui9ComponentFv
-getID__Q310homebutton3gui9ComponentFv:
+.fn getID__Q310homebutton3gui9ComponentFv, global
 /* 8031F9A0 002E8F60  80 63 00 20 */	lwz r3, 0x20(r3)
 /* 8031F9A4 002E8F64  4E 80 00 20 */	blr 
+.endfn getID__Q310homebutton3gui9ComponentFv
 
 .balign 16, 0
-.global setPointed__Q310homebutton3gui9ComponentFib
-setPointed__Q310homebutton3gui9ComponentFib:
+.fn setPointed__Q310homebutton3gui9ComponentFib, global
 /* 8031F9B0 002E8F70  7C 63 22 14 */	add r3, r3, r4
 /* 8031F9B4 002E8F74  98 A3 00 04 */	stb r5, 4(r3)
 /* 8031F9B8 002E8F78  4E 80 00 20 */	blr 
+.endfn setPointed__Q310homebutton3gui9ComponentFib
 
 .balign 16, 0
-.global onPoint__Q310homebutton3gui9ComponentFv
-onPoint__Q310homebutton3gui9ComponentFv:
+.fn onPoint__Q310homebutton3gui9ComponentFv, global
 /* 8031F9C0 002E8F80  4E 80 00 20 */	blr 
+.endfn onPoint__Q310homebutton3gui9ComponentFv
 
 .balign 16, 0
-.global offPoint__Q310homebutton3gui9ComponentFv
-offPoint__Q310homebutton3gui9ComponentFv:
+.fn offPoint__Q310homebutton3gui9ComponentFv, global
 /* 8031F9D0 002E8F90  4E 80 00 20 */	blr 
+.endfn offPoint__Q310homebutton3gui9ComponentFv
 
 .balign 16, 0
-.global __dt__Q310homebutton3gui7ManagerFv
-__dt__Q310homebutton3gui7ManagerFv:
+.fn __dt__Q310homebutton3gui7ManagerFv, global
 /* 8031F9E0 002E8FA0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8031F9E4 002E8FA4  7C 08 02 A6 */	mflr r0
 /* 8031F9E8 002E8FA8  2C 03 00 00 */	cmpwi r3, 0
@@ -370,10 +369,10 @@ __dt__Q310homebutton3gui7ManagerFv:
 /* 8031FA90 002E9050  7C 08 03 A6 */	mtlr r0
 /* 8031FA94 002E9054  38 21 00 20 */	addi r1, r1, 0x20
 /* 8031FA98 002E9058  4E 80 00 20 */	blr 
+.endfn __dt__Q310homebutton3gui7ManagerFv
 
 .balign 16, 0
-.global init__Q310homebutton3gui7ManagerFv
-init__Q310homebutton3gui7ManagerFv:
+.fn init__Q310homebutton3gui7ManagerFv, global
 /* 8031FAA0 002E9060  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031FAA4 002E9064  7C 08 02 A6 */	mflr r0
 /* 8031FAA8 002E9068  90 01 00 14 */	stw r0, 0x14(r1)
@@ -402,10 +401,10 @@ init__Q310homebutton3gui7ManagerFv:
 /* 8031FAFC 002E90BC  7C 08 03 A6 */	mtlr r0
 /* 8031FB00 002E90C0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031FB04 002E90C4  4E 80 00 20 */	blr 
+.endfn init__Q310homebutton3gui7ManagerFv
 
 .balign 16, 0
-.global init__Q310homebutton3gui9ComponentFv
-init__Q310homebutton3gui9ComponentFv:
+.fn init__Q310homebutton3gui9ComponentFv, global
 /* 8031FB10 002E90D0  38 00 00 00 */	li r0, 0
 /* 8031FB14 002E90D4  98 03 00 18 */	stb r0, 0x18(r3)
 /* 8031FB18 002E90D8  98 03 00 04 */	stb r0, 4(r3)
@@ -417,10 +416,10 @@ init__Q310homebutton3gui9ComponentFv:
 /* 8031FB30 002E90F0  98 03 00 0A */	stb r0, 0xa(r3)
 /* 8031FB34 002E90F4  98 03 00 0B */	stb r0, 0xb(r3)
 /* 8031FB38 002E90F8  4E 80 00 20 */	blr 
+.endfn init__Q310homebutton3gui9ComponentFv
 
 .balign 16, 0
-.global addComponent__Q310homebutton3gui7ManagerFPQ310homebutton3gui9Component
-addComponent__Q310homebutton3gui7ManagerFPQ310homebutton3gui9Component:
+.fn addComponent__Q310homebutton3gui7ManagerFPQ310homebutton3gui9Component, global
 /* 8031FB40 002E9100  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8031FB44 002E9104  7C 08 02 A6 */	mflr r0
 /* 8031FB48 002E9108  90 01 00 24 */	stw r0, 0x24(r1)
@@ -474,16 +473,16 @@ addComponent__Q310homebutton3gui7ManagerFPQ310homebutton3gui9Component:
 /* 8031FBF8 002E91B8  7C 08 03 A6 */	mtlr r0
 /* 8031FBFC 002E91BC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8031FC00 002E91C0  4E 80 00 20 */	blr 
+.endfn addComponent__Q310homebutton3gui7ManagerFPQ310homebutton3gui9Component
 
 .balign 16, 0
-.global setManager__Q310homebutton3gui9ComponentFPQ310homebutton3gui7Manager
-setManager__Q310homebutton3gui9ComponentFPQ310homebutton3gui7Manager:
+.fn setManager__Q310homebutton3gui9ComponentFPQ310homebutton3gui7Manager, global
 /* 8031FC10 002E91D0  90 83 00 28 */	stw r4, 0x28(r3)
 /* 8031FC14 002E91D4  4E 80 00 20 */	blr 
+.endfn setManager__Q310homebutton3gui9ComponentFPQ310homebutton3gui7Manager
 
 .balign 16, 0
-.global delComponent__Q310homebutton3gui7ManagerFPQ310homebutton3gui9Component
-delComponent__Q310homebutton3gui7ManagerFPQ310homebutton3gui9Component:
+.fn delComponent__Q310homebutton3gui7ManagerFPQ310homebutton3gui9Component, global
 /* 8031FC20 002E91E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8031FC24 002E91E4  7C 08 02 A6 */	mflr r0
 /* 8031FC28 002E91E8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -529,10 +528,10 @@ delComponent__Q310homebutton3gui7ManagerFPQ310homebutton3gui9Component:
 /* 8031FCB4 002E9274  7C 08 03 A6 */	mtlr r0
 /* 8031FCB8 002E9278  38 21 00 20 */	addi r1, r1, 0x20
 /* 8031FCBC 002E927C  4E 80 00 20 */	blr 
+.endfn delComponent__Q310homebutton3gui7ManagerFPQ310homebutton3gui9Component
 
 .balign 16, 0
-.global getComponent__Q310homebutton3gui7ManagerFUl
-getComponent__Q310homebutton3gui7ManagerFUl:
+.fn getComponent__Q310homebutton3gui7ManagerFUl, global
 /* 8031FCC0 002E9280  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031FCC4 002E9284  7C 08 02 A6 */	mflr r0
 /* 8031FCC8 002E9288  54 84 04 3E */	clrlwi r4, r4, 0x10
@@ -544,10 +543,10 @@ getComponent__Q310homebutton3gui7ManagerFUl:
 /* 8031FCE0 002E92A0  7C 08 03 A6 */	mtlr r0
 /* 8031FCE4 002E92A4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031FCE8 002E92A8  4E 80 00 20 */	blr 
+.endfn getComponent__Q310homebutton3gui7ManagerFUl
 
 .balign 16, 0
-.global update__Q310homebutton3gui7ManagerFiffUlUlUlPv
-update__Q310homebutton3gui7ManagerFiffUlUlUlPv:
+.fn update__Q310homebutton3gui7ManagerFiffUlUlUlPv, global
 /* 8031FCF0 002E92B0  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8031FCF4 002E92B4  7C 08 02 A6 */	mflr r0
 /* 8031FCF8 002E92B8  90 01 00 64 */	stw r0, 0x64(r1)
@@ -659,16 +658,16 @@ update__Q310homebutton3gui7ManagerFiffUlUlUlPv:
 /* 8031FE88 002E9448  7C 08 03 A6 */	mtlr r0
 /* 8031FE8C 002E944C  38 21 00 60 */	addi r1, r1, 0x60
 /* 8031FE90 002E9450  4E 80 00 20 */	blr 
+.endfn update__Q310homebutton3gui7ManagerFiffUlUlUlPv
 
 .balign 16, 0
-.global isTriggerTarger__Q310homebutton3gui9ComponentFv
-isTriggerTarger__Q310homebutton3gui9ComponentFv:
+.fn isTriggerTarger__Q310homebutton3gui9ComponentFv, global
 /* 8031FEA0 002E9460  88 63 00 24 */	lbz r3, 0x24(r3)
 /* 8031FEA4 002E9464  4E 80 00 20 */	blr 
+.endfn isTriggerTarger__Q310homebutton3gui9ComponentFv
 
 .balign 16, 0
-.global onTrig__Q310homebutton3gui9ComponentFUlR3Vec
-onTrig__Q310homebutton3gui9ComponentFUlR3Vec:
+.fn onTrig__Q310homebutton3gui9ComponentFUlR3Vec, global
 /* 8031FEB0 002E9470  80 03 00 1C */	lwz r0, 0x1c(r3)
 /* 8031FEB4 002E9474  7C 80 00 39 */	and. r0, r4, r0
 /* 8031FEB8 002E9478  4D 82 00 20 */	beqlr 
@@ -681,10 +680,10 @@ onTrig__Q310homebutton3gui9ComponentFUlR3Vec:
 /* 8031FED4 002E9494  D0 03 00 14 */	stfs f0, 0x14(r3)
 /* 8031FED8 002E9498  98 03 00 18 */	stb r0, 0x18(r3)
 /* 8031FEDC 002E949C  4E 80 00 20 */	blr 
+.endfn onTrig__Q310homebutton3gui9ComponentFUlR3Vec
 
 .balign 16, 0
-.global calc__Q310homebutton3gui7ManagerFv
-calc__Q310homebutton3gui7ManagerFv:
+.fn calc__Q310homebutton3gui7ManagerFv, global
 /* 8031FEE0 002E94A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031FEE4 002E94A4  7C 08 02 A6 */	mflr r0
 /* 8031FEE8 002E94A8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -713,15 +712,15 @@ calc__Q310homebutton3gui7ManagerFv:
 /* 8031FF3C 002E94FC  7C 08 03 A6 */	mtlr r0
 /* 8031FF40 002E9500  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031FF44 002E9504  4E 80 00 20 */	blr 
+.endfn calc__Q310homebutton3gui7ManagerFv
 
 .balign 16, 0
-.global calc__Q310homebutton3gui9InterfaceFv
-calc__Q310homebutton3gui9InterfaceFv:
+.fn calc__Q310homebutton3gui9InterfaceFv, global
 /* 8031FF50 002E9510  4E 80 00 20 */	blr 
+.endfn calc__Q310homebutton3gui9InterfaceFv
 
 .balign 16, 0
-.global draw__Q310homebutton3gui7ManagerFv
-draw__Q310homebutton3gui7ManagerFv:
+.fn draw__Q310homebutton3gui7ManagerFv, global
 /* 8031FF60 002E9520  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031FF64 002E9524  7C 08 02 A6 */	mflr r0
 /* 8031FF68 002E9528  90 01 00 14 */	stw r0, 0x14(r1)
@@ -750,15 +749,15 @@ draw__Q310homebutton3gui7ManagerFv:
 /* 8031FFBC 002E957C  7C 08 03 A6 */	mtlr r0
 /* 8031FFC0 002E9580  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031FFC4 002E9584  4E 80 00 20 */	blr 
+.endfn draw__Q310homebutton3gui7ManagerFv
 
 .balign 16, 0
-.global draw__Q310homebutton3gui9InterfaceFv
-draw__Q310homebutton3gui9InterfaceFv:
+.fn draw__Q310homebutton3gui9InterfaceFv, global
 /* 8031FFD0 002E9590  4E 80 00 20 */	blr 
+.endfn draw__Q310homebutton3gui9InterfaceFv
 
 .balign 16, 0
-.global setAllComponentTriggerTarget__Q310homebutton3gui7ManagerFb
-setAllComponentTriggerTarget__Q310homebutton3gui7ManagerFb:
+.fn setAllComponentTriggerTarget__Q310homebutton3gui7ManagerFb, global
 /* 8031FFE0 002E95A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8031FFE4 002E95A4  7C 08 02 A6 */	mflr r0
 /* 8031FFE8 002E95A8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -791,16 +790,16 @@ setAllComponentTriggerTarget__Q310homebutton3gui7ManagerFb:
 /* 8032004C 002E960C  7C 08 03 A6 */	mtlr r0
 /* 80320050 002E9610  38 21 00 20 */	addi r1, r1, 0x20
 /* 80320054 002E9614  4E 80 00 20 */	blr 
+.endfn setAllComponentTriggerTarget__Q310homebutton3gui7ManagerFb
 
 .balign 16, 0
-.global setTriggerTarget__Q310homebutton3gui9ComponentFb
-setTriggerTarget__Q310homebutton3gui9ComponentFb:
+.fn setTriggerTarget__Q310homebutton3gui9ComponentFb, global
 /* 80320060 002E9620  98 83 00 24 */	stb r4, 0x24(r3)
 /* 80320064 002E9624  4E 80 00 20 */	blr 
+.endfn setTriggerTarget__Q310homebutton3gui9ComponentFb
 
 .balign 16, 0
-.global __dt__Q310homebutton3gui11PaneManagerFv
-__dt__Q310homebutton3gui11PaneManagerFv:
+.fn __dt__Q310homebutton3gui11PaneManagerFv, global
 /* 80320070 002E9630  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80320074 002E9634  7C 08 02 A6 */	mflr r0
 /* 80320078 002E9638  2C 03 00 00 */	cmpwi r3, 0
@@ -897,10 +896,10 @@ __dt__Q310homebutton3gui11PaneManagerFv:
 /* 803201B8 002E9778  7C 08 03 A6 */	mtlr r0
 /* 803201BC 002E977C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803201C0 002E9780  4E 80 00 20 */	blr 
+.endfn __dt__Q310homebutton3gui11PaneManagerFv
 
 .balign 16, 0
-.global __dt__Q310homebutton3gui13PaneComponentFv
-__dt__Q310homebutton3gui13PaneComponentFv:
+.fn __dt__Q310homebutton3gui13PaneComponentFv, global
 /* 803201D0 002E9790  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803201D4 002E9794  7C 08 02 A6 */	mflr r0
 /* 803201D8 002E9798  2C 03 00 00 */	cmpwi r3, 0
@@ -918,10 +917,10 @@ __dt__Q310homebutton3gui13PaneComponentFv:
 /* 80320204 002E97C4  7C 08 03 A6 */	mtlr r0
 /* 80320208 002E97C8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8032020C 002E97CC  4E 80 00 20 */	blr 
+.endfn __dt__Q310homebutton3gui13PaneComponentFv
 
 .balign 16, 0
-.global __dt__Q310homebutton3gui9ComponentFv
-__dt__Q310homebutton3gui9ComponentFv:
+.fn __dt__Q310homebutton3gui9ComponentFv, global
 /* 80320210 002E97D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80320214 002E97D4  7C 08 02 A6 */	mflr r0
 /* 80320218 002E97D8  2C 03 00 00 */	cmpwi r3, 0
@@ -939,10 +938,10 @@ __dt__Q310homebutton3gui9ComponentFv:
 /* 80320244 002E9804  7C 08 03 A6 */	mtlr r0
 /* 80320248 002E9808  38 21 00 10 */	addi r1, r1, 0x10
 /* 8032024C 002E980C  4E 80 00 20 */	blr 
+.endfn __dt__Q310homebutton3gui9ComponentFv
 
 .balign 16, 0
-.global createLayoutScene__Q310homebutton3gui11PaneManagerFRCQ36nw4hbm3lyt6Layout
-createLayoutScene__Q310homebutton3gui11PaneManagerFRCQ36nw4hbm3lyt6Layout:
+.fn createLayoutScene__Q310homebutton3gui11PaneManagerFRCQ36nw4hbm3lyt6Layout, global
 /* 80320250 002E9810  3C A0 80 5D */	lis r5, lbl_805CD5A8@ha
 /* 80320254 002E9814  38 00 00 00 */	li r0, 0
 /* 80320258 002E9818  90 05 D5 A8 */	stw r0, lbl_805CD5A8@l(r5)
@@ -952,21 +951,21 @@ createLayoutScene__Q310homebutton3gui11PaneManagerFRCQ36nw4hbm3lyt6Layout:
 /* 80320268 002E9828  81 8C 00 5C */	lwz r12, 0x5c(r12)
 /* 8032026C 002E982C  7D 89 03 A6 */	mtctr r12
 /* 80320270 002E9830  4E 80 04 20 */	bctr 
+.endfn createLayoutScene__Q310homebutton3gui11PaneManagerFRCQ36nw4hbm3lyt6Layout
 
 .balign 16, 0
-.global addLayoutScene__Q310homebutton3gui11PaneManagerFRCQ36nw4hbm3lyt6Layout
-addLayoutScene__Q310homebutton3gui11PaneManagerFRCQ36nw4hbm3lyt6Layout:
+.fn addLayoutScene__Q310homebutton3gui11PaneManagerFRCQ36nw4hbm3lyt6Layout, global
 /* 80320280 002E9840  81 83 00 00 */	lwz r12, 0(r3)
 /* 80320284 002E9844  80 84 00 10 */	lwz r4, 0x10(r4)
 /* 80320288 002E9848  81 8C 00 5C */	lwz r12, 0x5c(r12)
 /* 8032028C 002E984C  38 84 00 10 */	addi r4, r4, 0x10
 /* 80320290 002E9850  7D 89 03 A6 */	mtctr r12
 /* 80320294 002E9854  4E 80 04 20 */	bctr 
+.endfn addLayoutScene__Q310homebutton3gui11PaneManagerFRCQ36nw4hbm3lyt6Layout
 
 .balign 16, 0
 #walkinchildren__q310homebutton3gui11panemanagerfrq36nw4hbm2ut30linklist<Q36nw4hbm3lyt4Pane,4>
-.global walkinchildren__q310homebutton3gui11panemanagerfrq36nw4hbm2ut30linklist_Q36nw4hbm3lyt4Pane_4_
-walkinchildren__q310homebutton3gui11panemanagerfrq36nw4hbm2ut30linklist_Q36nw4hbm3lyt4Pane_4_:
+.fn walkinchildren__q310homebutton3gui11panemanagerfrq36nw4hbm2ut30linklist_Q36nw4hbm3lyt4Pane_4_, global
 /* 803202A0 002E9860  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803202A4 002E9864  7C 08 02 A6 */	mflr r0
 /* 803202A8 002E9868  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1154,34 +1153,34 @@ walkinchildren__q310homebutton3gui11panemanagerfrq36nw4hbm2ut30linklist_Q36nw4hb
 /* 8032052C 002E9AEC  7C 08 03 A6 */	mtlr r0
 /* 80320530 002E9AF0  38 21 00 40 */	addi r1, r1, 0x40
 /* 80320534 002E9AF4  4E 80 00 20 */	blr 
+.endfn walkinchildren__q310homebutton3gui11panemanagerfrq36nw4hbm2ut30linklist_Q36nw4hbm3lyt4Pane_4_
 
 .balign 16, 0
-.global setPane__Q310homebutton3gui13PaneComponentFPQ36nw4hbm3lyt4Pane
-setPane__Q310homebutton3gui13PaneComponentFPQ36nw4hbm3lyt4Pane:
+.fn setPane__Q310homebutton3gui13PaneComponentFPQ36nw4hbm3lyt4Pane, global
 /* 80320540 002E9B00  90 83 00 2C */	stw r4, 0x2c(r3)
 /* 80320544 002E9B04  4E 80 00 20 */	blr 
+.endfn setPane__Q310homebutton3gui13PaneComponentFPQ36nw4hbm3lyt4Pane
 
 .balign 16, 0
-.global GetRuntimeTypeInfo__Q36nw4hbm3lyt4PaneCFv
-GetRuntimeTypeInfo__Q36nw4hbm3lyt4PaneCFv:
+.fn GetRuntimeTypeInfo__Q36nw4hbm3lyt4PaneCFv, global
 /* 80320550 002E9B10  3C 60 80 5D */	lis r3, lbl_805CD7C0@ha
 /* 80320554 002E9B14  38 63 D7 C0 */	addi r3, r3, lbl_805CD7C0@l
 /* 80320558 002E9B18  4E 80 00 20 */	blr 
+.endfn GetRuntimeTypeInfo__Q36nw4hbm3lyt4PaneCFv
 
 .balign 16, 0
-.global delLayoutScene__Q310homebutton3gui11PaneManagerFRCQ36nw4hbm3lyt6Layout
-delLayoutScene__Q310homebutton3gui11PaneManagerFRCQ36nw4hbm3lyt6Layout:
+.fn delLayoutScene__Q310homebutton3gui11PaneManagerFRCQ36nw4hbm3lyt6Layout, global
 /* 80320560 002E9B20  81 83 00 00 */	lwz r12, 0(r3)
 /* 80320564 002E9B24  80 84 00 10 */	lwz r4, 0x10(r4)
 /* 80320568 002E9B28  81 8C 00 60 */	lwz r12, 0x60(r12)
 /* 8032056C 002E9B2C  38 84 00 10 */	addi r4, r4, 0x10
 /* 80320570 002E9B30  7D 89 03 A6 */	mtctr r12
 /* 80320574 002E9B34  4E 80 04 20 */	bctr 
+.endfn delLayoutScene__Q310homebutton3gui11PaneManagerFRCQ36nw4hbm3lyt6Layout
 
 .balign 16, 0
 #walkInChildrenDel__Q310homebutton3gui11PaneManagerFRQ36nw4hbm2ut30LinkList<Q36nw4hbm3lyt4Pane,4>
-.global walkInChildrenDel__Q310homebutton3gui11PaneManagerFRQ36nw4hbm2ut30LinkList_Q36nw4hbm3lyt4Pane_4_
-walkInChildrenDel__Q310homebutton3gui11PaneManagerFRQ36nw4hbm2ut30LinkList_Q36nw4hbm3lyt4Pane_4_:
+.fn walkInChildrenDel__Q310homebutton3gui11PaneManagerFRQ36nw4hbm2ut30LinkList_Q36nw4hbm3lyt4Pane_4_, global
 /* 80320580 002E9B40  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80320584 002E9B44  7C 08 02 A6 */	mflr r0
 /* 80320588 002E9B48  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1261,10 +1260,10 @@ walkInChildrenDel__Q310homebutton3gui11PaneManagerFRQ36nw4hbm2ut30LinkList_Q36nw
 /* 80320690 002E9C50  7C 08 03 A6 */	mtlr r0
 /* 80320694 002E9C54  38 21 00 20 */	addi r1, r1, 0x20
 /* 80320698 002E9C58  4E 80 00 20 */	blr 
+.endfn walkInChildrenDel__Q310homebutton3gui11PaneManagerFRQ36nw4hbm2ut30LinkList_Q36nw4hbm3lyt4Pane_4_
 
 .balign 16, 0
-.global getPaneComponentByPane__Q310homebutton3gui11PaneManagerFPQ36nw4hbm3lyt4Pane
-getPaneComponentByPane__Q310homebutton3gui11PaneManagerFPQ36nw4hbm3lyt4Pane:
+.fn getPaneComponentByPane__Q310homebutton3gui11PaneManagerFPQ36nw4hbm3lyt4Pane, global
 /* 803206A0 002E9C60  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803206A4 002E9C64  7C 08 02 A6 */	mflr r0
 /* 803206A8 002E9C68  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1299,10 +1298,10 @@ getPaneComponentByPane__Q310homebutton3gui11PaneManagerFPQ36nw4hbm3lyt4Pane:
 /* 8032070C 002E9CCC  7C 08 03 A6 */	mtlr r0
 /* 80320710 002E9CD0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80320714 002E9CD4  4E 80 00 20 */	blr 
+.endfn getPaneComponentByPane__Q310homebutton3gui11PaneManagerFPQ36nw4hbm3lyt4Pane
 
 .balign 16, 0
-.global setAllBoundingBoxComponentTriggerTarget__Q310homebutton3gui11PaneManagerFb
-setAllBoundingBoxComponentTriggerTarget__Q310homebutton3gui11PaneManagerFb:
+.fn setAllBoundingBoxComponentTriggerTarget__Q310homebutton3gui11PaneManagerFb, global
 /* 80320720 002E9CE0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80320724 002E9CE4  7C 08 02 A6 */	mflr r0
 /* 80320728 002E9CE8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1364,10 +1363,10 @@ setAllBoundingBoxComponentTriggerTarget__Q310homebutton3gui11PaneManagerFb:
 /* 803207E4 002E9DA4  7C 08 03 A6 */	mtlr r0
 /* 803207E8 002E9DA8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803207EC 002E9DAC  4E 80 00 20 */	blr 
+.endfn setAllBoundingBoxComponentTriggerTarget__Q310homebutton3gui11PaneManagerFb
 
 .balign 16, 0
-.global contain__Q310homebutton3gui13PaneComponentFff
-contain__Q310homebutton3gui13PaneComponentFff:
+.fn contain__Q310homebutton3gui13PaneComponentFff, global
 /* 803207F0 002E9DB0  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 803207F4 002E9DB4  7C 08 02 A6 */	mflr r0
 /* 803207F8 002E9DB8  90 01 00 94 */	stw r0, 0x94(r1)
@@ -1447,16 +1446,16 @@ contain__Q310homebutton3gui13PaneComponentFff:
 /* 80320910 002E9ED0  7C 08 03 A6 */	mtlr r0
 /* 80320914 002E9ED4  38 21 00 90 */	addi r1, r1, 0x90
 /* 80320918 002E9ED8  4E 80 00 20 */	blr 
+.endfn contain__Q310homebutton3gui13PaneComponentFff
 
 .balign 16, 0
-.global getDrawInfo__Q310homebutton3gui11PaneManagerFv
-getDrawInfo__Q310homebutton3gui11PaneManagerFv:
+.fn getDrawInfo__Q310homebutton3gui11PaneManagerFv, global
 /* 80320920 002E9EE0  80 63 00 24 */	lwz r3, 0x24(r3)
 /* 80320924 002E9EE4  4E 80 00 20 */	blr 
+.endfn getDrawInfo__Q310homebutton3gui11PaneManagerFv
 
 .balign 16, 0
-.global draw__Q310homebutton3gui13PaneComponentFv
-draw__Q310homebutton3gui13PaneComponentFv:
+.fn draw__Q310homebutton3gui13PaneComponentFv, global
 /* 80320930 002E9EF0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80320934 002E9EF4  7C 08 02 A6 */	mflr r0
 /* 80320938 002E9EF8  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1556,10 +1555,10 @@ draw__Q310homebutton3gui13PaneComponentFv:
 /* 80320AA8 002EA068  7C 08 03 A6 */	mtlr r0
 /* 80320AAC 002EA06C  38 21 00 40 */	addi r1, r1, 0x40
 /* 80320AB0 002EA070  4E 80 00 20 */	blr 
+.endfn draw__Q310homebutton3gui13PaneComponentFv
 
 .balign 16, 0
-.global is_visible__Q210homebutton3guiFPQ36nw4hbm3lyt4Pane
-is_visible__Q210homebutton3guiFPQ36nw4hbm3lyt4Pane:
+.fn is_visible__Q210homebutton3guiFPQ36nw4hbm3lyt4Pane, global
 /* 80320AC0 002EA080  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80320AC4 002EA084  7C 08 02 A6 */	mflr r0
 /* 80320AC8 002EA088  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1635,23 +1634,23 @@ is_visible__Q210homebutton3guiFPQ36nw4hbm3lyt4Pane:
 /* 80320BB4 002EA174  7C 08 03 A6 */	mtlr r0
 /* 80320BB8 002EA178  38 21 00 10 */	addi r1, r1, 0x10
 /* 80320BBC 002EA17C  4E 80 00 20 */	blr 
+.endfn is_visible__Q210homebutton3guiFPQ36nw4hbm3lyt4Pane
 
 .balign 16, 0
-.global IsVisible__Q36nw4hbm3lyt4PaneCFv
-IsVisible__Q36nw4hbm3lyt4PaneCFv:
+.fn IsVisible__Q36nw4hbm3lyt4PaneCFv, global
 /* 80320BC0 002EA180  88 03 00 CF */	lbz r0, 0xcf(r3)
 /* 80320BC4 002EA184  54 03 07 FE */	clrlwi r3, r0, 0x1f
 /* 80320BC8 002EA188  4E 80 00 20 */	blr 
+.endfn IsVisible__Q36nw4hbm3lyt4PaneCFv
 
 .balign 16, 0
-.global GetParent__Q36nw4hbm3lyt4PaneCFv
-GetParent__Q36nw4hbm3lyt4PaneCFv:
+.fn GetParent__Q36nw4hbm3lyt4PaneCFv, global
 /* 80320BD0 002EA190  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 80320BD4 002EA194  4E 80 00 20 */	blr 
+.endfn GetParent__Q36nw4hbm3lyt4PaneCFv
 
 .balign 16, 0
-.global isVisible__Q310homebutton3gui13PaneComponentFv
-isVisible__Q310homebutton3gui13PaneComponentFv:
+.fn isVisible__Q310homebutton3gui13PaneComponentFv, global
 /* 80320BE0 002EA1A0  80 63 00 2C */	lwz r3, 0x2c(r3)
 /* 80320BE4 002EA1A4  88 03 00 CF */	lbz r0, 0xcf(r3)
 /* 80320BE8 002EA1A8  54 00 07 FF */	clrlwi. r0, r0, 0x1f
@@ -1715,43 +1714,43 @@ isVisible__Q310homebutton3gui13PaneComponentFv:
 .L_80320CAC:
 /* 80320CAC 002EA26C  4B FF FE 14 */	b is_visible__Q210homebutton3guiFPQ36nw4hbm3lyt4Pane
 /* 80320CB0 002EA270  4E 80 00 20 */	blr 
+.endfn isVisible__Q310homebutton3gui13PaneComponentFv
 
 .balign 16, 0
-.global draw__Q310homebutton3gui9InterfaceFRA3_A4_f
-draw__Q310homebutton3gui9InterfaceFRA3_A4_f:
+.fn draw__Q310homebutton3gui9InterfaceFRA3_A4_f, global
 /* 80320CC0 002EA280  4E 80 00 20 */	blr 
+.endfn draw__Q310homebutton3gui9InterfaceFRA3_A4_f
 
 .balign 16, 0
-.global create__Q310homebutton3gui9InterfaceFv
-create__Q310homebutton3gui9InterfaceFv:
+.fn create__Q310homebutton3gui9InterfaceFv, global
 /* 80320CD0 002EA290  4E 80 00 20 */	blr 
+.endfn create__Q310homebutton3gui9InterfaceFv
 
 .balign 16, 0
-.global update__Q310homebutton3gui9ComponentFiPC10KPADStatusffPv
-update__Q310homebutton3gui9ComponentFiPC10KPADStatusffPv:
+.fn update__Q310homebutton3gui9ComponentFiPC10KPADStatusffPv, global
 /* 80320CE0 002EA2A0  38 60 00 00 */	li r3, 0
 /* 80320CE4 002EA2A4  4E 80 00 20 */	blr 
+.endfn update__Q310homebutton3gui9ComponentFiPC10KPADStatusffPv
 
 .balign 16, 0
-.global setDraggingButton__Q310homebutton3gui9ComponentFUl
-setDraggingButton__Q310homebutton3gui9ComponentFUl:
+.fn setDraggingButton__Q310homebutton3gui9ComponentFUl, global
 /* 80320CF0 002EA2B0  90 83 00 1C */	stw r4, 0x1c(r3)
 /* 80320CF4 002EA2B4  4E 80 00 20 */	blr 
+.endfn setDraggingButton__Q310homebutton3gui9ComponentFUl
 
 .balign 16, 0
-.global onDrag__Q310homebutton3gui9ComponentFff
-onDrag__Q310homebutton3gui9ComponentFff:
+.fn onDrag__Q310homebutton3gui9ComponentFff, global
 /* 80320D00 002EA2C0  4E 80 00 20 */	blr 
+.endfn onDrag__Q310homebutton3gui9ComponentFff
 
 .balign 16, 0
-.global getPane__Q310homebutton3gui13PaneComponentFv
-getPane__Q310homebutton3gui13PaneComponentFv:
+.fn getPane__Q310homebutton3gui13PaneComponentFv, global
 /* 80320D10 002EA2D0  80 63 00 2C */	lwz r3, 0x2c(r3)
 /* 80320D14 002EA2D4  4E 80 00 20 */	blr 
+.endfn getPane__Q310homebutton3gui13PaneComponentFv
 
 .balign 16, 0
-.global setEventHandler__Q310homebutton3gui7ManagerFPQ310homebutton3gui12EventHandler
-setEventHandler__Q310homebutton3gui7ManagerFPQ310homebutton3gui12EventHandler:
+.fn setEventHandler__Q310homebutton3gui7ManagerFPQ310homebutton3gui12EventHandler, global
 /* 80320D20 002EA2E0  2C 04 00 00 */	cmpwi r4, 0
 /* 80320D24 002EA2E4  90 83 00 04 */	stw r4, 4(r3)
 /* 80320D28 002EA2E8  7C 60 1B 78 */	mr r0, r3
@@ -1763,24 +1762,25 @@ setEventHandler__Q310homebutton3gui7ManagerFPQ310homebutton3gui12EventHandler:
 /* 80320D40 002EA300  7D 89 03 A6 */	mtctr r12
 /* 80320D44 002EA304  4E 80 04 20 */	bctr 
 /* 80320D48 002EA308  4E 80 00 20 */	blr 
+.endfn setEventHandler__Q310homebutton3gui7ManagerFPQ310homebutton3gui12EventHandler
 
 .balign 16, 0
-.global setManager__Q310homebutton3gui12EventHandlerFPQ310homebutton3gui7Manager
-setManager__Q310homebutton3gui12EventHandlerFPQ310homebutton3gui7Manager:
+.fn setManager__Q310homebutton3gui12EventHandlerFPQ310homebutton3gui7Manager, global
 /* 80320D50 002EA310  90 83 00 04 */	stw r4, 4(r3)
 /* 80320D54 002EA314  4E 80 00 20 */	blr 
+.endfn setManager__Q310homebutton3gui12EventHandlerFPQ310homebutton3gui7Manager
 
 .balign 16, 0
-.global update__Q310homebutton3gui7ManagerFiPC10KPADStatusffPv
-update__Q310homebutton3gui7ManagerFiPC10KPADStatusffPv:
+.fn update__Q310homebutton3gui7ManagerFiPC10KPADStatusffPv, global
 /* 80320D60 002EA320  38 60 00 00 */	li r3, 0
 /* 80320D64 002EA324  4E 80 00 20 */	blr 
+.endfn update__Q310homebutton3gui7ManagerFiPC10KPADStatusffPv
 
 .balign 16, 0
-.global setDrawInfo__Q310homebutton3gui11PaneManagerFPCQ36nw4hbm3lyt8DrawInfo
-setDrawInfo__Q310homebutton3gui11PaneManagerFPCQ36nw4hbm3lyt8DrawInfo:
+.fn setDrawInfo__Q310homebutton3gui11PaneManagerFPCQ36nw4hbm3lyt8DrawInfo, global
 /* 80320D70 002EA330  90 83 00 24 */	stw r4, 0x24(r3)
 /* 80320D74 002EA334  4E 80 00 20 */	blr 
+.endfn setDrawInfo__Q310homebutton3gui11PaneManagerFPCQ36nw4hbm3lyt8DrawInfo
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0

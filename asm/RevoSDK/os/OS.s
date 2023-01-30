@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global __OSFPRInit
-__OSFPRInit:
+.fn __OSFPRInit, global
 /* 80351880 0031AE40  7C 60 00 A6 */	mfmsr r3
 /* 80351884 0031AE44  60 63 20 00 */	ori r3, r3, 0x2000
 /* 80351888 0031AE48  7C 60 01 24 */	mtmsr r3
@@ -80,10 +79,10 @@ __OSFPRInit:
 /* 8035199C 0031AF5C  FF E0 00 90 */	fmr f31, f0
 /* 803519A0 0031AF60  FD FE 05 8E */	mtfsf 0xff, f0
 /* 803519A4 0031AF64  4E 80 00 20 */	blr 
+.endfn __OSFPRInit
 
 .balign 16, 0
-.global __OSGetIOSRev
-__OSGetIOSRev:
+.fn __OSGetIOSRev, global
 /* 803519B0 0031AF70  3C 80 C0 00 */	lis r4, 0xC0003144@ha
 /* 803519B4 0031AF74  81 44 31 44 */	lwz r10, 0xC0003144@l(r4)
 /* 803519B8 0031AF78  81 24 31 40 */	lwz r9, 0x3140(r4)
@@ -111,10 +110,10 @@ __OSGetIOSRev:
 /* 80351A10 0031AFD0  98 83 00 05 */	stb r4, 5(r3)
 /* 80351A14 0031AFD4  B0 03 00 06 */	sth r0, 6(r3)
 /* 80351A18 0031AFD8  4E 80 00 20 */	blr 
+.endfn __OSGetIOSRev
 
 .balign 16, 0
-.global OSGetConsoleType
-OSGetConsoleType:
+.fn OSGetConsoleType, global
 /* 80351A20 0031AFE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80351A24 0031AFE4  7C 08 02 A6 */	mflr r0
 /* 80351A28 0031AFE8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -290,10 +289,10 @@ OSGetConsoleType:
 /* 80351C68 0031B228  7C 08 03 A6 */	mtlr r0
 /* 80351C6C 0031B22C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80351C70 0031B230  4E 80 00 20 */	blr 
+.endfn OSGetConsoleType
 
 .balign 16, 0
-.global ClearArena
-ClearArena:
+.fn ClearArena, global
 /* 80351C80 0031B240  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80351C84 0031B244  7C 08 02 A6 */	mflr r0
 /* 80351C88 0031B248  90 01 00 14 */	stw r0, 0x14(r1)
@@ -428,10 +427,10 @@ ClearArena:
 /* 80351E50 0031B410  7C 08 03 A6 */	mtlr r0
 /* 80351E54 0031B414  38 21 00 10 */	addi r1, r1, 0x10
 /* 80351E58 0031B418  4E 80 00 20 */	blr 
+.endfn ClearArena
 
 .balign 16, 0
-.global ClearMEM2Arena
-ClearMEM2Arena:
+.fn ClearMEM2Arena, global
 /* 80351E60 0031B420  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80351E64 0031B424  7C 08 02 A6 */	mflr r0
 /* 80351E68 0031B428  90 01 00 14 */	stw r0, 0x14(r1)
@@ -568,10 +567,10 @@ ClearMEM2Arena:
 /* 80352038 0031B5F8  7C 08 03 A6 */	mtlr r0
 /* 8035203C 0031B5FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80352040 0031B600  4E 80 00 20 */	blr 
+.endfn ClearMEM2Arena
 
 .balign 16, 0
-.global InquiryCallback
-InquiryCallback:
+.fn InquiryCallback, global
 /* 80352050 0031B610  80 04 00 0C */	lwz r0, 0xc(r4)
 /* 80352054 0031B614  2C 00 00 00 */	cmpwi r0, 0
 /* 80352058 0031B618  41 82 00 08 */	beq .L_80352060
@@ -589,10 +588,10 @@ InquiryCallback:
 /* 80352080 0031B640  38 00 00 01 */	li r0, 1
 /* 80352084 0031B644  B0 03 30 E6 */	sth r0, 0x800030E6@l(r3)
 /* 80352088 0031B648  4E 80 00 20 */	blr 
+.endfn InquiryCallback
 
 .balign 16, 0
-.global ReportOSInfo
-ReportOSInfo:
+.fn ReportOSInfo, global
 /* 80352090 0031B650  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80352094 0031B654  7C 08 02 A6 */	mflr r0
 /* 80352098 0031B658  90 01 00 14 */	stw r0, 0x14(r1)
@@ -779,10 +778,10 @@ ReportOSInfo:
 /* 80352328 0031B8E8  7C 08 03 A6 */	mtlr r0
 /* 8035232C 0031B8EC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80352330 0031B8F0  4E 80 00 20 */	blr 
+.endfn ReportOSInfo
 
 .balign 16, 0
-.global OSInit
-OSInit:
+.fn OSInit, global
 /* 80352340 0031B900  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80352344 0031B904  7C 08 02 A6 */	mflr r0
 /* 80352348 0031B908  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1153,10 +1152,10 @@ OSInit:
 /* 80352888 0031BE48  7C 08 03 A6 */	mtlr r0
 /* 8035288C 0031BE4C  38 21 00 30 */	addi r1, r1, 0x30
 /* 80352890 0031BE50  4E 80 00 20 */	blr 
+.endfn OSInit
 
 .balign 16, 0
-.global OSExceptionInit
-OSExceptionInit:
+.fn OSExceptionInit, global
 /* 803528A0 0031BE60  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803528A4 0031BE64  7C 08 02 A6 */	mflr r0
 /* 803528A8 0031BE68  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1326,10 +1325,10 @@ OSExceptionInit:
 /* 80352B14 0031C0D4  7C 08 03 A6 */	mtlr r0
 /* 80352B18 0031C0D8  38 21 00 40 */	addi r1, r1, 0x40
 /* 80352B1C 0031C0DC  4E 80 00 20 */	blr
+.endfn OSExceptionInit
 
 .balign 16, 0
-.global __OSDBIntegrator
-__OSDBIntegrator:
+.fn __OSDBIntegrator, global
 /* 80352B20 0031C0E0  38 A0 00 40 */	li r5, 0x40
 /* 80352B24 0031C0E4  7C 68 02 A6 */	mflr r3
 /* 80352B28 0031C0E8  90 65 00 0C */	stw r3, 0xc(r5)
@@ -1339,36 +1338,36 @@ __OSDBIntegrator:
 /* 80352B38 0031C0F8  38 60 00 30 */	li r3, 0x30
 /* 80352B3C 0031C0FC  7C 60 01 24 */	mtmsr r3
 /* 80352B40 0031C100  4E 80 00 20 */	blr
+.endfn __OSDBIntegrator
 
 #These extra labels shouldn't exist, but are needed because of alignment shenanigans
 
 __OSDBJump1:
 .balign 16, 0
-.global __OSDBJump
-__OSDBJump:
+.fn __OSDBJump, global
 /* 80352B50 0031C110  48 00 00 63 */	bla 0x60
+.endfn __OSDBJump
 
 __OSSetExceptionHandler1:
 .balign 16, 0
-.global __OSSetExceptionHandler
-__OSSetExceptionHandler:
+.fn __OSSetExceptionHandler, global
 /* 80352B60 0031C120  80 AD B8 90 */	lwz r5, lbl_80667A10@sda21(r13)
 /* 80352B64 0031C124  54 60 15 BA */	rlwinm r0, r3, 2, 0x16, 0x1d
 /* 80352B68 0031C128  7C 65 00 2E */	lwzx r3, r5, r0
 /* 80352B6C 0031C12C  7C 85 01 2E */	stwx r4, r5, r0
 /* 80352B70 0031C130  4E 80 00 20 */	blr 
+.endfn __OSSetExceptionHandler
 
 .balign 16, 0
-.global __OSGetExceptionHandler
-__OSGetExceptionHandler:
+.fn __OSGetExceptionHandler, global
 /* 80352B80 0031C140  80 8D B8 90 */	lwz r4, lbl_80667A10@sda21(r13)
 /* 80352B84 0031C144  54 60 15 BA */	rlwinm r0, r3, 2, 0x16, 0x1d
 /* 80352B88 0031C148  7C 64 00 2E */	lwzx r3, r4, r0
 /* 80352B8C 0031C14C  4E 80 00 20 */	blr
+.endfn __OSGetExceptionHandler
 
 .balign 16, 0
-.global OSExceptionVector
-OSExceptionVector:
+.fn OSExceptionVector, global
 /* 80352B90 0031C150  7C 90 43 A6 */	mtspr 0x110, r4
 /* 80352B94 0031C154  80 80 00 C0 */	lwz r4, 0xc0(0)
 /* 80352B98 0031C158  90 64 00 0C */	stw r3, 0xc(r4)
@@ -1391,17 +1390,17 @@ OSExceptionVector:
 /* 80352BDC 0031C19C  7C 7B 02 A6 */	mfspr r3, 0x1b
 /* 80352BE0 0031C1A0  90 64 01 9C */	stw r3, 0x19c(r4)
 /* 80352BE4 0031C1A4  7C 65 1B 78 */	mr r5, r3
+.endfn OSExceptionVector
 
 
-.global __DBVECTOR
-__DBVECTOR:
+.fn __DBVECTOR, global
 /* 80352BE8 0031C1A8  60 00 00 00 */	nop 
 /* 80352BEC 0031C1AC  7C 60 00 A6 */	mfmsr r3
 /* 80352BF0 0031C1B0  60 63 00 30 */	ori r3, r3, 0x30
 /* 80352BF4 0031C1B4  7C 7B 03 A6 */	mtspr 0x1b, r3
+.endfn __DBVECTOR
 
-.global __OSEVSetNumber
-__OSEVSetNumber:
+.fn __OSEVSetNumber, global
 /* 80352BF8 0031C1B8  38 60 00 00 */	li r3, 0
 /* 80352BFC 0031C1BC  80 80 00 D4 */	lwz r4, 0xd4(0)
 /* 80352C00 0031C1C0  54 A5 07 BD */	rlwinm. r5, r5, 0, 0x1e, 0x1e
@@ -1415,15 +1414,15 @@ __OSEVSetNumber:
 /* 80352C1C 0031C1DC  80 A5 30 00 */	lwz r5, 0x3000(r5)
 /* 80352C20 0031C1E0  7C BA 03 A6 */	mtspr 0x1a, r5
 /* 80352C24 0031C1E4  4C 00 00 64 */	rfi 
+.endfn __OSEVSetNumber
 
 
-.global __OSEVEnd
-__OSEVEnd:
+.fn __OSEVEnd, global
 /* 80352C28 0031C1E8  60 00 00 00 */	nop 
+.endfn __OSEVEnd
 
 .balign 16, 0
-.global OSDefaultExceptionHandler
-OSDefaultExceptionHandler:
+.fn OSDefaultExceptionHandler, global
 /* 80352C30 0031C1F0  90 04 00 00 */	stw r0, 0(r4)
 /* 80352C34 0031C1F4  90 24 00 04 */	stw r1, 4(r4)
 /* 80352C38 0031C1F8  90 44 00 08 */	stw r2, 8(r4)
@@ -1446,10 +1445,10 @@ OSDefaultExceptionHandler:
 /* 80352C7C 0031C23C  7C D3 02 A6 */	mfdar r6
 /* 80352C80 0031C240  94 21 FF F8 */	stwu r1, -8(r1)
 /* 80352C84 0031C244  48 00 25 8C */	b __OSUnhandledException
+.endfn OSDefaultExceptionHandler
 
 .balign 16, 0
-.global __OSPSInit
-__OSPSInit:
+.fn __OSPSInit, global
 /* 80352C90 0031C250  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80352C94 0031C254  7C 08 02 A6 */	mflr r0
 /* 80352C98 0031C258  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1471,26 +1470,26 @@ __OSPSInit:
 /* 80352CD8 0031C298  7C 08 03 A6 */	mtlr r0
 /* 80352CDC 0031C29C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80352CE0 0031C2A0  4E 80 00 20 */	blr 
+.endfn __OSPSInit
 
 .balign 16, 0
-.global __OSGetDIConfig
-__OSGetDIConfig:
+.fn __OSGetDIConfig, global
 /* 80352CF0 0031C2B0  3C 60 CD 00 */	lis r3, 0xCD006024@ha
 /* 80352CF4 0031C2B4  80 03 60 24 */	lwz r0, 0xCD006024@l(r3)
 /* 80352CF8 0031C2B8  54 03 06 3E */	clrlwi r3, r0, 0x18
 /* 80352CFC 0031C2BC  4E 80 00 20 */	blr 
+.endfn __OSGetDIConfig
 
 .balign 16, 0
-.global OSRegisterVersion
-OSRegisterVersion:
+.fn OSRegisterVersion, global
 /* 80352D00 0031C2C0  7C 64 1B 78 */	mr r4, r3
 /* 80352D04 0031C2C4  38 6D 99 BC */	addi r3, r13, lbl_80665B3C@sda21
 /* 80352D08 0031C2C8  4C C6 31 82 */	crclr 6
 /* 80352D0C 0031C2CC  48 00 21 E4 */	b OSReport
+.endfn OSRegisterVersion
 
 .balign 16, 0
-.global OSGetAppGamename
-OSGetAppGamename:
+.fn OSGetAppGamename, global
 /* 80352D10 0031C2D0  80 0D B8 80 */	lwz r0, lbl_80667A00@sda21(r13)
 /* 80352D14 0031C2D4  3C 60 80 00 */	lis r3, 0x80003194@ha
 /* 80352D18 0031C2D8  38 C3 31 94 */	addi r6, r3, 0x80003194@l
@@ -1528,10 +1527,10 @@ OSGetAppGamename:
 /* 80352D88 0031C348  98 85 00 03 */	stb r4, 3(r5)
 /* 80352D8C 0031C34C  98 05 00 04 */	stb r0, 4(r5)
 /* 80352D90 0031C350  4E 80 00 20 */	blr 
+.endfn OSGetAppGamename
 
 .balign 16, 0
-.global OSGetAppType
-OSGetAppType:
+.fn OSGetAppType, global
 /* 80352DA0 0031C360  80 0D B8 80 */	lwz r0, lbl_80667A00@sda21(r13)
 /* 80352DA4 0031C364  2C 00 00 00 */	cmpwi r0, 0
 /* 80352DA8 0031C368  41 82 00 0C */	beq .L_80352DB4
@@ -1541,6 +1540,7 @@ OSGetAppType:
 /* 80352DB4 0031C374  3C 60 80 00 */	lis r3, 0x80003184@ha
 /* 80352DB8 0031C378  88 63 31 84 */	lbz r3, 0x80003184@l(r3)
 /* 80352DBC 0031C37C  4E 80 00 20 */	blr 
+.endfn OSGetAppType
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

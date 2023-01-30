@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __msl_assertion_failed
-__msl_assertion_failed:
+.fn __msl_assertion_failed, global
 /* 802BDC7C 0028723C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802BDC80 00287240  7C 08 02 A6 */	mflr r0
 /* 802BDC84 00287244  3D 00 80 54 */	lis r8, lbl_8053F0F0@ha
@@ -23,6 +22,7 @@ __msl_assertion_failed:
 /* 802BDCBC 0028727C  7C 08 03 A6 */	mtlr r0
 /* 802BDCC0 00287280  38 21 00 10 */	addi r1, r1, 0x10
 /* 802BDCC4 00287284  4E 80 00 20 */	blr 
+.endfn __msl_assertion_failed
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 .global lbl_8050CFF8

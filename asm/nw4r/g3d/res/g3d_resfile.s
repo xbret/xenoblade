@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global GetResMdl__Q34nw4r3g3d7ResFileCFi
-GetResMdl__Q34nw4r3g3d7ResFileCFi:
+.fn GetResMdl__Q34nw4r3g3d7ResFileCFi, global
 /* 803D7CE4 003A12A4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D7CE8 003A12A8  7C 08 02 A6 */	mflr r0
 /* 803D7CEC 003A12AC  80 A3 00 00 */	lwz r5, 0(r3)
@@ -46,9 +45,9 @@ GetResMdl__Q34nw4r3g3d7ResFileCFi:
 /* 803D7D70 003A1330  7C 08 03 A6 */	mtlr r0
 /* 803D7D74 003A1334  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D7D78 003A1338  4E 80 00 20 */	blr 
+.endfn GetResMdl__Q34nw4r3g3d7ResFileCFi
 
-.global GetResMdlNumEntries__Q34nw4r3g3d7ResFileCFv
-GetResMdlNumEntries__Q34nw4r3g3d7ResFileCFv:
+.fn GetResMdlNumEntries__Q34nw4r3g3d7ResFileCFv, global
 /* 803D7D7C 003A133C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D7D80 003A1340  7C 08 02 A6 */	mflr r0
 /* 803D7D84 003A1344  80 A3 00 00 */	lwz r5, 0(r3)
@@ -79,9 +78,9 @@ GetResMdlNumEntries__Q34nw4r3g3d7ResFileCFv:
 /* 803D7DDC 003A139C  7C 08 03 A6 */	mtlr r0
 /* 803D7DE0 003A13A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D7DE4 003A13A4  4E 80 00 20 */	blr 
+.endfn GetResMdlNumEntries__Q34nw4r3g3d7ResFileCFv
 
-.global GetResPltt__Q34nw4r3g3d7ResFileCFPCc
-GetResPltt__Q34nw4r3g3d7ResFileCFPCc:
+.fn GetResPltt__Q34nw4r3g3d7ResFileCFPCc, global
 /* 803D7DE8 003A13A8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D7DEC 003A13AC  7C 08 02 A6 */	mflr r0
 /* 803D7DF0 003A13B0  80 A3 00 00 */	lwz r5, 0(r3)
@@ -111,9 +110,9 @@ GetResPltt__Q34nw4r3g3d7ResFileCFPCc:
 /* 803D7E48 003A1408  7C 08 03 A6 */	mtlr r0
 /* 803D7E4C 003A140C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D7E50 003A1410  4E 80 00 20 */	blr 
+.endfn GetResPltt__Q34nw4r3g3d7ResFileCFPCc
 
-.global GetResPltt__Q34nw4r3g3d7ResFileCFQ34nw4r3g3d7ResName
-GetResPltt__Q34nw4r3g3d7ResFileCFQ34nw4r3g3d7ResName:
+.fn GetResPltt__Q34nw4r3g3d7ResFileCFQ34nw4r3g3d7ResName, global
 /* 803D7E54 003A1414  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D7E58 003A1418  7C 08 02 A6 */	mflr r0
 /* 803D7E5C 003A141C  80 A3 00 00 */	lwz r5, 0(r3)
@@ -145,9 +144,9 @@ GetResPltt__Q34nw4r3g3d7ResFileCFQ34nw4r3g3d7ResName:
 /* 803D7EBC 003A147C  7C 08 03 A6 */	mtlr r0
 /* 803D7EC0 003A1480  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D7EC4 003A1484  4E 80 00 20 */	blr 
+.endfn GetResPltt__Q34nw4r3g3d7ResFileCFQ34nw4r3g3d7ResName
 
-.global GetResPltt__Q34nw4r3g3d7ResFileCFi
-GetResPltt__Q34nw4r3g3d7ResFileCFi:
+.fn GetResPltt__Q34nw4r3g3d7ResFileCFi, global
 /* 803D7EC8 003A1488  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D7ECC 003A148C  7C 08 02 A6 */	mflr r0
 /* 803D7ED0 003A1490  80 A3 00 00 */	lwz r5, 0(r3)
@@ -190,9 +189,9 @@ GetResPltt__Q34nw4r3g3d7ResFileCFi:
 /* 803D7F54 003A1514  7C 08 03 A6 */	mtlr r0
 /* 803D7F58 003A1518  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D7F5C 003A151C  4E 80 00 20 */	blr 
+.endfn GetResPltt__Q34nw4r3g3d7ResFileCFi
 
-.global GetResTex__Q34nw4r3g3d7ResFileCFPCc
-GetResTex__Q34nw4r3g3d7ResFileCFPCc:
+.fn GetResTex__Q34nw4r3g3d7ResFileCFPCc, global
 /* 803D7F60 003A1520  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D7F64 003A1524  7C 08 02 A6 */	mflr r0
 /* 803D7F68 003A1528  80 A3 00 00 */	lwz r5, 0(r3)
@@ -222,9 +221,9 @@ GetResTex__Q34nw4r3g3d7ResFileCFPCc:
 /* 803D7FC0 003A1580  7C 08 03 A6 */	mtlr r0
 /* 803D7FC4 003A1584  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D7FC8 003A1588  4E 80 00 20 */	blr 
+.endfn GetResTex__Q34nw4r3g3d7ResFileCFPCc
 
-.global GetResTex__Q34nw4r3g3d7ResFileCFQ34nw4r3g3d7ResName
-GetResTex__Q34nw4r3g3d7ResFileCFQ34nw4r3g3d7ResName:
+.fn GetResTex__Q34nw4r3g3d7ResFileCFQ34nw4r3g3d7ResName, global
 /* 803D7FCC 003A158C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D7FD0 003A1590  7C 08 02 A6 */	mflr r0
 /* 803D7FD4 003A1594  80 A3 00 00 */	lwz r5, 0(r3)
@@ -256,9 +255,9 @@ GetResTex__Q34nw4r3g3d7ResFileCFQ34nw4r3g3d7ResName:
 /* 803D8034 003A15F4  7C 08 03 A6 */	mtlr r0
 /* 803D8038 003A15F8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D803C 003A15FC  4E 80 00 20 */	blr 
+.endfn GetResTex__Q34nw4r3g3d7ResFileCFQ34nw4r3g3d7ResName
 
-.global GetResTex__Q34nw4r3g3d7ResFileCFi
-GetResTex__Q34nw4r3g3d7ResFileCFi:
+.fn GetResTex__Q34nw4r3g3d7ResFileCFi, global
 /* 803D8040 003A1600  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D8044 003A1604  7C 08 02 A6 */	mflr r0
 /* 803D8048 003A1608  80 A3 00 00 */	lwz r5, 0(r3)
@@ -301,9 +300,9 @@ GetResTex__Q34nw4r3g3d7ResFileCFi:
 /* 803D80CC 003A168C  7C 08 03 A6 */	mtlr r0
 /* 803D80D0 003A1690  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D80D4 003A1694  4E 80 00 20 */	blr 
+.endfn GetResTex__Q34nw4r3g3d7ResFileCFi
 
-.global GetResAnmChr__Q34nw4r3g3d7ResFileCFi
-GetResAnmChr__Q34nw4r3g3d7ResFileCFi:
+.fn GetResAnmChr__Q34nw4r3g3d7ResFileCFi, global
 /* 803D80D8 003A1698  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D80DC 003A169C  7C 08 02 A6 */	mflr r0
 /* 803D80E0 003A16A0  80 A3 00 00 */	lwz r5, 0(r3)
@@ -346,9 +345,9 @@ GetResAnmChr__Q34nw4r3g3d7ResFileCFi:
 /* 803D8164 003A1724  7C 08 03 A6 */	mtlr r0
 /* 803D8168 003A1728  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D816C 003A172C  4E 80 00 20 */	blr 
+.endfn GetResAnmChr__Q34nw4r3g3d7ResFileCFi
 
-.global GetResAnmChrNumEntries__Q34nw4r3g3d7ResFileCFv
-GetResAnmChrNumEntries__Q34nw4r3g3d7ResFileCFv:
+.fn GetResAnmChrNumEntries__Q34nw4r3g3d7ResFileCFv, global
 /* 803D8170 003A1730  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D8174 003A1734  7C 08 02 A6 */	mflr r0
 /* 803D8178 003A1738  80 A3 00 00 */	lwz r5, 0(r3)
@@ -379,9 +378,9 @@ GetResAnmChrNumEntries__Q34nw4r3g3d7ResFileCFv:
 /* 803D81D0 003A1790  7C 08 03 A6 */	mtlr r0
 /* 803D81D4 003A1794  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D81D8 003A1798  4E 80 00 20 */	blr 
+.endfn GetResAnmChrNumEntries__Q34nw4r3g3d7ResFileCFv
 
-.global GetResAnmClr__Q34nw4r3g3d7ResFileCFi
-GetResAnmClr__Q34nw4r3g3d7ResFileCFi:
+.fn GetResAnmClr__Q34nw4r3g3d7ResFileCFi, global
 /* 803D81DC 003A179C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D81E0 003A17A0  7C 08 02 A6 */	mflr r0
 /* 803D81E4 003A17A4  80 A3 00 00 */	lwz r5, 0(r3)
@@ -424,9 +423,9 @@ GetResAnmClr__Q34nw4r3g3d7ResFileCFi:
 /* 803D8268 003A1828  7C 08 03 A6 */	mtlr r0
 /* 803D826C 003A182C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D8270 003A1830  4E 80 00 20 */	blr 
+.endfn GetResAnmClr__Q34nw4r3g3d7ResFileCFi
 
-.global GetResAnmTexPat__Q34nw4r3g3d7ResFileCFi
-GetResAnmTexPat__Q34nw4r3g3d7ResFileCFi:
+.fn GetResAnmTexPat__Q34nw4r3g3d7ResFileCFi, global
 /* 803D8274 003A1834  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D8278 003A1838  7C 08 02 A6 */	mflr r0
 /* 803D827C 003A183C  80 A3 00 00 */	lwz r5, 0(r3)
@@ -469,9 +468,9 @@ GetResAnmTexPat__Q34nw4r3g3d7ResFileCFi:
 /* 803D8300 003A18C0  7C 08 03 A6 */	mtlr r0
 /* 803D8304 003A18C4  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D8308 003A18C8  4E 80 00 20 */	blr 
+.endfn GetResAnmTexPat__Q34nw4r3g3d7ResFileCFi
 
-.global GetResAnmTexSrt__Q34nw4r3g3d7ResFileCFi
-GetResAnmTexSrt__Q34nw4r3g3d7ResFileCFi:
+.fn GetResAnmTexSrt__Q34nw4r3g3d7ResFileCFi, global
 /* 803D830C 003A18CC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D8310 003A18D0  7C 08 02 A6 */	mflr r0
 /* 803D8314 003A18D4  80 A3 00 00 */	lwz r5, 0(r3)
@@ -514,9 +513,9 @@ GetResAnmTexSrt__Q34nw4r3g3d7ResFileCFi:
 /* 803D8398 003A1958  7C 08 03 A6 */	mtlr r0
 /* 803D839C 003A195C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D83A0 003A1960  4E 80 00 20 */	blr 
+.endfn GetResAnmTexSrt__Q34nw4r3g3d7ResFileCFi
 
-.global GetResAnmScn__Q34nw4r3g3d7ResFileCFUl
-GetResAnmScn__Q34nw4r3g3d7ResFileCFUl:
+.fn GetResAnmScn__Q34nw4r3g3d7ResFileCFUl, global
 /* 803D83A4 003A1964  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D83A8 003A1968  7C 08 02 A6 */	mflr r0
 /* 803D83AC 003A196C  80 A3 00 00 */	lwz r5, 0(r3)
@@ -559,9 +558,9 @@ GetResAnmScn__Q34nw4r3g3d7ResFileCFUl:
 /* 803D8430 003A19F0  7C 08 03 A6 */	mtlr r0
 /* 803D8434 003A19F4  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D8438 003A19F8  4E 80 00 20 */	blr 
+.endfn GetResAnmScn__Q34nw4r3g3d7ResFileCFUl
 
-.global HasResTex__Q34nw4r3g3d7ResFileCFv
-HasResTex__Q34nw4r3g3d7ResFileCFv:
+.fn HasResTex__Q34nw4r3g3d7ResFileCFv, global
 /* 803D843C 003A19FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D8440 003A1A00  7C 08 02 A6 */	mflr r0
 /* 803D8444 003A1A04  80 A3 00 00 */	lwz r5, 0(r3)
@@ -581,9 +580,9 @@ HasResTex__Q34nw4r3g3d7ResFileCFv:
 /* 803D847C 003A1A3C  7C 08 03 A6 */	mtlr r0
 /* 803D8480 003A1A40  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D8484 003A1A44  4E 80 00 20 */	blr 
+.endfn HasResTex__Q34nw4r3g3d7ResFileCFv
 
-.global HasResAnmChr__Q34nw4r3g3d7ResFileCFv
-HasResAnmChr__Q34nw4r3g3d7ResFileCFv:
+.fn HasResAnmChr__Q34nw4r3g3d7ResFileCFv, global
 /* 803D8488 003A1A48  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D848C 003A1A4C  7C 08 02 A6 */	mflr r0
 /* 803D8490 003A1A50  80 A3 00 00 */	lwz r5, 0(r3)
@@ -603,9 +602,9 @@ HasResAnmChr__Q34nw4r3g3d7ResFileCFv:
 /* 803D84C8 003A1A88  7C 08 03 A6 */	mtlr r0
 /* 803D84CC 003A1A8C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D84D0 003A1A90  4E 80 00 20 */	blr 
+.endfn HasResAnmChr__Q34nw4r3g3d7ResFileCFv
 
-.global HasResAnmClr__Q34nw4r3g3d7ResFileCFv
-HasResAnmClr__Q34nw4r3g3d7ResFileCFv:
+.fn HasResAnmClr__Q34nw4r3g3d7ResFileCFv, global
 /* 803D84D4 003A1A94  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D84D8 003A1A98  7C 08 02 A6 */	mflr r0
 /* 803D84DC 003A1A9C  80 A3 00 00 */	lwz r5, 0(r3)
@@ -625,9 +624,9 @@ HasResAnmClr__Q34nw4r3g3d7ResFileCFv:
 /* 803D8514 003A1AD4  7C 08 03 A6 */	mtlr r0
 /* 803D8518 003A1AD8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D851C 003A1ADC  4E 80 00 20 */	blr 
+.endfn HasResAnmClr__Q34nw4r3g3d7ResFileCFv
 
-.global HasResAnmTexPat__Q34nw4r3g3d7ResFileCFv
-HasResAnmTexPat__Q34nw4r3g3d7ResFileCFv:
+.fn HasResAnmTexPat__Q34nw4r3g3d7ResFileCFv, global
 /* 803D8520 003A1AE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D8524 003A1AE4  7C 08 02 A6 */	mflr r0
 /* 803D8528 003A1AE8  80 A3 00 00 */	lwz r5, 0(r3)
@@ -647,9 +646,9 @@ HasResAnmTexPat__Q34nw4r3g3d7ResFileCFv:
 /* 803D8560 003A1B20  7C 08 03 A6 */	mtlr r0
 /* 803D8564 003A1B24  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D8568 003A1B28  4E 80 00 20 */	blr 
+.endfn HasResAnmTexPat__Q34nw4r3g3d7ResFileCFv
 
-.global HasResAnmTexSrt__Q34nw4r3g3d7ResFileCFv
-HasResAnmTexSrt__Q34nw4r3g3d7ResFileCFv:
+.fn HasResAnmTexSrt__Q34nw4r3g3d7ResFileCFv, global
 /* 803D856C 003A1B2C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D8570 003A1B30  7C 08 02 A6 */	mflr r0
 /* 803D8574 003A1B34  80 A3 00 00 */	lwz r5, 0(r3)
@@ -669,9 +668,9 @@ HasResAnmTexSrt__Q34nw4r3g3d7ResFileCFv:
 /* 803D85AC 003A1B6C  7C 08 03 A6 */	mtlr r0
 /* 803D85B0 003A1B70  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D85B4 003A1B74  4E 80 00 20 */	blr 
+.endfn HasResAnmTexSrt__Q34nw4r3g3d7ResFileCFv
 
-.global HasResAnmShp__Q34nw4r3g3d7ResFileCFv
-HasResAnmShp__Q34nw4r3g3d7ResFileCFv:
+.fn HasResAnmShp__Q34nw4r3g3d7ResFileCFv, global
 /* 803D85B8 003A1B78  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D85BC 003A1B7C  7C 08 02 A6 */	mflr r0
 /* 803D85C0 003A1B80  80 A3 00 00 */	lwz r5, 0(r3)
@@ -691,9 +690,9 @@ HasResAnmShp__Q34nw4r3g3d7ResFileCFv:
 /* 803D85F8 003A1BB8  7C 08 03 A6 */	mtlr r0
 /* 803D85FC 003A1BBC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D8600 003A1BC0  4E 80 00 20 */	blr 
+.endfn HasResAnmShp__Q34nw4r3g3d7ResFileCFv
 
-.global HasResAnmScn__Q34nw4r3g3d7ResFileCFv
-HasResAnmScn__Q34nw4r3g3d7ResFileCFv:
+.fn HasResAnmScn__Q34nw4r3g3d7ResFileCFv, global
 /* 803D8604 003A1BC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D8608 003A1BC8  7C 08 02 A6 */	mflr r0
 /* 803D860C 003A1BCC  80 A3 00 00 */	lwz r5, 0(r3)
@@ -713,9 +712,9 @@ HasResAnmScn__Q34nw4r3g3d7ResFileCFv:
 /* 803D8644 003A1C04  7C 08 03 A6 */	mtlr r0
 /* 803D8648 003A1C08  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D864C 003A1C0C  4E 80 00 20 */	blr 
+.endfn HasResAnmScn__Q34nw4r3g3d7ResFileCFv
 
-.global Bind__Q34nw4r3g3d7ResFileFQ34nw4r3g3d7ResFile
-Bind__Q34nw4r3g3d7ResFileFQ34nw4r3g3d7ResFile:
+.fn Bind__Q34nw4r3g3d7ResFileFQ34nw4r3g3d7ResFile, global
 /* 803D8650 003A1C10  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 803D8654 003A1C14  7C 08 02 A6 */	mflr r0
 /* 803D8658 003A1C18  90 01 00 64 */	stw r0, 0x64(r1)
@@ -876,9 +875,9 @@ Bind__Q34nw4r3g3d7ResFileFQ34nw4r3g3d7ResFile:
 /* 803D8878 003A1E38  7C 08 03 A6 */	mtlr r0
 /* 803D887C 003A1E3C  38 21 00 60 */	addi r1, r1, 0x60
 /* 803D8880 003A1E40  4E 80 00 20 */	blr 
+.endfn Bind__Q34nw4r3g3d7ResFileFQ34nw4r3g3d7ResFile
 
-.global Init__Q34nw4r3g3d7ResFileFv
-Init__Q34nw4r3g3d7ResFileFv:
+.fn Init__Q34nw4r3g3d7ResFileFv, global
 /* 803D8884 003A1E44  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 803D8888 003A1E48  7C 08 02 A6 */	mflr r0
 /* 803D888C 003A1E4C  90 01 00 64 */	stw r0, 0x64(r1)
@@ -1083,9 +1082,9 @@ Init__Q34nw4r3g3d7ResFileFv:
 /* 803D8B3C 003A20FC  7C 08 03 A6 */	mtlr r0
 /* 803D8B40 003A2100  38 21 00 60 */	addi r1, r1, 0x60
 /* 803D8B44 003A2104  4E 80 00 20 */	blr
+.endfn Init__Q34nw4r3g3d7ResFileFv
 
-.global Terminate__Q34nw4r3g3d7ResFileFv
-Terminate__Q34nw4r3g3d7ResFileFv:
+.fn Terminate__Q34nw4r3g3d7ResFileFv, global
 /* 803D8B48 003A2108  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803D8B4C 003A210C  7C 08 02 A6 */	mflr r0
 /* 803D8B50 003A2110  3C A0 80 57 */	lis r5, lbl_8056C840@ha
@@ -1167,9 +1166,9 @@ Terminate__Q34nw4r3g3d7ResFileFv:
 /* 803D8C5C 003A221C  7C 08 03 A6 */	mtlr r0
 /* 803D8C60 003A2220  38 21 00 30 */	addi r1, r1, 0x30
 /* 803D8C64 003A2224  4E 80 00 20 */	blr 
+.endfn Terminate__Q34nw4r3g3d7ResFileFv
 
-.global CheckRevision__Q34nw4r3g3d7ResFileCFv
-CheckRevision__Q34nw4r3g3d7ResFileCFv:
+.fn CheckRevision__Q34nw4r3g3d7ResFileCFv, global
 /* 803D8C68 003A2228  94 21 FF 30 */	stwu r1, -0xd0(r1)
 /* 803D8C6C 003A222C  7C 08 02 A6 */	mflr r0
 /* 803D8C70 003A2230  90 01 00 D4 */	stw r0, 0xd4(r1)
@@ -1866,9 +1865,9 @@ CheckRevision__Q34nw4r3g3d7ResFileCFv:
 /* 803D95A8 003A2B68  7C 08 03 A6 */	mtlr r0
 /* 803D95AC 003A2B6C  38 21 00 D0 */	addi r1, r1, 0xd0
 /* 803D95B0 003A2B70  4E 80 00 20 */	blr 
+.endfn CheckRevision__Q34nw4r3g3d7ResFileCFv
 
-.global func_803D95B4
-func_803D95B4:
+.fn func_803D95B4, global
 /* 803D95B4 003A2B74  80 63 00 00 */	lwz r3, 0(r3)
 /* 803D95B8 003A2B78  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 803D95BC 003A2B7C  2C 00 00 00 */	cmpwi r0, 0
@@ -1878,6 +1877,7 @@ func_803D95B4:
 .L_803D95CC:
 /* 803D95CC 003A2B8C  38 60 00 00 */	li r3, 0
 /* 803D95D0 003A2B90  4E 80 00 20 */	blr 
+.endfn func_803D95B4
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

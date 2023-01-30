@@ -2,8 +2,9 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_8049E5DC
-func_8049E5DC:
+
+
+.fn func_8049E5DC, global
 /* 8049E5DC 00467B9C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049E5E0 00467BA0  7C 08 02 A6 */	mflr r0
 /* 8049E5E4 00467BA4  2C 03 00 00 */	cmpwi r3, 0
@@ -32,9 +33,9 @@ func_8049E5DC:
 /* 8049E63C 00467BFC  7C 08 03 A6 */	mtlr r0
 /* 8049E640 00467C00  38 21 00 10 */	addi r1, r1, 0x10
 /* 8049E644 00467C04  4E 80 00 20 */	blr 
+.endfn func_8049E5DC
 
-.global func_8049E648
-func_8049E648:
+.fn func_8049E648, global
 /* 8049E648 00467C08  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8049E64C 00467C0C  7C 08 02 A6 */	mflr r0
 /* 8049E650 00467C10  90 01 00 34 */	stw r0, 0x34(r1)
@@ -90,14 +91,14 @@ func_8049E648:
 /* 8049E6FC 00467CBC  7C 08 03 A6 */	mtlr r0
 /* 8049E700 00467CC0  38 21 00 30 */	addi r1, r1, 0x30
 /* 8049E704 00467CC4  4E 80 00 20 */	blr 
+.endfn func_8049E648
 
-.global func_8049E708
-func_8049E708:
+.fn func_8049E708, global
 /* 8049E708 00467CC8  38 63 00 0C */	addi r3, r3, 0xc
 /* 8049E70C 00467CCC  4B F3 99 CC */	b GetResAnmChr__Q34nw4r3g3d7ResFileCFi
+.endfn func_8049E708
 
-.global func_8049E710
-func_8049E710:
+.fn func_8049E710, global
 /* 8049E710 00467CD0  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 8049E714 00467CD4  7C 08 02 A6 */	mflr r0
 /* 8049E718 00467CD8  90 01 00 54 */	stw r0, 0x54(r1)
@@ -211,19 +212,22 @@ func_8049E710:
 /* 8049E8A8 00467E68  7D 41 53 78 */	mr r1, r10
 /* 8049E8AC 00467E6C  7C 08 03 A6 */	mtlr r0
 /* 8049E8B0 00467E70  4E 80 00 20 */	blr 
+.endfn func_8049E710
 
-.global func_8049E8B4
-func_8049E8B4:
+.fn func_8049E8B4, global
 /* 8049E8B4 00467E74  38 63 00 10 */	addi r3, r3, 0x10
 /* 8049E8B8 00467E78  4E 80 00 20 */	blr 
+.endfn func_8049E8B4
 
-.global func_8049E8BC
-func_8049E8BC:
+.fn func_8049E8BC, global
 /* 8049E8BC 00467E7C  80 63 00 54 */	lwz r3, 0x54(r3)
 /* 8049E8C0 00467E80  4E 80 00 20 */	blr 
+.endfn func_8049E8BC
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
 
 .global CScnItemAnim_typestr
 CScnItemAnim_typestr:
@@ -231,6 +235,8 @@ CScnItemAnim_typestr:
 	.balign 4
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
 
 .global __vt__CScnItemAnim
 __vt__CScnItemAnim:
@@ -252,6 +258,8 @@ CScnItemAnim_hierarchy:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+
+
 .global __RTTI__CScnItemAnim
 __RTTI__CScnItemAnim:
 	.4byte CScnItemAnim_typestr
@@ -263,49 +271,66 @@ lbl_806663A8:
 	.4byte 0x72656600
 	.4byte 0
 
-.section extab_, "a"  # 0x800066E0 - 0x80021020
+.section extab, "a" # 0x800066E0 - 0x80021020
 
-.global lbl_8001F700
-lbl_8001F700:
+.balign 4
+
+.obj "@etb_8001F700", local
+.hidden "@etb_8001F700"
 	.4byte 0x10080000
 	.4byte 0x00000040
 	.4byte 0x00000010
-	.4byte 0
+	.4byte 0x00000000
 	.4byte 0x8680001E
-	.4byte 0
+	.4byte 0x00000000
 	.4byte func_80482054
+.endobj "@etb_8001F700"
 
-.global lbl_8001F71C
-lbl_8001F71C:
+.obj "@etb_8001F71C", local
+.hidden "@etb_8001F71C"
 	.4byte 0x40080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001F71C"
 
-.global lbl_8001F724
-lbl_8001F724:
+.obj "@etb_8001F724", local
+.hidden "@etb_8001F724"
 	.4byte 0x30180000
 	.4byte 0x000000DC
 	.4byte 0x00140018
 	.4byte 0x00000174
 	.4byte 0x00000034
-	.4byte 0
+	.4byte 0x00000000
 	.4byte 0x0680001D
-	.4byte 0
+	.4byte 0x00000000
 	.4byte func_80482054
 	.4byte 0x90000000
-	.4byte 0
+	.4byte 0x00000000
 	.4byte 0x00000164
 	.4byte 0x00000018
 	.4byte 0x8D000018
+.endobj "@etb_8001F724"
 
+.section extabindex, "a" # 0x80021020 - 0x80039220
 
-.section extabindex_, "a"  # 0x80021020 - 0x80039220
+.balign 4
 
-.4byte func_8049E5DC
+.obj "@eti_800371C0", local
+.hidden "@eti_800371C0"
+	.4byte func_8049E5DC
 	.4byte 0x0000006C
-	.4byte lbl_8001F700
+	.4byte "@etb_8001F700"
+.endobj "@eti_800371C0"
+
+.obj "@eti_800371CC", local
+.hidden "@eti_800371CC"
 	.4byte func_8049E648
 	.4byte 0x000000C0
-	.4byte lbl_8001F71C
+	.4byte "@etb_8001F71C"
+.endobj "@eti_800371CC"
+
+.obj "@eti_800371D8", local
+.hidden "@eti_800371D8"
 	.4byte func_8049E710
 	.4byte 0x000001A4
-	.4byte lbl_8001F724
+	.4byte "@etb_8001F724"
+.endobj "@eti_800371D8"

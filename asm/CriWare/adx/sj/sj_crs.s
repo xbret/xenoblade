@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global SJCRS_Init
-SJCRS_Init:
+.fn SJCRS_Init, global
 /* 803968CC 0035FE8C  3C 80 80 5F */	lis r4, sj_init_count@ha
 /* 803968D0 0035FE90  80 64 5D 28 */	lwz r3, sj_init_count@l(r4)
 /* 803968D4 0035FE94  38 03 00 01 */	addi r0, r3, 1
@@ -15,9 +14,9 @@ SJCRS_Init:
 /* 803968EC 0035FEAC  3C 60 80 5F */	lis r3, sjcrs_lvl@ha
 /* 803968F0 0035FEB0  90 03 5D 20 */	stw r0, sjcrs_lvl@l(r3)
 /* 803968F4 0035FEB4  4E 80 00 20 */	blr 
+.endfn SJCRS_Init
 
-.global SJCRS_Finish
-SJCRS_Finish:
+.fn SJCRS_Finish, global
 /* 803968F8 0035FEB8  3C 80 80 5F */	lis r4, sj_init_count@ha
 /* 803968FC 0035FEBC  80 64 5D 28 */	lwz r3, sj_init_count@l(r4)
 /* 80396900 0035FEC0  38 03 FF FF */	addi r0, r3, -1
@@ -29,9 +28,9 @@ SJCRS_Finish:
 /* 80396918 0035FED8  3C 60 80 5F */	lis r3, sjcrs_lvl@ha
 /* 8039691C 0035FEDC  90 03 5D 20 */	stw r0, sjcrs_lvl@l(r3)
 /* 80396920 0035FEE0  4E 80 00 20 */	blr 
+.endfn SJCRS_Finish
 
-.global SJCRS_Lock
-SJCRS_Lock:
+.fn SJCRS_Lock, global
 /* 80396924 0035FEE4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80396928 0035FEE8  7C 08 02 A6 */	mflr r0
 /* 8039692C 0035FEEC  3C 60 80 5F */	lis r3, sjcrs_lvl@ha
@@ -51,9 +50,9 @@ SJCRS_Lock:
 /* 80396960 0035FF20  7C 08 03 A6 */	mtlr r0
 /* 80396964 0035FF24  38 21 00 10 */	addi r1, r1, 0x10
 /* 80396968 0035FF28  4E 80 00 20 */	blr 
+.endfn SJCRS_Lock
 
-.global SJCRS_Unlock
-SJCRS_Unlock:
+.fn SJCRS_Unlock, global
 /* 8039696C 0035FF2C  3C 80 80 5F */	lis r4, sjcrs_lvl@ha
 /* 80396970 0035FF30  80 64 5D 20 */	lwz r3, sjcrs_lvl@l(r4)
 /* 80396974 0035FF34  38 03 FF FF */	addi r0, r3, -1
@@ -65,6 +64,7 @@ SJCRS_Unlock:
 /* 8039698C 0035FF4C  80 63 5D 24 */	lwz r3, sjcrs_msk@l(r3)
 /* 80396990 0035FF50  4B FC 20 60 */	b OSRestoreInterrupts
 /* 80396994 0035FF54  4E 80 00 20 */	blr 
+.endfn SJCRS_Unlock
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

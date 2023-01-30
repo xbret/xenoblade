@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global __OSReboot
-__OSReboot:
+.fn __OSReboot, global
 /* 80359E80 00323440  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80359E84 00323444  7C 08 02 A6 */	mflr r0
 /* 80359E88 00323448  90 01 00 24 */	stw r0, 0x24(r1)
@@ -32,15 +31,16 @@ __OSReboot:
 /* 80359EE0 003234A0  7C 08 03 A6 */	mtlr r0
 /* 80359EE4 003234A4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80359EE8 003234A8  4E 80 00 20 */	blr 
+.endfn __OSReboot
 
 .balign 16, 0
-.global OSGetSaveRegion
-OSGetSaveRegion:
+.fn OSGetSaveRegion, global
 /* 80359EF0 003234B0  80 0D B9 30 */	lwz r0, lbl_80667AB0@sda21(r13)
 /* 80359EF4 003234B4  90 03 00 00 */	stw r0, 0(r3)
 /* 80359EF8 003234B8  80 0D B9 34 */	lwz r0, lbl_80667AB4@sda21(r13)
 /* 80359EFC 003234BC  90 04 00 00 */	stw r0, 0(r4)
 /* 80359F00 003234C0  4E 80 00 20 */	blr 
+.endfn OSGetSaveRegion
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

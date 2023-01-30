@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global GXSetTevOp
-GXSetTevOp:
+.fn GXSetTevOp, global
 /* 8031D620 002E6BE0  2C 03 00 00 */	cmpwi r3, 0
 /* 8031D624 002E6BE4  3C A0 80 55 */	lis r5, lbl_8054C098@ha
 /* 8031D628 002E6BE8  38 A5 C0 98 */	addi r5, r5, lbl_8054C098@l
@@ -44,10 +43,10 @@ GXSetTevOp:
 /* 8031D6A8 002E6C68  91 06 01 C0 */	stw r8, 0x1c0(r6)
 /* 8031D6AC 002E6C6C  B0 07 00 02 */	sth r0, 2(r7)
 /* 8031D6B0 002E6C70  4E 80 00 20 */	blr 
+.endfn GXSetTevOp
 
 .balign 16, 0
-.global GXSetTevColorIn
-GXSetTevColorIn:
+.fn GXSetTevColorIn, global
 /* 8031D6C0 002E6C80  81 62 BC 20 */	lwz r11, lbl_8066BFA0@sda21(r2)
 /* 8031D6C4 002E6C84  54 60 10 3A */	slwi r0, r3, 2
 /* 8031D6C8 002E6C88  3C 60 CC 01 */	lis r3, 0xCC008000@ha
@@ -64,10 +63,10 @@ GXSetTevColorIn:
 /* 8031D6F4 002E6CB4  91 2A 01 80 */	stw r9, 0x180(r10)
 /* 8031D6F8 002E6CB8  B0 0B 00 02 */	sth r0, 2(r11)
 /* 8031D6FC 002E6CBC  4E 80 00 20 */	blr 
+.endfn GXSetTevColorIn
 
 .balign 16, 0
-.global GXSetTevAlphaIn
-GXSetTevAlphaIn:
+.fn GXSetTevAlphaIn, global
 /* 8031D700 002E6CC0  81 62 BC 20 */	lwz r11, lbl_8066BFA0@sda21(r2)
 /* 8031D704 002E6CC4  54 60 10 3A */	slwi r0, r3, 2
 /* 8031D708 002E6CC8  3C 60 CC 01 */	lis r3, 0xCC008000@ha
@@ -84,10 +83,10 @@ GXSetTevAlphaIn:
 /* 8031D734 002E6CF4  91 2A 01 C0 */	stw r9, 0x1c0(r10)
 /* 8031D738 002E6CF8  B0 0B 00 02 */	sth r0, 2(r11)
 /* 8031D73C 002E6CFC  4E 80 00 20 */	blr 
+.endfn GXSetTevAlphaIn
 
 .balign 16, 0
-.global GXSetTevColorOp
-GXSetTevColorOp:
+.fn GXSetTevColorOp, global
 /* 8031D740 002E6D00  81 42 BC 20 */	lwz r10, lbl_8066BFA0@sda21(r2)
 /* 8031D744 002E6D04  54 60 10 3A */	slwi r0, r3, 2
 /* 8031D748 002E6D08  2C 04 00 01 */	cmpwi r4, 1
@@ -112,10 +111,10 @@ GXSetTevColorOp:
 /* 8031D78C 002E6D4C  91 69 01 80 */	stw r11, 0x180(r9)
 /* 8031D790 002E6D50  B0 0A 00 02 */	sth r0, 2(r10)
 /* 8031D794 002E6D54  4E 80 00 20 */	blr 
+.endfn GXSetTevColorOp
 
 .balign 16, 0
-.global GXSetTevAlphaOp
-GXSetTevAlphaOp:
+.fn GXSetTevAlphaOp, global
 /* 8031D7A0 002E6D60  81 42 BC 20 */	lwz r10, lbl_8066BFA0@sda21(r2)
 /* 8031D7A4 002E6D64  54 60 10 3A */	slwi r0, r3, 2
 /* 8031D7A8 002E6D68  2C 04 00 01 */	cmpwi r4, 1
@@ -140,10 +139,10 @@ GXSetTevAlphaOp:
 /* 8031D7EC 002E6DAC  91 69 01 C0 */	stw r11, 0x1c0(r9)
 /* 8031D7F0 002E6DB0  B0 0A 00 02 */	sth r0, 2(r10)
 /* 8031D7F4 002E6DB4  4E 80 00 20 */	blr 
+.endfn GXSetTevAlphaOp
 
 .balign 16, 0
-.global GXSetTevColor
-GXSetTevColor:
+.fn GXSetTevColor, global
 /* 8031D800 002E6DC0  81 04 00 00 */	lwz r8, 0(r4)
 /* 8031D804 002E6DC4  54 63 08 3C */	slwi r3, r3, 1
 /* 8031D808 002E6DC8  3C 80 CC 01 */	lis r4, 0xCC008000@ha
@@ -168,10 +167,10 @@ GXSetTevColor:
 /* 8031D854 002E6E14  90 C4 80 00 */	stw r6, -0x8000(r4)
 /* 8031D858 002E6E18  B0 03 00 02 */	sth r0, 2(r3)
 /* 8031D85C 002E6E1C  4E 80 00 20 */	blr 
+.endfn GXSetTevColor
 
 .balign 16, 0
-.global GXSetTevColorS10
-GXSetTevColorS10:
+.fn GXSetTevColorS10, global
 /* 8031D860 002E6E20  81 04 00 00 */	lwz r8, 0(r4)
 /* 8031D864 002E6E24  54 66 08 3C */	slwi r6, r3, 1
 /* 8031D868 002E6E28  81 24 00 04 */	lwz r9, 4(r4)
@@ -197,10 +196,10 @@ GXSetTevColorS10:
 /* 8031D8B8 002E6E78  90 C5 80 00 */	stw r6, -0x8000(r5)
 /* 8031D8BC 002E6E7C  B0 03 00 02 */	sth r0, 2(r3)
 /* 8031D8C0 002E6E80  4E 80 00 20 */	blr 
+.endfn GXSetTevColorS10
 
 .balign 16, 0
-.global GXSetTevKColor
-GXSetTevKColor:
+.fn GXSetTevKColor, global
 /* 8031D8D0 002E6E90  81 24 00 00 */	lwz r9, 0(r4)
 /* 8031D8D4 002E6E94  54 63 08 3C */	slwi r3, r3, 1
 /* 8031D8D8 002E6E98  3C 80 CC 01 */	lis r4, 0xCC008000@ha
@@ -224,10 +223,10 @@ GXSetTevKColor:
 /* 8031D920 002E6EE0  90 C4 80 00 */	stw r6, -0x8000(r4)
 /* 8031D924 002E6EE4  B0 03 00 02 */	sth r0, 2(r3)
 /* 8031D928 002E6EE8  4E 80 00 20 */	blr 
+.endfn GXSetTevKColor
 
 .balign 16, 0
-.global GXSetTevKColorSel
-GXSetTevKColorSel:
+.fn GXSetTevKColorSel, global
 /* 8031D930 002E6EF0  54 60 07 FF */	clrlwi. r0, r3, 0x1f
 /* 8031D934 002E6EF4  80 A2 BC 20 */	lwz r5, lbl_8066BFA0@sda21(r2)
 /* 8031D938 002E6EF8  54 60 08 3A */	rlwinm r0, r3, 1, 0, 0x1d
@@ -250,10 +249,10 @@ GXSetTevKColorSel:
 /* 8031D974 002E6F34  90 64 80 00 */	stw r3, -0x8000(r4)
 /* 8031D978 002E6F38  B0 05 00 02 */	sth r0, 2(r5)
 /* 8031D97C 002E6F3C  4E 80 00 20 */	blr 
+.endfn GXSetTevKColorSel
 
 .balign 16, 0
-.global GXSetTevKAlphaSel
-GXSetTevKAlphaSel:
+.fn GXSetTevKAlphaSel, global
 /* 8031D980 002E6F40  54 60 07 FF */	clrlwi. r0, r3, 0x1f
 /* 8031D984 002E6F44  80 A2 BC 20 */	lwz r5, lbl_8066BFA0@sda21(r2)
 /* 8031D988 002E6F48  54 60 08 3A */	rlwinm r0, r3, 1, 0, 0x1d
@@ -276,10 +275,10 @@ GXSetTevKAlphaSel:
 /* 8031D9C4 002E6F84  90 64 80 00 */	stw r3, -0x8000(r4)
 /* 8031D9C8 002E6F88  B0 05 00 02 */	sth r0, 2(r5)
 /* 8031D9CC 002E6F8C  4E 80 00 20 */	blr 
+.endfn GXSetTevKAlphaSel
 
 .balign 16, 0
-.global GXSetTevSwapMode
-GXSetTevSwapMode:
+.fn GXSetTevSwapMode, global
 /* 8031D9D0 002E6F90  81 22 BC 20 */	lwz r9, lbl_8066BFA0@sda21(r2)
 /* 8031D9D4 002E6F94  54 60 10 3A */	slwi r0, r3, 2
 /* 8031D9D8 002E6F98  3C C0 CC 01 */	lis r6, 0xCC008000@ha
@@ -295,10 +294,10 @@ GXSetTevSwapMode:
 /* 8031DA00 002E6FC0  90 66 80 00 */	stw r3, -0x8000(r6)
 /* 8031DA04 002E6FC4  B0 09 00 02 */	sth r0, 2(r9)
 /* 8031DA08 002E6FC8  4E 80 00 20 */	blr 
+.endfn GXSetTevSwapMode
 
 .balign 16, 0
-.global GXSetTevSwapModeTable
-GXSetTevSwapModeTable:
+.fn GXSetTevSwapModeTable, global
 /* 8031DA10 002E6FD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031DA14 002E6FD4  54 6B 18 38 */	slwi r11, r3, 3
 /* 8031DA18 002E6FD8  54 6C 08 3C */	slwi r12, r3, 1
@@ -330,10 +329,10 @@ GXSetTevSwapModeTable:
 /* 8031DA80 002E7040  83 C1 00 08 */	lwz r30, 8(r1)
 /* 8031DA84 002E7044  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031DA88 002E7048  4E 80 00 20 */	blr 
+.endfn GXSetTevSwapModeTable
 
 .balign 16, 0
-.global GXSetAlphaCompare
-GXSetAlphaCompare:
+.fn GXSetAlphaCompare, global
 /* 8031DA90 002E7050  3D 00 CC 01 */	lis r8, 0xCC008000@ha
 /* 8031DA94 002E7054  38 00 00 61 */	li r0, 0x61
 /* 8031DA98 002E7058  98 08 80 00 */	stb r0, 0xCC008000@l(r8)
@@ -348,10 +347,10 @@ GXSetAlphaCompare:
 /* 8031DABC 002E707C  91 28 80 00 */	stw r9, -0x8000(r8)
 /* 8031DAC0 002E7080  B0 04 00 02 */	sth r0, 2(r4)
 /* 8031DAC4 002E7084  4E 80 00 20 */	blr 
+.endfn GXSetAlphaCompare
 
 .balign 16, 0
-.global GXSetZTexture
-GXSetZTexture:
+.fn GXSetZTexture, global
 /* 8031DAD0 002E7090  2C 04 00 11 */	cmpwi r4, 0x11
 /* 8031DAD4 002E7094  38 E0 00 00 */	li r7, 0
 /* 8031DAD8 002E7098  38 00 00 F4 */	li r0, 0xf4
@@ -390,10 +389,10 @@ GXSetZTexture:
 /* 8031DB48 002E7108  90 C4 80 00 */	stw r6, -0x8000(r4)
 /* 8031DB4C 002E710C  B0 03 00 02 */	sth r0, 2(r3)
 /* 8031DB50 002E7110  4E 80 00 20 */	blr 
+.endfn GXSetZTexture
 
 .balign 16, 0
-.global GXSetTevOrder
-GXSetTevOrder:
+.fn GXSetTevOrder, global
 /* 8031DB60 002E7120  54 AB 06 2C */	rlwinm r11, r5, 0, 0x18, 0x16
 /* 8031DB64 002E7124  38 E0 00 08 */	li r7, 8
 /* 8031DB68 002E7128  54 69 0F FE */	srwi r9, r3, 0x1f
@@ -491,10 +490,10 @@ GXSetTevOrder:
 /* 8031DCB0 002E7270  60 00 00 01 */	ori r0, r0, 1
 /* 8031DCB4 002E7274  90 05 05 FC */	stw r0, 0x5fc(r5)
 /* 8031DCB8 002E7278  4E 80 00 20 */	blr 
+.endfn GXSetTevOrder
 
 .balign 16, 0
-.global GXSetNumTevStages
-GXSetNumTevStages:
+.fn GXSetNumTevStages, global
 /* 8031DCC0 002E7280  80 82 BC 20 */	lwz r4, lbl_8066BFA0@sda21(r2)
 /* 8031DCC4 002E7284  38 03 FF FF */	addi r0, r3, -1
 /* 8031DCC8 002E7288  80 64 02 54 */	lwz r3, 0x254(r4)
@@ -504,6 +503,7 @@ GXSetNumTevStages:
 /* 8031DCD8 002E7298  60 00 00 04 */	ori r0, r0, 4
 /* 8031DCDC 002E729C  90 04 05 FC */	stw r0, 0x5fc(r4)
 /* 8031DCE0 002E72A0  4E 80 00 20 */	blr 
+.endfn GXSetNumTevStages
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

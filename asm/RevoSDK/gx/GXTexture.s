@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global GXGetTexBufferSize
-GXGetTexBufferSize:
+.fn GXGetTexBufferSize, global
 /* 8031C0C0 002E5680  28 05 00 3C */	cmplwi r5, 0x3c
 /* 8031C0C4 002E5684  41 81 00 40 */	bgt switch_8031C104
 /* 8031C0C8 002E5688  3D 00 80 55 */	lis r8, lbl_8054BE70@ha
@@ -92,10 +91,10 @@ switch_8031C104:
 .L_8031C1DC:
 /* 8031C1DC 002E579C  7D 83 63 78 */	mr r3, r12
 /* 8031C1E0 002E57A0  4E 80 00 20 */	blr 
+.endfn GXGetTexBufferSize
 
 .balign 16, 0
-.global __GetImageTileCount
-__GetImageTileCount:
+.fn __GetImageTileCount, global
 /* 8031C1F0 002E57B0  28 03 00 3C */	cmplwi r3, 0x3c
 /* 8031C1F4 002E57B4  41 81 00 40 */	bgt switch_8031C234
 /* 8031C1F8 002E57B8  3D 20 80 55 */	lis r9, lbl_8054BF64@ha
@@ -153,10 +152,10 @@ switch_8031C234:
 /* 8031C2A4 002E5864  38 03 00 01 */	addi r0, r3, 1
 /* 8031C2A8 002E5868  90 08 00 00 */	stw r0, 0(r8)
 /* 8031C2AC 002E586C  4E 80 00 20 */	blr 
+.endfn __GetImageTileCount
 
 .balign 16, 0
-.global GXInitTexObj
-GXInitTexObj:
+.fn GXInitTexObj, global
 /* 8031C2B0 002E5870  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8031C2B4 002E5874  7C 08 02 A6 */	mflr r0
 /* 8031C2B8 002E5878  90 01 00 44 */	stw r0, 0x44(r1)
@@ -301,10 +300,10 @@ switch_8031C458:
 /* 8031C4B0 002E5A70  7C 08 03 A6 */	mtlr r0
 /* 8031C4B4 002E5A74  38 21 00 40 */	addi r1, r1, 0x40
 /* 8031C4B8 002E5A78  4E 80 00 20 */	blr 
+.endfn GXInitTexObj
 
 .balign 16, 0
-.global GXInitTexObjCI
-GXInitTexObjCI:
+.fn GXInitTexObjCI, global
 /* 8031C4C0 002E5A80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031C4C4 002E5A84  7C 08 02 A6 */	mflr r0
 /* 8031C4C8 002E5A88  90 01 00 14 */	stw r0, 0x14(r1)
@@ -323,10 +322,10 @@ GXInitTexObjCI:
 /* 8031C4FC 002E5ABC  7C 08 03 A6 */	mtlr r0
 /* 8031C500 002E5AC0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031C504 002E5AC4  4E 80 00 20 */	blr 
+.endfn GXInitTexObjCI
 
 .balign 16, 0
-.global GXInitTexObjLOD
-GXInitTexObjLOD:
+.fn GXInitTexObjLOD, global
 /* 8031C510 002E5AD0  C0 02 BC A0 */	lfs f0, float_8066C020@sda21(r2)
 /* 8031C514 002E5AD4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031C518 002E5AD8  FC 03 00 40 */	fcmpo cr0, f3, f0
@@ -398,25 +397,25 @@ GXInitTexObjLOD:
 /* 8031C608 002E5BC8  90 03 00 04 */	stw r0, 4(r3)
 /* 8031C60C 002E5BCC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031C610 002E5BD0  4E 80 00 20 */	blr 
+.endfn GXInitTexObjLOD
 
 .balign 16, 0
-.global GXInitTexObjWrapMode
-GXInitTexObjWrapMode:
+.fn GXInitTexObjWrapMode, global
 /* 8031C620 002E5BE0  80 03 00 00 */	lwz r0, 0(r3)
 /* 8031C624 002E5BE4  50 80 07 BE */	rlwimi r0, r4, 0, 0x1e, 0x1f
 /* 8031C628 002E5BE8  50 A0 17 3A */	rlwimi r0, r5, 2, 0x1c, 0x1d
 /* 8031C62C 002E5BEC  90 03 00 00 */	stw r0, 0(r3)
 /* 8031C630 002E5BF0  4E 80 00 20 */	blr 
+.endfn GXInitTexObjWrapMode
 
 .balign 16, 0
-.global GXInitTexObjTlut
-GXInitTexObjTlut:
+.fn GXInitTexObjTlut, global
 /* 8031C640 002E5C00  90 83 00 18 */	stw r4, 0x18(r3)
 /* 8031C644 002E5C04  4E 80 00 20 */	blr 
+.endfn GXInitTexObjTlut
 
 .balign 16, 0
-.global GXInitTexObjFilter
-GXInitTexObjFilter:
+.fn GXInitTexObjFilter, global
 /* 8031C650 002E5C10  38 05 FF FF */	addi r0, r5, -1
 /* 8031C654 002E5C14  80 C3 00 00 */	lwz r6, 0(r3)
 /* 8031C658 002E5C18  7C 00 00 34 */	cntlzw r0, r0
@@ -427,67 +426,67 @@ GXInitTexObjFilter:
 /* 8031C66C 002E5C2C  50 06 2E 34 */	rlwimi r6, r0, 5, 0x18, 0x1a
 /* 8031C670 002E5C30  90 C3 00 00 */	stw r6, 0(r3)
 /* 8031C674 002E5C34  4E 80 00 20 */	blr 
+.endfn GXInitTexObjFilter
 
 .balign 16, 0
-.global GXInitTexObjUserData
-GXInitTexObjUserData:
+.fn GXInitTexObjUserData, global
 /* 8031C680 002E5C40  90 83 00 10 */	stw r4, 0x10(r3)
 /* 8031C684 002E5C44  4E 80 00 20 */	blr 
+.endfn GXInitTexObjUserData
 
 .balign 16, 0
-.global GXGetTexObjUserData
-GXGetTexObjUserData:
+.fn GXGetTexObjUserData, global
 /* 8031C690 002E5C50  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 8031C694 002E5C54  4E 80 00 20 */	blr 
+.endfn GXGetTexObjUserData
 
 .balign 16, 0
-.global GXGetTexObjWidth
-GXGetTexObjWidth:
+.fn GXGetTexObjWidth, global
 /* 8031C6A0 002E5C60  80 03 00 08 */	lwz r0, 8(r3)
 /* 8031C6A4 002E5C64  54 03 05 BE */	clrlwi r3, r0, 0x16
 /* 8031C6A8 002E5C68  38 03 00 01 */	addi r0, r3, 1
 /* 8031C6AC 002E5C6C  54 03 04 3E */	clrlwi r3, r0, 0x10
 /* 8031C6B0 002E5C70  4E 80 00 20 */	blr 
+.endfn GXGetTexObjWidth
 
 .balign 16, 0
-.global GXGetTexObjHeight
-GXGetTexObjHeight:
+.fn GXGetTexObjHeight, global
 /* 8031C6C0 002E5C80  80 03 00 08 */	lwz r0, 8(r3)
 /* 8031C6C4 002E5C84  54 03 B5 BE */	rlwinm r3, r0, 0x16, 0x16, 0x1f
 /* 8031C6C8 002E5C88  38 03 00 01 */	addi r0, r3, 1
 /* 8031C6CC 002E5C8C  54 03 04 3E */	clrlwi r3, r0, 0x10
 /* 8031C6D0 002E5C90  4E 80 00 20 */	blr 
+.endfn GXGetTexObjHeight
 
 .balign 16, 0
-.global GXGetTexObjFmt
-GXGetTexObjFmt:
+.fn GXGetTexObjFmt, global
 /* 8031C6E0 002E5CA0  80 63 00 14 */	lwz r3, 0x14(r3)
 /* 8031C6E4 002E5CA4  4E 80 00 20 */	blr 
+.endfn GXGetTexObjFmt
 
 .balign 16, 0
-.global GXGetTexObjWrapS
-GXGetTexObjWrapS:
+.fn GXGetTexObjWrapS, global
 /* 8031C6F0 002E5CB0  80 03 00 00 */	lwz r0, 0(r3)
 /* 8031C6F4 002E5CB4  54 03 07 BE */	clrlwi r3, r0, 0x1e
 /* 8031C6F8 002E5CB8  4E 80 00 20 */	blr 
+.endfn GXGetTexObjWrapS
 
 .balign 16, 0
-.global GXGetTexObjWrapT
-GXGetTexObjWrapT:
+.fn GXGetTexObjWrapT, global
 /* 8031C700 002E5CC0  80 03 00 00 */	lwz r0, 0(r3)
 /* 8031C704 002E5CC4  54 03 F7 BE */	rlwinm r3, r0, 0x1e, 0x1e, 0x1f
 /* 8031C708 002E5CC8  4E 80 00 20 */	blr 
+.endfn GXGetTexObjWrapT
 
 .balign 16, 0
-.global GXGetTexObjMipMap
-GXGetTexObjMipMap:
+.fn GXGetTexObjMipMap, global
 /* 8031C710 002E5CD0  88 03 00 1F */	lbz r0, 0x1f(r3)
 /* 8031C714 002E5CD4  54 03 07 FE */	clrlwi r3, r0, 0x1f
 /* 8031C718 002E5CD8  4E 80 00 20 */	blr 
+.endfn GXGetTexObjMipMap
 
 .balign 16, 0
-.global GXGetTexObjLODAll
-GXGetTexObjLODAll:
+.fn GXGetTexObjLODAll, global
 /* 8031C720 002E5CE0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8031C724 002E5CE4  3D 80 43 30 */	lis r12, 0x4330
 /* 8031C728 002E5CE8  81 63 00 04 */	lwz r11, 4(r3)
@@ -543,16 +542,16 @@ GXGetTexObjLODAll:
 /* 8031C7F0 002E5DB0  83 A1 00 24 */	lwz r29, 0x24(r1)
 /* 8031C7F4 002E5DB4  38 21 00 30 */	addi r1, r1, 0x30
 /* 8031C7F8 002E5DB8  4E 80 00 20 */	blr 
+.endfn GXGetTexObjLODAll
 
 .balign 16, 0
-.global GXGetTexObjTlut
-GXGetTexObjTlut:
+.fn GXGetTexObjTlut, global
 /* 8031C800 002E5DC0  80 63 00 18 */	lwz r3, 0x18(r3)
 /* 8031C804 002E5DC4  4E 80 00 20 */	blr 
+.endfn GXGetTexObjTlut
 
 .balign 16, 0
-.global GXLoadTexObjPreLoaded
-GXLoadTexObjPreLoaded:
+.fn GXLoadTexObjPreLoaded, global
 /* 8031C810 002E5DD0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8031C814 002E5DD4  7C 08 02 A6 */	mflr r0
 /* 8031C818 002E5DD8  39 6D 98 88 */	addi r11, r13, lbl_80665A08@sda21
@@ -643,10 +642,10 @@ GXLoadTexObjPreLoaded:
 /* 8031C968 002E5F28  7C 08 03 A6 */	mtlr r0
 /* 8031C96C 002E5F2C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8031C970 002E5F30  4E 80 00 20 */	blr 
+.endfn GXLoadTexObjPreLoaded
 
 .balign 16, 0
-.global GXLoadTexObj
-GXLoadTexObj:
+.fn GXLoadTexObj, global
 /* 8031C980 002E5F40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031C984 002E5F44  7C 08 02 A6 */	mflr r0
 /* 8031C988 002E5F48  80 A2 BC 20 */	lwz r5, lbl_8066BFA0@sda21(r2)
@@ -668,10 +667,10 @@ GXLoadTexObj:
 /* 8031C9C8 002E5F88  7C 08 03 A6 */	mtlr r0
 /* 8031C9CC 002E5F8C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031C9D0 002E5F90  4E 80 00 20 */	blr 
+.endfn GXLoadTexObj
 
 .balign 16, 0
-.global GXInitTlutObj
-GXInitTlutObj:
+.fn GXInitTlutObj, global
 /* 8031C9E0 002E5FA0  80 E3 00 04 */	lwz r7, 4(r3)
 /* 8031C9E4 002E5FA4  38 00 00 64 */	li r0, 0x64
 /* 8031C9E8 002E5FA8  50 87 DA 3E */	rlwimi r7, r4, 0x1b, 8, 0x1f
@@ -682,10 +681,10 @@ GXInitTlutObj:
 /* 8031C9FC 002E5FBC  90 83 00 00 */	stw r4, 0(r3)
 /* 8031CA00 002E5FC0  90 E3 00 04 */	stw r7, 4(r3)
 /* 8031CA04 002E5FC4  4E 80 00 20 */	blr 
+.endfn GXInitTlutObj
 
 .balign 16, 0
-.global GXLoadTlut
-GXLoadTlut:
+.fn GXLoadTlut, global
 /* 8031CA10 002E5FD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031CA14 002E5FD4  7C 08 02 A6 */	mflr r0
 /* 8031CA18 002E5FD8  80 A2 BC 20 */	lwz r5, lbl_8066BFA0@sda21(r2)
@@ -723,10 +722,10 @@ GXLoadTlut:
 /* 8031CA98 002E6058  7C 08 03 A6 */	mtlr r0
 /* 8031CA9C 002E605C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031CAA0 002E6060  4E 80 00 20 */	blr 
+.endfn GXLoadTlut
 
 .balign 16, 0
-.global GXInitTexCacheRegion
-GXInitTexCacheRegion:
+.fn GXInitTexCacheRegion, global
 /* 8031CAB0 002E6070  2C 06 00 00 */	cmpwi r6, 0
 /* 8031CAB4 002E6074  41 82 00 18 */	beq .L_8031CACC
 /* 8031CAB8 002E6078  2C 06 00 01 */	cmpwi r6, 1
@@ -778,10 +777,10 @@ GXInitTexCacheRegion:
 /* 8031CB4C 002E610C  98 03 00 0D */	stb r0, 0xd(r3)
 /* 8031CB50 002E6110  90 A3 00 04 */	stw r5, 4(r3)
 /* 8031CB54 002E6114  4E 80 00 20 */	blr 
+.endfn GXInitTexCacheRegion
 
 .balign 16, 0
-.global GXInitTlutRegion
-GXInitTlutRegion:
+.fn GXInitTlutRegion, global
 /* 8031CB60 002E6120  3C 04 FF F8 */	addis r0, r4, 0xfff8
 /* 8031CB64 002E6124  38 80 00 00 */	li r4, 0
 /* 8031CB68 002E6128  50 04 BD BE */	rlwimi r4, r0, 0x17, 0x16, 0x1f
@@ -790,10 +789,10 @@ GXInitTlutRegion:
 /* 8031CB74 002E6134  50 04 C0 0E */	rlwimi r4, r0, 0x18, 0, 7
 /* 8031CB78 002E6138  90 83 00 00 */	stw r4, 0(r3)
 /* 8031CB7C 002E613C  4E 80 00 20 */	blr 
+.endfn GXInitTlutRegion
 
 .balign 16, 0
-.global GXInvalidateTexAll
-GXInvalidateTexAll:
+.fn GXInvalidateTexAll, global
 /* 8031CB80 002E6140  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031CB84 002E6144  7C 08 02 A6 */	mflr r0
 /* 8031CB88 002E6148  90 01 00 14 */	stw r0, 0x14(r1)
@@ -812,28 +811,28 @@ GXInvalidateTexAll:
 /* 8031CBBC 002E617C  7C 08 03 A6 */	mtlr r0
 /* 8031CBC0 002E6180  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031CBC4 002E6184  4E 80 00 20 */	blr 
+.endfn GXInvalidateTexAll
 
 .balign 16, 0
-.global GXSetTexRegionCallback
-GXSetTexRegionCallback:
+.fn GXSetTexRegionCallback, global
 /* 8031CBD0 002E6190  80 82 BC 20 */	lwz r4, lbl_8066BFA0@sda21(r2)
 /* 8031CBD4 002E6194  7C 60 1B 78 */	mr r0, r3
 /* 8031CBD8 002E6198  80 64 05 18 */	lwz r3, 0x518(r4)
 /* 8031CBDC 002E619C  90 04 05 18 */	stw r0, 0x518(r4)
 /* 8031CBE0 002E61A0  4E 80 00 20 */	blr 
+.endfn GXSetTexRegionCallback
 
 .balign 16, 0
-.global GXSetTlutRegionCallback
-GXSetTlutRegionCallback:
+.fn GXSetTlutRegionCallback, global
 /* 8031CBF0 002E61B0  80 82 BC 20 */	lwz r4, lbl_8066BFA0@sda21(r2)
 /* 8031CBF4 002E61B4  7C 60 1B 78 */	mr r0, r3
 /* 8031CBF8 002E61B8  80 64 05 1C */	lwz r3, 0x51c(r4)
 /* 8031CBFC 002E61BC  90 04 05 1C */	stw r0, 0x51c(r4)
 /* 8031CC00 002E61C0  4E 80 00 20 */	blr 
+.endfn GXSetTlutRegionCallback
 
 .balign 16, 0
-.global __SetSURegs
-__SetSURegs:
+.fn __SetSURegs, global
 /* 8031CC10 002E61D0  81 62 BC 20 */	lwz r11, lbl_8066BFA0@sda21(r2)
 /* 8031CC14 002E61D4  54 86 10 3A */	slwi r6, r4, 2
 /* 8031CC18 002E61D8  54 60 10 3A */	slwi r0, r3, 2
@@ -870,10 +869,10 @@ __SetSURegs:
 /* 8031CC94 002E6254  90 65 80 00 */	stw r3, -0x8000(r5)
 /* 8031CC98 002E6258  B0 0B 00 02 */	sth r0, 2(r11)
 /* 8031CC9C 002E625C  4E 80 00 20 */	blr 
+.endfn __SetSURegs
 
 .balign 16, 0
-.global __GXSetSUTexRegs
-__GXSetSUTexRegs:
+.fn __GXSetSUTexRegs, global
 /* 8031CCA0 002E6260  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8031CCA4 002E6264  7C 08 02 A6 */	mflr r0
 /* 8031CCA8 002E6268  90 01 00 34 */	stw r0, 0x34(r1)
@@ -977,10 +976,10 @@ __GXSetSUTexRegs:
 /* 8031CDF8 002E63B8  7C 08 03 A6 */	mtlr r0
 /* 8031CDFC 002E63BC  38 21 00 30 */	addi r1, r1, 0x30
 /* 8031CE00 002E63C0  4E 80 00 20 */	blr 
+.endfn __GXSetSUTexRegs
 
 .balign 16, 0
-.global __GXSetTmemConfig
-__GXSetTmemConfig:
+.fn __GXSetTmemConfig, global
 /* 8031CE10 002E63D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031CE14 002E63D4  28 03 00 02 */	cmplwi r3, 2
 /* 8031CE18 002E63D8  93 E1 00 0C */	stw r31, 0xc(r1)
@@ -1197,6 +1196,7 @@ __GXSetTmemConfig:
 /* 8031D154 002E6714  83 C1 00 08 */	lwz r30, 8(r1)
 /* 8031D158 002E6718  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031D15C 002E671C  4E 80 00 20 */	blr 
+.endfn __GXSetTmemConfig
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __ct__Q44nw4r3snd6detail14BankFileReaderFPCv
-__ct__Q44nw4r3snd6detail14BankFileReaderFPCv:
+.fn __ct__Q44nw4r3snd6detail14BankFileReaderFPCv, global
 /* 804119F0 003DAFB0  80 A4 00 00 */	lwz r5, 0(r4)
 /* 804119F4 003DAFB4  38 C0 00 00 */	li r6, 0
 /* 804119F8 003DAFB8  90 C3 00 00 */	stw r6, 0(r3)
@@ -44,9 +43,9 @@ __ct__Q44nw4r3snd6detail14BankFileReaderFPCv:
 /* 80411A74 003DB034  7C 00 22 14 */	add r0, r0, r4
 /* 80411A78 003DB038  90 03 00 08 */	stw r0, 8(r3)
 /* 80411A7C 003DB03C  4E 80 00 20 */	blr 
+.endfn __ct__Q44nw4r3snd6detail14BankFileReaderFPCv
 
-.global GetInstParam__Q44nw4r3snd6detail14BankFileReaderCFiii
-GetInstParam__Q44nw4r3snd6detail14BankFileReaderCFiii:
+.fn GetInstParam__Q44nw4r3snd6detail14BankFileReaderCFiii, global
 /* 80411A80 003DB040  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80411A84 003DB044  7C 08 02 A6 */	mflr r0
 /* 80411A88 003DB048  90 01 00 14 */	stw r0, 0x14(r1)
@@ -123,9 +122,9 @@ GetInstParam__Q44nw4r3snd6detail14BankFileReaderCFiii:
 /* 80411B80 003DB140  7C 08 03 A6 */	mtlr r0
 /* 80411B84 003DB144  38 21 00 10 */	addi r1, r1, 0x10
 /* 80411B88 003DB148  4E 80 00 20 */	blr 
+.endfn GetInstParam__Q44nw4r3snd6detail14BankFileReaderCFiii
 
-.global ReadInstInfo__Q44nw4r3snd6detail14BankFileReaderCFPQ44nw4r3snd6detail8InstInfoiii
-ReadInstInfo__Q44nw4r3snd6detail14BankFileReaderCFPQ44nw4r3snd6detail8InstInfoiii:
+.fn ReadInstInfo__Q44nw4r3snd6detail14BankFileReaderCFPQ44nw4r3snd6detail8InstInfoiii, global
 /* 80411B8C 003DB14C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80411B90 003DB150  7C 08 02 A6 */	mflr r0
 /* 80411B94 003DB154  90 01 00 14 */	stw r0, 0x14(r1)
@@ -246,10 +245,10 @@ ReadInstInfo__Q44nw4r3snd6detail14BankFileReaderCFPQ44nw4r3snd6detail8InstInfoii
 /* 80411D24 003DB2E4  7C 08 03 A6 */	mtlr r0
 /* 80411D28 003DB2E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80411D2C 003DB2EC  4E 80 00 20 */	blr 
+.endfn ReadInstInfo__Q44nw4r3snd6detail14BankFileReaderCFPQ44nw4r3snd6detail8InstInfoiii
 
 #GetReferenceToSubRegion__Q44nw4r3snd6detail14BankFileReaderCFPCQ54nw4r3snd6detail4Util128DataRef<v,Q54nw4r3snd6detail8BankFile9InstParam,Q54nw4r3snd6detail8BankFile10RangeTable,Q54nw4r3snd6detail8BankFile10IndexTable>i
-.global GetReferenceToSubRegion__Q44nw4r3snd6detail14BankFileReaderCFPCQ54nw4r3snd6detail4Util128DataRef_v_Q54nw4r3snd6detail8BankFile9InstParam_Q54nw4r3snd6detail8BankFile10RangeTable_Q54nw4r3snd6detail8BankFile10IndexTable_i
-GetReferenceToSubRegion__Q44nw4r3snd6detail14BankFileReaderCFPCQ54nw4r3snd6detail4Util128DataRef_v_Q54nw4r3snd6detail8BankFile9InstParam_Q54nw4r3snd6detail8BankFile10RangeTable_Q54nw4r3snd6detail8BankFile10IndexTable_i:
+.fn GetReferenceToSubRegion__Q44nw4r3snd6detail14BankFileReaderCFPCQ54nw4r3snd6detail4Util128DataRef_v_Q54nw4r3snd6detail8BankFile9InstParam_Q54nw4r3snd6detail8BankFile10RangeTable_Q54nw4r3snd6detail8BankFile10IndexTable_i, global
 /* 80411D30 003DB2F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80411D34 003DB2F4  7C 08 02 A6 */	mflr r0
 /* 80411D38 003DB2F8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -336,9 +335,9 @@ GetReferenceToSubRegion__Q44nw4r3snd6detail14BankFileReaderCFPCQ54nw4r3snd6detai
 /* 80411E4C 003DB40C  7C 08 03 A6 */	mtlr r0
 /* 80411E50 003DB410  38 21 00 10 */	addi r1, r1, 0x10
 /* 80411E54 003DB414  4E 80 00 20 */	blr 
+.endfn GetReferenceToSubRegion__Q44nw4r3snd6detail14BankFileReaderCFPCQ54nw4r3snd6detail4Util128DataRef_v_Q54nw4r3snd6detail8BankFile9InstParam_Q54nw4r3snd6detail8BankFile10RangeTable_Q54nw4r3snd6detail8BankFile10IndexTable_i
 
-.global ReadWaveInfo__Q44nw4r3snd6detail14BankFileReaderCFPQ44nw4r3snd6detail8WaveInfoRCQ54nw4r3snd6detail8InstInfo16WaveDataLocationPCvPPCQ44nw4r3snd6detail8WaveInfo
-ReadWaveInfo__Q44nw4r3snd6detail14BankFileReaderCFPQ44nw4r3snd6detail8WaveInfoRCQ54nw4r3snd6detail8InstInfo16WaveDataLocationPCvPPCQ44nw4r3snd6detail8WaveInfo:
+.fn ReadWaveInfo__Q44nw4r3snd6detail14BankFileReaderCFPQ44nw4r3snd6detail8WaveInfoRCQ54nw4r3snd6detail8InstInfo16WaveDataLocationPCvPPCQ44nw4r3snd6detail8WaveInfo, global
 /* 80411E58 003DB418  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80411E5C 003DB41C  7C 08 02 A6 */	mflr r0
 /* 80411E60 003DB420  2C 07 00 00 */	cmpwi r7, 0
@@ -505,6 +504,7 @@ ReadWaveInfo__Q44nw4r3snd6detail14BankFileReaderCFPQ44nw4r3snd6detail8WaveInfoRC
 /* 804120A0 003DB660  7C 08 03 A6 */	mtlr r0
 /* 804120A4 003DB664  38 21 00 30 */	addi r1, r1, 0x30
 /* 804120A8 003DB668  4E 80 00 20 */	blr 
+.endfn ReadWaveInfo__Q44nw4r3snd6detail14BankFileReaderCFPQ44nw4r3snd6detail8WaveInfoRCQ54nw4r3snd6detail8InstInfo16WaveDataLocationPCvPPCQ44nw4r3snd6detail8WaveInfo
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

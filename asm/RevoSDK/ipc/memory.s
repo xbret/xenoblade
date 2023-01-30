@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global iosCreateHeap
-iosCreateHeap:
+.fn iosCreateHeap, global
 /* 803443B0 0030D970  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803443B4 0030D974  7C 08 02 A6 */	mflr r0
 /* 803443B8 0030D978  90 01 00 24 */	stw r0, 0x24(r1)
@@ -84,10 +83,10 @@ iosCreateHeap:
 /* 803444D4 0030DA94  7C 08 03 A6 */	mtlr r0
 /* 803444D8 0030DA98  38 21 00 20 */	addi r1, r1, 0x20
 /* 803444DC 0030DA9C  4E 80 00 20 */	blr
+.endfn iosCreateHeap
 
 .balign 16, 0
-.global __iosAlloc
-__iosAlloc:
+.fn __iosAlloc, global
 /* 803444E0 0030DAA0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803444E4 0030DAA4  7C 08 02 A6 */	mflr r0
 /* 803444E8 0030DAA8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -230,15 +229,15 @@ __iosAlloc:
 /* 803446D0 0030DC90  7C 08 03 A6 */	mtlr r0
 /* 803446D4 0030DC94  38 21 00 20 */	addi r1, r1, 0x20
 /* 803446D8 0030DC98  4E 80 00 20 */	blr 
+.endfn __iosAlloc
 
 .balign 16, 0
-.global iosAllocAligned
-iosAllocAligned:
+.fn iosAllocAligned, global
 /* 803446E0 0030DCA0  4B FF FE 00 */	b __iosAlloc
+.endfn iosAllocAligned
 
 .balign 16, 0
-.global iosFree
-iosFree:
+.fn iosFree, global
 /* 803446F0 0030DCB0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803446F4 0030DCB4  7C 08 02 A6 */	mflr r0
 /* 803446F8 0030DCB8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -374,6 +373,7 @@ iosFree:
 /* 803448CC 0030DE8C  7C 08 03 A6 */	mtlr r0
 /* 803448D0 0030DE90  38 21 00 20 */	addi r1, r1, 0x20
 /* 803448D4 0030DE94  4E 80 00 20 */	blr
+.endfn iosFree
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

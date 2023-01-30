@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global MWSFSVM_Init
-MWSFSVM_Init:
+.fn MWSFSVM_Init, global
 /* 8039DB20 003670E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039DB24 003670E4  7C 08 02 A6 */	mflr r0
 /* 8039DB28 003670E8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -21,9 +20,9 @@ MWSFSVM_Init:
 /* 8039DB58 00367118  7C 08 03 A6 */	mtlr r0
 /* 8039DB5C 0036711C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039DB60 00367120  4E 80 00 20 */	blr 
+.endfn MWSFSVM_Init
 
-.global MWSFSVM_EntryIdVfunc
-MWSFSVM_EntryIdVfunc:
+.fn MWSFSVM_EntryIdVfunc, global
 /* 8039DB64 00367124  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039DB68 00367128  7C 08 02 A6 */	mflr r0
 /* 8039DB6C 0036712C  7C C7 33 78 */	mr r7, r6
@@ -44,9 +43,9 @@ MWSFSVM_EntryIdVfunc:
 /* 8039DBA8 00367168  7C 08 03 A6 */	mtlr r0
 /* 8039DBAC 0036716C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039DBB0 00367170  4E 80 00 20 */	blr 
+.endfn MWSFSVM_EntryIdVfunc
 
-.global MWSFSVM_EntryIdleFunc
-MWSFSVM_EntryIdleFunc:
+.fn MWSFSVM_EntryIdleFunc, global
 /* 8039DBB4 00367174  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039DBB8 00367178  7C 08 02 A6 */	mflr r0
 /* 8039DBBC 0036717C  7C 67 1B 78 */	mr r7, r3
@@ -63,9 +62,9 @@ MWSFSVM_EntryIdleFunc:
 /* 8039DBE8 003671A8  7C 08 03 A6 */	mtlr r0
 /* 8039DBEC 003671AC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039DBF0 003671B0  4E 80 00 20 */	blr 
+.endfn MWSFSVM_EntryIdleFunc
 
-.global MWSFSVM_EntryMainFunc
-MWSFSVM_EntryMainFunc:
+.fn MWSFSVM_EntryMainFunc, global
 /* 8039DBF4 003671B4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039DBF8 003671B8  7C 08 02 A6 */	mflr r0
 /* 8039DBFC 003671BC  7C 67 1B 78 */	mr r7, r3
@@ -82,13 +81,13 @@ MWSFSVM_EntryMainFunc:
 /* 8039DC28 003671E8  7C 08 03 A6 */	mtlr r0
 /* 8039DC2C 003671EC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039DC30 003671F0  4E 80 00 20 */	blr 
+.endfn MWSFSVM_EntryMainFunc
 
-.global MWSFSVM_TestAndSet
-MWSFSVM_TestAndSet:
+.fn MWSFSVM_TestAndSet, global
 /* 8039DC34 003671F4  4B FF 9C C4 */	b SVM_TestAndSet
+.endfn MWSFSVM_TestAndSet
 
-.global MWSFSVM_Error
-MWSFSVM_Error:
+.fn MWSFSVM_Error, global
 /* 8039DC38 003671F8  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 8039DC3C 003671FC  7C 08 02 A6 */	mflr r0
 /* 8039DC40 00367200  90 01 00 84 */	stw r0, 0x84(r1)
@@ -163,9 +162,9 @@ MWSFSVM_Error:
 /* 8039DD48 00367308  7C 08 03 A6 */	mtlr r0
 /* 8039DD4C 0036730C  38 21 00 80 */	addi r1, r1, 0x80
 /* 8039DD50 00367310  4E 80 00 20 */	blr 
+.endfn MWSFSVM_Error
 
-.global MWSFSVM_GotoIdleBorder
-MWSFSVM_GotoIdleBorder:
+.fn MWSFSVM_GotoIdleBorder, global
 /* 8039DD54 00367314  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039DD58 00367318  7C 08 02 A6 */	mflr r0
 /* 8039DD5C 0036731C  3C 60 80 60 */	lis r3, lbl_80602960@ha
@@ -199,6 +198,7 @@ MWSFSVM_GotoIdleBorder:
 /* 8039DDC4 00367384  7C 08 03 A6 */	mtlr r0
 /* 8039DDC8 00367388  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039DDCC 0036738C  4E 80 00 20 */	blr 
+.endfn MWSFSVM_GotoIdleBorder
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global SFD_GetHnStat
-SFD_GetHnStat:
+.fn SFD_GetHnStat, global
 /* 803CC2FC 003958BC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CC300 003958C0  7C 08 02 A6 */	mflr r0
 /* 803CC304 003958C4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -24,9 +23,9 @@ SFD_GetHnStat:
 /* 803CC338 003958F8  7C 08 03 A6 */	mtlr r0
 /* 803CC33C 003958FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CC340 00395900  4E 80 00 20 */	blr 
+.endfn SFD_GetHnStat
 
-.global func_803CC344
-func_803CC344:
+.fn func_803CC344, global
 /* 803CC344 00395904  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CC348 00395908  7C 08 02 A6 */	mflr r0
 /* 803CC34C 0039590C  2C 03 00 00 */	cmpwi r3, 0
@@ -167,9 +166,9 @@ func_803CC344:
 /* 803CC528 00395AE8  7C 08 03 A6 */	mtlr r0
 /* 803CC52C 00395AEC  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CC530 00395AF0  4E 80 00 20 */	blr 
+.endfn func_803CC344
 
-.global SFSET_SetCond
-SFSET_SetCond:
+.fn SFSET_SetCond, global
 /* 803CC534 00395AF4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CC538 00395AF8  7C 08 02 A6 */	mflr r0
 /* 803CC53C 00395AFC  2C 04 00 06 */	cmpwi r4, 6
@@ -217,9 +216,9 @@ SFSET_SetCond:
 /* 803CC5D4 00395B94  7C 08 03 A6 */	mtlr r0
 /* 803CC5D8 00395B98  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CC5DC 00395B9C  4E 80 00 20 */	blr 
+.endfn SFSET_SetCond
 
-.global func_803CC5E0
-func_803CC5E0:
+.fn func_803CC5E0, global
 /* 803CC5E0 00395BA0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CC5E4 00395BA4  7C 08 02 A6 */	mflr r0
 /* 803CC5E8 00395BA8  2C 03 00 00 */	cmpwi r3, 0
@@ -261,19 +260,20 @@ func_803CC5E0:
 /* 803CC668 00395C28  7C 08 03 A6 */	mtlr r0
 /* 803CC66C 00395C2C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CC670 00395C30  4E 80 00 20 */	blr 
+.endfn func_803CC5E0
 
-.global SFSET_GetCond
-SFSET_GetCond:
+.fn SFSET_GetCond, global
 /* 803CC674 00395C34  54 80 10 3A */	slwi r0, r4, 2
 /* 803CC678 00395C38  7C 63 02 14 */	add r3, r3, r0
 /* 803CC67C 00395C3C  80 63 0A 14 */	lwz r3, 0xa14(r3)
 /* 803CC680 00395C40  4E 80 00 20 */	blr
+.endfn SFSET_GetCond
 
-.global func_803CC684
-func_803CC684:
+.fn func_803CC684, global
 /* 803CC684 00395C44  90 A3 0D 38 */	stw r5, 0xd38(r3)
 /* 803CC688 00395C48  90 83 0D 34 */	stw r4, 0xd34(r3)
 /* 803CC68C 00395C4C  4E 80 00 20 */	blr 
+.endfn func_803CC684
 
 .global SFD_GetSofdecHeader
 SFD_GetSofdecHeader:

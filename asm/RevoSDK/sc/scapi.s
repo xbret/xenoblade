@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global SCGetAspectRatio
-SCGetAspectRatio:
+.fn SCGetAspectRatio, global
 /* 80360EC0 0032A480  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80360EC4 0032A484  7C 08 02 A6 */	mflr r0
 /* 80360EC8 0032A488  38 80 00 01 */	li r4, 1
@@ -28,10 +27,10 @@ SCGetAspectRatio:
 /* 80360F08 0032A4C8  7C 08 03 A6 */	mtlr r0
 /* 80360F0C 0032A4CC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80360F10 0032A4D0  4E 80 00 20 */	blr 
+.endfn SCGetAspectRatio
 
 .balign 16, 0
-.global SCGetDisplayOffsetH
-SCGetDisplayOffsetH:
+.fn SCGetDisplayOffsetH, global
 /* 80360F20 0032A4E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80360F24 0032A4E4  7C 08 02 A6 */	mflr r0
 /* 80360F28 0032A4E8  38 80 00 05 */	li r4, 5
@@ -64,10 +63,10 @@ SCGetDisplayOffsetH:
 /* 80360F88 0032A548  7C 08 03 A6 */	mtlr r0
 /* 80360F8C 0032A54C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80360F90 0032A550  4E 80 00 20 */	blr 
+.endfn SCGetDisplayOffsetH
 
 .balign 16, 0
-.global SCGetEuRgb60Mode
-SCGetEuRgb60Mode:
+.fn SCGetEuRgb60Mode, global
 /* 80360FA0 0032A560  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80360FA4 0032A564  7C 08 02 A6 */	mflr r0
 /* 80360FA8 0032A568  38 80 00 06 */	li r4, 6
@@ -91,17 +90,17 @@ SCGetEuRgb60Mode:
 /* 80360FE8 0032A5A8  7C 08 03 A6 */	mtlr r0
 /* 80360FEC 0032A5AC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80360FF0 0032A5B0  4E 80 00 20 */	blr 
+.endfn SCGetEuRgb60Mode
 
 .balign 16, 0
-.global SCGetIdleMode
-SCGetIdleMode:
+.fn SCGetIdleMode, global
 /* 80361000 0032A5C0  38 80 00 02 */	li r4, 2
 /* 80361004 0032A5C4  38 A0 00 09 */	li r5, 9
 /* 80361008 0032A5C8  4B FF F3 88 */	b SCFindByteArrayItem
+.endfn SCGetIdleMode
 
 .balign 16, 0
-.global SCGetLanguage
-SCGetLanguage:
+.fn SCGetLanguage, global
 /* 80361010 0032A5D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80361014 0032A5D4  7C 08 02 A6 */	mflr r0
 /* 80361018 0032A5D8  38 80 00 0B */	li r4, 0xb
@@ -132,10 +131,10 @@ SCGetLanguage:
 /* 80361070 0032A630  7C 08 03 A6 */	mtlr r0
 /* 80361074 0032A634  38 21 00 10 */	addi r1, r1, 0x10
 /* 80361078 0032A638  4E 80 00 20 */	blr 
+.endfn SCGetLanguage
 
 .balign 16, 0
-.global SCGetProgressiveMode
-SCGetProgressiveMode:
+.fn SCGetProgressiveMode, global
 /* 80361080 0032A640  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80361084 0032A644  7C 08 02 A6 */	mflr r0
 /* 80361088 0032A648  38 80 00 0E */	li r4, 0xe
@@ -159,10 +158,10 @@ SCGetProgressiveMode:
 /* 803610C8 0032A688  7C 08 03 A6 */	mtlr r0
 /* 803610CC 0032A68C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803610D0 0032A690  4E 80 00 20 */	blr 
+.endfn SCGetProgressiveMode
 
 .balign 16, 0
-.global SCGetScreenSaverMode
-SCGetScreenSaverMode:
+.fn SCGetScreenSaverMode, global
 /* 803610E0 0032A6A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803610E4 0032A6A4  7C 08 02 A6 */	mflr r0
 /* 803610E8 0032A6A8  38 80 00 0F */	li r4, 0xf
@@ -186,10 +185,10 @@ SCGetScreenSaverMode:
 /* 80361128 0032A6E8  7C 08 03 A6 */	mtlr r0
 /* 8036112C 0032A6EC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80361130 0032A6F0  4E 80 00 20 */	blr 
+.endfn SCGetScreenSaverMode
 
 .balign 16, 0
-.global SCGetSoundMode
-SCGetSoundMode:
+.fn SCGetSoundMode, global
 /* 80361140 0032A700  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80361144 0032A704  7C 08 02 A6 */	mflr r0
 /* 80361148 0032A708  38 80 00 11 */	li r4, 0x11
@@ -213,10 +212,10 @@ SCGetSoundMode:
 /* 80361188 0032A748  7C 08 03 A6 */	mtlr r0
 /* 8036118C 0032A74C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80361190 0032A750  4E 80 00 20 */	blr 
+.endfn SCGetSoundMode
 
 .balign 16, 0
-.global SCGetCounterBias
-SCGetCounterBias:
+.fn SCGetCounterBias, global
 /* 803611A0 0032A760  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803611A4 0032A764  7C 08 02 A6 */	mflr r0
 /* 803611A8 0032A768  38 80 00 00 */	li r4, 0
@@ -234,38 +233,38 @@ SCGetCounterBias:
 /* 803611D4 0032A794  7C 08 03 A6 */	mtlr r0
 /* 803611D8 0032A798  38 21 00 10 */	addi r1, r1, 0x10
 /* 803611DC 0032A79C  4E 80 00 20 */	blr 
+.endfn SCGetCounterBias
 
 .balign 16, 0
-.global SCGetBtDeviceInfoArray
-SCGetBtDeviceInfoArray:
+.fn SCGetBtDeviceInfoArray, global
 /* 803611E0 0032A7A0  38 80 04 61 */	li r4, 0x461
 /* 803611E4 0032A7A4  38 A0 00 1C */	li r5, 0x1c
 /* 803611E8 0032A7A8  4B FF F1 A8 */	b SCFindByteArrayItem
+.endfn SCGetBtDeviceInfoArray
 
 .balign 16, 0
-.global SCSetBtDeviceInfoArray
-SCSetBtDeviceInfoArray:
+.fn SCSetBtDeviceInfoArray, global
 /* 803611F0 0032A7B0  38 80 04 61 */	li r4, 0x461
 /* 803611F4 0032A7B4  38 A0 00 1C */	li r5, 0x1c
 /* 803611F8 0032A7B8  4B FF F2 78 */	b SCReplaceByteArrayItem
+.endfn SCSetBtDeviceInfoArray
 
 .balign 16, 0
-.global SCGetBtCmpDevInfoArray
-SCGetBtCmpDevInfoArray:
+.fn SCGetBtCmpDevInfoArray, global
 /* 80361200 0032A7C0  38 80 02 05 */	li r4, 0x205
 /* 80361204 0032A7C4  38 A0 00 1D */	li r5, 0x1d
 /* 80361208 0032A7C8  4B FF F1 88 */	b SCFindByteArrayItem
+.endfn SCGetBtCmpDevInfoArray
 
 .balign 16, 0
-.global SCSetBtCmpDevInfoArray
-SCSetBtCmpDevInfoArray:
+.fn SCSetBtCmpDevInfoArray, global
 /* 80361210 0032A7D0  38 80 02 05 */	li r4, 0x205
 /* 80361214 0032A7D4  38 A0 00 1D */	li r5, 0x1d
 /* 80361218 0032A7D8  4B FF F2 58 */	b SCReplaceByteArrayItem
+.endfn SCSetBtCmpDevInfoArray
 
 .balign 16, 0
-.global SCGetBtDpdSensibility
-SCGetBtDpdSensibility:
+.fn SCGetBtDpdSensibility, global
 /* 80361220 0032A7E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80361224 0032A7E4  7C 08 02 A6 */	mflr r0
 /* 80361228 0032A7E8  38 80 00 1E */	li r4, 0x1e
@@ -295,10 +294,10 @@ SCGetBtDpdSensibility:
 /* 8036127C 0032A83C  7C 08 03 A6 */	mtlr r0
 /* 80361280 0032A840  38 21 00 10 */	addi r1, r1, 0x10
 /* 80361284 0032A844  4E 80 00 20 */	blr 
+.endfn SCGetBtDpdSensibility
 
 .balign 16, 0
-.global SCGetWpadMotorMode
-SCGetWpadMotorMode:
+.fn SCGetWpadMotorMode, global
 /* 80361290 0032A850  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80361294 0032A854  7C 08 02 A6 */	mflr r0
 /* 80361298 0032A858  38 80 00 20 */	li r4, 0x20
@@ -322,16 +321,16 @@ SCGetWpadMotorMode:
 /* 803612D8 0032A898  7C 08 03 A6 */	mtlr r0
 /* 803612DC 0032A89C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803612E0 0032A8A0  4E 80 00 20 */	blr 
+.endfn SCGetWpadMotorMode
 
 .balign 16, 0
-.global SCSetWpadMotorMode
-SCSetWpadMotorMode:
+.fn SCSetWpadMotorMode, global
 /* 803612F0 0032A8B0  38 80 00 20 */	li r4, 0x20
 /* 803612F4 0032A8B4  4B FF F5 4C */	b SCReplaceU8Item
+.endfn SCSetWpadMotorMode
 
 .balign 16, 0
-.global SCGetWpadSensorBarPosition
-SCGetWpadSensorBarPosition:
+.fn SCGetWpadSensorBarPosition, global
 /* 80361300 0032A8C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80361304 0032A8C4  7C 08 02 A6 */	mflr r0
 /* 80361308 0032A8C8  38 80 00 21 */	li r4, 0x21
@@ -355,10 +354,10 @@ SCGetWpadSensorBarPosition:
 /* 80361348 0032A908  7C 08 03 A6 */	mtlr r0
 /* 8036134C 0032A90C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80361350 0032A910  4E 80 00 20 */	blr 
+.endfn SCGetWpadSensorBarPosition
 
 .balign 16, 0
-.global SCGetWpadSpeakerVolume
-SCGetWpadSpeakerVolume:
+.fn SCGetWpadSpeakerVolume, global
 /* 80361360 0032A920  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80361364 0032A924  7C 08 02 A6 */	mflr r0
 /* 80361368 0032A928  38 80 00 1F */	li r4, 0x1f
@@ -382,6 +381,7 @@ SCGetWpadSpeakerVolume:
 /* 803613A8 0032A968  7C 08 03 A6 */	mtlr r0
 /* 803613AC 0032A96C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803613B0 0032A970  4E 80 00 20 */	blr 
+.endfn SCGetWpadSpeakerVolume
 
 .balign 16, 0
 .global SCSetWpadSpeakerVolume

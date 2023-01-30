@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global BTM_SetDiscoverability
-BTM_SetDiscoverability:
+.fn BTM_SetDiscoverability, global
 /* 802E83CC 002B198C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802E83D0 002B1990  7C 08 02 A6 */	mflr r0
 /* 802E83D4 002B1994  90 01 00 34 */	stw r0, 0x34(r1)
@@ -185,9 +184,9 @@ BTM_SetDiscoverability:
 /* 802E8644 002B1C04  7C 08 03 A6 */	mtlr r0
 /* 802E8648 002B1C08  38 21 00 30 */	addi r1, r1, 0x30
 /* 802E864C 002B1C0C  4E 80 00 20 */	blr 
+.endfn BTM_SetDiscoverability
 
-.global BTM_SetInquiryScanType
-BTM_SetInquiryScanType:
+.fn BTM_SetInquiryScanType, global
 /* 802E8650 002B1C10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E8654 002B1C14  7C 08 02 A6 */	mflr r0
 /* 802E8658 002B1C18  2C 03 00 00 */	cmpwi r3, 0
@@ -238,9 +237,9 @@ BTM_SetInquiryScanType:
 /* 802E86F4 002B1CB4  7C 08 03 A6 */	mtlr r0
 /* 802E86F8 002B1CB8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E86FC 002B1CBC  4E 80 00 20 */	blr 
+.endfn BTM_SetInquiryScanType
 
-.global BTM_SetPageScanType
-BTM_SetPageScanType:
+.fn BTM_SetPageScanType, global
 /* 802E8700 002B1CC0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E8704 002B1CC4  7C 08 02 A6 */	mflr r0
 /* 802E8708 002B1CC8  2C 03 00 00 */	cmpwi r3, 0
@@ -291,9 +290,9 @@ BTM_SetPageScanType:
 /* 802E87A4 002B1D64  7C 08 03 A6 */	mtlr r0
 /* 802E87A8 002B1D68  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E87AC 002B1D6C  4E 80 00 20 */	blr 
+.endfn BTM_SetPageScanType
 
-.global BTM_SetInquiryMode
-BTM_SetInquiryMode:
+.fn BTM_SetInquiryMode, global
 /* 802E87B0 002B1D70  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E87B4 002B1D74  7C 08 02 A6 */	mflr r0
 /* 802E87B8 002B1D78  2C 03 00 00 */	cmpwi r3, 0
@@ -338,9 +337,9 @@ BTM_SetInquiryMode:
 /* 802E883C 002B1DFC  7C 08 03 A6 */	mtlr r0
 /* 802E8840 002B1E00  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E8844 002B1E04  4E 80 00 20 */	blr 
+.endfn BTM_SetInquiryMode
 
-.global BTM_SetConnectability
-BTM_SetConnectability:
+.fn BTM_SetConnectability, global
 /* 802E8848 002B1E08  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E884C 002B1E0C  7C 08 02 A6 */	mflr r0
 /* 802E8850 002B1E10  90 01 00 24 */	stw r0, 0x24(r1)
@@ -454,16 +453,16 @@ BTM_SetConnectability:
 /* 802E89C4 002B1F84  7C 08 03 A6 */	mtlr r0
 /* 802E89C8 002B1F88  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E89CC 002B1F8C  4E 80 00 20 */	blr 
+.endfn BTM_SetConnectability
 
-.global BTM_IsInquiryActive
-BTM_IsInquiryActive:
+.fn BTM_IsInquiryActive, global
 /* 802E89D0 002B1F90  3C 60 80 5C */	lis r3, lbl_805BF9F8@ha
 /* 802E89D4 002B1F94  38 63 F9 F8 */	addi r3, r3, lbl_805BF9F8@l
 /* 802E89D8 002B1F98  88 63 18 48 */	lbz r3, 0x1848(r3)
 /* 802E89DC 002B1F9C  4E 80 00 20 */	blr 
+.endfn BTM_IsInquiryActive
 
-.global BTM_CancelInquiry
-BTM_CancelInquiry:
+.fn BTM_CancelInquiry, global
 /* 802E89E0 002B1FA0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E89E4 002B1FA4  7C 08 02 A6 */	mflr r0
 /* 802E89E8 002B1FA8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -537,9 +536,9 @@ BTM_CancelInquiry:
 /* 802E8ADC 002B209C  7C 08 03 A6 */	mtlr r0
 /* 802E8AE0 002B20A0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E8AE4 002B20A4  4E 80 00 20 */	blr 
+.endfn BTM_CancelInquiry
 
-.global BTM_StartInquiry
-BTM_StartInquiry:
+.fn BTM_StartInquiry, global
 /* 802E8AE8 002B20A8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E8AEC 002B20AC  7C 08 02 A6 */	mflr r0
 /* 802E8AF0 002B20B0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -659,9 +658,9 @@ BTM_StartInquiry:
 /* 802E8C90 002B2250  7C 08 03 A6 */	mtlr r0
 /* 802E8C94 002B2254  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E8C98 002B2258  4E 80 00 20 */	blr 
+.endfn BTM_StartInquiry
 
-.global BTM_ReadRemoteDeviceName
-BTM_ReadRemoteDeviceName:
+.fn BTM_ReadRemoteDeviceName, global
 /* 802E8C9C 002B225C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E8CA0 002B2260  7C 08 02 A6 */	mflr r0
 /* 802E8CA4 002B2264  90 01 00 24 */	stw r0, 0x24(r1)
@@ -725,9 +724,9 @@ BTM_ReadRemoteDeviceName:
 /* 802E8D78 002B2338  7C 08 03 A6 */	mtlr r0
 /* 802E8D7C 002B233C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E8D80 002B2340  4E 80 00 20 */	blr 
+.endfn BTM_ReadRemoteDeviceName
 
-.global BTM_CancelRemoteDeviceName
-BTM_CancelRemoteDeviceName:
+.fn BTM_CancelRemoteDeviceName, global
 /* 802E8D84 002B2344  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E8D88 002B2348  7C 08 02 A6 */	mflr r0
 /* 802E8D8C 002B234C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -761,9 +760,9 @@ BTM_CancelRemoteDeviceName:
 /* 802E8DF0 002B23B0  7C 08 03 A6 */	mtlr r0
 /* 802E8DF4 002B23B4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E8DF8 002B23B8  4E 80 00 20 */	blr 
+.endfn BTM_CancelRemoteDeviceName
 
-.global BTM_InqDbRead
-BTM_InqDbRead:
+.fn BTM_InqDbRead, global
 /* 802E8DFC 002B23BC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E8E00 002B23C0  7C 08 02 A6 */	mflr r0
 /* 802E8E04 002B23C4  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
@@ -816,9 +815,9 @@ BTM_InqDbRead:
 /* 802E8EB0 002B2470  7C 08 03 A6 */	mtlr r0
 /* 802E8EB4 002B2474  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E8EB8 002B2478  4E 80 00 20 */	blr 
+.endfn BTM_InqDbRead
 
-.global BTM_InqDbFirst
-BTM_InqDbFirst:
+.fn BTM_InqDbFirst, global
 /* 802E8EBC 002B247C  3C 60 80 5C */	lis r3, lbl_805BF9F8@ha
 /* 802E8EC0 002B2480  38 00 00 02 */	li r0, 2
 /* 802E8EC4 002B2484  38 63 F9 F8 */	addi r3, r3, lbl_805BF9F8@l
@@ -872,9 +871,9 @@ BTM_InqDbFirst:
 /* 802E8F68 002B2528  42 00 FF 6C */	bdnz .L_802E8ED4
 /* 802E8F6C 002B252C  38 60 00 00 */	li r3, 0
 /* 802E8F70 002B2530  4E 80 00 20 */	blr 
+.endfn BTM_InqDbFirst
 
-.global BTM_InqDbNext
-BTM_InqDbNext:
+.fn BTM_InqDbNext, global
 /* 802E8F74 002B2534  2C 03 00 00 */	cmpwi r3, 0
 /* 802E8F78 002B2538  41 82 00 80 */	beq .L_802E8FF8
 /* 802E8F7C 002B253C  3C A0 80 5C */	lis r5, lbl_805BF9F8@ha
@@ -965,9 +964,9 @@ BTM_InqDbNext:
 /* 802E90A4 002B2664  42 00 FF 6C */	bdnz .L_802E9010
 /* 802E90A8 002B2668  38 60 00 00 */	li r3, 0
 /* 802E90AC 002B266C  4E 80 00 20 */	blr 
+.endfn BTM_InqDbNext
 
-.global BTM_ClearInqDb
-BTM_ClearInqDb:
+.fn BTM_ClearInqDb, global
 /* 802E90B0 002B2670  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E90B4 002B2674  7C 08 02 A6 */	mflr r0
 /* 802E90B8 002B2678  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1026,9 +1025,9 @@ BTM_ClearInqDb:
 /* 802E9174 002B2734  7C 08 03 A6 */	mtlr r0
 /* 802E9178 002B2738  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E917C 002B273C  4E 80 00 20 */	blr 
+.endfn BTM_ClearInqDb
 
-.global btm_inq_db_reset
-btm_inq_db_reset:
+.fn btm_inq_db_reset, global
 /* 802E9180 002B2740  94 21 FE E0 */	stwu r1, -0x120(r1)
 /* 802E9184 002B2744  7C 08 02 A6 */	mflr r0
 /* 802E9188 002B2748  90 01 01 24 */	stw r0, 0x124(r1)
@@ -1137,13 +1136,13 @@ btm_inq_db_reset:
 /* 802E930C 002B28CC  7C 08 03 A6 */	mtlr r0
 /* 802E9310 002B28D0  38 21 01 20 */	addi r1, r1, 0x120
 /* 802E9314 002B28D4  4E 80 00 20 */	blr 
+.endfn btm_inq_db_reset
 
-.global btm_inq_db_init
-btm_inq_db_init:
+.fn btm_inq_db_init, global
 /* 802E9318 002B28D8  4E 80 00 20 */	blr 
+.endfn btm_inq_db_init
 
-.global btm_inq_find_bdaddr
-btm_inq_find_bdaddr:
+.fn btm_inq_find_bdaddr, global
 /* 802E931C 002B28DC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E9320 002B28E0  7C 08 02 A6 */	mflr r0
 /* 802E9324 002B28E4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1206,9 +1205,9 @@ btm_inq_find_bdaddr:
 /* 802E93EC 002B29AC  7C 08 03 A6 */	mtlr r0
 /* 802E93F0 002B29B0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E93F4 002B29B4  4E 80 00 20 */	blr 
+.endfn btm_inq_find_bdaddr
 
-.global btm_inq_db_new
-btm_inq_db_new:
+.fn btm_inq_db_new, global
 /* 802E93F8 002B29B8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E93FC 002B29BC  7C 08 02 A6 */	mflr r0
 /* 802E9400 002B29C0  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
@@ -1279,9 +1278,9 @@ btm_inq_db_new:
 /* 802E94F0 002B2AB0  7C 08 03 A6 */	mtlr r0
 /* 802E94F4 002B2AB4  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E94F8 002B2AB8  4E 80 00 20 */	blr 
+.endfn btm_inq_db_new
 
-.global btm_set_inq_event_filter
-btm_set_inq_event_filter:
+.fn btm_set_inq_event_filter, global
 /* 802E94FC 002B2ABC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802E9500 002B2AC0  7C 08 02 A6 */	mflr r0
 /* 802E9504 002B2AC4  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1347,9 +1346,9 @@ btm_set_inq_event_filter:
 /* 802E95D4 002B2B94  7C 08 03 A6 */	mtlr r0
 /* 802E95D8 002B2B98  38 21 00 30 */	addi r1, r1, 0x30
 /* 802E95DC 002B2B9C  4E 80 00 20 */	blr
+.endfn btm_set_inq_event_filter
 
-.global btm_event_filter_complete
-btm_event_filter_complete:
+.fn btm_event_filter_complete, global
 /* 802E95E0 002B2BA0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E95E4 002B2BA4  7C 08 02 A6 */	mflr r0
 /* 802E95E8 002B2BA8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1500,9 +1499,9 @@ btm_event_filter_complete:
 /* 802E97F4 002B2DB4  7C 08 03 A6 */	mtlr r0
 /* 802E97F8 002B2DB8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E97FC 002B2DBC  4E 80 00 20 */	blr 
+.endfn btm_event_filter_complete
 
-.global btm_process_inq_results
-btm_process_inq_results:
+.fn btm_process_inq_results, global
 /* 802E9800 002B2DC0  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 802E9804 002B2DC4  7C 08 02 A6 */	mflr r0
 /* 802E9808 002B2DC8  90 01 00 64 */	stw r0, 0x64(r1)
@@ -1677,9 +1676,9 @@ btm_process_inq_results:
 /* 802E9A6C 002B302C  7C 08 03 A6 */	mtlr r0
 /* 802E9A70 002B3030  38 21 00 60 */	addi r1, r1, 0x60
 /* 802E9A74 002B3034  4E 80 00 20 */	blr 
+.endfn btm_process_inq_results
 
-.global btm_process_inq_complete
-btm_process_inq_complete:
+.fn btm_process_inq_complete, global
 /* 802E9A78 002B3038  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E9A7C 002B303C  7C 08 02 A6 */	mflr r0
 /* 802E9A80 002B3040  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1749,9 +1748,9 @@ btm_process_inq_complete:
 /* 802E9B70 002B3130  7C 08 03 A6 */	mtlr r0
 /* 802E9B74 002B3134  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E9B78 002B3138  4E 80 00 20 */	blr 
+.endfn btm_process_inq_complete
 
-.global btm_initiate_rem_name
-btm_initiate_rem_name:
+.fn btm_initiate_rem_name, global
 /* 802E9B7C 002B313C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802E9B80 002B3140  7C 08 02 A6 */	mflr r0
 /* 802E9B84 002B3144  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1848,9 +1847,9 @@ btm_initiate_rem_name:
 /* 802E9CC0 002B3280  7C 08 03 A6 */	mtlr r0
 /* 802E9CC4 002B3284  38 21 00 30 */	addi r1, r1, 0x30
 /* 802E9CC8 002B3288  4E 80 00 20 */	blr 
+.endfn btm_initiate_rem_name
 
-.global btm_process_remote_name
-btm_process_remote_name:
+.fn btm_process_remote_name, global
 /* 802E9CCC 002B328C  94 21 FE E0 */	stwu r1, -0x120(r1)
 /* 802E9CD0 002B3290  7C 08 02 A6 */	mflr r0
 /* 802E9CD4 002B3294  90 01 01 24 */	stw r0, 0x124(r1)
@@ -1944,9 +1943,9 @@ btm_process_remote_name:
 /* 802E9E18 002B33D8  7C 08 03 A6 */	mtlr r0
 /* 802E9E1C 002B33DC  38 21 01 20 */	addi r1, r1, 0x120
 /* 802E9E20 002B33E0  4E 80 00 20 */	blr 
+.endfn btm_process_remote_name
 
-.global btm_inq_rmt_name_failed
-btm_inq_rmt_name_failed:
+.fn btm_inq_rmt_name_failed, global
 /* 802E9E24 002B33E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E9E28 002B33E8  7C 08 02 A6 */	mflr r0
 /* 802E9E2C 002B33EC  38 60 00 00 */	li r3, 0
@@ -1963,6 +1962,7 @@ btm_inq_rmt_name_failed:
 /* 802E9E58 002B3418  7C 08 03 A6 */	mtlr r0
 /* 802E9E5C 002B341C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E9E60 002B3420  4E 80 00 20 */	blr 
+.endfn btm_inq_rmt_name_failed
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

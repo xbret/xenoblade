@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __strtoul
-__strtoul:
+.fn __strtoul, global
 /* 802C3DAC 0028D36C  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 802C3DB0 0028D370  7C 08 02 A6 */	mflr r0
 /* 802C3DB4 0028D374  2C 03 00 00 */	cmpwi r3, 0
@@ -311,9 +310,9 @@ __strtoul:
 /* 802C41B4 0028D774  7C 08 03 A6 */	mtlr r0
 /* 802C41B8 0028D778  38 21 00 50 */	addi r1, r1, 0x50
 /* 802C41BC 0028D77C  4E 80 00 20 */	blr 
+.endfn __strtoul
 
-.global __strtoull
-__strtoull:
+.fn __strtoull, global
 /* 802C41C0 0028D780  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 802C41C4 0028D784  7C 08 02 A6 */	mflr r0
 /* 802C41C8 0028D788  2C 03 00 00 */	cmpwi r3, 0
@@ -658,9 +657,9 @@ __strtoull:
 /* 802C465C 0028DC1C  7C 08 03 A6 */	mtlr r0
 /* 802C4660 0028DC20  38 21 00 60 */	addi r1, r1, 0x60
 /* 802C4664 0028DC24  4E 80 00 20 */	blr 
+.endfn __strtoull
 
-.global strtoul
-strtoul:
+.fn strtoul, global
 /* 802C4668 0028DC28  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802C466C 0028DC2C  7C 08 02 A6 */	mflr r0
 /* 802C4670 0028DC30  3C E0 80 00 */	lis r7, 0x7FFFFFFF@ha
@@ -706,6 +705,7 @@ strtoul:
 /* 802C4704 0028DCC4  7C 08 03 A6 */	mtlr r0
 /* 802C4708 0028DCC8  38 21 00 30 */	addi r1, r1, 0x30
 /* 802C470C 0028DCCC  4E 80 00 20 */	blr 
+.endfn strtoul
 
 .global atoi
 atoi:

@@ -2,12 +2,11 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global MPVFRM_Init
-MPVFRM_Init:
+.fn MPVFRM_Init, global
 /* 803A62C4 0036F884  4E 80 00 20 */	blr 
+.endfn MPVFRM_Init
 
-.global MPV_DecodeFrmSj
-MPV_DecodeFrmSj:
+.fn MPV_DecodeFrmSj, global
 /* 803A62C8 0036F888  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A62CC 0036F88C  7C 08 02 A6 */	mflr r0
 /* 803A62D0 0036F890  90 01 00 24 */	stw r0, 0x24(r1)
@@ -89,9 +88,9 @@ MPV_DecodeFrmSj:
 /* 803A63EC 0036F9AC  7C 08 03 A6 */	mtlr r0
 /* 803A63F0 0036F9B0  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A63F4 0036F9B4  4E 80 00 20 */	blr 
+.endfn MPV_DecodeFrmSj
 
-.global MPV_SkipFrmSj
-MPV_SkipFrmSj:
+.fn MPV_SkipFrmSj, global
 /* 803A63F8 0036F9B8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A63FC 0036F9BC  7C 08 02 A6 */	mflr r0
 /* 803A6400 0036F9C0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -139,6 +138,7 @@ MPV_SkipFrmSj:
 /* 803A6494 0036FA54  7C 08 03 A6 */	mtlr r0
 /* 803A6498 0036FA58  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A649C 0036FA5C  4E 80 00 20 */	blr 
+.endfn MPV_SkipFrmSj
 
 .global MPV_RequestStop
 MPV_RequestStop:

@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global SFPTS_InitPtsQue
-SFPTS_InitPtsQue:
+.fn SFPTS_InitPtsQue, global
 /* 803CB858 00394E18  38 00 00 00 */	li r0, 0
 /* 803CB85C 00394E1C  90 03 00 00 */	stw r0, 0(r3)
 /* 803CB860 00394E20  90 03 00 04 */	stw r0, 4(r3)
@@ -12,17 +11,17 @@ SFPTS_InitPtsQue:
 /* 803CB868 00394E28  90 03 00 0C */	stw r0, 0xc(r3)
 /* 803CB86C 00394E2C  90 03 00 10 */	stw r0, 0x10(r3)
 /* 803CB870 00394E30  4E 80 00 20 */	blr 
+.endfn SFPTS_InitPtsQue
 
-.global SFPTS_ResetPtsQue
-SFPTS_ResetPtsQue:
+.fn SFPTS_ResetPtsQue, global
 /* 803CB874 00394E34  38 00 00 00 */	li r0, 0
 /* 803CB878 00394E38  90 03 00 08 */	stw r0, 8(r3)
 /* 803CB87C 00394E3C  90 03 00 0C */	stw r0, 0xc(r3)
 /* 803CB880 00394E40  90 03 00 10 */	stw r0, 0x10(r3)
 /* 803CB884 00394E44  4E 80 00 20 */	blr 
+.endfn SFPTS_ResetPtsQue
 
-.global SFD_SetVideoPts
-SFD_SetVideoPts:
+.fn SFD_SetVideoPts, global
 /* 803CB888 00394E48  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CB88C 00394E4C  7C 08 02 A6 */	mflr r0
 /* 803CB890 00394E50  2C 04 00 00 */	cmpwi r4, 0
@@ -76,9 +75,9 @@ SFD_SetVideoPts:
 /* 803CB940 00394F00  7C 08 03 A6 */	mtlr r0
 /* 803CB944 00394F04  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CB948 00394F08  4E 80 00 20 */	blr 
+.endfn SFD_SetVideoPts
 
-.global SFPTS_WritePtsQue
-SFPTS_WritePtsQue:
+.fn SFPTS_WritePtsQue, global
 /* 803CB94C 00394F0C  38 E0 00 00 */	li r7, 0
 /* 803CB950 00394F10  90 E6 00 00 */	stw r7, 0(r6)
 /* 803CB954 00394F14  6C E8 80 00 */	xoris r8, r7, 0x8000
@@ -149,9 +148,9 @@ SFPTS_WritePtsQue:
 .L_803CBA3C:
 /* 803CBA3C 00394FFC  38 60 00 00 */	li r3, 0
 /* 803CBA40 00395000  4E 80 00 20 */	blr 
+.endfn SFPTS_WritePtsQue
 
-.global SFPTS_ReadPtsQue
-SFPTS_ReadPtsQue:
+.fn SFPTS_ReadPtsQue, global
 /* 803CBA44 00395004  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CBA48 00395008  7C 08 02 A6 */	mflr r0
 /* 803CBA4C 0039500C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -248,9 +247,9 @@ SFPTS_ReadPtsQue:
 /* 803CBB9C 0039515C  7C 08 03 A6 */	mtlr r0
 /* 803CBBA0 00395160  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CBBA4 00395164  4E 80 00 20 */	blr 
+.endfn SFPTS_ReadPtsQue
 
-.global sfpts_SearchPtsQue
-sfpts_SearchPtsQue:
+.fn sfpts_SearchPtsQue, global
 /* 803CBBA8 00395168  80 03 00 08 */	lwz r0, 8(r3)
 /* 803CBBAC 0039516C  7D 65 32 14 */	add r11, r5, r6
 /* 803CBBB0 00395170  81 43 00 04 */	lwz r10, 4(r3)
@@ -300,6 +299,7 @@ sfpts_SearchPtsQue:
 .L_803CBC48:
 /* 803CBC48 00395208  38 60 FF FF */	li r3, -1
 /* 803CBC4C 0039520C  4E 80 00 20 */	blr 
+.endfn sfpts_SearchPtsQue
 
 .global SFPTS_IsPtsQueFull
 SFPTS_IsPtsQueFull:

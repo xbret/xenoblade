@@ -2,16 +2,15 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __ct__Q44nw4r3snd6detail10TaskThreadFv
-__ct__Q44nw4r3snd6detail10TaskThreadFv:
+.fn __ct__Q44nw4r3snd6detail10TaskThreadFv, global
 /* 80425F30 003EF4F0  38 00 00 00 */	li r0, 0
 /* 80425F34 003EF4F4  90 03 03 18 */	stw r0, 0x318(r3)
 /* 80425F38 003EF4F8  98 03 03 1C */	stb r0, 0x31c(r3)
 /* 80425F3C 003EF4FC  98 03 03 1D */	stb r0, 0x31d(r3)
 /* 80425F40 003EF500  4E 80 00 20 */	blr
+.endfn __ct__Q44nw4r3snd6detail10TaskThreadFv
 
-.global __dt__Q44nw4r3snd6detail10TaskThreadFv
-__dt__Q44nw4r3snd6detail10TaskThreadFv:
+.fn __dt__Q44nw4r3snd6detail10TaskThreadFv, global
 /* 80425F44 003EF504  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80425F48 003EF508  7C 08 02 A6 */	mflr r0
 /* 80425F4C 003EF50C  2C 03 00 00 */	cmpwi r3, 0
@@ -47,9 +46,9 @@ __dt__Q44nw4r3snd6detail10TaskThreadFv:
 /* 80425FBC 003EF57C  7C 08 03 A6 */	mtlr r0
 /* 80425FC0 003EF580  38 21 00 10 */	addi r1, r1, 0x10
 /* 80425FC4 003EF584  4E 80 00 20 */	blr 
+.endfn __dt__Q44nw4r3snd6detail10TaskThreadFv
 
-.global Create__Q44nw4r3snd6detail10TaskThreadFlPvUl
-Create__Q44nw4r3snd6detail10TaskThreadFlPvUl:
+.fn Create__Q44nw4r3snd6detail10TaskThreadFlPvUl, global
 /* 80425FC8 003EF588  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80425FCC 003EF58C  7C 08 02 A6 */	mflr r0
 /* 80425FD0 003EF590  90 01 00 24 */	stw r0, 0x24(r1)
@@ -106,9 +105,9 @@ Create__Q44nw4r3snd6detail10TaskThreadFlPvUl:
 /* 80426090 003EF650  7C 08 03 A6 */	mtlr r0
 /* 80426094 003EF654  38 21 00 20 */	addi r1, r1, 0x20
 /* 80426098 003EF658  4E 80 00 20 */	blr 
+.endfn Create__Q44nw4r3snd6detail10TaskThreadFlPvUl
 
-.global Destroy__Q44nw4r3snd6detail10TaskThreadFv
-Destroy__Q44nw4r3snd6detail10TaskThreadFv:
+.fn Destroy__Q44nw4r3snd6detail10TaskThreadFv, global
 /* 8042609C 003EF65C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804260A0 003EF660  7C 08 02 A6 */	mflr r0
 /* 804260A4 003EF664  90 01 00 14 */	stw r0, 0x14(r1)
@@ -132,6 +131,7 @@ Destroy__Q44nw4r3snd6detail10TaskThreadFv:
 /* 804260E8 003EF6A8  7C 08 03 A6 */	mtlr r0
 /* 804260EC 003EF6AC  38 21 00 10 */	addi r1, r1, 0x10
 /* 804260F0 003EF6B0  4E 80 00 20 */	blr
+.endfn Destroy__Q44nw4r3snd6detail10TaskThreadFv
 
 #could also be ThreadProc__Q44nw4r3snd6detail10TaskThreadFv
 .global ThreadFunc__Q44nw4r3snd6detail10TaskThreadFPv

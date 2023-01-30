@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 #__ct__Q44nw4r3snd6detail9StrmSoundFPQ44nw4r3snd6detail50SoundInstanceManager<Q44nw4r3snd6detail9StrmSound>ii
-.global __ct__Q44nw4r3snd6detail9StrmSoundFPQ44nw4r3snd6detail50SoundInstanceManager_Q44nw4r3snd6detail9StrmSound_ii
-__ct__Q44nw4r3snd6detail9StrmSoundFPQ44nw4r3snd6detail50SoundInstanceManager_Q44nw4r3snd6detail9StrmSound_ii:
+.fn __ct__Q44nw4r3snd6detail9StrmSoundFPQ44nw4r3snd6detail50SoundInstanceManager_Q44nw4r3snd6detail9StrmSound_ii, global
 /* 80424FBC 003EE57C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80424FC0 003EE580  7C 08 02 A6 */	mflr r0
 /* 80424FC4 003EE584  90 01 00 14 */	stw r0, 0x14(r1)
@@ -140,9 +139,9 @@ __ct__Q44nw4r3snd6detail9StrmSoundFPQ44nw4r3snd6detail50SoundInstanceManager_Q44
 /* 804251AC 003EE76C  7C 08 03 A6 */	mtlr r0
 /* 804251B0 003EE770  38 21 00 10 */	addi r1, r1, 0x10
 /* 804251B4 003EE774  4E 80 00 20 */	blr 
+.endfn __ct__Q44nw4r3snd6detail9StrmSoundFPQ44nw4r3snd6detail50SoundInstanceManager_Q44nw4r3snd6detail9StrmSound_ii
 
-.global InitParam__Q44nw4r3snd6detail9StrmSoundFv
-InitParam__Q44nw4r3snd6detail9StrmSoundFv:
+.fn InitParam__Q44nw4r3snd6detail9StrmSoundFv, global
 /* 804251B8 003EE778  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804251BC 003EE77C  7C 08 02 A6 */	mflr r0
 /* 804251C0 003EE780  90 01 00 24 */	stw r0, 0x24(r1)
@@ -225,9 +224,9 @@ InitParam__Q44nw4r3snd6detail9StrmSoundFv:
 /* 804252E0 003EE8A0  7C 08 03 A6 */	mtlr r0
 /* 804252E4 003EE8A4  38 21 00 20 */	addi r1, r1, 0x20
 /* 804252E8 003EE8A8  4E 80 00 20 */	blr 
+.endfn InitParam__Q44nw4r3snd6detail9StrmSoundFv
 
-.global Setup__Q44nw4r3snd6detail9StrmSoundFPQ44nw4r3snd6detail14StrmBufferPooliUs
-Setup__Q44nw4r3snd6detail9StrmSoundFPQ44nw4r3snd6detail14StrmBufferPooliUs:
+.fn Setup__Q44nw4r3snd6detail9StrmSoundFPQ44nw4r3snd6detail14StrmBufferPooliUs, global
 /* 804252EC 003EE8AC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804252F0 003EE8B0  7C 08 02 A6 */	mflr r0
 /* 804252F4 003EE8B4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -259,9 +258,9 @@ Setup__Q44nw4r3snd6detail9StrmSoundFPQ44nw4r3snd6detail14StrmBufferPooliUs:
 /* 8042535C 003EE91C  7C 08 03 A6 */	mtlr r0
 /* 80425360 003EE920  38 21 00 20 */	addi r1, r1, 0x20
 /* 80425364 003EE924  4E 80 00 20 */	blr 
+.endfn Setup__Q44nw4r3snd6detail9StrmSoundFPQ44nw4r3snd6detail14StrmBufferPooliUs
 
-.global Prepare__Q44nw4r3snd6detail9StrmSoundFQ54nw4r3snd6detail10StrmPlayer15StartOffsetTypelPQ34nw4r2ut10FileStream
-Prepare__Q44nw4r3snd6detail9StrmSoundFQ54nw4r3snd6detail10StrmPlayer15StartOffsetTypelPQ34nw4r2ut10FileStream:
+.fn Prepare__Q44nw4r3snd6detail9StrmSoundFQ54nw4r3snd6detail10StrmPlayer15StartOffsetTypelPQ34nw4r2ut10FileStream, global
 /* 80425368 003EE928  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8042536C 003EE92C  7C 08 02 A6 */	mflr r0
 /* 80425370 003EE930  7C 87 23 78 */	mr r7, r4
@@ -288,9 +287,9 @@ Prepare__Q44nw4r3snd6detail9StrmSoundFQ54nw4r3snd6detail10StrmPlayer15StartOffse
 /* 804253BC 003EE97C  7C 08 03 A6 */	mtlr r0
 /* 804253C0 003EE980  38 21 00 10 */	addi r1, r1, 0x10
 /* 804253C4 003EE984  4E 80 00 20 */	blr 
+.endfn Prepare__Q44nw4r3snd6detail9StrmSoundFQ54nw4r3snd6detail10StrmPlayer15StartOffsetTypelPQ34nw4r2ut10FileStream
 
-.global UpdateMoveValue__Q44nw4r3snd6detail9StrmSoundFv
-UpdateMoveValue__Q44nw4r3snd6detail9StrmSoundFv:
+.fn UpdateMoveValue__Q44nw4r3snd6detail9StrmSoundFv, global
 /* 804253C8 003EE988  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804253CC 003EE98C  7C 08 02 A6 */	mflr r0
 /* 804253D0 003EE990  90 01 00 24 */	stw r0, 0x24(r1)
@@ -325,9 +324,9 @@ UpdateMoveValue__Q44nw4r3snd6detail9StrmSoundFv:
 /* 8042543C 003EE9FC  7C 08 03 A6 */	mtlr r0
 /* 80425440 003EEA00  38 21 00 20 */	addi r1, r1, 0x20
 /* 80425444 003EEA04  4E 80 00 20 */	blr 
+.endfn UpdateMoveValue__Q44nw4r3snd6detail9StrmSoundFv
 
-.global UpdateParam__Q44nw4r3snd6detail9StrmSoundFv
-UpdateParam__Q44nw4r3snd6detail9StrmSoundFv:
+.fn UpdateParam__Q44nw4r3snd6detail9StrmSoundFv, global
 /* 80425448 003EEA08  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8042544C 003EEA0C  7C 08 02 A6 */	mflr r0
 /* 80425450 003EEA10  90 01 00 44 */	stw r0, 0x44(r1)
@@ -388,9 +387,9 @@ UpdateParam__Q44nw4r3snd6detail9StrmSoundFv:
 /* 8042551C 003EEADC  7C 08 03 A6 */	mtlr r0
 /* 80425520 003EEAE0  38 21 00 40 */	addi r1, r1, 0x40
 /* 80425524 003EEAE4  4E 80 00 20 */	blr 
+.endfn UpdateParam__Q44nw4r3snd6detail9StrmSoundFv
 
-.global Shutdown__Q44nw4r3snd6detail9StrmSoundFv
-Shutdown__Q44nw4r3snd6detail9StrmSoundFv:
+.fn Shutdown__Q44nw4r3snd6detail9StrmSoundFv, global
 /* 80425528 003EEAE8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8042552C 003EEAEC  7C 08 02 A6 */	mflr r0
 /* 80425530 003EEAF0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -432,9 +431,9 @@ Shutdown__Q44nw4r3snd6detail9StrmSoundFv:
 /* 804255B8 003EEB78  7C 08 03 A6 */	mtlr r0
 /* 804255BC 003EEB7C  38 21 00 20 */	addi r1, r1, 0x20
 /* 804255C0 003EEB80  4E 80 00 20 */	blr 
+.endfn Shutdown__Q44nw4r3snd6detail9StrmSoundFv
 
-.global __dt__Q44nw4r3snd6detail9StrmSoundFv
-__dt__Q44nw4r3snd6detail9StrmSoundFv:
+.fn __dt__Q44nw4r3snd6detail9StrmSoundFv, global
 /* 804255C4 003EEB84  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804255C8 003EEB88  7C 08 02 A6 */	mflr r0
 /* 804255CC 003EEB8C  2C 03 00 00 */	cmpwi r3, 0
@@ -459,9 +458,9 @@ __dt__Q44nw4r3snd6detail9StrmSoundFv:
 /* 80425614 003EEBD4  7C 08 03 A6 */	mtlr r0
 /* 80425618 003EEBD8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042561C 003EEBDC  4E 80 00 20 */	blr 
+.endfn __dt__Q44nw4r3snd6detail9StrmSoundFv
 
-.global OnUpdatePlayerPriority__Q44nw4r3snd6detail9StrmSoundFv
-OnUpdatePlayerPriority__Q44nw4r3snd6detail9StrmSoundFv:
+.fn OnUpdatePlayerPriority__Q44nw4r3snd6detail9StrmSoundFv, global
 /* 80425620 003EEBE0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80425624 003EEBE4  7C 08 02 A6 */	mflr r0
 /* 80425628 003EEBE8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -526,45 +525,46 @@ OnUpdatePlayerPriority__Q44nw4r3snd6detail9StrmSoundFv:
 /* 804256F8 003EECB8  7C 08 03 A6 */	mtlr r0
 /* 804256FC 003EECBC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80425700 003EECC0  4E 80 00 20 */	blr 
+.endfn OnUpdatePlayerPriority__Q44nw4r3snd6detail9StrmSoundFv
 
-.global IsAttachedTempSpecialHandle__Q44nw4r3snd6detail9StrmSoundFv
-IsAttachedTempSpecialHandle__Q44nw4r3snd6detail9StrmSoundFv:
+.fn IsAttachedTempSpecialHandle__Q44nw4r3snd6detail9StrmSoundFv, global
 /* 80425704 003EECC4  80 63 0E 44 */	lwz r3, 0xe44(r3)
 /* 80425708 003EECC8  7C 03 00 D0 */	neg r0, r3
 /* 8042570C 003EECCC  7C 00 1B 78 */	or r0, r0, r3
 /* 80425710 003EECD0  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 80425714 003EECD4  4E 80 00 20 */	blr 
+.endfn IsAttachedTempSpecialHandle__Q44nw4r3snd6detail9StrmSoundFv
 
-.global DetachTempSpecialHandle__Q44nw4r3snd6detail9StrmSoundFv
-DetachTempSpecialHandle__Q44nw4r3snd6detail9StrmSoundFv:
+.fn DetachTempSpecialHandle__Q44nw4r3snd6detail9StrmSoundFv, global
 /* 80425718 003EECD8  80 63 0E 44 */	lwz r3, 0xe44(r3)
 /* 8042571C 003EECDC  48 00 00 30 */	b DetachSound__Q34nw4r3snd15StrmSoundHandleFv
+.endfn DetachTempSpecialHandle__Q44nw4r3snd6detail9StrmSoundFv
 
-.global GetBasicPlayer__Q44nw4r3snd6detail9StrmSoundFv
-GetBasicPlayer__Q44nw4r3snd6detail9StrmSoundFv:
+.fn GetBasicPlayer__Q44nw4r3snd6detail9StrmSoundFv, global
 /* 80425720 003EECE0  38 63 01 0C */	addi r3, r3, 0x10c
 /* 80425724 003EECE4  4E 80 00 20 */	blr 
+.endfn GetBasicPlayer__Q44nw4r3snd6detail9StrmSoundFv
 
-.global GetBasicPlayer__Q44nw4r3snd6detail9StrmSoundCFv
-GetBasicPlayer__Q44nw4r3snd6detail9StrmSoundCFv:
+.fn GetBasicPlayer__Q44nw4r3snd6detail9StrmSoundCFv, global
 /* 80425728 003EECE8  38 63 01 0C */	addi r3, r3, 0x10c
 /* 8042572C 003EECEC  4E 80 00 20 */	blr 
+.endfn GetBasicPlayer__Q44nw4r3snd6detail9StrmSoundCFv
 
-.global IsPrepared__Q44nw4r3snd6detail9StrmSoundCFv
-IsPrepared__Q44nw4r3snd6detail9StrmSoundCFv:
+.fn IsPrepared__Q44nw4r3snd6detail9StrmSoundCFv, global
 /* 80425730 003EECF0  88 63 02 2F */	lbz r3, 0x22f(r3)
 /* 80425734 003EECF4  4E 80 00 20 */	blr 
+.endfn IsPrepared__Q44nw4r3snd6detail9StrmSoundCFv
 
-.global GetRuntimeTypeInfo__Q44nw4r3snd6detail9StrmSoundCFv
-GetRuntimeTypeInfo__Q44nw4r3snd6detail9StrmSoundCFv:
+.fn GetRuntimeTypeInfo__Q44nw4r3snd6detail9StrmSoundCFv, global
 /* 80425738 003EECF8  38 6D BC 80 */	addi r3, r13, lbl_80667E00@sda21
 /* 8042573C 003EECFC  4E 80 00 20 */	blr
+.endfn GetRuntimeTypeInfo__Q44nw4r3snd6detail9StrmSoundCFv
 
-.global sinit_80425740
-sinit_80425740:
+.fn sinit_80425740, global
 /* 80425740 003EED00  38 0D BC 30 */	addi r0, r13, lbl_80667DB0@sda21
 /* 80425744 003EED04  90 0D BC 80 */	stw r0, lbl_80667E00@sda21(r13)
 /* 80425748 003EED08  4E 80 00 20 */	blr
+.endfn sinit_80425740
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 

@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 #SetTagProcessorImpl__Q34nw4r3lyt24@unnamed@lyt_layout_cpp@FPQ34nw4r3lyt4PanePQ34nw4r2ut19TagProcessorBase<w>
-.global SetTagProcessorImpl__Q34nw4r3lyt24_unnamed_lyt_layout_cpp_FPQ34nw4r3lyt4PanePQ34nw4r2ut19TagProcessorBase_w
-SetTagProcessorImpl__Q34nw4r3lyt24_unnamed_lyt_layout_cpp_FPQ34nw4r3lyt4PanePQ34nw4r2ut19TagProcessorBase_w:
+.fn SetTagProcessorImpl__Q34nw4r3lyt24_unnamed_lyt_layout_cpp_FPQ34nw4r3lyt4PanePQ34nw4r2ut19TagProcessorBase_w, global
 /* 803FFC74 003C9234  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803FFC78 003C9238  7C 08 02 A6 */	mflr r0
 /* 803FFC7C 003C923C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -139,10 +138,10 @@ SetTagProcessorImpl__Q34nw4r3lyt24_unnamed_lyt_layout_cpp_FPQ34nw4r3lyt4PanePQ34
 /* 803FFE14 003C93D4  7C 08 03 A6 */	mtlr r0
 /* 803FFE18 003C93D8  38 21 00 30 */	addi r1, r1, 0x30
 /* 803FFE1C 003C93DC  4E 80 00 20 */	blr
+.endfn SetTagProcessorImpl__Q34nw4r3lyt24_unnamed_lyt_layout_cpp_FPQ34nw4r3lyt4PanePQ34nw4r2ut19TagProcessorBase_w
 
 #IsIncludeAnimationGroupRef__Q34nw4r3lyt24@unnamed@lyt_layout_cpp@FPQ34nw4r3lyt14GroupContainerPCQ34nw4r3lyt17AnimationGroupRefUsbPQ34nw4r3lyt4Pane
-.global IsIncludeAnimationGroupRef__Q34nw4r3lyt24_unnamed_lyt_layout_cpp_FPQ34nw4r3lyt14GroupContainerPCQ34nw4r3lyt17AnimationGroupRefUsbPQ34nw4r3lyt4Pane
-IsIncludeAnimationGroupRef__Q34nw4r3lyt24_unnamed_lyt_layout_cpp_FPQ34nw4r3lyt14GroupContainerPCQ34nw4r3lyt17AnimationGroupRefUsbPQ34nw4r3lyt4Pane:
+.fn IsIncludeAnimationGroupRef__Q34nw4r3lyt24_unnamed_lyt_layout_cpp_FPQ34nw4r3lyt14GroupContainerPCQ34nw4r3lyt17AnimationGroupRefUsbPQ34nw4r3lyt4Pane, global
 /* 803FFE20 003C93E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803FFE24 003C93E4  7C 08 02 A6 */	mflr r0
 /* 803FFE28 003C93E8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -203,10 +202,10 @@ IsIncludeAnimationGroupRef__Q34nw4r3lyt24_unnamed_lyt_layout_cpp_FPQ34nw4r3lyt14
 /* 803FFEDC 003C949C  7C 08 03 A6 */	mtlr r0
 /* 803FFEE0 003C94A0  38 21 00 20 */	addi r1, r1, 0x20
 /* 803FFEE4 003C94A4  4E 80 00 20 */	blr 
+.endfn IsIncludeAnimationGroupRef__Q34nw4r3lyt24_unnamed_lyt_layout_cpp_FPQ34nw4r3lyt14GroupContainerPCQ34nw4r3lyt17AnimationGroupRefUsbPQ34nw4r3lyt4Pane
 
 
-.global __ct__Q34nw4r3lyt6LayoutFv
-__ct__Q34nw4r3lyt6LayoutFv:
+.fn __ct__Q34nw4r3lyt6LayoutFv, global
 /* 803FFEE8 003C94A8  38 00 00 00 */	li r0, 0
 /* 803FFEEC 003C94AC  C0 02 C1 D8 */	lfs f0, float_8066C558@sda21(r2)
 /* 803FFEF0 003C94B0  3C 80 80 57 */	lis r4, lbl_8056D258@ha
@@ -223,9 +222,9 @@ __ct__Q34nw4r3lyt6LayoutFv:
 /* 803FFF1C 003C94DC  D0 03 00 18 */	stfs f0, 0x18(r3)
 /* 803FFF20 003C94E0  D0 03 00 1C */	stfs f0, 0x1c(r3)
 /* 803FFF24 003C94E4  4E 80 00 20 */	blr
+.endfn __ct__Q34nw4r3lyt6LayoutFv
 
-.global __dt__Q34nw4r3lyt6LayoutFv
-__dt__Q34nw4r3lyt6LayoutFv:
+.fn __dt__Q34nw4r3lyt6LayoutFv, global
 /* 803FFF28 003C94E8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803FFF2C 003C94EC  7C 08 02 A6 */	mflr r0
 /* 803FFF30 003C94F0  90 01 00 34 */	stw r0, 0x34(r1)
@@ -306,9 +305,9 @@ __dt__Q34nw4r3lyt6LayoutFv:
 /* 80400044 003C9604  7C 08 03 A6 */	mtlr r0
 /* 80400048 003C9608  38 21 00 30 */	addi r1, r1, 0x30
 /* 8040004C 003C960C  4E 80 00 20 */	blr 
+.endfn __dt__Q34nw4r3lyt6LayoutFv
 
-.global Build__Q34nw4r3lyt6LayoutFPCvPQ34nw4r3lyt16ResourceAccessor
-Build__Q34nw4r3lyt6LayoutFPCvPQ34nw4r3lyt16ResourceAccessor:
+.fn Build__Q34nw4r3lyt6LayoutFPCvPQ34nw4r3lyt16ResourceAccessor, global
 /* 80400050 003C9610  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80400054 003C9614  7C 08 02 A6 */	mflr r0
 /* 80400058 003C9618  90 01 00 64 */	stw r0, 0x64(r1)
@@ -549,9 +548,9 @@ Build__Q34nw4r3lyt6LayoutFPCvPQ34nw4r3lyt16ResourceAccessor:
 /* 80400384 003C9944  7C 08 03 A6 */	mtlr r0
 /* 80400388 003C9948  38 21 00 60 */	addi r1, r1, 0x60
 /* 8040038C 003C994C  4E 80 00 20 */	blr 
+.endfn Build__Q34nw4r3lyt6LayoutFPCvPQ34nw4r3lyt16ResourceAccessor
 
-.global CreateAnimTransform__Q34nw4r3lyt6LayoutFv
-CreateAnimTransform__Q34nw4r3lyt6LayoutFv:
+.fn CreateAnimTransform__Q34nw4r3lyt6LayoutFv, global
 /* 80400390 003C9950  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80400394 003C9954  7C 08 02 A6 */	mflr r0
 /* 80400398 003C9958  38 80 00 20 */	li r4, 0x20
@@ -587,9 +586,9 @@ CreateAnimTransform__Q34nw4r3lyt6LayoutFv:
 /* 80400404 003C99C4  7C 08 03 A6 */	mtlr r0
 /* 80400408 003C99C8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8040040C 003C99CC  4E 80 00 20 */	blr 
+.endfn CreateAnimTransform__Q34nw4r3lyt6LayoutFv
 
-.global CreateAnimTransform__Q34nw4r3lyt6LayoutFPCvPQ34nw4r3lyt16ResourceAccessor
-CreateAnimTransform__Q34nw4r3lyt6LayoutFPCvPQ34nw4r3lyt16ResourceAccessor:
+.fn CreateAnimTransform__Q34nw4r3lyt6LayoutFPCvPQ34nw4r3lyt16ResourceAccessor, global
 /* 80400410 003C99D0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80400414 003C99D4  7C 08 02 A6 */	mflr r0
 /* 80400418 003C99D8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -612,9 +611,9 @@ CreateAnimTransform__Q34nw4r3lyt6LayoutFPCvPQ34nw4r3lyt16ResourceAccessor:
 /* 8040045C 003C9A1C  7C 08 03 A6 */	mtlr r0
 /* 80400460 003C9A20  38 21 00 20 */	addi r1, r1, 0x20
 /* 80400464 003C9A24  4E 80 00 20 */	blr 
+.endfn CreateAnimTransform__Q34nw4r3lyt6LayoutFPCvPQ34nw4r3lyt16ResourceAccessor
 
-.global CreateAnimTransform__Q34nw4r3lyt6LayoutFRCQ34nw4r3lyt12AnimResourcePQ34nw4r3lyt16ResourceAccessor
-CreateAnimTransform__Q34nw4r3lyt6LayoutFRCQ34nw4r3lyt12AnimResourcePQ34nw4r3lyt16ResourceAccessor:
+.fn CreateAnimTransform__Q34nw4r3lyt6LayoutFRCQ34nw4r3lyt12AnimResourcePQ34nw4r3lyt16ResourceAccessor, global
 /* 80400468 003C9A28  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8040046C 003C9A2C  7C 08 02 A6 */	mflr r0
 /* 80400470 003C9A30  90 01 00 24 */	stw r0, 0x24(r1)
@@ -651,9 +650,9 @@ CreateAnimTransform__Q34nw4r3lyt6LayoutFRCQ34nw4r3lyt12AnimResourcePQ34nw4r3lyt1
 /* 804004E0 003C9AA0  7C 08 03 A6 */	mtlr r0
 /* 804004E4 003C9AA4  38 21 00 20 */	addi r1, r1, 0x20
 /* 804004E8 003C9AA8  4E 80 00 20 */	blr 
+.endfn CreateAnimTransform__Q34nw4r3lyt6LayoutFRCQ34nw4r3lyt12AnimResourcePQ34nw4r3lyt16ResourceAccessor
 
-.global BindAnimation__Q34nw4r3lyt6LayoutFPQ34nw4r3lyt13AnimTransform
-BindAnimation__Q34nw4r3lyt6LayoutFPQ34nw4r3lyt13AnimTransform:
+.fn BindAnimation__Q34nw4r3lyt6LayoutFPQ34nw4r3lyt13AnimTransform, global
 /* 804004EC 003C9AAC  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 804004F0 003C9AB0  2C 03 00 00 */	cmpwi r3, 0
 /* 804004F4 003C9AB4  4D 82 00 20 */	beqlr 
@@ -664,9 +663,9 @@ BindAnimation__Q34nw4r3lyt6LayoutFPQ34nw4r3lyt13AnimTransform:
 /* 80400508 003C9AC8  7D 89 03 A6 */	mtctr r12
 /* 8040050C 003C9ACC  4E 80 04 20 */	bctr 
 /* 80400510 003C9AD0  4E 80 00 20 */	blr 
+.endfn BindAnimation__Q34nw4r3lyt6LayoutFPQ34nw4r3lyt13AnimTransform
 
-.global UnbindAnimation__Q34nw4r3lyt6LayoutFPQ34nw4r3lyt13AnimTransform
-UnbindAnimation__Q34nw4r3lyt6LayoutFPQ34nw4r3lyt13AnimTransform:
+.fn UnbindAnimation__Q34nw4r3lyt6LayoutFPQ34nw4r3lyt13AnimTransform, global
 /* 80400514 003C9AD4  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 80400518 003C9AD8  2C 03 00 00 */	cmpwi r3, 0
 /* 8040051C 003C9ADC  4D 82 00 20 */	beqlr 
@@ -676,17 +675,17 @@ UnbindAnimation__Q34nw4r3lyt6LayoutFPQ34nw4r3lyt13AnimTransform:
 /* 8040052C 003C9AEC  7D 89 03 A6 */	mtctr r12
 /* 80400530 003C9AF0  4E 80 04 20 */	bctr 
 /* 80400534 003C9AF4  4E 80 00 20 */	blr 
+.endfn UnbindAnimation__Q34nw4r3lyt6LayoutFPQ34nw4r3lyt13AnimTransform
 
-.global UnbindAllAnimation__Q34nw4r3lyt6LayoutFv
-UnbindAllAnimation__Q34nw4r3lyt6LayoutFv:
+.fn UnbindAllAnimation__Q34nw4r3lyt6LayoutFv, global
 /* 80400538 003C9AF8  81 83 00 00 */	lwz r12, 0(r3)
 /* 8040053C 003C9AFC  38 80 00 00 */	li r4, 0
 /* 80400540 003C9B00  81 8C 00 20 */	lwz r12, 0x20(r12)
 /* 80400544 003C9B04  7D 89 03 A6 */	mtctr r12
 /* 80400548 003C9B08  4E 80 04 20 */	bctr 
+.endfn UnbindAllAnimation__Q34nw4r3lyt6LayoutFv
 
-.global BindAnimationAuto__Q34nw4r3lyt6LayoutFRCQ34nw4r3lyt12AnimResourcePQ34nw4r3lyt16ResourceAccessor
-BindAnimationAuto__Q34nw4r3lyt6LayoutFRCQ34nw4r3lyt12AnimResourcePQ34nw4r3lyt16ResourceAccessor:
+.fn BindAnimationAuto__Q34nw4r3lyt6LayoutFRCQ34nw4r3lyt12AnimResourcePQ34nw4r3lyt16ResourceAccessor, global
 /* 8040054C 003C9B0C  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80400550 003C9B10  7C 08 02 A6 */	mflr r0
 /* 80400554 003C9B14  90 01 00 64 */	stw r0, 0x64(r1)
@@ -871,9 +870,9 @@ BindAnimationAuto__Q34nw4r3lyt6LayoutFRCQ34nw4r3lyt12AnimResourcePQ34nw4r3lyt16R
 /* 804007DC 003C9D9C  7C 08 03 A6 */	mtlr r0
 /* 804007E0 003C9DA0  38 21 00 60 */	addi r1, r1, 0x60
 /* 804007E4 003C9DA4  4E 80 00 20 */	blr 
+.endfn BindAnimationAuto__Q34nw4r3lyt6LayoutFRCQ34nw4r3lyt12AnimResourcePQ34nw4r3lyt16ResourceAccessor
 
-.global SetAnimationEnable__Q34nw4r3lyt6LayoutFPQ34nw4r3lyt13AnimTransformb
-SetAnimationEnable__Q34nw4r3lyt6LayoutFPQ34nw4r3lyt13AnimTransformb:
+.fn SetAnimationEnable__Q34nw4r3lyt6LayoutFPQ34nw4r3lyt13AnimTransformb, global
 /* 804007E8 003C9DA8  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 804007EC 003C9DAC  2C 03 00 00 */	cmpwi r3, 0
 /* 804007F0 003C9DB0  4D 82 00 20 */	beqlr 
@@ -883,9 +882,9 @@ SetAnimationEnable__Q34nw4r3lyt6LayoutFPQ34nw4r3lyt13AnimTransformb:
 /* 80400800 003C9DC0  7D 89 03 A6 */	mtctr r12
 /* 80400804 003C9DC4  4E 80 04 20 */	bctr 
 /* 80400808 003C9DC8  4E 80 00 20 */	blr 
+.endfn SetAnimationEnable__Q34nw4r3lyt6LayoutFPQ34nw4r3lyt13AnimTransformb
 
-.global CalculateMtx__Q34nw4r3lyt6LayoutFRCQ34nw4r3lyt8DrawInfo
-CalculateMtx__Q34nw4r3lyt6LayoutFRCQ34nw4r3lyt8DrawInfo:
+.fn CalculateMtx__Q34nw4r3lyt6LayoutFRCQ34nw4r3lyt8DrawInfo, global
 /* 8040080C 003C9DCC  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 80400810 003C9DD0  2C 03 00 00 */	cmpwi r3, 0
 /* 80400814 003C9DD4  4D 82 00 20 */	beqlr 
@@ -894,9 +893,9 @@ CalculateMtx__Q34nw4r3lyt6LayoutFRCQ34nw4r3lyt8DrawInfo:
 /* 80400820 003C9DE0  7D 89 03 A6 */	mtctr r12
 /* 80400824 003C9DE4  4E 80 04 20 */	bctr 
 /* 80400828 003C9DE8  4E 80 00 20 */	blr 
+.endfn CalculateMtx__Q34nw4r3lyt6LayoutFRCQ34nw4r3lyt8DrawInfo
 
-.global Draw__Q34nw4r3lyt6LayoutFRCQ34nw4r3lyt8DrawInfo
-Draw__Q34nw4r3lyt6LayoutFRCQ34nw4r3lyt8DrawInfo:
+.fn Draw__Q34nw4r3lyt6LayoutFRCQ34nw4r3lyt8DrawInfo, global
 /* 8040082C 003C9DEC  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 80400830 003C9DF0  2C 03 00 00 */	cmpwi r3, 0
 /* 80400834 003C9DF4  4D 82 00 20 */	beqlr 
@@ -905,9 +904,9 @@ Draw__Q34nw4r3lyt6LayoutFRCQ34nw4r3lyt8DrawInfo:
 /* 80400840 003C9E00  7D 89 03 A6 */	mtctr r12
 /* 80400844 003C9E04  4E 80 04 20 */	bctr 
 /* 80400848 003C9E08  4E 80 00 20 */	blr 
+.endfn Draw__Q34nw4r3lyt6LayoutFRCQ34nw4r3lyt8DrawInfo
 
-.global Animate__Q34nw4r3lyt6LayoutFUl
-Animate__Q34nw4r3lyt6LayoutFUl:
+.fn Animate__Q34nw4r3lyt6LayoutFUl, global
 /* 8040084C 003C9E0C  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 80400850 003C9E10  2C 03 00 00 */	cmpwi r3, 0
 /* 80400854 003C9E14  4D 82 00 20 */	beqlr 
@@ -916,9 +915,9 @@ Animate__Q34nw4r3lyt6LayoutFUl:
 /* 80400860 003C9E20  7D 89 03 A6 */	mtctr r12
 /* 80400864 003C9E24  4E 80 04 20 */	bctr 
 /* 80400868 003C9E28  4E 80 00 20 */	blr 
+.endfn Animate__Q34nw4r3lyt6LayoutFUl
 
-.global GetLayoutRect__Q34nw4r3lyt6LayoutCFv
-GetLayoutRect__Q34nw4r3lyt6LayoutCFv:
+.fn GetLayoutRect__Q34nw4r3lyt6LayoutCFv, global
 /* 8040086C 003C9E2C  C0 84 00 1C */	lfs f4, 0x1c(r4)
 /* 80400870 003C9E30  C0 24 00 18 */	lfs f1, 0x18(r4)
 /* 80400874 003C9E34  FC 60 20 50 */	fneg f3, f4
@@ -933,10 +932,10 @@ GetLayoutRect__Q34nw4r3lyt6LayoutCFv:
 /* 80400898 003C9E58  D0 03 00 00 */	stfs f0, 0(r3)
 /* 8040089C 003C9E5C  D0 63 00 0C */	stfs f3, 0xc(r3)
 /* 804008A0 003C9E60  4E 80 00 20 */	blr 
+.endfn GetLayoutRect__Q34nw4r3lyt6LayoutCFv
 
 #SetTagProcessor__Q34nw4r3lyt6LayoutFPQ34nw4r2ut19TagProcessorBase<w>
-.global SetTagProcessor__Q34nw4r3lyt6LayoutFPQ34nw4r2ut19TagProcessorBase_w
-SetTagProcessor__Q34nw4r3lyt6LayoutFPQ34nw4r2ut19TagProcessorBase_w:
+.fn SetTagProcessor__Q34nw4r3lyt6LayoutFPQ34nw4r2ut19TagProcessorBase_w, global
 /* 804008A4 003C9E64  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 804008A8 003C9E68  7C 08 02 A6 */	mflr r0
 /* 804008AC 003C9E6C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1072,9 +1071,9 @@ SetTagProcessor__Q34nw4r3lyt6LayoutFPQ34nw4r2ut19TagProcessorBase_w:
 /* 80400A48 003CA008  7C 08 03 A6 */	mtlr r0
 /* 80400A4C 003CA00C  38 21 00 30 */	addi r1, r1, 0x30
 /* 80400A50 003CA010  4E 80 00 20 */	blr 
+.endfn SetTagProcessor__Q34nw4r3lyt6LayoutFPQ34nw4r2ut19TagProcessorBase_w
 
-.global BuildPaneObj__Q34nw4r3lyt6LayoutFlPCvRCQ34nw4r3lyt11ResBlockSet
-BuildPaneObj__Q34nw4r3lyt6LayoutFlPCvRCQ34nw4r3lyt11ResBlockSet:
+.fn BuildPaneObj__Q34nw4r3lyt6LayoutFlPCvRCQ34nw4r3lyt11ResBlockSet, global
 /* 80400A54 003CA014  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80400A58 003CA018  7C 08 02 A6 */	mflr r0
 /* 80400A5C 003CA01C  3C C0 70 69 */	lis r6, 0x70696331@ha
@@ -1219,6 +1218,7 @@ BuildPaneObj__Q34nw4r3lyt6LayoutFlPCvRCQ34nw4r3lyt11ResBlockSet:
 /* 80400C54 003CA214  7C 08 03 A6 */	mtlr r0
 /* 80400C58 003CA218  38 21 00 50 */	addi r1, r1, 0x50
 /* 80400C5C 003CA21C  4E 80 00 20 */	blr
+.endfn BuildPaneObj__Q34nw4r3lyt6LayoutFlPCvRCQ34nw4r3lyt11ResBlockSet
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

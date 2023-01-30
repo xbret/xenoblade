@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global reset_kpad
-reset_kpad:
+.fn reset_kpad, global
 /* 80344AC0 0030E080  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80344AC4 0030E084  38 03 00 F0 */	addi r0, r3, 0xf0
 /* 80344AC8 0030E088  C0 C2 BD 38 */	lfs f6, float_8066C0B8@sda21(r2)
@@ -123,10 +122,10 @@ reset_kpad:
 /* 80344C84 0030E244  83 C1 00 08 */	lwz r30, 8(r1)
 /* 80344C88 0030E248  38 21 00 10 */	addi r1, r1, 0x10
 /* 80344C8C 0030E24C  4E 80 00 20 */	blr 
+.endfn reset_kpad
 
 .balign 16, 0
-.global KPADEnableAimingMode
-KPADEnableAimingMode:
+.fn KPADEnableAimingMode, global
 /* 80344C90 0030E250  1C 83 05 78 */	mulli r4, r3, 0x578
 /* 80344C94 0030E254  3C 60 80 5D */	lis r3, lbl_805CE600@ha
 /* 80344C98 0030E258  38 00 00 01 */	li r0, 1
@@ -135,10 +134,10 @@ KPADEnableAimingMode:
 /* 80344CA4 0030E264  98 03 05 5C */	stb r0, 0x55c(r3)
 /* 80344CA8 0030E268  98 03 05 5D */	stb r0, 0x55d(r3)
 /* 80344CAC 0030E26C  4E 80 00 20 */	blr
+.endfn KPADEnableAimingMode
 
 .balign 16, 0
-.global calc_button_repeat
-calc_button_repeat:
+.fn calc_button_repeat, global
 /* 80344CB0 0030E270  80 03 00 04 */	lwz r0, 4(r3)
 /* 80344CB4 0030E274  2C 00 00 00 */	cmpwi r0, 0
 /* 80344CB8 0030E278  40 82 00 10 */	bne .L_80344CC8
@@ -251,10 +250,10 @@ calc_button_repeat:
 /* 80344E44 0030E404  B0 A3 05 08 */	sth r5, 0x508(r3)
 /* 80344E48 0030E408  B0 03 05 0A */	sth r0, 0x50a(r3)
 /* 80344E4C 0030E40C  4E 80 00 20 */	blr 
+.endfn calc_button_repeat
 
 
-.global read_kpad_button
-read_kpad_button:
+.fn read_kpad_button, global
 /* 80344E50 0030E410  80 03 00 00 */	lwz r0, 0(r3)
 /* 80344E54 0030E414  70 C9 9F FF */	andi. r9, r6, 0x9fff
 /* 80344E58 0030E418  28 04 00 01 */	cmplwi r4, 1
@@ -298,10 +297,10 @@ read_kpad_button:
 /* 80344EE8 0030E4A8  90 03 00 68 */	stw r0, 0x68(r3)
 .L_80344EEC:
 /* 80344EEC 0030E4AC  4B FF FD C4 */	b calc_button_repeat
+.endfn read_kpad_button
 
 .balign 16, 0
-.global calc_acc
-calc_acc:
+.fn calc_acc, global
 /* 80344EF0 0030E4B0  C0 44 00 00 */	lfs f2, 0(r4)
 /* 80344EF4 0030E4B4  80 03 05 6C */	lwz r0, 0x56c(r3)
 /* 80344EF8 0030E4B8  EC 61 10 28 */	fsubs f3, f1, f2
@@ -353,10 +352,10 @@ calc_acc:
 /* 80344F98 0030E558  EC 02 00 2A */	fadds f0, f2, f0
 /* 80344F9C 0030E55C  D0 04 00 00 */	stfs f0, 0(r4)
 /* 80344FA0 0030E560  4E 80 00 20 */	blr 
+.endfn calc_acc
 
 .balign 16, 0
-.global calc_acc_horizon
-calc_acc_horizon:
+.fn calc_acc_horizon, global
 /* 80344FB0 0030E570  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80344FB4 0030E574  7C 08 02 A6 */	mflr r0
 /* 80344FB8 0030E578  90 01 00 34 */	stw r0, 0x34(r1)
@@ -462,10 +461,10 @@ calc_acc_horizon:
 /* 80345138 0030E6F8  7C 08 03 A6 */	mtlr r0
 /* 8034513C 0030E6FC  38 21 00 30 */	addi r1, r1, 0x30
 /* 80345140 0030E700  4E 80 00 20 */	blr 
+.endfn calc_acc_horizon
 
 .balign 16, 0
-.global calc_acc_vertical
-calc_acc_vertical:
+.fn calc_acc_vertical, global
 /* 80345150 0030E710  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80345154 0030E714  7C 08 02 A6 */	mflr r0
 /* 80345158 0030E718  90 01 00 44 */	stw r0, 0x44(r1)
@@ -542,10 +541,10 @@ calc_acc_vertical:
 /* 80345268 0030E828  7C 08 03 A6 */	mtlr r0
 /* 8034526C 0030E82C  38 21 00 40 */	addi r1, r1, 0x40
 /* 80345270 0030E830  4E 80 00 20 */	blr 
+.endfn calc_acc_vertical
 
 .balign 16, 0
-.global read_kpad_acc
-read_kpad_acc:
+.fn read_kpad_acc, global
 /* 80345280 0030E840  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80345284 0030E844  7C 08 02 A6 */	mflr r0
 /* 80345288 0030E848  3C A0 43 30 */	lis r5, 0x4330
@@ -848,10 +847,10 @@ read_kpad_acc:
 /* 803456D4 0030EC94  7C 08 03 A6 */	mtlr r0
 /* 803456D8 0030EC98  38 21 00 50 */	addi r1, r1, 0x50
 /* 803456DC 0030EC9C  4E 80 00 20 */	blr 
+.endfn read_kpad_acc
 
 .balign 16, 0
-.global select_2obj_first
-select_2obj_first:
+.fn select_2obj_first, global
 /* 803456E0 0030ECA0  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 803456E4 0030ECA4  7C 08 02 A6 */	mflr r0
 /* 803456E8 0030ECA8  90 01 00 84 */	stw r0, 0x84(r1)
@@ -981,10 +980,10 @@ select_2obj_first:
 /* 803458BC 0030EE7C  7C 08 03 A6 */	mtlr r0
 /* 803458C0 0030EE80  38 21 00 80 */	addi r1, r1, 0x80
 /* 803458C4 0030EE84  4E 80 00 20 */	blr 
+.endfn select_2obj_first
 
 .balign 16, 0
-.global select_2obj_continue
-select_2obj_continue:
+.fn select_2obj_continue, global
 /* 803458D0 0030EE90  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 803458D4 0030EE94  7C 08 02 A6 */	mflr r0
 /* 803458D8 0030EE98  90 01 00 84 */	stw r0, 0x84(r1)
@@ -1134,10 +1133,10 @@ select_2obj_continue:
 /* 80345AEC 0030F0AC  7C 08 03 A6 */	mtlr r0
 /* 80345AF0 0030F0B0  38 21 00 80 */	addi r1, r1, 0x80
 /* 80345AF4 0030F0B4  4E 80 00 20 */	blr 
+.endfn select_2obj_continue
 
 .balign 16, 0
-.global select_1obj_first
-select_1obj_first:
+.fn select_1obj_first, global
 /* 80345B00 0030F0C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80345B04 0030F0C4  39 03 00 F0 */	addi r8, r3, 0xf0
 /* 80345B08 0030F0C8  38 03 01 20 */	addi r0, r3, 0x120
@@ -1253,10 +1252,10 @@ select_1obj_first:
 .L_80345CAC:
 /* 80345CAC 0030F26C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80345CB0 0030F270  4E 80 00 20 */	blr 
+.endfn select_1obj_first
 
 .balign 16, 0
-.global select_1obj_continue
-select_1obj_continue:
+.fn select_1obj_continue, global
 /* 80345CC0 0030F280  C0 0D 99 20 */	lfs f0, float_80665AA0@sda21(r13)
 /* 80345CC4 0030F284  38 C3 01 20 */	addi r6, r3, 0x120
 /* 80345CC8 0030F288  38 03 01 38 */	addi r0, r3, 0x138
@@ -1358,10 +1357,10 @@ select_1obj_continue:
 .L_80345E2C:
 /* 80345E2C 0030F3EC  38 60 00 01 */	li r3, 1
 /* 80345E30 0030F3F0  4E 80 00 20 */	blr 
+.endfn select_1obj_continue
 
 .balign 16, 0
-.global calc_dpd_variable
-calc_dpd_variable:
+.fn calc_dpd_variable, global
 /* 80345E40 0030F400  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80345E44 0030F404  7C 08 02 A6 */	mflr r0
 /* 80345E48 0030F408  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1759,10 +1758,10 @@ calc_dpd_variable:
 /* 80346400 0030F9C0  7C 08 03 A6 */	mtlr r0
 /* 80346404 0030F9C4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80346408 0030F9C8  4E 80 00 20 */	blr 
+.endfn calc_dpd_variable
 
 .balign 16, 0
-.global read_kpad_dpd
-read_kpad_dpd:
+.fn read_kpad_dpd, global
 /* 80346410 0030F9D0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80346414 0030F9D4  7C 08 02 A6 */	mflr r0
 /* 80346418 0030F9D8  90 01 00 44 */	stw r0, 0x44(r1)
@@ -2080,9 +2079,10 @@ read_kpad_dpd:
 /* 80346880 0030FE40  7C 08 03 A6 */	mtlr r0
 /* 80346884 0030FE44  38 21 00 40 */	addi r1, r1, 0x40
 /* 80346888 0030FE48  4E 80 00 20 */	blr
+.endfn read_kpad_dpd
 
 .balign 16, 0
-clamp_stick_circle:
+.fn clamp_stick_circle, local
 /* 80346890 0030FE50  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80346894 0030FE54  7C 08 02 A6 */	mflr r0
 /* 80346898 0030FE58  3D 00 43 30 */	lis r8, 0x4330
@@ -2160,9 +2160,10 @@ clamp_stick_circle:
 /* 803469AC 0030FF6C  7C 08 03 A6 */	mtlr r0
 /* 803469B0 0030FF70  38 21 00 60 */	addi r1, r1, 0x60
 /* 803469B4 0030FF74  4E 80 00 20 */	blr
+.endfn clamp_stick_circle
 
 .balign 16, 0
-clamp_stick_cross:
+.fn clamp_stick_cross, local
 /* 803469C0 0030FF80  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803469C4 0030FF84  7C 08 02 A6 */	mflr r0
 /* 803469C8 0030FF88  2C 04 00 00 */	cmpwi r4, 0
@@ -2315,10 +2316,10 @@ clamp_stick_cross:
 /* 80346BD8 00310198  7C 08 03 A6 */	mtlr r0
 /* 80346BDC 0031019C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80346BE0 003101A0  4E 80 00 20 */	blr 
+.endfn clamp_stick_cross
 
 .balign 16, 0
-.global read_kpad_stick
-read_kpad_stick:
+.fn read_kpad_stick, global
 /* 80346BF0 003101B0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80346BF4 003101B4  7C 08 02 A6 */	mflr r0
 /* 80346BF8 003101B8  3C A0 43 30 */	lis r5, 0x4330
@@ -2920,15 +2921,16 @@ read_kpad_stick:
 /* 803474B4 00310A74  7C 08 03 A6 */	mtlr r0
 /* 803474B8 00310A78  38 21 00 30 */	addi r1, r1, 0x30
 /* 803474BC 00310A7C  4E 80 00 20 */	blr 
+.endfn read_kpad_stick
 
 .balign 16, 0
-.global KPADReadEx
-KPADReadEx:
+.fn KPADReadEx, global
 /* 803474C0 00310A80  38 E0 00 01 */	li r7, 1
 /* 803474C4 00310A84  48 00 00 0C */	b KPADiRead
+.endfn KPADReadEx
 
 .balign 16, 0
-KPADiRead:
+.fn KPADiRead, local
 /* 803474D0 00310A90  94 21 FF 10 */	stwu r1, -0xf0(r1)
 /* 803474D4 00310A94  7C 08 02 A6 */	mflr r0
 /* 803474D8 00310A98  90 01 00 F4 */	stw r0, 0xf4(r1)
@@ -3457,10 +3459,10 @@ KPADiRead:
 /* 80347BF0 003111B0  7C 08 03 A6 */	mtlr r0
 /* 80347BF4 003111B4  38 21 00 F0 */	addi r1, r1, 0xf0
 /* 80347BF8 003111B8  4E 80 00 20 */	blr 
+.endfn KPADiRead
 
 .balign 16, 0
-.global KPADInit
-KPADInit:
+.fn KPADInit, global
 /* 80347C00 003111C0  94 21 FF 50 */	stwu r1, -0xb0(r1)
 /* 80347C04 003111C4  7C 08 02 A6 */	mflr r0
 /* 80347C08 003111C8  90 01 00 B4 */	stw r0, 0xb4(r1)
@@ -3748,10 +3750,10 @@ KPADInit:
 /* 80348038 003115F8  7C 08 03 A6 */	mtlr r0
 /* 8034803C 003115FC  38 21 00 B0 */	addi r1, r1, 0xb0
 /* 80348040 00311600  4E 80 00 20 */	blr 
+.endfn KPADInit
 
 .balign 16, 0
-.global KPADReset
-KPADReset:
+.fn KPADReset, global
 /* 80348050 00311610  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80348054 00311614  7C 08 02 A6 */	mflr r0
 /* 80348058 00311618  90 01 00 34 */	stw r0, 0x34(r1)
@@ -3794,10 +3796,10 @@ KPADReset:
 /* 803480E4 003116A4  7C 08 03 A6 */	mtlr r0
 /* 803480E8 003116A8  38 21 00 30 */	addi r1, r1, 0x30
 /* 803480EC 003116AC  4E 80 00 20 */	blr
+.endfn KPADReset
 
 .balign 16, 0
-.global KPADiConnectCallback
-KPADiConnectCallback:
+.fn KPADiConnectCallback, global
 /* 803480F0 003116B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803480F4 003116B4  7C 08 02 A6 */	mflr r0
 /* 803480F8 003116B8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -3892,10 +3894,10 @@ KPADiConnectCallback:
 /* 80348248 00311808  7C 08 03 A6 */	mtlr r0
 /* 8034824C 0031180C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80348250 00311810  4E 80 00 20 */	blr 
+.endfn KPADiConnectCallback
 
 .balign 16, 0
-.global KPADSetConnectCallback
-KPADSetConnectCallback:
+.fn KPADSetConnectCallback, global
 /* 80348260 00311820  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80348264 00311824  7C 08 02 A6 */	mflr r0
 /* 80348268 00311828  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3918,30 +3920,32 @@ KPADSetConnectCallback:
 /* 803482AC 0031186C  7C 08 03 A6 */	mtlr r0
 /* 803482B0 00311870  38 21 00 10 */	addi r1, r1, 0x10
 /* 803482B4 00311874  4E 80 00 20 */	blr
+.endfn KPADSetConnectCallback
 
 .balign 16, 0
 #KPADiControlWbcCallback?
-func_803482C0:
+.fn func_803482C0, local
 /* 803482C0 00311880  7C 83 00 34 */	cntlzw r3, r4
 /* 803482C4 00311884  38 00 00 00 */	li r0, 0
 /* 803482C8 00311888  54 63 DE 3E */	rlwinm r3, r3, 0x1b, 0x18, 0x1f
 /* 803482CC 0031188C  98 6D B8 45 */	stb r3, lbl_806679C5@sda21(r13)
 /* 803482D0 00311890  98 0D B8 46 */	stb r0, lbl_806679C6@sda21(r13)
 /* 803482D4 00311894  4E 80 00 20 */	blr
+.endfn func_803482C0
 
 .balign 16, 0
 #KPADiControlWbcCallback?
-func_803482E0:
+.fn func_803482E0, local
 /* 803482E0 003118A0  7C 83 00 34 */	cntlzw r3, r4
 /* 803482E4 003118A4  38 00 00 00 */	li r0, 0
 /* 803482E8 003118A8  54 63 DE 3E */	rlwinm r3, r3, 0x1b, 0x18, 0x1f
 /* 803482EC 003118AC  98 6D B8 42 */	stb r3, lbl_806679C2@sda21(r13)
 /* 803482F0 003118B0  98 0D B8 46 */	stb r0, lbl_806679C6@sda21(r13)
 /* 803482F4 003118B4  4E 80 00 20 */	blr 
+.endfn func_803482E0
 
 .balign 16, 0
-.global KPADDisableDPD
-KPADDisableDPD:
+.fn KPADDisableDPD, global
 /* 80348300 003118C0  1C 03 05 78 */	mulli r0, r3, 0x578
 /* 80348304 003118C4  3C 60 80 5D */	lis r3, lbl_805CE600@ha
 /* 80348308 003118C8  38 80 00 00 */	li r4, 0
@@ -3949,10 +3953,10 @@ KPADDisableDPD:
 /* 80348310 003118D0  7C 63 02 14 */	add r3, r3, r0
 /* 80348314 003118D4  98 83 05 56 */	stb r4, 0x556(r3)
 /* 80348318 003118D8  4E 80 00 20 */	blr 
+.endfn KPADDisableDPD
 
 .balign 16, 0
-.global KPADEnableDPD
-KPADEnableDPD:
+.fn KPADEnableDPD, global
 /* 80348320 003118E0  1C 03 05 78 */	mulli r0, r3, 0x578
 /* 80348324 003118E4  3C 60 80 5D */	lis r3, lbl_805CE600@ha
 /* 80348328 003118E8  38 80 00 01 */	li r4, 1
@@ -3960,9 +3964,10 @@ KPADEnableDPD:
 /* 80348330 003118F0  7C 63 02 14 */	add r3, r3, r0
 /* 80348334 003118F4  98 83 05 56 */	stb r4, 0x556(r3)
 /* 80348338 003118F8  4E 80 00 20 */	blr
+.endfn KPADEnableDPD
 
 .balign 16, 0
-KPADiControlDpdCallback:
+.fn KPADiControlDpdCallback, local
 /* 80348340 00311900  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80348344 00311904  7C 08 02 A6 */	mflr r0
 /* 80348348 00311908  3C A0 80 5D */	lis r5, lbl_805CE600@ha
@@ -4001,9 +4006,10 @@ KPADiControlDpdCallback:
 /* 803483C8 00311988  7C 08 03 A6 */	mtlr r0
 /* 803483CC 0031198C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803483D0 00311990  4E 80 00 20 */	blr
+.endfn KPADiControlDpdCallback
 
 .balign 16, 0
-KPADiSamplingCallback:
+.fn KPADiSamplingCallback, local
 /* 803483E0 003119A0  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 803483E4 003119A4  7C 08 02 A6 */	mflr r0
 /* 803483E8 003119A8  90 01 00 64 */	stw r0, 0x64(r1)
@@ -4524,6 +4530,7 @@ KPADiSamplingCallback:
 /* 80348B3C 003120FC  7C 08 03 A6 */	mtlr r0
 /* 80348B40 00312100  38 21 00 60 */	addi r1, r1, 0x60
 /* 80348B44 00312104  4E 80 00 20 */	blr
+.endfn KPADiSamplingCallback
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

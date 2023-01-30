@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global sdpu_build_uuid_seq
-sdpu_build_uuid_seq:
+.fn sdpu_build_uuid_seq, global
 /* 803049F0 002CDFB0  38 00 00 35 */	li r0, 0x35
 /* 803049F4 002CDFB4  39 63 00 01 */	addi r11, r3, 1
 /* 803049F8 002CDFB8  7D 6A 5B 78 */	mr r10, r11
@@ -70,9 +69,9 @@ sdpu_build_uuid_seq:
 /* 80304AD0 002CE090  38 04 FF FF */	addi r0, r4, -1
 /* 80304AD4 002CE094  98 0A 00 00 */	stb r0, 0(r10)
 /* 80304AD8 002CE098  4E 80 00 20 */	blr 
+.endfn sdpu_build_uuid_seq
 
-.global sdp_snd_service_search_req
-sdp_snd_service_search_req:
+.fn sdp_snd_service_search_req, global
 /* 80304ADC 002CE09C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80304AE0 002CE0A0  7C 08 02 A6 */	mflr r0
 /* 80304AE4 002CE0A4  90 01 00 34 */	stw r0, 0x34(r1)
@@ -152,9 +151,9 @@ sdp_snd_service_search_req:
 /* 80304C00 002CE1C0  7C 08 03 A6 */	mtlr r0
 /* 80304C04 002CE1C4  38 21 00 30 */	addi r1, r1, 0x30
 /* 80304C08 002CE1C8  4E 80 00 20 */	blr 
+.endfn sdp_snd_service_search_req
 
-.global sdp_disc_connected
-sdp_disc_connected:
+.fn sdp_disc_connected, global
 /* 80304C0C 002CE1CC  88 03 04 75 */	lbz r0, 0x475(r3)
 /* 80304C10 002CE1D0  2C 00 00 00 */	cmpwi r0, 0
 /* 80304C14 002CE1D4  41 82 00 18 */	beq .L_80304C2C
@@ -169,9 +168,9 @@ sdp_disc_connected:
 /* 80304C34 002CE1F4  B0 03 04 6C */	sth r0, 0x46c(r3)
 /* 80304C38 002CE1F8  38 A0 00 00 */	li r5, 0
 /* 80304C3C 002CE1FC  4B FF FE A0 */	b sdp_snd_service_search_req
+.endfn sdp_disc_connected
 
-.global sdp_disc_server_rsp
-sdp_disc_server_rsp:
+.fn sdp_disc_server_rsp, global
 /* 80304C40 002CE200  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80304C44 002CE204  7C 08 02 A6 */	mflr r0
 /* 80304C48 002CE208  90 01 00 24 */	stw r0, 0x24(r1)
@@ -259,9 +258,9 @@ sdp_disc_server_rsp:
 /* 80304D74 002CE334  7C 08 03 A6 */	mtlr r0
 /* 80304D78 002CE338  38 21 00 20 */	addi r1, r1, 0x20
 /* 80304D7C 002CE33C  4E 80 00 20 */	blr 
+.endfn sdp_disc_server_rsp
 
-.global process_service_search_rsp
-process_service_search_rsp:
+.fn process_service_search_rsp, global
 /* 80304D80 002CE340  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80304D84 002CE344  7C 08 02 A6 */	mflr r0
 /* 80304D88 002CE348  38 A4 00 08 */	addi r5, r4, 8
@@ -351,9 +350,9 @@ process_service_search_rsp:
 /* 80304EBC 002CE47C  7C 08 03 A6 */	mtlr r0
 /* 80304EC0 002CE480  38 21 00 10 */	addi r1, r1, 0x10
 /* 80304EC4 002CE484  4E 80 00 20 */	blr 
+.endfn process_service_search_rsp
 
-.global process_service_attr_rsp
-process_service_attr_rsp:
+.fn process_service_attr_rsp, global
 /* 80304EC8 002CE488  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80304ECC 002CE48C  7C 08 02 A6 */	mflr r0
 /* 80304ED0 002CE490  90 01 00 34 */	stw r0, 0x34(r1)
@@ -536,9 +535,9 @@ process_service_attr_rsp:
 /* 80305164 002CE724  7C 08 03 A6 */	mtlr r0
 /* 80305168 002CE728  38 21 00 30 */	addi r1, r1, 0x30
 /* 8030516C 002CE72C  4E 80 00 20 */	blr 
+.endfn process_service_attr_rsp
 
-.global process_service_search_attr_rsp
-process_service_search_attr_rsp:
+.fn process_service_search_attr_rsp, global
 /* 80305170 002CE730  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80305174 002CE734  7C 08 02 A6 */	mflr r0
 /* 80305178 002CE738  90 01 00 34 */	stw r0, 0x34(r1)
@@ -734,9 +733,9 @@ process_service_search_attr_rsp:
 /* 80305438 002CE9F8  7C 08 03 A6 */	mtlr r0
 /* 8030543C 002CE9FC  38 21 00 30 */	addi r1, r1, 0x30
 /* 80305440 002CEA00  4E 80 00 20 */	blr 
+.endfn process_service_search_attr_rsp
 
-.global save_attr_seq
-save_attr_seq:
+.fn save_attr_seq, global
 /* 80305444 002CEA04  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80305448 002CEA08  7C 08 02 A6 */	mflr r0
 /* 8030544C 002CEA0C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -873,9 +872,9 @@ save_attr_seq:
 /* 80305624 002CEBE4  7C 08 03 A6 */	mtlr r0
 /* 80305628 002CEBE8  38 21 00 30 */	addi r1, r1, 0x30
 /* 8030562C 002CEBEC  4E 80 00 20 */	blr 
+.endfn save_attr_seq
 
-.global add_record
-add_record:
+.fn add_record, global
 /* 80305630 002CEBF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80305634 002CEBF4  7C 08 02 A6 */	mflr r0
 /* 80305638 002CEBF8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -921,9 +920,9 @@ add_record:
 /* 803056C4 002CEC84  7C 08 03 A6 */	mtlr r0
 /* 803056C8 002CEC88  38 21 00 10 */	addi r1, r1, 0x10
 /* 803056CC 002CEC8C  4E 80 00 20 */	blr 
+.endfn add_record
 
-.global add_attr
-add_attr:
+.fn add_attr, global
 /* 803056D0 002CEC90  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803056D4 002CEC94  7C 08 02 A6 */	mflr r0
 /* 803056D8 002CEC98  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1328,6 +1327,7 @@ switch_80305BD0:
 /* 80305C5C 002CF21C  7C 08 03 A6 */	mtlr r0
 /* 80305C60 002CF220  38 21 00 40 */	addi r1, r1, 0x40
 /* 80305C64 002CF224  4E 80 00 20 */	blr 
+.endfn add_attr
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

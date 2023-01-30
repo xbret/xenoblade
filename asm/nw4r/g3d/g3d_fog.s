@@ -2,13 +2,12 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __ct__Q34nw4r3g3d3FogFPQ34nw4r3g3d7FogData
-__ct__Q34nw4r3g3d3FogFPQ34nw4r3g3d7FogData:
+.fn __ct__Q34nw4r3g3d3FogFPQ34nw4r3g3d7FogData, global
 /* 803FD128 003C66E8  90 83 00 00 */	stw r4, 0(r3)
 /* 803FD12C 003C66EC  4E 80 00 20 */	blr 
+.endfn __ct__Q34nw4r3g3d3FogFPQ34nw4r3g3d7FogData
 
-.global Init__Q34nw4r3g3d3FogFv
-Init__Q34nw4r3g3d3FogFv:
+.fn Init__Q34nw4r3g3d3FogFv, global
 /* 803FD130 003C66F0  80 63 00 00 */	lwz r3, 0(r3)
 /* 803FD134 003C66F4  2C 03 00 00 */	cmpwi r3, 0
 /* 803FD138 003C66F8  4D 82 00 20 */	beqlr 
@@ -37,9 +36,9 @@ Init__Q34nw4r3g3d3FogFv:
 /* 803FD194 003C6754  B0 03 00 2C */	sth r0, 0x2c(r3)
 /* 803FD198 003C6758  B0 03 00 2E */	sth r0, 0x2e(r3)
 /* 803FD19C 003C675C  4E 80 00 20 */	blr 
+.endfn Init__Q34nw4r3g3d3FogFv
 
-.global CopyTo__Q34nw4r3g3d3FogCFPv
-CopyTo__Q34nw4r3g3d3FogCFPv:
+.fn CopyTo__Q34nw4r3g3d3FogCFPv, global
 /* 803FD1A0 003C6760  2C 04 00 00 */	cmpwi r4, 0
 /* 803FD1A4 003C6764  41 82 00 48 */	beq .L_803FD1EC
 /* 803FD1A8 003C6768  80 A3 00 00 */	lwz r5, 0(r3)
@@ -62,9 +61,9 @@ CopyTo__Q34nw4r3g3d3FogCFPv:
 .L_803FD1EC:
 /* 803FD1EC 003C67AC  38 60 00 00 */	li r3, 0
 /* 803FD1F0 003C67B0  4E 80 00 20 */	blr 
+.endfn CopyTo__Q34nw4r3g3d3FogCFPv
 
-.global GetFog__Q34nw4r3g3d3FogFP10_GXFogTypePfPfPfPfP8_GXColor
-GetFog__Q34nw4r3g3d3FogFP10_GXFogTypePfPfPfPfP8_GXColor:
+.fn GetFog__Q34nw4r3g3d3FogFP10_GXFogTypePfPfPfPfP8_GXColor, global
 /* 803FD1F4 003C67B4  80 63 00 00 */	lwz r3, 0(r3)
 /* 803FD1F8 003C67B8  2C 03 00 00 */	cmpwi r3, 0
 /* 803FD1FC 003C67BC  4D 82 00 20 */	beqlr 
@@ -104,9 +103,9 @@ GetFog__Q34nw4r3g3d3FogFP10_GXFogTypePfPfPfPfP8_GXColor:
 /* 803FD270 003C6830  88 03 00 17 */	lbz r0, 0x17(r3)
 /* 803FD274 003C6834  98 09 00 03 */	stb r0, 3(r9)
 /* 803FD278 003C6838  4E 80 00 20 */	blr 
+.endfn GetFog__Q34nw4r3g3d3FogFP10_GXFogTypePfPfPfPfP8_GXColor
 
-.global SetFogRangeAdjParam__Q34nw4r3g3d3FogFUsUsRCQ34nw4r4math5MTX44
-SetFogRangeAdjParam__Q34nw4r3g3d3FogFUsUsRCQ34nw4r4math5MTX44:
+.fn SetFogRangeAdjParam__Q34nw4r3g3d3FogFUsUsRCQ34nw4r4math5MTX44, global
 /* 803FD27C 003C683C  80 63 00 00 */	lwz r3, 0(r3)
 /* 803FD280 003C6840  2C 03 00 00 */	cmpwi r3, 0
 /* 803FD284 003C6844  4D 82 00 20 */	beqlr 
@@ -115,9 +114,9 @@ SetFogRangeAdjParam__Q34nw4r3g3d3FogFUsUsRCQ34nw4r4math5MTX44:
 /* 803FD290 003C6850  38 63 00 1C */	addi r3, r3, 0x1c
 /* 803FD294 003C6854  4B F2 0C 8C */	b GXInitFogAdjTable
 /* 803FD298 003C6858  4E 80 00 20 */	blr 
+.endfn SetFogRangeAdjParam__Q34nw4r3g3d3FogFUsUsRCQ34nw4r4math5MTX44
 
-.global SetGP__Q34nw4r3g3d3FogCFv
-SetGP__Q34nw4r3g3d3FogCFv:
+.fn SetGP__Q34nw4r3g3d3FogCFv, global
 /* 803FD29C 003C685C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803FD2A0 003C6860  7C 08 02 A6 */	mflr r0
 /* 803FD2A4 003C6864  90 01 00 24 */	stw r0, 0x24(r1)
@@ -154,6 +153,7 @@ SetGP__Q34nw4r3g3d3FogCFv:
 /* 803FD318 003C68D8  7C 08 03 A6 */	mtlr r0
 /* 803FD31C 003C68DC  38 21 00 20 */	addi r1, r1, 0x20
 /* 803FD320 003C68E0  4E 80 00 20 */	blr 
+.endfn SetGP__Q34nw4r3g3d3FogCFv
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

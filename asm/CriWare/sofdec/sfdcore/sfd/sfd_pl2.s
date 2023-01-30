@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global SFD_Pause
-SFD_Pause:
+.fn SFD_Pause, global
 /* 803C8BA8 00392168  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803C8BAC 0039216C  7C 08 02 A6 */	mflr r0
 /* 803C8BB0 00392170  90 01 00 24 */	stw r0, 0x24(r1)
@@ -142,9 +141,9 @@ SFD_Pause:
 /* 803C8D94 00392354  7C 08 03 A6 */	mtlr r0
 /* 803C8D98 00392358  38 21 00 20 */	addi r1, r1, 0x20
 /* 803C8D9C 0039235C  4E 80 00 20 */	blr 
+.endfn SFD_Pause
 
-.global SFPL2_Pause
-SFPL2_Pause:
+.fn SFPL2_Pause, global
 /* 803C8DA0 00392360  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803C8DA4 00392364  7C 08 02 A6 */	mflr r0
 /* 803C8DA8 00392368  2C 04 00 01 */	cmpwi r4, 1
@@ -253,9 +252,9 @@ SFPL2_Pause:
 /* 803C8F28 003924E8  7C 08 03 A6 */	mtlr r0
 /* 803C8F2C 003924EC  38 21 00 20 */	addi r1, r1, 0x20
 /* 803C8F30 003924F0  4E 80 00 20 */	blr 
+.endfn SFPL2_Pause
 
-.global SFD_Standby
-SFD_Standby:
+.fn SFD_Standby, global
 /* 803C8F34 003924F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803C8F38 003924F8  7C 08 02 A6 */	mflr r0
 /* 803C8F3C 003924FC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -279,13 +278,14 @@ SFD_Standby:
 /* 803C8F7C 0039253C  7C 08 03 A6 */	mtlr r0
 /* 803C8F80 00392540  38 21 00 10 */	addi r1, r1, 0x10
 /* 803C8F84 00392544  4E 80 00 20 */	blr 
+.endfn SFD_Standby
 
-.global SFPL2_Standby
-SFPL2_Standby:
+.fn SFPL2_Standby, global
 /* 803C8F88 00392548  38 00 00 03 */	li r0, 3
 /* 803C8F8C 0039254C  90 03 00 54 */	stw r0, 0x54(r3)
 /* 803C8F90 00392550  38 60 00 00 */	li r3, 0
 /* 803C8F94 00392554  4E 80 00 20 */	blr 
+.endfn SFPL2_Standby
 
 .global func_803C8F98
 func_803C8F98:

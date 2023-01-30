@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global Console_Printf__Q24nw4r2dbFPQ44nw4r2db6detail11ConsoleHeadPCce
-Console_Printf__Q24nw4r2dbFPQ44nw4r2db6detail11ConsoleHeadPCce:
+.fn Console_Printf__Q24nw4r2dbFPQ44nw4r2db6detail11ConsoleHeadPCce, global
 /* 803D7244 003A0804  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 803D7248 003A0808  40 86 00 24 */	bne cr1, .L_803D726C
 /* 803D724C 003A080C  D8 21 00 28 */	stfd f1, 0x28(r1)
@@ -31,9 +30,9 @@ Console_Printf__Q24nw4r2dbFPQ44nw4r2db6detail11ConsoleHeadPCce:
 /* 803D72A0 003A0860  90 01 00 70 */	stw r0, 0x70(r1)
 /* 803D72A4 003A0864  38 21 00 80 */	addi r1, r1, 0x80
 /* 803D72A8 003A0868  4E 80 00 20 */	blr 
+.endfn Console_Printf__Q24nw4r2dbFPQ44nw4r2db6detail11ConsoleHeadPCce
 
-.global Console_GetTotalLines__Q24nw4r2dbFPQ44nw4r2db6detail11ConsoleHead
-Console_GetTotalLines__Q24nw4r2dbFPQ44nw4r2db6detail11ConsoleHead:
+.fn Console_GetTotalLines__Q24nw4r2dbFPQ44nw4r2db6detail11ConsoleHead, global
 /* 803D72AC 003A086C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D72B0 003A0870  7C 08 02 A6 */	mflr r0
 /* 803D72B4 003A0874  90 01 00 14 */	stw r0, 0x14(r1)
@@ -63,6 +62,7 @@ Console_GetTotalLines__Q24nw4r2dbFPQ44nw4r2db6detail11ConsoleHead:
 /* 803D730C 003A08CC  7C 08 03 A6 */	mtlr r0
 /* 803D7310 003A08D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D7314 003A08D4  4E 80 00 20 */	blr 
+.endfn Console_GetTotalLines__Q24nw4r2dbFPQ44nw4r2db6detail11ConsoleHead
 
 #probably in a separate file (db_DbgPrintBase?)
 .global SetTextColor__Q34nw4r2ut10CharWriterFQ34nw4r2ut5Color

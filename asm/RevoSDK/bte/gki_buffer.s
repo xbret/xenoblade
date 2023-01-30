@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global gki_init_free_queue
-gki_init_free_queue:
+.fn gki_init_free_queue, global
 /* 802DAD60 002A4320  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802DAD64 002A4324  7C 08 02 A6 */	mflr r0
 /* 802DAD68 002A4328  90 01 00 44 */	stw r0, 0x44(r1)
@@ -145,10 +144,10 @@ gki_init_free_queue:
 /* 802DAF74 002A4534  7C 08 03 A6 */	mtlr r0
 /* 802DAF78 002A4538  38 21 00 40 */	addi r1, r1, 0x40
 /* 802DAF7C 002A453C  4E 80 00 20 */	blr 
+.endfn gki_init_free_queue
 
 .balign 16, 0
-.global gki_buffer_init
-gki_buffer_init:
+.fn gki_buffer_init, global
 /* 802DAF80 002A4540  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DAF84 002A4544  7C 08 02 A6 */	mflr r0
 /* 802DAF88 002A4548  3C 60 80 59 */	lis r3, lbl_80593140@ha
@@ -322,19 +321,19 @@ gki_buffer_init:
 /* 802DB220 002A47E0  7C 08 03 A6 */	mtlr r0
 /* 802DB224 002A47E4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DB228 002A47E8  4E 80 00 20 */	blr 
+.endfn gki_buffer_init
 
 .balign 16, 0
-.global GKI_init_q
-GKI_init_q:
+.fn GKI_init_q, global
 /* 802DB230 002A47F0  38 00 00 00 */	li r0, 0
 /* 802DB234 002A47F4  90 03 00 04 */	stw r0, 4(r3)
 /* 802DB238 002A47F8  90 03 00 00 */	stw r0, 0(r3)
 /* 802DB23C 002A47FC  B0 03 00 08 */	sth r0, 8(r3)
 /* 802DB240 002A4800  4E 80 00 20 */	blr 
+.endfn GKI_init_q
 
 .balign 16, 0
-.global GKI_getbuf
-GKI_getbuf:
+.fn GKI_getbuf, global
 /* 802DB250 002A4810  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DB254 002A4814  7C 08 02 A6 */	mflr r0
 /* 802DB258 002A4818  3C 80 80 59 */	lis r4, lbl_80593140@ha
@@ -450,10 +449,10 @@ GKI_getbuf:
 /* 802DB3E4 002A49A4  7C 08 03 A6 */	mtlr r0
 /* 802DB3E8 002A49A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DB3EC 002A49AC  4E 80 00 20 */	blr 
+.endfn GKI_getbuf
 
 .balign 16, 0
-.global GKI_getpoolbuf
-GKI_getpoolbuf:
+.fn GKI_getpoolbuf, global
 /* 802DB3F0 002A49B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DB3F4 002A49B4  7C 08 02 A6 */	mflr r0
 /* 802DB3F8 002A49B8  3C 80 80 59 */	lis r4, lbl_80593140@ha
@@ -517,10 +516,10 @@ GKI_getpoolbuf:
 /* 802DB4CC 002A4A8C  7C 08 03 A6 */	mtlr r0
 /* 802DB4D0 002A4A90  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DB4D4 002A4A94  4E 80 00 20 */	blr 
+.endfn GKI_getpoolbuf
 
 .balign 16, 0
-.global GKI_freebuf
-GKI_freebuf:
+.fn GKI_freebuf, global
 /* 802DB4E0 002A4AA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DB4E4 002A4AA4  7C 08 02 A6 */	mflr r0
 /* 802DB4E8 002A4AA8  3C A0 80 54 */	lis r5, lbl_80543E18@ha
@@ -626,10 +625,10 @@ GKI_freebuf:
 /* 802DB644 002A4C04  7C 08 03 A6 */	mtlr r0
 /* 802DB648 002A4C08  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DB64C 002A4C0C  4E 80 00 20 */	blr 
+.endfn GKI_freebuf
 
 .balign 16, 0
-.global GKI_get_buf_size
-GKI_get_buf_size:
+.fn GKI_get_buf_size, global
 /* 802DB650 002A4C10  38 63 FF F8 */	addi r3, r3, -8
 /* 802DB654 002A4C14  54 60 07 FF */	clrlwi. r0, r3, 0x1f
 /* 802DB658 002A4C18  41 82 00 0C */	beq .L_802DB664
@@ -649,10 +648,10 @@ GKI_get_buf_size:
 .L_802DB68C:
 /* 802DB68C 002A4C4C  38 60 00 00 */	li r3, 0
 /* 802DB690 002A4C50  4E 80 00 20 */	blr 
+.endfn GKI_get_buf_size
 
 .balign 16, 0
-.global GKI_send_msg
-GKI_send_msg:
+.fn GKI_send_msg, global
 /* 802DB6A0 002A4C60  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DB6A4 002A4C64  7C 08 02 A6 */	mflr r0
 /* 802DB6A8 002A4C68  3C E0 80 59 */	lis r7, lbl_80593140@ha
@@ -776,10 +775,10 @@ GKI_send_msg:
 /* 802DB850 002A4E10  7C 08 03 A6 */	mtlr r0
 /* 802DB854 002A4E14  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DB858 002A4E18  4E 80 00 20 */	blr 
+.endfn GKI_send_msg
 
 .balign 16, 0
-.global GKI_read_mbox
-GKI_read_mbox:
+.fn GKI_read_mbox, global
 /* 802DB860 002A4E20  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DB864 002A4E24  7C 08 02 A6 */	mflr r0
 /* 802DB868 002A4E28  90 01 00 24 */	stw r0, 0x24(r1)
@@ -828,10 +827,10 @@ GKI_read_mbox:
 /* 802DB904 002A4EC4  7C 08 03 A6 */	mtlr r0
 /* 802DB908 002A4EC8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DB90C 002A4ECC  4E 80 00 20 */	blr 
+.endfn GKI_read_mbox
 
 .balign 16, 0
-.global GKI_enqueue
-GKI_enqueue:
+.fn GKI_enqueue, global
 /* 802DB910 002A4ED0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DB914 002A4ED4  7C 08 02 A6 */	mflr r0
 /* 802DB918 002A4ED8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -921,10 +920,10 @@ GKI_enqueue:
 /* 802DBA40 002A5000  7C 08 03 A6 */	mtlr r0
 /* 802DBA44 002A5004  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DBA48 002A5008  4E 80 00 20 */	blr 
+.endfn GKI_enqueue
 
 .balign 16, 0
-.global GKI_enqueue_head
-GKI_enqueue_head:
+.fn GKI_enqueue_head, global
 /* 802DBA50 002A5010  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DBA54 002A5014  7C 08 02 A6 */	mflr r0
 /* 802DBA58 002A5018  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1015,10 +1014,10 @@ GKI_enqueue_head:
 /* 802DBB84 002A5144  7C 08 03 A6 */	mtlr r0
 /* 802DBB88 002A5148  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DBB8C 002A514C  4E 80 00 20 */	blr 
+.endfn GKI_enqueue_head
 
 .balign 16, 0
-.global GKI_dequeue
-GKI_dequeue:
+.fn GKI_dequeue, global
 /* 802DBB90 002A5150  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DBB94 002A5154  7C 08 02 A6 */	mflr r0
 /* 802DBB98 002A5158  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1064,10 +1063,10 @@ GKI_dequeue:
 /* 802DBC24 002A51E4  7C 08 03 A6 */	mtlr r0
 /* 802DBC28 002A51E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DBC2C 002A51EC  4E 80 00 20 */	blr 
+.endfn GKI_dequeue
 
 .balign 16, 0
-.global GKI_remove_from_queue
-GKI_remove_from_queue:
+.fn GKI_remove_from_queue, global
 /* 802DBC30 002A51F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DBC34 002A51F4  7C 08 02 A6 */	mflr r0
 /* 802DBC38 002A51F8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1123,16 +1122,16 @@ GKI_remove_from_queue:
 /* 802DBCE8 002A52A8  7C 08 03 A6 */	mtlr r0
 /* 802DBCEC 002A52AC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DBCF0 002A52B0  4E 80 00 20 */	blr 
+.endfn GKI_remove_from_queue
 
 .balign 16, 0
-.global GKI_getfirst
-GKI_getfirst:
+.fn GKI_getfirst, global
 /* 802DBD00 002A52C0  80 63 00 00 */	lwz r3, 0(r3)
 /* 802DBD04 002A52C4  4E 80 00 20 */	blr 
+.endfn GKI_getfirst
 
 .balign 16, 0
-.global GKI_getnext
-GKI_getnext:
+.fn GKI_getnext, global
 /* 802DBD10 002A52D0  80 63 FF F8 */	lwz r3, -8(r3)
 /* 802DBD14 002A52D4  2C 03 00 00 */	cmpwi r3, 0
 /* 802DBD18 002A52D8  41 82 00 0C */	beq .L_802DBD24
@@ -1141,18 +1140,18 @@ GKI_getnext:
 .L_802DBD24:
 /* 802DBD24 002A52E4  38 60 00 00 */	li r3, 0
 /* 802DBD28 002A52E8  4E 80 00 20 */	blr 
+.endfn GKI_getnext
 
 .balign 16, 0
-.global GKI_queue_is_empty
-GKI_queue_is_empty:
+.fn GKI_queue_is_empty, global
 /* 802DBD30 002A52F0  A0 03 00 08 */	lhz r0, 8(r3)
 /* 802DBD34 002A52F4  7C 00 00 34 */	cntlzw r0, r0
 /* 802DBD38 002A52F8  54 03 DE 3E */	rlwinm r3, r0, 0x1b, 0x18, 0x1f
 /* 802DBD3C 002A52FC  4E 80 00 20 */	blr 
+.endfn GKI_queue_is_empty
 
 .balign 16, 0
-.global GKI_create_pool
-GKI_create_pool:
+.fn GKI_create_pool, global
 /* 802DBD40 002A5300  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DBD44 002A5304  7C 08 02 A6 */	mflr r0
 /* 802DBD48 002A5308  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1383,10 +1382,10 @@ GKI_create_pool:
 /* 802DC07C 002A563C  7C 08 03 A6 */	mtlr r0
 /* 802DC080 002A5640  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DC084 002A5644  4E 80 00 20 */	blr 
+.endfn GKI_create_pool
 
 .balign 16, 0
-.global GKI_delete_pool
-GKI_delete_pool:
+.fn GKI_delete_pool, global
 /* 802DC090 002A5650  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DC094 002A5654  7C 08 02 A6 */	mflr r0
 /* 802DC098 002A5658  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1486,6 +1485,7 @@ GKI_delete_pool:
 /* 802DC1EC 002A57AC  7C 08 03 A6 */	mtlr r0
 /* 802DC1F0 002A57B0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DC1F4 002A57B4  4E 80 00 20 */	blr 
+.endfn GKI_delete_pool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 .global lbl_80543E18

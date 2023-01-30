@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global OSInitMessageQueue
-OSInitMessageQueue:
+.fn OSInitMessageQueue, global
 /* 803591A0 00322760  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803591A4 00322764  7C 08 02 A6 */	mflr r0
 /* 803591A8 00322768  90 01 00 24 */	stw r0, 0x24(r1)
@@ -29,10 +28,10 @@ OSInitMessageQueue:
 /* 803591F4 003227B4  7C 08 03 A6 */	mtlr r0
 /* 803591F8 003227B8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803591FC 003227BC  4E 80 00 20 */	blr 
+.endfn OSInitMessageQueue
 
 .balign 16, 0
-.global OSSendMessage
-OSSendMessage:
+.fn OSSendMessage, global
 /* 80359200 003227C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80359204 003227C4  7C 08 02 A6 */	mflr r0
 /* 80359208 003227C8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -87,10 +86,10 @@ OSSendMessage:
 /* 803592BC 0032287C  7C 08 03 A6 */	mtlr r0
 /* 803592C0 00322880  38 21 00 20 */	addi r1, r1, 0x20
 /* 803592C4 00322884  4E 80 00 20 */	blr 
+.endfn OSSendMessage
 
 .balign 16, 0
-.global OSReceiveMessage
-OSReceiveMessage:
+.fn OSReceiveMessage, global
 /* 803592D0 00322890  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803592D4 00322894  7C 08 02 A6 */	mflr r0
 /* 803592D8 00322898  90 01 00 24 */	stw r0, 0x24(r1)
@@ -151,6 +150,7 @@ OSReceiveMessage:
 /* 803593A0 00322960  7C 08 03 A6 */	mtlr r0
 /* 803593A4 00322964  38 21 00 20 */	addi r1, r1, 0x20
 /* 803593A8 00322968  4E 80 00 20 */	blr 
+.endfn OSReceiveMessage
 
 .balign 16, 0
 .global OSJamMessage

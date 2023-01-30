@@ -3,13 +3,12 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global SFHDS_Finish
-SFHDS_Finish:
+.fn SFHDS_Finish, global
 /* 803C005C 0038961C  48 01 05 B4 */	b SFH_Finish
+.endfn SFHDS_Finish
 
 
-.global SFHDS_InitFhd
-SFHDS_InitFhd:
+.fn SFHDS_InitFhd, global
 /* 803C0060 00389620  38 00 00 00 */	li r0, 0
 /* 803C0064 00389624  90 03 00 00 */	stw r0, 0(r3)
 /* 803C0068 00389628  90 03 00 04 */	stw r0, 4(r3)
@@ -17,17 +16,17 @@ SFHDS_InitFhd:
 /* 803C0070 00389630  90 03 00 0C */	stw r0, 0xc(r3)
 /* 803C0074 00389634  90 03 00 90 */	stw r0, 0x90(r3)
 /* 803C0078 00389638  4E 80 00 20 */	blr 
+.endfn SFHDS_InitFhd
 
-.global SFHDS_FinishFhd
-SFHDS_FinishFhd:
+.fn SFHDS_FinishFhd, global
 /* 803C007C 0038963C  38 00 00 00 */	li r0, 0
 /* 803C0080 00389640  90 03 00 00 */	stw r0, 0(r3)
 /* 803C0084 00389644  90 03 00 0C */	stw r0, 0xc(r3)
 /* 803C0088 00389648  90 03 00 90 */	stw r0, 0x90(r3)
 /* 803C008C 0038964C  4E 80 00 20 */	blr 
+.endfn SFHDS_FinishFhd
 
-.global SFHDS_SetHdr
-SFHDS_SetHdr:
+.fn SFHDS_SetHdr, global
 /* 803C0090 00389650  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 803C0094 00389654  7C 08 02 A6 */	mflr r0
 /* 803C0098 00389658  2C 04 00 02 */	cmpwi r4, 2
@@ -186,9 +185,9 @@ SFHDS_SetHdr:
 /* 803C02B4 00389874  7C 08 03 A6 */	mtlr r0
 /* 803C02B8 00389878  38 21 00 60 */	addi r1, r1, 0x60
 /* 803C02BC 0038987C  4E 80 00 20 */	blr 
+.endfn SFHDS_SetHdr
 
-.global SFHDS_ReprocessHdr
-SFHDS_ReprocessHdr:
+.fn SFHDS_ReprocessHdr, global
 /* 803C02C0 00389880  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803C02C4 00389884  7C 08 02 A6 */	mflr r0
 /* 803C02C8 00389888  90 01 00 34 */	stw r0, 0x34(r1)
@@ -255,10 +254,10 @@ SFHDS_ReprocessHdr:
 /* 803C03A0 00389960  7C 08 03 A6 */	mtlr r0
 /* 803C03A4 00389964  38 21 00 30 */	addi r1, r1, 0x30
 /* 803C03A8 00389968  4E 80 00 20 */	blr 
+.endfn SFHDS_ReprocessHdr
 
 
-.global sfhds_DoProcessHdr
-sfhds_DoProcessHdr:
+.fn sfhds_DoProcessHdr, global
 /* 803C03AC 0038996C  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 803C03B0 00389970  7C 08 02 A6 */	mflr r0
 /* 803C03B4 00389974  90 01 00 84 */	stw r0, 0x84(r1)
@@ -571,9 +570,9 @@ sfhds_DoProcessHdr:
 /* 803C07C4 00389D84  7C 08 03 A6 */	mtlr r0
 /* 803C07C8 00389D88  38 21 00 80 */	addi r1, r1, 0x80
 /* 803C07CC 00389D8C  4E 80 00 20 */	blr 
+.endfn sfhds_DoProcessHdr
 
-.global sfhds_AnlyVideo
-sfhds_AnlyVideo:
+.fn sfhds_AnlyVideo, global
 /* 803C07D0 00389D90  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803C07D4 00389D94  7C 08 02 A6 */	mflr r0
 /* 803C07D8 00389D98  90 01 00 54 */	stw r0, 0x54(r1)
@@ -738,9 +737,9 @@ sfhds_AnlyVideo:
 /* 803C09F8 00389FB8  7C 08 03 A6 */	mtlr r0
 /* 803C09FC 00389FBC  38 21 00 50 */	addi r1, r1, 0x50
 /* 803C0A00 00389FC0  4E 80 00 20 */	blr 
+.endfn sfhds_AnlyVideo
 
-.global SFHDS_GetMuxVerNum
-SFHDS_GetMuxVerNum:
+.fn SFHDS_GetMuxVerNum, global
 /* 803C0A04 00389FC4  80 03 00 84 */	lwz r0, 0x84(r3)
 /* 803C0A08 00389FC8  2C 00 00 00 */	cmpwi r0, 0
 /* 803C0A0C 00389FCC  41 82 00 18 */	beq .L_803C0A24
@@ -752,6 +751,7 @@ SFHDS_GetMuxVerNum:
 .L_803C0A24:
 /* 803C0A24 00389FE4  38 60 00 00 */	li r3, 0
 /* 803C0A28 00389FE8  4E 80 00 20 */	blr 
+.endfn SFHDS_GetMuxVerNum
 
 .global SFHDS_GetColType
 SFHDS_GetColType:

@@ -2,16 +2,15 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global ADXPD_Init
-ADXPD_Init:
+.fn ADXPD_Init, global
 /* 80385720 0034ECE0  3C 60 80 5F */	lis r3, lbl_805E8600@ha
 /* 80385724 0034ECE4  38 80 00 00 */	li r4, 0
 /* 80385728 0034ECE8  38 63 86 00 */	addi r3, r3, lbl_805E8600@l
 /* 8038572C 0034ECEC  38 A0 03 C0 */	li r5, 0x3c0
 /* 80385730 0034ECF0  4B C7 EC 20 */	b memset
+.endfn ADXPD_Init
 
-.global ADXPD_Create
-ADXPD_Create:
+.fn ADXPD_Create, global
 /* 80385734 0034ECF4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80385738 0034ECF8  7C 08 02 A6 */	mflr r0
 /* 8038573C 0034ECFC  3C 60 80 5F */	lis r3, lbl_805E8600@ha
@@ -95,17 +94,17 @@ ADXPD_Create:
 /* 80385864 0034EE24  7C 08 03 A6 */	mtlr r0
 /* 80385868 0034EE28  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038586C 0034EE2C  4E 80 00 20 */	blr 
+.endfn ADXPD_Create
 
-.global ADXPD_SetCoef
-ADXPD_SetCoef:
+.fn ADXPD_SetCoef, global
 /* 80385870 0034EE30  7C 66 1B 78 */	mr r6, r3
 /* 80385874 0034EE34  7C A3 2B 78 */	mr r3, r5
 /* 80385878 0034EE38  38 A6 00 30 */	addi r5, r6, 0x30
 /* 8038587C 0034EE3C  38 C6 00 32 */	addi r6, r6, 0x32
 /* 80385880 0034EE40  48 00 42 44 */	b ADX_GetCoefficient
+.endfn ADXPD_SetCoef
 
-.global ADXPD_SetDly
-ADXPD_SetDly:
+.fn ADXPD_SetDly, global
 /* 80385884 0034EE44  A8 04 00 00 */	lha r0, 0(r4)
 /* 80385888 0034EE48  B0 03 00 28 */	sth r0, 0x28(r3)
 /* 8038588C 0034EE4C  A8 05 00 00 */	lha r0, 0(r5)
@@ -115,9 +114,9 @@ ADXPD_SetDly:
 /* 8038589C 0034EE5C  A8 05 00 02 */	lha r0, 2(r5)
 /* 803858A0 0034EE60  B0 03 00 2E */	sth r0, 0x2e(r3)
 /* 803858A4 0034EE64  4E 80 00 20 */	blr 
+.endfn ADXPD_SetDly
 
-.global ADXPD_GetDly
-ADXPD_GetDly:
+.fn ADXPD_GetDly, global
 /* 803858A8 0034EE68  A8 03 00 28 */	lha r0, 0x28(r3)
 /* 803858AC 0034EE6C  B0 04 00 00 */	sth r0, 0(r4)
 /* 803858B0 0034EE70  A8 03 00 2A */	lha r0, 0x2a(r3)
@@ -127,16 +126,16 @@ ADXPD_GetDly:
 /* 803858C0 0034EE80  A8 03 00 2E */	lha r0, 0x2e(r3)
 /* 803858C4 0034EE84  B0 05 00 02 */	sth r0, 2(r5)
 /* 803858C8 0034EE88  4E 80 00 20 */	blr 
+.endfn ADXPD_GetDly
 
-.global ADXPD_SetExtPrm
-ADXPD_SetExtPrm:
+.fn ADXPD_SetExtPrm, global
 /* 803858CC 0034EE8C  B0 83 00 34 */	sth r4, 0x34(r3)
 /* 803858D0 0034EE90  B0 A3 00 36 */	sth r5, 0x36(r3)
 /* 803858D4 0034EE94  B0 C3 00 38 */	sth r6, 0x38(r3)
 /* 803858D8 0034EE98  4E 80 00 20 */	blr 
+.endfn ADXPD_SetExtPrm
 
-.global ADXPD_GetExtPrm
-ADXPD_GetExtPrm:
+.fn ADXPD_GetExtPrm, global
 /* 803858DC 0034EE9C  A8 03 00 34 */	lha r0, 0x34(r3)
 /* 803858E0 0034EEA0  B0 04 00 00 */	sth r0, 0(r4)
 /* 803858E4 0034EEA4  A8 03 00 36 */	lha r0, 0x36(r3)
@@ -144,9 +143,9 @@ ADXPD_GetExtPrm:
 /* 803858EC 0034EEAC  A8 03 00 38 */	lha r0, 0x38(r3)
 /* 803858F0 0034EEB0  B0 06 00 00 */	sth r0, 0(r6)
 /* 803858F4 0034EEB4  4E 80 00 20 */	blr 
+.endfn ADXPD_GetExtPrm
 
-.global ADXPD_Destroy
-ADXPD_Destroy:
+.fn ADXPD_Destroy, global
 /* 803858F8 0034EEB8  2C 03 00 00 */	cmpwi r3, 0
 /* 803858FC 0034EEBC  4D 82 00 20 */	beqlr 
 /* 80385900 0034EEC0  38 00 00 00 */	li r0, 0
@@ -155,14 +154,14 @@ ADXPD_Destroy:
 /* 8038590C 0034EECC  38 A0 00 3C */	li r5, 0x3c
 /* 80385910 0034EED0  4B C7 EA 40 */	b memset
 /* 80385914 0034EED4  4E 80 00 20 */	blr 
+.endfn ADXPD_Destroy
 
-.global ADXPD_GetStat
-ADXPD_GetStat:
+.fn ADXPD_GetStat, global
 /* 80385918 0034EED8  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 8038591C 0034EEDC  4E 80 00 20 */	blr 
+.endfn ADXPD_GetStat
 
-.global ADXPD_EntryMono
-ADXPD_EntryMono:
+.fn ADXPD_EntryMono, global
 /* 80385920 0034EEE0  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 80385924 0034EEE4  2C 00 00 00 */	cmpwi r0, 0
 /* 80385928 0034EEE8  40 82 00 24 */	bne .L_8038594C
@@ -177,9 +176,9 @@ ADXPD_EntryMono:
 .L_8038594C:
 /* 8038594C 0034EF0C  38 60 00 00 */	li r3, 0
 /* 80385950 0034EF10  4E 80 00 20 */	blr 
+.endfn ADXPD_EntryMono
 
-.global ADXPD_EntrySte
-ADXPD_EntrySte:
+.fn ADXPD_EntrySte, global
 /* 80385954 0034EF14  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 80385958 0034EF18  2C 00 00 00 */	cmpwi r0, 0
 /* 8038595C 0034EF1C  40 82 00 24 */	bne .L_80385980
@@ -194,9 +193,9 @@ ADXPD_EntrySte:
 .L_80385980:
 /* 80385980 0034EF40  38 60 00 00 */	li r3, 0
 /* 80385984 0034EF44  4E 80 00 20 */	blr 
+.endfn ADXPD_EntrySte
 
-.global ADXPD_EntryPl2
-ADXPD_EntryPl2:
+.fn ADXPD_EntryPl2, global
 /* 80385988 0034EF48  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 8038598C 0034EF4C  2C 00 00 00 */	cmpwi r0, 0
 /* 80385990 0034EF50  40 82 00 24 */	bne .L_803859B4
@@ -211,9 +210,9 @@ ADXPD_EntryPl2:
 .L_803859B4:
 /* 803859B4 0034EF74  38 60 00 00 */	li r3, 0
 /* 803859B8 0034EF78  4E 80 00 20 */	blr 
+.endfn ADXPD_EntryPl2
 
-.global ADXPD_Start
-ADXPD_Start:
+.fn ADXPD_Start, global
 /* 803859BC 0034EF7C  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 803859C0 0034EF80  2C 00 00 00 */	cmpwi r0, 0
 /* 803859C4 0034EF84  4C 82 00 20 */	bnelr 
@@ -222,32 +221,32 @@ ADXPD_Start:
 /* 803859D0 0034EF90  90 83 00 10 */	stw r4, 0x10(r3)
 /* 803859D4 0034EF94  90 03 00 0C */	stw r0, 0xc(r3)
 /* 803859D8 0034EF98  4E 80 00 20 */	blr 
+.endfn ADXPD_Start
 
-.global ADXPD_Stop
-ADXPD_Stop:
+.fn ADXPD_Stop, global
 /* 803859DC 0034EF9C  38 00 00 00 */	li r0, 0
 /* 803859E0 0034EFA0  38 80 00 00 */	li r4, 0
 /* 803859E4 0034EFA4  90 03 00 0C */	stw r0, 0xc(r3)
 /* 803859E8 0034EFA8  38 A0 00 08 */	li r5, 8
 /* 803859EC 0034EFAC  38 63 00 28 */	addi r3, r3, 0x28
 /* 803859F0 0034EFB0  4B C7 E9 60 */	b memset
+.endfn ADXPD_Stop
 
-.global ADXPD_Reset
-ADXPD_Reset:
+.fn ADXPD_Reset, global
 /* 803859F4 0034EFB4  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 803859F8 0034EFB8  2C 00 00 03 */	cmpwi r0, 3
 /* 803859FC 0034EFBC  4C 82 00 20 */	bnelr 
 /* 80385A00 0034EFC0  38 00 00 00 */	li r0, 0
 /* 80385A04 0034EFC4  90 03 00 0C */	stw r0, 0xc(r3)
 /* 80385A08 0034EFC8  4E 80 00 20 */	blr 
+.endfn ADXPD_Reset
 
-.global ADXPD_GetNumBlk
-ADXPD_GetNumBlk:
+.fn ADXPD_GetNumBlk, global
 /* 80385A0C 0034EFCC  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 80385A10 0034EFD0  4E 80 00 20 */	blr 
+.endfn ADXPD_GetNumBlk
 
-.global ADXPD_ExecHndl
-ADXPD_ExecHndl:
+.fn ADXPD_ExecHndl, global
 /* 80385A14 0034EFD4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80385A18 0034EFD8  7C 08 02 A6 */	mflr r0
 /* 80385A1C 0034EFDC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -313,6 +312,7 @@ ADXPD_ExecHndl:
 /* 80385AFC 0034F0BC  7C 08 03 A6 */	mtlr r0
 /* 80385B00 0034F0C0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80385B04 0034F0C4  4E 80 00 20 */	blr 
+.endfn ADXPD_ExecHndl
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

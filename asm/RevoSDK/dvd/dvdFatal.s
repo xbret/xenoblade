@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global __DVDShowFatalMessage
-__DVDShowFatalMessage:
+.fn __DVDShowFatalMessage, global
 /* 80310200 002D97C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80310204 002D97C4  7C 08 02 A6 */	mflr r0
 /* 80310208 002D97C8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -63,10 +62,10 @@ __DVDShowFatalMessage:
 /* 803102C0 002D9880  7C 08 03 A6 */	mtlr r0
 /* 803102C4 002D9884  38 21 00 20 */	addi r1, r1, 0x20
 /* 803102C8 002D9888  4E 80 00 20 */	blr 
+.endfn __DVDShowFatalMessage
 
 .balign 16, 0
-.global DVDSetAutoFatalMessaging
-DVDSetAutoFatalMessaging:
+.fn DVDSetAutoFatalMessaging, global
 /* 803102D0 002D9890  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803102D4 002D9894  7C 08 02 A6 */	mflr r0
 /* 803102D8 002D9898  90 01 00 14 */	stw r0, 0x14(r1)
@@ -91,25 +90,26 @@ DVDSetAutoFatalMessaging:
 /* 80310320 002D98E0  7C 08 03 A6 */	mtlr r0
 /* 80310324 002D98E4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80310328 002D98E8  4E 80 00 20 */	blr 
+.endfn DVDSetAutoFatalMessaging
 
 .balign 16, 0
-.global __DVDGetAutoFatalMessaging
-__DVDGetAutoFatalMessaging:
+.fn __DVDGetAutoFatalMessaging, global
 /* 80310330 002D98F0  80 6D B7 08 */	lwz r3, lbl_80667888@sda21(r13)
 /* 80310334 002D98F4  7C 03 00 D0 */	neg r0, r3
 /* 80310338 002D98F8  7C 00 1B 78 */	or r0, r0, r3
 /* 8031033C 002D98FC  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 80310340 002D9900  4E 80 00 20 */	blr 
+.endfn __DVDGetAutoFatalMessaging
 
 .balign 16, 0
-.global __DVDPrintFatalMessage
-__DVDPrintFatalMessage:
+.fn __DVDPrintFatalMessage, global
 /* 80310350 002D9910  81 8D B7 08 */	lwz r12, lbl_80667888@sda21(r13)
 /* 80310354 002D9914  2C 0C 00 00 */	cmpwi r12, 0
 /* 80310358 002D9918  4D 82 00 20 */	beqlr 
 /* 8031035C 002D991C  7D 89 03 A6 */	mtctr r12
 /* 80310360 002D9920  4E 80 04 20 */	bctr 
 /* 80310364 002D9924  4E 80 00 20 */	blr
+.endfn __DVDPrintFatalMessage
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 .global lbl_8050E3A8

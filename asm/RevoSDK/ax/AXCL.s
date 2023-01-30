@@ -3,14 +3,13 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global __AXGetCommandListCycles
-__AXGetCommandListCycles:
+.fn __AXGetCommandListCycles, global
 /* 802D2F70 0029C530  80 6D B4 F4 */	lwz r3, lbl_80667674@sda21(r13)
 /* 802D2F74 0029C534  4E 80 00 20 */	blr 
+.endfn __AXGetCommandListCycles
 
 .balign 16, 0
-.global __AXGetCommandListAddress
-__AXGetCommandListAddress:
+.fn __AXGetCommandListAddress, global
 /* 802D2F80 0029C540  80 AD B5 00 */	lwz r5, lbl_80667680@sda21(r13)
 /* 802D2F84 0029C544  3C 80 80 58 */	lis r4, lbl_80580AC0@ha
 /* 802D2F88 0029C548  38 84 0A C0 */	addi r4, r4, lbl_80580AC0@l
@@ -23,10 +22,10 @@ __AXGetCommandListAddress:
 /* 802D2FA4 0029C564  90 0D B4 FC */	stw r0, lbl_8066767C@sda21(r13)
 /* 802D2FA8 0029C568  7C 64 2A 14 */	add r3, r4, r5
 /* 802D2FAC 0029C56C  4E 80 00 20 */	blr 
+.endfn __AXGetCommandListAddress
 
 .balign 16, 0
-.global __AXNextFrame
-__AXNextFrame:
+.fn __AXNextFrame, global
 /* 802D2FB0 0029C570  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D2FB4 0029C574  7C 08 02 A6 */	mflr r0
 /* 802D2FB8 0029C578  90 01 00 24 */	stw r0, 0x24(r1)
@@ -662,10 +661,10 @@ __AXNextFrame:
 /* 802D3960 0029CF20  7C 08 03 A6 */	mtlr r0
 /* 802D3964 0029CF24  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D3968 0029CF28  4E 80 00 20 */	blr 
+.endfn __AXNextFrame
 
 .balign 16, 0
-.global __AXClInit
-__AXClInit:
+.fn __AXClInit, global
 /* 802D3970 0029CF30  3C C0 80 58 */	lis r6, lbl_80580AC0@ha
 /* 802D3974 0029CF34  3C 80 80 54 */	lis r4, lbl_80540160@ha
 /* 802D3978 0029CF38  38 E0 00 00 */	li r7, 0
@@ -686,45 +685,45 @@ __AXClInit:
 /* 802D39B4 0029CF74  B0 0D B4 E2 */	sth r0, lbl_80667662@sda21(r13)
 /* 802D39B8 0029CF78  B0 0D B4 E0 */	sth r0, lbl_80667660@sda21(r13)
 /* 802D39BC 0029CF7C  4E 80 00 20 */	blr 
+.endfn __AXClInit
 
 .balign 16, 0
-.global __AXClQuit
-__AXClQuit:
+.fn __AXClQuit, global
 /* 802D39C0 0029CF80  4E 80 00 20 */	blr 
+.endfn __AXClQuit
 
 .balign 16, 0
-.global AXSetMode
-AXSetMode:
+.fn AXSetMode, global
 /* 802D39D0 0029CF90  90 6D B4 F8 */	stw r3, lbl_80667678@sda21(r13)
 /* 802D39D4 0029CF94  4E 80 00 20 */	blr 
+.endfn AXSetMode
 
 .balign 16, 0
-.global AXGetMode
-AXGetMode:
+.fn AXGetMode, global
 /* 802D39E0 0029CFA0  80 6D B4 F8 */	lwz r3, lbl_80667678@sda21(r13)
 /* 802D39E4 0029CFA4  4E 80 00 20 */	blr 
+.endfn AXGetMode
 
 .balign 16, 0
-.global AXGetAuxAReturnVolume
-AXGetAuxAReturnVolume:
+.fn AXGetAuxAReturnVolume, global
 /* 802D39F0 0029CFB0  A0 6D B4 E4 */	lhz r3, lbl_80667664@sda21(r13)
 /* 802D39F4 0029CFB4  4E 80 00 20 */	blr 
+.endfn AXGetAuxAReturnVolume
 
 .balign 16, 0
-.global AXGetAuxBReturnVolume
-AXGetAuxBReturnVolume:
+.fn AXGetAuxBReturnVolume, global
 /* 802D3A00 0029CFC0  A0 6D B4 E2 */	lhz r3, lbl_80667662@sda21(r13)
 /* 802D3A04 0029CFC4  4E 80 00 20 */	blr 
+.endfn AXGetAuxBReturnVolume
 
 .balign 16, 0
-.global AXGetAuxCReturnVolume
-AXGetAuxCReturnVolume:
+.fn AXGetAuxCReturnVolume, global
 /* 802D3A10 0029CFD0  A0 6D B4 E0 */	lhz r3, lbl_80667660@sda21(r13)
 /* 802D3A14 0029CFD4  4E 80 00 20 */	blr 
+.endfn AXGetAuxCReturnVolume
 
 .balign 16, 0
-.global AXSetMasterVolume
-AXSetMasterVolume:
+.fn AXSetMasterVolume, global
 /* 802D3A20 0029CFE0  28 03 80 00 */	cmplwi r3, 0x8000
 /* 802D3A24 0029CFE4  40 81 00 0C */	ble .L_802D3A30
 /* 802D3A28 0029CFE8  3C 60 00 01 */	lis r3, 1
@@ -732,24 +731,25 @@ AXSetMasterVolume:
 .L_802D3A30:
 /* 802D3A30 0029CFF0  B0 6D B4 E6 */	sth r3, lbl_80667666@sda21(r13)
 /* 802D3A34 0029CFF4  4E 80 00 20 */	blr 
+.endfn AXSetMasterVolume
 
 .balign 16, 0
-.global AXSetAuxAReturnVolume
-AXSetAuxAReturnVolume:
+.fn AXSetAuxAReturnVolume, global
 /* 802D3A40 0029D000  B0 6D B4 E4 */	sth r3, lbl_80667664@sda21(r13)
 /* 802D3A44 0029D004  4E 80 00 20 */	blr 
+.endfn AXSetAuxAReturnVolume
 
 .balign 16, 0
-.global AXSetAuxBReturnVolume
-AXSetAuxBReturnVolume:
+.fn AXSetAuxBReturnVolume, global
 /* 802D3A50 0029D010  B0 6D B4 E2 */	sth r3, lbl_80667662@sda21(r13)
 /* 802D3A54 0029D014  4E 80 00 20 */	blr 
+.endfn AXSetAuxBReturnVolume
 
 .balign 16, 0
-.global AXSetAuxCReturnVolume
-AXSetAuxCReturnVolume:
+.fn AXSetAuxCReturnVolume, global
 /* 802D3A60 0029D020  B0 6D B4 E0 */	sth r3, lbl_80667660@sda21(r13)
 /* 802D3A64 0029D024  4E 80 00 20 */	blr 
+.endfn AXSetAuxCReturnVolume
 
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

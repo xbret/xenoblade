@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global abort
-abort:
+.fn abort, global
 /* 802C71E8 002907A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802C71EC 002907AC  7C 08 02 A6 */	mflr r0
 /* 802C71F0 002907B0  38 60 00 01 */	li r3, 1
@@ -17,15 +16,16 @@ abort:
 /* 802C7210 002907D0  7C 08 03 A6 */	mtlr r0
 /* 802C7214 002907D4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802C7218 002907D8  4E 80 00 20 */	blr 
+.endfn abort
 
-.global __msl_runtime_constraint_violation_s
-__msl_runtime_constraint_violation_s:
+.fn __msl_runtime_constraint_violation_s, global
 /* 802C721C 002907DC  81 8D B3 C8 */	lwz r12, lbl_80667548@sda21(r13)
 /* 802C7220 002907E0  2C 0C 00 00 */	cmpwi r12, 0
 /* 802C7224 002907E4  4D 82 00 20 */	beqlr 
 /* 802C7228 002907E8  7D 89 03 A6 */	mtctr r12
 /* 802C722C 002907EC  4E 80 04 20 */	bctr 
 /* 802C7230 002907F0  4E 80 00 20 */	blr 
+.endfn __msl_runtime_constraint_violation_s
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 .global lbl_80667540

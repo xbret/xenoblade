@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global __OSInitAlarm
-__OSInitAlarm:
+.fn __OSInitAlarm, global
 /* 80352DC0 0031C380  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80352DC4 0031C384  7C 08 02 A6 */	mflr r0
 /* 80352DC8 0031C388  38 60 00 08 */	li r3, 8
@@ -28,18 +27,18 @@ __OSInitAlarm:
 /* 80352E0C 0031C3CC  7C 08 03 A6 */	mtlr r0
 /* 80352E10 0031C3D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80352E14 0031C3D4  4E 80 00 20 */	blr 
+.endfn __OSInitAlarm
 
 .balign 16, 0
-.global OSCreateAlarm
-OSCreateAlarm:
+.fn OSCreateAlarm, global
 /* 80352E20 0031C3E0  38 00 00 00 */	li r0, 0
 /* 80352E24 0031C3E4  90 03 00 00 */	stw r0, 0(r3)
 /* 80352E28 0031C3E8  90 03 00 04 */	stw r0, 4(r3)
 /* 80352E2C 0031C3EC  4E 80 00 20 */	blr 
+.endfn OSCreateAlarm
 
 .balign 16, 0
-.global InsertAlarm
-InsertAlarm:
+.fn InsertAlarm, global
 /* 80352E30 0031C3F0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80352E34 0031C3F4  7C 08 02 A6 */	mflr r0
 /* 80352E38 0031C3F8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -199,10 +198,10 @@ InsertAlarm:
 /* 80353074 0031C634  7C 08 03 A6 */	mtlr r0
 /* 80353078 0031C638  38 21 00 30 */	addi r1, r1, 0x30
 /* 8035307C 0031C63C  4E 80 00 20 */	blr 
+.endfn InsertAlarm
 
 .balign 16, 0
-.global OSSetAlarm
-OSSetAlarm:
+.fn OSSetAlarm, global
 /* 80353080 0031C640  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80353084 0031C644  7C 08 02 A6 */	mflr r0
 /* 80353088 0031C648  90 01 00 24 */	stw r0, 0x24(r1)
@@ -231,10 +230,10 @@ OSSetAlarm:
 /* 803530E4 0031C6A4  7C 08 03 A6 */	mtlr r0
 /* 803530E8 0031C6A8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803530EC 0031C6AC  4E 80 00 20 */	blr 
+.endfn OSSetAlarm
 
 .balign 16, 0
-.global OSSetPeriodicAlarm
-OSSetPeriodicAlarm:
+.fn OSSetPeriodicAlarm, global
 /* 803530F0 0031C6B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803530F4 0031C6B4  7C 08 02 A6 */	mflr r0
 /* 803530F8 0031C6B8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -268,10 +267,10 @@ OSSetPeriodicAlarm:
 /* 80353168 0031C728  7C 08 03 A6 */	mtlr r0
 /* 8035316C 0031C72C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80353170 0031C730  4E 80 00 20 */	blr 
+.endfn OSSetPeriodicAlarm
 
 .balign 16, 0
-.global OSCancelAlarm
-OSCancelAlarm:
+.fn OSCancelAlarm, global
 /* 80353180 0031C740  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80353184 0031C744  7C 08 02 A6 */	mflr r0
 /* 80353188 0031C748  90 01 00 24 */	stw r0, 0x24(r1)
@@ -350,10 +349,10 @@ OSCancelAlarm:
 /* 8035328C 0031C84C  7C 08 03 A6 */	mtlr r0
 /* 80353290 0031C850  38 21 00 20 */	addi r1, r1, 0x20
 /* 80353294 0031C854  4E 80 00 20 */	blr 
+.endfn OSCancelAlarm
 
 .balign 16, 0
-.global DecrementerExceptionCallback
-DecrementerExceptionCallback:
+.fn DecrementerExceptionCallback, global
 /* 803532A0 0031C860  94 21 FD 20 */	stwu r1, -0x2e0(r1)
 /* 803532A4 0031C864  7C 08 02 A6 */	mflr r0
 /* 803532A8 0031C868  90 01 02 E4 */	stw r0, 0x2e4(r1)
@@ -504,10 +503,10 @@ DecrementerExceptionCallback:
 /* 803534C0 0031CA80  7C 08 03 A6 */	mtlr r0
 /* 803534C4 0031CA84  38 21 02 E0 */	addi r1, r1, 0x2e0
 /* 803534C8 0031CA88  4E 80 00 20 */	blr 
+.endfn DecrementerExceptionCallback
 
 .balign 16, 0
-.global DecrementerExceptionHandler
-DecrementerExceptionHandler:
+.fn DecrementerExceptionHandler, global
 /* 803534D0 0031CA90  90 04 00 00 */	stw r0, 0(r4)
 /* 803534D4 0031CA94  90 24 00 04 */	stw r1, 4(r4)
 /* 803534D8 0031CA98  90 44 00 08 */	stw r2, 8(r4)
@@ -528,11 +527,11 @@ DecrementerExceptionHandler:
 /* 80353514 0031CAD4  90 04 01 C0 */	stw r0, 0x1c0(r4)
 /* 80353518 0031CAD8  94 21 FF F8 */	stwu r1, -8(r1)
 /* 8035351C 0031CADC  4B FF FD 84 */	b DecrementerExceptionCallback
+.endfn DecrementerExceptionHandler
 
 
 .balign 16, 0
-.global OnReset
-OnReset:
+.fn OnReset, global
 /* 80353520 0031CAE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80353524 0031CAE4  7C 08 02 A6 */	mflr r0
 /* 80353528 0031CAE8  2C 03 00 00 */	cmpwi r3, 0
@@ -574,22 +573,22 @@ OnReset:
 /* 803535A0 0031CB60  7C 08 03 A6 */	mtlr r0
 /* 803535A4 0031CB64  38 21 00 10 */	addi r1, r1, 0x10
 /* 803535A8 0031CB68  4E 80 00 20 */	blr 
+.endfn OnReset
 
 .balign 16, 0
-.global OSSetAlarmUserData
-OSSetAlarmUserData:
+.fn OSSetAlarmUserData, global
 /* 803535B0 0031CB70  90 83 00 28 */	stw r4, 0x28(r3)
 /* 803535B4 0031CB74  4E 80 00 20 */	blr 
+.endfn OSSetAlarmUserData
 
 .balign 16, 0
-.global OSGetAlarmUserData
-OSGetAlarmUserData:
+.fn OSGetAlarmUserData, global
 /* 803535C0 0031CB80  80 63 00 28 */	lwz r3, 0x28(r3)
 /* 803535C4 0031CB84  4E 80 00 20 */	blr 
+.endfn OSGetAlarmUserData
 
 .balign 16, 0
-.global __OSCancelInternalAlarms
-__OSCancelInternalAlarms:
+.fn __OSCancelInternalAlarms, global
 /* 803535D0 0031CB90  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803535D4 0031CB94  7C 08 02 A6 */	mflr r0
 /* 803535D8 0031CB98  90 01 00 24 */	stw r0, 0x24(r1)
@@ -637,6 +636,7 @@ __OSCancelInternalAlarms:
 /* 8035366C 0031CC2C  7C 08 03 A6 */	mtlr r0
 /* 80353670 0031CC30  38 21 00 20 */	addi r1, r1, 0x20
 /* 80353674 0031CC34  4E 80 00 20 */	blr 
+.endfn __OSCancelInternalAlarms
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

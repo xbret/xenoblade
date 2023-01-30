@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global __AIClockInit
-__AIClockInit:
+.fn __AIClockInit, global
 /* 80353AA0 0031D060  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80353AA4 0031D064  7C 08 02 A6 */	mflr r0
 /* 80353AA8 0031D068  3C 80 CD 80 */	lis r4, 0xCD800180@ha
@@ -148,10 +147,10 @@ __AIClockInit:
 /* 80353CB4 0031D274  7C 08 03 A6 */	mtlr r0
 /* 80353CB8 0031D278  38 21 00 20 */	addi r1, r1, 0x20
 /* 80353CBC 0031D27C  4E 80 00 20 */	blr 
+.endfn __AIClockInit
 
 .balign 16, 0
-.global __OSInitAudioSystem
-__OSInitAudioSystem:
+.fn __OSInitAudioSystem, global
 /* 80353CC0 0031D280  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80353CC4 0031D284  7C 08 02 A6 */	mflr r0
 /* 80353CC8 0031D288  90 01 00 14 */	stw r0, 0x14(r1)
@@ -280,10 +279,10 @@ __OSInitAudioSystem:
 /* 80353E84 0031D444  7C 08 03 A6 */	mtlr r0
 /* 80353E88 0031D448  38 21 00 10 */	addi r1, r1, 0x10
 /* 80353E8C 0031D44C  4E 80 00 20 */	blr 
+.endfn __OSInitAudioSystem
 
 .balign 16, 0
-.global __OSStopAudioSystem
-__OSStopAudioSystem:
+.fn __OSStopAudioSystem, global
 /* 80353E90 0031D450  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80353E94 0031D454  7C 08 02 A6 */	mflr r0
 /* 80353E98 0031D458  3C 60 CC 00 */	lis r3, 0xCC00500A@ha
@@ -344,6 +343,7 @@ __OSStopAudioSystem:
 /* 80353F54 0031D514  7C 08 03 A6 */	mtlr r0
 /* 80353F58 0031D518  38 21 00 10 */	addi r1, r1, 0x10
 /* 80353F5C 0031D51C  4E 80 00 20 */	blr 
+.endfn __OSStopAudioSystem
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

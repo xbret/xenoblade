@@ -3,17 +3,16 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global hcisu_h2_usb_cback
-hcisu_h2_usb_cback:
+.fn hcisu_h2_usb_cback, global
 /* 802DCAA0 002A6060  2C 03 00 04 */	cmpwi r3, 4
 /* 802DCAA4 002A6064  4C 82 00 20 */	bnelr 
 /* 802DCAA8 002A6068  7C 83 07 74 */	extsb r3, r4
 /* 802DCAAC 002A606C  48 00 17 14 */	b bta_usb_close_evt
 /* 802DCAB0 002A6070  4E 80 00 20 */	blr 
+.endfn hcisu_h2_usb_cback
 
 .balign 16, 0
-.global hcisu_h2_receive_msg
-hcisu_h2_receive_msg:
+.fn hcisu_h2_receive_msg, global
 /* 802DCAC0 002A6080  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 802DCAC4 002A6084  7C 08 02 A6 */	mflr r0
 /* 802DCAC8 002A6088  90 01 00 64 */	stw r0, 0x64(r1)
@@ -267,10 +266,10 @@ hcisu_h2_receive_msg:
 /* 802DCE4C 002A640C  7C 08 03 A6 */	mtlr r0
 /* 802DCE50 002A6410  38 21 00 60 */	addi r1, r1, 0x60
 /* 802DCE54 002A6414  4E 80 00 20 */	blr 
+.endfn hcisu_h2_receive_msg
 
 .balign 16, 0
-.global hcisu_h2_send_msg_now
-hcisu_h2_send_msg_now:
+.fn hcisu_h2_send_msg_now, global
 /* 802DCE60 002A6420  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DCE64 002A6424  7C 08 02 A6 */	mflr r0
 /* 802DCE68 002A6428  90 01 00 24 */	stw r0, 0x24(r1)
@@ -387,10 +386,10 @@ hcisu_h2_send_msg_now:
 /* 802DD000 002A65C0  7C 08 03 A6 */	mtlr r0
 /* 802DD004 002A65C4  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DD008 002A65C8  4E 80 00 20 */	blr 
+.endfn hcisu_h2_send_msg_now
 
 .balign 16, 0
-.global hcisu_h2_init
-hcisu_h2_init:
+.fn hcisu_h2_init, global
 /* 802DD010 002A65D0  3C C0 80 5C */	lis r6, lbl_805BBC20@ha
 /* 802DD014 002A65D4  38 00 00 00 */	li r0, 0
 /* 802DD018 002A65D8  38 C6 BC 20 */	addi r6, r6, lbl_805BBC20@l
@@ -402,10 +401,10 @@ hcisu_h2_init:
 /* 802DD030 002A65F0  98 86 00 20 */	stb r4, 0x20(r6)
 /* 802DD034 002A65F4  B0 A6 00 12 */	sth r5, 0x12(r6)
 /* 802DD038 002A65F8  4E 80 00 20 */	blr 
+.endfn hcisu_h2_init
 
 .balign 16, 0
-.global hcisu_h2_open
-hcisu_h2_open:
+.fn hcisu_h2_open, global
 /* 802DD040 002A6600  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DD044 002A6604  7C 08 02 A6 */	mflr r0
 /* 802DD048 002A6608  3C A0 80 5C */	lis r5, lbl_805BBC20@ha
@@ -432,10 +431,10 @@ hcisu_h2_open:
 /* 802DD09C 002A665C  7C 08 03 A6 */	mtlr r0
 /* 802DD0A0 002A6660  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DD0A4 002A6664  4E 80 00 20 */	blr 
+.endfn hcisu_h2_open
 
 .balign 16, 0
-.global hcisu_h2_close
-hcisu_h2_close:
+.fn hcisu_h2_close, global
 /* 802DD0B0 002A6670  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DD0B4 002A6674  7C 08 02 A6 */	mflr r0
 /* 802DD0B8 002A6678  3C 60 80 5C */	lis r3, lbl_805BBC20@ha
@@ -449,10 +448,10 @@ hcisu_h2_close:
 /* 802DD0D8 002A6698  7C 08 03 A6 */	mtlr r0
 /* 802DD0DC 002A669C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DD0E0 002A66A0  4E 80 00 20 */	blr 
+.endfn hcisu_h2_close
 
 .balign 16, 0
-.global hcisu_h2_send
-hcisu_h2_send:
+.fn hcisu_h2_send, global
 /* 802DD0F0 002A66B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DD0F4 002A66B4  7C 08 02 A6 */	mflr r0
 /* 802DD0F8 002A66B8  3C A0 80 5C */	lis r5, lbl_805BBC20@ha
@@ -465,10 +464,10 @@ hcisu_h2_send:
 /* 802DD114 002A66D4  7C 08 03 A6 */	mtlr r0
 /* 802DD118 002A66D8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DD11C 002A66DC  4E 80 00 20 */	blr 
+.endfn hcisu_h2_send
 
 .balign 16, 0
-.global hcisu_h2_handle_event
-hcisu_h2_handle_event:
+.fn hcisu_h2_handle_event, global
 /* 802DD120 002A66E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DD124 002A66E4  7C 08 02 A6 */	mflr r0
 /* 802DD128 002A66E8  3C 80 80 5C */	lis r4, lbl_805BBC20@ha
@@ -484,6 +483,7 @@ hcisu_h2_handle_event:
 /* 802DD150 002A6710  7C 08 03 A6 */	mtlr r0
 /* 802DD154 002A6714  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DD158 002A6718  4E 80 00 20 */	blr 
+.endfn hcisu_h2_handle_event
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

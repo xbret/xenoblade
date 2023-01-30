@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global SFTRN_Init
-SFTRN_Init:
+.fn SFTRN_Init, global
 /* 803CE3F0 003979B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CE3F4 003979B4  7C 08 02 A6 */	mflr r0
 /* 803CE3F8 003979B8  38 C0 00 00 */	li r6, 0
@@ -69,9 +68,9 @@ SFTRN_Init:
 /* 803CE4DC 00397A9C  7C 08 03 A6 */	mtlr r0
 /* 803CE4E0 00397AA0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CE4E4 00397AA4  4E 80 00 20 */	blr 
+.endfn SFTRN_Init
 
-.global SFTRN_InitHn
-SFTRN_InitHn:
+.fn SFTRN_InitHn, global
 /* 803CE4E8 00397AA8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CE4EC 00397AAC  7C 08 02 A6 */	mflr r0
 /* 803CE4F0 00397AB0  38 C0 00 00 */	li r6, 0
@@ -136,9 +135,9 @@ SFTRN_InitHn:
 /* 803CE5D0 00397B90  7C 08 03 A6 */	mtlr r0
 /* 803CE5D4 00397B94  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CE5D8 00397B98  4E 80 00 20 */	blr 
+.endfn SFTRN_InitHn
 
-.global sftrn_BuildAll
-sftrn_BuildAll:
+.fn sftrn_BuildAll, global
 /* 803CE5DC 00397B9C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CE5E0 00397BA0  7C 08 02 A6 */	mflr r0
 /* 803CE5E4 00397BA4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -264,9 +263,9 @@ sftrn_BuildAll:
 /* 803CE79C 00397D5C  7C 08 03 A6 */	mtlr r0
 /* 803CE7A0 00397D60  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CE7A4 00397D64  4E 80 00 20 */	blr 
+.endfn sftrn_BuildAll
 
-.global sftrn_BuildSystem
-sftrn_BuildSystem:
+.fn sftrn_BuildSystem, global
 /* 803CE7A8 00397D68  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CE7AC 00397D6C  7C 08 02 A6 */	mflr r0
 /* 803CE7B0 00397D70  38 A0 00 01 */	li r5, 1
@@ -371,9 +370,9 @@ sftrn_BuildSystem:
 /* 803CE920 00397EE0  7C 08 03 A6 */	mtlr r0
 /* 803CE924 00397EE4  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CE928 00397EE8  4E 80 00 20 */	blr 
+.endfn sftrn_BuildSystem
 
-.global SFTRN_CallTrSetup
-SFTRN_CallTrSetup:
+.fn SFTRN_CallTrSetup, global
 /* 803CE92C 00397EEC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CE930 00397EF0  7C 08 02 A6 */	mflr r0
 /* 803CE934 00397EF4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -413,9 +412,9 @@ SFTRN_CallTrSetup:
 /* 803CE9B0 00397F70  7C 08 03 A6 */	mtlr r0
 /* 803CE9B4 00397F74  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CE9B8 00397F78  4E 80 00 20 */	blr 
+.endfn SFTRN_CallTrSetup
 
-.global SFTRN_CallTrtTrif
-SFTRN_CallTrtTrif:
+.fn SFTRN_CallTrtTrif, global
 /* 803CE9BC 00397F7C  1C 04 00 44 */	mulli r0, r4, 0x44
 /* 803CE9C0 00397F80  7C 83 02 14 */	add r4, r3, r0
 /* 803CE9C4 00397F84  81 04 1F DC */	lwz r8, 0x1fdc(r4)
@@ -432,34 +431,35 @@ SFTRN_CallTrtTrif:
 /* 803CE9EC 00397FAC  7D 89 03 A6 */	mtctr r12
 /* 803CE9F0 00397FB0  4E 80 04 20 */	bctr 
 /* 803CE9F4 00397FB4  4E 80 00 20 */	blr 
+.endfn SFTRN_CallTrtTrif
 
-.global SFTRN_SetPrepFlg
-SFTRN_SetPrepFlg:
+.fn SFTRN_SetPrepFlg, global
 /* 803CE9F8 00397FB8  1C 04 00 44 */	mulli r0, r4, 0x44
 /* 803CE9FC 00397FBC  7C 63 02 14 */	add r3, r3, r0
 /* 803CEA00 00397FC0  90 A3 1F D0 */	stw r5, 0x1fd0(r3)
 /* 803CEA04 00397FC4  4E 80 00 20 */	blr 
+.endfn SFTRN_SetPrepFlg
 
-.global SFTRN_GetPrepFlg
-SFTRN_GetPrepFlg:
+.fn SFTRN_GetPrepFlg, global
 /* 803CEA08 00397FC8  1C 04 00 44 */	mulli r0, r4, 0x44
 /* 803CEA0C 00397FCC  7C 63 02 14 */	add r3, r3, r0
 /* 803CEA10 00397FD0  80 63 1F D0 */	lwz r3, 0x1fd0(r3)
 /* 803CEA14 00397FD4  4E 80 00 20 */	blr 
+.endfn SFTRN_GetPrepFlg
 
-.global SFTRN_SetTermFlg
-SFTRN_SetTermFlg:
+.fn SFTRN_SetTermFlg, global
 /* 803CEA18 00397FD8  1C 04 00 44 */	mulli r0, r4, 0x44
 /* 803CEA1C 00397FDC  7C 63 02 14 */	add r3, r3, r0
 /* 803CEA20 00397FE0  90 A3 1F D4 */	stw r5, 0x1fd4(r3)
 /* 803CEA24 00397FE4  4E 80 00 20 */	blr 
+.endfn SFTRN_SetTermFlg
 
-.global SFTRN_GetTermFlg
-SFTRN_GetTermFlg:
+.fn SFTRN_GetTermFlg, global
 /* 803CEA28 00397FE8  1C 04 00 44 */	mulli r0, r4, 0x44
 /* 803CEA2C 00397FEC  7C 63 02 14 */	add r3, r3, r0
 /* 803CEA30 00397FF0  80 63 1F D4 */	lwz r3, 0x1fd4(r3)
 /* 803CEA34 00397FF4  4E 80 00 20 */	blr 
+.endfn SFTRN_GetTermFlg
 
 .global SFTRN_IsSetup
 SFTRN_IsSetup:

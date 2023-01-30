@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global gki_timers_init
-gki_timers_init:
+.fn gki_timers_init, global
 /* 802DC200 002A57C0  3C 60 80 59 */	lis r3, lbl_80593140@ha
 /* 802DC204 002A57C4  38 00 00 00 */	li r0, 0
 /* 802DC208 002A57C8  38 63 31 40 */	addi r3, r3, lbl_80593140@l
@@ -52,19 +51,19 @@ gki_timers_init:
 /* 802DC2B0 002A5870  90 03 88 BC */	stw r0, -0x7744(r3)
 /* 802DC2B4 002A5874  90 03 88 DC */	stw r0, -0x7724(r3)
 /* 802DC2B8 002A5878  4E 80 00 20 */	blr 
+.endfn gki_timers_init
 
 .balign 16, 0
-.global GKI_get_tick_count
-GKI_get_tick_count:
+.fn GKI_get_tick_count, global
 /* 802DC2C0 002A5880  3C 60 80 59 */	lis r3, lbl_80593140@ha
 /* 802DC2C4 002A5884  38 63 31 40 */	addi r3, r3, lbl_80593140@l
 /* 802DC2C8 002A5888  3C 63 00 03 */	addis r3, r3, 3
 /* 802DC2CC 002A588C  80 63 88 28 */	lwz r3, -0x77d8(r3)
 /* 802DC2D0 002A5890  4E 80 00 20 */	blr 
+.endfn GKI_get_tick_count
 
 .balign 16, 0
-.global GKI_start_timer
-GKI_start_timer:
+.fn GKI_start_timer, global
 /* 802DC2E0 002A58A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DC2E4 002A58A4  7C 08 02 A6 */	mflr r0
 /* 802DC2E8 002A58A8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -156,10 +155,10 @@ GKI_start_timer:
 /* 802DC420 002A59E0  7C 08 03 A6 */	mtlr r0
 /* 802DC424 002A59E4  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DC428 002A59E8  4E 80 00 20 */	blr 
+.endfn GKI_start_timer
 
 .balign 16, 0
-.global GKI_stop_timer
-GKI_stop_timer:
+.fn GKI_stop_timer, global
 /* 802DC430 002A59F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DC434 002A59F4  7C 08 02 A6 */	mflr r0
 /* 802DC438 002A59F8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -196,19 +195,19 @@ GKI_stop_timer:
 /* 802DC4A8 002A5A68  7C 08 03 A6 */	mtlr r0
 /* 802DC4AC 002A5A6C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DC4B0 002A5A70  4E 80 00 20 */	blr 
+.endfn GKI_stop_timer
 
 .balign 16, 0
-.global GKI_init_timer_list
-GKI_init_timer_list:
+.fn GKI_init_timer_list, global
 /* 802DC4C0 002A5A80  38 00 00 00 */	li r0, 0
 /* 802DC4C4 002A5A84  90 03 00 00 */	stw r0, 0(r3)
 /* 802DC4C8 002A5A88  90 03 00 04 */	stw r0, 4(r3)
 /* 802DC4CC 002A5A8C  90 03 00 08 */	stw r0, 8(r3)
 /* 802DC4D0 002A5A90  4E 80 00 20 */	blr 
+.endfn GKI_init_timer_list
 
 .balign 16, 0
-.global GKI_update_timer_list
-GKI_update_timer_list:
+.fn GKI_update_timer_list, global
 /* 802DC4E0 002A5AA0  80 C3 00 00 */	lwz r6, 0(r3)
 /* 802DC4E4 002A5AA4  38 E0 00 00 */	li r7, 0
 /* 802DC4E8 002A5AA8  48 00 00 10 */	b .L_802DC4F8
@@ -253,10 +252,10 @@ GKI_update_timer_list:
 .L_802DC568:
 /* 802DC568 002A5B28  7C E3 3B 78 */	mr r3, r7
 /* 802DC56C 002A5B2C  4E 80 00 20 */	blr 
+.endfn GKI_update_timer_list
 
 .balign 16, 0
-.global GKI_add_to_timer_list
-GKI_add_to_timer_list:
+.fn GKI_add_to_timer_list, global
 /* 802DC570 002A5B30  80 A4 00 0C */	lwz r5, 0xc(r4)
 /* 802DC574 002A5B34  2C 05 00 00 */	cmpwi r5, 0
 /* 802DC578 002A5B38  4D 80 00 20 */	bltlr 
@@ -326,6 +325,7 @@ GKI_add_to_timer_list:
 /* 802DC650 002A5C10  38 00 00 01 */	li r0, 1
 /* 802DC654 002A5C14  98 04 00 16 */	stb r0, 0x16(r4)
 /* 802DC658 002A5C18  4E 80 00 20 */	blr 
+.endfn GKI_add_to_timer_list
 
 .balign 16, 0
 .global GKI_remove_from_timer_list

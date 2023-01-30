@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global ADXAMP_Destroy
-ADXAMP_Destroy:
+.fn ADXAMP_Destroy, global
 /* 80385B08 0034F0C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80385B0C 0034F0CC  7C 08 02 A6 */	mflr r0
 /* 80385B10 0034F0D0  2C 03 00 00 */	cmpwi r3, 0
@@ -23,9 +22,9 @@ ADXAMP_Destroy:
 /* 80385B44 0034F104  7C 08 03 A6 */	mtlr r0
 /* 80385B48 0034F108  38 21 00 10 */	addi r1, r1, 0x10
 /* 80385B4C 0034F10C  4E 80 00 20 */	blr 
+.endfn ADXAMP_Destroy
 
-.global ADXAMP_Start
-ADXAMP_Start:
+.fn ADXAMP_Start, global
 /* 80385B50 0034F110  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80385B54 0034F114  7C 08 02 A6 */	mflr r0
 /* 80385B58 0034F118  38 C0 00 00 */	li r6, 0
@@ -143,12 +142,13 @@ ADXAMP_Start:
 /* 80385D00 0034F2C0  7C 08 03 A6 */	mtlr r0
 /* 80385D04 0034F2C4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80385D08 0034F2C8  4E 80 00 20 */	blr 
+.endfn ADXAMP_Start
 
-.global ADXAMP_Stop
-ADXAMP_Stop:
+.fn ADXAMP_Stop, global
 /* 80385D0C 0034F2CC  38 00 00 00 */	li r0, 0
 /* 80385D10 0034F2D0  98 03 00 01 */	stb r0, 1(r3)
 /* 80385D14 0034F2D4  4E 80 00 20 */	blr 
+.endfn ADXAMP_Stop
 
 .global ADXAMP_SetSfreq
 ADXAMP_SetSfreq:

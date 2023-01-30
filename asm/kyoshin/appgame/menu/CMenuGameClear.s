@@ -2,8 +2,9 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __ct__CMenuGameClear
-__ct__CMenuGameClear:
+
+
+.fn __ct__CMenuGameClear, global
 /* 802B219C 0027B75C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802B21A0 0027B760  7C 08 02 A6 */	mflr r0
 /* 802B21A4 0027B764  90 01 00 24 */	stw r0, 0x24(r1)
@@ -89,17 +90,17 @@ __ct__CMenuGameClear:
 /* 802B22D4 0027B894  7C 08 03 A6 */	mtlr r0
 /* 802B22D8 0027B898  38 21 00 20 */	addi r1, r1, 0x20
 /* 802B22DC 0027B89C  4E 80 00 20 */	blr 
+.endfn __ct__CMenuGameClear
 
-.global func_802B22E0
-func_802B22E0:
+.fn func_802B22E0, global
 /* 802B22E0 0027B8A0  80 6D B3 68 */	lwz r3, lbl_806674E8@sda21(r13)
 /* 802B22E4 0027B8A4  7C 03 00 D0 */	neg r0, r3
 /* 802B22E8 0027B8A8  7C 00 1B 78 */	or r0, r0, r3
 /* 802B22EC 0027B8AC  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 802B22F0 0027B8B0  4E 80 00 20 */	blr 
+.endfn func_802B22E0
 
-.global func_802B22F4
-func_802B22F4:
+.fn func_802B22F4, global
 /* 802B22F4 0027B8B4  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802B22F8 0027B8B8  7C 08 02 A6 */	mflr r0
 /* 802B22FC 0027B8BC  90 01 00 34 */	stw r0, 0x34(r1)
@@ -208,9 +209,9 @@ func_802B22F4:
 /* 802B247C 0027BA3C  7C 08 03 A6 */	mtlr r0
 /* 802B2480 0027BA40  38 21 00 30 */	addi r1, r1, 0x30
 /* 802B2484 0027BA44  4E 80 00 20 */	blr 
+.endfn func_802B22F4
 
-.global func_802B2488
-func_802B2488:
+.fn func_802B2488, global
 /* 802B2488 0027BA48  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802B248C 0027BA4C  7C 08 02 A6 */	mflr r0
 /* 802B2490 0027BA50  90 01 00 34 */	stw r0, 0x34(r1)
@@ -319,23 +320,26 @@ func_802B2488:
 /* 802B2610 0027BBD0  7C 08 03 A6 */	mtlr r0
 /* 802B2614 0027BBD4  38 21 00 30 */	addi r1, r1, 0x30
 /* 802B2618 0027BBD8  4E 80 00 20 */	blr 
+.endfn func_802B2488
 
-.global func_802B261C
-func_802B261C:
+.fn func_802B261C, global
 /* 802B261C 0027BBDC  38 63 FF A8 */	addi r3, r3, -88
 /* 802B2620 0027BBE0  4B FF FA E4 */	b func_802B2104
+.endfn func_802B261C
 
-.global func_802B2624
-func_802B2624:
+.fn func_802B2624, global
 /* 802B2624 0027BBE4  38 63 FF A8 */	addi r3, r3, -88
 /* 802B2628 0027BBE8  4B FF E8 F0 */	b func_802B0F18
+.endfn func_802B2624
 
-.global func_802B262C
-func_802B262C:
+.fn func_802B262C, global
 /* 802B262C 0027BBEC  80 6D B3 70 */	lwz r3, lbl_806674F0@sda21(r13)
 /* 802B2630 0027BBF0  4E 80 00 20 */	blr 
+.endfn func_802B262C
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
 
 .global CMenuGameClear_typestr
 CMenuGameClear_typestr:
@@ -357,6 +361,8 @@ lbl_8050C948:
 	
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
 
 .global __vt__CMenuGameClear
 __vt__CMenuGameClear:
@@ -394,6 +400,8 @@ CMenuGameClear_hierarchy:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+
+
 .global __RTTI__CMenuGameClear
 __RTTI__CMenuGameClear:
 	.4byte CMenuGameClear_typestr
@@ -401,14 +409,18 @@ __RTTI__CMenuGameClear:
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+
+
 .global lbl_806674E8
 lbl_806674E8:
 	.skip 0x8
 
-.section extab_, "a"  # 0x800066E0 - 0x80021020
+.section extab, "a" # 0x800066E0 - 0x80021020
 
-.global lbl_8001B840
-lbl_8001B840:
+.balign 4
+
+.obj "@etb_8001B840", local
+.hidden "@etb_8001B840"
 	.4byte 0x20080000
 	.4byte 0x000000CC
 	.4byte 0x0000004C
@@ -418,7 +430,7 @@ lbl_8001B840:
 	.4byte 0x00000034
 	.4byte 0x00000100
 	.4byte 0x00000028
-	.4byte 0
+	.4byte 0x00000000
 	.4byte 0x0780001D
 	.4byte 0x000000B0
 	.4byte func_801D2A38
@@ -432,28 +444,43 @@ lbl_8001B840:
 	.4byte 0x00000058
 	.4byte func_8004031C
 	.4byte 0x8680001D
-	.4byte 0
+	.4byte 0x00000000
 	.4byte func_800FED0C
+.endobj "@etb_8001B840"
 
-.global lbl_8001B8A4
-lbl_8001B8A4:
+.obj "@etb_8001B8A4", local
+.hidden "@etb_8001B8A4"
 	.4byte 0x10080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001B8A4"
 
-.global lbl_8001B8AC
-lbl_8001B8AC:
+.obj "@etb_8001B8AC", local
+.hidden "@etb_8001B8AC"
 	.4byte 0x10080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001B8AC"
 
+.section extabindex, "a" # 0x80021020 - 0x80039220
 
-.section extabindex_, "a"  # 0x80021020 - 0x80039220
+.balign 4
 
-.4byte __ct__CMenuGameClear
+.obj "@eti_800333E0", local
+.hidden "@eti_800333E0"
+	.4byte __ct__CMenuGameClear
 	.4byte 0x00000144
-	.4byte lbl_8001B840
+	.4byte "@etb_8001B840"
+.endobj "@eti_800333E0"
+
+.obj "@eti_800333EC", local
+.hidden "@eti_800333EC"
 	.4byte func_802B22F4
 	.4byte 0x00000194
-	.4byte lbl_8001B8A4
+	.4byte "@etb_8001B8A4"
+.endobj "@eti_800333EC"
+
+.obj "@eti_800333F8", local
+.hidden "@eti_800333F8"
 	.4byte func_802B2488
 	.4byte 0x00000194
-	.4byte lbl_8001B8AC
+	.4byte "@etb_8001B8AC"
+.endobj "@eti_800333F8"

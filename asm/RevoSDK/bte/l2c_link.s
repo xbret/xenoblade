@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global l2c_link_hci_conn_req
-l2c_link_hci_conn_req:
+.fn l2c_link_hci_conn_req, global
 /* 802F89AC 002C1F6C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F89B0 002C1F70  7C 08 02 A6 */	mflr r0
 /* 802F89B4 002C1F74  90 01 00 24 */	stw r0, 0x24(r1)
@@ -96,9 +95,9 @@ l2c_link_hci_conn_req:
 /* 802F8AF4 002C20B4  7C 08 03 A6 */	mtlr r0
 /* 802F8AF8 002C20B8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F8AFC 002C20BC  4E 80 00 20 */	blr 
+.endfn l2c_link_hci_conn_req
 
-.global l2c_link_hci_conn_comp
-l2c_link_hci_conn_comp:
+.fn l2c_link_hci_conn_comp, global
 /* 802F8B00 002C20C0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802F8B04 002C20C4  7C 08 02 A6 */	mflr r0
 /* 802F8B08 002C20C8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -257,9 +256,9 @@ l2c_link_hci_conn_comp:
 /* 802F8D2C 002C22EC  7C 08 03 A6 */	mtlr r0
 /* 802F8D30 002C22F0  38 21 00 30 */	addi r1, r1, 0x30
 /* 802F8D34 002C22F4  4E 80 00 20 */	blr
+.endfn l2c_link_hci_conn_comp
 
-.global l2c_link_sec_comp
-l2c_link_sec_comp:
+.fn l2c_link_sec_comp, global
 /* 802F8D38 002C22F8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F8D3C 002C22FC  7C 08 02 A6 */	mflr r0
 /* 802F8D40 002C2300  90 01 00 24 */	stw r0, 0x24(r1)
@@ -309,9 +308,9 @@ l2c_link_sec_comp:
 /* 802F8DE0 002C23A0  7C 08 03 A6 */	mtlr r0
 /* 802F8DE4 002C23A4  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F8DE8 002C23A8  4E 80 00 20 */	blr 
+.endfn l2c_link_sec_comp
 
-.global l2c_link_hci_disc_comp
-l2c_link_hci_disc_comp:
+.fn l2c_link_hci_disc_comp, global
 /* 802F8DEC 002C23AC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F8DF0 002C23B0  7C 08 02 A6 */	mflr r0
 /* 802F8DF4 002C23B4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -365,9 +364,9 @@ l2c_link_hci_disc_comp:
 /* 802F8E9C 002C245C  7C 08 03 A6 */	mtlr r0
 /* 802F8EA0 002C2460  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F8EA4 002C2464  4E 80 00 20 */	blr 
+.endfn l2c_link_hci_disc_comp
 
-.global l2c_link_hci_qos_violation
-l2c_link_hci_qos_violation:
+.fn l2c_link_hci_qos_violation, global
 /* 802F8EA8 002C2468  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F8EAC 002C246C  7C 08 02 A6 */	mflr r0
 /* 802F8EB0 002C2470  90 01 00 14 */	stw r0, 0x14(r1)
@@ -401,9 +400,9 @@ l2c_link_hci_qos_violation:
 /* 802F8F0C 002C24CC  7C 08 03 A6 */	mtlr r0
 /* 802F8F10 002C24D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F8F14 002C24D4  4E 80 00 20 */	blr
+.endfn l2c_link_hci_qos_violation
 
-.global l2c_link_timeout
-l2c_link_timeout:
+.fn l2c_link_timeout, global
 /* 802F8F18 002C24D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F8F1C 002C24DC  7C 08 02 A6 */	mflr r0
 /* 802F8F20 002C24E0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -510,9 +509,9 @@ l2c_link_timeout:
 /* 802F9080 002C2640  7C 08 03 A6 */	mtlr r0
 /* 802F9084 002C2644  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F9088 002C2648  4E 80 00 20 */	blr 
+.endfn l2c_link_timeout
 
-.global l2c_link_send_to_lower
-l2c_link_send_to_lower:
+.fn l2c_link_send_to_lower, global
 /* 802F908C 002C264C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F9090 002C2650  7C 08 02 A6 */	mflr r0
 /* 802F9094 002C2654  3C C0 80 5C */	lis r6, lbl_805BF4D0@ha
@@ -583,9 +582,9 @@ l2c_link_send_to_lower:
 /* 802F9188 002C2748  7C 08 03 A6 */	mtlr r0
 /* 802F918C 002C274C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F9190 002C2750  4E 80 00 20 */	blr 
+.endfn l2c_link_send_to_lower
 
-.global l2c_link_check_send_pkts
-l2c_link_check_send_pkts:
+.fn l2c_link_check_send_pkts, global
 /* 802F9194 002C2754  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802F9198 002C2758  7C 08 02 A6 */	mflr r0
 /* 802F919C 002C275C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -783,9 +782,9 @@ l2c_link_check_send_pkts:
 /* 802F9454 002C2A14  7C 08 03 A6 */	mtlr r0
 /* 802F9458 002C2A18  38 21 00 30 */	addi r1, r1, 0x30
 /* 802F945C 002C2A1C  4E 80 00 20 */	blr 
+.endfn l2c_link_check_send_pkts
 
-.global l2c_link_adjust_allocation
-l2c_link_adjust_allocation:
+.fn l2c_link_adjust_allocation, global
 /* 802F9460 002C2A20  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802F9464 002C2A24  7C 08 02 A6 */	mflr r0
 /* 802F9468 002C2A28  90 01 00 34 */	stw r0, 0x34(r1)
@@ -898,9 +897,9 @@ l2c_link_adjust_allocation:
 /* 802F95EC 002C2BAC  7C 08 03 A6 */	mtlr r0
 /* 802F95F0 002C2BB0  38 21 00 30 */	addi r1, r1, 0x30
 /* 802F95F4 002C2BB4  4E 80 00 20 */	blr 
+.endfn l2c_link_adjust_allocation
 
-.global l2c_link_process_num_completed_pkts
-l2c_link_process_num_completed_pkts:
+.fn l2c_link_process_num_completed_pkts, global
 /* 802F95F8 002C2BB8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F95FC 002C2BBC  7C 08 02 A6 */	mflr r0
 /* 802F9600 002C2BC0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -964,17 +963,17 @@ l2c_link_process_num_completed_pkts:
 /* 802F96D0 002C2C90  7C 08 03 A6 */	mtlr r0
 /* 802F96D4 002C2C94  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F96D8 002C2C98  4E 80 00 20 */	blr 
+.endfn l2c_link_process_num_completed_pkts
 
-.global l2c_link_processs_num_bufs
-l2c_link_processs_num_bufs:
+.fn l2c_link_processs_num_bufs, global
 /* 802F96DC 002C2C9C  3C 80 80 5C */	lis r4, lbl_805C2AC0@ha
 /* 802F96E0 002C2CA0  38 84 2A C0 */	addi r4, r4, lbl_805C2AC0@l
 /* 802F96E4 002C2CA4  B0 64 00 02 */	sth r3, 2(r4)
 /* 802F96E8 002C2CA8  B0 64 00 04 */	sth r3, 4(r4)
 /* 802F96EC 002C2CAC  4E 80 00 20 */	blr 
+.endfn l2c_link_processs_num_bufs
 
-.global l2cap_link_chk_pkt_start
-l2cap_link_chk_pkt_start:
+.fn l2cap_link_chk_pkt_start, global
 /* 802F96F0 002C2CB0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802F96F4 002C2CB4  7C 08 02 A6 */	mflr r0
 /* 802F96F8 002C2CB8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1102,9 +1101,9 @@ l2cap_link_chk_pkt_start:
 /* 802F98B4 002C2E74  7C 08 03 A6 */	mtlr r0
 /* 802F98B8 002C2E78  38 21 00 30 */	addi r1, r1, 0x30
 /* 802F98BC 002C2E7C  4E 80 00 20 */	blr 
+.endfn l2cap_link_chk_pkt_start
 
-.global l2cap_link_chk_pkt_end
-l2cap_link_chk_pkt_end:
+.fn l2cap_link_chk_pkt_end, global
 /* 802F98C0 002C2E80  3C 60 80 5C */	lis r3, lbl_805C2AC0@ha
 /* 802F98C4 002C2E84  38 63 2A C0 */	addi r3, r3, lbl_805C2AC0@l
 /* 802F98C8 002C2E88  80 C3 07 BC */	lwz r6, 0x7bc(r3)
@@ -1135,9 +1134,9 @@ l2cap_link_chk_pkt_end:
 /* 802F9920 002C2EE0  38 60 00 01 */	li r3, 1
 /* 802F9924 002C2EE4  90 06 00 50 */	stw r0, 0x50(r6)
 /* 802F9928 002C2EE8  4E 80 00 20 */	blr 
+.endfn l2cap_link_chk_pkt_end
 
-.global l2c_link_role_changed
-l2c_link_role_changed:
+.fn l2c_link_role_changed, global
 /* 802F992C 002C2EEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F9930 002C2EF0  7C 08 02 A6 */	mflr r0
 /* 802F9934 002C2EF4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1173,9 +1172,9 @@ l2c_link_role_changed:
 /* 802F99A0 002C2F60  7C 08 03 A6 */	mtlr r0
 /* 802F99A4 002C2F64  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F99A8 002C2F68  4E 80 00 20 */	blr 
+.endfn l2c_link_role_changed
 
-.global l2c_link_role_change_failed
-l2c_link_role_change_failed:
+.fn l2c_link_role_change_failed, global
 /* 802F99AC 002C2F6C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F99B0 002C2F70  7C 08 02 A6 */	mflr r0
 /* 802F99B4 002C2F74  3C 60 80 5C */	lis r3, lbl_805C2AC0@ha
@@ -1205,9 +1204,9 @@ l2c_link_role_change_failed:
 /* 802F9A0C 002C2FCC  7C 08 03 A6 */	mtlr r0
 /* 802F9A10 002C2FD0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F9A14 002C2FD4  4E 80 00 20 */	blr 
+.endfn l2c_link_role_change_failed
 
-.global l2c_link_segments_xmitted
-l2c_link_segments_xmitted:
+.fn l2c_link_segments_xmitted, global
 /* 802F9A18 002C2FD8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F9A1C 002C2FDC  7C 08 02 A6 */	mflr r0
 /* 802F9A20 002C2FE0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1267,9 +1266,9 @@ l2c_link_segments_xmitted:
 /* 802F9AE8 002C30A8  7C 08 03 A6 */	mtlr r0
 /* 802F9AEC 002C30AC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F9AF0 002C30B0  4E 80 00 20 */	blr 
+.endfn l2c_link_segments_xmitted
 
-.global l2c_pin_code_request
-l2c_pin_code_request:
+.fn l2c_pin_code_request, global
 /* 802F9AF4 002C30B4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F9AF8 002C30B8  7C 08 02 A6 */	mflr r0
 /* 802F9AFC 002C30BC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1288,6 +1287,7 @@ l2c_pin_code_request:
 /* 802F9B2C 002C30EC  7C 08 03 A6 */	mtlr r0
 /* 802F9B30 002C30F0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F9B34 002C30F4  4E 80 00 20 */	blr
+.endfn l2c_pin_code_request
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

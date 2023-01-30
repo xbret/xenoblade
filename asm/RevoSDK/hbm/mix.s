@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_8033F040
-func_8033F040:
+.fn func_8033F040, global
 /* 8033F040 00308600  3C 80 80 5D */	lis r4, lbl_805CD898@ha
 /* 8033F044 00308604  3C C0 80 55 */	lis r6, lbl_8054EF00@ha
 /* 8033F048 00308608  80 04 D8 98 */	lwz r0, lbl_805CD898@l(r4)
@@ -46,10 +45,10 @@ func_8033F040:
 /* 8033F0D4 00308694  90 03 00 28 */	stw r0, 0x28(r3)
 /* 8033F0D8 00308698  90 03 00 2C */	stw r0, 0x2c(r3)
 /* 8033F0DC 0030869C  4E 80 00 20 */	blr 
+.endfn func_8033F040
 
 
-.global func_8033F0E0
-func_8033F0E0:
+.fn func_8033F0E0, global
 /* 8033F0E0 003086A0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8033F0E4 003086A4  7C 08 02 A6 */	mflr r0
 /* 8033F0E8 003086A8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -181,27 +180,27 @@ func_8033F0E0:
 /* 8033F2D4 00308894  7C 08 03 A6 */	mtlr r0
 /* 8033F2D8 00308898  38 21 00 30 */	addi r1, r1, 0x30
 /* 8033F2DC 0030889C  4E 80 00 20 */	blr 
+.endfn func_8033F0E0
 
 .balign 16, 0
-.global func_8033F2E0
-func_8033F2E0:
+.fn func_8033F2E0, global
 /* 8033F2E0 003088A0  3C 80 80 5D */	lis r4, lbl_805CD89C@ha
 /* 8033F2E4 003088A4  3C 60 80 5D */	lis r3, lbl_805CDEE0@ha
 /* 8033F2E8 003088A8  38 00 00 00 */	li r0, 0
 /* 8033F2EC 003088AC  90 04 D8 9C */	stw r0, lbl_805CD89C@l(r4)
 /* 8033F2F0 003088B0  90 03 DE E0 */	stw r0, lbl_805CDEE0@l(r3)
 /* 8033F2F4 003088B4  4E 80 00 20 */	blr 
+.endfn func_8033F2E0
 
 .balign 16, 0
-.global HBMMIXSetSoundMode
-HBMMIXSetSoundMode:
+.fn HBMMIXSetSoundMode, global
 /* 8033F300 003088C0  3C 80 80 5D */	lis r4, lbl_805CD898@ha
 /* 8033F304 003088C4  90 64 D8 98 */	stw r3, lbl_805CD898@l(r4)
 /* 8033F308 003088C8  4E 80 00 20 */	blr 
+.endfn HBMMIXSetSoundMode
 
 .balign 16, 0
-.global func_8033F310
-func_8033F310:
+.fn func_8033F310, global
 /* 8033F310 003088D0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8033F314 003088D4  7C 08 02 A6 */	mflr r0
 /* 8033F318 003088D8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -875,10 +874,10 @@ func_8033F310:
 /* 8033FC4C 0030920C  7C 08 03 A6 */	mtlr r0
 /* 8033FC50 00309210  38 21 00 20 */	addi r1, r1, 0x20
 /* 8033FC54 00309214  4E 80 00 20 */	blr 
+.endfn func_8033F310
 
 .balign 16, 0
-.global HBMMIXReleaseChannel
-HBMMIXReleaseChannel:
+.fn HBMMIXReleaseChannel, global
 /* 8033FC60 00309220  3C 80 80 5D */	lis r4, lbl_805CD838@ha
 /* 8033FC64 00309224  80 03 00 18 */	lwz r0, 0x18(r3)
 /* 8033FC68 00309228  38 84 D8 38 */	addi r4, r4, lbl_805CD838@l
@@ -890,10 +889,10 @@ HBMMIXReleaseChannel:
 /* 8033FC80 00309240  1C 00 00 64 */	mulli r0, r0, 0x64
 /* 8033FC84 00309244  7C 83 01 2E */	stwx r4, r3, r0
 /* 8033FC88 00309248  4E 80 00 20 */	blr 
+.endfn HBMMIXReleaseChannel
 
 .balign 16, 0
-.global HBMMIXSetInput
-HBMMIXSetInput:
+.fn HBMMIXSetInput, global
 /* 8033FC90 00309250  3C A0 80 5D */	lis r5, lbl_805CD838@ha
 /* 8033FC94 00309254  80 03 00 18 */	lwz r0, 0x18(r3)
 /* 8033FC98 00309258  38 A5 D8 38 */	addi r5, r5, lbl_805CD838@l
@@ -908,10 +907,10 @@ HBMMIXSetInput:
 /* 8033FCBC 0030927C  64 00 10 00 */	oris r0, r0, 0x1000
 /* 8033FCC0 00309280  90 03 00 04 */	stw r0, 4(r3)
 /* 8033FCC4 00309284  4E 80 00 20 */	blr 
+.endfn HBMMIXSetInput
 
 .balign 16, 0
-.global HBMMIXSetAuxA
-HBMMIXSetAuxA:
+.fn HBMMIXSetAuxA, global
 /* 8033FCD0 00309290  3C A0 80 5D */	lis r5, lbl_805CD838@ha
 /* 8033FCD4 00309294  80 03 00 18 */	lwz r0, 0x18(r3)
 /* 8033FCD8 00309298  38 A5 D8 38 */	addi r5, r5, lbl_805CD838@l
@@ -926,10 +925,10 @@ HBMMIXSetAuxA:
 /* 8033FCFC 003092BC  64 00 40 00 */	oris r0, r0, 0x4000
 /* 8033FD00 003092C0  90 03 00 04 */	stw r0, 4(r3)
 /* 8033FD04 003092C4  4E 80 00 20 */	blr 
+.endfn HBMMIXSetAuxA
 
 .balign 16, 0
-.global HBMMIXSetPan
-HBMMIXSetPan:
+.fn HBMMIXSetPan, global
 /* 8033FD10 003092D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8033FD14 003092D4  7C 08 02 A6 */	mflr r0
 /* 8033FD18 003092D8  3C A0 80 5D */	lis r5, lbl_805CD838@ha
@@ -964,10 +963,10 @@ HBMMIXSetPan:
 /* 8033FD84 00309344  7C 08 03 A6 */	mtlr r0
 /* 8033FD88 00309348  38 21 00 10 */	addi r1, r1, 0x10
 /* 8033FD8C 0030934C  4E 80 00 20 */	blr 
+.endfn HBMMIXSetPan
 
 .balign 16, 0
-.global HBMMIXSetFader
-HBMMIXSetFader:
+.fn HBMMIXSetFader, global
 /* 8033FD90 00309350  3C A0 80 5D */	lis r5, lbl_805CD838@ha
 /* 8033FD94 00309354  80 03 00 18 */	lwz r0, 0x18(r3)
 /* 8033FD98 00309358  38 A5 D8 38 */	addi r5, r5, lbl_805CD838@l
@@ -982,10 +981,10 @@ HBMMIXSetFader:
 /* 8033FDBC 0030937C  64 00 40 00 */	oris r0, r0, 0x4000
 /* 8033FDC0 00309380  90 03 00 04 */	stw r0, 4(r3)
 /* 8033FDC4 00309384  4E 80 00 20 */	blr 
+.endfn HBMMIXSetFader
 
 .balign 16, 0
-.global func_8033FDD0
-func_8033FDD0:
+.fn func_8033FDD0, global
 /* 8033FDD0 00309390  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8033FDD4 00309394  3C C0 80 5D */	lis r6, lbl_805CD828@ha
 /* 8033FDD8 00309398  38 C6 D8 28 */	addi r6, r6, lbl_805CD828@l
@@ -1787,10 +1786,10 @@ func_8033FDD0:
 /* 803408BC 00309E7C  83 A1 00 14 */	lwz r29, 0x14(r1)
 /* 803408C0 00309E80  38 21 00 20 */	addi r1, r1, 0x20
 /* 803408C4 00309E84  4E 80 00 20 */	blr 
+.endfn func_8033FDD0
 
 .balign 16, 0
-.global func_803408D0
-func_803408D0:
+.fn func_803408D0, global
 /* 803408D0 00309E90  3C 80 80 5D */	lis r4, lbl_805CD828@ha
 /* 803408D4 00309E94  38 00 00 10 */	li r0, 0x10
 /* 803408D8 00309E98  38 84 D8 28 */	addi r4, r4, lbl_805CD828@l
@@ -1815,19 +1814,19 @@ func_803408D0:
 /* 8034091C 00309EDC  42 00 FF CC */	bdnz .L_803408E8
 /* 80340920 00309EE0  38 60 FF FF */	li r3, -1
 /* 80340924 00309EE4  4E 80 00 20 */	blr 
+.endfn func_803408D0
 
 .balign 16, 0
-.global func_80340930
-func_80340930:
+.fn func_80340930, global
 /* 80340930 00309EF0  3C 80 80 5D */	lis r4, lbl_805CD838@ha
 /* 80340934 00309EF4  38 84 D8 38 */	addi r4, r4, lbl_805CD838@l
 /* 80340938 00309EF8  7C 64 18 AE */	lbzx r3, r4, r3
 /* 8034093C 00309EFC  7C 63 07 74 */	extsb r3, r3
 /* 80340940 00309F00  4E 80 00 20 */	blr 
+.endfn func_80340930
 
 .balign 16, 0
-.global func_80340950
-func_80340950:
+.fn func_80340950, global
 /* 80340950 00309F10  3C A0 80 5D */	lis r5, lbl_805CD828@ha
 /* 80340954 00309F14  3C 80 80 5D */	lis r4, lbl_805CD838@ha
 /* 80340958 00309F18  38 A5 D8 28 */	addi r5, r5, lbl_805CD828@l
@@ -1838,10 +1837,10 @@ func_80340950:
 /* 8034096C 00309F2C  7C 05 19 AE */	stbx r0, r5, r3
 /* 80340970 00309F30  7C 04 31 AE */	stbx r0, r4, r6
 /* 80340974 00309F34  4E 80 00 20 */	blr 
+.endfn func_80340950
 
 .balign 16, 0
-.global HBMFreeIndexByKey
-HBMFreeIndexByKey:
+.fn HBMFreeIndexByKey, global
 /* 80340980 00309F40  3C A0 80 5D */	lis r5, lbl_805CD838@ha
 /* 80340984 00309F44  38 A5 D8 38 */	addi r5, r5, lbl_805CD838@l
 /* 80340988 00309F48  7C C5 18 AE */	lbzx r6, r5, r3
@@ -1853,6 +1852,7 @@ HBMFreeIndexByKey:
 /* 803409A0 00309F60  7C 05 19 AE */	stbx r0, r5, r3
 /* 803409A4 00309F64  7C 04 31 AE */	stbx r0, r4, r6
 /* 803409A8 00309F68  4E 80 00 20 */	blr 
+.endfn HBMFreeIndexByKey
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

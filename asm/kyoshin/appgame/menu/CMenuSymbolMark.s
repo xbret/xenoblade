@@ -2,8 +2,9 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __ct__CMenuSymbolMark
-__ct__CMenuSymbolMark:
+
+
+.fn __ct__CMenuSymbolMark, global
 /* 8011D424 000E69E4  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8011D428 000E69E8  7C 08 02 A6 */	mflr r0
 /* 8011D42C 000E69EC  90 01 00 64 */	stw r0, 0x64(r1)
@@ -372,9 +373,9 @@ __ct__CMenuSymbolMark:
 /* 8011D9B4 000E6F74  7C 08 03 A6 */	mtlr r0
 /* 8011D9B8 000E6F78  38 21 00 60 */	addi r1, r1, 0x60
 /* 8011D9BC 000E6F7C  4E 80 00 20 */	blr
+.endfn __ct__CMenuSymbolMark
 
-.global func_8011D9C0
-func_8011D9C0:
+.fn func_8011D9C0, global
 /* 8011D9C0 000E6F80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8011D9C4 000E6F84  7C 08 02 A6 */	mflr r0
 /* 8011D9C8 000E6F88  2C 03 00 00 */	cmpwi r3, 0
@@ -406,8 +407,11 @@ func_8011D9C0:
 /* 8011DA28 000E6FE8  7C 08 03 A6 */	mtlr r0
 /* 8011DA2C 000E6FEC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8011DA30 000E6FF0  4E 80 00 20 */	blr 
+.endfn func_8011D9C0
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
 
 .global lbl_804F9D68
 lbl_804F9D68:
@@ -546,6 +550,8 @@ lbl_804F9F08:
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+
+
 .global lbl_80530478
 lbl_80530478:
 	.4byte lbl_804F9D68
@@ -585,16 +591,18 @@ lbl_80530478:
 	.4byte 0
 	.4byte 0
 
-.section extab_, "a"  # 0x800066E0 - 0x80021020
+.section extab, "a" # 0x800066E0 - 0x80021020
 
-.global lbl_8000BA94
-lbl_8000BA94:
+.balign 4
+
+.obj "@etb_8000BA94", local
+.hidden "@etb_8000BA94"
 	.4byte 0x200A0000
 	.4byte 0x0000009C
 	.4byte 0x00000024
 	.4byte 0x0000045C
 	.4byte 0x001A0018
-	.4byte 0
+	.4byte 0x00000000
 	.4byte 0x0780001F
 	.4byte 0x00000064
 	.4byte func_8045F580
@@ -605,15 +613,16 @@ lbl_8000BA94:
 	.4byte 0x00000058
 	.4byte __dt__IWorkEvent
 	.4byte 0x8680001F
-	.4byte 0
+	.4byte 0x00000000
 	.4byte func_800FED0C
+.endobj "@etb_8000BA94"
 
-.global lbl_8000BADC
-lbl_8000BADC:
+.obj "@etb_8000BADC", local
+.hidden "@etb_8000BADC"
 	.4byte 0x10080000
 	.4byte 0x00000048
 	.4byte 0x00000010
-	.4byte 0
+	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000064
 	.4byte func_8045F580
@@ -623,13 +632,22 @@ lbl_8000BADC:
 	.4byte 0x8680001E
 	.4byte 0x00000058
 	.4byte __dt__IWorkEvent
+.endobj "@etb_8000BADC"
 
+.section extabindex, "a" # 0x80021020 - 0x80039220
 
-.section extabindex_, "a"  # 0x80021020 - 0x80039220
+.balign 4
 
+.obj "@eti_80026E4C", local
+.hidden "@eti_80026E4C"
 	.4byte __ct__CMenuSymbolMark
 	.4byte 0x0000059C
-	.4byte lbl_8000BA94
+	.4byte "@etb_8000BA94"
+.endobj "@eti_80026E4C"
+
+.obj "@eti_80026E58", local
+.hidden "@eti_80026E58"
 	.4byte func_8011D9C0
 	.4byte 0x00000074
-	.4byte lbl_8000BADC
+	.4byte "@etb_8000BADC"
+.endobj "@eti_80026E58"

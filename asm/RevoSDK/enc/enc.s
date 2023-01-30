@@ -3,21 +3,20 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global ENCConvertStringSjisToUnicode
-ENCConvertStringSjisToUnicode:
+.fn ENCConvertStringSjisToUnicode, global
 /* 80312EF0 002DC4B0  38 E0 00 00 */	li r7, 0
 /* 80312EF4 002DC4B4  48 00 00 1C */	b ENCiConvertStringSjisToUnicode
+.endfn ENCConvertStringSjisToUnicode
 
 .balign 16, 0
-.global ENCConvertStringUnicodeToSjis
-ENCConvertStringUnicodeToSjis:
+.fn ENCConvertStringUnicodeToSjis, global
 /* 80312F00 002DC4C0  38 E0 00 00 */	li r7, 0
 /* 80312F04 002DC4C4  48 00 03 7C */	b ENCiConvertStringUnicodeToSjis
+.endfn ENCConvertStringUnicodeToSjis
 
 
 .balign 16, 0
-.global ENCiConvertStringSjisToUnicode
-ENCiConvertStringSjisToUnicode:
+.fn ENCiConvertStringSjisToUnicode, global
 /* 80312F10 002DC4D0  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80312F14 002DC4D4  7C 08 02 A6 */	mflr r0
 /* 80312F18 002DC4D8  90 01 00 54 */	stw r0, 0x54(r1)
@@ -273,10 +272,10 @@ ENCiConvertStringSjisToUnicode:
 /* 80313274 002DC834  7C 08 03 A6 */	mtlr r0
 /* 80313278 002DC838  38 21 00 50 */	addi r1, r1, 0x50
 /* 8031327C 002DC83C  4E 80 00 20 */	blr
+.endfn ENCiConvertStringSjisToUnicode
 
 .balign 16, 0
-.global ENCiConvertStringUnicodeToSjis
-ENCiConvertStringUnicodeToSjis:
+.fn ENCiConvertStringUnicodeToSjis, global
 /* 80313280 002DC840  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80313284 002DC844  7C 08 02 A6 */	mflr r0
 /* 80313288 002DC848  90 01 00 54 */	stw r0, 0x54(r1)
@@ -470,10 +469,10 @@ ENCiConvertStringUnicodeToSjis:
 /* 8031351C 002DCADC  7C 08 03 A6 */	mtlr r0
 /* 80313520 002DCAE0  38 21 00 50 */	addi r1, r1, 0x50
 /* 80313524 002DCAE4  4E 80 00 20 */	blr 
+.endfn ENCiConvertStringUnicodeToSjis
 
 .balign 16, 0
-.global ENCiConvertUnicodeToSjis
-ENCiConvertUnicodeToSjis:
+.fn ENCiConvertUnicodeToSjis, global
 /* 80313530 002DCAF0  28 04 00 80 */	cmplwi r4, 0x80
 /* 80313534 002DCAF4  40 80 00 14 */	bge .L_80313548
 /* 80313538 002DCAF8  38 00 00 00 */	li r0, 0
@@ -545,10 +544,10 @@ ENCiConvertUnicodeToSjis:
 /* 80313620 002DCBE0  98 03 00 01 */	stb r0, 1(r3)
 /* 80313624 002DCBE4  98 03 00 00 */	stb r0, 0(r3)
 /* 80313628 002DCBE8  4E 80 00 20 */	blr
+.endfn ENCiConvertUnicodeToSjis
 
 .balign 16, 0
-.global ENCiFindSjisFromUnicode
-ENCiFindSjisFromUnicode:
+.fn ENCiFindSjisFromUnicode, global
 /* 80313630 002DCBF0  54 87 06 3F */	clrlwi. r7, r4, 0x18
 /* 80313634 002DCBF4  54 86 C6 3E */	rlwinm r6, r4, 0x18, 0x18, 0x1f
 /* 80313638 002DCBF8  41 82 00 1C */	beq .L_80313654
@@ -628,6 +627,7 @@ ENCiFindSjisFromUnicode:
 /* 80313740 002DCD00  98 03 00 01 */	stb r0, 1(r3)
 /* 80313744 002DCD04  98 03 00 00 */	stb r0, 0(r3)
 /* 80313748 002DCD08  4E 80 00 20 */	blr
+.endfn ENCiFindSjisFromUnicode
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0

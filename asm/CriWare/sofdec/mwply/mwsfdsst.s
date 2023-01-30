@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 #MWSFD_SetSstCh?
-.global func_803A31C0
-func_803A31C0:
+.fn func_803A31C0, global
 /* 803A31C0 0036C780  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A31C4 0036C784  7C 08 02 A6 */	mflr r0
 /* 803A31C8 0036C788  90 01 00 24 */	stw r0, 0x24(r1)
@@ -50,9 +49,9 @@ func_803A31C0:
 /* 803A3260 0036C820  7C 08 03 A6 */	mtlr r0
 /* 803A3264 0036C824  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A3268 0036C828  4E 80 00 20 */	blr 
+.endfn func_803A31C0
 
-.global MWSFD_DisconnectSst
-MWSFD_DisconnectSst:
+.fn MWSFD_DisconnectSst, global
 /* 803A326C 0036C82C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A3270 0036C830  7C 08 02 A6 */	mflr r0
 /* 803A3274 0036C834  90 01 00 14 */	stw r0, 0x14(r1)
@@ -77,16 +76,16 @@ MWSFD_DisconnectSst:
 /* 803A32BC 0036C87C  7C 08 03 A6 */	mtlr r0
 /* 803A32C0 0036C880  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A32C4 0036C884  4E 80 00 20 */	blr 
+.endfn MWSFD_DisconnectSst
 
-.global func_803A32C8
-func_803A32C8:
+.fn func_803A32C8, global
 /* 803A32C8 0036C888  1C 04 00 28 */	mulli r0, r4, 0x28
 /* 803A32CC 0036C88C  7C 63 02 14 */	add r3, r3, r0
 /* 803A32D0 0036C890  80 63 05 EC */	lwz r3, 0x5ec(r3)
 /* 803A32D4 0036C894  4E 80 00 20 */	blr 
+.endfn func_803A32C8
 
-.global MWSST_StartSj
-MWSST_StartSj:
+.fn MWSST_StartSj, global
 /* 803A32D8 0036C898  80 03 00 04 */	lwz r0, 4(r3)
 /* 803A32DC 0036C89C  3C 80 80 60 */	lis r4, lbl_80605EC0@ha
 /* 803A32E0 0036C8A0  38 84 5E C0 */	addi r4, r4, lbl_80605EC0@l
@@ -122,9 +121,9 @@ MWSST_StartSj:
 /* 803A334C 0036C90C  7D 89 03 A6 */	mtctr r12
 /* 803A3350 0036C910  4E 80 04 20 */	bctr 
 /* 803A3354 0036C914  4E 80 00 20 */	blr 
+.endfn MWSST_StartSj
 
-.global MWSST_Stop
-MWSST_Stop:
+.fn MWSST_Stop, global
 /* 803A3358 0036C918  80 03 00 04 */	lwz r0, 4(r3)
 /* 803A335C 0036C91C  3C 80 80 60 */	lis r4, lbl_80605EC0@ha
 /* 803A3360 0036C920  38 84 5E C0 */	addi r4, r4, lbl_80605EC0@l
@@ -161,9 +160,9 @@ MWSST_Stop:
 /* 803A33D0 0036C990  7D 89 03 A6 */	mtctr r12
 /* 803A33D4 0036C994  4E 80 04 20 */	bctr 
 /* 803A33D8 0036C998  4E 80 00 20 */	blr 
+.endfn MWSST_Stop
 
-.global MWSST_GetStat
-MWSST_GetStat:
+.fn MWSST_GetStat, global
 /* 803A33DC 0036C99C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A33E0 0036C9A0  7C 08 02 A6 */	mflr r0
 /* 803A33E4 0036C9A4  3C 80 80 60 */	lis r4, lbl_80605EC0@ha
@@ -211,9 +210,9 @@ MWSST_GetStat:
 /* 803A3474 0036CA34  7C 08 03 A6 */	mtlr r0
 /* 803A3478 0036CA38  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A347C 0036CA3C  4E 80 00 20 */	blr 
+.endfn MWSST_GetStat
 
-.global MWSST_GetTime
-MWSST_GetTime:
+.fn MWSST_GetTime, global
 /* 803A3480 0036CA40  80 03 00 04 */	lwz r0, 4(r3)
 /* 803A3484 0036CA44  3C A0 80 60 */	lis r5, lbl_80605EC0@ha
 /* 803A3488 0036CA48  38 A5 5E C0 */	addi r5, r5, lbl_80605EC0@l
@@ -247,10 +246,10 @@ MWSST_GetTime:
 /* 803A34EC 0036CAAC  7D 89 03 A6 */	mtctr r12
 /* 803A34F0 0036CAB0  4E 80 04 20 */	bctr 
 /* 803A34F4 0036CAB4  4E 80 00 20 */	blr 
+.endfn MWSST_GetTime
 
 #MWSST_SetOutVol or MWSST_Pause
-.global func_803A34F8
-func_803A34F8:
+.fn func_803A34F8, global
 /* 803A34F8 0036CAB8  80 03 00 04 */	lwz r0, 4(r3)
 /* 803A34FC 0036CABC  3C A0 80 60 */	lis r5, lbl_80605EC0@ha
 /* 803A3500 0036CAC0  38 A5 5E C0 */	addi r5, r5, lbl_80605EC0@l
@@ -284,9 +283,9 @@ func_803A34F8:
 /* 803A3564 0036CB24  7D 89 03 A6 */	mtctr r12
 /* 803A3568 0036CB28  4E 80 04 20 */	bctr 
 /* 803A356C 0036CB2C  4E 80 00 20 */	blr 
+.endfn func_803A34F8
 
-.global MWSST_GetOutVol
-MWSST_GetOutVol:
+.fn MWSST_GetOutVol, global
 /* 803A3570 0036CB30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A3574 0036CB34  7C 08 02 A6 */	mflr r0
 /* 803A3578 0036CB38  3C 80 80 60 */	lis r4, lbl_80605EC0@ha
@@ -334,9 +333,9 @@ MWSST_GetOutVol:
 /* 803A3608 0036CBC8  7C 08 03 A6 */	mtlr r0
 /* 803A360C 0036CBCC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A3610 0036CBD0  4E 80 00 20 */	blr 
+.endfn MWSST_GetOutVol
 
-.global func_803A3614
-func_803A3614:
+.fn func_803A3614, global
 /* 803A3614 0036CBD4  80 03 00 04 */	lwz r0, 4(r3)
 /* 803A3618 0036CBD8  3C A0 80 60 */	lis r5, lbl_80605EC0@ha
 /* 803A361C 0036CBDC  38 A5 5E C0 */	addi r5, r5, lbl_80605EC0@l
@@ -370,9 +369,9 @@ func_803A3614:
 /* 803A3680 0036CC40  7D 89 03 A6 */	mtctr r12
 /* 803A3684 0036CC44  4E 80 04 20 */	bctr 
 /* 803A3688 0036CC48  4E 80 00 20 */	blr 
+.endfn func_803A3614
 
-.global func_803A368C
-func_803A368C:
+.fn func_803A368C, global
 /* 803A368C 0036CC4C  80 03 00 04 */	lwz r0, 4(r3)
 /* 803A3690 0036CC50  3C 80 80 60 */	lis r4, lbl_80605EC0@ha
 /* 803A3694 0036CC54  38 84 5E C0 */	addi r4, r4, lbl_80605EC0@l
@@ -406,9 +405,9 @@ func_803A368C:
 /* 803A36F8 0036CCB8  7D 89 03 A6 */	mtctr r12
 /* 803A36FC 0036CCBC  4E 80 04 20 */	bctr 
 /* 803A3700 0036CCC0  4E 80 00 20 */	blr 
+.endfn func_803A368C
 
-.global MWSST_Reset
-MWSST_Reset:
+.fn MWSST_Reset, global
 /* 803A3704 0036CCC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A3708 0036CCC8  7C 08 02 A6 */	mflr r0
 /* 803A370C 0036CCCC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -480,9 +479,9 @@ MWSST_Reset:
 /* 803A37F4 0036CDB4  7C 08 03 A6 */	mtlr r0
 /* 803A37F8 0036CDB8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A37FC 0036CDBC  4E 80 00 20 */	blr 
+.endfn MWSST_Reset
 
-.global MWSST_Destroy
-MWSST_Destroy:
+.fn MWSST_Destroy, global
 /* 803A3800 0036CDC0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A3804 0036CDC4  7C 08 02 A6 */	mflr r0
 /* 803A3808 0036CDC8  3C 80 80 60 */	lis r4, lbl_80605EC0@ha
@@ -599,6 +598,7 @@ MWSST_Destroy:
 /* 803A39A0 0036CF60  7C 08 03 A6 */	mtlr r0
 /* 803A39A4 0036CF64  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A39A8 0036CF68  4E 80 00 20 */	blr 
+.endfn MWSST_Destroy
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

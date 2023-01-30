@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global G3dInit__Q24nw4r3g3dFb
-G3dInit__Q24nw4r3g3dFb:
+.fn G3dInit__Q24nw4r3g3dFb, global
 /* 803FCD3C 003C62FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803FCD40 003C6300  7C 08 02 A6 */	mflr r0
 /* 803FCD44 003C6304  90 01 00 14 */	stw r0, 0x14(r1)
@@ -74,11 +73,12 @@ G3dInit__Q24nw4r3g3dFb:
 /* 803FCE24 003C63E4  7C 08 03 A6 */	mtlr r0
 /* 803FCE28 003C63E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803FCE2C 003C63EC  4E 80 00 20 */	blr 
+.endfn G3dInit__Q24nw4r3g3dFb
 
-.global G3dReset__Q24nw4r3g3dFv
-G3dReset__Q24nw4r3g3dFv:
+.fn G3dReset__Q24nw4r3g3dFv, global
 /* 803FCE30 003C63F0  38 60 07 FF */	li r3, 0x7ff
 /* 803FCE34 003C63F4  4B FE E0 B4 */	b Invalidate__Q34nw4r3g3d8G3DStateFUl
+.endfn G3dReset__Q24nw4r3g3dFv
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

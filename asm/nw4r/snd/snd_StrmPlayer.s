@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __ct__Q44nw4r3snd6detail10StrmPlayerFv
-__ct__Q44nw4r3snd6detail10StrmPlayerFv:
+.fn __ct__Q44nw4r3snd6detail10StrmPlayerFv, global
 /* 80422598 003EBB58  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8042259C 003EBB5C  7C 08 02 A6 */	mflr r0
 /* 804225A0 003EBB60  90 01 00 14 */	stw r0, 0x14(r1)
@@ -67,9 +66,9 @@ __ct__Q44nw4r3snd6detail10StrmPlayerFv:
 /* 80422684 003EBC44  7C 08 03 A6 */	mtlr r0
 /* 80422688 003EBC48  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042268C 003EBC4C  4E 80 00 20 */	blr 
+.endfn __ct__Q44nw4r3snd6detail10StrmPlayerFv
 
-.global __dt__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv
-__dt__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv:
+.fn __dt__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv, global
 /* 80422690 003EBC50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80422694 003EBC54  7C 08 02 A6 */	mflr r0
 /* 80422698 003EBC58  2C 03 00 00 */	cmpwi r3, 0
@@ -93,9 +92,9 @@ __dt__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv:
 /* 804226DC 003EBC9C  7C 08 03 A6 */	mtlr r0
 /* 804226E0 003EBCA0  38 21 00 10 */	addi r1, r1, 0x10
 /* 804226E4 003EBCA4  4E 80 00 20 */	blr
+.endfn __dt__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv
 
-.global __dt__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv
-__dt__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv:
+.fn __dt__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv, global
 /* 804226E8 003EBCA8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804226EC 003EBCAC  7C 08 02 A6 */	mflr r0
 /* 804226F0 003EBCB0  2C 03 00 00 */	cmpwi r3, 0
@@ -119,9 +118,9 @@ __dt__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv:
 /* 80422734 003EBCF4  7C 08 03 A6 */	mtlr r0
 /* 80422738 003EBCF8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042273C 003EBCFC  4E 80 00 20 */	blr 
+.endfn __dt__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv
 
-.global __dt__Q44nw4r3snd6detail10StrmPlayerFv
-__dt__Q44nw4r3snd6detail10StrmPlayerFv:
+.fn __dt__Q44nw4r3snd6detail10StrmPlayerFv, global
 /* 80422740 003EBD00  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80422744 003EBD04  7C 08 02 A6 */	mflr r0
 /* 80422748 003EBD08  2C 03 00 00 */	cmpwi r3, 0
@@ -191,9 +190,9 @@ __dt__Q44nw4r3snd6detail10StrmPlayerFv:
 /* 80422834 003EBDF4  7C 08 03 A6 */	mtlr r0
 /* 80422838 003EBDF8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8042283C 003EBDFC  4E 80 00 20 */	blr 
+.endfn __dt__Q44nw4r3snd6detail10StrmPlayerFv
 
-.global Setup__Q44nw4r3snd6detail10StrmPlayerFPQ44nw4r3snd6detail14StrmBufferPooliUsi
-Setup__Q44nw4r3snd6detail10StrmPlayerFPQ44nw4r3snd6detail14StrmBufferPooliUsi:
+.fn Setup__Q44nw4r3snd6detail10StrmPlayerFPQ44nw4r3snd6detail14StrmBufferPooliUsi, global
 /* 80422840 003EBE00  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80422844 003EBE04  7C 08 02 A6 */	mflr r0
 /* 80422848 003EBE08  90 01 00 24 */	stw r0, 0x24(r1)
@@ -346,9 +345,9 @@ Setup__Q44nw4r3snd6detail10StrmPlayerFPQ44nw4r3snd6detail14StrmBufferPooliUsi:
 /* 80422A4C 003EC00C  7C 08 03 A6 */	mtlr r0
 /* 80422A50 003EC010  38 21 00 20 */	addi r1, r1, 0x20
 /* 80422A54 003EC014  4E 80 00 20 */	blr 
+.endfn Setup__Q44nw4r3snd6detail10StrmPlayerFPQ44nw4r3snd6detail14StrmBufferPooliUsi
 
-.global Shutdown__Q44nw4r3snd6detail10StrmPlayerFv
-Shutdown__Q44nw4r3snd6detail10StrmPlayerFv:
+.fn Shutdown__Q44nw4r3snd6detail10StrmPlayerFv, global
 /* 80422A58 003EC018  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80422A5C 003EC01C  7C 08 02 A6 */	mflr r0
 /* 80422A60 003EC020  90 01 00 14 */	stw r0, 0x14(r1)
@@ -387,9 +386,9 @@ Shutdown__Q44nw4r3snd6detail10StrmPlayerFv:
 /* 80422ADC 003EC09C  7C 08 03 A6 */	mtlr r0
 /* 80422AE0 003EC0A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80422AE4 003EC0A4  4E 80 00 20 */	blr 
+.endfn Shutdown__Q44nw4r3snd6detail10StrmPlayerFv
 
-.global Prepare__Q44nw4r3snd6detail10StrmPlayerFPQ34nw4r2ut10FileStreamQ54nw4r3snd6detail10StrmPlayer15StartOffsetTypei
-Prepare__Q44nw4r3snd6detail10StrmPlayerFPQ34nw4r2ut10FileStreamQ54nw4r3snd6detail10StrmPlayer15StartOffsetTypei:
+.fn Prepare__Q44nw4r3snd6detail10StrmPlayerFPQ34nw4r2ut10FileStreamQ54nw4r3snd6detail10StrmPlayer15StartOffsetTypei, global
 /* 80422AE8 003EC0A8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80422AEC 003EC0AC  7C 08 02 A6 */	mflr r0
 /* 80422AF0 003EC0B0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -445,9 +444,9 @@ Prepare__Q44nw4r3snd6detail10StrmPlayerFPQ34nw4r2ut10FileStreamQ54nw4r3snd6detai
 /* 80422BB4 003EC174  7C 08 03 A6 */	mtlr r0
 /* 80422BB8 003EC178  38 21 00 20 */	addi r1, r1, 0x20
 /* 80422BBC 003EC17C  4E 80 00 20 */	blr 
+.endfn Prepare__Q44nw4r3snd6detail10StrmPlayerFPQ34nw4r2ut10FileStreamQ54nw4r3snd6detail10StrmPlayer15StartOffsetTypei
 
-.global Start__Q44nw4r3snd6detail10StrmPlayerFv
-Start__Q44nw4r3snd6detail10StrmPlayerFv:
+.fn Start__Q44nw4r3snd6detail10StrmPlayerFv, global
 /* 80422BC0 003EC180  94 21 FF 40 */	stwu r1, -0xc0(r1)
 /* 80422BC4 003EC184  7C 08 02 A6 */	mflr r0
 /* 80422BC8 003EC188  90 01 00 C4 */	stw r0, 0xc4(r1)
@@ -702,9 +701,9 @@ Start__Q44nw4r3snd6detail10StrmPlayerFv:
 /* 80422F4C 003EC50C  7C 08 03 A6 */	mtlr r0
 /* 80422F50 003EC510  38 21 00 C0 */	addi r1, r1, 0xc0
 /* 80422F54 003EC514  4E 80 00 20 */	blr 
+.endfn Start__Q44nw4r3snd6detail10StrmPlayerFv
 
-.global Stop__Q44nw4r3snd6detail10StrmPlayerFv
-Stop__Q44nw4r3snd6detail10StrmPlayerFv:
+.fn Stop__Q44nw4r3snd6detail10StrmPlayerFv, global
 /* 80422F58 003EC518  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80422F5C 003EC51C  7C 08 02 A6 */	mflr r0
 /* 80422F60 003EC520  90 01 00 24 */	stw r0, 0x24(r1)
@@ -833,9 +832,9 @@ Stop__Q44nw4r3snd6detail10StrmPlayerFv:
 /* 80423114 003EC6D4  7C 08 03 A6 */	mtlr r0
 /* 80423118 003EC6D8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8042311C 003EC6DC  4E 80 00 20 */	blr 
+.endfn Stop__Q44nw4r3snd6detail10StrmPlayerFv
 
-.global Pause__Q44nw4r3snd6detail10StrmPlayerFb
-Pause__Q44nw4r3snd6detail10StrmPlayerFb:
+.fn Pause__Q44nw4r3snd6detail10StrmPlayerFb, global
 /* 80423120 003EC6E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80423124 003EC6E4  7C 08 02 A6 */	mflr r0
 /* 80423128 003EC6E8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -863,9 +862,9 @@ Pause__Q44nw4r3snd6detail10StrmPlayerFb:
 /* 8042317C 003EC73C  7C 08 03 A6 */	mtlr r0
 /* 80423180 003EC740  38 21 00 10 */	addi r1, r1, 0x10
 /* 80423184 003EC744  4E 80 00 20 */	blr 
+.endfn Pause__Q44nw4r3snd6detail10StrmPlayerFb
 
-.global InitParam__Q44nw4r3snd6detail10StrmPlayerFv
-InitParam__Q44nw4r3snd6detail10StrmPlayerFv:
+.fn InitParam__Q44nw4r3snd6detail10StrmPlayerFv, global
 /* 80423188 003EC748  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8042318C 003EC74C  7C 08 02 A6 */	mflr r0
 /* 80423190 003EC750  90 01 00 14 */	stw r0, 0x14(r1)
@@ -943,9 +942,9 @@ InitParam__Q44nw4r3snd6detail10StrmPlayerFv:
 /* 804232B0 003EC870  7C 08 03 A6 */	mtlr r0
 /* 804232B4 003EC874  38 21 00 10 */	addi r1, r1, 0x10
 /* 804232B8 003EC878  4E 80 00 20 */	blr 
+.endfn InitParam__Q44nw4r3snd6detail10StrmPlayerFv
 
-.global LoadHeader__Q44nw4r3snd6detail10StrmPlayerFPQ34nw4r2ut10FileStreamQ54nw4r3snd6detail10StrmPlayer15StartOffsetTypei
-LoadHeader__Q44nw4r3snd6detail10StrmPlayerFPQ34nw4r2ut10FileStreamQ54nw4r3snd6detail10StrmPlayer15StartOffsetTypei:
+.fn LoadHeader__Q44nw4r3snd6detail10StrmPlayerFPQ34nw4r2ut10FileStreamQ54nw4r3snd6detail10StrmPlayer15StartOffsetTypei, global
 /* 804232BC 003EC87C  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 804232C0 003EC880  7C 08 02 A6 */	mflr r0
 /* 804232C4 003EC884  90 01 00 74 */	stw r0, 0x74(r1)
@@ -1144,9 +1143,9 @@ LoadHeader__Q44nw4r3snd6detail10StrmPlayerFPQ34nw4r2ut10FileStreamQ54nw4r3snd6de
 /* 80423570 003ECB30  7C 08 03 A6 */	mtlr r0
 /* 80423574 003ECB34  38 21 00 70 */	addi r1, r1, 0x70
 /* 80423578 003ECB38  4E 80 00 20 */	blr 
+.endfn LoadHeader__Q44nw4r3snd6detail10StrmPlayerFPQ34nw4r2ut10FileStreamQ54nw4r3snd6detail10StrmPlayer15StartOffsetTypei
 
-.global LoadStreamData__Q44nw4r3snd6detail10StrmPlayerFPQ34nw4r2ut10FileStreamiUlUlib
-LoadStreamData__Q44nw4r3snd6detail10StrmPlayerFPQ34nw4r2ut10FileStreamiUlUlib:
+.fn LoadStreamData__Q44nw4r3snd6detail10StrmPlayerFPQ34nw4r2ut10FileStreamiUlUlib, global
 /* 8042357C 003ECB3C  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 80423580 003ECB40  7C 08 02 A6 */	mflr r0
 /* 80423584 003ECB44  90 01 00 74 */	stw r0, 0x74(r1)
@@ -1319,9 +1318,9 @@ LoadStreamData__Q44nw4r3snd6detail10StrmPlayerFPQ34nw4r2ut10FileStreamiUlUlib:
 /* 804237D0 003ECD90  7C 08 03 A6 */	mtlr r0
 /* 804237D4 003ECD94  38 21 00 70 */	addi r1, r1, 0x70
 /* 804237D8 003ECD98  4E 80 00 20 */	blr 
+.endfn LoadStreamData__Q44nw4r3snd6detail10StrmPlayerFPQ34nw4r2ut10FileStreamiUlUlib
 
-.global SetupPlayer__Q44nw4r3snd6detail10StrmPlayerFv
-SetupPlayer__Q44nw4r3snd6detail10StrmPlayerFv:
+.fn SetupPlayer__Q44nw4r3snd6detail10StrmPlayerFv, global
 /* 804237DC 003ECD9C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 804237E0 003ECDA0  7C 08 02 A6 */	mflr r0
 /* 804237E4 003ECDA4  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1464,9 +1463,9 @@ SetupPlayer__Q44nw4r3snd6detail10StrmPlayerFv:
 /* 804239C8 003ECF88  7C 08 03 A6 */	mtlr r0
 /* 804239CC 003ECF8C  38 21 00 30 */	addi r1, r1, 0x30
 /* 804239D0 003ECF90  4E 80 00 20 */	blr 
+.endfn SetupPlayer__Q44nw4r3snd6detail10StrmPlayerFv
 
-.global AllocVoices__Q44nw4r3snd6detail10StrmPlayerFi
-AllocVoices__Q44nw4r3snd6detail10StrmPlayerFi:
+.fn AllocVoices__Q44nw4r3snd6detail10StrmPlayerFi, global
 /* 804239D4 003ECF94  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 804239D8 003ECF98  7C 08 02 A6 */	mflr r0
 /* 804239DC 003ECF9C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1534,9 +1533,9 @@ AllocVoices__Q44nw4r3snd6detail10StrmPlayerFi:
 /* 80423AB4 003ED074  7C 08 03 A6 */	mtlr r0
 /* 80423AB8 003ED078  38 21 00 30 */	addi r1, r1, 0x30
 /* 80423ABC 003ED07C  4E 80 00 20 */	blr
+.endfn AllocVoices__Q44nw4r3snd6detail10StrmPlayerFi
 
-.global Update__Q44nw4r3snd6detail10StrmPlayerFv
-Update__Q44nw4r3snd6detail10StrmPlayerFv:
+.fn Update__Q44nw4r3snd6detail10StrmPlayerFv, global
 /* 80423AC0 003ED080  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80423AC4 003ED084  7C 08 02 A6 */	mflr r0
 /* 80423AC8 003ED088  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1663,9 +1662,9 @@ Update__Q44nw4r3snd6detail10StrmPlayerFv:
 /* 80423C68 003ED228  7C 08 03 A6 */	mtlr r0
 /* 80423C6C 003ED22C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80423C70 003ED230  4E 80 00 20 */	blr 
+.endfn Update__Q44nw4r3snd6detail10StrmPlayerFv
 
-.global UpdateVoiceParams__Q44nw4r3snd6detail10StrmPlayerFPQ54nw4r3snd6detail10StrmPlayer9StrmTrack
-UpdateVoiceParams__Q44nw4r3snd6detail10StrmPlayerFPQ54nw4r3snd6detail10StrmPlayer9StrmTrack:
+.fn UpdateVoiceParams__Q44nw4r3snd6detail10StrmPlayerFPQ54nw4r3snd6detail10StrmPlayer9StrmTrack, global
 /* 80423C74 003ED234  94 21 FF 10 */	stwu r1, -0xf0(r1)
 /* 80423C78 003ED238  7C 08 02 A6 */	mflr r0
 /* 80423C7C 003ED23C  90 01 00 F4 */	stw r0, 0xf4(r1)
@@ -1908,9 +1907,9 @@ UpdateVoiceParams__Q44nw4r3snd6detail10StrmPlayerFPQ54nw4r3snd6detail10StrmPlaye
 /* 80424008 003ED5C8  7C 08 03 A6 */	mtlr r0
 /* 8042400C 003ED5CC  38 21 00 F0 */	addi r1, r1, 0xf0
 /* 80424010 003ED5D0  4E 80 00 20 */	blr
+.endfn UpdateVoiceParams__Q44nw4r3snd6detail10StrmPlayerFPQ54nw4r3snd6detail10StrmPlayer9StrmTrack
 
-.global UpdateBuffer__Q44nw4r3snd6detail10StrmPlayerFv
-UpdateBuffer__Q44nw4r3snd6detail10StrmPlayerFv:
+.fn UpdateBuffer__Q44nw4r3snd6detail10StrmPlayerFv, global
 /* 80424014 003ED5D4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80424018 003ED5D8  7C 08 02 A6 */	mflr r0
 /* 8042401C 003ED5DC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2024,9 +2023,9 @@ UpdateBuffer__Q44nw4r3snd6detail10StrmPlayerFv:
 /* 80424198 003ED758  7C 08 03 A6 */	mtlr r0
 /* 8042419C 003ED75C  38 21 00 20 */	addi r1, r1, 0x20
 /* 804241A0 003ED760  4E 80 00 20 */	blr 
+.endfn UpdateBuffer__Q44nw4r3snd6detail10StrmPlayerFv
 
-.global UpdateLoopAddress__Q44nw4r3snd6detail10StrmPlayerFUlUl
-UpdateLoopAddress__Q44nw4r3snd6detail10StrmPlayerFUlUl:
+.fn UpdateLoopAddress__Q44nw4r3snd6detail10StrmPlayerFUlUl, global
 /* 804241A4 003ED764  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 804241A8 003ED768  7C 08 02 A6 */	mflr r0
 /* 804241AC 003ED76C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -2101,9 +2100,9 @@ UpdateLoopAddress__Q44nw4r3snd6detail10StrmPlayerFUlUl:
 /* 804242A0 003ED860  7C 08 03 A6 */	mtlr r0
 /* 804242A4 003ED864  38 21 00 30 */	addi r1, r1, 0x30
 /* 804242A8 003ED868  4E 80 00 20 */	blr 
+.endfn UpdateLoopAddress__Q44nw4r3snd6detail10StrmPlayerFUlUl
 
-.global UpdatePlayingBlockIndex__Q44nw4r3snd6detail10StrmPlayerFv
-UpdatePlayingBlockIndex__Q44nw4r3snd6detail10StrmPlayerFv:
+.fn UpdatePlayingBlockIndex__Q44nw4r3snd6detail10StrmPlayerFv, global
 /* 804242AC 003ED86C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 804242B0 003ED870  7C 08 02 A6 */	mflr r0
 /* 804242B4 003ED874  90 01 00 34 */	stw r0, 0x34(r1)
@@ -2245,9 +2244,9 @@ UpdatePlayingBlockIndex__Q44nw4r3snd6detail10StrmPlayerFv:
 /* 8042449C 003EDA5C  7C 08 03 A6 */	mtlr r0
 /* 804244A0 003EDA60  38 21 00 30 */	addi r1, r1, 0x30
 /* 804244A4 003EDA64  4E 80 00 20 */	blr 
+.endfn UpdatePlayingBlockIndex__Q44nw4r3snd6detail10StrmPlayerFv
 
-.global UpdateDataLoopAddress__Q44nw4r3snd6detail10StrmPlayerFl
-UpdateDataLoopAddress__Q44nw4r3snd6detail10StrmPlayerFl:
+.fn UpdateDataLoopAddress__Q44nw4r3snd6detail10StrmPlayerFl, global
 /* 804244A8 003EDA68  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 804244AC 003EDA6C  7C 08 02 A6 */	mflr r0
 /* 804244B0 003EDA70  90 01 00 34 */	stw r0, 0x34(r1)
@@ -2347,9 +2346,9 @@ UpdateDataLoopAddress__Q44nw4r3snd6detail10StrmPlayerFl:
 /* 804245F8 003EDBB8  7C 08 03 A6 */	mtlr r0
 /* 804245FC 003EDBBC  38 21 00 30 */	addi r1, r1, 0x30
 /* 80424600 003EDBC0  4E 80 00 20 */	blr 
+.endfn UpdateDataLoopAddress__Q44nw4r3snd6detail10StrmPlayerFl
 
-.global SetLoopEndToZeroBuffer__Q44nw4r3snd6detail10StrmPlayerFi
-SetLoopEndToZeroBuffer__Q44nw4r3snd6detail10StrmPlayerFi:
+.fn SetLoopEndToZeroBuffer__Q44nw4r3snd6detail10StrmPlayerFi, global
 /* 80424604 003EDBC4  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80424608 003EDBC8  7C 08 02 A6 */	mflr r0
 /* 8042460C 003EDBCC  90 01 00 34 */	stw r0, 0x34(r1)
@@ -2418,9 +2417,9 @@ SetLoopEndToZeroBuffer__Q44nw4r3snd6detail10StrmPlayerFi:
 /* 804246E8 003EDCA8  7C 08 03 A6 */	mtlr r0
 /* 804246EC 003EDCAC  38 21 00 30 */	addi r1, r1, 0x30
 /* 804246F0 003EDCB0  4E 80 00 20 */	blr 
+.endfn SetLoopEndToZeroBuffer__Q44nw4r3snd6detail10StrmPlayerFi
 
-.global UpdateLoadingBlockIndex__Q44nw4r3snd6detail10StrmPlayerFv
-UpdateLoadingBlockIndex__Q44nw4r3snd6detail10StrmPlayerFv:
+.fn UpdateLoadingBlockIndex__Q44nw4r3snd6detail10StrmPlayerFv, global
 /* 804246F4 003EDCB4  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 804246F8 003EDCB8  7C 08 02 A6 */	mflr r0
 /* 804246FC 003EDCBC  90 01 00 34 */	stw r0, 0x34(r1)
@@ -2571,9 +2570,9 @@ UpdateLoadingBlockIndex__Q44nw4r3snd6detail10StrmPlayerFv:
 /* 80424914 003EDED4  7C 08 03 A6 */	mtlr r0
 /* 80424918 003EDED8  38 21 00 30 */	addi r1, r1, 0x30
 /* 8042491C 003EDEDC  4E 80 00 20 */	blr 
+.endfn UpdateLoadingBlockIndex__Q44nw4r3snd6detail10StrmPlayerFv
 
-.global UpdatePauseStatus__Q44nw4r3snd6detail10StrmPlayerFv
-UpdatePauseStatus__Q44nw4r3snd6detail10StrmPlayerFv:
+.fn UpdatePauseStatus__Q44nw4r3snd6detail10StrmPlayerFv, global
 /* 80424920 003EDEE0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80424924 003EDEE4  7C 08 02 A6 */	mflr r0
 /* 80424928 003EDEE8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2625,9 +2624,9 @@ UpdatePauseStatus__Q44nw4r3snd6detail10StrmPlayerFv:
 /* 804249C8 003EDF88  7C 08 03 A6 */	mtlr r0
 /* 804249CC 003EDF8C  38 21 00 20 */	addi r1, r1, 0x20
 /* 804249D0 003EDF90  4E 80 00 20 */	blr 
+.endfn UpdatePauseStatus__Q44nw4r3snd6detail10StrmPlayerFv
 
-.global CalcStartOffset__Q44nw4r3snd6detail10StrmPlayerFPlPUlPl
-CalcStartOffset__Q44nw4r3snd6detail10StrmPlayerFPlPUlPl:
+.fn CalcStartOffset__Q44nw4r3snd6detail10StrmPlayerFPlPUlPl, global
 /* 804249D4 003EDF94  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804249D8 003EDF98  7C 08 02 A6 */	mflr r0
 /* 804249DC 003EDF9C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2701,9 +2700,9 @@ CalcStartOffset__Q44nw4r3snd6detail10StrmPlayerFPlPUlPl:
 /* 80424AD4 003EE094  7C 08 03 A6 */	mtlr r0
 /* 80424AD8 003EE098  38 21 00 20 */	addi r1, r1, 0x20
 /* 80424ADC 003EE09C  4E 80 00 20 */	blr
+.endfn CalcStartOffset__Q44nw4r3snd6detail10StrmPlayerFPlPUlPl
 
-.global VoiceCallbackFunc__Q44nw4r3snd6detail10StrmPlayerFPQ44nw4r3snd6detail5VoiceQ54nw4r3snd6detail5Voice19VoiceCallbackStatusPv
-VoiceCallbackFunc__Q44nw4r3snd6detail10StrmPlayerFPQ44nw4r3snd6detail5VoiceQ54nw4r3snd6detail5Voice19VoiceCallbackStatusPv:
+.fn VoiceCallbackFunc__Q44nw4r3snd6detail10StrmPlayerFPQ44nw4r3snd6detail5VoiceQ54nw4r3snd6detail5Voice19VoiceCallbackStatusPv, global
 /* 80424AE0 003EE0A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80424AE4 003EE0A4  7C 08 02 A6 */	mflr r0
 /* 80424AE8 003EE0A8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2751,9 +2750,9 @@ VoiceCallbackFunc__Q44nw4r3snd6detail10StrmPlayerFPQ44nw4r3snd6detail5VoiceQ54nw
 /* 80424B78 003EE138  7C 08 03 A6 */	mtlr r0
 /* 80424B7C 003EE13C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80424B80 003EE140  4E 80 00 20 */	blr 
+.endfn VoiceCallbackFunc__Q44nw4r3snd6detail10StrmPlayerFPQ44nw4r3snd6detail5VoiceQ54nw4r3snd6detail5Voice19VoiceCallbackStatusPv
 
-.global SetTrackVolume__Q44nw4r3snd6detail10StrmPlayerFUlf
-SetTrackVolume__Q44nw4r3snd6detail10StrmPlayerFUlf:
+.fn SetTrackVolume__Q44nw4r3snd6detail10StrmPlayerFUlf, global
 /* 80424B84 003EE144  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80424B88 003EE148  7C 08 02 A6 */	mflr r0
 /* 80424B8C 003EE14C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2790,10 +2789,10 @@ SetTrackVolume__Q44nw4r3snd6detail10StrmPlayerFUlf:
 /* 80424BF8 003EE1B8  7C 08 03 A6 */	mtlr r0
 /* 80424BFC 003EE1BC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80424C00 003EE1C0  4E 80 00 20 */	blr 
+.endfn SetTrackVolume__Q44nw4r3snd6detail10StrmPlayerFUlf
 
 #GetPlayerTrack__Q44nw4r3snd6detail10StrmPlayerCFi or GetPlayerTrack__Q44nw4r3snd6detail10StrmPlayerFi
-.global GetPlayerTrack__Q44nw4r3snd6detail10StrmPlayerFi
-GetPlayerTrack__Q44nw4r3snd6detail10StrmPlayerFi:
+.fn GetPlayerTrack__Q44nw4r3snd6detail10StrmPlayerFi, global
 /* 80424C04 003EE1C4  2C 04 00 07 */	cmpwi r4, 7
 /* 80424C08 003EE1C8  40 81 00 0C */	ble .L_80424C14
 /* 80424C0C 003EE1CC  38 60 00 00 */	li r3, 0
@@ -2803,9 +2802,9 @@ GetPlayerTrack__Q44nw4r3snd6detail10StrmPlayerFi:
 /* 80424C18 003EE1D8  7C 63 02 14 */	add r3, r3, r0
 /* 80424C1C 003EE1DC  38 63 0B 78 */	addi r3, r3, 0xb78
 /* 80424C20 003EE1E0  4E 80 00 20 */	blr 
+.endfn GetPlayerTrack__Q44nw4r3snd6detail10StrmPlayerFi
 
-.global Execute__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv
-Execute__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv:
+.fn Execute__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv, global
 /* 80424C24 003EE1E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80424C28 003EE1E8  7C 08 02 A6 */	mflr r0
 /* 80424C2C 003EE1EC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2827,13 +2826,13 @@ Execute__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv:
 /* 80424C68 003EE228  7C 08 03 A6 */	mtlr r0
 /* 80424C6C 003EE22C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80424C70 003EE230  4E 80 00 20 */	blr 
+.endfn Execute__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv
 
-.global Cancel__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv
-Cancel__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv:
+.fn Cancel__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv, global
 /* 80424C74 003EE234  4E 80 00 20 */	blr 
+.endfn Cancel__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv
 
-.global OnCancel__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv
-OnCancel__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv:
+.fn OnCancel__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv, global
 /* 80424C78 003EE238  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80424C7C 003EE23C  7C 08 02 A6 */	mflr r0
 /* 80424C80 003EE240  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2878,9 +2877,9 @@ OnCancel__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv:
 /* 80424D14 003EE2D4  7C 08 03 A6 */	mtlr r0
 /* 80424D18 003EE2D8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80424D1C 003EE2DC  4E 80 00 20 */	blr
+.endfn OnCancel__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv
 
-.global __ct__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv
-__ct__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv:
+.fn __ct__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv, global
 /* 80424D20 003EE2E0  3C 80 80 57 */	lis r4, lbl_8056E5A0@ha
 /* 80424D24 003EE2E4  38 A0 00 00 */	li r5, 0
 /* 80424D28 003EE2E8  38 84 E5 A0 */	addi r4, r4, lbl_8056E5A0@l
@@ -2899,9 +2898,9 @@ __ct__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv:
 /* 80424D5C 003EE31C  90 A3 00 2C */	stw r5, 0x2c(r3)
 /* 80424D60 003EE320  90 A3 00 30 */	stw r5, 0x30(r3)
 /* 80424D64 003EE324  4E 80 00 20 */	blr 
+.endfn __ct__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv
 
-.global Execute__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv
-Execute__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv:
+.fn Execute__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv, global
 /* 80424D68 003EE328  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80424D6C 003EE32C  7C 08 02 A6 */	mflr r0
 /* 80424D70 003EE330  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2956,9 +2955,9 @@ Execute__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv:
 /* 80424E2C 003EE3EC  7C 08 03 A6 */	mtlr r0
 /* 80424E30 003EE3F0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80424E34 003EE3F4  4E 80 00 20 */	blr 
+.endfn Execute__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv
 
-.global Cancel__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv
-Cancel__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv:
+.fn Cancel__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv, global
 /* 80424E38 003EE3F8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80424E3C 003EE3FC  7C 08 02 A6 */	mflr r0
 /* 80424E40 003EE400  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2995,9 +2994,9 @@ Cancel__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv:
 /* 80424EB8 003EE478  7C 08 03 A6 */	mtlr r0
 /* 80424EBC 003EE47C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80424EC0 003EE480  4E 80 00 20 */	blr 
+.endfn Cancel__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv
 
-.global OnCancel__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv
-OnCancel__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv:
+.fn OnCancel__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv, global
 /* 80424EC4 003EE484  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80424EC8 003EE488  7C 08 02 A6 */	mflr r0
 /* 80424ECC 003EE48C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3042,60 +3041,61 @@ OnCancel__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv:
 /* 80424F60 003EE520  7C 08 03 A6 */	mtlr r0
 /* 80424F64 003EE524  38 21 00 10 */	addi r1, r1, 0x10
 /* 80424F68 003EE528  4E 80 00 20 */	blr
+.endfn OnCancel__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv
 
-.global OnUpdateFrameSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
-OnUpdateFrameSoundThread__Q44nw4r3snd6detail10StrmPlayerFv:
+.fn OnUpdateFrameSoundThread__Q44nw4r3snd6detail10StrmPlayerFv, global
 /* 80424F6C 003EE52C  4B FF EB 54 */	b Update__Q44nw4r3snd6detail10StrmPlayerFv
+.endfn OnUpdateFrameSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
 
-.global OnUpdateVoiceSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
-OnUpdateVoiceSoundThread__Q44nw4r3snd6detail10StrmPlayerFv:
+.fn OnUpdateVoiceSoundThread__Q44nw4r3snd6detail10StrmPlayerFv, global
 /* 80424F70 003EE530  4B FF F0 A4 */	b UpdateBuffer__Q44nw4r3snd6detail10StrmPlayerFv
+.endfn OnUpdateVoiceSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
 
-.global OnShutdownSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
-OnShutdownSoundThread__Q44nw4r3snd6detail10StrmPlayerFv:
+.fn OnShutdownSoundThread__Q44nw4r3snd6detail10StrmPlayerFv, global
 /* 80424F74 003EE534  81 83 00 00 */	lwz r12, 0(r3)
 /* 80424F78 003EE538  81 8C 00 10 */	lwz r12, 0x10(r12)
 /* 80424F7C 003EE53C  7D 89 03 A6 */	mtctr r12
 /* 80424F80 003EE540  4E 80 04 20 */	bctr 
+.endfn OnShutdownSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
 
-.global IsPause__Q44nw4r3snd6detail10StrmPlayerCFv
-IsPause__Q44nw4r3snd6detail10StrmPlayerCFv:
+.fn IsPause__Q44nw4r3snd6detail10StrmPlayerCFv, global
 /* 80424F84 003EE544  88 63 01 27 */	lbz r3, 0x127(r3)
 /* 80424F88 003EE548  4E 80 00 20 */	blr 
+.endfn IsPause__Q44nw4r3snd6detail10StrmPlayerCFv
 
-.global IsStarted__Q44nw4r3snd6detail10StrmPlayerCFv
-IsStarted__Q44nw4r3snd6detail10StrmPlayerCFv:
+.fn IsStarted__Q44nw4r3snd6detail10StrmPlayerCFv, global
 /* 80424F8C 003EE54C  88 63 01 22 */	lbz r3, 0x122(r3)
 /* 80424F90 003EE550  4E 80 00 20 */	blr 
+.endfn IsStarted__Q44nw4r3snd6detail10StrmPlayerCFv
 
-.global IsActive__Q44nw4r3snd6detail10StrmPlayerCFv
-IsActive__Q44nw4r3snd6detail10StrmPlayerCFv:
+.fn IsActive__Q44nw4r3snd6detail10StrmPlayerCFv, global
 /* 80424F94 003EE554  88 63 01 21 */	lbz r3, 0x121(r3)
 /* 80424F98 003EE558  4E 80 00 20 */	blr 
+.endfn IsActive__Q44nw4r3snd6detail10StrmPlayerCFv
 
 #@208@OnShutdownSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
-.global _208_OnShutdownSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
-_208_OnShutdownSoundThread__Q44nw4r3snd6detail10StrmPlayerFv:
+.fn _208_OnShutdownSoundThread__Q44nw4r3snd6detail10StrmPlayerFv, global
 /* 80424F9C 003EE55C  38 63 FF 2C */	addi r3, r3, -212
 /* 80424FA0 003EE560  4B FF FF D4 */	b OnShutdownSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
+.endfn _208_OnShutdownSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
 
 #@208@OnUpdateVoiceSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
-.global _208_OnUpdateVoiceSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
-_208_OnUpdateVoiceSoundThread__Q44nw4r3snd6detail10StrmPlayerFv:
+.fn _208_OnUpdateVoiceSoundThread__Q44nw4r3snd6detail10StrmPlayerFv, global
 /* 80424FA4 003EE564  38 63 FF 2C */	addi r3, r3, -212
 /* 80424FA8 003EE568  4B FF FF C8 */	b OnUpdateVoiceSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
+.endfn _208_OnUpdateVoiceSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
 
 #@208@OnUpdateFrameSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
-.global _208_OnUpdateFrameSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
-_208_OnUpdateFrameSoundThread__Q44nw4r3snd6detail10StrmPlayerFv:
+.fn _208_OnUpdateFrameSoundThread__Q44nw4r3snd6detail10StrmPlayerFv, global
 /* 80424FAC 003EE56C  38 63 FF 2C */	addi r3, r3, -212
 /* 80424FB0 003EE570  4B FF FF BC */	b OnUpdateFrameSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
+.endfn _208_OnUpdateFrameSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
 
 #@208@__dt__Q44nw4r3snd6detail10StrmPlayerFv
-.global _208___dt__Q44nw4r3snd6detail10StrmPlayerFv
-_208___dt__Q44nw4r3snd6detail10StrmPlayerFv:
+.fn _208___dt__Q44nw4r3snd6detail10StrmPlayerFv, global
 /* 80424FB4 003EE574  38 63 FF 2C */	addi r3, r3, -212
 /* 80424FB8 003EE578  4B FF D7 88 */	b __dt__Q44nw4r3snd6detail10StrmPlayerFv
+.endfn _208___dt__Q44nw4r3snd6detail10StrmPlayerFv
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

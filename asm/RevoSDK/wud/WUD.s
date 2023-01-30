@@ -6,14 +6,13 @@
 
 
 .balign 16, 0
-.global WUDIsLinkedWBC
-WUDIsLinkedWBC:
+.fn WUDIsLinkedWBC, global
 /* 80375BE0 0033F1A0  80 6D BB 78 */	lwz r3, lbl_80667CF8@sda21(r13)
 /* 80375BE4 0033F1A4  4E 80 00 20 */	blr 
+.endfn WUDIsLinkedWBC
 
 .balign 16, 0
-.global App_MEMalloc
-App_MEMalloc:
+.fn App_MEMalloc, global
 /* 80375BF0 0033F1B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80375BF4 0033F1B4  7C 08 02 A6 */	mflr r0
 /* 80375BF8 0033F1B8  3C 80 80 56 */	lis r4, lbl_805624E4@ha
@@ -34,10 +33,10 @@ App_MEMalloc:
 /* 80375C34 0033F1F4  7C 08 03 A6 */	mtlr r0
 /* 80375C38 0033F1F8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80375C3C 0033F1FC  4E 80 00 20 */	blr 
+.endfn App_MEMalloc
 
 .balign 16, 0
-.global App_MEMfree
-App_MEMfree:
+.fn App_MEMfree, global
 /* 80375C40 0033F200  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80375C44 0033F204  7C 08 02 A6 */	mflr r0
 /* 80375C48 0033F208  3C 80 80 56 */	lis r4, lbl_805624F4@ha
@@ -58,10 +57,10 @@ App_MEMfree:
 /* 80375C84 0033F244  7C 08 03 A6 */	mtlr r0
 /* 80375C88 0033F248  38 21 00 10 */	addi r1, r1, 0x10
 /* 80375C8C 0033F24C  4E 80 00 20 */	blr
+.endfn App_MEMfree
 
 .balign 16, 0
-.global SyncFlushCallback
-SyncFlushCallback:
+.fn SyncFlushCallback, global
 /* 80375C90 0033F250  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80375C94 0033F254  7C 08 02 A6 */	mflr r0
 /* 80375C98 0033F258  90 01 00 14 */	stw r0, 0x14(r1)
@@ -94,10 +93,10 @@ SyncFlushCallback:
 /* 80375CFC 0033F2BC  7C 08 03 A6 */	mtlr r0
 /* 80375D00 0033F2C0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80375D04 0033F2C4  4E 80 00 20 */	blr 
+.endfn SyncFlushCallback
 
 .balign 16, 0
-.global WUDiIsSyncDisabled
-WUDiIsSyncDisabled:
+.fn WUDiIsSyncDisabled, global
 /* 80375D10 0033F2D0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80375D14 0033F2D4  7C 08 02 A6 */	mflr r0
 /* 80375D18 0033F2D8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -193,10 +192,10 @@ WUDiIsSyncDisabled:
 /* 80375E5C 0033F41C  7C 08 03 A6 */	mtlr r0
 /* 80375E60 0033F420  38 21 00 30 */	addi r1, r1, 0x30
 /* 80375E64 0033F424  4E 80 00 20 */	blr 
+.endfn WUDiIsSyncDisabled
 
 .balign 16, 0
-.global WUDiTryConnecting
-WUDiTryConnecting:
+.fn WUDiTryConnecting, global
 /* 80375E70 0033F430  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80375E74 0033F434  7C 08 02 A6 */	mflr r0
 /* 80375E78 0033F438  90 01 00 34 */	stw r0, 0x34(r1)
@@ -297,11 +296,11 @@ WUDiTryConnecting:
 /* 80375FD4 0033F594  7C 08 03 A6 */	mtlr r0
 /* 80375FD8 0033F598  38 21 00 30 */	addi r1, r1, 0x30
 /* 80375FDC 0033F59C  4E 80 00 20 */	blr 
+.endfn WUDiTryConnecting
 
 .balign 16, 0
 #not sure
-.global WUDiGetNewStdDevInfo
-WUDiGetNewStdDevInfo:
+.fn WUDiGetNewStdDevInfo, global
 /* 80375FE0 0033F5A0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80375FE4 0033F5A4  7C 08 02 A6 */	mflr r0
 /* 80375FE8 0033F5A8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -541,10 +540,10 @@ WUDiGetNewStdDevInfo:
 /* 8037634C 0033F90C  7C 08 03 A6 */	mtlr r0
 /* 80376350 0033F910  38 21 00 30 */	addi r1, r1, 0x30
 /* 80376354 0033F914  4E 80 00 20 */	blr 
+.endfn WUDiGetNewStdDevInfo
 
 .balign 16, 0
-.global WUDiSaveDeviceToNand
-WUDiSaveDeviceToNand:
+.fn WUDiSaveDeviceToNand, global
 /* 80376360 0033F920  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80376364 0033F924  7C 08 02 A6 */	mflr r0
 /* 80376368 0033F928  90 01 00 24 */	stw r0, 0x24(r1)
@@ -628,9 +627,10 @@ WUDiSaveDeviceToNand:
 /* 80376488 0033FA48  7C 08 03 A6 */	mtlr r0
 /* 8037648C 0033FA4C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80376490 0033FA50  4E 80 00 20 */	blr
+.endfn WUDiSaveDeviceToNand
 
 .balign 16, 0
-__wudOpenWiiFitCallback:
+.fn __wudOpenWiiFitCallback, local
 /* 803764A0 0033FA60  3C A0 80 5E */	lis r5, __rvl_wudcb@ha
 /* 803764A4 0033FA64  7C 64 1B 78 */	mr r4, r3
 /* 803764A8 0033FA68  38 A5 12 80 */	addi r5, r5, __rvl_wudcb@l
@@ -666,9 +666,10 @@ __wudOpenWiiFitCallback:
 /* 80376510 0033FAD0  38 63 25 D0 */	addi r3, r3, lbl_805625D0@l
 /* 80376514 0033FAD4  4C C6 31 82 */	crclr 6
 /* 80376518 0033FAD8  48 00 60 B8 */	b WUD_DEBUGPrint
+.endfn __wudOpenWiiFitCallback
 
 .balign 16, 0
-__wudSeekWiiFitCallback:
+.fn __wudSeekWiiFitCallback, local
 /* 80376520 0033FAE0  3C A0 80 5E */	lis r5, __rvl_wudcb@ha
 /* 80376524 0033FAE4  7C 64 1B 78 */	mr r4, r3
 /* 80376528 0033FAE8  38 A5 12 80 */	addi r5, r5, __rvl_wudcb@l
@@ -706,9 +707,10 @@ __wudSeekWiiFitCallback:
 /* 80376598 0033FB58  38 63 25 E0 */	addi r3, r3, lbl_805625E0@l
 /* 8037659C 0033FB5C  4C C6 31 82 */	crclr 6
 /* 803765A0 0033FB60  48 00 60 30 */	b WUD_DEBUGPrint
+.endfn __wudSeekWiiFitCallback
 
 .balign 16, 0
-__wudUpdateWiiFitCallback:
+.fn __wudUpdateWiiFitCallback, local
 /* 803765B0 0033FB70  3C A0 80 5E */	lis r5, __rvl_wudcb@ha
 /* 803765B4 0033FB74  7C 64 1B 78 */	mr r4, r3
 /* 803765B8 0033FB78  38 A5 12 80 */	addi r5, r5, __rvl_wudcb@l
@@ -744,9 +746,10 @@ __wudUpdateWiiFitCallback:
 /* 80376620 0033FBE0  38 63 25 F0 */	addi r3, r3, lbl_805625F0@l
 /* 80376624 0033FBE4  4C C6 31 82 */	crclr 6
 /* 80376628 0033FBE8  48 00 5F A8 */	b WUD_DEBUGPrint
+.endfn __wudUpdateWiiFitCallback
 
 .balign 16, 0
-__wudCloseWiiFitCallback:
+.fn __wudCloseWiiFitCallback, local
 /* 80376630 0033FBF0  3C A0 80 5E */	lis r5, __rvl_wudcb@ha
 /* 80376634 0033FBF4  7C 64 1B 78 */	mr r4, r3
 /* 80376638 0033FBF8  38 A5 12 80 */	addi r5, r5, __rvl_wudcb@l
@@ -770,10 +773,10 @@ __wudCloseWiiFitCallback:
 /* 80376678 0033FC38  38 63 26 04 */	addi r3, r3, lbl_80562604@l
 /* 8037667C 0033FC3C  4C C6 31 82 */	crclr 6
 /* 80376680 0033FC40  48 00 5F 50 */	b WUD_DEBUGPrint
+.endfn __wudCloseWiiFitCallback
 
 .balign 16, 0
-.global WUDiSyncDone
-WUDiSyncDone:
+.fn WUDiSyncDone, global
 /* 80376690 0033FC50  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80376694 0033FC54  7C 08 02 A6 */	mflr r0
 /* 80376698 0033FC58  3C 60 80 5E */	lis r3, __rvl_wudcb@ha
@@ -874,9 +877,10 @@ WUDiSyncDone:
 /* 803767EC 0033FDAC  7C 08 03 A6 */	mtlr r0
 /* 803767F0 0033FDB0  38 21 00 30 */	addi r1, r1, 0x30
 /* 803767F4 0033FDB4  4E 80 00 20 */	blr
+.endfn WUDiSyncDone
 
 .balign 16, 0
-SyncHandler:
+.fn SyncHandler, local
 /* 80376800 0033FDC0  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80376804 0033FDC4  7C 08 02 A6 */	mflr r0
 /* 80376808 0033FDC8  90 01 00 64 */	stw r0, 0x64(r1)
@@ -1671,9 +1675,10 @@ SyncHandler:
 /* 803772D8 00340898  7C 08 03 A6 */	mtlr r0
 /* 803772DC 0034089C  38 21 00 60 */	addi r1, r1, 0x60
 /* 803772E0 003408A0  4E 80 00 20 */	blr
+.endfn SyncHandler
 
 .balign 16, 0
-SyncHandler0:
+.fn SyncHandler0, local
 /* 803772F0 003408B0  3D 00 80 5E */	lis r8, lbl_805E21E0@ha
 /* 803772F4 003408B4  3C E0 80 37 */	lis r7, SyncHandler@ha
 /* 803772F8 003408B8  39 08 21 E0 */	addi r8, r8, lbl_805E21E0@l
@@ -1682,9 +1687,10 @@ SyncHandler0:
 /* 80377304 003408C4  38 C0 00 00 */	li r6, 0
 /* 80377308 003408C8  39 08 10 00 */	addi r8, r8, 0x1000
 /* 8037730C 003408CC  4B FD D7 84 */	b OSSwitchFiberEx
+.endfn SyncHandler0
 
 .balign 16, 0
-DeleteFlushCallback:
+.fn DeleteFlushCallback, local
 /* 80377310 003408D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80377314 003408D4  7C 08 02 A6 */	mflr r0
 /* 80377318 003408D8  3C C0 80 56 */	lis r6, lbl_805627BC@ha
@@ -1708,10 +1714,10 @@ DeleteFlushCallback:
 /* 8037735C 0034091C  7C 08 03 A6 */	mtlr r0
 /* 80377360 00340920  38 21 00 10 */	addi r1, r1, 0x10
 /* 80377364 00340924  4E 80 00 20 */	blr 
+.endfn DeleteFlushCallback
 
 .balign 16, 0
-.global WUDiTerminateDevice
-WUDiTerminateDevice:
+.fn WUDiTerminateDevice, global
 /* 80377370 00340930  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80377374 00340934  7C 08 02 A6 */	mflr r0
 /* 80377378 00340938  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1754,10 +1760,10 @@ WUDiTerminateDevice:
 /* 803773FC 003409BC  7C 08 03 A6 */	mtlr r0
 /* 80377400 003409C0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80377404 003409C4  4E 80 00 20 */	blr 
+.endfn WUDiTerminateDevice
 
 .balign 16, 0
-.global WUDiDeleteDevice
-WUDiDeleteDevice:
+.fn WUDiDeleteDevice, global
 /* 80377410 003409D0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80377414 003409D4  7C 08 02 A6 */	mflr r0
 /* 80377418 003409D8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1898,9 +1904,10 @@ WUDiDeleteDevice:
 /* 80377608 00340BC8  7C 08 03 A6 */	mtlr r0
 /* 8037760C 00340BCC  38 21 00 30 */	addi r1, r1, 0x30
 /* 80377610 00340BD0  4E 80 00 20 */	blr
+.endfn WUDiDeleteDevice
 
 .balign 16, 0
-DeleteAllHandler:
+.fn DeleteAllHandler, local
 /* 80377620 00340BE0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80377624 00340BE4  7C 08 02 A6 */	mflr r0
 /* 80377628 00340BE8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2128,10 +2135,10 @@ DeleteAllHandler:
 /* 80377964 00340F24  7C 08 03 A6 */	mtlr r0
 /* 80377968 00340F28  38 21 00 20 */	addi r1, r1, 0x20
 /* 8037796C 00340F2C  4E 80 00 20 */	blr
+.endfn DeleteAllHandler
 
 .balign 16, 0
-.global DeleteAllHandler0
-DeleteAllHandler0:
+.fn DeleteAllHandler0, global
 /* 80377970 00340F30  3D 00 80 5E */	lis r8, lbl_805E21E0@ha
 /* 80377974 00340F34  3C E0 80 37 */	lis r7, DeleteAllHandler@ha
 /* 80377978 00340F38  39 08 21 E0 */	addi r8, r8, lbl_805E21E0@l
@@ -2140,10 +2147,10 @@ DeleteAllHandler0:
 /* 80377984 00340F44  38 C0 00 00 */	li r6, 0
 /* 80377988 00340F48  39 08 10 00 */	addi r8, r8, 0x1000
 /* 8037798C 00340F4C  4B FD D1 04 */	b OSSwitchFiberEx
+.endfn DeleteAllHandler0
 
 .balign 16, 0
-.global WUDiClearUnregisteredDevice
-WUDiClearUnregisteredDevice:
+.fn WUDiClearUnregisteredDevice, global
 /* 80377990 00340F50  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80377994 00340F54  7C 08 02 A6 */	mflr r0
 /* 80377998 00340F58  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2218,9 +2225,10 @@ WUDiClearUnregisteredDevice:
 /* 80377A90 00341050  7C 08 03 A6 */	mtlr r0
 /* 80377A94 00341054  38 21 00 20 */	addi r1, r1, 0x20
 /* 80377A98 00341058  4E 80 00 20 */	blr
+.endfn WUDiClearUnregisteredDevice
 
 .balign 16, 0
-EnableStackHandler:
+.fn EnableStackHandler, local
 /* 80377AA0 00341060  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80377AA4 00341064  7C 08 02 A6 */	mflr r0
 /* 80377AA8 00341068  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2311,9 +2319,10 @@ EnableStackHandler:
 /* 80377BD8 00341198  7C 08 03 A6 */	mtlr r0
 /* 80377BDC 0034119C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80377BE0 003411A0  4E 80 00 20 */	blr
+.endfn EnableStackHandler
 
 .balign 16, 0
-EnableStackHandler0:
+.fn EnableStackHandler0, local
 /* 80377BF0 003411B0  3D 00 80 5E */	lis r8, lbl_805E21E0@ha
 /* 80377BF4 003411B4  3C E0 80 37 */	lis r7, EnableStackHandler@ha
 /* 80377BF8 003411B8  39 08 21 E0 */	addi r8, r8, lbl_805E21E0@l
@@ -2322,9 +2331,10 @@ EnableStackHandler0:
 /* 80377C04 003411C4  38 C0 00 00 */	li r6, 0
 /* 80377C08 003411C8  39 08 10 00 */	addi r8, r8, 0x1000
 /* 80377C0C 003411CC  4B FD CE 84 */	b OSSwitchFiberEx
+.endfn EnableStackHandler0
 
 .balign 16, 0
-__wudInitFlushCallbac:
+.fn __wudInitFlushCallbac, local
 /* 80377C10 003411D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80377C14 003411D4  7C 08 02 A6 */	mflr r0
 /* 80377C18 003411D8  3C C0 80 56 */	lis r6, lbl_8056288C@ha
@@ -2344,10 +2354,10 @@ __wudInitFlushCallbac:
 /* 80377C50 00341210  7C 08 03 A6 */	mtlr r0
 /* 80377C54 00341214  38 21 00 10 */	addi r1, r1, 0x10
 /* 80377C58 00341218  4E 80 00 20 */	blr 
+.endfn __wudInitFlushCallbac
 
 .balign 16, 0
-.global WUDiGetRegisteredDevice
-WUDiGetRegisteredDevice:
+.fn WUDiGetRegisteredDevice, global
 /* 80377C60 00341220  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80377C64 00341224  7C 08 02 A6 */	mflr r0
 /* 80377C68 00341228  90 01 00 64 */	stw r0, 0x64(r1)
@@ -2776,9 +2786,10 @@ WUDiGetRegisteredDevice:
 /* 8037828C 0034184C  7C 08 03 A6 */	mtlr r0
 /* 80378290 00341850  38 21 00 60 */	addi r1, r1, 0x60
 /* 80378294 00341854  4E 80 00 20 */	blr
+.endfn WUDiGetRegisteredDevice
 
 .balign 16, 0
-__wudNandResultCallback:
+.fn __wudNandResultCallback, local
 /* 803782A0 00341860  80 8D BB 80 */	lwz r4, lbl_80667D00@sda21(r13)
 /* 803782A4 00341864  38 00 00 00 */	li r0, 0
 /* 803782A8 00341868  98 0D BB 84 */	stb r0, lbl_80667D04@sda21(r13)
@@ -2818,20 +2829,20 @@ __wudNandResultCallback:
 /* 80378314 003418D4  38 00 00 06 */	li r0, 6
 /* 80378318 003418D8  90 0D BB 80 */	stw r0, lbl_80667D00@sda21(r13)
 /* 8037831C 003418DC  4E 80 00 20 */	blr
+.endfn __wudNandResultCallback
 
 .balign 16, 0
-.global __wudNandFlushCallback
-__wudNandFlushCallback:
+.fn __wudNandFlushCallback, global
 /* 80378320 003418E0  80 6D BB 80 */	lwz r3, lbl_80667D00@sda21(r13)
 /* 80378324 003418E4  38 00 00 00 */	li r0, 0
 /* 80378328 003418E8  98 0D BB 84 */	stb r0, lbl_80667D04@sda21(r13)
 /* 8037832C 003418EC  38 03 00 01 */	addi r0, r3, 1
 /* 80378330 003418F0  90 0D BB 80 */	stw r0, lbl_80667D00@sda21(r13)
 /* 80378334 003418F4  4E 80 00 20 */	blr 
+.endfn __wudNandFlushCallback
 
 .balign 16, 0
-.global __wudGetDevInfoFromWiiFit
-__wudGetDevInfoFromWiiFit:
+.fn __wudGetDevInfoFromWiiFit, global
 /* 80378340 00341900  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80378344 00341904  7C 08 02 A6 */	mflr r0
 /* 80378348 00341908  90 01 00 44 */	stw r0, 0x44(r1)
@@ -3185,10 +3196,10 @@ __wudGetDevInfoFromWiiFit:
 /* 80378864 00341E24  7C 08 03 A6 */	mtlr r0
 /* 80378868 00341E28  38 21 00 40 */	addi r1, r1, 0x40
 /* 8037886C 00341E2C  4E 80 00 20 */	blr
+.endfn __wudGetDevInfoFromWiiFit
 
 .balign 16, 0
-.global InitHandler
-InitHandler:
+.fn InitHandler, global
 /* 80378870 00341E30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80378874 00341E34  7C 08 02 A6 */	mflr r0
 /* 80378878 00341E38  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3264,9 +3275,10 @@ InitHandler:
 /* 80378978 00341F38  7C 08 03 A6 */	mtlr r0
 /* 8037897C 00341F3C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80378980 00341F40  4E 80 00 20 */	blr
+.endfn InitHandler
 
 .balign 16, 0
-InitHandler0:
+.fn InitHandler0, local
 /* 80378990 00341F50  3D 00 80 5E */	lis r8, lbl_805E21E0@ha
 /* 80378994 00341F54  3C E0 80 38 */	lis r7, InitHandler@ha
 /* 80378998 00341F58  39 08 21 E0 */	addi r8, r8, lbl_805E21E0@l
@@ -3275,9 +3287,10 @@ InitHandler0:
 /* 803789A4 00341F64  38 C0 00 00 */	li r6, 0
 /* 803789A8 00341F68  39 08 10 00 */	addi r8, r8, 0x1000
 /* 803789AC 00341F6C  4B FD C0 E4 */	b OSSwitchFiberEx
+.endfn InitHandler0
 
 .balign 16, 0
-__wudShutdownFlushCallback:
+.fn __wudShutdownFlushCallback, local
 /* 803789B0 00341F70  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803789B4 00341F74  7C 08 02 A6 */	mflr r0
 /* 803789B8 00341F78  3C C0 80 56 */	lis r6, lbl_805629E8@ha
@@ -3297,9 +3310,10 @@ __wudShutdownFlushCallback:
 /* 803789F0 00341FB0  7C 08 03 A6 */	mtlr r0
 /* 803789F4 00341FB4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803789F8 00341FB8  4E 80 00 20 */	blr
+.endfn __wudShutdownFlushCallback
 
 .balign 16, 0
-ShutdownHandler:
+.fn ShutdownHandler, local
 /* 80378A00 00341FC0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80378A04 00341FC4  7C 08 02 A6 */	mflr r0
 /* 80378A08 00341FC8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -3349,9 +3363,10 @@ ShutdownHandler:
 /* 80378AA8 00342068  7C 08 03 A6 */	mtlr r0
 /* 80378AAC 0034206C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80378AB0 00342070  4E 80 00 20 */	blr
+.endfn ShutdownHandler
 
 .balign 16, 0
-ShutdownHandler0:
+.fn ShutdownHandler0, local
 /* 80378AC0 00342080  3D 00 80 5E */	lis r8, lbl_805E21E0@ha
 /* 80378AC4 00342084  3C E0 80 38 */	lis r7, ShutdownHandler@ha
 /* 80378AC8 00342088  39 08 21 E0 */	addi r8, r8, lbl_805E21E0@l
@@ -3360,10 +3375,10 @@ ShutdownHandler0:
 /* 80378AD4 00342094  38 C0 00 00 */	li r6, 0
 /* 80378AD8 00342098  39 08 10 00 */	addi r8, r8, 0x1000
 /* 80378ADC 0034209C  4B FD BF B4 */	b OSSwitchFiberEx
+.endfn ShutdownHandler0
 
 .balign 16, 0
-.global __wudClearControlBlock
-__wudClearControlBlock:
+.fn __wudClearControlBlock, global
 /* 80378AE0 003420A0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80378AE4 003420A4  7C 08 02 A6 */	mflr r0
 /* 80378AE8 003420A8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -3612,10 +3627,10 @@ __wudClearControlBlock:
 /* 80378E68 00342428  7C 08 03 A6 */	mtlr r0
 /* 80378E6C 0034242C  38 21 00 30 */	addi r1, r1, 0x30
 /* 80378E70 00342430  4E 80 00 20 */	blr 
+.endfn __wudClearControlBlock
 
 .balign 16, 0
-.global WUDInit
-WUDInit:
+.fn WUDInit, global
 /* 80378E80 00342440  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80378E84 00342444  7C 08 02 A6 */	mflr r0
 /* 80378E88 00342448  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3690,10 +3705,10 @@ WUDInit:
 /* 80378F90 00342550  7C 08 03 A6 */	mtlr r0
 /* 80378F94 00342554  38 21 00 10 */	addi r1, r1, 0x10
 /* 80378F98 00342558  4E 80 00 20 */	blr 
+.endfn WUDInit
 
 .balign 16, 0
-.global WUDRegisterAllocator
-WUDRegisterAllocator:
+.fn WUDRegisterAllocator, global
 /* 80378FA0 00342560  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80378FA4 00342564  7C 08 02 A6 */	mflr r0
 /* 80378FA8 00342568  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3713,10 +3728,10 @@ WUDRegisterAllocator:
 /* 80378FE0 003425A0  7C 08 03 A6 */	mtlr r0
 /* 80378FE4 003425A4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80378FE8 003425A8  4E 80 00 20 */	blr 
+.endfn WUDRegisterAllocator
 
 .balign 16, 0
-.global WUDShutdown
-WUDShutdown:
+.fn WUDShutdown, global
 /* 80378FF0 003425B0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80378FF4 003425B4  7C 08 02 A6 */	mflr r0
 /* 80378FF8 003425B8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -3862,10 +3877,10 @@ WUDShutdown:
 /* 80379204 003427C4  7C 08 03 A6 */	mtlr r0
 /* 80379208 003427C8  38 21 00 30 */	addi r1, r1, 0x30
 /* 8037920C 003427CC  4E 80 00 20 */	blr 
+.endfn WUDShutdown
 
 .balign 16, 0
-.global WUDGetStatus
-WUDGetStatus:
+.fn WUDGetStatus, global
 /* 80379210 003427D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80379214 003427D4  7C 08 02 A6 */	mflr r0
 /* 80379218 003427D8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3881,10 +3896,10 @@ WUDGetStatus:
 /* 80379240 00342800  7C 08 03 A6 */	mtlr r0
 /* 80379244 00342804  38 21 00 10 */	addi r1, r1, 0x10
 /* 80379248 00342808  4E 80 00 20 */	blr 
+.endfn WUDGetStatus
 
 .balign 16, 0
-.global WUDGetBufferStatus
-WUDGetBufferStatus:
+.fn WUDGetBufferStatus, global
 /* 80379250 00342810  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80379254 00342814  7C 08 02 A6 */	mflr r0
 /* 80379258 00342818  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3903,10 +3918,10 @@ WUDGetBufferStatus:
 /* 8037928C 0034284C  7C 08 03 A6 */	mtlr r0
 /* 80379290 00342850  38 21 00 10 */	addi r1, r1, 0x10
 /* 80379294 00342854  4E 80 00 20 */	blr 
+.endfn WUDGetBufferStatus
 
 .balign 16, 0
-.global WUDSetSniffMode
-WUDSetSniffMode:
+.fn WUDSetSniffMode, global
 /* 803792A0 00342860  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803792A4 00342864  7C 08 02 A6 */	mflr r0
 /* 803792A8 00342868  2C 04 00 00 */	cmpwi r4, 0
@@ -3936,10 +3951,10 @@ WUDSetSniffMode:
 /* 80379300 003428C0  7C 08 03 A6 */	mtlr r0
 /* 80379304 003428C4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80379308 003428C8  4E 80 00 20 */	blr 
+.endfn WUDSetSniffMode
 
 .balign 16, 0
-.global WUDSetSyncSimpleCallback
-WUDSetSyncSimpleCallback:
+.fn WUDSetSyncSimpleCallback, global
 /* 80379310 003428D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80379314 003428D4  7C 08 02 A6 */	mflr r0
 /* 80379318 003428D8  3C 80 80 56 */	lis r4, lbl_80562A74@ha
@@ -3963,10 +3978,10 @@ WUDSetSyncSimpleCallback:
 /* 80379360 00342920  7C 08 03 A6 */	mtlr r0
 /* 80379364 00342924  38 21 00 10 */	addi r1, r1, 0x10
 /* 80379368 00342928  4E 80 00 20 */	blr 
+.endfn WUDSetSyncSimpleCallback
 
 .balign 16, 0
-.global StartSyncDevice
-StartSyncDevice:
+.fn StartSyncDevice, global
 /* 80379370 00342930  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80379374 00342934  7C 08 02 A6 */	mflr r0
 /* 80379378 00342938  90 01 00 34 */	stw r0, 0x34(r1)
@@ -4053,19 +4068,19 @@ StartSyncDevice:
 /* 803794B0 00342A70  7C 08 03 A6 */	mtlr r0
 /* 803794B4 00342A74  38 21 00 30 */	addi r1, r1, 0x30
 /* 803794B8 00342A78  4E 80 00 20 */	blr 
+.endfn StartSyncDevice
 
 .balign 16, 0
-.global WUDStartFastSyncSimple
-WUDStartFastSyncSimple:
+.fn WUDStartFastSyncSimple, global
 /* 803794C0 00342A80  38 60 00 01 */	li r3, 1
 /* 803794C4 00342A84  38 80 FF FF */	li r4, -1
 /* 803794C8 00342A88  38 A0 00 00 */	li r5, 0
 /* 803794CC 00342A8C  38 C0 00 01 */	li r6, 1
 /* 803794D0 00342A90  4B FF FE A0 */	b StartSyncDevice
+.endfn WUDStartFastSyncSimple
 
 .balign 16, 0
-.global WUDCancelSyncDevice
-WUDCancelSyncDevice:
+.fn WUDCancelSyncDevice, global
 /* 803794E0 00342AA0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803794E4 00342AA4  7C 08 02 A6 */	mflr r0
 /* 803794E8 00342AA8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -4105,10 +4120,10 @@ WUDCancelSyncDevice:
 /* 80379564 00342B24  7C 08 03 A6 */	mtlr r0
 /* 80379568 00342B28  38 21 00 20 */	addi r1, r1, 0x20
 /* 8037956C 00342B2C  4E 80 00 20 */	blr
+.endfn WUDCancelSyncDevice
 
 .balign 16, 0
-.global WUDStopSyncSimple
-WUDStopSyncSimple:
+.fn WUDStopSyncSimple, global
 /* 80379570 00342B30  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80379574 00342B34  7C 08 02 A6 */	mflr r0
 /* 80379578 00342B38  90 01 00 24 */	stw r0, 0x24(r1)
@@ -4146,10 +4161,10 @@ WUDStopSyncSimple:
 /* 803795EC 00342BAC  7C 08 03 A6 */	mtlr r0
 /* 803795F0 00342BB0  38 21 00 20 */	addi r1, r1, 0x20
 /* 803795F4 00342BB4  4E 80 00 20 */	blr 
+.endfn WUDStopSyncSimple
 
 .balign 16, 0
-.global WUDSetDisableChannel
-WUDSetDisableChannel:
+.fn WUDSetDisableChannel, global
 /* 80379600 00342BC0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80379604 00342BC4  7C 08 02 A6 */	mflr r0
 /* 80379608 00342BC8  3C 80 80 56 */	lis r4, lbl_80562AE0@ha
@@ -4214,10 +4229,10 @@ WUDSetDisableChannel:
 /* 803796DC 00342C9C  7C 08 03 A6 */	mtlr r0
 /* 803796E0 00342CA0  38 21 00 20 */	addi r1, r1, 0x20
 /* 803796E4 00342CA4  4E 80 00 20 */	blr 
+.endfn WUDSetDisableChannel
 
 .balign 16, 0
-.global WUDSetHidRecvCallback
-WUDSetHidRecvCallback:
+.fn WUDSetHidRecvCallback, global
 /* 803796F0 00342CB0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803796F4 00342CB4  7C 08 02 A6 */	mflr r0
 /* 803796F8 00342CB8  3C 80 80 56 */	lis r4, lbl_80562B14@ha
@@ -4241,10 +4256,10 @@ WUDSetHidRecvCallback:
 /* 80379740 00342D00  7C 08 03 A6 */	mtlr r0
 /* 80379744 00342D04  38 21 00 10 */	addi r1, r1, 0x10
 /* 80379748 00342D08  4E 80 00 20 */	blr 
+.endfn WUDSetHidRecvCallback
 
 .balign 16, 0
-.global WUDSetHidConnCallback
-WUDSetHidConnCallback:
+.fn WUDSetHidConnCallback, global
 /* 80379750 00342D10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80379754 00342D14  7C 08 02 A6 */	mflr r0
 /* 80379758 00342D18  3C 80 80 56 */	lis r4, lbl_80562B30@ha
@@ -4268,10 +4283,10 @@ WUDSetHidConnCallback:
 /* 803797A0 00342D60  7C 08 03 A6 */	mtlr r0
 /* 803797A4 00342D64  38 21 00 10 */	addi r1, r1, 0x10
 /* 803797A8 00342D68  4E 80 00 20 */	blr 
+.endfn WUDSetHidConnCallback
 
 .balign 16, 0
-.global WUDSetVisibility
-WUDSetVisibility:
+.fn WUDSetVisibility, global
 /* 803797B0 00342D70  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803797B4 00342D74  7C 08 02 A6 */	mflr r0
 /* 803797B8 00342D78  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4294,9 +4309,10 @@ WUDSetVisibility:
 /* 803797FC 00342DBC  7C 08 03 A6 */	mtlr r0
 /* 80379800 00342DC0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80379804 00342DC4  4E 80 00 20 */	blr
+.endfn WUDSetVisibility
 
 .balign 16, 0
-reset_again_cb:
+.fn reset_again_cb, local
 /* 80379810 00342DD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80379814 00342DD4  7C 08 02 A6 */	mflr r0
 /* 80379818 00342DD8  3C 60 80 56 */	lis r3, lbl_80562B4C@ha
@@ -4309,10 +4325,10 @@ reset_again_cb:
 /* 80379834 00342DF4  7C 08 03 A6 */	mtlr r0
 /* 80379838 00342DF8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8037983C 00342DFC  4E 80 00 20 */	blr
+.endfn reset_again_cb
 
 .balign 16, 0
-.global __wudInstallPatchCallback
-__wudInstallPatchCallback:
+.fn __wudInstallPatchCallback, global
 /* 80379840 00342E00  94 21 FE E0 */	stwu r1, -0x120(r1)
 /* 80379844 00342E04  7C 08 02 A6 */	mflr r0
 /* 80379848 00342E08  90 01 01 24 */	stw r0, 0x124(r1)
@@ -4378,10 +4394,10 @@ __wudInstallPatchCallback:
 /* 80379924 00342EE4  7C 08 03 A6 */	mtlr r0
 /* 80379928 00342EE8  38 21 01 20 */	addi r1, r1, 0x120
 /* 8037992C 00342EEC  4E 80 00 20 */	blr
+.endfn __wudInstallPatchCallback
 
 .balign 16, 0
-.global __wudWritePatchCallback
-__wudWritePatchCallback:
+.fn __wudWritePatchCallback, global
 /* 80379930 00342EF0  94 21 FD E0 */	stwu r1, -0x220(r1)
 /* 80379934 00342EF4  7C 08 02 A6 */	mflr r0
 /* 80379938 00342EF8  2C 03 00 00 */	cmpwi r3, 0
@@ -4541,9 +4557,10 @@ __wudWritePatchCallback:
 /* 80379B78 00343138  7C 08 03 A6 */	mtlr r0
 /* 80379B7C 0034313C  38 21 02 20 */	addi r1, r1, 0x220
 /* 80379B80 00343140  4E 80 00 20 */	blr
+.endfn __wudWritePatchCallback
 
 .balign 16, 0
-__wudRemovePatchCallback:
+.fn __wudRemovePatchCallback, local
 /* 80379B90 00343150  94 21 FE F0 */	stwu r1, -0x110(r1)
 /* 80379B94 00343154  7C 08 02 A6 */	mflr r0
 /* 80379B98 00343158  90 01 01 14 */	stw r0, 0x114(r1)
@@ -4661,9 +4678,10 @@ __wudRemovePatchCallback:
 /* 80379D38 003432F8  7C 08 03 A6 */	mtlr r0
 /* 80379D3C 003432FC  38 21 01 10 */	addi r1, r1, 0x110
 /* 80379D40 00343300  4E 80 00 20 */	blr
+.endfn __wudRemovePatchCallback
 
 .balign 16, 0
-__wudSuperPeekPokeCallback:
+.fn __wudSuperPeekPokeCallback, local
 /* 80379D50 00343310  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80379D54 00343314  7C 08 02 A6 */	mflr r0
 /* 80379D58 00343318  3C 60 80 56 */	lis r3, lbl_80562BD8@ha
@@ -4687,10 +4705,10 @@ __wudSuperPeekPokeCallback:
 /* 80379DA0 00343360  7C 08 03 A6 */	mtlr r0
 /* 80379DA4 00343364  38 21 00 10 */	addi r1, r1, 0x10
 /* 80379DA8 00343368  4E 80 00 20 */	blr 
+.endfn __wudSuperPeekPokeCallback
 
 .balign 16, 0
-.global __wudStackHandler
-__wudStackHandler:
+.fn __wudStackHandler, global
 /* 80379DB0 00343370  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80379DB4 00343374  7C 08 02 A6 */	mflr r0
 /* 80379DB8 00343378  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4756,10 +4774,10 @@ __wudStackHandler:
 /* 80379EA0 00343460  7C 08 03 A6 */	mtlr r0
 /* 80379EA4 00343464  38 21 00 10 */	addi r1, r1, 0x10
 /* 80379EA8 00343468  4E 80 00 20 */	blr 
+.endfn __wudStackHandler
 
 .balign 16, 0
-.global __wudInitSub
-__wudInitSub:
+.fn __wudInitSub, global
 /* 80379EB0 00343470  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80379EB4 00343474  7C 08 02 A6 */	mflr r0
 /* 80379EB8 00343478  3C 60 80 56 */	lis r3, lbl_80562C2C@ha
@@ -4856,10 +4874,10 @@ __wudInitSub:
 /* 8037A014 003435D4  7C 08 03 A6 */	mtlr r0
 /* 8037A018 003435D8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8037A01C 003435DC  4E 80 00 20 */	blr 
+.endfn __wudInitSub
 
 .balign 16, 0
-.global WUDiRegisterDevice
-WUDiRegisterDevice:
+.fn WUDiRegisterDevice, global
 /* 8037A020 003435E0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8037A024 003435E4  7C 08 02 A6 */	mflr r0
 /* 8037A028 003435E8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -4950,10 +4968,10 @@ WUDiRegisterDevice:
 /* 8037A168 00343728  7C 08 03 A6 */	mtlr r0
 /* 8037A16C 0034372C  38 21 00 30 */	addi r1, r1, 0x30
 /* 8037A170 00343730  4E 80 00 20 */	blr 
+.endfn WUDiRegisterDevice
 
 .balign 16, 0
-.global WUDiRemoveDevice
-WUDiRemoveDevice:
+.fn WUDiRemoveDevice, global
 /* 8037A180 00343740  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8037A184 00343744  7C 08 02 A6 */	mflr r0
 /* 8037A188 00343748  90 01 00 24 */	stw r0, 0x24(r1)
@@ -5056,10 +5074,10 @@ WUDiRemoveDevice:
 /* 8037A2F4 003438B4  7C 08 03 A6 */	mtlr r0
 /* 8037A2F8 003438B8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8037A2FC 003438BC  4E 80 00 20 */	blr 
+.endfn WUDiRemoveDevice
 
 .balign 16, 0
-.global WUDiGetDevInfo
-WUDiGetDevInfo:
+.fn WUDiGetDevInfo, global
 /* 8037A300 003438C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8037A304 003438C4  7C 08 02 A6 */	mflr r0
 /* 8037A308 003438C8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -5120,10 +5138,10 @@ WUDiGetDevInfo:
 /* 8037A3CC 0034398C  7C 08 03 A6 */	mtlr r0
 /* 8037A3D0 00343990  38 21 00 20 */	addi r1, r1, 0x20
 /* 8037A3D4 00343994  4E 80 00 20 */	blr 
+.endfn WUDiGetDevInfo
 
 .balign 16, 0
-.global WUDiMoveTopSmpDevInfoPtr
-WUDiMoveTopSmpDevInfoPtr:
+.fn WUDiMoveTopSmpDevInfoPtr, global
 /* 8037A3E0 003439A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8037A3E4 003439A4  7C 08 02 A6 */	mflr r0
 /* 8037A3E8 003439A8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -5198,10 +5216,10 @@ WUDiMoveTopSmpDevInfoPtr:
 /* 8037A4E8 00343AA8  7C 08 03 A6 */	mtlr r0
 /* 8037A4EC 00343AAC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8037A4F0 00343AB0  4E 80 00 20 */	blr 
+.endfn WUDiMoveTopSmpDevInfoPtr
 
 .balign 16, 0
-.global WUDiMoveBottomSmpDevInfoPtr
-WUDiMoveBottomSmpDevInfoPtr:
+.fn WUDiMoveBottomSmpDevInfoPtr, global
 /* 8037A500 00343AC0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8037A504 00343AC4  7C 08 02 A6 */	mflr r0
 /* 8037A508 00343AC8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -5276,10 +5294,10 @@ WUDiMoveBottomSmpDevInfoPtr:
 /* 8037A608 00343BC8  7C 08 03 A6 */	mtlr r0
 /* 8037A60C 00343BCC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8037A610 00343BD0  4E 80 00 20 */	blr 
+.endfn WUDiMoveBottomSmpDevInfoPtr
 
 .balign 16, 0
-.global WUDiMoveTopOfDisconnectedSmpDevice
-WUDiMoveTopOfDisconnectedSmpDevice:
+.fn WUDiMoveTopOfDisconnectedSmpDevice, global
 /* 8037A620 00343BE0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8037A624 00343BE4  7C 08 02 A6 */	mflr r0
 /* 8037A628 00343BE8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -5378,10 +5396,10 @@ WUDiMoveTopOfDisconnectedSmpDevice:
 /* 8037A77C 00343D3C  7C 08 03 A6 */	mtlr r0
 /* 8037A780 00343D40  38 21 00 30 */	addi r1, r1, 0x30
 /* 8037A784 00343D44  4E 80 00 20 */	blr 
+.endfn WUDiMoveTopOfDisconnectedSmpDevice
 
 .balign 16, 0
-.global WUDiMoveTopStdDevInfoPtr
-WUDiMoveTopStdDevInfoPtr:
+.fn WUDiMoveTopStdDevInfoPtr, global
 /* 8037A790 00343D50  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8037A794 00343D54  7C 08 02 A6 */	mflr r0
 /* 8037A798 00343D58  90 01 00 24 */	stw r0, 0x24(r1)
@@ -5456,10 +5474,10 @@ WUDiMoveTopStdDevInfoPtr:
 /* 8037A898 00343E58  7C 08 03 A6 */	mtlr r0
 /* 8037A89C 00343E5C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8037A8A0 00343E60  4E 80 00 20 */	blr 
+.endfn WUDiMoveTopStdDevInfoPtr
 
 .balign 16, 0
-.global WUDiMoveBottomStdDevInfoPtr
-WUDiMoveBottomStdDevInfoPtr:
+.fn WUDiMoveBottomStdDevInfoPtr, global
 /* 8037A8B0 00343E70  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8037A8B4 00343E74  7C 08 02 A6 */	mflr r0
 /* 8037A8B8 00343E78  90 01 00 24 */	stw r0, 0x24(r1)
@@ -5534,10 +5552,10 @@ WUDiMoveBottomStdDevInfoPtr:
 /* 8037A9B8 00343F78  7C 08 03 A6 */	mtlr r0
 /* 8037A9BC 00343F7C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8037A9C0 00343F80  4E 80 00 20 */	blr 
+.endfn WUDiMoveBottomStdDevInfoPtr
 
 .balign 16, 0
-.global WUDiMoveTopOfDisconnectedStdDevice
-WUDiMoveTopOfDisconnectedStdDevice:
+.fn WUDiMoveTopOfDisconnectedStdDevice, global
 /* 8037A9D0 00343F90  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8037A9D4 00343F94  7C 08 02 A6 */	mflr r0
 /* 8037A9D8 00343F98  90 01 00 34 */	stw r0, 0x34(r1)
@@ -5647,10 +5665,10 @@ WUDiMoveTopOfDisconnectedStdDevice:
 /* 8037AB54 00344114  7C 08 03 A6 */	mtlr r0
 /* 8037AB58 00344118  38 21 00 30 */	addi r1, r1, 0x30
 /* 8037AB5C 0034411C  4E 80 00 20 */	blr 
+.endfn WUDiMoveTopOfDisconnectedStdDevice
 
 .balign 16, 0
-.global WUDiMoveTopOfUnusedStdDevice
-WUDiMoveTopOfUnusedStdDevice:
+.fn WUDiMoveTopOfUnusedStdDevice, global
 /* 8037AB60 00344120  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8037AB64 00344124  7C 08 02 A6 */	mflr r0
 /* 8037AB68 00344128  90 01 00 44 */	stw r0, 0x44(r1)
@@ -5763,10 +5781,10 @@ WUDiMoveTopOfUnusedStdDevice:
 /* 8037ACEC 003442AC  7C 08 03 A6 */	mtlr r0
 /* 8037ACF0 003442B0  38 21 00 40 */	addi r1, r1, 0x40
 /* 8037ACF4 003442B4  4E 80 00 20 */	blr 
+.endfn WUDiMoveTopOfUnusedStdDevice
 
 .balign 16, 0
-.global WUDIsBusy
-WUDIsBusy:
+.fn WUDIsBusy, global
 /* 8037AD00 003442C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8037AD04 003442C4  7C 08 02 A6 */	mflr r0
 /* 8037AD08 003442C8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -5798,9 +5816,10 @@ WUDIsBusy:
 /* 8037AD68 00344328  7C 08 03 A6 */	mtlr r0
 /* 8037AD6C 0034432C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8037AD70 00344330  4E 80 00 20 */	blr
+.endfn WUDIsBusy
 
 .balign 16, 0
-CleanupCallback:
+.fn CleanupCallback, local
 /* 8037AD80 00344340  2C 03 00 00 */	cmpwi r3, 0
 /* 8037AD84 00344344  3C 60 80 5E */	lis r3, __rvl_wudcb@ha
 /* 8037AD88 00344348  38 63 12 80 */	addi r3, r3, __rvl_wudcb@l
@@ -5815,9 +5834,10 @@ CleanupCallback:
 /* 8037ADA8 00344368  4C C6 31 82 */	crclr 6
 /* 8037ADAC 0034436C  48 00 18 24 */	b WUD_DEBUGPrint
 /* 8037ADB0 00344370  4E 80 00 20 */	blr
+.endfn CleanupCallback
 
 .balign 16, 0
-__wudSecurityEventStackCallback:
+.fn __wudSecurityEventStackCallback, local
 /* 8037ADC0 00344380  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8037ADC4 00344384  7C 08 02 A6 */	mflr r0
 /* 8037ADC8 00344388  90 01 00 64 */	stw r0, 0x64(r1)
@@ -6184,10 +6204,10 @@ switch_8037B2F0:
 /* 8037B308 003448C8  7C 08 03 A6 */	mtlr r0
 /* 8037B30C 003448CC  38 21 00 60 */	addi r1, r1, 0x60
 /* 8037B310 003448D0  4E 80 00 20 */	blr
+.endfn __wudSecurityEventStackCallback
 
 .balign 16, 0
-.global __wudSearchEventStackCallback
-__wudSearchEventStackCallback:
+.fn __wudSearchEventStackCallback, global
 /* 8037B320 003448E0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8037B324 003448E4  7C 08 02 A6 */	mflr r0
 /* 8037B328 003448E8  2C 03 00 00 */	cmpwi r3, 0
@@ -6328,9 +6348,10 @@ __wudSearchEventStackCallback:
 /* 8037B51C 00344ADC  7C 08 03 A6 */	mtlr r0
 /* 8037B520 00344AE0  38 21 00 30 */	addi r1, r1, 0x30
 /* 8037B524 00344AE4  4E 80 00 20 */	blr
+.endfn __wudSearchEventStackCallback
 
 .balign 16, 0
-__wudVendorSpecificEventStackCallback:
+.fn __wudVendorSpecificEventStackCallback, local
 /* 8037B530 00344AF0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8037B534 00344AF4  7C 08 02 A6 */	mflr r0
 /* 8037B538 00344AF8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -6514,9 +6535,10 @@ __wudVendorSpecificEventStackCallback:
 /* 8037B7CC 00344D8C  7C 08 03 A6 */	mtlr r0
 /* 8037B7D0 00344D90  38 21 00 20 */	addi r1, r1, 0x20
 /* 8037B7D4 00344D94  4E 80 00 20 */	blr
+.endfn __wudVendorSpecificEventStackCallback
 
 .balign 16, 0
-__wudDeviceStatusEventStackCallback:
+.fn __wudDeviceStatusEventStackCallback, local
 /* 8037B7E0 00344DA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8037B7E4 00344DA4  7C 08 02 A6 */	mflr r0
 /* 8037B7E8 00344DA8  3C 80 80 56 */	lis r4, lbl_805630F4@ha
@@ -6538,10 +6560,10 @@ __wudDeviceStatusEventStackCallback:
 /* 8037B824 00344DE4  7C 08 03 A6 */	mtlr r0
 /* 8037B828 00344DE8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8037B82C 00344DEC  4E 80 00 20 */	blr
+.endfn __wudDeviceStatusEventStackCallback
 
 .balign 16, 0
-.global __wudLinkKeyEventStackCallback
-__wudLinkKeyEventStackCallback:
+.fn __wudLinkKeyEventStackCallback, global
 /* 8037B830 00344DF0  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8037B834 00344DF4  7C 08 02 A6 */	mflr r0
 /* 8037B838 00344DF8  90 01 00 64 */	stw r0, 0x64(r1)
@@ -6774,9 +6796,10 @@ __wudLinkKeyEventStackCallback:
 /* 8037BB78 00345138  7C 08 03 A6 */	mtlr r0
 /* 8037BB7C 0034513C  38 21 00 60 */	addi r1, r1, 0x60
 /* 8037BB80 00345140  4E 80 00 20 */	blr
+.endfn __wudLinkKeyEventStackCallback
 
 .balign 16, 0
-__wudPowerMangeEventStackCallback:
+.fn __wudPowerMangeEventStackCallback, local
 /* 8037BB90 00345150  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8037BB94 00345154  7C 08 02 A6 */	mflr r0
 /* 8037BB98 00345158  90 01 00 24 */	stw r0, 0x24(r1)
@@ -6858,10 +6881,10 @@ __wudPowerMangeEventStackCallback:
 /* 8037BCB0 00345270  7C 08 03 A6 */	mtlr r0
 /* 8037BCB4 00345274  38 21 00 20 */	addi r1, r1, 0x20
 /* 8037BCB8 00345278  4E 80 00 20 */	blr 
+.endfn __wudPowerMangeEventStackCallback
 
 .balign 16, 0
-.global _WUDGetDevAddr
-_WUDGetDevAddr:
+.fn _WUDGetDevAddr, global
 /* 8037BCC0 00345280  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8037BCC4 00345284  7C 08 02 A6 */	mflr r0
 /* 8037BCC8 00345288  90 01 00 14 */	stw r0, 0x14(r1)
@@ -6885,10 +6908,10 @@ _WUDGetDevAddr:
 /* 8037BD08 003452C8  7C 08 03 A6 */	mtlr r0
 /* 8037BD0C 003452CC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8037BD10 003452D0  4E 80 00 20 */	blr 
+.endfn _WUDGetDevAddr
 
 .balign 16, 0
-.global _WUDGetQueuedSize
-_WUDGetQueuedSize:
+.fn _WUDGetQueuedSize, global
 /* 8037BD20 003452E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8037BD24 003452E4  7C 08 02 A6 */	mflr r0
 /* 8037BD28 003452E8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -6913,10 +6936,10 @@ _WUDGetQueuedSize:
 /* 8037BD6C 0034532C  7C 08 03 A6 */	mtlr r0
 /* 8037BD70 00345330  38 21 00 10 */	addi r1, r1, 0x10
 /* 8037BD74 00345334  4E 80 00 20 */	blr 
+.endfn _WUDGetQueuedSize
 
 .balign 16, 0
-.global _WUDGetNotAckedSize
-_WUDGetNotAckedSize:
+.fn _WUDGetNotAckedSize, global
 /* 8037BD80 00345340  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8037BD84 00345344  7C 08 02 A6 */	mflr r0
 /* 8037BD88 00345348  90 01 00 14 */	stw r0, 0x14(r1)
@@ -6941,10 +6964,10 @@ _WUDGetNotAckedSize:
 /* 8037BDCC 0034538C  7C 08 03 A6 */	mtlr r0
 /* 8037BDD0 00345390  38 21 00 10 */	addi r1, r1, 0x10
 /* 8037BDD4 00345394  4E 80 00 20 */	blr 
+.endfn _WUDGetNotAckedSize
 
 .balign 16, 0
-.global _WUDGetLinkNumber
-_WUDGetLinkNumber:
+.fn _WUDGetLinkNumber, global
 /* 8037BDE0 003453A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8037BDE4 003453A4  7C 08 02 A6 */	mflr r0
 /* 8037BDE8 003453A8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -6960,17 +6983,17 @@ _WUDGetLinkNumber:
 /* 8037BE10 003453D0  7C 08 03 A6 */	mtlr r0
 /* 8037BE14 003453D4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8037BE18 003453D8  4E 80 00 20 */	blr 
+.endfn _WUDGetLinkNumber
 
 .balign 16, 0
-.global WUDiGetDiscoverDevice
-WUDiGetDiscoverDevice:
+.fn WUDiGetDiscoverDevice, global
 /* 8037BE20 003453E0  3C 60 80 5E */	lis r3, lbl_805E1AD8@ha
 /* 8037BE24 003453E4  38 63 1A D8 */	addi r3, r3, lbl_805E1AD8@l
 /* 8037BE28 003453E8  4E 80 00 20 */	blr 
+.endfn WUDiGetDiscoverDevice
 
 .balign 16, 0
-.global WUDSetDeviceHistory
-WUDSetDeviceHistory:
+.fn WUDSetDeviceHistory, global
 /* 8037BE30 003453F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8037BE34 003453F4  7C 08 02 A6 */	mflr r0
 /* 8037BE38 003453F8  2C 04 00 00 */	cmpwi r4, 0
@@ -7002,10 +7025,10 @@ WUDSetDeviceHistory:
 /* 8037BE98 00345458  7C 08 03 A6 */	mtlr r0
 /* 8037BE9C 0034545C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8037BEA0 00345460  4E 80 00 20 */	blr 
+.endfn WUDSetDeviceHistory
 
 .balign 16, 0
-.global WUDIsLatestDevice
-WUDIsLatestDevice:
+.fn WUDIsLatestDevice, global
 /* 8037BEB0 00345470  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8037BEB4 00345474  7C 08 02 A6 */	mflr r0
 /* 8037BEB8 00345478  2C 04 00 00 */	cmpwi r4, 0
@@ -7029,10 +7052,10 @@ WUDIsLatestDevice:
 /* 8037BEF8 003454B8  7C 08 03 A6 */	mtlr r0
 /* 8037BEFC 003454BC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8037BF00 003454C0  4E 80 00 20 */	blr 
+.endfn WUDIsLatestDevice
 
 .balign 16, 0
-.global WUDUpdateSCSetting
-WUDUpdateSCSetting:
+.fn WUDUpdateSCSetting, global
 /* 8037BF10 003454D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8037BF14 003454D4  7C 08 02 A6 */	mflr r0
 /* 8037BF18 003454D8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -7053,42 +7076,43 @@ WUDUpdateSCSetting:
 /* 8037BF50 00345510  7C 08 03 A6 */	mtlr r0
 /* 8037BF54 00345514  38 21 00 10 */	addi r1, r1, 0x10
 /* 8037BF58 00345518  4E 80 00 20 */	blr 
+.endfn WUDUpdateSCSetting
 
 .balign 16, 0
-.global WUDiSetDevAddrForHandle
-WUDiSetDevAddrForHandle:
+.fn WUDiSetDevAddrForHandle, global
 /* 8037BF60 00345520  3C A0 80 5E */	lis r5, lbl_805E2040@ha
 /* 8037BF64 00345524  54 60 15 BA */	rlwinm r0, r3, 2, 0x16, 0x1d
 /* 8037BF68 00345528  38 A5 20 40 */	addi r5, r5, lbl_805E2040@l
 /* 8037BF6C 0034552C  7C 85 01 2E */	stwx r4, r5, r0
 /* 8037BF70 00345530  4E 80 00 20 */	blr 
+.endfn WUDiSetDevAddrForHandle
 
 .balign 16, 0
-.global WUDiGetDevAddrForHandle
-WUDiGetDevAddrForHandle:
+.fn WUDiGetDevAddrForHandle, global
 /* 8037BF80 00345540  3C 80 80 5E */	lis r4, lbl_805E2040@ha
 /* 8037BF84 00345544  54 60 15 BA */	rlwinm r0, r3, 2, 0x16, 0x1d
 /* 8037BF88 00345548  38 84 20 40 */	addi r4, r4, lbl_805E2040@l
 /* 8037BF8C 0034554C  7C 64 00 2E */	lwzx r3, r4, r0
 /* 8037BF90 00345550  4E 80 00 20 */	blr 
+.endfn WUDiGetDevAddrForHandle
 
 .balign 16, 0
-.global WUDiSetQueueSizeForHandle
-WUDiSetQueueSizeForHandle:
+.fn WUDiSetQueueSizeForHandle, global
 /* 8037BFA0 00345560  3C A0 80 5E */	lis r5, lbl_805E33E8@ha
 /* 8037BFA4 00345564  54 60 0D FC */	rlwinm r0, r3, 1, 0x17, 0x1e
 /* 8037BFA8 00345568  38 A5 33 E8 */	addi r5, r5, lbl_805E33E8@l
 /* 8037BFAC 0034556C  7C 85 03 2E */	sthx r4, r5, r0
 /* 8037BFB0 00345570  4E 80 00 20 */	blr 
+.endfn WUDiSetQueueSizeForHandle
 
 .balign 16, 0
-.global WUDiSetNotAckNumForHandle
-WUDiSetNotAckNumForHandle:
+.fn WUDiSetNotAckNumForHandle, global
 /* 8037BFC0 00345580  3C A0 80 5E */	lis r5, lbl_805E3408@ha
 /* 8037BFC4 00345584  54 60 0D FC */	rlwinm r0, r3, 1, 0x17, 0x1e
 /* 8037BFC8 00345588  38 A5 34 08 */	addi r5, r5, lbl_805E3408@l
 /* 8037BFCC 0034558C  7C 85 03 2E */	sthx r4, r5, r0
 /* 8037BFD0 00345590  4E 80 00 20 */	blr 
+.endfn WUDiSetNotAckNumForHandle
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

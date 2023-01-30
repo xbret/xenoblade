@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global AHXSJD_Init
-AHXSJD_Init:
+.fn AHXSJD_Init, global
 /* 8038C760 00355D20  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8038C764 00355D24  7C 08 02 A6 */	mflr r0
 /* 8038C768 00355D28  3C 60 80 5F */	lis r3, lbl_805E9B00@ha
@@ -48,9 +47,9 @@ AHXSJD_Init:
 /* 8038C800 00355DC0  7C 08 03 A6 */	mtlr r0
 /* 8038C804 00355DC4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038C808 00355DC8  4E 80 00 20 */	blr 
+.endfn AHXSJD_Init
 
-.global AHXSJD_Finish
-AHXSJD_Finish:
+.fn AHXSJD_Finish, global
 /* 8038C80C 00355DCC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8038C810 00355DD0  7C 08 02 A6 */	mflr r0
 /* 8038C814 00355DD4  3C 60 80 5F */	lis r3, lbl_805E9B00@ha
@@ -68,9 +67,9 @@ AHXSJD_Finish:
 /* 8038C840 00355E00  7C 08 03 A6 */	mtlr r0
 /* 8038C844 00355E04  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038C848 00355E08  4E 80 00 20 */	blr 
+.endfn AHXSJD_Finish
 
-.global AHXSJD_Create
-AHXSJD_Create:
+.fn AHXSJD_Create, global
 /* 8038C84C 00355E0C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038C850 00355E10  7C 08 02 A6 */	mflr r0
 /* 8038C854 00355E14  90 01 00 24 */	stw r0, 0x24(r1)
@@ -212,9 +211,9 @@ AHXSJD_Create:
 /* 8038CA4C 0035600C  7C 08 03 A6 */	mtlr r0
 /* 8038CA50 00356010  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038CA54 00356014  4E 80 00 20 */	blr 
+.endfn AHXSJD_Create
 
-.global AHXSJD_Destroy
-AHXSJD_Destroy:
+.fn AHXSJD_Destroy, global
 /* 8038CA58 00356018  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8038CA5C 0035601C  7C 08 02 A6 */	mflr r0
 /* 8038CA60 00356020  2C 03 00 00 */	cmpwi r3, 0
@@ -247,20 +246,20 @@ AHXSJD_Destroy:
 /* 8038CAC0 00356080  7C 08 03 A6 */	mtlr r0
 /* 8038CAC4 00356084  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038CAC8 00356088  4E 80 00 20 */	blr 
+.endfn AHXSJD_Destroy
 
-.global AHXSJD_GetStat
-AHXSJD_GetStat:
+.fn AHXSJD_GetStat, global
 /* 8038CACC 0035608C  88 63 00 09 */	lbz r3, 9(r3)
 /* 8038CAD0 00356090  7C 63 07 74 */	extsb r3, r3
 /* 8038CAD4 00356094  4E 80 00 20 */	blr
+.endfn AHXSJD_GetStat
 
-.global AHXSJD_SetInSj
-AHXSJD_SetInSj:
+.fn AHXSJD_SetInSj, global
 /* 8038CAD8 00356098  90 83 00 10 */	stw r4, 0x10(r3)
 /* 8038CADC 0035609C  4E 80 00 20 */	blr 
+.endfn AHXSJD_SetInSj
 
-.global AHXSJD_Start
-AHXSJD_Start:
+.fn AHXSJD_Start, global
 /* 8038CAE0 003560A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8038CAE4 003560A4  7C 08 02 A6 */	mflr r0
 /* 8038CAE8 003560A8  3C 80 80 00 */	lis r4, 0x7FFFFFFF@ha
@@ -294,9 +293,9 @@ AHXSJD_Start:
 /* 8038CB58 00356118  7C 08 03 A6 */	mtlr r0
 /* 8038CB5C 0035611C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038CB60 00356120  4E 80 00 20 */	blr 
+.endfn AHXSJD_Start
 
-.global AHXSJD_Stop
-AHXSJD_Stop:
+.fn AHXSJD_Stop, global
 /* 8038CB64 00356124  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8038CB68 00356128  7C 08 02 A6 */	mflr r0
 /* 8038CB6C 0035612C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -311,9 +310,9 @@ AHXSJD_Stop:
 /* 8038CB90 00356150  7C 08 03 A6 */	mtlr r0
 /* 8038CB94 00356154  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038CB98 00356158  4E 80 00 20 */	blr 
+.endfn AHXSJD_Stop
 
-.global func_8038CB9C
-func_8038CB9C:
+.fn func_8038CB9C, global
 /* 8038CB9C 0035615C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8038CBA0 00356160  7C 08 02 A6 */	mflr r0
 /* 8038CBA4 00356164  90 01 00 34 */	stw r0, 0x34(r1)
@@ -495,9 +494,9 @@ func_8038CB9C:
 /* 8038CE38 003563F8  7C 08 03 A6 */	mtlr r0
 /* 8038CE3C 003563FC  38 21 00 30 */	addi r1, r1, 0x30
 /* 8038CE40 00356400  4E 80 00 20 */	blr 
+.endfn func_8038CB9C
 
-.global AHXSJD_ExecHndl
-AHXSJD_ExecHndl:
+.fn AHXSJD_ExecHndl, global
 /* 8038CE44 00356404  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8038CE48 00356408  7C 08 02 A6 */	mflr r0
 /* 8038CE4C 0035640C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -532,40 +531,41 @@ AHXSJD_ExecHndl:
 /* 8038CEB8 00356478  7C 08 03 A6 */	mtlr r0
 /* 8038CEBC 0035647C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038CEC0 00356480  4E 80 00 20 */	blr 
+.endfn AHXSJD_ExecHndl
 
-.global AHXSJD_GetDecDtLen
-AHXSJD_GetDecDtLen:
+.fn AHXSJD_GetDecDtLen, global
 /* 8038CEC4 00356484  80 63 00 24 */	lwz r3, 0x24(r3)
 /* 8038CEC8 00356488  4E 80 00 20 */	blr 
+.endfn AHXSJD_GetDecDtLen
 
-.global AHXSJD_GetDecNumSmpl
-AHXSJD_GetDecNumSmpl:
+.fn AHXSJD_GetDecNumSmpl, global
 /* 8038CECC 0035648C  80 83 00 2C */	lwz r4, 0x2c(r3)
 /* 8038CED0 00356490  80 03 00 28 */	lwz r0, 0x28(r3)
 /* 8038CED4 00356494  7C 64 02 14 */	add r3, r4, r0
 /* 8038CED8 00356498  4E 80 00 20 */	blr 
+.endfn AHXSJD_GetDecNumSmpl
 
-.global func_8038CEDC
-func_8038CEDC:
+.fn func_8038CEDC, global
 /* 8038CEDC 0035649C  90 83 00 54 */	stw r4, 0x54(r3)
 /* 8038CEE0 003564A0  90 A3 00 58 */	stw r5, 0x58(r3)
 /* 8038CEE4 003564A4  4E 80 00 20 */	blr
+.endfn func_8038CEDC
 
-.global func_8038CEE8
-func_8038CEE8:
+.fn func_8038CEE8, global
 /* 8038CEE8 003564A8  80 63 00 00 */	lwz r3, 0(r3)
 /* 8038CEEC 003564AC  48 00 19 18 */	b AHXDCD_SetExtPrm
+.endfn func_8038CEE8
 
-.global .L_8038CEF0
-.L_8038CEF0:
+.fn .L_8038CEF0, global
 /* 8038CEF0 003564B0  90 83 00 34 */	stw r4, 0x34(r3)
 /* 8038CEF4 003564B4  4E 80 00 20 */	blr
+.endfn .L_8038CEF0
 
-.global func_8038CEF8
-func_8038CEF8:
+.fn func_8038CEF8, global
 /* 8038CEF8 003564B8  38 00 00 01 */	li r0, 1
 /* 8038CEFC 003564BC  90 03 00 0C */	stw r0, 0xc(r3)
 /* 8038CF00 003564C0  4E 80 00 20 */	blr 
+.endfn func_8038CEF8
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

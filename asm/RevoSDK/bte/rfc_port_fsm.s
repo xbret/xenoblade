@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global rfc_port_sm_execute
-rfc_port_sm_execute:
+.fn rfc_port_sm_execute, global
 /* 802FF9C8 002C8F88  2C 03 00 00 */	cmpwi r3, 0
 /* 802FF9CC 002C8F8C  7C 86 23 78 */	mr r6, r4
 /* 802FF9D0 002C8F90  40 82 00 34 */	bne .L_802FFA04
@@ -48,9 +47,9 @@ rfc_port_sm_execute:
 .L_802FFA50:
 /* 802FFA50 002C9010  48 00 08 10 */	b rfc_port_sm_disc_wait_ua
 /* 802FFA54 002C9014  4E 80 00 20 */	blr
+.endfn rfc_port_sm_execute
 
-.global rfc_port_sm_state_closed
-rfc_port_sm_state_closed:
+.fn rfc_port_sm_state_closed, global
 /* 802FFA58 002C9018  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FFA5C 002C901C  7C 08 02 A6 */	mflr r0
 /* 802FFA60 002C9020  28 04 00 0E */	cmplwi r4, 0xe
@@ -155,9 +154,9 @@ switch_802FFB88:
 /* 802FFBC0 002C9180  7C 08 03 A6 */	mtlr r0
 /* 802FFBC4 002C9184  38 21 00 10 */	addi r1, r1, 0x10
 /* 802FFBC8 002C9188  4E 80 00 20 */	blr
+.endfn rfc_port_sm_state_closed
 
-.global rfc_port_sm_sabme_wait_ua
-rfc_port_sm_sabme_wait_ua:
+.fn rfc_port_sm_sabme_wait_ua, global
 /* 802FFBCC 002C918C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FFBD0 002C9190  7C 08 02 A6 */	mflr r0
 /* 802FFBD4 002C9194  28 04 00 0E */	cmplwi r4, 0xe
@@ -273,9 +272,9 @@ switch_802FFD24:
 /* 802FFD5C 002C931C  7C 08 03 A6 */	mtlr r0
 /* 802FFD60 002C9320  38 21 00 10 */	addi r1, r1, 0x10
 /* 802FFD64 002C9324  4E 80 00 20 */	blr
+.endfn rfc_port_sm_sabme_wait_ua
 
-.global rfc_port_sm_term_wait_sec_check
-rfc_port_sm_term_wait_sec_check:
+.fn rfc_port_sm_term_wait_sec_check, global
 /* 802FFD68 002C9328  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FFD6C 002C932C  7C 08 02 A6 */	mflr r0
 /* 802FFD70 002C9330  3C E0 80 55 */	lis r7, lbl_80548A70@ha
@@ -400,9 +399,9 @@ switch_802FFEE4:
 /* 802FFF18 002C94D8  7C 08 03 A6 */	mtlr r0
 /* 802FFF1C 002C94DC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802FFF20 002C94E0  4E 80 00 20 */	blr
+.endfn rfc_port_sm_term_wait_sec_check
 
-.global rfc_port_sm_orig_wait_sec_check
-rfc_port_sm_orig_wait_sec_check:
+.fn rfc_port_sm_orig_wait_sec_check, global
 /* 802FFF24 002C94E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FFF28 002C94E8  7C 08 02 A6 */	mflr r0
 /* 802FFF2C 002C94EC  3C E0 80 55 */	lis r7, lbl_80548A70@ha
@@ -496,9 +495,9 @@ switch_80300034:
 /* 80300068 002C9628  7C 08 03 A6 */	mtlr r0
 /* 8030006C 002C962C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80300070 002C9630  4E 80 00 20 */	blr
+.endfn rfc_port_sm_orig_wait_sec_check
 
-.global rfc_port_sm_opened
-rfc_port_sm_opened:
+.fn rfc_port_sm_opened, global
 /* 80300074 002C9634  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80300078 002C9638  7C 08 02 A6 */	mflr r0
 /* 8030007C 002C963C  28 04 00 0E */	cmplwi r4, 0xe
@@ -636,9 +635,9 @@ switch_8030021C:
 /* 80300254 002C9814  7C 08 03 A6 */	mtlr r0
 /* 80300258 002C9818  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030025C 002C981C  4E 80 00 20 */	blr
+.endfn rfc_port_sm_opened
 
-.global rfc_port_sm_disc_wait_ua
-rfc_port_sm_disc_wait_ua:
+.fn rfc_port_sm_disc_wait_ua, global
 /* 80300260 002C9820  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80300264 002C9824  7C 08 02 A6 */	mflr r0
 /* 80300268 002C9828  28 04 00 0E */	cmplwi r4, 0xe
@@ -721,9 +720,9 @@ switch_8030033C:
 /* 80300370 002C9930  7C 08 03 A6 */	mtlr r0
 /* 80300374 002C9934  38 21 00 10 */	addi r1, r1, 0x10
 /* 80300378 002C9938  4E 80 00 20 */	blr 
+.endfn rfc_port_sm_disc_wait_ua
 
-.global rfc_process_pn
-rfc_process_pn:
+.fn rfc_process_pn, global
 /* 8030037C 002C993C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80300380 002C9940  7C 08 02 A6 */	mflr r0
 /* 80300384 002C9944  2C 04 00 00 */	cmpwi r4, 0
@@ -786,9 +785,9 @@ rfc_process_pn:
 /* 80300458 002C9A18  7C 08 03 A6 */	mtlr r0
 /* 8030045C 002C9A1C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80300460 002C9A20  4E 80 00 20 */	blr 
+.endfn rfc_process_pn
 
-.global rfc_process_rpn
-rfc_process_rpn:
+.fn rfc_process_rpn, global
 /* 80300464 002C9A24  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80300468 002C9A28  7C 08 02 A6 */	mflr r0
 /* 8030046C 002C9A2C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -996,9 +995,9 @@ rfc_process_rpn:
 /* 80300764 002C9D24  7C 08 03 A6 */	mtlr r0
 /* 80300768 002C9D28  38 21 00 30 */	addi r1, r1, 0x30
 /* 8030076C 002C9D2C  4E 80 00 20 */	blr 
+.endfn rfc_process_rpn
 
-.global rfc_process_msc
-rfc_process_msc:
+.fn rfc_process_msc, global
 /* 80300770 002C9D30  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80300774 002C9D34  7C 08 02 A6 */	mflr r0
 /* 80300778 002C9D38  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1099,9 +1098,9 @@ rfc_process_msc:
 /* 803008D0 002C9E90  7C 08 03 A6 */	mtlr r0
 /* 803008D4 002C9E94  38 21 00 30 */	addi r1, r1, 0x30
 /* 803008D8 002C9E98  4E 80 00 20 */	blr 
+.endfn rfc_process_msc
 
-.global rfc_process_rls
-rfc_process_rls:
+.fn rfc_process_rls, global
 /* 803008DC 002C9E9C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803008E0 002C9EA0  7C 08 02 A6 */	mflr r0
 /* 803008E4 002C9EA4  2C 04 00 00 */	cmpwi r4, 0
@@ -1140,18 +1139,18 @@ rfc_process_rls:
 /* 8030095C 002C9F1C  7C 08 03 A6 */	mtlr r0
 /* 80300960 002C9F20  38 21 00 10 */	addi r1, r1, 0x10
 /* 80300964 002C9F24  4E 80 00 20 */	blr 
+.endfn rfc_process_rls
 
-.global rfc_process_nsc
-rfc_process_nsc:
+.fn rfc_process_nsc, global
 /* 80300968 002C9F28  4E 80 00 20 */	blr 
+.endfn rfc_process_nsc
 
-.global rfc_process_test_rsp
-rfc_process_test_rsp:
+.fn rfc_process_test_rsp, global
 /* 8030096C 002C9F2C  7C 83 23 78 */	mr r3, r4
 /* 80300970 002C9F30  4B FD AB 70 */	b GKI_freebuf
+.endfn rfc_process_test_rsp
 
-.global rfc_process_fcon
-rfc_process_fcon:
+.fn rfc_process_fcon, global
 /* 80300974 002C9F34  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80300978 002C9F38  7C 08 02 A6 */	mflr r0
 /* 8030097C 002C9F3C  2C 04 00 00 */	cmpwi r4, 0
@@ -1178,9 +1177,9 @@ rfc_process_fcon:
 /* 803009CC 002C9F8C  7C 08 03 A6 */	mtlr r0
 /* 803009D0 002C9F90  38 21 00 10 */	addi r1, r1, 0x10
 /* 803009D4 002C9F94  4E 80 00 20 */	blr 
+.endfn rfc_process_fcon
 
-.global rfc_process_fcoff
-rfc_process_fcoff:
+.fn rfc_process_fcoff, global
 /* 803009D8 002C9F98  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803009DC 002C9F9C  7C 08 02 A6 */	mflr r0
 /* 803009E0 002C9FA0  2C 04 00 00 */	cmpwi r4, 0
@@ -1208,9 +1207,9 @@ rfc_process_fcoff:
 /* 80300A30 002C9FF0  7C 08 03 A6 */	mtlr r0
 /* 80300A34 002C9FF4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80300A38 002C9FF8  4E 80 00 20 */	blr 
+.endfn rfc_process_fcoff
 
-.global rfc_process_l2cap_congestion
-rfc_process_l2cap_congestion:
+.fn rfc_process_l2cap_congestion, global
 /* 80300A3C 002C9FFC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80300A40 002CA000  7C 08 02 A6 */	mflr r0
 /* 80300A44 002CA004  2C 04 00 00 */	cmpwi r4, 0
@@ -1248,9 +1247,9 @@ rfc_process_l2cap_congestion:
 /* 80300AB8 002CA078  7C 08 03 A6 */	mtlr r0
 /* 80300ABC 002CA07C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80300AC0 002CA080  4E 80 00 20 */	blr 
+.endfn rfc_process_l2cap_congestion
 
-.global rfc_set_port_state
-rfc_set_port_state:
+.fn rfc_set_port_state, global
 /* 80300AC4 002CA084  A0 04 00 12 */	lhz r0, 0x12(r4)
 /* 80300AC8 002CA088  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 80300ACC 002CA08C  41 82 00 0C */	beq .L_80300AD8
@@ -1299,6 +1298,7 @@ rfc_set_port_state:
 /* 80300B5C 002CA11C  88 04 00 11 */	lbz r0, 0x11(r4)
 /* 80300B60 002CA120  98 03 00 08 */	stb r0, 8(r3)
 /* 80300B64 002CA124  4E 80 00 20 */	blr 
+.endfn rfc_set_port_state
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

@@ -3,24 +3,23 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global HBMAllocMem__FUl
-HBMAllocMem__FUl:
+.fn HBMAllocMem__FUl, global
 /* 80322DE0 002EC3A0  3C A0 80 55 */	lis r5, lbl_8054C8C4@ha
 /* 80322DE4 002EC3A4  7C 64 1B 78 */	mr r4, r3
 /* 80322DE8 002EC3A8  80 65 C8 C4 */	lwz r3, lbl_8054C8C4@l(r5)
 /* 80322DEC 002EC3AC  48 02 6C A4 */	b MEMAllocFromAllocator
+.endfn HBMAllocMem__FUl
 
 .balign 16, 0
-.global HBMFreeMem__FPv
-HBMFreeMem__FPv:
+.fn HBMFreeMem__FPv, global
 /* 80322DF0 002EC3B0  3C A0 80 55 */	lis r5, lbl_8054C8C4@ha
 /* 80322DF4 002EC3B4  7C 64 1B 78 */	mr r4, r3
 /* 80322DF8 002EC3B8  80 65 C8 C4 */	lwz r3, lbl_8054C8C4@l(r5)
 /* 80322DFC 002EC3BC  48 02 6C A4 */	b MEMFreeToAllocator
+.endfn HBMFreeMem__FPv
 
 .balign 16, 0
-.global HBMCreate
-HBMCreate:
+.fn HBMCreate, global
 /* 80322E00 002EC3C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80322E04 002EC3C4  7C 08 02 A6 */	mflr r0
 /* 80322E08 002EC3C8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -102,10 +101,10 @@ HBMCreate:
 /* 80322F14 002EC4D4  7C 08 03 A6 */	mtlr r0
 /* 80322F18 002EC4D8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80322F1C 002EC4DC  4E 80 00 20 */	blr 
+.endfn HBMCreate
 
 .balign 16, 0
-.global func_80322F20
-func_80322F20:
+.fn func_80322F20, global
 /* 80322F20 002EC4E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80322F24 002EC4E4  7C 08 02 A6 */	mflr r0
 /* 80322F28 002EC4E8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -137,10 +136,10 @@ func_80322F20:
 /* 80322F84 002EC544  7C 08 03 A6 */	mtlr r0
 /* 80322F88 002EC548  38 21 00 10 */	addi r1, r1, 0x10
 /* 80322F8C 002EC54C  4E 80 00 20 */	blr 
+.endfn func_80322F20
 
 .balign 16, 0
-.global HBMInit
-HBMInit:
+.fn HBMInit, global
 /* 80322F90 002EC550  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80322F94 002EC554  7C 08 02 A6 */	mflr r0
 /* 80322F98 002EC558  3C 60 80 55 */	lis r3, lbl_8054C8C0@ha
@@ -153,10 +152,10 @@ HBMInit:
 /* 80322FB4 002EC574  7C 08 03 A6 */	mtlr r0
 /* 80322FB8 002EC578  38 21 00 10 */	addi r1, r1, 0x10
 /* 80322FBC 002EC57C  4E 80 00 20 */	blr 
+.endfn HBMInit
 
 .balign 16, 0
-.global HBMCalc
-HBMCalc:
+.fn HBMCalc, global
 /* 80322FC0 002EC580  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80322FC4 002EC584  7C 08 02 A6 */	mflr r0
 /* 80322FC8 002EC588  90 01 00 14 */	stw r0, 0x14(r1)
@@ -172,10 +171,10 @@ HBMCalc:
 /* 80322FF0 002EC5B0  7C 08 03 A6 */	mtlr r0
 /* 80322FF4 002EC5B4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80322FF8 002EC5B8  4E 80 00 20 */	blr 
+.endfn HBMCalc
 
 .balign 16, 0
-.global func_80323000
-func_80323000:
+.fn func_80323000, global
 /* 80323000 002EC5C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80323004 002EC5C4  7C 08 02 A6 */	mflr r0
 /* 80323008 002EC5C8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -185,10 +184,10 @@ func_80323000:
 /* 80323018 002EC5D8  7C 08 03 A6 */	mtlr r0
 /* 8032301C 002EC5DC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80323020 002EC5E0  4E 80 00 20 */	blr 
+.endfn func_80323000
 
 .balign 16, 0
-.global func_80323030
-func_80323030:
+.fn func_80323030, global
 /* 80323030 002EC5F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80323034 002EC5F4  7C 08 02 A6 */	mflr r0
 /* 80323038 002EC5F8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -202,10 +201,10 @@ func_80323030:
 /* 80323058 002EC618  7C 08 03 A6 */	mtlr r0
 /* 8032305C 002EC61C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80323060 002EC620  4E 80 00 20 */	blr 
+.endfn func_80323030
 
 .balign 16, 0
-.global func_80323070
-func_80323070:
+.fn func_80323070, global
 /* 80323070 002EC630  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80323074 002EC634  7C 08 02 A6 */	mflr r0
 /* 80323078 002EC638  90 01 00 24 */	stw r0, 0x24(r1)
@@ -227,15 +226,15 @@ func_80323070:
 /* 803230B8 002EC678  7C 08 03 A6 */	mtlr r0
 /* 803230BC 002EC67C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803230C0 002EC680  4E 80 00 20 */	blr 
+.endfn func_80323070
 
 .balign 16, 0
-.global func_803230D0
-func_803230D0:
+.fn func_803230D0, global
 /* 803230D0 002EC690  4B FF F9 70 */	b ShutdownAxSound__10homebuttonFv
+.endfn func_803230D0
 
 .balign 16, 0
-.global func_803230E0
-func_803230E0:
+.fn func_803230E0, global
 /* 803230E0 002EC6A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803230E4 002EC6A4  7C 08 02 A6 */	mflr r0
 /* 803230E8 002EC6A8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -245,10 +244,10 @@ func_803230E0:
 /* 803230F8 002EC6B8  7C 08 03 A6 */	mtlr r0
 /* 803230FC 002EC6BC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80323100 002EC6C0  4E 80 00 20 */	blr 
+.endfn func_803230E0
 
 .balign 16, 0
-.global initgx__10homebuttonFv
-initgx__10homebuttonFv:
+.fn initgx__10homebuttonFv, global
 /* 80323110 002EC6D0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80323114 002EC6D4  7C 08 02 A6 */	mflr r0
 /* 80323118 002EC6D8  38 60 00 00 */	li r3, 0
@@ -359,10 +358,10 @@ initgx__10homebuttonFv:
 /* 803232BC 002EC87C  7C 08 03 A6 */	mtlr r0
 /* 803232C0 002EC880  38 21 00 40 */	addi r1, r1, 0x40
 /* 803232C4 002EC884  4E 80 00 20 */	blr 
+.endfn initgx__10homebuttonFv
 
 .balign 16, 0
-.global __ct__Q210homebutton10HomeButtonFPC11HBMDataInfo
-__ct__Q210homebutton10HomeButtonFPC11HBMDataInfo:
+.fn __ct__Q210homebutton10HomeButtonFPC11HBMDataInfo, global
 /* 803232D0 002EC890  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803232D4 002EC894  7C 08 02 A6 */	mflr r0
 /* 803232D8 002EC898  90 01 00 24 */	stw r0, 0x24(r1)
@@ -431,10 +430,10 @@ __ct__Q210homebutton10HomeButtonFPC11HBMDataInfo:
 /* 803233D0 002EC990  7C 08 03 A6 */	mtlr r0
 /* 803233D4 002EC994  38 21 00 20 */	addi r1, r1, 0x20
 /* 803233D8 002EC998  4E 80 00 20 */	blr 
+.endfn __ct__Q210homebutton10HomeButtonFPC11HBMDataInfo
 
 .balign 16, 0
-.global __dt__Q210homebutton10HomeButtonFv
-__dt__Q210homebutton10HomeButtonFv:
+.fn __dt__Q210homebutton10HomeButtonFv, global
 /* 803233E0 002EC9A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803233E4 002EC9A4  7C 08 02 A6 */	mflr r0
 /* 803233E8 002EC9A8  2C 03 00 00 */	cmpwi r3, 0
@@ -617,10 +616,10 @@ __dt__Q210homebutton10HomeButtonFv:
 /* 80323684 002ECC44  7C 08 03 A6 */	mtlr r0
 /* 80323688 002ECC48  38 21 00 20 */	addi r1, r1, 0x20
 /* 8032368C 002ECC4C  4E 80 00 20 */	blr 
+.endfn __dt__Q210homebutton10HomeButtonFv
 
 .balign 16, 0
-.global __dt__Q36nw4hbm3lyt19ArcResourceAccessorFv
-__dt__Q36nw4hbm3lyt19ArcResourceAccessorFv:
+.fn __dt__Q36nw4hbm3lyt19ArcResourceAccessorFv, global
 /* 80323690 002ECC50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80323694 002ECC54  7C 08 02 A6 */	mflr r0
 /* 80323698 002ECC58  2C 03 00 00 */	cmpwi r3, 0
@@ -650,10 +649,10 @@ __dt__Q36nw4hbm3lyt19ArcResourceAccessorFv:
 /* 803236F0 002ECCB0  7C 08 03 A6 */	mtlr r0
 /* 803236F4 002ECCB4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803236F8 002ECCB8  4E 80 00 20 */	blr 
+.endfn __dt__Q36nw4hbm3lyt19ArcResourceAccessorFv
 
 .balign 16, 0
-.global createInstance__Q210homebutton10HomeButtonFPC11HBMDataInfo
-createInstance__Q210homebutton10HomeButtonFPC11HBMDataInfo:
+.fn createInstance__Q210homebutton10HomeButtonFPC11HBMDataInfo, global
 /* 80323700 002ECCC0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80323704 002ECCC4  7C 08 02 A6 */	mflr r0
 /* 80323708 002ECCC8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -675,10 +674,10 @@ createInstance__Q210homebutton10HomeButtonFPC11HBMDataInfo:
 /* 80323740 002ECD00  7C 08 03 A6 */	mtlr r0
 /* 80323744 002ECD04  38 21 00 10 */	addi r1, r1, 0x10
 /* 80323748 002ECD08  4E 80 00 20 */	blr 
+.endfn createInstance__Q210homebutton10HomeButtonFPC11HBMDataInfo
 
 .balign 16, 0
-.global deleteInstance__Q210homebutton10HomeButtonFv
-deleteInstance__Q210homebutton10HomeButtonFv:
+.fn deleteInstance__Q210homebutton10HomeButtonFv, global
 /* 80323750 002ECD10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80323754 002ECD14  7C 08 02 A6 */	mflr r0
 /* 80323758 002ECD18  38 80 FF FF */	li r4, -1
@@ -696,17 +695,17 @@ deleteInstance__Q210homebutton10HomeButtonFv:
 /* 80323788 002ECD48  7C 08 03 A6 */	mtlr r0
 /* 8032378C 002ECD4C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80323790 002ECD50  4E 80 00 20 */	blr 
+.endfn deleteInstance__Q210homebutton10HomeButtonFv
 
 .balign 16, 0
-.global getInstance__Q210homebutton10HomeButtonFv
-getInstance__Q210homebutton10HomeButtonFv:
+.fn getInstance__Q210homebutton10HomeButtonFv, global
 /* 803237A0 002ECD60  3C 60 80 5D */	lis r3, lbl_805CD768@ha
 /* 803237A4 002ECD64  80 63 D7 68 */	lwz r3, lbl_805CD768@l(r3)
 /* 803237A8 002ECD68  4E 80 00 20 */	blr 
+.endfn getInstance__Q210homebutton10HomeButtonFv
 
 .balign 16, 0
-.global create__Q210homebutton10HomeButtonFv
-create__Q210homebutton10HomeButtonFv:
+.fn create__Q210homebutton10HomeButtonFv, global
 /* 803237B0 002ECD70  94 21 FF 30 */	stwu r1, -0xd0(r1)
 /* 803237B4 002ECD74  7C 08 02 A6 */	mflr r0
 /* 803237B8 002ECD78  90 01 00 D4 */	stw r0, 0xd4(r1)
@@ -1290,10 +1289,10 @@ create__Q210homebutton10HomeButtonFv:
 /* 80324004 002ED5C4  7C 08 03 A6 */	mtlr r0
 /* 80324008 002ED5C8  38 21 00 D0 */	addi r1, r1, 0xd0
 /* 8032400C 002ED5CC  4E 80 00 20 */	blr 
+.endfn create__Q210homebutton10HomeButtonFv
 
 .balign 16, 0
-.global set_config__Q210homebutton10HomeButtonFv
-set_config__Q210homebutton10HomeButtonFv:
+.fn set_config__Q210homebutton10HomeButtonFv, global
 /* 80324010 002ED5D0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80324014 002ED5D4  7C 08 02 A6 */	mflr r0
 /* 80324018 002ED5D8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1398,10 +1397,10 @@ set_config__Q210homebutton10HomeButtonFv:
 /* 80324174 002ED734  7C 08 03 A6 */	mtlr r0
 /* 80324178 002ED738  38 21 00 20 */	addi r1, r1, 0x20
 /* 8032417C 002ED73C  4E 80 00 20 */	blr 
+.endfn set_config__Q210homebutton10HomeButtonFv
 
 .balign 16, 0
-.global set_text__Q210homebutton10HomeButtonFv
-set_text__Q210homebutton10HomeButtonFv:
+.fn set_text__Q210homebutton10HomeButtonFv, global
 /* 80324180 002ED740  80 83 00 04 */	lwz r4, 4(r3)
 /* 80324184 002ED744  39 00 00 00 */	li r8, 0
 /* 80324188 002ED748  39 20 00 00 */	li r9, 0
@@ -1439,10 +1438,10 @@ set_text__Q210homebutton10HomeButtonFv:
 /* 803241F8 002ED7B8  2C 00 00 00 */	cmpwi r0, 0
 /* 803241FC 002ED7BC  40 82 FF A4 */	bne .L_803241A0
 /* 80324200 002ED7C0  4E 80 00 20 */	blr 
+.endfn set_text__Q210homebutton10HomeButtonFv
 
 .balign 16, 0
-.global init__Q210homebutton10HomeButtonFv
-init__Q210homebutton10HomeButtonFv:
+.fn init__Q210homebutton10HomeButtonFv, global
 /* 80324210 002ED7D0  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 80324214 002ED7D4  7C 08 02 A6 */	mflr r0
 /* 80324218 002ED7D8  90 01 00 84 */	stw r0, 0x84(r1)
@@ -1748,10 +1747,10 @@ init__Q210homebutton10HomeButtonFv:
 /* 803246A4 002EDC64  7C 08 03 A6 */	mtlr r0
 /* 803246A8 002EDC68  38 21 00 80 */	addi r1, r1, 0x80
 /* 803246AC 002EDC6C  4E 80 00 20 */	blr 
+.endfn init__Q210homebutton10HomeButtonFv
 
 .balign 16, 0
-.global init_volume__Q210homebutton10HomeButtonFv
-init_volume__Q210homebutton10HomeButtonFv:
+.fn init_volume__Q210homebutton10HomeButtonFv, global
 /* 803246B0 002EDC70  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 803246B4 002EDC74  7C 08 02 A6 */	mflr r0
 /* 803246B8 002EDC78  90 01 00 64 */	stw r0, 0x64(r1)
@@ -1892,10 +1891,10 @@ init_volume__Q210homebutton10HomeButtonFv:
 /* 803248A4 002EDE64  7C 08 03 A6 */	mtlr r0
 /* 803248A8 002EDE68  38 21 00 60 */	addi r1, r1, 0x60
 /* 803248AC 002EDE6C  4E 80 00 20 */	blr 
+.endfn init_volume__Q210homebutton10HomeButtonFv
 
 .balign 16, 0
-.global init_sound__Q210homebutton10HomeButtonFv
-init_sound__Q210homebutton10HomeButtonFv:
+.fn init_sound__Q210homebutton10HomeButtonFv, global
 /* 803248B0 002EDE70  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803248B4 002EDE74  7C 08 02 A6 */	mflr r0
 /* 803248B8 002EDE78  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1974,10 +1973,10 @@ init_sound__Q210homebutton10HomeButtonFv:
 /* 803249D4 002EDF94  7C 08 03 A6 */	mtlr r0
 /* 803249D8 002EDF98  38 21 00 10 */	addi r1, r1, 0x10
 /* 803249DC 002EDF9C  4E 80 00 20 */	blr 
+.endfn init_sound__Q210homebutton10HomeButtonFv
 
 .balign 16, 0
-.global init_battery__Q210homebutton10HomeButtonFPC17HBMControllerData
-init_battery__Q210homebutton10HomeButtonFPC17HBMControllerData:
+.fn init_battery__Q210homebutton10HomeButtonFPC17HBMControllerData, global
 /* 803249E0 002EDFA0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803249E4 002EDFA4  7C 08 02 A6 */	mflr r0
 /* 803249E8 002EDFA8  90 01 00 44 */	stw r0, 0x44(r1)
@@ -2148,10 +2147,10 @@ init_battery__Q210homebutton10HomeButtonFPC17HBMControllerData:
 /* 80324C40 002EE200  7C 08 03 A6 */	mtlr r0
 /* 80324C44 002EE204  38 21 00 40 */	addi r1, r1, 0x40
 /* 80324C48 002EE208  4E 80 00 20 */	blr 
+.endfn init_battery__Q210homebutton10HomeButtonFPC17HBMControllerData
 
 .balign 16, 0
-.global calc__Q210homebutton10HomeButtonFPC17HBMControllerData
-calc__Q210homebutton10HomeButtonFPC17HBMControllerData:
+.fn calc__Q210homebutton10HomeButtonFPC17HBMControllerData, global
 /* 80324C50 002EE210  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 80324C54 002EE214  7C 08 02 A6 */	mflr r0
 /* 80324C58 002EE218  90 01 00 74 */	stw r0, 0x74(r1)
@@ -4199,10 +4198,10 @@ switch_803265BC:
 /* 80326940 002EFF00  7C 08 03 A6 */	mtlr r0
 /* 80326944 002EFF04  38 21 00 70 */	addi r1, r1, 0x70
 /* 80326948 002EFF08  4E 80 00 20 */	blr 
+.endfn calc__Q210homebutton10HomeButtonFPC17HBMControllerData
 
 .balign 16, 0
-.global calc_fadeoutAnm__Q210homebutton10HomeButtonFv
-calc_fadeoutAnm__Q210homebutton10HomeButtonFv:
+.fn calc_fadeoutAnm__Q210homebutton10HomeButtonFv, global
 /* 80326950 002EFF10  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80326954 002EFF14  7C 08 02 A6 */	mflr r0
 /* 80326958 002EFF18  90 01 00 24 */	stw r0, 0x24(r1)
@@ -4346,10 +4345,10 @@ calc_fadeoutAnm__Q210homebutton10HomeButtonFv:
 /* 80326B48 002F0108  7C 08 03 A6 */	mtlr r0
 /* 80326B4C 002F010C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80326B50 002F0110  4E 80 00 20 */	blr 
+.endfn calc_fadeoutAnm__Q210homebutton10HomeButtonFv
 
 .balign 16, 0
-.global draw__Q210homebutton10HomeButtonFv
-draw__Q210homebutton10HomeButtonFv:
+.fn draw__Q210homebutton10HomeButtonFv, global
 /* 80326B60 002F0120  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80326B64 002F0124  7C 08 02 A6 */	mflr r0
 /* 80326B68 002F0128  90 01 00 34 */	stw r0, 0x34(r1)
@@ -4440,11 +4439,11 @@ draw__Q210homebutton10HomeButtonFv:
 /* 80326CAC 002F026C  7C 08 03 A6 */	mtlr r0
 /* 80326CB0 002F0270  38 21 00 30 */	addi r1, r1, 0x30
 /* 80326CB4 002F0274  4E 80 00 20 */	blr
+.endfn draw__Q210homebutton10HomeButtonFv
 
 
 .balign 16, 0
-.global SpeakerCallback__10homebuttonFP7OSAlarmP9OSContext
-SpeakerCallback__10homebuttonFP7OSAlarmP9OSContext:
+.fn SpeakerCallback__10homebuttonFP7OSAlarmP9OSContext, global
 /* 80326CC0 002F0280  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80326CC4 002F0284  7C 08 02 A6 */	mflr r0
 /* 80326CC8 002F0288  90 01 00 24 */	stw r0, 0x24(r1)
@@ -4505,11 +4504,11 @@ SpeakerCallback__10homebuttonFP7OSAlarmP9OSContext:
 /* 80326D98 002F0358  7C 08 03 A6 */	mtlr r0
 /* 80326D9C 002F035C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80326DA0 002F0360  4E 80 00 20 */	blr
+.endfn SpeakerCallback__10homebuttonFP7OSAlarmP9OSContext
 
 
 .balign 16, 0
-.global MotorCallback__10homebuttonFP7OSAlarmP9OSContext
-MotorCallback__10homebuttonFP7OSAlarmP9OSContext:
+.fn MotorCallback__10homebuttonFP7OSAlarmP9OSContext, global
 /* 80326DB0 002F0370  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80326DB4 002F0374  7C 08 02 A6 */	mflr r0
 /* 80326DB8 002F0378  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4519,11 +4518,11 @@ MotorCallback__10homebuttonFP7OSAlarmP9OSContext:
 /* 80326DC8 002F0388  7C 08 03 A6 */	mtlr r0
 /* 80326DCC 002F038C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80326DD0 002F0390  4E 80 00 20 */	blr
+.endfn MotorCallback__10homebuttonFP7OSAlarmP9OSContext
 
 
 .balign 16, 0
-.global setSpeakerAlarm__Q210homebutton10HomeButtonFii
-setSpeakerAlarm__Q210homebutton10HomeButtonFii:
+.fn setSpeakerAlarm__Q210homebutton10HomeButtonFii, global
 /* 80326DE0 002F03A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80326DE4 002F03A4  7C 08 02 A6 */	mflr r0
 /* 80326DE8 002F03A8  3C 80 80 5D */	lis r4, lbl_805CD768@ha
@@ -4578,11 +4577,11 @@ setSpeakerAlarm__Q210homebutton10HomeButtonFii:
 /* 80326EA0 002F0460  7C 08 03 A6 */	mtlr r0
 /* 80326EA4 002F0464  38 21 00 20 */	addi r1, r1, 0x20
 /* 80326EA8 002F0468  4E 80 00 20 */	blr
+.endfn setSpeakerAlarm__Q210homebutton10HomeButtonFii
 
 
 .balign 16, 0
-.global SimpleSyncCallback__10homebuttonFll
-SimpleSyncCallback__10homebuttonFll:
+.fn SimpleSyncCallback__10homebuttonFll, global
 /* 80326EB0 002F0470  2C 03 00 01 */	cmpwi r3, 1
 /* 80326EB4 002F0474  40 82 00 14 */	bne .L_80326EC8
 /* 80326EB8 002F0478  3C A0 80 5D */	lis r5, lbl_805CD768@ha
@@ -4598,10 +4597,10 @@ SimpleSyncCallback__10homebuttonFll:
 /* 80326EDC 002F049C  7D 89 03 A6 */	mtctr r12
 /* 80326EE0 002F04A0  4E 80 04 20 */	bctr 
 /* 80326EE4 002F04A4  4E 80 00 20 */	blr 
+.endfn SimpleSyncCallback__10homebuttonFll
 
 .balign 16, 0
-.global update__Q210homebutton10HomeButtonFPC17HBMControllerData
-update__Q210homebutton10HomeButtonFPC17HBMControllerData:
+.fn update__Q210homebutton10HomeButtonFPC17HBMControllerData, global
 /* 80326EF0 002F04B0  94 21 FF 00 */	stwu r1, -0x100(r1)
 /* 80326EF4 002F04B4  7C 08 02 A6 */	mflr r0
 /* 80326EF8 002F04B8  90 01 01 04 */	stw r0, 0x104(r1)
@@ -5252,10 +5251,10 @@ update__Q210homebutton10HomeButtonFPC17HBMControllerData:
 /* 80327838 002F0DF8  7C 08 03 A6 */	mtlr r0
 /* 8032783C 002F0DFC  38 21 01 00 */	addi r1, r1, 0x100
 /* 80327840 002F0E00  4E 80 00 20 */	blr 
+.endfn update__Q210homebutton10HomeButtonFPC17HBMControllerData
 
 .balign 16, 0
-.global update_controller__Q210homebutton10HomeButtonFi
-update_controller__Q210homebutton10HomeButtonFi:
+.fn update_controller__Q210homebutton10HomeButtonFi, global
 /* 80327850 002F0E10  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80327854 002F0E14  7C 08 02 A6 */	mflr r0
 /* 80327858 002F0E18  3C A0 43 30 */	lis r5, 0x4330
@@ -5861,10 +5860,10 @@ update_controller__Q210homebutton10HomeButtonFi:
 /* 803280E8 002F16A8  7C 08 03 A6 */	mtlr r0
 /* 803280EC 002F16AC  38 21 00 50 */	addi r1, r1, 0x50
 /* 803280F0 002F16B0  4E 80 00 20 */	blr 
+.endfn update_controller__Q210homebutton10HomeButtonFi
 
 .balign 16, 0
-.global updateTrigPane__Q210homebutton10HomeButtonFv
-updateTrigPane__Q210homebutton10HomeButtonFv:
+.fn updateTrigPane__Q210homebutton10HomeButtonFv, global
 /* 80328100 002F16C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80328104 002F16C4  7C 08 02 A6 */	mflr r0
 /* 80328108 002F16C8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -6056,10 +6055,10 @@ updateTrigPane__Q210homebutton10HomeButtonFv:
 /* 803283B0 002F1970  7C 08 03 A6 */	mtlr r0
 /* 803283B4 002F1974  38 21 00 20 */	addi r1, r1, 0x20
 /* 803283B8 002F1978  4E 80 00 20 */	blr 
+.endfn updateTrigPane__Q210homebutton10HomeButtonFv
 
 .balign 16, 0
-.global startPointEvent__Q210homebutton10HomeButtonFPCQ36nw4hbm3lyt4PanePv
-startPointEvent__Q210homebutton10HomeButtonFPCQ36nw4hbm3lyt4PanePv:
+.fn startPointEvent__Q210homebutton10HomeButtonFPCQ36nw4hbm3lyt4PanePv, global
 /* 803283C0 002F1980  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803283C4 002F1984  7C 08 02 A6 */	mflr r0
 /* 803283C8 002F1988  90 01 00 24 */	stw r0, 0x24(r1)
@@ -7105,10 +7104,10 @@ switch_80329068:
 /* 80329200 002F27C0  7C 08 03 A6 */	mtlr r0
 /* 80329204 002F27C4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80329208 002F27C8  4E 80 00 20 */	blr 
+.endfn startPointEvent__Q210homebutton10HomeButtonFPCQ36nw4hbm3lyt4PanePv
 
 .balign 16, 0
-.global startLeftEvent__Q210homebutton10HomeButtonFPCQ36nw4hbm3lyt4Pane
-startLeftEvent__Q210homebutton10HomeButtonFPCQ36nw4hbm3lyt4Pane:
+.fn startLeftEvent__Q210homebutton10HomeButtonFPCQ36nw4hbm3lyt4Pane, global
 /* 80329210 002F27D0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80329214 002F27D4  7C 08 02 A6 */	mflr r0
 /* 80329218 002F27D8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -7896,10 +7895,10 @@ switch_80329C3C:
 /* 80329CD0 002F3290  7C 08 03 A6 */	mtlr r0
 /* 80329CD4 002F3294  38 21 00 20 */	addi r1, r1, 0x20
 /* 80329CD8 002F3298  4E 80 00 20 */	blr 
+.endfn startLeftEvent__Q210homebutton10HomeButtonFPCQ36nw4hbm3lyt4Pane
 
 .balign 16, 0
-.global startTrigEvent__Q210homebutton10HomeButtonFPCQ36nw4hbm3lyt4Pane
-startTrigEvent__Q210homebutton10HomeButtonFPCQ36nw4hbm3lyt4Pane:
+.fn startTrigEvent__Q210homebutton10HomeButtonFPCQ36nw4hbm3lyt4Pane, global
 /* 80329CE0 002F32A0  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80329CE4 002F32A4  7C 08 02 A6 */	mflr r0
 /* 80329CE8 002F32A8  90 01 00 64 */	stw r0, 0x64(r1)
@@ -9207,10 +9206,10 @@ switch_8032AE48:
 /* 8032AF2C 002F44EC  7C 08 03 A6 */	mtlr r0
 /* 8032AF30 002F44F0  38 21 00 60 */	addi r1, r1, 0x60
 /* 8032AF34 002F44F4  4E 80 00 20 */	blr 
+.endfn startTrigEvent__Q210homebutton10HomeButtonFPCQ36nw4hbm3lyt4Pane
 
 .balign 16, 0
-.global reset_btn__Q210homebutton10HomeButtonFv
-reset_btn__Q210homebutton10HomeButtonFv:
+.fn reset_btn__Q210homebutton10HomeButtonFv, global
 /* 8032AF40 002F4500  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8032AF44 002F4504  7C 08 02 A6 */	mflr r0
 /* 8032AF48 002F4508  90 01 00 34 */	stw r0, 0x34(r1)
@@ -9384,10 +9383,10 @@ reset_btn__Q210homebutton10HomeButtonFv:
 /* 8032B1A0 002F4760  7C 08 03 A6 */	mtlr r0
 /* 8032B1A4 002F4764  38 21 00 30 */	addi r1, r1, 0x30
 /* 8032B1A8 002F4768  4E 80 00 20 */	blr 
+.endfn reset_btn__Q210homebutton10HomeButtonFv
 
 .balign 16, 0
-.global getPaneNo__Q210homebutton10HomeButtonFPCQ36nw4hbm3lyt4Pane
-getPaneNo__Q210homebutton10HomeButtonFPCQ36nw4hbm3lyt4Pane:
+.fn getPaneNo__Q210homebutton10HomeButtonFPCQ36nw4hbm3lyt4Pane, global
 /* 8032B1B0 002F4770  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8032B1B4 002F4774  7C 08 02 A6 */	mflr r0
 /* 8032B1B8 002F4778  90 01 00 24 */	stw r0, 0x24(r1)
@@ -9439,10 +9438,10 @@ getPaneNo__Q210homebutton10HomeButtonFPCQ36nw4hbm3lyt4Pane:
 /* 8032B254 002F4814  7C 08 03 A6 */	mtlr r0
 /* 8032B258 002F4818  38 21 00 20 */	addi r1, r1, 0x20
 /* 8032B25C 002F481C  4E 80 00 20 */	blr 
+.endfn getPaneNo__Q210homebutton10HomeButtonFPCQ36nw4hbm3lyt4Pane
 
 .balign 16, 0
-.global getSelectBtnNum__Q210homebutton10HomeButtonFv
-getSelectBtnNum__Q210homebutton10HomeButtonFv:
+.fn getSelectBtnNum__Q210homebutton10HomeButtonFv, global
 /* 8032B260 002F4820  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 8032B264 002F4824  2C 00 00 12 */	cmpwi r0, 0x12
 /* 8032B268 002F4828  41 82 00 0C */	beq .L_8032B274
@@ -9451,10 +9450,10 @@ getSelectBtnNum__Q210homebutton10HomeButtonFv:
 .L_8032B274:
 /* 8032B274 002F4834  80 63 00 B8 */	lwz r3, 0xb8(r3)
 /* 8032B278 002F4838  4E 80 00 20 */	blr 
+.endfn getSelectBtnNum__Q210homebutton10HomeButtonFv
 
 .balign 16, 0
-.global setAdjustFlag__Q210homebutton10HomeButtonFi
-setAdjustFlag__Q210homebutton10HomeButtonFi:
+.fn setAdjustFlag__Q210homebutton10HomeButtonFi, global
 /* 8032B280 002F4840  7C A4 00 D0 */	neg r5, r4
 /* 8032B284 002F4844  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8032B288 002F4848  7C A5 23 78 */	or r5, r5, r4
@@ -9530,10 +9529,10 @@ setAdjustFlag__Q210homebutton10HomeButtonFi:
 .L_8032B39C:
 /* 8032B39C 002F495C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8032B3A0 002F4960  4E 80 00 20 */	blr 
+.endfn setAdjustFlag__Q210homebutton10HomeButtonFi
 
 .balign 16, 0
-.global onEvent__Q210homebutton22HomeButtonEventHandlerFUlUlPv
-onEvent__Q210homebutton22HomeButtonEventHandlerFUlUlPv:
+.fn onEvent__Q210homebutton22HomeButtonEventHandlerFUlUlPv, global
 /* 8032B3B0 002F4970  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8032B3B4 002F4974  7C 08 02 A6 */	mflr r0
 /* 8032B3B8 002F4978  90 01 00 24 */	stw r0, 0x24(r1)
@@ -9584,10 +9583,10 @@ onEvent__Q210homebutton22HomeButtonEventHandlerFUlUlPv:
 /* 8032B45C 002F4A1C  7C 08 03 A6 */	mtlr r0
 /* 8032B460 002F4A20  38 21 00 20 */	addi r1, r1, 0x20
 /* 8032B464 002F4A24  4E 80 00 20 */	blr 
+.endfn onEvent__Q210homebutton22HomeButtonEventHandlerFUlUlPv
 
 .balign 16, 0
-.global update_sound__Q210homebutton10HomeButtonFv
-update_sound__Q210homebutton10HomeButtonFv:
+.fn update_sound__Q210homebutton10HomeButtonFv, global
 /* 8032B470 002F4A30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8032B474 002F4A34  7C 08 02 A6 */	mflr r0
 /* 8032B478 002F4A38  90 01 00 14 */	stw r0, 0x14(r1)
@@ -9609,6 +9608,7 @@ update_sound__Q210homebutton10HomeButtonFv:
 /* 8032B4B4 002F4A74  7C 08 03 A6 */	mtlr r0
 /* 8032B4B8 002F4A78  38 21 00 10 */	addi r1, r1, 0x10
 /* 8032B4BC 002F4A7C  4E 80 00 20 */	blr 
+.endfn update_sound__Q210homebutton10HomeButtonFv
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

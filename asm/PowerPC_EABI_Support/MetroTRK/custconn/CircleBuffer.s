@@ -2,13 +2,12 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global CBGetBytesAvailableForRead
-CBGetBytesAvailableForRead:
+.fn CBGetBytesAvailableForRead, global
 /* 802CB7E0 00294DA0  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 802CB7E4 00294DA4  4E 80 00 20 */	blr 
+.endfn CBGetBytesAvailableForRead
 
-.global CircleBufferInitialize
-CircleBufferInitialize:
+.fn CircleBufferInitialize, global
 /* 802CB7E8 00294DA8  38 00 00 00 */	li r0, 0
 /* 802CB7EC 00294DAC  90 83 00 08 */	stw r4, 8(r3)
 /* 802CB7F0 00294DB0  90 A3 00 0C */	stw r5, 0xc(r3)
@@ -18,9 +17,9 @@ CircleBufferInitialize:
 /* 802CB800 00294DC0  90 A3 00 14 */	stw r5, 0x14(r3)
 /* 802CB804 00294DC4  38 63 00 18 */	addi r3, r3, 0x18
 /* 802CB808 00294DC8  4B FF FF 9C */	b MWInitializeCriticalSection
+.endfn CircleBufferInitialize
 
-.global CircleBufferReadBytes
-CircleBufferReadBytes:
+.fn CircleBufferReadBytes, global
 /* 802CB80C 00294DCC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CB810 00294DD0  7C 08 02 A6 */	mflr r0
 /* 802CB814 00294DD4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -92,6 +91,7 @@ CircleBufferReadBytes:
 /* 802CB908 00294EC8  7C 08 03 A6 */	mtlr r0
 /* 802CB90C 00294ECC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802CB910 00294ED0  4E 80 00 20 */	blr 
+.endfn CircleBufferReadBytes
 
 .global CircleBufferWriteBytes
 CircleBufferWriteBytes:

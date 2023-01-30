@@ -2,8 +2,9 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802A0AFC
-func_802A0AFC:
+
+
+.fn func_802A0AFC, global
 /* 802A0AFC 0026A0BC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802A0B00 0026A0C0  7C 08 02 A6 */	mflr r0
 /* 802A0B04 0026A0C4  3C 80 80 54 */	lis r4, __vt__cf_CCharVoice@ha
@@ -40,9 +41,9 @@ func_802A0AFC:
 /* 802A0B80 0026A140  7C 08 03 A6 */	mtlr r0
 /* 802A0B84 0026A144  38 21 00 20 */	addi r1, r1, 0x20
 /* 802A0B88 0026A148  4E 80 00 20 */	blr 
+.endfn func_802A0AFC
 
-.global func_802A0B8C
-func_802A0B8C:
+.fn func_802A0B8C, global
 /* 802A0B8C 0026A14C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802A0B90 0026A150  7C 08 02 A6 */	mflr r0
 /* 802A0B94 0026A154  2C 04 00 00 */	cmpwi r4, 0
@@ -122,9 +123,9 @@ func_802A0B8C:
 /* 802A0CAC 0026A26C  7C 08 03 A6 */	mtlr r0
 /* 802A0CB0 0026A270  38 21 00 20 */	addi r1, r1, 0x20
 /* 802A0CB4 0026A274  4E 80 00 20 */	blr 
+.endfn func_802A0B8C
 
-.global func_802A0CB8
-func_802A0CB8:
+.fn func_802A0CB8, global
 /* 802A0CB8 0026A278  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802A0CBC 0026A27C  7C 08 02 A6 */	mflr r0
 /* 802A0CC0 0026A280  90 01 00 24 */	stw r0, 0x24(r1)
@@ -213,9 +214,9 @@ func_802A0CB8:
 /* 802A0DFC 0026A3BC  7C 08 03 A6 */	mtlr r0
 /* 802A0E00 0026A3C0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802A0E04 0026A3C4  4E 80 00 20 */	blr 
+.endfn func_802A0CB8
 
-.global func_802A0E08
-func_802A0E08:
+.fn func_802A0E08, global
 /* 802A0E08 0026A3C8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802A0E0C 0026A3CC  7C 08 02 A6 */	mflr r0
 /* 802A0E10 0026A3D0  90 01 00 34 */	stw r0, 0x34(r1)
@@ -345,9 +346,9 @@ func_802A0E08:
 /* 802A0FDC 0026A59C  7C 08 03 A6 */	mtlr r0
 /* 802A0FE0 0026A5A0  38 21 00 30 */	addi r1, r1, 0x30
 /* 802A0FE4 0026A5A4  4E 80 00 20 */	blr 
+.endfn func_802A0E08
 
-.global func_802A0FE8
-func_802A0FE8:
+.fn func_802A0FE8, global
 /* 802A0FE8 0026A5A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A0FEC 0026A5AC  7C 08 02 A6 */	mflr r0
 /* 802A0FF0 0026A5B0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -396,9 +397,9 @@ func_802A0FE8:
 /* 802A1090 0026A650  7C 08 03 A6 */	mtlr r0
 /* 802A1094 0026A654  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A1098 0026A658  4E 80 00 20 */	blr
+.endfn func_802A0FE8
 
-.global func_802A109C
-func_802A109C:
+.fn func_802A109C, global
 /* 802A109C 0026A65C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802A10A0 0026A660  7C 08 02 A6 */	mflr r0
 /* 802A10A4 0026A664  90 01 00 34 */	stw r0, 0x34(r1)
@@ -566,9 +567,9 @@ func_802A109C:
 /* 802A12F8 0026A8B8  7C 08 03 A6 */	mtlr r0
 /* 802A12FC 0026A8BC  38 21 00 30 */	addi r1, r1, 0x30
 /* 802A1300 0026A8C0  4E 80 00 20 */	blr
+.endfn func_802A109C
 
-.global func_802A1304
-func_802A1304:
+.fn func_802A1304, global
 /* 802A1304 0026A8C4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A1308 0026A8C8  7C 08 02 A6 */	mflr r0
 /* 802A130C 0026A8CC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -617,12 +618,15 @@ func_802A1304:
 /* 802A13AC 0026A96C  7C 08 03 A6 */	mtlr r0
 /* 802A13B0 0026A970  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A13B4 0026A974  4E 80 00 20 */	blr 
+.endfn func_802A1304
 
-.global func_802A13B8
-func_802A13B8:
+.fn func_802A13B8, global
 /* 802A13B8 0026A978  4E 80 00 20 */	blr 
+.endfn func_802A13B8
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
 
 .global lbl_8050BCC0
 lbl_8050BCC0:
@@ -640,6 +644,8 @@ lbl_8050BCEC:
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+
+
 .global __vt__cf_CCharVoice
 __vt__cf_CCharVoice:
 	.4byte __RTTI__cf_CCharVoice
@@ -648,6 +654,8 @@ __vt__cf_CCharVoice:
 	.4byte 0
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+
 
 .global lbl_80665590
 lbl_80665590:
@@ -660,6 +668,8 @@ __RTTI__cf_CCharVoice:
 	.4byte 0
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
 
 .global float_8066B500
 float_8066B500:
@@ -680,64 +690,101 @@ float_8066B508:
 float_8066B50C:
 	.float 0
 
-.section extab_, "a"  # 0x800066E0 - 0x80021020
+.section extab, "a" # 0x800066E0 - 0x80021020
 
-.global lbl_8001A880
-lbl_8001A880:
+.balign 4
+
+.obj "@etb_8001A880", local
+.hidden "@etb_8001A880"
 	.4byte 0x18080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001A880"
 
-.global lbl_8001A888
-lbl_8001A888:
+.obj "@etb_8001A888", local
+.hidden "@etb_8001A888"
 	.4byte 0x10080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001A888"
 
-.global lbl_8001A890
-lbl_8001A890:
+.obj "@etb_8001A890", local
+.hidden "@etb_8001A890"
 	.4byte 0x20080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001A890"
 
-.global lbl_8001A898
-lbl_8001A898:
+.obj "@etb_8001A898", local
+.hidden "@etb_8001A898"
 	.4byte 0x100A0000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001A898"
 
-.global lbl_8001A8A0
-lbl_8001A8A0:
+.obj "@etb_8001A8A0", local
+.hidden "@etb_8001A8A0"
 	.4byte 0x100A0000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001A8A0"
 
-.global lbl_8001A8A8
-lbl_8001A8A8:
+.obj "@etb_8001A8A8", local
+.hidden "@etb_8001A8A8"
 	.4byte 0x184A0000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001A8A8"
 
-.global lbl_8001A8B0
-lbl_8001A8B0:
+.obj "@etb_8001A8B0", local
+.hidden "@etb_8001A8B0"
 	.4byte 0x100A0000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001A8B0"
 
+.section extabindex, "a" # 0x80021020 - 0x80039220
 
-.section extabindex_, "a"  # 0x80021020 - 0x80039220
+.balign 4
 
-.4byte func_802A0AFC
+.obj "@eti_8003266C", local
+.hidden "@eti_8003266C"
+	.4byte func_802A0AFC
 	.4byte 0x00000090
-	.4byte lbl_8001A880
+	.4byte "@etb_8001A880"
+.endobj "@eti_8003266C"
+
+.obj "@eti_80032678", local
+.hidden "@eti_80032678"
 	.4byte func_802A0B8C
 	.4byte 0x0000012C
-	.4byte lbl_8001A888
+	.4byte "@etb_8001A888"
+.endobj "@eti_80032678"
+
+.obj "@eti_80032684", local
+.hidden "@eti_80032684"
 	.4byte func_802A0CB8
 	.4byte 0x00000150
-	.4byte lbl_8001A890
+	.4byte "@etb_8001A890"
+.endobj "@eti_80032684"
+
+.obj "@eti_80032690", local
+.hidden "@eti_80032690"
 	.4byte func_802A0E08
 	.4byte 0x000001E0
-	.4byte lbl_8001A898
+	.4byte "@etb_8001A898"
+.endobj "@eti_80032690"
+
+.obj "@eti_8003269C", local
+.hidden "@eti_8003269C"
 	.4byte func_802A0FE8
 	.4byte 0x000000B4
-	.4byte lbl_8001A8A0
+	.4byte "@etb_8001A8A0"
+.endobj "@eti_8003269C"
+
+.obj "@eti_800326A8", local
+.hidden "@eti_800326A8"
 	.4byte func_802A109C
 	.4byte 0x00000268
-	.4byte lbl_8001A8A8
+	.4byte "@etb_8001A8A8"
+.endobj "@eti_800326A8"
+
+.obj "@eti_800326B4", local
+.hidden "@eti_800326B4"
 	.4byte func_802A1304
 	.4byte 0x000000B4
-	.4byte lbl_8001A8B0
+	.4byte "@etb_8001A8B0"
+.endobj "@eti_800326B4"

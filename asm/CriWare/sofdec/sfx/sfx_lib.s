@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global SFX_Init
-SFX_Init:
+.fn SFX_Init, global
 /* 803D5828 0039EDE8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D582C 0039EDEC  7C 08 02 A6 */	mflr r0
 /* 803D5830 0039EDF0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -40,17 +39,17 @@ SFX_Init:
 /* 803D58A8 0039EE68  7C 08 03 A6 */	mtlr r0
 /* 803D58AC 0039EE6C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D58B0 0039EE70  4E 80 00 20 */	blr 
+.endfn SFX_Init
 
-.global SFX_SetErrFn
-SFX_SetErrFn:
+.fn SFX_SetErrFn, global
 /* 803D58B4 0039EE74  3C A0 80 62 */	lis r5, sfx_libwork@ha
 /* 803D58B8 0039EE78  38 A5 CE 48 */	addi r5, r5, sfx_libwork@l
 /* 803D58BC 0039EE7C  90 65 00 08 */	stw r3, 8(r5)
 /* 803D58C0 0039EE80  90 85 00 0C */	stw r4, 0xc(r5)
 /* 803D58C4 0039EE84  4E 80 00 20 */	blr
+.endfn SFX_SetErrFn
 
-.global SFX_Create
-SFX_Create:
+.fn SFX_Create, global
 /* 803D58C8 0039EE88  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D58CC 0039EE8C  7C 08 02 A6 */	mflr r0
 /* 803D58D0 0039EE90  3C C0 80 62 */	lis r6, sfx_libwork@ha
@@ -192,9 +191,9 @@ SFX_Create:
 /* 803D5AB8 0039F078  7C 08 03 A6 */	mtlr r0
 /* 803D5ABC 0039F07C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D5AC0 0039F080  4E 80 00 20 */	blr 
+.endfn SFX_Create
 
-.global sfx_InitHn
-sfx_InitHn:
+.fn sfx_InitHn, global
 /* 803D5AC4 0039F084  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D5AC8 0039F088  7C 08 02 A6 */	mflr r0
 /* 803D5ACC 0039F08C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -237,9 +236,9 @@ sfx_InitHn:
 /* 803D5B60 0039F120  7C 08 03 A6 */	mtlr r0
 /* 803D5B64 0039F124  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D5B68 0039F128  4E 80 00 20 */	blr
+.endfn sfx_InitHn
 
-.global SFX_Destroy
-SFX_Destroy:
+.fn SFX_Destroy, global
 /* 803D5B6C 0039F12C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D5B70 0039F130  7C 08 02 A6 */	mflr r0
 /* 803D5B74 0039F134  2C 03 00 00 */	cmpwi r3, 0
@@ -264,9 +263,9 @@ SFX_Destroy:
 /* 803D5BBC 0039F17C  7C 08 03 A6 */	mtlr r0
 /* 803D5BC0 0039F180  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D5BC4 0039F184  4E 80 00 20 */	blr 
+.endfn SFX_Destroy
 
-.global SFXLIB_Error
-SFXLIB_Error:
+.fn SFXLIB_Error, global
 /* 803D5BC8 0039F188  3C C0 80 62 */	lis r6, sfx_libwork@ha
 /* 803D5BCC 0039F18C  38 C6 CE 48 */	addi r6, r6, sfx_libwork@l
 /* 803D5BD0 0039F190  81 86 00 08 */	lwz r12, 8(r6)
@@ -280,19 +279,20 @@ SFXLIB_Error:
 /* 803D5BF0 0039F1B0  7D 89 03 A6 */	mtctr r12
 /* 803D5BF4 0039F1B4  4E 80 04 20 */	bctr 
 /* 803D5BF8 0039F1B8  4E 80 00 20 */	blr 
+.endfn SFXLIB_Error
 
-.global SFX_SetCcirFx
-SFX_SetCcirFx:
+.fn SFX_SetCcirFx, global
 /* 803D5BFC 0039F1BC  3C 60 80 62 */	lis r3, sfx_libwork@ha
 /* 803D5C00 0039F1C0  38 63 CE 48 */	addi r3, r3, sfx_libwork@l
 /* 803D5C04 0039F1C4  80 63 00 14 */	lwz r3, 0x14(r3)
 /* 803D5C08 0039F1C8  4E 80 00 20 */	blr 
+.endfn SFX_SetCcirFx
 
-.global SFX_GetForceSplitField
-SFX_GetForceSplitField:
+.fn SFX_GetForceSplitField, global
 /* 803D5C0C 0039F1CC  3C 60 80 62 */	lis r3, lbl_8061CE3C@ha
 /* 803D5C10 0039F1D0  80 63 CE 3C */	lwz r3, lbl_8061CE3C@l(r3)
 /* 803D5C14 0039F1D4  4E 80 00 20 */	blr 
+.endfn SFX_GetForceSplitField
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

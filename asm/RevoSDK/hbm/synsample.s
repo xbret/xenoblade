@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-func_80341A90:
+.fn func_80341A90, local
 /* 80341A90 0030B050  80 C3 00 10 */	lwz r6, 0x10(r3)
 /* 80341A94 0030B054  80 83 00 04 */	lwz r4, 4(r3)
 /* 80341A98 0030B058  80 A6 00 08 */	lwz r5, 8(r6)
@@ -138,9 +138,10 @@ func_80341A90:
 /* 80341C98 0030B258  60 00 84 00 */	ori r0, r0, 0x8400
 /* 80341C9C 0030B25C  90 04 00 1C */	stw r0, 0x1c(r4)
 /* 80341CA0 0030B260  4E 80 00 20 */	blr
+.endfn func_80341A90
 
 .balign 16, 0
-func_80341CB0:
+.fn func_80341CB0, local
 /* 80341CB0 0030B270  81 43 00 10 */	lwz r10, 0x10(r3)
 /* 80341CB4 0030B274  80 83 00 04 */	lwz r4, 4(r3)
 /* 80341CB8 0030B278  80 AA 00 08 */	lwz r5, 8(r10)
@@ -211,10 +212,10 @@ func_80341CB0:
 /* 80341DB4 0030B374  60 00 84 00 */	ori r0, r0, 0x8400
 /* 80341DB8 0030B378  90 04 00 1C */	stw r0, 0x1c(r4)
 /* 80341DBC 0030B37C  4E 80 00 20 */	blr
+.endfn func_80341CB0
 
 .balign 16, 0
-.global func_80341DC0
-func_80341DC0:
+.fn func_80341DC0, global
 /* 80341DC0 0030B380  81 43 00 10 */	lwz r10, 0x10(r3)
 /* 80341DC4 0030B384  80 83 00 04 */	lwz r4, 4(r3)
 /* 80341DC8 0030B388  80 AA 00 08 */	lwz r5, 8(r10)
@@ -285,6 +286,7 @@ func_80341DC0:
 /* 80341EC4 0030B484  60 00 84 00 */	ori r0, r0, 0x8400
 /* 80341EC8 0030B488  90 04 00 1C */	stw r0, 0x1c(r4)
 /* 80341ECC 0030B48C  4E 80 00 20 */	blr 
+.endfn func_80341DC0
 
 .balign 16, 0
 .global __HBMSYNSetupSample

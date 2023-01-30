@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global bdcpy
-bdcpy:
+.fn bdcpy, global
 /* 802DE634 002A7BF4  89 24 00 00 */	lbz r9, 0(r4)
 /* 802DE638 002A7BF8  89 04 00 01 */	lbz r8, 1(r4)
 /* 802DE63C 002A7BFC  88 E4 00 02 */	lbz r7, 2(r4)
@@ -17,6 +16,7 @@ bdcpy:
 /* 802DE65C 002A7C1C  98 A3 00 04 */	stb r5, 4(r3)
 /* 802DE660 002A7C20  98 03 00 05 */	stb r0, 5(r3)
 /* 802DE664 002A7C24  4E 80 00 20 */	blr 
+.endfn bdcpy
 
 .global bdcmp
 bdcmp:

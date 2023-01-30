@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global GetInstance__Q44nw4r3snd6detail11TaskManagerFv
-GetInstance__Q44nw4r3snd6detail11TaskManagerFv:
+.fn GetInstance__Q44nw4r3snd6detail11TaskManagerFv, global
 /* 804257C4 003EED84  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804257C8 003EED88  7C 08 02 A6 */	mflr r0
 /* 804257CC 003EED8C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -44,9 +43,9 @@ GetInstance__Q44nw4r3snd6detail11TaskManagerFv:
 /* 80425854 003EEE14  7C 08 03 A6 */	mtlr r0
 /* 80425858 003EEE18  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042585C 003EEE1C  4E 80 00 20 */	blr
+.endfn GetInstance__Q44nw4r3snd6detail11TaskManagerFv
 
-.global __dt__Q44nw4r3snd6detail11TaskManagerFv
-__dt__Q44nw4r3snd6detail11TaskManagerFv:
+.fn __dt__Q44nw4r3snd6detail11TaskManagerFv, global
 /* 80425860 003EEE20  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80425864 003EEE24  7C 08 02 A6 */	mflr r0
 /* 80425868 003EEE28  2C 03 00 00 */	cmpwi r3, 0
@@ -73,10 +72,10 @@ __dt__Q44nw4r3snd6detail11TaskManagerFv:
 /* 804258B8 003EEE78  7C 08 03 A6 */	mtlr r0
 /* 804258BC 003EEE7C  38 21 00 10 */	addi r1, r1, 0x10
 /* 804258C0 003EEE80  4E 80 00 20 */	blr
+.endfn __dt__Q44nw4r3snd6detail11TaskManagerFv
 
 #__dt__Q34nw4r2ut35LinkList<Q44nw4r3snd6detail4Task,4>Fv
-.global __dt__Q34nw4r2ut35LinkList_Q44nw4r3snd6detail4Task_4_Fv
-__dt__Q34nw4r2ut35LinkList_Q44nw4r3snd6detail4Task_4_Fv:
+.fn __dt__Q34nw4r2ut35LinkList_Q44nw4r3snd6detail4Task_4_Fv, global
 /* 804258C4 003EEE84  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804258C8 003EEE88  7C 08 02 A6 */	mflr r0
 /* 804258CC 003EEE8C  2C 03 00 00 */	cmpwi r3, 0
@@ -100,10 +99,10 @@ __dt__Q34nw4r2ut35LinkList_Q44nw4r3snd6detail4Task_4_Fv:
 /* 80425910 003EEED0  7C 08 03 A6 */	mtlr r0
 /* 80425914 003EEED4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80425918 003EEED8  4E 80 00 20 */	blr
+.endfn __dt__Q34nw4r2ut35LinkList_Q44nw4r3snd6detail4Task_4_Fv
 
 #__ct__q34nw4r2ut35linklist<Q44nw4r3snd6detail4Task,4>Fv
-.global __ct__Q34nw4r2ut35LinkList_Q44nw4r3snd6detail4Task_4_Fv
-__ct__Q34nw4r2ut35LinkList_Q44nw4r3snd6detail4Task_4_Fv:
+.fn __ct__Q34nw4r2ut35LinkList_Q44nw4r3snd6detail4Task_4_Fv, global
 /* 8042591C 003EEEDC  38 00 00 00 */	li r0, 0
 /* 80425920 003EEEE0  38 83 00 04 */	addi r4, r3, 4
 /* 80425924 003EEEE4  90 03 00 04 */	stw r0, 4(r3)
@@ -112,9 +111,9 @@ __ct__Q34nw4r2ut35LinkList_Q44nw4r3snd6detail4Task_4_Fv:
 /* 80425930 003EEEF0  90 83 00 04 */	stw r4, 4(r3)
 /* 80425934 003EEEF4  90 83 00 08 */	stw r4, 8(r3)
 /* 80425938 003EEEF8  4E 80 00 20 */	blr 
+.endfn __ct__Q34nw4r2ut35LinkList_Q44nw4r3snd6detail4Task_4_Fv
 
-.global AppendTask__Q44nw4r3snd6detail11TaskManagerFPQ44nw4r3snd6detail4TaskQ54nw4r3snd6detail11TaskManager12TaskPriority
-AppendTask__Q44nw4r3snd6detail11TaskManagerFPQ44nw4r3snd6detail4TaskQ54nw4r3snd6detail11TaskManager12TaskPriority:
+.fn AppendTask__Q44nw4r3snd6detail11TaskManagerFPQ44nw4r3snd6detail4TaskQ54nw4r3snd6detail11TaskManager12TaskPriority, global
 /* 8042593C 003EEEFC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80425940 003EEF00  7C 08 02 A6 */	mflr r0
 /* 80425944 003EEF04  90 01 00 24 */	stw r0, 0x24(r1)
@@ -146,9 +145,9 @@ AppendTask__Q44nw4r3snd6detail11TaskManagerFPQ44nw4r3snd6detail4TaskQ54nw4r3snd6
 /* 804259AC 003EEF6C  7C 08 03 A6 */	mtlr r0
 /* 804259B0 003EEF70  38 21 00 20 */	addi r1, r1, 0x20
 /* 804259B4 003EEF74  4E 80 00 20 */	blr 
+.endfn AppendTask__Q44nw4r3snd6detail11TaskManagerFPQ44nw4r3snd6detail4TaskQ54nw4r3snd6detail11TaskManager12TaskPriority
 
-.global PopTask__Q44nw4r3snd6detail11TaskManagerFv
-PopTask__Q44nw4r3snd6detail11TaskManagerFv:
+.fn PopTask__Q44nw4r3snd6detail11TaskManagerFv, global
 /* 804259B8 003EEF78  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 804259BC 003EEF7C  7C 08 02 A6 */	mflr r0
 /* 804259C0 003EEF80  90 01 00 34 */	stw r0, 0x34(r1)
@@ -246,9 +245,9 @@ PopTask__Q44nw4r3snd6detail11TaskManagerFv:
 /* 80425B08 003EF0C8  7C 08 03 A6 */	mtlr r0
 /* 80425B0C 003EF0CC  38 21 00 30 */	addi r1, r1, 0x30
 /* 80425B10 003EF0D0  4E 80 00 20 */	blr 
+.endfn PopTask__Q44nw4r3snd6detail11TaskManagerFv
 
-.global GetNextTask__Q44nw4r3snd6detail11TaskManagerFv
-GetNextTask__Q44nw4r3snd6detail11TaskManagerFv:
+.fn GetNextTask__Q44nw4r3snd6detail11TaskManagerFv, global
 /* 80425B14 003EF0D4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80425B18 003EF0D8  7C 08 02 A6 */	mflr r0
 /* 80425B1C 003EF0DC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -326,9 +325,9 @@ GetNextTask__Q44nw4r3snd6detail11TaskManagerFv:
 /* 80425C14 003EF1D4  7C 08 03 A6 */	mtlr r0
 /* 80425C18 003EF1D8  38 21 00 20 */	addi r1, r1, 0x20
 /* 80425C1C 003EF1DC  4E 80 00 20 */	blr 
+.endfn GetNextTask__Q44nw4r3snd6detail11TaskManagerFv
 
-.global ExecuteTask__Q44nw4r3snd6detail11TaskManagerFv
-ExecuteTask__Q44nw4r3snd6detail11TaskManagerFv:
+.fn ExecuteTask__Q44nw4r3snd6detail11TaskManagerFv, global
 /* 80425C20 003EF1E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80425C24 003EF1E4  7C 08 02 A6 */	mflr r0
 /* 80425C28 003EF1E8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -362,9 +361,9 @@ ExecuteTask__Q44nw4r3snd6detail11TaskManagerFv:
 /* 80425C90 003EF250  7C 08 03 A6 */	mtlr r0
 /* 80425C94 003EF254  38 21 00 20 */	addi r1, r1, 0x20
 /* 80425C98 003EF258  4E 80 00 20 */	blr 
+.endfn ExecuteTask__Q44nw4r3snd6detail11TaskManagerFv
 
-.global CancelTask__Q44nw4r3snd6detail11TaskManagerFPQ44nw4r3snd6detail4Task
-CancelTask__Q44nw4r3snd6detail11TaskManagerFPQ44nw4r3snd6detail4Task:
+.fn CancelTask__Q44nw4r3snd6detail11TaskManagerFPQ44nw4r3snd6detail4Task, global
 /* 80425C9C 003EF25C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80425CA0 003EF260  7C 08 02 A6 */	mflr r0
 /* 80425CA4 003EF264  90 01 00 34 */	stw r0, 0x34(r1)
@@ -433,9 +432,9 @@ CancelTask__Q44nw4r3snd6detail11TaskManagerFPQ44nw4r3snd6detail4Task:
 /* 80425D80 003EF340  7C 08 03 A6 */	mtlr r0
 /* 80425D84 003EF344  38 21 00 30 */	addi r1, r1, 0x30
 /* 80425D88 003EF348  4E 80 00 20 */	blr 
+.endfn CancelTask__Q44nw4r3snd6detail11TaskManagerFPQ44nw4r3snd6detail4Task
 
-.global CancelAllTask__Q44nw4r3snd6detail11TaskManagerFv
-CancelAllTask__Q44nw4r3snd6detail11TaskManagerFv:
+.fn CancelAllTask__Q44nw4r3snd6detail11TaskManagerFv, global
 /* 80425D8C 003EF34C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80425D90 003EF350  7C 08 02 A6 */	mflr r0
 /* 80425D94 003EF354  90 01 00 34 */	stw r0, 0x34(r1)
@@ -500,9 +499,9 @@ CancelAllTask__Q44nw4r3snd6detail11TaskManagerFv:
 /* 80425E64 003EF424  7C 08 03 A6 */	mtlr r0
 /* 80425E68 003EF428  38 21 00 30 */	addi r1, r1, 0x30
 /* 80425E6C 003EF42C  4E 80 00 20 */	blr 
+.endfn CancelAllTask__Q44nw4r3snd6detail11TaskManagerFv
 
-.global WaitTask__Q44nw4r3snd6detail11TaskManagerFv
-WaitTask__Q44nw4r3snd6detail11TaskManagerFv:
+.fn WaitTask__Q44nw4r3snd6detail11TaskManagerFv, global
 /* 80425E70 003EF430  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80425E74 003EF434  7C 08 02 A6 */	mflr r0
 /* 80425E78 003EF438  90 01 00 14 */	stw r0, 0x14(r1)
@@ -534,9 +533,9 @@ WaitTask__Q44nw4r3snd6detail11TaskManagerFv:
 /* 80425ED4 003EF494  7C 08 03 A6 */	mtlr r0
 /* 80425ED8 003EF498  38 21 00 10 */	addi r1, r1, 0x10
 /* 80425EDC 003EF49C  4E 80 00 20 */	blr 
+.endfn WaitTask__Q44nw4r3snd6detail11TaskManagerFv
 
-.global CancelWaitTask__Q44nw4r3snd6detail11TaskManagerFv
-CancelWaitTask__Q44nw4r3snd6detail11TaskManagerFv:
+.fn CancelWaitTask__Q44nw4r3snd6detail11TaskManagerFv, global
 /* 80425EE0 003EF4A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80425EE4 003EF4A4  7C 08 02 A6 */	mflr r0
 /* 80425EE8 003EF4A8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -557,6 +556,7 @@ CancelWaitTask__Q44nw4r3snd6detail11TaskManagerFv:
 /* 80425F24 003EF4E4  7C 08 03 A6 */	mtlr r0
 /* 80425F28 003EF4E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80425F2C 003EF4EC  4E 80 00 20 */	blr 
+.endfn CancelWaitTask__Q44nw4r3snd6detail11TaskManagerFv
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global TRKTestForPacket
-TRKTestForPacket:
+.fn TRKTestForPacket, global
 /* 802CC93C 00295EFC  94 21 F7 20 */	stwu r1, -0x8e0(r1)
 /* 802CC940 00295F00  7C 08 02 A6 */	mflr r0
 /* 802CC944 00295F04  90 01 08 E4 */	stw r0, 0x8e4(r1)
@@ -60,9 +59,9 @@ TRKTestForPacket:
 /* 802CC9FC 00295FBC  7C 08 03 A6 */	mtlr r0
 /* 802CCA00 00295FC0  38 21 08 E0 */	addi r1, r1, 0x8e0
 /* 802CCA04 00295FC4  4E 80 00 20 */	blr 
+.endfn TRKTestForPacket
 
-.global TRKGetInput
-TRKGetInput:
+.fn TRKGetInput, global
 /* 802CCA08 00295FC8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CCA0C 00295FCC  7C 08 02 A6 */	mflr r0
 /* 802CCA10 00295FD0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -75,9 +74,9 @@ TRKGetInput:
 /* 802CCA28 00295FE8  7C 08 03 A6 */	mtlr r0
 /* 802CCA2C 00295FEC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CCA30 00295FF0  4E 80 00 20 */	blr 
+.endfn TRKGetInput
 
-.global TRKProcessInput
-TRKProcessInput:
+.fn TRKProcessInput, global
 /* 802CCA34 00295FF4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CCA38 00295FF8  7C 08 02 A6 */	mflr r0
 /* 802CCA3C 00295FFC  38 80 00 02 */	li r4, 2
@@ -94,11 +93,12 @@ TRKProcessInput:
 /* 802CCA68 00296028  7C 08 03 A6 */	mtlr r0
 /* 802CCA6C 0029602C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802CCA70 00296030  4E 80 00 20 */	blr 
+.endfn TRKProcessInput
 
-.global TRKInitializeSerialHandler
-TRKInitializeSerialHandler:
+.fn TRKInitializeSerialHandler, global
 /* 802CCA74 00296034  38 60 00 00 */	li r3, 0
 /* 802CCA78 00296038  4E 80 00 20 */	blr 
+.endfn TRKInitializeSerialHandler
 
 .global TRKTerminateSerialHandler
 TRKTerminateSerialHandler:

@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global OSSetResetCallback
-OSSetResetCallback:
+.fn OSSetResetCallback, global
 /* 8035D020 003265E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035D024 003265E4  7C 08 02 A6 */	mflr r0
 /* 8035D028 003265E8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -71,10 +70,10 @@ OSSetResetCallback:
 /* 8035D100 003266C0  7C 08 03 A6 */	mtlr r0
 /* 8035D104 003266C4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035D108 003266C8  4E 80 00 20 */	blr 
+.endfn OSSetResetCallback
 
 .balign 16, 0
-.global OSSetPowerCallback
-OSSetPowerCallback:
+.fn OSSetPowerCallback, global
 /* 8035D110 003266D0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035D114 003266D4  7C 08 02 A6 */	mflr r0
 /* 8035D118 003266D8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -141,10 +140,10 @@ OSSetPowerCallback:
 /* 8035D1F0 003267B0  7C 08 03 A6 */	mtlr r0
 /* 8035D1F4 003267B4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035D1F8 003267B8  4E 80 00 20 */	blr 
+.endfn OSSetPowerCallback
 
 .balign 16, 0
-.global __OSInitSTM
-__OSInitSTM:
+.fn __OSInitSTM, global
 /* 8035D200 003267C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035D204 003267C4  7C 08 02 A6 */	mflr r0
 /* 8035D208 003267C8  3C 80 80 36 */	lis r4, __OSDefaultPowerCallback@ha
@@ -221,10 +220,10 @@ __OSInitSTM:
 /* 8035D30C 003268CC  7C 08 03 A6 */	mtlr r0
 /* 8035D310 003268D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035D314 003268D4  4E 80 00 20 */	blr 
+.endfn __OSInitSTM
 
 .balign 16, 0
-.global __OSShutdownToSBY
-__OSShutdownToSBY:
+.fn __OSShutdownToSBY, global
 /* 8035D320 003268E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035D324 003268E4  7C 08 02 A6 */	mflr r0
 /* 8035D328 003268E8  3C 60 CC 00 */	lis r3, 0xCC002002@ha
@@ -258,10 +257,10 @@ __OSShutdownToSBY:
 /* 8035D394 00326954  60 00 00 00 */	nop 
 .L_8035D398:
 /* 8035D398 00326958  48 00 00 00 */	b .L_8035D398
+.endfn __OSShutdownToSBY
 
 .balign 16, 0
-.global __OSHotReset
-__OSHotReset:
+.fn __OSHotReset, global
 /* 8035D3A0 00326960  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035D3A4 00326964  7C 08 02 A6 */	mflr r0
 /* 8035D3A8 00326968  3C 60 CC 00 */	lis r3, 0xCC002002@ha
@@ -293,10 +292,10 @@ __OSHotReset:
 /* 8035D40C 003269CC  60 00 00 00 */	nop 
 .L_8035D410:
 /* 8035D410 003269D0  48 00 00 00 */	b .L_8035D410
+.endfn __OSHotReset
 
 .balign 16, 0
-.global __OSSetVIForceDimming
-__OSSetVIForceDimming:
+.fn __OSSetVIForceDimming, global
 /* 8035D420 003269E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035D424 003269E4  7C 08 02 A6 */	mflr r0
 /* 8035D428 003269E8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -363,10 +362,10 @@ __OSSetVIForceDimming:
 /* 8035D50C 00326ACC  7C 08 03 A6 */	mtlr r0
 /* 8035D510 00326AD0  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035D514 00326AD4  4E 80 00 20 */	blr 
+.endfn __OSSetVIForceDimming
 
 .balign 16, 0
-.global __OSUnRegisterStateEvent
-__OSUnRegisterStateEvent:
+.fn __OSUnRegisterStateEvent, global
 /* 8035D520 00326AE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035D524 00326AE4  7C 08 02 A6 */	mflr r0
 /* 8035D528 00326AE8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -400,28 +399,28 @@ __OSUnRegisterStateEvent:
 /* 8035D58C 00326B4C  7C 08 03 A6 */	mtlr r0
 /* 8035D590 00326B50  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035D594 00326B54  4E 80 00 20 */	blr 
+.endfn __OSUnRegisterStateEvent
 
 .balign 16, 0
-.global __OSVIDimReplyHandler
-__OSVIDimReplyHandler:
+.fn __OSVIDimReplyHandler, global
 /* 8035D5A0 00326B60  38 00 00 00 */	li r0, 0
 /* 8035D5A4 00326B64  90 0D B9 74 */	stw r0, lbl_80667AF4@sda21(r13)
 /* 8035D5A8 00326B68  38 60 00 00 */	li r3, 0
 /* 8035D5AC 00326B6C  4E 80 00 20 */	blr
+.endfn __OSVIDimReplyHandler
 
 .balign 16, 0
-.global __OSDefaultResetCallback
-__OSDefaultResetCallback:
+.fn __OSDefaultResetCallback, global
 /* 8035D5B0 00326B70  4E 80 00 20 */	blr 
+.endfn __OSDefaultResetCallback
 
 .balign 16, 0
-.global __OSDefaultPowerCallback
-__OSDefaultPowerCallback:
+.fn __OSDefaultPowerCallback, global
 /* 8035D5C0 00326B80  4E 80 00 20 */	blr 
+.endfn __OSDefaultPowerCallback
 
 .balign 16, 0
-.global __OSStateEventHandler
-__OSStateEventHandler:
+.fn __OSStateEventHandler, global
 /* 8035D5D0 00326B90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035D5D4 00326B94  7C 08 02 A6 */	mflr r0
 /* 8035D5D8 00326B98  2C 03 00 00 */	cmpwi r3, 0
@@ -515,6 +514,7 @@ __OSStateEventHandler:
 /* 8035D718 00326CD8  7C 08 03 A6 */	mtlr r0
 /* 8035D71C 00326CDC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035D720 00326CE0  4E 80 00 20 */	blr 
+.endfn __OSStateEventHandler
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

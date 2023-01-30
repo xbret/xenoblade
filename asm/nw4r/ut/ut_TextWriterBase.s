@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 #GetLineHeight__Q34nw4r2ut17TextWriterBase<c>CFv
-.global GetLineHeight__Q34nw4r2ut17TextWriterBase_c_CFv
-GetLineHeight__Q34nw4r2ut17TextWriterBase_c_CFv:
+.fn GetLineHeight__Q34nw4r2ut17TextWriterBase_c_CFv, global
 /* 80430624 003F9BE4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80430628 003F9BE8  7C 08 02 A6 */	mflr r0
 /* 8043062C 003F9BEC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -38,10 +37,10 @@ GetLineHeight__Q34nw4r2ut17TextWriterBase_c_CFv:
 /* 80430694 003F9C54  7C 08 03 A6 */	mtlr r0
 /* 80430698 003F9C58  38 21 00 20 */	addi r1, r1, 0x20
 /* 8043069C 003F9C5C  4E 80 00 20 */	blr 
+.endfn GetLineHeight__Q34nw4r2ut17TextWriterBase_c_CFv
 
 #__ct__Q34nw4r2ut17TextWriterBase<w>Fv
-.global __ct__Q34nw4r2ut17TextWriterBase_w_Fv
-__ct__Q34nw4r2ut17TextWriterBase_w_Fv:
+.fn __ct__Q34nw4r2ut17TextWriterBase_w_Fv, global
 /* 804306A0 003F9C60  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804306A4 003F9C64  7C 08 02 A6 */	mflr r0
 /* 804306A8 003F9C68  90 01 00 14 */	stw r0, 0x14(r1)
@@ -65,10 +64,10 @@ __ct__Q34nw4r2ut17TextWriterBase_w_Fv:
 /* 804306F0 003F9CB0  7C 08 03 A6 */	mtlr r0
 /* 804306F4 003F9CB4  38 21 00 10 */	addi r1, r1, 0x10
 /* 804306F8 003F9CB8  4E 80 00 20 */	blr 
+.endfn __ct__Q34nw4r2ut17TextWriterBase_w_Fv
 
 #__dt__Q34nw4r2ut17TextWriterBase<w>Fv
-.global __dt__Q34nw4r2ut17TextWriterBase_w_Fv
-__dt__Q34nw4r2ut17TextWriterBase_w_Fv:
+.fn __dt__Q34nw4r2ut17TextWriterBase_w_Fv, global
 /* 804306FC 003F9CBC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80430700 003F9CC0  7C 08 02 A6 */	mflr r0
 /* 80430704 003F9CC4  2C 03 00 00 */	cmpwi r3, 0
@@ -92,10 +91,10 @@ __dt__Q34nw4r2ut17TextWriterBase_w_Fv:
 /* 80430748 003F9D08  7C 08 03 A6 */	mtlr r0
 /* 8043074C 003F9D0C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80430750 003F9D10  4E 80 00 20 */	blr 
+.endfn __dt__Q34nw4r2ut17TextWriterBase_w_Fv
 
 #GetLineHeight__Q34nw4r2ut17TextWriterBase<w>CFv
-.global GetLineHeight__Q34nw4r2ut17TextWriterBase_w_CFv
-GetLineHeight__Q34nw4r2ut17TextWriterBase_w_CFv:
+.fn GetLineHeight__Q34nw4r2ut17TextWriterBase_w_CFv, global
 /* 80430754 003F9D14  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80430758 003F9D18  7C 08 02 A6 */	mflr r0
 /* 8043075C 003F9D1C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -129,11 +128,11 @@ GetLineHeight__Q34nw4r2ut17TextWriterBase_w_CFv:
 /* 804307C4 003F9D84  7C 08 03 A6 */	mtlr r0
 /* 804307C8 003F9D88  38 21 00 20 */	addi r1, r1, 0x20
 /* 804307CC 003F9D8C  4E 80 00 20 */	blr 
+.endfn GetLineHeight__Q34nw4r2ut17TextWriterBase_w_CFv
 
 #not sure about this label
 #CalcStringRect__Q34nw4r2ut17TextWriterBase<w>CFPQ34nw4r2ut4RectPCwi
-.global CalcStringRect__Q34nw4r2ut17TextWriterBase_w_CFPQ34nw4r2ut4RectPCwi
-CalcStringRect__Q34nw4r2ut17TextWriterBase_w_CFPQ34nw4r2ut4RectPCwi:
+.fn CalcStringRect__Q34nw4r2ut17TextWriterBase_w_CFPQ34nw4r2ut4RectPCwi, global
 /* 804307D0 003F9D90  94 21 FE F0 */	stwu r1, -0x110(r1)
 /* 804307D4 003F9D94  7C 08 02 A6 */	mflr r0
 /* 804307D8 003F9D98  90 01 01 14 */	stw r0, 0x114(r1)
@@ -303,10 +302,10 @@ CalcStringRect__Q34nw4r2ut17TextWriterBase_w_CFPQ34nw4r2ut4RectPCwi:
 /* 80430A68 003FA028  7C 08 03 A6 */	mtlr r0
 /* 80430A6C 003FA02C  38 21 01 10 */	addi r1, r1, 0x110
 /* 80430A70 003FA030  4E 80 00 20 */	blr 
+.endfn CalcStringRect__Q34nw4r2ut17TextWriterBase_w_CFPQ34nw4r2ut4RectPCwi
 
 #Print__Q34nw4r2ut17TextWriterBase<w>FPCwi
-.global Print__Q34nw4r2ut17TextWriterBase_w_FPCwi_w_FPCwi
-Print__Q34nw4r2ut17TextWriterBase_w_FPCwi_w_FPCwi:
+.fn Print__Q34nw4r2ut17TextWriterBase_w_FPCwi_w_FPCwi, global
 /* 80430A74 003FA034  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 80430A78 003FA038  7C 08 02 A6 */	mflr r0
 /* 80430A7C 003FA03C  90 01 00 94 */	stw r0, 0x94(r1)
@@ -437,16 +436,16 @@ Print__Q34nw4r2ut17TextWriterBase_w_FPCwi_w_FPCwi:
 /* 80430C70 003FA230  7C 08 03 A6 */	mtlr r0
 /* 80430C74 003FA234  38 21 00 90 */	addi r1, r1, 0x90
 /* 80430C78 003FA238  4E 80 00 20 */	blr 
+.endfn Print__Q34nw4r2ut17TextWriterBase_w_FPCwi_w_FPCwi
 
 #PrintMutable__Q34nw4r2ut17TextWriterBase<w>FPCwi
-.global PrintMutable__Q34nw4r2ut17TextWriterBase_w_FPCwi
-PrintMutable__Q34nw4r2ut17TextWriterBase_w_FPCwi:
+.fn PrintMutable__Q34nw4r2ut17TextWriterBase_w_FPCwi, global
 /* 80430C7C 003FA23C  38 C0 00 01 */	li r6, 1
 /* 80430C80 003FA240  48 00 07 AC */	b PrintImpl__Q34nw4r2ut17TextWriterBase_w_FPCwib
+.endfn PrintMutable__Q34nw4r2ut17TextWriterBase_w_FPCwi
 
 #CalcLineRectImpl__Q34nw4r2ut17TextWriterBase<w>FPQ34nw4r2ut4RectPPCwi
-.global CalcLineRectImpl__Q34nw4r2ut17TextWriterBase_w_FPQ34nw4r2ut4RectPPCwi
-CalcLineRectImpl__Q34nw4r2ut17TextWriterBase_w_FPQ34nw4r2ut4RectPPCwi:
+.fn CalcLineRectImpl__Q34nw4r2ut17TextWriterBase_w_FPQ34nw4r2ut4RectPPCwi, global
 /* 80430C84 003FA244  94 21 FE 90 */	stwu r1, -0x170(r1)
 /* 80430C88 003FA248  7C 08 02 A6 */	mflr r0
 /* 80430C8C 003FA24C  90 01 01 74 */	stw r0, 0x174(r1)
@@ -899,10 +898,10 @@ CalcLineRectImpl__Q34nw4r2ut17TextWriterBase_w_FPQ34nw4r2ut4RectPPCwi:
 /* 80431300 003FA8C0  7C 08 03 A6 */	mtlr r0
 /* 80431304 003FA8C4  38 21 01 70 */	addi r1, r1, 0x170
 /* 80431308 003FA8C8  4E 80 00 20 */	blr 
+.endfn CalcLineRectImpl__Q34nw4r2ut17TextWriterBase_w_FPQ34nw4r2ut4RectPPCwi
 
 #CalcStringRectImpl__Q34nw4r2ut17TextWriterBase<w>FPQ34nw4r2ut4RectPCwi
-.global CalcStringRectImpl__Q34nw4r2ut17TextWriterBase_w_FPQ34nw4r2ut4RectPCwi
-CalcStringRectImpl__Q34nw4r2ut17TextWriterBase_w_FPQ34nw4r2ut4RectPCwi:
+.fn CalcStringRectImpl__Q34nw4r2ut17TextWriterBase_w_FPQ34nw4r2ut4RectPCwi, global
 /* 8043130C 003FA8CC  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80431310 003FA8D0  7C 08 02 A6 */	mflr r0
 /* 80431314 003FA8D4  90 01 00 44 */	stw r0, 0x44(r1)
@@ -984,10 +983,10 @@ CalcStringRectImpl__Q34nw4r2ut17TextWriterBase_w_FPQ34nw4r2ut4RectPCwi:
 /* 80431420 003FA9E0  7C 08 03 A6 */	mtlr r0
 /* 80431424 003FA9E4  38 21 00 40 */	addi r1, r1, 0x40
 /* 80431428 003FA9E8  4E 80 00 20 */	blr 
+.endfn CalcStringRectImpl__Q34nw4r2ut17TextWriterBase_w_FPQ34nw4r2ut4RectPCwi
 
 #PrintImpl__Q34nw4r2ut17TextWriterBase<w>FPCwib
-.global PrintImpl__Q34nw4r2ut17TextWriterBase_w_FPCwib
-PrintImpl__Q34nw4r2ut17TextWriterBase_w_FPCwib:
+.fn PrintImpl__Q34nw4r2ut17TextWriterBase_w_FPCwib, global
 /* 8043142C 003FA9EC  94 21 FD 70 */	stwu r1, -0x290(r1)
 /* 80431430 003FA9F0  7C 08 02 A6 */	mflr r0
 /* 80431434 003FA9F4  90 01 02 94 */	stw r0, 0x294(r1)
@@ -1693,10 +1692,10 @@ PrintImpl__Q34nw4r2ut17TextWriterBase_w_FPCwib:
 /* 80431EAC 003FB46C  7C 08 03 A6 */	mtlr r0
 /* 80431EB0 003FB470  38 21 02 90 */	addi r1, r1, 0x290
 /* 80431EB4 003FB474  4E 80 00 20 */	blr 
+.endfn PrintImpl__Q34nw4r2ut17TextWriterBase_w_FPCwib
 
 #AdjustCursor__Q34nw4r2ut17TextWriterBase<w>FPfPfPCwi
-.global AdjustCursor__Q34nw4r2ut17TextWriterBase_w_FPfPfPCwi
-AdjustCursor__Q34nw4r2ut17TextWriterBase_w_FPfPfPCwi:
+.fn AdjustCursor__Q34nw4r2ut17TextWriterBase_w_FPfPfPCwi, global
 /* 80431EB8 003FB478  94 21 FE 50 */	stwu r1, -0x1b0(r1)
 /* 80431EBC 003FB47C  7C 08 02 A6 */	mflr r0
 /* 80431EC0 003FB480  90 01 01 B4 */	stw r0, 0x1b4(r1)
@@ -2170,10 +2169,10 @@ AdjustCursor__Q34nw4r2ut17TextWriterBase_w_FPfPfPCwi:
 /* 804325E8 003FBBA8  7C 08 03 A6 */	mtlr r0
 /* 804325EC 003FBBAC  38 21 01 B0 */	addi r1, r1, 0x1b0
 /* 804325F0 003FBBB0  4E 80 00 20 */	blr
+.endfn AdjustCursor__Q34nw4r2ut17TextWriterBase_w_FPfPfPCwi
 
 
-.global sinit_804325F4
-sinit_804325F4:
+.fn sinit_804325F4, global
 /* 804325F4 003FBBB4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804325F8 003FBBB8  7C 08 02 A6 */	mflr r0
 /* 804325FC 003FBBBC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2209,6 +2208,7 @@ sinit_804325F4:
 /* 8043266C 003FBC2C  7C 08 03 A6 */	mtlr r0
 /* 80432670 003FBC30  38 21 00 10 */	addi r1, r1, 0x10
 /* 80432674 003FBC34  4E 80 00 20 */	blr 
+.endfn sinit_804325F4
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 

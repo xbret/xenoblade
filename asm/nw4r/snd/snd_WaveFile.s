@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __ct__Q44nw4r3snd6detail17WaveArchiveReaderFPCv
-__ct__Q44nw4r3snd6detail17WaveArchiveReaderFPCv:
+.fn __ct__Q44nw4r3snd6detail17WaveArchiveReaderFPCv, global
 /* 8042984C 003F2E0C  80 A4 00 00 */	lwz r5, 0(r4)
 /* 80429850 003F2E10  38 C0 00 00 */	li r6, 0
 /* 80429854 003F2E14  90 C3 00 00 */	stw r6, 0(r3)
@@ -36,9 +35,9 @@ __ct__Q44nw4r3snd6detail17WaveArchiveReaderFPCv:
 /* 804298B4 003F2E74  90 A3 00 04 */	stw r5, 4(r3)
 /* 804298B8 003F2E78  90 03 00 00 */	stw r0, 0(r3)
 /* 804298BC 003F2E7C  4E 80 00 20 */	blr 
+.endfn __ct__Q44nw4r3snd6detail17WaveArchiveReaderFPCv
 
-.global GetWaveFile__Q44nw4r3snd6detail17WaveArchiveReaderCFi
-GetWaveFile__Q44nw4r3snd6detail17WaveArchiveReaderCFi:
+.fn GetWaveFile__Q44nw4r3snd6detail17WaveArchiveReaderCFi, global
 /* 804298C0 003F2E80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804298C4 003F2E84  7C 08 02 A6 */	mflr r0
 /* 804298C8 003F2E88  80 C3 00 00 */	lwz r6, 0(r3)
@@ -78,9 +77,9 @@ GetWaveFile__Q44nw4r3snd6detail17WaveArchiveReaderCFi:
 /* 8042993C 003F2EFC  7C 08 03 A6 */	mtlr r0
 /* 80429940 003F2F00  38 21 00 10 */	addi r1, r1, 0x10
 /* 80429944 003F2F04  4E 80 00 20 */	blr 
+.endfn GetWaveFile__Q44nw4r3snd6detail17WaveArchiveReaderCFi
 
-.global __ct__Q44nw4r3snd6detail14WaveFileReaderFPCQ54nw4r3snd6detail8WaveFile10FileHeader
-__ct__Q44nw4r3snd6detail14WaveFileReaderFPCQ54nw4r3snd6detail8WaveFile10FileHeader:
+.fn __ct__Q44nw4r3snd6detail14WaveFileReaderFPCQ54nw4r3snd6detail8WaveFile10FileHeader, global
 /* 80429948 003F2F08  38 00 00 00 */	li r0, 0
 /* 8042994C 003F2F0C  90 03 00 00 */	stw r0, 0(r3)
 /* 80429950 003F2F10  80 04 00 10 */	lwz r0, 0x10(r4)
@@ -89,14 +88,14 @@ __ct__Q44nw4r3snd6detail14WaveFileReaderFPCQ54nw4r3snd6detail8WaveFile10FileHead
 /* 8042995C 003F2F1C  38 04 00 08 */	addi r0, r4, 8
 /* 80429960 003F2F20  90 03 00 00 */	stw r0, 0(r3)
 /* 80429964 003F2F24  4E 80 00 20 */	blr 
+.endfn __ct__Q44nw4r3snd6detail14WaveFileReaderFPCQ54nw4r3snd6detail8WaveFile10FileHeader
 
-.global __ct__Q44nw4r3snd6detail14WaveFileReaderFPCQ54nw4r3snd6detail8WaveFile8WaveInfo
-__ct__Q44nw4r3snd6detail14WaveFileReaderFPCQ54nw4r3snd6detail8WaveFile8WaveInfo:
+.fn __ct__Q44nw4r3snd6detail14WaveFileReaderFPCQ54nw4r3snd6detail8WaveFile8WaveInfo, global
 /* 80429968 003F2F28  90 83 00 00 */	stw r4, 0(r3)
 /* 8042996C 003F2F2C  4E 80 00 20 */	blr 
+.endfn __ct__Q44nw4r3snd6detail14WaveFileReaderFPCQ54nw4r3snd6detail8WaveFile8WaveInfo
 
-.global ReadWaveInfo__Q44nw4r3snd6detail14WaveFileReaderCFPQ44nw4r3snd6detail8WaveInfoPCv
-ReadWaveInfo__Q44nw4r3snd6detail14WaveFileReaderCFPQ44nw4r3snd6detail8WaveInfoPCv:
+.fn ReadWaveInfo__Q44nw4r3snd6detail14WaveFileReaderCFPQ44nw4r3snd6detail8WaveInfoPCv, global
 /* 80429970 003F2F30  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80429974 003F2F34  7C 08 02 A6 */	mflr r0
 /* 80429978 003F2F38  90 01 00 24 */	stw r0, 0x24(r1)
@@ -234,6 +233,7 @@ ReadWaveInfo__Q44nw4r3snd6detail14WaveFileReaderCFPQ44nw4r3snd6detail8WaveInfoPC
 /* 80429B64 003F3124  7C 08 03 A6 */	mtlr r0
 /* 80429B68 003F3128  38 21 00 20 */	addi r1, r1, 0x20
 /* 80429B6C 003F312C  4E 80 00 20 */	blr 
+.endfn ReadWaveInfo__Q44nw4r3snd6detail14WaveFileReaderCFPQ44nw4r3snd6detail8WaveInfoPCv
 
 .global GetWaveDataAddress__Q44nw4r3snd6detail14WaveFileReaderCFPCQ54nw4r3snd6detail8WaveFile15WaveChannelInfoPCv
 GetWaveDataAddress__Q44nw4r3snd6detail14WaveFileReaderCFPCQ54nw4r3snd6detail8WaveFile15WaveChannelInfoPCv:

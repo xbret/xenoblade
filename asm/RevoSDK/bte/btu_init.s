@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global btu_init_core
-btu_init_core:
+.fn btu_init_core, global
 /* 802EFBAC 002B916C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802EFBB0 002B9170  7C 08 02 A6 */	mflr r0
 /* 802EFBB4 002B9174  90 01 00 14 */	stw r0, 0x14(r1)
@@ -15,6 +14,7 @@ btu_init_core:
 /* 802EFBCC 002B918C  7C 08 03 A6 */	mtlr r0
 /* 802EFBD0 002B9190  38 21 00 10 */	addi r1, r1, 0x10
 /* 802EFBD4 002B9194  4E 80 00 20 */	blr 
+.endfn btu_init_core
 
 .global BTE_Init
 BTE_Init:

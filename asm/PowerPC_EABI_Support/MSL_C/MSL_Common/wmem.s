@@ -2,10 +2,10 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global wmemcpy
-wmemcpy:
+.fn wmemcpy, global
 /* 802C4CDC 0028E29C  54 A5 08 3C */	slwi r5, r5, 1
 /* 802C4CE0 0028E2A0  4B D3 F3 20 */	b memcpy
+.endfn wmemcpy
 
 .global wmemchr
 wmemchr:

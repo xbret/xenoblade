@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900s
 
-.global wcslen
-wcslen:
+.fn wcslen, global
 /* 802C6FBC 0029057C  38 83 FF FE */	addi r4, r3, -2
 /* 802C6FC0 00290580  38 60 FF FF */	li r3, -1
 .L_802C6FC4:
@@ -12,9 +11,9 @@ wcslen:
 /* 802C6FCC 0029058C  2C 00 00 00 */	cmpwi r0, 0
 /* 802C6FD0 00290590  40 82 FF F4 */	bne .L_802C6FC4
 /* 802C6FD4 00290594  4E 80 00 20 */	blr 
+.endfn wcslen
 
-.global wcscpy
-wcscpy:
+.fn wcscpy, global
 /* 802C6FD8 00290598  38 84 FF FE */	addi r4, r4, -2
 /* 802C6FDC 0029059C  38 A3 FF FE */	addi r5, r3, -2
 .L_802C6FE0:
@@ -23,9 +22,9 @@ wcscpy:
 /* 802C6FE8 002905A8  2C 00 00 00 */	cmpwi r0, 0
 /* 802C6FEC 002905AC  40 82 FF F4 */	bne .L_802C6FE0
 /* 802C6FF0 002905B0  4E 80 00 20 */	blr 
+.endfn wcscpy
 
-.global wcsncpy
-wcsncpy:
+.fn wcsncpy, global
 /* 802C6FF4 002905B4  38 84 FF FE */	addi r4, r4, -2
 /* 802C6FF8 002905B8  38 C3 FF FE */	addi r6, r3, -2
 /* 802C6FFC 002905BC  38 A5 00 01 */	addi r5, r5, 1
@@ -47,9 +46,9 @@ wcsncpy:
 /* 802C702C 002905EC  34 A5 FF FF */	addic. r5, r5, -1
 /* 802C7030 002905F0  40 82 FF D4 */	bne .L_802C7004
 /* 802C7034 002905F4  4E 80 00 20 */	blr 
+.endfn wcsncpy
 
-.global wcscmp
-wcscmp:
+.fn wcscmp, global
 /* 802C7038 002905F8  38 A3 FF FE */	addi r5, r3, -2
 /* 802C703C 002905FC  38 84 FF FE */	addi r4, r4, -2
 /* 802C7040 00290600  48 00 00 14 */	b .L_802C7054
@@ -65,6 +64,7 @@ wcscmp:
 /* 802C7060 00290620  41 82 FF E4 */	beq .L_802C7044
 /* 802C7064 00290624  7C 60 18 50 */	subf r3, r0, r3
 /* 802C7068 00290628  4E 80 00 20 */	blr 
+.endfn wcscmp
 
 .global wcschr
 wcschr:

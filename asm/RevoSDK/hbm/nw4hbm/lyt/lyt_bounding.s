@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global __ct__Q36nw4hbm3lyt8BoundingFPCQ46nw4hbm3lyt3res8BoundingRCQ36nw4hbm3lyt11ResBlockSet
-__ct__Q36nw4hbm3lyt8BoundingFPCQ46nw4hbm3lyt3res8BoundingRCQ36nw4hbm3lyt11ResBlockSet:
+.fn __ct__Q36nw4hbm3lyt8BoundingFPCQ46nw4hbm3lyt3res8BoundingRCQ36nw4hbm3lyt11ResBlockSet, global
 /* 8032C410 002F59D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8032C414 002F59D4  7C 08 02 A6 */	mflr r0
 /* 8032C418 002F59D8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -20,10 +19,10 @@ __ct__Q36nw4hbm3lyt8BoundingFPCQ46nw4hbm3lyt3res8BoundingRCQ36nw4hbm3lyt11ResBlo
 /* 8032C440 002F5A00  7C 08 03 A6 */	mtlr r0
 /* 8032C444 002F5A04  38 21 00 10 */	addi r1, r1, 0x10
 /* 8032C448 002F5A08  4E 80 00 20 */	blr 
+.endfn __ct__Q36nw4hbm3lyt8BoundingFPCQ46nw4hbm3lyt3res8BoundingRCQ36nw4hbm3lyt11ResBlockSet
 
 .balign 16, 0
-.global __dt__Q36nw4hbm3lyt8BoundingFv
-__dt__Q36nw4hbm3lyt8BoundingFv:
+.fn __dt__Q36nw4hbm3lyt8BoundingFv, global
 /* 8032C450 002F5A10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8032C454 002F5A14  7C 08 02 A6 */	mflr r0
 /* 8032C458 002F5A18  2C 03 00 00 */	cmpwi r3, 0
@@ -47,10 +46,10 @@ __dt__Q36nw4hbm3lyt8BoundingFv:
 /* 8032C49C 002F5A5C  7C 08 03 A6 */	mtlr r0
 /* 8032C4A0 002F5A60  38 21 00 10 */	addi r1, r1, 0x10
 /* 8032C4A4 002F5A64  4E 80 00 20 */	blr 
+.endfn __dt__Q36nw4hbm3lyt8BoundingFv
 
 .balign 16, 0
-.global DrawSelf__Q36nw4hbm3lyt8BoundingFRCQ36nw4hbm3lyt8DrawInfo
-DrawSelf__Q36nw4hbm3lyt8BoundingFRCQ36nw4hbm3lyt8DrawInfo:
+.fn DrawSelf__Q36nw4hbm3lyt8BoundingFRCQ36nw4hbm3lyt8DrawInfo, global
 /* 8032C4B0 002F5A70  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8032C4B4 002F5A74  7C 08 02 A6 */	mflr r0
 /* 8032C4B8 002F5A78  90 01 00 24 */	stw r0, 0x24(r1)
@@ -80,10 +79,10 @@ DrawSelf__Q36nw4hbm3lyt8BoundingFRCQ36nw4hbm3lyt8DrawInfo:
 /* 8032C514 002F5AD4  7C 08 03 A6 */	mtlr r0
 /* 8032C518 002F5AD8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8032C51C 002F5ADC  4E 80 00 20 */	blr
+.endfn DrawSelf__Q36nw4hbm3lyt8BoundingFRCQ36nw4hbm3lyt8DrawInfo
 
 .balign 16, 0
-.global __dt__Q36nw4hbm2ut5ColorFv
-__dt__Q36nw4hbm2ut5ColorFv:
+.fn __dt__Q36nw4hbm2ut5ColorFv, global
 /* 8032C520 002F5AE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8032C524 002F5AE4  7C 08 02 A6 */	mflr r0
 /* 8032C528 002F5AE8  2C 03 00 00 */	cmpwi r3, 0
@@ -101,23 +100,24 @@ __dt__Q36nw4hbm2ut5ColorFv:
 /* 8032C554 002F5B14  7C 08 03 A6 */	mtlr r0
 /* 8032C558 002F5B18  38 21 00 10 */	addi r1, r1, 0x10
 /* 8032C55C 002F5B1C  4E 80 00 20 */	blr 
+.endfn __dt__Q36nw4hbm2ut5ColorFv
 
 .balign 16, 0
-.global GetRuntimeTypeInfo__Q36nw4hbm3lyt8BoundingCFv
-GetRuntimeTypeInfo__Q36nw4hbm3lyt8BoundingCFv:
+.fn GetRuntimeTypeInfo__Q36nw4hbm3lyt8BoundingCFv, global
 /* 8032C560 002F5B20  3C 60 80 5D */	lis r3, lbl_805CD788@ha
 /* 8032C564 002F5B24  38 63 D7 88 */	addi r3, r3, lbl_805CD788@l
 /* 8032C568 002F5B28  4E 80 00 20 */	blr 
+.endfn GetRuntimeTypeInfo__Q36nw4hbm3lyt8BoundingCFv
 
 .balign 16, 0
 #__sinit_\lyt_bounding_cpp
-.global __sinit_lyt_bounding_cpp
-__sinit_lyt_bounding_cpp:
+.fn __sinit_lyt_bounding_cpp, global
 /* 8032C570 002F5B30  3C 80 80 5D */	lis r4, lbl_805CD7C0@ha
 /* 8032C574 002F5B34  3C 60 80 5D */	lis r3, lbl_805CD788@ha
 /* 8032C578 002F5B38  38 84 D7 C0 */	addi r4, r4, lbl_805CD7C0@l
 /* 8032C57C 002F5B3C  90 83 D7 88 */	stw r4, lbl_805CD788@l(r3)
 /* 8032C580 002F5B40  4E 80 00 20 */	blr 
+.endfn __sinit_lyt_bounding_cpp
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 

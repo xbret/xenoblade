@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global ahxsbf_mult_flt_ex
-ahxsbf_mult_flt_ex:
+.fn ahxsbf_mult_flt_ex, global
 /* 8038A9B0 00353F70  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 8038A9B4 00353F74  DB E1 00 80 */	stfd f31, 0x80(r1)
 /* 8038A9B8 00353F78  F3 E1 00 88 */	psq_st f31, 136(r1), 0, qr0
@@ -324,6 +323,7 @@ ahxsbf_mult_flt_ex:
 /* 8038AE9C 0035445C  CB 01 00 10 */	lfd f24, 0x10(r1)
 /* 8038AEA0 00354460  38 21 00 90 */	addi r1, r1, 0x90
 /* 8038AEA4 00354464  4E 80 00 20 */	blr 
+.endfn ahxsbf_mult_flt_ex
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global WPADiClearMemBlock
-WPADiClearMemBlock:
+.fn WPADiClearMemBlock, global
 /* 80375A90 0033F050  3C 80 80 5E */	lis r4, __rvl_p_wpadcb@ha
 /* 80375A94 0033F054  54 63 10 3A */	slwi r3, r3, 2
 /* 80375A98 0033F058  38 84 DA D0 */	addi r4, r4, __rvl_p_wpadcb@l
@@ -16,6 +15,7 @@ WPADiClearMemBlock:
 /* 80375AB0 0033F070  90 03 09 A4 */	stw r0, 0x9a4(r3)
 /* 80375AB4 0033F074  90 03 09 A8 */	stw r0, 0x9a8(r3)
 /* 80375AB8 0033F078  4E 80 00 20 */	blr 
+.endfn WPADiClearMemBlock
 
 .balign 16, 0
 #name might be wrong

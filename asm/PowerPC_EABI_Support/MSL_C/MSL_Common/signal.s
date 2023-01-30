@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global raise
-raise:
+.fn raise, global
 /* 802C2610 0028BBD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802C2614 0028BBD4  7C 08 02 A6 */	mflr r0
 /* 802C2618 0028BBD8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -52,6 +51,7 @@ raise:
 /* 802C26AC 0028BC6C  7C 08 03 A6 */	mtlr r0
 /* 802C26B0 0028BC70  38 21 00 10 */	addi r1, r1, 0x10
 /* 802C26B4 0028BC74  4E 80 00 20 */	blr 
+.endfn raise
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 .global lbl_8057B348

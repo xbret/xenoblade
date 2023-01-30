@@ -2,13 +2,12 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global MWSTM_SetTrSct
-MWSTM_SetTrSct:
+.fn MWSTM_SetTrSct, global
 /* 8039DDD0 00367390  38 60 00 00 */	li r3, 0
 /* 8039DDD4 00367394  4E 80 00 20 */	blr 
+.endfn MWSTM_SetTrSct
 
-.global MWSTM_IsFsStatErr
-MWSTM_IsFsStatErr:
+.fn MWSTM_IsFsStatErr, global
 /* 8039DDD8 00367398  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039DDDC 0036739C  7C 08 02 A6 */	mflr r0
 /* 8039DDE0 003673A0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -20,29 +19,29 @@ MWSTM_IsFsStatErr:
 /* 8039DDF8 003673B8  7C 08 03 A6 */	mtlr r0
 /* 8039DDFC 003673BC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039DE00 003673C0  4E 80 00 20 */	blr 
+.endfn MWSTM_IsFsStatErr
 
-.global MWSTM_SetFlowLimit
-MWSTM_SetFlowLimit:
+.fn MWSTM_SetFlowLimit, global
 /* 8039DE04 003673C4  2C 03 00 00 */	cmpwi r3, 0
 /* 8039DE08 003673C8  4D 82 00 20 */	beqlr 
 /* 8039DE0C 003673CC  4B FE 43 4C */	b ADXSTM_SetBufSize
 /* 8039DE10 003673D0  4E 80 00 20 */	blr 
+.endfn MWSTM_SetFlowLimit
 
-.global MWSTM_GetReadFlg
-MWSTM_GetReadFlg:
+.fn MWSTM_GetReadFlg, global
 /* 8039DE14 003673D4  4B FE 45 6C */	b ADXSTM_IsOpenedFile
+.endfn MWSTM_GetReadFlg
 
-.global MWSTM_Create
-MWSTM_Create:
+.fn MWSTM_Create, global
 /* 8039DE18 003673D8  38 80 00 00 */	li r4, 0
 /* 8039DE1C 003673DC  4B FE 31 DC */	b ADXSTM_Create
+.endfn MWSTM_Create
 
-.global func_8039DE20
-func_8039DE20:
+.fn func_8039DE20, global
 /* 8039DE20 003673E0  4B FE 33 20 */	b ADXSTM_Destroy
+.endfn func_8039DE20
 
-.global MWSTM_SetFileRange
-MWSTM_SetFileRange:
+.fn MWSTM_SetFileRange, global
 /* 8039DE24 003673E4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039DE28 003673E8  7C 08 02 A6 */	mflr r0
 /* 8039DE2C 003673EC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -70,13 +69,13 @@ MWSTM_SetFileRange:
 /* 8039DE84 00367444  7C 08 03 A6 */	mtlr r0
 /* 8039DE88 00367448  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039DE8C 0036744C  4E 80 00 20 */	blr 
+.endfn MWSTM_SetFileRange
 
-.global MWSTM_ReqStart
-MWSTM_ReqStart:
+.fn MWSTM_ReqStart, global
 /* 8039DE90 00367450  4B FE 37 20 */	b ADXSTM_Start
+.endfn MWSTM_ReqStart
 
-.global func_8039DE94
-func_8039DE94:
+.fn func_8039DE94, global
 /* 8039DE94 00367454  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039DE98 00367458  7C 08 02 A6 */	mflr r0
 /* 8039DE9C 0036745C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -90,16 +89,17 @@ func_8039DE94:
 /* 8039DEBC 0036747C  7C 08 03 A6 */	mtlr r0
 /* 8039DEC0 00367480  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039DEC4 00367484  4E 80 00 20 */	blr 
+.endfn func_8039DE94
 
-.global MWSTM_GetStat
-MWSTM_GetStat:
+.fn MWSTM_GetStat, global
 /* 8039DEC8 00367488  4B FE 36 08 */	b ADXSTM_GetStat
+.endfn MWSTM_GetStat
 
-.global func_8039DECC
-func_8039DECC:
+.fn func_8039DECC, global
 /* 8039DECC 0036748C  4E 80 00 20 */	blr 
+.endfn func_8039DECC
 
-.global func_8039DED0
-func_8039DED0:
+.fn func_8039DED0, global
 /* 8039DED0 00367490  4E 80 00 20 */	blr 
+.endfn func_8039DED0
 

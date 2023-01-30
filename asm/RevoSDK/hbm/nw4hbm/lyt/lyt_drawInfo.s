@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global __ct__Q36nw4hbm3lyt8DrawInfoFv
-__ct__Q36nw4hbm3lyt8DrawInfoFv:
+.fn __ct__Q36nw4hbm3lyt8DrawInfoFv, global
 /* 8032D420 002F69E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8032D424 002F69E4  7C 08 02 A6 */	mflr r0
 /* 8032D428 002F69E8  3C A0 80 52 */	lis r5, lbl_80518A58@ha
@@ -36,10 +35,10 @@ __ct__Q36nw4hbm3lyt8DrawInfoFv:
 /* 8032D490 002F6A50  7C 08 03 A6 */	mtlr r0
 /* 8032D494 002F6A54  38 21 00 10 */	addi r1, r1, 0x10
 /* 8032D498 002F6A58  4E 80 00 20 */	blr 
+.endfn __ct__Q36nw4hbm3lyt8DrawInfoFv
 
 .balign 16, 0
-.global __dt__Q36nw4hbm3lyt8DrawInfoFv
-__dt__Q36nw4hbm3lyt8DrawInfoFv:
+.fn __dt__Q36nw4hbm3lyt8DrawInfoFv, global
 /* 8032D4A0 002F6A60  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8032D4A4 002F6A64  7C 08 02 A6 */	mflr r0
 /* 8032D4A8 002F6A68  2C 03 00 00 */	cmpwi r3, 0
@@ -57,6 +56,7 @@ __dt__Q36nw4hbm3lyt8DrawInfoFv:
 /* 8032D4D4 002F6A94  7C 08 03 A6 */	mtlr r0
 /* 8032D4D8 002F6A98  38 21 00 10 */	addi r1, r1, 0x10
 /* 8032D4DC 002F6A9C  4E 80 00 20 */	blr 
+.endfn __dt__Q36nw4hbm3lyt8DrawInfoFv
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

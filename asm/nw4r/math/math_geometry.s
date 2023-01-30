@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global Set__Q34nw4r4math4AABBFPCQ34nw4r4math4VEC3Ui
-Set__Q34nw4r4math4AABBFPCQ34nw4r4math4VEC3Ui:
+.fn Set__Q34nw4r4math4AABBFPCQ34nw4r4math4VEC3Ui, global
 /* 8040B488 003D4A48  C0 44 00 00 */	lfs f2, 0(r4)
 /* 8040B48C 003D4A4C  38 05 FF FF */	addi r0, r5, -1
 /* 8040B490 003D4A50  C0 24 00 04 */	lfs f1, 4(r4)
@@ -58,9 +57,9 @@ Set__Q34nw4r4math4AABBFPCQ34nw4r4math4VEC3Ui:
 /* 8040B538 003D4AF8  38 C6 00 0C */	addi r6, r6, 0xc
 /* 8040B53C 003D4AFC  42 00 FF 84 */	bdnz .L_8040B4C0
 /* 8040B540 003D4B00  4E 80 00 20 */	blr 
+.endfn Set__Q34nw4r4math4AABBFPCQ34nw4r4math4VEC3Ui
 
-.global Set__Q34nw4r4math4AABBFPCQ34nw4r4math4AABBPCQ34nw4r4math5MTX34
-Set__Q34nw4r4math4AABBFPCQ34nw4r4math4AABBPCQ34nw4r4math5MTX34:
+.fn Set__Q34nw4r4math4AABBFPCQ34nw4r4math4AABBPCQ34nw4r4math5MTX34, global
 /* 8040B544 003D4B04  C0 85 00 00 */	lfs f4, 0(r5)
 /* 8040B548 003D4B08  C0 24 00 00 */	lfs f1, 0(r4)
 /* 8040B54C 003D4B0C  C0 04 00 0C */	lfs f0, 0xc(r4)
@@ -194,9 +193,9 @@ Set__Q34nw4r4math4AABBFPCQ34nw4r4math4AABBPCQ34nw4r4math5MTX34:
 /* 8040B710 003D4CD0  D0 63 00 10 */	stfs f3, 0x10(r3)
 /* 8040B714 003D4CD4  D1 63 00 14 */	stfs f11, 0x14(r3)
 /* 8040B718 003D4CD8  4E 80 00 20 */	blr 
+.endfn Set__Q34nw4r4math4AABBFPCQ34nw4r4math4AABBPCQ34nw4r4math5MTX34
 
-.global Set__Q34nw4r4math7FRUSTUMFffffRCQ34nw4r4math5MTX34
-Set__Q34nw4r4math7FRUSTUMFffffRCQ34nw4r4math5MTX34:
+.fn Set__Q34nw4r4math7FRUSTUMFffffRCQ34nw4r4math5MTX34, global
 /* 8040B71C 003D4CDC  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8040B720 003D4CE0  7C 08 02 A6 */	mflr r0
 /* 8040B724 003D4CE4  90 01 00 44 */	stw r0, 0x44(r1)
@@ -242,9 +241,9 @@ Set__Q34nw4r4math7FRUSTUMFffffRCQ34nw4r4math5MTX34:
 /* 8040B7C4 003D4D84  7C 08 03 A6 */	mtlr r0
 /* 8040B7C8 003D4D88  38 21 00 40 */	addi r1, r1, 0x40
 /* 8040B7CC 003D4D8C  4E 80 00 20 */	blr 
+.endfn Set__Q34nw4r4math7FRUSTUMFffffRCQ34nw4r4math5MTX34
 
-.global Set__Q34nw4r4math7FRUSTUMFffffffRCQ34nw4r4math5MTX34
-Set__Q34nw4r4math7FRUSTUMFffffffRCQ34nw4r4math5MTX34:
+.fn Set__Q34nw4r4math7FRUSTUMFffffffRCQ34nw4r4math5MTX34, global
 /* 8040B7D0 003D4D90  94 21 FD 70 */	stwu r1, -0x290(r1)
 /* 8040B7D4 003D4D94  7C 08 02 A6 */	mflr r0
 /* 8040B7D8 003D4D98  90 01 02 94 */	stw r0, 0x294(r1)
@@ -672,9 +671,9 @@ Set__Q34nw4r4math7FRUSTUMFffffffRCQ34nw4r4math5MTX34:
 /* 8040BE6C 003D542C  7C 08 03 A6 */	mtlr r0
 /* 8040BE70 003D5430  38 21 02 90 */	addi r1, r1, 0x290
 /* 8040BE74 003D5434  4E 80 00 20 */	blr 
+.endfn Set__Q34nw4r4math7FRUSTUMFffffffRCQ34nw4r4math5MTX34
 
-.global DistSqSegment3ToSegment3__Q24nw4r4mathFPCQ34nw4r4math8SEGMENT3PCQ34nw4r4math8SEGMENT3PfPf
-DistSqSegment3ToSegment3__Q24nw4r4mathFPCQ34nw4r4math8SEGMENT3PCQ34nw4r4math8SEGMENT3PfPf:
+.fn DistSqSegment3ToSegment3__Q24nw4r4mathFPCQ34nw4r4math8SEGMENT3PCQ34nw4r4math8SEGMENT3PfPf, global
 /* 8040BE78 003D5438  E0 03 00 0C */	psq_l f0, 12(r3), 0, qr0
 /* 8040BE7C 003D543C  E0 23 00 00 */	psq_l f1, 0(r3), 0, qr0
 /* 8040BE80 003D5440  E0 64 00 0C */	psq_l f3, 12(r4), 0, qr0
@@ -853,9 +852,9 @@ DistSqSegment3ToSegment3__Q24nw4r4mathFPCQ34nw4r4math8SEGMENT3PCQ34nw4r4math8SEG
 /* 8040C0F8 003D56B8  10 21 10 94 */	ps_sum0 f1, f1, f2, f2
 /* 8040C0FC 003D56BC  38 21 00 60 */	addi r1, r1, 0x60
 /* 8040C100 003D56C0  4E 80 00 20 */	blr 
+.endfn DistSqSegment3ToSegment3__Q24nw4r4mathFPCQ34nw4r4math8SEGMENT3PCQ34nw4r4math8SEGMENT3PfPf
 
-.global IntersectionCapsule__Q24nw4r4mathFPCQ34nw4r4math7CAPSULEPCQ34nw4r4math7CAPSULE
-IntersectionCapsule__Q24nw4r4mathFPCQ34nw4r4math7CAPSULEPCQ34nw4r4math7CAPSULE:
+.fn IntersectionCapsule__Q24nw4r4mathFPCQ34nw4r4math7CAPSULEPCQ34nw4r4math7CAPSULE, global
 /* 8040C104 003D56C4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8040C108 003D56C8  7C 08 02 A6 */	mflr r0
 /* 8040C10C 003D56CC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -878,9 +877,9 @@ IntersectionCapsule__Q24nw4r4mathFPCQ34nw4r4math7CAPSULEPCQ34nw4r4math7CAPSULE:
 /* 8040C150 003D5710  7C 08 03 A6 */	mtlr r0
 /* 8040C154 003D5714  38 21 00 20 */	addi r1, r1, 0x20
 /* 8040C158 003D5718  4E 80 00 20 */	blr
+.endfn IntersectionCapsule__Q24nw4r4mathFPCQ34nw4r4math7CAPSULEPCQ34nw4r4math7CAPSULE
 
-.global IntersectSphere__Q34nw4r4math7FRUSTUMCFPCQ34nw4r4math6SPHERE
-IntersectSphere__Q34nw4r4math7FRUSTUMCFPCQ34nw4r4math6SPHERE:
+.fn IntersectSphere__Q34nw4r4math7FRUSTUMCFPCQ34nw4r4math6SPHERE, global
 /* 8040C15C 003D571C  C0 23 00 20 */	lfs f1, 0x20(r3)
 /* 8040C160 003D5720  C0 64 00 00 */	lfs f3, 0(r4)
 /* 8040C164 003D5724  C0 03 00 24 */	lfs f0, 0x24(r3)
@@ -976,9 +975,9 @@ IntersectSphere__Q34nw4r4math7FRUSTUMCFPCQ34nw4r4math6SPHERE:
 .L_8040C2B8:
 /* 8040C2B8 003D5878  38 21 00 20 */	addi r1, r1, 0x20
 /* 8040C2BC 003D587C  4E 80 00 20 */	blr 
+.endfn IntersectSphere__Q34nw4r4math7FRUSTUMCFPCQ34nw4r4math6SPHERE
 
-.global IntersectAABB_Ex__Q34nw4r4math7FRUSTUMCFPCQ34nw4r4math4AABB
-IntersectAABB_Ex__Q34nw4r4math7FRUSTUMCFPCQ34nw4r4math4AABB:
+.fn IntersectAABB_Ex__Q34nw4r4math7FRUSTUMCFPCQ34nw4r4math4AABB, global
 /* 8040C2C0 003D5880  C0 24 00 00 */	lfs f1, 0(r4)
 /* 8040C2C4 003D5884  C0 03 00 84 */	lfs f0, 0x84(r3)
 /* 8040C2C8 003D5888  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1098,6 +1097,7 @@ IntersectAABB_Ex__Q34nw4r4math7FRUSTUMCFPCQ34nw4r4math4AABB:
 .L_8040C45C:
 /* 8040C45C 003D5A1C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8040C460 003D5A20  4E 80 00 20 */	blr
+.endfn IntersectAABB_Ex__Q34nw4r4math7FRUSTUMCFPCQ34nw4r4math4AABB
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 

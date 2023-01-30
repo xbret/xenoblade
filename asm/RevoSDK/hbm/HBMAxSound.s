@@ -4,8 +4,7 @@
 
 .balign 16, 0
 #GetFreePlayer__24@unnamed@HBMAxSound_cpp@Fi
-.global GetFreePlayer__24_unnamed_HBMAxSound_cpp_Fi
-GetFreePlayer__24_unnamed_HBMAxSound_cpp_Fi:
+.fn GetFreePlayer__24_unnamed_HBMAxSound_cpp_Fi, global
 /* 803222B0 002EB870  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803222B4 002EB874  7C 08 02 A6 */	mflr r0
 /* 803222B8 002EB878  2C 03 00 04 */	cmpwi r3, 4
@@ -125,11 +124,11 @@ GetFreePlayer__24_unnamed_HBMAxSound_cpp_Fi:
 /* 8032243C 002EB9FC  7C 08 03 A6 */	mtlr r0
 /* 80322440 002EBA00  38 21 00 10 */	addi r1, r1, 0x10
 /* 80322444 002EBA04  4E 80 00 20 */	blr 
+.endfn GetFreePlayer__24_unnamed_HBMAxSound_cpp_Fi
 
 .balign 16, 0
 #AudioFrameCallback__24@unnamed@HBMAxSound_cpp@Fv@l
-.global AudioFrameCallback__24_unnamed_HBMAxSound_cpp_Fv
-AudioFrameCallback__24_unnamed_HBMAxSound_cpp_Fv:
+.fn AudioFrameCallback__24_unnamed_HBMAxSound_cpp_Fv, global
 /* 80322450 002EBA10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80322454 002EBA14  7C 08 02 A6 */	mflr r0
 /* 80322458 002EBA18  90 01 00 14 */	stw r0, 0x14(r1)
@@ -156,11 +155,11 @@ AudioFrameCallback__24_unnamed_HBMAxSound_cpp_Fv:
 /* 803224A8 002EBA68  7C 08 03 A6 */	mtlr r0
 /* 803224AC 002EBA6C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803224B0 002EBA70  4E 80 00 20 */	blr
+.endfn AudioFrameCallback__24_unnamed_HBMAxSound_cpp_Fv
 
 .balign 16, 0
 #AudioSoundThreadProc__24@unnamed@HBMAxSound_cpp@FPv
-.global AudioSoundThreadProc__24_unnamed_HBMAxSound_cpp_FPv
-AudioSoundThreadProc__24_unnamed_HBMAxSound_cpp_FPv:
+.fn AudioSoundThreadProc__24_unnamed_HBMAxSound_cpp_FPv, global
 /* 803224C0 002EBA80  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803224C4 002EBA84  7C 08 02 A6 */	mflr r0
 /* 803224C8 002EBA88  90 01 00 34 */	stw r0, 0x34(r1)
@@ -327,10 +326,10 @@ AudioSoundThreadProc__24_unnamed_HBMAxSound_cpp_FPv:
 /* 803226F4 002EBCB4  7C 08 03 A6 */	mtlr r0
 /* 803226F8 002EBCB8  38 21 00 30 */	addi r1, r1, 0x30
 /* 803226FC 002EBCBC  4E 80 00 20 */	blr 
+.endfn AudioSoundThreadProc__24_unnamed_HBMAxSound_cpp_FPv
 
 .balign 16, 0
-.global PlaySeq__10homebuttonFi
-PlaySeq__10homebuttonFi:
+.fn PlaySeq__10homebuttonFi, global
 /* 80322700 002EBCC0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80322704 002EBCC4  7C 08 02 A6 */	mflr r0
 /* 80322708 002EBCC8  3C 80 80 5D */	lis r4, lbl_805CD750@ha
@@ -417,10 +416,10 @@ PlaySeq__10homebuttonFi:
 /* 80322830 002EBDF0  7C 08 03 A6 */	mtlr r0
 /* 80322834 002EBDF4  38 21 00 30 */	addi r1, r1, 0x30
 /* 80322838 002EBDF8  4E 80 00 20 */	blr 
+.endfn PlaySeq__10homebuttonFi
 
 .balign 16, 0
-.global InitAxSound__10homebuttonFPCvPvUl
-InitAxSound__10homebuttonFPCvPvUl:
+.fn InitAxSound__10homebuttonFPCvPvUl, global
 /* 80322840 002EBE00  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80322844 002EBE04  7C 08 02 A6 */	mflr r0
 /* 80322848 002EBE08  3C C0 00 02 */	lis r6, 0x00018700@ha
@@ -548,10 +547,10 @@ InitAxSound__10homebuttonFPCvPvUl:
 /* 80322A28 002EBFE8  7C 08 03 A6 */	mtlr r0
 /* 80322A2C 002EBFEC  38 21 00 30 */	addi r1, r1, 0x30
 /* 80322A30 002EBFF0  4E 80 00 20 */	blr 
+.endfn InitAxSound__10homebuttonFPCvPvUl
 
 .balign 16, 0
-.global ShutdownAxSound__10homebuttonFv
-ShutdownAxSound__10homebuttonFv:
+.fn ShutdownAxSound__10homebuttonFv, global
 /* 80322A40 002EC000  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80322A44 002EC004  7C 08 02 A6 */	mflr r0
 /* 80322A48 002EC008  90 01 00 14 */	stw r0, 0x14(r1)
@@ -587,15 +586,15 @@ ShutdownAxSound__10homebuttonFv:
 /* 80322ABC 002EC07C  7C 08 03 A6 */	mtlr r0
 /* 80322AC0 002EC080  38 21 00 10 */	addi r1, r1, 0x10
 /* 80322AC4 002EC084  4E 80 00 20 */	blr 
+.endfn ShutdownAxSound__10homebuttonFv
 
 .balign 16, 0
-.global AxSoundMain__10homebuttonFv
-AxSoundMain__10homebuttonFv:
+.fn AxSoundMain__10homebuttonFv, global
 /* 80322AD0 002EC090  4E 80 00 20 */	blr 
+.endfn AxSoundMain__10homebuttonFv
 
 .balign 16, 0
-.global StopAllSeq__10homebuttonFv
-StopAllSeq__10homebuttonFv:
+.fn StopAllSeq__10homebuttonFv, global
 /* 80322AE0 002EC0A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80322AE4 002EC0A4  7C 08 02 A6 */	mflr r0
 /* 80322AE8 002EC0A8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -728,10 +727,10 @@ StopAllSeq__10homebuttonFv:
 /* 80322C98 002EC258  7C 08 03 A6 */	mtlr r0
 /* 80322C9C 002EC25C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80322CA0 002EC260  4E 80 00 20 */	blr 
+.endfn StopAllSeq__10homebuttonFv
 
 .balign 16, 0
-.global SetVolumeAllSeq__10homebuttonFf
-SetVolumeAllSeq__10homebuttonFf:
+.fn SetVolumeAllSeq__10homebuttonFf, global
 /* 80322CB0 002EC270  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80322CB4 002EC274  7C 08 02 A6 */	mflr r0
 /* 80322CB8 002EC278  3C 60 80 5D */	lis r3, lbl_805CD750@ha
@@ -813,11 +812,12 @@ SetVolumeAllSeq__10homebuttonFf:
 /* 80322DC4 002EC384  7C 08 03 A6 */	mtlr r0
 /* 80322DC8 002EC388  38 21 00 20 */	addi r1, r1, 0x20
 /* 80322DCC 002EC38C  4E 80 00 20 */	blr 
+.endfn SetVolumeAllSeq__10homebuttonFf
 
 .balign 16, 0
-.global SetSoundMode__10homebuttonFUl
-SetSoundMode__10homebuttonFUl:
+.fn SetSoundMode__10homebuttonFUl, global
 /* 80322DD0 002EC390  48 01 C5 30 */	b HBMMIXSetSoundMode
+.endfn SetSoundMode__10homebuttonFUl
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global SDP_InitDiscoveryDb
-SDP_InitDiscoveryDb:
+.fn SDP_InitDiscoveryDb, global
 /* 80302EBC 002CC47C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80302EC0 002CC480  7C 08 02 A6 */	mflr r0
 /* 80302EC4 002CC484  90 01 00 24 */	stw r0, 0x24(r1)
@@ -238,9 +237,9 @@ SDP_InitDiscoveryDb:
 /* 80303228 002CC7E8  7C 08 03 A6 */	mtlr r0
 /* 8030322C 002CC7EC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80303230 002CC7F0  4E 80 00 20 */	blr 
+.endfn SDP_InitDiscoveryDb
 
-.global SDP_ServiceSearchRequest
-SDP_ServiceSearchRequest:
+.fn SDP_ServiceSearchRequest, global
 /* 80303234 002CC7F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80303238 002CC7F8  7C 08 02 A6 */	mflr r0
 /* 8030323C 002CC7FC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -266,9 +265,9 @@ SDP_ServiceSearchRequest:
 /* 80303284 002CC844  7C 08 03 A6 */	mtlr r0
 /* 80303288 002CC848  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030328C 002CC84C  4E 80 00 20 */	blr 
+.endfn SDP_ServiceSearchRequest
 
-.global SDP_ServiceSearchAttributeRequest
-SDP_ServiceSearchAttributeRequest:
+.fn SDP_ServiceSearchAttributeRequest, global
 /* 80303290 002CC850  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80303294 002CC854  7C 08 02 A6 */	mflr r0
 /* 80303298 002CC858  90 01 00 14 */	stw r0, 0x14(r1)
@@ -296,9 +295,9 @@ SDP_ServiceSearchAttributeRequest:
 /* 803032E8 002CC8A8  7C 08 03 A6 */	mtlr r0
 /* 803032EC 002CC8AC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803032F0 002CC8B0  4E 80 00 20 */	blr 
+.endfn SDP_ServiceSearchAttributeRequest
 
-.global SDP_FindAttributeInRec
-SDP_FindAttributeInRec:
+.fn SDP_FindAttributeInRec, global
 /* 803032F4 002CC8B4  80 63 00 00 */	lwz r3, 0(r3)
 /* 803032F8 002CC8B8  48 00 00 14 */	b .L_8030330C
 .L_803032FC:
@@ -311,9 +310,9 @@ SDP_FindAttributeInRec:
 /* 80303310 002CC8D0  40 82 FF EC */	bne .L_803032FC
 /* 80303314 002CC8D4  38 60 00 00 */	li r3, 0
 /* 80303318 002CC8D8  4E 80 00 20 */	blr 
+.endfn SDP_FindAttributeInRec
 
-.global SDP_FindServiceInDb
-SDP_FindServiceInDb:
+.fn SDP_FindServiceInDb, global
 /* 8030331C 002CC8DC  2C 05 00 00 */	cmpwi r5, 0
 /* 80303320 002CC8E0  40 82 00 0C */	bne .L_8030332C
 /* 80303324 002CC8E4  80 63 00 08 */	lwz r3, 8(r3)
@@ -376,9 +375,9 @@ SDP_FindServiceInDb:
 /* 803033DC 002CC99C  40 82 FF 58 */	bne .L_80303334
 /* 803033E0 002CC9A0  38 60 00 00 */	li r3, 0
 /* 803033E4 002CC9A4  4E 80 00 20 */	blr 
+.endfn SDP_FindServiceInDb
 
-.global SDP_FindServiceUUIDInDb
-SDP_FindServiceUUIDInDb:
+.fn SDP_FindServiceUUIDInDb, global
 /* 803033E8 002CC9A8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803033EC 002CC9AC  7C 08 02 A6 */	mflr r0
 /* 803033F0 002CC9B0  2C 05 00 00 */	cmpwi r5, 0
@@ -457,9 +456,9 @@ SDP_FindServiceUUIDInDb:
 /* 803034E4 002CCAA4  7C 08 03 A6 */	mtlr r0
 /* 803034E8 002CCAA8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803034EC 002CCAAC  4E 80 00 20 */	blr 
+.endfn SDP_FindServiceUUIDInDb
 
-.global SDP_SetLocalDiRecord
-SDP_SetLocalDiRecord:
+.fn SDP_SetLocalDiRecord, global
 /* 803034F0 002CCAB0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803034F4 002CCAB4  7C 08 02 A6 */	mflr r0
 /* 803034F8 002CCAB8  2C 03 00 00 */	cmpwi r3, 0
@@ -695,9 +694,9 @@ SDP_SetLocalDiRecord:
 /* 80303844 002CCE04  7C 08 03 A6 */	mtlr r0
 /* 80303848 002CCE08  38 21 00 20 */	addi r1, r1, 0x20
 /* 8030384C 002CCE0C  4E 80 00 20 */	blr 
+.endfn SDP_SetLocalDiRecord
 
-.global SDP_GetLocalDiRecord
-SDP_GetLocalDiRecord:
+.fn SDP_GetLocalDiRecord, global
 /* 80303850 002CCE10  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80303854 002CCE14  7C 08 02 A6 */	mflr r0
 /* 80303858 002CCE18  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1024,9 +1023,9 @@ SDP_GetLocalDiRecord:
 /* 80303CF4 002CD2B4  7C 08 03 A6 */	mtlr r0
 /* 80303CF8 002CD2B8  38 21 00 20 */	addi r1, r1, 0x20
 /* 80303CFC 002CD2BC  4E 80 00 20 */	blr 
+.endfn SDP_GetLocalDiRecord
 
-.global SDP_SetTraceLevel
-SDP_SetTraceLevel:
+.fn SDP_SetTraceLevel, global
 /* 80303D00 002CD2C0  28 03 00 FF */	cmplwi r3, 0xff
 /* 80303D04 002CD2C4  41 82 00 10 */	beq .L_80303D14
 /* 80303D08 002CD2C8  3C 80 80 5C */	lis r4, lbl_805C36C0@ha
@@ -1037,6 +1036,7 @@ SDP_SetTraceLevel:
 /* 80303D18 002CD2D8  38 63 36 C0 */	addi r3, r3, lbl_805C36C0@l
 /* 80303D1C 002CD2DC  88 63 46 30 */	lbz r3, 0x4630(r3)
 /* 80303D20 002CD2E0  4E 80 00 20 */	blr
+.endfn SDP_SetTraceLevel
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

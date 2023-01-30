@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global SCInit
-SCInit:
+.fn SCInit, global
 /* 8035F530 00328AF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035F534 00328AF4  7C 08 02 A6 */	mflr r0
 /* 8035F538 00328AF8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -49,10 +48,10 @@ SCInit:
 /* 8035F5C4 00328B84  7C 08 03 A6 */	mtlr r0
 /* 8035F5C8 00328B88  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035F5CC 00328B8C  4E 80 00 20 */	blr 
+.endfn SCInit
 
 .balign 16, 0
-.global SCCheckStatus
-SCCheckStatus:
+.fn SCCheckStatus, global
 /* 8035F5D0 00328B90  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035F5D4 00328B94  7C 08 02 A6 */	mflr r0
 /* 8035F5D8 00328B98  90 01 00 24 */	stw r0, 0x24(r1)
@@ -130,10 +129,10 @@ SCCheckStatus:
 /* 8035F6E0 00328CA0  7C 08 03 A6 */	mtlr r0
 /* 8035F6E4 00328CA4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035F6E8 00328CA8  4E 80 00 20 */	blr 
+.endfn SCCheckStatus
 
 .balign 16, 0
-.global SCReloadConfFileAsync
-SCReloadConfFileAsync:
+.fn SCReloadConfFileAsync, global
 /* 8035F6F0 00328CB0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035F6F4 00328CB4  7C 08 02 A6 */	mflr r0
 /* 8035F6F8 00328CB8  28 04 40 00 */	cmplwi r4, 0x4000
@@ -205,9 +204,10 @@ SCReloadConfFileAsync:
 /* 8035F7F8 00328DB8  7C 08 03 A6 */	mtlr r0
 /* 8035F7FC 00328DBC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035F800 00328DC0  4E 80 00 20 */	blr
+.endfn SCReloadConfFileAsync
 
 .balign 16, 0
-OpenCallbackFromReload:
+.fn OpenCallbackFromReload, local
 /* 8035F810 00328DD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035F814 00328DD4  7C 08 02 A6 */	mflr r0
 /* 8035F818 00328DD8  2C 03 00 00 */	cmpwi r3, 0
@@ -264,10 +264,10 @@ OpenCallbackFromReload:
 /* 8035F8D4 00328E94  7C 08 03 A6 */	mtlr r0
 /* 8035F8D8 00328E98  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035F8DC 00328E9C  4E 80 00 20 */	blr
+.endfn OpenCallbackFromReload
 
 .balign 16, 0
-.global ReadCallbackFromReload
-ReadCallbackFromReload:
+.fn ReadCallbackFromReload, global
 /* 8035F8E0 00328EA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035F8E4 00328EA4  7C 08 02 A6 */	mflr r0
 /* 8035F8E8 00328EA8  3C A0 80 5D */	lis r5, lbl_805D5540@ha
@@ -331,9 +331,10 @@ ReadCallbackFromReload:
 /* 8035F9BC 00328F7C  7C 08 03 A6 */	mtlr r0
 /* 8035F9C0 00328F80  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035F9C4 00328F84  4E 80 00 20 */	blr
+.endfn ReadCallbackFromReload
 
 .balign 16, 0
-CloseCallbackFromReload:
+.fn CloseCallbackFromReload, local
 /* 8035F9D0 00328F90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035F9D4 00328F94  7C 08 02 A6 */	mflr r0
 /* 8035F9D8 00328F98  2C 03 00 00 */	cmpwi r3, 0
@@ -373,10 +374,10 @@ CloseCallbackFromReload:
 /* 8035FA50 00329010  7C 08 03 A6 */	mtlr r0
 /* 8035FA54 00329014  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035FA58 00329018  4E 80 00 20 */	blr 
+.endfn CloseCallbackFromReload
 
 .balign 16, 0
-.global FinishFromReload
-FinishFromReload:
+.fn FinishFromReload, global
 /* 8035FA60 00329020  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035FA64 00329024  7C 08 02 A6 */	mflr r0
 /* 8035FA68 00329028  90 01 00 24 */	stw r0, 0x24(r1)
@@ -456,14 +457,15 @@ FinishFromReload:
 /* 8035FB78 00329138  7C 08 03 A6 */	mtlr r0
 /* 8035FB7C 0032913C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035FB80 00329140  4E 80 00 20 */	blr
+.endfn FinishFromReload
 
 .balign 16, 0
-CloseCallbackFromReloadError:
+.fn CloseCallbackFromReloadError, local
 /* 8035FB90 00329150  4B FF FE D0 */	b FinishFromReload
+.endfn CloseCallbackFromReloadError
 
 .balign 16, 0
-.global ParseConfBuf
-ParseConfBuf:
+.fn ParseConfBuf, global
 /* 8035FBA0 00329160  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8035FBA4 00329164  7C 08 02 A6 */	mflr r0
 /* 8035FBA8 00329168  90 01 00 64 */	stw r0, 0x64(r1)
@@ -624,10 +626,10 @@ ParseConfBuf:
 /* 8035FDDC 0032939C  7C 08 03 A6 */	mtlr r0
 /* 8035FDE0 003293A0  38 21 00 60 */	addi r1, r1, 0x60
 /* 8035FDE4 003293A4  4E 80 00 20 */	blr 
+.endfn ParseConfBuf
 
 .balign 16, 0
-.global UnpackItem
-UnpackItem:
+.fn UnpackItem, global
 /* 8035FDF0 003293B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035FDF4 003293B4  7C 08 02 A6 */	mflr r0
 /* 8035FDF8 003293B8  38 A0 00 20 */	li r5, 0x20
@@ -735,10 +737,10 @@ UnpackItem:
 /* 8035FF64 00329524  7C 08 03 A6 */	mtlr r0
 /* 8035FF68 00329528  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035FF6C 0032952C  4E 80 00 20 */	blr 
+.endfn UnpackItem
 
 .balign 16, 0
-.global DeleteItemByID
-DeleteItemByID:
+.fn DeleteItemByID, global
 /* 8035FF70 00329530  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8035FF74 00329534  7C 08 02 A6 */	mflr r0
 /* 8035FF78 00329538  90 01 00 34 */	stw r0, 0x34(r1)
@@ -849,10 +851,10 @@ DeleteItemByID:
 /* 803600F8 003296B8  7C 08 03 A6 */	mtlr r0
 /* 803600FC 003296BC  38 21 00 30 */	addi r1, r1, 0x30
 /* 80360100 003296C0  4E 80 00 20 */	blr 
+.endfn DeleteItemByID
 
 .balign 16, 0
-.global CreateItemByID
-CreateItemByID:
+.fn CreateItemByID, global
 /* 80360110 003296D0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80360114 003296D4  7C 08 02 A6 */	mflr r0
 /* 80360118 003296D8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1028,10 +1030,10 @@ CreateItemByID:
 /* 8036037C 0032993C  7C 08 03 A6 */	mtlr r0
 /* 80360380 00329940  38 21 00 30 */	addi r1, r1, 0x30
 /* 80360384 00329944  4E 80 00 20 */	blr 
+.endfn CreateItemByID
 
 .balign 16, 0
-.global SCFindByteArrayItem
-SCFindByteArrayItem:
+.fn SCFindByteArrayItem, global
 /* 80360390 00329950  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80360394 00329954  7C 08 02 A6 */	mflr r0
 /* 80360398 00329958  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1091,10 +1093,10 @@ SCFindByteArrayItem:
 /* 80360464 00329A24  7C 08 03 A6 */	mtlr r0
 /* 80360468 00329A28  38 21 00 40 */	addi r1, r1, 0x40
 /* 8036046C 00329A2C  4E 80 00 20 */	blr
+.endfn SCFindByteArrayItem
 
 .balign 16, 0
-.global SCReplaceByteArrayItem
-SCReplaceByteArrayItem:
+.fn SCReplaceByteArrayItem, global
 /* 80360470 00329A30  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80360474 00329A34  7C 08 02 A6 */	mflr r0
 /* 80360478 00329A38  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1174,10 +1176,10 @@ SCReplaceByteArrayItem:
 /* 80360588 00329B48  7C 08 03 A6 */	mtlr r0
 /* 8036058C 00329B4C  38 21 00 40 */	addi r1, r1, 0x40
 /* 80360590 00329B50  4E 80 00 20 */	blr 
+.endfn SCReplaceByteArrayItem
 
 .balign 16, 0
-.global SCFindU8Item
-SCFindU8Item:
+.fn SCFindU8Item, global
 /* 803605A0 00329B60  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803605A4 00329B64  7C 08 02 A6 */	mflr r0
 /* 803605A8 00329B68  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1234,10 +1236,10 @@ SCFindU8Item:
 /* 80360668 00329C28  7C 08 03 A6 */	mtlr r0
 /* 8036066C 00329C2C  38 21 00 40 */	addi r1, r1, 0x40
 /* 80360670 00329C30  4E 80 00 20 */	blr 
+.endfn SCFindU8Item
 
 .balign 16, 0
-.global SCFindS8Item
-SCFindS8Item:
+.fn SCFindS8Item, global
 /* 80360680 00329C40  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80360684 00329C44  7C 08 02 A6 */	mflr r0
 /* 80360688 00329C48  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1294,10 +1296,10 @@ SCFindS8Item:
 /* 80360748 00329D08  7C 08 03 A6 */	mtlr r0
 /* 8036074C 00329D0C  38 21 00 40 */	addi r1, r1, 0x40
 /* 80360750 00329D10  4E 80 00 20 */	blr 
+.endfn SCFindS8Item
 
 .balign 16, 0
-.global SCFindU32Item
-SCFindU32Item:
+.fn SCFindU32Item, global
 /* 80360760 00329D20  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80360764 00329D24  7C 08 02 A6 */	mflr r0
 /* 80360768 00329D28  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1354,10 +1356,10 @@ SCFindU32Item:
 /* 80360828 00329DE8  7C 08 03 A6 */	mtlr r0
 /* 8036082C 00329DEC  38 21 00 40 */	addi r1, r1, 0x40
 /* 80360830 00329DF0  4E 80 00 20 */	blr 
+.endfn SCFindU32Item
 
 .balign 16, 0
-.global SCReplaceU8Item
-SCReplaceU8Item:
+.fn SCReplaceU8Item, global
 /* 80360840 00329E00  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80360844 00329E04  7C 08 02 A6 */	mflr r0
 /* 80360848 00329E08  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1429,16 +1431,17 @@ SCReplaceU8Item:
 /* 80360938 00329EF8  7C 08 03 A6 */	mtlr r0
 /* 8036093C 00329EFC  38 21 00 40 */	addi r1, r1, 0x40
 /* 80360940 00329F00  4E 80 00 20 */	blr
+.endfn SCReplaceU8Item
 
 .balign 16, 0
-__SCFlushSyncCallback:
+.fn __SCFlushSyncCallback, local
 /* 80360950 00329F10  3C 60 80 5D */	lis r3, lbl_805D5540@ha
 /* 80360954 00329F14  38 63 55 40 */	addi r3, r3, lbl_805D5540@l
 /* 80360958 00329F18  4B FF BE 08 */	b OSWakeupThread
+.endfn __SCFlushSyncCallback
 
 .balign 16, 0
-.global SCFlushAsync
-SCFlushAsync:
+.fn SCFlushAsync, global
 /* 80360960 00329F20  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80360964 00329F24  7C 08 02 A6 */	mflr r0
 /* 80360968 00329F28  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1588,9 +1591,10 @@ SCFlushAsync:
 /* 80360B70 0032A130  7C 08 03 A6 */	mtlr r0
 /* 80360B74 0032A134  38 21 00 20 */	addi r1, r1, 0x20
 /* 80360B78 0032A138  4E 80 00 20 */	blr
+.endfn SCFlushAsync
 
 .balign 16, 0
-MyNandCallback:
+.fn MyNandCallback, local
 /* 80360B80 0032A140  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80360B84 0032A144  7C 08 02 A6 */	mflr r0
 /* 80360B88 0032A148  3C E0 80 5D */	lis r7, lbl_805D5540@ha
@@ -1816,6 +1820,7 @@ switch_80360DAC:
 /* 80360EAC 0032A46C  7C 08 03 A6 */	mtlr r0
 /* 80360EB0 0032A470  38 21 00 10 */	addi r1, r1, 0x10
 /* 80360EB4 0032A474  4E 80 00 20 */	blr 
+.endfn MyNandCallback
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

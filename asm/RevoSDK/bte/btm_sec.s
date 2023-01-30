@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global BTM_SecRegister
-BTM_SecRegister:
+.fn BTM_SecRegister, global
 /* 802EB98C 002B4F4C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802EB990 002B4F50  7C 08 02 A6 */	mflr r0
 /* 802EB994 002B4F54  3C C0 80 5C */	lis r6, lbl_805BF9F8@ha
@@ -35,9 +34,9 @@ BTM_SecRegister:
 /* 802EB9F8 002B4FB8  7C 08 03 A6 */	mtlr r0
 /* 802EB9FC 002B4FBC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802EBA00 002B4FC0  4E 80 00 20 */	blr 
+.endfn BTM_SecRegister
 
-.global BTM_SecAddRmtNameNotifyCallback
-BTM_SecAddRmtNameNotifyCallback:
+.fn BTM_SecAddRmtNameNotifyCallback, global
 /* 802EBA04 002B4FC4  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
 /* 802EBA08 002B4FC8  38 00 00 02 */	li r0, 2
 /* 802EBA0C 002B4FCC  38 84 F9 F8 */	addi r4, r4, lbl_805BF9F8@l
@@ -60,9 +59,9 @@ BTM_SecAddRmtNameNotifyCallback:
 /* 802EBA48 002B5008  42 00 FF D0 */	bdnz .L_802EBA18
 /* 802EBA4C 002B500C  38 60 00 00 */	li r3, 0
 /* 802EBA50 002B5010  4E 80 00 20 */	blr 
+.endfn BTM_SecAddRmtNameNotifyCallback
 
-.global BTM_SecDeleteRmtNameNotifyCallback
-BTM_SecDeleteRmtNameNotifyCallback:
+.fn BTM_SecDeleteRmtNameNotifyCallback, global
 /* 802EBA54 002B5014  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
 /* 802EBA58 002B5018  38 00 00 02 */	li r0, 2
 /* 802EBA5C 002B501C  38 84 F9 F8 */	addi r4, r4, lbl_805BF9F8@l
@@ -86,9 +85,9 @@ BTM_SecDeleteRmtNameNotifyCallback:
 /* 802EBA9C 002B505C  42 00 FF CC */	bdnz .L_802EBA68
 /* 802EBAA0 002B5060  38 60 00 00 */	li r3, 0
 /* 802EBAA4 002B5064  4E 80 00 20 */	blr 
+.endfn BTM_SecDeleteRmtNameNotifyCallback
 
-.global BTM_SetPinType
-BTM_SetPinType:
+.fn BTM_SetPinType, global
 /* 802EBAA8 002B5068  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802EBAAC 002B506C  7C 08 02 A6 */	mflr r0
 /* 802EBAB0 002B5070  3C C0 80 5C */	lis r6, lbl_805BF9F8@ha
@@ -135,9 +134,9 @@ BTM_SetPinType:
 /* 802EBB4C 002B510C  7C 08 03 A6 */	mtlr r0
 /* 802EBB50 002B5110  38 21 00 20 */	addi r1, r1, 0x20
 /* 802EBB54 002B5114  4E 80 00 20 */	blr 
+.endfn BTM_SetPinType
 
-.global BTM_SetSecurityLevel
-BTM_SetSecurityLevel:
+.fn BTM_SetSecurityLevel, global
 /* 802EBB58 002B5118  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802EBB5C 002B511C  7C 08 02 A6 */	mflr r0
 /* 802EBB60 002B5120  90 01 00 44 */	stw r0, 0x44(r1)
@@ -287,9 +286,9 @@ BTM_SetSecurityLevel:
 /* 802EBD74 002B5334  7C 08 03 A6 */	mtlr r0
 /* 802EBD78 002B5338  38 21 00 40 */	addi r1, r1, 0x40
 /* 802EBD7C 002B533C  4E 80 00 20 */	blr 
+.endfn BTM_SetSecurityLevel
 
-.global BTM_PINCodeReply
-BTM_PINCodeReply:
+.fn BTM_PINCodeReply, global
 /* 802EBD80 002B5340  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802EBD84 002B5344  7C 08 02 A6 */	mflr r0
 /* 802EBD88 002B5348  90 01 00 34 */	stw r0, 0x34(r1)
@@ -341,9 +340,9 @@ BTM_PINCodeReply:
 /* 802EBE38 002B53F8  7C 08 03 A6 */	mtlr r0
 /* 802EBE3C 002B53FC  38 21 00 30 */	addi r1, r1, 0x30
 /* 802EBE40 002B5400  4E 80 00 20 */	blr 
+.endfn BTM_PINCodeReply
 
-.global BTM_DeviceAuthorized
-BTM_DeviceAuthorized:
+.fn BTM_DeviceAuthorized, global
 /* 802EBE44 002B5404  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802EBE48 002B5408  7C 08 02 A6 */	mflr r0
 /* 802EBE4C 002B540C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -472,9 +471,9 @@ BTM_DeviceAuthorized:
 /* 802EC014 002B55D4  7C 08 03 A6 */	mtlr r0
 /* 802EC018 002B55D8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802EC01C 002B55DC  4E 80 00 20 */	blr 
+.endfn BTM_DeviceAuthorized
 
-.global BTM_SecBond
-BTM_SecBond:
+.fn BTM_SecBond, global
 /* 802EC020 002B55E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802EC024 002B55E4  7C 08 02 A6 */	mflr r0
 /* 802EC028 002B55E8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -741,9 +740,9 @@ BTM_SecBond:
 /* 802EC3E0 002B59A0  7C 08 03 A6 */	mtlr r0
 /* 802EC3E4 002B59A4  38 21 00 20 */	addi r1, r1, 0x20
 /* 802EC3E8 002B59A8  4E 80 00 20 */	blr 
+.endfn BTM_SecBond
 
-.global btm_sec_l2cap_access_req
-btm_sec_l2cap_access_req:
+.fn btm_sec_l2cap_access_req, global
 /* 802EC3EC 002B59AC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802EC3F0 002B59B0  7C 08 02 A6 */	mflr r0
 /* 802EC3F4 002B59B4  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1054,9 +1053,9 @@ btm_sec_l2cap_access_req:
 /* 802EC844 002B5E04  7C 08 03 A6 */	mtlr r0
 /* 802EC848 002B5E08  38 21 00 30 */	addi r1, r1, 0x30
 /* 802EC84C 002B5E0C  4E 80 00 20 */	blr 
+.endfn btm_sec_l2cap_access_req
 
-.global btm_sec_mx_access_request
-btm_sec_mx_access_request:
+.fn btm_sec_mx_access_request, global
 /* 802EC850 002B5E10  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802EC854 002B5E14  7C 08 02 A6 */	mflr r0
 /* 802EC858 002B5E18  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1237,9 +1236,9 @@ btm_sec_mx_access_request:
 /* 802ECAE0 002B60A0  7C 08 03 A6 */	mtlr r0
 /* 802ECAE4 002B60A4  38 21 00 30 */	addi r1, r1, 0x30
 /* 802ECAE8 002B60A8  4E 80 00 20 */	blr 
+.endfn btm_sec_mx_access_request
 
-.global btm_sec_conn_req
-btm_sec_conn_req:
+.fn btm_sec_conn_req, global
 /* 802ECAEC 002B60AC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802ECAF0 002B60B0  7C 08 02 A6 */	mflr r0
 /* 802ECAF4 002B60B4  3C A0 80 5C */	lis r5, lbl_805BF9F8@ha
@@ -1320,9 +1319,9 @@ btm_sec_conn_req:
 /* 802ECC0C 002B61CC  7C 08 03 A6 */	mtlr r0
 /* 802ECC10 002B61D0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802ECC14 002B61D4  4E 80 00 20 */	blr 
+.endfn btm_sec_conn_req
 
-.global btm_sec_init
-btm_sec_init:
+.fn btm_sec_init, global
 /* 802ECC18 002B61D8  3C C0 80 5C */	lis r6, lbl_805BF9F8@ha
 /* 802ECC1C 002B61DC  38 80 00 FF */	li r4, 0xff
 /* 802ECC20 002B61E0  38 C6 F9 F8 */	addi r6, r6, lbl_805BF9F8@l
@@ -1330,9 +1329,9 @@ btm_sec_init:
 /* 802ECC28 002B61E8  98 66 19 78 */	stb r3, 0x1978(r6)
 /* 802ECC2C 002B61EC  38 66 19 54 */	addi r3, r6, 0x1954
 /* 802ECC30 002B61F0  4B D1 77 20 */	b memset
+.endfn btm_sec_init
 
-.global btm_sec_dev_reset
-btm_sec_dev_reset:
+.fn btm_sec_dev_reset, global
 /* 802ECC34 002B61F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802ECC38 002B61F8  7C 08 02 A6 */	mflr r0
 /* 802ECC3C 002B61FC  3C 60 80 5C */	lis r3, lbl_805BF9F8@ha
@@ -1350,9 +1349,9 @@ btm_sec_dev_reset:
 /* 802ECC68 002B6228  7C 08 03 A6 */	mtlr r0
 /* 802ECC6C 002B622C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802ECC70 002B6230  4E 80 00 20 */	blr 
+.endfn btm_sec_dev_reset
 
-.global btm_sec_abort_access_req
-btm_sec_abort_access_req:
+.fn btm_sec_abort_access_req, global
 /* 802ECC74 002B6234  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802ECC78 002B6238  7C 08 02 A6 */	mflr r0
 /* 802ECC7C 002B623C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1402,9 +1401,9 @@ btm_sec_abort_access_req:
 /* 802ECD1C 002B62DC  7C 08 03 A6 */	mtlr r0
 /* 802ECD20 002B62E0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802ECD24 002B62E4  4E 80 00 20 */	blr 
+.endfn btm_sec_abort_access_req
 
-.global btm_sec_rmt_name_request_complete
-btm_sec_rmt_name_request_complete:
+.fn btm_sec_rmt_name_request_complete, global
 /* 802ECD28 002B62E8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802ECD2C 002B62EC  7C 08 02 A6 */	mflr r0
 /* 802ECD30 002B62F0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1613,9 +1612,9 @@ btm_sec_rmt_name_request_complete:
 /* 802ED004 002B65C4  7C 08 03 A6 */	mtlr r0
 /* 802ED008 002B65C8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802ED00C 002B65CC  4E 80 00 20 */	blr 
+.endfn btm_sec_rmt_name_request_complete
 
-.global btm_sec_auth_complete
-btm_sec_auth_complete:
+.fn btm_sec_auth_complete, global
 /* 802ED010 002B65D0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802ED014 002B65D4  7C 08 02 A6 */	mflr r0
 /* 802ED018 002B65D8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1842,9 +1841,9 @@ btm_sec_auth_complete:
 /* 802ED348 002B6908  7C 08 03 A6 */	mtlr r0
 /* 802ED34C 002B690C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802ED350 002B6910  4E 80 00 20 */	blr 
+.endfn btm_sec_auth_complete
 
-.global btm_sec_mkey_comp_event
-btm_sec_mkey_comp_event:
+.fn btm_sec_mkey_comp_event, global
 /* 802ED354 002B6914  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802ED358 002B6918  7C 08 02 A6 */	mflr r0
 /* 802ED35C 002B691C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1913,9 +1912,9 @@ btm_sec_mkey_comp_event:
 /* 802ED444 002B6A04  7C 08 03 A6 */	mtlr r0
 /* 802ED448 002B6A08  38 21 00 20 */	addi r1, r1, 0x20
 /* 802ED44C 002B6A0C  4E 80 00 20 */	blr 
+.endfn btm_sec_mkey_comp_event
 
-.global btm_sec_encrypt_change
-btm_sec_encrypt_change:
+.fn btm_sec_encrypt_change, global
 /* 802ED450 002B6A10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802ED454 002B6A14  7C 08 02 A6 */	mflr r0
 /* 802ED458 002B6A18  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2001,9 +2000,9 @@ btm_sec_encrypt_change:
 /* 802ED580 002B6B40  7C 08 03 A6 */	mtlr r0
 /* 802ED584 002B6B44  38 21 00 10 */	addi r1, r1, 0x10
 /* 802ED588 002B6B48  4E 80 00 20 */	blr 
+.endfn btm_sec_encrypt_change
 
-.global btm_sec_is_bonding
-btm_sec_is_bonding:
+.fn btm_sec_is_bonding, global
 /* 802ED58C 002B6B4C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802ED590 002B6B50  7C 08 02 A6 */	mflr r0
 /* 802ED594 002B6B54  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2022,9 +2021,9 @@ btm_sec_is_bonding:
 /* 802ED5C0 002B6B80  7C 08 03 A6 */	mtlr r0
 /* 802ED5C4 002B6B84  38 21 00 10 */	addi r1, r1, 0x10
 /* 802ED5C8 002B6B88  4E 80 00 20 */	blr 
+.endfn btm_sec_is_bonding
 
-.global btm_sec_connected
-btm_sec_connected:
+.fn btm_sec_connected, global
 /* 802ED5CC 002B6B8C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802ED5D0 002B6B90  7C 08 02 A6 */	mflr r0
 /* 802ED5D4 002B6B94  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2337,9 +2336,9 @@ btm_sec_connected:
 /* 802EDA40 002B7000  7C 08 03 A6 */	mtlr r0
 /* 802EDA44 002B7004  38 21 00 20 */	addi r1, r1, 0x20
 /* 802EDA48 002B7008  4E 80 00 20 */	blr 
+.endfn btm_sec_connected
 
-.global btm_sec_disconnect
-btm_sec_disconnect:
+.fn btm_sec_disconnect, global
 /* 802EDA4C 002B700C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802EDA50 002B7010  7C 08 02 A6 */	mflr r0
 /* 802EDA54 002B7014  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2392,9 +2391,9 @@ btm_sec_disconnect:
 /* 802EDAFC 002B70BC  7C 08 03 A6 */	mtlr r0
 /* 802EDB00 002B70C0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802EDB04 002B70C4  4E 80 00 20 */	blr 
+.endfn btm_sec_disconnect
 
-.global btm_sec_disconnected
-btm_sec_disconnected:
+.fn btm_sec_disconnected, global
 /* 802EDB08 002B70C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802EDB0C 002B70CC  7C 08 02 A6 */	mflr r0
 /* 802EDB10 002B70D0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2478,9 +2477,9 @@ btm_sec_disconnected:
 /* 802EDC38 002B71F8  7C 08 03 A6 */	mtlr r0
 /* 802EDC3C 002B71FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802EDC40 002B7200  4E 80 00 20 */	blr 
+.endfn btm_sec_disconnected
 
-.global btm_sec_link_key_notification
-btm_sec_link_key_notification:
+.fn btm_sec_link_key_notification, global
 /* 802EDC44 002B7204  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802EDC48 002B7208  7C 08 02 A6 */	mflr r0
 /* 802EDC4C 002B720C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2599,9 +2598,9 @@ btm_sec_link_key_notification:
 /* 802EDDE4 002B73A4  7C 08 03 A6 */	mtlr r0
 /* 802EDDE8 002B73A8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802EDDEC 002B73AC  4E 80 00 20 */	blr 
+.endfn btm_sec_link_key_notification
 
-.global btm_sec_link_key_request
-btm_sec_link_key_request:
+.fn btm_sec_link_key_request, global
 /* 802EDDF0 002B73B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802EDDF4 002B73B4  7C 08 02 A6 */	mflr r0
 /* 802EDDF8 002B73B8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2684,9 +2683,9 @@ btm_sec_link_key_request:
 /* 802EDF14 002B74D4  7C 08 03 A6 */	mtlr r0
 /* 802EDF18 002B74D8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802EDF1C 002B74DC  4E 80 00 20 */	blr
+.endfn btm_sec_link_key_request
 
-.global btm_sec_pin_code_request_timeout
-btm_sec_pin_code_request_timeout:
+.fn btm_sec_pin_code_request_timeout, global
 /* 802EDF20 002B74E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802EDF24 002B74E4  7C 08 02 A6 */	mflr r0
 /* 802EDF28 002B74E8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2717,9 +2716,9 @@ btm_sec_pin_code_request_timeout:
 /* 802EDF88 002B7548  7C 08 03 A6 */	mtlr r0
 /* 802EDF8C 002B754C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802EDF90 002B7550  4E 80 00 20 */	blr 
+.endfn btm_sec_pin_code_request_timeout
 
-.global btm_sec_pin_code_request
-btm_sec_pin_code_request:
+.fn btm_sec_pin_code_request, global
 /* 802EDF94 002B7554  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802EDF98 002B7558  7C 08 02 A6 */	mflr r0
 /* 802EDF9C 002B755C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2951,9 +2950,9 @@ btm_sec_pin_code_request:
 /* 802EE2E4 002B78A4  7C 08 03 A6 */	mtlr r0
 /* 802EE2E8 002B78A8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802EE2EC 002B78AC  4E 80 00 20 */	blr 
+.endfn btm_sec_pin_code_request
 
-.global btm_sec_update_clock_offset
-btm_sec_update_clock_offset:
+.fn btm_sec_update_clock_offset, global
 /* 802EE2F0 002B78B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802EE2F4 002B78B4  7C 08 02 A6 */	mflr r0
 /* 802EE2F8 002B78B8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2975,9 +2974,9 @@ btm_sec_update_clock_offset:
 /* 802EE334 002B78F4  7C 08 03 A6 */	mtlr r0
 /* 802EE338 002B78F8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802EE33C 002B78FC  4E 80 00 20 */	blr 
+.endfn btm_sec_update_clock_offset
 
-.global btm_sec_execute_procedure
-btm_sec_execute_procedure:
+.fn btm_sec_execute_procedure, global
 /* 802EE340 002B7900  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802EE344 002B7904  7C 08 02 A6 */	mflr r0
 /* 802EE348 002B7908  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
@@ -3259,9 +3258,9 @@ btm_sec_execute_procedure:
 /* 802EE714 002B7CD4  7C 08 03 A6 */	mtlr r0
 /* 802EE718 002B7CD8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802EE71C 002B7CDC  4E 80 00 20 */	blr 
+.endfn btm_sec_execute_procedure
 
-.global btm_sec_start_authorization
-btm_sec_start_authorization:
+.fn btm_sec_start_authorization, global
 /* 802EE720 002B7CE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802EE724 002B7CE4  7C 08 02 A6 */	mflr r0
 /* 802EE728 002B7CE8  38 C0 00 00 */	li r6, 0
@@ -3342,9 +3341,9 @@ btm_sec_start_authorization:
 /* 802EE830 002B7DF0  7C 08 03 A6 */	mtlr r0
 /* 802EE834 002B7DF4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802EE838 002B7DF8  4E 80 00 20 */	blr
+.endfn btm_sec_start_authorization
 
-.global btm_sec_collision_timeout
-btm_sec_collision_timeout:
+.fn btm_sec_collision_timeout, global
 /* 802EE83C 002B7DFC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802EE840 002B7E00  7C 08 02 A6 */	mflr r0
 /* 802EE844 002B7E04  3C 60 80 5C */	lis r3, lbl_805BF9F8@ha
@@ -3404,9 +3403,9 @@ btm_sec_collision_timeout:
 /* 802EE910 002B7ED0  7C 08 03 A6 */	mtlr r0
 /* 802EE914 002B7ED4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802EE918 002B7ED8  4E 80 00 20 */	blr 
+.endfn btm_sec_collision_timeout
 
-.global btm_read_trusted_mask
-btm_read_trusted_mask:
+.fn btm_read_trusted_mask, global
 /* 802EE91C 002B7EDC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802EE920 002B7EE0  7C 08 02 A6 */	mflr r0
 /* 802EE924 002B7EE4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3422,6 +3421,7 @@ btm_read_trusted_mask:
 /* 802EE944 002B7F04  7C 08 03 A6 */	mtlr r0
 /* 802EE948 002B7F08  38 21 00 10 */	addi r1, r1, 0x10
 /* 802EE94C 002B7F0C  4E 80 00 20 */	blr
+.endfn btm_read_trusted_mask
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

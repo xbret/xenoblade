@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global RFCOMM_StartRsp
-RFCOMM_StartRsp:
+.fn RFCOMM_StartRsp, global
 /* 80300B68 002CA128  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80300B6C 002CA12C  7C 08 02 A6 */	mflr r0
 /* 80300B70 002CA130  90 01 00 14 */	stw r0, 0x14(r1)
@@ -15,9 +14,9 @@ RFCOMM_StartRsp:
 /* 80300B88 002CA148  7C 08 03 A6 */	mtlr r0
 /* 80300B8C 002CA14C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80300B90 002CA150  4E 80 00 20 */	blr 
+.endfn RFCOMM_StartRsp
 
-.global RFCOMM_DlcEstablishReq
-RFCOMM_DlcEstablishReq:
+.fn RFCOMM_DlcEstablishReq, global
 /* 80300B94 002CA154  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80300B98 002CA158  7C 08 02 A6 */	mflr r0
 /* 80300B9C 002CA15C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -46,9 +45,9 @@ RFCOMM_DlcEstablishReq:
 /* 80300BF0 002CA1B0  7C 08 03 A6 */	mtlr r0
 /* 80300BF4 002CA1B4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80300BF8 002CA1B8  4E 80 00 20 */	blr 
+.endfn RFCOMM_DlcEstablishReq
 
-.global RFCOMM_DlcEstablishRsp
-RFCOMM_DlcEstablishRsp:
+.fn RFCOMM_DlcEstablishRsp, global
 /* 80300BFC 002CA1BC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80300C00 002CA1C0  7C 08 02 A6 */	mflr r0
 /* 80300C04 002CA1C4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -79,9 +78,9 @@ RFCOMM_DlcEstablishRsp:
 /* 80300C60 002CA220  7C 08 03 A6 */	mtlr r0
 /* 80300C64 002CA224  38 21 00 20 */	addi r1, r1, 0x20
 /* 80300C68 002CA228  4E 80 00 20 */	blr 
+.endfn RFCOMM_DlcEstablishRsp
 
-.global RFCOMM_ParNegReq
-RFCOMM_ParNegReq:
+.fn RFCOMM_ParNegReq, global
 /* 80300C6C 002CA22C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80300C70 002CA230  7C 08 02 A6 */	mflr r0
 /* 80300C74 002CA234  90 01 00 24 */	stw r0, 0x24(r1)
@@ -144,9 +143,9 @@ RFCOMM_ParNegReq:
 /* 80300D40 002CA300  7C 08 03 A6 */	mtlr r0
 /* 80300D44 002CA304  38 21 00 20 */	addi r1, r1, 0x20
 /* 80300D48 002CA308  4E 80 00 20 */	blr 
+.endfn RFCOMM_ParNegReq
 
-.global RFCOMM_ParNegRsp
-RFCOMM_ParNegRsp:
+.fn RFCOMM_ParNegRsp, global
 /* 80300D4C 002CA30C  88 03 00 6C */	lbz r0, 0x6c(r3)
 /* 80300D50 002CA310  7C C9 33 78 */	mr r9, r6
 /* 80300D54 002CA314  7C E8 3B 78 */	mr r8, r7
@@ -157,9 +156,9 @@ RFCOMM_ParNegRsp:
 /* 80300D68 002CA328  38 A0 00 00 */	li r5, 0
 /* 80300D6C 002CA32C  48 00 07 94 */	b rfc_send_pn
 /* 80300D70 002CA330  4E 80 00 20 */	blr 
+.endfn RFCOMM_ParNegRsp
 
-.global RFCOMM_PortNegReq
-RFCOMM_PortNegReq:
+.fn RFCOMM_PortNegReq, global
 /* 80300D74 002CA334  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80300D78 002CA338  7C 08 02 A6 */	mflr r0
 /* 80300D7C 002CA33C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -211,9 +210,9 @@ RFCOMM_PortNegReq:
 /* 80300E24 002CA3E4  7C 08 03 A6 */	mtlr r0
 /* 80300E28 002CA3E8  38 21 00 20 */	addi r1, r1, 0x20
 /* 80300E2C 002CA3EC  4E 80 00 20 */	blr 
+.endfn RFCOMM_PortNegReq
 
-.global RFCOMM_PortNegRsp
-RFCOMM_PortNegRsp:
+.fn RFCOMM_PortNegRsp, global
 /* 80300E30 002CA3F0  88 03 00 6C */	lbz r0, 0x6c(r3)
 /* 80300E34 002CA3F4  7C C7 33 78 */	mr r7, r6
 /* 80300E38 002CA3F8  28 00 00 05 */	cmplwi r0, 5
@@ -222,9 +221,9 @@ RFCOMM_PortNegRsp:
 /* 80300E44 002CA404  38 A0 00 00 */	li r5, 0
 /* 80300E48 002CA408  48 00 0A 78 */	b rfc_send_rpn
 /* 80300E4C 002CA40C  4E 80 00 20 */	blr 
+.endfn RFCOMM_PortNegRsp
 
-.global RFCOMM_ControlReq
-RFCOMM_ControlReq:
+.fn RFCOMM_ControlReq, global
 /* 80300E50 002CA410  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80300E54 002CA414  7C 08 02 A6 */	mflr r0
 /* 80300E58 002CA418  90 01 00 24 */	stw r0, 0x24(r1)
@@ -268,9 +267,9 @@ RFCOMM_ControlReq:
 /* 80300EE8 002CA4A8  7C 08 03 A6 */	mtlr r0
 /* 80300EEC 002CA4AC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80300EF0 002CA4B0  4E 80 00 20 */	blr 
+.endfn RFCOMM_ControlReq
 
-.global RFCOMM_FlowReq
-RFCOMM_FlowReq:
+.fn RFCOMM_FlowReq, global
 /* 80300EF4 002CA4B4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80300EF8 002CA4B8  7C 08 02 A6 */	mflr r0
 /* 80300EFC 002CA4BC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -314,9 +313,9 @@ RFCOMM_FlowReq:
 /* 80300F8C 002CA54C  7C 08 03 A6 */	mtlr r0
 /* 80300F90 002CA550  38 21 00 20 */	addi r1, r1, 0x20
 /* 80300F94 002CA554  4E 80 00 20 */	blr 
+.endfn RFCOMM_FlowReq
 
-.global RFCOMM_LineStatusReq
-RFCOMM_LineStatusReq:
+.fn RFCOMM_LineStatusReq, global
 /* 80300F98 002CA558  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80300F9C 002CA55C  7C 08 02 A6 */	mflr r0
 /* 80300FA0 002CA560  90 01 00 24 */	stw r0, 0x24(r1)
@@ -357,9 +356,9 @@ RFCOMM_LineStatusReq:
 /* 80301024 002CA5E4  7C 08 03 A6 */	mtlr r0
 /* 80301028 002CA5E8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8030102C 002CA5EC  4E 80 00 20 */	blr 
+.endfn RFCOMM_LineStatusReq
 
-.global RFCOMM_DlcReleaseReq
-RFCOMM_DlcReleaseReq:
+.fn RFCOMM_DlcReleaseReq, global
 /* 80301030 002CA5F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80301034 002CA5F4  7C 08 02 A6 */	mflr r0
 /* 80301038 002CA5F8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -371,6 +370,7 @@ RFCOMM_DlcReleaseReq:
 /* 80301050 002CA610  7C 08 03 A6 */	mtlr r0
 /* 80301054 002CA614  38 21 00 10 */	addi r1, r1, 0x10
 /* 80301058 002CA618  4E 80 00 20 */	blr 
+.endfn RFCOMM_DlcReleaseReq
 
 .global RFCOMM_DataReq
 RFCOMM_DataReq:

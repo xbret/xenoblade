@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __ct__Q34nw4r3lyt8DrawInfoFv
-__ct__Q34nw4r3lyt8DrawInfoFv:
+.fn __ct__Q34nw4r3lyt8DrawInfoFv, global
 /* 80408668 003D1C28  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040866C 003D1C2C  7C 08 02 A6 */	mflr r0
 /* 80408670 003D1C30  3C 80 80 57 */	lis r4, lbl_8056D548@ha
@@ -33,10 +32,10 @@ __ct__Q34nw4r3lyt8DrawInfoFv:
 /* 804086D0 003D1C90  7C 08 03 A6 */	mtlr r0
 /* 804086D4 003D1C94  38 21 00 10 */	addi r1, r1, 0x10
 /* 804086D8 003D1C98  4E 80 00 20 */	blr 
+.endfn __ct__Q34nw4r3lyt8DrawInfoFv
 
 #could also be __dt__Q34nw4r2ut4RectFv
-.global __dt__Q34nw4r3lyt8DrawInfoFv
-__dt__Q34nw4r3lyt8DrawInfoFv:
+.fn __dt__Q34nw4r3lyt8DrawInfoFv, global
 /* 804086DC 003D1C9C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804086E0 003D1CA0  7C 08 02 A6 */	mflr r0
 /* 804086E4 003D1CA4  2C 03 00 00 */	cmpwi r3, 0
@@ -54,6 +53,7 @@ __dt__Q34nw4r3lyt8DrawInfoFv:
 /* 80408710 003D1CD0  7C 08 03 A6 */	mtlr r0
 /* 80408714 003D1CD4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80408718 003D1CD8  4E 80 00 20 */	blr 
+.endfn __dt__Q34nw4r3lyt8DrawInfoFv
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

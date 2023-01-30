@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global ADXSJD_Init
-ADXSJD_Init:
+.fn ADXSJD_Init, global
 /* 8037F9BC 00348F7C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8037F9C0 00348F80  7C 08 02 A6 */	mflr r0
 /* 8037F9C4 00348F84  3C 60 80 5E */	lis r3, lbl_805E69C0@ha
@@ -26,9 +25,9 @@ ADXSJD_Init:
 /* 8037FA04 00348FC4  7C 08 03 A6 */	mtlr r0
 /* 8037FA08 00348FC8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8037FA0C 00348FCC  4E 80 00 20 */	blr 
+.endfn ADXSJD_Init
 
-.global ADXSJD_Finish
-ADXSJD_Finish:
+.fn ADXSJD_Finish, global
 /* 8037FA10 00348FD0  3C 80 80 5E */	lis r4, lbl_805E69C0@ha
 /* 8037FA14 00348FD4  80 64 69 C0 */	lwz r3, lbl_805E69C0@l(r4)
 /* 8037FA18 00348FD8  38 03 FF FF */	addi r0, r3, -1
@@ -42,9 +41,9 @@ ADXSJD_Finish:
 /* 8037FA38 00348FF8  38 A0 0B 40 */	li r5, 0xb40
 /* 8037FA3C 00348FFC  4B C8 49 14 */	b memset
 /* 8037FA40 00349000  4E 80 00 20 */	blr 
+.endfn ADXSJD_Finish
 
-.global ADXSJD_Create
-ADXSJD_Create:
+.fn ADXSJD_Create, global
 /* 8037FA44 00349004  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8037FA48 00349008  7C 08 02 A6 */	mflr r0
 /* 8037FA4C 0034900C  3C C0 80 5E */	lis r6, lbl_805E69D8@ha
@@ -221,9 +220,9 @@ ADXSJD_Create:
 /* 8037FCD0 00349290  7C 08 03 A6 */	mtlr r0
 /* 8037FCD4 00349294  38 21 00 20 */	addi r1, r1, 0x20
 /* 8037FCD8 00349298  4E 80 00 20 */	blr 
+.endfn ADXSJD_Create
 
-.global ADXSJD_Destroy
-ADXSJD_Destroy:
+.fn ADXSJD_Destroy, global
 /* 8037FCDC 0034929C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8037FCE0 003492A0  7C 08 02 A6 */	mflr r0
 /* 8037FCE4 003492A4  2C 03 00 00 */	cmpwi r3, 0
@@ -251,32 +250,32 @@ ADXSJD_Destroy:
 /* 8037FD34 003492F4  7C 08 03 A6 */	mtlr r0
 /* 8037FD38 003492F8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8037FD3C 003492FC  4E 80 00 20 */	blr 
+.endfn ADXSJD_Destroy
 
-.global ADXSJD_GetStat
-ADXSJD_GetStat:
+.fn ADXSJD_GetStat, global
 /* 8037FD40 00349300  88 63 00 01 */	lbz r3, 1(r3)
 /* 8037FD44 00349304  7C 63 07 74 */	extsb r3, r3
 /* 8037FD48 00349308  4E 80 00 20 */	blr 
+.endfn ADXSJD_GetStat
 
-.global ADXSJD_SetInSj
-ADXSJD_SetInSj:
+.fn ADXSJD_SetInSj, global
 /* 8037FD4C 0034930C  90 83 00 08 */	stw r4, 8(r3)
 /* 8037FD50 00349310  80 63 00 04 */	lwz r3, 4(r3)
 /* 8037FD54 00349314  48 00 5F CC */	b ADXB_SetAhxInSj
+.endfn ADXSJD_SetInSj
 
-.global ADXSJD_SetMaxDecSmpl
-ADXSJD_SetMaxDecSmpl:
+.fn ADXSJD_SetMaxDecSmpl, global
 /* 8037FD58 00349318  90 83 00 38 */	stw r4, 0x38(r3)
 /* 8037FD5C 0034931C  80 63 00 04 */	lwz r3, 4(r3)
 /* 8037FD60 00349320  48 00 5F E0 */	b ADXB_SetAhxDecSmpl
+.endfn ADXSJD_SetMaxDecSmpl
 
-.global ADXSJD_TermSupply
-ADXSJD_TermSupply:
+.fn ADXSJD_TermSupply, global
 /* 8037FD64 00349324  80 63 00 04 */	lwz r3, 4(r3)
 /* 8037FD68 00349328  48 00 60 5C */	b ADXB_AhxTermSupply
+.endfn ADXSJD_TermSupply
 
-.global ADXSJD_Start
-ADXSJD_Start:
+.fn ADXSJD_Start, global
 /* 8037FD6C 0034932C  3C 80 80 00 */	lis r4, 0x7FFFFFFF@ha
 /* 8037FD70 00349330  38 C0 00 00 */	li r6, 0
 /* 8037FD74 00349334  38 A4 FF FF */	addi r5, r4, 0x7FFFFFFF@l
@@ -295,9 +294,9 @@ ADXSJD_Start:
 /* 8037FDA8 00349368  90 C3 00 AC */	stw r6, 0xac(r3)
 /* 8037FDAC 0034936C  98 03 00 01 */	stb r0, 1(r3)
 /* 8037FDB0 00349370  4E 80 00 20 */	blr 
+.endfn ADXSJD_Start
 
-.global ADXSJD_Stop
-ADXSJD_Stop:
+.fn ADXSJD_Stop, global
 /* 8037FDB4 00349374  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8037FDB8 00349378  7C 08 02 A6 */	mflr r0
 /* 8037FDBC 0034937C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -312,9 +311,9 @@ ADXSJD_Stop:
 /* 8037FDE0 003493A0  7C 08 03 A6 */	mtlr r0
 /* 8037FDE4 003493A4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8037FDE8 003493A8  4E 80 00 20 */	blr 
+.endfn ADXSJD_Stop
 
-.global adxsjd_decode_prep
-adxsjd_decode_prep:
+.fn adxsjd_decode_prep, global
 /* 8037FDEC 003493AC  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8037FDF0 003493B0  7C 08 02 A6 */	mflr r0
 /* 8037FDF4 003493B4  3C A0 00 01 */	lis r5, 0x0000C800@ha
@@ -522,9 +521,9 @@ adxsjd_decode_prep:
 /* 803800D8 00349698  7C 08 03 A6 */	mtlr r0
 /* 803800DC 0034969C  38 21 00 40 */	addi r1, r1, 0x40
 /* 803800E0 003496A0  4E 80 00 20 */	blr
+.endfn adxsjd_decode_prep
 
-.global adxsjd_get_wr
-adxsjd_get_wr:
+.fn adxsjd_get_wr, global
 /* 803800E4 003496A4  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803800E8 003496A8  7C 08 02 A6 */	mflr r0
 /* 803800EC 003496AC  90 01 00 34 */	stw r0, 0x34(r1)
@@ -592,9 +591,9 @@ adxsjd_get_wr:
 /* 803801D0 00349790  7C 08 03 A6 */	mtlr r0
 /* 803801D4 00349794  38 21 00 30 */	addi r1, r1, 0x30
 /* 803801D8 00349798  4E 80 00 20 */	blr 
+.endfn adxsjd_get_wr
 
-.global adxsjd_decexec_start
-adxsjd_decexec_start:
+.fn adxsjd_decexec_start, global
 /* 803801DC 0034979C  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803801E0 003497A0  7C 08 02 A6 */	mflr r0
 /* 803801E4 003497A4  90 01 00 44 */	stw r0, 0x44(r1)
@@ -878,9 +877,9 @@ adxsjd_decexec_start:
 /* 803805F4 00349BB4  7C 08 03 A6 */	mtlr r0
 /* 803805F8 00349BB8  38 21 00 40 */	addi r1, r1, 0x40
 /* 803805FC 00349BBC  4E 80 00 20 */	blr 
+.endfn adxsjd_decexec_start
 
-.global adxsjd_decexec_end
-adxsjd_decexec_end:
+.fn adxsjd_decexec_end, global
 /* 80380600 00349BC0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80380604 00349BC4  7C 08 02 A6 */	mflr r0
 /* 80380608 00349BC8  90 01 00 44 */	stw r0, 0x44(r1)
@@ -997,9 +996,9 @@ adxsjd_decexec_end:
 /* 803807AC 00349D6C  7C 08 03 A6 */	mtlr r0
 /* 803807B0 00349D70  38 21 00 40 */	addi r1, r1, 0x40
 /* 803807B4 00349D74  4E 80 00 20 */	blr 
+.endfn adxsjd_decexec_end
 
-.global ADXSJD_ExecHndl
-ADXSJD_ExecHndl:
+.fn ADXSJD_ExecHndl, global
 /* 803807B8 00349D78  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803807BC 00349D7C  7C 08 02 A6 */	mflr r0
 /* 803807C0 00349D80  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1085,9 +1084,9 @@ ADXSJD_ExecHndl:
 /* 803808E4 00349EA4  7C 08 03 A6 */	mtlr r0
 /* 803808E8 00349EA8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803808EC 00349EAC  4E 80 00 20 */	blr 
+.endfn ADXSJD_ExecHndl
 
-.global adxsjd_insert_proc
-adxsjd_insert_proc:
+.fn adxsjd_insert_proc, global
 /* 803808F0 00349EB0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803808F4 00349EB4  7C 08 02 A6 */	mflr r0
 /* 803808F8 00349EB8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1172,9 +1171,9 @@ adxsjd_insert_proc:
 /* 80380A1C 00349FDC  7C 08 03 A6 */	mtlr r0
 /* 80380A20 00349FE0  38 21 00 30 */	addi r1, r1, 0x30
 /* 80380A24 00349FE4  4E 80 00 20 */	blr 
+.endfn adxsjd_insert_proc
 
-.global adxsjd_discard_proc
-adxsjd_discard_proc:
+.fn adxsjd_discard_proc, global
 /* 80380A28 00349FE8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80380A2C 00349FEC  7C 08 02 A6 */	mflr r0
 /* 80380A30 00349FF0  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1255,9 +1254,9 @@ adxsjd_discard_proc:
 /* 80380B44 0034A104  7C 08 03 A6 */	mtlr r0
 /* 80380B48 0034A108  38 21 00 30 */	addi r1, r1, 0x30
 /* 80380B4C 0034A10C  4E 80 00 20 */	blr 
+.endfn adxsjd_discard_proc
 
-.global ADXSJD_ExecServer
-ADXSJD_ExecServer:
+.fn ADXSJD_ExecServer, global
 /* 80380B50 0034A110  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80380B54 0034A114  7C 08 02 A6 */	mflr r0
 /* 80380B58 0034A118  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1364,97 +1363,97 @@ ADXSJD_ExecServer:
 /* 80380CC4 0034A284  7C 08 03 A6 */	mtlr r0
 /* 80380CC8 0034A288  38 21 00 20 */	addi r1, r1, 0x20
 /* 80380CCC 0034A28C  4E 80 00 20 */	blr 
+.endfn ADXSJD_ExecServer
 
-.global ADXSJD_GetDecDtLen
-ADXSJD_GetDecDtLen:
+.fn ADXSJD_GetDecDtLen, global
 /* 80380CD0 0034A290  80 63 00 30 */	lwz r3, 0x30(r3)
 /* 80380CD4 0034A294  4E 80 00 20 */	blr 
+.endfn ADXSJD_GetDecDtLen
 
-.global ADXSJD_GetDecNumSmpl
-ADXSJD_GetDecNumSmpl:
+.fn ADXSJD_GetDecNumSmpl, global
 /* 80380CD8 0034A298  80 63 00 2C */	lwz r3, 0x2c(r3)
 /* 80380CDC 0034A29C  4E 80 00 20 */	blr 
+.endfn ADXSJD_GetDecNumSmpl
 
-.global ADXSJD_SetDecPos
-ADXSJD_SetDecPos:
+.fn ADXSJD_SetDecPos, global
 /* 80380CE0 0034A2A0  90 83 00 34 */	stw r4, 0x34(r3)
 /* 80380CE4 0034A2A4  4E 80 00 20 */	blr 
+.endfn ADXSJD_SetDecPos
 
-.global ADXSJD_SetLnkSw
-ADXSJD_SetLnkSw:
+.fn ADXSJD_SetLnkSw, global
 /* 80380CE8 0034A2A8  90 83 00 A4 */	stw r4, 0xa4(r3)
 /* 80380CEC 0034A2AC  80 63 00 04 */	lwz r3, 4(r3)
 /* 80380CF0 0034A2B0  48 00 6E CC */	b func_80387BBC
+.endfn ADXSJD_SetLnkSw
 
-.global ADXSJD_EntryFltFunc
-ADXSJD_EntryFltFunc:
+.fn ADXSJD_EntryFltFunc, global
 /* 80380CF4 0034A2B4  90 83 00 50 */	stw r4, 0x50(r3)
 /* 80380CF8 0034A2B8  90 A3 00 54 */	stw r5, 0x54(r3)
 /* 80380CFC 0034A2BC  4E 80 00 20 */	blr 
+.endfn ADXSJD_EntryFltFunc
 
-.global ADXSJD_EntryTrapFunc
-ADXSJD_EntryTrapFunc:
+.fn ADXSJD_EntryTrapFunc, global
 /* 80380D00 0034A2C0  90 83 00 48 */	stw r4, 0x48(r3)
 /* 80380D04 0034A2C4  90 A3 00 4C */	stw r5, 0x4c(r3)
 /* 80380D08 0034A2C8  4E 80 00 20 */	blr 
+.endfn ADXSJD_EntryTrapFunc
 
-.global ADXSJD_SetTrapNumSmpl
-ADXSJD_SetTrapNumSmpl:
+.fn ADXSJD_SetTrapNumSmpl, global
 /* 80380D0C 0034A2CC  90 83 00 3C */	stw r4, 0x3c(r3)
 /* 80380D10 0034A2D0  4E 80 00 20 */	blr 
+.endfn ADXSJD_SetTrapNumSmpl
 
-.global ADXSJD_SetTrapCnt
-ADXSJD_SetTrapCnt:
+.fn ADXSJD_SetTrapCnt, global
 /* 80380D14 0034A2D4  90 83 00 40 */	stw r4, 0x40(r3)
 /* 80380D18 0034A2D8  4E 80 00 20 */	blr 
+.endfn ADXSJD_SetTrapCnt
 
-.global ADXSJD_SetTrapDtLen
-ADXSJD_SetTrapDtLen:
+.fn ADXSJD_SetTrapDtLen, global
 /* 80380D1C 0034A2DC  90 83 00 44 */	stw r4, 0x44(r3)
 /* 80380D20 0034A2E0  4E 80 00 20 */	blr 
+.endfn ADXSJD_SetTrapDtLen
 
-.global ADXSJD_GetFormat
-ADXSJD_GetFormat:
+.fn ADXSJD_GetFormat, global
 /* 80380D24 0034A2E4  80 63 00 04 */	lwz r3, 4(r3)
 /* 80380D28 0034A2E8  48 00 6B 94 */	b ADXB_GetFormat
+.endfn ADXSJD_GetFormat
 
-.global ADXSJD_GetSfreq
-ADXSJD_GetSfreq:
+.fn ADXSJD_GetSfreq, global
 /* 80380D2C 0034A2EC  80 63 00 04 */	lwz r3, 4(r3)
 /* 80380D30 0034A2F0  48 00 6B 94 */	b ADXB_GetSfreq
+.endfn ADXSJD_GetSfreq
 
-.global ADXSJD_GetNumChan
-ADXSJD_GetNumChan:
+.fn ADXSJD_GetNumChan, global
 /* 80380D34 0034A2F4  80 63 00 04 */	lwz r3, 4(r3)
 /* 80380D38 0034A2F8  48 00 6B 94 */	b ADXB_GetNumChan
+.endfn ADXSJD_GetNumChan
 
-.global ADXSJD_GetOutBps
-ADXSJD_GetOutBps:
+.fn ADXSJD_GetOutBps, global
 /* 80380D3C 0034A2FC  80 63 00 04 */	lwz r3, 4(r3)
 /* 80380D40 0034A300  48 00 6B F8 */	b ADXB_GetOutBps
+.endfn ADXSJD_GetOutBps
 
-.global ADXSJD_GetBlkSmpl
-ADXSJD_GetBlkSmpl:
+.fn ADXSJD_GetBlkSmpl, global
 /* 80380D44 0034A304  80 63 00 04 */	lwz r3, 4(r3)
 /* 80380D48 0034A308  48 00 6C 5C */	b ADXB_GetBlkSmpl
+.endfn ADXSJD_GetBlkSmpl
 
-.global ADXSJD_GetTotalNumSmpl
-ADXSJD_GetTotalNumSmpl:
+.fn ADXSJD_GetTotalNumSmpl, global
 /* 80380D4C 0034A30C  80 63 00 04 */	lwz r3, 4(r3)
 /* 80380D50 0034A310  48 00 6C 5C */	b ADXB_GetTotalNumSmpl
+.endfn ADXSJD_GetTotalNumSmpl
 
-.global ADXSJD_GetNumLoop
-ADXSJD_GetNumLoop:
+.fn ADXSJD_GetNumLoop, global
 /* 80380D54 0034A314  80 63 00 04 */	lwz r3, 4(r3)
 /* 80380D58 0034A318  48 00 6C 5C */	b ADXB_GetNumLoop
+.endfn ADXSJD_GetNumLoop
 
-.global ADXSJD_GetLpStartPos
-ADXSJD_GetLpStartPos:
+.fn ADXSJD_GetLpStartPos, global
 /* 80380D5C 0034A31C  80 63 00 04 */	lwz r3, 4(r3)
 /* 80380D60 0034A320  48 00 6C 5C */	b ADXB_GetLpStartPos
+.endfn ADXSJD_GetLpStartPos
 
-.global ADXSJD_GetLpStartOfst
-ADXSJD_GetLpStartOfst:
+.fn ADXSJD_GetLpStartOfst, global
 /* 80380D64 0034A324  2C 03 00 00 */	cmpwi r3, 0
 /* 80380D68 0034A328  40 82 00 0C */	bne .L_80380D74
 /* 80380D6C 0034A32C  38 60 00 00 */	li r3, 0
@@ -1463,19 +1462,19 @@ ADXSJD_GetLpStartOfst:
 /* 80380D74 0034A334  80 63 00 04 */	lwz r3, 4(r3)
 /* 80380D78 0034A338  48 00 6C 4C */	b ADXB_GetLpStartOfst
 /* 80380D7C 0034A33C  4E 80 00 20 */	blr 
+.endfn ADXSJD_GetLpStartOfst
 
-.global ADXSJD_GetLpEndPos
-ADXSJD_GetLpEndPos:
+.fn ADXSJD_GetLpEndPos, global
 /* 80380D80 0034A340  80 63 00 04 */	lwz r3, 4(r3)
 /* 80380D84 0034A344  48 00 6C 58 */	b ADXB_GetLpEndPos
+.endfn ADXSJD_GetLpEndPos
 
-.global ADXSJD_GetLpEndOfst
-ADXSJD_GetLpEndOfst:
+.fn ADXSJD_GetLpEndOfst, global
 /* 80380D88 0034A348  80 63 00 04 */	lwz r3, 4(r3)
 /* 80380D8C 0034A34C  48 00 6C 58 */	b ADXB_GetLpEndOfst
+.endfn ADXSJD_GetLpEndOfst
 
-.global ADXSJD_GetDefOutVol
-ADXSJD_GetDefOutVol:
+.fn ADXSJD_GetDefOutVol, global
 /* 80380D90 0034A350  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80380D94 0034A354  7C 08 02 A6 */	mflr r0
 /* 80380D98 0034A358  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1501,9 +1500,9 @@ ADXSJD_GetDefOutVol:
 /* 80380DE0 0034A3A0  7C 08 03 A6 */	mtlr r0
 /* 80380DE4 0034A3A4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80380DE8 0034A3A8  4E 80 00 20 */	blr 
+.endfn ADXSJD_GetDefOutVol
 
-.global ADXSJD_GetDefPan
-ADXSJD_GetDefPan:
+.fn ADXSJD_GetDefPan, global
 /* 80380DEC 0034A3AC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80380DF0 0034A3B0  7C 08 02 A6 */	mflr r0
 /* 80380DF4 0034A3B4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1533,21 +1532,22 @@ ADXSJD_GetDefPan:
 /* 80380E4C 0034A40C  7C 08 03 A6 */	mtlr r0
 /* 80380E50 0034A410  38 21 00 10 */	addi r1, r1, 0x10
 /* 80380E54 0034A414  4E 80 00 20 */	blr 
+.endfn ADXSJD_GetDefPan
 
-.global ADXSJD_GetSpsdInfo
-ADXSJD_GetSpsdInfo:
+.fn ADXSJD_GetSpsdInfo, global
 /* 80380E58 0034A418  38 63 00 60 */	addi r3, r3, 0x60
 /* 80380E5C 0034A41C  4E 80 00 20 */	blr 
+.endfn ADXSJD_GetSpsdInfo
 
-.global ADXSJD_TakeSnapshot
-ADXSJD_TakeSnapshot:
+.fn ADXSJD_TakeSnapshot, global
 /* 80380E60 0034A420  80 63 00 04 */	lwz r3, 4(r3)
 /* 80380E64 0034A424  48 00 6B A8 */	b ADXB_TakeSnapshot
+.endfn ADXSJD_TakeSnapshot
 
-.global ADXSJD_RestoreSnapshot
-ADXSJD_RestoreSnapshot:
+.fn ADXSJD_RestoreSnapshot, global
 /* 80380E68 0034A428  80 63 00 04 */	lwz r3, 4(r3)
 /* 80380E6C 0034A42C  48 00 6B EC */	b ADXB_RestoreSnapshot
+.endfn ADXSJD_RestoreSnapshot
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0

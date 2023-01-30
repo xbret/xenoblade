@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global MIXRmtSetVolumes
-MIXRmtSetVolumes:
+.fn MIXRmtSetVolumes, global
 /* 8034CC90 00316250  80 63 00 18 */	lwz r3, 0x18(r3)
 /* 8034CC94 00316254  54 80 07 3E */	clrlwi r0, r4, 0x1c
 /* 8034CC98 00316258  80 8D B8 68 */	lwz r4, lbl_806679E8@sda21(r13)
@@ -24,10 +23,10 @@ MIXRmtSetVolumes:
 /* 8034CCD0 00316290  91 64 00 20 */	stw r11, 0x20(r4)
 /* 8034CCD4 00316294  90 04 00 00 */	stw r0, 0(r4)
 /* 8034CCD8 00316298  4E 80 00 20 */	blr 
+.endfn MIXRmtSetVolumes
 
 .balign 16, 0
-.global MIXRmtSetFader
-MIXRmtSetFader:
+.fn MIXRmtSetFader, global
 /* 8034CCE0 003162A0  80 03 00 18 */	lwz r0, 0x18(r3)
 /* 8034CCE4 003162A4  2C 04 00 00 */	cmpwi r4, 0
 /* 8034CCE8 003162A8  80 6D B8 68 */	lwz r3, lbl_806679E8@sda21(r13)
@@ -57,10 +56,10 @@ MIXRmtSetFader:
 /* 8034CD34 003162F4  64 00 40 00 */	oris r0, r0, 0x4000
 /* 8034CD38 003162F8  90 03 00 00 */	stw r0, 0(r3)
 /* 8034CD3C 003162FC  4E 80 00 20 */	blr 
+.endfn MIXRmtSetFader
 
 .balign 16, 0
-.global __MIXRmtUpdateSettings
-__MIXRmtUpdateSettings:
+.fn __MIXRmtUpdateSettings, global
 /* 8034CD40 00316300  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8034CD44 00316304  7C 08 02 A6 */	mflr r0
 /* 8034CD48 00316308  90 01 00 14 */	stw r0, 0x14(r1)
@@ -359,6 +358,7 @@ __MIXRmtUpdateSettings:
 /* 8034D170 00316730  7C 08 03 A6 */	mtlr r0
 /* 8034D174 00316734  38 21 00 10 */	addi r1, r1, 0x10
 /* 8034D178 00316738  4E 80 00 20 */	blr 
+.endfn __MIXRmtUpdateSettings
 
 .balign 16, 0
 .global __MIXRmtResetChannel

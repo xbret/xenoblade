@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-uusb_CloseDeviceCB:
+.fn uusb_CloseDeviceCB, local
 /* 802DD160 002A6720  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DD164 002A6724  7C 08 02 A6 */	mflr r0
 /* 802DD168 002A6728  3C 80 80 5C */	lis r4, lbl_805BBC60@ha
@@ -41,9 +41,10 @@ uusb_CloseDeviceCB:
 /* 802DD1E8 002A67A8  7C 08 03 A6 */	mtlr r0
 /* 802DD1EC 002A67AC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DD1F0 002A67B0  4E 80 00 20 */	blr 
+.endfn uusb_CloseDeviceCB
 
 .balign 16, 0
-uusb_ReadIntrDataCB:
+.fn uusb_ReadIntrDataCB, local
 /* 802DD200 002A67C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DD204 002A67C4  7C 08 02 A6 */	mflr r0
 /* 802DD208 002A67C8  38 A0 00 00 */	li r5, 0
@@ -157,9 +158,10 @@ uusb_ReadIntrDataCB:
 /* 802DD39C 002A695C  7C 08 03 A6 */	mtlr r0
 /* 802DD3A0 002A6960  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DD3A4 002A6964  4E 80 00 20 */	blr 
+.endfn uusb_ReadIntrDataCB
 
 .balign 16, 0
-uusb_ReadBulkDataCB:
+.fn uusb_ReadBulkDataCB, local
 /* 802DD3B0 002A6970  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DD3B4 002A6974  7C 08 02 A6 */	mflr r0
 /* 802DD3B8 002A6978  90 01 00 24 */	stw r0, 0x24(r1)
@@ -270,9 +272,10 @@ uusb_ReadBulkDataCB:
 /* 802DD540 002A6B00  7C 08 03 A6 */	mtlr r0
 /* 802DD544 002A6B04  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DD548 002A6B08  4E 80 00 20 */	blr 
+.endfn uusb_ReadBulkDataCB
 
 .balign 16, 0
-uusb_WriteCtrlDataCB:
+.fn uusb_WriteCtrlDataCB, local
 /* 802DD550 002A6B10  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DD554 002A6B14  7C 08 02 A6 */	mflr r0
 /* 802DD558 002A6B18  2C 04 00 00 */	cmpwi r4, 0
@@ -335,9 +338,10 @@ uusb_WriteCtrlDataCB:
 /* 802DD630 002A6BF0  7C 08 03 A6 */	mtlr r0
 /* 802DD634 002A6BF4  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DD638 002A6BF8  4E 80 00 20 */	blr 
+.endfn uusb_WriteCtrlDataCB
 
 .balign 16, 0
-uusb_WriteBulkDataCB:
+.fn uusb_WriteBulkDataCB, local
 /* 802DD640 002A6C00  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DD644 002A6C04  7C 08 02 A6 */	mflr r0
 /* 802DD648 002A6C08  2C 04 00 00 */	cmpwi r4, 0
@@ -397,10 +401,10 @@ uusb_WriteBulkDataCB:
 /* 802DD714 002A6CD4  7C 08 03 A6 */	mtlr r0
 /* 802DD718 002A6CD8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DD71C 002A6CDC  4E 80 00 20 */	blr 
+.endfn uusb_WriteBulkDataCB
 
 .balign 16, 0
-.global UUSB_Register
-UUSB_Register:
+.fn UUSB_Register, global
 /* 802DD720 002A6CE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DD724 002A6CE4  7C 08 02 A6 */	mflr r0
 /* 802DD728 002A6CE8  38 80 00 00 */	li r4, 0
@@ -540,10 +544,10 @@ UUSB_Register:
 /* 802DD91C 002A6EDC  7C 08 03 A6 */	mtlr r0
 /* 802DD920 002A6EE0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DD924 002A6EE4  4E 80 00 20 */	blr 
+.endfn UUSB_Register
 
 .balign 16, 0
-.global UUSB_Open
-UUSB_Open:
+.fn UUSB_Open, global
 /* 802DD930 002A6EF0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DD934 002A6EF4  7C 08 02 A6 */	mflr r0
 /* 802DD938 002A6EF8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -649,16 +653,16 @@ UUSB_Open:
 /* 802DDAB0 002A7070  7C 08 03 A6 */	mtlr r0
 /* 802DDAB4 002A7074  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DDAB8 002A7078  4E 80 00 20 */	blr 
+.endfn UUSB_Open
 
 .balign 16, 0
-.global UUSB_Read
-UUSB_Read:
+.fn UUSB_Read, global
 /* 802DDAC0 002A7080  38 60 00 00 */	li r3, 0
 /* 802DDAC4 002A7084  4E 80 00 20 */	blr 
+.endfn UUSB_Read
 
 .balign 16, 0
-.global UUSB_Write
-UUSB_Write:
+.fn UUSB_Write, global
 /* 802DDAD0 002A7090  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802DDAD4 002A7094  7C 08 02 A6 */	mflr r0
 /* 802DDAD8 002A7098  90 01 00 34 */	stw r0, 0x34(r1)
@@ -803,10 +807,10 @@ UUSB_Write:
 /* 802DDCD0 002A7290  7C 08 03 A6 */	mtlr r0
 /* 802DDCD4 002A7294  38 21 00 30 */	addi r1, r1, 0x30
 /* 802DDCD8 002A7298  4E 80 00 20 */	blr 
+.endfn UUSB_Write
 
 .balign 16, 0
-.global UUSB_Close
-UUSB_Close:
+.fn UUSB_Close, global
 /* 802DDCE0 002A72A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DDCE4 002A72A4  7C 08 02 A6 */	mflr r0
 /* 802DDCE8 002A72A8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -856,10 +860,10 @@ UUSB_Close:
 /* 802DDD80 002A7340  7C 08 03 A6 */	mtlr r0
 /* 802DDD84 002A7344  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DDD88 002A7348  4E 80 00 20 */	blr 
+.endfn UUSB_Close
 
 .balign 16, 0
-.global UUSB_Unregister
-UUSB_Unregister:
+.fn UUSB_Unregister, global
 /* 802DDD90 002A7350  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DDD94 002A7354  7C 08 02 A6 */	mflr r0
 /* 802DDD98 002A7358  90 01 00 14 */	stw r0, 0x14(r1)
@@ -877,6 +881,7 @@ UUSB_Unregister:
 /* 802DDDC8 002A7388  7C 08 03 A6 */	mtlr r0
 /* 802DDDCC 002A738C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DDDD0 002A7390  4E 80 00 20 */	blr 
+.endfn UUSB_Unregister
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 .global lbl_806658C8

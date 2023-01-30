@@ -3,14 +3,13 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global __AXGetNumVoices
-__AXGetNumVoices:
+.fn __AXGetNumVoices, global
 /* 802D4760 0029DD20  80 6D B5 A8 */	lwz r3, lbl_80667728@sda21(r13)
 /* 802D4764 0029DD24  4E 80 00 20 */	blr 
+.endfn __AXGetNumVoices
 
 .balign 16, 0
-.global __AXServiceVPB
-__AXServiceVPB:
+.fn __AXServiceVPB, global
 /* 802D4770 0029DD30  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D4774 0029DD34  7C 08 02 A6 */	mflr r0
 /* 802D4778 0029DD38  90 01 00 24 */	stw r0, 0x24(r1)
@@ -387,10 +386,10 @@ __AXServiceVPB:
 /* 802D4CB4 0029E274  7C 08 03 A6 */	mtlr r0
 /* 802D4CB8 0029E278  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D4CBC 0029E27C  4E 80 00 20 */	blr 
+.endfn __AXServiceVPB
 
 .balign 16, 0
-.global __AXSyncPBs
-__AXSyncPBs:
+.fn __AXSyncPBs, global
 /* 802D4CC0 0029E280  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802D4CC4 0029E284  7C 08 02 A6 */	mflr r0
 /* 802D4CC8 0029E288  90 01 00 34 */	stw r0, 0x34(r1)
@@ -607,16 +606,16 @@ __AXSyncPBs:
 /* 802D4FC4 0029E584  7C 08 03 A6 */	mtlr r0
 /* 802D4FC8 0029E588  38 21 00 30 */	addi r1, r1, 0x30
 /* 802D4FCC 0029E58C  4E 80 00 20 */	blr 
+.endfn __AXSyncPBs
 
 .balign 16, 0
-.global __AXGetPBs
-__AXGetPBs:
+.fn __AXGetPBs, global
 /* 802D4FD0 0029E590  80 6D B5 98 */	lwz r3, lbl_80667718@sda21(r13)
 /* 802D4FD4 0029E594  4E 80 00 20 */	blr 
+.endfn __AXGetPBs
 
 .balign 16, 0
-.global __AXSetPBDefault
-__AXSetPBDefault:
+.fn __AXSetPBDefault, global
 /* 802D4FE0 0029E5A0  3C 80 18 A8 */	lis r4, 0x18A80024@ha
 /* 802D4FE4 0029E5A4  38 A0 00 00 */	li r5, 0
 /* 802D4FE8 0029E5A8  38 04 00 24 */	addi r0, r4, 0x18A80024@l
@@ -633,10 +632,10 @@ __AXSetPBDefault:
 /* 802D5014 0029E5D4  B0 A3 01 38 */	sth r5, 0x138(r3)
 /* 802D5018 0029E5D8  B0 A3 01 3A */	sth r5, 0x13a(r3)
 /* 802D501C 0029E5DC  4E 80 00 20 */	blr 
+.endfn __AXSetPBDefault
 
 .balign 16, 0
-.global __AXVPBInitSpecifyMem
-__AXVPBInitSpecifyMem:
+.fn __AXVPBInitSpecifyMem, global
 /* 802D5020 0029E5E0  3C A0 80 58 */	lis r5, lbl_80581A40@ha
 /* 802D5024 0029E5E4  3C 80 80 59 */	lis r4, lbl_80589240@ha
 /* 802D5028 0029E5E8  3C 60 80 59 */	lis r3, lbl_8058AA40@ha
@@ -649,10 +648,10 @@ __AXVPBInitSpecifyMem:
 /* 802D5044 0029E604  90 8D B5 9C */	stw r4, lbl_8066771C@sda21(r13)
 /* 802D5048 0029E608  90 6D B5 A0 */	stw r3, lbl_80667720@sda21(r13)
 /* 802D504C 0029E60C  48 00 00 04 */	b __AXVPBInitCommon
+.endfn __AXVPBInitSpecifyMem
 
 .balign 16, 0
-.global __AXVPBInitCommon
-__AXVPBInitCommon:
+.fn __AXVPBInitCommon, global
 /* 802D5050 0029E610  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802D5054 0029E614  7C 08 02 A6 */	mflr r0
 /* 802D5058 0029E618  90 01 00 34 */	stw r0, 0x34(r1)
@@ -832,20 +831,20 @@ __AXVPBInitCommon:
 /* 802D52D0 0029E890  7C 08 03 A6 */	mtlr r0
 /* 802D52D4 0029E894  38 21 00 30 */	addi r1, r1, 0x30
 /* 802D52D8 0029E898  4E 80 00 20 */	blr 
+.endfn __AXVPBInitCommon
 
 .balign 16, 0
-.global __AXVPBQuit
-__AXVPBQuit:
+.fn __AXVPBQuit, global
 /* 802D52E0 0029E8A0  38 00 00 00 */	li r0, 0
 /* 802D52E4 0029E8A4  90 0D B5 98 */	stw r0, lbl_80667718@sda21(r13)
 /* 802D52E8 0029E8A8  90 0D B5 9C */	stw r0, lbl_8066771C@sda21(r13)
 /* 802D52EC 0029E8AC  90 0D B5 A0 */	stw r0, lbl_80667720@sda21(r13)
 /* 802D52F0 0029E8B0  90 0D B5 A4 */	stw r0, lbl_80667724@sda21(r13)
 /* 802D52F4 0029E8B4  4E 80 00 20 */	blr 
+.endfn __AXVPBQuit
 
 .balign 16, 0
-.global AXSetVoiceSrcType
-AXSetVoiceSrcType:
+.fn AXSetVoiceSrcType, global
 /* 802D5300 0029E8C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D5304 0029E8C4  7C 08 02 A6 */	mflr r0
 /* 802D5308 0029E8C8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -900,10 +899,10 @@ AXSetVoiceSrcType:
 /* 802D53B4 0029E974  7C 08 03 A6 */	mtlr r0
 /* 802D53B8 0029E978  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D53BC 0029E97C  4E 80 00 20 */	blr 
+.endfn AXSetVoiceSrcType
 
 .balign 16, 0
-.global AXSetVoiceState
-AXSetVoiceState:
+.fn AXSetVoiceState, global
 /* 802D53C0 0029E980  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D53C4 0029E984  7C 08 02 A6 */	mflr r0
 /* 802D53C8 0029E988  90 01 00 14 */	stw r0, 0x14(r1)
@@ -935,10 +934,10 @@ AXSetVoiceState:
 /* 802D5424 0029E9E4  7C 08 03 A6 */	mtlr r0
 /* 802D5428 0029E9E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D542C 0029E9EC  4E 80 00 20 */	blr 
+.endfn AXSetVoiceState
 
 .balign 16, 0
-.global AXSetVoiceAddr
-AXSetVoiceAddr:
+.fn AXSetVoiceAddr, global
 /* 802D5430 0029E9F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D5434 0029E9F4  7C 08 02 A6 */	mflr r0
 /* 802D5438 0029E9F8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1000,10 +999,10 @@ AXSetVoiceAddr:
 /* 802D550C 0029EACC  7C 08 03 A6 */	mtlr r0
 /* 802D5510 0029EAD0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D5514 0029EAD4  4E 80 00 20 */	blr 
+.endfn AXSetVoiceAddr
 
 .balign 16, 0
-.global AXSetVoiceSrc
-AXSetVoiceSrc:
+.fn AXSetVoiceSrc, global
 /* 802D5520 0029EAE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D5524 0029EAE4  7C 08 02 A6 */	mflr r0
 /* 802D5528 0029EAE8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1037,10 +1036,10 @@ AXSetVoiceSrc:
 /* 802D5598 0029EB58  7C 08 03 A6 */	mtlr r0
 /* 802D559C 0029EB5C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D55A0 0029EB60  4E 80 00 20 */	blr 
+.endfn AXSetVoiceSrc
 
 .balign 16, 0
-.global AXGetLpfCoefs
-AXGetLpfCoefs:
+.fn AXGetLpfCoefs, global
 /* 802D55B0 0029EB70  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802D55B4 0029EB74  7C 08 02 A6 */	mflr r0
 /* 802D55B8 0029EB78  C8 62 BA 50 */	lfd f3, double_8066BDD0@sda21(r2)
@@ -1088,10 +1087,10 @@ AXGetLpfCoefs:
 /* 802D5660 0029EC20  7C 08 03 A6 */	mtlr r0
 /* 802D5664 0029EC24  38 21 00 30 */	addi r1, r1, 0x30
 /* 802D5668 0029EC28  4E 80 00 20 */	blr 
+.endfn AXGetLpfCoefs
 
 .balign 16, 0
-.global AXSetVoiceRmtOn
-AXSetVoiceRmtOn:
+.fn AXSetVoiceRmtOn, global
 /* 802D5670 0029EC30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D5674 0029EC34  7C 08 02 A6 */	mflr r0
 /* 802D5678 0029EC38  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1111,12 +1110,13 @@ AXSetVoiceRmtOn:
 /* 802D56B0 0029EC70  7C 08 03 A6 */	mtlr r0
 /* 802D56B4 0029EC74  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D56B8 0029EC78  4E 80 00 20 */	blr 
+.endfn AXSetVoiceRmtOn
 
 .balign 16, 0
-.global AXGetMaxVoices
-AXGetMaxVoices:
+.fn AXGetMaxVoices, global
 /* 802D56C0 0029EC80  80 6D B5 A4 */	lwz r3, lbl_80667724@sda21(r13)
 /* 802D56C4 0029EC84  4E 80 00 20 */	blr 
+.endfn AXGetMaxVoices
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

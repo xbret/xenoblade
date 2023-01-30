@@ -2,16 +2,15 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global MPSDEC_Init
-MPSDEC_Init:
+.fn MPSDEC_Init, global
 /* 803BB730 00384CF0  4E 80 00 20 */	blr 
+.endfn MPSDEC_Init
 
-.global MPSDEC_Finish
-MPSDEC_Finish:
+.fn MPSDEC_Finish, global
 /* 803BB734 00384CF4  4E 80 00 20 */	blr 
+.endfn MPSDEC_Finish
 
-.global MPS_SetSystemFn
-MPS_SetSystemFn:
+.fn MPS_SetSystemFn, global
 /* 803BB738 00384CF8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803BB73C 00384CFC  7C 08 02 A6 */	mflr r0
 /* 803BB740 00384D00  90 01 00 24 */	stw r0, 0x24(r1)
@@ -34,9 +33,9 @@ MPS_SetSystemFn:
 /* 803BB780 00384D40  7C 08 03 A6 */	mtlr r0
 /* 803BB784 00384D44  38 21 00 20 */	addi r1, r1, 0x20
 /* 803BB788 00384D48  4E 80 00 20 */	blr 
+.endfn MPS_SetSystemFn
 
-.global MPS_SetPsMapFn
-MPS_SetPsMapFn:
+.fn MPS_SetPsMapFn, global
 /* 803BB78C 00384D4C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803BB790 00384D50  7C 08 02 A6 */	mflr r0
 /* 803BB794 00384D54  90 01 00 24 */	stw r0, 0x24(r1)
@@ -59,9 +58,9 @@ MPS_SetPsMapFn:
 /* 803BB7D4 00384D94  7C 08 03 A6 */	mtlr r0
 /* 803BB7D8 00384D98  38 21 00 20 */	addi r1, r1, 0x20
 /* 803BB7DC 00384D9C  4E 80 00 20 */	blr 
+.endfn MPS_SetPsMapFn
 
-.global MPS_SetPesFn
-MPS_SetPesFn:
+.fn MPS_SetPesFn, global
 /* 803BB7E0 00384DA0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803BB7E4 00384DA4  7C 08 02 A6 */	mflr r0
 /* 803BB7E8 00384DA8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -84,9 +83,9 @@ MPS_SetPesFn:
 /* 803BB828 00384DE8  7C 08 03 A6 */	mtlr r0
 /* 803BB82C 00384DEC  38 21 00 20 */	addi r1, r1, 0x20
 /* 803BB830 00384DF0  4E 80 00 20 */	blr 
+.endfn MPS_SetPesFn
 
-.global MPS_DecHd
-MPS_DecHd:
+.fn MPS_DecHd, global
 /* 803BB834 00384DF4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803BB838 00384DF8  7C 08 02 A6 */	mflr r0
 /* 803BB83C 00384DFC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -122,9 +121,9 @@ MPS_DecHd:
 /* 803BB8AC 00384E6C  7C 08 03 A6 */	mtlr r0
 /* 803BB8B0 00384E70  38 21 00 20 */	addi r1, r1, 0x20
 /* 803BB8B4 00384E74  4E 80 00 20 */	blr
+.endfn MPS_DecHd
 
-.global MPSDEC_DecHdMpeg1
-MPSDEC_DecHdMpeg1:
+.fn MPSDEC_DecHdMpeg1, global
 /* 803BB8B8 00384E78  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803BB8BC 00384E7C  7C 08 02 A6 */	mflr r0
 /* 803BB8C0 00384E80  90 01 00 34 */	stw r0, 0x34(r1)
@@ -198,9 +197,9 @@ MPSDEC_DecHdMpeg1:
 /* 803BB9B8 00384F78  7C 08 03 A6 */	mtlr r0
 /* 803BB9BC 00384F7C  38 21 00 30 */	addi r1, r1, 0x30
 /* 803BB9C0 00384F80  4E 80 00 20 */	blr 
+.endfn MPSDEC_DecHdMpeg1
 
-.global mpsdec_DecOneHd
-mpsdec_DecOneHd:
+.fn mpsdec_DecOneHd, global
 /* 803BB9C4 00384F84  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803BB9C8 00384F88  7C 08 02 A6 */	mflr r0
 /* 803BB9CC 00384F8C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -268,9 +267,9 @@ mpsdec_DecOneHd:
 /* 803BBAB0 00385070  7C 08 03 A6 */	mtlr r0
 /* 803BBAB4 00385074  38 21 00 20 */	addi r1, r1, 0x20
 /* 803BBAB8 00385078  4E 80 00 20 */	blr 
+.endfn mpsdec_DecOneHd
 
-.global mpsdec_DecPackHd
-mpsdec_DecPackHd:
+.fn mpsdec_DecPackHd, global
 /* 803BBABC 0038507C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803BBAC0 00385080  38 04 00 04 */	addi r0, r4, 4
 /* 803BBAC4 00385084  54 04 00 3A */	rlwinm r4, r0, 0, 0, 0x1d
@@ -457,9 +456,9 @@ mpsdec_DecPackHd:
 /* 803BBD24 003852E4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 803BBD28 003852E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803BBD2C 003852EC  4E 80 00 20 */	blr 
+.endfn mpsdec_DecPackHd
 
-.global mpsdec_DecSysHd
-mpsdec_DecSysHd:
+.fn mpsdec_DecSysHd, global
 /* 803BBD30 003852F0  94 21 FF 10 */	stwu r1, -0xf0(r1)
 /* 803BBD34 003852F4  7C 08 02 A6 */	mflr r0
 /* 803BBD38 003852F8  90 01 00 F4 */	stw r0, 0xf4(r1)
@@ -827,6 +826,7 @@ mpsdec_DecSysHd:
 /* 803BC218 003857D8  7C 08 03 A6 */	mtlr r0
 /* 803BC21C 003857DC  38 21 00 F0 */	addi r1, r1, 0xf0
 /* 803BC220 003857E0  4E 80 00 20 */	blr 
+.endfn mpsdec_DecSysHd
 
 .global mpsdec_DecPketHd
 mpsdec_DecPketHd:

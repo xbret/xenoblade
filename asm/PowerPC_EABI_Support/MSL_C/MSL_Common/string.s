@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global strcpy
-strcpy:
+.fn strcpy, global
 /* 802C26B8 0028BC78  54 60 07 BE */	clrlwi r0, r3, 0x1e
 /* 802C26BC 0028BC7C  54 85 07 BE */	clrlwi r5, r4, 0x1e
 /* 802C26C0 0028BC80  7C 00 28 40 */	cmplw r0, r5
@@ -58,9 +57,9 @@ strcpy:
 /* 802C276C 0028BD2C  2C 00 00 00 */	cmpwi r0, 0
 /* 802C2770 0028BD30  40 82 FF F4 */	bne .L_802C2764
 /* 802C2774 0028BD34  4E 80 00 20 */	blr 
+.endfn strcpy
 
-.global strncpy
-strncpy:
+.fn strncpy, global
 /* 802C2778 0028BD38  38 84 FF FF */	addi r4, r4, -1
 /* 802C277C 0028BD3C  38 C3 FF FF */	addi r6, r3, -1
 /* 802C2780 0028BD40  38 A5 00 01 */	addi r5, r5, 1
@@ -82,9 +81,9 @@ strncpy:
 /* 802C27B0 0028BD70  34 A5 FF FF */	addic. r5, r5, -1
 /* 802C27B4 0028BD74  40 82 FF D4 */	bne .L_802C2788
 /* 802C27B8 0028BD78  4E 80 00 20 */	blr 
+.endfn strncpy
 
-.global strcat
-strcat:
+.fn strcat, global
 /* 802C27BC 0028BD7C  38 84 FF FF */	addi r4, r4, -1
 /* 802C27C0 0028BD80  38 A3 FF FF */	addi r5, r3, -1
 .L_802C27C4:
@@ -98,9 +97,9 @@ strcat:
 /* 802C27DC 0028BD9C  2C 00 00 00 */	cmpwi r0, 0
 /* 802C27E0 0028BDA0  40 82 FF F4 */	bne .L_802C27D4
 /* 802C27E4 0028BDA4  4E 80 00 20 */	blr 
+.endfn strcat
 
-.global strncat
-strncat:
+.fn strncat, global
 /* 802C27E8 0028BDA8  38 84 FF FF */	addi r4, r4, -1
 /* 802C27EC 0028BDAC  38 C3 FF FF */	addi r6, r3, -1
 .L_802C27F0:
@@ -124,9 +123,9 @@ strncat:
 /* 802C2828 0028BDE8  38 00 00 00 */	li r0, 0
 /* 802C282C 0028BDEC  98 06 00 01 */	stb r0, 1(r6)
 /* 802C2830 0028BDF0  4E 80 00 20 */	blr 
+.endfn strncat
 
-.global strcmp
-strcmp:
+.fn strcmp, global
 /* 802C2834 0028BDF4  88 A3 00 00 */	lbz r5, 0(r3)
 /* 802C2838 0028BDF8  88 04 00 00 */	lbz r0, 0(r4)
 /* 802C283C 0028BDFC  7C 00 28 51 */	subf. r0, r0, r5
@@ -211,9 +210,9 @@ strcmp:
 /* 802C2944 0028BF04  40 82 FF E4 */	bne .L_802C2928
 /* 802C2948 0028BF08  38 60 00 00 */	li r3, 0
 /* 802C294C 0028BF0C  4E 80 00 20 */	blr 
+.endfn strcmp
 
-.global strncmp
-strncmp:
+.fn strncmp, global
 /* 802C2950 0028BF10  38 63 FF FF */	addi r3, r3, -1
 /* 802C2954 0028BF14  38 84 FF FF */	addi r4, r4, -1
 /* 802C2958 0028BF18  38 C5 00 01 */	addi r6, r5, 1
@@ -234,9 +233,9 @@ strncmp:
 .L_802C2988:
 /* 802C2988 0028BF48  38 60 00 00 */	li r3, 0
 /* 802C298C 0028BF4C  4E 80 00 20 */	blr 
+.endfn strncmp
 
-.global strchr
-strchr:
+.fn strchr, global
 /* 802C2990 0028BF50  38 63 FF FF */	addi r3, r3, -1
 /* 802C2994 0028BF54  54 80 06 3E */	clrlwi r0, r4, 0x18
 /* 802C2998 0028BF58  48 00 00 0C */	b .L_802C29A4
@@ -251,6 +250,7 @@ strchr:
 /* 802C29B4 0028BF74  4D 82 00 20 */	beqlr 
 /* 802C29B8 0028BF78  38 60 00 00 */	li r3, 0
 /* 802C29BC 0028BF7C  4E 80 00 20 */	blr 
+.endfn strchr
 
 .global strstr
 strstr:

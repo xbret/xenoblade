@@ -2,13 +2,12 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __ct__Q34nw4r3g3d6CameraFPQ34nw4r3g3d10CameraData
-__ct__Q34nw4r3g3d6CameraFPQ34nw4r3g3d10CameraData:
+.fn __ct__Q34nw4r3g3d6CameraFPQ34nw4r3g3d10CameraData, global
 /* 803F0FFC 003BA5BC  90 83 00 00 */	stw r4, 0(r3)
 /* 803F1000 003BA5C0  4E 80 00 20 */	blr 
+.endfn __ct__Q34nw4r3g3d6CameraFPQ34nw4r3g3d10CameraData
 
-.global Init__Q34nw4r3g3d6CameraFv
-Init__Q34nw4r3g3d6CameraFv:
+.fn Init__Q34nw4r3g3d6CameraFv, global
 /* 803F1004 003BA5C4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F1008 003BA5C8  7C 08 02 A6 */	mflr r0
 /* 803F100C 003BA5CC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -29,9 +28,9 @@ Init__Q34nw4r3g3d6CameraFv:
 /* 803F1048 003BA608  7C 08 03 A6 */	mtlr r0
 /* 803F104C 003BA60C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F1050 003BA610  4E 80 00 20 */	blr 
+.endfn Init__Q34nw4r3g3d6CameraFv
 
-.global Init__Q34nw4r3g3d6CameraFUsUsUsUsUsUs
-Init__Q34nw4r3g3d6CameraFUsUsUsUsUsUs:
+.fn Init__Q34nw4r3g3d6CameraFUsUsUsUsUsUs, global
 /* 803F1054 003BA614  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803F1058 003BA618  3C 00 43 30 */	lis r0, 0x4330
 /* 803F105C 003BA61C  81 43 00 00 */	lwz r10, 0(r3)
@@ -104,9 +103,9 @@ Init__Q34nw4r3g3d6CameraFUsUsUsUsUsUs:
 .L_803F1168:
 /* 803F1168 003BA728  38 21 00 20 */	addi r1, r1, 0x20
 /* 803F116C 003BA72C  4E 80 00 20 */	blr 
+.endfn Init__Q34nw4r3g3d6CameraFUsUsUsUsUsUs
 
-.global SetPosition__Q34nw4r3g3d6CameraFRCQ34nw4r4math4VEC3
-SetPosition__Q34nw4r3g3d6CameraFRCQ34nw4r4math4VEC3:
+.fn SetPosition__Q34nw4r3g3d6CameraFRCQ34nw4r4math4VEC3, global
 /* 803F1170 003BA730  80 63 00 00 */	lwz r3, 0(r3)
 /* 803F1174 003BA734  2C 03 00 00 */	cmpwi r3, 0
 /* 803F1178 003BA738  4D 82 00 20 */	beqlr 
@@ -120,9 +119,9 @@ SetPosition__Q34nw4r3g3d6CameraFRCQ34nw4r4math4VEC3:
 /* 803F1198 003BA758  54 00 07 76 */	rlwinm r0, r0, 0, 0x1d, 0x1b
 /* 803F119C 003BA75C  90 03 00 70 */	stw r0, 0x70(r3)
 /* 803F11A0 003BA760  4E 80 00 20 */	blr 
+.endfn SetPosition__Q34nw4r3g3d6CameraFRCQ34nw4r4math4VEC3
 
-.global SetPosture__Q34nw4r3g3d6CameraFRCQ44nw4r3g3d6Camera11PostureInfo
-SetPosture__Q34nw4r3g3d6CameraFRCQ44nw4r3g3d6Camera11PostureInfo:
+.fn SetPosture__Q34nw4r3g3d6CameraFRCQ44nw4r3g3d6Camera11PostureInfo, global
 /* 803F11A4 003BA764  80 63 00 00 */	lwz r3, 0(r3)
 /* 803F11A8 003BA768  2C 03 00 00 */	cmpwi r3, 0
 /* 803F11AC 003BA76C  4D 82 00 20 */	beqlr 
@@ -274,9 +273,9 @@ SetPosture__Q34nw4r3g3d6CameraFRCQ44nw4r3g3d6Camera11PostureInfo:
 /* 803F13B8 003BA978  D0 03 00 A4 */	stfs f0, 0xa4(r3)
 /* 803F13BC 003BA97C  90 03 00 70 */	stw r0, 0x70(r3)
 /* 803F13C0 003BA980  4E 80 00 20 */	blr 
+.endfn SetPosture__Q34nw4r3g3d6CameraFRCQ44nw4r3g3d6Camera11PostureInfo
 
-.global SetCameraMtxDirectly__Q34nw4r3g3d6CameraFRCQ34nw4r4math5MTX34
-SetCameraMtxDirectly__Q34nw4r3g3d6CameraFRCQ34nw4r4math5MTX34:
+.fn SetCameraMtxDirectly__Q34nw4r3g3d6CameraFRCQ34nw4r4math5MTX34, global
 /* 803F13C4 003BA984  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F13C8 003BA988  7C 08 02 A6 */	mflr r0
 /* 803F13CC 003BA98C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -296,9 +295,9 @@ SetCameraMtxDirectly__Q34nw4r3g3d6CameraFRCQ34nw4r4math5MTX34:
 /* 803F1400 003BA9C0  7C 08 03 A6 */	mtlr r0
 /* 803F1404 003BA9C4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F1408 003BA9C8  4E 80 00 20 */	blr 
+.endfn SetCameraMtxDirectly__Q34nw4r3g3d6CameraFRCQ34nw4r4math5MTX34
 
-.global SetPerspective__Q34nw4r3g3d6CameraFffff
-SetPerspective__Q34nw4r3g3d6CameraFffff:
+.fn SetPerspective__Q34nw4r3g3d6CameraFffff, global
 /* 803F140C 003BA9CC  80 63 00 00 */	lwz r3, 0(r3)
 /* 803F1410 003BA9D0  2C 03 00 00 */	cmpwi r3, 0
 /* 803F1414 003BA9D4  4D 82 00 20 */	beqlr 
@@ -313,9 +312,9 @@ SetPerspective__Q34nw4r3g3d6CameraFffff:
 /* 803F1438 003BA9F8  60 00 00 20 */	ori r0, r0, 0x20
 /* 803F143C 003BA9FC  90 03 00 70 */	stw r0, 0x70(r3)
 /* 803F1440 003BAA00  4E 80 00 20 */	blr 
+.endfn SetPerspective__Q34nw4r3g3d6CameraFffff
 
-.global SetOrtho__Q34nw4r3g3d6CameraFffffff
-SetOrtho__Q34nw4r3g3d6CameraFffffff:
+.fn SetOrtho__Q34nw4r3g3d6CameraFffffff, global
 /* 803F1444 003BAA04  80 63 00 00 */	lwz r3, 0(r3)
 /* 803F1448 003BAA08  2C 03 00 00 */	cmpwi r3, 0
 /* 803F144C 003BAA0C  4D 82 00 20 */	beqlr 
@@ -332,9 +331,9 @@ SetOrtho__Q34nw4r3g3d6CameraFffffff:
 /* 803F1478 003BAA38  60 00 00 40 */	ori r0, r0, 0x40
 /* 803F147C 003BAA3C  90 03 00 70 */	stw r0, 0x70(r3)
 /* 803F1480 003BAA40  4E 80 00 20 */	blr 
+.endfn SetOrtho__Q34nw4r3g3d6CameraFffffff
 
-.global SetProjectionMtxDirectly__Q34nw4r3g3d6CameraFPCQ34nw4r4math5MTX44
-SetProjectionMtxDirectly__Q34nw4r3g3d6CameraFPCQ34nw4r4math5MTX44:
+.fn SetProjectionMtxDirectly__Q34nw4r3g3d6CameraFPCQ34nw4r4math5MTX44, global
 /* 803F1484 003BAA44  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F1488 003BAA48  7C 08 02 A6 */	mflr r0
 /* 803F148C 003BAA4C  2C 04 00 00 */	cmpwi r4, 0
@@ -355,9 +354,9 @@ SetProjectionMtxDirectly__Q34nw4r3g3d6CameraFPCQ34nw4r4math5MTX44:
 /* 803F14C4 003BAA84  7C 08 03 A6 */	mtlr r0
 /* 803F14C8 003BAA88  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F14CC 003BAA8C  4E 80 00 20 */	blr 
+.endfn SetProjectionMtxDirectly__Q34nw4r3g3d6CameraFPCQ34nw4r4math5MTX44
 
-.global SetScissor__Q34nw4r3g3d6CameraFUlUlUlUl
-SetScissor__Q34nw4r3g3d6CameraFUlUlUlUl:
+.fn SetScissor__Q34nw4r3g3d6CameraFUlUlUlUl, global
 /* 803F14D0 003BAA90  80 63 00 00 */	lwz r3, 0(r3)
 /* 803F14D4 003BAA94  2C 03 00 00 */	cmpwi r3, 0
 /* 803F14D8 003BAA98  4D 82 00 20 */	beqlr 
@@ -366,9 +365,9 @@ SetScissor__Q34nw4r3g3d6CameraFUlUlUlUl:
 /* 803F14E4 003BAAA4  90 C3 00 FC */	stw r6, 0xfc(r3)
 /* 803F14E8 003BAAA8  90 E3 01 00 */	stw r7, 0x100(r3)
 /* 803F14EC 003BAAAC  4E 80 00 20 */	blr 
+.endfn SetScissor__Q34nw4r3g3d6CameraFUlUlUlUl
 
-.global SetViewport__Q34nw4r3g3d6CameraFffff
-SetViewport__Q34nw4r3g3d6CameraFffff:
+.fn SetViewport__Q34nw4r3g3d6CameraFffff, global
 /* 803F14F0 003BAAB0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803F14F4 003BAAB4  7C 08 02 A6 */	mflr r0
 /* 803F14F8 003BAAB8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -409,9 +408,9 @@ SetViewport__Q34nw4r3g3d6CameraFffff:
 /* 803F1580 003BAB40  7C 08 03 A6 */	mtlr r0
 /* 803F1584 003BAB44  38 21 00 30 */	addi r1, r1, 0x30
 /* 803F1588 003BAB48  4E 80 00 20 */	blr 
+.endfn SetViewport__Q34nw4r3g3d6CameraFffff
 
-.global GetViewport__Q34nw4r3g3d6CameraCFPfPfPfPfPfPf
-GetViewport__Q34nw4r3g3d6CameraCFPfPfPfPfPfPf:
+.fn GetViewport__Q34nw4r3g3d6CameraCFPfPfPfPfPfPf, global
 /* 803F158C 003BAB4C  80 63 00 00 */	lwz r3, 0(r3)
 /* 803F1590 003BAB50  2C 03 00 00 */	cmpwi r3, 0
 /* 803F1594 003BAB54  4D 82 00 20 */	beqlr 
@@ -445,9 +444,9 @@ GetViewport__Q34nw4r3g3d6CameraCFPfPfPfPfPfPf:
 /* 803F15F0 003BABB0  C0 03 00 F0 */	lfs f0, 0xf0(r3)
 /* 803F15F4 003BABB4  D0 09 00 00 */	stfs f0, 0(r9)
 /* 803F15F8 003BABB8  4E 80 00 20 */	blr 
+.endfn GetViewport__Q34nw4r3g3d6CameraCFPfPfPfPfPfPf
 
-.global GetCameraMtx__Q34nw4r3g3d6CameraCFPQ34nw4r4math5MTX34
-GetCameraMtx__Q34nw4r3g3d6CameraCFPQ34nw4r4math5MTX34:
+.fn GetCameraMtx__Q34nw4r3g3d6CameraCFPQ34nw4r4math5MTX34, global
 /* 803F15FC 003BABBC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F1600 003BABC0  7C 08 02 A6 */	mflr r0
 /* 803F1604 003BABC4  2C 04 00 00 */	cmpwi r4, 0
@@ -474,9 +473,9 @@ GetCameraMtx__Q34nw4r3g3d6CameraCFPQ34nw4r4math5MTX34:
 /* 803F1650 003BAC10  7C 08 03 A6 */	mtlr r0
 /* 803F1654 003BAC14  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F1658 003BAC18  4E 80 00 20 */	blr 
+.endfn GetCameraMtx__Q34nw4r3g3d6CameraCFPQ34nw4r4math5MTX34
 
-.global GetProjectionMtx__Q34nw4r3g3d6CameraCFPQ34nw4r4math5MTX44
-GetProjectionMtx__Q34nw4r3g3d6CameraCFPQ34nw4r4math5MTX44:
+.fn GetProjectionMtx__Q34nw4r3g3d6CameraCFPQ34nw4r4math5MTX44, global
 /* 803F165C 003BAC1C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F1660 003BAC20  7C 08 02 A6 */	mflr r0
 /* 803F1664 003BAC24  2C 04 00 00 */	cmpwi r4, 0
@@ -537,9 +536,9 @@ GetProjectionMtx__Q34nw4r3g3d6CameraCFPQ34nw4r4math5MTX44:
 /* 803F172C 003BACEC  7C 08 03 A6 */	mtlr r0
 /* 803F1730 003BACF0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F1734 003BACF4  4E 80 00 20 */	blr 
+.endfn GetProjectionMtx__Q34nw4r3g3d6CameraCFPQ34nw4r4math5MTX44
 
-.global GetProjectionTexMtx__Q34nw4r3g3d6CameraCFPQ34nw4r4math5MTX34
-GetProjectionTexMtx__Q34nw4r3g3d6CameraCFPQ34nw4r4math5MTX34:
+.fn GetProjectionTexMtx__Q34nw4r3g3d6CameraCFPQ34nw4r4math5MTX34, global
 /* 803F1738 003BACF8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F173C 003BACFC  7C 08 02 A6 */	mflr r0
 /* 803F1740 003BAD00  2C 04 00 00 */	cmpwi r4, 0
@@ -595,9 +594,9 @@ GetProjectionTexMtx__Q34nw4r3g3d6CameraCFPQ34nw4r4math5MTX34:
 /* 803F17FC 003BADBC  7C 08 03 A6 */	mtlr r0
 /* 803F1800 003BADC0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F1804 003BADC4  4E 80 00 20 */	blr 
+.endfn GetProjectionTexMtx__Q34nw4r3g3d6CameraCFPQ34nw4r4math5MTX34
 
-.global GetEnvironmentTexMtx__Q34nw4r3g3d6CameraCFPQ34nw4r4math5MTX34
-GetEnvironmentTexMtx__Q34nw4r3g3d6CameraCFPQ34nw4r4math5MTX34:
+.fn GetEnvironmentTexMtx__Q34nw4r3g3d6CameraCFPQ34nw4r4math5MTX34, global
 /* 803F1808 003BADC8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F180C 003BADCC  7C 08 02 A6 */	mflr r0
 /* 803F1810 003BADD0  2C 04 00 00 */	cmpwi r4, 0
@@ -631,9 +630,9 @@ GetEnvironmentTexMtx__Q34nw4r3g3d6CameraCFPQ34nw4r4math5MTX34:
 /* 803F187C 003BAE3C  7C 08 03 A6 */	mtlr r0
 /* 803F1880 003BAE40  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F1884 003BAE44  4E 80 00 20 */	blr 
+.endfn GetEnvironmentTexMtx__Q34nw4r3g3d6CameraCFPQ34nw4r4math5MTX34
 
-.global GXSetViewport__Q34nw4r3g3d6CameraCFv
-GXSetViewport__Q34nw4r3g3d6CameraCFv:
+.fn GXSetViewport__Q34nw4r3g3d6CameraCFv, global
 /* 803F1888 003BAE48  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F188C 003BAE4C  7C 08 02 A6 */	mflr r0
 /* 803F1890 003BAE50  90 01 00 14 */	stw r0, 0x14(r1)
@@ -669,9 +668,9 @@ GXSetViewport__Q34nw4r3g3d6CameraCFv:
 /* 803F1900 003BAEC0  7C 08 03 A6 */	mtlr r0
 /* 803F1904 003BAEC4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F1908 003BAEC8  4E 80 00 20 */	blr 
+.endfn GXSetViewport__Q34nw4r3g3d6CameraCFv
 
-.global GXSetProjection__Q34nw4r3g3d6CameraCFv
-GXSetProjection__Q34nw4r3g3d6CameraCFv:
+.fn GXSetProjection__Q34nw4r3g3d6CameraCFv, global
 /* 803F190C 003BAECC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F1910 003BAED0  7C 08 02 A6 */	mflr r0
 /* 803F1914 003BAED4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -727,9 +726,9 @@ GXSetProjection__Q34nw4r3g3d6CameraCFv:
 /* 803F19C8 003BAF88  7C 08 03 A6 */	mtlr r0
 /* 803F19CC 003BAF8C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F19D0 003BAF90  4E 80 00 20 */	blr 
+.endfn GXSetProjection__Q34nw4r3g3d6CameraCFv
 
-.global GXSetScissor__Q34nw4r3g3d6CameraCFv
-GXSetScissor__Q34nw4r3g3d6CameraCFv:
+.fn GXSetScissor__Q34nw4r3g3d6CameraCFv, global
 /* 803F19D4 003BAF94  80 C3 00 00 */	lwz r6, 0(r3)
 /* 803F19D8 003BAF98  2C 06 00 00 */	cmpwi r6, 0
 /* 803F19DC 003BAF9C  4D 82 00 20 */	beqlr 
@@ -739,9 +738,9 @@ GXSetScissor__Q34nw4r3g3d6CameraCFv:
 /* 803F19EC 003BAFAC  80 C6 01 00 */	lwz r6, 0x100(r6)
 /* 803F19F0 003BAFB0  4B F2 CF 10 */	b GXSetScissor
 /* 803F19F4 003BAFB4  4E 80 00 20 */	blr 
+.endfn GXSetScissor__Q34nw4r3g3d6CameraCFv
 
-.global GXSetScissorBoxOffset__Q34nw4r3g3d6CameraCFv
-GXSetScissorBoxOffset__Q34nw4r3g3d6CameraCFv:
+.fn GXSetScissorBoxOffset__Q34nw4r3g3d6CameraCFv, global
 /* 803F19F8 003BAFB8  80 83 00 00 */	lwz r4, 0(r3)
 /* 803F19FC 003BAFBC  2C 04 00 00 */	cmpwi r4, 0
 /* 803F1A00 003BAFC0  4D 82 00 20 */	beqlr 
@@ -749,9 +748,9 @@ GXSetScissorBoxOffset__Q34nw4r3g3d6CameraCFv:
 /* 803F1A08 003BAFC8  80 84 01 08 */	lwz r4, 0x108(r4)
 /* 803F1A0C 003BAFCC  4B F2 CF 64 */	b GXSetScissorBoxOffset
 /* 803F1A10 003BAFD0  4E 80 00 20 */	blr 
+.endfn GXSetScissorBoxOffset__Q34nw4r3g3d6CameraCFv
 
-.global UpdateCameraMtx__Q34nw4r3g3d6CameraCFv
-UpdateCameraMtx__Q34nw4r3g3d6CameraCFv:
+.fn UpdateCameraMtx__Q34nw4r3g3d6CameraCFv, global
 /* 803F1A14 003BAFD4  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 803F1A18 003BAFD8  7C 08 02 A6 */	mflr r0
 /* 803F1A1C 003BAFDC  90 01 00 A4 */	stw r0, 0xa4(r1)
@@ -1014,6 +1013,7 @@ UpdateCameraMtx__Q34nw4r3g3d6CameraCFv:
 /* 803F1E0C 003BB3CC  7C 08 03 A6 */	mtlr r0
 /* 803F1E10 003BB3D0  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 803F1E14 003BB3D4  4E 80 00 20 */	blr 
+.endfn UpdateCameraMtx__Q34nw4r3g3d6CameraCFv
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

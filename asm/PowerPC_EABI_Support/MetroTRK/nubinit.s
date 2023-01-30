@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global TRKInitializeNub
-TRKInitializeNub:
+.fn TRKInitializeNub, global
 /* 802CC7EC 00295DAC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CC7F0 00295DB0  7C 08 02 A6 */	mflr r0
 /* 802CC7F4 00295DB4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -52,9 +51,9 @@ TRKInitializeNub:
 /* 802CC88C 00295E4C  7C 08 03 A6 */	mtlr r0
 /* 802CC890 00295E50  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CC894 00295E54  4E 80 00 20 */	blr 
+.endfn TRKInitializeNub
 
-.global TRKTerminateNub
-TRKTerminateNub:
+.fn TRKTerminateNub, global
 /* 802CC898 00295E58  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CC89C 00295E5C  7C 08 02 A6 */	mflr r0
 /* 802CC8A0 00295E60  90 01 00 14 */	stw r0, 0x14(r1)
@@ -64,15 +63,15 @@ TRKTerminateNub:
 /* 802CC8B0 00295E70  7C 08 03 A6 */	mtlr r0
 /* 802CC8B4 00295E74  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CC8B8 00295E78  4E 80 00 20 */	blr 
+.endfn TRKTerminateNub
 
-.global TRKNubWelcome
-TRKNubWelcome:
+.fn TRKNubWelcome, global
 /* 802CC8BC 00295E7C  3C 60 80 54 */	lis r3, lbl_8053FE88@ha
 /* 802CC8C0 00295E80  38 63 FE 88 */	addi r3, r3, lbl_8053FE88@l
 /* 802CC8C4 00295E84  4B FF FC 90 */	b TRK_board_display
+.endfn TRKNubWelcome
 
-.global TRK_InitializeEndian
-TRK_InitializeEndian:
+.fn TRK_InitializeEndian, global
 /* 802CC8C8 00295E88  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CC8CC 00295E8C  38 60 00 12 */	li r3, 0x12
 /* 802CC8D0 00295E90  38 A0 00 34 */	li r5, 0x34
@@ -105,6 +104,7 @@ TRK_InitializeEndian:
 .L_802CC934:
 /* 802CC934 00295EF4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CC938 00295EF8  4E 80 00 20 */	blr 
+.endfn TRK_InitializeEndian
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

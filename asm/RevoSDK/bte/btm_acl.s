@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global btm_acl_init
-btm_acl_init:
+.fn btm_acl_init, global
 /* 802E4500 002ADAC0  3C 60 80 5C */	lis r3, lbl_805BF9F8@ha
 /* 802E4504 002ADAC4  38 80 7D 00 */	li r4, 0x7d00
 /* 802E4508 002ADAC8  38 63 F9 F8 */	addi r3, r3, lbl_805BF9F8@l
@@ -11,9 +10,9 @@ btm_acl_init:
 /* 802E4510 002ADAD0  B0 83 04 C6 */	sth r4, 0x4c6(r3)
 /* 802E4514 002ADAD4  98 03 27 BF */	stb r0, 0x27bf(r3)
 /* 802E4518 002ADAD8  4E 80 00 20 */	blr 
+.endfn btm_acl_init
 
-.global btm_handle_to_acl_index
-btm_handle_to_acl_index:
+.fn btm_handle_to_acl_index, global
 /* 802E451C 002ADADC  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
 /* 802E4520 002ADAE0  38 A0 00 00 */	li r5, 0
 /* 802E4524 002ADAE4  38 84 F9 F8 */	addi r4, r4, lbl_805BF9F8@l
@@ -52,9 +51,9 @@ btm_handle_to_acl_index:
 .L_802E4598:
 /* 802E4598 002ADB58  7C A3 2B 78 */	mr r3, r5
 /* 802E459C 002ADB5C  4E 80 00 20 */	blr 
+.endfn btm_handle_to_acl_index
 
-.global btm_acl_created
-btm_acl_created:
+.fn btm_acl_created, global
 /* 802E45A0 002ADB60  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802E45A4 002ADB64  7C 08 02 A6 */	mflr r0
 /* 802E45A8 002ADB68  90 01 00 34 */	stw r0, 0x34(r1)
@@ -272,9 +271,9 @@ btm_acl_created:
 /* 802E48A8 002ADE68  7C 08 03 A6 */	mtlr r0
 /* 802E48AC 002ADE6C  38 21 00 30 */	addi r1, r1, 0x30
 /* 802E48B0 002ADE70  4E 80 00 20 */	blr 
+.endfn btm_acl_created
 
-.global btm_acl_removed
-btm_acl_removed:
+.fn btm_acl_removed, global
 /* 802E48B4 002ADE74  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E48B8 002ADE78  7C 08 02 A6 */	mflr r0
 /* 802E48BC 002ADE7C  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
@@ -328,9 +327,9 @@ btm_acl_removed:
 /* 802E496C 002ADF2C  7C 08 03 A6 */	mtlr r0
 /* 802E4970 002ADF30  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E4974 002ADF34  4E 80 00 20 */	blr 
+.endfn btm_acl_removed
 
-.global btm_acl_device_down
-btm_acl_device_down:
+.fn btm_acl_device_down, global
 /* 802E4978 002ADF38  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E497C 002ADF3C  7C 08 02 A6 */	mflr r0
 /* 802E4980 002ADF40  3C 60 80 5C */	lis r3, lbl_805BF9F8@ha
@@ -358,9 +357,9 @@ btm_acl_device_down:
 /* 802E49D0 002ADF90  7C 08 03 A6 */	mtlr r0
 /* 802E49D4 002ADF94  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E49D8 002ADF98  4E 80 00 20 */	blr 
+.endfn btm_acl_device_down
 
-.global BTM_SwitchRole
-BTM_SwitchRole:
+.fn BTM_SwitchRole, global
 /* 802E49DC 002ADF9C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802E49E0 002ADFA0  7C 08 02 A6 */	mflr r0
 /* 802E49E4 002ADFA4  90 01 00 34 */	stw r0, 0x34(r1)
@@ -513,9 +512,9 @@ BTM_SwitchRole:
 /* 802E4BEC 002AE1AC  7C 08 03 A6 */	mtlr r0
 /* 802E4BF0 002AE1B0  38 21 00 30 */	addi r1, r1, 0x30
 /* 802E4BF4 002AE1B4  4E 80 00 20 */	blr 
+.endfn BTM_SwitchRole
 
-.global btm_acl_encrypt_change
-btm_acl_encrypt_change:
+.fn btm_acl_encrypt_change, global
 /* 802E4BF8 002AE1B8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E4BFC 002AE1BC  7C 08 02 A6 */	mflr r0
 /* 802E4C00 002AE1C0  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
@@ -618,9 +617,9 @@ btm_acl_encrypt_change:
 /* 802E4D5C 002AE31C  7C 08 03 A6 */	mtlr r0
 /* 802E4D60 002AE320  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E4D64 002AE324  4E 80 00 20 */	blr 
+.endfn btm_acl_encrypt_change
 
-.global BTM_SetLinkPolicy
-BTM_SetLinkPolicy:
+.fn BTM_SetLinkPolicy, global
 /* 802E4D68 002AE328  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E4D6C 002AE32C  7C 08 02 A6 */	mflr r0
 /* 802E4D70 002AE330  90 01 00 24 */	stw r0, 0x24(r1)
@@ -754,16 +753,16 @@ BTM_SetLinkPolicy:
 /* 802E4F4C 002AE50C  7C 08 03 A6 */	mtlr r0
 /* 802E4F50 002AE510  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E4F54 002AE514  4E 80 00 20 */	blr 
+.endfn BTM_SetLinkPolicy
 
-.global BTM_SetDefaultLinkPolicy
-BTM_SetDefaultLinkPolicy:
+.fn BTM_SetDefaultLinkPolicy, global
 /* 802E4F58 002AE518  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
 /* 802E4F5C 002AE51C  38 84 F9 F8 */	addi r4, r4, lbl_805BF9F8@l
 /* 802E4F60 002AE520  B0 64 04 C4 */	sth r3, 0x4c4(r4)
 /* 802E4F64 002AE524  4E 80 00 20 */	blr
+.endfn BTM_SetDefaultLinkPolicy
 
-.global btm_read_link_policy_complete
-btm_read_link_policy_complete:
+.fn btm_read_link_policy_complete, global
 /* 802E4F68 002AE528  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802E4F6C 002AE52C  7C 08 02 A6 */	mflr r0
 /* 802E4F70 002AE530  90 01 00 34 */	stw r0, 0x34(r1)
@@ -834,9 +833,9 @@ btm_read_link_policy_complete:
 /* 802E5060 002AE620  7C 08 03 A6 */	mtlr r0
 /* 802E5064 002AE624  38 21 00 30 */	addi r1, r1, 0x30
 /* 802E5068 002AE628  4E 80 00 20 */	blr 
+.endfn btm_read_link_policy_complete
 
-.global btm_read_remote_version_complete
-btm_read_remote_version_complete:
+.fn btm_read_remote_version_complete, global
 /* 802E506C 002AE62C  88 03 00 00 */	lbz r0, 0(r3)
 /* 802E5070 002AE630  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
 /* 802E5074 002AE634  38 84 F9 F8 */	addi r4, r4, lbl_805BF9F8@l
@@ -874,9 +873,9 @@ btm_read_remote_version_complete:
 /* 802E50EC 002AE6AC  38 C6 01 1C */	addi r6, r6, 0x11c
 /* 802E50F0 002AE6B0  42 00 FF B0 */	bdnz .L_802E50A0
 /* 802E50F4 002AE6B4  4E 80 00 20 */	blr 
+.endfn btm_read_remote_version_complete
 
-.global btm_read_remote_features_complete
-btm_read_remote_features_complete:
+.fn btm_read_remote_features_complete, global
 /* 802E50F8 002AE6B8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E50FC 002AE6BC  7C 08 02 A6 */	mflr r0
 /* 802E5100 002AE6C0  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
@@ -1028,16 +1027,16 @@ btm_read_remote_features_complete:
 /* 802E5318 002AE8D8  7C 08 03 A6 */	mtlr r0
 /* 802E531C 002AE8DC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E5320 002AE8E0  4E 80 00 20 */	blr 
+.endfn btm_read_remote_features_complete
 
-.global BTM_SetDefaultLinkSuperTout
-BTM_SetDefaultLinkSuperTout:
+.fn BTM_SetDefaultLinkSuperTout, global
 /* 802E5324 002AE8E4  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
 /* 802E5328 002AE8E8  38 84 F9 F8 */	addi r4, r4, lbl_805BF9F8@l
 /* 802E532C 002AE8EC  B0 64 04 C6 */	sth r3, 0x4c6(r4)
 /* 802E5330 002AE8F0  4E 80 00 20 */	blr 
+.endfn BTM_SetDefaultLinkSuperTout
 
-.global BTM_IsAclConnectionUp
-BTM_IsAclConnectionUp:
+.fn BTM_IsAclConnectionUp, global
 /* 802E5334 002AE8F4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E5338 002AE8F8  7C 08 02 A6 */	mflr r0
 /* 802E533C 002AE8FC  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
@@ -1098,9 +1097,9 @@ BTM_IsAclConnectionUp:
 /* 802E5400 002AE9C0  7C 08 03 A6 */	mtlr r0
 /* 802E5404 002AE9C4  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E5408 002AE9C8  4E 80 00 20 */	blr 
+.endfn BTM_IsAclConnectionUp
 
-.global BTM_GetNumAclLinks
-BTM_GetNumAclLinks:
+.fn BTM_GetNumAclLinks, global
 /* 802E540C 002AE9CC  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
 /* 802E5410 002AE9D0  38 60 00 00 */	li r3, 0
 /* 802E5414 002AE9D4  38 84 F9 F8 */	addi r4, r4, lbl_805BF9F8@l
@@ -1127,16 +1126,16 @@ BTM_GetNumAclLinks:
 /* 802E545C 002AEA1C  38 03 00 01 */	addi r0, r3, 1
 /* 802E5460 002AEA20  54 03 04 3E */	clrlwi r3, r0, 0x10
 /* 802E5464 002AEA24  4E 80 00 20 */	blr 
+.endfn BTM_GetNumAclLinks
 
-.global btm_get_acl_disc_reason_code
-btm_get_acl_disc_reason_code:
+.fn btm_get_acl_disc_reason_code, global
 /* 802E5468 002AEA28  3C 60 80 5C */	lis r3, lbl_805BF9F8@ha
 /* 802E546C 002AEA2C  38 63 F9 F8 */	addi r3, r3, lbl_805BF9F8@l
 /* 802E5470 002AEA30  88 63 27 BF */	lbz r3, 0x27bf(r3)
 /* 802E5474 002AEA34  4E 80 00 20 */	blr 
+.endfn btm_get_acl_disc_reason_code
 
-.global BTM_GetHCIConnHandle
-BTM_GetHCIConnHandle:
+.fn BTM_GetHCIConnHandle, global
 /* 802E5478 002AEA38  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E547C 002AEA3C  7C 08 02 A6 */	mflr r0
 /* 802E5480 002AEA40  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
@@ -1181,9 +1180,9 @@ BTM_GetHCIConnHandle:
 /* 802E5508 002AEAC8  7C 08 03 A6 */	mtlr r0
 /* 802E550C 002AEACC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E5510 002AEAD0  4E 80 00 20 */	blr 
+.endfn BTM_GetHCIConnHandle
 
-.global btm_process_clk_off_comp_evt
-btm_process_clk_off_comp_evt:
+.fn btm_process_clk_off_comp_evt, global
 /* 802E5514 002AEAD4  3C A0 80 5C */	lis r5, lbl_805BF9F8@ha
 /* 802E5518 002AEAD8  38 C0 00 00 */	li r6, 0
 /* 802E551C 002AEADC  38 A5 F9 F8 */	addi r5, r5, lbl_805BF9F8@l
@@ -1228,9 +1227,9 @@ btm_process_clk_off_comp_evt:
 /* 802E55A4 002AEB64  7C 63 02 14 */	add r3, r3, r0
 /* 802E55A8 002AEB68  B0 83 00 3A */	sth r4, 0x3a(r3)
 /* 802E55AC 002AEB6C  4E 80 00 20 */	blr 
+.endfn btm_process_clk_off_comp_evt
 
-.global btm_acl_role_changed
-btm_acl_role_changed:
+.fn btm_acl_role_changed, global
 /* 802E55B0 002AEB70  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802E55B4 002AEB74  7C 08 02 A6 */	mflr r0
 /* 802E55B8 002AEB78  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1370,9 +1369,9 @@ btm_acl_role_changed:
 /* 802E5798 002AED58  7C 08 03 A6 */	mtlr r0
 /* 802E579C 002AED5C  38 21 00 30 */	addi r1, r1, 0x30
 /* 802E57A0 002AED60  4E 80 00 20 */	blr 
+.endfn btm_acl_role_changed
 
-.global btm_acl_timeout
-btm_acl_timeout:
+.fn btm_acl_timeout, global
 /* 802E57A4 002AED64  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E57A8 002AED68  7C 08 02 A6 */	mflr r0
 /* 802E57AC 002AED6C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1397,9 +1396,9 @@ btm_acl_timeout:
 /* 802E57F4 002AEDB4  7C 08 03 A6 */	mtlr r0
 /* 802E57F8 002AEDB8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E57FC 002AEDBC  4E 80 00 20 */	blr 
+.endfn btm_acl_timeout
 
-.global btm_get_max_packet_size
-btm_get_max_packet_size:
+.fn btm_get_max_packet_size, global
 /* 802E5800 002AEDC0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E5804 002AEDC4  7C 08 02 A6 */	mflr r0
 /* 802E5808 002AEDC8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1522,9 +1521,9 @@ btm_get_max_packet_size:
 /* 802E5994 002AEF54  7C 08 03 A6 */	mtlr r0
 /* 802E5998 002AEF58  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E599C 002AEF5C  4E 80 00 20 */	blr 
+.endfn btm_get_max_packet_size
 
-.global BTM_AclRegisterForChanges
-BTM_AclRegisterForChanges:
+.fn BTM_AclRegisterForChanges, global
 /* 802E59A0 002AEF60  2C 03 00 00 */	cmpwi r3, 0
 /* 802E59A4 002AEF64  40 82 00 18 */	bne .L_802E59BC
 /* 802E59A8 002AEF68  3C 60 80 5C */	lis r3, lbl_805BF9F8@ha
@@ -1545,9 +1544,9 @@ BTM_AclRegisterForChanges:
 .L_802E59DC:
 /* 802E59DC 002AEF9C  38 60 00 00 */	li r3, 0
 /* 802E59E0 002AEFA0  4E 80 00 20 */	blr 
+.endfn BTM_AclRegisterForChanges
 
-.global btm_qos_setup_complete
-btm_qos_setup_complete:
+.fn btm_qos_setup_complete, global
 /* 802E59E4 002AEFA4  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802E59E8 002AEFA8  7C 08 02 A6 */	mflr r0
 /* 802E59EC 002AEFAC  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1605,9 +1604,9 @@ btm_qos_setup_complete:
 /* 802E5AB0 002AF070  7C 08 03 A6 */	mtlr r0
 /* 802E5AB4 002AF074  38 21 00 40 */	addi r1, r1, 0x40
 /* 802E5AB8 002AF078  4E 80 00 20 */	blr 
+.endfn btm_qos_setup_complete
 
-.global BTM_ReadRSSI
-BTM_ReadRSSI:
+.fn BTM_ReadRSSI, global
 /* 802E5ABC 002AF07C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E5AC0 002AF080  7C 08 02 A6 */	mflr r0
 /* 802E5AC4 002AF084  3C A0 80 5C */	lis r5, lbl_805BF9F8@ha
@@ -1695,9 +1694,9 @@ BTM_ReadRSSI:
 /* 802E5BEC 002AF1AC  7C 08 03 A6 */	mtlr r0
 /* 802E5BF0 002AF1B0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E5BF4 002AF1B4  4E 80 00 20 */	blr 
+.endfn BTM_ReadRSSI
 
-.global BTM_ReadLinkQuality
-BTM_ReadLinkQuality:
+.fn BTM_ReadLinkQuality, global
 /* 802E5BF8 002AF1B8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E5BFC 002AF1BC  7C 08 02 A6 */	mflr r0
 /* 802E5C00 002AF1C0  3C A0 80 5C */	lis r5, lbl_805BF9F8@ha
@@ -1785,9 +1784,9 @@ BTM_ReadLinkQuality:
 /* 802E5D28 002AF2E8  7C 08 03 A6 */	mtlr r0
 /* 802E5D2C 002AF2EC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E5D30 002AF2F0  4E 80 00 20 */	blr
+.endfn BTM_ReadLinkQuality
 
-.global btm_read_rssi_complete
-btm_read_rssi_complete:
+.fn btm_read_rssi_complete, global
 /* 802E5D34 002AF2F4  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802E5D38 002AF2F8  7C 08 02 A6 */	mflr r0
 /* 802E5D3C 002AF2FC  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1865,9 +1864,9 @@ btm_read_rssi_complete:
 /* 802E5E44 002AF404  7C 08 03 A6 */	mtlr r0
 /* 802E5E48 002AF408  38 21 00 30 */	addi r1, r1, 0x30
 /* 802E5E4C 002AF40C  4E 80 00 20 */	blr
+.endfn btm_read_rssi_complete
 
-.global btm_read_link_quality_complete
-btm_read_link_quality_complete:
+.fn btm_read_link_quality_complete, global
 /* 802E5E50 002AF410  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802E5E54 002AF414  7C 08 02 A6 */	mflr r0
 /* 802E5E58 002AF418  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1944,9 +1943,9 @@ btm_read_link_quality_complete:
 /* 802E5F5C 002AF51C  7C 08 03 A6 */	mtlr r0
 /* 802E5F60 002AF520  38 21 00 30 */	addi r1, r1, 0x30
 /* 802E5F64 002AF524  4E 80 00 20 */	blr 
+.endfn btm_read_link_quality_complete
 
-.global btm_remove_acl
-btm_remove_acl:
+.fn btm_remove_acl, global
 /* 802E5F68 002AF528  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E5F6C 002AF52C  7C 08 02 A6 */	mflr r0
 /* 802E5F70 002AF530  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
@@ -2001,9 +2000,9 @@ btm_remove_acl:
 /* 802E6018 002AF5D8  7C 08 03 A6 */	mtlr r0
 /* 802E601C 002AF5DC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E6020 002AF5E0  4E 80 00 20 */	blr 
+.endfn btm_remove_acl
 
-.global btm_chg_all_acl_pkt_types
-btm_chg_all_acl_pkt_types:
+.fn btm_chg_all_acl_pkt_types, global
 /* 802E6024 002AF5E4  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802E6028 002AF5E8  7C 08 02 A6 */	mflr r0
 /* 802E602C 002AF5EC  90 01 00 44 */	stw r0, 0x44(r1)
@@ -2156,6 +2155,7 @@ btm_chg_all_acl_pkt_types:
 /* 802E6238 002AF7F8  7C 08 03 A6 */	mtlr r0
 /* 802E623C 002AF7FC  38 21 00 40 */	addi r1, r1, 0x40
 /* 802E6240 002AF800  4E 80 00 20 */	blr
+.endfn btm_chg_all_acl_pkt_types
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

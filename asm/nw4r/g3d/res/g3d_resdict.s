@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global Get__Q34nw4r3g3d6ResDicCFQ34nw4r3g3d7ResName
-Get__Q34nw4r3g3d6ResDicCFQ34nw4r3g3d7ResName:
+.fn Get__Q34nw4r3g3d6ResDicCFQ34nw4r3g3d7ResName, global
 /* 803D7960 003A0F20  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D7964 003A0F24  7C 08 02 A6 */	mflr r0
 /* 803D7968 003A0F28  80 A3 00 00 */	lwz r5, 0(r3)
@@ -63,9 +62,9 @@ Get__Q34nw4r3g3d6ResDicCFQ34nw4r3g3d7ResName:
 /* 803D7A2C 003A0FEC  7C 08 03 A6 */	mtlr r0
 /* 803D7A30 003A0FF0  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D7A34 003A0FF4  4E 80 00 20 */	blr 
+.endfn Get__Q34nw4r3g3d6ResDicCFQ34nw4r3g3d7ResName
 
-.global Get__Q34nw4r3g3d6ResDicCFPCcUl
-Get__Q34nw4r3g3d6ResDicCFPCcUl:
+.fn Get__Q34nw4r3g3d6ResDicCFPCcUl, global
 /* 803D7A38 003A0FF8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D7A3C 003A0FFC  7C 08 02 A6 */	mflr r0
 /* 803D7A40 003A1000  80 C3 00 00 */	lwz r6, 0(r3)
@@ -126,9 +125,9 @@ Get__Q34nw4r3g3d6ResDicCFPCcUl:
 /* 803D7B00 003A10C0  7C 08 03 A6 */	mtlr r0
 /* 803D7B04 003A10C4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D7B08 003A10C8  4E 80 00 20 */	blr 
+.endfn Get__Q34nw4r3g3d6ResDicCFPCcUl
 
-.global __vc__Q34nw4r3g3d6ResDicCFPCc
-__vc__Q34nw4r3g3d6ResDicCFPCc:
+.fn __vc__Q34nw4r3g3d6ResDicCFPCc, global
 /* 803D7B0C 003A10CC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D7B10 003A10D0  7C 08 02 A6 */	mflr r0
 /* 803D7B14 003A10D4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -162,9 +161,9 @@ __vc__Q34nw4r3g3d6ResDicCFPCc:
 /* 803D7B7C 003A113C  7C 08 03 A6 */	mtlr r0
 /* 803D7B80 003A1140  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D7B84 003A1144  4E 80 00 20 */	blr 
+.endfn __vc__Q34nw4r3g3d6ResDicCFPCc
 
-.global __vc__Q34nw4r3g3d6ResDicCFQ34nw4r3g3d7ResName
-__vc__Q34nw4r3g3d6ResDicCFQ34nw4r3g3d7ResName:
+.fn __vc__Q34nw4r3g3d6ResDicCFQ34nw4r3g3d7ResName, global
 /* 803D7B88 003A1148  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D7B8C 003A114C  7C 08 02 A6 */	mflr r0
 /* 803D7B90 003A1150  90 01 00 24 */	stw r0, 0x24(r1)
@@ -193,9 +192,9 @@ __vc__Q34nw4r3g3d6ResDicCFQ34nw4r3g3d7ResName:
 /* 803D7BE4 003A11A4  7C 08 03 A6 */	mtlr r0
 /* 803D7BE8 003A11A8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D7BEC 003A11AC  4E 80 00 20 */	blr 
+.endfn __vc__Q34nw4r3g3d6ResDicCFQ34nw4r3g3d7ResName
 
-.global GetIndex__Q34nw4r3g3d6ResDicCFPCc
-GetIndex__Q34nw4r3g3d6ResDicCFPCc:
+.fn GetIndex__Q34nw4r3g3d6ResDicCFPCc, global
 /* 803D7BF0 003A11B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D7BF4 003A11B4  7C 08 02 A6 */	mflr r0
 /* 803D7BF8 003A11B8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -231,6 +230,7 @@ GetIndex__Q34nw4r3g3d6ResDicCFPCc:
 /* 803D7C68 003A1228  7C 08 03 A6 */	mtlr r0
 /* 803D7C6C 003A122C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D7C70 003A1230  4E 80 00 20 */	blr 
+.endfn GetIndex__Q34nw4r3g3d6ResDicCFPCc
 
 .global GetIndex__Q34nw4r3g3d6ResDicCFQ34nw4r3g3d7ResName
 GetIndex__Q34nw4r3g3d6ResDicCFQ34nw4r3g3d7ResName:

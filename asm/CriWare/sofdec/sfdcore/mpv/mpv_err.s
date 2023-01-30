@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global MPVERR_Init
-MPVERR_Init:
+.fn MPVERR_Init, global
 /* 803A6154 0036F714  3C 80 80 60 */	lis r4, lbl_80605F38@ha
 /* 803A6158 0036F718  38 00 00 00 */	li r0, 0
 /* 803A615C 0036F71C  38 64 5F 38 */	addi r3, r4, lbl_80605F38@l
@@ -14,9 +13,9 @@ MPVERR_Init:
 /* 803A616C 0036F72C  90 03 00 0C */	stw r0, 0xc(r3)
 /* 803A6170 0036F730  90 03 00 10 */	stw r0, 0x10(r3)
 /* 803A6174 0036F734  4E 80 00 20 */	blr 
+.endfn MPVERR_Init
 
-.global MPVERR_InitErrInf
-MPVERR_InitErrInf:
+.fn MPVERR_InitErrInf, global
 /* 803A6178 0036F738  38 00 00 00 */	li r0, 0
 /* 803A617C 0036F73C  90 03 00 00 */	stw r0, 0(r3)
 /* 803A6180 0036F740  90 03 00 04 */	stw r0, 4(r3)
@@ -24,9 +23,9 @@ MPVERR_InitErrInf:
 /* 803A6188 0036F748  90 03 00 0C */	stw r0, 0xc(r3)
 /* 803A618C 0036F74C  90 03 00 10 */	stw r0, 0x10(r3)
 /* 803A6190 0036F750  4E 80 00 20 */	blr 
+.endfn MPVERR_InitErrInf
 
-.global MPV_SetErrFunc
-MPV_SetErrFunc:
+.fn MPV_SetErrFunc, global
 /* 803A6194 0036F754  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A6198 0036F758  7C 08 02 A6 */	mflr r0
 /* 803A619C 0036F75C  2C 03 00 00 */	cmpwi r3, 0
@@ -74,9 +73,9 @@ MPV_SetErrFunc:
 /* 803A6230 0036F7F0  7C 08 03 A6 */	mtlr r0
 /* 803A6234 0036F7F4  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A6238 0036F7F8  4E 80 00 20 */	blr 
+.endfn MPV_SetErrFunc
 
-.global MPVERR_SetCode
-MPVERR_SetCode:
+.fn MPVERR_SetCode, global
 /* 803A623C 0036F7FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A6240 0036F800  7C 08 02 A6 */	mflr r0
 /* 803A6244 0036F804  2C 03 00 00 */	cmpwi r3, 0
@@ -113,6 +112,7 @@ MPVERR_SetCode:
 /* 803A62B8 0036F878  7C 08 03 A6 */	mtlr r0
 /* 803A62BC 0036F87C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A62C0 0036F880  4E 80 00 20 */	blr 
+.endfn MPVERR_SetCode
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

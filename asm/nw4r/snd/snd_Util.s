@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global CalcPitchRatio__Q44nw4r3snd6detail4UtilFi
-CalcPitchRatio__Q44nw4r3snd6detail4UtilFi:
+.fn CalcPitchRatio__Q44nw4r3snd6detail4UtilFi, global
 /* 804293D0 003F2990  20 A3 0B FF */	subfic r5, r3, 0xbff
 /* 804293D4 003F2994  38 00 0C 00 */	li r0, 0xc00
 /* 804293D8 003F2998  7C A5 03 96 */	divwu r5, r5, r0
@@ -124,9 +123,9 @@ CalcPitchRatio__Q44nw4r3snd6detail4UtilFi:
 /* 80429554 003F2B14  7C 04 04 2E */	lfsx f0, r4, r0
 /* 80429558 003F2B18  EC 21 00 32 */	fmuls f1, f1, f0
 /* 8042955C 003F2B1C  4E 80 00 20 */	blr 
+.endfn CalcPitchRatio__Q44nw4r3snd6detail4UtilFi
 
-.global CalcVolumeRatio__Q44nw4r3snd6detail4UtilFf
-CalcVolumeRatio__Q44nw4r3snd6detail4UtilFf:
+.fn CalcVolumeRatio__Q44nw4r3snd6detail4UtilFf, global
 /* 80429560 003F2B20  C0 42 C5 5C */	lfs f2, float_8066C8DC@sda21(r2)
 /* 80429564 003F2B24  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80429568 003F2B28  FC 01 10 40 */	fcmpo cr0, f1, f2
@@ -152,9 +151,9 @@ CalcVolumeRatio__Q44nw4r3snd6detail4UtilFf:
 /* 804295AC 003F2B6C  7C 23 04 2E */	lfsx f1, r3, r0
 /* 804295B0 003F2B70  38 21 00 10 */	addi r1, r1, 0x10
 /* 804295B4 003F2B74  4E 80 00 20 */	blr 
+.endfn CalcVolumeRatio__Q44nw4r3snd6detail4UtilFf
 
-.global CalcPanRatio__Q44nw4r3snd6detail4UtilFfRCQ54nw4r3snd6detail4Util7PanInfo
-CalcPanRatio__Q44nw4r3snd6detail4UtilFfRCQ54nw4r3snd6detail4Util7PanInfo:
+.fn CalcPanRatio__Q44nw4r3snd6detail4UtilFfRCQ54nw4r3snd6detail4Util7PanInfo, global
 /* 804295B8 003F2B78  C0 42 C5 50 */	lfs f2, float_8066C8D0@sda21(r2)
 /* 804295BC 003F2B7C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804295C0 003F2B80  FC 01 10 40 */	fcmpo cr0, f1, f2
@@ -221,9 +220,9 @@ CalcPanRatio__Q44nw4r3snd6detail4UtilFfRCQ54nw4r3snd6detail4Util7PanInfo:
 .L_80429690:
 /* 80429690 003F2C50  38 21 00 10 */	addi r1, r1, 0x10
 /* 80429694 003F2C54  4E 80 00 20 */	blr 
+.endfn CalcPanRatio__Q44nw4r3snd6detail4UtilFfRCQ54nw4r3snd6detail4Util7PanInfo
 
-.global CalcSurroundPanRatio__Q44nw4r3snd6detail4UtilFfRCQ54nw4r3snd6detail4Util7PanInfo
-CalcSurroundPanRatio__Q44nw4r3snd6detail4UtilFfRCQ54nw4r3snd6detail4Util7PanInfo:
+.fn CalcSurroundPanRatio__Q44nw4r3snd6detail4UtilFfRCQ54nw4r3snd6detail4Util7PanInfo, global
 /* 80429698 003F2C58  C0 02 C5 54 */	lfs f0, float_8066C8D4@sda21(r2)
 /* 8042969C 003F2C5C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804296A0 003F2C60  FC 01 00 40 */	fcmpo cr0, f1, f0
@@ -267,9 +266,9 @@ CalcSurroundPanRatio__Q44nw4r3snd6detail4UtilFfRCQ54nw4r3snd6detail4Util7PanInfo
 /* 80429720 003F2CE0  FC 20 18 90 */	fmr f1, f3
 /* 80429724 003F2CE4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80429728 003F2CE8  4E 80 00 20 */	blr 
+.endfn CalcSurroundPanRatio__Q44nw4r3snd6detail4UtilFfRCQ54nw4r3snd6detail4Util7PanInfo
 
-.global CalcLpfFreq__Q44nw4r3snd6detail4UtilFf
-CalcLpfFreq__Q44nw4r3snd6detail4UtilFf:
+.fn CalcLpfFreq__Q44nw4r3snd6detail4UtilFf, global
 /* 8042972C 003F2CEC  C0 42 C5 50 */	lfs f2, float_8066C8D0@sda21(r2)
 /* 80429730 003F2CF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80429734 003F2CF4  FC 01 10 40 */	fcmpo cr0, f1, f2
@@ -309,9 +308,9 @@ CalcLpfFreq__Q44nw4r3snd6detail4UtilFf:
 .L_804297A8:
 /* 804297A8 003F2D68  38 21 00 10 */	addi r1, r1, 0x10
 /* 804297AC 003F2D6C  4E 80 00 20 */	blr 
+.endfn CalcLpfFreq__Q44nw4r3snd6detail4UtilFf
 
-.global GetRemoteFilterCoefs__Q44nw4r3snd6detail4UtilFiPUsPUsPUsPUsPUs
-GetRemoteFilterCoefs__Q44nw4r3snd6detail4UtilFiPUsPUsPUsPUsPUs:
+.fn GetRemoteFilterCoefs__Q44nw4r3snd6detail4UtilFiPUsPUsPUsPUsPUs, global
 /* 804297B0 003F2D70  2C 03 00 7F */	cmpwi r3, 0x7f
 /* 804297B4 003F2D74  40 81 00 0C */	ble .L_804297C0
 /* 804297B8 003F2D78  38 00 00 7F */	li r0, 0x7f
@@ -335,9 +334,9 @@ GetRemoteFilterCoefs__Q44nw4r3snd6detail4UtilFiPUsPUsPUsPUsPUs:
 /* 804297F8 003F2DB8  B0 67 00 00 */	sth r3, 0(r7)
 /* 804297FC 003F2DBC  B0 08 00 00 */	sth r0, 0(r8)
 /* 80429800 003F2DC0  4E 80 00 20 */	blr 
+.endfn GetRemoteFilterCoefs__Q44nw4r3snd6detail4UtilFiPUsPUsPUsPUsPUs
 
-.global CalcRandom__Q44nw4r3snd6detail4UtilFv
-CalcRandom__Q44nw4r3snd6detail4UtilFv:
+.fn CalcRandom__Q44nw4r3snd6detail4UtilFv, global
 /* 80429804 003F2DC4  3C 60 00 19 */	lis r3, 0x0019660D@ha
 /* 80429808 003F2DC8  80 8D 9C A0 */	lwz r4, lbl_80665E20@sda21(r13)
 /* 8042980C 003F2DCC  38 03 66 0D */	addi r0, r3, 0x0019660D@l
@@ -347,9 +346,9 @@ CalcRandom__Q44nw4r3snd6detail4UtilFv:
 /* 8042981C 003F2DDC  90 0D 9C A0 */	stw r0, lbl_80665E20@sda21(r13)
 /* 80429820 003F2DE0  54 03 84 3E */	srwi r3, r0, 0x10
 /* 80429824 003F2DE4  4E 80 00 20 */	blr 
+.endfn CalcRandom__Q44nw4r3snd6detail4UtilFv
 
-.global GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
-GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv:
+.fn GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv, global
 /* 80429828 003F2DE8  2C 03 00 01 */	cmpwi r3, 1
 /* 8042982C 003F2DEC  40 82 00 0C */	bne .L_80429838
 /* 80429830 003F2DF0  7C 64 2A 14 */	add r3, r4, r5
@@ -360,6 +359,7 @@ GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUl
 /* 80429840 003F2E00  4C 82 00 20 */	bnelr 
 /* 80429844 003F2E04  7C 83 23 78 */	mr r3, r4
 /* 80429848 003F2E08  4E 80 00 20 */	blr 
+.endfn GetDataRefAddressImpl__Q44nw4r3snd6detail4UtilFQ54nw4r3snd6detail4Util7RefTypeUlPCv
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0

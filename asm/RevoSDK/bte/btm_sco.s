@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global btm_sco_init
-btm_sco_init:
+.fn btm_sco_init, global
 /* 802EAB54 002B4114  3C 60 80 51 */	lis r3, lbl_8050E250@ha
 /* 802EAB58 002B4118  84 C3 E2 50 */	lwzu r6, lbl_8050E250@l(r3)
 /* 802EAB5C 002B411C  3C 80 00 01 */	lis r4, 0x0000FFFF@ha
@@ -21,9 +20,9 @@ btm_sco_init:
 /* 802EAB8C 002B414C  90 67 19 04 */	stw r3, 0x1904(r7)
 /* 802EAB90 002B4150  98 07 19 09 */	stb r0, 0x1909(r7)
 /* 802EAB94 002B4154  4E 80 00 20 */	blr 
+.endfn btm_sco_init
 
-.global btm_esco_conn_rsp
-btm_esco_conn_rsp:
+.fn btm_esco_conn_rsp, global
 /* 802EAB98 002B4158  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802EAB9C 002B415C  7C 08 02 A6 */	mflr r0
 /* 802EABA0 002B4160  90 01 00 24 */	stw r0, 0x24(r1)
@@ -153,9 +152,9 @@ btm_esco_conn_rsp:
 /* 802EAD68 002B4328  7C 08 03 A6 */	mtlr r0
 /* 802EAD6C 002B432C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802EAD70 002B4330  4E 80 00 20 */	blr 
+.endfn btm_esco_conn_rsp
 
-.global btm_sco_chk_pend_unpark
-btm_sco_chk_pend_unpark:
+.fn btm_sco_chk_pend_unpark, global
 /* 802EAD74 002B4334  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802EAD78 002B4338  7C 08 02 A6 */	mflr r0
 /* 802EAD7C 002B433C  90 01 00 44 */	stw r0, 0x44(r1)
@@ -264,9 +263,9 @@ btm_sco_chk_pend_unpark:
 /* 802EAEF4 002B44B4  7C 08 03 A6 */	mtlr r0
 /* 802EAEF8 002B44B8  38 21 00 40 */	addi r1, r1, 0x40
 /* 802EAEFC 002B44BC  4E 80 00 20 */	blr 
+.endfn btm_sco_chk_pend_unpark
 
-.global btm_sco_conn_req
-btm_sco_conn_req:
+.fn btm_sco_conn_req, global
 /* 802EAF00 002B44C0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802EAF04 002B44C4  7C 08 02 A6 */	mflr r0
 /* 802EAF08 002B44C8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -398,9 +397,9 @@ btm_sco_conn_req:
 /* 802EB0D4 002B4694  7C 08 03 A6 */	mtlr r0
 /* 802EB0D8 002B4698  38 21 00 30 */	addi r1, r1, 0x30
 /* 802EB0DC 002B469C  4E 80 00 20 */	blr 
+.endfn btm_sco_conn_req
 
-.global btm_sco_connected
-btm_sco_connected:
+.fn btm_sco_connected, global
 /* 802EB0E0 002B46A0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802EB0E4 002B46A4  7C 08 02 A6 */	mflr r0
 /* 802EB0E8 002B46A8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -514,9 +513,9 @@ btm_sco_connected:
 /* 802EB274 002B4834  7C 08 03 A6 */	mtlr r0
 /* 802EB278 002B4838  38 21 00 30 */	addi r1, r1, 0x30
 /* 802EB27C 002B483C  4E 80 00 20 */	blr 
+.endfn btm_sco_connected
 
-.global BTM_RemoveSco
-BTM_RemoveSco:
+.fn BTM_RemoveSco, global
 /* 802EB280 002B4840  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802EB284 002B4844  7C 08 02 A6 */	mflr r0
 /* 802EB288 002B4848  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
@@ -569,9 +568,9 @@ BTM_RemoveSco:
 /* 802EB32C 002B48EC  7C 08 03 A6 */	mtlr r0
 /* 802EB330 002B48F0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802EB334 002B48F4  4E 80 00 20 */	blr 
+.endfn BTM_RemoveSco
 
-.global btm_remove_sco_links
-btm_remove_sco_links:
+.fn btm_remove_sco_links, global
 /* 802EB338 002B48F8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802EB33C 002B48FC  7C 08 02 A6 */	mflr r0
 /* 802EB340 002B4900  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
@@ -607,9 +606,9 @@ btm_remove_sco_links:
 /* 802EB3B0 002B4970  7C 08 03 A6 */	mtlr r0
 /* 802EB3B4 002B4974  38 21 00 20 */	addi r1, r1, 0x20
 /* 802EB3B8 002B4978  4E 80 00 20 */	blr 
+.endfn btm_remove_sco_links
 
-.global btm_sco_removed
-btm_sco_removed:
+.fn btm_sco_removed, global
 /* 802EB3BC 002B497C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802EB3C0 002B4980  7C 08 02 A6 */	mflr r0
 /* 802EB3C4 002B4984  3C A0 80 5C */	lis r5, lbl_805BF9F8@ha
@@ -689,9 +688,9 @@ btm_sco_removed:
 /* 802EB4C4 002B4A84  7C 08 03 A6 */	mtlr r0
 /* 802EB4C8 002B4A88  38 21 00 10 */	addi r1, r1, 0x10
 /* 802EB4CC 002B4A8C  4E 80 00 20 */	blr 
+.endfn btm_sco_removed
 
-.global btm_sco_acl_removed
-btm_sco_acl_removed:
+.fn btm_sco_acl_removed, global
 /* 802EB4D0 002B4A90  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802EB4D4 002B4A94  7C 08 02 A6 */	mflr r0
 /* 802EB4D8 002B4A98  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
@@ -740,13 +739,13 @@ btm_sco_acl_removed:
 /* 802EB578 002B4B38  7C 08 03 A6 */	mtlr r0
 /* 802EB57C 002B4B3C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802EB580 002B4B40  4E 80 00 20 */	blr 
+.endfn btm_sco_acl_removed
 
-.global btm_route_sco_data
-btm_route_sco_data:
+.fn btm_route_sco_data, global
 /* 802EB584 002B4B44  4B FE FF 5C */	b GKI_freebuf
+.endfn btm_route_sco_data
 
-.global BTM_ChangeEScoLinkParms
-BTM_ChangeEScoLinkParms:
+.fn BTM_ChangeEScoLinkParms, global
 /* 802EB588 002B4B48  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802EB58C 002B4B4C  7C 08 02 A6 */	mflr r0
 /* 802EB590 002B4B50  90 01 00 24 */	stw r0, 0x24(r1)
@@ -864,9 +863,9 @@ BTM_ChangeEScoLinkParms:
 /* 802EB724 002B4CE4  7C 08 03 A6 */	mtlr r0
 /* 802EB728 002B4CE8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802EB72C 002B4CEC  4E 80 00 20 */	blr 
+.endfn BTM_ChangeEScoLinkParms
 
-.global btm_esco_proc_conn_chg
-btm_esco_proc_conn_chg:
+.fn btm_esco_proc_conn_chg, global
 /* 802EB730 002B4CF0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802EB734 002B4CF4  7C 08 02 A6 */	mflr r0
 /* 802EB738 002B4CF8  90 01 00 44 */	stw r0, 0x44(r1)
@@ -936,9 +935,9 @@ btm_esco_proc_conn_chg:
 /* 802EB828 002B4DE8  7C 08 03 A6 */	mtlr r0
 /* 802EB82C 002B4DEC  38 21 00 40 */	addi r1, r1, 0x40
 /* 802EB830 002B4DF0  4E 80 00 20 */	blr 
+.endfn btm_esco_proc_conn_chg
 
-.global btm_is_sco_active
-btm_is_sco_active:
+.fn btm_is_sco_active, global
 /* 802EB834 002B4DF4  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
 /* 802EB838 002B4DF8  38 84 F9 F8 */	addi r4, r4, lbl_805BF9F8@l
 /* 802EB83C 002B4DFC  A0 04 18 5E */	lhz r0, 0x185e(r4)
@@ -970,9 +969,9 @@ btm_is_sco_active:
 .L_802EB89C:
 /* 802EB89C 002B4E5C  38 60 00 00 */	li r3, 0
 /* 802EB8A0 002B4E60  4E 80 00 20 */	blr 
+.endfn btm_is_sco_active
 
-.global btm_num_sco_links_active
-btm_num_sco_links_active:
+.fn btm_num_sco_links_active, global
 /* 802EB8A4 002B4E64  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
 /* 802EB8A8 002B4E68  38 60 00 00 */	li r3, 0
 /* 802EB8AC 002B4E6C  38 84 F9 F8 */	addi r4, r4, lbl_805BF9F8@l
@@ -1001,9 +1000,9 @@ btm_num_sco_links_active:
 /* 802EB8F8 002B4EB8  4D 80 00 20 */	bltlr 
 /* 802EB8FC 002B4EBC  38 63 00 01 */	addi r3, r3, 1
 /* 802EB900 002B4EC0  4E 80 00 20 */	blr 
+.endfn btm_num_sco_links_active
 
-.global btm_is_sco_active_by_bdaddr
-btm_is_sco_active_by_bdaddr:
+.fn btm_is_sco_active_by_bdaddr, global
 /* 802EB904 002B4EC4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802EB908 002B4EC8  7C 08 02 A6 */	mflr r0
 /* 802EB90C 002B4ECC  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
@@ -1041,6 +1040,7 @@ btm_is_sco_active_by_bdaddr:
 /* 802EB980 002B4F40  7C 08 03 A6 */	mtlr r0
 /* 802EB984 002B4F44  38 21 00 20 */	addi r1, r1, 0x20
 /* 802EB988 002B4F48  4E 80 00 20 */	blr
+.endfn btm_is_sco_active_by_bdaddr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 .global lbl_80545530

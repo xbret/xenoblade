@@ -1,5 +1,6 @@
 #include "kyoshin/appgame/main.hpp"
 #include "kyoshin/appgame/CGame.hpp"
+#include "kyoshin/appgame/code_802AEB74.hpp"
 
 extern char* pkhFilenames[];
 extern u32 lbl_80528390[];

@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global InitReaderFunc__Q34nw4r2ut4FontFQ34nw4r2ut12FontEncoding
-InitReaderFunc__Q34nw4r2ut4FontFQ34nw4r2ut12FontEncoding:
+.fn InitReaderFunc__Q34nw4r2ut4FontFQ34nw4r2ut12FontEncoding, global
 /* 8042BFCC 003F558C  2C 04 00 02 */	cmpwi r4, 2
 /* 8042BFD0 003F5590  3C A0 80 57 */	lis r5, lbl_8056E710@ha
 /* 8042BFD4 003F5594  38 A5 E7 10 */	addi r5, r5, lbl_8056E710@l
@@ -50,6 +49,7 @@ InitReaderFunc__Q34nw4r2ut4FontFQ34nw4r2ut12FontEncoding:
 /* 8042C068 003F5628  80 04 00 08 */	lwz r0, 8(r4)
 /* 8042C06C 003F562C  90 03 00 0C */	stw r0, 0xc(r3)
 /* 8042C070 003F5630  4E 80 00 20 */	blr 
+.endfn InitReaderFunc__Q34nw4r2ut4FontFQ34nw4r2ut12FontEncoding
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

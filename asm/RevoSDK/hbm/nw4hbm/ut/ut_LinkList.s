@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global __dt__Q46nw4hbm2ut6detail12LinkListImplFv
-__dt__Q46nw4hbm2ut6detail12LinkListImplFv:
+.fn __dt__Q46nw4hbm2ut6detail12LinkListImplFv, global
 /* 80338540 00301B00  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80338544 00301B04  7C 08 02 A6 */	mflr r0
 /* 80338548 00301B08  2C 03 00 00 */	cmpwi r3, 0
@@ -41,10 +40,10 @@ __dt__Q46nw4hbm2ut6detail12LinkListImplFv:
 /* 803385B8 00301B78  7C 08 03 A6 */	mtlr r0
 /* 803385BC 00301B7C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803385C0 00301B80  4E 80 00 20 */	blr 
+.endfn __dt__Q46nw4hbm2ut6detail12LinkListImplFv
 
 .balign 16, 0
-.global func_803385D0
-func_803385D0:
+.fn func_803385D0, global
 /* 803385D0 00301B90  80 C4 00 00 */	lwz r6, 0(r4)
 /* 803385D4 00301B94  38 00 00 00 */	li r0, 0
 /* 803385D8 00301B98  80 A6 00 00 */	lwz r5, 0(r6)
@@ -65,6 +64,7 @@ func_803385D0:
 /* 8033860C 00301BCC  40 82 FF D4 */	bne .L_803385E0
 /* 80338610 00301BD0  7C A3 2B 78 */	mr r3, r5
 /* 80338614 00301BD4  4E 80 00 20 */	blr 
+.endfn func_803385D0
 
 .balign 16, 0
 .global func_80338620

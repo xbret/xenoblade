@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global rfc_send_sabme
-rfc_send_sabme:
+.fn rfc_send_sabme, global
 /* 80301094 002CA654  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80301098 002CA658  7C 08 02 A6 */	mflr r0
 /* 8030109C 002CA65C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -50,9 +49,9 @@ rfc_send_sabme:
 /* 80301138 002CA6F8  7C 08 03 A6 */	mtlr r0
 /* 8030113C 002CA6FC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80301140 002CA700  4E 80 00 20 */	blr 
+.endfn rfc_send_sabme
 
-.global rfc_send_ua
-rfc_send_ua:
+.fn rfc_send_ua, global
 /* 80301144 002CA704  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80301148 002CA708  7C 08 02 A6 */	mflr r0
 /* 8030114C 002CA70C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -99,9 +98,9 @@ rfc_send_ua:
 /* 803011E8 002CA7A8  7C 08 03 A6 */	mtlr r0
 /* 803011EC 002CA7AC  38 21 00 20 */	addi r1, r1, 0x20
 /* 803011F0 002CA7B0  4E 80 00 20 */	blr 
+.endfn rfc_send_ua
 
-.global rfc_send_dm
-rfc_send_dm:
+.fn rfc_send_dm, global
 /* 803011F4 002CA7B4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803011F8 002CA7B8  7C 08 02 A6 */	mflr r0
 /* 803011FC 002CA7BC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -153,9 +152,9 @@ rfc_send_dm:
 /* 803012AC 002CA86C  7C 08 03 A6 */	mtlr r0
 /* 803012B0 002CA870  38 21 00 20 */	addi r1, r1, 0x20
 /* 803012B4 002CA874  4E 80 00 20 */	blr 
+.endfn rfc_send_dm
 
-.global rfc_send_disc
-rfc_send_disc:
+.fn rfc_send_disc, global
 /* 803012B8 002CA878  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803012BC 002CA87C  7C 08 02 A6 */	mflr r0
 /* 803012C0 002CA880  90 01 00 24 */	stw r0, 0x24(r1)
@@ -202,9 +201,9 @@ rfc_send_disc:
 /* 8030135C 002CA91C  7C 08 03 A6 */	mtlr r0
 /* 80301360 002CA920  38 21 00 20 */	addi r1, r1, 0x20
 /* 80301364 002CA924  4E 80 00 20 */	blr 
+.endfn rfc_send_disc
 
-.global rfc_send_buf_uih
-rfc_send_buf_uih:
+.fn rfc_send_buf_uih, global
 /* 80301368 002CA928  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8030136C 002CA92C  7C 08 02 A6 */	mflr r0
 /* 80301370 002CA930  90 01 00 24 */	stw r0, 0x24(r1)
@@ -317,9 +316,9 @@ rfc_send_buf_uih:
 /* 803014F4 002CAAB4  7C 08 03 A6 */	mtlr r0
 /* 803014F8 002CAAB8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803014FC 002CAABC  4E 80 00 20 */	blr 
+.endfn rfc_send_buf_uih
 
-.global rfc_send_pn
-rfc_send_pn:
+.fn rfc_send_pn, global
 /* 80301500 002CAAC0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80301504 002CAAC4  7C 08 02 A6 */	mflr r0
 /* 80301508 002CAAC8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -381,9 +380,9 @@ rfc_send_pn:
 /* 803015DC 002CAB9C  7C 08 03 A6 */	mtlr r0
 /* 803015E0 002CABA0  38 21 00 20 */	addi r1, r1, 0x20
 /* 803015E4 002CABA4  4E 80 00 20 */	blr 
+.endfn rfc_send_pn
 
-.global rfc_send_fcon
-rfc_send_fcon:
+.fn rfc_send_fcon, global
 /* 803015E8 002CABA8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803015EC 002CABAC  7C 08 02 A6 */	mflr r0
 /* 803015F0 002CABB0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -418,9 +417,9 @@ rfc_send_fcon:
 /* 80301660 002CAC20  7C 08 03 A6 */	mtlr r0
 /* 80301664 002CAC24  38 21 00 10 */	addi r1, r1, 0x10
 /* 80301668 002CAC28  4E 80 00 20 */	blr 
+.endfn rfc_send_fcon
 
-.global rfc_send_fcoff
-rfc_send_fcoff:
+.fn rfc_send_fcoff, global
 /* 8030166C 002CAC2C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80301670 002CAC30  7C 08 02 A6 */	mflr r0
 /* 80301674 002CAC34  90 01 00 14 */	stw r0, 0x14(r1)
@@ -455,9 +454,9 @@ rfc_send_fcoff:
 /* 803016E4 002CACA4  7C 08 03 A6 */	mtlr r0
 /* 803016E8 002CACA8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803016EC 002CACAC  4E 80 00 20 */	blr 
+.endfn rfc_send_fcoff
 
-.global rfc_send_msc
-rfc_send_msc:
+.fn rfc_send_msc, global
 /* 803016F0 002CACB0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803016F4 002CACB4  7C 08 02 A6 */	mflr r0
 /* 803016F8 002CACB8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -532,9 +531,9 @@ rfc_send_msc:
 /* 80301804 002CADC4  7C 08 03 A6 */	mtlr r0
 /* 80301808 002CADC8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8030180C 002CADCC  4E 80 00 20 */	blr 
+.endfn rfc_send_msc
 
-.global rfc_send_rls
-rfc_send_rls:
+.fn rfc_send_rls, global
 /* 80301810 002CADD0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80301814 002CADD4  7C 08 02 A6 */	mflr r0
 /* 80301818 002CADD8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -580,9 +579,9 @@ rfc_send_rls:
 /* 803018B4 002CAE74  7C 08 03 A6 */	mtlr r0
 /* 803018B8 002CAE78  38 21 00 20 */	addi r1, r1, 0x20
 /* 803018BC 002CAE7C  4E 80 00 20 */	blr 
+.endfn rfc_send_rls
 
-.global rfc_send_rpn
-rfc_send_rpn:
+.fn rfc_send_rpn, global
 /* 803018C0 002CAE80  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803018C4 002CAE84  7C 08 02 A6 */	mflr r0
 /* 803018C8 002CAE88  90 01 00 24 */	stw r0, 0x24(r1)
@@ -657,9 +656,9 @@ rfc_send_rpn:
 /* 803019D0 002CAF90  7C 08 03 A6 */	mtlr r0
 /* 803019D4 002CAF94  38 21 00 20 */	addi r1, r1, 0x20
 /* 803019D8 002CAF98  4E 80 00 20 */	blr 
+.endfn rfc_send_rpn
 
-.global rfc_send_test
-rfc_send_test:
+.fn rfc_send_test, global
 /* 803019DC 002CAF9C  A0 05 00 04 */	lhz r0, 4(r5)
 /* 803019E0 002CAFA0  28 00 00 10 */	cmplwi r0, 0x10
 /* 803019E4 002CAFA4  40 80 00 50 */	bge .L_80301A34
@@ -705,9 +704,9 @@ rfc_send_test:
 /* 80301A78 002CB038  38 06 00 02 */	addi r0, r6, 2
 /* 80301A7C 002CB03C  B0 05 00 02 */	sth r0, 2(r5)
 /* 80301A80 002CB040  4B FF F8 E8 */	b rfc_send_buf_uih
+.endfn rfc_send_test
 
-.global rfc_send_credit
-rfc_send_credit:
+.fn rfc_send_credit, global
 /* 80301A84 002CB044  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80301A88 002CB048  7C 08 02 A6 */	mflr r0
 /* 80301A8C 002CB04C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -758,9 +757,9 @@ rfc_send_credit:
 /* 80301B38 002CB0F8  7C 08 03 A6 */	mtlr r0
 /* 80301B3C 002CB0FC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80301B40 002CB100  4E 80 00 20 */	blr 
+.endfn rfc_send_credit
 
-.global rfc_parse_data
-rfc_parse_data:
+.fn rfc_parse_data, global
 /* 80301B44 002CB104  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80301B48 002CB108  7C 08 02 A6 */	mflr r0
 /* 80301B4C 002CB10C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1159,9 +1158,9 @@ rfc_parse_data:
 /* 803020AC 002CB66C  7C 08 03 A6 */	mtlr r0
 /* 803020B0 002CB670  38 21 00 20 */	addi r1, r1, 0x20
 /* 803020B4 002CB674  4E 80 00 20 */	blr 
+.endfn rfc_parse_data
 
-.global rfc_process_mx_message
-rfc_process_mx_message:
+.fn rfc_process_mx_message, global
 /* 803020B8 002CB678  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803020BC 002CB67C  7C 08 02 A6 */	mflr r0
 /* 803020C0 002CB680  3C E0 80 55 */	lis r7, lbl_80548D98@ha
@@ -1588,6 +1587,7 @@ rfc_process_mx_message:
 /* 803026D0 002CBC90  7C 08 03 A6 */	mtlr r0
 /* 803026D4 002CBC94  38 21 00 20 */	addi r1, r1, 0x20
 /* 803026D8 002CBC98  4E 80 00 20 */	blr 
+.endfn rfc_process_mx_message
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 .global lbl_80548D98

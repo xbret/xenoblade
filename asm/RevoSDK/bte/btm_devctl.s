@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global btm_dev_init
-btm_dev_init:
+.fn btm_dev_init, global
 /* 802E6910 002AFED0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E6914 002AFED4  7C 08 02 A6 */	mflr r0
 /* 802E6918 002AFED8  38 8D 97 A8 */	addi r4, r13, lbl_80665928@sda21
@@ -44,9 +43,9 @@ btm_dev_init:
 /* 802E69A4 002AFF64  7C 08 03 A6 */	mtlr r0
 /* 802E69A8 002AFF68  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E69AC 002AFF6C  4E 80 00 20 */	blr 
+.endfn btm_dev_init
 
-.global btm_db_reset
-btm_db_reset:
+.fn btm_db_reset, global
 /* 802E69B0 002AFF70  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E69B4 002AFF74  7C 08 02 A6 */	mflr r0
 /* 802E69B8 002AFF78  90 01 00 14 */	stw r0, 0x14(r1)
@@ -94,9 +93,9 @@ btm_db_reset:
 /* 802E6A54 002B0014  7C 08 03 A6 */	mtlr r0
 /* 802E6A58 002B0018  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E6A5C 002B001C  4E 80 00 20 */	blr 
+.endfn btm_db_reset
 
-.global BTM_DeviceReset
-BTM_DeviceReset:
+.fn BTM_DeviceReset, global
 /* 802E6A60 002B0020  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E6A64 002B0024  7C 08 02 A6 */	mflr r0
 /* 802E6A68 002B0028  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
@@ -138,9 +137,9 @@ BTM_DeviceReset:
 /* 802E6AF0 002B00B0  7C 08 03 A6 */	mtlr r0
 /* 802E6AF4 002B00B4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E6AF8 002B00B8  4E 80 00 20 */	blr 
+.endfn BTM_DeviceReset
 
-.global BTM_SendHciReset
-BTM_SendHciReset:
+.fn BTM_SendHciReset, global
 /* 802E6AFC 002B00BC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E6B00 002B00C0  7C 08 02 A6 */	mflr r0
 /* 802E6B04 002B00C4  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
@@ -185,9 +184,9 @@ BTM_SendHciReset:
 /* 802E6B98 002B0158  7C 08 03 A6 */	mtlr r0
 /* 802E6B9C 002B015C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E6BA0 002B0160  4E 80 00 20 */	blr 
+.endfn BTM_SendHciReset
 
-.global BTM_IsDeviceUp
-BTM_IsDeviceUp:
+.fn BTM_IsDeviceUp, global
 /* 802E6BA4 002B0164  3C 60 80 5C */	lis r3, lbl_805BF9F8@ha
 /* 802E6BA8 002B0168  38 63 F9 F8 */	addi r3, r3, lbl_805BF9F8@l
 /* 802E6BAC 002B016C  88 63 06 4E */	lbz r3, 0x64e(r3)
@@ -195,9 +194,9 @@ BTM_IsDeviceUp:
 /* 802E6BB4 002B0174  7C 00 00 34 */	cntlzw r0, r0
 /* 802E6BB8 002B0178  54 03 DE 3E */	rlwinm r3, r0, 0x1b, 0x18, 0x1f
 /* 802E6BBC 002B017C  4E 80 00 20 */	blr 
+.endfn BTM_IsDeviceUp
 
-.global BTM_SetAfhChannels
-BTM_SetAfhChannels:
+.fn BTM_SetAfhChannels, global
 /* 802E6BC0 002B0180  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E6BC4 002B0184  7C 08 02 A6 */	mflr r0
 /* 802E6BC8 002B0188  3C E0 80 5C */	lis r7, lbl_805BF9F8@ha
@@ -264,9 +263,9 @@ BTM_SetAfhChannels:
 /* 802E6CA4 002B0264  7C 08 03 A6 */	mtlr r0
 /* 802E6CA8 002B0268  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E6CAC 002B026C  4E 80 00 20 */	blr 
+.endfn BTM_SetAfhChannels
 
-.global btm_dev_timeout
-btm_dev_timeout:
+.fn btm_dev_timeout, global
 /* 802E6CB0 002B0270  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E6CB4 002B0274  7C 08 02 A6 */	mflr r0
 /* 802E6CB8 002B0278  90 01 00 14 */	stw r0, 0x14(r1)
@@ -447,9 +446,9 @@ btm_dev_timeout:
 /* 802E6F3C 002B04FC  7C 08 03 A6 */	mtlr r0
 /* 802E6F40 002B0500  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E6F44 002B0504  4E 80 00 20 */	blr
+.endfn btm_dev_timeout
 
-.global btm_reset_complete
-btm_reset_complete:
+.fn btm_reset_complete, global
 /* 802E6F48 002B0508  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E6F4C 002B050C  7C 08 02 A6 */	mflr r0
 /* 802E6F50 002B0510  3C 60 80 5C */	lis r3, lbl_805BF9F8@ha
@@ -571,9 +570,9 @@ btm_reset_complete:
 /* 802E7100 002B06C0  7C 08 03 A6 */	mtlr r0
 /* 802E7104 002B06C4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E7108 002B06C8  4E 80 00 20 */	blr
+.endfn btm_reset_complete
 
-.global btm_read_hci_buf_size_complete
-btm_read_hci_buf_size_complete:
+.fn btm_read_hci_buf_size_complete, global
 /* 802E710C 002B06CC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E7110 002B06D0  7C 08 02 A6 */	mflr r0
 /* 802E7114 002B06D4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -627,9 +626,9 @@ btm_read_hci_buf_size_complete:
 /* 802E71C8 002B0788  7C 08 03 A6 */	mtlr r0
 /* 802E71CC 002B078C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E71D0 002B0790  4E 80 00 20 */	blr
+.endfn btm_read_hci_buf_size_complete
 
-.global btm_read_local_version_complete
-btm_read_local_version_complete:
+.fn btm_read_local_version_complete, global
 /* 802E71D4 002B0794  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E71D8 002B0798  7C 08 02 A6 */	mflr r0
 /* 802E71DC 002B079C  3C A0 80 5C */	lis r5, lbl_805BF9F8@ha
@@ -680,9 +679,9 @@ btm_read_local_version_complete:
 /* 802E7284 002B0844  7C 08 03 A6 */	mtlr r0
 /* 802E7288 002B0848  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E728C 002B084C  4E 80 00 20 */	blr
+.endfn btm_read_local_version_complete
 
-.global btm_read_local_features_complete
-btm_read_local_features_complete:
+.fn btm_read_local_features_complete, global
 /* 802E7290 002B0850  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E7294 002B0854  7C 08 02 A6 */	mflr r0
 /* 802E7298 002B0858  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1035,9 +1034,9 @@ btm_read_local_features_complete:
 /* 802E7780 002B0D40  7C 08 03 A6 */	mtlr r0
 /* 802E7784 002B0D44  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E7788 002B0D48  4E 80 00 20 */	blr
+.endfn btm_read_local_features_complete
 
-.global BTM_SetLocalDeviceName
-BTM_SetLocalDeviceName:
+.fn BTM_SetLocalDeviceName, global
 /* 802E778C 002B0D4C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E7790 002B0D50  7C 08 02 A6 */	mflr r0
 /* 802E7794 002B0D54  2C 03 00 00 */	cmpwi r3, 0
@@ -1089,9 +1088,9 @@ BTM_SetLocalDeviceName:
 /* 802E7838 002B0DF8  7C 08 03 A6 */	mtlr r0
 /* 802E783C 002B0DFC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E7840 002B0E00  4E 80 00 20 */	blr
+.endfn BTM_SetLocalDeviceName
 
-.global btm_read_local_name_complete
-btm_read_local_name_complete:
+.fn btm_read_local_name_complete, global
 /* 802E7844 002B0E04  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E7848 002B0E08  7C 08 02 A6 */	mflr r0
 /* 802E784C 002B0E0C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1129,9 +1128,9 @@ btm_read_local_name_complete:
 /* 802E78C4 002B0E84  7C 08 03 A6 */	mtlr r0
 /* 802E78C8 002B0E88  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E78CC 002B0E8C  4E 80 00 20 */	blr 
+.endfn btm_read_local_name_complete
 
-.global BTM_ReadLocalDeviceAddr
-BTM_ReadLocalDeviceAddr:
+.fn BTM_ReadLocalDeviceAddr, global
 /* 802E78D0 002B0E90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E78D4 002B0E94  7C 08 02 A6 */	mflr r0
 /* 802E78D8 002B0E98  2C 03 00 00 */	cmpwi r3, 0
@@ -1149,9 +1148,9 @@ BTM_ReadLocalDeviceAddr:
 /* 802E7904 002B0EC4  7C 08 03 A6 */	mtlr r0
 /* 802E7908 002B0EC8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E790C 002B0ECC  4E 80 00 20 */	blr
+.endfn BTM_ReadLocalDeviceAddr
 
-.global btm_read_local_addr_complete
-btm_read_local_addr_complete:
+.fn btm_read_local_addr_complete, global
 /* 802E7910 002B0ED0  88 03 00 00 */	lbz r0, 0(r3)
 /* 802E7914 002B0ED4  2C 00 00 00 */	cmpwi r0, 0
 /* 802E7918 002B0ED8  4C 82 00 20 */	bnelr 
@@ -1170,9 +1169,9 @@ btm_read_local_addr_complete:
 /* 802E794C 002B0F0C  88 03 00 06 */	lbz r0, 6(r3)
 /* 802E7950 002B0F10  98 04 06 30 */	stb r0, 0x630(r4)
 /* 802E7954 002B0F14  4E 80 00 20 */	blr 
+.endfn btm_read_local_addr_complete
 
-.global BTM_ReadLocalVersion
-BTM_ReadLocalVersion:
+.fn BTM_ReadLocalVersion, global
 /* 802E7958 002B0F18  3C A0 80 5C */	lis r5, lbl_805BF9F8@ha
 /* 802E795C 002B0F1C  38 A5 F9 F8 */	addi r5, r5, lbl_805BF9F8@l
 /* 802E7960 002B0F20  88 05 06 4E */	lbz r0, 0x64e(r5)
@@ -1193,9 +1192,9 @@ BTM_ReadLocalVersion:
 /* 802E7998 002B0F58  B0 03 00 08 */	sth r0, 8(r3)
 /* 802E799C 002B0F5C  38 60 00 00 */	li r3, 0
 /* 802E79A0 002B0F60  4E 80 00 20 */	blr 
+.endfn BTM_ReadLocalVersion
 
-.global BTM_SetDeviceClass
-BTM_SetDeviceClass:
+.fn BTM_SetDeviceClass, global
 /* 802E79A4 002B0F64  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E79A8 002B0F68  7C 08 02 A6 */	mflr r0
 /* 802E79AC 002B0F6C  38 A0 00 03 */	li r5, 3
@@ -1231,32 +1230,32 @@ BTM_SetDeviceClass:
 /* 802E7A18 002B0FD8  7C 08 03 A6 */	mtlr r0
 /* 802E7A1C 002B0FDC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E7A20 002B0FE0  4E 80 00 20 */	blr 
+.endfn BTM_SetDeviceClass
 
-.global BTM_ReadDeviceClass
-BTM_ReadDeviceClass:
+.fn BTM_ReadDeviceClass, global
 /* 802E7A24 002B0FE4  3C 60 80 5C */	lis r3, lbl_805BF9F8@ha
 /* 802E7A28 002B0FE8  38 63 F9 F8 */	addi r3, r3, lbl_805BF9F8@l
 /* 802E7A2C 002B0FEC  38 63 06 48 */	addi r3, r3, 0x648
 /* 802E7A30 002B0FF0  4E 80 00 20 */	blr 
+.endfn BTM_ReadDeviceClass
 
-.global BTM_ReadLocalFeatures
-BTM_ReadLocalFeatures:
+.fn BTM_ReadLocalFeatures, global
 /* 802E7A34 002B0FF4  3C 60 80 5C */	lis r3, lbl_805BF9F8@ha
 /* 802E7A38 002B0FF8  38 63 F9 F8 */	addi r3, r3, lbl_805BF9F8@l
 /* 802E7A3C 002B0FFC  38 63 06 40 */	addi r3, r3, 0x640
 /* 802E7A40 002B1000  4E 80 00 20 */	blr 
+.endfn BTM_ReadLocalFeatures
 
-.global BTM_RegisterForDeviceStatusNotif
-BTM_RegisterForDeviceStatusNotif:
+.fn BTM_RegisterForDeviceStatusNotif, global
 /* 802E7A44 002B1004  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
 /* 802E7A48 002B1008  7C 60 1B 78 */	mr r0, r3
 /* 802E7A4C 002B100C  38 84 F9 F8 */	addi r4, r4, lbl_805BF9F8@l
 /* 802E7A50 002B1010  80 64 05 68 */	lwz r3, 0x568(r4)
 /* 802E7A54 002B1014  90 04 05 68 */	stw r0, 0x568(r4)
 /* 802E7A58 002B1018  4E 80 00 20 */	blr 
+.endfn BTM_RegisterForDeviceStatusNotif
 
-.global BTM_VendorSpecificCommand
-BTM_VendorSpecificCommand:
+.fn BTM_VendorSpecificCommand, global
 /* 802E7A5C 002B101C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E7A60 002B1020  7C 08 02 A6 */	mflr r0
 /* 802E7A64 002B1024  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1327,9 +1326,9 @@ BTM_VendorSpecificCommand:
 /* 802E7B4C 002B110C  7C 08 03 A6 */	mtlr r0
 /* 802E7B50 002B1110  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E7B54 002B1114  4E 80 00 20 */	blr 
+.endfn BTM_VendorSpecificCommand
 
-.global btm_vsc_complete
-btm_vsc_complete:
+.fn btm_vsc_complete, global
 /* 802E7B58 002B1118  94 21 FE E0 */	stwu r1, -0x120(r1)
 /* 802E7B5C 002B111C  7C 08 02 A6 */	mflr r0
 /* 802E7B60 002B1120  3C C0 80 5C */	lis r6, lbl_805BF9F8@ha
@@ -1358,9 +1357,9 @@ btm_vsc_complete:
 /* 802E7BB8 002B1178  7C 08 03 A6 */	mtlr r0
 /* 802E7BBC 002B117C  38 21 01 20 */	addi r1, r1, 0x120
 /* 802E7BC0 002B1180  4E 80 00 20 */	blr 
+.endfn btm_vsc_complete
 
-.global BTM_RegisterForVSEvents
-BTM_RegisterForVSEvents:
+.fn BTM_RegisterForVSEvents, global
 /* 802E7BC4 002B1184  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
 /* 802E7BC8 002B1188  38 84 F9 F8 */	addi r4, r4, lbl_805BF9F8@l
 /* 802E7BCC 002B118C  80 04 05 6C */	lwz r0, 0x56c(r4)
@@ -1376,9 +1375,9 @@ BTM_RegisterForVSEvents:
 /* 802E7BF0 002B11B0  90 64 05 6C */	stw r3, 0x56c(r4)
 /* 802E7BF4 002B11B4  38 60 00 00 */	li r3, 0
 /* 802E7BF8 002B11B8  4E 80 00 20 */	blr 
+.endfn BTM_RegisterForVSEvents
 
-.global btm_vendor_specific_evt
-btm_vendor_specific_evt:
+.fn btm_vendor_specific_evt, global
 /* 802E7BFC 002B11BC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E7C00 002B11C0  7C 08 02 A6 */	mflr r0
 /* 802E7C04 002B11C4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1419,9 +1418,9 @@ btm_vendor_specific_evt:
 /* 802E7C88 002B1248  7C 08 03 A6 */	mtlr r0
 /* 802E7C8C 002B124C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E7C90 002B1250  4E 80 00 20 */	blr 
+.endfn btm_vendor_specific_evt
 
-.global BTM_WritePageTimeout
-BTM_WritePageTimeout:
+.fn BTM_WritePageTimeout, global
 /* 802E7C94 002B1254  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E7C98 002B1258  7C 08 02 A6 */	mflr r0
 /* 802E7C9C 002B125C  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
@@ -1465,9 +1464,9 @@ BTM_WritePageTimeout:
 /* 802E7D28 002B12E8  7C 08 03 A6 */	mtlr r0
 /* 802E7D2C 002B12EC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E7D30 002B12F0  4E 80 00 20 */	blr 
+.endfn BTM_WritePageTimeout
 
-.global BTM_ReadStoredLinkKey
-BTM_ReadStoredLinkKey:
+.fn BTM_ReadStoredLinkKey, global
 /* 802E7D34 002B12F4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E7D38 002B12F8  7C 08 02 A6 */	mflr r0
 /* 802E7D3C 002B12FC  3C A0 80 5C */	lis r5, lbl_805BF9F8@ha
@@ -1528,9 +1527,9 @@ BTM_ReadStoredLinkKey:
 /* 802E7E00 002B13C0  7C 08 03 A6 */	mtlr r0
 /* 802E7E04 002B13C4  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E7E08 002B13C8  4E 80 00 20 */	blr 
+.endfn BTM_ReadStoredLinkKey
 
-.global BTM_WriteStoredLinkKey
-BTM_WriteStoredLinkKey:
+.fn BTM_WriteStoredLinkKey, global
 /* 802E7E0C 002B13CC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E7E10 002B13D0  7C 08 02 A6 */	mflr r0
 /* 802E7E14 002B13D4  3C E0 80 5C */	lis r7, lbl_805BF9F8@ha
@@ -1588,9 +1587,9 @@ BTM_WriteStoredLinkKey:
 /* 802E7ED0 002B1490  7C 08 03 A6 */	mtlr r0
 /* 802E7ED4 002B1494  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E7ED8 002B1498  4E 80 00 20 */	blr 
+.endfn BTM_WriteStoredLinkKey
 
-.global BTM_DeleteStoredLinkKey
-BTM_DeleteStoredLinkKey:
+.fn BTM_DeleteStoredLinkKey, global
 /* 802E7EDC 002B149C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E7EE0 002B14A0  7C 08 02 A6 */	mflr r0
 /* 802E7EE4 002B14A4  3C A0 80 5C */	lis r5, lbl_805BF9F8@ha
@@ -1649,9 +1648,9 @@ BTM_DeleteStoredLinkKey:
 /* 802E7FA0 002B1560  7C 08 03 A6 */	mtlr r0
 /* 802E7FA4 002B1564  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E7FA8 002B1568  4E 80 00 20 */	blr
+.endfn BTM_DeleteStoredLinkKey
 
-.global btm_read_stored_link_key_complete
-btm_read_stored_link_key_complete:
+.fn btm_read_stored_link_key_complete, global
 /* 802E7FAC 002B156C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E7FB0 002B1570  7C 08 02 A6 */	mflr r0
 /* 802E7FB4 002B1574  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
@@ -1684,9 +1683,9 @@ btm_read_stored_link_key_complete:
 /* 802E801C 002B15DC  7C 08 03 A6 */	mtlr r0
 /* 802E8020 002B15E0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E8024 002B15E4  4E 80 00 20 */	blr
+.endfn btm_read_stored_link_key_complete
 
-.global btm_write_stored_link_key_complete
-btm_write_stored_link_key_complete:
+.fn btm_write_stored_link_key_complete, global
 /* 802E8028 002B15E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E802C 002B15EC  7C 08 02 A6 */	mflr r0
 /* 802E8030 002B15F0  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
@@ -1711,9 +1710,9 @@ btm_write_stored_link_key_complete:
 /* 802E8078 002B1638  7C 08 03 A6 */	mtlr r0
 /* 802E807C 002B163C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E8080 002B1640  4E 80 00 20 */	blr
+.endfn btm_write_stored_link_key_complete
 
-.global btm_delete_stored_link_key_complete
-btm_delete_stored_link_key_complete:
+.fn btm_delete_stored_link_key_complete, global
 /* 802E8084 002B1644  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E8088 002B1648  7C 08 02 A6 */	mflr r0
 /* 802E808C 002B164C  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
@@ -1741,9 +1740,9 @@ btm_delete_stored_link_key_complete:
 /* 802E80E0 002B16A0  7C 08 03 A6 */	mtlr r0
 /* 802E80E4 002B16A4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E80E8 002B16A8  4E 80 00 20 */	blr 
+.endfn btm_delete_stored_link_key_complete
 
-.global btm_return_link_keys_evt
-btm_return_link_keys_evt:
+.fn btm_return_link_keys_evt, global
 /* 802E80EC 002B16AC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E80F0 002B16B0  7C 08 02 A6 */	mflr r0
 /* 802E80F4 002B16B4  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
@@ -1846,9 +1845,9 @@ btm_return_link_keys_evt:
 /* 802E826C 002B182C  7C 08 03 A6 */	mtlr r0
 /* 802E8270 002B1830  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E8274 002B1834  4E 80 00 20 */	blr 
+.endfn btm_return_link_keys_evt
 
-.global btm_report_device_status
-btm_report_device_status:
+.fn btm_report_device_status, global
 /* 802E8278 002B1838  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
 /* 802E827C 002B183C  38 84 F9 F8 */	addi r4, r4, lbl_805BF9F8@l
 /* 802E8280 002B1840  81 84 05 68 */	lwz r12, 0x568(r4)
@@ -1857,6 +1856,7 @@ btm_report_device_status:
 /* 802E828C 002B184C  7D 89 03 A6 */	mtctr r12
 /* 802E8290 002B1850  4E 80 04 20 */	bctr 
 /* 802E8294 002B1854  4E 80 00 20 */	blr
+.endfn btm_report_device_status
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 .global lbl_80545080

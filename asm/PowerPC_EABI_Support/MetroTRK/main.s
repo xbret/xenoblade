@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global gdev_cc_initialize
-gdev_cc_initialize:
+.fn gdev_cc_initialize, global
 /* 802CB52C 00294AEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CB530 00294AF0  7C 08 02 A6 */	mflr r0
 /* 802CB534 00294AF4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -19,14 +18,14 @@ gdev_cc_initialize:
 /* 802CB55C 00294B1C  7C 08 03 A6 */	mtlr r0
 /* 802CB560 00294B20  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CB564 00294B24  4E 80 00 20 */	blr
+.endfn gdev_cc_initialize
 
-.global gdev_cc_shutdown
-gdev_cc_shutdown:
+.fn gdev_cc_shutdown, global
 /* 802CB568 00294B28  38 60 00 00 */	li r3, 0
 /* 802CB56C 00294B2C  4E 80 00 20 */	blr
+.endfn gdev_cc_shutdown
 
-.global gdev_cc_open
-gdev_cc_open:
+.fn gdev_cc_open, global
 /* 802CB570 00294B30  80 0D B3 E0 */	lwz r0, lbl_80667560@sda21(r13)
 /* 802CB574 00294B34  2C 00 00 00 */	cmpwi r0, 0
 /* 802CB578 00294B38  41 82 00 0C */	beq .L_802CB584
@@ -37,14 +36,14 @@ gdev_cc_open:
 /* 802CB588 00294B48  90 0D B3 E0 */	stw r0, lbl_80667560@sda21(r13)
 /* 802CB58C 00294B4C  38 60 00 00 */	li r3, 0
 /* 802CB590 00294B50  4E 80 00 20 */	blr
+.endfn gdev_cc_open
 
-.global gdev_cc_close
-gdev_cc_close:
+.fn gdev_cc_close, global
 /* 802CB594 00294B54  38 60 00 00 */	li r3, 0
 /* 802CB598 00294B58  4E 80 00 20 */	blr
+.endfn gdev_cc_close
 
-.global gdev_cc_read
-gdev_cc_read:
+.fn gdev_cc_read, global
 /* 802CB59C 00294B5C  94 21 FA E0 */	stwu r1, -0x520(r1)
 /* 802CB5A0 00294B60  7C 08 02 A6 */	mflr r0
 /* 802CB5A4 00294B64  90 01 05 24 */	stw r0, 0x524(r1)
@@ -95,9 +94,9 @@ gdev_cc_read:
 /* 802CB644 00294C04  7C 08 03 A6 */	mtlr r0
 /* 802CB648 00294C08  38 21 05 20 */	addi r1, r1, 0x520
 /* 802CB64C 00294C0C  4E 80 00 20 */	blr
+.endfn gdev_cc_read
 
-.global gdev_cc_write
-gdev_cc_write:
+.fn gdev_cc_write, global
 /* 802CB650 00294C10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CB654 00294C14  7C 08 02 A6 */	mflr r0
 /* 802CB658 00294C18  90 01 00 14 */	stw r0, 0x14(r1)
@@ -131,9 +130,9 @@ gdev_cc_write:
 /* 802CB6B8 00294C78  7C 08 03 A6 */	mtlr r0
 /* 802CB6BC 00294C7C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CB6C0 00294C80  4E 80 00 20 */	blr
+.endfn gdev_cc_write
 
-.global gdev_cc_pre_continue
-gdev_cc_pre_continue:
+.fn gdev_cc_pre_continue, global
 /* 802CB6C4 00294C84  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CB6C8 00294C88  7C 08 02 A6 */	mflr r0
 /* 802CB6CC 00294C8C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -143,9 +142,9 @@ gdev_cc_pre_continue:
 /* 802CB6DC 00294C9C  7C 08 03 A6 */	mtlr r0
 /* 802CB6E0 00294CA0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CB6E4 00294CA4  4E 80 00 20 */	blr
+.endfn gdev_cc_pre_continue
 
-.global gdev_cc_post_stop
-gdev_cc_post_stop:
+.fn gdev_cc_post_stop, global
 /* 802CB6E8 00294CA8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CB6EC 00294CAC  7C 08 02 A6 */	mflr r0
 /* 802CB6F0 00294CB0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -155,9 +154,9 @@ gdev_cc_post_stop:
 /* 802CB700 00294CC0  7C 08 03 A6 */	mtlr r0
 /* 802CB704 00294CC4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CB708 00294CC8  4E 80 00 20 */	blr
+.endfn gdev_cc_post_stop
 
-.global gdev_cc_peek
-gdev_cc_peek:
+.fn gdev_cc_peek, global
 /* 802CB70C 00294CCC  94 21 FA F0 */	stwu r1, -0x510(r1)
 /* 802CB710 00294CD0  7C 08 02 A6 */	mflr r0
 /* 802CB714 00294CD4  90 01 05 14 */	stw r0, 0x514(r1)
@@ -191,9 +190,9 @@ gdev_cc_peek:
 /* 802CB774 00294D34  7C 08 03 A6 */	mtlr r0
 /* 802CB778 00294D38  38 21 05 10 */	addi r1, r1, 0x510
 /* 802CB77C 00294D3C  4E 80 00 20 */	blr
+.endfn gdev_cc_peek
 
-.global gdev_cc_initinterrupts
-gdev_cc_initinterrupts:
+.fn gdev_cc_initinterrupts, global
 /* 802CB780 00294D40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CB784 00294D44  7C 08 02 A6 */	mflr r0
 /* 802CB788 00294D48  90 01 00 14 */	stw r0, 0x14(r1)
@@ -203,6 +202,7 @@ gdev_cc_initinterrupts:
 /* 802CB798 00294D58  7C 08 03 A6 */	mtlr r0
 /* 802CB79C 00294D5C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CB7A0 00294D60  4E 80 00 20 */	blr
+.endfn gdev_cc_initinterrupts
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 .global lbl_8057B368

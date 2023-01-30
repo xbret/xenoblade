@@ -2,24 +2,23 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global MPVSL_Init
-MPVSL_Init:
+.fn MPVSL_Init, global
 /* 803B96F4 00382CB4  4E 80 00 20 */	blr 
+.endfn MPVSL_Init
 
-.global MPVSL_Finish
-MPVSL_Finish:
+.fn MPVSL_Finish, global
 /* 803B96F8 00382CB8  4E 80 00 20 */	blr 
+.endfn MPVSL_Finish
 
-.global MPVSL_Create
-MPVSL_Create:
+.fn MPVSL_Create, global
 /* 803B96FC 00382CBC  4E 80 00 20 */	blr 
+.endfn MPVSL_Create
 
-.global MPVSL_Destroy
-MPVSL_Destroy:
+.fn MPVSL_Destroy, global
 /* 803B9700 00382CC0  4E 80 00 20 */	blr 
+.endfn MPVSL_Destroy
 
-.global MPVSL_DecPicture
-MPVSL_DecPicture:
+.fn MPVSL_DecPicture, global
 /* 803B9704 00382CC4  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803B9708 00382CC8  7C 08 02 A6 */	mflr r0
 /* 803B970C 00382CCC  90 01 00 44 */	stw r0, 0x44(r1)
@@ -109,6 +108,7 @@ MPVSL_DecPicture:
 /* 803B9840 00382E00  7C 08 03 A6 */	mtlr r0
 /* 803B9844 00382E04  38 21 00 40 */	addi r1, r1, 0x40
 /* 803B9848 00382E08  4E 80 00 20 */	blr 
+.endfn MPVSL_DecPicture
 
 .global MPVSL_DecSliceOne
 MPVSL_DecSliceOne:

@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global SFSEEKI_InitHn
-SFSEEKI_InitHn:
+.fn SFSEEKI_InitHn, global
 /* 803D0030 003995F0  38 00 00 00 */	li r0, 0
 /* 803D0034 003995F4  90 03 00 00 */	stw r0, 0(r3)
 /* 803D0038 003995F8  90 03 00 18 */	stw r0, 0x18(r3)
@@ -13,9 +12,9 @@ SFSEEKI_InitHn:
 /* 803D0048 00399608  90 03 00 10 */	stw r0, 0x10(r3)
 /* 803D004C 0039960C  90 03 00 14 */	stw r0, 0x14(r3)
 /* 803D0050 00399610  4E 80 00 20 */	blr 
+.endfn SFSEEKI_InitHn
 
-.global func_803D0054
-func_803D0054:
+.fn func_803D0054, global
 /* 803D0054 00399614  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D0058 00399618  7C 08 02 A6 */	mflr r0
 /* 803D005C 0039961C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -82,9 +81,9 @@ func_803D0054:
 /* 803D0138 003996F8  7C 08 03 A6 */	mtlr r0
 /* 803D013C 003996FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D0140 00399700  4E 80 00 20 */	blr 
+.endfn func_803D0054
 
-.global func_803D0144
-func_803D0144:
+.fn func_803D0144, global
 /* 803D0144 00399704  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D0148 00399708  7C 08 02 A6 */	mflr r0
 /* 803D014C 0039970C  2C 04 00 00 */	cmpwi r4, 0
@@ -182,9 +181,9 @@ func_803D0144:
 /* 803D0298 00399858  7C 08 03 A6 */	mtlr r0
 /* 803D029C 0039985C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D02A0 00399860  4E 80 00 20 */	blr 
+.endfn func_803D0144
 
-.global func_803D02A4
-func_803D02A4:
+.fn func_803D02A4, global
 /* 803D02A4 00399864  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D02A8 00399868  7C 08 02 A6 */	mflr r0
 /* 803D02AC 0039986C  2C 04 00 00 */	cmpwi r4, 0
@@ -269,9 +268,9 @@ func_803D02A4:
 /* 803D03CC 0039998C  7C 08 03 A6 */	mtlr r0
 /* 803D03D0 00399990  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D03D4 00399994  4E 80 00 20 */	blr 
+.endfn func_803D02A4
 
-.global func_803D03D8
-func_803D03D8:
+.fn func_803D03D8, global
 /* 803D03D8 00399998  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D03DC 0039999C  7C 08 02 A6 */	mflr r0
 /* 803D03E0 003999A0  2C 04 00 00 */	cmpwi r4, 0
@@ -396,9 +395,9 @@ func_803D03D8:
 /* 803D05A0 00399B60  7C 08 03 A6 */	mtlr r0
 /* 803D05A4 00399B64  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D05A8 00399B68  4E 80 00 20 */	blr 
+.endfn func_803D03D8
 
-.global func_803D05AC
-func_803D05AC:
+.fn func_803D05AC, global
 /* 803D05AC 00399B6C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D05B0 00399B70  7C 08 02 A6 */	mflr r0
 /* 803D05B4 00399B74  90 01 00 14 */	stw r0, 0x14(r1)
@@ -426,6 +425,7 @@ func_803D05AC:
 /* 803D0604 00399BC4  7C 08 03 A6 */	mtlr r0
 /* 803D0608 00399BC8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D060C 00399BCC  4E 80 00 20 */	blr
+.endfn func_803D05AC
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

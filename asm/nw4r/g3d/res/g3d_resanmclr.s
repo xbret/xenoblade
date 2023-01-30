@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global GetAnmResult__Q34nw4r3g3d9ResAnmClrCFPQ34nw4r3g3d12ClrAnmResultUlf
-GetAnmResult__Q34nw4r3g3d9ResAnmClrCFPQ34nw4r3g3d12ClrAnmResultUlf:
+.fn GetAnmResult__Q34nw4r3g3d9ResAnmClrCFPQ34nw4r3g3d12ClrAnmResultUlf, global
 /* 803DDCD4 003A7294  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803DDCD8 003A7298  7C 08 02 A6 */	mflr r0
 /* 803DDCDC 003A729C  90 01 00 44 */	stw r0, 0x44(r1)
@@ -108,6 +107,7 @@ GetAnmResult__Q34nw4r3g3d9ResAnmClrCFPQ34nw4r3g3d12ClrAnmResultUlf:
 /* 803DDE34 003A73F4  7C 08 03 A6 */	mtlr r0
 /* 803DDE38 003A73F8  38 21 00 40 */	addi r1, r1, 0x40
 /* 803DDE3C 003A73FC  4E 80 00 20 */	blr 
+.endfn GetAnmResult__Q34nw4r3g3d9ResAnmClrCFPQ34nw4r3g3d12ClrAnmResultUlf
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

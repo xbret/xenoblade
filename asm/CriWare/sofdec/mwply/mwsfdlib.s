@@ -2,20 +2,19 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global MWSFLIB_GetLibWorkPtr
-MWSFLIB_GetLibWorkPtr:
+.fn MWSFLIB_GetLibWorkPtr, global
 /* 803A0C60 0036A220  3C 60 80 60 */	lis r3, mwsfd_libwork@ha
 /* 803A0C64 0036A224  38 63 29 68 */	addi r3, r3, mwsfd_libwork@l
 /* 803A0C68 0036A228  4E 80 00 20 */	blr
+.endfn MWSFLIB_GetLibWorkPtr
 
-.global mwsflib_LscErrFunc
-mwsflib_LscErrFunc:
+.fn mwsflib_LscErrFunc, global
 /* 803A0C6C 0036A22C  7C 83 23 78 */	mr r3, r4
 /* 803A0C70 0036A230  4C C6 31 82 */	crclr 6
 /* 803A0C74 0036A234  4B FF CF C4 */	b MWSFSVM_Error
+.endfn mwsflib_LscErrFunc
 
-.global mwPlyInitSfdFx
-mwPlyInitSfdFx:
+.fn mwPlyInitSfdFx, global
 /* 803A0C78 0036A238  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803A0C7C 0036A23C  7C 08 02 A6 */	mflr r0
 /* 803A0C80 0036A240  2C 03 00 00 */	cmpwi r3, 0
@@ -177,9 +176,9 @@ mwPlyInitSfdFx:
 /* 803A0ED4 0036A494  7C 08 03 A6 */	mtlr r0
 /* 803A0ED8 0036A498  38 21 00 40 */	addi r1, r1, 0x40
 /* 803A0EDC 0036A49C  4E 80 00 20 */	blr 
+.endfn mwPlyInitSfdFx
 
-.global mwsflib_InitLibWork
-mwsflib_InitLibWork:
+.fn mwsflib_InitLibWork, global
 /* 803A0EE0 0036A4A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A0EE4 0036A4A4  7C 08 02 A6 */	mflr r0
 /* 803A0EE8 0036A4A8  38 80 00 00 */	li r4, 0
@@ -227,23 +226,23 @@ mwsflib_InitLibWork:
 /* 803A0F88 0036A548  7C 08 03 A6 */	mtlr r0
 /* 803A0F8C 0036A54C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A0F90 0036A550  4E 80 00 20 */	blr 
+.endfn mwsflib_InitLibWork
 
-.global MWSFD_GetUsePicUsr
-MWSFD_GetUsePicUsr:
+.fn MWSFD_GetUsePicUsr, global
 /* 803A0F94 0036A554  3C 60 80 60 */	lis r3, mwsfd_libwork@ha
 /* 803A0F98 0036A558  38 63 29 68 */	addi r3, r3, mwsfd_libwork@l
 /* 803A0F9C 0036A55C  80 63 00 38 */	lwz r3, 0x38(r3)
 /* 803A0FA0 0036A560  4E 80 00 20 */	blr 
+.endfn MWSFD_GetUsePicUsr
 
-.global MWSFD_GetPauseBdr
-MWSFD_GetPauseBdr:
+.fn MWSFD_GetPauseBdr, global
 /* 803A0FA4 0036A564  3C 60 80 60 */	lis r3, mwsfd_libwork@ha
 /* 803A0FA8 0036A568  38 63 29 68 */	addi r3, r3, mwsfd_libwork@l
 /* 803A0FAC 0036A56C  80 63 00 3C */	lwz r3, 0x3c(r3)
 /* 803A0FB0 0036A570  4E 80 00 20 */	blr 
+.endfn MWSFD_GetPauseBdr
 
-.global MWSFLIB_SetErrCode
-MWSFLIB_SetErrCode:
+.fn MWSFLIB_SetErrCode, global
 /* 803A0FB4 0036A574  7C 60 00 34 */	cntlzw r0, r3
 /* 803A0FB8 0036A578  3C 80 80 60 */	lis r4, mwsfd_libwork@ha
 /* 803A0FBC 0036A57C  38 84 29 68 */	addi r4, r4, mwsfd_libwork@l
@@ -252,9 +251,9 @@ MWSFLIB_SetErrCode:
 /* 803A0FC8 0036A588  7C 00 00 D0 */	neg r0, r0
 /* 803A0FCC 0036A58C  7C 63 00 78 */	andc r3, r3, r0
 /* 803A0FD0 0036A590  4E 80 00 20 */	blr 
+.endfn MWSFLIB_SetErrCode
 
-.global mwPlySfdInit
-mwPlySfdInit:
+.fn mwPlySfdInit, global
 /* 803A0FD4 0036A594  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A0FD8 0036A598  7C 08 02 A6 */	mflr r0
 /* 803A0FDC 0036A59C  3C 80 80 52 */	lis r4, lbl_8051E170@ha
@@ -308,9 +307,9 @@ mwPlySfdInit:
 /* 803A108C 0036A64C  7C 08 03 A6 */	mtlr r0
 /* 803A1090 0036A650  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A1094 0036A654  4E 80 00 20 */	blr
+.endfn mwPlySfdInit
 
-.global MWSFLIB_SfdErrFunc
-MWSFLIB_SfdErrFunc:
+.fn MWSFLIB_SfdErrFunc, global
 /* 803A1098 0036A658  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A109C 0036A65C  7C 08 02 A6 */	mflr r0
 /* 803A10A0 0036A660  2C 03 00 00 */	cmpwi r3, 0
@@ -496,6 +495,7 @@ MWSFLIB_SfdErrFunc:
 /* 803A132C 0036A8EC  7C 08 03 A6 */	mtlr r0
 /* 803A1330 0036A8F0  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A1334 0036A8F4  4E 80 00 20 */	blr 
+.endfn MWSFLIB_SfdErrFunc
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0

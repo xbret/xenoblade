@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global mwsfcre_CalcWorkStmBuf
-mwsfcre_CalcWorkStmBuf:
+.fn mwsfcre_CalcWorkStmBuf, global
 /* 8039ECA4 00368264  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039ECA8 00368268  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8039ECAC 0036826C  93 C1 00 18 */	stw r30, 0x18(r1)
@@ -90,9 +89,9 @@ mwsfcre_CalcWorkStmBuf:
 /* 8039EDD8 00368398  83 A1 00 14 */	lwz r29, 0x14(r1)
 /* 8039EDDC 0036839C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039EDE0 003683A0  4E 80 00 20 */	blr
+.endfn mwsfcre_CalcWorkStmBuf
 
-.global mwPlyCalcWorkCprmSfd
-mwPlyCalcWorkCprmSfd:
+.fn mwPlyCalcWorkCprmSfd, global
 /* 8039EDE4 003683A4  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8039EDE8 003683A8  7C 08 02 A6 */	mflr r0
 /* 8039EDEC 003683AC  2C 03 00 00 */	cmpwi r3, 0
@@ -235,9 +234,9 @@ mwPlyCalcWorkCprmSfd:
 /* 8039EFE4 003685A4  7C 08 03 A6 */	mtlr r0
 /* 8039EFE8 003685A8  38 21 00 30 */	addi r1, r1, 0x30
 /* 8039EFEC 003685AC  4E 80 00 20 */	blr 
+.endfn mwPlyCalcWorkCprmSfd
 
-.global mwsfcre_IsOuterFrmPoolUsed
-mwsfcre_IsOuterFrmPoolUsed:
+.fn mwsfcre_IsOuterFrmPoolUsed, global
 /* 8039EFF0 003685B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039EFF4 003685B4  7C 08 02 A6 */	mflr r0
 /* 8039EFF8 003685B8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -330,9 +329,9 @@ mwsfcre_IsOuterFrmPoolUsed:
 /* 8039F134 003686F4  7C 08 03 A6 */	mtlr r0
 /* 8039F138 003686F8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039F13C 003686FC  4E 80 00 20 */	blr 
+.endfn mwsfcre_IsOuterFrmPoolUsed
 
-.global func_8039F140
-func_8039F140:
+.fn func_8039F140, global
 /* 8039F140 00368700  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8039F144 00368704  7C 08 02 A6 */	mflr r0
 /* 8039F148 00368708  90 01 00 34 */	stw r0, 0x34(r1)
@@ -428,9 +427,9 @@ func_8039F140:
 /* 8039F298 00368858  7C 08 03 A6 */	mtlr r0
 /* 8039F29C 0036885C  38 21 00 30 */	addi r1, r1, 0x30
 /* 8039F2A0 00368860  4E 80 00 20 */	blr 
+.endfn func_8039F140
 
-.global func_8039F2A4
-func_8039F2A4:
+.fn func_8039F2A4, global
 /* 8039F2A4 00368864  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039F2A8 00368868  7C 08 02 A6 */	mflr r0
 /* 8039F2AC 0036886C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -520,9 +519,9 @@ func_8039F2A4:
 /* 8039F3E4 003689A4  7C 08 03 A6 */	mtlr r0
 /* 8039F3E8 003689A8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039F3EC 003689AC  4E 80 00 20 */	blr 
+.endfn func_8039F2A4
 
-.global func_8039F3F0
-func_8039F3F0:
+.fn func_8039F3F0, global
 /* 8039F3F0 003689B0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8039F3F4 003689B4  7C 08 02 A6 */	mflr r0
 /* 8039F3F8 003689B8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -626,9 +625,9 @@ func_8039F3F0:
 /* 8039F554 00368B14  7C 08 03 A6 */	mtlr r0
 /* 8039F558 00368B18  38 21 00 30 */	addi r1, r1, 0x30
 /* 8039F55C 00368B1C  4E 80 00 20 */	blr 
+.endfn func_8039F3F0
 
-.global mwsfcre_CreateSfd
-mwsfcre_CreateSfd:
+.fn mwsfcre_CreateSfd, global
 /* 8039F560 00368B20  94 21 FF 10 */	stwu r1, -0xf0(r1)
 /* 8039F564 00368B24  7C 08 02 A6 */	mflr r0
 /* 8039F568 00368B28  90 01 00 F4 */	stw r0, 0xf4(r1)
@@ -1101,9 +1100,9 @@ switch_8039F84C:
 /* 8039FC18 003691D8  7C 08 03 A6 */	mtlr r0
 /* 8039FC1C 003691DC  38 21 00 F0 */	addi r1, r1, 0xf0
 /* 8039FC20 003691E0  4E 80 00 20 */	blr 
+.endfn mwsfcre_CreateSfd
 
-.global mwsfcre_AttachPicUsrBuf
-mwsfcre_AttachPicUsrBuf:
+.fn mwsfcre_AttachPicUsrBuf, global
 /* 8039FC24 003691E4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039FC28 003691E8  7C 08 02 A6 */	mflr r0
 /* 8039FC2C 003691EC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1154,9 +1153,9 @@ mwsfcre_AttachPicUsrBuf:
 /* 8039FCD4 00369294  7C 08 03 A6 */	mtlr r0
 /* 8039FCD8 00369298  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039FCDC 0036929C  4E 80 00 20 */	blr 
+.endfn mwsfcre_AttachPicUsrBuf
 
-.global MWSFCRE_SetCondSfd
-MWSFCRE_SetCondSfd:
+.fn MWSFCRE_SetCondSfd, global
 /* 8039FCE0 003692A0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8039FCE4 003692A4  7C 08 02 A6 */	mflr r0
 /* 8039FCE8 003692A8  38 80 00 08 */	li r4, 8
@@ -1262,9 +1261,9 @@ MWSFCRE_SetCondSfd:
 /* 8039FE70 00369430  7C 08 03 A6 */	mtlr r0
 /* 8039FE74 00369434  38 21 00 40 */	addi r1, r1, 0x40
 /* 8039FE78 00369438  4E 80 00 20 */	blr 
+.endfn MWSFCRE_SetCondSfd
 
-.global MWSFCRE_ResetSfdHn
-MWSFCRE_ResetSfdHn:
+.fn MWSFCRE_ResetSfdHn, global
 /* 8039FE7C 0036943C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039FE80 00369440  7C 08 02 A6 */	mflr r0
 /* 8039FE84 00369444  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1314,9 +1313,9 @@ MWSFCRE_ResetSfdHn:
 /* 8039FF28 003694E8  7C 08 03 A6 */	mtlr r0
 /* 8039FF2C 003694EC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039FF30 003694F0  4E 80 00 20 */	blr 
+.endfn MWSFCRE_ResetSfdHn
 
-.global func_8039FF34
-func_8039FF34:
+.fn func_8039FF34, global
 /* 8039FF34 003694F4  94 21 FD D0 */	stwu r1, -0x230(r1)
 /* 8039FF38 003694F8  7C 08 02 A6 */	mflr r0
 /* 8039FF3C 003694FC  90 01 02 34 */	stw r0, 0x234(r1)
@@ -1390,9 +1389,9 @@ func_8039FF34:
 /* 803A0044 00369604  7C 08 03 A6 */	mtlr r0
 /* 803A0048 00369608  38 21 02 30 */	addi r1, r1, 0x230
 /* 803A004C 0036960C  4E 80 00 20 */	blr 
+.endfn func_8039FF34
 
-.global mwPlyCreateSofdec
-mwPlyCreateSofdec:
+.fn mwPlyCreateSofdec, global
 /* 803A0050 00369610  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803A0054 00369614  7C 08 02 A6 */	mflr r0
 /* 803A0058 00369618  2C 03 00 00 */	cmpwi r3, 0
@@ -1968,9 +1967,9 @@ mwPlyCreateSofdec:
 /* 803A08B4 00369E74  7C 08 03 A6 */	mtlr r0
 /* 803A08B8 00369E78  38 21 00 40 */	addi r1, r1, 0x40
 /* 803A08BC 00369E7C  4E 80 00 20 */	blr 
+.endfn mwPlyCreateSofdec
 
-.global func_803A08C0
-func_803A08C0:
+.fn func_803A08C0, global
 /* 803A08C0 00369E80  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A08C4 00369E84  7C 08 02 A6 */	mflr r0
 /* 803A08C8 00369E88  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2037,9 +2036,9 @@ func_803A08C0:
 /* 803A09A8 00369F68  7C 08 03 A6 */	mtlr r0
 /* 803A09AC 00369F6C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A09B0 00369F70  4E 80 00 20 */	blr 
+.endfn func_803A08C0
 
-.global func_803A09B4
-func_803A09B4:
+.fn func_803A09B4, global
 /* 803A09B4 00369F74  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A09B8 00369F78  7C 08 02 A6 */	mflr r0
 /* 803A09BC 00369F7C  3C 80 80 60 */	lis r4, lbl_80602960@ha
@@ -2078,9 +2077,9 @@ func_803A09B4:
 /* 803A0A38 00369FF8  7C 08 03 A6 */	mtlr r0
 /* 803A0A3C 00369FFC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A0A40 0036A000  4E 80 00 20 */	blr 
+.endfn func_803A09B4
 
-.global func_803A0A44
-func_803A0A44:
+.fn func_803A0A44, global
 /* 803A0A44 0036A004  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A0A48 0036A008  7C 08 02 A6 */	mflr r0
 /* 803A0A4C 0036A00C  2C 03 00 00 */	cmpwi r3, 0
@@ -2179,9 +2178,9 @@ func_803A0A44:
 /* 803A0B9C 0036A15C  7C 08 03 A6 */	mtlr r0
 /* 803A0BA0 0036A160  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A0BA4 0036A164  4E 80 00 20 */	blr 
+.endfn func_803A0A44
 
-.global func_803A0BA8
-func_803A0BA8:
+.fn func_803A0BA8, global
 /* 803A0BA8 0036A168  80 A3 05 3C */	lwz r5, 0x53c(r3)
 /* 803A0BAC 0036A16C  80 03 05 34 */	lwz r0, 0x534(r3)
 /* 803A0BB0 0036A170  7C A5 22 14 */	add r5, r5, r4
@@ -2197,9 +2196,9 @@ func_803A0BA8:
 .L_803A0BD4:
 /* 803A0BD4 0036A194  7C C3 33 78 */	mr r3, r6
 /* 803A0BD8 0036A198  4E 80 00 20 */	blr 
+.endfn func_803A0BA8
 
-.global func_803A0BDC
-func_803A0BDC:
+.fn func_803A0BDC, global
 /* 803A0BDC 0036A19C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A0BE0 0036A1A0  7C 08 02 A6 */	mflr r0
 /* 803A0BE4 0036A1A4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2216,13 +2215,13 @@ func_803A0BDC:
 /* 803A0C10 0036A1D0  7C 08 03 A6 */	mtlr r0
 /* 803A0C14 0036A1D4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A0C18 0036A1D8  4E 80 00 20 */	blr 
+.endfn func_803A0BDC
 
-.global func_803A0C1C
-func_803A0C1C:
+.fn func_803A0C1C, global
 /* 803A0C1C 0036A1DC  4E 80 00 20 */	blr 
+.endfn func_803A0C1C
 
-.global func_803A0C20
-func_803A0C20:
+.fn func_803A0C20, global
 /* 803A0C20 0036A1E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A0C24 0036A1E4  7C 08 02 A6 */	mflr r0
 /* 803A0C28 0036A1E8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2239,6 +2238,7 @@ func_803A0C20:
 /* 803A0C54 0036A214  7C 08 03 A6 */	mtlr r0
 /* 803A0C58 0036A218  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A0C5C 0036A21C  4E 80 00 20 */	blr 
+.endfn func_803A0C20
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

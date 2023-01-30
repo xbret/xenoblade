@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global HID_HostGetSDPRecord
-HID_HostGetSDPRecord:
+.fn HID_HostGetSDPRecord, global
 /* 802F3B44 002BD104  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802F3B48 002BD108  7C 08 02 A6 */	mflr r0
 /* 802F3B4C 002BD10C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -57,9 +56,9 @@ HID_HostGetSDPRecord:
 /* 802F3C00 002BD1C0  7C 08 03 A6 */	mtlr r0
 /* 802F3C04 002BD1C4  38 21 00 30 */	addi r1, r1, 0x30
 /* 802F3C08 002BD1C8  4E 80 00 20 */	blr
+.endfn HID_HostGetSDPRecord
 
-.global hidh_search_callback
-hidh_search_callback:
+.fn hidh_search_callback, global
 /* 802F3C0C 002BD1CC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802F3C10 002BD1D0  7C 08 02 A6 */	mflr r0
 /* 802F3C14 002BD1D4  38 80 00 02 */	li r4, 2
@@ -362,9 +361,9 @@ hidh_search_callback:
 /* 802F4050 002BD610  7C 08 03 A6 */	mtlr r0
 /* 802F4054 002BD614  38 21 00 30 */	addi r1, r1, 0x30
 /* 802F4058 002BD618  4E 80 00 20 */	blr 
+.endfn hidh_search_callback
 
-.global HID_HostInit
-HID_HostInit:
+.fn HID_HostInit, global
 /* 802F405C 002BD61C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F4060 002BD620  7C 08 02 A6 */	mflr r0
 /* 802F4064 002BD624  38 80 00 00 */	li r4, 0
@@ -382,9 +381,9 @@ HID_HostInit:
 /* 802F4094 002BD654  7C 08 03 A6 */	mtlr r0
 /* 802F4098 002BD658  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F409C 002BD65C  4E 80 00 20 */	blr 
+.endfn HID_HostInit
 
-.global HID_HostRegister
-HID_HostRegister:
+.fn HID_HostRegister, global
 /* 802F40A0 002BD660  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F40A4 002BD664  7C 08 02 A6 */	mflr r0
 /* 802F40A8 002BD668  90 01 00 14 */	stw r0, 0x14(r1)
@@ -420,9 +419,9 @@ HID_HostRegister:
 /* 802F4110 002BD6D0  7C 08 03 A6 */	mtlr r0
 /* 802F4114 002BD6D4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F4118 002BD6D8  4E 80 00 20 */	blr 
+.endfn HID_HostRegister
 
-.global HID_HostDeregister
-HID_HostDeregister:
+.fn HID_HostDeregister, global
 /* 802F411C 002BD6DC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F4120 002BD6E0  7C 08 02 A6 */	mflr r0
 /* 802F4124 002BD6E4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -485,9 +484,9 @@ HID_HostDeregister:
 /* 802F41F4 002BD7B4  7C 08 03 A6 */	mtlr r0
 /* 802F41F8 002BD7B8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F41FC 002BD7BC  4E 80 00 20 */	blr 
+.endfn HID_HostDeregister
 
-.global HID_HostAddDev
-HID_HostAddDev:
+.fn HID_HostAddDev, global
 /* 802F4200 002BD7C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F4204 002BD7C4  7C 08 02 A6 */	mflr r0
 /* 802F4208 002BD7C8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -596,9 +595,9 @@ HID_HostAddDev:
 /* 802F4384 002BD944  7C 08 03 A6 */	mtlr r0
 /* 802F4388 002BD948  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F438C 002BD94C  4E 80 00 20 */	blr 
+.endfn HID_HostAddDev
 
-.global HID_HostRemoveDev
-HID_HostRemoveDev:
+.fn HID_HostRemoveDev, global
 /* 802F4390 002BD950  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F4394 002BD954  7C 08 02 A6 */	mflr r0
 /* 802F4398 002BD958  90 01 00 24 */	stw r0, 0x24(r1)
@@ -654,9 +653,9 @@ HID_HostRemoveDev:
 /* 802F444C 002BDA0C  7C 08 03 A6 */	mtlr r0
 /* 802F4450 002BDA10  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F4454 002BDA14  4E 80 00 20 */	blr 
+.endfn HID_HostRemoveDev
 
-.global HID_HostOpenDev
-HID_HostOpenDev:
+.fn HID_HostOpenDev, global
 /* 802F4458 002BDA18  3C 80 80 5C */	lis r4, lbl_805C26B8@ha
 /* 802F445C 002BDA1C  38 84 26 B8 */	addi r4, r4, lbl_805C26B8@l
 /* 802F4460 002BDA20  88 04 04 00 */	lbz r0, 0x400(r4)
@@ -686,9 +685,9 @@ HID_HostOpenDev:
 /* 802F44B0 002BDA70  98 04 00 0C */	stb r0, 0xc(r4)
 /* 802F44B4 002BDA74  48 00 23 28 */	b hidh_conn_initiate
 /* 802F44B8 002BDA78  4E 80 00 20 */	blr 
+.endfn HID_HostOpenDev
 
-.global HID_HostWriteDev
-HID_HostWriteDev:
+.fn HID_HostWriteDev, global
 /* 802F44BC 002BDA7C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802F44C0 002BDA80  7C 08 02 A6 */	mflr r0
 /* 802F44C4 002BDA84  90 01 00 34 */	stw r0, 0x34(r1)
@@ -778,9 +777,9 @@ HID_HostWriteDev:
 /* 802F45F0 002BDBB0  7C 08 03 A6 */	mtlr r0
 /* 802F45F4 002BDBB4  38 21 00 30 */	addi r1, r1, 0x30
 /* 802F45F8 002BDBB8  4E 80 00 20 */	blr 
+.endfn HID_HostWriteDev
 
-.global HID_HostCloseDev
-HID_HostCloseDev:
+.fn HID_HostCloseDev, global
 /* 802F45FC 002BDBBC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F4600 002BDBC0  7C 08 02 A6 */	mflr r0
 /* 802F4604 002BDBC4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -826,9 +825,9 @@ HID_HostCloseDev:
 /* 802F4690 002BDC50  7C 08 03 A6 */	mtlr r0
 /* 802F4694 002BDC54  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F4698 002BDC58  4E 80 00 20 */	blr 
+.endfn HID_HostCloseDev
 
-.global HID_HostSetSecurityLevel
-HID_HostSetSecurityLevel:
+.fn HID_HostSetSecurityLevel, global
 /* 802F469C 002BDC5C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F46A0 002BDC60  7C 08 02 A6 */	mflr r0
 /* 802F46A4 002BDC64  38 A0 00 20 */	li r5, 0x20
@@ -980,6 +979,7 @@ HID_HostSetSecurityLevel:
 /* 802F48B8 002BDE78  7C 08 03 A6 */	mtlr r0
 /* 802F48BC 002BDE7C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F48C0 002BDE80  4E 80 00 20 */	blr
+.endfn HID_HostSetSecurityLevel
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

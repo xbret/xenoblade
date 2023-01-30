@@ -2,16 +2,15 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global MPSGET_Init
-MPSGET_Init:
+.fn MPSGET_Init, global
 /* 803BCA80 00386040  4E 80 00 20 */	blr 
+.endfn MPSGET_Init
 
-.global MPSGET_Finish
-MPSGET_Finish:
+.fn MPSGET_Finish, global
 /* 803BCA84 00386044  4E 80 00 20 */	blr 
+.endfn MPSGET_Finish
 
-.global MPS_GetPackHd
-MPS_GetPackHd:
+.fn MPS_GetPackHd, global
 /* 803BCA88 00386048  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803BCA8C 0038604C  7C 08 02 A6 */	mflr r0
 /* 803BCA90 00386050  90 01 00 14 */	stw r0, 0x14(r1)
@@ -44,9 +43,9 @@ MPS_GetPackHd:
 /* 803BCAF4 003860B4  7C 08 03 A6 */	mtlr r0
 /* 803BCAF8 003860B8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803BCAFC 003860BC  4E 80 00 20 */	blr 
+.endfn MPS_GetPackHd
 
-.global MPS_GetSysHd
-MPS_GetSysHd:
+.fn MPS_GetSysHd, global
 /* 803BCB00 003860C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803BCB04 003860C4  7C 08 02 A6 */	mflr r0
 /* 803BCB08 003860C8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -92,9 +91,9 @@ MPS_GetSysHd:
 /* 803BCBA0 00386160  7C 08 03 A6 */	mtlr r0
 /* 803BCBA4 00386164  38 21 00 20 */	addi r1, r1, 0x20
 /* 803BCBA8 00386168  4E 80 00 20 */	blr 
+.endfn MPS_GetSysHd
 
-.global MPS_GetLastSysHd
-MPS_GetLastSysHd:
+.fn MPS_GetLastSysHd, global
 /* 803BCBAC 0038616C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803BCBB0 00386170  7C 08 02 A6 */	mflr r0
 /* 803BCBB4 00386174  90 01 00 14 */	stw r0, 0x14(r1)
@@ -135,6 +134,7 @@ MPS_GetLastSysHd:
 /* 803BCC38 003861F8  7C 08 03 A6 */	mtlr r0
 /* 803BCC3C 003861FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803BCC40 00386200  4E 80 00 20 */	blr 
+.endfn MPS_GetLastSysHd
 
 .global MPS_GetPketHd
 MPS_GetPketHd:

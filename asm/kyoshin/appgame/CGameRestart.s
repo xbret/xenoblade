@@ -2,10 +2,11 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+
+
 #this class is inside CGame.cpp
 
-.global func_80039E40
-func_80039E40:
+.fn func_80039E40, global
 /* 80039E40 00003400  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039E44 00003404  7C 08 02 A6 */	mflr r0
 /* 80039E48 00003408  90 01 00 14 */	stw r0, 0x14(r1)
@@ -27,9 +28,9 @@ func_80039E40:
 /* 80039E84 00003444  7C 08 03 A6 */	mtlr r0
 /* 80039E88 00003448  38 21 00 10 */	addi r1, r1, 0x10
 /* 80039E8C 0000344C  4E 80 00 20 */	blr 
+.endfn func_80039E40
 
-.global func_80039E90
-func_80039E90:
+.fn func_80039E90, global
 /* 80039E90 00003450  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039E94 00003454  7C 08 02 A6 */	mflr r0
 /* 80039E98 00003458  2C 03 00 00 */	cmpwi r3, 0
@@ -51,25 +52,30 @@ func_80039E90:
 /* 80039ED4 00003494  7C 08 03 A6 */	mtlr r0
 /* 80039ED8 00003498  38 21 00 10 */	addi r1, r1, 0x10
 /* 80039EDC 0000349C  4E 80 00 20 */	blr
+.endfn func_80039E90
 
-.global sinit_80039EE0
-sinit_80039EE0:
+.fn sinit_80039EE0, global
 /* 80039EE0 000034A0  3C 60 80 57 */	lis r3, lbl_80573C80@ha
 /* 80039EE4 000034A4  38 63 3C 80 */	addi r3, r3, lbl_80573C80@l
 /* 80039EE8 000034A8  48 00 00 04 */	b func_80039EEC
+.endfn sinit_80039EE0
 
-.global func_80039EEC
-func_80039EEC:
+.fn func_80039EEC, global
 /* 80039EEC 000034AC  38 00 00 00 */	li r0, 0
 /* 80039EF0 000034B0  98 03 00 00 */	stb r0, 0(r3)
 /* 80039EF4 000034B4  90 03 00 40 */	stw r0, 0x40(r3)
 /* 80039EF8 000034B8  4E 80 00 20 */	blr
+.endfn func_80039EEC
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 
+.balign 4
+
 .4byte sinit_80039EE0
 
-.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+
+
 
 .global lbl_80573C80
 lbl_80573C80:
@@ -77,27 +83,42 @@ lbl_80573C80:
     
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+
+
 .global lbl_8066660C
 lbl_8066660C:
 	.skip 0x4
 
-.section extab_, "a"  # 0x800066E0 - 0x80021020
+.section extab, "a" # 0x800066E0 - 0x80021020
 
-.global lbl_800067B4
-lbl_800067B4:
+.balign 4
+
+.obj "@etb_800067B4", local
+.hidden "@etb_800067B4"
 	.4byte 0x08080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_800067B4"
 
-.global lbl_800067BC
-lbl_800067BC:
+.obj "@etb_800067BC", local
+.hidden "@etb_800067BC"
 	.4byte 0x10080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_800067BC"
 
-.section extabindex_, "a"  # 0x80021020 - 0x80039220
+.section extabindex, "a" # 0x80021020 - 0x80039220
 
-.4byte func_80039E40
+.balign 4
+
+.obj "@eti_800210EC", local
+.hidden "@eti_800210EC"
+	.4byte func_80039E40
 	.4byte 0x00000050
-	.4byte lbl_800067B4
+	.4byte "@etb_800067B4"
+.endobj "@eti_800210EC"
+
+.obj "@eti_800210F8", local
+.hidden "@eti_800210F8"
 	.4byte func_80039E90
 	.4byte 0x00000050
-	.4byte lbl_800067BC
+	.4byte "@etb_800067BC"
+.endobj "@eti_800210F8"

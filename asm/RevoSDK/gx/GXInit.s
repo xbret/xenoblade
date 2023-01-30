@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global __GXDefaultTexRegionCallback
-__GXDefaultTexRegionCallback:
+.fn __GXDefaultTexRegionCallback, global
 /* 80317470 002E0A30  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80317474 002E0A34  7C 08 02 A6 */	mflr r0
 /* 80317478 002E0A38  90 01 00 24 */	stw r0, 0x24(r1)
@@ -67,10 +66,10 @@ __GXDefaultTexRegionCallback:
 /* 80317548 002E0B08  7C 08 03 A6 */	mtlr r0
 /* 8031754C 002E0B0C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80317550 002E0B10  4E 80 00 20 */	blr 
+.endfn __GXDefaultTexRegionCallback
 
 .balign 16, 0
-.global __GXDefaultTlutRegionCallback
-__GXDefaultTlutRegionCallback:
+.fn __GXDefaultTlutRegionCallback, global
 /* 80317560 002E0B20  28 03 00 14 */	cmplwi r3, 0x14
 /* 80317564 002E0B24  41 80 00 0C */	blt .L_80317570
 /* 80317568 002E0B28  38 60 00 00 */	li r3, 0
@@ -81,10 +80,10 @@ __GXDefaultTlutRegionCallback:
 /* 80317578 002E0B38  7C 64 02 14 */	add r3, r4, r0
 /* 8031757C 002E0B3C  38 63 03 D8 */	addi r3, r3, 0x3d8
 /* 80317580 002E0B40  4E 80 00 20 */	blr 
+.endfn __GXDefaultTlutRegionCallback
 
 .balign 16, 0
-.global __GXShutdown
-__GXShutdown:
+.fn __GXShutdown, global
 /* 80317590 002E0B50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80317594 002E0B54  7C 08 02 A6 */	mflr r0
 /* 80317598 002E0B58  2C 03 00 00 */	cmpwi r3, 0
@@ -184,10 +183,10 @@ __GXShutdown:
 /* 803176F4 002E0CB4  7C 08 03 A6 */	mtlr r0
 /* 803176F8 002E0CB8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803176FC 002E0CBC  4E 80 00 20 */	blr 
+.endfn __GXShutdown
 
 .balign 16, 0
-.global __GXInitRevisionBits
-__GXInitRevisionBits:
+.fn __GXInitRevisionBits, global
 /* 80317700 002E0CC0  38 00 00 02 */	li r0, 2
 /* 80317704 002E0CC4  80 C2 BC 20 */	lwz r6, lbl_8066BFA0@sda21(r2)
 /* 80317708 002E0CC8  38 E0 00 00 */	li r7, 0
@@ -265,10 +264,10 @@ __GXInitRevisionBits:
 /* 80317824 002E0DE4  98 07 80 00 */	stb r0, -0x8000(r7)
 /* 80317828 002E0DE8  90 87 80 00 */	stw r4, -0x8000(r7)
 /* 8031782C 002E0DEC  4E 80 00 20 */	blr 
+.endfn __GXInitRevisionBits
 
 .balign 16, 0
-.global GXInit
-GXInit:
+.fn GXInit, global
 /* 80317830 002E0DF0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80317834 002E0DF4  7C 08 02 A6 */	mflr r0
 /* 80317838 002E0DF8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -596,10 +595,10 @@ GXInit:
 /* 80317D28 002E12E8  7C 08 03 A6 */	mtlr r0
 /* 80317D2C 002E12EC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80317D30 002E12F0  4E 80 00 20 */	blr 
+.endfn GXInit
 
 .balign 16, 0
-.global __GXInitGX
-__GXInitGX:
+.fn __GXInitGX, global
 /* 80317D40 002E1300  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 80317D44 002E1304  7C 08 02 A6 */	mflr r0
 /* 80317D48 002E1308  90 01 00 A4 */	stw r0, 0xa4(r1)
@@ -1173,6 +1172,7 @@ __GXInitGX:
 /* 803185F4 002E1BB4  7C 08 03 A6 */	mtlr r0
 /* 803185F8 002E1BB8  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 803185FC 002E1BBC  4E 80 00 20 */	blr
+.endfn __GXInitGX
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

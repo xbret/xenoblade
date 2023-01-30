@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global btu_task_init
-btu_task_init:
+.fn btu_task_init, global
 /* 802DE1F0 002A77B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DE1F4 002A77B4  7C 08 02 A6 */	mflr r0
 /* 802DE1F8 002A77B8  38 60 00 01 */	li r3, 1
@@ -20,9 +19,9 @@ btu_task_init:
 /* 802DE224 002A77E4  7C 08 03 A6 */	mtlr r0
 /* 802DE228 002A77E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DE22C 002A77EC  4E 80 00 20 */	blr
+.endfn btu_task_init
 
-.global btu_task_msg_handler
-btu_task_msg_handler:
+.fn btu_task_msg_handler, global
 /* 802DE230 002A77F0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DE234 002A77F4  7C 08 02 A6 */	mflr r0
 /* 802DE238 002A77F8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -290,10 +289,10 @@ btu_task_msg_handler:
 /* 802DE5A0 002A7B60  7C 08 03 A6 */	mtlr r0
 /* 802DE5A4 002A7B64  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DE5A8 002A7B68  4E 80 00 20 */	blr 
+.endfn btu_task_msg_handler
 
 .balign 16, 0
-.global btu_start_timer
-btu_start_timer:
+.fn btu_start_timer, global
 /* 802DE5B0 002A7B70  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DE5B4 002A7B74  7C 08 02 A6 */	mflr r0
 /* 802DE5B8 002A7B78  90 01 00 24 */	stw r0, 0x24(r1)
@@ -322,14 +321,15 @@ btu_start_timer:
 /* 802DE614 002A7BD4  7C 08 03 A6 */	mtlr r0
 /* 802DE618 002A7BD8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DE61C 002A7BDC  4E 80 00 20 */	blr 
+.endfn btu_start_timer
 
-.global btu_stop_timer
-btu_stop_timer:
+.fn btu_stop_timer, global
 /* 802DE620 002A7BE0  3C A0 80 5C */	lis r5, lbl_805BF4D0@ha
 /* 802DE624 002A7BE4  7C 64 1B 78 */	mr r4, r3
 /* 802DE628 002A7BE8  38 A5 F4 D0 */	addi r5, r5, lbl_805BF4D0@l
 /* 802DE62C 002A7BEC  38 65 00 40 */	addi r3, r5, 0x40
 /* 802DE630 002A7BF0  4B FF E0 30 */	b GKI_remove_from_timer_list
+.endfn btu_stop_timer
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 .global lbl_80667770

@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __prep_buffer
-__prep_buffer:
+.fn __prep_buffer, global
 /* 802BDCC8 00287288  80 83 00 18 */	lwz r4, 0x18(r3)
 /* 802BDCCC 0028728C  80 03 00 2C */	lwz r0, 0x2c(r3)
 /* 802BDCD0 00287290  80 C3 00 1C */	lwz r6, 0x1c(r3)
@@ -14,6 +13,7 @@ __prep_buffer:
 /* 802BDCE4 002872A4  90 03 00 28 */	stw r0, 0x28(r3)
 /* 802BDCE8 002872A8  90 83 00 34 */	stw r4, 0x34(r3)
 /* 802BDCEC 002872AC  4E 80 00 20 */	blr 
+.endfn __prep_buffer
 
 .global __flush_buffer
 __flush_buffer:

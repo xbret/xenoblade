@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global TPLBind
-TPLBind:
+.fn TPLBind, global
 /* 803627C0 0032BD80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803627C4 0032BD84  7C 08 02 A6 */	mflr r0
 /* 803627C8 0032BD88  90 01 00 14 */	stw r0, 0x14(r1)
@@ -80,10 +79,10 @@ TPLBind:
 /* 803628CC 0032BE8C  7C 08 03 A6 */	mtlr r0
 /* 803628D0 0032BE90  38 21 00 10 */	addi r1, r1, 0x10
 /* 803628D4 0032BE94  4E 80 00 20 */	blr 
+.endfn TPLBind
 
 .balign 16, 0
-.global TPLGet
-TPLGet:
+.fn TPLGet, global
 /* 803628E0 0032BEA0  80 A3 00 04 */	lwz r5, 4(r3)
 /* 803628E4 0032BEA4  80 63 00 08 */	lwz r3, 8(r3)
 /* 803628E8 0032BEA8  7C 04 2B 96 */	divwu r0, r4, r5
@@ -92,10 +91,10 @@ TPLGet:
 /* 803628F4 0032BEB4  54 00 18 38 */	slwi r0, r0, 3
 /* 803628F8 0032BEB8  7C 63 02 14 */	add r3, r3, r0
 /* 803628FC 0032BEBC  4E 80 00 20 */	blr 
+.endfn TPLGet
 
 .balign 16, 0
-.global TPLGetGXTexObjFromPalette
-TPLGetGXTexObjFromPalette:
+.fn TPLGetGXTexObjFromPalette, global
 /* 80362900 0032BEC0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80362904 0032BEC4  7C 08 02 A6 */	mflr r0
 /* 80362908 0032BEC8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -152,6 +151,7 @@ TPLGetGXTexObjFromPalette:
 /* 803629D4 0032BF94  7C 08 03 A6 */	mtlr r0
 /* 803629D8 0032BF98  38 21 00 30 */	addi r1, r1, 0x30
 /* 803629DC 0032BF9C  4E 80 00 20 */	blr
+.endfn TPLGetGXTexObjFromPalette
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

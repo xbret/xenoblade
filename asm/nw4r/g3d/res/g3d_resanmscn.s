@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global HasResAnmAmbLight__Q34nw4r3g3d9ResAnmScnCFv
-HasResAnmAmbLight__Q34nw4r3g3d9ResAnmScnCFv:
+.fn HasResAnmAmbLight__Q34nw4r3g3d9ResAnmScnCFv, global
 /* 803E0DC8 003AA388  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803E0DCC 003AA38C  7C 08 02 A6 */	mflr r0
 /* 803E0DD0 003AA390  80 63 00 00 */	lwz r3, 0(r3)
@@ -30,9 +29,9 @@ HasResAnmAmbLight__Q34nw4r3g3d9ResAnmScnCFv:
 /* 803E0E1C 003AA3DC  7C 08 03 A6 */	mtlr r0
 /* 803E0E20 003AA3E0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803E0E24 003AA3E4  4E 80 00 20 */	blr 
+.endfn HasResAnmAmbLight__Q34nw4r3g3d9ResAnmScnCFv
 
-.global HasResAnmLight__Q34nw4r3g3d9ResAnmScnCFv
-HasResAnmLight__Q34nw4r3g3d9ResAnmScnCFv:
+.fn HasResAnmLight__Q34nw4r3g3d9ResAnmScnCFv, global
 /* 803E0E28 003AA3E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803E0E2C 003AA3EC  7C 08 02 A6 */	mflr r0
 /* 803E0E30 003AA3F0  80 63 00 00 */	lwz r3, 0(r3)
@@ -59,9 +58,9 @@ HasResAnmLight__Q34nw4r3g3d9ResAnmScnCFv:
 /* 803E0E7C 003AA43C  7C 08 03 A6 */	mtlr r0
 /* 803E0E80 003AA440  38 21 00 10 */	addi r1, r1, 0x10
 /* 803E0E84 003AA444  4E 80 00 20 */	blr
+.endfn HasResAnmLight__Q34nw4r3g3d9ResAnmScnCFv
 
-.global GetResLightSetNumEntries__Q34nw4r3g3d9ResAnmScnCFv
-GetResLightSetNumEntries__Q34nw4r3g3d9ResAnmScnCFv:
+.fn GetResLightSetNumEntries__Q34nw4r3g3d9ResAnmScnCFv, global
 /* 803E0E88 003AA448  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803E0E8C 003AA44C  7C 08 02 A6 */	mflr r0
 /* 803E0E90 003AA450  80 63 00 00 */	lwz r3, 0(r3)
@@ -99,9 +98,9 @@ GetResLightSetNumEntries__Q34nw4r3g3d9ResAnmScnCFv:
 /* 803E0EFC 003AA4BC  7C 08 03 A6 */	mtlr r0
 /* 803E0F00 003AA4C0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803E0F04 003AA4C4  4E 80 00 20 */	blr 
+.endfn GetResLightSetNumEntries__Q34nw4r3g3d9ResAnmScnCFv
 
-.global GetResAnmAmbLight__Q34nw4r3g3d9ResAnmScnCFQ34nw4r3g3d7ResName
-GetResAnmAmbLight__Q34nw4r3g3d9ResAnmScnCFQ34nw4r3g3d7ResName:
+.fn GetResAnmAmbLight__Q34nw4r3g3d9ResAnmScnCFQ34nw4r3g3d7ResName, global
 /* 803E0F08 003AA4C8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803E0F0C 003AA4CC  7C 08 02 A6 */	mflr r0
 /* 803E0F10 003AA4D0  80 63 00 00 */	lwz r3, 0(r3)
@@ -140,9 +139,9 @@ GetResAnmAmbLight__Q34nw4r3g3d9ResAnmScnCFQ34nw4r3g3d7ResName:
 /* 803E0F84 003AA544  7C 08 03 A6 */	mtlr r0
 /* 803E0F88 003AA548  38 21 00 20 */	addi r1, r1, 0x20
 /* 803E0F8C 003AA54C  4E 80 00 20 */	blr 
+.endfn GetResAnmAmbLight__Q34nw4r3g3d9ResAnmScnCFQ34nw4r3g3d7ResName
 
-.global GetResAnmAmbLight__Q34nw4r3g3d9ResAnmScnCFUl
-GetResAnmAmbLight__Q34nw4r3g3d9ResAnmScnCFUl:
+.fn GetResAnmAmbLight__Q34nw4r3g3d9ResAnmScnCFUl, global
 /* 803E0F90 003AA550  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803E0F94 003AA554  7C 08 02 A6 */	mflr r0
 /* 803E0F98 003AA558  80 63 00 00 */	lwz r3, 0(r3)
@@ -192,9 +191,9 @@ GetResAnmAmbLight__Q34nw4r3g3d9ResAnmScnCFUl:
 /* 803E1030 003AA5F0  7C 08 03 A6 */	mtlr r0
 /* 803E1034 003AA5F4  38 21 00 20 */	addi r1, r1, 0x20
 /* 803E1038 003AA5F8  4E 80 00 20 */	blr 
+.endfn GetResAnmAmbLight__Q34nw4r3g3d9ResAnmScnCFUl
 
-.global GetResAnmAmbLightNumEntries__Q34nw4r3g3d9ResAnmScnCFv
-GetResAnmAmbLightNumEntries__Q34nw4r3g3d9ResAnmScnCFv:
+.fn GetResAnmAmbLightNumEntries__Q34nw4r3g3d9ResAnmScnCFv, global
 /* 803E103C 003AA5FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803E1040 003AA600  7C 08 02 A6 */	mflr r0
 /* 803E1044 003AA604  80 63 00 00 */	lwz r3, 0(r3)
@@ -232,9 +231,9 @@ GetResAnmAmbLightNumEntries__Q34nw4r3g3d9ResAnmScnCFv:
 /* 803E10B0 003AA670  7C 08 03 A6 */	mtlr r0
 /* 803E10B4 003AA674  38 21 00 10 */	addi r1, r1, 0x10
 /* 803E10B8 003AA678  4E 80 00 20 */	blr 
+.endfn GetResAnmAmbLightNumEntries__Q34nw4r3g3d9ResAnmScnCFv
 
-.global GetResAnmLight__Q34nw4r3g3d9ResAnmScnCFQ34nw4r3g3d7ResName
-GetResAnmLight__Q34nw4r3g3d9ResAnmScnCFQ34nw4r3g3d7ResName:
+.fn GetResAnmLight__Q34nw4r3g3d9ResAnmScnCFQ34nw4r3g3d7ResName, global
 /* 803E10BC 003AA67C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803E10C0 003AA680  7C 08 02 A6 */	mflr r0
 /* 803E10C4 003AA684  80 63 00 00 */	lwz r3, 0(r3)
@@ -273,9 +272,9 @@ GetResAnmLight__Q34nw4r3g3d9ResAnmScnCFQ34nw4r3g3d7ResName:
 /* 803E1138 003AA6F8  7C 08 03 A6 */	mtlr r0
 /* 803E113C 003AA6FC  38 21 00 20 */	addi r1, r1, 0x20
 /* 803E1140 003AA700  4E 80 00 20 */	blr 
+.endfn GetResAnmLight__Q34nw4r3g3d9ResAnmScnCFQ34nw4r3g3d7ResName
 
-.global GetResAnmLight__Q34nw4r3g3d9ResAnmScnCFUl
-GetResAnmLight__Q34nw4r3g3d9ResAnmScnCFUl:
+.fn GetResAnmLight__Q34nw4r3g3d9ResAnmScnCFUl, global
 /* 803E1144 003AA704  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803E1148 003AA708  7C 08 02 A6 */	mflr r0
 /* 803E114C 003AA70C  80 63 00 00 */	lwz r3, 0(r3)
@@ -325,9 +324,9 @@ GetResAnmLight__Q34nw4r3g3d9ResAnmScnCFUl:
 /* 803E11E4 003AA7A4  7C 08 03 A6 */	mtlr r0
 /* 803E11E8 003AA7A8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803E11EC 003AA7AC  4E 80 00 20 */	blr 
+.endfn GetResAnmLight__Q34nw4r3g3d9ResAnmScnCFUl
 
-.global GetResAnmLightNumEntries__Q34nw4r3g3d9ResAnmScnCFv
-GetResAnmLightNumEntries__Q34nw4r3g3d9ResAnmScnCFv:
+.fn GetResAnmLightNumEntries__Q34nw4r3g3d9ResAnmScnCFv, global
 /* 803E11F0 003AA7B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803E11F4 003AA7B4  7C 08 02 A6 */	mflr r0
 /* 803E11F8 003AA7B8  80 63 00 00 */	lwz r3, 0(r3)
@@ -365,9 +364,9 @@ GetResAnmLightNumEntries__Q34nw4r3g3d9ResAnmScnCFv:
 /* 803E1264 003AA824  7C 08 03 A6 */	mtlr r0
 /* 803E1268 003AA828  38 21 00 10 */	addi r1, r1, 0x10
 /* 803E126C 003AA82C  4E 80 00 20 */	blr 
+.endfn GetResAnmLightNumEntries__Q34nw4r3g3d9ResAnmScnCFv
 
-.global GetResAnmFog__Q34nw4r3g3d9ResAnmScnCFUl
-GetResAnmFog__Q34nw4r3g3d9ResAnmScnCFUl:
+.fn GetResAnmFog__Q34nw4r3g3d9ResAnmScnCFUl, global
 /* 803E1270 003AA830  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803E1274 003AA834  7C 08 02 A6 */	mflr r0
 /* 803E1278 003AA838  80 63 00 00 */	lwz r3, 0(r3)
@@ -417,9 +416,9 @@ GetResAnmFog__Q34nw4r3g3d9ResAnmScnCFUl:
 /* 803E1310 003AA8D0  7C 08 03 A6 */	mtlr r0
 /* 803E1314 003AA8D4  38 21 00 20 */	addi r1, r1, 0x20
 /* 803E1318 003AA8D8  4E 80 00 20 */	blr 
+.endfn GetResAnmFog__Q34nw4r3g3d9ResAnmScnCFUl
 
-.global GetResAnmFogNumEntries__Q34nw4r3g3d9ResAnmScnCFv
-GetResAnmFogNumEntries__Q34nw4r3g3d9ResAnmScnCFv:
+.fn GetResAnmFogNumEntries__Q34nw4r3g3d9ResAnmScnCFv, global
 /* 803E131C 003AA8DC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803E1320 003AA8E0  7C 08 02 A6 */	mflr r0
 /* 803E1324 003AA8E4  80 63 00 00 */	lwz r3, 0(r3)
@@ -457,9 +456,9 @@ GetResAnmFogNumEntries__Q34nw4r3g3d9ResAnmScnCFv:
 /* 803E1390 003AA950  7C 08 03 A6 */	mtlr r0
 /* 803E1394 003AA954  38 21 00 10 */	addi r1, r1, 0x10
 /* 803E1398 003AA958  4E 80 00 20 */	blr 
+.endfn GetResAnmFogNumEntries__Q34nw4r3g3d9ResAnmScnCFv
 
-.global GetResAnmCamera__Q34nw4r3g3d9ResAnmScnCFUl
-GetResAnmCamera__Q34nw4r3g3d9ResAnmScnCFUl:
+.fn GetResAnmCamera__Q34nw4r3g3d9ResAnmScnCFUl, global
 /* 803E139C 003AA95C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803E13A0 003AA960  7C 08 02 A6 */	mflr r0
 /* 803E13A4 003AA964  80 63 00 00 */	lwz r3, 0(r3)
@@ -509,9 +508,9 @@ GetResAnmCamera__Q34nw4r3g3d9ResAnmScnCFUl:
 /* 803E143C 003AA9FC  7C 08 03 A6 */	mtlr r0
 /* 803E1440 003AAA00  38 21 00 20 */	addi r1, r1, 0x20
 /* 803E1444 003AAA04  4E 80 00 20 */	blr 
+.endfn GetResAnmCamera__Q34nw4r3g3d9ResAnmScnCFUl
 
-.global GetResAnmCameraNumEntries__Q34nw4r3g3d9ResAnmScnCFv
-GetResAnmCameraNumEntries__Q34nw4r3g3d9ResAnmScnCFv:
+.fn GetResAnmCameraNumEntries__Q34nw4r3g3d9ResAnmScnCFv, global
 /* 803E1448 003AAA08  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803E144C 003AAA0C  7C 08 02 A6 */	mflr r0
 /* 803E1450 003AAA10  80 63 00 00 */	lwz r3, 0(r3)
@@ -549,9 +548,9 @@ GetResAnmCameraNumEntries__Q34nw4r3g3d9ResAnmScnCFv:
 /* 803E14BC 003AAA7C  7C 08 03 A6 */	mtlr r0
 /* 803E14C0 003AAA80  38 21 00 10 */	addi r1, r1, 0x10
 /* 803E14C4 003AAA84  4E 80 00 20 */	blr 
+.endfn GetResAnmCameraNumEntries__Q34nw4r3g3d9ResAnmScnCFv
 
-.global GetResLightSetByRefNumber__Q34nw4r3g3d9ResAnmScnCFUl
-GetResLightSetByRefNumber__Q34nw4r3g3d9ResAnmScnCFUl:
+.fn GetResLightSetByRefNumber__Q34nw4r3g3d9ResAnmScnCFUl, global
 /* 803E14C8 003AAA88  80 63 00 00 */	lwz r3, 0(r3)
 /* 803E14CC 003AAA8C  A0 A3 00 3C */	lhz r5, 0x3c(r3)
 /* 803E14D0 003AAA90  7C 05 20 40 */	cmplw r5, r4
@@ -574,9 +573,9 @@ GetResLightSetByRefNumber__Q34nw4r3g3d9ResAnmScnCFUl:
 /* 803E1508 003AAAC8  4D 80 00 20 */	bltlr 
 /* 803E150C 003AAACC  38 60 00 00 */	li r3, 0
 /* 803E1510 003AAAD0  4E 80 00 20 */	blr 
+.endfn GetResLightSetByRefNumber__Q34nw4r3g3d9ResAnmScnCFUl
 
-.global GetResAnmAmbLightByRefNumber__Q34nw4r3g3d9ResAnmScnCFUl
-GetResAnmAmbLightByRefNumber__Q34nw4r3g3d9ResAnmScnCFUl:
+.fn GetResAnmAmbLightByRefNumber__Q34nw4r3g3d9ResAnmScnCFUl, global
 /* 803E1514 003AAAD4  80 63 00 00 */	lwz r3, 0(r3)
 /* 803E1518 003AAAD8  A0 A3 00 3E */	lhz r5, 0x3e(r3)
 /* 803E151C 003AAADC  7C 05 20 40 */	cmplw r5, r4
@@ -599,9 +598,9 @@ GetResAnmAmbLightByRefNumber__Q34nw4r3g3d9ResAnmScnCFUl:
 /* 803E1554 003AAB14  4D 80 00 20 */	bltlr 
 /* 803E1558 003AAB18  38 60 00 00 */	li r3, 0
 /* 803E155C 003AAB1C  4E 80 00 20 */	blr 
+.endfn GetResAnmAmbLightByRefNumber__Q34nw4r3g3d9ResAnmScnCFUl
 
-.global GetResAnmLightByRefNumber__Q34nw4r3g3d9ResAnmScnCFUl
-GetResAnmLightByRefNumber__Q34nw4r3g3d9ResAnmScnCFUl:
+.fn GetResAnmLightByRefNumber__Q34nw4r3g3d9ResAnmScnCFUl, global
 /* 803E1560 003AAB20  80 63 00 00 */	lwz r3, 0(r3)
 /* 803E1564 003AAB24  A0 A3 00 40 */	lhz r5, 0x40(r3)
 /* 803E1568 003AAB28  7C 05 20 40 */	cmplw r5, r4
@@ -624,9 +623,9 @@ GetResAnmLightByRefNumber__Q34nw4r3g3d9ResAnmScnCFUl:
 /* 803E15A0 003AAB60  4D 80 00 20 */	bltlr 
 /* 803E15A4 003AAB64  38 60 00 00 */	li r3, 0
 /* 803E15A8 003AAB68  4E 80 00 20 */	blr 
+.endfn GetResAnmLightByRefNumber__Q34nw4r3g3d9ResAnmScnCFUl
 
-.global GetResAnmFogByRefNumber__Q34nw4r3g3d9ResAnmScnCFUl
-GetResAnmFogByRefNumber__Q34nw4r3g3d9ResAnmScnCFUl:
+.fn GetResAnmFogByRefNumber__Q34nw4r3g3d9ResAnmScnCFUl, global
 /* 803E15AC 003AAB6C  80 63 00 00 */	lwz r3, 0(r3)
 /* 803E15B0 003AAB70  A0 A3 00 42 */	lhz r5, 0x42(r3)
 /* 803E15B4 003AAB74  7C 05 20 40 */	cmplw r5, r4
@@ -649,9 +648,9 @@ GetResAnmFogByRefNumber__Q34nw4r3g3d9ResAnmScnCFUl:
 /* 803E15EC 003AABAC  4D 80 00 20 */	bltlr 
 /* 803E15F0 003AABB0  38 60 00 00 */	li r3, 0
 /* 803E15F4 003AABB4  4E 80 00 20 */	blr 
+.endfn GetResAnmFogByRefNumber__Q34nw4r3g3d9ResAnmScnCFUl
 
-.global GetResAnmCameraByRefNumber__Q34nw4r3g3d9ResAnmScnCFUl
-GetResAnmCameraByRefNumber__Q34nw4r3g3d9ResAnmScnCFUl:
+.fn GetResAnmCameraByRefNumber__Q34nw4r3g3d9ResAnmScnCFUl, global
 /* 803E15F8 003AABB8  80 63 00 00 */	lwz r3, 0(r3)
 /* 803E15FC 003AABBC  A0 A3 00 44 */	lhz r5, 0x44(r3)
 /* 803E1600 003AABC0  7C 05 20 40 */	cmplw r5, r4
@@ -674,9 +673,9 @@ GetResAnmCameraByRefNumber__Q34nw4r3g3d9ResAnmScnCFUl:
 /* 803E1638 003AABF8  4D 80 00 20 */	bltlr 
 /* 803E163C 003AABFC  38 60 00 00 */	li r3, 0
 /* 803E1640 003AAC00  4E 80 00 20 */	blr 
+.endfn GetResAnmCameraByRefNumber__Q34nw4r3g3d9ResAnmScnCFUl
 
-.global Bind__Q34nw4r3g3d9ResAnmScnFQ34nw4r3g3d9ResAnmScn
-Bind__Q34nw4r3g3d9ResAnmScnFQ34nw4r3g3d9ResAnmScn:
+.fn Bind__Q34nw4r3g3d9ResAnmScnFQ34nw4r3g3d9ResAnmScn, global
 /* 803E1644 003AAC04  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803E1648 003AAC08  7C 08 02 A6 */	mflr r0
 /* 803E164C 003AAC0C  90 01 00 44 */	stw r0, 0x44(r1)
@@ -782,6 +781,7 @@ Bind__Q34nw4r3g3d9ResAnmScnFQ34nw4r3g3d9ResAnmScn:
 /* 803E17A4 003AAD64  7C 08 03 A6 */	mtlr r0
 /* 803E17A8 003AAD68  38 21 00 40 */	addi r1, r1, 0x40
 /* 803E17AC 003AAD6C  4E 80 00 20 */	blr 
+.endfn Bind__Q34nw4r3g3d9ResAnmScnFQ34nw4r3g3d9ResAnmScn
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

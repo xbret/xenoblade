@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global OSInitMutex
-OSInitMutex:
+.fn OSInitMutex, global
 /* 80359C20 003231E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80359C24 003231E4  7C 08 02 A6 */	mflr r0
 /* 80359C28 003231E8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -19,10 +18,10 @@ OSInitMutex:
 /* 80359C4C 0032320C  7C 08 03 A6 */	mtlr r0
 /* 80359C50 00323210  38 21 00 10 */	addi r1, r1, 0x10
 /* 80359C54 00323214  4E 80 00 20 */	blr 
+.endfn OSInitMutex
 
 .balign 16, 0
-.global OSLockMutex
-OSLockMutex:
+.fn OSLockMutex, global
 /* 80359C60 00323220  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80359C64 00323224  7C 08 02 A6 */	mflr r0
 /* 80359C68 00323228  90 01 00 24 */	stw r0, 0x24(r1)
@@ -84,10 +83,10 @@ OSLockMutex:
 /* 80359D30 003232F0  7C 08 03 A6 */	mtlr r0
 /* 80359D34 003232F4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80359D38 003232F8  4E 80 00 20 */	blr 
+.endfn OSLockMutex
 
 .balign 16, 0
-.global OSUnlockMutex
-OSUnlockMutex:
+.fn OSUnlockMutex, global
 /* 80359D40 00323300  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80359D44 00323304  7C 08 02 A6 */	mflr r0
 /* 80359D48 00323308  90 01 00 24 */	stw r0, 0x24(r1)
@@ -144,6 +143,7 @@ OSUnlockMutex:
 /* 80359DFC 003233BC  7C 08 03 A6 */	mtlr r0
 /* 80359E00 003233C0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80359E04 003233C4  4E 80 00 20 */	blr 
+.endfn OSUnlockMutex
 
 .balign 16, 0
 .global __OSUnlockAllMutex

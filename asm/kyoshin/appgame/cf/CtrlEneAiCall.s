@@ -2,8 +2,9 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global sinit_8008A0C8
-sinit_8008A0C8:
+
+
+.fn sinit_8008A0C8, global
 /* 8008A0C8 00053688  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8008A0CC 0005368C  7C 08 02 A6 */	mflr r0
 /* 8008A0D0 00053690  90 01 00 14 */	stw r0, 0x14(r1)
@@ -19,13 +20,18 @@ sinit_8008A0C8:
 /* 8008A0F8 000536B8  7C 08 03 A6 */	mtlr r0
 /* 8008A0FC 000536BC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8008A100 000536C0  4E 80 00 20 */	blr 
+.endfn sinit_8008A0C8
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.balign 4
 
 .4byte sinit_8008A0C8
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
 
 .global cf_CtrlEneAiCall_typestr
 cf_CtrlEneAiCall_typestr:
@@ -39,6 +45,8 @@ CColiProc_typestr:
 	.4byte 0
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
 
 .global __vt__cf_CtrlEneAiCall
 __vt__cf_CtrlEneAiCall:
@@ -55,6 +63,8 @@ cf_CtrlEneAiCall_hierarchy:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+
+
 .global __RTTI__cf_CtrlEneAiCall
 __RTTI__cf_CtrlEneAiCall:
 	.4byte cf_CtrlEneAiCall_typestr
@@ -65,17 +75,23 @@ __RTTI__CColiProc:
 	.4byte CColiProc_typestr
 	.4byte 0
 
-.section extab_, "a"  # 0x800066E0 - 0x80021020
+.section extab, "a" # 0x800066E0 - 0x80021020
 
-.global lbl_80008BB4
-lbl_80008BB4:
+.balign 4
+
+.obj "@etb_80008BB4", local
+.hidden "@etb_80008BB4"
 	.4byte 0x08080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_80008BB4"
 
+.section extabindex, "a" # 0x80021020 - 0x80039220
 
-.section extabindex_, "a"  # 0x80021020 - 0x80039220
+.balign 4
 
-
+.obj "@eti_800241AC", local
+.hidden "@eti_800241AC"
 	.4byte sinit_8008A0C8
 	.4byte 0x0000003C
-	.4byte lbl_80008BB4
+	.4byte "@etb_80008BB4"
+.endobj "@eti_800241AC"

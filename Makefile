@@ -35,10 +35,7 @@ S_FILES := $(wildcard asm/*.s)
 C_FILES := $(wildcard src/*.c)
 CPP_FILES := $(wildcard src/*.cpp)
 CPP_FILES += $(wildcard src/*.cp)
-LDSCRIPT_DOL := $(BUILD_DIR)/ldscript.lcf
-LDSCRIPT_REL := $(BUILD_DIR)/partial.lcf
-ELF2REL_ARGS := -i 1 -o 0x0 -l 0x2F -c 14
-REL_LDFLAGS := -nodefaults -fp hard -r1 -m _prolog -g
+LDSCRIPT_DOL := ldscript.lcf
 
 # Outputs
 DOL     := $(BUILD_DIR)/main.dol
@@ -96,12 +93,10 @@ else
   SHA1SUM := shasum
   PYTHON  := python3
 endif
-CC      = $(WINE) tools/mwcc_compiler/$(CONSOLE)/$(MWCC_VERSION)/mwcceppc.exe
-LD     := $(WINE) tools/mwcc_compiler/$(CONSOLE)/$(MWLD_VERSION)/mwldeppc.exe
-ELF2DOL := tools/elf2dol
-ELF2REL := tools/elf2rel
-
-DTK := tools/dtk
+CC      := $(WINE) tools/mwcc_compiler/$(CONSOLE)/$(MWCC_VERSION)/mwcceppc.exe
+LD      := $(WINE) tools/mwcc_compiler/$(CONSOLE)/$(MWLD_VERSION)/mwldeppc.exe
+DTK     := tools/dtk
+ELF2DOL := $(DTK) elf2dol
 
 # Options
 INCLUDES := -i include/ -i src/
@@ -131,13 +126,13 @@ $(GAME_O_FILES): CFLAGS += -ipa file -str pool,readonly,reuse -RTTI on -enc SJIS
 $(MM_O_FILES): CFLAGS += -ipa file -str pool,readonly,reuse -RTTI on -enc SJIS
 $(MONOLITHLIB_O_FILES): CFLAGS += -ipa file -str pool,readonly,reuse -RTTI on -enc SJIS
 
-$(NDEV_O_FILES): CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -proc gekko -fp hard -O4,p -nodefaults $(INCLUDES)
+$(NDEV_O_FILES): CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -proc gekko -fp hard -O4,p -nodefaults  -func_align 4 $(INCLUDES)
 #All the functions in the Wii SDK except for bte are aligned to 16 bytes, so this is necessary.
 $(RVL_SDK_O_FILES): CFLAGS += -Cpp_exceptions off -func_align 16
 $(MW_O_FILES): CFLAGS += -Cpp_exceptions off
 
 #arc.c doesn't use -use_lmw_stmw on, and uses -ipa file and (maybe rest of wii sdk too?)
-$(BUILD_DIR)/src/RevoSDK/arc/arc.o: CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -proc gekko -fp hard -O4,p -nodefaults $(INCLUDES)
+$(BUILD_DIR)/src/RevoSDK/arc/arc.o: CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -proc gekko -fp hard -O4,p -nodefaults -func_align 16 $(INCLUDES)
 #Runtime has defaults and exceptions turned on
 $(BUILD_DIR)/src/PowerPC_EABI_Support/Runtime/%.o: CFLAGS = -use_lmw_stmw on -inline on -proc gekko -fp hard -O4,p -func_align 4 $(INCLUDES)
 
@@ -167,9 +162,6 @@ DUMMY != mkdir -p $(ALL_DIRS)
 
 .PHONY: tools
 
-$(LDSCRIPT_DOL): ldscript.lcf
-	$(QUIET) $(CPP) -MMD -MP -MT $@ -MF $@.d -I include/ -I . -DBUILD_DIR=$(BUILD_DIR) -o $@ $<
-
 $(DOL): $(ELF) | tools
 	$(QUIET) $(ELF2DOL) $< $@
 	$(QUIET) $(SHA1SUM) -c sha1/$(NAME).$(VERSION).sha1
@@ -188,7 +180,7 @@ tools:
 	$(MAKE) -C tools
 
 $(DTK): tools/dtk_version
-	@echo "DOWNLOAD "$@
+	@echo "Downloading $@"
 	$(QUIET) $(PYTHON) tools/download_dtk.py $< $@
 
 # ELF creation makefile instructions

@@ -3,18 +3,17 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global OSPlayTimeIsLimited
-OSPlayTimeIsLimited:
+.fn OSPlayTimeIsLimited, global
 /* 8035E820 00327DE0  80 0D B9 C8 */	lwz r0, lbl_80667B48@sda21(r13)
 /* 8035E824 00327DE4  80 6D B9 CC */	lwz r3, lbl_80667B4C@sda21(r13)
 /* 8035E828 00327DE8  7C 60 03 78 */	or r0, r3, r0
 /* 8035E82C 00327DEC  30 60 FF FF */	addic r3, r0, -1
 /* 8035E830 00327DF0  7C 63 01 10 */	subfe r3, r3, r0
 /* 8035E834 00327DF4  4E 80 00 20 */	blr 
+.endfn OSPlayTimeIsLimited
 
 .balign 16, 0
-.global __OSPlayTimeFadeLastAIDCallback
-__OSPlayTimeFadeLastAIDCallback:
+.fn __OSPlayTimeFadeLastAIDCallback, global
 /* 8035E840 00327E00  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8035E844 00327E04  7C 08 02 A6 */	mflr r0
 /* 8035E848 00327E08  90 01 00 44 */	stw r0, 0x44(r1)
@@ -132,10 +131,10 @@ __OSPlayTimeFadeLastAIDCallback:
 /* 8035E9F0 00327FB0  7C 08 03 A6 */	mtlr r0
 /* 8035E9F4 00327FB4  38 21 00 40 */	addi r1, r1, 0x40
 /* 8035E9F8 00327FB8  4E 80 00 20 */	blr 
+.endfn __OSPlayTimeFadeLastAIDCallback
 
 .balign 16, 0
-.global __OSWriteExpiredFlag
-__OSWriteExpiredFlag:
+.fn __OSWriteExpiredFlag, global
 /* 8035EA00 00327FC0  54 2B 06 FE */	clrlwi r11, r1, 0x1b
 /* 8035EA04 00327FC4  7C 2C 0B 78 */	mr r12, r1
 /* 8035EA08 00327FC8  21 6B FF 00 */	subfic r11, r11, -256
@@ -211,10 +210,10 @@ __OSWriteExpiredFlag:
 /* 8035EB08 003280C8  7C 08 03 A6 */	mtlr r0
 /* 8035EB0C 003280CC  7D 41 53 78 */	mr r1, r10
 /* 8035EB10 003280D0  4E 80 00 20 */	blr 
+.endfn __OSWriteExpiredFlag
 
 .balign 16, 0
-.global __OSWriteExpiredFlagIfSet
-__OSWriteExpiredFlagIfSet:
+.fn __OSWriteExpiredFlagIfSet, global
 /* 8035EB20 003280E0  80 0D B9 BC */	lwz r0, lbl_80667B3C@sda21(r13)
 /* 8035EB24 003280E4  2C 00 00 00 */	cmpwi r0, 0
 /* 8035EB28 003280E8  41 82 00 08 */	beq .L_8035EB30
@@ -222,10 +221,10 @@ __OSWriteExpiredFlagIfSet:
 .L_8035EB30:
 /* 8035EB30 003280F0  38 60 00 00 */	li r3, 0
 /* 8035EB34 003280F4  4E 80 00 20 */	blr 
+.endfn __OSWriteExpiredFlagIfSet
 
 .balign 16, 0
-.global __OSPlayTimeRebootThread
-__OSPlayTimeRebootThread:
+.fn __OSPlayTimeRebootThread, global
 /* 8035EB40 00328100  54 2B 06 FE */	clrlwi r11, r1, 0x1b
 /* 8035EB44 00328104  7C 2C 0B 78 */	mr r12, r1
 /* 8035EB48 00328108  21 6B FB 20 */	subfic r11, r11, -1248
@@ -288,10 +287,10 @@ __OSPlayTimeRebootThread:
 /* 8035EC20 003281E0  7C 08 03 A6 */	mtlr r0
 /* 8035EC24 003281E4  7D 41 53 78 */	mr r1, r10
 /* 8035EC28 003281E8  4E 80 00 20 */	blr 
+.endfn __OSPlayTimeRebootThread
 
 .balign 16, 0
-.global __OSPlayTimeAlarmExpired
-__OSPlayTimeAlarmExpired:
+.fn __OSPlayTimeAlarmExpired, global
 /* 8035EC30 003281F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035EC34 003281F4  7C 08 02 A6 */	mflr r0
 /* 8035EC38 003281F8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -337,10 +336,10 @@ __OSPlayTimeAlarmExpired:
 /* 8035ECC4 00328284  7C 08 03 A6 */	mtlr r0
 /* 8035ECC8 00328288  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035ECCC 0032828C  4E 80 00 20 */	blr 
+.endfn __OSPlayTimeAlarmExpired
 
 .balign 16, 0
-.global __OSGetPlayTime
-__OSGetPlayTime:
+.fn __OSGetPlayTime, global
 /* 8035ECD0 00328290  54 2B 06 FE */	clrlwi r11, r1, 0x1b
 /* 8035ECD4 00328294  7C 2C 0B 78 */	mr r12, r1
 /* 8035ECD8 00328298  21 6B FE 80 */	subfic r11, r11, -384
@@ -467,10 +466,10 @@ __OSGetPlayTime:
 /* 8035EE90 00328450  7C 08 03 A6 */	mtlr r0
 /* 8035EE94 00328454  7D 41 53 78 */	mr r1, r10
 /* 8035EE98 00328458  4E 80 00 20 */	blr 
+.endfn __OSGetPlayTime
 
 .balign 16, 0
-.global __OSInitPlayTime
-__OSInitPlayTime:
+.fn __OSInitPlayTime, global
 /* 8035EEA0 00328460  54 2B 06 FE */	clrlwi r11, r1, 0x1b
 /* 8035EEA4 00328464  7C 2C 0B 78 */	mr r12, r1
 /* 8035EEA8 00328468  21 6B FE C0 */	subfic r11, r11, -320
@@ -563,6 +562,7 @@ __OSInitPlayTime:
 /* 8035EFEC 003285AC  7C 08 03 A6 */	mtlr r0
 /* 8035EFF0 003285B0  7D 41 53 78 */	mr r1, r10
 /* 8035EFF4 003285B4  4E 80 00 20 */	blr 
+.endfn __OSInitPlayTime
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

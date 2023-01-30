@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global SFTMR_GetTmr
-SFTMR_GetTmr:
+.fn SFTMR_GetTmr, global
 /* 803CEE60 00398420  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CEE64 00398424  7C 08 02 A6 */	mflr r0
 /* 803CEE68 00398428  90 01 00 24 */	stw r0, 0x24(r1)
@@ -62,9 +61,9 @@ SFTMR_GetTmr:
 /* 803CEF2C 003984EC  7C 08 03 A6 */	mtlr r0
 /* 803CEF30 003984F0  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CEF34 003984F4  4E 80 00 20 */	blr 
+.endfn SFTMR_GetTmr
 
-.global SFTMR_GetTmrUnit
-SFTMR_GetTmrUnit:
+.fn SFTMR_GetTmrUnit, global
 /* 803CEF38 003984F8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CEF3C 003984FC  7C 08 02 A6 */	mflr r0
 /* 803CEF40 00398500  90 01 00 24 */	stw r0, 0x24(r1)
@@ -127,9 +126,9 @@ SFTMR_GetTmrUnit:
 /* 803CF018 003985D8  7C 08 03 A6 */	mtlr r0
 /* 803CF01C 003985DC  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CF020 003985E0  4E 80 00 20 */	blr 
+.endfn SFTMR_GetTmrUnit
 
-.global SFTMR_InitTsum
-SFTMR_InitTsum:
+.fn SFTMR_InitTsum, global
 /* 803CF024 003985E4  3C 80 80 00 */	lis r4, 0x7FFFFFFF@ha
 /* 803CF028 003985E8  38 A0 00 00 */	li r5, 0
 /* 803CF02C 003985EC  38 04 FF FF */	addi r0, r4, 0x7FFFFFFF@l
@@ -142,9 +141,9 @@ SFTMR_InitTsum:
 /* 803CF048 00398608  90 A3 00 10 */	stw r5, 0x10(r3)
 /* 803CF04C 0039860C  90 A3 00 18 */	stw r5, 0x18(r3)
 /* 803CF050 00398610  4E 80 00 20 */	blr 
+.endfn SFTMR_InitTsum
 
-.global SFTMR_AddTsum
-SFTMR_AddTsum:
+.fn SFTMR_AddTsum, global
 /* 803CF054 00398614  80 83 00 04 */	lwz r4, 4(r3)
 /* 803CF058 00398618  6C A0 80 00 */	xoris r0, r5, 0x8000
 /* 803CF05C 0039861C  80 E3 00 00 */	lwz r7, 0(r3)
@@ -185,6 +184,7 @@ SFTMR_AddTsum:
 /* 803CF0DC 0039869C  90 A3 00 10 */	stw r5, 0x10(r3)
 /* 803CF0E0 003986A0  90 03 00 18 */	stw r0, 0x18(r3)
 /* 803CF0E4 003986A4  4E 80 00 20 */	blr 
+.endfn SFTMR_AddTsum
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

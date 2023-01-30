@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global AllocUsedBlockFromFreeBlock_
-AllocUsedBlockFromFreeBlock_:
+.fn AllocUsedBlockFromFreeBlock_, global
 /* 80348FC0 00312580  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80348FC4 00312584  7C 08 02 A6 */	mflr r0
 /* 80348FC8 00312588  90 01 00 24 */	stw r0, 0x24(r1)
@@ -166,10 +165,10 @@ AllocUsedBlockFromFreeBlock_:
 /* 803491E0 003127A0  7C 08 03 A6 */	mtlr r0
 /* 803491E4 003127A4  38 21 00 20 */	addi r1, r1, 0x20
 /* 803491E8 003127A8  4E 80 00 20 */	blr 
+.endfn AllocUsedBlockFromFreeBlock_
 
 .balign 16, 0
-.global AllocFromHead_
-AllocFromHead_:
+.fn AllocFromHead_, global
 /* 803491F0 003127B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803491F4 003127B4  7C 08 02 A6 */	mflr r0
 /* 803491F8 003127B8  38 63 00 3C */	addi r3, r3, 0x3c
@@ -231,10 +230,10 @@ AllocFromHead_:
 /* 803492C0 00312880  7C 08 03 A6 */	mtlr r0
 /* 803492C4 00312884  38 21 00 20 */	addi r1, r1, 0x20
 /* 803492C8 00312888  4E 80 00 20 */	blr 
+.endfn AllocFromHead_
 
 .balign 16, 0
-.global AllocFromTail_
-AllocFromTail_:
+.fn AllocFromTail_, global
 /* 803492D0 00312890  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803492D4 00312894  7C 08 02 A6 */	mflr r0
 /* 803492D8 00312898  38 63 00 3C */	addi r3, r3, 0x3c
@@ -291,10 +290,10 @@ AllocFromTail_:
 /* 8034938C 0031294C  7C 08 03 A6 */	mtlr r0
 /* 80349390 00312950  38 21 00 10 */	addi r1, r1, 0x10
 /* 80349394 00312954  4E 80 00 20 */	blr 
+.endfn AllocFromTail_
 
 .balign 16, 0
-.global RecycleRegion_
-RecycleRegion_:
+.fn RecycleRegion_, global
 /* 803493A0 00312960  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803493A4 00312964  39 00 00 00 */	li r8, 0
 /* 803493A8 00312968  80 A4 00 00 */	lwz r5, 0(r4)
@@ -404,10 +403,10 @@ RecycleRegion_:
 .L_80349500:
 /* 80349500 00312AC0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80349504 00312AC4  4E 80 00 20 */	blr 
+.endfn RecycleRegion_
 
 .balign 16, 0
-.global MEMCreateExpHeapEx
-MEMCreateExpHeapEx:
+.fn MEMCreateExpHeapEx, global
 /* 80349510 00312AD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80349514 00312AD4  7C 08 02 A6 */	mflr r0
 /* 80349518 00312AD8  7C 84 1A 14 */	add r4, r4, r3
@@ -455,10 +454,10 @@ MEMCreateExpHeapEx:
 /* 803495B4 00312B74  7C 08 03 A6 */	mtlr r0
 /* 803495B8 00312B78  38 21 00 10 */	addi r1, r1, 0x10
 /* 803495BC 00312B7C  4E 80 00 20 */	blr 
+.endfn MEMCreateExpHeapEx
 
 .balign 16, 0
-.global MEMDestroyExpHeap
-MEMDestroyExpHeap:
+.fn MEMDestroyExpHeap, global
 /* 803495C0 00312B80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803495C4 00312B84  7C 08 02 A6 */	mflr r0
 /* 803495C8 00312B88  90 01 00 14 */	stw r0, 0x14(r1)
@@ -471,10 +470,10 @@ MEMDestroyExpHeap:
 /* 803495E4 00312BA4  7C 08 03 A6 */	mtlr r0
 /* 803495E8 00312BA8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803495EC 00312BAC  4E 80 00 20 */	blr
+.endfn MEMDestroyExpHeap
 
 .balign 16, 0
-.global MEMAllocFromExpHeapEx
-MEMAllocFromExpHeapEx:
+.fn MEMAllocFromExpHeapEx, global
 /* 803495F0 00312BB0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803495F4 00312BB4  7C 08 02 A6 */	mflr r0
 /* 803495F8 00312BB8  2C 04 00 00 */	cmpwi r4, 0
@@ -524,6 +523,7 @@ MEMAllocFromExpHeapEx:
 /* 80349694 00312C54  7C 08 03 A6 */	mtlr r0
 /* 80349698 00312C58  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034969C 00312C5C  4E 80 00 20 */	blr
+.endfn MEMAllocFromExpHeapEx
 
 .balign 16, 0
 .global MEMFreeToExpHeap

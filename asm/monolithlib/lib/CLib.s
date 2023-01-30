@@ -2,8 +2,9 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __ct__CLib
-__ct__CLib:
+
+
+.fn __ct__CLib, global
 /* 80459790 00422D50  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80459794 00422D54  7C 08 02 A6 */	mflr r0
 /* 80459798 00422D58  90 01 00 24 */	stw r0, 0x24(r1)
@@ -45,9 +46,9 @@ __ct__CLib:
 /* 80459824 00422DE4  7C 08 03 A6 */	mtlr r0
 /* 80459828 00422DE8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8045982C 00422DEC  4E 80 00 20 */	blr
+.endfn __ct__CLib
 
-.global func_80459830
-func_80459830:
+.fn func_80459830, global
 /* 80459830 00422DF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80459834 00422DF4  7C 08 02 A6 */	mflr r0
 /* 80459838 00422DF8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -62,9 +63,12 @@ func_80459830:
 /* 80459858 00422E18  7C 08 03 A6 */	mtlr r0
 /* 8045985C 00422E1C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80459860 00422E20  4E 80 00 20 */	blr 
+.endfn func_80459830
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
 
 .global __vt__CLib
 __vt__CLib:
@@ -121,6 +125,8 @@ CLib_hierarchy:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+
+
 .global __RTTI__CLib
 __RTTI__CLib:
 	.4byte CLib_typestr
@@ -129,29 +135,43 @@ __RTTI__CLib:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+
+
 .global CLib_typestr
 CLib_typestr:
 	.asciz "CLib"
 	.balign 4
 
-.section extab_, "a"  # 0x800066E0 - 0x80021020
+.section extab, "a" # 0x800066E0 - 0x80021020
 
-.global lbl_8001D498
-lbl_8001D498:
+.balign 4
+
+.obj "@etb_8001D498", local
+.hidden "@etb_8001D498"
 	.4byte 0x18080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001D498"
 
-.global lbl_8001D4A0
-lbl_8001D4A0:
+.obj "@etb_8001D4A0", local
+.hidden "@etb_8001D4A0"
 	.4byte 0x00080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001D4A0"
 
+.section extabindex, "a" # 0x80021020 - 0x80039220
 
-.section extabindex_, "a"  # 0x80021020 - 0x80039220
+.balign 4
 
-.4byte __ct__CLib
+.obj "@eti_800350FC", local
+.hidden "@eti_800350FC"
+	.4byte __ct__CLib
 	.4byte 0x000000A0
-	.4byte lbl_8001D498
+	.4byte "@etb_8001D498"
+.endobj "@eti_800350FC"
+
+.obj "@eti_80035108", local
+.hidden "@eti_80035108"
 	.4byte func_80459830
 	.4byte 0x00000034
-	.4byte lbl_8001D4A0
+	.4byte "@etb_8001D4A0"
+.endobj "@eti_80035108"

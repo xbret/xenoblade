@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global nandOpen
-nandOpen:
+.fn nandOpen, global
 /* 8034F8B0 00318E70  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8034F8B4 00318E74  7C 08 02 A6 */	mflr r0
 /* 8034F8B8 00318E78  90 01 00 64 */	stw r0, 0x64(r1)
@@ -80,10 +79,10 @@ nandOpen:
 /* 8034F9B4 00318F74  7C 08 03 A6 */	mtlr r0
 /* 8034F9B8 00318F78  38 21 00 60 */	addi r1, r1, 0x60
 /* 8034F9BC 00318F7C  4E 80 00 20 */	blr 
+.endfn nandOpen
 
 .balign 16, 0
-.global NANDOpen
-NANDOpen:
+.fn NANDOpen, global
 /* 8034F9C0 00318F80  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8034F9C4 00318F84  7C 08 02 A6 */	mflr r0
 /* 8034F9C8 00318F88  90 01 00 24 */	stw r0, 0x24(r1)
@@ -122,10 +121,10 @@ NANDOpen:
 /* 8034FA40 00319000  7C 08 03 A6 */	mtlr r0
 /* 8034FA44 00319004  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034FA48 00319008  4E 80 00 20 */	blr 
+.endfn NANDOpen
 
 .balign 16, 0
-.global NANDPrivateOpen
-NANDPrivateOpen:
+.fn NANDPrivateOpen, global
 /* 8034FA50 00319010  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8034FA54 00319014  7C 08 02 A6 */	mflr r0
 /* 8034FA58 00319018  90 01 00 24 */	stw r0, 0x24(r1)
@@ -164,10 +163,10 @@ NANDPrivateOpen:
 /* 8034FAD0 00319090  7C 08 03 A6 */	mtlr r0
 /* 8034FAD4 00319094  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034FAD8 00319098  4E 80 00 20 */	blr 
+.endfn NANDPrivateOpen
 
 .balign 16, 0
-.global NANDOpenAsync
-NANDOpenAsync:
+.fn NANDOpenAsync, global
 /* 8034FAE0 003190A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8034FAE4 003190A4  7C 08 02 A6 */	mflr r0
 /* 8034FAE8 003190A8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -200,10 +199,10 @@ NANDOpenAsync:
 /* 8034FB4C 0031910C  7C 08 03 A6 */	mtlr r0
 /* 8034FB50 00319110  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034FB54 00319114  4E 80 00 20 */	blr 
+.endfn NANDOpenAsync
 
 .balign 16, 0
-.global NANDPrivateOpenAsync
-NANDPrivateOpenAsync:
+.fn NANDPrivateOpenAsync, global
 /* 8034FB60 00319120  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8034FB64 00319124  7C 08 02 A6 */	mflr r0
 /* 8034FB68 00319128  90 01 00 24 */	stw r0, 0x24(r1)
@@ -236,9 +235,10 @@ NANDPrivateOpenAsync:
 /* 8034FBCC 0031918C  7C 08 03 A6 */	mtlr r0
 /* 8034FBD0 00319190  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034FBD4 00319194  4E 80 00 20 */	blr
+.endfn NANDPrivateOpenAsync
 
 .balign 16, 0
-nandOpenCallback:
+.fn nandOpenCallback, local
 /* 8034FBE0 003191A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8034FBE4 003191A4  7C 08 02 A6 */	mflr r0
 /* 8034FBE8 003191A8  2C 03 00 00 */	cmpwi r3, 0
@@ -271,10 +271,10 @@ nandOpenCallback:
 /* 8034FC4C 0031920C  7C 08 03 A6 */	mtlr r0
 /* 8034FC50 00319210  38 21 00 10 */	addi r1, r1, 0x10
 /* 8034FC54 00319214  4E 80 00 20 */	blr 
+.endfn nandOpenCallback
 
 .balign 16, 0
-.global NANDClose
-NANDClose:
+.fn NANDClose, global
 /* 8034FC60 00319220  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8034FC64 00319224  7C 08 02 A6 */	mflr r0
 /* 8034FC68 00319228  90 01 00 14 */	stw r0, 0x14(r1)
@@ -306,10 +306,10 @@ NANDClose:
 /* 8034FCC0 00319280  7C 08 03 A6 */	mtlr r0
 /* 8034FCC4 00319284  38 21 00 10 */	addi r1, r1, 0x10
 /* 8034FCC8 00319288  4E 80 00 20 */	blr 
+.endfn NANDClose
 
 .balign 16, 0
-.global NANDCloseAsync
-NANDCloseAsync:
+.fn NANDCloseAsync, global
 /* 8034FCD0 00319290  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8034FCD4 00319294  7C 08 02 A6 */	mflr r0
 /* 8034FCD8 00319298  90 01 00 24 */	stw r0, 0x24(r1)
@@ -347,6 +347,7 @@ NANDCloseAsync:
 /* 8034FD4C 0031930C  7C 08 03 A6 */	mtlr r0
 /* 8034FD50 00319310  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034FD54 00319314  4E 80 00 20 */	blr
+.endfn NANDCloseAsync
 
 .balign 16, 0
 nandCloseCallback:

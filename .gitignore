@@ -30,3 +30,6 @@ __pycache__
 tools/dtk
 #Linux
 tools/dtk-*
+disasm.log
+link_order.txt
+rsp

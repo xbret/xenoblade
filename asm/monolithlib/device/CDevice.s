@@ -2,8 +2,9 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __ct__CDeviceException
-__ct__CDeviceException:
+
+
+.fn __ct__CDeviceException, global
 /* 8044D820 00416DE0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8044D824 00416DE4  7C 08 02 A6 */	mflr r0
 /* 8044D828 00416DE8  3C 80 80 52 */	lis r4, lbl_805263E8@ha
@@ -47,9 +48,9 @@ __ct__CDeviceException:
 /* 8044D8BC 00416E7C  7C 08 03 A6 */	mtlr r0
 /* 8044D8C0 00416E80  38 21 00 20 */	addi r1, r1, 0x20
 /* 8044D8C4 00416E84  4E 80 00 20 */	blr 
+.endfn __ct__CDeviceException
 
-.global func_8044D8C8
-func_8044D8C8:
+.fn func_8044D8C8, global
 /* 8044D8C8 00416E88  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044D8CC 00416E8C  7C 08 02 A6 */	mflr r0
 /* 8044D8D0 00416E90  90 01 00 14 */	stw r0, 0x14(r1)
@@ -76,9 +77,9 @@ func_8044D8C8:
 /* 8044D91C 00416EDC  7C 08 03 A6 */	mtlr r0
 /* 8044D920 00416EE0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8044D924 00416EE4  4E 80 00 20 */	blr 
+.endfn func_8044D8C8
 
-.global __ct__CDevice
-__ct__CDevice:
+.fn __ct__CDevice, global
 /* 8044D928 00416EE8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8044D92C 00416EEC  7C 08 02 A6 */	mflr r0
 /* 8044D930 00416EF0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -120,9 +121,9 @@ __ct__CDevice:
 /* 8044D9BC 00416F7C  7C 08 03 A6 */	mtlr r0
 /* 8044D9C0 00416F80  38 21 00 20 */	addi r1, r1, 0x20
 /* 8044D9C4 00416F84  4E 80 00 20 */	blr 
+.endfn __ct__CDevice
 
-.global func_8044D9C8
-func_8044D9C8:
+.fn func_8044D9C8, global
 /* 8044D9C8 00416F88  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044D9CC 00416F8C  7C 08 02 A6 */	mflr r0
 /* 8044D9D0 00416F90  90 01 00 14 */	stw r0, 0x14(r1)
@@ -156,9 +157,9 @@ func_8044D9C8:
 /* 8044DA38 00416FF8  7C 08 03 A6 */	mtlr r0
 /* 8044DA3C 00416FFC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8044DA40 00417000  4E 80 00 20 */	blr 
+.endfn func_8044D9C8
 
-.global func_8044DA44
-func_8044DA44:
+.fn func_8044DA44, global
 /* 8044DA44 00417004  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044DA48 00417008  7C 08 02 A6 */	mflr r0
 /* 8044DA4C 0041700C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -173,9 +174,9 @@ func_8044DA44:
 /* 8044DA70 00417030  7C 08 03 A6 */	mtlr r0
 /* 8044DA74 00417034  38 21 00 10 */	addi r1, r1, 0x10
 /* 8044DA78 00417038  4E 80 00 20 */	blr 
+.endfn func_8044DA44
 
-.global func_8044DA7C
-func_8044DA7C:
+.fn func_8044DA7C, global
 /* 8044DA7C 0041703C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044DA80 00417040  7C 08 02 A6 */	mflr r0
 /* 8044DA84 00417044  2C 03 00 00 */	cmpwi r3, 0
@@ -201,9 +202,9 @@ func_8044DA7C:
 /* 8044DAD0 00417090  7C 08 03 A6 */	mtlr r0
 /* 8044DAD4 00417094  38 21 00 10 */	addi r1, r1, 0x10
 /* 8044DAD8 00417098  4E 80 00 20 */	blr 
+.endfn func_8044DA7C
 
-.global func_8044DADC
-func_8044DADC:
+.fn func_8044DADC, global
 /* 8044DADC 0041709C  80 83 00 60 */	lwz r4, 0x60(r3)
 /* 8044DAE0 004170A0  80 04 00 00 */	lwz r0, 0(r4)
 /* 8044DAE4 004170A4  7C 00 20 40 */	cmplw r0, r4
@@ -213,10 +214,10 @@ func_8044DADC:
 .L_8044DAF4:
 /* 8044DAF4 004170B4  4B FE AF 30 */	b func_80438A24
 /* 8044DAF8 004170B8  4E 80 00 20 */	blr
+.endfn func_8044DADC
 
 
-.global sinit_8044DAFC
-sinit_8044DAFC:
+.fn sinit_8044DAFC, global
 /* 8044DAFC 004170BC  3C C0 80 66 */	lis r6, lbl_8065A6F8@ha
 /* 8044DB00 004170C0  3C 80 80 66 */	lis r4, lbl_8065A73C@ha
 /* 8044DB04 004170C4  38 A6 A6 F8 */	addi r5, r6, lbl_8065A6F8@l
@@ -227,12 +228,17 @@ sinit_8044DAFC:
 /* 8044DB18 004170D8  98 04 A7 3C */	stb r0, lbl_8065A73C@l(r4)
 /* 8044DB1C 004170DC  90 03 00 40 */	stw r0, 0x40(r3)
 /* 8044DB20 004170E0  4E 80 00 20 */	blr
+.endfn sinit_8044DAFC
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.balign 4
 
 .4byte sinit_8044DAFC
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
 
 
 .global lbl_805263A0
@@ -266,6 +272,8 @@ lbl_805263E8:
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
 
 .global __vt___unnamed_CDevice_cpp_CDeviceException
 __vt___unnamed_CDevice_cpp_CDeviceException:
@@ -375,6 +383,8 @@ CDevice_hierarchy:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+
+
 .global lbl_80665F98
 lbl_80665F98:
 	.4byte lbl_805263A0
@@ -404,56 +414,88 @@ __RTTI__CDevice:
 	.4byte CDevice_typestr
 	.4byte CDevice_hierarchy
 
-.section extab_, "a"  # 0x800066E0 - 0x80021020
+.section extab, "a" # 0x800066E0 - 0x80021020
 
-.global lbl_8001CCD8
-lbl_8001CCD8:
+.balign 4
+
+.obj "@etb_8001CCD8", local
+.hidden "@etb_8001CCD8"
 	.4byte 0x18080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001CCD8"
 
-.global lbl_8001CCE0
-lbl_8001CCE0:
+.obj "@etb_8001CCE0", local
+.hidden "@etb_8001CCE0"
 	.4byte 0x08080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001CCE0"
 
-.global lbl_8001CCE8
-lbl_8001CCE8:
+.obj "@etb_8001CCE8", local
+.hidden "@etb_8001CCE8"
 	.4byte 0x18080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001CCE8"
 
-.global lbl_8001CCF0
-lbl_8001CCF0:
+.obj "@etb_8001CCF0", local
+.hidden "@etb_8001CCF0"
 	.4byte 0x08080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001CCF0"
 
-.global lbl_8001CCF8
-lbl_8001CCF8:
+.obj "@etb_8001CCF8", local
+.hidden "@etb_8001CCF8"
 	.4byte 0x00080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001CCF8"
 
-.global lbl_8001CD00
-lbl_8001CD00:
+.obj "@etb_8001CD00", local
+.hidden "@etb_8001CD00"
 	.4byte 0x10080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001CD00"
 
+.section extabindex, "a" # 0x80021020 - 0x80039220
 
-.section extabindex_, "a"  # 0x80021020 - 0x80039220
+.balign 4
 
-.4byte __ct__CDeviceException
+.obj "@eti_80034958", local
+.hidden "@eti_80034958"
+	.4byte __ct__CDeviceException
 	.4byte 0x000000A8
-	.4byte lbl_8001CCD8
+	.4byte "@etb_8001CCD8"
+.endobj "@eti_80034958"
+
+.obj "@eti_80034964", local
+.hidden "@eti_80034964"
 	.4byte func_8044D8C8
 	.4byte 0x00000060
-	.4byte lbl_8001CCE0
+	.4byte "@etb_8001CCE0"
+.endobj "@eti_80034964"
+
+.obj "@eti_80034970", local
+.hidden "@eti_80034970"
 	.4byte __ct__CDevice
 	.4byte 0x000000A0
-	.4byte lbl_8001CCE8
+	.4byte "@etb_8001CCE8"
+.endobj "@eti_80034970"
+
+.obj "@eti_8003497C", local
+.hidden "@eti_8003497C"
 	.4byte func_8044D9C8
 	.4byte 0x0000007C
-	.4byte lbl_8001CCF0
+	.4byte "@etb_8001CCF0"
+.endobj "@eti_8003497C"
+
+.obj "@eti_80034988", local
+.hidden "@eti_80034988"
 	.4byte func_8044DA44
 	.4byte 0x00000038
-	.4byte lbl_8001CCF8
+	.4byte "@etb_8001CCF8"
+.endobj "@eti_80034988"
+
+.obj "@eti_80034994", local
+.hidden "@eti_80034994"
 	.4byte func_8044DA7C
 	.4byte 0x00000060
-	.4byte lbl_8001CD00
+	.4byte "@etb_8001CD00"
+.endobj "@eti_80034994"

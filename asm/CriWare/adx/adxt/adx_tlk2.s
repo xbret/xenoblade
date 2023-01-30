@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global ADXT_StartAfs
-ADXT_StartAfs:
+.fn ADXT_StartAfs, global
 /* 8038238C 0034B94C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80382390 0034B950  7C 08 02 A6 */	mflr r0
 /* 80382394 0034B954  90 01 00 24 */	stw r0, 0x24(r1)
@@ -26,9 +25,9 @@ ADXT_StartAfs:
 /* 803823D8 0034B998  7C 08 03 A6 */	mtlr r0
 /* 803823DC 0034B99C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803823E0 0034B9A0  4E 80 00 20 */	blr 
+.endfn ADXT_StartAfs
 
-.global adxt_StartAfs
-adxt_StartAfs:
+.fn adxt_StartAfs, global
 /* 803823E4 0034B9A4  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803823E8 0034B9A8  7C 08 02 A6 */	mflr r0
 /* 803823EC 0034B9AC  2C 03 00 00 */	cmpwi r3, 0
@@ -97,9 +96,9 @@ adxt_StartAfs:
 /* 803824DC 0034BA9C  7C 08 03 A6 */	mtlr r0
 /* 803824E0 0034BAA0  38 21 00 40 */	addi r1, r1, 0x40
 /* 803824E4 0034BAA4  4E 80 00 20 */	blr 
+.endfn adxt_StartAfs
 
-.global ADXT_StartFnameRange
-ADXT_StartFnameRange:
+.fn ADXT_StartFnameRange, global
 /* 803824E8 0034BAA8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803824EC 0034BAAC  7C 08 02 A6 */	mflr r0
 /* 803824F0 0034BAB0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -148,6 +147,7 @@ ADXT_StartFnameRange:
 /* 80382590 0034BB50  7C 08 03 A6 */	mtlr r0
 /* 80382594 0034BB54  38 21 00 10 */	addi r1, r1, 0x10
 /* 80382598 0034BB58  4E 80 00 20 */	blr 
+.endfn ADXT_StartFnameRange
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

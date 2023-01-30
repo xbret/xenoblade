@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global port_select_mtu
-port_select_mtu:
+.fn port_select_mtu, global
 /* 802FDE78 002C7438  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FDE7C 002C743C  7C 08 02 A6 */	mflr r0
 /* 802FDE80 002C7440  90 01 00 14 */	stw r0, 0x14(r1)
@@ -105,9 +104,9 @@ port_select_mtu:
 /* 802FDFE8 002C75A8  7C 08 03 A6 */	mtlr r0
 /* 802FDFEC 002C75AC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802FDFF0 002C75B0  4E 80 00 20 */	blr 
+.endfn port_select_mtu
 
-.global port_release_port
-port_release_port:
+.fn port_release_port, global
 /* 802FDFF4 002C75B4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FDFF8 002C75B8  7C 08 02 A6 */	mflr r0
 /* 802FDFFC 002C75BC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -170,9 +169,9 @@ port_release_port:
 /* 802FE0C4 002C7684  7C 08 03 A6 */	mtlr r0
 /* 802FE0C8 002C7688  38 21 00 10 */	addi r1, r1, 0x10
 /* 802FE0CC 002C768C  4E 80 00 20 */	blr 
+.endfn port_release_port
 
-.global port_find_mcb_dlci_port
-port_find_mcb_dlci_port:
+.fn port_find_mcb_dlci_port, global
 /* 802FE0D0 002C7690  2C 03 00 00 */	cmpwi r3, 0
 /* 802FE0D4 002C7694  40 82 00 0C */	bne .L_802FE0E0
 /* 802FE0D8 002C7698  38 60 00 00 */	li r3, 0
@@ -197,9 +196,9 @@ port_find_mcb_dlci_port:
 /* 802FE118 002C76D8  7C 63 02 14 */	add r3, r3, r0
 /* 802FE11C 002C76DC  38 63 00 68 */	addi r3, r3, 0x68
 /* 802FE120 002C76E0  4E 80 00 20 */	blr 
+.endfn port_find_mcb_dlci_port
 
-.global port_find_dlci_port
-port_find_dlci_port:
+.fn port_find_dlci_port, global
 /* 802FE124 002C76E4  3C A0 80 5C */	lis r5, lbl_805C32A8@ha
 /* 802FE128 002C76E8  38 00 00 05 */	li r0, 5
 /* 802FE12C 002C76EC  54 66 07 FE */	clrlwi r6, r3, 0x1f
@@ -237,9 +236,9 @@ port_find_dlci_port:
 /* 802FE1A0 002C7760  42 00 FF A0 */	bdnz .L_802FE140
 /* 802FE1A4 002C7764  38 60 00 00 */	li r3, 0
 /* 802FE1A8 002C7768  4E 80 00 20 */	blr 
+.endfn port_find_dlci_port
 
-.global port_flow_control_user
-port_flow_control_user:
+.fn port_flow_control_user, global
 /* 802FE1AC 002C776C  88 03 00 24 */	lbz r0, 0x24(r3)
 /* 802FE1B0 002C7770  38 A0 00 00 */	li r5, 0
 /* 802FE1B4 002C7774  2C 00 00 00 */	cmpwi r0, 0
@@ -271,9 +270,9 @@ port_flow_control_user:
 /* 802FE210 002C77D0  4D 82 00 20 */	beqlr 
 /* 802FE214 002C77D4  3C 60 00 01 */	lis r3, 1
 /* 802FE218 002C77D8  4E 80 00 20 */	blr 
+.endfn port_flow_control_user
 
-.global port_get_signal_changes
-port_get_signal_changes:
+.fn port_get_signal_changes, global
 /* 802FE21C 002C77DC  7C A4 22 78 */	xor r4, r5, r4
 /* 802FE220 002C77E0  38 C0 00 00 */	li r6, 0
 /* 802FE224 002C77E4  54 80 07 FF */	clrlwi. r0, r4, 0x1f
@@ -304,9 +303,9 @@ port_get_signal_changes:
 /* 802FE278 002C7838  80 03 00 88 */	lwz r0, 0x88(r3)
 /* 802FE27C 002C783C  7C 03 30 38 */	and r3, r0, r6
 /* 802FE280 002C7840  4E 80 00 20 */	blr 
+.endfn port_get_signal_changes
 
-.global port_flow_control_peer
-port_flow_control_peer:
+.fn port_flow_control_peer, global
 /* 802FE284 002C7844  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FE288 002C7848  7C 08 02 A6 */	mflr r0
 /* 802FE28C 002C784C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -432,6 +431,7 @@ port_flow_control_peer:
 /* 802FE444 002C7A04  7C 08 03 A6 */	mtlr r0
 /* 802FE448 002C7A08  38 21 00 10 */	addi r1, r1, 0x10
 /* 802FE44C 002C7A0C  4E 80 00 20 */	blr 
+.endfn port_flow_control_peer
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

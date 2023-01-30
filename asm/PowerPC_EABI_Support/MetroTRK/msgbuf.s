@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global TRKInitializeMessageBuffers
-TRKInitializeMessageBuffers:
+.fn TRKInitializeMessageBuffers, global
 /* 802CD484 00296A44  3C 60 80 58 */	lis r3, lbl_8057B8D8@ha
 /* 802CD488 00296A48  38 00 00 00 */	li r0, 0
 /* 802CD48C 00296A4C  38 83 B8 D8 */	addi r4, r3, lbl_8057B8D8@l
@@ -12,9 +11,9 @@ TRKInitializeMessageBuffers:
 /* 802CD498 00296A58  90 04 08 8C */	stw r0, 0x88c(r4)
 /* 802CD49C 00296A5C  90 04 11 18 */	stw r0, 0x1118(r4)
 /* 802CD4A0 00296A60  4E 80 00 20 */	blr 
+.endfn TRKInitializeMessageBuffers
 
-.global TRKGetFreeBuffer
-TRKGetFreeBuffer:
+.fn TRKGetFreeBuffer, global
 /* 802CD4A4 00296A64  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CD4A8 00296A68  7C 08 02 A6 */	mflr r0
 /* 802CD4AC 00296A6C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -58,9 +57,9 @@ TRKGetFreeBuffer:
 /* 802CD534 00296AF4  7C 08 03 A6 */	mtlr r0
 /* 802CD538 00296AF8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802CD53C 00296AFC  4E 80 00 20 */	blr 
+.endfn TRKGetFreeBuffer
 
-.global TRKGetBuffer
-TRKGetBuffer:
+.fn TRKGetBuffer, global
 /* 802CD540 00296B00  28 03 00 02 */	cmplwi r3, 2
 /* 802CD544 00296B04  38 00 00 00 */	li r0, 0
 /* 802CD548 00296B08  41 81 00 14 */	bgt .L_802CD55C
@@ -71,9 +70,9 @@ TRKGetBuffer:
 .L_802CD55C:
 /* 802CD55C 00296B1C  7C 03 03 78 */	mr r3, r0
 /* 802CD560 00296B20  4E 80 00 20 */	blr 
+.endfn TRKGetBuffer
 
-.global TRKReleaseBuffer
-TRKReleaseBuffer:
+.fn TRKReleaseBuffer, global
 /* 802CD564 00296B24  2C 03 FF FF */	cmpwi r3, -1
 /* 802CD568 00296B28  4D 82 00 20 */	beqlr 
 /* 802CD56C 00296B2C  28 03 00 02 */	cmplwi r3, 2
@@ -84,9 +83,9 @@ TRKReleaseBuffer:
 /* 802CD580 00296B40  38 63 B8 D8 */	addi r3, r3, lbl_8057B8D8@l
 /* 802CD584 00296B44  7C 83 01 2E */	stwx r4, r3, r0
 /* 802CD588 00296B48  4E 80 00 20 */	blr 
+.endfn TRKReleaseBuffer
 
-.global TRKResetBuffer
-TRKResetBuffer:
+.fn TRKResetBuffer, global
 /* 802CD58C 00296B4C  2C 04 00 00 */	cmpwi r4, 0
 /* 802CD590 00296B50  38 00 00 00 */	li r0, 0
 /* 802CD594 00296B54  90 03 00 04 */	stw r0, 4(r3)
@@ -97,9 +96,9 @@ TRKResetBuffer:
 /* 802CD5A8 00296B68  38 63 00 0C */	addi r3, r3, 0xc
 /* 802CD5AC 00296B6C  4B FF E7 0C */	b TRK_memset
 /* 802CD5B0 00296B70  4E 80 00 20 */	blr 
+.endfn TRKResetBuffer
 
-.global TRKSetBufferPosition
-TRKSetBufferPosition:
+.fn TRKSetBufferPosition, global
 /* 802CD5B4 00296B74  28 04 08 80 */	cmplwi r4, 0x880
 /* 802CD5B8 00296B78  38 A0 00 00 */	li r5, 0
 /* 802CD5BC 00296B7C  40 81 00 0C */	ble .L_802CD5C8
@@ -114,9 +113,9 @@ TRKSetBufferPosition:
 .L_802CD5DC:
 /* 802CD5DC 00296B9C  7C A3 2B 78 */	mr r3, r5
 /* 802CD5E0 00296BA0  4E 80 00 20 */	blr 
+.endfn TRKSetBufferPosition
 
-.global TRK_AppendBuffer
-TRK_AppendBuffer:
+.fn TRK_AppendBuffer, global
 /* 802CD5E4 00296BA4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CD5E8 00296BA8  7C 08 02 A6 */	mflr r0
 /* 802CD5EC 00296BAC  2C 05 00 00 */	cmpwi r5, 0
@@ -163,9 +162,9 @@ TRK_AppendBuffer:
 /* 802CD67C 00296C3C  7C 08 03 A6 */	mtlr r0
 /* 802CD680 00296C40  38 21 00 20 */	addi r1, r1, 0x20
 /* 802CD684 00296C44  4E 80 00 20 */	blr 
+.endfn TRK_AppendBuffer
 
-.global TRK_ReadBuffer
-TRK_ReadBuffer:
+.fn TRK_ReadBuffer, global
 /* 802CD688 00296C48  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CD68C 00296C4C  7C 08 02 A6 */	mflr r0
 /* 802CD690 00296C50  2C 05 00 00 */	cmpwi r5, 0
@@ -205,9 +204,9 @@ TRK_ReadBuffer:
 /* 802CD70C 00296CCC  7C 08 03 A6 */	mtlr r0
 /* 802CD710 00296CD0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802CD714 00296CD4  4E 80 00 20 */	blr 
+.endfn TRK_ReadBuffer
 
-.global TRKAppendBuffer1_ui32
-TRKAppendBuffer1_ui32:
+.fn TRKAppendBuffer1_ui32, global
 /* 802CD718 00296CD8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CD71C 00296CDC  7C 08 02 A6 */	mflr r0
 /* 802CD720 00296CE0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -265,9 +264,9 @@ TRKAppendBuffer1_ui32:
 /* 802CD7DC 00296D9C  7C 08 03 A6 */	mtlr r0
 /* 802CD7E0 00296DA0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802CD7E4 00296DA4  4E 80 00 20 */	blr 
+.endfn TRKAppendBuffer1_ui32
 
-.global TRKAppendBuffer1_ui64
-TRKAppendBuffer1_ui64:
+.fn TRKAppendBuffer1_ui64, global
 /* 802CD7E8 00296DA8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802CD7EC 00296DAC  7C 08 02 A6 */	mflr r0
 /* 802CD7F0 00296DB0  90 01 00 34 */	stw r0, 0x34(r1)
@@ -334,9 +333,9 @@ TRKAppendBuffer1_ui64:
 /* 802CD8D0 00296E90  7C 08 03 A6 */	mtlr r0
 /* 802CD8D4 00296E94  38 21 00 30 */	addi r1, r1, 0x30
 /* 802CD8D8 00296E98  4E 80 00 20 */	blr 
+.endfn TRKAppendBuffer1_ui64
 
-.global TRKAppendBuffer_ui8
-TRKAppendBuffer_ui8:
+.fn TRKAppendBuffer_ui8, global
 /* 802CD8DC 00296E9C  39 20 00 00 */	li r9, 0
 /* 802CD8E0 00296EA0  38 E0 00 00 */	li r7, 0
 /* 802CD8E4 00296EA4  48 00 00 44 */	b .L_802CD928
@@ -367,9 +366,9 @@ TRKAppendBuffer_ui8:
 .L_802CD938:
 /* 802CD938 00296EF8  7C E3 3B 78 */	mr r3, r7
 /* 802CD93C 00296EFC  4E 80 00 20 */	blr 
+.endfn TRKAppendBuffer_ui8
 
-.global TRKAppendBuffer_ui32
-TRKAppendBuffer_ui32:
+.fn TRKAppendBuffer_ui32, global
 /* 802CD940 00296F00  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802CD944 00296F04  7C 08 02 A6 */	mflr r0
 /* 802CD948 00296F08  90 01 00 34 */	stw r0, 0x34(r1)
@@ -438,9 +437,9 @@ TRKAppendBuffer_ui32:
 /* 802CDA24 00296FE4  7C 08 03 A6 */	mtlr r0
 /* 802CDA28 00296FE8  38 21 00 30 */	addi r1, r1, 0x30
 /* 802CDA2C 00296FEC  4E 80 00 20 */	blr 
+.endfn TRKAppendBuffer_ui32
 
-.global TRKAppendBuffer_ui64
-TRKAppendBuffer_ui64:
+.fn TRKAppendBuffer_ui64, global
 /* 802CDA30 00296FF0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802CDA34 00296FF4  7C 08 02 A6 */	mflr r0
 /* 802CDA38 00296FF8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -501,9 +500,9 @@ TRKAppendBuffer_ui64:
 /* 802CDB04 002970C4  7C 08 03 A6 */	mtlr r0
 /* 802CDB08 002970C8  38 21 00 30 */	addi r1, r1, 0x30
 /* 802CDB0C 002970CC  4E 80 00 20 */	blr 
+.endfn TRKAppendBuffer_ui64
 
-.global TRKReadBuffer_ui8
-TRKReadBuffer_ui8:
+.fn TRKReadBuffer_ui8, global
 /* 802CDB10 002970D0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CDB14 002970D4  7C 08 02 A6 */	mflr r0
 /* 802CDB18 002970D8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -546,9 +545,9 @@ TRKReadBuffer_ui8:
 /* 802CDB9C 0029715C  7C 08 03 A6 */	mtlr r0
 /* 802CDBA0 00297160  38 21 00 20 */	addi r1, r1, 0x20
 /* 802CDBA4 00297164  4E 80 00 20 */	blr 
+.endfn TRKReadBuffer_ui8
 
-.global TRKReadBuffer_ui32
-TRKReadBuffer_ui32:
+.fn TRKReadBuffer_ui32, global
 /* 802CDBA8 00297168  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802CDBAC 0029716C  7C 08 02 A6 */	mflr r0
 /* 802CDBB0 00297170  90 01 00 34 */	stw r0, 0x34(r1)
@@ -614,6 +613,7 @@ TRKReadBuffer_ui32:
 /* 802CDC84 00297244  7C 08 03 A6 */	mtlr r0
 /* 802CDC88 00297248  38 21 00 30 */	addi r1, r1, 0x30
 /* 802CDC8C 0029724C  4E 80 00 20 */	blr
+.endfn TRKReadBuffer_ui32
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

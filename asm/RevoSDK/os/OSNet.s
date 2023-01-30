@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global __OSInitNet
-__OSInitNet:
+.fn __OSInitNet, global
 /* 8035E070 00327630  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035E074 00327634  7C 08 02 A6 */	mflr r0
 /* 8035E078 00327638  90 01 00 24 */	stw r0, 0x24(r1)
@@ -54,10 +53,10 @@ __OSInitNet:
 /* 8035E118 003276D8  7C 08 03 A6 */	mtlr r0
 /* 8035E11C 003276DC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035E120 003276E0  4E 80 00 20 */	blr 
+.endfn __OSInitNet
 
 .balign 16, 0
-.global NWC24iPrepareShutdown
-NWC24iPrepareShutdown:
+.fn NWC24iPrepareShutdown, global
 /* 8035E130 003276F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035E134 003276F4  7C 08 02 A6 */	mflr r0
 /* 8035E138 003276F8  3C 80 80 5D */	lis r4, lbl_805D5440@ha
@@ -109,10 +108,10 @@ NWC24iPrepareShutdown:
 /* 8035E1DC 0032779C  7C 08 03 A6 */	mtlr r0
 /* 8035E1E0 003277A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035E1E4 003277A4  4E 80 00 20 */	blr 
+.endfn NWC24iPrepareShutdown
 
 .balign 16, 0
-.global NWC24iSynchronizeRtcCounter
-NWC24iSynchronizeRtcCounter:
+.fn NWC24iSynchronizeRtcCounter, global
 /* 8035E1F0 003277B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035E1F4 003277B4  7C 08 02 A6 */	mflr r0
 /* 8035E1F8 003277B8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -155,10 +154,10 @@ NWC24iSynchronizeRtcCounter:
 /* 8035E278 00327838  7C 08 03 A6 */	mtlr r0
 /* 8035E27C 0032783C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035E280 00327840  4E 80 00 20 */	blr 
+.endfn NWC24iSynchronizeRtcCounter
 
 .balign 16, 0
-.global NWC24SuspendScheduler
-NWC24SuspendScheduler:
+.fn NWC24SuspendScheduler, global
 /* 8035E290 00327850  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035E294 00327854  7C 08 02 A6 */	mflr r0
 /* 8035E298 00327858  90 01 00 14 */	stw r0, 0x14(r1)
@@ -236,10 +235,10 @@ NWC24SuspendScheduler:
 /* 8035E384 00327944  7C 08 03 A6 */	mtlr r0
 /* 8035E388 00327948  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035E38C 0032794C  4E 80 00 20 */	blr
+.endfn NWC24SuspendScheduler
 
 .balign 16, 0
-.global NWC24iIoctlResourceManagerAsync
-NWC24iIoctlResourceManagerAsync:
+.fn NWC24iIoctlResourceManagerAsync, global
 /* 8035E390 00327950  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035E394 00327954  7C 08 02 A6 */	mflr r0
 /* 8035E398 00327958  3C E0 80 5D */	lis r7, lbl_805D54A0@ha
@@ -269,10 +268,10 @@ NWC24iIoctlResourceManagerAsync:
 /* 8035E3F0 003279B0  7C 08 03 A6 */	mtlr r0
 /* 8035E3F4 003279B4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035E3F8 003279B8  4E 80 00 20 */	blr 
+.endfn NWC24iIoctlResourceManagerAsync
 
 .balign 16, 0
-.global NWC24Shutdown
-NWC24Shutdown:
+.fn NWC24Shutdown, global
 /* 8035E400 003279C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035E404 003279C4  7C 08 02 A6 */	mflr r0
 /* 8035E408 003279C8  2C 03 00 00 */	cmpwi r3, 0
@@ -326,10 +325,10 @@ NWC24Shutdown:
 /* 8035E4AC 00327A6C  7C 08 03 A6 */	mtlr r0
 /* 8035E4B0 00327A70  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035E4B4 00327A74  4E 80 00 20 */	blr 
+.endfn NWC24Shutdown
 
 .balign 16, 0
-.global NWC24iSetRtcCounter
-NWC24iSetRtcCounter:
+.fn NWC24iSetRtcCounter, global
 /* 8035E4C0 00327A80  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035E4C4 00327A84  7C 08 02 A6 */	mflr r0
 /* 8035E4C8 00327A88  90 01 00 24 */	stw r0, 0x24(r1)
@@ -416,10 +415,10 @@ NWC24iSetRtcCounter:
 /* 8035E5D8 00327B98  7C 08 03 A6 */	mtlr r0
 /* 8035E5DC 00327B9C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035E5E0 00327BA0  4E 80 00 20 */	blr 
+.endfn NWC24iSetRtcCounter
 
 .balign 16, 0
-.global CallbackAsyncIpc
-CallbackAsyncIpc:
+.fn CallbackAsyncIpc, global
 /* 8035E5F0 00327BB0  2C 04 00 00 */	cmpwi r4, 0
 /* 8035E5F4 00327BB4  41 82 00 08 */	beq .L_8035E5FC
 /* 8035E5F8 00327BB8  90 64 00 00 */	stw r3, 0(r4)
@@ -428,6 +427,7 @@ CallbackAsyncIpc:
 /* 8035E600 00327BC0  90 0D B9 AC */	stw r0, lbl_80667B2C@sda21(r13)
 /* 8035E604 00327BC4  38 60 00 00 */	li r3, 0
 /* 8035E608 00327BC8  4E 80 00 20 */	blr 
+.endfn CallbackAsyncIpc
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

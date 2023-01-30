@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global CXInitUncompContextLH
-CXInitUncompContextLH:
+.fn CXInitUncompContextLH, global
 /* 80308530 002D1AF0  38 E0 FF FF */	li r7, -1
 /* 80308534 002D1AF4  38 00 00 00 */	li r0, 0
 /* 80308538 002D1AF8  38 C3 00 0E */	addi r6, r3, 0xe
@@ -21,6 +20,7 @@ CXInitUncompContextLH:
 /* 80308564 002D1B24  98 E3 08 A6 */	stb r7, 0x8a6(r3)
 /* 80308568 002D1B28  90 03 00 08 */	stw r0, 8(r3)
 /* 8030856C 002D1B2C  4E 80 00 20 */	blr 
+.endfn CXInitUncompContextLH
 
 .balign 16, 0
 .global CXReadUncompLH

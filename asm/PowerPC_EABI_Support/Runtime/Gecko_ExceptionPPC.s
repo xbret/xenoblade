@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __register_fragment
-__register_fragment:
+.fn __register_fragment, global
 /* 802BA7E4 00283DA4  3C A0 80 58 */	lis r5, lbl_8057AE90@ha
 /* 802BA7E8 00283DA8  38 00 00 20 */	li r0, 0x20
 /* 802BA7EC 00283DAC  38 A5 AE 90 */	addi r5, r5, lbl_8057AE90@l
@@ -25,9 +24,9 @@ __register_fragment:
 /* 802BA824 00283DE4  42 00 FF D4 */	bdnz .L_802BA7F8
 /* 802BA828 00283DE8  38 60 FF FF */	li r3, -1
 /* 802BA82C 00283DEC  4E 80 00 20 */	blr 
+.endfn __register_fragment
 
-.global __unregister_fragment
-__unregister_fragment:
+.fn __unregister_fragment, global
 /* 802BA830 00283DF0  28 03 00 1F */	cmplwi r3, 0x1f
 /* 802BA834 00283DF4  4D 81 00 20 */	bgtlr 
 /* 802BA838 00283DF8  1C 83 00 0C */	mulli r4, r3, 0xc
@@ -38,9 +37,9 @@ __unregister_fragment:
 /* 802BA84C 00283E0C  90 03 00 04 */	stw r0, 4(r3)
 /* 802BA850 00283E10  90 03 00 08 */	stw r0, 8(r3)
 /* 802BA854 00283E14  4E 80 00 20 */	blr 
+.endfn __unregister_fragment
 
-.global FragmentInfo$7ExPPC_FindExceptionFragment
-FragmentInfo$7ExPPC_FindExceptionFragment:
+.fn FragmentInfo$7ExPPC_FindExceptionFragment, global
 /* 802BA858 00283E18  3C C0 80 58 */	lis r6, lbl_8057AE90@ha
 /* 802BA85C 00283E1C  38 00 00 20 */	li r0, 0x20
 /* 802BA860 00283E20  38 C6 AE 90 */	addi r6, r6, lbl_8057AE90@l
@@ -83,9 +82,9 @@ FragmentInfo$7ExPPC_FindExceptionFragment:
 /* 802BA8E4 00283EA4  42 00 FF 84 */	bdnz .L_802BA868
 /* 802BA8E8 00283EA8  38 60 00 00 */	li r3, 0
 /* 802BA8EC 00283EAC  4E 80 00 20 */	blr 
+.endfn FragmentInfo$7ExPPC_FindExceptionFragment
 
-.global MWExceptionInfo$7ExPPC_FindExceptionRecord
-MWExceptionInfo$7ExPPC_FindExceptionRecord:
+.fn MWExceptionInfo$7ExPPC_FindExceptionRecord, global
 /* 802BA8F0 00283EB0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802BA8F4 00283EB4  7C 08 02 A6 */	mflr r0
 /* 802BA8F8 00283EB8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -207,9 +206,9 @@ MWExceptionInfo$7ExPPC_FindExceptionRecord:
 /* 802BAA94 00284054  7C 08 03 A6 */	mtlr r0
 /* 802BAA98 00284058  38 21 00 30 */	addi r1, r1, 0x30
 /* 802BAA9C 0028405C  4E 80 00 20 */	blr 
+.endfn MWExceptionInfo$7ExPPC_FindExceptionRecord
 
-.global ActionIterator$7ExPPC_NextAction
-ActionIterator$7ExPPC_NextAction:
+.fn ActionIterator$7ExPPC_NextAction, global
 /* 802BAAA0 00284060  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802BAAA4 00284064  7C 08 02 A6 */	mflr r0
 /* 802BAAA8 00284068  90 01 00 14 */	stw r0, 0x14(r1)
@@ -340,9 +339,9 @@ switch_802BAC08:
 /* 802BAC44 00284204  7C 08 03 A6 */	mtlr r0
 /* 802BAC48 00284208  38 21 00 10 */	addi r1, r1, 0x10
 /* 802BAC4C 0028420C  4E 80 00 20 */	blr 
+.endfn ActionIterator$7ExPPC_NextAction
 
-.global ThrowContext$7ExPPC_PopStackFrame
-ThrowContext$7ExPPC_PopStackFrame:
+.fn ThrowContext$7ExPPC_PopStackFrame, global
 /* 802BAC50 00284210  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802BAC54 00284214  7C 08 02 A6 */	mflr r0
 /* 802BAC58 00284218  90 01 00 24 */	stw r0, 0x24(r1)
@@ -710,9 +709,9 @@ ThrowContext$7ExPPC_PopStackFrame:
 /* 802BB198 00284758  7C 08 03 A6 */	mtlr r0
 /* 802BB19C 0028475C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802BB1A0 00284760  4E 80 00 20 */	blr 
+.endfn ThrowContext$7ExPPC_PopStackFrame
 
-.global ThrowContext$7ExPPC_UnwindStack
-ThrowContext$7ExPPC_UnwindStack:
+.fn ThrowContext$7ExPPC_UnwindStack, global
 /* 802BB1A4 00284764  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802BB1A8 00284768  7C 08 02 A6 */	mflr r0
 /* 802BB1AC 0028476C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1088,9 +1087,9 @@ switch_802BB688:
 /* 802BB6A4 00284C64  7C 08 03 A6 */	mtlr r0
 /* 802BB6A8 00284C68  38 21 00 30 */	addi r1, r1, 0x30
 /* 802BB6AC 00284C6C  4E 80 00 20 */	blr 
+.endfn ThrowContext$7ExPPC_UnwindStack
 
-.global ThrowContext$7ExPPC_LongJump
-ThrowContext$7ExPPC_LongJump:
+.fn ThrowContext$7ExPPC_LongJump, global
 /* 802BB6B0 00284C70  7C A8 2B 78 */	mr r8, r5
 /* 802BB6B4 00284C74  7C 82 23 78 */	mr r2, r4
 /* 802BB6B8 00284C78  80 03 02 80 */	lwz r0, 0x280(r3)
@@ -1156,9 +1155,9 @@ ThrowContext$7ExPPC_LongJump:
 /* 802BB7A8 00284D68  80 63 00 00 */	lwz r3, 0(r3)
 /* 802BB7AC 00284D6C  90 61 00 00 */	stw r3, 0(r1)
 /* 802BB7B0 00284D70  4E 80 00 20 */	blr 
+.endfn ThrowContext$7ExPPC_LongJump
 
-.global ThrowContext$7ExPPC_ThrowHandler
-ThrowContext$7ExPPC_ThrowHandler:
+.fn ThrowContext$7ExPPC_ThrowHandler, global
 /* 802BB7B4 00284D74  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 802BB7B8 00284D78  7C 08 02 A6 */	mflr r0
 /* 802BB7BC 00284D7C  90 01 00 74 */	stw r0, 0x74(r1)
@@ -1444,9 +1443,9 @@ ThrowContext$7ExPPC_ThrowHandler:
 /* 802BBBB0 00285170  7C 08 03 A6 */	mtlr r0
 /* 802BBBB4 00285174  38 21 00 70 */	addi r1, r1, 0x70
 /* 802BBBB8 00285178  4E 80 00 20 */	blr 
+.endfn ThrowContext$7ExPPC_ThrowHandler
 
-.global __throw
-__throw:
+.fn __throw, global
 /* 802BBBBC 0028517C  94 21 FD 40 */	stwu r1, -0x2c0(r1)
 /* 802BBBC0 00285180  7C 08 02 A6 */	mflr r0
 /* 802BBBC4 00285184  90 01 02 C4 */	stw r0, 0x2c4(r1)
@@ -1528,6 +1527,7 @@ __throw:
 /* 802BBCF4 002852B4  7C 08 03 A6 */	mtlr r0
 /* 802BBCF8 002852B8  38 21 02 C0 */	addi r1, r1, 0x2c0
 /* 802BBCFC 002852BC  4E 80 00 20 */	blr 
+.endfn __throw
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 .global lbl_8053F068
@@ -1575,53 +1575,81 @@ lbl_8053F0AC:
 lbl_8057AE90:
 	.skip 0x180
 
-.section extab_, "a"  # 0x800066E0 - 0x80021020
+.section extab, "a" # 0x800066E0 - 0x80021020
 
-.global lbl_8001BF40
-lbl_8001BF40:
+.balign 4
+
+.obj "@etb_8001BF40", local
+.hidden "@etb_8001BF40"
 	.4byte 0x10080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001BF40"
 
-.global lbl_8001BF48
-lbl_8001BF48:
+.obj "@etb_8001BF48", local
+.hidden "@etb_8001BF48"
 	.4byte 0x10080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001BF48"
 
-.global lbl_8001BF50
-lbl_8001BF50:
+.obj "@etb_8001BF50", local
+.hidden "@etb_8001BF50"
 	.4byte 0x280A0000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001BF50"
 
-.global lbl_8001BF58
-lbl_8001BF58:
+.obj "@etb_8001BF58", local
+.hidden "@etb_8001BF58"
 	.4byte 0x50080000
 	.4byte 0x00000054
 	.4byte 0x01250010
-	.4byte 0
+	.4byte 0x00000000
 	.4byte 0x8E000000
+.endobj "@etb_8001BF58"
 
-.global lbl_8001BF6C
-lbl_8001BF6C:
+.obj "@etb_8001BF6C", local
+.hidden "@etb_8001BF6C"
 	.4byte 0x28080000
 	.4byte 0x00000274
 	.4byte 0x000F0010
-	.4byte 0
+	.4byte 0x00000000
 	.4byte 0x8E000000
+.endobj "@etb_8001BF6C"
 
-.section extabindex_, "a"  # 0x80021020 - 0x80039220
+.section extabindex, "a" # 0x80021020 - 0x80039220
 
+.balign 4
+
+.obj "@eti_80033AD0", local
+.hidden "@eti_80033AD0"
 	.4byte MWExceptionInfo$7ExPPC_FindExceptionRecord
 	.4byte 0x000001B0
-	.4byte lbl_8001BF40
+	.4byte "@etb_8001BF40"
+.endobj "@eti_80033AD0"
+
+.obj "@eti_80033ADC", local
+.hidden "@eti_80033ADC"
 	.4byte ActionIterator$7ExPPC_NextAction
 	.4byte 0x000001B0
-	.4byte lbl_8001BF48
+	.4byte "@etb_8001BF48"
+.endobj "@eti_80033ADC"
+
+.obj "@eti_80033AE8", local
+.hidden "@eti_80033AE8"
 	.4byte ThrowContext$7ExPPC_PopStackFrame
 	.4byte 0x00000554
-	.4byte lbl_8001BF50
+	.4byte "@etb_8001BF50"
+.endobj "@eti_80033AE8"
+
+.obj "@eti_80033AF4", local
+.hidden "@eti_80033AF4"
 	.4byte ThrowContext$7ExPPC_UnwindStack
 	.4byte 0x0000050C
-	.4byte lbl_8001BF58
+	.4byte "@etb_8001BF58"
+.endobj "@eti_80033AF4"
+
+.obj "@eti_80033B00", local
+.hidden "@eti_80033B00"
 	.4byte ThrowContext$7ExPPC_ThrowHandler
 	.4byte 0x00000408
-	.4byte lbl_8001BF6C
+	.4byte "@etb_8001BF6C"
+.endobj "@eti_80033B00"

@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global OSRegisterShutdownFunction
-OSRegisterShutdownFunction:
+.fn OSRegisterShutdownFunction, global
 /* 80359F10 003234D0  80 AD B9 40 */	lwz r5, lbl_80667AC0@sda21(r13)
 /* 80359F14 003234D4  48 00 00 08 */	b .L_80359F1C
 .L_80359F18:
@@ -46,10 +45,10 @@ OSRegisterShutdownFunction:
 .L_80359F90:
 /* 80359F90 00323550  90 64 00 08 */	stw r3, 8(r4)
 /* 80359F94 00323554  4E 80 00 20 */	blr 
+.endfn OSRegisterShutdownFunction
 
 .balign 16, 0
-.global __OSCallShutdownFunctions
-__OSCallShutdownFunctions:
+.fn __OSCallShutdownFunctions, global
 /* 80359FA0 00323560  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80359FA4 00323564  7C 08 02 A6 */	mflr r0
 /* 80359FA8 00323568  90 01 00 24 */	stw r0, 0x24(r1)
@@ -98,10 +97,10 @@ __OSCallShutdownFunctions:
 /* 8035A044 00323604  7C 08 03 A6 */	mtlr r0
 /* 8035A048 00323608  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035A04C 0032360C  4E 80 00 20 */	blr 
+.endfn __OSCallShutdownFunctions
 
 .balign 16, 0
-.global __OSShutdownDevices
-__OSShutdownDevices:
+.fn __OSShutdownDevices, global
 /* 8035A050 00323610  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035A054 00323614  7C 08 02 A6 */	mflr r0
 /* 8035A058 00323618  90 01 00 24 */	stw r0, 0x24(r1)
@@ -216,10 +215,10 @@ __OSShutdownDevices:
 /* 8035A1C4 00323784  7C 08 03 A6 */	mtlr r0
 /* 8035A1C8 00323788  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035A1CC 0032378C  4E 80 00 20 */	blr 
+.endfn __OSShutdownDevices
 
 .balign 16, 0
-.global OSShutdownSystem
-OSShutdownSystem:
+.fn OSShutdownSystem, global
 /* 8035A1D0 00323790  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8035A1D4 00323794  7C 08 02 A6 */	mflr r0
 /* 8035A1D8 00323798  38 80 00 00 */	li r4, 0
@@ -299,10 +298,10 @@ OSShutdownSystem:
 /* 8035A2E0 003238A0  7C 08 03 A6 */	mtlr r0
 /* 8035A2E4 003238A4  38 21 00 40 */	addi r1, r1, 0x40
 /* 8035A2E8 003238A8  4E 80 00 20 */	blr 
+.endfn OSShutdownSystem
 
 .balign 16, 0
-.global OSRestart
-OSRestart:
+.fn OSRestart, global
 /* 8035A2F0 003238B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035A2F4 003238B4  7C 08 02 A6 */	mflr r0
 /* 8035A2F8 003238B8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -360,10 +359,10 @@ OSRestart:
 /* 8035A3B8 00323978  7C 08 03 A6 */	mtlr r0
 /* 8035A3BC 0032397C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035A3C0 00323980  4E 80 00 20 */	blr 
+.endfn OSRestart
 
 .balign 16, 0
-.global __OSReturnToMenu
-__OSReturnToMenu:
+.fn __OSReturnToMenu, global
 /* 8035A3D0 00323990  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 8035A3D4 00323994  7C 08 02 A6 */	mflr r0
 /* 8035A3D8 00323998  90 01 00 94 */	stw r0, 0x94(r1)
@@ -538,10 +537,10 @@ __OSReturnToMenu:
 /* 8035A64C 00323C0C  7C 08 03 A6 */	mtlr r0
 /* 8035A650 00323C10  38 21 00 90 */	addi r1, r1, 0x90
 /* 8035A654 00323C14  4E 80 00 20 */	blr 
+.endfn __OSReturnToMenu
 
 .balign 16, 0
-.global OSReturnToMenu
-OSReturnToMenu:
+.fn OSReturnToMenu, global
 /* 8035A660 00323C20  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035A664 00323C24  7C 08 02 A6 */	mflr r0
 /* 8035A668 00323C28  38 60 00 00 */	li r3, 0
@@ -558,10 +557,10 @@ OSReturnToMenu:
 /* 8035A694 00323C54  7C 08 03 A6 */	mtlr r0
 /* 8035A698 00323C58  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035A69C 00323C5C  4E 80 00 20 */	blr 
+.endfn OSReturnToMenu
 
 .balign 16, 0
-.global __OSReturnToMenuForError
-__OSReturnToMenuForError:
+.fn __OSReturnToMenuForError, global
 /* 8035A6A0 00323C60  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8035A6A4 00323C64  7C 08 02 A6 */	mflr r0
 /* 8035A6A8 00323C68  90 01 00 34 */	stw r0, 0x34(r1)
@@ -605,10 +604,10 @@ __OSReturnToMenuForError:
 /* 8035A738 00323CF8  7C 08 03 A6 */	mtlr r0
 /* 8035A73C 00323CFC  38 21 00 30 */	addi r1, r1, 0x30
 /* 8035A740 00323D00  4E 80 00 20 */	blr 
+.endfn __OSReturnToMenuForError
 
 .balign 16, 0
-.global __OSHotResetForError
-__OSHotResetForError:
+.fn __OSHotResetForError, global
 /* 8035A750 00323D10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035A754 00323D14  7C 08 02 A6 */	mflr r0
 /* 8035A758 00323D18  90 01 00 14 */	stw r0, 0x14(r1)
@@ -633,10 +632,10 @@ __OSHotResetForError:
 /* 8035A79C 00323D5C  7C 08 03 A6 */	mtlr r0
 /* 8035A7A0 00323D60  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035A7A4 00323D64  4E 80 00 20 */	blr 
+.endfn __OSHotResetForError
 
 .balign 16, 0
-.global OSGetResetCode
-OSGetResetCode:
+.fn OSGetResetCode, global
 /* 8035A7B0 00323D70  3C 60 80 5D */	lis r3, lbl_805D4340@ha
 /* 8035A7B4 00323D74  80 03 43 40 */	lwz r0, lbl_805D4340@l(r3)
 /* 8035A7B8 00323D78  2C 00 00 00 */	cmpwi r0, 0
@@ -650,10 +649,10 @@ OSGetResetCode:
 /* 8035A7D4 00323D94  80 03 30 24 */	lwz r0, 0xCC003024@l(r3)
 /* 8035A7D8 00323D98  54 03 E8 FE */	srwi r3, r0, 3
 /* 8035A7DC 00323D9C  4E 80 00 20 */	blr 
+.endfn OSGetResetCode
 
 .balign 16, 0
-.global OSResetSystem
-OSResetSystem:
+.fn OSResetSystem, global
 /* 8035A7E0 00323DA0  3C 60 80 55 */	lis r3, lbl_80552AF0@ha
 /* 8035A7E4 00323DA4  3C A0 80 55 */	lis r5, lbl_80552CDC@ha
 /* 8035A7E8 00323DA8  38 63 2A F0 */	addi r3, r3, lbl_80552AF0@l
@@ -661,6 +660,7 @@ OSResetSystem:
 /* 8035A7F0 00323DB0  38 A5 2C DC */	addi r5, r5, lbl_80552CDC@l
 /* 8035A7F4 00323DB4  4C C6 31 82 */	crclr 6
 /* 8035A7F8 00323DB8  4B FF B0 C4 */	b OSPanic
+.endfn OSResetSystem
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

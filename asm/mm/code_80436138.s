@@ -2,8 +2,9 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global sinit_80436138
-sinit_80436138:
+
+
+.fn sinit_80436138, global
 /* 80436138 003FF6F8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8043613C 003FF6FC  C0 42 C6 B0 */	lfs f2, float_8066CA30@sda21(r2)
 /* 80436140 003FF700  93 E1 00 1C */	stw r31, 0x1c(r1)
@@ -78,12 +79,17 @@ sinit_80436138:
 /* 80436254 003FF814  83 A1 00 14 */	lwz r29, 0x14(r1)
 /* 80436258 003FF818  38 21 00 20 */	addi r1, r1, 0x20
 /* 8043625C 003FF81C  4E 80 00 20 */	blr 
+.endfn sinit_80436138
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.balign 4
 
 .4byte sinit_80436138
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
 
 .global float_8066CA30
 float_8066CA30:
@@ -100,16 +106,23 @@ float_8066CA38:
 	.float 0
 	.4byte 0
 
-.section extab_, "a"  # 0x800066E0 - 0x80021020
+.section extab, "a" # 0x800066E0 - 0x80021020
 
-.global lbl_8001C0A8
-lbl_8001C0A8:
+.balign 4
+
+.obj "@etb_8001C0A8", local
+.hidden "@etb_8001C0A8"
 	.4byte 0x180A0000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001C0A8"
 
+.section extabindex, "a" # 0x80021020 - 0x80039220
 
-.section extabindex_, "a"  # 0x80021020 - 0x80039220
+.balign 4
 
+.obj "@eti_80033CC8", local
+.hidden "@eti_80033CC8"
 	.4byte sinit_80436138
 	.4byte 0x00000128
-	.4byte lbl_8001C0A8
+	.4byte "@etb_8001C0A8"
+.endobj "@eti_80033CC8"

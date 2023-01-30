@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global ESP_InitLib
-ESP_InitLib:
+.fn ESP_InitLib, global
 /* 80313750 002DCD10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80313754 002DCD14  7C 08 02 A6 */	mflr r0
 /* 80313758 002DCD18  90 01 00 14 */	stw r0, 0x14(r1)
@@ -26,10 +25,10 @@ ESP_InitLib:
 /* 80313798 002DCD58  7C 08 03 A6 */	mtlr r0
 /* 8031379C 002DCD5C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803137A0 002DCD60  4E 80 00 20 */	blr 
+.endfn ESP_InitLib
 
 .balign 16, 0
-.global ESP_CloseLib
-ESP_CloseLib:
+.fn ESP_CloseLib, global
 /* 803137B0 002DCD70  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803137B4 002DCD74  7C 08 02 A6 */	mflr r0
 /* 803137B8 002DCD78  38 80 00 00 */	li r4, 0
@@ -49,10 +48,10 @@ ESP_CloseLib:
 /* 803137EC 002DCDAC  7C 08 03 A6 */	mtlr r0
 /* 803137F0 002DCDB0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803137F4 002DCDB4  4E 80 00 20 */	blr 
+.endfn ESP_CloseLib
 
 .balign 16, 0
-.global ESP_LaunchTitle
-ESP_LaunchTitle:
+.fn ESP_LaunchTitle, global
 /* 80313800 002DCDC0  54 2B 06 FE */	clrlwi r11, r1, 0x1b
 /* 80313804 002DCDC4  7C 2C 0B 78 */	mr r12, r1
 /* 80313808 002DCDC8  21 6B FE E0 */	subfic r11, r11, -288
@@ -93,10 +92,10 @@ ESP_LaunchTitle:
 /* 80313888 002DCE48  7C 08 03 A6 */	mtlr r0
 /* 8031388C 002DCE4C  7D 41 53 78 */	mr r1, r10
 /* 80313890 002DCE50  4E 80 00 20 */	blr 
+.endfn ESP_LaunchTitle
 
 .balign 16, 0
-.global ESP_GetTicketViews
-ESP_GetTicketViews:
+.fn ESP_GetTicketViews, global
 /* 803138A0 002DCE60  54 2B 06 FE */	clrlwi r11, r1, 0x1b
 /* 803138A4 002DCE64  7C 2C 0B 78 */	mr r12, r1
 /* 803138A8 002DCE68  21 6B FE C0 */	subfic r11, r11, -320
@@ -172,10 +171,10 @@ ESP_GetTicketViews:
 /* 803139A8 002DCF68  7C 08 03 A6 */	mtlr r0
 /* 803139AC 002DCF6C  7D 41 53 78 */	mr r1, r10
 /* 803139B0 002DCF70  4E 80 00 20 */	blr 
+.endfn ESP_GetTicketViews
 
 .balign 16, 0
-.global ESP_DiGetTicketView
-ESP_DiGetTicketView:
+.fn ESP_DiGetTicketView, global
 /* 803139C0 002DCF80  54 2B 06 FE */	clrlwi r11, r1, 0x1b
 /* 803139C4 002DCF84  7C 2C 0B 78 */	mr r12, r1
 /* 803139C8 002DCF88  21 6B FE E0 */	subfic r11, r11, -288
@@ -224,10 +223,10 @@ ESP_DiGetTicketView:
 /* 80313A58 002DD018  7C 08 03 A6 */	mtlr r0
 /* 80313A5C 002DD01C  7D 41 53 78 */	mr r1, r10
 /* 80313A60 002DD020  4E 80 00 20 */	blr 
+.endfn ESP_DiGetTicketView
 
 .balign 16, 0
-.global ESP_DiGetTmd
-ESP_DiGetTmd:
+.fn ESP_DiGetTmd, global
 /* 80313A70 002DD030  54 2B 06 FE */	clrlwi r11, r1, 0x1b
 /* 80313A74 002DD034  7C 2C 0B 78 */	mr r12, r1
 /* 80313A78 002DD038  21 6B FE C0 */	subfic r11, r11, -320
@@ -293,10 +292,10 @@ ESP_DiGetTmd:
 /* 80313B50 002DD110  7C 08 03 A6 */	mtlr r0
 /* 80313B54 002DD114  7D 41 53 78 */	mr r1, r10
 /* 80313B58 002DD118  4E 80 00 20 */	blr 
+.endfn ESP_DiGetTmd
 
 .balign 16, 0
-.global ESP_GetTmdView
-ESP_GetTmdView:
+.fn ESP_GetTmdView, global
 /* 80313B60 002DD120  54 2B 06 FE */	clrlwi r11, r1, 0x1b
 /* 80313B64 002DD124  7C 2C 0B 78 */	mr r12, r1
 /* 80313B68 002DD128  21 6B FE E0 */	subfic r11, r11, -288
@@ -339,10 +338,10 @@ ESP_GetTmdView:
 /* 80313BEC 002DD1AC  7C 08 03 A6 */	mtlr r0
 /* 80313BF0 002DD1B0  7D 41 53 78 */	mr r1, r10
 /* 80313BF4 002DD1B4  4E 80 00 20 */	blr 
+.endfn ESP_GetTmdView
 
 .balign 16, 0
-.global ESP_GetTitleId
-ESP_GetTitleId:
+.fn ESP_GetTitleId, global
 /* 80313C00 002DD1C0  54 2B 06 FE */	clrlwi r11, r1, 0x1b
 /* 80313C04 002DD1C4  7C 2C 0B 78 */	mr r12, r1
 /* 80313C08 002DD1C8  21 6B FE C0 */	subfic r11, r11, -320
@@ -384,10 +383,10 @@ ESP_GetTitleId:
 /* 80313C8C 002DD24C  7C 08 03 A6 */	mtlr r0
 /* 80313C90 002DD250  7D 41 53 78 */	mr r1, r10
 /* 80313C94 002DD254  4E 80 00 20 */	blr 
+.endfn ESP_GetTitleId
 
 .balign 16, 0
-.global ESP_GetConsumption
-ESP_GetConsumption:
+.fn ESP_GetConsumption, global
 /* 80313CA0 002DD260  54 2B 06 FE */	clrlwi r11, r1, 0x1b
 /* 80313CA4 002DD264  7C 2C 0B 78 */	mr r12, r1
 /* 80313CA8 002DD268  21 6B FE C0 */	subfic r11, r11, -320
@@ -445,6 +444,7 @@ ESP_GetConsumption:
 /* 80313D64 002DD324  7C 08 03 A6 */	mtlr r0
 /* 80313D68 002DD328  7D 41 53 78 */	mr r1, r10
 /* 80313D6C 002DD32C  4E 80 00 20 */	blr 
+.endfn ESP_GetConsumption
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 

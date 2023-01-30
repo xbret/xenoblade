@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __ct__Q34nw4r2ut7ResFontFv
-__ct__Q34nw4r2ut7ResFontFv:
+.fn __ct__Q34nw4r2ut7ResFontFv, global
 /* 8042C928 003F5EE8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8042C92C 003F5EEC  7C 08 02 A6 */	mflr r0
 /* 8042C930 003F5EF0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -19,9 +18,9 @@ __ct__Q34nw4r2ut7ResFontFv:
 /* 8042C958 003F5F18  7C 08 03 A6 */	mtlr r0
 /* 8042C95C 003F5F1C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042C960 003F5F20  4E 80 00 20 */	blr
+.endfn __ct__Q34nw4r2ut7ResFontFv
 
-.global __dt__Q34nw4r2ut7ResFontFv
-__dt__Q34nw4r2ut7ResFontFv:
+.fn __dt__Q34nw4r2ut7ResFontFv, global
 /* 8042C964 003F5F24  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8042C968 003F5F28  7C 08 02 A6 */	mflr r0
 /* 8042C96C 003F5F2C  2C 03 00 00 */	cmpwi r3, 0
@@ -45,9 +44,9 @@ __dt__Q34nw4r2ut7ResFontFv:
 /* 8042C9B0 003F5F70  7C 08 03 A6 */	mtlr r0
 /* 8042C9B4 003F5F74  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042C9B8 003F5F78  4E 80 00 20 */	blr 
+.endfn __dt__Q34nw4r2ut7ResFontFv
 
-.global SetResource__Q34nw4r2ut7ResFontFPv
-SetResource__Q34nw4r2ut7ResFontFPv:
+.fn SetResource__Q34nw4r2ut7ResFontFPv, global
 /* 8042C9BC 003F5F7C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8042C9C0 003F5F80  7C 08 02 A6 */	mflr r0
 /* 8042C9C4 003F5F84  38 A0 00 00 */	li r5, 0
@@ -138,9 +137,9 @@ SetResource__Q34nw4r2ut7ResFontFPv:
 /* 8042CAF4 003F60B4  7C 08 03 A6 */	mtlr r0
 /* 8042CAF8 003F60B8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042CAFC 003F60BC  4E 80 00 20 */	blr 
+.endfn SetResource__Q34nw4r2ut7ResFontFPv
 
-.global Rebuild__Q34nw4r2ut7ResFontFPQ34nw4r2ut16BinaryFileHeader
-Rebuild__Q34nw4r2ut7ResFontFPQ34nw4r2ut16BinaryFileHeader:
+.fn Rebuild__Q34nw4r2ut7ResFontFPQ34nw4r2ut16BinaryFileHeader, global
 /* 8042CB00 003F60C0  A0 03 00 0C */	lhz r0, 0xc(r3)
 /* 8042CB04 003F60C4  3C 80 46 49 */	lis r4, 0x46494E46@ha
 /* 8042CB08 003F60C8  39 64 4E 46 */	addi r11, r4, 0x46494E46@l
@@ -226,6 +225,7 @@ Rebuild__Q34nw4r2ut7ResFontFPQ34nw4r2ut16BinaryFileHeader:
 /* 8042CC20 003F61E0  90 03 00 00 */	stw r0, 0(r3)
 /* 8042CC24 003F61E4  7C A3 2B 78 */	mr r3, r5
 /* 8042CC28 003F61E8  4E 80 00 20 */	blr 
+.endfn Rebuild__Q34nw4r2ut7ResFontFPQ34nw4r2ut16BinaryFileHeader
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

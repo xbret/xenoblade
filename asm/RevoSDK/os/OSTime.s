@@ -3,24 +3,23 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global OSGetTime
-OSGetTime:
+.fn OSGetTime, global
 /* 8035C960 00325F20  7C 6D 42 E6 */	mftbu r3
 /* 8035C964 00325F24  7C 8C 42 E6 */	mftb r4, 0x10c
 /* 8035C968 00325F28  7C AD 42 E6 */	mftbu r5
 /* 8035C96C 00325F2C  7C 03 28 00 */	cmpw r3, r5
 /* 8035C970 00325F30  40 82 FF F0 */	bne OSGetTime
 /* 8035C974 00325F34  4E 80 00 20 */	blr 
+.endfn OSGetTime
 
 .balign 16, 0
-.global OSGetTick
-OSGetTick:
+.fn OSGetTick, global
 /* 8035C980 00325F40  7C 6C 42 E6 */	mftb r3, 0x10c
 /* 8035C984 00325F44  4E 80 00 20 */	blr 
+.endfn OSGetTick
 
 .balign 16, 0
-.global __OSGetSystemTime
-__OSGetSystemTime:
+.fn __OSGetSystemTime, global
 /* 8035C990 00325F50  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035C994 00325F54  7C 08 02 A6 */	mflr r0
 /* 8035C998 00325F58  90 01 00 24 */	stw r0, 0x24(r1)
@@ -46,10 +45,10 @@ __OSGetSystemTime:
 /* 8035C9E8 00325FA8  7C 08 03 A6 */	mtlr r0
 /* 8035C9EC 00325FAC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035C9F0 00325FB0  4E 80 00 20 */	blr 
+.endfn __OSGetSystemTime
 
 .balign 16, 0
-.global __OSTimeToSystemTime
-__OSTimeToSystemTime:
+.fn __OSTimeToSystemTime, global
 /* 8035CA00 00325FC0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035CA04 00325FC4  7C 08 02 A6 */	mflr r0
 /* 8035CA08 00325FC8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -72,10 +71,10 @@ __OSTimeToSystemTime:
 /* 8035CA4C 0032600C  7C 08 03 A6 */	mtlr r0
 /* 8035CA50 00326010  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035CA54 00326014  4E 80 00 20 */	blr 
+.endfn __OSTimeToSystemTime
 
 .balign 16, 0
-.global OSTicksToCalendarTime
-OSTicksToCalendarTime:
+.fn OSTicksToCalendarTime, global
 /* 8035CA60 00326020  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035CA64 00326024  7C 08 02 A6 */	mflr r0
 /* 8035CA68 00326028  90 01 00 24 */	stw r0, 0x24(r1)
@@ -290,6 +289,7 @@ OSTicksToCalendarTime:
 /* 8035CD80 00326340  7C 08 03 A6 */	mtlr r0
 /* 8035CD84 00326344  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035CD88 00326348  4E 80 00 20 */	blr 
+.endfn OSTicksToCalendarTime
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

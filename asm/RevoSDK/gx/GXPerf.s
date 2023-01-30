@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global GXSetGPMetric
-GXSetGPMetric:
+.fn GXSetGPMetric, global
 /* 8031EA70 002E8030  80 A2 BC 20 */	lwz r5, lbl_8066BFA0@sda21(r2)
 /* 8031EA74 002E8034  80 C5 05 EC */	lwz r6, 0x5ec(r5)
 /* 8031EA78 002E8038  38 06 FF F5 */	addi r0, r6, -11
@@ -591,14 +590,15 @@ switch_8031F274:
 /* 8031F280 002E8840  38 00 00 00 */	li r0, 0
 /* 8031F284 002E8844  B0 05 00 02 */	sth r0, 2(r5)
 /* 8031F288 002E8848  4E 80 00 20 */	blr 
+.endfn GXSetGPMetric
 
 .balign 16, 0
-.global GXClearGPMetric
-GXClearGPMetric:
+.fn GXClearGPMetric, global
 /* 8031F290 002E8850  80 6D B7 8C */	lwz r3, lbl_8066790C@sda21(r13)
 /* 8031F294 002E8854  38 00 00 04 */	li r0, 4
 /* 8031F298 002E8858  B0 03 00 04 */	sth r0, 4(r3)
 /* 8031F29C 002E885C  4E 80 00 20 */	blr 
+.endfn GXClearGPMetric
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

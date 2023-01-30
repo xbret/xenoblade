@@ -2,11 +2,11 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global MPVUMC_Init
-MPVUMC_Init:
+.fn MPVUMC_Init, global
 /* 803AC468 00375A28  48 00 00 04 */	b mpvumc_InitOneRef
+.endfn MPVUMC_Init
 
-mpvumc_InitOneRef:
+.fn mpvumc_InitOneRef, local
 /* 803AC46C 00375A2C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803AC470 00375A30  3D 80 80 3B */	lis r12, MPVMC08_OneRefH2_TuneC@ha
 /* 803AC474 00375A34  3D 40 80 3B */	lis r10, MPVMC08_OneRefV2_TuneC@ha
@@ -50,13 +50,13 @@ mpvumc_InitOneRef:
 /* 803AC50C 00375ACC  83 C1 00 08 */	lwz r30, 8(r1)
 /* 803AC510 00375AD0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803AC514 00375AD4  4E 80 00 20 */	blr 
+.endfn mpvumc_InitOneRef
 
-.global MPVUMC_Finish
-MPVUMC_Finish:
+.fn MPVUMC_Finish, global
 /* 803AC518 00375AD8  4E 80 00 20 */	blr 
+.endfn MPVUMC_Finish
 
-.global MPVUMC_InitOutRfb
-MPVUMC_InitOutRfb:
+.fn MPVUMC_InitOutRfb, global
 /* 803AC51C 00375ADC  80 A3 0C 18 */	lwz r5, 0xc18(r3)
 /* 803AC520 00375AE0  80 03 0C 20 */	lwz r0, 0xc20(r3)
 /* 803AC524 00375AE4  2C 05 00 00 */	cmpwi r5, 0
@@ -134,13 +134,13 @@ MPVUMC_InitOutRfb:
 /* 803AC640 00375C00  7C 05 02 14 */	add r0, r5, r0
 /* 803AC644 00375C04  90 03 0C 38 */	stw r0, 0xc38(r3)
 /* 803AC648 00375C08  4E 80 00 20 */	blr 
+.endfn MPVUMC_InitOutRfb
 
-.global MPVUMC_EndOfFrame
-MPVUMC_EndOfFrame:
+.fn MPVUMC_EndOfFrame, global
 /* 803AC64C 00375C0C  4E 80 00 20 */	blr
+.endfn MPVUMC_EndOfFrame
 
-.global MPVUMC_Intra
-MPVUMC_Intra:
+.fn MPVUMC_Intra, global
 /* 803AC650 00375C10  80 A3 0C DC */	lwz r5, 0xcdc(r3)
 /* 803AC654 00375C14  38 83 0A A0 */	addi r4, r3, 0xaa0
 /* 803AC658 00375C18  A9 63 0C 42 */	lha r11, 0xc42(r3)
@@ -172,10 +172,11 @@ MPVUMC_Intra:
 /* 803AC6C0 00375C80  90 C3 0A C4 */	stw r6, 0xac4(r3)
 /* 803AC6C4 00375C84  90 03 0A CC */	stw r0, 0xacc(r3)
 /* 803AC6C8 00375C88  48 00 00 04 */	b mpvumc_OutputIntra6blk
+.endfn MPVUMC_Intra
 
 
 
-mpvumc_OutputIntra6blk:
+.fn mpvumc_OutputIntra6blk, local
 /* 803AC6CC 00375C8C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803AC6D0 00375C90  38 84 00 04 */	addi r4, r4, 4
 /* 803AC6D4 00375C94  38 C0 00 06 */	li r6, 6
@@ -279,9 +280,9 @@ mpvumc_OutputIntra6blk:
 /* 803AC848 00375E08  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 803AC84C 00375E0C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803AC850 00375E10  4E 80 00 20 */	blr
+.endfn mpvumc_OutputIntra6blk
 
-.global MPVUMC_Forward
-MPVUMC_Forward:
+.fn MPVUMC_Forward, global
 /* 803AC854 00375E14  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803AC858 00375E18  7C 08 02 A6 */	mflr r0
 /* 803AC85C 00375E1C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -348,9 +349,9 @@ MPVUMC_Forward:
 /* 803AC950 00375F10  7C 08 03 A6 */	mtlr r0
 /* 803AC954 00375F14  38 21 00 20 */	addi r1, r1, 0x20
 /* 803AC958 00375F18  4E 80 00 20 */	blr
+.endfn MPVUMC_Forward
 
-.global MPVUMC_Backward
-MPVUMC_Backward:
+.fn MPVUMC_Backward, global
 /* 803AC95C 00375F1C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803AC960 00375F20  7C 08 02 A6 */	mflr r0
 /* 803AC964 00375F24  90 01 00 24 */	stw r0, 0x24(r1)
@@ -417,9 +418,9 @@ MPVUMC_Backward:
 /* 803ACA58 00376018  7C 08 03 A6 */	mtlr r0
 /* 803ACA5C 0037601C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803ACA60 00376020  4E 80 00 20 */	blr
+.endfn MPVUMC_Backward
 
-.global MPVUMC_BiDirect
-MPVUMC_BiDirect:
+.fn MPVUMC_BiDirect, global
 /* 803ACA64 00376024  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803ACA68 00376028  7C 08 02 A6 */	mflr r0
 /* 803ACA6C 0037602C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -492,9 +493,9 @@ MPVUMC_BiDirect:
 /* 803ACB78 00376138  7C 08 03 A6 */	mtlr r0
 /* 803ACB7C 0037613C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803ACB80 00376140  4E 80 00 20 */	blr 
+.endfn MPVUMC_BiDirect
 
-.global mpvumc_OneReadMb
-mpvumc_OneReadMb:
+.fn mpvumc_OneReadMb, global
 /* 803ACB84 00376144  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803ACB88 00376148  7C 08 02 A6 */	mflr r0
 /* 803ACB8C 0037614C  3D 60 80 60 */	lis r11, lbl_80607B48@ha
@@ -584,9 +585,9 @@ mpvumc_OneReadMb:
 /* 803ACCDC 0037629C  7C 08 03 A6 */	mtlr r0
 /* 803ACCE0 003762A0  38 21 00 40 */	addi r1, r1, 0x40
 /* 803ACCE4 003762A4  4E 80 00 20 */	blr 
+.endfn mpvumc_OneReadMb
 
-.global mpvumc_OneMakeMb
-mpvumc_OneMakeMb:
+.fn mpvumc_OneMakeMb, global
 /* 803ACCE8 003762A8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803ACCEC 003762AC  38 84 00 04 */	addi r4, r4, 4
 /* 803ACCF0 003762B0  39 20 00 00 */	li r9, 0
@@ -703,9 +704,9 @@ mpvumc_OneMakeMb:
 /* 803ACE9C 0037645C  BB 21 00 14 */	lmw r25, 0x14(r1)
 /* 803ACEA0 00376460  38 21 00 30 */	addi r1, r1, 0x30
 /* 803ACEA4 00376464  4E 80 00 20 */	blr 
+.endfn mpvumc_OneMakeMb
 
-.global mpvumc_BiMakeMb
-mpvumc_BiMakeMb:
+.fn mpvumc_BiMakeMb, global
 /* 803ACEA8 00376468  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803ACEAC 0037646C  38 00 00 08 */	li r0, 8
 /* 803ACEB0 00376470  38 C0 00 08 */	li r6, 8
@@ -1040,9 +1041,9 @@ mpvumc_BiMakeMb:
 /* 803AD3B0 00376970  BA 61 00 0C */	lmw r19, 0xc(r1)
 /* 803AD3B4 00376974  38 21 00 40 */	addi r1, r1, 0x40
 /* 803AD3B8 00376978  4E 80 00 20 */	blr
+.endfn mpvumc_BiMakeMb
 
-.global MPVUMC_PpicSkipped
-MPVUMC_PpicSkipped:
+.fn MPVUMC_PpicSkipped, global
 /* 803AD3BC 0037697C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803AD3C0 00376980  7C 08 02 A6 */	mflr r0
 /* 803AD3C4 00376984  38 A4 FF FF */	addi r5, r4, -1
@@ -1116,9 +1117,9 @@ MPVUMC_PpicSkipped:
 /* 803AD4C0 00376A80  7C 08 03 A6 */	mtlr r0
 /* 803AD4C4 00376A84  38 21 00 20 */	addi r1, r1, 0x20
 /* 803AD4C8 00376A88  4E 80 00 20 */	blr 
+.endfn MPVUMC_PpicSkipped
 
-.global mpvumc_PpicSkipMb
-mpvumc_PpicSkipMb:
+.fn mpvumc_PpicSkipMb, global
 /* 803AD4CC 00376A8C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803AD4D0 00376A90  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 803AD4D4 00376A94  93 C1 00 18 */	stw r30, 0x18(r1)
@@ -1676,9 +1677,9 @@ mpvumc_PpicSkipMb:
 /* 803ADD64 00377324  83 A1 00 14 */	lwz r29, 0x14(r1)
 /* 803ADD68 00377328  38 21 00 20 */	addi r1, r1, 0x20
 /* 803ADD6C 0037732C  4E 80 00 20 */	blr
+.endfn mpvumc_PpicSkipMb
 
-.global MPVUMC_BpicSkipped
-MPVUMC_BpicSkipped:
+.fn MPVUMC_BpicSkipped, global
 /* 803ADD70 00377330  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803ADD74 00377334  7C 08 02 A6 */	mflr r0
 /* 803ADD78 00377338  38 A4 FF FF */	addi r5, r4, -1
@@ -1743,6 +1744,7 @@ MPVUMC_BpicSkipped:
 /* 803ADE50 00377410  7C 08 03 A6 */	mtlr r0
 /* 803ADE54 00377414  38 21 00 20 */	addi r1, r1, 0x20
 /* 803ADE58 00377418  4E 80 00 20 */	blr 
+.endfn MPVUMC_BpicSkipped
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

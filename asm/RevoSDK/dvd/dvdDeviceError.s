@@ -3,15 +3,15 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-lowCallback:
+.fn lowCallback, local
 /* 80310370 002D9930  90 6D B7 10 */	stw r3, lbl_80667890@sda21(r13)
 /* 80310374 002D9934  38 00 00 01 */	li r0, 1
 /* 80310378 002D9938  90 0D 98 20 */	stw r0, lbl_806659A0@sda21(r13)
 /* 8031037C 002D993C  4E 80 00 20 */	blr 
+.endfn lowCallback
 
 .balign 16, 0
-.global __DVDCheckDevice
-__DVDCheckDevice:
+.fn __DVDCheckDevice, global
 /* 80310380 002D9940  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80310384 002D9944  7C 08 02 A6 */	mflr r0
 /* 80310388 002D9948  90 01 00 34 */	stw r0, 0x34(r1)
@@ -193,6 +193,7 @@ __DVDCheckDevice:
 /* 803105F0 002D9BB0  7C 08 03 A6 */	mtlr r0
 /* 803105F4 002D9BB4  38 21 00 30 */	addi r1, r1, 0x30
 /* 803105F8 002D9BB8  4E 80 00 20 */	blr 
+.endfn __DVDCheckDevice
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global rfc_calc_fcs
-rfc_calc_fcs:
+.fn rfc_calc_fcs, global
 /* 803026DC 002CBC9C  3C A0 80 51 */	lis r5, lbl_8050E298@ha
 /* 803026E0 002CBCA0  38 C0 00 FF */	li r6, 0xff
 /* 803026E4 002CBCA4  38 A5 E2 98 */	addi r5, r5, lbl_8050E298@l
@@ -20,9 +19,9 @@ rfc_calc_fcs:
 /* 80302708 002CBCC8  20 06 00 FF */	subfic r0, r6, 0xff
 /* 8030270C 002CBCCC  54 03 06 3E */	clrlwi r3, r0, 0x18
 /* 80302710 002CBCD0  4E 80 00 20 */	blr 
+.endfn rfc_calc_fcs
 
-.global rfc_check_fcs
-rfc_check_fcs:
+.fn rfc_check_fcs, global
 /* 80302714 002CBCD4  3C C0 80 51 */	lis r6, lbl_8050E298@ha
 /* 80302718 002CBCD8  38 E0 00 FF */	li r7, 0xff
 /* 8030271C 002CBCDC  38 C6 E2 98 */	addi r6, r6, lbl_8050E298@l
@@ -44,9 +43,9 @@ rfc_check_fcs:
 /* 80302754 002CBD14  7C 00 00 34 */	cntlzw r0, r0
 /* 80302758 002CBD18  54 03 DE 3E */	rlwinm r3, r0, 0x1b, 0x18, 0x1f
 /* 8030275C 002CBD1C  4E 80 00 20 */	blr 
+.endfn rfc_check_fcs
 
-.global rfc_alloc_multiplexer_channel
-rfc_alloc_multiplexer_channel:
+.fn rfc_alloc_multiplexer_channel, global
 /* 80302760 002CBD20  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80302764 002CBD24  7C 08 02 A6 */	mflr r0
 /* 80302768 002CBD28  90 01 00 24 */	stw r0, 0x24(r1)
@@ -139,9 +138,9 @@ rfc_alloc_multiplexer_channel:
 /* 803028AC 002CBE6C  7C 08 03 A6 */	mtlr r0
 /* 803028B0 002CBE70  38 21 00 20 */	addi r1, r1, 0x20
 /* 803028B4 002CBE74  4E 80 00 20 */	blr 
+.endfn rfc_alloc_multiplexer_channel
 
-.global rfc_release_multiplexer_channel
-rfc_release_multiplexer_channel:
+.fn rfc_release_multiplexer_channel, global
 /* 803028B8 002CBE78  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803028BC 002CBE7C  7C 08 02 A6 */	mflr r0
 /* 803028C0 002CBE80  3C 80 80 5C */	lis r4, lbl_805C32A8@ha
@@ -179,9 +178,9 @@ rfc_release_multiplexer_channel:
 /* 80302934 002CBEF4  7C 08 03 A6 */	mtlr r0
 /* 80302938 002CBEF8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030293C 002CBEFC  4E 80 00 20 */	blr 
+.endfn rfc_release_multiplexer_channel
 
-.global rfc_timer_start
-rfc_timer_start:
+.fn rfc_timer_start, global
 /* 80302940 002CBF00  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80302944 002CBF04  7C 08 02 A6 */	mflr r0
 /* 80302948 002CBF08  3C A0 80 5C */	lis r5, lbl_805C32A8@ha
@@ -212,9 +211,9 @@ rfc_timer_start:
 /* 803029A8 002CBF68  7C 08 03 A6 */	mtlr r0
 /* 803029AC 002CBF6C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803029B0 002CBF70  4E 80 00 20 */	blr 
+.endfn rfc_timer_start
 
-.global rfc_timer_stop
-rfc_timer_stop:
+.fn rfc_timer_stop, global
 /* 803029B4 002CBF74  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803029B8 002CBF78  7C 08 02 A6 */	mflr r0
 /* 803029BC 002CBF7C  3C 80 80 5C */	lis r4, lbl_805C32A8@ha
@@ -238,9 +237,9 @@ rfc_timer_stop:
 /* 80302A00 002CBFC0  7C 08 03 A6 */	mtlr r0
 /* 80302A04 002CBFC4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80302A08 002CBFC8  4E 80 00 20 */	blr 
+.endfn rfc_timer_stop
 
-.global rfc_port_timer_start
-rfc_port_timer_start:
+.fn rfc_port_timer_start, global
 /* 80302A0C 002CBFCC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80302A10 002CBFD0  7C 08 02 A6 */	mflr r0
 /* 80302A14 002CBFD4  3C A0 80 5C */	lis r5, lbl_805C32A8@ha
@@ -274,9 +273,9 @@ rfc_port_timer_start:
 /* 80302A80 002CC040  7C 08 03 A6 */	mtlr r0
 /* 80302A84 002CC044  38 21 00 20 */	addi r1, r1, 0x20
 /* 80302A88 002CC048  4E 80 00 20 */	blr 
+.endfn rfc_port_timer_start
 
-.global rfc_port_timer_stop
-rfc_port_timer_stop:
+.fn rfc_port_timer_stop, global
 /* 80302A8C 002CC04C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80302A90 002CC050  7C 08 02 A6 */	mflr r0
 /* 80302A94 002CC054  3C 80 80 5C */	lis r4, lbl_805C32A8@ha
@@ -300,9 +299,9 @@ rfc_port_timer_stop:
 /* 80302AD8 002CC098  7C 08 03 A6 */	mtlr r0
 /* 80302ADC 002CC09C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80302AE0 002CC0A0  4E 80 00 20 */	blr 
+.endfn rfc_port_timer_stop
 
-.global rfc_check_mcb_active
-rfc_check_mcb_active:
+.fn rfc_check_mcb_active, global
 /* 80302AE4 002CC0A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80302AE8 002CC0A8  7C 08 02 A6 */	mflr r0
 /* 80302AEC 002CC0AC  38 A0 00 00 */	li r5, 0
@@ -357,9 +356,9 @@ rfc_check_mcb_active:
 /* 80302B9C 002CC15C  7C 08 03 A6 */	mtlr r0
 /* 80302BA0 002CC160  38 21 00 10 */	addi r1, r1, 0x10
 /* 80302BA4 002CC164  4E 80 00 20 */	blr 
+.endfn rfc_check_mcb_active
 
-.global rfcomm_process_timeout
-rfcomm_process_timeout:
+.fn rfcomm_process_timeout, global
 /* 80302BA8 002CC168  A0 03 00 14 */	lhz r0, 0x14(r3)
 /* 80302BAC 002CC16C  2C 00 00 0C */	cmpwi r0, 0xc
 /* 80302BB0 002CC170  41 82 00 20 */	beq .L_80302BD0
@@ -376,9 +375,9 @@ rfcomm_process_timeout:
 /* 80302BD8 002CC198  38 A0 00 00 */	li r5, 0
 /* 80302BDC 002CC19C  4B FF CD EC */	b rfc_port_sm_execute
 /* 80302BE0 002CC1A0  4E 80 00 20 */	blr
+.endfn rfcomm_process_timeout
 
-.global rfc_sec_check_complete
-rfc_sec_check_complete:
+.fn rfc_sec_check_complete, global
 /* 80302BE4 002CC1A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80302BE8 002CC1A8  7C 08 02 A6 */	mflr r0
 /* 80302BEC 002CC1AC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -402,9 +401,9 @@ rfc_sec_check_complete:
 /* 80302C2C 002CC1EC  7C 08 03 A6 */	mtlr r0
 /* 80302C30 002CC1F0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80302C34 002CC1F4  4E 80 00 20 */	blr 
+.endfn rfc_sec_check_complete
 
-.global rfc_port_closed
-rfc_port_closed:
+.fn rfc_port_closed, global
 /* 80302C38 002CC1F8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80302C3C 002CC1FC  7C 08 02 A6 */	mflr r0
 /* 80302C40 002CC200  3C 80 80 5C */	lis r4, lbl_805C32A8@ha
@@ -498,9 +497,9 @@ rfc_port_closed:
 /* 80302D84 002CC344  7C 08 03 A6 */	mtlr r0
 /* 80302D88 002CC348  38 21 00 20 */	addi r1, r1, 0x20
 /* 80302D8C 002CC34C  4E 80 00 20 */	blr 
+.endfn rfc_port_closed
 
-.global rfc_inc_credit
-rfc_inc_credit:
+.fn rfc_inc_credit, global
 /* 80302D90 002CC350  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80302D94 002CC354  7C 08 02 A6 */	mflr r0
 /* 80302D98 002CC358  90 01 00 14 */	stw r0, 0x14(r1)
@@ -538,9 +537,9 @@ rfc_inc_credit:
 /* 80302E10 002CC3D0  7C 08 03 A6 */	mtlr r0
 /* 80302E14 002CC3D4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80302E18 002CC3D8  4E 80 00 20 */	blr 
+.endfn rfc_inc_credit
 
-.global rfc_dec_credit
-rfc_dec_credit:
+.fn rfc_dec_credit, global
 /* 80302E1C 002CC3DC  80 83 00 6C */	lwz r4, 0x6c(r3)
 /* 80302E20 002CC3E0  88 04 00 72 */	lbz r0, 0x72(r4)
 /* 80302E24 002CC3E4  28 00 00 02 */	cmplwi r0, 2
@@ -557,9 +556,9 @@ rfc_dec_credit:
 /* 80302E4C 002CC40C  38 00 00 01 */	li r0, 1
 /* 80302E50 002CC410  98 03 00 24 */	stb r0, 0x24(r3)
 /* 80302E54 002CC414  4E 80 00 20 */	blr 
+.endfn rfc_dec_credit
 
-.global rfc_check_send_cmd
-rfc_check_send_cmd:
+.fn rfc_check_send_cmd, global
 /* 80302E58 002CC418  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80302E5C 002CC41C  7C 08 02 A6 */	mflr r0
 /* 80302E60 002CC420  2C 04 00 00 */	cmpwi r4, 0
@@ -588,6 +587,7 @@ rfc_check_send_cmd:
 /* 80302EB0 002CC470  7C 08 03 A6 */	mtlr r0
 /* 80302EB4 002CC474  38 21 00 10 */	addi r1, r1, 0x10
 /* 80302EB8 002CC478  4E 80 00 20 */	blr
+.endfn rfc_check_send_cmd
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 .global lbl_80548E70

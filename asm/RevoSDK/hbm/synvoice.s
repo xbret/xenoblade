@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global __HBMSYNClearVoiceReferences
-__HBMSYNClearVoiceReferences:
+.fn __HBMSYNClearVoiceReferences, global
 /* 80341F10 0030B4D0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80341F14 0030B4D4  7C 08 02 A6 */	mflr r0
 /* 80341F18 0030B4D8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -47,13 +46,14 @@ __HBMSYNClearVoiceReferences:
 /* 80341FA8 0030B568  7C 08 03 A6 */	mtlr r0
 /* 80341FAC 0030B56C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80341FB0 0030B570  4E 80 00 20 */	blr 
+.endfn __HBMSYNClearVoiceReferences
 
 .balign 16, 0
-.global func_80341FC0
-func_80341FC0:
+.fn func_80341FC0, global
 /* 80341FC0 0030B580  38 00 00 03 */	li r0, 3
 /* 80341FC4 0030B584  90 03 00 30 */	stw r0, 0x30(r3)
 /* 80341FC8 0030B588  4E 80 00 20 */	blr 
+.endfn func_80341FC0
 
 .balign 16, 0
 .global func_80341FD0

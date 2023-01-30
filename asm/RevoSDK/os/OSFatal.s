@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global ScreenReport
-ScreenReport:
+.fn ScreenReport, global
 /* 80356AF0 003200B0  94 21 FE 80 */	stwu r1, -0x180(r1)
 /* 80356AF4 003200B4  7C 08 02 A6 */	mflr r0
 /* 80356AF8 003200B8  90 01 01 84 */	stw r0, 0x184(r1)
@@ -218,10 +217,10 @@ ScreenReport:
 /* 80356E0C 003203CC  7C 08 03 A6 */	mtlr r0
 /* 80356E10 003203D0  38 21 01 80 */	addi r1, r1, 0x180
 /* 80356E14 003203D4  4E 80 00 20 */	blr 
+.endfn ScreenReport
 
 .balign 16, 0
-.global ConfigureVideo
-ConfigureVideo:
+.fn ConfigureVideo, global
 /* 80356E20 003203E0  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80356E24 003203E4  7C 08 02 A6 */	mflr r0
 /* 80356E28 003203E8  38 C0 01 E0 */	li r6, 0x1e0
@@ -300,10 +299,10 @@ ConfigureVideo:
 /* 80356F34 003204F4  7C 08 03 A6 */	mtlr r0
 /* 80356F38 003204F8  38 21 00 50 */	addi r1, r1, 0x50
 /* 80356F3C 003204FC  4E 80 00 20 */	blr 
+.endfn ConfigureVideo
 
 .balign 16, 0
-.global OSFatal
-OSFatal:
+.fn OSFatal, global
 /* 80356F40 00320500  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80356F44 00320504  7C 08 02 A6 */	mflr r0
 /* 80356F48 00320508  90 01 00 34 */	stw r0, 0x34(r1)
@@ -434,10 +433,10 @@ OSFatal:
 /* 8035711C 003206DC  7C 08 03 A6 */	mtlr r0
 /* 80357120 003206E0  38 21 00 30 */	addi r1, r1, 0x30
 /* 80357124 003206E4  4E 80 00 20 */	blr 
+.endfn OSFatal
 
 .balign 16, 0
-.global Halt
-Halt:
+.fn Halt, global
 /* 80357130 003206F0  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80357134 003206F4  7C 08 02 A6 */	mflr r0
 /* 80357138 003206F8  90 01 00 54 */	stw r0, 0x54(r1)
@@ -840,6 +839,7 @@ Halt:
 /* 8035770C 00320CCC  7C 08 03 A6 */	mtlr r0
 /* 80357710 00320CD0  38 21 00 50 */	addi r1, r1, 0x50
 /* 80357714 00320CD4  4E 80 00 20 */	blr 
+.endfn Halt
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 

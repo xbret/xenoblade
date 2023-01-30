@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global ADX_DecodeInfoSpsd
-ADX_DecodeInfoSpsd:
+.fn ADX_DecodeInfoSpsd, global
 /* 80397A0C 00360FCC  88 03 00 07 */	lbz r0, 7(r3)
 /* 80397A10 00360FD0  81 81 00 08 */	lwz r12, 8(r1)
 /* 80397A14 00360FD4  54 00 20 36 */	slwi r0, r0, 4
@@ -82,9 +81,9 @@ ADX_DecodeInfoSpsd:
 /* 80397B24 003610E4  98 87 00 00 */	stb r4, 0(r7)
 /* 80397B28 003610E8  98 06 00 00 */	stb r0, 0(r6)
 /* 80397B2C 003610EC  4E 80 00 20 */	blr 
+.endfn ADX_DecodeInfoSpsd
 
-.global ADXB_DecodeHeaderSpsd
-ADXB_DecodeHeaderSpsd:
+.fn ADXB_DecodeHeaderSpsd, global
 /* 80397B30 003610F0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80397B34 003610F4  7C 08 02 A6 */	mflr r0
 /* 80397B38 003610F8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -146,9 +145,9 @@ ADXB_DecodeHeaderSpsd:
 /* 80397C10 003611D0  7C 08 03 A6 */	mtlr r0
 /* 80397C14 003611D4  38 21 00 30 */	addi r1, r1, 0x30
 /* 80397C18 003611D8  4E 80 00 20 */	blr 
+.endfn ADXB_DecodeHeaderSpsd
 
-.global ADXB_ExecOneSpsd
-ADXB_ExecOneSpsd:
+.fn ADXB_ExecOneSpsd, global
 /* 80397C1C 003611DC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80397C20 003611E0  7C 08 02 A6 */	mflr r0
 /* 80397C24 003611E4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -363,9 +362,9 @@ ADXB_ExecOneSpsd:
 /* 80397F30 003614F0  7C 08 03 A6 */	mtlr r0
 /* 80397F34 003614F4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80397F38 003614F8  4E 80 00 20 */	blr 
+.endfn ADXB_ExecOneSpsd
 
-.global ADXB_CheckSpsd
-ADXB_CheckSpsd:
+.fn ADXB_CheckSpsd, global
 /* 80397F3C 003614FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80397F40 00361500  7C 08 02 A6 */	mflr r0
 /* 80397F44 00361504  3C 80 80 52 */	lis r4, lbl_8051C748@ha
@@ -379,6 +378,7 @@ ADXB_CheckSpsd:
 /* 80397F64 00361524  7C 08 03 A6 */	mtlr r0
 /* 80397F68 00361528  38 21 00 10 */	addi r1, r1, 0x10
 /* 80397F6C 0036152C  4E 80 00 20 */	blr 
+.endfn ADXB_CheckSpsd
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0

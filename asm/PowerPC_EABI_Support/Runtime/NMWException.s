@@ -2,18 +2,17 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global dthandler__3stdFv
-dthandler__3stdFv:
+.fn dthandler__3stdFv, global
 /* 802B96FC 00282CBC  48 00 DA EC */	b abort
+.endfn dthandler__3stdFv
 
-.global terminate__3stdFv
-terminate__3stdFv:
+.fn terminate__3stdFv, global
 /* 802B9700 00282CC0  81 8D 96 E0 */	lwz r12, lbl_80665860@sda21(r13)
 /* 802B9704 00282CC4  7D 89 03 A6 */	mtctr r12
 /* 802B9708 00282CC8  4E 80 04 20 */	bctr 
+.endfn terminate__3stdFv
 
-.global __throw_catch_compare
-__throw_catch_compare:
+.fn __throw_catch_compare, global
 /* 802B970C 00282CCC  2C 04 00 00 */	cmpwi r4, 0
 /* 802B9710 00282CD0  38 00 00 00 */	li r0, 0
 /* 802B9714 00282CD4  90 05 00 00 */	stw r0, 0(r5)
@@ -179,9 +178,9 @@ __throw_catch_compare:
 /* 802B9934 00282EF4  41 82 FF D4 */	beq .L_802B9908
 /* 802B9938 00282EF8  38 60 00 00 */	li r3, 0
 /* 802B993C 00282EFC  4E 80 00 20 */	blr 
+.endfn __throw_catch_compare
 
-.global __construct_new_array
-__construct_new_array:
+.fn __construct_new_array, global
 /* 802B9940 00282F00  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802B9944 00282F04  7C 08 02 A6 */	mflr r0
 /* 802B9948 00282F08  2C 03 00 00 */	cmpwi r3, 0
@@ -252,10 +251,10 @@ __construct_new_array:
 /* 802B9A38 00282FF8  7C 08 03 A6 */	mtlr r0
 /* 802B9A3C 00282FFC  38 21 00 40 */	addi r1, r1, 0x40
 /* 802B9A40 00283000  4E 80 00 20 */	blr
+.endfn __construct_new_array
 
 
-.global __dt__26__partial_array_destructorFv
-__dt__26__partial_array_destructorFv:
+.fn __dt__26__partial_array_destructorFv, global
 /* 802B9A44 00283004  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802B9A48 00283008  7C 08 02 A6 */	mflr r0
 /* 802B9A4C 0028300C  2C 03 00 00 */	cmpwi r3, 0
@@ -307,9 +306,9 @@ __dt__26__partial_array_destructorFv:
 /* 802B9AF4 002830B4  7C 08 03 A6 */	mtlr r0
 /* 802B9AF8 002830B8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802B9AFC 002830BC  4E 80 00 20 */	blr 
+.endfn __dt__26__partial_array_destructorFv
 
-.global __construct_array
-__construct_array:
+.fn __construct_array, global
 /* 802B9B00 002830C0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802B9B04 002830C4  7C 08 02 A6 */	mflr r0
 /* 802B9B08 002830C8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -377,9 +376,9 @@ __construct_array:
 /* 802B9BEC 002831AC  7C 08 03 A6 */	mtlr r0
 /* 802B9BF0 002831B0  38 21 00 30 */	addi r1, r1, 0x30
 /* 802B9BF4 002831B4  4E 80 00 20 */	blr 
+.endfn __construct_array
 
-.global __destroy_arr
-__destroy_arr:
+.fn __destroy_arr, global
 /* 802B9BF8 002831B8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802B9BFC 002831BC  7C 08 02 A6 */	mflr r0
 /* 802B9C00 002831C0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -412,9 +411,9 @@ __destroy_arr:
 /* 802B9C64 00283224  7C 08 03 A6 */	mtlr r0
 /* 802B9C68 00283228  38 21 00 20 */	addi r1, r1, 0x20
 /* 802B9C6C 0028322C  4E 80 00 20 */	blr 
+.endfn __destroy_arr
 
-.global __destroy_new_array
-__destroy_new_array:
+.fn __destroy_new_array, global
 /* 802B9C70 00283230  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802B9C74 00283234  7C 08 02 A6 */	mflr r0
 /* 802B9C78 00283238  2C 03 00 00 */	cmpwi r3, 0
@@ -451,56 +450,85 @@ __destroy_new_array:
 /* 802B9CE4 002832A4  7C 08 03 A6 */	mtlr r0
 /* 802B9CE8 002832A8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802B9CEC 002832AC  4E 80 00 20 */	blr 
+.endfn __destroy_new_array
 
-.section extab_, "a"  # 0x800066E0 - 0x80021020
+.section extab, "a" # 0x800066E0 - 0x80021020
 
-.global lbl_8001BEE8
-lbl_8001BEE8:
+.balign 4
+
+.obj "@etb_8001BEE8", local
+.hidden "@etb_8001BEE8"
 	.4byte 0x28080000
 	.4byte 0x00000070
 	.4byte 0x00000010
-	.4byte 0
+	.4byte 0x00000000
 	.4byte 0x82000008
 	.4byte __dt__26__partial_array_destructorFv
+.endobj "@etb_8001BEE8"
 
-.global lbl_8001BF00
-lbl_8001BF00:
+.obj "@etb_8001BF00", local
+.hidden "@etb_8001BF00"
 	.4byte 0x18080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001BF00"
 
-.global lbl_8001BF08
-lbl_8001BF08:
+.obj "@etb_8001BF08", local
+.hidden "@etb_8001BF08"
 	.4byte 0x20080000
 	.4byte 0x0000005C
 	.4byte 0x00000010
-	.4byte 0
+	.4byte 0x00000000
 	.4byte 0x82000008
 	.4byte __dt__26__partial_array_destructorFv
+.endobj "@etb_8001BF08"
 
-.global lbl_8001BF20
-lbl_8001BF20:
+.obj "@etb_8001BF20", local
+.hidden "@etb_8001BF20"
 	.4byte 0x20080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001BF20"
 
-.global lbl_8001BF28
-lbl_8001BF28:
+.obj "@etb_8001BF28", local
+.hidden "@etb_8001BF28"
 	.4byte 0x30080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001BF28"
 
-.section extabindex_, "a"  # 0x80021020 - 0x80039220
+.section extabindex, "a" # 0x80021020 - 0x80039220
 
-.4byte __construct_new_array
+.balign 4
+
+.obj "@eti_80033A7C", local
+.hidden "@eti_80033A7C"
+	.4byte __construct_new_array
 	.4byte 0x00000104
-	.4byte lbl_8001BEE8
+	.4byte "@etb_8001BEE8"
+.endobj "@eti_80033A7C"
+
+.obj "@eti_80033A88", local
+.hidden "@eti_80033A88"
 	.4byte __dt__26__partial_array_destructorFv
 	.4byte 0x000000BC
-	.4byte lbl_8001BF00
+	.4byte "@etb_8001BF00"
+.endobj "@eti_80033A88"
+
+.obj "@eti_80033A94", local
+.hidden "@eti_80033A94"
 	.4byte __construct_array
 	.4byte 0x000000F8
-	.4byte lbl_8001BF08
+	.4byte "@etb_8001BF08"
+.endobj "@eti_80033A94"
+
+.obj "@eti_80033AA0", local
+.hidden "@eti_80033AA0"
 	.4byte __destroy_arr
 	.4byte 0x00000078
-	.4byte lbl_8001BF20
+	.4byte "@etb_8001BF20"
+.endobj "@eti_80033AA0"
+
+.obj "@eti_80033AAC", local
+.hidden "@eti_80033AAC"
 	.4byte __destroy_new_array
 	.4byte 0x00000080
-	.4byte lbl_8001BF28
+	.4byte "@etb_8001BF28"
+.endobj "@eti_80033AAC"

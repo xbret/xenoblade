@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global reserveFileDescriptor
-reserveFileDescriptor:
+.fn reserveFileDescriptor, global
 /* 80351290 0031A850  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80351294 0031A854  7C 08 02 A6 */	mflr r0
 /* 80351298 0031A858  90 01 00 14 */	stw r0, 0x14(r1)
@@ -28,10 +27,10 @@ reserveFileDescriptor:
 /* 803512D8 0031A898  7C 08 03 A6 */	mtlr r0
 /* 803512DC 0031A89C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803512E0 0031A8A0  4E 80 00 20 */	blr 
+.endfn reserveFileDescriptor
 
 .balign 16, 0
-.global NANDLoggingAddMessageAsync
-NANDLoggingAddMessageAsync:
+.fn NANDLoggingAddMessageAsync, global
 /* 803512F0 0031A8B0  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 803512F4 0031A8B4  7C 08 02 A6 */	mflr r0
 /* 803512F8 0031A8B8  90 01 00 84 */	stw r0, 0x84(r1)
@@ -98,9 +97,10 @@ NANDLoggingAddMessageAsync:
 /* 803513DC 0031A99C  7C 08 03 A6 */	mtlr r0
 /* 803513E0 0031A9A0  38 21 00 80 */	addi r1, r1, 0x80
 /* 803513E4 0031A9A4  4E 80 00 20 */	blr
+.endfn NANDLoggingAddMessageAsync
 
 .balign 16, 0
-asyncRoutine:
+.fn asyncRoutine, local
 /* 803513F0 0031A9B0  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 803513F4 0031A9B4  7C 08 02 A6 */	mflr r0
 /* 803513F8 0031A9B8  90 01 00 94 */	stw r0, 0x94(r1)
@@ -407,6 +407,7 @@ asyncRoutine:
 /* 80351868 0031AE28  7C 08 03 A6 */	mtlr r0
 /* 8035186C 0031AE2C  38 21 00 90 */	addi r1, r1, 0x90
 /* 80351870 0031AE30  4E 80 00 20 */	blr 
+.endfn asyncRoutine
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

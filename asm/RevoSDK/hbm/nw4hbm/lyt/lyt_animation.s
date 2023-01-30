@@ -4,8 +4,7 @@
 
 .balign 16, 0
 #GetStepCurveValue__27@unnamed@lyt_animation_cpp@FfPCQ46nw4hbm3lyt3res7StepKeyUl
-.global GetStepCurveValue__27_unnamed_lyt_animation_cpp_FfPCQ46nw4hbm3lyt3res7StepKeyUl
-GetStepCurveValue__27_unnamed_lyt_animation_cpp_FfPCQ46nw4hbm3lyt3res7StepKeyUl:
+.fn GetStepCurveValue__27_unnamed_lyt_animation_cpp_FfPCQ46nw4hbm3lyt3res7StepKeyUl, global
 /* 8032B4C0 002F4A80  28 04 00 01 */	cmplwi r4, 1
 /* 8032B4C4 002F4A84  41 82 00 14 */	beq .L_8032B4D8
 /* 8032B4C8 002F4A88  C0 03 00 00 */	lfs f0, 0(r3)
@@ -75,11 +74,11 @@ GetStepCurveValue__27_unnamed_lyt_animation_cpp_FfPCQ46nw4hbm3lyt3res7StepKeyUl:
 /* 8032B5A4 002F4B64  7C 63 02 14 */	add r3, r3, r0
 /* 8032B5A8 002F4B68  A0 63 00 04 */	lhz r3, 4(r3)
 /* 8032B5AC 002F4B6C  4E 80 00 20 */	blr 
+.endfn GetStepCurveValue__27_unnamed_lyt_animation_cpp_FfPCQ46nw4hbm3lyt3res7StepKeyUl
 
 .balign 16, 0
 #GetHermiteCurveValue__27@unnamed@lyt_animation_cpp@FfPCQ46nw4hbm3lyt3res10HermiteKeyUl
-.global GetHermiteCurveValue__27_unnamed_lyt_animation_cpp_FfPCQ46nw4hbm3lyt3res10HermiteKeyUl
-GetHermiteCurveValue__27_unnamed_lyt_animation_cpp_FfPCQ46nw4hbm3lyt3res10HermiteKeyUl:
+.fn GetHermiteCurveValue__27_unnamed_lyt_animation_cpp_FfPCQ46nw4hbm3lyt3res10HermiteKeyUl, global
 /* 8032B5B0 002F4B70  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8032B5B4 002F4B74  DB E1 00 10 */	stfd f31, 0x10(r1)
 /* 8032B5B8 002F4B78  F3 E1 00 18 */	psq_st f31, 24(r1), 0, qr0
@@ -204,17 +203,17 @@ GetHermiteCurveValue__27_unnamed_lyt_animation_cpp_FfPCQ46nw4hbm3lyt3res10Hermit
 /* 8032B768 002F4D28  CB E1 00 10 */	lfd f31, 0x10(r1)
 /* 8032B76C 002F4D2C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8032B770 002F4D30  4E 80 00 20 */	blr 
+.endfn GetHermiteCurveValue__27_unnamed_lyt_animation_cpp_FfPCQ46nw4hbm3lyt3res10HermiteKeyUl
 
 .balign 16, 0
-.global GetFrameSize__Q36nw4hbm3lyt13AnimTransformCFv
-GetFrameSize__Q36nw4hbm3lyt13AnimTransformCFv:
+.fn GetFrameSize__Q36nw4hbm3lyt13AnimTransformCFv, global
 /* 8032B780 002F4D40  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 8032B784 002F4D44  A0 63 00 08 */	lhz r3, 8(r3)
 /* 8032B788 002F4D48  4E 80 00 20 */	blr 
+.endfn GetFrameSize__Q36nw4hbm3lyt13AnimTransformCFv
 
 .balign 16, 0
-.global __ct__Q36nw4hbm3lyt18AnimTransformBasicFv
-__ct__Q36nw4hbm3lyt18AnimTransformBasicFv:
+.fn __ct__Q36nw4hbm3lyt18AnimTransformBasicFv, global
 /* 8032B790 002F4D50  3C 80 80 52 */	lis r4, lbl_80518A40@ha
 /* 8032B794 002F4D54  38 00 00 00 */	li r0, 0
 /* 8032B798 002F4D58  C0 04 8A 40 */	lfs f0, lbl_80518A40@l(r4)
@@ -229,10 +228,10 @@ __ct__Q36nw4hbm3lyt18AnimTransformBasicFv:
 /* 8032B7BC 002F4D7C  90 03 00 18 */	stw r0, 0x18(r3)
 /* 8032B7C0 002F4D80  B0 03 00 1C */	sth r0, 0x1c(r3)
 /* 8032B7C4 002F4D84  4E 80 00 20 */	blr 
+.endfn __ct__Q36nw4hbm3lyt18AnimTransformBasicFv
 
 .balign 16, 0
-.global __dt__Q36nw4hbm3lyt18AnimTransformBasicFv
-__dt__Q36nw4hbm3lyt18AnimTransformBasicFv:
+.fn __dt__Q36nw4hbm3lyt18AnimTransformBasicFv, global
 /* 8032B7D0 002F4D90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8032B7D4 002F4D94  7C 08 02 A6 */	mflr r0
 /* 8032B7D8 002F4D98  2C 03 00 00 */	cmpwi r3, 0
@@ -271,10 +270,10 @@ __dt__Q36nw4hbm3lyt18AnimTransformBasicFv:
 /* 8032B850 002F4E10  7C 08 03 A6 */	mtlr r0
 /* 8032B854 002F4E14  38 21 00 10 */	addi r1, r1, 0x10
 /* 8032B858 002F4E18  4E 80 00 20 */	blr 
+.endfn __dt__Q36nw4hbm3lyt18AnimTransformBasicFv
 
 .balign 16, 0
-.global SetResource__Q36nw4hbm3lyt18AnimTransformBasicFPCQ46nw4hbm3lyt3res14AnimationBlockPQ36nw4hbm3lyt16ResourceAccessor
-SetResource__Q36nw4hbm3lyt18AnimTransformBasicFPCQ46nw4hbm3lyt3res14AnimationBlockPQ36nw4hbm3lyt16ResourceAccessor:
+.fn SetResource__Q36nw4hbm3lyt18AnimTransformBasicFPCQ46nw4hbm3lyt3res14AnimationBlockPQ36nw4hbm3lyt16ResourceAccessor, global
 /* 8032B860 002F4E20  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8032B864 002F4E24  7C 08 02 A6 */	mflr r0
 /* 8032B868 002F4E28  90 01 00 34 */	stw r0, 0x34(r1)
@@ -364,10 +363,10 @@ SetResource__Q36nw4hbm3lyt18AnimTransformBasicFPCQ46nw4hbm3lyt3res14AnimationBlo
 /* 8032B99C 002F4F5C  7C 08 03 A6 */	mtlr r0
 /* 8032B9A0 002F4F60  38 21 00 30 */	addi r1, r1, 0x30
 /* 8032B9A4 002F4F64  4E 80 00 20 */	blr 
+.endfn SetResource__Q36nw4hbm3lyt18AnimTransformBasicFPCQ46nw4hbm3lyt3res14AnimationBlockPQ36nw4hbm3lyt16ResourceAccessor
 
 .balign 16, 0
-.global Bind__Q36nw4hbm3lyt18AnimTransformBasicFPQ36nw4hbm3lyt4Paneb
-Bind__Q36nw4hbm3lyt18AnimTransformBasicFPQ36nw4hbm3lyt4Paneb:
+.fn Bind__Q36nw4hbm3lyt18AnimTransformBasicFPQ36nw4hbm3lyt4Paneb, global
 /* 8032B9B0 002F4F70  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8032B9B4 002F4F74  7C 08 02 A6 */	mflr r0
 /* 8032B9B8 002F4F78  90 01 00 24 */	stw r0, 0x24(r1)
@@ -436,10 +435,10 @@ Bind__Q36nw4hbm3lyt18AnimTransformBasicFPQ36nw4hbm3lyt4Paneb:
 /* 8032BAA4 002F5064  7C 08 03 A6 */	mtlr r0
 /* 8032BAA8 002F5068  38 21 00 20 */	addi r1, r1, 0x20
 /* 8032BAAC 002F506C  4E 80 00 20 */	blr 
+.endfn Bind__Q36nw4hbm3lyt18AnimTransformBasicFPQ36nw4hbm3lyt4Paneb
 
 .balign 16, 0
-.global Bind__Q36nw4hbm3lyt18AnimTransformBasicFPQ36nw4hbm3lyt8Material
-Bind__Q36nw4hbm3lyt18AnimTransformBasicFPQ36nw4hbm3lyt8Material:
+.fn Bind__Q36nw4hbm3lyt18AnimTransformBasicFPQ36nw4hbm3lyt8Material, global
 /* 8032BAB0 002F5070  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8032BAB4 002F5074  7C 08 02 A6 */	mflr r0
 /* 8032BAB8 002F5078  90 01 00 24 */	stw r0, 0x24(r1)
@@ -490,10 +489,10 @@ Bind__Q36nw4hbm3lyt18AnimTransformBasicFPQ36nw4hbm3lyt8Material:
 /* 8032BB60 002F5120  7C 08 03 A6 */	mtlr r0
 /* 8032BB64 002F5124  38 21 00 20 */	addi r1, r1, 0x20
 /* 8032BB68 002F5128  4E 80 00 20 */	blr 
+.endfn Bind__Q36nw4hbm3lyt18AnimTransformBasicFPQ36nw4hbm3lyt8Material
 
 .balign 16, 0
-.global Animate__Q36nw4hbm3lyt18AnimTransformBasicFUlPQ36nw4hbm3lyt4Pane
-Animate__Q36nw4hbm3lyt18AnimTransformBasicFUlPQ36nw4hbm3lyt4Pane:
+.fn Animate__Q36nw4hbm3lyt18AnimTransformBasicFUlPQ36nw4hbm3lyt4Pane, global
 /* 8032BB70 002F5130  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8032BB74 002F5134  7C 08 02 A6 */	mflr r0
 /* 8032BB78 002F5138  90 01 00 64 */	stw r0, 0x64(r1)
@@ -626,10 +625,10 @@ Animate__Q36nw4hbm3lyt18AnimTransformBasicFUlPQ36nw4hbm3lyt4Pane:
 /* 8032BD44 002F5304  7C 08 03 A6 */	mtlr r0
 /* 8032BD48 002F5308  38 21 00 60 */	addi r1, r1, 0x60
 /* 8032BD4C 002F530C  4E 80 00 20 */	blr 
+.endfn Animate__Q36nw4hbm3lyt18AnimTransformBasicFUlPQ36nw4hbm3lyt4Pane
 
 .balign 16, 0
-.global Animate__Q36nw4hbm3lyt18AnimTransformBasicFUlPQ36nw4hbm3lyt8Material
-Animate__Q36nw4hbm3lyt18AnimTransformBasicFUlPQ36nw4hbm3lyt8Material:
+.fn Animate__Q36nw4hbm3lyt18AnimTransformBasicFUlPQ36nw4hbm3lyt8Material, global
 /* 8032BD50 002F5310  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8032BD54 002F5314  7C 08 02 A6 */	mflr r0
 /* 8032BD58 002F5318  90 01 00 74 */	stw r0, 0x74(r1)
@@ -832,11 +831,11 @@ Animate__Q36nw4hbm3lyt18AnimTransformBasicFUlPQ36nw4hbm3lyt8Material:
 /* 8032C01C 002F55DC  7C 08 03 A6 */	mtlr r0
 /* 8032C020 002F55E0  38 21 00 70 */	addi r1, r1, 0x70
 /* 8032C024 002F55E4  4E 80 00 20 */	blr 
+.endfn Animate__Q36nw4hbm3lyt18AnimTransformBasicFUlPQ36nw4hbm3lyt8Material
 
 .balign 16, 0
 #FindAnimationLink__Q36nw4hbm3lyt6detailFPQ36nw4hbm2ut40LinkList<Q36nw4hbm3lyt13AnimationLink,0>PQ36nw4hbm3lyt13AnimTransform
-.global FindAnimationLink__Q36nw4hbm3lyt6detailFPQ36nw4hbm2ut40LinkList_Q36nw4hbm3lyt13AnimationLink_0_PQ36nw4hbm3lyt13AnimTransform
-FindAnimationLink__Q36nw4hbm3lyt6detailFPQ36nw4hbm2ut40LinkList_Q36nw4hbm3lyt13AnimationLink_0_PQ36nw4hbm3lyt13AnimTransform:
+.fn FindAnimationLink__Q36nw4hbm3lyt6detailFPQ36nw4hbm2ut40LinkList_Q36nw4hbm3lyt13AnimationLink_0_PQ36nw4hbm3lyt13AnimTransform, global
 /* 8032C030 002F55F0  80 A3 00 04 */	lwz r5, 4(r3)
 /* 8032C034 002F55F4  38 03 00 04 */	addi r0, r3, 4
 /* 8032C038 002F55F8  48 00 00 20 */	b .L_8032C058
@@ -854,6 +853,7 @@ FindAnimationLink__Q36nw4hbm3lyt6detailFPQ36nw4hbm2ut40LinkList_Q36nw4hbm3lyt13A
 /* 8032C05C 002F561C  40 82 FF E4 */	bne .L_8032C040
 /* 8032C060 002F5620  38 60 00 00 */	li r3, 0
 /* 8032C064 002F5624  4E 80 00 20 */	blr 
+.endfn FindAnimationLink__Q36nw4hbm3lyt6detailFPQ36nw4hbm2ut40LinkList_Q36nw4hbm3lyt13AnimationLink_0_PQ36nw4hbm3lyt13AnimTransform
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0

@@ -2,8 +2,9 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802240C4
-func_802240C4:
+
+
+.fn func_802240C4, global
 /* 802240C4 001ED684  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802240C8 001ED688  7C 08 02 A6 */	mflr r0
 /* 802240CC 001ED68C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -19,9 +20,9 @@ func_802240C4:
 /* 802240F4 001ED6B4  7C 08 03 A6 */	mtlr r0
 /* 802240F8 001ED6B8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802240FC 001ED6BC  4E 80 00 20 */	blr 
+.endfn func_802240C4
 
-.global func_80224100
-func_80224100:
+.fn func_80224100, global
 /* 80224100 001ED6C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80224104 001ED6C4  7C 08 02 A6 */	mflr r0
 /* 80224108 001ED6C8  2C 03 00 00 */	cmpwi r3, 0
@@ -39,9 +40,9 @@ func_80224100:
 /* 80224134 001ED6F4  7C 08 03 A6 */	mtlr r0
 /* 80224138 001ED6F8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8022413C 001ED6FC  4E 80 00 20 */	blr 
+.endfn func_80224100
 
-.global func_80224140
-func_80224140:
+.fn func_80224140, global
 /* 80224140 001ED700  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80224144 001ED704  7C 08 02 A6 */	mflr r0
 /* 80224148 001ED708  90 01 00 14 */	stw r0, 0x14(r1)
@@ -78,9 +79,9 @@ func_80224140:
 /* 802241C4 001ED784  7C 08 03 A6 */	mtlr r0
 /* 802241C8 001ED788  38 21 00 10 */	addi r1, r1, 0x10
 /* 802241CC 001ED78C  4E 80 00 20 */	blr 
+.endfn func_80224140
 
-.global func_802241D0
-func_802241D0:
+.fn func_802241D0, global
 /* 802241D0 001ED790  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802241D4 001ED794  7C 08 02 A6 */	mflr r0
 /* 802241D8 001ED798  90 01 00 14 */	stw r0, 0x14(r1)
@@ -91,41 +92,64 @@ func_802241D0:
 /* 802241EC 001ED7AC  7C 08 03 A6 */	mtlr r0
 /* 802241F0 001ED7B0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802241F4 001ED7B4  4E 80 00 20 */	blr 
+.endfn func_802241D0
 
-.section extab_, "a"  # 0x800066E0 - 0x80021020
+.section extab, "a" # 0x800066E0 - 0x80021020
 
-.global lbl_80014FD4
-lbl_80014FD4:
+.balign 4
+
+.obj "@etb_80014FD4", local
+.hidden "@etb_80014FD4"
 	.4byte 0x08080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_80014FD4"
 
-.global lbl_80014FDC
-lbl_80014FDC:
+.obj "@etb_80014FDC", local
+.hidden "@etb_80014FDC"
 	.4byte 0x08080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_80014FDC"
 
-.global lbl_80014FE4
-lbl_80014FE4:
+.obj "@etb_80014FE4", local
+.hidden "@etb_80014FE4"
 	.4byte 0x10080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_80014FE4"
 
-.global lbl_80014FEC
-lbl_80014FEC:
+.obj "@etb_80014FEC", local
+.hidden "@etb_80014FEC"
 	.4byte 0x00080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_80014FEC"
 
+.section extabindex, "a" # 0x80021020 - 0x80039220
 
-.section extabindex_, "a"  # 0x80021020 - 0x80039220
+.balign 4
 
-.4byte func_802240C4
+.obj "@eti_8002DE6C", local
+.hidden "@eti_8002DE6C"
+	.4byte func_802240C4
 	.4byte 0x0000003C
-	.4byte lbl_80014FD4
+	.4byte "@etb_80014FD4"
+.endobj "@eti_8002DE6C"
+
+.obj "@eti_8002DE78", local
+.hidden "@eti_8002DE78"
 	.4byte func_80224100
 	.4byte 0x00000040
-	.4byte lbl_80014FDC
+	.4byte "@etb_80014FDC"
+.endobj "@eti_8002DE78"
+
+.obj "@eti_8002DE84", local
+.hidden "@eti_8002DE84"
 	.4byte func_80224140
 	.4byte 0x00000090
-	.4byte lbl_80014FE4
+	.4byte "@etb_80014FE4"
+.endobj "@eti_8002DE84"
+
+.obj "@eti_8002DE90", local
+.hidden "@eti_8002DE90"
 	.4byte func_802241D0
 	.4byte 0x00000028
-	.4byte lbl_80014FEC
+	.4byte "@etb_80014FEC"
+.endobj "@eti_8002DE90"

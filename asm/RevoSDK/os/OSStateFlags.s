@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global __OSWriteStateFlags
-__OSWriteStateFlags:
+.fn __OSWriteStateFlags, global
 /* 8035DE50 00327410  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 8035DE54 00327414  7C 08 02 A6 */	mflr r0
 /* 8035DE58 00327418  7C 64 1B 78 */	mr r4, r3
@@ -66,10 +65,10 @@ __OSWriteStateFlags:
 /* 8035DF28 003274E8  7C 08 03 A6 */	mtlr r0
 /* 8035DF2C 003274EC  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 8035DF30 003274F0  4E 80 00 20 */	blr 
+.endfn __OSWriteStateFlags
 
 .balign 16, 0
-.global __OSReadStateFlags
-__OSReadStateFlags:
+.fn __OSReadStateFlags, global
 /* 8035DF40 00327500  94 21 FF 50 */	stwu r1, -0xb0(r1)
 /* 8035DF44 00327504  7C 08 02 A6 */	mflr r0
 /* 8035DF48 00327508  38 A0 00 01 */	li r5, 1
@@ -148,6 +147,7 @@ __OSReadStateFlags:
 /* 8035E05C 0032761C  7C 08 03 A6 */	mtlr r0
 /* 8035E060 00327620  38 21 00 B0 */	addi r1, r1, 0xb0
 /* 8035E064 00327624  4E 80 00 20 */	blr 
+.endfn __OSReadStateFlags
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

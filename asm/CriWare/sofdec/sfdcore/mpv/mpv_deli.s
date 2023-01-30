@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global MPV_CheckDelim
-MPV_CheckDelim:
+.fn MPV_CheckDelim, global
 /* 803A5908 0036EEC8  38 00 01 00 */	li r0, 0x100
 /* 803A590C 0036EECC  38 80 00 00 */	li r4, 0
 /* 803A5910 0036EED0  7C 09 03 A6 */	mtctr r0
@@ -55,10 +54,10 @@ MPV_CheckDelim:
 /* 803A59A4 0036EF64  38 63 00 01 */	addi r3, r3, 1
 /* 803A59A8 0036EF68  42 00 FF 6C */	bdnz .L_803A5914
 /* 803A59AC 0036EF6C  4E 80 00 20 */	blr 
+.endfn MPV_CheckDelim
 
 
-.global func_803A59B0
-func_803A59B0:
+.fn func_803A59B0, global
 /* 803A59B0 0036EF70  94 21 FE F0 */	stwu r1, -0x110(r1)
 /* 803A59B4 0036EF74  7C 08 02 A6 */	mflr r0
 /* 803A59B8 0036EF78  90 01 01 14 */	stw r0, 0x114(r1)
@@ -78,10 +77,10 @@ func_803A59B0:
 /* 803A59E8 0036EFA8  7C 08 03 A6 */	mtlr r0
 /* 803A59EC 0036EFAC  38 21 01 10 */	addi r1, r1, 0x110
 /* 803A59F0 0036EFB0  4E 80 00 20 */	blr 
+.endfn func_803A59B0
 
 #MPV_CheckDelim?
-.global func_803A59F4
-func_803A59F4:
+.fn func_803A59F4, global
 /* 803A59F4 0036EFB4  88 A3 00 00 */	lbz r5, 0(r3)
 /* 803A59F8 0036EFB8  88 83 00 01 */	lbz r4, 1(r3)
 /* 803A59FC 0036EFBC  54 A5 40 2E */	slwi r5, r5, 8
@@ -99,9 +98,9 @@ func_803A59F4:
 /* 803A5A28 0036EFE8  38 84 F6 08 */	addi r4, r4, lbl_8051F608@l
 /* 803A5A2C 0036EFEC  7C 64 00 AE */	lbzx r3, r4, r0
 /* 803A5A30 0036EFF0  4E 80 00 20 */	blr 
+.endfn func_803A59F4
 
-.global MPV_BsearchDelim
-MPV_BsearchDelim:
+.fn MPV_BsearchDelim, global
 /* 803A5A34 0036EFF4  3C C0 80 52 */	lis r6, lbl_8051F608@ha
 /* 803A5A38 0036EFF8  38 E3 FF FF */	addi r7, r3, -1
 /* 803A5A3C 0036EFFC  38 C6 F6 08 */	addi r6, r6, lbl_8051F608@l
@@ -129,9 +128,9 @@ MPV_BsearchDelim:
 .L_803A5A8C:
 /* 803A5A8C 0036F04C  38 60 00 00 */	li r3, 0
 /* 803A5A90 0036F050  4E 80 00 20 */	blr 
+.endfn MPV_BsearchDelim
 
-.global MPV_SearchDelim
-MPV_SearchDelim:
+.fn MPV_SearchDelim, global
 /* 803A5A94 0036F054  3C C0 80 52 */	lis r6, lbl_8051F608@ha
 /* 803A5A98 0036F058  39 20 FF 00 */	li r9, -256
 /* 803A5A9C 0036F05C  38 C6 F6 08 */	addi r6, r6, lbl_8051F608@l
@@ -157,6 +156,7 @@ MPV_SearchDelim:
 .L_803A5AE4:
 /* 803A5AE4 0036F0A4  38 60 00 00 */	li r3, 0
 /* 803A5AE8 0036F0A8  4E 80 00 20 */	blr 
+.endfn MPV_SearchDelim
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

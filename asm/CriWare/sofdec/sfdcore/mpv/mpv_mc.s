@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global MPVMC08_Init
-MPVMC08_Init:
+.fn MPVMC08_Init, global
 /* 803A8A0C 00371FCC  3C 80 80 52 */	lis r4, lbl_8051F820@ha
 /* 803A8A10 00371FD0  38 C4 F8 20 */	addi r6, r4, lbl_8051F820@l
 /* 803A8A14 00371FD4  80 E4 F8 20 */	lwz r7, lbl_8051F820@l(r4)
@@ -15,9 +14,9 @@ MPVMC08_Init:
 /* 803A8A2C 00371FEC  90 83 00 08 */	stw r4, 8(r3)
 /* 803A8A30 00371FF0  90 03 00 0C */	stw r0, 0xc(r3)
 /* 803A8A34 00371FF4  4E 80 00 20 */	blr
+.endfn MPVMC08_Init
 
-.global MPVMC08_OneRef1p_TuneC
-MPVMC08_OneRef1p_TuneC:
+.fn MPVMC08_OneRef1p_TuneC, global
 /* 803A8A38 00371FF8  80 E3 00 24 */	lwz r7, 0x24(r3)
 /* 803A8A3C 00371FFC  7C 00 3A 2C */	dcbt 0, r7
 /* 803A8A40 00372000  54 E0 07 7E */	clrlwi r0, r7, 0x1d
@@ -335,9 +334,9 @@ switch_803A8DB4:
 /* 803A8F0C 003724CC  50 A6 C0 0E */	rlwimi r6, r5, 0x18, 0, 7
 /* 803A8F10 003724D0  90 C3 00 3C */	stw r6, 0x3c(r3)
 /* 803A8F14 003724D4  4E 80 00 20 */	blr
+.endfn MPVMC08_OneRef1p_TuneC
 
-.global MPVMC08_OneRefV2_TuneC
-MPVMC08_OneRefV2_TuneC:
+.fn MPVMC08_OneRefV2_TuneC, global
 /* 803A8F18 003724D8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A8F1C 003724DC  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 803A8F20 003724E0  93 C1 00 18 */	stw r30, 0x18(r1)
@@ -641,9 +640,9 @@ MPVMC08_OneRefV2_TuneC:
 /* 803A93A0 00372960  83 81 00 10 */	lwz r28, 0x10(r1)
 /* 803A93A4 00372964  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A93A8 00372968  4E 80 00 20 */	blr
+.endfn MPVMC08_OneRefV2_TuneC
 
-.global MPVMC08_OneRefH2_TuneC
-MPVMC08_OneRefH2_TuneC:
+.fn MPVMC08_OneRefH2_TuneC, global
 /* 803A93AC 0037296C  80 E3 00 24 */	lwz r7, 0x24(r3)
 /* 803A93B0 00372970  3C A0 FE FF */	lis r5, 0xFEFEFEFE@ha
 /* 803A93B4 00372974  3C 80 01 01 */	lis r4, 0x01010101@ha
@@ -799,9 +798,9 @@ MPVMC08_OneRefH2_TuneC:
 /* 803A95E8 00372BA8  38 C6 00 08 */	addi r6, r6, 8
 /* 803A95EC 00372BAC  42 00 FF 9C */	bdnz .L_803A9588
 /* 803A95F0 00372BB0  4E 80 00 20 */	blr
+.endfn MPVMC08_OneRefH2_TuneC
 
-.global MPVMC08_OneRef4p_TuneC
-MPVMC08_OneRef4p_TuneC:
+.fn MPVMC08_OneRef4p_TuneC, global
 /* 803A95F4 00372BB4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A95F8 00372BB8  38 E0 00 08 */	li r7, 8
 /* 803A95FC 00372BBC  BF 61 00 0C */	stmw r27, 0xc(r1)
@@ -874,6 +873,7 @@ MPVMC08_OneRef4p_TuneC:
 /* 803A9704 00372CC4  BB 61 00 0C */	lmw r27, 0xc(r1)
 /* 803A9708 00372CC8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A970C 00372CCC  4E 80 00 20 */	blr 
+.endfn MPVMC08_OneRef4p_TuneC
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

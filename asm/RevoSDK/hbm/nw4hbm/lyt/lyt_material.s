@@ -4,8 +4,7 @@
 
 .balign 16, 0
 #CalcTextureMtx__26@unnamed@lyt_material_cpp@FPQ36nw4hbm4math5MTX34RCQ36nw4hbm3lyt6TexSRT
-.global CalcTextureMtx__26_unnamed_lyt_material_cpp_FPQ36nw4hbm4math5MTX34RCQ36nw4hbm3lyt6TexSRT
-CalcTextureMtx__26_unnamed_lyt_material_cpp_FPQ36nw4hbm4math5MTX34RCQ36nw4hbm3lyt6TexSRT:
+.fn CalcTextureMtx__26_unnamed_lyt_material_cpp_FPQ36nw4hbm4math5MTX34RCQ36nw4hbm3lyt6TexSRT, global
 /* 8032E4D0 002F7A90  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8032E4D4 002F7A94  7C 08 02 A6 */	mflr r0
 /* 8032E4D8 002F7A98  C0 24 00 08 */	lfs f1, 8(r4)
@@ -76,11 +75,11 @@ CalcTextureMtx__26_unnamed_lyt_material_cpp_FPQ36nw4hbm4math5MTX34RCQ36nw4hbm3ly
 /* 8032E5DC 002F7B9C  7C 08 03 A6 */	mtlr r0
 /* 8032E5E0 002F7BA0  38 21 00 30 */	addi r1, r1, 0x30
 /* 8032E5E4 002F7BA4  4E 80 00 20 */	blr 
+.endfn CalcTextureMtx__26_unnamed_lyt_material_cpp_FPQ36nw4hbm4math5MTX34RCQ36nw4hbm3lyt6TexSRT
 
 .balign 16, 0
 #SetIndTexMtx__26@unnamed@lyt_material_cpp@F14_GXIndTexMtxIDPA3_Cf
-.global SetIndTexMtx__26_unnamed_lyt_material_cpp_F14_GXIndTexMtxIDPA3_Cf
-SetIndTexMtx__26_unnamed_lyt_material_cpp_F14_GXIndTexMtxIDPA3_Cf:
+.fn SetIndTexMtx__26_unnamed_lyt_material_cpp_F14_GXIndTexMtxIDPA3_Cf, global
 /* 8032E5F0 002F7BB0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8032E5F4 002F7BB4  7C 08 02 A6 */	mflr r0
 /* 8032E5F8 002F7BB8  C0 44 00 00 */	lfs f2, 0(r4)
@@ -216,17 +215,17 @@ SetIndTexMtx__26_unnamed_lyt_material_cpp_F14_GXIndTexMtxIDPA3_Cf:
 /* 8032E7EC 002F7DAC  7C 08 03 A6 */	mtlr r0
 /* 8032E7F0 002F7DB0  38 21 00 20 */	addi r1, r1, 0x20
 /* 8032E7F4 002F7DB4  4E 80 00 20 */	blr 
+.endfn SetIndTexMtx__26_unnamed_lyt_material_cpp_F14_GXIndTexMtxIDPA3_Cf
 
 .balign 16, 0
-.global __ct__Q36nw4hbm2ut5ColorFv
-__ct__Q36nw4hbm2ut5ColorFv:
+.fn __ct__Q36nw4hbm2ut5ColorFv, global
 /* 8032E800 002F7DC0  38 00 FF FF */	li r0, -1
 /* 8032E804 002F7DC4  90 03 00 00 */	stw r0, 0(r3)
 /* 8032E808 002F7DC8  4E 80 00 20 */	blr 
+.endfn __ct__Q36nw4hbm2ut5ColorFv
 
 .balign 16, 0
-.global __ct__Q36nw4hbm3lyt8MaterialFPCQ46nw4hbm3lyt3res8MaterialRCQ36nw4hbm3lyt11ResBlockSet
-__ct__Q36nw4hbm3lyt8MaterialFPCQ46nw4hbm3lyt3res8MaterialRCQ36nw4hbm3lyt11ResBlockSet:
+.fn __ct__Q36nw4hbm3lyt8MaterialFPCQ46nw4hbm3lyt3res8MaterialRCQ36nw4hbm3lyt11ResBlockSet, global
 /* 8032E810 002F7DD0  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 8032E814 002F7DD4  7C 08 02 A6 */	mflr r0
 /* 8032E818 002F7DD8  90 01 00 84 */	stw r0, 0x84(r1)
@@ -1398,10 +1397,10 @@ __ct__Q36nw4hbm3lyt8MaterialFPCQ46nw4hbm3lyt3res8MaterialRCQ36nw4hbm3lyt11ResBlo
 /* 8032F988 002F8F48  7C 08 03 A6 */	mtlr r0
 /* 8032F98C 002F8F4C  38 21 00 80 */	addi r1, r1, 0x80
 /* 8032F990 002F8F50  4E 80 00 20 */	blr 
+.endfn __ct__Q36nw4hbm3lyt8MaterialFPCQ46nw4hbm3lyt3res8MaterialRCQ36nw4hbm3lyt11ResBlockSet
 
 .balign 16, 0
-.global __dt__Q36nw4hbm3lyt8MaterialFv
-__dt__Q36nw4hbm3lyt8MaterialFv:
+.fn __dt__Q36nw4hbm3lyt8MaterialFv, global
 /* 8032F9A0 002F8F60  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8032F9A4 002F8F64  7C 08 02 A6 */	mflr r0
 /* 8032F9A8 002F8F68  2C 03 00 00 */	cmpwi r3, 0
@@ -1449,10 +1448,10 @@ __dt__Q36nw4hbm3lyt8MaterialFv:
 /* 8032FA44 002F9004  7C 08 03 A6 */	mtlr r0
 /* 8032FA48 002F9008  38 21 00 10 */	addi r1, r1, 0x10
 /* 8032FA4C 002F900C  4E 80 00 20 */	blr 
+.endfn __dt__Q36nw4hbm3lyt8MaterialFv
 
 .balign 16, 0
-.global ReserveGXMem__Q36nw4hbm3lyt8MaterialFUcUcUcUcbUcUcbbbb
-ReserveGXMem__Q36nw4hbm3lyt8MaterialFUcUcUcUcbUcUcbbbb:
+.fn ReserveGXMem__Q36nw4hbm3lyt8MaterialFUcUcUcUcbUcUcbbbb, global
 /* 8032FA50 002F9010  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8032FA54 002F9014  7C 08 02 A6 */	mflr r0
 /* 8032FA58 002F9018  90 01 00 64 */	stw r0, 0x64(r1)
@@ -1890,21 +1889,21 @@ ReserveGXMem__Q36nw4hbm3lyt8MaterialFUcUcUcUcbUcUcbbbb:
 /* 803300DC 002F969C  7C 08 03 A6 */	mtlr r0
 /* 803300E0 002F96A0  38 21 00 60 */	addi r1, r1, 0x60
 /* 803300E4 002F96A4  4E 80 00 20 */	blr 
+.endfn ReserveGXMem__Q36nw4hbm3lyt8MaterialFUcUcUcUcbUcUcbbbb
 
 .balign 16, 0
 #GetTexSRTAry__Q36nw4hbm3lyt8MaterialFv or GetTexSRTAry__Q36nw4hbm3lyt8MaterialCFv
-.global func_803300F0
-func_803300F0:
+.fn func_803300F0, global
 /* 803300F0 002F96B0  80 03 00 4C */	lwz r0, 0x4c(r3)
 /* 803300F4 002F96B4  80 63 00 58 */	lwz r3, 0x58(r3)
 /* 803300F8 002F96B8  54 00 4D F4 */	rlwinm r0, r0, 9, 0x17, 0x1a
 /* 803300FC 002F96BC  7C 63 02 14 */	add r3, r3, r0
 /* 80330100 002F96C0  4E 80 00 20 */	blr 
+.endfn func_803300F0
 
 .balign 16, 0
 #GetTexCoordGenAry__Q36nw4hbm3lyt8MaterialCFv or GetTexCoordGenAry__Q36nw4hbm3lyt8MaterialFv
-.global func_80330110
-func_80330110:
+.fn func_80330110, global
 /* 80330110 002F96D0  80 83 00 4C */	lwz r4, 0x4c(r3)
 /* 80330114 002F96D4  80 A3 00 58 */	lwz r5, 0x58(r3)
 /* 80330118 002F96D8  54 80 47 3E */	rlwinm r0, r4, 8, 0x1c, 0x1f
@@ -1913,11 +1912,11 @@ func_80330110:
 /* 80330124 002F96E4  7C 05 02 14 */	add r0, r5, r0
 /* 80330128 002F96E8  7C 63 02 14 */	add r3, r3, r0
 /* 8033012C 002F96EC  4E 80 00 20 */	blr 
+.endfn func_80330110
 
 #GetIndTexSRTAry__Q36nw4hbm3lyt8MaterialCFv or GetIndTexSRTAry__Q36nw4hbm3lyt8MaterialFv
 .balign 16, 0
-.global func_80330130
-func_80330130:
+.fn func_80330130, global
 /* 80330130 002F96F0  81 23 00 4C */	lwz r9, 0x4c(r3)
 /* 80330134 002F96F4  81 63 00 58 */	lwz r11, 0x58(r3)
 /* 80330138 002F96F8  55 20 47 3E */	rlwinm r0, r9, 8, 0x1c, 0x1f
@@ -1940,10 +1939,10 @@ func_80330130:
 /* 8033017C 002F973C  7C 0B 02 14 */	add r0, r11, r0
 /* 80330180 002F9740  7C 63 02 14 */	add r3, r3, r0
 /* 80330184 002F9744  4E 80 00 20 */	blr 
+.endfn func_80330130
 
 .balign 16, 0
-.global SetTextureNum__Q36nw4hbm3lyt8MaterialFUc
-SetTextureNum__Q36nw4hbm3lyt8MaterialFUc:
+.fn SetTextureNum__Q36nw4hbm3lyt8MaterialFUc, global
 /* 80330190 002F9750  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80330194 002F9754  7C 08 02 A6 */	mflr r0
 /* 80330198 002F9758  2C 04 00 00 */	cmpwi r4, 0
@@ -1983,10 +1982,10 @@ SetTextureNum__Q36nw4hbm3lyt8MaterialFUc:
 /* 80330214 002F97D4  7C 08 03 A6 */	mtlr r0
 /* 80330218 002F97D8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8033021C 002F97DC  4E 80 00 20 */	blr 
+.endfn SetTextureNum__Q36nw4hbm3lyt8MaterialFUc
 
 .balign 16, 0
-.global SetTexCoordGenNum__Q36nw4hbm3lyt8MaterialFUc
-SetTexCoordGenNum__Q36nw4hbm3lyt8MaterialFUc:
+.fn SetTexCoordGenNum__Q36nw4hbm3lyt8MaterialFUc, global
 /* 80330220 002F97E0  2C 04 00 00 */	cmpwi r4, 0
 /* 80330224 002F97E4  4D 82 00 20 */	beqlr 
 /* 80330228 002F97E8  80 E3 00 4C */	lwz r7, 0x4c(r3)
@@ -2076,10 +2075,10 @@ SetTexCoordGenNum__Q36nw4hbm3lyt8MaterialFUc:
 /* 80330368 002F9928  50 80 A2 16 */	rlwimi r0, r4, 0x14, 8, 0xb
 /* 8033036C 002F992C  90 03 00 50 */	stw r0, 0x50(r3)
 /* 80330370 002F9930  4E 80 00 20 */	blr 
+.endfn SetTexCoordGenNum__Q36nw4hbm3lyt8MaterialFUc
 
 .balign 16, 0
-.global SetTextureNoWrap__Q36nw4hbm3lyt8MaterialFUcP10TPLPalette
-SetTextureNoWrap__Q36nw4hbm3lyt8MaterialFUcP10TPLPalette:
+.fn SetTextureNoWrap__Q36nw4hbm3lyt8MaterialFUcP10TPLPalette, global
 /* 80330380 002F9940  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80330384 002F9944  7C 08 02 A6 */	mflr r0
 /* 80330388 002F9948  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2113,10 +2112,10 @@ SetTextureNoWrap__Q36nw4hbm3lyt8MaterialFUcP10TPLPalette:
 /* 803303F8 002F99B8  7C 08 03 A6 */	mtlr r0
 /* 803303FC 002F99BC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80330400 002F99C0  4E 80 00 20 */	blr 
+.endfn SetTextureNoWrap__Q36nw4hbm3lyt8MaterialFUcP10TPLPalette
 
 .balign 16, 0
-.global SetTexture__Q36nw4hbm3lyt8MaterialFUcRC9_GXTexObj
-SetTexture__Q36nw4hbm3lyt8MaterialFUcRC9_GXTexObj:
+.fn SetTexture__Q36nw4hbm3lyt8MaterialFUcRC9_GXTexObj, global
 /* 80330410 002F99D0  80 63 00 58 */	lwz r3, 0x58(r3)
 /* 80330414 002F99D4  54 80 2C F4 */	rlwinm r0, r4, 5, 0x13, 0x1a
 /* 80330418 002F99D8  80 C5 00 00 */	lwz r6, 0(r5)
@@ -2138,10 +2137,10 @@ SetTexture__Q36nw4hbm3lyt8MaterialFUcRC9_GXTexObj:
 /* 80330458 002F9A18  90 C3 00 18 */	stw r6, 0x18(r3)
 /* 8033045C 002F9A1C  90 03 00 1C */	stw r0, 0x1c(r3)
 /* 80330460 002F9A20  4B FE C2 20 */	b GXInitTexObjUserData
+.endfn SetTexture__Q36nw4hbm3lyt8MaterialFUcRC9_GXTexObj
 
 .balign 16, 0
-.global SetColorElement__Q36nw4hbm3lyt8MaterialFUls
-SetColorElement__Q36nw4hbm3lyt8MaterialFUls:
+.fn SetColorElement__Q36nw4hbm3lyt8MaterialFUls, global
 /* 80330470 002F9A30  38 C4 FF F0 */	addi r6, r4, -16
 /* 80330474 002F9A34  28 06 00 0F */	cmplwi r6, 0xf
 /* 80330478 002F9A38  40 81 01 20 */	ble .L_80330598
@@ -2267,10 +2266,10 @@ SetColorElement__Q36nw4hbm3lyt8MaterialFUls:
 /* 80330618 002F9BD8  7C 63 02 14 */	add r3, r3, r0
 /* 8033061C 002F9BDC  98 83 00 3F */	stb r4, 0x3f(r3)
 /* 80330620 002F9BE0  4E 80 00 20 */	blr 
+.endfn SetColorElement__Q36nw4hbm3lyt8MaterialFUls
 
 .balign 16, 0
-.global SetupGX__Q36nw4hbm3lyt8MaterialFbUc
-SetupGX__Q36nw4hbm3lyt8MaterialFbUc:
+.fn SetupGX__Q36nw4hbm3lyt8MaterialFbUc, global
 /* 80330630 002F9BF0  94 21 FE E0 */	stwu r1, -0x120(r1)
 /* 80330634 002F9BF4  7C 08 02 A6 */	mflr r0
 /* 80330638 002F9BF8  90 01 01 24 */	stw r0, 0x124(r1)
@@ -3229,10 +3228,10 @@ SetupGX__Q36nw4hbm3lyt8MaterialFbUc:
 /* 80331440 002FAA00  7C 08 03 A6 */	mtlr r0
 /* 80331444 002FAA04  38 21 01 20 */	addi r1, r1, 0x120
 /* 80331448 002FAA08  4E 80 00 20 */	blr 
+.endfn SetupGX__Q36nw4hbm3lyt8MaterialFbUc
 
 .balign 16, 0
-.global BindAnimation__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransform
-BindAnimation__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransform:
+.fn BindAnimation__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransform, global
 /* 80331450 002FAA10  81 84 00 00 */	lwz r12, 0(r4)
 /* 80331454 002FAA14  7C 60 1B 78 */	mr r0, r3
 /* 80331458 002FAA18  7C 83 23 78 */	mr r3, r4
@@ -3240,10 +3239,10 @@ BindAnimation__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransform:
 /* 80331460 002FAA20  7C 04 03 78 */	mr r4, r0
 /* 80331464 002FAA24  7D 89 03 A6 */	mtctr r12
 /* 80331468 002FAA28  4E 80 04 20 */	bctr 
+.endfn BindAnimation__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransform
 
 .balign 16, 0
-.global UnbindAnimation__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransform
-UnbindAnimation__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransform:
+.fn UnbindAnimation__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransform, global
 /* 80331470 002FAA30  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80331474 002FAA34  7C 08 02 A6 */	mflr r0
 /* 80331478 002FAA38  90 01 00 34 */	stw r0, 0x34(r1)
@@ -3279,19 +3278,19 @@ UnbindAnimation__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransform:
 /* 803314E4 002FAAA4  7C 08 03 A6 */	mtlr r0
 /* 803314E8 002FAAA8  38 21 00 30 */	addi r1, r1, 0x30
 /* 803314EC 002FAAAC  4E 80 00 20 */	blr 
+.endfn UnbindAnimation__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransform
 
 .balign 16, 0
-.global UnbindAllAnimation__Q36nw4hbm3lyt8MaterialFv
-UnbindAllAnimation__Q36nw4hbm3lyt8MaterialFv:
+.fn UnbindAllAnimation__Q36nw4hbm3lyt8MaterialFv, global
 /* 803314F0 002FAAB0  81 83 00 00 */	lwz r12, 0(r3)
 /* 803314F4 002FAAB4  38 80 00 00 */	li r4, 0
 /* 803314F8 002FAAB8  81 8C 00 14 */	lwz r12, 0x14(r12)
 /* 803314FC 002FAABC  7D 89 03 A6 */	mtctr r12
 /* 80331500 002FAAC0  4E 80 04 20 */	bctr 
+.endfn UnbindAllAnimation__Q36nw4hbm3lyt8MaterialFv
 
 .balign 16, 0
-.global Animate__Q36nw4hbm3lyt8MaterialFv
-Animate__Q36nw4hbm3lyt8MaterialFv:
+.fn Animate__Q36nw4hbm3lyt8MaterialFv, global
 /* 80331510 002FAAD0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80331514 002FAAD4  7C 08 02 A6 */	mflr r0
 /* 80331518 002FAAD8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -3325,10 +3324,10 @@ Animate__Q36nw4hbm3lyt8MaterialFv:
 /* 8033157C 002FAB3C  7C 08 03 A6 */	mtlr r0
 /* 80331580 002FAB40  38 21 00 20 */	addi r1, r1, 0x20
 /* 80331584 002FAB44  4E 80 00 20 */	blr 
+.endfn Animate__Q36nw4hbm3lyt8MaterialFv
 
 .balign 16, 0
-.global AddAnimationLink__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimationLink
-AddAnimationLink__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimationLink:
+.fn AddAnimationLink__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimationLink, global
 /* 80331590 002FAB50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80331594 002FAB54  7C 08 02 A6 */	mflr r0
 /* 80331598 002FAB58  7C 85 23 78 */	mr r5, r4
@@ -3342,16 +3341,16 @@ AddAnimationLink__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimationLink:
 /* 803315B8 002FAB78  7C 08 03 A6 */	mtlr r0
 /* 803315BC 002FAB7C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803315C0 002FAB80  4E 80 00 20 */	blr 
+.endfn AddAnimationLink__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimationLink
 
 .balign 16, 0
-.global FindAnimationLink__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransform
-FindAnimationLink__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransform:
+.fn FindAnimationLink__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransform, global
 /* 803315D0 002FAB90  38 63 00 18 */	addi r3, r3, 0x18
 /* 803315D4 002FAB94  4B FF AA 5C */	b FindAnimationLink__Q36nw4hbm3lyt6detailFPQ36nw4hbm2ut40LinkList_Q36nw4hbm3lyt13AnimationLink_0_PQ36nw4hbm3lyt13AnimTransform
+.endfn FindAnimationLink__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransform
 
 .balign 16, 0
-.global SetAnimationEnable__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransformb
-SetAnimationEnable__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransformb:
+.fn SetAnimationEnable__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransformb, global
 /* 803315E0 002FABA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803315E4 002FABA4  7C 08 02 A6 */	mflr r0
 /* 803315E8 002FABA8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3372,10 +3371,10 @@ SetAnimationEnable__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransformb:
 /* 80331620 002FABE0  7C 08 03 A6 */	mtlr r0
 /* 80331624 002FABE4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80331628 002FABE8  4E 80 00 20 */	blr 
+.endfn SetAnimationEnable__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransformb
 
 .balign 16, 0
-.global GetTextureSize__Q36nw4hbm3lyt6detailFPQ36nw4hbm3lyt8MaterialUc
-GetTextureSize__Q36nw4hbm3lyt6detailFPQ36nw4hbm3lyt8MaterialUc:
+.fn GetTextureSize__Q36nw4hbm3lyt6detailFPQ36nw4hbm3lyt8MaterialUc, global
 /* 80331630 002FABF0  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80331634 002FABF4  7C 08 02 A6 */	mflr r0
 /* 80331638 002FABF8  90 01 00 64 */	stw r0, 0x64(r1)
@@ -3446,6 +3445,7 @@ GetTextureSize__Q36nw4hbm3lyt6detailFPQ36nw4hbm3lyt8MaterialUc:
 /* 80331734 002FACF4  7C 08 03 A6 */	mtlr r0
 /* 80331738 002FACF8  38 21 00 60 */	addi r1, r1, 0x60
 /* 8033173C 002FACFC  4E 80 00 20 */	blr 
+.endfn GetTextureSize__Q36nw4hbm3lyt6detailFPQ36nw4hbm3lyt8MaterialUc
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

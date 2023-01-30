@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global SetExiInterruptMask
-SetExiInterruptMask:
+.fn SetExiInterruptMask, global
 /* 803140F0 002DD6B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803140F4 002DD6B4  7C 08 02 A6 */	mflr r0
 /* 803140F8 002DD6B8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -74,10 +73,10 @@ SetExiInterruptMask:
 /* 803141CC 002DD78C  7C 08 03 A6 */	mtlr r0
 /* 803141D0 002DD790  38 21 00 10 */	addi r1, r1, 0x10
 /* 803141D4 002DD794  4E 80 00 20 */	blr 
+.endfn SetExiInterruptMask
 
 .balign 16, 0
-.global EXIImm
-EXIImm:
+.fn EXIImm, global
 /* 803141E0 002DD7A0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803141E4 002DD7A4  7C 08 02 A6 */	mflr r0
 /* 803141E8 002DD7A8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -247,10 +246,10 @@ EXIImm:
 /* 80314450 002DDA10  7C 08 03 A6 */	mtlr r0
 /* 80314454 002DDA14  38 21 00 30 */	addi r1, r1, 0x30
 /* 80314458 002DDA18  4E 80 00 20 */	blr 
+.endfn EXIImm
 
 .balign 16, 0
-.global EXIImmEx
-EXIImmEx:
+.fn EXIImmEx, global
 /* 80314460 002DDA20  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80314464 002DDA24  7C 08 02 A6 */	mflr r0
 /* 80314468 002DDA28  90 01 00 24 */	stw r0, 0x24(r1)
@@ -298,10 +297,10 @@ EXIImmEx:
 /* 803144F8 002DDAB8  7C 08 03 A6 */	mtlr r0
 /* 803144FC 002DDABC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80314500 002DDAC0  4E 80 00 20 */	blr 
+.endfn EXIImmEx
 
 .balign 16, 0
-.global EXIDma
-EXIDma:
+.fn EXIDma, global
 /* 80314510 002DDAD0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80314514 002DDAD4  7C 08 02 A6 */	mflr r0
 /* 80314518 002DDAD8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -368,10 +367,10 @@ EXIDma:
 /* 803145FC 002DDBBC  7C 08 03 A6 */	mtlr r0
 /* 80314600 002DDBC0  38 21 00 30 */	addi r1, r1, 0x30
 /* 80314604 002DDBC4  4E 80 00 20 */	blr 
+.endfn EXIDma
 
 .balign 16, 0
-.global EXISync
-EXISync:
+.fn EXISync, global
 /* 80314610 002DDBD0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80314614 002DDBD4  7C 08 02 A6 */	mflr r0
 /* 80314618 002DDBD8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -543,10 +542,10 @@ EXISync:
 /* 80314880 002DDE40  7C 08 03 A6 */	mtlr r0
 /* 80314884 002DDE44  38 21 00 20 */	addi r1, r1, 0x20
 /* 80314888 002DDE48  4E 80 00 20 */	blr 
+.endfn EXISync
 
 .balign 16, 0
-.global EXISetExiCallback
-EXISetExiCallback:
+.fn EXISetExiCallback, global
 /* 80314890 002DDE50  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80314894 002DDE54  7C 08 02 A6 */	mflr r0
 /* 80314898 002DDE58  90 01 00 24 */	stw r0, 0x24(r1)
@@ -582,10 +581,10 @@ EXISetExiCallback:
 /* 80314908 002DDEC8  7C 08 03 A6 */	mtlr r0
 /* 8031490C 002DDECC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80314910 002DDED0  4E 80 00 20 */	blr 
+.endfn EXISetExiCallback
 
 .balign 16, 0
-.global __EXIProbe
-__EXIProbe:
+.fn __EXIProbe, global
 /* 80314920 002DDEE0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80314924 002DDEE4  7C 08 02 A6 */	mflr r0
 /* 80314928 002DDEE8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -690,10 +689,10 @@ __EXIProbe:
 /* 80314A94 002DE054  7C 08 03 A6 */	mtlr r0
 /* 80314A98 002DE058  38 21 00 20 */	addi r1, r1, 0x20
 /* 80314A9C 002DE05C  4E 80 00 20 */	blr 
+.endfn __EXIProbe
 
 .balign 16, 0
-.global EXIAttach
-EXIAttach:
+.fn EXIAttach, global
 /* 80314AA0 002DE060  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80314AA4 002DE064  7C 08 02 A6 */	mflr r0
 /* 80314AA8 002DE068  90 01 00 34 */	stw r0, 0x34(r1)
@@ -770,10 +769,10 @@ EXIAttach:
 /* 80314BAC 002DE16C  7C 08 03 A6 */	mtlr r0
 /* 80314BB0 002DE170  38 21 00 30 */	addi r1, r1, 0x30
 /* 80314BB4 002DE174  4E 80 00 20 */	blr 
+.endfn EXIAttach
 
 .balign 16, 0
-.global EXIDetach
-EXIDetach:
+.fn EXIDetach, global
 /* 80314BC0 002DE180  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80314BC4 002DE184  7C 08 02 A6 */	mflr r0
 /* 80314BC8 002DE188  90 01 00 24 */	stw r0, 0x24(r1)
@@ -823,10 +822,10 @@ EXIDetach:
 /* 80314C6C 002DE22C  7C 08 03 A6 */	mtlr r0
 /* 80314C70 002DE230  38 21 00 20 */	addi r1, r1, 0x20
 /* 80314C74 002DE234  4E 80 00 20 */	blr 
+.endfn EXIDetach
 
 .balign 16, 0
-.global EXISelect
-EXISelect:
+.fn EXISelect, global
 /* 80314C80 002DE240  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80314C84 002DE244  7C 08 02 A6 */	mflr r0
 /* 80314C88 002DE248  90 01 00 24 */	stw r0, 0x24(r1)
@@ -909,10 +908,10 @@ EXISelect:
 /* 80314DA0 002DE360  7C 08 03 A6 */	mtlr r0
 /* 80314DA4 002DE364  38 21 00 20 */	addi r1, r1, 0x20
 /* 80314DA8 002DE368  4E 80 00 20 */	blr 
+.endfn EXISelect
 
 .balign 16, 0
-.global EXIDeselect
-EXIDeselect:
+.fn EXIDeselect, global
 /* 80314DB0 002DE370  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80314DB4 002DE374  7C 08 02 A6 */	mflr r0
 /* 80314DB8 002DE378  90 01 00 24 */	stw r0, 0x24(r1)
@@ -982,9 +981,10 @@ EXIDeselect:
 /* 80314EA0 002DE460  7C 08 03 A6 */	mtlr r0
 /* 80314EA4 002DE464  38 21 00 20 */	addi r1, r1, 0x20
 /* 80314EA8 002DE468  4E 80 00 20 */	blr
+.endfn EXIDeselect
 
 .balign 16, 0
-EXIIntrruptHandler:
+.fn EXIIntrruptHandler, local
 /* 80314EB0 002DE470  94 21 FD 20 */	stwu r1, -0x2e0(r1)
 /* 80314EB4 002DE474  7C 08 02 A6 */	mflr r0
 /* 80314EB8 002DE478  90 01 02 E4 */	stw r0, 0x2e4(r1)
@@ -1032,9 +1032,10 @@ EXIIntrruptHandler:
 /* 80314F5C 002DE51C  7C 08 03 A6 */	mtlr r0
 /* 80314F60 002DE520  38 21 02 E0 */	addi r1, r1, 0x2e0
 /* 80314F64 002DE524  4E 80 00 20 */	blr
+.endfn EXIIntrruptHandler
 
 .balign 16, 0
-TCIntrruptHandler:
+.fn TCIntrruptHandler, local
 /* 80314F70 002DE530  94 21 FD 10 */	stwu r1, -0x2f0(r1)
 /* 80314F74 002DE534  7C 08 02 A6 */	mflr r0
 /* 80314F78 002DE538  90 01 02 F4 */	stw r0, 0x2f4(r1)
@@ -1176,9 +1177,10 @@ TCIntrruptHandler:
 /* 8031517C 002DE73C  7C 08 03 A6 */	mtlr r0
 /* 80315180 002DE740  38 21 02 F0 */	addi r1, r1, 0x2f0
 /* 80315184 002DE744  4E 80 00 20 */	blr
+.endfn TCIntrruptHandler
 
 .balign 16, 0
-EXTIntrruptHandler:
+.fn EXTIntrruptHandler, local
 /* 80315190 002DE750  94 21 FD 20 */	stwu r1, -0x2e0(r1)
 /* 80315194 002DE754  7C 08 02 A6 */	mflr r0
 /* 80315198 002DE758  90 01 02 E4 */	stw r0, 0x2e4(r1)
@@ -1232,10 +1234,10 @@ EXTIntrruptHandler:
 /* 80315254 002DE814  7C 08 03 A6 */	mtlr r0
 /* 80315258 002DE818  38 21 02 E0 */	addi r1, r1, 0x2e0
 /* 8031525C 002DE81C  4E 80 00 20 */	blr 
+.endfn EXTIntrruptHandler
 
 .balign 16, 0
-.global EXIInit
-EXIInit:
+.fn EXIInit, global
 /* 80315260 002DE820  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80315264 002DE824  7C 08 02 A6 */	mflr r0
 /* 80315268 002DE828  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1353,10 +1355,10 @@ EXIInit:
 /* 80315418 002DE9D8  7C 08 03 A6 */	mtlr r0
 /* 8031541C 002DE9DC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80315420 002DE9E0  4E 80 00 20 */	blr 
+.endfn EXIInit
 
 .balign 16, 0
-.global EXILock
-EXILock:
+.fn EXILock, global
 /* 80315430 002DE9F0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80315434 002DE9F4  7C 08 02 A6 */	mflr r0
 /* 80315438 002DE9F8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1426,10 +1428,10 @@ EXILock:
 /* 80315520 002DEAE0  7C 08 03 A6 */	mtlr r0
 /* 80315524 002DEAE4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80315528 002DEAE8  4E 80 00 20 */	blr 
+.endfn EXILock
 
 .balign 16, 0
-.global EXIUnlock
-EXIUnlock:
+.fn EXIUnlock, global
 /* 80315530 002DEAF0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80315534 002DEAF4  7C 08 02 A6 */	mflr r0
 /* 80315538 002DEAF8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1488,9 +1490,10 @@ EXIUnlock:
 /* 803155FC 002DEBBC  7C 08 03 A6 */	mtlr r0
 /* 80315600 002DEBC0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80315604 002DEBC4  4E 80 00 20 */	blr
+.endfn EXIUnlock
 
 .balign 16, 0
-UnlockedHandler:
+.fn UnlockedHandler, local
 /* 80315610 002DEBD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80315614 002DEBD4  7C 08 02 A6 */	mflr r0
 /* 80315618 002DEBD8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1501,10 +1504,10 @@ UnlockedHandler:
 /* 8031562C 002DEBEC  7C 08 03 A6 */	mtlr r0
 /* 80315630 002DEBF0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80315634 002DEBF4  4E 80 00 20 */	blr 
+.endfn UnlockedHandler
 
 .balign 16, 0
-.global EXIGetID
-EXIGetID:
+.fn EXIGetID, global
 /* 80315640 002DEC00  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80315644 002DEC04  7C 08 02 A6 */	mflr r0
 /* 80315648 002DEC08  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1761,6 +1764,7 @@ EXIGetID:
 /* 803159DC 002DEF9C  7C 08 03 A6 */	mtlr r0
 /* 803159E0 002DEFA0  38 21 00 40 */	addi r1, r1, 0x40
 /* 803159E4 002DEFA4  4E 80 00 20 */	blr 
+.endfn EXIGetID
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

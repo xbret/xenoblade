@@ -3,30 +3,29 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global OSGetPhysicalMem2Size
-OSGetPhysicalMem2Size:
+.fn OSGetPhysicalMem2Size, global
 /* 80359480 00322A40  3C 60 80 00 */	lis r3, 0x80003118@ha
 /* 80359484 00322A44  80 63 31 18 */	lwz r3, 0x80003118@l(r3)
 /* 80359488 00322A48  4E 80 00 20 */	blr 
+.endfn OSGetPhysicalMem2Size
 
 .balign 16, 0
-.global OSGetConsoleSimulatedMem1Size
-OSGetConsoleSimulatedMem1Size:
+.fn OSGetConsoleSimulatedMem1Size, global
 /* 80359490 00322A50  3C 60 80 00 */	lis r3, 0x80003104@ha
 /* 80359494 00322A54  80 63 31 04 */	lwz r3, 0x80003104@l(r3)
 /* 80359498 00322A58  4E 80 00 20 */	blr 
+.endfn OSGetConsoleSimulatedMem1Size
 
 .balign 16, 0
-.global OSGetConsoleSimulatedMem2Size
-OSGetConsoleSimulatedMem2Size:
+.fn OSGetConsoleSimulatedMem2Size, global
 /* 803594A0 00322A60  3C 60 80 00 */	lis r3, 0x8000311C@ha
 /* 803594A4 00322A64  80 63 31 1C */	lwz r3, 0x8000311C@l(r3)
 /* 803594A8 00322A68  4E 80 00 20 */	blr 
+.endfn OSGetConsoleSimulatedMem2Size
 
 #unreferenced?
 .balign 16, 0
-.global OnShutdown
-OnShutdown:
+.fn OnShutdown, global
 /* 803594B0 00322A70  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803594B4 00322A74  7C 08 02 A6 */	mflr r0
 /* 803594B8 00322A78  2C 03 00 00 */	cmpwi r3, 0
@@ -43,10 +42,10 @@ OnShutdown:
 /* 803594E0 00322AA0  7C 08 03 A6 */	mtlr r0
 /* 803594E4 00322AA4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803594E8 00322AA8  4E 80 00 20 */	blr 
+.endfn OnShutdown
 
 .balign 16, 0
-.global MEMIntrruptHandler
-MEMIntrruptHandler:
+.fn MEMIntrruptHandler, global
 /* 803594F0 00322AB0  3D 00 CC 00 */	lis r8, 0xCC00
 /* 803594F4 00322AB4  3C 60 80 5D */	lis r3, lbl_805D43B0@ha
 /* 803594F8 00322AB8  A0 A8 40 1E */	lhz r5, 0x401E(r8)
@@ -66,10 +65,10 @@ MEMIntrruptHandler:
 .L_80359530:
 /* 80359530 00322AF0  38 60 00 0F */	li r3, 0xf
 /* 80359534 00322AF4  4B FF BC DC */	b __OSUnhandledException
+.endfn MEMIntrruptHandler
 
 .balign 16, 0
-.global ConfigMEM1_24MB
-ConfigMEM1_24MB:
+.fn ConfigMEM1_24MB, global
 /* 80359540 00322B00  38 E0 00 00 */	li r7, 0
 /* 80359544 00322B04  3C 80 00 00 */	lis r4, 0x00000002@ha
 /* 80359548 00322B08  38 84 00 02 */	addi r4, r4, 0x00000002@l
@@ -102,10 +101,10 @@ ConfigMEM1_24MB:
 /* 803595B4 00322B74  7C 68 02 A6 */	mflr r3
 /* 803595B8 00322B78  7C 7A 03 A6 */	mtspr 0x1a, r3
 /* 803595BC 00322B7C  4C 00 00 64 */	rfi
+.endfn ConfigMEM1_24MB
 
 .balign 16, 0
-.global ConfigMEM2_52MB
-ConfigMEM2_52MB:
+.fn ConfigMEM2_52MB, global
 /* 803595C0 00322B80  38 E0 00 00 */	li r7, 0
 /* 803595C4 00322B84  3C 80 10 00 */	lis r4, 0x10000002@ha
 /* 803595C8 00322B88  38 84 00 02 */	addi r4, r4, 0x10000002@l
@@ -159,10 +158,10 @@ ConfigMEM2_52MB:
 /* 80359688 00322C48  7C 68 02 A6 */	mflr r3
 /* 8035968C 00322C4C  7C 7A 03 A6 */	mtspr 0x1a, r3
 /* 80359690 00322C50  4C 00 00 64 */	rfi 
+.endfn ConfigMEM2_52MB
 
 .balign 16, 0
-.global ConfigMEM2_56MB
-ConfigMEM2_56MB:
+.fn ConfigMEM2_56MB, global
 /* 803596A0 00322C60  38 E0 00 00 */	li r7, 0
 /* 803596A4 00322C64  3C 80 10 00 */	lis r4, 0x10000002@ha
 /* 803596A8 00322C68  38 84 00 02 */	addi r4, r4, 0x10000002@l
@@ -216,10 +215,10 @@ ConfigMEM2_56MB:
 /* 80359768 00322D28  7C 68 02 A6 */	mflr r3
 /* 8035976C 00322D2C  7C 7A 03 A6 */	mtspr 0x1a, r3
 /* 80359770 00322D30  4C 00 00 64 */	rfi 
+.endfn ConfigMEM2_56MB
 
 .balign 16, 0
-.global ConfigMEM2_64MB
-ConfigMEM2_64MB:
+.fn ConfigMEM2_64MB, global
 /* 80359780 00322D40  38 E0 00 00 */	li r7, 0
 /* 80359784 00322D44  3C 80 10 00 */	lis r4, 0x10000002@ha
 /* 80359788 00322D48  38 84 00 02 */	addi r4, r4, 0x10000002@l
@@ -262,10 +261,10 @@ ConfigMEM2_64MB:
 /* 8035981C 00322DDC  7C 68 02 A6 */	mflr r3
 /* 80359820 00322DE0  7C 7A 03 A6 */	mtspr 0x1a, r3
 /* 80359824 00322DE4  4C 00 00 64 */	rfi 
+.endfn ConfigMEM2_64MB
 
 .balign 16, 0
-.global ConfigMEM2_112MB
-ConfigMEM2_112MB:
+.fn ConfigMEM2_112MB, global
 /* 80359830 00322DF0  38 E0 00 00 */	li r7, 0
 /* 80359834 00322DF4  3C 80 10 00 */	lis r4, 0x10000002@ha
 /* 80359838 00322DF8  38 84 00 02 */	addi r4, r4, 0x10000002@l
@@ -319,10 +318,10 @@ ConfigMEM2_112MB:
 /* 803598F8 00322EB8  7C 68 02 A6 */	mflr r3
 /* 803598FC 00322EBC  7C 7A 03 A6 */	mtspr 0x1a, r3
 /* 80359900 00322EC0  4C 00 00 64 */	rfi 
+.endfn ConfigMEM2_112MB
 
 .balign 16, 0
-.global ConfigMEM2_128MB
-ConfigMEM2_128MB:
+.fn ConfigMEM2_128MB, global
 /* 80359910 00322ED0  38 E0 00 00 */	li r7, 0
 /* 80359914 00322ED4  3C 80 10 00 */	lis r4, 0x10000002@ha
 /* 80359918 00322ED8  38 84 00 02 */	addi r4, r4, 0x10000002@l
@@ -365,20 +364,20 @@ ConfigMEM2_128MB:
 /* 803599AC 00322F6C  7C 68 02 A6 */	mflr r3
 /* 803599B0 00322F70  7C 7A 03 A6 */	mtspr 0x1a, r3
 /* 803599B4 00322F74  4C 00 00 64 */	rfi 
+.endfn ConfigMEM2_128MB
 
 .balign 16, 0
-.global RealMode
-RealMode:
+.fn RealMode, global
 /* 803599C0 00322F80  54 63 00 BE */	clrlwi r3, r3, 2
 /* 803599C4 00322F84  7C 7A 03 A6 */	mtspr 0x1a, r3
 /* 803599C8 00322F88  7C 60 00 A6 */	mfmsr r3
 /* 803599CC 00322F8C  54 63 07 32 */	rlwinm r3, r3, 0, 0x1c, 0x19
 /* 803599D0 00322F90  7C 7B 03 A6 */	mtspr 0x1b, r3
 /* 803599D4 00322F94  4C 00 00 64 */	rfi 
+.endfn RealMode
 
 .balign 16, 0
-.global BATConfig
-BATConfig:
+.fn BATConfig, global
 /* 803599E0 00322FA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803599E4 00322FA4  7C 08 02 A6 */	mflr r0
 /* 803599E8 00322FA8  3C 80 80 00 */	lis r4, 0x80003104@ha
@@ -459,10 +458,10 @@ BATConfig:
 /* 80359AF4 003230B4  7C 08 03 A6 */	mtlr r0
 /* 80359AF8 003230B8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80359AFC 003230BC  4E 80 00 20 */	blr 
+.endfn BATConfig
 
 .balign 16, 0
-.global __OSRestoreCodeExecOnMEM1
-__OSRestoreCodeExecOnMEM1:
+.fn __OSRestoreCodeExecOnMEM1, global
 /* 80359B00 003230C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80359B04 003230C4  7C 08 02 A6 */	mflr r0
 /* 80359B08 003230C8  3C 80 80 36 */	lis r4, ConfigMEM1_24MB@ha
@@ -481,10 +480,10 @@ __OSRestoreCodeExecOnMEM1:
 /* 80359B38 003230F8  7C 08 03 A6 */	mtlr r0
 /* 80359B3C 003230FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80359B40 00323100  4E 80 00 20 */	blr 
+.endfn __OSRestoreCodeExecOnMEM1
 
 .balign 16, 0
-.global __OSInitMemoryProtection
-__OSInitMemoryProtection:
+.fn __OSInitMemoryProtection, global
 /* 80359B50 00323110  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80359B54 00323114  7C 08 02 A6 */	mflr r0
 /* 80359B58 00323118  90 01 00 14 */	stw r0, 0x14(r1)
@@ -537,6 +536,7 @@ __OSInitMemoryProtection:
 /* 80359C10 003231D0  7C 08 03 A6 */	mtlr r0
 /* 80359C14 003231D4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80359C18 003231D8  4E 80 00 20 */	blr 
+.endfn __OSInitMemoryProtection
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

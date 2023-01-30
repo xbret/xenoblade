@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global ApplyVisAnmResult__Q24nw4r3g3dFQ34nw4r3g3d6ResMdlPQ34nw4r3g3d9AnmObjVis
-ApplyVisAnmResult__Q24nw4r3g3dFQ34nw4r3g3d6ResMdlPQ34nw4r3g3d9AnmObjVis:
+.fn ApplyVisAnmResult__Q24nw4r3g3dFQ34nw4r3g3d6ResMdlPQ34nw4r3g3d9AnmObjVis, global
 /* 803E1AA0 003AB060  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803E1AA4 003AB064  7C 08 02 A6 */	mflr r0
 /* 803E1AA8 003AB068  90 01 00 24 */	stw r0, 0x24(r1)
@@ -55,9 +54,9 @@ ApplyVisAnmResult__Q24nw4r3g3dFQ34nw4r3g3d6ResMdlPQ34nw4r3g3d9AnmObjVis:
 /* 803E1B50 003AB110  7C 08 03 A6 */	mtlr r0
 /* 803E1B54 003AB114  38 21 00 20 */	addi r1, r1, 0x20
 /* 803E1B58 003AB118  4E 80 00 20 */	blr 
+.endfn ApplyVisAnmResult__Q24nw4r3g3dFQ34nw4r3g3d6ResMdlPQ34nw4r3g3d9AnmObjVis
 
-.global ApplyVisAnmResult__Q24nw4r3g3dFPUcQ34nw4r3g3d6ResMdlPQ34nw4r3g3d9AnmObjVis
-ApplyVisAnmResult__Q24nw4r3g3dFPUcQ34nw4r3g3d6ResMdlPQ34nw4r3g3d9AnmObjVis:
+.fn ApplyVisAnmResult__Q24nw4r3g3dFPUcQ34nw4r3g3d6ResMdlPQ34nw4r3g3d9AnmObjVis, global
 /* 803E1B5C 003AB11C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803E1B60 003AB120  7C 08 02 A6 */	mflr r0
 /* 803E1B64 003AB124  90 01 00 24 */	stw r0, 0x24(r1)
@@ -96,6 +95,7 @@ ApplyVisAnmResult__Q24nw4r3g3dFPUcQ34nw4r3g3d6ResMdlPQ34nw4r3g3d9AnmObjVis:
 /* 803E1BDC 003AB19C  7C 08 03 A6 */	mtlr r0
 /* 803E1BE0 003AB1A0  38 21 00 20 */	addi r1, r1, 0x20
 /* 803E1BE4 003AB1A4  4E 80 00 20 */	blr 
+.endfn ApplyVisAnmResult__Q24nw4r3g3dFPUcQ34nw4r3g3d6ResMdlPQ34nw4r3g3d9AnmObjVis
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global GetInstance__Q44nw4r3snd6detail14ChannelManagerFv
-GetInstance__Q44nw4r3snd6detail14ChannelManagerFv:
+.fn GetInstance__Q44nw4r3snd6detail14ChannelManagerFv, global
 /* 80413DE0 003DD3A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80413DE4 003DD3A4  7C 08 02 A6 */	mflr r0
 /* 80413DE8 003DD3A8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -36,9 +35,9 @@ GetInstance__Q44nw4r3snd6detail14ChannelManagerFv:
 /* 80413E50 003DD410  7C 08 03 A6 */	mtlr r0
 /* 80413E54 003DD414  38 21 00 10 */	addi r1, r1, 0x10
 /* 80413E58 003DD418  4E 80 00 20 */	blr
+.endfn GetInstance__Q44nw4r3snd6detail14ChannelManagerFv
 
-.global __dt__Q44nw4r3snd6detail14ChannelManagerFv
-__dt__Q44nw4r3snd6detail14ChannelManagerFv:
+.fn __dt__Q44nw4r3snd6detail14ChannelManagerFv, global
 /* 80413E5C 003DD41C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80413E60 003DD420  7C 08 02 A6 */	mflr r0
 /* 80413E64 003DD424  2C 03 00 00 */	cmpwi r3, 0
@@ -65,15 +64,15 @@ __dt__Q44nw4r3snd6detail14ChannelManagerFv:
 /* 80413EB0 003DD470  7C 08 03 A6 */	mtlr r0
 /* 80413EB4 003DD474  38 21 00 10 */	addi r1, r1, 0x10
 /* 80413EB8 003DD478  4E 80 00 20 */	blr 
+.endfn __dt__Q44nw4r3snd6detail14ChannelManagerFv
 
-.global GetRequiredMemSize__Q44nw4r3snd6detail14ChannelManagerFi
-GetRequiredMemSize__Q44nw4r3snd6detail14ChannelManagerFi:
+.fn GetRequiredMemSize__Q44nw4r3snd6detail14ChannelManagerFi, global
 /* 80413EBC 003DD47C  38 04 00 01 */	addi r0, r4, 1
 /* 80413EC0 003DD480  54 03 40 2E */	slwi r3, r0, 8
 /* 80413EC4 003DD484  4E 80 00 20 */	blr 
+.endfn GetRequiredMemSize__Q44nw4r3snd6detail14ChannelManagerFi
 
-.global Setup__Q44nw4r3snd6detail14ChannelManagerFPvUl
-Setup__Q44nw4r3snd6detail14ChannelManagerFPvUl:
+.fn Setup__Q44nw4r3snd6detail14ChannelManagerFPvUl, global
 /* 80413EC8 003DD488  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80413ECC 003DD48C  7C 08 02 A6 */	mflr r0
 /* 80413ED0 003DD490  90 01 00 24 */	stw r0, 0x24(r1)
@@ -113,9 +112,9 @@ Setup__Q44nw4r3snd6detail14ChannelManagerFPvUl:
 /* 80413F50 003DD510  7C 08 03 A6 */	mtlr r0
 /* 80413F54 003DD514  38 21 00 20 */	addi r1, r1, 0x20
 /* 80413F58 003DD518  4E 80 00 20 */	blr 
+.endfn Setup__Q44nw4r3snd6detail14ChannelManagerFPvUl
 
-.global Shutdown__Q44nw4r3snd6detail14ChannelManagerFv
-Shutdown__Q44nw4r3snd6detail14ChannelManagerFv:
+.fn Shutdown__Q44nw4r3snd6detail14ChannelManagerFv, global
 /* 80413F5C 003DD51C  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80413F60 003DD520  7C 08 02 A6 */	mflr r0
 /* 80413F64 003DD524  90 01 00 44 */	stw r0, 0x44(r1)
@@ -218,9 +217,9 @@ Shutdown__Q44nw4r3snd6detail14ChannelManagerFv:
 /* 804140CC 003DD68C  7C 08 03 A6 */	mtlr r0
 /* 804140D0 003DD690  38 21 00 40 */	addi r1, r1, 0x40
 /* 804140D4 003DD694  4E 80 00 20 */	blr 
+.endfn Shutdown__Q44nw4r3snd6detail14ChannelManagerFv
 
-.global UpdateAllChannel__Q44nw4r3snd6detail14ChannelManagerFv
-UpdateAllChannel__Q44nw4r3snd6detail14ChannelManagerFv:
+.fn UpdateAllChannel__Q44nw4r3snd6detail14ChannelManagerFv, global
 /* 804140D8 003DD698  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804140DC 003DD69C  7C 08 02 A6 */	mflr r0
 /* 804140E0 003DD6A0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -244,9 +243,9 @@ UpdateAllChannel__Q44nw4r3snd6detail14ChannelManagerFv:
 /* 80414120 003DD6E0  7C 08 03 A6 */	mtlr r0
 /* 80414124 003DD6E4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80414128 003DD6E8  4E 80 00 20 */	blr 
+.endfn UpdateAllChannel__Q44nw4r3snd6detail14ChannelManagerFv
 
-.global InitParam__Q44nw4r3snd6detail7ChannelFPFPQ44nw4r3snd6detail7ChannelQ54nw4r3snd6detail7Channel21ChannelCallbackStatusUl_vUl
-InitParam__Q44nw4r3snd6detail7ChannelFPFPQ44nw4r3snd6detail7ChannelQ54nw4r3snd6detail7Channel21ChannelCallbackStatusUl_vUl:
+.fn InitParam__Q44nw4r3snd6detail7ChannelFPFPQ44nw4r3snd6detail7ChannelQ54nw4r3snd6detail7Channel21ChannelCallbackStatusUl_vUl, global
 /* 8041412C 003DD6EC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80414130 003DD6F0  7C 08 02 A6 */	mflr r0
 /* 80414134 003DD6F4  C0 02 C3 88 */	lfs f0, float_8066C708@sda21(r2)
@@ -323,9 +322,9 @@ InitParam__Q44nw4r3snd6detail7ChannelFPFPQ44nw4r3snd6detail7ChannelQ54nw4r3snd6d
 /* 80414250 003DD810  7C 08 03 A6 */	mtlr r0
 /* 80414254 003DD814  38 21 00 10 */	addi r1, r1, 0x10
 /* 80414258 003DD818  4E 80 00 20 */	blr 
+.endfn InitParam__Q44nw4r3snd6detail7ChannelFPFPQ44nw4r3snd6detail7ChannelQ54nw4r3snd6detail7Channel21ChannelCallbackStatusUl_vUl
 
-.global Update__Q44nw4r3snd6detail7ChannelFb
-Update__Q44nw4r3snd6detail7ChannelFb:
+.fn Update__Q44nw4r3snd6detail7ChannelFb, global
 /* 8041425C 003DD81C  94 21 FE D0 */	stwu r1, -0x130(r1)
 /* 80414260 003DD820  7C 08 02 A6 */	mflr r0
 /* 80414264 003DD824  90 01 01 34 */	stw r0, 0x134(r1)
@@ -841,9 +840,9 @@ Update__Q44nw4r3snd6detail7ChannelFb:
 /* 804149FC 003DDFBC  7C 08 03 A6 */	mtlr r0
 /* 80414A00 003DDFC0  38 21 01 30 */	addi r1, r1, 0x130
 /* 80414A04 003DDFC4  4E 80 00 20 */	blr 
+.endfn Update__Q44nw4r3snd6detail7ChannelFb
 
-.global Start__Q44nw4r3snd6detail7ChannelFRCQ44nw4r3snd6detail8WaveInfoiUl
-Start__Q44nw4r3snd6detail7ChannelFRCQ44nw4r3snd6detail8WaveInfoiUl:
+.fn Start__Q44nw4r3snd6detail7ChannelFRCQ44nw4r3snd6detail8WaveInfoiUl, global
 /* 80414A08 003DDFC8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80414A0C 003DDFCC  7C 08 02 A6 */	mflr r0
 /* 80414A10 003DDFD0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -876,9 +875,9 @@ Start__Q44nw4r3snd6detail7ChannelFRCQ44nw4r3snd6detail8WaveInfoiUl:
 /* 80414A7C 003DE03C  7C 08 03 A6 */	mtlr r0
 /* 80414A80 003DE040  38 21 00 20 */	addi r1, r1, 0x20
 /* 80414A84 003DE044  4E 80 00 20 */	blr 
+.endfn Start__Q44nw4r3snd6detail7ChannelFRCQ44nw4r3snd6detail8WaveInfoiUl
 
-.global Release__Q44nw4r3snd6detail7ChannelFv
-Release__Q44nw4r3snd6detail7ChannelFv:
+.fn Release__Q44nw4r3snd6detail7ChannelFv, global
 /* 80414A88 003DE048  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80414A8C 003DE04C  7C 08 02 A6 */	mflr r0
 /* 80414A90 003DE050  90 01 00 14 */	stw r0, 0x14(r1)
@@ -907,9 +906,9 @@ Release__Q44nw4r3snd6detail7ChannelFv:
 /* 80414AE4 003DE0A4  7C 08 03 A6 */	mtlr r0
 /* 80414AE8 003DE0A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80414AEC 003DE0AC  4E 80 00 20 */	blr 
+.endfn Release__Q44nw4r3snd6detail7ChannelFv
 
-.global NoteOff__Q44nw4r3snd6detail7ChannelFv
-NoteOff__Q44nw4r3snd6detail7ChannelFv:
+.fn NoteOff__Q44nw4r3snd6detail7ChannelFv, global
 /* 80414AF0 003DE0B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80414AF4 003DE0B4  7C 08 02 A6 */	mflr r0
 /* 80414AF8 003DE0B8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -942,9 +941,9 @@ NoteOff__Q44nw4r3snd6detail7ChannelFv:
 /* 80414B58 003DE118  7C 08 03 A6 */	mtlr r0
 /* 80414B5C 003DE11C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80414B60 003DE120  4E 80 00 20 */	blr 
+.endfn NoteOff__Q44nw4r3snd6detail7ChannelFv
 
-.global Stop__Q44nw4r3snd6detail7ChannelFv
-Stop__Q44nw4r3snd6detail7ChannelFv:
+.fn Stop__Q44nw4r3snd6detail7ChannelFv, global
 /* 80414B64 003DE124  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80414B68 003DE128  7C 08 02 A6 */	mflr r0
 /* 80414B6C 003DE12C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1024,9 +1023,9 @@ Stop__Q44nw4r3snd6detail7ChannelFv:
 /* 80414C84 003DE244  7C 08 03 A6 */	mtlr r0
 /* 80414C88 003DE248  38 21 00 10 */	addi r1, r1, 0x10
 /* 80414C8C 003DE24C  4E 80 00 20 */	blr 
+.endfn Stop__Q44nw4r3snd6detail7ChannelFv
 
-.global UpdateSweep__Q44nw4r3snd6detail7ChannelFi
-UpdateSweep__Q44nw4r3snd6detail7ChannelFi:
+.fn UpdateSweep__Q44nw4r3snd6detail7ChannelFi, global
 /* 80414C90 003DE250  80 03 00 A8 */	lwz r0, 0xa8(r3)
 /* 80414C94 003DE254  80 A3 00 AC */	lwz r5, 0xac(r3)
 /* 80414C98 003DE258  7C 00 22 14 */	add r0, r0, r4
@@ -1035,24 +1034,24 @@ UpdateSweep__Q44nw4r3snd6detail7ChannelFi:
 /* 80414CA4 003DE264  4C 81 00 20 */	blelr 
 /* 80414CA8 003DE268  90 A3 00 A8 */	stw r5, 0xa8(r3)
 /* 80414CAC 003DE26C  4E 80 00 20 */	blr 
+.endfn UpdateSweep__Q44nw4r3snd6detail7ChannelFi
 
-.global SetSweepParam__Q44nw4r3snd6detail7ChannelFfib
-SetSweepParam__Q44nw4r3snd6detail7ChannelFfib:
+.fn SetSweepParam__Q44nw4r3snd6detail7ChannelFfib, global
 /* 80414CB0 003DE270  38 00 00 00 */	li r0, 0
 /* 80414CB4 003DE274  D0 23 00 A4 */	stfs f1, 0xa4(r3)
 /* 80414CB8 003DE278  90 83 00 AC */	stw r4, 0xac(r3)
 /* 80414CBC 003DE27C  98 A3 00 38 */	stb r5, 0x38(r3)
 /* 80414CC0 003DE280  90 03 00 A8 */	stw r0, 0xa8(r3)
 /* 80414CC4 003DE284  4E 80 00 20 */	blr 
+.endfn SetSweepParam__Q44nw4r3snd6detail7ChannelFfib
 
-.global SetBiquadFilter__Q44nw4r3snd6detail7ChannelFif
-SetBiquadFilter__Q44nw4r3snd6detail7ChannelFif:
+.fn SetBiquadFilter__Q44nw4r3snd6detail7ChannelFif, global
 /* 80414CC8 003DE288  98 83 00 3B */	stb r4, 0x3b(r3)
 /* 80414CCC 003DE28C  D0 23 00 54 */	stfs f1, 0x54(r3)
 /* 80414CD0 003DE290  4E 80 00 20 */	blr
+.endfn SetBiquadFilter__Q44nw4r3snd6detail7ChannelFif
 
-.global VoiceCallbackFunc__Q44nw4r3snd6detail7ChannelFPQ44nw4r3snd6detail5VoiceQ54nw4r3snd6detail5Voice19VoiceCallbackStatusPv
-VoiceCallbackFunc__Q44nw4r3snd6detail7ChannelFPQ44nw4r3snd6detail5VoiceQ54nw4r3snd6detail5Voice19VoiceCallbackStatusPv:
+.fn VoiceCallbackFunc__Q44nw4r3snd6detail7ChannelFPQ44nw4r3snd6detail5VoiceQ54nw4r3snd6detail5Voice19VoiceCallbackStatusPv, global
 /* 80414CD4 003DE294  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80414CD8 003DE298  7C 08 02 A6 */	mflr r0
 /* 80414CDC 003DE29C  2C 04 00 02 */	cmpwi r4, 2
@@ -1146,9 +1145,9 @@ VoiceCallbackFunc__Q44nw4r3snd6detail7ChannelFPQ44nw4r3snd6detail5VoiceQ54nw4r3s
 /* 80414E14 003DE3D4  7C 08 03 A6 */	mtlr r0
 /* 80414E18 003DE3D8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80414E1C 003DE3DC  4E 80 00 20 */	blr 
+.endfn VoiceCallbackFunc__Q44nw4r3snd6detail7ChannelFPQ44nw4r3snd6detail5VoiceQ54nw4r3snd6detail5Voice19VoiceCallbackStatusPv
 
-.global AllocChannel__Q44nw4r3snd6detail7ChannelFiiiPFPQ44nw4r3snd6detail7ChannelQ54nw4r3snd6detail7Channel21ChannelCallbackStatusUl_vUl
-AllocChannel__Q44nw4r3snd6detail7ChannelFiiiPFPQ44nw4r3snd6detail7ChannelQ54nw4r3snd6detail7Channel21ChannelCallbackStatusUl_vUl:
+.fn AllocChannel__Q44nw4r3snd6detail7ChannelFiiiPFPQ44nw4r3snd6detail7ChannelQ54nw4r3snd6detail7Channel21ChannelCallbackStatusUl_vUl, global
 /* 80414E20 003DE3E0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80414E24 003DE3E4  7C 08 02 A6 */	mflr r0
 /* 80414E28 003DE3E8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1284,15 +1283,16 @@ AllocChannel__Q44nw4r3snd6detail7ChannelFiiiPFPQ44nw4r3snd6detail7ChannelQ54nw4r
 /* 80415010 003DE5D0  7C 08 03 A6 */	mtlr r0
 /* 80415014 003DE5D4  38 21 00 30 */	addi r1, r1, 0x30
 /* 80415018 003DE5D8  4E 80 00 20 */	blr 
+.endfn AllocChannel__Q44nw4r3snd6detail7ChannelFiiiPFPQ44nw4r3snd6detail7ChannelQ54nw4r3snd6detail7Channel21ChannelCallbackStatusUl_vUl
 
-.global FreeChannel__Q44nw4r3snd6detail7ChannelFPQ44nw4r3snd6detail7Channel
-FreeChannel__Q44nw4r3snd6detail7ChannelFPQ44nw4r3snd6detail7Channel:
+.fn FreeChannel__Q44nw4r3snd6detail7ChannelFPQ44nw4r3snd6detail7Channel, global
 /* 8041501C 003DE5DC  2C 03 00 00 */	cmpwi r3, 0
 /* 80415020 003DE5E0  4D 82 00 20 */	beqlr 
 /* 80415024 003DE5E4  38 00 00 00 */	li r0, 0
 /* 80415028 003DE5E8  90 03 00 E0 */	stw r0, 0xe0(r3)
 /* 8041502C 003DE5EC  90 03 00 E4 */	stw r0, 0xe4(r3)
 /* 80415030 003DE5F0  4E 80 00 20 */	blr 
+.endfn FreeChannel__Q44nw4r3snd6detail7ChannelFPQ44nw4r3snd6detail7Channel
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

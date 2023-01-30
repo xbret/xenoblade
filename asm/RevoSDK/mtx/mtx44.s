@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global C_MTXFrustum
-C_MTXFrustum:
+.fn C_MTXFrustum, global
 /* 8034DE50 00317410  EC 04 18 28 */	fsubs f0, f4, f3
 /* 8034DE54 00317414  C1 22 BD D0 */	lfs f9, float_8066C150@sda21(r2)
 /* 8034DE58 00317418  C1 62 BD C8 */	lfs f11, float_8066C148@sda21(r2)
@@ -44,10 +43,10 @@ C_MTXFrustum:
 /* 8034DEE0 003174A0  D0 23 00 28 */	stfs f1, 0x28(r3)
 /* 8034DEE4 003174A4  D0 03 00 2C */	stfs f0, 0x2c(r3)
 /* 8034DEE8 003174A8  4E 80 00 20 */	blr 
+.endfn C_MTXFrustum
 
 .balign 16, 0
-.global C_MTXPerspective
-C_MTXPerspective:
+.fn C_MTXPerspective, global
 /* 8034DEF0 003174B0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8034DEF4 003174B4  7C 08 02 A6 */	mflr r0
 /* 8034DEF8 003174B8  C0 A2 BD D8 */	lfs f5, float_8066C158@sda21(r2)
@@ -107,10 +106,10 @@ C_MTXPerspective:
 /* 8034DFD0 00317590  7C 08 03 A6 */	mtlr r0
 /* 8034DFD4 00317594  38 21 00 40 */	addi r1, r1, 0x40
 /* 8034DFD8 00317598  4E 80 00 20 */	blr 
+.endfn C_MTXPerspective
 
 .balign 16, 0
-.global C_MTXOrtho
-C_MTXOrtho:
+.fn C_MTXOrtho, global
 /* 8034DFE0 003175A0  ED 64 18 28 */	fsubs f11, f4, f3
 /* 8034DFE4 003175A4  C1 02 BD D0 */	lfs f8, float_8066C150@sda21(r2)
 /* 8034DFE8 003175A8  C1 42 BD C8 */	lfs f10, float_8066C148@sda21(r2)
@@ -149,6 +148,7 @@ C_MTXOrtho:
 /* 8034E06C 0031762C  D0 43 00 1C */	stfs f2, 0x1c(r3)
 /* 8034E070 00317630  D0 23 00 28 */	stfs f1, 0x28(r3)
 /* 8034E074 00317634  4E 80 00 20 */	blr 
+.endfn C_MTXOrtho
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

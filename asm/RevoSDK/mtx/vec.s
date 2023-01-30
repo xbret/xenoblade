@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global PSVECAdd
-PSVECAdd:
+.fn PSVECAdd, global
 /* 8034E080 00317640  E0 43 00 00 */	psq_l f2, 0(r3), 0, qr0
 /* 8034E084 00317644  E0 84 00 00 */	psq_l f4, 0(r4), 0, qr0
 /* 8034E088 00317648  10 C2 20 2A */	ps_add f6, f2, f4
@@ -14,10 +13,10 @@ PSVECAdd:
 /* 8034E098 00317658  10 E3 28 2A */	ps_add f7, f3, f5
 /* 8034E09C 0031765C  F0 E5 80 08 */	psq_st f7, 8(r5), 1, qr0
 /* 8034E0A0 00317660  4E 80 00 20 */	blr 
+.endfn PSVECAdd
 
 .balign 16, 0
-.global PSVECNormalize
-PSVECNormalize:
+.fn PSVECNormalize, global
 /* 8034E0B0 00317670  E0 43 00 00 */	psq_l f2, 0(r3), 0, qr0
 /* 8034E0B4 00317674  E0 63 80 08 */	psq_l f3, 8(r3), 1, qr0
 /* 8034E0B8 00317678  10 A2 00 B2 */	ps_mul f5, f2, f2
@@ -35,10 +34,10 @@ PSVECNormalize:
 /* 8034E0E8 003176A8  F0 44 00 00 */	psq_st f2, 0(r4), 0, qr0
 /* 8034E0EC 003176AC  F0 64 80 08 */	psq_st f3, 8(r4), 1, qr0
 /* 8034E0F0 003176B0  4E 80 00 20 */	blr 
+.endfn PSVECNormalize
 
 .balign 16, 0
-.global PSVECMag
-PSVECMag:
+.fn PSVECMag, global
 /* 8034E100 003176C0  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
 /* 8034E104 003176C4  C0 82 BD E0 */	lfs f4, float_8066C160@sda21(r2)
 /* 8034E108 003176C8  10 00 00 32 */	ps_mul f0, f0, f0
@@ -56,10 +55,10 @@ PSVECMag:
 /* 8034E138 003176F8  EC 02 00 32 */	fmuls f0, f2, f0
 /* 8034E13C 003176FC  EC 21 00 32 */	fmuls f1, f1, f0
 /* 8034E140 00317700  4E 80 00 20 */	blr 
+.endfn PSVECMag
 
 .balign 16, 0
-.global PSVECDotProduct
-PSVECDotProduct:
+.fn PSVECDotProduct, global
 /* 8034E150 00317710  E0 43 00 04 */	psq_l f2, 4(r3), 0, qr0
 /* 8034E154 00317714  E0 64 00 04 */	psq_l f3, 4(r4), 0, qr0
 /* 8034E158 00317718  10 42 00 F2 */	ps_mul f2, f2, f3
@@ -68,10 +67,10 @@ PSVECDotProduct:
 /* 8034E164 00317724  10 65 11 3A */	ps_madd f3, f5, f4, f2
 /* 8034E168 00317728  10 23 10 94 */	ps_sum0 f1, f3, f2, f2
 /* 8034E16C 0031772C  4E 80 00 20 */	blr 
+.endfn PSVECDotProduct
 
 .balign 16, 0
-.global PSVECCrossProduct
-PSVECCrossProduct:
+.fn PSVECCrossProduct, global
 /* 8034E170 00317730  E0 24 00 00 */	psq_l f1, 0(r4), 0, qr0
 /* 8034E174 00317734  C0 43 00 08 */	lfs f2, 8(r3)
 /* 8034E178 00317738  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
@@ -87,10 +86,10 @@ PSVECCrossProduct:
 /* 8034E1A0 00317760  11 40 50 50 */	ps_neg f10, f10
 /* 8034E1A4 00317764  F1 45 00 04 */	psq_st f10, 4(r5), 0, qr0
 /* 8034E1A8 00317768  4E 80 00 20 */	blr 
+.endfn PSVECCrossProduct
 
 .balign 16, 0
-.global C_VECHalfAngle
-C_VECHalfAngle:
+.fn C_VECHalfAngle, global
 /* 8034E1B0 00317770  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8034E1B4 00317774  7C 08 02 A6 */	mflr r0
 /* 8034E1B8 00317778  C0 43 00 00 */	lfs f2, 0(r3)
@@ -147,10 +146,10 @@ C_VECHalfAngle:
 /* 8034E27C 0031783C  7C 08 03 A6 */	mtlr r0
 /* 8034E280 00317840  38 21 00 40 */	addi r1, r1, 0x40
 /* 8034E284 00317844  4E 80 00 20 */	blr 
+.endfn C_VECHalfAngle
 
 .balign 16, 0
-.global PSVECSquareDistance
-PSVECSquareDistance:
+.fn PSVECSquareDistance, global
 /* 8034E290 00317850  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
 /* 8034E294 00317854  E0 24 00 00 */	psq_l f1, 0(r4), 0, qr0
 /* 8034E298 00317858  E0 43 00 08 */	psq_l f2, 8(r3), 0, qr0
@@ -160,6 +159,7 @@ PSVECSquareDistance:
 /* 8034E2A8 00317868  F0 05 00 00 */	psq_st f0, 0(r5), 0, qr0
 /* 8034E2AC 0031786C  F0 25 00 08 */	psq_st f1, 8(r5), 0, qr0
 /* 8034E2B0 00317870  4E 80 00 20 */	blr 
+.endfn PSVECSquareDistance
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

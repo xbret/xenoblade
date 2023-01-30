@@ -3,8 +3,7 @@
 .section .init, "ax"  # 0x80003100 - 0x80005600
 
 #Handwritten
-.global memcpy
-memcpy:
+.fn memcpy, global
 /* 80004000 00000100  28 85 00 00 */	cmplwi cr1, r5, 0
 /* 80004004 00000104  4D 86 00 20 */	beqlr cr1
 /* 80004008 00000108  7C 84 18 40 */	cmplw cr1, r4, r3
@@ -194,9 +193,9 @@ memcpy:
 /* 80004290 00000390  9D 2C FF FF */	stbu r9, -1(r12)
 /* 80004294 00000394  42 00 FF F8 */	bdnz .L_8000428C
 /* 80004298 00000398  4E 80 00 20 */	blr 
+.endfn memcpy
 
-.global __fill_mem
-__fill_mem:
+.fn __fill_mem, global
 /* 8000429C 0000039C  28 05 00 20 */	cmplwi r5, 0x20
 /* 800042A0 000003A0  54 87 06 3E */	clrlwi r7, r4, 0x18
 /* 800042A4 000003A4  38 C3 FF FF */	addi r6, r3, -1
@@ -251,6 +250,7 @@ __fill_mem:
 /* 80004344 00000444  9C E6 00 01 */	stbu r7, 1(r6)
 /* 80004348 00000448  40 82 FF F8 */	bne .L_80004340
 /* 8000434C 0000044C  4E 80 00 20 */	blr 
+.endfn __fill_mem
 
 .global memset
 memset:

@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global MPVDEC_CheckVersion
-MPVDEC_CheckVersion:
+.fn MPVDEC_CheckVersion, global
 /* 803A4704 0036DCC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A4708 0036DCC8  7C 08 02 A6 */	mflr r0
 /* 803A470C 0036DCCC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -37,9 +36,9 @@ MPVDEC_CheckVersion:
 /* 803A4770 0036DD30  7C 08 03 A6 */	mtlr r0
 /* 803A4774 0036DD34  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A4778 0036DD38  4E 80 00 20 */	blr 
+.endfn MPVDEC_CheckVersion
 
-.global MPVDEC_DecIpicMb
-MPVDEC_DecIpicMb:
+.fn MPVDEC_DecIpicMb, global
 /* 803A477C 0036DD3C  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803A4780 0036DD40  7C 08 02 A6 */	mflr r0
 /* 803A4784 0036DD44  3C A0 80 00 */	lis r5, 0x7FFFFFFF@ha
@@ -314,9 +313,9 @@ MPVDEC_DecIpicMb:
 /* 803A4B58 0036E118  7C 08 03 A6 */	mtlr r0
 /* 803A4B5C 0036E11C  38 21 00 40 */	addi r1, r1, 0x40
 /* 803A4B60 0036E120  4E 80 00 20 */	blr 
+.endfn MPVDEC_DecIpicMb
 
-.global MPVDEC_DecPpicMb
-MPVDEC_DecPpicMb:
+.fn MPVDEC_DecPpicMb, global
 /* 803A4B64 0036E124  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803A4B68 0036E128  7C 08 02 A6 */	mflr r0
 /* 803A4B6C 0036E12C  3C A0 80 00 */	lis r5, 0x7FFFFFFF@ha
@@ -723,26 +722,26 @@ MPVDEC_DecPpicMb:
 /* 803A5118 0036E6D8  7C 08 03 A6 */	mtlr r0
 /* 803A511C 0036E6DC  38 21 00 50 */	addi r1, r1, 0x50
 /* 803A5120 0036E6E0  4E 80 00 20 */	blr 
+.endfn MPVDEC_DecPpicMb
 
-.global MPVDEC_ResetMv
-MPVDEC_ResetMv:
+.fn MPVDEC_ResetMv, global
 /* 803A5124 0036E6E4  38 00 00 00 */	li r0, 0
 /* 803A5128 0036E6E8  90 03 00 10 */	stw r0, 0x10(r3)
 /* 803A512C 0036E6EC  90 03 00 14 */	stw r0, 0x14(r3)
 /* 803A5130 0036E6F0  90 03 00 18 */	stw r0, 0x18(r3)
 /* 803A5134 0036E6F4  90 03 00 1C */	stw r0, 0x1c(r3)
 /* 803A5138 0036E6F8  4E 80 00 20 */	blr 
+.endfn MPVDEC_ResetMv
 
-.global MPVDEC_ResetDc
-MPVDEC_ResetDc:
+.fn MPVDEC_ResetDc, global
 /* 803A513C 0036E6FC  38 00 04 00 */	li r0, 0x400
 /* 803A5140 0036E700  90 03 0C F4 */	stw r0, 0xcf4(r3)
 /* 803A5144 0036E704  90 03 0C F8 */	stw r0, 0xcf8(r3)
 /* 803A5148 0036E708  90 03 0C F0 */	stw r0, 0xcf0(r3)
 /* 803A514C 0036E70C  4E 80 00 20 */	blr 
+.endfn MPVDEC_ResetDc
 
-.global mpvdec_MotionSub
-mpvdec_MotionSub:
+.fn mpvdec_MotionSub, global
 /* 803A5150 0036E710  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A5154 0036E714  39 40 00 00 */	li r10, 0
 /* 803A5158 0036E718  93 E1 00 1C */	stw r31, 0x1c(r1)
@@ -857,9 +856,9 @@ mpvdec_MotionSub:
 /* 803A52D0 0036E890  83 A1 00 14 */	lwz r29, 0x14(r1)
 /* 803A52D4 0036E894  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A52D8 0036E898  4E 80 00 20 */	blr 
+.endfn mpvdec_MotionSub
 
-.global MPVDEC_DecBpicMb
-MPVDEC_DecBpicMb:
+.fn MPVDEC_DecBpicMb, global
 /* 803A52DC 0036E89C  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803A52E0 0036E8A0  7C 08 02 A6 */	mflr r0
 /* 803A52E4 0036E8A4  3C A0 80 00 */	lis r5, 0x7FFFFFFF@ha
@@ -1293,6 +1292,7 @@ MPVDEC_DecBpicMb:
 /* 803A58FC 0036EEBC  7C 08 03 A6 */	mtlr r0
 /* 803A5900 0036EEC0  38 21 00 50 */	addi r1, r1, 0x50
 /* 803A5904 0036EEC4  4E 80 00 20 */	blr 
+.endfn MPVDEC_DecBpicMb
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

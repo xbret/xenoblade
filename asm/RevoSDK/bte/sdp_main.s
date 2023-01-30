@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global sdp_init
-sdp_init:
+.fn sdp_init, global
 /* 80305C68 002CF228  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80305C6C 002CF22C  7C 08 02 A6 */	mflr r0
 /* 80305C70 002CF230  38 80 00 00 */	li r4, 0
@@ -111,9 +110,9 @@ sdp_init:
 /* 80305DFC 002CF3BC  7C 08 03 A6 */	mtlr r0
 /* 80305E00 002CF3C0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80305E04 002CF3C4  4E 80 00 20 */	blr
+.endfn sdp_init
 
-.global sdp_connect_ind
-sdp_connect_ind:
+.fn sdp_connect_ind, global
 /* 80305E08 002CF3C8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80305E0C 002CF3CC  7C 08 02 A6 */	mflr r0
 /* 80305E10 002CF3D0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -164,9 +163,9 @@ sdp_connect_ind:
 /* 80305EC0 002CF480  7C 08 03 A6 */	mtlr r0
 /* 80305EC4 002CF484  38 21 00 20 */	addi r1, r1, 0x20
 /* 80305EC8 002CF488  4E 80 00 20 */	blr
+.endfn sdp_connect_ind
 
-.global sdp_connect_cfm
-sdp_connect_cfm:
+.fn sdp_connect_cfm, global
 /* 80305ECC 002CF48C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80305ED0 002CF490  7C 08 02 A6 */	mflr r0
 /* 80305ED4 002CF494  90 01 00 24 */	stw r0, 0x24(r1)
@@ -275,9 +274,9 @@ sdp_connect_cfm:
 /* 80306050 002CF610  7C 08 03 A6 */	mtlr r0
 /* 80306054 002CF614  38 21 00 20 */	addi r1, r1, 0x20
 /* 80306058 002CF618  4E 80 00 20 */	blr
+.endfn sdp_connect_cfm
 
-.global sdp_config_ind
-sdp_config_ind:
+.fn sdp_config_ind, global
 /* 8030605C 002CF61C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80306060 002CF620  7C 08 02 A6 */	mflr r0
 /* 80306064 002CF624  90 01 00 24 */	stw r0, 0x24(r1)
@@ -364,9 +363,9 @@ sdp_config_ind:
 /* 8030618C 002CF74C  7C 08 03 A6 */	mtlr r0
 /* 80306190 002CF750  38 21 00 20 */	addi r1, r1, 0x20
 /* 80306194 002CF754  4E 80 00 20 */	blr
+.endfn sdp_config_ind
 
-.global sdp_config_cfm
-sdp_config_cfm:
+.fn sdp_config_cfm, global
 /* 80306198 002CF758  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8030619C 002CF75C  7C 08 02 A6 */	mflr r0
 /* 803061A0 002CF760  3C A0 80 5C */	lis r5, lbl_805C36C0@ha
@@ -470,9 +469,9 @@ sdp_config_cfm:
 /* 80306308 002CF8C8  7C 08 03 A6 */	mtlr r0
 /* 8030630C 002CF8CC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80306310 002CF8D0  4E 80 00 20 */	blr
+.endfn sdp_config_cfm
 
-.global sdp_disconnect_ind
-sdp_disconnect_ind:
+.fn sdp_disconnect_ind, global
 /* 80306314 002CF8D4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80306318 002CF8D8  7C 08 02 A6 */	mflr r0
 /* 8030631C 002CF8DC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -540,9 +539,9 @@ sdp_disconnect_ind:
 /* 80306400 002CF9C0  7C 08 03 A6 */	mtlr r0
 /* 80306404 002CF9C4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80306408 002CF9C8  4E 80 00 20 */	blr
+.endfn sdp_disconnect_ind
 
-.global sdp_data_ind
-sdp_data_ind:
+.fn sdp_data_ind, global
 /* 8030640C 002CF9CC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80306410 002CF9D0  7C 08 02 A6 */	mflr r0
 /* 80306414 002CF9D4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -600,9 +599,9 @@ sdp_data_ind:
 /* 803064D4 002CFA94  7C 08 03 A6 */	mtlr r0
 /* 803064D8 002CFA98  38 21 00 10 */	addi r1, r1, 0x10
 /* 803064DC 002CFA9C  4E 80 00 20 */	blr 
+.endfn sdp_data_ind
 
-.global sdp_conn_originate
-sdp_conn_originate:
+.fn sdp_conn_originate, global
 /* 803064E0 002CFAA0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803064E4 002CFAA4  7C 08 02 A6 */	mflr r0
 /* 803064E8 002CFAA8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -678,9 +677,9 @@ sdp_conn_originate:
 /* 803065E8 002CFBA8  7C 08 03 A6 */	mtlr r0
 /* 803065EC 002CFBAC  38 21 00 20 */	addi r1, r1, 0x20
 /* 803065F0 002CFBB0  4E 80 00 20 */	blr 
+.endfn sdp_conn_originate
 
-.global sdp_disconnect
-sdp_disconnect:
+.fn sdp_disconnect, global
 /* 803065F4 002CFBB4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803065F8 002CFBB8  7C 08 02 A6 */	mflr r0
 /* 803065FC 002CFBBC  3C A0 80 5C */	lis r5, lbl_805C36C0@ha
@@ -724,9 +723,9 @@ sdp_disconnect:
 /* 80306684 002CFC44  7C 08 03 A6 */	mtlr r0
 /* 80306688 002CFC48  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030668C 002CFC4C  4E 80 00 20 */	blr
+.endfn sdp_disconnect
 
-.global sdp_disconnect_cfm
-sdp_disconnect_cfm:
+.fn sdp_disconnect_cfm, global
 /* 80306690 002CFC50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80306694 002CFC54  7C 08 02 A6 */	mflr r0
 /* 80306698 002CFC58  90 01 00 14 */	stw r0, 0x14(r1)
@@ -778,9 +777,9 @@ sdp_disconnect_cfm:
 /* 80306740 002CFD00  7C 08 03 A6 */	mtlr r0
 /* 80306744 002CFD04  38 21 00 10 */	addi r1, r1, 0x10
 /* 80306748 002CFD08  4E 80 00 20 */	blr 
+.endfn sdp_disconnect_cfm
 
-.global sdp_conn_timeout
-sdp_conn_timeout:
+.fn sdp_conn_timeout, global
 /* 8030674C 002CFD0C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80306750 002CFD10  7C 08 02 A6 */	mflr r0
 /* 80306754 002CFD14  3C 80 80 5C */	lis r4, lbl_805C36C0@ha
@@ -817,6 +816,7 @@ sdp_conn_timeout:
 /* 803067C8 002CFD88  7C 08 03 A6 */	mtlr r0
 /* 803067CC 002CFD8C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803067D0 002CFD90  4E 80 00 20 */	blr 
+.endfn sdp_conn_timeout
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

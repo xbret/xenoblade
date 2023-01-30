@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global FindContainHeap_
-FindContainHeap_:
+.fn FindContainHeap_, global
 /* 80348B50 00312110  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80348B54 00312114  7C 08 02 A6 */	mflr r0
 /* 80348B58 00312118  90 01 00 24 */	stw r0, 0x24(r1)
@@ -97,10 +96,10 @@ FindContainHeap_:
 /* 80348C84 00312244  7C 08 03 A6 */	mtlr r0
 /* 80348C88 00312248  38 21 00 20 */	addi r1, r1, 0x20
 /* 80348C8C 0031224C  4E 80 00 20 */	blr 
+.endfn FindContainHeap_
 
 .balign 16, 0
-.global MEMiInitHeapHead
-MEMiInitHeapHead:
+.fn MEMiInitHeapHead, global
 /* 80348C90 00312250  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80348C94 00312254  7C 08 02 A6 */	mflr r0
 /* 80348C98 00312258  90 01 00 24 */	stw r0, 0x24(r1)
@@ -227,10 +226,10 @@ MEMiInitHeapHead:
 /* 80348E44 00312404  7C 08 03 A6 */	mtlr r0
 /* 80348E48 00312408  38 21 00 20 */	addi r1, r1, 0x20
 /* 80348E4C 0031240C  4E 80 00 20 */	blr 
+.endfn MEMiInitHeapHead
 
 .balign 16, 0
-.global MEMiFinalizeHeap
-MEMiFinalizeHeap:
+.fn MEMiFinalizeHeap, global
 /* 80348E50 00312410  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80348E54 00312414  7C 08 02 A6 */	mflr r0
 /* 80348E58 00312418  90 01 00 24 */	stw r0, 0x24(r1)
@@ -335,6 +334,7 @@ MEMiFinalizeHeap:
 /* 80348FB0 00312570  7C 08 03 A6 */	mtlr r0
 /* 80348FB4 00312574  38 21 00 20 */	addi r1, r1, 0x20
 /* 80348FB8 00312578  4E 80 00 20 */	blr 
+.endfn MEMiFinalizeHeap
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

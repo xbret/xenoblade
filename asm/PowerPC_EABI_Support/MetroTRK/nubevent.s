@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global TRKInitializeEventQueue
-TRKInitializeEventQueue:
+.fn TRKInitializeEventQueue, global
 /* 802CC650 00295C10  3C 60 80 58 */	lis r3, lbl_8057B8B0@ha
 /* 802CC654 00295C14  38 A0 00 00 */	li r5, 0
 /* 802CC658 00295C18  38 83 B8 B0 */	addi r4, r3, lbl_8057B8B0@l
@@ -13,9 +12,9 @@ TRKInitializeEventQueue:
 /* 802CC668 00295C28  90 A4 00 04 */	stw r5, 4(r4)
 /* 802CC66C 00295C2C  90 04 00 20 */	stw r0, 0x20(r4)
 /* 802CC670 00295C30  4E 80 00 20 */	blr 
+.endfn TRKInitializeEventQueue
 
-.global TRKGetNextEvent
-TRKGetNextEvent:
+.fn TRKGetNextEvent, global
 /* 802CC674 00295C34  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CC678 00295C38  7C 08 02 A6 */	mflr r0
 /* 802CC67C 00295C3C  38 80 00 00 */	li r4, 0
@@ -53,9 +52,9 @@ TRKGetNextEvent:
 /* 802CC6F4 00295CB4  7C 08 03 A6 */	mtlr r0
 /* 802CC6F8 00295CB8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CC6FC 00295CBC  4E 80 00 20 */	blr 
+.endfn TRKGetNextEvent
 
-.global TRKPostEvent
-TRKPostEvent:
+.fn TRKPostEvent, global
 /* 802CC700 00295CC0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CC704 00295CC4  7C 08 02 A6 */	mflr r0
 /* 802CC708 00295CC8  3C 80 80 58 */	lis r4, lbl_8057B8B0@ha
@@ -110,20 +109,21 @@ TRKPostEvent:
 /* 802CC7C0 00295D80  7C 08 03 A6 */	mtlr r0
 /* 802CC7C4 00295D84  38 21 00 20 */	addi r1, r1, 0x20
 /* 802CC7C8 00295D88  4E 80 00 20 */	blr 
+.endfn TRKPostEvent
 
-.global TRKConstructEvent
-TRKConstructEvent:
+.fn TRKConstructEvent, global
 /* 802CC7CC 00295D8C  38 A0 00 00 */	li r5, 0
 /* 802CC7D0 00295D90  38 00 FF FF */	li r0, -1
 /* 802CC7D4 00295D94  90 83 00 00 */	stw r4, 0(r3)
 /* 802CC7D8 00295D98  90 A3 00 04 */	stw r5, 4(r3)
 /* 802CC7DC 00295D9C  90 03 00 08 */	stw r0, 8(r3)
 /* 802CC7E0 00295DA0  4E 80 00 20 */	blr 
+.endfn TRKConstructEvent
 
-.global TRKDestructEvent
-TRKDestructEvent:
+.fn TRKDestructEvent, global
 /* 802CC7E4 00295DA4  80 63 00 08 */	lwz r3, 8(r3)
 /* 802CC7E8 00295DA8  48 00 0D 7C */	b TRKReleaseBuffer
+.endfn TRKDestructEvent
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

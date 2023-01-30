@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global AIFF_GetInfo
-AIFF_GetInfo:
+.fn AIFF_GetInfo, global
 /* 80385DE4 0034F3A4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80385DE8 0034F3A8  39 23 00 0C */	addi r9, r3, 0xc
 /* 80385DEC 0034F3AC  39 60 00 00 */	li r11, 0
@@ -165,9 +164,9 @@ AIFF_GetInfo:
 /* 80386038 0034F5F8  BB 41 00 08 */	lmw r26, 8(r1)
 /* 8038603C 0034F5FC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80386040 0034F600  4E 80 00 20 */	blr 
+.endfn AIFF_GetInfo
 
-.global ADXB_CheckAiff
-ADXB_CheckAiff:
+.fn ADXB_CheckAiff, global
 /* 80386044 0034F604  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80386048 0034F608  7C 08 02 A6 */	mflr r0
 /* 8038604C 0034F60C  38 A0 00 04 */	li r5, 4
@@ -198,9 +197,9 @@ ADXB_CheckAiff:
 /* 803860A8 0034F668  7C 08 03 A6 */	mtlr r0
 /* 803860AC 0034F66C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803860B0 0034F670  4E 80 00 20 */	blr 
+.endfn ADXB_CheckAiff
 
-.global ADX_DecodeInfoAiff
-ADX_DecodeInfoAiff:
+.fn ADX_DecodeInfoAiff, global
 /* 803860B4 0034F674  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803860B8 0034F678  7C 08 02 A6 */	mflr r0
 /* 803860BC 0034F67C  2C 04 10 00 */	cmpwi r4, 0x1000
@@ -269,9 +268,9 @@ ADX_DecodeInfoAiff:
 /* 803861A8 0034F768  7C 08 03 A6 */	mtlr r0
 /* 803861AC 0034F76C  38 21 00 40 */	addi r1, r1, 0x40
 /* 803861B0 0034F770  4E 80 00 20 */	blr 
+.endfn ADX_DecodeInfoAiff
 
-.global ADXB_DecodeHeaderAiff
-ADXB_DecodeHeaderAiff:
+.fn ADXB_DecodeHeaderAiff, global
 /* 803861B4 0034F774  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803861B8 0034F778  7C 08 02 A6 */	mflr r0
 /* 803861BC 0034F77C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -342,9 +341,9 @@ ADXB_DecodeHeaderAiff:
 /* 803862B0 0034F870  7C 08 03 A6 */	mtlr r0
 /* 803862B4 0034F874  38 21 00 20 */	addi r1, r1, 0x20
 /* 803862B8 0034F878  4E 80 00 20 */	blr
+.endfn ADXB_DecodeHeaderAiff
 
-.global ADXB_ExecOneAiff16
-ADXB_ExecOneAiff16:
+.fn ADXB_ExecOneAiff16, global
 /* 803862BC 0034F87C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803862C0 0034F880  7C 08 02 A6 */	mflr r0
 /* 803862C4 0034F884  90 01 00 14 */	stw r0, 0x14(r1)
@@ -559,9 +558,9 @@ ADXB_ExecOneAiff16:
 /* 803865D0 0034FB90  7C 08 03 A6 */	mtlr r0
 /* 803865D4 0034FB94  38 21 00 10 */	addi r1, r1, 0x10
 /* 803865D8 0034FB98  4E 80 00 20 */	blr
+.endfn ADXB_ExecOneAiff16
 
-.global ADXB_ExecOneAiff8
-ADXB_ExecOneAiff8:
+.fn ADXB_ExecOneAiff8, global
 /* 803865DC 0034FB9C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803865E0 0034FBA0  7C 08 02 A6 */	mflr r0
 /* 803865E4 0034FBA4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -800,15 +799,16 @@ ADXB_ExecOneAiff8:
 /* 80386950 0034FF10  7C 08 03 A6 */	mtlr r0
 /* 80386954 0034FF14  38 21 00 10 */	addi r1, r1, 0x10
 /* 80386958 0034FF18  4E 80 00 20 */	blr 
+.endfn ADXB_ExecOneAiff8
 
-.global ADXB_ExecOneAiff
-ADXB_ExecOneAiff:
+.fn ADXB_ExecOneAiff, global
 /* 8038695C 0034FF1C  A8 03 00 9C */	lha r0, 0x9c(r3)
 /* 80386960 0034FF20  2C 00 00 01 */	cmpwi r0, 1
 /* 80386964 0034FF24  40 82 00 08 */	bne .L_8038696C
 /* 80386968 0034FF28  4B FF FC 74 */	b ADXB_ExecOneAiff8
 .L_8038696C:
 /* 8038696C 0034FF2C  4B FF F9 50 */	b ADXB_ExecOneAiff16
+.endfn ADXB_ExecOneAiff
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

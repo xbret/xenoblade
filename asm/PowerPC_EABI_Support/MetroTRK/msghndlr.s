@@ -2,13 +2,12 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global GetTRKConnected
-GetTRKConnected:
+.fn GetTRKConnected, global
 /* 802CDC90 00297250  80 6D B4 1C */	lwz r3, lbl_8066759C@sda21(r13)
 /* 802CDC94 00297254  4E 80 00 20 */	blr 
+.endfn GetTRKConnected
 
-.global TRKDoConnect
-TRKDoConnect:
+.fn TRKDoConnect, global
 /* 802CDC98 00297258  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 802CDC9C 0029725C  7C 08 02 A6 */	mflr r0
 /* 802CDCA0 00297260  38 80 00 00 */	li r4, 0
@@ -37,9 +36,9 @@ TRKDoConnect:
 /* 802CDCFC 002972BC  7C 08 03 A6 */	mtlr r0
 /* 802CDD00 002972C0  38 21 00 50 */	addi r1, r1, 0x50
 /* 802CDD04 002972C4  4E 80 00 20 */	blr 
+.endfn TRKDoConnect
 
-.global TRKDoDisconnect
-TRKDoDisconnect:
+.fn TRKDoDisconnect, global
 /* 802CDD08 002972C8  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 802CDD0C 002972CC  7C 08 02 A6 */	mflr r0
 /* 802CDD10 002972D0  38 80 00 00 */	li r4, 0
@@ -74,9 +73,9 @@ TRKDoDisconnect:
 /* 802CDD84 00297344  7C 08 03 A6 */	mtlr r0
 /* 802CDD88 00297348  38 21 00 60 */	addi r1, r1, 0x60
 /* 802CDD8C 0029734C  4E 80 00 20 */	blr 
+.endfn TRKDoDisconnect
 
-.global TRKDoReset
-TRKDoReset:
+.fn TRKDoReset, global
 /* 802CDD90 00297350  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 802CDD94 00297354  7C 08 02 A6 */	mflr r0
 /* 802CDD98 00297358  38 80 00 00 */	li r4, 0
@@ -104,9 +103,9 @@ TRKDoReset:
 /* 802CDDF0 002973B0  7C 08 03 A6 */	mtlr r0
 /* 802CDDF4 002973B4  38 21 00 50 */	addi r1, r1, 0x50
 /* 802CDDF8 002973B8  4E 80 00 20 */	blr 
+.endfn TRKDoReset
 
-.global TRKDoOverride
-TRKDoOverride:
+.fn TRKDoOverride, global
 /* 802CDDFC 002973BC  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 802CDE00 002973C0  7C 08 02 A6 */	mflr r0
 /* 802CDE04 002973C4  38 80 00 00 */	li r4, 0
@@ -134,9 +133,9 @@ TRKDoOverride:
 /* 802CDE5C 0029741C  7C 08 03 A6 */	mtlr r0
 /* 802CDE60 00297420  38 21 00 50 */	addi r1, r1, 0x50
 /* 802CDE64 00297424  4E 80 00 20 */	blr 
+.endfn TRKDoOverride
 
-.global TRKDoReadMemory
-TRKDoReadMemory:
+.fn TRKDoReadMemory, global
 /* 802CDE68 00297428  54 2B 06 FE */	clrlwi r11, r1, 0x1b
 /* 802CDE6C 0029742C  7C 2C 0B 78 */	mr r12, r1
 /* 802CDE70 00297430  21 6B F6 C0 */	subfic r11, r11, -2368
@@ -292,9 +291,9 @@ switch_802CE020:
 /* 802CE090 00297650  7C 08 03 A6 */	mtlr r0
 /* 802CE094 00297654  7D 41 53 78 */	mr r1, r10
 /* 802CE098 00297658  4E 80 00 20 */	blr 
+.endfn TRKDoReadMemory
 
-.global TRKDoWriteMemory
-TRKDoWriteMemory:
+.fn TRKDoWriteMemory, global
 /* 802CE09C 0029765C  54 2B 06 FE */	clrlwi r11, r1, 0x1b
 /* 802CE0A0 00297660  7C 2C 0B 78 */	mr r12, r1
 /* 802CE0A4 00297664  21 6B F6 C0 */	subfic r11, r11, -2368
@@ -440,9 +439,9 @@ switch_802CE230:
 /* 802CE2A0 00297860  7C 08 03 A6 */	mtlr r0
 /* 802CE2A4 00297864  7D 41 53 78 */	mr r1, r10
 /* 802CE2A8 00297868  4E 80 00 20 */	blr 
+.endfn TRKDoWriteMemory
 
-.global TRKDoReadRegisters
-TRKDoReadRegisters:
+.fn TRKDoReadRegisters, global
 /* 802CE2AC 0029786C  94 21 FF 20 */	stwu r1, -0xe0(r1)
 /* 802CE2B0 00297870  7C 08 02 A6 */	mflr r0
 /* 802CE2B4 00297874  90 01 00 E4 */	stw r0, 0xe4(r1)
@@ -584,9 +583,9 @@ TRKDoReadRegisters:
 /* 802CE49C 00297A5C  7C 08 03 A6 */	mtlr r0
 /* 802CE4A0 00297A60  38 21 00 E0 */	addi r1, r1, 0xe0
 /* 802CE4A4 00297A64  4E 80 00 20 */	blr 
+.endfn TRKDoReadRegisters
 
-.global TRKDoWriteRegisters
-TRKDoWriteRegisters:
+.fn TRKDoWriteRegisters, global
 /* 802CE4A8 00297A68  94 21 FF 20 */	stwu r1, -0xe0(r1)
 /* 802CE4AC 00297A6C  7C 08 02 A6 */	mflr r0
 /* 802CE4B0 00297A70  38 80 00 00 */	li r4, 0
@@ -777,9 +776,9 @@ TRKDoWriteRegisters:
 /* 802CE73C 00297CFC  7C 08 03 A6 */	mtlr r0
 /* 802CE740 00297D00  38 21 00 E0 */	addi r1, r1, 0xe0
 /* 802CE744 00297D04  4E 80 00 20 */	blr 
+.endfn TRKDoWriteRegisters
 
-.global TRKDoContinue
-TRKDoContinue:
+.fn TRKDoContinue, global
 /* 802CE748 00297D08  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 802CE74C 00297D0C  7C 08 02 A6 */	mflr r0
 /* 802CE750 00297D10  90 01 00 94 */	stw r0, 0x94(r1)
@@ -831,9 +830,9 @@ TRKDoContinue:
 /* 802CE800 00297DC0  7C 08 03 A6 */	mtlr r0
 /* 802CE804 00297DC4  38 21 00 90 */	addi r1, r1, 0x90
 /* 802CE808 00297DC8  4E 80 00 20 */	blr 
+.endfn TRKDoContinue
 
-.global TRKDoStep
-TRKDoStep:
+.fn TRKDoStep, global
 /* 802CE80C 00297DCC  94 21 FE A0 */	stwu r1, -0x160(r1)
 /* 802CE810 00297DD0  7C 08 02 A6 */	mflr r0
 /* 802CE814 00297DD4  38 80 00 00 */	li r4, 0
@@ -1004,9 +1003,9 @@ TRKDoStep:
 /* 802CEA84 00298044  7C 08 03 A6 */	mtlr r0
 /* 802CEA88 00298048  38 21 01 60 */	addi r1, r1, 0x160
 /* 802CEA8C 0029804C  4E 80 00 20 */	blr 
+.endfn TRKDoStep
 
-.global TRKDoStop
-TRKDoStop:
+.fn TRKDoStop, global
 /* 802CEA90 00298050  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 802CEA94 00298054  7C 08 02 A6 */	mflr r0
 /* 802CEA98 00298058  90 01 00 54 */	stw r0, 0x54(r1)
@@ -1059,9 +1058,9 @@ TRKDoStop:
 /* 802CEB3C 002980FC  7C 08 03 A6 */	mtlr r0
 /* 802CEB40 00298100  38 21 00 50 */	addi r1, r1, 0x50
 /* 802CEB44 00298104  4E 80 00 20 */	blr 
+.endfn TRKDoStop
 
-.global TRKDoSetOption
-TRKDoSetOption:
+.fn TRKDoSetOption, global
 /* 802CEB48 00298108  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 802CEB4C 0029810C  7C 08 02 A6 */	mflr r0
 /* 802CEB50 00298110  90 01 00 54 */	stw r0, 0x54(r1)
@@ -1116,6 +1115,7 @@ TRKDoSetOption:
 /* 802CEC08 002981C8  7C 08 03 A6 */	mtlr r0
 /* 802CEC0C 002981CC  38 21 00 50 */	addi r1, r1, 0x50
 /* 802CEC10 002981D0  4E 80 00 20 */	blr
+.endfn TRKDoSetOption
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

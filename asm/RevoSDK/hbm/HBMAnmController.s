@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global __ct__Q210homebutton18GroupAnmControllerFv
-__ct__Q210homebutton18GroupAnmControllerFv:
+.fn __ct__Q210homebutton18GroupAnmControllerFv, global
 /* 8031F450 002E8A10  3C 80 80 55 */	lis r4, __vt__homebutton_GroupAnmController@ha
 /* 8031F454 002E8A14  38 00 00 00 */	li r0, 0
 /* 8031F458 002E8A18  38 84 C2 40 */	addi r4, r4, __vt__homebutton_GroupAnmController@l
@@ -12,10 +11,10 @@ __ct__Q210homebutton18GroupAnmControllerFv:
 /* 8031F460 002E8A20  90 03 00 20 */	stw r0, 0x20(r3)
 /* 8031F464 002E8A24  90 03 00 24 */	stw r0, 0x24(r3)
 /* 8031F468 002E8A28  4E 80 00 20 */	blr 
+.endfn __ct__Q210homebutton18GroupAnmControllerFv
 
 .balign 16, 0
-.global __dt__Q210homebutton15FrameControllerFv
-__dt__Q210homebutton15FrameControllerFv:
+.fn __dt__Q210homebutton15FrameControllerFv, global
 /* 8031F470 002E8A30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031F474 002E8A34  7C 08 02 A6 */	mflr r0
 /* 8031F478 002E8A38  2C 03 00 00 */	cmpwi r3, 0
@@ -33,10 +32,10 @@ __dt__Q210homebutton15FrameControllerFv:
 /* 8031F4A4 002E8A64  7C 08 03 A6 */	mtlr r0
 /* 8031F4A8 002E8A68  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031F4AC 002E8A6C  4E 80 00 20 */	blr 
+.endfn __dt__Q210homebutton15FrameControllerFv
 
 .balign 16, 0
-.global do_calc__Q210homebutton18GroupAnmControllerFv
-do_calc__Q210homebutton18GroupAnmControllerFv:
+.fn do_calc__Q210homebutton18GroupAnmControllerFv, global
 /* 8031F4B0 002E8A70  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8031F4B4 002E8A74  7C 08 02 A6 */	mflr r0
 /* 8031F4B8 002E8A78  90 01 00 24 */	stw r0, 0x24(r1)
@@ -85,6 +84,7 @@ do_calc__Q210homebutton18GroupAnmControllerFv:
 /* 8031F554 002E8B14  7C 08 03 A6 */	mtlr r0
 /* 8031F558 002E8B18  38 21 00 20 */	addi r1, r1, 0x20
 /* 8031F55C 002E8B1C  4E 80 00 20 */	blr 
+.endfn do_calc__Q210homebutton18GroupAnmControllerFv
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

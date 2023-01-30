@@ -2,8 +2,9 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80435D28
-func_80435D28:
+
+
+.fn func_80435D28, global
 /* 80435D28 003FF2E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80435D2C 003FF2EC  7C 08 02 A6 */	mflr r0
 /* 80435D30 003FF2F0  C0 23 00 00 */	lfs f1, 0(r3)
@@ -33,10 +34,10 @@ func_80435D28:
 /* 80435D88 003FF348  7C 08 03 A6 */	mtlr r0
 /* 80435D8C 003FF34C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80435D90 003FF350  4E 80 00 20 */	blr
+.endfn func_80435D28
 
 
-.global sinit_80435D94
-sinit_80435D94:
+.fn sinit_80435D94, global
 /* 80435D94 003FF354  3D 00 80 66 */	lis r8, lbl_80659DB0@ha
 /* 80435D98 003FF358  C0 22 C6 68 */	lfs f1, float_8066C9E8@sda21(r2)
 /* 80435D9C 003FF35C  39 08 9D B0 */	addi r8, r8, lbl_80659DB0@l
@@ -62,8 +63,11 @@ sinit_80435D94:
 /* 80435DEC 003FF3AC  D0 03 00 04 */	stfs f0, 4(r3)
 /* 80435DF0 003FF3B0  D0 03 00 08 */	stfs f0, 8(r3)
 /* 80435DF4 003FF3B4  4E 80 00 20 */	blr
+.endfn sinit_80435D94
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.balign 4
 
 .4byte sinit_80435D94
 
@@ -79,15 +83,23 @@ float_8066C9E8:
 float_8066C9EC:
 	.float 1.0
 
-.section extab_, "a"  # 0x800066E0 - 0x80021020
+.section extab, "a" # 0x800066E0 - 0x80021020
 
-.global lbl_8001C070
-lbl_8001C070:
+.balign 4
+
+.obj "@etb_8001C070", local
+.hidden "@etb_8001C070"
 	.4byte 0x100A0000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001C070"
 
-.section extabindex_, "a"  # 0x80021020 - 0x80039220
+.section extabindex, "a" # 0x80021020 - 0x80039220
 
+.balign 4
+
+.obj "@eti_80033C74", local
+.hidden "@eti_80033C74"
 	.4byte func_80435D28
 	.4byte 0x0000006C
-	.4byte lbl_8001C070
+	.4byte "@etb_8001C070"
+.endobj "@eti_80033C74"

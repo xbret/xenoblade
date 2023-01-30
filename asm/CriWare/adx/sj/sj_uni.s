@@ -3,14 +3,13 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global SJUNI_Error
-SJUNI_Error:
+.fn SJUNI_Error, global
 /* 80395678 0035EC38  3C 60 80 52 */	lis r3, lbl_8051C440@ha
 /* 8039567C 0035EC3C  38 63 C4 40 */	addi r3, r3, lbl_8051C440@l
 /* 80395680 0035EC40  48 00 13 18 */	b SJERR_CallErr
+.endfn SJUNI_Error
 
-.global SJUNI_Init
-SJUNI_Init:
+.fn SJUNI_Init, global
 /* 80395684 0035EC44  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80395688 0035EC48  7C 08 02 A6 */	mflr r0
 /* 8039568C 0035EC4C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -35,9 +34,9 @@ SJUNI_Init:
 /* 803956D4 0035EC94  7C 08 03 A6 */	mtlr r0
 /* 803956D8 0035EC98  38 21 00 10 */	addi r1, r1, 0x10
 /* 803956DC 0035EC9C  4E 80 00 20 */	blr 
+.endfn SJUNI_Init
 
-.global SJUNI_Finish
-SJUNI_Finish:
+.fn SJUNI_Finish, global
 /* 803956E0 0035ECA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803956E4 0035ECA4  7C 08 02 A6 */	mflr r0
 /* 803956E8 0035ECA8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -59,9 +58,9 @@ SJUNI_Finish:
 /* 80395724 0035ECE4  7C 08 03 A6 */	mtlr r0
 /* 80395728 0035ECE8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039572C 0035ECEC  4E 80 00 20 */	blr 
+.endfn SJUNI_Finish
 
-.global SJUNI_Create
-SJUNI_Create:
+.fn SJUNI_Create, global
 /* 80395730 0035ECF0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80395734 0035ECF4  7C 08 02 A6 */	mflr r0
 /* 80395738 0035ECF8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -86,9 +85,9 @@ SJUNI_Create:
 /* 80395784 0035ED44  7C 08 03 A6 */	mtlr r0
 /* 80395788 0035ED48  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039578C 0035ED4C  4E 80 00 20 */	blr 
+.endfn SJUNI_Create
 
-.global sjuni_Create
-sjuni_Create:
+.fn sjuni_Create, global
 /* 80395790 0035ED50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80395794 0035ED54  7C 08 02 A6 */	mflr r0
 /* 80395798 0035ED58  3C C0 80 5F */	lis r6, sjuni_obj@ha
@@ -169,9 +168,9 @@ sjuni_Create:
 /* 803958B4 0035EE74  7C 08 03 A6 */	mtlr r0
 /* 803958B8 0035EE78  38 21 00 10 */	addi r1, r1, 0x10
 /* 803958BC 0035EE7C  4E 80 00 20 */	blr 
+.endfn sjuni_Create
 
-.global SJUNI_Destroy
-SJUNI_Destroy:
+.fn SJUNI_Destroy, global
 /* 803958C0 0035EE80  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 803958C4 0035EE84  7C 08 02 A6 */	mflr r0
 /* 803958C8 0035EE88  90 01 00 94 */	stw r0, 0x94(r1)
@@ -226,9 +225,9 @@ SJUNI_Destroy:
 /* 80395980 0035EF40  7C 08 03 A6 */	mtlr r0
 /* 80395984 0035EF44  38 21 00 90 */	addi r1, r1, 0x90
 /* 80395988 0035EF48  4E 80 00 20 */	blr 
+.endfn SJUNI_Destroy
 
-.global SJUNI_GetUuid
-SJUNI_GetUuid:
+.fn SJUNI_GetUuid, global
 /* 8039598C 0035EF4C  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 80395990 0035EF50  7C 08 02 A6 */	mflr r0
 /* 80395994 0035EF54  90 01 00 94 */	stw r0, 0x94(r1)
@@ -281,9 +280,9 @@ SJUNI_GetUuid:
 /* 80395A44 0035F004  7C 08 03 A6 */	mtlr r0
 /* 80395A48 0035F008  38 21 00 90 */	addi r1, r1, 0x90
 /* 80395A4C 0035F00C  4E 80 00 20 */	blr 
+.endfn SJUNI_GetUuid
 
-.global SJUNI_EntryErrFunc
-SJUNI_EntryErrFunc:
+.fn SJUNI_EntryErrFunc, global
 /* 80395A50 0035F010  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 80395A54 0035F014  7C 08 02 A6 */	mflr r0
 /* 80395A58 0035F018  90 01 00 A4 */	stw r0, 0xa4(r1)
@@ -340,9 +339,9 @@ SJUNI_EntryErrFunc:
 /* 80395B18 0035F0D8  7C 08 03 A6 */	mtlr r0
 /* 80395B1C 0035F0DC  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 80395B20 0035F0E0  4E 80 00 20 */	blr 
+.endfn SJUNI_EntryErrFunc
 
-.global SJUNI_Reset
-SJUNI_Reset:
+.fn SJUNI_Reset, global
 /* 80395B24 0035F0E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80395B28 0035F0E8  7C 08 02 A6 */	mflr r0
 /* 80395B2C 0035F0EC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -357,9 +356,9 @@ SJUNI_Reset:
 /* 80395B50 0035F110  7C 08 03 A6 */	mtlr r0
 /* 80395B54 0035F114  38 21 00 10 */	addi r1, r1, 0x10
 /* 80395B58 0035F118  4E 80 00 20 */	blr 
+.endfn SJUNI_Reset
 
-.global sjuni_Reset
-sjuni_Reset:
+.fn sjuni_Reset, global
 /* 80395B5C 0035F11C  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 80395B60 0035F120  7C 08 02 A6 */	mflr r0
 /* 80395B64 0035F124  2C 03 00 00 */	cmpwi r3, 0
@@ -435,9 +434,9 @@ sjuni_Reset:
 /* 80395C68 0035F228  7C 08 03 A6 */	mtlr r0
 /* 80395C6C 0035F22C  38 21 00 90 */	addi r1, r1, 0x90
 /* 80395C70 0035F230  4E 80 00 20 */	blr 
+.endfn sjuni_Reset
 
-.global SJUNI_GetNumData
-SJUNI_GetNumData:
+.fn SJUNI_GetNumData, global
 /* 80395C74 0035F234  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80395C78 0035F238  7C 08 02 A6 */	mflr r0
 /* 80395C7C 0035F23C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -458,9 +457,9 @@ SJUNI_GetNumData:
 /* 80395CB8 0035F278  7C 08 03 A6 */	mtlr r0
 /* 80395CBC 0035F27C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80395CC0 0035F280  4E 80 00 20 */	blr 
+.endfn SJUNI_GetNumData
 
-.global sjuni_GetNumData
-sjuni_GetNumData:
+.fn sjuni_GetNumData, global
 /* 80395CC4 0035F284  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 80395CC8 0035F288  7C 08 02 A6 */	mflr r0
 /* 80395CCC 0035F28C  2C 03 00 00 */	cmpwi r3, 0
@@ -537,9 +536,9 @@ sjuni_GetNumData:
 /* 80395DC8 0035F388  7C 08 03 A6 */	mtlr r0
 /* 80395DCC 0035F38C  38 21 00 90 */	addi r1, r1, 0x90
 /* 80395DD0 0035F390  4E 80 00 20 */	blr 
+.endfn sjuni_GetNumData
 
-.global SJUNI_GetChunk
-SJUNI_GetChunk:
+.fn SJUNI_GetChunk, global
 /* 80395DD4 0035F394  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80395DD8 0035F398  7C 08 02 A6 */	mflr r0
 /* 80395DDC 0035F39C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -566,9 +565,9 @@ SJUNI_GetChunk:
 /* 80395E30 0035F3F0  7C 08 03 A6 */	mtlr r0
 /* 80395E34 0035F3F4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80395E38 0035F3F8  4E 80 00 20 */	blr 
+.endfn SJUNI_GetChunk
 
-.global sjuni_GetChunk
-sjuni_GetChunk:
+.fn sjuni_GetChunk, global
 /* 80395E3C 0035F3FC  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 80395E40 0035F400  7C 08 02 A6 */	mflr r0
 /* 80395E44 0035F404  2C 03 00 00 */	cmpwi r3, 0
@@ -681,9 +680,9 @@ sjuni_GetChunk:
 /* 80395FCC 0035F58C  7C 08 03 A6 */	mtlr r0
 /* 80395FD0 0035F590  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 80395FD4 0035F594  4E 80 00 20 */	blr 
+.endfn sjuni_GetChunk
 
-.global SJUNI_PutChunk
-SJUNI_PutChunk:
+.fn SJUNI_PutChunk, global
 /* 80395FD8 0035F598  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80395FDC 0035F59C  7C 08 02 A6 */	mflr r0
 /* 80395FE0 0035F5A0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -706,9 +705,9 @@ SJUNI_PutChunk:
 /* 80396024 0035F5E4  7C 08 03 A6 */	mtlr r0
 /* 80396028 0035F5E8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039602C 0035F5EC  4E 80 00 20 */	blr 
+.endfn SJUNI_PutChunk
 
-.global sjuni_PutChunk
-sjuni_PutChunk:
+.fn sjuni_PutChunk, global
 /* 80396030 0035F5F0  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 80396034 0035F5F4  7C 08 02 A6 */	mflr r0
 /* 80396038 0035F5F8  2C 03 00 00 */	cmpwi r3, 0
@@ -823,9 +822,9 @@ sjuni_PutChunk:
 /* 803961C4 0035F784  7C 08 03 A6 */	mtlr r0
 /* 803961C8 0035F788  38 21 00 90 */	addi r1, r1, 0x90
 /* 803961CC 0035F78C  4E 80 00 20 */	blr 
+.endfn sjuni_PutChunk
 
-.global SJUNI_UngetChunk
-SJUNI_UngetChunk:
+.fn SJUNI_UngetChunk, global
 /* 803961D0 0035F790  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803961D4 0035F794  7C 08 02 A6 */	mflr r0
 /* 803961D8 0035F798  90 01 00 24 */	stw r0, 0x24(r1)
@@ -848,9 +847,9 @@ SJUNI_UngetChunk:
 /* 8039621C 0035F7DC  7C 08 03 A6 */	mtlr r0
 /* 80396220 0035F7E0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80396224 0035F7E4  4E 80 00 20 */	blr 
+.endfn SJUNI_UngetChunk
 
-.global sjuni_UngetChunk
-sjuni_UngetChunk:
+.fn sjuni_UngetChunk, global
 /* 80396228 0035F7E8  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 8039622C 0035F7EC  7C 08 02 A6 */	mflr r0
 /* 80396230 0035F7F0  2C 03 00 00 */	cmpwi r3, 0
@@ -960,9 +959,9 @@ sjuni_UngetChunk:
 /* 803963B0 0035F970  7C 08 03 A6 */	mtlr r0
 /* 803963B4 0035F974  38 21 00 90 */	addi r1, r1, 0x90
 /* 803963B8 0035F978  4E 80 00 20 */	blr 
+.endfn sjuni_UngetChunk
 
-.global SJUNI_IsGetChunk
-SJUNI_IsGetChunk:
+.fn SJUNI_IsGetChunk, global
 /* 803963BC 0035F97C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803963C0 0035F980  7C 08 02 A6 */	mflr r0
 /* 803963C4 0035F984  90 01 00 24 */	stw r0, 0x24(r1)
@@ -991,9 +990,9 @@ SJUNI_IsGetChunk:
 /* 80396420 0035F9E0  7C 08 03 A6 */	mtlr r0
 /* 80396424 0035F9E4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80396428 0035F9E8  4E 80 00 20 */	blr 
+.endfn SJUNI_IsGetChunk
 
-.global sjuni_IsGetChunk
-sjuni_IsGetChunk:
+.fn sjuni_IsGetChunk, global
 /* 8039642C 0035F9EC  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 80396430 0035F9F0  7C 08 02 A6 */	mflr r0
 /* 80396434 0035F9F4  2C 03 00 00 */	cmpwi r3, 0
@@ -1084,9 +1083,9 @@ sjuni_IsGetChunk:
 /* 80396568 0035FB28  7C 08 03 A6 */	mtlr r0
 /* 8039656C 0035FB2C  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 80396570 0035FB30  4E 80 00 20 */	blr 
+.endfn sjuni_IsGetChunk
 
-.global SJUNI_GetNumChunk
-SJUNI_GetNumChunk:
+.fn SJUNI_GetNumChunk, global
 /* 80396574 0035FB34  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 80396578 0035FB38  7C 08 02 A6 */	mflr r0
 /* 8039657C 0035FB3C  90 01 00 94 */	stw r0, 0x94(r1)
@@ -1152,6 +1151,7 @@ SJUNI_GetNumChunk:
 /* 80396658 0035FC18  7C 08 03 A6 */	mtlr r0
 /* 8039665C 0035FC1C  38 21 00 90 */	addi r1, r1, 0x90
 /* 80396660 0035FC20  4E 80 00 20 */	blr 
+.endfn SJUNI_GetNumChunk
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

@@ -3,12 +3,11 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global AXRNA_EntryErrFunc
-AXRNA_EntryErrFunc:
+.fn AXRNA_EntryErrFunc, global
 /* 80399014 003625D4  4B FF FF 94 */	b RNAERR_EntryErrFunc
+.endfn AXRNA_EntryErrFunc
 
-.global AXRNA_Init
-AXRNA_Init:
+.fn AXRNA_Init, global
 /* 80399018 003625D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039901C 003625DC  7C 08 02 A6 */	mflr r0
 /* 80399020 003625E0  3C 60 80 5F */	lis r3, axrna_init_cnt@ha
@@ -32,9 +31,9 @@ AXRNA_Init:
 /* 80399064 00362624  7C 08 03 A6 */	mtlr r0
 /* 80399068 00362628  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039906C 0036262C  4E 80 00 20 */	blr
+.endfn AXRNA_Init
 
-.global AXRNA_Finish
-AXRNA_Finish:
+.fn AXRNA_Finish, global
 /* 80399070 00362630  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80399074 00362634  7C 08 02 A6 */	mflr r0
 /* 80399078 00362638  3C 60 80 5F */	lis r3, axrna_init_cnt@ha
@@ -71,9 +70,9 @@ AXRNA_Finish:
 /* 803990E8 003626A8  7C 08 03 A6 */	mtlr r0
 /* 803990EC 003626AC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803990F0 003626B0  4E 80 00 20 */	blr
+.endfn AXRNA_Finish
 
-.global axrna_voice_drop
-axrna_voice_drop:
+.fn axrna_voice_drop, global
 /* 803990F4 003626B4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803990F8 003626B8  7C 08 02 A6 */	mflr r0
 /* 803990FC 003626BC  3C A0 80 5F */	lis r5, lbl_805F61C8@ha
@@ -115,9 +114,9 @@ axrna_voice_drop:
 /* 8039917C 0036273C  7C 08 03 A6 */	mtlr r0
 /* 80399180 00362740  38 21 00 10 */	addi r1, r1, 0x10
 /* 80399184 00362744  4E 80 00 20 */	blr
+.endfn axrna_voice_drop
 
-.global AXRNA_Create
-AXRNA_Create:
+.fn AXRNA_Create, global
 /* 80399188 00362748  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8039918C 0036274C  7C 08 02 A6 */	mflr r0
 /* 80399190 00362750  2C 04 00 00 */	cmpwi r4, 0
@@ -417,9 +416,9 @@ AXRNA_Create:
 /* 803995C0 00362B80  7C 08 03 A6 */	mtlr r0
 /* 803995C4 00362B84  38 21 00 30 */	addi r1, r1, 0x30
 /* 803995C8 00362B88  4E 80 00 20 */	blr 
+.endfn AXRNA_Create
 
-.global AXRNA_Destroy
-AXRNA_Destroy:
+.fn AXRNA_Destroy, global
 /* 803995CC 00362B8C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803995D0 00362B90  7C 08 02 A6 */	mflr r0
 /* 803995D4 00362B94  2C 03 00 00 */	cmpwi r3, 0
@@ -474,9 +473,9 @@ AXRNA_Destroy:
 /* 80399684 00362C44  7C 08 03 A6 */	mtlr r0
 /* 80399688 00362C48  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039968C 00362C4C  4E 80 00 20 */	blr 
+.endfn AXRNA_Destroy
 
-.global AXRNA_SetTransSw
-AXRNA_SetTransSw:
+.fn AXRNA_SetTransSw, global
 /* 80399690 00362C50  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80399694 00362C54  7C 08 02 A6 */	mflr r0
 /* 80399698 00362C58  2C 03 00 00 */	cmpwi r3, 0
@@ -685,9 +684,9 @@ AXRNA_SetTransSw:
 /* 80399984 00362F44  7C 08 03 A6 */	mtlr r0
 /* 80399988 00362F48  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039998C 00362F4C  4E 80 00 20 */	blr 
+.endfn AXRNA_SetTransSw
 
-.global AXRNA_SetPlaySw
-AXRNA_SetPlaySw:
+.fn AXRNA_SetPlaySw, global
 /* 80399990 00362F50  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80399994 00362F54  7C 08 02 A6 */	mflr r0
 /* 80399998 00362F58  2C 03 00 00 */	cmpwi r3, 0
@@ -803,9 +802,9 @@ AXRNA_SetPlaySw:
 /* 80399B14 003630D4  7C 08 03 A6 */	mtlr r0
 /* 80399B18 003630D8  38 21 00 30 */	addi r1, r1, 0x30
 /* 80399B1C 003630DC  4E 80 00 20 */	blr
+.endfn AXRNA_SetPlaySw
 
-.global AXRNA_GetNumData
-AXRNA_GetNumData:
+.fn AXRNA_GetNumData, global
 /* 80399B20 003630E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80399B24 003630E4  7C 08 02 A6 */	mflr r0
 /* 80399B28 003630E8  2C 03 00 00 */	cmpwi r3, 0
@@ -837,9 +836,9 @@ AXRNA_GetNumData:
 /* 80399B88 00363148  7C 08 03 A6 */	mtlr r0
 /* 80399B8C 0036314C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80399B90 00363150  4E 80 00 20 */	blr
+.endfn AXRNA_GetNumData
 
-.global AXRNA_GetNumRoom
-AXRNA_GetNumRoom:
+.fn AXRNA_GetNumRoom, global
 /* 80399B94 00363154  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80399B98 00363158  7C 08 02 A6 */	mflr r0
 /* 80399B9C 0036315C  2C 03 00 00 */	cmpwi r3, 0
@@ -865,9 +864,9 @@ AXRNA_GetNumRoom:
 /* 80399BE4 003631A4  7C 08 03 A6 */	mtlr r0
 /* 80399BE8 003631A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80399BEC 003631AC  4E 80 00 20 */	blr 
+.endfn AXRNA_GetNumRoom
 
-.global axrna_update_play
-axrna_update_play:
+.fn axrna_update_play, global
 /* 80399BF0 003631B0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80399BF4 003631B4  7C 08 02 A6 */	mflr r0
 /* 80399BF8 003631B8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -961,9 +960,9 @@ axrna_update_play:
 /* 80399D34 003632F4  7C 08 03 A6 */	mtlr r0
 /* 80399D38 003632F8  38 21 00 30 */	addi r1, r1, 0x30
 /* 80399D3C 003632FC  4E 80 00 20 */	blr 
+.endfn axrna_update_play
 
-.global axrna_start_trans
-axrna_start_trans:
+.fn axrna_start_trans, global
 /* 80399D40 00363300  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80399D44 00363304  7C 08 02 A6 */	mflr r0
 /* 80399D48 00363308  90 01 00 54 */	stw r0, 0x54(r1)
@@ -1100,9 +1099,9 @@ axrna_start_trans:
 /* 80399F40 00363500  7C 08 03 A6 */	mtlr r0
 /* 80399F44 00363504  38 21 00 50 */	addi r1, r1, 0x50
 /* 80399F48 00363508  4E 80 00 20 */	blr 
+.endfn axrna_start_trans
 
-.global func_80399F4C
-func_80399F4C:
+.fn func_80399F4C, global
 /* 80399F4C 0036350C  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80399F50 00363510  7C 08 02 A6 */	mflr r0
 /* 80399F54 00363514  3C 80 51 EC */	lis r4, 0x51EB851F@ha
@@ -1362,9 +1361,9 @@ func_80399F4C:
 /* 8039A31C 003638DC  7C 08 03 A6 */	mtlr r0
 /* 8039A320 003638E0  38 21 00 60 */	addi r1, r1, 0x60
 /* 8039A324 003638E4  4E 80 00 20 */	blr 
+.endfn func_80399F4C
 
-.global axrna_start_flash
-axrna_start_flash:
+.fn axrna_start_flash, global
 /* 8039A328 003638E8  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8039A32C 003638EC  7C 08 02 A6 */	mflr r0
 /* 8039A330 003638F0  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1457,9 +1456,9 @@ axrna_start_flash:
 /* 8039A47C 00363A3C  7C 08 03 A6 */	mtlr r0
 /* 8039A480 00363A40  38 21 00 40 */	addi r1, r1, 0x40
 /* 8039A484 00363A44  4E 80 00 20 */	blr
+.endfn axrna_start_flash
 
-.global AXRNA_ExecServer
-AXRNA_ExecServer:
+.fn AXRNA_ExecServer, global
 /* 8039A488 00363A48  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039A48C 00363A4C  7C 08 02 A6 */	mflr r0
 /* 8039A490 00363A50  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1536,16 +1535,16 @@ AXRNA_ExecServer:
 /* 8039A580 00363B40  7C 08 03 A6 */	mtlr r0
 /* 8039A584 00363B44  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039A588 00363B48  4E 80 00 20 */	blr
+.endfn AXRNA_ExecServer
 
-.global AXRNA_SetNumChan
-AXRNA_SetNumChan:
+.fn AXRNA_SetNumChan, global
 /* 8039A58C 00363B4C  2C 03 00 00 */	cmpwi r3, 0
 /* 8039A590 00363B50  4D 82 00 20 */	beqlr 
 /* 8039A594 00363B54  98 83 00 03 */	stb r4, 3(r3)
 /* 8039A598 00363B58  4E 80 00 20 */	blr 
+.endfn AXRNA_SetNumChan
 
-.global AXRNA_SetSfreq
-AXRNA_SetSfreq:
+.fn AXRNA_SetSfreq, global
 /* 8039A59C 00363B5C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8039A5A0 00363B60  7C 08 02 A6 */	mflr r0
 /* 8039A5A4 00363B64  2C 03 00 00 */	cmpwi r3, 0
@@ -1611,9 +1610,9 @@ AXRNA_SetSfreq:
 /* 8039A680 00363C40  7C 08 03 A6 */	mtlr r0
 /* 8039A684 00363C44  38 21 00 30 */	addi r1, r1, 0x30
 /* 8039A688 00363C48  4E 80 00 20 */	blr
+.endfn AXRNA_SetSfreq
 
-.global AXRNA_SetOutVol
-AXRNA_SetOutVol:
+.fn AXRNA_SetOutVol, global
 /* 8039A68C 00363C4C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039A690 00363C50  7C 08 02 A6 */	mflr r0
 /* 8039A694 00363C54  2C 03 00 00 */	cmpwi r3, 0
@@ -1663,9 +1662,9 @@ AXRNA_SetOutVol:
 /* 8039A730 00363CF0  7C 08 03 A6 */	mtlr r0
 /* 8039A734 00363CF4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039A738 00363CF8  4E 80 00 20 */	blr
+.endfn AXRNA_SetOutVol
 
-.global AXRNA_SetOutPan
-AXRNA_SetOutPan:
+.fn AXRNA_SetOutPan, global
 /* 8039A73C 00363CFC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039A740 00363D00  7C 08 02 A6 */	mflr r0
 /* 8039A744 00363D04  2C 03 00 00 */	cmpwi r3, 0
@@ -1716,26 +1715,26 @@ AXRNA_SetOutPan:
 /* 8039A7E8 00363DA8  7C 08 03 A6 */	mtlr r0
 /* 8039A7EC 00363DAC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039A7F0 00363DB0  4E 80 00 20 */	blr
+.endfn AXRNA_SetOutPan
 
-.global AXRNA_SetBitPerSmpl
-AXRNA_SetBitPerSmpl:
+.fn AXRNA_SetBitPerSmpl, global
 /* 8039A7F4 00363DB4  2C 03 00 00 */	cmpwi r3, 0
 /* 8039A7F8 00363DB8  4D 82 00 20 */	beqlr 
 /* 8039A7FC 00363DBC  90 83 00 78 */	stw r4, 0x78(r3)
 /* 8039A800 00363DC0  4E 80 00 20 */	blr 
+.endfn AXRNA_SetBitPerSmpl
 
-.global func_8039A804
-func_8039A804:
+.fn func_8039A804, global
 /* 8039A804 00363DC4  38 60 00 00 */	li r3, 0
 /* 8039A808 00363DC8  4E 80 00 20 */	blr
+.endfn func_8039A804
 
-.global func_8039A80C
-func_8039A80C:
+.fn func_8039A80C, global
 /* 8039A80C 00363DCC  38 60 00 00 */	li r3, 0
 /* 8039A810 00363DD0  4E 80 00 20 */	blr 
+.endfn func_8039A80C
 
-.global AXRNA_SetMain
-AXRNA_SetMain:
+.fn AXRNA_SetMain, global
 /* 8039A814 00363DD4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039A818 00363DD8  7C 08 02 A6 */	mflr r0
 /* 8039A81C 00363DDC  2C 03 00 00 */	cmpwi r3, 0
@@ -1794,11 +1793,11 @@ AXRNA_SetMain:
 /* 8039A8D4 00363E94  7C 08 03 A6 */	mtlr r0
 /* 8039A8D8 00363E98  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039A8DC 00363E9C  4E 80 00 20 */	blr 
+.endfn AXRNA_SetMain
 
 #this function belongs to another file?
 
-.global func_8039A8E0
-func_8039A8E0:
+.fn func_8039A8E0, global
 /* 8039A8E0 00363EA0  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 8039A8E4 00363EA4  7C 08 02 A6 */	mflr r0
 /* 8039A8E8 00363EA8  2C 03 00 00 */	cmpwi r3, 0
@@ -1888,6 +1887,7 @@ func_8039A8E0:
 /* 8039AA0C 00363FCC  7C 08 03 A6 */	mtlr r0
 /* 8039AA10 00363FD0  38 21 00 50 */	addi r1, r1, 0x50
 /* 8039AA14 00363FD4  4E 80 00 20 */	blr 
+.endfn func_8039A8E0
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

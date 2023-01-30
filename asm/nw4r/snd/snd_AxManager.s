@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __ct__Q44nw4r3snd6detail9AxManagerFv
-__ct__Q44nw4r3snd6detail9AxManagerFv:
+.fn __ct__Q44nw4r3snd6detail9AxManagerFv, global
 /* 8040C464 003D5A24  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040C468 003D5A28  7C 08 02 A6 */	mflr r0
 /* 8040C46C 003D5A2C  38 C0 00 00 */	li r6, 0
@@ -318,8 +317,9 @@ __ct__Q44nw4r3snd6detail9AxManagerFv:
 /* 8040C900 003D5EC0  7C 08 03 A6 */	mtlr r0
 /* 8040C904 003D5EC4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040C908 003D5EC8  4E 80 00 20 */	blr
+.endfn __ct__Q44nw4r3snd6detail9AxManagerFv
 
-func_8040C90C:
+.fn func_8040C90C, local
 /* 8040C90C 003D5ECC  38 00 00 00 */	li r0, 0
 /* 8040C910 003D5ED0  38 83 00 04 */	addi r4, r3, 4
 /* 8040C914 003D5ED4  90 03 00 04 */	stw r0, 4(r3)
@@ -328,10 +328,10 @@ func_8040C90C:
 /* 8040C920 003D5EE0  90 83 00 04 */	stw r4, 4(r3)
 /* 8040C924 003D5EE4  90 83 00 08 */	stw r4, 8(r3)
 /* 8040C928 003D5EE8  4E 80 00 20 */	blr
+.endfn func_8040C90C
 
 #__dt__Q34nw4r2ut30LinkList<Q34nw4r3snd6FxBase,4>Fv
-.global __dt__Q34nw4r2ut30LinkList_Q34nw4r3snd6FxBase_4_Fv
-__dt__Q34nw4r2ut30LinkList_Q34nw4r3snd6FxBase_4_Fv:
+.fn __dt__Q34nw4r2ut30LinkList_Q34nw4r3snd6FxBase_4_Fv, global
 /* 8040C92C 003D5EEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040C930 003D5EF0  7C 08 02 A6 */	mflr r0
 /* 8040C934 003D5EF4  2C 03 00 00 */	cmpwi r3, 0
@@ -355,9 +355,9 @@ __dt__Q34nw4r2ut30LinkList_Q34nw4r3snd6FxBase_4_Fv:
 /* 8040C978 003D5F38  7C 08 03 A6 */	mtlr r0
 /* 8040C97C 003D5F3C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040C980 003D5F40  4E 80 00 20 */	blr 
+.endfn __dt__Q34nw4r2ut30LinkList_Q34nw4r3snd6FxBase_4_Fv
 
-.global GetInstance__Q44nw4r3snd6detail9AxManagerFv
-GetInstance__Q44nw4r3snd6detail9AxManagerFv:
+.fn GetInstance__Q44nw4r3snd6detail9AxManagerFv, global
 /* 8040C984 003D5F44  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040C988 003D5F48  7C 08 02 A6 */	mflr r0
 /* 8040C98C 003D5F4C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -384,9 +384,9 @@ GetInstance__Q44nw4r3snd6detail9AxManagerFv:
 /* 8040C9DC 003D5F9C  7C 08 03 A6 */	mtlr r0
 /* 8040C9E0 003D5FA0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040C9E4 003D5FA4  4E 80 00 20 */	blr
+.endfn GetInstance__Q44nw4r3snd6detail9AxManagerFv
 
-.global __dt__Q44nw4r3snd6detail9AxManagerFv
-__dt__Q44nw4r3snd6detail9AxManagerFv:
+.fn __dt__Q44nw4r3snd6detail9AxManagerFv, global
 /* 8040C9E8 003D5FA8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040C9EC 003D5FAC  7C 08 02 A6 */	mflr r0
 /* 8040C9F0 003D5FB0  2C 03 00 00 */	cmpwi r3, 0
@@ -419,9 +419,9 @@ __dt__Q44nw4r3snd6detail9AxManagerFv:
 /* 8040CA54 003D6014  7C 08 03 A6 */	mtlr r0
 /* 8040CA58 003D6018  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040CA5C 003D601C  4E 80 00 20 */	blr 
+.endfn __dt__Q44nw4r3snd6detail9AxManagerFv
 
-.global Init__Q44nw4r3snd6detail9AxManagerFv
-Init__Q44nw4r3snd6detail9AxManagerFv:
+.fn Init__Q44nw4r3snd6detail9AxManagerFv, global
 /* 8040CA60 003D6020  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8040CA64 003D6024  7C 08 02 A6 */	mflr r0
 /* 8040CA68 003D6028  90 01 00 24 */	stw r0, 0x24(r1)
@@ -494,9 +494,9 @@ Init__Q44nw4r3snd6detail9AxManagerFv:
 /* 8040CB70 003D6130  7C 08 03 A6 */	mtlr r0
 /* 8040CB74 003D6134  38 21 00 20 */	addi r1, r1, 0x20
 /* 8040CB78 003D6138  4E 80 00 20 */	blr 
+.endfn Init__Q44nw4r3snd6detail9AxManagerFv
 
-.global Shutdown__Q44nw4r3snd6detail9AxManagerFv
-Shutdown__Q44nw4r3snd6detail9AxManagerFv:
+.fn Shutdown__Q44nw4r3snd6detail9AxManagerFv, global
 /* 8040CB7C 003D613C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040CB80 003D6140  7C 08 02 A6 */	mflr r0
 /* 8040CB84 003D6144  90 01 00 14 */	stw r0, 0x14(r1)
@@ -540,9 +540,9 @@ Shutdown__Q44nw4r3snd6detail9AxManagerFv:
 /* 8040CC18 003D61D8  7C 08 03 A6 */	mtlr r0
 /* 8040CC1C 003D61DC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040CC20 003D61E0  4E 80 00 20 */	blr 
+.endfn Shutdown__Q44nw4r3snd6detail9AxManagerFv
 
-.global GetOutputVolume__Q44nw4r3snd6detail9AxManagerCFv
-GetOutputVolume__Q44nw4r3snd6detail9AxManagerCFv:
+.fn GetOutputVolume__Q44nw4r3snd6detail9AxManagerCFv, global
 /* 8040CC24 003D61E4  80 A3 00 24 */	lwz r5, 0x24(r3)
 /* 8040CC28 003D61E8  80 03 00 28 */	lwz r0, 0x28(r3)
 /* 8040CC2C 003D61EC  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -572,9 +572,9 @@ GetOutputVolume__Q44nw4r3snd6detail9AxManagerCFv:
 .L_8040CC88:
 /* 8040CC88 003D6248  38 21 00 20 */	addi r1, r1, 0x20
 /* 8040CC8C 003D624C  4E 80 00 20 */	blr 
+.endfn GetOutputVolume__Q44nw4r3snd6detail9AxManagerCFv
 
-.global Update__Q44nw4r3snd6detail9AxManagerFv
-Update__Q44nw4r3snd6detail9AxManagerFv:
+.fn Update__Q44nw4r3snd6detail9AxManagerFv, global
 /* 8040CC90 003D6250  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8040CC94 003D6254  7C 08 02 A6 */	mflr r0
 /* 8040CC98 003D6258  90 01 00 74 */	stw r0, 0x74(r1)
@@ -850,14 +850,14 @@ Update__Q44nw4r3snd6detail9AxManagerFv:
 /* 8040D058 003D6618  7C 08 03 A6 */	mtlr r0
 /* 8040D05C 003D661C  38 21 00 70 */	addi r1, r1, 0x70
 /* 8040D060 003D6620  4E 80 00 20 */	blr 
+.endfn Update__Q44nw4r3snd6detail9AxManagerFv
 
-.global GetZeroBufferAddress__Q44nw4r3snd6detail9AxManagerFv
-GetZeroBufferAddress__Q44nw4r3snd6detail9AxManagerFv:
+.fn GetZeroBufferAddress__Q44nw4r3snd6detail9AxManagerFv, global
 /* 8040D064 003D6624  80 63 00 04 */	lwz r3, 4(r3)
 /* 8040D068 003D6628  4E 80 00 20 */	blr 
+.endfn GetZeroBufferAddress__Q44nw4r3snd6detail9AxManagerFv
 
-.global RegisterCallback__Q44nw4r3snd6detail9AxManagerFPQ54nw4r3snd6detail9AxManager16CallbackListNodePFv_v
-RegisterCallback__Q44nw4r3snd6detail9AxManagerFPQ54nw4r3snd6detail9AxManager16CallbackListNodePFv_v:
+.fn RegisterCallback__Q44nw4r3snd6detail9AxManagerFPQ54nw4r3snd6detail9AxManager16CallbackListNodePFv_v, global
 /* 8040D06C 003D662C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8040D070 003D6630  7C 08 02 A6 */	mflr r0
 /* 8040D074 003D6634  90 01 00 24 */	stw r0, 0x24(r1)
@@ -885,9 +885,9 @@ RegisterCallback__Q44nw4r3snd6detail9AxManagerFPQ54nw4r3snd6detail9AxManager16Ca
 /* 8040D0CC 003D668C  7C 08 03 A6 */	mtlr r0
 /* 8040D0D0 003D6690  38 21 00 20 */	addi r1, r1, 0x20
 /* 8040D0D4 003D6694  4E 80 00 20 */	blr 
+.endfn RegisterCallback__Q44nw4r3snd6detail9AxManagerFPQ54nw4r3snd6detail9AxManager16CallbackListNodePFv_v
 
-.global UnregisterCallback__Q44nw4r3snd6detail9AxManagerFPQ54nw4r3snd6detail9AxManager16CallbackListNode
-UnregisterCallback__Q44nw4r3snd6detail9AxManagerFPQ54nw4r3snd6detail9AxManager16CallbackListNode:
+.fn UnregisterCallback__Q44nw4r3snd6detail9AxManagerFPQ54nw4r3snd6detail9AxManager16CallbackListNode, global
 /* 8040D0D8 003D6698  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8040D0DC 003D669C  7C 08 02 A6 */	mflr r0
 /* 8040D0E0 003D66A0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -910,9 +910,9 @@ UnregisterCallback__Q44nw4r3snd6detail9AxManagerFPQ54nw4r3snd6detail9AxManager16
 /* 8040D124 003D66E4  7C 08 03 A6 */	mtlr r0
 /* 8040D128 003D66E8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8040D12C 003D66EC  4E 80 00 20 */	blr 
+.endfn UnregisterCallback__Q44nw4r3snd6detail9AxManagerFPQ54nw4r3snd6detail9AxManager16CallbackListNode
 
-.global SetOutputMode__Q44nw4r3snd6detail9AxManagerFQ34nw4r3snd10OutputMode
-SetOutputMode__Q44nw4r3snd6detail9AxManagerFQ34nw4r3snd10OutputMode:
+.fn SetOutputMode__Q44nw4r3snd6detail9AxManagerFQ34nw4r3snd10OutputMode, global
 /* 8040D130 003D66F0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8040D134 003D66F4  7C 08 02 A6 */	mflr r0
 /* 8040D138 003D66F8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -990,14 +990,14 @@ SetOutputMode__Q44nw4r3snd6detail9AxManagerFQ34nw4r3snd10OutputMode:
 /* 8040D22C 003D67EC  7C 08 03 A6 */	mtlr r0
 /* 8040D230 003D67F0  38 21 00 30 */	addi r1, r1, 0x30
 /* 8040D234 003D67F4  4E 80 00 20 */	blr 
+.endfn SetOutputMode__Q44nw4r3snd6detail9AxManagerFQ34nw4r3snd10OutputMode
 
-.global GetOutputMode__Q44nw4r3snd6detail9AxManagerFv
-GetOutputMode__Q44nw4r3snd6detail9AxManagerFv:
+.fn GetOutputMode__Q44nw4r3snd6detail9AxManagerFv, global
 /* 8040D238 003D67F8  80 63 00 00 */	lwz r3, 0(r3)
 /* 8040D23C 003D67FC  4E 80 00 20 */	blr 
+.endfn GetOutputMode__Q44nw4r3snd6detail9AxManagerFv
 
-.global SetMasterVolume__Q44nw4r3snd6detail9AxManagerFfi
-SetMasterVolume__Q44nw4r3snd6detail9AxManagerFfi:
+.fn SetMasterVolume__Q44nw4r3snd6detail9AxManagerFfi, global
 /* 8040D240 003D6800  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8040D244 003D6804  7C 08 02 A6 */	mflr r0
 /* 8040D248 003D6808  C0 A2 C2 FC */	lfs f5, float_8066C67C@sda21(r2)
@@ -1060,9 +1060,9 @@ SetMasterVolume__Q44nw4r3snd6detail9AxManagerFfi:
 /* 8040D314 003D68D4  7C 08 03 A6 */	mtlr r0
 /* 8040D318 003D68D8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8040D31C 003D68DC  4E 80 00 20 */	blr
+.endfn SetMasterVolume__Q44nw4r3snd6detail9AxManagerFfi
 
-.global AxCallbackFunc__Q44nw4r3snd6detail9AxManagerFv
-AxCallbackFunc__Q44nw4r3snd6detail9AxManagerFv:
+.fn AxCallbackFunc__Q44nw4r3snd6detail9AxManagerFv, global
 /* 8040D320 003D68E0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8040D324 003D68E4  7C 08 02 A6 */	mflr r0
 /* 8040D328 003D68E8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1156,9 +1156,9 @@ AxCallbackFunc__Q44nw4r3snd6detail9AxManagerFv:
 /* 8040D46C 003D6A2C  7C 08 03 A6 */	mtlr r0
 /* 8040D470 003D6A30  38 21 00 30 */	addi r1, r1, 0x30
 /* 8040D474 003D6A34  4E 80 00 20 */	blr 
+.endfn AxCallbackFunc__Q44nw4r3snd6detail9AxManagerFv
 
-.global AppendEffect__Q44nw4r3snd6detail9AxManagerFQ34nw4r3snd6AuxBusPQ34nw4r3snd6FxBase
-AppendEffect__Q44nw4r3snd6detail9AxManagerFQ34nw4r3snd6AuxBusPQ34nw4r3snd6FxBase:
+.fn AppendEffect__Q44nw4r3snd6detail9AxManagerFQ34nw4r3snd6AuxBusPQ34nw4r3snd6FxBase, global
 /* 8040D478 003D6A38  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8040D47C 003D6A3C  7C 08 02 A6 */	mflr r0
 /* 8040D480 003D6A40  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1304,9 +1304,9 @@ AppendEffect__Q44nw4r3snd6detail9AxManagerFQ34nw4r3snd6AuxBusPQ34nw4r3snd6FxBase
 /* 8040D670 003D6C30  7C 08 03 A6 */	mtlr r0
 /* 8040D674 003D6C34  38 21 00 40 */	addi r1, r1, 0x40
 /* 8040D678 003D6C38  4E 80 00 20 */	blr 
+.endfn AppendEffect__Q44nw4r3snd6detail9AxManagerFQ34nw4r3snd6AuxBusPQ34nw4r3snd6FxBase
 
-.global ClearEffect__Q44nw4r3snd6detail9AxManagerFQ34nw4r3snd6AuxBusi
-ClearEffect__Q44nw4r3snd6detail9AxManagerFQ34nw4r3snd6AuxBusi:
+.fn ClearEffect__Q44nw4r3snd6detail9AxManagerFQ34nw4r3snd6AuxBusi, global
 /* 8040D67C 003D6C3C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8040D680 003D6C40  7C 08 02 A6 */	mflr r0
 /* 8040D684 003D6C44  2C 05 00 00 */	cmpwi r5, 0
@@ -1400,9 +1400,9 @@ ClearEffect__Q44nw4r3snd6detail9AxManagerFQ34nw4r3snd6AuxBusi:
 /* 8040D7CC 003D6D8C  7C 08 03 A6 */	mtlr r0
 /* 8040D7D0 003D6D90  38 21 00 20 */	addi r1, r1, 0x20
 /* 8040D7D4 003D6D94  4E 80 00 20 */	blr 
+.endfn ClearEffect__Q44nw4r3snd6detail9AxManagerFQ34nw4r3snd6AuxBusi
 
-.global ShutdownEffect__Q44nw4r3snd6detail9AxManagerFQ34nw4r3snd6AuxBus
-ShutdownEffect__Q44nw4r3snd6detail9AxManagerFQ34nw4r3snd6AuxBus:
+.fn ShutdownEffect__Q44nw4r3snd6detail9AxManagerFQ34nw4r3snd6AuxBus, global
 /* 8040D7D8 003D6D98  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8040D7DC 003D6D9C  7C 08 02 A6 */	mflr r0
 /* 8040D7E0 003D6DA0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1476,9 +1476,9 @@ ShutdownEffect__Q44nw4r3snd6detail9AxManagerFQ34nw4r3snd6AuxBus:
 /* 8040D8CC 003D6E8C  7C 08 03 A6 */	mtlr r0
 /* 8040D8D0 003D6E90  38 21 00 20 */	addi r1, r1, 0x20
 /* 8040D8D4 003D6E94  4E 80 00 20 */	blr
+.endfn ShutdownEffect__Q44nw4r3snd6detail9AxManagerFQ34nw4r3snd6AuxBus
 
-.global AuxCallbackFunc__Q44nw4r3snd6detail9AxManagerFPvPv
-AuxCallbackFunc__Q44nw4r3snd6detail9AxManagerFPvPv:
+.fn AuxCallbackFunc__Q44nw4r3snd6detail9AxManagerFPvPv, global
 /* 8040D8D8 003D6E98  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8040D8DC 003D6E9C  7C 08 02 A6 */	mflr r0
 /* 8040D8E0 003D6EA0  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1747,9 +1747,9 @@ AuxCallbackFunc__Q44nw4r3snd6detail9AxManagerFPvPv:
 /* 8040DCA8 003D7268  7C 08 03 A6 */	mtlr r0
 /* 8040DCAC 003D726C  38 21 00 40 */	addi r1, r1, 0x40
 /* 8040DCB0 003D7270  4E 80 00 20 */	blr
+.endfn AuxCallbackFunc__Q44nw4r3snd6detail9AxManagerFPvPv
 
-.global sinit_8040DCB4
-sinit_8040DCB4:
+.fn sinit_8040DCB4, global
 /* 8040DCB4 003D7274  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040DCB8 003D7278  7C 08 02 A6 */	mflr r0
 /* 8040DCBC 003D727C  3C 60 80 57 */	lis r3, lbl_8056E068@ha
@@ -1801,9 +1801,9 @@ sinit_8040DCB4:
 /* 8040DD74 003D7334  7C 08 03 A6 */	mtlr r0
 /* 8040DD78 003D7338  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040DD7C 003D733C  4E 80 00 20 */	blr
+.endfn sinit_8040DCB4
 
-.global func_8040DD80
-func_8040DD80:
+.fn func_8040DD80, global
 /* 8040DD80 003D7340  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040DD84 003D7344  7C 08 02 A6 */	mflr r0
 /* 8040DD88 003D7348  2C 03 00 00 */	cmpwi r3, 0
@@ -1821,9 +1821,9 @@ func_8040DD80:
 /* 8040DDB4 003D7374  7C 08 03 A6 */	mtlr r0
 /* 8040DDB8 003D7378  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040DDBC 003D737C  4E 80 00 20 */	blr
+.endfn func_8040DD80
 
-.global func_8040DDC0
-func_8040DDC0:
+.fn func_8040DDC0, global
 /* 8040DDC0 003D7380  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040DDC4 003D7384  7C 08 02 A6 */	mflr r0
 /* 8040DDC8 003D7388  2C 03 00 00 */	cmpwi r3, 0
@@ -1841,9 +1841,9 @@ func_8040DDC0:
 /* 8040DDF4 003D73B4  7C 08 03 A6 */	mtlr r0
 /* 8040DDF8 003D73B8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040DDFC 003D73BC  4E 80 00 20 */	blr
+.endfn func_8040DDC0
 
-.global func_8040DE00
-func_8040DE00:
+.fn func_8040DE00, global
 /* 8040DE00 003D73C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040DE04 003D73C4  7C 08 02 A6 */	mflr r0
 /* 8040DE08 003D73C8  2C 03 00 00 */	cmpwi r3, 0
@@ -1861,9 +1861,9 @@ func_8040DE00:
 /* 8040DE34 003D73F4  7C 08 03 A6 */	mtlr r0
 /* 8040DE38 003D73F8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040DE3C 003D73FC  4E 80 00 20 */	blr
+.endfn func_8040DE00
 
-.global func_8040DE40
-func_8040DE40:
+.fn func_8040DE40, global
 /* 8040DE40 003D7400  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040DE44 003D7404  7C 08 02 A6 */	mflr r0
 /* 8040DE48 003D7408  2C 03 00 00 */	cmpwi r3, 0
@@ -1881,9 +1881,9 @@ func_8040DE40:
 /* 8040DE74 003D7434  7C 08 03 A6 */	mtlr r0
 /* 8040DE78 003D7438  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040DE7C 003D743C  4E 80 00 20 */	blr
+.endfn func_8040DE40
 
-.global func_8040DE80
-func_8040DE80:
+.fn func_8040DE80, global
 /* 8040DE80 003D7440  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040DE84 003D7444  7C 08 02 A6 */	mflr r0
 /* 8040DE88 003D7448  2C 03 00 00 */	cmpwi r3, 0
@@ -1901,6 +1901,7 @@ func_8040DE80:
 /* 8040DEB4 003D7474  7C 08 03 A6 */	mtlr r0
 /* 8040DEB8 003D7478  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040DEBC 003D747C  4E 80 00 20 */	blr 
+.endfn func_8040DE80
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 

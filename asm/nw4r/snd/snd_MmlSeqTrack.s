@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __ct__Q44nw4r3snd6detail11MmlSeqTrackFv
-__ct__Q44nw4r3snd6detail11MmlSeqTrackFv:
+.fn __ct__Q44nw4r3snd6detail11MmlSeqTrackFv, global
 /* 80418794 003E1D54  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80418798 003E1D58  7C 08 02 A6 */	mflr r0
 /* 8041879C 003E1D5C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -19,18 +18,18 @@ __ct__Q44nw4r3snd6detail11MmlSeqTrackFv:
 /* 804187C4 003E1D84  7C 08 03 A6 */	mtlr r0
 /* 804187C8 003E1D88  38 21 00 10 */	addi r1, r1, 0x10
 /* 804187CC 003E1D8C  4E 80 00 20 */	blr
+.endfn __ct__Q44nw4r3snd6detail11MmlSeqTrackFv
 
 
-.global Parse__Q44nw4r3snd6detail11MmlSeqTrackFb
-Parse__Q44nw4r3snd6detail11MmlSeqTrackFb:
+.fn Parse__Q44nw4r3snd6detail11MmlSeqTrackFb, global
 /* 804187D0 003E1D90  7C 60 1B 78 */	mr r0, r3
 /* 804187D4 003E1D94  80 63 00 C8 */	lwz r3, 0xc8(r3)
 /* 804187D8 003E1D98  7C 85 23 78 */	mr r5, r4
 /* 804187DC 003E1D9C  7C 04 03 78 */	mr r4, r0
 /* 804187E0 003E1DA0  4B FF EE 10 */	b Parse__Q44nw4r3snd6detail9MmlParserCFPQ44nw4r3snd6detail11MmlSeqTrackb
+.endfn Parse__Q44nw4r3snd6detail11MmlSeqTrackFb
 
-.global __dt__Q44nw4r3snd6detail11MmlSeqTrackFv
-__dt__Q44nw4r3snd6detail11MmlSeqTrackFv:
+.fn __dt__Q44nw4r3snd6detail11MmlSeqTrackFv, global
 /* 804187E4 003E1DA4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804187E8 003E1DA8  7C 08 02 A6 */	mflr r0
 /* 804187EC 003E1DAC  2C 03 00 00 */	cmpwi r3, 0
@@ -54,6 +53,7 @@ __dt__Q44nw4r3snd6detail11MmlSeqTrackFv:
 /* 80418830 003E1DF0  7C 08 03 A6 */	mtlr r0
 /* 80418834 003E1DF4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80418838 003E1DF8  4E 80 00 20 */	blr
+.endfn __dt__Q44nw4r3snd6detail11MmlSeqTrackFv
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

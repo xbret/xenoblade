@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global ADX_GetCoefficient
-ADX_GetCoefficient:
+.fn ADX_GetCoefficient, global
 /* 80389AC4 00353084  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80389AC8 00353088  7C 08 02 A6 */	mflr r0
 /* 80389ACC 0035308C  90 01 00 64 */	stw r0, 0x64(r1)
@@ -77,9 +76,9 @@ ADX_GetCoefficient:
 /* 80389BDC 0035319C  7C 08 03 A6 */	mtlr r0
 /* 80389BE0 003531A0  38 21 00 60 */	addi r1, r1, 0x60
 /* 80389BE4 003531A4  4E 80 00 20 */	blr 
+.endfn ADX_GetCoefficient
 
-.global ADX_ScanInfoCode
-ADX_ScanInfoCode:
+.fn ADX_ScanInfoCode, global
 /* 80389BE8 003531A8  34 84 FF FF */	addic. r4, r4, -1
 /* 80389BEC 003531AC  3C C0 80 00 */	lis r6, 0x7FFFFFFF@ha
 /* 80389BF0 003531B0  38 E6 FF FF */	addi r7, r6, 0x7FFFFFFF@l
@@ -114,9 +113,9 @@ ADX_ScanInfoCode:
 /* 80389C54 00353214  38 60 FF FF */	li r3, -1
 /* 80389C58 00353218  B0 05 00 00 */	sth r0, 0(r5)
 /* 80389C5C 0035321C  4E 80 00 20 */	blr 
+.endfn ADX_ScanInfoCode
 
-.global ADX_DecodeInfo
-ADX_DecodeInfo:
+.fn ADX_DecodeInfo, global
 /* 80389C60 00353220  2C 04 00 10 */	cmpwi r4, 0x10
 /* 80389C64 00353224  81 61 00 08 */	lwz r11, 8(r1)
 /* 80389C68 00353228  80 81 00 0C */	lwz r4, 0xc(r1)
@@ -179,9 +178,9 @@ ADX_DecodeInfo:
 .L_80389D40:
 /* 80389D40 00353300  38 60 00 00 */	li r3, 0
 /* 80389D44 00353304  4E 80 00 20 */	blr 
+.endfn ADX_DecodeInfo
 
-.global ADX_DecodeInfoExADPCM2
-ADX_DecodeInfoExADPCM2:
+.fn ADX_DecodeInfoExADPCM2, global
 /* 80389D48 00353308  2C 04 00 12 */	cmpwi r4, 0x12
 /* 80389D4C 0035330C  40 80 00 0C */	bge .L_80389D58
 /* 80389D50 00353310  38 60 FF FF */	li r3, -1
@@ -203,9 +202,9 @@ ADX_DecodeInfoExADPCM2:
 /* 80389D84 00353344  38 60 00 00 */	li r3, 0
 /* 80389D88 00353348  B0 05 00 00 */	sth r0, 0(r5)
 /* 80389D8C 0035334C  4E 80 00 20 */	blr 
+.endfn ADX_DecodeInfoExADPCM2
 
-.global ADX_DecodeInfoExVer
-ADX_DecodeInfoExVer:
+.fn ADX_DecodeInfoExVer, global
 /* 80389D90 00353350  2C 04 00 14 */	cmpwi r4, 0x14
 /* 80389D94 00353354  40 80 00 0C */	bge .L_80389DA0
 /* 80389D98 00353358  38 60 FF FF */	li r3, -1
@@ -229,9 +228,9 @@ ADX_DecodeInfoExVer:
 /* 80389DD4 00353394  38 60 00 00 */	li r3, 0
 /* 80389DD8 00353398  98 06 00 00 */	stb r0, 0(r6)
 /* 80389DDC 0035339C  4E 80 00 20 */	blr 
+.endfn ADX_DecodeInfoExVer
 
-.global ADX_DecodeInfoExIdly
-ADX_DecodeInfoExIdly:
+.fn ADX_DecodeInfoExIdly, global
 /* 80389DE0 003533A0  2C 04 00 14 */	cmpwi r4, 0x14
 /* 80389DE4 003533A4  40 80 00 0C */	bge .L_80389DF0
 /* 80389DE8 003533A8  38 00 FF FF */	li r0, -1
@@ -294,9 +293,9 @@ ADX_DecodeInfoExIdly:
 .L_80389EA8:
 /* 80389EA8 00353468  38 60 00 00 */	li r3, 0
 /* 80389EAC 0035346C  4E 80 00 20 */	blr 
+.endfn ADX_DecodeInfoExIdly
 
-.global ADX_DecodeInfoExLoop
-ADX_DecodeInfoExLoop:
+.fn ADX_DecodeInfoExLoop, global
 /* 80389EB0 00353470  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80389EB4 00353474  38 00 00 00 */	li r0, 0
 /* 80389EB8 00353478  2C 04 00 14 */	cmpwi r4, 0x14
@@ -380,9 +379,9 @@ ADX_DecodeInfoExLoop:
 /* 80389FC0 00353580  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80389FC4 00353584  38 21 00 10 */	addi r1, r1, 0x10
 /* 80389FC8 00353588  4E 80 00 20 */	blr 
+.endfn ADX_DecodeInfoExLoop
 
-.global ADX_DecodeInfoAinf
-ADX_DecodeInfoAinf:
+.fn ADX_DecodeInfoAinf, global
 /* 80389FCC 0035358C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80389FD0 00353590  7C 08 02 A6 */	mflr r0
 /* 80389FD4 00353594  2C 04 00 14 */	cmpwi r4, 0x14
@@ -493,9 +492,9 @@ ADX_DecodeInfoAinf:
 /* 8038A144 00353704  7C 08 03 A6 */	mtlr r0
 /* 8038A148 00353708  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038A14C 0035370C  4E 80 00 20 */	blr 
+.endfn ADX_DecodeInfoAinf
 
-.global ADX_DecodeFooter
-ADX_DecodeFooter:
+.fn ADX_DecodeFooter, global
 /* 8038A150 00353710  2C 04 00 10 */	cmpwi r4, 0x10
 /* 8038A154 00353714  40 80 00 0C */	bge .L_8038A160
 /* 8038A158 00353718  38 60 FF FF */	li r3, -1
@@ -512,6 +511,7 @@ ADX_DecodeFooter:
 /* 8038A17C 0035373C  38 04 00 04 */	addi r0, r4, 4
 /* 8038A180 00353740  B0 05 00 00 */	sth r0, 0(r5)
 /* 8038A184 00353744  4E 80 00 20 */	blr 
+.endfn ADX_DecodeFooter
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

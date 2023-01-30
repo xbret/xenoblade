@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global GetInstance__Q44nw4r3snd6detail22DisposeCallbackManagerFv
-GetInstance__Q44nw4r3snd6detail22DisposeCallbackManagerFv:
+.fn GetInstance__Q44nw4r3snd6detail22DisposeCallbackManagerFv, global
 /* 80415034 003DE5F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80415038 003DE5F8  7C 08 02 A6 */	mflr r0
 /* 8041503C 003DE5FC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -39,9 +38,9 @@ GetInstance__Q44nw4r3snd6detail22DisposeCallbackManagerFv:
 /* 804150B0 003DE670  7C 08 03 A6 */	mtlr r0
 /* 804150B4 003DE674  38 21 00 10 */	addi r1, r1, 0x10
 /* 804150B8 003DE678  4E 80 00 20 */	blr
+.endfn GetInstance__Q44nw4r3snd6detail22DisposeCallbackManagerFv
 
-.global __dt__Q44nw4r3snd6detail22DisposeCallbackManagerFv
-__dt__Q44nw4r3snd6detail22DisposeCallbackManagerFv:
+.fn __dt__Q44nw4r3snd6detail22DisposeCallbackManagerFv, global
 /* 804150BC 003DE67C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804150C0 003DE680  7C 08 02 A6 */	mflr r0
 /* 804150C4 003DE684  2C 03 00 00 */	cmpwi r3, 0
@@ -67,9 +66,9 @@ __dt__Q44nw4r3snd6detail22DisposeCallbackManagerFv:
 /* 8041510C 003DE6CC  7C 08 03 A6 */	mtlr r0
 /* 80415110 003DE6D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80415114 003DE6D4  4E 80 00 20 */	blr 
+.endfn __dt__Q44nw4r3snd6detail22DisposeCallbackManagerFv
 
-.global RegisterDisposeCallback__Q44nw4r3snd6detail22DisposeCallbackManagerFPQ44nw4r3snd6detail15DisposeCallback
-RegisterDisposeCallback__Q44nw4r3snd6detail22DisposeCallbackManagerFPQ44nw4r3snd6detail15DisposeCallback:
+.fn RegisterDisposeCallback__Q44nw4r3snd6detail22DisposeCallbackManagerFPQ44nw4r3snd6detail15DisposeCallback, global
 /* 80415118 003DE6D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041511C 003DE6DC  7C 08 02 A6 */	mflr r0
 /* 80415120 003DE6E0  7C 85 23 78 */	mr r5, r4
@@ -82,13 +81,13 @@ RegisterDisposeCallback__Q44nw4r3snd6detail22DisposeCallbackManagerFPQ44nw4r3snd
 /* 8041513C 003DE6FC  7C 08 03 A6 */	mtlr r0
 /* 80415140 003DE700  38 21 00 10 */	addi r1, r1, 0x10
 /* 80415144 003DE704  4E 80 00 20 */	blr 
+.endfn RegisterDisposeCallback__Q44nw4r3snd6detail22DisposeCallbackManagerFPQ44nw4r3snd6detail15DisposeCallback
 
-.global UnregisterDisposeCallback__Q44nw4r3snd6detail22DisposeCallbackManagerFPQ44nw4r3snd6detail15DisposeCallback
-UnregisterDisposeCallback__Q44nw4r3snd6detail22DisposeCallbackManagerFPQ44nw4r3snd6detail15DisposeCallback:
+.fn UnregisterDisposeCallback__Q44nw4r3snd6detail22DisposeCallbackManagerFPQ44nw4r3snd6detail15DisposeCallback, global
 /* 80415148 003DE708  48 01 64 04 */	b Erase__Q44nw4r2ut6detail12LinkListImplFPQ34nw4r2ut12LinkListNode
+.endfn UnregisterDisposeCallback__Q44nw4r3snd6detail22DisposeCallbackManagerFPQ44nw4r3snd6detail15DisposeCallback
 
-.global Dispose__Q44nw4r3snd6detail22DisposeCallbackManagerFPvUlPv
-Dispose__Q44nw4r3snd6detail22DisposeCallbackManagerFPvUlPv:
+.fn Dispose__Q44nw4r3snd6detail22DisposeCallbackManagerFPvUlPv, global
 /* 8041514C 003DE70C  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80415150 003DE710  7C 08 02 A6 */	mflr r0
 /* 80415154 003DE714  90 01 00 44 */	stw r0, 0x44(r1)
@@ -172,9 +171,9 @@ Dispose__Q44nw4r3snd6detail22DisposeCallbackManagerFPvUlPv:
 /* 8041527C 003DE83C  7C 08 03 A6 */	mtlr r0
 /* 80415280 003DE840  38 21 00 40 */	addi r1, r1, 0x40
 /* 80415284 003DE844  4E 80 00 20 */	blr 
+.endfn Dispose__Q44nw4r3snd6detail22DisposeCallbackManagerFPvUlPv
 
-.global DisposeWave__Q44nw4r3snd6detail22DisposeCallbackManagerFPvUlPv
-DisposeWave__Q44nw4r3snd6detail22DisposeCallbackManagerFPvUlPv:
+.fn DisposeWave__Q44nw4r3snd6detail22DisposeCallbackManagerFPvUlPv, global
 /* 80415288 003DE848  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8041528C 003DE84C  7C 08 02 A6 */	mflr r0
 /* 80415290 003DE850  90 01 00 44 */	stw r0, 0x44(r1)
@@ -258,6 +257,7 @@ DisposeWave__Q44nw4r3snd6detail22DisposeCallbackManagerFPvUlPv:
 /* 804153B8 003DE978  7C 08 03 A6 */	mtlr r0
 /* 804153BC 003DE97C  38 21 00 40 */	addi r1, r1, 0x40
 /* 804153C0 003DE980  4E 80 00 20 */	blr 
+.endfn DisposeWave__Q44nw4r3snd6detail22DisposeCallbackManagerFPvUlPv
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

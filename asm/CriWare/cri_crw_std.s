@@ -2,38 +2,37 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global criCrw_GetVersion
-criCrw_GetVersion:
+.fn criCrw_GetVersion, global
 /* 8039B408 003649C8  3C 60 80 52 */	lis r3, lbl_8051CD90@ha
 /* 8039B40C 003649CC  3C 80 80 60 */	lis r4, lbl_80601360@ha
 /* 8039B410 003649D0  38 63 CD 90 */	addi r3, r3, lbl_8051CD90@l
 /* 8039B414 003649D4  90 64 13 60 */	stw r3, lbl_80601360@l(r4)
 /* 8039B418 003649D8  4E 80 00 20 */	blr 
+.endfn criCrw_GetVersion
 
-.global criCrw_Strcpy
-criCrw_Strcpy:
+.fn criCrw_Strcpy, global
 /* 8039B41C 003649DC  7C A4 2B 78 */	mr r4, r5
 /* 8039B420 003649E0  4B F2 72 98 */	b strcpy
+.endfn criCrw_Strcpy
 
-.global criCrw_Strncpy
-criCrw_Strncpy:
+.fn criCrw_Strncpy, global
 /* 8039B424 003649E4  7C A4 2B 78 */	mr r4, r5
 /* 8039B428 003649E8  7C C5 33 78 */	mr r5, r6
 /* 8039B42C 003649EC  4B F2 73 4C */	b strncpy
+.endfn criCrw_Strncpy
 
-.global criCrw_Strcat
-criCrw_Strcat:
+.fn criCrw_Strcat, global
 /* 8039B430 003649F0  7C A4 2B 78 */	mr r4, r5
 /* 8039B434 003649F4  4B F2 73 88 */	b strcat
+.endfn criCrw_Strcat
 
-.global criCrw_Strncat
-criCrw_Strncat:
+.fn criCrw_Strncat, global
 /* 8039B438 003649F8  7C A4 2B 78 */	mr r4, r5
 /* 8039B43C 003649FC  7C C5 33 78 */	mr r5, r6
 /* 8039B440 00364A00  4B F2 73 A8 */	b strncat
+.endfn criCrw_Strncat
 
-.global criCrw_Sprintf
-criCrw_Sprintf:
+.fn criCrw_Sprintf, global
 /* 8039B444 00364A04  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 8039B448 00364A08  7C 08 02 A6 */	mflr r0
 /* 8039B44C 00364A0C  90 01 00 84 */	stw r0, 0x84(r1)
@@ -71,17 +70,17 @@ criCrw_Sprintf:
 /* 8039B4C8 00364A88  7C 08 03 A6 */	mtlr r0
 /* 8039B4CC 00364A8C  38 21 00 80 */	addi r1, r1, 0x80
 /* 8039B4D0 00364A90  4E 80 00 20 */	blr 
+.endfn criCrw_Sprintf
 
-.global criCrw_Vsprintf
-criCrw_Vsprintf:
+.fn criCrw_Vsprintf, global
 /* 8039B4D4 00364A94  7C A4 2B 78 */	mr r4, r5
 /* 8039B4D8 00364A98  7C C5 33 78 */	mr r5, r6
 /* 8039B4DC 00364A9C  4B F2 59 E4 */	b vsprintf
+.endfn criCrw_Vsprintf
 
 #may not belong here?
 
-.global func_8039B4E0
-func_8039B4E0:
+.fn func_8039B4E0, global
 /* 8039B4E0 00364AA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039B4E4 00364AA4  7C 08 02 A6 */	mflr r0
 /* 8039B4E8 00364AA8  7C 04 30 00 */	cmpw r4, r6
@@ -299,6 +298,7 @@ func_8039B4E0:
 /* 8039B7EC 00364DAC  7C 08 03 A6 */	mtlr r0
 /* 8039B7F0 00364DB0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039B7F4 00364DB4  4E 80 00 20 */	blr
+.endfn func_8039B4E0
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

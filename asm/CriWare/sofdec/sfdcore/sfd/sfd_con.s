@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global SFD_SetConcatPlay
-SFD_SetConcatPlay:
+.fn SFD_SetConcatPlay, global
 /* 803BFD38 003892F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803BFD3C 003892FC  7C 08 02 A6 */	mflr r0
 /* 803BFD40 00389300  90 01 00 14 */	stw r0, 0x14(r1)
@@ -29,9 +28,9 @@ SFD_SetConcatPlay:
 /* 803BFD88 00389348  7C 08 03 A6 */	mtlr r0
 /* 803BFD8C 0038934C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803BFD90 00389350  4E 80 00 20 */	blr 
+.endfn SFD_SetConcatPlay
 
-.global SFCON_IsEndcodeSkip
-SFCON_IsEndcodeSkip:
+.fn SFCON_IsEndcodeSkip, global
 /* 803BFD94 00389354  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803BFD98 00389358  7C 08 02 A6 */	mflr r0
 /* 803BFD9C 0038935C  38 80 00 31 */	li r4, 0x31
@@ -44,9 +43,9 @@ SFCON_IsEndcodeSkip:
 /* 803BFDB8 00389378  7C 08 03 A6 */	mtlr r0
 /* 803BFDBC 0038937C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803BFDC0 00389380  4E 80 00 20 */	blr 
+.endfn SFCON_IsEndcodeSkip
 
-.global SFCON_IsSystemEndcodeSkip
-SFCON_IsSystemEndcodeSkip:
+.fn SFCON_IsSystemEndcodeSkip, global
 /* 803BFDC4 00389384  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803BFDC8 00389388  7C 08 02 A6 */	mflr r0
 /* 803BFDCC 0038938C  38 80 00 31 */	li r4, 0x31
@@ -72,9 +71,9 @@ SFCON_IsSystemEndcodeSkip:
 /* 803BFE10 003893D0  7C 08 03 A6 */	mtlr r0
 /* 803BFE14 003893D4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803BFE18 003893D8  4E 80 00 20 */	blr 
+.endfn SFCON_IsSystemEndcodeSkip
 
-.global SFCON_IsVideoEndcodeSkip
-SFCON_IsVideoEndcodeSkip:
+.fn SFCON_IsVideoEndcodeSkip, global
 /* 803BFE1C 003893DC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803BFE20 003893E0  7C 08 02 A6 */	mflr r0
 /* 803BFE24 003893E4  38 80 00 31 */	li r4, 0x31
@@ -100,9 +99,9 @@ SFCON_IsVideoEndcodeSkip:
 /* 803BFE68 00389428  7C 08 03 A6 */	mtlr r0
 /* 803BFE6C 0038942C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803BFE70 00389430  4E 80 00 20 */	blr 
+.endfn SFCON_IsVideoEndcodeSkip
 
-.global SFCON_UpdateConcatTime
-SFCON_UpdateConcatTime:
+.fn SFCON_UpdateConcatTime, global
 /* 803BFE74 00389434  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803BFE78 00389438  7C 08 02 A6 */	mflr r0
 /* 803BFE7C 0038943C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -134,9 +133,9 @@ SFCON_UpdateConcatTime:
 /* 803BFEE4 003894A4  7C 08 03 A6 */	mtlr r0
 /* 803BFEE8 003894A8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803BFEEC 003894AC  4E 80 00 20 */	blr
+.endfn SFCON_UpdateConcatTime
 
-.global SFCON_WriteTotSmplQue
-SFCON_WriteTotSmplQue:
+.fn SFCON_WriteTotSmplQue, global
 /* 803BFEF0 003894B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803BFEF4 003894B4  7C 08 02 A6 */	mflr r0
 /* 803BFEF8 003894B8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -183,6 +182,7 @@ SFCON_WriteTotSmplQue:
 /* 803BFF94 00389554  7C 08 03 A6 */	mtlr r0
 /* 803BFF98 00389558  38 21 00 20 */	addi r1, r1, 0x20
 /* 803BFF9C 0038955C  4E 80 00 20 */	blr 
+.endfn SFCON_WriteTotSmplQue
 
 .global SFCON_ReadTotSmplQue
 SFCON_ReadTotSmplQue:

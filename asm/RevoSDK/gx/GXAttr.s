@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global GXSetVtxDesc
-GXSetVtxDesc:
+.fn GXSetVtxDesc, global
 /* 80319230 002E27F0  28 03 00 19 */	cmplwi r3, 0x19
 /* 80319234 002E27F4  41 81 02 10 */	bgt switch_80319444
 /* 80319238 002E27F8  3C A0 80 55 */	lis r5, lbl_8054B8F0@ha
@@ -186,10 +185,10 @@ switch_80319444:
 /* 80319488 002E2A48  60 00 00 08 */	ori r0, r0, 8
 /* 8031948C 002E2A4C  90 04 05 FC */	stw r0, 0x5fc(r4)
 /* 80319490 002E2A50  4E 80 00 20 */	blr 
+.endfn GXSetVtxDesc
 
 .balign 16, 0
-.global __GXSetVCD
-__GXSetVCD:
+.fn __GXSetVCD, global
 /* 803194A0 002E2A60  3C A0 CC 01 */	lis r5, 0xCC008000@ha
 /* 803194A4 002E2A64  38 C0 00 08 */	li r6, 8
 /* 803194A8 002E2A68  98 C5 80 00 */	stb r6, 0xCC008000@l(r5)
@@ -236,10 +235,10 @@ __GXSetVCD:
 /* 80319544 002E2B04  90 86 80 00 */	stw r4, -0x8000(r6)
 /* 80319548 002E2B08  B0 03 00 02 */	sth r0, 2(r3)
 /* 8031954C 002E2B0C  4E 80 00 20 */	blr 
+.endfn __GXSetVCD
 
 .balign 16, 0
-.global __GXCalculateVLim
-__GXCalculateVLim:
+.fn __GXCalculateVLim, global
 /* 80319550 002E2B10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80319554 002E2B14  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
 /* 80319558 002E2B18  93 E1 00 0C */	stw r31, 0xc(r1)
@@ -317,10 +316,10 @@ __GXCalculateVLim:
 /* 80319670 002E2C30  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80319674 002E2C34  38 21 00 10 */	addi r1, r1, 0x10
 /* 80319678 002E2C38  4E 80 00 20 */	blr 
+.endfn __GXCalculateVLim
 
 .balign 16, 0
-.global GXClearVtxDesc
-GXClearVtxDesc:
+.fn GXClearVtxDesc, global
 /* 80319680 002E2C40  80 A2 BC 20 */	lwz r5, lbl_8066BFA0@sda21(r2)
 /* 80319684 002E2C44  38 00 00 01 */	li r0, 1
 /* 80319688 002E2C48  38 60 00 00 */	li r3, 0
@@ -334,10 +333,10 @@ GXClearVtxDesc:
 /* 803196A8 002E2C68  60 00 00 08 */	ori r0, r0, 8
 /* 803196AC 002E2C6C  90 05 05 FC */	stw r0, 0x5fc(r5)
 /* 803196B0 002E2C70  4E 80 00 20 */	blr 
+.endfn GXClearVtxDesc
 
 .balign 16, 0
-.global GXSetVtxAttrFmt
-GXSetVtxAttrFmt:
+.fn GXSetVtxAttrFmt, global
 /* 803196C0 002E2C80  38 04 FF F7 */	addi r0, r4, -9
 /* 803196C4 002E2C84  81 02 BC 20 */	lwz r8, lbl_8066BFA0@sda21(r2)
 /* 803196C8 002E2C88  28 00 00 10 */	cmplwi r0, 0x10
@@ -456,10 +455,10 @@ switch_80319830:
 /* 80319854 002E2E14  7C 60 03 78 */	or r0, r3, r0
 /* 80319858 002E2E18  98 05 05 FB */	stb r0, 0x5fb(r5)
 /* 8031985C 002E2E1C  4E 80 00 20 */	blr
+.endfn GXSetVtxAttrFmt
 
 .balign 16, 0
-.global GXSetVtxAttrFmtv
-GXSetVtxAttrFmtv:
+.fn GXSetVtxAttrFmtv, global
 /* 80319860 002E2E20  80 C2 BC 20 */	lwz r6, lbl_8066BFA0@sda21(r2)
 /* 80319864 002E2E24  54 60 10 3A */	slwi r0, r3, 2
 /* 80319868 002E2E28  3C A0 80 55 */	lis r5, lbl_8054B99C@ha
@@ -590,10 +589,10 @@ switch_803199E8:
 /* 80319A1C 002E2FDC  7C 60 03 78 */	or r0, r3, r0
 /* 80319A20 002E2FE0  98 05 05 FB */	stb r0, 0x5fb(r5)
 /* 80319A24 002E2FE4  4E 80 00 20 */	blr 
+.endfn GXSetVtxAttrFmtv
 
 .balign 16, 0
-.global __GXSetVAT
-__GXSetVAT:
+.fn __GXSetVAT, global
 /* 80319A30 002E2FF0  81 02 BC 20 */	lwz r8, lbl_8066BFA0@sda21(r2)
 /* 80319A34 002E2FF4  39 20 00 00 */	li r9, 0
 /* 80319A38 002E2FF8  38 C0 00 08 */	li r6, 8
@@ -628,10 +627,10 @@ __GXSetVAT:
 /* 80319AA4 002E3064  98 03 80 00 */	stb r0, 0xCC008000@l(r3)
 /* 80319AA8 002E3068  98 08 05 FB */	stb r0, 0x5fb(r8)
 /* 80319AAC 002E306C  4E 80 00 20 */	blr 
+.endfn __GXSetVAT
 
 .balign 16, 0
-.global GXSetArray
-GXSetArray:
+.fn GXSetArray, global
 /* 80319AB0 002E3070  2C 03 00 19 */	cmpwi r3, 0x19
 /* 80319AB4 002E3074  40 82 00 08 */	bne .L_80319ABC
 /* 80319AB8 002E3078  38 60 00 0A */	li r3, 0xa
@@ -649,18 +648,18 @@ GXSetArray:
 /* 80319AE4 002E30A4  98 06 80 00 */	stb r0, -0x8000(r6)
 /* 80319AE8 002E30A8  90 A6 80 00 */	stw r5, -0x8000(r6)
 /* 80319AEC 002E30AC  4E 80 00 20 */	blr 
+.endfn GXSetArray
 
 
-.global GXInvalidateVtxCache
-GXInvalidateVtxCache:
+.fn GXInvalidateVtxCache, global
 /* 80319AF0 002E30B0  3C 60 CC 01 */	lis r3, 0xCC008000@ha
 /* 80319AF4 002E30B4  38 00 00 48 */	li r0, 0x48
 /* 80319AF8 002E30B8  98 03 80 00 */	stb r0, 0xCC008000@l(r3)
 /* 80319AFC 002E30BC  4E 80 00 20 */	blr 
+.endfn GXInvalidateVtxCache
 
 
-.global GXSetTexCoordGen2
-GXSetTexCoordGen2:
+.fn GXSetTexCoordGen2, global
 /* 80319B00 002E30C0  28 05 00 14 */	cmplwi r5, 0x14
 /* 80319B04 002E30C4  39 40 00 00 */	li r10, 0
 /* 80319B08 002E30C8  39 80 00 00 */	li r12, 0
@@ -837,10 +836,10 @@ switch_80319BA8:
 /* 80319D38 002E32F8  64 00 04 00 */	oris r0, r0, 0x400
 /* 80319D3C 002E32FC  90 09 05 FC */	stw r0, 0x5fc(r9)
 /* 80319D40 002E3300  4E 80 00 20 */	blr 
+.endfn GXSetTexCoordGen2
 
 .balign 16, 0
-.global GXSetNumTexGens
-GXSetNumTexGens:
+.fn GXSetNumTexGens, global
 /* 80319D50 002E3310  80 82 BC 20 */	lwz r4, lbl_8066BFA0@sda21(r2)
 /* 80319D54 002E3314  80 04 02 54 */	lwz r0, 0x254(r4)
 /* 80319D58 002E3318  50 60 07 3E */	rlwimi r0, r3, 0, 0x1c, 0x1f
@@ -850,6 +849,7 @@ GXSetNumTexGens:
 /* 80319D68 002E3328  60 00 00 04 */	ori r0, r0, 4
 /* 80319D6C 002E332C  90 04 05 FC */	stw r0, 0x5fc(r4)
 /* 80319D70 002E3330  4E 80 00 20 */	blr 
+.endfn GXSetNumTexGens
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global GXCPInterruptHandler
-GXCPInterruptHandler:
+.fn GXCPInterruptHandler, global
 /* 80318600 002E1BC0  94 21 FD 20 */	stwu r1, -0x2e0(r1)
 /* 80318604 002E1BC4  7C 08 02 A6 */	mflr r0
 /* 80318608 002E1BC8  90 01 02 E4 */	stw r0, 0x2e4(r1)
@@ -96,10 +95,10 @@ GXCPInterruptHandler:
 /* 80318754 002E1D14  7C 08 03 A6 */	mtlr r0
 /* 80318758 002E1D18  38 21 02 E0 */	addi r1, r1, 0x2e0
 /* 8031875C 002E1D1C  4E 80 00 20 */	blr 
+.endfn GXCPInterruptHandler
 
 .balign 16, 0
-.global GXInitFifoBase
-GXInitFifoBase:
+.fn GXInitFifoBase, global
 /* 80318760 002E1D20  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80318764 002E1D24  7C 08 02 A6 */	mflr r0
 /* 80318768 002E1D28  7C E4 2A 14 */	add r7, r4, r5
@@ -136,10 +135,10 @@ GXInitFifoBase:
 /* 803187E0 002E1DA0  7C 08 03 A6 */	mtlr r0
 /* 803187E4 002E1DA4  38 21 00 20 */	addi r1, r1, 0x20
 /* 803187E8 002E1DA8  4E 80 00 20 */	blr 
+.endfn GXInitFifoBase
 
 .balign 16, 0
-.global CPGPLinkCheck
-CPGPLinkCheck:
+.fn CPGPLinkCheck, global
 /* 803187F0 002E1DB0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803187F4 002E1DB4  7C 08 02 A6 */	mflr r0
 /* 803187F8 002E1DB8  38 E0 00 00 */	li r7, 0
@@ -212,10 +211,10 @@ CPGPLinkCheck:
 /* 803188DC 002E1E9C  7C 08 03 A6 */	mtlr r0
 /* 803188E0 002E1EA0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803188E4 002E1EA4  4E 80 00 20 */	blr 
+.endfn CPGPLinkCheck
 
 .balign 16, 0
-.global GXSetCPUFifo
-GXSetCPUFifo:
+.fn GXSetCPUFifo, global
 /* 803188F0 002E1EB0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803188F4 002E1EB4  7C 08 02 A6 */	mflr r0
 /* 803188F8 002E1EB8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -341,10 +340,10 @@ GXSetCPUFifo:
 /* 80318AC4 002E2084  7C 08 03 A6 */	mtlr r0
 /* 80318AC8 002E2088  38 21 00 20 */	addi r1, r1, 0x20
 /* 80318ACC 002E208C  4E 80 00 20 */	blr 
+.endfn GXSetCPUFifo
 
 .balign 16, 0
-.global GXSetGPFifo
-GXSetGPFifo:
+.fn GXSetGPFifo, global
 /* 80318AD0 002E2090  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80318AD4 002E2094  7C 08 02 A6 */	mflr r0
 /* 80318AD8 002E2098  90 01 00 24 */	stw r0, 0x24(r1)
@@ -513,10 +512,10 @@ GXSetGPFifo:
 /* 80318D54 002E2314  7C 08 03 A6 */	mtlr r0
 /* 80318D58 002E2318  38 21 00 20 */	addi r1, r1, 0x20
 /* 80318D5C 002E231C  4E 80 00 20 */	blr 
+.endfn GXSetGPFifo
 
 .balign 16, 0
-.global __GXSaveFifo
-__GXSaveFifo:
+.fn __GXSaveFifo, global
 /* 80318D60 002E2320  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80318D64 002E2324  7C 08 02 A6 */	mflr r0
 /* 80318D68 002E2328  90 01 00 14 */	stw r0, 0x14(r1)
@@ -585,16 +584,16 @@ __GXSaveFifo:
 /* 80318E54 002E2414  7C 08 03 A6 */	mtlr r0
 /* 80318E58 002E2418  38 21 00 10 */	addi r1, r1, 0x10
 /* 80318E5C 002E241C  4E 80 00 20 */	blr 
+.endfn __GXSaveFifo
 
 .balign 16, 0
-.global __GXIsGPFifoReady
-__GXIsGPFifoReady:
+.fn __GXIsGPFifoReady, global
 /* 80318E60 002E2420  88 6D B7 B1 */	lbz r3, lbl_80667931@sda21(r13)
 /* 80318E64 002E2424  4E 80 00 20 */	blr 
+.endfn __GXIsGPFifoReady
 
 .balign 16, 0
-.global GXGetCPUFifo
-GXGetCPUFifo:
+.fn GXGetCPUFifo, global
 /* 80318E70 002E2430  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80318E74 002E2434  7C 08 02 A6 */	mflr r0
 /* 80318E78 002E2438  90 01 00 14 */	stw r0, 0x14(r1)
@@ -633,20 +632,20 @@ GXGetCPUFifo:
 /* 80318EF4 002E24B4  7C 08 03 A6 */	mtlr r0
 /* 80318EF8 002E24B8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80318EFC 002E24BC  4E 80 00 20 */	blr 
+.endfn GXGetCPUFifo
 
 #either GXGetFifoPtrs or GXGetFifoLimits
 .balign 16, 0
-.global func_80318F00
-func_80318F00:
+.fn func_80318F00, global
 /* 80318F00 002E24C0  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 80318F04 002E24C4  90 04 00 00 */	stw r0, 0(r4)
 /* 80318F08 002E24C8  80 03 00 18 */	lwz r0, 0x18(r3)
 /* 80318F0C 002E24CC  90 05 00 00 */	stw r0, 0(r5)
 /* 80318F10 002E24D0  4E 80 00 20 */	blr 
+.endfn func_80318F00
 
 .balign 16, 0
-.global GXSetBreakPtCallback
-GXSetBreakPtCallback:
+.fn GXSetBreakPtCallback, global
 /* 80318F20 002E24E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80318F24 002E24E4  7C 08 02 A6 */	mflr r0
 /* 80318F28 002E24E8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -664,10 +663,10 @@ GXSetBreakPtCallback:
 /* 80318F58 002E2518  7C 08 03 A6 */	mtlr r0
 /* 80318F5C 002E251C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80318F60 002E2520  4E 80 00 20 */	blr 
+.endfn GXSetBreakPtCallback
 
 .balign 16, 0
-.global GXDisableBreakPt
-GXDisableBreakPt:
+.fn GXDisableBreakPt, global
 /* 80318F70 002E2530  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80318F74 002E2534  7C 08 02 A6 */	mflr r0
 /* 80318F78 002E2538  90 01 00 14 */	stw r0, 0x14(r1)
@@ -708,10 +707,10 @@ GXDisableBreakPt:
 /* 80319004 002E25C4  7C 08 03 A6 */	mtlr r0
 /* 80319008 002E25C8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031900C 002E25CC  4E 80 00 20 */	blr 
+.endfn GXDisableBreakPt
 
 .balign 16, 0
-.global __GXFifoInit
-__GXFifoInit:
+.fn __GXFifoInit, global
 /* 80319010 002E25D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80319014 002E25D4  7C 08 02 A6 */	mflr r0
 /* 80319018 002E25D8  3C 80 80 32 */	lis r4, GXCPInterruptHandler@ha
@@ -743,10 +742,10 @@ __GXFifoInit:
 /* 80319080 002E2640  7C 08 03 A6 */	mtlr r0
 /* 80319084 002E2644  38 21 00 10 */	addi r1, r1, 0x10
 /* 80319088 002E2648  4E 80 00 20 */	blr 
+.endfn __GXFifoInit
 
 .balign 16, 0
-.global __GXCleanGPFifo
-__GXCleanGPFifo:
+.fn __GXCleanGPFifo, global
 /* 80319090 002E2650  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80319094 002E2654  7C 08 02 A6 */	mflr r0
 /* 80319098 002E2658  90 01 00 24 */	stw r0, 0x24(r1)
@@ -853,6 +852,7 @@ __GXCleanGPFifo:
 /* 80319224 002E27E4  7C 08 03 A6 */	mtlr r0
 /* 80319228 002E27E8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8031922C 002E27EC  4E 80 00 20 */	blr 
+.endfn __GXCleanGPFifo
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

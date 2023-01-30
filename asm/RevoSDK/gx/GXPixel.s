@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global GXSetFog
-GXSetFog:
+.fn GXSetFog, global
 /* 8031DCF0 002E72B0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8031DCF4 002E72B4  7C 08 02 A6 */	mflr r0
 /* 8031DCF8 002E72B8  90 01 00 44 */	stw r0, 0x44(r1)
@@ -156,10 +155,10 @@ GXSetFog:
 /* 8031DF10 002E74D0  7C 08 03 A6 */	mtlr r0
 /* 8031DF14 002E74D4  38 21 00 40 */	addi r1, r1, 0x40
 /* 8031DF18 002E74D8  4E 80 00 20 */	blr 
+.endfn GXSetFog
 
 .balign 16, 0
-.global GXInitFogAdjTable
-GXInitFogAdjTable:
+.fn GXInitFogAdjTable, global
 /* 8031DF20 002E74E0  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 8031DF24 002E74E4  7C 08 02 A6 */	mflr r0
 /* 8031DF28 002E74E8  C8 22 BD 08 */	lfd f1, double_8066C088@sda21(r2)
@@ -251,10 +250,10 @@ GXInitFogAdjTable:
 /* 8031E074 002E7634  7C 08 03 A6 */	mtlr r0
 /* 8031E078 002E7638  38 21 00 80 */	addi r1, r1, 0x80
 /* 8031E07C 002E763C  4E 80 00 20 */	blr 
+.endfn GXInitFogAdjTable
 
 .balign 16, 0
-.global GXSetFogRangeAdj
-GXSetFogRangeAdj:
+.fn GXSetFogRangeAdj, global
 /* 8031E080 002E7640  2C 03 00 00 */	cmpwi r3, 0
 /* 8031E084 002E7644  41 82 00 D4 */	beq .L_8031E158
 /* 8031E088 002E7648  A1 65 00 00 */	lhz r11, 0(r5)
@@ -324,10 +323,10 @@ GXSetFogRangeAdj:
 /* 8031E184 002E7744  90 C5 80 00 */	stw r6, -0x8000(r5)
 /* 8031E188 002E7748  B0 03 00 02 */	sth r0, 2(r3)
 /* 8031E18C 002E774C  4E 80 00 20 */	blr 
+.endfn GXSetFogRangeAdj
 
 .balign 16, 0
-.global GXSetBlendMode
-GXSetBlendMode:
+.fn GXSetBlendMode, global
 /* 8031E190 002E7750  81 42 BC 20 */	lwz r10, lbl_8066BFA0@sda21(r2)
 /* 8031E194 002E7754  38 03 FF FD */	addi r0, r3, -3
 /* 8031E198 002E7758  39 03 FF FE */	addi r8, r3, -2
@@ -348,10 +347,10 @@ GXSetBlendMode:
 /* 8031E1D4 002E7794  91 2A 02 20 */	stw r9, 0x220(r10)
 /* 8031E1D8 002E7798  B0 0A 00 02 */	sth r0, 2(r10)
 /* 8031E1DC 002E779C  4E 80 00 20 */	blr 
+.endfn GXSetBlendMode
 
 .balign 16, 0
-.global GXSetColorUpdate
-GXSetColorUpdate:
+.fn GXSetColorUpdate, global
 /* 8031E1E0 002E77A0  80 E2 BC 20 */	lwz r7, lbl_8066BFA0@sda21(r2)
 /* 8031E1E4 002E77A4  3C 80 CC 01 */	lis r4, 0xCC008000@ha
 /* 8031E1E8 002E77A8  38 A0 00 61 */	li r5, 0x61
@@ -363,10 +362,10 @@ GXSetColorUpdate:
 /* 8031E200 002E77C0  90 C7 02 20 */	stw r6, 0x220(r7)
 /* 8031E204 002E77C4  B0 07 00 02 */	sth r0, 2(r7)
 /* 8031E208 002E77C8  4E 80 00 20 */	blr 
+.endfn GXSetColorUpdate
 
 .balign 16, 0
-.global GXSetAlphaUpdate
-GXSetAlphaUpdate:
+.fn GXSetAlphaUpdate, global
 /* 8031E210 002E77D0  80 E2 BC 20 */	lwz r7, lbl_8066BFA0@sda21(r2)
 /* 8031E214 002E77D4  3C 80 CC 01 */	lis r4, 0xCC008000@ha
 /* 8031E218 002E77D8  38 A0 00 61 */	li r5, 0x61
@@ -378,10 +377,10 @@ GXSetAlphaUpdate:
 /* 8031E230 002E77F0  90 C7 02 20 */	stw r6, 0x220(r7)
 /* 8031E234 002E77F4  B0 07 00 02 */	sth r0, 2(r7)
 /* 8031E238 002E77F8  4E 80 00 20 */	blr 
+.endfn GXSetAlphaUpdate
 
 .balign 16, 0
-.global GXSetZMode
-GXSetZMode:
+.fn GXSetZMode, global
 /* 8031E240 002E7800  81 22 BC 20 */	lwz r9, lbl_8066BFA0@sda21(r2)
 /* 8031E244 002E7804  3C C0 CC 01 */	lis r6, 0xCC008000@ha
 /* 8031E248 002E7808  38 E0 00 61 */	li r7, 0x61
@@ -395,10 +394,10 @@ GXSetZMode:
 /* 8031E268 002E7828  91 09 02 28 */	stw r8, 0x228(r9)
 /* 8031E26C 002E782C  B0 09 00 02 */	sth r0, 2(r9)
 /* 8031E270 002E7830  4E 80 00 20 */	blr 
+.endfn GXSetZMode
 
 .balign 16, 0
-.global GXSetZCompLoc
-GXSetZCompLoc:
+.fn GXSetZCompLoc, global
 /* 8031E280 002E7840  80 E2 BC 20 */	lwz r7, lbl_8066BFA0@sda21(r2)
 /* 8031E284 002E7844  3C 80 CC 01 */	lis r4, 0xCC008000@ha
 /* 8031E288 002E7848  38 A0 00 61 */	li r5, 0x61
@@ -411,10 +410,10 @@ GXSetZCompLoc:
 /* 8031E2A4 002E7864  90 64 80 00 */	stw r3, -0x8000(r4)
 /* 8031E2A8 002E7868  B0 07 00 02 */	sth r0, 2(r7)
 /* 8031E2AC 002E786C  4E 80 00 20 */	blr 
+.endfn GXSetZCompLoc
 
 .balign 16, 0
-.global GXSetPixelFmt
-GXSetPixelFmt:
+.fn GXSetPixelFmt, global
 /* 8031E2B0 002E7870  81 22 BC 20 */	lwz r9, lbl_8066BFA0@sda21(r2)
 /* 8031E2B4 002E7874  3C C0 80 55 */	lis r6, lbl_8054C110@ha
 /* 8031E2B8 002E7878  54 67 10 3A */	slwi r7, r3, 2
@@ -459,10 +458,10 @@ GXSetPixelFmt:
 /* 8031E34C 002E790C  38 00 00 00 */	li r0, 0
 /* 8031E350 002E7910  B0 09 00 02 */	sth r0, 2(r9)
 /* 8031E354 002E7914  4E 80 00 20 */	blr 
+.endfn GXSetPixelFmt
 
 .balign 16, 0
-.global GXSetDither
-GXSetDither:
+.fn GXSetDither, global
 /* 8031E360 002E7920  80 E2 BC 20 */	lwz r7, lbl_8066BFA0@sda21(r2)
 /* 8031E364 002E7924  3C 80 CC 01 */	lis r4, 0xCC008000@ha
 /* 8031E368 002E7928  38 A0 00 61 */	li r5, 0x61
@@ -474,10 +473,10 @@ GXSetDither:
 /* 8031E380 002E7940  90 C7 02 20 */	stw r6, 0x220(r7)
 /* 8031E384 002E7944  B0 07 00 02 */	sth r0, 2(r7)
 /* 8031E388 002E7948  4E 80 00 20 */	blr 
+.endfn GXSetDither
 
 .balign 16, 0
-.global GXSetDstAlpha
-GXSetDstAlpha:
+.fn GXSetDstAlpha, global
 /* 8031E390 002E7950  81 02 BC 20 */	lwz r8, lbl_8066BFA0@sda21(r2)
 /* 8031E394 002E7954  3C A0 CC 01 */	lis r5, 0xCC008000@ha
 /* 8031E398 002E7958  38 C0 00 61 */	li r6, 0x61
@@ -490,10 +489,10 @@ GXSetDstAlpha:
 /* 8031E3B4 002E7974  90 E8 02 24 */	stw r7, 0x224(r8)
 /* 8031E3B8 002E7978  B0 08 00 02 */	sth r0, 2(r8)
 /* 8031E3BC 002E797C  4E 80 00 20 */	blr 
+.endfn GXSetDstAlpha
 
 .balign 16, 0
-.global GXSetFieldMask
-GXSetFieldMask:
+.fn GXSetFieldMask, global
 /* 8031E3C0 002E7980  3C A0 CC 01 */	lis r5, 0xCC008000@ha
 /* 8031E3C4 002E7984  38 00 00 61 */	li r0, 0x61
 /* 8031E3C8 002E7988  98 05 80 00 */	stb r0, 0xCC008000@l(r5)
@@ -507,10 +506,10 @@ GXSetFieldMask:
 /* 8031E3E8 002E79A8  38 00 00 00 */	li r0, 0
 /* 8031E3EC 002E79AC  B0 03 00 02 */	sth r0, 2(r3)
 /* 8031E3F0 002E79B0  4E 80 00 20 */	blr 
+.endfn GXSetFieldMask
 
 .balign 16, 0
-.global GXSetFieldMode
-GXSetFieldMode:
+.fn GXSetFieldMode, global
 /* 8031E400 002E79C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8031E404 002E79C4  7C 08 02 A6 */	mflr r0
 /* 8031E408 002E79C8  80 A2 BC 20 */	lwz r5, lbl_8066BFA0@sda21(r2)
@@ -539,6 +538,7 @@ GXSetFieldMode:
 /* 8031E464 002E7A24  7C 08 03 A6 */	mtlr r0
 /* 8031E468 002E7A28  38 21 00 20 */	addi r1, r1, 0x20
 /* 8031E46C 002E7A2C  4E 80 00 20 */	blr 
+.endfn GXSetFieldMode
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

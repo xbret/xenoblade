@@ -2,8 +2,9 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80479F04
-func_80479F04:
+
+
+.fn func_80479F04, global
 /* 80479F04 004434C4  88 0D C0 00 */	lbz r0, lbl_80668180@sda21(r13)
 /* 80479F08 004434C8  7C 00 07 75 */	extsb. r0, r0
 /* 80479F0C 004434CC  40 82 00 18 */	bne .L_80479F24
@@ -15,8 +16,11 @@ func_80479F04:
 .L_80479F24:
 /* 80479F24 004434E4  38 6D C0 04 */	addi r3, r13, lbl_80668184@sda21
 /* 80479F28 004434E8  4E 80 00 20 */	blr 
+.endfn func_80479F04
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+
 
 .global lbl_80668180
 lbl_80668180:

@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global TRK_memcpy
-TRK_memcpy:
+.fn TRK_memcpy, global
 /* 802CBB7C 0029513C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CBB80 00295140  2C 05 00 00 */	cmpwi r5, 0
 /* 802CBB84 00295144  39 20 00 FF */	li r9, 0xff
@@ -87,6 +86,7 @@ TRK_memcpy:
 /* 802CBCAC 0029526C  83 C1 00 08 */	lwz r30, 8(r1)
 /* 802CBCB0 00295270  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CBCB4 00295274  4E 80 00 20 */	blr 
+.endfn TRK_memcpy
 
 .global TRK_memset
 TRK_memset:

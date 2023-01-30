@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_80332730
-func_80332730:
+.fn func_80332730, global
 /* 80332730 002FBCF0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80332734 002FBCF4  7C 08 02 A6 */	mflr r0
 /* 80332738 002FBCF8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -84,10 +83,10 @@ func_80332730:
 /* 8033284C 002FBE0C  7C 08 03 A6 */	mtlr r0
 /* 80332850 002FBE10  38 21 00 20 */	addi r1, r1, 0x20
 /* 80332854 002FBE14  4E 80 00 20 */	blr 
+.endfn func_80332730
 
 .balign 16, 0
-.global func_80332860
-func_80332860:
+.fn func_80332860, global
 /* 80332860 002FBE20  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80332864 002FBE24  7C 08 02 A6 */	mflr r0
 /* 80332868 002FBE28  2C 03 00 00 */	cmpwi r3, 0
@@ -142,10 +141,10 @@ func_80332860:
 /* 80332924 002FBEE4  7C 08 03 A6 */	mtlr r0
 /* 80332928 002FBEE8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8033292C 002FBEEC  4E 80 00 20 */	blr 
+.endfn func_80332860
 
 .balign 16, 0
-.global func_80332930
-func_80332930:
+.fn func_80332930, global
 /* 80332930 002FBEF0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80332934 002FBEF4  7C 08 02 A6 */	mflr r0
 /* 80332938 002FBEF8  38 A0 00 00 */	li r5, 0
@@ -165,10 +164,10 @@ func_80332930:
 /* 80332970 002FBF30  7C 08 03 A6 */	mtlr r0
 /* 80332974 002FBF34  38 21 00 30 */	addi r1, r1, 0x30
 /* 80332978 002FBF38  4E 80 00 20 */	blr 
+.endfn func_80332930
 
 .balign 16, 0
-.global func_80332980
-func_80332980:
+.fn func_80332980, global
 /* 80332980 002FBF40  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80332984 002FBF44  7C 08 02 A6 */	mflr r0
 /* 80332988 002FBF48  90 01 00 34 */	stw r0, 0x34(r1)
@@ -264,19 +263,19 @@ func_80332980:
 /* 80332AE4 002FC0A4  7C 08 03 A6 */	mtlr r0
 /* 80332AE8 002FC0A8  38 21 00 30 */	addi r1, r1, 0x30
 /* 80332AEC 002FC0AC  4E 80 00 20 */	blr 
+.endfn func_80332980
 
 .balign 16, 0
-.global func_80332AF0
-func_80332AF0:
+.fn func_80332AF0, global
 /* 80332AF0 002FC0B0  54 A0 10 3A */	slwi r0, r5, 2
 /* 80332AF4 002FC0B4  7C 84 02 14 */	add r4, r4, r0
 /* 80332AF8 002FC0B8  80 04 00 D4 */	lwz r0, 0xd4(r4)
 /* 80332AFC 002FC0BC  90 03 00 00 */	stw r0, 0(r3)
 /* 80332B00 002FC0C0  4E 80 00 20 */	blr 
+.endfn func_80332AF0
 
 .balign 16, 0
-.global func_80332B10
-func_80332B10:
+.fn func_80332B10, global
 /* 80332B10 002FC0D0  54 80 10 3A */	slwi r0, r4, 2
 /* 80332B14 002FC0D4  88 C5 00 00 */	lbz r6, 0(r5)
 /* 80332B18 002FC0D8  7C 83 02 14 */	add r4, r3, r0
@@ -288,30 +287,30 @@ func_80332B10:
 /* 80332B30 002FC0F0  98 64 00 D6 */	stb r3, 0xd6(r4)
 /* 80332B34 002FC0F4  98 04 00 D7 */	stb r0, 0xd7(r4)
 /* 80332B38 002FC0F8  4E 80 00 20 */	blr 
+.endfn func_80332B10
 
 .balign 16, 0
-.global GetVtxColorElement__Q36nw4hbm3lyt7PictureCFUl
-GetVtxColorElement__Q36nw4hbm3lyt7PictureCFUl:
+.fn GetVtxColorElement__Q36nw4hbm3lyt7PictureCFUl, global
 /* 80332B40 002FC100  54 85 00 3A */	rlwinm r5, r4, 0, 0, 0x1d
 /* 80332B44 002FC104  54 80 07 BE */	clrlwi r0, r4, 0x1e
 /* 80332B48 002FC108  7C 63 2A 14 */	add r3, r3, r5
 /* 80332B4C 002FC10C  7C 63 02 14 */	add r3, r3, r0
 /* 80332B50 002FC110  88 63 00 D4 */	lbz r3, 0xd4(r3)
 /* 80332B54 002FC114  4E 80 00 20 */	blr 
+.endfn GetVtxColorElement__Q36nw4hbm3lyt7PictureCFUl
 
 .balign 16, 0
-.global SetVtxColorElement__Q36nw4hbm3lyt7PictureFUlUc
-SetVtxColorElement__Q36nw4hbm3lyt7PictureFUlUc:
+.fn SetVtxColorElement__Q36nw4hbm3lyt7PictureFUlUc, global
 /* 80332B60 002FC120  54 86 00 3A */	rlwinm r6, r4, 0, 0, 0x1d
 /* 80332B64 002FC124  54 80 07 BE */	clrlwi r0, r4, 0x1e
 /* 80332B68 002FC128  7C 63 32 14 */	add r3, r3, r6
 /* 80332B6C 002FC12C  7C 63 02 14 */	add r3, r3, r0
 /* 80332B70 002FC130  98 A3 00 D4 */	stb r5, 0xd4(r3)
 /* 80332B74 002FC134  4E 80 00 20 */	blr 
+.endfn SetVtxColorElement__Q36nw4hbm3lyt7PictureFUlUc
 
 .balign 16, 0
-.global DrawSelf__Q36nw4hbm3lyt7PictureFRCQ36nw4hbm3lyt8DrawInfo
-DrawSelf__Q36nw4hbm3lyt7PictureFRCQ36nw4hbm3lyt8DrawInfo:
+.fn DrawSelf__Q36nw4hbm3lyt7PictureFRCQ36nw4hbm3lyt8DrawInfo, global
 /* 80332B80 002FC140  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80332B84 002FC144  7C 08 02 A6 */	mflr r0
 /* 80332B88 002FC148  90 01 00 24 */	stw r0, 0x24(r1)
@@ -370,23 +369,24 @@ DrawSelf__Q36nw4hbm3lyt7PictureFRCQ36nw4hbm3lyt8DrawInfo:
 /* 80332C50 002FC210  7C 08 03 A6 */	mtlr r0
 /* 80332C54 002FC214  38 21 00 20 */	addi r1, r1, 0x20
 /* 80332C58 002FC218  4E 80 00 20 */	blr 
+.endfn DrawSelf__Q36nw4hbm3lyt7PictureFRCQ36nw4hbm3lyt8DrawInfo
 
 .balign 16, 0
-.global GetRuntimeTypeInfo__Q36nw4hbm3lyt7PictureCFv
-GetRuntimeTypeInfo__Q36nw4hbm3lyt7PictureCFv:
+.fn GetRuntimeTypeInfo__Q36nw4hbm3lyt7PictureCFv, global
 /* 80332C60 002FC220  3C 60 80 5D */	lis r3, lbl_805CD7C8@ha
 /* 80332C64 002FC224  38 63 D7 C8 */	addi r3, r3, lbl_805CD7C8@l
 /* 80332C68 002FC228  4E 80 00 20 */	blr 
+.endfn GetRuntimeTypeInfo__Q36nw4hbm3lyt7PictureCFv
 
 .balign 16, 0
 #__sinit_\lyt_picture_cpp
-.global __sinit_lyt_picture_cpp
-__sinit_lyt_picture_cpp:
+.fn __sinit_lyt_picture_cpp, global
 /* 80332C70 002FC230  3C 80 80 5D */	lis r4, lbl_805CD7C0@ha
 /* 80332C74 002FC234  3C 60 80 5D */	lis r3, lbl_805CD7C8@ha
 /* 80332C78 002FC238  38 84 D7 C0 */	addi r4, r4, lbl_805CD7C0@l
 /* 80332C7C 002FC23C  90 83 D7 C8 */	stw r4, lbl_805CD7C8@l(r3)
 /* 80332C80 002FC240  4E 80 00 20 */	blr
+.endfn __sinit_lyt_picture_cpp
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 

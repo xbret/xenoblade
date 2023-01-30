@@ -2,8 +2,9 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80494678
-func_80494678:
+
+
+.fn func_80494678, global
 /* 80494678 0045DC38  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049467C 0045DC3C  7C 08 02 A6 */	mflr r0
 /* 80494680 0045DC40  90 01 00 14 */	stw r0, 0x14(r1)
@@ -21,9 +22,9 @@ func_80494678:
 /* 804946B0 0045DC70  7C 08 03 A6 */	mtlr r0
 /* 804946B4 0045DC74  38 21 00 10 */	addi r1, r1, 0x10
 /* 804946B8 0045DC78  4E 80 00 20 */	blr 
+.endfn func_80494678
 
-.global func_804946BC
-func_804946BC:
+.fn func_804946BC, global
 /* 804946BC 0045DC7C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804946C0 0045DC80  7C 08 02 A6 */	mflr r0
 /* 804946C4 0045DC84  2C 03 00 00 */	cmpwi r3, 0
@@ -41,9 +42,12 @@ func_804946BC:
 /* 804946F0 0045DCB0  7C 08 03 A6 */	mtlr r0
 /* 804946F4 0045DCB4  38 21 00 10 */	addi r1, r1, 0x10
 /* 804946F8 0045DCB8  4E 80 00 20 */	blr 
+.endfn func_804946BC
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
 
 .global CVirtualLightAmb_typestr
 CVirtualLightAmb_typestr:
@@ -51,6 +55,8 @@ CVirtualLightAmb_typestr:
 	.balign 4
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
 
 .global __vt__CVirtualLightAmb
 __vt__CVirtualLightAmb:
@@ -69,29 +75,43 @@ CVirtualLightAmb_hierarchy:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+
+
 .global __RTTI__CVirtualLightAmb
 __RTTI__CVirtualLightAmb:
 	.4byte CVirtualLightAmb_typestr
 	.4byte CVirtualLightAmb_hierarchy
 
-.section extab_, "a"  # 0x800066E0 - 0x80021020
+.section extab, "a" # 0x800066E0 - 0x80021020
 
-.global lbl_8001EF14
-lbl_8001EF14:
+.balign 4
+
+.obj "@etb_8001EF14", local
+.hidden "@etb_8001EF14"
 	.4byte 0x08080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001EF14"
 
-.global lbl_8001EF1C
-lbl_8001EF1C:
+.obj "@etb_8001EF1C", local
+.hidden "@etb_8001EF1C"
 	.4byte 0x08080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001EF1C"
 
+.section extabindex, "a" # 0x80021020 - 0x80039220
 
-.section extabindex_, "a"  # 0x80021020 - 0x80039220
+.balign 4
 
-.4byte func_80494678
+.obj "@eti_80036AC4", local
+.hidden "@eti_80036AC4"
+	.4byte func_80494678
 	.4byte 0x00000044
-	.4byte lbl_8001EF14
+	.4byte "@etb_8001EF14"
+.endobj "@eti_80036AC4"
+
+.obj "@eti_80036AD0", local
+.hidden "@eti_80036AD0"
 	.4byte func_804946BC
 	.4byte 0x00000040
-	.4byte lbl_8001EF1C
+	.4byte "@etb_8001EF1C"
+.endobj "@eti_80036AD0"

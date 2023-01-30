@@ -3,15 +3,14 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global SFD_IsVersionCompatible
-SFD_IsVersionCompatible:
+.fn SFD_IsVersionCompatible, global
 /* 803C0A60 0038A020  38 04 C6 78 */	addi r0, r4, -14728
 /* 803C0A64 0038A024  7C 00 00 34 */	cntlzw r0, r0
 /* 803C0A68 0038A028  54 03 D9 7E */	srwi r3, r0, 5
 /* 803C0A6C 0038A02C  4E 80 00 20 */	blr 
+.endfn SFD_IsVersionCompatible
 
-.global SFD_Init
-SFD_Init:
+.fn SFD_Init, global
 /* 803C0A70 0038A030  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803C0A74 0038A034  7C 08 02 A6 */	mflr r0
 /* 803C0A78 0038A038  90 01 00 24 */	stw r0, 0x24(r1)
@@ -71,9 +70,9 @@ switch_803C0AC4:
 /* 803C0B44 0038A104  7C 08 03 A6 */	mtlr r0
 /* 803C0B48 0038A108  38 21 00 20 */	addi r1, r1, 0x20
 /* 803C0B4C 0038A10C  4E 80 00 20 */	blr 
+.endfn SFD_Init
 
-.global sflib_InitLibWork
-sflib_InitLibWork:
+.fn sflib_InitLibWork, global
 /* 803C0B50 0038A110  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803C0B54 0038A114  7C 08 02 A6 */	mflr r0
 /* 803C0B58 0038A118  38 80 00 00 */	li r4, 0
@@ -133,9 +132,9 @@ sflib_InitLibWork:
 /* 803C0C2C 0038A1EC  7C 08 03 A6 */	mtlr r0
 /* 803C0C30 0038A1F0  38 21 00 20 */	addi r1, r1, 0x20
 /* 803C0C34 0038A1F4  4E 80 00 20 */	blr 
+.endfn sflib_InitLibWork
 
-.global SFLIB_InitErrInf
-SFLIB_InitErrInf:
+.fn SFLIB_InitErrInf, global
 /* 803C0C38 0038A1F8  38 00 00 00 */	li r0, 0
 /* 803C0C3C 0038A1FC  90 03 00 00 */	stw r0, 0(r3)
 /* 803C0C40 0038A200  90 03 00 04 */	stw r0, 4(r3)
@@ -143,9 +142,9 @@ SFLIB_InitErrInf:
 /* 803C0C48 0038A208  90 03 00 0C */	stw r0, 0xc(r3)
 /* 803C0C4C 0038A20C  90 03 00 10 */	stw r0, 0x10(r3)
 /* 803C0C50 0038A210  4E 80 00 20 */	blr 
+.endfn SFLIB_InitErrInf
 
-.global SFLIB_SetErr
-SFLIB_SetErr:
+.fn SFLIB_SetErr, global
 /* 803C0C54 0038A214  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803C0C58 0038A218  7C 08 02 A6 */	mflr r0
 /* 803C0C5C 0038A21C  2C 04 00 00 */	cmpwi r4, 0
@@ -235,9 +234,9 @@ SFLIB_SetErr:
 /* 803C0D88 0038A348  7C 08 03 A6 */	mtlr r0
 /* 803C0D8C 0038A34C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803C0D90 0038A350  4E 80 00 20 */	blr 
+.endfn SFLIB_SetErr
 
-.global func_803C0D94
-func_803C0D94:
+.fn func_803C0D94, global
 /* 803C0D94 0038A354  2C 03 00 00 */	cmpwi r3, 0
 /* 803C0D98 0038A358  40 82 00 18 */	bne .L_803C0DB0
 /* 803C0D9C 0038A35C  3C 60 80 61 */	lis r3, SFLIB_libwork@ha
@@ -272,9 +271,9 @@ func_803C0D94:
 .L_803C0DFC:
 /* 803C0DFC 0038A3BC  38 60 00 00 */	li r3, 0
 /* 803C0E00 0038A3C0  4E 80 00 20 */	blr 
+.endfn func_803C0D94
 
-.global SFLIB_CheckHn
-SFLIB_CheckHn:
+.fn SFLIB_CheckHn, global
 /* 803C0E04 0038A3C4  2C 03 00 00 */	cmpwi r3, 0
 /* 803C0E08 0038A3C8  40 82 00 0C */	bne .L_803C0E14
 /* 803C0E0C 0038A3CC  38 60 FF FF */	li r3, -1
@@ -290,14 +289,15 @@ SFLIB_CheckHn:
 /* 803C0E2C 0038A3EC  90 64 A5 10 */	stw r3, lbl_8060A510@l(r4)
 /* 803C0E30 0038A3F0  38 60 00 00 */	li r3, 0
 /* 803C0E34 0038A3F4  4E 80 00 20 */	blr 
+.endfn SFLIB_CheckHn
 
-.global SFLIB_LockCs
-SFLIB_LockCs:
+.fn SFLIB_LockCs, global
 /* 803C0E38 0038A3F8  4B FD 5B 64 */	b SVM_Lock
+.endfn SFLIB_LockCs
 
-.global SFLIB_UnlockCs
-SFLIB_UnlockCs:
+.fn SFLIB_UnlockCs, global
 /* 803C0E3C 0038A3FC  4B FD 5B C8 */	b SVM_Unlock
+.endfn SFLIB_UnlockCs
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0

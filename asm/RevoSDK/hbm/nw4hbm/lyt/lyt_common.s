@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global EqualsPaneName__Q36nw4hbm3lyt6detailFPCcPCc
-EqualsPaneName__Q36nw4hbm3lyt6detailFPCcPCc:
+.fn EqualsPaneName__Q36nw4hbm3lyt6detailFPCcPCc, global
 /* 8032C590 002F5B50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8032C594 002F5B54  7C 08 02 A6 */	mflr r0
 /* 8032C598 002F5B58  38 A0 00 10 */	li r5, 0x10
@@ -16,10 +15,10 @@ EqualsPaneName__Q36nw4hbm3lyt6detailFPCcPCc:
 /* 8032C5B0 002F5B70  7C 08 03 A6 */	mtlr r0
 /* 8032C5B4 002F5B74  38 21 00 10 */	addi r1, r1, 0x10
 /* 8032C5B8 002F5B78  4E 80 00 20 */	blr 
+.endfn EqualsPaneName__Q36nw4hbm3lyt6detailFPCcPCc
 
 .balign 16, 0
-.global EqualsPaneName__Q36nw4hbm3lyt6detailFPCUcPCUc
-EqualsPaneName__Q36nw4hbm3lyt6detailFPCUcPCUc:
+.fn EqualsPaneName__Q36nw4hbm3lyt6detailFPCUcPCUc, global
 /* 8032C5C0 002F5B80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8032C5C4 002F5B84  7C 08 02 A6 */	mflr r0
 /* 8032C5C8 002F5B88  38 A0 00 14 */	li r5, 0x14
@@ -31,10 +30,10 @@ EqualsPaneName__Q36nw4hbm3lyt6detailFPCUcPCUc:
 /* 8032C5E0 002F5BA0  7C 08 03 A6 */	mtlr r0
 /* 8032C5E4 002F5BA4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8032C5E8 002F5BA8  4E 80 00 20 */	blr 
+.endfn EqualsPaneName__Q36nw4hbm3lyt6detailFPCUcPCUc
 
 .balign 16, 0
-.global TestFileHeader__Q36nw4hbm3lyt6detailFRCQ46nw4hbm3lyt3res16BinaryFileHeader
-TestFileHeader__Q36nw4hbm3lyt6detailFRCQ46nw4hbm3lyt3res16BinaryFileHeader:
+.fn TestFileHeader__Q36nw4hbm3lyt6detailFRCQ46nw4hbm3lyt3res16BinaryFileHeader, global
 /* 8032C5F0 002F5BB0  A0 03 00 04 */	lhz r0, 4(r3)
 /* 8032C5F4 002F5BB4  38 80 00 00 */	li r4, 0
 /* 8032C5F8 002F5BB8  28 00 FE FF */	cmplwi r0, 0xfeff
@@ -46,10 +45,10 @@ TestFileHeader__Q36nw4hbm3lyt6detailFRCQ46nw4hbm3lyt3res16BinaryFileHeader:
 .L_8032C610:
 /* 8032C610 002F5BD0  7C 83 23 78 */	mr r3, r4
 /* 8032C614 002F5BD4  4E 80 00 20 */	blr 
+.endfn TestFileHeader__Q36nw4hbm3lyt6detailFRCQ46nw4hbm3lyt3res16BinaryFileHeader
 
 .balign 16, 0
-.global TestFileHeader__Q36nw4hbm3lyt6detailFRCQ46nw4hbm3lyt3res16BinaryFileHeaderUl
-TestFileHeader__Q36nw4hbm3lyt6detailFRCQ46nw4hbm3lyt3res16BinaryFileHeaderUl:
+.fn TestFileHeader__Q36nw4hbm3lyt6detailFRCQ46nw4hbm3lyt3res16BinaryFileHeaderUl, global
 /* 8032C620 002F5BE0  80 03 00 00 */	lwz r0, 0(r3)
 /* 8032C624 002F5BE4  38 A0 00 00 */	li r5, 0
 /* 8032C628 002F5BE8  7C 04 00 40 */	cmplw r4, r0
@@ -64,19 +63,19 @@ TestFileHeader__Q36nw4hbm3lyt6detailFRCQ46nw4hbm3lyt3res16BinaryFileHeaderUl:
 .L_8032C64C:
 /* 8032C64C 002F5C0C  7C A3 2B 78 */	mr r3, r5
 /* 8032C650 002F5C10  4E 80 00 20 */	blr 
+.endfn TestFileHeader__Q36nw4hbm3lyt6detailFRCQ46nw4hbm3lyt3res16BinaryFileHeaderUl
 
 .balign 16, 0
-.global __ct__Q46nw4hbm3lyt6detail11TexCoordAryFv
-__ct__Q46nw4hbm3lyt6detail11TexCoordAryFv:
+.fn __ct__Q46nw4hbm3lyt6detail11TexCoordAryFv, global
 /* 8032C660 002F5C20  38 00 00 00 */	li r0, 0
 /* 8032C664 002F5C24  98 03 00 00 */	stb r0, 0(r3)
 /* 8032C668 002F5C28  98 03 00 01 */	stb r0, 1(r3)
 /* 8032C66C 002F5C2C  90 03 00 04 */	stw r0, 4(r3)
 /* 8032C670 002F5C30  4E 80 00 20 */	blr 
+.endfn __ct__Q46nw4hbm3lyt6detail11TexCoordAryFv
 
 .balign 16, 0
-.global Free__Q46nw4hbm3lyt6detail11TexCoordAryFv
-Free__Q46nw4hbm3lyt6detail11TexCoordAryFv:
+.fn Free__Q46nw4hbm3lyt6detail11TexCoordAryFv, global
 /* 8032C680 002F5C40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8032C684 002F5C44  7C 08 02 A6 */	mflr r0
 /* 8032C688 002F5C48  90 01 00 14 */	stw r0, 0x14(r1)
@@ -98,10 +97,10 @@ Free__Q46nw4hbm3lyt6detail11TexCoordAryFv:
 /* 8032C6C4 002F5C84  7C 08 03 A6 */	mtlr r0
 /* 8032C6C8 002F5C88  38 21 00 10 */	addi r1, r1, 0x10
 /* 8032C6CC 002F5C8C  4E 80 00 20 */	blr 
+.endfn Free__Q46nw4hbm3lyt6detail11TexCoordAryFv
 
 .balign 16, 0
-.global Reserve__Q46nw4hbm3lyt6detail11TexCoordAryFUc
-Reserve__Q46nw4hbm3lyt6detail11TexCoordAryFUc:
+.fn Reserve__Q46nw4hbm3lyt6detail11TexCoordAryFUc, global
 /* 8032C6D0 002F5C90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8032C6D4 002F5C94  7C 08 02 A6 */	mflr r0
 /* 8032C6D8 002F5C98  90 01 00 14 */	stw r0, 0x14(r1)
@@ -138,10 +137,10 @@ Reserve__Q46nw4hbm3lyt6detail11TexCoordAryFUc:
 /* 8032C74C 002F5D0C  7C 08 03 A6 */	mtlr r0
 /* 8032C750 002F5D10  38 21 00 10 */	addi r1, r1, 0x10
 /* 8032C754 002F5D14  4E 80 00 20 */	blr 
+.endfn Reserve__Q46nw4hbm3lyt6detail11TexCoordAryFUc
 
 .balign 16, 0
-.global SetSize__Q46nw4hbm3lyt6detail11TexCoordAryFUc
-SetSize__Q46nw4hbm3lyt6detail11TexCoordAryFUc:
+.fn SetSize__Q46nw4hbm3lyt6detail11TexCoordAryFUc, global
 /* 8032C760 002F5D20  80 03 00 04 */	lwz r0, 4(r3)
 /* 8032C764 002F5D24  2C 00 00 00 */	cmpwi r0, 0
 /* 8032C768 002F5D28  4D 82 00 20 */	beqlr 
@@ -207,10 +206,10 @@ SetSize__Q46nw4hbm3lyt6detail11TexCoordAryFUc:
 .L_8032C850:
 /* 8032C850 002F5E10  98 83 00 01 */	stb r4, 1(r3)
 /* 8032C854 002F5E14  4E 80 00 20 */	blr 
+.endfn SetSize__Q46nw4hbm3lyt6detail11TexCoordAryFUc
 
 .balign 16, 0
-.global Copy__Q46nw4hbm3lyt6detail11TexCoordAryFPCvUc
-Copy__Q46nw4hbm3lyt6detail11TexCoordAryFPCvUc:
+.fn Copy__Q46nw4hbm3lyt6detail11TexCoordAryFPCvUc, global
 /* 8032C860 002F5E20  88 03 00 01 */	lbz r0, 1(r3)
 /* 8032C864 002F5E24  7C 00 28 40 */	cmplw r0, r5
 /* 8032C868 002F5E28  40 80 00 08 */	bge .L_8032C870
@@ -250,10 +249,10 @@ Copy__Q46nw4hbm3lyt6detail11TexCoordAryFPCvUc:
 /* 8032C8E8 002F5EA8  D0 05 00 1C */	stfs f0, 0x1c(r5)
 /* 8032C8EC 002F5EAC  42 00 FF 98 */	bdnz .L_8032C884
 /* 8032C8F0 002F5EB0  4E 80 00 20 */	blr 
+.endfn Copy__Q46nw4hbm3lyt6detail11TexCoordAryFPCvUc
 
 .balign 16, 0
-.global IsModulateVertexColor__Q36nw4hbm3lyt6detailFPQ36nw4hbm2ut5ColorUc
-IsModulateVertexColor__Q36nw4hbm3lyt6detailFPQ36nw4hbm2ut5ColorUc:
+.fn IsModulateVertexColor__Q36nw4hbm3lyt6detailFPQ36nw4hbm2ut5ColorUc, global
 /* 8032C900 002F5EC0  28 04 00 FF */	cmplwi r4, 0xff
 /* 8032C904 002F5EC4  41 82 00 0C */	beq .L_8032C910
 /* 8032C908 002F5EC8  38 60 00 01 */	li r3, 1
@@ -283,10 +282,10 @@ IsModulateVertexColor__Q36nw4hbm3lyt6detailFPQ36nw4hbm2ut5ColorUc:
 .L_8032C960:
 /* 8032C960 002F5F20  38 60 00 00 */	li r3, 0
 /* 8032C964 002F5F24  4E 80 00 20 */	blr 
+.endfn IsModulateVertexColor__Q36nw4hbm3lyt6detailFPQ36nw4hbm2ut5ColorUc
 
 .balign 16, 0
-.global MultipleAlpha__Q36nw4hbm3lyt6detailFQ36nw4hbm2ut5ColorUc
-MultipleAlpha__Q36nw4hbm3lyt6detailFQ36nw4hbm2ut5ColorUc:
+.fn MultipleAlpha__Q36nw4hbm3lyt6detailFQ36nw4hbm2ut5ColorUc, global
 /* 8032C970 002F5F30  80 04 00 00 */	lwz r0, 0(r4)
 /* 8032C974 002F5F34  28 05 00 FF */	cmplwi r5, 0xff
 /* 8032C978 002F5F38  90 03 00 00 */	stw r0, 0(r3)
@@ -302,10 +301,10 @@ MultipleAlpha__Q36nw4hbm3lyt6detailFQ36nw4hbm2ut5ColorUc:
 /* 8032C9A0 002F5F60  7C 00 22 14 */	add r0, r0, r4
 /* 8032C9A4 002F5F64  98 03 00 03 */	stb r0, 3(r3)
 /* 8032C9A8 002F5F68  4E 80 00 20 */	blr 
+.endfn MultipleAlpha__Q36nw4hbm3lyt6detailFQ36nw4hbm2ut5ColorUc
 
 .balign 16, 0
-.global SetVertexFormat__Q36nw4hbm3lyt6detailFbUc
-SetVertexFormat__Q36nw4hbm3lyt6detailFbUc:
+.fn SetVertexFormat__Q36nw4hbm3lyt6detailFbUc, global
 /* 8032C9B0 002F5F70  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8032C9B4 002F5F74  7C 08 02 A6 */	mflr r0
 /* 8032C9B8 002F5F78  90 01 00 24 */	stw r0, 0x24(r1)
@@ -369,10 +368,10 @@ SetVertexFormat__Q36nw4hbm3lyt6detailFbUc:
 /* 8032CA88 002F6048  7C 08 03 A6 */	mtlr r0
 /* 8032CA8C 002F604C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8032CA90 002F6050  4E 80 00 20 */	blr 
+.endfn SetVertexFormat__Q36nw4hbm3lyt6detailFbUc
 
 .balign 16, 0
-.global DrawQuad__Q36nw4hbm3lyt6detailFRCQ36nw4hbm4math4VEC2RCQ36nw4hbm4math4VEC2RCQ36nw4hbm4math4VEC2RCQ36nw4hbm4math4VEC2PCQ36nw4hbm2ut5Color
-DrawQuad__Q36nw4hbm3lyt6detailFRCQ36nw4hbm4math4VEC2RCQ36nw4hbm4math4VEC2RCQ36nw4hbm4math4VEC2RCQ36nw4hbm4math4VEC2PCQ36nw4hbm2ut5Color:
+.fn DrawQuad__Q36nw4hbm3lyt6detailFRCQ36nw4hbm4math4VEC2RCQ36nw4hbm4math4VEC2RCQ36nw4hbm4math4VEC2RCQ36nw4hbm4math4VEC2PCQ36nw4hbm2ut5Color, global
 /* 8032CAA0 002F6060  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8032CAA4 002F6064  7C 08 02 A6 */	mflr r0
 /* 8032CAA8 002F6068  90 01 00 24 */	stw r0, 0x24(r1)
@@ -741,10 +740,10 @@ DrawQuad__Q36nw4hbm3lyt6detailFRCQ36nw4hbm4math4VEC2RCQ36nw4hbm4math4VEC2RCQ36nw
 /* 8032CFF4 002F65B4  7C 08 03 A6 */	mtlr r0
 /* 8032CFF8 002F65B8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8032CFFC 002F65BC  4E 80 00 20 */	blr 
+.endfn DrawQuad__Q36nw4hbm3lyt6detailFRCQ36nw4hbm4math4VEC2RCQ36nw4hbm4math4VEC2RCQ36nw4hbm4math4VEC2RCQ36nw4hbm4math4VEC2PCQ36nw4hbm2ut5Color
 
 .balign 16, 0
-.global DrawQuad__Q36nw4hbm3lyt6detailFRCQ36nw4hbm4math4VEC2RCQ36nw4hbm3lyt4SizeUcPA4_CQ36nw4hbm4math4VEC2PCQ36nw4hbm2ut5ColorUc
-DrawQuad__Q36nw4hbm3lyt6detailFRCQ36nw4hbm4math4VEC2RCQ36nw4hbm3lyt4SizeUcPA4_CQ36nw4hbm4math4VEC2PCQ36nw4hbm2ut5ColorUc:
+.fn DrawQuad__Q36nw4hbm3lyt6detailFRCQ36nw4hbm4math4VEC2RCQ36nw4hbm3lyt4SizeUcPA4_CQ36nw4hbm4math4VEC2PCQ36nw4hbm2ut5ColorUc, global
 /* 8032D000 002F65C0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8032D004 002F65C4  7C 08 02 A6 */	mflr r0
 /* 8032D008 002F65C8  2C 07 00 00 */	cmpwi r7, 0
@@ -826,10 +825,10 @@ DrawQuad__Q36nw4hbm3lyt6detailFRCQ36nw4hbm4math4VEC2RCQ36nw4hbm3lyt4SizeUcPA4_CQ
 /* 8032D128 002F66E8  7C 08 03 A6 */	mtlr r0
 /* 8032D12C 002F66EC  38 21 00 30 */	addi r1, r1, 0x30
 /* 8032D130 002F66F0  4E 80 00 20 */	blr 
+.endfn DrawQuad__Q36nw4hbm3lyt6detailFRCQ36nw4hbm4math4VEC2RCQ36nw4hbm3lyt4SizeUcPA4_CQ36nw4hbm4math4VEC2PCQ36nw4hbm2ut5ColorUc
 
 .balign 16, 0
-.global DrawLine__Q36nw4hbm3lyt6detailFRCQ36nw4hbm4math4VEC2RCQ36nw4hbm3lyt4SizeQ36nw4hbm2ut5Color
-DrawLine__Q36nw4hbm3lyt6detailFRCQ36nw4hbm4math4VEC2RCQ36nw4hbm3lyt4SizeQ36nw4hbm2ut5Color:
+.fn DrawLine__Q36nw4hbm3lyt6detailFRCQ36nw4hbm4math4VEC2RCQ36nw4hbm3lyt4SizeQ36nw4hbm2ut5Color, global
 /* 8032D140 002F6700  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8032D144 002F6704  7C 08 02 A6 */	mflr r0
 /* 8032D148 002F6708  90 01 00 24 */	stw r0, 0x24(r1)
@@ -932,10 +931,10 @@ DrawLine__Q36nw4hbm3lyt6detailFRCQ36nw4hbm4math4VEC2RCQ36nw4hbm3lyt4SizeQ36nw4hb
 /* 8032D2CC 002F688C  7C 08 03 A6 */	mtlr r0
 /* 8032D2D0 002F6890  38 21 00 20 */	addi r1, r1, 0x20
 /* 8032D2D4 002F6894  4E 80 00 20 */	blr 
+.endfn DrawLine__Q36nw4hbm3lyt6detailFRCQ36nw4hbm4math4VEC2RCQ36nw4hbm3lyt4SizeQ36nw4hbm2ut5Color
 
 .balign 16, 0
-.global InitGXTexObjFromTPL__Q36nw4hbm3lyt6detailFP9_GXTexObjP10TPLPaletteUl
-InitGXTexObjFromTPL__Q36nw4hbm3lyt6detailFP9_GXTexObjP10TPLPaletteUl:
+.fn InitGXTexObjFromTPL__Q36nw4hbm3lyt6detailFP9_GXTexObjP10TPLPaletteUl, global
 /* 8032D2E0 002F68A0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8032D2E4 002F68A4  7C 08 02 A6 */	mflr r0
 /* 8032D2E8 002F68A8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1019,6 +1018,7 @@ InitGXTexObjFromTPL__Q36nw4hbm3lyt6detailFP9_GXTexObjP10TPLPaletteUl:
 /* 8032D414 002F69D4  7C 08 03 A6 */	mtlr r0
 /* 8032D418 002F69D8  38 21 00 30 */	addi r1, r1, 0x30
 /* 8032D41C 002F69DC  4E 80 00 20 */	blr 
+.endfn InitGXTexObjFromTPL__Q36nw4hbm3lyt6detailFP9_GXTexObjP10TPLPaletteUl
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

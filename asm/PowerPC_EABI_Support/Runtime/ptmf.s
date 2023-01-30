@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __ptmf_test
-__ptmf_test:
+.fn __ptmf_test, global
 /* 802B9CF0 002832B0  80 A3 00 00 */	lwz r5, 0(r3)
 /* 802B9CF4 002832B4  80 C3 00 04 */	lwz r6, 4(r3)
 /* 802B9CF8 002832B8  80 E3 00 08 */	lwz r7, 8(r3)
@@ -16,9 +15,9 @@ __ptmf_test:
 /* 802B9D14 002832D4  4C 9E 00 20 */	bnelr cr7
 /* 802B9D18 002832D8  38 60 00 00 */	li r3, 0
 /* 802B9D1C 002832DC  4E 80 00 20 */	blr 
+.endfn __ptmf_test
 
-.global __ptmf_cmpr
-__ptmf_cmpr:
+.fn __ptmf_cmpr, global
 /* 802B9D20 002832E0  80 A3 00 00 */	lwz r5, 0(r3)
 /* 802B9D24 002832E4  80 C4 00 00 */	lwz r6, 0(r4)
 /* 802B9D28 002832E8  80 E3 00 04 */	lwz r7, 4(r3)
@@ -34,6 +33,7 @@ __ptmf_cmpr:
 /* 802B9D50 00283310  4C 9E 00 20 */	bnelr cr7
 /* 802B9D54 00283314  38 60 00 00 */	li r3, 0
 /* 802B9D58 00283318  4E 80 00 20 */	blr 
+.endfn __ptmf_cmpr
 
 .global __ptmf_scall
 __ptmf_scall:

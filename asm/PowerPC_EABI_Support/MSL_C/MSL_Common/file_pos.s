@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global _ftell
-_ftell:
+.fn _ftell, global
 /* 802BE2A0 00287860  80 03 00 04 */	lwz r0, 4(r3)
 /* 802BE2A4 00287864  38 C0 00 00 */	li r6, 0
 /* 802BE2A8 00287868  54 04 57 7E */	rlwinm r4, r0, 0xa, 0x1d, 0x1f
@@ -53,10 +52,11 @@ _ftell:
 .L_802BE340:
 /* 802BE340 00287900  7C E3 3B 78 */	mr r3, r7
 /* 802BE344 00287904  4E 80 00 20 */	blr 
+.endfn _ftell
 
-.global ftell
-ftell:
+.fn ftell, global
 /* 802BE348 00287908  4B FF FF 58 */	b _ftell
+.endfn ftell
 
 .global fseek
 fseek:

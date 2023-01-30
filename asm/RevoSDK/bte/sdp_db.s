@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global sdp_db_service_search
-sdp_db_service_search:
+.fn sdp_db_service_search, global
 /* 80303D24 002CD2E4  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80303D28 002CD2E8  7C 08 02 A6 */	mflr r0
 /* 80303D2C 002CD2EC  90 01 00 34 */	stw r0, 0x34(r1)
@@ -96,9 +95,9 @@ sdp_db_service_search:
 /* 80303E54 002CD414  7C 08 03 A6 */	mtlr r0
 /* 80303E58 002CD418  38 21 00 30 */	addi r1, r1, 0x30
 /* 80303E5C 002CD41C  4E 80 00 20 */	blr 
+.endfn sdp_db_service_search
 
-.global find_uuid_in_seq
-find_uuid_in_seq:
+.fn find_uuid_in_seq, global
 /* 80303E60 002CD420  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80303E64 002CD424  7C 08 02 A6 */	mflr r0
 /* 80303E68 002CD428  90 01 00 34 */	stw r0, 0x34(r1)
@@ -158,9 +157,9 @@ find_uuid_in_seq:
 /* 80303F2C 002CD4EC  7C 08 03 A6 */	mtlr r0
 /* 80303F30 002CD4F0  38 21 00 30 */	addi r1, r1, 0x30
 /* 80303F34 002CD4F4  4E 80 00 20 */	blr 
+.endfn find_uuid_in_seq
 
-.global sdp_db_find_record
-sdp_db_find_record:
+.fn sdp_db_find_record, global
 /* 80303F38 002CD4F8  3C A0 80 5C */	lis r5, lbl_805C36C0@ha
 /* 80303F3C 002CD4FC  38 00 02 98 */	li r0, 0x298
 /* 80303F40 002CD500  38 A5 36 C0 */	addi r5, r5, lbl_805C36C0@l
@@ -187,9 +186,9 @@ sdp_db_find_record:
 .L_80303F8C:
 /* 80303F8C 002CD54C  38 60 00 00 */	li r3, 0
 /* 80303F90 002CD550  4E 80 00 20 */	blr 
+.endfn sdp_db_find_record
 
-.global sdp_db_find_attr_in_rec
-sdp_db_find_attr_in_rec:
+.fn sdp_db_find_attr_in_rec, global
 /* 80303F94 002CD554  A0 C3 00 08 */	lhz r6, 8(r3)
 /* 80303F98 002CD558  38 63 00 0C */	addi r3, r3, 0xc
 /* 80303F9C 002CD55C  38 E0 00 00 */	li r7, 0
@@ -209,9 +208,9 @@ sdp_db_find_attr_in_rec:
 /* 80303FC8 002CD588  41 80 FF DC */	blt .L_80303FA4
 /* 80303FCC 002CD58C  38 60 00 00 */	li r3, 0
 /* 80303FD0 002CD590  4E 80 00 20 */	blr 
+.endfn sdp_db_find_attr_in_rec
 
-.global SDP_CreateRecord
-SDP_CreateRecord:
+.fn SDP_CreateRecord, global
 /* 80303FD4 002CD594  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80303FD8 002CD598  7C 08 02 A6 */	mflr r0
 /* 80303FDC 002CD59C  3C 60 80 5C */	lis r3, lbl_805C36C0@ha
@@ -272,9 +271,9 @@ SDP_CreateRecord:
 /* 803040A8 002CD668  7C 08 03 A6 */	mtlr r0
 /* 803040AC 002CD66C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803040B0 002CD670  4E 80 00 20 */	blr 
+.endfn SDP_CreateRecord
 
-.global SDP_DeleteRecord
-SDP_DeleteRecord:
+.fn SDP_DeleteRecord, global
 /* 803040B4 002CD674  3C 80 80 5C */	lis r4, lbl_805C36C0@ha
 /* 803040B8 002CD678  2C 03 00 00 */	cmpwi r3, 0
 /* 803040BC 002CD67C  38 84 36 C0 */	addi r4, r4, lbl_805C36C0@l
@@ -355,9 +354,9 @@ SDP_DeleteRecord:
 /* 803041BC 002CD77C  41 80 FF 40 */	blt .L_803040FC
 /* 803041C0 002CD780  38 60 00 00 */	li r3, 0
 /* 803041C4 002CD784  4E 80 00 20 */	blr 
+.endfn SDP_DeleteRecord
 
-.global SDP_AddAttribute
-SDP_AddAttribute:
+.fn SDP_AddAttribute, global
 /* 803041C8 002CD788  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803041CC 002CD78C  7C 08 02 A6 */	mflr r0
 /* 803041D0 002CD790  90 01 00 34 */	stw r0, 0x34(r1)
@@ -606,9 +605,9 @@ SDP_AddAttribute:
 /* 80304554 002CDB14  7C 08 03 A6 */	mtlr r0
 /* 80304558 002CDB18  38 21 00 30 */	addi r1, r1, 0x30
 /* 8030455C 002CDB1C  4E 80 00 20 */	blr 
+.endfn SDP_AddAttribute
 
-.global SDP_AddUuidSequence
-SDP_AddUuidSequence:
+.fn SDP_AddUuidSequence, global
 /* 80304560 002CDB20  94 21 FF 40 */	stwu r1, -0xc0(r1)
 /* 80304564 002CDB24  7C 08 02 A6 */	mflr r0
 /* 80304568 002CDB28  38 E0 00 00 */	li r7, 0
@@ -666,9 +665,9 @@ SDP_AddUuidSequence:
 /* 8030462C 002CDBEC  7C 08 03 A6 */	mtlr r0
 /* 80304630 002CDBF0  38 21 00 C0 */	addi r1, r1, 0xc0
 /* 80304634 002CDBF4  4E 80 00 20 */	blr 
+.endfn SDP_AddUuidSequence
 
-.global SDP_AddServiceClassIdList
-SDP_AddServiceClassIdList:
+.fn SDP_AddServiceClassIdList, global
 /* 80304638 002CDBF8  94 21 FF 50 */	stwu r1, -0xb0(r1)
 /* 8030463C 002CDBFC  7C 08 02 A6 */	mflr r0
 /* 80304640 002CDC00  2C 04 00 00 */	cmpwi r4, 0
@@ -768,9 +767,9 @@ SDP_AddServiceClassIdList:
 /* 803047A8 002CDD68  7C 08 03 A6 */	mtlr r0
 /* 803047AC 002CDD6C  38 21 00 B0 */	addi r1, r1, 0xb0
 /* 803047B0 002CDD70  4E 80 00 20 */	blr 
+.endfn SDP_AddServiceClassIdList
 
-.global SDP_DeleteAttribute
-SDP_DeleteAttribute:
+.fn SDP_DeleteAttribute, global
 /* 803047B4 002CDD74  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803047B8 002CDD78  7C 08 02 A6 */	mflr r0
 /* 803047BC 002CDD7C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -933,6 +932,7 @@ SDP_DeleteAttribute:
 /* 803049E4 002CDFA4  7C 08 03 A6 */	mtlr r0
 /* 803049E8 002CDFA8  38 21 00 30 */	addi r1, r1, 0x30
 /* 803049EC 002CDFAC  4E 80 00 20 */	blr 
+.endfn SDP_DeleteAttribute
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

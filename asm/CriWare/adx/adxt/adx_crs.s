@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global ADXCRS_Init
-ADXCRS_Init:
+.fn ADXCRS_Init, global
 /* 803893A4 00352964  3C 80 80 5F */	lis r4, lbl_805E99BC@ha
 /* 803893A8 00352968  80 64 99 BC */	lwz r3, lbl_805E99BC@l(r4)
 /* 803893AC 0035296C  38 03 00 01 */	addi r0, r3, 1
@@ -15,9 +14,9 @@ ADXCRS_Init:
 /* 803893C4 00352984  3C 60 80 5F */	lis r3, lbl_805E99B8@ha
 /* 803893C8 00352988  90 03 99 B8 */	stw r0, lbl_805E99B8@l(r3)
 /* 803893CC 0035298C  4E 80 00 20 */	blr 
+.endfn ADXCRS_Init
 
-.global ADXCRS_Finish
-ADXCRS_Finish:
+.fn ADXCRS_Finish, global
 /* 803893D0 00352990  3C 80 80 5F */	lis r4, lbl_805E99BC@ha
 /* 803893D4 00352994  80 64 99 BC */	lwz r3, lbl_805E99BC@l(r4)
 /* 803893D8 00352998  38 03 FF FF */	addi r0, r3, -1
@@ -29,22 +28,23 @@ ADXCRS_Finish:
 /* 803893F0 003529B0  3C 60 80 5F */	lis r3, lbl_805E99B8@ha
 /* 803893F4 003529B4  90 03 99 B8 */	stw r0, lbl_805E99B8@l(r3)
 /* 803893F8 003529B8  4E 80 00 20 */	blr 
+.endfn ADXCRS_Finish
 
-.global ADXCRS_Lock
-ADXCRS_Lock:
+.fn ADXCRS_Lock, global
 /* 803893FC 003529BC  48 00 D5 A0 */	b SVM_Lock
+.endfn ADXCRS_Lock
 
-.global ADXCRS_Unlock
-ADXCRS_Unlock:
+.fn ADXCRS_Unlock, global
 /* 80389400 003529C0  48 00 D6 04 */	b SVM_Unlock
+.endfn ADXCRS_Unlock
 
-.global ADXCRS_Enter
-ADXCRS_Enter:
+.fn ADXCRS_Enter, global
 /* 80389404 003529C4  4E 80 00 20 */	blr 
+.endfn ADXCRS_Enter
 
-.global ADXCRS_Leave
-ADXCRS_Leave:
+.fn ADXCRS_Leave, global
 /* 80389408 003529C8  4E 80 00 20 */	blr 
+.endfn ADXCRS_Leave
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global __OSLoadFPUContext
-__OSLoadFPUContext:
+.fn __OSLoadFPUContext, global
 /* 80354610 0031DBD0  A0 A4 01 A2 */	lhz r5, 0x1a2(r4)
 /* 80354614 0031DBD4  54 A5 07 FF */	clrlwi. r5, r5, 0x1f
 /* 80354618 0031DBD8  41 82 01 18 */	beq .L_80354730
@@ -80,10 +79,10 @@ __OSLoadFPUContext:
 /* 8035472C 0031DCEC  CB E4 01 88 */	lfd f31, 0x188(r4)
 .L_80354730:
 /* 80354730 0031DCF0  4E 80 00 20 */	blr 
+.endfn __OSLoadFPUContext
 
 .balign 16, 0
-.global __OSSaveFPUContext
-__OSSaveFPUContext:
+.fn __OSSaveFPUContext, global
 /* 80354740 0031DD00  A0 65 01 A2 */	lhz r3, 0x1a2(r5)
 /* 80354744 0031DD04  60 63 00 01 */	ori r3, r3, 1
 /* 80354748 0031DD08  B0 65 01 A2 */	sth r3, 0x1a2(r5)
@@ -159,16 +158,16 @@ __OSSaveFPUContext:
 /* 80354860 0031DE20  F3 E5 02 C0 */	psq_st f31, 704(r5), 0, qr0
 .L_80354864:
 /* 80354864 0031DE24  4E 80 00 20 */	blr 
+.endfn __OSSaveFPUContext
 
 .balign 16, 0
-.global OSSaveFPUContext
-OSSaveFPUContext:
+.fn OSSaveFPUContext, global
 /* 80354870 0031DE30  38 A3 00 00 */	addi r5, r3, 0
 /* 80354874 0031DE34  4B FF FE CC */	b __OSSaveFPUContext
+.endfn OSSaveFPUContext
 
 .balign 16, 0
-.global OSSetCurrentContext
-OSSetCurrentContext:
+.fn OSSetCurrentContext, global
 /* 80354880 0031DE40  3C 80 80 00 */	lis r4, 0x800000D4@ha
 /* 80354884 0031DE44  90 64 00 D4 */	stw r3, 0x800000D4@l(r4)
 /* 80354888 0031DE48  54 65 00 BE */	clrlwi r5, r3, 2
@@ -193,17 +192,17 @@ OSSetCurrentContext:
 /* 803548D0 0031DE90  7C C0 01 24 */	mtmsr r6
 /* 803548D4 0031DE94  4C 00 01 2C */	isync 
 /* 803548D8 0031DE98  4E 80 00 20 */	blr 
+.endfn OSSetCurrentContext
 
 .balign 16, 0
-.global OSGetCurrentContext
-OSGetCurrentContext:
+.fn OSGetCurrentContext, global
 /* 803548E0 0031DEA0  3C 60 80 00 */	lis r3, 0x800000D4@ha
 /* 803548E4 0031DEA4  80 63 00 D4 */	lwz r3, 0x800000D4@l(r3)
 /* 803548E8 0031DEA8  4E 80 00 20 */	blr 
+.endfn OSGetCurrentContext
 
 .balign 16, 0
-.global OSSaveContext
-OSSaveContext:
+.fn OSSaveContext, global
 /* 803548F0 0031DEB0  BD A3 00 34 */	stmw r13, 0x34(r3)
 /* 803548F4 0031DEB4  7C 11 E2 A6 */	mfspr r0, 0x391
 /* 803548F8 0031DEB8  90 03 01 A8 */	stw r0, 0x1a8(r3)
@@ -236,10 +235,10 @@ OSSaveContext:
 /* 80354964 0031DF24  90 03 00 0C */	stw r0, 0xc(r3)
 /* 80354968 0031DF28  38 60 00 00 */	li r3, 0
 /* 8035496C 0031DF2C  4E 80 00 20 */	blr 
+.endfn OSSaveContext
 
 .balign 16, 0
-.global OSLoadContext
-OSLoadContext:
+.fn OSLoadContext, global
 /* 80354970 0031DF30  3C 80 80 36 */	lis r4, OSDisableInterrupts@ha
 /* 80354974 0031DF34  80 C3 01 98 */	lwz r6, 0x198(r3)
 /* 80354978 0031DF38  38 A4 89 B0 */	addi r5, r4, OSDisableInterrupts@l
@@ -297,16 +296,16 @@ OSLoadContext:
 /* 80354A3C 0031DFFC  80 83 00 10 */	lwz r4, 0x10(r3)
 /* 80354A40 0031E000  80 63 00 0C */	lwz r3, 0xc(r3)
 /* 80354A44 0031E004  4C 00 00 64 */	rfi 
+.endfn OSLoadContext
 
 .balign 16, 0
-.global OSGetStackPointer
-OSGetStackPointer:
+.fn OSGetStackPointer, global
 /* 80354A50 0031E010  7C 23 0B 78 */	mr r3, r1
 /* 80354A54 0031E014  4E 80 00 20 */	blr 
+.endfn OSGetStackPointer
 
 .balign 16, 0
-.global OSSwitchFiber
-OSSwitchFiber:
+.fn OSSwitchFiber, global
 /* 80354A60 0031E020  7C 08 02 A6 */	mflr r0
 /* 80354A64 0031E024  7C 25 0B 78 */	mr r5, r1
 /* 80354A68 0031E028  94 A4 FF F8 */	stwu r5, -8(r4)
@@ -319,10 +318,10 @@ OSSwitchFiber:
 /* 80354A84 0031E044  7C 08 03 A6 */	mtlr r0
 /* 80354A88 0031E048  7C A1 2B 78 */	mr r1, r5
 /* 80354A8C 0031E04C  4E 80 00 20 */	blr 
+.endfn OSSwitchFiber
 
 .balign 16, 0
-.global OSSwitchFiberEx
-OSSwitchFiberEx:
+.fn OSSwitchFiberEx, global
 /* 80354A90 0031E050  7C 08 02 A6 */	mflr r0
 /* 80354A94 0031E054  7C 29 0B 78 */	mr r9, r1
 /* 80354A98 0031E058  95 28 FF F8 */	stwu r9, -8(r8)
@@ -335,10 +334,10 @@ OSSwitchFiberEx:
 /* 80354AB4 0031E074  7C 08 03 A6 */	mtlr r0
 /* 80354AB8 0031E078  7C A1 2B 78 */	mr r1, r5
 /* 80354ABC 0031E07C  4E 80 00 20 */	blr 
+.endfn OSSwitchFiberEx
 
 .balign 16, 0
-.global OSClearContext
-OSClearContext:
+.fn OSClearContext, global
 /* 80354AC0 0031E080  38 A0 00 00 */	li r5, 0
 /* 80354AC4 0031E084  B0 A3 01 A0 */	sth r5, 0x1a0(r3)
 /* 80354AC8 0031E088  3C 80 80 00 */	lis r4, 0x800000D8@ha
@@ -348,10 +347,10 @@ OSClearContext:
 /* 80354AD8 0031E098  4C 82 00 20 */	bnelr 
 /* 80354ADC 0031E09C  90 A4 00 D8 */	stw r5, 0xd8(r4)
 /* 80354AE0 0031E0A0  4E 80 00 20 */	blr 
+.endfn OSClearContext
 
 .balign 16, 0
-.global OSInitContext
-OSInitContext:
+.fn OSInitContext, global
 /* 80354AF0 0031E0B0  90 83 01 98 */	stw r4, 0x198(r3)
 /* 80354AF4 0031E0B4  90 A3 00 04 */	stw r5, 4(r3)
 /* 80354AF8 0031E0B8  39 60 00 00 */	li r11, 0
@@ -399,10 +398,10 @@ OSInitContext:
 /* 80354BA0 0031E160  90 03 01 BC */	stw r0, 0x1bc(r3)
 /* 80354BA4 0031E164  90 03 01 C0 */	stw r0, 0x1c0(r3)
 /* 80354BA8 0031E168  4B FF FF 18 */	b OSClearContext
+.endfn OSInitContext
 
 .balign 16, 0
-.global OSDumpContext
-OSDumpContext:
+.fn OSDumpContext, global
 /* 80354BB0 0031E170  94 21 FD 10 */	stwu r1, -0x2f0(r1)
 /* 80354BB4 0031E174  7C 08 02 A6 */	mflr r0
 /* 80354BB8 0031E178  90 01 02 F4 */	stw r0, 0x2f4(r1)
@@ -565,10 +564,10 @@ OSDumpContext:
 /* 80354E04 0031E3C4  7C 08 03 A6 */	mtlr r0
 /* 80354E08 0031E3C8  38 21 02 F0 */	addi r1, r1, 0x2f0
 /* 80354E0C 0031E3CC  4E 80 00 20 */	blr
+.endfn OSDumpContext
 
 .balign 16, 0
-.global OSSwitchFPUContext
-OSSwitchFPUContext:
+.fn OSSwitchFPUContext, global
 /* 80354E10 0031E3D0  7C A0 00 A6 */	mfmsr r5
 /* 80354E14 0031E3D4  60 A5 20 00 */	ori r5, r5, 0x2000
 /* 80354E18 0031E3D8  7C A0 01 24 */	mtmsr r5
@@ -604,10 +603,10 @@ OSSwitchFPUContext:
 /* 80354E88 0031E448  80 64 00 0C */	lwz r3, 0xc(r4)
 /* 80354E8C 0031E44C  80 84 00 10 */	lwz r4, 0x10(r4)
 /* 80354E90 0031E450  4C 00 00 64 */	rfi 
+.endfn OSSwitchFPUContext
 
 .balign 16, 0
-.global __OSContextInit
-__OSContextInit:
+.fn __OSContextInit, global
 /* 80354EA0 0031E460  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80354EA4 0031E464  7C 08 02 A6 */	mflr r0
 /* 80354EA8 0031E468  3C 80 80 35 */	lis r4, OSSwitchFPUContext@ha
@@ -626,6 +625,7 @@ __OSContextInit:
 /* 80354EDC 0031E49C  7C 08 03 A6 */	mtlr r0
 /* 80354EE0 0031E4A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80354EE4 0031E4A4  4E 80 00 20 */	blr 
+.endfn __OSContextInit
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

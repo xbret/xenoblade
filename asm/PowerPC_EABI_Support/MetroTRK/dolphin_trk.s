@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global InitMetroTRK
-InitMetroTRK:
+.fn InitMetroTRK, global
 /* 802CBF00  38 21 FF FC */		addi r1,r1,-4
 /* 802CBF04  90 61 00 00 */		stw r3,0(r1)
 /* 802CBF08  3C 60 80 57 */		lis r3, gTRKCPUState@h
@@ -43,9 +42,9 @@ InitMetroTRK:
 .L_802CBF90:
 /* 802CBF90  4B FF FA C4 */		b TRK_main
 /* 802CBF94  4E 80 00 20 */		blr
+.endfn InitMetroTRK
 
-.global InitMetroTRK_BBA
-InitMetroTRK_BBA:
+.fn InitMetroTRK_BBA, global
 /* 802CBF98 00295558  38 21 FF FC */	addi r1, r1, -4
 /* 802CBF9C 0029555C  90 61 00 00 */	stw r3, 0(r1)
 /* 802CBFA0 00295560  3C 60 80 57 */	lis r3, gTRKCPUState@h
@@ -84,13 +83,13 @@ InitMetroTRK_BBA:
 .L_802CC024:
 /* 802CC024 002955E4  4B FF FA 30 */	b TRK_main
 /* 802CC028 002955E8  4E 80 00 20 */	blr 
+.endfn InitMetroTRK_BBA
 
-.global EnableMetroTRKInterrupts
-EnableMetroTRKInterrupts:
+.fn EnableMetroTRKInterrupts, global
 /* 802CC02C 002955EC  48 00 04 48 */	b EnableEXI2Interrupts
+.endfn EnableMetroTRKInterrupts
 
-.global TRKTargetTranslate
-TRKTargetTranslate:
+.fn TRKTargetTranslate, global
 /* 802CC030 002955F0  80 8D B3 F0 */	lwz r4, lbl_80667570@sda21(r13)
 /* 802CC034 002955F4  7C 03 20 40 */	cmplw r3, r4
 /* 802CC038 002955F8  41 80 00 24 */	blt .L_802CC05C
@@ -119,9 +118,9 @@ TRKTargetTranslate:
 /* 802CC08C 0029564C  54 60 00 BE */	clrlwi r0, r3, 2
 /* 802CC090 00295650  64 03 90 00 */	oris r3, r0, 0x9000
 /* 802CC094 00295654  4E 80 00 20 */	blr 
+.endfn TRKTargetTranslate
 
-.global __TRK_copy_vectors
-__TRK_copy_vectors:
+.fn __TRK_copy_vectors, global
 /* 802CC098 00295658  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802CC09C 0029565C  7C 08 02 A6 */	mflr r0
 /* 802CC0A0 00295660  90 01 00 34 */	stw r0, 0x34(r1)
@@ -207,9 +206,9 @@ __TRK_copy_vectors:
 /* 802CC1C0 00295780  7C 08 03 A6 */	mtlr r0
 /* 802CC1C4 00295784  38 21 00 30 */	addi r1, r1, 0x30
 /* 802CC1C8 00295788  4E 80 00 20 */	blr 
+.endfn __TRK_copy_vectors
 
-.global TRKInitializeTarget
-TRKInitializeTarget:
+.fn TRKInitializeTarget, global
 /* 802CC1CC 0029578C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CC1D0 00295790  7C 08 02 A6 */	mflr r0
 /* 802CC1D4 00295794  90 01 00 14 */	stw r0, 0x14(r1)
@@ -228,13 +227,14 @@ TRKInitializeTarget:
 /* 802CC208 002957C8  7C 08 03 A6 */	mtlr r0
 /* 802CC20C 002957CC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CC210 002957D0  4E 80 00 20 */	blr 
+.endfn TRKInitializeTarget
 
-.global __TRKreset
-__TRKreset:
+.fn __TRKreset, global
 /* 802CC214 002957D4  38 60 00 00 */	li r3, 0
 /* 802CC218 002957D8  38 80 00 00 */	li r4, 0
 /* 802CC21C 002957DC  38 A0 00 00 */	li r5, 0
 /* 802CC220 002957E0  48 08 E5 C0 */	b OSResetSystem
+.endfn __TRKreset
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

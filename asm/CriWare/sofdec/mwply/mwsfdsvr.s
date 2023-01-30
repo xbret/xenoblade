@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global mwsfsvr_StartStream
-mwsfsvr_StartStream:
+.fn mwsfsvr_StartStream, global
 /* 803A23D4 0036B994  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A23D8 0036B998  7C 08 02 A6 */	mflr r0
 /* 803A23DC 0036B99C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -63,9 +62,9 @@ mwsfsvr_StartStream:
 /* 803A24A0 0036BA60  7C 08 03 A6 */	mtlr r0
 /* 803A24A4 0036BA64  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A24A8 0036BA68  4E 80 00 20 */	blr 
+.endfn mwsfsvr_StartStream
 
-.global mwlSfdExecDecSvrPlaying
-mwlSfdExecDecSvrPlaying:
+.fn mwlSfdExecDecSvrPlaying, global
 /* 803A24AC 0036BA6C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A24B0 0036BA70  7C 08 02 A6 */	mflr r0
 /* 803A24B4 0036BA74  90 01 00 24 */	stw r0, 0x24(r1)
@@ -117,9 +116,9 @@ mwlSfdExecDecSvrPlaying:
 /* 803A2560 0036BB20  7C 08 03 A6 */	mtlr r0
 /* 803A2564 0036BB24  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A2568 0036BB28  4E 80 00 20 */	blr
+.endfn mwlSfdExecDecSvrPlaying
 
-.global MWSFSVR_VsyncThrdProc
-MWSFSVR_VsyncThrdProc:
+.fn MWSFSVR_VsyncThrdProc, global
 /* 803A256C 0036BB2C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A2570 0036BB30  7C 08 02 A6 */	mflr r0
 /* 803A2574 0036BB34  3C 60 80 60 */	lis r3, lbl_80602960@ha
@@ -212,9 +211,9 @@ MWSFSVR_VsyncThrdProc:
 /* 803A26B8 0036BC78  7C 08 03 A6 */	mtlr r0
 /* 803A26BC 0036BC7C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A26C0 0036BC80  4E 80 00 20 */	blr
+.endfn MWSFSVR_VsyncThrdProc
 
-.global MWSFSVR_MainThrdProc
-MWSFSVR_MainThrdProc:
+.fn MWSFSVR_MainThrdProc, global
 /* 803A26C4 0036BC84  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803A26C8 0036BC88  7C 08 02 A6 */	mflr r0
 /* 803A26CC 0036BC8C  3C 80 80 60 */	lis r4, lbl_80602960@ha
@@ -371,9 +370,9 @@ MWSFSVR_MainThrdProc:
 /* 803A28FC 0036BEBC  7C 08 03 A6 */	mtlr r0
 /* 803A2900 0036BEC0  38 21 00 30 */	addi r1, r1, 0x30
 /* 803A2904 0036BEC4  4E 80 00 20 */	blr
+.endfn MWSFSVR_MainThrdProc
 
-.global func_803A2908
-func_803A2908:
+.fn func_803A2908, global
 /* 803A2908 0036BEC8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A290C 0036BECC  7C 08 02 A6 */	mflr r0
 /* 803A2910 0036BED0  3C 80 80 60 */	lis r4, lbl_80602960@ha
@@ -449,9 +448,9 @@ func_803A2908:
 /* 803A2A14 0036BFD4  7C 08 03 A6 */	mtlr r0
 /* 803A2A18 0036BFD8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A2A1C 0036BFDC  4E 80 00 20 */	blr 
+.endfn func_803A2908
 
-.global mwsfsvr_DecodeServer
-mwsfsvr_DecodeServer:
+.fn mwsfsvr_DecodeServer, global
 /* 803A2A20 0036BFE0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A2A24 0036BFE4  7C 08 02 A6 */	mflr r0
 /* 803A2A28 0036BFE8  3C 60 80 60 */	lis r3, lbl_8060295C@ha
@@ -537,9 +536,9 @@ mwsfsvr_DecodeServer:
 /* 803A2B44 0036C104  7C 08 03 A6 */	mtlr r0
 /* 803A2B48 0036C108  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A2B4C 0036C10C  4E 80 00 20 */	blr 
+.endfn mwsfsvr_DecodeServer
 
-.global mwply_ExecSvrHndl
-mwply_ExecSvrHndl:
+.fn mwply_ExecSvrHndl, global
 /* 803A2B50 0036C110  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A2B54 0036C114  7C 08 02 A6 */	mflr r0
 /* 803A2B58 0036C118  3C 80 80 60 */	lis r4, lbl_8060295C@ha
@@ -624,9 +623,9 @@ mwply_ExecSvrHndl:
 /* 803A2C70 0036C230  7C 08 03 A6 */	mtlr r0
 /* 803A2C74 0036C234  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A2C78 0036C238  4E 80 00 20 */	blr 
+.endfn mwply_ExecSvrHndl
 
-.global mwsfd_ExecSvrHndl
-mwsfd_ExecSvrHndl:
+.fn mwsfd_ExecSvrHndl, global
 /* 803A2C7C 0036C23C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A2C80 0036C240  7C 08 02 A6 */	mflr r0
 /* 803A2C84 0036C244  38 A0 00 01 */	li r5, 1
@@ -812,9 +811,9 @@ mwsfd_ExecSvrHndl:
 /* 803A2F0C 0036C4CC  7C 08 03 A6 */	mtlr r0
 /* 803A2F10 0036C4D0  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A2F14 0036C4D4  4E 80 00 20 */	blr 
+.endfn mwsfd_ExecSvrHndl
 
-.global MWSFSVR_SetMwsfdSvrFlg
-MWSFSVR_SetMwsfdSvrFlg:
+.fn MWSFSVR_SetMwsfdSvrFlg, global
 /* 803A2F18 0036C4D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A2F1C 0036C4DC  7C 08 02 A6 */	mflr r0
 /* 803A2F20 0036C4E0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -827,19 +826,19 @@ MWSFSVR_SetMwsfdSvrFlg:
 /* 803A2F3C 0036C4FC  7C 08 03 A6 */	mtlr r0
 /* 803A2F40 0036C500  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A2F44 0036C504  4E 80 00 20 */	blr 
+.endfn MWSFSVR_SetMwsfdSvrFlg
 
-.global MWSFSVR_SetHnMwplySvrFlg
-MWSFSVR_SetHnMwplySvrFlg:
+.fn MWSFSVR_SetHnMwplySvrFlg, global
 /* 803A2F48 0036C508  90 83 00 6C */	stw r4, 0x6c(r3)
 /* 803A2F4C 0036C50C  4E 80 00 20 */	blr 
+.endfn MWSFSVR_SetHnMwplySvrFlg
 
-.global MWSFSVR_SetHnSfdSvrFlg
-MWSFSVR_SetHnSfdSvrFlg:
+.fn MWSFSVR_SetHnSfdSvrFlg, global
 /* 803A2F50 0036C510  90 83 00 70 */	stw r4, 0x70(r3)
 /* 803A2F54 0036C514  4E 80 00 20 */	blr 
+.endfn MWSFSVR_SetHnSfdSvrFlg
 
-.global MWSFSVR_IsSvrBdrHndl
-MWSFSVR_IsSvrBdrHndl:
+.fn MWSFSVR_IsSvrBdrHndl, global
 /* 803A2F58 0036C518  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A2F5C 0036C51C  7C 08 02 A6 */	mflr r0
 /* 803A2F60 0036C520  90 01 00 14 */	stw r0, 0x14(r1)
@@ -867,9 +866,9 @@ MWSFSVR_IsSvrBdrHndl:
 /* 803A2FB0 0036C570  7C 08 03 A6 */	mtlr r0
 /* 803A2FB4 0036C574  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A2FB8 0036C578  4E 80 00 20 */	blr 
+.endfn MWSFSVR_IsSvrBdrHndl
 
-.global mwlSfdSleepDecSvr
-mwlSfdSleepDecSvr:
+.fn mwlSfdSleepDecSvr, global
 /* 803A2FBC 0036C57C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A2FC0 0036C580  7C 08 02 A6 */	mflr r0
 /* 803A2FC4 0036C584  90 01 00 24 */	stw r0, 0x24(r1)
@@ -931,9 +930,9 @@ mwlSfdSleepDecSvr:
 /* 803A308C 0036C64C  7C 08 03 A6 */	mtlr r0
 /* 803A3090 0036C650  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A3094 0036C654  4E 80 00 20 */	blr 
+.endfn mwlSfdSleepDecSvr
 
-.global MWSFD_IsFsBdr
-MWSFD_IsFsBdr:
+.fn MWSFD_IsFsBdr, global
 /* 803A3098 0036C658  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A309C 0036C65C  7C 08 02 A6 */	mflr r0
 /* 803A30A0 0036C660  90 01 00 14 */	stw r0, 0x14(r1)
@@ -947,9 +946,9 @@ MWSFD_IsFsBdr:
 /* 803A30C0 0036C680  7C 08 03 A6 */	mtlr r0
 /* 803A30C4 0036C684  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A30C8 0036C688  4E 80 00 20 */	blr 
+.endfn MWSFD_IsFsBdr
 
-.global MWSFD_SetProhibitServer
-MWSFD_SetProhibitServer:
+.fn MWSFD_SetProhibitServer, global
 /* 803A30CC 0036C68C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A30D0 0036C690  7C 08 02 A6 */	mflr r0
 /* 803A30D4 0036C694  90 01 00 14 */	stw r0, 0x14(r1)
@@ -962,9 +961,9 @@ MWSFD_SetProhibitServer:
 /* 803A30F0 0036C6B0  7C 08 03 A6 */	mtlr r0
 /* 803A30F4 0036C6B4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A30F8 0036C6B8  4E 80 00 20 */	blr 
+.endfn MWSFD_SetProhibitServer
 
-.global mwPlyExecRequestServer
-mwPlyExecRequestServer:
+.fn mwPlyExecRequestServer, global
 /* 803A30FC 0036C6BC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A3100 0036C6C0  7C 08 02 A6 */	mflr r0
 /* 803A3104 0036C6C4  3C 60 80 60 */	lis r3, lbl_8060295C@ha
@@ -1018,6 +1017,7 @@ mwPlyExecRequestServer:
 /* 803A31B4 0036C774  7C 08 03 A6 */	mtlr r0
 /* 803A31B8 0036C778  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A31BC 0036C77C  4E 80 00 20 */	blr 
+.endfn mwPlyExecRequestServer
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

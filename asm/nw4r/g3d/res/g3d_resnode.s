@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global PatchChrAnmResult__Q34nw4r3g3d7ResNodeCFPQ34nw4r3g3d12ChrAnmResult
-PatchChrAnmResult__Q34nw4r3g3d7ResNodeCFPQ34nw4r3g3d12ChrAnmResult:
+.fn PatchChrAnmResult__Q34nw4r3g3d7ResNodeCFPQ34nw4r3g3d12ChrAnmResult, global
 /* 803DD784 003A6D44  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803DD788 003A6D48  7C 08 02 A6 */	mflr r0
 /* 803DD78C 003A6D4C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -117,9 +116,9 @@ PatchChrAnmResult__Q34nw4r3g3d7ResNodeCFPQ34nw4r3g3d12ChrAnmResult:
 /* 803DD914 003A6ED4  7C 08 03 A6 */	mtlr r0
 /* 803DD918 003A6ED8  38 21 00 30 */	addi r1, r1, 0x30
 /* 803DD91C 003A6EDC  4E 80 00 20 */	blr 
+.endfn PatchChrAnmResult__Q34nw4r3g3d7ResNodeCFPQ34nw4r3g3d12ChrAnmResult
 
-.global CalcChrAnmResult__Q34nw4r3g3d7ResNodeCFPQ34nw4r3g3d12ChrAnmResult
-CalcChrAnmResult__Q34nw4r3g3d7ResNodeCFPQ34nw4r3g3d12ChrAnmResult:
+.fn CalcChrAnmResult__Q34nw4r3g3d7ResNodeCFPQ34nw4r3g3d12ChrAnmResult, global
 /* 803DD920 003A6EE0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803DD924 003A6EE4  7C 08 02 A6 */	mflr r0
 /* 803DD928 003A6EE8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -221,10 +220,10 @@ CalcChrAnmResult__Q34nw4r3g3d7ResNodeCFPQ34nw4r3g3d12ChrAnmResult:
 /* 803DDA7C 003A703C  7C 08 03 A6 */	mtlr r0
 /* 803DDA80 003A7040  38 21 00 30 */	addi r1, r1, 0x30
 /* 803DDA84 003A7044  4E 80 00 20 */	blr 
+.endfn CalcChrAnmResult__Q34nw4r3g3d7ResNodeCFPQ34nw4r3g3d12ChrAnmResult
 
 #GetResUserData__Q34nw4r3g3d7ResNodeCFv or GetResUserData__Q34nw4r3g3d7ResNodeFv
-.global func_803DDA88
-func_803DDA88:
+.fn func_803DDA88, global
 /* 803DDA88 003A7048  80 63 00 00 */	lwz r3, 0(r3)
 /* 803DDA8C 003A704C  80 03 00 6C */	lwz r0, 0x6c(r3)
 /* 803DDA90 003A7050  2C 00 00 00 */	cmpwi r0, 0
@@ -234,6 +233,7 @@ func_803DDA88:
 .L_803DDAA0:
 /* 803DDAA0 003A7060  38 60 00 00 */	li r3, 0
 /* 803DDAA4 003A7064  4E 80 00 20 */	blr 
+.endfn func_803DDA88
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

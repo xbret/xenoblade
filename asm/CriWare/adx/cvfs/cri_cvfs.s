@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global cvFsCallUsrErrFn
-cvFsCallUsrErrFn:
+.fn cvFsCallUsrErrFn, global
 /* 8038F594 00358B54  3C 60 80 5F */	lis r3, lbl_805E9D28@ha
 /* 8038F598 00358B58  81 83 9D 28 */	lwz r12, lbl_805E9D28@l(r3)
 /* 8038F59C 00358B5C  2C 0C 00 00 */	cmpwi r12, 0
@@ -13,9 +12,9 @@ cvFsCallUsrErrFn:
 /* 8038F5AC 00358B6C  7D 89 03 A6 */	mtctr r12
 /* 8038F5B0 00358B70  4E 80 04 20 */	bctr 
 /* 8038F5B4 00358B74  4E 80 00 20 */	blr 
+.endfn cvFsCallUsrErrFn
 
-.global cvFsAddDev
-cvFsAddDev:
+.fn cvFsAddDev, global
 /* 8038F5B8 00358B78  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8038F5BC 00358B7C  7C 08 02 A6 */	mflr r0
 /* 8038F5C0 00358B80  2C 03 00 00 */	cmpwi r3, 0
@@ -80,9 +79,9 @@ cvFsAddDev:
 /* 8038F69C 00358C5C  7C 08 03 A6 */	mtlr r0
 /* 8038F6A0 00358C60  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038F6A4 00358C64  4E 80 00 20 */	blr 
+.endfn cvFsAddDev
 
-.global addDevice
-addDevice:
+.fn addDevice, global
 /* 8038F6A8 00358C68  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038F6AC 00358C6C  7C 08 02 A6 */	mflr r0
 /* 8038F6B0 00358C70  90 01 00 24 */	stw r0, 0x24(r1)
@@ -207,9 +206,9 @@ addDevice:
 /* 8038F860 00358E20  7C 08 03 A6 */	mtlr r0
 /* 8038F864 00358E24  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038F868 00358E28  4E 80 00 20 */	blr 
+.endfn addDevice
 
-.global cvFsSetDefDev
-cvFsSetDefDev:
+.fn cvFsSetDefDev, global
 /* 8038F86C 00358E2C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038F870 00358E30  7C 08 02 A6 */	mflr r0
 /* 8038F874 00358E34  2C 03 00 00 */	cmpwi r3, 0
@@ -301,9 +300,9 @@ cvFsSetDefDev:
 /* 8038F9A4 00358F64  7C 08 03 A6 */	mtlr r0
 /* 8038F9A8 00358F68  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038F9AC 00358F6C  4E 80 00 20 */	blr 
+.endfn cvFsSetDefDev
 
-.global cvFsOpen
-cvFsOpen:
+.fn cvFsOpen, global
 /* 8038F9B0 00358F70  94 21 FD 70 */	stwu r1, -0x290(r1)
 /* 8038F9B4 00358F74  7C 08 02 A6 */	mflr r0
 /* 8038F9B8 00358F78  2C 03 00 00 */	cmpwi r3, 0
@@ -676,9 +675,9 @@ cvFsOpen:
 /* 8038FED4 00359494  7C 08 03 A6 */	mtlr r0
 /* 8038FED8 00359498  38 21 02 90 */	addi r1, r1, 0x290
 /* 8038FEDC 0035949C  4E 80 00 20 */	blr 
+.endfn cvFsOpen
 
-.global getDevName
-getDevName:
+.fn getDevName, global
 /* 8038FEE0 003594A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038FEE4 003594A4  7C 08 02 A6 */	mflr r0
 /* 8038FEE8 003594A8  2C 05 00 00 */	cmpwi r5, 0
@@ -791,9 +790,9 @@ getDevName:
 /* 80390070 00359630  7C 08 03 A6 */	mtlr r0
 /* 80390074 00359634  38 21 00 20 */	addi r1, r1, 0x20
 /* 80390078 00359638  4E 80 00 20 */	blr 
+.endfn getDevName
 
-.global cvFsClose
-cvFsClose:
+.fn cvFsClose, global
 /* 8039007C 0035963C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80390080 00359640  7C 08 02 A6 */	mflr r0
 /* 80390084 00359644  2C 03 00 00 */	cmpwi r3, 0
@@ -845,9 +844,9 @@ cvFsClose:
 /* 80390130 003596F0  7C 08 03 A6 */	mtlr r0
 /* 80390134 003596F4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80390138 003596F8  4E 80 00 20 */	blr 
+.endfn cvFsClose
 
-.global cvFsTell
-cvFsTell:
+.fn cvFsTell, global
 /* 8039013C 003596FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80390140 00359700  7C 08 02 A6 */	mflr r0
 /* 80390144 00359704  2C 03 00 00 */	cmpwi r3, 0
@@ -901,9 +900,9 @@ cvFsTell:
 /* 803901F0 003597B0  7C 08 03 A6 */	mtlr r0
 /* 803901F4 003597B4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803901F8 003597B8  4E 80 00 20 */	blr 
+.endfn cvFsTell
 
-.global cvFsSeek
-cvFsSeek:
+.fn cvFsSeek, global
 /* 803901FC 003597BC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80390200 003597C0  7C 08 02 A6 */	mflr r0
 /* 80390204 003597C4  2C 03 00 00 */	cmpwi r3, 0
@@ -957,10 +956,10 @@ cvFsSeek:
 /* 803902B0 00359870  7C 08 03 A6 */	mtlr r0
 /* 803902B4 00359874  38 21 00 10 */	addi r1, r1, 0x10
 /* 803902B8 00359878  4E 80 00 20 */	blr 
+.endfn cvFsSeek
 
 #maybe cvFsReqWr
-.global cvFsReqRd
-cvFsReqRd:
+.fn cvFsReqRd, global
 /* 803902BC 0035987C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803902C0 00359880  7C 08 02 A6 */	mflr r0
 /* 803902C4 00359884  2C 03 00 00 */	cmpwi r3, 0
@@ -1014,9 +1013,9 @@ cvFsReqRd:
 /* 80390370 00359930  7C 08 03 A6 */	mtlr r0
 /* 80390374 00359934  38 21 00 10 */	addi r1, r1, 0x10
 /* 80390378 00359938  4E 80 00 20 */	blr 
+.endfn cvFsReqRd
 
-.global cvFsStopTr
-cvFsStopTr:
+.fn cvFsStopTr, global
 /* 8039037C 0035993C  2C 03 00 00 */	cmpwi r3, 0
 /* 80390380 00359940  40 82 00 38 */	bne .L_803903B8
 /* 80390384 00359944  3C 60 80 5F */	lis r3, lbl_805E9D28@ha
@@ -1054,9 +1053,9 @@ cvFsStopTr:
 /* 803903FC 003599BC  7D 89 03 A6 */	mtctr r12
 /* 80390400 003599C0  4E 80 04 20 */	bctr 
 /* 80390404 003599C4  4E 80 00 20 */	blr 
+.endfn cvFsStopTr
 
-.global cvFsExecServer
-cvFsExecServer:
+.fn cvFsExecServer, global
 /* 80390408 003599C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039040C 003599CC  7C 08 02 A6 */	mflr r0
 /* 80390410 003599D0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1085,9 +1084,9 @@ cvFsExecServer:
 /* 80390464 00359A24  7C 08 03 A6 */	mtlr r0
 /* 80390468 00359A28  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039046C 00359A2C  4E 80 00 20 */	blr 
+.endfn cvFsExecServer
 
-.global cvFsGetStat
-cvFsGetStat:
+.fn cvFsGetStat, global
 /* 80390470 00359A30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80390474 00359A34  7C 08 02 A6 */	mflr r0
 /* 80390478 00359A38  2C 03 00 00 */	cmpwi r3, 0
@@ -1141,9 +1140,9 @@ cvFsGetStat:
 /* 80390524 00359AE4  7C 08 03 A6 */	mtlr r0
 /* 80390528 00359AE8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039052C 00359AEC  4E 80 00 20 */	blr 
+.endfn cvFsGetStat
 
-.global cvFsGetFileSize
-cvFsGetFileSize:
+.fn cvFsGetFileSize, global
 /* 80390530 00359AF0  94 21 FD 80 */	stwu r1, -0x280(r1)
 /* 80390534 00359AF4  7C 08 02 A6 */	mflr r0
 /* 80390538 00359AF8  2C 03 00 00 */	cmpwi r3, 0
@@ -1400,9 +1399,9 @@ cvFsGetFileSize:
 /* 803908AC 00359E6C  7C 08 03 A6 */	mtlr r0
 /* 803908B0 00359E70  38 21 02 80 */	addi r1, r1, 0x280
 /* 803908B4 00359E74  4E 80 00 20 */	blr 
+.endfn cvFsGetFileSize
 
-.global cvFsEntryErrFunc
-cvFsEntryErrFunc:
+.fn cvFsEntryErrFunc, global
 /* 803908B8 00359E78  2C 03 00 00 */	cmpwi r3, 0
 /* 803908BC 00359E7C  40 82 00 1C */	bne .L_803908D8
 /* 803908C0 00359E80  38 00 00 00 */	li r0, 0
@@ -1417,9 +1416,9 @@ cvFsEntryErrFunc:
 /* 803908E0 00359EA0  90 66 9D 28 */	stw r3, lbl_805E9D28@l(r6)
 /* 803908E4 00359EA4  90 85 9D 2C */	stw r4, lbl_805E9D2C@l(r5)
 /* 803908E8 00359EA8  4E 80 00 20 */	blr 
+.endfn cvFsEntryErrFunc
 
-.global cvFsIsAvailableRetry
-cvFsIsAvailableRetry:
+.fn cvFsIsAvailableRetry, global
 /* 803908EC 00359EAC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803908F0 00359EB0  7C 08 02 A6 */	mflr r0
 /* 803908F4 00359EB4  2C 03 00 00 */	cmpwi r3, 0
@@ -1459,6 +1458,7 @@ cvFsIsAvailableRetry:
 /* 8039096C 00359F2C  7C 08 03 A6 */	mtlr r0
 /* 80390970 00359F30  38 21 00 10 */	addi r1, r1, 0x10
 /* 80390974 00359F34  4E 80 00 20 */	blr
+.endfn cvFsIsAvailableRetry
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

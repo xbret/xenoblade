@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global hidd_proc_repage_timeout
-hidd_proc_repage_timeout:
+.fn hidd_proc_repage_timeout, global
 /* 802F3700 002BCCC0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F3704 002BCCC4  7C 08 02 A6 */	mflr r0
 /* 802F3708 002BCCC8  3C 60 80 5C */	lis r3, lbl_805C2570@ha
@@ -58,6 +57,7 @@ hidd_proc_repage_timeout:
 /* 802F37BC 002BCD7C  7C 08 03 A6 */	mtlr r0
 /* 802F37C0 002BCD80  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F37C4 002BCD84  4E 80 00 20 */	blr
+.endfn hidd_proc_repage_timeout
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

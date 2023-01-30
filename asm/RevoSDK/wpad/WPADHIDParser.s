@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global __wpadAbortInitExtension
-__wpadAbortInitExtension:
+.fn __wpadAbortInitExtension, global
 /* 80370700 00339CC0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80370704 00339CC4  7C 08 02 A6 */	mflr r0
 /* 80370708 00339CC8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -97,10 +96,10 @@ __wpadAbortInitExtension:
 /* 80370850 00339E10  7C 08 03 A6 */	mtlr r0
 /* 80370854 00339E14  38 21 00 20 */	addi r1, r1, 0x20
 /* 80370858 00339E18  4E 80 00 20 */	blr 
+.endfn __wpadAbortInitExtension
 
 .balign 16, 0
-.global __wpadGetDevConfig
-__wpadGetDevConfig:
+.fn __wpadGetDevConfig, global
 /* 80370860 00339E20  94 21 FE F0 */	stwu r1, -0x110(r1)
 /* 80370864 00339E24  7C 08 02 A6 */	mflr r0
 /* 80370868 00339E28  90 01 01 14 */	stw r0, 0x114(r1)
@@ -833,10 +832,10 @@ __wpadGetDevConfig:
 /* 8037133C 0033A8FC  7C 08 03 A6 */	mtlr r0
 /* 80371340 0033A900  38 21 01 10 */	addi r1, r1, 0x110
 /* 80371344 0033A904  4E 80 00 20 */	blr 
+.endfn __wpadGetDevConfig
 
 .balign 16, 0
-.global __wpadGetExtConfig
-__wpadGetExtConfig:
+.fn __wpadGetExtConfig, global
 /* 80371350 0033A910  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80371354 0033A914  7C 08 02 A6 */	mflr r0
 /* 80371358 0033A918  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1195,10 +1194,10 @@ __wpadGetExtConfig:
 /* 80371880 0033AE40  7C 08 03 A6 */	mtlr r0
 /* 80371884 0033AE44  38 21 00 20 */	addi r1, r1, 0x20
 /* 80371888 0033AE48  4E 80 00 20 */	blr 
+.endfn __wpadGetExtConfig
 
 .balign 16, 0
-.global __wpadGetExtType
-__wpadGetExtType:
+.fn __wpadGetExtType, global
 /* 80371890 0033AE50  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80371894 0033AE54  7C 08 02 A6 */	mflr r0
 /* 80371898 0033AE58  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1498,10 +1497,10 @@ __wpadGetExtType:
 /* 80371CBC 0033B27C  7C 08 03 A6 */	mtlr r0
 /* 80371CC0 0033B280  38 21 00 20 */	addi r1, r1, 0x20
 /* 80371CC4 0033B284  4E 80 00 20 */	blr 
+.endfn __wpadGetExtType
 
 .balign 16, 0
-.global __wpadGetGameInfo
-__wpadGetGameInfo:
+.fn __wpadGetGameInfo, global
 /* 80371CD0 0033B290  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80371CD4 0033B294  7C 08 02 A6 */	mflr r0
 /* 80371CD8 0033B298  3C C0 80 5E */	lis r6, __rvl_p_wpadcb@ha
@@ -1611,10 +1610,10 @@ __wpadGetGameInfo:
 /* 80371E68 0033B428  7C 08 03 A6 */	mtlr r0
 /* 80371E6C 0033B42C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80371E70 0033B430  4E 80 00 20 */	blr 
+.endfn __wpadGetGameInfo
 
 .balign 16, 0
-.global WPADiHIDParser
-WPADiHIDParser:
+.fn WPADiHIDParser, global
 /* 80371E80 0033B440  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80371E84 0033B444  7C 08 02 A6 */	mflr r0
 /* 80371E88 0033B448  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1694,10 +1693,10 @@ WPADiHIDParser:
 /* 80371F9C 0033B55C  7C 08 03 A6 */	mtlr r0
 /* 80371FA0 0033B560  38 21 00 30 */	addi r1, r1, 0x30
 /* 80371FA4 0033B564  4E 80 00 20 */	blr 
+.endfn WPADiHIDParser
 
 .balign 16, 0
-.global __a1_20_status_report
-__a1_20_status_report:
+.fn __a1_20_status_report, global
 /* 80371FB0 0033B570  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80371FB4 0033B574  7C 08 02 A6 */	mflr r0
 /* 80371FB8 0033B578  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1919,10 +1918,10 @@ __a1_20_status_report:
 /* 803722E4 0033B8A4  7C 08 03 A6 */	mtlr r0
 /* 803722E8 0033B8A8  38 21 00 40 */	addi r1, r1, 0x40
 /* 803722EC 0033B8AC  4E 80 00 20 */	blr 
+.endfn __a1_20_status_report
 
 .balign 16, 0
-.global __a1_21_user_data
-__a1_21_user_data:
+.fn __a1_21_user_data, global
 /* 803722F0 0033B8B0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803722F4 0033B8B4  7C 08 02 A6 */	mflr r0
 /* 803722F8 0033B8B8  90 01 00 44 */	stw r0, 0x44(r1)
@@ -2141,10 +2140,10 @@ __a1_21_user_data:
 /* 8037260C 0033BBCC  7C 08 03 A6 */	mtlr r0
 /* 80372610 0033BBD0  38 21 00 40 */	addi r1, r1, 0x40
 /* 80372614 0033BBD4  4E 80 00 20 */	blr 
+.endfn __a1_21_user_data
 
 .balign 16, 0
-.global __a1_22_ack
-__a1_22_ack:
+.fn __a1_22_ack, global
 /* 80372620 0033BBE0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80372624 0033BBE4  7C 08 02 A6 */	mflr r0
 /* 80372628 0033BBE8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -2229,10 +2228,10 @@ __a1_22_ack:
 /* 80372754 0033BD14  7C 08 03 A6 */	mtlr r0
 /* 80372758 0033BD18  38 21 00 30 */	addi r1, r1, 0x30
 /* 8037275C 0033BD1C  4E 80 00 20 */	blr 
+.endfn __a1_22_ack
 
 .balign 16, 0
-.global __parse_dpd_data
-__parse_dpd_data:
+.fn __parse_dpd_data, global
 /* 80372760 0033BD20  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 80372764 0033BD24  7C 08 02 A6 */	mflr r0
 /* 80372768 0033BD28  90 01 00 A4 */	stw r0, 0xa4(r1)
@@ -2544,10 +2543,10 @@ __parse_dpd_data:
 /* 80372BE8 0033C1A8  7C 08 03 A6 */	mtlr r0
 /* 80372BEC 0033C1AC  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 80372BF0 0033C1B0  4E 80 00 20 */	blr 
+.endfn __parse_dpd_data
 
 .balign 16, 0
-.global __parse_dpdex_data
-__parse_dpdex_data:
+.fn __parse_dpdex_data, global
 /* 80372C00 0033C1C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80372C04 0033C1C4  54 A3 1D 78 */	rlwinm r3, r5, 3, 0x15, 0x1c
 /* 80372C08 0033C1C8  1C 05 00 0C */	mulli r0, r5, 0xc
@@ -2708,10 +2707,10 @@ __parse_dpdex_data:
 /* 80372E6C 0033C42C  98 A3 00 0E */	stb r5, 0xe(r3)
 /* 80372E70 0033C430  38 21 00 20 */	addi r1, r1, 0x20
 /* 80372E74 0033C434  4E 80 00 20 */	blr 
+.endfn __parse_dpdex_data
 
 .balign 16, 0
-.global __parse_cl_data
-__parse_cl_data:
+.fn __parse_cl_data, global
 /* 80372E80 0033C440  3D 00 80 5E */	lis r8, __rvl_p_wpadcb@ha
 /* 80372E84 0033C444  2C 05 00 02 */	cmpwi r5, 2
 /* 80372E88 0033C448  54 60 10 3A */	slwi r0, r3, 2
@@ -3046,10 +3045,10 @@ __parse_cl_data:
 /* 80373340 0033C900  80 64 00 00 */	lwz r3, 0(r4)
 /* 80373344 0033C904  98 03 00 35 */	stb r0, 0x35(r3)
 /* 80373348 0033C908  4E 80 00 20 */	blr 
+.endfn __parse_cl_data
 
 .balign 16, 0
-.global func_80373350
-func_80373350:
+.fn func_80373350, global
 /* 80373350 0033C910  80 64 00 00 */	lwz r3, 0(r4)
 /* 80373354 0033C914  28 87 00 15 */	cmplwi cr1, r7, 0x15
 /* 80373358 0033C918  88 06 00 00 */	lbz r0, 0(r6)
@@ -3162,10 +3161,10 @@ func_80373350:
 /* 80373500 0033CAC0  88 06 00 14 */	lbz r0, 0x14(r6)
 /* 80373504 0033CAC4  98 03 00 49 */	stb r0, 0x49(r3)
 /* 80373508 0033CAC8  4E 80 00 20 */	blr 
+.endfn func_80373350
 
 .balign 16, 0
-.global __a1_30_data_type
-__a1_30_data_type:
+.fn __a1_30_data_type, global
 /* 80373510 0033CAD0  88 C4 00 02 */	lbz r6, 2(r4)
 /* 80373514 0033CAD4  3C E0 80 5E */	lis r7, __rvl_p_wpadcb@ha
 /* 80373518 0033CAD8  88 04 00 01 */	lbz r0, 1(r4)
@@ -3191,11 +3190,11 @@ __a1_30_data_type:
 /* 80373560 0033CB20  54 00 CF FE */	rlwinm r0, r0, 0x19, 0x1f, 0x1f
 /* 80373564 0033CB24  90 03 08 48 */	stw r0, 0x848(r3)
 /* 80373568 0033CB28  4E 80 00 20 */	blr 
+.endfn __a1_30_data_type
 
 
 .balign 16, 0
-.global __a1_31_data_type
-__a1_31_data_type:
+.fn __a1_31_data_type, global
 /* 80373570 0033CB30  88 C4 00 02 */	lbz r6, 2(r4)
 /* 80373574 0033CB34  3C E0 80 5E */	lis r7, __rvl_p_wpadcb@ha
 /* 80373578 0033CB38  88 04 00 01 */	lbz r0, 1(r4)
@@ -3263,10 +3262,10 @@ __a1_31_data_type:
 /* 80373668 0033CC28  7C 06 00 50 */	subf r0, r6, r0
 /* 8037366C 0033CC2C  B0 05 00 06 */	sth r0, 6(r5)
 /* 80373670 0033CC30  4E 80 00 20 */	blr 
+.endfn __a1_31_data_type
 
 .balign 16, 0
-.global __a1_32_data_type
-__a1_32_data_type:
+.fn __a1_32_data_type, global
 /* 80373680 0033CC40  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80373684 0033CC44  7C 08 02 A6 */	mflr r0
 /* 80373688 0033CC48  3C C0 80 5E */	lis r6, __rvl_p_wpadcb@ha
@@ -3477,10 +3476,10 @@ __a1_32_data_type:
 /* 8037398C 0033CF4C  7C 08 03 A6 */	mtlr r0
 /* 80373990 0033CF50  38 21 00 20 */	addi r1, r1, 0x20
 /* 80373994 0033CF54  4E 80 00 20 */	blr 
+.endfn __a1_32_data_type
 
 .balign 16, 0
-.global __a1_33_data_type
-__a1_33_data_type:
+.fn __a1_33_data_type, global
 /* 803739A0 0033CF60  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803739A4 0033CF64  7C 08 02 A6 */	mflr r0
 /* 803739A8 0033CF68  3C E0 80 5E */	lis r7, __rvl_p_wpadcb@ha
@@ -3566,10 +3565,10 @@ __a1_33_data_type:
 /* 80373AE0 0033D0A0  7C 08 03 A6 */	mtlr r0
 /* 80373AE4 0033D0A4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80373AE8 0033D0A8  4E 80 00 20 */	blr 
+.endfn __a1_33_data_type
 
 .balign 16, 0
-.global __a1_34_data_type
-__a1_34_data_type:
+.fn __a1_34_data_type, global
 /* 80373AF0 0033D0B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80373AF4 0033D0B4  7C 08 02 A6 */	mflr r0
 /* 80373AF8 0033D0B8  3C E0 80 5E */	lis r7, __rvl_p_wpadcb@ha
@@ -3699,10 +3698,10 @@ __a1_34_data_type:
 /* 80373CC4 0033D284  7C 08 03 A6 */	mtlr r0
 /* 80373CC8 0033D288  38 21 00 20 */	addi r1, r1, 0x20
 /* 80373CCC 0033D28C  4E 80 00 20 */	blr 
+.endfn __a1_34_data_type
 
 .balign 16, 0
-.global __a1_35_data_type
-__a1_35_data_type:
+.fn __a1_35_data_type, global
 /* 80373CD0 0033D290  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80373CD4 0033D294  7C 08 02 A6 */	mflr r0
 /* 80373CD8 0033D298  90 01 00 34 */	stw r0, 0x34(r1)
@@ -3947,10 +3946,10 @@ __a1_35_data_type:
 /* 80374064 0033D624  7C 08 03 A6 */	mtlr r0
 /* 80374068 0033D628  38 21 00 30 */	addi r1, r1, 0x30
 /* 8037406C 0033D62C  4E 80 00 20 */	blr 
+.endfn __a1_35_data_type
 
 .balign 16, 0
-.global __a1_36_data_type
-__a1_36_data_type:
+.fn __a1_36_data_type, global
 /* 80374070 0033D630  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80374074 0033D634  7C 08 02 A6 */	mflr r0
 /* 80374078 0033D638  3C E0 80 5E */	lis r7, __rvl_p_wpadcb@ha
@@ -4019,10 +4018,10 @@ __a1_36_data_type:
 /* 80374170 0033D730  7C 08 03 A6 */	mtlr r0
 /* 80374174 0033D734  38 21 00 20 */	addi r1, r1, 0x20
 /* 80374178 0033D738  4E 80 00 20 */	blr 
+.endfn __a1_36_data_type
 
 .balign 16, 0
-.global __a1_37_data_type
-__a1_37_data_type:
+.fn __a1_37_data_type, global
 /* 80374180 0033D740  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80374184 0033D744  7C 08 02 A6 */	mflr r0
 /* 80374188 0033D748  90 01 00 34 */	stw r0, 0x34(r1)
@@ -4270,10 +4269,10 @@ __a1_37_data_type:
 /* 80374520 0033DAE0  7C 08 03 A6 */	mtlr r0
 /* 80374524 0033DAE4  38 21 00 30 */	addi r1, r1, 0x30
 /* 80374528 0033DAE8  4E 80 00 20 */	blr 
+.endfn __a1_37_data_type
 
 .balign 16, 0
-.global __a1_3d_data_type
-__a1_3d_data_type:
+.fn __a1_3d_data_type, global
 /* 80374530 0033DAF0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80374534 0033DAF4  7C 08 02 A6 */	mflr r0
 /* 80374538 0033DAF8  3C C0 80 5E */	lis r6, __rvl_p_wpadcb@ha
@@ -4347,10 +4346,10 @@ __a1_3d_data_type:
 /* 80374638 0033DBF8  7C 08 03 A6 */	mtlr r0
 /* 8037463C 0033DBFC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80374640 0033DC00  4E 80 00 20 */	blr 
+.endfn __a1_3d_data_type
 
 .balign 16, 0
-.global __a1_3e_data_type
-__a1_3e_data_type:
+.fn __a1_3e_data_type, global
 /* 80374650 0033DC10  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80374654 0033DC14  7C 08 02 A6 */	mflr r0
 /* 80374658 0033DC18  90 01 00 34 */	stw r0, 0x34(r1)
@@ -4465,10 +4464,10 @@ __a1_3e_data_type:
 /* 803747F8 0033DDB8  7C 08 03 A6 */	mtlr r0
 /* 803747FC 0033DDBC  38 21 00 30 */	addi r1, r1, 0x30
 /* 80374800 0033DDC0  4E 80 00 20 */	blr 
+.endfn __a1_3e_data_type
 
 .balign 16, 0
-.global __a1_3f_data_type
-__a1_3f_data_type:
+.fn __a1_3f_data_type, global
 /* 80374810 0033DDD0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80374814 0033DDD4  7C 08 02 A6 */	mflr r0
 /* 80374818 0033DDD8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -4582,11 +4581,12 @@ __a1_3f_data_type:
 /* 803749B4 0033DF74  7C 08 03 A6 */	mtlr r0
 /* 803749B8 0033DF78  38 21 00 30 */	addi r1, r1, 0x30
 /* 803749BC 0033DF7C  4E 80 00 20 */	blr 
+.endfn __a1_3f_data_type
 
 .balign 16, 0
-.global __a1_unused_report
-__a1_unused_report:
+.fn __a1_unused_report, global
 /* 803749C0 0033DF80  4E 80 00 20 */	blr 
+.endfn __a1_unused_report
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0

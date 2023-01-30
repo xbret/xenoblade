@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global l2cu_allocate_lcb
-l2cu_allocate_lcb:
+.fn l2cu_allocate_lcb, global
 /* 802FAB68 002C4128  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FAB6C 002C412C  7C 08 02 A6 */	mflr r0
 /* 802FAB70 002C4130  3C 80 80 5C */	lis r4, lbl_805C2AC0@ha
@@ -60,9 +59,9 @@ l2cu_allocate_lcb:
 /* 802FAC30 002C41F0  7C 08 03 A6 */	mtlr r0
 /* 802FAC34 002C41F4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802FAC38 002C41F8  4E 80 00 20 */	blr 
+.endfn l2cu_allocate_lcb
 
-.global l2cu_release_lcb
-l2cu_release_lcb:
+.fn l2cu_release_lcb, global
 /* 802FAC3C 002C41FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FAC40 002C4200  7C 08 02 A6 */	mflr r0
 /* 802FAC44 002C4204  90 01 00 14 */	stw r0, 0x14(r1)
@@ -134,9 +133,9 @@ l2cu_release_lcb:
 /* 802FAD30 002C42F0  7C 08 03 A6 */	mtlr r0
 /* 802FAD34 002C42F4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802FAD38 002C42F8  4E 80 00 20 */	blr 
+.endfn l2cu_release_lcb
 
-.global l2cu_find_lcb_by_bd_addr
-l2cu_find_lcb_by_bd_addr:
+.fn l2cu_find_lcb_by_bd_addr, global
 /* 802FAD3C 002C42FC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FAD40 002C4300  7C 08 02 A6 */	mflr r0
 /* 802FAD44 002C4304  3C 80 80 5C */	lis r4, lbl_805C2AC0@ha
@@ -174,9 +173,9 @@ l2cu_find_lcb_by_bd_addr:
 /* 802FADB8 002C4378  7C 08 03 A6 */	mtlr r0
 /* 802FADBC 002C437C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FADC0 002C4380  4E 80 00 20 */	blr 
+.endfn l2cu_find_lcb_by_bd_addr
 
-.global l2cu_find_lcb_by_handle
-l2cu_find_lcb_by_handle:
+.fn l2cu_find_lcb_by_handle, global
 /* 802FADC4 002C4384  3C 80 80 5C */	lis r4, lbl_805C2AC0@ha
 /* 802FADC8 002C4388  38 84 2A C0 */	addi r4, r4, lbl_805C2AC0@l
 /* 802FADCC 002C438C  8C 04 00 08 */	lbzu r0, 8(r4)
@@ -217,16 +216,16 @@ l2cu_find_lcb_by_handle:
 .L_802FAE4C:
 /* 802FAE4C 002C440C  38 60 00 00 */	li r3, 0
 /* 802FAE50 002C4410  4E 80 00 20 */	blr 
+.endfn l2cu_find_lcb_by_handle
 
-.global l2cu_get_conn_role
-l2cu_get_conn_role:
+.fn l2cu_get_conn_role, global
 /* 802FAE54 002C4414  3C 60 80 5C */	lis r3, lbl_805C2AC0@ha
 /* 802FAE58 002C4418  38 63 2A C0 */	addi r3, r3, lbl_805C2AC0@l
 /* 802FAE5C 002C441C  88 63 00 01 */	lbz r3, 1(r3)
 /* 802FAE60 002C4420  4E 80 00 20 */	blr 
+.endfn l2cu_get_conn_role
 
-.global l2cu_build_header
-l2cu_build_header:
+.fn l2cu_build_header, global
 /* 802FAE64 002C4424  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FAE68 002C4428  7C 08 02 A6 */	mflr r0
 /* 802FAE6C 002C442C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -278,9 +277,9 @@ l2cu_build_header:
 /* 802FAF1C 002C44DC  7C 08 03 A6 */	mtlr r0
 /* 802FAF20 002C44E0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FAF24 002C44E4  4E 80 00 20 */	blr 
+.endfn l2cu_build_header
 
-.global l2cu_send_peer_cmd_reject
-l2cu_send_peer_cmd_reject:
+.fn l2cu_send_peer_cmd_reject, global
 /* 802FAF28 002C44E8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FAF2C 002C44EC  7C 08 02 A6 */	mflr r0
 /* 802FAF30 002C44F0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -350,9 +349,9 @@ l2cu_send_peer_cmd_reject:
 /* 802FB018 002C45D8  7C 08 03 A6 */	mtlr r0
 /* 802FB01C 002C45DC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FB020 002C45E0  4E 80 00 20 */	blr 
+.endfn l2cu_send_peer_cmd_reject
 
-.global l2cu_send_peer_connect_req
-l2cu_send_peer_connect_req:
+.fn l2cu_send_peer_connect_req, global
 /* 802FB024 002C45E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FB028 002C45E8  7C 08 02 A6 */	mflr r0
 /* 802FB02C 002C45EC  38 80 00 04 */	li r4, 4
@@ -404,9 +403,9 @@ l2cu_send_peer_connect_req:
 /* 802FB0DC 002C469C  7C 08 03 A6 */	mtlr r0
 /* 802FB0E0 002C46A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802FB0E4 002C46A4  4E 80 00 20 */	blr 
+.endfn l2cu_send_peer_connect_req
 
-.global l2cu_send_peer_connect_rsp
-l2cu_send_peer_connect_rsp:
+.fn l2cu_send_peer_connect_rsp, global
 /* 802FB0E8 002C46A8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FB0EC 002C46AC  7C 08 02 A6 */	mflr r0
 /* 802FB0F0 002C46B0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -463,9 +462,9 @@ l2cu_send_peer_connect_rsp:
 /* 802FB1B4 002C4774  7C 08 03 A6 */	mtlr r0
 /* 802FB1B8 002C4778  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FB1BC 002C477C  4E 80 00 20 */	blr 
+.endfn l2cu_send_peer_connect_rsp
 
-.global l2cu_reject_connection
-l2cu_reject_connection:
+.fn l2cu_reject_connection, global
 /* 802FB1C0 002C4780  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FB1C4 002C4784  7C 08 02 A6 */	mflr r0
 /* 802FB1C8 002C4788  90 01 00 24 */	stw r0, 0x24(r1)
@@ -516,9 +515,9 @@ l2cu_reject_connection:
 /* 802FB274 002C4834  7C 08 03 A6 */	mtlr r0
 /* 802FB278 002C4838  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FB27C 002C483C  4E 80 00 20 */	blr 
+.endfn l2cu_reject_connection
 
-.global l2cu_send_peer_config_req
-l2cu_send_peer_config_req:
+.fn l2cu_send_peer_config_req, global
 /* 802FB280 002C4840  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FB284 002C4844  7C 08 02 A6 */	mflr r0
 /* 802FB288 002C4848  38 E0 00 00 */	li r7, 0
@@ -719,9 +718,9 @@ l2cu_send_peer_config_req:
 /* 802FB56C 002C4B2C  7C 08 03 A6 */	mtlr r0
 /* 802FB570 002C4B30  38 21 00 10 */	addi r1, r1, 0x10
 /* 802FB574 002C4B34  4E 80 00 20 */	blr 
+.endfn l2cu_send_peer_config_req
 
-.global l2cu_send_peer_config_rsp
-l2cu_send_peer_config_rsp:
+.fn l2cu_send_peer_config_rsp, global
 /* 802FB578 002C4B38  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FB57C 002C4B3C  7C 08 02 A6 */	mflr r0
 /* 802FB580 002C4B40  38 A0 00 00 */	li r5, 0
@@ -922,9 +921,9 @@ l2cu_send_peer_config_rsp:
 /* 802FB864 002C4E24  7C 08 03 A6 */	mtlr r0
 /* 802FB868 002C4E28  38 21 00 10 */	addi r1, r1, 0x10
 /* 802FB86C 002C4E2C  4E 80 00 20 */	blr 
+.endfn l2cu_send_peer_config_rsp
 
-.global l2cu_send_peer_config_rej
-l2cu_send_peer_config_rej:
+.fn l2cu_send_peer_config_rej, global
 /* 802FB870 002C4E30  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802FB874 002C4E34  7C 08 02 A6 */	mflr r0
 /* 802FB878 002C4E38  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1042,9 +1041,9 @@ l2cu_send_peer_config_rej:
 /* 802FBA18 002C4FD8  7C 08 03 A6 */	mtlr r0
 /* 802FBA1C 002C4FDC  38 21 00 30 */	addi r1, r1, 0x30
 /* 802FBA20 002C4FE0  4E 80 00 20 */	blr 
+.endfn l2cu_send_peer_config_rej
 
-.global l2cu_send_peer_disc_req
-l2cu_send_peer_disc_req:
+.fn l2cu_send_peer_disc_req, global
 /* 802FBA24 002C4FE4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FBA28 002C4FE8  7C 08 02 A6 */	mflr r0
 /* 802FBA2C 002C4FEC  38 80 00 04 */	li r4, 4
@@ -1100,9 +1099,9 @@ l2cu_send_peer_disc_req:
 /* 802FBAEC 002C50AC  7C 08 03 A6 */	mtlr r0
 /* 802FBAF0 002C50B0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802FBAF4 002C50B4  4E 80 00 20 */	blr 
+.endfn l2cu_send_peer_disc_req
 
-.global l2cu_send_peer_disc_rsp
-l2cu_send_peer_disc_rsp:
+.fn l2cu_send_peer_disc_rsp, global
 /* 802FBAF8 002C50B8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FBAFC 002C50BC  7C 08 02 A6 */	mflr r0
 /* 802FBB00 002C50C0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1153,9 +1152,9 @@ l2cu_send_peer_disc_rsp:
 /* 802FBBAC 002C516C  7C 08 03 A6 */	mtlr r0
 /* 802FBBB0 002C5170  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FBBB4 002C5174  4E 80 00 20 */	blr 
+.endfn l2cu_send_peer_disc_rsp
 
-.global l2cu_send_peer_echo_req
-l2cu_send_peer_echo_req:
+.fn l2cu_send_peer_echo_req, global
 /* 802FBBB8 002C5178  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FBBBC 002C517C  7C 08 02 A6 */	mflr r0
 /* 802FBBC0 002C5180  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1255,9 +1254,9 @@ l2cu_send_peer_echo_req:
 /* 802FBD1C 002C52DC  7C 08 03 A6 */	mtlr r0
 /* 802FBD20 002C52E0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FBD24 002C52E4  4E 80 00 20 */	blr 
+.endfn l2cu_send_peer_echo_req
 
-.global l2cu_send_peer_echo_rsp
-l2cu_send_peer_echo_rsp:
+.fn l2cu_send_peer_echo_rsp, global
 /* 802FBD28 002C52E8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FBD2C 002C52EC  7C 08 02 A6 */	mflr r0
 /* 802FBD30 002C52F0  3C E0 80 5C */	lis r7, lbl_805BF4D0@ha
@@ -1371,9 +1370,9 @@ l2cu_send_peer_echo_rsp:
 /* 802FBEB8 002C5478  7C 08 03 A6 */	mtlr r0
 /* 802FBEBC 002C547C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FBEC0 002C5480  4E 80 00 20 */	blr 
+.endfn l2cu_send_peer_echo_rsp
 
-.global l2cu_send_peer_info_rsp
-l2cu_send_peer_info_rsp:
+.fn l2cu_send_peer_info_rsp, global
 /* 802FBEC4 002C5484  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FBEC8 002C5488  7C 08 02 A6 */	mflr r0
 /* 802FBECC 002C548C  7C 86 23 78 */	mr r6, r4
@@ -1417,9 +1416,9 @@ l2cu_send_peer_info_rsp:
 /* 802FBF5C 002C551C  7C 08 03 A6 */	mtlr r0
 /* 802FBF60 002C5520  38 21 00 10 */	addi r1, r1, 0x10
 /* 802FBF64 002C5524  4E 80 00 20 */	blr 
+.endfn l2cu_send_peer_info_rsp
 
-.global l2cu_allocate_ccb
-l2cu_allocate_ccb:
+.fn l2cu_allocate_ccb, global
 /* 802FBF68 002C5528  3C E0 80 5C */	lis r7, lbl_805C2AC0@ha
 /* 802FBF6C 002C552C  38 E7 2A C0 */	addi r7, r7, lbl_805C2AC0@l
 /* 802FBF70 002C5530  81 07 07 B0 */	lwz r8, 0x7b0(r7)
@@ -1490,9 +1489,9 @@ l2cu_allocate_ccb:
 /* 802FC068 002C5628  98 A8 00 37 */	stb r5, 0x37(r8)
 /* 802FC06C 002C562C  91 08 00 28 */	stw r8, 0x28(r8)
 /* 802FC070 002C5630  4E 80 00 20 */	blr 
+.endfn l2cu_allocate_ccb
 
-.global l2cu_release_ccb
-l2cu_release_ccb:
+.fn l2cu_release_ccb, global
 /* 802FC074 002C5634  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FC078 002C5638  7C 08 02 A6 */	mflr r0
 /* 802FC07C 002C563C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1609,9 +1608,9 @@ l2cu_release_ccb:
 /* 802FC20C 002C57CC  7C 08 03 A6 */	mtlr r0
 /* 802FC210 002C57D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802FC214 002C57D4  4E 80 00 20 */	blr 
+.endfn l2cu_release_ccb
 
-.global l2cu_find_ccb_by_cid
-l2cu_find_ccb_by_cid:
+.fn l2cu_find_ccb_by_cid, global
 /* 802FC218 002C57D8  28 04 00 40 */	cmplwi r4, 0x40
 /* 802FC21C 002C57DC  38 A0 00 00 */	li r5, 0
 /* 802FC220 002C57E0  41 80 00 4C */	blt .L_802FC26C
@@ -1637,9 +1636,9 @@ l2cu_find_ccb_by_cid:
 .L_802FC26C:
 /* 802FC26C 002C582C  7C A3 2B 78 */	mr r3, r5
 /* 802FC270 002C5830  4E 80 00 20 */	blr 
+.endfn l2cu_find_ccb_by_cid
 
-.global l2cu_allocate_rcb
-l2cu_allocate_rcb:
+.fn l2cu_allocate_rcb, global
 /* 802FC274 002C5834  3C 80 80 5C */	lis r4, lbl_805C2AC0@ha
 /* 802FC278 002C5838  38 00 00 08 */	li r0, 8
 /* 802FC27C 002C583C  38 84 2A C0 */	addi r4, r4, lbl_805C2AC0@l
@@ -1661,16 +1660,16 @@ l2cu_allocate_rcb:
 /* 802FC2B4 002C5874  42 00 FF D8 */	bdnz .L_802FC28C
 /* 802FC2B8 002C5878  38 60 00 00 */	li r3, 0
 /* 802FC2BC 002C587C  4E 80 00 20 */	blr 
+.endfn l2cu_allocate_rcb
 
-.global l2cu_release_rcb
-l2cu_release_rcb:
+.fn l2cu_release_rcb, global
 /* 802FC2C0 002C5880  38 00 00 00 */	li r0, 0
 /* 802FC2C4 002C5884  98 03 00 00 */	stb r0, 0(r3)
 /* 802FC2C8 002C5888  B0 03 00 02 */	sth r0, 2(r3)
 /* 802FC2CC 002C588C  4E 80 00 20 */	blr 
+.endfn l2cu_release_rcb
 
-.global l2cu_find_rcb_by_psm
-l2cu_find_rcb_by_psm:
+.fn l2cu_find_rcb_by_psm, global
 /* 802FC2D0 002C5890  3C 80 80 5C */	lis r4, lbl_805C2AC0@ha
 /* 802FC2D4 002C5894  38 00 00 02 */	li r0, 2
 /* 802FC2D8 002C5898  38 84 2A C0 */	addi r4, r4, lbl_805C2AC0@l
@@ -1722,9 +1721,9 @@ l2cu_find_rcb_by_psm:
 /* 802FC37C 002C593C  42 00 FF 6C */	bdnz .L_802FC2E8
 /* 802FC380 002C5940  38 60 00 00 */	li r3, 0
 /* 802FC384 002C5944  4E 80 00 20 */	blr 
+.endfn l2cu_find_rcb_by_psm
 
-.global l2cu_process_peer_cfg_req
-l2cu_process_peer_cfg_req:
+.fn l2cu_process_peer_cfg_req, global
 /* 802FC388 002C5948  88 04 00 02 */	lbz r0, 2(r4)
 /* 802FC38C 002C594C  38 C0 00 01 */	li r6, 1
 /* 802FC390 002C5950  38 E0 00 01 */	li r7, 1
@@ -1817,9 +1816,9 @@ l2cu_process_peer_cfg_req:
 /* 802FC4C4 002C5A84  38 00 00 00 */	li r0, 0
 /* 802FC4C8 002C5A88  98 04 00 24 */	stb r0, 0x24(r4)
 /* 802FC4CC 002C5A8C  4E 80 00 20 */	blr 
+.endfn l2cu_process_peer_cfg_req
 
-.global l2cu_process_peer_cfg_rsp
-l2cu_process_peer_cfg_rsp:
+.fn l2cu_process_peer_cfg_rsp, global
 /* 802FC4D0 002C5A90  88 04 00 06 */	lbz r0, 6(r4)
 /* 802FC4D4 002C5A94  2C 00 00 00 */	cmpwi r0, 0
 /* 802FC4D8 002C5A98  4D 82 00 20 */	beqlr 
@@ -1836,9 +1835,9 @@ l2cu_process_peer_cfg_rsp:
 /* 802FC504 002C5AC4  90 A3 00 68 */	stw r5, 0x68(r3)
 /* 802FC508 002C5AC8  90 03 00 6C */	stw r0, 0x6c(r3)
 /* 802FC50C 002C5ACC  4E 80 00 20 */	blr 
+.endfn l2cu_process_peer_cfg_rsp
 
-.global l2cu_process_our_cfg_req
-l2cu_process_our_cfg_req:
+.fn l2cu_process_our_cfg_req, global
 /* 802FC510 002C5AD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FC514 002C5AD4  7C 08 02 A6 */	mflr r0
 /* 802FC518 002C5AD8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1910,9 +1909,9 @@ l2cu_process_our_cfg_req:
 /* 802FC614 002C5BD4  7C 08 03 A6 */	mtlr r0
 /* 802FC618 002C5BD8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802FC61C 002C5BDC  4E 80 00 20 */	blr 
+.endfn l2cu_process_our_cfg_req
 
-.global l2cu_process_our_cfg_rsp
-l2cu_process_our_cfg_rsp:
+.fn l2cu_process_our_cfg_rsp, global
 /* 802FC620 002C5BE0  88 04 00 06 */	lbz r0, 6(r4)
 /* 802FC624 002C5BE4  2C 00 00 00 */	cmpwi r0, 0
 /* 802FC628 002C5BE8  4D 82 00 20 */	beqlr 
@@ -1929,9 +1928,9 @@ l2cu_process_our_cfg_rsp:
 /* 802FC654 002C5C14  90 A3 00 50 */	stw r5, 0x50(r3)
 /* 802FC658 002C5C18  90 03 00 54 */	stw r0, 0x54(r3)
 /* 802FC65C 002C5C1C  4E 80 00 20 */	blr 
+.endfn l2cu_process_our_cfg_rsp
 
-.global l2cu_device_reset
-l2cu_device_reset:
+.fn l2cu_device_reset, global
 /* 802FC660 002C5C20  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FC664 002C5C24  7C 08 02 A6 */	mflr r0
 /* 802FC668 002C5C28  3C 60 80 5C */	lis r3, lbl_805C2AC0@ha
@@ -1961,9 +1960,9 @@ l2cu_device_reset:
 /* 802FC6C0 002C5C80  7C 08 03 A6 */	mtlr r0
 /* 802FC6C4 002C5C84  38 21 00 10 */	addi r1, r1, 0x10
 /* 802FC6C8 002C5C88  4E 80 00 20 */	blr 
+.endfn l2cu_device_reset
 
-.global l2cu_create_conn
-l2cu_create_conn:
+.fn l2cu_create_conn, global
 /* 802FC6CC 002C5C8C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802FC6D0 002C5C90  7C 08 02 A6 */	mflr r0
 /* 802FC6D4 002C5C94  90 01 00 34 */	stw r0, 0x34(r1)
@@ -2039,9 +2038,9 @@ l2cu_create_conn:
 /* 802FC7D8 002C5D98  7C 08 03 A6 */	mtlr r0
 /* 802FC7DC 002C5D9C  38 21 00 30 */	addi r1, r1, 0x30
 /* 802FC7E0 002C5DA0  4E 80 00 20 */	blr 
+.endfn l2cu_create_conn
 
-.global l2cu_create_conn_after_switch
-l2cu_create_conn_after_switch:
+.fn l2cu_create_conn_after_switch, global
 /* 802FC7E4 002C5DA4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FC7E8 002C5DA8  7C 08 02 A6 */	mflr r0
 /* 802FC7EC 002C5DAC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2099,9 +2098,9 @@ l2cu_create_conn_after_switch:
 /* 802FC8A8 002C5E68  7C 08 03 A6 */	mtlr r0
 /* 802FC8AC 002C5E6C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802FC8B0 002C5E70  4E 80 00 20 */	blr 
+.endfn l2cu_create_conn_after_switch
 
-.global l2cu_find_lcb_by_state
-l2cu_find_lcb_by_state:
+.fn l2cu_find_lcb_by_state, global
 /* 802FC8B4 002C5E74  3C 80 80 5C */	lis r4, lbl_805C2AC0@ha
 /* 802FC8B8 002C5E78  38 84 2A C0 */	addi r4, r4, lbl_805C2AC0@l
 /* 802FC8BC 002C5E7C  8C 04 00 08 */	lbzu r0, 8(r4)
@@ -2142,9 +2141,9 @@ l2cu_find_lcb_by_state:
 .L_802FC93C:
 /* 802FC93C 002C5EFC  38 60 00 00 */	li r3, 0
 /* 802FC940 002C5F00  4E 80 00 20 */	blr 
+.endfn l2cu_find_lcb_by_state
 
-.global l2cu_lcb_disconnecting
-l2cu_lcb_disconnecting:
+.fn l2cu_lcb_disconnecting, global
 /* 802FC944 002C5F04  3C 80 80 5C */	lis r4, lbl_805C2AC0@ha
 /* 802FC948 002C5F08  38 00 00 02 */	li r0, 2
 /* 802FC94C 002C5F0C  38 84 2A C0 */	addi r4, r4, lbl_805C2AC0@l
@@ -2210,6 +2209,7 @@ l2cu_lcb_disconnecting:
 /* 802FCA20 002C5FE0  38 A5 00 B8 */	addi r5, r5, 0xb8
 /* 802FCA24 002C5FE4  42 00 FF 3C */	bdnz .L_802FC960
 /* 802FCA28 002C5FE8  4E 80 00 20 */	blr
+.endfn l2cu_lcb_disconnecting
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 .global lbl_80548118

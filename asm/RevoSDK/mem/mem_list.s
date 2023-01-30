@@ -3,18 +3,17 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global MEMInitList
-MEMInitList:
+.fn MEMInitList, global
 /* 80349AD0 00313090  38 00 00 00 */	li r0, 0
 /* 80349AD4 00313094  90 03 00 00 */	stw r0, 0(r3)
 /* 80349AD8 00313098  90 03 00 04 */	stw r0, 4(r3)
 /* 80349ADC 0031309C  B0 03 00 08 */	sth r0, 8(r3)
 /* 80349AE0 003130A0  B0 83 00 0A */	sth r4, 0xa(r3)
 /* 80349AE4 003130A4  4E 80 00 20 */	blr 
+.endfn MEMInitList
 
 .balign 16, 0
-.global MEMAppendListObject
-MEMAppendListObject:
+.fn MEMAppendListObject, global
 /* 80349AF0 003130B0  80 03 00 00 */	lwz r0, 0(r3)
 /* 80349AF4 003130B4  2C 00 00 00 */	cmpwi r0, 0
 /* 80349AF8 003130B8  40 82 00 30 */	bne .L_80349B28
@@ -44,10 +43,10 @@ MEMAppendListObject:
 /* 80349B54 00313114  38 05 00 01 */	addi r0, r5, 1
 /* 80349B58 00313118  B0 03 00 08 */	sth r0, 8(r3)
 /* 80349B5C 0031311C  4E 80 00 20 */	blr 
+.endfn MEMAppendListObject
 
 .balign 16, 0
-.global MEMRemoveListObject
-MEMRemoveListObject:
+.fn MEMRemoveListObject, global
 /* 80349B60 00313120  A0 03 00 0A */	lhz r0, 0xa(r3)
 /* 80349B64 00313124  7C C4 02 14 */	add r6, r4, r0
 /* 80349B68 00313128  7C 84 00 2E */	lwzx r4, r4, r0
@@ -79,6 +78,7 @@ MEMRemoveListObject:
 /* 80349BC0 00313180  38 04 FF FF */	addi r0, r4, -1
 /* 80349BC4 00313184  B0 03 00 08 */	sth r0, 8(r3)
 /* 80349BC8 00313188  4E 80 00 20 */	blr 
+.endfn MEMRemoveListObject
 
 .balign 16, 0
 .global MEMGetNextListObject

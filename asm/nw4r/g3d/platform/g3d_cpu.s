@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global Copy32ByteBlocks__Q34nw4r3g3d6detailFPvPCvUl
-Copy32ByteBlocks__Q34nw4r3g3d6detailFPvPCvUl:
+.fn Copy32ByteBlocks__Q34nw4r3g3d6detailFPvPCvUl, global
 /* 803E7978 003B0F38  54 A5 D9 7F */	rlwinm. r5, r5, 0x1b, 5, 0x1f
 /* 803E797C 003B0F3C  4D 82 00 20 */	beqlr 
 /* 803E7980 003B0F40  54 A0 F0 BF */	rlwinm. r0, r5, 0x1e, 2, 0x1f
@@ -62,9 +61,9 @@ Copy32ByteBlocks__Q34nw4r3g3d6detailFPvPCvUl:
 /* 803E7A48 003B1008  38 63 00 20 */	addi r3, r3, 0x20
 /* 803E7A4C 003B100C  42 00 FF D8 */	bdnz .L_803E7A24
 /* 803E7A50 003B1010  4E 80 00 20 */	blr 
+.endfn Copy32ByteBlocks__Q34nw4r3g3d6detailFPvPCvUl
 
-.global ZeroMemory32ByteBlocks__Q34nw4r3g3d6detailFPvUl
-ZeroMemory32ByteBlocks__Q34nw4r3g3d6detailFPvUl:
+.fn ZeroMemory32ByteBlocks__Q34nw4r3g3d6detailFPvUl, global
 /* 803E7A54 003B1014  54 84 D9 7F */	rlwinm. r4, r4, 0x1b, 5, 0x1f
 /* 803E7A58 003B1018  C0 02 C0 60 */	lfs f0, float_8066C3E0@sda21(r2)
 /* 803E7A5C 003B101C  4D 82 00 20 */	beqlr 
@@ -118,9 +117,9 @@ ZeroMemory32ByteBlocks__Q34nw4r3g3d6detailFPvUl:
 /* 803E7B10 003B10D0  38 63 00 20 */	addi r3, r3, 0x20
 /* 803E7B14 003B10D4  42 00 FF EC */	bdnz .L_803E7B00
 /* 803E7B18 003B10D8  4E 80 00 20 */	blr 
+.endfn ZeroMemory32ByteBlocks__Q34nw4r3g3d6detailFPvUl
 
-.global ZeroMemory16ByteBlocks__Q34nw4r3g3d6detailFPvUl
-ZeroMemory16ByteBlocks__Q34nw4r3g3d6detailFPvUl:
+.fn ZeroMemory16ByteBlocks__Q34nw4r3g3d6detailFPvUl, global
 /* 803E7B1C 003B10DC  54 84 E1 3F */	rlwinm. r4, r4, 0x1c, 4, 0x1f
 /* 803E7B20 003B10E0  C0 02 C0 60 */	lfs f0, float_8066C3E0@sda21(r2)
 /* 803E7B24 003B10E4  4D 82 00 20 */	beqlr 
@@ -156,6 +155,7 @@ ZeroMemory16ByteBlocks__Q34nw4r3g3d6detailFPvUl:
 /* 803E7B90 003B1150  38 63 00 10 */	addi r3, r3, 0x10
 /* 803E7B94 003B1154  42 00 FF F4 */	bdnz .L_803E7B88
 /* 803E7B98 003B1158  4E 80 00 20 */	blr
+.endfn ZeroMemory16ByteBlocks__Q34nw4r3g3d6detailFPvUl
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

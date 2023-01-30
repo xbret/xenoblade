@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global SFX_IsMergeField
-SFX_IsMergeField:
+.fn SFX_IsMergeField, global
 /* 803D4A14 0039DFD4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D4A18 0039DFD8  7C 08 02 A6 */	mflr r0
 /* 803D4A1C 0039DFDC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -63,9 +62,9 @@ SFX_IsMergeField:
 /* 803D4AD4 0039E094  7C 08 03 A6 */	mtlr r0
 /* 803D4AD8 0039E098  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D4ADC 0039E09C  4E 80 00 20 */	blr 
+.endfn SFX_IsMergeField
 
-.global sfxcnv_MakeTable
-sfxcnv_MakeTable:
+.fn sfxcnv_MakeTable, global
 /* 803D4AE0 0039E0A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D4AE4 0039E0A4  7C 08 02 A6 */	mflr r0
 /* 803D4AE8 0039E0A8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -200,9 +199,9 @@ sfxcnv_MakeTable:
 /* 803D4CA4 0039E264  7C 08 03 A6 */	mtlr r0
 /* 803D4CA8 0039E268  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D4CAC 0039E26C  4E 80 00 20 */	blr 
+.endfn sfxcnv_MakeTable
 
-.global SFXCNV_MakeCcirFromY
-SFXCNV_MakeCcirFromY:
+.fn SFXCNV_MakeCcirFromY, global
 /* 803D4CB0 0039E270  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 803D4CB4 0039E274  3D 00 43 30 */	lis r8, 0x4330
 /* 803D4CB8 0039E278  38 E0 00 00 */	li r7, 0
@@ -387,42 +386,42 @@ SFXCNV_MakeCcirFromY:
 /* 803D4F80 0039E540  98 03 00 FF */	stb r0, 0xff(r3)
 /* 803D4F84 0039E544  38 21 00 60 */	addi r1, r1, 0x60
 /* 803D4F88 0039E548  4E 80 00 20 */	blr 
+.endfn SFXCNV_MakeCcirFromY
 
-.global SFX_SetCnvFrmCbFunc
-SFX_SetCnvFrmCbFunc:
+.fn SFX_SetCnvFrmCbFunc, global
 /* 803D4F8C 0039E54C  90 83 00 68 */	stw r4, 0x68(r3)
 /* 803D4F90 0039E550  4E 80 00 20 */	blr 
+.endfn SFX_SetCnvFrmCbFunc
 
-.global SFX_SetCopyAlphaCbFunc
-SFX_SetCopyAlphaCbFunc:
+.fn SFX_SetCopyAlphaCbFunc, global
 /* 803D4F94 0039E554  90 83 00 6C */	stw r4, 0x6c(r3)
 /* 803D4F98 0039E558  4E 80 00 20 */	blr 
+.endfn SFX_SetCopyAlphaCbFunc
 
-.global SFX_SetMakeLumiTableCbFunc
-SFX_SetMakeLumiTableCbFunc:
+.fn SFX_SetMakeLumiTableCbFunc, global
 /* 803D4F9C 0039E55C  80 63 00 30 */	lwz r3, 0x30(r3)
 /* 803D4FA0 0039E560  90 83 00 18 */	stw r4, 0x18(r3)
 /* 803D4FA4 0039E564  4E 80 00 20 */	blr 
+.endfn SFX_SetMakeLumiTableCbFunc
 
-.global SFX_SetMakeAlp3TableCbFunc
-SFX_SetMakeAlp3TableCbFunc:
+.fn SFX_SetMakeAlp3TableCbFunc, global
 /* 803D4FA8 0039E568  80 63 00 30 */	lwz r3, 0x30(r3)
 /* 803D4FAC 0039E56C  90 83 00 20 */	stw r4, 0x20(r3)
 /* 803D4FB0 0039E570  4E 80 00 20 */	blr 
+.endfn SFX_SetMakeAlp3TableCbFunc
 
-.global SFX_SetMakeAlp3110TableCbFunc
-SFX_SetMakeAlp3110TableCbFunc:
+.fn SFX_SetMakeAlp3110TableCbFunc, global
 /* 803D4FB4 0039E574  80 63 00 30 */	lwz r3, 0x30(r3)
 /* 803D4FB8 0039E578  90 83 00 1C */	stw r4, 0x1c(r3)
 /* 803D4FBC 0039E57C  4E 80 00 20 */	blr 
+.endfn SFX_SetMakeAlp3110TableCbFunc
 
-.global SFX_SetMakeColAdjTableCbFunc
-SFX_SetMakeColAdjTableCbFunc:
+.fn SFX_SetMakeColAdjTableCbFunc, global
 /* 803D4FC0 0039E580  90 83 00 70 */	stw r4, 0x70(r3)
 /* 803D4FC4 0039E584  4E 80 00 20 */	blr 
+.endfn SFX_SetMakeColAdjTableCbFunc
 
-.global SFX_CnvFrmByCbFunc
-SFX_CnvFrmByCbFunc:
+.fn SFX_CnvFrmByCbFunc, global
 /* 803D4FC8 0039E588  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D4FCC 0039E58C  7C 08 02 A6 */	mflr r0
 /* 803D4FD0 0039E590  90 01 00 24 */	stw r0, 0x24(r1)
@@ -574,9 +573,9 @@ SFX_CnvFrmByCbFunc:
 /* 803D51DC 0039E79C  7C 08 03 A6 */	mtlr r0
 /* 803D51E0 0039E7A0  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D51E4 0039E7A4  4E 80 00 20 */	blr 
+.endfn SFX_CnvFrmByCbFunc
 
-.global sfxcnv_ExecCnvFrmByCbFunc
-sfxcnv_ExecCnvFrmByCbFunc:
+.fn sfxcnv_ExecCnvFrmByCbFunc, global
 /* 803D51E8 0039E7A8  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 803D51EC 0039E7AC  7C 08 02 A6 */	mflr r0
 /* 803D51F0 0039E7B0  90 01 00 A4 */	stw r0, 0xa4(r1)
@@ -664,9 +663,9 @@ sfxcnv_ExecCnvFrmByCbFunc:
 /* 803D5318 0039E8D8  7C 08 03 A6 */	mtlr r0
 /* 803D531C 0039E8DC  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 803D5320 0039E8E0  4E 80 00 20 */	blr 
+.endfn sfxcnv_ExecCnvFrmByCbFunc
 
-.global sfxcnv_MakeCftSrcBuf
-sfxcnv_MakeCftSrcBuf:
+.fn sfxcnv_MakeCftSrcBuf, global
 /* 803D5324 0039E8E4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D5328 0039E8E8  7C 08 02 A6 */	mflr r0
 /* 803D532C 0039E8EC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -764,9 +763,9 @@ sfxcnv_MakeCftSrcBuf:
 /* 803D5484 0039EA44  7C 08 03 A6 */	mtlr r0
 /* 803D5488 0039EA48  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D548C 0039EA4C  4E 80 00 20 */	blr 
+.endfn sfxcnv_MakeCftSrcBuf
 
-.global sfxcnv_ExecCopyAlphaByCbFunc
-sfxcnv_ExecCopyAlphaByCbFunc:
+.fn sfxcnv_ExecCopyAlphaByCbFunc, global
 /* 803D5490 0039EA50  94 21 FF 00 */	stwu r1, -0x100(r1)
 /* 803D5494 0039EA54  7C 08 02 A6 */	mflr r0
 /* 803D5498 0039EA58  90 01 01 04 */	stw r0, 0x104(r1)
@@ -869,14 +868,14 @@ sfxcnv_ExecCopyAlphaByCbFunc:
 /* 803D55FC 0039EBBC  7C 08 03 A6 */	mtlr r0
 /* 803D5600 0039EBC0  38 21 01 00 */	addi r1, r1, 0x100
 /* 803D5604 0039EBC4  4E 80 00 20 */	blr 
+.endfn sfxcnv_ExecCopyAlphaByCbFunc
 
-.global SFX_SetBytePerPixelOutBuf
-SFX_SetBytePerPixelOutBuf:
+.fn SFX_SetBytePerPixelOutBuf, global
 /* 803D5608 0039EBC8  90 83 00 74 */	stw r4, 0x74(r3)
 /* 803D560C 0039EBCC  4E 80 00 20 */	blr 
+.endfn SFX_SetBytePerPixelOutBuf
 
-.global sfxcnv_MakeDstBufInf
-sfxcnv_MakeDstBufInf:
+.fn sfxcnv_MakeDstBufInf, global
 /* 803D5610 0039EBD0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D5614 0039EBD4  7C 08 02 A6 */	mflr r0
 /* 803D5618 0039EBD8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -981,9 +980,9 @@ sfxcnv_MakeDstBufInf:
 /* 803D5778 0039ED38  7C 08 03 A6 */	mtlr r0
 /* 803D577C 0039ED3C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D5780 0039ED40  4E 80 00 20 */	blr 
+.endfn sfxcnv_MakeDstBufInf
 
-.global SFX_Make2PlaneCftDstBuf
-SFX_Make2PlaneCftDstBuf:
+.fn SFX_Make2PlaneCftDstBuf, global
 /* 803D5784 0039ED44  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D5788 0039ED48  7C 08 02 A6 */	mflr r0
 /* 803D578C 0039ED4C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1023,6 +1022,7 @@ SFX_Make2PlaneCftDstBuf:
 /* 803D5814 0039EDD4  7C 08 03 A6 */	mtlr r0
 /* 803D5818 0039EDD8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D581C 0039EDDC  4E 80 00 20 */	blr 
+.endfn SFX_Make2PlaneCftDstBuf
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global btu_hcif_process_event
-btu_hcif_process_event:
+.fn btu_hcif_process_event, global
 /* 802EE950 002B7F10  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802EE954 002B7F14  7C 08 02 A6 */	mflr r0
 /* 802EE958 002B7F18  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
@@ -412,9 +411,9 @@ btu_hcif_process_event:
 /* 802EEEFC 002B84BC  7C 08 03 A6 */	mtlr r0
 /* 802EEF00 002B84C0  38 21 00 40 */	addi r1, r1, 0x40
 /* 802EEF04 002B84C4  4E 80 00 20 */	blr 
+.endfn btu_hcif_process_event
 
-.global btu_hcif_send_cmd
-btu_hcif_send_cmd:
+.fn btu_hcif_send_cmd, global
 /* 802EEF08 002B84C8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802EEF0C 002B84CC  7C 08 02 A6 */	mflr r0
 /* 802EEF10 002B84D0  2C 03 00 00 */	cmpwi r3, 0
@@ -522,9 +521,9 @@ btu_hcif_send_cmd:
 /* 802EF088 002B8648  7C 08 03 A6 */	mtlr r0
 /* 802EF08C 002B864C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802EF090 002B8650  4E 80 00 20 */	blr 
+.endfn btu_hcif_send_cmd
 
-.global btu_hcif_connection_comp_evt
-btu_hcif_connection_comp_evt:
+.fn btu_hcif_connection_comp_evt, global
 /* 802EF094 002B8654  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802EF098 002B8658  7C 08 02 A6 */	mflr r0
 /* 802EF09C 002B865C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -582,9 +581,9 @@ btu_hcif_connection_comp_evt:
 /* 802EF164 002B8724  7C 08 03 A6 */	mtlr r0
 /* 802EF168 002B8728  38 21 00 30 */	addi r1, r1, 0x30
 /* 802EF16C 002B872C  4E 80 00 20 */	blr 
+.endfn btu_hcif_connection_comp_evt
 
-.global btu_hcif_connection_request_evt
-btu_hcif_connection_request_evt:
+.fn btu_hcif_connection_request_evt, global
 /* 802EF170 002B8730  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802EF174 002B8734  7C 08 02 A6 */	mflr r0
 /* 802EF178 002B8738  90 01 00 24 */	stw r0, 0x24(r1)
@@ -622,9 +621,9 @@ btu_hcif_connection_request_evt:
 /* 802EF1F0 002B87B0  7C 08 03 A6 */	mtlr r0
 /* 802EF1F4 002B87B4  38 21 00 20 */	addi r1, r1, 0x20
 /* 802EF1F8 002B87B8  4E 80 00 20 */	blr 
+.endfn btu_hcif_connection_request_evt
 
-.global btu_hcif_qos_setup_comp_evt
-btu_hcif_qos_setup_comp_evt:
+.fn btu_hcif_qos_setup_comp_evt, global
 /* 802EF1FC 002B87BC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802EF200 002B87C0  7C 08 02 A6 */	mflr r0
 /* 802EF204 002B87C4  7C 66 1B 78 */	mr r6, r3
@@ -689,9 +688,9 @@ btu_hcif_qos_setup_comp_evt:
 /* 802EF2F0 002B88B0  7C 08 03 A6 */	mtlr r0
 /* 802EF2F4 002B88B4  38 21 00 20 */	addi r1, r1, 0x20
 /* 802EF2F8 002B88B8  4E 80 00 20 */	blr 
+.endfn btu_hcif_qos_setup_comp_evt
 
-.global btu_hcif_esco_connection_comp_evt
-btu_hcif_esco_connection_comp_evt:
+.fn btu_hcif_esco_connection_comp_evt, global
 /* 802EF2FC 002B88BC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802EF300 002B88C0  7C 08 02 A6 */	mflr r0
 /* 802EF304 002B88C4  38 A0 00 06 */	li r5, 6
@@ -748,9 +747,9 @@ btu_hcif_esco_connection_comp_evt:
 /* 802EF3D0 002B8990  7C 08 03 A6 */	mtlr r0
 /* 802EF3D4 002B8994  38 21 00 30 */	addi r1, r1, 0x30
 /* 802EF3D8 002B8998  4E 80 00 20 */	blr 
+.endfn btu_hcif_esco_connection_comp_evt
 
-.global btu_hcif_hdl_command_complete
-btu_hcif_hdl_command_complete:
+.fn btu_hcif_hdl_command_complete, global
 /* 802EF3DC 002B899C  2C 03 0C 14 */	cmpwi r3, 0xc14
 /* 802EF3E0 002B89A0  7C 66 1B 78 */	mr r6, r3
 /* 802EF3E4 002B89A4  41 82 01 08 */	beq .L_802EF4EC
@@ -859,9 +858,9 @@ btu_hcif_hdl_command_complete:
 /* 802EF528 002B8AE8  7C C4 33 78 */	mr r4, r6
 /* 802EF52C 002B8AEC  4B FF 86 2C */	b btm_vsc_complete
 /* 802EF530 002B8AF0  4E 80 00 20 */	blr 
+.endfn btu_hcif_hdl_command_complete
 
-.global btu_hcif_command_complete_evt
-btu_hcif_command_complete_evt:
+.fn btu_hcif_command_complete_evt, global
 /* 802EF534 002B8AF4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802EF538 002B8AF8  7C 08 02 A6 */	mflr r0
 /* 802EF53C 002B8AFC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -937,9 +936,9 @@ btu_hcif_command_complete_evt:
 /* 802EF640 002B8C00  7C 08 03 A6 */	mtlr r0
 /* 802EF644 002B8C04  38 21 00 20 */	addi r1, r1, 0x20
 /* 802EF648 002B8C08  4E 80 00 20 */	blr 
+.endfn btu_hcif_command_complete_evt
 
-.global btu_hcif_hdl_command_status
-btu_hcif_hdl_command_status:
+.fn btu_hcif_hdl_command_status, global
 /* 802EF64C 002B8C0C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802EF650 002B8C10  7C 08 02 A6 */	mflr r0
 /* 802EF654 002B8C14  2C 03 08 02 */	cmpwi r3, 0x802
@@ -1082,9 +1081,9 @@ btu_hcif_hdl_command_status:
 /* 802EF840 002B8E00  7C 08 03 A6 */	mtlr r0
 /* 802EF844 002B8E04  38 21 00 30 */	addi r1, r1, 0x30
 /* 802EF848 002B8E08  4E 80 00 20 */	blr 
+.endfn btu_hcif_hdl_command_status
 
-.global btu_hcif_command_status_evt
-btu_hcif_command_status_evt:
+.fn btu_hcif_command_status_evt, global
 /* 802EF84C 002B8E0C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802EF850 002B8E10  7C 08 02 A6 */	mflr r0
 /* 802EF854 002B8E14  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1163,9 +1162,9 @@ btu_hcif_command_status_evt:
 /* 802EF968 002B8F28  7C 08 03 A6 */	mtlr r0
 /* 802EF96C 002B8F2C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802EF970 002B8F30  4E 80 00 20 */	blr 
+.endfn btu_hcif_command_status_evt
 
-.global btu_hcif_cmd_timeout
-btu_hcif_cmd_timeout:
+.fn btu_hcif_cmd_timeout, global
 /* 802EF974 002B8F34  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802EF978 002B8F38  7C 08 02 A6 */	mflr r0
 /* 802EF97C 002B8F3C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1261,9 +1260,9 @@ btu_hcif_cmd_timeout:
 /* 802EFAC0 002B9080  7C 08 03 A6 */	mtlr r0
 /* 802EFAC4 002B9084  38 21 00 20 */	addi r1, r1, 0x20
 /* 802EFAC8 002B9088  4E 80 00 20 */	blr 
+.endfn btu_hcif_cmd_timeout
 
-.global btu_hcif_link_key_notification_evt
-btu_hcif_link_key_notification_evt:
+.fn btu_hcif_link_key_notification_evt, global
 /* 802EFACC 002B908C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802EFAD0 002B9090  7C 08 02 A6 */	mflr r0
 /* 802EFAD4 002B9094  38 A3 00 16 */	addi r5, r3, 0x16
@@ -1320,6 +1319,7 @@ btu_hcif_link_key_notification_evt:
 /* 802EFBA0 002B9160  7C 08 03 A6 */	mtlr r0
 /* 802EFBA4 002B9164  38 21 00 20 */	addi r1, r1, 0x20
 /* 802EFBA8 002B9168  4E 80 00 20 */	blr
+.endfn btu_hcif_link_key_notification_evt
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 .global lbl_80546240

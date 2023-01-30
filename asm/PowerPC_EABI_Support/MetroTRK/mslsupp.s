@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __read_console
-__read_console:
+.fn __read_console, global
 /* 802CEC14 002981D4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CEC18 002981D8  7C 08 02 A6 */	mflr r0
 /* 802CEC1C 002981DC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -32,9 +31,9 @@ __read_console:
 /* 802CEC70 00298230  7C 08 03 A6 */	mtlr r0
 /* 802CEC74 00298234  38 21 00 20 */	addi r1, r1, 0x20
 /* 802CEC78 00298238  4E 80 00 20 */	blr 
+.endfn __read_console
 
-.global __TRK_write_console
-__TRK_write_console:
+.fn __TRK_write_console, global
 /* 802CEC7C 0029823C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CEC80 00298240  7C 08 02 A6 */	mflr r0
 /* 802CEC84 00298244  90 01 00 24 */	stw r0, 0x24(r1)
@@ -63,16 +62,17 @@ __TRK_write_console:
 /* 802CECD8 00298298  7C 08 03 A6 */	mtlr r0
 /* 802CECDC 0029829C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802CECE0 002982A0  4E 80 00 20 */	blr 
+.endfn __TRK_write_console
 
-.global __read_file
-__read_file:
+.fn __read_file, global
 /* 802CECE4 002982A4  38 E0 00 D1 */	li r7, 0xd1
 /* 802CECE8 002982A8  48 00 00 0C */	b __access_file
+.endfn __read_file
 
-.global __write_file
-__write_file:
+.fn __write_file, global
 /* 802CECEC 002982AC  38 E0 00 D0 */	li r7, 0xd0
 /* 802CECF0 002982B0  48 00 00 04 */	b __access_file
+.endfn __write_file
 
 
 .global __access_file

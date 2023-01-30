@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global ISFS_OpenLib
-ISFS_OpenLib:
+.fn ISFS_OpenLib, global
 /* 80315EC0 002DF480  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80315EC4 002DF484  7C 08 02 A6 */	mflr r0
 /* 80315EC8 002DF488  90 01 00 14 */	stw r0, 0x14(r1)
@@ -85,10 +84,10 @@ ISFS_OpenLib:
 /* 80315FDC 002DF59C  7C 08 03 A6 */	mtlr r0
 /* 80315FE0 002DF5A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80315FE4 002DF5A4  4E 80 00 20 */	blr 
+.endfn ISFS_OpenLib
 
 .balign 16, 0
-.global _isfsFuncCb
-_isfsFuncCb:
+.fn _isfsFuncCb, global
 /* 80315FF0 002DF5B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80315FF4 002DF5B4  7C 08 02 A6 */	mflr r0
 /* 80315FF8 002DF5B8  2C 83 00 00 */	cmpwi cr1, r3, 0
@@ -193,10 +192,10 @@ _isfsFuncCb:
 /* 80316164 002DF724  7C 08 03 A6 */	mtlr r0
 /* 80316168 002DF728  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031616C 002DF72C  4E 80 00 20 */	blr 
+.endfn _isfsFuncCb
 
 .balign 16, 0
-.global ISFS_CreateDir
-ISFS_CreateDir:
+.fn ISFS_CreateDir, global
 /* 80316170 002DF730  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80316174 002DF734  7C 08 02 A6 */	mflr r0
 /* 80316178 002DF738  90 01 00 34 */	stw r0, 0x34(r1)
@@ -262,10 +261,10 @@ ISFS_CreateDir:
 /* 80316258 002DF818  7C 08 03 A6 */	mtlr r0
 /* 8031625C 002DF81C  38 21 00 30 */	addi r1, r1, 0x30
 /* 80316260 002DF820  4E 80 00 20 */	blr 
+.endfn ISFS_CreateDir
 
 .balign 16, 0
-.global ISFS_ReadDir
-ISFS_ReadDir:
+.fn ISFS_ReadDir, global
 /* 80316270 002DF830  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80316274 002DF834  7C 08 02 A6 */	mflr r0
 /* 80316278 002DF838  90 01 00 24 */	stw r0, 0x24(r1)
@@ -358,10 +357,10 @@ ISFS_ReadDir:
 /* 803163B8 002DF978  7C 08 03 A6 */	mtlr r0
 /* 803163BC 002DF97C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803163C0 002DF980  4E 80 00 20 */	blr 
+.endfn ISFS_ReadDir
 
 .balign 16, 0
-.global ISFS_ReadDirAsync
-ISFS_ReadDirAsync:
+.fn ISFS_ReadDirAsync, global
 /* 803163D0 002DF990  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803163D4 002DF994  7C 08 02 A6 */	mflr r0
 /* 803163D8 002DF998  90 01 00 34 */	stw r0, 0x34(r1)
@@ -450,10 +449,10 @@ ISFS_ReadDirAsync:
 /* 8031650C 002DFACC  7C 08 03 A6 */	mtlr r0
 /* 80316510 002DFAD0  38 21 00 30 */	addi r1, r1, 0x30
 /* 80316514 002DFAD4  4E 80 00 20 */	blr 
+.endfn ISFS_ReadDirAsync
 
 .balign 16, 0
-.global ISFS_GetAttr
-ISFS_GetAttr:
+.fn ISFS_GetAttr, global
 /* 80316520 002DFAE0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80316524 002DFAE4  7C 08 02 A6 */	mflr r0
 /* 80316528 002DFAE8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -545,10 +544,10 @@ ISFS_GetAttr:
 /* 8031666C 002DFC2C  7C 08 03 A6 */	mtlr r0
 /* 80316670 002DFC30  38 21 00 30 */	addi r1, r1, 0x30
 /* 80316674 002DFC34  4E 80 00 20 */	blr 
+.endfn ISFS_GetAttr
 
 .balign 16, 0
-.global ISFS_GetAttrAsync
-ISFS_GetAttrAsync:
+.fn ISFS_GetAttrAsync, global
 /* 80316680 002DFC40  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80316684 002DFC44  7C 08 02 A6 */	mflr r0
 /* 80316688 002DFC48  90 01 00 44 */	stw r0, 0x44(r1)
@@ -630,10 +629,10 @@ ISFS_GetAttrAsync:
 /* 803167A8 002DFD68  7C 08 03 A6 */	mtlr r0
 /* 803167AC 002DFD6C  38 21 00 40 */	addi r1, r1, 0x40
 /* 803167B0 002DFD70  4E 80 00 20 */	blr 
+.endfn ISFS_GetAttrAsync
 
 .balign 16, 0
-.global ISFS_Delete
-ISFS_Delete:
+.fn ISFS_Delete, global
 /* 803167C0 002DFD80  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803167C4 002DFD84  7C 08 02 A6 */	mflr r0
 /* 803167C8 002DFD88  2C 03 00 00 */	cmpwi r3, 0
@@ -693,10 +692,10 @@ ISFS_Delete:
 /* 8031688C 002DFE4C  7C 08 03 A6 */	mtlr r0
 /* 80316890 002DFE50  38 21 00 20 */	addi r1, r1, 0x20
 /* 80316894 002DFE54  4E 80 00 20 */	blr 
+.endfn ISFS_Delete
 
 .balign 16, 0
-.global ISFS_DeleteAsync
-ISFS_DeleteAsync:
+.fn ISFS_DeleteAsync, global
 /* 803168A0 002DFE60  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803168A4 002DFE64  7C 08 02 A6 */	mflr r0
 /* 803168A8 002DFE68  90 01 00 24 */	stw r0, 0x24(r1)
@@ -753,10 +752,10 @@ ISFS_DeleteAsync:
 /* 80316964 002DFF24  7C 08 03 A6 */	mtlr r0
 /* 80316968 002DFF28  38 21 00 20 */	addi r1, r1, 0x20
 /* 8031696C 002DFF2C  4E 80 00 20 */	blr 
+.endfn ISFS_DeleteAsync
 
 .balign 16, 0
-.global ISFS_Rename
-ISFS_Rename:
+.fn ISFS_Rename, global
 /* 80316970 002DFF30  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80316974 002DFF34  7C 08 02 A6 */	mflr r0
 /* 80316978 002DFF38  90 01 00 24 */	stw r0, 0x24(r1)
@@ -827,10 +826,10 @@ ISFS_Rename:
 /* 80316A68 002E0028  7C 08 03 A6 */	mtlr r0
 /* 80316A6C 002E002C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80316A70 002E0030  4E 80 00 20 */	blr 
+.endfn ISFS_Rename
 
 .balign 16, 0
-.global ISFS_RenameAsync
-ISFS_RenameAsync:
+.fn ISFS_RenameAsync, global
 /* 80316A80 002E0040  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80316A84 002E0044  7C 08 02 A6 */	mflr r0
 /* 80316A88 002E0048  90 01 00 34 */	stw r0, 0x34(r1)
@@ -900,10 +899,10 @@ ISFS_RenameAsync:
 /* 80316B78 002E0138  7C 08 03 A6 */	mtlr r0
 /* 80316B7C 002E013C  38 21 00 30 */	addi r1, r1, 0x30
 /* 80316B80 002E0140  4E 80 00 20 */	blr 
+.endfn ISFS_RenameAsync
 
 .balign 16, 0
-.global ISFS_GetUsageAsync
-ISFS_GetUsageAsync:
+.fn ISFS_GetUsageAsync, global
 /* 80316B90 002E0150  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80316B94 002E0154  7C 08 02 A6 */	mflr r0
 /* 80316B98 002E0158  90 01 00 34 */	stw r0, 0x34(r1)
@@ -981,10 +980,10 @@ ISFS_GetUsageAsync:
 /* 80316CA8 002E0268  7C 08 03 A6 */	mtlr r0
 /* 80316CAC 002E026C  38 21 00 30 */	addi r1, r1, 0x30
 /* 80316CB0 002E0270  4E 80 00 20 */	blr 
+.endfn ISFS_GetUsageAsync
 
 .balign 16, 0
-.global ISFS_CreateFile
-ISFS_CreateFile:
+.fn ISFS_CreateFile, global
 /* 80316CC0 002E0280  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80316CC4 002E0284  7C 08 02 A6 */	mflr r0
 /* 80316CC8 002E0288  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1051,10 +1050,10 @@ ISFS_CreateFile:
 /* 80316DA8 002E0368  7C 08 03 A6 */	mtlr r0
 /* 80316DAC 002E036C  38 21 00 30 */	addi r1, r1, 0x30
 /* 80316DB0 002E0370  4E 80 00 20 */	blr 
+.endfn ISFS_CreateFile
 
 .balign 16, 0
-.global ISFS_CreateFileAsync
-ISFS_CreateFileAsync:
+.fn ISFS_CreateFileAsync, global
 /* 80316DC0 002E0380  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80316DC4 002E0384  7C 08 02 A6 */	mflr r0
 /* 80316DC8 002E0388  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1120,10 +1119,10 @@ ISFS_CreateFileAsync:
 /* 80316EA8 002E0468  7C 08 03 A6 */	mtlr r0
 /* 80316EAC 002E046C  38 21 00 30 */	addi r1, r1, 0x30
 /* 80316EB0 002E0470  4E 80 00 20 */	blr 
+.endfn ISFS_CreateFileAsync
 
 .balign 16, 0
-.global ISFS_Open
-ISFS_Open:
+.fn ISFS_Open, global
 /* 80316EC0 002E0480  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80316EC4 002E0484  7C 08 02 A6 */	mflr r0
 /* 80316EC8 002E0488  2C 03 00 00 */	cmpwi r3, 0
@@ -1179,10 +1178,10 @@ ISFS_Open:
 /* 80316F7C 002E053C  7C 08 03 A6 */	mtlr r0
 /* 80316F80 002E0540  38 21 00 20 */	addi r1, r1, 0x20
 /* 80316F84 002E0544  4E 80 00 20 */	blr 
+.endfn ISFS_Open
 
 .balign 16, 0
-.global ISFS_OpenAsync
-ISFS_OpenAsync:
+.fn ISFS_OpenAsync, global
 /* 80316F90 002E0550  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80316F94 002E0554  7C 08 02 A6 */	mflr r0
 /* 80316F98 002E0558  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1233,10 +1232,10 @@ ISFS_OpenAsync:
 /* 8031703C 002E05FC  7C 08 03 A6 */	mtlr r0
 /* 80317040 002E0600  38 21 00 20 */	addi r1, r1, 0x20
 /* 80317044 002E0604  4E 80 00 20 */	blr 
+.endfn ISFS_OpenAsync
 
 .balign 16, 0
-.global ISFS_GetFileStatsAsync
-ISFS_GetFileStatsAsync:
+.fn ISFS_GetFileStatsAsync, global
 /* 80317050 002E0610  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80317054 002E0614  7C 08 02 A6 */	mflr r0
 /* 80317058 002E0618  2C 04 00 00 */	cmpwi r4, 0
@@ -1289,10 +1288,10 @@ ISFS_GetFileStatsAsync:
 /* 80317104 002E06C4  7C 08 03 A6 */	mtlr r0
 /* 80317108 002E06C8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8031710C 002E06CC  4E 80 00 20 */	blr 
+.endfn ISFS_GetFileStatsAsync
 
 .balign 16, 0
-.global ISFS_SeekAsync
-ISFS_SeekAsync:
+.fn ISFS_SeekAsync, global
 /* 80317110 002E06D0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80317114 002E06D4  7C 08 02 A6 */	mflr r0
 /* 80317118 002E06D8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1330,10 +1329,10 @@ ISFS_SeekAsync:
 /* 80317190 002E0750  7C 08 03 A6 */	mtlr r0
 /* 80317194 002E0754  38 21 00 20 */	addi r1, r1, 0x20
 /* 80317198 002E0758  4E 80 00 20 */	blr 
+.endfn ISFS_SeekAsync
 
 .balign 16, 0
-.global ISFS_Read
-ISFS_Read:
+.fn ISFS_Read, global
 /* 803171A0 002E0760  2C 04 00 00 */	cmpwi r4, 0
 /* 803171A4 002E0764  41 82 00 0C */	beq .L_803171B0
 /* 803171A8 002E0768  54 80 06 FF */	clrlwi. r0, r4, 0x1b
@@ -1344,10 +1343,10 @@ ISFS_Read:
 .L_803171B8:
 /* 803171B8 002E0778  48 02 C5 78 */	b IOS_Read
 /* 803171BC 002E077C  4E 80 00 20 */	blr 
+.endfn ISFS_Read
 
 .balign 16, 0
-.global ISFS_ReadAsync
-ISFS_ReadAsync:
+.fn ISFS_ReadAsync, global
 /* 803171C0 002E0780  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803171C4 002E0784  7C 08 02 A6 */	mflr r0
 /* 803171C8 002E0788  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1393,10 +1392,10 @@ ISFS_ReadAsync:
 /* 80317258 002E0818  7C 08 03 A6 */	mtlr r0
 /* 8031725C 002E081C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80317260 002E0820  4E 80 00 20 */	blr 
+.endfn ISFS_ReadAsync
 
 .balign 16, 0
-.global ISFS_Write
-ISFS_Write:
+.fn ISFS_Write, global
 /* 80317270 002E0830  2C 04 00 00 */	cmpwi r4, 0
 /* 80317274 002E0834  41 82 00 0C */	beq .L_80317280
 /* 80317278 002E0838  54 80 06 FF */	clrlwi. r0, r4, 0x1b
@@ -1407,10 +1406,10 @@ ISFS_Write:
 .L_80317288:
 /* 80317288 002E0848  48 02 C6 B8 */	b IOS_Write
 /* 8031728C 002E084C  4E 80 00 20 */	blr 
+.endfn ISFS_Write
 
 .balign 16, 0
-.global ISFS_WriteAsync
-ISFS_WriteAsync:
+.fn ISFS_WriteAsync, global
 /* 80317290 002E0850  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80317294 002E0854  7C 08 02 A6 */	mflr r0
 /* 80317298 002E0858  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1456,15 +1455,15 @@ ISFS_WriteAsync:
 /* 80317328 002E08E8  7C 08 03 A6 */	mtlr r0
 /* 8031732C 002E08EC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80317330 002E08F0  4E 80 00 20 */	blr 
+.endfn ISFS_WriteAsync
 
 .balign 16, 0
-.global ISFS_Close
-ISFS_Close:
+.fn ISFS_Close, global
 /* 80317340 002E0900  48 02 C2 40 */	b IOS_Close
+.endfn ISFS_Close
 
 .balign 16, 0
-.global ISFS_CloseAsync
-ISFS_CloseAsync:
+.fn ISFS_CloseAsync, global
 /* 80317350 002E0910  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80317354 002E0914  7C 08 02 A6 */	mflr r0
 /* 80317358 002E0918  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1500,10 +1499,10 @@ ISFS_CloseAsync:
 /* 803173C8 002E0988  7C 08 03 A6 */	mtlr r0
 /* 803173CC 002E098C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803173D0 002E0990  4E 80 00 20 */	blr 
+.endfn ISFS_CloseAsync
 
 .balign 16, 0
-.global ISFS_ShutdownAsync
-ISFS_ShutdownAsync:
+.fn ISFS_ShutdownAsync, global
 /* 803173E0 002E09A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803173E4 002E09A4  7C 08 02 A6 */	mflr r0
 /* 803173E8 002E09A8  38 A0 00 20 */	li r5, 0x20
@@ -1542,6 +1541,7 @@ ISFS_ShutdownAsync:
 /* 80317464 002E0A24  7C 08 03 A6 */	mtlr r0
 /* 80317468 002E0A28  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031746C 002E0A2C  4E 80 00 20 */	blr
+.endfn ISFS_ShutdownAsync
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

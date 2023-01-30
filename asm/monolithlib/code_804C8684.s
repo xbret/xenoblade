@@ -2,20 +2,21 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_804C8684
-func_804C8684:
+
+
+.fn func_804C8684, global
 /* 804C8684 00491C44  4E 80 00 20 */	blr
+.endfn func_804C8684
 
-.global func_804C8688
-func_804C8688:
+.fn func_804C8688, global
 /* 804C8688 00491C48  4E 80 00 20 */	blr 
+.endfn func_804C8688
 
-.global func_804C868C
-func_804C868C:
+.fn func_804C868C, global
 /* 804C868C 00491C4C  4E 80 00 20 */	blr 
+.endfn func_804C868C
 
-.global func_804C8690
-func_804C8690:
+.fn func_804C8690, global
 /* 804C8690 00491C50  2C 04 00 00 */	cmpwi r4, 0
 /* 804C8694 00491C54  98 6D C0 F8 */	stb r3, lbl_80668278@sda21(r13)
 /* 804C8698 00491C58  4D 82 00 20 */	beqlr 
@@ -28,9 +29,9 @@ func_804C8690:
 /* 804C86B4 00491C74  80 04 00 08 */	lwz r0, 8(r4)
 /* 804C86B8 00491C78  90 05 00 08 */	stw r0, 8(r5)
 /* 804C86BC 00491C7C  4E 80 00 20 */	blr
+.endfn func_804C8690
 
-.global sinit_804C86C0
-sinit_804C86C0:
+.fn sinit_804C86C0, global
 /* 804C86C0 00491C80  3C C0 80 66 */	lis r6, lbl_806624A8@ha
 /* 804C86C4 00491C84  C0 82 D4 B8 */	lfs f4, float_8066D838@sda21(r2)
 /* 804C86C8 00491C88  38 C6 24 A8 */	addi r6, r6, lbl_806624A8@l
@@ -53,13 +54,18 @@ sinit_804C86C0:
 /* 804C870C 00491CCC  D0 03 00 04 */	stfs f0, 4(r3)
 /* 804C8710 00491CD0  D0 63 00 08 */	stfs f3, 8(r3)
 /* 804C8714 00491CD4  4E 80 00 20 */	blr 
+.endfn sinit_804C86C0
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.balign 4
 
 .4byte sinit_804C86C0
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
 
 .global float_8066D838
 float_8066D838:
@@ -87,7 +93,9 @@ float_8066D848:
 	.4byte 0
 
 
-.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+
+
 
 .global lbl_806624A8
 lbl_806624A8:
@@ -97,6 +105,8 @@ lbl_806624C8:
 	.skip 0x10
 	
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+
 
 .global lbl_80668278
 lbl_80668278:

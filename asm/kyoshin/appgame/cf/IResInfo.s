@@ -4,117 +4,121 @@
 
 
 
+
+
 #IResInfo
-.global func_80068990
-func_80068990:
+.fn func_80068990, global
 /* 80068990 00031F50  38 60 00 00 */	li r3, 0
 /* 80068994 00031F54  4E 80 00 20 */	blr 
+.endfn func_80068990
 
 #IResInfo
-.global func_80068998
-func_80068998:
+.fn func_80068998, global
 /* 80068998 00031F58  38 60 00 01 */	li r3, 1
 /* 8006899C 00031F5C  4E 80 00 20 */	blr 
+.endfn func_80068998
 
 #IResInfo
-.global func_800689A0
-func_800689A0:
+.fn func_800689A0, global
 /* 800689A0 00031F60  4E 80 00 20 */	blr 
+.endfn func_800689A0
 
 #IResInfo
-.global func_800689A4
-func_800689A4:
+.fn func_800689A4, global
 /* 800689A4 00031F64  38 60 00 00 */	li r3, 0
 /* 800689A8 00031F68  4E 80 00 20 */	blr 
+.endfn func_800689A4
 
 #IResInfoEneNpcEvent
-.global func_800689AC
-func_800689AC:
+.fn func_800689AC, global
 /* 800689AC 00031F6C  3C 60 00 01 */	lis r3, 0x00010004@ha
 /* 800689B0 00031F70  38 63 00 04 */	addi r3, r3, 0x00010004@l
 /* 800689B4 00031F74  4E 80 00 20 */	blr 
+.endfn func_800689AC
 
 #IResInfoEneNpc
-.global func_800689B8
-func_800689B8:
+.fn func_800689B8, global
 /* 800689B8 00031F78  38 60 00 04 */	li r3, 4
 /* 800689BC 00031F7C  4E 80 00 20 */	blr 
+.endfn func_800689B8
 
 #IResInfo
-.global func_800689C0
-func_800689C0:
+.fn func_800689C0, global
 /* 800689C0 00031F80  38 60 00 00 */	li r3, 0
 /* 800689C4 00031F84  4E 80 00 20 */	blr 
+.endfn func_800689C0
 
 #IResInfoPc
-.global func_800689C8
-func_800689C8:
+.fn func_800689C8, global
 /* 800689C8 00031F88  38 60 00 02 */	li r3, 2
 /* 800689CC 00031F8C  4E 80 00 20 */	blr 
+.endfn func_800689C8
 
 #IResInfo
-.global func_800689D0
-func_800689D0:
+.fn func_800689D0, global
 /* 800689D0 00031F90  38 60 00 00 */	li r3, 0
 /* 800689D4 00031F94  4E 80 00 20 */	blr 
+.endfn func_800689D0
 
 #IResInfo
-.global func_800689D8
-func_800689D8:
+.fn func_800689D8, global
 /* 800689D8 00031F98  38 60 00 00 */	li r3, 0
 /* 800689DC 00031F9C  4E 80 00 20 */	blr 
+.endfn func_800689D8
 
 #IResInfoObj
-.global func_800689E0
-func_800689E0:
+.fn func_800689E0, global
 /* 800689E0 00031FA0  38 60 02 00 */	li r3, 0x200
 /* 800689E4 00031FA4  4E 80 00 20 */	blr 
+.endfn func_800689E0
 
 #IResInfoTBox
-.global func_800689E8
-func_800689E8:
+.fn func_800689E8, global
 /* 800689E8 00031FA8  38 60 02 00 */	li r3, 0x200
 /* 800689EC 00031FAC  4E 80 00 20 */	blr 
+.endfn func_800689E8
 
 #IResInfoSe
-.global func_800689F0
-func_800689F0:
+.fn func_800689F0, global
 /* 800689F0 00031FB0  38 60 02 00 */	li r3, 0x200
 /* 800689F4 00031FB4  4E 80 00 20 */	blr 
+.endfn func_800689F0
 
 #IResInfoEffect
-.global func_800689F8
-func_800689F8:
+.fn func_800689F8, global
 /* 800689F8 00031FB8  38 60 00 20 */	li r3, 0x20
 /* 800689FC 00031FBC  4E 80 00 20 */	blr 
+.endfn func_800689F8
 
 #IResInfoLOD
-.global func_80068A00
-func_80068A00:
+.fn func_80068A00, global
 /* 80068A00 00031FC0  38 60 02 00 */	li r3, 0x200
 /* 80068A04 00031FC4  4E 80 00 20 */	blr 
+.endfn func_80068A00
 
 #IResInfoID
-.global func_80068A08
-func_80068A08:
+.fn func_80068A08, global
 /* 80068A08 00031FC8  38 60 02 00 */	li r3, 0x200
 /* 80068A0C 00031FCC  4E 80 00 20 */	blr 
+.endfn func_80068A08
 
 #IResInfoPreloadMap
-.global func_80068A10
-func_80068A10:
+.fn func_80068A10, global
 /* 80068A10 00031FD0  38 60 02 00 */	li r3, 0x200
 /* 80068A14 00031FD4  4E 80 00 20 */	blr 
+.endfn func_80068A10
 
 #IResInfoMap
-.global func_80068A18
-func_80068A18:
+.fn func_80068A18, global
 /* 80068A18 00031FD8  38 60 02 00 */	li r3, 0x200
 /* 80068A1C 00031FDC  4E 80 00 20 */	blr 
+.endfn func_80068A18
 
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
 
 .global __vt__reslist_unsigned_short
 __vt__reslist_unsigned_short:
@@ -482,6 +486,8 @@ cf_IResInfoMap_hierarchy:
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+
+
 .global reslist_unsigned_short_typestr
 reslist_unsigned_short_typestr:
 	.asciz "reslist<unsigned short>"
@@ -558,6 +564,8 @@ lbl_804F6B90:
 
 
 
+
+
 .global __RTTI__reslist_unsigned_short
 __RTTI__reslist_unsigned_short:
 	.4byte reslist_unsigned_short_typestr
@@ -631,6 +639,8 @@ __RTTI__cf_IResInfo:
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 
+
+
 .global float_80668A88
 float_80668A88:
 	.float 0
@@ -655,6 +665,8 @@ float_80668A98:
 	.float 30 #0x41F00000
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+
 
 .global lbl_80666688
 lbl_80666688:

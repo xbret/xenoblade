@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global ADXSTM_Init
-ADXSTM_Init:
+.fn ADXSTM_Init, global
 /* 80380E70 0034A430  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80380E74 0034A434  7C 08 02 A6 */	mflr r0
 /* 80380E78 0034A438  3C 80 80 5E */	lis r4, adxstm_init_count@ha
@@ -24,9 +23,9 @@ ADXSTM_Init:
 /* 80380EB0 0034A470  7C 08 03 A6 */	mtlr r0
 /* 80380EB4 0034A474  38 21 00 10 */	addi r1, r1, 0x10
 /* 80380EB8 0034A478  4E 80 00 20 */	blr 
+.endfn ADXSTM_Init
 
-.global ADXSTM_Finish
-ADXSTM_Finish:
+.fn ADXSTM_Finish, global
 /* 80380EBC 0034A47C  3C 60 80 5E */	lis r3, adxstm_init_count@ha
 /* 80380EC0 0034A480  80 03 75 18 */	lwz r0, adxstm_init_count@l(r3)
 /* 80380EC4 0034A484  34 00 FF FF */	addic. r0, r0, -1
@@ -38,9 +37,9 @@ ADXSTM_Finish:
 /* 80380EDC 0034A49C  38 A0 10 40 */	li r5, 0x1040
 /* 80380EE0 0034A4A0  4B C8 34 70 */	b memset
 /* 80380EE4 0034A4A4  4E 80 00 20 */	blr 
+.endfn ADXSTM_Finish
 
-.global ADXSTMF_SetupHandleMember
-ADXSTMF_SetupHandleMember:
+.fn ADXSTMF_SetupHandleMember, global
 /* 80380EE8 0034A4A8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80380EEC 0034A4AC  7C 08 02 A6 */	mflr r0
 /* 80380EF0 0034A4B0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -110,9 +109,9 @@ ADXSTMF_SetupHandleMember:
 /* 80380FEC 0034A5AC  7C 08 03 A6 */	mtlr r0
 /* 80380FF0 0034A5B0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80380FF4 0034A5B4  4E 80 00 20 */	blr 
+.endfn ADXSTMF_SetupHandleMember
 
-.global ADXSTM_Create
-ADXSTM_Create:
+.fn ADXSTM_Create, global
 /* 80380FF8 0034A5B8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80380FFC 0034A5BC  7C 08 02 A6 */	mflr r0
 /* 80381000 0034A5C0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -203,9 +202,9 @@ ADXSTM_Create:
 /* 80381134 0034A6F4  7C 08 03 A6 */	mtlr r0
 /* 80381138 0034A6F8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038113C 0034A6FC  4E 80 00 20 */	blr 
+.endfn ADXSTM_Create
 
-.global ADXSTM_Destroy
-ADXSTM_Destroy:
+.fn ADXSTM_Destroy, global
 /* 80381140 0034A700  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80381144 0034A704  7C 08 02 A6 */	mflr r0
 /* 80381148 0034A708  90 01 00 14 */	stw r0, 0x14(r1)
@@ -282,9 +281,9 @@ ADXSTM_Destroy:
 /* 80381248 0034A808  7C 08 03 A6 */	mtlr r0
 /* 8038124C 0034A80C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80381250 0034A810  4E 80 00 20 */	blr 
+.endfn ADXSTM_Destroy
 
-.global ADXSTM_BindFileNw
-ADXSTM_BindFileNw:
+.fn ADXSTM_BindFileNw, global
 /* 80381254 0034A814  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80381258 0034A818  7C 08 02 A6 */	mflr r0
 /* 8038125C 0034A81C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -322,9 +321,9 @@ ADXSTM_BindFileNw:
 /* 803812DC 0034A89C  7C 08 03 A6 */	mtlr r0
 /* 803812E0 0034A8A0  38 21 00 20 */	addi r1, r1, 0x20
 /* 803812E4 0034A8A4  4E 80 00 20 */	blr 
+.endfn ADXSTM_BindFileNw
 
-.global ADXSTM_ReleaseFileNw
-ADXSTM_ReleaseFileNw:
+.fn ADXSTM_ReleaseFileNw, global
 /* 803812E8 0034A8A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803812EC 0034A8AC  7C 08 02 A6 */	mflr r0
 /* 803812F0 0034A8B0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -369,9 +368,9 @@ ADXSTM_ReleaseFileNw:
 /* 80381380 0034A940  7C 08 03 A6 */	mtlr r0
 /* 80381384 0034A944  38 21 00 10 */	addi r1, r1, 0x10
 /* 80381388 0034A948  4E 80 00 20 */	blr 
+.endfn ADXSTM_ReleaseFileNw
 
-.global ADXSTM_ReleaseFile
-ADXSTM_ReleaseFile:
+.fn ADXSTM_ReleaseFile, global
 /* 8038138C 0034A94C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80381390 0034A950  7C 08 02 A6 */	mflr r0
 /* 80381394 0034A954  90 01 00 14 */	stw r0, 0x14(r1)
@@ -433,9 +432,9 @@ ADXSTM_ReleaseFile:
 /* 8038145C 0034AA1C  7C 08 03 A6 */	mtlr r0
 /* 80381460 0034AA20  38 21 00 10 */	addi r1, r1, 0x10
 /* 80381464 0034AA24  4E 80 00 20 */	blr 
+.endfn ADXSTM_ReleaseFile
 
-.global ADXSTM_IsOpened
-ADXSTM_IsOpened:
+.fn ADXSTM_IsOpened, global
 /* 80381468 0034AA28  88 03 00 4A */	lbz r0, 0x4a(r3)
 /* 8038146C 0034AA2C  7C 00 07 75 */	extsb. r0, r0
 /* 80381470 0034AA30  41 82 00 0C */	beq .L_8038147C
@@ -454,9 +453,9 @@ ADXSTM_IsOpened:
 /* 8038149C 0034AA5C  7C 00 1B 78 */	or r0, r0, r3
 /* 803814A0 0034AA60  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 803814A4 0034AA64  4E 80 00 20 */	blr 
+.endfn ADXSTM_IsOpened
 
-.global ADXSTM_IsOpenReq
-ADXSTM_IsOpenReq:
+.fn ADXSTM_IsOpenReq, global
 /* 803814A8 0034AA68  88 03 00 49 */	lbz r0, 0x49(r3)
 /* 803814AC 0034AA6C  7C 00 07 75 */	extsb. r0, r0
 /* 803814B0 0034AA70  40 82 00 18 */	bne .L_803814C8
@@ -468,9 +467,9 @@ ADXSTM_IsOpenReq:
 .L_803814C8:
 /* 803814C8 0034AA88  38 60 00 01 */	li r3, 1
 /* 803814CC 0034AA8C  4E 80 00 20 */	blr 
+.endfn ADXSTM_IsOpenReq
 
-.global ADXSTM_GetStat
-ADXSTM_GetStat:
+.fn ADXSTM_GetStat, global
 /* 803814D0 0034AA90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803814D4 0034AA94  7C 08 02 A6 */	mflr r0
 /* 803814D8 0034AA98  90 01 00 14 */	stw r0, 0x14(r1)
@@ -486,9 +485,9 @@ ADXSTM_GetStat:
 /* 80381500 0034AAC0  7C 08 03 A6 */	mtlr r0
 /* 80381504 0034AAC4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80381508 0034AAC8  4E 80 00 20 */	blr 
+.endfn ADXSTM_GetStat
 
-.global ADXSTM_Seek
-ADXSTM_Seek:
+.fn ADXSTM_Seek, global
 /* 8038150C 0034AACC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80381510 0034AAD0  7C 08 02 A6 */	mflr r0
 /* 80381514 0034AAD4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -512,9 +511,9 @@ ADXSTM_Seek:
 /* 80381558 0034AB18  7C 08 03 A6 */	mtlr r0
 /* 8038155C 0034AB1C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80381560 0034AB20  4E 80 00 20 */	blr 
+.endfn ADXSTM_Seek
 
-.global ADXSTM_Tell
-ADXSTM_Tell:
+.fn ADXSTM_Tell, global
 /* 80381564 0034AB24  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80381568 0034AB28  7C 08 02 A6 */	mflr r0
 /* 8038156C 0034AB2C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -536,9 +535,9 @@ ADXSTM_Tell:
 /* 803815A4 0034AB64  7C 08 03 A6 */	mtlr r0
 /* 803815A8 0034AB68  38 21 00 10 */	addi r1, r1, 0x10
 /* 803815AC 0034AB6C  4E 80 00 20 */	blr 
+.endfn ADXSTM_Tell
 
-.global ADXSTM_Start
-ADXSTM_Start:
+.fn ADXSTM_Start, global
 /* 803815B0 0034AB70  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803815B4 0034AB74  7C 08 02 A6 */	mflr r0
 /* 803815B8 0034AB78  90 01 00 14 */	stw r0, 0x14(r1)
@@ -576,9 +575,9 @@ ADXSTM_Start:
 /* 80381630 0034ABF0  7C 08 03 A6 */	mtlr r0
 /* 80381634 0034ABF4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80381638 0034ABF8  4E 80 00 20 */	blr 
+.endfn ADXSTM_Start
 
-.global ADXSTM_Start2
-ADXSTM_Start2:
+.fn ADXSTM_Start2, global
 /* 8038163C 0034ABFC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80381640 0034AC00  7C 08 02 A6 */	mflr r0
 /* 80381644 0034AC04  90 01 00 14 */	stw r0, 0x14(r1)
@@ -617,9 +616,9 @@ ADXSTM_Start2:
 /* 803816C0 0034AC80  7C 08 03 A6 */	mtlr r0
 /* 803816C4 0034AC84  38 21 00 10 */	addi r1, r1, 0x10
 /* 803816C8 0034AC88  4E 80 00 20 */	blr 
+.endfn ADXSTM_Start2
 
-.global ADXSTM_StopNw
-ADXSTM_StopNw:
+.fn ADXSTM_StopNw, global
 /* 803816CC 0034AC8C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803816D0 0034AC90  7C 08 02 A6 */	mflr r0
 /* 803816D4 0034AC94  90 01 00 14 */	stw r0, 0x14(r1)
@@ -652,9 +651,9 @@ ADXSTM_StopNw:
 /* 80381738 0034ACF8  7C 08 03 A6 */	mtlr r0
 /* 8038173C 0034ACFC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80381740 0034AD00  4E 80 00 20 */	blr 
+.endfn ADXSTM_StopNw
 
-.global ADXSTM_Stop
-ADXSTM_Stop:
+.fn ADXSTM_Stop, global
 /* 80381744 0034AD04  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80381748 0034AD08  7C 08 02 A6 */	mflr r0
 /* 8038174C 0034AD0C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -669,9 +668,9 @@ ADXSTM_Stop:
 /* 80381770 0034AD30  7C 08 03 A6 */	mtlr r0
 /* 80381774 0034AD34  38 21 00 10 */	addi r1, r1, 0x10
 /* 80381778 0034AD38  4E 80 00 20 */	blr 
+.endfn ADXSTM_Stop
 
-.global adxstm_Stop
-adxstm_Stop:
+.fn adxstm_Stop, global
 /* 8038177C 0034AD3C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80381780 0034AD40  7C 08 02 A6 */	mflr r0
 /* 80381784 0034AD44  90 01 00 24 */	stw r0, 0x24(r1)
@@ -733,9 +732,9 @@ adxstm_Stop:
 /* 8038184C 0034AE0C  7C 08 03 A6 */	mtlr r0
 /* 80381850 0034AE10  38 21 00 20 */	addi r1, r1, 0x20
 /* 80381854 0034AE14  4E 80 00 20 */	blr 
+.endfn adxstm_Stop
 
-.global ADXSTM_EntryEosFunc
-ADXSTM_EntryEosFunc:
+.fn ADXSTM_EntryEosFunc, global
 /* 80381858 0034AE18  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038185C 0034AE1C  7C 08 02 A6 */	mflr r0
 /* 80381860 0034AE20  90 01 00 24 */	stw r0, 0x24(r1)
@@ -756,9 +755,9 @@ ADXSTM_EntryEosFunc:
 /* 8038189C 0034AE5C  7C 08 03 A6 */	mtlr r0
 /* 803818A0 0034AE60  38 21 00 20 */	addi r1, r1, 0x20
 /* 803818A4 0034AE64  4E 80 00 20 */	blr 
+.endfn ADXSTM_EntryEosFunc
 
-.global ADXSTM_SetEos
-ADXSTM_SetEos:
+.fn ADXSTM_SetEos, global
 /* 803818A8 0034AE68  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803818AC 0034AE6C  7C 08 02 A6 */	mflr r0
 /* 803818B0 0034AE70  90 01 00 14 */	stw r0, 0x14(r1)
@@ -782,9 +781,9 @@ ADXSTM_SetEos:
 /* 803818F0 0034AEB0  7C 08 03 A6 */	mtlr r0
 /* 803818F4 0034AEB4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803818F8 0034AEB8  4E 80 00 20 */	blr 
+.endfn ADXSTM_SetEos
 
-.global adxstmf_stat_exec
-adxstmf_stat_exec:
+.fn adxstmf_stat_exec, global
 /* 803818FC 0034AEBC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80381900 0034AEC0  7C 08 02 A6 */	mflr r0
 /* 80381904 0034AEC4  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1089,9 +1088,9 @@ adxstmf_stat_exec:
 /* 80381D50 0034B310  7C 08 03 A6 */	mtlr r0
 /* 80381D54 0034B314  38 21 00 30 */	addi r1, r1, 0x30
 /* 80381D58 0034B318  4E 80 00 20 */	blr 
+.endfn adxstmf_stat_exec
 
-.global ADXSTMF_ExecHndl
-ADXSTMF_ExecHndl:
+.fn ADXSTMF_ExecHndl, global
 /* 80381D5C 0034B31C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80381D60 0034B320  7C 08 02 A6 */	mflr r0
 /* 80381D64 0034B324  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1322,9 +1321,9 @@ ADXSTMF_ExecHndl:
 /* 8038209C 0034B65C  7C 08 03 A6 */	mtlr r0
 /* 803820A0 0034B660  38 21 00 20 */	addi r1, r1, 0x20
 /* 803820A4 0034B664  4E 80 00 20 */	blr 
+.endfn ADXSTMF_ExecHndl
 
-.global ADXSTM_ExecServer
-ADXSTM_ExecServer:
+.fn ADXSTM_ExecServer, global
 /* 803820A8 0034B668  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803820AC 0034B66C  7C 08 02 A6 */	mflr r0
 /* 803820B0 0034B670  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1361,9 +1360,9 @@ ADXSTM_ExecServer:
 /* 80382120 0034B6E0  7C 08 03 A6 */	mtlr r0
 /* 80382124 0034B6E4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80382128 0034B6E8  4E 80 00 20 */	blr 
+.endfn ADXSTM_ExecServer
 
-.global ADXSTM_ExecFsSvr
-ADXSTM_ExecFsSvr:
+.fn ADXSTM_ExecFsSvr, global
 /* 8038212C 0034B6EC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80382130 0034B6F0  7C 08 02 A6 */	mflr r0
 /* 80382134 0034B6F4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1374,13 +1373,13 @@ ADXSTM_ExecFsSvr:
 /* 80382148 0034B708  7C 08 03 A6 */	mtlr r0
 /* 8038214C 0034B70C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80382150 0034B710  4E 80 00 20 */	blr 
+.endfn ADXSTM_ExecFsSvr
 
-.global ADXSTM_ExecFsIdle
-ADXSTM_ExecFsIdle:
+.fn ADXSTM_ExecFsIdle, global
 /* 80382154 0034B714  4E 80 00 20 */	blr 
+.endfn ADXSTM_ExecFsIdle
 
-.global ADXSTM_SetBufSize
-ADXSTM_SetBufSize:
+.fn ADXSTM_SetBufSize, global
 /* 80382158 0034B718  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038215C 0034B71C  7C 08 02 A6 */	mflr r0
 /* 80382160 0034B720  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1402,9 +1401,9 @@ ADXSTM_SetBufSize:
 /* 803821A0 0034B760  7C 08 03 A6 */	mtlr r0
 /* 803821A4 0034B764  38 21 00 20 */	addi r1, r1, 0x20
 /* 803821A8 0034B768  4E 80 00 20 */	blr 
+.endfn ADXSTM_SetBufSize
 
-.global ADXSTM_SetReqRdSize
-ADXSTM_SetReqRdSize:
+.fn ADXSTM_SetReqRdSize, global
 /* 803821AC 0034B76C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803821B0 0034B770  7C 08 02 A6 */	mflr r0
 /* 803821B4 0034B774  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1422,9 +1421,9 @@ ADXSTM_SetReqRdSize:
 /* 803821E4 0034B7A4  7C 08 03 A6 */	mtlr r0
 /* 803821E8 0034B7A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803821EC 0034B7AC  4E 80 00 20 */	blr 
+.endfn ADXSTM_SetReqRdSize
 
-.global ADXSTM_GetFileLen
-ADXSTM_GetFileLen:
+.fn ADXSTM_GetFileLen, global
 /* 803821F0 0034B7B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803821F4 0034B7B4  7C 08 02 A6 */	mflr r0
 /* 803821F8 0034B7B8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1439,9 +1438,9 @@ ADXSTM_GetFileLen:
 /* 8038221C 0034B7DC  7C 08 03 A6 */	mtlr r0
 /* 80382220 0034B7E0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80382224 0034B7E4  4E 80 00 20 */	blr 
+.endfn ADXSTM_GetFileLen
 
-.global ADXSTM_GetFileLen64
-ADXSTM_GetFileLen64:
+.fn ADXSTM_GetFileLen64, global
 /* 80382228 0034B7E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8038222C 0034B7EC  7C 08 02 A6 */	mflr r0
 /* 80382230 0034B7F0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1460,9 +1459,9 @@ ADXSTM_GetFileLen64:
 /* 80382264 0034B824  7C 08 03 A6 */	mtlr r0
 /* 80382268 0034B828  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038226C 0034B82C  4E 80 00 20 */	blr 
+.endfn ADXSTM_GetFileLen64
 
-.global ADXSTM_GetFileSct
-ADXSTM_GetFileSct:
+.fn ADXSTM_GetFileSct, global
 /* 80382270 0034B830  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80382274 0034B834  7C 08 02 A6 */	mflr r0
 /* 80382278 0034B838  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1477,9 +1476,9 @@ ADXSTM_GetFileSct:
 /* 8038229C 0034B85C  7C 08 03 A6 */	mtlr r0
 /* 803822A0 0034B860  38 21 00 10 */	addi r1, r1, 0x10
 /* 803822A4 0034B864  4E 80 00 20 */	blr 
+.endfn ADXSTM_GetFileSct
 
-.global ADXSTM_SetPause
-ADXSTM_SetPause:
+.fn ADXSTM_SetPause, global
 /* 803822A8 0034B868  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803822AC 0034B86C  7C 08 02 A6 */	mflr r0
 /* 803822B0 0034B870  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1496,9 +1495,9 @@ ADXSTM_SetPause:
 /* 803822DC 0034B89C  7C 08 03 A6 */	mtlr r0
 /* 803822E0 0034B8A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803822E4 0034B8A4  4E 80 00 20 */	blr 
+.endfn ADXSTM_SetPause
 
-.global ADXSTM_SetSj
-ADXSTM_SetSj:
+.fn ADXSTM_SetSj, global
 /* 803822E8 0034B8A8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803822EC 0034B8AC  7C 08 02 A6 */	mflr r0
 /* 803822F0 0034B8B0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1537,12 +1536,13 @@ ADXSTM_SetSj:
 /* 80382374 0034B934  7C 08 03 A6 */	mtlr r0
 /* 80382378 0034B938  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038237C 0034B93C  4E 80 00 20 */	blr
+.endfn ADXSTM_SetSj
 
-.global ADXSTM_IsOpenedFile
-ADXSTM_IsOpenedFile:
+.fn ADXSTM_IsOpenedFile, global
 /* 80382380 0034B940  88 63 00 4D */	lbz r3, 0x4d(r3)
 /* 80382384 0034B944  7C 63 07 74 */	extsb r3, r3
 /* 80382388 0034B948  4E 80 00 20 */	blr 
+.endfn ADXSTM_IsOpenedFile
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0

@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global CalcViewNrmMtx__Q34nw4r3g3d6detailFPQ34nw4r4math5MTX33PCQ34nw4r4math5MTX34
-CalcViewNrmMtx__Q34nw4r3g3d6detailFPQ34nw4r4math5MTX33PCQ34nw4r4math5MTX34:
+.fn CalcViewNrmMtx__Q34nw4r3g3d6detailFPQ34nw4r4math5MTX33PCQ34nw4r4math5MTX34, global
 /* 803E17B0 003AAD70  E0 04 80 00 */	psq_l f0, 0(r4), 1, qr0
 /* 803E17B4 003AAD74  E0 24 00 04 */	psq_l f1, 4(r4), 0, qr0
 /* 803E17B8 003AAD78  E0 44 80 10 */	psq_l f2, 16(r4), 1, qr0
@@ -62,9 +61,9 @@ CalcViewNrmMtx__Q34nw4r3g3d6detailFPQ34nw4r4math5MTX33PCQ34nw4r4math5MTX34:
 /* 803E1888 003AAE48  F1 03 80 20 */	psq_st f8, 32(r3), 1, qr0
 /* 803E188C 003AAE4C  38 60 00 01 */	li r3, 1
 /* 803E1890 003AAE50  4E 80 00 20 */	blr 
+.endfn CalcViewNrmMtx__Q34nw4r3g3d6detailFPQ34nw4r4math5MTX33PCQ34nw4r4math5MTX34
 
-.global CalcViewTexMtx__Q34nw4r3g3d6detailFPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34
-CalcViewTexMtx__Q34nw4r3g3d6detailFPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34:
+.fn CalcViewTexMtx__Q34nw4r3g3d6detailFPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34, global
 /* 803E1894 003AAE54  E0 04 80 00 */	psq_l f0, 0(r4), 1, qr0
 /* 803E1898 003AAE58  E0 24 00 04 */	psq_l f1, 4(r4), 0, qr0
 /* 803E189C 003AAE5C  E0 44 80 10 */	psq_l f2, 16(r4), 1, qr0
@@ -133,9 +132,9 @@ CalcViewTexMtx__Q34nw4r3g3d6detailFPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34:
 /* 803E1990 003AAF50  F1 03 80 28 */	psq_st f8, 40(r3), 1, qr0
 /* 803E1994 003AAF54  38 60 00 01 */	li r3, 1
 /* 803E1998 003AAF58  4E 80 00 20 */	blr 
+.endfn CalcViewTexMtx__Q34nw4r3g3d6detailFPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34
 
-.global CalcInvWorldMtx__Q34nw4r3g3d6detailFPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34
-CalcInvWorldMtx__Q34nw4r3g3d6detailFPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34:
+.fn CalcInvWorldMtx__Q34nw4r3g3d6detailFPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34, global
 /* 803E199C 003AAF5C  E0 04 80 00 */	psq_l f0, 0(r4), 1, qr0
 /* 803E19A0 003AAF60  E0 24 00 04 */	psq_l f1, 4(r4), 0, qr0
 /* 803E19A4 003AAF64  E0 44 80 10 */	psq_l f2, 16(r4), 1, qr0
@@ -202,6 +201,7 @@ CalcInvWorldMtx__Q34nw4r3g3d6detailFPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34:
 /* 803E1A94 003AB054  F0 E3 80 2C */	psq_st f7, 44(r3), 1, qr0
 /* 803E1A98 003AB058  38 60 00 01 */	li r3, 1
 /* 803E1A9C 003AB05C  4E 80 00 20 */	blr
+.endfn CalcInvWorldMtx__Q34nw4r3g3d6detailFPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

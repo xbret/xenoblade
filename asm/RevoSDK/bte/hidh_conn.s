@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global hidh_conn_reg
-hidh_conn_reg:
+.fn hidh_conn_reg, global
 /* 802F48C4 002BDE84  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F48C8 002BDE88  7C 08 02 A6 */	mflr r0
 /* 802F48CC 002BDE8C  3C 60 00 01 */	lis r3, 0x0000FFFF@ha
@@ -95,9 +94,9 @@ hidh_conn_reg:
 /* 802F4A10 002BDFD0  7C 08 03 A6 */	mtlr r0
 /* 802F4A14 002BDFD4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F4A18 002BDFD8  4E 80 00 20 */	blr 
+.endfn hidh_conn_reg
 
-.global hidh_conn_disconnect
-hidh_conn_disconnect:
+.fn hidh_conn_disconnect, global
 /* 802F4A1C 002BDFDC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F4A20 002BDFE0  7C 08 02 A6 */	mflr r0
 /* 802F4A24 002BDFE4  3C 80 80 5C */	lis r4, lbl_805C26B8@ha
@@ -144,9 +143,9 @@ hidh_conn_disconnect:
 /* 802F4AB4 002BE074  7C 08 03 A6 */	mtlr r0
 /* 802F4AB8 002BE078  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F4ABC 002BE07C  4E 80 00 20 */	blr
+.endfn hidh_conn_disconnect
 
-.global hidh_sec_check_complete_term
-hidh_sec_check_complete_term:
+.fn hidh_sec_check_complete_term, global
 /* 802F4AC0 002BE080  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F4AC4 002BE084  7C 08 02 A6 */	mflr r0
 /* 802F4AC8 002BE088  3C 60 4E C5 */	lis r3, 0x4EC4EC4F@ha
@@ -229,9 +228,9 @@ hidh_sec_check_complete_term:
 /* 802F4BE4 002BE1A4  7C 08 03 A6 */	mtlr r0
 /* 802F4BE8 002BE1A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F4BEC 002BE1AC  4E 80 00 20 */	blr 
+.endfn hidh_sec_check_complete_term
 
-.global hidh_l2cif_connect_ind
-hidh_l2cif_connect_ind:
+.fn hidh_l2cif_connect_ind, global
 /* 802F4BF0 002BE1B0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802F4BF4 002BE1B4  7C 08 02 A6 */	mflr r0
 /* 802F4BF8 002BE1B8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -396,9 +395,9 @@ hidh_l2cif_connect_ind:
 /* 802F4E3C 002BE3FC  7C 08 03 A6 */	mtlr r0
 /* 802F4E40 002BE400  38 21 00 30 */	addi r1, r1, 0x30
 /* 802F4E44 002BE404  4E 80 00 20 */	blr 
+.endfn hidh_l2cif_connect_ind
 
-.global hidh_proc_repage_timeout
-hidh_proc_repage_timeout:
+.fn hidh_proc_repage_timeout, global
 /* 802F4E48 002BE408  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F4E4C 002BE40C  7C 08 02 A6 */	mflr r0
 /* 802F4E50 002BE410  90 01 00 24 */	stw r0, 0x24(r1)
@@ -485,9 +484,9 @@ hidh_proc_repage_timeout:
 /* 802F4F88 002BE548  7C 08 03 A6 */	mtlr r0
 /* 802F4F8C 002BE54C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F4F90 002BE550  4E 80 00 20 */	blr
+.endfn hidh_proc_repage_timeout
 
-.global hidh_sec_check_complete_orig
-hidh_sec_check_complete_orig:
+.fn hidh_sec_check_complete_orig, global
 /* 802F4F94 002BE554  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F4F98 002BE558  7C 08 02 A6 */	mflr r0
 /* 802F4F9C 002BE55C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -635,9 +634,9 @@ hidh_sec_check_complete_orig:
 /* 802F519C 002BE75C  7C 08 03 A6 */	mtlr r0
 /* 802F51A0 002BE760  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F51A4 002BE764  4E 80 00 20 */	blr 
+.endfn hidh_sec_check_complete_orig
 
-.global hidh_l2cif_connect_cfm
-hidh_l2cif_connect_cfm:
+.fn hidh_l2cif_connect_cfm, global
 /* 802F51A8 002BE768  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F51AC 002BE76C  7C 08 02 A6 */	mflr r0
 /* 802F51B0 002BE770  3C C0 80 5C */	lis r6, lbl_805C26B8@ha
@@ -869,9 +868,9 @@ hidh_l2cif_connect_cfm:
 /* 802F54E4 002BEAA4  7C 08 03 A6 */	mtlr r0
 /* 802F54E8 002BEAA8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F54EC 002BEAAC  4E 80 00 20 */	blr 
+.endfn hidh_l2cif_connect_cfm
 
-.global hidh_l2cif_config_ind
-hidh_l2cif_config_ind:
+.fn hidh_l2cif_config_ind, global
 /* 802F54F0 002BEAB0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F54F4 002BEAB4  7C 08 02 A6 */	mflr r0
 /* 802F54F8 002BEAB8  3C A0 80 5C */	lis r5, lbl_805C26B8@ha
@@ -1057,9 +1056,9 @@ hidh_l2cif_config_ind:
 /* 802F578C 002BED4C  7C 08 03 A6 */	mtlr r0
 /* 802F5790 002BED50  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F5794 002BED54  4E 80 00 20 */	blr 
+.endfn hidh_l2cif_config_ind
 
-.global hidh_l2cif_config_cfm
-hidh_l2cif_config_cfm:
+.fn hidh_l2cif_config_cfm, global
 /* 802F5798 002BED58  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F579C 002BED5C  7C 08 02 A6 */	mflr r0
 /* 802F57A0 002BED60  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1273,9 +1272,9 @@ hidh_l2cif_config_cfm:
 /* 802F5A98 002BF058  7C 08 03 A6 */	mtlr r0
 /* 802F5A9C 002BF05C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F5AA0 002BF060  4E 80 00 20 */	blr 
+.endfn hidh_l2cif_config_cfm
 
-.global hidh_l2cif_disconnect_ind
-hidh_l2cif_disconnect_ind:
+.fn hidh_l2cif_disconnect_ind, global
 /* 802F5AA4 002BF064  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F5AA8 002BF068  7C 08 02 A6 */	mflr r0
 /* 802F5AAC 002BF06C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1469,9 +1468,9 @@ hidh_l2cif_disconnect_ind:
 /* 802F5D5C 002BF31C  7C 08 03 A6 */	mtlr r0
 /* 802F5D60 002BF320  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F5D64 002BF324  4E 80 00 20 */	blr 
+.endfn hidh_l2cif_disconnect_ind
 
-.global hidh_l2cif_disconnect_cfm
-hidh_l2cif_disconnect_cfm:
+.fn hidh_l2cif_disconnect_cfm, global
 /* 802F5D68 002BF328  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F5D6C 002BF32C  7C 08 02 A6 */	mflr r0
 /* 802F5D70 002BF330  3C 80 80 5C */	lis r4, lbl_805C26B8@ha
@@ -1630,9 +1629,9 @@ hidh_l2cif_disconnect_cfm:
 /* 802F5FA4 002BF564  7C 08 03 A6 */	mtlr r0
 /* 802F5FA8 002BF568  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F5FAC 002BF56C  4E 80 00 20 */	blr 
+.endfn hidh_l2cif_disconnect_cfm
 
-.global hidh_l2cif_cong_ind
-hidh_l2cif_cong_ind:
+.fn hidh_l2cif_cong_ind, global
 /* 802F5FB0 002BF570  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F5FB4 002BF574  7C 08 02 A6 */	mflr r0
 /* 802F5FB8 002BF578  3C A0 80 5C */	lis r5, lbl_805C26B8@ha
@@ -1770,9 +1769,9 @@ hidh_l2cif_cong_ind:
 /* 802F619C 002BF75C  7C 08 03 A6 */	mtlr r0
 /* 802F61A0 002BF760  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F61A4 002BF764  4E 80 00 20 */	blr 
+.endfn hidh_l2cif_cong_ind
 
-.global hidh_l2cif_data_ind
-hidh_l2cif_data_ind:
+.fn hidh_l2cif_data_ind, global
 /* 802F61A8 002BF768  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F61AC 002BF76C  7C 08 02 A6 */	mflr r0
 /* 802F61B0 002BF770  3C C0 80 5C */	lis r6, lbl_805C26B8@ha
@@ -2028,9 +2027,9 @@ hidh_l2cif_data_ind:
 /* 802F6534 002BFAF4  7C 08 03 A6 */	mtlr r0
 /* 802F6538 002BFAF8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F653C 002BFAFC  4E 80 00 20 */	blr 
+.endfn hidh_l2cif_data_ind
 
-.global hidh_conn_snd_data
-hidh_conn_snd_data:
+.fn hidh_conn_snd_data, global
 /* 802F6540 002BFB00  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 802F6544 002BFB04  7C 08 02 A6 */	mflr r0
 /* 802F6548 002BFB08  90 01 00 54 */	stw r0, 0x54(r1)
@@ -2223,9 +2222,9 @@ hidh_conn_snd_data:
 /* 802F67D0 002BFD90  7C 08 03 A6 */	mtlr r0
 /* 802F67D4 002BFD94  38 21 00 50 */	addi r1, r1, 0x50
 /* 802F67D8 002BFD98  4E 80 00 20 */	blr
+.endfn hidh_conn_snd_data
 
-.global hidh_conn_initiate
-hidh_conn_initiate:
+.fn hidh_conn_initiate, global
 /* 802F67DC 002BFD9C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F67E0 002BFDA0  7C 08 02 A6 */	mflr r0
 /* 802F67E4 002BFDA4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2294,9 +2293,9 @@ hidh_conn_initiate:
 /* 802F68CC 002BFE8C  7C 08 03 A6 */	mtlr r0
 /* 802F68D0 002BFE90  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F68D4 002BFE94  4E 80 00 20 */	blr 
+.endfn hidh_conn_initiate
 
-.global hidh_conn_dereg
-hidh_conn_dereg:
+.fn hidh_conn_dereg, global
 /* 802F68D8 002BFE98  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F68DC 002BFE9C  7C 08 02 A6 */	mflr r0
 /* 802F68E0 002BFEA0  38 60 00 11 */	li r3, 0x11
@@ -2308,6 +2307,7 @@ hidh_conn_dereg:
 /* 802F68F8 002BFEB8  7C 08 03 A6 */	mtlr r0
 /* 802F68FC 002BFEBC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802F6900 002BFEC0  4E 80 00 20 */	blr 
+.endfn hidh_conn_dereg
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

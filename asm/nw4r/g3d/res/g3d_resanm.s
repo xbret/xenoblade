@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global GetResKeyFrameAnmResult__Q34nw4r3g3d6detailFPCQ34nw4r3g3d18ResKeyFrameAnmDataf
-GetResKeyFrameAnmResult__Q34nw4r3g3d6detailFPCQ34nw4r3g3d18ResKeyFrameAnmDataf:
+.fn GetResKeyFrameAnmResult__Q34nw4r3g3d6detailFPCQ34nw4r3g3d18ResKeyFrameAnmDataf, global
 /* 803DDAA8 003A7068  A0 A3 00 00 */	lhz r5, 0(r3)
 /* 803DDAAC 003A706C  C0 43 00 08 */	lfs f2, 8(r3)
 /* 803DDAB0 003A7070  38 05 FF FF */	addi r0, r5, -1
@@ -86,9 +85,9 @@ GetResKeyFrameAnmResult__Q34nw4r3g3d6detailFPCQ34nw4r3g3d18ResKeyFrameAnmDataf:
 .L_803DDBCC:
 /* 803DDBCC 003A718C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803DDBD0 003A7190  4E 80 00 20 */	blr 
+.endfn GetResKeyFrameAnmResult__Q34nw4r3g3d6detailFPCQ34nw4r3g3d18ResKeyFrameAnmDataf
 
-.global GetResColorAnmResult__Q34nw4r3g3d6detailFPCQ34nw4r3g3d21ResColorAnmFramesDataf
-GetResColorAnmResult__Q34nw4r3g3d6detailFPCQ34nw4r3g3d21ResColorAnmFramesDataf:
+.fn GetResColorAnmResult__Q34nw4r3g3d6detailFPCQ34nw4r3g3d21ResColorAnmFramesDataf, global
 /* 803DDBD4 003A7194  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803DDBD8 003A7198  7C 08 02 A6 */	mflr r0
 /* 803DDBDC 003A719C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -155,6 +154,7 @@ GetResColorAnmResult__Q34nw4r3g3d6detailFPCQ34nw4r3g3d21ResColorAnmFramesDataf:
 /* 803DDCC8 003A7288  7C 08 03 A6 */	mtlr r0
 /* 803DDCCC 003A728C  38 21 00 30 */	addi r1, r1, 0x30
 /* 803DDCD0 003A7290  4E 80 00 20 */	blr 
+.endfn GetResColorAnmResult__Q34nw4r3g3d6detailFPCQ34nw4r3g3d21ResColorAnmFramesDataf
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

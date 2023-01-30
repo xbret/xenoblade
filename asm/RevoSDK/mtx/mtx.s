@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global PSMTXIdentity
-PSMTXIdentity:
+.fn PSMTXIdentity, global
 /* 8034D1E0 003167A0  C0 02 BD AC */	lfs f0, zero_c@sda21(r2)
 /* 8034D1E4 003167A4  C0 22 BD A8 */	lfs f1, one_c@sda21(r2)
 /* 8034D1E8 003167A8  F0 03 00 08 */	psq_st f0, 8(r3), 0, qr0
@@ -16,10 +15,10 @@ PSMTXIdentity:
 /* 8034D200 003167C0  F0 43 00 00 */	psq_st f2, 0(r3), 0, qr0
 /* 8034D204 003167C4  F0 43 00 28 */	psq_st f2, 40(r3), 0, qr0
 /* 8034D208 003167C8  4E 80 00 20 */	blr 
+.endfn PSMTXIdentity
 
 .balign 16, 0
-.global PSMTXCopy
-PSMTXCopy:
+.fn PSMTXCopy, global
 /* 8034D210 003167D0  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
 /* 8034D214 003167D4  F0 04 00 00 */	psq_st f0, 0(r4), 0, qr0
 /* 8034D218 003167D8  E0 23 00 08 */	psq_l f1, 8(r3), 0, qr0
@@ -33,10 +32,10 @@ PSMTXCopy:
 /* 8034D238 003167F8  E0 A3 00 28 */	psq_l f5, 40(r3), 0, qr0
 /* 8034D23C 003167FC  F0 A4 00 28 */	psq_st f5, 40(r4), 0, qr0
 /* 8034D240 00316800  4E 80 00 20 */	blr 
+.endfn PSMTXCopy
 
 .balign 16, 0
-.global PSMTXConcat
-PSMTXConcat:
+.fn PSMTXConcat, global
 /* 8034D250 00316810  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8034D254 00316814  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
 /* 8034D258 00316818  D9 C1 00 08 */	stfd f14, 8(r1)
@@ -88,10 +87,10 @@ PSMTXConcat:
 /* 8034D310 003168D0  CB E1 00 28 */	lfd f31, 0x28(r1)
 /* 8034D314 003168D4  38 21 00 40 */	addi r1, r1, 0x40
 /* 8034D318 003168D8  4E 80 00 20 */	blr 
+.endfn PSMTXConcat
 
 .balign 16, 0
-.global PSMTXConcatArray
-PSMTXConcatArray:
+.fn PSMTXConcatArray, global
 /* 8034D320 003168E0  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 8034D324 003168E4  DB E1 00 40 */	stfd f31, 0x40(r1)
 /* 8034D328 003168E8  F3 E1 00 48 */	psq_st f31, 72(r1), 0, qr0
@@ -191,10 +190,10 @@ PSMTXConcatArray:
 /* 8034D49C 00316A5C  CB 81 00 10 */	lfd f28, 0x10(r1)
 /* 8034D4A0 00316A60  38 21 00 50 */	addi r1, r1, 0x50
 /* 8034D4A4 00316A64  4E 80 00 20 */	blr 
+.endfn PSMTXConcatArray
 
 .balign 16, 0
-.global PSMTXTranspose
-PSMTXTranspose:
+.fn PSMTXTranspose, global
 /* 8034D4B0 00316A70  E0 23 00 00 */	psq_l f1, 0(r3), 0, qr0
 /* 8034D4B4 00316A74  E0 43 00 10 */	psq_l f2, 16(r3), 0, qr0
 /* 8034D4B8 00316A78  C0 02 BD AC */	lfs f0, zero_c@sda21(r2)
@@ -215,10 +214,10 @@ PSMTXTranspose:
 /* 8034D4F4 00316AB4  F0 A4 00 18 */	psq_st f5, 24(r4), 0, qr0
 /* 8034D4F8 00316AB8  D0 64 00 28 */	stfs f3, 0x28(r4)
 /* 8034D4FC 00316ABC  4E 80 00 20 */	blr 
+.endfn PSMTXTranspose
 
 .balign 16, 0
-.global PSMTXInverse
-PSMTXInverse:
+.fn PSMTXInverse, global
 /* 8034D500 00316AC0  E0 03 80 00 */	psq_l f0, 0(r3), 1, qr0
 /* 8034D504 00316AC4  E0 23 00 04 */	psq_l f1, 4(r3), 0, qr0
 /* 8034D508 00316AC8  E0 43 80 10 */	psq_l f2, 16(r3), 1, qr0
@@ -282,10 +281,10 @@ PSMTXInverse:
 /* 8034D5EC 00316BAC  F0 E4 80 2C */	psq_st f7, 44(r4), 1, qr0
 /* 8034D5F0 00316BB0  38 60 00 01 */	li r3, 1
 /* 8034D5F4 00316BB4  4E 80 00 20 */	blr 
+.endfn PSMTXInverse
 
 .balign 16, 0
-.global PSMTXRotRad
-PSMTXRotRad:
+.fn PSMTXRotRad, global
 /* 8034D600 00316BC0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8034D604 00316BC4  7C 08 02 A6 */	mflr r0
 /* 8034D608 00316BC8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -317,10 +316,10 @@ PSMTXRotRad:
 /* 8034D670 00316C30  7C 08 03 A6 */	mtlr r0
 /* 8034D674 00316C34  38 21 00 30 */	addi r1, r1, 0x30
 /* 8034D678 00316C38  4E 80 00 20 */	blr 
+.endfn PSMTXRotRad
 
 .balign 16, 0
-.global PSMTXRotTrig
-PSMTXRotTrig:
+.fn PSMTXRotTrig, global
 /* 8034D680 00316C40  FC A0 08 18 */	frsp f5, f1
 /* 8034D684 00316C44  60 80 00 20 */	ori r0, r4, 0x20
 /* 8034D688 00316C48  FC 80 10 18 */	frsp f4, f2
@@ -368,10 +367,10 @@ PSMTXRotTrig:
 /* 8034D724 00316CE4  F0 43 00 00 */	psq_st f2, 0(r3), 0, qr0
 /* 8034D728 00316CE8  F0 23 00 28 */	psq_st f1, 40(r3), 0, qr0
 /* 8034D72C 00316CEC  4E 80 00 20 */	blr 
+.endfn PSMTXRotTrig
 
 .balign 16, 0
-.global __PSMTXRotAxisRadInternal
-__PSMTXRotAxisRadInternal:
+.fn __PSMTXRotAxisRadInternal, global
 /* 8034D730 00316CF0  E0 64 00 00 */	psq_l f3, 0(r4), 0, qr0
 /* 8034D734 00316CF4  FD 60 10 18 */	frsp f11, f2
 /* 8034D738 00316CF8  C1 42 BD B0 */	lfs f10, float_8066C130@sda21(r2)
@@ -416,10 +415,10 @@ __PSMTXRotAxisRadInternal:
 /* 8034D7D4 00316D94  F0 C3 00 20 */	psq_st f6, 32(r3), 0, qr0
 /* 8034D7D8 00316D98  F0 E3 00 28 */	psq_st f7, 40(r3), 0, qr0
 /* 8034D7DC 00316D9C  4E 80 00 20 */	blr 
+.endfn __PSMTXRotAxisRadInternal
 
 .balign 16, 0
-.global PSMTXRotAxisRad
-PSMTXRotAxisRad:
+.fn PSMTXRotAxisRad, global
 /* 8034D7E0 00316DA0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8034D7E4 00316DA4  7C 08 02 A6 */	mflr r0
 /* 8034D7E8 00316DA8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -451,10 +450,10 @@ PSMTXRotAxisRad:
 /* 8034D850 00316E10  7C 08 03 A6 */	mtlr r0
 /* 8034D854 00316E14  38 21 00 30 */	addi r1, r1, 0x30
 /* 8034D858 00316E18  4E 80 00 20 */	blr 
+.endfn PSMTXRotAxisRad
 
 .balign 16, 0
-.global PSMTXTrans
-PSMTXTrans:
+.fn PSMTXTrans, global
 /* 8034D860 00316E20  C0 02 BD AC */	lfs f0, zero_c@sda21(r2)
 /* 8034D864 00316E24  C0 82 BD A8 */	lfs f4, one_c@sda21(r2)
 /* 8034D868 00316E28  D0 23 00 0C */	stfs f1, 0xc(r3)
@@ -468,10 +467,10 @@ PSMTXTrans:
 /* 8034D888 00316E48  D0 63 00 2C */	stfs f3, 0x2c(r3)
 /* 8034D88C 00316E4C  D0 83 00 00 */	stfs f4, 0(r3)
 /* 8034D890 00316E50  4E 80 00 20 */	blr 
+.endfn PSMTXTrans
 
 .balign 16, 0
-.global PSMTXTransApply
-PSMTXTransApply:
+.fn PSMTXTransApply, global
 /* 8034D8A0 00316E60  E0 83 00 00 */	psq_l f4, 0(r3), 0, qr0
 /* 8034D8A4 00316E64  FC 20 08 18 */	frsp f1, f1
 /* 8034D8A8 00316E68  E0 A3 00 08 */	psq_l f5, 8(r3), 0, qr0
@@ -491,10 +490,10 @@ PSMTXTransApply:
 /* 8034D8E0 00316EA0  F1 24 00 20 */	psq_st f9, 32(r4), 0, qr0
 /* 8034D8E4 00316EA4  F1 04 00 28 */	psq_st f8, 40(r4), 0, qr0
 /* 8034D8E8 00316EA8  4E 80 00 20 */	blr 
+.endfn PSMTXTransApply
 
 .balign 16, 0
-.global PSMTXScale
-PSMTXScale:
+.fn PSMTXScale, global
 /* 8034D8F0 00316EB0  C0 02 BD AC */	lfs f0, zero_c@sda21(r2)
 /* 8034D8F4 00316EB4  D0 23 00 00 */	stfs f1, 0(r3)
 /* 8034D8F8 00316EB8  F0 03 00 04 */	psq_st f0, 4(r3), 0, qr0
@@ -505,10 +504,10 @@ PSMTXScale:
 /* 8034D90C 00316ECC  D0 63 00 28 */	stfs f3, 0x28(r3)
 /* 8034D910 00316ED0  D0 03 00 2C */	stfs f0, 0x2c(r3)
 /* 8034D914 00316ED4  4E 80 00 20 */	blr 
+.endfn PSMTXScale
 
 .balign 16, 0
-.global PSMTXScaleApply
-PSMTXScaleApply:
+.fn PSMTXScaleApply, global
 /* 8034D920 00316EE0  FC 20 08 18 */	frsp f1, f1
 /* 8034D924 00316EE4  E0 83 00 00 */	psq_l f4, 0(r3), 0, qr0
 /* 8034D928 00316EE8  FC 40 10 18 */	frsp f2, f2
@@ -531,10 +530,10 @@ PSMTXScaleApply:
 /* 8034D96C 00316F2C  F1 04 00 20 */	psq_st f8, 32(r4), 0, qr0
 /* 8034D970 00316F30  F0 44 00 28 */	psq_st f2, 40(r4), 0, qr0
 /* 8034D974 00316F34  4E 80 00 20 */	blr 
+.endfn PSMTXScaleApply
 
 .balign 16, 0
-.global PSMTXQuat
-PSMTXQuat:
+.fn PSMTXQuat, global
 /* 8034D980 00316F40  E0 84 00 00 */	psq_l f4, 0(r4), 0, qr0
 /* 8034D984 00316F44  E0 A4 00 08 */	psq_l f5, 8(r4), 0, qr0
 /* 8034D988 00316F48  10 C4 01 32 */	ps_mul f6, f4, f4
@@ -576,10 +575,10 @@ PSMTXQuat:
 /* 8034DA18 00316FD8  F0 83 00 00 */	psq_st f4, 0(r3), 0, qr0
 /* 8034DA1C 00316FDC  F1 A3 00 20 */	psq_st f13, 32(r3), 0, qr0
 /* 8034DA20 00316FE0  4E 80 00 20 */	blr 
+.endfn PSMTXQuat
 
 .balign 16, 0
-.global C_MTXLookAt
-C_MTXLookAt:
+.fn C_MTXLookAt, global
 /* 8034DA30 00316FF0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8034DA34 00316FF4  7C 08 02 A6 */	mflr r0
 /* 8034DA38 00316FF8  C0 24 00 00 */	lfs f1, 0(r4)
@@ -673,10 +672,10 @@ C_MTXLookAt:
 /* 8034DB98 00317158  7C 08 03 A6 */	mtlr r0
 /* 8034DB9C 0031715C  38 21 00 40 */	addi r1, r1, 0x40
 /* 8034DBA0 00317160  4E 80 00 20 */	blr 
+.endfn C_MTXLookAt
 
 .balign 16, 0
-.global C_MTXLightFrustum
-C_MTXLightFrustum:
+.fn C_MTXLightFrustum, global
 /* 8034DBB0 00317170  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8034DBB4 00317174  DB E1 00 10 */	stfd f31, 0x10(r1)
 /* 8034DBB8 00317178  F3 E1 00 18 */	psq_st f31, 24(r1), 0, qr0
@@ -718,10 +717,10 @@ C_MTXLightFrustum:
 /* 8034DC48 00317208  CB E1 00 10 */	lfd f31, 0x10(r1)
 /* 8034DC4C 0031720C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034DC50 00317210  4E 80 00 20 */	blr 
+.endfn C_MTXLightFrustum
 
 .balign 16, 0
-.global C_MTXLightPerspective
-C_MTXLightPerspective:
+.fn C_MTXLightPerspective, global
 /* 8034DC60 00317220  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8034DC64 00317224  7C 08 02 A6 */	mflr r0
 /* 8034DC68 00317228  C0 E2 BD B0 */	lfs f7, float_8066C130@sda21(r2)
@@ -784,10 +783,10 @@ C_MTXLightPerspective:
 /* 8034DD4C 0031730C  7C 08 03 A6 */	mtlr r0
 /* 8034DD50 00317310  38 21 00 60 */	addi r1, r1, 0x60
 /* 8034DD54 00317314  4E 80 00 20 */	blr 
+.endfn C_MTXLightPerspective
 
 .balign 16, 0
-.global C_MTXLightOrtho
-C_MTXLightOrtho:
+.fn C_MTXLightOrtho, global
 /* 8034DD60 00317320  ED 64 18 28 */	fsubs f11, f4, f3
 /* 8034DD64 00317324  C1 22 BD AC */	lfs f9, zero_c@sda21(r2)
 /* 8034DD68 00317328  C1 42 BD A8 */	lfs f10, one_c@sda21(r2)
@@ -822,6 +821,7 @@ C_MTXLightOrtho:
 /* 8034DDDC 0031739C  D0 23 00 14 */	stfs f1, 0x14(r3)
 /* 8034DDE0 003173A0  D0 03 00 1C */	stfs f0, 0x1c(r3)
 /* 8034DDE4 003173A4  4E 80 00 20 */	blr
+.endfn C_MTXLightOrtho
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 

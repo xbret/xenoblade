@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global BTM_PmRegister
-BTM_PmRegister:
+.fn BTM_PmRegister, global
 /* 802E9EC0 002B3480  54 60 07 7B */	rlwinm. r0, r3, 0, 0x1d, 0x1d
 /* 802E9EC4 002B3484  41 82 00 38 */	beq .L_802E9EFC
 /* 802E9EC8 002B3488  88 04 00 00 */	lbz r0, 0(r4)
@@ -57,9 +56,9 @@ BTM_PmRegister:
 /* 802E9F70 002B3530  42 00 FF A0 */	bdnz .L_802E9F10
 /* 802E9F74 002B3534  38 60 00 03 */	li r3, 3
 /* 802E9F78 002B3538  4E 80 00 20 */	blr 
+.endfn BTM_PmRegister
 
-.global BTM_SetPowerMode
-BTM_SetPowerMode:
+.fn BTM_SetPowerMode, global
 /* 802E9F7C 002B353C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E9F80 002B3540  7C 08 02 A6 */	mflr r0
 /* 802E9F84 002B3544  90 01 00 24 */	stw r0, 0x24(r1)
@@ -189,9 +188,9 @@ BTM_SetPowerMode:
 /* 802EA140 002B3700  7C 08 03 A6 */	mtlr r0
 /* 802EA144 002B3704  38 21 00 20 */	addi r1, r1, 0x20
 /* 802EA148 002B3708  4E 80 00 20 */	blr 
+.endfn BTM_SetPowerMode
 
-.global BTM_ReadPowerMode
-BTM_ReadPowerMode:
+.fn BTM_ReadPowerMode, global
 /* 802EA14C 002B370C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802EA150 002B3710  7C 08 02 A6 */	mflr r0
 /* 802EA154 002B3714  3C A0 80 5C */	lis r5, lbl_805BF9F8@ha
@@ -243,9 +242,9 @@ BTM_ReadPowerMode:
 /* 802EA1F8 002B37B8  7C 08 03 A6 */	mtlr r0
 /* 802EA1FC 002B37BC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802EA200 002B37C0  4E 80 00 20 */	blr 
+.endfn BTM_ReadPowerMode
 
-.global btm_pm_reset
-btm_pm_reset:
+.fn btm_pm_reset, global
 /* 802EA204 002B37C4  3C 60 80 5C */	lis r3, lbl_805BF9F8@ha
 /* 802EA208 002B37C8  39 80 00 00 */	li r12, 0
 /* 802EA20C 002B37CC  38 63 F9 F8 */	addi r3, r3, lbl_805BF9F8@l
@@ -277,9 +276,9 @@ btm_pm_reset:
 /* 802EA270 002B3830  7D 89 03 A6 */	mtctr r12
 /* 802EA274 002B3834  4E 80 04 20 */	bctr 
 /* 802EA278 002B3838  4E 80 00 20 */	blr 
+.endfn btm_pm_reset
 
-.global btm_pm_sm_alloc
-btm_pm_sm_alloc:
+.fn btm_pm_sm_alloc, global
 /* 802EA27C 002B383C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802EA280 002B3840  7C 08 02 A6 */	mflr r0
 /* 802EA284 002B3844  38 80 00 00 */	li r4, 0
@@ -300,9 +299,9 @@ btm_pm_sm_alloc:
 /* 802EA2C0 002B3880  7C 08 03 A6 */	mtlr r0
 /* 802EA2C4 002B3884  38 21 00 10 */	addi r1, r1, 0x10
 /* 802EA2C8 002B3888  4E 80 00 20 */	blr 
+.endfn btm_pm_sm_alloc
 
-.global btm_pm_compare_modes
-btm_pm_compare_modes:
+.fn btm_pm_compare_modes, global
 /* 802EA2CC 002B388C  2C 03 00 00 */	cmpwi r3, 0
 /* 802EA2D0 002B3890  40 82 00 34 */	bne .L_802EA304
 /* 802EA2D4 002B3894  A0 C4 00 00 */	lhz r6, 0(r4)
@@ -454,9 +453,9 @@ btm_pm_compare_modes:
 .L_802EA4E0:
 /* 802EA4E0 002B3AA0  38 60 00 00 */	li r3, 0
 /* 802EA4E4 002B3AA4  4E 80 00 20 */	blr 
+.endfn btm_pm_compare_modes
 
-.global btm_pm_get_set_mode
-btm_pm_get_set_mode:
+.fn btm_pm_get_set_mode, global
 /* 802EA4E8 002B3AA8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802EA4EC 002B3AAC  7C 08 02 A6 */	mflr r0
 /* 802EA4F0 002B3AB0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -554,9 +553,9 @@ btm_pm_get_set_mode:
 /* 802EA63C 002B3BFC  7C 08 03 A6 */	mtlr r0
 /* 802EA640 002B3C00  38 21 00 20 */	addi r1, r1, 0x20
 /* 802EA644 002B3C04  4E 80 00 20 */	blr 
+.endfn btm_pm_get_set_mode
 
-.global btm_pm_snd_md_req
-btm_pm_snd_md_req:
+.fn btm_pm_snd_md_req, global
 /* 802EA648 002B3C08  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802EA64C 002B3C0C  7C 08 02 A6 */	mflr r0
 /* 802EA650 002B3C10  3C C0 80 5C */	lis r6, lbl_805BF9F8@ha
@@ -716,9 +715,9 @@ btm_pm_snd_md_req:
 /* 802EA870 002B3E30  7C 08 03 A6 */	mtlr r0
 /* 802EA874 002B3E34  38 21 00 30 */	addi r1, r1, 0x30
 /* 802EA878 002B3E38  4E 80 00 20 */	blr 
+.endfn btm_pm_snd_md_req
 
-.global btm_pm_proc_cmd_status
-btm_pm_proc_cmd_status:
+.fn btm_pm_proc_cmd_status, global
 /* 802EA87C 002B3E3C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802EA880 002B3E40  7C 08 02 A6 */	mflr r0
 /* 802EA884 002B3E44  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
@@ -767,9 +766,9 @@ btm_pm_proc_cmd_status:
 /* 802EA920 002B3EE0  7C 08 03 A6 */	mtlr r0
 /* 802EA924 002B3EE4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802EA928 002B3EE8  4E 80 00 20 */	blr 
+.endfn btm_pm_proc_cmd_status
 
-.global btm_pm_proc_mode_change
-btm_pm_proc_mode_change:
+.fn btm_pm_proc_mode_change, global
 /* 802EA92C 002B3EEC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802EA930 002B3EF0  7C 08 02 A6 */	mflr r0
 /* 802EA934 002B3EF4  90 01 00 34 */	stw r0, 0x34(r1)
@@ -918,6 +917,7 @@ btm_pm_proc_mode_change:
 /* 802EAB48 002B4108  7C 08 03 A6 */	mtlr r0
 /* 802EAB4C 002B410C  38 21 00 30 */	addi r1, r1, 0x30
 /* 802EAB50 002B4110  4E 80 00 20 */	blr
+.endfn btm_pm_proc_mode_change
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 .global lbl_805454F0

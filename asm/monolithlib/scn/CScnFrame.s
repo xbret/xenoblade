@@ -2,8 +2,9 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_8049E380
-func_8049E380:
+
+
+.fn func_8049E380, global
 /* 8049E380 00467940  C0 02 D0 10 */	lfs f0, float_8066D390@sda21(r2)
 /* 8049E384 00467944  3C A0 80 57 */	lis r5, __vt__CScnFrame@ha
 /* 8049E388 00467948  38 A5 24 B8 */	addi r5, r5, __vt__CScnFrame@l
@@ -14,9 +15,9 @@ func_8049E380:
 /* 8049E39C 0046795C  D0 03 00 0C */	stfs f0, 0xc(r3)
 /* 8049E3A0 00467960  98 03 00 10 */	stb r0, 0x10(r3)
 /* 8049E3A4 00467964  4E 80 00 20 */	blr 
+.endfn func_8049E380
 
-.global func_8049E3A8
-func_8049E3A8:
+.fn func_8049E3A8, global
 /* 8049E3A8 00467968  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049E3AC 0046796C  7C 08 02 A6 */	mflr r0
 /* 8049E3B0 00467970  2C 03 00 00 */	cmpwi r3, 0
@@ -34,9 +35,9 @@ func_8049E3A8:
 /* 8049E3DC 0046799C  7C 08 03 A6 */	mtlr r0
 /* 8049E3E0 004679A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8049E3E4 004679A4  4E 80 00 20 */	blr 
+.endfn func_8049E3A8
 
-.global func_8049E3E8
-func_8049E3E8:
+.fn func_8049E3E8, global
 /* 8049E3E8 004679A8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8049E3EC 004679AC  7C 08 02 A6 */	mflr r0
 /* 8049E3F0 004679B0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -67,9 +68,12 @@ func_8049E3E8:
 /* 8049E44C 00467A0C  7C 08 03 A6 */	mtlr r0
 /* 8049E450 00467A10  38 21 00 20 */	addi r1, r1, 0x20
 /* 8049E454 00467A14  4E 80 00 20 */	blr 
+.endfn func_8049E3E8
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
 
 .global CScnFrame_typestr
 CScnFrame_typestr:
@@ -78,6 +82,8 @@ CScnFrame_typestr:
 	.4byte 0
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
 
 .global __vt__CScnFrame
 __vt__CScnFrame:
@@ -89,6 +95,8 @@ __vt__CScnFrame:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+
+
 .global __RTTI__CScnFrame
 __RTTI__CScnFrame:
 	.4byte CScnFrame_typestr
@@ -96,6 +104,8 @@ __RTTI__CScnFrame:
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
 
 .global float_8066D390
 float_8066D390:
@@ -110,24 +120,37 @@ float_8066D394:
 .global double_8066D398
 double_8066D398:
 	.8byte 0x4330000000000000 #unsigned int to float constant
-.section extab_, "a"  # 0x800066E0 - 0x80021020
 
-.global lbl_8001F6A8
-lbl_8001F6A8:
+.section extab, "a" # 0x800066E0 - 0x80021020
+
+.balign 4
+
+.obj "@etb_8001F6A8", local
+.hidden "@etb_8001F6A8"
 	.4byte 0x08080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001F6A8"
 
-.global lbl_8001F6B0
-lbl_8001F6B0:
+.obj "@etb_8001F6B0", local
+.hidden "@etb_8001F6B0"
 	.4byte 0x080A0000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001F6B0"
 
+.section extabindex, "a" # 0x80021020 - 0x80039220
 
-.section extabindex_, "a"  # 0x80021020 - 0x80039220
+.balign 4
 
-.4byte func_8049E3A8
+.obj "@eti_80037178", local
+.hidden "@eti_80037178"
+	.4byte func_8049E3A8
 	.4byte 0x00000040
-	.4byte lbl_8001F6A8
+	.4byte "@etb_8001F6A8"
+.endobj "@eti_80037178"
+
+.obj "@eti_80037184", local
+.hidden "@eti_80037184"
 	.4byte func_8049E3E8
 	.4byte 0x00000070
-	.4byte lbl_8001F6B0
+	.4byte "@etb_8001F6B0"
+.endobj "@eti_80037184"

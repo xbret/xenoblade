@@ -2,13 +2,12 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global PlayPolicy_Onetime__Q24nw4r3g3dFfff
-PlayPolicy_Onetime__Q24nw4r3g3dFfff:
+.fn PlayPolicy_Onetime__Q24nw4r3g3dFfff, global
 /* 803E73B0 003B0970  FC 20 18 90 */	fmr f1, f3
 /* 803E73B4 003B0974  4E 80 00 20 */	blr
+.endfn PlayPolicy_Onetime__Q24nw4r3g3dFfff
 
-.global PlayPolicy_Loop__Q24nw4r3g3dFfff
-PlayPolicy_Loop__Q24nw4r3g3dFfff:
+.fn PlayPolicy_Loop__Q24nw4r3g3dFfff, global
 /* 803E73B8 003B0978  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803E73BC 003B097C  7C 08 02 A6 */	mflr r0
 /* 803E73C0 003B0980  90 01 00 24 */	stw r0, 0x24(r1)
@@ -39,9 +38,9 @@ PlayPolicy_Loop__Q24nw4r3g3dFfff:
 /* 803E741C 003B09DC  7C 08 03 A6 */	mtlr r0
 /* 803E7420 003B09E0  38 21 00 20 */	addi r1, r1, 0x20
 /* 803E7424 003B09E4  4E 80 00 20 */	blr 
+.endfn PlayPolicy_Loop__Q24nw4r3g3dFfff
 
-.global SetAnmFlag__Q34nw4r3g3d6AnmObjFQ44nw4r3g3d6AnmObj7AnmFlagb
-SetAnmFlag__Q34nw4r3g3d6AnmObjFQ44nw4r3g3d6AnmObj7AnmFlagb:
+.fn SetAnmFlag__Q34nw4r3g3d6AnmObjFQ44nw4r3g3d6AnmObj7AnmFlagb, global
 /* 803E7428 003B09E8  2C 05 00 00 */	cmpwi r5, 0
 /* 803E742C 003B09EC  41 82 00 14 */	beq .L_803E7440
 /* 803E7430 003B09F0  80 03 00 0C */	lwz r0, 0xc(r3)
@@ -53,15 +52,16 @@ SetAnmFlag__Q34nw4r3g3d6AnmObjFQ44nw4r3g3d6AnmObj7AnmFlagb:
 /* 803E7444 003B0A04  7C 00 20 78 */	andc r0, r0, r4
 /* 803E7448 003B0A08  90 03 00 0C */	stw r0, 0xc(r3)
 /* 803E744C 003B0A0C  4E 80 00 20 */	blr 
+.endfn SetAnmFlag__Q34nw4r3g3d6AnmObjFQ44nw4r3g3d6AnmObj7AnmFlagb
 
-.global TestAnmFlag__Q34nw4r3g3d6AnmObjCFQ44nw4r3g3d6AnmObj7AnmFlag
-TestAnmFlag__Q34nw4r3g3d6AnmObjCFQ44nw4r3g3d6AnmObj7AnmFlag:
+.fn TestAnmFlag__Q34nw4r3g3d6AnmObjCFQ44nw4r3g3d6AnmObj7AnmFlag, global
 /* 803E7450 003B0A10  80 03 00 0C */	lwz r0, 0xc(r3)
 /* 803E7454 003B0A14  7C 03 20 38 */	and r3, r0, r4
 /* 803E7458 003B0A18  7C 03 00 D0 */	neg r0, r3
 /* 803E745C 003B0A1C  7C 00 1B 78 */	or r0, r0, r3
 /* 803E7460 003B0A20  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 803E7464 003B0A24  4E 80 00 20 */	blr 
+.endfn TestAnmFlag__Q34nw4r3g3d6AnmObjCFQ44nw4r3g3d6AnmObj7AnmFlag
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

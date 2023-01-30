@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __sys_free
-__sys_free:
+.fn __sys_free, global
 /* 802BBD00 002852C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802BBD04 002852C4  7C 08 02 A6 */	mflr r0
 /* 802BBD08 002852C8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -51,6 +50,7 @@ __sys_free:
 /* 802BBDAC 0028536C  7C 08 03 A6 */	mtlr r0
 /* 802BBDB0 00285370  38 21 00 20 */	addi r1, r1, 0x20
 /* 802BBDB4 00285374  4E 80 00 20 */	blr 
+.endfn __sys_free
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 .global lbl_8050CE90

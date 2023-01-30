@@ -3,18 +3,17 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global List_Init__Q26nw4hbm2utFPQ36nw4hbm2ut4ListUs
-List_Init__Q26nw4hbm2utFPQ36nw4hbm2ut4ListUs:
+.fn List_Init__Q26nw4hbm2utFPQ36nw4hbm2ut4ListUs, global
 /* 80338650 00301C10  38 00 00 00 */	li r0, 0
 /* 80338654 00301C14  90 03 00 00 */	stw r0, 0(r3)
 /* 80338658 00301C18  90 03 00 04 */	stw r0, 4(r3)
 /* 8033865C 00301C1C  B0 03 00 08 */	sth r0, 8(r3)
 /* 80338660 00301C20  B0 83 00 0A */	sth r4, 0xa(r3)
 /* 80338664 00301C24  4E 80 00 20 */	blr 
+.endfn List_Init__Q26nw4hbm2utFPQ36nw4hbm2ut4ListUs
 
 .balign 16, 0
-.global List_Insert__Q26nw4hbm2utFPQ36nw4hbm2ut4ListPvPv
-List_Insert__Q26nw4hbm2utFPQ36nw4hbm2ut4ListPvPv:
+.fn List_Insert__Q26nw4hbm2utFPQ36nw4hbm2ut4ListPvPv, global
 /* 80338670 00301C30  80 03 00 00 */	lwz r0, 0(r3)
 /* 80338674 00301C34  2C 00 00 00 */	cmpwi r0, 0
 /* 80338678 00301C38  40 82 00 30 */	bne .L_803386A8
@@ -44,10 +43,10 @@ List_Insert__Q26nw4hbm2utFPQ36nw4hbm2ut4ListPvPv:
 /* 803386D4 00301C94  38 05 00 01 */	addi r0, r5, 1
 /* 803386D8 00301C98  B0 03 00 08 */	sth r0, 8(r3)
 /* 803386DC 00301C9C  4E 80 00 20 */	blr 
+.endfn List_Insert__Q26nw4hbm2utFPQ36nw4hbm2ut4ListPvPv
 
 
-.global List_Remove__Q26nw4hbm2utFPQ36nw4hbm2ut4ListPv
-List_Remove__Q26nw4hbm2utFPQ36nw4hbm2ut4ListPv:
+.fn List_Remove__Q26nw4hbm2utFPQ36nw4hbm2ut4ListPv, global
 /* 803386E0 00301CA0  A0 03 00 0A */	lhz r0, 0xa(r3)
 /* 803386E4 00301CA4  7C C4 02 14 */	add r6, r4, r0
 /* 803386E8 00301CA8  7C 84 00 2E */	lwzx r4, r4, r0
@@ -79,10 +78,10 @@ List_Remove__Q26nw4hbm2utFPQ36nw4hbm2ut4ListPv:
 /* 80338740 00301D00  38 04 FF FF */	addi r0, r4, -1
 /* 80338744 00301D04  B0 03 00 08 */	sth r0, 8(r3)
 /* 80338748 00301D08  4E 80 00 20 */	blr 
+.endfn List_Remove__Q26nw4hbm2utFPQ36nw4hbm2ut4ListPv
 
 .balign 16, 0
-.global List_GetNext__Q26nw4hbm2utFPCQ36nw4hbm2ut4ListPCv
-List_GetNext__Q26nw4hbm2utFPCQ36nw4hbm2ut4ListPCv:
+.fn List_GetNext__Q26nw4hbm2utFPCQ36nw4hbm2ut4ListPCv, global
 /* 80338750 00301D10  2C 04 00 00 */	cmpwi r4, 0
 /* 80338754 00301D14  40 82 00 0C */	bne .L_80338760
 /* 80338758 00301D18  80 63 00 00 */	lwz r3, 0(r3)
@@ -92,6 +91,7 @@ List_GetNext__Q26nw4hbm2utFPCQ36nw4hbm2ut4ListPCv:
 /* 80338764 00301D24  7C 64 02 14 */	add r3, r4, r0
 /* 80338768 00301D28  80 63 00 04 */	lwz r3, 4(r3)
 /* 8033876C 00301D2C  4E 80 00 20 */	blr 
+.endfn List_GetNext__Q26nw4hbm2utFPCQ36nw4hbm2ut4ListPCv
 
 .balign 16, 0
 .global List_GetNth__Q26nw4hbm2utFPCQ36nw4hbm2ut4ListUs

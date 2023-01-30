@@ -2,8 +2,9 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global sinit_80435DF8
-sinit_80435DF8:
+
+
+.fn sinit_80435DF8, global
 /* 80435DF8 003FF3B8  3D 00 80 66 */	lis r8, lbl_80659DF0@ha
 /* 80435DFC 003FF3BC  C0 22 C6 70 */	lfs f1, float_8066C9F0@sda21(r2)
 /* 80435E00 003FF3C0  39 08 9D F0 */	addi r8, r8, lbl_80659DF0@l
@@ -34,10 +35,10 @@ sinit_80435DF8:
 /* 80435E64 003FF424  D0 03 00 08 */	stfs f0, 8(r3)
 /* 80435E68 003FF428  D0 03 00 0C */	stfs f0, 0xc(r3)
 /* 80435E6C 003FF42C  4E 80 00 20 */	blr 
+.endfn sinit_80435DF8
 
 #Either inlines OSInitFastCast or is the function itself
-.global func_80435E70
-func_80435E70:
+.fn func_80435E70, global
 /* 80435E70 003FF430  38 60 00 04 */	li r3, 4
 /* 80435E74 003FF434  64 63 00 04 */	oris r3, r3, 4
 /* 80435E78 003FF438  7C 72 E3 A6 */	mtspr 0x392, r3
@@ -51,12 +52,17 @@ func_80435E70:
 /* 80435E98 003FF458  64 63 00 07 */	oris r3, r3, 7
 /* 80435E9C 003FF45C  7C 75 E3 A6 */	mtspr 0x395, r3
 /* 80435EA0 003FF460  4E 80 00 20 */	blr 
+.endfn func_80435E70
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
+
+.balign 4
 
 .4byte sinit_80435DF8
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
 
 .global float_8066C9F0
 float_8066C9F0:

@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global strnlen
-strnlen:
+.fn strnlen, global
 /* 80342AB0 0030C070  7C 65 1B 78 */	mr r5, r3
 /* 80342AB4 0030C074  48 00 00 08 */	b .L_80342ABC
 .L_80342AB8:
@@ -19,10 +18,10 @@ strnlen:
 .L_80342AD4:
 /* 80342AD4 0030C094  7C 63 28 50 */	subf r3, r3, r5
 /* 80342AD8 0030C098  4E 80 00 20 */	blr 
+.endfn strnlen
 
 .balign 16, 0
-.global IpcReplyHandler
-IpcReplyHandler:
+.fn IpcReplyHandler, global
 /* 80342AE0 0030C0A0  94 21 FD 20 */	stwu r1, -0x2e0(r1)
 /* 80342AE4 0030C0A4  7C 08 02 A6 */	mflr r0
 /* 80342AE8 0030C0A8  38 60 00 02 */	li r3, 2
@@ -191,9 +190,10 @@ IpcReplyHandler:
 /* 80342D2C 0030C2EC  7C 08 03 A6 */	mtlr r0
 /* 80342D30 0030C2F0  38 21 02 E0 */	addi r1, r1, 0x2e0
 /* 80342D34 0030C2F4  4E 80 00 20 */	blr
+.endfn IpcReplyHandler
 
 .balign 16, 0
-IPCInterruptHandler:
+.fn IPCInterruptHandler, local
 /* 80342D40 0030C300  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80342D44 0030C304  7C 08 02 A6 */	mflr r0
 /* 80342D48 0030C308  90 01 00 14 */	stw r0, 0x14(r1)
@@ -308,10 +308,10 @@ IPCInterruptHandler:
 /* 80342EE0 0030C4A0  7C 08 03 A6 */	mtlr r0
 /* 80342EE4 0030C4A4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80342EE8 0030C4A8  4E 80 00 20 */	blr 
+.endfn IPCInterruptHandler
 
 .balign 16, 0
-.global IPCCltInit
-IPCCltInit:
+.fn IPCCltInit, global
 /* 80342EF0 0030C4B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80342EF4 0030C4B4  7C 08 02 A6 */	mflr r0
 /* 80342EF8 0030C4B8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -362,10 +362,10 @@ IPCCltInit:
 /* 80342FA4 0030C564  7C 08 03 A6 */	mtlr r0
 /* 80342FA8 0030C568  38 21 00 20 */	addi r1, r1, 0x20
 /* 80342FAC 0030C56C  4E 80 00 20 */	blr 
+.endfn IPCCltInit
 
 .balign 16, 0
-.global IPCCltReInit
-IPCCltReInit:
+.fn IPCCltReInit, global
 /* 80342FB0 0030C570  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80342FB4 0030C574  7C 08 02 A6 */	mflr r0
 /* 80342FB8 0030C578  90 01 00 24 */	stw r0, 0x24(r1)
@@ -397,10 +397,10 @@ IPCCltReInit:
 /* 80343018 0030C5D8  7C 08 03 A6 */	mtlr r0
 /* 8034301C 0030C5DC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80343020 0030C5E0  4E 80 00 20 */	blr 
+.endfn IPCCltReInit
 
 .balign 16, 0
-.global __ios_Ipc2
-__ios_Ipc2:
+.fn __ios_Ipc2, global
 /* 80343030 0030C5F0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80343034 0030C5F4  7C 08 02 A6 */	mflr r0
 /* 80343038 0030C5F8  2C 03 00 00 */	cmpwi r3, 0
@@ -559,10 +559,10 @@ __ios_Ipc2:
 /* 80343264 0030C824  7C 08 03 A6 */	mtlr r0
 /* 80343268 0030C828  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034326C 0030C82C  4E 80 00 20 */	blr 
+.endfn __ios_Ipc2
 
 .balign 16, 0
-.global IOS_OpenAsync
-IOS_OpenAsync:
+.fn IOS_OpenAsync, global
 /* 80343270 0030C830  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80343274 0030C834  7C 08 02 A6 */	mflr r0
 /* 80343278 0030C838  90 01 00 34 */	stw r0, 0x34(r1)
@@ -643,10 +643,10 @@ IOS_OpenAsync:
 /* 80343380 0030C940  7C 08 03 A6 */	mtlr r0
 /* 80343384 0030C944  38 21 00 30 */	addi r1, r1, 0x30
 /* 80343388 0030C948  4E 80 00 20 */	blr 
+.endfn IOS_OpenAsync
 
 .balign 16, 0
-.global IOS_Open
-IOS_Open:
+.fn IOS_Open, global
 /* 80343390 0030C950  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80343394 0030C954  7C 08 02 A6 */	mflr r0
 /* 80343398 0030C958  90 01 00 24 */	stw r0, 0x24(r1)
@@ -729,10 +729,10 @@ IOS_Open:
 /* 803434A8 0030CA68  7C 08 03 A6 */	mtlr r0
 /* 803434AC 0030CA6C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803434B0 0030CA70  4E 80 00 20 */	blr 
+.endfn IOS_Open
 
 .balign 16, 0
-.global IOS_CloseAsync
-IOS_CloseAsync:
+.fn IOS_CloseAsync, global
 /* 803434C0 0030CA80  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803434C4 0030CA84  7C 08 02 A6 */	mflr r0
 /* 803434C8 0030CA88  90 01 00 24 */	stw r0, 0x24(r1)
@@ -785,10 +785,10 @@ IOS_CloseAsync:
 /* 80343574 0030CB34  7C 08 03 A6 */	mtlr r0
 /* 80343578 0030CB38  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034357C 0030CB3C  4E 80 00 20 */	blr 
+.endfn IOS_CloseAsync
 
 .balign 16, 0
-.global IOS_Close
-IOS_Close:
+.fn IOS_Close, global
 /* 80343580 0030CB40  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80343584 0030CB44  7C 08 02 A6 */	mflr r0
 /* 80343588 0030CB48  90 01 00 24 */	stw r0, 0x24(r1)
@@ -835,10 +835,10 @@ IOS_Close:
 /* 8034361C 0030CBDC  7C 08 03 A6 */	mtlr r0
 /* 80343620 0030CBE0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80343624 0030CBE4  4E 80 00 20 */	blr 
+.endfn IOS_Close
 
 .balign 16, 0
-.global IOS_ReadAsync
-IOS_ReadAsync:
+.fn IOS_ReadAsync, global
 /* 80343630 0030CBF0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80343634 0030CBF4  7C 08 02 A6 */	mflr r0
 /* 80343638 0030CBF8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -911,10 +911,10 @@ IOS_ReadAsync:
 /* 80343724 0030CCE4  7C 08 03 A6 */	mtlr r0
 /* 80343728 0030CCE8  38 21 00 30 */	addi r1, r1, 0x30
 /* 8034372C 0030CCEC  4E 80 00 20 */	blr
+.endfn IOS_ReadAsync
 
 .balign 16, 0
-.global IOS_Read
-IOS_Read:
+.fn IOS_Read, global
 /* 80343730 0030CCF0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80343734 0030CCF4  7C 08 02 A6 */	mflr r0
 /* 80343738 0030CCF8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -989,10 +989,10 @@ IOS_Read:
 /* 8034382C 0030CDEC  7C 08 03 A6 */	mtlr r0
 /* 80343830 0030CDF0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80343834 0030CDF4  4E 80 00 20 */	blr 
+.endfn IOS_Read
 
 .balign 16, 0
-.global IOS_WriteAsync
-IOS_WriteAsync:
+.fn IOS_WriteAsync, global
 /* 80343840 0030CE00  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80343844 0030CE04  7C 08 02 A6 */	mflr r0
 /* 80343848 0030CE08  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1065,10 +1065,10 @@ IOS_WriteAsync:
 /* 80343934 0030CEF4  7C 08 03 A6 */	mtlr r0
 /* 80343938 0030CEF8  38 21 00 30 */	addi r1, r1, 0x30
 /* 8034393C 0030CEFC  4E 80 00 20 */	blr
+.endfn IOS_WriteAsync
 
 .balign 16, 0
-.global IOS_Write
-IOS_Write:
+.fn IOS_Write, global
 /* 80343940 0030CF00  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80343944 0030CF04  7C 08 02 A6 */	mflr r0
 /* 80343948 0030CF08  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1143,10 +1143,10 @@ IOS_Write:
 /* 80343A3C 0030CFFC  7C 08 03 A6 */	mtlr r0
 /* 80343A40 0030D000  38 21 00 20 */	addi r1, r1, 0x20
 /* 80343A44 0030D004  4E 80 00 20 */	blr 
+.endfn IOS_Write
 
 .balign 16, 0
-.global IOS_SeekAsync
-IOS_SeekAsync:
+.fn IOS_SeekAsync, global
 /* 80343A50 0030D010  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80343A54 0030D014  7C 08 02 A6 */	mflr r0
 /* 80343A58 0030D018  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1209,10 +1209,10 @@ IOS_SeekAsync:
 /* 80343B24 0030D0E4  7C 08 03 A6 */	mtlr r0
 /* 80343B28 0030D0E8  38 21 00 30 */	addi r1, r1, 0x30
 /* 80343B2C 0030D0EC  4E 80 00 20 */	blr 
+.endfn IOS_SeekAsync
 
 .balign 16, 0
-.global IOS_IoctlAsync
-IOS_IoctlAsync:
+.fn IOS_IoctlAsync, global
 /* 80343B30 0030D0F0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80343B34 0030D0F4  7C 08 02 A6 */	mflr r0
 /* 80343B38 0030D0F8  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1301,10 +1301,10 @@ IOS_IoctlAsync:
 /* 80343C5C 0030D21C  7C 08 03 A6 */	mtlr r0
 /* 80343C60 0030D220  38 21 00 40 */	addi r1, r1, 0x40
 /* 80343C64 0030D224  4E 80 00 20 */	blr 
+.endfn IOS_IoctlAsync
 
 .balign 16, 0
-.global IOS_Ioctl
-IOS_Ioctl:
+.fn IOS_Ioctl, global
 /* 80343C70 0030D230  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80343C74 0030D234  7C 08 02 A6 */	mflr r0
 /* 80343C78 0030D238  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1391,10 +1391,10 @@ IOS_Ioctl:
 /* 80343D94 0030D354  7C 08 03 A6 */	mtlr r0
 /* 80343D98 0030D358  38 21 00 30 */	addi r1, r1, 0x30
 /* 80343D9C 0030D35C  4E 80 00 20 */	blr 
+.endfn IOS_Ioctl
 
 .balign 16, 0
-.global __ios_Ioctlv
-__ios_Ioctlv:
+.fn __ios_Ioctlv, global
 /* 80343DA0 0030D360  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80343DA4 0030D364  7C 08 02 A6 */	mflr r0
 /* 80343DA8 0030D368  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1486,10 +1486,10 @@ __ios_Ioctlv:
 /* 80343ED0 0030D490  7C 08 03 A6 */	mtlr r0
 /* 80343ED4 0030D494  38 21 00 20 */	addi r1, r1, 0x20
 /* 80343ED8 0030D498  4E 80 00 20 */	blr 
+.endfn __ios_Ioctlv
 
 .balign 16, 0
-.global IOS_IoctlvAsync
-IOS_IoctlvAsync:
+.fn IOS_IoctlvAsync, global
 /* 80343EE0 0030D4A0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80343EE4 0030D4A4  7C 08 02 A6 */	mflr r0
 /* 80343EE8 0030D4A8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1551,10 +1551,10 @@ IOS_IoctlvAsync:
 /* 80343FB8 0030D578  7C 08 03 A6 */	mtlr r0
 /* 80343FBC 0030D57C  38 21 00 30 */	addi r1, r1, 0x30
 /* 80343FC0 0030D580  4E 80 00 20 */	blr 
+.endfn IOS_IoctlvAsync
 
 .balign 16, 0
-.global IOS_Ioctlv
-IOS_Ioctlv:
+.fn IOS_Ioctlv, global
 /* 80343FD0 0030D590  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80343FD4 0030D594  7C 08 02 A6 */	mflr r0
 /* 80343FD8 0030D598  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1614,10 +1614,10 @@ IOS_Ioctlv:
 /* 803440A0 0030D660  7C 08 03 A6 */	mtlr r0
 /* 803440A4 0030D664  38 21 00 30 */	addi r1, r1, 0x30
 /* 803440A8 0030D668  4E 80 00 20 */	blr 
+.endfn IOS_Ioctlv
 
 .balign 16, 0
-.global IOS_IoctlvReboot
-IOS_IoctlvReboot:
+.fn IOS_IoctlvReboot, global
 /* 803440B0 0030D670  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803440B4 0030D674  7C 08 02 A6 */	mflr r0
 /* 803440B8 0030D678  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1824,6 +1824,7 @@ IOS_IoctlvReboot:
 /* 803443A0 0030D960  7C 08 03 A6 */	mtlr r0
 /* 803443A4 0030D964  38 21 00 30 */	addi r1, r1, 0x30
 /* 803443A8 0030D968  4E 80 00 20 */	blr 
+.endfn IOS_IoctlvReboot
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 

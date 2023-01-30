@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global SFTST_Create
-SFTST_Create:
+.fn SFTST_Create, global
 /* 803CF0E8 003986A8  94 21 FE D0 */	stwu r1, -0x130(r1)
 /* 803CF0EC 003986AC  7C 08 02 A6 */	mflr r0
 /* 803CF0F0 003986B0  38 80 00 00 */	li r4, 0
@@ -123,14 +122,14 @@ SFTST_Create:
 /* 803CF2AC 0039886C  7C 08 03 A6 */	mtlr r0
 /* 803CF2B0 00398870  38 21 01 30 */	addi r1, r1, 0x130
 /* 803CF2B4 00398874  4E 80 00 20 */	blr 
+.endfn SFTST_Create
 
-.global SFTST_SetTstFlg
-SFTST_SetTstFlg:
+.fn SFTST_SetTstFlg, global
 /* 803CF2B8 00398878  90 83 00 00 */	stw r4, 0(r3)
 /* 803CF2BC 0039887C  4E 80 00 20 */	blr 
+.endfn SFTST_SetTstFlg
 
-.global SFTST_SetTolerance
-SFTST_SetTolerance:
+.fn SFTST_SetTolerance, global
 /* 803CF2C0 00398880  80 A4 00 00 */	lwz r5, 0(r4)
 /* 803CF2C4 00398884  80 04 00 04 */	lwz r0, 4(r4)
 /* 803CF2C8 00398888  90 A3 01 38 */	stw r5, 0x138(r3)
@@ -140,9 +139,9 @@ SFTST_SetTolerance:
 /* 803CF2D8 00398898  90 A3 01 40 */	stw r5, 0x140(r3)
 /* 803CF2DC 0039889C  90 03 01 44 */	stw r0, 0x144(r3)
 /* 803CF2E0 003988A0  4E 80 00 20 */	blr 
+.endfn SFTST_SetTolerance
 
-.global SFTST_SetExcessErr
-SFTST_SetExcessErr:
+.fn SFTST_SetExcessErr, global
 /* 803CF2E4 003988A4  80 A4 00 00 */	lwz r5, 0(r4)
 /* 803CF2E8 003988A8  80 04 00 04 */	lwz r0, 4(r4)
 /* 803CF2EC 003988AC  90 A3 01 48 */	stw r5, 0x148(r3)
@@ -152,9 +151,9 @@ SFTST_SetExcessErr:
 /* 803CF2FC 003988BC  90 A3 01 50 */	stw r5, 0x150(r3)
 /* 803CF300 003988C0  90 03 01 54 */	stw r0, 0x154(r3)
 /* 803CF304 003988C4  4E 80 00 20 */	blr 
+.endfn SFTST_SetExcessErr
 
-.global SFTST_SetAdjStart
-SFTST_SetAdjStart:
+.fn SFTST_SetAdjStart, global
 /* 803CF308 003988C8  80 A4 00 00 */	lwz r5, 0(r4)
 /* 803CF30C 003988CC  80 04 00 04 */	lwz r0, 4(r4)
 /* 803CF310 003988D0  90 A3 01 58 */	stw r5, 0x158(r3)
@@ -164,9 +163,9 @@ SFTST_SetAdjStart:
 /* 803CF320 003988E0  90 A3 01 60 */	stw r5, 0x160(r3)
 /* 803CF324 003988E4  90 03 01 64 */	stw r0, 0x164(r3)
 /* 803CF328 003988E8  4E 80 00 20 */	blr 
+.endfn SFTST_SetAdjStart
 
-.global SFTST_SetAdjPoff
-SFTST_SetAdjPoff:
+.fn SFTST_SetAdjPoff, global
 /* 803CF32C 003988EC  80 A4 00 00 */	lwz r5, 0(r4)
 /* 803CF330 003988F0  80 04 00 04 */	lwz r0, 4(r4)
 /* 803CF334 003988F4  90 A3 01 68 */	stw r5, 0x168(r3)
@@ -176,26 +175,26 @@ SFTST_SetAdjPoff:
 /* 803CF344 00398904  90 A3 01 70 */	stw r5, 0x170(r3)
 /* 803CF348 00398908  90 03 01 74 */	stw r0, 0x174(r3)
 /* 803CF34C 0039890C  4E 80 00 20 */	blr 
+.endfn SFTST_SetAdjPoff
 
-.global SFTST_SetMovaveRange
-SFTST_SetMovaveRange:
+.fn SFTST_SetMovaveRange, global
 /* 803CF350 00398910  2C 04 00 00 */	cmpwi r4, 0
 /* 803CF354 00398914  4C 81 00 20 */	blelr 
 /* 803CF358 00398918  90 83 00 10 */	stw r4, 0x10(r3)
 /* 803CF35C 0039891C  4E 80 00 20 */	blr 
+.endfn SFTST_SetMovaveRange
 
-.global SFTST_Pause
-SFTST_Pause:
+.fn SFTST_Pause, global
 /* 803CF360 00398920  90 83 00 04 */	stw r4, 4(r3)
 /* 803CF364 00398924  4E 80 00 20 */	blr 
+.endfn SFTST_Pause
 
-.global SFTST_SetAdjFlg
-SFTST_SetAdjFlg:
+.fn SFTST_SetAdjFlg, global
 /* 803CF368 00398928  90 83 00 0C */	stw r4, 0xc(r3)
 /* 803CF36C 0039892C  4E 80 00 20 */	blr 
+.endfn SFTST_SetAdjFlg
 
-.global SFTST_GoNextFrame
-SFTST_GoNextFrame:
+.fn SFTST_GoNextFrame, global
 /* 803CF370 00398930  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CF374 00398934  7C 08 02 A6 */	mflr r0
 /* 803CF378 00398938  90 01 00 14 */	stw r0, 0x14(r1)
@@ -229,15 +228,15 @@ SFTST_GoNextFrame:
 /* 803CF3E4 003989A4  7C 08 03 A6 */	mtlr r0
 /* 803CF3E8 003989A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CF3EC 003989AC  4E 80 00 20 */	blr 
+.endfn SFTST_GoNextFrame
 
-.global SFTST_SetSpeed
-SFTST_SetSpeed:
+.fn SFTST_SetSpeed, global
 /* 803CF3F0 003989B0  90 83 01 98 */	stw r4, 0x198(r3)
 /* 803CF3F4 003989B4  90 A3 01 9C */	stw r5, 0x19c(r3)
 /* 803CF3F8 003989B8  4E 80 00 20 */	blr 
+.endfn SFTST_SetSpeed
 
-.global SFTST_Calc
-SFTST_Calc:
+.fn SFTST_Calc, global
 /* 803CF3FC 003989BC  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803CF400 003989C0  7C 08 02 A6 */	mflr r0
 /* 803CF404 003989C4  90 01 00 44 */	stw r0, 0x44(r1)
@@ -297,9 +296,9 @@ SFTST_Calc:
 /* 803CF4D4 00398A94  7C 08 03 A6 */	mtlr r0
 /* 803CF4D8 00398A98  38 21 00 40 */	addi r1, r1, 0x40
 /* 803CF4DC 00398A9C  4E 80 00 20 */	blr 
+.endfn SFTST_Calc
 
-.global sftst_CalcSub
-sftst_CalcSub:
+.fn sftst_CalcSub, global
 /* 803CF4E0 00398AA0  94 21 FE 60 */	stwu r1, -0x1a0(r1)
 /* 803CF4E4 00398AA4  7C 08 02 A6 */	mflr r0
 /* 803CF4E8 00398AA8  90 01 01 A4 */	stw r0, 0x1a4(r1)
@@ -1071,6 +1070,7 @@ sftst_CalcSub:
 /* 803D0024 003995E4  7C 08 03 A6 */	mtlr r0
 /* 803D0028 003995E8  38 21 01 A0 */	addi r1, r1, 0x1a0
 /* 803D002C 003995EC  4E 80 00 20 */	blr 
+.endfn sftst_CalcSub
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

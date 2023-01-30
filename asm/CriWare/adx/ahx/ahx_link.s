@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global AHXTBL_GetFtblInfo
-AHXTBL_GetFtblInfo:
+.fn AHXTBL_GetFtblInfo, global
 /* 8038A668 00353C28  2C 03 00 00 */	cmpwi r3, 0
 /* 8038A66C 00353C2C  41 82 00 10 */	beq .L_8038A67C
 /* 8038A670 00353C30  3C A0 80 56 */	lis r5, lbl_805657B0@ha
@@ -16,9 +15,9 @@ AHXTBL_GetFtblInfo:
 /* 8038A688 00353C48  80 03 57 B4 */	lwz r0, lbl_805657B4@l(r3)
 /* 8038A68C 00353C4C  90 04 00 00 */	stw r0, 0(r4)
 /* 8038A690 00353C50  4E 80 00 20 */	blr 
+.endfn AHXTBL_GetFtblInfo
 
-.global ADXT_AttachAhx
-ADXT_AttachAhx:
+.fn ADXT_AttachAhx, global
 /* 8038A694 00353C54  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038A698 00353C58  7C 08 02 A6 */	mflr r0
 /* 8038A69C 00353C5C  2C 03 00 00 */	cmpwi r3, 0
@@ -107,9 +106,9 @@ ADXT_AttachAhx:
 /* 8038A7D0 00353D90  7C 08 03 A6 */	mtlr r0
 /* 8038A7D4 00353D94  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038A7D8 00353D98  4E 80 00 20 */	blr 
+.endfn ADXT_AttachAhx
 
-.global ADXT_DetachAhx
-ADXT_DetachAhx:
+.fn ADXT_DetachAhx, global
 /* 8038A7DC 00353D9C  3C 80 80 5F */	lis r4, lbl_805E85A0@ha
 /* 8038A7E0 00353DA0  81 84 85 A0 */	lwz r12, lbl_805E85A0@l(r4)
 /* 8038A7E4 00353DA4  2C 0C 00 00 */	cmpwi r12, 0
@@ -117,9 +116,9 @@ ADXT_DetachAhx:
 /* 8038A7EC 00353DAC  7D 89 03 A6 */	mtctr r12
 /* 8038A7F0 00353DB0  4E 80 04 20 */	bctr 
 /* 8038A7F4 00353DB4  4E 80 00 20 */	blr
+.endfn ADXT_DetachAhx
 
-.global AHXLINK_DetachAhx
-AHXLINK_DetachAhx:
+.fn AHXLINK_DetachAhx, global
 /* 8038A7F8 00353DB8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8038A7FC 00353DBC  7C 08 02 A6 */	mflr r0
 /* 8038A800 00353DC0  2C 03 00 00 */	cmpwi r3, 0
@@ -156,15 +155,17 @@ AHXLINK_DetachAhx:
 /* 8038A874 00353E34  7C 08 03 A6 */	mtlr r0
 /* 8038A878 00353E38  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038A87C 00353E3C  4E 80 00 20 */	blr
+.endfn AHXLINK_DetachAhx
 
-.global AHXLINK_ExecOneAhx
-AHXLINK_ExecOneAhx:
+.fn AHXLINK_ExecOneAhx, global
 /* 8038A880 00353E40  48 00 26 70 */	b .L_8038CEF0
+.endfn AHXLINK_ExecOneAhx
 
-func_8038A884:
+.fn func_8038A884, local
 /* 8038A884 00353E44  48 00 26 74 */	b func_8038CEF8
+.endfn func_8038A884
 
-func_8038A888:
+.fn func_8038A888, local
 /* 8038A888 00353E48  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038A88C 00353E4C  7C 08 02 A6 */	mflr r0
 /* 8038A890 00353E50  90 01 00 24 */	stw r0, 0x24(r1)
@@ -246,6 +247,7 @@ func_8038A888:
 /* 8038A9A4 00353F64  7C 08 03 A6 */	mtlr r0
 /* 8038A9A8 00353F68  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038A9AC 00353F6C  4E 80 00 20 */	blr 
+.endfn func_8038A888
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

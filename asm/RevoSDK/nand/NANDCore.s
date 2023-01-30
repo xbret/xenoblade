@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global nandRemoveTailToken
-nandRemoveTailToken:
+.fn nandRemoveTailToken, global
 /* 8034FDC0 00319380  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8034FDC4 00319384  7C 08 02 A6 */	mflr r0
 /* 8034FDC8 00319388  90 01 00 24 */	stw r0, 0x24(r1)
@@ -63,10 +62,10 @@ nandRemoveTailToken:
 /* 8034FE88 00319448  7C 08 03 A6 */	mtlr r0
 /* 8034FE8C 0031944C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034FE90 00319450  4E 80 00 20 */	blr 
+.endfn nandRemoveTailToken
 
 .balign 16, 0
-.global nandGetHeadToken
-nandGetHeadToken:
+.fn nandGetHeadToken, global
 /* 8034FEA0 00319460  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8034FEA4 00319464  7C 08 02 A6 */	mflr r0
 /* 8034FEA8 00319468  90 01 00 24 */	stw r0, 0x24(r1)
@@ -126,10 +125,10 @@ nandGetHeadToken:
 /* 8034FF68 00319528  7C 08 03 A6 */	mtlr r0
 /* 8034FF6C 0031952C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034FF70 00319530  4E 80 00 20 */	blr 
+.endfn nandGetHeadToken
 
 .balign 16, 0
-.global nandGetRelativeName
-nandGetRelativeName:
+.fn nandGetRelativeName, global
 /* 8034FF80 00319540  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8034FF84 00319544  7C 08 02 A6 */	mflr r0
 /* 8034FF88 00319548  90 01 00 14 */	stw r0, 0x14(r1)
@@ -172,10 +171,10 @@ nandGetRelativeName:
 /* 8035000C 003195CC  7C 08 03 A6 */	mtlr r0
 /* 80350010 003195D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80350014 003195D4  4E 80 00 20 */	blr 
+.endfn nandGetRelativeName
 
 .balign 16, 0
-.global nandConvertPath
-nandConvertPath:
+.fn nandConvertPath, global
 /* 80350020 003195E0  94 21 FD E0 */	stwu r1, -0x220(r1)
 /* 80350024 003195E4  7C 08 02 A6 */	mflr r0
 /* 80350028 003195E8  90 01 02 24 */	stw r0, 0x224(r1)
@@ -262,10 +261,10 @@ nandConvertPath:
 /* 80350150 00319710  7C 08 03 A6 */	mtlr r0
 /* 80350154 00319714  38 21 02 20 */	addi r1, r1, 0x220
 /* 80350158 00319718  4E 80 00 20 */	blr 
+.endfn nandConvertPath
 
 .balign 16, 0
-.global nandIsPrivatePath
-nandIsPrivatePath:
+.fn nandIsPrivatePath, global
 /* 80350160 00319720  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80350164 00319724  7C 08 02 A6 */	mflr r0
 /* 80350168 00319728  3C 80 80 55 */	lis r4, lbl_80551130@ha
@@ -279,10 +278,10 @@ nandIsPrivatePath:
 /* 80350188 00319748  7C 08 03 A6 */	mtlr r0
 /* 8035018C 0031974C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80350190 00319750  4E 80 00 20 */	blr 
+.endfn nandIsPrivatePath
 
 .balign 16, 0
-.global nandIsUnderPrivatePath
-nandIsUnderPrivatePath:
+.fn nandIsUnderPrivatePath, global
 /* 803501A0 00319760  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803501A4 00319764  7C 08 02 A6 */	mflr r0
 /* 803501A8 00319768  3C 80 80 55 */	lis r4, lbl_8055113C@ha
@@ -307,19 +306,19 @@ nandIsUnderPrivatePath:
 /* 803501EC 003197AC  7C 08 03 A6 */	mtlr r0
 /* 803501F0 003197B0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803501F4 003197B4  4E 80 00 20 */	blr 
+.endfn nandIsUnderPrivatePath
 
 .balign 16, 0
-.global nandIsInitialized
-nandIsInitialized:
+.fn nandIsInitialized, global
 /* 80350200 003197C0  80 6D B8 70 */	lwz r3, lbl_806679F0@sda21(r13)
 /* 80350204 003197C4  38 03 FF FE */	addi r0, r3, -2
 /* 80350208 003197C8  7C 00 00 34 */	cntlzw r0, r0
 /* 8035020C 003197CC  54 03 D9 7E */	srwi r3, r0, 5
 /* 80350210 003197D0  4E 80 00 20 */	blr 
+.endfn nandIsInitialized
 
 .balign 16, 0
-.global nandConvertErrorCode
-nandConvertErrorCode:
+.fn nandConvertErrorCode, global
 /* 80350220 003197E0  54 2B 06 BE */	clrlwi r11, r1, 0x1a
 /* 80350224 003197E4  7C 2C 0B 78 */	mr r12, r1
 /* 80350228 003197E8  21 6B FD 00 */	subfic r11, r11, -768
@@ -419,10 +418,10 @@ nandConvertErrorCode:
 /* 8035037C 0031993C  7C 08 03 A6 */	mtlr r0
 /* 80350380 00319940  7D 41 53 78 */	mr r1, r10
 /* 80350384 00319944  4E 80 00 20 */	blr 
+.endfn nandConvertErrorCode
 
 .balign 16, 0
-.global nandGenerateAbsPath
-nandGenerateAbsPath:
+.fn nandGenerateAbsPath, global
 /* 80350390 00319950  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80350394 00319954  7C 08 02 A6 */	mflr r0
 /* 80350398 00319958  90 01 00 14 */	stw r0, 0x14(r1)
@@ -478,10 +477,10 @@ nandGenerateAbsPath:
 /* 8035044C 00319A0C  7C 08 03 A6 */	mtlr r0
 /* 80350450 00319A10  38 21 00 10 */	addi r1, r1, 0x10
 /* 80350454 00319A14  4E 80 00 20 */	blr 
+.endfn nandGenerateAbsPath
 
 .balign 16, 0
-.global NANDInit
-NANDInit:
+.fn NANDInit, global
 /* 80350460 00319A20  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80350464 00319A24  7C 08 02 A6 */	mflr r0
 /* 80350468 00319A28  90 01 00 24 */	stw r0, 0x24(r1)
@@ -565,10 +564,10 @@ NANDInit:
 /* 80350580 00319B40  7C 08 03 A6 */	mtlr r0
 /* 80350584 00319B44  38 21 00 20 */	addi r1, r1, 0x20
 /* 80350588 00319B48  4E 80 00 20 */	blr 
+.endfn NANDInit
 
 .balign 16, 0
-.global nandOnShutdown
-nandOnShutdown:
+.fn nandOnShutdown, global
 /* 80350590 00319B50  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80350594 00319B54  7C 08 02 A6 */	mflr r0
 /* 80350598 00319B58  90 01 00 34 */	stw r0, 0x34(r1)
@@ -625,17 +624,17 @@ nandOnShutdown:
 /* 80350650 00319C10  7C 08 03 A6 */	mtlr r0
 /* 80350654 00319C14  38 21 00 30 */	addi r1, r1, 0x30
 /* 80350658 00319C18  4E 80 00 20 */	blr 
+.endfn nandOnShutdown
 
 .balign 16, 0
-.global nandShutdownCallback
-nandShutdownCallback:
+.fn nandShutdownCallback, global
 /* 80350660 00319C20  38 00 00 01 */	li r0, 1
 /* 80350664 00319C24  90 04 00 00 */	stw r0, 0(r4)
 /* 80350668 00319C28  4E 80 00 20 */	blr 
+.endfn nandShutdownCallback
 
 .balign 16, 0
-.global nandChangeDir
-nandChangeDir:
+.fn nandChangeDir, global
 /* 80350670 00319C30  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80350674 00319C34  7C 08 02 A6 */	mflr r0
 /* 80350678 00319C38  2C 05 00 00 */	cmpwi r5, 0
@@ -820,10 +819,10 @@ nandChangeDir:
 /* 803508F8 00319EB8  7C 08 03 A6 */	mtlr r0
 /* 803508FC 00319EBC  38 21 00 60 */	addi r1, r1, 0x60
 /* 80350900 00319EC0  4E 80 00 20 */	blr 
+.endfn nandChangeDir
 
 .balign 16, 0
-.global NANDChangeDir
-NANDChangeDir:
+.fn NANDChangeDir, global
 /* 80350910 00319ED0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80350914 00319ED4  7C 08 02 A6 */	mflr r0
 /* 80350918 00319ED8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -844,10 +843,10 @@ NANDChangeDir:
 /* 8035094C 00319F0C  7C 08 03 A6 */	mtlr r0
 /* 80350950 00319F10  38 21 00 10 */	addi r1, r1, 0x10
 /* 80350954 00319F14  4E 80 00 20 */	blr 
+.endfn NANDChangeDir
 
 .balign 16, 0
-.global nandChangeDirCallback
-nandChangeDirCallback:
+.fn nandChangeDirCallback, global
 /* 80350960 00319F20  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80350964 00319F24  7C 08 02 A6 */	mflr r0
 /* 80350968 00319F28  2C 03 00 00 */	cmpwi r3, 0
@@ -880,10 +879,10 @@ nandChangeDirCallback:
 /* 803509D0 00319F90  7C 08 03 A6 */	mtlr r0
 /* 803509D4 00319F94  38 21 00 20 */	addi r1, r1, 0x20
 /* 803509D8 00319F98  4E 80 00 20 */	blr 
+.endfn nandChangeDirCallback
 
 .balign 16, 0
-.global NANDGetCurrentDir
-NANDGetCurrentDir:
+.fn NANDGetCurrentDir, global
 /* 803509E0 00319FA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803509E4 00319FA4  7C 08 02 A6 */	mflr r0
 /* 803509E8 00319FA8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -919,10 +918,10 @@ NANDGetCurrentDir:
 /* 80350A50 0031A010  7C 08 03 A6 */	mtlr r0
 /* 80350A54 0031A014  38 21 00 10 */	addi r1, r1, 0x10
 /* 80350A58 0031A018  4E 80 00 20 */	blr 
+.endfn NANDGetCurrentDir
 
 .balign 16, 0
-.global NANDGetHomeDir
-NANDGetHomeDir:
+.fn NANDGetHomeDir, global
 /* 80350A60 0031A020  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80350A64 0031A024  7C 08 02 A6 */	mflr r0
 /* 80350A68 0031A028  90 01 00 14 */	stw r0, 0x14(r1)
@@ -948,10 +947,10 @@ NANDGetHomeDir:
 /* 80350AA8 0031A068  7C 08 03 A6 */	mtlr r0
 /* 80350AAC 0031A06C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80350AB0 0031A070  4E 80 00 20 */	blr 
+.endfn NANDGetHomeDir
 
 .balign 16, 0
-.global nandCallback
-nandCallback:
+.fn nandCallback, global
 /* 80350AC0 0031A080  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80350AC4 0031A084  7C 08 02 A6 */	mflr r0
 /* 80350AC8 0031A088  90 01 00 14 */	stw r0, 0x14(r1)
@@ -967,10 +966,10 @@ nandCallback:
 /* 80350AF0 0031A0B0  7C 08 03 A6 */	mtlr r0
 /* 80350AF4 0031A0B4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80350AF8 0031A0B8  4E 80 00 20 */	blr 
+.endfn nandCallback
 
 .balign 16, 0
-.global nandGetType
-nandGetType:
+.fn nandGetType, global
 /* 80350B00 0031A0C0  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 80350B04 0031A0C4  7C 08 02 A6 */	mflr r0
 /* 80350B08 0031A0C8  90 01 00 74 */	stw r0, 0x74(r1)
@@ -1173,10 +1172,10 @@ nandGetType:
 /* 80350DC8 0031A388  7C 08 03 A6 */	mtlr r0
 /* 80350DCC 0031A38C  38 21 00 70 */	addi r1, r1, 0x70
 /* 80350DD0 0031A390  4E 80 00 20 */	blr 
+.endfn nandGetType
 
 .balign 16, 0
-.global NANDPrivateGetTypeAsync
-NANDPrivateGetTypeAsync:
+.fn NANDPrivateGetTypeAsync, global
 /* 80350DE0 0031A3A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80350DE4 0031A3A4  7C 08 02 A6 */	mflr r0
 /* 80350DE8 0031A3A8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1197,10 +1196,10 @@ NANDPrivateGetTypeAsync:
 /* 80350E1C 0031A3DC  7C 08 03 A6 */	mtlr r0
 /* 80350E20 0031A3E0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80350E24 0031A3E4  4E 80 00 20 */	blr 
+.endfn NANDPrivateGetTypeAsync
 
 .balign 16, 0
-.global nandGetTypeCallback
-nandGetTypeCallback:
+.fn nandGetTypeCallback, global
 /* 80350E30 0031A3F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80350E34 0031A3F4  7C 08 02 A6 */	mflr r0
 /* 80350E38 0031A3F8  2C 03 00 00 */	cmpwi r3, 0
@@ -1234,17 +1233,17 @@ nandGetTypeCallback:
 /* 80350E9C 0031A45C  7C 08 03 A6 */	mtlr r0
 /* 80350EA0 0031A460  38 21 00 10 */	addi r1, r1, 0x10
 /* 80350EA4 0031A464  4E 80 00 20 */	blr 
+.endfn nandGetTypeCallback
 
 .balign 16, 0
-.global nandGetHomeDir
-nandGetHomeDir:
+.fn nandGetHomeDir, global
 /* 80350EB0 0031A470  3C 60 80 5D */	lis r3, lbl_805D4000@ha
 /* 80350EB4 0031A474  38 63 40 00 */	addi r3, r3, lbl_805D4000@l
 /* 80350EB8 0031A478  4E 80 00 20 */	blr 
+.endfn nandGetHomeDir
 
 .balign 16, 0
-.global NANDInitBanner
-NANDInitBanner:
+.fn NANDInitBanner, global
 /* 80350EC0 0031A480  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80350EC4 0031A484  7C 08 02 A6 */	mflr r0
 /* 80350EC8 0031A488  3C E0 00 01 */	lis r7, 0x0000F0A0@ha
@@ -1304,6 +1303,7 @@ NANDInitBanner:
 /* 80350F90 0031A550  7C 08 03 A6 */	mtlr r0
 /* 80350F94 0031A554  38 21 00 20 */	addi r1, r1, 0x20
 /* 80350F98 0031A558  4E 80 00 20 */	blr 
+.endfn NANDInitBanner
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

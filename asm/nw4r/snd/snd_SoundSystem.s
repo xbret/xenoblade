@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global InitSoundSystem__Q34nw4r3snd11SoundSystemFll
-InitSoundSystem__Q34nw4r3snd11SoundSystemFll:
+.fn InitSoundSystem__Q34nw4r3snd11SoundSystemFll, global
 /* 80421020 003EA5E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80421024 003EA5E4  7C 08 02 A6 */	mflr r0
 /* 80421028 003EA5E8  3C A0 00 01 */	lis r5, 0x00016E00@ha
@@ -22,9 +21,9 @@ InitSoundSystem__Q34nw4r3snd11SoundSystemFll:
 /* 8042105C 003EA61C  7C 08 03 A6 */	mtlr r0
 /* 80421060 003EA620  38 21 00 20 */	addi r1, r1, 0x20
 /* 80421064 003EA624  4E 80 00 20 */	blr 
+.endfn InitSoundSystem__Q34nw4r3snd11SoundSystemFll
 
-.global InitSoundSystem__Q34nw4r3snd11SoundSystemFRCQ44nw4r3snd11SoundSystem16SoundSystemParamPvUl
-InitSoundSystem__Q34nw4r3snd11SoundSystemFRCQ44nw4r3snd11SoundSystem16SoundSystemParamPvUl:
+.fn InitSoundSystem__Q34nw4r3snd11SoundSystemFRCQ44nw4r3snd11SoundSystem16SoundSystemParamPvUl, global
 /* 80421068 003EA628  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8042106C 003EA62C  7C 08 02 A6 */	mflr r0
 /* 80421070 003EA630  90 01 00 24 */	stw r0, 0x24(r1)
@@ -143,9 +142,9 @@ InitSoundSystem__Q34nw4r3snd11SoundSystemFRCQ44nw4r3snd11SoundSystem16SoundSyste
 /* 80421214 003EA7D4  7C 08 03 A6 */	mtlr r0
 /* 80421218 003EA7D8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8042121C 003EA7DC  4E 80 00 20 */	blr 
+.endfn InitSoundSystem__Q34nw4r3snd11SoundSystemFRCQ44nw4r3snd11SoundSystem16SoundSystemParamPvUl
 
-.global ShutdownSoundSystem__Q34nw4r3snd11SoundSystemFv
-ShutdownSoundSystem__Q34nw4r3snd11SoundSystemFv:
+.fn ShutdownSoundSystem__Q34nw4r3snd11SoundSystemFv, global
 /* 80421220 003EA7E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80421224 003EA7E4  7C 08 02 A6 */	mflr r0
 /* 80421228 003EA7E8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -176,15 +175,15 @@ ShutdownSoundSystem__Q34nw4r3snd11SoundSystemFv:
 /* 80421288 003EA848  7C 08 03 A6 */	mtlr r0
 /* 8042128C 003EA84C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80421290 003EA850  4E 80 00 20 */	blr 
+.endfn ShutdownSoundSystem__Q34nw4r3snd11SoundSystemFv
 
-.global IsInitializedSoundSystem__Q34nw4r3snd11SoundSystemFv
-IsInitializedSoundSystem__Q34nw4r3snd11SoundSystemFv:
+.fn IsInitializedSoundSystem__Q34nw4r3snd11SoundSystemFv, global
 /* 80421294 003EA854  88 6D BC 68 */	lbz r3, lbl_80667DE8@sda21(r13)
 /* 80421298 003EA858  4E 80 00 20 */	blr
+.endfn IsInitializedSoundSystem__Q34nw4r3snd11SoundSystemFv
 
 
-.global sinit_8042129C
-sinit_8042129C:
+.fn sinit_8042129C, global
 /* 8042129C 003EA85C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804212A0 003EA860  7C 08 02 A6 */	mflr r0
 /* 804212A4 003EA864  90 01 00 14 */	stw r0, 0x14(r1)
@@ -203,6 +202,7 @@ sinit_8042129C:
 /* 804212D8 003EA898  7C 08 03 A6 */	mtlr r0
 /* 804212DC 003EA89C  38 21 00 10 */	addi r1, r1, 0x10
 /* 804212E0 003EA8A0  4E 80 00 20 */	blr 
+.endfn sinit_8042129C
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 

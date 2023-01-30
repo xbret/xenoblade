@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global ptim_init
-ptim_init:
+.fn ptim_init, global
 /* 802DEBA0 002A8160  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DEBA4 002A8164  7C 08 02 A6 */	mflr r0
 /* 802DEBA8 002A8168  90 01 00 24 */	stw r0, 0x24(r1)
@@ -23,9 +22,9 @@ ptim_init:
 /* 802DEBE0 002A81A0  7C 08 03 A6 */	mtlr r0
 /* 802DEBE4 002A81A4  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DEBE8 002A81A8  4E 80 00 20 */	blr
+.endfn ptim_init
 
-.global ptim_timer_update
-ptim_timer_update:
+.fn ptim_timer_update, global
 /* 802DEBEC 002A81AC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DEBF0 002A81B0  7C 08 02 A6 */	mflr r0
 /* 802DEBF4 002A81B4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -76,9 +75,9 @@ ptim_timer_update:
 /* 802DEC94 002A8254  7C 08 03 A6 */	mtlr r0
 /* 802DEC98 002A8258  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DEC9C 002A825C  4E 80 00 20 */	blr
+.endfn ptim_timer_update
 
-.global ptim_start_timer
-ptim_start_timer:
+.fn ptim_start_timer, global
 /* 802DECA0 002A8260  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DECA4 002A8264  7C 08 02 A6 */	mflr r0
 /* 802DECA8 002A8268  90 01 00 24 */	stw r0, 0x24(r1)
@@ -120,6 +119,7 @@ ptim_start_timer:
 /* 802DED34 002A82F4  7C 08 03 A6 */	mtlr r0
 /* 802DED38 002A82F8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802DED3C 002A82FC  4E 80 00 20 */	blr
+.endfn ptim_start_timer
 
 .global ptim_stop_timer
 ptim_stop_timer:

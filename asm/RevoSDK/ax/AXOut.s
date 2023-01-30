@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global __AXOutNewFrame
-__AXOutNewFrame:
+.fn __AXOutNewFrame, global
 /* 802D3A70 0029D030  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802D3A74 0029D034  7C 08 02 A6 */	mflr r0
 /* 802D3A78 0029D038  90 01 00 34 */	stw r0, 0x34(r1)
@@ -168,10 +167,10 @@ __AXOutNewFrame:
 /* 802D3CC4 0029D284  7C 08 03 A6 */	mtlr r0
 /* 802D3CC8 0029D288  38 21 00 30 */	addi r1, r1, 0x30
 /* 802D3CCC 0029D28C  4E 80 00 20 */	blr
+.endfn __AXOutNewFrame
 
 .balign 16, 0
-.global __AXOutAiCallback
-__AXOutAiCallback:
+.fn __AXOutAiCallback, global
 /* 802D3CD0 0029D290  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D3CD4 0029D294  7C 08 02 A6 */	mflr r0
 /* 802D3CD8 0029D298  90 01 00 14 */	stw r0, 0x14(r1)
@@ -219,17 +218,17 @@ __AXOutAiCallback:
 /* 802D3D74 0029D334  7C 08 03 A6 */	mtlr r0
 /* 802D3D78 0029D338  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D3D7C 0029D33C  4E 80 00 20 */	blr
+.endfn __AXOutAiCallback
 
 .balign 16, 0
-.global __AXDSPInitCallback
-__AXDSPInitCallback:
+.fn __AXDSPInitCallback, global
 /* 802D3D80 0029D340  38 00 00 01 */	li r0, 1
 /* 802D3D84 0029D344  90 0D B5 30 */	stw r0, lbl_806676B0@sda21(r13)
 /* 802D3D88 0029D348  4E 80 00 20 */	blr 
+.endfn __AXDSPInitCallback
 
 .balign 16, 0
-.global __AXDSPResumeCallback
-__AXDSPResumeCallback:
+.fn __AXDSPResumeCallback, global
 /* 802D3D90 0029D350  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D3D94 0029D354  7C 08 02 A6 */	mflr r0
 /* 802D3D98 0029D358  90 01 00 14 */	stw r0, 0x14(r1)
@@ -253,23 +252,23 @@ __AXDSPResumeCallback:
 /* 802D3DD8 0029D398  7C 08 03 A6 */	mtlr r0
 /* 802D3DDC 0029D39C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D3DE0 0029D3A0  4E 80 00 20 */	blr 
+.endfn __AXDSPResumeCallback
 
 .balign 16, 0
-.global __AXDSPDoneCallback
-__AXDSPDoneCallback:
+.fn __AXDSPDoneCallback, global
 /* 802D3DF0 0029D3B0  38 00 00 01 */	li r0, 1
 /* 802D3DF4 0029D3B4  90 0D B5 2C */	stw r0, lbl_806676AC@sda21(r13)
 /* 802D3DF8 0029D3B8  38 6D B5 20 */	addi r3, r13, lbl_806676A0@sda21
 /* 802D3DFC 0029D3BC  48 08 89 64 */	b OSWakeupThread
+.endfn __AXDSPDoneCallback
 
 .balign 16, 0
-.global __AXDSPRequestCallback
-__AXDSPRequestCallback:
+.fn __AXDSPRequestCallback, global
 /* 802D3E00 0029D3C0  4E 80 00 20 */	blr 
+.endfn __AXDSPRequestCallback
 
 .balign 16, 0
-.global __AXOutInitDSP
-__AXOutInitDSP:
+.fn __AXOutInitDSP, global
 /* 802D3E10 0029D3D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D3E14 0029D3D4  7C 08 02 A6 */	mflr r0
 /* 802D3E18 0029D3D8  3D 60 80 58 */	lis r11, lbl_80581980@ha
@@ -331,10 +330,10 @@ __AXOutInitDSP:
 /* 802D3EF0 0029D4B0  7C 08 03 A6 */	mtlr r0
 /* 802D3EF4 0029D4B4  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D3EF8 0029D4B8  4E 80 00 20 */	blr 
+.endfn __AXOutInitDSP
 
 .balign 16, 0
-.global __AXOutInit
-__AXOutInit:
+.fn __AXOutInit, global
 /* 802D3F00 0029D4C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D3F04 0029D4C4  7C 08 02 A6 */	mflr r0
 /* 802D3F08 0029D4C8  38 80 00 00 */	li r4, 0
@@ -468,10 +467,10 @@ __AXOutInit:
 /* 802D40EC 0029D6AC  7C 08 03 A6 */	mtlr r0
 /* 802D40F0 0029D6B0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D40F4 0029D6B4  4E 80 00 20 */	blr 
+.endfn __AXOutInit
 
 .balign 16, 0
-.global __AXOutQuit
-__AXOutQuit:
+.fn __AXOutQuit, global
 /* 802D4100 0029D6C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D4104 0029D6C4  7C 08 02 A6 */	mflr r0
 /* 802D4108 0029D6C8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -498,10 +497,10 @@ __AXOutQuit:
 /* 802D415C 0029D71C  7C 08 03 A6 */	mtlr r0
 /* 802D4160 0029D720  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D4164 0029D724  4E 80 00 20 */	blr 
+.endfn __AXOutQuit
 
 .balign 16, 0
-.global AXRegisterCallback
-AXRegisterCallback:
+.fn AXRegisterCallback, global
 /* 802D4170 0029D730  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D4174 0029D734  7C 08 02 A6 */	mflr r0
 /* 802D4178 0029D738  90 01 00 14 */	stw r0, 0x14(r1)
@@ -519,10 +518,10 @@ AXRegisterCallback:
 /* 802D41A8 0029D768  7C 08 03 A6 */	mtlr r0
 /* 802D41AC 0029D76C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D41B0 0029D770  4E 80 00 20 */	blr 
+.endfn AXRegisterCallback
 
 .balign 16, 0
-.global AXRmtGetSamplesLeft
-AXRmtGetSamplesLeft:
+.fn AXRmtGetSamplesLeft, global
 /* 802D41C0 0029D780  80 6D B5 10 */	lwz r3, lbl_80667690@sda21(r13)
 /* 802D41C4 0029D784  34 63 FF DC */	addic. r3, r3, -36
 /* 802D41C8 0029D788  40 80 00 0C */	bge .L_802D41D4
@@ -535,10 +534,10 @@ AXRmtGetSamplesLeft:
 /* 802D41E0 0029D7A0  80 0D B5 14 */	lwz r0, lbl_80667694@sda21(r13)
 /* 802D41E4 0029D7A4  7C 63 02 14 */	add r3, r3, r0
 /* 802D41E8 0029D7A8  4E 80 00 20 */	blr 
+.endfn AXRmtGetSamplesLeft
 
 .balign 16, 0
-.global AXRmtGetSamples
-AXRmtGetSamples:
+.fn AXRmtGetSamples, global
 /* 802D41F0 0029D7B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D41F4 0029D7B4  7C 08 02 A6 */	mflr r0
 /* 802D41F8 0029D7B8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -595,10 +594,10 @@ AXRmtGetSamples:
 /* 802D42A8 0029D868  7C 08 03 A6 */	mtlr r0
 /* 802D42AC 0029D86C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D42B0 0029D870  4E 80 00 20 */	blr 
+.endfn AXRmtGetSamples
 
 .balign 16, 0
-.global AXRmtAdvancePtr
-AXRmtAdvancePtr:
+.fn AXRmtAdvancePtr, global
 /* 802D42C0 0029D880  80 8D B5 10 */	lwz r4, lbl_80667690@sda21(r13)
 /* 802D42C4 0029D884  34 84 FF DC */	addic. r4, r4, -36
 /* 802D42C8 0029D888  40 80 00 0C */	bge .L_802D42D4
@@ -624,6 +623,7 @@ AXRmtAdvancePtr:
 /* 802D430C 0029D8CC  7C 04 00 50 */	subf r0, r4, r0
 /* 802D4310 0029D8D0  90 0D B5 0C */	stw r0, lbl_8066768C@sda21(r13)
 /* 802D4314 0029D8D4  4E 80 00 20 */	blr
+.endfn AXRmtAdvancePtr
 
 
 

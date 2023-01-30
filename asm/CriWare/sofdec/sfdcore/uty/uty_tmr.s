@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global UTY_InitTmr
-UTY_InitTmr:
+.fn UTY_InitTmr, global
 /* 803D46F8 0039DCB8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D46FC 0039DCBC  7C 08 02 A6 */	mflr r0
 /* 803D4700 0039DCC0  3C A0 80 52 */	lis r5, lbl_80520838@ha
@@ -54,9 +53,9 @@ UTY_InitTmr:
 /* 803D47A4 0039DD64  7C 08 03 A6 */	mtlr r0
 /* 803D47A8 0039DD68  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D47AC 0039DD6C  4E 80 00 20 */	blr 
+.endfn UTY_InitTmr
 
-.global UTY_FinishTmr
-UTY_FinishTmr:
+.fn UTY_FinishTmr, global
 /* 803D47B0 0039DD70  3C 80 80 62 */	lis r4, lbl_8061CE28@ha
 /* 803D47B4 0039DD74  80 64 CE 28 */	lwz r3, lbl_8061CE28@l(r4)
 /* 803D47B8 0039DD78  38 03 FF FF */	addi r0, r3, -1
@@ -68,9 +67,9 @@ UTY_FinishTmr:
 /* 803D47D0 0039DD90  38 00 00 00 */	li r0, 0
 /* 803D47D4 0039DD94  90 04 CE 28 */	stw r0, lbl_8061CE28@l(r4)
 /* 803D47D8 0039DD98  4E 80 00 20 */	blr 
+.endfn UTY_FinishTmr
 
-.global UTY_GetTmr
-UTY_GetTmr:
+.fn UTY_GetTmr, global
 /* 803D47DC 0039DD9C  3C 60 80 62 */	lis r3, lbl_8061CE28@ha
 /* 803D47E0 0039DDA0  80 03 CE 28 */	lwz r0, lbl_8061CE28@l(r3)
 /* 803D47E4 0039DDA4  2C 80 00 00 */	cmpwi cr1, r0, 0
@@ -90,9 +89,9 @@ UTY_GetTmr:
 /* 803D4814 0039DDD4  7C 00 18 00 */	cmpw r0, r3
 /* 803D4818 0039DDD8  40 82 FF F0 */	bne .L_803D4808
 /* 803D481C 0039DDDC  4E 80 00 20 */	blr 
+.endfn UTY_GetTmr
 
-.global UTY_IsTmrVoid
-UTY_IsTmrVoid:
+.fn UTY_IsTmrVoid, global
 /* 803D4820 0039DDE0  3C A0 80 62 */	lis r5, utytmr_unit@ha
 /* 803D4824 0039DDE4  38 80 00 01 */	li r4, 1
 /* 803D4828 0039DDE8  38 65 CE 30 */	addi r3, r5, utytmr_unit@l
@@ -105,14 +104,15 @@ UTY_IsTmrVoid:
 /* 803D4844 0039DE04  7C 00 00 D0 */	neg r0, r0
 /* 803D4848 0039DE08  20 60 00 01 */	subfic r3, r0, 1
 /* 803D484C 0039DE0C  4E 80 00 20 */	blr 
+.endfn UTY_IsTmrVoid
 
-.global UTY_GetTmrUnit
-UTY_GetTmrUnit:
+.fn UTY_GetTmrUnit, global
 /* 803D4850 0039DE10  3C 60 80 62 */	lis r3, utytmr_unit@ha
 /* 803D4854 0039DE14  38 83 CE 30 */	addi r4, r3, utytmr_unit@l
 /* 803D4858 0039DE18  80 63 CE 30 */	lwz r3, utytmr_unit@l(r3)
 /* 803D485C 0039DE1C  80 84 00 04 */	lwz r4, 4(r4)
 /* 803D4860 0039DE20  4E 80 00 20 */	blr 
+.endfn UTY_GetTmrUnit
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

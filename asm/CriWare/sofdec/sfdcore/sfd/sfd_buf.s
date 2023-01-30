@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global SFBUF_Init
-SFBUF_Init:
+.fn SFBUF_Init, global
 /* 803BED00 003882C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803BED04 003882C4  7C 08 02 A6 */	mflr r0
 /* 803BED08 003882C8  38 80 00 08 */	li r4, 8
@@ -44,9 +43,9 @@ SFBUF_Init:
 /* 803BED94 00388354  7C 08 03 A6 */	mtlr r0
 /* 803BED98 00388358  38 21 00 20 */	addi r1, r1, 0x20
 /* 803BED9C 0038835C  4E 80 00 20 */	blr 
+.endfn SFBUF_Init
 
-.global SFBUF_InitHn
-SFBUF_InitHn:
+.fn SFBUF_InitHn, global
 /* 803BEDA0 00388360  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803BEDA4 00388364  7C 08 02 A6 */	mflr r0
 /* 803BEDA8 00388368  7C A9 2B 78 */	mr r9, r5
@@ -167,9 +166,9 @@ SFBUF_InitHn:
 /* 803BEF64 00388524  7C 08 03 A6 */	mtlr r0
 /* 803BEF68 00388528  38 21 00 40 */	addi r1, r1, 0x40
 /* 803BEF6C 0038852C  4E 80 00 20 */	blr 
+.endfn SFBUF_InitHn
 
-.global sfbuf_InitRingSj
-sfbuf_InitRingSj:
+.fn sfbuf_InitRingSj, global
 /* 803BEF70 00388530  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803BEF74 00388534  7C 08 02 A6 */	mflr r0
 /* 803BEF78 00388538  54 C8 10 3A */	slwi r8, r6, 2
@@ -266,9 +265,9 @@ sfbuf_InitRingSj:
 /* 803BF0C8 00388688  7C 08 03 A6 */	mtlr r0
 /* 803BF0CC 0038868C  38 21 00 40 */	addi r1, r1, 0x40
 /* 803BF0D0 00388690  4E 80 00 20 */	blr 
+.endfn sfbuf_InitRingSj
 
-.global SFBUF_DestroySj
-SFBUF_DestroySj:
+.fn SFBUF_DestroySj, global
 /* 803BF0D4 00388694  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803BF0D8 00388698  7C 08 02 A6 */	mflr r0
 /* 803BF0DC 0038869C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -323,9 +322,9 @@ SFBUF_DestroySj:
 /* 803BF194 00388754  7C 08 03 A6 */	mtlr r0
 /* 803BF198 00388758  38 21 00 10 */	addi r1, r1, 0x10
 /* 803BF19C 0038875C  4E 80 00 20 */	blr 
+.endfn SFBUF_DestroySj
 
-.global sfbuf_InitVfrmBuf
-sfbuf_InitVfrmBuf:
+.fn sfbuf_InitVfrmBuf, global
 /* 803BF1A0 00388760  1D 27 00 74 */	mulli r9, r7, 0x74
 /* 803BF1A4 00388764  54 EA 10 3A */	slwi r10, r7, 2
 /* 803BF1A8 00388768  7D 06 50 2E */	lwzx r8, r6, r10
@@ -382,9 +381,9 @@ sfbuf_InitVfrmBuf:
 /* 803BF274 00388834  80 69 00 20 */	lwz r3, 0x20(r9)
 /* 803BF278 00388838  90 E3 07 F8 */	stw r7, 0x7f8(r3)
 /* 803BF27C 0038883C  4E 80 00 20 */	blr 
+.endfn sfbuf_InitVfrmBuf
 
-.global sfbuf_InitAringBuf
-sfbuf_InitAringBuf:
+.fn sfbuf_InitAringBuf, global
 /* 803BF280 00388840  1D 06 00 74 */	mulli r8, r6, 0x74
 /* 803BF284 00388844  54 C9 10 3A */	slwi r9, r6, 2
 /* 803BF288 00388848  7C E5 48 2E */	lwzx r7, r5, r9
@@ -416,9 +415,9 @@ sfbuf_InitAringBuf:
 /* 803BF2F0 003888B0  90 C8 00 38 */	stw r6, 0x38(r8)
 /* 803BF2F4 003888B4  90 C8 00 3C */	stw r6, 0x3c(r8)
 /* 803BF2F8 003888B8  4E 80 00 20 */	blr 
+.endfn sfbuf_InitAringBuf
 
-.global SFBUF_SetSupplySj
-SFBUF_SetSupplySj:
+.fn SFBUF_SetSupplySj, global
 /* 803BF2FC 003888BC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803BF300 003888C0  7C 08 02 A6 */	mflr r0
 /* 803BF304 003888C4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -539,9 +538,9 @@ SFBUF_SetSupplySj:
 /* 803BF4A4 00388A64  7C 08 03 A6 */	mtlr r0
 /* 803BF4A8 00388A68  38 21 00 20 */	addi r1, r1, 0x20
 /* 803BF4AC 00388A6C  4E 80 00 20 */	blr 
+.endfn SFBUF_SetSupplySj
 
-.global SFBUF_SetUoch
-SFBUF_SetUoch:
+.fn SFBUF_SetUoch, global
 /* 803BF4B0 00388A70  1C E4 00 74 */	mulli r7, r4, 0x74
 /* 803BF4B4 00388A74  54 A5 20 36 */	slwi r5, r5, 4
 /* 803BF4B8 00388A78  80 86 00 00 */	lwz r4, 0(r6)
@@ -555,9 +554,9 @@ SFBUF_SetUoch:
 /* 803BF4D8 00388A98  90 65 13 C8 */	stw r3, 0x13c8(r5)
 /* 803BF4DC 00388A9C  90 05 13 CC */	stw r0, 0x13cc(r5)
 /* 803BF4E0 00388AA0  4E 80 00 20 */	blr 
+.endfn SFBUF_SetUoch
 
-.global SFBUF_GetUoch
-SFBUF_GetUoch:
+.fn SFBUF_GetUoch, global
 /* 803BF4E4 00388AA4  1C 84 00 74 */	mulli r4, r4, 0x74
 /* 803BF4E8 00388AA8  54 A0 20 36 */	slwi r0, r5, 4
 /* 803BF4EC 00388AAC  7C 63 22 14 */	add r3, r3, r4
@@ -571,19 +570,19 @@ SFBUF_GetUoch:
 /* 803BF50C 00388ACC  90 66 00 08 */	stw r3, 8(r6)
 /* 803BF510 00388AD0  90 06 00 0C */	stw r0, 0xc(r6)
 /* 803BF514 00388AD4  4E 80 00 20 */	blr 
+.endfn SFBUF_GetUoch
 
-.global SFBUF_RingGetWrite
-SFBUF_RingGetWrite:
+.fn SFBUF_RingGetWrite, global
 /* 803BF518 00388AD8  38 C0 00 00 */	li r6, 0
 /* 803BF51C 00388ADC  48 00 00 0C */	b sfbuf_RingGetSub
+.endfn SFBUF_RingGetWrite
 
-.global SFBUF_RingGetRead
-SFBUF_RingGetRead:
+.fn SFBUF_RingGetRead, global
 /* 803BF520 00388AE0  38 C0 00 01 */	li r6, 1
 /* 803BF524 00388AE4  48 00 00 04 */	b sfbuf_RingGetSub
+.endfn SFBUF_RingGetRead
 
-.global sfbuf_RingGetSub
-sfbuf_RingGetSub:
+.fn sfbuf_RingGetSub, global
 /* 803BF528 00388AE8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803BF52C 00388AEC  7C 08 02 A6 */	mflr r0
 /* 803BF530 00388AF0  90 01 00 34 */	stw r0, 0x34(r1)
@@ -671,19 +670,19 @@ sfbuf_RingGetSub:
 /* 803BF664 00388C24  7C 08 03 A6 */	mtlr r0
 /* 803BF668 00388C28  38 21 00 30 */	addi r1, r1, 0x30
 /* 803BF66C 00388C2C  4E 80 00 20 */	blr 
+.endfn sfbuf_RingGetSub
 
-.global SFBUF_RingAddWrite
-SFBUF_RingAddWrite:
+.fn SFBUF_RingAddWrite, global
 /* 803BF670 00388C30  38 C0 00 00 */	li r6, 0
 /* 803BF674 00388C34  48 00 00 0C */	b sfbuf_RingAddSub
+.endfn SFBUF_RingAddWrite
 
-.global SFBUF_RingAddRead
-SFBUF_RingAddRead:
+.fn SFBUF_RingAddRead, global
 /* 803BF678 00388C38  38 C0 00 01 */	li r6, 1
 /* 803BF67C 00388C3C  48 00 00 04 */	b sfbuf_RingAddSub
+.endfn SFBUF_RingAddRead
 
-.global sfbuf_RingAddSub
-sfbuf_RingAddSub:
+.fn sfbuf_RingAddSub, global
 /* 803BF680 00388C40  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803BF684 00388C44  7C 08 02 A6 */	mflr r0
 /* 803BF688 00388C48  2C 05 00 00 */	cmpwi r5, 0
@@ -854,9 +853,9 @@ sfbuf_RingAddSub:
 /* 803BF8EC 00388EAC  7C 08 03 A6 */	mtlr r0
 /* 803BF8F0 00388EB0  38 21 00 50 */	addi r1, r1, 0x50
 /* 803BF8F4 00388EB4  4E 80 00 20 */	blr 
+.endfn sfbuf_RingAddSub
 
-.global SFBUF_RingGetDlm
-SFBUF_RingGetDlm:
+.fn SFBUF_RingGetDlm, global
 /* 803BF8F8 00388EB8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803BF8FC 00388EBC  7C 08 02 A6 */	mflr r0
 /* 803BF900 00388EC0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -882,9 +881,9 @@ SFBUF_RingGetDlm:
 /* 803BF950 00388F10  7C 08 03 A6 */	mtlr r0
 /* 803BF954 00388F14  38 21 00 20 */	addi r1, r1, 0x20
 /* 803BF958 00388F18  4E 80 00 20 */	blr 
+.endfn SFBUF_RingGetDlm
 
-.global SFBUF_RingSetDlm
-SFBUF_RingSetDlm:
+.fn SFBUF_RingSetDlm, global
 /* 803BF95C 00388F1C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803BF960 00388F20  7C 08 02 A6 */	mflr r0
 /* 803BF964 00388F24  90 01 00 24 */	stw r0, 0x24(r1)
@@ -908,23 +907,23 @@ SFBUF_RingSetDlm:
 /* 803BF9AC 00388F6C  7C 08 03 A6 */	mtlr r0
 /* 803BF9B0 00388F70  38 21 00 20 */	addi r1, r1, 0x20
 /* 803BF9B4 00388F74  4E 80 00 20 */	blr 
+.endfn SFBUF_RingSetDlm
 
-.global SFBUF_GetRingBufSiz
-SFBUF_GetRingBufSiz:
+.fn SFBUF_GetRingBufSiz, global
 /* 803BF9B8 00388F78  1C 04 00 74 */	mulli r0, r4, 0x74
 /* 803BF9BC 00388F7C  7C 63 02 14 */	add r3, r3, r0
 /* 803BF9C0 00388F80  80 63 13 CC */	lwz r3, 0x13cc(r3)
 /* 803BF9C4 00388F84  4E 80 00 20 */	blr 
+.endfn SFBUF_GetRingBufSiz
 
-.global SFBUF_GetRTot
-SFBUF_GetRTot:
+.fn SFBUF_GetRTot, global
 /* 803BF9C8 00388F88  1C 04 00 74 */	mulli r0, r4, 0x74
 /* 803BF9CC 00388F8C  7C 63 02 14 */	add r3, r3, r0
 /* 803BF9D0 00388F90  80 63 13 E4 */	lwz r3, 0x13e4(r3)
 /* 803BF9D4 00388F94  4E 80 00 20 */	blr 
+.endfn SFBUF_GetRTot
 
-.global SFBUF_GetWTot
-SFBUF_GetWTot:
+.fn SFBUF_GetWTot, global
 /* 803BF9D8 00388F98  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803BF9DC 00388F9C  7C 08 02 A6 */	mflr r0
 /* 803BF9E0 00388FA0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -964,9 +963,9 @@ SFBUF_GetWTot:
 /* 803BFA60 00389020  7C 08 03 A6 */	mtlr r0
 /* 803BFA64 00389024  38 21 00 20 */	addi r1, r1, 0x20
 /* 803BFA68 00389028  4E 80 00 20 */	blr 
+.endfn SFBUF_GetWTot
 
-.global SFBUF_RingGetSj
-SFBUF_RingGetSj:
+.fn SFBUF_RingGetSj, global
 /* 803BFA6C 0038902C  1C 84 00 74 */	mulli r4, r4, 0x74
 /* 803BFA70 00389030  38 00 00 00 */	li r0, 0
 /* 803BFA74 00389034  90 05 00 00 */	stw r0, 0(r5)
@@ -982,9 +981,9 @@ SFBUF_RingGetSj:
 /* 803BFA98 00389058  38 60 00 00 */	li r3, 0
 /* 803BFA9C 0038905C  90 05 00 00 */	stw r0, 0(r5)
 /* 803BFAA0 00389060  4E 80 00 20 */	blr 
+.endfn SFBUF_RingGetSj
 
-.global SFBUF_AddRtotSj
-SFBUF_AddRtotSj:
+.fn SFBUF_AddRtotSj, global
 /* 803BFAA4 00389064  1C 04 00 74 */	mulli r0, r4, 0x74
 /* 803BFAA8 00389068  7C 63 02 14 */	add r3, r3, r0
 /* 803BFAAC 0038906C  80 03 13 E4 */	lwz r0, 0x13e4(r3)
@@ -993,9 +992,9 @@ SFBUF_AddRtotSj:
 /* 803BFAB8 00389078  7C 00 2A 14 */	add r0, r0, r5
 /* 803BFABC 0038907C  90 03 13 E4 */	stw r0, 0x13e4(r3)
 /* 803BFAC0 00389080  4E 80 00 20 */	blr 
+.endfn SFBUF_AddRtotSj
 
-.global SFBUF_VfrmGetRead
-SFBUF_VfrmGetRead:
+.fn SFBUF_VfrmGetRead, global
 /* 803BFAC4 00389084  1C 04 00 74 */	mulli r0, r4, 0x74
 /* 803BFAC8 00389088  7C C7 33 78 */	mr r7, r6
 /* 803BFACC 0038908C  7C 83 02 14 */	add r4, r3, r0
@@ -1009,9 +1008,9 @@ SFBUF_VfrmGetRead:
 .L_803BFAEC:
 /* 803BFAEC 003890AC  38 60 00 00 */	li r3, 0
 /* 803BFAF0 003890B0  4E 80 00 20 */	blr
+.endfn SFBUF_VfrmGetRead
 
-.global SFBUF_VfrmAddRead
-SFBUF_VfrmAddRead:
+.fn SFBUF_VfrmAddRead, global
 /* 803BFAF4 003890B4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803BFAF8 003890B8  7C 08 02 A6 */	mflr r0
 /* 803BFAFC 003890BC  7C C7 33 78 */	mr r7, r6
@@ -1038,18 +1037,18 @@ SFBUF_VfrmAddRead:
 /* 803BFB4C 0038910C  7C 08 03 A6 */	mtlr r0
 /* 803BFB50 00389110  38 21 00 10 */	addi r1, r1, 0x10
 /* 803BFB54 00389114  4E 80 00 20 */	blr 
+.endfn SFBUF_VfrmAddRead
 
-.global SFBUF_SetPrepFlg
-SFBUF_SetPrepFlg:
+.fn SFBUF_SetPrepFlg, global
 /* 803BFB58 00389118  2C 04 00 08 */	cmpwi r4, 8
 /* 803BFB5C 0038911C  4D 82 00 20 */	beqlr 
 /* 803BFB60 00389120  1C 04 00 74 */	mulli r0, r4, 0x74
 /* 803BFB64 00389124  7C 63 02 14 */	add r3, r3, r0
 /* 803BFB68 00389128  90 A3 13 B8 */	stw r5, 0x13b8(r3)
 /* 803BFB6C 0038912C  4E 80 00 20 */	blr 
+.endfn SFBUF_SetPrepFlg
 
-.global SFBUF_GetPrepFlg
-SFBUF_GetPrepFlg:
+.fn SFBUF_GetPrepFlg, global
 /* 803BFB70 00389130  2C 04 00 08 */	cmpwi r4, 8
 /* 803BFB74 00389134  40 82 00 0C */	bne .L_803BFB80
 /* 803BFB78 00389138  38 60 00 00 */	li r3, 0
@@ -1059,18 +1058,18 @@ SFBUF_GetPrepFlg:
 /* 803BFB84 00389144  7C 63 02 14 */	add r3, r3, r0
 /* 803BFB88 00389148  80 63 13 B8 */	lwz r3, 0x13b8(r3)
 /* 803BFB8C 0038914C  4E 80 00 20 */	blr 
+.endfn SFBUF_GetPrepFlg
 
-.global SFBUF_SetTermFlg
-SFBUF_SetTermFlg:
+.fn SFBUF_SetTermFlg, global
 /* 803BFB90 00389150  2C 04 00 08 */	cmpwi r4, 8
 /* 803BFB94 00389154  4D 82 00 20 */	beqlr 
 /* 803BFB98 00389158  1C 04 00 74 */	mulli r0, r4, 0x74
 /* 803BFB9C 0038915C  7C 63 02 14 */	add r3, r3, r0
 /* 803BFBA0 00389160  90 A3 13 BC */	stw r5, 0x13bc(r3)
 /* 803BFBA4 00389164  4E 80 00 20 */	blr 
+.endfn SFBUF_SetTermFlg
 
-.global SFBUF_GetTermFlg
-SFBUF_GetTermFlg:
+.fn SFBUF_GetTermFlg, global
 /* 803BFBA8 00389168  2C 04 00 08 */	cmpwi r4, 8
 /* 803BFBAC 0038916C  40 82 00 0C */	bne .L_803BFBB8
 /* 803BFBB0 00389170  38 60 00 01 */	li r3, 1
@@ -1080,9 +1079,9 @@ SFBUF_GetTermFlg:
 /* 803BFBBC 0038917C  7C 63 02 14 */	add r3, r3, r0
 /* 803BFBC0 00389180  80 63 13 BC */	lwz r3, 0x13bc(r3)
 /* 803BFBC4 00389184  4E 80 00 20 */	blr 
+.endfn SFBUF_GetTermFlg
 
-.global SFBUF_RingGetDataSiz
-SFBUF_RingGetDataSiz:
+.fn SFBUF_RingGetDataSiz, global
 /* 803BFBC8 00389188  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803BFBCC 0038918C  7C 08 02 A6 */	mflr r0
 /* 803BFBD0 00389190  38 C0 00 01 */	li r6, 1
@@ -1096,9 +1095,9 @@ SFBUF_RingGetDataSiz:
 /* 803BFBF0 003891B0  7C 08 03 A6 */	mtlr r0
 /* 803BFBF4 003891B4  38 21 00 30 */	addi r1, r1, 0x30
 /* 803BFBF8 003891B8  4E 80 00 20 */	blr 
+.endfn SFBUF_RingGetDataSiz
 
-.global SFBUF_GetFlowCnt
-SFBUF_GetFlowCnt:
+.fn SFBUF_GetFlowCnt, global
 /* 803BFBFC 003891BC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803BFC00 003891C0  7C 08 02 A6 */	mflr r0
 /* 803BFC04 003891C4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1166,9 +1165,9 @@ SFBUF_GetFlowCnt:
 /* 803BFCF0 003892B0  7C 08 03 A6 */	mtlr r0
 /* 803BFCF4 003892B4  38 21 00 20 */	addi r1, r1, 0x20
 /* 803BFCF8 003892B8  4E 80 00 20 */	blr 
+.endfn SFBUF_GetFlowCnt
 
-.global SFBUF_UpdateFlowCnt
-SFBUF_UpdateFlowCnt:
+.fn SFBUF_UpdateFlowCnt, global
 /* 803BFCFC 003892BC  7C 80 2A 78 */	xor r0, r4, r5
 /* 803BFD00 003892C0  7C 00 00 34 */	cntlzw r0, r0
 /* 803BFD04 003892C4  7C 80 00 30 */	slw r0, r4, r0
@@ -1178,16 +1177,17 @@ SFBUF_UpdateFlowCnt:
 /* 803BFD14 003892D4  7C 60 FE 70 */	srawi r0, r3, 0x1f
 /* 803BFD18 003892D8  7C 63 28 14 */	addc r3, r3, r5
 /* 803BFD1C 003892DC  4E 80 00 20 */	blr 
+.endfn SFBUF_UpdateFlowCnt
 
 
-.global func_803BFD20
-func_803BFD20:
+.fn func_803BFD20, global
 /* 803BFD20 003892E0  3C 80 80 61 */	lis r4, lbl_8060A2D0@ha
 /* 803BFD24 003892E4  80 64 A2 D0 */	lwz r3, lbl_8060A2D0@l(r4)
 /* 803BFD28 003892E8  38 03 00 01 */	addi r0, r3, 1
 /* 803BFD2C 003892EC  90 04 A2 D0 */	stw r0, lbl_8060A2D0@l(r4)
 /* 803BFD30 003892F0  80 04 A2 D0 */	lwz r0, lbl_8060A2D0@l(r4)
 /* 803BFD34 003892F4  4E 80 00 20 */	blr 
+.endfn func_803BFD20
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

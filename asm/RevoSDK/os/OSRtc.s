@@ -91,8 +91,7 @@ WriteSramCallback:
 .4byte 0
 
 .balign 16, 0
-.global __OSInitSram
-__OSInitSram:
+.fn __OSInitSram, global
 /* 8035A940 00323F00  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035A944 00323F04  7C 08 02 A6 */	mflr r0
 /* 8035A948 00323F08  38 80 00 40 */	li r4, 0x40
@@ -232,10 +231,10 @@ __OSInitSram:
 /* 8035AB34 003240F4  7C 08 03 A6 */	mtlr r0
 /* 8035AB38 003240F8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035AB3C 003240FC  4E 80 00 20 */	blr 
+.endfn __OSInitSram
 
 .balign 16, 0
-.global UnlockSram
-UnlockSram:
+.fn UnlockSram, global
 /* 8035AB40 00324100  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035AB44 00324104  7C 08 02 A6 */	mflr r0
 /* 8035AB48 00324108  2C 03 00 00 */	cmpwi r3, 0
@@ -432,18 +431,18 @@ UnlockSram:
 /* 8035AE14 003243D4  7C 08 03 A6 */	mtlr r0
 /* 8035AE18 003243D8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035AE1C 003243DC  4E 80 00 20 */	blr 
+.endfn UnlockSram
 
 .balign 16, 0
-.global __OSSyncSram
-__OSSyncSram:
+.fn __OSSyncSram, global
 /* 8035AE20 003243E0  3C 60 80 5D */	lis r3, lbl_805D4700@ha
 /* 8035AE24 003243E4  38 63 47 00 */	addi r3, r3, lbl_805D4700@l
 /* 8035AE28 003243E8  80 63 00 4C */	lwz r3, 0x4c(r3)
 /* 8035AE2C 003243EC  4E 80 00 20 */	blr 
+.endfn __OSSyncSram
 
 .balign 16, 0
-.global __OSReadROM
-__OSReadROM:
+.fn __OSReadROM, global
 /* 8035AE30 003243F0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035AE34 003243F4  7C 08 02 A6 */	mflr r0
 /* 8035AE38 003243F8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -520,10 +519,10 @@ __OSReadROM:
 /* 8035AF48 00324508  7C 08 03 A6 */	mtlr r0
 /* 8035AF4C 0032450C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035AF50 00324510  4E 80 00 20 */	blr 
+.endfn __OSReadROM
 
 .balign 16, 0
-.global OSGetWirelessID
-OSGetWirelessID:
+.fn OSGetWirelessID, global
 /* 8035AF60 00324520  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035AF64 00324524  7C 08 02 A6 */	mflr r0
 /* 8035AF68 00324528  90 01 00 14 */	stw r0, 0x14(r1)
@@ -556,10 +555,10 @@ OSGetWirelessID:
 /* 8035AFCC 0032458C  7C 08 03 A6 */	mtlr r0
 /* 8035AFD0 00324590  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035AFD4 00324594  4E 80 00 20 */	blr 
+.endfn OSGetWirelessID
 
 .balign 16, 0
-.global OSSetWirelessID
-OSSetWirelessID:
+.fn OSSetWirelessID, global
 /* 8035AFE0 003245A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035AFE4 003245A4  7C 08 02 A6 */	mflr r0
 /* 8035AFE8 003245A8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -603,10 +602,10 @@ OSSetWirelessID:
 /* 8035B070 00324630  7C 08 03 A6 */	mtlr r0
 /* 8035B074 00324634  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035B078 00324638  4E 80 00 20 */	blr 
+.endfn OSSetWirelessID
 
 .balign 16, 0
-.global __OSGetRTCFlags
-__OSGetRTCFlags:
+.fn __OSGetRTCFlags, global
 /* 8035B080 00324640  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035B084 00324644  7C 08 02 A6 */	mflr r0
 /* 8035B088 00324648  38 80 00 01 */	li r4, 1
@@ -681,10 +680,10 @@ __OSGetRTCFlags:
 /* 8035B190 00324750  7C 08 03 A6 */	mtlr r0
 /* 8035B194 00324754  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035B198 00324758  4E 80 00 20 */	blr 
+.endfn __OSGetRTCFlags
 
 .balign 16, 0
-.global __OSClearRTCFlags
-__OSClearRTCFlags:
+.fn __OSClearRTCFlags, global
 /* 8035B1A0 00324760  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035B1A4 00324764  7C 08 02 A6 */	mflr r0
 /* 8035B1A8 00324768  38 60 00 00 */	li r3, 0
@@ -756,6 +755,7 @@ __OSClearRTCFlags:
 /* 8035B2A4 00324864  7C 08 03 A6 */	mtlr r0
 /* 8035B2A8 00324868  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035B2AC 0032486C  4E 80 00 20 */	blr
+.endfn __OSClearRTCFlags
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

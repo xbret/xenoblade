@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global GXAdjustForOverscan
-GXAdjustForOverscan:
+.fn GXAdjustForOverscan, global
 /* 8031AD70 002E4330  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8031AD74 002E4334  7C 08 02 A6 */	mflr r0
 /* 8031AD78 002E4338  90 01 00 34 */	stw r0, 0x34(r1)
@@ -97,10 +96,10 @@ GXAdjustForOverscan:
 /* 8031AEC0 002E4480  7C 08 03 A6 */	mtlr r0
 /* 8031AEC4 002E4484  38 21 00 30 */	addi r1, r1, 0x30
 /* 8031AEC8 002E4488  4E 80 00 20 */	blr 
+.endfn GXAdjustForOverscan
 
 .balign 16, 0
-.global GXSetDispCopySrc
-GXSetDispCopySrc:
+.fn GXSetDispCopySrc, global
 /* 8031AED0 002E4490  81 02 BC 20 */	lwz r8, lbl_8066BFA0@sda21(r2)
 /* 8031AED4 002E4494  38 E0 00 00 */	li r7, 0
 /* 8031AED8 002E4498  50 67 05 BE */	rlwimi r7, r3, 0, 0x16, 0x1f
@@ -117,10 +116,10 @@ GXSetDispCopySrc:
 /* 8031AF04 002E44C4  50 03 C0 0E */	rlwimi r3, r0, 0x18, 0, 7
 /* 8031AF08 002E44C8  90 68 02 34 */	stw r3, 0x234(r8)
 /* 8031AF0C 002E44CC  4E 80 00 20 */	blr 
+.endfn GXSetDispCopySrc
 
 .balign 16, 0
-.global GXSetTexCopySrc
-GXSetTexCopySrc:
+.fn GXSetTexCopySrc, global
 /* 8031AF10 002E44D0  81 02 BC 20 */	lwz r8, lbl_8066BFA0@sda21(r2)
 /* 8031AF14 002E44D4  38 E0 00 00 */	li r7, 0
 /* 8031AF18 002E44D8  50 67 05 BE */	rlwimi r7, r3, 0, 0x16, 0x1f
@@ -137,10 +136,10 @@ GXSetTexCopySrc:
 /* 8031AF44 002E4504  50 03 C0 0E */	rlwimi r3, r0, 0x18, 0, 7
 /* 8031AF48 002E4508  90 68 02 44 */	stw r3, 0x244(r8)
 /* 8031AF4C 002E450C  4E 80 00 20 */	blr 
+.endfn GXSetTexCopySrc
 
 .balign 16, 0
-.global GXSetDispCopyDst
-GXSetDispCopyDst:
+.fn GXSetDispCopyDst, global
 /* 8031AF50 002E4510  54 60 0C 3C */	rlwinm r0, r3, 1, 0x10, 0x1e
 /* 8031AF54 002E4514  80 82 BC 20 */	lwz r4, lbl_8066BFA0@sda21(r2)
 /* 8031AF58 002E4518  7C 00 2E 70 */	srawi r0, r0, 5
@@ -150,10 +149,10 @@ GXSetDispCopyDst:
 /* 8031AF68 002E4528  50 03 C0 0E */	rlwimi r3, r0, 0x18, 0, 7
 /* 8031AF6C 002E452C  90 64 02 38 */	stw r3, 0x238(r4)
 /* 8031AF70 002E4530  4E 80 00 20 */	blr 
+.endfn GXSetDispCopyDst
 
 .balign 16, 0
-.global GXSetTexCopyDst
-GXSetTexCopyDst:
+.fn GXSetTexCopyDst, global
 /* 8031AF80 002E4540  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8031AF84 002E4544  7C 08 02 A6 */	mflr r0
 /* 8031AF88 002E4548  80 E2 BC 20 */	lwz r7, lbl_8066BFA0@sda21(r2)
@@ -225,10 +224,10 @@ GXSetTexCopyDst:
 /* 8031B080 002E4640  7C 08 03 A6 */	mtlr r0
 /* 8031B084 002E4644  38 21 00 30 */	addi r1, r1, 0x30
 /* 8031B088 002E4648  4E 80 00 20 */	blr 
+.endfn GXSetTexCopyDst
 
 .balign 16, 0
-.global GXSetDispCopyFrame2Field
-GXSetDispCopyFrame2Field:
+.fn GXSetDispCopyFrame2Field, global
 /* 8031B090 002E4650  80 82 BC 20 */	lwz r4, lbl_8066BFA0@sda21(r2)
 /* 8031B094 002E4654  80 04 02 3C */	lwz r0, 0x23c(r4)
 /* 8031B098 002E4658  50 60 64 A6 */	rlwimi r0, r3, 0xc, 0x12, 0x13
@@ -237,10 +236,10 @@ GXSetDispCopyFrame2Field:
 /* 8031B0A4 002E4664  54 00 05 22 */	rlwinm r0, r0, 0, 0x14, 0x11
 /* 8031B0A8 002E4668  90 04 02 4C */	stw r0, 0x24c(r4)
 /* 8031B0AC 002E466C  4E 80 00 20 */	blr 
+.endfn GXSetDispCopyFrame2Field
 
 .balign 16, 0
-.global GXSetCopyClamp
-GXSetCopyClamp:
+.fn GXSetCopyClamp, global
 /* 8031B0B0 002E4670  80 82 BC 20 */	lwz r4, lbl_8066BFA0@sda21(r2)
 /* 8031B0B4 002E4674  80 04 02 3C */	lwz r0, 0x23c(r4)
 /* 8031B0B8 002E4678  50 60 07 FE */	rlwimi r0, r3, 0, 0x1f, 0x1f
@@ -251,10 +250,10 @@ GXSetCopyClamp:
 /* 8031B0CC 002E468C  50 60 07 BC */	rlwimi r0, r3, 0, 0x1e, 0x1e
 /* 8031B0D0 002E4690  90 04 02 4C */	stw r0, 0x24c(r4)
 /* 8031B0D4 002E4694  4E 80 00 20 */	blr 
+.endfn GXSetCopyClamp
 
 .balign 16, 0
-.global GXGetYScaleFactor
-GXGetYScaleFactor:
+.fn GXGetYScaleFactor, global
 /* 8031B0E0 002E46A0  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8031B0E4 002E46A4  7C 08 02 A6 */	mflr r0
 /* 8031B0E8 002E46A8  C8 62 BC 50 */	lfd f3, double_8066BFD0@sda21(r2)
@@ -409,10 +408,10 @@ GXGetYScaleFactor:
 /* 8031B304 002E48C4  7C 08 03 A6 */	mtlr r0
 /* 8031B308 002E48C8  38 21 00 70 */	addi r1, r1, 0x70
 /* 8031B30C 002E48CC  4E 80 00 20 */	blr 
+.endfn GXGetYScaleFactor
 
 .balign 16, 0
-.global GXSetDispCopyYScale
-GXSetDispCopyYScale:
+.fn GXSetDispCopyYScale, global
 /* 8031B310 002E48D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031B314 002E48D4  7C 08 02 A6 */	mflr r0
 /* 8031B318 002E48D8  C0 02 BC 48 */	lfs f0, float_8066BFC8@sda21(r2)
@@ -468,10 +467,10 @@ GXSetDispCopyYScale:
 /* 8031B3D0 002E4990  7C 08 03 A6 */	mtlr r0
 /* 8031B3D4 002E4994  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031B3D8 002E4998  4E 80 00 20 */	blr 
+.endfn GXSetDispCopyYScale
 
 .balign 16, 0
-.global GXSetCopyClear
-GXSetCopyClear:
+.fn GXSetCopyClear, global
 /* 8031B3E0 002E49A0  88 03 00 00 */	lbz r0, 0(r3)
 /* 8031B3E4 002E49A4  39 00 00 00 */	li r8, 0
 /* 8031B3E8 002E49A8  88 C3 00 03 */	lbz r6, 3(r3)
@@ -502,10 +501,10 @@ GXSetCopyClear:
 /* 8031B44C 002E4A0C  90 A9 80 00 */	stw r5, -0x8000(r9)
 /* 8031B450 002E4A10  B0 03 00 02 */	sth r0, 2(r3)
 /* 8031B454 002E4A14  4E 80 00 20 */	blr 
+.endfn GXSetCopyClear
 
 .balign 16, 0
-.global GXSetCopyFilter
-GXSetCopyFilter:
+.fn GXSetCopyFilter, global
 /* 8031B460 002E4A20  2C 03 00 00 */	cmpwi r3, 0
 /* 8031B464 002E4A24  41 82 00 F8 */	beq .L_8031B55C
 /* 8031B468 002E4A28  89 04 00 00 */	lbz r8, 0(r4)
@@ -631,19 +630,19 @@ GXSetCopyFilter:
 /* 8031B638 002E4BF8  91 84 80 00 */	stw r12, -0x8000(r4)
 /* 8031B63C 002E4BFC  B0 03 00 02 */	sth r0, 2(r3)
 /* 8031B640 002E4C00  4E 80 00 20 */	blr 
+.endfn GXSetCopyFilter
 
 .balign 16, 0
-.global GXSetDispCopyGamma
-GXSetDispCopyGamma:
+.fn GXSetDispCopyGamma, global
 /* 8031B650 002E4C10  80 82 BC 20 */	lwz r4, lbl_8066BFA0@sda21(r2)
 /* 8031B654 002E4C14  80 04 02 3C */	lwz r0, 0x23c(r4)
 /* 8031B658 002E4C18  50 60 3D F0 */	rlwimi r0, r3, 7, 0x17, 0x18
 /* 8031B65C 002E4C1C  90 04 02 3C */	stw r0, 0x23c(r4)
 /* 8031B660 002E4C20  4E 80 00 20 */	blr 
+.endfn GXSetDispCopyGamma
 
 .balign 16, 0
-.global GXCopyDisp
-GXCopyDisp:
+.fn GXCopyDisp, global
 /* 8031B670 002E4C30  2C 04 00 00 */	cmpwi r4, 0
 /* 8031B674 002E4C34  41 82 00 30 */	beq .L_8031B6A4
 /* 8031B678 002E4C38  80 E2 BC 20 */	lwz r7, lbl_8066BFA0@sda21(r2)
@@ -728,10 +727,10 @@ GXCopyDisp:
 /* 8031B7A0 002E4D60  38 00 00 00 */	li r0, 0
 /* 8031B7A4 002E4D64  B0 05 00 02 */	sth r0, 2(r5)
 /* 8031B7A8 002E4D68  4E 80 00 20 */	blr 
+.endfn GXCopyDisp
 
 .balign 16, 0
-.global GXCopyTex
-GXCopyTex:
+.fn GXCopyTex, global
 /* 8031B7B0 002E4D70  2C 04 00 00 */	cmpwi r4, 0
 /* 8031B7B4 002E4D74  41 82 00 30 */	beq .L_8031B7E4
 /* 8031B7B8 002E4D78  80 E2 BC 20 */	lwz r7, lbl_8066BFA0@sda21(r2)
@@ -825,10 +824,10 @@ GXCopyTex:
 /* 8031B8FC 002E4EBC  38 00 00 00 */	li r0, 0
 /* 8031B900 002E4EC0  B0 09 00 02 */	sth r0, 2(r9)
 /* 8031B904 002E4EC4  4E 80 00 20 */	blr 
+.endfn GXCopyTex
 
 .balign 16, 0
-.global GXClearBoundingBox
-GXClearBoundingBox:
+.fn GXClearBoundingBox, global
 /* 8031B910 002E4ED0  3C A0 CC 01 */	lis r5, 0xCC008000@ha
 /* 8031B914 002E4ED4  38 C0 00 61 */	li r6, 0x61
 /* 8031B918 002E4ED8  98 C5 80 00 */	stb r6, 0xCC008000@l(r5)
@@ -843,6 +842,7 @@ GXClearBoundingBox:
 /* 8031B93C 002E4EFC  90 85 80 00 */	stw r4, -0x8000(r5)
 /* 8031B940 002E4F00  B0 03 00 02 */	sth r0, 2(r3)
 /* 8031B944 002E4F04  4E 80 00 20 */	blr 
+.endfn GXClearBoundingBox
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

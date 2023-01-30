@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global bta_hh_api_enable
-bta_hh_api_enable:
+.fn bta_hh_api_enable, global
 /* 802E20E8 002AB6A8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E20EC 002AB6AC  7C 08 02 A6 */	mflr r0
 /* 802E20F0 002AB6B0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -99,9 +98,9 @@ bta_hh_api_enable:
 /* 802E2250 002AB810  7C 08 03 A6 */	mtlr r0
 /* 802E2254 002AB814  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E2258 002AB818  4E 80 00 20 */	blr 
+.endfn bta_hh_api_enable
 
-.global bta_hh_api_disable
-bta_hh_api_disable:
+.fn bta_hh_api_disable, global
 /* 802E225C 002AB81C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E2260 002AB820  7C 08 02 A6 */	mflr r0
 /* 802E2264 002AB824  3C 60 80 5C */	lis r3, lbl_805BF7C8@ha
@@ -173,9 +172,9 @@ bta_hh_api_disable:
 /* 802E2354 002AB914  7C 08 03 A6 */	mtlr r0
 /* 802E2358 002AB918  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E235C 002AB91C  4E 80 00 20 */	blr 
+.endfn bta_hh_api_disable
 
-.global bta_hh_disc_cmpl
-bta_hh_disc_cmpl:
+.fn bta_hh_disc_cmpl, global
 /* 802E2360 002AB920  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E2364 002AB924  7C 08 02 A6 */	mflr r0
 /* 802E2368 002AB928  90 01 00 24 */	stw r0, 0x24(r1)
@@ -219,9 +218,9 @@ bta_hh_disc_cmpl:
 /* 802E23F8 002AB9B8  7C 08 03 A6 */	mtlr r0
 /* 802E23FC 002AB9BC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E2400 002AB9C0  4E 80 00 20 */	blr
+.endfn bta_hh_disc_cmpl
 
-.global bta_hh_sdp_cback
-bta_hh_sdp_cback:
+.fn bta_hh_sdp_cback, global
 /* 802E2404 002AB9C4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E2408 002AB9C8  7C 08 02 A6 */	mflr r0
 /* 802E240C 002AB9CC  3C C0 80 5C */	lis r6, lbl_805BF7C8@ha
@@ -304,9 +303,9 @@ bta_hh_sdp_cback:
 /* 802E252C 002ABAEC  7C 08 03 A6 */	mtlr r0
 /* 802E2530 002ABAF0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E2534 002ABAF4  4E 80 00 20 */	blr 
+.endfn bta_hh_sdp_cback
 
-.global bta_hh_start_sdp
-bta_hh_start_sdp:
+.fn bta_hh_start_sdp, global
 /* 802E2538 002ABAF8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E253C 002ABAFC  7C 08 02 A6 */	mflr r0
 /* 802E2540 002ABB00  90 01 00 24 */	stw r0, 0x24(r1)
@@ -414,9 +413,9 @@ bta_hh_start_sdp:
 /* 802E26C0 002ABC80  7C 08 03 A6 */	mtlr r0
 /* 802E26C4 002ABC84  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E26C8 002ABC88  4E 80 00 20 */	blr 
+.endfn bta_hh_start_sdp
 
-.global bta_hh_sdp_cmpl
-bta_hh_sdp_cmpl:
+.fn bta_hh_sdp_cmpl, global
 /* 802E26CC 002ABC8C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E26D0 002ABC90  7C 08 02 A6 */	mflr r0
 /* 802E26D4 002ABC94  90 01 00 24 */	stw r0, 0x24(r1)
@@ -515,9 +514,9 @@ bta_hh_sdp_cmpl:
 /* 802E2828 002ABDE8  7C 08 03 A6 */	mtlr r0
 /* 802E282C 002ABDEC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E2830 002ABDF0  4E 80 00 20 */	blr 
+.endfn bta_hh_sdp_cmpl
 
-.global bta_hh_api_disc_act
-bta_hh_api_disc_act:
+.fn bta_hh_api_disc_act, global
 /* 802E2834 002ABDF4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E2838 002ABDF8  7C 08 02 A6 */	mflr r0
 /* 802E283C 002ABDFC  2C 04 00 00 */	cmpwi r4, 0
@@ -547,9 +546,9 @@ bta_hh_api_disc_act:
 /* 802E2890 002ABE50  7C 08 03 A6 */	mtlr r0
 /* 802E2894 002ABE54  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E2898 002ABE58  4E 80 00 20 */	blr 
+.endfn bta_hh_api_disc_act
 
-.global bta_hh_open_cmpl_act
-bta_hh_open_cmpl_act:
+.fn bta_hh_open_cmpl_act, global
 /* 802E289C 002ABE5C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E28A0 002ABE60  7C 08 02 A6 */	mflr r0
 /* 802E28A4 002ABE64  2C 04 00 00 */	cmpwi r4, 0
@@ -629,9 +628,9 @@ bta_hh_open_cmpl_act:
 /* 802E29B8 002ABF78  7C 08 03 A6 */	mtlr r0
 /* 802E29BC 002ABF7C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E29C0 002ABF80  4E 80 00 20 */	blr 
+.endfn bta_hh_open_cmpl_act
 
-.global bta_hh_open_act
-bta_hh_open_act:
+.fn bta_hh_open_act, global
 /* 802E29C4 002ABF84  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E29C8 002ABF88  7C 08 02 A6 */	mflr r0
 /* 802E29CC 002ABF8C  2C 04 00 00 */	cmpwi r4, 0
@@ -683,9 +682,9 @@ bta_hh_open_act:
 /* 802E2A70 002AC030  7C 08 03 A6 */	mtlr r0
 /* 802E2A74 002AC034  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E2A78 002AC038  4E 80 00 20 */	blr 
+.endfn bta_hh_open_act
 
-.global bta_hh_data_act
-bta_hh_data_act:
+.fn bta_hh_data_act, global
 /* 802E2A7C 002AC03C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E2A80 002AC040  7C 08 02 A6 */	mflr r0
 /* 802E2A84 002AC044  7C 68 1B 78 */	mr r8, r3
@@ -708,9 +707,9 @@ bta_hh_data_act:
 /* 802E2AC8 002AC088  7C 08 03 A6 */	mtlr r0
 /* 802E2ACC 002AC08C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E2AD0 002AC090  4E 80 00 20 */	blr 
+.endfn bta_hh_data_act
 
-.global bta_hh_handsk_act
-bta_hh_handsk_act:
+.fn bta_hh_handsk_act, global
 /* 802E2AD4 002AC094  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802E2AD8 002AC098  7C 08 02 A6 */	mflr r0
 /* 802E2ADC 002AC09C  90 01 00 44 */	stw r0, 0x44(r1)
@@ -891,9 +890,9 @@ switch_802E2CF8:
 /* 802E2D30 002AC2F0  7C 08 03 A6 */	mtlr r0
 /* 802E2D34 002AC2F4  38 21 00 40 */	addi r1, r1, 0x40
 /* 802E2D38 002AC2F8  4E 80 00 20 */	blr 
+.endfn bta_hh_handsk_act
 
-.global bta_hh_ctrl_dat_act
-bta_hh_ctrl_dat_act:
+.fn bta_hh_ctrl_dat_act, global
 /* 802E2D3C 002AC2FC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802E2D40 002AC300  7C 08 02 A6 */	mflr r0
 /* 802E2D44 002AC304  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1044,9 +1043,9 @@ switch_802E2EBC:
 /* 802E2F28 002AC4E8  7C 08 03 A6 */	mtlr r0
 /* 802E2F2C 002AC4EC  38 21 00 30 */	addi r1, r1, 0x30
 /* 802E2F30 002AC4F0  4E 80 00 20 */	blr 
+.endfn bta_hh_ctrl_dat_act
 
-.global bta_hh_close_act
-bta_hh_close_act:
+.fn bta_hh_close_act, global
 /* 802E2F34 002AC4F4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E2F38 002AC4F8  7C 08 02 A6 */	mflr r0
 /* 802E2F3C 002AC4FC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1184,9 +1183,9 @@ bta_hh_close_act:
 /* 802E3128 002AC6E8  7C 08 03 A6 */	mtlr r0
 /* 802E312C 002AC6EC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E3130 002AC6F0  4E 80 00 20 */	blr 
+.endfn bta_hh_close_act
 
-.global bta_hh_get_dscp_act
-bta_hh_get_dscp_act:
+.fn bta_hh_get_dscp_act, global
 /* 802E3134 002AC6F4  3C A0 80 5C */	lis r5, lbl_805BF7C8@ha
 /* 802E3138 002AC6F8  7C 64 1B 78 */	mr r4, r3
 /* 802E313C 002AC6FC  38 A5 F7 C8 */	addi r5, r5, lbl_805BF7C8@l
@@ -1194,9 +1193,9 @@ bta_hh_get_dscp_act:
 /* 802E3144 002AC704  81 85 02 24 */	lwz r12, 0x224(r5)
 /* 802E3148 002AC708  7D 89 03 A6 */	mtctr r12
 /* 802E314C 002AC70C  4E 80 04 20 */	bctr 
+.endfn bta_hh_get_dscp_act
 
-.global bta_hh_maint_dev_act
-bta_hh_maint_dev_act:
+.fn bta_hh_maint_dev_act, global
 /* 802E3150 002AC710  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E3154 002AC714  7C 08 02 A6 */	mflr r0
 /* 802E3158 002AC718  38 A0 00 06 */	li r5, 6
@@ -1292,9 +1291,9 @@ bta_hh_maint_dev_act:
 /* 802E32A8 002AC868  7C 08 03 A6 */	mtlr r0
 /* 802E32AC 002AC86C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E32B0 002AC870  4E 80 00 20 */	blr 
+.endfn bta_hh_maint_dev_act
 
-.global bta_hh_get_acl_q_info
-bta_hh_get_acl_q_info:
+.fn bta_hh_get_acl_q_info, global
 /* 802E32B4 002AC874  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802E32B8 002AC878  7C 08 02 A6 */	mflr r0
 /* 802E32BC 002AC87C  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1369,9 +1368,9 @@ bta_hh_get_acl_q_info:
 /* 802E33C4 002AC984  7C 08 03 A6 */	mtlr r0
 /* 802E33C8 002AC988  38 21 00 40 */	addi r1, r1, 0x40
 /* 802E33CC 002AC98C  4E 80 00 20 */	blr 
+.endfn bta_hh_get_acl_q_info
 
-.global bta_hh_write_dev_act
-bta_hh_write_dev_act:
+.fn bta_hh_write_dev_act, global
 /* 802E33D0 002AC990  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E33D4 002AC994  7C 08 02 A6 */	mflr r0
 /* 802E33D8 002AC998  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1496,9 +1495,9 @@ bta_hh_write_dev_act:
 /* 802E358C 002ACB4C  7C 08 03 A6 */	mtlr r0
 /* 802E3590 002ACB50  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E3594 002ACB54  4E 80 00 20 */	blr
+.endfn bta_hh_write_dev_act
 
-.global bta_hh_cback
-bta_hh_cback:
+.fn bta_hh_cback, global
 /* 802E3598 002ACB58  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E359C 002ACB5C  7C 08 02 A6 */	mflr r0
 /* 802E35A0 002ACB60  3C E0 80 54 */	lis r7, lbl_80544198@ha
@@ -1695,6 +1694,7 @@ switch_802E37E0:
 /* 802E3824 002ACDE4  7C 08 03 A6 */	mtlr r0
 /* 802E3828 002ACDE8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E382C 002ACDEC  4E 80 00 20 */	blr 
+.endfn bta_hh_cback
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global SetArray__Q34nw4r3g3d9ResVtxPosFv
-SetArray__Q34nw4r3g3d9ResVtxPosFv:
+.fn SetArray__Q34nw4r3g3d9ResVtxPosFv, global
 /* 803DD1C0 003A6780  80 A3 00 00 */	lwz r5, 0(r3)
 /* 803DD1C4 003A6784  2C 05 00 00 */	cmpwi r5, 0
 /* 803DD1C8 003A6788  4D 82 00 20 */	beqlr 
@@ -19,9 +18,9 @@ SetArray__Q34nw4r3g3d9ResVtxPosFv:
 /* 803DD1E8 003A67A8  88 A5 00 1D */	lbz r5, 0x1d(r5)
 /* 803DD1EC 003A67AC  4B F3 C8 C4 */	b GXSetArray
 /* 803DD1F0 003A67B0  4E 80 00 20 */	blr 
+.endfn SetArray__Q34nw4r3g3d9ResVtxPosFv
 
-.global GetArray__Q34nw4r3g3d9ResVtxPosCFPPCvPUc
-GetArray__Q34nw4r3g3d9ResVtxPosCFPPCvPUc:
+.fn GetArray__Q34nw4r3g3d9ResVtxPosCFPPCvPUc, global
 /* 803DD1F4 003A67B4  2C 04 00 00 */	cmpwi r4, 0
 /* 803DD1F8 003A67B8  41 82 00 24 */	beq .L_803DD21C
 /* 803DD1FC 003A67BC  80 C3 00 00 */	lwz r6, 0(r3)
@@ -41,9 +40,9 @@ GetArray__Q34nw4r3g3d9ResVtxPosCFPPCvPUc:
 /* 803DD228 003A67E8  88 03 00 1D */	lbz r0, 0x1d(r3)
 /* 803DD22C 003A67EC  98 05 00 00 */	stb r0, 0(r5)
 /* 803DD230 003A67F0  4E 80 00 20 */	blr 
+.endfn GetArray__Q34nw4r3g3d9ResVtxPosCFPPCvPUc
 
-.global CopyTo__Q34nw4r3g3d9ResVtxPosCFPv
-CopyTo__Q34nw4r3g3d9ResVtxPosCFPv:
+.fn CopyTo__Q34nw4r3g3d9ResVtxPosCFPv, global
 /* 803DD234 003A67F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803DD238 003A67F8  7C 08 02 A6 */	mflr r0
 /* 803DD23C 003A67FC  80 A3 00 00 */	lwz r5, 0(r3)
@@ -68,9 +67,9 @@ CopyTo__Q34nw4r3g3d9ResVtxPosCFPv:
 /* 803DD284 003A6844  7C 08 03 A6 */	mtlr r0
 /* 803DD288 003A6848  38 21 00 10 */	addi r1, r1, 0x10
 /* 803DD28C 003A684C  4E 80 00 20 */	blr 
+.endfn CopyTo__Q34nw4r3g3d9ResVtxPosCFPv
 
-.global SetArray__Q34nw4r3g3d9ResVtxNrmFv
-SetArray__Q34nw4r3g3d9ResVtxNrmFv:
+.fn SetArray__Q34nw4r3g3d9ResVtxNrmFv, global
 /* 803DD290 003A6850  80 A3 00 00 */	lwz r5, 0(r3)
 /* 803DD294 003A6854  2C 05 00 00 */	cmpwi r5, 0
 /* 803DD298 003A6858  4D 82 00 20 */	beqlr 
@@ -86,9 +85,9 @@ SetArray__Q34nw4r3g3d9ResVtxNrmFv:
 /* 803DD2B8 003A6878  88 A5 00 1D */	lbz r5, 0x1d(r5)
 /* 803DD2BC 003A687C  4B F3 C7 F4 */	b GXSetArray
 /* 803DD2C0 003A6880  4E 80 00 20 */	blr 
+.endfn SetArray__Q34nw4r3g3d9ResVtxNrmFv
 
-.global GetArray__Q34nw4r3g3d9ResVtxNrmCFPPCvPUc
-GetArray__Q34nw4r3g3d9ResVtxNrmCFPPCvPUc:
+.fn GetArray__Q34nw4r3g3d9ResVtxNrmCFPPCvPUc, global
 /* 803DD2C4 003A6884  2C 04 00 00 */	cmpwi r4, 0
 /* 803DD2C8 003A6888  41 82 00 24 */	beq .L_803DD2EC
 /* 803DD2CC 003A688C  80 C3 00 00 */	lwz r6, 0(r3)
@@ -108,9 +107,9 @@ GetArray__Q34nw4r3g3d9ResVtxNrmCFPPCvPUc:
 /* 803DD2F8 003A68B8  88 03 00 1D */	lbz r0, 0x1d(r3)
 /* 803DD2FC 003A68BC  98 05 00 00 */	stb r0, 0(r5)
 /* 803DD300 003A68C0  4E 80 00 20 */	blr 
+.endfn GetArray__Q34nw4r3g3d9ResVtxNrmCFPPCvPUc
 
-.global CopyTo__Q34nw4r3g3d9ResVtxNrmCFPv
-CopyTo__Q34nw4r3g3d9ResVtxNrmCFPv:
+.fn CopyTo__Q34nw4r3g3d9ResVtxNrmCFPv, global
 /* 803DD304 003A68C4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803DD308 003A68C8  7C 08 02 A6 */	mflr r0
 /* 803DD30C 003A68CC  80 A3 00 00 */	lwz r5, 0(r3)
@@ -135,9 +134,9 @@ CopyTo__Q34nw4r3g3d9ResVtxNrmCFPv:
 /* 803DD354 003A6914  7C 08 03 A6 */	mtlr r0
 /* 803DD358 003A6918  38 21 00 10 */	addi r1, r1, 0x10
 /* 803DD35C 003A691C  4E 80 00 20 */	blr 
+.endfn CopyTo__Q34nw4r3g3d9ResVtxNrmCFPv
 
-.global SetArray__Q34nw4r3g3d9ResVtxClrF7_GXAttr
-SetArray__Q34nw4r3g3d9ResVtxClrF7_GXAttr:
+.fn SetArray__Q34nw4r3g3d9ResVtxClrF7_GXAttr, global
 /* 803DD360 003A6920  80 A3 00 00 */	lwz r5, 0(r3)
 /* 803DD364 003A6924  2C 05 00 00 */	cmpwi r5, 0
 /* 803DD368 003A6928  4D 82 00 20 */	beqlr 
@@ -156,9 +155,9 @@ SetArray__Q34nw4r3g3d9ResVtxClrF7_GXAttr:
 /* 803DD394 003A6954  88 A5 00 1C */	lbz r5, 0x1c(r5)
 /* 803DD398 003A6958  4B F3 C7 18 */	b GXSetArray
 /* 803DD39C 003A695C  4E 80 00 20 */	blr 
+.endfn SetArray__Q34nw4r3g3d9ResVtxClrF7_GXAttr
 
-.global GetArray__Q34nw4r3g3d9ResVtxClrCFPPCvPUc
-GetArray__Q34nw4r3g3d9ResVtxClrCFPPCvPUc:
+.fn GetArray__Q34nw4r3g3d9ResVtxClrCFPPCvPUc, global
 /* 803DD3A0 003A6960  2C 04 00 00 */	cmpwi r4, 0
 /* 803DD3A4 003A6964  41 82 00 24 */	beq .L_803DD3C8
 /* 803DD3A8 003A6968  80 C3 00 00 */	lwz r6, 0(r3)
@@ -178,9 +177,9 @@ GetArray__Q34nw4r3g3d9ResVtxClrCFPPCvPUc:
 /* 803DD3D4 003A6994  88 03 00 1C */	lbz r0, 0x1c(r3)
 /* 803DD3D8 003A6998  98 05 00 00 */	stb r0, 0(r5)
 /* 803DD3DC 003A699C  4E 80 00 20 */	blr 
+.endfn GetArray__Q34nw4r3g3d9ResVtxClrCFPPCvPUc
 
-.global CopyTo__Q34nw4r3g3d9ResVtxClrCFPv
-CopyTo__Q34nw4r3g3d9ResVtxClrCFPv:
+.fn CopyTo__Q34nw4r3g3d9ResVtxClrCFPv, global
 /* 803DD3E0 003A69A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803DD3E4 003A69A4  7C 08 02 A6 */	mflr r0
 /* 803DD3E8 003A69A8  80 A3 00 00 */	lwz r5, 0(r3)
@@ -205,9 +204,9 @@ CopyTo__Q34nw4r3g3d9ResVtxClrCFPv:
 /* 803DD430 003A69F0  7C 08 03 A6 */	mtlr r0
 /* 803DD434 003A69F4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803DD438 003A69F8  4E 80 00 20 */	blr 
+.endfn CopyTo__Q34nw4r3g3d9ResVtxClrCFPv
 
-.global GetArray__Q34nw4r3g3d14ResVtxTexCoordCFPPCvPUc
-GetArray__Q34nw4r3g3d14ResVtxTexCoordCFPPCvPUc:
+.fn GetArray__Q34nw4r3g3d14ResVtxTexCoordCFPPCvPUc, global
 /* 803DD43C 003A69FC  2C 04 00 00 */	cmpwi r4, 0
 /* 803DD440 003A6A00  41 82 00 24 */	beq .L_803DD464
 /* 803DD444 003A6A04  80 C3 00 00 */	lwz r6, 0(r3)
@@ -227,9 +226,9 @@ GetArray__Q34nw4r3g3d14ResVtxTexCoordCFPPCvPUc:
 /* 803DD470 003A6A30  88 03 00 1D */	lbz r0, 0x1d(r3)
 /* 803DD474 003A6A34  98 05 00 00 */	stb r0, 0(r5)
 /* 803DD478 003A6A38  4E 80 00 20 */	blr 
+.endfn GetArray__Q34nw4r3g3d14ResVtxTexCoordCFPPCvPUc
 
-.global SetArray__Q34nw4r3g3d12ResVtxFurPosFUs
-SetArray__Q34nw4r3g3d12ResVtxFurPosFUs:
+.fn SetArray__Q34nw4r3g3d12ResVtxFurPosFUs, global
 /* 803DD47C 003A6A3C  80 C3 00 00 */	lwz r6, 0(r3)
 /* 803DD480 003A6A40  2C 06 00 00 */	cmpwi r6, 0
 /* 803DD484 003A6A44  4D 82 00 20 */	beqlr 
@@ -263,9 +262,9 @@ SetArray__Q34nw4r3g3d12ResVtxFurPosFUs:
 /* 803DD4E4 003A6AA4  88 A6 00 1D */	lbz r5, 0x1d(r6)
 /* 803DD4E8 003A6AA8  4B F3 C5 C8 */	b GXSetArray
 /* 803DD4EC 003A6AAC  4E 80 00 20 */	blr 
+.endfn SetArray__Q34nw4r3g3d12ResVtxFurPosFUs
 
-.global DCStore__Q34nw4r3g3d9ResVtxPosFb
-DCStore__Q34nw4r3g3d9ResVtxPosFb:
+.fn DCStore__Q34nw4r3g3d9ResVtxPosFb, global
 /* 803DD4F0 003A6AB0  80 63 00 00 */	lwz r3, 0(r3)
 /* 803DD4F4 003A6AB4  2C 04 00 00 */	cmpwi r4, 0
 /* 803DD4F8 003A6AB8  80 83 00 00 */	lwz r4, 0(r3)
@@ -273,9 +272,9 @@ DCStore__Q34nw4r3g3d9ResVtxPosFb:
 /* 803DD500 003A6AC0  4B F7 6A E0 */	b DCStoreRange
 .L_803DD504:
 /* 803DD504 003A6AC4  4B F7 6B 3C */	b DCStoreRangeNoSync
+.endfn DCStore__Q34nw4r3g3d9ResVtxPosFb
 
-.global DCStore__Q34nw4r3g3d9ResVtxNrmFb
-DCStore__Q34nw4r3g3d9ResVtxNrmFb:
+.fn DCStore__Q34nw4r3g3d9ResVtxNrmFb, global
 /* 803DD508 003A6AC8  80 63 00 00 */	lwz r3, 0(r3)
 /* 803DD50C 003A6ACC  2C 04 00 00 */	cmpwi r4, 0
 /* 803DD510 003A6AD0  80 83 00 00 */	lwz r4, 0(r3)
@@ -283,9 +282,9 @@ DCStore__Q34nw4r3g3d9ResVtxNrmFb:
 /* 803DD518 003A6AD8  4B F7 6A C8 */	b DCStoreRange
 .L_803DD51C:
 /* 803DD51C 003A6ADC  4B F7 6B 24 */	b DCStoreRangeNoSync
+.endfn DCStore__Q34nw4r3g3d9ResVtxNrmFb
 
-.global DCStore__Q34nw4r3g3d9ResVtxClrFb
-DCStore__Q34nw4r3g3d9ResVtxClrFb:
+.fn DCStore__Q34nw4r3g3d9ResVtxClrFb, global
 /* 803DD520 003A6AE0  80 63 00 00 */	lwz r3, 0(r3)
 /* 803DD524 003A6AE4  2C 04 00 00 */	cmpwi r4, 0
 /* 803DD528 003A6AE8  80 83 00 00 */	lwz r4, 0(r3)
@@ -293,9 +292,9 @@ DCStore__Q34nw4r3g3d9ResVtxClrFb:
 /* 803DD530 003A6AF0  4B F7 6A B0 */	b DCStoreRange
 .L_803DD534:
 /* 803DD534 003A6AF4  4B F7 6B 0C */	b DCStoreRangeNoSync
+.endfn DCStore__Q34nw4r3g3d9ResVtxClrFb
 
-.global DCStore__Q34nw4r3g3d14ResVtxTexCoordFb
-DCStore__Q34nw4r3g3d14ResVtxTexCoordFb:
+.fn DCStore__Q34nw4r3g3d14ResVtxTexCoordFb, global
 /* 803DD538 003A6AF8  80 63 00 00 */	lwz r3, 0(r3)
 /* 803DD53C 003A6AFC  2C 04 00 00 */	cmpwi r4, 0
 /* 803DD540 003A6B00  80 83 00 00 */	lwz r4, 0(r3)
@@ -303,9 +302,9 @@ DCStore__Q34nw4r3g3d14ResVtxTexCoordFb:
 /* 803DD548 003A6B08  4B F7 6A 98 */	b DCStoreRange
 .L_803DD54C:
 /* 803DD54C 003A6B0C  4B F7 6A F4 */	b DCStoreRangeNoSync
+.endfn DCStore__Q34nw4r3g3d14ResVtxTexCoordFb
 
-.global DCStore__Q34nw4r3g3d12ResVtxFurVecFb
-DCStore__Q34nw4r3g3d12ResVtxFurVecFb:
+.fn DCStore__Q34nw4r3g3d12ResVtxFurVecFb, global
 /* 803DD550 003A6B10  80 63 00 00 */	lwz r3, 0(r3)
 /* 803DD554 003A6B14  2C 04 00 00 */	cmpwi r4, 0
 /* 803DD558 003A6B18  80 83 00 00 */	lwz r4, 0(r3)
@@ -313,6 +312,7 @@ DCStore__Q34nw4r3g3d12ResVtxFurVecFb:
 /* 803DD560 003A6B20  4B F7 6A 80 */	b DCStoreRange
 .L_803DD564:
 /* 803DD564 003A6B24  4B F7 6A DC */	b DCStoreRangeNoSync
+.endfn DCStore__Q34nw4r3g3d12ResVtxFurVecFb
 
 .global DCStore__Q34nw4r3g3d12ResVtxFurPosFb
 DCStore__Q34nw4r3g3d12ResVtxFurPosFb:

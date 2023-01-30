@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global AppendSound__Q44nw4r3snd6detail19ExternalSoundPlayerFPQ44nw4r3snd6detail10BasicSound
-AppendSound__Q44nw4r3snd6detail19ExternalSoundPlayerFPQ44nw4r3snd6detail10BasicSound:
+.fn AppendSound__Q44nw4r3snd6detail19ExternalSoundPlayerFPQ44nw4r3snd6detail10BasicSound, global
 /* 80415760 003DED20  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80415764 003DED24  7C 08 02 A6 */	mflr r0
 /* 80415768 003DED28  90 01 00 24 */	stw r0, 0x24(r1)
@@ -123,9 +122,9 @@ AppendSound__Q44nw4r3snd6detail19ExternalSoundPlayerFPQ44nw4r3snd6detail10BasicS
 /* 804158F4 003DEEB4  7C 08 03 A6 */	mtlr r0
 /* 804158F8 003DEEB8  38 21 00 20 */	addi r1, r1, 0x20
 /* 804158FC 003DEEBC  4E 80 00 20 */	blr 
+.endfn AppendSound__Q44nw4r3snd6detail19ExternalSoundPlayerFPQ44nw4r3snd6detail10BasicSound
 
-.global RemoveSound__Q44nw4r3snd6detail19ExternalSoundPlayerFPQ44nw4r3snd6detail10BasicSound
-RemoveSound__Q44nw4r3snd6detail19ExternalSoundPlayerFPQ44nw4r3snd6detail10BasicSound:
+.fn RemoveSound__Q44nw4r3snd6detail19ExternalSoundPlayerFPQ44nw4r3snd6detail10BasicSound, global
 /* 80415900 003DEEC0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80415904 003DEEC4  7C 08 02 A6 */	mflr r0
 /* 80415908 003DEEC8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -144,6 +143,7 @@ RemoveSound__Q44nw4r3snd6detail19ExternalSoundPlayerFPQ44nw4r3snd6detail10BasicS
 /* 8041593C 003DEEFC  7C 08 03 A6 */	mtlr r0
 /* 80415940 003DEF00  38 21 00 10 */	addi r1, r1, 0x10
 /* 80415944 003DEF04  4E 80 00 20 */	blr 
+.endfn RemoveSound__Q44nw4r3snd6detail19ExternalSoundPlayerFPQ44nw4r3snd6detail10BasicSound
 
 .global detail_CanPlaySound__Q44nw4r3snd6detail19ExternalSoundPlayerFi
 detail_CanPlaySound__Q44nw4r3snd6detail19ExternalSoundPlayerFi:

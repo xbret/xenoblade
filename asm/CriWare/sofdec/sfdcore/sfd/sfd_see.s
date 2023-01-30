@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global SFSEE_InitHn
-SFSEE_InitHn:
+.fn SFSEE_InitHn, global
 /* 803CBC88 00395248  38 A0 00 00 */	li r5, 0
 /* 803CBC8C 0039524C  38 80 FF FD */	li r4, -3
 /* 803CBC90 00395250  38 00 00 01 */	li r0, 1
@@ -13,9 +12,9 @@ SFSEE_InitHn:
 /* 803CBC9C 0039525C  90 83 00 08 */	stw r4, 8(r3)
 /* 803CBCA0 00395260  90 03 00 0C */	stw r0, 0xc(r3)
 /* 803CBCA4 00395264  4E 80 00 20 */	blr 
+.endfn SFSEE_InitHn
 
-.global SFD_EntrySeek
-SFD_EntrySeek:
+.fn SFD_EntrySeek, global
 /* 803CBCA8 00395268  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CBCAC 0039526C  7C 08 02 A6 */	mflr r0
 /* 803CBCB0 00395270  90 01 00 14 */	stw r0, 0x14(r1)
@@ -41,9 +40,9 @@ SFD_EntrySeek:
 /* 803CBCF8 003952B8  7C 08 03 A6 */	mtlr r0
 /* 803CBCFC 003952BC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CBD00 003952C0  4E 80 00 20 */	blr 
+.endfn SFD_EntrySeek
 
-.global SFSEE_FixAvPlay
-SFSEE_FixAvPlay:
+.fn SFSEE_FixAvPlay, global
 /* 803CBD04 003952C4  80 63 26 C8 */	lwz r3, 0x26c8(r3)
 /* 803CBD08 003952C8  2C 03 00 00 */	cmpwi r3, 0
 /* 803CBD0C 003952CC  4D 82 00 20 */	beqlr 
@@ -57,9 +56,9 @@ SFSEE_FixAvPlay:
 /* 803CBD28 003952E8  4C 80 00 20 */	bgelr 
 /* 803CBD2C 003952EC  90 A3 0D BC */	stw r5, 0xdbc(r3)
 /* 803CBD30 003952F0  4E 80 00 20 */	blr 
+.endfn SFSEE_FixAvPlay
 
-.global SFSEE_ExecServer
-SFSEE_ExecServer:
+.fn SFSEE_ExecServer, global
 /* 803CBD34 003952F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CBD38 003952F8  7C 08 02 A6 */	mflr r0
 /* 803CBD3C 003952FC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -77,9 +76,9 @@ SFSEE_ExecServer:
 /* 803CBD68 00395328  7C 08 03 A6 */	mtlr r0
 /* 803CBD6C 0039532C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CBD70 00395330  4E 80 00 20 */	blr 
+.endfn SFSEE_ExecServer
 
-.global sfsee_ExecHeadAnaly
-sfsee_ExecHeadAnaly:
+.fn sfsee_ExecHeadAnaly, global
 /* 803CBD74 00395334  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CBD78 00395338  7C 08 02 A6 */	mflr r0
 /* 803CBD7C 0039533C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -219,9 +218,9 @@ sfsee_ExecHeadAnaly:
 /* 803CBF5C 0039551C  7C 08 03 A6 */	mtlr r0
 /* 803CBF60 00395520  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CBF64 00395524  4E 80 00 20 */	blr 
+.endfn sfsee_ExecHeadAnaly
 
-.global SFD_SetFileSize
-SFD_SetFileSize:
+.fn SFD_SetFileSize, global
 /* 803CBF68 00395528  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CBF6C 0039552C  7C 08 02 A6 */	mflr r0
 /* 803CBF70 00395530  90 01 00 14 */	stw r0, 0x14(r1)
@@ -255,9 +254,9 @@ SFD_SetFileSize:
 /* 803CBFD4 00395594  7C 08 03 A6 */	mtlr r0
 /* 803CBFD8 00395598  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CBFDC 0039559C  4E 80 00 20 */	blr 
+.endfn SFD_SetFileSize
 
-.global SFD_SetTotTime
-SFD_SetTotTime:
+.fn SFD_SetTotTime, global
 /* 803CBFE0 003955A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CBFE4 003955A4  7C 08 02 A6 */	mflr r0
 /* 803CBFE8 003955A8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -295,9 +294,9 @@ SFD_SetTotTime:
 /* 803CC05C 0039561C  7C 08 03 A6 */	mtlr r0
 /* 803CC060 00395620  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CC064 00395624  4E 80 00 20 */	blr 
+.endfn SFD_SetTotTime
 
-.global SFD_SetByteRate
-SFD_SetByteRate:
+.fn SFD_SetByteRate, global
 /* 803CC068 00395628  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CC06C 0039562C  7C 08 02 A6 */	mflr r0
 /* 803CC070 00395630  90 01 00 14 */	stw r0, 0x14(r1)
@@ -331,9 +330,9 @@ SFD_SetByteRate:
 /* 803CC0D4 00395694  7C 08 03 A6 */	mtlr r0
 /* 803CC0D8 00395698  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CC0DC 0039569C  4E 80 00 20 */	blr 
+.endfn SFD_SetByteRate
 
-.global SFD_SetSeekPos
-SFD_SetSeekPos:
+.fn SFD_SetSeekPos, global
 /* 803CC0E0 003956A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CC0E4 003956A4  7C 08 02 A6 */	mflr r0
 /* 803CC0E8 003956A8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -365,9 +364,9 @@ SFD_SetSeekPos:
 /* 803CC144 00395704  7C 08 03 A6 */	mtlr r0
 /* 803CC148 00395708  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CC14C 0039570C  4E 80 00 20 */	blr 
+.endfn SFD_SetSeekPos
 
-.global sfsee_ExecFinAnaly
-sfsee_ExecFinAnaly:
+.fn sfsee_ExecFinAnaly, global
 /* 803CC150 00395710  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CC154 00395714  7C 08 02 A6 */	mflr r0
 /* 803CC158 00395718  90 01 00 24 */	stw r0, 0x24(r1)
@@ -436,6 +435,7 @@ sfsee_ExecFinAnaly:
 /* 803CC23C 003957FC  7C 08 03 A6 */	mtlr r0
 /* 803CC240 00395800  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CC244 00395804  4E 80 00 20 */	blr 
+.endfn sfsee_ExecFinAnaly
 
 .global sfsee_UpdateEByteRate
 sfsee_UpdateEByteRate:

@@ -5,18 +5,17 @@
 
 #here be dragons
 
-.global MPVABDEC_Init
-MPVABDEC_Init:
+.fn MPVABDEC_Init, global
 /* 803AEFF8 003785B8  3C 80 80 52 */	lis r4, lbl_8051F8F0@ha
 /* 803AEFFC 003785BC  3C 60 80 60 */	lis r3, lbl_80607B68@ha
 /* 803AF000 003785C0  38 84 F8 F0 */	addi r4, r4, lbl_8051F8F0@l
 /* 803AF004 003785C4  38 63 7B 68 */	addi r3, r3, lbl_80607B68@l
 /* 803AF008 003785C8  90 83 00 08 */	stw r4, 8(r3)
 /* 803AF00C 003785CC  4E 80 00 20 */	blr 
+.endfn MPVABDEC_Init
 
 
-.global mpvabdec_IntraBlock_Isr
-mpvabdec_IntraBlock_Isr:
+.fn mpvabdec_IntraBlock_Isr, global
 /* 803AF010 003785D0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803AF014 003785D4  BE 81 00 10 */	stmw r20, 0x10(r1)
 /* 803AF018 003785D8  80 C3 09 88 */	lwz r6, 0x988(r3)
@@ -3691,9 +3690,9 @@ switch_803B25A8:
 /* 803B2644 0037BC04  80 64 00 14 */	lwz r3, 0x14(r4)
 /* 803B2648 0037BC08  38 21 00 40 */	addi r1, r1, 0x40
 /* 803B264C 0037BC0C  4E 80 00 20 */	blr 
+.endfn mpvabdec_IntraBlock_Isr
 
-.global mpvabdec_IntraBlockDc11_Isr
-mpvabdec_IntraBlockDc11_Isr:
+.fn mpvabdec_IntraBlockDc11_Isr, global
 /* 803B2650 0037BC10  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803B2654 0037BC14  BE 81 00 10 */	stmw r20, 0x10(r1)
 /* 803B2658 0037BC18  80 C3 09 88 */	lwz r6, 0x988(r3)
@@ -7359,9 +7358,9 @@ switch_803B5BC8:
 /* 803B5C64 0037F224  80 64 00 14 */	lwz r3, 0x14(r4)
 /* 803B5C68 0037F228  38 21 00 40 */	addi r1, r1, 0x40
 /* 803B5C6C 0037F22C  4E 80 00 20 */	blr 
+.endfn mpvabdec_IntraBlockDc11_Isr
 
-.global mpvabdec_NintraBlock_Isr
-mpvabdec_NintraBlock_Isr:
+.fn mpvabdec_NintraBlock_Isr, global
 /* 803B5C70 0037F230  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803B5C74 0037F234  38 00 00 00 */	li r0, 0
 /* 803B5C78 0037F238  BE 61 00 0C */	stmw r19, 0xc(r1)
@@ -11323,6 +11322,7 @@ switch_803B9648:
 /* 803B96E8 00382CA8  80 64 00 14 */	lwz r3, 0x14(r4)
 /* 803B96EC 00382CAC  38 21 00 40 */	addi r1, r1, 0x40
 /* 803B96F0 00382CB0  4E 80 00 20 */	blr 
+.endfn mpvabdec_NintraBlock_Isr
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

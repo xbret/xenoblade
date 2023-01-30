@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global OSReport
-OSReport:
+.fn OSReport, global
 /* 80354EF0 0031E4B0  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 80354EF4 0031E4B4  7C 08 02 A6 */	mflr r0
 /* 80354EF8 0031E4B8  90 01 00 84 */	stw r0, 0x84(r1)
@@ -38,15 +37,15 @@ OSReport:
 /* 80354F64 0031E524  7C 08 03 A6 */	mtlr r0
 /* 80354F68 0031E528  38 21 00 80 */	addi r1, r1, 0x80
 /* 80354F6C 0031E52C  4E 80 00 20 */	blr 
+.endfn OSReport
 
 .balign 16, 0
-.global OSVReport
-OSVReport:
+.fn OSVReport, global
 /* 80354F70 0031E530  4B F6 BE 4C */	b vprintf
+.endfn OSVReport
 
 .balign 16, 0
-.global OSSetErrorHandler
-OSSetErrorHandler:
+.fn OSSetErrorHandler, global
 /* 80354F80 0031E540  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80354F84 0031E544  7C 08 02 A6 */	mflr r0
 /* 80354F88 0031E548  90 01 00 24 */	stw r0, 0x24(r1)
@@ -219,10 +218,10 @@ OSSetErrorHandler:
 /* 80355200 0031E7C0  7C 08 03 A6 */	mtlr r0
 /* 80355204 0031E7C4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80355208 0031E7C8  4E 80 00 20 */	blr 
+.endfn OSSetErrorHandler
 
 .balign 16, 0
-.global __OSUnhandledException
-__OSUnhandledException:
+.fn __OSUnhandledException, global
 /* 80355210 0031E7D0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80355214 0031E7D4  7C 08 02 A6 */	mflr r0
 /* 80355218 0031E7D8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -428,6 +427,7 @@ __OSUnhandledException:
 /* 80355500 0031EAC0  7C 08 03 A6 */	mtlr r0
 /* 80355504 0031EAC4  38 21 00 30 */	addi r1, r1, 0x30
 /* 80355508 0031EAC8  4E 80 00 20 */	blr 
+.endfn __OSUnhandledException
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

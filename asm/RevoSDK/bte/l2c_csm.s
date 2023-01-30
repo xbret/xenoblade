@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global l2c_csm_execute
-l2c_csm_execute:
+.fn l2c_csm_execute, global
 /* 802F74D0 002C0A90  80 03 00 04 */	lwz r0, 4(r3)
 /* 802F74D4 002C0A94  28 00 00 08 */	cmplwi r0, 8
 /* 802F74D8 002C0A98  4D 81 00 20 */	bgtlr 
@@ -32,9 +31,9 @@ switch_802F7510:
 switch_802F7514:
 /* 802F7514 002C0AD4  48 00 11 98 */	b l2c_csm_w4_l2ca_disconnect_rsp
 /* 802F7518 002C0AD8  4E 80 00 20 */	blr
+.endfn l2c_csm_execute
 
-.global l2c_csm_closed
-l2c_csm_closed:
+.fn l2c_csm_closed, global
 /* 802F751C 002C0ADC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802F7520 002C0AE0  7C 08 02 A6 */	mflr r0
 /* 802F7524 002C0AE4  90 01 00 34 */	stw r0, 0x34(r1)
@@ -216,9 +215,9 @@ switch_802F7798:
 /* 802F77A4 002C0D64  7C 08 03 A6 */	mtlr r0
 /* 802F77A8 002C0D68  38 21 00 30 */	addi r1, r1, 0x30
 /* 802F77AC 002C0D6C  4E 80 00 20 */	blr
+.endfn l2c_csm_closed
 
-.global l2c_csm_orig_w4_sec_comp
-l2c_csm_orig_w4_sec_comp:
+.fn l2c_csm_orig_w4_sec_comp, global
 /* 802F77B0 002C0D70  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802F77B4 002C0D74  7C 08 02 A6 */	mflr r0
 /* 802F77B8 002C0D78  90 01 00 34 */	stw r0, 0x34(r1)
@@ -320,9 +319,9 @@ switch_802F7908:
 /* 802F7914 002C0ED4  7C 08 03 A6 */	mtlr r0
 /* 802F7918 002C0ED8  38 21 00 30 */	addi r1, r1, 0x30
 /* 802F791C 002C0EDC  4E 80 00 20 */	blr
+.endfn l2c_csm_orig_w4_sec_comp
 
-.global l2c_csm_term_w4_sec_comp
-l2c_csm_term_w4_sec_comp:
+.fn l2c_csm_term_w4_sec_comp, global
 /* 802F7920 002C0EE0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F7924 002C0EE4  7C 08 02 A6 */	mflr r0
 /* 802F7928 002C0EE8  3C C0 80 5C */	lis r6, lbl_805C2AC0@ha
@@ -422,9 +421,9 @@ switch_802F7A6C:
 /* 802F7A7C 002C103C  7C 08 03 A6 */	mtlr r0
 /* 802F7A80 002C1040  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F7A84 002C1044  4E 80 00 20 */	blr
+.endfn l2c_csm_term_w4_sec_comp
 
-.global l2c_csm_w4_l2cap_connect_rsp
-l2c_csm_w4_l2cap_connect_rsp:
+.fn l2c_csm_w4_l2cap_connect_rsp, global
 /* 802F7A88 002C1048  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802F7A8C 002C104C  7C 08 02 A6 */	mflr r0
 /* 802F7A90 002C1050  90 01 00 34 */	stw r0, 0x34(r1)
@@ -584,9 +583,9 @@ switch_802F7CB4:
 /* 802F7CC0 002C1280  7C 08 03 A6 */	mtlr r0
 /* 802F7CC4 002C1284  38 21 00 30 */	addi r1, r1, 0x30
 /* 802F7CC8 002C1288  4E 80 00 20 */	blr
+.endfn l2c_csm_w4_l2cap_connect_rsp
 
-.global l2c_csm_w4_l2ca_connect_rsp
-l2c_csm_w4_l2ca_connect_rsp:
+.fn l2c_csm_w4_l2ca_connect_rsp, global
 /* 802F7CCC 002C128C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F7CD0 002C1290  7C 08 02 A6 */	mflr r0
 /* 802F7CD4 002C1294  90 01 00 24 */	stw r0, 0x24(r1)
@@ -717,9 +716,9 @@ switch_802F7E8C:
 /* 802F7E98 002C1458  7C 08 03 A6 */	mtlr r0
 /* 802F7E9C 002C145C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F7EA0 002C1460  4E 80 00 20 */	blr
+.endfn l2c_csm_w4_l2ca_connect_rsp
 
-.global l2c_csm_config
-l2c_csm_config:
+.fn l2c_csm_config, global
 /* 802F7EA4 002C1464  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F7EA8 002C1468  7C 08 02 A6 */	mflr r0
 /* 802F7EAC 002C146C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -987,9 +986,9 @@ switch_802F8254:
 /* 802F8260 002C1820  7C 08 03 A6 */	mtlr r0
 /* 802F8264 002C1824  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F8268 002C1828  4E 80 00 20 */	blr
+.endfn l2c_csm_config
 
-.global l2c_csm_open
-l2c_csm_open:
+.fn l2c_csm_open, global
 /* 802F826C 002C182C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F8270 002C1830  7C 08 02 A6 */	mflr r0
 /* 802F8274 002C1834  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1154,9 +1153,9 @@ switch_802F84B0:
 /* 802F84BC 002C1A7C  7C 08 03 A6 */	mtlr r0
 /* 802F84C0 002C1A80  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F84C4 002C1A84  4E 80 00 20 */	blr
+.endfn l2c_csm_open
 
-.global l2c_csm_w4_l2cap_disconnect_rsp
-l2c_csm_w4_l2cap_disconnect_rsp:
+.fn l2c_csm_w4_l2cap_disconnect_rsp, global
 /* 802F84C8 002C1A88  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802F84CC 002C1A8C  7C 08 02 A6 */	mflr r0
 /* 802F84D0 002C1A90  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1289,9 +1288,9 @@ switch_802F8694:
 /* 802F86A0 002C1C60  7C 08 03 A6 */	mtlr r0
 /* 802F86A4 002C1C64  38 21 00 30 */	addi r1, r1, 0x30
 /* 802F86A8 002C1C68  4E 80 00 20 */	blr
+.endfn l2c_csm_w4_l2cap_disconnect_rsp
 
-.global l2c_csm_w4_l2ca_disconnect_rsp
-l2c_csm_w4_l2ca_disconnect_rsp:
+.fn l2c_csm_w4_l2ca_disconnect_rsp, global
 /* 802F86AC 002C1C6C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F86B0 002C1C70  7C 08 02 A6 */	mflr r0
 /* 802F86B4 002C1C74  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1387,9 +1386,9 @@ switch_802F87F0:
 /* 802F87FC 002C1DBC  7C 08 03 A6 */	mtlr r0
 /* 802F8800 002C1DC0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F8804 002C1DC4  4E 80 00 20 */	blr 
+.endfn l2c_csm_w4_l2ca_disconnect_rsp
 
-.global forward_peer_data
-forward_peer_data:
+.fn forward_peer_data, global
 /* 802F8808 002C1DC8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F880C 002C1DCC  7C 08 02 A6 */	mflr r0
 /* 802F8810 002C1DD0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1503,6 +1502,7 @@ forward_peer_data:
 /* 802F89A0 002C1F60  7C 08 03 A6 */	mtlr r0
 /* 802F89A4 002C1F64  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F89A8 002C1F68  4E 80 00 20 */	blr
+.endfn forward_peer_data
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

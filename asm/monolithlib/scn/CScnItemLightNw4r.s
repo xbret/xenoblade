@@ -2,8 +2,9 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_80482440
-func_80482440:
+
+
+.fn func_80482440, global
 /* 80482440 0044BA00  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80482444 0044BA04  7C 08 02 A6 */	mflr r0
 /* 80482448 0044BA08  90 01 00 44 */	stw r0, 0x44(r1)
@@ -65,9 +66,12 @@ func_80482440:
 /* 8048251C 0044BADC  7C 08 03 A6 */	mtlr r0
 /* 80482520 0044BAE0  38 21 00 40 */	addi r1, r1, 0x40
 /* 80482524 0044BAE4  4E 80 00 20 */	blr 
+.endfn func_80482440
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
 
 .global CScnItemLightNw4r_typestr
 CScnItemLightNw4r_typestr:
@@ -82,6 +86,8 @@ lbl_805277F4:
 	
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
 
 .global __vt__CScnItemLightNw4r
 __vt__CScnItemLightNw4r:
@@ -107,21 +113,30 @@ CScnItemLightNw4r_hierarchy:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+
+
 .global __RTTI__CScnItemLightNw4r
 __RTTI__CScnItemLightNw4r:
 	.4byte CScnItemLightNw4r_typestr
 	.4byte CScnItemLightNw4r_hierarchy
 
-.section extab_, "a"  # 0x800066E0 - 0x80021020
+.section extab, "a" # 0x800066E0 - 0x80021020
 
-.global lbl_8001E2B8
-lbl_8001E2B8:
+.balign 4
+
+.obj "@etb_8001E2B8", local
+.hidden "@etb_8001E2B8"
 	.4byte 0x20080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001E2B8"
 
+.section extabindex, "a" # 0x80021020 - 0x80039220
 
-.section extabindex_, "a"  # 0x80021020 - 0x80039220
+.balign 4
 
-.4byte func_80482440
+.obj "@eti_80036218", local
+.hidden "@eti_80036218"
+	.4byte func_80482440
 	.4byte 0x000000E8
-	.4byte lbl_8001E2B8
+	.4byte "@etb_8001E2B8"
+.endobj "@eti_80036218"

@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global LSC_Create
-LSC_Create:
+.fn LSC_Create, global
 /* 80391D58 0035B318  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80391D5C 0035B31C  7C 08 02 A6 */	mflr r0
 /* 80391D60 0035B320  90 01 00 14 */	stw r0, 0x14(r1)
@@ -20,9 +19,9 @@ LSC_Create:
 /* 80391D8C 0035B34C  7C 08 03 A6 */	mtlr r0
 /* 80391D90 0035B350  38 21 00 10 */	addi r1, r1, 0x10
 /* 80391D94 0035B354  4E 80 00 20 */	blr 
+.endfn LSC_Create
 
-.global lsc_Create
-lsc_Create:
+.fn lsc_Create, global
 /* 80391D98 0035B358  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80391D9C 0035B35C  7C 08 02 A6 */	mflr r0
 /* 80391DA0 0035B360  2C 03 00 00 */	cmpwi r3, 0
@@ -131,9 +130,9 @@ lsc_Create:
 /* 80391F20 0035B4E0  7C 08 03 A6 */	mtlr r0
 /* 80391F24 0035B4E4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80391F28 0035B4E8  4E 80 00 20 */	blr 
+.endfn lsc_Create
 
-.global LSC_Destroy
-LSC_Destroy:
+.fn LSC_Destroy, global
 /* 80391F2C 0035B4EC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80391F30 0035B4F0  7C 08 02 A6 */	mflr r0
 /* 80391F34 0035B4F4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -202,9 +201,9 @@ LSC_Destroy:
 /* 80392018 0035B5D8  7C 08 03 A6 */	mtlr r0
 /* 8039201C 0035B5DC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80392020 0035B5E0  4E 80 00 20 */	blr 
+.endfn LSC_Destroy
 
-.global LSC_SetStmHndl
-LSC_SetStmHndl:
+.fn LSC_SetStmHndl, global
 /* 80392024 0035B5E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80392028 0035B5E8  7C 08 02 A6 */	mflr r0
 /* 8039202C 0035B5EC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -221,9 +220,9 @@ LSC_SetStmHndl:
 /* 80392058 0035B618  7C 08 03 A6 */	mtlr r0
 /* 8039205C 0035B61C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80392060 0035B620  4E 80 00 20 */	blr 
+.endfn LSC_SetStmHndl
 
-.global LSC_EntryFname
-LSC_EntryFname:
+.fn LSC_EntryFname, global
 /* 80392064 0035B624  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80392068 0035B628  7C 08 02 A6 */	mflr r0
 /* 8039206C 0035B62C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -248,9 +247,9 @@ LSC_EntryFname:
 /* 803920B8 0035B678  7C 08 03 A6 */	mtlr r0
 /* 803920BC 0035B67C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803920C0 0035B680  4E 80 00 20 */	blr 
+.endfn LSC_EntryFname
 
-.global LSC_EntryFileRange
-LSC_EntryFileRange:
+.fn LSC_EntryFileRange, global
 /* 803920C4 0035B684  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803920C8 0035B688  7C 08 02 A6 */	mflr r0
 /* 803920CC 0035B68C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -275,9 +274,9 @@ LSC_EntryFileRange:
 /* 80392118 0035B6D8  7C 08 03 A6 */	mtlr r0
 /* 8039211C 0035B6DC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80392120 0035B6E0  4E 80 00 20 */	blr 
+.endfn LSC_EntryFileRange
 
-.global lsc_EntryFileRange
-lsc_EntryFileRange:
+.fn lsc_EntryFileRange, global
 /* 80392124 0035B6E4  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80392128 0035B6E8  7C 08 02 A6 */	mflr r0
 /* 8039212C 0035B6EC  2C 03 00 00 */	cmpwi r3, 0
@@ -424,9 +423,9 @@ lsc_EntryFileRange:
 /* 8039233C 0035B8FC  7C 08 03 A6 */	mtlr r0
 /* 80392340 0035B900  38 21 00 30 */	addi r1, r1, 0x30
 /* 80392344 0035B904  4E 80 00 20 */	blr 
+.endfn lsc_EntryFileRange
 
-.global LSC_Start
-LSC_Start:
+.fn LSC_Start, global
 /* 80392348 0035B908  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039234C 0035B90C  7C 08 02 A6 */	mflr r0
 /* 80392350 0035B910  90 01 00 24 */	stw r0, 0x24(r1)
@@ -514,9 +513,9 @@ LSC_Start:
 /* 80392470 0035BA30  7C 08 03 A6 */	mtlr r0
 /* 80392474 0035BA34  38 21 00 20 */	addi r1, r1, 0x20
 /* 80392478 0035BA38  4E 80 00 20 */	blr 
+.endfn LSC_Start
 
-.global LSC_Stop
-LSC_Stop:
+.fn LSC_Stop, global
 /* 8039247C 0035BA3C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80392480 0035BA40  7C 08 02 A6 */	mflr r0
 /* 80392484 0035BA44  90 01 00 14 */	stw r0, 0x14(r1)
@@ -574,9 +573,9 @@ LSC_Stop:
 /* 80392540 0035BB00  7C 08 03 A6 */	mtlr r0
 /* 80392544 0035BB04  38 21 00 10 */	addi r1, r1, 0x10
 /* 80392548 0035BB08  4E 80 00 20 */	blr
+.endfn LSC_Stop
 
-.global LSC_Pause
-LSC_Pause:
+.fn LSC_Pause, global
 /* 8039254C 0035BB0C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80392550 0035BB10  7C 08 02 A6 */	mflr r0
 /* 80392554 0035BB14  90 01 00 14 */	stw r0, 0x14(r1)
@@ -610,9 +609,9 @@ LSC_Pause:
 /* 803925B8 0035BB78  7C 08 03 A6 */	mtlr r0
 /* 803925BC 0035BB7C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803925C0 0035BB80  4E 80 00 20 */	blr 
+.endfn LSC_Pause
 
-.global LSC_ExecServer
-LSC_ExecServer:
+.fn LSC_ExecServer, global
 /* 803925C4 0035BB84  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803925C8 0035BB88  7C 08 02 A6 */	mflr r0
 /* 803925CC 0035BB8C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -644,9 +643,9 @@ LSC_ExecServer:
 /* 8039262C 0035BBEC  7C 08 03 A6 */	mtlr r0
 /* 80392630 0035BBF0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80392634 0035BBF4  4E 80 00 20 */	blr 
+.endfn LSC_ExecServer
 
-.global LSC_GetStat
-LSC_GetStat:
+.fn LSC_GetStat, global
 /* 80392638 0035BBF8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039263C 0035BBFC  7C 08 02 A6 */	mflr r0
 /* 80392640 0035BC00  90 01 00 14 */	stw r0, 0x14(r1)
@@ -673,9 +672,9 @@ LSC_GetStat:
 /* 8039268C 0035BC4C  7C 08 03 A6 */	mtlr r0
 /* 80392690 0035BC50  38 21 00 10 */	addi r1, r1, 0x10
 /* 80392694 0035BC54  4E 80 00 20 */	blr 
+.endfn LSC_GetStat
 
-.global LSC_GetNumStm
-LSC_GetNumStm:
+.fn LSC_GetNumStm, global
 /* 80392698 0035BC58  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039269C 0035BC5C  7C 08 02 A6 */	mflr r0
 /* 803926A0 0035BC60  90 01 00 14 */	stw r0, 0x14(r1)
@@ -701,9 +700,9 @@ LSC_GetNumStm:
 /* 803926E8 0035BCA8  7C 08 03 A6 */	mtlr r0
 /* 803926EC 0035BCAC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803926F0 0035BCB0  4E 80 00 20 */	blr
+.endfn LSC_GetNumStm
 
-.global LSC_SetFlowLimit
-LSC_SetFlowLimit:
+.fn LSC_SetFlowLimit, global
 /* 803926F4 0035BCB4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803926F8 0035BCB8  7C 08 02 A6 */	mflr r0
 /* 803926FC 0035BCBC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -744,9 +743,9 @@ LSC_SetFlowLimit:
 /* 80392778 0035BD38  7C 08 03 A6 */	mtlr r0
 /* 8039277C 0035BD3C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80392780 0035BD40  4E 80 00 20 */	blr 
+.endfn LSC_SetFlowLimit
 
-.global LSC_CallStatFunc
-LSC_CallStatFunc:
+.fn LSC_CallStatFunc, global
 /* 80392784 0035BD44  3C 80 80 5F */	lis r4, lbl_805EFA80@ha
 /* 80392788 0035BD48  38 84 FA 80 */	addi r4, r4, lbl_805EFA80@l
 /* 8039278C 0035BD4C  81 84 00 00 */	lwz r12, 0(r4)
@@ -757,9 +756,9 @@ LSC_CallStatFunc:
 /* 803927A0 0035BD60  7D 89 03 A6 */	mtctr r12
 /* 803927A4 0035BD64  4E 80 04 20 */	bctr 
 /* 803927A8 0035BD68  4E 80 00 20 */	blr 
+.endfn LSC_CallStatFunc
 
-.global LSC_SetLpFlg
-LSC_SetLpFlg:
+.fn LSC_SetLpFlg, global
 /* 803927AC 0035BD6C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803927B0 0035BD70  7C 08 02 A6 */	mflr r0
 /* 803927B4 0035BD74  90 01 00 14 */	stw r0, 0x14(r1)
@@ -786,6 +785,7 @@ LSC_SetLpFlg:
 /* 80392800 0035BDC0  7C 08 03 A6 */	mtlr r0
 /* 80392804 0035BDC4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80392808 0035BDC8  4E 80 00 20 */	blr 
+.endfn LSC_SetLpFlg
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

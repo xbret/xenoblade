@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __wcstoul
-__wcstoul:
+.fn __wcstoul, global
 /* 802C47D4 0028DD94  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 802C47D8 0028DD98  7C 08 02 A6 */	mflr r0
 /* 802C47DC 0028DD9C  2C 03 00 00 */	cmpwi r3, 0
@@ -308,6 +307,7 @@ __wcstoul:
 /* 802C4BE0 0028E1A0  7C 08 03 A6 */	mtlr r0
 /* 802C4BE4 0028E1A4  38 21 00 50 */	addi r1, r1, 0x50
 /* 802C4BE8 0028E1A8  4E 80 00 20 */	blr 
+.endfn __wcstoul
 
 .global wcstol
 wcstol:

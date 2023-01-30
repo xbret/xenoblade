@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global MEMCreateFrmHeapEx
-MEMCreateFrmHeapEx:
+.fn MEMCreateFrmHeapEx, global
 /* 80349770 00312D30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80349774 00312D34  7C 08 02 A6 */	mflr r0
 /* 80349778 00312D38  7C 84 1A 14 */	add r4, r4, r3
@@ -41,10 +40,10 @@ MEMCreateFrmHeapEx:
 /* 803497E8 00312DA8  7C 08 03 A6 */	mtlr r0
 /* 803497EC 00312DAC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803497F0 00312DB0  4E 80 00 20 */	blr 
+.endfn MEMCreateFrmHeapEx
 
 .balign 16, 0
-.global MEMDestroyFrmHeap
-MEMDestroyFrmHeap:
+.fn MEMDestroyFrmHeap, global
 /* 80349800 00312DC0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80349804 00312DC4  7C 08 02 A6 */	mflr r0
 /* 80349808 00312DC8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -57,10 +56,10 @@ MEMDestroyFrmHeap:
 /* 80349824 00312DE4  7C 08 03 A6 */	mtlr r0
 /* 80349828 00312DE8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8034982C 00312DEC  4E 80 00 20 */	blr 
+.endfn MEMDestroyFrmHeap
 
 .balign 16, 0
-.global MEMAllocFromFrmHeapEx
-MEMAllocFromFrmHeapEx:
+.fn MEMAllocFromFrmHeapEx, global
 /* 80349830 00312DF0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80349834 00312DF4  7C 08 02 A6 */	mflr r0
 /* 80349838 00312DF8  2C 04 00 00 */	cmpwi r4, 0
@@ -142,10 +141,10 @@ MEMAllocFromFrmHeapEx:
 /* 80349944 00312F04  7C 08 03 A6 */	mtlr r0
 /* 80349948 00312F08  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034994C 00312F0C  4E 80 00 20 */	blr 
+.endfn MEMAllocFromFrmHeapEx
 
 .balign 16, 0
-.global MEMFreeToFrmHeap
-MEMFreeToFrmHeap:
+.fn MEMFreeToFrmHeap, global
 /* 80349950 00312F10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80349954 00312F14  7C 08 02 A6 */	mflr r0
 /* 80349958 00312F18  90 01 00 14 */	stw r0, 0x14(r1)
@@ -192,6 +191,7 @@ MEMFreeToFrmHeap:
 /* 803499E4 00312FA4  7C 08 03 A6 */	mtlr r0
 /* 803499E8 00312FA8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803499EC 00312FAC  4E 80 00 20 */	blr 
+.endfn MEMFreeToFrmHeap
 
 .balign 16, 0
 .global MEMGetAllocatableSizeForFrmHeapEx

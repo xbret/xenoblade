@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global __HBMSYNGetRelativePitch
-__HBMSYNGetRelativePitch:
+.fn __HBMSYNGetRelativePitch, global
 /* 80341810 0030ADD0  80 63 00 28 */	lwz r3, 0x28(r3)
 /* 80341814 0030ADD4  3C E0 80 55 */	lis r7, lbl_80550020@ha
 /* 80341818 0030ADD8  38 E7 00 20 */	addi r7, r7, lbl_80550020@l
@@ -76,10 +75,10 @@ __HBMSYNGetRelativePitch:
 /* 80341914 0030AED4  3C 60 80 52 */	lis r3, lbl_80518B78@ha
 /* 80341918 0030AED8  C0 23 8B 78 */	lfs f1, lbl_80518B78@l(r3)
 /* 8034191C 0030AEDC  4E 80 00 20 */	blr 
+.endfn __HBMSYNGetRelativePitch
 
 
-.global func_80341920
-func_80341920:
+.fn func_80341920, global
 /* 80341920 0030AEE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80341924 0030AEE4  3C 00 43 30 */	lis r0, 0x4330
 /* 80341928 0030AEE8  3C A0 80 52 */	lis r5, double_80518B80@ha
@@ -106,10 +105,10 @@ func_80341920:
 /* 8034197C 0030AF3C  90 03 00 28 */	stw r0, 0x28(r3)
 /* 80341980 0030AF40  38 21 00 10 */	addi r1, r1, 0x10
 /* 80341984 0030AF44  4E 80 00 20 */	blr 
+.endfn func_80341920
 
 .balign 16, 0
-.global func_80341990
-func_80341990:
+.fn func_80341990, global
 /* 80341990 0030AF50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80341994 0030AF54  7C 08 02 A6 */	mflr r0
 /* 80341998 0030AF58  90 01 00 14 */	stw r0, 0x14(r1)
@@ -149,10 +148,10 @@ func_80341990:
 /* 80341A20 0030AFE0  7C 08 03 A6 */	mtlr r0
 /* 80341A24 0030AFE4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80341A28 0030AFE8  4E 80 00 20 */	blr 
+.endfn func_80341990
 
 .balign 16, 0
-.global __HBMSYNUpdateSrc
-__HBMSYNUpdateSrc:
+.fn __HBMSYNUpdateSrc, global
 /* 80341A30 0030AFF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80341A34 0030AFF4  7C 08 02 A6 */	mflr r0
 /* 80341A38 0030AFF8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -176,6 +175,7 @@ __HBMSYNUpdateSrc:
 /* 80341A80 0030B040  7C 08 03 A6 */	mtlr r0
 /* 80341A84 0030B044  38 21 00 10 */	addi r1, r1, 0x10
 /* 80341A88 0030B048  4E 80 00 20 */	blr
+.endfn __HBMSYNUpdateSrc
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

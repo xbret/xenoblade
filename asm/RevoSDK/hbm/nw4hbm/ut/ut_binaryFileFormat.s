@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_803368F0
-func_803368F0:
+.fn func_803368F0, global
 /* 803368F0 002FFEB0  80 03 00 00 */	lwz r0, 0(r3)
 /* 803368F4 002FFEB4  7C 00 20 40 */	cmplw r0, r4
 /* 803368F8 002FFEB8  41 82 00 0C */	beq .L_80336904
@@ -38,10 +37,10 @@ func_803368F0:
 /* 80336958 002FFF18  7C 00 18 50 */	subf r0, r0, r3
 /* 8033695C 002FFF1C  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 80336960 002FFF20  4E 80 00 20 */	blr 
+.endfn func_803368F0
 
 .balign 16, 0
-.global func_80336970
-func_80336970:
+.fn func_80336970, global
 /* 80336970 002FFF30  80 E3 00 00 */	lwz r7, 0(r3)
 /* 80336974 002FFF34  88 C7 00 00 */	lbz r6, 0(r7)
 /* 80336978 002FFF38  54 C0 06 31 */	rlwinm. r0, r6, 0, 0x18, 0x18
@@ -75,11 +74,11 @@ func_80336970:
 .L_803369E0:
 /* 803369E0 002FFFA0  7C C3 33 78 */	mr r3, r6
 /* 803369E4 002FFFA4  4E 80 00 20 */	blr
+.endfn func_80336970
 
 
 .balign 16, 0
-.global func_803369F0
-func_803369F0:
+.fn func_803369F0, global
 /* 803369F0 002FFFB0  80 A3 00 00 */	lwz r5, 0(r3)
 /* 803369F4 002FFFB4  7C 66 1B 78 */	mr r6, r3
 /* 803369F8 002FFFB8  80 83 00 00 */	lwz r4, 0(r3)
@@ -87,11 +86,11 @@ func_803369F0:
 /* 80336A00 002FFFC0  38 04 00 02 */	addi r0, r4, 2
 /* 80336A04 002FFFC4  90 06 00 00 */	stw r0, 0(r6)
 /* 80336A08 002FFFC8  4E 80 00 20 */	blr
+.endfn func_803369F0
 
 
 .balign 16, 0
-.global func_80336A10
-func_80336A10:
+.fn func_80336A10, global
 /* 80336A10 002FFFD0  80 A3 00 00 */	lwz r5, 0(r3)
 /* 80336A14 002FFFD4  7C 66 1B 78 */	mr r6, r3
 /* 80336A18 002FFFD8  80 83 00 00 */	lwz r4, 0(r3)
@@ -99,6 +98,7 @@ func_80336A10:
 /* 80336A20 002FFFE0  38 04 00 01 */	addi r0, r4, 1
 /* 80336A24 002FFFE4  90 06 00 00 */	stw r0, 0(r6)
 /* 80336A28 002FFFE8  4E 80 00 20 */	blr
+.endfn func_80336A10
 
 .balign 16, 0
 .global func_80336A30

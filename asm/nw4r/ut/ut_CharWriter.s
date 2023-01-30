@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __ct__Q34nw4r2ut10CharWriterFv
-__ct__Q34nw4r2ut10CharWriterFv:
+.fn __ct__Q34nw4r2ut10CharWriterFv, global
 /* 8042EEE0 003F84A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8042EEE4 003F84A4  7C 08 02 A6 */	mflr r0
 /* 8042EEE8 003F84A8  3C E0 80 65 */	lis r7, lbl_806570B8@ha
@@ -146,9 +145,9 @@ __ct__Q34nw4r2ut10CharWriterFv:
 /* 8042F0F4 003F86B4  7C 08 03 A6 */	mtlr r0
 /* 8042F0F8 003F86B8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8042F0FC 003F86BC  4E 80 00 20 */	blr 
+.endfn __ct__Q34nw4r2ut10CharWriterFv
 
-.global __dt__Q34nw4r2ut10CharWriterFv
-__dt__Q34nw4r2ut10CharWriterFv:
+.fn __dt__Q34nw4r2ut10CharWriterFv, global
 /* 8042F100 003F86C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8042F104 003F86C4  7C 08 02 A6 */	mflr r0
 /* 8042F108 003F86C8  2C 03 00 00 */	cmpwi r3, 0
@@ -166,9 +165,9 @@ __dt__Q34nw4r2ut10CharWriterFv:
 /* 8042F134 003F86F4  7C 08 03 A6 */	mtlr r0
 /* 8042F138 003F86F8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042F13C 003F86FC  4E 80 00 20 */	blr 
+.endfn __dt__Q34nw4r2ut10CharWriterFv
 
-.global SetupGX__Q34nw4r2ut10CharWriterFv
-SetupGX__Q34nw4r2ut10CharWriterFv:
+.fn SetupGX__Q34nw4r2ut10CharWriterFv, global
 /* 8042F140 003F8700  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8042F144 003F8704  7C 08 02 A6 */	mflr r0
 /* 8042F148 003F8708  3C A0 80 65 */	lis r5, lbl_806570B8@ha
@@ -845,9 +844,9 @@ SetupGX__Q34nw4r2ut10CharWriterFv:
 /* 8042FB8C 003F914C  7C 08 03 A6 */	mtlr r0
 /* 8042FB90 003F9150  38 21 00 30 */	addi r1, r1, 0x30
 /* 8042FB94 003F9154  4E 80 00 20 */	blr 
+.endfn SetupGX__Q34nw4r2ut10CharWriterFv
 
-.global SetFontSize__Q34nw4r2ut10CharWriterFff
-SetFontSize__Q34nw4r2ut10CharWriterFff:
+.fn SetFontSize__Q34nw4r2ut10CharWriterFff, global
 /* 8042FB98 003F9158  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8042FB9C 003F915C  7C 08 02 A6 */	mflr r0
 /* 8042FBA0 003F9160  90 01 00 44 */	stw r0, 0x44(r1)
@@ -897,9 +896,9 @@ SetFontSize__Q34nw4r2ut10CharWriterFff:
 /* 8042FC50 003F9210  7C 08 03 A6 */	mtlr r0
 /* 8042FC54 003F9214  38 21 00 40 */	addi r1, r1, 0x40
 /* 8042FC58 003F9218  4E 80 00 20 */	blr 
+.endfn SetFontSize__Q34nw4r2ut10CharWriterFff
 
-.global GetFontWidth__Q34nw4r2ut10CharWriterCFv
-GetFontWidth__Q34nw4r2ut10CharWriterCFv:
+.fn GetFontWidth__Q34nw4r2ut10CharWriterCFv, global
 /* 8042FC5C 003F921C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8042FC60 003F9220  7C 08 02 A6 */	mflr r0
 /* 8042FC64 003F9224  90 01 00 24 */	stw r0, 0x24(r1)
@@ -924,9 +923,9 @@ GetFontWidth__Q34nw4r2ut10CharWriterCFv:
 /* 8042FCB0 003F9270  7C 08 03 A6 */	mtlr r0
 /* 8042FCB4 003F9274  38 21 00 20 */	addi r1, r1, 0x20
 /* 8042FCB8 003F9278  4E 80 00 20 */	blr 
+.endfn GetFontWidth__Q34nw4r2ut10CharWriterCFv
 
-.global GetFontHeight__Q34nw4r2ut10CharWriterCFv
-GetFontHeight__Q34nw4r2ut10CharWriterCFv:
+.fn GetFontHeight__Q34nw4r2ut10CharWriterCFv, global
 /* 8042FCBC 003F927C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8042FCC0 003F9280  7C 08 02 A6 */	mflr r0
 /* 8042FCC4 003F9284  90 01 00 24 */	stw r0, 0x24(r1)
@@ -951,9 +950,9 @@ GetFontHeight__Q34nw4r2ut10CharWriterCFv:
 /* 8042FD10 003F92D0  7C 08 03 A6 */	mtlr r0
 /* 8042FD14 003F92D4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8042FD18 003F92D8  4E 80 00 20 */	blr 
+.endfn GetFontHeight__Q34nw4r2ut10CharWriterCFv
 
-.global GetFontAscent__Q34nw4r2ut10CharWriterCFv
-GetFontAscent__Q34nw4r2ut10CharWriterCFv:
+.fn GetFontAscent__Q34nw4r2ut10CharWriterCFv, global
 /* 8042FD1C 003F92DC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8042FD20 003F92E0  7C 08 02 A6 */	mflr r0
 /* 8042FD24 003F92E4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -978,9 +977,9 @@ GetFontAscent__Q34nw4r2ut10CharWriterCFv:
 /* 8042FD70 003F9330  7C 08 03 A6 */	mtlr r0
 /* 8042FD74 003F9334  38 21 00 20 */	addi r1, r1, 0x20
 /* 8042FD78 003F9338  4E 80 00 20 */	blr 
+.endfn GetFontAscent__Q34nw4r2ut10CharWriterCFv
 
-.global GetFontDescent__Q34nw4r2ut10CharWriterCFv
-GetFontDescent__Q34nw4r2ut10CharWriterCFv:
+.fn GetFontDescent__Q34nw4r2ut10CharWriterCFv, global
 /* 8042FD7C 003F933C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8042FD80 003F9340  7C 08 02 A6 */	mflr r0
 /* 8042FD84 003F9344  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1005,9 +1004,9 @@ GetFontDescent__Q34nw4r2ut10CharWriterCFv:
 /* 8042FDD0 003F9390  7C 08 03 A6 */	mtlr r0
 /* 8042FDD4 003F9394  38 21 00 20 */	addi r1, r1, 0x20
 /* 8042FDD8 003F9398  4E 80 00 20 */	blr 
+.endfn GetFontDescent__Q34nw4r2ut10CharWriterCFv
 
-.global Print__Q34nw4r2ut10CharWriterFUs
-Print__Q34nw4r2ut10CharWriterFUs:
+.fn Print__Q34nw4r2ut10CharWriterFUs, global
 /* 8042FDDC 003F939C  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 8042FDE0 003F93A0  7C 08 02 A6 */	mflr r0
 /* 8042FDE4 003F93A4  90 01 00 54 */	stw r0, 0x54(r1)
@@ -1086,9 +1085,9 @@ Print__Q34nw4r2ut10CharWriterFUs:
 /* 8042FF00 003F94C0  7C 08 03 A6 */	mtlr r0
 /* 8042FF04 003F94C4  38 21 00 50 */	addi r1, r1, 0x50
 /* 8042FF08 003F94C8  4E 80 00 20 */	blr 
+.endfn Print__Q34nw4r2ut10CharWriterFUs
 
-.global PrintGlyph__Q34nw4r2ut10CharWriterFfffRCQ34nw4r2ut5Glyph
-PrintGlyph__Q34nw4r2ut10CharWriterFfffRCQ34nw4r2ut5Glyph:
+.fn PrintGlyph__Q34nw4r2ut10CharWriterFfffRCQ34nw4r2ut5Glyph, global
 /* 8042FF0C 003F94CC  94 21 FF 50 */	stwu r1, -0xb0(r1)
 /* 8042FF10 003F94D0  7C 08 02 A6 */	mflr r0
 /* 8042FF14 003F94D4  90 01 00 B4 */	stw r0, 0xb4(r1)
@@ -1251,9 +1250,9 @@ PrintGlyph__Q34nw4r2ut10CharWriterFfffRCQ34nw4r2ut5Glyph:
 /* 8043017C 003F973C  7C 08 03 A6 */	mtlr r0
 /* 80430180 003F9740  38 21 00 B0 */	addi r1, r1, 0xb0
 /* 80430184 003F9744  4E 80 00 20 */	blr 
+.endfn PrintGlyph__Q34nw4r2ut10CharWriterFfffRCQ34nw4r2ut5Glyph
 
-.global UpdateVertexColor__Q34nw4r2ut10CharWriterFv
-UpdateVertexColor__Q34nw4r2ut10CharWriterFv:
+.fn UpdateVertexColor__Q34nw4r2ut10CharWriterFv, global
 /* 80430188 003F9748  80 03 00 20 */	lwz r0, 0x20(r3)
 /* 8043018C 003F974C  88 C3 00 18 */	lbz r6, 0x18(r3)
 /* 80430190 003F9750  88 A3 00 19 */	lbz r5, 0x19(r3)
@@ -1344,10 +1343,10 @@ UpdateVertexColor__Q34nw4r2ut10CharWriterFv:
 /* 804302CC 003F988C  7C 00 22 14 */	add r0, r0, r4
 /* 804302D0 003F9890  98 03 00 17 */	stb r0, 0x17(r3)
 /* 804302D4 003F9894  4E 80 00 20 */	blr
+.endfn UpdateVertexColor__Q34nw4r2ut10CharWriterFv
 
 #not sure about this label
-.global SetupGXWithColorMapping__Q34nw4r2ut10CharWriterFQ34nw4r2ut5ColorQ34nw4r2ut5Color
-SetupGXWithColorMapping__Q34nw4r2ut10CharWriterFQ34nw4r2ut5ColorQ34nw4r2ut5Color:
+.fn SetupGXWithColorMapping__Q34nw4r2ut10CharWriterFQ34nw4r2ut5ColorQ34nw4r2ut5Color, global
 /* 804302D8 003F9898  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804302DC 003F989C  7C 08 02 A6 */	mflr r0
 /* 804302E0 003F98A0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1560,6 +1559,7 @@ SetupGXWithColorMapping__Q34nw4r2ut10CharWriterFQ34nw4r2ut5ColorQ34nw4r2ut5Color
 /* 80430618 003F9BD8  7C 08 03 A6 */	mtlr r0
 /* 8043061C 003F9BDC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80430620 003F9BE0  4E 80 00 20 */	blr 
+.endfn SetupGXWithColorMapping__Q34nw4r2ut10CharWriterFQ34nw4r2ut5ColorQ34nw4r2ut5Color
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

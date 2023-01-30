@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global GetIndMtxOp__Q34nw4r3g3d6detailFQ34nw4r3g3d6ResMatQ34nw4r3g3d7ResNodeQ34nw4r3g3d6ResShp
-GetIndMtxOp__Q34nw4r3g3d6detailFQ34nw4r3g3d6ResMatQ34nw4r3g3d7ResNodeQ34nw4r3g3d6ResShp:
+.fn GetIndMtxOp__Q34nw4r3g3d6detailFQ34nw4r3g3d6ResMatQ34nw4r3g3d7ResNodeQ34nw4r3g3d6ResShp, global
 /* 803EF1A0 003B8760  94 21 FE D0 */	stwu r1, -0x130(r1)
 /* 803EF1A4 003B8764  7C 08 02 A6 */	mflr r0
 /* 803EF1A8 003B8768  90 01 01 34 */	stw r0, 0x134(r1)
@@ -348,10 +347,10 @@ GetIndMtxOp__Q34nw4r3g3d6detailFQ34nw4r3g3d6ResMatQ34nw4r3g3d7ResNodeQ34nw4r3g3d
 /* 803EF6B0 003B8C70  7C 08 03 A6 */	mtlr r0
 /* 803EF6B4 003B8C74  38 21 01 30 */	addi r1, r1, 0x130
 /* 803EF6B8 003B8C78  4E 80 00 20 */	blr 
+.endfn GetIndMtxOp__Q34nw4r3g3d6detailFQ34nw4r3g3d6ResMatQ34nw4r3g3d7ResNodeQ34nw4r3g3d6ResShp
 
 #SetupDraw1Mat1ShpSwap__Q34nw4r3g3d22@unnamed@g3d_draw_cpp@FPQ34nw4r3g3d16Draw1Mat1ShpSwapPQ34nw4r3g3d21DrawResMdlReplacementUl
-.global SetupDraw1Mat1ShpSwap__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FPQ34nw4r3g3d16Draw1Mat1ShpSwapPQ34nw4r3g3d21DrawResMdlReplacementUl
-SetupDraw1Mat1ShpSwap__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FPQ34nw4r3g3d16Draw1Mat1ShpSwapPQ34nw4r3g3d21DrawResMdlReplacementUl:
+.fn SetupDraw1Mat1ShpSwap__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FPQ34nw4r3g3d16Draw1Mat1ShpSwapPQ34nw4r3g3d21DrawResMdlReplacementUl, global
 /* 803EF6BC 003B8C7C  80 C4 00 08 */	lwz r6, 8(r4)
 /* 803EF6C0 003B8C80  2C 06 00 00 */	cmpwi r6, 0
 /* 803EF6C4 003B8C84  41 82 00 14 */	beq .L_803EF6D8
@@ -489,10 +488,10 @@ SetupDraw1Mat1ShpSwap__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FPQ34nw4r3g3d16Draw1Ma
 /* 803EF878 003B8E38  80 04 00 3C */	lwz r0, 0x3c(r4)
 /* 803EF87C 003B8E3C  90 03 00 34 */	stw r0, 0x34(r3)
 /* 803EF880 003B8E40  4E 80 00 20 */	blr 
+.endfn SetupDraw1Mat1ShpSwap__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FPQ34nw4r3g3d16Draw1Mat1ShpSwapPQ34nw4r3g3d21DrawResMdlReplacementUl
 
 #DrawResMdlLoop__Q34nw4r3g3d22@unnamed@g3d_draw_cpp@FQ34nw4r3g3d6ResMdlPCUcUl
-.global DrawResMdlLoop__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FQ34nw4r3g3d6ResMdlPCUcUl
-DrawResMdlLoop__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FQ34nw4r3g3d6ResMdlPCUcUl:
+.fn DrawResMdlLoop__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FQ34nw4r3g3d6ResMdlPCUcUl, global
 /* 803EF884 003B8E44  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803EF888 003B8E48  7C 08 02 A6 */	mflr r0
 /* 803EF88C 003B8E4C  90 01 00 54 */	stw r0, 0x54(r1)
@@ -581,10 +580,10 @@ DrawResMdlLoop__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FQ34nw4r3g3d6ResMdlPCUcUl:
 /* 803EF9B8 003B8F78  7C 08 03 A6 */	mtlr r0
 /* 803EF9BC 003B8F7C  38 21 00 50 */	addi r1, r1, 0x50
 /* 803EF9C0 003B8F80  4E 80 00 20 */	blr 
+.endfn DrawResMdlLoop__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FQ34nw4r3g3d6ResMdlPCUcUl
 
 #DrawResMdlLoop__Q34nw4r3g3d22@unnamed@g3d_draw_cpp@FQ34nw4r3g3d6ResMdlPCUcPQ34nw4r3g3d21DrawResMdlReplacementUl
-.global DrawResMdlLoop__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FQ34nw4r3g3d6ResMdlPCUcPQ34nw4r3g3d21DrawResMdlReplacementUl
-DrawResMdlLoop__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FQ34nw4r3g3d6ResMdlPCUcPQ34nw4r3g3d21DrawResMdlReplacementUl:
+.fn DrawResMdlLoop__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FQ34nw4r3g3d6ResMdlPCUcPQ34nw4r3g3d21DrawResMdlReplacementUl, global
 /* 803EF9C4 003B8F84  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 803EF9C8 003B8F88  7C 08 02 A6 */	mflr r0
 /* 803EF9CC 003B8F8C  90 01 00 94 */	stw r0, 0x94(r1)
@@ -709,10 +708,10 @@ DrawResMdlLoop__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FQ34nw4r3g3d6ResMdlPCUcPQ34nw
 /* 803EFB7C 003B913C  7C 08 03 A6 */	mtlr r0
 /* 803EFB80 003B9140  38 21 00 90 */	addi r1, r1, 0x90
 /* 803EFB84 003B9144  4E 80 00 20 */	blr 
+.endfn DrawResMdlLoop__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FQ34nw4r3g3d6ResMdlPCUcPQ34nw4r3g3d21DrawResMdlReplacementUl
 
 #DrawResMdlLoop__Q34nw4r3g3d22@unnamed@g3d_draw_cpp@FQ34nw4r3g3d6ResMdlPCQ54nw4r3g3d6detail7workmem4MdlZUlUl
-.global DrawResMdlLoop__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FQ34nw4r3g3d6ResMdlPCQ54nw4r3g3d6detail7workmem4MdlZUlUl
-DrawResMdlLoop__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FQ34nw4r3g3d6ResMdlPCQ54nw4r3g3d6detail7workmem4MdlZUlUl:
+.fn DrawResMdlLoop__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FQ34nw4r3g3d6ResMdlPCQ54nw4r3g3d6detail7workmem4MdlZUlUl, global
 /* 803EFB88 003B9148  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803EFB8C 003B914C  7C 08 02 A6 */	mflr r0
 /* 803EFB90 003B9150  90 01 00 54 */	stw r0, 0x54(r1)
@@ -787,10 +786,10 @@ DrawResMdlLoop__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FQ34nw4r3g3d6ResMdlPCQ54nw4r3
 /* 803EFC8C 003B924C  7C 08 03 A6 */	mtlr r0
 /* 803EFC90 003B9250  38 21 00 50 */	addi r1, r1, 0x50
 /* 803EFC94 003B9254  4E 80 00 20 */	blr 
+.endfn DrawResMdlLoop__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FQ34nw4r3g3d6ResMdlPCQ54nw4r3g3d6detail7workmem4MdlZUlUl
 
 #DrawResMdlLoop__Q34nw4r3g3d22@unnamed@g3d_draw_cpp@FQ34nw4r3g3d6ResMdlPCQ54nw4r3g3d6detail7workmem4MdlZUlPQ34nw4r3g3d21DrawResMdlReplacementUl
-.global DrawResMdlLoop__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FQ34nw4r3g3d6ResMdlPCQ54nw4r3g3d6detail7workmem4MdlZUlPQ34nw4r3g3d21DrawResMdlReplacementUl
-DrawResMdlLoop__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FQ34nw4r3g3d6ResMdlPCQ54nw4r3g3d6detail7workmem4MdlZUlPQ34nw4r3g3d21DrawResMdlReplacementUl:
+.fn DrawResMdlLoop__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FQ34nw4r3g3d6ResMdlPCQ54nw4r3g3d6detail7workmem4MdlZUlPQ34nw4r3g3d21DrawResMdlReplacementUl, global
 /* 803EFC98 003B9258  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 803EFC9C 003B925C  7C 08 02 A6 */	mflr r0
 /* 803EFCA0 003B9260  90 01 00 94 */	stw r0, 0x94(r1)
@@ -885,10 +884,10 @@ DrawResMdlLoop__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FQ34nw4r3g3d6ResMdlPCQ54nw4r3
 /* 803EFDEC 003B93AC  7C 08 03 A6 */	mtlr r0
 /* 803EFDF0 003B93B0  38 21 00 90 */	addi r1, r1, 0x90
 /* 803EFDF4 003B93B4  4E 80 00 20 */	blr 
+.endfn DrawResMdlLoop__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FQ34nw4r3g3d6ResMdlPCQ54nw4r3g3d6detail7workmem4MdlZUlPQ34nw4r3g3d21DrawResMdlReplacementUl
 
 #SetUpMdlZ__Q34nw4r3g3d22@unnamed@g3d_draw_cpp@FPUlQ34nw4r3g3d6ResMdlPCQ34nw4r4math5MTX34PCUcPQ34nw4r3g3d21DrawResMdlReplacement
-.global SetUpMdlZ__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FPUlQ34nw4r3g3d6ResMdlPCQ34nw4r4math5MTX34PCUcPQ34nw4r3g3d21DrawResMdlReplacement
-SetUpMdlZ__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FPUlQ34nw4r3g3d6ResMdlPCQ34nw4r4math5MTX34PCUcPQ34nw4r3g3d21DrawResMdlReplacement:
+.fn SetUpMdlZ__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FPUlQ34nw4r3g3d6ResMdlPCQ34nw4r4math5MTX34PCUcPQ34nw4r3g3d21DrawResMdlReplacement, global
 /* 803EFDF8 003B93B8  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803EFDFC 003B93BC  7C 08 02 A6 */	mflr r0
 /* 803EFE00 003B93C0  90 01 00 44 */	stw r0, 0x44(r1)
@@ -991,9 +990,9 @@ SetUpMdlZ__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FPUlQ34nw4r3g3d6ResMdlPCQ34nw4r4ma
 /* 803EFF50 003B9510  7C 08 03 A6 */	mtlr r0
 /* 803EFF54 003B9514  38 21 00 40 */	addi r1, r1, 0x40
 /* 803EFF58 003B9518  4E 80 00 20 */	blr 
+.endfn SetUpMdlZ__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FPUlQ34nw4r3g3d6ResMdlPCQ34nw4r4math5MTX34PCUcPQ34nw4r3g3d21DrawResMdlReplacement
 
-.global DrawResMdlDirectly__Q24nw4r3g3dFQ34nw4r3g3d6ResMdlPCQ34nw4r4math5MTX34PCQ34nw4r4math5MTX33PCQ34nw4r4math5MTX34PCUcPCUcPQ34nw4r3g3d21DrawResMdlReplacementUl
-DrawResMdlDirectly__Q24nw4r3g3dFQ34nw4r3g3d6ResMdlPCQ34nw4r4math5MTX34PCQ34nw4r4math5MTX33PCQ34nw4r4math5MTX34PCUcPCUcPQ34nw4r3g3d21DrawResMdlReplacementUl:
+.fn DrawResMdlDirectly__Q24nw4r3g3dFQ34nw4r3g3d6ResMdlPCQ34nw4r4math5MTX34PCQ34nw4r4math5MTX33PCQ34nw4r4math5MTX34PCUcPCUcPQ34nw4r3g3d21DrawResMdlReplacementUl, global
 /* 803EFF5C 003B951C  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803EFF60 003B9520  7C 08 02 A6 */	mflr r0
 /* 803EFF64 003B9524  90 01 00 54 */	stw r0, 0x54(r1)
@@ -1141,10 +1140,10 @@ DrawResMdlDirectly__Q24nw4r3g3dFQ34nw4r3g3d6ResMdlPCQ34nw4r4math5MTX34PCQ34nw4r4
 /* 803F0178 003B9738  7C 08 03 A6 */	mtlr r0
 /* 803F017C 003B973C  38 21 00 50 */	addi r1, r1, 0x50
 /* 803F0180 003B9740  4E 80 00 20 */	blr
+.endfn DrawResMdlDirectly__Q24nw4r3g3dFQ34nw4r3g3d6ResMdlPCQ34nw4r4math5MTX34PCQ34nw4r4math5MTX33PCQ34nw4r4math5MTX34PCUcPCUcPQ34nw4r3g3d21DrawResMdlReplacementUl
 
 #FrontToBack__Q34nw4r3g3d22@unnamed@g3d_draw_cpp@FRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ
-.global FrontToBack__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ
-FrontToBack__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ:
+.fn FrontToBack__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ, global
 /* 803F0184 003B9744  A0 04 00 04 */	lhz r0, 4(r4)
 /* 803F0188 003B9748  A0 A3 00 04 */	lhz r5, 4(r3)
 /* 803F018C 003B974C  7C 05 00 40 */	cmplw r5, r0
@@ -1162,10 +1161,10 @@ FrontToBack__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FRCQ54nw4r3g3d6detail7workmem4Md
 /* 803F01B4 003B9774  7C 60 00 26 */	mfcr r3
 /* 803F01B8 003B9778  54 63 17 FE */	rlwinm r3, r3, 2, 0x1f, 0x1f
 /* 803F01BC 003B977C  4E 80 00 20 */	blr
+.endfn FrontToBack__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ
 
 #BackToFront__Q34nw4r3g3d22@unnamed@g3d_draw_cpp@FRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ
-.global BackToFront__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ
-BackToFront__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ:
+.fn BackToFront__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ, global
 /* 803F01C0 003B9780  A0 04 00 04 */	lhz r0, 4(r4)
 /* 803F01C4 003B9784  A0 A3 00 04 */	lhz r5, 4(r3)
 /* 803F01C8 003B9788  7C 05 00 40 */	cmplw r5, r0
@@ -1195,10 +1194,10 @@ BackToFront__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FRCQ54nw4r3g3d6detail7workmem4Md
 .L_803F021C:
 /* 803F021C 003B97DC  38 60 00 00 */	li r3, 0
 /* 803F0220 003B97E0  4E 80 00 20 */	blr 
+.endfn BackToFront__Q34nw4r3g3d22_unnamed_g3d_draw_cpp_FRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ
 
 #sort<PQ54nw4r3g3d6detail7workmem4MdlZ,PFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b>__3stdFPQ54nw4r3g3d6detail7workmem4MdlZPQ54nw4r3g3d6detail7workmem4MdlZPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b_v
-.global sort_PQ54nw4r3g3d6detail7workmem4MdlZ_PFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b___3stdFPQ54nw4r3g3d6detail7workmem4MdlZPQ54nw4r3g3d6detail7workmem4MdlZPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b_v
-sort_PQ54nw4r3g3d6detail7workmem4MdlZ_PFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b___3stdFPQ54nw4r3g3d6detail7workmem4MdlZPQ54nw4r3g3d6detail7workmem4MdlZPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b_v:
+.fn sort_PQ54nw4r3g3d6detail7workmem4MdlZ_PFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b___3stdFPQ54nw4r3g3d6detail7workmem4MdlZPQ54nw4r3g3d6detail7workmem4MdlZPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b_v, global
 /* 803F0224 003B97E4  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 803F0228 003B97E8  7C 08 02 A6 */	mflr r0
 /* 803F022C 003B97EC  90 01 00 84 */	stw r0, 0x84(r1)
@@ -1596,10 +1595,10 @@ sort_PQ54nw4r3g3d6detail7workmem4MdlZ_PFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw
 /* 803F07D4 003B9D94  7C 08 03 A6 */	mtlr r0
 /* 803F07D8 003B9D98  38 21 00 80 */	addi r1, r1, 0x80
 /* 803F07DC 003B9D9C  4E 80 00 20 */	blr 
+.endfn sort_PQ54nw4r3g3d6detail7workmem4MdlZ_PFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b___3stdFPQ54nw4r3g3d6detail7workmem4MdlZPQ54nw4r3g3d6detail7workmem4MdlZPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b_v
 
 #sort<PQ54nw4r3g3d6detail7workmem4MdlZ,RPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b>__3stdFPQ54nw4r3g3d6detail7workmem4MdlZPQ54nw4r3g3d6detail7workmem4MdlZRPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b_v
-.global sort_PQ54nw4r3g3d6detail7workmem4MdlZ_RPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b___3stdFPQ54nw4r3g3d6detail7workmem4MdlZPQ54nw4r3g3d6detail7workmem4MdlZRPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b_v
-sort_PQ54nw4r3g3d6detail7workmem4MdlZ_RPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b___3stdFPQ54nw4r3g3d6detail7workmem4MdlZPQ54nw4r3g3d6detail7workmem4MdlZRPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b_v:
+.fn sort_PQ54nw4r3g3d6detail7workmem4MdlZ_RPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b___3stdFPQ54nw4r3g3d6detail7workmem4MdlZPQ54nw4r3g3d6detail7workmem4MdlZRPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b_v, global
 /* 803F07E0 003B9DA0  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 803F07E4 003B9DA4  7C 08 02 A6 */	mflr r0
 /* 803F07E8 003B9DA8  90 01 00 84 */	stw r0, 0x84(r1)
@@ -1997,10 +1996,10 @@ sort_PQ54nw4r3g3d6detail7workmem4MdlZ_RPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54n
 /* 803F0D90 003BA350  7C 08 03 A6 */	mtlr r0
 /* 803F0D94 003BA354  38 21 00 80 */	addi r1, r1, 0x80
 /* 803F0D98 003BA358  4E 80 00 20 */	blr 
+.endfn sort_PQ54nw4r3g3d6detail7workmem4MdlZ_RPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b___3stdFPQ54nw4r3g3d6detail7workmem4MdlZPQ54nw4r3g3d6detail7workmem4MdlZRPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b_v
 
 #__sort132<RPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b,PQ54nw4r3g3d6detail7workmem4MdlZ>__3stdFPQ54nw4r3g3d6detail7workmem4MdlZPQ54nw4r3g3d6detail7workmem4MdlZPQ54nw4r3g3d6detail7workmem4MdlZRPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b_v
-.global __sort132_RPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b_PQ54nw4r3g3d6detail7workmem4MdlZ___3stdFPQ54nw4r3g3d6detail7workmem4MdlZPQ54nw4r3g3d6detail7workmem4MdlZPQ54nw4r3g3d6detail7workmem4MdlZRPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b_v
-__sort132_RPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b_PQ54nw4r3g3d6detail7workmem4MdlZ___3stdFPQ54nw4r3g3d6detail7workmem4MdlZPQ54nw4r3g3d6detail7workmem4MdlZPQ54nw4r3g3d6detail7workmem4MdlZRPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b_v:
+.fn __sort132_RPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b_PQ54nw4r3g3d6detail7workmem4MdlZ___3stdFPQ54nw4r3g3d6detail7workmem4MdlZPQ54nw4r3g3d6detail7workmem4MdlZPQ54nw4r3g3d6detail7workmem4MdlZRPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b_v, global
 /* 803F0D9C 003BA35C  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803F0DA0 003BA360  7C 08 02 A6 */	mflr r0
 /* 803F0DA4 003BA364  90 01 00 54 */	stw r0, 0x54(r1)
@@ -2158,6 +2157,7 @@ __sort132_RPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_
 /* 803F0FF0 003BA5B0  7C 08 03 A6 */	mtlr r0
 /* 803F0FF4 003BA5B4  38 21 00 50 */	addi r1, r1, 0x50
 /* 803F0FF8 003BA5B8  4E 80 00 20 */	blr 
+.endfn __sort132_RPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b_PQ54nw4r3g3d6detail7workmem4MdlZ___3stdFPQ54nw4r3g3d6detail7workmem4MdlZPQ54nw4r3g3d6detail7workmem4MdlZPQ54nw4r3g3d6detail7workmem4MdlZRPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b_v
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 

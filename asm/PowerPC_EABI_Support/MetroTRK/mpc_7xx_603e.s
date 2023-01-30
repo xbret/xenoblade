@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global TRKSaveExtended1Block
-TRKSaveExtended1Block:
+.fn TRKSaveExtended1Block, global
 /* 802CD0F8 002966B8  3C 40 80 57 */	lis r2, gTRKCPUState@h
 /* 802CD0FC 002966BC  60 42 D3 F8 */	ori r2, r2, gTRKCPUState@l
 /* 802CD100 002966C0  7E 00 04 A6 */	mfsr r16, 0
@@ -117,6 +116,7 @@ TRKSaveExtended1Block:
 /* 802CD2B0 00296870  7F FB E2 A6 */	mfspr r31, 0x39b
 /* 802CD2B4 00296874  BE 82 02 FC */	stmw r20, 0x2fc(r2)
 /* 802CD2B8 00296878  4E 80 00 20 */	blr 
+.endfn TRKSaveExtended1Block
 
 .global TRKRestoreExtended1Block
 TRKRestoreExtended1Block:

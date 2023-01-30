@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __ct__Q44nw4r3snd6detail13SeqFileReaderFPCv
-__ct__Q44nw4r3snd6detail13SeqFileReaderFPCv:
+.fn __ct__Q44nw4r3snd6detail13SeqFileReaderFPCv, global
 /* 804195D4 003E2B94  80 A4 00 00 */	lwz r5, 0(r4)
 /* 804195D8 003E2B98  38 C0 00 00 */	li r6, 0
 /* 804195DC 003E2B9C  90 C3 00 00 */	stw r6, 0(r3)
@@ -34,13 +33,14 @@ __ct__Q44nw4r3snd6detail13SeqFileReaderFPCv:
 /* 80419634 003E2BF4  7C 00 22 14 */	add r0, r0, r4
 /* 80419638 003E2BF8  90 03 00 04 */	stw r0, 4(r3)
 /* 8041963C 003E2BFC  4E 80 00 20 */	blr 
+.endfn __ct__Q44nw4r3snd6detail13SeqFileReaderFPCv
 
-.global GetBaseAddress__Q44nw4r3snd6detail13SeqFileReaderCFv
-GetBaseAddress__Q44nw4r3snd6detail13SeqFileReaderCFv:
+.fn GetBaseAddress__Q44nw4r3snd6detail13SeqFileReaderCFv, global
 /* 80419640 003E2C00  80 63 00 04 */	lwz r3, 4(r3)
 /* 80419644 003E2C04  80 03 00 08 */	lwz r0, 8(r3)
 /* 80419648 003E2C08  7C 60 1A 14 */	add r3, r0, r3
 /* 8041964C 003E2C0C  4E 80 00 20 */	blr
+.endfn GetBaseAddress__Q44nw4r3snd6detail13SeqFileReaderCFv
 
 .global ReadOffsetByLabel__Q44nw4r3snd6detail13SeqFileReaderCFPCcPUl
 ReadOffsetByLabel__Q44nw4r3snd6detail13SeqFileReaderCFPCcPUl:

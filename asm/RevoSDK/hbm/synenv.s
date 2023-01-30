@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global __HBMSYNSetupVolumeEnvelope
-__HBMSYNSetupVolumeEnvelope:
+.fn __HBMSYNSetupVolumeEnvelope, global
 /* 803412F0 0030A8B0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803412F4 0030A8B4  7C 08 02 A6 */	mflr r0
 /* 803412F8 0030A8B8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -195,10 +194,10 @@ __HBMSYNSetupVolumeEnvelope:
 /* 803415B0 0030AB70  7C 08 03 A6 */	mtlr r0
 /* 803415B4 0030AB74  38 21 00 30 */	addi r1, r1, 0x30
 /* 803415B8 0030AB78  4E 80 00 20 */	blr 
+.endfn __HBMSYNSetupVolumeEnvelope
 
 .balign 16, 0
-.global func_803415C0
-func_803415C0:
+.fn func_803415C0, global
 /* 803415C0 0030AB80  80 03 00 30 */	lwz r0, 0x30(r3)
 /* 803415C4 0030AB84  2C 00 00 00 */	cmpwi r0, 0
 /* 803415C8 0030AB88  41 82 00 18 */	beq .L_803415E0
@@ -273,6 +272,7 @@ func_803415C0:
 /* 803416C0 0030AC80  7C 04 02 14 */	add r0, r4, r0
 /* 803416C4 0030AC84  90 03 00 34 */	stw r0, 0x34(r3)
 /* 803416C8 0030AC88  4E 80 00 20 */	blr 
+.endfn func_803415C0
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

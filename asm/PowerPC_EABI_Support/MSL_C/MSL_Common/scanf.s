@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-parse_format:
+.fn parse_format, local
 /* 802C112C 0028A6EC  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802C1130 0028A6F0  3C C0 80 51 */	lis r6, lbl_8050D550@ha
 /* 802C1134 0028A6F4  84 06 D5 50 */	lwzu r0, lbl_8050D550@l(r6)
@@ -471,9 +471,9 @@ switch_802C175C:
 /* 802C17B4 0028AD74  83 C1 00 38 */	lwz r30, 0x38(r1)
 /* 802C17B8 0028AD78  38 21 00 40 */	addi r1, r1, 0x40
 /* 802C17BC 0028AD7C  4E 80 00 20 */	blr 
+.endfn parse_format
 
-.global __sformatter
-__sformatter:
+.fn __sformatter, global
 /* 802C17C0 0028AD80  94 21 FF 50 */	stwu r1, -0xb0(r1)
 /* 802C17C4 0028AD84  7C 08 02 A6 */	mflr r0
 /* 802C17C8 0028AD88  90 01 00 B4 */	stw r0, 0xb4(r1)
@@ -1411,9 +1411,9 @@ switch_802C240C:
 /* 802C244C 0028BA0C  7C 08 03 A6 */	mtlr r0
 /* 802C2450 0028BA10  38 21 00 B0 */	addi r1, r1, 0xb0
 /* 802C2454 0028BA14  4E 80 00 20 */	blr
+.endfn __sformatter
 
-.global __StringRead
-__StringRead:
+.fn __StringRead, global
 /* 802C2458 0028BA18  2C 05 00 00 */	cmpwi r5, 0
 /* 802C245C 0028BA1C  41 82 00 18 */	beq .L_802C2474
 /* 802C2460 0028BA20  2C 05 00 01 */	cmpwi r5, 1
@@ -1455,9 +1455,9 @@ __StringRead:
 .L_802C24D8:
 /* 802C24D8 0028BA98  38 60 00 00 */	li r3, 0
 /* 802C24DC 0028BA9C  4E 80 00 20 */	blr 
+.endfn __StringRead
 
-.global sscanf
-sscanf:
+.fn sscanf, global
 /* 802C24E0 0028BAA0  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 802C24E4 0028BAA4  7C 08 02 A6 */	mflr r0
 /* 802C24E8 0028BAA8  90 01 00 84 */	stw r0, 0x84(r1)
@@ -1544,6 +1544,7 @@ sscanf:
 /* 802C2604 0028BBC4  7C 08 03 A6 */	mtlr r0
 /* 802C2608 0028BBC8  38 21 00 80 */	addi r1, r1, 0x80
 /* 802C260C 0028BBCC  4E 80 00 20 */	blr
+.endfn sscanf
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 .global lbl_8053F7C0

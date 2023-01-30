@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global ADX_DecodeInfoWav
-ADX_DecodeInfoWav:
+.fn ADX_DecodeInfoWav, global
 /* 803883BC 0035197C  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 803883C0 00351980  7C 08 02 A6 */	mflr r0
 /* 803883C4 00351984  3D 60 80 56 */	lis r11, lbl_80563728@ha
@@ -176,9 +175,9 @@ ADX_DecodeInfoWav:
 /* 8038861C 00351BDC  7C 08 03 A6 */	mtlr r0
 /* 80388620 00351BE0  38 21 00 60 */	addi r1, r1, 0x60
 /* 80388624 00351BE4  4E 80 00 20 */	blr 
+.endfn ADX_DecodeInfoWav
 
-.global ADXB_DecodeHeaderWav
-ADXB_DecodeHeaderWav:
+.fn ADXB_DecodeHeaderWav, global
 /* 80388628 00351BE8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8038862C 00351BEC  7C 08 02 A6 */	mflr r0
 /* 80388630 00351BF0  90 01 00 34 */	stw r0, 0x34(r1)
@@ -240,9 +239,9 @@ ADXB_DecodeHeaderWav:
 /* 80388708 00351CC8  7C 08 03 A6 */	mtlr r0
 /* 8038870C 00351CCC  38 21 00 30 */	addi r1, r1, 0x30
 /* 80388710 00351CD0  4E 80 00 20 */	blr
+.endfn ADXB_DecodeHeaderWav
 
-.global ADXB_ExecOneWav16
-ADXB_ExecOneWav16:
+.fn ADXB_ExecOneWav16, global
 /* 80388714 00351CD4  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80388718 00351CD8  7C 08 02 A6 */	mflr r0
 /* 8038871C 00351CDC  90 01 00 34 */	stw r0, 0x34(r1)
@@ -476,9 +475,9 @@ ADXB_ExecOneWav16:
 /* 80388A74 00352034  7C 08 03 A6 */	mtlr r0
 /* 80388A78 00352038  38 21 00 30 */	addi r1, r1, 0x30
 /* 80388A7C 0035203C  4E 80 00 20 */	blr
+.endfn ADXB_ExecOneWav16
 
-.global ADXB_ExecOneWav8
-ADXB_ExecOneWav8:
+.fn ADXB_ExecOneWav8, global
 /* 80388A80 00352040  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80388A84 00352044  7C 08 02 A6 */	mflr r0
 /* 80388A88 00352048  90 01 00 14 */	stw r0, 0x14(r1)
@@ -744,9 +743,9 @@ ADXB_ExecOneWav8:
 /* 80388E60 00352420  7C 08 03 A6 */	mtlr r0
 /* 80388E64 00352424  38 21 00 10 */	addi r1, r1, 0x10
 /* 80388E68 00352428  4E 80 00 20 */	blr
+.endfn ADXB_ExecOneWav8
 
-.global ADXB_ExecOneWav4
-ADXB_ExecOneWav4:
+.fn ADXB_ExecOneWav4, global
 /* 80388E6C 0035242C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80388E70 00352430  7C 08 02 A6 */	mflr r0
 /* 80388E74 00352434  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1015,9 +1014,9 @@ ADXB_ExecOneWav4:
 /* 80389258 00352818  7C 08 03 A6 */	mtlr r0
 /* 8038925C 0035281C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80389260 00352820  4E 80 00 20 */	blr 
+.endfn ADXB_ExecOneWav4
 
-.global ADXB_CheckWav
-ADXB_CheckWav:
+.fn ADXB_CheckWav, global
 /* 80389264 00352824  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80389268 00352828  7C 08 02 A6 */	mflr r0
 /* 8038926C 0035282C  38 A0 00 04 */	li r5, 4
@@ -1048,9 +1047,9 @@ ADXB_CheckWav:
 /* 803892C8 00352888  7C 08 03 A6 */	mtlr r0
 /* 803892CC 0035288C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803892D0 00352890  4E 80 00 20 */	blr 
+.endfn ADXB_CheckWav
 
-.global ADXB_ExecOneWav
-ADXB_ExecOneWav:
+.fn ADXB_ExecOneWav, global
 /* 803892D4 00352894  A8 03 00 9C */	lha r0, 0x9c(r3)
 /* 803892D8 00352898  2C 00 00 02 */	cmpwi r0, 2
 /* 803892DC 0035289C  40 82 00 08 */	bne .L_803892E4
@@ -1064,6 +1063,7 @@ ADXB_ExecOneWav:
 /* 803892F4 003528B4  4C 82 00 20 */	bnelr 
 /* 803892F8 003528B8  4B FF F4 1C */	b ADXB_ExecOneWav16
 /* 803892FC 003528BC  4E 80 00 20 */	blr 
+.endfn ADXB_ExecOneWav
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

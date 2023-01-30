@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global sdpu_find_ccb_by_cid
-sdpu_find_ccb_by_cid:
+.fn sdpu_find_ccb_by_cid, global
 /* 803074E4 002D0AA4  3C 80 80 5C */	lis r4, lbl_805C36C0@ha
 /* 803074E8 002D0AA8  38 84 36 C0 */	addi r4, r4, lbl_805C36C0@l
 /* 803074EC 002D0AAC  8C 04 00 3C */	lbzu r0, 0x3c(r4)
@@ -44,9 +43,9 @@ sdpu_find_ccb_by_cid:
 .L_8030756C:
 /* 8030756C 002D0B2C  38 60 00 00 */	li r3, 0
 /* 80307570 002D0B30  4E 80 00 20 */	blr 
+.endfn sdpu_find_ccb_by_cid
 
-.global sdpu_allocate_ccb
-sdpu_allocate_ccb:
+.fn sdpu_allocate_ccb, global
 /* 80307574 002D0B34  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80307578 002D0B38  7C 08 02 A6 */	mflr r0
 /* 8030757C 002D0B3C  3C 60 80 5C */	lis r3, lbl_805C36C0@ha
@@ -79,9 +78,9 @@ sdpu_allocate_ccb:
 /* 803075DC 002D0B9C  7C 08 03 A6 */	mtlr r0
 /* 803075E0 002D0BA0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803075E4 002D0BA4  4E 80 00 20 */	blr 
+.endfn sdpu_allocate_ccb
 
-.global sdpu_release_ccb
-sdpu_release_ccb:
+.fn sdpu_release_ccb, global
 /* 803075E8 002D0BA8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803075EC 002D0BAC  7C 08 02 A6 */	mflr r0
 /* 803075F0 002D0BB0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -96,9 +95,9 @@ sdpu_release_ccb:
 /* 80307614 002D0BD4  7C 08 03 A6 */	mtlr r0
 /* 80307618 002D0BD8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030761C 002D0BDC  4E 80 00 20 */	blr 
+.endfn sdpu_release_ccb
 
-.global sdpu_build_attrib_seq
-sdpu_build_attrib_seq:
+.fn sdpu_build_attrib_seq, global
 /* 80307620 002D0BE0  2C 04 00 00 */	cmpwi r4, 0
 /* 80307624 002D0BE4  41 82 00 14 */	beq .L_80307638
 /* 80307628 002D0BE8  54 A0 10 3A */	slwi r0, r5, 2
@@ -224,9 +223,9 @@ sdpu_build_attrib_seq:
 .L_803077E8:
 /* 803077E8 002D0DA8  7C C3 33 78 */	mr r3, r6
 /* 803077EC 002D0DAC  4E 80 00 20 */	blr 
+.endfn sdpu_build_attrib_seq
 
-.global sdpu_build_attrib_entry
-sdpu_build_attrib_entry:
+.fn sdpu_build_attrib_entry, global
 /* 803077F0 002D0DB0  38 00 00 09 */	li r0, 9
 /* 803077F4 002D0DB4  98 03 00 00 */	stb r0, 0(r3)
 /* 803077F8 002D0DB8  A0 04 00 08 */	lhz r0, 8(r4)
@@ -326,9 +325,9 @@ switch_803078FC:
 /* 80307938 002D0EF8  41 80 FF E4 */	blt .L_8030791C
 /* 8030793C 002D0EFC  7C C3 33 78 */	mr r3, r6
 /* 80307940 002D0F00  4E 80 00 20 */	blr 
+.endfn sdpu_build_attrib_entry
 
-.global sdpu_build_n_send_error
-sdpu_build_n_send_error:
+.fn sdpu_build_n_send_error, global
 /* 80307944 002D0F04  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80307948 002D0F08  7C 08 02 A6 */	mflr r0
 /* 8030794C 002D0F0C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -414,9 +413,9 @@ sdpu_build_n_send_error:
 /* 80307A74 002D1034  7C 08 03 A6 */	mtlr r0
 /* 80307A78 002D1038  38 21 00 30 */	addi r1, r1, 0x30
 /* 80307A7C 002D103C  4E 80 00 20 */	blr 
+.endfn sdpu_build_n_send_error
 
-.global sdpu_extract_uid_seq
-sdpu_extract_uid_seq:
+.fn sdpu_extract_uid_seq, global
 /* 80307A80 002D1040  38 00 00 00 */	li r0, 0
 /* 80307A84 002D1044  39 03 00 01 */	addi r8, r3, 1
 /* 80307A88 002D1048  B0 05 00 00 */	sth r0, 0(r5)
@@ -659,9 +658,9 @@ switch_80307C0C:
 .L_80307DC8:
 /* 80307DC8 002D1388  7D 03 43 78 */	mr r3, r8
 /* 80307DCC 002D138C  4E 80 00 20 */	blr 
+.endfn sdpu_extract_uid_seq
 
-.global sdpu_extract_attr_seq
-sdpu_extract_attr_seq:
+.fn sdpu_extract_attr_seq, global
 /* 80307DD0 002D1390  38 00 00 00 */	li r0, 0
 /* 80307DD4 002D1394  B0 05 00 00 */	sth r0, 0(r5)
 /* 80307DD8 002D1398  88 C3 00 00 */	lbz r6, 0(r3)
@@ -832,9 +831,9 @@ sdpu_extract_attr_seq:
 /* 80308014 002D15D4  41 80 FE 7C */	blt .L_80307E90
 /* 80308018 002D15D8  7C C3 33 78 */	mr r3, r6
 /* 8030801C 002D15DC  4E 80 00 20 */	blr 
+.endfn sdpu_extract_attr_seq
 
-.global sdpu_get_len_from_type
-sdpu_get_len_from_type:
+.fn sdpu_get_len_from_type, global
 /* 80308020 002D15E0  54 80 07 7E */	clrlwi r0, r4, 0x1d
 /* 80308024 002D15E4  7C 68 1B 78 */	mr r8, r3
 /* 80308028 002D15E8  28 00 00 07 */	cmplwi r0, 7
@@ -896,9 +895,9 @@ switch_803080B4:
 .L_803080E8:
 /* 803080E8 002D16A8  7D 03 43 78 */	mr r3, r8
 /* 803080EC 002D16AC  4E 80 00 20 */	blr 
+.endfn sdpu_get_len_from_type
 
-.global sdpu_is_base_uuid
-sdpu_is_base_uuid:
+.fn sdpu_is_base_uuid, global
 /* 803080F0 002D16B0  3C A0 80 51 */	lis r5, lbl_8050E398@ha
 /* 803080F4 002D16B4  38 00 00 02 */	li r0, 2
 /* 803080F8 002D16B8  38 A5 E3 98 */	addi r5, r5, lbl_8050E398@l
@@ -962,9 +961,9 @@ sdpu_is_base_uuid:
 /* 803081C4 002D1784  42 00 FF 40 */	bdnz .L_80308104
 /* 803081C8 002D1788  38 60 00 01 */	li r3, 1
 /* 803081CC 002D178C  4E 80 00 20 */	blr 
+.endfn sdpu_is_base_uuid
 
-.global sdpu_compare_uuid_arrays
-sdpu_compare_uuid_arrays:
+.fn sdpu_compare_uuid_arrays, global
 /* 803081D0 002D1790  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803081D4 002D1794  7C 08 02 A6 */	mflr r0
 /* 803081D8 002D1798  7C 04 30 40 */	cmplw r4, r6
@@ -1137,9 +1136,9 @@ sdpu_compare_uuid_arrays:
 /* 80308438 002D19F8  7C 08 03 A6 */	mtlr r0
 /* 8030843C 002D19FC  38 21 00 40 */	addi r1, r1, 0x40
 /* 80308440 002D1A00  4E 80 00 20 */	blr 
+.endfn sdpu_compare_uuid_arrays
 
-.global sdpu_compare_uuid_with_attr
-sdpu_compare_uuid_with_attr:
+.fn sdpu_compare_uuid_with_attr, global
 /* 80308444 002D1A04  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80308448 002D1A08  7C 08 02 A6 */	mflr r0
 /* 8030844C 002D1A0C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1180,9 +1179,9 @@ sdpu_compare_uuid_with_attr:
 /* 803084C8 002D1A88  7C 08 03 A6 */	mtlr r0
 /* 803084CC 002D1A8C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803084D0 002D1A90  4E 80 00 20 */	blr 
+.endfn sdpu_compare_uuid_with_attr
 
-.global sdpu_sort_attr_list
-sdpu_sort_attr_list:
+.fn sdpu_sort_attr_list, global
 /* 803084D4 002D1A94  28 03 00 01 */	cmplwi r3, 1
 /* 803084D8 002D1A98  4C 81 00 20 */	blelr 
 /* 803084DC 002D1A9C  38 A3 FF FF */	addi r5, r3, -1
@@ -1206,6 +1205,7 @@ sdpu_sort_attr_list:
 /* 80308518 002D1AD8  7C 00 28 00 */	cmpw r0, r5
 /* 8030851C 002D1ADC  41 80 FF D0 */	blt .L_803084EC
 /* 80308520 002D1AE0  4E 80 00 20 */	blr 
+.endfn sdpu_sort_attr_list
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

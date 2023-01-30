@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global Get__Q34nw4r3lyt6TexMapCFP9_GXTexObj
-Get__Q34nw4r3lyt6TexMapCFP9_GXTexObj:
+.fn Get__Q34nw4r3lyt6TexMapCFP9_GXTexObj, global
 /* 804082FC 003D18BC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80408300 003D18C0  7C 08 02 A6 */	mflr r0
 /* 80408304 003D18C4  81 43 00 18 */	lwz r10, 0x18(r3)
@@ -65,9 +64,9 @@ Get__Q34nw4r3lyt6TexMapCFP9_GXTexObj:
 /* 804083DC 003D199C  7C 08 03 A6 */	mtlr r0
 /* 804083E0 003D19A0  38 21 00 20 */	addi r1, r1, 0x20
 /* 804083E4 003D19A4  4E 80 00 20 */	blr 
+.endfn Get__Q34nw4r3lyt6TexMapCFP9_GXTexObj
 
-.global Get__Q34nw4r3lyt6TexMapCFP10_GXTlutObj
-Get__Q34nw4r3lyt6TexMapCFP10_GXTlutObj:
+.fn Get__Q34nw4r3lyt6TexMapCFP10_GXTlutObj, global
 /* 804083E8 003D19A8  7C 65 1B 78 */	mr r5, r3
 /* 804083EC 003D19AC  7C 83 23 78 */	mr r3, r4
 /* 804083F0 003D19B0  80 05 00 18 */	lwz r0, 0x18(r5)
@@ -75,9 +74,9 @@ Get__Q34nw4r3lyt6TexMapCFP10_GXTlutObj:
 /* 804083F8 003D19B8  A0 C5 00 16 */	lhz r6, 0x16(r5)
 /* 804083FC 003D19BC  54 05 9F BE */	rlwinm r5, r0, 0x13, 0x1e, 0x1f
 /* 80408400 003D19C0  4B F1 45 E0 */	b GXInitTlutObj
+.endfn Get__Q34nw4r3lyt6TexMapCFP10_GXTlutObj
 
-.global Set__Q34nw4r3lyt6TexMapFP10TPLPaletteUl
-Set__Q34nw4r3lyt6TexMapFP10TPLPaletteUl:
+.fn Set__Q34nw4r3lyt6TexMapFP10TPLPaletteUl, global
 /* 80408404 003D19C4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80408408 003D19C8  7C 08 02 A6 */	mflr r0
 /* 8040840C 003D19CC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -107,9 +106,9 @@ Set__Q34nw4r3lyt6TexMapFP10TPLPaletteUl:
 /* 80408468 003D1A28  7C 08 03 A6 */	mtlr r0
 /* 8040846C 003D1A2C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80408470 003D1A30  4E 80 00 20 */	blr 
+.endfn Set__Q34nw4r3lyt6TexMapFP10TPLPaletteUl
 
-.global Set__Q34nw4r3lyt6TexMapFPC13TPLDescriptor
-Set__Q34nw4r3lyt6TexMapFPC13TPLDescriptor:
+.fn Set__Q34nw4r3lyt6TexMapFPC13TPLDescriptor, global
 /* 80408474 003D1A34  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80408478 003D1A38  3C 00 43 30 */	lis r0, 0x4330
 /* 8040847C 003D1A3C  80 E4 00 00 */	lwz r7, 0(r4)
@@ -185,9 +184,9 @@ Set__Q34nw4r3lyt6TexMapFPC13TPLDescriptor:
 .L_80408590:
 /* 80408590 003D1B50  38 21 00 20 */	addi r1, r1, 0x20
 /* 80408594 003D1B54  4E 80 00 20 */	blr
+.endfn Set__Q34nw4r3lyt6TexMapFPC13TPLDescriptor
 
-.global ReplaceImage__Q34nw4r3lyt6TexMapFP10TPLPaletteUl
-ReplaceImage__Q34nw4r3lyt6TexMapFP10TPLPaletteUl:
+.fn ReplaceImage__Q34nw4r3lyt6TexMapFP10TPLPaletteUl, global
 /* 80408598 003D1B58  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8040859C 003D1B5C  7C 08 02 A6 */	mflr r0
 /* 804085A0 003D1B60  90 01 00 24 */	stw r0, 0x24(r1)
@@ -243,6 +242,7 @@ ReplaceImage__Q34nw4r3lyt6TexMapFP10TPLPaletteUl:
 /* 8040865C 003D1C1C  7C 08 03 A6 */	mtlr r0
 /* 80408660 003D1C20  38 21 00 20 */	addi r1, r1, 0x20
 /* 80408664 003D1C24  4E 80 00 20 */	blr 
+.endfn ReplaceImage__Q34nw4r3lyt6TexMapFP10TPLPaletteUl
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

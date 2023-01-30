@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __ct__Q44nw4r3snd6detail10PlayerHeapFv
-__ct__Q44nw4r3snd6detail10PlayerHeapFv:
+.fn __ct__Q44nw4r3snd6detail10PlayerHeapFv, global
 /* 80418968 003E1F28  3C 80 80 57 */	lis r4, lbl_8056E3C8@ha
 /* 8041896C 003E1F2C  38 00 00 00 */	li r0, 0
 /* 80418970 003E1F30  38 84 E3 C8 */	addi r4, r4, lbl_8056E3C8@l
@@ -16,10 +15,10 @@ __ct__Q44nw4r3snd6detail10PlayerHeapFv:
 /* 8041898C 003E1F4C  90 03 00 18 */	stw r0, 0x18(r3)
 /* 80418990 003E1F50  90 03 00 1C */	stw r0, 0x1c(r3)
 /* 80418994 003E1F54  4E 80 00 20 */	blr
+.endfn __ct__Q44nw4r3snd6detail10PlayerHeapFv
 
 
-.global __dt__Q44nw4r3snd6detail10PlayerHeapFv
-__dt__Q44nw4r3snd6detail10PlayerHeapFv:
+.fn __dt__Q44nw4r3snd6detail10PlayerHeapFv, global
 /* 80418998 003E1F58  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8041899C 003E1F5C  7C 08 02 A6 */	mflr r0
 /* 804189A0 003E1F60  2C 03 00 00 */	cmpwi r3, 0
@@ -70,9 +69,9 @@ __dt__Q44nw4r3snd6detail10PlayerHeapFv:
 /* 80418A50 003E2010  7C 08 03 A6 */	mtlr r0
 /* 80418A54 003E2014  38 21 00 20 */	addi r1, r1, 0x20
 /* 80418A58 003E2018  4E 80 00 20 */	blr 
+.endfn __dt__Q44nw4r3snd6detail10PlayerHeapFv
 
-.global Create__Q44nw4r3snd6detail10PlayerHeapFPvUl
-Create__Q44nw4r3snd6detail10PlayerHeapFPvUl:
+.fn Create__Q44nw4r3snd6detail10PlayerHeapFPvUl, global
 /* 80418A5C 003E201C  38 04 00 1F */	addi r0, r4, 0x1f
 /* 80418A60 003E2020  7C 85 22 14 */	add r4, r5, r4
 /* 80418A64 003E2024  54 00 00 34 */	rlwinm r0, r0, 0, 0, 0x1a
@@ -86,9 +85,9 @@ Create__Q44nw4r3snd6detail10PlayerHeapFPvUl:
 /* 80418A80 003E2040  90 03 00 14 */	stw r0, 0x14(r3)
 /* 80418A84 003E2044  38 60 00 01 */	li r3, 1
 /* 80418A88 003E2048  4E 80 00 20 */	blr 
+.endfn Create__Q44nw4r3snd6detail10PlayerHeapFPvUl
 
-.global Alloc__Q44nw4r3snd6detail10PlayerHeapFUl
-Alloc__Q44nw4r3snd6detail10PlayerHeapFUl:
+.fn Alloc__Q44nw4r3snd6detail10PlayerHeapFUl, global
 /* 80418A8C 003E204C  80 A3 00 14 */	lwz r5, 0x14(r3)
 /* 80418A90 003E2050  80 03 00 10 */	lwz r0, 0x10(r3)
 /* 80418A94 003E2054  7C 84 2A 14 */	add r4, r4, r5
@@ -102,9 +101,9 @@ Alloc__Q44nw4r3snd6detail10PlayerHeapFUl:
 /* 80418AB0 003E2070  90 03 00 14 */	stw r0, 0x14(r3)
 /* 80418AB4 003E2074  7C A3 2B 78 */	mr r3, r5
 /* 80418AB8 003E2078  4E 80 00 20 */	blr 
+.endfn Alloc__Q44nw4r3snd6detail10PlayerHeapFUl
 
-.global Clear__Q44nw4r3snd6detail10PlayerHeapFv
-Clear__Q44nw4r3snd6detail10PlayerHeapFv:
+.fn Clear__Q44nw4r3snd6detail10PlayerHeapFv, global
 /* 80418ABC 003E207C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80418AC0 003E2080  7C 08 02 A6 */	mflr r0
 /* 80418AC4 003E2084  90 01 00 14 */	stw r0, 0x14(r1)
@@ -139,24 +138,25 @@ Clear__Q44nw4r3snd6detail10PlayerHeapFv:
 /* 80418B38 003E20F8  7C 08 03 A6 */	mtlr r0
 /* 80418B3C 003E20FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80418B40 003E2100  4E 80 00 20 */	blr 
+.endfn Clear__Q44nw4r3snd6detail10PlayerHeapFv
 
-.global GetFreeSize__Q44nw4r3snd6detail10PlayerHeapCFv
-GetFreeSize__Q44nw4r3snd6detail10PlayerHeapCFv:
+.fn GetFreeSize__Q44nw4r3snd6detail10PlayerHeapCFv, global
 /* 80418B44 003E2104  80 83 00 14 */	lwz r4, 0x14(r3)
 /* 80418B48 003E2108  80 03 00 10 */	lwz r0, 0x10(r3)
 /* 80418B4C 003E210C  7C 64 00 50 */	subf r3, r4, r0
 /* 80418B50 003E2110  4E 80 00 20 */	blr 
+.endfn GetFreeSize__Q44nw4r3snd6detail10PlayerHeapCFv
 
-.global AttachSound__Q44nw4r3snd6detail10PlayerHeapFPQ44nw4r3snd6detail10BasicSound
-AttachSound__Q44nw4r3snd6detail10PlayerHeapFPQ44nw4r3snd6detail10BasicSound:
+.fn AttachSound__Q44nw4r3snd6detail10PlayerHeapFPQ44nw4r3snd6detail10BasicSound, global
 /* 80418B54 003E2114  90 83 00 04 */	stw r4, 4(r3)
 /* 80418B58 003E2118  4E 80 00 20 */	blr 
+.endfn AttachSound__Q44nw4r3snd6detail10PlayerHeapFPQ44nw4r3snd6detail10BasicSound
 
-.global DetachSound__Q44nw4r3snd6detail10PlayerHeapFPQ44nw4r3snd6detail10BasicSound
-DetachSound__Q44nw4r3snd6detail10PlayerHeapFPQ44nw4r3snd6detail10BasicSound:
+.fn DetachSound__Q44nw4r3snd6detail10PlayerHeapFPQ44nw4r3snd6detail10BasicSound, global
 /* 80418B5C 003E211C  38 00 00 00 */	li r0, 0
 /* 80418B60 003E2120  90 03 00 04 */	stw r0, 4(r3)
 /* 80418B64 003E2124  4E 80 00 20 */	blr 
+.endfn DetachSound__Q44nw4r3snd6detail10PlayerHeapFPQ44nw4r3snd6detail10BasicSound
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

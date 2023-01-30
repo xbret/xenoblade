@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global bta_hh_find_cb
-bta_hh_find_cb:
+.fn bta_hh_find_cb, global
 /* 802E4154 002AD714  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E4158 002AD718  7C 08 02 A6 */	mflr r0
 /* 802E415C 002AD71C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -92,9 +91,9 @@ bta_hh_find_cb:
 /* 802E4284 002AD844  7C 08 03 A6 */	mtlr r0
 /* 802E4288 002AD848  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E428C 002AD84C  4E 80 00 20 */	blr 
+.endfn bta_hh_find_cb
 
-.global bta_hh_clean_up_kdev
-bta_hh_clean_up_kdev:
+.fn bta_hh_clean_up_kdev, global
 /* 802E4290 002AD850  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E4294 002AD854  7C 08 02 A6 */	mflr r0
 /* 802E4298 002AD858  90 01 00 14 */	stw r0, 0x14(r1)
@@ -128,9 +127,9 @@ bta_hh_clean_up_kdev:
 /* 802E4304 002AD8C4  7C 08 03 A6 */	mtlr r0
 /* 802E4308 002AD8C8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E430C 002AD8CC  4E 80 00 20 */	blr 
+.endfn bta_hh_clean_up_kdev
 
-.global bta_hh_add_device_to_list
-bta_hh_add_device_to_list:
+.fn bta_hh_add_device_to_list, global
 /* 802E4310 002AD8D0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E4314 002AD8D4  7C 08 02 A6 */	mflr r0
 /* 802E4318 002AD8D8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -180,9 +179,9 @@ bta_hh_add_device_to_list:
 /* 802E43C0 002AD980  7C 08 03 A6 */	mtlr r0
 /* 802E43C4 002AD984  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E43C8 002AD988  4E 80 00 20 */	blr 
+.endfn bta_hh_add_device_to_list
 
-.global bta_hh_tod_spt
-bta_hh_tod_spt:
+.fn bta_hh_tod_spt, global
 /* 802E43CC 002AD98C  80 ED 97 78 */	lwz r7, lbl_806658F8@sda21(r13)
 /* 802E43D0 002AD990  54 89 F6 BE */	rlwinm r9, r4, 0x1e, 0x1a, 0x1f
 /* 802E43D4 002AD994  39 00 00 00 */	li r8, 0
@@ -207,9 +206,9 @@ bta_hh_tod_spt:
 /* 802E4414 002AD9D4  41 80 FF CC */	blt .L_802E43E0
 /* 802E4418 002AD9D8  38 60 00 00 */	li r3, 0
 /* 802E441C 002AD9DC  4E 80 00 20 */	blr 
+.endfn bta_hh_tod_spt
 
-.global bta_hh_trace_dev_db
-bta_hh_trace_dev_db:
+.fn bta_hh_trace_dev_db, global
 /* 802E4420 002AD9E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E4424 002AD9E4  7C 08 02 A6 */	mflr r0
 /* 802E4428 002AD9E8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -271,6 +270,7 @@ bta_hh_trace_dev_db:
 /* 802E44F4 002ADAB4  7C 08 03 A6 */	mtlr r0
 /* 802E44F8 002ADAB8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E44FC 002ADABC  4E 80 00 20 */	blr
+.endfn bta_hh_trace_dev_db
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 .global lbl_805449A0

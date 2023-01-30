@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global lsc_StatWait
-lsc_StatWait:
+.fn lsc_StatWait, global
 /* 803919C0 0035AF80  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803919C4 0035AF84  7C 08 02 A6 */	mflr r0
 /* 803919C8 0035AF88  90 01 00 24 */	stw r0, 0x24(r1)
@@ -117,9 +116,9 @@ lsc_StatWait:
 /* 80391B60 0035B120  7C 08 03 A6 */	mtlr r0
 /* 80391B64 0035B124  38 21 00 20 */	addi r1, r1, 0x20
 /* 80391B68 0035B128  4E 80 00 20 */	blr 
+.endfn lsc_StatWait
 
-.global lsc_StatEnd
-lsc_StatEnd:
+.fn lsc_StatEnd, global
 /* 80391B6C 0035B12C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80391B70 0035B130  7C 08 02 A6 */	mflr r0
 /* 80391B74 0035B134  90 01 00 24 */	stw r0, 0x24(r1)
@@ -174,9 +173,9 @@ lsc_StatEnd:
 /* 80391C2C 0035B1EC  7C 08 03 A6 */	mtlr r0
 /* 80391C30 0035B1F0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80391C34 0035B1F4  4E 80 00 20 */	blr 
+.endfn lsc_StatEnd
 
-.global lsc_ExecHndl
-lsc_ExecHndl:
+.fn lsc_ExecHndl, global
 /* 80391C38 0035B1F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80391C3C 0035B1FC  7C 08 02 A6 */	mflr r0
 /* 80391C40 0035B200  90 01 00 14 */	stw r0, 0x14(r1)
@@ -256,6 +255,7 @@ lsc_ExecHndl:
 /* 80391D4C 0035B30C  7C 08 03 A6 */	mtlr r0
 /* 80391D50 0035B310  38 21 00 10 */	addi r1, r1, 0x10
 /* 80391D54 0035B314  4E 80 00 20 */	blr
+.endfn lsc_ExecHndl
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

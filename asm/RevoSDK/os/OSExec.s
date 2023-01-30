@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global PackArgs
-PackArgs:
+.fn PackArgs, global
 /* 80355510 0031EAD0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80355514 0031EAD4  7C 08 02 A6 */	mflr r0
 /* 80355518 0031EAD8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -109,10 +108,10 @@ PackArgs:
 /* 80355684 0031EC44  7C 08 03 A6 */	mtlr r0
 /* 80355688 0031EC48  38 21 00 30 */	addi r1, r1, 0x30
 /* 8035568C 0031EC4C  4E 80 00 20 */	blr 
+.endfn PackArgs
 
 .balign 16, 0
-.global Utf16ToArg
-Utf16ToArg:
+.fn Utf16ToArg, global
 /* 80355690 0031EC50  2C 04 00 00 */	cmpwi r4, 0
 /* 80355694 0031EC54  41 82 01 4C */	beq .L_803557E0
 /* 80355698 0031EC58  38 C0 00 04 */	li r6, 4
@@ -213,10 +212,10 @@ Utf16ToArg:
 .L_803557E0:
 /* 803557E0 0031EDA0  38 60 00 00 */	li r3, 0
 /* 803557E4 0031EDA4  4E 80 00 20 */	blr 
+.endfn Utf16ToArg
 
 .balign 16, 0
-.global PackInstallerArgs
-PackInstallerArgs:
+.fn PackInstallerArgs, global
 /* 803557F0 0031EDB0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803557F4 0031EDB4  7C 08 02 A6 */	mflr r0
 /* 803557F8 0031EDB8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -342,10 +341,10 @@ PackInstallerArgs:
 /* 803559B0 0031EF70  7C 08 03 A6 */	mtlr r0
 /* 803559B4 0031EF74  38 21 00 30 */	addi r1, r1, 0x30
 /* 803559B8 0031EF78  4E 80 00 20 */	blr 
+.endfn PackInstallerArgs
 
 .balign 16, 0
-.global Run
-Run:
+.fn Run, global
 /* 803559C0 0031EF80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803559C4 0031EF84  7C 08 02 A6 */	mflr r0
 /* 803559C8 0031EF88  90 01 00 14 */	stw r0, 0x14(r1)
@@ -361,16 +360,17 @@ Run:
 /* 803559F0 0031EFB0  7C 08 03 A6 */	mtlr r0
 /* 803559F4 0031EFB4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803559F8 0031EFB8  4E 80 00 20 */	blr
+.endfn Run
 
 .balign 16, 0
-Callback:
+.fn Callback, local
 /* 80355A00 0031EFC0  38 00 00 01 */	li r0, 1
 /* 80355A04 0031EFC4  90 0D B8 F8 */	stw r0, lbl_80667A78@sda21(r13)
 /* 80355A08 0031EFC8  4E 80 00 20 */	blr 
+.endfn Callback
 
 .balign 16, 0
-.global __OSGetExecParams
-__OSGetExecParams:
+.fn __OSGetExecParams, global
 /* 80355A10 0031EFD0  3C A0 80 00 */	lis r5, 0x800030F0@ha
 /* 80355A14 0031EFD4  80 85 30 F0 */	lwz r4, 0x800030F0@l(r5)
 /* 80355A18 0031EFD8  7C 04 28 40 */	cmplw r4, r5
@@ -381,16 +381,16 @@ __OSGetExecParams:
 /* 80355A28 0031EFE8  38 00 00 00 */	li r0, 0
 /* 80355A2C 0031EFEC  90 03 00 00 */	stw r0, 0(r3)
 /* 80355A30 0031EFF0  4E 80 00 20 */	blr 
+.endfn __OSGetExecParams
 
 .balign 16, 0
-.global callback
-callback:
+.fn callback, global
 /* 80355A40 0031F000  90 6D B8 F0 */	stw r3, lbl_80667A70@sda21(r13)
 /* 80355A44 0031F004  4E 80 00 20 */	blr 
+.endfn callback
 
 .balign 16, 0
-.global __OSLaunchNextFirmware
-__OSLaunchNextFirmware:
+.fn __OSLaunchNextFirmware, global
 /* 80355A50 0031F010  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80355A54 0031F014  7C 08 02 A6 */	mflr r0
 /* 80355A58 0031F018  90 01 00 44 */	stw r0, 0x44(r1)
@@ -844,10 +844,10 @@ __OSLaunchNextFirmware:
 /* 803560C8 0031F688  7C 08 03 A6 */	mtlr r0
 /* 803560CC 0031F68C  38 21 00 40 */	addi r1, r1, 0x40
 /* 803560D0 0031F690  4E 80 00 20 */	blr 
+.endfn __OSLaunchNextFirmware
 
 .balign 16, 0
-.global __OSLaunchMenu
-__OSLaunchMenu:
+.fn __OSLaunchMenu, global
 /* 803560E0 0031F6A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803560E4 0031F6A4  7C 08 02 A6 */	mflr r0
 /* 803560E8 0031F6A8  3C 60 81 28 */	lis r3, 0x8128
@@ -901,10 +901,10 @@ __OSLaunchMenu:
 /* 8035619C 0031F75C  7C 08 03 A6 */	mtlr r0
 /* 803561A0 0031F760  38 21 00 20 */	addi r1, r1, 0x20
 /* 803561A4 0031F764  4E 80 00 20 */	blr 
+.endfn __OSLaunchMenu
 
 .balign 16, 0
-.global __OSBootDolSimple
-__OSBootDolSimple:
+.fn __OSBootDolSimple, global
 /* 803561B0 0031F770  54 2B 06 FE */	clrlwi r11, r1, 0x1b
 /* 803561B4 0031F774  7C 2C 0B 78 */	mr r12, r1
 /* 803561B8 0031F778  21 6B FE 00 */	subfic r11, r11, -512
@@ -1422,10 +1422,10 @@ __OSBootDolSimple:
 /* 803568F8 0031FEB8  7C 08 03 A6 */	mtlr r0
 /* 803568FC 0031FEBC  7D 41 53 78 */	mr r1, r10
 /* 80356900 0031FEC0  4E 80 00 20 */	blr 
+.endfn __OSBootDolSimple
 
 .balign 16, 0
-.global __OSBootDol
-__OSBootDol:
+.fn __OSBootDol, global
 /* 80356910 0031FED0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80356914 0031FED4  7C 08 02 A6 */	mflr r0
 /* 80356918 0031FED8  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1556,6 +1556,7 @@ __OSBootDol:
 /* 80356AE4 003200A4  7C 08 03 A6 */	mtlr r0
 /* 80356AE8 003200A8  38 21 00 40 */	addi r1, r1, 0x40
 /* 80356AEC 003200AC  4E 80 00 20 */	blr 
+.endfn __OSBootDol
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

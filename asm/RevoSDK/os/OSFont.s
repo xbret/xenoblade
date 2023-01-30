@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global GetFontCode
-GetFontCode:
+.fn GetFontCode, global
 /* 80357720 00320CE0  28 03 00 01 */	cmplwi r3, 1
 /* 80357724 00320CE4  40 82 01 10 */	bne .L_80357834
 /* 80357728 00320CE8  28 04 00 20 */	cmplwi r4, 0x20
@@ -93,10 +92,10 @@ GetFontCode:
 .L_80357850:
 /* 80357850 00320E10  38 60 00 00 */	li r3, 0
 /* 80357854 00320E14  4E 80 00 20 */	blr 
+.endfn GetFontCode
 
 .balign 16, 0
-.global Decode
-Decode:
+.fn Decode, global
 /* 80357860 00320E20  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80357864 00320E24  7C 08 02 A6 */	mflr r0
 /* 80357868 00320E28  90 01 00 24 */	stw r0, 0x24(r1)
@@ -213,10 +212,10 @@ Decode:
 /* 803579FC 00320FBC  7C 08 03 A6 */	mtlr r0
 /* 80357A00 00320FC0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80357A04 00320FC4  4E 80 00 20 */	blr 
+.endfn Decode
 
 .balign 16, 0
-.global OSSetFontEncode
-OSSetFontEncode:
+.fn OSSetFontEncode, global
 /* 80357A10 00320FD0  A0 0D 9A 08 */	lhz r0, lbl_80665B88@sda21(r13)
 /* 80357A14 00320FD4  28 00 FF FF */	cmplwi r0, 0xffff
 /* 80357A18 00320FD8  41 82 00 08 */	beq .L_80357A20
@@ -252,10 +251,10 @@ OSSetFontEncode:
 .L_80357A80:
 /* 80357A80 00321040  7C 03 03 78 */	mr r3, r0
 /* 80357A84 00321044  4E 80 00 20 */	blr 
+.endfn OSSetFontEncode
 
 .balign 16, 0
-.global ReadFont
-ReadFont:
+.fn ReadFont, global
 /* 80357A90 00321050  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80357A94 00321054  7C 08 02 A6 */	mflr r0
 /* 80357A98 00321058  90 01 00 34 */	stw r0, 0x34(r1)
@@ -467,10 +466,10 @@ ReadFont:
 /* 80357D94 00321354  7C 08 03 A6 */	mtlr r0
 /* 80357D98 00321358  38 21 00 30 */	addi r1, r1, 0x30
 /* 80357D9C 0032135C  4E 80 00 20 */	blr 
+.endfn ReadFont
 
 .balign 16, 0
-.global OSLoadFont
-OSLoadFont:
+.fn OSLoadFont, global
 /* 80357DA0 00321360  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80357DA4 00321364  7C 08 02 A6 */	mflr r0
 /* 80357DA8 00321368  7C 65 1B 78 */	mr r5, r3
@@ -550,10 +549,10 @@ OSLoadFont:
 /* 80357EAC 0032146C  7C 08 03 A6 */	mtlr r0
 /* 80357EB0 00321470  38 21 00 10 */	addi r1, r1, 0x10
 /* 80357EB4 00321474  4E 80 00 20 */	blr 
+.endfn OSLoadFont
 
 .balign 16, 0
-.global ParseStringS
-ParseStringS:
+.fn ParseStringS, global
 /* 80357EC0 00321480  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80357EC4 00321484  7C 08 02 A6 */	mflr r0
 /* 80357EC8 00321488  2C 03 00 00 */	cmpwi r3, 0
@@ -623,10 +622,10 @@ ParseStringS:
 /* 80357FAC 0032156C  7C 08 03 A6 */	mtlr r0
 /* 80357FB0 00321570  38 21 00 10 */	addi r1, r1, 0x10
 /* 80357FB4 00321574  4E 80 00 20 */	blr 
+.endfn ParseStringS
 
 .balign 16, 0
-.global ParseStringW
-ParseStringW:
+.fn ParseStringW, global
 /* 80357FC0 00321580  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80357FC4 00321584  7C 08 02 A6 */	mflr r0
 /* 80357FC8 00321588  90 01 00 34 */	stw r0, 0x34(r1)
@@ -748,10 +747,10 @@ ParseStringW:
 /* 80358168 00321728  7C 08 03 A6 */	mtlr r0
 /* 8035816C 0032172C  38 21 00 30 */	addi r1, r1, 0x30
 /* 80358170 00321730  4E 80 00 20 */	blr 
+.endfn ParseStringW
 
 .balign 16, 0
-.global OSGetFontTexel
-OSGetFontTexel:
+.fn OSGetFontTexel, global
 /* 80358180 00321740  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80358184 00321744  7C 08 02 A6 */	mflr r0
 /* 80358188 00321748  90 01 00 54 */	stw r0, 0x54(r1)
@@ -924,10 +923,10 @@ OSGetFontTexel:
 /* 803583FC 003219BC  7C 08 03 A6 */	mtlr r0
 /* 80358400 003219C0  38 21 00 50 */	addi r1, r1, 0x50
 /* 80358404 003219C4  4E 80 00 20 */	blr 
+.endfn OSGetFontTexel
 
 .balign 16, 0
-.global ExpandFontSheet
-ExpandFontSheet:
+.fn ExpandFontSheet, global
 /* 80358410 003219D0  A0 03 00 18 */	lhz r0, 0x18(r3)
 /* 80358414 003219D4  38 C3 00 2C */	addi r6, r3, 0x2c
 /* 80358418 003219D8  2C 00 00 00 */	cmpwi r0, 0
@@ -1091,10 +1090,10 @@ ExpandFontSheet:
 /* 80358670 00321C30  80 83 00 28 */	lwz r4, 0x28(r3)
 /* 80358674 00321C34  7C A3 2B 78 */	mr r3, r5
 /* 80358678 00321C38  4B FF B9 68 */	b DCStoreRange
+.endfn ExpandFontSheet
 
 .balign 16, 0
-.global OSInitFont
-OSInitFont:
+.fn OSInitFont, global
 /* 80358680 00321C40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80358684 00321C44  7C 08 02 A6 */	mflr r0
 /* 80358688 00321C48  7C 65 1B 78 */	mr r5, r3
@@ -1228,10 +1227,10 @@ OSInitFont:
 /* 80358854 00321E14  7C 08 03 A6 */	mtlr r0
 /* 80358858 00321E18  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035885C 00321E1C  4E 80 00 20 */	blr 
+.endfn OSInitFont
 
 .balign 16, 0
-.global OSGetFontTexture
-OSGetFontTexture:
+.fn OSGetFontTexture, global
 /* 80358860 00321E20  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80358864 00321E24  7C 08 02 A6 */	mflr r0
 /* 80358868 00321E28  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1319,6 +1318,7 @@ OSGetFontTexture:
 /* 8035899C 00321F5C  7C 08 03 A6 */	mtlr r0
 /* 803589A0 00321F60  38 21 00 20 */	addi r1, r1, 0x20
 /* 803589A4 00321F64  4E 80 00 20 */	blr 
+.endfn OSGetFontTexture
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

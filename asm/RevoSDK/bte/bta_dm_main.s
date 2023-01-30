@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global bta_dm_sm_execute
-bta_dm_sm_execute:
+.fn bta_dm_sm_execute, global
 /* 802E156C 002AAB2C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E1570 002AAB30  7C 08 02 A6 */	mflr r0
 /* 802E1574 002AAB34  90 01 00 24 */	stw r0, 0x24(r1)
@@ -44,10 +43,10 @@ bta_dm_sm_execute:
 /* 802E15F8 002AABB8  7C 08 03 A6 */	mtlr r0
 /* 802E15FC 002AABBC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E1600 002AABC0  4E 80 00 20 */	blr
+.endfn bta_dm_sm_execute
 
 
-.global bta_dm_search_sm_execute
-bta_dm_search_sm_execute:
+.fn bta_dm_search_sm_execute, global
 /* 802E1604 002AABC4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E1608 002AABC8  7C 08 02 A6 */	mflr r0
 /* 802E160C 002AABCC  3C E0 80 5C */	lis r7, lbl_805BF618@ha
@@ -100,6 +99,7 @@ bta_dm_search_sm_execute:
 /* 802E16C0 002AAC80  7C 08 03 A6 */	mtlr r0
 /* 802E16C4 002AAC84  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E16C8 002AAC88  4E 80 00 20 */	blr
+.endfn bta_dm_search_sm_execute
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 .global lbl_8050E090

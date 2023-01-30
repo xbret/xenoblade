@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __ct__Q34nw4r3g3d8LightObjFRCQ34nw4r3g3d8LightObj
-__ct__Q34nw4r3g3d8LightObjFRCQ34nw4r3g3d8LightObj:
+.fn __ct__Q34nw4r3g3d8LightObjFRCQ34nw4r3g3d8LightObj, global
 /* 803FD324 003C68E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803FD328 003C68E8  7C 08 02 A6 */	mflr r0
 /* 803FD32C 003C68EC  38 A0 00 40 */	li r5, 0x40
@@ -21,9 +20,9 @@ __ct__Q34nw4r3g3d8LightObjFRCQ34nw4r3g3d8LightObj:
 /* 803FD35C 003C691C  7C 08 03 A6 */	mtlr r0
 /* 803FD360 003C6920  38 21 00 10 */	addi r1, r1, 0x10
 /* 803FD364 003C6924  4E 80 00 20 */	blr 
+.endfn __ct__Q34nw4r3g3d8LightObjFRCQ34nw4r3g3d8LightObj
 
-.global __as__Q34nw4r3g3d8LightObjFRCQ34nw4r3g3d8LightObj
-__as__Q34nw4r3g3d8LightObjFRCQ34nw4r3g3d8LightObj:
+.fn __as__Q34nw4r3g3d8LightObjFRCQ34nw4r3g3d8LightObj, global
 /* 803FD368 003C6928  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803FD36C 003C692C  7C 08 02 A6 */	mflr r0
 /* 803FD370 003C6930  7C 03 20 40 */	cmplw r3, r4
@@ -44,9 +43,9 @@ __as__Q34nw4r3g3d8LightObjFRCQ34nw4r3g3d8LightObj:
 /* 803FD3A8 003C6968  7C 08 03 A6 */	mtlr r0
 /* 803FD3AC 003C696C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803FD3B0 003C6970  4E 80 00 20 */	blr 
+.endfn __as__Q34nw4r3g3d8LightObjFRCQ34nw4r3g3d8LightObj
 
-.global __ne__Q34nw4r3g3d8LightObjCFRCQ34nw4r3g3d8LightObj
-__ne__Q34nw4r3g3d8LightObjCFRCQ34nw4r3g3d8LightObj:
+.fn __ne__Q34nw4r3g3d8LightObjCFRCQ34nw4r3g3d8LightObj, global
 /* 803FD3B4 003C6974  80 C3 00 00 */	lwz r6, 0(r3)
 /* 803FD3B8 003C6978  38 00 00 00 */	li r0, 0
 /* 803FD3BC 003C697C  80 A4 00 00 */	lwz r5, 0(r4)
@@ -121,17 +120,17 @@ __ne__Q34nw4r3g3d8LightObjCFRCQ34nw4r3g3d8LightObj:
 .L_803FD4CC:
 /* 803FD4CC 003C6A8C  7C 03 03 78 */	mr r3, r0
 /* 803FD4D0 003C6A90  4E 80 00 20 */	blr 
+.endfn __ne__Q34nw4r3g3d8LightObjCFRCQ34nw4r3g3d8LightObj
 
-.global Clear__Q34nw4r3g3d8LightObjFv
-Clear__Q34nw4r3g3d8LightObjFv:
+.fn Clear__Q34nw4r3g3d8LightObjFv, global
 /* 803FD4D4 003C6A94  38 00 00 00 */	li r0, 0
 /* 803FD4D8 003C6A98  38 80 00 40 */	li r4, 0x40
 /* 803FD4DC 003C6A9C  90 03 00 00 */	stw r0, 0(r3)
 /* 803FD4E0 003C6AA0  38 63 00 04 */	addi r3, r3, 4
 /* 803FD4E4 003C6AA4  4B FE A5 70 */	b ZeroMemory32ByteBlocks__Q34nw4r3g3d6detailFPvUl
+.endfn Clear__Q34nw4r3g3d8LightObjFv
 
-.global InitLightColor__Q34nw4r3g3d8LightObjF8_GXColor
-InitLightColor__Q34nw4r3g3d8LightObjF8_GXColor:
+.fn InitLightColor__Q34nw4r3g3d8LightObjF8_GXColor, global
 /* 803FD4E8 003C6AA8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803FD4EC 003C6AAC  7C 08 02 A6 */	mflr r0
 /* 803FD4F0 003C6AB0  88 E4 00 00 */	lbz r7, 0(r4)
@@ -150,9 +149,9 @@ InitLightColor__Q34nw4r3g3d8LightObjF8_GXColor:
 /* 803FD524 003C6AE4  7C 08 03 A6 */	mtlr r0
 /* 803FD528 003C6AE8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803FD52C 003C6AEC  4E 80 00 20 */	blr 
+.endfn InitLightColor__Q34nw4r3g3d8LightObjF8_GXColor
 
-.global InitLightPos__Q34nw4r3g3d8LightObjFfff
-InitLightPos__Q34nw4r3g3d8LightObjFfff:
+.fn InitLightPos__Q34nw4r3g3d8LightObjFfff, global
 /* 803FD530 003C6AF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803FD534 003C6AF4  7C 08 02 A6 */	mflr r0
 /* 803FD538 003C6AF8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -168,9 +167,9 @@ InitLightPos__Q34nw4r3g3d8LightObjFfff:
 /* 803FD560 003C6B20  7C 08 03 A6 */	mtlr r0
 /* 803FD564 003C6B24  38 21 00 10 */	addi r1, r1, 0x10
 /* 803FD568 003C6B28  4E 80 00 20 */	blr 
+.endfn InitLightPos__Q34nw4r3g3d8LightObjFfff
 
-.global InitLightDir__Q34nw4r3g3d8LightObjFfff
-InitLightDir__Q34nw4r3g3d8LightObjFfff:
+.fn InitLightDir__Q34nw4r3g3d8LightObjFfff, global
 /* 803FD56C 003C6B2C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803FD570 003C6B30  7C 08 02 A6 */	mflr r0
 /* 803FD574 003C6B34  90 01 00 14 */	stw r0, 0x14(r1)
@@ -187,9 +186,9 @@ InitLightDir__Q34nw4r3g3d8LightObjFfff:
 /* 803FD5A0 003C6B60  7C 08 03 A6 */	mtlr r0
 /* 803FD5A4 003C6B64  38 21 00 10 */	addi r1, r1, 0x10
 /* 803FD5A8 003C6B68  4E 80 00 20 */	blr 
+.endfn InitLightDir__Q34nw4r3g3d8LightObjFfff
 
-.global InitLightSpot__Q34nw4r3g3d8LightObjFf9_GXSpotFn
-InitLightSpot__Q34nw4r3g3d8LightObjFf9_GXSpotFn:
+.fn InitLightSpot__Q34nw4r3g3d8LightObjFf9_GXSpotFn, global
 /* 803FD5AC 003C6B6C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803FD5B0 003C6B70  7C 08 02 A6 */	mflr r0
 /* 803FD5B4 003C6B74  90 01 00 14 */	stw r0, 0x14(r1)
@@ -206,9 +205,9 @@ InitLightSpot__Q34nw4r3g3d8LightObjFf9_GXSpotFn:
 /* 803FD5E0 003C6BA0  7C 08 03 A6 */	mtlr r0
 /* 803FD5E4 003C6BA4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803FD5E8 003C6BA8  4E 80 00 20 */	blr 
+.endfn InitLightSpot__Q34nw4r3g3d8LightObjFf9_GXSpotFn
 
-.global InitLightAttnA__Q34nw4r3g3d8LightObjFfff
-InitLightAttnA__Q34nw4r3g3d8LightObjFfff:
+.fn InitLightAttnA__Q34nw4r3g3d8LightObjFfff, global
 /* 803FD5EC 003C6BAC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803FD5F0 003C6BB0  7C 08 02 A6 */	mflr r0
 /* 803FD5F4 003C6BB4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -225,9 +224,9 @@ InitLightAttnA__Q34nw4r3g3d8LightObjFfff:
 /* 803FD620 003C6BE0  7C 08 03 A6 */	mtlr r0
 /* 803FD624 003C6BE4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803FD628 003C6BE8  4E 80 00 20 */	blr 
+.endfn InitLightAttnA__Q34nw4r3g3d8LightObjFfff
 
-.global InitLightDistAttn__Q34nw4r3g3d8LightObjFff13_GXDistAttnFn
-InitLightDistAttn__Q34nw4r3g3d8LightObjFff13_GXDistAttnFn:
+.fn InitLightDistAttn__Q34nw4r3g3d8LightObjFff13_GXDistAttnFn, global
 /* 803FD62C 003C6BEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803FD630 003C6BF0  7C 08 02 A6 */	mflr r0
 /* 803FD634 003C6BF4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -244,9 +243,9 @@ InitLightDistAttn__Q34nw4r3g3d8LightObjFff13_GXDistAttnFn:
 /* 803FD660 003C6C20  7C 08 03 A6 */	mtlr r0
 /* 803FD664 003C6C24  38 21 00 10 */	addi r1, r1, 0x10
 /* 803FD668 003C6C28  4E 80 00 20 */	blr 
+.endfn InitLightDistAttn__Q34nw4r3g3d8LightObjFff13_GXDistAttnFn
 
-.global InitLightAttnK__Q34nw4r3g3d8LightObjFfff
-InitLightAttnK__Q34nw4r3g3d8LightObjFfff:
+.fn InitLightAttnK__Q34nw4r3g3d8LightObjFfff, global
 /* 803FD66C 003C6C2C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803FD670 003C6C30  7C 08 02 A6 */	mflr r0
 /* 803FD674 003C6C34  90 01 00 14 */	stw r0, 0x14(r1)
@@ -263,9 +262,9 @@ InitLightAttnK__Q34nw4r3g3d8LightObjFfff:
 /* 803FD6A0 003C6C60  7C 08 03 A6 */	mtlr r0
 /* 803FD6A4 003C6C64  38 21 00 10 */	addi r1, r1, 0x10
 /* 803FD6A8 003C6C68  4E 80 00 20 */	blr 
+.endfn InitLightAttnK__Q34nw4r3g3d8LightObjFfff
 
-.global InitSpecularDir__Q34nw4r3g3d8LightObjFfff
-InitSpecularDir__Q34nw4r3g3d8LightObjFfff:
+.fn InitSpecularDir__Q34nw4r3g3d8LightObjFfff, global
 /* 803FD6AC 003C6C6C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803FD6B0 003C6C70  7C 08 02 A6 */	mflr r0
 /* 803FD6B4 003C6C74  90 01 00 14 */	stw r0, 0x14(r1)
@@ -282,9 +281,9 @@ InitSpecularDir__Q34nw4r3g3d8LightObjFfff:
 /* 803FD6E0 003C6CA0  7C 08 03 A6 */	mtlr r0
 /* 803FD6E4 003C6CA4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803FD6E8 003C6CA8  4E 80 00 20 */	blr 
+.endfn InitSpecularDir__Q34nw4r3g3d8LightObjFfff
 
-.global InitLightShininess__Q34nw4r3g3d8LightObjFf
-InitLightShininess__Q34nw4r3g3d8LightObjFf:
+.fn InitLightShininess__Q34nw4r3g3d8LightObjFf, global
 /* 803FD6EC 003C6CAC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803FD6F0 003C6CB0  7C 08 02 A6 */	mflr r0
 /* 803FD6F4 003C6CB4  FC 80 08 90 */	fmr f4, f1
@@ -309,9 +308,9 @@ InitLightShininess__Q34nw4r3g3d8LightObjFf:
 /* 803FD740 003C6D00  7C 08 03 A6 */	mtlr r0
 /* 803FD744 003C6D04  38 21 00 10 */	addi r1, r1, 0x10
 /* 803FD748 003C6D08  4E 80 00 20 */	blr 
+.endfn InitLightShininess__Q34nw4r3g3d8LightObjFf
 
-.global GetLightPos__Q34nw4r3g3d8LightObjCFPQ34nw4r4math4VEC3
-GetLightPos__Q34nw4r3g3d8LightObjCFPQ34nw4r4math4VEC3:
+.fn GetLightPos__Q34nw4r3g3d8LightObjCFPQ34nw4r4math4VEC3, global
 /* 803FD74C 003C6D0C  2C 04 00 00 */	cmpwi r4, 0
 /* 803FD750 003C6D10  4D 82 00 20 */	beqlr 
 /* 803FD754 003C6D14  38 63 00 04 */	addi r3, r3, 4
@@ -319,9 +318,9 @@ GetLightPos__Q34nw4r3g3d8LightObjCFPQ34nw4r4math4VEC3:
 /* 803FD75C 003C6D1C  38 C4 00 08 */	addi r6, r4, 8
 /* 803FD760 003C6D20  4B F1 E4 B0 */	b GXGetLightPos
 /* 803FD764 003C6D24  4E 80 00 20 */	blr 
+.endfn GetLightPos__Q34nw4r3g3d8LightObjCFPQ34nw4r4math4VEC3
 
-.global GetLightDir__Q34nw4r3g3d8LightObjCFPQ34nw4r4math4VEC3
-GetLightDir__Q34nw4r3g3d8LightObjCFPQ34nw4r4math4VEC3:
+.fn GetLightDir__Q34nw4r3g3d8LightObjCFPQ34nw4r4math4VEC3, global
 /* 803FD768 003C6D28  2C 04 00 00 */	cmpwi r4, 0
 /* 803FD76C 003C6D2C  4D 82 00 20 */	beqlr 
 /* 803FD770 003C6D30  38 63 00 04 */	addi r3, r3, 4
@@ -329,9 +328,9 @@ GetLightDir__Q34nw4r3g3d8LightObjCFPQ34nw4r4math4VEC3:
 /* 803FD778 003C6D38  38 C4 00 08 */	addi r6, r4, 8
 /* 803FD77C 003C6D3C  4B F1 E4 D4 */	b GXGetLightDir
 /* 803FD780 003C6D40  4E 80 00 20 */	blr 
+.endfn GetLightDir__Q34nw4r3g3d8LightObjCFPQ34nw4r4math4VEC3
 
-.global ApplyViewMtx__Q34nw4r3g3d8LightObjFRCQ34nw4r4math5MTX34
-ApplyViewMtx__Q34nw4r3g3d8LightObjFRCQ34nw4r4math5MTX34:
+.fn ApplyViewMtx__Q34nw4r3g3d8LightObjFRCQ34nw4r4math5MTX34, global
 /* 803FD784 003C6D44  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803FD788 003C6D48  7C 08 02 A6 */	mflr r0
 /* 803FD78C 003C6D4C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -384,9 +383,9 @@ ApplyViewMtx__Q34nw4r3g3d8LightObjFRCQ34nw4r4math5MTX34:
 /* 803FD840 003C6E00  7C 08 03 A6 */	mtlr r0
 /* 803FD844 003C6E04  38 21 00 30 */	addi r1, r1, 0x30
 /* 803FD848 003C6E08  4E 80 00 20 */	blr 
+.endfn ApplyViewMtx__Q34nw4r3g3d8LightObjFRCQ34nw4r4math5MTX34
 
-.global __ct__Q34nw4r3g3d12LightSettingFPQ34nw4r3g3d8LightObjPQ34nw4r3g3d11AmbLightObjUlPQ34nw4r3g3d12LightSetDataUl
-__ct__Q34nw4r3g3d12LightSettingFPQ34nw4r3g3d8LightObjPQ34nw4r3g3d11AmbLightObjUlPQ34nw4r3g3d12LightSetDataUl:
+.fn __ct__Q34nw4r3g3d12LightSettingFPQ34nw4r3g3d8LightObjPQ34nw4r3g3d11AmbLightObjUlPQ34nw4r3g3d12LightSetDataUl, global
 /* 803FD84C 003C6E0C  94 21 FE A0 */	stwu r1, -0x160(r1)
 /* 803FD850 003C6E10  7C 08 02 A6 */	mflr r0
 /* 803FD854 003C6E14  90 01 01 64 */	stw r0, 0x164(r1)
@@ -669,9 +668,9 @@ __ct__Q34nw4r3g3d12LightSettingFPQ34nw4r3g3d8LightObjPQ34nw4r3g3d11AmbLightObjUl
 /* 803FDC7C 003C723C  7C 08 03 A6 */	mtlr r0
 /* 803FDC80 003C7240  38 21 01 60 */	addi r1, r1, 0x160
 /* 803FDC84 003C7244  4E 80 00 20 */	blr 
+.endfn __ct__Q34nw4r3g3d12LightSettingFPQ34nw4r3g3d8LightObjPQ34nw4r3g3d11AmbLightObjUlPQ34nw4r3g3d12LightSetDataUl
 
-.global Import__Q34nw4r3g3d12LightSettingFRCQ34nw4r3g3d12LightSetting
-Import__Q34nw4r3g3d12LightSettingFRCQ34nw4r3g3d12LightSetting:
+.fn Import__Q34nw4r3g3d12LightSettingFRCQ34nw4r3g3d12LightSetting, global
 /* 803FDC88 003C7248  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803FDC8C 003C724C  7C 08 02 A6 */	mflr r0
 /* 803FDC90 003C7250  90 01 00 24 */	stw r0, 0x24(r1)
@@ -781,9 +780,9 @@ Import__Q34nw4r3g3d12LightSettingFRCQ34nw4r3g3d12LightSetting:
 /* 803FDE0C 003C73CC  7C 08 03 A6 */	mtlr r0
 /* 803FDE10 003C73D0  38 21 00 20 */	addi r1, r1, 0x20
 /* 803FDE14 003C73D4  4E 80 00 20 */	blr 
+.endfn Import__Q34nw4r3g3d12LightSettingFRCQ34nw4r3g3d12LightSetting
 
-.global ApplyViewMtx__Q34nw4r3g3d12LightSettingFRCQ34nw4r4math5MTX34Ul
-ApplyViewMtx__Q34nw4r3g3d12LightSettingFRCQ34nw4r4math5MTX34Ul:
+.fn ApplyViewMtx__Q34nw4r3g3d12LightSettingFRCQ34nw4r4math5MTX34Ul, global
 /* 803FDE18 003C73D8  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803FDE1C 003C73DC  7C 08 02 A6 */	mflr r0
 /* 803FDE20 003C73E0  90 01 00 44 */	stw r0, 0x44(r1)
@@ -861,9 +860,9 @@ ApplyViewMtx__Q34nw4r3g3d12LightSettingFRCQ34nw4r4math5MTX34Ul:
 /* 803FDF2C 003C74EC  7C 08 03 A6 */	mtlr r0
 /* 803FDF30 003C74F0  38 21 00 40 */	addi r1, r1, 0x40
 /* 803FDF34 003C74F4  4E 80 00 20 */	blr 
+.endfn ApplyViewMtx__Q34nw4r3g3d12LightSettingFRCQ34nw4r4math5MTX34Ul
 
-.global GetLightObj__Q34nw4r3g3d8LightSetFUl
-GetLightObj__Q34nw4r3g3d8LightSetFUl:
+.fn GetLightObj__Q34nw4r3g3d8LightSetFUl, global
 /* 803FDF38 003C74F8  80 C3 00 00 */	lwz r6, 0(r3)
 /* 803FDF3C 003C74FC  38 A0 00 00 */	li r5, 0
 /* 803FDF40 003C7500  2C 06 00 00 */	cmpwi r6, 0
@@ -888,9 +887,9 @@ GetLightObj__Q34nw4r3g3d8LightSetFUl:
 .L_803FDF88:
 /* 803FDF88 003C7548  38 60 00 00 */	li r3, 0
 /* 803FDF8C 003C754C  4E 80 00 20 */	blr 
+.endfn GetLightObj__Q34nw4r3g3d8LightSetFUl
 
-.global GetAmbLightObj__Q34nw4r3g3d8LightSetFv
-GetAmbLightObj__Q34nw4r3g3d8LightSetFv:
+.fn GetAmbLightObj__Q34nw4r3g3d8LightSetFv, global
 /* 803FDF90 003C7550  80 A3 00 00 */	lwz r5, 0(r3)
 /* 803FDF94 003C7554  38 80 00 00 */	li r4, 0
 /* 803FDF98 003C7558  2C 05 00 00 */	cmpwi r5, 0
@@ -913,9 +912,9 @@ GetAmbLightObj__Q34nw4r3g3d8LightSetFv:
 .L_803FDFD8:
 /* 803FDFD8 003C7598  38 60 00 00 */	li r3, 0
 /* 803FDFDC 003C759C  4E 80 00 20 */	blr 
+.endfn GetAmbLightObj__Q34nw4r3g3d8LightSetFv
 
-.global SelectLightObj__Q34nw4r3g3d8LightSetFUli
-SelectLightObj__Q34nw4r3g3d8LightSetFUli:
+.fn SelectLightObj__Q34nw4r3g3d8LightSetFUli, global
 /* 803FDFE0 003C75A0  80 E3 00 00 */	lwz r7, 0(r3)
 /* 803FDFE4 003C75A4  38 C0 00 00 */	li r6, 0
 /* 803FDFE8 003C75A8  2C 07 00 00 */	cmpwi r7, 0
@@ -947,9 +946,9 @@ SelectLightObj__Q34nw4r3g3d8LightSetFUli:
 .L_803FE048:
 /* 803FE048 003C7608  38 60 00 00 */	li r3, 0
 /* 803FE04C 003C760C  4E 80 00 20 */	blr 
+.endfn SelectLightObj__Q34nw4r3g3d8LightSetFUli
 
-.global SelectAmbLightObj__Q34nw4r3g3d8LightSetFi
-SelectAmbLightObj__Q34nw4r3g3d8LightSetFi:
+.fn SelectAmbLightObj__Q34nw4r3g3d8LightSetFi, global
 /* 803FE050 003C7610  80 C3 00 00 */	lwz r6, 0(r3)
 /* 803FE054 003C7614  38 A0 00 00 */	li r5, 0
 /* 803FE058 003C7618  2C 06 00 00 */	cmpwi r6, 0
@@ -979,6 +978,7 @@ SelectAmbLightObj__Q34nw4r3g3d8LightSetFi:
 .L_803FE0B0:
 /* 803FE0B0 003C7670  38 60 00 00 */	li r3, 0
 /* 803FE0B4 003C7674  4E 80 00 20 */	blr 
+.endfn SelectAmbLightObj__Q34nw4r3g3d8LightSetFi
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

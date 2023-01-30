@@ -2,18 +2,17 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global adxini_rnaerr_cbfn
-adxini_rnaerr_cbfn:
+.fn adxini_rnaerr_cbfn, global
 /* 8037F674 00348C34  7C 83 23 78 */	mr r3, r4
 /* 8037F678 00348C38  48 00 AB A0 */	b ADXERR_CallErrFunc1_
+.endfn adxini_rnaerr_cbfn
 
-.global adxini_lscerr_cbfn
-adxini_lscerr_cbfn:
+.fn adxini_lscerr_cbfn, global
 /* 8037F67C 00348C3C  7C 83 23 78 */	mr r3, r4
 /* 8037F680 00348C40  48 00 AB 98 */	b ADXERR_CallErrFunc1_
+.endfn adxini_lscerr_cbfn
 
-.global adxt_exec_main_thrd
-adxt_exec_main_thrd:
+.fn adxt_exec_main_thrd, global
 /* 8037F684 00348C44  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8037F688 00348C48  7C 08 02 A6 */	mflr r0
 /* 8037F68C 00348C4C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -23,9 +22,9 @@ adxt_exec_main_thrd:
 /* 8037F69C 00348C5C  7C 08 03 A6 */	mtlr r0
 /* 8037F6A0 00348C60  38 21 00 10 */	addi r1, r1, 0x10
 /* 8037F6A4 00348C64  4E 80 00 20 */	blr
+.endfn adxt_exec_main_thrd
 
-.global adxt_exec_tsvr
-adxt_exec_tsvr:
+.fn adxt_exec_tsvr, global
 /* 8037F6A8 00348C68  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8037F6AC 00348C6C  7C 08 02 A6 */	mflr r0
 /* 8037F6B0 00348C70  90 01 00 14 */	stw r0, 0x14(r1)
@@ -35,9 +34,9 @@ adxt_exec_tsvr:
 /* 8037F6C0 00348C80  7C 08 03 A6 */	mtlr r0
 /* 8037F6C4 00348C84  38 21 00 10 */	addi r1, r1, 0x10
 /* 8037F6C8 00348C88  4E 80 00 20 */	blr
+.endfn adxt_exec_tsvr
 
-.global adxt_exec_fssvr
-adxt_exec_fssvr:
+.fn adxt_exec_fssvr, global
 /* 8037F6CC 00348C8C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8037F6D0 00348C90  7C 08 02 A6 */	mflr r0
 /* 8037F6D4 00348C94  90 01 00 14 */	stw r0, 0x14(r1)
@@ -47,9 +46,9 @@ adxt_exec_fssvr:
 /* 8037F6E4 00348CA4  7C 08 03 A6 */	mtlr r0
 /* 8037F6E8 00348CA8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8037F6EC 00348CAC  4E 80 00 20 */	blr 
+.endfn adxt_exec_fssvr
 
-.global ADXT_Init
-ADXT_Init:
+.fn ADXT_Init, global
 /* 8037F6F0 00348CB0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8037F6F4 00348CB4  7C 08 02 A6 */	mflr r0
 /* 8037F6F8 00348CB8  3C 60 80 52 */	lis r3, adxt_build@ha
@@ -127,9 +126,9 @@ ADXT_Init:
 /* 8037F814 00348DD4  7C 08 03 A6 */	mtlr r0
 /* 8037F818 00348DD8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8037F81C 00348DDC  4E 80 00 20 */	blr 
+.endfn ADXT_Init
 
-.global ADXT_Finish
-ADXT_Finish:
+.fn ADXT_Finish, global
 /* 8037F820 00348DE0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8037F824 00348DE4  7C 08 02 A6 */	mflr r0
 /* 8037F828 00348DE8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -198,6 +197,7 @@ ADXT_Finish:
 /* 8037F914 00348ED4  7C 08 03 A6 */	mtlr r0
 /* 8037F918 00348ED8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8037F91C 00348EDC  4E 80 00 20 */	blr 
+.endfn ADXT_Finish
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

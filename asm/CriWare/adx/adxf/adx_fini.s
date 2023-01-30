@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global ADXF_Init
-ADXF_Init:
+.fn ADXF_Init, global
 /* 8037C620 00345BE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8037C624 00345BE4  7C 08 02 A6 */	mflr r0
 /* 8037C628 00345BE8  3C 60 80 52 */	lis r3, adxf_build@ha
@@ -50,9 +49,9 @@ ADXF_Init:
 /* 8037C6C8 00345C88  7C 08 03 A6 */	mtlr r0
 /* 8037C6CC 00345C8C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8037C6D0 00345C90  4E 80 00 20 */	blr 
+.endfn ADXF_Init
 
-.global ADXF_Finish
-ADXF_Finish:
+.fn ADXF_Finish, global
 /* 8037C6D4 00345C94  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8037C6D8 00345C98  7C 08 02 A6 */	mflr r0
 /* 8037C6DC 00345C9C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -95,6 +94,7 @@ ADXF_Finish:
 /* 8037C76C 00345D2C  7C 08 03 A6 */	mtlr r0
 /* 8037C770 00345D30  38 21 00 10 */	addi r1, r1, 0x10
 /* 8037C774 00345D34  4E 80 00 20 */	blr 
+.endfn ADXF_Finish
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

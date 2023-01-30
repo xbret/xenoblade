@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global MPVCDEC_Init
-MPVCDEC_Init:
+.fn MPVCDEC_Init, global
 /* 803A3F8C 0036D54C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A3F90 0036D550  7C 08 02 A6 */	mflr r0
 /* 803A3F94 0036D554  3C 80 80 60 */	lis r4, mpvcdec_ixa@ha
@@ -24,9 +23,9 @@ MPVCDEC_Init:
 /* 803A3FD0 0036D590  7C 08 03 A6 */	mtlr r0
 /* 803A3FD4 0036D594  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A3FD8 0036D598  4E 80 00 20 */	blr 
+.endfn MPVCDEC_Init
 
-.global MPVCDEC_StartFrame
-MPVCDEC_StartFrame:
+.fn MPVCDEC_StartFrame, global
 /* 803A3FDC 0036D59C  3C C0 80 3C */	lis r6, DCT_IsrTrans@ha
 /* 803A3FE0 0036D5A0  3C A0 80 60 */	lis r5, lbl_80605F2C@ha
 /* 803A3FE4 0036D5A4  38 C6 9F 68 */	addi r6, r6, DCT_IsrTrans@l
@@ -43,9 +42,9 @@ MPVCDEC_StartFrame:
 /* 803A4010 0036D5D0  80 04 00 04 */	lwz r0, 4(r4)
 /* 803A4014 0036D5D4  90 03 0C 6C */	stw r0, 0xc6c(r3)
 /* 803A4018 0036D5D8  4E 80 00 20 */	blr 
+.endfn MPVCDEC_StartFrame
 
-.global mpvcdec_IntraBlocksInt1
-mpvcdec_IntraBlocksInt1:
+.fn mpvcdec_IntraBlocksInt1, global
 /* 803A401C 0036D5DC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803A4020 0036D5E0  7C 08 02 A6 */	mflr r0
 /* 803A4024 0036D5E4  39 20 00 00 */	li r9, 0
@@ -344,9 +343,9 @@ mpvcdec_IntraBlocksInt1:
 /* 803A44B8 0036DA78  7C 08 03 A6 */	mtlr r0
 /* 803A44BC 0036DA7C  38 21 00 30 */	addi r1, r1, 0x30
 /* 803A44C0 0036DA80  4E 80 00 20 */	blr 
+.endfn mpvcdec_IntraBlocksInt1
 
-.global mpvcdec_NintraBlocksInt1
-mpvcdec_NintraBlocksInt1:
+.fn mpvcdec_NintraBlocksInt1, global
 /* 803A44C4 0036DA84  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803A44C8 0036DA88  7C 08 02 A6 */	mflr r0
 /* 803A44CC 0036DA8C  38 A3 03 40 */	addi r5, r3, 0x340
@@ -437,6 +436,7 @@ mpvcdec_NintraBlocksInt1:
 /* 803A4600 0036DBC0  7C 08 03 A6 */	mtlr r0
 /* 803A4604 0036DBC4  38 21 00 40 */	addi r1, r1, 0x40
 /* 803A4608 0036DBC8  4E 80 00 20 */	blr 
+.endfn mpvcdec_NintraBlocksInt1
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

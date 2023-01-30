@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global BTM_SecAddDevice
-BTM_SecAddDevice:
+.fn BTM_SecAddDevice, global
 /* 802E6244 002AF804  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802E6248 002AF808  7C 08 02 A6 */	mflr r0
 /* 802E624C 002AF80C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -113,9 +112,9 @@ BTM_SecAddDevice:
 /* 802E63C0 002AF980  7C 08 03 A6 */	mtlr r0
 /* 802E63C4 002AF984  38 21 00 30 */	addi r1, r1, 0x30
 /* 802E63C8 002AF988  4E 80 00 20 */	blr 
+.endfn BTM_SecAddDevice
 
-.global BTM_SecDeleteDevice
-BTM_SecDeleteDevice:
+.fn BTM_SecDeleteDevice, global
 /* 802E63CC 002AF98C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E63D0 002AF990  7C 08 02 A6 */	mflr r0
 /* 802E63D4 002AF994  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
@@ -164,9 +163,9 @@ BTM_SecDeleteDevice:
 /* 802E646C 002AFA2C  7C 08 03 A6 */	mtlr r0
 /* 802E6470 002AFA30  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E6474 002AFA34  4E 80 00 20 */	blr 
+.endfn BTM_SecDeleteDevice
 
-.global BTM_SecReadDevName
-BTM_SecReadDevName:
+.fn BTM_SecReadDevName, global
 /* 802E6478 002AFA38  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E647C 002AFA3C  7C 08 02 A6 */	mflr r0
 /* 802E6480 002AFA40  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
@@ -211,9 +210,9 @@ BTM_SecReadDevName:
 /* 802E650C 002AFACC  7C 08 03 A6 */	mtlr r0
 /* 802E6510 002AFAD0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E6514 002AFAD4  4E 80 00 20 */	blr 
+.endfn BTM_SecReadDevName
 
-.global btm_sec_alloc_dev
-btm_sec_alloc_dev:
+.fn btm_sec_alloc_dev, global
 /* 802E6518 002AFAD8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E651C 002AFADC  7C 08 02 A6 */	mflr r0
 /* 802E6520 002AFAE0  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
@@ -292,9 +291,9 @@ btm_sec_alloc_dev:
 /* 802E662C 002AFBEC  7C 08 03 A6 */	mtlr r0
 /* 802E6630 002AFBF0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E6634 002AFBF4  4E 80 00 20 */	blr 
+.endfn btm_sec_alloc_dev
 
-.global btm_find_dev_by_handle
-btm_find_dev_by_handle:
+.fn btm_find_dev_by_handle, global
 /* 802E6638 002AFBF8  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
 /* 802E663C 002AFBFC  38 00 00 04 */	li r0, 4
 /* 802E6640 002AFC00  38 84 F9 F8 */	addi r4, r4, lbl_805BF9F8@l
@@ -346,9 +345,9 @@ btm_find_dev_by_handle:
 /* 802E66E4 002AFCA4  42 00 FF 6C */	bdnz .L_802E6650
 /* 802E66E8 002AFCA8  38 60 00 00 */	li r3, 0
 /* 802E66EC 002AFCAC  4E 80 00 20 */	blr 
+.endfn btm_find_dev_by_handle
 
-.global btm_find_dev
-btm_find_dev:
+.fn btm_find_dev, global
 /* 802E66F0 002AFCB0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E66F4 002AFCB4  7C 08 02 A6 */	mflr r0
 /* 802E66F8 002AFCB8  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
@@ -386,6 +385,7 @@ btm_find_dev:
 /* 802E676C 002AFD2C  7C 08 03 A6 */	mtlr r0
 /* 802E6770 002AFD30  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E6774 002AFD34  4E 80 00 20 */	blr 
+.endfn btm_find_dev
 
 .global btm_find_oldest_dev
 btm_find_oldest_dev:

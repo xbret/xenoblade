@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global BTA_HhEnable
-BTA_HhEnable:
+.fn BTA_HhEnable, global
 /* 802E3830 002ACDF0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E3834 002ACDF4  7C 08 02 A6 */	mflr r0
 /* 802E3838 002ACDF8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -39,9 +38,9 @@ BTA_HhEnable:
 /* 802E38AC 002ACE6C  7C 08 03 A6 */	mtlr r0
 /* 802E38B0 002ACE70  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E38B4 002ACE74  4E 80 00 20 */	blr 
+.endfn BTA_HhEnable
 
-.global BTA_HhDisable
-BTA_HhDisable:
+.fn BTA_HhDisable, global
 /* 802E38B8 002ACE78  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E38BC 002ACE7C  7C 08 02 A6 */	mflr r0
 /* 802E38C0 002ACE80  38 60 00 08 */	li r3, 8
@@ -57,9 +56,9 @@ BTA_HhDisable:
 /* 802E38E4 002ACEA4  7C 08 03 A6 */	mtlr r0
 /* 802E38E8 002ACEA8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E38EC 002ACEAC  4E 80 00 20 */	blr 
+.endfn BTA_HhDisable
 
-.global BTA_HhClose
-BTA_HhClose:
+.fn BTA_HhClose, global
 /* 802E38F0 002ACEB0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E38F4 002ACEB4  7C 08 02 A6 */	mflr r0
 /* 802E38F8 002ACEB8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -86,9 +85,9 @@ BTA_HhClose:
 /* 802E3948 002ACF08  7C 08 03 A6 */	mtlr r0
 /* 802E394C 002ACF0C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E3950 002ACF10  4E 80 00 20 */	blr 
+.endfn BTA_HhClose
 
-.global BTA_HhOpen
-BTA_HhOpen:
+.fn BTA_HhOpen, global
 /* 802E3954 002ACF14  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E3958 002ACF18  7C 08 02 A6 */	mflr r0
 /* 802E395C 002ACF1C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -136,9 +135,9 @@ BTA_HhOpen:
 /* 802E39FC 002ACFBC  7C 08 03 A6 */	mtlr r0
 /* 802E3A00 002ACFC0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E3A04 002ACFC4  4E 80 00 20 */	blr 
+.endfn BTA_HhOpen
 
-.global BTA_HhSendData
-BTA_HhSendData:
+.fn BTA_HhSendData, global
 /* 802E3A08 002ACFC8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E3A0C 002ACFCC  7C 08 02 A6 */	mflr r0
 /* 802E3A10 002ACFD0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -176,9 +175,9 @@ BTA_HhSendData:
 /* 802E3A8C 002AD04C  7C 08 03 A6 */	mtlr r0
 /* 802E3A90 002AD050  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E3A94 002AD054  4E 80 00 20 */	blr 
+.endfn BTA_HhSendData
 
-.global BTA_HhAddDev
-BTA_HhAddDev:
+.fn BTA_HhAddDev, global
 /* 802E3A98 002AD058  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E3A9C 002AD05C  7C 08 02 A6 */	mflr r0
 /* 802E3AA0 002AD060  90 01 00 24 */	stw r0, 0x24(r1)
@@ -222,9 +221,9 @@ BTA_HhAddDev:
 /* 802E3B34 002AD0F4  7C 08 03 A6 */	mtlr r0
 /* 802E3B38 002AD0F8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E3B3C 002AD0FC  4E 80 00 20 */	blr 
+.endfn BTA_HhAddDev
 
-.global BTA_HhRemoveDev
-BTA_HhRemoveDev:
+.fn BTA_HhRemoveDev, global
 /* 802E3B40 002AD100  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E3B44 002AD104  7C 08 02 A6 */	mflr r0
 /* 802E3B48 002AD108  90 01 00 14 */	stw r0, 0x14(r1)
@@ -253,9 +252,9 @@ BTA_HhRemoveDev:
 /* 802E3BA0 002AD160  7C 08 03 A6 */	mtlr r0
 /* 802E3BA4 002AD164  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E3BA8 002AD168  4E 80 00 20 */	blr 
+.endfn BTA_HhRemoveDev
 
-.global BTA_HhGetAclQueueInfo
-BTA_HhGetAclQueueInfo:
+.fn BTA_HhGetAclQueueInfo, global
 /* 802E3BAC 002AD16C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E3BB0 002AD170  7C 08 02 A6 */	mflr r0
 /* 802E3BB4 002AD174  38 60 00 08 */	li r3, 8
@@ -278,6 +277,7 @@ BTA_HhGetAclQueueInfo:
 /* 802E3BF4 002AD1B4  7C 08 03 A6 */	mtlr r0
 /* 802E3BF8 002AD1B8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E3BFC 002AD1BC  4E 80 00 20 */	blr
+.endfn BTA_HhGetAclQueueInfo
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

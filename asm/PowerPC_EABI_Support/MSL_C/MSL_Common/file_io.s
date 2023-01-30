@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global fclose
-fclose:
+.fn fclose, global
 /* 802BE0B0 00287670  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802BE0B4 00287674  7C 08 02 A6 */	mflr r0
 /* 802BE0B8 00287678  2C 03 00 00 */	cmpwi r3, 0
@@ -57,6 +56,7 @@ fclose:
 /* 802BE160 00287720  7C 08 03 A6 */	mtlr r0
 /* 802BE164 00287724  38 21 00 20 */	addi r1, r1, 0x20
 /* 802BE168 00287728  4E 80 00 20 */	blr 
+.endfn fclose
 
 .global fflush
 fflush:

@@ -3,8 +3,9 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global func_80434F94
-func_80434F94:
+
+
+.fn func_80434F94, global
 /* 80434F94 003FE554  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80434F98 003FE558  7C 08 02 A6 */	mflr r0
 /* 80434F9C 003FE55C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -41,9 +42,9 @@ func_80434F94:
 /* 80435004 003FE5C4  7C 08 03 A6 */	mtlr r0
 /* 80435008 003FE5C8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8043500C 003FE5CC  4E 80 00 20 */	blr 
+.endfn func_80434F94
 
-.global func_80435010
-func_80435010:
+.fn func_80435010, global
 /* 80435010 003FE5D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80435014 003FE5D4  7C 08 02 A6 */	mflr r0
 /* 80435018 003FE5D8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -74,9 +75,9 @@ func_80435010:
 /* 8043506C 003FE62C  7C 08 03 A6 */	mtlr r0
 /* 80435070 003FE630  38 21 00 10 */	addi r1, r1, 0x10
 /* 80435074 003FE634  4E 80 00 20 */	blr 
+.endfn func_80435010
 
-.global func_80435078
-func_80435078:
+.fn func_80435078, global
 /* 80435078 003FE638  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8043507C 003FE63C  7C 08 02 A6 */	mflr r0
 /* 80435080 003FE640  90 01 00 74 */	stw r0, 0x74(r1)
@@ -197,9 +198,9 @@ func_80435078:
 /* 80435214 003FE7D4  7C 08 03 A6 */	mtlr r0
 /* 80435218 003FE7D8  38 21 00 70 */	addi r1, r1, 0x70
 /* 8043521C 003FE7DC  4E 80 00 20 */	blr 
+.endfn func_80435078
 
-.global func_80435220
-func_80435220:
+.fn func_80435220, global
 /* 80435220 003FE7E0  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80435224 003FE7E4  7C 08 02 A6 */	mflr r0
 /* 80435228 003FE7E8  3C C0 80 52 */	lis r6, lbl_80525D70@ha
@@ -302,8 +303,11 @@ func_80435220:
 /* 80435390 003FE950  7C 08 03 A6 */	mtlr r0
 /* 80435394 003FE954  38 21 00 60 */	addi r1, r1, 0x60
 /* 80435398 003FE958  4E 80 00 20 */	blr 
+.endfn func_80435220
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
 
 .global lbl_80525D70
 lbl_80525D70:
@@ -312,91 +316,62 @@ lbl_80525D70:
 	.2byte 0
 
 
-.section extab_, "a"  # 0x800066E0 - 0x80021020
+.section extab, "a" # 0x800066E0 - 0x80021020
 
-.global lbl_8001C020
-lbl_8001C020:
+.balign 4
+
+.obj "@etb_8001C020", local
+.hidden "@etb_8001C020"
 	.4byte 0x08080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001C020"
 
-.global lbl_8001C028
-lbl_8001C028:
+.obj "@etb_8001C028", local
+.hidden "@etb_8001C028"
 	.4byte 0x08080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001C028"
 
-.global lbl_8001C030
-lbl_8001C030:
+.obj "@etb_8001C030", local
+.hidden "@etb_8001C030"
 	.4byte 0x28080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001C030"
 
-.global lbl_8001C038
-lbl_8001C038:
+.obj "@etb_8001C038", local
+.hidden "@etb_8001C038"
 	.4byte 0x40080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001C038"
 
-#MTRand extab (temporary)
-	.global lbl_8001C040
-lbl_8001C040:
-	.4byte 0x08080000
-	.4byte 0
+.section extabindex, "a" # 0x80021020 - 0x80039220
 
-.global lbl_8001C048
-lbl_8001C048:
-	.4byte 0x08080000
-	.4byte 0
+.balign 4
 
-.global lbl_8001C050
-lbl_8001C050:
-	.4byte 0x08080000
-	.4byte 0
-
-.global lbl_8001C058
-lbl_8001C058:
-	.4byte 0x08080000
-	.4byte 0
-
-.global lbl_8001C060
-lbl_8001C060:
-	.4byte 0x080A0000
-	.4byte 0
-
-.global lbl_8001C068
-lbl_8001C068:
-	.4byte 0x080A0000
-	.4byte 0
-
-
-.section extabindex_, "a"  # 0x80021020 - 0x80039220
-
+.obj "@eti_80033BFC", local
+.hidden "@eti_80033BFC"
 	.4byte func_80434F94
 	.4byte 0x0000007C
-	.4byte lbl_8001C020
+	.4byte "@etb_8001C020"
+.endobj "@eti_80033BFC"
+
+.obj "@eti_80033C08", local
+.hidden "@eti_80033C08"
 	.4byte func_80435010
 	.4byte 0x00000068
-	.4byte lbl_8001C028
+	.4byte "@etb_8001C028"
+.endobj "@eti_80033C08"
+
+.obj "@eti_80033C14", local
+.hidden "@eti_80033C14"
 	.4byte func_80435078
 	.4byte 0x000001A8
-	.4byte lbl_8001C030
+	.4byte "@etb_8001C030"
+.endobj "@eti_80033C14"
+
+.obj "@eti_80033C20", local
+.hidden "@eti_80033C20"
 	.4byte func_80435220
 	.4byte 0x0000017C
-	.4byte lbl_8001C038
-
-#MTRand extabindex (temporary)
-		.4byte getInstanceMTRand__Q22mm3mtlFv
-	.4byte 0x00000238
-	.4byte lbl_8001C040
-	.4byte mtInit__Q32mm3mtl6MTRandFUl
-	.4byte 0x00000214
-	.4byte lbl_8001C048
-	.4byte nextMt__Q32mm3mtl6MTRandFv
-	.4byte 0x000002F4
-	.4byte lbl_8001C050
-	.4byte rand__Q32mm3mtl6MTRandFv
-	.4byte 0x00000080
-	.4byte lbl_8001C058
-	.4byte randFloat__Q32mm3mtl6MTRandFv
-	.4byte 0x0000009C
-	.4byte lbl_8001C060
-	.4byte randFloat1__Q32mm3mtl6MTRandFv
-	.4byte 0x000000A4
-	.4byte lbl_8001C068
+	.4byte "@etb_8001C038"
+.endobj "@eti_80033C20"

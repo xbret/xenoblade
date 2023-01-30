@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global hidd_conn_initiate
-hidd_conn_initiate:
+.fn hidd_conn_initiate, global
 /* 802F3640 002BCC00  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F3644 002BCC04  7C 08 02 A6 */	mflr r0
 /* 802F3648 002BCC08  90 01 00 24 */	stw r0, 0x24(r1)
@@ -56,6 +55,7 @@ hidd_conn_initiate:
 /* 802F36F4 002BCCB4  7C 08 03 A6 */	mtlr r0
 /* 802F36F8 002BCCB8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802F36FC 002BCCBC  4E 80 00 20 */	blr
+.endfn hidd_conn_initiate
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 .global lbl_80546690

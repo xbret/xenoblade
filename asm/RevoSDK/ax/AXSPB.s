@@ -3,15 +3,14 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global __AXGetStudio
-__AXGetStudio:
+.fn __AXGetStudio, global
 /* 802D4320 0029D8E0  3C 60 80 58 */	lis r3, lbl_805819C0@ha
 /* 802D4324 0029D8E4  38 63 19 C0 */	addi r3, r3, lbl_805819C0@l
 /* 802D4328 0029D8E8  4E 80 00 20 */	blr 
+.endfn __AXGetStudio
 
 .balign 16, 0
-.global __AXDepopFadeMain
-__AXDepopFadeMain:
+.fn __AXDepopFadeMain, global
 /* 802D4330 0029D8F0  3C C0 2A AB */	lis r6, 0x2AAAAAAB@ha
 /* 802D4334 0029D8F4  80 E3 00 00 */	lwz r7, 0(r3)
 /* 802D4338 0029D8F8  38 06 AA AB */	addi r0, r6, 0x2AAAAAAB@l
@@ -42,10 +41,10 @@ __AXDepopFadeMain:
 /* 802D4390 0029D950  90 04 00 00 */	stw r0, 0(r4)
 /* 802D4394 0029D954  B0 05 00 00 */	sth r0, 0(r5)
 /* 802D4398 0029D958  4E 80 00 20 */	blr 
+.endfn __AXDepopFadeMain
 
 .balign 16, 0
-.global __AXDepopFadeRmt
-__AXDepopFadeRmt:
+.fn __AXDepopFadeRmt, global
 /* 802D43A0 0029D960  3C C0 38 E4 */	lis r6, 0x38E38E39@ha
 /* 802D43A4 0029D964  80 E3 00 00 */	lwz r7, 0(r3)
 /* 802D43A8 0029D968  38 06 8E 39 */	addi r0, r6, 0x38E38E39@l
@@ -76,10 +75,10 @@ __AXDepopFadeRmt:
 /* 802D4400 0029D9C0  90 04 00 00 */	stw r0, 0(r4)
 /* 802D4404 0029D9C4  B0 05 00 00 */	sth r0, 0(r5)
 /* 802D4408 0029D9C8  4E 80 00 20 */	blr 
+.endfn __AXDepopFadeRmt
 
 .balign 16, 0
-.global __AXPrintStudio
-__AXPrintStudio:
+.fn __AXPrintStudio, global
 /* 802D4410 0029D9D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D4414 0029D9D4  7C 08 02 A6 */	mflr r0
 /* 802D4418 0029D9D8  38 6D B5 94 */	addi r3, r13, lbl_80667714@sda21
@@ -174,10 +173,10 @@ __AXPrintStudio:
 /* 802D457C 0029DB3C  7C 08 03 A6 */	mtlr r0
 /* 802D4580 0029DB40  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D4584 0029DB44  4E 80 00 20 */	blr 
+.endfn __AXPrintStudio
 
 .balign 16, 0
-.global __AXSPBInit
-__AXSPBInit:
+.fn __AXSPBInit, global
 /* 802D4590 0029DB50  38 00 00 00 */	li r0, 0
 /* 802D4594 0029DB54  90 0D B5 48 */	stw r0, lbl_806676C8@sda21(r13)
 /* 802D4598 0029DB58  90 0D B5 4C */	stw r0, lbl_806676CC@sda21(r13)
@@ -200,15 +199,15 @@ __AXSPBInit:
 /* 802D45DC 0029DB9C  90 0D B5 90 */	stw r0, lbl_80667710@sda21(r13)
 /* 802D45E0 0029DBA0  90 0D B5 94 */	stw r0, lbl_80667714@sda21(r13)
 /* 802D45E4 0029DBA4  4E 80 00 20 */	blr 
+.endfn __AXSPBInit
 
 .balign 16, 0
-.global __AXSPBQuit
-__AXSPBQuit:
+.fn __AXSPBQuit, global
 /* 802D45F0 0029DBB0  4E 80 00 20 */	blr 
+.endfn __AXSPBQuit
 
 .balign 16, 0
-.global __AXDepopVoice
-__AXDepopVoice:
+.fn __AXDepopVoice, global
 /* 802D4600 0029DBC0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D4604 0029DBC4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802D4608 0029DBC8  93 C1 00 08 */	stw r30, 8(r1)
@@ -296,6 +295,7 @@ __AXDepopVoice:
 /* 802D4750 0029DD10  83 C1 00 08 */	lwz r30, 8(r1)
 /* 802D4754 0029DD14  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D4758 0029DD18  4E 80 00 20 */	blr 
+.endfn __AXDepopVoice
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 .global lbl_805819C0

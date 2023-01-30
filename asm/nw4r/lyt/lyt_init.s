@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global LytInit__Q24nw4r3lytFv
-LytInit__Q24nw4r3lytFv:
+.fn LytInit__Q24nw4r3lytFv, global
 /* 803FE8B0 003C7E70  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803FE8B4 003C7E74  7C 08 02 A6 */	mflr r0
 /* 803FE8B8 003C7E78  90 01 00 14 */	stw r0, 0x14(r1)
@@ -25,6 +24,7 @@ LytInit__Q24nw4r3lytFv:
 /* 803FE8F8 003C7EB8  7C 08 03 A6 */	mtlr r0
 /* 803FE8FC 003C7EBC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803FE900 003C7EC0  4E 80 00 20 */	blr 
+.endfn LytInit__Q24nw4r3lytFv
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

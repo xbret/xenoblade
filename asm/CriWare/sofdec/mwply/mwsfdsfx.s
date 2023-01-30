@@ -5,8 +5,7 @@
 
 #the later code might be part of mwsfdcre
 
-.global MWSFSFX_Init
-MWSFSFX_Init:
+.fn MWSFSFX_Init, global
 /* 8039DED4 00367494  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039DED8 00367498  7C 08 02 A6 */	mflr r0
 /* 8039DEDC 0036749C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -19,28 +18,28 @@ MWSFSFX_Init:
 /* 8039DEF8 003674B8  7C 08 03 A6 */	mtlr r0
 /* 8039DEFC 003674BC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039DF00 003674C0  4E 80 00 20 */	blr
+.endfn MWSFSFX_Init
 
-.global mwsfsfx_SfxErrCbFn
-mwsfsfx_SfxErrCbFn:
+.fn mwsfsfx_SfxErrCbFn, global
 /* 8039DF04 003674C4  7C 83 23 78 */	mr r3, r4
 /* 8039DF08 003674C8  4C C6 31 82 */	crclr 6
 /* 8039DF0C 003674CC  4B FF FD 2C */	b MWSFSVM_Error
+.endfn mwsfsfx_SfxErrCbFn
 
-.global MWSFSFX_CalcHnWorkSiz
-MWSFSFX_CalcHnWorkSiz:
+.fn MWSFSFX_CalcHnWorkSiz, global
 /* 8039DF10 003674D0  38 60 30 1F */	li r3, 0x301f
 /* 8039DF14 003674D4  4E 80 00 20 */	blr 
+.endfn MWSFSFX_CalcHnWorkSiz
 
-.global MWSFSFX_Create
-MWSFSFX_Create:
+.fn MWSFSFX_Create, global
 /* 8039DF18 003674D8  48 03 79 B0 */	b SFX_Create
+.endfn MWSFSFX_Create
 
-.global MWSFSFX_Destroy
-MWSFSFX_Destroy:
+.fn MWSFSFX_Destroy, global
 /* 8039DF1C 003674DC  48 03 7C 50 */	b SFX_Destroy
+.endfn MWSFSFX_Destroy
 
-.global MWSFD_CnvFrmInfToSfx
-MWSFD_CnvFrmInfToSfx:
+.fn MWSFD_CnvFrmInfToSfx, global
 /* 8039DF20 003674E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039DF24 003674E4  7C 08 02 A6 */	mflr r0
 /* 8039DF28 003674E8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -299,10 +298,10 @@ MWSFD_CnvFrmInfToSfx:
 /* 8039E28C 0036784C  7C 08 03 A6 */	mtlr r0
 /* 8039E290 00367850  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039E294 00367854  4E 80 00 20 */	blr 
+.endfn MWSFD_CnvFrmInfToSfx
 
 
-.global func_8039E298
-func_8039E298:
+.fn func_8039E298, global
 /* 8039E298 00367858  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039E29C 0036785C  7C 08 02 A6 */	mflr r0
 /* 8039E2A0 00367860  90 01 00 14 */	stw r0, 0x14(r1)
@@ -339,9 +338,9 @@ func_8039E298:
 /* 8039E310 003678D0  7C 08 03 A6 */	mtlr r0
 /* 8039E314 003678D4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039E318 003678D8  4E 80 00 20 */	blr 
+.endfn func_8039E298
 
-.global MWSFD_IsColAdjFrame
-MWSFD_IsColAdjFrame:
+.fn MWSFD_IsColAdjFrame, global
 /* 8039E31C 003678DC  54 80 E8 04 */	slwi r0, r4, 0x1d
 /* 8039E320 003678E0  54 84 0F FE */	srwi r4, r4, 0x1f
 /* 8039E324 003678E4  7C 04 00 50 */	subf r0, r4, r0
@@ -357,9 +356,9 @@ MWSFD_IsColAdjFrame:
 .L_8039E34C:
 /* 8039E34C 0036790C  80 63 00 EC */	lwz r3, 0xec(r3)
 /* 8039E350 00367910  4E 80 00 20 */	blr 
+.endfn MWSFD_IsColAdjFrame
 
-.global MWSFD_GetFxType
-MWSFD_GetFxType:
+.fn MWSFD_GetFxType, global
 /* 8039E354 00367914  54 80 E8 04 */	slwi r0, r4, 0x1d
 /* 8039E358 00367918  54 84 0F FE */	srwi r4, r4, 0x1f
 /* 8039E35C 0036791C  7C 04 00 50 */	subf r0, r4, r0
@@ -375,9 +374,9 @@ MWSFD_GetFxType:
 .L_8039E384:
 /* 8039E384 00367944  80 63 00 F4 */	lwz r3, 0xf4(r3)
 /* 8039E388 00367948  4E 80 00 20 */	blr 
+.endfn MWSFD_GetFxType
 
-.global mwsfsfx_SetYcc420plnInfToSfx
-mwsfsfx_SetYcc420plnInfToSfx:
+.fn mwsfsfx_SetYcc420plnInfToSfx, global
 /* 8039E38C 0036794C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8039E390 00367950  7C 08 02 A6 */	mflr r0
 /* 8039E394 00367954  90 01 00 34 */	stw r0, 0x34(r1)
@@ -427,14 +426,14 @@ mwsfsfx_SetYcc420plnInfToSfx:
 /* 8039E43C 003679FC  7C 08 03 A6 */	mtlr r0
 /* 8039E440 00367A00  38 21 00 30 */	addi r1, r1, 0x30
 /* 8039E444 00367A04  4E 80 00 20 */	blr 
+.endfn mwsfsfx_SetYcc420plnInfToSfx
 
-.global MWSFSFX_SetCompoMode
-MWSFSFX_SetCompoMode:
+.fn MWSFSFX_SetCompoMode, global
 /* 8039E448 00367A08  80 63 00 B8 */	lwz r3, 0xb8(r3)
 /* 8039E44C 00367A0C  48 03 64 18 */	b SFX_SetCompoMode
+.endfn MWSFSFX_SetCompoMode
 
-.global mwPlyFxGetCompoMode
-mwPlyFxGetCompoMode:
+.fn mwPlyFxGetCompoMode, global
 /* 8039E450 00367A10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039E454 00367A14  7C 08 02 A6 */	mflr r0
 /* 8039E458 00367A18  90 01 00 14 */	stw r0, 0x14(r1)
@@ -458,9 +457,9 @@ mwPlyFxGetCompoMode:
 /* 8039E498 00367A58  7C 08 03 A6 */	mtlr r0
 /* 8039E49C 00367A5C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039E4A0 00367A60  4E 80 00 20 */	blr 
+.endfn mwPlyFxGetCompoMode
 
-.global mwPlyFxSetOutBufPitchHeight
-mwPlyFxSetOutBufPitchHeight:
+.fn mwPlyFxSetOutBufPitchHeight, global
 /* 8039E4A4 00367A64  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039E4A8 00367A68  7C 08 02 A6 */	mflr r0
 /* 8039E4AC 00367A6C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -496,9 +495,9 @@ mwPlyFxSetOutBufPitchHeight:
 /* 8039E51C 00367ADC  7C 08 03 A6 */	mtlr r0
 /* 8039E520 00367AE0  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039E524 00367AE4  4E 80 00 20 */	blr 
+.endfn mwPlyFxSetOutBufPitchHeight
 
-.global MWSFTAG_IsUseAinfSj
-MWSFTAG_IsUseAinfSj:
+.fn MWSFTAG_IsUseAinfSj, global
 /* 8039E528 00367AE8  80 03 00 20 */	lwz r0, 0x20(r3)
 /* 8039E52C 00367AEC  2C 00 00 00 */	cmpwi r0, 0
 /* 8039E530 00367AF0  41 82 00 0C */	beq .L_8039E53C
@@ -510,9 +509,9 @@ MWSFTAG_IsUseAinfSj:
 .L_8039E544:
 /* 8039E544 00367B04  38 60 00 00 */	li r3, 0
 /* 8039E548 00367B08  4E 80 00 20 */	blr 
+.endfn MWSFTAG_IsUseAinfSj
 
-.global MWSFTAG_CreateAinfSj
-MWSFTAG_CreateAinfSj:
+.fn MWSFTAG_CreateAinfSj, global
 /* 8039E54C 00367B0C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039E550 00367B10  7C 08 02 A6 */	mflr r0
 /* 8039E554 00367B14  90 01 00 14 */	stw r0, 0x14(r1)
@@ -554,9 +553,9 @@ MWSFTAG_CreateAinfSj:
 /* 8039E5D0 00367B90  7C 08 03 A6 */	mtlr r0
 /* 8039E5D4 00367B94  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039E5D8 00367B98  4E 80 00 20 */	blr 
+.endfn MWSFTAG_CreateAinfSj
 
-.global MWSFTAG_DestroyAinfSj
-MWSFTAG_DestroyAinfSj:
+.fn MWSFTAG_DestroyAinfSj, global
 /* 8039E5DC 00367B9C  80 63 04 B0 */	lwz r3, 0x4b0(r3)
 /* 8039E5E0 00367BA0  2C 03 00 00 */	cmpwi r3, 0
 /* 8039E5E4 00367BA4  4D 82 00 20 */	beqlr 
@@ -565,9 +564,9 @@ MWSFTAG_DestroyAinfSj:
 /* 8039E5F0 00367BB0  7D 89 03 A6 */	mtctr r12
 /* 8039E5F4 00367BB4  4E 80 04 20 */	bctr 
 /* 8039E5F8 00367BB8  4E 80 00 20 */	blr 
+.endfn MWSFTAG_DestroyAinfSj
 
-.global MWSFTAG_SetAinfSj
-MWSFTAG_SetAinfSj:
+.fn MWSFTAG_SetAinfSj, global
 /* 8039E5FC 00367BBC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039E600 00367BC0  7C 08 02 A6 */	mflr r0
 /* 8039E604 00367BC4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -609,9 +608,9 @@ MWSFTAG_SetAinfSj:
 /* 8039E67C 00367C3C  7C 08 03 A6 */	mtlr r0
 /* 8039E680 00367C40  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039E684 00367C44  4E 80 00 20 */	blr 
+.endfn MWSFTAG_SetAinfSj
 
-.global MWSFTAG_InitTagInf
-MWSFTAG_InitTagInf:
+.fn MWSFTAG_InitTagInf, global
 /* 8039E688 00367C48  38 80 00 00 */	li r4, 0
 /* 8039E68C 00367C4C  38 00 FF FF */	li r0, -1
 /* 8039E690 00367C50  90 83 04 C8 */	stw r4, 0x4c8(r3)
@@ -619,9 +618,9 @@ MWSFTAG_InitTagInf:
 /* 8039E698 00367C58  90 83 04 D0 */	stw r4, 0x4d0(r3)
 /* 8039E69C 00367C5C  90 03 04 C4 */	stw r0, 0x4c4(r3)
 /* 8039E6A0 00367C60  4E 80 00 20 */	blr 
+.endfn MWSFTAG_InitTagInf
 
-.global MWSFTAG_ResetAinfSj
-MWSFTAG_ResetAinfSj:
+.fn MWSFTAG_ResetAinfSj, global
 /* 8039E6A4 00367C64  80 63 04 B0 */	lwz r3, 0x4b0(r3)
 /* 8039E6A8 00367C68  2C 03 00 00 */	cmpwi r3, 0
 /* 8039E6AC 00367C6C  4D 82 00 20 */	beqlr 
@@ -630,9 +629,9 @@ MWSFTAG_ResetAinfSj:
 /* 8039E6B8 00367C78  7D 89 03 A6 */	mtctr r12
 /* 8039E6BC 00367C7C  4E 80 04 20 */	bctr 
 /* 8039E6C0 00367C80  4E 80 00 20 */	blr 
+.endfn MWSFTAG_ResetAinfSj
 
-.global MWSFTAG_UpdateTagInf
-MWSFTAG_UpdateTagInf:
+.fn MWSFTAG_UpdateTagInf, global
 /* 8039E6C4 00367C84  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039E6C8 00367C88  7C 08 02 A6 */	mflr r0
 /* 8039E6CC 00367C8C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -682,9 +681,9 @@ MWSFTAG_UpdateTagInf:
 /* 8039E770 00367D30  7C 08 03 A6 */	mtlr r0
 /* 8039E774 00367D34  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039E778 00367D38  4E 80 00 20 */	blr 
+.endfn MWSFTAG_UpdateTagInf
 
-.global mwsftag_GetAinfFromSj
-mwsftag_GetAinfFromSj:
+.fn mwsftag_GetAinfFromSj, global
 /* 8039E77C 00367D3C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8039E780 00367D40  7C 08 02 A6 */	mflr r0
 /* 8039E784 00367D44  38 80 00 01 */	li r4, 1
@@ -799,9 +798,9 @@ mwsftag_GetAinfFromSj:
 /* 8039E91C 00367EDC  7C 08 03 A6 */	mtlr r0
 /* 8039E920 00367EE0  38 21 00 30 */	addi r1, r1, 0x30
 /* 8039E924 00367EE4  4E 80 00 20 */	blr 
+.endfn mwsftag_GetAinfFromSj
 
-.global func_8039E928
-func_8039E928:
+.fn func_8039E928, global
 /* 8039E928 00367EE8  94 21 FF 40 */	stwu r1, -0xc0(r1)
 /* 8039E92C 00367EEC  7C 08 02 A6 */	mflr r0
 /* 8039E930 00367EF0  90 01 00 C4 */	stw r0, 0xc4(r1)
@@ -1061,6 +1060,7 @@ func_8039E928:
 /* 8039EC98 00368258  7C 08 03 A6 */	mtlr r0
 /* 8039EC9C 0036825C  38 21 00 C0 */	addi r1, r1, 0xc0
 /* 8039ECA0 00368260  4E 80 00 20 */	blr 
+.endfn func_8039E928
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

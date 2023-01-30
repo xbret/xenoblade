@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global cbForNandClose
-cbForNandClose:
+.fn cbForNandClose, global
 /* 8030F6F0 002D8CB0  81 8D B7 00 */	lwz r12, lbl_80667880@sda21(r13)
 /* 8030F6F4 002D8CB4  2C 0C 00 00 */	cmpwi r12, 0
 /* 8030F6F8 002D8CB8  4D 82 00 20 */	beqlr 
@@ -16,10 +15,10 @@ cbForNandClose:
 /* 8030F710 002D8CD0  7D 89 03 A6 */	mtctr r12
 /* 8030F714 002D8CD4  4E 80 04 20 */	bctr 
 /* 8030F718 002D8CD8  4E 80 00 20 */	blr
+.endfn cbForNandClose
 
 .balign 16, 0
-.global cbForNandWrite
-cbForNandWrite:
+.fn cbForNandWrite, global
 /* 8030F720 002D8CE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030F724 002D8CE4  7C 08 02 A6 */	mflr r0
 /* 8030F728 002D8CE8  3C 60 80 5D */	lis r3, lbl_805CC9E0@ha
@@ -44,10 +43,10 @@ cbForNandWrite:
 /* 8030F770 002D8D30  7C 08 03 A6 */	mtlr r0
 /* 8030F774 002D8D34  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030F778 002D8D38  4E 80 00 20 */	blr
+.endfn cbForNandWrite
 
 .balign 16, 0
-.global cbForNandSeek
-cbForNandSeek:
+.fn cbForNandSeek, global
 /* 8030F780 002D8D40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030F784 002D8D44  7C 08 02 A6 */	mflr r0
 /* 8030F788 002D8D48  90 01 00 14 */	stw r0, 0x14(r1)
@@ -114,10 +113,10 @@ cbForNandSeek:
 /* 8030F870 002D8E30  7C 08 03 A6 */	mtlr r0
 /* 8030F874 002D8E34  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030F878 002D8E38  4E 80 00 20 */	blr
+.endfn cbForNandSeek
 
 .balign 16, 0
-.global cbForNandWrite0
-cbForNandWrite0:
+.fn cbForNandWrite0, global
 /* 8030F880 002D8E40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030F884 002D8E44  7C 08 02 A6 */	mflr r0
 /* 8030F888 002D8E48  28 03 00 80 */	cmplwi r3, 0x80
@@ -207,10 +206,10 @@ cbForNandWrite0:
 /* 8030F9C8 002D8F88  7C 08 03 A6 */	mtlr r0
 /* 8030F9CC 002D8F8C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030F9D0 002D8F90  4E 80 00 20 */	blr
+.endfn cbForNandWrite0
 
 .balign 16, 0
-.global cbForNandSeek2
-cbForNandSeek2:
+.fn cbForNandSeek2, global
 /* 8030F9E0 002D8FA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030F9E4 002D8FA4  7C 08 02 A6 */	mflr r0
 /* 8030F9E8 002D8FA8  28 03 00 80 */	cmplwi r3, 0x80
@@ -260,10 +259,10 @@ cbForNandSeek2:
 /* 8030FA90 002D9050  7C 08 03 A6 */	mtlr r0
 /* 8030FA94 002D9054  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030FA98 002D9058  4E 80 00 20 */	blr
+.endfn cbForNandSeek2
 
 .balign 16, 0
-.global cbForNandRead
-cbForNandRead:
+.fn cbForNandRead, global
 /* 8030FAA0 002D9060  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030FAA4 002D9064  7C 08 02 A6 */	mflr r0
 /* 8030FAA8 002D9068  28 03 00 80 */	cmplwi r3, 0x80
@@ -324,10 +323,10 @@ cbForNandRead:
 /* 8030FB7C 002D913C  7C 08 03 A6 */	mtlr r0
 /* 8030FB80 002D9140  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030FB84 002D9144  4E 80 00 20 */	blr
+.endfn cbForNandRead
 
 .balign 16, 0
-.global cbForNandSeek0
-cbForNandSeek0:
+.fn cbForNandSeek0, global
 /* 8030FB90 002D9150  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030FB94 002D9154  7C 08 02 A6 */	mflr r0
 /* 8030FB98 002D9158  2C 03 00 00 */	cmpwi r3, 0
@@ -370,10 +369,10 @@ cbForNandSeek0:
 /* 8030FC24 002D91E4  7C 08 03 A6 */	mtlr r0
 /* 8030FC28 002D91E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030FC2C 002D91EC  4E 80 00 20 */	blr
+.endfn cbForNandSeek0
 
 .balign 16, 0
-.global cbForNandSeek1
-cbForNandSeek1:
+.fn cbForNandSeek1, global
 /* 8030FC30 002D91F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030FC34 002D91F4  7C 08 02 A6 */	mflr r0
 /* 8030FC38 002D91F8  28 03 00 80 */	cmplwi r3, 0x80
@@ -440,10 +439,10 @@ cbForNandSeek1:
 /* 8030FD24 002D92E4  7C 08 03 A6 */	mtlr r0
 /* 8030FD28 002D92E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030FD2C 002D92EC  4E 80 00 20 */	blr
+.endfn cbForNandSeek1
 
 .balign 16, 0
-.global cbForNandOpen
-cbForNandOpen:
+.fn cbForNandOpen, global
 /* 8030FD30 002D92F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030FD34 002D92F4  7C 08 02 A6 */	mflr r0
 /* 8030FD38 002D92F8  2C 03 00 00 */	cmpwi r3, 0
@@ -518,10 +517,10 @@ cbForNandOpen:
 /* 8030FE40 002D9400  7C 08 03 A6 */	mtlr r0
 /* 8030FE44 002D9404  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030FE48 002D9408  4E 80 00 20 */	blr
+.endfn cbForNandOpen
 
 .balign 16, 0
-.global cbForNandCreate
-cbForNandCreate:
+.fn cbForNandCreate, global
 /* 8030FE50 002D9410  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030FE54 002D9414  7C 08 02 A6 */	mflr r0
 /* 8030FE58 002D9418  2C 03 00 00 */	cmpwi r3, 0
@@ -565,10 +564,10 @@ cbForNandCreate:
 /* 8030FEE4 002D94A4  7C 08 03 A6 */	mtlr r0
 /* 8030FEE8 002D94A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030FEEC 002D94AC  4E 80 00 20 */	blr
+.endfn cbForNandCreate
 
 .balign 16, 0
-.global cbForNandCreateDir
-cbForNandCreateDir:
+.fn cbForNandCreateDir, global
 /* 8030FEF0 002D94B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030FEF4 002D94B4  7C 08 02 A6 */	mflr r0
 /* 8030FEF8 002D94B8  2C 03 00 00 */	cmpwi r3, 0
@@ -609,10 +608,10 @@ cbForNandCreateDir:
 /* 8030FF78 002D9538  7C 08 03 A6 */	mtlr r0
 /* 8030FF7C 002D953C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8030FF80 002D9540  4E 80 00 20 */	blr
+.endfn cbForNandCreateDir
 
 .balign 16, 0
-.global cbForPrepareControlRegister
-cbForPrepareControlRegister:
+.fn cbForPrepareControlRegister, global
 /* 8030FF90 002D9550  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030FF94 002D9554  7C 08 02 A6 */	mflr r0
 /* 8030FF98 002D9558  28 03 00 01 */	cmplwi r3, 1
@@ -652,10 +651,10 @@ cbForPrepareControlRegister:
 /* 80310014 002D95D4  7C 08 03 A6 */	mtlr r0
 /* 80310018 002D95D8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031001C 002D95DC  4E 80 00 20 */	blr
+.endfn cbForPrepareControlRegister
 
 .balign 16, 0
-.global cbForPrepareStatusRegister
-cbForPrepareStatusRegister:
+.fn cbForPrepareStatusRegister, global
 /* 80310020 002D95E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80310024 002D95E4  7C 08 02 A6 */	mflr r0
 /* 80310028 002D95E8  28 03 00 01 */	cmplwi r3, 1
@@ -689,10 +688,10 @@ cbForPrepareStatusRegister:
 /* 8031008C 002D964C  7C 08 03 A6 */	mtlr r0
 /* 80310090 002D9650  38 21 00 10 */	addi r1, r1, 0x10
 /* 80310094 002D9654  4E 80 00 20 */	blr 
+.endfn cbForPrepareStatusRegister
 
 .balign 16, 0
-.global __DVDStoreErrorCode
-__DVDStoreErrorCode:
+.fn __DVDStoreErrorCode, global
 /* 803100A0 002D9660  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803100A4 002D9664  7C 08 02 A6 */	mflr r0
 /* 803100A8 002D9668  90 01 00 14 */	stw r0, 0x14(r1)
@@ -719,6 +718,7 @@ __DVDStoreErrorCode:
 /* 803100FC 002D96BC  7C 08 03 A6 */	mtlr r0
 /* 80310100 002D96C0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80310104 002D96C4  4E 80 00 20 */	blr
+.endfn __DVDStoreErrorCode
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

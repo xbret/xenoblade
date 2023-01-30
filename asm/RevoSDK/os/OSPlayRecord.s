@@ -3,15 +3,14 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global PlayRecordAlarmCallback
-PlayRecordAlarmCallback:
+.fn PlayRecordAlarmCallback, global
 /* 8035D730 00326CF0  38 60 00 00 */	li r3, 0
 /* 8035D734 00326CF4  38 80 00 00 */	li r4, 0
 /* 8035D738 00326CF8  48 00 00 08 */	b PlayRecordCallback
+.endfn PlayRecordAlarmCallback
 
 .balign 16, 0
-.global PlayRecordCallback
-PlayRecordCallback:
+.fn PlayRecordCallback, global
 /* 8035D740 00326D00  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035D744 00326D04  7C 08 02 A6 */	mflr r0
 /* 8035D748 00326D08  90 01 00 24 */	stw r0, 0x24(r1)
@@ -347,10 +346,10 @@ switch_8035D938:
 /* 8035DBE8 003271A8  7C 08 03 A6 */	mtlr r0
 /* 8035DBEC 003271AC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035DBF0 003271B0  4E 80 00 20 */	blr 
+.endfn PlayRecordCallback
 
 .balign 16, 0
-.global __OSStartPlayRecord
-__OSStartPlayRecord:
+.fn __OSStartPlayRecord, global
 /* 8035DC00 003271C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035DC04 003271C4  7C 08 02 A6 */	mflr r0
 /* 8035DC08 003271C8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -373,10 +372,10 @@ __OSStartPlayRecord:
 /* 8035DC48 00327208  7C 08 03 A6 */	mtlr r0
 /* 8035DC4C 0032720C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035DC50 00327210  4E 80 00 20 */	blr 
+.endfn __OSStartPlayRecord
 
 .balign 16, 0
-.global __OSStopPlayRecord
-__OSStopPlayRecord:
+.fn __OSStopPlayRecord, global
 /* 8035DC60 00327220  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035DC64 00327224  7C 08 02 A6 */	mflr r0
 /* 8035DC68 00327228  90 01 00 24 */	stw r0, 0x24(r1)
@@ -513,6 +512,7 @@ __OSStopPlayRecord:
 /* 8035DE40 00327400  7C 08 03 A6 */	mtlr r0
 /* 8035DE44 00327404  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035DE48 00327408  4E 80 00 20 */	blr 
+.endfn __OSStopPlayRecord
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

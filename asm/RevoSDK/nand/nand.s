@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global NANDPrivateCreate
-NANDPrivateCreate:
+.fn NANDPrivateCreate, global
 /* 8034E730 00317CF0  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8034E734 00317CF4  7C 08 02 A6 */	mflr r0
 /* 8034E738 00317CF8  90 01 00 74 */	stw r0, 0x74(r1)
@@ -69,10 +68,10 @@ NANDPrivateCreate:
 /* 8034E814 00317DD4  7C 08 03 A6 */	mtlr r0
 /* 8034E818 00317DD8  38 21 00 70 */	addi r1, r1, 0x70
 /* 8034E81C 00317DDC  4E 80 00 20 */	blr 
+.endfn NANDPrivateCreate
 
 .balign 16, 0
-.global func_8034E820
-func_8034E820:
+.fn func_8034E820, global
 /* 8034E820 00317DE0  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8034E824 00317DE4  7C 08 02 A6 */	mflr r0
 /* 8034E828 00317DE8  90 01 00 74 */	stw r0, 0x74(r1)
@@ -148,10 +147,10 @@ func_8034E820:
 /* 8034E92C 00317EEC  7C 08 03 A6 */	mtlr r0
 /* 8034E930 00317EF0  38 21 00 70 */	addi r1, r1, 0x70
 /* 8034E934 00317EF4  4E 80 00 20 */	blr 
+.endfn func_8034E820
 
 .balign 16, 0
-.global NANDPrivateCreateAsync
-NANDPrivateCreateAsync:
+.fn NANDPrivateCreateAsync, global
 /* 8034E940 00317F00  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8034E944 00317F04  7C 08 02 A6 */	mflr r0
 /* 8034E948 00317F08  90 01 00 74 */	stw r0, 0x74(r1)
@@ -220,10 +219,10 @@ NANDPrivateCreateAsync:
 /* 8034EA34 00317FF4  7C 08 03 A6 */	mtlr r0
 /* 8034EA38 00317FF8  38 21 00 70 */	addi r1, r1, 0x70
 /* 8034EA3C 00317FFC  4E 80 00 20 */	blr 
+.endfn NANDPrivateCreateAsync
 
 .balign 16, 0
-.global NANDDelete
-NANDDelete:
+.fn NANDDelete, global
 /* 8034EA40 00318000  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 8034EA44 00318004  7C 08 02 A6 */	mflr r0
 /* 8034EA48 00318008  90 01 00 54 */	stw r0, 0x54(r1)
@@ -272,10 +271,10 @@ NANDDelete:
 /* 8034EAE4 003180A4  7C 08 03 A6 */	mtlr r0
 /* 8034EAE8 003180A8  38 21 00 50 */	addi r1, r1, 0x50
 /* 8034EAEC 003180AC  4E 80 00 20 */	blr 
+.endfn NANDDelete
 
 .balign 16, 0
-.global NANDPrivateDelete
-NANDPrivateDelete:
+.fn NANDPrivateDelete, global
 /* 8034EAF0 003180B0  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 8034EAF4 003180B4  7C 08 02 A6 */	mflr r0
 /* 8034EAF8 003180B8  90 01 00 54 */	stw r0, 0x54(r1)
@@ -316,10 +315,10 @@ NANDPrivateDelete:
 /* 8034EB7C 0031813C  7C 08 03 A6 */	mtlr r0
 /* 8034EB80 00318140  38 21 00 50 */	addi r1, r1, 0x50
 /* 8034EB84 00318144  4E 80 00 20 */	blr 
+.endfn NANDPrivateDelete
 
 .balign 16, 0
-.global NANDDeleteAsync
-NANDDeleteAsync:
+.fn NANDDeleteAsync, global
 /* 8034EB90 00318150  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8034EB94 00318154  7C 08 02 A6 */	mflr r0
 /* 8034EB98 00318158  90 01 00 64 */	stw r0, 0x64(r1)
@@ -378,10 +377,10 @@ NANDDeleteAsync:
 /* 8034EC5C 0031821C  7C 08 03 A6 */	mtlr r0
 /* 8034EC60 00318220  38 21 00 60 */	addi r1, r1, 0x60
 /* 8034EC64 00318224  4E 80 00 20 */	blr 
+.endfn NANDDeleteAsync
 
 .balign 16, 0
-.global NANDPrivateDeleteAsync
-NANDPrivateDeleteAsync:
+.fn NANDPrivateDeleteAsync, global
 /* 8034EC70 00318230  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8034EC74 00318234  7C 08 02 A6 */	mflr r0
 /* 8034EC78 00318238  90 01 00 64 */	stw r0, 0x64(r1)
@@ -432,10 +431,10 @@ NANDPrivateDeleteAsync:
 /* 8034ED24 003182E4  7C 08 03 A6 */	mtlr r0
 /* 8034ED28 003182E8  38 21 00 60 */	addi r1, r1, 0x60
 /* 8034ED2C 003182EC  4E 80 00 20 */	blr 
+.endfn NANDPrivateDeleteAsync
 
 .balign 16, 0
-.global NANDRead
-NANDRead:
+.fn NANDRead, global
 /* 8034ED30 003182F0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8034ED34 003182F4  7C 08 02 A6 */	mflr r0
 /* 8034ED38 003182F8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -464,10 +463,10 @@ NANDRead:
 /* 8034ED8C 0031834C  7C 08 03 A6 */	mtlr r0
 /* 8034ED90 00318350  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034ED94 00318354  4E 80 00 20 */	blr 
+.endfn NANDRead
 
 .balign 16, 0
-.global NANDReadAsync
-NANDReadAsync:
+.fn NANDReadAsync, global
 /* 8034EDA0 00318360  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8034EDA4 00318364  7C 08 02 A6 */	mflr r0
 /* 8034EDA8 00318368  90 01 00 24 */	stw r0, 0x24(r1)
@@ -500,10 +499,10 @@ NANDReadAsync:
 /* 8034EE0C 003183CC  7C 08 03 A6 */	mtlr r0
 /* 8034EE10 003183D0  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034EE14 003183D4  4E 80 00 20 */	blr 
+.endfn NANDReadAsync
 
 .balign 16, 0
-.global NANDWrite
-NANDWrite:
+.fn NANDWrite, global
 /* 8034EE20 003183E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8034EE24 003183E4  7C 08 02 A6 */	mflr r0
 /* 8034EE28 003183E8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -532,10 +531,10 @@ NANDWrite:
 /* 8034EE7C 0031843C  7C 08 03 A6 */	mtlr r0
 /* 8034EE80 00318440  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034EE84 00318444  4E 80 00 20 */	blr 
+.endfn NANDWrite
 
 .balign 16, 0
-.global NANDWriteAsync
-NANDWriteAsync:
+.fn NANDWriteAsync, global
 /* 8034EE90 00318450  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8034EE94 00318454  7C 08 02 A6 */	mflr r0
 /* 8034EE98 00318458  90 01 00 24 */	stw r0, 0x24(r1)
@@ -568,10 +567,10 @@ NANDWriteAsync:
 /* 8034EEFC 003184BC  7C 08 03 A6 */	mtlr r0
 /* 8034EF00 003184C0  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034EF04 003184C4  4E 80 00 20 */	blr 
+.endfn NANDWriteAsync
 
 .balign 16, 0
-.global NANDSeekAsync
-NANDSeekAsync:
+.fn NANDSeekAsync, global
 /* 8034EF10 003184D0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8034EF14 003184D4  7C 08 02 A6 */	mflr r0
 /* 8034EF18 003184D8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -620,10 +619,10 @@ NANDSeekAsync:
 /* 8034EFAC 0031856C  7C 08 03 A6 */	mtlr r0
 /* 8034EFB0 00318570  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034EFB4 00318574  4E 80 00 20 */	blr 
+.endfn NANDSeekAsync
 
 .balign 16, 0
-.global NANDReadDirAsync
-NANDReadDirAsync:
+.fn NANDReadDirAsync, global
 /* 8034EFC0 00318580  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8034EFC4 00318584  7C 08 02 A6 */	mflr r0
 /* 8034EFC8 00318588  90 01 00 64 */	stw r0, 0x64(r1)
@@ -684,10 +683,10 @@ NANDReadDirAsync:
 /* 8034F094 00318654  7C 08 03 A6 */	mtlr r0
 /* 8034F098 00318658  38 21 00 60 */	addi r1, r1, 0x60
 /* 8034F09C 0031865C  4E 80 00 20 */	blr 
+.endfn NANDReadDirAsync
 
 .balign 16, 0
-.global nandCreateDir
-nandCreateDir:
+.fn nandCreateDir, global
 /* 8034F0A0 00318660  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8034F0A4 00318664  7C 08 02 A6 */	mflr r0
 /* 8034F0A8 00318668  90 01 00 74 */	stw r0, 0x74(r1)
@@ -756,10 +755,10 @@ nandCreateDir:
 /* 8034F194 00318754  7C 08 03 A6 */	mtlr r0
 /* 8034F198 00318758  38 21 00 70 */	addi r1, r1, 0x70
 /* 8034F19C 0031875C  4E 80 00 20 */	blr 
+.endfn nandCreateDir
 
 .balign 16, 0
-.global nandMove
-nandMove:
+.fn nandMove, global
 /* 8034F1A0 00318760  94 21 FF 50 */	stwu r1, -0xb0(r1)
 /* 8034F1A4 00318764  7C 08 02 A6 */	mflr r0
 /* 8034F1A8 00318768  90 01 00 B4 */	stw r0, 0xb4(r1)
@@ -872,10 +871,10 @@ nandMove:
 /* 8034F33C 003188FC  7C 08 03 A6 */	mtlr r0
 /* 8034F340 00318900  38 21 00 B0 */	addi r1, r1, 0xb0
 /* 8034F344 00318904  4E 80 00 20 */	blr 
+.endfn nandMove
 
 .balign 16, 0
-.global NANDMoveAsync
-NANDMoveAsync:
+.fn NANDMoveAsync, global
 /* 8034F350 00318910  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8034F354 00318914  7C 08 02 A6 */	mflr r0
 /* 8034F358 00318918  90 01 00 24 */	stw r0, 0x24(r1)
@@ -910,10 +909,10 @@ NANDMoveAsync:
 /* 8034F3C4 00318984  7C 08 03 A6 */	mtlr r0
 /* 8034F3C8 00318988  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034F3CC 0031898C  4E 80 00 20 */	blr
+.endfn NANDMoveAsync
 
 .balign 16, 0
-.global nandGetFileStatusAsyncCallback
-nandGetFileStatusAsyncCallback:
+.fn nandGetFileStatusAsyncCallback, global
 /* 8034F3D0 00318990  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8034F3D4 00318994  7C 08 02 A6 */	mflr r0
 /* 8034F3D8 00318998  2C 03 00 00 */	cmpwi r3, 0
@@ -945,10 +944,10 @@ nandGetFileStatusAsyncCallback:
 /* 8034F438 003189F8  7C 08 03 A6 */	mtlr r0
 /* 8034F43C 003189FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8034F440 00318A00  4E 80 00 20 */	blr 
+.endfn nandGetFileStatusAsyncCallback
 
 .balign 16, 0
-.global NANDTellAsync
-NANDTellAsync:
+.fn NANDTellAsync, global
 /* 8034F450 00318A10  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8034F454 00318A14  7C 08 02 A6 */	mflr r0
 /* 8034F458 00318A18  90 01 00 24 */	stw r0, 0x24(r1)
@@ -987,10 +986,10 @@ NANDTellAsync:
 /* 8034F4D4 00318A94  7C 08 03 A6 */	mtlr r0
 /* 8034F4D8 00318A98  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034F4DC 00318A9C  4E 80 00 20 */	blr 
+.endfn NANDTellAsync
 
 .balign 16, 0
-.global nandComposePerm
-nandComposePerm:
+.fn nandComposePerm, global
 /* 8034F4E0 00318AA0  54 80 07 FF */	clrlwi. r0, r4, 0x1f
 /* 8034F4E4 00318AA4  38 E0 00 00 */	li r7, 0
 /* 8034F4E8 00318AA8  41 82 00 08 */	beq .L_8034F4F0
@@ -1018,10 +1017,10 @@ nandComposePerm:
 .L_8034F52C:
 /* 8034F52C 00318AEC  98 E3 00 00 */	stb r7, 0(r3)
 /* 8034F530 00318AF0  4E 80 00 20 */	blr 
+.endfn nandComposePerm
 
 .balign 16, 0
-.global nandSplitPerm
-nandSplitPerm:
+.fn nandSplitPerm, global
 /* 8034F540 00318B00  54 60 06 F7 */	rlwinm. r0, r3, 0, 0x1b, 0x1b
 /* 8034F544 00318B04  38 00 00 00 */	li r0, 0
 /* 8034F548 00318B08  90 04 00 00 */	stw r0, 0(r4)
@@ -1062,10 +1061,10 @@ nandSplitPerm:
 /* 8034F5C0 00318B80  60 00 00 02 */	ori r0, r0, 2
 /* 8034F5C4 00318B84  90 06 00 00 */	stw r0, 0(r6)
 /* 8034F5C8 00318B88  4E 80 00 20 */	blr 
+.endfn nandSplitPerm
 
 .balign 16, 0
-.global nandGetStatus
-nandGetStatus:
+.fn nandGetStatus, global
 /* 8034F5D0 00318B90  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8034F5D4 00318B94  7C 08 02 A6 */	mflr r0
 /* 8034F5D8 00318B98  90 01 00 74 */	stw r0, 0x74(r1)
@@ -1155,9 +1154,10 @@ nandGetStatus:
 /* 8034F718 00318CD8  7C 08 03 A6 */	mtlr r0
 /* 8034F71C 00318CDC  38 21 00 70 */	addi r1, r1, 0x70
 /* 8034F720 00318CE0  4E 80 00 20 */	blr
+.endfn nandGetStatus
 
 .balign 16, 0
-nandGetStatusCallback:
+.fn nandGetStatusCallback, local
 /* 8034F730 00318CF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8034F734 00318CF4  7C 08 02 A6 */	mflr r0
 /* 8034F738 00318CF8  2C 03 00 00 */	cmpwi r3, 0
@@ -1188,10 +1188,10 @@ nandGetStatusCallback:
 /* 8034F798 00318D58  7C 08 03 A6 */	mtlr r0
 /* 8034F79C 00318D5C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8034F7A0 00318D60  4E 80 00 20 */	blr 
+.endfn nandGetStatusCallback
 
 .balign 16, 0
-.global NANDPrivateGetStatus
-NANDPrivateGetStatus:
+.fn NANDPrivateGetStatus, global
 /* 8034F7B0 00318D70  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8034F7B4 00318D74  7C 08 02 A6 */	mflr r0
 /* 8034F7B8 00318D78  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1219,10 +1219,10 @@ NANDPrivateGetStatus:
 /* 8034F808 00318DC8  7C 08 03 A6 */	mtlr r0
 /* 8034F80C 00318DCC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8034F810 00318DD0  4E 80 00 20 */	blr 
+.endfn NANDPrivateGetStatus
 
 .balign 16, 0
-.global NANDPrivateGetStatusAsync
-NANDPrivateGetStatusAsync:
+.fn NANDPrivateGetStatusAsync, global
 /* 8034F820 00318DE0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8034F824 00318DE4  7C 08 02 A6 */	mflr r0
 /* 8034F828 00318DE8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1258,6 +1258,7 @@ NANDPrivateGetStatusAsync:
 /* 8034F898 00318E58  7C 08 03 A6 */	mtlr r0
 /* 8034F89C 00318E5C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034F8A0 00318E60  4E 80 00 20 */	blr 
+.endfn NANDPrivateGetStatusAsync
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 

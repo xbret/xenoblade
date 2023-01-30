@@ -4,8 +4,7 @@
 
 
 .balign 16, 0
-.global __OSCreateNandbootInfo
-__OSCreateNandbootInfo:
+.fn __OSCreateNandbootInfo, global
 /* 8035E610 00327BD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035E614 00327BD4  7C 08 02 A6 */	mflr r0
 /* 8035E618 00327BD8  3C 60 80 56 */	lis r3, lbl_8055EE98@ha
@@ -55,10 +54,10 @@ __OSCreateNandbootInfo:
 /* 8035E6B4 00327C74  7C 08 03 A6 */	mtlr r0
 /* 8035E6B8 00327C78  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035E6BC 00327C7C  4E 80 00 20 */	blr 
+.endfn __OSCreateNandbootInfo
 
 .balign 16, 0
-.global __OSWriteNandbootInfo
-__OSWriteNandbootInfo:
+.fn __OSWriteNandbootInfo, global
 /* 8035E6C0 00327C80  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 8035E6C4 00327C84  7C 08 02 A6 */	mflr r0
 /* 8035E6C8 00327C88  39 03 00 04 */	addi r8, r3, 4
@@ -149,6 +148,7 @@ __OSWriteNandbootInfo:
 /* 8035E80C 00327DCC  7C 08 03 A6 */	mtlr r0
 /* 8035E810 00327DD0  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 8035E814 00327DD4  4E 80 00 20 */	blr 
+.endfn __OSWriteNandbootInfo
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

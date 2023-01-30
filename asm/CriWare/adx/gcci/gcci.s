@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global gcCiGetInterface
-gcCiGetInterface:
+.fn gcCiGetInterface, global
 /* 80390978 00359F38  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039097C 00359F3C  7C 08 02 A6 */	mflr r0
 /* 80390980 00359F40  3C 60 80 5F */	lis r3, lbl_805EB170@ha
@@ -31,9 +30,9 @@ gcCiGetInterface:
 /* 803909D8 00359F98  7C 08 03 A6 */	mtlr r0
 /* 803909DC 00359F9C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803909E0 00359FA0  4E 80 00 20 */	blr 
+.endfn gcCiGetInterface
 
-.global gcCiExecHndl
-gcCiExecHndl:
+.fn gcCiExecHndl, global
 /* 803909E4 00359FA4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803909E8 00359FA8  7C 08 02 A6 */	mflr r0
 /* 803909EC 00359FAC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -127,9 +126,9 @@ gcCiExecHndl:
 /* 80390B34 0035A0F4  7C 08 03 A6 */	mtlr r0
 /* 80390B38 0035A0F8  38 21 00 20 */	addi r1, r1, 0x20
 /* 80390B3C 0035A0FC  4E 80 00 20 */	blr 
+.endfn gcCiExecHndl
 
-.global gcCiExecServer
-gcCiExecServer:
+.fn gcCiExecServer, global
 /* 80390B40 0035A100  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80390B44 0035A104  7C 08 02 A6 */	mflr r0
 /* 80390B48 0035A108  90 01 00 14 */	stw r0, 0x14(r1)
@@ -155,17 +154,17 @@ gcCiExecServer:
 /* 80390B90 0035A150  7C 08 03 A6 */	mtlr r0
 /* 80390B94 0035A154  38 21 00 10 */	addi r1, r1, 0x10
 /* 80390B98 0035A158  4E 80 00 20 */	blr 
+.endfn gcCiExecServer
 
-.global gcCiEntryErrFunc
-gcCiEntryErrFunc:
+.fn gcCiEntryErrFunc, global
 /* 80390B9C 0035A15C  3C C0 80 5F */	lis r6, lbl_805EA1B4@ha
 /* 80390BA0 0035A160  3C A0 80 5F */	lis r5, lbl_805EA1B8@ha
 /* 80390BA4 0035A164  90 66 A1 B4 */	stw r3, lbl_805EA1B4@l(r6)
 /* 80390BA8 0035A168  90 85 A1 B8 */	stw r4, lbl_805EA1B8@l(r5)
 /* 80390BAC 0035A16C  4E 80 00 20 */	blr 
+.endfn gcCiEntryErrFunc
 
-.global gcCiGetFileSize
-gcCiGetFileSize:
+.fn gcCiGetFileSize, global
 /* 80390BB0 0035A170  94 21 FE B0 */	stwu r1, -0x150(r1)
 /* 80390BB4 0035A174  7C 08 02 A6 */	mflr r0
 /* 80390BB8 0035A178  2C 03 00 00 */	cmpwi r3, 0
@@ -265,9 +264,9 @@ gcCiGetFileSize:
 /* 80390D04 0035A2C4  7C 08 03 A6 */	mtlr r0
 /* 80390D08 0035A2C8  38 21 01 50 */	addi r1, r1, 0x150
 /* 80390D0C 0035A2CC  4E 80 00 20 */	blr 
+.endfn gcCiGetFileSize
 
-.global gcCiOpen
-gcCiOpen:
+.fn gcCiOpen, global
 /* 80390D10 0035A2D0  94 21 FE E0 */	stwu r1, -0x120(r1)
 /* 80390D14 0035A2D4  7C 08 02 A6 */	mflr r0
 /* 80390D18 0035A2D8  2C 03 00 00 */	cmpwi r3, 0
@@ -420,9 +419,9 @@ gcCiOpen:
 /* 80390F24 0035A4E4  7C 08 03 A6 */	mtlr r0
 /* 80390F28 0035A4E8  38 21 01 20 */	addi r1, r1, 0x120
 /* 80390F2C 0035A4EC  4E 80 00 20 */	blr 
+.endfn gcCiOpen
 
-.global gcCiClose
-gcCiClose:
+.fn gcCiClose, global
 /* 80390F30 0035A4F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80390F34 0035A4F4  7C 08 02 A6 */	mflr r0
 /* 80390F38 0035A4F8  2C 03 00 00 */	cmpwi r3, 0
@@ -445,9 +444,9 @@ gcCiClose:
 /* 80390F78 0035A538  7C 08 03 A6 */	mtlr r0
 /* 80390F7C 0035A53C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80390F80 0035A540  4E 80 00 20 */	blr 
+.endfn gcCiClose
 
-.global gcCiSeek
-gcCiSeek:
+.fn gcCiSeek, global
 /* 80390F84 0035A544  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80390F88 0035A548  7C 08 02 A6 */	mflr r0
 /* 80390F8C 0035A54C  2C 03 00 00 */	cmpwi r3, 0
@@ -504,9 +503,9 @@ gcCiSeek:
 /* 8039103C 0035A5FC  7C 08 03 A6 */	mtlr r0
 /* 80391040 0035A600  38 21 00 10 */	addi r1, r1, 0x10
 /* 80391044 0035A604  4E 80 00 20 */	blr 
+.endfn gcCiSeek
 
-.global gcCiTell
-gcCiTell:
+.fn gcCiTell, global
 /* 80391048 0035A608  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039104C 0035A60C  7C 08 02 A6 */	mflr r0
 /* 80391050 0035A610  2C 03 00 00 */	cmpwi r3, 0
@@ -534,9 +533,9 @@ gcCiTell:
 /* 8039109C 0035A65C  7C 08 03 A6 */	mtlr r0
 /* 803910A0 0035A660  38 21 00 10 */	addi r1, r1, 0x10
 /* 803910A4 0035A664  4E 80 00 20 */	blr 
+.endfn gcCiTell
 
-.global gcCiReqRd
-gcCiReqRd:
+.fn gcCiReqRd, global
 /* 803910A8 0035A668  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803910AC 0035A66C  7C 08 02 A6 */	mflr r0
 /* 803910B0 0035A670  2C 03 00 00 */	cmpwi r3, 0
@@ -767,9 +766,9 @@ gcCiReqRd:
 /* 803913CC 0035A98C  7C 08 03 A6 */	mtlr r0
 /* 803913D0 0035A990  38 21 00 20 */	addi r1, r1, 0x20
 /* 803913D4 0035A994  4E 80 00 20 */	blr 
+.endfn gcCiReqRd
 
-.global gcCiStopTr
-gcCiStopTr:
+.fn gcCiStopTr, global
 /* 803913D8 0035A998  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803913DC 0035A99C  7C 08 02 A6 */	mflr r0
 /* 803913E0 0035A9A0  2C 03 00 00 */	cmpwi r3, 0
@@ -886,9 +885,9 @@ gcCiStopTr:
 /* 8039157C 0035AB3C  7C 08 03 A6 */	mtlr r0
 /* 80391580 0035AB40  38 21 00 20 */	addi r1, r1, 0x20
 /* 80391584 0035AB44  4E 80 00 20 */	blr 
+.endfn gcCiStopTr
 
-.global gcCiGetStat
-gcCiGetStat:
+.fn gcCiGetStat, global
 /* 80391588 0035AB48  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039158C 0035AB4C  7C 08 02 A6 */	mflr r0
 /* 80391590 0035AB50  2C 03 00 00 */	cmpwi r3, 0
@@ -917,9 +916,9 @@ gcCiGetStat:
 /* 803915E0 0035ABA0  7C 08 03 A6 */	mtlr r0
 /* 803915E4 0035ABA4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803915E8 0035ABA8  4E 80 00 20 */	blr 
+.endfn gcCiGetStat
 
-.global gcCiGetSctLen
-gcCiGetSctLen:
+.fn gcCiGetSctLen, global
 /* 803915EC 0035ABAC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803915F0 0035ABB0  7C 08 02 A6 */	mflr r0
 /* 803915F4 0035ABB4  2C 03 00 00 */	cmpwi r3, 0
@@ -947,9 +946,9 @@ gcCiGetSctLen:
 /* 80391640 0035AC00  7C 08 03 A6 */	mtlr r0
 /* 80391644 0035AC04  38 21 00 10 */	addi r1, r1, 0x10
 /* 80391648 0035AC08  4E 80 00 20 */	blr 
+.endfn gcCiGetSctLen
 
-.global gcCiSetSctLen
-gcCiSetSctLen:
+.fn gcCiSetSctLen, global
 /* 8039164C 0035AC0C  2C 03 00 00 */	cmpwi r3, 0
 /* 80391650 0035AC10  40 82 00 38 */	bne .L_80391688
 /* 80391654 0035AC14  3C 60 80 5F */	lis r3, lbl_805EA1B4@ha
@@ -1001,9 +1000,9 @@ gcCiSetSctLen:
 /* 80391704 0035ACC4  90 A3 00 1C */	stw r5, 0x1c(r3)
 /* 80391708 0035ACC8  90 03 00 20 */	stw r0, 0x20(r3)
 /* 8039170C 0035ACCC  4E 80 00 20 */	blr 
+.endfn gcCiSetSctLen
 
-.global gcCiGetNumTr
-gcCiGetNumTr:
+.fn gcCiGetNumTr, global
 /* 80391710 0035ACD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80391714 0035ACD4  7C 08 02 A6 */	mflr r0
 /* 80391718 0035ACD8  2C 03 00 00 */	cmpwi r3, 0
@@ -1031,9 +1030,9 @@ gcCiGetNumTr:
 /* 80391764 0035AD24  7C 08 03 A6 */	mtlr r0
 /* 80391768 0035AD28  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039176C 0035AD2C  4E 80 00 20 */	blr 
+.endfn gcCiGetNumTr
 
-.global gcCiIsExistFile
-gcCiIsExistFile:
+.fn gcCiIsExistFile, global
 /* 80391770 0035AD30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80391774 0035AD34  7C 08 02 A6 */	mflr r0
 /* 80391778 0035AD38  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1044,10 +1043,11 @@ gcCiIsExistFile:
 /* 8039178C 0035AD4C  7C 08 03 A6 */	mtlr r0
 /* 80391790 0035AD50  38 21 00 10 */	addi r1, r1, 0x10
 /* 80391794 0035AD54  4E 80 00 20 */	blr
+.endfn gcCiIsExistFile
 
-.global gcci_rd_cbfn
-gcci_rd_cbfn:
+.fn gcci_rd_cbfn, global
 /* 80391798 0035AD58  4E 80 00 20 */	blr 
+.endfn gcci_rd_cbfn
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

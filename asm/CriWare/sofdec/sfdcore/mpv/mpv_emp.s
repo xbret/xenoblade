@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global MPV_IsEmptyBpic
-MPV_IsEmptyBpic:
+.fn MPV_IsEmptyBpic, global
 /* 803A5AEC 0036F0AC  54 67 00 3A */	rlwinm r7, r3, 0, 0, 0x1d
 /* 803A5AF0 0036F0B0  7C 07 18 50 */	subf r0, r7, r3
 /* 803A5AF4 0036F0B4  81 47 00 00 */	lwz r10, 0(r7)
@@ -226,9 +225,9 @@ MPV_IsEmptyBpic:
 /* 803A5DC8 0036F388  7C 00 20 10 */	subfc r0, r0, r4
 /* 803A5DCC 0036F38C  7C 65 19 14 */	adde r3, r5, r3
 /* 803A5DD0 0036F390  4E 80 00 20 */	blr 
+.endfn MPV_IsEmptyBpic
 
-.global MPV_IsEmptyPpic
-MPV_IsEmptyPpic:
+.fn MPV_IsEmptyPpic, global
 /* 803A5DD4 0036F394  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A5DD8 0036F398  7C 08 02 A6 */	mflr r0
 /* 803A5DDC 0036F39C  54 67 00 3A */	rlwinm r7, r3, 0, 0, 0x1d
@@ -494,6 +493,7 @@ MPV_IsEmptyPpic:
 /* 803A6148 0036F708  7C 08 03 A6 */	mtlr r0
 /* 803A614C 0036F70C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803A6150 0036F710  4E 80 00 20 */	blr 
+.endfn MPV_IsEmptyPpic
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

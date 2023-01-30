@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global GKI_init
-GKI_init:
+.fn GKI_init, global
 /* 802DC790 002A5D50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DC794 002A5D54  7C 08 02 A6 */	mflr r0
 /* 802DC798 002A5D58  3C A0 00 03 */	lis r5, 0x00028AE0@ha
@@ -41,10 +40,10 @@ GKI_init:
 /* 802DC814 002A5DD4  7C 08 03 A6 */	mtlr r0
 /* 802DC818 002A5DD8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DC81C 002A5DDC  4E 80 00 20 */	blr 
+.endfn GKI_init
 
 .balign 16, 0
-.global GKI_shutdown
-GKI_shutdown:
+.fn GKI_shutdown, global
 /* 802DC820 002A5DE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DC824 002A5DE4  7C 08 02 A6 */	mflr r0
 /* 802DC828 002A5DE8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -89,30 +88,30 @@ GKI_shutdown:
 /* 802DC8BC 002A5E7C  7C 08 03 A6 */	mtlr r0
 /* 802DC8C0 002A5E80  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DC8C4 002A5E84  4E 80 00 20 */	blr 
+.endfn GKI_shutdown
 
 .balign 16, 0
-.global GKI_run
-GKI_run:
+.fn GKI_run, global
 /* 802DC8D0 002A5E90  4E 80 00 20 */	blr 
+.endfn GKI_run
 
 .balign 16, 0
-.global GKI_sched_lock
-GKI_sched_lock:
+.fn GKI_sched_lock, global
 /* 802DC8E0 002A5EA0  4E 80 00 20 */	blr 
+.endfn GKI_sched_lock
 
 .balign 16, 0
-.global GKI_sched_unlock
-GKI_sched_unlock:
+.fn GKI_sched_unlock, global
 /* 802DC8F0 002A5EB0  4E 80 00 20 */	blr 
+.endfn GKI_sched_unlock
 
 .balign 16, 0
-.global GKI_delay
-GKI_delay:
+.fn GKI_delay, global
 /* 802DC900 002A5EC0  4E 80 00 20 */	blr 
+.endfn GKI_delay
 
 .balign 16, 0
-.global GKI_send_event
-GKI_send_event:
+.fn GKI_send_event, global
 /* 802DC910 002A5ED0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DC914 002A5ED4  7C 08 02 A6 */	mflr r0
 /* 802DC918 002A5ED8  28 03 00 08 */	cmplwi r3, 8
@@ -156,16 +155,16 @@ GKI_send_event:
 /* 802DC9A8 002A5F68  7C 08 03 A6 */	mtlr r0
 /* 802DC9AC 002A5F6C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DC9B0 002A5F70  4E 80 00 20 */	blr 
+.endfn GKI_send_event
 
 .balign 16, 0
-.global GKI_get_taskid
-GKI_get_taskid:
+.fn GKI_get_taskid, global
 /* 802DC9C0 002A5F80  38 60 00 02 */	li r3, 2
 /* 802DC9C4 002A5F84  4E 80 00 20 */	blr 
+.endfn GKI_get_taskid
 
 .balign 16, 0
-.global GKI_enable
-GKI_enable:
+.fn GKI_enable, global
 /* 802DC9D0 002A5F90  3C A0 80 59 */	lis r5, lbl_80593140@ha
 /* 802DC9D4 002A5F94  88 85 31 40 */	lbz r4, lbl_80593140@l(r5)
 /* 802DC9D8 002A5F98  38 65 31 40 */	addi r3, r5, lbl_80593140@l
@@ -175,10 +174,10 @@ GKI_enable:
 /* 802DC9E8 002A5FA8  7C 63 02 14 */	add r3, r3, r0
 /* 802DC9EC 002A5FAC  80 63 00 04 */	lwz r3, 4(r3)
 /* 802DC9F0 002A5FB0  48 07 C0 00 */	b OSRestoreInterrupts
+.endfn GKI_enable
 
 .balign 16, 0
-.global GKI_disable
-GKI_disable:
+.fn GKI_disable, global
 /* 802DCA00 002A5FC0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DCA04 002A5FC4  7C 08 02 A6 */	mflr r0
 /* 802DCA08 002A5FC8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -196,15 +195,15 @@ GKI_disable:
 /* 802DCA38 002A5FF8  7C 08 03 A6 */	mtlr r0
 /* 802DCA3C 002A5FFC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DCA40 002A6000  4E 80 00 20 */	blr 
+.endfn GKI_disable
 
 .balign 16, 0
-.global GKI_exception
-GKI_exception:
+.fn GKI_exception, global
 /* 802DCA50 002A6010  4E 80 00 20 */	blr 
+.endfn GKI_exception
 
 .balign 16, 0
-.global GKI_os_malloc
-GKI_os_malloc:
+.fn GKI_os_malloc, global
 /* 802DCA60 002A6020  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DCA64 002A6024  7C 08 02 A6 */	mflr r0
 /* 802DCA68 002A6028  90 01 00 14 */	stw r0, 0x14(r1)
@@ -217,6 +216,7 @@ GKI_os_malloc:
 /* 802DCA80 002A6040  7C 08 03 A6 */	mtlr r0
 /* 802DCA84 002A6044  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DCA88 002A6048  4E 80 00 20 */	blr 
+.endfn GKI_os_malloc
 
 .balign 16, 0
 .global GKI_os_free

@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global LoadMaterial__Q34nw4r3g3d6detailFQ34nw4r3g3d6ResMatUlPQ34nw4r3g3d16Draw1Mat1ShpSwapPQ44nw4r3g3d8G3DState8IndMtxOpb
-LoadMaterial__Q34nw4r3g3d6detailFQ34nw4r3g3d6ResMatUlPQ34nw4r3g3d16Draw1Mat1ShpSwapPQ44nw4r3g3d8G3DState8IndMtxOpb:
+.fn LoadMaterial__Q34nw4r3g3d6detailFQ34nw4r3g3d6ResMatUlPQ34nw4r3g3d16Draw1Mat1ShpSwapPQ44nw4r3g3d8G3DState8IndMtxOpb, global
 /* 803EB6B0 003B4C70  94 21 FE D0 */	stwu r1, -0x130(r1)
 /* 803EB6B4 003B4C74  7C 08 02 A6 */	mflr r0
 /* 803EB6B8 003B4C78  2C 07 00 00 */	cmpwi r7, 0
@@ -345,9 +344,9 @@ LoadMaterial__Q34nw4r3g3d6detailFQ34nw4r3g3d6ResMatUlPQ34nw4r3g3d16Draw1Mat1ShpS
 /* 803EBB38 003B50F8  7C 08 03 A6 */	mtlr r0
 /* 803EBB3C 003B50FC  38 21 01 30 */	addi r1, r1, 0x130
 /* 803EBB40 003B5100  4E 80 00 20 */	blr 
+.endfn LoadMaterial__Q34nw4r3g3d6detailFQ34nw4r3g3d6ResMatUlPQ34nw4r3g3d16Draw1Mat1ShpSwapPQ44nw4r3g3d8G3DState8IndMtxOpb
 
-.global Draw1Mat1ShpDirectly__Q24nw4r3g3dFQ34nw4r3g3d6ResMatQ34nw4r3g3d6ResShpPCQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34UlPQ34nw4r3g3d16Draw1Mat1ShpSwapPQ44nw4r3g3d8G3DState8IndMtxOp
-Draw1Mat1ShpDirectly__Q24nw4r3g3dFQ34nw4r3g3d6ResMatQ34nw4r3g3d6ResShpPCQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34UlPQ34nw4r3g3d16Draw1Mat1ShpSwapPQ44nw4r3g3d8G3DState8IndMtxOp:
+.fn Draw1Mat1ShpDirectly__Q24nw4r3g3dFQ34nw4r3g3d6ResMatQ34nw4r3g3d6ResShpPCQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34UlPQ34nw4r3g3d16Draw1Mat1ShpSwapPQ44nw4r3g3d8G3DState8IndMtxOp, global
 /* 803EBB44 003B5104  94 21 FD A0 */	stwu r1, -0x260(r1)
 /* 803EBB48 003B5108  7C 08 02 A6 */	mflr r0
 /* 803EBB4C 003B510C  90 01 02 64 */	stw r0, 0x264(r1)
@@ -945,6 +944,7 @@ Draw1Mat1ShpDirectly__Q24nw4r3g3dFQ34nw4r3g3d6ResMatQ34nw4r3g3d6ResShpPCQ34nw4r4
 /* 803EC3D8 003B5998  7C 08 03 A6 */	mtlr r0
 /* 803EC3DC 003B599C  38 21 02 60 */	addi r1, r1, 0x260
 /* 803EC3E0 003B59A0  4E 80 00 20 */	blr 
+.endfn Draw1Mat1ShpDirectly__Q24nw4r3g3dFQ34nw4r3g3d6ResMatQ34nw4r3g3d6ResShpPCQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34UlPQ34nw4r3g3d16Draw1Mat1ShpSwapPQ44nw4r3g3d8G3DState8IndMtxOp
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

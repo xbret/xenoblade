@@ -2,17 +2,16 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global mbtowc
-mbtowc:
+.fn mbtowc, global
 /* 802BE510 00287AD0  3C C0 80 54 */	lis r6, _current_locale@ha
 /* 802BE514 00287AD4  38 C6 F5 48 */	addi r6, r6, _current_locale@l
 /* 802BE518 00287AD8  80 C6 00 38 */	lwz r6, 0x38(r6)
 /* 802BE51C 00287ADC  81 86 00 20 */	lwz r12, 0x20(r6)
 /* 802BE520 00287AE0  7D 89 03 A6 */	mtctr r12
 /* 802BE524 00287AE4  4E 80 04 20 */	bctr
+.endfn mbtowc
 
-.global __mbtowc_noconv
-__mbtowc_noconv:
+.fn __mbtowc_noconv, global
 /* 802BE528 00287AE8  2C 04 00 00 */	cmpwi r4, 0
 /* 802BE52C 00287AEC  40 82 00 0C */	bne .L_802BE538
 /* 802BE530 00287AF0  38 60 00 00 */	li r3, 0
@@ -36,9 +35,9 @@ __mbtowc_noconv:
 .L_802BE56C:
 /* 802BE56C 00287B2C  38 60 00 01 */	li r3, 1
 /* 802BE570 00287B30  4E 80 00 20 */	blr
+.endfn __mbtowc_noconv
 
-.global __wctomb_noconv
-__wctomb_noconv:
+.fn __wctomb_noconv, global
 /* 802BE574 00287B34  2C 03 00 00 */	cmpwi r3, 0
 /* 802BE578 00287B38  40 82 00 0C */	bne .L_802BE584
 /* 802BE57C 00287B3C  38 60 00 00 */	li r3, 0
@@ -47,10 +46,10 @@ __wctomb_noconv:
 /* 802BE584 00287B44  98 83 00 00 */	stb r4, 0(r3)
 /* 802BE588 00287B48  38 60 00 01 */	li r3, 1
 /* 802BE58C 00287B4C  4E 80 00 20 */	blr 
+.endfn __wctomb_noconv
 
 
-.global mbstowc
-mbstowc:
+.fn mbstowc, global
 /* 802BE590 00287B50  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802BE594 00287B54  7C 08 02 A6 */	mflr r0
 /* 802BE598 00287B58  90 01 00 24 */	stw r0, 0x24(r1)
@@ -107,6 +106,7 @@ mbstowc:
 /* 802BE644 00287C04  7C 08 03 A6 */	mtlr r0
 /* 802BE648 00287C08  38 21 00 20 */	addi r1, r1, 0x20
 /* 802BE64C 00287C0C  4E 80 00 20 */	blr 
+.endfn mbstowc
 
 .global wcstombs
 wcstombs:

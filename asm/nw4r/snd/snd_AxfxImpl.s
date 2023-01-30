@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global CreateHeap__Q44nw4r3snd6detail8AxfxImplFPvUl
-CreateHeap__Q44nw4r3snd6detail8AxfxImplFPvUl:
+.fn CreateHeap__Q44nw4r3snd6detail8AxfxImplFPvUl, global
 /* 804115B4 003DAB74  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804115B8 003DAB78  7C 08 02 A6 */	mflr r0
 /* 804115BC 003DAB7C  2C 04 00 00 */	cmpwi r4, 0
@@ -33,9 +32,9 @@ CreateHeap__Q44nw4r3snd6detail8AxfxImplFPvUl:
 /* 80411610 003DABD0  7C 08 03 A6 */	mtlr r0
 /* 80411614 003DABD4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80411618 003DABD8  4E 80 00 20 */	blr
+.endfn CreateHeap__Q44nw4r3snd6detail8AxfxImplFPvUl
 
-.global DestroyHeap__Q44nw4r3snd6detail8AxfxImplFv
-DestroyHeap__Q44nw4r3snd6detail8AxfxImplFv:
+.fn DestroyHeap__Q44nw4r3snd6detail8AxfxImplFv, global
 /* 8041161C 003DABDC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80411620 003DABE0  7C 08 02 A6 */	mflr r0
 /* 80411624 003DABE4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -54,9 +53,9 @@ DestroyHeap__Q44nw4r3snd6detail8AxfxImplFv:
 /* 80411654 003DAC14  7C 08 03 A6 */	mtlr r0
 /* 80411658 003DAC18  38 21 00 10 */	addi r1, r1, 0x10
 /* 8041165C 003DAC1C  4E 80 00 20 */	blr 
+.endfn DestroyHeap__Q44nw4r3snd6detail8AxfxImplFv
 
-.global HookAlloc__Q44nw4r3snd6detail8AxfxImplFPPFUl_PvPPFPv_v
-HookAlloc__Q44nw4r3snd6detail8AxfxImplFPPFUl_PvPPFPv_v:
+.fn HookAlloc__Q44nw4r3snd6detail8AxfxImplFPPFUl_PvPPFPv_v, global
 /* 80411660 003DAC20  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80411664 003DAC24  7C 08 02 A6 */	mflr r0
 /* 80411668 003DAC28  90 01 00 14 */	stw r0, 0x14(r1)
@@ -78,9 +77,9 @@ HookAlloc__Q44nw4r3snd6detail8AxfxImplFPPFUl_PvPPFPv_v:
 /* 804116A8 003DAC68  7C 08 03 A6 */	mtlr r0
 /* 804116AC 003DAC6C  38 21 00 10 */	addi r1, r1, 0x10
 /* 804116B0 003DAC70  4E 80 00 20 */	blr 
+.endfn HookAlloc__Q44nw4r3snd6detail8AxfxImplFPPFUl_PvPPFPv_v
 
-.global RestoreAlloc__Q44nw4r3snd6detail8AxfxImplFPFUl_PvPFPv_v
-RestoreAlloc__Q44nw4r3snd6detail8AxfxImplFPFUl_PvPFPv_v:
+.fn RestoreAlloc__Q44nw4r3snd6detail8AxfxImplFPFUl_PvPFPv_v, global
 /* 804116B4 003DAC74  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804116B8 003DAC78  7C 08 02 A6 */	mflr r0
 /* 804116BC 003DAC7C  7C 83 23 78 */	mr r3, r4
@@ -94,9 +93,9 @@ RestoreAlloc__Q44nw4r3snd6detail8AxfxImplFPFUl_PvPFPv_v:
 /* 804116DC 003DAC9C  7C 08 03 A6 */	mtlr r0
 /* 804116E0 003DACA0  38 21 00 10 */	addi r1, r1, 0x10
 /* 804116E4 003DACA4  4E 80 00 20 */	blr
+.endfn RestoreAlloc__Q44nw4r3snd6detail8AxfxImplFPFUl_PvPFPv_v
 
-.global Alloc__Q44nw4r3snd6detail8AxfxImplFUl
-Alloc__Q44nw4r3snd6detail8AxfxImplFUl:
+.fn Alloc__Q44nw4r3snd6detail8AxfxImplFUl, global
 /* 804116E8 003DACA8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804116EC 003DACAC  7C 08 02 A6 */	mflr r0
 /* 804116F0 003DACB0  38 A0 00 04 */	li r5, 4
@@ -121,9 +120,9 @@ Alloc__Q44nw4r3snd6detail8AxfxImplFUl:
 /* 8041173C 003DACFC  7C 08 03 A6 */	mtlr r0
 /* 80411740 003DAD00  38 21 00 10 */	addi r1, r1, 0x10
 /* 80411744 003DAD04  4E 80 00 20 */	blr
+.endfn Alloc__Q44nw4r3snd6detail8AxfxImplFUl
 
-.global Free__Q44nw4r3snd6detail8AxfxImplFPv
-Free__Q44nw4r3snd6detail8AxfxImplFPv:
+.fn Free__Q44nw4r3snd6detail8AxfxImplFPv, global
 /* 80411748 003DAD08  80 8D BC 28 */	lwz r4, lbl_80667DA8@sda21(r13)
 /* 8041174C 003DAD0C  80 64 00 04 */	lwz r3, 4(r4)
 /* 80411750 003DAD10  2C 03 00 00 */	cmpwi r3, 0
@@ -139,6 +138,7 @@ Free__Q44nw4r3snd6detail8AxfxImplFPv:
 /* 80411774 003DAD34  38 80 00 03 */	li r4, 3
 /* 80411778 003DAD38  4B F3 81 D8 */	b MEMFreeToFrmHeap
 /* 8041177C 003DAD3C  4E 80 00 20 */	blr 
+.endfn Free__Q44nw4r3snd6detail8AxfxImplFPv
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

@@ -2,8 +2,9 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_8048D024
-func_8048D024:
+
+
+.fn func_8048D024, global
 /* 8048D024 004565E4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8048D028 004565E8  7C 08 02 A6 */	mflr r0
 /* 8048D02C 004565EC  3C A0 80 57 */	lis r5, __vt__CScnLightMan@ha
@@ -55,9 +56,9 @@ func_8048D024:
 /* 8048D0D8 00456698  7C 08 03 A6 */	mtlr r0
 /* 8048D0DC 0045669C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8048D0E0 004566A0  4E 80 00 20 */	blr 
+.endfn func_8048D024
 
-.global func_8048D0E4
-func_8048D0E4:
+.fn func_8048D0E4, global
 /* 8048D0E4 004566A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8048D0E8 004566A8  7C 08 02 A6 */	mflr r0
 /* 8048D0EC 004566AC  2C 03 00 00 */	cmpwi r3, 0
@@ -75,9 +76,9 @@ func_8048D0E4:
 /* 8048D118 004566D8  7C 08 03 A6 */	mtlr r0
 /* 8048D11C 004566DC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8048D120 004566E0  4E 80 00 20 */	blr
+.endfn func_8048D0E4
 
-.global func_8048D124
-func_8048D124:
+.fn func_8048D124, global
 /* 8048D124 004566E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8048D128 004566E8  7C 08 02 A6 */	mflr r0
 /* 8048D12C 004566EC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -93,9 +94,9 @@ func_8048D124:
 /* 8048D154 00456714  7C 08 03 A6 */	mtlr r0
 /* 8048D158 00456718  38 21 00 10 */	addi r1, r1, 0x10
 /* 8048D15C 0045671C  4E 80 00 20 */	blr 
+.endfn func_8048D124
 
-.global func_8048D160
-func_8048D160:
+.fn func_8048D160, global
 /* 8048D160 00456720  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8048D164 00456724  7C 08 02 A6 */	mflr r0
 /* 8048D168 00456728  90 01 00 14 */	stw r0, 0x14(r1)
@@ -117,16 +118,19 @@ func_8048D160:
 /* 8048D1A4 00456764  7C 08 03 A6 */	mtlr r0
 /* 8048D1A8 00456768  38 21 00 10 */	addi r1, r1, 0x10
 /* 8048D1AC 0045676C  4E 80 00 20 */	blr 
+.endfn func_8048D160
 
-.global func_8048D1B0
-func_8048D1B0:
+.fn func_8048D1B0, global
 /* 8048D1B0 00456770  80 63 00 08 */	lwz r3, 8(r3)
 /* 8048D1B4 00456774  81 83 00 00 */	lwz r12, 0(r3)
 /* 8048D1B8 00456778  81 8C 00 14 */	lwz r12, 0x14(r12)
 /* 8048D1BC 0045677C  7D 89 03 A6 */	mtctr r12
 /* 8048D1C0 00456780  4E 80 04 20 */	bctr 
+.endfn func_8048D1B0
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
 
 .global CScnLightMan_typestr
 CScnLightMan_typestr:
@@ -134,6 +138,8 @@ CScnLightMan_typestr:
 	.balign 4
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
 
 .global __vt__CScnLightMan
 __vt__CScnLightMan:
@@ -145,45 +151,69 @@ __vt__CScnLightMan:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+
+
 .global __RTTI__CScnLightMan
 __RTTI__CScnLightMan:
 	.4byte CScnLightMan_typestr
 	.4byte 0
 
-.section extab_, "a"  # 0x800066E0 - 0x80021020
+.section extab, "a" # 0x800066E0 - 0x80021020
 
-.global lbl_8001EB70
-lbl_8001EB70:
+.balign 4
+
+.obj "@etb_8001EB70", local
+.hidden "@etb_8001EB70"
 	.4byte 0x20080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001EB70"
 
-.global lbl_8001EB78
-lbl_8001EB78:
+.obj "@etb_8001EB78", local
+.hidden "@etb_8001EB78"
 	.4byte 0x08080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001EB78"
 
-.global lbl_8001EB80
-lbl_8001EB80:
+.obj "@etb_8001EB80", local
+.hidden "@etb_8001EB80"
 	.4byte 0x08080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001EB80"
 
-.global lbl_8001EB88
-lbl_8001EB88:
+.obj "@etb_8001EB88", local
+.hidden "@etb_8001EB88"
 	.4byte 0x08080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001EB88"
 
+.section extabindex, "a" # 0x80021020 - 0x80039220
 
-.section extabindex_, "a"  # 0x80021020 - 0x80039220
+.balign 4
 
-.4byte func_8048D024
+.obj "@eti_80036740", local
+.hidden "@eti_80036740"
+	.4byte func_8048D024
 	.4byte 0x000000C0
-	.4byte lbl_8001EB70
+	.4byte "@etb_8001EB70"
+.endobj "@eti_80036740"
+
+.obj "@eti_8003674C", local
+.hidden "@eti_8003674C"
 	.4byte func_8048D0E4
 	.4byte 0x00000040
-	.4byte lbl_8001EB78
+	.4byte "@etb_8001EB78"
+.endobj "@eti_8003674C"
+
+.obj "@eti_80036758", local
+.hidden "@eti_80036758"
 	.4byte func_8048D124
 	.4byte 0x0000003C
-	.4byte lbl_8001EB80
+	.4byte "@etb_8001EB80"
+.endobj "@eti_80036758"
+
+.obj "@eti_80036764", local
+.hidden "@eti_80036764"
 	.4byte func_8048D160
 	.4byte 0x00000050
-	.4byte lbl_8001EB88
+	.4byte "@etb_8001EB88"
+.endobj "@eti_80036764"

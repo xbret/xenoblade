@@ -3,12 +3,13 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global CamLookatIntf_update
-CamLookatIntf_update:
-/* 8006B508 00034AC8  4E 80 00 20 */	blr 
 
-.global CamLookatIntf_setPos
-CamLookatIntf_setPos:
+
+.fn CamLookatIntf_update, global
+/* 8006B508 00034AC8  4E 80 00 20 */	blr 
+.endfn CamLookatIntf_update
+
+.fn CamLookatIntf_setPos, global
 /* 8006B50C 00034ACC  80 C5 00 00 */	lwz r6, 0(r5)
 /* 8006B510 00034AD0  80 65 00 04 */	lwz r3, 4(r5)
 /* 8006B514 00034AD4  80 05 00 08 */	lwz r0, 8(r5)
@@ -21,9 +22,9 @@ CamLookatIntf_setPos:
 /* 8006B530 00034AF0  90 04 02 7C */	stw r0, 0x27c(r4)
 /* 8006B534 00034AF4  D0 04 02 64 */	stfs f0, 0x264(r4)
 /* 8006B538 00034AF8  4E 80 00 20 */	blr 
+.endfn CamLookatIntf_setPos
 
-.global CamLookatIntf_setDir
-CamLookatIntf_setDir:
+.fn CamLookatIntf_setDir, global
 /* 8006B53C 00034AFC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8006B540 00034B00  7C 08 02 A6 */	mflr r0
 /* 8006B544 00034B04  90 01 00 24 */	stw r0, 0x24(r1)
@@ -53,9 +54,9 @@ CamLookatIntf_setDir:
 /* 8006B5A4 00034B64  7C 08 03 A6 */	mtlr r0
 /* 8006B5A8 00034B68  38 21 00 20 */	addi r1, r1, 0x20
 /* 8006B5AC 00034B6C  4E 80 00 20 */	blr 
+.endfn CamLookatIntf_setDir
 
-.global CamLookatIntf_setLookat
-CamLookatIntf_setLookat:
+.fn CamLookatIntf_setLookat, global
 /* 8006B5B0 00034B70  80 C5 00 00 */	lwz r6, 0(r5)
 /* 8006B5B4 00034B74  80 65 00 04 */	lwz r3, 4(r5)
 /* 8006B5B8 00034B78  80 05 00 08 */	lwz r0, 8(r5)
@@ -65,25 +66,25 @@ CamLookatIntf_setLookat:
 /* 8006B5C8 00034B88  90 04 02 70 */	stw r0, 0x270(r4)
 /* 8006B5CC 00034B8C  D0 04 02 64 */	stfs f0, 0x264(r4)
 /* 8006B5D0 00034B90  4E 80 00 20 */	blr 
+.endfn CamLookatIntf_setLookat
 
-.section extab_, "a"  # 0x800066E0 - 0x80021020
+.section extab, "a" # 0x800066E0 - 0x80021020
 
-.global lbl_80008098
-lbl_80008098:
+.balign 4
+
+.obj "@etb_80008098", local
+.hidden "@etb_80008098"
 	.4byte 0x100A0000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_80008098"
 
-.global lbl_800080A0
-lbl_800080A0:
-	.4byte 0x100A0000
-	.4byte 0
+.section extabindex, "a" # 0x80021020 - 0x80039220
 
+.balign 4
 
-.section extabindex_, "a"  # 0x80021020 - 0x80039220
-
+.obj "@eti_800233B4", local
+.hidden "@eti_800233B4"
 	.4byte CamLookatIntf_setDir
 	.4byte 0x00000074
-	.4byte lbl_80008098
-	.4byte CfCamTargetIntf_setDir
-	.4byte 0x00000074
-	.4byte lbl_800080A0
+	.4byte "@etb_80008098"
+.endobj "@eti_800233B4"

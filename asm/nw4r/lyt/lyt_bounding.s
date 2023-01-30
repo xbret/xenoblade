@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __ct__Q34nw4r3lyt8BoundingFPCQ44nw4r3lyt3res8BoundingRCQ34nw4r3lyt11ResBlockSet
-__ct__Q34nw4r3lyt8BoundingFPCQ44nw4r3lyt3res8BoundingRCQ34nw4r3lyt11ResBlockSet:
+.fn __ct__Q34nw4r3lyt8BoundingFPCQ44nw4r3lyt3res8BoundingRCQ34nw4r3lyt11ResBlockSet, global
 /* 804053DC 003CE99C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804053E0 003CE9A0  7C 08 02 A6 */	mflr r0
 /* 804053E4 003CE9A4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -19,9 +18,9 @@ __ct__Q34nw4r3lyt8BoundingFPCQ44nw4r3lyt3res8BoundingRCQ34nw4r3lyt11ResBlockSet:
 /* 8040540C 003CE9CC  7C 08 03 A6 */	mtlr r0
 /* 80405410 003CE9D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80405414 003CE9D4  4E 80 00 20 */	blr
+.endfn __ct__Q34nw4r3lyt8BoundingFPCQ44nw4r3lyt3res8BoundingRCQ34nw4r3lyt11ResBlockSet
 
-.global __dt__Q34nw4r3lyt8BoundingFv
-__dt__Q34nw4r3lyt8BoundingFv:
+.fn __dt__Q34nw4r3lyt8BoundingFv, global
 /* 80405418 003CE9D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040541C 003CE9DC  7C 08 02 A6 */	mflr r0
 /* 80405420 003CE9E0  2C 03 00 00 */	cmpwi r3, 0
@@ -45,22 +44,23 @@ __dt__Q34nw4r3lyt8BoundingFv:
 /* 80405464 003CEA24  7C 08 03 A6 */	mtlr r0
 /* 80405468 003CEA28  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040546C 003CEA2C  4E 80 00 20 */	blr 
+.endfn __dt__Q34nw4r3lyt8BoundingFv
 
-.global DrawSelf__Q34nw4r3lyt8BoundingFRCQ34nw4r3lyt8DrawInfo
-DrawSelf__Q34nw4r3lyt8BoundingFRCQ34nw4r3lyt8DrawInfo:
+.fn DrawSelf__Q34nw4r3lyt8BoundingFRCQ34nw4r3lyt8DrawInfo, global
 /* 80405470 003CEA30  4E 80 00 20 */	blr
+.endfn DrawSelf__Q34nw4r3lyt8BoundingFRCQ34nw4r3lyt8DrawInfo
 
-.global GetRuntimeTypeInfo__Q34nw4r3lyt8BoundingCFv
-GetRuntimeTypeInfo__Q34nw4r3lyt8BoundingCFv:
+.fn GetRuntimeTypeInfo__Q34nw4r3lyt8BoundingCFv, global
 /* 80405474 003CEA34  38 6D BB F8 */	addi r3, r13, lbl_80667D78@sda21
 /* 80405478 003CEA38  4E 80 00 20 */	blr
+.endfn GetRuntimeTypeInfo__Q34nw4r3lyt8BoundingCFv
 
 
-.global sinit_8040547C
-sinit_8040547C:
+.fn sinit_8040547C, global
 /* 8040547C 003CEA3C  38 0D BB D0 */	addi r0, r13, lbl_80667D50@sda21
 /* 80405480 003CEA40  90 0D BB F8 */	stw r0, lbl_80667D78@sda21(r13)
 /* 80405484 003CEA44  4E 80 00 20 */	blr 
+.endfn sinit_8040547C
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 

@@ -3,12 +3,11 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global MWInitializeCriticalSection
-MWInitializeCriticalSection:
+.fn MWInitializeCriticalSection, global
 /* 802CB7A4 00294D64  4E 80 00 20 */	blr 
+.endfn MWInitializeCriticalSection
 
-.global MWEnterCriticalSection
-MWEnterCriticalSection:
+.fn MWEnterCriticalSection, global
 /* 802CB7A8 00294D68  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CB7AC 00294D6C  7C 08 02 A6 */	mflr r0
 /* 802CB7B0 00294D70  90 01 00 14 */	stw r0, 0x14(r1)
@@ -21,6 +20,7 @@ MWEnterCriticalSection:
 /* 802CB7CC 00294D8C  7C 08 03 A6 */	mtlr r0
 /* 802CB7D0 00294D90  38 21 00 10 */	addi r1, r1, 0x10
 /* 802CB7D4 00294D94  4E 80 00 20 */	blr
+.endfn MWEnterCriticalSection
 
 .global MWExitCriticalSection
 MWExitCriticalSection:

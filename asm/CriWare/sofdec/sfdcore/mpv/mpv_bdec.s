@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global MPVBDEC_Init
-MPVBDEC_Init:
+.fn MPVBDEC_Init, global
 /* 803A3BAC 0036D16C  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 803A3BB0 0036D170  7C 08 02 A6 */	mflr r0
 /* 803A3BB4 0036D174  3C C0 80 60 */	lis r6, lbl_80605ED0@ha
@@ -219,9 +218,9 @@ MPVBDEC_Init:
 /* 803A3EF4 0036D4B4  7C 08 03 A6 */	mtlr r0
 /* 803A3EF8 0036D4B8  38 21 00 70 */	addi r1, r1, 0x70
 /* 803A3EFC 0036D4BC  4E 80 00 20 */	blr 
+.endfn MPVBDEC_Init
 
-.global MPVBDEC_StartFrame
-MPVBDEC_StartFrame:
+.fn MPVBDEC_StartFrame, global
 /* 803A3F00 0036D4C0  80 03 0D 00 */	lwz r0, 0xd00(r3)
 /* 803A3F04 0036D4C4  3C 80 80 60 */	lis r4, lbl_80607B68@ha
 /* 803A3F08 0036D4C8  38 84 7B 68 */	addi r4, r4, lbl_80607B68@l
@@ -261,6 +260,7 @@ MPVBDEC_StartFrame:
 /* 803A3F80 0036D540  80 04 7B 08 */	lwz r0, lbl_80607B08@l(r4)
 /* 803A3F84 0036D544  90 03 0D 50 */	stw r0, 0xd50(r3)
 /* 803A3F88 0036D548  4E 80 00 20 */	blr 
+.endfn MPVBDEC_StartFrame
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

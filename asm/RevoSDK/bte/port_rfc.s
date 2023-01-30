@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global PORT_StartCnf
-PORT_StartCnf:
+.fn PORT_StartCnf, global
 /* 802FCA7C 002C603C  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802FCA80 002C6040  7C 08 02 A6 */	mflr r0
 /* 802FCA84 002C6044  90 01 00 44 */	stw r0, 0x44(r1)
@@ -102,9 +101,9 @@ PORT_StartCnf:
 /* 802FCBD0 002C6190  7C 08 03 A6 */	mtlr r0
 /* 802FCBD4 002C6194  38 21 00 40 */	addi r1, r1, 0x40
 /* 802FCBD8 002C6198  4E 80 00 20 */	blr 
+.endfn PORT_StartCnf
 
-.global PORT_StartInd
-PORT_StartInd:
+.fn PORT_StartInd, global
 /* 802FCBDC 002C619C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FCBE0 002C61A0  7C 08 02 A6 */	mflr r0
 /* 802FCBE4 002C61A4  3C 80 80 5C */	lis r4, lbl_805C32A8@ha
@@ -149,9 +148,9 @@ PORT_StartInd:
 /* 802FCC6C 002C622C  7C 08 03 A6 */	mtlr r0
 /* 802FCC70 002C6230  38 21 00 10 */	addi r1, r1, 0x10
 /* 802FCC74 002C6234  4E 80 00 20 */	blr 
+.endfn PORT_StartInd
 
-.global PORT_ParNegInd
-PORT_ParNegInd:
+.fn PORT_ParNegInd, global
 /* 802FCC78 002C6238  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FCC7C 002C623C  7C 08 02 A6 */	mflr r0
 /* 802FCC80 002C6240  90 01 00 24 */	stw r0, 0x24(r1)
@@ -272,9 +271,9 @@ PORT_ParNegInd:
 /* 802FCE1C 002C63DC  7C 08 03 A6 */	mtlr r0
 /* 802FCE20 002C63E0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FCE24 002C63E4  4E 80 00 20 */	blr 
+.endfn PORT_ParNegInd
 
-.global PORT_ParNegCnf
-PORT_ParNegCnf:
+.fn PORT_ParNegCnf, global
 /* 802FCE28 002C63E8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FCE2C 002C63EC  7C 08 02 A6 */	mflr r0
 /* 802FCE30 002C63F0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -346,9 +345,9 @@ PORT_ParNegCnf:
 /* 802FCF20 002C64E0  7C 08 03 A6 */	mtlr r0
 /* 802FCF24 002C64E4  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FCF28 002C64E8  4E 80 00 20 */	blr 
+.endfn PORT_ParNegCnf
 
-.global PORT_DlcEstablishInd
-PORT_DlcEstablishInd:
+.fn PORT_DlcEstablishInd, global
 /* 802FCF2C 002C64EC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FCF30 002C64F0  7C 08 02 A6 */	mflr r0
 /* 802FCF34 002C64F4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -436,9 +435,9 @@ PORT_DlcEstablishInd:
 /* 802FD060 002C6620  7C 08 03 A6 */	mtlr r0
 /* 802FD064 002C6624  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FD068 002C6628  4E 80 00 20 */	blr 
+.endfn PORT_DlcEstablishInd
 
-.global PORT_DlcEstablishCnf
-PORT_DlcEstablishCnf:
+.fn PORT_DlcEstablishCnf, global
 /* 802FD06C 002C662C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FD070 002C6630  7C 08 02 A6 */	mflr r0
 /* 802FD074 002C6634  90 01 00 24 */	stw r0, 0x24(r1)
@@ -528,9 +527,9 @@ PORT_DlcEstablishCnf:
 /* 802FD1A4 002C6764  7C 08 03 A6 */	mtlr r0
 /* 802FD1A8 002C6768  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FD1AC 002C676C  4E 80 00 20 */	blr 
+.endfn PORT_DlcEstablishCnf
 
-.global PORT_PortNegInd
-PORT_PortNegInd:
+.fn PORT_PortNegInd, global
 /* 802FD1B0 002C6770  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FD1B4 002C6774  7C 08 02 A6 */	mflr r0
 /* 802FD1B8 002C6778  90 01 00 24 */	stw r0, 0x24(r1)
@@ -619,9 +618,9 @@ PORT_PortNegInd:
 /* 802FD2F4 002C68B4  7C 08 03 A6 */	mtlr r0
 /* 802FD2F8 002C68B8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FD2FC 002C68BC  4E 80 00 20 */	blr 
+.endfn PORT_PortNegInd
 
-.global PORT_PortNegCnf
-PORT_PortNegCnf:
+.fn PORT_PortNegCnf, global
 /* 802FD300 002C68C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FD304 002C68C4  7C 08 02 A6 */	mflr r0
 /* 802FD308 002C68C8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -697,9 +696,9 @@ PORT_PortNegCnf:
 /* 802FD40C 002C69CC  7C 08 03 A6 */	mtlr r0
 /* 802FD410 002C69D0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FD414 002C69D4  4E 80 00 20 */	blr 
+.endfn PORT_PortNegCnf
 
-.global PORT_ControlInd
-PORT_ControlInd:
+.fn PORT_ControlInd, global
 /* 802FD418 002C69D8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FD41C 002C69DC  7C 08 02 A6 */	mflr r0
 /* 802FD420 002C69E0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -801,9 +800,9 @@ PORT_ControlInd:
 /* 802FD584 002C6B44  7C 08 03 A6 */	mtlr r0
 /* 802FD588 002C6B48  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FD58C 002C6B4C  4E 80 00 20 */	blr 
+.endfn PORT_ControlInd
 
-.global PORT_ControlCnf
-PORT_ControlCnf:
+.fn PORT_ControlCnf, global
 /* 802FD590 002C6B50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FD594 002C6B54  7C 08 02 A6 */	mflr r0
 /* 802FD598 002C6B58  90 01 00 14 */	stw r0, 0x14(r1)
@@ -857,9 +856,9 @@ PORT_ControlCnf:
 /* 802FD648 002C6C08  7C 08 03 A6 */	mtlr r0
 /* 802FD64C 002C6C0C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802FD650 002C6C10  4E 80 00 20 */	blr 
+.endfn PORT_ControlCnf
 
-.global PORT_LineStatusInd
-PORT_LineStatusInd:
+.fn PORT_LineStatusInd, global
 /* 802FD654 002C6C14  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FD658 002C6C18  7C 08 02 A6 */	mflr r0
 /* 802FD65C 002C6C1C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -915,9 +914,9 @@ PORT_LineStatusInd:
 /* 802FD710 002C6CD0  7C 08 03 A6 */	mtlr r0
 /* 802FD714 002C6CD4  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FD718 002C6CD8  4E 80 00 20 */	blr 
+.endfn PORT_LineStatusInd
 
-.global PORT_DlcReleaseInd
-PORT_DlcReleaseInd:
+.fn PORT_DlcReleaseInd, global
 /* 802FD71C 002C6CDC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FD720 002C6CE0  7C 08 02 A6 */	mflr r0
 /* 802FD724 002C6CE4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -946,9 +945,9 @@ PORT_DlcReleaseInd:
 /* 802FD778 002C6D38  7C 08 03 A6 */	mtlr r0
 /* 802FD77C 002C6D3C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802FD780 002C6D40  4E 80 00 20 */	blr 
+.endfn PORT_DlcReleaseInd
 
-.global PORT_CloseInd
-PORT_CloseInd:
+.fn PORT_CloseInd, global
 /* 802FD784 002C6D44  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FD788 002C6D48  7C 08 02 A6 */	mflr r0
 /* 802FD78C 002C6D4C  3C 80 80 5C */	lis r4, lbl_805C32A8@ha
@@ -992,9 +991,9 @@ PORT_CloseInd:
 /* 802FD818 002C6DD8  7C 08 03 A6 */	mtlr r0
 /* 802FD81C 002C6DDC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FD820 002C6DE0  4E 80 00 20 */	blr 
+.endfn PORT_CloseInd
 
-.global Port_TimeOutCloseMux
-Port_TimeOutCloseMux:
+.fn Port_TimeOutCloseMux, global
 /* 802FD824 002C6DE4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FD828 002C6DE8  7C 08 02 A6 */	mflr r0
 /* 802FD82C 002C6DEC  3C 80 80 5C */	lis r4, lbl_805C32A8@ha
@@ -1036,9 +1035,9 @@ Port_TimeOutCloseMux:
 /* 802FD8B0 002C6E70  7C 08 03 A6 */	mtlr r0
 /* 802FD8B4 002C6E74  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FD8B8 002C6E78  4E 80 00 20 */	blr 
+.endfn Port_TimeOutCloseMux
 
-.global PORT_DataInd
-PORT_DataInd:
+.fn PORT_DataInd, global
 /* 802FD8BC 002C6E7C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FD8C0 002C6E80  7C 08 02 A6 */	mflr r0
 /* 802FD8C4 002C6E84  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1178,9 +1177,9 @@ PORT_DataInd:
 /* 802FDAB0 002C7070  7C 08 03 A6 */	mtlr r0
 /* 802FDAB4 002C7074  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FDAB8 002C7078  4E 80 00 20 */	blr 
+.endfn PORT_DataInd
 
-.global PORT_FlowInd
-PORT_FlowInd:
+.fn PORT_FlowInd, global
 /* 802FDABC 002C707C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FDAC0 002C7080  7C 08 02 A6 */	mflr r0
 /* 802FDAC4 002C7084  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1265,9 +1264,9 @@ PORT_FlowInd:
 /* 802FDBE0 002C71A0  7C 08 03 A6 */	mtlr r0
 /* 802FDBE4 002C71A4  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FDBE8 002C71A8  4E 80 00 20 */	blr 
+.endfn PORT_FlowInd
 
-.global port_rfc_send_tx_data
-port_rfc_send_tx_data:
+.fn port_rfc_send_tx_data, global
 /* 802FDBEC 002C71AC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FDBF0 002C71B0  7C 08 02 A6 */	mflr r0
 /* 802FDBF4 002C71B4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1336,9 +1335,9 @@ port_rfc_send_tx_data:
 /* 802FDCD8 002C7298  7C 08 03 A6 */	mtlr r0
 /* 802FDCDC 002C729C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FDCE0 002C72A0  4E 80 00 20 */	blr 
+.endfn port_rfc_send_tx_data
 
-.global port_rfc_closed
-port_rfc_closed:
+.fn port_rfc_closed, global
 /* 802FDCE4 002C72A4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FDCE8 002C72A8  7C 08 02 A6 */	mflr r0
 /* 802FDCEC 002C72AC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1448,6 +1447,7 @@ port_rfc_closed:
 /* 802FDE6C 002C742C  7C 08 03 A6 */	mtlr r0
 /* 802FDE70 002C7430  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FDE74 002C7434  4E 80 00 20 */	blr 
+.endfn port_rfc_closed
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 .global lbl_80548200

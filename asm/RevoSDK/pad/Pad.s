@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global PADControlMotor
-PADControlMotor:
+.fn PADControlMotor, global
 /* 8035F410 003289D0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035F414 003289D4  7C 08 02 A6 */	mflr r0
 /* 8035F418 003289D8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -54,10 +53,10 @@ PADControlMotor:
 /* 8035F4BC 00328A7C  7C 08 03 A6 */	mtlr r0
 /* 8035F4C0 00328A80  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035F4C4 00328A84  4E 80 00 20 */	blr 
+.endfn PADControlMotor
 
 .balign 16, 0
-.global __PADDisableRecalibration
-__PADDisableRecalibration:
+.fn __PADDisableRecalibration, global
 /* 8035F4D0 00328A90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035F4D4 00328A94  7C 08 02 A6 */	mflr r0
 /* 8035F4D8 00328A98  90 01 00 14 */	stw r0, 0x14(r1)
@@ -82,6 +81,7 @@ __PADDisableRecalibration:
 /* 8035F520 00328AE0  7C 08 03 A6 */	mtlr r0
 /* 8035F524 00328AE4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035F528 00328AE8  4E 80 00 20 */	blr 
+.endfn __PADDisableRecalibration
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 

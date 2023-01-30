@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global SFTIM_Init
-SFTIM_Init:
+.fn SFTIM_Init, global
 /* 803CC71C 00395CDC  3C A0 66 66 */	lis r5, 0x66666667@ha
 /* 803CC720 00395CE0  38 E0 00 00 */	li r7, 0
 /* 803CC724 00395CE4  38 05 66 67 */	addi r0, r5, 0x66666667@l
@@ -30,9 +29,9 @@ SFTIM_Init:
 /* 803CC770 00395D30  90 83 00 0C */	stw r4, 0xc(r3)
 /* 803CC774 00395D34  90 03 00 10 */	stw r0, 0x10(r3)
 /* 803CC778 00395D38  4E 80 00 20 */	blr 
+.endfn SFTIM_Init
 
-.global SFTIM_InitHn
-SFTIM_InitHn:
+.fn SFTIM_InitHn, global
 /* 803CC77C 00395D3C  3C E0 80 3D */	lis r7, sftim_GetTimeNone@ha
 /* 803CC780 00395D40  3D 80 80 3D */	lis r12, sftim_GetTimeVsync@ha
 /* 803CC784 00395D44  3D 40 80 3D */	lis r10, sftim_GetTimeUfrm@ha
@@ -259,9 +258,9 @@ SFTIM_InitHn:
 /* 803CCAF8 003960B8  91 64 05 F8 */	stw r11, 0x5f8(r4)
 /* 803CCAFC 003960BC  90 C4 05 FC */	stw r6, 0x5fc(r4)
 /* 803CCB00 003960C0  4E 80 00 20 */	blr 
+.endfn SFTIM_InitHn
 
-.global SFTIM_InitTtu
-SFTIM_InitTtu:
+.fn SFTIM_InitTtu, global
 /* 803CCB04 003960C4  38 A0 00 00 */	li r5, 0
 /* 803CCB08 003960C8  38 00 00 01 */	li r0, 1
 /* 803CCB0C 003960CC  90 A3 00 00 */	stw r5, 0(r3)
@@ -277,9 +276,9 @@ SFTIM_InitTtu:
 /* 803CCB34 003960F4  90 83 00 24 */	stw r4, 0x24(r3)
 /* 803CCB38 003960F8  90 03 00 28 */	stw r0, 0x28(r3)
 /* 803CCB3C 003960FC  4E 80 00 20 */	blr 
+.endfn SFTIM_InitTtu
 
-.global SFTIM_UpdateItime
-SFTIM_UpdateItime:
+.fn SFTIM_UpdateItime, global
 /* 803CCB40 00396100  80 03 02 98 */	lwz r0, 0x298(r3)
 /* 803CCB44 00396104  2C 00 FF FB */	cmpwi r0, -5
 /* 803CCB48 00396108  40 82 00 0C */	bne .L_803CCB54
@@ -325,9 +324,9 @@ SFTIM_UpdateItime:
 .L_803CCBD4:
 /* 803CCBD4 00396194  90 C3 02 9C */	stw r6, 0x29c(r3)
 /* 803CCBD8 00396198  4E 80 00 20 */	blr 
+.endfn SFTIM_UpdateItime
 
-.global SFTIM_GetNextItime
-SFTIM_GetNextItime:
+.fn SFTIM_GetNextItime, global
 /* 803CCBDC 0039619C  80 C3 02 98 */	lwz r6, 0x298(r3)
 /* 803CCBE0 003961A0  80 A3 02 9C */	lwz r5, 0x29c(r3)
 /* 803CCBE4 003961A4  80 03 02 A0 */	lwz r0, 0x2a0(r3)
@@ -341,9 +340,9 @@ SFTIM_GetNextItime:
 /* 803CCC04 003961C4  4C 80 00 20 */	bgelr 
 /* 803CCC08 003961C8  7C 03 03 78 */	mr r3, r0
 /* 803CCC0C 003961CC  4E 80 00 20 */	blr 
+.endfn SFTIM_GetNextItime
 
-.global SFTIM_VbIn
-SFTIM_VbIn:
+.fn SFTIM_VbIn, global
 /* 803CCC10 003961D0  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803CCC14 003961D4  7C 08 02 A6 */	mflr r0
 /* 803CCC18 003961D8  90 01 00 54 */	stw r0, 0x54(r1)
@@ -503,9 +502,9 @@ SFTIM_VbIn:
 /* 803CCE44 00396404  7C 08 03 A6 */	mtlr r0
 /* 803CCE48 00396408  38 21 00 50 */	addi r1, r1, 0x50
 /* 803CCE4C 0039640C  4E 80 00 20 */	blr 
+.endfn SFTIM_VbIn
 
-.global SFTIM_IsStagnant
-SFTIM_IsStagnant:
+.fn SFTIM_IsStagnant, global
 /* 803CCE50 00396410  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CCE54 00396414  7C 08 02 A6 */	mflr r0
 /* 803CCE58 00396418  38 80 00 06 */	li r4, 6
@@ -570,9 +569,9 @@ SFTIM_IsStagnant:
 /* 803CCF28 003964E8  7C 08 03 A6 */	mtlr r0
 /* 803CCF2C 003964EC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CCF30 003964F0  4E 80 00 20 */	blr 
+.endfn SFTIM_IsStagnant
 
-.global SFTIM_GetAudioStartSample
-SFTIM_GetAudioStartSample:
+.fn SFTIM_GetAudioStartSample, global
 /* 803CCF34 003964F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CCF38 003964F8  7C 08 02 A6 */	mflr r0
 /* 803CCF3C 003964FC  38 C0 00 00 */	li r6, 0
@@ -616,9 +615,9 @@ SFTIM_GetAudioStartSample:
 /* 803CCFCC 0039658C  7C 08 03 A6 */	mtlr r0
 /* 803CCFD0 00396590  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CCFD4 00396594  4E 80 00 20 */	blr 
+.endfn SFTIM_GetAudioStartSample
 
-.global SFTIM_GetVideoStartSample
-SFTIM_GetVideoStartSample:
+.fn SFTIM_GetVideoStartSample, global
 /* 803CCFD8 00396598  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CCFDC 0039659C  7C 08 02 A6 */	mflr r0
 /* 803CCFE0 003965A0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -652,15 +651,15 @@ SFTIM_GetVideoStartSample:
 /* 803CD040 00396600  7C 08 03 A6 */	mtlr r0
 /* 803CD044 00396604  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CD048 00396608  4E 80 00 20 */	blr 
+.endfn SFTIM_GetVideoStartSample
 
-.global SFTIM_SetStartTime
-SFTIM_SetStartTime:
+.fn SFTIM_SetStartTime, global
 /* 803CD04C 0039660C  90 83 01 44 */	stw r4, 0x144(r3)
 /* 803CD050 00396610  90 A3 01 48 */	stw r5, 0x148(r3)
 /* 803CD054 00396614  4E 80 00 20 */	blr 
+.endfn SFTIM_SetStartTime
 
-.global SFD_GetTime
-SFD_GetTime:
+.fn SFD_GetTime, global
 /* 803CD058 00396618  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CD05C 0039661C  7C 08 02 A6 */	mflr r0
 /* 803CD060 00396620  90 01 00 24 */	stw r0, 0x24(r1)
@@ -717,9 +716,9 @@ SFD_GetTime:
 /* 803CD118 003966D8  7C 08 03 A6 */	mtlr r0
 /* 803CD11C 003966DC  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CD120 003966E0  4E 80 00 20 */	blr 
+.endfn SFD_GetTime
 
-.global SFTIM_GetTimeSub
-SFTIM_GetTimeSub:
+.fn SFTIM_GetTimeSub, global
 /* 803CD124 003966E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CD128 003966E8  7C 08 02 A6 */	mflr r0
 /* 803CD12C 003966EC  38 E3 0E A8 */	addi r7, r3, 0xea8
@@ -762,18 +761,18 @@ SFTIM_GetTimeSub:
 /* 803CD1B0 00396770  7C 08 03 A6 */	mtlr r0
 /* 803CD1B4 00396774  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CD1B8 00396778  4E 80 00 20 */	blr 
+.endfn SFTIM_GetTimeSub
 
-.global SFTIM_GetTime
-SFTIM_GetTime:
+.fn SFTIM_GetTime, global
 /* 803CD1BC 0039677C  80 03 10 20 */	lwz r0, 0x1020(r3)
 /* 803CD1C0 00396780  90 04 00 00 */	stw r0, 0(r4)
 /* 803CD1C4 00396784  80 03 10 24 */	lwz r0, 0x1024(r3)
 /* 803CD1C8 00396788  38 60 00 00 */	li r3, 0
 /* 803CD1CC 0039678C  90 05 00 00 */	stw r0, 0(r5)
 /* 803CD1D0 00396790  4E 80 00 20 */	blr
+.endfn SFTIM_GetTime
 
-.global sftim_GetTimeNone
-sftim_GetTimeNone:
+.fn sftim_GetTimeNone, global
 /* 803CD1D4 00396794  80 03 00 50 */	lwz r0, 0x50(r3)
 /* 803CD1D8 00396798  2C 00 00 04 */	cmpwi r0, 4
 /* 803CD1DC 0039679C  41 82 00 34 */	beq .L_803CD210
@@ -803,9 +802,9 @@ sftim_GetTimeNone:
 /* 803CD230 003967F0  38 60 00 00 */	li r3, 0
 /* 803CD234 003967F4  90 05 00 00 */	stw r0, 0(r5)
 /* 803CD238 003967F8  4E 80 00 20 */	blr
+.endfn sftim_GetTimeNone
 
-.global sftim_GetTimeVsync
-sftim_GetTimeVsync:
+.fn sftim_GetTimeVsync, global
 /* 803CD23C 003967FC  80 03 00 50 */	lwz r0, 0x50(r3)
 /* 803CD240 00396800  2C 00 00 04 */	cmpwi r0, 4
 /* 803CD244 00396804  41 82 00 34 */	beq .L_803CD278
@@ -837,9 +836,9 @@ sftim_GetTimeVsync:
 /* 803CD2A0 00396860  80 06 01 BC */	lwz r0, 0x1bc(r6)
 /* 803CD2A4 00396864  90 05 00 00 */	stw r0, 0(r5)
 /* 803CD2A8 00396868  4E 80 00 20 */	blr
+.endfn sftim_GetTimeVsync
 
-.global sftim_GetTimeUfrm
-sftim_GetTimeUfrm:
+.fn sftim_GetTimeUfrm, global
 /* 803CD2AC 0039686C  80 03 00 50 */	lwz r0, 0x50(r3)
 /* 803CD2B0 00396870  2C 00 00 04 */	cmpwi r0, 4
 /* 803CD2B4 00396874  41 82 00 2C */	beq .L_803CD2E0
@@ -856,9 +855,9 @@ sftim_GetTimeUfrm:
 .L_803CD2E0:
 /* 803CD2E0 003968A0  38 60 00 00 */	li r3, 0
 /* 803CD2E4 003968A4  4E 80 00 20 */	blr
+.endfn sftim_GetTimeUfrm
 
-.global sftim_GetTimeUtim
-sftim_GetTimeUtim:
+.fn sftim_GetTimeUtim, global
 /* 803CD2E8 003968A8  80 03 00 50 */	lwz r0, 0x50(r3)
 /* 803CD2EC 003968AC  2C 00 00 04 */	cmpwi r0, 4
 /* 803CD2F0 003968B0  41 82 00 34 */	beq .L_803CD324
@@ -896,9 +895,9 @@ sftim_GetTimeUtim:
 /* 803CD360 00396920  7D 89 03 A6 */	mtctr r12
 /* 803CD364 00396924  4E 80 04 20 */	bctr 
 /* 803CD368 00396928  4E 80 00 20 */	blr
+.endfn sftim_GetTimeUtim
 
-.global sftim_GetTimeExtClock
-sftim_GetTimeExtClock:
+.fn sftim_GetTimeExtClock, global
 /* 803CD36C 0039692C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CD370 00396930  7C 08 02 A6 */	mflr r0
 /* 803CD374 00396934  90 01 00 24 */	stw r0, 0x24(r1)
@@ -995,9 +994,9 @@ sftim_GetTimeExtClock:
 /* 803CD4B8 00396A78  7C 08 03 A6 */	mtlr r0
 /* 803CD4BC 00396A7C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CD4C0 00396A80  4E 80 00 20 */	blr 
+.endfn sftim_GetTimeExtClock
 
-.global SFTIM_ChkRegularTime
-SFTIM_ChkRegularTime:
+.fn SFTIM_ChkRegularTime, global
 /* 803CD4C4 00396A84  80 03 00 50 */	lwz r0, 0x50(r3)
 /* 803CD4C8 00396A88  2C 00 00 04 */	cmpwi r0, 4
 /* 803CD4CC 00396A8C  41 82 00 34 */	beq .L_803CD500
@@ -1016,9 +1015,9 @@ SFTIM_ChkRegularTime:
 .L_803CD500:
 /* 803CD500 00396AC0  38 60 00 01 */	li r3, 1
 /* 803CD504 00396AC4  4E 80 00 20 */	blr 
+.endfn SFTIM_ChkRegularTime
 
-.global SFD_SetUsrIsSkipFn
-SFD_SetUsrIsSkipFn:
+.fn SFD_SetUsrIsSkipFn, global
 /* 803CD508 00396AC8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CD50C 00396ACC  7C 08 02 A6 */	mflr r0
 /* 803CD510 00396AD0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1044,9 +1043,9 @@ SFD_SetUsrIsSkipFn:
 /* 803CD558 00396B18  7C 08 03 A6 */	mtlr r0
 /* 803CD55C 00396B1C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CD560 00396B20  4E 80 00 20 */	blr 
+.endfn SFD_SetUsrIsSkipFn
 
-.global SFD_SetUsrTimeFn
-SFD_SetUsrTimeFn:
+.fn SFD_SetUsrTimeFn, global
 /* 803CD564 00396B24  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CD568 00396B28  7C 08 02 A6 */	mflr r0
 /* 803CD56C 00396B2C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1076,9 +1075,9 @@ SFD_SetUsrTimeFn:
 /* 803CD5C4 00396B84  7C 08 03 A6 */	mtlr r0
 /* 803CD5C8 00396B88  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CD5CC 00396B8C  4E 80 00 20 */	blr 
+.endfn SFD_SetUsrTimeFn
 
-.global SFD_SetExtClockFn
-SFD_SetExtClockFn:
+.fn SFD_SetExtClockFn, global
 /* 803CD5D0 00396B90  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CD5D4 00396B94  7C 08 02 A6 */	mflr r0
 /* 803CD5D8 00396B98  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1121,16 +1120,16 @@ SFD_SetExtClockFn:
 /* 803CD65C 00396C1C  7C 08 03 A6 */	mtlr r0
 /* 803CD660 00396C20  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CD664 00396C24  4E 80 00 20 */	blr 
+.endfn SFD_SetExtClockFn
 
-.global SFTIM_SetTimeFn
-SFTIM_SetTimeFn:
+.fn SFTIM_SetTimeFn, global
 /* 803CD668 00396C28  54 A0 10 3A */	slwi r0, r5, 2
 /* 803CD66C 00396C2C  7C 63 02 14 */	add r3, r3, r0
 /* 803CD670 00396C30  90 83 0D 90 */	stw r4, 0xd90(r3)
 /* 803CD674 00396C34  4E 80 00 20 */	blr 
+.endfn SFTIM_SetTimeFn
 
-.global SFTIM_Tc2Time
-SFTIM_Tc2Time:
+.fn SFTIM_Tc2Time, global
 /* 803CD678 00396C38  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CD67C 00396C3C  7C 08 02 A6 */	mflr r0
 /* 803CD680 00396C40  3C E0 80 52 */	lis r7, lbl_80520600@ha
@@ -1179,11 +1178,11 @@ SFTIM_Tc2Time:
 /* 803CD720 00396CE0  7C 08 03 A6 */	mtlr r0
 /* 803CD724 00396CE4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CD728 00396CE8  4E 80 00 20 */	blr 
+.endfn SFTIM_Tc2Time
 
 #sftim_Tc2TimeN, sftim_Tc2Time23N, sftim_Tc2Time29N, sftim_Tc2Time59N
 
-.global func_803CD72C
-func_803CD72C:
+.fn func_803CD72C, global
 /* 803CD72C 00396CEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CD730 00396CF0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 803CD734 00396CF4  3B E0 03 E8 */	li r31, 0x3e8
@@ -1215,9 +1214,9 @@ func_803CD72C:
 /* 803CD79C 00396D5C  83 C1 00 08 */	lwz r30, 8(r1)
 /* 803CD7A0 00396D60  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CD7A4 00396D64  4E 80 00 20 */	blr 
+.endfn func_803CD72C
 
-.global func_803CD7A8
-func_803CD7A8:
+.fn func_803CD7A8, global
 /* 803CD7A8 00396D68  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CD7AC 00396D6C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 803CD7B0 00396D70  3B E0 5D C0 */	li r31, 0x5dc0
@@ -1251,9 +1250,9 @@ func_803CD7A8:
 /* 803CD820 00396DE0  83 C1 00 08 */	lwz r30, 8(r1)
 /* 803CD824 00396DE4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CD828 00396DE8  4E 80 00 20 */	blr 
+.endfn func_803CD7A8
 
-.global func_803CD82C
-func_803CD82C:
+.fn func_803CD82C, global
 /* 803CD82C 00396DEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CD830 00396DF0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 803CD834 00396DF4  3B E0 75 30 */	li r31, 0x7530
@@ -1287,9 +1286,9 @@ func_803CD82C:
 /* 803CD8A4 00396E64  83 C1 00 08 */	lwz r30, 8(r1)
 /* 803CD8A8 00396E68  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CD8AC 00396E6C  4E 80 00 20 */	blr 
+.endfn func_803CD82C
 
-.global func_803CD8B0
-func_803CD8B0:
+.fn func_803CD8B0, global
 /* 803CD8B0 00396E70  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CD8B4 00396E74  3D 00 00 01 */	lis r8, 0x0000EA60@ha
 /* 803CD8B8 00396E78  93 E1 00 0C */	stw r31, 0xc(r1)
@@ -1324,9 +1323,9 @@ func_803CD8B0:
 /* 803CD92C 00396EEC  83 C1 00 08 */	lwz r30, 8(r1)
 /* 803CD930 00396EF0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CD934 00396EF4  4E 80 00 20 */	blr 
+.endfn func_803CD8B0
 
-.global sftim_Tc2Time23D
-sftim_Tc2Time23D:
+.fn sftim_Tc2Time23D, global
 /* 803CD938 00396EF8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CD93C 00396EFC  38 00 03 E8 */	li r0, 0x3e8
 /* 803CD940 00396F00  3D 20 66 66 */	lis r9, 0x66666667@ha
@@ -1372,9 +1371,9 @@ sftim_Tc2Time23D:
 /* 803CD9E0 00396FA0  83 81 00 10 */	lwz r28, 0x10(r1)
 /* 803CD9E4 00396FA4  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CD9E8 00396FA8  4E 80 00 20 */	blr 
+.endfn sftim_Tc2Time23D
 
-.global func_803CD9EC
-func_803CD9EC:
+.fn func_803CD9EC, global
 /* 803CD9EC 00396FAC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CD9F0 00396FB0  38 00 03 E8 */	li r0, 0x3e8
 /* 803CD9F4 00396FB4  3D 20 66 66 */	lis r9, 0x66666667@ha
@@ -1420,9 +1419,9 @@ func_803CD9EC:
 /* 803CDA94 00397054  83 81 00 10 */	lwz r28, 0x10(r1)
 /* 803CDA98 00397058  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CDA9C 0039705C  4E 80 00 20 */	blr 
+.endfn func_803CD9EC
 
-.global sftim_Tc2Time59D
-sftim_Tc2Time59D:
+.fn sftim_Tc2Time59D, global
 /* 803CDAA0 00397060  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CDAA4 00397064  38 00 03 E8 */	li r0, 0x3e8
 /* 803CDAA8 00397068  3D 20 66 66 */	lis r9, 0x66666667@ha
@@ -1468,9 +1467,9 @@ sftim_Tc2Time59D:
 /* 803CDB48 00397108  83 81 00 10 */	lwz r28, 0x10(r1)
 /* 803CDB4C 0039710C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CDB50 00397110  4E 80 00 20 */	blr 
+.endfn sftim_Tc2Time59D
 
-.global SFTIM_Pause
-SFTIM_Pause:
+.fn SFTIM_Pause, global
 /* 803CDB54 00397114  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CDB58 00397118  7C 08 02 A6 */	mflr r0
 /* 803CDB5C 0039711C  2C 04 00 02 */	cmpwi r4, 2
@@ -1535,9 +1534,9 @@ SFTIM_Pause:
 /* 803CDC38 003971F8  7C 08 03 A6 */	mtlr r0
 /* 803CDC3C 003971FC  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CDC40 00397200  4E 80 00 20 */	blr 
+.endfn SFTIM_Pause
 
-.global SFTIM_GetTimeOneFrmVideo
-SFTIM_GetTimeOneFrmVideo:
+.fn SFTIM_GetTimeOneFrmVideo, global
 /* 803CDC44 00397204  80 03 09 2C */	lwz r0, 0x92c(r3)
 /* 803CDC48 00397208  2C 00 00 00 */	cmpwi r0, 0
 /* 803CDC4C 0039720C  40 82 00 18 */	bne .L_803CDC64
@@ -1555,9 +1554,9 @@ SFTIM_GetTimeOneFrmVideo:
 /* 803CDC78 00397238  7C 03 00 2E */	lwzx r0, r3, r0
 /* 803CDC7C 0039723C  90 05 00 00 */	stw r0, 0(r5)
 /* 803CDC80 00397240  4E 80 00 20 */	blr 
+.endfn SFTIM_GetTimeOneFrmVideo
 
-.global SFD_GetFps
-SFD_GetFps:
+.fn SFD_GetFps, global
 /* 803CDC84 00397244  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CDC88 00397248  7C 08 02 A6 */	mflr r0
 /* 803CDC8C 0039724C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1595,9 +1594,9 @@ SFD_GetFps:
 /* 803CDD00 003972C0  7C 08 03 A6 */	mtlr r0
 /* 803CDD04 003972C4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CDD08 003972C8  4E 80 00 20 */	blr 
+.endfn SFD_GetFps
 
-.global SFTIM_IsGetFrmTime
-SFTIM_IsGetFrmTime:
+.fn SFTIM_IsGetFrmTime, global
 /* 803CDD0C 003972CC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CDD10 003972D0  7C 08 02 A6 */	mflr r0
 /* 803CDD14 003972D4  2C 04 00 00 */	cmpwi r4, 0
@@ -1623,9 +1622,9 @@ SFTIM_IsGetFrmTime:
 /* 803CDD58 00397318  7C 08 03 A6 */	mtlr r0
 /* 803CDD5C 0039731C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CDD60 00397320  4E 80 00 20 */	blr 
+.endfn SFTIM_IsGetFrmTime
 
-.global SFTIM_IsGetFrmTimeTunit
-SFTIM_IsGetFrmTimeTunit:
+.fn SFTIM_IsGetFrmTimeTunit, global
 /* 803CDD64 00397324  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CDD68 00397328  7C 08 02 A6 */	mflr r0
 /* 803CDD6C 0039732C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1644,9 +1643,9 @@ SFTIM_IsGetFrmTimeTunit:
 /* 803CDD98 00397358  7C 08 03 A6 */	mtlr r0
 /* 803CDD9C 0039735C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CDDA0 00397360  4E 80 00 20 */	blr 
+.endfn SFTIM_IsGetFrmTimeTunit
 
-.global SFTIM_IsExecTime
-SFTIM_IsExecTime:
+.fn SFTIM_IsExecTime, global
 /* 803CDDA4 00397364  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CDDA8 00397368  7C 08 02 A6 */	mflr r0
 /* 803CDDAC 0039736C  3D 00 80 61 */	lis r8, SFLIB_libwork@ha
@@ -1721,9 +1720,9 @@ SFTIM_IsExecTime:
 /* 803CDEA4 00397464  7C 08 03 A6 */	mtlr r0
 /* 803CDEA8 00397468  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CDEAC 0039746C  4E 80 00 20 */	blr 
+.endfn SFTIM_IsExecTime
 
-.global sftim_IsGrExecTime
-sftim_IsGrExecTime:
+.fn sftim_IsGrExecTime, global
 /* 803CDEB0 00397470  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803CDEB4 00397474  7C 08 02 A6 */	mflr r0
 /* 803CDEB8 00397478  3D 20 68 DC */	lis r9, 0x68DB8BAD@ha
@@ -1822,9 +1821,9 @@ sftim_IsGrExecTime:
 /* 803CE010 003975D0  7C 08 03 A6 */	mtlr r0
 /* 803CE014 003975D4  38 21 00 30 */	addi r1, r1, 0x30
 /* 803CE018 003975D8  4E 80 00 20 */	blr 
+.endfn sftim_IsGrExecTime
 
-.global SFTIM_IsVideoTerm
-SFTIM_IsVideoTerm:
+.fn SFTIM_IsVideoTerm, global
 /* 803CE01C 003975DC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CE020 003975E0  7C 08 02 A6 */	mflr r0
 /* 803CE024 003975E4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1861,23 +1860,23 @@ SFTIM_IsVideoTerm:
 /* 803CE094 00397654  7C 08 03 A6 */	mtlr r0
 /* 803CE098 00397658  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CE09C 0039765C  4E 80 00 20 */	blr 
+.endfn SFTIM_IsVideoTerm
 
-.global SFTIM_SetSpeed
-SFTIM_SetSpeed:
+.fn SFTIM_SetSpeed, global
 /* 803CE0A0 00397660  90 83 10 40 */	stw r4, 0x1040(r3)
 /* 803CE0A4 00397664  90 A3 10 44 */	stw r5, 0x1044(r3)
 /* 803CE0A8 00397668  4E 80 00 20 */	blr 
+.endfn SFTIM_SetSpeed
 
-.global SFTIM_GetSpeed
-SFTIM_GetSpeed:
+.fn SFTIM_GetSpeed, global
 /* 803CE0AC 0039766C  80 03 10 40 */	lwz r0, 0x1040(r3)
 /* 803CE0B0 00397670  90 04 00 00 */	stw r0, 0(r4)
 /* 803CE0B4 00397674  80 03 10 44 */	lwz r0, 0x1044(r3)
 /* 803CE0B8 00397678  90 05 00 00 */	stw r0, 0(r5)
 /* 803CE0BC 0039767C  4E 80 00 20 */	blr 
+.endfn SFTIM_GetSpeed
 
-.global SFD_SetCyclicFrameOutput
-SFD_SetCyclicFrameOutput:
+.fn SFD_SetCyclicFrameOutput, global
 /* 803CE0C0 00397680  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CE0C4 00397684  7C 08 02 A6 */	mflr r0
 /* 803CE0C8 00397688  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1916,9 +1915,9 @@ SFD_SetCyclicFrameOutput:
 /* 803CE140 00397700  7C 08 03 A6 */	mtlr r0
 /* 803CE144 00397704  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CE148 00397708  4E 80 00 20 */	blr 
+.endfn SFD_SetCyclicFrameOutput
 
-.global SFTIM_ExecCyclicFrameOutput
-SFTIM_ExecCyclicFrameOutput:
+.fn SFTIM_ExecCyclicFrameOutput, global
 /* 803CE14C 0039770C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CE150 00397710  7C 08 02 A6 */	mflr r0
 /* 803CE154 00397714  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1965,9 +1964,9 @@ SFTIM_ExecCyclicFrameOutput:
 /* 803CE1E4 003977A4  7C 08 03 A6 */	mtlr r0
 /* 803CE1E8 003977A8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CE1EC 003977AC  4E 80 00 20 */	blr 
+.endfn SFTIM_ExecCyclicFrameOutput
 
-.global SFD_CalcCycleFromFps
-SFD_CalcCycleFromFps:
+.fn SFD_CalcCycleFromFps, global
 /* 803CE1F0 003977B0  3C E0 80 61 */	lis r7, SFLIB_libwork@ha
 /* 803CE1F4 003977B4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CE1F8 003977B8  38 E7 A2 E4 */	addi r7, r7, SFLIB_libwork@l
@@ -2075,14 +2074,14 @@ SFD_CalcCycleFromFps:
 .L_803CE370:
 /* 803CE370 00397930  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CE374 00397934  4E 80 00 20 */	blr 
+.endfn SFD_CalcCycleFromFps
 
-.global func_803CE378
-func_803CE378:
+.fn func_803CE378, global
 /* 803CE378 00397938  90 83 13 8C */	stw r4, 0x138c(r3)
 /* 803CE37C 0039793C  4E 80 00 20 */	blr 
+.endfn func_803CE378
 
-.global func_803CE380
-func_803CE380:
+.fn func_803CE380, global
 /* 803CE380 00397940  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CE384 00397944  7C 08 02 A6 */	mflr r0
 /* 803CE388 00397948  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2115,6 +2114,7 @@ func_803CE380:
 /* 803CE3E4 003979A4  7C 08 03 A6 */	mtlr r0
 /* 803CE3E8 003979A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CE3EC 003979AC  4E 80 00 20 */	blr 
+.endfn func_803CE380
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global NANDCheckAsync
-NANDCheckAsync:
+.fn NANDCheckAsync, global
 /* 80350FA0 0031A560  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80350FA4 0031A564  7C 08 02 A6 */	mflr r0
 /* 80350FA8 0031A568  90 01 00 24 */	stw r0, 0x24(r1)
@@ -50,9 +49,10 @@ NANDCheckAsync:
 /* 80351040 0031A600  7C 08 03 A6 */	mtlr r0
 /* 80351044 0031A604  38 21 00 20 */	addi r1, r1, 0x20
 /* 80351048 0031A608  4E 80 00 20 */	blr 
+.endfn NANDCheckAsync
 
 .balign 16, 0
-nandUserAreaCallback:
+.fn nandUserAreaCallback, local
 /* 80351050 0031A610  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80351054 0031A614  7C 08 02 A6 */	mflr r0
 /* 80351058 0031A618  2C 03 00 00 */	cmpwi r3, 0
@@ -207,6 +207,7 @@ nandUserAreaCallback:
 /* 80351278 0031A838  7C 08 03 A6 */	mtlr r0
 /* 8035127C 0031A83C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80351280 0031A840  4E 80 00 20 */	blr 
+.endfn nandUserAreaCallback
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

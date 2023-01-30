@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global Assertion_Printf___Q24nw4r2dbFPCce
-Assertion_Printf___Q24nw4r2dbFPCce:
+.fn Assertion_Printf___Q24nw4r2dbFPCce, global
 /* 803D733C 003A08FC  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 803D7340 003A0900  7C 08 02 A6 */	mflr r0
 /* 803D7344 003A0904  90 01 00 84 */	stw r0, 0x84(r1)
@@ -44,9 +43,9 @@ Assertion_Printf___Q24nw4r2dbFPCce:
 /* 803D73C8 003A0988  7C 08 03 A6 */	mtlr r0
 /* 803D73CC 003A098C  38 21 00 80 */	addi r1, r1, 0x80
 /* 803D73D0 003A0990  4E 80 00 20 */	blr 
+.endfn Assertion_Printf___Q24nw4r2dbFPCce
 
-.global func_803D73D4
-func_803D73D4:
+.fn func_803D73D4, global
 /* 803D73D4 003A0994  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D73D8 003A0998  7C 08 02 A6 */	mflr r0
 /* 803D73DC 003A099C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -92,9 +91,9 @@ func_803D73D4:
 /* 803D7474 003A0A34  7C 08 03 A6 */	mtlr r0
 /* 803D7478 003A0A38  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D747C 003A0A3C  4E 80 00 20 */	blr 
+.endfn func_803D73D4
 
-.global VPanic__Q24nw4r2dbFPCciPCcP16__va_list_structb
-VPanic__Q24nw4r2dbFPCciPCcP16__va_list_structb:
+.fn VPanic__Q24nw4r2dbFPCciPCcP16__va_list_structb, global
 /* 803D7480 003A0A40  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D7484 003A0A44  7C 08 02 A6 */	mflr r0
 /* 803D7488 003A0A48  90 01 00 24 */	stw r0, 0x24(r1)
@@ -164,9 +163,9 @@ VPanic__Q24nw4r2dbFPCciPCcP16__va_list_structb:
 /* 803D7578 003A0B38  7C 08 03 A6 */	mtlr r0
 /* 803D757C 003A0B3C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D7580 003A0B40  4E 80 00 20 */	blr 
+.endfn VPanic__Q24nw4r2dbFPCciPCcP16__va_list_structb
 
-.global Panic__Q24nw4r2dbFPCciPCce
-Panic__Q24nw4r2dbFPCciPCce:
+.fn Panic__Q24nw4r2dbFPCciPCce, global
 /* 803D7584 003A0B44  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 803D7588 003A0B48  7C 08 02 A6 */	mflr r0
 /* 803D758C 003A0B4C  90 01 00 84 */	stw r0, 0x84(r1)
@@ -205,9 +204,9 @@ Panic__Q24nw4r2dbFPCciPCce:
 /* 803D760C 003A0BCC  7C 08 03 A6 */	mtlr r0
 /* 803D7610 003A0BD0  38 21 00 80 */	addi r1, r1, 0x80
 /* 803D7614 003A0BD4  4E 80 00 20 */	blr 
+.endfn Panic__Q24nw4r2dbFPCciPCce
 
-.global Warning__Q24nw4r2dbFPCciPCce
-Warning__Q24nw4r2dbFPCciPCce:
+.fn Warning__Q24nw4r2dbFPCciPCce, global
 /* 803D7618 003A0BD8  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 803D761C 003A0BDC  7C 08 02 A6 */	mflr r0
 /* 803D7620 003A0BE0  90 01 00 94 */	stw r0, 0x94(r1)
@@ -316,19 +315,19 @@ Warning__Q24nw4r2dbFPCciPCce:
 /* 803D77A8 003A0D68  7C 08 03 A6 */	mtlr r0
 /* 803D77AC 003A0D6C  38 21 00 90 */	addi r1, r1, 0x90
 /* 803D77B0 003A0D70  4E 80 00 20 */	blr
+.endfn Warning__Q24nw4r2dbFPCciPCce
 
-.global WarningAlarmFunc___Q24nw4r2dbFP7OSAlarmP9OSContext
-WarningAlarmFunc___Q24nw4r2dbFP7OSAlarmP9OSContext:
+.fn WarningAlarmFunc___Q24nw4r2dbFP7OSAlarmP9OSContext, global
 /* 803D77B4 003A0D74  80 6D BB 9C */	lwz r3, lbl_80667D1C@sda21(r13)
 /* 803D77B8 003A0D78  2C 03 00 00 */	cmpwi r3, 0
 /* 803D77BC 003A0D7C  4D 82 00 20 */	beqlr 
 /* 803D77C0 003A0D80  38 00 00 00 */	li r0, 0
 /* 803D77C4 003A0D84  98 03 00 22 */	stb r0, 0x22(r3)
 /* 803D77C8 003A0D88  4E 80 00 20 */	blr 
+.endfn WarningAlarmFunc___Q24nw4r2dbFP7OSAlarmP9OSContext
 
 #why tf is this here? this should be in lyt_textBox.s
-.global SetTextColor__Q34nw4r2ut10CharWriterFQ34nw4r2ut5ColorQ34nw4r2ut5Color
-SetTextColor__Q34nw4r2ut10CharWriterFQ34nw4r2ut5ColorQ34nw4r2ut5Color:
+.fn SetTextColor__Q34nw4r2ut10CharWriterFQ34nw4r2ut5ColorQ34nw4r2ut5Color, global
 /* 803D77CC 003A0D8C  89 64 00 00 */	lbz r11, 0(r4)
 /* 803D77D0 003A0D90  89 44 00 01 */	lbz r10, 1(r4)
 /* 803D77D4 003A0D94  89 24 00 02 */	lbz r9, 2(r4)
@@ -346,6 +345,7 @@ SetTextColor__Q34nw4r2ut10CharWriterFQ34nw4r2ut5ColorQ34nw4r2ut5Color:
 /* 803D7804 003A0DC4  98 83 00 1E */	stb r4, 0x1e(r3)
 /* 803D7808 003A0DC8  98 03 00 1F */	stb r0, 0x1f(r3)
 /* 803D780C 003A0DCC  48 05 89 7C */	b UpdateVertexColor__Q34nw4r2ut10CharWriterFv
+.endfn SetTextColor__Q34nw4r2ut10CharWriterFQ34nw4r2ut5ColorQ34nw4r2ut5Color
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

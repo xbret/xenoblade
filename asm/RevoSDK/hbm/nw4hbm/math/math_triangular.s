@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global SinFIdx__Q26nw4hbm4mathFf
-SinFIdx__Q26nw4hbm4mathFf:
+.fn SinFIdx__Q26nw4hbm4mathFf, global
 /* 80336640 002FFC00  3C 60 80 52 */	lis r3, lbl_80518AF0@ha
 /* 80336644 002FFC04  FC 40 0A 10 */	fabs f2, f1
 /* 80336648 002FFC08  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -40,10 +39,10 @@ SinFIdx__Q26nw4hbm4mathFf:
 .L_803366B8:
 /* 803366B8 002FFC78  38 21 00 10 */	addi r1, r1, 0x10
 /* 803366BC 002FFC7C  4E 80 00 20 */	blr 
+.endfn SinFIdx__Q26nw4hbm4mathFf
 
 .balign 16, 0
-.global CosFIdx__Q26nw4hbm4mathFf
-CosFIdx__Q26nw4hbm4mathFf:
+.fn CosFIdx__Q26nw4hbm4mathFf, global
 /* 803366C0 002FFC80  3C 60 80 52 */	lis r3, lbl_80518AF0@ha
 /* 803366C4 002FFC84  FC 20 0A 10 */	fabs f1, f1
 /* 803366C8 002FFC88  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -73,10 +72,10 @@ CosFIdx__Q26nw4hbm4mathFf:
 /* 80336720 002FFCE0  EC 20 08 2A */	fadds f1, f0, f1
 /* 80336724 002FFCE4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80336728 002FFCE8  4E 80 00 20 */	blr 
+.endfn CosFIdx__Q26nw4hbm4mathFf
 
 .balign 16, 0
-.global Atan2FIdx__Q26nw4hbm4mathFff
-Atan2FIdx__Q26nw4hbm4mathFff:
+.fn Atan2FIdx__Q26nw4hbm4mathFff, global
 /* 80336730 002FFCF0  3C 60 80 52 */	lis r3, lbl_80518AF0@ha
 /* 80336734 002FFCF4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80336738 002FFCF8  38 63 8A F0 */	addi r3, r3, lbl_80518AF0@l
@@ -200,6 +199,7 @@ Atan2FIdx__Q26nw4hbm4mathFff:
 .L_803368E8:
 /* 803368E8 002FFEA8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803368EC 002FFEAC  4E 80 00 20 */	blr
+.endfn Atan2FIdx__Q26nw4hbm4mathFff
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

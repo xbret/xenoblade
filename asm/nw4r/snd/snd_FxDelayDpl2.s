@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __ct__Q34nw4r3snd11FxDelayDpl2Fv
-__ct__Q34nw4r3snd11FxDelayDpl2Fv:
+.fn __ct__Q34nw4r3snd11FxDelayDpl2Fv, global
 /* 80415FB0 003DF570  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80415FB4 003DF574  7C 08 02 A6 */	mflr r0
 /* 80415FB8 003DF578  3C A0 80 57 */	lis r5, lbl_8056E0A0@ha
@@ -39,9 +38,9 @@ __ct__Q34nw4r3snd11FxDelayDpl2Fv:
 /* 80416030 003DF5F0  7C 08 03 A6 */	mtlr r0
 /* 80416034 003DF5F4  38 21 00 30 */	addi r1, r1, 0x30
 /* 80416038 003DF5F8  4E 80 00 20 */	blr 
+.endfn __ct__Q34nw4r3snd11FxDelayDpl2Fv
 
-.global GetRequiredMemSize__Q34nw4r3snd11FxDelayDpl2Fv
-GetRequiredMemSize__Q34nw4r3snd11FxDelayDpl2Fv:
+.fn GetRequiredMemSize__Q34nw4r3snd11FxDelayDpl2Fv, global
 /* 8041603C 003DF5FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80416040 003DF600  7C 08 02 A6 */	mflr r0
 /* 80416044 003DF604  90 01 00 14 */	stw r0, 0x14(r1)
@@ -64,19 +63,19 @@ GetRequiredMemSize__Q34nw4r3snd11FxDelayDpl2Fv:
 /* 80416084 003DF644  7C 08 03 A6 */	mtlr r0
 /* 80416088 003DF648  38 21 00 10 */	addi r1, r1, 0x10
 /* 8041608C 003DF64C  4E 80 00 20 */	blr 
+.endfn GetRequiredMemSize__Q34nw4r3snd11FxDelayDpl2Fv
 
-.global AssignWorkBuffer__Q34nw4r3snd11FxDelayDpl2FPvUl
-AssignWorkBuffer__Q34nw4r3snd11FxDelayDpl2FPvUl:
+.fn AssignWorkBuffer__Q34nw4r3snd11FxDelayDpl2FPvUl, global
 /* 80416090 003DF650  38 63 00 14 */	addi r3, r3, 0x14
 /* 80416094 003DF654  4B FF B5 20 */	b CreateHeap__Q44nw4r3snd6detail8AxfxImplFPvUl
+.endfn AssignWorkBuffer__Q34nw4r3snd11FxDelayDpl2FPvUl
 
-.global ReleaseWorkBuffer__Q34nw4r3snd11FxDelayDpl2Fv
-ReleaseWorkBuffer__Q34nw4r3snd11FxDelayDpl2Fv:
+.fn ReleaseWorkBuffer__Q34nw4r3snd11FxDelayDpl2Fv, global
 /* 80416098 003DF658  38 63 00 14 */	addi r3, r3, 0x14
 /* 8041609C 003DF65C  4B FF B5 80 */	b DestroyHeap__Q44nw4r3snd6detail8AxfxImplFv
+.endfn ReleaseWorkBuffer__Q34nw4r3snd11FxDelayDpl2Fv
 
-.global StartUp__Q34nw4r3snd11FxDelayDpl2Fv
-StartUp__Q34nw4r3snd11FxDelayDpl2Fv:
+.fn StartUp__Q34nw4r3snd11FxDelayDpl2Fv, global
 /* 804160A0 003DF660  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804160A4 003DF664  7C 08 02 A6 */	mflr r0
 /* 804160A8 003DF668  90 01 00 24 */	stw r0, 0x24(r1)
@@ -158,9 +157,9 @@ StartUp__Q34nw4r3snd11FxDelayDpl2Fv:
 /* 804161BC 003DF77C  7C 08 03 A6 */	mtlr r0
 /* 804161C0 003DF780  38 21 00 20 */	addi r1, r1, 0x20
 /* 804161C4 003DF784  4E 80 00 20 */	blr 
+.endfn StartUp__Q34nw4r3snd11FxDelayDpl2Fv
 
-.global Shutdown__Q34nw4r3snd11FxDelayDpl2Fv
-Shutdown__Q34nw4r3snd11FxDelayDpl2Fv:
+.fn Shutdown__Q34nw4r3snd11FxDelayDpl2Fv, global
 /* 804161C8 003DF788  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804161CC 003DF78C  7C 08 02 A6 */	mflr r0
 /* 804161D0 003DF790  90 01 00 24 */	stw r0, 0x24(r1)
@@ -195,9 +194,9 @@ Shutdown__Q34nw4r3snd11FxDelayDpl2Fv:
 /* 80416238 003DF7F8  7C 08 03 A6 */	mtlr r0
 /* 8041623C 003DF7FC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80416240 003DF800  4E 80 00 20 */	blr 
+.endfn Shutdown__Q34nw4r3snd11FxDelayDpl2Fv
 
-.global SetParam__Q34nw4r3snd11FxDelayDpl2FRCQ44nw4r3snd6detail12FxDelayParam
-SetParam__Q34nw4r3snd11FxDelayDpl2FRCQ44nw4r3snd6detail12FxDelayParam:
+.fn SetParam__Q34nw4r3snd11FxDelayDpl2FRCQ44nw4r3snd6detail12FxDelayParam, global
 /* 80416244 003DF804  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80416248 003DF808  7C 08 02 A6 */	mflr r0
 /* 8041624C 003DF80C  C0 24 00 0C */	lfs f1, 0xc(r4)
@@ -375,9 +374,9 @@ SetParam__Q34nw4r3snd11FxDelayDpl2FRCQ44nw4r3snd6detail12FxDelayParam:
 /* 80416494 003DFA54  7C 08 03 A6 */	mtlr r0
 /* 80416498 003DFA58  38 21 00 20 */	addi r1, r1, 0x20
 /* 8041649C 003DFA5C  4E 80 00 20 */	blr 
+.endfn SetParam__Q34nw4r3snd11FxDelayDpl2FRCQ44nw4r3snd6detail12FxDelayParam
 
-.global UpdateBuffer__Q34nw4r3snd11FxDelayDpl2FiPPvUlQ34nw4r3snd12SampleFormatfQ34nw4r3snd10OutputMode
-UpdateBuffer__Q34nw4r3snd11FxDelayDpl2FiPPvUlQ34nw4r3snd12SampleFormatfQ34nw4r3snd10OutputMode:
+.fn UpdateBuffer__Q34nw4r3snd11FxDelayDpl2FiPPvUlQ34nw4r3snd12SampleFormatfQ34nw4r3snd10OutputMode, global
 /* 804164A0 003DFA60  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 804164A4 003DFA64  7C 08 02 A6 */	mflr r0
 /* 804164A8 003DFA68  7C 64 1B 78 */	mr r4, r3
@@ -420,9 +419,9 @@ UpdateBuffer__Q34nw4r3snd11FxDelayDpl2FiPPvUlQ34nw4r3snd12SampleFormatfQ34nw4r3s
 /* 80416534 003DFAF4  7C 08 03 A6 */	mtlr r0
 /* 80416538 003DFAF8  38 21 00 30 */	addi r1, r1, 0x30
 /* 8041653C 003DFAFC  4E 80 00 20 */	blr 
+.endfn UpdateBuffer__Q34nw4r3snd11FxDelayDpl2FiPPvUlQ34nw4r3snd12SampleFormatfQ34nw4r3snd10OutputMode
 
-.global OnChangeOutputMode__Q34nw4r3snd11FxDelayDpl2Fv
-OnChangeOutputMode__Q34nw4r3snd11FxDelayDpl2Fv:
+.fn OnChangeOutputMode__Q34nw4r3snd11FxDelayDpl2Fv, global
 /* 80416540 003DFB00  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80416544 003DFB04  7C 08 02 A6 */	mflr r0
 /* 80416548 003DFB08  90 01 00 14 */	stw r0, 0x14(r1)
@@ -452,6 +451,7 @@ OnChangeOutputMode__Q34nw4r3snd11FxDelayDpl2Fv:
 /* 804165A4 003DFB64  7C 08 03 A6 */	mtlr r0
 /* 804165A8 003DFB68  38 21 00 10 */	addi r1, r1, 0x10
 /* 804165AC 003DFB6C  4E 80 00 20 */	blr 
+.endfn OnChangeOutputMode__Q34nw4r3snd11FxDelayDpl2Fv
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

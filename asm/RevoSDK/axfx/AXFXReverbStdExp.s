@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global AXFXReverbStdExpGetMemSize
-AXFXReverbStdExpGetMemSize:
+.fn AXFXReverbStdExpGetMemSize, global
 /* 802D7990 002A0F50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D7994 002A0F54  3C 80 80 54 */	lis r4, lbl_805432C0@ha
 /* 802D7998 002A0F58  3C C0 80 54 */	lis r6, lbl_805432E0@ha
@@ -29,10 +28,10 @@ AXFXReverbStdExpGetMemSize:
 /* 802D79E4 002A0FA4  1C 66 00 0C */	mulli r3, r6, 0xc
 /* 802D79E8 002A0FA8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D79EC 002A0FAC  4E 80 00 20 */	blr 
+.endfn AXFXReverbStdExpGetMemSize
 
 .balign 16, 0
-.global AXFXReverbStdExpInit
-AXFXReverbStdExpInit:
+.fn AXFXReverbStdExpInit, global
 /* 802D79F0 002A0FB0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D79F4 002A0FB4  7C 08 02 A6 */	mflr r0
 /* 802D79F8 002A0FB8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -132,10 +131,10 @@ AXFXReverbStdExpInit:
 /* 802D7B60 002A1120  7C 08 03 A6 */	mtlr r0
 /* 802D7B64 002A1124  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D7B68 002A1128  4E 80 00 20 */	blr 
+.endfn AXFXReverbStdExpInit
 
 .balign 16, 0
-.global AXFXReverbStdExpSettings
-AXFXReverbStdExpSettings:
+.fn AXFXReverbStdExpSettings, global
 /* 802D7B70 002A1130  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D7B74 002A1134  7C 08 02 A6 */	mflr r0
 /* 802D7B78 002A1138  90 01 00 24 */	stw r0, 0x24(r1)
@@ -190,10 +189,10 @@ AXFXReverbStdExpSettings:
 /* 802D7C34 002A11F4  7C 08 03 A6 */	mtlr r0
 /* 802D7C38 002A11F8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D7C3C 002A11FC  4E 80 00 20 */	blr 
+.endfn AXFXReverbStdExpSettings
 
 .balign 16, 0
-.global AXFXReverbStdExpSettingsUpdate
-AXFXReverbStdExpSettingsUpdate:
+.fn AXFXReverbStdExpSettingsUpdate, global
 /* 802D7C40 002A1200  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D7C44 002A1204  7C 08 02 A6 */	mflr r0
 /* 802D7C48 002A1208  90 01 00 24 */	stw r0, 0x24(r1)
@@ -241,10 +240,10 @@ AXFXReverbStdExpSettingsUpdate:
 /* 802D7CE8 002A12A8  7C 08 03 A6 */	mtlr r0
 /* 802D7CEC 002A12AC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D7CF0 002A12B0  4E 80 00 20 */	blr 
+.endfn AXFXReverbStdExpSettingsUpdate
 
 .balign 16, 0
-.global AXFXReverbStdExpShutdown
-AXFXReverbStdExpShutdown:
+.fn AXFXReverbStdExpShutdown, global
 /* 802D7D00 002A12C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D7D04 002A12C4  7C 08 02 A6 */	mflr r0
 /* 802D7D08 002A12C8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -266,10 +265,10 @@ AXFXReverbStdExpShutdown:
 /* 802D7D48 002A1308  7C 08 03 A6 */	mtlr r0
 /* 802D7D4C 002A130C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802D7D50 002A1310  4E 80 00 20 */	blr 
+.endfn AXFXReverbStdExpShutdown
 
 .balign 16, 0
-.global AXFXReverbStdExpCallback
-AXFXReverbStdExpCallback:
+.fn AXFXReverbStdExpCallback, global
 /* 802D7D60 002A1320  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 802D7D64 002A1324  7C 08 02 A6 */	mflr r0
 /* 802D7D68 002A1328  90 01 00 64 */	stw r0, 0x64(r1)
@@ -506,10 +505,10 @@ AXFXReverbStdExpCallback:
 /* 802D80C0 002A1680  7C 08 03 A6 */	mtlr r0
 /* 802D80C4 002A1684  38 21 00 60 */	addi r1, r1, 0x60
 /* 802D80C8 002A1688  4E 80 00 20 */	blr 
+.endfn AXFXReverbStdExpCallback
 
 .balign 16, 0
-.global __AllocDelayLine
-__AllocDelayLine:
+.fn __AllocDelayLine, global
 /* 802D80D0 002A1690  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802D80D4 002A1694  7C 08 02 A6 */	mflr r0
 /* 802D80D8 002A1698  90 01 00 34 */	stw r0, 0x34(r1)
@@ -600,9 +599,10 @@ __AllocDelayLine:
 /* 802D8208 002A17C8  7C 08 03 A6 */	mtlr r0
 /* 802D820C 002A17CC  38 21 00 30 */	addi r1, r1, 0x30
 /* 802D8210 002A17D0  4E 80 00 20 */	blr 
+.endfn __AllocDelayLine
 
 .balign 16, 0
-__BzeroDelayLines:
+.fn __BzeroDelayLines, local
 /* 802D8220 002A17E0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802D8224 002A17E4  7C 08 02 A6 */	mflr r0
 /* 802D8228 002A17E8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -674,9 +674,10 @@ __BzeroDelayLines:
 /* 802D8314 002A18D4  7C 08 03 A6 */	mtlr r0
 /* 802D8318 002A18D8  38 21 00 30 */	addi r1, r1, 0x30
 /* 802D831C 002A18DC  4E 80 00 20 */	blr 
+.endfn __BzeroDelayLines
 
 .balign 16, 0
-__FreeDelayLine:
+.fn __FreeDelayLine, local
 /* 802D8320 002A18E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802D8324 002A18E4  7C 08 02 A6 */	mflr r0
 /* 802D8328 002A18E8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -744,9 +745,10 @@ __FreeDelayLine:
 /* 802D8404 002A19C4  7C 08 03 A6 */	mtlr r0
 /* 802D8408 002A19C8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802D840C 002A19CC  4E 80 00 20 */	blr 
+.endfn __FreeDelayLine
 
 .balign 16, 0
-__InitParams:
+.fn __InitParams, local
 /* 802D8410 002A19D0  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 802D8414 002A19D4  7C 08 02 A6 */	mflr r0
 /* 802D8418 002A19D8  90 01 00 64 */	stw r0, 0x64(r1)
@@ -940,6 +942,7 @@ __InitParams:
 /* 802D86B0 002A1C70  7C 08 03 A6 */	mtlr r0
 /* 802D86B4 002A1C74  38 21 00 60 */	addi r1, r1, 0x60
 /* 802D86B8 002A1C78  4E 80 00 20 */	blr 
+.endfn __InitParams
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

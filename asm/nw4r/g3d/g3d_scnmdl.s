@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global GetResTexSrt__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFb
-GetResTexSrt__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFb:
+.fn GetResTexSrt__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFb, global
 /* 803F9508 003C2AC8  80 A3 00 00 */	lwz r5, 0(r3)
 /* 803F950C 003C2ACC  2C 05 00 00 */	cmpwi r5, 0
 /* 803F9510 003C2AD0  41 82 00 38 */	beq .L_803F9548
@@ -24,9 +23,9 @@ GetResTexSrt__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFb:
 .L_803F9548:
 /* 803F9548 003C2B08  38 60 00 00 */	li r3, 0
 /* 803F954C 003C2B0C  4E 80 00 20 */	blr 
+.endfn GetResTexSrt__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFb
 
-.global GetResMatChan__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFb
-GetResMatChan__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFb:
+.fn GetResMatChan__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFb, global
 /* 803F9550 003C2B10  80 A3 00 00 */	lwz r5, 0(r3)
 /* 803F9554 003C2B14  2C 05 00 00 */	cmpwi r5, 0
 /* 803F9558 003C2B18  41 82 00 38 */	beq .L_803F9590
@@ -47,9 +46,9 @@ GetResMatChan__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFb:
 .L_803F9590:
 /* 803F9590 003C2B50  38 60 00 00 */	li r3, 0
 /* 803F9594 003C2B54  4E 80 00 20 */	blr 
+.endfn GetResMatChan__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFb
 
-.global GetResGenMode__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFb
-GetResGenMode__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFb:
+.fn GetResGenMode__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFb, global
 /* 803F9598 003C2B58  80 A3 00 00 */	lwz r5, 0(r3)
 /* 803F959C 003C2B5C  2C 05 00 00 */	cmpwi r5, 0
 /* 803F95A0 003C2B60  41 82 00 38 */	beq .L_803F95D8
@@ -70,9 +69,9 @@ GetResGenMode__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFb:
 .L_803F95D8:
 /* 803F95D8 003C2B98  38 60 00 00 */	li r3, 0
 /* 803F95DC 003C2B9C  4E 80 00 20 */	blr 
+.endfn GetResGenMode__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFb
 
-.global GetResMatIndMtxAndScaleEx__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFv
-GetResMatIndMtxAndScaleEx__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFv:
+.fn GetResMatIndMtxAndScaleEx__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFv, global
 /* 803F95E0 003C2BA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F95E4 003C2BA4  7C 08 02 A6 */	mflr r0
 /* 803F95E8 003C2BA8  7C 65 1B 78 */	mr r5, r3
@@ -106,9 +105,9 @@ GetResMatIndMtxAndScaleEx__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFv:
 /* 803F9648 003C2C08  7C 08 03 A6 */	mtlr r0
 /* 803F964C 003C2C0C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F9650 003C2C10  4E 80 00 20 */	blr 
+.endfn GetResMatIndMtxAndScaleEx__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFv
 
-.global GetResMatTexCoordGenEx__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFv
-GetResMatTexCoordGenEx__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFv:
+.fn GetResMatTexCoordGenEx__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFv, global
 /* 803F9654 003C2C14  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F9658 003C2C18  7C 08 02 A6 */	mflr r0
 /* 803F965C 003C2C1C  7C 65 1B 78 */	mr r5, r3
@@ -144,9 +143,9 @@ GetResMatTexCoordGenEx__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFv:
 /* 803F96C0 003C2C80  7C 08 03 A6 */	mtlr r0
 /* 803F96C4 003C2C84  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F96C8 003C2C88  4E 80 00 20 */	blr 
+.endfn GetResMatTexCoordGenEx__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFv
 
-.global GetResTevEx__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFv
-GetResTevEx__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFv:
+.fn GetResTevEx__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFv, global
 /* 803F96CC 003C2C8C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803F96D0 003C2C90  7C 08 02 A6 */	mflr r0
 /* 803F96D4 003C2C94  7C 65 1B 78 */	mr r5, r3
@@ -176,9 +175,9 @@ GetResTevEx__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFv:
 /* 803F9728 003C2CE8  7C 08 03 A6 */	mtlr r0
 /* 803F972C 003C2CEC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803F9730 003C2CF0  4E 80 00 20 */	blr 
+.endfn GetResTevEx__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFv
 
-.global __ct__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFPQ34nw4r3g3d6ScnMdlUl
-__ct__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFPQ34nw4r3g3d6ScnMdlUl:
+.fn __ct__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFPQ34nw4r3g3d6ScnMdlUl, global
 /* 803F9734 003C2CF4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803F9738 003C2CF8  7C 08 02 A6 */	mflr r0
 /* 803F973C 003C2CFC  2C 04 00 00 */	cmpwi r4, 0
@@ -363,9 +362,9 @@ __ct__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFPQ34nw4r3g3d6ScnMdlUl:
 /* 803F99A8 003C2F68  7C 08 03 A6 */	mtlr r0
 /* 803F99AC 003C2F6C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803F99B0 003C2F70  4E 80 00 20 */	blr 
+.endfn __ct__Q44nw4r3g3d6ScnMdl15CopiedMatAccessFPQ34nw4r3g3d6ScnMdlUl
 
-.global SetVisibilityEx__Q44nw4r3g3d6ScnMdl15CopiedVisAccessFb
-SetVisibilityEx__Q44nw4r3g3d6ScnMdl15CopiedVisAccessFb:
+.fn SetVisibilityEx__Q44nw4r3g3d6ScnMdl15CopiedVisAccessFb, global
 /* 803F99B4 003C2F74  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803F99B8 003C2F78  7C 08 02 A6 */	mflr r0
 /* 803F99BC 003C2F7C  7C 67 1B 78 */	mr r7, r3
@@ -426,9 +425,9 @@ SetVisibilityEx__Q44nw4r3g3d6ScnMdl15CopiedVisAccessFb:
 /* 803F9A78 003C3038  7C 08 03 A6 */	mtlr r0
 /* 803F9A7C 003C303C  38 21 00 20 */	addi r1, r1, 0x20
 /* 803F9A80 003C3040  4E 80 00 20 */	blr 
+.endfn SetVisibilityEx__Q44nw4r3g3d6ScnMdl15CopiedVisAccessFb
 
-.global __ct__Q44nw4r3g3d6ScnMdl15CopiedVisAccessFPQ34nw4r3g3d6ScnMdlUl
-__ct__Q44nw4r3g3d6ScnMdl15CopiedVisAccessFPQ34nw4r3g3d6ScnMdlUl:
+.fn __ct__Q44nw4r3g3d6ScnMdl15CopiedVisAccessFPQ34nw4r3g3d6ScnMdlUl, global
 /* 803F9A84 003C3044  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803F9A88 003C3048  7C 08 02 A6 */	mflr r0
 /* 803F9A8C 003C304C  2C 04 00 00 */	cmpwi r4, 0
@@ -480,9 +479,9 @@ __ct__Q44nw4r3g3d6ScnMdl15CopiedVisAccessFPQ34nw4r3g3d6ScnMdlUl:
 /* 803F9B34 003C30F4  7C 08 03 A6 */	mtlr r0
 /* 803F9B38 003C30F8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803F9B3C 003C30FC  4E 80 00 20 */	blr 
+.endfn __ct__Q44nw4r3g3d6ScnMdl15CopiedVisAccessFPQ34nw4r3g3d6ScnMdlUl
 
-.global Construct__Q34nw4r3g3d6ScnMdlFP12MEMAllocatorPUlQ34nw4r3g3d6ResMdlUli
-Construct__Q34nw4r3g3d6ScnMdlFP12MEMAllocatorPUlQ34nw4r3g3d6ResMdlUli:
+.fn Construct__Q34nw4r3g3d6ScnMdlFP12MEMAllocatorPUlQ34nw4r3g3d6ResMdlUli, global
 /* 803F9B40 003C3100  94 21 FE B0 */	stwu r1, -0x150(r1)
 /* 803F9B44 003C3104  7C 08 02 A6 */	mflr r0
 /* 803F9B48 003C3108  90 01 01 54 */	stw r0, 0x154(r1)
@@ -1326,9 +1325,9 @@ Construct__Q34nw4r3g3d6ScnMdlFP12MEMAllocatorPUlQ34nw4r3g3d6ResMdlUli:
 /* 803FA6BC 003C3C7C  7C 08 03 A6 */	mtlr r0
 /* 803FA6C0 003C3C80  38 21 01 50 */	addi r1, r1, 0x150
 /* 803FA6C4 003C3C84  4E 80 00 20 */	blr 
+.endfn Construct__Q34nw4r3g3d6ScnMdlFP12MEMAllocatorPUlQ34nw4r3g3d6ResMdlUli
 
-.global ScnMdl_G3DPROC_CALC_MAT__Q34nw4r3g3d6ScnMdlFUlPv
-ScnMdl_G3DPROC_CALC_MAT__Q34nw4r3g3d6ScnMdlFUlPv:
+.fn ScnMdl_G3DPROC_CALC_MAT__Q34nw4r3g3d6ScnMdlFUlPv, global
 /* 803FA6C8 003C3C88  94 21 FD B0 */	stwu r1, -0x250(r1)
 /* 803FA6CC 003C3C8C  7C 08 02 A6 */	mflr r0
 /* 803FA6D0 003C3C90  90 01 02 54 */	stw r0, 0x254(r1)
@@ -1855,9 +1854,9 @@ ScnMdl_G3DPROC_CALC_MAT__Q34nw4r3g3d6ScnMdlFUlPv:
 /* 803FAE2C 003C43EC  7C 08 03 A6 */	mtlr r0
 /* 803FAE30 003C43F0  38 21 02 50 */	addi r1, r1, 0x250
 /* 803FAE34 003C43F4  4E 80 00 20 */	blr 
+.endfn ScnMdl_G3DPROC_CALC_MAT__Q34nw4r3g3d6ScnMdlFUlPv
 
-.global G3dProc__Q34nw4r3g3d6ScnMdlFUlUlPv
-G3dProc__Q34nw4r3g3d6ScnMdlFUlUlPv:
+.fn G3dProc__Q34nw4r3g3d6ScnMdlFUlUlPv, global
 /* 803FAE38 003C43F8  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803FAE3C 003C43FC  7C 08 02 A6 */	mflr r0
 /* 803FAE40 003C4400  90 01 00 44 */	stw r0, 0x44(r1)
@@ -2190,9 +2189,9 @@ G3dProc__Q34nw4r3g3d6ScnMdlFUlUlPv:
 /* 803FB2E0 003C48A0  7C 08 03 A6 */	mtlr r0
 /* 803FB2E4 003C48A4  38 21 00 40 */	addi r1, r1, 0x40
 /* 803FB2E8 003C48A8  4E 80 00 20 */	blr 
+.endfn G3dProc__Q34nw4r3g3d6ScnMdlFUlUlPv
 
-.global SetScnObjOption__Q34nw4r3g3d6ScnMdlFUlUl
-SetScnObjOption__Q34nw4r3g3d6ScnMdlFUlUl:
+.fn SetScnObjOption__Q34nw4r3g3d6ScnMdlFUlUl, global
 /* 803FB2EC 003C48AC  3C C0 00 03 */	lis r6, 0x00030001@ha
 /* 803FB2F0 003C48B0  38 06 00 01 */	addi r0, r6, 0x00030001@l
 /* 803FB2F4 003C48B4  7C 04 00 00 */	cmpw r4, r0
@@ -2215,9 +2214,9 @@ SetScnObjOption__Q34nw4r3g3d6ScnMdlFUlUl:
 .L_803FB32C:
 /* 803FB32C 003C48EC  38 60 00 01 */	li r3, 1
 /* 803FB330 003C48F0  4E 80 00 20 */	blr 
+.endfn SetScnObjOption__Q34nw4r3g3d6ScnMdlFUlUl
 
-.global GetScnObjOption__Q34nw4r3g3d6ScnMdlCFUlPUl
-GetScnObjOption__Q34nw4r3g3d6ScnMdlCFUlPUl:
+.fn GetScnObjOption__Q34nw4r3g3d6ScnMdlCFUlPUl, global
 /* 803FB334 003C48F4  2C 05 00 00 */	cmpwi r5, 0
 /* 803FB338 003C48F8  40 82 00 0C */	bne .L_803FB344
 /* 803FB33C 003C48FC  38 60 00 00 */	li r3, 0
@@ -2240,9 +2239,9 @@ GetScnObjOption__Q34nw4r3g3d6ScnMdlCFUlPUl:
 .L_803FB374:
 /* 803FB374 003C4934  38 60 00 01 */	li r3, 1
 /* 803FB378 003C4938  4E 80 00 20 */	blr 
+.endfn GetScnObjOption__Q34nw4r3g3d6ScnMdlCFUlPUl
 
-.global InitBuffer__Q34nw4r3g3d6ScnMdlFv
-InitBuffer__Q34nw4r3g3d6ScnMdlFv:
+.fn InitBuffer__Q34nw4r3g3d6ScnMdlFv, global
 /* 803FB37C 003C493C  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 803FB380 003C4940  7C 08 02 A6 */	mflr r0
 /* 803FB384 003C4944  90 01 00 94 */	stw r0, 0x94(r1)
@@ -2508,9 +2507,9 @@ InitBuffer__Q34nw4r3g3d6ScnMdlFv:
 /* 803FB724 003C4CE4  7C 08 03 A6 */	mtlr r0
 /* 803FB728 003C4CE8  38 21 00 90 */	addi r1, r1, 0x90
 /* 803FB72C 003C4CEC  4E 80 00 20 */	blr 
+.endfn InitBuffer__Q34nw4r3g3d6ScnMdlFv
 
-.global CleanMatBuffer__Q34nw4r3g3d6ScnMdlFUlUl
-CleanMatBuffer__Q34nw4r3g3d6ScnMdlFUlUl:
+.fn CleanMatBuffer__Q34nw4r3g3d6ScnMdlFUlUl, global
 /* 803FB730 003C4CF0  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 803FB734 003C4CF4  7C 08 02 A6 */	mflr r0
 /* 803FB738 003C4CF8  90 01 00 64 */	stw r0, 0x64(r1)
@@ -2741,9 +2740,9 @@ CleanMatBuffer__Q34nw4r3g3d6ScnMdlFUlUl:
 /* 803FBA70 003C5030  7C 08 03 A6 */	mtlr r0
 /* 803FBA74 003C5034  38 21 00 60 */	addi r1, r1, 0x60
 /* 803FBA78 003C5038  4E 80 00 20 */	blr 
+.endfn CleanMatBuffer__Q34nw4r3g3d6ScnMdlFUlUl
 
-.global SetAnmObj__Q34nw4r3g3d6ScnMdlFPQ34nw4r3g3d6AnmObjQ44nw4r3g3d12ScnMdlSimple10AnmObjType
-SetAnmObj__Q34nw4r3g3d6ScnMdlFPQ34nw4r3g3d6AnmObjQ44nw4r3g3d12ScnMdlSimple10AnmObjType:
+.fn SetAnmObj__Q34nw4r3g3d6ScnMdlFPQ34nw4r3g3d6AnmObjQ44nw4r3g3d12ScnMdlSimple10AnmObjType, global
 /* 803FBA7C 003C503C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803FBA80 003C5040  7C 08 02 A6 */	mflr r0
 /* 803FBA84 003C5044  2C 84 00 00 */	cmpwi cr1, r4, 0
@@ -2843,9 +2842,9 @@ SetAnmObj__Q34nw4r3g3d6ScnMdlFPQ34nw4r3g3d6AnmObjQ44nw4r3g3d12ScnMdlSimple10AnmO
 /* 803FBBD4 003C5194  7C 08 03 A6 */	mtlr r0
 /* 803FBBD8 003C5198  38 21 00 20 */	addi r1, r1, 0x20
 /* 803FBBDC 003C519C  4E 80 00 20 */	blr 
+.endfn SetAnmObj__Q34nw4r3g3d6ScnMdlFPQ34nw4r3g3d6AnmObjQ44nw4r3g3d12ScnMdlSimple10AnmObjType
 
-.global RemoveAnmObj__Q34nw4r3g3d6ScnMdlFPQ34nw4r3g3d6AnmObj
-RemoveAnmObj__Q34nw4r3g3d6ScnMdlFPQ34nw4r3g3d6AnmObj:
+.fn RemoveAnmObj__Q34nw4r3g3d6ScnMdlFPQ34nw4r3g3d6AnmObj, global
 /* 803FBBE0 003C51A0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803FBBE4 003C51A4  7C 08 02 A6 */	mflr r0
 /* 803FBBE8 003C51A8  2C 04 00 00 */	cmpwi r4, 0
@@ -2988,10 +2987,10 @@ RemoveAnmObj__Q34nw4r3g3d6ScnMdlFPQ34nw4r3g3d6AnmObj:
 /* 803FBDCC 003C538C  7C 08 03 A6 */	mtlr r0
 /* 803FBDD0 003C5390  38 21 00 40 */	addi r1, r1, 0x40
 /* 803FBDD4 003C5394  4E 80 00 20 */	blr
+.endfn RemoveAnmObj__Q34nw4r3g3d6ScnMdlFPQ34nw4r3g3d6AnmObj
 
 
-.global RemoveAnmObj__Q34nw4r3g3d6ScnMdlFQ44nw4r3g3d12ScnMdlSimple10AnmObjType
-RemoveAnmObj__Q34nw4r3g3d6ScnMdlFQ44nw4r3g3d12ScnMdlSimple10AnmObjType:
+.fn RemoveAnmObj__Q34nw4r3g3d6ScnMdlFQ44nw4r3g3d12ScnMdlSimple10AnmObjType, global
 /* 803FBDD8 003C5398  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803FBDDC 003C539C  7C 08 02 A6 */	mflr r0
 /* 803FBDE0 003C53A0  2C 04 00 05 */	cmpwi r4, 5
@@ -3014,10 +3013,10 @@ RemoveAnmObj__Q34nw4r3g3d6ScnMdlFQ44nw4r3g3d12ScnMdlSimple10AnmObjType:
 /* 803FBE1C 003C53DC  7C 08 03 A6 */	mtlr r0
 /* 803FBE20 003C53E0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803FBE24 003C53E4  4E 80 00 20 */	blr
+.endfn RemoveAnmObj__Q34nw4r3g3d6ScnMdlFQ44nw4r3g3d12ScnMdlSimple10AnmObjType
 
 
-.global GetAnmObj__Q34nw4r3g3d6ScnMdlFQ44nw4r3g3d12ScnMdlSimple10AnmObjType
-GetAnmObj__Q34nw4r3g3d6ScnMdlFQ44nw4r3g3d12ScnMdlSimple10AnmObjType:
+.fn GetAnmObj__Q34nw4r3g3d6ScnMdlFQ44nw4r3g3d12ScnMdlSimple10AnmObjType, global
 /* 803FBE28 003C53E8  2C 04 00 05 */	cmpwi r4, 5
 /* 803FBE2C 003C53EC  40 82 00 0C */	bne .L_803FBE38
 /* 803FBE30 003C53F0  80 63 01 38 */	lwz r3, 0x138(r3)
@@ -3025,10 +3024,10 @@ GetAnmObj__Q34nw4r3g3d6ScnMdlFQ44nw4r3g3d12ScnMdlSimple10AnmObjType:
 .L_803FBE38:
 /* 803FBE38 003C53F8  4B FF D0 5C */	b GetAnmObj__Q34nw4r3g3d12ScnMdlSimpleFQ44nw4r3g3d12ScnMdlSimple10AnmObjType
 /* 803FBE3C 003C53FC  4E 80 00 20 */	blr
+.endfn GetAnmObj__Q34nw4r3g3d6ScnMdlFQ44nw4r3g3d12ScnMdlSimple10AnmObjType
 
 
-.global GetAnmObj__Q34nw4r3g3d6ScnMdlCFQ44nw4r3g3d12ScnMdlSimple10AnmObjType
-GetAnmObj__Q34nw4r3g3d6ScnMdlCFQ44nw4r3g3d12ScnMdlSimple10AnmObjType:
+.fn GetAnmObj__Q34nw4r3g3d6ScnMdlCFQ44nw4r3g3d12ScnMdlSimple10AnmObjType, global
 /* 803FBE40 003C5400  2C 04 00 05 */	cmpwi r4, 5
 /* 803FBE44 003C5404  40 82 00 0C */	bne .L_803FBE50
 /* 803FBE48 003C5408  80 63 01 38 */	lwz r3, 0x138(r3)
@@ -3036,10 +3035,10 @@ GetAnmObj__Q34nw4r3g3d6ScnMdlCFQ44nw4r3g3d12ScnMdlSimple10AnmObjType:
 .L_803FBE50:
 /* 803FBE50 003C5410  4B FF D0 AC */	b GetAnmObj__Q34nw4r3g3d12ScnMdlSimpleCFQ44nw4r3g3d12ScnMdlSimple10AnmObjType
 /* 803FBE54 003C5414  4E 80 00 20 */	blr
+.endfn GetAnmObj__Q34nw4r3g3d6ScnMdlCFQ44nw4r3g3d12ScnMdlSimple10AnmObjType
 
 
-.global __dt__Q34nw4r3g3d6ScnMdlFv
-__dt__Q34nw4r3g3d6ScnMdlFv:
+.fn __dt__Q34nw4r3g3d6ScnMdlFv, global
 /* 803FBE58 003C5418  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803FBE5C 003C541C  7C 08 02 A6 */	mflr r0
 /* 803FBE60 003C5420  2C 03 00 00 */	cmpwi r3, 0
@@ -3068,9 +3067,9 @@ __dt__Q34nw4r3g3d6ScnMdlFv:
 /* 803FBEB4 003C5474  7C 08 03 A6 */	mtlr r0
 /* 803FBEB8 003C5478  38 21 00 10 */	addi r1, r1, 0x10
 /* 803FBEBC 003C547C  4E 80 00 20 */	blr
+.endfn __dt__Q34nw4r3g3d6ScnMdlFv
 
-.global IsDerivedFrom__Q34nw4r3g3d6ScnMdlCFQ44nw4r3g3d6G3dObj7TypeObj
-IsDerivedFrom__Q34nw4r3g3d6ScnMdlCFQ44nw4r3g3d6G3dObj7TypeObj:
+.fn IsDerivedFrom__Q34nw4r3g3d6ScnMdlCFQ44nw4r3g3d6G3dObj7TypeObj, global
 /* 803FBEC0 003C5480  3C 60 80 52 */	lis r3, lbl_805210D8@ha
 /* 803FBEC4 003C5484  80 04 00 00 */	lwz r0, 0(r4)
 /* 803FBEC8 003C5488  38 63 10 D8 */	addi r3, r3, lbl_805210D8@l
@@ -3107,9 +3106,9 @@ IsDerivedFrom__Q34nw4r3g3d6ScnMdlCFQ44nw4r3g3d6G3dObj7TypeObj:
 /* 803FBF34 003C54F4  7C 00 00 34 */	cntlzw r0, r0
 /* 803FBF38 003C54F8  54 03 D9 7E */	srwi r3, r0, 5
 /* 803FBF3C 003C54FC  4E 80 00 20 */	blr 
+.endfn IsDerivedFrom__Q34nw4r3g3d6ScnMdlCFQ44nw4r3g3d6G3dObj7TypeObj
 
-.global GetTypeName__Q34nw4r3g3d6ScnMdlCFv
-GetTypeName__Q34nw4r3g3d6ScnMdlCFv:
+.fn GetTypeName__Q34nw4r3g3d6ScnMdlCFv, global
 /* 803FBF40 003C5500  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803FBF44 003C5504  7C 08 02 A6 */	mflr r0
 /* 803FBF48 003C5508  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3122,12 +3121,13 @@ GetTypeName__Q34nw4r3g3d6ScnMdlCFv:
 /* 803FBF64 003C5524  7C 08 03 A6 */	mtlr r0
 /* 803FBF68 003C5528  38 21 00 10 */	addi r1, r1, 0x10
 /* 803FBF6C 003C552C  4E 80 00 20 */	blr 
+.endfn GetTypeName__Q34nw4r3g3d6ScnMdlCFv
 
-.global GetTypeObj__Q34nw4r3g3d6ScnMdlCFv
-GetTypeObj__Q34nw4r3g3d6ScnMdlCFv:
+.fn GetTypeObj__Q34nw4r3g3d6ScnMdlCFv, global
 /* 803FBF70 003C5530  3C 60 80 52 */	lis r3, lbl_805210D8@ha
 /* 803FBF74 003C5534  38 63 10 D8 */	addi r3, r3, lbl_805210D8@l
 /* 803FBF78 003C5538  4E 80 00 20 */	blr
+.endfn GetTypeObj__Q34nw4r3g3d6ScnMdlCFv
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

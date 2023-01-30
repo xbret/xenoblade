@@ -2,24 +2,24 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global ADXM_WaitVsync
-ADXM_WaitVsync:
+.fn ADXM_WaitVsync, global
 /* 8039AA18 00363FD8  4B FC A7 D8 */	b VIWaitForRetrace
+.endfn ADXM_WaitVsync
 
-.global ADXM_ExecMain
-ADXM_ExecMain:
+.fn ADXM_ExecMain, global
 /* 8039AA1C 00363FDC  4B FF CC 3C */	b SVM_ExecSvrMain
+.endfn ADXM_ExecMain
 
-.global ADXM_Lock
-ADXM_Lock:
+.fn ADXM_Lock, global
 /* 8039AA20 00363FE0  4B FF BF 7C */	b SVM_Lock
+.endfn ADXM_Lock
 
-.global ADXM_Unlock
-ADXM_Unlock:
+.fn ADXM_Unlock, global
 /* 8039AA24 00363FE4  4B FF BF E0 */	b SVM_Unlock
+.endfn ADXM_Unlock
 
 
-adxm_lock:
+.fn adxm_lock, local
 /* 8039AA28 00363FE8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039AA2C 00363FEC  7C 08 02 A6 */	mflr r0
 /* 8039AA30 00363FF0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -64,9 +64,9 @@ adxm_lock:
 /* 8039AAC8 00364088  7C 08 03 A6 */	mtlr r0
 /* 8039AACC 0036408C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039AAD0 00364090  4E 80 00 20 */	blr
+.endfn adxm_lock
 
-.global adxm_unlock
-adxm_unlock:
+.fn adxm_unlock, global
 /* 8039AAD4 00364094  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039AAD8 00364098  7C 08 02 A6 */	mflr r0
 /* 8039AADC 0036409C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -94,10 +94,10 @@ adxm_unlock:
 /* 8039AB30 003640F0  7C 08 03 A6 */	mtlr r0
 /* 8039AB34 003640F4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039AB38 003640F8  4E 80 00 20 */	blr
+.endfn adxm_unlock
 
 #may also be adxm_goto_usridle_border
-.global adxm_goto_mwidle_border
-adxm_goto_mwidle_border:
+.fn adxm_goto_mwidle_border, global
 /* 8039AB3C 003640FC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039AB40 00364100  7C 08 02 A6 */	mflr r0
 /* 8039AB44 00364104  90 01 00 24 */	stw r0, 0x24(r1)
@@ -149,9 +149,9 @@ adxm_goto_mwidle_border:
 /* 8039ABEC 003641AC  7C 08 03 A6 */	mtlr r0
 /* 8039ABF0 003641B0  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039ABF4 003641B4  4E 80 00 20 */	blr
+.endfn adxm_goto_mwidle_border
 
-.global adxm_safe_proc
-adxm_safe_proc:
+.fn adxm_safe_proc, global
 /* 8039ABF8 003641B8  3C 80 80 5F */	lis r4, lbl_805F7010@ha
 /* 8039ABFC 003641BC  38 84 70 10 */	addi r4, r4, lbl_805F7010@l
 /* 8039AC00 003641C0  48 00 00 10 */	b .L_8039AC10
@@ -166,9 +166,9 @@ adxm_safe_proc:
 /* 8039AC1C 003641DC  38 00 00 01 */	li r0, 1
 /* 8039AC20 003641E0  90 04 09 D4 */	stw r0, 0x9d4(r4)
 /* 8039AC24 003641E4  4E 80 00 20 */	blr
+.endfn adxm_safe_proc
 
-.global adxm_vsync_proc
-adxm_vsync_proc:
+.fn adxm_vsync_proc, global
 /* 8039AC28 003641E8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039AC2C 003641EC  7C 08 02 A6 */	mflr r0
 /* 8039AC30 003641F0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -213,9 +213,9 @@ adxm_vsync_proc:
 /* 8039ACC4 00364284  7C 08 03 A6 */	mtlr r0
 /* 8039ACC8 00364288  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039ACCC 0036428C  4E 80 00 20 */	blr
+.endfn adxm_vsync_proc
 
-.global adxm_fs_proc
-adxm_fs_proc:
+.fn adxm_fs_proc, global
 /* 8039ACD0 00364290  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039ACD4 00364294  7C 08 02 A6 */	mflr r0
 /* 8039ACD8 00364298  90 01 00 14 */	stw r0, 0x14(r1)
@@ -240,9 +240,9 @@ adxm_fs_proc:
 /* 8039AD1C 003642DC  7C 08 03 A6 */	mtlr r0
 /* 8039AD20 003642E0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039AD24 003642E4  4E 80 00 20 */	blr
+.endfn adxm_fs_proc
 
-.global adxm_mwidle_proc
-adxm_mwidle_proc:
+.fn adxm_mwidle_proc, global
 /* 8039AD28 003642E8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039AD2C 003642EC  7C 08 02 A6 */	mflr r0
 /* 8039AD30 003642F0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -301,13 +301,13 @@ adxm_mwidle_proc:
 /* 8039ADEC 003643AC  7C 08 03 A6 */	mtlr r0
 /* 8039ADF0 003643B0  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039ADF4 003643B4  4E 80 00 20 */	blr 
+.endfn adxm_mwidle_proc
 
-.global func_8039ADF8
-func_8039ADF8:
+.fn func_8039ADF8, global
 /* 8039ADF8 003643B8  4B FF C6 28 */	b SVM_SetCbErr
+.endfn func_8039ADF8
 
-.global adxm_create_base_thread
-adxm_create_base_thread:
+.fn adxm_create_base_thread, global
 /* 8039ADFC 003643BC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039AE00 003643C0  7C 08 02 A6 */	mflr r0
 /* 8039AE04 003643C4  3C 80 80 3A */	lis r4, adxm_safe_proc@ha
@@ -391,9 +391,9 @@ adxm_create_base_thread:
 /* 8039AF38 003644F8  7C 08 03 A6 */	mtlr r0
 /* 8039AF3C 003644FC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039AF40 00364500  4E 80 00 20 */	blr 
+.endfn adxm_create_base_thread
 
-.global ADXM_SetupThrd
-ADXM_SetupThrd:
+.fn ADXM_SetupThrd, global
 /* 8039AF44 00364504  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039AF48 00364508  7C 08 02 A6 */	mflr r0
 /* 8039AF4C 0036450C  3C 80 80 52 */	lis r4, lbl_8051CD10@ha
@@ -480,9 +480,9 @@ ADXM_SetupThrd:
 /* 8039B084 00364644  7C 08 03 A6 */	mtlr r0
 /* 8039B088 00364648  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039B08C 0036464C  4E 80 00 20 */	blr 
+.endfn ADXM_SetupThrd
 
-.global ADXM_ShutdownThrd
-ADXM_ShutdownThrd:
+.fn ADXM_ShutdownThrd, global
 /* 8039B090 00364650  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039B094 00364654  7C 08 02 A6 */	mflr r0
 /* 8039B098 00364658  90 01 00 14 */	stw r0, 0x14(r1)
@@ -551,9 +551,9 @@ ADXM_ShutdownThrd:
 /* 8039B17C 0036473C  7C 08 03 A6 */	mtlr r0
 /* 8039B180 00364740  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039B184 00364744  4E 80 00 20 */	blr 
+.endfn ADXM_ShutdownThrd
 
-.global ADXM_SetupFramework
-ADXM_SetupFramework:
+.fn ADXM_SetupFramework, global
 /* 8039B188 00364748  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039B18C 0036474C  7C 08 02 A6 */	mflr r0
 /* 8039B190 00364750  2C 03 00 01 */	cmpwi r3, 1
@@ -601,9 +601,9 @@ ADXM_SetupFramework:
 /* 8039B21C 003647DC  7C 08 03 A6 */	mtlr r0
 /* 8039B220 003647E0  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039B224 003647E4  4E 80 00 20 */	blr 
+.endfn ADXM_SetupFramework
 
-.global ADXM_ShutdownFramework
-ADXM_ShutdownFramework:
+.fn ADXM_ShutdownFramework, global
 /* 8039B228 003647E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039B22C 003647EC  7C 08 02 A6 */	mflr r0
 /* 8039B230 003647F0  3C 60 80 60 */	lis r3, adxm_wii_framework@ha
@@ -634,6 +634,7 @@ ADXM_ShutdownFramework:
 /* 8039B284 00364844  7C 08 03 A6 */	mtlr r0
 /* 8039B288 00364848  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039B28C 0036484C  4E 80 00 20 */	blr
+.endfn ADXM_ShutdownFramework
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

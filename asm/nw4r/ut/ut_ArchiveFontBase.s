@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __ct__Q44nw4r2ut6detail15ArchiveFontBaseFv
-__ct__Q44nw4r2ut6detail15ArchiveFontBaseFv:
+.fn __ct__Q44nw4r2ut6detail15ArchiveFontBaseFv, global
 /* 8042CC2C 003F61EC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8042CC30 003F61F0  7C 08 02 A6 */	mflr r0
 /* 8042CC34 003F61F4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -21,9 +20,9 @@ __ct__Q44nw4r2ut6detail15ArchiveFontBaseFv:
 /* 8042CC64 003F6224  7C 08 03 A6 */	mtlr r0
 /* 8042CC68 003F6228  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042CC6C 003F622C  4E 80 00 20 */	blr 
+.endfn __ct__Q44nw4r2ut6detail15ArchiveFontBaseFv
 
-.global __dt__Q44nw4r2ut6detail15ArchiveFontBaseFv
-__dt__Q44nw4r2ut6detail15ArchiveFontBaseFv:
+.fn __dt__Q44nw4r2ut6detail15ArchiveFontBaseFv, global
 /* 8042CC70 003F6230  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8042CC74 003F6234  7C 08 02 A6 */	mflr r0
 /* 8042CC78 003F6238  2C 03 00 00 */	cmpwi r3, 0
@@ -47,9 +46,9 @@ __dt__Q44nw4r2ut6detail15ArchiveFontBaseFv:
 /* 8042CCBC 003F627C  7C 08 03 A6 */	mtlr r0
 /* 8042CCC0 003F6280  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042CCC4 003F6284  4E 80 00 20 */	blr 
+.endfn __dt__Q44nw4r2ut6detail15ArchiveFontBaseFv
 
-.global GetCharWidths__Q44nw4r2ut6detail15ArchiveFontBaseCFUs
-GetCharWidths__Q44nw4r2ut6detail15ArchiveFontBaseCFUs:
+.fn GetCharWidths__Q44nw4r2ut6detail15ArchiveFontBaseCFUs, global
 /* 8042CCC8 003F6288  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8042CCCC 003F628C  7C 08 02 A6 */	mflr r0
 /* 8042CCD0 003F6290  90 01 00 14 */	stw r0, 0x14(r1)
@@ -92,9 +91,9 @@ GetCharWidths__Q44nw4r2ut6detail15ArchiveFontBaseCFUs:
 /* 8042CD5C 003F631C  7C 08 03 A6 */	mtlr r0
 /* 8042CD60 003F6320  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042CD64 003F6324  4E 80 00 20 */	blr 
+.endfn GetCharWidths__Q44nw4r2ut6detail15ArchiveFontBaseCFUs
 
-.global HasGlyph__Q44nw4r2ut6detail15ArchiveFontBaseCFUs
-HasGlyph__Q44nw4r2ut6detail15ArchiveFontBaseCFUs:
+.fn HasGlyph__Q44nw4r2ut6detail15ArchiveFontBaseCFUs, global
 /* 8042CD68 003F6328  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8042CD6C 003F632C  7C 08 02 A6 */	mflr r0
 /* 8042CD70 003F6330  90 01 00 14 */	stw r0, 0x14(r1)
@@ -137,9 +136,9 @@ HasGlyph__Q44nw4r2ut6detail15ArchiveFontBaseCFUs:
 /* 8042CDF8 003F63B8  7C 08 03 A6 */	mtlr r0
 /* 8042CDFC 003F63BC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042CE00 003F63C0  4E 80 00 20 */	blr 
+.endfn HasGlyph__Q44nw4r2ut6detail15ArchiveFontBaseCFUs
 
-.global SetResourceBuffer__Q44nw4r2ut6detail15ArchiveFontBaseFPvPQ34nw4r2ut15FontInformationPUs
-SetResourceBuffer__Q44nw4r2ut6detail15ArchiveFontBaseFPvPQ34nw4r2ut15FontInformationPUs:
+.fn SetResourceBuffer__Q44nw4r2ut6detail15ArchiveFontBaseFPvPQ34nw4r2ut15FontInformationPUs, global
 /* 8042CE04 003F63C4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8042CE08 003F63C8  7C 08 02 A6 */	mflr r0
 /* 8042CE0C 003F63CC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -155,15 +154,15 @@ SetResourceBuffer__Q44nw4r2ut6detail15ArchiveFontBaseFPvPQ34nw4r2ut15FontInforma
 /* 8042CE34 003F63F4  7C 08 03 A6 */	mtlr r0
 /* 8042CE38 003F63F8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042CE3C 003F63FC  4E 80 00 20 */	blr
+.endfn SetResourceBuffer__Q44nw4r2ut6detail15ArchiveFontBaseFPvPQ34nw4r2ut15FontInformationPUs
 
-.global RemoveResourceBuffer__Q44nw4r2ut6detail15ArchiveFontBaseFv
-RemoveResourceBuffer__Q44nw4r2ut6detail15ArchiveFontBaseFv:
+.fn RemoveResourceBuffer__Q44nw4r2ut6detail15ArchiveFontBaseFv, global
 /* 8042CE40 003F6400  38 00 00 00 */	li r0, 0
 /* 8042CE44 003F6404  90 03 00 1C */	stw r0, 0x1c(r3)
 /* 8042CE48 003F6408  4B FF F2 CC */	b RemoveResourceBuffer__Q44nw4r2ut6detail11ResFontBaseFv
+.endfn RemoveResourceBuffer__Q44nw4r2ut6detail15ArchiveFontBaseFv
 
-.global AdjustIndex__Q44nw4r2ut6detail15ArchiveFontBaseCFUs
-AdjustIndex__Q44nw4r2ut6detail15ArchiveFontBaseCFUs:
+.fn AdjustIndex__Q44nw4r2ut6detail15ArchiveFontBaseCFUs, global
 /* 8042CE4C 003F640C  80 E3 00 14 */	lwz r7, 0x14(r3)
 /* 8042CE50 003F6410  3C A0 00 01 */	lis r5, 0x0000FFFF@ha
 /* 8042CE54 003F6414  80 C3 00 1C */	lwz r6, 0x1c(r3)
@@ -180,9 +179,9 @@ AdjustIndex__Q44nw4r2ut6detail15ArchiveFontBaseCFUs:
 /* 8042CE80 003F6440  7C 00 20 50 */	subf r0, r0, r4
 /* 8042CE84 003F6444  54 03 04 3E */	clrlwi r3, r0, 0x10
 /* 8042CE88 003F6448  4E 80 00 20 */	blr 
+.endfn AdjustIndex__Q44nw4r2ut6detail15ArchiveFontBaseCFUs
 
-.global IncludeName__Q44nw4r2ut6detail15ArchiveFontBaseFPCcPCc
-IncludeName__Q44nw4r2ut6detail15ArchiveFontBaseFPCcPCc:
+.fn IncludeName__Q44nw4r2ut6detail15ArchiveFontBaseFPCcPCc, global
 /* 8042CE8C 003F644C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8042CE90 003F6450  7C 08 02 A6 */	mflr r0
 /* 8042CE94 003F6454  90 01 00 24 */	stw r0, 0x24(r1)
@@ -258,9 +257,9 @@ IncludeName__Q44nw4r2ut6detail15ArchiveFontBaseFPCcPCc:
 /* 8042CF7C 003F653C  7C 08 03 A6 */	mtlr r0
 /* 8042CF80 003F6540  38 21 00 20 */	addi r1, r1, 0x20
 /* 8042CF84 003F6544  4E 80 00 20 */	blr 
+.endfn IncludeName__Q44nw4r2ut6detail15ArchiveFontBaseFPCcPCc
 
-.global IsValidResource__Q44nw4r2ut6detail15ArchiveFontBaseFPCvUl
-IsValidResource__Q44nw4r2ut6detail15ArchiveFontBaseFPCvUl:
+.fn IsValidResource__Q44nw4r2ut6detail15ArchiveFontBaseFPCvUl, global
 /* 8042CF88 003F6548  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8042CF8C 003F654C  7C 08 02 A6 */	mflr r0
 /* 8042CF90 003F6550  3C C0 52 46 */	lis r6, 0x52464E41@ha
@@ -299,9 +298,9 @@ IsValidResource__Q44nw4r2ut6detail15ArchiveFontBaseFPCvUl:
 /* 8042D008 003F65C8  7C 08 03 A6 */	mtlr r0
 /* 8042D00C 003F65CC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042D010 003F65D0  4E 80 00 20 */	blr 
+.endfn IsValidResource__Q44nw4r2ut6detail15ArchiveFontBaseFPCvUl
 
-.global RequestData__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReaderUl
-RequestData__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReaderUl:
+.fn RequestData__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReaderUl, global
 /* 8042D014 003F65D4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8042D018 003F65D8  7C 08 02 A6 */	mflr r0
 /* 8042D01C 003F65DC  7C 89 23 78 */	mr r9, r4
@@ -328,9 +327,9 @@ RequestData__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontB
 /* 8042D06C 003F662C  7C 08 03 A6 */	mtlr r0
 /* 8042D070 003F6630  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042D074 003F6634  4E 80 00 20 */	blr 
+.endfn RequestData__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReaderUl
 
-.global ConstructOpDispatch__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
-ConstructOpDispatch__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader:
+.fn ConstructOpDispatch__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader, global
 /* 8042D078 003F6638  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8042D07C 003F663C  7C 08 02 A6 */	mflr r0
 /* 8042D080 003F6640  90 01 00 24 */	stw r0, 0x24(r1)
@@ -470,9 +469,9 @@ ConstructOpDispatch__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15Arch
 /* 8042D264 003F6824  7C 08 03 A6 */	mtlr r0
 /* 8042D268 003F6828  38 21 00 20 */	addi r1, r1, 0x20
 /* 8042D26C 003F682C  4E 80 00 20 */	blr 
+.endfn ConstructOpDispatch__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
 
-.global ConstructOpAnalyzeFileHeader__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
-ConstructOpAnalyzeFileHeader__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader:
+.fn ConstructOpAnalyzeFileHeader__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader, global
 /* 8042D270 003F6830  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8042D274 003F6834  7C 08 02 A6 */	mflr r0
 /* 8042D278 003F6838  90 01 00 24 */	stw r0, 0x24(r1)
@@ -555,9 +554,9 @@ ConstructOpAnalyzeFileHeader__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6det
 /* 8042D398 003F6958  7C 08 03 A6 */	mtlr r0
 /* 8042D39C 003F695C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8042D3A0 003F6960  4E 80 00 20 */	blr 
+.endfn ConstructOpAnalyzeFileHeader__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
 
-.global ConstructOpAnalyzeFINF__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
-ConstructOpAnalyzeFINF__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader:
+.fn ConstructOpAnalyzeFINF__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader, global
 /* 8042D3A4 003F6964  80 A3 00 14 */	lwz r5, 0x14(r3)
 /* 8042D3A8 003F6968  80 83 00 4C */	lwz r4, 0x4c(r3)
 /* 8042D3AC 003F696C  80 03 00 48 */	lwz r0, 0x48(r3)
@@ -577,9 +576,9 @@ ConstructOpAnalyzeFINF__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15A
 /* 8042D3E0 003F69A0  90 03 00 50 */	stw r0, 0x50(r3)
 /* 8042D3E4 003F69A4  38 60 00 03 */	li r3, 3
 /* 8042D3E8 003F69A8  4E 80 00 20 */	blr 
+.endfn ConstructOpAnalyzeFINF__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
 
-.global ConstructOpAnalyzeCMAP__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
-ConstructOpAnalyzeCMAP__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader:
+.fn ConstructOpAnalyzeCMAP__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader, global
 /* 8042D3EC 003F69AC  80 83 00 08 */	lwz r4, 8(r3)
 /* 8042D3F0 003F69B0  80 C3 00 4C */	lwz r6, 0x4c(r3)
 /* 8042D3F4 003F69B4  2C 04 00 00 */	cmpwi r4, 0
@@ -608,9 +607,9 @@ ConstructOpAnalyzeCMAP__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15A
 /* 8042D444 003F6A04  90 03 00 50 */	stw r0, 0x50(r3)
 /* 8042D448 003F6A08  38 60 00 03 */	li r3, 3
 /* 8042D44C 003F6A0C  4E 80 00 20 */	blr 
+.endfn ConstructOpAnalyzeCMAP__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
 
-.global ConstructOpAnalyzeCWDH__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
-ConstructOpAnalyzeCWDH__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader:
+.fn ConstructOpAnalyzeCWDH__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader, global
 /* 8042D450 003F6A10  80 83 00 04 */	lwz r4, 4(r3)
 /* 8042D454 003F6A14  80 C3 00 4C */	lwz r6, 0x4c(r3)
 /* 8042D458 003F6A18  2C 04 00 00 */	cmpwi r4, 0
@@ -639,9 +638,9 @@ ConstructOpAnalyzeCWDH__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15A
 /* 8042D4A8 003F6A68  90 03 00 50 */	stw r0, 0x50(r3)
 /* 8042D4AC 003F6A6C  38 60 00 03 */	li r3, 3
 /* 8042D4B0 003F6A70  4E 80 00 20 */	blr 
+.endfn ConstructOpAnalyzeCWDH__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
 
-.global ConstructOpAnalyzeTGLP__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
-ConstructOpAnalyzeTGLP__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader:
+.fn ConstructOpAnalyzeTGLP__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader, global
 /* 8042D4B4 003F6A74  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8042D4B8 003F6A78  7C 08 02 A6 */	mflr r0
 /* 8042D4BC 003F6A7C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -782,9 +781,9 @@ ConstructOpAnalyzeTGLP__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15A
 /* 8042D6B4 003F6C74  7C 08 03 A6 */	mtlr r0
 /* 8042D6B8 003F6C78  38 21 00 20 */	addi r1, r1, 0x20
 /* 8042D6BC 003F6C7C  4E 80 00 20 */	blr 
+.endfn ConstructOpAnalyzeTGLP__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
 
-.global ConstructOpCopy__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
-ConstructOpCopy__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader:
+.fn ConstructOpCopy__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader, global
 /* 8042D6C0 003F6C80  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8042D6C4 003F6C84  7C 08 02 A6 */	mflr r0
 /* 8042D6C8 003F6C88  90 01 00 24 */	stw r0, 0x24(r1)
@@ -852,9 +851,9 @@ ConstructOpCopy__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveF
 /* 8042D7AC 003F6D6C  7C 08 03 A6 */	mtlr r0
 /* 8042D7B0 003F6D70  38 21 00 20 */	addi r1, r1, 0x20
 /* 8042D7B4 003F6D74  4E 80 00 20 */	blr 
+.endfn ConstructOpCopy__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
 
-.global ConstructOpSkip__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
-ConstructOpSkip__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader:
+.fn ConstructOpSkip__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader, global
 /* 8042D7B8 003F6D78  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8042D7BC 003F6D7C  7C 08 02 A6 */	mflr r0
 /* 8042D7C0 003F6D80  90 01 00 14 */	stw r0, 0x14(r1)
@@ -924,16 +923,16 @@ ConstructOpSkip__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveF
 /* 8042D8A4 003F6E64  7C 08 03 A6 */	mtlr r0
 /* 8042D8A8 003F6E68  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042D8AC 003F6E6C  4E 80 00 20 */	blr 
+.endfn ConstructOpSkip__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
 
-.global ConstructOpFatalError__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
-ConstructOpFatalError__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader:
+.fn ConstructOpFatalError__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader, global
 /* 8042D8B0 003F6E70  38 00 00 0C */	li r0, 0xc
 /* 8042D8B4 003F6E74  90 03 00 0C */	stw r0, 0xc(r3)
 /* 8042D8B8 003F6E78  38 60 00 02 */	li r3, 2
 /* 8042D8BC 003F6E7C  4E 80 00 20 */	blr 
+.endfn ConstructOpFatalError__Q44nw4r2ut6detail15ArchiveFontBaseFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextPQ54nw4r2ut6detail15ArchiveFontBase18CachedStreamReader
 
-.global Init__Q54nw4r2ut6detail15ArchiveFontBase18CachedStreamReaderFv
-Init__Q54nw4r2ut6detail15ArchiveFontBase18CachedStreamReaderFv:
+.fn Init__Q54nw4r2ut6detail15ArchiveFontBase18CachedStreamReaderFv, global
 /* 8042D8C0 003F6E80  38 00 00 00 */	li r0, 0
 /* 8042D8C4 003F6E84  90 03 00 00 */	stw r0, 0(r3)
 /* 8042D8C8 003F6E88  90 03 00 04 */	stw r0, 4(r3)
@@ -943,17 +942,17 @@ Init__Q54nw4r2ut6detail15ArchiveFontBase18CachedStreamReaderFv:
 /* 8042D8D8 003F6E98  90 03 00 14 */	stw r0, 0x14(r3)
 /* 8042D8DC 003F6E9C  90 03 00 18 */	stw r0, 0x18(r3)
 /* 8042D8E0 003F6EA0  4E 80 00 20 */	blr 
+.endfn Init__Q54nw4r2ut6detail15ArchiveFontBase18CachedStreamReaderFv
 
-.global Attach__Q54nw4r2ut6detail15ArchiveFontBase18CachedStreamReaderFPCvUl
-Attach__Q54nw4r2ut6detail15ArchiveFontBase18CachedStreamReaderFPCvUl:
+.fn Attach__Q54nw4r2ut6detail15ArchiveFontBase18CachedStreamReaderFPCvUl, global
 /* 8042D8E4 003F6EA4  7C 04 2A 14 */	add r0, r4, r5
 /* 8042D8E8 003F6EA8  90 83 00 00 */	stw r4, 0(r3)
 /* 8042D8EC 003F6EAC  90 83 00 04 */	stw r4, 4(r3)
 /* 8042D8F0 003F6EB0  90 03 00 08 */	stw r0, 8(r3)
 /* 8042D8F4 003F6EB4  4E 80 00 20 */	blr 
+.endfn Attach__Q54nw4r2ut6detail15ArchiveFontBase18CachedStreamReaderFPCvUl
 
-.global GetRemain__Q54nw4r2ut6detail15ArchiveFontBase18CachedStreamReaderCFv
-GetRemain__Q54nw4r2ut6detail15ArchiveFontBase18CachedStreamReaderCFv:
+.fn GetRemain__Q54nw4r2ut6detail15ArchiveFontBase18CachedStreamReaderCFv, global
 /* 8042D8F8 003F6EB8  80 C3 00 04 */	lwz r6, 4(r3)
 /* 8042D8FC 003F6EBC  80 A3 00 08 */	lwz r5, 8(r3)
 /* 8042D900 003F6EC0  80 83 00 10 */	lwz r4, 0x10(r3)
@@ -962,9 +961,9 @@ GetRemain__Q54nw4r2ut6detail15ArchiveFontBase18CachedStreamReaderCFv:
 /* 8042D90C 003F6ECC  7C 04 00 50 */	subf r0, r4, r0
 /* 8042D910 003F6ED0  7C 63 02 14 */	add r3, r3, r0
 /* 8042D914 003F6ED4  4E 80 00 20 */	blr 
+.endfn GetRemain__Q54nw4r2ut6detail15ArchiveFontBase18CachedStreamReaderCFv
 
-.global CopyTo__Q54nw4r2ut6detail15ArchiveFontBase18CachedStreamReaderFPvUl
-CopyTo__Q54nw4r2ut6detail15ArchiveFontBase18CachedStreamReaderFPvUl:
+.fn CopyTo__Q54nw4r2ut6detail15ArchiveFontBase18CachedStreamReaderFPvUl, global
 /* 8042D918 003F6ED8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8042D91C 003F6EDC  7C 08 02 A6 */	mflr r0
 /* 8042D920 003F6EE0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1011,9 +1010,9 @@ CopyTo__Q54nw4r2ut6detail15ArchiveFontBase18CachedStreamReaderFPvUl:
 /* 8042D9BC 003F6F7C  7C 08 03 A6 */	mtlr r0
 /* 8042D9C0 003F6F80  38 21 00 20 */	addi r1, r1, 0x20
 /* 8042D9C4 003F6F84  4E 80 00 20 */	blr 
+.endfn CopyTo__Q54nw4r2ut6detail15ArchiveFontBase18CachedStreamReaderFPvUl
 
-.global RequestData__Q54nw4r2ut6detail15ArchiveFontBase18CachedStreamReaderFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextUl
-RequestData__Q54nw4r2ut6detail15ArchiveFontBase18CachedStreamReaderFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextUl:
+.fn RequestData__Q54nw4r2ut6detail15ArchiveFontBase18CachedStreamReaderFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextUl, global
 /* 8042D9C8 003F6F88  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8042D9CC 003F6F8C  7C 08 02 A6 */	mflr r0
 /* 8042D9D0 003F6F90  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1090,6 +1089,7 @@ RequestData__Q54nw4r2ut6detail15ArchiveFontBase18CachedStreamReaderFPQ54nw4r2ut6
 /* 8042DAD4 003F7094  7C 08 03 A6 */	mtlr r0
 /* 8042DAD8 003F7098  38 21 00 20 */	addi r1, r1, 0x20
 /* 8042DADC 003F709C  4E 80 00 20 */	blr 
+.endfn RequestData__Q54nw4r2ut6detail15ArchiveFontBase18CachedStreamReaderFPQ54nw4r2ut6detail15ArchiveFontBase16ConstructContextUl
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

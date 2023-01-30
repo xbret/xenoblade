@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global rfc_mx_sm_execute
-rfc_mx_sm_execute:
+.fn rfc_mx_sm_execute, global
 /* 802FED84 002C8344  88 03 00 6C */	lbz r0, 0x6c(r3)
 /* 802FED88 002C8348  28 00 00 06 */	cmplwi r0, 6
 /* 802FED8C 002C834C  4D 81 00 20 */	bgtlr 
@@ -28,9 +27,9 @@ switch_802FEDBC:
 switch_802FEDC0:
 /* 802FEDC0 002C8380  48 00 08 AC */	b rfc_mx_sm_state_disc_wait_ua
 /* 802FEDC4 002C8384  4E 80 00 20 */	blr
+.endfn rfc_mx_sm_execute
 
-.global rfc_mx_sm_state_idle
-rfc_mx_sm_state_idle:
+.fn rfc_mx_sm_state_idle, global
 /* 802FEDC8 002C8388  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 802FEDCC 002C838C  7C 08 02 A6 */	mflr r0
 /* 802FEDD0 002C8390  3C C0 80 5C */	lis r6, lbl_805C32A8@ha
@@ -176,9 +175,9 @@ switch_802FEF90:
 /* 802FEFD0 002C8590  7C 08 03 A6 */	mtlr r0
 /* 802FEFD4 002C8594  38 21 00 60 */	addi r1, r1, 0x60
 /* 802FEFD8 002C8598  4E 80 00 20 */	blr
+.endfn rfc_mx_sm_state_idle
 
-.global rfc_mx_sm_state_wait_conn_cnf
-rfc_mx_sm_state_wait_conn_cnf:
+.fn rfc_mx_sm_state_wait_conn_cnf, global
 /* 802FEFDC 002C859C  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 802FEFE0 002C85A0  7C 08 02 A6 */	mflr r0
 /* 802FEFE4 002C85A4  3C C0 80 5C */	lis r6, lbl_805C32A8@ha
@@ -300,9 +299,9 @@ rfc_mx_sm_state_wait_conn_cnf:
 /* 802FF18C 002C874C  7C 08 03 A6 */	mtlr r0
 /* 802FF190 002C8750  38 21 00 60 */	addi r1, r1, 0x60
 /* 802FF194 002C8754  4E 80 00 20 */	blr
+.endfn rfc_mx_sm_state_wait_conn_cnf
 
-.global rfc_mx_sm_state_configure
-rfc_mx_sm_state_configure:
+.fn rfc_mx_sm_state_configure, global
 /* 802FF198 002C8758  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FF19C 002C875C  7C 08 02 A6 */	mflr r0
 /* 802FF1A0 002C8760  3C C0 80 5C */	lis r6, lbl_805C32A8@ha
@@ -384,9 +383,9 @@ switch_802FF274:
 /* 802FF2B4 002C8874  7C 08 03 A6 */	mtlr r0
 /* 802FF2B8 002C8878  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FF2BC 002C887C  4E 80 00 20 */	blr
+.endfn rfc_mx_sm_state_configure
 
-.global rfc_mx_sm_sabme_wait_ua
-rfc_mx_sm_sabme_wait_ua:
+.fn rfc_mx_sm_sabme_wait_ua, global
 /* 802FF2C0 002C8880  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FF2C4 002C8884  7C 08 02 A6 */	mflr r0
 /* 802FF2C8 002C8888  3C C0 80 5C */	lis r6, lbl_805C32A8@ha
@@ -490,9 +489,9 @@ switch_802FF3E8:
 /* 802FF428 002C89E8  7C 08 03 A6 */	mtlr r0
 /* 802FF42C 002C89EC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FF430 002C89F0  4E 80 00 20 */	blr
+.endfn rfc_mx_sm_sabme_wait_ua
 
-.global rfc_mx_sm_state_wait_sabme
-rfc_mx_sm_state_wait_sabme:
+.fn rfc_mx_sm_state_wait_sabme, global
 /* 802FF434 002C89F4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FF438 002C89F8  7C 08 02 A6 */	mflr r0
 /* 802FF43C 002C89FC  3C C0 80 5C */	lis r6, lbl_805C32A8@ha
@@ -573,9 +572,9 @@ rfc_mx_sm_state_wait_sabme:
 /* 802FF548 002C8B08  7C 08 03 A6 */	mtlr r0
 /* 802FF54C 002C8B0C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FF550 002C8B10  4E 80 00 20 */	blr
+.endfn rfc_mx_sm_state_wait_sabme
 
-.global rfc_mx_sm_state_connected
-rfc_mx_sm_state_connected:
+.fn rfc_mx_sm_state_connected, global
 /* 802FF554 002C8B14  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FF558 002C8B18  7C 08 02 A6 */	mflr r0
 /* 802FF55C 002C8B1C  3C A0 80 5C */	lis r5, lbl_805C32A8@ha
@@ -653,9 +652,9 @@ switch_802FF624:
 /* 802FF660 002C8C20  7C 08 03 A6 */	mtlr r0
 /* 802FF664 002C8C24  38 21 00 10 */	addi r1, r1, 0x10
 /* 802FF668 002C8C28  4E 80 00 20 */	blr
+.endfn rfc_mx_sm_state_connected
 
-.global rfc_mx_sm_state_disc_wait_ua
-rfc_mx_sm_state_disc_wait_ua:
+.fn rfc_mx_sm_state_disc_wait_ua, global
 /* 802FF66C 002C8C2C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FF670 002C8C30  7C 08 02 A6 */	mflr r0
 /* 802FF674 002C8C34  3C C0 80 5C */	lis r6, lbl_805C32A8@ha
@@ -761,9 +760,9 @@ switch_802FF798:
 /* 802FF7D8 002C8D98  7C 08 03 A6 */	mtlr r0
 /* 802FF7DC 002C8D9C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FF7E0 002C8DA0  4E 80 00 20 */	blr 
+.endfn rfc_mx_sm_state_disc_wait_ua
 
-.global rfc_mx_conf_cnf
-rfc_mx_conf_cnf:
+.fn rfc_mx_conf_cnf, global
 /* 802FF7E4 002C8DA4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FF7E8 002C8DA8  7C 08 02 A6 */	mflr r0
 /* 802FF7EC 002C8DAC  3C A0 80 5C */	lis r5, lbl_805C32A8@ha
@@ -832,9 +831,9 @@ rfc_mx_conf_cnf:
 /* 802FF8CC 002C8E8C  7C 08 03 A6 */	mtlr r0
 /* 802FF8D0 002C8E90  38 21 00 10 */	addi r1, r1, 0x10
 /* 802FF8D4 002C8E94  4E 80 00 20 */	blr 
+.endfn rfc_mx_conf_cnf
 
-.global rfc_mx_conf_ind
-rfc_mx_conf_ind:
+.fn rfc_mx_conf_ind, global
 /* 802FF8D8 002C8E98  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FF8DC 002C8E9C  7C 08 02 A6 */	mflr r0
 /* 802FF8E0 002C8EA0  3C A0 80 5C */	lis r5, lbl_805C32A8@ha
@@ -900,6 +899,7 @@ rfc_mx_conf_ind:
 /* 802FF9BC 002C8F7C  7C 08 03 A6 */	mtlr r0
 /* 802FF9C0 002C8F80  38 21 00 10 */	addi r1, r1, 0x10
 /* 802FF9C4 002C8F84  4E 80 00 20 */	blr 
+.endfn rfc_mx_conf_ind
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

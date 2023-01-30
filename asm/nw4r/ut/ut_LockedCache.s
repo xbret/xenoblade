@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global Enable__Q34nw4r2ut2LCFv
-Enable__Q34nw4r2ut2LCFv:
+.fn Enable__Q34nw4r2ut2LCFv, global
 /* 8042BE20 003F53E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8042BE24 003F53E4  7C 08 02 A6 */	mflr r0
 /* 8042BE28 003F53E8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -29,9 +28,9 @@ Enable__Q34nw4r2ut2LCFv:
 /* 8042BE74 003F5434  7C 08 03 A6 */	mtlr r0
 /* 8042BE78 003F5438  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042BE7C 003F543C  4E 80 00 20 */	blr 
+.endfn Enable__Q34nw4r2ut2LCFv
 
-.global Disable__Q34nw4r2ut2LCFv
-Disable__Q34nw4r2ut2LCFv:
+.fn Disable__Q34nw4r2ut2LCFv, global
 /* 8042BE80 003F5440  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8042BE84 003F5444  7C 08 02 A6 */	mflr r0
 /* 8042BE88 003F5448  90 01 00 14 */	stw r0, 0x14(r1)
@@ -65,9 +64,9 @@ Disable__Q34nw4r2ut2LCFv:
 /* 8042BEEC 003F54AC  7C 08 03 A6 */	mtlr r0
 /* 8042BEF0 003F54B0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042BEF4 003F54B4  4E 80 00 20 */	blr 
+.endfn Disable__Q34nw4r2ut2LCFv
 
-.global Lock__Q34nw4r2ut2LCFv
-Lock__Q34nw4r2ut2LCFv:
+.fn Lock__Q34nw4r2ut2LCFv, global
 /* 8042BEF8 003F54B8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8042BEFC 003F54BC  7C 08 02 A6 */	mflr r0
 /* 8042BF00 003F54C0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -100,9 +99,9 @@ Lock__Q34nw4r2ut2LCFv:
 /* 8042BF5C 003F551C  7C 08 03 A6 */	mtlr r0
 /* 8042BF60 003F5520  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042BF64 003F5524  4E 80 00 20 */	blr 
+.endfn Lock__Q34nw4r2ut2LCFv
 
-.global Unlock__Q34nw4r2ut2LCFv
-Unlock__Q34nw4r2ut2LCFv:
+.fn Unlock__Q34nw4r2ut2LCFv, global
 /* 8042BF68 003F5528  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8042BF6C 003F552C  7C 08 02 A6 */	mflr r0
 /* 8042BF70 003F5530  90 01 00 14 */	stw r0, 0x14(r1)
@@ -121,28 +120,29 @@ Unlock__Q34nw4r2ut2LCFv:
 /* 8042BF9C 003F555C  7C 08 03 A6 */	mtlr r0
 /* 8042BFA0 003F5560  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042BFA4 003F5564  4E 80 00 20 */	blr 
+.endfn Unlock__Q34nw4r2ut2LCFv
 
-.global LoadBlocks__Q34nw4r2ut2LCFPvPvUl
-LoadBlocks__Q34nw4r2ut2LCFPvPvUl:
+.fn LoadBlocks__Q34nw4r2ut2LCFPvPvUl, global
 /* 8042BFA8 003F5568  4B F2 82 A8 */	b LCLoadBlocks
+.endfn LoadBlocks__Q34nw4r2ut2LCFPvPvUl
 
-.global StoreBlocks__Q34nw4r2ut2LCFPvPvUl
-StoreBlocks__Q34nw4r2ut2LCFPvPvUl:
+.fn StoreBlocks__Q34nw4r2ut2LCFPvPvUl, global
 /* 8042BFAC 003F556C  4B F2 82 D4 */	b LCStoreBlocks
+.endfn StoreBlocks__Q34nw4r2ut2LCFPvPvUl
 
-.global StoreData__Q34nw4r2ut2LCFPvPvUl
-StoreData__Q34nw4r2ut2LCFPvPvUl:
+.fn StoreData__Q34nw4r2ut2LCFPvPvUl, global
 /* 8042BFB0 003F5570  4B F2 83 00 */	b LCStoreData
+.endfn StoreData__Q34nw4r2ut2LCFPvPvUl
 
 
-.global sinit_8042BFB4
-sinit_8042BFB4:
+.fn sinit_8042BFB4, global
 /* 8042BFB4 003F5574  3C 80 80 65 */	lis r4, lbl_80657088@ha
 /* 8042BFB8 003F5578  38 00 00 00 */	li r0, 0
 /* 8042BFBC 003F557C  38 64 70 88 */	addi r3, r4, lbl_80657088@l
 /* 8042BFC0 003F5580  98 04 70 88 */	stb r0, lbl_80657088@l(r4)
 /* 8042BFC4 003F5584  38 63 00 04 */	addi r3, r3, 4
 /* 8042BFC8 003F5588  4B F2 DC 58 */	b OSInitMutex
+.endfn sinit_8042BFB4
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 

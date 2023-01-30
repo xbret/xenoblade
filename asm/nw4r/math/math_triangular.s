@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global SinFIdx__Q24nw4r4mathFf
-SinFIdx__Q24nw4r4mathFf:
+.fn SinFIdx__Q24nw4r4mathFf, global
 /* 8040AD2C 003D42EC  FC 60 0A 10 */	fabs f3, f1
 /* 8040AD30 003D42F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040AD34 003D42F4  C0 02 C2 A0 */	lfs f0, float_8066C620@sda21(r2)
@@ -34,9 +33,9 @@ SinFIdx__Q24nw4r4mathFf:
 .L_8040AD8C:
 /* 8040AD8C 003D434C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040AD90 003D4350  4E 80 00 20 */	blr 
+.endfn SinFIdx__Q24nw4r4mathFf
 
-.global CosFIdx__Q24nw4r4mathFf
-CosFIdx__Q24nw4r4mathFf:
+.fn CosFIdx__Q24nw4r4mathFf, global
 /* 8040AD94 003D4354  FC 20 0A 10 */	fabs f1, f1
 /* 8040AD98 003D4358  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040AD9C 003D435C  C0 02 C2 A0 */	lfs f0, float_8066C620@sda21(r2)
@@ -61,9 +60,9 @@ CosFIdx__Q24nw4r4mathFf:
 /* 8040ADE0 003D43A0  EC 20 08 2A */	fadds f1, f0, f1
 /* 8040ADE4 003D43A4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040ADE8 003D43A8  4E 80 00 20 */	blr 
+.endfn CosFIdx__Q24nw4r4mathFf
 
-.global SinCosFIdx__Q24nw4r4mathFPfPff
-SinCosFIdx__Q24nw4r4mathFPfPff:
+.fn SinCosFIdx__Q24nw4r4mathFPfPff, global
 /* 8040ADEC 003D43AC  FC 00 0A 10 */	fabs f0, f1
 /* 8040ADF0 003D43B0  3C A0 80 52 */	lis r5, lbl_80521110@ha
 /* 8040ADF4 003D43B4  C0 42 C2 A0 */	lfs f2, float_8066C620@sda21(r2)
@@ -94,9 +93,9 @@ SinCosFIdx__Q24nw4r4mathFPfPff:
 .L_8040AE50:
 /* 8040AE50 003D4410  F0 03 80 00 */	psq_st f0, 0(r3), 1, qr0
 /* 8040AE54 003D4414  4E 80 00 20 */	blr 
+.endfn SinCosFIdx__Q24nw4r4mathFPfPff
 
-.global Atan2FIdx__Q24nw4r4mathFff
-Atan2FIdx__Q24nw4r4mathFff:
+.fn Atan2FIdx__Q24nw4r4mathFff, global
 /* 8040AE58 003D4418  C0 02 C2 A4 */	lfs f0, float_8066C624@sda21(r2)
 /* 8040AE5C 003D441C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8040AE60 003D4420  FC 00 10 00 */	fcmpu cr0, f0, f2
@@ -214,6 +213,7 @@ Atan2FIdx__Q24nw4r4mathFff:
 .L_8040AFF8:
 /* 8040AFF8 003D45B8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8040AFFC 003D45BC  4E 80 00 20 */	blr 
+.endfn Atan2FIdx__Q24nw4r4mathFff
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global MPS_Init
-MPS_Init:
+.fn MPS_Init, global
 /* 803BCCEC 003862AC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803BCCF0 003862B0  7C 08 02 A6 */	mflr r0
 /* 803BCCF4 003862B4  3C A0 01 02 */	lis r5, 0x01020304@ha
@@ -104,9 +103,9 @@ MPS_Init:
 /* 803BCE50 00386410  7C 08 03 A6 */	mtlr r0
 /* 803BCE54 00386414  38 21 00 20 */	addi r1, r1, 0x20
 /* 803BCE58 00386418  4E 80 00 20 */	blr 
+.endfn MPS_Init
 
-.global MPS_Finish
-MPS_Finish:
+.fn MPS_Finish, global
 /* 803BCE5C 0038641C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803BCE60 00386420  7C 08 02 A6 */	mflr r0
 /* 803BCE64 00386424  90 01 00 34 */	stw r0, 0x34(r1)
@@ -163,9 +162,9 @@ MPS_Finish:
 /* 803BCF14 003864D4  7C 08 03 A6 */	mtlr r0
 /* 803BCF18 003864D8  38 21 00 30 */	addi r1, r1, 0x30
 /* 803BCF1C 003864DC  4E 80 00 20 */	blr 
+.endfn MPS_Finish
 
-.global MPSLIB_SetErr
-MPSLIB_SetErr:
+.fn MPSLIB_SetErr, global
 /* 803BCF20 003864E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803BCF24 003864E4  7C 08 02 A6 */	mflr r0
 /* 803BCF28 003864E8  2C 03 00 00 */	cmpwi r3, 0
@@ -202,9 +201,9 @@ MPSLIB_SetErr:
 /* 803BCF9C 0038655C  7C 08 03 A6 */	mtlr r0
 /* 803BCFA0 00386560  38 21 00 10 */	addi r1, r1, 0x10
 /* 803BCFA4 00386564  4E 80 00 20 */	blr 
+.endfn MPSLIB_SetErr
 
-.global MPS_GetErrInf
-MPS_GetErrInf:
+.fn MPS_GetErrInf, global
 /* 803BCFA8 00386568  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803BCFAC 0038656C  7C 08 02 A6 */	mflr r0
 /* 803BCFB0 00386570  2C 03 00 00 */	cmpwi r3, 0
@@ -257,9 +256,9 @@ MPS_GetErrInf:
 /* 803BD04C 0038660C  7C 08 03 A6 */	mtlr r0
 /* 803BD050 00386610  38 21 00 10 */	addi r1, r1, 0x10
 /* 803BD054 00386614  4E 80 00 20 */	blr 
+.endfn MPS_GetErrInf
 
-.global MPSLIB_CheckHn
-MPSLIB_CheckHn:
+.fn MPSLIB_CheckHn, global
 /* 803BD058 00386618  2C 03 00 00 */	cmpwi r3, 0
 /* 803BD05C 0038661C  40 82 00 0C */	bne .L_803BD068
 /* 803BD060 00386620  38 60 FF FF */	li r3, -1
@@ -275,9 +274,9 @@ MPSLIB_CheckHn:
 /* 803BD080 00386640  90 64 A2 98 */	stw r3, mpslib_hn_last@l(r4)
 /* 803BD084 00386644  38 60 00 00 */	li r3, 0
 /* 803BD088 00386648  4E 80 00 20 */	blr 
+.endfn MPSLIB_CheckHn
 
-.global MPS_Create
-MPS_Create:
+.fn MPS_Create, global
 /* 803BD08C 0038664C  3C 60 80 61 */	lis r3, MPSLIB_libwork@ha
 /* 803BD090 00386650  80 63 A2 94 */	lwz r3, MPSLIB_libwork@l(r3)
 /* 803BD094 00386654  80 03 00 0C */	lwz r0, 0xc(r3)
@@ -303,9 +302,9 @@ MPS_Create:
 .L_803BD0D4:
 /* 803BD0D4 00386694  48 00 00 08 */	b mpslib_InitHn
 /* 803BD0D8 00386698  4E 80 00 20 */	blr
+.endfn MPS_Create
 
-.global mpslib_InitHn
-mpslib_InitHn:
+.fn mpslib_InitHn, global
 /* 803BD0DC 0038669C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803BD0E0 003866A0  7C 08 02 A6 */	mflr r0
 /* 803BD0E4 003866A4  38 80 00 00 */	li r4, 0
@@ -383,9 +382,9 @@ mpslib_InitHn:
 /* 803BD204 003867C4  7C 08 03 A6 */	mtlr r0
 /* 803BD208 003867C8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803BD20C 003867CC  4E 80 00 20 */	blr 
+.endfn mpslib_InitHn
 
-.global MPS_Destroy
-MPS_Destroy:
+.fn MPS_Destroy, global
 /* 803BD210 003867D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803BD214 003867D4  7C 08 02 A6 */	mflr r0
 /* 803BD218 003867D8  2C 03 00 00 */	cmpwi r3, 0
@@ -430,6 +429,7 @@ MPS_Destroy:
 /* 803BD29C 0038685C  7C 08 03 A6 */	mtlr r0
 /* 803BD2A0 00386860  38 21 00 10 */	addi r1, r1, 0x10
 /* 803BD2A4 00386864  4E 80 00 20 */	blr
+.endfn MPS_Destroy
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

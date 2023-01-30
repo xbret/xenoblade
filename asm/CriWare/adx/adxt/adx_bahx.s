@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global ADXB_SetAhxInSj
-ADXB_SetAhxInSj:
+.fn ADXB_SetAhxInSj, global
 /* 80385D20 0034F2E0  80 63 00 B8 */	lwz r3, 0xb8(r3)
 /* 80385D24 0034F2E4  2C 03 00 00 */	cmpwi r3, 0
 /* 80385D28 0034F2E8  4D 82 00 20 */	beqlr 
@@ -12,9 +11,9 @@ ADXB_SetAhxInSj:
 /* 80385D34 0034F2F4  7D 89 03 A6 */	mtctr r12
 /* 80385D38 0034F2F8  4E 80 04 20 */	bctr 
 /* 80385D3C 0034F2FC  4E 80 00 20 */	blr
+.endfn ADXB_SetAhxInSj
 
-.global ADXB_SetAhxDecSmpl
-ADXB_SetAhxDecSmpl:
+.fn ADXB_SetAhxDecSmpl, global
 /* 80385D40 0034F300  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80385D44 0034F304  7C 08 02 A6 */	mflr r0
 /* 80385D48 0034F308  90 01 00 14 */	stw r0, 0x14(r1)
@@ -45,16 +44,16 @@ ADXB_SetAhxDecSmpl:
 /* 80385DA8 0034F368  7C 08 03 A6 */	mtlr r0
 /* 80385DAC 0034F36C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80385DB0 0034F370  4E 80 00 20 */	blr 
+.endfn ADXB_SetAhxDecSmpl
 
-.global ADXB_ExecOneAhx
-ADXB_ExecOneAhx:
+.fn ADXB_ExecOneAhx, global
 /* 80385DB4 0034F374  3C 80 80 5F */	lis r4, ahxexecfunc@ha
 /* 80385DB8 0034F378  81 84 89 D4 */	lwz r12, ahxexecfunc@l(r4)
 /* 80385DBC 0034F37C  7D 89 03 A6 */	mtctr r12
 /* 80385DC0 0034F380  4E 80 04 20 */	bctr
+.endfn ADXB_ExecOneAhx
 
-.global ADXB_AhxTermSupply
-ADXB_AhxTermSupply:
+.fn ADXB_AhxTermSupply, global
 /* 80385DC4 0034F384  80 63 00 B8 */	lwz r3, 0xb8(r3)
 /* 80385DC8 0034F388  2C 03 00 00 */	cmpwi r3, 0
 /* 80385DCC 0034F38C  4D 82 00 20 */	beqlr 
@@ -63,6 +62,7 @@ ADXB_AhxTermSupply:
 /* 80385DD8 0034F398  7D 89 03 A6 */	mtctr r12
 /* 80385DDC 0034F39C  4E 80 04 20 */	bctr 
 /* 80385DE0 0034F3A0  4E 80 00 20 */	blr 
+.endfn ADXB_AhxTermSupply
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

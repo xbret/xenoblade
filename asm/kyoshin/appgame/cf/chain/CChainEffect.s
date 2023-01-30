@@ -2,25 +2,26 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_802A07F4
-func_802A07F4:
+
+
+.fn func_802A07F4, global
 /* 802A07F4 00269DB4  2C 04 00 00 */	cmpwi r4, 0
 /* 802A07F8 00269DB8  41 82 00 08 */	beq .L_802A0800
 /* 802A07FC 00269DBC  38 84 3E 9C */	addi r4, r4, 0x3e9c
 .L_802A0800:
 /* 802A0800 00269DC0  4B DA 49 D8 */	b func_800451D8
+.endfn func_802A07F4
 
-.global func_802A0804
-func_802A0804:
+.fn func_802A0804, global
 /* 802A0804 00269DC4  80 84 00 00 */	lwz r4, 0(r4)
 /* 802A0808 00269DC8  2C 04 00 00 */	cmpwi r4, 0
 /* 802A080C 00269DCC  41 82 00 08 */	beq .L_802A0814
 /* 802A0810 00269DD0  38 84 3E 9C */	addi r4, r4, 0x3e9c
 .L_802A0814:
 /* 802A0814 00269DD4  4B DA 49 C4 */	b func_800451D8
+.endfn func_802A0804
 
-.global func_802A0818
-func_802A0818:
+.fn func_802A0818, global
 /* 802A0818 00269DD8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802A081C 00269DDC  7C 08 02 A6 */	mflr r0
 /* 802A0820 00269DE0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -77,9 +78,9 @@ func_802A0818:
 /* 802A08CC 00269E8C  7C 08 03 A6 */	mtlr r0
 /* 802A08D0 00269E90  38 21 00 20 */	addi r1, r1, 0x20
 /* 802A08D4 00269E94  4E 80 00 20 */	blr 
+.endfn func_802A0818
 
-.global func_802A08D8
-func_802A08D8:
+.fn func_802A08D8, global
 /* 802A08D8 00269E98  3C 80 80 54 */	lis r4, __vt__cf_CChainEffect@ha
 /* 802A08DC 00269E9C  38 00 00 00 */	li r0, 0
 /* 802A08E0 00269EA0  38 84 D0 20 */	addi r4, r4, __vt__cf_CChainEffect@l
@@ -87,16 +88,16 @@ func_802A08D8:
 /* 802A08E8 00269EA8  90 03 00 04 */	stw r0, 4(r3)
 /* 802A08EC 00269EAC  90 03 00 08 */	stw r0, 8(r3)
 /* 802A08F0 00269EB0  4E 80 00 20 */	blr 
+.endfn func_802A08D8
 
-.global func_802A08F4
-func_802A08F4:
+.fn func_802A08F4, global
 /* 802A08F4 00269EB4  38 00 00 00 */	li r0, 0
 /* 802A08F8 00269EB8  90 03 00 04 */	stw r0, 4(r3)
 /* 802A08FC 00269EBC  90 03 00 08 */	stw r0, 8(r3)
 /* 802A0900 00269EC0  4E 80 00 20 */	blr 
+.endfn func_802A08F4
 
-.global func_802A0904
-func_802A0904:
+.fn func_802A0904, global
 /* 802A0904 00269EC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A0908 00269EC8  7C 08 02 A6 */	mflr r0
 /* 802A090C 00269ECC  38 80 00 00 */	li r4, 0
@@ -116,9 +117,9 @@ func_802A0904:
 /* 802A0944 00269F04  7C 08 03 A6 */	mtlr r0
 /* 802A0948 00269F08  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A094C 00269F0C  4E 80 00 20 */	blr 
+.endfn func_802A0904
 
-.global func_802A0950
-func_802A0950:
+.fn func_802A0950, global
 /* 802A0950 00269F10  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802A0954 00269F14  7C 08 02 A6 */	mflr r0
 /* 802A0958 00269F18  90 01 00 24 */	stw r0, 0x24(r1)
@@ -214,9 +215,9 @@ func_802A0950:
 /* 802A0A94 0026A054  7C 08 03 A6 */	mtlr r0
 /* 802A0A98 0026A058  38 21 00 20 */	addi r1, r1, 0x20
 /* 802A0A9C 0026A05C  4E 80 00 20 */	blr
+.endfn func_802A0950
 
-.global func_802A0AA0
-func_802A0AA0:
+.fn func_802A0AA0, global
 /* 802A0AA0 0026A060  80 03 00 04 */	lwz r0, 4(r3)
 /* 802A0AA4 0026A064  2C 00 00 00 */	cmpwi r0, 0
 /* 802A0AA8 0026A068  4D 82 00 20 */	beqlr 
@@ -233,9 +234,9 @@ func_802A0AA0:
 /* 802A0AD4 0026A094  39 00 00 00 */	li r8, 0
 /* 802A0AD8 0026A098  4B FF FE 78 */	b func_802A0950
 /* 802A0ADC 0026A09C  4E 80 00 20 */	blr 
+.endfn func_802A0AA0
 
-.global func_802A0AE0
-func_802A0AE0:
+.fn func_802A0AE0, global
 /* 802A0AE0 0026A0A0  80 03 00 04 */	lwz r0, 4(r3)
 /* 802A0AE4 0026A0A4  7C 04 00 40 */	cmplw r4, r0
 /* 802A0AE8 0026A0A8  4C 82 00 20 */	bnelr 
@@ -243,8 +244,11 @@ func_802A0AE0:
 /* 802A0AF0 0026A0B0  90 03 00 04 */	stw r0, 4(r3)
 /* 802A0AF4 0026A0B4  90 03 00 08 */	stw r0, 8(r3)
 /* 802A0AF8 0026A0B8  4E 80 00 20 */	blr 
+.endfn func_802A0AE0
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
 
 .global cf_CChainEffect_typestr
 cf_CChainEffect_typestr:
@@ -253,6 +257,8 @@ cf_CChainEffect_typestr:
 	.4byte 0
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
 
 .global __vt__cf_CChainEffect
 __vt__cf_CChainEffect:
@@ -270,6 +276,8 @@ cf_CChainEffect_hierarchy:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+
+
 .global __RTTI__cf_CChainEffect
 __RTTI__cf_CChainEffect:
 	.4byte cf_CChainEffect_typestr
@@ -278,37 +286,56 @@ __RTTI__cf_CChainEffect:
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 
+
+
 .global float_8066B4F8
 float_8066B4F8:
 	.float 0.6 #0x3F19999A
 	.4byte 0
 
-.section extab_, "a"  # 0x800066E0 - 0x80021020
+.section extab, "a" # 0x800066E0 - 0x80021020
 
-.global lbl_8001A868
-lbl_8001A868:
+.balign 4
+
+.obj "@etb_8001A868", local
+.hidden "@etb_8001A868"
 	.4byte 0x30080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001A868"
 
-.global lbl_8001A870
-lbl_8001A870:
+.obj "@etb_8001A870", local
+.hidden "@etb_8001A870"
 	.4byte 0x08080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001A870"
 
-.global lbl_8001A878
-lbl_8001A878:
+.obj "@etb_8001A878", local
+.hidden "@etb_8001A878"
 	.4byte 0x280A0000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001A878"
 
+.section extabindex, "a" # 0x80021020 - 0x80039220
 
-.section extabindex_, "a"  # 0x80021020 - 0x80039220
+.balign 4
 
-.4byte func_802A0818
+.obj "@eti_80032648", local
+.hidden "@eti_80032648"
+	.4byte func_802A0818
 	.4byte 0x000000C0
-	.4byte lbl_8001A868
+	.4byte "@etb_8001A868"
+.endobj "@eti_80032648"
+
+.obj "@eti_80032654", local
+.hidden "@eti_80032654"
 	.4byte func_802A0904
 	.4byte 0x0000004C
-	.4byte lbl_8001A870
+	.4byte "@etb_8001A870"
+.endobj "@eti_80032654"
+
+.obj "@eti_80032660", local
+.hidden "@eti_80032660"
 	.4byte func_802A0950
 	.4byte 0x00000150
-	.4byte lbl_8001A878
+	.4byte "@etb_8001A878"
+.endobj "@eti_80032660"

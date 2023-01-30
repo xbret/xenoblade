@@ -4,17 +4,16 @@
 
 .balign 16, 0
 #__ct__Q36nw4hbm2ut19TagProcessorBase<c>Fv
-.global __ct__Q36nw4hbm2ut19TagProcessorBase_c_Fv
-__ct__Q36nw4hbm2ut19TagProcessorBase_c_Fv:
+.fn __ct__Q36nw4hbm2ut19TagProcessorBase_c_Fv, global
 /* 80339110 003026D0  3C 80 80 55 */	lis r4, lbl_8054EEB8@ha
 /* 80339114 003026D4  38 84 EE B8 */	addi r4, r4, lbl_8054EEB8@l
 /* 80339118 003026D8  90 83 00 00 */	stw r4, 0(r3)
 /* 8033911C 003026DC  4E 80 00 20 */	blr
+.endfn __ct__Q36nw4hbm2ut19TagProcessorBase_c_Fv
 
 .balign 16, 0
 #__dt__Q36nw4hbm2ut19TagProcessorBase<c>Fv
-.global __dt__Q36nw4hbm2ut19TagProcessorBase_c_Fv
-__dt__Q36nw4hbm2ut19TagProcessorBase_c_Fv:
+.fn __dt__Q36nw4hbm2ut19TagProcessorBase_c_Fv, global
 /* 80339120 003026E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80339124 003026E4  7C 08 02 A6 */	mflr r0
 /* 80339128 003026E8  2C 03 00 00 */	cmpwi r3, 0
@@ -32,10 +31,10 @@ __dt__Q36nw4hbm2ut19TagProcessorBase_c_Fv:
 /* 80339154 00302714  7C 08 03 A6 */	mtlr r0
 /* 80339158 00302718  38 21 00 10 */	addi r1, r1, 0x10
 /* 8033915C 0030271C  4E 80 00 20 */	blr 
+.endfn __dt__Q36nw4hbm2ut19TagProcessorBase_c_Fv
 
 .balign 16, 0
-.global func_80339160
-func_80339160:
+.fn func_80339160, global
 /* 80339160 00302720  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80339164 00302724  7C 08 02 A6 */	mflr r0
 /* 80339168 00302728  2C 04 00 0A */	cmpwi r4, 0xa
@@ -130,10 +129,10 @@ func_80339160:
 /* 803392B0 00302870  7C 08 03 A6 */	mtlr r0
 /* 803392B4 00302874  38 21 00 50 */	addi r1, r1, 0x50
 /* 803392B8 00302878  4E 80 00 20 */	blr 
+.endfn func_80339160
 
 .balign 16, 0
-.global func_803392C0
-func_803392C0:
+.fn func_803392C0, global
 /* 803392C0 00302880  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 803392C4 00302884  7C 08 02 A6 */	mflr r0
 /* 803392C8 00302888  90 01 00 64 */	stw r0, 0x64(r1)
@@ -282,9 +281,10 @@ func_803392C0:
 /* 803394E8 00302AA8  7C 08 03 A6 */	mtlr r0
 /* 803394EC 00302AAC  38 21 00 60 */	addi r1, r1, 0x60
 /* 803394F0 00302AB0  4E 80 00 20 */	blr
+.endfn func_803392C0
 
 .balign 16, 0
-func_80339500:
+.fn func_80339500, local
 /* 80339500 00302AC0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80339504 00302AC4  7C 08 02 A6 */	mflr r0
 /* 80339508 00302AC8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -313,10 +313,10 @@ func_80339500:
 /* 80339564 00302B24  7C 08 03 A6 */	mtlr r0
 /* 80339568 00302B28  38 21 00 30 */	addi r1, r1, 0x30
 /* 8033956C 00302B2C  4E 80 00 20 */	blr
+.endfn func_80339500
 
 .balign 16, 0
-.global func_80339570
-func_80339570:
+.fn func_80339570, global
 /* 80339570 00302B30  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80339574 00302B34  7C 08 02 A6 */	mflr r0
 /* 80339578 00302B38  90 01 00 44 */	stw r0, 0x44(r1)
@@ -382,19 +382,19 @@ func_80339570:
 /* 8033965C 00302C1C  7C 08 03 A6 */	mtlr r0
 /* 80339660 00302C20  38 21 00 40 */	addi r1, r1, 0x40
 /* 80339664 00302C24  4E 80 00 20 */	blr 
+.endfn func_80339570
 
 .balign 16, 0
 #__ct__Q36nw4hbm2ut19TagProcessorBase<w>Fv
-.global __ct__Q36nw4hbm2ut19TagProcessorBase_w_Fv
-__ct__Q36nw4hbm2ut19TagProcessorBase_w_Fv:
+.fn __ct__Q36nw4hbm2ut19TagProcessorBase_w_Fv, global
 /* 80339670 00302C30  3C 80 80 55 */	lis r4, __vt__8054EE70@ha
 /* 80339674 00302C34  38 84 EE 70 */	addi r4, r4, __vt__8054EE70@l
 /* 80339678 00302C38  90 83 00 00 */	stw r4, 0(r3)
 /* 8033967C 00302C3C  4E 80 00 20 */	blr
+.endfn __ct__Q36nw4hbm2ut19TagProcessorBase_w_Fv
 
 .balign 16, 0
-.global func_80339680
-func_80339680:
+.fn func_80339680, global
 /* 80339680 00302C40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80339684 00302C44  7C 08 02 A6 */	mflr r0
 /* 80339688 00302C48  2C 03 00 00 */	cmpwi r3, 0
@@ -412,10 +412,10 @@ func_80339680:
 /* 803396B4 00302C74  7C 08 03 A6 */	mtlr r0
 /* 803396B8 00302C78  38 21 00 10 */	addi r1, r1, 0x10
 /* 803396BC 00302C7C  4E 80 00 20 */	blr 
+.endfn func_80339680
 
 .balign 16, 0
-.global func_803396C0
-func_803396C0:
+.fn func_803396C0, global
 /* 803396C0 00302C80  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803396C4 00302C84  7C 08 02 A6 */	mflr r0
 /* 803396C8 00302C88  2C 04 00 0A */	cmpwi r4, 0xa
@@ -510,10 +510,10 @@ func_803396C0:
 /* 80339810 00302DD0  7C 08 03 A6 */	mtlr r0
 /* 80339814 00302DD4  38 21 00 50 */	addi r1, r1, 0x50
 /* 80339818 00302DD8  4E 80 00 20 */	blr 
+.endfn func_803396C0
 
 .balign 16, 0
-.global func_80339820
-func_80339820:
+.fn func_80339820, global
 /* 80339820 00302DE0  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80339824 00302DE4  7C 08 02 A6 */	mflr r0
 /* 80339828 00302DE8  90 01 00 64 */	stw r0, 0x64(r1)
@@ -662,9 +662,10 @@ func_80339820:
 /* 80339A48 00303008  7C 08 03 A6 */	mtlr r0
 /* 80339A4C 0030300C  38 21 00 60 */	addi r1, r1, 0x60
 /* 80339A50 00303010  4E 80 00 20 */	blr 
+.endfn func_80339820
 
 .balign 16, 0
-func_80339A60:
+.fn func_80339A60, local
 /* 80339A60 00303024  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80339A64 00303024  7C 08 02 A6 */	mflr r0
 /* 80339A68 00303028  90 01 00 34 */	stw r0, 0x34(r1)
@@ -693,10 +694,10 @@ func_80339A60:
 /* 80339AC4 00303084  7C 08 03 A6 */	mtlr r0
 /* 80339AC8 00303088  38 21 00 30 */	addi r1, r1, 0x30
 /* 80339ACC 0030308C  4E 80 00 20 */	blr
+.endfn func_80339A60
 
 .balign 16, 0
-.global func_80339AD0
-func_80339AD0:
+.fn func_80339AD0, global
 /* 80339AD0 00303090  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80339AD4 00303094  7C 08 02 A6 */	mflr r0
 /* 80339AD8 00303098  90 01 00 44 */	stw r0, 0x44(r1)
@@ -762,6 +763,7 @@ func_80339AD0:
 /* 80339BBC 0030317C  7C 08 03 A6 */	mtlr r0
 /* 80339BC0 00303180  38 21 00 40 */	addi r1, r1, 0x40
 /* 80339BC4 00303184  4E 80 00 20 */	blr
+.endfn func_80339AD0
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

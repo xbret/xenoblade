@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global detail_AttachSoundAsTempHandle__Q34nw4r3snd11SoundHandleFPQ44nw4r3snd6detail10BasicSound
-detail_AttachSoundAsTempHandle__Q34nw4r3snd11SoundHandleFPQ44nw4r3snd6detail10BasicSound:
+.fn detail_AttachSoundAsTempHandle__Q34nw4r3snd11SoundHandleFPQ44nw4r3snd6detail10BasicSound, global
 /* 80420330 003E98F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80420334 003E98F4  7C 08 02 A6 */	mflr r0
 /* 80420338 003E98F8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -24,9 +23,9 @@ detail_AttachSoundAsTempHandle__Q34nw4r3snd11SoundHandleFPQ44nw4r3snd6detail10Ba
 /* 80420370 003E9930  7C 08 03 A6 */	mtlr r0
 /* 80420374 003E9934  38 21 00 10 */	addi r1, r1, 0x10
 /* 80420378 003E9938  4E 80 00 20 */	blr 
+.endfn detail_AttachSoundAsTempHandle__Q34nw4r3snd11SoundHandleFPQ44nw4r3snd6detail10BasicSound
 
-.global detail_AttachSound__Q34nw4r3snd11SoundHandleFPQ44nw4r3snd6detail10BasicSound
-detail_AttachSound__Q34nw4r3snd11SoundHandleFPQ44nw4r3snd6detail10BasicSound:
+.fn detail_AttachSound__Q34nw4r3snd11SoundHandleFPQ44nw4r3snd6detail10BasicSound, global
 /* 8042037C 003E993C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80420380 003E9940  7C 08 02 A6 */	mflr r0
 /* 80420384 003E9944  90 01 00 14 */	stw r0, 0x14(r1)
@@ -47,6 +46,7 @@ detail_AttachSound__Q34nw4r3snd11SoundHandleFPQ44nw4r3snd6detail10BasicSound:
 /* 804203BC 003E997C  7C 08 03 A6 */	mtlr r0
 /* 804203C0 003E9980  38 21 00 10 */	addi r1, r1, 0x10
 /* 804203C4 003E9984  4E 80 00 20 */	blr 
+.endfn detail_AttachSound__Q34nw4r3snd11SoundHandleFPQ44nw4r3snd6detail10BasicSound
 
 .global DetachSound__Q34nw4r3snd11SoundHandleFv
 DetachSound__Q34nw4r3snd11SoundHandleFv:

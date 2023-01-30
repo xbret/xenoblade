@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global TRKSuppAccessFile
-TRKSuppAccessFile:
+.fn TRKSuppAccessFile, global
 /* 802CCAA0 00296060  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 802CCAA4 00296064  7C 08 02 A6 */	mflr r0
 /* 802CCAA8 00296068  2C 04 00 00 */	cmpwi r4, 0
@@ -144,9 +143,9 @@ TRKSuppAccessFile:
 /* 802CCC88 00296248  7C 08 03 A6 */	mtlr r0
 /* 802CCC8C 0029624C  38 21 00 90 */	addi r1, r1, 0x90
 /* 802CCC90 00296250  4E 80 00 20 */	blr 
+.endfn TRKSuppAccessFile
 
-.global TRKRequestSend
-TRKRequestSend:
+.fn TRKRequestSend, global
 /* 802CCC94 00296254  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CCC98 00296258  7C 08 02 A6 */	mflr r0
 /* 802CCC9C 0029625C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -230,9 +229,9 @@ TRKRequestSend:
 /* 802CCDB0 00296370  7C 08 03 A6 */	mtlr r0
 /* 802CCDB4 00296374  38 21 00 20 */	addi r1, r1, 0x20
 /* 802CCDB8 00296378  4E 80 00 20 */	blr 
+.endfn TRKRequestSend
 
-.global HandleOpenFileSupportRequest
-HandleOpenFileSupportRequest:
+.fn HandleOpenFileSupportRequest, global
 /* 802CCDBC 0029637C  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 802CCDC0 00296380  7C 08 02 A6 */	mflr r0
 /* 802CCDC4 00296384  90 01 00 74 */	stw r0, 0x74(r1)
@@ -306,9 +305,9 @@ HandleOpenFileSupportRequest:
 /* 802CCEC8 00296488  7C 08 03 A6 */	mtlr r0
 /* 802CCECC 0029648C  38 21 00 70 */	addi r1, r1, 0x70
 /* 802CCED0 00296490  4E 80 00 20 */	blr 
+.endfn HandleOpenFileSupportRequest
 
-.global HandleCloseFileSupportRequest
-HandleCloseFileSupportRequest:
+.fn HandleCloseFileSupportRequest, global
 /* 802CCED4 00296494  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 802CCED8 00296498  7C 08 02 A6 */	mflr r0
 /* 802CCEDC 0029649C  38 A0 00 40 */	li r5, 0x40
@@ -370,9 +369,9 @@ HandleCloseFileSupportRequest:
 /* 802CCFAC 0029656C  7C 08 03 A6 */	mtlr r0
 /* 802CCFB0 00296570  38 21 00 70 */	addi r1, r1, 0x70
 /* 802CCFB4 00296574  4E 80 00 20 */	blr 
+.endfn HandleCloseFileSupportRequest
 
-.global HandlePositionFileSupportRequest
-HandlePositionFileSupportRequest:
+.fn HandlePositionFileSupportRequest, global
 /* 802CCFB8 00296578  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 802CCFBC 0029657C  7C 08 02 A6 */	mflr r0
 /* 802CCFC0 00296580  90 01 00 74 */	stw r0, 0x74(r1)
@@ -443,6 +442,7 @@ HandlePositionFileSupportRequest:
 /* 802CD0B8 00296678  7C 08 03 A6 */	mtlr r0
 /* 802CD0BC 0029667C  38 21 00 70 */	addi r1, r1, 0x70
 /* 802CD0C0 00296680  4E 80 00 20 */	blr 
+.endfn HandlePositionFileSupportRequest
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global CalcVtx__Q24nw4r3g3dFQ34nw4r3g3d6ResMdlPQ34nw4r3g3d9AnmObjShpPPQ34nw4r3g3d13ResVtxPosDataPPQ34nw4r3g3d13ResVtxNrmDataPPQ34nw4r3g3d13ResVtxClrData
-CalcVtx__Q24nw4r3g3dFQ34nw4r3g3d6ResMdlPQ34nw4r3g3d9AnmObjShpPPQ34nw4r3g3d13ResVtxPosDataPPQ34nw4r3g3d13ResVtxNrmDataPPQ34nw4r3g3d13ResVtxClrData:
+.fn CalcVtx__Q24nw4r3g3dFQ34nw4r3g3d6ResMdlPQ34nw4r3g3d9AnmObjShpPPQ34nw4r3g3d13ResVtxPosDataPPQ34nw4r3g3d13ResVtxNrmDataPPQ34nw4r3g3d13ResVtxClrData, global
 /* 803FE0B8 003C7678  94 21 FA 50 */	stwu r1, -0x5b0(r1)
 /* 803FE0BC 003C767C  7C 08 02 A6 */	mflr r0
 /* 803FE0C0 003C7680  90 01 05 B4 */	stw r0, 0x5b4(r1)
@@ -573,6 +572,7 @@ CalcVtx__Q24nw4r3g3dFQ34nw4r3g3d6ResMdlPQ34nw4r3g3d9AnmObjShpPPQ34nw4r3g3d13ResV
 /* 803FE8A4 003C7E64  7C 08 03 A6 */	mtlr r0
 /* 803FE8A8 003C7E68  38 21 05 B0 */	addi r1, r1, 0x5b0
 /* 803FE8AC 003C7E6C  4E 80 00 20 */	blr
+.endfn CalcVtx__Q24nw4r3g3dFQ34nw4r3g3d6ResMdlPQ34nw4r3g3d9AnmObjShpPPQ34nw4r3g3d13ResVtxPosDataPPQ34nw4r3g3d13ResVtxNrmDataPPQ34nw4r3g3d13ResVtxClrData
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

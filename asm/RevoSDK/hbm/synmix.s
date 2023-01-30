@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global func_803416D0
-func_803416D0:
+.fn func_803416D0, global
 /* 803416D0 0030AC90  88 03 00 0E */	lbz r0, 0xe(r3)
 /* 803416D4 0030AC94  3C 80 80 55 */	lis r4, lbl_8054FC90@ha
 /* 803416D8 0030AC98  80 A3 00 10 */	lwz r5, 0x10(r3)
@@ -15,29 +14,29 @@ func_803416D0:
 /* 803416EC 0030ACAC  7C 05 02 14 */	add r0, r5, r0
 /* 803416F0 0030ACB0  90 03 00 2C */	stw r0, 0x2c(r3)
 /* 803416F4 0030ACB4  4E 80 00 20 */	blr 
+.endfn func_803416D0
 
 .balign 16, 0
-.global func_80341700
-func_80341700:
+.fn func_80341700, global
 /* 80341700 0030ACC0  80 83 00 08 */	lwz r4, 8(r3)
 /* 80341704 0030ACC4  88 03 00 0C */	lbz r0, 0xc(r3)
 /* 80341708 0030ACC8  7C 84 02 14 */	add r4, r4, r0
 /* 8034170C 0030ACCC  88 04 00 EC */	lbz r0, 0xec(r4)
 /* 80341710 0030ACD0  98 03 00 0F */	stb r0, 0xf(r3)
 /* 80341714 0030ACD4  4E 80 00 20 */	blr 
+.endfn func_80341700
 
 .balign 16, 0
-.global func_80341720
-func_80341720:
+.fn func_80341720, global
 /* 80341720 0030ACE0  80 83 00 2C */	lwz r4, 0x2c(r3)
 /* 80341724 0030ACE4  80 03 00 34 */	lwz r0, 0x34(r3)
 /* 80341728 0030ACE8  7C 04 02 14 */	add r0, r4, r0
 /* 8034172C 0030ACEC  7C 03 86 70 */	srawi r3, r0, 0x10
 /* 80341730 0030ACF0  4E 80 00 20 */	blr 
+.endfn func_80341720
 
 .balign 16, 0
-.global func_80341740
-func_80341740:
+.fn func_80341740, global
 /* 80341740 0030AD00  88 03 00 0C */	lbz r0, 0xc(r3)
 /* 80341744 0030AD04  80 83 00 08 */	lwz r4, 8(r3)
 /* 80341748 0030AD08  54 00 10 3A */	slwi r0, r0, 2
@@ -47,10 +46,10 @@ func_80341740:
 /* 80341758 0030AD18  7C 04 02 14 */	add r0, r4, r0
 /* 8034175C 0030AD1C  7C 03 86 70 */	srawi r3, r0, 0x10
 /* 80341760 0030AD20  4E 80 00 20 */	blr 
+.endfn func_80341740
 
 .balign 16, 0
-.global __HBMSYNUpdateMix
-__HBMSYNUpdateMix:
+.fn __HBMSYNUpdateMix, global
 /* 80341770 0030AD30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80341774 0030AD34  7C 08 02 A6 */	mflr r0
 /* 80341778 0030AD38  90 01 00 14 */	stw r0, 0x14(r1)
@@ -91,6 +90,7 @@ __HBMSYNUpdateMix:
 /* 80341804 0030ADC4  7C 08 03 A6 */	mtlr r0
 /* 80341808 0030ADC8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8034180C 0030ADCC  4E 80 00 20 */	blr 
+.endfn __HBMSYNUpdateMix
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

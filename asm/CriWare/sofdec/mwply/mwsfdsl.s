@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global mwPlyEntryFname
-mwPlyEntryFname:
+.fn mwPlyEntryFname, global
 /* 8039CE70 00366430  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039CE74 00366434  7C 08 02 A6 */	mflr r0
 /* 8039CE78 00366438  90 01 00 14 */	stw r0, 0x14(r1)
@@ -83,9 +82,9 @@ mwPlyEntryFname:
 /* 8039CF88 00366548  7C 08 03 A6 */	mtlr r0
 /* 8039CF8C 0036654C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039CF90 00366550  4E 80 00 20 */	blr 
+.endfn mwPlyEntryFname
 
-.global func_8039CF94
-func_8039CF94:
+.fn func_8039CF94, global
 /* 8039CF94 00366554  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039CF98 00366558  7C 08 02 A6 */	mflr r0
 /* 8039CF9C 0036655C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -164,9 +163,9 @@ func_8039CF94:
 /* 8039D0A8 00366668  7C 08 03 A6 */	mtlr r0
 /* 8039D0AC 0036666C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039D0B0 00366670  4E 80 00 20 */	blr 
+.endfn func_8039CF94
 
-.global func_8039D0B4
-func_8039D0B4:
+.fn func_8039D0B4, global
 /* 8039D0B4 00366674  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039D0B8 00366678  7C 08 02 A6 */	mflr r0
 /* 8039D0BC 0036667C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -218,9 +217,9 @@ func_8039D0B4:
 /* 8039D168 00366728  7C 08 03 A6 */	mtlr r0
 /* 8039D16C 0036672C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039D170 00366730  4E 80 00 20 */	blr 
+.endfn func_8039D0B4
 
-.global func_8039D174
-func_8039D174:
+.fn func_8039D174, global
 /* 8039D174 00366734  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039D178 00366738  7C 08 02 A6 */	mflr r0
 /* 8039D17C 0036673C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -343,9 +342,9 @@ func_8039D174:
 /* 8039D330 003668F0  7C 08 03 A6 */	mtlr r0
 /* 8039D334 003668F4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039D338 003668F8  4E 80 00 20 */	blr 
+.endfn func_8039D174
 
-.global mwPlyEntryFnameRange
-mwPlyEntryFnameRange:
+.fn mwPlyEntryFnameRange, global
 /* 8039D33C 003668FC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039D340 00366900  7C 08 02 A6 */	mflr r0
 /* 8039D344 00366904  90 01 00 24 */	stw r0, 0x24(r1)
@@ -455,9 +454,9 @@ mwPlyEntryFnameRange:
 /* 8039D4C8 00366A88  7C 08 03 A6 */	mtlr r0
 /* 8039D4CC 00366A8C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039D4D0 00366A90  4E 80 00 20 */	blr 
+.endfn mwPlyEntryFnameRange
 
-.global MWSFLSC_IsFsStatErr
-MWSFLSC_IsFsStatErr:
+.fn MWSFLSC_IsFsStatErr, global
 /* 8039D4D4 00366A94  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039D4D8 00366A98  7C 08 02 A6 */	mflr r0
 /* 8039D4DC 00366A9C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -469,25 +468,25 @@ MWSFLSC_IsFsStatErr:
 /* 8039D4F4 00366AB4  7C 08 03 A6 */	mtlr r0
 /* 8039D4F8 00366AB8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039D4FC 00366ABC  4E 80 00 20 */	blr 
+.endfn MWSFLSC_IsFsStatErr
 
-.global MWSFLSC_SetFlowLimit
-MWSFLSC_SetFlowLimit:
+.fn MWSFLSC_SetFlowLimit, global
 /* 8039D500 00366AC0  80 63 00 54 */	lwz r3, 0x54(r3)
 /* 8039D504 00366AC4  2C 03 00 00 */	cmpwi r3, 0
 /* 8039D508 00366AC8  4D 82 00 20 */	beqlr 
 /* 8039D50C 00366ACC  4B FF 51 E8 */	b LSC_SetFlowLimit
 /* 8039D510 00366AD0  4E 80 00 20 */	blr 
+.endfn MWSFLSC_SetFlowLimit
 
-.global MWSFLSC_Pause
-MWSFLSC_Pause:
+.fn MWSFLSC_Pause, global
 /* 8039D514 00366AD4  80 63 00 54 */	lwz r3, 0x54(r3)
 /* 8039D518 00366AD8  2C 03 00 00 */	cmpwi r3, 0
 /* 8039D51C 00366ADC  4D 82 00 20 */	beqlr 
 /* 8039D520 00366AE0  4B FF 50 2C */	b LSC_Pause
 /* 8039D524 00366AE4  4E 80 00 20 */	blr 
+.endfn MWSFLSC_Pause
 
-.global func_8039D528
-func_8039D528:
+.fn func_8039D528, global
 /* 8039D528 00366AE8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039D52C 00366AEC  7C 08 02 A6 */	mflr r0
 /* 8039D530 00366AF0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -521,9 +520,9 @@ func_8039D528:
 /* 8039D594 00366B54  7C 08 03 A6 */	mtlr r0
 /* 8039D598 00366B58  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039D59C 00366B5C  4E 80 00 20 */	blr 
+.endfn func_8039D528
 
-.global mwPlyExecInfiniteLoopHandle
-mwPlyExecInfiniteLoopHandle:
+.fn mwPlyExecInfiniteLoopHandle, global
 /* 8039D5A0 00366B60  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 8039D5A4 00366B64  7C 08 02 A6 */	mflr r0
 /* 8039D5A8 00366B68  90 01 00 54 */	stw r0, 0x54(r1)
@@ -905,6 +904,7 @@ mwPlyExecInfiniteLoopHandle:
 /* 8039DB14 003670D4  7C 08 03 A6 */	mtlr r0
 /* 8039DB18 003670D8  38 21 00 50 */	addi r1, r1, 0x50
 /* 8039DB1C 003670DC  4E 80 00 20 */	blr 
+.endfn mwPlyExecInfiniteLoopHandle
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

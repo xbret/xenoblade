@@ -2,8 +2,9 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global func_800AB010
-func_800AB010:
+
+
+.fn func_800AB010, global
 /* 800AB010 000745D0  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 800AB014 000745D4  7C 08 02 A6 */	mflr r0
 /* 800AB018 000745D8  90 01 00 94 */	stw r0, 0x94(r1)
@@ -153,9 +154,9 @@ func_800AB010:
 /* 800AB23C 000747FC  7C 08 03 A6 */	mtlr r0
 /* 800AB240 00074800  38 21 00 90 */	addi r1, r1, 0x90
 /* 800AB244 00074804  4E 80 00 20 */	blr 
+.endfn func_800AB010
 
-.global func_800AB248
-func_800AB248:
+.fn func_800AB248, global
 /* 800AB248 00074808  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800AB24C 0007480C  7C 08 02 A6 */	mflr r0
 /* 800AB250 00074810  C0 02 8E 88 */	lfs f0, float_80669208@sda21(r2)
@@ -197,25 +198,38 @@ func_800AB248:
 /* 800AB2D8 00074898  7C 08 03 A6 */	mtlr r0
 /* 800AB2DC 0007489C  38 21 00 20 */	addi r1, r1, 0x20
 /* 800AB2E0 000748A0  4E 80 00 20 */	blr 
+.endfn func_800AB248
 
-.section extab_, "a"  # 0x800066E0 - 0x80021020
+.section extab, "a" # 0x800066E0 - 0x80021020
 
-.global lbl_800093AC
-lbl_800093AC:
+.balign 4
+
+.obj "@etb_800093AC", local
+.hidden "@etb_800093AC"
 	.4byte 0x000A0000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_800093AC"
 
-.global lbl_800093B4
-lbl_800093B4:
+.obj "@etb_800093B4", local
+.hidden "@etb_800093B4"
 	.4byte 0x000A0000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_800093B4"
 
+.section extabindex, "a" # 0x80021020 - 0x80039220
 
-.section extabindex_, "a"  # 0x80021020 - 0x80039220
+.balign 4
 
-.4byte func_800AB010
+.obj "@eti_80024BF0", local
+.hidden "@eti_80024BF0"
+	.4byte func_800AB010
 	.4byte 0x00000238
-	.4byte lbl_800093AC
+	.4byte "@etb_800093AC"
+.endobj "@eti_80024BF0"
+
+.obj "@eti_80024BFC", local
+.hidden "@eti_80024BFC"
 	.4byte func_800AB248
 	.4byte 0x0000009C
-	.4byte lbl_800093B4
+	.4byte "@etb_800093B4"
+.endobj "@eti_80024BFC"

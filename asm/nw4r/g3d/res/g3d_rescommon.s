@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __eq__Q34nw4r3g3d7ResNameCFQ34nw4r3g3d7ResName
-__eq__Q34nw4r3g3d7ResNameCFQ34nw4r3g3d7ResName:
+.fn __eq__Q34nw4r3g3d7ResNameCFQ34nw4r3g3d7ResName, global
 /* 803D7810 003A0DD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D7814 003A0DD4  7C 08 02 A6 */	mflr r0
 /* 803D7818 003A0DD8  80 84 00 00 */	lwz r4, 0(r4)
@@ -26,9 +25,9 @@ __eq__Q34nw4r3g3d7ResNameCFQ34nw4r3g3d7ResName:
 /* 803D7854 003A0E14  7C 08 03 A6 */	mtlr r0
 /* 803D7858 003A0E18  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D785C 003A0E1C  4E 80 00 20 */	blr 
+.endfn __eq__Q34nw4r3g3d7ResNameCFQ34nw4r3g3d7ResName
 
-.global ResWriteBPCmd__Q34nw4r3g3d6detailFPUcUl
-ResWriteBPCmd__Q34nw4r3g3d6detailFPUcUl:
+.fn ResWriteBPCmd__Q34nw4r3g3d6detailFPUcUl, global
 /* 803D7860 003A0E20  54 86 46 3E */	srwi r6, r4, 0x18
 /* 803D7864 003A0E24  54 85 86 3E */	rlwinm r5, r4, 0x10, 0x18, 0x1f
 /* 803D7868 003A0E28  54 80 C6 3E */	rlwinm r0, r4, 0x18, 0x18, 0x1f
@@ -39,9 +38,9 @@ ResWriteBPCmd__Q34nw4r3g3d6detailFPUcUl:
 /* 803D787C 003A0E3C  98 03 00 03 */	stb r0, 3(r3)
 /* 803D7880 003A0E40  98 83 00 04 */	stb r4, 4(r3)
 /* 803D7884 003A0E44  4E 80 00 20 */	blr 
+.endfn ResWriteBPCmd__Q34nw4r3g3d6detailFPUcUl
 
-.global ResWriteBPCmd__Q34nw4r3g3d6detailFPUcUlUl
-ResWriteBPCmd__Q34nw4r3g3d6detailFPUcUlUl:
+.fn ResWriteBPCmd__Q34nw4r3g3d6detailFPUcUlUl, global
 /* 803D7888 003A0E48  88 C3 00 02 */	lbz r6, 2(r3)
 /* 803D788C 003A0E4C  39 00 00 61 */	li r8, 0x61
 /* 803D7890 003A0E50  88 03 00 03 */	lbz r0, 3(r3)
@@ -64,9 +63,9 @@ ResWriteBPCmd__Q34nw4r3g3d6detailFPUcUlUl:
 /* 803D78D4 003A0E94  98 83 00 02 */	stb r4, 2(r3)
 /* 803D78D8 003A0E98  98 03 00 03 */	stb r0, 3(r3)
 /* 803D78DC 003A0E9C  4E 80 00 20 */	blr 
+.endfn ResWriteBPCmd__Q34nw4r3g3d6detailFPUcUlUl
 
-.global ResWriteCPCmd__Q34nw4r3g3d6detailFPUcUcUl
-ResWriteCPCmd__Q34nw4r3g3d6detailFPUcUcUl:
+.fn ResWriteCPCmd__Q34nw4r3g3d6detailFPUcUcUl, global
 /* 803D78E0 003A0EA0  54 A7 46 3E */	srwi r7, r5, 0x18
 /* 803D78E4 003A0EA4  54 A6 86 3E */	rlwinm r6, r5, 0x10, 0x18, 0x1f
 /* 803D78E8 003A0EA8  54 A0 C6 3E */	rlwinm r0, r5, 0x18, 0x18, 0x1f
@@ -78,6 +77,7 @@ ResWriteCPCmd__Q34nw4r3g3d6detailFPUcUcUl:
 /* 803D7900 003A0EC0  98 03 00 04 */	stb r0, 4(r3)
 /* 803D7904 003A0EC4  98 A3 00 05 */	stb r5, 5(r3)
 /* 803D7908 003A0EC8  4E 80 00 20 */	blr 
+.endfn ResWriteCPCmd__Q34nw4r3g3d6detailFPUcUcUl
 
 .global ResWriteSSMask__Q34nw4r3g3d6detailFPUcUl
 ResWriteSSMask__Q34nw4r3g3d6detailFPUcUl:

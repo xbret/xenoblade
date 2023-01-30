@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global sdp_server_handle_client_req
-sdp_server_handle_client_req:
+.fn sdp_server_handle_client_req, global
 /* 803067D4 002CFD94  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803067D8 002CFD98  7C 08 02 A6 */	mflr r0
 /* 803067DC 002CFD9C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -96,9 +95,9 @@ sdp_server_handle_client_req:
 /* 8030691C 002CFEDC  7C 08 03 A6 */	mtlr r0
 /* 80306920 002CFEE0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80306924 002CFEE4  4E 80 00 20 */	blr 
+.endfn sdp_server_handle_client_req
 
-.global process_service_search
-process_service_search:
+.fn process_service_search, global
 /* 80306928 002CFEE8  94 21 FE 30 */	stwu r1, -0x1d0(r1)
 /* 8030692C 002CFEEC  7C 08 02 A6 */	mflr r0
 /* 80306930 002CFEF0  90 01 01 D4 */	stw r0, 0x1d4(r1)
@@ -381,9 +380,9 @@ process_service_search:
 /* 80306D2C 002D02EC  7C 08 03 A6 */	mtlr r0
 /* 80306D30 002D02F0  38 21 01 D0 */	addi r1, r1, 0x1d0
 /* 80306D34 002D02F4  4E 80 00 20 */	blr 
+.endfn process_service_search
 
-.global process_service_attr_req
-process_service_attr_req:
+.fn process_service_attr_req, global
 /* 80306D38 002D02F8  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 80306D3C 002D02FC  7C 08 02 A6 */	mflr r0
 /* 80306D40 002D0300  90 01 00 74 */	stw r0, 0x74(r1)
@@ -630,9 +629,9 @@ process_service_attr_req:
 /* 803070BC 002D067C  7C 08 03 A6 */	mtlr r0
 /* 803070C0 002D0680  38 21 00 70 */	addi r1, r1, 0x70
 /* 803070C4 002D0684  4E 80 00 20 */	blr 
+.endfn process_service_attr_req
 
-.global process_service_search_attr_req
-process_service_search_attr_req:
+.fn process_service_search_attr_req, global
 /* 803070C8 002D0688  94 21 FE 10 */	stwu r1, -0x1f0(r1)
 /* 803070CC 002D068C  7C 08 02 A6 */	mflr r0
 /* 803070D0 002D0690  90 01 01 F4 */	stw r0, 0x1f4(r1)
@@ -922,6 +921,7 @@ process_service_search_attr_req:
 /* 803074D8 002D0A98  7C 08 03 A6 */	mtlr r0
 /* 803074DC 002D0A9C  38 21 01 F0 */	addi r1, r1, 0x1f0
 /* 803074E0 002D0AA0  4E 80 00 20 */	blr
+.endfn process_service_search_attr_req
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 .global lbl_805494A8

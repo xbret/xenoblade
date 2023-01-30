@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __close_all
-__close_all:
+.fn __close_all, global
 /* 802BC2CC 0028588C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802BC2D0 00285890  7C 08 02 A6 */	mflr r0
 /* 802BC2D4 00285894  90 01 00 24 */	stw r0, 0x24(r1)
@@ -49,9 +48,9 @@ __close_all:
 /* 802BC364 00285924  7C 08 03 A6 */	mtlr r0
 /* 802BC368 00285928  38 21 00 20 */	addi r1, r1, 0x20
 /* 802BC36C 0028592C  4E 80 00 20 */	blr 
+.endfn __close_all
 
-.global __flush_all
-__flush_all:
+.fn __flush_all, global
 /* 802BC370 00285930  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802BC374 00285934  7C 08 02 A6 */	mflr r0
 /* 802BC378 00285938  90 01 00 14 */	stw r0, 0x14(r1)
@@ -82,6 +81,7 @@ __flush_all:
 /* 802BC3D0 00285990  7C 08 03 A6 */	mtlr r0
 /* 802BC3D4 00285994  38 21 00 10 */	addi r1, r1, 0x10
 /* 802BC3D8 00285998  4E 80 00 20 */	blr 
+.endfn __flush_all
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

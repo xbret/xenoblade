@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global MPVCMC_InitObj
-MPVCMC_InitObj:
+.fn MPVCMC_InitObj, global
 /* 803A460C 0036DBCC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803A4610 0036DBD0  7C 08 02 A6 */	mflr r0
 /* 803A4614 0036DBD4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -20,9 +19,9 @@ MPVCMC_InitObj:
 /* 803A4640 0036DC00  7C 08 03 A6 */	mtlr r0
 /* 803A4644 0036DC04  38 21 00 10 */	addi r1, r1, 0x10
 /* 803A4648 0036DC08  4E 80 00 20 */	blr 
+.endfn MPVCMC_InitObj
 
-.global mpvcmc_InitMcOiTa
-mpvcmc_InitMcOiTa:
+.fn mpvcmc_InitMcOiTa, global
 /* 803A464C 0036DC0C  80 03 0B 24 */	lwz r0, 0xb24(r3)
 /* 803A4650 0036DC10  38 A3 0A D8 */	addi r5, r3, 0xad8
 /* 803A4654 0036DC14  38 C3 03 80 */	addi r6, r3, 0x380
@@ -46,9 +45,9 @@ mpvcmc_InitMcOiTa:
 /* 803A4698 0036DC58  90 05 00 24 */	stw r0, 0x24(r5)
 /* 803A469C 0036DC5C  90 05 00 2C */	stw r0, 0x2c(r5)
 /* 803A46A0 0036DC60  4E 80 00 20 */	blr 
+.endfn mpvcmc_InitMcOiTa
 
-.global MPVCMC_InitMcOiRt
-MPVCMC_InitMcOiRt:
+.fn MPVCMC_InitMcOiRt, global
 /* 803A46A4 0036DC64  80 03 0B 24 */	lwz r0, 0xb24(r3)
 /* 803A46A8 0036DC68  38 A3 0A A4 */	addi r5, r3, 0xaa4
 /* 803A46AC 0036DC6C  38 80 00 04 */	li r4, 4
@@ -66,6 +65,7 @@ MPVCMC_InitMcOiRt:
 /* 803A46D8 0036DC98  90 05 00 24 */	stw r0, 0x24(r5)
 /* 803A46DC 0036DC9C  90 05 00 2C */	stw r0, 0x2c(r5)
 /* 803A46E0 0036DCA0  4E 80 00 20 */	blr 
+.endfn MPVCMC_InitMcOiRt
 
 .global MPVCMC_SetCcnt
 MPVCMC_SetCcnt:

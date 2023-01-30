@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global CXGetUncompressedSize
-CXGetUncompressedSize:
+.fn CXGetUncompressedSize, global
 /* 80308D70 002D2330  80 A3 00 00 */	lwz r5, 0(r3)
 /* 80308D74 002D2334  54 A4 42 1E */	rlwinm r4, r5, 8, 8, 0xf
 /* 80308D78 002D2338  54 A0 C4 2E */	rlwinm r0, r5, 0x18, 0x10, 0x17
@@ -22,6 +21,7 @@ CXGetUncompressedSize:
 .L_80308DA8:
 /* 80308DA8 002D2368  7C 03 03 78 */	mr r3, r0
 /* 80308DAC 002D236C  4E 80 00 20 */	blr 
+.endfn CXGetUncompressedSize
 
 .balign 16, 0
 .global CXUncompressHuffman

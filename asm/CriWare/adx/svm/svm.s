@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global SVM_Lock
-SVM_Lock:
+.fn SVM_Lock, global
 /* 8039699C 0035FF5C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803969A0 0035FF60  7C 08 02 A6 */	mflr r0
 /* 803969A4 0035FF64  90 01 00 14 */	stw r0, 0x14(r1)
@@ -32,9 +31,9 @@ SVM_Lock:
 /* 803969F8 0035FFB8  7C 08 03 A6 */	mtlr r0
 /* 803969FC 0035FFBC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80396A00 0035FFC0  4E 80 00 20 */	blr 
+.endfn SVM_Lock
 
-.global SVM_Unlock
-SVM_Unlock:
+.fn SVM_Unlock, global
 /* 80396A04 0035FFC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80396A08 0035FFC8  7C 08 02 A6 */	mflr r0
 /* 80396A0C 0035FFCC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -74,9 +73,9 @@ SVM_Unlock:
 /* 80396A88 00360048  7C 08 03 A6 */	mtlr r0
 /* 80396A8C 0036004C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80396A90 00360050  4E 80 00 20 */	blr 
+.endfn SVM_Unlock
 
-.global SVM_CallErr
-SVM_CallErr:
+.fn SVM_CallErr, global
 /* 80396A94 00360054  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 80396A98 00360058  7C 08 02 A6 */	mflr r0
 /* 80396A9C 0036005C  90 01 00 84 */	stw r0, 0x84(r1)
@@ -133,9 +132,9 @@ SVM_CallErr:
 /* 80396B60 00360120  7C 08 03 A6 */	mtlr r0
 /* 80396B64 00360124  38 21 00 80 */	addi r1, r1, 0x80
 /* 80396B68 00360128  4E 80 00 20 */	blr 
+.endfn SVM_CallErr
 
-.global SVM_CallErr1
-SVM_CallErr1:
+.fn SVM_CallErr1, global
 /* 80396B6C 0036012C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80396B70 00360130  7C 08 02 A6 */	mflr r0
 /* 80396B74 00360134  2C 03 00 00 */	cmpwi r3, 0
@@ -172,9 +171,9 @@ SVM_CallErr1:
 /* 80396BE8 003601A8  7C 08 03 A6 */	mtlr r0
 /* 80396BEC 003601AC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80396BF0 003601B0  4E 80 00 20 */	blr 
+.endfn SVM_CallErr1
 
-.global SVM_SetCbSvrWithString
-SVM_SetCbSvrWithString:
+.fn SVM_SetCbSvrWithString, global
 /* 80396BF4 003601B4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80396BF8 003601B8  7C 08 02 A6 */	mflr r0
 /* 80396BFC 003601BC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -242,9 +241,9 @@ SVM_SetCbSvrWithString:
 /* 80396CE0 003602A0  7C 08 03 A6 */	mtlr r0
 /* 80396CE4 003602A4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80396CE8 003602A8  4E 80 00 20 */	blr 
+.endfn SVM_SetCbSvrWithString
 
-.global svm_SetCbSvr
-svm_SetCbSvr:
+.fn svm_SetCbSvr, global
 /* 80396CEC 003602AC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80396CF0 003602B0  7C 08 02 A6 */	mflr r0
 /* 80396CF4 003602B4  2C 03 00 00 */	cmpwi r3, 0
@@ -345,9 +344,9 @@ svm_SetCbSvr:
 /* 80396E44 00360404  7C 08 03 A6 */	mtlr r0
 /* 80396E48 00360408  38 21 00 10 */	addi r1, r1, 0x10
 /* 80396E4C 0036040C  4E 80 00 20 */	blr 
+.endfn svm_SetCbSvr
 
-.global SVM_DelCbSvr
-SVM_DelCbSvr:
+.fn SVM_DelCbSvr, global
 /* 80396E50 00360410  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80396E54 00360414  7C 08 02 A6 */	mflr r0
 /* 80396E58 00360418  90 01 00 24 */	stw r0, 0x24(r1)
@@ -483,9 +482,9 @@ SVM_DelCbSvr:
 /* 80397030 003605F0  7C 08 03 A6 */	mtlr r0
 /* 80397034 003605F4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80397038 003605F8  4E 80 00 20 */	blr 
+.endfn SVM_DelCbSvr
 
-.global SVM_SetCbSvrIdWithString
-SVM_SetCbSvrIdWithString:
+.fn SVM_SetCbSvrIdWithString, global
 /* 8039703C 003605FC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80397040 00360600  7C 08 02 A6 */	mflr r0
 /* 80397044 00360604  90 01 00 24 */	stw r0, 0x24(r1)
@@ -553,9 +552,9 @@ SVM_SetCbSvrIdWithString:
 /* 80397128 003606E8  7C 08 03 A6 */	mtlr r0
 /* 8039712C 003606EC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80397130 003606F0  4E 80 00 20 */	blr 
+.endfn SVM_SetCbSvrIdWithString
 
-.global svm_SetCbSvrId
-svm_SetCbSvrId:
+.fn svm_SetCbSvrId, global
 /* 80397134 003606F4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80397138 003606F8  7C 08 02 A6 */	mflr r0
 /* 8039713C 003606FC  2C 04 00 00 */	cmpwi r4, 0
@@ -677,9 +676,9 @@ svm_SetCbSvrId:
 /* 803972E4 003608A4  7C 08 03 A6 */	mtlr r0
 /* 803972E8 003608A8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803972EC 003608AC  4E 80 00 20 */	blr 
+.endfn svm_SetCbSvrId
 
-.global SVM_SetCbBdr
-SVM_SetCbBdr:
+.fn SVM_SetCbBdr, global
 /* 803972F0 003608B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803972F4 003608B4  7C 08 02 A6 */	mflr r0
 /* 803972F8 003608B8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -750,9 +749,9 @@ SVM_SetCbBdr:
 /* 803973E8 003609A8  7C 08 03 A6 */	mtlr r0
 /* 803973EC 003609AC  38 21 00 20 */	addi r1, r1, 0x20
 /* 803973F0 003609B0  4E 80 00 20 */	blr 
+.endfn SVM_SetCbBdr
 
-.global SVM_GotoSvrBorder
-SVM_GotoSvrBorder:
+.fn SVM_GotoSvrBorder, global
 /* 803973F4 003609B4  3C 80 80 5F */	lis r4, lbl_805F6018@ha
 /* 803973F8 003609B8  54 60 18 38 */	slwi r0, r3, 3
 /* 803973FC 003609BC  38 84 60 18 */	addi r4, r4, lbl_805F6018@l
@@ -764,9 +763,9 @@ SVM_GotoSvrBorder:
 /* 80397414 003609D4  7D 89 03 A6 */	mtctr r12
 /* 80397418 003609D8  4E 80 04 20 */	bctr 
 /* 8039741C 003609DC  4E 80 00 20 */	blr
+.endfn SVM_GotoSvrBorder
 
-.global SVM_SetCbErr
-SVM_SetCbErr:
+.fn SVM_SetCbErr, global
 /* 80397420 003609E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80397424 003609E4  7C 08 02 A6 */	mflr r0
 /* 80397428 003609E8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -832,25 +831,25 @@ SVM_SetCbErr:
 /* 80397504 00360AC4  7C 08 03 A6 */	mtlr r0
 /* 80397508 00360AC8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8039750C 00360ACC  4E 80 00 20 */	blr 
+.endfn SVM_SetCbErr
 
-.global SVM_SetCbLock
-SVM_SetCbLock:
+.fn SVM_SetCbLock, global
 /* 80397510 00360AD0  3C C0 80 5F */	lis r6, lbl_805F5D40@ha
 /* 80397514 00360AD4  38 A6 5D 40 */	addi r5, r6, lbl_805F5D40@l
 /* 80397518 00360AD8  90 66 5D 40 */	stw r3, lbl_805F5D40@l(r6)
 /* 8039751C 00360ADC  90 85 00 04 */	stw r4, 4(r5)
 /* 80397520 00360AE0  4E 80 00 20 */	blr 
+.endfn SVM_SetCbLock
 
-.global SVM_SetCbUnlock
-SVM_SetCbUnlock:
+.fn SVM_SetCbUnlock, global
 /* 80397524 00360AE4  3C C0 80 5F */	lis r6, lbl_805F5D48@ha
 /* 80397528 00360AE8  38 A6 5D 48 */	addi r5, r6, lbl_805F5D48@l
 /* 8039752C 00360AEC  90 66 5D 48 */	stw r3, lbl_805F5D48@l(r6)
 /* 80397530 00360AF0  90 85 00 04 */	stw r4, 4(r5)
 /* 80397534 00360AF4  4E 80 00 20 */	blr 
+.endfn SVM_SetCbUnlock
 
-.global SVM_ExecSvrVsync
-SVM_ExecSvrVsync:
+.fn SVM_ExecSvrVsync, global
 /* 80397538 00360AF8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8039753C 00360AFC  7C 08 02 A6 */	mflr r0
 /* 80397540 00360B00  90 01 00 34 */	stw r0, 0x34(r1)
@@ -889,9 +888,9 @@ SVM_ExecSvrVsync:
 /* 803975BC 00360B7C  7C 08 03 A6 */	mtlr r0
 /* 803975C0 00360B80  38 21 00 30 */	addi r1, r1, 0x30
 /* 803975C4 00360B84  4E 80 00 20 */	blr 
+.endfn SVM_ExecSvrVsync
 
-.global SVM_ExecSvrFs
-SVM_ExecSvrFs:
+.fn SVM_ExecSvrFs, global
 /* 803975C8 00360B88  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803975CC 00360B8C  7C 08 02 A6 */	mflr r0
 /* 803975D0 00360B90  90 01 00 34 */	stw r0, 0x34(r1)
@@ -930,9 +929,9 @@ SVM_ExecSvrFs:
 /* 8039764C 00360C0C  7C 08 03 A6 */	mtlr r0
 /* 80397650 00360C10  38 21 00 30 */	addi r1, r1, 0x30
 /* 80397654 00360C14  4E 80 00 20 */	blr
+.endfn SVM_ExecSvrFs
 
-.global SVM_ExecSvrMain
-SVM_ExecSvrMain:
+.fn SVM_ExecSvrMain, global
 /* 80397658 00360C18  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8039765C 00360C1C  7C 08 02 A6 */	mflr r0
 /* 80397660 00360C20  90 01 00 34 */	stw r0, 0x34(r1)
@@ -971,9 +970,9 @@ SVM_ExecSvrMain:
 /* 803976DC 00360C9C  7C 08 03 A6 */	mtlr r0
 /* 803976E0 00360CA0  38 21 00 30 */	addi r1, r1, 0x30
 /* 803976E4 00360CA4  4E 80 00 20 */	blr 
+.endfn SVM_ExecSvrMain
 
-.global SVM_ExecSvrMwIdle
-SVM_ExecSvrMwIdle:
+.fn SVM_ExecSvrMwIdle, global
 /* 803976E8 00360CA8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803976EC 00360CAC  7C 08 02 A6 */	mflr r0
 /* 803976F0 00360CB0  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1012,9 +1011,9 @@ SVM_ExecSvrMwIdle:
 /* 8039776C 00360D2C  7C 08 03 A6 */	mtlr r0
 /* 80397770 00360D30  38 21 00 30 */	addi r1, r1, 0x30
 /* 80397774 00360D34  4E 80 00 20 */	blr 
+.endfn SVM_ExecSvrMwIdle
 
-.global SVM_Init
-SVM_Init:
+.fn SVM_Init, global
 /* 80397778 00360D38  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039777C 00360D3C  7C 08 02 A6 */	mflr r0
 /* 80397780 00360D40  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1062,9 +1061,9 @@ SVM_Init:
 /* 80397824 00360DE4  7C 08 03 A6 */	mtlr r0
 /* 80397828 00360DE8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039782C 00360DEC  4E 80 00 20 */	blr 
+.endfn SVM_Init
 
-.global SVM_Finish
-SVM_Finish:
+.fn SVM_Finish, global
 /* 80397830 00360DF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80397834 00360DF4  7C 08 02 A6 */	mflr r0
 /* 80397838 00360DF8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1116,9 +1115,9 @@ SVM_Finish:
 /* 803978EC 00360EAC  7C 08 03 A6 */	mtlr r0
 /* 803978F0 00360EB0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803978F4 00360EB4  4E 80 00 20 */	blr 
+.endfn SVM_Finish
 
-.global SVM_TestAndSet
-SVM_TestAndSet:
+.fn SVM_TestAndSet, global
 /* 803978F8 00360EB8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803978FC 00360EBC  7C 08 02 A6 */	mflr r0
 /* 80397900 00360EC0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1194,6 +1193,7 @@ SVM_TestAndSet:
 /* 80397A00 00360FC0  7C 08 03 A6 */	mtlr r0
 /* 80397A04 00360FC4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80397A08 00360FC8  4E 80 00 20 */	blr 
+.endfn SVM_TestAndSet
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

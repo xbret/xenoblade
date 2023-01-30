@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global rfcomm_l2cap_if_init
-rfcomm_l2cap_if_init:
+.fn rfcomm_l2cap_if_init, global
 /* 802FE450 002C7A10  3C 60 80 30 */	lis r3, RFCOMM_ConnectInd@ha
 /* 802FE454 002C7A14  3C 80 80 5C */	lis r4, lbl_805C32A8@ha
 /* 802FE458 002C7A18  38 63 E4 CC */	addi r3, r3, RFCOMM_ConnectInd@l
@@ -35,8 +34,9 @@ rfcomm_l2cap_if_init:
 /* 802FE4C0 002C7A80  90 C4 00 20 */	stw r6, 0x20(r4)
 /* 802FE4C4 002C7A84  90 A4 00 24 */	stw r5, 0x24(r4)
 /* 802FE4C8 002C7A88  4B FF 84 3C */	b L2CA_Register
+.endfn rfcomm_l2cap_if_init
 
-RFCOMM_ConnectInd:
+.fn RFCOMM_ConnectInd, local
 /* 802FE4CC 002C7A8C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FE4D0 002C7A90  7C 08 02 A6 */	mflr r0
 /* 802FE4D4 002C7A94  90 01 00 24 */	stw r0, 0x24(r1)
@@ -74,9 +74,9 @@ RFCOMM_ConnectInd:
 /* 802FE54C 002C7B0C  7C 08 03 A6 */	mtlr r0
 /* 802FE550 002C7B10  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FE554 002C7B14  4E 80 00 20 */	blr
+.endfn RFCOMM_ConnectInd
 
-.global RFCOMM_ConnectCnf
-RFCOMM_ConnectCnf:
+.fn RFCOMM_ConnectCnf, global
 /* 802FE558 002C7B18  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FE55C 002C7B1C  7C 08 02 A6 */	mflr r0
 /* 802FE560 002C7B20  90 01 00 24 */	stw r0, 0x24(r1)
@@ -148,9 +148,9 @@ RFCOMM_ConnectCnf:
 /* 802FE650 002C7C10  7C 08 03 A6 */	mtlr r0
 /* 802FE654 002C7C14  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FE658 002C7C18  4E 80 00 20 */	blr
+.endfn RFCOMM_ConnectCnf
 
-.global RFCOMM_ConfigInd
-RFCOMM_ConfigInd:
+.fn RFCOMM_ConfigInd, global
 /* 802FE65C 002C7C1C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FE660 002C7C20  7C 08 02 A6 */	mflr r0
 /* 802FE664 002C7C24  90 01 00 24 */	stw r0, 0x24(r1)
@@ -223,9 +223,9 @@ RFCOMM_ConfigInd:
 /* 802FE758 002C7D18  7C 08 03 A6 */	mtlr r0
 /* 802FE75C 002C7D1C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FE760 002C7D20  4E 80 00 20 */	blr
+.endfn RFCOMM_ConfigInd
 
-.global RFCOMM_ConfigCnf
-RFCOMM_ConfigCnf:
+.fn RFCOMM_ConfigCnf, global
 /* 802FE764 002C7D24  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FE768 002C7D28  7C 08 02 A6 */	mflr r0
 /* 802FE76C 002C7D2C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -298,13 +298,13 @@ RFCOMM_ConfigCnf:
 /* 802FE860 002C7E20  7C 08 03 A6 */	mtlr r0
 /* 802FE864 002C7E24  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FE868 002C7E28  4E 80 00 20 */	blr
+.endfn RFCOMM_ConfigCnf
 
-.global RFCOMM_QoSViolationInd
-RFCOMM_QoSViolationInd:
+.fn RFCOMM_QoSViolationInd, global
 /* 802FE86C 002C7E2C  4E 80 00 20 */	blr
+.endfn RFCOMM_QoSViolationInd
 
-.global RFCOMM_DisconnectInd
-RFCOMM_DisconnectInd:
+.fn RFCOMM_DisconnectInd, global
 /* 802FE870 002C7E30  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FE874 002C7E34  7C 08 02 A6 */	mflr r0
 /* 802FE878 002C7E38  90 01 00 24 */	stw r0, 0x24(r1)
@@ -385,9 +385,9 @@ RFCOMM_DisconnectInd:
 /* 802FE988 002C7F48  7C 08 03 A6 */	mtlr r0
 /* 802FE98C 002C7F4C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FE990 002C7F50  4E 80 00 20 */	blr
+.endfn RFCOMM_DisconnectInd
 
-.global RFCOMM_BufDataInd
-RFCOMM_BufDataInd:
+.fn RFCOMM_BufDataInd, global
 /* 802FE994 002C7F54  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FE998 002C7F58  7C 08 02 A6 */	mflr r0
 /* 802FE99C 002C7F5C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -576,9 +576,9 @@ RFCOMM_BufDataInd:
 /* 802FEC28 002C81E8  7C 08 03 A6 */	mtlr r0
 /* 802FEC2C 002C81EC  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FEC30 002C81F0  4E 80 00 20 */	blr
+.endfn RFCOMM_BufDataInd
 
-.global RFCOMM_CongestionStatusInd
-RFCOMM_CongestionStatusInd:
+.fn RFCOMM_CongestionStatusInd, global
 /* 802FEC34 002C81F4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FEC38 002C81F8  7C 08 02 A6 */	mflr r0
 /* 802FEC3C 002C81FC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -663,9 +663,9 @@ RFCOMM_CongestionStatusInd:
 /* 802FED5C 002C831C  7C 08 03 A6 */	mtlr r0
 /* 802FED60 002C8320  38 21 00 20 */	addi r1, r1, 0x20
 /* 802FED64 002C8324  4E 80 00 20 */	blr 
+.endfn RFCOMM_CongestionStatusInd
 
-.global rfc_save_lcid_mcb
-rfc_save_lcid_mcb:
+.fn rfc_save_lcid_mcb, global
 /* 802FED68 002C8328  38 04 FF C0 */	addi r0, r4, -64
 /* 802FED6C 002C832C  3C 80 80 5C */	lis r4, lbl_805C32A8@ha
 /* 802FED70 002C8330  38 84 32 A8 */	addi r4, r4, lbl_805C32A8@l
@@ -673,6 +673,7 @@ rfc_save_lcid_mcb:
 /* 802FED78 002C8338  7C 84 02 14 */	add r4, r4, r0
 /* 802FED7C 002C833C  90 64 00 3C */	stw r3, 0x3c(r4)
 /* 802FED80 002C8340  4E 80 00 20 */	blr 
+.endfn rfc_save_lcid_mcb
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

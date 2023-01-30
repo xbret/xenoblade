@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global LSC_Init
-LSC_Init:
+.fn LSC_Init, global
 /* 803918AC 0035AE6C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803918B0 0035AE70  7C 08 02 A6 */	mflr r0
 /* 803918B4 0035AE74  3C 80 80 52 */	lis r4, lsc_build@ha
@@ -34,9 +33,9 @@ LSC_Init:
 /* 80391914 0035AED4  7C 08 03 A6 */	mtlr r0
 /* 80391918 0035AED8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8039191C 0035AEDC  4E 80 00 20 */	blr 
+.endfn LSC_Init
 
-.global LSC_Finish
-LSC_Finish:
+.fn LSC_Finish, global
 /* 80391920 0035AEE0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80391924 0035AEE4  7C 08 02 A6 */	mflr r0
 /* 80391928 0035AEE8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -80,6 +79,7 @@ LSC_Finish:
 /* 803919B4 0035AF74  7C 08 03 A6 */	mtlr r0
 /* 803919B8 0035AF78  38 21 00 20 */	addi r1, r1, 0x20
 /* 803919BC 0035AF7C  4E 80 00 20 */	blr 
+.endfn LSC_Finish
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0

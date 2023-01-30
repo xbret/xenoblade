@@ -2,8 +2,9 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __ct__CMenuMapSelect
-__ct__CMenuMapSelect:
+
+
+.fn __ct__CMenuMapSelect, global
 /* 8024221C 0020B7DC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80242220 0020B7E0  7C 08 02 A6 */	mflr r0
 /* 80242224 0020B7E4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -85,17 +86,17 @@ __ct__CMenuMapSelect:
 /* 80242348 0020B908  7C 08 03 A6 */	mtlr r0
 /* 8024234C 0020B90C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80242350 0020B910  4E 80 00 20 */	blr 
+.endfn __ct__CMenuMapSelect
 
-.global func_80242354
-func_80242354:
+.fn func_80242354, global
 /* 80242354 0020B914  80 6D AF 00 */	lwz r3, lbl_80667080@sda21(r13)
 /* 80242358 0020B918  7C 03 00 D0 */	neg r0, r3
 /* 8024235C 0020B91C  7C 00 1B 78 */	or r0, r0, r3
 /* 80242360 0020B920  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 80242364 0020B924  4E 80 00 20 */	blr 
+.endfn func_80242354
 
-.global func_80242368
-func_80242368:
+.fn func_80242368, global
 /* 80242368 0020B928  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8024236C 0020B92C  7C 08 02 A6 */	mflr r0
 /* 80242370 0020B930  90 01 00 14 */	stw r0, 0x14(r1)
@@ -217,9 +218,9 @@ func_80242368:
 /* 80242518 0020BAD8  7C 08 03 A6 */	mtlr r0
 /* 8024251C 0020BADC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80242520 0020BAE0  4E 80 00 20 */	blr 
+.endfn func_80242368
 
-.global func_80242524
-func_80242524:
+.fn func_80242524, global
 /* 80242524 0020BAE4  94 21 CC A0 */	stwu r1, -0x3360(r1)
 /* 80242528 0020BAE8  7C 08 02 A6 */	mflr r0
 /* 8024252C 0020BAEC  90 01 33 64 */	stw r0, 0x3364(r1)
@@ -544,9 +545,9 @@ func_80242524:
 /* 80242A1C 0020BFDC  7C 08 03 A6 */	mtlr r0
 /* 80242A20 0020BFE0  38 21 33 60 */	addi r1, r1, 0x3360
 /* 80242A24 0020BFE4  4E 80 00 20 */	blr 
+.endfn func_80242524
 
-.global func_80242A28
-func_80242A28:
+.fn func_80242A28, global
 /* 80242A28 0020BFE8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80242A2C 0020BFEC  7C 08 02 A6 */	mflr r0
 /* 80242A30 0020BFF0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1010,18 +1011,21 @@ func_80242A28:
 /* 80243090 0020C650  7C 08 03 A6 */	mtlr r0
 /* 80243094 0020C654  38 21 00 20 */	addi r1, r1, 0x20
 /* 80243098 0020C658  4E 80 00 20 */	blr 
+.endfn func_80242A28
 
-.global func_8024309C
-func_8024309C:
+.fn func_8024309C, global
 /* 8024309C 0020C65C  38 63 FF A8 */	addi r3, r3, -88
 /* 802430A0 0020C660  4B FF F0 A4 */	b func_80242144
+.endfn func_8024309C
 
-.global func_802430A4
-func_802430A4:
+.fn func_802430A4, global
 /* 802430A4 0020C664  38 63 FF A8 */	addi r3, r3, -88
 /* 802430A8 0020C668  4B FF E3 C4 */	b func_8024146C
+.endfn func_802430A4
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+
 
 .global CMenuMapSelect_typestr
 CMenuMapSelect_typestr:
@@ -1036,6 +1040,8 @@ lbl_80506B98:
 	.balign 4
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
 
 
 .global __vt__CMenuMapSelect
@@ -1074,12 +1080,16 @@ CMenuMapSelect_hierarchy:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+
+
 .global __RTTI__CMenuMapSelect
 __RTTI__CMenuMapSelect:
 	.4byte CMenuMapSelect_typestr
 	.4byte CMenuMapSelect_hierarchy
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
 
 .global float_8066AFE0
 float_8066AFE0:
@@ -1097,10 +1107,12 @@ float_8066AFE8:
 	.4byte 0
 
 
-.section extab_, "a"  # 0x800066E0 - 0x80021020
+.section extab, "a" # 0x800066E0 - 0x80021020
 
-.global lbl_80016290
-lbl_80016290:
+.balign 4
+
+.obj "@etb_80016290", local
+.hidden "@etb_80016290"
 	.4byte 0x200A0000
 	.4byte 0x000000CC
 	.4byte 0x00000060
@@ -1112,7 +1124,7 @@ lbl_80016290:
 	.4byte 0x0000003C
 	.4byte 0x000000F4
 	.4byte 0x00000030
-	.4byte 0
+	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x0000016C
 	.4byte func_80244348
@@ -1129,36 +1141,56 @@ lbl_80016290:
 	.4byte 0x00000058
 	.4byte func_8004031C
 	.4byte 0x8680001E
-	.4byte 0
+	.4byte 0x00000000
 	.4byte func_800FED0C
+.endobj "@etb_80016290"
 
-.global lbl_80016308
-lbl_80016308:
+.obj "@etb_80016308", local
+.hidden "@etb_80016308"
 	.4byte 0x10080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_80016308"
 
-.global lbl_80016310
-lbl_80016310:
+.obj "@etb_80016310", local
+.hidden "@etb_80016310"
 	.4byte 0x080A0000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_80016310"
 
-.global lbl_80016318
-lbl_80016318:
+.obj "@etb_80016318", local
+.hidden "@etb_80016318"
 	.4byte 0x180A0000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_80016318"
 
+.section extabindex, "a" # 0x80021020 - 0x80039220
 
-.section extabindex_, "a"  # 0x80021020 - 0x80039220
+.balign 4
 
-.4byte __ct__CMenuMapSelect
+.obj "@eti_8002F150", local
+.hidden "@eti_8002F150"
+	.4byte __ct__CMenuMapSelect
 	.4byte 0x00000138
-	.4byte lbl_80016290
+	.4byte "@etb_80016290"
+.endobj "@eti_8002F150"
+
+.obj "@eti_8002F15C", local
+.hidden "@eti_8002F15C"
 	.4byte func_80242368
 	.4byte 0x000001BC
-	.4byte lbl_80016308
+	.4byte "@etb_80016308"
+.endobj "@eti_8002F15C"
+
+.obj "@eti_8002F168", local
+.hidden "@eti_8002F168"
 	.4byte func_80242524
 	.4byte 0x00000504
-	.4byte lbl_80016310
+	.4byte "@etb_80016310"
+.endobj "@eti_8002F168"
+
+.obj "@eti_8002F174", local
+.hidden "@eti_8002F174"
 	.4byte func_80242A28
 	.4byte 0x00000674
-	.4byte lbl_80016318
+	.4byte "@etb_80016318"
+.endobj "@eti_8002F174"

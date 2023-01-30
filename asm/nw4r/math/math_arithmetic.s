@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global FExp__Q34nw4r4math6detailFf
-FExp__Q34nw4r4math6detailFf:
+.fn FExp__Q34nw4r4math6detailFf, global
 /* 8040ABF0 003D41B0  C0 02 C2 80 */	lfs f0, float_8066C600@sda21(r2)
 /* 8040ABF4 003D41B4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8040ABF8 003D41B8  EC 00 00 72 */	fmuls f0, f0, f1
@@ -40,9 +39,9 @@ FExp__Q34nw4r4math6detailFf:
 /* 8040AC70 003D4230  C0 21 00 0C */	lfs f1, 0xc(r1)
 /* 8040AC74 003D4234  38 21 00 20 */	addi r1, r1, 0x20
 /* 8040AC78 003D4238  4E 80 00 20 */	blr 
+.endfn FExp__Q34nw4r4math6detailFf
 
-.global FLog__Q34nw4r4math6detailFf
-FLog__Q34nw4r4math6detailFf:
+.fn FLog__Q34nw4r4math6detailFf, global
 /* 8040AC7C 003D423C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8040AC80 003D4240  D0 21 00 18 */	stfs f1, 0x18(r1)
 /* 8040AC84 003D4244  D0 21 00 10 */	stfs f1, 0x10(r1)
@@ -78,9 +77,9 @@ FLog__Q34nw4r4math6detailFf:
 /* 8040ACFC 003D42BC  EC 21 00 2A */	fadds f1, f1, f0
 /* 8040AD00 003D42C0  38 21 00 20 */	addi r1, r1, 0x20
 /* 8040AD04 003D42C4  4E 80 00 20 */	blr 
+.endfn FLog__Q34nw4r4math6detailFf
 
-.global FrSqrt__Q24nw4r4mathFf
-FrSqrt__Q24nw4r4mathFf:
+.fn FrSqrt__Q24nw4r4mathFf, global
 /* 8040AD08 003D42C8  FC 00 08 34 */	frsqrte f0, f1
 /* 8040AD0C 003D42CC  C0 42 C2 94 */	lfs f2, float_8066C614@sda21(r2)
 /* 8040AD10 003D42D0  C0 62 C2 98 */	lfs f3, float_8066C618@sda21(r2)
@@ -90,6 +89,7 @@ FrSqrt__Q24nw4r4mathFf:
 /* 8040AD20 003D42E0  EC 04 00 32 */	fmuls f0, f4, f0
 /* 8040AD24 003D42E4  FC 20 00 90 */	fmr f1, f0
 /* 8040AD28 003D42E8  4E 80 00 20 */	blr 
+.endfn FrSqrt__Q24nw4r4mathFf
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

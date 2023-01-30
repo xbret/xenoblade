@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __ull2dec
-__ull2dec:
+.fn __ull2dec, global
 /* 802BC3DC 0028599C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802BC3E0 002859A0  7C 08 02 A6 */	mflr r0
 /* 802BC3E4 002859A4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -63,9 +62,9 @@ __ull2dec:
 /* 802BC4AC 00285A6C  7C 08 03 A6 */	mtlr r0
 /* 802BC4B0 00285A70  38 21 00 20 */	addi r1, r1, 0x20
 /* 802BC4B4 00285A74  4E 80 00 20 */	blr 
+.endfn __ull2dec
 
-.global __timesdec
-__timesdec:
+.fn __timesdec, global
 /* 802BC4B8 00285A78  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 802BC4BC 00285A7C  3C C0 CC CD */	lis r6, 0xCCCCCCCD@ha
 /* 802BC4C0 00285A80  89 04 00 04 */	lbz r8, 4(r4)
@@ -247,9 +246,9 @@ __timesdec:
 /* 802BC734 00285CF4  83 A1 00 54 */	lwz r29, 0x54(r1)
 /* 802BC738 00285CF8  38 21 00 60 */	addi r1, r1, 0x60
 /* 802BC73C 00285CFC  4E 80 00 20 */	blr 
+.endfn __timesdec
 
-.global __str2dec
-__str2dec:
+.fn __str2dec, global
 /* 802BC740 00285D00  38 00 00 00 */	li r0, 0
 /* 802BC744 00285D04  B0 A3 00 02 */	sth r5, 2(r3)
 /* 802BC748 00285D08  38 E0 00 00 */	li r7, 0
@@ -318,9 +317,9 @@ __str2dec:
 /* 802BC820 00285DE0  38 A5 FF FF */	addi r5, r5, -1
 /* 802BC824 00285DE4  4B FF FF C0 */	b .L_802BC7E4
 /* 802BC828 00285DE8  4E 80 00 20 */	blr 
+.endfn __str2dec
 
-.global __two_exp
-__two_exp:
+.fn __two_exp, global
 /* 802BC82C 00285DEC  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 802BC830 00285DF0  7C 08 02 A6 */	mflr r0
 /* 802BC834 00285DF4  90 01 00 74 */	stw r0, 0x74(r1)
@@ -545,9 +544,9 @@ switch_802BCA60:
 /* 802BCB3C 002860FC  7C 08 03 A6 */	mtlr r0
 /* 802BCB40 00286100  38 21 00 70 */	addi r1, r1, 0x70
 /* 802BCB44 00286104  4E 80 00 20 */	blr 
+.endfn __two_exp
 
-.global __equals_dec
-__equals_dec:
+.fn __equals_dec, global
 /* 802BCB48 00286108  88 A3 00 05 */	lbz r5, 5(r3)
 /* 802BCB4C 0028610C  2C 05 00 00 */	cmpwi r5, 0
 /* 802BCB50 00286110  40 82 00 14 */	bne .L_802BCB64
@@ -616,9 +615,9 @@ __equals_dec:
 .L_802BCC24:
 /* 802BCC24 002861E4  38 60 00 00 */	li r3, 0
 /* 802BCC28 002861E8  4E 80 00 20 */	blr 
+.endfn __equals_dec
 
-.global __less_dec
-__less_dec:
+.fn __less_dec, global
 /* 802BCC2C 002861EC  88 03 00 05 */	lbz r0, 5(r3)
 /* 802BCC30 002861F0  2C 00 00 00 */	cmpwi r0, 0
 /* 802BCC34 002861F4  40 82 00 18 */	bne .L_802BCC4C
@@ -694,9 +693,9 @@ __less_dec:
 /* 802BCD20 002862E0  7C 00 18 50 */	subf r0, r0, r3
 /* 802BCD24 002862E4  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 802BCD28 002862E8  4E 80 00 20 */	blr 
+.endfn __less_dec
 
-.global __minus_dec
-__minus_dec:
+.fn __minus_dec, global
 /* 802BCD2C 002862EC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802BCD30 002862F0  81 84 00 0C */	lwz r12, 0xc(r4)
 /* 802BCD34 002862F4  93 E1 00 1C */	stw r31, 0x1c(r1)
@@ -1043,9 +1042,9 @@ __minus_dec:
 /* 802BD1FC 002867BC  83 A1 00 14 */	lwz r29, 0x14(r1)
 /* 802BD200 002867C0  38 21 00 20 */	addi r1, r1, 0x20
 /* 802BD204 002867C4  4E 80 00 20 */	blr 
+.endfn __minus_dec
 
-.global __num2dec_internal
-__num2dec_internal:
+.fn __num2dec_internal, global
 /* 802BD208 002867C8  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 802BD20C 002867CC  7C 08 02 A6 */	mflr r0
 /* 802BD210 002867D0  90 01 00 94 */	stw r0, 0x94(r1)
@@ -1141,9 +1140,9 @@ __num2dec_internal:
 /* 802BD360 00286920  7C 08 03 A6 */	mtlr r0
 /* 802BD364 00286924  38 21 00 90 */	addi r1, r1, 0x90
 /* 802BD368 00286928  4E 80 00 20 */	blr 
+.endfn __num2dec_internal
 
-.global __num2dec
-__num2dec:
+.fn __num2dec, global
 /* 802BD36C 0028692C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802BD370 00286930  7C 08 02 A6 */	mflr r0
 /* 802BD374 00286934  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1265,9 +1264,9 @@ __num2dec:
 /* 802BD504 00286AC4  7C 08 03 A6 */	mtlr r0
 /* 802BD508 00286AC8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802BD50C 00286ACC  4E 80 00 20 */	blr 
+.endfn __num2dec
 
-.global __dec2num
-__dec2num:
+.fn __dec2num, global
 /* 802BD510 00286AD0  94 21 FE 80 */	stwu r1, -0x180(r1)
 /* 802BD514 00286AD4  7C 08 02 A6 */	mflr r0
 /* 802BD518 00286AD8  90 01 01 84 */	stw r0, 0x184(r1)
@@ -1778,6 +1777,7 @@ __dec2num:
 /* 802BDC50 00287210  7C 08 03 A6 */	mtlr r0
 /* 802BDC54 00287214  38 21 01 80 */	addi r1, r1, 0x180
 /* 802BDC58 00287218  4E 80 00 20 */	blr 
+.endfn __dec2num
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 .global lbl_8053F230

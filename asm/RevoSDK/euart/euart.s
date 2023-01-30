@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global EUARTInit
-EUARTInit:
+.fn EUARTInit, global
 /* 80313D70 002DD330  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80313D74 002DD334  7C 08 02 A6 */	mflr r0
 /* 80313D78 002DD338  90 01 00 24 */	stw r0, 0x24(r1)
@@ -73,10 +72,10 @@ EUARTInit:
 /* 80313E60 002DD420  7C 08 03 A6 */	mtlr r0
 /* 80313E64 002DD424  38 21 00 20 */	addi r1, r1, 0x20
 /* 80313E68 002DD428  4E 80 00 20 */	blr 
+.endfn EUARTInit
 
 .balign 16, 0
-.global InitializeUART
-InitializeUART:
+.fn InitializeUART, global
 /* 80313E70 002DD430  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80313E74 002DD434  7C 08 02 A6 */	mflr r0
 /* 80313E78 002DD438  90 01 00 14 */	stw r0, 0x14(r1)
@@ -97,10 +96,10 @@ InitializeUART:
 /* 80313EAC 002DD46C  7C 08 03 A6 */	mtlr r0
 /* 80313EB0 002DD470  38 21 00 10 */	addi r1, r1, 0x10
 /* 80313EB4 002DD474  4E 80 00 20 */	blr 
+.endfn InitializeUART
 
 .balign 16, 0
-.global WriteUARTN
-WriteUARTN:
+.fn WriteUARTN, global
 /* 80313EC0 002DD480  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80313EC4 002DD484  7C 08 02 A6 */	mflr r0
 /* 80313EC8 002DD488  90 01 00 34 */	stw r0, 0x34(r1)
@@ -259,6 +258,7 @@ WriteUARTN:
 /* 803140E4 002DD6A4  7C 08 03 A6 */	mtlr r0
 /* 803140E8 002DD6A8  38 21 00 30 */	addi r1, r1, 0x30
 /* 803140EC 002DD6AC  4E 80 00 20 */	blr 
+.endfn WriteUARTN
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

@@ -2,24 +2,23 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global SFX_SetCompoMode
-SFX_SetCompoMode:
+.fn SFX_SetCompoMode, global
 /* 803D4864 0039DE24  90 83 00 04 */	stw r4, 4(r3)
 /* 803D4868 0039DE28  4E 80 00 20 */	blr 
+.endfn SFX_SetCompoMode
 
-.global SFX_SetOutBufSize
-SFX_SetOutBufSize:
+.fn SFX_SetOutBufSize, global
 /* 803D486C 0039DE2C  90 83 00 08 */	stw r4, 8(r3)
 /* 803D4870 0039DE30  90 A3 00 0C */	stw r5, 0xc(r3)
 /* 803D4874 0039DE34  4E 80 00 20 */	blr 
+.endfn SFX_SetOutBufSize
 
-.global SFX_SetUnitWidth
-SFX_SetUnitWidth:
+.fn SFX_SetUnitWidth, global
 /* 803D4878 0039DE38  90 83 00 10 */	stw r4, 0x10(r3)
 /* 803D487C 0039DE3C  4E 80 00 20 */	blr 
+.endfn SFX_SetUnitWidth
 
-.global SFX_SetTagInf
-SFX_SetTagInf:
+.fn SFX_SetTagInf, global
 /* 803D4880 0039DE40  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D4884 0039DE44  7C 08 02 A6 */	mflr r0
 /* 803D4888 0039DE48  3C E0 80 52 */	lis r7, lbl_80520840@ha
@@ -58,9 +57,9 @@ SFX_SetTagInf:
 /* 803D4904 0039DEC4  7C 08 03 A6 */	mtlr r0
 /* 803D4908 0039DEC8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D490C 0039DECC  4E 80 00 20 */	blr 
+.endfn SFX_SetTagInf
 
-.global SFX_GetTagInf
-SFX_GetTagInf:
+.fn SFX_GetTagInf, global
 /* 803D4910 0039DED0  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 803D4914 0039DED4  2C 00 00 01 */	cmpwi r0, 1
 /* 803D4918 0039DED8  41 82 00 14 */	beq .L_803D492C
@@ -74,30 +73,30 @@ SFX_GetTagInf:
 /* 803D4934 0039DEF4  80 03 00 1C */	lwz r0, 0x1c(r3)
 /* 803D4938 0039DEF8  90 05 00 00 */	stw r0, 0(r5)
 /* 803D493C 0039DEFC  4E 80 00 20 */	blr 
+.endfn SFX_GetTagInf
 
-.global SFX_GetZfrmRange
-SFX_GetZfrmRange:
+.fn SFX_GetZfrmRange, global
 /* 803D4940 0039DF00  80 63 00 24 */	lwz r3, 0x24(r3)
 /* 803D4944 0039DF04  80 84 00 4C */	lwz r4, 0x4c(r4)
 /* 803D4948 0039DF08  48 00 16 4C */	b SFXZ_GetZfrmRange
+.endfn SFX_GetZfrmRange
 
-.global SFX_GetSplitField
-SFX_GetSplitField:
+.fn SFX_GetSplitField, global
 /* 803D494C 0039DF0C  80 63 00 58 */	lwz r3, 0x58(r3)
 /* 803D4950 0039DF10  4E 80 00 20 */	blr 
+.endfn SFX_GetSplitField
 
-.global SFX_GetProgOut
-SFX_GetProgOut:
+.fn SFX_GetProgOut, global
 /* 803D4954 0039DF14  80 63 00 5C */	lwz r3, 0x5c(r3)
 /* 803D4958 0039DF18  4E 80 00 20 */	blr 
+.endfn SFX_GetProgOut
 
-.global SFX_GetCnvBottomUp
-SFX_GetCnvBottomUp:
+.fn SFX_GetCnvBottomUp, global
 /* 803D495C 0039DF1C  80 63 00 64 */	lwz r3, 0x64(r3)
 /* 803D4960 0039DF20  4E 80 00 20 */	blr 
+.endfn SFX_GetCnvBottomUp
 
-.global SFX_ShiftYccPtrByPix
-SFX_ShiftYccPtrByPix:
+.fn SFX_ShiftYccPtrByPix, global
 /* 803D4964 0039DF24  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D4968 0039DF28  54 A6 0F FE */	srwi r6, r5, 0x1f
 /* 803D496C 0039DF2C  54 80 0F FE */	srwi r0, r4, 0x1f
@@ -142,6 +141,7 @@ SFX_ShiftYccPtrByPix:
 /* 803D4A08 0039DFC8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 803D4A0C 0039DFCC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803D4A10 0039DFD0  4E 80 00 20 */	blr 
+.endfn SFX_ShiftYccPtrByPix
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

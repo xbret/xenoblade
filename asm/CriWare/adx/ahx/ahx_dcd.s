@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-SKG_GenerateKey:
+.fn SKG_GenerateKey, local
 /* 8038D9E8 00356FA8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038D9EC 00356FAC  3D 20 80 5F */	lis r9, skg_init_count_1@ha
 /* 8038D9F0 00356FB0  BF 41 00 08 */	stmw r26, 8(r1)
@@ -511,28 +511,28 @@ SKG_GenerateKey:
 /* 8038E184 00357744  BB 41 00 08 */	lmw r26, 8(r1)
 /* 8038E188 00357748  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038E18C 0035774C  4E 80 00 20 */	blr 
+.endfn SKG_GenerateKey
 
 #why are these here?
-.global AHXSJD_SetupAtbl
-AHXSJD_SetupAtbl:
+.fn AHXSJD_SetupAtbl, global
 /* 8038E190 00357750  4B FF F8 38 */	b AHXDCD_SetupAtbl
+.endfn AHXSJD_SetupAtbl
 
-.global AHXSJD_SetupMtbl
-AHXSJD_SetupMtbl:
+.fn AHXSJD_SetupMtbl, global
 /* 8038E194 00357754  3C 80 80 5F */	lis r4, lbl_805E9B14@ha
 /* 8038E198 00357758  90 64 9B 14 */	stw r3, lbl_805E9B14@l(r4)
 /* 8038E19C 0035775C  4E 80 00 20 */	blr 
+.endfn AHXSJD_SetupMtbl
 
-.global AHXSJD_SetupFtbl
-AHXSJD_SetupFtbl:
+.fn AHXSJD_SetupFtbl, global
 /* 8038E1A0 00357760  4B FF E2 8C */	b AHXDCD_SetupFtbl
+.endfn AHXSJD_SetupFtbl
 
-.global AHXSJD_SetupWtbl
-AHXSJD_SetupWtbl:
+.fn AHXSJD_SetupWtbl, global
 /* 8038E1A4 00357764  4B FF E2 94 */	b AHXDCD_SetupWtbl
+.endfn AHXSJD_SetupWtbl
 
-.global AHXDCD_Init
-AHXDCD_Init:
+.fn AHXDCD_Init, global
 /* 8038E1A8 00357768  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8038E1AC 0035776C  7C 08 02 A6 */	mflr r0
 /* 8038E1B0 00357770  3C 60 80 5F */	lis r3, ahxdcd_init_cnt@ha
@@ -550,9 +550,9 @@ AHXDCD_Init:
 /* 8038E1DC 0035779C  7C 08 03 A6 */	mtlr r0
 /* 8038E1E0 003577A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038E1E4 003577A4  4E 80 00 20 */	blr 
+.endfn AHXDCD_Init
 
-.global AHXDCD_Finish
-AHXDCD_Finish:
+.fn AHXDCD_Finish, global
 /* 8038E1E8 003577A8  3C 60 80 5F */	lis r3, ahxdcd_init_cnt@ha
 /* 8038E1EC 003577AC  80 03 9B 18 */	lwz r0, ahxdcd_init_cnt@l(r3)
 /* 8038E1F0 003577B0  34 00 FF FF */	addic. r0, r0, -1
@@ -560,9 +560,9 @@ AHXDCD_Finish:
 /* 8038E1F8 003577B8  4C 82 00 20 */	bnelr 
 /* 8038E1FC 003577BC  4B FF E4 E0 */	b AHXSBF_Finish
 /* 8038E200 003577C0  4E 80 00 20 */	blr 
+.endfn AHXDCD_Finish
 
-.global AHXDCD_Create
-AHXDCD_Create:
+.fn AHXDCD_Create, global
 /* 8038E204 003577C4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038E208 003577C8  7C 08 02 A6 */	mflr r0
 /* 8038E20C 003577CC  38 A0 0B CC */	li r5, 0xbcc
@@ -616,9 +616,9 @@ AHXDCD_Create:
 /* 8038E2C0 00357880  7C 08 03 A6 */	mtlr r0
 /* 8038E2C4 00357884  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038E2C8 00357888  4E 80 00 20 */	blr 
+.endfn AHXDCD_Create
 
-.global AHXDCD_Destroy
-AHXDCD_Destroy:
+.fn AHXDCD_Destroy, global
 /* 8038E2CC 0035788C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8038E2D0 00357890  7C 08 02 A6 */	mflr r0
 /* 8038E2D4 00357894  90 01 00 14 */	stw r0, 0x14(r1)
@@ -641,9 +641,9 @@ AHXDCD_Destroy:
 /* 8038E314 003578D4  7C 08 03 A6 */	mtlr r0
 /* 8038E318 003578D8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038E31C 003578DC  4E 80 00 20 */	blr 
+.endfn AHXDCD_Destroy
 
-.global AHXDCD_Reset
-AHXDCD_Reset:
+.fn AHXDCD_Reset, global
 /* 8038E320 003578E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8038E324 003578E4  7C 08 02 A6 */	mflr r0
 /* 8038E328 003578E8  38 80 00 00 */	li r4, 0
@@ -698,9 +698,9 @@ AHXDCD_Reset:
 /* 8038E3E8 003579A8  7C 08 03 A6 */	mtlr r0
 /* 8038E3EC 003579AC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038E3F0 003579B0  4E 80 00 20 */	blr 
+.endfn AHXDCD_Reset
 
-.global AHXDCD_SetBsr
-AHXDCD_SetBsr:
+.fn AHXDCD_SetBsr, global
 /* 8038E3F4 003579B4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8038E3F8 003579B8  7C 08 02 A6 */	mflr r0
 /* 8038E3FC 003579BC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -716,9 +716,9 @@ AHXDCD_SetBsr:
 /* 8038E424 003579E4  7C 08 03 A6 */	mtlr r0
 /* 8038E428 003579E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038E42C 003579EC  4E 80 00 20 */	blr 
+.endfn AHXDCD_SetBsr
 
-.global AHXDCD_DecodeHeader
-AHXDCD_DecodeHeader:
+.fn AHXDCD_DecodeHeader, global
 /* 8038E430 003579F0  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8038E434 003579F4  7C 08 02 A6 */	mflr r0
 /* 8038E438 003579F8  90 01 00 64 */	stw r0, 0x64(r1)
@@ -851,9 +851,9 @@ AHXDCD_DecodeHeader:
 /* 8038E614 00357BD4  7C 08 03 A6 */	mtlr r0
 /* 8038E618 00357BD8  38 21 00 60 */	addi r1, r1, 0x60
 /* 8038E61C 00357BDC  4E 80 00 20 */	blr 
+.endfn AHXDCD_DecodeHeader
 
-.global AHXDCD_DecodeFrmHdr
-AHXDCD_DecodeFrmHdr:
+.fn AHXDCD_DecodeFrmHdr, global
 /* 8038E620 00357BE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8038E624 00357BE4  7C 08 02 A6 */	mflr r0
 /* 8038E628 00357BE8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -917,17 +917,17 @@ AHXDCD_DecodeFrmHdr:
 /* 8038E6F8 00357CB8  7C 08 03 A6 */	mtlr r0
 /* 8038E6FC 00357CBC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038E700 00357CC0  4E 80 00 20 */	blr 
+.endfn AHXDCD_DecodeFrmHdr
 
-.global AHXDCD_IsEof
-AHXDCD_IsEof:
+.fn AHXDCD_IsEof, global
 /* 8038E704 00357CC4  80 63 03 4C */	lwz r3, 0x34c(r3)
 /* 8038E708 00357CC8  38 03 FF F4 */	addi r0, r3, -12
 /* 8038E70C 00357CCC  7C 00 00 34 */	cntlzw r0, r0
 /* 8038E710 00357CD0  54 03 D9 7E */	srwi r3, r0, 5
 /* 8038E714 00357CD4  4E 80 00 20 */	blr 
+.endfn AHXDCD_IsEof
 
-.global AHXDCD_DecodeData
-AHXDCD_DecodeData:
+.fn AHXDCD_DecodeData, global
 /* 8038E718 00357CD8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038E71C 00357CDC  7C 08 02 A6 */	mflr r0
 /* 8038E720 00357CE0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -978,22 +978,22 @@ AHXDCD_DecodeData:
 /* 8038E7C8 00357D88  7C 08 03 A6 */	mtlr r0
 /* 8038E7CC 00357D8C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038E7D0 00357D90  4E 80 00 20 */	blr 
+.endfn AHXDCD_DecodeData
 
 #AHXSJD_GetOutBps? renamed for now
-.global AHXDCD_GetOutBps
-AHXDCD_GetOutBps:
+.fn AHXDCD_GetOutBps, global
 /* 8038E7D4 00357D94  88 63 03 4B */	lbz r3, 0x34b(r3)
 /* 8038E7D8 00357D98  7C 63 07 74 */	extsb r3, r3
 /* 8038E7DC 00357D9C  4E 80 00 20 */	blr 
+.endfn AHXDCD_GetOutBps
 
-.global AHXDCD_GetOutSmpl
-AHXDCD_GetOutSmpl:
+.fn AHXDCD_GetOutSmpl, global
 /* 8038E7E0 00357DA0  38 60 00 60 */	li r3, 0x60
 /* 8038E7E4 00357DA4  4E 80 00 20 */	blr 
+.endfn AHXDCD_GetOutSmpl
 
 #not sure
-.global AHXDCD_GetTotalNumSmpl
-AHXDCD_GetTotalNumSmpl:
+.fn AHXDCD_GetTotalNumSmpl, global
 /* 8038E7E8 00357DA8  88 03 03 49 */	lbz r0, 0x349(r3)
 /* 8038E7EC 00357DAC  7C 00 07 75 */	extsb. r0, r0
 /* 8038E7F0 00357DB0  40 82 00 0C */	bne .L_8038E7FC
@@ -1002,15 +1002,15 @@ AHXDCD_GetTotalNumSmpl:
 .L_8038E7FC:
 /* 8038E7FC 00357DBC  80 63 03 94 */	lwz r3, 0x394(r3)
 /* 8038E800 00357DC0  4E 80 00 20 */	blr
+.endfn AHXDCD_GetTotalNumSmpl
 
-.global AHXDCD_SetExtPrm
-AHXDCD_SetExtPrm:
+.fn AHXDCD_SetExtPrm, global
 /* 8038E804 00357DC4  38 A0 00 08 */	li r5, 8
 /* 8038E808 00357DC8  38 63 0B C4 */	addi r3, r3, 0xbc4
 /* 8038E80C 00357DCC  4B C7 57 F4 */	b memcpy
+.endfn AHXDCD_SetExtPrm
 
-.global AHXDCD_DecodeBhdr
-AHXDCD_DecodeBhdr:
+.fn AHXDCD_DecodeBhdr, global
 /* 8038E810 00357DD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8038E814 00357DD4  7C 08 02 A6 */	mflr r0
 /* 8038E818 00357DD8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1086,9 +1086,9 @@ AHXDCD_DecodeBhdr:
 /* 8038E924 00357EE4  7C 08 03 A6 */	mtlr r0
 /* 8038E928 00357EE8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038E92C 00357EEC  4E 80 00 20 */	blr 
+.endfn AHXDCD_DecodeBhdr
 
-.global AHXDCD_BhdrToDinf
-AHXDCD_BhdrToDinf:
+.fn AHXDCD_BhdrToDinf, global
 /* 8038E930 00357EF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8038E934 00357EF4  7C 08 02 A6 */	mflr r0
 /* 8038E938 00357EF8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1157,9 +1157,9 @@ AHXDCD_BhdrToDinf:
 /* 8038EA18 00357FD8  7C 08 03 A6 */	mtlr r0
 /* 8038EA1C 00357FDC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038EA20 00357FE0  4E 80 00 20 */	blr 
+.endfn AHXDCD_BhdrToDinf
 
-.global AHXDCD_DecodeBitalloc2
-AHXDCD_DecodeBitalloc2:
+.fn AHXDCD_DecodeBitalloc2, global
 /* 8038EA24 00357FE4  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8038EA28 00357FE8  7C 08 02 A6 */	mflr r0
 /* 8038EA2C 00357FEC  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1273,9 +1273,9 @@ AHXDCD_DecodeBitalloc2:
 /* 8038EBA8 00358168  7C 08 03 A6 */	mtlr r0
 /* 8038EBAC 0035816C  38 21 00 40 */	addi r1, r1, 0x40
 /* 8038EBB0 00358170  4E 80 00 20 */	blr 
+.endfn AHXDCD_DecodeBitalloc2
 
-.global AHXDCD_DecodeScale2
-AHXDCD_DecodeScale2:
+.fn AHXDCD_DecodeScale2, global
 /* 8038EBB4 00358174  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8038EBB8 00358178  7C 08 02 A6 */	mflr r0
 /* 8038EBBC 0035817C  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1549,9 +1549,9 @@ AHXDCD_DecodeScale2:
 /* 8038EF74 00358534  7C 08 03 A6 */	mtlr r0
 /* 8038EF78 00358538  38 21 00 40 */	addi r1, r1, 0x40
 /* 8038EF7C 0035853C  4E 80 00 20 */	blr 
+.endfn AHXDCD_DecodeScale2
 
-.global AHXDCD_GetSample_Dequantize_Denormalize
-AHXDCD_GetSample_Dequantize_Denormalize:
+.fn AHXDCD_GetSample_Dequantize_Denormalize, global
 /* 8038EF80 00358540  94 21 FF 50 */	stwu r1, -0xb0(r1)
 /* 8038EF84 00358544  7C 08 02 A6 */	mflr r0
 /* 8038EF88 00358548  90 01 00 B4 */	stw r0, 0xb4(r1)
@@ -1913,6 +1913,7 @@ AHXDCD_GetSample_Dequantize_Denormalize:
 /* 8038F4D4 00358A94  7C 08 03 A6 */	mtlr r0
 /* 8038F4D8 00358A98  38 21 00 B0 */	addi r1, r1, 0xb0
 /* 8038F4DC 00358A9C  4E 80 00 20 */	blr 
+.endfn AHXDCD_GetSample_Dequantize_Denormalize
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

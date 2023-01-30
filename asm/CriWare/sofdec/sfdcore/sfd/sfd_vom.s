@@ -3,18 +3,17 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global SFVOM_Init
-SFVOM_Init:
+.fn SFVOM_Init, global
 /* 803CEC9C 0039825C  38 60 00 00 */	li r3, 0
 /* 803CECA0 00398260  4E 80 00 20 */	blr 
+.endfn SFVOM_Init
 
-.global SFVOM_Finish
-SFVOM_Finish:
+.fn SFVOM_Finish, global
 /* 803CECA4 00398264  38 60 00 00 */	li r3, 0
 /* 803CECA8 00398268  4E 80 00 20 */	blr 
+.endfn SFVOM_Finish
 
-.global SFVOM_ExecServer
-SFVOM_ExecServer:
+.fn SFVOM_ExecServer, global
 /* 803CECAC 0039826C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CECB0 00398270  7C 08 02 A6 */	mflr r0
 /* 803CECB4 00398274  38 80 00 05 */	li r4, 5
@@ -80,51 +79,51 @@ SFVOM_ExecServer:
 /* 803CED8C 0039834C  7C 08 03 A6 */	mtlr r0
 /* 803CED90 00398350  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CED94 00398354  4E 80 00 20 */	blr 
+.endfn SFVOM_ExecServer
 
-.global SFVOM_Create
-SFVOM_Create:
+.fn SFVOM_Create, global
 /* 803CED98 00398358  38 60 00 00 */	li r3, 0
 /* 803CED9C 0039835C  4E 80 00 20 */	blr 
+.endfn SFVOM_Create
 
-.global SFVOM_Destroy
-SFVOM_Destroy:
+.fn SFVOM_Destroy, global
 /* 803CEDA0 00398360  38 60 00 00 */	li r3, 0
 /* 803CEDA4 00398364  4E 80 00 20 */	blr 
+.endfn SFVOM_Destroy
 
-.global SFVOM_RequestStop
-SFVOM_RequestStop:
+.fn SFVOM_RequestStop, global
 /* 803CEDA8 00398368  38 60 00 00 */	li r3, 0
 /* 803CEDAC 0039836C  4E 80 00 20 */	blr 
+.endfn SFVOM_RequestStop
 
-.global SFVOM_Start
-SFVOM_Start:
+.fn SFVOM_Start, global
 /* 803CEDB0 00398370  38 60 00 00 */	li r3, 0
 /* 803CEDB4 00398374  4E 80 00 20 */	blr 
+.endfn SFVOM_Start
 
-.global SFVOM_Stop
-SFVOM_Stop:
+.fn SFVOM_Stop, global
 /* 803CEDB8 00398378  38 60 00 00 */	li r3, 0
 /* 803CEDBC 0039837C  4E 80 00 20 */	blr 
+.endfn SFVOM_Stop
 
-.global SFVOM_Pause
-SFVOM_Pause:
+.fn SFVOM_Pause, global
 /* 803CEDC0 00398380  38 60 00 00 */	li r3, 0
 /* 803CEDC4 00398384  4E 80 00 20 */	blr 
+.endfn SFVOM_Pause
 
-.global SFVOM_GetWrite
-SFVOM_GetWrite:
+.fn SFVOM_GetWrite, global
 /* 803CEDC8 00398388  3C 80 FF 00 */	lis r4, 0xFF000701@ha
 /* 803CEDCC 0039838C  38 84 07 01 */	addi r4, r4, 0xFF000701@l
 /* 803CEDD0 00398390  4B FF 1E 84 */	b SFLIB_SetErr
+.endfn SFVOM_GetWrite
 
-.global SFVOM_AddWrite
-SFVOM_AddWrite:
+.fn SFVOM_AddWrite, global
 /* 803CEDD4 00398394  3C 80 FF 00 */	lis r4, 0xFF000701@ha
 /* 803CEDD8 00398398  38 84 07 01 */	addi r4, r4, 0xFF000701@l
 /* 803CEDDC 0039839C  4B FF 1E 78 */	b SFLIB_SetErr
+.endfn SFVOM_AddWrite
 
-.global SFVOM_GetRead
-SFVOM_GetRead:
+.fn SFVOM_GetRead, global
 /* 803CEDE0 003983A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CEDE4 003983A4  7C 08 02 A6 */	mflr r0
 /* 803CEDE8 003983A8  7C 87 23 78 */	mr r7, r4
@@ -153,19 +152,20 @@ SFVOM_GetRead:
 /* 803CEE38 003983F8  7C 08 03 A6 */	mtlr r0
 /* 803CEE3C 003983FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CEE40 00398400  4E 80 00 20 */	blr 
+.endfn SFVOM_GetRead
 
-.global SFVOM_AddRead
-SFVOM_AddRead:
+.fn SFVOM_AddRead, global
 /* 803CEE44 00398404  7C 80 23 78 */	mr r0, r4
 /* 803CEE48 00398408  80 83 21 78 */	lwz r4, 0x2178(r3)
 /* 803CEE4C 0039840C  7C A6 2B 78 */	mr r6, r5
 /* 803CEE50 00398410  7C 05 03 78 */	mr r5, r0
 /* 803CEE54 00398414  4B FF 0C A0 */	b SFBUF_VfrmAddRead
+.endfn SFVOM_AddRead
 
-.global SFVOM_Seek
-SFVOM_Seek:
+.fn SFVOM_Seek, global
 /* 803CEE58 00398418  38 60 00 00 */	li r3, 0
 /* 803CEE5C 0039841C  4E 80 00 20 */	blr 
+.endfn SFVOM_Seek
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

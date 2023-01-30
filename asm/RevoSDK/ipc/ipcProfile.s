@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global IPCiProfInit
-IPCiProfInit:
+.fn IPCiProfInit, global
 /* 803448E0 0030DEA0  3C A0 80 5D */	lis r5, lbl_805CE580@ha
 /* 803448E4 0030DEA4  3C C0 80 5D */	lis r6, lbl_805CE500@ha
 /* 803448E8 0030DEA8  38 80 00 00 */	li r4, 0
@@ -52,10 +51,10 @@ IPCiProfInit:
 /* 8034498C 0030DF4C  38 C6 00 40 */	addi r6, r6, 0x40
 /* 80344990 0030DF50  42 00 FF 78 */	bdnz .L_80344908
 /* 80344994 0030DF54  4E 80 00 20 */	blr 
+.endfn IPCiProfInit
 
 .balign 16, 0
-.global IPCiProfQueueReq
-IPCiProfQueueReq:
+.fn IPCiProfQueueReq, global
 /* 803449A0 0030DF60  80 CD B8 10 */	lwz r6, lbl_80667990@sda21(r13)
 /* 803449A4 0030DF64  3D 00 80 5D */	lis r8, lbl_805CE580@ha
 /* 803449A8 0030DF68  80 AD B8 14 */	lwz r5, lbl_80667994@sda21(r13)
@@ -91,18 +90,18 @@ IPCiProfQueueReq:
 /* 80344A18 0030DFD8  38 E7 00 01 */	addi r7, r7, 1
 /* 80344A1C 0030DFDC  42 00 FF BC */	bdnz .L_803449D8
 /* 80344A20 0030DFE0  4E 80 00 20 */	blr 
+.endfn IPCiProfQueueReq
 
 .balign 16, 0
-.global IPCiProfAck
-IPCiProfAck:
+.fn IPCiProfAck, global
 /* 80344A30 0030DFF0  80 6D B8 14 */	lwz r3, lbl_80667994@sda21(r13)
 /* 80344A34 0030DFF4  38 03 FF FF */	addi r0, r3, -1
 /* 80344A38 0030DFF8  90 0D B8 14 */	stw r0, lbl_80667994@sda21(r13)
 /* 80344A3C 0030DFFC  4E 80 00 20 */	blr 
+.endfn IPCiProfAck
 
 .balign 16, 0
-.global IPCiProfReply
-IPCiProfReply:
+.fn IPCiProfReply, global
 /* 80344A40 0030E000  80 AD B8 10 */	lwz r5, lbl_80667990@sda21(r13)
 /* 80344A44 0030E004  3C C0 80 5D */	lis r6, lbl_805CE580@ha
 /* 80344A48 0030E008  3C E0 80 5D */	lis r7, lbl_805CE500@ha
@@ -136,6 +135,7 @@ IPCiProfReply:
 /* 80344AB0 0030E070  38 A5 00 01 */	addi r5, r5, 1
 /* 80344AB4 0030E074  42 00 FF B4 */	bdnz .L_80344A68
 /* 80344AB8 0030E078  4E 80 00 20 */	blr 
+.endfn IPCiProfReply
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

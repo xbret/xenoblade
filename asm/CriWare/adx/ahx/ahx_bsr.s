@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global AHXBSR_Create
-AHXBSR_Create:
+.fn AHXBSR_Create, global
 /* 8038D300 003568C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038D304 003568C4  7C 08 02 A6 */	mflr r0
 /* 8038D308 003568C8  28 05 00 34 */	cmplwi r5, 0x34
@@ -60,18 +59,18 @@ AHXBSR_Create:
 /* 8038D3CC 0035698C  7C 08 03 A6 */	mtlr r0
 /* 8038D3D0 00356990  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038D3D4 00356994  4E 80 00 20 */	blr 
+.endfn AHXBSR_Create
 
-.global AHXBSR_Destroy
-AHXBSR_Destroy:
+.fn AHXBSR_Destroy, global
 /* 8038D3D8 00356998  2C 03 00 00 */	cmpwi r3, 0
 /* 8038D3DC 0035699C  4D 82 00 20 */	beqlr 
 /* 8038D3E0 003569A0  38 80 00 00 */	li r4, 0
 /* 8038D3E4 003569A4  38 A0 00 2C */	li r5, 0x2c
 /* 8038D3E8 003569A8  4B C7 6F 68 */	b memset
 /* 8038D3EC 003569AC  4E 80 00 20 */	blr 
+.endfn AHXBSR_Destroy
 
-.global AHXBSR_Restruct
-AHXBSR_Restruct:
+.fn AHXBSR_Restruct, global
 /* 8038D3F0 003569B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038D3F4 003569B4  7C 08 02 A6 */	mflr r0
 /* 8038D3F8 003569B8  2C 03 00 00 */	cmpwi r3, 0
@@ -122,9 +121,9 @@ AHXBSR_Restruct:
 /* 8038D4A8 00356A68  7C 08 03 A6 */	mtlr r0
 /* 8038D4AC 00356A6C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038D4B0 00356A70  4E 80 00 20 */	blr 
+.endfn AHXBSR_Restruct
 
-.global ahxbsr_get_data
-ahxbsr_get_data:
+.fn ahxbsr_get_data, global
 /* 8038D4B4 00356A74  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038D4B8 00356A78  7C 08 02 A6 */	mflr r0
 /* 8038D4BC 00356A7C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -281,9 +280,9 @@ ahxbsr_get_data:
 /* 8038D6F0 00356CB0  7C 08 03 A6 */	mtlr r0
 /* 8038D6F4 00356CB4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038D6F8 00356CB8  4E 80 00 20 */	blr 
+.endfn ahxbsr_get_data
 
-.global AHXBSR_IsDataAvailable
-AHXBSR_IsDataAvailable:
+.fn AHXBSR_IsDataAvailable, global
 /* 8038D6FC 00356CBC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8038D700 00356CC0  7C 08 02 A6 */	mflr r0
 /* 8038D704 00356CC4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -310,9 +309,9 @@ AHXBSR_IsDataAvailable:
 /* 8038D74C 00356D0C  7C 08 03 A6 */	mtlr r0
 /* 8038D750 00356D10  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038D754 00356D14  4E 80 00 20 */	blr 
+.endfn AHXBSR_IsDataAvailable
 
-.global AHXBSR_GetBitStm
-AHXBSR_GetBitStm:
+.fn AHXBSR_GetBitStm, global
 /* 8038D758 00356D18  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8038D75C 00356D1C  7C 08 02 A6 */	mflr r0
 /* 8038D760 00356D20  90 01 00 14 */	stw r0, 0x14(r1)
@@ -355,14 +354,14 @@ AHXBSR_GetBitStm:
 /* 8038D7E8 00356DA8  7C 08 03 A6 */	mtlr r0
 /* 8038D7EC 00356DAC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8038D7F0 00356DB0  4E 80 00 20 */	blr 
+.endfn AHXBSR_GetBitStm
 
-.global AHXBSR_Tell
-AHXBSR_Tell:
+.fn AHXBSR_Tell, global
 /* 8038D7F4 00356DB4  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 8038D7F8 00356DB8  4E 80 00 20 */	blr 
+.endfn AHXBSR_Tell
 
-.global AHXBSR_SearchSync
-AHXBSR_SearchSync:
+.fn AHXBSR_SearchSync, global
 /* 8038D7FC 00356DBC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8038D800 00356DC0  7C 08 02 A6 */	mflr r0
 /* 8038D804 00356DC4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -494,6 +493,7 @@ AHXBSR_SearchSync:
 /* 8038D9BC 00356F7C  7C 08 03 A6 */	mtlr r0
 /* 8038D9C0 00356F80  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038D9C4 00356F84  4E 80 00 20 */	blr
+.endfn AHXBSR_SearchSync
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0

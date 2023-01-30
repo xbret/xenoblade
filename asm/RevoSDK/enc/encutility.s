@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global ENCiCheckParameters
-ENCiCheckParameters:
+.fn ENCiCheckParameters, global
 /* 80312CB0 002DC270  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80312CB4 002DC274  7C 08 02 A6 */	mflr r0
 /* 80312CB8 002DC278  90 01 00 34 */	stw r0, 0x34(r1)
@@ -76,10 +75,10 @@ ENCiCheckParameters:
 /* 80312D9C 002DC35C  7C 08 03 A6 */	mtlr r0
 /* 80312DA0 002DC360  38 21 00 30 */	addi r1, r1, 0x30
 /* 80312DA4 002DC364  4E 80 00 20 */	blr 
+.endfn ENCiCheckParameters
 
 .balign 16, 0
-.global ENCiCheckBreakType
-ENCiCheckBreakType:
+.fn ENCiCheckBreakType, global
 /* 80312DB0 002DC370  28 03 00 0A */	cmplwi r3, 0xa
 /* 80312DB4 002DC374  40 82 00 0C */	bne bl_80312DC0
 /* 80312DB8 002DC378  38 60 00 01 */	li r3, 1
@@ -95,10 +94,10 @@ bl_80312DC0:
 bl_80312DDC:
 /* 80312DDC 002DC39C  38 60 00 00 */	li r3, 0
 /* 80312DE0 002DC3A0  4E 80 00 20 */	blr 
+.endfn ENCiCheckBreakType
 
 .balign 16, 0
-.global ENCiWriteBreakType
-ENCiWriteBreakType:
+.fn ENCiWriteBreakType, global
 /* 80312DF0 002DC3B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80312DF4 002DC3B4  7C 08 02 A6 */	mflr r0
 /* 80312DF8 002DC3B8  2C 06 00 00 */	cmpwi r6, 0
@@ -172,6 +171,7 @@ ENCiWriteBreakType:
 /* 80312EE4 002DC4A4  7C 08 03 A6 */	mtlr r0
 /* 80312EE8 002DC4A8  38 21 00 20 */	addi r1, r1, 0x20
 /* 80312EEC 002DC4AC  4E 80 00 20 */	blr 
+.endfn ENCiWriteBreakType
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

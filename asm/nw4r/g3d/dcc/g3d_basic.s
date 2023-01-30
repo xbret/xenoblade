@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global CalcTexMtx_Basic__Q44nw4r3g3d6detail3dccFPQ34nw4r4math5MTX34bRCQ34nw4r3g3d6TexSrtQ44nw4r3g3d6TexSrt4Flag
-CalcTexMtx_Basic__Q44nw4r3g3d6detail3dccFPQ34nw4r4math5MTX34bRCQ34nw4r3g3d6TexSrtQ44nw4r3g3d6TexSrt4Flag:
+.fn CalcTexMtx_Basic__Q44nw4r3g3d6detail3dccFPQ34nw4r4math5MTX34bRCQ34nw4r3g3d6TexSrtQ44nw4r3g3d6TexSrt4Flag, global
 /* 803F1E18 003BB3D8  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803F1E1C 003BB3DC  7C 08 02 A6 */	mflr r0
 /* 803F1E20 003BB3E0  90 01 00 54 */	stw r0, 0x54(r1)
@@ -95,9 +94,9 @@ CalcTexMtx_Basic__Q44nw4r3g3d6detail3dccFPQ34nw4r4math5MTX34bRCQ34nw4r3g3d6TexSr
 /* 803F1F68 003BB528  7C 08 03 A6 */	mtlr r0
 /* 803F1F6C 003BB52C  38 21 00 50 */	addi r1, r1, 0x50
 /* 803F1F70 003BB530  4E 80 00 20 */	blr 
+.endfn CalcTexMtx_Basic__Q44nw4r3g3d6detail3dccFPQ34nw4r4math5MTX34bRCQ34nw4r3g3d6TexSrtQ44nw4r3g3d6TexSrt4Flag
 
-.global CalcWorldMtx_Basic__Q44nw4r3g3d6detail3dccFPQ34nw4r4math5MTX34PQ34nw4r4math4VEC3PCQ34nw4r4math5MTX34PCQ34nw4r4math4VEC3UlPCQ34nw4r3g3d12ChrAnmResult
-CalcWorldMtx_Basic__Q44nw4r3g3d6detail3dccFPQ34nw4r4math5MTX34PQ34nw4r4math4VEC3PCQ34nw4r4math5MTX34PCQ34nw4r4math4VEC3UlPCQ34nw4r3g3d12ChrAnmResult:
+.fn CalcWorldMtx_Basic__Q44nw4r3g3d6detail3dccFPQ34nw4r4math5MTX34PQ34nw4r4math4VEC3PCQ34nw4r4math5MTX34PCQ34nw4r4math4VEC3UlPCQ34nw4r3g3d12ChrAnmResult, global
 /* 803F1F74 003BB534  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 803F1F78 003BB538  7C 08 02 A6 */	mflr r0
 /* 803F1F7C 003BB53C  90 01 00 64 */	stw r0, 0x64(r1)
@@ -198,6 +197,7 @@ CalcWorldMtx_Basic__Q44nw4r3g3d6detail3dccFPQ34nw4r4math5MTX34PQ34nw4r4math4VEC3
 /* 803F20D0 003BB690  7C 08 03 A6 */	mtlr r0
 /* 803F20D4 003BB694  38 21 00 60 */	addi r1, r1, 0x60
 /* 803F20D8 003BB698  4E 80 00 20 */	blr
+.endfn CalcWorldMtx_Basic__Q44nw4r3g3d6detail3dccFPQ34nw4r4math5MTX34PQ34nw4r4math4VEC3PCQ34nw4r4math5MTX34PCQ34nw4r4math4VEC3UlPCQ34nw4r3g3d12ChrAnmResult
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

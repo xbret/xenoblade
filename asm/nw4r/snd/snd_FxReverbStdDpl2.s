@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __ct__Q34nw4r3snd15FxReverbStdDpl2Fv
-__ct__Q34nw4r3snd15FxReverbStdDpl2Fv:
+.fn __ct__Q34nw4r3snd15FxReverbStdDpl2Fv, global
 /* 804165B0 003DFB70  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 804165B4 003DFB74  7C 08 02 A6 */	mflr r0
 /* 804165B8 003DFB78  3C A0 80 57 */	lis r5, lbl_8056E0C8@ha
@@ -53,9 +52,9 @@ __ct__Q34nw4r3snd15FxReverbStdDpl2Fv:
 /* 80416668 003DFC28  7C 08 03 A6 */	mtlr r0
 /* 8041666C 003DFC2C  38 21 00 40 */	addi r1, r1, 0x40
 /* 80416670 003DFC30  4E 80 00 20 */	blr 
+.endfn __ct__Q34nw4r3snd15FxReverbStdDpl2Fv
 
-.global GetRequiredMemSize__Q34nw4r3snd15FxReverbStdDpl2Fv
-GetRequiredMemSize__Q34nw4r3snd15FxReverbStdDpl2Fv:
+.fn GetRequiredMemSize__Q34nw4r3snd15FxReverbStdDpl2Fv, global
 /* 80416674 003DFC34  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80416678 003DFC38  7C 08 02 A6 */	mflr r0
 /* 8041667C 003DFC3C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -78,19 +77,19 @@ GetRequiredMemSize__Q34nw4r3snd15FxReverbStdDpl2Fv:
 /* 804166BC 003DFC7C  7C 08 03 A6 */	mtlr r0
 /* 804166C0 003DFC80  38 21 00 10 */	addi r1, r1, 0x10
 /* 804166C4 003DFC84  4E 80 00 20 */	blr 
+.endfn GetRequiredMemSize__Q34nw4r3snd15FxReverbStdDpl2Fv
 
-.global AssignWorkBuffer__Q34nw4r3snd15FxReverbStdDpl2FPvUl
-AssignWorkBuffer__Q34nw4r3snd15FxReverbStdDpl2FPvUl:
+.fn AssignWorkBuffer__Q34nw4r3snd15FxReverbStdDpl2FPvUl, global
 /* 804166C8 003DFC88  38 63 00 14 */	addi r3, r3, 0x14
 /* 804166CC 003DFC8C  4B FF AE E8 */	b CreateHeap__Q44nw4r3snd6detail8AxfxImplFPvUl
+.endfn AssignWorkBuffer__Q34nw4r3snd15FxReverbStdDpl2FPvUl
 
-.global ReleaseWorkBuffer__Q34nw4r3snd15FxReverbStdDpl2Fv
-ReleaseWorkBuffer__Q34nw4r3snd15FxReverbStdDpl2Fv:
+.fn ReleaseWorkBuffer__Q34nw4r3snd15FxReverbStdDpl2Fv, global
 /* 804166D0 003DFC90  38 63 00 14 */	addi r3, r3, 0x14
 /* 804166D4 003DFC94  4B FF AF 48 */	b DestroyHeap__Q44nw4r3snd6detail8AxfxImplFv
+.endfn ReleaseWorkBuffer__Q34nw4r3snd15FxReverbStdDpl2Fv
 
-.global StartUp__Q34nw4r3snd15FxReverbStdDpl2Fv
-StartUp__Q34nw4r3snd15FxReverbStdDpl2Fv:
+.fn StartUp__Q34nw4r3snd15FxReverbStdDpl2Fv, global
 /* 804166D8 003DFC98  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804166DC 003DFC9C  7C 08 02 A6 */	mflr r0
 /* 804166E0 003DFCA0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -172,9 +171,9 @@ StartUp__Q34nw4r3snd15FxReverbStdDpl2Fv:
 /* 804167F4 003DFDB4  7C 08 03 A6 */	mtlr r0
 /* 804167F8 003DFDB8  38 21 00 20 */	addi r1, r1, 0x20
 /* 804167FC 003DFDBC  4E 80 00 20 */	blr 
+.endfn StartUp__Q34nw4r3snd15FxReverbStdDpl2Fv
 
-.global Shutdown__Q34nw4r3snd15FxReverbStdDpl2Fv
-Shutdown__Q34nw4r3snd15FxReverbStdDpl2Fv:
+.fn Shutdown__Q34nw4r3snd15FxReverbStdDpl2Fv, global
 /* 80416800 003DFDC0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80416804 003DFDC4  7C 08 02 A6 */	mflr r0
 /* 80416808 003DFDC8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -209,9 +208,9 @@ Shutdown__Q34nw4r3snd15FxReverbStdDpl2Fv:
 /* 80416870 003DFE30  7C 08 03 A6 */	mtlr r0
 /* 80416874 003DFE34  38 21 00 20 */	addi r1, r1, 0x20
 /* 80416878 003DFE38  4E 80 00 20 */	blr 
+.endfn Shutdown__Q34nw4r3snd15FxReverbStdDpl2Fv
 
-.global SetParam__Q34nw4r3snd15FxReverbStdDpl2FRCQ44nw4r3snd6detail16FxReverbStdParam
-SetParam__Q34nw4r3snd15FxReverbStdDpl2FRCQ44nw4r3snd6detail16FxReverbStdParam:
+.fn SetParam__Q34nw4r3snd15FxReverbStdDpl2FRCQ44nw4r3snd6detail16FxReverbStdParam, global
 /* 8041687C 003DFE3C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80416880 003DFE40  7C 08 02 A6 */	mflr r0
 /* 80416884 003DFE44  C0 44 00 18 */	lfs f2, 0x18(r4)
@@ -445,9 +444,9 @@ SetParam__Q34nw4r3snd15FxReverbStdDpl2FRCQ44nw4r3snd6detail16FxReverbStdParam:
 /* 80416B8C 003E014C  7C 08 03 A6 */	mtlr r0
 /* 80416B90 003E0150  38 21 00 20 */	addi r1, r1, 0x20
 /* 80416B94 003E0154  4E 80 00 20 */	blr 
+.endfn SetParam__Q34nw4r3snd15FxReverbStdDpl2FRCQ44nw4r3snd6detail16FxReverbStdParam
 
-.global UpdateBuffer__Q34nw4r3snd15FxReverbStdDpl2FiPPvUlQ34nw4r3snd12SampleFormatfQ34nw4r3snd10OutputMode
-UpdateBuffer__Q34nw4r3snd15FxReverbStdDpl2FiPPvUlQ34nw4r3snd12SampleFormatfQ34nw4r3snd10OutputMode:
+.fn UpdateBuffer__Q34nw4r3snd15FxReverbStdDpl2FiPPvUlQ34nw4r3snd12SampleFormatfQ34nw4r3snd10OutputMode, global
 /* 80416B98 003E0158  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80416B9C 003E015C  7C 08 02 A6 */	mflr r0
 /* 80416BA0 003E0160  7C 64 1B 78 */	mr r4, r3
@@ -490,9 +489,9 @@ UpdateBuffer__Q34nw4r3snd15FxReverbStdDpl2FiPPvUlQ34nw4r3snd12SampleFormatfQ34nw
 /* 80416C2C 003E01EC  7C 08 03 A6 */	mtlr r0
 /* 80416C30 003E01F0  38 21 00 30 */	addi r1, r1, 0x30
 /* 80416C34 003E01F4  4E 80 00 20 */	blr 
+.endfn UpdateBuffer__Q34nw4r3snd15FxReverbStdDpl2FiPPvUlQ34nw4r3snd12SampleFormatfQ34nw4r3snd10OutputMode
 
-.global OnChangeOutputMode__Q34nw4r3snd15FxReverbStdDpl2Fv
-OnChangeOutputMode__Q34nw4r3snd15FxReverbStdDpl2Fv:
+.fn OnChangeOutputMode__Q34nw4r3snd15FxReverbStdDpl2Fv, global
 /* 80416C38 003E01F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80416C3C 003E01FC  7C 08 02 A6 */	mflr r0
 /* 80416C40 003E0200  90 01 00 14 */	stw r0, 0x14(r1)
@@ -522,6 +521,7 @@ OnChangeOutputMode__Q34nw4r3snd15FxReverbStdDpl2Fv:
 /* 80416C9C 003E025C  7C 08 03 A6 */	mtlr r0
 /* 80416CA0 003E0260  38 21 00 10 */	addi r1, r1, 0x10
 /* 80416CA4 003E0264  4E 80 00 20 */	blr 
+.endfn OnChangeOutputMode__Q34nw4r3snd15FxReverbStdDpl2Fv
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

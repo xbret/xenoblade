@@ -3,18 +3,17 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global BTUInterruptHandler
-BTUInterruptHandler:
+.fn BTUInterruptHandler, global
 /* 802DE080 002A7640  3C 80 80 5C */	lis r4, lbl_805BE4A0@ha
 /* 802DE084 002A7644  3C 60 80 2E */	lis r3, btu_task_msg_handler@ha
 /* 802DE088 002A7648  38 84 E4 A0 */	addi r4, r4, lbl_805BE4A0@l
 /* 802DE08C 002A764C  38 63 E2 30 */	addi r3, r3, btu_task_msg_handler@l
 /* 802DE090 002A7650  38 84 10 00 */	addi r4, r4, 0x1000
 /* 802DE094 002A7654  48 07 69 CC */	b OSSwitchFiber
+.endfn BTUInterruptHandler
 
 .balign 16, 0
-.global BTA_Init
-BTA_Init:
+.fn BTA_Init, global
 /* 802DE0A0 002A7660  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DE0A4 002A7664  7C 08 02 A6 */	mflr r0
 /* 802DE0A8 002A7668  90 01 00 14 */	stw r0, 0x14(r1)
@@ -74,10 +73,10 @@ BTA_Init:
 /* 802DE170 002A7730  7C 08 03 A6 */	mtlr r0
 /* 802DE174 002A7734  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DE178 002A7738  4E 80 00 20 */	blr 
+.endfn BTA_Init
 
 .balign 16, 0
-.global BTA_CleanUp
-BTA_CleanUp:
+.fn BTA_CleanUp, global
 /* 802DE180 002A7740  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DE184 002A7744  7C 08 02 A6 */	mflr r0
 /* 802DE188 002A7748  90 01 00 14 */	stw r0, 0x14(r1)
@@ -91,10 +90,10 @@ BTA_CleanUp:
 /* 802DE1A8 002A7768  7C 08 03 A6 */	mtlr r0
 /* 802DE1AC 002A776C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802DE1B0 002A7770  4E 80 00 20 */	blr 
+.endfn BTA_CleanUp
 
 .balign 16, 0
-.global bta_usb_close_evt
-bta_usb_close_evt:
+.fn bta_usb_close_evt, global
 /* 802DE1C0 002A7780  81 8D B5 EC */	lwz r12, lbl_8066776C@sda21(r13)
 /* 802DE1C4 002A7784  2C 0C 00 00 */	cmpwi r12, 0
 /* 802DE1C8 002A7788  4D 82 00 20 */	beqlr 
@@ -108,6 +107,7 @@ bta_usb_close_evt:
 /* 802DE1E4 002A77A4  7D 89 03 A6 */	mtctr r12
 /* 802DE1E8 002A77A8  4E 80 04 20 */	bctr 
 /* 802DE1EC 002A77AC  4E 80 00 20 */	blr
+.endfn bta_usb_close_evt
 
 #not sure where the stuff in rodata/sdata should be
 

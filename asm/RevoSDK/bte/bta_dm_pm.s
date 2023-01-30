@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global bta_dm_init_pm
-bta_dm_init_pm:
+.fn bta_dm_init_pm, global
 /* 802E16CC 002AAC8C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E16D0 002AAC90  7C 08 02 A6 */	mflr r0
 /* 802E16D4 002AAC94  3C 60 80 5C */	lis r3, lbl_805BF798@ha
@@ -31,18 +30,19 @@ bta_dm_init_pm:
 /* 802E1728 002AACE8  7C 08 03 A6 */	mtlr r0
 /* 802E172C 002AACEC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E1730 002AACF0  4E 80 00 20 */	blr 
+.endfn bta_dm_init_pm
 
-.global bta_dm_disable_pm
-bta_dm_disable_pm:
+.fn bta_dm_disable_pm, global
 /* 802E1734 002AACF4  3C 80 80 5C */	lis r4, lbl_805BF694@ha
 /* 802E1738 002AACF8  38 60 00 04 */	li r3, 4
 /* 802E173C 002AACFC  38 84 F6 94 */	addi r4, r4, lbl_805BF694@l
 /* 802E1740 002AAD00  38 A0 00 00 */	li r5, 0
 /* 802E1744 002AAD04  38 84 00 95 */	addi r4, r4, 0x95
 /* 802E1748 002AAD08  48 00 87 78 */	b BTM_PmRegister
+.endfn bta_dm_disable_pm
 
 
-bta_dm_pm_cback:
+.fn bta_dm_pm_cback, local
 /* 802E174C 002AAD0C  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802E1750 002AAD10  7C 08 02 A6 */	mflr r0
 /* 802E1754 002AAD14  90 01 00 44 */	stw r0, 0x44(r1)
@@ -290,9 +290,9 @@ bta_dm_pm_cback:
 /* 802E1AC0 002AB080  7C 08 03 A6 */	mtlr r0
 /* 802E1AC4 002AB084  38 21 00 40 */	addi r1, r1, 0x40
 /* 802E1AC8 002AB088  4E 80 00 20 */	blr 
+.endfn bta_dm_pm_cback
 
-.global bta_dm_pm_set_mode
-bta_dm_pm_set_mode:
+.fn bta_dm_pm_set_mode, global
 /* 802E1ACC 002AB08C  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 802E1AD0 002AB090  7C 08 02 A6 */	mflr r0
 /* 802E1AD4 002AB094  90 01 00 54 */	stw r0, 0x54(r1)
@@ -536,9 +536,9 @@ bta_dm_pm_set_mode:
 /* 802E1E40 002AB400  7C 08 03 A6 */	mtlr r0
 /* 802E1E44 002AB404  38 21 00 50 */	addi r1, r1, 0x50
 /* 802E1E48 002AB408  4E 80 00 20 */	blr
+.endfn bta_dm_pm_set_mode
 
-.global bta_dm_pm_btm_cback
-bta_dm_pm_btm_cback:
+.fn bta_dm_pm_btm_cback, global
 /* 802E1E4C 002AB40C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E1E50 002AB410  7C 08 02 A6 */	mflr r0
 /* 802E1E54 002AB414  90 01 00 24 */	stw r0, 0x24(r1)
@@ -570,9 +570,9 @@ bta_dm_pm_btm_cback:
 /* 802E1EB8 002AB478  7C 08 03 A6 */	mtlr r0
 /* 802E1EBC 002AB47C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E1EC0 002AB480  4E 80 00 20 */	blr
+.endfn bta_dm_pm_btm_cback
 
-.global bta_dm_pm_timer_cback
-bta_dm_pm_timer_cback:
+.fn bta_dm_pm_timer_cback, global
 /* 802E1EC4 002AB484  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E1EC8 002AB488  7C 08 02 A6 */	mflr r0
 /* 802E1ECC 002AB48C  3C 80 80 5C */	lis r4, lbl_805BF694@ha
@@ -640,9 +640,9 @@ bta_dm_pm_timer_cback:
 /* 802E1FB0 002AB570  7C 08 03 A6 */	mtlr r0
 /* 802E1FB4 002AB574  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E1FB8 002AB578  4E 80 00 20 */	blr 
+.endfn bta_dm_pm_timer_cback
 
-.global bta_dm_pm_btm_status
-bta_dm_pm_btm_status:
+.fn bta_dm_pm_btm_status, global
 /* 802E1FBC 002AB57C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E1FC0 002AB580  7C 08 02 A6 */	mflr r0
 /* 802E1FC4 002AB584  90 01 00 24 */	stw r0, 0x24(r1)
@@ -724,12 +724,13 @@ bta_dm_pm_btm_status:
 /* 802E20D0 002AB690  7C 08 03 A6 */	mtlr r0
 /* 802E20D4 002AB694  38 21 00 20 */	addi r1, r1, 0x20
 /* 802E20D8 002AB698  4E 80 00 20 */	blr 
+.endfn bta_dm_pm_btm_status
 
-.global bta_dm_pm_timer
-bta_dm_pm_timer:
+.fn bta_dm_pm_timer, global
 /* 802E20DC 002AB69C  38 80 00 01 */	li r4, 1
 /* 802E20E0 002AB6A0  38 63 00 08 */	addi r3, r3, 8
 /* 802E20E4 002AB6A4  4B FF F9 E8 */	b bta_dm_pm_set_mode
+.endfn bta_dm_pm_timer
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

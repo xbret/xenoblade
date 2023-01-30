@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global __ct__Q44nw4r3snd6detail4BankFPCv
-__ct__Q44nw4r3snd6detail4BankFPCv:
+.fn __ct__Q44nw4r3snd6detail4BankFPCv, global
 /* 80411780 003DAD40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80411784 003DAD44  7C 08 02 A6 */	mflr r0
 /* 80411788 003DAD48  90 01 00 14 */	stw r0, 0x14(r1)
@@ -18,9 +17,9 @@ __ct__Q44nw4r3snd6detail4BankFPCv:
 /* 804117AC 003DAD6C  7C 08 03 A6 */	mtlr r0
 /* 804117B0 003DAD70  38 21 00 10 */	addi r1, r1, 0x10
 /* 804117B4 003DAD74  4E 80 00 20 */	blr 
+.endfn __ct__Q44nw4r3snd6detail4BankFPCv
 
-.global __dt__Q44nw4r3snd6detail4BankFv
-__dt__Q44nw4r3snd6detail4BankFv:
+.fn __dt__Q44nw4r3snd6detail4BankFv, global
 /* 804117B8 003DAD78  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804117BC 003DAD7C  7C 08 02 A6 */	mflr r0
 /* 804117C0 003DAD80  2C 03 00 00 */	cmpwi r3, 0
@@ -38,9 +37,9 @@ __dt__Q44nw4r3snd6detail4BankFv:
 /* 804117EC 003DADAC  7C 08 03 A6 */	mtlr r0
 /* 804117F0 003DADB0  38 21 00 10 */	addi r1, r1, 0x10
 /* 804117F4 003DADB4  4E 80 00 20 */	blr 
+.endfn __dt__Q44nw4r3snd6detail4BankFv
 
-.global NoteOn__Q44nw4r3snd6detail4BankCFRCQ44nw4r3snd6detail10NoteOnInfo
-NoteOn__Q44nw4r3snd6detail4BankCFRCQ44nw4r3snd6detail10NoteOnInfo:
+.fn NoteOn__Q44nw4r3snd6detail4BankCFRCQ44nw4r3snd6detail10NoteOnInfo, global
 /* 804117F8 003DADB8  94 21 FF 40 */	stwu r1, -0xc0(r1)
 /* 804117FC 003DADBC  7C 08 02 A6 */	mflr r0
 /* 80411800 003DADC0  80 A4 00 00 */	lwz r5, 0(r4)
@@ -173,6 +172,7 @@ NoteOn__Q44nw4r3snd6detail4BankCFRCQ44nw4r3snd6detail10NoteOnInfo:
 /* 804119E4 003DAFA4  7C 08 03 A6 */	mtlr r0
 /* 804119E8 003DAFA8  38 21 00 C0 */	addi r1, r1, 0xc0
 /* 804119EC 003DAFAC  4E 80 00 20 */	blr 
+.endfn NoteOn__Q44nw4r3snd6detail4BankCFRCQ44nw4r3snd6detail10NoteOnInfo
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

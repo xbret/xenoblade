@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global SJ_SplitChunk
-SJ_SplitChunk:
+.fn SJ_SplitChunk, global
 /* 80396664 0035FC24  80 E3 00 00 */	lwz r7, 0(r3)
 /* 80396668 0035FC28  80 03 00 04 */	lwz r0, 4(r3)
 /* 8039666C 0035FC2C  90 E5 00 00 */	stw r7, 0(r5)
@@ -28,9 +27,9 @@ SJ_SplitChunk:
 /* 803966B0 0035FC70  7C 03 02 14 */	add r0, r3, r0
 /* 803966B4 0035FC74  90 06 00 00 */	stw r0, 0(r6)
 /* 803966B8 0035FC78  4E 80 00 20 */	blr 
+.endfn SJ_SplitChunk
 
-.global SJ_SearchTag
-SJ_SearchTag:
+.fn SJ_SearchTag, global
 /* 803966BC 0035FC7C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803966C0 0035FC80  7C 08 02 A6 */	mflr r0
 /* 803966C4 0035FC84  90 01 00 24 */	stw r0, 0x24(r1)
@@ -170,6 +169,7 @@ SJ_SearchTag:
 /* 803968C0 0035FE80  7C 08 03 A6 */	mtlr r0
 /* 803968C4 0035FE84  38 21 00 20 */	addi r1, r1, 0x20
 /* 803968C8 0035FE88  4E 80 00 20 */	blr 
+.endfn SJ_SearchTag
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

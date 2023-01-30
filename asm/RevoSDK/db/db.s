@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global DBInit
-DBInit:
+.fn DBInit, global
 /* 80309110 002D26D0  3C 80 80 00 */	lis r4, 0x80000040@ha
 /* 80309114 002D26D4  3C 60 80 31 */	lis r3, __DBExceptionDestination@ha
 /* 80309118 002D26D8  38 04 00 40 */	addi r0, r4, 0x80000040@l
@@ -15,9 +14,10 @@ DBInit:
 /* 8030912C 002D26EC  38 00 00 01 */	li r0, 1
 /* 80309130 002D26F0  90 0D B6 04 */	stw r0, lbl_80667784@sda21(r13)
 /* 80309134 002D26F4  4E 80 00 20 */	blr
+.endfn DBInit
 
 .balign 16, 0
-__DBExceptionDestinationAux:
+.fn __DBExceptionDestinationAux, local
 /* 80309140 002D2700  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80309144 002D2704  7C 08 02 A6 */	mflr r0
 /* 80309148 002D2708  3C 60 80 55 */	lis r3, lbl_805495E0@ha
@@ -36,28 +36,28 @@ __DBExceptionDestinationAux:
 /* 8030917C 002D273C  7C 08 03 A6 */	mtlr r0
 /* 80309180 002D2740  38 21 00 10 */	addi r1, r1, 0x10
 /* 80309184 002D2744  4E 80 00 20 */	blr
+.endfn __DBExceptionDestinationAux
 
 .balign 16, 0
-.global __DBExceptionDestination
-__DBExceptionDestination:
+.fn __DBExceptionDestination, global
 /* 80309190 002D2750  7C 60 00 A6 */	mfmsr r3
 /* 80309194 002D2754  60 63 00 30 */	ori r3, r3, 0x30
 /* 80309198 002D2758  7C 60 01 24 */	mtmsr r3
 /* 8030919C 002D275C  4B FF FF A4 */	b __DBExceptionDestinationAux
+.endfn __DBExceptionDestination
 
 .balign 16, 0
-.global __DBIsExceptionMarked
-__DBIsExceptionMarked:
+.fn __DBIsExceptionMarked, global
 /* 803091A0 002D2760  80 8D B6 00 */	lwz r4, lbl_80667780@sda21(r13)
 /* 803091A4 002D2764  38 00 00 01 */	li r0, 1
 /* 803091A8 002D2768  7C 00 18 30 */	slw r0, r0, r3
 /* 803091AC 002D276C  80 64 00 04 */	lwz r3, 4(r4)
 /* 803091B0 002D2770  7C 63 00 38 */	and r3, r3, r0
 /* 803091B4 002D2774  4E 80 00 20 */	blr 
+.endfn __DBIsExceptionMarked
 
 .balign 16, 0
-.global DBPrintf
-DBPrintf:
+.fn DBPrintf, global
 /* 803091C0 002D2780  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 803091C4 002D2784  40 86 00 24 */	bne cr1, .L_803091E8
 /* 803091C8 002D2788  D8 21 00 28 */	stfd f1, 0x28(r1)
@@ -79,6 +79,7 @@ DBPrintf:
 /* 80309204 002D27C4  91 41 00 24 */	stw r10, 0x24(r1)
 /* 80309208 002D27C8  38 21 00 70 */	addi r1, r1, 0x70
 /* 8030920C 002D27CC  4E 80 00 20 */	blr
+.endfn DBPrintf
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

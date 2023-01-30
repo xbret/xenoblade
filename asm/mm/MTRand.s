@@ -3,8 +3,9 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.global getInstanceMTRand__Q22mm3mtlFv
-getInstanceMTRand__Q22mm3mtlFv:
+
+
+.fn getInstanceMTRand__Q22mm3mtlFv, global
 /* 8043539C 003FE95C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804353A0 003FE960  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804353A4 003FE964  88 0D BC E0 */	lbz r0, lbl_80667E60@sda21(r13)
@@ -149,9 +150,9 @@ getInstanceMTRand__Q22mm3mtlFv:
 /* 804355C8 003FEB88  38 63 93 E0 */	addi r3, r3, twister@l
 /* 804355CC 003FEB8C  38 21 00 10 */	addi r1, r1, 0x10
 /* 804355D0 003FEB90  4E 80 00 20 */	blr 
+.endfn getInstanceMTRand__Q22mm3mtlFv
 
-.global mtInit__Q32mm3mtl6MTRandFUl
-mtInit__Q32mm3mtl6MTRandFUl:
+.fn mtInit__Q32mm3mtl6MTRandFUl, global
 /* 804355D4 003FEB94  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804355D8 003FEB98  2C 04 00 00 */	cmpwi r4, 0
 /* 804355DC 003FEB9C  93 E1 00 0C */	stw r31, 0xc(r1)
@@ -287,9 +288,9 @@ mtInit__Q32mm3mtl6MTRandFUl:
 /* 804357DC 003FED9C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 804357E0 003FEDA0  38 21 00 10 */	addi r1, r1, 0x10
 /* 804357E4 003FEDA4  4E 80 00 20 */	blr 
+.endfn mtInit__Q32mm3mtl6MTRandFUl
 
-.global nextMt__Q32mm3mtl6MTRandFv
-nextMt__Q32mm3mtl6MTRandFv:
+.fn nextMt__Q32mm3mtl6MTRandFv, global
 /* 804357E8 003FEDA8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804357EC 003FEDAC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804357F0 003FEDB0  80 03 09 C4 */	lwz r0, 0x9c4(r3)
@@ -485,9 +486,9 @@ nextMt__Q32mm3mtl6MTRandFv:
 /* 80435AD0 003FF090  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80435AD4 003FF094  38 21 00 10 */	addi r1, r1, 0x10
 /* 80435AD8 003FF098  4E 80 00 20 */	blr 
+.endfn nextMt__Q32mm3mtl6MTRandFv
 
-.global rand__Q32mm3mtl6MTRandFv
-rand__Q32mm3mtl6MTRandFv:
+.fn rand__Q32mm3mtl6MTRandFv, global
 /* 80435ADC 003FF09C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80435AE0 003FF0A0  7C 08 02 A6 */	mflr r0
 /* 80435AE4 003FF0A4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -521,9 +522,9 @@ rand__Q32mm3mtl6MTRandFv:
 /* 80435B50 003FF110  7C 08 03 A6 */	mtlr r0
 /* 80435B54 003FF114  38 21 00 10 */	addi r1, r1, 0x10
 /* 80435B58 003FF118  4E 80 00 20 */	blr 
+.endfn rand__Q32mm3mtl6MTRandFv
 
-.global randFloat__Q32mm3mtl6MTRandFv
-randFloat__Q32mm3mtl6MTRandFv:
+.fn randFloat__Q32mm3mtl6MTRandFv, global
 /* 80435B5C 003FF11C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80435B60 003FF120  7C 08 02 A6 */	mflr r0
 /* 80435B64 003FF124  90 01 00 24 */	stw r0, 0x24(r1)
@@ -564,9 +565,9 @@ randFloat__Q32mm3mtl6MTRandFv:
 /* 80435BEC 003FF1AC  7C 08 03 A6 */	mtlr r0
 /* 80435BF0 003FF1B0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80435BF4 003FF1B4  4E 80 00 20 */	blr 
+.endfn randFloat__Q32mm3mtl6MTRandFv
 
-.global randFloat1__Q32mm3mtl6MTRandFv
-randFloat1__Q32mm3mtl6MTRandFv:
+.fn randFloat1__Q32mm3mtl6MTRandFv, global
 /* 80435BF8 003FF1B8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80435BFC 003FF1BC  7C 08 02 A6 */	mflr r0
 /* 80435C00 003FF1C0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -609,9 +610,9 @@ randFloat1__Q32mm3mtl6MTRandFv:
 /* 80435C90 003FF250  7C 08 03 A6 */	mtlr r0
 /* 80435C94 003FF254  38 21 00 20 */	addi r1, r1, 0x20
 /* 80435C98 003FF258  4E 80 00 20 */	blr 
+.endfn randFloat1__Q32mm3mtl6MTRandFv
 
-.global PointInRect__Q22mm3mtlFP4RectP4Rect
-PointInRect__Q22mm3mtlFP4RectP4Rect:
+.fn PointInRect__Q22mm3mtlFP4RectP4Rect, global
 /* 80435C9C 003FF25C  A8 A3 00 00 */	lha r5, 0(r3)
 /* 80435CA0 003FF260  A8 C4 00 00 */	lha r6, 0(r4)
 /* 80435CA4 003FF264  7C 06 28 00 */	cmpw r6, r5
@@ -643,9 +644,9 @@ PointInRect__Q22mm3mtlFP4RectP4Rect:
 /* 80435D00 003FF2C0  7C 00 18 50 */	subf r0, r0, r3
 /* 80435D04 003FF2C4  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 80435D08 003FF2C8  4E 80 00 20 */	blr
+.endfn PointInRect__Q22mm3mtlFP4RectP4Rect
 
-.global __sinit_MTRand_cpp
-__sinit_MTRand_cpp:
+.fn __sinit_MTRand_cpp, global
 /* 80435D0C 003FF2CC  38 6D BC E8 */	addi r3, r13, lbl_80667E68@sda21
 /* 80435D10 003FF2D0  38 00 00 00 */	li r0, 0
 /* 80435D14 003FF2D4  B0 0D BC E8 */	sth r0, lbl_80667E68@sda21(r13)
@@ -653,15 +654,20 @@ __sinit_MTRand_cpp:
 /* 80435D1C 003FF2DC  B0 03 00 04 */	sth r0, 4(r3)
 /* 80435D20 003FF2E0  B0 03 00 06 */	sth r0, 6(r3)
 /* 80435D24 003FF2E4  4E 80 00 20 */	blr 
+.endfn __sinit_MTRand_cpp
 
 
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 
+.balign 4
+
 .4byte __sinit_MTRand_cpp
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+
 
 .global float_8066C9D0
 float_8066C9D0:
@@ -679,12 +685,16 @@ float_8066C9E0:
 	.float 0.5
 	.4byte 0
 
-.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+
+
 
 twister:
 	.skip 0x9D0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+
 
 .global lbl_80667E60
 lbl_80667E60:
@@ -693,56 +703,88 @@ lbl_80667E60:
 lbl_80667E68:
 	.skip 0x8
 
-.section extab_, "a"  # 0x800066E0 - 0x80021020
+.section extab, "a" # 0x800066E0 - 0x80021020
 
-.global lbl_8001C040
-lbl_8001C040:
+.balign 4
+
+.obj "@etb_8001C040", local
+.hidden "@etb_8001C040"
 	.4byte 0x08080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001C040"
 
-.global lbl_8001C048
-lbl_8001C048:
+.obj "@etb_8001C048", local
+.hidden "@etb_8001C048"
 	.4byte 0x08080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001C048"
 
-.global lbl_8001C050
-lbl_8001C050:
+.obj "@etb_8001C050", local
+.hidden "@etb_8001C050"
 	.4byte 0x08080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001C050"
 
-.global lbl_8001C058
-lbl_8001C058:
+.obj "@etb_8001C058", local
+.hidden "@etb_8001C058"
 	.4byte 0x08080000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001C058"
 
-.global lbl_8001C060
-lbl_8001C060:
+.obj "@etb_8001C060", local
+.hidden "@etb_8001C060"
 	.4byte 0x080A0000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001C060"
 
-.global lbl_8001C068
-lbl_8001C068:
+.obj "@etb_8001C068", local
+.hidden "@etb_8001C068"
 	.4byte 0x080A0000
-	.4byte 0
+	.4byte 0x00000000
+.endobj "@etb_8001C068"
 
+.section extabindex, "a" # 0x80021020 - 0x80039220
 
-.section extabindex_, "a"  # 0x80021020 - 0x80039220
+.balign 4
 
+.obj "@eti_80033C2C", local
+.hidden "@eti_80033C2C"
 	.4byte getInstanceMTRand__Q22mm3mtlFv
 	.4byte 0x00000238
-	.4byte lbl_8001C040
+	.4byte "@etb_8001C040"
+.endobj "@eti_80033C2C"
+
+.obj "@eti_80033C38", local
+.hidden "@eti_80033C38"
 	.4byte mtInit__Q32mm3mtl6MTRandFUl
 	.4byte 0x00000214
-	.4byte lbl_8001C048
+	.4byte "@etb_8001C048"
+.endobj "@eti_80033C38"
+
+.obj "@eti_80033C44", local
+.hidden "@eti_80033C44"
 	.4byte nextMt__Q32mm3mtl6MTRandFv
 	.4byte 0x000002F4
-	.4byte lbl_8001C050
+	.4byte "@etb_8001C050"
+.endobj "@eti_80033C44"
+
+.obj "@eti_80033C50", local
+.hidden "@eti_80033C50"
 	.4byte rand__Q32mm3mtl6MTRandFv
 	.4byte 0x00000080
-	.4byte lbl_8001C058
+	.4byte "@etb_8001C058"
+.endobj "@eti_80033C50"
+
+.obj "@eti_80033C5C", local
+.hidden "@eti_80033C5C"
 	.4byte randFloat__Q32mm3mtl6MTRandFv
 	.4byte 0x0000009C
-	.4byte lbl_8001C060
+	.4byte "@etb_8001C060"
+.endobj "@eti_80033C5C"
+
+.obj "@eti_80033C68", local
+.hidden "@eti_80033C68"
 	.4byte randFloat1__Q32mm3mtl6MTRandFv
 	.4byte 0x000000A4
-	.4byte lbl_8001C068
+	.4byte "@etb_8001C068"
+.endobj "@eti_80033C68"

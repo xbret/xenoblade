@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global init__Q210homebutton15FrameControllerFifff
-init__Q210homebutton15FrameControllerFifff:
+.fn init__Q210homebutton15FrameControllerFifff, global
 /* 8031F2A0 002E8860  2C 04 00 01 */	cmpwi r4, 1
 /* 8031F2A4 002E8864  38 00 00 00 */	li r0, 0
 /* 8031F2A8 002E8868  90 83 00 18 */	stw r4, 0x18(r3)
@@ -21,10 +20,10 @@ init__Q210homebutton15FrameControllerFifff:
 .L_8031F2D0:
 /* 8031F2D0 002E8890  D0 03 00 0C */	stfs f0, 0xc(r3)
 /* 8031F2D4 002E8894  4E 80 00 20 */	blr 
+.endfn init__Q210homebutton15FrameControllerFifff
 
 .balign 16, 0
-.global initFrame__Q210homebutton15FrameControllerFv
-initFrame__Q210homebutton15FrameControllerFv:
+.fn initFrame__Q210homebutton15FrameControllerFv, global
 /* 8031F2E0 002E88A0  80 03 00 18 */	lwz r0, 0x18(r3)
 /* 8031F2E4 002E88A4  2C 00 00 01 */	cmpwi r0, 1
 /* 8031F2E8 002E88A8  40 82 00 0C */	bne .L_8031F2F4
@@ -35,10 +34,10 @@ initFrame__Q210homebutton15FrameControllerFv:
 .L_8031F2F8:
 /* 8031F2F8 002E88B8  D0 03 00 0C */	stfs f0, 0xc(r3)
 /* 8031F2FC 002E88BC  4E 80 00 20 */	blr 
+.endfn initFrame__Q210homebutton15FrameControllerFv
 
 .balign 16, 0
-.global calc__Q210homebutton15FrameControllerFv
-calc__Q210homebutton15FrameControllerFv:
+.fn calc__Q210homebutton15FrameControllerFv, global
 /* 8031F300 002E88C0  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 8031F304 002E88C4  2C 00 00 01 */	cmpwi r0, 1
 /* 8031F308 002E88C8  4C 82 00 20 */	bnelr 
@@ -127,6 +126,7 @@ calc__Q210homebutton15FrameControllerFv:
 /* 8031F440 002E8A00  D0 03 00 0C */	stfs f0, 0xc(r3)
 /* 8031F444 002E8A04  98 03 00 1C */	stb r0, 0x1c(r3)
 /* 8031F448 002E8A08  4E 80 00 20 */	blr 
+.endfn calc__Q210homebutton15FrameControllerFv
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

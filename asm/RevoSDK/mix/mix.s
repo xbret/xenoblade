@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.global __MIXSetPan
-__MIXSetPan:
+.fn __MIXSetPan, global
 /* 80349BF0 003131B0  80 0D B8 64 */	lwz r0, lbl_806679E4@sda21(r13)
 /* 80349BF4 003131B4  3C 80 80 55 */	lis r4, lbl_805504F0@ha
 /* 80349BF8 003131B8  80 A3 00 18 */	lwz r5, 0x18(r3)
@@ -51,10 +50,10 @@ __MIXSetPan:
 /* 80349C98 00313258  90 03 00 34 */	stw r0, 0x34(r3)
 /* 80349C9C 0031325C  90 03 00 38 */	stw r0, 0x38(r3)
 /* 80349CA0 00313260  4E 80 00 20 */	blr 
+.endfn __MIXSetPan
 
 .balign 16, 0
-.global __MIXGetVolume
-__MIXGetVolume:
+.fn __MIXGetVolume, global
 /* 80349CB0 00313270  2C 03 FC 78 */	cmpwi r3, -904
 /* 80349CB4 00313274  41 81 00 0C */	bgt .L_80349CC0
 /* 80349CB8 00313278  38 60 00 00 */	li r3, 0
@@ -72,10 +71,10 @@ __MIXGetVolume:
 /* 80349CE0 003132A0  38 63 04 F0 */	addi r3, r3, lbl_805504F0@l
 /* 80349CE4 003132A4  7C 63 02 2E */	lhzx r3, r3, r0
 /* 80349CE8 003132A8  4E 80 00 20 */	blr 
+.endfn __MIXGetVolume
 
 .balign 16, 0
-.global MIXInit
-MIXInit:
+.fn MIXInit, global
 /* 80349CF0 003132B0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80349CF4 003132B4  7C 08 02 A6 */	mflr r0
 /* 80349CF8 003132B8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -148,19 +147,19 @@ MIXInit:
 /* 80349DF8 003133B8  7C 08 03 A6 */	mtlr r0
 /* 80349DFC 003133BC  38 21 00 30 */	addi r1, r1, 0x30
 /* 80349E00 003133C0  4E 80 00 20 */	blr 
+.endfn MIXInit
 
 .balign 16, 0
-.global MIXQuit
-MIXQuit:
+.fn MIXQuit, global
 /* 80349E10 003133D0  38 00 00 00 */	li r0, 0
 /* 80349E14 003133D4  90 0D B8 58 */	stw r0, lbl_806679D8@sda21(r13)
 /* 80349E18 003133D8  90 0D B8 68 */	stw r0, lbl_806679E8@sda21(r13)
 /* 80349E1C 003133DC  90 0D B8 5C */	stw r0, lbl_806679DC@sda21(r13)
 /* 80349E20 003133E0  4E 80 00 20 */	blr 
+.endfn MIXQuit
 
 .balign 16, 0
-.global MIXInitChannel
-MIXInitChannel:
+.fn MIXInitChannel, global
 /* 80349E30 003133F0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80349E34 003133F4  7C 08 02 A6 */	mflr r0
 /* 80349E38 003133F8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1839,20 +1838,20 @@ MIXInitChannel:
 /* 8034B4E8 00314AA8  7C 08 03 A6 */	mtlr r0
 /* 8034B4EC 00314AAC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034B4F0 00314AB0  4E 80 00 20 */	blr 
+.endfn MIXInitChannel
 
 .balign 16, 0
-.global MIXReleaseChannel
-MIXReleaseChannel:
+.fn MIXReleaseChannel, global
 /* 8034B500 00314AC0  80 03 00 18 */	lwz r0, 0x18(r3)
 /* 8034B504 00314AC4  38 80 00 00 */	li r4, 0
 /* 8034B508 00314AC8  80 6D B8 58 */	lwz r3, lbl_806679D8@sda21(r13)
 /* 8034B50C 00314ACC  1C 00 00 70 */	mulli r0, r0, 0x70
 /* 8034B510 00314AD0  7C 83 01 2E */	stwx r4, r3, r0
 /* 8034B514 00314AD4  4E 80 00 20 */	blr 
+.endfn MIXReleaseChannel
 
 .balign 16, 0
-.global MIXSetInput
-MIXSetInput:
+.fn MIXSetInput, global
 /* 8034B520 00314AE0  80 03 00 18 */	lwz r0, 0x18(r3)
 /* 8034B524 00314AE4  80 6D B8 58 */	lwz r3, lbl_806679D8@sda21(r13)
 /* 8034B528 00314AE8  1C 00 00 70 */	mulli r0, r0, 0x70
@@ -1862,10 +1861,10 @@ MIXSetInput:
 /* 8034B538 00314AF8  64 00 10 00 */	oris r0, r0, 0x1000
 /* 8034B53C 00314AFC  90 03 00 04 */	stw r0, 4(r3)
 /* 8034B540 00314B00  4E 80 00 20 */	blr 
+.endfn MIXSetInput
 
 .balign 16, 0
-.global MIXSetPan
-MIXSetPan:
+.fn MIXSetPan, global
 /* 8034B550 00314B10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8034B554 00314B14  7C 08 02 A6 */	mflr r0
 /* 8034B558 00314B18  2C 04 00 00 */	cmpwi r4, 0
@@ -1895,10 +1894,10 @@ MIXSetPan:
 /* 8034B5B0 00314B70  7C 08 03 A6 */	mtlr r0
 /* 8034B5B4 00314B74  38 21 00 10 */	addi r1, r1, 0x10
 /* 8034B5B8 00314B78  4E 80 00 20 */	blr 
+.endfn MIXSetPan
 
 .balign 16, 0
-.global MIXSetFader
-MIXSetFader:
+.fn MIXSetFader, global
 /* 8034B5C0 00314B80  80 03 00 18 */	lwz r0, 0x18(r3)
 /* 8034B5C4 00314B84  80 6D B8 58 */	lwz r3, lbl_806679D8@sda21(r13)
 /* 8034B5C8 00314B88  1C 00 00 70 */	mulli r0, r0, 0x70
@@ -1908,10 +1907,10 @@ MIXSetFader:
 /* 8034B5D8 00314B98  64 00 40 00 */	oris r0, r0, 0x4000
 /* 8034B5DC 00314B9C  90 03 00 04 */	stw r0, 4(r3)
 /* 8034B5E0 00314BA0  4E 80 00 20 */	blr 
+.endfn MIXSetFader
 
 .balign 16, 0
-.global MIXUpdateSettings
-MIXUpdateSettings:
+.fn MIXUpdateSettings, global
 /* 8034B5F0 00314BB0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8034B5F4 00314BB4  7C 08 02 A6 */	mflr r0
 /* 8034B5F8 00314BB8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -3600,6 +3599,7 @@ MIXUpdateSettings:
 /* 8034CC78 00316238  7C 08 03 A6 */	mtlr r0
 /* 8034CC7C 0031623C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8034CC80 00316240  4E 80 00 20 */	blr 
+.endfn MIXUpdateSettings
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

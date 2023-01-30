@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.global btm_discovery_db_init
-btm_discovery_db_init:
+.fn btm_discovery_db_init, global
 /* 802E8298 002B1858  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E829C 002B185C  7C 08 02 A6 */	mflr r0
 /* 802E82A0 002B1860  38 80 00 00 */	li r4, 0
@@ -34,9 +33,9 @@ btm_discovery_db_init:
 /* 802E8304 002B18C4  7C 08 03 A6 */	mtlr r0
 /* 802E8308 002B18C8  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E830C 002B18CC  4E 80 00 20 */	blr 
+.endfn btm_discovery_db_init
 
-.global btm_discovery_db_reset
-btm_discovery_db_reset:
+.fn btm_discovery_db_reset, global
 /* 802E8310 002B18D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E8314 002B18D4  7C 08 02 A6 */	mflr r0
 /* 802E8318 002B18D8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -84,6 +83,7 @@ btm_discovery_db_reset:
 /* 802E83BC 002B197C  7C 08 03 A6 */	mtlr r0
 /* 802E83C0 002B1980  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E83C4 002B1984  4E 80 00 20 */	blr 
+.endfn btm_discovery_db_reset
 
 .global btm_discovery_timeout
 btm_discovery_timeout:
