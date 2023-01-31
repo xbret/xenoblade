@@ -26,9 +26,6 @@ VERSION ?= 1
 VERSION := jp
 
 BUILD_DIR := build/$(NAME).$(VERSION)
-ifeq ($(EPILOGUE_PROCESS),1)
-EPILOGUE_DIR := epilogue/$(NAME).$(VERSION)
-endif
 
 # Inputs
 S_FILES := $(wildcard asm/*.s)
@@ -48,13 +45,14 @@ ifeq ($(MAPGENFLAG),1)
 endif
 
 include obj_files.mk
-ifeq ($(EPILOGUE_PROCESS),1)
-include e_files.mk
-endif
 
 O_FILES :=  $(GAME_O_FILES) $(MW_O_FILES) $(NDEV_O_FILES) $(RVL_SDK_O_FILES) \
 		   $(CRIWARE_O_FILES) $(NW4R_O_FILES) $(UTILS_O_FILES) \
 		   $(MM_O_FILES) $(MONOLITHLIB_O_FILES)
+
+DEPENDS := $($(filter *.o,O_FILES):.o=.d)
+# If a specific .o file is passed as a target, also process its deps
+DEPENDS += $(MAKECMDGOALS:.o=.d)
 
 #-------------------------------------------------------------------------------
 # Tools
@@ -98,6 +96,8 @@ LD      := $(WINE) tools/mwcc_compiler/$(CONSOLE)/$(MWLD_VERSION)/mwldeppc.exe
 DTK     := tools/dtk
 ELF2DOL := $(DTK) elf2dol
 
+TRANSFORM_DEP := tools/transform-dep.py
+
 # Options
 INCLUDES := -i include/ -i src/
 ASM_INCLUDES := -I include/
@@ -111,6 +111,7 @@ ifeq ($(VERBOSE),0)
 # this set of LDFLAGS generates no warnings.
 LDFLAGS := $(MAPGEN) -fp hard -nodefaults -w off
 endif
+LIBRARY_LDFLAGS := -nodefaults -fp hard -proc gekko
 
 ifeq ($(VERBOSE),0)
 # this set of ASFLAGS generates no warnings.
@@ -162,11 +163,14 @@ DUMMY != mkdir -p $(ALL_DIRS)
 
 .PHONY: tools
 
+$(LDSCRIPT): ldscript.lcf
+	$(QUIET) $(CPP) -MMD -MP -MT $@ -MF $@.d -I include/ -I . -DBUILD_DIR=$(BUILD_DIR) -o $@ $<
+
 $(DOL): $(ELF) | tools
 	$(QUIET) $(ELF2DOL) $< $@
 	$(QUIET) $(SHA1SUM) -c sha1/$(NAME).$(VERSION).sha1
 ifneq ($(findstring -map,$(LDFLAGS)),)
-	$(QUIET) $(PYTHON) tools/calcprogress.py $@ $(MAP)
+	$(PYTHON) tools/calcprogress.py $(DOL) $(MAP)
 endif
 
 clean:
@@ -184,16 +188,21 @@ $(DTK): tools/dtk_version
 	$(QUIET) $(PYTHON) tools/download_dtk.py $< $@
 
 # ELF creation makefile instructions
-ifeq ($(EPILOGUE_PROCESS),1)
-	@echo Linking ELF $@
-$(ELF): $(O_FILES) $(E_FILES) $(LDSCRIPT_DOL)
-	$(QUIET) @echo $(O_FILES) > build/o_files
-	$(QUIET) $(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT_DOL) @build/o_files
-else
 $(ELF): $(O_FILES) $(LDSCRIPT_DOL)
 	@echo Linking ELF $@
 	$(QUIET) @echo $(O_FILES) > build/o_files
 	$(QUIET) $(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT_DOL) @build/o_files
+
+
+%.d.unix: %.d $(TRANSFORM_DEP)
+	@echo Processing $<
+	$(QUIET) $(PYTHON) $(TRANSFORM_DEP) $< $@
+
+-include include_link.mk
+
+DEPENDS := $(DEPENDS:.d=.d.unix)
+ifneq ($(MAKECMDGOALS), clean)
+-include $(DEPENDS)
 endif
 
 $(BUILD_DIR)/%.o: %.s | $(DTK)

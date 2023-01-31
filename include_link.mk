@@ -1,0 +1,9 @@
+# libraries
+-include src/kyoshin/Makefile
+-include src/PowerPC_EABI_Support/Makefile
+-include src/NdevExi2A/Makefile
+-include src/RevoSDK/Makefile
+-include src/CriWare/Makefile
+-include src/nw4r/Makefile
+-include src/mm/Makefile
+-include src/monolithlib/Makefile
