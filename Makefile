@@ -32,7 +32,7 @@ S_FILES := $(wildcard asm/*.s)
 C_FILES := $(wildcard src/*.c)
 CPP_FILES := $(wildcard src/*.cpp)
 CPP_FILES += $(wildcard src/*.cp)
-LDSCRIPT_DOL := ldscript.lcf
+LDSCRIPT := $(BUILD_DIR)/ldscript.lcf
 
 # Outputs
 DOL     := $(BUILD_DIR)/main.dol
@@ -47,8 +47,8 @@ endif
 include obj_files.mk
 
 O_FILES :=  $(GAME_O_FILES) $(MW_O_FILES) $(NDEV_O_FILES) $(RVL_SDK_O_FILES) \
-		   $(CRIWARE_O_FILES) $(NW4R_O_FILES) $(UTILS_O_FILES) \
-		   $(MM_O_FILES) $(MONOLITHLIB_O_FILES)
+			$(CRIWARE_O_FILES) $(NW4R_O_FILES) $(UTILS_O_FILES) \
+			$(MM_O_FILES) $(MONOLITHLIB_O_FILES)
 
 DEPENDS := $($(filter *.o,O_FILES):.o=.d)
 # If a specific .o file is passed as a target, also process its deps
@@ -62,10 +62,6 @@ DEPENDS += $(MAKECMDGOALS:.o=.d)
 MWCC_VERSION := 1.1
 MWLD_VERSION := 1.1
 CONSOLE := Wii
-
-#Ndev uses GC 3.0
-$(NDEV_O_FILES): MWCC_VERSION := 3.0
-$(NDEV_O_FILES): CONSOLE := GC
 
 # Programs
 ifeq ($(WINDOWS),1)
@@ -96,7 +92,11 @@ LD      := $(WINE) tools/mwcc_compiler/$(CONSOLE)/$(MWLD_VERSION)/mwldeppc.exe
 DTK     := tools/dtk
 ELF2DOL := $(DTK) elf2dol
 
+ifneq ($(WINDOWS),1)
 TRANSFORM_DEP := tools/transform-dep.py
+else
+TRANSFORM_DEP := tools/transform-win.py
+endif
 
 # Options
 INCLUDES := -i include/ -i src/
@@ -118,24 +118,8 @@ ifeq ($(VERBOSE),0)
 ASFLAGS += -W
 endif
 
-#Compiler flags
-#TODO: clean this up
-
-CFLAGS   = -enum int -inline on -use_lmw_stmw on -proc gekko -fp hard -O4,p -nodefaults -func_align 4 $(INCLUDES)
-
-$(GAME_O_FILES): CFLAGS += -ipa file -str pool,readonly,reuse -RTTI on -enc SJIS
-$(MM_O_FILES): CFLAGS += -ipa file -str pool,readonly,reuse -RTTI on -enc SJIS
-$(MONOLITHLIB_O_FILES): CFLAGS += -ipa file -str pool,readonly,reuse -RTTI on -enc SJIS
-
-$(NDEV_O_FILES): CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -proc gekko -fp hard -O4,p -nodefaults  -func_align 4 $(INCLUDES)
-#All the functions in the Wii SDK except for bte are aligned to 16 bytes, so this is necessary.
-$(RVL_SDK_O_FILES): CFLAGS += -Cpp_exceptions off -func_align 16
-$(MW_O_FILES): CFLAGS += -Cpp_exceptions off
-
-#arc.c doesn't use -use_lmw_stmw on, and uses -ipa file and (maybe rest of wii sdk too?)
-$(BUILD_DIR)/src/RevoSDK/arc/arc.o: CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -proc gekko -fp hard -O4,p -nodefaults -func_align 16 $(INCLUDES)
-#Runtime has defaults and exceptions turned on
-$(BUILD_DIR)/src/PowerPC_EABI_Support/Runtime/%.o: CFLAGS = -use_lmw_stmw on -inline on -proc gekko -fp hard -O4,p -func_align 4 $(INCLUDES)
+# Base compiler flags
+CFLAGS = -enum int -inline on -use_lmw_stmw on -proc gekko -fp hard -O4,p -nodefaults -func_align 4 $(INCLUDES)
 
 ifeq ($(NON_MATCHING),1)
 CFLAGS += -DNON_MATCHING
@@ -188,10 +172,10 @@ $(DTK): tools/dtk_version
 	$(QUIET) $(PYTHON) tools/download_dtk.py $< $@
 
 # ELF creation makefile instructions
-$(ELF): $(O_FILES) $(LDSCRIPT_DOL)
+$(ELF): $(O_FILES) $(LDSCRIPT)
 	@echo Linking ELF $@
 	$(QUIET) @echo $(O_FILES) > build/o_files
-	$(QUIET) $(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT_DOL) @build/o_files
+	$(QUIET) $(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT) @build/o_files
 
 
 %.d.unix: %.d $(TRANSFORM_DEP)
@@ -207,15 +191,18 @@ endif
 
 $(BUILD_DIR)/%.o: %.s | $(DTK)
 	@echo Assembling $<
+	$(QUIET) mkdir -p $(dir $@)
 	$(QUIET) $(AS) $(ASFLAGS) -o $@ $<
 	$(QUIET) $(DTK) elf fixup $@ $@
 
 $(BUILD_DIR)/%.o: %.c
 	@echo "Compiling " $<
+	$(QUIET) mkdir -p $(dir $@)
 	$(QUIET) $(CC) $(CFLAGS) -lang=c99 -c -o $@ $<
 	
 $(BUILD_DIR)/%.o: %.cpp
 	@echo "Compiling " $<
+	$(QUIET) mkdir -p $(dir $@)
 	$(QUIET) $(CC) $(CFLAGS) -lang=c++ -c -o $@ $<
 
 ### Debug Print ###

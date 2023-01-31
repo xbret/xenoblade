@@ -337,7 +337,7 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_ORDER.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CBattery.o\
 
-$(GAME_FILES): CFLAGS += -sym on
+$(GAME_FILES): CFLAGS += -ipa file -str pool,readonly,reuse -RTTI on -enc SJIS
 
 DEPENDS += $(GAME_FILES:.o=.d)
 

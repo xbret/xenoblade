@@ -142,9 +142,7 @@ CRIWARE_FILES :=\
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfx/sfx_zmv.o\
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfx/sfx_sud.o\
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfx/sfx_cnv_to_Y84C44.o\
-	$(BUILD_DIR)/asm/CriWare/sofdec/sud/sud_lib.o
-
-$(CRIWARE_FILES): CFLAGS += -sym on
+	$(BUILD_DIR)/asm/CriWare/sofdec/sud/sud_lib.o\
 
 DEPENDS += $(CRIWARE_FILES:.o=.d)
 

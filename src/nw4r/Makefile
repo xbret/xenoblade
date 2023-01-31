@@ -148,9 +148,7 @@ NW4R_FILES:=\
 	$(BUILD_DIR)/asm/nw4r/ut/ut_ArchiveFontBase.o\
 	$(BUILD_DIR)/asm/nw4r/ut/ut_PackedFont.o\
 	$(BUILD_DIR)/asm/nw4r/ut/ut_CharWriter.o\
-	$(BUILD_DIR)/asm/nw4r/ut/ut_TextWriterBase.o
-
-$(NW4R_FILES): CFLAGS += -sym on
+	$(BUILD_DIR)/asm/nw4r/ut/ut_TextWriterBase.o\
 
 DEPENDS += $(NW4R_FILES:.o=.d)
 

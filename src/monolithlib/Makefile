@@ -137,9 +137,9 @@ MONOLITHLIB_FILES:=\
 	$(BUILD_DIR)/asm/monolithlib/code_804EE0F4.o\
 	$(BUILD_DIR)/asm/monolithlib/code_804F0258.o\
 	$(BUILD_DIR)/asm/monolithlib/nand/CNReqtaskSaveBanner.o\
-	$(BUILD_DIR)/asm/monolithlib/nand/CNBanner.o
+	$(BUILD_DIR)/asm/monolithlib/nand/CNBanner.o\
 
-$(MONOLITHLIB_FILES): CFLAGS += -sym on
+$(MONOLITHLIB_FILES): CFLAGS += -ipa file -str pool,readonly,reuse -RTTI on -enc SJIS
 
 DEPENDS += $(MONOLITHLIB_FILES:.o=.d)
 

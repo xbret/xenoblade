@@ -12,9 +12,9 @@ MM_FILES:=\
 	$(BUILD_DIR)/asm/mm/code_80436260.o\
 	$(BUILD_DIR)/asm/mm/code_80436E84.o\
 	$(BUILD_DIR)/asm/mm/code_80436F20.o\
-	$(BUILD_DIR)/asm/mm/code_8043738C.o
+	$(BUILD_DIR)/asm/mm/code_8043738C.o\
 
-$(MM_FILES): CFLAGS += -sym on
+$(MM_FILES): CFLAGS += -ipa file -str pool,readonly,reuse -RTTI on -enc SJIS
 
 DEPENDS += $(MM_FILES:.o=.d)
 
