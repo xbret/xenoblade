@@ -1219,7 +1219,7 @@
 .endfn GetRuntimeTypeInfo__Q34nw4r3lyt4PaneCFv
 
 
-.fn sinit_lyt_pane_cpp, global
+.fn sinit_lyt_pane_cpp, local
 /* 803FF928 003C8EE8  38 00 00 00 */	li r0, 0
 /* 803FF92C 003C8EEC  90 0D BB D0 */	stw r0, lbl_80667D50@sda21(r13)
 /* 803FF930 003C8EF0  4E 80 00 20 */	blr 

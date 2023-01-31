@@ -1294,7 +1294,7 @@
 .endfn func_80448E88
 
 
-.fn sinit_80448E98, global
+.fn sinit_80448E98, local
 /* 80448E98 00412458  3C A0 80 66 */	lis r5, lbl_8065A6B8@ha
 /* 80448E9C 0041245C  38 C0 00 00 */	li r6, 0
 /* 80448EA0 00412460  38 65 A6 B8 */	addi r3, r5, lbl_8065A6B8@l
@@ -1541,7 +1541,7 @@ float_8066CB68:
 double_8066CB70:
 	.8byte 0x4330000000000000 #unsigned int to float constant
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

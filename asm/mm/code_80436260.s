@@ -840,7 +840,7 @@
 .endfn func_80436B98
 
 
-.fn sinit_80436E08, global
+.fn sinit_80436E08, local
 /* 80436E08 004003C8  3C C0 80 66 */	lis r6, lbl_80659F88@ha
 /* 80436E0C 004003CC  3C 80 80 66 */	lis r4, lbl_80659FB8@ha
 /* 80436E10 004003D0  C0 22 C6 C0 */	lfs f1, float_8066CA40@sda21(r2)
@@ -908,6 +908,15 @@ float_8066CA4C:
 float_8066CA50:
 	.float 0.0245436933 #0x3CC90FDB
 	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80659F88
+lbl_80659F88:
+	.skip 0x30
+.global lbl_80659FB8
+lbl_80659FB8:
+	.skip 0x30
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

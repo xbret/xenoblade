@@ -2798,7 +2798,7 @@
 /* 801BC868 00185E28  4E 80 00 20 */	blr
 .endfn func_801BC6A4
 
-.fn sinit_801BC86C, global
+.fn sinit_801BC86C, local
 /* 801BC86C 00185E2C  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 801BC870 00185E30  3C 80 80 53 */	lis r4, __vt__cf_CSuddenCommu@ha
 /* 801BC874 00185E34  38 84 71 78 */	addi r4, r4, __vt__cf_CSuddenCommu@l
@@ -3123,7 +3123,7 @@ float_8066A720:
 float_8066A724:
 	.float 90 #0x42B40000
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

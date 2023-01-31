@@ -56,7 +56,7 @@
 .endfn GetRuntimeTypeInfo__Q34nw4r3lyt8BoundingCFv
 
 
-.fn sinit_8040547C, global
+.fn sinit_8040547C, local
 /* 8040547C 003CEA3C  38 0D BB D0 */	addi r0, r13, lbl_80667D50@sda21
 /* 80405480 003CEA40  90 0D BB F8 */	stw r0, lbl_80667D78@sda21(r13)
 /* 80405484 003CEA44  4E 80 00 20 */	blr 

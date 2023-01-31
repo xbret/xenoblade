@@ -8727,7 +8727,7 @@
 /* 8028DAAC 0025706C  4E 80 00 20 */	blr
 .endfn func_8028D1A0
 
-.fn sinit_8028DAB0, global
+.fn sinit_8028DAB0, local
 /* 8028DAB0 00257070  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8028DAB4 00257074  7C 08 02 A6 */	mflr r0
 /* 8028DAB8 00257078  38 6D B0 90 */	addi r3, r13, lbl_80667210@sda21

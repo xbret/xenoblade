@@ -470,7 +470,7 @@
 /* 802AEA84 00278044  4E 80 00 20 */	blr
 .endfn func_802AE8FC
 
-.fn sinit_802AEA88, global
+.fn sinit_802AEA88, local
 /* 802AEA88 00278048  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802AEA8C 0027804C  7C 08 02 A6 */	mflr r0
 /* 802AEA90 00278050  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1095,7 +1095,7 @@ CLoad_typestr:
 	.asciz "CLoad"
 	.balign 4
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

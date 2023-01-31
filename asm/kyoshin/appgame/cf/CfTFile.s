@@ -1108,7 +1108,7 @@
 /* 8006A81C 00033DDC  4E 80 00 20 */	blr
 .endfn func_8006A814
 
-.fn sinit_8006A820, global
+.fn sinit_8006A820, local
 /* 8006A820 00033DE0  38 00 00 00 */	li r0, 0
 /* 8006A824 00033DE4  90 0D A5 28 */	stw r0, lbl_806666A8@sda21(r13)
 /* 8006A828 00033DE8  4E 80 00 20 */	blr 

@@ -13291,7 +13291,7 @@
 .endfn func_80087448
 
 
-.fn sinit_80087470, global
+.fn sinit_80087470, local
 /* 80087470 00050A30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80087474 00050A34  7C 08 02 A6 */	mflr r0
 /* 80087478 00050A38  3C 80 80 08 */	lis r4, func_8008753C@ha
@@ -13733,7 +13733,7 @@ float_80668DF0:
 float_80668DF4:
 	.float 5 #0x40A00000
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

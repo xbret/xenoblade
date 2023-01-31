@@ -294,7 +294,7 @@
 /* 804F513C 004BE6FC  4E 80 00 20 */	blr
 .endfn func_804F50D0
 
-.fn sinit_804F5140, global
+.fn sinit_804F5140, local
 /* 804F5140 004BE700  38 6D C1 E8 */	addi r3, r13, lbl_80668368@sda21
 /* 804F5144 004BE704  48 00 00 04 */	b .L_804F5148
 .L_804F5148:
@@ -391,7 +391,7 @@ lbl_8066DCD0:
 	.asciz "/tmp/"
 	.balign 4
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

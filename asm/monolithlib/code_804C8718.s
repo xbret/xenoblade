@@ -4204,7 +4204,7 @@
 /* 804CC2B0 00495870  48 01 8C EC */	b func_804E4F9C
 .endfn func_804CC2B0
 
-.fn sinit_804CC2B4, global
+.fn sinit_804CC2B4, local
 /* 804CC2B4 00495874  4E 80 00 20 */	blr
 .endfn sinit_804CC2B4
 

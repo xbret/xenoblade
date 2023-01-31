@@ -31,7 +31,7 @@
 /* 804C86BC 00491C7C  4E 80 00 20 */	blr
 .endfn func_804C8690
 
-.fn sinit_804C86C0, global
+.fn sinit_804C86C0, local
 /* 804C86C0 00491C80  3C C0 80 66 */	lis r6, lbl_806624A8@ha
 /* 804C86C4 00491C84  C0 82 D4 B8 */	lfs f4, float_8066D838@sda21(r2)
 /* 804C86C8 00491C88  38 C6 24 A8 */	addi r6, r6, lbl_806624A8@l
@@ -93,7 +93,7 @@ float_8066D848:
 	.4byte 0
 
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

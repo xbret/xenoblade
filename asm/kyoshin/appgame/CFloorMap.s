@@ -5839,7 +5839,7 @@
 /* 80250CB0 0021A270  4E 80 00 20 */	blr
 .endfn func_8024FD40
 
-.fn sinit_80250CB4, global
+.fn sinit_80250CB4, local
 /* 80250CB4 0021A274  39 6D AF 10 */	addi r11, r13, lbl_80667090@sda21
 /* 80250CB8 0021A278  39 4D AF 18 */	addi r10, r13, lbl_80667098@sda21
 /* 80250CBC 0021A27C  39 80 00 FF */	li r12, 0xff

@@ -165,7 +165,7 @@
 /* 804DAF54 004A4514  4E 80 00 20 */	blr
 .endfn func_804DAEE8
 
-.fn sinit_804DAF58, global
+.fn sinit_804DAF58, local
 /* 804DAF58 004A4518  38 6D C1 38 */	addi r3, r13, lbl_806682B8@sda21
 /* 804DAF5C 004A451C  48 00 00 04 */	b .L_804DAF60
 .L_804DAF60:
@@ -239,7 +239,7 @@ lbl_8066D9D0:
 	.balign 4
 
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

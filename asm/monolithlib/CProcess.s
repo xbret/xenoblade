@@ -2086,7 +2086,7 @@
 .endfn func_8044629C
 
 
-.fn sinit_804464B4, global
+.fn sinit_804464B4, local
 /* 804464B4 0040FA74  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804464B8 0040FA78  7C 08 02 A6 */	mflr r0
 /* 804464BC 0040FA7C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2193,7 +2193,7 @@ __RTTI__TChildListHeader_CProcess:
 	.4byte 0
 
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

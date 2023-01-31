@@ -416,7 +416,7 @@
 /* 80295DAC 0025F36C  48 02 1E BC */	b func_802B7C68
 .endfn func_80295DAC
 
-.fn sinit_80295DB0, global
+.fn sinit_80295DB0, local
 /* 80295DB0 0025F370  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80295DB4 0025F374  7C 08 02 A6 */	mflr r0
 /* 80295DB8 0025F378  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1742,7 +1742,7 @@ float_8066B470:
 float_8066B474:
 	.float 300 #0x43960000
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

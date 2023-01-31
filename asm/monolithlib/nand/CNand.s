@@ -320,7 +320,7 @@
 /* 804DA4BC 004A3A7C  4E 80 00 20 */	blr
 .endfn func_804DA47C
 
-.fn sinit_804DA4C0, global
+.fn sinit_804DA4C0, local
 /* 804DA4C0 004A3A80  3C 60 80 66 */	lis r3, lbl_806625C0@ha
 /* 804DA4C4 004A3A84  38 63 25 C0 */	addi r3, r3, lbl_806625C0@l
 /* 804DA4C8 004A3A88  4B FF FC 8C */	b func_804DA154
@@ -388,7 +388,7 @@ CNand_typestr:
 	.asciz "CNand"
 	.balign 4
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

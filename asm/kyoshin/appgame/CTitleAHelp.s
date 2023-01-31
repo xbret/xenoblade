@@ -888,7 +888,7 @@
 /* 801C4AE0 0018E0A0  4E 80 00 20 */	blr
 .endfn func_801C492C
 
-.fn sinit_801C4AE4, global
+.fn sinit_801C4AE4, local
 /* 801C4AE4 0018E0A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801C4AE8 0018E0A8  7C 08 02 A6 */	mflr r0
 /* 801C4AEC 0018E0AC  38 6D AB D8 */	addi r3, r13, lbl_80666D58@sda21

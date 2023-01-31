@@ -5261,7 +5261,7 @@ double_8066DCC0:
 .global double_8066DCC8
 double_8066DCC8:
 	.8byte 0x4330000080000000 #signed int to float constant
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

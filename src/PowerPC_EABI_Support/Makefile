@@ -103,10 +103,10 @@ MW_FILES:=\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/targimpl.o\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/target_options.o\
 
-$(MW_O_FILES): CFLAGS += -Cpp_exceptions off
+$(MW_O_FILES): CFLAGS += -Cpp_exceptions off -inline on
 
 #Runtime has defaults and exceptions turned on
-$(BUILD_DIR)/src/PowerPC_EABI_Support/Runtime/%.o: CFLAGS = -use_lmw_stmw on -inline on -proc gekko -fp hard -O4,p -func_align 4 $(INCLUDES)
+$(BUILD_DIR)/src/PowerPC_EABI_Support/Runtime/%.o: CFLAGS = -Cpp_exceptions off -use_lmw_stmw on -inline on -proc gekko -fp hard -O4,p -func_align 4 $(INCLUDES)
 
 
 DEPENDS += $(MW_FILES:.o=.d)

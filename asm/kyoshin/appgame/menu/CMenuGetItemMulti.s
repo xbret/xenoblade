@@ -8388,7 +8388,7 @@
 /* 801B9FC4 00183584  4E 80 00 20 */	blr
 .endfn func_801B9C1C
 
-.fn sinit_801B9FC8, global
+.fn sinit_801B9FC8, local
 /* 801B9FC8 00183588  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801B9FCC 0018358C  39 6D AB 18 */	addi r11, r13, lbl_80666C98@sda21
 /* 801B9FD0 00183590  38 ED AB 30 */	addi r7, r13, lbl_80666CB0@sda21

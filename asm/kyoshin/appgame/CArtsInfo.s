@@ -6968,7 +6968,7 @@
 /* 8023BC88 00205248  4E 80 00 20 */	blr
 .endfn func_8023B468
 
-.fn sinit_8023BC8C, global
+.fn sinit_8023BC8C, local
 /* 8023BC8C 0020524C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8023BC90 00205250  7C 08 02 A6 */	mflr r0
 /* 8023BC94 00205254  38 6D AE B8 */	addi r3, r13, lbl_80667038@sda21

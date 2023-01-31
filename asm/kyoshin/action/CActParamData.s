@@ -5718,7 +5718,7 @@ __vt__CActParamData:
 	.4byte 0
 
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

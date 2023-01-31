@@ -4,7 +4,7 @@
 
 
 
-.fn sinit_80436E84, global
+.fn sinit_80436E84, local
 /* 80436E84 00400444  3C C0 80 66 */	lis r6, lbl_80659FE8@ha
 /* 80436E88 00400448  3C 80 80 66 */	lis r4, lbl_8065A028@ha
 /* 80436E8C 0040044C  C0 22 C6 D8 */	lfs f1, float_8066CA58@sda21(r2)
@@ -54,8 +54,6 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-
-
 .global float_8066CA58
 float_8066CA58:
 	.float 0
@@ -64,3 +62,12 @@ float_8066CA58:
 .global float_8066CA5C
 float_8066CA5C:
 	.float 1.0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80659FE8
+lbl_80659FE8:
+	.skip 0x40
+.global lbl_8065A028
+lbl_8065A028:
+	.skip 0x40

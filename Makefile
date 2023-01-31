@@ -81,7 +81,6 @@ else
   export WINEDEBUG ?= -all
   # Default devkitPPC path
   DEVKITPPC ?= /opt/devkitpro/devkitPPC
-  DEPENDS   := $(DEPENDS:.d=.d.unix)
   AS      := $(DEVKITPPC)/bin/powerpc-eabi-as
   CPP     := $(DEVKITPPC)/bin/powerpc-eabi-cpp -P
   SHA1SUM := shasum
@@ -112,14 +111,14 @@ ifeq ($(VERBOSE),0)
 LDFLAGS := $(MAPGEN) -fp hard -nodefaults -w off
 endif
 LIBRARY_LDFLAGS := -nodefaults -fp hard -proc gekko
+CFLAGS = -enum int -use_lmw_stmw on -proc gekko -fp hard -O4,p -nodefaults -func_align 4 $(INCLUDES)
 
 ifeq ($(VERBOSE),0)
 # this set of ASFLAGS generates no warnings.
 ASFLAGS += -W
+# this set of CFLAGS generates no warnings.
+CFLAGS += -w off
 endif
-
-# Base compiler flags
-CFLAGS = -enum int -inline on -use_lmw_stmw on -proc gekko -fp hard -O4,p -nodefaults -func_align 4 $(INCLUDES)
 
 ifeq ($(NON_MATCHING),1)
 CFLAGS += -DNON_MATCHING
@@ -167,10 +166,6 @@ clean:
 tools:
 	$(MAKE) -C tools
 
-$(DTK): tools/dtk_version
-	@echo "Downloading $@"
-	$(QUIET) $(PYTHON) tools/download_dtk.py $< $@
-
 # ELF creation makefile instructions
 $(ELF): $(O_FILES) $(LDSCRIPT)
 	@echo Linking ELF $@
@@ -181,6 +176,11 @@ $(ELF): $(O_FILES) $(LDSCRIPT)
 %.d.unix: %.d $(TRANSFORM_DEP)
 	@echo Processing $<
 	$(QUIET) $(PYTHON) $(TRANSFORM_DEP) $< $@
+
+$(DTK): tools/dtk_version
+	@echo "Downloading $@"
+	$(QUIET) $(PYTHON) tools/download_dtk.py $< $@
+
 
 -include include_link.mk
 
@@ -198,12 +198,12 @@ $(BUILD_DIR)/%.o: %.s | $(DTK)
 $(BUILD_DIR)/%.o: %.c
 	@echo "Compiling " $<
 	$(QUIET) mkdir -p $(dir $@)
-	$(QUIET) $(CC) $(CFLAGS) -lang=c99 -c -o $@ $<
+	$(QUIET) $(CC) $(CFLAGS) -lang=c99 -c -o $(dir $@) $<
 	
 $(BUILD_DIR)/%.o: %.cpp
 	@echo "Compiling " $<
 	$(QUIET) mkdir -p $(dir $@)
-	$(QUIET) $(CC) $(CFLAGS) -lang=c++ -c -o $@ $<
+	$(QUIET) $(CC) $(CFLAGS) -lang=c++ -c -o $(dir $@) $<
 
 ### Debug Print ###
 

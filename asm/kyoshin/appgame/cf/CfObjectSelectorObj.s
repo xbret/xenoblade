@@ -1065,7 +1065,7 @@
 /* 800FEA10 000C7FD0  4E 80 00 20 */	blr
 .endfn func_800FE96C
 
-.fn sinit_800FEA14, global
+.fn sinit_800FEA14, local
 /* 800FEA14 000C7FD4  C0 42 C6 78 */	lfs f2, pi__2mm@sda21(r2)
 /* 800FEA18 000C7FD8  C0 22 94 54 */	lfs f1, float_806697D4@sda21(r2)
 /* 800FEA1C 000C7FDC  C0 02 94 50 */	lfs f0, float_806697D0@sda21(r2)

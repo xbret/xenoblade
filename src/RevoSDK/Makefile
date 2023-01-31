@@ -239,7 +239,7 @@ RVL_SDK_FILES:=\
 	$(BUILD_DIR)/asm/RevoSDK/wud/debug_msg.o\
 
 #All the functions in the Wii SDK except for bte are aligned to 16 bytes, so this is necessary.
-$(RVL_SDK_FILES): CFLAGS += -Cpp_exceptions off -func_align 16
+$(RVL_SDK_FILES): CFLAGS += -Cpp_exceptions off -inline on -func_align 16
 
 #arc.c doesn't use -use_lmw_stmw on, and uses -ipa file and (maybe rest of wii sdk too?)
 $(BUILD_DIR)/src/RevoSDK/arc/arc.o: CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -proc gekko -fp hard -O4,p -nodefaults -func_align 16 $(INCLUDES)

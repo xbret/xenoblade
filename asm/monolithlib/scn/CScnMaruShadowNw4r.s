@@ -1728,7 +1728,7 @@
 /* 8048EAA0 00458060  4E 80 00 20 */	blr
 .endfn func_8048EA9C
 
-.fn sinit_8048EAA4, global
+.fn sinit_8048EAA4, local
 /* 8048EAA4 00458064  4E 80 00 20 */	blr 
 .endfn sinit_8048EAA4
 
@@ -1974,7 +1974,7 @@ float_8066D190:
 	.float 100.0
 	.4byte 0
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

@@ -962,7 +962,7 @@
 /* 802A07D4 00269D94  4E 80 00 20 */	blr
 .endfn func_802A066C
 
-.fn sinit_802A07D8, global
+.fn sinit_802A07D8, local
 /* 802A07D8 00269D98  C0 42 B1 74 */	lfs f2, float_8066B4F4@sda21(r2)
 /* 802A07DC 00269D9C  C0 2D 93 F0 */	lfs f1, float_80665570@sda21(r13)
 /* 802A07E0 00269DA0  C0 02 B1 70 */	lfs f0, float_8066B4F0@sda21(r2)

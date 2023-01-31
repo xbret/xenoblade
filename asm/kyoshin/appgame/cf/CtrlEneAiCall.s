@@ -4,7 +4,7 @@
 
 
 
-.fn sinit_8008A0C8, global
+.fn sinit_8008A0C8, local
 /* 8008A0C8 00053688  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8008A0CC 0005368C  7C 08 02 A6 */	mflr r0
 /* 8008A0D0 00053690  90 01 00 14 */	stw r0, 0x14(r1)

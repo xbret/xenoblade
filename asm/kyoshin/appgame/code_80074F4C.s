@@ -7635,7 +7635,7 @@
 /* 8007BE70 00045430  4E 80 00 20 */	blr
 .endfn func_8007BAFC
 
-.fn sinit_8007BE74, global
+.fn sinit_8007BE74, local
 /* 8007BE74 00045434  3C 60 80 53 */	lis r3, lbl_8052AB98@ha
 /* 8007BE78 00045438  94 21 FE D0 */	stwu r1, -0x130(r1)
 /* 8007BE7C 0004543C  C0 C2 89 88 */	lfs f6, float_80668D08@sda21(r2)
@@ -8194,7 +8194,7 @@ float_80668D18:
 	.float 0.6 #0x3F19999A
 	.4byte 0
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

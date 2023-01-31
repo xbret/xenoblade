@@ -878,7 +878,7 @@
 /* 8011C414 000E59D4  4E 80 00 20 */	blr
 .endfn func_8011C400
 
-.fn sinit_8011C418, global
+.fn sinit_8011C418, local
 /* 8011C418 000E59D8  C0 42 95 E8 */	lfs f2, float_80669968@sda21(r2)
 /* 8011C41C 000E59DC  C0 2D 85 C0 */	lfs f1, float_80664740@sda21(r13)
 /* 8011C420 000E59E0  C0 02 96 14 */	lfs f0, float_80669994@sda21(r2)

@@ -845,7 +845,7 @@
 /* 800AABB8 00074178  4E 80 00 20 */	blr 
 .endfn func_800AA714
 
-.fn sinit_800AABBC, global
+.fn sinit_800AABBC, local
 /* 800AABBC 0007417C  3C 80 80 57 */	lis r4, lbl_80576478@ha
 /* 800AABC0 00074180  38 00 00 00 */	li r0, 0
 /* 800AABC4 00074184  38 64 64 78 */	addi r3, r4, lbl_80576478@l
@@ -1301,7 +1301,7 @@ lbl_806691D0:
 	.4byte 0x63630000
 	.4byte 0
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

@@ -2302,7 +2302,7 @@
 /* 8016ED40 00138300  4E 80 00 20 */	blr
 .endfn func_8016EC58
 
-.fn sinit_8016ED44, global
+.fn sinit_8016ED44, local
 /* 8016ED44 00138304  38 00 00 00 */	li r0, 0
 /* 8016ED48 00138308  B0 0D A9 F8 */	sth r0, lbl_80666B78@sda21(r13)
 /* 8016ED4C 0013830C  4E 80 00 20 */	blr 

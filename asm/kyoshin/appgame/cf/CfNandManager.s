@@ -5108,7 +5108,7 @@
 /* 802405EC 00209BAC  4E 80 00 20 */	blr
 .endfn func_802405A8
 
-.fn sinit_802405F0, global
+.fn sinit_802405F0, local
 /* 802405F0 00209BB0  4E 80 00 20 */	blr
 .endfn sinit_802405F0
 
@@ -5356,7 +5356,7 @@ double_8066AFB0:
 .global double_8066AFB8
 double_8066AFB8:
 	.8byte 0x4330000080000000 #signed int to float constant
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

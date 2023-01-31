@@ -135,7 +135,7 @@
 .endfn func_80435FA4
 
 
-.fn sinit_80436058, global
+.fn sinit_80436058, local
 /* 80436058 003FF618  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8043605C 003FF61C  C0 42 C6 A0 */	lfs f2, float_8066CA20@sda21(r2)
 /* 80436060 003FF620  93 E1 00 0C */	stw r31, 0xc(r1)

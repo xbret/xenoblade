@@ -135,7 +135,7 @@
 .endfn StoreData__Q34nw4r2ut2LCFPvPvUl
 
 
-.fn sinit_8042BFB4, global
+.fn sinit_8042BFB4, local
 /* 8042BFB4 003F5574  3C 80 80 65 */	lis r4, lbl_80657088@ha
 /* 8042BFB8 003F5578  38 00 00 00 */	li r0, 0
 /* 8042BFBC 003F557C  38 64 70 88 */	addi r3, r4, lbl_80657088@l

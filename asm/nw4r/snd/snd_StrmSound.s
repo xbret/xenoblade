@@ -560,7 +560,7 @@
 /* 8042573C 003EECFC  4E 80 00 20 */	blr
 .endfn GetRuntimeTypeInfo__Q44nw4r3snd6detail9StrmSoundCFv
 
-.fn sinit_80425740, global
+.fn sinit_80425740, local
 /* 80425740 003EED00  38 0D BC 30 */	addi r0, r13, lbl_80667DB0@sda21
 /* 80425744 003EED04  90 0D BC 80 */	stw r0, lbl_80667E00@sda21(r13)
 /* 80425748 003EED08  4E 80 00 20 */	blr

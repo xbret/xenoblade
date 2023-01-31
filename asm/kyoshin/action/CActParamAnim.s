@@ -10055,7 +10055,7 @@
 /* 800539DC 0001CF9C  4E 80 00 20 */	blr
 .endfn func_800539D8
 
-.fn sinit_800539E0, global
+.fn sinit_800539E0, local
 /* 800539E0 0001CFA0  C0 02 D3 50 */	lfs f0, mlib_invsqrt2@sda21(r2)
 /* 800539E4 0001CFA4  D0 0D A4 C8 */	stfs f0, float_80666648@sda21(r13)
 /* 800539E8 0001CFA8  4E 80 00 20 */	blr

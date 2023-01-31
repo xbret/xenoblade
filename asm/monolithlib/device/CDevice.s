@@ -217,7 +217,7 @@
 .endfn func_8044DADC
 
 
-.fn sinit_8044DAFC, global
+.fn sinit_8044DAFC, local
 /* 8044DAFC 004170BC  3C C0 80 66 */	lis r6, lbl_8065A6F8@ha
 /* 8044DB00 004170C0  3C 80 80 66 */	lis r4, lbl_8065A73C@ha
 /* 8044DB04 004170C4  38 A6 A6 F8 */	addi r5, r6, lbl_8065A6F8@l

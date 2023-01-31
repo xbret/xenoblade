@@ -1170,7 +1170,7 @@
 /* 80142540 0010BB00  4E 80 00 20 */	blr
 .endfn func_801424BC
 
-.fn sinit_80142544, global
+.fn sinit_80142544, local
 /* 80142544 0010BB04  3C 60 80 53 */	lis r3, __vt__cf_CfBdat@ha
 /* 80142548 0010BB08  38 0D A9 04 */	addi r0, r13, lbl_80666A84@sda21
 /* 8014254C 0010BB0C  38 63 1E E8 */	addi r3, r3, __vt__cf_CfBdat@l

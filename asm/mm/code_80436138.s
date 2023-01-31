@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn sinit_80436138, global
+.fn sinit_80436138, local
 /* 80436138 003FF6F8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8043613C 003FF6FC  C0 42 C6 B0 */	lfs f2, float_8066CA30@sda21(r2)
 /* 80436140 003FF700  93 E1 00 1C */	stw r31, 0x1c(r1)
@@ -85,10 +83,12 @@
 
 .balign 4
 
+.obj lbl_ctor, local
+.hidden lbl_ctor
 .4byte sinit_80436138
+.endobj lbl_ctor
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
-
 
 
 .global float_8066CA30
@@ -105,6 +105,18 @@ float_8066CA34:
 float_8066CA38:
 	.float 0
 	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global lbl_80659EC8
+lbl_80659EC8:
+	.skip 0x20
+.global lbl_80659EE8
+lbl_80659EE8:
+	.skip 0x10
+.global lbl_80659EF8
+lbl_80659EF8:
+	.skip 0x90
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

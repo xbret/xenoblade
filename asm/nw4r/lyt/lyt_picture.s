@@ -459,7 +459,7 @@
 /* 804012AC 003CA86C  4E 80 00 20 */	blr
 .endfn GetRuntimeTypeInfo__Q34nw4r3lyt7PictureCFv
 
-.fn sinit_804012B0, global
+.fn sinit_804012B0, local
 /* 804012B0 003CA870  38 0D BB D0 */	addi r0, r13, lbl_80667D50@sda21
 /* 804012B4 003CA874  90 0D BB E0 */	stw r0, lbl_80667D60@sda21(r13)
 /* 804012B8 003CA878  4E 80 00 20 */	blr

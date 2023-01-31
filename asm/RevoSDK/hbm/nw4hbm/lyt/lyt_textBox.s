@@ -1420,7 +1420,7 @@
 .endfn func_80334110
 
 .balign 16, 0
-.fn sinit_80334120, global
+.fn sinit_80334120, local
 /* 80334120 002FD6E0  3C 80 80 5D */	lis r4, lbl_805CD7C0@ha
 /* 80334124 002FD6E4  3C 60 80 5D */	lis r3, lbl_805CD7D0@ha
 /* 80334128 002FD6E8  38 84 D7 C0 */	addi r4, r4, lbl_805CD7C0@l

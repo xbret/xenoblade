@@ -72,7 +72,7 @@
 /* 804DB41C 004A49DC  4E 80 00 20 */	blr
 .endfn func_804DB364
 
-.fn sinit_804DB420, global
+.fn sinit_804DB420, local
 /* 804DB420 004A49E0  38 6D C1 58 */	addi r3, r13, lbl_806682D8@sda21
 /* 804DB424 004A49E4  48 00 00 04 */	b .L_804DB428
 .L_804DB428:

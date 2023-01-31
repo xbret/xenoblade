@@ -564,7 +564,7 @@
 /* 8041B2F4 003E48B4  4E 80 00 20 */	blr
 .endfn GetRuntimeTypeInfo__Q44nw4r3snd6detail8SeqSoundCFv
 
-.fn sinit_8041B2F8, global
+.fn sinit_8041B2F8, local
 /* 8041B2F8 003E48B8  38 0D BC 30 */	addi r0, r13, lbl_80667DB0@sda21
 /* 8041B2FC 003E48BC  90 0D BC 58 */	stw r0, lbl_80667DD8@sda21(r13)
 /* 8041B300 003E48C0  4E 80 00 20 */	blr

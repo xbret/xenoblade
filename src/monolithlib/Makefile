@@ -139,7 +139,7 @@ MONOLITHLIB_FILES:=\
 	$(BUILD_DIR)/asm/monolithlib/nand/CNReqtaskSaveBanner.o\
 	$(BUILD_DIR)/asm/monolithlib/nand/CNBanner.o\
 
-$(MONOLITHLIB_FILES): CFLAGS += -ipa file -str pool,readonly,reuse -RTTI on -enc SJIS
+$(MONOLITHLIB_FILES): CFLAGS += -ipa file -inline deferred -inline on -str pool,readonly,reuse -RTTI on -enc SJIS
 
 DEPENDS += $(MONOLITHLIB_FILES:.o=.d)
 

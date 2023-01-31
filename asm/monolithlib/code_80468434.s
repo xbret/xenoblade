@@ -2316,7 +2316,7 @@
 /* 8046A528 00433AE8  4E 80 00 20 */	blr
 .endfn func_8046A3B4
 
-.fn sinit_8046A52C, global
+.fn sinit_8046A52C, local
 /* 8046A52C 00433AEC  4E 80 00 20 */	blr
 .endfn sinit_8046A52C
 
@@ -2377,7 +2377,7 @@ float_8066CE10:
 	.float 0.33333333 #0x3EAAAAAB
 	.4byte 0
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

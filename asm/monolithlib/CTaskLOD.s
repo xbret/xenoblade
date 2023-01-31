@@ -2110,7 +2110,7 @@
 .endfn func_8046451C
 
 
-.fn sinit_8046456C, global
+.fn sinit_8046456C, local
 /* 8046456C 0042DB2C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80464570 0042DB30  7C 08 02 A6 */	mflr r0
 /* 80464574 0042DB34  3C 60 80 66 */	lis r3, lbl_8065A900@ha

@@ -5776,7 +5776,7 @@
 /* 804BADB0 00484370  4E 80 00 20 */	blr
 .endfn func_804BADA0
 
-.fn sinit_804BADB4, global
+.fn sinit_804BADB4, local
 /* 804BADB4 00484374  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804BADB8 00484378  7C 08 02 A6 */	mflr r0
 /* 804BADBC 0048437C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -6123,7 +6123,7 @@ float_8066D698:
 float_8066D69C:
 	.float 0.0245436933 #0x3CC90FDB
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

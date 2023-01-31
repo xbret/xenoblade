@@ -1995,7 +1995,7 @@
 /* 80229374 001F2934  4E 80 00 20 */	blr
 .endfn func_80228CD8
 
-.fn sinit_80229378, global
+.fn sinit_80229378, local
 /* 80229378 001F2938  3C 60 80 58 */	lis r3, lbl_80579E68@ha
 /* 8022937C 001F293C  3C 80 80 23 */	lis r4, func_80229398@ha
 /* 80229380 001F2940  38 63 9E 68 */	addi r3, r3, lbl_80579E68@l
@@ -2206,7 +2206,7 @@ float_8066AE44:
 .global double_8066AE48
 double_8066AE48:
 	.8byte 0x4330000000000000 #unsigned int to float constant
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
