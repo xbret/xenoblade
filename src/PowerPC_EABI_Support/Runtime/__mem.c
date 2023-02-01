@@ -195,74 +195,76 @@ lbl_8000428C:
 	blr 
 }
 
-asm void __fill_mem(void* dest, int offset, size_t n){
-	cmplwi r5, 0x20
-	clrlwi r7, r4, 0x18
-	addi r6, r3, -1
-	blt lbl_80004338
-	nor r0, r6, r6
-	clrlwi. r0, r0, 0x1e
-	beq lbl_800042C8
-	subf r5, r0, r5
-lbl_800042BC:
-	addic. r0, r0, -1
-	stbu r7, 1(r6)
-	bne lbl_800042BC
-lbl_800042C8:
-	cmpwi r7, 0
-	beq lbl_800042E8
-	slwi r4, r7, 8
-	slwi r3, r7, 0x18
-	slwi r0, r7, 0x10
-	or r4, r7, r4
-	or r0, r3, r0
-	or r7, r4, r0
-lbl_800042E8:
-	rlwinm. r0, r5, 0x1b, 5, 0x1f
-	addi r3, r6, -3
-	beq lbl_8000431C
-lbl_800042F4:
-	stw r7, 4(r3)
-	addic. r0, r0, -1
-	stw r7, 8(r3)
-	stw r7, 0xc(r3)
-	stw r7, 0x10(r3)
-	stw r7, 0x14(r3)
-	stw r7, 0x18(r3)
-	stw r7, 0x1c(r3)
-	stwu r7, 0x20(r3)
-	bne lbl_800042F4
-lbl_8000431C:
-	rlwinm. r0, r5, 0x1e, 0x1d, 0x1f
-	beq lbl_80004330
-lbl_80004324:
-	addic. r0, r0, -1
-	stwu r7, 4(r3)
-	bne lbl_80004324
-lbl_80004330:
-	addi r6, r3, 3
-	clrlwi r5, r5, 0x1e
-lbl_80004338:
-	cmpwi r5, 0
-	beqlr 
-lbl_80004340:
-	addic. r5, r5, -1
-	stbu r7, 1(r6)
-	bne lbl_80004340
-	blr 
+void __fill_mem(void * dest, int val, size_t count)
+{
+	char * cdest = (char *)dest;
+	int cval = (unsigned char)val;
+	int * idest = (int *)dest;
+	int r0;
+	cdest--;
+	if (count >= 0x20)
+	{
+		r0 = ~(int)(cdest) & 3;
+		
+		if (r0)
+		{
+			count -= r0;
+			
+			do
+			{
+				*++cdest = cval;
+			} while(--r0);
+		}
+		
+		if (cval)
+		{
+			cval = (cval << 0x18) | (cval << 0x10) | (cval << 0x8) | cval;
+		}
+		
+		r0 = count >> 5;
+		idest = (int *)(cdest - 3);
+		
+		if (r0)
+		{
+			do
+			{
+				idest[1] = cval;//4
+				--r0;
+				idest[2] = cval;//8
+				idest[3] = cval;//c
+				idest[4] = cval;//10
+				idest[5] = cval;//14
+				idest[6] = cval;//18
+				idest[7] = cval;//1c
+				*(idest += 8) = cval;//20
+			} while (r0);
+		}
+		
+		r0 = (count >> 2) & 7;
+		
+		if (r0)
+		{
+			do
+			{
+				*++idest = cval;
+			} while(--r0);
+		}
+		
+		cdest = (char *)idest + 3;
+		count &= 3;
+	}
+	
+	if (count)
+	{
+		do
+		{
+			*++cdest = cval;
+		} while(--count);
+	}
 }
 
-asm void memset(void* dest, int offset, size_t n){
-	stwu r1, -0x10(r1)
-	mflr r0
-	stw r0, 0x14(r1)
-	stw r31, 0xc(r1)
-	mr r31, r3
-	bl __fill_mem
-	mr r3, r31
-	lwz r31, 0xc(r1)
-	lwz r0, 0x14(r1)
-	mtlr r0
-	addi r1, r1, 0x10
-	blr 
+
+void* memset(void* dest, int val, size_t count) {
+    __fill_mem(dest, val, count);
+    return dest;
 }
