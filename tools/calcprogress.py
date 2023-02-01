@@ -25,6 +25,7 @@ import math
 import csv
 import json
 import argparse
+from pathlib import Path
 from datetime import datetime
 
 ###############################################
@@ -161,6 +162,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Calculate progress.")
     parser.add_argument("dol", help="Path to DOL")
     parser.add_argument("map", help="Path to map")
+    parser.add_argument("build", help="Path to build")
     parser.add_argument("-o", "--output", help="JSON output file")
     args = parser.parse_args()
 
@@ -207,6 +209,8 @@ if __name__ == "__main__":
     # Open map file
     mapfile = open(sys.argv[2], "r")
     symbols = mapfile.readlines()
+
+    src_o_files = list(Path(sys.argv[3] + "/src").rglob("*.o"))
 
     decomp_code_size = 0
     decomp_data_size = 0
@@ -258,17 +262,25 @@ if __name__ == "__main__":
             symb = match_obj.group("Symbol")
             if (symb.startswith("*fill*")) or (symb.startswith(".") and symb[1:] in TEXT_SECTIONS or symb[1:] in DATA_SECTIONS):
                 continue
-            # Subtract size of symbols ending in ".o", as they're assembly.
+
+            # Subtract the size of the symbol if the object file is in the asm folder
+            # TODO: see if there's a better way to do this
             if match_obj.group("Object").endswith(".o") == True:
-                if j == i - 1:
-                    if section_type == SECTION_TEXT:
-                        decomp_code_size -= cur_size
-                    else:
-                        decomp_data_size -= cur_size
-                    cur_size = 0
-                    #print(f"Line* {j}: {symbols[j]}")
-                #print(f"Line {i}: {symbols[i]}")
-                continue
+                in_asm_file = True
+                object_parts = match_obj.group("Object").strip().split(" ")
+                lib_name = object_parts[0].replace(".a","")
+                object_name = object_parts[1]
+
+                #If we find the object file in the src folder, don't subtract the symbol size
+                for src_o_file in src_o_files:
+                    file_path = str(src_o_file)
+                
+                    if lib_name in file_path and object_name in file_path:
+                        in_asm_file = False
+                
+                if in_asm_file == True:
+                    continue
+            
             # For sections that don't start with "."
             if (symb in DATA_SECTIONS):
                 continue

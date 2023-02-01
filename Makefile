@@ -86,8 +86,9 @@ else
   SHA1SUM := shasum
   PYTHON  := python3
 endif
-CC      := $(WINE) tools/mwcc_compiler/$(CONSOLE)/$(MWCC_VERSION)/mwcceppc.exe
-LD      := $(WINE) tools/mwcc_compiler/$(CONSOLE)/$(MWLD_VERSION)/mwldeppc.exe
+COMPILERS ?= tools/mwcc_compiler
+CC      = $(WINE) $(COMPILERS)/$(CONSOLE)/$(MWCC_VERSION)/mwcceppc.exe
+LD      = $(WINE) $(COMPILERS)/$(CONSOLE)/$(MWLD_VERSION)/mwldeppc.exe
 DTK     := tools/dtk
 ELF2DOL := $(DTK) elf2dol
 
@@ -120,10 +121,6 @@ ASFLAGS += -W
 CFLAGS += -w off
 endif
 
-ifeq ($(NON_MATCHING),1)
-CFLAGS += -DNON_MATCHING
-endif
-
 #-------------------------------------------------------------------------------
 # Recipes
 #-------------------------------------------------------------------------------
@@ -153,7 +150,7 @@ $(DOL): $(ELF) | tools
 	$(QUIET) $(ELF2DOL) $< $@
 	$(QUIET) $(SHA1SUM) -c sha1/$(NAME).$(VERSION).sha1
 ifneq ($(findstring -map,$(LDFLAGS)),)
-	$(PYTHON) tools/calcprogress.py $(DOL) $(MAP)
+	$(PYTHON) tools/calcprogress.py $(DOL) $(MAP) $(BUILD_DIR)
 endif
 
 clean:

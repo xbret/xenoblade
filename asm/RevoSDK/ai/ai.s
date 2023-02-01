@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+#fake? needed to align Ndev an extra 0x10 bytes, but might just be .balign 16
 .balign 16, 0
 .fn AIRegisterDMACallback, global
 /* 802D10A0 0029A660  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -432,7 +433,7 @@ lbl_8053FFB8:
 	.balign 4
 	
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
-#.skip 0x4 #needed to align DebuggerDriver.c
+.skip 0x4 #needed to align DebuggerDriver.c
 
 .global lbl_806675C8
 lbl_806675C8:
