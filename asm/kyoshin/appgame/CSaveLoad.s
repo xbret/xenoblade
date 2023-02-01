@@ -4635,7 +4635,7 @@
 /* 802930DC 0025C69C  4E 80 00 20 */	blr
 .endfn func_80292EC0
 
-.fn sinit_802930E0, global
+.fn sinit_802930E0, local
 /* 802930E0 0025C6A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802930E4 0025C6A4  7C 08 02 A6 */	mflr r0
 /* 802930E8 0025C6A8  3C 80 80 54 */	lis r4, __vt__cf_CfAward@ha
@@ -4917,7 +4917,7 @@ CSLCur_typestr:
 	.asciz "CSLCur"
 	.balign 4
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

@@ -6085,7 +6085,7 @@
 /* 801413F4 0010A9B4  4E 80 00 20 */	blr
 .endfn func_801413DC
 
-.fn sinit_801413F8, global
+.fn sinit_801413F8, local
 /* 801413F8 0010A9B8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801413FC 0010A9BC  7C 08 02 A6 */	mflr r0
 /* 80141400 0010A9C0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -6485,7 +6485,7 @@ __RTTI__CTTask_CUIWindowManager:
 	.4byte CTTask_CUIWindowManager_typestr
 	.4byte CTTask_CUIWindowManager_hierarchy
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

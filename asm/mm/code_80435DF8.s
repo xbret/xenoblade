@@ -4,7 +4,7 @@
 
 
 
-.fn sinit_80435DF8, global
+.fn sinit_80435DF8, local
 /* 80435DF8 003FF3B8  3D 00 80 66 */	lis r8, lbl_80659DF0@ha
 /* 80435DFC 003FF3BC  C0 22 C6 70 */	lfs f1, float_8066C9F0@sda21(r2)
 /* 80435E00 003FF3C0  39 08 9D F0 */	addi r8, r8, lbl_80659DF0@l

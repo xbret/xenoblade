@@ -79,7 +79,7 @@
 .endfn func_804DB278
 
 
-.fn sinit_804DB330, global
+.fn sinit_804DB330, local
 /* 804DB330 004A48F0  38 6D C1 50 */	addi r3, r13, lbl_806682D0@sda21
 /* 804DB334 004A48F4  48 00 00 04 */	b .L_804DB338
 .L_804DB338:

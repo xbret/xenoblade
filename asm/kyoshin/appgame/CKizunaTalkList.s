@@ -1359,7 +1359,7 @@
 /* 80274454 0023DA14  4E 80 00 20 */	blr
 .endfn func_80274268
 
-.fn sinit_80274458, global
+.fn sinit_80274458, local
 /* 80274458 0023DA18  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027445C 0023DA1C  7C 08 02 A6 */	mflr r0
 /* 80274460 0023DA20  38 6D B0 30 */	addi r3, r13, lbl_806671B0@sda21

@@ -1749,7 +1749,7 @@
 /* 8040DCB0 003D7270  4E 80 00 20 */	blr
 .endfn AuxCallbackFunc__Q44nw4r3snd6detail9AxManagerFPvPv
 
-.fn sinit_8040DCB4, global
+.fn sinit_8040DCB4, local
 /* 8040DCB4 003D7274  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040DCB8 003D7278  7C 08 02 A6 */	mflr r0
 /* 8040DCBC 003D727C  3C 60 80 57 */	lis r3, lbl_8056E068@ha

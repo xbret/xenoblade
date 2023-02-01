@@ -14202,7 +14202,7 @@
 /* 801D1E2C 0019B3EC  4E 80 00 20 */	blr
 .endfn func_801D1E0C
 
-.fn sinit_801D1E30, global
+.fn sinit_801D1E30, local
 /* 801D1E30 0019B3F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801D1E34 0019B3F4  7C 08 02 A6 */	mflr r0
 /* 801D1E38 0019B3F8  38 6D AB F8 */	addi r3, r13, lbl_80666D78@sda21

@@ -2087,7 +2087,7 @@ float_8066CD64:
 double_8066CD68:
 	.8byte 0x4330000000000000 #unsigned int to float constant
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

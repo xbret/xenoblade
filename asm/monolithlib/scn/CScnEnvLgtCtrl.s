@@ -8496,7 +8496,7 @@
 /* 804C8170 00491730  4E 80 00 20 */	blr
 .endfn func_804C8054
 
-.fn sinit_804C8174, global
+.fn sinit_804C8174, local
 /* 804C8174 00491734  94 21 FF 30 */	stwu r1, -0xd0(r1)
 /* 804C8178 00491738  BD C1 00 88 */	stmw r14, 0x88(r1)
 /* 804C817C 0049173C  3E 40 80 57 */	lis r18, lbl_805732B0@ha
@@ -9299,7 +9299,7 @@ float_8066D830:
 	.float 40.7436638 #0x4222F983
 	.4byte 0
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

@@ -2996,7 +2996,7 @@
 /* 804B5988 0047EF48  4E 80 00 20 */	blr
 .endfn func_804B5944
 
-.fn sinit_804B598C, global
+.fn sinit_804B598C, local
 /* 804B598C 0047EF4C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804B5990 0047EF50  7C 08 02 A6 */	mflr r0
 /* 804B5994 0047EF54  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3164,7 +3164,7 @@ float_8066D678:
 	.float 1000000 #0x49742400
 	.4byte 0
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

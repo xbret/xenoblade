@@ -1329,7 +1329,7 @@
 /* 802AAF20 002744E0  4E 80 00 20 */	blr
 .endfn func_802AAC78
 
-.fn sinit_802AAF24, global
+.fn sinit_802AAF24, local
 /* 802AAF24 002744E4  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 802AAF28 002744E8  39 6D B1 D0 */	addi r11, r13, lbl_80667350@sda21
 /* 802AAF2C 002744EC  39 4D B1 D8 */	addi r10, r13, lbl_80667358@sda21

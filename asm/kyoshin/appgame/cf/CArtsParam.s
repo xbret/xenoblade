@@ -1627,7 +1627,7 @@
 /* 801555E0 0011EBA0  4E 80 00 20 */	blr
 .endfn func_801555C8
 
-.fn sinit_801555E4, global
+.fn sinit_801555E4, local
 /* 801555E4 0011EBA4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801555E8 0011EBA8  7C 08 02 A6 */	mflr r0
 /* 801555EC 0011EBAC  3C 60 80 53 */	lis r3, __vt__cf_CAttackParam@ha
@@ -1781,7 +1781,7 @@ double_80669D50:
 .global double_80669D58
 double_80669D58:
 	.8byte 0x4330000080000000 #signed int to float constant
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

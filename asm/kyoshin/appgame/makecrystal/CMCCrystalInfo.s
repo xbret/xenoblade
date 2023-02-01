@@ -1541,7 +1541,7 @@
 /* 8021BBC0 001E5180  4E 80 00 20 */	blr
 .endfn func_8021B74C
 
-.fn sinit_8021BBC4, global
+.fn sinit_8021BBC4, local
 /* 8021BBC4 001E5184  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8021BBC8 001E5188  7C 08 02 A6 */	mflr r0
 /* 8021BBCC 001E518C  38 6D AE 48 */	addi r3, r13, lbl_80666FC8@sda21

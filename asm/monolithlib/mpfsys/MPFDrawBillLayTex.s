@@ -2965,7 +2965,7 @@
 .endfn func_8047C904
 
 
-.fn sinit_8047CA2C, global
+.fn sinit_8047CA2C, local
 /* 8047CA2C 00445FEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8047CA30 00445FF0  7C 08 02 A6 */	mflr r0
 /* 8047CA34 00445FF4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3038,7 +3038,7 @@ float_8066D028:
 	.float 3 #0x40400000
 	.4byte 0
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

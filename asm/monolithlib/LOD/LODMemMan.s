@@ -9050,7 +9050,7 @@
 .endfn func_80474F54
 
 
-.fn sinit_80474F7C, global
+.fn sinit_80474F7C, local
 /* 80474F7C 0043E53C  4E 80 00 20 */	blr 
 .endfn sinit_80474F7C
 

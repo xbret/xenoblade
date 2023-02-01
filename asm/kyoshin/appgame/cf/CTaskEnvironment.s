@@ -1673,7 +1673,7 @@
 /* 80059D5C 0002331C  4E 80 00 20 */	blr
 .endfn func_80059D18
 
-.fn sinit_80059D60, global
+.fn sinit_80059D60, local
 /* 80059D60 00023320  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80059D64 00023324  C0 A2 85 2C */	lfs f5, float_806688AC@sda21(r2)
 /* 80059D68 00023328  DB E1 00 30 */	stfd f31, 0x30(r1)
@@ -1838,7 +1838,7 @@ CTTask_CTaskEnvironment_typestr:
 	.asciz "CTTask<CTaskEnvironment>"
 	.balign 4
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

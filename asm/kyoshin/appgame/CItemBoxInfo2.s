@@ -10494,7 +10494,7 @@
 /* 801EABC0 001B4180  4E 80 00 20 */	blr
 .endfn func_801E9B94
 
-.fn sinit_801EABC4, global
+.fn sinit_801EABC4, local
 /* 801EABC4 001B4184  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801EABC8 001B4188  7C 08 02 A6 */	mflr r0
 /* 801EABCC 001B418C  38 6D AC 88 */	addi r3, r13, lbl_80666E08@sda21

@@ -2629,7 +2629,7 @@
 /* 802019F4 001CAFB4  4E 80 00 20 */	blr
 .endfn func_80201900
 
-.fn sinit_802019F8, global
+.fn sinit_802019F8, local
 /* 802019F8 001CAFB8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802019FC 001CAFBC  7C 08 02 A6 */	mflr r0
 /* 80201A00 001CAFC0  3C 60 80 58 */	lis r3, lbl_80579D48@ha
@@ -2878,7 +2878,7 @@ float_8066AB58:
 float_8066AB5C:
 	.float 1.5
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

@@ -976,7 +976,7 @@
 /* 800696C4 00032C84  4E 80 00 20 */	blr
 .endfn func_80069600
 
-.fn sinit_800696C8, global
+.fn sinit_800696C8, local
 /* 800696C8 00032C88  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800696CC 00032C8C  7C 08 02 A6 */	mflr r0
 /* 800696D0 00032C90  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1108,7 +1108,7 @@ lbl_806643C8:
 	.4byte 0
 
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

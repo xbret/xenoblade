@@ -5756,7 +5756,7 @@
 .endfn func_8033EF70
 
 .balign 16, 0
-.fn sinit_8033EF90, global
+.fn sinit_8033EF90, local
 /* 8033EF90 00308550  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8033EF94 00308554  7C 08 02 A6 */	mflr r0
 /* 8033EF98 00308558  90 01 00 14 */	stw r0, 0x14(r1)

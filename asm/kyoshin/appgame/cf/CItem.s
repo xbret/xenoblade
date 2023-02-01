@@ -7402,7 +7402,7 @@
 /* 8015B9D4 00124F94  4E 80 00 20 */	blr
 .endfn func_8015B9D0
 
-.fn sinit_8015B9D8, global
+.fn sinit_8015B9D8, local
 /* 8015B9D8 00124F98  3C 60 80 57 */	lis r3, lbl_80577610@ha
 /* 8015B9DC 00124F9C  38 A0 00 00 */	li r5, 0
 /* 8015B9E0 00124FA0  38 C3 76 10 */	addi r6, r3, lbl_80577610@l
@@ -8428,7 +8428,7 @@ lbl_80669DE8:
 	.asciz "arts1"
 	.balign 4
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

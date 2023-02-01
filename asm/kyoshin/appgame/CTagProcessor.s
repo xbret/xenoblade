@@ -7430,7 +7430,7 @@
 /* 8012B9FC 000F4FBC  4E 80 00 20 */	blr
 .endfn func_8012B9F0
 
-.fn sinit_8012BA00, global
+.fn sinit_8012BA00, local
 /* 8012BA00 000F4FC0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8012BA04 000F4FC4  7C 08 02 A6 */	mflr r0
 /* 8012BA08 000F4FC8  38 6D A7 58 */	addi r3, r13, lbl_806668D8@sda21

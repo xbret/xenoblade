@@ -12932,7 +12932,7 @@ double_80669C18:
 .global double_80669C20
 double_80669C20:
 	.8byte 0x4330000080000000 #signed int to float constant
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

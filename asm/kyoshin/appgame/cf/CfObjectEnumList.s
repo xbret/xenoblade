@@ -10555,7 +10555,7 @@ float_806697C4:
 float_806697C8:
 	.float 0.5
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

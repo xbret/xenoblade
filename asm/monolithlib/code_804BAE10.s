@@ -1946,7 +1946,7 @@
 /* 804BC9E4 00485FA4  4E 80 00 20 */	blr
 .endfn func_804BC9DC
 
-.fn sinit_804BC9E8, global
+.fn sinit_804BC9E8, local
 /* 804BC9E8 00485FA8  4E 80 00 20 */	blr
 .endfn sinit_804BC9E8
 

@@ -1633,7 +1633,7 @@
 .endfn GetRuntimeTypeInfo__Q44nw4r3snd6detail10BasicSoundCFv
 
 
-.fn sinit_80413B08, global
+.fn sinit_80413B08, local
 /* 80413B08 003DD0C8  38 00 00 00 */	li r0, 0
 /* 80413B0C 003DD0CC  90 0D BC 30 */	stw r0, lbl_80667DB0@sda21(r13)
 /* 80413B10 003DD0D0  4E 80 00 20 */	blr

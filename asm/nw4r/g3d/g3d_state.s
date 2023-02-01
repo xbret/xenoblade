@@ -4014,7 +4014,7 @@
 .endfn __dt__Q44nw4r3g3d8G3DState11IndMtxOpStdFv
 
 
-.fn sinit_803EB3B4, global
+.fn sinit_803EB3B4, local
 /* 803EB3B4 003B4974  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803EB3B8 003B4978  7C 08 02 A6 */	mflr r0
 /* 803EB3BC 003B497C  38 80 00 00 */	li r4, 0

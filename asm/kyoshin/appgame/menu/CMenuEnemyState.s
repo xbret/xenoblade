@@ -4613,7 +4613,7 @@
 /* 801134E4 000DCAA4  4E 80 00 20 */	blr
 .endfn func_801132A8
 
-.fn sinit_801134E8, global
+.fn sinit_801134E8, local
 /* 801134E8 000DCAA8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801134EC 000DCAAC  39 6D A6 F0 */	addi r11, r13, lbl_80666870@sda21
 /* 801134F0 000DCAB0  39 0D A6 F8 */	addi r8, r13, lbl_80666878@sda21
@@ -5020,7 +5020,7 @@ float_80669918:
 float_8066991C:
 	.float 31 #0x41F80000
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

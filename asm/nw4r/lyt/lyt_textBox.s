@@ -1956,7 +1956,7 @@
 /* 80402E18 003CC3D8  4E 80 00 20 */	blr
 .endfn GetRuntimeTypeInfo__Q34nw4r3lyt7TextBoxCFv
 
-.fn sinit_80402E1C, global
+.fn sinit_80402E1C, local
 /* 80402E1C 003CC3DC  38 0D BB D0 */	addi r0, r13, lbl_80667D50@sda21
 /* 80402E20 003CC3E0  90 0D BB E8 */	stw r0, lbl_80667D68@sda21(r13)
 /* 80402E24 003CC3E4  4E 80 00 20 */	blr 

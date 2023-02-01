@@ -290,7 +290,7 @@
 .endfn func_80437310
 
 
-.fn sinit_80437350, global
+.fn sinit_80437350, local
 /* 80437350 00400910  3C C0 80 66 */	lis r6, lbl_8065A068@ha
 /* 80437354 00400914  3C 80 80 66 */	lis r4, lbl_8065A078@ha
 /* 80437358 00400918  C0 22 C6 EC */	lfs f1, float_8066CA6C@sda21(r2)
@@ -339,7 +339,7 @@ float_8066CA70:
 	.float 1.0
 	.4byte 0
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

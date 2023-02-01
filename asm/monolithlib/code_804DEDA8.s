@@ -5070,7 +5070,7 @@ float_8066DA84:
 	.float 0.9999 #0x3F7FF972
 
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

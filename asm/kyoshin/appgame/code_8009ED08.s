@@ -12384,7 +12384,7 @@
 /* 800A9F3C 000734FC  4E 80 00 20 */	blr
 .endfn func_800A9E50
 
-.fn sinit_800A9F40, global
+.fn sinit_800A9F40, local
 /* 800A9F40 00073500  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800A9F44 00073504  7C 08 02 A6 */	mflr r0
 /* 800A9F48 00073508  90 01 00 14 */	stw r0, 0x14(r1)
@@ -12952,7 +12952,7 @@ float_806690A8:
 	.float 0.2
 	.4byte 0
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

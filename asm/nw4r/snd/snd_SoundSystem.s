@@ -183,7 +183,7 @@
 .endfn IsInitializedSoundSystem__Q34nw4r3snd11SoundSystemFv
 
 
-.fn sinit_8042129C, global
+.fn sinit_8042129C, local
 /* 8042129C 003EA85C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804212A0 003EA860  7C 08 02 A6 */	mflr r0
 /* 804212A4 003EA864  90 01 00 14 */	stw r0, 0x14(r1)

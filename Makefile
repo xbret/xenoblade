@@ -26,16 +26,13 @@ VERSION ?= 1
 VERSION := jp
 
 BUILD_DIR := build/$(NAME).$(VERSION)
-ifeq ($(EPILOGUE_PROCESS),1)
-EPILOGUE_DIR := epilogue/$(NAME).$(VERSION)
-endif
 
 # Inputs
 S_FILES := $(wildcard asm/*.s)
 C_FILES := $(wildcard src/*.c)
 CPP_FILES := $(wildcard src/*.cpp)
 CPP_FILES += $(wildcard src/*.cp)
-LDSCRIPT_DOL := ldscript.lcf
+LDSCRIPT := $(BUILD_DIR)/ldscript.lcf
 
 # Outputs
 DOL     := $(BUILD_DIR)/main.dol
@@ -48,13 +45,14 @@ ifeq ($(MAPGENFLAG),1)
 endif
 
 include obj_files.mk
-ifeq ($(EPILOGUE_PROCESS),1)
-include e_files.mk
-endif
 
 O_FILES :=  $(GAME_O_FILES) $(MW_O_FILES) $(NDEV_O_FILES) $(RVL_SDK_O_FILES) \
-		   $(CRIWARE_O_FILES) $(NW4R_O_FILES) $(UTILS_O_FILES) \
-		   $(MM_O_FILES) $(MONOLITHLIB_O_FILES)
+			$(CRIWARE_O_FILES) $(NW4R_O_FILES) $(UTILS_O_FILES) \
+			$(MM_O_FILES) $(MONOLITHLIB_O_FILES)
+
+DEPENDS := $($(filter *.o,O_FILES):.o=.d)
+# If a specific .o file is passed as a target, also process its deps
+DEPENDS += $(MAKECMDGOALS:.o=.d)
 
 #-------------------------------------------------------------------------------
 # Tools
@@ -64,10 +62,6 @@ O_FILES :=  $(GAME_O_FILES) $(MW_O_FILES) $(NDEV_O_FILES) $(RVL_SDK_O_FILES) \
 MWCC_VERSION := 1.1
 MWLD_VERSION := 1.1
 CONSOLE := Wii
-
-#Ndev uses GC 3.0
-$(NDEV_O_FILES): MWCC_VERSION := 3.0
-$(NDEV_O_FILES): CONSOLE := GC
 
 # Programs
 ifeq ($(WINDOWS),1)
@@ -87,16 +81,22 @@ else
   export WINEDEBUG ?= -all
   # Default devkitPPC path
   DEVKITPPC ?= /opt/devkitpro/devkitPPC
-  DEPENDS   := $(DEPENDS:.d=.d.unix)
   AS      := $(DEVKITPPC)/bin/powerpc-eabi-as
   CPP     := $(DEVKITPPC)/bin/powerpc-eabi-cpp -P
   SHA1SUM := shasum
   PYTHON  := python3
 endif
-CC      := $(WINE) tools/mwcc_compiler/$(CONSOLE)/$(MWCC_VERSION)/mwcceppc.exe
-LD      := $(WINE) tools/mwcc_compiler/$(CONSOLE)/$(MWLD_VERSION)/mwldeppc.exe
+COMPILERS ?= tools/mwcc_compiler
+CC      = $(WINE) $(COMPILERS)/$(CONSOLE)/$(MWCC_VERSION)/mwcceppc.exe
+LD      = $(WINE) $(COMPILERS)/$(CONSOLE)/$(MWLD_VERSION)/mwldeppc.exe
 DTK     := tools/dtk
 ELF2DOL := $(DTK) elf2dol
+
+ifneq ($(WINDOWS),1)
+TRANSFORM_DEP := tools/transform-dep.py
+else
+TRANSFORM_DEP := tools/transform-win.py
+endif
 
 # Options
 INCLUDES := -i include/ -i src/
@@ -111,33 +111,14 @@ ifeq ($(VERBOSE),0)
 # this set of LDFLAGS generates no warnings.
 LDFLAGS := $(MAPGEN) -fp hard -nodefaults -w off
 endif
+LIBRARY_LDFLAGS := -nodefaults -fp hard -proc gekko
+CFLAGS = -enum int -use_lmw_stmw on -proc gekko -fp hard -O4,p -nodefaults -func_align 4 $(INCLUDES)
 
 ifeq ($(VERBOSE),0)
 # this set of ASFLAGS generates no warnings.
 ASFLAGS += -W
-endif
-
-#Compiler flags
-#TODO: clean this up
-
-CFLAGS   = -enum int -inline on -use_lmw_stmw on -proc gekko -fp hard -O4,p -nodefaults -func_align 4 $(INCLUDES)
-
-$(GAME_O_FILES): CFLAGS += -ipa file -str pool,readonly,reuse -RTTI on -enc SJIS
-$(MM_O_FILES): CFLAGS += -ipa file -str pool,readonly,reuse -RTTI on -enc SJIS
-$(MONOLITHLIB_O_FILES): CFLAGS += -ipa file -str pool,readonly,reuse -RTTI on -enc SJIS
-
-$(NDEV_O_FILES): CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -proc gekko -fp hard -O4,p -nodefaults  -func_align 4 $(INCLUDES)
-#All the functions in the Wii SDK except for bte are aligned to 16 bytes, so this is necessary.
-$(RVL_SDK_O_FILES): CFLAGS += -Cpp_exceptions off -func_align 16
-$(MW_O_FILES): CFLAGS += -Cpp_exceptions off
-
-#arc.c doesn't use -use_lmw_stmw on, and uses -ipa file and (maybe rest of wii sdk too?)
-$(BUILD_DIR)/src/RevoSDK/arc/arc.o: CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -proc gekko -fp hard -O4,p -nodefaults -func_align 16 $(INCLUDES)
-#Runtime has defaults and exceptions turned on
-$(BUILD_DIR)/src/PowerPC_EABI_Support/Runtime/%.o: CFLAGS = -use_lmw_stmw on -inline on -proc gekko -fp hard -O4,p -func_align 4 $(INCLUDES)
-
-ifeq ($(NON_MATCHING),1)
-CFLAGS += -DNON_MATCHING
+# this set of CFLAGS generates no warnings.
+CFLAGS += -w off
 endif
 
 #-------------------------------------------------------------------------------
@@ -162,11 +143,14 @@ DUMMY != mkdir -p $(ALL_DIRS)
 
 .PHONY: tools
 
+$(LDSCRIPT): ldscript.lcf
+	$(QUIET) $(CPP) -MMD -MP -MT $@ -MF $@.d -I include/ -I . -DBUILD_DIR=$(BUILD_DIR) -o $@ $<
+
 $(DOL): $(ELF) | tools
 	$(QUIET) $(ELF2DOL) $< $@
 	$(QUIET) $(SHA1SUM) -c sha1/$(NAME).$(VERSION).sha1
 ifneq ($(findstring -map,$(LDFLAGS)),)
-	$(QUIET) $(PYTHON) tools/calcprogress.py $@ $(MAP)
+	$(PYTHON) tools/calcprogress.py $(DOL) $(MAP) $(BUILD_DIR)
 endif
 
 clean:
@@ -179,35 +163,44 @@ clean:
 tools:
 	$(MAKE) -C tools
 
+# ELF creation makefile instructions
+$(ELF): $(O_FILES) $(LDSCRIPT)
+	@echo Linking ELF $@
+	$(QUIET) @echo $(O_FILES) > build/o_files
+	$(QUIET) $(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT) @build/o_files
+
+
+%.d.unix: %.d $(TRANSFORM_DEP)
+	@echo Processing $<
+	$(QUIET) $(PYTHON) $(TRANSFORM_DEP) $< $@
+
 $(DTK): tools/dtk_version
 	@echo "Downloading $@"
 	$(QUIET) $(PYTHON) tools/download_dtk.py $< $@
 
-# ELF creation makefile instructions
-ifeq ($(EPILOGUE_PROCESS),1)
-	@echo Linking ELF $@
-$(ELF): $(O_FILES) $(E_FILES) $(LDSCRIPT_DOL)
-	$(QUIET) @echo $(O_FILES) > build/o_files
-	$(QUIET) $(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT_DOL) @build/o_files
-else
-$(ELF): $(O_FILES) $(LDSCRIPT_DOL)
-	@echo Linking ELF $@
-	$(QUIET) @echo $(O_FILES) > build/o_files
-	$(QUIET) $(LD) $(LDFLAGS) -o $@ -lcf $(LDSCRIPT_DOL) @build/o_files
+
+-include include_link.mk
+
+DEPENDS := $(DEPENDS:.d=.d.unix)
+ifneq ($(MAKECMDGOALS), clean)
+-include $(DEPENDS)
 endif
 
 $(BUILD_DIR)/%.o: %.s | $(DTK)
 	@echo Assembling $<
+	$(QUIET) mkdir -p $(dir $@)
 	$(QUIET) $(AS) $(ASFLAGS) -o $@ $<
 	$(QUIET) $(DTK) elf fixup $@ $@
 
 $(BUILD_DIR)/%.o: %.c
 	@echo "Compiling " $<
-	$(QUIET) $(CC) $(CFLAGS) -lang=c99 -c -o $@ $<
+	$(QUIET) mkdir -p $(dir $@)
+	$(QUIET) $(CC) $(CFLAGS) -lang=c99 -c -o $(dir $@) $<
 	
 $(BUILD_DIR)/%.o: %.cpp
 	@echo "Compiling " $<
-	$(QUIET) $(CC) $(CFLAGS) -lang=c++ -c -o $@ $<
+	$(QUIET) mkdir -p $(dir $@)
+	$(QUIET) $(CC) $(CFLAGS) -lang=c++ -c -o $(dir $@) $<
 
 ### Debug Print ###
 

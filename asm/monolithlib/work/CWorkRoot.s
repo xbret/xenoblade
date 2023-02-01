@@ -691,7 +691,7 @@
 .endfn func_8044438C
 
 
-.fn sinit_804443D0, global
+.fn sinit_804443D0, local
 /* 804443D0 0040D990  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804443D4 0040D994  7C 08 02 A6 */	mflr r0
 /* 804443D8 0040D998  90 01 00 14 */	stw r0, 0x14(r1)
@@ -802,7 +802,7 @@ __RTTI___unnamed_CWorkRoot_cpp_CWorkRootThread:
 	.4byte _unnamed_CWorkRoot_cpp_CWorkRootThread_typestr
 	.4byte _unnamed_CWorkRoot_cpp_CWorkRootThread_hierarchy
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 

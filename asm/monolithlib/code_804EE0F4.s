@@ -2282,7 +2282,7 @@
 /* 804F01C4 004B9784  4E 80 00 20 */	blr
 .endfn func_804EFD78
 
-.fn sinit_804F01C8, global
+.fn sinit_804F01C8, local
 /* 804F01C8 004B9788  3C 80 80 66 */	lis r4, lbl_80664050@ha
 /* 804F01CC 004B978C  C0 42 D8 3C */	lfs f2, float_8066DBBC@sda21(r2)
 /* 804F01D0 004B9790  38 64 40 50 */	addi r3, r4, lbl_80664050@l
@@ -2467,7 +2467,7 @@ float_8066DBE0:
 	.float 45 #0x42340000
 	.4byte 0
 
-.section .bss, "wa", @nobits  # 0x80573C80 - 0x8066417B
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
