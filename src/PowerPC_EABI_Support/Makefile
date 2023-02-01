@@ -1,5 +1,5 @@
 MW_FILES:=\
-	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/__mem.o\
+	$(BUILD_DIR)/src/PowerPC_EABI_Support/Runtime/__mem.o\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/__exception.o\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/strlen.o\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/__va_arg.o\

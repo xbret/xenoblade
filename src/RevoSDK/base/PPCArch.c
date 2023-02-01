@@ -1,5 +1,4 @@
 #include "RevoSDK/base/PPCArch.h"
-
 #include "RevoSDK/os/OSError.h"
 
 asm u32 PPCMfmsr(void) {
