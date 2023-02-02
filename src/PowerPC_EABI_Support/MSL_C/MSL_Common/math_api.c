@@ -1,5 +1,5 @@
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/math_api.h"
-#include "fdlibm.h"
+#include "stl/fdlibm.h"
 
 //This shouldn't be necessary
 #pragma dont_inline on

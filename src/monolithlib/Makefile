@@ -119,7 +119,7 @@ MONOLITHLIB_FILES:=\
 	$(BUILD_DIR)/asm/monolithlib/nand/CNReqtaskReaddir.o\
 	$(BUILD_DIR)/asm/monolithlib/nand/CNReqtaskRemove.o\
 	$(BUILD_DIR)/asm/monolithlib/nand/CNReqtaskCheck.o\
-	$(BUILD_DIR)/asm/monolithlib/effect/CERandomizer.o\
+	$(BUILD_DIR)/asm/monolithlib/effect/CERand.o\
 	$(BUILD_DIR)/asm/monolithlib/code_804DB938.o\
 	$(BUILD_DIR)/asm/monolithlib/work/CWorkSystemPack.o\
 	$(BUILD_DIR)/asm/monolithlib/CPackItem.o\
@@ -139,7 +139,7 @@ MONOLITHLIB_FILES:=\
 	$(BUILD_DIR)/asm/monolithlib/nand/CNReqtaskSaveBanner.o\
 	$(BUILD_DIR)/asm/monolithlib/nand/CNBanner.o\
 
-$(MONOLITHLIB_FILES): CFLAGS += -ipa file -inline deferred -inline on -str pool,readonly,reuse -RTTI on -enc SJIS
+$(MONOLITHLIB_FILES): CFLAGS += -ipa file -inline deferred -str pool,readonly,reuse -RTTI on -enc SJIS
 
 DEPENDS += $(MONOLITHLIB_FILES:.o=.d)
 

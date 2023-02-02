@@ -1,4 +1,4 @@
-#include "kyoshin/appgame/IWorkEvent.hpp"
+#include "monolithlib/IWorkEvent.hpp"
 
 void IWorkEvent::func_80039D40(){
 }

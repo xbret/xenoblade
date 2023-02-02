@@ -1,5 +1,8 @@
 #include "monolithlib/effect/CERand.hpp"
 
+CERandomizer ceRandomizer;
+CERandomizerSimple ceRandomizerSimple;
+
 CERandomizerSimple::CERandomizerSimple() {
     create(CERand::defaultSeed);
 }

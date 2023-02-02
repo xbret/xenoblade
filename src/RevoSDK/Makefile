@@ -97,7 +97,7 @@ RVL_SDK_FILES:=\
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvd.o\
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvdqueue.o\
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvderror.o\
-	$(BUILD_DIR)/asm/RevoSDK/dvd/dvdidutils.o\
+	$(BUILD_DIR)/src/RevoSDK/dvd/dvdidutils.o\
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvdFatal.o\
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvdDeviceError.o\
 	$(BUILD_DIR)/asm/RevoSDK/dvd/dvd_broadway.o\

@@ -81,7 +81,7 @@ public:
     static const int defaultSeed = 14992;
 };
 
-static CERandomizer ceRandomizer;
-static CERandomizerSimple ceRandomizerSimple;
+extern CERandomizer ceRandomizer;
+extern CERandomizerSimple ceRandomizerSimple;
 
 #endif

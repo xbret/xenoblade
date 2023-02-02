@@ -44,7 +44,7 @@
  * shown.
  */
 
-#include "fdlibm.h"
+#include "stl/fdlibm.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/errno.h"
 
 #ifdef __STDC__

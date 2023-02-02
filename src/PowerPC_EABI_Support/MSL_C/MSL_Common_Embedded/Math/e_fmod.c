@@ -17,7 +17,7 @@
  * Method: shift and subtract
  */
 
-#include "fdlibm.h"
+#include "stl/fdlibm.h"
 
 #ifdef __STDC__
 static const double one = 1.0, Zero[] = {

@@ -21,7 +21,7 @@
  * with *exp=0.
  */
 
-#include "fdlibm.h"
+#include "stl/fdlibm.h"
 
 #ifdef __STDC__
 static const double

@@ -15,7 +15,7 @@ MM_FILES:=\
 	$(BUILD_DIR)/asm/mm/code_8043738C.o\
 
 #MTRand seems to be the same without ipa file or inline deferred. needs to be tested
-$(MM_FILES): CFLAGS += -ipa file -inline on -str pool,readonly,reuse -RTTI on -enc SJIS
+$(MM_FILES): CFLAGS += -ipa file -inline deferred -str pool,readonly,reuse -RTTI on -enc SJIS
 
 DEPENDS += $(MM_FILES:.o=.d)
 

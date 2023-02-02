@@ -32,7 +32,7 @@
  * to produce the hexadecimal values shown.
  */
 
-#include "fdlibm.h"
+#include "stl/fdlibm.h"
 
 #ifdef __STDC__
 static const double atanhi[] = {

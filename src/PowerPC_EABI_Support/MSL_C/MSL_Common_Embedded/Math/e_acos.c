@@ -35,7 +35,7 @@
  * Function needed: sqrt
  */
 
-#include "fdlibm.h"
+#include "stl/fdlibm.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/errno.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/float.h"
 #include "RevoSDK/math.h"
