@@ -68,7 +68,6 @@ ifeq ($(WINDOWS),1)
   WINE :=
   AS      := $(DEVKITPPC)/bin/powerpc-eabi-as.exe
   CPP     := $(DEVKITPPC)/bin/powerpc-eabi-cpp.exe -P
-  SHA1SUM := sha1sum
   PYTHON  := python
 else
   WIBO   := $(shell command -v wibo 2> /dev/null)
@@ -83,7 +82,6 @@ else
   DEVKITPPC ?= /opt/devkitpro/devkitPPC
   AS      := $(DEVKITPPC)/bin/powerpc-eabi-as
   CPP     := $(DEVKITPPC)/bin/powerpc-eabi-cpp -P
-  SHA1SUM := shasum
   PYTHON  := python3
 endif
 COMPILERS ?= tools/mwcc_compiler
@@ -91,6 +89,7 @@ CC      = $(WINE) $(COMPILERS)/$(CONSOLE)/$(MWCC_VERSION)/mwcceppc.exe
 LD      = $(WINE) $(COMPILERS)/$(CONSOLE)/$(MWLD_VERSION)/mwldeppc.exe
 DTK     := tools/dtk
 ELF2DOL := $(DTK) elf2dol
+SHASUM  := $(DTK) shasum
 
 ifneq ($(WINDOWS),1)
 TRANSFORM_DEP := tools/transform-dep.py
@@ -141,27 +140,22 @@ DUMMY != mkdir -p $(ALL_DIRS)
 # DUMMY != mkdir -p $(EPI_DIRS)
 # endif
 
-.PHONY: tools
-
 $(LDSCRIPT): ldscript.lcf
 	$(QUIET) $(CPP) -MMD -MP -MT $@ -MF $@.d -I include/ -I . -DBUILD_DIR=$(BUILD_DIR) -o $@ $<
 
-$(DOL): $(ELF) | tools
+$(DOL): $(ELF) | $(DTK)
 	$(QUIET) $(ELF2DOL) $< $@
-	$(QUIET) $(SHA1SUM) -c sha1/$(NAME).$(VERSION).sha1
+	$(QUIET) $(SHASUM) -c sha1/$(NAME).$(VERSION).sha1
 ifneq ($(findstring -map,$(LDFLAGS)),)
 	$(PYTHON) tools/calcprogress.py $(DOL) $(MAP) $(BUILD_DIR)
 endif
 
 clean:
 	rm -f -d -r build
-	rm -f -d -r epilogue
-	find . -name '*.o' -exec rm {} +
-	find . -name 'ctx.c' -exec rm {} +
-	find ./include -name "*.s" -type f -delete
-	$(MAKE) -C tools clean
-tools:
-	$(MAKE) -C tools
+
+$(DTK): tools/dtk_version
+	@echo "Downloading $@"
+	$(QUIET) $(PYTHON) tools/download_dtk.py $< $@
 
 # ELF creation makefile instructions
 $(ELF): $(O_FILES) $(LDSCRIPT)
@@ -173,10 +167,6 @@ $(ELF): $(O_FILES) $(LDSCRIPT)
 %.d.unix: %.d $(TRANSFORM_DEP)
 	@echo Processing $<
 	$(QUIET) $(PYTHON) $(TRANSFORM_DEP) $< $@
-
-$(DTK): tools/dtk_version
-	@echo "Downloading $@"
-	$(QUIET) $(PYTHON) tools/download_dtk.py $< $@
 
 
 -include include_link.mk
