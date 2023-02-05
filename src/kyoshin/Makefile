@@ -229,10 +229,6 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CCLPCur.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CCollepedia.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuKizunagram.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/CKizunaRadar.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/CKizunaCur.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/CKizunaLine.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/CKizunaInfo.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CKizunagram.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CPcKizunaCur.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CPcKizunagram.o\
