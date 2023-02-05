@@ -45,8 +45,8 @@
 /* 80224764 001EDD24  7C 08 02 A6 */	mflr r0
 /* 80224768 001EDD28  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8022476C 001EDD2C  BF C1 00 08 */	stmw r30, 8(r1)
-/* 80224770 001EDD30  3F E0 80 50 */	lis r31, lbl_80504CFC@ha
-/* 80224774 001EDD34  3B FF 4C FC */	addi r31, r31, lbl_80504CFC@l
+/* 80224770 001EDD30  3F E0 80 50 */	lis r31, CMCEffCrystal_strpool@ha
+/* 80224774 001EDD34  3B FF 4C FC */	addi r31, r31, CMCEffCrystal_strpool@l
 /* 80224778 001EDD38  7C 7E 1B 78 */	mr r30, r3
 /* 8022477C 001EDD3C  38 BF 00 FD */	addi r5, r31, 0xfd
 /* 80224780 001EDD40  80 83 00 08 */	lwz r4, 8(r3)

@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .fn SJMEM_Error, global
-/* 8039349C 0035CA5C  3C 60 80 52 */	lis r3, lbl_8051C0A8@ha
-/* 803934A0 0035CA60  38 63 C0 A8 */	addi r3, r3, lbl_8051C0A8@l
+/* 8039349C 0035CA5C  3C 60 80 52 */	lis r3, sj_mem_strpool@ha
+/* 803934A0 0035CA60  38 63 C0 A8 */	addi r3, r3, sj_mem_strpool@l
 /* 803934A4 0035CA64  48 00 34 F4 */	b SJERR_CallErr
 .endfn SJMEM_Error
 
@@ -153,9 +153,9 @@
 /* 803936A4 0035CC64  90 BE 00 1C */	stw r5, 0x1c(r30)
 /* 803936A8 0035CC68  93 DE 00 20 */	stw r30, 0x20(r30)
 /* 803936AC 0035CC6C  40 82 00 3C */	bne .L_803936E8
-/* 803936B0 0035CC70  3C A0 80 52 */	lis r5, lbl_8051C0A8@ha
+/* 803936B0 0035CC70  3C A0 80 52 */	lis r5, sj_mem_strpool@ha
 /* 803936B4 0035CC74  38 61 00 08 */	addi r3, r1, 8
-/* 803936B8 0035CC78  38 A5 C0 A8 */	addi r5, r5, lbl_8051C0A8@l
+/* 803936B8 0035CC78  38 A5 C0 A8 */	addi r5, r5, sj_mem_strpool@l
 /* 803936BC 0035CC7C  38 80 00 40 */	li r4, 0x40
 /* 803936C0 0035CC80  3B E5 00 0C */	addi r31, r5, 0xc
 /* 803936C4 0035CC84  38 A5 00 27 */	addi r5, r5, 0x27
@@ -171,9 +171,9 @@
 /* 803936E8 0035CCA8  80 1E 00 04 */	lwz r0, 4(r30)
 /* 803936EC 0035CCAC  2C 00 00 00 */	cmpwi r0, 0
 /* 803936F0 0035CCB0  40 82 00 3C */	bne .L_8039372C
-/* 803936F4 0035CCB4  3C A0 80 52 */	lis r5, lbl_8051C0A8@ha
+/* 803936F4 0035CCB4  3C A0 80 52 */	lis r5, sj_mem_strpool@ha
 /* 803936F8 0035CCB8  38 61 00 48 */	addi r3, r1, 0x48
-/* 803936FC 0035CCBC  38 A5 C0 A8 */	addi r5, r5, lbl_8051C0A8@l
+/* 803936FC 0035CCBC  38 A5 C0 A8 */	addi r5, r5, sj_mem_strpool@l
 /* 80393700 0035CCC0  38 80 00 40 */	li r4, 0x40
 /* 80393704 0035CCC4  3B E5 00 33 */	addi r31, r5, 0x33
 /* 80393708 0035CCC8  38 A5 00 53 */	addi r5, r5, 0x53
@@ -210,9 +210,9 @@
 /* 8039376C 0035CD2C  48 00 31 B9 */	bl SJCRS_Lock
 /* 80393770 0035CD30  2C 1F 00 00 */	cmpwi r31, 0
 /* 80393774 0035CD34  40 82 00 3C */	bne .L_803937B0
-/* 80393778 0035CD38  3C A0 80 52 */	lis r5, lbl_8051C0A8@ha
+/* 80393778 0035CD38  3C A0 80 52 */	lis r5, sj_mem_strpool@ha
 /* 8039377C 0035CD3C  38 61 00 08 */	addi r3, r1, 8
-/* 80393780 0035CD40  38 A5 C0 A8 */	addi r5, r5, lbl_8051C0A8@l
+/* 80393780 0035CD40  38 A5 C0 A8 */	addi r5, r5, sj_mem_strpool@l
 /* 80393784 0035CD44  38 80 00 40 */	li r4, 0x40
 /* 80393788 0035CD48  3B E5 00 0C */	addi r31, r5, 0xc
 /* 8039378C 0035CD4C  38 A5 00 5F */	addi r5, r5, 0x5f
@@ -228,9 +228,9 @@
 /* 803937B0 0035CD70  80 1F 00 04 */	lwz r0, 4(r31)
 /* 803937B4 0035CD74  2C 00 00 00 */	cmpwi r0, 0
 /* 803937B8 0035CD78  40 82 00 3C */	bne .L_803937F4
-/* 803937BC 0035CD7C  3C A0 80 52 */	lis r5, lbl_8051C0A8@ha
+/* 803937BC 0035CD7C  3C A0 80 52 */	lis r5, sj_mem_strpool@ha
 /* 803937C0 0035CD80  38 61 00 48 */	addi r3, r1, 0x48
-/* 803937C4 0035CD84  38 A5 C0 A8 */	addi r5, r5, lbl_8051C0A8@l
+/* 803937C4 0035CD84  38 A5 C0 A8 */	addi r5, r5, sj_mem_strpool@l
 /* 803937C8 0035CD88  38 80 00 40 */	li r4, 0x40
 /* 803937CC 0035CD8C  3B E5 00 33 */	addi r31, r5, 0x33
 /* 803937D0 0035CD90  38 A5 00 6B */	addi r5, r5, 0x6b
@@ -267,9 +267,9 @@
 /* 80393838 0035CDF8  48 00 30 ED */	bl SJCRS_Lock
 /* 8039383C 0035CDFC  2C 1F 00 00 */	cmpwi r31, 0
 /* 80393840 0035CE00  40 82 00 40 */	bne .L_80393880
-/* 80393844 0035CE04  3C A0 80 52 */	lis r5, lbl_8051C0A8@ha
+/* 80393844 0035CE04  3C A0 80 52 */	lis r5, sj_mem_strpool@ha
 /* 80393848 0035CE08  38 61 00 08 */	addi r3, r1, 8
-/* 8039384C 0035CE0C  38 A5 C0 A8 */	addi r5, r5, lbl_8051C0A8@l
+/* 8039384C 0035CE0C  38 A5 C0 A8 */	addi r5, r5, sj_mem_strpool@l
 /* 80393850 0035CE10  38 80 00 40 */	li r4, 0x40
 /* 80393854 0035CE14  3B E5 00 0C */	addi r31, r5, 0xc
 /* 80393858 0035CE18  38 A5 00 77 */	addi r5, r5, 0x77
@@ -286,9 +286,9 @@
 /* 80393880 0035CE40  80 1F 00 04 */	lwz r0, 4(r31)
 /* 80393884 0035CE44  2C 00 00 00 */	cmpwi r0, 0
 /* 80393888 0035CE48  40 82 00 40 */	bne .L_803938C8
-/* 8039388C 0035CE4C  3C A0 80 52 */	lis r5, lbl_8051C0A8@ha
+/* 8039388C 0035CE4C  3C A0 80 52 */	lis r5, sj_mem_strpool@ha
 /* 80393890 0035CE50  38 61 00 48 */	addi r3, r1, 0x48
-/* 80393894 0035CE54  38 A5 C0 A8 */	addi r5, r5, lbl_8051C0A8@l
+/* 80393894 0035CE54  38 A5 C0 A8 */	addi r5, r5, sj_mem_strpool@l
 /* 80393898 0035CE58  38 80 00 40 */	li r4, 0x40
 /* 8039389C 0035CE5C  3B E5 00 33 */	addi r31, r5, 0x33
 /* 803938A0 0035CE60  38 A5 00 83 */	addi r5, r5, 0x83
@@ -326,9 +326,9 @@
 /* 8039390C 0035CECC  48 00 30 19 */	bl SJCRS_Lock
 /* 80393910 0035CED0  2C 1D 00 00 */	cmpwi r29, 0
 /* 80393914 0035CED4  40 82 00 3C */	bne .L_80393950
-/* 80393918 0035CED8  3C A0 80 52 */	lis r5, lbl_8051C0A8@ha
+/* 80393918 0035CED8  3C A0 80 52 */	lis r5, sj_mem_strpool@ha
 /* 8039391C 0035CEDC  38 61 00 08 */	addi r3, r1, 8
-/* 80393920 0035CEE0  38 A5 C0 A8 */	addi r5, r5, lbl_8051C0A8@l
+/* 80393920 0035CEE0  38 A5 C0 A8 */	addi r5, r5, sj_mem_strpool@l
 /* 80393924 0035CEE4  38 80 00 40 */	li r4, 0x40
 /* 80393928 0035CEE8  3B E5 00 0C */	addi r31, r5, 0xc
 /* 8039392C 0035CEEC  38 A5 00 8F */	addi r5, r5, 0x8f
@@ -344,9 +344,9 @@
 /* 80393950 0035CF10  80 1D 00 04 */	lwz r0, 4(r29)
 /* 80393954 0035CF14  2C 00 00 00 */	cmpwi r0, 0
 /* 80393958 0035CF18  40 82 00 3C */	bne .L_80393994
-/* 8039395C 0035CF1C  3C A0 80 52 */	lis r5, lbl_8051C0A8@ha
+/* 8039395C 0035CF1C  3C A0 80 52 */	lis r5, sj_mem_strpool@ha
 /* 80393960 0035CF20  38 61 00 48 */	addi r3, r1, 0x48
-/* 80393964 0035CF24  38 A5 C0 A8 */	addi r5, r5, lbl_8051C0A8@l
+/* 80393964 0035CF24  38 A5 C0 A8 */	addi r5, r5, sj_mem_strpool@l
 /* 80393968 0035CF28  38 80 00 40 */	li r4, 0x40
 /* 8039396C 0035CF2C  3B E5 00 33 */	addi r31, r5, 0x33
 /* 80393970 0035CF30  38 A5 00 9B */	addi r5, r5, 0x9b
@@ -381,9 +381,9 @@
 /* 803939D0 0035CF90  48 00 2F 55 */	bl SJCRS_Lock
 /* 803939D4 0035CF94  2C 1F 00 00 */	cmpwi r31, 0
 /* 803939D8 0035CF98  40 82 00 3C */	bne .L_80393A14
-/* 803939DC 0035CF9C  3C A0 80 52 */	lis r5, lbl_8051C0A8@ha
+/* 803939DC 0035CF9C  3C A0 80 52 */	lis r5, sj_mem_strpool@ha
 /* 803939E0 0035CFA0  38 61 00 08 */	addi r3, r1, 8
-/* 803939E4 0035CFA4  38 A5 C0 A8 */	addi r5, r5, lbl_8051C0A8@l
+/* 803939E4 0035CFA4  38 A5 C0 A8 */	addi r5, r5, sj_mem_strpool@l
 /* 803939E8 0035CFA8  38 80 00 40 */	li r4, 0x40
 /* 803939EC 0035CFAC  3B E5 00 0C */	addi r31, r5, 0xc
 /* 803939F0 0035CFB0  38 A5 00 27 */	addi r5, r5, 0x27
@@ -399,9 +399,9 @@
 /* 80393A14 0035CFD4  80 1F 00 04 */	lwz r0, 4(r31)
 /* 80393A18 0035CFD8  2C 00 00 00 */	cmpwi r0, 0
 /* 80393A1C 0035CFDC  40 82 00 3C */	bne .L_80393A58
-/* 80393A20 0035CFE0  3C A0 80 52 */	lis r5, lbl_8051C0A8@ha
+/* 80393A20 0035CFE0  3C A0 80 52 */	lis r5, sj_mem_strpool@ha
 /* 80393A24 0035CFE4  38 61 00 48 */	addi r3, r1, 0x48
-/* 80393A28 0035CFE8  38 A5 C0 A8 */	addi r5, r5, lbl_8051C0A8@l
+/* 80393A28 0035CFE8  38 A5 C0 A8 */	addi r5, r5, sj_mem_strpool@l
 /* 80393A2C 0035CFEC  38 80 00 40 */	li r4, 0x40
 /* 80393A30 0035CFF0  3B E5 00 33 */	addi r31, r5, 0x33
 /* 80393A34 0035CFF4  38 A5 00 53 */	addi r5, r5, 0x53
@@ -457,9 +457,9 @@
 /* 80393ADC 0035D09C  90 01 00 94 */	stw r0, 0x94(r1)
 /* 80393AE0 0035D0A0  93 E1 00 8C */	stw r31, 0x8c(r1)
 /* 80393AE4 0035D0A4  40 82 00 40 */	bne .L_80393B24
-/* 80393AE8 0035D0A8  3C A0 80 52 */	lis r5, lbl_8051C0A8@ha
+/* 80393AE8 0035D0A8  3C A0 80 52 */	lis r5, sj_mem_strpool@ha
 /* 80393AEC 0035D0AC  38 61 00 48 */	addi r3, r1, 0x48
-/* 80393AF0 0035D0B0  38 A5 C0 A8 */	addi r5, r5, lbl_8051C0A8@l
+/* 80393AF0 0035D0B0  38 A5 C0 A8 */	addi r5, r5, sj_mem_strpool@l
 /* 80393AF4 0035D0B4  38 80 00 40 */	li r4, 0x40
 /* 80393AF8 0035D0B8  3B E5 00 0C */	addi r31, r5, 0xc
 /* 80393AFC 0035D0BC  38 A5 00 A7 */	addi r5, r5, 0xa7
@@ -476,9 +476,9 @@
 /* 80393B24 0035D0E4  80 03 00 04 */	lwz r0, 4(r3)
 /* 80393B28 0035D0E8  2C 00 00 00 */	cmpwi r0, 0
 /* 80393B2C 0035D0EC  40 82 00 40 */	bne .L_80393B6C
-/* 80393B30 0035D0F0  3C A0 80 52 */	lis r5, lbl_8051C0A8@ha
+/* 80393B30 0035D0F0  3C A0 80 52 */	lis r5, sj_mem_strpool@ha
 /* 80393B34 0035D0F4  38 61 00 08 */	addi r3, r1, 8
-/* 80393B38 0035D0F8  38 A5 C0 A8 */	addi r5, r5, lbl_8051C0A8@l
+/* 80393B38 0035D0F8  38 A5 C0 A8 */	addi r5, r5, sj_mem_strpool@l
 /* 80393B3C 0035D0FC  38 80 00 40 */	li r4, 0x40
 /* 80393B40 0035D100  3B E5 00 33 */	addi r31, r5, 0x33
 /* 80393B44 0035D104  38 A5 00 B3 */	addi r5, r5, 0xb3
@@ -555,9 +555,9 @@
 /* 80393C34 0035D1F4  90 01 00 94 */	stw r0, 0x94(r1)
 /* 80393C38 0035D1F8  93 E1 00 8C */	stw r31, 0x8c(r1)
 /* 80393C3C 0035D1FC  40 82 00 3C */	bne .L_80393C78
-/* 80393C40 0035D200  3C A0 80 52 */	lis r5, lbl_8051C0A8@ha
+/* 80393C40 0035D200  3C A0 80 52 */	lis r5, sj_mem_strpool@ha
 /* 80393C44 0035D204  38 61 00 48 */	addi r3, r1, 0x48
-/* 80393C48 0035D208  38 A5 C0 A8 */	addi r5, r5, lbl_8051C0A8@l
+/* 80393C48 0035D208  38 A5 C0 A8 */	addi r5, r5, sj_mem_strpool@l
 /* 80393C4C 0035D20C  38 80 00 40 */	li r4, 0x40
 /* 80393C50 0035D210  3B E5 00 0C */	addi r31, r5, 0xc
 /* 80393C54 0035D214  38 A5 00 BF */	addi r5, r5, 0xbf
@@ -573,9 +573,9 @@
 /* 80393C78 0035D238  80 03 00 04 */	lwz r0, 4(r3)
 /* 80393C7C 0035D23C  2C 00 00 00 */	cmpwi r0, 0
 /* 80393C80 0035D240  40 82 00 3C */	bne .L_80393CBC
-/* 80393C84 0035D244  3C A0 80 52 */	lis r5, lbl_8051C0A8@ha
+/* 80393C84 0035D244  3C A0 80 52 */	lis r5, sj_mem_strpool@ha
 /* 80393C88 0035D248  38 61 00 08 */	addi r3, r1, 8
-/* 80393C8C 0035D24C  38 A5 C0 A8 */	addi r5, r5, lbl_8051C0A8@l
+/* 80393C8C 0035D24C  38 A5 C0 A8 */	addi r5, r5, sj_mem_strpool@l
 /* 80393C90 0035D250  38 80 00 40 */	li r4, 0x40
 /* 80393C94 0035D254  3B E5 00 33 */	addi r31, r5, 0x33
 /* 80393C98 0035D258  38 A5 00 CB */	addi r5, r5, 0xcb
@@ -666,9 +666,9 @@
 /* 80393DC0 0035D380  90 01 00 94 */	stw r0, 0x94(r1)
 /* 80393DC4 0035D384  93 E1 00 8C */	stw r31, 0x8c(r1)
 /* 80393DC8 0035D388  40 82 00 3C */	bne .L_80393E04
-/* 80393DCC 0035D38C  3C A0 80 52 */	lis r5, lbl_8051C0A8@ha
+/* 80393DCC 0035D38C  3C A0 80 52 */	lis r5, sj_mem_strpool@ha
 /* 80393DD0 0035D390  38 61 00 48 */	addi r3, r1, 0x48
-/* 80393DD4 0035D394  38 A5 C0 A8 */	addi r5, r5, lbl_8051C0A8@l
+/* 80393DD4 0035D394  38 A5 C0 A8 */	addi r5, r5, sj_mem_strpool@l
 /* 80393DD8 0035D398  38 80 00 40 */	li r4, 0x40
 /* 80393DDC 0035D39C  3B E5 00 0C */	addi r31, r5, 0xc
 /* 80393DE0 0035D3A0  38 A5 00 D7 */	addi r5, r5, 0xd7
@@ -684,9 +684,9 @@
 /* 80393E04 0035D3C4  80 03 00 04 */	lwz r0, 4(r3)
 /* 80393E08 0035D3C8  2C 00 00 00 */	cmpwi r0, 0
 /* 80393E0C 0035D3CC  40 82 00 3C */	bne .L_80393E48
-/* 80393E10 0035D3D0  3C A0 80 52 */	lis r5, lbl_8051C0A8@ha
+/* 80393E10 0035D3D0  3C A0 80 52 */	lis r5, sj_mem_strpool@ha
 /* 80393E14 0035D3D4  38 61 00 08 */	addi r3, r1, 8
-/* 80393E18 0035D3D8  38 A5 C0 A8 */	addi r5, r5, lbl_8051C0A8@l
+/* 80393E18 0035D3D8  38 A5 C0 A8 */	addi r5, r5, sj_mem_strpool@l
 /* 80393E1C 0035D3DC  38 80 00 40 */	li r4, 0x40
 /* 80393E20 0035D3E0  3B E5 00 33 */	addi r31, r5, 0x33
 /* 80393E24 0035D3E4  38 A5 00 E3 */	addi r5, r5, 0xe3
@@ -761,9 +761,9 @@
 /* 80393F14 0035D4D4  90 01 00 94 */	stw r0, 0x94(r1)
 /* 80393F18 0035D4D8  93 E1 00 8C */	stw r31, 0x8c(r1)
 /* 80393F1C 0035D4DC  40 82 00 3C */	bne .L_80393F58
-/* 80393F20 0035D4E0  3C A0 80 52 */	lis r5, lbl_8051C0A8@ha
+/* 80393F20 0035D4E0  3C A0 80 52 */	lis r5, sj_mem_strpool@ha
 /* 80393F24 0035D4E4  38 61 00 48 */	addi r3, r1, 0x48
-/* 80393F28 0035D4E8  38 A5 C0 A8 */	addi r5, r5, lbl_8051C0A8@l
+/* 80393F28 0035D4E8  38 A5 C0 A8 */	addi r5, r5, sj_mem_strpool@l
 /* 80393F2C 0035D4EC  38 80 00 40 */	li r4, 0x40
 /* 80393F30 0035D4F0  3B E5 00 0C */	addi r31, r5, 0xc
 /* 80393F34 0035D4F4  38 A5 00 EF */	addi r5, r5, 0xef
@@ -779,9 +779,9 @@
 /* 80393F58 0035D518  80 03 00 04 */	lwz r0, 4(r3)
 /* 80393F5C 0035D51C  2C 00 00 00 */	cmpwi r0, 0
 /* 80393F60 0035D520  40 82 00 3C */	bne .L_80393F9C
-/* 80393F64 0035D524  3C A0 80 52 */	lis r5, lbl_8051C0A8@ha
+/* 80393F64 0035D524  3C A0 80 52 */	lis r5, sj_mem_strpool@ha
 /* 80393F68 0035D528  38 61 00 08 */	addi r3, r1, 8
-/* 80393F6C 0035D52C  38 A5 C0 A8 */	addi r5, r5, lbl_8051C0A8@l
+/* 80393F6C 0035D52C  38 A5 C0 A8 */	addi r5, r5, sj_mem_strpool@l
 /* 80393F70 0035D530  38 80 00 40 */	li r4, 0x40
 /* 80393F74 0035D534  3B E5 00 33 */	addi r31, r5, 0x33
 /* 80393F78 0035D538  38 A5 00 FB */	addi r5, r5, 0xfb
@@ -905,9 +905,9 @@
 /* 80394120 0035D6E0  93 A1 00 94 */	stw r29, 0x94(r1)
 /* 80394124 0035D6E4  7C BD 2B 78 */	mr r29, r5
 /* 80394128 0035D6E8  40 82 00 40 */	bne .L_80394168
-/* 8039412C 0035D6EC  3C A0 80 52 */	lis r5, lbl_8051C0A8@ha
+/* 8039412C 0035D6EC  3C A0 80 52 */	lis r5, sj_mem_strpool@ha
 /* 80394130 0035D6F0  38 61 00 48 */	addi r3, r1, 0x48
-/* 80394134 0035D6F4  38 A5 C0 A8 */	addi r5, r5, lbl_8051C0A8@l
+/* 80394134 0035D6F4  38 A5 C0 A8 */	addi r5, r5, sj_mem_strpool@l
 /* 80394138 0035D6F8  38 80 00 40 */	li r4, 0x40
 /* 8039413C 0035D6FC  3B E5 00 0C */	addi r31, r5, 0xc
 /* 80394140 0035D700  38 A5 01 07 */	addi r5, r5, 0x107
@@ -924,9 +924,9 @@
 /* 80394168 0035D728  80 03 00 04 */	lwz r0, 4(r3)
 /* 8039416C 0035D72C  2C 00 00 00 */	cmpwi r0, 0
 /* 80394170 0035D730  40 82 00 40 */	bne .L_803941B0
-/* 80394174 0035D734  3C A0 80 52 */	lis r5, lbl_8051C0A8@ha
+/* 80394174 0035D734  3C A0 80 52 */	lis r5, sj_mem_strpool@ha
 /* 80394178 0035D738  38 61 00 08 */	addi r3, r1, 8
-/* 8039417C 0035D73C  38 A5 C0 A8 */	addi r5, r5, lbl_8051C0A8@l
+/* 8039417C 0035D73C  38 A5 C0 A8 */	addi r5, r5, sj_mem_strpool@l
 /* 80394180 0035D740  38 80 00 40 */	li r4, 0x40
 /* 80394184 0035D744  3B E5 00 33 */	addi r31, r5, 0x33
 /* 80394188 0035D748  38 A5 01 13 */	addi r5, r5, 0x113
@@ -987,9 +987,9 @@
 /* 80394240 0035D800  48 00 26 E5 */	bl SJCRS_Lock
 /* 80394244 0035D804  2C 1F 00 00 */	cmpwi r31, 0
 /* 80394248 0035D808  40 82 00 40 */	bne .L_80394288
-/* 8039424C 0035D80C  3C A0 80 52 */	lis r5, lbl_8051C0A8@ha
+/* 8039424C 0035D80C  3C A0 80 52 */	lis r5, sj_mem_strpool@ha
 /* 80394250 0035D810  38 61 00 08 */	addi r3, r1, 8
-/* 80394254 0035D814  38 A5 C0 A8 */	addi r5, r5, lbl_8051C0A8@l
+/* 80394254 0035D814  38 A5 C0 A8 */	addi r5, r5, sj_mem_strpool@l
 /* 80394258 0035D818  38 80 00 40 */	li r4, 0x40
 /* 8039425C 0035D81C  3B E5 00 0C */	addi r31, r5, 0xc
 /* 80394260 0035D820  38 A5 01 37 */	addi r5, r5, 0x137
@@ -1006,9 +1006,9 @@
 /* 80394288 0035D848  80 1F 00 04 */	lwz r0, 4(r31)
 /* 8039428C 0035D84C  2C 00 00 00 */	cmpwi r0, 0
 /* 80394290 0035D850  40 82 00 40 */	bne .L_803942D0
-/* 80394294 0035D854  3C A0 80 52 */	lis r5, lbl_8051C0A8@ha
+/* 80394294 0035D854  3C A0 80 52 */	lis r5, sj_mem_strpool@ha
 /* 80394298 0035D858  38 61 00 48 */	addi r3, r1, 0x48
-/* 8039429C 0035D85C  38 A5 C0 A8 */	addi r5, r5, lbl_8051C0A8@l
+/* 8039429C 0035D85C  38 A5 C0 A8 */	addi r5, r5, sj_mem_strpool@l
 /* 803942A0 0035D860  38 80 00 40 */	li r4, 0x40
 /* 803942A4 0035D864  3B E5 00 33 */	addi r31, r5, 0x33
 /* 803942A8 0035D868  38 A5 01 43 */	addi r5, r5, 0x143
@@ -1043,8 +1043,8 @@ sjmem_uuid:
 	.4byte 0x089448BC
 
 
-.global lbl_8051C0A8
-lbl_8051C0A8:
+.global sj_mem_strpool
+sj_mem_strpool:
 	.asciz "SJMEM Error"
 	.asciz " : NULL pointer is passed."
 	.asciz "E2004090237"

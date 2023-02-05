@@ -403,8 +403,8 @@
 /* 80180F28 0014A4E8  38 A0 00 01 */	li r5, 1
 /* 80180F2C 0014A4EC  38 C0 00 00 */	li r6, 0
 /* 80180F30 0014A4F0  4B F2 94 0D */	bl func_800AA33C
-/* 80180F34 0014A4F4  3F A0 80 50 */	lis r29, lbl_804FEF5C@ha
-/* 80180F38 0014A4F8  3B BD EF 5C */	addi r29, r29, lbl_804FEF5C@l
+/* 80180F34 0014A4F4  3F A0 80 50 */	lis r29, CREvtModelMap_strpool@ha
+/* 80180F38 0014A4F8  3B BD EF 5C */	addi r29, r29, CREvtModelMap_strpool@l
 /* 80180F3C 0014A4FC  7F A3 EB 78 */	mr r3, r29
 /* 80180F40 0014A500  48 13 86 79 */	bl strlen
 /* 80180F44 0014A504  7C 7C 1B 78 */	mr r28, r3
@@ -416,9 +416,9 @@
 /* 80180F5C 0014A51C  90 1E 00 90 */	stw r0, 0x90(r30)
 /* 80180F60 0014A520  48 00 04 98 */	b .L_801813F8
 .L_80180F64:
-/* 80180F64 0014A524  3F 80 80 50 */	lis r28, lbl_804FEF5C@ha
+/* 80180F64 0014A524  3F 80 80 50 */	lis r28, CREvtModelMap_strpool@ha
 /* 80180F68 0014A528  38 00 00 00 */	li r0, 0
-/* 80180F6C 0014A52C  3B 9C EF 5C */	addi r28, r28, lbl_804FEF5C@l
+/* 80180F6C 0014A52C  3B 9C EF 5C */	addi r28, r28, CREvtModelMap_strpool@l
 /* 80180F70 0014A530  98 01 00 2C */	stb r0, 0x2c(r1)
 /* 80180F74 0014A534  3B BC 00 05 */	addi r29, r28, 5
 /* 80180F78 0014A538  90 01 00 4C */	stw r0, 0x4c(r1)
@@ -536,8 +536,8 @@
 /* 80181120 0014A6E0  38 61 00 08 */	addi r3, r1, 8
 /* 80181124 0014A6E4  48 14 16 99 */	bl strcat
 /* 80181128 0014A6E8  80 01 00 28 */	lwz r0, 0x28(r1)
-/* 8018112C 0014A6EC  3F 60 80 50 */	lis r27, lbl_804FEF5C@ha
-/* 80181130 0014A6F0  3B 7B EF 5C */	addi r27, r27, lbl_804FEF5C@l
+/* 8018112C 0014A6EC  3F 60 80 50 */	lis r27, CREvtModelMap_strpool@ha
+/* 80181130 0014A6F0  3B 7B EF 5C */	addi r27, r27, CREvtModelMap_strpool@l
 /* 80181134 0014A6F4  7C 00 EA 14 */	add r0, r0, r29
 /* 80181138 0014A6F8  90 01 00 28 */	stw r0, 0x28(r1)
 /* 8018113C 0014A6FC  7F 63 DB 78 */	mr r3, r27
@@ -626,8 +626,8 @@
 /* 80181270 0014A830  38 61 00 08 */	addi r3, r1, 8
 /* 80181274 0014A834  48 14 15 49 */	bl strcat
 /* 80181278 0014A838  80 01 00 28 */	lwz r0, 0x28(r1)
-/* 8018127C 0014A83C  3C 60 80 50 */	lis r3, lbl_804FEF5C@ha
-/* 80181280 0014A840  38 63 EF 5C */	addi r3, r3, lbl_804FEF5C@l
+/* 8018127C 0014A83C  3C 60 80 50 */	lis r3, CREvtModelMap_strpool@ha
+/* 80181280 0014A840  38 63 EF 5C */	addi r3, r3, CREvtModelMap_strpool@l
 /* 80181284 0014A844  7C 00 EA 14 */	add r0, r0, r29
 /* 80181288 0014A848  90 01 00 28 */	stw r0, 0x28(r1)
 /* 8018128C 0014A84C  3B 63 00 10 */	addi r27, r3, 0x10
@@ -1211,8 +1211,8 @@ cf_CREvtModelMap_typestr:
 	.balign 4
 
 
-.global lbl_804FEF5C
-lbl_804FEF5C:
+.global CREvtModelMap_strpool
+CREvtModelMap_strpool:
 	.asciz ".lod"
 	.asciz "/obj/"
 	.asciz ".map"

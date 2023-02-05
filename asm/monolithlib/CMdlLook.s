@@ -72,7 +72,7 @@
 /* 804E7B64 004B1124  F3 81 01 C8 */	psq_st f28, 456(r1), 0, qr0
 /* 804E7B68 004B1128  4B DD 25 BD */	bl _savegpr_15
 /* 804E7B6C 004B112C  C0 42 D7 9C */	lfs f2, float_8066DB1C@sda21(r2)
-/* 804E7B70 004B1130  3C A0 80 53 */	lis r5, lbl_80528114@ha
+/* 804E7B70 004B1130  3C A0 80 53 */	lis r5, CMdlLook_strpool@ha
 /* 804E7B74 004B1134  C0 22 C6 90 */	lfs f1, deg2rad__2mm@sda21(r2)
 /* 804E7B78 004B1138  7C 72 1B 78 */	mr r18, r3
 /* 804E7B7C 004B113C  C0 02 D7 A0 */	lfs f0, float_8066DB20@sda21(r2)
@@ -95,7 +95,7 @@
 /* 804E7BC0 004B1180  D0 03 00 60 */	stfs f0, 0x60(r3)
 /* 804E7BC4 004B1184  38 61 00 10 */	addi r3, r1, 0x10
 /* 804E7BC8 004B1188  80 04 14 6C */	lwz r0, 0x146c(r4)
-/* 804E7BCC 004B118C  38 85 81 14 */	addi r4, r5, lbl_80528114@l
+/* 804E7BCC 004B118C  38 85 81 14 */	addi r4, r5, CMdlLook_strpool@l
 /* 804E7BD0 004B1190  90 01 00 10 */	stw r0, 0x10(r1)
 /* 804E7BD4 004B1194  4B EF 1A 45 */	bl GetResNode__Q34nw4r3g3d6ResMdlCFPCc
 /* 804E7BD8 004B1198  2C 03 00 00 */	cmpwi r3, 0
@@ -159,8 +159,8 @@
 /* 804E7CB0 004B1270  4B E6 64 01 */	bl PSVECNormalize
 .L_804E7CB4:
 /* 804E7CB4 004B1274  80 13 14 6C */	lwz r0, 0x146c(r19)
-/* 804E7CB8 004B1278  3C 80 80 53 */	lis r4, lbl_80528114@ha
-/* 804E7CBC 004B127C  38 84 81 14 */	addi r4, r4, lbl_80528114@l
+/* 804E7CB8 004B1278  3C 80 80 53 */	lis r4, CMdlLook_strpool@ha
+/* 804E7CBC 004B127C  38 84 81 14 */	addi r4, r4, CMdlLook_strpool@l
 /* 804E7CC0 004B1280  90 01 00 0C */	stw r0, 0xc(r1)
 /* 804E7CC4 004B1284  38 61 00 0C */	addi r3, r1, 0xc
 /* 804E7CC8 004B1288  38 84 00 06 */	addi r4, r4, 6
@@ -219,9 +219,9 @@
 .L_804E7D8C:
 /* 804E7D8C 004B134C  3A C0 00 00 */	li r22, 0
 .L_804E7D90:
-/* 804E7D90 004B1350  3F A0 80 53 */	lis r29, lbl_80528114@ha
+/* 804E7D90 004B1350  3F A0 80 53 */	lis r29, CMdlLook_strpool@ha
 /* 804E7D94 004B1354  3B 41 00 C0 */	addi r26, r1, 0xc0
-/* 804E7D98 004B1358  3B BD 81 14 */	addi r29, r29, lbl_80528114@l
+/* 804E7D98 004B1358  3B BD 81 14 */	addi r29, r29, CMdlLook_strpool@l
 /* 804E7D9C 004B135C  3D E0 80 57 */	lis r15, lbl_80572068@ha
 /* 804E7DA0 004B1360  3E 00 80 57 */	lis r16, lbl_80572040@ha
 /* 804E7DA4 004B1364  3F 00 80 57 */	lis r24, lbl_80571A10@ha
@@ -1796,8 +1796,8 @@ CMdlLook_typestr:
 	.balign 4
 
 
-.global lbl_80528114
-lbl_80528114:
+.global CMdlLook_strpool
+CMdlLook_strpool:
 	.asciz "JUspA"
 	.asciz "JUhead"
 	.asciz "move"

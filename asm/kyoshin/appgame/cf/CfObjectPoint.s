@@ -1049,9 +1049,9 @@
 /* 800C20BC 0008B67C  2C 03 00 00 */	cmpwi r3, 0
 /* 800C20C0 0008B680  40 82 00 3C */	bne .L_800C20FC
 /* 800C20C4 0008B684  80 7F 00 18 */	lwz r3, 0x18(r31)
-/* 800C20C8 0008B688  3C A0 80 4F */	lis r5, lbl_804F7EB4@ha
+/* 800C20C8 0008B688  3C A0 80 4F */	lis r5, CfObjectImplWalker_strpool@ha
 /* 800C20CC 0008B68C  85 83 3E 9C */	lwzu r12, 0x3e9c(r3)
-/* 800C20D0 0008B690  38 A5 7E B4 */	addi r5, r5, lbl_804F7EB4@l
+/* 800C20D0 0008B690  38 A5 7E B4 */	addi r5, r5, CfObjectImplWalker_strpool@l
 /* 800C20D4 0008B694  38 80 00 00 */	li r4, 0
 /* 800C20D8 0008B698  81 8C 01 AC */	lwz r12, 0x1ac(r12)
 /* 800C20DC 0008B69C  7D 89 03 A6 */	mtctr r12
@@ -1072,9 +1072,9 @@
 /* 800C2114 0008B6D4  2C 03 00 00 */	cmpwi r3, 0
 /* 800C2118 0008B6D8  40 82 00 4C */	bne .L_800C2164
 /* 800C211C 0008B6DC  80 7F 00 18 */	lwz r3, 0x18(r31)
-/* 800C2120 0008B6E0  3C A0 80 4F */	lis r5, lbl_804F7EB4@ha
+/* 800C2120 0008B6E0  3C A0 80 4F */	lis r5, CfObjectImplWalker_strpool@ha
 /* 800C2124 0008B6E4  85 83 3E 9C */	lwzu r12, 0x3e9c(r3)
-/* 800C2128 0008B6E8  38 A5 7E B4 */	addi r5, r5, lbl_804F7EB4@l
+/* 800C2128 0008B6E8  38 A5 7E B4 */	addi r5, r5, CfObjectImplWalker_strpool@l
 /* 800C212C 0008B6EC  38 80 00 00 */	li r4, 0
 /* 800C2130 0008B6F0  81 8C 01 AC */	lwz r12, 0x1ac(r12)
 /* 800C2134 0008B6F4  7D 89 03 A6 */	mtctr r12

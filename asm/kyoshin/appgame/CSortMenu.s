@@ -4,7 +4,7 @@
 
 
 
-.fn func_801D2F80, global
+.fn __ct__CSortMenu, global
 /* 801D2F80 0019C540  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801D2F84 0019C544  7C 08 02 A6 */	mflr r0
 /* 801D2F88 0019C548  3C 80 80 54 */	lis r4, __vt__CSortMenu@ha
@@ -14,7 +14,7 @@
 /* 801D2F98 0019C558  7C 7E 1B 78 */	mr r30, r3
 /* 801D2F9C 0019C55C  90 83 00 00 */	stw r4, 0(r3)
 /* 801D2FA0 0019C560  38 63 00 04 */	addi r3, r3, 4
-/* 801D2FA4 0019C564  48 28 C5 C1 */	bl func_8045F564
+/* 801D2FA4 0019C564  48 28 C5 C1 */	bl __ct__8045F564
 /* 801D2FA8 0019C568  3B E0 00 00 */	li r31, 0
 /* 801D2FAC 0019C56C  38 00 00 01 */	li r0, 1
 /* 801D2FB0 0019C570  93 FE 00 14 */	stw r31, 0x14(r30)
@@ -28,7 +28,7 @@
 /* 801D2FD0 0019C590  9B FE 00 29 */	stb r31, 0x29(r30)
 /* 801D2FD4 0019C594  9B FE 00 2A */	stb r31, 0x2a(r30)
 /* 801D2FD8 0019C598  98 1E 00 2B */	stb r0, 0x2b(r30)
-/* 801D2FDC 0019C59C  48 02 04 35 */	bl func_801F3410
+/* 801D2FDC 0019C59C  48 02 04 35 */	bl __ct__CScrollBar
 /* 801D2FE0 0019C5A0  9B FE 00 EC */	stb r31, 0xec(r30)
 /* 801D2FE4 0019C5A4  7F C3 F3 78 */	mr r3, r30
 /* 801D2FE8 0019C5A8  9B FE 00 ED */	stb r31, 0xed(r30)
@@ -38,9 +38,9 @@
 /* 801D2FF8 0019C5B8  7C 08 03 A6 */	mtlr r0
 /* 801D2FFC 0019C5BC  38 21 00 10 */	addi r1, r1, 0x10
 /* 801D3000 0019C5C0  4E 80 00 20 */	blr 
-.endfn func_801D2F80
+.endfn __ct__CSortMenu
 
-.fn func_801D3004, global
+.fn __dt__CSortMenu, global
 /* 801D3004 0019C5C4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801D3008 0019C5C8  7C 08 02 A6 */	mflr r0
 /* 801D300C 0019C5CC  2C 03 00 00 */	cmpwi r3, 0
@@ -51,10 +51,10 @@
 /* 801D3020 0019C5E0  41 82 00 2C */	beq .L_801D304C
 /* 801D3024 0019C5E4  38 80 FF FF */	li r4, -1
 /* 801D3028 0019C5E8  38 63 00 2C */	addi r3, r3, 0x2c
-/* 801D302C 0019C5EC  48 02 04 75 */	bl func_801F34A0
+/* 801D302C 0019C5EC  48 02 04 75 */	bl __dt__CScrollBar
 /* 801D3030 0019C5F0  38 7E 00 04 */	addi r3, r30, 4
 /* 801D3034 0019C5F4  38 80 FF FF */	li r4, -1
-/* 801D3038 0019C5F8  48 28 C5 49 */	bl func_8045F580
+/* 801D3038 0019C5F8  48 28 C5 49 */	bl __dt__8045F580
 /* 801D303C 0019C5FC  2C 1F 00 00 */	cmpwi r31, 0
 /* 801D3040 0019C600  40 81 00 0C */	ble .L_801D304C
 /* 801D3044 0019C604  7F C3 F3 78 */	mr r3, r30
@@ -66,7 +66,7 @@
 /* 801D3058 0019C618  7C 08 03 A6 */	mtlr r0
 /* 801D305C 0019C61C  38 21 00 10 */	addi r1, r1, 0x10
 /* 801D3060 0019C620  4E 80 00 20 */	blr 
-.endfn func_801D3004
+.endfn __dt__CSortMenu
 
 .fn func_801D3064, global
 /* 801D3064 0019C624  94 21 FF B0 */	stwu r1, -0x50(r1)
@@ -75,9 +75,9 @@
 /* 801D3070 0019C630  93 E1 00 4C */	stw r31, 0x4c(r1)
 /* 801D3074 0019C634  7C 7F 1B 78 */	mr r31, r3
 /* 801D3078 0019C638  48 26 13 29 */	bl func_804343A0
-/* 801D307C 0019C63C  3C 80 80 50 */	lis r4, lbl_80501A20@ha
+/* 801D307C 0019C63C  3C 80 80 50 */	lis r4, CSortMenu_strpool@ha
 /* 801D3080 0019C640  7F E5 FB 78 */	mr r5, r31
-/* 801D3084 0019C644  38 84 1A 20 */	addi r4, r4, lbl_80501A20@l
+/* 801D3084 0019C644  38 84 1A 20 */	addi r4, r4, CSortMenu_strpool@l
 /* 801D3088 0019C648  38 C0 00 00 */	li r6, 0
 /* 801D308C 0019C64C  38 E0 00 00 */	li r7, 0
 /* 801D3090 0019C650  48 27 B7 05 */	bl func_8044E794
@@ -85,7 +85,7 @@
 /* 801D3098 0019C658  48 27 C3 6D */	bl func_8044F404
 /* 801D309C 0019C65C  38 61 00 08 */	addi r3, r1, 8
 /* 801D30A0 0019C660  38 80 00 02 */	li r4, 2
-/* 801D30A4 0019C664  48 02 03 6D */	bl func_801F3410
+/* 801D30A4 0019C664  48 02 03 6D */	bl __ct__CScrollBar
 /* 801D30A8 0019C668  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 801D30AC 0019C66C  38 61 00 08 */	addi r3, r1, 8
 /* 801D30B0 0019C670  90 1F 00 30 */	stw r0, 0x30(r31)
@@ -124,7 +124,7 @@
 /* 801D3134 0019C6F4  D0 1F 00 64 */	stfs f0, 0x64(r31)
 /* 801D3138 0019C6F8  88 01 00 44 */	lbz r0, 0x44(r1)
 /* 801D313C 0019C6FC  98 1F 00 68 */	stb r0, 0x68(r31)
-/* 801D3140 0019C700  48 02 03 61 */	bl func_801F34A0
+/* 801D3140 0019C700  48 02 03 61 */	bl __dt__CScrollBar
 /* 801D3144 0019C704  38 7F 00 2C */	addi r3, r31, 0x2c
 /* 801D3148 0019C708  48 02 03 AD */	bl func_801F34F4
 /* 801D314C 0019C70C  80 01 00 54 */	lwz r0, 0x54(r1)
@@ -291,9 +291,9 @@
 /* 801D3350 0019C910  38 E0 00 01 */	li r7, 1
 /* 801D3354 0019C914  38 00 00 00 */	li r0, 0
 /* 801D3358 0019C918  98 E3 00 2A */	stb r7, 0x2a(r3)
-/* 801D335C 0019C91C  3F E0 80 50 */	lis r31, lbl_80501A20@ha
+/* 801D335C 0019C91C  3F E0 80 50 */	lis r31, CSortMenu_strpool@ha
 /* 801D3360 0019C920  80 C3 00 1C */	lwz r6, 0x1c(r3)
-/* 801D3364 0019C924  3B FF 1A 20 */	addi r31, r31, lbl_80501A20@l
+/* 801D3364 0019C924  3B FF 1A 20 */	addi r31, r31, CSortMenu_strpool@l
 /* 801D3368 0019C928  98 03 00 2B */	stb r0, 0x2b(r3)
 /* 801D336C 0019C92C  38 9F 00 13 */	addi r4, r31, 0x13
 /* 801D3370 0019C930  38 A0 00 01 */	li r5, 1
@@ -369,11 +369,11 @@
 /* 801D3460 0019CA20  BF A1 00 34 */	stmw r29, 0x34(r1)
 /* 801D3464 0019CA24  7C 9E 23 78 */	mr r30, r4
 /* 801D3468 0019CA28  3C 80 80 54 */	lis r4, lbl_80538170@ha
-/* 801D346C 0019CA2C  3F E0 80 50 */	lis r31, lbl_80501A20@ha
+/* 801D346C 0019CA2C  3F E0 80 50 */	lis r31, CSortMenu_strpool@ha
 /* 801D3470 0019CA30  7C 7D 1B 78 */	mr r29, r3
 /* 801D3474 0019CA34  38 61 00 08 */	addi r3, r1, 8
 /* 801D3478 0019CA38  38 84 81 70 */	addi r4, r4, lbl_80538170@l
-/* 801D347C 0019CA3C  3B FF 1A 20 */	addi r31, r31, lbl_80501A20@l
+/* 801D347C 0019CA3C  3B FF 1A 20 */	addi r31, r31, CSortMenu_strpool@l
 /* 801D3480 0019CA40  88 1E 00 ED */	lbz r0, 0xed(r30)
 /* 801D3484 0019CA44  7C 00 07 74 */	extsb r0, r0
 /* 801D3488 0019CA48  54 00 10 3A */	slwi r0, r0, 2
@@ -432,9 +432,9 @@
 .fn func_801D353C, global
 /* 801D353C 0019CAFC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801D3540 0019CB00  7C 08 02 A6 */	mflr r0
-/* 801D3544 0019CB04  3C A0 80 50 */	lis r5, lbl_80501A20@ha
+/* 801D3544 0019CB04  3C A0 80 50 */	lis r5, CSortMenu_strpool@ha
 /* 801D3548 0019CB08  90 01 00 24 */	stw r0, 0x24(r1)
-/* 801D354C 0019CB0C  38 A5 1A 20 */	addi r5, r5, lbl_80501A20@l
+/* 801D354C 0019CB0C  38 A5 1A 20 */	addi r5, r5, CSortMenu_strpool@l
 /* 801D3550 0019CB10  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 801D3554 0019CB14  7C 9F 23 78 */	mr r31, r4
 /* 801D3558 0019CB18  38 85 00 2D */	addi r4, r5, 0x2d
@@ -809,11 +809,11 @@
 /* 801D3A44 0019D004  90 01 00 24 */	stw r0, 0x24(r1)
 /* 801D3A48 0019D008  BF 81 00 10 */	stmw r28, 0x10(r1)
 /* 801D3A4C 0019D00C  3F C0 80 54 */	lis r30, lbl_80538170@ha
-/* 801D3A50 0019D010  3F E0 80 50 */	lis r31, lbl_80501A20@ha
+/* 801D3A50 0019D010  3F E0 80 50 */	lis r31, CSortMenu_strpool@ha
 /* 801D3A54 0019D014  7C 7C 1B 78 */	mr r28, r3
 /* 801D3A58 0019D018  3B A0 00 00 */	li r29, 0
 /* 801D3A5C 0019D01C  3B DE 81 70 */	addi r30, r30, lbl_80538170@l
-/* 801D3A60 0019D020  3B FF 1A 20 */	addi r31, r31, lbl_80501A20@l
+/* 801D3A60 0019D020  3B FF 1A 20 */	addi r31, r31, CSortMenu_strpool@l
 .L_801D3A64:
 /* 801D3A64 0019D024  88 7C 00 EE */	lbz r3, 0xee(r28)
 /* 801D3A68 0019D028  57 A4 06 3E */	clrlwi r4, r29, 0x18
@@ -865,9 +865,9 @@
 /* 801D3B0C 0019D0CC  7C 05 00 40 */	cmplw r5, r0
 /* 801D3B10 0019D0D0  40 82 01 4C */	bne .L_801D3C5C
 /* 801D3B14 0019D0D4  48 26 08 8D */	bl func_804343A0
-/* 801D3B18 0019D0D8  3F E0 80 50 */	lis r31, lbl_80501A20@ha
+/* 801D3B18 0019D0D8  3F E0 80 50 */	lis r31, CSortMenu_strpool@ha
 /* 801D3B1C 0019D0DC  7C 64 1B 78 */	mr r4, r3
-/* 801D3B20 0019D0E0  3B FF 1A 20 */	addi r31, r31, lbl_80501A20@l
+/* 801D3B20 0019D0E0  3B FF 1A 20 */	addi r31, r31, CSortMenu_strpool@l
 /* 801D3B24 0019D0E4  38 7D 00 04 */	addi r3, r29, 4
 /* 801D3B28 0019D0E8  38 DF 00 3D */	addi r6, r31, 0x3d
 /* 801D3B2C 0019D0EC  38 A0 20 00 */	li r5, 0x2000
@@ -944,7 +944,7 @@
 /* 801D3C44 0019D204  48 28 BB CD */	bl func_8045F810
 /* 801D3C48 0019D208  38 61 00 08 */	addi r3, r1, 8
 /* 801D3C4C 0019D20C  38 80 FF FF */	li r4, -1
-/* 801D3C50 0019D210  48 28 BC 79 */	bl func_8045F8C8
+/* 801D3C50 0019D210  48 28 BC 79 */	bl __dt__8045F8C8
 /* 801D3C54 0019D214  38 60 00 01 */	li r3, 1
 /* 801D3C58 0019D218  48 00 00 08 */	b .L_801D3C60
 .L_801D3C5C:
@@ -1179,8 +1179,8 @@ CSortMenu_typestr:
 	.4byte 0
 
 
-.global lbl_80501A20
-lbl_80501A20:
+.global CSortMenu_strpool
+CSortMenu_strpool:
 	.asciz "/menu/SortMenu.arc"
 	.asciz "nul_scr"
 	.asciz "nul_proportion"
@@ -1252,7 +1252,7 @@ lbl_80538170:
 __vt__CSortMenu:
 	.4byte __RTTI__CSortMenu
 	.4byte 0
-	.4byte func_801D3004
+	.4byte __dt__CSortMenu
 	.4byte func_80039E28
 	.4byte func_801D3AF0
 	.4byte func_80039E18
@@ -1334,7 +1334,7 @@ float_8066A8C0:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000004
-	.4byte func_8045F580
+	.4byte __dt__8045F580
 	.4byte 0x8680001E
 	.4byte 0x00000000
 	.4byte __dt__IWorkEvent
@@ -1348,7 +1348,7 @@ float_8066A8C0:
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x0000002C
-	.4byte func_801F34A0
+	.4byte __dt__CScrollBar
 .endobj "@etb_8001165C"
 
 .obj "@etb_80011678", local
@@ -1442,7 +1442,7 @@ float_8066A8C0:
 	.4byte 0x003B0010
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte func_8045F8C8
+	.4byte __dt__8045F8C8
 .endobj "@etb_800116E8"
 
 .obj "@etb_80011700", local
@@ -1457,14 +1457,14 @@ float_8066A8C0:
 
 .obj "@eti_8002B9F4", local
 .hidden "@eti_8002B9F4"
-	.4byte func_801D2F80
+	.4byte __ct__CSortMenu
 	.4byte 0x00000084
 	.4byte "@etb_8001162C"
 .endobj "@eti_8002B9F4"
 
 .obj "@eti_8002BA00", local
 .hidden "@eti_8002BA00"
-	.4byte func_801D3004
+	.4byte __dt__CSortMenu
 	.4byte 0x00000060
 	.4byte "@etb_8001165C"
 .endobj "@eti_8002BA00"

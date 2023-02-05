@@ -282,7 +282,7 @@
 .L_804DDCA0:
 /* 804DDCA0 004A7260  7F C3 F3 78 */	mr r3, r30
 /* 804DDCA4 004A7264  38 80 00 00 */	li r4, 0
-/* 804DDCA8 004A7268  4B F5 9E 21 */	bl func_80437AC8
+/* 804DDCA8 004A7268  4B F5 9E 21 */	bl __dt__CWorkThread
 /* 804DDCAC 004A726C  2C 1F 00 00 */	cmpwi r31, 0
 /* 804DDCB0 004A7270  40 81 00 0C */	ble .L_804DDCBC
 /* 804DDCB4 004A7274  7F C3 F3 78 */	mr r3, r30
@@ -1010,7 +1010,7 @@ staticArcFilenameString:
 	.4byte func_804DDB0C
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte func_80437AC8
+	.4byte __dt__CWorkThread
 .endobj "@etb_80020830"
 
 .obj "@etb_80020864", local

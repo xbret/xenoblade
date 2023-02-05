@@ -88,10 +88,10 @@
 /* 803D5940 0039EF00  2C 00 00 01 */	cmpwi r0, 1
 /* 803D5944 0039EF04  41 82 00 40 */	beq .L_803D5984
 /* 803D5948 0039EF08  3C C0 80 62 */	lis r6, sfx_libwork@ha
-/* 803D594C 0039EF0C  3C 80 80 52 */	lis r4, lbl_80520AC4@ha
+/* 803D594C 0039EF0C  3C 80 80 52 */	lis r4, sfx_lib_strpool@ha
 /* 803D5950 0039EF10  38 C6 CE 48 */	addi r6, r6, sfx_libwork@l
 /* 803D5954 0039EF14  81 86 00 08 */	lwz r12, 8(r6)
-/* 803D5958 0039EF18  38 84 0A C4 */	addi r4, r4, lbl_80520AC4@l
+/* 803D5958 0039EF18  38 84 0A C4 */	addi r4, r4, sfx_lib_strpool@l
 /* 803D595C 0039EF1C  80 A6 00 10 */	lwz r5, 0x10(r6)
 /* 803D5960 0039EF20  2C 0C 00 00 */	cmpwi r12, 0
 /* 803D5964 0039EF24  80 66 00 0C */	lwz r3, 0xc(r6)
@@ -111,10 +111,10 @@
 /* 803D5994 0039EF54  2C 03 00 00 */	cmpwi r3, 0
 /* 803D5998 0039EF58  40 82 00 78 */	bne .L_803D5A10
 /* 803D599C 0039EF5C  3C C0 80 62 */	lis r6, sfx_libwork@ha
-/* 803D59A0 0039EF60  3C 60 80 52 */	lis r3, lbl_80520AC4@ha
+/* 803D59A0 0039EF60  3C 60 80 52 */	lis r3, sfx_lib_strpool@ha
 /* 803D59A4 0039EF64  38 C6 CE 48 */	addi r6, r6, sfx_libwork@l
 /* 803D59A8 0039EF68  81 86 00 08 */	lwz r12, 8(r6)
-/* 803D59AC 0039EF6C  38 63 0A C4 */	addi r3, r3, lbl_80520AC4@l
+/* 803D59AC 0039EF6C  38 63 0A C4 */	addi r3, r3, sfx_lib_strpool@l
 /* 803D59B0 0039EF70  80 A6 00 10 */	lwz r5, 0x10(r6)
 /* 803D59B4 0039EF74  38 83 00 29 */	addi r4, r3, 0x29
 /* 803D59B8 0039EF78  2C 0C 00 00 */	cmpwi r12, 0
@@ -147,10 +147,10 @@
 /* 803D5A18 0039EFD8  2C 03 00 00 */	cmpwi r3, 0
 /* 803D5A1C 0039EFDC  40 82 00 78 */	bne .L_803D5A94
 /* 803D5A20 0039EFE0  3C C0 80 62 */	lis r6, sfx_libwork@ha
-/* 803D5A24 0039EFE4  3C 60 80 52 */	lis r3, lbl_80520AC4@ha
+/* 803D5A24 0039EFE4  3C 60 80 52 */	lis r3, sfx_lib_strpool@ha
 /* 803D5A28 0039EFE8  38 C6 CE 48 */	addi r6, r6, sfx_libwork@l
 /* 803D5A2C 0039EFEC  81 86 00 08 */	lwz r12, 8(r6)
-/* 803D5A30 0039EFF0  38 63 0A C4 */	addi r3, r3, lbl_80520AC4@l
+/* 803D5A30 0039EFF0  38 63 0A C4 */	addi r3, r3, sfx_lib_strpool@l
 /* 803D5A34 0039EFF4  80 A6 00 10 */	lwz r5, 0x10(r6)
 /* 803D5A38 0039EFF8  38 83 00 48 */	addi r4, r3, 0x48
 /* 803D5A3C 0039EFFC  2C 0C 00 00 */	cmpwi r12, 0
@@ -302,8 +302,8 @@ lbl_80520A90:
 	.balign 4
 
 
-.global lbl_80520AC4
-lbl_80520AC4:
+.global sfx_lib_strpool
+sfx_lib_strpool:
 	.asciz "E201194: sfx_InitHn: work size is short."
 	.asciz "E201281: SfxZHn: can't create."
 	.asciz "E202011: SfxAHn: can't create."

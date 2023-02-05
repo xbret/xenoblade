@@ -15,7 +15,7 @@
 /* 8027313C 0023C6FC  7C 7E 1B 78 */	mr r30, r3
 /* 80273140 0023C700  90 83 00 00 */	stw r4, 0(r3)
 /* 80273144 0023C704  38 63 00 04 */	addi r3, r3, 4
-/* 80273148 0023C708  48 1E C4 1D */	bl func_8045F564
+/* 80273148 0023C708  48 1E C4 1D */	bl __ct__8045F564
 /* 8027314C 0023C70C  3B E0 00 00 */	li r31, 0
 /* 80273150 0023C710  93 FE 00 14 */	stw r31, 0x14(r30)
 /* 80273154 0023C714  38 7E 00 2C */	addi r3, r30, 0x2c
@@ -28,7 +28,7 @@
 /* 80273170 0023C730  4B F5 F8 8D */	bl func_801D29FC
 /* 80273174 0023C734  38 7E 00 44 */	addi r3, r30, 0x44
 /* 80273178 0023C738  38 80 00 00 */	li r4, 0
-/* 8027317C 0023C73C  4B F8 02 95 */	bl func_801F3410
+/* 8027317C 0023C73C  4B F8 02 95 */	bl __ct__CScrollBar
 /* 80273180 0023C740  38 00 00 01 */	li r0, 1
 /* 80273184 0023C744  9B FE 00 84 */	stb r31, 0x84(r30)
 /* 80273188 0023C748  38 7E 00 8C */	addi r3, r30, 0x8c
@@ -41,7 +41,7 @@
 /* 802731A4 0023C764  4B FF F5 51 */	bl func_802726F4
 /* 802731A8 0023C768  38 61 00 08 */	addi r3, r1, 8
 /* 802731AC 0023C76C  38 80 00 01 */	li r4, 1
-/* 802731B0 0023C770  4B F8 02 61 */	bl func_801F3410
+/* 802731B0 0023C770  4B F8 02 61 */	bl __ct__CScrollBar
 /* 802731B4 0023C774  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 802731B8 0023C778  38 61 00 08 */	addi r3, r1, 8
 /* 802731BC 0023C77C  90 1E 00 48 */	stw r0, 0x48(r30)
@@ -80,7 +80,7 @@
 /* 80273240 0023C800  D0 1E 00 7C */	stfs f0, 0x7c(r30)
 /* 80273244 0023C804  88 01 00 44 */	lbz r0, 0x44(r1)
 /* 80273248 0023C808  98 1E 00 80 */	stb r0, 0x80(r30)
-/* 8027324C 0023C80C  4B F8 02 55 */	bl func_801F34A0
+/* 8027324C 0023C80C  4B F8 02 55 */	bl __dt__CScrollBar
 /* 80273250 0023C810  7F C3 F3 78 */	mr r3, r30
 /* 80273254 0023C814  83 E1 00 4C */	lwz r31, 0x4c(r1)
 /* 80273258 0023C818  83 C1 00 48 */	lwz r30, 0x48(r1)
@@ -109,13 +109,13 @@
 .L_802732A8:
 /* 802732A8 0023C868  38 7E 00 44 */	addi r3, r30, 0x44
 /* 802732AC 0023C86C  38 80 FF FF */	li r4, -1
-/* 802732B0 0023C870  4B F8 01 F1 */	bl func_801F34A0
+/* 802732B0 0023C870  4B F8 01 F1 */	bl __dt__CScrollBar
 /* 802732B4 0023C874  38 7E 00 2C */	addi r3, r30, 0x2c
 /* 802732B8 0023C878  38 80 FF FF */	li r4, -1
-/* 802732BC 0023C87C  4B F5 F7 7D */	bl func_801D2A38
+/* 802732BC 0023C87C  4B F5 F7 7D */	bl __dt__801D2A38
 /* 802732C0 0023C880  38 7E 00 04 */	addi r3, r30, 4
 /* 802732C4 0023C884  38 80 FF FF */	li r4, -1
-/* 802732C8 0023C888  48 1E C2 B9 */	bl func_8045F580
+/* 802732C8 0023C888  48 1E C2 B9 */	bl __dt__8045F580
 /* 802732CC 0023C88C  2C 1F 00 00 */	cmpwi r31, 0
 /* 802732D0 0023C890  40 81 00 0C */	ble .L_802732DC
 /* 802732D4 0023C894  7F C3 F3 78 */	mr r3, r30
@@ -136,9 +136,9 @@
 /* 80273300 0023C8C0  BF C1 00 08 */	stmw r30, 8(r1)
 /* 80273304 0023C8C4  7C 7E 1B 78 */	mr r30, r3
 /* 80273308 0023C8C8  48 1C 10 99 */	bl func_804343A0
-/* 8027330C 0023C8CC  3F E0 80 51 */	lis r31, lbl_8050A018@ha
+/* 8027330C 0023C8CC  3F E0 80 51 */	lis r31, CMenuKizunaTalkList_strpool@ha
 /* 80273310 0023C8D0  7F C5 F3 78 */	mr r5, r30
-/* 80273314 0023C8D4  3B FF A0 18 */	addi r31, r31, lbl_8050A018@l
+/* 80273314 0023C8D4  3B FF A0 18 */	addi r31, r31, CMenuKizunaTalkList_strpool@l
 /* 80273318 0023C8D8  38 C0 00 00 */	li r6, 0
 /* 8027331C 0023C8DC  38 9F 00 67 */	addi r4, r31, 0x67
 /* 80273320 0023C8E0  38 E0 00 00 */	li r7, 0
@@ -738,12 +738,12 @@
 .fn func_80273B30, global
 /* 80273B30 0023D0F0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80273B34 0023D0F4  7C 08 02 A6 */	mflr r0
-/* 80273B38 0023D0F8  3C 80 80 51 */	lis r4, lbl_8050A018@ha
+/* 80273B38 0023D0F8  3C 80 80 51 */	lis r4, CMenuKizunaTalkList_strpool@ha
 /* 80273B3C 0023D0FC  90 01 00 44 */	stw r0, 0x44(r1)
 /* 80273B40 0023D100  BF 41 00 28 */	stmw r26, 0x28(r1)
 /* 80273B44 0023D104  7C 7C 1B 78 */	mr r28, r3
 /* 80273B48 0023D108  3B C0 00 00 */	li r30, 0
-/* 80273B4C 0023D10C  3B 64 A0 18 */	addi r27, r4, lbl_8050A018@l
+/* 80273B4C 0023D10C  3B 64 A0 18 */	addi r27, r4, CMenuKizunaTalkList_strpool@l
 /* 80273B50 0023D110  3F 40 74 69 */	lis r26, 0x7469
 .L_80273B54:
 /* 80273B54 0023D114  A8 1C 00 8A */	lha r0, 0x8a(r28)
@@ -1128,8 +1128,8 @@
 /* 802740E8 0023D6A8  7C 08 02 A6 */	mflr r0
 /* 802740EC 0023D6AC  90 01 00 54 */	stw r0, 0x54(r1)
 /* 802740F0 0023D6B0  BF A1 00 44 */	stmw r29, 0x44(r1)
-/* 802740F4 0023D6B4  3F E0 80 51 */	lis r31, lbl_8050A018@ha
-/* 802740F8 0023D6B8  3B FF A0 18 */	addi r31, r31, lbl_8050A018@l
+/* 802740F4 0023D6B4  3F E0 80 51 */	lis r31, CMenuKizunaTalkList_strpool@ha
+/* 802740F8 0023D6B8  3B FF A0 18 */	addi r31, r31, CMenuKizunaTalkList_strpool@l
 /* 802740FC 0023D6BC  7C 7D 1B 78 */	mr r29, r3
 /* 80274100 0023D6C0  38 9F 00 C4 */	addi r4, r31, 0xc4
 /* 80274104 0023D6C4  88 03 00 88 */	lbz r0, 0x88(r3)
@@ -1240,9 +1240,9 @@
 /* 80274284 0023D844  7C 00 20 40 */	cmplw r0, r4
 /* 80274288 0023D848  40 82 01 6C */	bne .L_802743F4
 /* 8027428C 0023D84C  48 1C 01 15 */	bl func_804343A0
-/* 80274290 0023D850  3F A0 80 51 */	lis r29, lbl_8050A018@ha
+/* 80274290 0023D850  3F A0 80 51 */	lis r29, CMenuKizunaTalkList_strpool@ha
 /* 80274294 0023D854  7C 64 1B 78 */	mr r4, r3
-/* 80274298 0023D858  3B BD A0 18 */	addi r29, r29, lbl_8050A018@l
+/* 80274298 0023D858  3B BD A0 18 */	addi r29, r29, CMenuKizunaTalkList_strpool@l
 /* 8027429C 0023D85C  38 7F 00 04 */	addi r3, r31, 4
 /* 802742A0 0023D860  38 DD 01 B2 */	addi r6, r29, 0x1b2
 /* 802742A4 0023D864  3C A0 00 01 */	lis r5, 1
@@ -1313,7 +1313,7 @@
 /* 802743A8 0023D968  98 1F 00 40 */	stb r0, 0x40(r31)
 /* 802743AC 0023D96C  88 01 00 25 */	lbz r0, 0x25(r1)
 /* 802743B0 0023D970  98 1F 00 41 */	stb r0, 0x41(r31)
-/* 802743B4 0023D974  4B F5 E6 85 */	bl func_801D2A38
+/* 802743B4 0023D974  4B F5 E6 85 */	bl __dt__801D2A38
 /* 802743B8 0023D978  81 9F 00 2C */	lwz r12, 0x2c(r31)
 /* 802743BC 0023D97C  38 7F 00 2C */	addi r3, r31, 0x2c
 /* 802743C0 0023D980  81 8C 00 08 */	lwz r12, 8(r12)
@@ -1326,7 +1326,7 @@
 /* 802743DC 0023D99C  48 1E B4 35 */	bl func_8045F810
 /* 802743E0 0023D9A0  38 61 00 08 */	addi r3, r1, 8
 /* 802743E4 0023D9A4  38 80 FF FF */	li r4, -1
-/* 802743E8 0023D9A8  48 1E B4 E1 */	bl func_8045F8C8
+/* 802743E8 0023D9A8  48 1E B4 E1 */	bl __dt__8045F8C8
 /* 802743EC 0023D9AC  38 60 00 01 */	li r3, 1
 /* 802743F0 0023D9B0  48 00 00 54 */	b .L_80274444
 .L_802743F4:
@@ -1339,8 +1339,8 @@
 /* 8027440C 0023D9CC  93 C5 00 04 */	stw r30, 4(r5)
 /* 80274410 0023D9D0  4B DC 66 69 */	bl func_8003AA78
 /* 80274414 0023D9D4  4B DC 66 21 */	bl func_8003AA34
-/* 80274418 0023D9D8  3C 60 80 51 */	lis r3, lbl_8050A018@ha
-/* 8027441C 0023D9DC  38 63 A0 18 */	addi r3, r3, lbl_8050A018@l
+/* 80274418 0023D9D8  3C 60 80 51 */	lis r3, CMenuKizunaTalkList_strpool@ha
+/* 8027441C 0023D9DC  38 63 A0 18 */	addi r3, r3, CMenuKizunaTalkList_strpool@l
 /* 80274420 0023D9E0  38 63 02 10 */	addi r3, r3, 0x210
 /* 80274424 0023D9E4  4B DC 66 81 */	bl func_8003AAA4
 /* 80274428 0023D9E8  90 6D B0 28 */	stw r3, lbl_806671A8@sda21(r13)
@@ -1408,8 +1408,8 @@ CKizunaTalkList_typestr:
 	.asciz "CKizunaTalkList"
 
 
-.global lbl_8050A018
-lbl_8050A018:
+.global CMenuKizunaTalkList_strpool
+CMenuKizunaTalkList_strpool:
 	.asciz "MNU_update"
 	.asciz "info"
 	.asciz "flag"
@@ -1572,13 +1572,13 @@ lbl_806671C8:
 	.4byte func_802727B4
 	.4byte 0x0780001E
 	.4byte 0x00000044
-	.4byte func_801F34A0
+	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x0000002C
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000004
-	.4byte func_8045F580
+	.4byte __dt__8045F580
 	.4byte 0x8680001E
 	.4byte 0x00000000
 	.4byte __dt__IWorkEvent
@@ -1602,16 +1602,16 @@ lbl_806671C8:
 	.4byte func_802727B4
 	.4byte 0x8780001E
 	.4byte 0x00000044
-	.4byte func_801F34A0
+	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x0000008C
 	.4byte func_802727B4
 	.4byte 0x0780001E
 	.4byte 0x00000044
-	.4byte func_801F34A0
+	.4byte __dt__CScrollBar
 	.4byte 0x8780001E
 	.4byte 0x0000002C
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 .endobj "@etb_800182E4"
 
 .obj "@etb_8001834C", local
@@ -1741,7 +1741,7 @@ lbl_806671C8:
 	.4byte 0x00430010
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte func_8045F8C8
+	.4byte __dt__8045F8C8
 .endobj "@etb_800183EC"
 
 .obj "@etb_80018404", local

@@ -13,8 +13,8 @@
 /* 80443B1C 0040D0DC  90 0D BD 6C */	stw r0, lbl_80667EEC@sda21(r13)
 /* 80443B20 0040D0E0  4B FF 23 51 */	bl func_80435E70
 /* 80443B24 0040D0E4  4B F2 11 7D */	bl VIInit
-/* 80443B28 0040D0E8  3F E0 80 52 */	lis r31, lbl_8052605C@ha
-/* 80443B2C 0040D0EC  3B FF 60 5C */	addi r31, r31, lbl_8052605C@l
+/* 80443B28 0040D0E8  3F E0 80 52 */	lis r31, CWorkRoot_strpool@ha
+/* 80443B2C 0040D0EC  3B FF 60 5C */	addi r31, r31, CWorkRoot_strpool@l
 /* 80443B30 0040D0F0  4B FF 3A 85 */	bl func_804375B4
 /* 80443B34 0040D0F4  7C 64 1B 78 */	mr r4, r3
 /* 80443B38 0040D0F8  38 60 02 08 */	li r3, 0x208
@@ -164,7 +164,7 @@
 .L_80443D1C:
 /* 80443D1C 0040D2DC  7F C3 F3 78 */	mr r3, r30
 /* 80443D20 0040D2E0  38 80 00 00 */	li r4, 0
-/* 80443D24 0040D2E4  4B FF 3D A5 */	bl func_80437AC8
+/* 80443D24 0040D2E4  4B FF 3D A5 */	bl __dt__CWorkThread
 /* 80443D28 0040D2E8  2C 1F 00 00 */	cmpwi r31, 0
 /* 80443D2C 0040D2EC  40 81 00 0C */	ble .L_80443D38
 /* 80443D30 0040D2F0  7F C3 F3 78 */	mr r3, r30
@@ -566,8 +566,8 @@
 /* 80444240 0040D800  80 0D BD 6C */	lwz r0, lbl_80667EEC@sda21(r13)
 /* 80444244 0040D804  2C 00 00 01 */	cmpwi r0, 1
 /* 80444248 0040D808  40 82 00 20 */	bne .L_80444268
-/* 8044424C 0040D80C  3C 60 80 52 */	lis r3, lbl_8052605C@ha
-/* 80444250 0040D810  38 63 60 5C */	addi r3, r3, lbl_8052605C@l
+/* 8044424C 0040D80C  3C 60 80 52 */	lis r3, CWorkRoot_strpool@ha
+/* 80444250 0040D810  38 63 60 5C */	addi r3, r3, CWorkRoot_strpool@l
 /* 80444254 0040D814  38 63 00 0A */	addi r3, r3, 0xa
 /* 80444258 0040D818  4C C6 31 82 */	crclr 6
 /* 8044425C 0040D81C  4B F1 0C 95 */	bl OSReport
@@ -576,8 +576,8 @@
 .L_80444268:
 /* 80444268 0040D828  2C 00 00 02 */	cmpwi r0, 2
 /* 8044426C 0040D82C  40 82 00 24 */	bne .L_80444290
-/* 80444270 0040D830  3C 60 80 52 */	lis r3, lbl_8052605C@ha
-/* 80444274 0040D834  38 63 60 5C */	addi r3, r3, lbl_8052605C@l
+/* 80444270 0040D830  3C 60 80 52 */	lis r3, CWorkRoot_strpool@ha
+/* 80444274 0040D834  38 63 60 5C */	addi r3, r3, CWorkRoot_strpool@l
 /* 80444278 0040D838  38 63 00 19 */	addi r3, r3, 0x19
 /* 8044427C 0040D83C  4C C6 31 82 */	crclr 6
 /* 80444280 0040D840  4B F1 0C 71 */	bl OSReport
@@ -587,16 +587,16 @@
 .L_80444290:
 /* 80444290 0040D850  2C 00 00 03 */	cmpwi r0, 3
 /* 80444294 0040D854  40 82 00 20 */	bne .L_804442B4
-/* 80444298 0040D858  3C 60 80 52 */	lis r3, lbl_8052605C@ha
-/* 8044429C 0040D85C  38 63 60 5C */	addi r3, r3, lbl_8052605C@l
+/* 80444298 0040D858  3C 60 80 52 */	lis r3, CWorkRoot_strpool@ha
+/* 8044429C 0040D85C  38 63 60 5C */	addi r3, r3, CWorkRoot_strpool@l
 /* 804442A0 0040D860  38 63 00 29 */	addi r3, r3, 0x29
 /* 804442A4 0040D864  4C C6 31 82 */	crclr 6
 /* 804442A8 0040D868  4B F1 0C 49 */	bl OSReport
 /* 804442AC 0040D86C  4B F1 5F 25 */	bl OSShutdownSystem
 /* 804442B0 0040D870  48 00 00 18 */	b .L_804442C8
 .L_804442B4:
-/* 804442B4 0040D874  3C 60 80 52 */	lis r3, lbl_8052605C@ha
-/* 804442B8 0040D878  38 63 60 5C */	addi r3, r3, lbl_8052605C@l
+/* 804442B4 0040D874  3C 60 80 52 */	lis r3, CWorkRoot_strpool@ha
+/* 804442B8 0040D878  38 63 60 5C */	addi r3, r3, CWorkRoot_strpool@l
 /* 804442BC 0040D87C  38 63 00 3D */	addi r3, r3, 0x3d
 /* 804442C0 0040D880  4C C6 31 82 */	crclr 6
 /* 804442C4 0040D884  4B F1 0C 2D */	bl OSReport
@@ -729,8 +729,8 @@ _unnamed_CWorkRoot_cpp_CWorkRootThread_typestr:
 	.balign 4
 
 
-.global lbl_8052605C
-lbl_8052605C:
+.global CWorkRoot_strpool
+CWorkRoot_strpool:
 	.asciz "CWorkRoot"
 	.asciz "exit wii menu\n"
 	.asciz "exit wii reset\n"
@@ -845,7 +845,7 @@ lbl_80667EF0:
 	.4byte func_804379B8
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_80437AC8
+	.4byte __dt__CWorkThread
 .endobj "@etb_8001C774"
 
 .obj "@etb_8001C7A8", local

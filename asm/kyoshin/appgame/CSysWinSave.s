@@ -66,10 +66,10 @@
 /* 802945BC 0025DB7C  90 9C 00 6C */	stw r4, 0x6c(r28)
 /* 802945C0 0025DB80  90 1C 00 70 */	stw r0, 0x70(r28)
 /* 802945C4 0025DB84  93 FC 00 74 */	stw r31, 0x74(r28)
-/* 802945C8 0025DB88  48 1C AF 9D */	bl func_8045F564
+/* 802945C8 0025DB88  48 1C AF 9D */	bl __ct__8045F564
 /* 802945CC 0025DB8C  38 7C 00 88 */	addi r3, r28, 0x88
 /* 802945D0 0025DB90  38 80 00 00 */	li r4, 0
-/* 802945D4 0025DB94  4B F9 70 45 */	bl func_8022B618
+/* 802945D4 0025DB94  4B F9 70 45 */	bl __ct__CSysWin
 /* 802945D8 0025DB98  38 7C 00 C4 */	addi r3, r28, 0xc4
 /* 802945DC 0025DB9C  38 80 00 00 */	li r4, 0
 /* 802945E0 0025DBA0  4B F3 E4 1D */	bl func_801D29FC
@@ -282,8 +282,8 @@ CSysWinSave_typestr:
 	.asciz "CSysWinSave"
 
 
-.global lbl_8050B3A4
-lbl_8050B3A4:
+.global CSysWinSave_strpool
+CSysWinSave_strpool:
 	.asciz "CSysWinSave"
 	.asciz "MNU_sysmes"
 	.asciz "name"
@@ -421,10 +421,10 @@ lbl_80667300:
 	.4byte 0x00000000
 	.4byte 0x0780001C
 	.4byte 0x00000088
-	.4byte func_8022B6A0
+	.4byte __dt__CSysWin
 	.4byte 0x0780001C
 	.4byte 0x00000078
-	.4byte func_8045F580
+	.4byte __dt__8045F580
 	.4byte 0x0680001C
 	.4byte 0x00000070
 	.4byte func_8004031C

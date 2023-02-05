@@ -39,7 +39,7 @@
 /* 80460150 00429710  38 00 00 00 */	li r0, 0
 /* 80460154 00429714  90 0D BE 78 */	stw r0, lbl_80667FF8@sda21(r13)
 /* 80460158 00429718  38 80 00 00 */	li r4, 0
-/* 8046015C 0042971C  4B FD 79 6D */	bl func_80437AC8
+/* 8046015C 0042971C  4B FD 79 6D */	bl __dt__CWorkThread
 /* 80460160 00429720  2C 1F 00 00 */	cmpwi r31, 0
 /* 80460164 00429724  40 81 00 0C */	ble .L_80460170
 /* 80460168 00429728  7F C3 F3 78 */	mr r3, r30
@@ -874,9 +874,9 @@
 /* 80460CD0 0042A290  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80460CD4 0042A294  7C 7D 1B 78 */	mr r29, r3
 /* 80460CD8 0042A298  41 82 00 28 */	beq .L_80460D00
-/* 80460CDC 0042A29C  3C 80 80 52 */	lis r4, lbl_80527418@ha
+/* 80460CDC 0042A29C  3C 80 80 52 */	lis r4, CLibVM_strpool@ha
 /* 80460CE0 0042A2A0  88 A5 00 00 */	lbz r5, 0(r5)
-/* 80460CE4 0042A2A4  88 04 74 18 */	lbz r0, lbl_80527418@l(r4)
+/* 80460CE4 0042A2A4  88 04 74 18 */	lbz r0, CLibVM_strpool@l(r4)
 /* 80460CE8 0042A2A8  7C A4 07 74 */	extsb r4, r5
 /* 80460CEC 0042A2AC  7C 00 07 74 */	extsb r0, r0
 /* 80460CF0 0042A2B0  7C 04 00 00 */	cmpw r4, r0
@@ -1091,7 +1091,7 @@
 /* 80460FC4 0042A584  3C 00 80 52 */	lis r0, lbl_80526B70@ha
 /* 80460FC8 0042A588  90 01 00 10 */	stw r0, 0x10(r1)
 /* 80460FCC 0042A58C  82 A3 00 10 */	lwz r21, 0x10(r3)
-/* 80460FD0 0042A590  3F A0 80 52 */	lis r29, lbl_80527418@ha
+/* 80460FD0 0042A590  3F A0 80 52 */	lis r29, CLibVM_strpool@ha
 /* 80460FD4 0042A594  82 C3 00 04 */	lwz r22, 4(r3)
 /* 80460FD8 0042A598  3F 40 80 52 */	lis r26, lbl_805273F0@ha
 /* 80460FDC 0042A59C  82 E3 00 0C */	lwz r23, 0xc(r3)
@@ -1101,7 +1101,7 @@
 /* 80460FEC 0042A5AC  80 61 00 10 */	lwz r3, 0x10(r1)
 /* 80460FF0 0042A5B0  3B 5A 73 F0 */	addi r26, r26, lbl_805273F0@l
 /* 80460FF4 0042A5B4  92 C1 00 0C */	stw r22, 0xc(r1)
-/* 80460FF8 0042A5B8  3B BD 74 18 */	addi r29, r29, lbl_80527418@l
+/* 80460FF8 0042A5B8  3B BD 74 18 */	addi r29, r29, CLibVM_strpool@l
 /* 80460FFC 0042A5BC  38 63 6B 70 */	addi r3, r3, lbl_80526B70@l
 /* 80461000 0042A5C0  82 99 00 38 */	lwz r20, 0x38(r25)
 /* 80461004 0042A5C4  90 61 00 10 */	stw r3, 0x10(r1)
@@ -3482,8 +3482,8 @@ lbl_805273F0:
 	.4byte 0x000F0000
 
 
-.global lbl_80527418
-lbl_80527418:
+.global CLibVM_strpool
+CLibVM_strpool:
 	.asciz "1.2.3"
 	.asciz "incorrect header check"
 	.asciz "unknown compression method"

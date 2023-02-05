@@ -25,11 +25,11 @@
 /* 801F4FAC 001BE56C  B0 16 01 94 */	sth r0, 0x194(r22)
 /* 801F4FB0 001BE570  4B E4 5A 85 */	bl func_8003AA34
 /* 801F4FB4 001BE574  80 0D A8 98 */	lwz r0, lbl_80666A18@sda21(r13)
-/* 801F4FB8 001BE578  3F 60 80 50 */	lis r27, lbl_805032B8@ha
+/* 801F4FB8 001BE578  3F 60 80 50 */	lis r27, CfGimmickObject_strpool@ha
 /* 801F4FBC 001BE57C  90 01 00 D0 */	stw r0, 0xd0(r1)
 /* 801F4FC0 001BE580  7C 7C 1B 78 */	mr r28, r3
 /* 801F4FC4 001BE584  7E E5 BB 78 */	mr r5, r23
-/* 801F4FC8 001BE588  38 9B 32 B8 */	addi r4, r27, lbl_805032B8@l
+/* 801F4FC8 001BE588  38 9B 32 B8 */	addi r4, r27, CfGimmickObject_strpool@l
 /* 801F4FCC 001BE58C  B2 F6 00 64 */	sth r23, 0x64(r22)
 /* 801F4FD0 001BE590  80 61 00 D0 */	lwz r3, 0xd0(r1)
 /* 801F4FD4 001BE594  4B E4 5B 75 */	bl func_8003AB48
@@ -61,7 +61,7 @@
 /* 801F503C 001BE5FC  81 8C 00 20 */	lwz r12, 0x20(r12)
 /* 801F5040 001BE600  7D 89 03 A6 */	mtctr r12
 /* 801F5044 001BE604  4E 80 04 21 */	bctrl 
-/* 801F5048 001BE608  3B BB 32 B8 */	addi r29, r27, lbl_805032B8@l
+/* 801F5048 001BE608  3B BB 32 B8 */	addi r29, r27, CfGimmickObject_strpool@l
 /* 801F504C 001BE60C  80 61 00 D0 */	lwz r3, 0xd0(r1)
 /* 801F5050 001BE610  7E E5 BB 78 */	mr r5, r23
 /* 801F5054 001BE614  38 9D 00 08 */	addi r4, r29, 8
@@ -281,9 +281,9 @@
 /* 801F53A0 001BE960  60 00 10 00 */	ori r0, r0, 0x1000
 /* 801F53A4 001BE964  90 16 00 74 */	stw r0, 0x74(r22)
 .L_801F53A8:
-/* 801F53A8 001BE968  3F 60 80 50 */	lis r27, lbl_805032B8@ha
+/* 801F53A8 001BE968  3F 60 80 50 */	lis r27, CfGimmickObject_strpool@ha
 /* 801F53AC 001BE96C  80 61 00 D0 */	lwz r3, 0xd0(r1)
-/* 801F53B0 001BE970  3B 7B 32 B8 */	addi r27, r27, lbl_805032B8@l
+/* 801F53B0 001BE970  3B 7B 32 B8 */	addi r27, r27, CfGimmickObject_strpool@l
 /* 801F53B4 001BE974  7E E5 BB 78 */	mr r5, r23
 /* 801F53B8 001BE978  38 9B 00 D3 */	addi r4, r27, 0xd3
 /* 801F53BC 001BE97C  4B E4 57 8D */	bl func_8003AB48
@@ -393,9 +393,9 @@
 /* 801F5558 001BEB18  2C 1F 00 02 */	cmpwi r31, 2
 /* 801F555C 001BEB1C  B0 03 00 92 */	sth r0, 0x92(r3)
 /* 801F5560 001BEB20  41 80 FE B4 */	blt .L_801F5414
-/* 801F5564 001BEB24  3C 80 80 50 */	lis r4, lbl_805032B8@ha
+/* 801F5564 001BEB24  3C 80 80 50 */	lis r4, CfGimmickObject_strpool@ha
 /* 801F5568 001BEB28  80 61 00 D0 */	lwz r3, 0xd0(r1)
-/* 801F556C 001BEB2C  38 84 32 B8 */	addi r4, r4, lbl_805032B8@l
+/* 801F556C 001BEB2C  38 84 32 B8 */	addi r4, r4, CfGimmickObject_strpool@l
 /* 801F5570 001BEB30  7E E5 BB 78 */	mr r5, r23
 /* 801F5574 001BEB34  38 84 00 F0 */	addi r4, r4, 0xf0
 /* 801F5578 001BEB38  4B E4 55 D1 */	bl func_8003AB48
@@ -4478,8 +4478,8 @@ cf_CfGimmick_typestr:
 	.balign 4
 
 
-.global lbl_805032B8
-lbl_805032B8:
+.global CfGimmickObject_strpool
+CfGimmickObject_strpool:
 	.asciz "rectype"
 	.asciz "ct"
 	.asciz "visible"

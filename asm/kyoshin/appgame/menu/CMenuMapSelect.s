@@ -56,11 +56,11 @@
 /* 802422D8 0020B898  90 BE 00 10 */	stw r5, 0x10(r30)
 /* 802422DC 0020B89C  90 1E 00 58 */	stw r0, 0x58(r30)
 /* 802422E0 0020B8A0  93 BE 00 5C */	stw r29, 0x5c(r30)
-/* 802422E4 0020B8A4  4B F8 16 91 */	bl func_801C3974
+/* 802422E4 0020B8A4  4B F8 16 91 */	bl __ct__CBgTex
 /* 802422E8 0020B8A8  38 7E 00 80 */	addi r3, r30, 0x80
 /* 802422EC 0020B8AC  38 80 00 00 */	li r4, 0
 /* 802422F0 0020B8B0  38 A0 00 00 */	li r5, 0
-/* 802422F4 0020B8B4  4B F8 1B DD */	bl func_801C3ED0
+/* 802422F4 0020B8B4  4B F8 1B DD */	bl __ct__CTitleAHelp
 /* 802422F8 0020B8B8  38 7E 00 B8 */	addi r3, r30, 0xb8
 /* 802422FC 0020B8BC  48 00 0D B1 */	bl func_802430AC
 /* 80242300 0020B8C0  38 7E 01 6C */	addi r3, r30, 0x16c
@@ -1133,10 +1133,10 @@ float_8066AFE8:
 	.4byte func_802433D0
 	.4byte 0x0780001E
 	.4byte 0x00000080
-	.4byte func_801C3F50
+	.4byte __dt__CTitleAHelp
 	.4byte 0x0780001E
 	.4byte 0x00000060
-	.4byte func_801C39D0
+	.4byte __dt__CBgTex
 	.4byte 0x0680001E
 	.4byte 0x00000058
 	.4byte func_8004031C

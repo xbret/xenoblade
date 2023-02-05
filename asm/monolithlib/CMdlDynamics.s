@@ -1657,9 +1657,9 @@
 /* 804EAAD8 004B4098  38 61 00 64 */	addi r3, r1, 0x64
 /* 804EAADC 004B409C  4B FF F4 F5 */	bl func_804E9FD0
 /* 804EAAE0 004B40A0  90 61 01 08 */	stw r3, 0x108(r1)
-/* 804EAAE4 004B40A4  3C 80 80 53 */	lis r4, lbl_80528138@ha
+/* 804EAAE4 004B40A4  3C 80 80 53 */	lis r4, CMdlDynamics_strpool@ha
 /* 804EAAE8 004B40A8  38 61 00 5C */	addi r3, r1, 0x5c
-/* 804EAAEC 004B40AC  38 84 81 38 */	addi r4, r4, lbl_80528138@l
+/* 804EAAEC 004B40AC  38 84 81 38 */	addi r4, r4, CMdlDynamics_strpool@l
 /* 804EAAF0 004B40B0  48 00 07 3D */	bl func_804EB22C
 /* 804EAAF4 004B40B4  90 61 00 34 */	stw r3, 0x34(r1)
 /* 804EAAF8 004B40B8  38 61 00 54 */	addi r3, r1, 0x54
@@ -1678,9 +1678,9 @@
 /* 804EAB28 004B40E8  C0 02 D7 F8 */	lfs f0, float_8066DB78@sda21(r2)
 /* 804EAB2C 004B40EC  D0 01 01 0C */	stfs f0, 0x10c(r1)
 .L_804EAB30:
-/* 804EAB30 004B40F0  3C 80 80 53 */	lis r4, lbl_80528138@ha
+/* 804EAB30 004B40F0  3C 80 80 53 */	lis r4, CMdlDynamics_strpool@ha
 /* 804EAB34 004B40F4  38 61 00 5C */	addi r3, r1, 0x5c
-/* 804EAB38 004B40F8  38 84 81 38 */	addi r4, r4, lbl_80528138@l
+/* 804EAB38 004B40F8  38 84 81 38 */	addi r4, r4, CMdlDynamics_strpool@l
 /* 804EAB3C 004B40FC  38 84 00 05 */	addi r4, r4, 5
 /* 804EAB40 004B4100  48 00 06 ED */	bl func_804EB22C
 /* 804EAB44 004B4104  90 61 00 30 */	stw r3, 0x30(r1)
@@ -1700,9 +1700,9 @@
 /* 804EAB78 004B4138  C0 02 D7 F8 */	lfs f0, float_8066DB78@sda21(r2)
 /* 804EAB7C 004B413C  D0 01 01 10 */	stfs f0, 0x110(r1)
 .L_804EAB80:
-/* 804EAB80 004B4140  3C 80 80 53 */	lis r4, lbl_80528138@ha
+/* 804EAB80 004B4140  3C 80 80 53 */	lis r4, CMdlDynamics_strpool@ha
 /* 804EAB84 004B4144  38 61 00 5C */	addi r3, r1, 0x5c
-/* 804EAB88 004B4148  38 84 81 38 */	addi r4, r4, lbl_80528138@l
+/* 804EAB88 004B4148  38 84 81 38 */	addi r4, r4, CMdlDynamics_strpool@l
 /* 804EAB8C 004B414C  38 84 00 0A */	addi r4, r4, 0xa
 /* 804EAB90 004B4150  48 00 06 9D */	bl func_804EB22C
 /* 804EAB94 004B4154  90 61 00 2C */	stw r3, 0x2c(r1)
@@ -1722,9 +1722,9 @@
 /* 804EABC8 004B4188  C0 02 D7 F8 */	lfs f0, float_8066DB78@sda21(r2)
 /* 804EABCC 004B418C  D0 01 01 14 */	stfs f0, 0x114(r1)
 .L_804EABD0:
-/* 804EABD0 004B4190  3C 80 80 53 */	lis r4, lbl_80528138@ha
+/* 804EABD0 004B4190  3C 80 80 53 */	lis r4, CMdlDynamics_strpool@ha
 /* 804EABD4 004B4194  38 61 00 5C */	addi r3, r1, 0x5c
-/* 804EABD8 004B4198  38 84 81 38 */	addi r4, r4, lbl_80528138@l
+/* 804EABD8 004B4198  38 84 81 38 */	addi r4, r4, CMdlDynamics_strpool@l
 /* 804EABDC 004B419C  38 84 00 0F */	addi r4, r4, 0xf
 /* 804EABE0 004B41A0  48 00 06 4D */	bl func_804EB22C
 /* 804EABE4 004B41A4  90 61 00 28 */	stw r3, 0x28(r1)
@@ -1754,9 +1754,9 @@
 /* 804EAC38 004B41F8  48 00 05 8D */	bl func_804EB1C4
 /* 804EAC3C 004B41FC  2C 03 00 00 */	cmpwi r3, 0
 /* 804EAC40 004B4200  41 82 02 B0 */	beq .L_804EAEF0
-/* 804EAC44 004B4204  3C 80 80 53 */	lis r4, lbl_80528138@ha
+/* 804EAC44 004B4204  3C 80 80 53 */	lis r4, CMdlDynamics_strpool@ha
 /* 804EAC48 004B4208  38 61 00 58 */	addi r3, r1, 0x58
-/* 804EAC4C 004B420C  38 84 81 38 */	addi r4, r4, lbl_80528138@l
+/* 804EAC4C 004B420C  38 84 81 38 */	addi r4, r4, CMdlDynamics_strpool@l
 /* 804EAC50 004B4210  38 84 00 14 */	addi r4, r4, 0x14
 /* 804EAC54 004B4214  48 00 05 D9 */	bl func_804EB22C
 /* 804EAC58 004B4218  90 61 00 24 */	stw r3, 0x24(r1)
@@ -1814,9 +1814,9 @@
 /* 804EAD20 004B42E0  D0 21 01 20 */	stfs f1, 0x120(r1)
 /* 804EAD24 004B42E4  D0 01 01 1C */	stfs f0, 0x11c(r1)
 .L_804EAD28:
-/* 804EAD28 004B42E8  3C 80 80 53 */	lis r4, lbl_80528138@ha
+/* 804EAD28 004B42E8  3C 80 80 53 */	lis r4, CMdlDynamics_strpool@ha
 /* 804EAD2C 004B42EC  38 61 00 58 */	addi r3, r1, 0x58
-/* 804EAD30 004B42F0  38 84 81 38 */	addi r4, r4, lbl_80528138@l
+/* 804EAD30 004B42F0  38 84 81 38 */	addi r4, r4, CMdlDynamics_strpool@l
 /* 804EAD34 004B42F4  38 84 00 19 */	addi r4, r4, 0x19
 /* 804EAD38 004B42F8  48 00 04 F5 */	bl func_804EB22C
 /* 804EAD3C 004B42FC  90 61 00 20 */	stw r3, 0x20(r1)
@@ -1874,9 +1874,9 @@
 /* 804EAE04 004B43C4  D0 21 01 28 */	stfs f1, 0x128(r1)
 /* 804EAE08 004B43C8  D0 01 01 24 */	stfs f0, 0x124(r1)
 .L_804EAE0C:
-/* 804EAE0C 004B43CC  3C 80 80 53 */	lis r4, lbl_80528138@ha
+/* 804EAE0C 004B43CC  3C 80 80 53 */	lis r4, CMdlDynamics_strpool@ha
 /* 804EAE10 004B43D0  38 61 00 58 */	addi r3, r1, 0x58
-/* 804EAE14 004B43D4  38 84 81 38 */	addi r4, r4, lbl_80528138@l
+/* 804EAE14 004B43D4  38 84 81 38 */	addi r4, r4, CMdlDynamics_strpool@l
 /* 804EAE18 004B43D8  38 84 00 1E */	addi r4, r4, 0x1e
 /* 804EAE1C 004B43DC  48 00 04 11 */	bl func_804EB22C
 /* 804EAE20 004B43E0  90 61 00 1C */	stw r3, 0x1c(r1)
@@ -2051,9 +2051,9 @@
 /* 804EB094 004B4654  7C 15 F8 40 */	cmplw r21, r31
 /* 804EB098 004B4658  41 80 FF B0 */	blt .L_804EB048
 .L_804EB09C:
-/* 804EB09C 004B465C  3F E0 80 53 */	lis r31, lbl_80528138@ha
+/* 804EB09C 004B465C  3F E0 80 53 */	lis r31, CMdlDynamics_strpool@ha
 /* 804EB0A0 004B4660  38 61 00 5C */	addi r3, r1, 0x5c
-/* 804EB0A4 004B4664  3B FF 81 38 */	addi r31, r31, lbl_80528138@l
+/* 804EB0A4 004B4664  3B FF 81 38 */	addi r31, r31, CMdlDynamics_strpool@l
 /* 804EB0A8 004B4668  38 9F 00 23 */	addi r4, r31, 0x23
 /* 804EB0AC 004B466C  48 00 01 81 */	bl func_804EB22C
 /* 804EB0B0 004B4670  90 61 00 0C */	stw r3, 0xc(r1)
@@ -5466,8 +5466,8 @@ CMdlDynamics_typestr:
 	.balign 4
 
 
-.global lbl_80528138
-lbl_80528138:
+.global CMdlDynamics_strpool
+CMdlDynamics_strpool:
 	.asciz "Dwet"
 	.asciz "Ddmp"
 	.asciz "Dsta"

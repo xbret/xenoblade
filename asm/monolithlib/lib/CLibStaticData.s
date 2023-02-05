@@ -118,7 +118,7 @@
 .L_8045FAC4:
 /* 8045FAC4 00429084  7F A3 EB 78 */	mr r3, r29
 /* 8045FAC8 00429088  38 80 00 00 */	li r4, 0
-/* 8045FACC 0042908C  4B FD 7F FD */	bl func_80437AC8
+/* 8045FACC 0042908C  4B FD 7F FD */	bl __dt__CWorkThread
 /* 8045FAD0 00429090  2C 1E 00 00 */	cmpwi r30, 0
 /* 8045FAD4 00429094  40 81 00 0C */	ble .L_8045FAE0
 /* 8045FAD8 00429098  7F A3 EB 78 */	mr r3, r29
@@ -733,7 +733,7 @@ lbl_80667FF4:
 	.4byte func_8045F9B8
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_80437AC8
+	.4byte __dt__CWorkThread
 .endobj "@etb_8001D89C"
 
 .obj "@etb_8001D8C4", local

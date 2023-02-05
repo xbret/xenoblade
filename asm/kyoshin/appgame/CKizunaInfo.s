@@ -46,8 +46,8 @@
 /* 8025B674 00224C34  7C 08 02 A6 */	mflr r0
 /* 8025B678 00224C38  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8025B67C 00224C3C  BF A1 00 14 */	stmw r29, 0x14(r1)
-/* 8025B680 00224C40  3F E0 80 51 */	lis r31, lbl_805081A8@ha
-/* 8025B684 00224C44  3B FF 81 A8 */	addi r31, r31, lbl_805081A8@l
+/* 8025B680 00224C40  3F E0 80 51 */	lis r31, CKizunagram_strpool@ha
+/* 8025B684 00224C44  3B FF 81 A8 */	addi r31, r31, CKizunagram_strpool@l
 /* 8025B688 00224C48  7C 7D 1B 78 */	mr r29, r3
 /* 8025B68C 00224C4C  38 BF 0B 19 */	addi r5, r31, 0xb19
 /* 8025B690 00224C50  80 83 00 04 */	lwz r4, 4(r3)

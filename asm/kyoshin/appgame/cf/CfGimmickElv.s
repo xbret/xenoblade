@@ -161,13 +161,13 @@
 /* 8020ADE4 001D43A4  81 8C 00 20 */	lwz r12, 0x20(r12)
 /* 8020ADE8 001D43A8  7D 89 03 A6 */	mtctr r12
 /* 8020ADEC 001D43AC  4E 80 04 21 */	bctrl 
-/* 8020ADF0 001D43B0  3F C0 80 50 */	lis r30, lbl_80503D9C@ha
+/* 8020ADF0 001D43B0  3F C0 80 50 */	lis r30, CfGimmickElv_strpool@ha
 /* 8020ADF4 001D43B4  80 61 00 50 */	lwz r3, 0x50(r1)
 /* 8020ADF8 001D43B8  7F A5 EB 78 */	mr r5, r29
-/* 8020ADFC 001D43BC  38 9E 3D 9C */	addi r4, r30, lbl_80503D9C@l
+/* 8020ADFC 001D43BC  38 9E 3D 9C */	addi r4, r30, CfGimmickElv_strpool@l
 /* 8020AE00 001D43C0  4B E2 FD 49 */	bl func_8003AB48
 /* 8020AE04 001D43C4  90 61 00 34 */	stw r3, 0x34(r1)
-/* 8020AE08 001D43C8  3B DE 3D 9C */	addi r30, r30, lbl_80503D9C@l
+/* 8020AE08 001D43C8  3B DE 3D 9C */	addi r30, r30, CfGimmickElv_strpool@l
 /* 8020AE0C 001D43CC  7F A5 EB 78 */	mr r5, r29
 /* 8020AE10 001D43D0  A0 01 00 34 */	lhz r0, 0x34(r1)
 /* 8020AE14 001D43D4  38 9E 00 07 */	addi r4, r30, 7
@@ -211,9 +211,9 @@
 /* 8020AEAC 001D446C  7C 80 00 78 */	andc r0, r4, r0
 /* 8020AEB0 001D4470  7C 05 31 2E */	stwx r0, r5, r6
 .L_8020AEB4:
-/* 8020AEB4 001D4474  3F C0 80 50 */	lis r30, lbl_80503D9C@ha
+/* 8020AEB4 001D4474  3F C0 80 50 */	lis r30, CfGimmickElv_strpool@ha
 /* 8020AEB8 001D4478  80 61 00 50 */	lwz r3, 0x50(r1)
-/* 8020AEBC 001D447C  3B DE 3D 9C */	addi r30, r30, lbl_80503D9C@l
+/* 8020AEBC 001D447C  3B DE 3D 9C */	addi r30, r30, CfGimmickElv_strpool@l
 /* 8020AEC0 001D4480  7F A5 EB 78 */	mr r5, r29
 /* 8020AEC4 001D4484  38 9E 00 26 */	addi r4, r30, 0x26
 /* 8020AEC8 001D4488  4B E2 FC 81 */	bl func_8003AB48
@@ -1681,8 +1681,8 @@ cf_CfGimmickElv_typestr:
 	.balign 4
 
 
-.global lbl_80503D9C
-lbl_80503D9C:
+.global CfGimmickElv_strpool
+CfGimmickElv_strpool:
 	.asciz "mapObj"
 	.asciz "LIFTLOD"
 	.asciz "shtALOD"

@@ -4,7 +4,7 @@
 
 
 
-.fn func_8022B618, global
+.fn __ct__CSysWin, global
 /* 8022B618 001F4BD8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8022B61C 001F4BDC  7C 08 02 A6 */	mflr r0
 /* 8022B620 001F4BE0  3C A0 80 54 */	lis r5, __vt__CSysWin@ha
@@ -15,7 +15,7 @@
 /* 8022B634 001F4BF4  7C 9F 23 78 */	mr r31, r4
 /* 8022B638 001F4BF8  90 A3 00 00 */	stw r5, 0(r3)
 /* 8022B63C 001F4BFC  38 63 00 04 */	addi r3, r3, 4
-/* 8022B640 001F4C00  48 23 3F 25 */	bl func_8045F564
+/* 8022B640 001F4C00  48 23 3F 25 */	bl __ct__8045F564
 /* 8022B644 001F4C04  38 A0 00 00 */	li r5, 0
 /* 8022B648 001F4C08  38 80 00 01 */	li r4, 1
 /* 8022B64C 001F4C0C  38 00 00 05 */	li r0, 5
@@ -39,9 +39,9 @@
 /* 8022B694 001F4C54  7C 08 03 A6 */	mtlr r0
 /* 8022B698 001F4C58  38 21 00 10 */	addi r1, r1, 0x10
 /* 8022B69C 001F4C5C  4E 80 00 20 */	blr 
-.endfn func_8022B618
+.endfn __ct__CSysWin
 
-.fn func_8022B6A0, global
+.fn __dt__CSysWin, global
 /* 8022B6A0 001F4C60  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8022B6A4 001F4C64  7C 08 02 A6 */	mflr r0
 /* 8022B6A8 001F4C68  2C 03 00 00 */	cmpwi r3, 0
@@ -52,7 +52,7 @@
 /* 8022B6BC 001F4C7C  41 82 00 20 */	beq .L_8022B6DC
 /* 8022B6C0 001F4C80  38 80 FF FF */	li r4, -1
 /* 8022B6C4 001F4C84  38 63 00 04 */	addi r3, r3, 4
-/* 8022B6C8 001F4C88  48 23 3E B9 */	bl func_8045F580
+/* 8022B6C8 001F4C88  48 23 3E B9 */	bl __dt__8045F580
 /* 8022B6CC 001F4C8C  2C 1F 00 00 */	cmpwi r31, 0
 /* 8022B6D0 001F4C90  40 81 00 0C */	ble .L_8022B6DC
 /* 8022B6D4 001F4C94  7F C3 F3 78 */	mr r3, r30
@@ -64,7 +64,7 @@
 /* 8022B6E8 001F4CA8  7C 08 03 A6 */	mtlr r0
 /* 8022B6EC 001F4CAC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8022B6F0 001F4CB0  4E 80 00 20 */	blr 
-.endfn func_8022B6A0
+.endfn __dt__CSysWin
 
 .fn func_8022B6F4, global
 /* 8022B6F4 001F4CB4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -73,9 +73,9 @@
 /* 8022B700 001F4CC0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8022B704 001F4CC4  7C 7F 1B 78 */	mr r31, r3
 /* 8022B708 001F4CC8  48 20 8C 99 */	bl func_804343A0
-/* 8022B70C 001F4CCC  3C 80 80 50 */	lis r4, lbl_80505B80@ha
+/* 8022B70C 001F4CCC  3C 80 80 50 */	lis r4, CSysWin_strpool@ha
 /* 8022B710 001F4CD0  7F E5 FB 78 */	mr r5, r31
-/* 8022B714 001F4CD4  38 84 5B 80 */	addi r4, r4, lbl_80505B80@l
+/* 8022B714 001F4CD4  38 84 5B 80 */	addi r4, r4, CSysWin_strpool@l
 /* 8022B718 001F4CD8  38 C0 00 00 */	li r6, 0
 /* 8022B71C 001F4CDC  38 E0 00 00 */	li r7, 0
 /* 8022B720 001F4CE0  48 22 30 75 */	bl func_8044E794
@@ -294,10 +294,10 @@
 /* 8022B9C4 001F4F84  48 08 E7 91 */	bl _savegpr_27
 /* 8022B9C8 001F4F88  80 C3 00 20 */	lwz r6, 0x20(r3)
 /* 8022B9CC 001F4F8C  7C 7B 1B 78 */	mr r27, r3
-/* 8022B9D0 001F4F90  3F E0 80 50 */	lis r31, lbl_80505B80@ha
+/* 8022B9D0 001F4F90  3F E0 80 50 */	lis r31, CSysWin_strpool@ha
 /* 8022B9D4 001F4F94  7C BD 2B 78 */	mr r29, r5
 /* 8022B9D8 001F4F98  80 66 00 10 */	lwz r3, 0x10(r6)
-/* 8022B9DC 001F4F9C  3B FF 5B 80 */	addi r31, r31, lbl_80505B80@l
+/* 8022B9DC 001F4F9C  3B FF 5B 80 */	addi r31, r31, CSysWin_strpool@l
 /* 8022B9E0 001F4FA0  7C 9C 23 78 */	mr r28, r4
 /* 8022B9E4 001F4FA4  38 A0 00 01 */	li r5, 1
 /* 8022B9E8 001F4FA8  81 83 00 00 */	lwz r12, 0(r3)
@@ -674,10 +674,10 @@
 /* 8022BF74 001F5534  38 C0 00 00 */	li r6, 0
 /* 8022BF78 001F5538  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8022BF7C 001F553C  BF A1 00 14 */	stmw r29, 0x14(r1)
-/* 8022BF80 001F5540  3F E0 80 50 */	lis r31, lbl_80505B80@ha
+/* 8022BF80 001F5540  3F E0 80 50 */	lis r31, CSysWin_strpool@ha
 /* 8022BF84 001F5544  7C 7D 1B 78 */	mr r29, r3
 /* 8022BF88 001F5548  7C BE 2B 78 */	mr r30, r5
-/* 8022BF8C 001F554C  3B FF 5B 80 */	addi r31, r31, lbl_80505B80@l
+/* 8022BF8C 001F554C  3B FF 5B 80 */	addi r31, r31, CSysWin_strpool@l
 /* 8022BF90 001F5550  7C 85 23 78 */	mr r5, r4
 /* 8022BF94 001F5554  38 9F 00 75 */	addi r4, r31, 0x75
 /* 8022BF98 001F5558  80 63 00 20 */	lwz r3, 0x20(r3)
@@ -707,11 +707,11 @@
 /* 8022BFEC 001F55AC  90 01 00 28 */	stw r0, 0x28(r1)
 /* 8022BFF0 001F55B0  40 80 01 AC */	bge .L_8022C19C
 /* 8022BFF4 001F55B4  80 C2 AB 1C */	lwz r6, lbl_8066AE9C@sda21(r2)
-/* 8022BFF8 001F55B8  3F E0 80 50 */	lis r31, lbl_80505B80@ha
+/* 8022BFF8 001F55B8  3F E0 80 50 */	lis r31, CSysWin_strpool@ha
 /* 8022BFFC 001F55BC  88 02 AB 20 */	lbz r0, lbl_8066AEA0@sda21(r2)
 /* 8022C000 001F55C0  38 A1 00 18 */	addi r5, r1, 0x18
 /* 8022C004 001F55C4  90 C1 00 18 */	stw r6, 0x18(r1)
-/* 8022C008 001F55C8  3B FF 5B 80 */	addi r31, r31, lbl_80505B80@l
+/* 8022C008 001F55C8  3B FF 5B 80 */	addi r31, r31, CSysWin_strpool@l
 /* 8022C00C 001F55CC  98 01 00 1C */	stb r0, 0x1c(r1)
 /* 8022C010 001F55D0  7F C5 20 AE */	lbzx r30, r5, r4
 /* 8022C014 001F55D4  98 83 00 38 */	stb r4, 0x38(r3)
@@ -755,9 +755,9 @@
 /* 8022C0A8 001F5668  2C 03 00 00 */	cmpwi r3, 0
 /* 8022C0AC 001F566C  7C 7D 1B 78 */	mr r29, r3
 /* 8022C0B0 001F5670  41 82 00 EC */	beq .L_8022C19C
-/* 8022C0B4 001F5674  3F E0 80 50 */	lis r31, lbl_80505B80@ha
+/* 8022C0B4 001F5674  3F E0 80 50 */	lis r31, CSysWin_strpool@ha
 /* 8022C0B8 001F5678  80 7C 00 20 */	lwz r3, 0x20(r28)
-/* 8022C0BC 001F567C  3B FF 5B 80 */	addi r31, r31, lbl_80505B80@l
+/* 8022C0BC 001F567C  3B FF 5B 80 */	addi r31, r31, CSysWin_strpool@l
 /* 8022C0C0 001F5680  7F A5 EB 78 */	mr r5, r29
 /* 8022C0C4 001F5684  38 9F 00 C8 */	addi r4, r31, 0xc8
 /* 8022C0C8 001F5688  4B F0 BD B5 */	bl func_80137E7C
@@ -792,8 +792,8 @@
 /* 8022C13C 001F56FC  4B EF 81 4D */	bl func_80124288
 .L_8022C140:
 /* 8022C140 001F5700  80 7C 00 20 */	lwz r3, 0x20(r28)
-/* 8022C144 001F5704  3C 80 80 50 */	lis r4, lbl_80505B80@ha
-/* 8022C148 001F5708  38 84 5B 80 */	addi r4, r4, lbl_80505B80@l
+/* 8022C144 001F5704  3C 80 80 50 */	lis r4, CSysWin_strpool@ha
+/* 8022C148 001F5708  38 84 5B 80 */	addi r4, r4, CSysWin_strpool@l
 /* 8022C14C 001F570C  38 A0 00 01 */	li r5, 1
 /* 8022C150 001F5710  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 8022C154 001F5714  38 84 00 D2 */	addi r4, r4, 0xd2
@@ -828,10 +828,10 @@
 /* 8022C1B8 001F5778  7C 08 02 A6 */	mflr r0
 /* 8022C1BC 001F577C  90 01 00 44 */	stw r0, 0x44(r1)
 /* 8022C1C0 001F5780  BF 81 00 30 */	stmw r28, 0x30(r1)
-/* 8022C1C4 001F5784  3F E0 80 50 */	lis r31, lbl_80505B80@ha
+/* 8022C1C4 001F5784  3F E0 80 50 */	lis r31, CSysWin_strpool@ha
 /* 8022C1C8 001F5788  7C 7C 1B 78 */	mr r28, r3
 /* 8022C1CC 001F578C  7C 9D 23 78 */	mr r29, r4
-/* 8022C1D0 001F5790  3B FF 5B 80 */	addi r31, r31, lbl_80505B80@l
+/* 8022C1D0 001F5790  3B FF 5B 80 */	addi r31, r31, CSysWin_strpool@l
 /* 8022C1D4 001F5794  38 61 00 08 */	addi r3, r1, 8
 /* 8022C1D8 001F5798  38 9F 00 DC */	addi r4, r31, 0xdc
 /* 8022C1DC 001F579C  4C C6 31 82 */	crclr 6
@@ -950,10 +950,10 @@
 /* 8022C364 001F5924  41 82 01 CC */	beq .L_8022C530
 /* 8022C368 001F5928  38 00 00 01 */	li r0, 1
 /* 8022C36C 001F592C  98 03 00 28 */	stb r0, 0x28(r3)
-/* 8022C370 001F5930  3F E0 80 50 */	lis r31, lbl_80505B80@ha
+/* 8022C370 001F5930  3F E0 80 50 */	lis r31, CSysWin_strpool@ha
 /* 8022C374 001F5934  38 A0 00 01 */	li r5, 1
 /* 8022C378 001F5938  80 64 00 10 */	lwz r3, 0x10(r4)
-/* 8022C37C 001F593C  3B FF 5B 80 */	addi r31, r31, lbl_80505B80@l
+/* 8022C37C 001F593C  3B FF 5B 80 */	addi r31, r31, CSysWin_strpool@l
 /* 8022C380 001F5940  38 9F 00 F8 */	addi r4, r31, 0xf8
 /* 8022C384 001F5944  81 83 00 00 */	lwz r12, 0(r3)
 /* 8022C388 001F5948  81 8C 00 3C */	lwz r12, 0x3c(r12)
@@ -1081,9 +1081,9 @@
 /* 8022C560 001F5B20  7C 05 00 40 */	cmplw r5, r0
 /* 8022C564 001F5B24  40 82 01 38 */	bne .L_8022C69C
 /* 8022C568 001F5B28  48 20 7E 39 */	bl func_804343A0
-/* 8022C56C 001F5B2C  3C A0 80 50 */	lis r5, lbl_80505B80@ha
+/* 8022C56C 001F5B2C  3C A0 80 50 */	lis r5, CSysWin_strpool@ha
 /* 8022C570 001F5B30  7C 64 1B 78 */	mr r4, r3
-/* 8022C574 001F5B34  38 A5 5B 80 */	addi r5, r5, lbl_80505B80@l
+/* 8022C574 001F5B34  38 A5 5B 80 */	addi r5, r5, CSysWin_strpool@l
 /* 8022C578 001F5B38  38 7D 00 04 */	addi r3, r29, 4
 /* 8022C57C 001F5B3C  38 C5 01 0D */	addi r6, r5, 0x10d
 /* 8022C580 001F5B40  38 E0 00 01 */	li r7, 1
@@ -1108,9 +1108,9 @@
 .L_8022C5CC:
 /* 8022C5CC 001F5B8C  90 7D 00 18 */	stw r3, 0x18(r29)
 /* 8022C5D0 001F5B90  48 23 2B E5 */	bl func_8045F1B4
-/* 8022C5D4 001F5B94  3F E0 80 50 */	lis r31, lbl_80505B80@ha
+/* 8022C5D4 001F5B94  3F E0 80 50 */	lis r31, CSysWin_strpool@ha
 /* 8022C5D8 001F5B98  90 7D 00 1C */	stw r3, 0x1c(r29)
-/* 8022C5DC 001F5B9C  3B FF 5B 80 */	addi r31, r31, lbl_80505B80@l
+/* 8022C5DC 001F5B9C  3B FF 5B 80 */	addi r31, r31, CSysWin_strpool@l
 /* 8022C5E0 001F5BA0  7F C4 F3 78 */	mr r4, r30
 /* 8022C5E4 001F5BA4  38 BF 01 15 */	addi r5, r31, 0x115
 /* 8022C5E8 001F5BA8  48 1D D9 21 */	bl Attach__Q34nw4r3lyt19ArcResourceAccessorFPvPCc
@@ -1155,7 +1155,7 @@
 /* 8022C684 001F5C44  48 23 31 8D */	bl func_8045F810
 /* 8022C688 001F5C48  38 61 00 08 */	addi r3, r1, 8
 /* 8022C68C 001F5C4C  38 80 FF FF */	li r4, -1
-/* 8022C690 001F5C50  48 23 32 39 */	bl func_8045F8C8
+/* 8022C690 001F5C50  48 23 32 39 */	bl __dt__8045F8C8
 /* 8022C694 001F5C54  38 60 00 01 */	li r3, 1
 /* 8022C698 001F5C58  48 00 00 08 */	b .L_8022C6A0
 .L_8022C69C:
@@ -1172,8 +1172,8 @@
 
 
 
-.global lbl_80505B80
-lbl_80505B80:
+.global CSysWin_strpool
+CSysWin_strpool:
 	.asciz "/menu/SysWin.arc"
 	.asciz "win_main"
 	.asciz "txt_sysmes01"
@@ -1215,7 +1215,7 @@ lbl_80505B80:
 __vt__CSysWin:
 	.4byte __RTTI__CSysWin
 	.4byte 0
-	.4byte func_8022B6A0
+	.4byte __dt__CSysWin
 	.4byte func_80039E28
 	.4byte func_8022C544
 	.4byte func_80039E18
@@ -1477,7 +1477,7 @@ CSysWin_typestr:
 	.4byte 0x00360010
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte func_8045F8C8
+	.4byte __dt__8045F8C8
 .endobj "@etb_80015664"
 
 .section extabindex, "a" # 0x80021020 - 0x80039220
@@ -1486,14 +1486,14 @@ CSysWin_typestr:
 
 .obj "@eti_8002E4E4", local
 .hidden "@eti_8002E4E4"
-	.4byte func_8022B618
+	.4byte __ct__CSysWin
 	.4byte 0x00000088
 	.4byte "@etb_800155E0"
 .endobj "@eti_8002E4E4"
 
 .obj "@eti_8002E4F0", local
 .hidden "@eti_8002E4F0"
-	.4byte func_8022B6A0
+	.4byte __dt__CSysWin
 	.4byte 0x00000054
 	.4byte "@etb_800155FC"
 .endobj "@eti_8002E4F0"

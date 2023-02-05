@@ -45,14 +45,14 @@
 /* 8025D4E8 00226AA8  7C 08 02 A6 */	mflr r0
 /* 8025D4EC 00226AAC  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8025D4F0 00226AB0  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 8025D4F4 00226AB4  3F E0 80 51 */	lis r31, lbl_80508F00@ha
-/* 8025D4F8 00226AB8  38 BF 8F 00 */	addi r5, r31, lbl_80508F00@l
+/* 8025D4F4 00226AB4  3F E0 80 51 */	lis r31, CPcKizunagram_strpool@ha
+/* 8025D4F8 00226AB8  38 BF 8F 00 */	addi r5, r31, CPcKizunagram_strpool@l
 /* 8025D4FC 00226ABC  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8025D500 00226AC0  7C 7E 1B 78 */	mr r30, r3
 /* 8025D504 00226AC4  80 83 00 04 */	lwz r4, 4(r3)
 /* 8025D508 00226AC8  38 63 00 08 */	addi r3, r3, 8
 /* 8025D50C 00226ACC  4B ED 99 79 */	bl func_80136E84
-/* 8025D510 00226AD0  3B FF 8F 00 */	addi r31, r31, lbl_80508F00@l
+/* 8025D510 00226AD0  3B FF 8F 00 */	addi r31, r31, CPcKizunagram_strpool@l
 /* 8025D514 00226AD4  80 7E 00 08 */	lwz r3, 8(r30)
 /* 8025D518 00226AD8  80 BE 00 04 */	lwz r5, 4(r30)
 /* 8025D51C 00226ADC  38 9E 00 0C */	addi r4, r30, 0xc

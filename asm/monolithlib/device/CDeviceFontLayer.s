@@ -237,7 +237,7 @@
 .L_80453B78:
 /* 80453B78 0041D138  7F A3 EB 78 */	mr r3, r29
 /* 80453B7C 0041D13C  38 80 00 00 */	li r4, 0
-/* 80453B80 0041D140  4B FE 3F 49 */	bl func_80437AC8
+/* 80453B80 0041D140  4B FE 3F 49 */	bl __dt__CWorkThread
 /* 80453B84 0041D144  2C 1E 00 00 */	cmpwi r30, 0
 /* 80453B88 0041D148  40 81 00 0C */	ble .L_80453B94
 /* 80453B8C 0041D14C  7F A3 EB 78 */	mr r3, r29
@@ -1765,7 +1765,7 @@ lbl_80667F6C:
 	.4byte func_80453A1C
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_80437AC8
+	.4byte __dt__CWorkThread
 .endobj "@etb_8001D120"
 
 .obj "@etb_8001D15C", local

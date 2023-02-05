@@ -42,7 +42,7 @@
 /* 800FEC0C 000C81CC  90 BF 00 10 */	stw r5, 0x10(r31)
 /* 800FEC10 000C81D0  90 9F 00 58 */	stw r4, 0x58(r31)
 /* 800FEC14 000C81D4  90 1F 00 5C */	stw r0, 0x5c(r31)
-/* 800FEC18 000C81D8  48 36 09 4D */	bl func_8045F564
+/* 800FEC18 000C81D8  48 36 09 4D */	bl __ct__8045F564
 /* 800FEC1C 000C81DC  3B BF 00 90 */	addi r29, r31, 0x90
 /* 800FEC20 000C81E0  93 9F 00 70 */	stw r28, 0x70(r31)
 /* 800FEC24 000C81E4  38 80 00 00 */	li r4, 0
@@ -157,7 +157,7 @@
 .L_800FEDA8:
 /* 800FEDA8 000C8368  38 7E 00 60 */	addi r3, r30, 0x60
 /* 800FEDAC 000C836C  38 80 FF FF */	li r4, -1
-/* 800FEDB0 000C8370  48 36 07 D1 */	bl func_8045F580
+/* 800FEDB0 000C8370  48 36 07 D1 */	bl __dt__8045F580
 /* 800FEDB4 000C8374  2C 1E 00 00 */	cmpwi r30, 0
 /* 800FEDB8 000C8378  41 82 00 14 */	beq .L_800FEDCC
 /* 800FEDBC 000C837C  41 82 00 10 */	beq .L_800FEDCC
@@ -376,9 +376,9 @@
 /* 800FF0B0 000C8670  80 7F 00 C0 */	lwz r3, 0xc0(r31)
 /* 800FF0B4 000C8674  37 83 00 01 */	addic. r28, r3, 1
 /* 800FF0B8 000C8678  40 81 00 60 */	ble .L_800FF118
-/* 800FF0BC 000C867C  3F C0 80 50 */	lis r30, lbl_804F86DC@ha
+/* 800FF0BC 000C867C  3F C0 80 50 */	lis r30, CMainMenu_strpool@ha
 /* 800FF0C0 000C8680  7F 85 E3 78 */	mr r5, r28
-/* 800FF0C4 000C8684  3B DE 86 DC */	addi r30, r30, lbl_804F86DC@l
+/* 800FF0C4 000C8684  3B DE 86 DC */	addi r30, r30, CMainMenu_strpool@l
 /* 800FF0C8 000C8688  38 7E 00 5E */	addi r3, r30, 0x5e
 /* 800FF0CC 000C868C  38 9E 00 67 */	addi r4, r30, 0x67
 /* 800FF0D0 000C8690  48 03 70 C1 */	bl func_80136190
@@ -400,9 +400,9 @@
 /* 800FF110 000C86D0  48 03 7A 3D */	bl func_80136B4C
 /* 800FF114 000C86D4  48 00 00 34 */	b .L_800FF148
 .L_800FF118:
-/* 800FF118 000C86D8  3F C0 80 50 */	lis r30, lbl_804F86DC@ha
+/* 800FF118 000C86D8  3F C0 80 50 */	lis r30, CMainMenu_strpool@ha
 /* 800FF11C 000C86DC  80 7F 00 7C */	lwz r3, 0x7c(r31)
-/* 800FF120 000C86E0  3B DE 86 DC */	addi r30, r30, lbl_804F86DC@l
+/* 800FF120 000C86E0  3B DE 86 DC */	addi r30, r30, CMainMenu_strpool@l
 /* 800FF124 000C86E4  38 C0 00 00 */	li r6, 0
 /* 800FF128 000C86E8  38 9E 00 71 */	addi r4, r30, 0x71
 /* 800FF12C 000C86EC  38 BE 00 89 */	addi r5, r30, 0x89
@@ -474,9 +474,9 @@
 /* 800FF20C 000C87CC  80 7F 00 C0 */	lwz r3, 0xc0(r31)
 /* 800FF210 000C87D0  37 A3 00 01 */	addic. r29, r3, 1
 /* 800FF214 000C87D4  40 81 00 60 */	ble .L_800FF274
-/* 800FF218 000C87D8  3F C0 80 50 */	lis r30, lbl_804F86DC@ha
+/* 800FF218 000C87D8  3F C0 80 50 */	lis r30, CMainMenu_strpool@ha
 /* 800FF21C 000C87DC  7F A5 EB 78 */	mr r5, r29
-/* 800FF220 000C87E0  3B DE 86 DC */	addi r30, r30, lbl_804F86DC@l
+/* 800FF220 000C87E0  3B DE 86 DC */	addi r30, r30, CMainMenu_strpool@l
 /* 800FF224 000C87E4  38 7E 00 5E */	addi r3, r30, 0x5e
 /* 800FF228 000C87E8  38 9E 00 67 */	addi r4, r30, 0x67
 /* 800FF22C 000C87EC  48 03 6F 65 */	bl func_80136190
@@ -498,9 +498,9 @@
 /* 800FF26C 000C882C  48 03 78 E1 */	bl func_80136B4C
 /* 800FF270 000C8830  48 00 00 34 */	b .L_800FF2A4
 .L_800FF274:
-/* 800FF274 000C8834  3F C0 80 50 */	lis r30, lbl_804F86DC@ha
+/* 800FF274 000C8834  3F C0 80 50 */	lis r30, CMainMenu_strpool@ha
 /* 800FF278 000C8838  80 7F 00 7C */	lwz r3, 0x7c(r31)
-/* 800FF27C 000C883C  3B DE 86 DC */	addi r30, r30, lbl_804F86DC@l
+/* 800FF27C 000C883C  3B DE 86 DC */	addi r30, r30, CMainMenu_strpool@l
 /* 800FF280 000C8840  38 C0 00 00 */	li r6, 0
 /* 800FF284 000C8844  38 9E 00 71 */	addi r4, r30, 0x71
 /* 800FF288 000C8848  38 BE 00 89 */	addi r5, r30, 0x89
@@ -665,8 +665,8 @@ CTTask_IUICf_typestr:
 	.balign 4
 
 
-.global lbl_804F86DC
-lbl_804F86DC:
+.global CMainMenu_strpool
+CMainMenu_strpool:
 	.asciz "mf01_main21_cursor.brlyt"
 	.asciz "mf01_main21_cursor_roop.brlan"
 	.asciz "mf01_main21_cursor_on.brlan"
@@ -916,7 +916,7 @@ lbl_80666810:
 	.4byte func_800FEA30
 	.4byte 0x0780001F
 	.4byte 0x00000060
-	.4byte func_8045F580
+	.4byte __dt__8045F580
 	.4byte 0x0680001F
 	.4byte 0x0000005C
 	.4byte func_8004031C
@@ -967,7 +967,7 @@ lbl_80666810:
 	.4byte func_800FEA30
 	.4byte 0x0780001E
 	.4byte 0x00000060
-	.4byte func_8045F580
+	.4byte __dt__8045F580
 	.4byte 0x0680001E
 	.4byte 0x0000005C
 	.4byte func_8004031C

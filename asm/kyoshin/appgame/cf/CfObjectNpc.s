@@ -247,11 +247,11 @@
 /* 800BF6B8 00088C78  7D 89 03 A6 */	mtctr r12
 /* 800BF6BC 00088C7C  4E 80 04 21 */	bctrl 
 /* 800BF6C0 00088C80  81 9E 00 00 */	lwz r12, 0(r30)
-/* 800BF6C4 00088C84  3C A0 80 4F */	lis r5, lbl_804F7DA8@ha
+/* 800BF6C4 00088C84  3C A0 80 4F */	lis r5, CfObjectNpc_strpool@ha
 /* 800BF6C8 00088C88  7F C3 F3 78 */	mr r3, r30
 /* 800BF6CC 00088C8C  38 80 00 00 */	li r4, 0
 /* 800BF6D0 00088C90  81 8C 01 AC */	lwz r12, 0x1ac(r12)
-/* 800BF6D4 00088C94  38 A5 7D A8 */	addi r5, r5, lbl_804F7DA8@l
+/* 800BF6D4 00088C94  38 A5 7D A8 */	addi r5, r5, CfObjectNpc_strpool@l
 /* 800BF6D8 00088C98  7D 89 03 A6 */	mtctr r12
 /* 800BF6DC 00088C9C  4E 80 04 21 */	bctrl 
 /* 800BF6E0 00088CA0  C0 02 90 28 */	lfs f0, float_806693A8@sda21(r2)
@@ -306,9 +306,9 @@
 /* 800BF784 00088D44  4B F7 B2 B1 */	bl func_8003AA34
 /* 800BF788 00088D48  38 7C 00 78 */	addi r3, r28, 0x78
 /* 800BF78C 00088D4C  4B F7 B3 19 */	bl func_8003AAA4
-/* 800BF790 00088D50  3F C0 80 4F */	lis r30, lbl_804F7DA8@ha
+/* 800BF790 00088D50  3F C0 80 4F */	lis r30, CfObjectNpc_strpool@ha
 /* 800BF794 00088D54  A0 BC 00 8C */	lhz r5, 0x8c(r28)
-/* 800BF798 00088D58  3B DE 7D A8 */	addi r30, r30, lbl_804F7DA8@l
+/* 800BF798 00088D58  3B DE 7D A8 */	addi r30, r30, CfObjectNpc_strpool@l
 /* 800BF79C 00088D5C  7C 7D 1B 78 */	mr r29, r3
 /* 800BF7A0 00088D60  38 9E 00 07 */	addi r4, r30, 7
 /* 800BF7A4 00088D64  4B F7 B3 A5 */	bl func_8003AB48
@@ -396,9 +396,9 @@
 /* 800BF8E0 00088EA0  4B F7 B1 55 */	bl func_8003AA34
 /* 800BF8E4 00088EA4  38 7F 00 78 */	addi r3, r31, 0x78
 /* 800BF8E8 00088EA8  4B F7 B1 BD */	bl func_8003AAA4
-/* 800BF8EC 00088EAC  3C 80 80 4F */	lis r4, lbl_804F7DA8@ha
+/* 800BF8EC 00088EAC  3C 80 80 4F */	lis r4, CfObjectNpc_strpool@ha
 /* 800BF8F0 00088EB0  A0 BF 00 8C */	lhz r5, 0x8c(r31)
-/* 800BF8F4 00088EB4  38 84 7D A8 */	addi r4, r4, lbl_804F7DA8@l
+/* 800BF8F4 00088EB4  38 84 7D A8 */	addi r4, r4, CfObjectNpc_strpool@l
 /* 800BF8F8 00088EB8  38 84 00 1D */	addi r4, r4, 0x1d
 /* 800BF8FC 00088EBC  4B F7 B2 4D */	bl func_8003AB48
 /* 800BF900 00088EC0  90 61 00 08 */	stw r3, 8(r1)
@@ -423,9 +423,9 @@
 /* 800BF940 00088F00  4B F7 B0 F5 */	bl func_8003AA34
 /* 800BF944 00088F04  38 7F 00 78 */	addi r3, r31, 0x78
 /* 800BF948 00088F08  4B F7 B1 5D */	bl func_8003AAA4
-/* 800BF94C 00088F0C  3C 80 80 4F */	lis r4, lbl_804F7DA8@ha
+/* 800BF94C 00088F0C  3C 80 80 4F */	lis r4, CfObjectNpc_strpool@ha
 /* 800BF950 00088F10  A0 BF 00 8C */	lhz r5, 0x8c(r31)
-/* 800BF954 00088F14  38 84 7D A8 */	addi r4, r4, lbl_804F7DA8@l
+/* 800BF954 00088F14  38 84 7D A8 */	addi r4, r4, CfObjectNpc_strpool@l
 /* 800BF958 00088F18  38 84 00 27 */	addi r4, r4, 0x27
 /* 800BF95C 00088F1C  4B F7 B1 ED */	bl func_8003AB48
 /* 800BF960 00088F20  90 61 00 08 */	stw r3, 8(r1)
@@ -455,8 +455,8 @@ cf_CfObjectNpc_typestr:
 	.asciz "cf::CfObjectNpc"
 
 
-.global lbl_804F7DA8
-lbl_804F7DA8:
+.global CfObjectNpc_strpool
+CfObjectNpc_strpool:
 	.asciz "JUhead"
 	.asciz "name"
 	.asciz "move_speed"

@@ -830,31 +830,31 @@
 /* 8006A44C 00033A0C  38 80 00 00 */	li r4, 0
 /* 8006A450 00033A10  3B A0 00 00 */	li r29, 0
 /* 8006A454 00033A14  40 82 00 14 */	bne .L_8006A468
-/* 8006A458 00033A18  3C 80 80 4F */	lis r4, lbl_804F6C30@ha
-/* 8006A45C 00033A1C  38 84 6C 30 */	addi r4, r4, lbl_804F6C30@l
+/* 8006A458 00033A18  3C 80 80 4F */	lis r4, CfTFile_strpool@ha
+/* 8006A45C 00033A1C  38 84 6C 30 */	addi r4, r4, CfTFile_strpool@l
 /* 8006A460 00033A20  3B A4 00 0A */	addi r29, r4, 0xa
 /* 8006A464 00033A24  48 00 00 54 */	b .L_8006A4B8
 .L_8006A468:
 /* 8006A468 00033A28  2C 1C 00 02 */	cmpwi r28, 2
 /* 8006A46C 00033A2C  40 82 00 18 */	bne .L_8006A484
-/* 8006A470 00033A30  3C 60 80 4F */	lis r3, lbl_804F6C30@ha
-/* 8006A474 00033A34  38 63 6C 30 */	addi r3, r3, lbl_804F6C30@l
+/* 8006A470 00033A30  3C 60 80 4F */	lis r3, CfTFile_strpool@ha
+/* 8006A474 00033A34  38 63 6C 30 */	addi r3, r3, CfTFile_strpool@l
 /* 8006A478 00033A38  38 83 00 14 */	addi r4, r3, 0x14
 /* 8006A47C 00033A3C  3B A3 00 1E */	addi r29, r3, 0x1e
 /* 8006A480 00033A40  48 00 00 38 */	b .L_8006A4B8
 .L_8006A484:
 /* 8006A484 00033A44  2C 1C 00 03 */	cmpwi r28, 3
 /* 8006A488 00033A48  40 82 00 18 */	bne .L_8006A4A0
-/* 8006A48C 00033A4C  3C 60 80 4F */	lis r3, lbl_804F6C30@ha
-/* 8006A490 00033A50  38 63 6C 30 */	addi r3, r3, lbl_804F6C30@l
+/* 8006A48C 00033A4C  3C 60 80 4F */	lis r3, CfTFile_strpool@ha
+/* 8006A490 00033A50  38 63 6C 30 */	addi r3, r3, CfTFile_strpool@l
 /* 8006A494 00033A54  38 83 00 28 */	addi r4, r3, 0x28
 /* 8006A498 00033A58  3B A3 00 32 */	addi r29, r3, 0x32
 /* 8006A49C 00033A5C  48 00 00 1C */	b .L_8006A4B8
 .L_8006A4A0:
 /* 8006A4A0 00033A60  2C 1C 00 04 */	cmpwi r28, 4
 /* 8006A4A4 00033A64  40 82 00 14 */	bne .L_8006A4B8
-/* 8006A4A8 00033A68  3C 60 80 4F */	lis r3, lbl_804F6C30@ha
-/* 8006A4AC 00033A6C  38 63 6C 30 */	addi r3, r3, lbl_804F6C30@l
+/* 8006A4A8 00033A68  3C 60 80 4F */	lis r3, CfTFile_strpool@ha
+/* 8006A4AC 00033A6C  38 63 6C 30 */	addi r3, r3, CfTFile_strpool@l
 /* 8006A4B0 00033A70  38 83 00 3C */	addi r4, r3, 0x3c
 /* 8006A4B4 00033A74  3B A3 00 44 */	addi r29, r3, 0x44
 .L_8006A4B8:
@@ -1136,8 +1136,8 @@ lbl_804F6C1C:
 	.balign 4
 
 
-.global lbl_804F6C30
-lbl_804F6C30:
+.global CfTFile_strpool
+CfTFile_strpool:
 	.asciz "morning_h"
 	.asciz "morning_m"
 	.asciz "daytime_h"

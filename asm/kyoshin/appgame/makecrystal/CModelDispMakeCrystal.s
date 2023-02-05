@@ -28,7 +28,7 @@
 /* 8021BCC0 001E5280  92 E3 00 24 */	stw r23, 0x24(r3)
 /* 8021BCC4 001E5284  92 E3 00 28 */	stw r23, 0x28(r3)
 /* 8021BCC8 001E5288  38 63 00 2C */	addi r3, r3, 0x2c
-/* 8021BCCC 001E528C  48 24 38 99 */	bl func_8045F564
+/* 8021BCCC 001E528C  48 24 38 99 */	bl __ct__8045F564
 /* 8021BCD0 001E5290  3C 80 80 22 */	lis r4, func_8021C4F0@ha
 /* 8021BCD4 001E5294  3C A0 80 22 */	lis r5, func_8021C540@ha
 /* 8021BCD8 001E5298  92 FB 00 3C */	stw r23, 0x3c(r27)
@@ -95,10 +95,10 @@
 /* 8021BDCC 001E538C  4B FB 6C 31 */	bl func_801D29FC
 /* 8021BDD0 001E5390  38 7B 0E 38 */	addi r3, r27, 0xe38
 /* 8021BDD4 001E5394  38 80 00 00 */	li r4, 0
-/* 8021BDD8 001E5398  4B FD 76 39 */	bl func_801F3410
+/* 8021BDD8 001E5398  4B FD 76 39 */	bl __ct__CScrollBar
 /* 8021BDDC 001E539C  38 7B 0E 78 */	addi r3, r27, 0xe78
 /* 8021BDE0 001E53A0  38 80 00 00 */	li r4, 0
-/* 8021BDE4 001E53A4  48 00 F8 35 */	bl func_8022B618
+/* 8021BDE4 001E53A4  48 00 F8 35 */	bl __ct__CSysWin
 /* 8021BDE8 001E53A8  38 7B 0E B4 */	addi r3, r27, 0xeb4
 /* 8021BDEC 001E53AC  38 80 00 00 */	li r4, 0
 /* 8021BDF0 001E53B0  4B FB 6C 0D */	bl func_801D29FC
@@ -215,10 +215,10 @@
 /* 8021BF9C 001E555C  48 00 67 A5 */	bl func_80222740
 /* 8021BFA0 001E5560  38 7B 0C 1C */	addi r3, r27, 0xc1c
 /* 8021BFA4 001E5564  38 81 00 CC */	addi r4, r1, 0xcc
-/* 8021BFA8 001E5568  4B F0 09 CD */	bl func_8011C974
+/* 8021BFA8 001E5568  4B F0 09 CD */	bl __ct__8011C974
 /* 8021BFAC 001E556C  38 7B 0C 2C */	addi r3, r27, 0xc2c
 /* 8021BFB0 001E5570  38 81 00 DC */	addi r4, r1, 0xdc
-/* 8021BFB4 001E5574  4B F0 09 C1 */	bl func_8011C974
+/* 8021BFB4 001E5574  4B F0 09 C1 */	bl __ct__8011C974
 /* 8021BFB8 001E5578  80 01 00 EC */	lwz r0, 0xec(r1)
 /* 8021BFBC 001E557C  38 61 00 C8 */	addi r3, r1, 0xc8
 /* 8021BFC0 001E5580  90 1B 0C 3C */	stw r0, 0xc3c(r27)
@@ -256,10 +256,10 @@
 /* 8021C040 001E5600  48 00 67 A9 */	bl func_802227E8
 /* 8021C044 001E5604  38 61 00 88 */	addi r3, r1, 0x88
 /* 8021C048 001E5608  38 80 00 00 */	li r4, 0
-/* 8021C04C 001E560C  4B FD 73 C5 */	bl func_801F3410
+/* 8021C04C 001E560C  4B FD 73 C5 */	bl __ct__CScrollBar
 /* 8021C050 001E5610  38 7B 0E 3C */	addi r3, r27, 0xe3c
 /* 8021C054 001E5614  38 81 00 8C */	addi r4, r1, 0x8c
-/* 8021C058 001E5618  4B F0 09 1D */	bl func_8011C974
+/* 8021C058 001E5618  4B F0 09 1D */	bl __ct__8011C974
 /* 8021C05C 001E561C  80 01 00 9C */	lwz r0, 0x9c(r1)
 /* 8021C060 001E5620  38 61 00 88 */	addi r3, r1, 0x88
 /* 8021C064 001E5624  90 1B 0E 4C */	stw r0, 0xe4c(r27)
@@ -290,24 +290,24 @@
 /* 8021C0C8 001E5688  D0 1B 0E 70 */	stfs f0, 0xe70(r27)
 /* 8021C0CC 001E568C  88 01 00 C4 */	lbz r0, 0xc4(r1)
 /* 8021C0D0 001E5690  98 1B 0E 74 */	stb r0, 0xe74(r27)
-/* 8021C0D4 001E5694  4B FD 73 CD */	bl func_801F34A0
+/* 8021C0D4 001E5694  4B FD 73 CD */	bl __dt__CScrollBar
 /* 8021C0D8 001E5698  38 61 00 48 */	addi r3, r1, 0x48
 /* 8021C0DC 001E569C  38 80 00 02 */	li r4, 2
-/* 8021C0E0 001E56A0  48 00 F5 39 */	bl func_8022B618
+/* 8021C0E0 001E56A0  48 00 F5 39 */	bl __ct__CSysWin
 /* 8021C0E4 001E56A4  38 7B 0E 78 */	addi r3, r27, 0xe78
 /* 8021C0E8 001E56A8  38 81 00 48 */	addi r4, r1, 0x48
 /* 8021C0EC 001E56AC  4B F4 B3 41 */	bl func_8016742C
 /* 8021C0F0 001E56B0  38 61 00 48 */	addi r3, r1, 0x48
 /* 8021C0F4 001E56B4  38 80 FF FF */	li r4, -1
-/* 8021C0F8 001E56B8  48 00 F5 A9 */	bl func_8022B6A0
+/* 8021C0F8 001E56B8  48 00 F5 A9 */	bl __dt__CSysWin
 /* 8021C0FC 001E56BC  38 61 01 20 */	addi r3, r1, 0x120
 /* 8021C100 001E56C0  48 07 B3 31 */	bl func_80297430
 /* 8021C104 001E56C4  38 7B 0E D0 */	addi r3, r27, 0xed0
 /* 8021C108 001E56C8  38 81 01 24 */	addi r4, r1, 0x124
-/* 8021C10C 001E56CC  4B F0 08 69 */	bl func_8011C974
+/* 8021C10C 001E56CC  4B F0 08 69 */	bl __ct__8011C974
 /* 8021C110 001E56D0  38 7B 0E E0 */	addi r3, r27, 0xee0
 /* 8021C114 001E56D4  38 81 01 34 */	addi r4, r1, 0x134
-/* 8021C118 001E56D8  4B F0 08 5D */	bl func_8011C974
+/* 8021C118 001E56D8  4B F0 08 5D */	bl __ct__8011C974
 /* 8021C11C 001E56DC  80 01 01 44 */	lwz r0, 0x144(r1)
 /* 8021C120 001E56E0  38 7B 0F 24 */	addi r3, r27, 0xf24
 /* 8021C124 001E56E4  90 1B 0E F0 */	stw r0, 0xef0(r27)
@@ -355,10 +355,10 @@
 /* 8021C1CC 001E578C  4B F4 B2 61 */	bl func_8016742C
 /* 8021C1D0 001E5790  38 7B 0F C4 */	addi r3, r27, 0xfc4
 /* 8021C1D4 001E5794  38 81 02 18 */	addi r4, r1, 0x218
-/* 8021C1D8 001E5798  4B F0 07 9D */	bl func_8011C974
+/* 8021C1D8 001E5798  4B F0 07 9D */	bl __ct__8011C974
 /* 8021C1DC 001E579C  38 7B 0F D4 */	addi r3, r27, 0xfd4
 /* 8021C1E0 001E57A0  38 81 02 28 */	addi r4, r1, 0x228
-/* 8021C1E4 001E57A4  4B F0 07 91 */	bl func_8011C974
+/* 8021C1E4 001E57A4  4B F0 07 91 */	bl __ct__8011C974
 /* 8021C1E8 001E57A8  80 61 02 38 */	lwz r3, 0x238(r1)
 /* 8021C1EC 001E57AC  38 00 00 03 */	li r0, 3
 /* 8021C1F0 001E57B0  90 7B 0F E4 */	stw r3, 0xfe4(r27)
@@ -626,16 +626,16 @@
 /* 8021C5BC 001E5B7C  48 07 B2 C5 */	bl func_80297880
 /* 8021C5C0 001E5B80  38 7E 0E B4 */	addi r3, r30, 0xeb4
 /* 8021C5C4 001E5B84  38 80 FF FF */	li r4, -1
-/* 8021C5C8 001E5B88  4B FB 64 71 */	bl func_801D2A38
+/* 8021C5C8 001E5B88  4B FB 64 71 */	bl __dt__801D2A38
 /* 8021C5CC 001E5B8C  38 7E 0E 78 */	addi r3, r30, 0xe78
 /* 8021C5D0 001E5B90  38 80 FF FF */	li r4, -1
-/* 8021C5D4 001E5B94  48 00 F0 CD */	bl func_8022B6A0
+/* 8021C5D4 001E5B94  48 00 F0 CD */	bl __dt__CSysWin
 /* 8021C5D8 001E5B98  38 7E 0E 38 */	addi r3, r30, 0xe38
 /* 8021C5DC 001E5B9C  38 80 FF FF */	li r4, -1
-/* 8021C5E0 001E5BA0  4B FD 6E C1 */	bl func_801F34A0
+/* 8021C5E0 001E5BA0  4B FD 6E C1 */	bl __dt__CScrollBar
 /* 8021C5E4 001E5BA4  38 7E 0E 20 */	addi r3, r30, 0xe20
 /* 8021C5E8 001E5BA8  38 80 FF FF */	li r4, -1
-/* 8021C5EC 001E5BAC  4B FB 64 4D */	bl func_801D2A38
+/* 8021C5EC 001E5BAC  4B FB 64 4D */	bl __dt__801D2A38
 /* 8021C5F0 001E5BB0  38 7E 0D FC */	addi r3, r30, 0xdfc
 /* 8021C5F4 001E5BB4  38 80 FF FF */	li r4, -1
 /* 8021C5F8 001E5BB8  48 00 97 41 */	bl func_80225D38
@@ -686,7 +686,7 @@
 /* 8021C6AC 001E5C6C  48 09 D5 4D */	bl __destroy_arr
 /* 8021C6B0 001E5C70  38 7E 00 2C */	addi r3, r30, 0x2c
 /* 8021C6B4 001E5C74  38 80 FF FF */	li r4, -1
-/* 8021C6B8 001E5C78  48 24 2E C9 */	bl func_8045F580
+/* 8021C6B8 001E5C78  48 24 2E C9 */	bl __dt__8045F580
 /* 8021C6BC 001E5C7C  2C 1F 00 00 */	cmpwi r31, 0
 /* 8021C6C0 001E5C80  40 81 00 0C */	ble .L_8021C6CC
 /* 8021C6C4 001E5C84  7F C3 F3 78 */	mr r3, r30
@@ -707,15 +707,15 @@
 /* 8021C6F0 001E5CB0  BF C1 00 08 */	stmw r30, 8(r1)
 /* 8021C6F4 001E5CB4  7C 7E 1B 78 */	mr r30, r3
 /* 8021C6F8 001E5CB8  48 21 7C A9 */	bl func_804343A0
-/* 8021C6FC 001E5CBC  3F E0 80 50 */	lis r31, lbl_80504814@ha
+/* 8021C6FC 001E5CBC  3F E0 80 50 */	lis r31, CModelDispMakeCrystal_strpool@ha
 /* 8021C700 001E5CC0  7F C5 F3 78 */	mr r5, r30
-/* 8021C704 001E5CC4  38 9F 48 14 */	addi r4, r31, lbl_80504814@l
+/* 8021C704 001E5CC4  38 9F 48 14 */	addi r4, r31, CModelDispMakeCrystal_strpool@l
 /* 8021C708 001E5CC8  38 C0 00 00 */	li r6, 0
 /* 8021C70C 001E5CCC  38 E0 00 00 */	li r7, 0
 /* 8021C710 001E5CD0  48 23 20 85 */	bl func_8044E794
 /* 8021C714 001E5CD4  90 7E 00 24 */	stw r3, 0x24(r30)
 /* 8021C718 001E5CD8  48 21 7C 89 */	bl func_804343A0
-/* 8021C71C 001E5CDC  3B FF 48 14 */	addi r31, r31, lbl_80504814@l
+/* 8021C71C 001E5CDC  3B FF 48 14 */	addi r31, r31, CModelDispMakeCrystal_strpool@l
 /* 8021C720 001E5CE0  7F C5 F3 78 */	mr r5, r30
 /* 8021C724 001E5CE4  38 9F 00 11 */	addi r4, r31, 0x11
 /* 8021C728 001E5CE8  38 C0 00 00 */	li r6, 0
@@ -2859,9 +2859,9 @@
 /* 8021E530 001E7AF0  48 00 00 7C */	b .L_8021E5AC
 .L_8021E534:
 /* 8021E534 001E7AF4  88 7F 2D A1 */	lbz r3, 0x2da1(r31)
-/* 8021E538 001E7AF8  3C C0 80 50 */	lis r6, lbl_80504814@ha
+/* 8021E538 001E7AF8  3C C0 80 50 */	lis r6, CModelDispMakeCrystal_strpool@ha
 /* 8021E53C 001E7AFC  88 1F 2D A2 */	lbz r0, 0x2da2(r31)
-/* 8021E540 001E7B00  38 C6 48 14 */	addi r6, r6, lbl_80504814@l
+/* 8021E540 001E7B00  38 C6 48 14 */	addi r6, r6, CModelDispMakeCrystal_strpool@l
 /* 8021E544 001E7B04  7C 64 07 74 */	extsb r4, r3
 /* 8021E548 001E7B08  80 BF 0E 1C */	lwz r5, 0xe1c(r31)
 /* 8021E54C 001E7B0C  7C 00 07 74 */	extsb r0, r0
@@ -3482,9 +3482,9 @@
 /* 8021EDF4 001E83B4  4B F1 92 85 */	bl func_80138078
 /* 8021EDF8 001E83B8  48 00 01 24 */	b .L_8021EF1C
 .L_8021EDFC:
-/* 8021EDFC 001E83BC  3F C0 80 50 */	lis r30, lbl_80504814@ha
+/* 8021EDFC 001E83BC  3F C0 80 50 */	lis r30, CModelDispMakeCrystal_strpool@ha
 /* 8021EE00 001E83C0  38 60 00 1A */	li r3, 0x1a
-/* 8021EE04 001E83C4  3B DE 48 14 */	addi r30, r30, lbl_80504814@l
+/* 8021EE04 001E83C4  3B DE 48 14 */	addi r30, r30, CModelDispMakeCrystal_strpool@l
 /* 8021EE08 001E83C8  38 00 00 00 */	li r0, 0
 /* 8021EE0C 001E83CC  98 7F 0B DD */	stb r3, 0xbdd(r31)
 /* 8021EE10 001E83D0  38 7E 00 44 */	addi r3, r30, 0x44
@@ -3915,9 +3915,9 @@
 /* 8021F3F8 001E89B8  4B F1 8C 81 */	bl func_80138078
 /* 8021F3FC 001E89BC  48 00 01 24 */	b .L_8021F520
 .L_8021F400:
-/* 8021F400 001E89C0  3F C0 80 50 */	lis r30, lbl_80504814@ha
+/* 8021F400 001E89C0  3F C0 80 50 */	lis r30, CModelDispMakeCrystal_strpool@ha
 /* 8021F404 001E89C4  38 60 00 21 */	li r3, 0x21
-/* 8021F408 001E89C8  3B DE 48 14 */	addi r30, r30, lbl_80504814@l
+/* 8021F408 001E89C8  3B DE 48 14 */	addi r30, r30, CModelDispMakeCrystal_strpool@l
 /* 8021F40C 001E89CC  38 00 00 00 */	li r0, 0
 /* 8021F410 001E89D0  98 7F 0B DD */	stb r3, 0xbdd(r31)
 /* 8021F414 001E89D4  38 7E 00 44 */	addi r3, r30, 0x44
@@ -4222,8 +4222,8 @@
 /* 8021F838 001E8DF8  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8021F83C 001E8DFC  38 00 00 00 */	li r0, 0
 /* 8021F840 001E8E00  BF 81 00 10 */	stmw r28, 0x10(r1)
-/* 8021F844 001E8E04  3F E0 80 50 */	lis r31, lbl_80504814@ha
-/* 8021F848 001E8E08  3B FF 48 14 */	addi r31, r31, lbl_80504814@l
+/* 8021F844 001E8E04  3F E0 80 50 */	lis r31, CModelDispMakeCrystal_strpool@ha
+/* 8021F848 001E8E08  3B FF 48 14 */	addi r31, r31, CModelDispMakeCrystal_strpool@l
 /* 8021F84C 001E8E0C  7C 7C 1B 78 */	mr r28, r3
 /* 8021F850 001E8E10  98 83 0B DD */	stb r4, 0xbdd(r3)
 /* 8021F854 001E8E14  38 9F 00 60 */	addi r4, r31, 0x60
@@ -5097,9 +5097,9 @@
 /* 80220418 001E99D8  8B 5E 00 01 */	lbz r26, 1(r30)
 /* 8022041C 001E99DC  4B E1 AD D1 */	bl func_8003B1EC
 /* 80220420 001E99E0  38 03 FF FF */	addi r0, r3, -1
-/* 80220424 001E99E4  3F 80 80 50 */	lis r28, lbl_80504814@ha
+/* 80220424 001E99E4  3F 80 80 50 */	lis r28, CModelDispMakeCrystal_strpool@ha
 /* 80220428 001E99E8  54 18 04 3E */	clrlwi r24, r0, 0x10
-/* 8022042C 001E99EC  3B 9C 48 14 */	addi r28, r28, lbl_80504814@l
+/* 8022042C 001E99EC  3B 9C 48 14 */	addi r28, r28, CModelDispMakeCrystal_strpool@l
 /* 80220430 001E99F0  48 00 00 28 */	b .L_80220458
 .L_80220434:
 /* 80220434 001E99F4  7F 23 CB 78 */	mr r3, r25
@@ -5164,9 +5164,9 @@
 /* 8022050C 001E9ACC  41 82 00 F8 */	beq .L_80220604
 /* 80220510 001E9AD0  48 00 01 20 */	b .L_80220630
 .L_80220514:
-/* 80220514 001E9AD4  3F 80 80 50 */	lis r28, lbl_80504814@ha
+/* 80220514 001E9AD4  3F 80 80 50 */	lis r28, CModelDispMakeCrystal_strpool@ha
 /* 80220518 001E9AD8  7F 43 D3 78 */	mr r3, r26
-/* 8022051C 001E9ADC  3B 9C 48 14 */	addi r28, r28, lbl_80504814@l
+/* 8022051C 001E9ADC  3B 9C 48 14 */	addi r28, r28, CModelDispMakeCrystal_strpool@l
 /* 80220520 001E9AE0  7F 65 DB 78 */	mr r5, r27
 /* 80220524 001E9AE4  38 9C 00 6E */	addi r4, r28, 0x6e
 /* 80220528 001E9AE8  4B F1 5C C1 */	bl func_801361E8
@@ -5177,9 +5177,9 @@
 /* 8022053C 001E9AFC  4B F1 5C AD */	bl func_801361E8
 /* 80220540 001E9B00  48 00 00 F0 */	b .L_80220630
 .L_80220544:
-/* 80220544 001E9B04  3F 80 80 50 */	lis r28, lbl_80504814@ha
+/* 80220544 001E9B04  3F 80 80 50 */	lis r28, CModelDispMakeCrystal_strpool@ha
 /* 80220548 001E9B08  7F 43 D3 78 */	mr r3, r26
-/* 8022054C 001E9B0C  3B 9C 48 14 */	addi r28, r28, lbl_80504814@l
+/* 8022054C 001E9B0C  3B 9C 48 14 */	addi r28, r28, CModelDispMakeCrystal_strpool@l
 /* 80220550 001E9B10  7F 65 DB 78 */	mr r5, r27
 /* 80220554 001E9B14  38 9C 00 7E */	addi r4, r28, 0x7e
 /* 80220558 001E9B18  4B F1 5C 91 */	bl func_801361E8
@@ -5190,9 +5190,9 @@
 /* 8022056C 001E9B2C  4B F1 5C 7D */	bl func_801361E8
 /* 80220570 001E9B30  48 00 00 C0 */	b .L_80220630
 .L_80220574:
-/* 80220574 001E9B34  3F 80 80 50 */	lis r28, lbl_80504814@ha
+/* 80220574 001E9B34  3F 80 80 50 */	lis r28, CModelDispMakeCrystal_strpool@ha
 /* 80220578 001E9B38  7F 43 D3 78 */	mr r3, r26
-/* 8022057C 001E9B3C  3B 9C 48 14 */	addi r28, r28, lbl_80504814@l
+/* 8022057C 001E9B3C  3B 9C 48 14 */	addi r28, r28, CModelDispMakeCrystal_strpool@l
 /* 80220580 001E9B40  7F 65 DB 78 */	mr r5, r27
 /* 80220584 001E9B44  38 9C 00 8E */	addi r4, r28, 0x8e
 /* 80220588 001E9B48  4B F1 5C 61 */	bl func_801361E8
@@ -5203,9 +5203,9 @@
 /* 8022059C 001E9B5C  4B F1 5C 4D */	bl func_801361E8
 /* 802205A0 001E9B60  48 00 00 90 */	b .L_80220630
 .L_802205A4:
-/* 802205A4 001E9B64  3F 80 80 50 */	lis r28, lbl_80504814@ha
+/* 802205A4 001E9B64  3F 80 80 50 */	lis r28, CModelDispMakeCrystal_strpool@ha
 /* 802205A8 001E9B68  7F 43 D3 78 */	mr r3, r26
-/* 802205AC 001E9B6C  3B 9C 48 14 */	addi r28, r28, lbl_80504814@l
+/* 802205AC 001E9B6C  3B 9C 48 14 */	addi r28, r28, CModelDispMakeCrystal_strpool@l
 /* 802205B0 001E9B70  7F 65 DB 78 */	mr r5, r27
 /* 802205B4 001E9B74  38 9C 00 9E */	addi r4, r28, 0x9e
 /* 802205B8 001E9B78  4B F1 5C 31 */	bl func_801361E8
@@ -5216,9 +5216,9 @@
 /* 802205CC 001E9B8C  4B F1 5C 1D */	bl func_801361E8
 /* 802205D0 001E9B90  48 00 00 60 */	b .L_80220630
 .L_802205D4:
-/* 802205D4 001E9B94  3F 80 80 50 */	lis r28, lbl_80504814@ha
+/* 802205D4 001E9B94  3F 80 80 50 */	lis r28, CModelDispMakeCrystal_strpool@ha
 /* 802205D8 001E9B98  7F 43 D3 78 */	mr r3, r26
-/* 802205DC 001E9B9C  3B 9C 48 14 */	addi r28, r28, lbl_80504814@l
+/* 802205DC 001E9B9C  3B 9C 48 14 */	addi r28, r28, CModelDispMakeCrystal_strpool@l
 /* 802205E0 001E9BA0  7F 65 DB 78 */	mr r5, r27
 /* 802205E4 001E9BA4  38 9C 00 AE */	addi r4, r28, 0xae
 /* 802205E8 001E9BA8  4B F1 5C 01 */	bl func_801361E8
@@ -5229,9 +5229,9 @@
 /* 802205FC 001E9BBC  4B F1 5B ED */	bl func_801361E8
 /* 80220600 001E9BC0  48 00 00 30 */	b .L_80220630
 .L_80220604:
-/* 80220604 001E9BC4  3F 80 80 50 */	lis r28, lbl_80504814@ha
+/* 80220604 001E9BC4  3F 80 80 50 */	lis r28, CModelDispMakeCrystal_strpool@ha
 /* 80220608 001E9BC8  7F 43 D3 78 */	mr r3, r26
-/* 8022060C 001E9BCC  3B 9C 48 14 */	addi r28, r28, lbl_80504814@l
+/* 8022060C 001E9BCC  3B 9C 48 14 */	addi r28, r28, CModelDispMakeCrystal_strpool@l
 /* 80220610 001E9BD0  7F 65 DB 78 */	mr r5, r27
 /* 80220614 001E9BD4  38 9C 00 BE */	addi r4, r28, 0xbe
 /* 80220618 001E9BD8  4B F1 5B D1 */	bl func_801361E8
@@ -5874,9 +5874,9 @@
 /* 80220F48 001EA508  40 82 00 08 */	bne .L_80220F50
 /* 80220F4C 001EA50C  38 A0 00 08 */	li r5, 8
 .L_80220F50:
-/* 80220F50 001EA510  3C 80 80 50 */	lis r4, lbl_80504814@ha
+/* 80220F50 001EA510  3C 80 80 50 */	lis r4, CModelDispMakeCrystal_strpool@ha
 /* 80220F54 001EA514  38 61 00 20 */	addi r3, r1, 0x20
-/* 80220F58 001EA518  38 84 48 14 */	addi r4, r4, lbl_80504814@l
+/* 80220F58 001EA518  38 84 48 14 */	addi r4, r4, CModelDispMakeCrystal_strpool@l
 /* 80220F5C 001EA51C  38 C0 00 00 */	li r6, 0
 /* 80220F60 001EA520  38 84 00 CE */	addi r4, r4, 0xce
 /* 80220F64 001EA524  38 E0 00 0A */	li r7, 0xa
@@ -5954,8 +5954,8 @@
 /* 80221074 001EA634  28 1B 00 05 */	cmplwi r27, 5
 /* 80221078 001EA638  40 81 FF 80 */	ble .L_80220FF8
 /* 8022107C 001EA63C  83 7F 05 A4 */	lwz r27, 0x5a4(r31)
-/* 80221080 001EA640  3C A0 80 50 */	lis r5, lbl_80504814@ha
-/* 80221084 001EA644  38 A5 48 14 */	addi r5, r5, lbl_80504814@l
+/* 80221080 001EA640  3C A0 80 50 */	lis r5, CModelDispMakeCrystal_strpool@ha
+/* 80221084 001EA644  38 A5 48 14 */	addi r5, r5, CModelDispMakeCrystal_strpool@l
 /* 80221088 001EA648  80 7E 00 0C */	lwz r3, 0xc(r30)
 /* 8022108C 001EA64C  7F 64 DB 78 */	mr r4, r27
 /* 80221090 001EA650  38 A5 00 E9 */	addi r5, r5, 0xe9
@@ -6152,9 +6152,9 @@
 /* 80221364 001EA924  40 82 00 08 */	bne .L_8022136C
 /* 80221368 001EA928  3B E0 00 08 */	li r31, 8
 .L_8022136C:
-/* 8022136C 001EA92C  3C 80 80 50 */	lis r4, lbl_80504814@ha
+/* 8022136C 001EA92C  3C 80 80 50 */	lis r4, CModelDispMakeCrystal_strpool@ha
 /* 80221370 001EA930  7F E5 FB 78 */	mr r5, r31
-/* 80221374 001EA934  38 84 48 14 */	addi r4, r4, lbl_80504814@l
+/* 80221374 001EA934  38 84 48 14 */	addi r4, r4, CModelDispMakeCrystal_strpool@l
 /* 80221378 001EA938  38 61 00 10 */	addi r3, r1, 0x10
 /* 8022137C 001EA93C  38 84 00 CE */	addi r4, r4, 0xce
 /* 80221380 001EA940  38 C0 00 00 */	li r6, 0
@@ -6202,8 +6202,8 @@
 /* 80221420 001EA9E0  80 9E 05 98 */	lwz r4, 0x598(r30)
 /* 80221424 001EA9E4  48 26 1D A1 */	bl func_804831C4
 /* 80221428 001EA9E8  82 BE 05 A4 */	lwz r21, 0x5a4(r30)
-/* 8022142C 001EA9EC  3C A0 80 50 */	lis r5, lbl_80504814@ha
-/* 80221430 001EA9F0  38 A5 48 14 */	addi r5, r5, lbl_80504814@l
+/* 8022142C 001EA9EC  3C A0 80 50 */	lis r5, CModelDispMakeCrystal_strpool@ha
+/* 80221430 001EA9F0  38 A5 48 14 */	addi r5, r5, CModelDispMakeCrystal_strpool@l
 /* 80221434 001EA9F4  80 7D 00 0C */	lwz r3, 0xc(r29)
 /* 80221438 001EA9F8  7E A4 AB 78 */	mr r4, r21
 /* 8022143C 001EA9FC  38 A5 00 E9 */	addi r5, r5, 0xe9
@@ -6320,9 +6320,9 @@
 /* 802215D4 001EAB94  7C 00 30 40 */	cmplw r0, r6
 /* 802215D8 001EAB98  40 82 05 30 */	bne .L_80221B08
 /* 802215DC 001EAB9C  48 21 2D C5 */	bl func_804343A0
-/* 802215E0 001EABA0  3F C0 80 50 */	lis r30, lbl_80504814@ha
+/* 802215E0 001EABA0  3F C0 80 50 */	lis r30, CModelDispMakeCrystal_strpool@ha
 /* 802215E4 001EABA4  3C A0 00 03 */	lis r5, 0x0002F000@ha
-/* 802215E8 001EABA8  3B DE 48 14 */	addi r30, r30, lbl_80504814@l
+/* 802215E8 001EABA8  3B DE 48 14 */	addi r30, r30, CModelDispMakeCrystal_strpool@l
 /* 802215EC 001EABAC  7C 64 1B 78 */	mr r4, r3
 /* 802215F0 001EABB0  38 7F 00 2C */	addi r3, r31, 0x2c
 /* 802215F4 001EABB4  38 A5 F0 00 */	addi r5, r5, 0x0002F000@l
@@ -6621,7 +6621,7 @@
 /* 80221A84 001EB044  4B F6 96 79 */	bl func_8018B0FC
 /* 80221A88 001EB048  38 61 00 28 */	addi r3, r1, 0x28
 /* 80221A8C 001EB04C  38 80 FF FF */	li r4, -1
-/* 80221A90 001EB050  4B FB 0F A9 */	bl func_801D2A38
+/* 80221A90 001EB050  4B FB 0F A9 */	bl __dt__801D2A38
 /* 80221A94 001EB054  81 9F 0E 20 */	lwz r12, 0xe20(r31)
 /* 80221A98 001EB058  38 7F 0E 20 */	addi r3, r31, 0xe20
 /* 80221A9C 001EB05C  81 8C 00 08 */	lwz r12, 8(r12)
@@ -6636,7 +6636,7 @@
 /* 80221AC0 001EB080  4B F6 96 3D */	bl func_8018B0FC
 /* 80221AC4 001EB084  38 61 00 10 */	addi r3, r1, 0x10
 /* 80221AC8 001EB088  38 80 FF FF */	li r4, -1
-/* 80221ACC 001EB08C  4B FB 0F 6D */	bl func_801D2A38
+/* 80221ACC 001EB08C  4B FB 0F 6D */	bl __dt__801D2A38
 /* 80221AD0 001EB090  81 9F 0E B4 */	lwz r12, 0xeb4(r31)
 /* 80221AD4 001EB094  38 7F 0E B4 */	addi r3, r31, 0xeb4
 /* 80221AD8 001EB098  81 8C 00 08 */	lwz r12, 8(r12)
@@ -6648,7 +6648,7 @@
 /* 80221AF0 001EB0B0  48 23 DD 21 */	bl func_8045F810
 /* 80221AF4 001EB0B4  38 61 00 08 */	addi r3, r1, 8
 /* 80221AF8 001EB0B8  38 80 FF FF */	li r4, -1
-/* 80221AFC 001EB0BC  48 23 DD CD */	bl func_8045F8C8
+/* 80221AFC 001EB0BC  48 23 DD CD */	bl __dt__8045F8C8
 /* 80221B00 001EB0C0  38 60 00 01 */	li r3, 1
 /* 80221B04 001EB0C4  48 00 00 74 */	b .L_80221B78
 .L_80221B08:
@@ -6936,8 +6936,8 @@ CModelDispMakeCrystal_typestr:
 	.balign 4
 
 
-.global lbl_80504814
-lbl_80504814:
+.global CModelDispMakeCrystal_strpool
+CModelDispMakeCrystal_strpool:
 	.asciz "obj/oj820002.chr"
 	.asciz "eff/rec/eu/eu01.rec"
 	.asciz "menu/McData.arc"
@@ -7332,16 +7332,16 @@ lbl_80667008:
 	.4byte func_80297880
 	.4byte 0x0780001B
 	.4byte 0x00000EB4
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001B
 	.4byte 0x00000E78
-	.4byte func_8022B6A0
+	.4byte __dt__CSysWin
 	.4byte 0x0780001B
 	.4byte 0x00000E38
-	.4byte func_801F34A0
+	.4byte __dt__CScrollBar
 	.4byte 0x0780001B
 	.4byte 0x00000E20
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001B
 	.4byte 0x00000DFC
 	.4byte func_80225D38
@@ -7391,7 +7391,7 @@ lbl_80667008:
 	.4byte func_8021C540
 	.4byte 0x0780001B
 	.4byte 0x0000002C
-	.4byte func_8045F580
+	.4byte __dt__8045F580
 	.4byte 0x0680001B
 	.4byte 0x00000008
 	.4byte func_80081C20
@@ -7467,58 +7467,58 @@ lbl_80667008:
 	.4byte func_80297880
 	.4byte 0x8780001E
 	.4byte 0x00000EB4
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000ECC
 	.4byte func_80297880
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x8780001E
 	.4byte 0x00000E78
-	.4byte func_8022B6A0
+	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x00000ECC
 	.4byte func_80297880
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte func_8022B6A0
+	.4byte __dt__CSysWin
 	.4byte 0x8780001E
 	.4byte 0x00000E38
-	.4byte func_801F34A0
+	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000ECC
 	.4byte func_80297880
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte func_8022B6A0
+	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte func_801F34A0
+	.4byte __dt__CScrollBar
 	.4byte 0x8780001E
 	.4byte 0x00000E20
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000ECC
 	.4byte func_80297880
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte func_8022B6A0
+	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte func_801F34A0
+	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x8780001E
 	.4byte 0x00000DFC
 	.4byte func_80225D38
@@ -7527,16 +7527,16 @@ lbl_80667008:
 	.4byte func_80297880
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte func_8022B6A0
+	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte func_801F34A0
+	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
 	.4byte func_80225D38
@@ -7548,16 +7548,16 @@ lbl_80667008:
 	.4byte func_80297880
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte func_8022B6A0
+	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte func_801F34A0
+	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
 	.4byte func_80225D38
@@ -7572,16 +7572,16 @@ lbl_80667008:
 	.4byte func_80297880
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte func_8022B6A0
+	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte func_801F34A0
+	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
 	.4byte func_80225D38
@@ -7599,16 +7599,16 @@ lbl_80667008:
 	.4byte func_80297880
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte func_8022B6A0
+	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte func_801F34A0
+	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
 	.4byte func_80225D38
@@ -7629,16 +7629,16 @@ lbl_80667008:
 	.4byte func_80297880
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte func_8022B6A0
+	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte func_801F34A0
+	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
 	.4byte func_80225D38
@@ -7662,16 +7662,16 @@ lbl_80667008:
 	.4byte func_80297880
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte func_8022B6A0
+	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte func_801F34A0
+	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
 	.4byte func_80225D38
@@ -7698,16 +7698,16 @@ lbl_80667008:
 	.4byte func_80297880
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte func_8022B6A0
+	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte func_801F34A0
+	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
 	.4byte func_80225D38
@@ -7737,16 +7737,16 @@ lbl_80667008:
 	.4byte func_80297880
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte func_8022B6A0
+	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte func_801F34A0
+	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
 	.4byte func_80225D38
@@ -7779,16 +7779,16 @@ lbl_80667008:
 	.4byte func_80297880
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte func_8022B6A0
+	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte func_801F34A0
+	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
 	.4byte func_80225D38
@@ -7824,16 +7824,16 @@ lbl_80667008:
 	.4byte func_80297880
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte func_8022B6A0
+	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte func_801F34A0
+	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
 	.4byte func_80225D38
@@ -7872,16 +7872,16 @@ lbl_80667008:
 	.4byte func_80297880
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte func_8022B6A0
+	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte func_801F34A0
+	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
 	.4byte func_80225D38
@@ -7923,16 +7923,16 @@ lbl_80667008:
 	.4byte func_80297880
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte func_8022B6A0
+	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte func_801F34A0
+	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
 	.4byte func_80225D38
@@ -7977,16 +7977,16 @@ lbl_80667008:
 	.4byte func_80297880
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte func_8022B6A0
+	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte func_801F34A0
+	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
 	.4byte func_80225D38
@@ -8034,16 +8034,16 @@ lbl_80667008:
 	.4byte func_80297880
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000E78
-	.4byte func_8022B6A0
+	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x00000E38
-	.4byte func_801F34A0
+	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
 	.4byte func_80225D38
@@ -8474,7 +8474,7 @@ lbl_80667008:
 	.4byte 0x01330010
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte func_8045F8C8
+	.4byte __dt__8045F8C8
 .endobj "@etb_80014DB0"
 
 .obj "@etb_80014DC8", local

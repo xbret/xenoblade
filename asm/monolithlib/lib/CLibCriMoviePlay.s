@@ -83,7 +83,7 @@
 /* 80459DB0 00423370  4B FE F1 CD */	bl func_80448F7C
 /* 80459DB4 00423374  7F C3 F3 78 */	mr r3, r30
 /* 80459DB8 00423378  38 80 00 00 */	li r4, 0
-/* 80459DBC 0042337C  4B FD DD 0D */	bl func_80437AC8
+/* 80459DBC 0042337C  4B FD DD 0D */	bl __dt__CWorkThread
 /* 80459DC0 00423380  2C 1F 00 00 */	cmpwi r31, 0
 /* 80459DC4 00423384  40 81 00 0C */	ble .L_80459DD0
 /* 80459DC8 00423388  7F C3 F3 78 */	mr r3, r30
@@ -1865,7 +1865,7 @@ lbl_80667FB8:
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_80437AC8
+	.4byte __dt__CWorkThread
 .endobj "@etb_8001D564"
 
 .obj "@etb_8001D580", local

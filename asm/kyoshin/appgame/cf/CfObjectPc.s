@@ -144,13 +144,13 @@
 /* 800BFE80 00089440  40 82 00 08 */	bne .L_800BFE88
 /* 800BFE84 00089444  3B 80 00 0C */	li r28, 0xc
 .L_800BFE88:
-/* 800BFE88 00089448  3F E0 80 4F */	lis r31, lbl_804F7E0C@ha
+/* 800BFE88 00089448  3F E0 80 4F */	lis r31, CfObjectPc_strpool@ha
 /* 800BFE8C 0008944C  7F C3 F3 78 */	mr r3, r30
 /* 800BFE90 00089450  7F 85 E3 78 */	mr r5, r28
-/* 800BFE94 00089454  38 9F 7E 0C */	addi r4, r31, lbl_804F7E0C@l
+/* 800BFE94 00089454  38 9F 7E 0C */	addi r4, r31, CfObjectPc_strpool@l
 /* 800BFE98 00089458  4B F7 AC B1 */	bl func_8003AB48
 /* 800BFE9C 0008945C  90 61 00 14 */	stw r3, 0x14(r1)
-/* 800BFEA0 00089460  3B FF 7E 0C */	addi r31, r31, lbl_804F7E0C@l
+/* 800BFEA0 00089460  3B FF 7E 0C */	addi r31, r31, CfObjectPc_strpool@l
 /* 800BFEA4 00089464  7F C3 F3 78 */	mr r3, r30
 /* 800BFEA8 00089468  7F 85 E3 78 */	mr r5, r28
 /* 800BFEAC 0008946C  88 01 00 14 */	lbz r0, 0x14(r1)
@@ -583,8 +583,8 @@
 /* 800C0498 00089A58  40 82 00 48 */	bne .L_800C04E0
 /* 800C049C 00089A5C  4B FD E8 01 */	bl func_8009EC9C
 /* 800C04A0 00089A60  7C 65 1B 78 */	mr r5, r3
-/* 800C04A4 00089A64  3C 80 80 4F */	lis r4, lbl_804F7E0C@ha
-/* 800C04A8 00089A68  38 84 7E 0C */	addi r4, r4, lbl_804F7E0C@l
+/* 800C04A4 00089A64  3C 80 80 4F */	lis r4, CfObjectPc_strpool@ha
+/* 800C04A8 00089A68  38 84 7E 0C */	addi r4, r4, CfObjectPc_strpool@l
 /* 800C04AC 00089A6C  80 6D A8 64 */	lwz r3, lbl_806669E4@sda21(r13)
 /* 800C04B0 00089A70  A0 A5 00 0C */	lhz r5, 0xc(r5)
 /* 800C04B4 00089A74  38 84 00 24 */	addi r4, r4, 0x24
@@ -859,8 +859,8 @@
 /* 800C0898 00089E58  7D 89 03 A6 */	mtctr r12
 /* 800C089C 00089E5C  4E 80 04 21 */	bctrl 
 /* 800C08A0 00089E60  81 9F 3E 9C */	lwz r12, 0x3e9c(r31)
-/* 800C08A4 00089E64  3C 80 80 4F */	lis r4, lbl_804F7E0C@ha
-/* 800C08A8 00089E68  38 84 7E 0C */	addi r4, r4, lbl_804F7E0C@l
+/* 800C08A4 00089E64  3C 80 80 4F */	lis r4, CfObjectPc_strpool@ha
+/* 800C08A8 00089E68  38 84 7E 0C */	addi r4, r4, CfObjectPc_strpool@l
 /* 800C08AC 00089E6C  38 7F 3E 9C */	addi r3, r31, 0x3e9c
 /* 800C08B0 00089E70  81 8C 01 AC */	lwz r12, 0x1ac(r12)
 /* 800C08B4 00089E74  38 A4 00 2D */	addi r5, r4, 0x2d
@@ -1006,9 +1006,9 @@
 /* 800C0AA4 0008A064  38 60 00 01 */	li r3, 1
 /* 800C0AA8 0008A068  48 00 00 34 */	b .L_800C0ADC
 .L_800C0AAC:
-/* 800C0AAC 0008A06C  3C 80 80 4F */	lis r4, lbl_804F7E0C@ha
+/* 800C0AAC 0008A06C  3C 80 80 4F */	lis r4, CfObjectPc_strpool@ha
 /* 800C0AB0 0008A070  7F E3 FB 78 */	mr r3, r31
-/* 800C0AB4 0008A074  38 84 7E 0C */	addi r4, r4, lbl_804F7E0C@l
+/* 800C0AB4 0008A074  38 84 7E 0C */	addi r4, r4, CfObjectPc_strpool@l
 /* 800C0AB8 0008A078  38 84 00 34 */	addi r4, r4, 0x34
 /* 800C0ABC 0008A07C  4B F7 A0 8D */	bl func_8003AB48
 /* 800C0AC0 0008A080  81 9E 00 00 */	lwz r12, 0(r30)
@@ -1338,9 +1338,9 @@
 /* 800C0F60 0008A520  7C 79 1B 78 */	mr r25, r3
 /* 800C0F64 0008A524  7F 83 E3 78 */	mr r3, r28
 /* 800C0F68 0008A528  4B F7 A2 85 */	bl func_8003B1EC
-/* 800C0F6C 0008A52C  3F C0 80 4F */	lis r30, lbl_804F7E0C@ha
+/* 800C0F6C 0008A52C  3F C0 80 4F */	lis r30, CfObjectPc_strpool@ha
 /* 800C0F70 0008A530  7F 59 1A 14 */	add r26, r25, r3
-/* 800C0F74 0008A534  3B DE 7E 0C */	addi r30, r30, lbl_804F7E0C@l
+/* 800C0F74 0008A534  3B DE 7E 0C */	addi r30, r30, CfObjectPc_strpool@l
 /* 800C0F78 0008A538  48 00 02 20 */	b .L_800C1198
 .L_800C0F7C:
 /* 800C0F7C 0008A53C  7F 83 E3 78 */	mr r3, r28
@@ -1589,8 +1589,8 @@ lbl_804F7E00:
 	.4byte 0x00140000
 
 
-.global lbl_804F7E0C
-lbl_804F7E0C:
+.global CfObjectPc_strpool
+CfObjectPc_strpool:
 	.asciz "tp_atk"
 	.asciz "tp_arts"
 	.asciz "tp_atkdmg"

@@ -51,8 +51,8 @@
 /* 801ECC14 001B61D4  7C 08 02 A6 */	mflr r0
 /* 801ECC18 001B61D8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801ECC1C 001B61DC  BF C1 00 08 */	stmw r30, 8(r1)
-/* 801ECC20 001B61E0  3F E0 80 50 */	lis r31, lbl_80502944@ha
-/* 801ECC24 001B61E4  3B FF 29 44 */	addi r31, r31, lbl_80502944@l
+/* 801ECC20 001B61E0  3F E0 80 50 */	lis r31, CItemBoxLine_strpool@ha
+/* 801ECC24 001B61E4  3B FF 29 44 */	addi r31, r31, CItemBoxLine_strpool@l
 /* 801ECC28 001B61E8  7C 7E 1B 78 */	mr r30, r3
 /* 801ECC2C 001B61EC  38 BF 00 EF */	addi r5, r31, 0xef
 /* 801ECC30 001B61F0  80 83 00 04 */	lwz r4, 4(r3)

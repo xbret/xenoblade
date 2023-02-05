@@ -30,15 +30,15 @@
 /* 8020D3F8 001D69B8  80 9F 00 2C */	lwz r4, 0x2c(r31)
 /* 8020D3FC 001D69BC  4B E2 D7 4D */	bl func_8003AB48
 /* 8020D400 001D69C0  90 61 00 34 */	stw r3, 0x34(r1)
-/* 8020D404 001D69C4  3F 80 80 50 */	lis r28, lbl_80503E2C@ha
+/* 8020D404 001D69C4  3F 80 80 50 */	lis r28, CfGimmickWarp_strpool@ha
 /* 8020D408 001D69C8  7F C5 F3 78 */	mr r5, r30
 /* 8020D40C 001D69CC  A0 01 00 34 */	lhz r0, 0x34(r1)
-/* 8020D410 001D69D0  38 9C 3E 2C */	addi r4, r28, lbl_80503E2C@l
+/* 8020D410 001D69D0  38 9C 3E 2C */	addi r4, r28, CfGimmickWarp_strpool@l
 /* 8020D414 001D69D4  B0 1D 00 E4 */	sth r0, 0xe4(r29)
 /* 8020D418 001D69D8  80 61 00 38 */	lwz r3, 0x38(r1)
 /* 8020D41C 001D69DC  4B E2 D7 2D */	bl func_8003AB48
 /* 8020D420 001D69E0  90 61 00 30 */	stw r3, 0x30(r1)
-/* 8020D424 001D69E4  3B 9C 3E 2C */	addi r28, r28, lbl_80503E2C@l
+/* 8020D424 001D69E4  3B 9C 3E 2C */	addi r28, r28, CfGimmickWarp_strpool@l
 /* 8020D428 001D69E8  7F C5 F3 78 */	mr r5, r30
 /* 8020D42C 001D69EC  88 01 00 30 */	lbz r0, 0x30(r1)
 /* 8020D430 001D69F0  38 9C 00 07 */	addi r4, r28, 7
@@ -1953,8 +1953,8 @@ cf_CfGimmickWarp_typestr:
 	.balign 4
 
 
-.global lbl_80503E2C
-lbl_80503E2C:
+.global CfGimmickWarp_strpool
+CfGimmickWarp_strpool:
 	.asciz "warpEF"
 	.asciz "warpSE"
 	.asciz "A_roty"

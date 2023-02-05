@@ -41,7 +41,7 @@
 /* 8010AE28 000D43E8  90 9B 00 58 */	stw r4, 0x58(r27)
 /* 8010AE2C 000D43EC  90 1B 00 5C */	stw r0, 0x5c(r27)
 /* 8010AE30 000D43F0  92 BB 00 60 */	stw r21, 0x60(r27)
-/* 8010AE34 000D43F4  48 35 47 31 */	bl func_8045F564
+/* 8010AE34 000D43F4  48 35 47 31 */	bl __ct__8045F564
 /* 8010AE38 000D43F8  3C 80 80 11 */	lis r4, func_8010B324@ha
 /* 8010AE3C 000D43FC  3C A0 80 11 */	lis r5, func_8010B444@ha
 /* 8010AE40 000D4400  38 7B 00 74 */	addi r3, r27, 0x74
@@ -58,7 +58,7 @@
 /* 8010AE6C 000D442C  9B FB 07 C8 */	stb r31, 0x7c8(r27)
 /* 8010AE70 000D4430  9B FB 07 C9 */	stb r31, 0x7c9(r27)
 /* 8010AE74 000D4434  90 9B 07 CC */	stw r4, 0x7cc(r27)
-/* 8010AE78 000D4438  48 35 46 ED */	bl func_8045F564
+/* 8010AE78 000D4438  48 35 46 ED */	bl __ct__8045F564
 /* 8010AE7C 000D443C  38 C1 02 0C */	addi r6, r1, 0x20c
 /* 8010AE80 000D4440  38 E1 00 98 */	addi r7, r1, 0x98
 /* 8010AE84 000D4444  7C A7 30 50 */	subf r5, r7, r6
@@ -483,7 +483,7 @@
 /* 8010B4AC 000D4A6C  41 82 00 10 */	beq .L_8010B4BC
 /* 8010B4B0 000D4A70  38 63 00 04 */	addi r3, r3, 4
 /* 8010B4B4 000D4A74  38 80 FF FF */	li r4, -1
-/* 8010B4B8 000D4A78  48 35 40 C9 */	bl func_8045F580
+/* 8010B4B8 000D4A78  48 35 40 C9 */	bl __dt__8045F580
 .L_8010B4BC:
 /* 8010B4BC 000D4A7C  3C 80 80 11 */	lis r4, func_8010B444@ha
 /* 8010B4C0 000D4A80  38 7E 00 74 */	addi r3, r30, 0x74
@@ -493,7 +493,7 @@
 /* 8010B4D0 000D4A90  48 1A E7 29 */	bl __destroy_arr
 /* 8010B4D4 000D4A94  38 7E 00 64 */	addi r3, r30, 0x64
 /* 8010B4D8 000D4A98  38 80 FF FF */	li r4, -1
-/* 8010B4DC 000D4A9C  48 35 40 A5 */	bl func_8045F580
+/* 8010B4DC 000D4A9C  48 35 40 A5 */	bl __dt__8045F580
 /* 8010B4E0 000D4AA0  2C 1E 00 00 */	cmpwi r30, 0
 /* 8010B4E4 000D4AA4  41 82 00 14 */	beq .L_8010B4F8
 /* 8010B4E8 000D4AA8  41 82 00 10 */	beq .L_8010B4F8
@@ -535,9 +535,9 @@
 /* 8010B564 000D4B24  90 01 02 08 */	stw r0, 0x208(r1)
 /* 8010B568 000D4B28  48 32 8E 39 */	bl func_804343A0
 /* 8010B56C 000D4B2C  48 02 48 51 */	bl func_8012FDBC
-/* 8010B570 000D4B30  3C 80 80 50 */	lis r4, lbl_804F8F68@ha
+/* 8010B570 000D4B30  3C 80 80 50 */	lis r4, CMenuBattlePlayerState_strpool@ha
 /* 8010B574 000D4B34  3C A0 00 01 */	lis r5, 0x00010E00@ha
-/* 8010B578 000D4B38  3A E4 8F 68 */	addi r23, r4, lbl_804F8F68@l
+/* 8010B578 000D4B38  3A E4 8F 68 */	addi r23, r4, CMenuBattlePlayerState_strpool@l
 /* 8010B57C 000D4B3C  38 E0 00 00 */	li r7, 0
 /* 8010B580 000D4B40  7C 64 1B 78 */	mr r4, r3
 /* 8010B584 000D4B44  38 73 00 64 */	addi r3, r19, 0x64
@@ -1108,7 +1108,7 @@
 /* 8010BE34 000D53F4  38 61 00 44 */	addi r3, r1, 0x44
 /* 8010BE38 000D53F8  38 84 FB FC */	addi r4, r4, __vt__CPcSelectCursor01@l
 /* 8010BE3C 000D53FC  90 81 00 40 */	stw r4, 0x40(r1)
-/* 8010BE40 000D5400  48 35 37 25 */	bl func_8045F564
+/* 8010BE40 000D5400  48 35 37 25 */	bl __ct__8045F564
 /* 8010BE44 000D5404  3A 40 00 00 */	li r18, 0
 /* 8010BE48 000D5408  38 A0 00 01 */	li r5, 1
 /* 8010BE4C 000D540C  92 41 00 54 */	stw r18, 0x54(r1)
@@ -1144,15 +1144,15 @@
 /* 8010BEC4 000D5484  98 13 07 F5 */	stb r0, 0x7f5(r19)
 /* 8010BEC8 000D5488  80 01 00 6C */	lwz r0, 0x6c(r1)
 /* 8010BECC 000D548C  90 13 07 F8 */	stw r0, 0x7f8(r19)
-/* 8010BED0 000D5490  48 35 36 B1 */	bl func_8045F580
+/* 8010BED0 000D5490  48 35 36 B1 */	bl __dt__8045F580
 /* 8010BED4 000D5494  48 02 97 21 */	bl func_801355F4
 /* 8010BED8 000D5498  90 73 07 E0 */	stw r3, 0x7e0(r19)
 /* 8010BEDC 000D549C  48 32 84 C5 */	bl func_804343A0
-/* 8010BEE0 000D54A0  3E 20 80 50 */	lis r17, lbl_804F8F68@ha
+/* 8010BEE0 000D54A0  3E 20 80 50 */	lis r17, CMenuBattlePlayerState_strpool@ha
 /* 8010BEE4 000D54A4  7C 64 1B 78 */	mr r4, r3
 /* 8010BEE8 000D54A8  38 73 07 D0 */	addi r3, r19, 0x7d0
 /* 8010BEEC 000D54AC  38 A0 20 00 */	li r5, 0x2000
-/* 8010BEF0 000D54B0  38 D1 8F 68 */	addi r6, r17, lbl_804F8F68@l
+/* 8010BEF0 000D54B0  38 D1 8F 68 */	addi r6, r17, CMenuBattlePlayerState_strpool@l
 /* 8010BEF4 000D54B4  38 E0 00 00 */	li r7, 0
 /* 8010BEF8 000D54B8  48 35 37 89 */	bl func_8045F680
 /* 8010BEFC 000D54BC  38 61 00 08 */	addi r3, r1, 8
@@ -1160,7 +1160,7 @@
 /* 8010BF04 000D54C4  48 35 39 55 */	bl func_8045F858
 /* 8010BF08 000D54C8  38 60 00 00 */	li r3, 0
 /* 8010BF0C 000D54CC  48 32 8B 41 */	bl func_80434A4C
-/* 8010BF10 000D54D0  3A 31 8F 68 */	addi r17, r17, lbl_804F8F68@l
+/* 8010BF10 000D54D0  3A 31 8F 68 */	addi r17, r17, CMenuBattlePlayerState_strpool@l
 /* 8010BF14 000D54D4  80 93 07 E0 */	lwz r4, 0x7e0(r19)
 /* 8010BF18 000D54D8  38 73 07 E4 */	addi r3, r19, 0x7e4
 /* 8010BF1C 000D54DC  38 B1 00 12 */	addi r5, r17, 0x12
@@ -1209,7 +1209,7 @@
 /* 8010BFC8 000D5588  4E 80 04 21 */	bctrl 
 /* 8010BFCC 000D558C  38 61 00 08 */	addi r3, r1, 8
 /* 8010BFD0 000D5590  38 80 FF FF */	li r4, -1
-/* 8010BFD4 000D5594  48 35 38 F5 */	bl func_8045F8C8
+/* 8010BFD4 000D5594  48 35 38 F5 */	bl __dt__8045F8C8
 /* 8010BFD8 000D5598  92 41 00 24 */	stw r18, 0x24(r1)
 /* 8010BFDC 000D559C  92 41 00 28 */	stw r18, 0x28(r1)
 /* 8010BFE0 000D55A0  92 41 00 2C */	stw r18, 0x2c(r1)
@@ -1307,7 +1307,7 @@
 /* 8010C138 000D56F8  48 35 36 D9 */	bl func_8045F810
 /* 8010C13C 000D56FC  38 61 00 0C */	addi r3, r1, 0xc
 /* 8010C140 000D5700  38 80 FF FF */	li r4, -1
-/* 8010C144 000D5704  48 35 37 85 */	bl func_8045F8C8
+/* 8010C144 000D5704  48 35 37 85 */	bl __dt__8045F8C8
 /* 8010C148 000D5708  39 61 02 50 */	addi r11, r1, 0x250
 /* 8010C14C 000D570C  E3 E1 02 88 */	psq_l f31, 648(r1), 0, qr0
 /* 8010C150 000D5710  CB E1 02 80 */	lfd f31, 0x280(r1)
@@ -1987,8 +1987,8 @@
 /* 8010CAF0 000D60B0  2C 00 00 00 */	cmpwi r0, 0
 /* 8010CAF4 000D60B4  41 82 00 6C */	beq .L_8010CB60
 /* 8010CAF8 000D60B8  80 74 07 E4 */	lwz r3, 0x7e4(r20)
-/* 8010CAFC 000D60BC  3C 80 80 50 */	lis r4, lbl_804F8F68@ha
-/* 8010CB00 000D60C0  38 84 8F 68 */	addi r4, r4, lbl_804F8F68@l
+/* 8010CAFC 000D60BC  3C 80 80 50 */	lis r4, CMenuBattlePlayerState_strpool@ha
+/* 8010CB00 000D60C0  38 84 8F 68 */	addi r4, r4, CMenuBattlePlayerState_strpool@l
 /* 8010CB04 000D60C4  38 A0 00 01 */	li r5, 1
 /* 8010CB08 000D60C8  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 8010CB0C 000D60CC  38 84 00 95 */	addi r4, r4, 0x95
@@ -2330,10 +2330,10 @@
 /* 8010CFB8 000D6578  28 03 00 08 */	cmplwi r3, 8
 /* 8010CFBC 000D657C  41 81 00 48 */	bgt .L_8010D004
 /* 8010CFC0 000D6580  38 03 FF FF */	addi r0, r3, -1
-/* 8010CFC4 000D6584  3C A0 80 50 */	lis r5, lbl_804F8F68@ha
+/* 8010CFC4 000D6584  3C A0 80 50 */	lis r5, CMenuBattlePlayerState_strpool@ha
 /* 8010CFC8 000D6588  57 E4 10 3A */	slwi r4, r31, 2
 /* 8010CFCC 000D658C  1C 60 00 19 */	mulli r3, r0, 0x19
-/* 8010CFD0 000D6590  38 A5 8F 68 */	addi r5, r5, lbl_804F8F68@l
+/* 8010CFD0 000D6590  38 A5 8F 68 */	addi r5, r5, CMenuBattlePlayerState_strpool@l
 /* 8010CFD4 000D6594  7C 04 FA 14 */	add r0, r4, r31
 /* 8010CFD8 000D6598  38 85 04 22 */	addi r4, r5, 0x422
 /* 8010CFDC 000D659C  7C 07 02 14 */	add r0, r7, r0
@@ -2494,9 +2494,9 @@
 /* 8010D1F8 000D67B8  C0 02 94 DC */	lfs f0, float_8066985C@sda21(r2)
 /* 8010D1FC 000D67BC  60 00 08 00 */	ori r0, r0, 0x800
 /* 8010D200 000D67C0  90 05 02 5C */	stw r0, 0x25c(r5)
-/* 8010D204 000D67C4  3F 80 80 50 */	lis r28, lbl_804F8F68@ha
+/* 8010D204 000D67C4  3F 80 80 50 */	lis r28, CMenuBattlePlayerState_strpool@ha
 /* 8010D208 000D67C8  83 E5 00 6C */	lwz r31, 0x6c(r5)
-/* 8010D20C 000D67CC  3B 9C 8F 68 */	addi r28, r28, lbl_804F8F68@l
+/* 8010D20C 000D67CC  3B 9C 8F 68 */	addi r28, r28, CMenuBattlePlayerState_strpool@l
 /* 8010D210 000D67D0  D0 05 02 64 */	stfs f0, 0x264(r5)
 /* 8010D214 000D67D4  3F 60 74 69 */	lis r27, 0x7469
 /* 8010D218 000D67D8  88 1F 00 BB */	lbz r0, 0xbb(r31)
@@ -2591,9 +2591,9 @@
 /* 8010D360 000D6920  7C 7B 03 2E */	sthx r3, r27, r0
 /* 8010D364 000D6924  41 80 FF C0 */	blt .L_8010D324
 /* 8010D368 000D6928  80 7E 02 6C */	lwz r3, 0x26c(r30)
-/* 8010D36C 000D692C  3F 80 80 50 */	lis r28, lbl_804F8F68@ha
+/* 8010D36C 000D692C  3F 80 80 50 */	lis r28, CMenuBattlePlayerState_strpool@ha
 /* 8010D370 000D6930  80 9D 15 30 */	lwz r4, 0x1530(r29)
-/* 8010D374 000D6934  3B 9C 8F 68 */	addi r28, r28, lbl_804F8F68@l
+/* 8010D374 000D6934  3B 9C 8F 68 */	addi r28, r28, CMenuBattlePlayerState_strpool@l
 /* 8010D378 000D6938  38 03 00 01 */	addi r0, r3, 1
 /* 8010D37C 000D693C  B0 81 00 48 */	sth r4, 0x48(r1)
 /* 8010D380 000D6940  54 19 06 3E */	clrlwi r25, r0, 0x18
@@ -2702,11 +2702,11 @@
 .L_8010D4FC:
 /* 8010D4FC 000D6ABC  38 00 00 C7 */	li r0, 0xc7
 /* 8010D500 000D6AC0  90 04 02 5C */	stw r0, 0x25c(r4)
-/* 8010D504 000D6AC4  3F 80 80 50 */	lis r28, lbl_804F8F68@ha
+/* 8010D504 000D6AC4  3F 80 80 50 */	lis r28, CMenuBattlePlayerState_strpool@ha
 /* 8010D508 000D6AC8  80 A4 02 0C */	lwz r5, 0x20c(r4)
 /* 8010D50C 000D6ACC  38 00 00 C6 */	li r0, 0xc6
 /* 8010D510 000D6AD0  90 04 02 5C */	stw r0, 0x25c(r4)
-/* 8010D514 000D6AD4  3B 9C 8F 68 */	addi r28, r28, lbl_804F8F68@l
+/* 8010D514 000D6AD4  3B 9C 8F 68 */	addi r28, r28, CMenuBattlePlayerState_strpool@l
 /* 8010D518 000D6AD8  38 61 00 08 */	addi r3, r1, 8
 /* 8010D51C 000D6ADC  38 9C 04 01 */	addi r4, r28, 0x401
 /* 8010D520 000D6AE0  4C C6 31 82 */	crclr 6
@@ -2969,10 +2969,10 @@
 /* 8010D8FC 000D6EBC  54 C0 06 A8 */	rlwinm r0, r6, 0, 0x1a, 0x14
 /* 8010D900 000D6EC0  90 04 02 5C */	stw r0, 0x25c(r4)
 /* 8010D904 000D6EC4  41 82 00 54 */	beq .L_8010D958
-/* 8010D908 000D6EC8  3F 80 80 50 */	lis r28, lbl_804F8F68@ha
+/* 8010D908 000D6EC8  3F 80 80 50 */	lis r28, CMenuBattlePlayerState_strpool@ha
 /* 8010D90C 000D6ECC  54 00 00 3C */	rlwinm r0, r0, 0, 0, 0x1e
 /* 8010D910 000D6ED0  90 04 02 5C */	stw r0, 0x25c(r4)
-/* 8010D914 000D6ED4  3B 9C 8F 68 */	addi r28, r28, lbl_804F8F68@l
+/* 8010D914 000D6ED4  3B 9C 8F 68 */	addi r28, r28, CMenuBattlePlayerState_strpool@l
 /* 8010D918 000D6ED8  38 61 00 08 */	addi r3, r1, 8
 /* 8010D91C 000D6EDC  38 9C 04 01 */	addi r4, r28, 0x401
 /* 8010D920 000D6EE0  4C C6 31 82 */	crclr 6
@@ -3291,8 +3291,8 @@
 /* 8010DDCC 000D738C  2C 1F 00 00 */	cmpwi r31, 0
 /* 8010DDD0 000D7390  40 80 00 80 */	bge .L_8010DE50
 /* 8010DDD4 000D7394  80 7E 00 20 */	lwz r3, 0x20(r30)
-/* 8010DDD8 000D7398  3F 80 80 50 */	lis r28, lbl_804F8F68@ha
-/* 8010DDDC 000D739C  3B 9C 8F 68 */	addi r28, r28, lbl_804F8F68@l
+/* 8010DDD8 000D7398  3F 80 80 50 */	lis r28, CMenuBattlePlayerState_strpool@ha
+/* 8010DDDC 000D739C  3B 9C 8F 68 */	addi r28, r28, CMenuBattlePlayerState_strpool@l
 /* 8010DDE0 000D73A0  38 A0 00 01 */	li r5, 1
 /* 8010DDE4 000D73A4  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 8010DDE8 000D73A8  38 9C 04 30 */	addi r4, r28, 0x430
@@ -3324,8 +3324,8 @@
 .L_8010DE50:
 /* 8010DE50 000D7410  40 81 00 7C */	ble .L_8010DECC
 /* 8010DE54 000D7414  80 7E 00 20 */	lwz r3, 0x20(r30)
-/* 8010DE58 000D7418  3F 80 80 50 */	lis r28, lbl_804F8F68@ha
-/* 8010DE5C 000D741C  3B 9C 8F 68 */	addi r28, r28, lbl_804F8F68@l
+/* 8010DE58 000D7418  3F 80 80 50 */	lis r28, CMenuBattlePlayerState_strpool@ha
+/* 8010DE5C 000D741C  3B 9C 8F 68 */	addi r28, r28, CMenuBattlePlayerState_strpool@l
 /* 8010DE60 000D7420  38 A0 00 01 */	li r5, 1
 /* 8010DE64 000D7424  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 8010DE68 000D7428  38 9C 04 30 */	addi r4, r28, 0x430
@@ -4175,8 +4175,8 @@ CPcSelectCursor01_typestr:
 	.balign 4
 
 
-.global lbl_804F8F68
-lbl_804F8F68:
+.global CMenuBattlePlayerState_strpool
+CMenuBattlePlayerState_strpool:
 	.asciz "CPcSelectCursor01"
 	.asciz "mf80_info00_target01_pc.brlyt"
 	.asciz "mf80_info00_target01_pc_in.brlan"
@@ -4443,7 +4443,7 @@ lbl_80666840:
 	.4byte func_8010B444
 	.4byte 0x0780001B
 	.4byte 0x00000064
-	.4byte func_8045F580
+	.4byte __dt__8045F580
 	.4byte 0x0680001B
 	.4byte 0x0000005C
 	.4byte func_8004031C
@@ -4492,7 +4492,7 @@ lbl_80666840:
 	.4byte func_8010B444
 	.4byte 0x0780001E
 	.4byte 0x00000064
-	.4byte func_8045F580
+	.4byte __dt__8045F580
 	.4byte 0x0680001E
 	.4byte 0x0000005C
 	.4byte func_8004031C
@@ -4512,9 +4512,9 @@ lbl_80666840:
 	.4byte 0x00590028
 	.4byte 0x00000000
 	.4byte 0x02000008
-	.4byte func_8045F8C8
+	.4byte __dt__8045F8C8
 	.4byte 0x8200000C
-	.4byte func_8045F8C8
+	.4byte __dt__8045F8C8
 .endobj "@etb_8000B2A0"
 
 .obj "@etb_8000B2D0", local

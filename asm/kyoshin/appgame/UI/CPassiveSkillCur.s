@@ -44,13 +44,13 @@
 /* 80263F34 0022D4F4  7C 08 02 A6 */	mflr r0
 /* 80263F38 0022D4F8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80263F3C 0022D4FC  BF C1 00 08 */	stmw r30, 8(r1)
-/* 80263F40 0022D500  3F E0 80 51 */	lis r31, lbl_805092B8@ha
+/* 80263F40 0022D500  3F E0 80 51 */	lis r31, CPassiveSkill_strpool@ha
 /* 80263F44 0022D504  7C 7E 1B 78 */	mr r30, r3
-/* 80263F48 0022D508  38 BF 92 B8 */	addi r5, r31, lbl_805092B8@l
+/* 80263F48 0022D508  38 BF 92 B8 */	addi r5, r31, CPassiveSkill_strpool@l
 /* 80263F4C 0022D50C  80 83 00 04 */	lwz r4, 4(r3)
 /* 80263F50 0022D510  38 63 00 08 */	addi r3, r3, 8
 /* 80263F54 0022D514  4B ED 2F 31 */	bl func_80136E84
-/* 80263F58 0022D518  3B FF 92 B8 */	addi r31, r31, lbl_805092B8@l
+/* 80263F58 0022D518  3B FF 92 B8 */	addi r31, r31, CPassiveSkill_strpool@l
 /* 80263F5C 0022D51C  80 7E 00 08 */	lwz r3, 8(r30)
 /* 80263F60 0022D520  80 BE 00 04 */	lwz r5, 4(r30)
 /* 80263F64 0022D524  38 9E 00 0C */	addi r4, r30, 0xc
@@ -251,8 +251,8 @@
 /* 80264208 0022D7C8  7C 08 02 A6 */	mflr r0
 /* 8026420C 0022D7CC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80264210 0022D7D0  BF C1 00 08 */	stmw r30, 8(r1)
-/* 80264214 0022D7D4  3F E0 80 51 */	lis r31, lbl_805092B8@ha
-/* 80264218 0022D7D8  3B FF 92 B8 */	addi r31, r31, lbl_805092B8@l
+/* 80264214 0022D7D4  3F E0 80 51 */	lis r31, CPassiveSkill_strpool@ha
+/* 80264218 0022D7D8  3B FF 92 B8 */	addi r31, r31, CPassiveSkill_strpool@l
 /* 8026421C 0022D7DC  7C 7E 1B 78 */	mr r30, r3
 /* 80264220 0022D7E0  38 BF 00 50 */	addi r5, r31, 0x50
 /* 80264224 0022D7E4  80 83 00 00 */	lwz r4, 0(r3)

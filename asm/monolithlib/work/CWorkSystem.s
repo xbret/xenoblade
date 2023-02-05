@@ -44,7 +44,7 @@
 /* 8044449C 0040DA5C  38 00 00 00 */	li r0, 0
 /* 804444A0 0040DA60  90 0D BD 7C */	stw r0, lbl_80667EFC@sda21(r13)
 /* 804444A4 0040DA64  38 80 00 00 */	li r4, 0
-/* 804444A8 0040DA68  4B FF 36 21 */	bl func_80437AC8
+/* 804444A8 0040DA68  4B FF 36 21 */	bl __dt__CWorkThread
 /* 804444AC 0040DA6C  2C 1F 00 00 */	cmpwi r31, 0
 /* 804444B0 0040DA70  40 81 00 0C */	ble .L_804444BC
 /* 804444B4 0040DA74  7F C3 F3 78 */	mr r3, r30
@@ -123,8 +123,8 @@
 /* 80444590 0040DB50  4B F2 0C 61 */	bl VIWaitForRetrace
 /* 80444594 0040DB54  4B F2 0C 5D */	bl VIWaitForRetrace
 /* 80444598 0040DB58  4B F2 0C 59 */	bl VIWaitForRetrace
-/* 8044459C 0040DB5C  3C 60 80 52 */	lis r3, lbl_805260B4@ha
-/* 804445A0 0040DB60  38 63 60 B4 */	addi r3, r3, lbl_805260B4@l
+/* 8044459C 0040DB5C  3C 60 80 52 */	lis r3, CWorkSystem_strpool@ha
+/* 804445A0 0040DB60  38 63 60 B4 */	addi r3, r3, CWorkSystem_strpool@l
 /* 804445A4 0040DB64  4C C6 31 82 */	crclr 6
 /* 804445A8 0040DB68  4B F1 09 49 */	bl OSReport #exit wii power off
 /* 804445AC 0040DB6C  4B F1 5C 25 */	bl OSShutdownSystem
@@ -147,8 +147,8 @@
 /* 804445EC 0040DBAC  4B F2 0C 05 */	bl VIWaitForRetrace
 /* 804445F0 0040DBB0  4B F2 0C 01 */	bl VIWaitForRetrace
 /* 804445F4 0040DBB4  4B F2 0B FD */	bl VIWaitForRetrace
-/* 804445F8 0040DBB8  3C 60 80 52 */	lis r3, lbl_805260B4@ha
-/* 804445FC 0040DBBC  38 63 60 B4 */	addi r3, r3, lbl_805260B4@l
+/* 804445F8 0040DBB8  3C 60 80 52 */	lis r3, CWorkSystem_strpool@ha
+/* 804445FC 0040DBBC  38 63 60 B4 */	addi r3, r3, CWorkSystem_strpool@l
 /* 80444600 0040DBC0  38 63 00 14 */	addi r3, r3, 0x14
 /* 80444604 0040DBC4  4C C6 31 82 */	crclr 6
 /* 80444608 0040DBC8  4B F1 08 E9 */	bl OSReport #exit wii reset
@@ -174,8 +174,8 @@
 /* 80444648 0040DC08  38 60 00 00 */	li r3, 0
 /* 8044464C 0040DC0C  48 00 01 0C */	b .L_80444758
 .L_80444650:
-/* 80444650 0040DC10  3C 60 80 52 */	lis r3, lbl_805260B4@ha
-/* 80444654 0040DC14  38 63 60 B4 */	addi r3, r3, lbl_805260B4@l
+/* 80444650 0040DC10  3C 60 80 52 */	lis r3, CWorkSystem_strpool@ha
+/* 80444654 0040DC14  38 63 60 B4 */	addi r3, r3, CWorkSystem_strpool@l
 /* 80444658 0040DC18  3B E3 00 24 */	addi r31, r3, 0x24
 /* 8044465C 0040DC1C  4B FF 2F 59 */	bl func_804375B4
 /* 80444660 0040DC20  7C 64 1B 78 */	mr r4, r3
@@ -191,9 +191,9 @@
 /* 80444684 0040DC44  38 A0 00 00 */	li r5, 0
 /* 80444688 0040DC48  4B FF 45 51 */	bl func_80438BD8
 /* 8044468C 0040DC4C  48 00 02 E5 */	bl func_80444970
-/* 80444690 0040DC50  3C 80 80 52 */	lis r4, lbl_805260B4@ha
+/* 80444690 0040DC50  3C 80 80 52 */	lis r4, CWorkSystem_strpool@ha
 /* 80444694 0040DC54  90 7E 01 C4 */	stw r3, 0x1c4(r30)
-/* 80444698 0040DC58  38 84 60 B4 */	addi r4, r4, lbl_805260B4@l
+/* 80444698 0040DC58  38 84 60 B4 */	addi r4, r4, CWorkSystem_strpool@l
 /* 8044469C 0040DC5C  3B E4 00 33 */	addi r31, r4, 0x33
 /* 804446A0 0040DC60  4B FF 2F 15 */	bl func_804375B4
 /* 804446A4 0040DC64  7C 64 1B 78 */	mr r4, r3
@@ -208,8 +208,8 @@
 /* 804446C4 0040DC84  7F C4 F3 78 */	mr r4, r30
 /* 804446C8 0040DC88  38 A0 00 00 */	li r5, 0
 /* 804446CC 0040DC8C  4B FF 45 0D */	bl func_80438BD8
-/* 804446D0 0040DC90  3C 60 80 52 */	lis r3, lbl_805260B4@ha
-/* 804446D4 0040DC94  38 63 60 B4 */	addi r3, r3, lbl_805260B4@l
+/* 804446D0 0040DC90  3C 60 80 52 */	lis r3, CWorkSystem_strpool@ha
+/* 804446D4 0040DC94  38 63 60 B4 */	addi r3, r3, CWorkSystem_strpool@l
 /* 804446D8 0040DC98  3B E3 00 44 */	addi r31, r3, 0x44
 /* 804446DC 0040DC9C  4B FF 2E D9 */	bl func_804375B4
 /* 804446E0 0040DCA0  7C 64 1B 78 */	mr r4, r3
@@ -258,9 +258,9 @@
 /* 80444778 0040DD38  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8044477C 0040DD3C  7C 7F 1B 78 */	mr r31, r3
 /* 80444780 0040DD40  4B FF 53 55 */	bl func_80439AD4
-/* 80444784 0040DD44  3C C0 80 52 */	lis r6, lbl_805260B4@ha
+/* 80444784 0040DD44  3C C0 80 52 */	lis r6, CWorkSystem_strpool@ha
 /* 80444788 0040DD48  7C 60 00 34 */	cntlzw r0, r3
-/* 8044478C 0040DD4C  38 C6 60 B4 */	addi r6, r6, lbl_805260B4@l
+/* 8044478C 0040DD4C  38 C6 60 B4 */	addi r6, r6, CWorkSystem_strpool@l
 /* 80444790 0040DD50  7F E3 FB 78 */	mr r3, r31
 /* 80444794 0040DD54  54 05 D9 7E */	srwi r5, r0, 5
 /* 80444798 0040DD58  38 80 75 30 */	li r4, 0x7530
@@ -299,9 +299,9 @@
 /* 80444804 0040DDC4  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80444808 0040DDC8  BF A1 00 14 */	stmw r29, 0x14(r1)
 /* 8044480C 0040DDCC  4B FF EF B1 */	bl func_804437BC
-/* 80444810 0040DDD0  3C 80 80 52 */	lis r4, lbl_805260B4@ha
+/* 80444810 0040DDD0  3C 80 80 52 */	lis r4, CWorkSystem_strpool@ha
 /* 80444814 0040DDD4  7C 7E 1B 78 */	mr r30, r3
-/* 80444818 0040DDD8  38 84 60 B4 */	addi r4, r4, lbl_805260B4@l
+/* 80444818 0040DDD8  38 84 60 B4 */	addi r4, r4, CWorkSystem_strpool@l
 /* 8044481C 0040DDDC  3B E4 00 6D */	addi r31, r4, 0x6d
 /* 80444820 0040DDE0  4B FF 2D 95 */	bl func_804375B4
 /* 80444824 0040DDE4  7C 64 1B 78 */	mr r4, r3
@@ -361,8 +361,8 @@ CWorkSystem_typestr:
 	.asciz "CWorkSystem"
 
 
-.global lbl_805260B4
-lbl_805260B4:
+.global CWorkSystem_strpool
+CWorkSystem_strpool:
 	.asciz "exit wii power off\n"
 	.asciz "exit wii reset\n"
 	.asciz "CWorkSystemMem"

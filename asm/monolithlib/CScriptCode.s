@@ -61,7 +61,7 @@
 /* 8043A19C 0040375C  48 00 08 41 */	bl func_8043A9DC
 /* 8043A1A0 00403760  7F 63 DB 78 */	mr r3, r27
 /* 8043A1A4 00403764  38 80 00 00 */	li r4, 0
-/* 8043A1A8 00403768  4B FF D9 21 */	bl func_80437AC8
+/* 8043A1A8 00403768  4B FF D9 21 */	bl __dt__CWorkThread
 /* 8043A1AC 0040376C  2C 1C 00 00 */	cmpwi r28, 0
 /* 8043A1B0 00403770  40 81 00 0C */	ble .L_8043A1BC
 /* 8043A1B4 00403774  7F 63 DB 78 */	mr r3, r27
@@ -789,7 +789,7 @@ lbl_80667E90:
 	.4byte func_8043A9DC
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_80437AC8
+	.4byte __dt__CWorkThread
 .endobj "@etb_8001C310"
 
 .section extabindex, "a" # 0x80021020 - 0x80039220

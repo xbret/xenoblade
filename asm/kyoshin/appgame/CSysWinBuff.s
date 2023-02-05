@@ -16,7 +16,7 @@
 /* 802744F4 0023DAB4  41 82 00 38 */	beq .L_8027452C
 /* 802744F8 0023DAB8  38 80 FF FF */	li r4, -1
 /* 802744FC 0023DABC  38 63 00 7C */	addi r3, r3, 0x7c
-/* 80274500 0023DAC0  4B FB 71 A1 */	bl func_8022B6A0
+/* 80274500 0023DAC0  4B FB 71 A1 */	bl __dt__CSysWin
 /* 80274504 0023DAC4  2C 1E 00 00 */	cmpwi r30, 0
 /* 80274508 0023DAC8  41 82 00 14 */	beq .L_8027451C
 /* 8027450C 0023DACC  41 82 00 10 */	beq .L_8027451C
@@ -60,16 +60,16 @@
 /* 8027458C 0023DB4C  3B DF 00 6C */	addi r30, r31, 0x6c
 .L_80274590:
 /* 80274590 0023DB50  4B E3 58 01 */	bl func_800A9D90
-/* 80274594 0023DB54  3C 80 80 51 */	lis r4, lbl_8050A244@ha
+/* 80274594 0023DB54  3C 80 80 51 */	lis r4, CSysWinBuff_strpool@ha
 /* 80274598 0023DB58  7F C5 F3 78 */	mr r5, r30
-/* 8027459C 0023DB5C  38 84 A2 44 */	addi r4, r4, lbl_8050A244@l
+/* 8027459C 0023DB5C  38 84 A2 44 */	addi r4, r4, CSysWinBuff_strpool@l
 /* 802745A0 0023DB60  38 C0 00 00 */	li r6, 0
 /* 802745A4 0023DB64  38 E0 00 00 */	li r7, 0
 /* 802745A8 0023DB68  48 1D A5 BD */	bl func_8044EB64
 /* 802745AC 0023DB6C  90 7F 00 74 */	stw r3, 0x74(r31)
 /* 802745B0 0023DB70  38 61 00 08 */	addi r3, r1, 8
 /* 802745B4 0023DB74  38 80 00 00 */	li r4, 0
-/* 802745B8 0023DB78  4B FB 70 61 */	bl func_8022B618
+/* 802745B8 0023DB78  4B FB 70 61 */	bl __ct__CSysWin
 /* 802745BC 0023DB7C  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 802745C0 0023DB80  38 61 00 08 */	addi r3, r1, 8
 /* 802745C4 0023DB84  90 1F 00 80 */	stw r0, 0x80(r31)
@@ -108,7 +108,7 @@
 /* 80274648 0023DC08  98 1F 00 B4 */	stb r0, 0xb4(r31)
 /* 8027464C 0023DC0C  88 01 00 41 */	lbz r0, 0x41(r1)
 /* 80274650 0023DC10  98 1F 00 B5 */	stb r0, 0xb5(r31)
-/* 80274654 0023DC14  4B FB 70 4D */	bl func_8022B6A0
+/* 80274654 0023DC14  4B FB 70 4D */	bl __dt__CSysWin
 /* 80274658 0023DC18  81 9F 00 7C */	lwz r12, 0x7c(r31)
 /* 8027465C 0023DC1C  38 7F 00 7C */	addi r3, r31, 0x7c
 /* 80274660 0023DC20  81 8C 00 88 */	lwz r12, 0x88(r12)
@@ -208,9 +208,9 @@
 /* 802747AC 0023DD6C  41 82 00 E4 */	beq .L_80274890
 /* 802747B0 0023DD70  38 00 00 01 */	li r0, 1
 /* 802747B4 0023DD74  98 1F 00 B8 */	stb r0, 0xb8(r31)
-/* 802747B8 0023DD78  3F C0 80 51 */	lis r30, lbl_8050A244@ha
+/* 802747B8 0023DD78  3F C0 80 51 */	lis r30, CSysWinBuff_strpool@ha
 /* 802747BC 0023DD7C  A0 BF 00 BA */	lhz r5, 0xba(r31)
-/* 802747C0 0023DD80  3B DE A2 44 */	addi r30, r30, lbl_8050A244@l
+/* 802747C0 0023DD80  3B DE A2 44 */	addi r30, r30, CSysWinBuff_strpool@l
 /* 802747C4 0023DD84  80 6D A8 50 */	lwz r3, lbl_806669D0@sda21(r13)
 /* 802747C8 0023DD88  38 9E 00 18 */	addi r4, r30, 0x18
 /* 802747CC 0023DD8C  4B EC 1A 89 */	bl func_80136254
@@ -384,7 +384,7 @@
 /* 80274A2C 0023DFEC  90 1F 00 70 */	stw r0, 0x70(r31)
 /* 80274A30 0023DFF0  93 7F 00 74 */	stw r27, 0x74(r31)
 /* 80274A34 0023DFF4  93 BF 00 78 */	stw r29, 0x78(r31)
-/* 80274A38 0023DFF8  4B FB 6B E1 */	bl func_8022B618
+/* 80274A38 0023DFF8  4B FB 6B E1 */	bl __ct__CSysWin
 /* 80274A3C 0023DFFC  9B 7F 00 B8 */	stb r27, 0xb8(r31)
 /* 80274A40 0023E000  38 60 00 01 */	li r3, 1
 /* 80274A44 0023E004  B3 DF 00 BA */	sth r30, 0xba(r31)
@@ -427,8 +427,8 @@
 /* 80274AB8 0023E078  93 E5 00 04 */	stw r31, 4(r5)
 /* 80274ABC 0023E07C  4B DC 5F BD */	bl func_8003AA78
 /* 80274AC0 0023E080  4B DC 5F 75 */	bl func_8003AA34
-/* 80274AC4 0023E084  3C 60 80 51 */	lis r3, lbl_8050A244@ha
-/* 80274AC8 0023E088  38 63 A2 44 */	addi r3, r3, lbl_8050A244@l
+/* 80274AC4 0023E084  3C 60 80 51 */	lis r3, CSysWinBuff_strpool@ha
+/* 80274AC8 0023E088  38 63 A2 44 */	addi r3, r3, CSysWinBuff_strpool@l
 /* 80274ACC 0023E08C  38 63 00 1D */	addi r3, r3, 0x1d
 /* 80274AD0 0023E090  4B DC 5F D5 */	bl func_8003AAA4
 /* 80274AD4 0023E094  90 6D B0 54 */	stw r3, lbl_806671D4@sda21(r13)
@@ -483,8 +483,8 @@ CSysWinBuff_typestr:
 	.asciz "CSysWinBuff"
 
 
-.global lbl_8050A244
-lbl_8050A244:
+.global CSysWinBuff_strpool
+CSysWinBuff_strpool:
 	.asciz "/common/jp/bdat_mes.bin"
 	.asciz "help"
 	.asciz "MNU_buff"
@@ -599,7 +599,7 @@ lbl_806671D4:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x0000007C
-	.4byte func_8022B6A0
+	.4byte __dt__CSysWin
 	.4byte 0x0680001E
 	.4byte 0x00000070
 	.4byte func_8004031C
@@ -646,7 +646,7 @@ lbl_806671D4:
 	.4byte 0x00000000
 	.4byte 0x0780001F
 	.4byte 0x0000007C
-	.4byte func_8022B6A0
+	.4byte __dt__CSysWin
 	.4byte 0x0680001F
 	.4byte 0x00000070
 	.4byte func_8004031C

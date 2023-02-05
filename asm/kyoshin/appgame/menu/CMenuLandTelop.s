@@ -52,7 +52,7 @@
 /* 80144658 0010DC18  90 9C 00 6C */	stw r4, 0x6c(r28)
 /* 8014465C 0010DC1C  90 1C 00 70 */	stw r0, 0x70(r28)
 /* 80144660 0010DC20  93 BC 00 74 */	stw r29, 0x74(r28)
-/* 80144664 0010DC24  48 31 AF 01 */	bl func_8045F564
+/* 80144664 0010DC24  48 31 AF 01 */	bl __ct__8045F564
 /* 80144668 0010DC28  38 BC 00 9E */	addi r5, r28, 0x9e
 /* 8014466C 0010DC2C  38 7C 00 DA */	addi r3, r28, 0xda
 /* 80144670 0010DC30  C0 02 99 08 */	lfs f0, float_80669C88@sda21(r2)
@@ -147,7 +147,7 @@
 /* 801447B0 0010DD70  41 82 00 38 */	beq .L_801447E8
 /* 801447B4 0010DD74  38 80 FF FF */	li r4, -1
 /* 801447B8 0010DD78  38 63 00 78 */	addi r3, r3, 0x78
-/* 801447BC 0010DD7C  48 31 AD C5 */	bl func_8045F580
+/* 801447BC 0010DD7C  48 31 AD C5 */	bl __dt__8045F580
 /* 801447C0 0010DD80  2C 1E 00 00 */	cmpwi r30, 0
 /* 801447C4 0010DD84  41 82 00 14 */	beq .L_801447D8
 /* 801447C8 0010DD88  41 82 00 10 */	beq .L_801447D8
@@ -346,25 +346,25 @@
 /* 80144A64 0010E024  98 7F 00 E0 */	stb r3, 0xe0(r31)
 /* 80144A68 0010E028  40 82 03 94 */	bne .L_80144DFC
 .L_80144A6C:
-/* 80144A6C 0010E02C  3F A0 80 50 */	lis r29, lbl_804FCF50@ha
+/* 80144A6C 0010E02C  3F A0 80 50 */	lis r29, CMenuLandTelop_strpool@ha
 /* 80144A70 0010E030  A0 BF 00 8C */	lhz r5, 0x8c(r31)
-/* 80144A74 0010E034  38 7D CF 50 */	addi r3, r29, lbl_804FCF50@l
+/* 80144A74 0010E034  38 7D CF 50 */	addi r3, r29, CMenuLandTelop_strpool@l
 /* 80144A78 0010E038  38 83 00 0D */	addi r4, r3, 0xd
 /* 80144A7C 0010E03C  4B FF 15 F1 */	bl func_8013606C
 /* 80144A80 0010E040  54 79 04 3E */	clrlwi r25, r3, 0x10
-/* 80144A84 0010E044  38 7D CF 50 */	addi r3, r29, lbl_804FCF50@l
+/* 80144A84 0010E044  38 7D CF 50 */	addi r3, r29, CMenuLandTelop_strpool@l
 /* 80144A88 0010E048  A0 BF 00 8C */	lhz r5, 0x8c(r31)
 /* 80144A8C 0010E04C  38 83 00 14 */	addi r4, r3, 0x14
 /* 80144A90 0010E050  4B FF 15 7D */	bl func_8013600C
 /* 80144A94 0010E054  2C 19 00 00 */	cmpwi r25, 0
 /* 80144A98 0010E058  7C 7B 1B 78 */	mr r27, r3
 /* 80144A9C 0010E05C  41 82 01 5C */	beq .L_80144BF8
-/* 80144AA0 0010E060  38 7D CF 50 */	addi r3, r29, lbl_804FCF50@l
+/* 80144AA0 0010E060  38 7D CF 50 */	addi r3, r29, CMenuLandTelop_strpool@l
 /* 80144AA4 0010E064  A0 BF 00 8C */	lhz r5, 0x8c(r31)
 /* 80144AA8 0010E068  38 83 00 1D */	addi r4, r3, 0x1d
 /* 80144AAC 0010E06C  4B FF 15 C1 */	bl func_8013606C
 /* 80144AB0 0010E070  7C 7C 1B 78 */	mr r28, r3
-/* 80144AB4 0010E074  38 7D CF 50 */	addi r3, r29, lbl_804FCF50@l
+/* 80144AB4 0010E074  38 7D CF 50 */	addi r3, r29, CMenuLandTelop_strpool@l
 /* 80144AB8 0010E078  A0 BF 00 8C */	lhz r5, 0x8c(r31)
 /* 80144ABC 0010E07C  38 83 00 23 */	addi r4, r3, 0x23
 /* 80144AC0 0010E080  4B FF 15 AD */	bl func_8013606C
@@ -468,9 +468,9 @@
 /* 80144C18 0010E1D8  48 35 13 D9 */	bl func_80495FF0
 /* 80144C1C 0010E1DC  7C 7E 1B 78 */	mr r30, r3
 /* 80144C20 0010E1E0  48 04 49 CD */	bl func_801895EC
-/* 80144C24 0010E1E4  3C 80 80 50 */	lis r4, lbl_804FCF50@ha
+/* 80144C24 0010E1E4  3C 80 80 50 */	lis r4, CMenuLandTelop_strpool@ha
 /* 80144C28 0010E1E8  7F C5 F3 78 */	mr r5, r30
-/* 80144C2C 0010E1EC  38 84 CF 50 */	addi r4, r4, lbl_804FCF50@l
+/* 80144C2C 0010E1EC  38 84 CF 50 */	addi r4, r4, CMenuLandTelop_strpool@l
 /* 80144C30 0010E1F0  38 60 00 00 */	li r3, 0
 /* 80144C34 0010E1F4  38 84 00 29 */	addi r4, r4, 0x29
 /* 80144C38 0010E1F8  38 C0 00 02 */	li r6, 2
@@ -483,9 +483,9 @@
 /* 80144C50 0010E210  48 35 13 A1 */	bl func_80495FF0
 /* 80144C54 0010E214  7C 7E 1B 78 */	mr r30, r3
 /* 80144C58 0010E218  48 04 49 95 */	bl func_801895EC
-/* 80144C5C 0010E21C  3C 80 80 50 */	lis r4, lbl_804FCF50@ha
+/* 80144C5C 0010E21C  3C 80 80 50 */	lis r4, CMenuLandTelop_strpool@ha
 /* 80144C60 0010E220  7F C5 F3 78 */	mr r5, r30
-/* 80144C64 0010E224  38 84 CF 50 */	addi r4, r4, lbl_804FCF50@l
+/* 80144C64 0010E224  38 84 CF 50 */	addi r4, r4, CMenuLandTelop_strpool@l
 /* 80144C68 0010E228  38 60 00 00 */	li r3, 0
 /* 80144C6C 0010E22C  38 84 00 39 */	addi r4, r4, 0x39
 /* 80144C70 0010E230  38 C0 00 02 */	li r6, 2
@@ -499,8 +499,8 @@
 /* 80144C8C 0010E24C  7C 7E 1B 78 */	mr r30, r3
 /* 80144C90 0010E250  48 04 49 5D */	bl func_801895EC
 /* 80144C94 0010E254  C0 02 99 2C */	lfs f0, float_80669CAC@sda21(r2)
-/* 80144C98 0010E258  3C 60 80 50 */	lis r3, lbl_804FCF50@ha
-/* 80144C9C 0010E25C  38 63 CF 50 */	addi r3, r3, lbl_804FCF50@l
+/* 80144C98 0010E258  3C 60 80 50 */	lis r3, CMenuLandTelop_strpool@ha
+/* 80144C9C 0010E25C  38 63 CF 50 */	addi r3, r3, CMenuLandTelop_strpool@l
 /* 80144CA0 0010E260  7F C5 F3 78 */	mr r5, r30
 /* 80144CA4 0010E264  EC 20 00 72 */	fmuls f1, f0, f1
 /* 80144CA8 0010E268  38 83 00 49 */	addi r4, r3, 0x49
@@ -1089,9 +1089,9 @@
 /* 8014549C 0010EA5C  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 801454A0 0010EA60  7C 7E 1B 78 */	mr r30, r3
 /* 801454A4 0010EA64  48 2E EE FD */	bl func_804343A0
-/* 801454A8 0010EA68  3F E0 80 50 */	lis r31, lbl_804FCF50@ha
+/* 801454A8 0010EA68  3F E0 80 50 */	lis r31, CMenuLandTelop_strpool@ha
 /* 801454AC 0010EA6C  7C 64 1B 78 */	mr r4, r3
-/* 801454B0 0010EA70  3B FF CF 50 */	addi r31, r31, lbl_804FCF50@l
+/* 801454B0 0010EA70  3B FF CF 50 */	addi r31, r31, CMenuLandTelop_strpool@l
 /* 801454B4 0010EA74  38 7E 00 78 */	addi r3, r30, 0x78
 /* 801454B8 0010EA78  38 DF 00 59 */	addi r6, r31, 0x59
 /* 801454BC 0010EA7C  38 A0 30 00 */	li r5, 0x3000
@@ -1469,7 +1469,7 @@
 /* 80145A68 0010F028  48 31 9D A9 */	bl func_8045F810
 /* 80145A6C 0010F02C  38 61 00 08 */	addi r3, r1, 8
 /* 80145A70 0010F030  38 80 FF FF */	li r4, -1
-/* 80145A74 0010F034  48 31 9E 55 */	bl func_8045F8C8
+/* 80145A74 0010F034  48 31 9E 55 */	bl __dt__8045F8C8
 /* 80145A78 0010F038  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80145A7C 0010F03C  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80145A80 0010F040  83 C1 00 18 */	lwz r30, 0x18(r1)
@@ -1537,8 +1537,8 @@ CMenuLandTelop_typestr:
 	.balign 4
 
 
-.global lbl_804FCF50
-lbl_804FCF50:
+.global CMenuLandTelop_strpool
+CMenuLandTelop_strpool:
 	.asciz "landmarklist"
 	.asciz "getEXP"
 	.asciz "category"
@@ -1741,7 +1741,7 @@ lbl_80666A90:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000078
-	.4byte func_8045F580
+	.4byte __dt__8045F580
 	.4byte 0x0680001E
 	.4byte 0x00000070
 	.4byte func_8004031C
@@ -1803,7 +1803,7 @@ lbl_80666A90:
 	.4byte 0x01650010
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte func_8045F8C8
+	.4byte __dt__8045F8C8
 .endobj "@etb_8000CFC4"
 
 .obj "@etb_8000CFDC", local

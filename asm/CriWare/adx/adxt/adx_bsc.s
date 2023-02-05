@@ -721,8 +721,8 @@
 /* 803873E0 003509A0  80 04 89 F0 */	lwz r0, adxb_dec_err_mode@l(r4)
 /* 803873E4 003509A4  2C 00 00 00 */	cmpwi r0, 0
 /* 803873E8 003509A8  40 82 00 1C */	bne .L_80387404
-/* 803873EC 003509AC  3C 60 80 52 */	lis r3, lbl_8051A9C8@ha
-/* 803873F0 003509B0  38 63 A9 C8 */	addi r3, r3, lbl_8051A9C8@l
+/* 803873EC 003509AC  3C 60 80 52 */	lis r3, adx_bsc_strpool@ha
+/* 803873F0 003509B0  38 63 A9 C8 */	addi r3, r3, adx_bsc_strpool@l
 /* 803873F4 003509B4  38 83 00 1F */	addi r4, r3, 0x1f
 /* 803873F8 003509B8  48 00 2E A5 */	bl ADXERR_CallErrFunc2_
 /* 803873FC 003509BC  38 60 FF FF */	li r3, -1
@@ -755,8 +755,8 @@
 /* 80387460 00350A20  80 1D 00 B8 */	lwz r0, 0xb8(r29)
 /* 80387464 00350A24  2C 00 00 00 */	cmpwi r0, 0
 /* 80387468 00350A28  40 82 00 20 */	bne .L_80387488
-/* 8038746C 00350A2C  3C 80 80 52 */	lis r4, lbl_8051A9C8@ha
-/* 80387470 00350A30  38 84 A9 C8 */	addi r4, r4, lbl_8051A9C8@l
+/* 8038746C 00350A2C  3C 80 80 52 */	lis r4, adx_bsc_strpool@ha
+/* 80387470 00350A30  38 84 A9 C8 */	addi r4, r4, adx_bsc_strpool@l
 /* 80387474 00350A34  38 64 00 3E */	addi r3, r4, 0x3e
 /* 80387478 00350A38  38 84 00 5E */	addi r4, r4, 0x5e
 /* 8038747C 00350A3C  48 00 2E 21 */	bl ADXERR_CallErrFunc2_
@@ -1086,8 +1086,8 @@
 .L_803878F8:
 /* 803878F8 00350EB8  2C 03 00 00 */	cmpwi r3, 0
 /* 803878FC 00350EBC  40 82 00 1C */	bne .L_80387918
-/* 80387900 00350EC0  3C 60 80 52 */	lis r3, lbl_8051A9C8@ha
-/* 80387904 00350EC4  38 63 A9 C8 */	addi r3, r3, lbl_8051A9C8@l
+/* 80387900 00350EC0  3C 60 80 52 */	lis r3, adx_bsc_strpool@ha
+/* 80387904 00350EC4  38 63 A9 C8 */	addi r3, r3, adx_bsc_strpool@l
 /* 80387908 00350EC8  38 63 00 81 */	addi r3, r3, 0x81
 /* 8038790C 00350ECC  48 00 29 0D */	bl ADXERR_CallErrFunc1_
 /* 80387910 00350ED0  38 60 FF FF */	li r3, -1
@@ -1264,9 +1264,9 @@
 .L_80387AEC:
 /* 80387AEC 003510AC  28 05 00 10 */	cmplwi r5, 0x10
 /* 80387AF0 003510B0  41 80 00 3C */	blt .L_80387B2C
-/* 80387AF4 003510B4  3C A0 80 52 */	lis r5, lbl_8051A9C8@ha
+/* 80387AF4 003510B4  3C A0 80 52 */	lis r5, adx_bsc_strpool@ha
 /* 80387AF8 003510B8  38 61 00 08 */	addi r3, r1, 8
-/* 80387AFC 003510BC  38 A5 A9 C8 */	addi r5, r5, lbl_8051A9C8@l
+/* 80387AFC 003510BC  38 A5 A9 C8 */	addi r5, r5, adx_bsc_strpool@l
 /* 80387B00 003510C0  38 80 00 10 */	li r4, 0x10
 /* 80387B04 003510C4  38 A5 00 A7 */	addi r5, r5, 0xa7
 /* 80387B08 003510C8  4C C6 31 82 */	crclr 6
@@ -2430,8 +2430,8 @@ lbl_8051A1C8:
 	.4byte 0x682D6839
 
 
-.global lbl_8051A9C8
-lbl_8051A9C8:
+.global adx_bsc_strpool
+adx_bsc_strpool:
 	.asciz "E04102501 adxsjd_decode_prep: "
 	.asciz "The data alignment is illegal."
 	.asciz "E1060101 ADXB_DecodeHeaderAdx: "

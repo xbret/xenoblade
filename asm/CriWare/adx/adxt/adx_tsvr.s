@@ -87,8 +87,8 @@
 /* 8038487C 0034DE3C  80 1C 00 50 */	lwz r0, 0x50(r28)
 /* 80384880 0034DE40  7C 03 00 00 */	cmpw r3, r0
 /* 80384884 0034DE44  40 80 00 10 */	bge .L_80384894
-/* 80384888 0034DE48  3C 60 80 52 */	lis r3, lbl_8051A120@ha
-/* 8038488C 0034DE4C  38 63 A1 20 */	addi r3, r3, lbl_8051A120@l
+/* 80384888 0034DE48  3C 60 80 52 */	lis r3, adx_tsvr_strpool@ha
+/* 8038488C 0034DE4C  38 63 A1 20 */	addi r3, r3, adx_tsvr_strpool@l
 /* 80384890 0034DE50  48 00 59 89 */	bl ADXERR_CallErrFunc1_
 .L_80384894:
 /* 80384894 0034DE54  80 DE 00 00 */	lwz r6, 0(r30)
@@ -483,9 +483,9 @@
 /* 80384E38 0034E3F8  38 A1 00 10 */	addi r5, r1, 0x10
 /* 80384E3C 0034E3FC  38 C0 00 10 */	li r6, 0x10
 /* 80384E40 0034E400  48 00 57 8D */	bl ADXERR_ItoA2
-/* 80384E44 0034E404  3C 60 80 52 */	lis r3, lbl_8051A120@ha
+/* 80384E44 0034E404  3C 60 80 52 */	lis r3, adx_tsvr_strpool@ha
 /* 80384E48 0034E408  38 81 00 10 */	addi r4, r1, 0x10
-/* 80384E4C 0034E40C  38 63 A1 20 */	addi r3, r3, lbl_8051A120@l
+/* 80384E4C 0034E40C  38 63 A1 20 */	addi r3, r3, adx_tsvr_strpool@l
 /* 80384E50 0034E410  38 63 00 2A */	addi r3, r3, 0x2a
 /* 80384E54 0034E414  48 00 54 49 */	bl ADXERR_CallErrFunc2_
 /* 80384E58 0034E418  7F A3 EB 78 */	mr r3, r29
@@ -1047,8 +1047,8 @@
 /* 80385620 0034EBE0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80385624 0034EBE4  7C 7F 1B 78 */	mr r31, r3
 /* 80385628 0034EBE8  40 82 00 18 */	bne .L_80385640
-/* 8038562C 0034EBEC  3C 60 80 52 */	lis r3, lbl_8051A120@ha
-/* 80385630 0034EBF0  38 63 A1 20 */	addi r3, r3, lbl_8051A120@l
+/* 8038562C 0034EBEC  3C 60 80 52 */	lis r3, adx_tsvr_strpool@ha
+/* 80385630 0034EBF0  38 63 A1 20 */	addi r3, r3, adx_tsvr_strpool@l
 /* 80385634 0034EBF4  38 63 00 69 */	addi r3, r3, 0x69
 /* 80385638 0034EBF8  48 00 4B E1 */	bl ADXERR_CallErrFunc1_
 /* 8038563C 0034EBFC  48 00 00 D0 */	b .L_8038570C
@@ -1119,8 +1119,8 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051A120
-lbl_8051A120:
+.global adx_tsvr_strpool
+adx_tsvr_strpool:
 	.asciz "E8101201 adxt_trap_entry: not enough data"
 	.asciz "E9081001 adxt_stat_decinfo: can't play this number of channels"
 	.asciz "E02080842 adxt_ExecHndl: parameter error"

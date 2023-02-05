@@ -42,7 +42,7 @@
 /* 80108CE0 000D22A0  90 9F 00 58 */	stw r4, 0x58(r31)
 /* 80108CE4 000D22A4  90 1F 00 5C */	stw r0, 0x5c(r31)
 /* 80108CE8 000D22A8  93 BF 00 60 */	stw r29, 0x60(r31)
-/* 80108CEC 000D22AC  48 35 68 79 */	bl func_8045F564
+/* 80108CEC 000D22AC  48 35 68 79 */	bl __ct__8045F564
 /* 80108CF0 000D22B0  C0 02 94 B0 */	lfs f0, float_80669830@sda21(r2)
 /* 80108CF4 000D22B4  38 7F 00 74 */	addi r3, r31, 0x74
 /* 80108CF8 000D22B8  38 1F 07 74 */	addi r0, r31, 0x774
@@ -137,7 +137,7 @@
 /* 80108E48 000D2408  41 82 00 38 */	beq .L_80108E80
 /* 80108E4C 000D240C  38 80 FF FF */	li r4, -1
 /* 80108E50 000D2410  38 63 00 64 */	addi r3, r3, 0x64
-/* 80108E54 000D2414  48 35 67 2D */	bl func_8045F580
+/* 80108E54 000D2414  48 35 67 2D */	bl __dt__8045F580
 /* 80108E58 000D2418  2C 1E 00 00 */	cmpwi r30, 0
 /* 80108E5C 000D241C  41 82 00 14 */	beq .L_80108E70
 /* 80108E60 000D2420  41 82 00 10 */	beq .L_80108E70
@@ -170,18 +170,18 @@
 /* 80108EB8 000D2478  7C 7B 1B 78 */	mr r27, r3
 /* 80108EBC 000D247C  48 32 B4 E5 */	bl func_804343A0
 /* 80108EC0 000D2480  3C A0 00 05 */	lis r5, 0x00051000@ha
-/* 80108EC4 000D2484  3F E0 80 50 */	lis r31, lbl_804F8D44@ha
+/* 80108EC4 000D2484  3F E0 80 50 */	lis r31, CMenuBattleDamage_strpool@ha
 /* 80108EC8 000D2488  7C 64 1B 78 */	mr r4, r3
 /* 80108ECC 000D248C  38 7B 00 64 */	addi r3, r27, 0x64
 /* 80108ED0 000D2490  38 A5 10 00 */	addi r5, r5, 0x00051000@l
-/* 80108ED4 000D2494  38 DF 8D 44 */	addi r6, r31, lbl_804F8D44@l
+/* 80108ED4 000D2494  38 DF 8D 44 */	addi r6, r31, CMenuBattleDamage_strpool@l
 /* 80108ED8 000D2498  38 E0 00 00 */	li r7, 0
 /* 80108EDC 000D249C  48 35 67 A5 */	bl func_8045F680
 /* 80108EE0 000D24A0  38 61 00 08 */	addi r3, r1, 8
 /* 80108EE4 000D24A4  38 9B 00 64 */	addi r4, r27, 0x64
 /* 80108EE8 000D24A8  48 35 69 71 */	bl func_8045F858
 /* 80108EEC 000D24AC  C3 E2 94 B0 */	lfs f31, float_80669830@sda21(r2)
-/* 80108EF0 000D24B0  3B FF 8D 44 */	addi r31, r31, lbl_804F8D44@l
+/* 80108EF0 000D24B0  3B FF 8D 44 */	addi r31, r31, CMenuBattleDamage_strpool@l
 /* 80108EF4 000D24B4  3B A0 00 00 */	li r29, 0
 .L_80108EF8:
 /* 80108EF8 000D24B8  57 A0 06 3E */	clrlwi r0, r29, 0x18
@@ -275,7 +275,7 @@
 /* 80109054 000D2614  48 35 67 BD */	bl func_8045F810
 /* 80109058 000D2618  38 61 00 08 */	addi r3, r1, 8
 /* 8010905C 000D261C  38 80 FF FF */	li r4, -1
-/* 80109060 000D2620  48 35 68 69 */	bl func_8045F8C8
+/* 80109060 000D2620  48 35 68 69 */	bl __dt__8045F8C8
 /* 80109064 000D2624  39 61 00 30 */	addi r11, r1, 0x30
 /* 80109068 000D2628  E3 E1 00 38 */	psq_l f31, 56(r1), 0, qr0
 /* 8010906C 000D262C  CB E1 00 30 */	lfd f31, 0x30(r1)
@@ -813,9 +813,9 @@
 /* 801097C8 000D2D88  41 82 00 8C */	beq .L_80109854
 /* 801097CC 000D2D8C  57 C0 07 39 */	rlwinm. r0, r30, 0, 0x1c, 0x1c
 /* 801097D0 000D2D90  41 82 00 30 */	beq .L_80109800
-/* 801097D4 000D2D94  3F E0 80 50 */	lis r31, lbl_804F8D44@ha
+/* 801097D4 000D2D94  3F E0 80 50 */	lis r31, CMenuBattleDamage_strpool@ha
 /* 801097D8 000D2D98  80 6D A8 D0 */	lwz r3, lbl_80666A50@sda21(r13)
-/* 801097DC 000D2D9C  3B FF 8D 44 */	addi r31, r31, lbl_804F8D44@l
+/* 801097DC 000D2D9C  3B FF 8D 44 */	addi r31, r31, CMenuBattleDamage_strpool@l
 /* 801097E0 000D2DA0  7F A5 EB 78 */	mr r5, r29
 /* 801097E4 000D2DA4  38 9F 00 C4 */	addi r4, r31, 0xc4
 /* 801097E8 000D2DA8  48 02 CB B5 */	bl func_8013639C
@@ -836,8 +836,8 @@
 .L_80109820:
 /* 80109820 000D2DE0  7F A3 EB 78 */	mr r3, r29
 /* 80109824 000D2DE4  48 03 C2 85 */	bl func_80145AA8
-/* 80109828 000D2DE8  3C 80 80 50 */	lis r4, lbl_804F8D44@ha
-/* 8010982C 000D2DEC  38 84 8D 44 */	addi r4, r4, lbl_804F8D44@l
+/* 80109828 000D2DE8  3C 80 80 50 */	lis r4, CMenuBattleDamage_strpool@ha
+/* 8010982C 000D2DEC  38 84 8D 44 */	addi r4, r4, CMenuBattleDamage_strpool@l
 /* 80109830 000D2DF0  38 84 00 C9 */	addi r4, r4, 0xc9
 /* 80109834 000D2DF4  48 1B 90 01 */	bl strcmp
 /* 80109838 000D2DF8  2C 03 00 00 */	cmpwi r3, 0
@@ -1155,25 +1155,25 @@
 /* 80109C84 000D3244  41 82 00 40 */	beq .L_80109CC4
 /* 80109C88 000D3248  48 00 00 54 */	b .L_80109CDC
 .L_80109C8C:
-/* 80109C8C 000D324C  3C 80 80 50 */	lis r4, lbl_804F8D44@ha
+/* 80109C8C 000D324C  3C 80 80 50 */	lis r4, CMenuBattleDamage_strpool@ha
 /* 80109C90 000D3250  38 61 00 08 */	addi r3, r1, 8
-/* 80109C94 000D3254  38 84 8D 44 */	addi r4, r4, lbl_804F8D44@l
+/* 80109C94 000D3254  38 84 8D 44 */	addi r4, r4, CMenuBattleDamage_strpool@l
 /* 80109C98 000D3258  38 84 00 C9 */	addi r4, r4, 0xc9
 /* 80109C9C 000D325C  4C C6 31 82 */	crclr 6
 /* 80109CA0 000D3260  48 1B 73 99 */	bl sprintf
 /* 80109CA4 000D3264  48 00 00 38 */	b .L_80109CDC
 .L_80109CA8:
-/* 80109CA8 000D3268  3C 80 80 50 */	lis r4, lbl_804F8D44@ha
+/* 80109CA8 000D3268  3C 80 80 50 */	lis r4, CMenuBattleDamage_strpool@ha
 /* 80109CAC 000D326C  38 61 00 08 */	addi r3, r1, 8
-/* 80109CB0 000D3270  38 84 8D 44 */	addi r4, r4, lbl_804F8D44@l
+/* 80109CB0 000D3270  38 84 8D 44 */	addi r4, r4, CMenuBattleDamage_strpool@l
 /* 80109CB4 000D3274  38 84 00 CA */	addi r4, r4, 0xca
 /* 80109CB8 000D3278  4C C6 31 82 */	crclr 6
 /* 80109CBC 000D327C  48 1B 73 7D */	bl sprintf
 /* 80109CC0 000D3280  48 00 00 1C */	b .L_80109CDC
 .L_80109CC4:
-/* 80109CC4 000D3284  3C 80 80 50 */	lis r4, lbl_804F8D44@ha
+/* 80109CC4 000D3284  3C 80 80 50 */	lis r4, CMenuBattleDamage_strpool@ha
 /* 80109CC8 000D3288  38 61 00 08 */	addi r3, r1, 8
-/* 80109CCC 000D328C  38 84 8D 44 */	addi r4, r4, lbl_804F8D44@l
+/* 80109CCC 000D328C  38 84 8D 44 */	addi r4, r4, CMenuBattleDamage_strpool@l
 /* 80109CD0 000D3290  38 84 00 CD */	addi r4, r4, 0xcd
 /* 80109CD4 000D3294  4C C6 31 82 */	crclr 6
 /* 80109CD8 000D3298  48 1B 73 61 */	bl sprintf
@@ -1191,9 +1191,9 @@
 /* 80109D04 000D32C4  7C 69 03 A6 */	mtctr r3
 /* 80109D08 000D32C8  4E 80 04 20 */	bctr
 .L_80109D0C:
-/* 80109D0C 000D32CC  3C 80 80 50 */	lis r4, lbl_804F8D44@ha
+/* 80109D0C 000D32CC  3C 80 80 50 */	lis r4, CMenuBattleDamage_strpool@ha
 /* 80109D10 000D32D0  80 DE 00 94 */	lwz r6, 0x94(r30)
-/* 80109D14 000D32D4  38 84 8D 44 */	addi r4, r4, lbl_804F8D44@l
+/* 80109D14 000D32D4  38 84 8D 44 */	addi r4, r4, CMenuBattleDamage_strpool@l
 /* 80109D18 000D32D8  38 61 00 34 */	addi r3, r1, 0x34
 /* 80109D1C 000D32DC  38 84 00 D2 */	addi r4, r4, 0xd2
 /* 80109D20 000D32E0  38 A1 00 08 */	addi r5, r1, 8
@@ -1201,9 +1201,9 @@
 /* 80109D28 000D32E8  4B F3 A2 91 */	bl func_80043FB8
 /* 80109D2C 000D32EC  48 00 01 C8 */	b .L_80109EF4
 .L_80109D30:
-/* 80109D30 000D32F0  3C 80 80 50 */	lis r4, lbl_804F8D44@ha
+/* 80109D30 000D32F0  3C 80 80 50 */	lis r4, CMenuBattleDamage_strpool@ha
 /* 80109D34 000D32F4  80 DE 00 94 */	lwz r6, 0x94(r30)
-/* 80109D38 000D32F8  38 84 8D 44 */	addi r4, r4, lbl_804F8D44@l
+/* 80109D38 000D32F8  38 84 8D 44 */	addi r4, r4, CMenuBattleDamage_strpool@l
 /* 80109D3C 000D32FC  38 61 00 34 */	addi r3, r1, 0x34
 /* 80109D40 000D3300  38 84 00 D2 */	addi r4, r4, 0xd2
 /* 80109D44 000D3304  38 A1 00 08 */	addi r5, r1, 8
@@ -1211,9 +1211,9 @@
 /* 80109D4C 000D330C  4B F3 A2 6D */	bl func_80043FB8
 /* 80109D50 000D3310  48 00 01 A4 */	b .L_80109EF4
 .L_80109D54:
-/* 80109D54 000D3314  3C 80 80 50 */	lis r4, lbl_804F8D44@ha
+/* 80109D54 000D3314  3C 80 80 50 */	lis r4, CMenuBattleDamage_strpool@ha
 /* 80109D58 000D3318  80 DE 00 94 */	lwz r6, 0x94(r30)
-/* 80109D5C 000D331C  38 84 8D 44 */	addi r4, r4, lbl_804F8D44@l
+/* 80109D5C 000D331C  38 84 8D 44 */	addi r4, r4, CMenuBattleDamage_strpool@l
 /* 80109D60 000D3320  38 61 00 34 */	addi r3, r1, 0x34
 /* 80109D64 000D3324  38 84 00 D2 */	addi r4, r4, 0xd2
 /* 80109D68 000D3328  38 A1 00 08 */	addi r5, r1, 8
@@ -1221,9 +1221,9 @@
 /* 80109D70 000D3330  4B F3 A2 49 */	bl func_80043FB8
 /* 80109D74 000D3334  48 00 01 80 */	b .L_80109EF4
 .L_80109D78:
-/* 80109D78 000D3338  3C 80 80 50 */	lis r4, lbl_804F8D44@ha
+/* 80109D78 000D3338  3C 80 80 50 */	lis r4, CMenuBattleDamage_strpool@ha
 /* 80109D7C 000D333C  80 DE 00 94 */	lwz r6, 0x94(r30)
-/* 80109D80 000D3340  38 84 8D 44 */	addi r4, r4, lbl_804F8D44@l
+/* 80109D80 000D3340  38 84 8D 44 */	addi r4, r4, CMenuBattleDamage_strpool@l
 /* 80109D84 000D3344  38 61 00 34 */	addi r3, r1, 0x34
 /* 80109D88 000D3348  38 84 00 D2 */	addi r4, r4, 0xd2
 /* 80109D8C 000D334C  38 A1 00 08 */	addi r5, r1, 8
@@ -1231,9 +1231,9 @@
 /* 80109D94 000D3354  4B F3 A2 25 */	bl func_80043FB8
 /* 80109D98 000D3358  48 00 01 5C */	b .L_80109EF4
 .L_80109D9C:
-/* 80109D9C 000D335C  3F 20 80 50 */	lis r25, lbl_804F8D44@ha
+/* 80109D9C 000D335C  3F 20 80 50 */	lis r25, CMenuBattleDamage_strpool@ha
 /* 80109DA0 000D3360  38 A0 00 0B */	li r5, 0xb
-/* 80109DA4 000D3364  3B 39 8D 44 */	addi r25, r25, lbl_804F8D44@l
+/* 80109DA4 000D3364  3B 39 8D 44 */	addi r25, r25, CMenuBattleDamage_strpool@l
 /* 80109DA8 000D3368  38 79 00 DA */	addi r3, r25, 0xda
 /* 80109DAC 000D336C  38 99 00 C4 */	addi r4, r25, 0xc4
 /* 80109DB0 000D3370  48 02 C3 E1 */	bl func_80136190
@@ -1244,9 +1244,9 @@
 /* 80109DC4 000D3384  4B F3 A1 F5 */	bl func_80043FB8
 /* 80109DC8 000D3388  48 00 01 2C */	b .L_80109EF4
 .L_80109DCC:
-/* 80109DCC 000D338C  3F 20 80 50 */	lis r25, lbl_804F8D44@ha
+/* 80109DCC 000D338C  3F 20 80 50 */	lis r25, CMenuBattleDamage_strpool@ha
 /* 80109DD0 000D3390  38 A0 00 0C */	li r5, 0xc
-/* 80109DD4 000D3394  3B 39 8D 44 */	addi r25, r25, lbl_804F8D44@l
+/* 80109DD4 000D3394  3B 39 8D 44 */	addi r25, r25, CMenuBattleDamage_strpool@l
 /* 80109DD8 000D3398  38 79 00 DA */	addi r3, r25, 0xda
 /* 80109DDC 000D339C  38 99 00 C4 */	addi r4, r25, 0xc4
 /* 80109DE0 000D33A0  48 02 C3 B1 */	bl func_80136190
@@ -1259,9 +1259,9 @@
 /* 80109DFC 000D33BC  4B F3 A1 BD */	bl func_80043FB8
 /* 80109E00 000D33C0  48 00 00 F4 */	b .L_80109EF4
 .L_80109E04:
-/* 80109E04 000D33C4  3F 20 80 50 */	lis r25, lbl_804F8D44@ha
+/* 80109E04 000D33C4  3F 20 80 50 */	lis r25, CMenuBattleDamage_strpool@ha
 /* 80109E08 000D33C8  38 A0 00 0E */	li r5, 0xe
-/* 80109E0C 000D33CC  3B 39 8D 44 */	addi r25, r25, lbl_804F8D44@l
+/* 80109E0C 000D33CC  3B 39 8D 44 */	addi r25, r25, CMenuBattleDamage_strpool@l
 /* 80109E10 000D33D0  38 79 00 DA */	addi r3, r25, 0xda
 /* 80109E14 000D33D4  38 99 00 C4 */	addi r4, r25, 0xc4
 /* 80109E18 000D33D8  48 02 C3 79 */	bl func_80136190
@@ -1274,9 +1274,9 @@
 /* 80109E34 000D33F4  4B F3 A1 85 */	bl func_80043FB8
 /* 80109E38 000D33F8  48 00 00 BC */	b .L_80109EF4
 .L_80109E3C:
-/* 80109E3C 000D33FC  3F 20 80 50 */	lis r25, lbl_804F8D44@ha
+/* 80109E3C 000D33FC  3F 20 80 50 */	lis r25, CMenuBattleDamage_strpool@ha
 /* 80109E40 000D3400  38 A0 00 0D */	li r5, 0xd
-/* 80109E44 000D3404  3B 39 8D 44 */	addi r25, r25, lbl_804F8D44@l
+/* 80109E44 000D3404  3B 39 8D 44 */	addi r25, r25, CMenuBattleDamage_strpool@l
 /* 80109E48 000D3408  38 79 00 DA */	addi r3, r25, 0xda
 /* 80109E4C 000D340C  38 99 00 C4 */	addi r4, r25, 0xc4
 /* 80109E50 000D3410  48 02 C3 41 */	bl func_80136190
@@ -1289,9 +1289,9 @@
 /* 80109E6C 000D342C  4B F3 A1 4D */	bl func_80043FB8
 /* 80109E70 000D3430  48 00 00 84 */	b .L_80109EF4
 .L_80109E74:
-/* 80109E74 000D3434  3F 20 80 50 */	lis r25, lbl_804F8D44@ha
+/* 80109E74 000D3434  3F 20 80 50 */	lis r25, CMenuBattleDamage_strpool@ha
 /* 80109E78 000D3438  38 A0 00 0E */	li r5, 0xe
-/* 80109E7C 000D343C  3B 39 8D 44 */	addi r25, r25, lbl_804F8D44@l
+/* 80109E7C 000D343C  3B 39 8D 44 */	addi r25, r25, CMenuBattleDamage_strpool@l
 /* 80109E80 000D3440  38 79 00 DA */	addi r3, r25, 0xda
 /* 80109E84 000D3444  38 99 00 C4 */	addi r4, r25, 0xc4
 /* 80109E88 000D3448  48 02 C3 09 */	bl func_80136190
@@ -1302,9 +1302,9 @@
 /* 80109E9C 000D345C  4B F3 A1 1D */	bl func_80043FB8
 /* 80109EA0 000D3460  48 00 00 54 */	b .L_80109EF4
 .L_80109EA4:
-/* 80109EA4 000D3464  3F 20 80 50 */	lis r25, lbl_804F8D44@ha
+/* 80109EA4 000D3464  3F 20 80 50 */	lis r25, CMenuBattleDamage_strpool@ha
 /* 80109EA8 000D3468  38 A0 00 0D */	li r5, 0xd
-/* 80109EAC 000D346C  3B 39 8D 44 */	addi r25, r25, lbl_804F8D44@l
+/* 80109EAC 000D346C  3B 39 8D 44 */	addi r25, r25, CMenuBattleDamage_strpool@l
 /* 80109EB0 000D3470  38 79 00 DA */	addi r3, r25, 0xda
 /* 80109EB4 000D3474  38 99 00 C4 */	addi r4, r25, 0xc4
 /* 80109EB8 000D3478  48 02 C2 D9 */	bl func_80136190
@@ -1315,9 +1315,9 @@
 /* 80109ECC 000D348C  4B F3 A0 ED */	bl func_80043FB8
 /* 80109ED0 000D3490  48 00 00 24 */	b .L_80109EF4
 .L_80109ED4:
-/* 80109ED4 000D3494  3C 80 80 50 */	lis r4, lbl_804F8D44@ha
+/* 80109ED4 000D3494  3C 80 80 50 */	lis r4, CMenuBattleDamage_strpool@ha
 /* 80109ED8 000D3498  80 DE 00 94 */	lwz r6, 0x94(r30)
-/* 80109EDC 000D349C  38 84 8D 44 */	addi r4, r4, lbl_804F8D44@l
+/* 80109EDC 000D349C  38 84 8D 44 */	addi r4, r4, CMenuBattleDamage_strpool@l
 /* 80109EE0 000D34A0  38 61 00 34 */	addi r3, r1, 0x34
 /* 80109EE4 000D34A4  38 84 00 D2 */	addi r4, r4, 0xd2
 /* 80109EE8 000D34A8  38 A1 00 08 */	addi r5, r1, 8
@@ -1325,8 +1325,8 @@
 /* 80109EF0 000D34B0  4B F3 A0 C9 */	bl func_80043FB8
 .L_80109EF4:
 /* 80109EF4 000D34B4  80 7E 00 74 */	lwz r3, 0x74(r30)
-/* 80109EF8 000D34B8  3F E0 80 50 */	lis r31, lbl_804F8D44@ha
-/* 80109EFC 000D34BC  3B FF 8D 44 */	addi r31, r31, lbl_804F8D44@l
+/* 80109EF8 000D34B8  3F E0 80 50 */	lis r31, CMenuBattleDamage_strpool@ha
+/* 80109EFC 000D34BC  3B FF 8D 44 */	addi r31, r31, CMenuBattleDamage_strpool@l
 /* 80109F00 000D34C0  38 A0 00 01 */	li r5, 1
 /* 80109F04 000D34C4  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 80109F08 000D34C8  38 9F 00 ED */	addi r4, r31, 0xed
@@ -1450,8 +1450,8 @@
 /* 8010A0CC 000D368C  2C 00 00 00 */	cmpwi r0, 0
 /* 8010A0D0 000D3690  41 82 00 3C */	beq .L_8010A10C
 /* 8010A0D4 000D3694  80 7E 00 74 */	lwz r3, 0x74(r30)
-/* 8010A0D8 000D3698  3C 80 80 50 */	lis r4, lbl_804F8D44@ha
-/* 8010A0DC 000D369C  38 84 8D 44 */	addi r4, r4, lbl_804F8D44@l
+/* 8010A0D8 000D3698  3C 80 80 50 */	lis r4, CMenuBattleDamage_strpool@ha
+/* 8010A0DC 000D369C  38 84 8D 44 */	addi r4, r4, CMenuBattleDamage_strpool@l
 /* 8010A0E0 000D36A0  38 A0 00 01 */	li r5, 1
 /* 8010A0E4 000D36A4  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 8010A0E8 000D36A8  38 84 01 27 */	addi r4, r4, 0x127
@@ -1581,9 +1581,9 @@
 /* 8010A2B8 000D3878  57 7F 07 7B */	rlwinm. r31, r27, 0, 0x1d, 0x1d
 /* 8010A2BC 000D387C  7C 7C 1B 78 */	mr r28, r3
 /* 8010A2C0 000D3880  41 82 00 24 */	beq .L_8010A2E4
-/* 8010A2C4 000D3884  3C 80 80 50 */	lis r4, lbl_804F8D44@ha
+/* 8010A2C4 000D3884  3C 80 80 50 */	lis r4, CMenuBattleDamage_strpool@ha
 /* 8010A2C8 000D3888  80 6D A8 50 */	lwz r3, lbl_806669D0@sda21(r13)
-/* 8010A2CC 000D388C  38 84 8D 44 */	addi r4, r4, lbl_804F8D44@l
+/* 8010A2CC 000D388C  38 84 8D 44 */	addi r4, r4, CMenuBattleDamage_strpool@l
 /* 8010A2D0 000D3890  7F 45 D3 78 */	mr r5, r26
 /* 8010A2D4 000D3894  38 84 00 C4 */	addi r4, r4, 0xc4
 /* 8010A2D8 000D3898  48 02 C0 C5 */	bl func_8013639C
@@ -1592,9 +1592,9 @@
 .L_8010A2E4:
 /* 8010A2E4 000D38A4  57 60 07 39 */	rlwinm. r0, r27, 0, 0x1c, 0x1c
 /* 8010A2E8 000D38A8  41 82 00 24 */	beq .L_8010A30C
-/* 8010A2EC 000D38AC  3C 80 80 50 */	lis r4, lbl_804F8D44@ha
+/* 8010A2EC 000D38AC  3C 80 80 50 */	lis r4, CMenuBattleDamage_strpool@ha
 /* 8010A2F0 000D38B0  80 6D A8 D0 */	lwz r3, lbl_80666A50@sda21(r13)
-/* 8010A2F4 000D38B4  38 84 8D 44 */	addi r4, r4, lbl_804F8D44@l
+/* 8010A2F4 000D38B4  38 84 8D 44 */	addi r4, r4, CMenuBattleDamage_strpool@l
 /* 8010A2F8 000D38B8  7F 45 D3 78 */	mr r5, r26
 /* 8010A2FC 000D38BC  38 84 00 C4 */	addi r4, r4, 0xc4
 /* 8010A300 000D38C0  48 02 C0 9D */	bl func_8013639C
@@ -1611,23 +1611,23 @@
 /* 8010A328 000D38E8  41 82 00 28 */	beq .L_8010A350
 /* 8010A32C 000D38EC  48 00 00 30 */	b .L_8010A35C
 .L_8010A330:
-/* 8010A330 000D38F0  3C 60 80 50 */	lis r3, lbl_804F8D44@ha
-/* 8010A334 000D38F4  38 63 8D 44 */	addi r3, r3, lbl_804F8D44@l
+/* 8010A330 000D38F0  3C 60 80 50 */	lis r3, CMenuBattleDamage_strpool@ha
+/* 8010A334 000D38F4  38 63 8D 44 */	addi r3, r3, CMenuBattleDamage_strpool@l
 /* 8010A338 000D38F8  3B 83 01 30 */	addi r28, r3, 0x130
 /* 8010A33C 000D38FC  48 00 00 20 */	b .L_8010A35C
 .L_8010A340:
-/* 8010A340 000D3900  3C 60 80 50 */	lis r3, lbl_804F8D44@ha
-/* 8010A344 000D3904  38 63 8D 44 */	addi r3, r3, lbl_804F8D44@l
+/* 8010A340 000D3900  3C 60 80 50 */	lis r3, CMenuBattleDamage_strpool@ha
+/* 8010A344 000D3904  38 63 8D 44 */	addi r3, r3, CMenuBattleDamage_strpool@l
 /* 8010A348 000D3908  3B 83 01 3F */	addi r28, r3, 0x13f
 /* 8010A34C 000D390C  48 00 00 10 */	b .L_8010A35C
 .L_8010A350:
-/* 8010A350 000D3910  3C 60 80 50 */	lis r3, lbl_804F8D44@ha
-/* 8010A354 000D3914  38 63 8D 44 */	addi r3, r3, lbl_804F8D44@l
+/* 8010A350 000D3910  3C 60 80 50 */	lis r3, CMenuBattleDamage_strpool@ha
+/* 8010A354 000D3914  38 63 8D 44 */	addi r3, r3, CMenuBattleDamage_strpool@l
 /* 8010A358 000D3918  3B 83 01 4A */	addi r28, r3, 0x14a
 .L_8010A35C:
 /* 8010A35C 000D391C  80 7E 00 88 */	lwz r3, 0x88(r30)
-/* 8010A360 000D3920  3F 20 80 50 */	lis r25, lbl_804F8D44@ha
-/* 8010A364 000D3924  3B 39 8D 44 */	addi r25, r25, lbl_804F8D44@l
+/* 8010A360 000D3920  3F 20 80 50 */	lis r25, CMenuBattleDamage_strpool@ha
+/* 8010A364 000D3924  3B 39 8D 44 */	addi r25, r25, CMenuBattleDamage_strpool@l
 /* 8010A368 000D3928  38 A0 00 01 */	li r5, 1
 /* 8010A36C 000D392C  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 8010A370 000D3930  38 99 01 59 */	addi r4, r25, 0x159
@@ -1690,8 +1690,8 @@
 .L_8010A450:
 /* 8010A450 000D3A10  48 02 B1 A5 */	bl func_801355F4
 /* 8010A454 000D3A14  81 83 00 00 */	lwz r12, 0(r3)
-/* 8010A458 000D3A18  3F 20 80 50 */	lis r25, lbl_804F8D44@ha
-/* 8010A45C 000D3A1C  3B 39 8D 44 */	addi r25, r25, lbl_804F8D44@l
+/* 8010A458 000D3A18  3F 20 80 50 */	lis r25, CMenuBattleDamage_strpool@ha
+/* 8010A45C 000D3A1C  3B 39 8D 44 */	addi r25, r25, CMenuBattleDamage_strpool@l
 /* 8010A460 000D3A20  3F 40 74 69 */	lis r26, 0x74696D67@ha
 /* 8010A464 000D3A24  81 8C 00 0C */	lwz r12, 0xc(r12)
 /* 8010A468 000D3A28  38 9A 6D 67 */	addi r4, r26, 0x74696D67@l
@@ -1753,9 +1753,9 @@
 .L_8010A53C:
 /* 8010A53C 000D3AFC  2C 05 00 00 */	cmpwi r5, 0
 /* 8010A540 000D3B00  41 82 00 18 */	beq .L_8010A558
-/* 8010A544 000D3B04  3C 80 80 50 */	lis r4, lbl_804F8D44@ha
+/* 8010A544 000D3B04  3C 80 80 50 */	lis r4, CMenuBattleDamage_strpool@ha
 /* 8010A548 000D3B08  80 7E 00 88 */	lwz r3, 0x88(r30)
-/* 8010A54C 000D3B0C  38 84 8D 44 */	addi r4, r4, lbl_804F8D44@l
+/* 8010A54C 000D3B0C  38 84 8D 44 */	addi r4, r4, CMenuBattleDamage_strpool@l
 /* 8010A550 000D3B10  38 84 01 DB */	addi r4, r4, 0x1db
 /* 8010A554 000D3B14  48 02 D9 29 */	bl func_80137E7C
 .L_8010A558:
@@ -1866,7 +1866,7 @@
 /* 8010A6B4 000D3C74  41 82 00 20 */	beq .L_8010A6D4
 /* 8010A6B8 000D3C78  38 80 FF FF */	li r4, -1
 /* 8010A6BC 000D3C7C  38 63 00 04 */	addi r3, r3, 4
-/* 8010A6C0 000D3C80  48 35 4E C1 */	bl func_8045F580
+/* 8010A6C0 000D3C80  48 35 4E C1 */	bl __dt__8045F580
 /* 8010A6C4 000D3C84  2C 1F 00 00 */	cmpwi r31, 0
 /* 8010A6C8 000D3C88  40 81 00 0C */	ble .L_8010A6D4
 /* 8010A6CC 000D3C8C  7F C3 F3 78 */	mr r3, r30
@@ -1989,9 +1989,9 @@
 /* 8010A858 000D3E18  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 8010A85C 000D3E1C  7C 7F 1B 78 */	mr r31, r3
 /* 8010A860 000D3E20  98 83 00 29 */	stb r4, 0x29(r3)
-/* 8010A864 000D3E24  3C 80 80 50 */	lis r4, lbl_804F8F68@ha
+/* 8010A864 000D3E24  3C 80 80 50 */	lis r4, CMenuBattlePlayerState_strpool@ha
 /* 8010A868 000D3E28  80 C3 00 18 */	lwz r6, 0x18(r3)
-/* 8010A86C 000D3E2C  38 84 8F 68 */	addi r4, r4, lbl_804F8F68@l
+/* 8010A86C 000D3E2C  38 84 8F 68 */	addi r4, r4, CMenuBattlePlayerState_strpool@l
 /* 8010A870 000D3E30  38 84 00 95 */	addi r4, r4, 0x95
 /* 8010A874 000D3E34  80 66 00 10 */	lwz r3, 0x10(r6)
 /* 8010A878 000D3E38  81 83 00 00 */	lwz r12, 0(r3)
@@ -2320,9 +2320,9 @@
 .L_8010AD1C:
 /* 8010AD1C 000D42DC  38 00 00 01 */	li r0, 1
 /* 8010AD20 000D42E0  98 03 00 0C */	stb r0, 0xc(r3)
-/* 8010AD24 000D42E4  3F E0 80 50 */	lis r31, lbl_804F8F68@ha
+/* 8010AD24 000D42E4  3F E0 80 50 */	lis r31, CMenuBattlePlayerState_strpool@ha
 /* 8010AD28 000D42E8  80 63 00 04 */	lwz r3, 4(r3)
-/* 8010AD2C 000D42EC  3B FF 8F 68 */	addi r31, r31, lbl_804F8F68@l
+/* 8010AD2C 000D42EC  3B FF 8F 68 */	addi r31, r31, CMenuBattlePlayerState_strpool@l
 /* 8010AD30 000D42F0  80 BE 00 10 */	lwz r5, 0x10(r30)
 /* 8010AD34 000D42F4  38 9F 00 E1 */	addi r4, r31, 0xe1
 /* 8010AD38 000D42F8  48 02 BB D9 */	bl func_80136910
@@ -2367,8 +2367,8 @@ CMenuBattleDamage_typestr:
 	.balign 4
 
 
-.global lbl_804F8D44
-lbl_804F8D44:
+.global CMenuBattleDamage_strpool
+CMenuBattleDamage_strpool:
 	.asciz "CMenuBattleDamage"
 	.asciz "mf71_battle15_damege.brlyt"
 	.asciz "mf71_battle15_damege_dot.brlan"
@@ -2645,7 +2645,7 @@ lbl_80666820:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000064
-	.4byte func_8045F580
+	.4byte __dt__8045F580
 	.4byte 0x0680001E
 	.4byte 0x0000005C
 	.4byte func_8004031C
@@ -2661,7 +2661,7 @@ lbl_80666820:
 	.4byte 0x00530010
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte func_8045F8C8
+	.4byte __dt__8045F8C8
 .endobj "@etb_8000B114"
 
 .obj "@etb_8000B12C", local

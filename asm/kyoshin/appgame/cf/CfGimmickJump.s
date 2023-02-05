@@ -48,14 +48,14 @@
 /* 8020EFA8 001D8568  38 9E 00 E8 */	addi r4, r30, 0xe8
 /* 8020EFAC 001D856C  38 C1 00 3C */	addi r6, r1, 0x3c
 /* 8020EFB0 001D8570  4B FF A1 AD */	bl func_8020915C
-/* 8020EFB4 001D8574  3F 80 80 50 */	lis r28, lbl_80503E5C@ha
+/* 8020EFB4 001D8574  3F 80 80 50 */	lis r28, CfGimmickJump_strpool@ha
 /* 8020EFB8 001D8578  80 61 00 3C */	lwz r3, 0x3c(r1)
 /* 8020EFBC 001D857C  7F E5 FB 78 */	mr r5, r31
-/* 8020EFC0 001D8580  38 9C 3E 5C */	addi r4, r28, lbl_80503E5C@l
+/* 8020EFC0 001D8580  38 9C 3E 5C */	addi r4, r28, CfGimmickJump_strpool@l
 /* 8020EFC4 001D8584  4B E2 BB 85 */	bl func_8003AB48
 /* 8020EFC8 001D8588  6C 60 80 00 */	xoris r0, r3, 0x8000
 /* 8020EFCC 001D858C  90 01 00 44 */	stw r0, 0x44(r1)
-/* 8020EFD0 001D8590  3B 9C 3E 5C */	addi r28, r28, lbl_80503E5C@l
+/* 8020EFD0 001D8590  3B 9C 3E 5C */	addi r28, r28, CfGimmickJump_strpool@l
 /* 8020EFD4 001D8594  C8 42 A9 50 */	lfd f2, double_8066ACD0@sda21(r2)
 /* 8020EFD8 001D8598  C8 21 00 40 */	lfd f1, 0x40(r1)
 /* 8020EFDC 001D859C  7F E5 FB 78 */	mr r5, r31
@@ -123,9 +123,9 @@
 /* 8020F0CC 001D868C  90 7E 01 34 */	stw r3, 0x134(r30)
 /* 8020F0D0 001D8690  90 1E 01 38 */	stw r0, 0x138(r30)
 .L_8020F0D4:
-/* 8020F0D4 001D8694  3F 80 80 50 */	lis r28, lbl_80503E5C@ha
+/* 8020F0D4 001D8694  3F 80 80 50 */	lis r28, CfGimmickJump_strpool@ha
 /* 8020F0D8 001D8698  80 61 00 3C */	lwz r3, 0x3c(r1)
-/* 8020F0DC 001D869C  3B 9C 3E 5C */	addi r28, r28, lbl_80503E5C@l
+/* 8020F0DC 001D869C  3B 9C 3E 5C */	addi r28, r28, CfGimmickJump_strpool@l
 /* 8020F0E0 001D86A0  7F E5 FB 78 */	mr r5, r31
 /* 8020F0E4 001D86A4  38 9C 00 1C */	addi r4, r28, 0x1c
 /* 8020F0E8 001D86A8  4B E2 BA 61 */	bl func_8003AB48
@@ -230,9 +230,9 @@
 .L_8020F274:
 /* 8020F274 001D8834  D0 1E 00 98 */	stfs f0, 0x98(r30)
 .L_8020F278:
-/* 8020F278 001D8838  3C 80 80 50 */	lis r4, lbl_80503E5C@ha
+/* 8020F278 001D8838  3C 80 80 50 */	lis r4, CfGimmickJump_strpool@ha
 /* 8020F27C 001D883C  80 61 00 3C */	lwz r3, 0x3c(r1)
-/* 8020F280 001D8840  38 84 3E 5C */	addi r4, r4, lbl_80503E5C@l
+/* 8020F280 001D8840  38 84 3E 5C */	addi r4, r4, CfGimmickJump_strpool@l
 /* 8020F284 001D8844  7F E5 FB 78 */	mr r5, r31
 /* 8020F288 001D8848  38 84 00 4F */	addi r4, r4, 0x4f
 /* 8020F28C 001D884C  4B E2 B8 BD */	bl func_8003AB48
@@ -1364,8 +1364,8 @@ cf_CfGimmickJump_typestr:
 	.balign 4
 
 
-.global lbl_80503E5C
-lbl_80503E5C:
+.global CfGimmickJump_strpool
+CfGimmickJump_strpool:
 	.asciz "lnPosX"
 	.asciz "lnPosY"
 	.asciz "lnPosZ"

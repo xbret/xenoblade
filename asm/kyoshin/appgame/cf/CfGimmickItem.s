@@ -38,10 +38,10 @@
 /* 802102DC 001D989C  38 9D 00 10 */	addi r4, r29, 0x10
 /* 802102E0 001D98A0  38 C1 00 58 */	addi r6, r1, 0x58
 /* 802102E4 001D98A4  4B FF 8F A5 */	bl func_80209288
-/* 802102E8 001D98A8  3C 80 80 50 */	lis r4, lbl_80503ECC@ha
+/* 802102E8 001D98A8  3C 80 80 50 */	lis r4, CfGimmickItem_strpool@ha
 /* 802102EC 001D98AC  80 61 00 58 */	lwz r3, 0x58(r1)
 /* 802102F0 001D98B0  7F C5 F3 78 */	mr r5, r30
-/* 802102F4 001D98B4  38 84 3E CC */	addi r4, r4, lbl_80503ECC@l
+/* 802102F4 001D98B4  38 84 3E CC */	addi r4, r4, CfGimmickItem_strpool@l
 /* 802102F8 001D98B8  4B E2 A8 51 */	bl func_8003AB48
 /* 802102FC 001D98BC  90 61 00 54 */	stw r3, 0x54(r1)
 /* 80210300 001D98C0  3B 40 00 00 */	li r26, 0
@@ -80,9 +80,9 @@
 /* 8021037C 001D993C  3B 7B 00 02 */	addi r27, r27, 2
 /* 80210380 001D9940  2C 1A 00 03 */	cmpwi r26, 3
 /* 80210384 001D9944  41 80 FF 94 */	blt .L_80210318
-/* 80210388 001D9948  3F E0 80 50 */	lis r31, lbl_80503ECC@ha
+/* 80210388 001D9948  3F E0 80 50 */	lis r31, CfGimmickItem_strpool@ha
 /* 8021038C 001D994C  80 61 00 58 */	lwz r3, 0x58(r1)
-/* 80210390 001D9950  3B FF 3E CC */	addi r31, r31, lbl_80503ECC@l
+/* 80210390 001D9950  3B FF 3E CC */	addi r31, r31, CfGimmickItem_strpool@l
 /* 80210394 001D9954  7F C5 F3 78 */	mr r5, r30
 /* 80210398 001D9958  38 9F 00 08 */	addi r4, r31, 8
 /* 8021039C 001D995C  4B E2 A7 AD */	bl func_8003AB48
@@ -717,8 +717,8 @@ cf_CfGimmickItem_typestr:
 	.balign 4
 
 
-.global lbl_80503ECC
-lbl_80503ECC:
+.global CfGimmickItem_strpool
+CfGimmickItem_strpool:
 	.asciz "rectype"
 	.asciz "geItem"
 	.asciz "MSG1"

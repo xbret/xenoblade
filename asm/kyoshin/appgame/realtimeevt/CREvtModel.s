@@ -382,18 +382,18 @@
 /* 80172B0C 0013C0CC  38 80 00 01 */	li r4, 1
 /* 80172B10 0013C0D0  48 31 22 F5 */	bl func_80484E04
 /* 80172B14 0013C0D4  80 DF 00 20 */	lwz r6, 0x20(r31)
-/* 80172B18 0013C0D8  3F C0 80 50 */	lis r30, lbl_804FEB74@ha
+/* 80172B18 0013C0D8  3F C0 80 50 */	lis r30, CREvtModel_strpool@ha
 /* 80172B1C 0013C0DC  38 00 00 00 */	li r0, 0
 /* 80172B20 0013C0E0  38 BF 00 2C */	addi r5, r31, 0x2c
 /* 80172B24 0013C0E4  80 66 07 A4 */	lwz r3, 0x7a4(r6)
-/* 80172B28 0013C0E8  38 9E EB 74 */	addi r4, r30, lbl_804FEB74@l
+/* 80172B28 0013C0E8  38 9E EB 74 */	addi r4, r30, CREvtModel_strpool@l
 /* 80172B2C 0013C0EC  64 63 20 00 */	oris r3, r3, 0x2000
 /* 80172B30 0013C0F0  90 66 07 A4 */	stw r3, 0x7a4(r6)
 /* 80172B34 0013C0F4  90 1F 00 2C */	stw r0, 0x2c(r31)
 /* 80172B38 0013C0F8  80 7F 00 24 */	lwz r3, 0x24(r31)
 /* 80172B3C 0013C0FC  90 1F 00 30 */	stw r0, 0x30(r31)
 /* 80172B40 0013C100  4B FF 84 0D */	bl func_8016AF4C
-/* 80172B44 0013C104  38 9E EB 74 */	addi r4, r30, lbl_804FEB74@l
+/* 80172B44 0013C104  38 9E EB 74 */	addi r4, r30, CREvtModel_strpool@l
 /* 80172B48 0013C108  80 7F 00 24 */	lwz r3, 0x24(r31)
 /* 80172B4C 0013C10C  38 84 00 0B */	addi r4, r4, 0xb
 /* 80172B50 0013C110  38 BF 00 30 */	addi r5, r31, 0x30
@@ -425,9 +425,9 @@
 .L_80172BB4:
 /* 80172BB4 0013C174  38 00 00 00 */	li r0, 0
 /* 80172BB8 0013C178  90 01 00 0C */	stw r0, 0xc(r1)
-/* 80172BBC 0013C17C  3C 80 80 50 */	lis r4, lbl_804FEB74@ha
+/* 80172BBC 0013C17C  3C 80 80 50 */	lis r4, CREvtModel_strpool@ha
 /* 80172BC0 0013C180  38 A1 00 0C */	addi r5, r1, 0xc
-/* 80172BC4 0013C184  38 84 EB 74 */	addi r4, r4, lbl_804FEB74@l
+/* 80172BC4 0013C184  38 84 EB 74 */	addi r4, r4, CREvtModel_strpool@l
 /* 80172BC8 0013C188  80 7F 00 24 */	lwz r3, 0x24(r31)
 /* 80172BCC 0013C18C  38 84 00 13 */	addi r4, r4, 0x13
 /* 80172BD0 0013C190  4B FF 83 7D */	bl func_8016AF4C
@@ -440,9 +440,9 @@
 .L_80172BEC:
 /* 80172BEC 0013C1AC  38 00 00 01 */	li r0, 1
 /* 80172BF0 0013C1B0  90 01 00 08 */	stw r0, 8(r1)
-/* 80172BF4 0013C1B4  3C 80 80 50 */	lis r4, lbl_804FEB74@ha
+/* 80172BF4 0013C1B4  3C 80 80 50 */	lis r4, CREvtModel_strpool@ha
 /* 80172BF8 0013C1B8  38 A1 00 08 */	addi r5, r1, 8
-/* 80172BFC 0013C1BC  38 84 EB 74 */	addi r4, r4, lbl_804FEB74@l
+/* 80172BFC 0013C1BC  38 84 EB 74 */	addi r4, r4, CREvtModel_strpool@l
 /* 80172C00 0013C1C0  80 7F 00 24 */	lwz r3, 0x24(r31)
 /* 80172C04 0013C1C4  38 84 00 1E */	addi r4, r4, 0x1e
 /* 80172C08 0013C1C8  4B FF 83 45 */	bl func_8016AF4C
@@ -522,8 +522,8 @@
 /* 80172CF8 0013C2B8  C0 02 9C B8 */	lfs f0, float_8066A038@sda21(r2)
 /* 80172CFC 0013C2BC  38 A1 00 18 */	addi r5, r1, 0x18
 /* 80172D00 0013C2C0  93 E1 00 5C */	stw r31, 0x5c(r1)
-/* 80172D04 0013C2C4  3F E0 80 50 */	lis r31, lbl_804FEB74@ha
-/* 80172D08 0013C2C8  3B FF EB 74 */	addi r31, r31, lbl_804FEB74@l
+/* 80172D04 0013C2C4  3F E0 80 50 */	lis r31, CREvtModel_strpool@ha
+/* 80172D08 0013C2C8  3B FF EB 74 */	addi r31, r31, CREvtModel_strpool@l
 /* 80172D0C 0013C2CC  93 C1 00 58 */	stw r30, 0x58(r1)
 /* 80172D10 0013C2D0  7C 9E 23 78 */	mr r30, r4
 /* 80172D14 0013C2D4  38 9F 00 24 */	addi r4, r31, 0x24
@@ -646,9 +646,9 @@
 /* 80172EC0 0013C480  90 61 00 08 */	stw r3, 8(r1)
 /* 80172EC4 0013C484  38 64 00 0C */	addi r3, r4, 0xc
 /* 80172EC8 0013C488  48 26 52 A9 */	bl GetResAnmChrNumEntries__Q34nw4r3g3d7ResFileCFv
-/* 80172ECC 0013C48C  3E C0 80 50 */	lis r22, lbl_804FEB74@ha
+/* 80172ECC 0013C48C  3E C0 80 50 */	lis r22, CREvtModel_strpool@ha
 /* 80172ED0 0013C490  7C 73 1B 78 */	mr r19, r3
-/* 80172ED4 0013C494  3A D6 EB 74 */	addi r22, r22, lbl_804FEB74@l
+/* 80172ED4 0013C494  3A D6 EB 74 */	addi r22, r22, CREvtModel_strpool@l
 /* 80172ED8 0013C498  3A 40 00 00 */	li r18, 0
 /* 80172EDC 0013C49C  3E E0 80 53 */	lis r23, lbl_805344E8@ha
 /* 80172EE0 0013C4A0  3F 00 80 53 */	lis r24, lbl_805344CC@ha
@@ -774,8 +774,8 @@
 /* 80173090 0013C650  54 00 05 EF */	rlwinm. r0, r0, 0, 0x17, 0x17
 /* 80173094 0013C654  41 82 00 28 */	beq .L_801730BC
 /* 80173098 0013C658  81 90 00 00 */	lwz r12, 0(r16)
-/* 8017309C 0013C65C  3C 80 80 50 */	lis r4, lbl_804FEB74@ha
-/* 801730A0 0013C660  38 84 EB 74 */	addi r4, r4, lbl_804FEB74@l
+/* 8017309C 0013C65C  3C 80 80 50 */	lis r4, CREvtModel_strpool@ha
+/* 801730A0 0013C660  38 84 EB 74 */	addi r4, r4, CREvtModel_strpool@l
 /* 801730A4 0013C664  7E 03 83 78 */	mr r3, r16
 /* 801730A8 0013C668  81 8C 00 28 */	lwz r12, 0x28(r12)
 /* 801730AC 0013C66C  38 84 00 44 */	addi r4, r4, 0x44
@@ -891,8 +891,8 @@ cf_CREvtObj_typestr:
 	.balign 4
 
 
-.global lbl_804FEB74
-lbl_804FEB74:
+.global CREvtModel_strpool
+CREvtModel_strpool:
 	.asciz "Monochrome"
 	.asciz "MonoRGB"
 	.asciz "noDynamics"

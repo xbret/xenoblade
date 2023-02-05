@@ -88,14 +88,14 @@
 /* 8037F780 00348D40  38 A0 0C 40 */	li r5, 0xc40
 /* 8037F784 00348D44  4B C8 4B CD */	bl memset
 /* 8037F788 00348D48  3C A0 80 38 */	lis r5, adxt_exec_tsvr@ha
-/* 8037F78C 00348D4C  3F E0 80 52 */	lis r31, lbl_805196A8@ha
+/* 8037F78C 00348D4C  3F E0 80 52 */	lis r31, adx_inis_strpool@ha
 /* 8037F790 00348D50  38 A5 F6 A8 */	addi r5, r5, adxt_exec_tsvr@l
 /* 8037F794 00348D54  38 60 00 02 */	li r3, 2
-/* 8037F798 00348D58  38 FF 96 A8 */	addi r7, r31, lbl_805196A8@l
+/* 8037F798 00348D58  38 FF 96 A8 */	addi r7, r31, adx_inis_strpool@l
 /* 8037F79C 00348D5C  38 80 00 01 */	li r4, 1
 /* 8037F7A0 00348D60  38 C0 00 00 */	li r6, 0
 /* 8037F7A4 00348D64  48 01 78 99 */	bl SVM_SetCbSvrIdWithString
-/* 8037F7A8 00348D68  3B FF 96 A8 */	addi r31, r31, lbl_805196A8@l
+/* 8037F7A8 00348D68  3B FF 96 A8 */	addi r31, r31, adx_inis_strpool@l
 /* 8037F7AC 00348D6C  3C 80 80 38 */	lis r4, adxt_exec_fssvr@ha
 /* 8037F7B0 00348D70  38 84 F6 CC */	addi r4, r4, adxt_exec_fssvr@l
 /* 8037F7B4 00348D74  38 60 00 04 */	li r3, 4
@@ -140,8 +140,8 @@
 /* 8037F840 00348E00  80 1E 00 00 */	lwz r0, 0(r30)
 /* 8037F844 00348E04  2C 00 00 00 */	cmpwi r0, 0
 /* 8037F848 00348E08  41 81 00 18 */	bgt .L_8037F860
-/* 8037F84C 00348E0C  3C 60 80 52 */	lis r3, lbl_805196A8@ha
-/* 8037F850 00348E10  38 63 96 A8 */	addi r3, r3, lbl_805196A8@l
+/* 8037F84C 00348E0C  3C 60 80 52 */	lis r3, adx_inis_strpool@ha
+/* 8037F850 00348E10  38 63 96 A8 */	addi r3, r3, adx_inis_strpool@l
 /* 8037F854 00348E14  38 63 00 33 */	addi r3, r3, 0x33
 /* 8037F858 00348E18  48 01 73 15 */	bl SVM_CallErr1
 /* 8037F85C 00348E1C  48 00 00 A8 */	b .L_8037F904
@@ -172,9 +172,9 @@
 /* 8037F8BC 00348E7C  48 01 5E 25 */	bl SJUNI_Finish
 /* 8037F8C0 00348E80  48 00 9B 41 */	bl ADXCRS_Unlock
 /* 8037F8C4 00348E84  48 00 9B 0D */	bl ADXCRS_Finish
-/* 8037F8C8 00348E88  3F E0 80 52 */	lis r31, lbl_805196A8@ha
+/* 8037F8C8 00348E88  3F E0 80 52 */	lis r31, adx_inis_strpool@ha
 /* 8037F8CC 00348E8C  3B DE 00 20 */	addi r30, r30, 0x20
-/* 8037F8D0 00348E90  3B FF 96 A8 */	addi r31, r31, lbl_805196A8@l
+/* 8037F8D0 00348E90  3B FF 96 A8 */	addi r31, r31, adx_inis_strpool@l
 /* 8037F8D4 00348E94  3B A0 00 00 */	li r29, 0
 .L_8037F8D8:
 /* 8037F8D8 00348E98  88 1E 00 00 */	lbz r0, 0(r30)
@@ -209,8 +209,8 @@ adxt_build:
 	.4byte 0
 
 
-.global lbl_805196A8
-lbl_805196A8:
+.global adx_inis_strpool
+adx_inis_strpool:
 	.asciz "adxt_exec_tsvr"
 	.asciz "adxt_exec_fssvr"
 	.asciz "adxt_exec_main_thrd"

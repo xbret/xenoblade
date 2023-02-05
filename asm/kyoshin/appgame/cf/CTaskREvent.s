@@ -450,12 +450,12 @@
 /* 8016472C 0012DCEC  90 01 00 64 */	stw r0, 0x64(r1)
 /* 80164730 0012DCF0  BE E1 00 3C */	stmw r23, 0x3c(r1)
 /* 80164734 0012DCF4  3F 40 80 53 */	lis r26, lbl_80533EE0@ha
-/* 80164738 0012DCF8  3F 80 80 50 */	lis r28, lbl_804FE838@ha
+/* 80164738 0012DCF8  3F 80 80 50 */	lis r28, CTaskREvent_strpool@ha
 /* 8016473C 0012DCFC  7C 77 1B 78 */	mr r23, r3
 /* 80164740 0012DD00  7C 9E 23 78 */	mr r30, r4
 /* 80164744 0012DD04  7C BF 2B 78 */	mr r31, r5
 /* 80164748 0012DD08  3B 5A 3E E0 */	addi r26, r26, lbl_80533EE0@l
-/* 8016474C 0012DD0C  3B 9C E8 38 */	addi r28, r28, lbl_804FE838@l
+/* 8016474C 0012DD0C  3B 9C E8 38 */	addi r28, r28, CTaskREvent_strpool@l
 /* 80164750 0012DD10  3B 20 FF FF */	li r25, -1
 /* 80164754 0012DD14  3B 00 00 00 */	li r24, 0
 .L_80164758:
@@ -528,11 +528,11 @@
 /* 80164840 0012DE00  90 01 00 54 */	stw r0, 0x54(r1)
 /* 80164844 0012DE04  BF 01 00 30 */	stmw r24, 0x30(r1)
 /* 80164848 0012DE08  3F 80 80 53 */	lis r28, lbl_80533EE0@ha
-/* 8016484C 0012DE0C  3F C0 80 50 */	lis r30, lbl_804FE838@ha
+/* 8016484C 0012DE0C  3F C0 80 50 */	lis r30, CTaskREvent_strpool@ha
 /* 80164850 0012DE10  7C 78 1B 78 */	mr r24, r3
 /* 80164854 0012DE14  7C 99 23 78 */	mr r25, r4
 /* 80164858 0012DE18  3B 9C 3E E0 */	addi r28, r28, lbl_80533EE0@l
-/* 8016485C 0012DE1C  3B DE E8 38 */	addi r30, r30, lbl_804FE838@l
+/* 8016485C 0012DE1C  3B DE E8 38 */	addi r30, r30, CTaskREvent_strpool@l
 /* 80164860 0012DE20  3B 60 FF FF */	li r27, -1
 /* 80164864 0012DE24  3B 40 00 00 */	li r26, 0
 .L_80164868:
@@ -769,10 +769,10 @@
 /* 80164B84 0012E144  7C 03 21 AE */	stbx r0, r3, r4
 .L_80164B88:
 /* 80164B88 0012E148  3F 60 80 53 */	lis r27, lbl_80533EE0@ha
-/* 80164B8C 0012E14C  3F A0 80 50 */	lis r29, lbl_804FE838@ha
+/* 80164B8C 0012E14C  3F A0 80 50 */	lis r29, CTaskREvent_strpool@ha
 /* 80164B90 0012E150  3B 7B 3E E0 */	addi r27, r27, lbl_80533EE0@l
 /* 80164B94 0012E154  3B 80 00 00 */	li r28, 0
-/* 80164B98 0012E158  3B BD E8 38 */	addi r29, r29, lbl_804FE838@l
+/* 80164B98 0012E158  3B BD E8 38 */	addi r29, r29, CTaskREvent_strpool@l
 .L_80164B9C:
 /* 80164B9C 0012E15C  7F A3 EB 78 */	mr r3, r29
 /* 80164BA0 0012E160  48 15 4A 19 */	bl strlen
@@ -985,10 +985,10 @@
 /* 80164E54 0012E414  90 7C 01 C8 */	stw r3, 0x1c8(r28)
 /* 80164E58 0012E418  3B DE 3C 28 */	addi r30, r30, lbl_80533C28@l
 /* 80164E5C 0012E41C  3B A0 00 00 */	li r29, 0
-/* 80164E60 0012E420  3F E0 80 50 */	lis r31, lbl_804FE838@ha
+/* 80164E60 0012E420  3F E0 80 50 */	lis r31, CTaskREvent_strpool@ha
 .L_80164E64:
 /* 80164E64 0012E424  80 1C 01 CC */	lwz r0, 0x1cc(r28)
-/* 80164E68 0012E428  38 9F E8 38 */	addi r4, r31, lbl_804FE838@l
+/* 80164E68 0012E428  38 9F E8 38 */	addi r4, r31, CTaskREvent_strpool@l
 /* 80164E6C 0012E42C  80 7C 01 C8 */	lwz r3, 0x1c8(r28)
 /* 80164E70 0012E430  1C 00 00 14 */	mulli r0, r0, 0x14
 /* 80164E74 0012E434  7C 63 02 14 */	add r3, r3, r0
@@ -1330,8 +1330,8 @@
 /* 801652E8 0012E8A8  80 0D A5 A8 */	lwz r0, lbl_80666728@sda21(r13)
 /* 801652EC 0012E8AC  54 00 01 CF */	rlwinm. r0, r0, 0, 7, 7
 /* 801652F0 0012E8B0  41 82 00 74 */	beq .L_80165364
-/* 801652F4 0012E8B4  3C 60 80 50 */	lis r3, lbl_804FE838@ha
-/* 801652F8 0012E8B8  38 63 E8 38 */	addi r3, r3, lbl_804FE838@l
+/* 801652F4 0012E8B4  3C 60 80 50 */	lis r3, CTaskREvent_strpool@ha
+/* 801652F8 0012E8B8  38 63 E8 38 */	addi r3, r3, CTaskREvent_strpool@l
 /* 801652FC 0012E8BC  3B 83 00 03 */	addi r28, r3, 3
 /* 80165300 0012E8C0  7F 83 E3 78 */	mr r3, r28
 /* 80165304 0012E8C4  48 15 42 B5 */	bl strlen
@@ -1359,8 +1359,8 @@
 /* 8016535C 0012E91C  90 1E 01 B4 */	stw r0, 0x1b4(r30)
 /* 80165360 0012E920  48 00 00 64 */	b .L_801653C4
 .L_80165364:
-/* 80165364 0012E924  3F 80 80 50 */	lis r28, lbl_804FE838@ha
-/* 80165368 0012E928  3B 9C E8 38 */	addi r28, r28, lbl_804FE838@l
+/* 80165364 0012E924  3F 80 80 50 */	lis r28, CTaskREvent_strpool@ha
+/* 80165368 0012E928  3B 9C E8 38 */	addi r28, r28, CTaskREvent_strpool@l
 /* 8016536C 0012E92C  7F 83 E3 78 */	mr r3, r28
 /* 80165370 0012E930  48 15 42 49 */	bl strlen
 /* 80165374 0012E934  7C 7D 1B 78 */	mr r29, r3
@@ -1384,8 +1384,8 @@
 /* 801653BC 0012E97C  7C 00 EA 14 */	add r0, r0, r29
 /* 801653C0 0012E980  90 1E 01 B4 */	stw r0, 0x1b4(r30)
 .L_801653C4:
-/* 801653C4 0012E984  3C 60 80 50 */	lis r3, lbl_804FE838@ha
-/* 801653C8 0012E988  38 63 E8 38 */	addi r3, r3, lbl_804FE838@l
+/* 801653C4 0012E984  3C 60 80 50 */	lis r3, CTaskREvent_strpool@ha
+/* 801653C8 0012E988  38 63 E8 38 */	addi r3, r3, CTaskREvent_strpool@l
 /* 801653CC 0012E98C  3B 83 00 08 */	addi r28, r3, 8
 /* 801653D0 0012E990  7F 83 E3 78 */	mr r3, r28
 /* 801653D4 0012E994  48 15 41 E5 */	bl strlen
@@ -1755,8 +1755,8 @@
 /* 80165938 0012EEF8  38 00 00 01 */	li r0, 1
 /* 8016593C 0012EEFC  98 1E 01 BC */	stb r0, 0x1bc(r30)
 .L_80165940:
-/* 80165940 0012EF00  3C 60 80 50 */	lis r3, lbl_804FE838@ha
-/* 80165944 0012EF04  38 63 E8 38 */	addi r3, r3, lbl_804FE838@l
+/* 80165940 0012EF00  3C 60 80 50 */	lis r3, CTaskREvent_strpool@ha
+/* 80165944 0012EF04  38 63 E8 38 */	addi r3, r3, CTaskREvent_strpool@l
 /* 80165948 0012EF08  3B 63 00 0D */	addi r27, r3, 0xd
 /* 8016594C 0012EF0C  7F 63 DB 78 */	mr r3, r27
 /* 80165950 0012EF10  48 15 3C 69 */	bl strlen
@@ -2590,9 +2590,9 @@
 /* 801664B0 0012FA70  48 00 00 54 */	b .L_80166504
 .L_801664B4:
 /* 801664B4 0012FA74  80 6D A5 A4 */	lwz r3, lbl_80666724@sda21(r13)
-/* 801664B8 0012FA78  3C C0 80 50 */	lis r6, lbl_804FE838@ha
+/* 801664B8 0012FA78  3C C0 80 50 */	lis r6, CTaskREvent_strpool@ha
 /* 801664BC 0012FA7C  C0 22 9B 68 */	lfs f1, float_80669EE8@sda21(r2)
-/* 801664C0 0012FA80  38 C6 E8 38 */	addi r6, r6, lbl_804FE838@l
+/* 801664C0 0012FA80  38 C6 E8 38 */	addi r6, r6, CTaskREvent_strpool@l
 /* 801664C4 0012FA84  54 63 01 CA */	rlwinm r3, r3, 0, 7, 5
 /* 801664C8 0012FA88  90 6D A5 A4 */	stw r3, lbl_80666724@sda21(r13)
 /* 801664CC 0012FA8C  80 01 00 0C */	lwz r0, 0xc(r1)
@@ -2633,8 +2633,8 @@
 /* 80166548 0012FB08  90 1F 01 D0 */	stw r0, 0x1d0(r31)
 /* 8016654C 0012FB0C  48 00 00 38 */	b .L_80166584
 .L_80166550:
-/* 80166550 0012FB10  3C 60 80 50 */	lis r3, lbl_804FE838@ha
-/* 80166554 0012FB14  38 63 E8 38 */	addi r3, r3, lbl_804FE838@l
+/* 80166550 0012FB10  3C 60 80 50 */	lis r3, CTaskREvent_strpool@ha
+/* 80166554 0012FB14  38 63 E8 38 */	addi r3, r3, CTaskREvent_strpool@l
 /* 80166558 0012FB18  3B A3 00 0D */	addi r29, r3, 0xd
 /* 8016655C 0012FB1C  7F A3 EB 78 */	mr r3, r29
 /* 80166560 0012FB20  48 15 30 59 */	bl strlen
@@ -3909,8 +3909,8 @@ CTTask_cf_CTaskREvent_typestr:
 	.asciz "CTTask<cf::CTaskREvent>"
 
 
-.global lbl_804FE838
-lbl_804FE838:
+.global CTaskREvent_strpool
+CTaskREvent_strpool:
 	.asciz "vs"
 	.asciz "vs00"
 	.asciz ".rev"

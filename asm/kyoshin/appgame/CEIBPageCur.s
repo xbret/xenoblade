@@ -47,8 +47,8 @@
 /* 80285C88 0024F248  7C 08 02 A6 */	mflr r0
 /* 80285C8C 0024F24C  90 01 00 34 */	stw r0, 0x34(r1)
 /* 80285C90 0024F250  93 E1 00 2C */	stw r31, 0x2c(r1)
-/* 80285C94 0024F254  3F E0 80 51 */	lis r31, lbl_8050A654@ha
-/* 80285C98 0024F258  3B FF A6 54 */	addi r31, r31, lbl_8050A654@l
+/* 80285C94 0024F254  3F E0 80 51 */	lis r31, CEquipItemBox_strpool@ha
+/* 80285C98 0024F258  3B FF A6 54 */	addi r31, r31, CEquipItemBox_strpool@l
 /* 80285C9C 0024F25C  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 80285CA0 0024F260  7C 7E 1B 78 */	mr r30, r3
 /* 80285CA4 0024F264  38 BF 00 E7 */	addi r5, r31, 0xe7

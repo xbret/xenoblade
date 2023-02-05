@@ -114,9 +114,9 @@
 /* 8003938C 0000294C  2C 00 00 00 */	cmpwi r0, 0
 /* 80039390 00002950  40 82 00 94 */	bne .L_80039424
 /* 80039394 00002954  48 41 C7 05 */	bl func_80455A98
-/* 80039398 00002958  3F E0 80 4F */	lis r31, lbl_804F5B5C@ha
+/* 80039398 00002958  3F E0 80 4F */	lis r31, CGame_strpool@ha
 /* 8003939C 0000295C  7C 7E 1B 78 */	mr r30, r3
-/* 800393A0 00002960  3B FF 5B 5C */	addi r31, r31, lbl_804F5B5C@l
+/* 800393A0 00002960  3B FF 5B 5C */	addi r31, r31, CGame_strpool@l
 /* 800393A4 00002964  48 3F E2 11 */	bl func_804375B4
 /* 800393A8 00002968  7C 64 1B 78 */	mr r4, r3
 /* 800393AC 0000296C  38 60 01 F0 */	li r3, 0x1f0
@@ -196,9 +196,9 @@
 /* 800394B0 00002A70  A8 FE 01 F8 */	lha r7, 0x1f8(r30)
 /* 800394B4 00002A74  48 00 75 89 */	bl func_80040A3C
 .L_800394B8:
-/* 800394B8 00002A78  3C 60 80 4F */	lis r3, lbl_804F5B5C@ha
+/* 800394B8 00002A78  3C 60 80 4F */	lis r3, CGame_strpool@ha
 /* 800394BC 00002A7C  38 00 FF FF */	li r0, -1
-/* 800394C0 00002A80  38 63 5B 5C */	addi r3, r3, lbl_804F5B5C@l
+/* 800394C0 00002A80  38 63 5B 5C */	addi r3, r3, CGame_strpool@l
 /* 800394C4 00002A84  B0 1E 01 F4 */	sth r0, 0x1f4(r30)
 /* 800394C8 00002A88  3B E3 00 0D */	addi r31, r3, 0xd
 /* 800394CC 00002A8C  B0 1E 01 F6 */	sth r0, 0x1f6(r30)
@@ -441,9 +441,9 @@
 /* 80039820 00002DE0  48 32 D0 51 */	bl VIEnableDimming
 /* 80039824 00002DE4  38 60 00 01 */	li r3, 1
 /* 80039828 00002DE8  48 32 D0 A9 */	bl VISetTimeToDimming
-/* 8003982C 00002DEC  3F E0 80 4F */	lis r31, lbl_804F5B5C@ha
+/* 8003982C 00002DEC  3F E0 80 4F */	lis r31, CGame_strpool@ha
 /* 80039830 00002DF0  38 81 00 08 */	addi r4, r1, 8
-/* 80039834 00002DF4  3B FF 5B 5C */	addi r31, r31, lbl_804F5B5C@l
+/* 80039834 00002DF4  3B FF 5B 5C */	addi r31, r31, CGame_strpool@l
 /* 80039838 00002DF8  38 A0 00 00 */	li r5, 0
 /* 8003983C 00002DFC  38 7F 00 0E */	addi r3, r31, 0xe
 /* 80039840 00002E00  48 42 63 79 */	bl func_8045FBB8
@@ -609,9 +609,9 @@
 /* 80039A54 00003014  48 41 C0 4D */	bl func_80455AA0
 /* 80039A58 00003018  83 A3 00 4C */	lwz r29, 0x4c(r3)
 /* 80039A5C 0000301C  48 41 C0 3D */	bl func_80455A98
-/* 80039A60 00003020  3C 80 80 4F */	lis r4, lbl_804F5B5C@ha
+/* 80039A60 00003020  3C 80 80 4F */	lis r4, CGame_strpool@ha
 /* 80039A64 00003024  7C 7E 1B 78 */	mr r30, r3
-/* 80039A68 00003028  38 84 5B 5C */	addi r4, r4, lbl_804F5B5C@l
+/* 80039A68 00003028  38 84 5B 5C */	addi r4, r4, CGame_strpool@l
 /* 80039A6C 0000302C  3B E4 00 23 */	addi r31, r4, 0x23
 /* 80039A70 00003030  48 3F DB 45 */	bl func_804375B4
 /* 80039A74 00003034  7C 64 1B 78 */	mr r4, r3
@@ -846,8 +846,8 @@ IWorkEvent_typestr:
 	.balign 4
 
 
-.global lbl_804F5B5C
-lbl_804F5B5C:
+.global CGame_strpool
+CGame_strpool:
 	.asciz "CGameRestart"
 	.byte 0x00
 	.asciz "43"

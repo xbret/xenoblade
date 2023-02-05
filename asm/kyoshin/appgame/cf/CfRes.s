@@ -3667,8 +3667,8 @@ cf_CfRes_typestr:
 	.balign 4
 
 #referenced in CTaskGameEffAfter.s, may not belong here
-.global lbl_804F6A54
-lbl_804F6A54:
+.global strpool_804F6A54
+strpool_804F6A54:
 	.asciz "map"
 	.asciz "mpf"
 	.asciz "id"

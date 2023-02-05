@@ -113,7 +113,7 @@
 /* 8045B570 00424B30  90 0D BE 40 */	stw r0, lbl_80667FC0@sda21(r13)
 /* 8045B574 00424B34  7F C3 F3 78 */	mr r3, r30
 /* 8045B578 00424B38  38 80 00 00 */	li r4, 0
-/* 8045B57C 00424B3C  4B FD C5 4D */	bl func_80437AC8
+/* 8045B57C 00424B3C  4B FD C5 4D */	bl __dt__CWorkThread
 /* 8045B580 00424B40  2C 1F 00 00 */	cmpwi r31, 0
 /* 8045B584 00424B44  40 81 00 0C */	ble .L_8045B590
 /* 8045B588 00424B48  7F C3 F3 78 */	mr r3, r30
@@ -2388,7 +2388,7 @@ lbl_80667FC4:
 	.4byte func_8044F65C
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_80437AC8
+	.4byte __dt__CWorkThread
 .endobj "@etb_8001D614"
 
 .obj "@etb_8001D63C", local
@@ -2404,7 +2404,7 @@ lbl_80667FC4:
 	.4byte func_8044F65C
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_80437AC8
+	.4byte __dt__CWorkThread
 	.4byte 0x8680001E
 	.4byte 0x000001C4
 	.4byte func_8044F65C

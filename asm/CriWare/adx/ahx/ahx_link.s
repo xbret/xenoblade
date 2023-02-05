@@ -30,15 +30,15 @@
 /* 8038A6B8 00353C78  2C 04 00 00 */	cmpwi r4, 0
 /* 8038A6BC 00353C7C  40 82 00 14 */	bne .L_8038A6D0
 .L_8038A6C0:
-/* 8038A6C0 00353C80  3C 60 80 52 */	lis r3, lbl_8051AB10@ha
-/* 8038A6C4 00353C84  38 63 AB 10 */	addi r3, r3, lbl_8051AB10@l
+/* 8038A6C0 00353C80  3C 60 80 52 */	lis r3, ahx_link_strpool@ha
+/* 8038A6C4 00353C84  38 63 AB 10 */	addi r3, r3, ahx_link_strpool@l
 /* 8038A6C8 00353C88  4B FF FB 51 */	bl ADXERR_CallErrFunc1_
 /* 8038A6CC 00353C8C  48 00 00 FC */	b .L_8038A7C8
 .L_8038A6D0:
 /* 8038A6D0 00353C90  2C 05 20 00 */	cmpwi r5, 0x2000
 /* 8038A6D4 00353C94  40 80 00 18 */	bge .L_8038A6EC
-/* 8038A6D8 00353C98  3C 60 80 52 */	lis r3, lbl_8051AB10@ha
-/* 8038A6DC 00353C9C  38 63 AB 10 */	addi r3, r3, lbl_8051AB10@l
+/* 8038A6D8 00353C98  3C 60 80 52 */	lis r3, ahx_link_strpool@ha
+/* 8038A6DC 00353C9C  38 63 AB 10 */	addi r3, r3, ahx_link_strpool@l
 /* 8038A6E0 00353CA0  38 63 00 26 */	addi r3, r3, 0x26
 /* 8038A6E4 00353CA4  4B FF FB 35 */	bl ADXERR_CallErrFunc1_
 /* 8038A6E8 00353CA8  48 00 00 E0 */	b .L_8038A7C8
@@ -65,8 +65,8 @@
 /* 8038A734 00353CF4  48 00 21 19 */	bl AHXSJD_Create
 /* 8038A738 00353CF8  2C 03 00 00 */	cmpwi r3, 0
 /* 8038A73C 00353CFC  40 82 00 18 */	bne .L_8038A754
-/* 8038A740 00353D00  3C 60 80 52 */	lis r3, lbl_8051AB10@ha
-/* 8038A744 00353D04  38 63 AB 10 */	addi r3, r3, lbl_8051AB10@l
+/* 8038A740 00353D00  3C 60 80 52 */	lis r3, ahx_link_strpool@ha
+/* 8038A744 00353D04  38 63 AB 10 */	addi r3, r3, ahx_link_strpool@l
 /* 8038A748 00353D08  38 63 00 51 */	addi r3, r3, 0x51
 /* 8038A74C 00353D0C  4B FF FA CD */	bl ADXERR_CallErrFunc1_
 /* 8038A750 00353D10  48 00 00 78 */	b .L_8038A7C8
@@ -127,8 +127,8 @@
 /* 8038A80C 00353DCC  93 C1 00 08 */	stw r30, 8(r1)
 /* 8038A810 00353DD0  7C 7E 1B 78 */	mr r30, r3
 /* 8038A814 00353DD4  40 82 00 18 */	bne .L_8038A82C
-/* 8038A818 00353DD8  3C 60 80 52 */	lis r3, lbl_8051AB10@ha
-/* 8038A81C 00353DDC  38 63 AB 10 */	addi r3, r3, lbl_8051AB10@l
+/* 8038A818 00353DD8  3C 60 80 52 */	lis r3, ahx_link_strpool@ha
+/* 8038A81C 00353DDC  38 63 AB 10 */	addi r3, r3, ahx_link_strpool@l
 /* 8038A820 00353DE0  38 63 00 7E */	addi r3, r3, 0x7e
 /* 8038A824 00353DE4  4B FF F9 F5 */	bl ADXERR_CallErrFunc1_
 /* 8038A828 00353DE8  48 00 00 40 */	b .L_8038A868
@@ -251,8 +251,8 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051AB10
-lbl_8051AB10:
+.global ahx_link_strpool
+ahx_link_strpool:
 	.asciz "E2005092203 : NULL pointer is passed."
 	.asciz "E2005092204 : Work area size is too short."
 	.asciz "E2005092202 : AHXSJD_Create function failed."

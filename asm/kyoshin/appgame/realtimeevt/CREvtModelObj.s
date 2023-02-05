@@ -631,9 +631,9 @@
 /* 80182328 0014B8E8  3B 9F 00 38 */	addi r28, r31, 0x38
 .L_8018232C:
 /* 8018232C 0014B8EC  48 2B 20 75 */	bl func_804343A0
-/* 80182330 0014B8F0  3C 80 80 50 */	lis r4, lbl_804FEF8C@ha
+/* 80182330 0014B8F0  3C 80 80 50 */	lis r4, CREvtModelObj_strpool@ha
 /* 80182334 0014B8F4  7F 85 E3 78 */	mr r5, r28
-/* 80182338 0014B8F8  38 84 EF 8C */	addi r4, r4, lbl_804FEF8C@l
+/* 80182338 0014B8F8  38 84 EF 8C */	addi r4, r4, CREvtModelObj_strpool@l
 /* 8018233C 0014B8FC  38 C0 00 00 */	li r6, 0
 /* 80182340 0014B900  38 E0 00 00 */	li r7, 0
 /* 80182344 0014B904  48 2C C4 51 */	bl func_8044E794
@@ -757,8 +757,8 @@
 /* 801824F0 0014BAB0  80 04 00 28 */	lwz r0, 0x28(r4)
 /* 801824F4 0014BAB4  28 00 00 04 */	cmplwi r0, 4
 /* 801824F8 0014BAB8  40 82 00 34 */	bne .L_8018252C
-/* 801824FC 0014BABC  3C 60 80 50 */	lis r3, lbl_804FEF8C@ha
-/* 80182500 0014BAC0  38 63 EF 8C */	addi r3, r3, lbl_804FEF8C@l
+/* 801824FC 0014BABC  3C 60 80 50 */	lis r3, CREvtModelObj_strpool@ha
+/* 80182500 0014BAC0  38 63 EF 8C */	addi r3, r3, CREvtModelObj_strpool@l
 /* 80182504 0014BAC4  3B A3 00 17 */	addi r29, r3, 0x17
 /* 80182508 0014BAC8  7F A3 EB 78 */	mr r3, r29
 /* 8018250C 0014BACC  48 13 70 AD */	bl strlen
@@ -772,8 +772,8 @@
 .L_8018252C:
 /* 8018252C 0014BAEC  28 00 00 03 */	cmplwi r0, 3
 /* 80182530 0014BAF0  40 82 00 34 */	bne .L_80182564
-/* 80182534 0014BAF4  3C 60 80 50 */	lis r3, lbl_804FEF8C@ha
-/* 80182538 0014BAF8  38 63 EF 8C */	addi r3, r3, lbl_804FEF8C@l
+/* 80182534 0014BAF4  3C 60 80 50 */	lis r3, CREvtModelObj_strpool@ha
+/* 80182538 0014BAF8  38 63 EF 8C */	addi r3, r3, CREvtModelObj_strpool@l
 /* 8018253C 0014BAFC  3B A3 00 20 */	addi r29, r3, 0x20
 /* 80182540 0014BB00  7F A3 EB 78 */	mr r3, r29
 /* 80182544 0014BB04  48 13 70 75 */	bl strlen
@@ -787,8 +787,8 @@
 .L_80182564:
 /* 80182564 0014BB24  28 00 00 05 */	cmplwi r0, 5
 /* 80182568 0014BB28  40 82 00 34 */	bne .L_8018259C
-/* 8018256C 0014BB2C  3C 60 80 50 */	lis r3, lbl_804FEF8C@ha
-/* 80182570 0014BB30  38 63 EF 8C */	addi r3, r3, lbl_804FEF8C@l
+/* 8018256C 0014BB2C  3C 60 80 50 */	lis r3, CREvtModelObj_strpool@ha
+/* 80182570 0014BB30  38 63 EF 8C */	addi r3, r3, CREvtModelObj_strpool@l
 /* 80182574 0014BB34  3B A3 00 29 */	addi r29, r3, 0x29
 /* 80182578 0014BB38  7F A3 EB 78 */	mr r3, r29
 /* 8018257C 0014BB3C  48 13 70 3D */	bl strlen
@@ -800,8 +800,8 @@
 /* 80182594 0014BB54  90 1F 00 50 */	stw r0, 0x50(r31)
 /* 80182598 0014BB58  48 00 00 30 */	b .L_801825C8
 .L_8018259C:
-/* 8018259C 0014BB5C  3C 60 80 50 */	lis r3, lbl_804FEF8C@ha
-/* 801825A0 0014BB60  38 63 EF 8C */	addi r3, r3, lbl_804FEF8C@l
+/* 8018259C 0014BB5C  3C 60 80 50 */	lis r3, CREvtModelObj_strpool@ha
+/* 801825A0 0014BB60  38 63 EF 8C */	addi r3, r3, CREvtModelObj_strpool@l
 /* 801825A4 0014BB64  3B A3 00 32 */	addi r29, r3, 0x32
 /* 801825A8 0014BB68  7F A3 EB 78 */	mr r3, r29
 /* 801825AC 0014BB6C  48 13 70 0D */	bl strlen
@@ -819,8 +819,8 @@
 /* 801825D8 0014BB98  38 81 00 40 */	addi r4, r1, 0x40
 /* 801825DC 0014BB9C  48 14 01 E1 */	bl strcat
 /* 801825E0 0014BBA0  80 01 01 94 */	lwz r0, 0x194(r1)
-/* 801825E4 0014BBA4  3F C0 80 50 */	lis r30, lbl_804FEF8C@ha
-/* 801825E8 0014BBA8  3B DE EF 8C */	addi r30, r30, lbl_804FEF8C@l
+/* 801825E4 0014BBA4  3F C0 80 50 */	lis r30, CREvtModelObj_strpool@ha
+/* 801825E8 0014BBA8  3B DE EF 8C */	addi r30, r30, CREvtModelObj_strpool@l
 /* 801825EC 0014BBAC  38 61 01 54 */	addi r3, r1, 0x154
 /* 801825F0 0014BBB0  7C 00 EA 14 */	add r0, r0, r29
 /* 801825F4 0014BBB4  90 01 01 94 */	stw r0, 0x194(r1)
@@ -1063,8 +1063,8 @@
 /* 80182950 0014BF10  80 03 00 28 */	lwz r0, 0x28(r3)
 /* 80182954 0014BF14  28 00 00 03 */	cmplwi r0, 3
 /* 80182958 0014BF18  40 82 01 C0 */	bne .L_80182B18
-/* 8018295C 0014BF1C  3F A0 80 50 */	lis r29, lbl_804FEF8C@ha
-/* 80182960 0014BF20  3B BD EF 8C */	addi r29, r29, lbl_804FEF8C@l
+/* 8018295C 0014BF1C  3F A0 80 50 */	lis r29, CREvtModelObj_strpool@ha
+/* 80182960 0014BF20  3B BD EF 8C */	addi r29, r29, CREvtModelObj_strpool@l
 /* 80182964 0014BF24  3B 9D 00 20 */	addi r28, r29, 0x20
 /* 80182968 0014BF28  7F 83 E3 78 */	mr r3, r28
 /* 8018296C 0014BF2C  48 13 6C 4D */	bl strlen
@@ -2088,8 +2088,8 @@ cf_CREvtModelObj_typestr:
 	.balign 4
 
 
-.global lbl_804FEF8C
-lbl_804FEF8C:
+.global CREvtModelObj_strpool
+CREvtModelObj_strpool:
 	.asciz "eff/rec/ev/evwpn01.rec"
 	.asciz "/chr/en/"
 	.asciz "/chr/np/"

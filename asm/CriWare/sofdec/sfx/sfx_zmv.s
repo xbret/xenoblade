@@ -106,8 +106,8 @@
 /* 803D5F0C 0039F4CC  48 00 00 6C */	b .L_803D5F78
 .L_803D5F10:
 /* 803D5F10 0039F4D0  90 01 00 10 */	stw r0, 0x10(r1)
-/* 803D5F14 0039F4D4  3F C0 80 52 */	lis r30, lbl_80520B6C@ha
-/* 803D5F18 0039F4D8  38 9E 0B 6C */	addi r4, r30, lbl_80520B6C@l
+/* 803D5F14 0039F4D4  3F C0 80 52 */	lis r30, sfx_zmv_strpool@ha
+/* 803D5F18 0039F4D8  38 9E 0B 6C */	addi r4, r30, sfx_zmv_strpool@l
 /* 803D5F1C 0039F4DC  38 C1 00 08 */	addi r6, r1, 8
 /* 803D5F20 0039F4E0  80 03 00 10 */	lwz r0, 0x10(r3)
 /* 803D5F24 0039F4E4  38 61 00 10 */	addi r3, r1, 0x10
@@ -115,7 +115,7 @@
 /* 803D5F2C 0039F4EC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803D5F30 0039F4F0  4B FC 07 8D */	bl SJ_SearchTag
 /* 803D5F34 0039F4F4  3B E0 00 01 */	li r31, 1
-/* 803D5F38 0039F4F8  38 BE 0B 6C */	addi r5, r30, lbl_80520B6C@l
+/* 803D5F38 0039F4F8  38 BE 0B 6C */	addi r5, r30, sfx_zmv_strpool@l
 /* 803D5F3C 0039F4FC  93 FD 00 18 */	stw r31, 0x18(r29)
 /* 803D5F40 0039F500  38 85 00 0E */	addi r4, r5, 0xe
 /* 803D5F44 0039F504  38 61 00 10 */	addi r3, r1, 0x10
@@ -144,9 +144,9 @@
 .fn SFXZ_GetZfrmRange, global
 /* 803D5F94 0039F554  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803D5F98 0039F558  7C 08 02 A6 */	mflr r0
-/* 803D5F9C 0039F55C  3C E0 80 52 */	lis r7, lbl_80520B6C@ha
+/* 803D5F9C 0039F55C  3C E0 80 52 */	lis r7, sfx_zmv_strpool@ha
 /* 803D5FA0 0039F560  90 01 00 54 */	stw r0, 0x54(r1)
-/* 803D5FA4 0039F564  38 E7 0B 6C */	addi r7, r7, lbl_80520B6C@l
+/* 803D5FA4 0039F564  38 E7 0B 6C */	addi r7, r7, sfx_zmv_strpool@l
 /* 803D5FA8 0039F568  BF 61 00 3C */	stmw r27, 0x3c(r1)
 /* 803D5FAC 0039F56C  7C 9C 23 78 */	mr r28, r4
 /* 803D5FB0 0039F570  7C BE 2B 78 */	mr r30, r5
@@ -181,9 +181,9 @@
 /* 803D6018 0039F5D8  90 1F 00 00 */	stw r0, 0(r31)
 /* 803D601C 0039F5DC  48 00 00 B4 */	b .L_803D60D0
 .L_803D6020:
-/* 803D6020 0039F5E0  3F A0 80 52 */	lis r29, lbl_80520B6C@ha
+/* 803D6020 0039F5E0  3F A0 80 52 */	lis r29, sfx_zmv_strpool@ha
 /* 803D6024 0039F5E4  38 A1 00 14 */	addi r5, r1, 0x14
-/* 803D6028 0039F5E8  3B BD 0B 6C */	addi r29, r29, lbl_80520B6C@l
+/* 803D6028 0039F5E8  3B BD 0B 6C */	addi r29, r29, sfx_zmv_strpool@l
 /* 803D602C 0039F5EC  38 9D 00 1D */	addi r4, r29, 0x1d
 /* 803D6030 0039F5F0  4C C6 31 82 */	crclr 6
 /* 803D6034 0039F5F4  4B EE C4 AD */	bl sscanf
@@ -215,8 +215,8 @@
 /* 803D6090 0039F650  48 00 00 40 */	b .L_803D60D0
 .L_803D6094:
 /* 803D6094 0039F654  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 803D6098 0039F658  3C 60 80 52 */	lis r3, lbl_80520B6C@ha
-/* 803D609C 0039F65C  38 63 0B 6C */	addi r3, r3, lbl_80520B6C@l
+/* 803D6098 0039F658  3C 60 80 52 */	lis r3, sfx_zmv_strpool@ha
+/* 803D609C 0039F65C  38 63 0B 6C */	addi r3, r3, sfx_zmv_strpool@l
 /* 803D60A0 0039F660  38 A1 00 10 */	addi r5, r1, 0x10
 /* 803D60A4 0039F664  7C 00 E1 D6 */	mullw r0, r0, r28
 /* 803D60A8 0039F668  38 C1 00 0C */	addi r6, r1, 0xc
@@ -1281,8 +1281,8 @@ double_80520B38:
 	.4byte 0xC1600000
 
 
-.global lbl_80520B6C
-lbl_80520B6C:
+.global sfx_zmv_strpool
+sfx_zmv_strpool:
 	.asciz "ZMHDR"
 	.asciz "SFXINFE"
 	.asciz "ZMVFRM"

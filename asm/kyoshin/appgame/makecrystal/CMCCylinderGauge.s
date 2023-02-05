@@ -50,14 +50,14 @@
 /* 80221EF8 001EB4B8  7C 08 02 A6 */	mflr r0
 /* 80221EFC 001EB4BC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80221F00 001EB4C0  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80221F04 001EB4C4  3F E0 80 50 */	lis r31, lbl_80504934@ha
-/* 80221F08 001EB4C8  38 BF 49 34 */	addi r5, r31, lbl_80504934@l
+/* 80221F04 001EB4C4  3F E0 80 50 */	lis r31, CMCCylinderGauge_strpool@ha
+/* 80221F08 001EB4C8  38 BF 49 34 */	addi r5, r31, CMCCylinderGauge_strpool@l
 /* 80221F0C 001EB4CC  93 C1 00 08 */	stw r30, 8(r1)
 /* 80221F10 001EB4D0  7C 7E 1B 78 */	mr r30, r3
 /* 80221F14 001EB4D4  80 83 00 04 */	lwz r4, 4(r3)
 /* 80221F18 001EB4D8  38 63 00 08 */	addi r3, r3, 8
 /* 80221F1C 001EB4DC  4B F1 4F 69 */	bl func_80136E84
-/* 80221F20 001EB4E0  3B FF 49 34 */	addi r31, r31, lbl_80504934@l
+/* 80221F20 001EB4E0  3B FF 49 34 */	addi r31, r31, CMCCylinderGauge_strpool@l
 /* 80221F24 001EB4E4  80 7E 00 08 */	lwz r3, 8(r30)
 /* 80221F28 001EB4E8  80 BE 00 04 */	lwz r5, 4(r30)
 /* 80221F2C 001EB4EC  38 9E 00 0C */	addi r4, r30, 0xc
@@ -289,8 +289,8 @@
 
 .fn func_80222234, global
 /* 80222234 001EB7F4  88 A3 00 25 */	lbz r5, 0x25(r3)
-/* 80222238 001EB7F8  3C 80 80 50 */	lis r4, lbl_80504934@ha
-/* 8022223C 001EB7FC  38 84 49 34 */	addi r4, r4, lbl_80504934@l
+/* 80222238 001EB7F8  3C 80 80 50 */	lis r4, CMCCylinderGauge_strpool@ha
+/* 8022223C 001EB7FC  38 84 49 34 */	addi r4, r4, CMCCylinderGauge_strpool@l
 /* 80222240 001EB800  38 05 FF FF */	addi r0, r5, -1
 /* 80222244 001EB804  98 03 00 25 */	stb r0, 0x25(r3)
 /* 80222248 001EB808  80 63 00 08 */	lwz r3, 8(r3)
@@ -325,9 +325,9 @@
 .fn func_802222A4, global
 /* 802222A4 001EB864  98 83 00 25 */	stb r4, 0x25(r3)
 /* 802222A8 001EB868  7C 65 1B 78 */	mr r5, r3
-/* 802222AC 001EB86C  3C 80 80 50 */	lis r4, lbl_80504934@ha
+/* 802222AC 001EB86C  3C 80 80 50 */	lis r4, CMCCylinderGauge_strpool@ha
 /* 802222B0 001EB870  80 63 00 08 */	lwz r3, 8(r3)
-/* 802222B4 001EB874  38 84 49 34 */	addi r4, r4, lbl_80504934@l
+/* 802222B4 001EB874  38 84 49 34 */	addi r4, r4, CMCCylinderGauge_strpool@l
 /* 802222B8 001EB878  88 A5 00 25 */	lbz r5, 0x25(r5)
 /* 802222BC 001EB87C  38 84 00 7D */	addi r4, r4, 0x7d
 /* 802222C0 001EB880  4B F1 46 50 */	b func_80136910
@@ -399,9 +399,9 @@
 /* 802223A8 001EB968  88 7F 00 25 */	lbz r3, 0x25(r31)
 /* 802223AC 001EB96C  28 03 00 09 */	cmplwi r3, 9
 /* 802223B0 001EB970  40 80 00 6C */	bge .L_8022241C
-/* 802223B4 001EB974  3C 80 80 50 */	lis r4, lbl_80504934@ha
+/* 802223B4 001EB974  3C 80 80 50 */	lis r4, CMCCylinderGauge_strpool@ha
 /* 802223B8 001EB978  38 03 00 01 */	addi r0, r3, 1
-/* 802223BC 001EB97C  38 84 49 34 */	addi r4, r4, lbl_80504934@l
+/* 802223BC 001EB97C  38 84 49 34 */	addi r4, r4, CMCCylinderGauge_strpool@l
 /* 802223C0 001EB980  98 1F 00 25 */	stb r0, 0x25(r31)
 /* 802223C4 001EB984  80 7F 00 08 */	lwz r3, 8(r31)
 /* 802223C8 001EB988  38 84 00 7D */	addi r4, r4, 0x7d
@@ -662,8 +662,8 @@ CMCCylinderGauge_typestr:
 	.balign 4
 
 
-.global lbl_80504934
-lbl_80504934:
+.global CMCCylinderGauge_strpool
+CMCCylinderGauge_strpool:
 	.asciz "mf10_cry01_gage.brlyt"
 	.asciz "mf10_cry01_gage_in.brlan"
 	.asciz "mf10_cry01_gage_up.brlan"

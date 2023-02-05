@@ -79,10 +79,10 @@
 /* 8006B770 00034D30  41 82 00 08 */	beq .L_8006B778
 /* 8006B774 00034D34  A3 E3 00 8C */	lhz r31, 0x8c(r3)
 .L_8006B778:
-/* 8006B778 00034D38  3F 60 80 4F */	lis r27, lbl_804F6D00@ha
-/* 8006B77C 00034D3C  38 7B 6D 00 */	addi r3, r27, lbl_804F6D00@l
+/* 8006B778 00034D38  3F 60 80 4F */	lis r27, CfCam_strpool@ha
+/* 8006B77C 00034D3C  38 7B 6D 00 */	addi r3, r27, CfCam_strpool@l
 /* 8006B780 00034D40  4B FC F3 25 */	bl func_8003AAA4
-/* 8006B784 00034D44  3B 7B 6D 00 */	addi r27, r27, lbl_804F6D00@l
+/* 8006B784 00034D44  3B 7B 6D 00 */	addi r27, r27, CfCam_strpool@l
 /* 8006B788 00034D48  7C 79 1B 78 */	mr r25, r3
 /* 8006B78C 00034D4C  3B 9B 00 0C */	addi r28, r27, 0xc
 /* 8006B790 00034D50  7F 83 E3 78 */	mr r3, r28
@@ -433,8 +433,8 @@ cf_CfCam_typestr:
 	.4byte 0
 
 
-.global lbl_804F6D00
-lbl_804F6D00:
+.global CfCam_strpool
+CfCam_strpool:
 	.asciz "opt_camlist"
 	.asciz "at"
 	.asciz "pitch"

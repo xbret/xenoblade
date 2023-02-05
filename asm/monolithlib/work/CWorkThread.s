@@ -369,7 +369,7 @@
 /* 80437AC4 00401084  4E 80 00 20 */	blr 
 .endfn func_80437A70
 
-.fn func_80437AC8, global
+.fn __dt__CWorkThread, global
 /* 80437AC8 00401088  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80437ACC 0040108C  7C 08 02 A6 */	mflr r0
 /* 80437AD0 00401090  2C 03 00 00 */	cmpwi r3, 0
@@ -460,7 +460,7 @@
 /* 80437C04 004011C4  7C 08 03 A6 */	mtlr r0
 /* 80437C08 004011C8  38 21 00 20 */	addi r1, r1, 0x20
 /* 80437C0C 004011CC  4E 80 00 20 */	blr 
-.endfn func_80437AC8
+.endfn __dt__CWorkThread
 
 .fn func_80437C10, global
 /* 80437C10 004011D0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1728,7 +1728,7 @@ lbl_8056E958:
 __vt__CWorkThread:
 	.4byte __RTTI__CWorkThread
 	.4byte 0
-	.4byte func_80437AC8
+	.4byte __dt__CWorkThread
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -1964,7 +1964,7 @@ __RTTI___reslist_base_CWorkThread:
 
 .obj "@eti_80033D7C", local
 .hidden "@eti_80033D7C"
-	.4byte func_80437AC8
+	.4byte __dt__CWorkThread
 	.4byte 0x00000148
 	.4byte "@etb_8001C14C"
 .endobj "@eti_80033D7C"

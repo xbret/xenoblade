@@ -29,8 +29,8 @@
 /* 803A0CA4 0036A264  93 81 00 30 */	stw r28, 0x30(r1)
 /* 803A0CA8 0036A268  7C 7C 1B 78 */	mr r28, r3
 /* 803A0CAC 0036A26C  40 82 00 18 */	bne .L_803A0CC4
-/* 803A0CB0 0036A270  3C 60 80 52 */	lis r3, lbl_8051E408@ha
-/* 803A0CB4 0036A274  38 63 E4 08 */	addi r3, r3, lbl_8051E408@l
+/* 803A0CB0 0036A270  3C 60 80 52 */	lis r3, mwsfdlib_strpool@ha
+/* 803A0CB4 0036A274  38 63 E4 08 */	addi r3, r3, mwsfdlib_strpool@l
 /* 803A0CB8 0036A278  4C C6 31 82 */	crclr 6
 /* 803A0CBC 0036A27C  4B FF CF 7D */	bl MWSFSVM_Error
 /* 803A0CC0 0036A280  48 00 02 00 */	b .L_803A0EC0
@@ -86,10 +86,10 @@
 /* 803A0D7C 0036A33C  4B FF D0 55 */	bl MWSTM_SetTrSct
 /* 803A0D80 0036A340  2C 03 00 00 */	cmpwi r3, 0
 /* 803A0D84 0036A344  41 82 00 24 */	beq .L_803A0DA8
-/* 803A0D88 0036A348  3C 60 80 52 */	lis r3, lbl_8051E408@ha
+/* 803A0D88 0036A348  3C 60 80 52 */	lis r3, mwsfdlib_strpool@ha
 /* 803A0D8C 0036A34C  38 9F 00 10 */	addi r4, r31, 0x10
 /* 803A0D90 0036A350  38 00 FF 9B */	li r0, -101
-/* 803A0D94 0036A354  38 63 E4 08 */	addi r3, r3, lbl_8051E408@l
+/* 803A0D94 0036A354  38 63 E4 08 */	addi r3, r3, mwsfdlib_strpool@l
 /* 803A0D98 0036A358  90 04 00 68 */	stw r0, 0x68(r4)
 /* 803A0D9C 0036A35C  38 63 00 27 */	addi r3, r3, 0x27
 /* 803A0DA0 0036A360  4C C6 31 82 */	crclr 6
@@ -110,8 +110,8 @@
 /* 803A0DD8 0036A398  48 00 01 FD */	bl mwPlySfdInit
 /* 803A0DDC 0036A39C  2C 03 00 00 */	cmpwi r3, 0
 /* 803A0DE0 0036A3A0  41 82 00 18 */	beq .L_803A0DF8
-/* 803A0DE4 0036A3A4  3C 60 80 52 */	lis r3, lbl_8051E408@ha
-/* 803A0DE8 0036A3A8  38 63 E4 08 */	addi r3, r3, lbl_8051E408@l
+/* 803A0DE4 0036A3A4  3C 60 80 52 */	lis r3, mwsfdlib_strpool@ha
+/* 803A0DE8 0036A3A8  38 63 E4 08 */	addi r3, r3, mwsfdlib_strpool@l
 /* 803A0DEC 0036A3AC  38 63 00 4C */	addi r3, r3, 0x4c
 /* 803A0DF0 0036A3B0  4C C6 31 82 */	crclr 6
 /* 803A0DF4 0036A3B4  4B FF CE 45 */	bl MWSFSVM_Error
@@ -135,9 +135,9 @@
 /* 803A0E38 0036A3F8  38 63 0C 6C */	addi r3, r3, mwsflib_LscErrFunc@l
 /* 803A0E3C 0036A3FC  4B FF 09 6D */	bl LSC_EntryErrFunc
 /* 803A0E40 0036A400  4B FF D0 95 */	bl MWSFSFX_Init
-/* 803A0E44 0036A404  3F C0 80 52 */	lis r30, lbl_8051E408@ha
+/* 803A0E44 0036A404  3F C0 80 52 */	lis r30, mwsfdlib_strpool@ha
 /* 803A0E48 0036A408  3C 80 80 3A */	lis r4, MWSFSVR_VsyncThrdProc@ha
-/* 803A0E4C 0036A40C  3B DE E4 08 */	addi r30, r30, lbl_8051E408@l
+/* 803A0E4C 0036A40C  3B DE E4 08 */	addi r30, r30, mwsfdlib_strpool@l
 /* 803A0E50 0036A410  38 60 00 02 */	li r3, 2
 /* 803A0E54 0036A414  38 84 25 6C */	addi r4, r4, MWSFSVR_VsyncThrdProc@l
 /* 803A0E58 0036A418  38 A0 00 00 */	li r5, 0
@@ -261,8 +261,8 @@
 /* 803A0FE4 0036A5A4  80 04 E1 70 */	lwz r0, lbl_8051E170@l(r4)
 /* 803A0FE8 0036A5A8  38 80 39 88 */	li r4, 0x3988
 /* 803A0FEC 0036A5AC  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 803A0FF0 0036A5B0  3F E0 80 52 */	lis r31, lbl_8051E408@ha
-/* 803A0FF4 0036A5B4  3B FF E4 08 */	addi r31, r31, lbl_8051E408@l
+/* 803A0FF0 0036A5B0  3F E0 80 52 */	lis r31, mwsfdlib_strpool@ha
+/* 803A0FF4 0036A5B4  3B FF E4 08 */	addi r31, r31, mwsfdlib_strpool@l
 /* 803A0FF8 0036A5B8  90 61 00 0C */	stw r3, 0xc(r1)
 /* 803A0FFC 0036A5BC  38 7F 00 A8 */	addi r3, r31, 0xa8
 /* 803A1000 0036A5C0  90 01 00 08 */	stw r0, 8(r1)
@@ -387,9 +387,9 @@
 /* 803A11A8 0036A768  40 80 00 08 */	bge .L_803A11B0
 /* 803A11AC 0036A76C  48 00 01 48 */	b .L_803A12F4
 .L_803A11B0:
-/* 803A11B0 0036A770  3C 80 80 52 */	lis r4, lbl_8051E408@ha
+/* 803A11B0 0036A770  3C 80 80 52 */	lis r4, mwsfdlib_strpool@ha
 /* 803A11B4 0036A774  7F C5 F3 78 */	mr r5, r30
-/* 803A11B8 0036A778  38 84 E4 08 */	addi r4, r4, lbl_8051E408@l
+/* 803A11B8 0036A778  38 84 E4 08 */	addi r4, r4, mwsfdlib_strpool@l
 /* 803A11BC 0036A77C  38 7F 34 58 */	addi r3, r31, 0x3458
 /* 803A11C0 0036A780  38 84 00 E0 */	addi r4, r4, 0xe0
 /* 803A11C4 0036A784  4C C6 31 82 */	crclr 6
@@ -414,72 +414,72 @@
 .L_803A120C:
 /* 803A120C 0036A7CC  2C 03 00 00 */	cmpwi r3, 0
 /* 803A1210 0036A7D0  40 82 00 24 */	bne .L_803A1234
-/* 803A1214 0036A7D4  3C 80 80 52 */	lis r4, lbl_8051E408@ha
+/* 803A1214 0036A7D4  3C 80 80 52 */	lis r4, mwsfdlib_strpool@ha
 /* 803A1218 0036A7D8  7F C5 F3 78 */	mr r5, r30
-/* 803A121C 0036A7DC  38 84 E4 08 */	addi r4, r4, lbl_8051E408@l
+/* 803A121C 0036A7DC  38 84 E4 08 */	addi r4, r4, mwsfdlib_strpool@l
 /* 803A1220 0036A7E0  38 7F 34 58 */	addi r3, r31, 0x3458
 /* 803A1224 0036A7E4  38 84 00 F1 */	addi r4, r4, 0xf1
 /* 803A1228 0036A7E8  4C C6 31 82 */	crclr 6
 /* 803A122C 0036A7EC  4B F1 FE 0D */	bl sprintf
 /* 803A1230 0036A7F0  48 00 00 E0 */	b .L_803A1310
 .L_803A1234:
-/* 803A1234 0036A7F4  3C 80 80 52 */	lis r4, lbl_8051E408@ha
+/* 803A1234 0036A7F4  3C 80 80 52 */	lis r4, mwsfdlib_strpool@ha
 /* 803A1238 0036A7F8  7F C5 F3 78 */	mr r5, r30
-/* 803A123C 0036A7FC  38 84 E4 08 */	addi r4, r4, lbl_8051E408@l
+/* 803A123C 0036A7FC  38 84 E4 08 */	addi r4, r4, mwsfdlib_strpool@l
 /* 803A1240 0036A800  38 7F 34 58 */	addi r3, r31, 0x3458
 /* 803A1244 0036A804  38 84 01 4F */	addi r4, r4, 0x14f
 /* 803A1248 0036A808  4C C6 31 82 */	crclr 6
 /* 803A124C 0036A80C  4B F1 FD ED */	bl sprintf
 /* 803A1250 0036A810  48 00 00 C0 */	b .L_803A1310
 .L_803A1254:
-/* 803A1254 0036A814  3C 80 80 52 */	lis r4, lbl_8051E408@ha
+/* 803A1254 0036A814  3C 80 80 52 */	lis r4, mwsfdlib_strpool@ha
 /* 803A1258 0036A818  7F C5 F3 78 */	mr r5, r30
-/* 803A125C 0036A81C  38 84 E4 08 */	addi r4, r4, lbl_8051E408@l
+/* 803A125C 0036A81C  38 84 E4 08 */	addi r4, r4, mwsfdlib_strpool@l
 /* 803A1260 0036A820  38 7F 34 58 */	addi r3, r31, 0x3458
 /* 803A1264 0036A824  38 84 01 B4 */	addi r4, r4, 0x1b4
 /* 803A1268 0036A828  4C C6 31 82 */	crclr 6
 /* 803A126C 0036A82C  4B F1 FD CD */	bl sprintf
 /* 803A1270 0036A830  48 00 00 A0 */	b .L_803A1310
 .L_803A1274:
-/* 803A1274 0036A834  3C 80 80 52 */	lis r4, lbl_8051E408@ha
+/* 803A1274 0036A834  3C 80 80 52 */	lis r4, mwsfdlib_strpool@ha
 /* 803A1278 0036A838  7F C5 F3 78 */	mr r5, r30
-/* 803A127C 0036A83C  38 84 E4 08 */	addi r4, r4, lbl_8051E408@l
+/* 803A127C 0036A83C  38 84 E4 08 */	addi r4, r4, mwsfdlib_strpool@l
 /* 803A1280 0036A840  38 7F 34 58 */	addi r3, r31, 0x3458
 /* 803A1284 0036A844  38 84 02 05 */	addi r4, r4, 0x205
 /* 803A1288 0036A848  4C C6 31 82 */	crclr 6
 /* 803A128C 0036A84C  4B F1 FD AD */	bl sprintf
 /* 803A1290 0036A850  48 00 00 80 */	b .L_803A1310
 .L_803A1294:
-/* 803A1294 0036A854  3C 80 80 52 */	lis r4, lbl_8051E408@ha
+/* 803A1294 0036A854  3C 80 80 52 */	lis r4, mwsfdlib_strpool@ha
 /* 803A1298 0036A858  7F C5 F3 78 */	mr r5, r30
-/* 803A129C 0036A85C  38 84 E4 08 */	addi r4, r4, lbl_8051E408@l
+/* 803A129C 0036A85C  38 84 E4 08 */	addi r4, r4, mwsfdlib_strpool@l
 /* 803A12A0 0036A860  38 7F 34 58 */	addi r3, r31, 0x3458
 /* 803A12A4 0036A864  38 84 02 72 */	addi r4, r4, 0x272
 /* 803A12A8 0036A868  4C C6 31 82 */	crclr 6
 /* 803A12AC 0036A86C  4B F1 FD 8D */	bl sprintf
 /* 803A12B0 0036A870  48 00 00 60 */	b .L_803A1310
 .L_803A12B4:
-/* 803A12B4 0036A874  3C 80 80 52 */	lis r4, lbl_8051E408@ha
+/* 803A12B4 0036A874  3C 80 80 52 */	lis r4, mwsfdlib_strpool@ha
 /* 803A12B8 0036A878  7F C5 F3 78 */	mr r5, r30
-/* 803A12BC 0036A87C  38 84 E4 08 */	addi r4, r4, lbl_8051E408@l
+/* 803A12BC 0036A87C  38 84 E4 08 */	addi r4, r4, mwsfdlib_strpool@l
 /* 803A12C0 0036A880  38 7F 34 58 */	addi r3, r31, 0x3458
 /* 803A12C4 0036A884  38 84 02 F5 */	addi r4, r4, 0x2f5
 /* 803A12C8 0036A888  4C C6 31 82 */	crclr 6
 /* 803A12CC 0036A88C  4B F1 FD 6D */	bl sprintf
 /* 803A12D0 0036A890  48 00 00 40 */	b .L_803A1310
 .L_803A12D4:
-/* 803A12D4 0036A894  3C 80 80 52 */	lis r4, lbl_8051E408@ha
+/* 803A12D4 0036A894  3C 80 80 52 */	lis r4, mwsfdlib_strpool@ha
 /* 803A12D8 0036A898  7F C5 F3 78 */	mr r5, r30
-/* 803A12DC 0036A89C  38 84 E4 08 */	addi r4, r4, lbl_8051E408@l
+/* 803A12DC 0036A89C  38 84 E4 08 */	addi r4, r4, mwsfdlib_strpool@l
 /* 803A12E0 0036A8A0  38 7F 34 58 */	addi r3, r31, 0x3458
 /* 803A12E4 0036A8A4  38 84 03 3B */	addi r4, r4, 0x33b
 /* 803A12E8 0036A8A8  4C C6 31 82 */	crclr 6
 /* 803A12EC 0036A8AC  4B F1 FD 4D */	bl sprintf
 /* 803A12F0 0036A8B0  48 00 00 20 */	b .L_803A1310
 .L_803A12F4:
-/* 803A12F4 0036A8B4  3C 80 80 52 */	lis r4, lbl_8051E408@ha
+/* 803A12F4 0036A8B4  3C 80 80 52 */	lis r4, mwsfdlib_strpool@ha
 /* 803A12F8 0036A8B8  7F C5 F3 78 */	mr r5, r30
-/* 803A12FC 0036A8BC  38 84 E4 08 */	addi r4, r4, lbl_8051E408@l
+/* 803A12FC 0036A8BC  38 84 E4 08 */	addi r4, r4, mwsfdlib_strpool@l
 /* 803A1300 0036A8C0  38 7F 34 58 */	addi r3, r31, 0x3458
 /* 803A1304 0036A8C4  38 84 03 97 */	addi r4, r4, 0x397
 /* 803A1308 0036A8C8  4C C6 31 82 */	crclr 6
@@ -632,8 +632,8 @@ lbl_8051E404:
 	.float 59.94 #0x426FC28F
 
 
-.global lbl_8051E408
-lbl_8051E408:
+.global mwsfdlib_strpool
+mwsfdlib_strpool:
 	.asciz "E1122611 mwPlyInitSfdFx: iprm is NULL."
 	.asciz "E2005 mwPlyInitSfdFx: can't init GSC"
 	.asciz "ERR20010421A mwPlyInitSfdFx"

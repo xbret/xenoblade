@@ -5937,9 +5937,9 @@
 /* 8012A514 000F3AD4  48 19 CB 25 */	bl wcscmp
 /* 8012A518 000F3AD8  2C 03 00 00 */	cmpwi r3, 0
 /* 8012A51C 000F3ADC  40 82 00 20 */	bne .L_8012A53C
-/* 8012A520 000F3AE0  3C 60 80 50 */	lis r3, lbl_804FB488@ha
+/* 8012A520 000F3AE0  3C 60 80 50 */	lis r3, CTagProcessor_strpool@ha
 /* 8012A524 000F3AE4  38 A0 00 01 */	li r5, 1
-/* 8012A528 000F3AE8  38 63 B4 88 */	addi r3, r3, lbl_804FB488@l
+/* 8012A528 000F3AE8  38 63 B4 88 */	addi r3, r3, CTagProcessor_strpool@l
 /* 8012A52C 000F3AEC  38 83 00 0C */	addi r4, r3, 0xc
 /* 8012A530 000F3AF0  48 00 BC 01 */	bl func_80136130
 /* 8012A534 000F3AF4  7C 7B 07 34 */	extsh r27, r3
@@ -5950,9 +5950,9 @@
 /* 8012A544 000F3B04  48 19 CA F5 */	bl wcscmp
 /* 8012A548 000F3B08  2C 03 00 00 */	cmpwi r3, 0
 /* 8012A54C 000F3B0C  40 82 00 20 */	bne .L_8012A56C
-/* 8012A550 000F3B10  3C 60 80 50 */	lis r3, lbl_804FB488@ha
+/* 8012A550 000F3B10  3C 60 80 50 */	lis r3, CTagProcessor_strpool@ha
 /* 8012A554 000F3B14  38 A0 00 02 */	li r5, 2
-/* 8012A558 000F3B18  38 63 B4 88 */	addi r3, r3, lbl_804FB488@l
+/* 8012A558 000F3B18  38 63 B4 88 */	addi r3, r3, CTagProcessor_strpool@l
 /* 8012A55C 000F3B1C  38 83 00 0C */	addi r4, r3, 0xc
 /* 8012A560 000F3B20  48 00 BB D1 */	bl func_80136130
 /* 8012A564 000F3B24  7C 7B 07 34 */	extsh r27, r3
@@ -5963,9 +5963,9 @@
 /* 8012A574 000F3B34  48 19 CA C5 */	bl wcscmp
 /* 8012A578 000F3B38  2C 03 00 00 */	cmpwi r3, 0
 /* 8012A57C 000F3B3C  40 82 00 20 */	bne .L_8012A59C
-/* 8012A580 000F3B40  3C 60 80 50 */	lis r3, lbl_804FB488@ha
+/* 8012A580 000F3B40  3C 60 80 50 */	lis r3, CTagProcessor_strpool@ha
 /* 8012A584 000F3B44  38 A0 00 03 */	li r5, 3
-/* 8012A588 000F3B48  38 63 B4 88 */	addi r3, r3, lbl_804FB488@l
+/* 8012A588 000F3B48  38 63 B4 88 */	addi r3, r3, CTagProcessor_strpool@l
 /* 8012A58C 000F3B4C  38 83 00 0C */	addi r4, r3, 0xc
 /* 8012A590 000F3B50  48 00 BB A1 */	bl func_80136130
 /* 8012A594 000F3B54  7C 7B 07 34 */	extsh r27, r3
@@ -5976,9 +5976,9 @@
 /* 8012A5A4 000F3B64  48 19 CA 95 */	bl wcscmp
 /* 8012A5A8 000F3B68  2C 03 00 00 */	cmpwi r3, 0
 /* 8012A5AC 000F3B6C  40 82 00 20 */	bne .L_8012A5CC
-/* 8012A5B0 000F3B70  3C 60 80 50 */	lis r3, lbl_804FB488@ha
+/* 8012A5B0 000F3B70  3C 60 80 50 */	lis r3, CTagProcessor_strpool@ha
 /* 8012A5B4 000F3B74  38 A0 00 04 */	li r5, 4
-/* 8012A5B8 000F3B78  38 63 B4 88 */	addi r3, r3, lbl_804FB488@l
+/* 8012A5B8 000F3B78  38 63 B4 88 */	addi r3, r3, CTagProcessor_strpool@l
 /* 8012A5BC 000F3B7C  38 83 00 0C */	addi r4, r3, 0xc
 /* 8012A5C0 000F3B80  48 00 BB 71 */	bl func_80136130
 /* 8012A5C4 000F3B84  7C 7B 07 34 */	extsh r27, r3
@@ -5989,9 +5989,9 @@
 /* 8012A5D4 000F3B94  48 19 CA 65 */	bl wcscmp
 /* 8012A5D8 000F3B98  2C 03 00 00 */	cmpwi r3, 0
 /* 8012A5DC 000F3B9C  40 82 00 20 */	bne .L_8012A5FC
-/* 8012A5E0 000F3BA0  3C 60 80 50 */	lis r3, lbl_804FB488@ha
+/* 8012A5E0 000F3BA0  3C 60 80 50 */	lis r3, CTagProcessor_strpool@ha
 /* 8012A5E4 000F3BA4  38 A0 00 05 */	li r5, 5
-/* 8012A5E8 000F3BA8  38 63 B4 88 */	addi r3, r3, lbl_804FB488@l
+/* 8012A5E8 000F3BA8  38 63 B4 88 */	addi r3, r3, CTagProcessor_strpool@l
 /* 8012A5EC 000F3BAC  38 83 00 0C */	addi r4, r3, 0xc
 /* 8012A5F0 000F3BB0  48 00 BB 41 */	bl func_80136130
 /* 8012A5F4 000F3BB4  7C 7B 07 34 */	extsh r27, r3
@@ -6002,9 +6002,9 @@
 /* 8012A604 000F3BC4  48 19 CA 35 */	bl wcscmp
 /* 8012A608 000F3BC8  2C 03 00 00 */	cmpwi r3, 0
 /* 8012A60C 000F3BCC  40 82 00 20 */	bne .L_8012A62C
-/* 8012A610 000F3BD0  3C 60 80 50 */	lis r3, lbl_804FB488@ha
+/* 8012A610 000F3BD0  3C 60 80 50 */	lis r3, CTagProcessor_strpool@ha
 /* 8012A614 000F3BD4  38 A0 00 06 */	li r5, 6
-/* 8012A618 000F3BD8  38 63 B4 88 */	addi r3, r3, lbl_804FB488@l
+/* 8012A618 000F3BD8  38 63 B4 88 */	addi r3, r3, CTagProcessor_strpool@l
 /* 8012A61C 000F3BDC  38 83 00 0C */	addi r4, r3, 0xc
 /* 8012A620 000F3BE0  48 00 BB 11 */	bl func_80136130
 /* 8012A624 000F3BE4  7C 7B 07 34 */	extsh r27, r3
@@ -6015,9 +6015,9 @@
 /* 8012A634 000F3BF4  48 19 CA 05 */	bl wcscmp
 /* 8012A638 000F3BF8  2C 03 00 00 */	cmpwi r3, 0
 /* 8012A63C 000F3BFC  40 82 00 20 */	bne .L_8012A65C
-/* 8012A640 000F3C00  3C 60 80 50 */	lis r3, lbl_804FB488@ha
+/* 8012A640 000F3C00  3C 60 80 50 */	lis r3, CTagProcessor_strpool@ha
 /* 8012A644 000F3C04  38 A0 00 07 */	li r5, 7
-/* 8012A648 000F3C08  38 63 B4 88 */	addi r3, r3, lbl_804FB488@l
+/* 8012A648 000F3C08  38 63 B4 88 */	addi r3, r3, CTagProcessor_strpool@l
 /* 8012A64C 000F3C0C  38 83 00 0C */	addi r4, r3, 0xc
 /* 8012A650 000F3C10  48 00 BA E1 */	bl func_80136130
 /* 8012A654 000F3C14  7C 7B 07 34 */	extsh r27, r3
@@ -6028,9 +6028,9 @@
 /* 8012A664 000F3C24  48 19 C9 D5 */	bl wcscmp
 /* 8012A668 000F3C28  2C 03 00 00 */	cmpwi r3, 0
 /* 8012A66C 000F3C2C  40 82 00 20 */	bne .L_8012A68C
-/* 8012A670 000F3C30  3C 60 80 50 */	lis r3, lbl_804FB488@ha
+/* 8012A670 000F3C30  3C 60 80 50 */	lis r3, CTagProcessor_strpool@ha
 /* 8012A674 000F3C34  38 A0 00 08 */	li r5, 8
-/* 8012A678 000F3C38  38 63 B4 88 */	addi r3, r3, lbl_804FB488@l
+/* 8012A678 000F3C38  38 63 B4 88 */	addi r3, r3, CTagProcessor_strpool@l
 /* 8012A67C 000F3C3C  38 83 00 0C */	addi r4, r3, 0xc
 /* 8012A680 000F3C40  48 00 BA B1 */	bl func_80136130
 /* 8012A684 000F3C44  7C 7B 07 34 */	extsh r27, r3
@@ -6041,9 +6041,9 @@
 /* 8012A694 000F3C54  48 19 C9 A5 */	bl wcscmp
 /* 8012A698 000F3C58  2C 03 00 00 */	cmpwi r3, 0
 /* 8012A69C 000F3C5C  40 82 00 20 */	bne .L_8012A6BC
-/* 8012A6A0 000F3C60  3C 60 80 50 */	lis r3, lbl_804FB488@ha
+/* 8012A6A0 000F3C60  3C 60 80 50 */	lis r3, CTagProcessor_strpool@ha
 /* 8012A6A4 000F3C64  38 A0 00 09 */	li r5, 9
-/* 8012A6A8 000F3C68  38 63 B4 88 */	addi r3, r3, lbl_804FB488@l
+/* 8012A6A8 000F3C68  38 63 B4 88 */	addi r3, r3, CTagProcessor_strpool@l
 /* 8012A6AC 000F3C6C  38 83 00 0C */	addi r4, r3, 0xc
 /* 8012A6B0 000F3C70  48 00 BA 81 */	bl func_80136130
 /* 8012A6B4 000F3C74  7C 7B 07 34 */	extsh r27, r3
@@ -6054,9 +6054,9 @@
 /* 8012A6C4 000F3C84  48 19 C9 75 */	bl wcscmp
 /* 8012A6C8 000F3C88  2C 03 00 00 */	cmpwi r3, 0
 /* 8012A6CC 000F3C8C  40 82 00 20 */	bne .L_8012A6EC
-/* 8012A6D0 000F3C90  3C 60 80 50 */	lis r3, lbl_804FB488@ha
+/* 8012A6D0 000F3C90  3C 60 80 50 */	lis r3, CTagProcessor_strpool@ha
 /* 8012A6D4 000F3C94  38 A0 00 0A */	li r5, 0xa
-/* 8012A6D8 000F3C98  38 63 B4 88 */	addi r3, r3, lbl_804FB488@l
+/* 8012A6D8 000F3C98  38 63 B4 88 */	addi r3, r3, CTagProcessor_strpool@l
 /* 8012A6DC 000F3C9C  38 83 00 0C */	addi r4, r3, 0xc
 /* 8012A6E0 000F3CA0  48 00 BA 51 */	bl func_80136130
 /* 8012A6E4 000F3CA4  7C 7B 07 34 */	extsh r27, r3
@@ -6067,9 +6067,9 @@
 /* 8012A6F4 000F3CB4  48 19 C9 45 */	bl wcscmp
 /* 8012A6F8 000F3CB8  2C 03 00 00 */	cmpwi r3, 0
 /* 8012A6FC 000F3CBC  40 82 00 20 */	bne .L_8012A71C
-/* 8012A700 000F3CC0  3C 60 80 50 */	lis r3, lbl_804FB488@ha
+/* 8012A700 000F3CC0  3C 60 80 50 */	lis r3, CTagProcessor_strpool@ha
 /* 8012A704 000F3CC4  38 A0 00 0B */	li r5, 0xb
-/* 8012A708 000F3CC8  38 63 B4 88 */	addi r3, r3, lbl_804FB488@l
+/* 8012A708 000F3CC8  38 63 B4 88 */	addi r3, r3, CTagProcessor_strpool@l
 /* 8012A70C 000F3CCC  38 83 00 0C */	addi r4, r3, 0xc
 /* 8012A710 000F3CD0  48 00 BA 21 */	bl func_80136130
 /* 8012A714 000F3CD4  7C 7B 07 34 */	extsh r27, r3
@@ -6080,9 +6080,9 @@
 /* 8012A724 000F3CE4  48 19 C9 15 */	bl wcscmp
 /* 8012A728 000F3CE8  2C 03 00 00 */	cmpwi r3, 0
 /* 8012A72C 000F3CEC  40 82 00 20 */	bne .L_8012A74C
-/* 8012A730 000F3CF0  3C 60 80 50 */	lis r3, lbl_804FB488@ha
+/* 8012A730 000F3CF0  3C 60 80 50 */	lis r3, CTagProcessor_strpool@ha
 /* 8012A734 000F3CF4  38 A0 00 0C */	li r5, 0xc
-/* 8012A738 000F3CF8  38 63 B4 88 */	addi r3, r3, lbl_804FB488@l
+/* 8012A738 000F3CF8  38 63 B4 88 */	addi r3, r3, CTagProcessor_strpool@l
 /* 8012A73C 000F3CFC  38 83 00 0C */	addi r4, r3, 0xc
 /* 8012A740 000F3D00  48 00 B9 F1 */	bl func_80136130
 /* 8012A744 000F3D04  7C 7B 07 34 */	extsh r27, r3
@@ -6093,9 +6093,9 @@
 /* 8012A754 000F3D14  48 19 C8 E5 */	bl wcscmp
 /* 8012A758 000F3D18  2C 03 00 00 */	cmpwi r3, 0
 /* 8012A75C 000F3D1C  40 82 00 20 */	bne .L_8012A77C
-/* 8012A760 000F3D20  3C 60 80 50 */	lis r3, lbl_804FB488@ha
+/* 8012A760 000F3D20  3C 60 80 50 */	lis r3, CTagProcessor_strpool@ha
 /* 8012A764 000F3D24  38 A0 00 0D */	li r5, 0xd
-/* 8012A768 000F3D28  38 63 B4 88 */	addi r3, r3, lbl_804FB488@l
+/* 8012A768 000F3D28  38 63 B4 88 */	addi r3, r3, CTagProcessor_strpool@l
 /* 8012A76C 000F3D2C  38 83 00 0C */	addi r4, r3, 0xc
 /* 8012A770 000F3D30  48 00 B9 C1 */	bl func_80136130
 /* 8012A774 000F3D34  7C 7B 07 34 */	extsh r27, r3
@@ -6106,9 +6106,9 @@
 /* 8012A784 000F3D44  48 19 C8 B5 */	bl wcscmp
 /* 8012A788 000F3D48  2C 03 00 00 */	cmpwi r3, 0
 /* 8012A78C 000F3D4C  40 82 00 20 */	bne .L_8012A7AC
-/* 8012A790 000F3D50  3C 60 80 50 */	lis r3, lbl_804FB488@ha
+/* 8012A790 000F3D50  3C 60 80 50 */	lis r3, CTagProcessor_strpool@ha
 /* 8012A794 000F3D54  38 A0 00 0E */	li r5, 0xe
-/* 8012A798 000F3D58  38 63 B4 88 */	addi r3, r3, lbl_804FB488@l
+/* 8012A798 000F3D58  38 63 B4 88 */	addi r3, r3, CTagProcessor_strpool@l
 /* 8012A79C 000F3D5C  38 83 00 0C */	addi r4, r3, 0xc
 /* 8012A7A0 000F3D60  48 00 B9 91 */	bl func_80136130
 /* 8012A7A4 000F3D64  7C 7B 07 34 */	extsh r27, r3
@@ -6119,9 +6119,9 @@
 /* 8012A7B4 000F3D74  48 19 C8 85 */	bl wcscmp
 /* 8012A7B8 000F3D78  2C 03 00 00 */	cmpwi r3, 0
 /* 8012A7BC 000F3D7C  40 82 00 20 */	bne .L_8012A7DC
-/* 8012A7C0 000F3D80  3C 60 80 50 */	lis r3, lbl_804FB488@ha
+/* 8012A7C0 000F3D80  3C 60 80 50 */	lis r3, CTagProcessor_strpool@ha
 /* 8012A7C4 000F3D84  38 A0 00 0F */	li r5, 0xf
-/* 8012A7C8 000F3D88  38 63 B4 88 */	addi r3, r3, lbl_804FB488@l
+/* 8012A7C8 000F3D88  38 63 B4 88 */	addi r3, r3, CTagProcessor_strpool@l
 /* 8012A7CC 000F3D8C  38 83 00 0C */	addi r4, r3, 0xc
 /* 8012A7D0 000F3D90  48 00 B9 61 */	bl func_80136130
 /* 8012A7D4 000F3D94  7C 7B 07 34 */	extsh r27, r3
@@ -6132,9 +6132,9 @@
 /* 8012A7E4 000F3DA4  48 19 C8 55 */	bl wcscmp
 /* 8012A7E8 000F3DA8  2C 03 00 00 */	cmpwi r3, 0
 /* 8012A7EC 000F3DAC  40 82 00 20 */	bne .L_8012A80C
-/* 8012A7F0 000F3DB0  3C 60 80 50 */	lis r3, lbl_804FB488@ha
+/* 8012A7F0 000F3DB0  3C 60 80 50 */	lis r3, CTagProcessor_strpool@ha
 /* 8012A7F4 000F3DB4  38 A0 00 10 */	li r5, 0x10
-/* 8012A7F8 000F3DB8  38 63 B4 88 */	addi r3, r3, lbl_804FB488@l
+/* 8012A7F8 000F3DB8  38 63 B4 88 */	addi r3, r3, CTagProcessor_strpool@l
 /* 8012A7FC 000F3DBC  38 83 00 0C */	addi r4, r3, 0xc
 /* 8012A800 000F3DC0  48 00 B9 31 */	bl func_80136130
 /* 8012A804 000F3DC4  7C 7B 07 34 */	extsh r27, r3
@@ -6145,9 +6145,9 @@
 /* 8012A814 000F3DD4  48 19 C8 25 */	bl wcscmp
 /* 8012A818 000F3DD8  2C 03 00 00 */	cmpwi r3, 0
 /* 8012A81C 000F3DDC  40 82 00 20 */	bne .L_8012A83C
-/* 8012A820 000F3DE0  3C 60 80 50 */	lis r3, lbl_804FB488@ha
+/* 8012A820 000F3DE0  3C 60 80 50 */	lis r3, CTagProcessor_strpool@ha
 /* 8012A824 000F3DE4  38 A0 00 11 */	li r5, 0x11
-/* 8012A828 000F3DE8  38 63 B4 88 */	addi r3, r3, lbl_804FB488@l
+/* 8012A828 000F3DE8  38 63 B4 88 */	addi r3, r3, CTagProcessor_strpool@l
 /* 8012A82C 000F3DEC  38 83 00 0C */	addi r4, r3, 0xc
 /* 8012A830 000F3DF0  48 00 B9 01 */	bl func_80136130
 /* 8012A834 000F3DF4  7C 7B 07 34 */	extsh r27, r3
@@ -6158,9 +6158,9 @@
 /* 8012A844 000F3E04  48 19 C7 F5 */	bl wcscmp
 /* 8012A848 000F3E08  2C 03 00 00 */	cmpwi r3, 0
 /* 8012A84C 000F3E0C  40 82 00 20 */	bne .L_8012A86C
-/* 8012A850 000F3E10  3C 60 80 50 */	lis r3, lbl_804FB488@ha
+/* 8012A850 000F3E10  3C 60 80 50 */	lis r3, CTagProcessor_strpool@ha
 /* 8012A854 000F3E14  38 A0 00 12 */	li r5, 0x12
-/* 8012A858 000F3E18  38 63 B4 88 */	addi r3, r3, lbl_804FB488@l
+/* 8012A858 000F3E18  38 63 B4 88 */	addi r3, r3, CTagProcessor_strpool@l
 /* 8012A85C 000F3E1C  38 83 00 0C */	addi r4, r3, 0xc
 /* 8012A860 000F3E20  48 00 B8 D1 */	bl func_80136130
 /* 8012A864 000F3E24  7C 7B 07 34 */	extsh r27, r3
@@ -6171,9 +6171,9 @@
 /* 8012A874 000F3E34  48 19 C7 C5 */	bl wcscmp
 /* 8012A878 000F3E38  2C 03 00 00 */	cmpwi r3, 0
 /* 8012A87C 000F3E3C  40 82 00 20 */	bne .L_8012A89C
-/* 8012A880 000F3E40  3C 60 80 50 */	lis r3, lbl_804FB488@ha
+/* 8012A880 000F3E40  3C 60 80 50 */	lis r3, CTagProcessor_strpool@ha
 /* 8012A884 000F3E44  38 A0 00 13 */	li r5, 0x13
-/* 8012A888 000F3E48  38 63 B4 88 */	addi r3, r3, lbl_804FB488@l
+/* 8012A888 000F3E48  38 63 B4 88 */	addi r3, r3, CTagProcessor_strpool@l
 /* 8012A88C 000F3E4C  38 83 00 0C */	addi r4, r3, 0xc
 /* 8012A890 000F3E50  48 00 B8 A1 */	bl func_80136130
 /* 8012A894 000F3E54  7C 7B 07 34 */	extsh r27, r3
@@ -6184,9 +6184,9 @@
 /* 8012A8A4 000F3E64  48 19 C7 95 */	bl wcscmp
 /* 8012A8A8 000F3E68  2C 03 00 00 */	cmpwi r3, 0
 /* 8012A8AC 000F3E6C  40 82 00 20 */	bne .L_8012A8CC
-/* 8012A8B0 000F3E70  3C 60 80 50 */	lis r3, lbl_804FB488@ha
+/* 8012A8B0 000F3E70  3C 60 80 50 */	lis r3, CTagProcessor_strpool@ha
 /* 8012A8B4 000F3E74  38 A0 00 14 */	li r5, 0x14
-/* 8012A8B8 000F3E78  38 63 B4 88 */	addi r3, r3, lbl_804FB488@l
+/* 8012A8B8 000F3E78  38 63 B4 88 */	addi r3, r3, CTagProcessor_strpool@l
 /* 8012A8BC 000F3E7C  38 83 00 0C */	addi r4, r3, 0xc
 /* 8012A8C0 000F3E80  48 00 B8 71 */	bl func_80136130
 /* 8012A8C4 000F3E84  7C 7B 07 34 */	extsh r27, r3
@@ -6197,9 +6197,9 @@
 /* 8012A8D4 000F3E94  48 19 C7 65 */	bl wcscmp
 /* 8012A8D8 000F3E98  2C 03 00 00 */	cmpwi r3, 0
 /* 8012A8DC 000F3E9C  40 82 00 20 */	bne .L_8012A8FC
-/* 8012A8E0 000F3EA0  3C 60 80 50 */	lis r3, lbl_804FB488@ha
+/* 8012A8E0 000F3EA0  3C 60 80 50 */	lis r3, CTagProcessor_strpool@ha
 /* 8012A8E4 000F3EA4  38 A0 00 15 */	li r5, 0x15
-/* 8012A8E8 000F3EA8  38 63 B4 88 */	addi r3, r3, lbl_804FB488@l
+/* 8012A8E8 000F3EA8  38 63 B4 88 */	addi r3, r3, CTagProcessor_strpool@l
 /* 8012A8EC 000F3EAC  38 83 00 0C */	addi r4, r3, 0xc
 /* 8012A8F0 000F3EB0  48 00 B8 41 */	bl func_80136130
 /* 8012A8F4 000F3EB4  7C 7B 07 34 */	extsh r27, r3
@@ -6210,9 +6210,9 @@
 /* 8012A904 000F3EC4  48 19 C7 35 */	bl wcscmp
 /* 8012A908 000F3EC8  2C 03 00 00 */	cmpwi r3, 0
 /* 8012A90C 000F3ECC  40 82 00 20 */	bne .L_8012A92C
-/* 8012A910 000F3ED0  3C 60 80 50 */	lis r3, lbl_804FB488@ha
+/* 8012A910 000F3ED0  3C 60 80 50 */	lis r3, CTagProcessor_strpool@ha
 /* 8012A914 000F3ED4  38 A0 00 16 */	li r5, 0x16
-/* 8012A918 000F3ED8  38 63 B4 88 */	addi r3, r3, lbl_804FB488@l
+/* 8012A918 000F3ED8  38 63 B4 88 */	addi r3, r3, CTagProcessor_strpool@l
 /* 8012A91C 000F3EDC  38 83 00 0C */	addi r4, r3, 0xc
 /* 8012A920 000F3EE0  48 00 B8 11 */	bl func_80136130
 /* 8012A924 000F3EE4  7C 7B 07 34 */	extsh r27, r3
@@ -6223,9 +6223,9 @@
 /* 8012A934 000F3EF4  48 19 C7 05 */	bl wcscmp
 /* 8012A938 000F3EF8  2C 03 00 00 */	cmpwi r3, 0
 /* 8012A93C 000F3EFC  40 82 00 20 */	bne .L_8012A95C
-/* 8012A940 000F3F00  3C 60 80 50 */	lis r3, lbl_804FB488@ha
+/* 8012A940 000F3F00  3C 60 80 50 */	lis r3, CTagProcessor_strpool@ha
 /* 8012A944 000F3F04  38 A0 00 17 */	li r5, 0x17
-/* 8012A948 000F3F08  38 63 B4 88 */	addi r3, r3, lbl_804FB488@l
+/* 8012A948 000F3F08  38 63 B4 88 */	addi r3, r3, CTagProcessor_strpool@l
 /* 8012A94C 000F3F0C  38 83 00 0C */	addi r4, r3, 0xc
 /* 8012A950 000F3F10  48 00 B7 E1 */	bl func_80136130
 /* 8012A954 000F3F14  7C 7B 07 34 */	extsh r27, r3
@@ -6236,9 +6236,9 @@
 /* 8012A964 000F3F24  48 19 C6 D5 */	bl wcscmp
 /* 8012A968 000F3F28  2C 03 00 00 */	cmpwi r3, 0
 /* 8012A96C 000F3F2C  40 82 00 20 */	bne .L_8012A98C
-/* 8012A970 000F3F30  3C 60 80 50 */	lis r3, lbl_804FB488@ha
+/* 8012A970 000F3F30  3C 60 80 50 */	lis r3, CTagProcessor_strpool@ha
 /* 8012A974 000F3F34  38 A0 00 18 */	li r5, 0x18
-/* 8012A978 000F3F38  38 63 B4 88 */	addi r3, r3, lbl_804FB488@l
+/* 8012A978 000F3F38  38 63 B4 88 */	addi r3, r3, CTagProcessor_strpool@l
 /* 8012A97C 000F3F3C  38 83 00 0C */	addi r4, r3, 0xc
 /* 8012A980 000F3F40  48 00 B7 B1 */	bl func_80136130
 /* 8012A984 000F3F44  7C 7B 07 34 */	extsh r27, r3
@@ -6249,9 +6249,9 @@
 /* 8012A994 000F3F54  48 19 C6 A5 */	bl wcscmp
 /* 8012A998 000F3F58  2C 03 00 00 */	cmpwi r3, 0
 /* 8012A99C 000F3F5C  40 82 00 20 */	bne .L_8012A9BC
-/* 8012A9A0 000F3F60  3C 60 80 50 */	lis r3, lbl_804FB488@ha
+/* 8012A9A0 000F3F60  3C 60 80 50 */	lis r3, CTagProcessor_strpool@ha
 /* 8012A9A4 000F3F64  38 A0 00 19 */	li r5, 0x19
-/* 8012A9A8 000F3F68  38 63 B4 88 */	addi r3, r3, lbl_804FB488@l
+/* 8012A9A8 000F3F68  38 63 B4 88 */	addi r3, r3, CTagProcessor_strpool@l
 /* 8012A9AC 000F3F6C  38 83 00 0C */	addi r4, r3, 0xc
 /* 8012A9B0 000F3F70  48 00 B7 81 */	bl func_80136130
 /* 8012A9B4 000F3F74  7C 7B 07 34 */	extsh r27, r3
@@ -6262,9 +6262,9 @@
 /* 8012A9C4 000F3F84  48 19 C6 75 */	bl wcscmp
 /* 8012A9C8 000F3F88  2C 03 00 00 */	cmpwi r3, 0
 /* 8012A9CC 000F3F8C  40 82 00 20 */	bne .L_8012A9EC
-/* 8012A9D0 000F3F90  3C 60 80 50 */	lis r3, lbl_804FB488@ha
+/* 8012A9D0 000F3F90  3C 60 80 50 */	lis r3, CTagProcessor_strpool@ha
 /* 8012A9D4 000F3F94  38 A0 00 1A */	li r5, 0x1a
-/* 8012A9D8 000F3F98  38 63 B4 88 */	addi r3, r3, lbl_804FB488@l
+/* 8012A9D8 000F3F98  38 63 B4 88 */	addi r3, r3, CTagProcessor_strpool@l
 /* 8012A9DC 000F3F9C  38 83 00 0C */	addi r4, r3, 0xc
 /* 8012A9E0 000F3FA0  48 00 B7 51 */	bl func_80136130
 /* 8012A9E4 000F3FA4  7C 7B 07 34 */	extsh r27, r3
@@ -7137,9 +7137,9 @@
 /* 8012B5D8 000F4B98  FF A0 08 90 */	fmr f29, f1
 /* 8012B5DC 000F4B9C  2C 1C 00 00 */	cmpwi r28, 0
 /* 8012B5E0 000F4BA0  40 82 00 20 */	bne .L_8012B600
-/* 8012B5E4 000F4BA4  3C A0 80 50 */	lis r5, lbl_804FB488@ha
+/* 8012B5E4 000F4BA4  3C A0 80 50 */	lis r5, CTagProcessor_strpool@ha
 /* 8012B5E8 000F4BA8  38 80 01 20 */	li r4, 0x120
-/* 8012B5EC 000F4BAC  38 A5 B4 88 */	addi r5, r5, lbl_804FB488@l
+/* 8012B5EC 000F4BAC  38 A5 B4 88 */	addi r5, r5, CTagProcessor_strpool@l
 /* 8012B5F0 000F4BB0  38 65 00 15 */	addi r3, r5, 0x15
 /* 8012B5F4 000F4BB4  38 A5 00 27 */	addi r5, r5, 0x27
 /* 8012B5F8 000F4BB8  4C C6 31 82 */	crclr 6
@@ -8850,8 +8850,8 @@ nw4r_ut_TagProcessorBase_wchar_t_typestr:
 	.asciz "nw4r::ut::TagProcessorBase<wchar_t>"
 
 
-.global lbl_804FB488
-lbl_804FB488:
+.global CTagProcessor_strpool
+CTagProcessor_strpool:
 	.asciz "JNL_trustup"
 	.asciz "trust_up"
 	.asciz "CTagProcessor.cpp"

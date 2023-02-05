@@ -51,13 +51,13 @@
 /* 80207FD0 001D1590  90 01 00 34 */	stw r0, 0x34(r1)
 /* 80207FD4 001D1594  39 61 00 30 */	addi r11, r1, 0x30
 /* 80207FD8 001D1598  48 0B 21 85 */	bl _savegpr_29
-/* 80207FDC 001D159C  3F E0 80 50 */	lis r31, lbl_80503BDC@ha
+/* 80207FDC 001D159C  3F E0 80 50 */	lis r31, CItemBoxGridSubMenu_strpool@ha
 /* 80207FE0 001D15A0  90 83 00 04 */	stw r4, 4(r3)
 /* 80207FE4 001D15A4  7C 7D 1B 78 */	mr r29, r3
 /* 80207FE8 001D15A8  38 63 00 08 */	addi r3, r3, 8
-/* 80207FEC 001D15AC  38 BF 3B DC */	addi r5, r31, lbl_80503BDC@l
+/* 80207FEC 001D15AC  38 BF 3B DC */	addi r5, r31, CItemBoxGridSubMenu_strpool@l
 /* 80207FF0 001D15B0  4B F2 EE 95 */	bl func_80136E84
-/* 80207FF4 001D15B4  3B FF 3B DC */	addi r31, r31, lbl_80503BDC@l
+/* 80207FF4 001D15B4  3B FF 3B DC */	addi r31, r31, CItemBoxGridSubMenu_strpool@l
 /* 80207FF8 001D15B8  80 7D 00 08 */	lwz r3, 8(r29)
 /* 80207FFC 001D15BC  80 BD 00 04 */	lwz r5, 4(r29)
 /* 80208000 001D15C0  38 9D 00 0C */	addi r4, r29, 0xc
@@ -155,9 +155,9 @@
 /* 80208170 001D1730  41 82 00 08 */	beq .L_80208178
 /* 80208174 001D1734  38 9F 00 97 */	addi r4, r31, 0x97
 .L_80208178:
-/* 80208178 001D1738  3F E0 80 50 */	lis r31, lbl_80503BDC@ha
+/* 80208178 001D1738  3F E0 80 50 */	lis r31, CItemBoxGridSubMenu_strpool@ha
 /* 8020817C 001D173C  38 A0 00 2B */	li r5, 0x2b
-/* 80208180 001D1740  3B FF 3B DC */	addi r31, r31, lbl_80503BDC@l
+/* 80208180 001D1740  3B FF 3B DC */	addi r31, r31, CItemBoxGridSubMenu_strpool@l
 /* 80208184 001D1744  38 7F 00 78 */	addi r3, r31, 0x78
 /* 80208188 001D1748  4B F2 DE E5 */	bl func_8013606C
 /* 8020818C 001D174C  54 63 04 3E */	clrlwi r3, r3, 0x10
@@ -425,10 +425,10 @@
 /* 802084F8 001D1AB8  2C 00 00 00 */	cmpwi r0, 0
 /* 802084FC 001D1ABC  7C 9E 23 78 */	mr r30, r4
 /* 80208500 001D1AC0  40 82 02 48 */	bne .L_80208748
-/* 80208504 001D1AC4  3F E0 80 50 */	lis r31, lbl_80503BDC@ha
+/* 80208504 001D1AC4  3F E0 80 50 */	lis r31, CItemBoxGridSubMenu_strpool@ha
 /* 80208508 001D1AC8  38 00 00 01 */	li r0, 1
 /* 8020850C 001D1ACC  98 03 00 23 */	stb r0, 0x23(r3)
-/* 80208510 001D1AD0  3B FF 3B DC */	addi r31, r31, lbl_80503BDC@l
+/* 80208510 001D1AD0  3B FF 3B DC */	addi r31, r31, CItemBoxGridSubMenu_strpool@l
 /* 80208514 001D1AD4  80 63 00 14 */	lwz r3, 0x14(r3)
 /* 80208518 001D1AD8  38 9F 00 B3 */	addi r4, r31, 0xb3
 /* 8020851C 001D1ADC  38 A0 00 00 */	li r5, 0
@@ -497,8 +497,8 @@
 /* 8020860C 001D1BCC  4B F2 E7 69 */	bl func_80136D74
 .L_80208610:
 /* 80208610 001D1BD0  80 7D 00 08 */	lwz r3, 8(r29)
-/* 80208614 001D1BD4  3F E0 80 50 */	lis r31, lbl_80503BDC@ha
-/* 80208618 001D1BD8  3B FF 3B DC */	addi r31, r31, lbl_80503BDC@l
+/* 80208614 001D1BD4  3F E0 80 50 */	lis r31, CItemBoxGridSubMenu_strpool@ha
+/* 80208618 001D1BD8  3B FF 3B DC */	addi r31, r31, CItemBoxGridSubMenu_strpool@l
 /* 8020861C 001D1BDC  38 A0 00 01 */	li r5, 1
 /* 80208620 001D1BE0  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 80208624 001D1BE4  38 9F 00 C2 */	addi r4, r31, 0xc2
@@ -716,8 +716,8 @@ CItemBoxGridSubMenu_typestr:
 	.asciz "CItemBoxGridSubMenu"
 
 
-.global lbl_80503BDC
-lbl_80503BDC:
+.global CItemBoxGridSubMenu_strpool
+CItemBoxGridSubMenu_strpool:
 	.asciz "mf70_cf60_syswin07.brlyt"
 	.asciz "mf70_cf60_syswin07_in.brlan"
 	.asciz "txt_point"

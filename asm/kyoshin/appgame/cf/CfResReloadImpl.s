@@ -1485,9 +1485,9 @@
 /* 8016E1DC 0013779C  7C BF 2B 78 */	mr r31, r5
 /* 8016E1E0 001377A0  54 DB 04 3E */	clrlwi r27, r6, 0x10
 /* 8016E1E4 001377A4  40 82 00 C8 */	bne .L_8016E2AC
-/* 8016E1E8 001377A8  3F A0 80 50 */	lis r29, lbl_804FE970@ha
+/* 8016E1E8 001377A8  3F A0 80 50 */	lis r29, CfResReloadImpl_strpool@ha
 /* 8016E1EC 001377AC  7F 83 E3 78 */	mr r3, r28
-/* 8016E1F0 001377B0  3B BD E9 70 */	addi r29, r29, lbl_804FE970@l
+/* 8016E1F0 001377B0  3B BD E9 70 */	addi r29, r29, CfResReloadImpl_strpool@l
 /* 8016E1F4 001377B4  7F 65 DB 78 */	mr r5, r27
 /* 8016E1F8 001377B8  38 9D 00 05 */	addi r4, r29, 5
 /* 8016E1FC 001377BC  4B EC C9 4D */	bl func_8003AB48
@@ -1537,9 +1537,9 @@
 .L_8016E2AC:
 /* 8016E2AC 0013786C  28 04 00 01 */	cmplwi r4, 1
 /* 8016E2B0 00137870  40 82 00 C4 */	bne .L_8016E374
-/* 8016E2B4 00137874  3F A0 80 50 */	lis r29, lbl_804FE970@ha
+/* 8016E2B4 00137874  3F A0 80 50 */	lis r29, CfResReloadImpl_strpool@ha
 /* 8016E2B8 00137878  7F 83 E3 78 */	mr r3, r28
-/* 8016E2BC 0013787C  3B BD E9 70 */	addi r29, r29, lbl_804FE970@l
+/* 8016E2BC 0013787C  3B BD E9 70 */	addi r29, r29, CfResReloadImpl_strpool@l
 /* 8016E2C0 00137880  7F 65 DB 78 */	mr r5, r27
 /* 8016E2C4 00137884  38 9D 00 2D */	addi r4, r29, 0x2d
 /* 8016E2C8 00137888  4B EC C8 81 */	bl func_8003AB48
@@ -1652,9 +1652,9 @@
 /* 8016E454 00137A14  28 1B 00 01 */	cmplwi r27, 1
 /* 8016E458 00137A18  54 7C 04 3E */	clrlwi r28, r3, 0x10
 /* 8016E45C 00137A1C  40 82 00 40 */	bne .L_8016E49C
-/* 8016E460 00137A20  3F E0 80 50 */	lis r31, lbl_804FE970@ha
+/* 8016E460 00137A20  3F E0 80 50 */	lis r31, CfResReloadImpl_strpool@ha
 /* 8016E464 00137A24  7F C3 F3 78 */	mr r3, r30
-/* 8016E468 00137A28  3B FF E9 70 */	addi r31, r31, lbl_804FE970@l
+/* 8016E468 00137A28  3B FF E9 70 */	addi r31, r31, CfResReloadImpl_strpool@l
 /* 8016E46C 00137A2C  7F A5 EB 78 */	mr r5, r29
 /* 8016E470 00137A30  38 9F 00 55 */	addi r4, r31, 0x55
 /* 8016E474 00137A34  4B EC C6 D5 */	bl func_8003AB48
@@ -1670,9 +1670,9 @@
 .L_8016E49C:
 /* 8016E49C 00137A5C  28 1B 00 02 */	cmplwi r27, 2
 /* 8016E4A0 00137A60  40 82 00 40 */	bne .L_8016E4E0
-/* 8016E4A4 00137A64  3F E0 80 50 */	lis r31, lbl_804FE970@ha
+/* 8016E4A4 00137A64  3F E0 80 50 */	lis r31, CfResReloadImpl_strpool@ha
 /* 8016E4A8 00137A68  7F C3 F3 78 */	mr r3, r30
-/* 8016E4AC 00137A6C  3B FF E9 70 */	addi r31, r31, lbl_804FE970@l
+/* 8016E4AC 00137A6C  3B FF E9 70 */	addi r31, r31, CfResReloadImpl_strpool@l
 /* 8016E4B0 00137A70  7F A5 EB 78 */	mr r5, r29
 /* 8016E4B4 00137A74  38 9F 00 6D */	addi r4, r31, 0x6d
 /* 8016E4B8 00137A78  4B EC C6 91 */	bl func_8003AB48
@@ -1705,9 +1705,9 @@
 /* 8016E514 00137AD4  41 81 00 4C */	bgt .L_8016E560
 /* 8016E518 00137AD8  7C 1C 00 40 */	cmplw r28, r0
 /* 8016E51C 00137ADC  41 81 00 44 */	bgt .L_8016E560
-/* 8016E520 00137AE0  3C 80 80 50 */	lis r4, lbl_804FE970@ha
+/* 8016E520 00137AE0  3C 80 80 50 */	lis r4, CfResReloadImpl_strpool@ha
 /* 8016E524 00137AE4  7F C3 F3 78 */	mr r3, r30
-/* 8016E528 00137AE8  38 84 E9 70 */	addi r4, r4, lbl_804FE970@l
+/* 8016E528 00137AE8  38 84 E9 70 */	addi r4, r4, CfResReloadImpl_strpool@l
 /* 8016E52C 00137AEC  7F A5 EB 78 */	mr r5, r29
 /* 8016E530 00137AF0  38 84 00 85 */	addi r4, r4, 0x85
 /* 8016E534 00137AF4  4B EC C6 15 */	bl func_8003AB48
@@ -1736,10 +1736,10 @@
 /* 8016E578 00137B38  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8016E57C 00137B3C  7C 08 02 A6 */	mflr r0
 /* 8016E580 00137B40  7C 65 1B 78 */	mr r5, r3
-/* 8016E584 00137B44  3C C0 80 50 */	lis r6, lbl_804FE970@ha
+/* 8016E584 00137B44  3C C0 80 50 */	lis r6, CfResReloadImpl_strpool@ha
 /* 8016E588 00137B48  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8016E58C 00137B4C  28 05 00 02 */	cmplwi r5, 2
-/* 8016E590 00137B50  38 C6 E9 70 */	addi r6, r6, lbl_804FE970@l
+/* 8016E590 00137B50  38 C6 E9 70 */	addi r6, r6, CfResReloadImpl_strpool@l
 /* 8016E594 00137B54  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8016E598 00137B58  7C 9F 23 78 */	mr r31, r4
 /* 8016E59C 00137B5C  38 86 00 94 */	addi r4, r6, 0x94
@@ -1800,9 +1800,9 @@
 .fn func_8016E654, global
 /* 8016E654 00137C14  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8016E658 00137C18  7C 08 02 A6 */	mflr r0
-/* 8016E65C 00137C1C  3D 00 80 50 */	lis r8, lbl_804FE970@ha
+/* 8016E65C 00137C1C  3D 00 80 50 */	lis r8, CfResReloadImpl_strpool@ha
 /* 8016E660 00137C20  90 01 00 44 */	stw r0, 0x44(r1)
-/* 8016E664 00137C24  39 08 E9 70 */	addi r8, r8, lbl_804FE970@l
+/* 8016E664 00137C24  39 08 E9 70 */	addi r8, r8, CfResReloadImpl_strpool@l
 /* 8016E668 00137C28  BE E1 00 1C */	stmw r23, 0x1c(r1)
 /* 8016E66C 00137C2C  7C 77 1B 78 */	mr r23, r3
 /* 8016E670 00137C30  7C 98 23 78 */	mr r24, r4
@@ -1821,10 +1821,10 @@
 /* 8016E6A0 00137C60  7F 45 D3 78 */	mr r5, r26
 /* 8016E6A4 00137C64  4B EC C4 A5 */	bl func_8003AB48
 /* 8016E6A8 00137C68  90 61 00 14 */	stw r3, 0x14(r1)
-/* 8016E6AC 00137C6C  3C A0 80 50 */	lis r5, lbl_804FE970@ha
+/* 8016E6AC 00137C6C  3C A0 80 50 */	lis r5, CfResReloadImpl_strpool@ha
 /* 8016E6B0 00137C70  28 17 00 02 */	cmplwi r23, 2
 /* 8016E6B4 00137C74  7F 63 DB 78 */	mr r3, r27
-/* 8016E6B8 00137C78  38 A5 E9 70 */	addi r5, r5, lbl_804FE970@l
+/* 8016E6B8 00137C78  38 A5 E9 70 */	addi r5, r5, CfResReloadImpl_strpool@l
 /* 8016E6BC 00137C7C  8B E1 00 14 */	lbz r31, 0x14(r1)
 /* 8016E6C0 00137C80  38 85 00 C0 */	addi r4, r5, 0xc0
 /* 8016E6C4 00137C84  40 82 00 08 */	bne .L_8016E6CC
@@ -1833,10 +1833,10 @@
 /* 8016E6CC 00137C8C  7F 45 D3 78 */	mr r5, r26
 /* 8016E6D0 00137C90  4B EC C4 79 */	bl func_8003AB48
 /* 8016E6D4 00137C94  90 61 00 10 */	stw r3, 0x10(r1)
-/* 8016E6D8 00137C98  3C A0 80 50 */	lis r5, lbl_804FE970@ha
+/* 8016E6D8 00137C98  3C A0 80 50 */	lis r5, CfResReloadImpl_strpool@ha
 /* 8016E6DC 00137C9C  28 17 00 02 */	cmplwi r23, 2
 /* 8016E6E0 00137CA0  7F 63 DB 78 */	mr r3, r27
-/* 8016E6E4 00137CA4  38 A5 E9 70 */	addi r5, r5, lbl_804FE970@l
+/* 8016E6E4 00137CA4  38 A5 E9 70 */	addi r5, r5, CfResReloadImpl_strpool@l
 /* 8016E6E8 00137CA8  8B C1 00 10 */	lbz r30, 0x10(r1)
 /* 8016E6EC 00137CAC  38 85 00 94 */	addi r4, r5, 0x94
 /* 8016E6F0 00137CB0  40 82 00 08 */	bne .L_8016E6F8
@@ -1844,10 +1844,10 @@
 .L_8016E6F8:
 /* 8016E6F8 00137CB8  7F 45 D3 78 */	mr r5, r26
 /* 8016E6FC 00137CBC  4B EC C4 4D */	bl func_8003AB48
-/* 8016E700 00137CC0  3C A0 80 50 */	lis r5, lbl_804FE970@ha
+/* 8016E700 00137CC0  3C A0 80 50 */	lis r5, CfResReloadImpl_strpool@ha
 /* 8016E704 00137CC4  28 17 00 02 */	cmplwi r23, 2
 /* 8016E708 00137CC8  90 61 00 0C */	stw r3, 0xc(r1)
-/* 8016E70C 00137CCC  38 A5 E9 70 */	addi r5, r5, lbl_804FE970@l
+/* 8016E70C 00137CCC  38 A5 E9 70 */	addi r5, r5, CfResReloadImpl_strpool@l
 /* 8016E710 00137CD0  7F 63 DB 78 */	mr r3, r27
 /* 8016E714 00137CD4  38 85 00 D4 */	addi r4, r5, 0xd4
 /* 8016E718 00137CD8  40 82 00 08 */	bne .L_8016E720
@@ -2113,9 +2113,9 @@
 /* 8016EA94 00138054  7C 7F 1B 78 */	mr r31, r3
 /* 8016EA98 00138058  40 82 00 40 */	bne .L_8016EAD8
 /* 8016EA9C 0013805C  A0 0D A9 F0 */	lhz r0, lbl_80666B70@sda21(r13)
-/* 8016EAA0 00138060  3C C0 80 50 */	lis r6, lbl_804FE970@ha
+/* 8016EAA0 00138060  3C C0 80 50 */	lis r6, CfResReloadImpl_strpool@ha
 /* 8016EAA4 00138064  80 8D A8 F4 */	lwz r4, lbl_80666A74@sda21(r13)
-/* 8016EAA8 00138068  38 C6 E9 70 */	addi r6, r6, lbl_804FE970@l
+/* 8016EAA8 00138068  38 C6 E9 70 */	addi r6, r6, CfResReloadImpl_strpool@l
 /* 8016EAAC 0013806C  28 00 00 02 */	cmplwi r0, 2
 /* 8016EAB0 00138070  80 6D A8 18 */	lwz r3, lbl_80666998@sda21(r13)
 /* 8016EAB4 00138074  54 85 04 3E */	clrlwi r5, r4, 0x10
@@ -2268,9 +2268,9 @@
 .L_8016ECC4:
 /* 8016ECC4 00138284  28 00 00 01 */	cmplwi r0, 1
 /* 8016ECC8 00138288  40 82 00 2C */	bne .L_8016ECF4
-/* 8016ECCC 0013828C  3C 80 80 50 */	lis r4, lbl_804FE970@ha
+/* 8016ECCC 0013828C  3C 80 80 50 */	lis r4, CfResReloadImpl_strpool@ha
 /* 8016ECD0 00138290  7F C3 F3 78 */	mr r3, r30
-/* 8016ECD4 00138294  38 84 E9 70 */	addi r4, r4, lbl_804FE970@l
+/* 8016ECD4 00138294  38 84 E9 70 */	addi r4, r4, CfResReloadImpl_strpool@l
 /* 8016ECD8 00138298  7F E5 FB 78 */	mr r5, r31
 /* 8016ECDC 0013829C  38 84 00 DC */	addi r4, r4, 0xdc
 /* 8016ECE0 001382A0  4B EC BE 69 */	bl func_8003AB48
@@ -2281,9 +2281,9 @@
 .L_8016ECF4:
 /* 8016ECF4 001382B4  28 00 00 02 */	cmplwi r0, 2
 /* 8016ECF8 001382B8  40 82 00 28 */	bne .L_8016ED20
-/* 8016ECFC 001382BC  3C 80 80 50 */	lis r4, lbl_804FE970@ha
+/* 8016ECFC 001382BC  3C 80 80 50 */	lis r4, CfResReloadImpl_strpool@ha
 /* 8016ED00 001382C0  7F C3 F3 78 */	mr r3, r30
-/* 8016ED04 001382C4  38 84 E9 70 */	addi r4, r4, lbl_804FE970@l
+/* 8016ED04 001382C4  38 84 E9 70 */	addi r4, r4, CfResReloadImpl_strpool@l
 /* 8016ED08 001382C8  7F E5 FB 78 */	mr r5, r31
 /* 8016ED0C 001382CC  38 84 00 E4 */	addi r4, r4, 0xe4
 /* 8016ED10 001382D0  4B EC BE 39 */	bl func_8003AB48
@@ -2325,8 +2325,8 @@ cf_CfResReloadImpl_typestr:
 	.4byte 0
 
 
-.global lbl_804FE970
-lbl_804FE970:
+.global CfResReloadImpl_strpool
+CfResReloadImpl_strpool:
 	.asciz "NONE"
 	.asciz "wb_size_X"
 	.asciz "wb_size_Y"

@@ -31,8 +31,8 @@
 /* 80391DB0 0035B370  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80391DB4 0035B374  7C 7D 1B 78 */	mr r29, r3
 /* 80391DB8 0035B378  40 82 00 1C */	bne .L_80391DD4
-/* 80391DBC 0035B37C  3C 60 80 52 */	lis r3, lbl_8051BAB8@ha
-/* 80391DC0 0035B380  38 63 BA B8 */	addi r3, r3, lbl_8051BAB8@l
+/* 80391DBC 0035B37C  3C 60 80 52 */	lis r3, lsc_strpool@ha
+/* 80391DC0 0035B380  38 63 BA B8 */	addi r3, r3, lsc_strpool@l
 /* 80391DC4 0035B384  4C C6 31 82 */	crclr 6
 /* 80391DC8 0035B388  4B FF FA 15 */	bl LSC_CallErrFunc_
 /* 80391DCC 0035B38C  38 60 00 00 */	li r3, 0
@@ -62,8 +62,8 @@
 .L_80391E20:
 /* 80391E20 0035B3E0  2C 1F 00 00 */	cmpwi r31, 0
 /* 80391E24 0035B3E4  40 82 00 1C */	bne .L_80391E40
-/* 80391E28 0035B3E8  3C 60 80 52 */	lis r3, lbl_8051BAB8@ha
-/* 80391E2C 0035B3EC  38 63 BA B8 */	addi r3, r3, lbl_8051BAB8@l
+/* 80391E28 0035B3E8  3C 60 80 52 */	lis r3, lsc_strpool@ha
+/* 80391E2C 0035B3EC  38 63 BA B8 */	addi r3, r3, lsc_strpool@l
 /* 80391E30 0035B3F0  38 63 00 30 */	addi r3, r3, 0x30
 /* 80391E34 0035B3F4  4C C6 31 82 */	crclr 6
 /* 80391E38 0035B3F8  4B FF F9 A5 */	bl LSC_CallErrFunc_
@@ -145,8 +145,8 @@
 /* 80391F50 0035B510  48 00 08 BD */	bl LSC_Enter
 /* 80391F54 0035B514  2C 1E 00 00 */	cmpwi r30, 0
 /* 80391F58 0035B518  40 82 00 1C */	bne .L_80391F74
-/* 80391F5C 0035B51C  3C 60 80 52 */	lis r3, lbl_8051BAB8@ha
-/* 80391F60 0035B520  38 63 BA B8 */	addi r3, r3, lbl_8051BAB8@l
+/* 80391F5C 0035B51C  3C 60 80 52 */	lis r3, lsc_strpool@ha
+/* 80391F60 0035B520  38 63 BA B8 */	addi r3, r3, lsc_strpool@l
 /* 80391F64 0035B524  38 63 00 5F */	addi r3, r3, 0x5f
 /* 80391F68 0035B528  4C C6 31 82 */	crclr 6
 /* 80391F6C 0035B52C  4B FF F8 71 */	bl LSC_CallErrFunc_
@@ -168,8 +168,8 @@
 /* 80391FA4 0035B564  48 00 08 69 */	bl LSC_Enter
 /* 80391FA8 0035B568  2C 1E 00 00 */	cmpwi r30, 0
 /* 80391FAC 0035B56C  40 82 00 1C */	bne .L_80391FC8
-/* 80391FB0 0035B570  3C 60 80 52 */	lis r3, lbl_8051BAB8@ha
-/* 80391FB4 0035B574  38 63 BA B8 */	addi r3, r3, lbl_8051BAB8@l
+/* 80391FB0 0035B570  3C 60 80 52 */	lis r3, lsc_strpool@ha
+/* 80391FB4 0035B574  38 63 BA B8 */	addi r3, r3, lsc_strpool@l
 /* 80391FB8 0035B578  38 63 00 88 */	addi r3, r3, 0x88
 /* 80391FBC 0035B57C  4C C6 31 82 */	crclr 6
 /* 80391FC0 0035B580  4B FF F8 1D */	bl LSC_CallErrFunc_
@@ -288,8 +288,8 @@
 /* 80392144 0035B704  7C DC 33 78 */	mr r28, r6
 /* 80392148 0035B708  7C FD 3B 78 */	mr r29, r7
 /* 8039214C 0035B70C  40 82 00 20 */	bne .L_8039216C
-/* 80392150 0035B710  3C 60 80 52 */	lis r3, lbl_8051BAB8@ha
-/* 80392154 0035B714  38 63 BA B8 */	addi r3, r3, lbl_8051BAB8@l
+/* 80392150 0035B710  3C 60 80 52 */	lis r3, lsc_strpool@ha
+/* 80392154 0035B714  38 63 BA B8 */	addi r3, r3, lsc_strpool@l
 /* 80392158 0035B718  38 63 00 B1 */	addi r3, r3, 0xb1
 /* 8039215C 0035B71C  4C C6 31 82 */	crclr 6
 /* 80392160 0035B720  4B FF F6 7D */	bl LSC_CallErrFunc_
@@ -304,8 +304,8 @@
 .L_80392180:
 /* 80392180 0035B740  2C 04 00 00 */	cmpwi r4, 0
 /* 80392184 0035B744  40 82 00 20 */	bne .L_803921A4
-/* 80392188 0035B748  3C 60 80 52 */	lis r3, lbl_8051BAB8@ha
-/* 8039218C 0035B74C  38 63 BA B8 */	addi r3, r3, lbl_8051BAB8@l
+/* 80392188 0035B748  3C 60 80 52 */	lis r3, lsc_strpool@ha
+/* 8039218C 0035B74C  38 63 BA B8 */	addi r3, r3, lsc_strpool@l
 /* 80392190 0035B750  38 63 00 DA */	addi r3, r3, 0xda
 /* 80392194 0035B754  4C C6 31 82 */	crclr 6
 /* 80392198 0035B758  4B FF F6 45 */	bl LSC_CallErrFunc_
@@ -435,8 +435,8 @@
 /* 80392360 0035B920  48 00 04 AD */	bl LSC_Enter
 /* 80392364 0035B924  2C 1E 00 00 */	cmpwi r30, 0
 /* 80392368 0035B928  40 82 00 1C */	bne .L_80392384
-/* 8039236C 0035B92C  3C 60 80 52 */	lis r3, lbl_8051BAB8@ha
-/* 80392370 0035B930  38 63 BA B8 */	addi r3, r3, lbl_8051BAB8@l
+/* 8039236C 0035B92C  3C 60 80 52 */	lis r3, lsc_strpool@ha
+/* 80392370 0035B930  38 63 BA B8 */	addi r3, r3, lsc_strpool@l
 /* 80392374 0035B934  38 63 01 03 */	addi r3, r3, 0x103
 /* 80392378 0035B938  4C C6 31 82 */	crclr 6
 /* 8039237C 0035B93C  4B FF F4 61 */	bl LSC_CallErrFunc_
@@ -450,8 +450,8 @@
 /* 80392398 0035B958  48 00 04 75 */	bl LSC_Enter
 /* 8039239C 0035B95C  2C 1E 00 00 */	cmpwi r30, 0
 /* 803923A0 0035B960  40 82 00 1C */	bne .L_803923BC
-/* 803923A4 0035B964  3C 60 80 52 */	lis r3, lbl_8051BAB8@ha
-/* 803923A8 0035B968  38 63 BA B8 */	addi r3, r3, lbl_8051BAB8@l
+/* 803923A4 0035B964  3C 60 80 52 */	lis r3, lsc_strpool@ha
+/* 803923A8 0035B968  38 63 BA B8 */	addi r3, r3, lsc_strpool@l
 /* 803923AC 0035B96C  38 63 00 5F */	addi r3, r3, 0x5f
 /* 803923B0 0035B970  4C C6 31 82 */	crclr 6
 /* 803923B4 0035B974  4B FF F4 29 */	bl LSC_CallErrFunc_
@@ -473,8 +473,8 @@
 /* 803923EC 0035B9AC  48 00 04 21 */	bl LSC_Enter
 /* 803923F0 0035B9B0  2C 1E 00 00 */	cmpwi r30, 0
 /* 803923F4 0035B9B4  40 82 00 1C */	bne .L_80392410
-/* 803923F8 0035B9B8  3C 60 80 52 */	lis r3, lbl_8051BAB8@ha
-/* 803923FC 0035B9BC  38 63 BA B8 */	addi r3, r3, lbl_8051BAB8@l
+/* 803923F8 0035B9B8  3C 60 80 52 */	lis r3, lsc_strpool@ha
+/* 803923FC 0035B9BC  38 63 BA B8 */	addi r3, r3, lsc_strpool@l
 /* 80392400 0035B9C0  38 63 00 88 */	addi r3, r3, 0x88
 /* 80392404 0035B9C4  4C C6 31 82 */	crclr 6
 /* 80392408 0035B9C8  4B FF F3 D5 */	bl LSC_CallErrFunc_
@@ -525,8 +525,8 @@
 /* 80392494 0035BA54  48 00 03 79 */	bl LSC_Enter
 /* 80392498 0035BA58  2C 1E 00 00 */	cmpwi r30, 0
 /* 8039249C 0035BA5C  40 82 00 1C */	bne .L_803924B8
-/* 803924A0 0035BA60  3C 60 80 52 */	lis r3, lbl_8051BAB8@ha
-/* 803924A4 0035BA64  38 63 BA B8 */	addi r3, r3, lbl_8051BAB8@l
+/* 803924A0 0035BA60  3C 60 80 52 */	lis r3, lsc_strpool@ha
+/* 803924A4 0035BA64  38 63 BA B8 */	addi r3, r3, lsc_strpool@l
 /* 803924A8 0035BA68  38 63 00 5F */	addi r3, r3, 0x5f
 /* 803924AC 0035BA6C  4C C6 31 82 */	crclr 6
 /* 803924B0 0035BA70  4B FF F3 2D */	bl LSC_CallErrFunc_
@@ -548,8 +548,8 @@
 /* 803924E8 0035BAA8  48 00 03 25 */	bl LSC_Enter
 /* 803924EC 0035BAAC  2C 1E 00 00 */	cmpwi r30, 0
 /* 803924F0 0035BAB0  40 82 00 1C */	bne .L_8039250C
-/* 803924F4 0035BAB4  3C 60 80 52 */	lis r3, lbl_8051BAB8@ha
-/* 803924F8 0035BAB8  38 63 BA B8 */	addi r3, r3, lbl_8051BAB8@l
+/* 803924F4 0035BAB4  3C 60 80 52 */	lis r3, lsc_strpool@ha
+/* 803924F8 0035BAB8  38 63 BA B8 */	addi r3, r3, lsc_strpool@l
 /* 803924FC 0035BABC  38 63 00 88 */	addi r3, r3, 0x88
 /* 80392500 0035BAC0  4C C6 31 82 */	crclr 6
 /* 80392504 0035BAC4  4B FF F2 D9 */	bl LSC_CallErrFunc_
@@ -586,8 +586,8 @@
 /* 80392568 0035BB28  48 00 02 A5 */	bl LSC_Enter
 /* 8039256C 0035BB2C  2C 1E 00 00 */	cmpwi r30, 0
 /* 80392570 0035BB30  40 82 00 1C */	bne .L_8039258C
-/* 80392574 0035BB34  3C 60 80 52 */	lis r3, lbl_8051BAB8@ha
-/* 80392578 0035BB38  38 63 BA B8 */	addi r3, r3, lbl_8051BAB8@l
+/* 80392574 0035BB34  3C 60 80 52 */	lis r3, lsc_strpool@ha
+/* 80392578 0035BB38  38 63 BA B8 */	addi r3, r3, lsc_strpool@l
 /* 8039257C 0035BB3C  38 63 01 2C */	addi r3, r3, 0x12c
 /* 80392580 0035BB40  4C C6 31 82 */	crclr 6
 /* 80392584 0035BB44  4B FF F2 59 */	bl LSC_CallErrFunc_
@@ -654,8 +654,8 @@
 /* 8039264C 0035BC0C  48 00 01 C1 */	bl LSC_Enter
 /* 80392650 0035BC10  2C 1F 00 00 */	cmpwi r31, 0
 /* 80392654 0035BC14  40 82 00 20 */	bne .L_80392674
-/* 80392658 0035BC18  3C 60 80 52 */	lis r3, lbl_8051BAB8@ha
-/* 8039265C 0035BC1C  38 63 BA B8 */	addi r3, r3, lbl_8051BAB8@l
+/* 80392658 0035BC18  3C 60 80 52 */	lis r3, lsc_strpool@ha
+/* 8039265C 0035BC1C  38 63 BA B8 */	addi r3, r3, lsc_strpool@l
 /* 80392660 0035BC20  38 63 01 55 */	addi r3, r3, 0x155
 /* 80392664 0035BC24  4C C6 31 82 */	crclr 6
 /* 80392668 0035BC28  4B FF F1 75 */	bl LSC_CallErrFunc_
@@ -683,8 +683,8 @@
 /* 803926AC 0035BC6C  48 00 01 61 */	bl LSC_Enter
 /* 803926B0 0035BC70  2C 1F 00 00 */	cmpwi r31, 0
 /* 803926B4 0035BC74  40 82 00 20 */	bne .L_803926D4
-/* 803926B8 0035BC78  3C 60 80 52 */	lis r3, lbl_8051BAB8@ha
-/* 803926BC 0035BC7C  38 63 BA B8 */	addi r3, r3, lbl_8051BAB8@l
+/* 803926B8 0035BC78  3C 60 80 52 */	lis r3, lsc_strpool@ha
+/* 803926BC 0035BC7C  38 63 BA B8 */	addi r3, r3, lsc_strpool@l
 /* 803926C0 0035BC80  38 63 01 7E */	addi r3, r3, 0x17e
 /* 803926C4 0035BC84  4C C6 31 82 */	crclr 6
 /* 803926C8 0035BC88  4B FF F1 15 */	bl LSC_CallErrFunc_
@@ -713,8 +713,8 @@
 /* 80392710 0035BCD0  48 00 00 FD */	bl LSC_Enter
 /* 80392714 0035BCD4  2C 1E 00 00 */	cmpwi r30, 0
 /* 80392718 0035BCD8  40 82 00 1C */	bne .L_80392734
-/* 8039271C 0035BCDC  3C 60 80 52 */	lis r3, lbl_8051BAB8@ha
-/* 80392720 0035BCE0  38 63 BA B8 */	addi r3, r3, lbl_8051BAB8@l
+/* 8039271C 0035BCDC  3C 60 80 52 */	lis r3, lsc_strpool@ha
+/* 80392720 0035BCE0  38 63 BA B8 */	addi r3, r3, lsc_strpool@l
 /* 80392724 0035BCE4  38 63 02 EC */	addi r3, r3, 0x2ec
 /* 80392728 0035BCE8  4C C6 31 82 */	crclr 6
 /* 8039272C 0035BCEC  4B FF F0 B1 */	bl LSC_CallErrFunc_
@@ -726,9 +726,9 @@
 /* 80392740 0035BD00  7C 1F 00 00 */	cmpw r31, r0
 /* 80392744 0035BD04  40 81 00 20 */	ble .L_80392764
 .L_80392748:
-/* 80392748 0035BD08  3C 60 80 52 */	lis r3, lbl_8051BAB8@ha
+/* 80392748 0035BD08  3C 60 80 52 */	lis r3, lsc_strpool@ha
 /* 8039274C 0035BD0C  7F E4 FB 78 */	mr r4, r31
-/* 80392750 0035BD10  38 63 BA B8 */	addi r3, r3, lbl_8051BAB8@l
+/* 80392750 0035BD10  38 63 BA B8 */	addi r3, r3, lsc_strpool@l
 /* 80392754 0035BD14  38 63 03 15 */	addi r3, r3, 0x315
 /* 80392758 0035BD18  4C C6 31 82 */	crclr 6
 /* 8039275C 0035BD1C  4B FF F0 81 */	bl LSC_CallErrFunc_
@@ -769,8 +769,8 @@
 /* 803927C8 0035BD88  48 00 00 45 */	bl LSC_Enter
 /* 803927CC 0035BD8C  2C 1E 00 00 */	cmpwi r30, 0
 /* 803927D0 0035BD90  40 82 00 1C */	bne .L_803927EC
-/* 803927D4 0035BD94  3C 60 80 52 */	lis r3, lbl_8051BAB8@ha
-/* 803927D8 0035BD98  38 63 BA B8 */	addi r3, r3, lbl_8051BAB8@l
+/* 803927D4 0035BD94  3C 60 80 52 */	lis r3, lsc_strpool@ha
+/* 803927D8 0035BD98  38 63 BA B8 */	addi r3, r3, lsc_strpool@l
 /* 803927DC 0035BD9C  38 63 03 69 */	addi r3, r3, 0x369
 /* 803927E0 0035BDA0  4C C6 31 82 */	crclr 6
 /* 803927E4 0035BDA4  4B FF EF F9 */	bl LSC_CallErrFunc_
@@ -789,8 +789,8 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051BAB8
-lbl_8051BAB8:
+.global lsc_strpool
+lsc_strpool:
 	.asciz "E2005012801: Invalid parameter=sj (LSC_Create)\n"
 	.asciz "E2005012802: Not enough instance (LSC_Create)\n"
 	.asciz "E2005012807: Invalid parameter lsc=NULL\n"

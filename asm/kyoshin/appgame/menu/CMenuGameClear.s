@@ -56,12 +56,12 @@
 /* 802B2258 0027B818  90 9D 00 10 */	stw r4, 0x10(r29)
 /* 802B225C 0027B81C  90 1D 00 58 */	stw r0, 0x58(r29)
 /* 802B2260 0027B820  93 9D 00 5C */	stw r28, 0x5c(r29)
-/* 802B2264 0027B824  48 1A D3 01 */	bl func_8045F564
+/* 802B2264 0027B824  48 1A D3 01 */	bl __ct__8045F564
 /* 802B2268 0027B828  9B DD 00 70 */	stb r30, 0x70(r29)
 /* 802B226C 0027B82C  38 7D 00 74 */	addi r3, r29, 0x74
 /* 802B2270 0027B830  38 80 00 00 */	li r4, 0
 /* 802B2274 0027B834  9B DD 00 71 */	stb r30, 0x71(r29)
-/* 802B2278 0027B838  4B F7 93 A1 */	bl func_8022B618
+/* 802B2278 0027B838  4B F7 93 A1 */	bl __ct__CSysWin
 /* 802B227C 0027B83C  38 7D 00 B0 */	addi r3, r29, 0xb0
 /* 802B2280 0027B840  38 80 00 00 */	li r4, 0
 /* 802B2284 0027B844  4B F2 07 79 */	bl func_801D29FC
@@ -347,8 +347,8 @@ CMenuGameClear_typestr:
 	.balign 4
 
 
-.global lbl_8050C948
-lbl_8050C948:
+.global CMenuGameClear_strpool
+CMenuGameClear_strpool:
 	.asciz "JNL_playaward"
 	.asciz "clear_flg"
 	.asciz "pc_arts"
@@ -433,13 +433,13 @@ lbl_806674E8:
 	.4byte 0x00000000
 	.4byte 0x0780001D
 	.4byte 0x000000B0
-	.4byte func_801D2A38
+	.4byte __dt__801D2A38
 	.4byte 0x0780001D
 	.4byte 0x00000074
-	.4byte func_8022B6A0
+	.4byte __dt__CSysWin
 	.4byte 0x0780001D
 	.4byte 0x00000060
-	.4byte func_8045F580
+	.4byte __dt__8045F580
 	.4byte 0x0680001D
 	.4byte 0x00000058
 	.4byte func_8004031C

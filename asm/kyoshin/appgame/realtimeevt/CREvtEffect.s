@@ -646,9 +646,9 @@
 /* 80185420 0014E9E0  80 1C 00 20 */	lwz r0, 0x20(r28)
 /* 80185424 0014E9E4  2C 00 00 00 */	cmpwi r0, 0
 /* 80185428 0014E9E8  40 82 01 08 */	bne .L_80185530
-/* 8018542C 0014E9EC  3C 60 80 50 */	lis r3, lbl_804FF028@ha
+/* 8018542C 0014E9EC  3C 60 80 50 */	lis r3, CREvtEffect_strpool@ha
 /* 80185430 0014E9F0  38 81 00 08 */	addi r4, r1, 8
-/* 80185434 0014E9F4  38 63 F0 28 */	addi r3, r3, lbl_804FF028@l
+/* 80185434 0014E9F4  38 63 F0 28 */	addi r3, r3, CREvtEffect_strpool@l
 /* 80185438 0014E9F8  38 A0 00 00 */	li r5, 0
 /* 8018543C 0014E9FC  48 2D A7 7D */	bl func_8045FBB8
 /* 80185440 0014EA00  80 6D A5 94 */	lwz r3, lbl_80666714@sda21(r13)
@@ -727,9 +727,9 @@
 /* 80185560 0014EB20  39 00 00 01 */	li r8, 1
 /* 80185564 0014EB24  39 20 FF FF */	li r9, -1
 /* 80185568 0014EB28  48 2F E4 6D */	bl func_804839D4
-/* 8018556C 0014EB2C  3F E0 80 50 */	lis r31, lbl_804FF028@ha
+/* 8018556C 0014EB2C  3F E0 80 50 */	lis r31, CREvtEffect_strpool@ha
 /* 80185570 0014EB30  38 00 00 00 */	li r0, 0
-/* 80185574 0014EB34  3B FF F0 28 */	addi r31, r31, lbl_804FF028@l
+/* 80185574 0014EB34  3B FF F0 28 */	addi r31, r31, CREvtEffect_strpool@l
 /* 80185578 0014EB38  90 1C 01 3C */	stw r0, 0x13c(r28)
 /* 8018557C 0014EB3C  80 7C 00 24 */	lwz r3, 0x24(r28)
 /* 80185580 0014EB40  38 9F 00 04 */	addi r4, r31, 4
@@ -833,8 +833,8 @@ cf_CREvtEffect_typestr:
 	.asciz "cf::CREvtEffect"
 
 
-.global lbl_804FF028
-lbl_804FF028:
+.global CREvtEffect_strpool
+CREvtEffect_strpool:
 	.asciz "EFF"
 	.asciz "Monochrome"
 	.asciz "MonoRGB"

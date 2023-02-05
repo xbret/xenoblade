@@ -97,9 +97,9 @@
 /* 801681A0 00131760  38 80 00 00 */	li r4, 0
 /* 801681A4 00131764  38 A0 01 00 */	li r5, 0x100
 /* 801681A8 00131768  4B E9 C1 A9 */	bl memset
-/* 801681AC 0013176C  3C 80 80 50 */	lis r4, lbl_804FE8C8@ha
+/* 801681AC 0013176C  3C 80 80 50 */	lis r4, CTaskREvtSequence_strpool@ha
 /* 801681B0 00131770  7F E3 FB 78 */	mr r3, r31
-/* 801681B4 00131774  38 84 E8 C8 */	addi r4, r4, lbl_804FE8C8@l
+/* 801681B4 00131774  38 84 E8 C8 */	addi r4, r4, CTaskREvtSequence_strpool@l
 /* 801681B8 00131778  48 15 A8 09 */	bl strstr
 /* 801681BC 0013177C  2C 03 00 00 */	cmpwi r3, 0
 /* 801681C0 00131780  41 82 00 10 */	beq .L_801681D0
@@ -113,9 +113,9 @@
 /* 801681DC 0013179C  4B FF C7 35 */	bl func_80164910
 /* 801681E0 001317A0  2C 03 00 00 */	cmpwi r3, 0
 /* 801681E4 001317A4  40 82 00 28 */	bne .L_8016820C
-/* 801681E8 001317A8  3C 80 80 50 */	lis r4, lbl_804FE8C8@ha
+/* 801681E8 001317A8  3C 80 80 50 */	lis r4, CTaskREvtSequence_strpool@ha
 /* 801681EC 001317AC  7F E3 FB 78 */	mr r3, r31
-/* 801681F0 001317B0  38 84 E8 C8 */	addi r4, r4, lbl_804FE8C8@l
+/* 801681F0 001317B0  38 84 E8 C8 */	addi r4, r4, CTaskREvtSequence_strpool@l
 /* 801681F4 001317B4  38 84 00 0B */	addi r4, r4, 0xb
 /* 801681F8 001317B8  48 15 A7 C9 */	bl strstr
 /* 801681FC 001317BC  2C 03 00 00 */	cmpwi r3, 0
@@ -123,9 +123,9 @@
 /* 80168204 001317C4  4B FA 88 6D */	bl func_80110A70
 /* 80168208 001317C8  4B FA 8E 6D */	bl func_80111074
 .L_8016820C:
-/* 8016820C 001317CC  3C 80 80 50 */	lis r4, lbl_804FE8C8@ha
+/* 8016820C 001317CC  3C 80 80 50 */	lis r4, CTaskREvtSequence_strpool@ha
 /* 80168210 001317D0  7F E3 FB 78 */	mr r3, r31
-/* 80168214 001317D4  38 84 E8 C8 */	addi r4, r4, lbl_804FE8C8@l
+/* 80168214 001317D4  38 84 E8 C8 */	addi r4, r4, CTaskREvtSequence_strpool@l
 /* 80168218 001317D8  38 84 00 16 */	addi r4, r4, 0x16
 /* 8016821C 001317DC  48 15 A7 A5 */	bl strstr
 /* 80168220 001317E0  2C 03 00 00 */	cmpwi r3, 0
@@ -859,9 +859,9 @@
 /* 80168B98 00132158  80 03 00 20 */	lwz r0, 0x20(r3)
 /* 80168B9C 0013215C  2C 00 00 00 */	cmpwi r0, 0
 /* 80168BA0 00132160  41 82 00 CC */	beq .L_80168C6C
-/* 80168BA4 00132164  3F 60 80 50 */	lis r27, lbl_804FE8C8@ha
+/* 80168BA4 00132164  3F 60 80 50 */	lis r27, CTaskREvtSequence_strpool@ha
 /* 80168BA8 00132168  3B 40 00 00 */	li r26, 0
-/* 80168BAC 0013216C  3B 7B E8 C8 */	addi r27, r27, lbl_804FE8C8@l
+/* 80168BAC 0013216C  3B 7B E8 C8 */	addi r27, r27, CTaskREvtSequence_strpool@l
 /* 80168BB0 00132170  3F A0 1C 90 */	lis r29, 0x1c90
 /* 80168BB4 00132174  3B C0 00 03 */	li r30, 3
 /* 80168BB8 00132178  3F 80 1B E0 */	lis r28, 0x1be0
@@ -3180,9 +3180,9 @@
 /* 8016AB2C 001340EC  4B FF 9D E5 */	bl func_80164910
 /* 8016AB30 001340F0  2C 03 00 00 */	cmpwi r3, 0
 /* 8016AB34 001340F4  40 82 00 20 */	bne .L_8016AB54
-/* 8016AB38 001340F8  3C 80 80 50 */	lis r4, lbl_804FE8C8@ha
+/* 8016AB38 001340F8  3C 80 80 50 */	lis r4, CTaskREvtSequence_strpool@ha
 /* 8016AB3C 001340FC  38 7C 00 60 */	addi r3, r28, 0x60
-/* 8016AB40 00134100  38 84 E8 C8 */	addi r4, r4, lbl_804FE8C8@l
+/* 8016AB40 00134100  38 84 E8 C8 */	addi r4, r4, CTaskREvtSequence_strpool@l
 /* 8016AB44 00134104  38 84 00 45 */	addi r4, r4, 0x45
 /* 8016AB48 00134108  48 15 7E 79 */	bl strstr
 /* 8016AB4C 0013410C  2C 03 00 00 */	cmpwi r3, 0
@@ -4093,9 +4093,9 @@
 /* 8016B7A8 00134D68  38 60 00 00 */	li r3, 0
 /* 8016B7AC 00134D6C  48 00 00 A0 */	b .L_8016B84C
 .L_8016B7B0:
-/* 8016B7B0 00134D70  3C 80 80 50 */	lis r4, lbl_804FE8C8@ha
+/* 8016B7B0 00134D70  3C 80 80 50 */	lis r4, CTaskREvtSequence_strpool@ha
 /* 8016B7B4 00134D74  38 00 00 00 */	li r0, 0
-/* 8016B7B8 00134D78  38 84 E8 C8 */	addi r4, r4, lbl_804FE8C8@l
+/* 8016B7B8 00134D78  38 84 E8 C8 */	addi r4, r4, CTaskREvtSequence_strpool@l
 /* 8016B7BC 00134D7C  90 01 00 08 */	stw r0, 8(r1)
 /* 8016B7C0 00134D80  7F E3 FB 78 */	mr r3, r31
 /* 8016B7C4 00134D84  38 A1 00 08 */	addi r5, r1, 8
@@ -5331,8 +5331,8 @@ CTTask_cf_CTaskREvtSequence_typestr:
 	.balign 4
 
 
-.global lbl_804FE8C8
-lbl_804FE8C8:
+.global CTaskREvtSequence_strpool
+CTaskREvtSequence_strpool:
 	.asciz "vs17240100"
 	.asciz "vs17220100"
 	.asciz "vs16010100"

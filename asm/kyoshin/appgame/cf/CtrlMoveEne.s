@@ -4382,9 +4382,9 @@
 .L_8008E0B0:
 /* 8008E0B0 00057670  38 00 00 00 */	li r0, 0
 /* 8008E0B4 00057674  90 03 00 4C */	stw r0, 0x4c(r3)
-/* 8008E0B8 00057678  3C 80 80 4F */	lis r4, lbl_804F7258@ha
+/* 8008E0B8 00057678  3C 80 80 4F */	lis r4, CtrlMoveEne_strpool@ha
 /* 8008E0BC 0005767C  7F E3 FB 78 */	mr r3, r31
-/* 8008E0C0 00057680  38 84 72 58 */	addi r4, r4, lbl_804F7258@l
+/* 8008E0C0 00057680  38 84 72 58 */	addi r4, r4, CtrlMoveEne_strpool@l
 /* 8008E0C4 00057684  48 02 17 21 */	bl func_800AF7E4
 /* 8008E0C8 00057688  90 61 00 0C */	stw r3, 0xc(r1)
 /* 8008E0CC 0005768C  8B 81 00 0C */	lbz r28, 0xc(r1)
@@ -4492,9 +4492,9 @@
 /* 8008E254 00057814  C0 03 00 00 */	lfs f0, 0(r3)
 /* 8008E258 00057818  EC 20 F8 24 */	fdivs f1, f0, f31
 .L_8008E25C:
-/* 8008E25C 0005781C  3C 80 80 4F */	lis r4, lbl_804F7258@ha
+/* 8008E25C 0005781C  3C 80 80 4F */	lis r4, CtrlMoveEne_strpool@ha
 /* 8008E260 00057820  D0 3E 00 58 */	stfs f1, 0x58(r30)
-/* 8008E264 00057824  38 84 72 58 */	addi r4, r4, lbl_804F7258@l
+/* 8008E264 00057824  38 84 72 58 */	addi r4, r4, CtrlMoveEne_strpool@l
 /* 8008E268 00057828  7F E3 FB 78 */	mr r3, r31
 /* 8008E26C 0005782C  38 84 00 0A */	addi r4, r4, 0xa
 /* 8008E270 00057830  48 02 15 75 */	bl func_800AF7E4
@@ -4551,9 +4551,9 @@
 /* 8008E324 000578E4  7E C3 B3 78 */	mr r3, r22
 /* 8008E328 000578E8  4B FF B3 5D */	bl func_80089684
 /* 8008E32C 000578EC  38 BD 01 3C */	addi r5, r29, 0x13c
-/* 8008E330 000578F0  3E E0 80 4F */	lis r23, lbl_804F7258@ha
+/* 8008E330 000578F0  3E E0 80 4F */	lis r23, CtrlMoveEne_strpool@ha
 /* 8008E334 000578F4  80 DD 01 3C */	lwz r6, 0x13c(r29)
-/* 8008E338 000578F8  3A F7 72 58 */	addi r23, r23, lbl_804F7258@l
+/* 8008E338 000578F8  3A F7 72 58 */	addi r23, r23, CtrlMoveEne_strpool@l
 /* 8008E33C 000578FC  80 05 00 04 */	lwz r0, 4(r5)
 /* 8008E340 00057900  7F 83 E3 78 */	mr r3, r28
 /* 8008E344 00057904  90 16 01 30 */	stw r0, 0x130(r22)
@@ -4615,12 +4615,12 @@
 /* 8008E41C 000579DC  80 01 00 54 */	lwz r0, 0x54(r1)
 /* 8008E420 000579E0  90 16 00 60 */	stw r0, 0x60(r22)
 /* 8008E424 000579E4  4B FF 87 21 */	bl func_80086B44
-/* 8008E428 000579E8  3C 80 80 4F */	lis r4, lbl_804F7258@ha
+/* 8008E428 000579E8  3C 80 80 4F */	lis r4, CtrlMoveEne_strpool@ha
 /* 8008E42C 000579EC  CB C2 8B 28 */	lfd f30, double_80668EA8@sda21(r2)
 /* 8008E430 000579F0  CB E2 8B 58 */	lfd f31, double_80668ED8@sda21(r2)
 /* 8008E434 000579F4  7C 7E 1B 78 */	mr r30, r3
 /* 8008E438 000579F8  3B 36 00 78 */	addi r25, r22, 0x78
-/* 8008E43C 000579FC  3B E4 72 58 */	addi r31, r4, lbl_804F7258@l
+/* 8008E43C 000579FC  3B E4 72 58 */	addi r31, r4, CtrlMoveEne_strpool@l
 /* 8008E440 00057A00  3B 40 00 00 */	li r26, 0
 /* 8008E444 00057A04  3B 00 00 00 */	li r24, 0
 /* 8008E448 00057A08  48 00 02 30 */	b .L_8008E678
@@ -4870,9 +4870,9 @@
 /* 8008E7D8 00057D98  60 60 00 40 */	ori r0, r3, 0x40
 /* 8008E7DC 00057D9C  90 1D 01 7C */	stw r0, 0x17c(r29)
 .L_8008E7E0:
-/* 8008E7E0 00057DA0  3C 80 80 4F */	lis r4, lbl_804F7258@ha
+/* 8008E7E0 00057DA0  3C 80 80 4F */	lis r4, CtrlMoveEne_strpool@ha
 /* 8008E7E4 00057DA4  7F C3 F3 78 */	mr r3, r30
-/* 8008E7E8 00057DA8  38 84 72 58 */	addi r4, r4, lbl_804F7258@l
+/* 8008E7E8 00057DA8  38 84 72 58 */	addi r4, r4, CtrlMoveEne_strpool@l
 /* 8008E7EC 00057DAC  38 84 00 53 */	addi r4, r4, 0x53
 /* 8008E7F0 00057DB0  48 02 0F F5 */	bl func_800AF7E4
 /* 8008E7F4 00057DB4  90 61 00 18 */	stw r3, 0x18(r1)
@@ -4910,9 +4910,9 @@
 /* 8008E870 00057E30  90 1D 01 80 */	stw r0, 0x180(r29)
 /* 8008E874 00057E34  48 00 03 30 */	b .L_8008EBA4
 .L_8008E878:
-/* 8008E878 00057E38  3C 80 80 4F */	lis r4, lbl_804F7258@ha
+/* 8008E878 00057E38  3C 80 80 4F */	lis r4, CtrlMoveEne_strpool@ha
 /* 8008E87C 00057E3C  7F C3 F3 78 */	mr r3, r30
-/* 8008E880 00057E40  38 84 72 58 */	addi r4, r4, lbl_804F7258@l
+/* 8008E880 00057E40  38 84 72 58 */	addi r4, r4, CtrlMoveEne_strpool@l
 /* 8008E884 00057E44  38 84 00 58 */	addi r4, r4, 0x58
 /* 8008E888 00057E48  48 02 0F 5D */	bl func_800AF7E4
 /* 8008E88C 00057E4C  90 61 00 1C */	stw r3, 0x1c(r1)
@@ -5125,9 +5125,9 @@
 /* 8008EB9C 0005815C  90 7D 01 7C */	stw r3, 0x17c(r29)
 /* 8008EBA0 00058160  B0 1D 01 8C */	sth r0, 0x18c(r29)
 .L_8008EBA4:
-/* 8008EBA4 00058164  3C 80 80 4F */	lis r4, lbl_804F7258@ha
+/* 8008EBA4 00058164  3C 80 80 4F */	lis r4, CtrlMoveEne_strpool@ha
 /* 8008EBA8 00058168  38 00 00 00 */	li r0, 0
-/* 8008EBAC 0005816C  38 84 72 58 */	addi r4, r4, lbl_804F7258@l
+/* 8008EBAC 0005816C  38 84 72 58 */	addi r4, r4, CtrlMoveEne_strpool@l
 /* 8008EBB0 00058170  B0 1D 01 8E */	sth r0, 0x18e(r29)
 /* 8008EBB4 00058174  7F C3 F3 78 */	mr r3, r30
 /* 8008EBB8 00058178  38 84 00 61 */	addi r4, r4, 0x61
@@ -5172,9 +5172,9 @@
 /* 8008EC4C 0005820C  38 00 00 03 */	li r0, 3
 /* 8008EC50 00058210  B0 1D 01 8E */	sth r0, 0x18e(r29)
 .L_8008EC54:
-/* 8008EC54 00058214  3C 80 80 4F */	lis r4, lbl_804F7258@ha
+/* 8008EC54 00058214  3C 80 80 4F */	lis r4, CtrlMoveEne_strpool@ha
 /* 8008EC58 00058218  7F C3 F3 78 */	mr r3, r30
-/* 8008EC5C 0005821C  38 84 72 58 */	addi r4, r4, lbl_804F7258@l
+/* 8008EC5C 0005821C  38 84 72 58 */	addi r4, r4, CtrlMoveEne_strpool@l
 /* 8008EC60 00058220  38 84 00 27 */	addi r4, r4, 0x27
 /* 8008EC64 00058224  48 02 0B 81 */	bl func_800AF7E4
 /* 8008EC68 00058228  90 61 00 10 */	stw r3, 0x10(r1)
@@ -5218,9 +5218,9 @@
 .L_8008ECF0:
 /* 8008ECF0 000582B0  38 7E 3F 14 */	addi r3, r30, 0x3f14
 /* 8008ECF4 000582B4  4B FA BD B1 */	bl func_8003AAA4
-/* 8008ECF8 000582B8  3C 80 80 4F */	lis r4, lbl_804F7258@ha
+/* 8008ECF8 000582B8  3C 80 80 4F */	lis r4, CtrlMoveEne_strpool@ha
 /* 8008ECFC 000582BC  A0 BE 3F 28 */	lhz r5, 0x3f28(r30)
-/* 8008ED00 000582C0  38 84 72 58 */	addi r4, r4, lbl_804F7258@l
+/* 8008ED00 000582C0  38 84 72 58 */	addi r4, r4, CtrlMoveEne_strpool@l
 /* 8008ED04 000582C4  38 84 00 68 */	addi r4, r4, 0x68
 /* 8008ED08 000582C8  4B FA BE 41 */	bl func_8003AB48
 /* 8008ED0C 000582CC  90 61 00 0C */	stw r3, 0xc(r1)
@@ -5313,9 +5313,9 @@
 /* 8008EE40 00058400  80 03 00 08 */	lwz r0, 8(r3)
 /* 8008EE44 00058404  90 1D 00 08 */	stw r0, 8(r29)
 /* 8008EE48 00058408  41 82 00 6C */	beq .L_8008EEB4
-/* 8008EE4C 0005840C  3C 80 80 4F */	lis r4, lbl_804F7258@ha
+/* 8008EE4C 0005840C  3C 80 80 4F */	lis r4, CtrlMoveEne_strpool@ha
 /* 8008EE50 00058410  7F C3 F3 78 */	mr r3, r30
-/* 8008EE54 00058414  38 84 72 58 */	addi r4, r4, lbl_804F7258@l
+/* 8008EE54 00058414  38 84 72 58 */	addi r4, r4, CtrlMoveEne_strpool@l
 /* 8008EE58 00058418  38 84 00 27 */	addi r4, r4, 0x27
 /* 8008EE5C 0005841C  48 02 09 89 */	bl func_800AF7E4
 /* 8008EE60 00058420  90 61 00 08 */	stw r3, 8(r1)
@@ -10290,8 +10290,8 @@ cf_CtrlMoveEne_typestr:
 	.asciz "cf::CtrlMoveEne"
 
 
-.global lbl_804F7258
-lbl_804F7258:
+.global CtrlMoveEne_strpool
+CtrlMoveEne_strpool:
 	.asciz "move_type"
 	.asciz "rndwalkR"
 	.asciz "routeID"

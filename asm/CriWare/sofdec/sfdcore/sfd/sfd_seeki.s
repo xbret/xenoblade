@@ -100,9 +100,9 @@
 .L_803D0178:
 /* 803D0178 00399738  2C 00 00 00 */	cmpwi r0, 0
 /* 803D017C 0039973C  40 82 00 1C */	bne .L_803D0198
-/* 803D0180 00399740  3C 60 80 52 */	lis r3, lbl_80520798@ha
+/* 803D0180 00399740  3C 60 80 52 */	lis r3, sfd_seeki_strpool@ha
 /* 803D0184 00399744  38 A0 00 00 */	li r5, 0
-/* 803D0188 00399748  38 63 07 98 */	addi r3, r3, lbl_80520798@l
+/* 803D0188 00399748  38 63 07 98 */	addi r3, r3, sfd_seeki_strpool@l
 /* 803D018C 0039974C  38 C0 00 31 */	li r6, 0x31
 /* 803D0190 00399750  38 83 00 1B */	addi r4, r3, 0x1b
 /* 803D0194 00399754  4B EE DA E9 */	bl __msl_assertion_failed
@@ -200,9 +200,9 @@
 .L_803D02D8:
 /* 803D02D8 00399898  2C 00 00 00 */	cmpwi r0, 0
 /* 803D02DC 0039989C  40 82 00 1C */	bne .L_803D02F8
-/* 803D02E0 003998A0  3C 60 80 52 */	lis r3, lbl_80520798@ha
+/* 803D02E0 003998A0  3C 60 80 52 */	lis r3, sfd_seeki_strpool@ha
 /* 803D02E4 003998A4  38 A0 00 00 */	li r5, 0
-/* 803D02E8 003998A8  38 63 07 98 */	addi r3, r3, lbl_80520798@l
+/* 803D02E8 003998A8  38 63 07 98 */	addi r3, r3, sfd_seeki_strpool@l
 /* 803D02EC 003998AC  38 C0 00 42 */	li r6, 0x42
 /* 803D02F0 003998B0  38 83 00 1B */	addi r4, r3, 0x1b
 /* 803D02F4 003998B4  4B EE D9 89 */	bl __msl_assertion_failed
@@ -288,9 +288,9 @@
 .L_803D0410:
 /* 803D0410 003999D0  2C 00 00 00 */	cmpwi r0, 0
 /* 803D0414 003999D4  40 82 00 20 */	bne .L_803D0434
-/* 803D0418 003999D8  3C 80 80 52 */	lis r4, lbl_80520798@ha
+/* 803D0418 003999D8  3C 80 80 52 */	lis r4, sfd_seeki_strpool@ha
 /* 803D041C 003999DC  38 A0 00 00 */	li r5, 0
-/* 803D0420 003999E0  38 84 07 98 */	addi r4, r4, lbl_80520798@l
+/* 803D0420 003999E0  38 84 07 98 */	addi r4, r4, sfd_seeki_strpool@l
 /* 803D0424 003999E4  38 C0 00 53 */	li r6, 0x53
 /* 803D0428 003999E8  38 64 00 27 */	addi r3, r4, 0x27
 /* 803D042C 003999EC  38 84 00 1B */	addi r4, r4, 0x1b
@@ -411,9 +411,9 @@
 .L_803D05D4:
 /* 803D05D4 00399B94  2C 00 00 00 */	cmpwi r0, 0
 /* 803D05D8 00399B98  40 82 00 20 */	bne .L_803D05F8
-/* 803D05DC 00399B9C  3C 80 80 52 */	lis r4, lbl_80520798@ha
+/* 803D05DC 00399B9C  3C 80 80 52 */	lis r4, sfd_seeki_strpool@ha
 /* 803D05E0 00399BA0  38 A0 00 00 */	li r5, 0
-/* 803D05E4 00399BA4  38 84 07 98 */	addi r4, r4, lbl_80520798@l
+/* 803D05E4 00399BA4  38 84 07 98 */	addi r4, r4, sfd_seeki_strpool@l
 /* 803D05E8 00399BA8  38 C0 00 65 */	li r6, 0x65
 /* 803D05EC 00399BAC  38 64 00 42 */	addi r3, r4, 0x42
 /* 803D05F0 00399BB0  38 84 00 1B */	addi r4, r4, 0x1b
@@ -437,8 +437,8 @@ lbl_80520778:
 	.4byte 0
 
 
-.global lbl_80520798
-lbl_80520798:
+.global sfd_seeki_strpool
+sfd_seeki_strpool:
 	.asciz "(nbyte > 0) && (nbyte < 5)"
 	.asciz "sfh_local.c"
 	.asciz "(nbyte > 0) && (nbyte < 9)"

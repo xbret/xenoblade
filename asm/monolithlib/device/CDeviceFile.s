@@ -254,7 +254,7 @@
 /* 8044E4CC 00417A8C  41 82 00 10 */	beq .L_8044E4DC
 /* 8044E4D0 00417A90  7F A3 EB 78 */	mr r3, r29
 /* 8044E4D4 00417A94  38 80 00 00 */	li r4, 0
-/* 8044E4D8 00417A98  4B FE 95 F1 */	bl func_80437AC8
+/* 8044E4D8 00417A98  4B FE 95 F1 */	bl __dt__CWorkThread
 .L_8044E4DC:
 /* 8044E4DC 00417A9C  2C 1E 00 00 */	cmpwi r30, 0
 /* 8044E4E0 00417AA0  40 81 00 0C */	ble .L_8044E4EC
@@ -512,9 +512,9 @@
 /* 8044E800 00417DC0  38 7F 00 30 */	addi r3, r31, 0x30
 /* 8044E804 00417DC4  4B E7 3E B5 */	bl strcpy
 .L_8044E808:
-/* 8044E808 00417DC8  3C 60 80 52 */	lis r3, strpool_805264FC@ha
+/* 8044E808 00417DC8  3C 60 80 52 */	lis r3, CDeviceFile_strpool@ha
 /* 8044E80C 00417DCC  38 00 00 00 */	li r0, 0
-/* 8044E810 00417DD0  38 63 64 FC */	addi r3, r3, strpool_805264FC@l
+/* 8044E810 00417DD0  38 63 64 FC */	addi r3, r3, CDeviceFile_strpool@l
 /* 8044E814 00417DD4  90 1F 00 14 */	stw r0, 0x14(r31)
 /* 8044E818 00417DD8  3B C3 00 1D */	addi r30, r3, 0x1d
 /* 8044E81C 00417DDC  3B 00 00 00 */	li r24, 0
@@ -650,9 +650,9 @@
 /* 8044E9E0 00417FA0  2C 03 00 06 */	cmpwi r3, 6
 /* 8044E9E4 00417FA4  7C 79 1B 78 */	mr r25, r3
 /* 8044E9E8 00417FA8  40 81 00 24 */	ble .L_8044EA0C
-/* 8044E9EC 00417FAC  3C 80 80 52 */	lis r4, strpool_805264FC@ha
+/* 8044E9EC 00417FAC  3C 80 80 52 */	lis r4, CDeviceFile_strpool@ha
 /* 8044E9F0 00417FB0  7F 43 D3 78 */	mr r3, r26
-/* 8044E9F4 00417FB4  38 84 64 FC */	addi r4, r4, strpool_805264FC@l
+/* 8044E9F4 00417FB4  38 84 64 FC */	addi r4, r4, CDeviceFile_strpool@l
 /* 8044E9F8 00417FB8  4B E7 3F C9 */	bl strstr
 /* 8044E9FC 00417FBC  7C 03 D0 40 */	cmplw r3, r26
 /* 8044EA00 00417FC0  40 82 00 0C */	bne .L_8044EA0C
@@ -689,9 +689,9 @@
 /* 8044EA68 00418028  2C 00 00 00 */	cmpwi r0, 0
 /* 8044EA6C 0041802C  40 82 00 58 */	bne .L_8044EAC4
 /* 8044EA70 00418030  48 00 21 A5 */	bl func_80450C14
-/* 8044EA74 00418034  3C 80 80 52 */	lis r4, strpool_805264FC@ha
+/* 8044EA74 00418034  3C 80 80 52 */	lis r4, CDeviceFile_strpool@ha
 /* 8044EA78 00418038  7C 77 1B 78 */	mr r23, r3
-/* 8044EA7C 0041803C  38 84 64 FC */	addi r4, r4, strpool_805264FC@l
+/* 8044EA7C 0041803C  38 84 64 FC */	addi r4, r4, CDeviceFile_strpool@l
 /* 8044EA80 00418040  3B 04 00 07 */	addi r24, r4, 7
 /* 8044EA84 00418044  4B FE 8B 31 */	bl func_804375B4
 /* 8044EA88 00418048  7C 64 1B 78 */	mr r4, r3
@@ -712,9 +712,9 @@
 /* 8044EAC0 00418080  48 00 00 54 */	b .L_8044EB14
 .L_8044EAC4:
 /* 8044EAC4 00418084  48 00 0E 99 */	bl func_8044F95C
-/* 8044EAC8 00418088  3C 80 80 52 */	lis r4, strpool_805264FC@ha
+/* 8044EAC8 00418088  3C 80 80 52 */	lis r4, CDeviceFile_strpool@ha
 /* 8044EACC 0041808C  7C 77 1B 78 */	mr r23, r3
-/* 8044EAD0 00418090  38 84 64 FC */	addi r4, r4, strpool_805264FC@l
+/* 8044EAD0 00418090  38 84 64 FC */	addi r4, r4, CDeviceFile_strpool@l
 /* 8044EAD4 00418094  3B 04 00 07 */	addi r24, r4, 7
 /* 8044EAD8 00418098  4B FE 8A DD */	bl func_804375B4
 /* 8044EADC 0041809C  7C 64 1B 78 */	mr r4, r3
@@ -795,9 +795,9 @@
 /* 8044EBE0 004181A0  38 7F 00 30 */	addi r3, r31, 0x30
 /* 8044EBE4 004181A4  4B E7 3A D5 */	bl strcpy
 .L_8044EBE8:
-/* 8044EBE8 004181A8  3C 60 80 52 */	lis r3, strpool_805264FC@ha
+/* 8044EBE8 004181A8  3C 60 80 52 */	lis r3, CDeviceFile_strpool@ha
 /* 8044EBEC 004181AC  38 00 00 00 */	li r0, 0
-/* 8044EBF0 004181B0  38 63 64 FC */	addi r3, r3, strpool_805264FC@l
+/* 8044EBF0 004181B0  38 63 64 FC */	addi r3, r3, CDeviceFile_strpool@l
 /* 8044EBF4 004181B4  90 1F 00 14 */	stw r0, 0x14(r31)
 /* 8044EBF8 004181B8  3B C3 00 1D */	addi r30, r3, 0x1d
 /* 8044EBFC 004181BC  3B 00 00 00 */	li r24, 0
@@ -933,9 +933,9 @@
 /* 8044EDC0 00418380  2C 03 00 06 */	cmpwi r3, 6
 /* 8044EDC4 00418384  7C 79 1B 78 */	mr r25, r3
 /* 8044EDC8 00418388  40 81 00 24 */	ble .L_8044EDEC
-/* 8044EDCC 0041838C  3C 80 80 52 */	lis r4, strpool_805264FC@ha
+/* 8044EDCC 0041838C  3C 80 80 52 */	lis r4, CDeviceFile_strpool@ha
 /* 8044EDD0 00418390  7F 43 D3 78 */	mr r3, r26
-/* 8044EDD4 00418394  38 84 64 FC */	addi r4, r4, strpool_805264FC@l
+/* 8044EDD4 00418394  38 84 64 FC */	addi r4, r4, CDeviceFile_strpool@l
 /* 8044EDD8 00418398  4B E7 3B E9 */	bl strstr
 /* 8044EDDC 0041839C  7C 03 D0 40 */	cmplw r3, r26
 /* 8044EDE0 004183A0  40 82 00 0C */	bne .L_8044EDEC
@@ -972,9 +972,9 @@
 /* 8044EE48 00418408  2C 00 00 00 */	cmpwi r0, 0
 /* 8044EE4C 0041840C  40 82 00 58 */	bne .L_8044EEA4
 /* 8044EE50 00418410  48 00 1D C5 */	bl func_80450C14
-/* 8044EE54 00418414  3C 80 80 52 */	lis r4, strpool_805264FC@ha
+/* 8044EE54 00418414  3C 80 80 52 */	lis r4, CDeviceFile_strpool@ha
 /* 8044EE58 00418418  7C 77 1B 78 */	mr r23, r3
-/* 8044EE5C 0041841C  38 84 64 FC */	addi r4, r4, strpool_805264FC@l
+/* 8044EE5C 0041841C  38 84 64 FC */	addi r4, r4, CDeviceFile_strpool@l
 /* 8044EE60 00418420  3B 04 00 07 */	addi r24, r4, 7
 /* 8044EE64 00418424  4B FE 87 51 */	bl func_804375B4
 /* 8044EE68 00418428  7C 64 1B 78 */	mr r4, r3
@@ -995,9 +995,9 @@
 /* 8044EEA0 00418460  48 00 00 54 */	b .L_8044EEF4
 .L_8044EEA4:
 /* 8044EEA4 00418464  48 00 0A B9 */	bl func_8044F95C
-/* 8044EEA8 00418468  3C 80 80 52 */	lis r4, strpool_805264FC@ha
+/* 8044EEA8 00418468  3C 80 80 52 */	lis r4, CDeviceFile_strpool@ha
 /* 8044EEAC 0041846C  7C 77 1B 78 */	mr r23, r3
-/* 8044EEB0 00418470  38 84 64 FC */	addi r4, r4, strpool_805264FC@l
+/* 8044EEB0 00418470  38 84 64 FC */	addi r4, r4, CDeviceFile_strpool@l
 /* 8044EEB4 00418474  3B 04 00 07 */	addi r24, r4, 7
 /* 8044EEB8 00418478  4B FE 86 FD */	bl func_804375B4
 /* 8044EEBC 0041847C  7C 64 1B 78 */	mr r4, r3
@@ -1054,9 +1054,9 @@
 /* 8044EF68 00418528  2C 03 00 06 */	cmpwi r3, 6
 /* 8044EF6C 0041852C  7C 7F 1B 78 */	mr r31, r3
 /* 8044EF70 00418530  40 81 00 24 */	ble .L_8044EF94
-/* 8044EF74 00418534  3C 80 80 52 */	lis r4, strpool_805264FC@ha
+/* 8044EF74 00418534  3C 80 80 52 */	lis r4, CDeviceFile_strpool@ha
 /* 8044EF78 00418538  7F A3 EB 78 */	mr r3, r29
-/* 8044EF7C 0041853C  38 84 64 FC */	addi r4, r4, strpool_805264FC@l
+/* 8044EF7C 0041853C  38 84 64 FC */	addi r4, r4, CDeviceFile_strpool@l
 /* 8044EF80 00418540  4B E7 3A 41 */	bl strstr
 /* 8044EF84 00418544  7C 03 E8 40 */	cmplw r3, r29
 /* 8044EF88 00418548  40 82 00 0C */	bne .L_8044EF94
@@ -1433,8 +1433,8 @@
 /* 8044F43C 004189FC  4B FF DE 0D */	bl func_8044D248
 /* 8044F440 00418A00  2C 03 00 00 */	cmpwi r3, 0
 /* 8044F444 00418A04  41 82 00 88 */	beq .L_8044F4CC
-/* 8044F448 00418A08  3C 60 80 52 */	lis r3, strpool_805264FC@ha
-/* 8044F44C 00418A0C  38 63 64 FC */	addi r3, r3, strpool_805264FC@l
+/* 8044F448 00418A08  3C 60 80 52 */	lis r3, CDeviceFile_strpool@ha
+/* 8044F44C 00418A0C  38 63 64 FC */	addi r3, r3, CDeviceFile_strpool@l
 /* 8044F450 00418A10  3B E3 00 8B */	addi r31, r3, 0x8b
 /* 8044F454 00418A14  4B FE 81 61 */	bl func_804375B4
 /* 8044F458 00418A18  7C 64 1B 78 */	mr r4, r3
@@ -1449,8 +1449,8 @@
 /* 8044F478 00418A38  7F C4 F3 78 */	mr r4, r30
 /* 8044F47C 00418A3C  38 A0 00 00 */	li r5, 0
 /* 8044F480 00418A40  4B FE 97 59 */	bl func_80438BD8
-/* 8044F484 00418A44  3C 60 80 52 */	lis r3, strpool_805264FC@ha
-/* 8044F488 00418A48  38 63 64 FC */	addi r3, r3, strpool_805264FC@l
+/* 8044F484 00418A44  3C 60 80 52 */	lis r3, CDeviceFile_strpool@ha
+/* 8044F488 00418A48  38 63 64 FC */	addi r3, r3, CDeviceFile_strpool@l
 /* 8044F48C 00418A4C  3B E3 00 9A */	addi r31, r3, 0x9a
 /* 8044F490 00418A50  4B FE 81 25 */	bl func_804375B4
 /* 8044F494 00418A54  7C 64 1B 78 */	mr r4, r3
@@ -1564,8 +1564,8 @@ _reslist_base_CFileHandle_typestr:
 	.balign 4
 
 
-.global strpool_805264FC
-strpool_805264FC:
+.global CDeviceFile_strpool
+CDeviceFile_strpool:
 	.asciz "USBKEY" #0x0
 	.asciz "CDeviceFileJobReadDvd" #0x7
 	.asciz "/" #0x1d

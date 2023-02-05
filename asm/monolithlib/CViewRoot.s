@@ -251,7 +251,7 @@ __RTTI__CViewRoot:
 	.4byte func_80442084
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_80437AC8
+	.4byte __dt__CWorkThread
 .endobj "@etb_8001C6D8"
 
 .section extabindex, "a" # 0x80021020 - 0x80039220

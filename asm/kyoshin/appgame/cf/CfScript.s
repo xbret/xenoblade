@@ -387,10 +387,10 @@
 /* 80068EAC 0003246C  7C C4 33 78 */	mr r4, r6
 /* 80068EB0 00032470  4B FF FB 80 */	b func_80068A30
 .L_80068EB4:
-/* 80068EB4 00032474  3C 80 80 4F */	lis r4, lbl_804F6BB4@ha
+/* 80068EB4 00032474  3C 80 80 4F */	lis r4, CfScript_strpool@ha
 /* 80068EB8 00032478  7C E5 3B 78 */	mr r5, r7
 /* 80068EBC 0003247C  7C 06 03 78 */	mr r6, r0
-/* 80068EC0 00032480  38 84 6B B4 */	addi r4, r4, lbl_804F6BB4@l
+/* 80068EC0 00032480  38 84 6B B4 */	addi r4, r4, CfScript_strpool@l
 /* 80068EC4 00032484  4C C6 31 82 */	crclr 6
 /* 80068EC8 00032488  4B FD D9 50 */	b CTaskGameEff_vsnprintf
 .endfn func_80068E9C
@@ -407,9 +407,9 @@
 /* 80068EEC 000324AC  98 01 00 D0 */	stb r0, 0xd0(r1)
 /* 80068EF0 000324B0  90 01 01 50 */	stw r0, 0x150(r1)
 /* 80068EF4 000324B4  41 82 00 3C */	beq .L_80068F30
-/* 80068EF8 000324B8  3F 80 80 4F */	lis r28, lbl_804F6BB4@ha
+/* 80068EF8 000324B8  3F 80 80 4F */	lis r28, CfScript_strpool@ha
 /* 80068EFC 000324BC  7F 63 DB 78 */	mr r3, r27
-/* 80068F00 000324C0  3B 9C 6B B4 */	addi r28, r28, lbl_804F6BB4@l
+/* 80068F00 000324C0  3B 9C 6B B4 */	addi r28, r28, CfScript_strpool@l
 /* 80068F04 000324C4  38 9C 00 0A */	addi r4, r28, 0xa
 /* 80068F08 000324C8  48 25 99 2D */	bl strcmp
 /* 80068F0C 000324CC  2C 03 00 00 */	cmpwi r3, 0
@@ -491,9 +491,9 @@
 /* 80069014 000325D4  38 61 00 08 */	addi r3, r1, 8
 /* 80069018 000325D8  38 81 00 D0 */	addi r4, r1, 0xd0
 /* 8006901C 000325DC  48 3C C0 5D */	bl func_80435078
-/* 80069020 000325E0  3F 80 80 4F */	lis r28, lbl_804F6BB4@ha
+/* 80069020 000325E0  3F 80 80 4F */	lis r28, CfScript_strpool@ha
 /* 80069024 000325E4  3F A0 80 57 */	lis r29, lbl_805740C8@ha
-/* 80069028 000325E8  3B 9C 6B B4 */	addi r28, r28, lbl_804F6BB4@l
+/* 80069028 000325E8  3B 9C 6B B4 */	addi r28, r28, CfScript_strpool@l
 /* 8006902C 000325EC  38 61 00 D0 */	addi r3, r1, 0xd0
 /* 80069030 000325F0  38 9C 00 1C */	addi r4, r28, 0x1c
 /* 80069034 000325F4  38 BD 40 C8 */	addi r5, r29, lbl_805740C8@l
@@ -682,9 +682,9 @@
 /* 800692C4 00032884  48 25 96 FD */	bl strstr
 /* 800692C8 00032888  2C 03 00 00 */	cmpwi r3, 0
 /* 800692CC 0003288C  41 82 00 2C */	beq .L_800692F8
-/* 800692D0 00032890  3F E0 80 4F */	lis r31, lbl_804F6BB4@ha
+/* 800692D0 00032890  3F E0 80 4F */	lis r31, CfScript_strpool@ha
 /* 800692D4 00032894  7F C3 F3 78 */	mr r3, r30
-/* 800692D8 00032898  3B FF 6B B4 */	addi r31, r31, lbl_804F6BB4@l
+/* 800692D8 00032898  3B FF 6B B4 */	addi r31, r31, CfScript_strpool@l
 /* 800692DC 0003289C  38 9F 00 25 */	addi r4, r31, 0x25
 /* 800692E0 000328A0  48 25 96 E1 */	bl strstr
 /* 800692E4 000328A4  2C 03 00 00 */	cmpwi r3, 0
@@ -785,7 +785,7 @@
 /* 8006941C 000329DC  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80069420 000329E0  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80069424 000329E4  7C 7D 1B 78 */	mr r29, r3
-/* 80069428 000329E8  48 43 68 85 */	bl func_8049FCAC
+/* 80069428 000329E8  48 43 68 85 */	bl CScriptBinary_InitMem
 /* 8006942C 000329EC  4B FD C3 E9 */	bl func_80045814
 /* 80069430 000329F0  3B C0 00 00 */	li r30, 0
 /* 80069434 000329F4  3B E0 00 00 */	li r31, 0
@@ -913,7 +913,7 @@
 /* 800695D8 00032B98  90 1E 00 A4 */	stw r0, 0xa4(r30)
 /* 800695DC 00032B9C  98 1E 00 5C */	stb r0, 0x5c(r30)
 /* 800695E0 00032BA0  90 1E 00 9C */	stw r0, 0x9c(r30)
-/* 800695E4 00032BA4  48 43 66 C9 */	bl func_8049FCAC
+/* 800695E4 00032BA4  48 43 66 C9 */	bl CScriptBinary_InitMem
 /* 800695E8 00032BA8  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 800695EC 00032BAC  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 800695F0 00032BB0  83 C1 00 08 */	lwz r30, 8(r1)
@@ -1076,8 +1076,8 @@ cf_CfScript_typestr:
 	.balign 4
 
 
-.global lbl_804F6BB4
-lbl_804F6BB4:
+.global CfScript_strpool
+CfScript_strpool:
 	.asciz "%02d%02df"
 	.asciz "eventView"
 	.asciz "abcd_00"

@@ -3,8 +3,6 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-
-
 #CChainMember and CChainChance might be in separate files
 
 .fn func_80276C30, global

@@ -3,9 +3,6 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-
-
-
 .fn __ct__CTaskGame, global
 /* 80040144 00009704  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80040148 00009708  7C 08 02 A6 */	mflr r0
@@ -5371,8 +5368,8 @@ cf_CObjectState_typestr:
 	.balign 4
 
 
-.global lbl_804F6014
-lbl_804F6014:
+.global CTaskGame_strpool
+CTaskGame_strpool:
 	.asciz "FLD_npclist"
 	.asciz "npc"
 	.asciz "remove"

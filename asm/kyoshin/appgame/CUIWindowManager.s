@@ -3960,9 +3960,9 @@
 /* 8013F5B8 00108B78  A0 BF 00 60 */	lhz r5, 0x60(r31)
 /* 8013F5BC 00108B7C  2C 05 00 00 */	cmpwi r5, 0
 /* 8013F5C0 00108B80  41 82 00 50 */	beq .L_8013F610
-/* 8013F5C4 00108B84  3C 80 80 50 */	lis r4, lbl_804FC280@ha
+/* 8013F5C4 00108B84  3C 80 80 50 */	lis r4, CUIWindowManager_strpool@ha
 /* 8013F5C8 00108B88  80 6D A8 08 */	lwz r3, lbl_80666988@sda21(r13)
-/* 8013F5CC 00108B8C  38 84 C2 80 */	addi r4, r4, lbl_804FC280@l
+/* 8013F5CC 00108B8C  38 84 C2 80 */	addi r4, r4, CUIWindowManager_strpool@l
 /* 8013F5D0 00108B90  4B EF B5 79 */	bl func_8003AB48
 /* 8013F5D4 00108B94  90 61 00 0C */	stw r3, 0xc(r1)
 /* 8013F5D8 00108B98  38 60 FF FF */	li r3, -1
@@ -3985,9 +3985,9 @@
 /* 8013F610 00108BD0  A0 BF 00 62 */	lhz r5, 0x62(r31)
 /* 8013F614 00108BD4  2C 05 00 00 */	cmpwi r5, 0
 /* 8013F618 00108BD8  41 82 00 50 */	beq .L_8013F668
-/* 8013F61C 00108BDC  3C 80 80 50 */	lis r4, lbl_804FC280@ha
+/* 8013F61C 00108BDC  3C 80 80 50 */	lis r4, CUIWindowManager_strpool@ha
 /* 8013F620 00108BE0  80 6D A8 08 */	lwz r3, lbl_80666988@sda21(r13)
-/* 8013F624 00108BE4  38 84 C2 80 */	addi r4, r4, lbl_804FC280@l
+/* 8013F624 00108BE4  38 84 C2 80 */	addi r4, r4, CUIWindowManager_strpool@l
 /* 8013F628 00108BE8  4B EF B5 21 */	bl func_8003AB48
 /* 8013F62C 00108BEC  90 61 00 08 */	stw r3, 8(r1)
 /* 8013F630 00108BF0  38 60 FF FF */	li r3, -1
@@ -4110,9 +4110,9 @@
 /* 8013F7C4 00108D84  90 01 00 20 */	stw r0, 0x20(r1)
 .L_8013F7C8:
 /* 8013F7C8 00108D88  80 01 00 20 */	lwz r0, 0x20(r1)
-/* 8013F7CC 00108D8C  3F C0 80 50 */	lis r30, lbl_804FC280@ha
+/* 8013F7CC 00108D8C  3F C0 80 50 */	lis r30, CUIWindowManager_strpool@ha
 /* 8013F7D0 00108D90  82 C1 00 20 */	lwz r22, 0x20(r1)
-/* 8013F7D4 00108D94  3B DE C2 80 */	addi r30, r30, lbl_804FC280@l
+/* 8013F7D4 00108D94  3B DE C2 80 */	addi r30, r30, CUIWindowManager_strpool@l
 /* 8013F7D8 00108D98  1C 60 00 2A */	mulli r3, r0, 0x2a
 /* 8013F7DC 00108D9C  3C 00 80 50 */	lis r0, lbl_804FC240@ha
 /* 8013F7E0 00108DA0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -4697,8 +4697,8 @@
 /* 80140018 001095D8  38 A0 00 C8 */	li r5, 0xc8
 /* 8014001C 001095DC  4B EC 43 35 */	bl memset
 /* 80140020 001095E0  88 1C 00 00 */	lbz r0, 0(r28)
-/* 80140024 001095E4  3F E0 80 50 */	lis r31, lbl_804FC280@ha
-/* 80140028 001095E8  3B FF C2 80 */	addi r31, r31, lbl_804FC280@l
+/* 80140024 001095E4  3F E0 80 50 */	lis r31, CUIWindowManager_strpool@ha
+/* 80140028 001095E8  3B FF C2 80 */	addi r31, r31, CUIWindowManager_strpool@l
 /* 8014002C 001095EC  B3 DC 00 52 */	sth r30, 0x52(r28)
 /* 80140030 001095F0  60 00 00 01 */	ori r0, r0, 1
 /* 80140034 001095F4  7F A3 EB 78 */	mr r3, r29
@@ -4934,9 +4934,9 @@
 /* 801403CC 0010998C  88 01 00 94 */	lbz r0, 0x94(r1)
 /* 801403D0 00109990  98 1C 00 95 */	stb r0, 0x95(r28)
 .L_801403D4:
-/* 801403D4 00109994  3F 60 80 50 */	lis r27, lbl_804FC280@ha
+/* 801403D4 00109994  3F 60 80 50 */	lis r27, CUIWindowManager_strpool@ha
 /* 801403D8 00109998  7F A3 EB 78 */	mr r3, r29
-/* 801403DC 0010999C  3B 7B C2 80 */	addi r27, r27, lbl_804FC280@l
+/* 801403DC 0010999C  3B 7B C2 80 */	addi r27, r27, CUIWindowManager_strpool@l
 /* 801403E0 001099A0  7F C5 F3 78 */	mr r5, r30
 /* 801403E4 001099A4  38 9B 01 70 */	addi r4, r27, 0x170
 /* 801403E8 001099A8  4B EF A7 61 */	bl func_8003AB48
@@ -4974,9 +4974,9 @@
 /* 80140468 00109A28  88 01 00 80 */	lbz r0, 0x80(r1)
 /* 8014046C 00109A2C  98 1C 00 96 */	stb r0, 0x96(r28)
 .L_80140470:
-/* 80140470 00109A30  3F 60 80 50 */	lis r27, lbl_804FC280@ha
+/* 80140470 00109A30  3F 60 80 50 */	lis r27, CUIWindowManager_strpool@ha
 /* 80140474 00109A34  7F A3 EB 78 */	mr r3, r29
-/* 80140478 00109A38  3B 7B C2 80 */	addi r27, r27, lbl_804FC280@l
+/* 80140478 00109A38  3B 7B C2 80 */	addi r27, r27, CUIWindowManager_strpool@l
 /* 8014047C 00109A3C  7F C5 F3 78 */	mr r5, r30
 /* 80140480 00109A40  38 9B 01 B0 */	addi r4, r27, 0x1b0
 /* 80140484 00109A44  4B EF A6 C5 */	bl func_8003AB48
@@ -5017,9 +5017,9 @@
 /* 8014050C 00109ACC  38 00 00 01 */	li r0, 1
 /* 80140510 00109AD0  98 1C 00 6E */	stb r0, 0x6e(r28)
 .L_80140514:
-/* 80140514 00109AD4  3F 60 80 50 */	lis r27, lbl_804FC280@ha
+/* 80140514 00109AD4  3F 60 80 50 */	lis r27, CUIWindowManager_strpool@ha
 /* 80140518 00109AD8  7F A3 EB 78 */	mr r3, r29
-/* 8014051C 00109ADC  3B 7B C2 80 */	addi r27, r27, lbl_804FC280@l
+/* 8014051C 00109ADC  3B 7B C2 80 */	addi r27, r27, CUIWindowManager_strpool@l
 /* 80140520 00109AE0  7F C5 F3 78 */	mr r5, r30
 /* 80140524 00109AE4  38 9B 01 F0 */	addi r4, r27, 0x1f0
 /* 80140528 00109AE8  4B EF A6 21 */	bl func_8003AB48
@@ -5129,9 +5129,9 @@
 /* 801406C8 00109C88  88 01 00 30 */	lbz r0, 0x30(r1)
 /* 801406CC 00109C8C  98 1C 00 BF */	stb r0, 0xbf(r28)
 .L_801406D0:
-/* 801406D0 00109C90  3F 60 80 50 */	lis r27, lbl_804FC280@ha
+/* 801406D0 00109C90  3F 60 80 50 */	lis r27, CUIWindowManager_strpool@ha
 /* 801406D4 00109C94  7F A3 EB 78 */	mr r3, r29
-/* 801406D8 00109C98  3B 7B C2 80 */	addi r27, r27, lbl_804FC280@l
+/* 801406D8 00109C98  3B 7B C2 80 */	addi r27, r27, CUIWindowManager_strpool@l
 /* 801406DC 00109C9C  7F C5 F3 78 */	mr r5, r30
 /* 801406E0 00109CA0  38 9B 02 A7 */	addi r4, r27, 0x2a7
 /* 801406E4 00109CA4  4B EF A4 65 */	bl func_8003AB48
@@ -5169,9 +5169,9 @@
 /* 80140764 00109D24  88 01 00 1C */	lbz r0, 0x1c(r1)
 /* 80140768 00109D28  98 1C 00 C0 */	stb r0, 0xc0(r28)
 .L_8014076C:
-/* 8014076C 00109D2C  3F 60 80 50 */	lis r27, lbl_804FC280@ha
+/* 8014076C 00109D2C  3F 60 80 50 */	lis r27, CUIWindowManager_strpool@ha
 /* 80140770 00109D30  7F A3 EB 78 */	mr r3, r29
-/* 80140774 00109D34  3B 7B C2 80 */	addi r27, r27, lbl_804FC280@l
+/* 80140774 00109D34  3B 7B C2 80 */	addi r27, r27, CUIWindowManager_strpool@l
 /* 80140778 00109D38  7F C5 F3 78 */	mr r5, r30
 /* 8014077C 00109D3C  38 9B 02 E7 */	addi r4, r27, 0x2e7
 /* 80140780 00109D40  4B EF A3 C9 */	bl func_8003AB48
@@ -5459,9 +5459,9 @@
 /* 80140B68 0010A128  94 05 00 08 */	stwu r0, 8(r5)
 /* 80140B6C 0010A12C  42 00 FF F0 */	bdnz .L_80140B5C
 /* 80140B70 0010A130  3E E0 80 57 */	lis r23, lbl_80577448@ha
-/* 80140B74 0010A134  3E C0 80 50 */	lis r22, lbl_804FC280@ha
+/* 80140B74 0010A134  3E C0 80 50 */	lis r22, CUIWindowManager_strpool@ha
 /* 80140B78 0010A138  3A A0 00 0E */	li r21, 0xe
-/* 80140B7C 0010A13C  3A D6 C2 80 */	addi r22, r22, lbl_804FC280@l
+/* 80140B7C 0010A13C  3A D6 C2 80 */	addi r22, r22, CUIWindowManager_strpool@l
 /* 80140B80 0010A140  3B 17 74 48 */	addi r24, r23, lbl_80577448@l
 .L_80140B84:
 /* 80140B84 0010A144  83 DD 00 00 */	lwz r30, 0(r29)
@@ -5579,9 +5579,9 @@
 /* 80140D0C 0010A2CC  90 65 00 04 */	stw r3, 4(r5)
 /* 80140D10 0010A2D0  94 05 00 08 */	stwu r0, 8(r5)
 /* 80140D14 0010A2D4  42 00 FF F0 */	bdnz .L_80140D04
-/* 80140D18 0010A2D8  3E C0 80 50 */	lis r22, lbl_804FC280@ha
+/* 80140D18 0010A2D8  3E C0 80 50 */	lis r22, CUIWindowManager_strpool@ha
 /* 80140D1C 0010A2DC  3E E0 80 57 */	lis r23, lbl_80577448@ha
-/* 80140D20 0010A2E0  3A D6 C2 80 */	addi r22, r22, lbl_804FC280@l
+/* 80140D20 0010A2E0  3A D6 C2 80 */	addi r22, r22, CUIWindowManager_strpool@l
 /* 80140D24 0010A2E4  3A A0 00 0E */	li r21, 0xe
 /* 80140D28 0010A2E8  3B 17 74 48 */	addi r24, r23, lbl_80577448@l
 .L_80140D2C:
@@ -6252,8 +6252,8 @@ lbl_804FC260:
 	.4byte 0x0000008E
 
 
-.global lbl_804FC280
-lbl_804FC280:
+.global CUIWindowManager_strpool
+CUIWindowManager_strpool:
 	.asciz "rlt_meet"
 	.asciz "itemType"
 	.asciz "qst_genre"

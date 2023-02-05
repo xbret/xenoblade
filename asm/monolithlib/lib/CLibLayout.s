@@ -4,7 +4,7 @@
 
 
 
-.fn func_8045EF84, global
+.fn __ct__CLibLayout, global
 /* 8045EF84 00428544  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045EF88 00428548  7C 08 02 A6 */	mflr r0
 /* 8045EF8C 0042854C  38 C0 00 00 */	li r6, 0
@@ -36,9 +36,9 @@
 /* 8045EFF4 004285B4  7C 08 03 A6 */	mtlr r0
 /* 8045EFF8 004285B8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045EFFC 004285BC  4E 80 00 20 */	blr 
-.endfn func_8045EF84
+.endfn __ct__CLibLayout
 
-.fn func_8045F000, global
+.fn __dt__CLibLayout, global
 /* 8045F000 004285C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045F004 004285C4  7C 08 02 A6 */	mflr r0
 /* 8045F008 004285C8  2C 03 00 00 */	cmpwi r3, 0
@@ -59,9 +59,9 @@
 /* 8045F040 00428600  7C 08 03 A6 */	mtlr r0
 /* 8045F044 00428604  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045F048 00428608  4E 80 00 20 */	blr 
-.endfn func_8045F000
+.endfn __dt__CLibLayout
 
-.fn func_8045F04C, global
+.fn __dt__CLibLayout_1, global
 /* 8045F04C 0042860C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045F050 00428610  7C 08 02 A6 */	mflr r0
 /* 8045F054 00428614  2C 03 00 00 */	cmpwi r3, 0
@@ -80,7 +80,7 @@
 .L_8045F088:
 /* 8045F088 00428648  7F C3 F3 78 */	mr r3, r30
 /* 8045F08C 0042864C  38 80 00 00 */	li r4, 0
-/* 8045F090 00428650  4B FD 8A 39 */	bl func_80437AC8
+/* 8045F090 00428650  4B FD 8A 39 */	bl __dt__CWorkThread
 /* 8045F094 00428654  2C 1F 00 00 */	cmpwi r31, 0
 /* 8045F098 00428658  40 81 00 0C */	ble .L_8045F0A4
 /* 8045F09C 0042865C  7F C3 F3 78 */	mr r3, r30
@@ -93,7 +93,7 @@
 /* 8045F0B4 00428674  7C 08 03 A6 */	mtlr r0
 /* 8045F0B8 00428678  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045F0BC 0042867C  4E 80 00 20 */	blr 
-.endfn func_8045F04C
+.endfn __dt__CLibLayout_1
 
 .fn func_8045F0C0, global
 /* 8045F0C0 00428680  80 6D BE 68 */	lwz r3, lbl_80667FE8@sda21(r13)
@@ -452,7 +452,7 @@
 /* 8045F560 00428B20  4E 80 00 20 */	blr 
 .endfn func_8045F4E4
 
-.fn func_8045F564, global
+.fn __ct__8045F564, global
 /* 8045F564 00428B24  38 00 00 00 */	li r0, 0
 /* 8045F568 00428B28  38 80 FF FF */	li r4, -1
 /* 8045F56C 00428B2C  90 83 00 00 */	stw r4, 0(r3)
@@ -460,9 +460,9 @@
 /* 8045F574 00428B34  90 03 00 08 */	stw r0, 8(r3)
 /* 8045F578 00428B38  90 03 00 0C */	stw r0, 0xc(r3)
 /* 8045F57C 00428B3C  4E 80 00 20 */	blr 
-.endfn func_8045F564
+.endfn __ct__8045F564
 
-.fn func_8045F580, global
+.fn __dt__8045F580, global
 /* 8045F580 00428B40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045F584 00428B44  7C 08 02 A6 */	mflr r0
 /* 8045F588 00428B48  2C 03 00 00 */	cmpwi r3, 0
@@ -535,7 +535,7 @@
 /* 8045F674 00428C34  7C 08 03 A6 */	mtlr r0
 /* 8045F678 00428C38  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045F67C 00428C3C  4E 80 00 20 */	blr 
-.endfn func_8045F580
+.endfn __dt__8045F580
 
 .fn func_8045F680, global
 /* 8045F680 00428C40  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -706,7 +706,7 @@
 /* 8045F8C4 00428E84  4E 80 00 20 */	blr 
 .endfn func_8045F858
 
-.fn func_8045F8C8, global
+.fn __dt__8045F8C8, global
 /* 8045F8C8 00428E88  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045F8CC 00428E8C  7C 08 02 A6 */	mflr r0
 /* 8045F8D0 00428E90  2C 03 00 00 */	cmpwi r3, 0
@@ -734,7 +734,7 @@
 /* 8045F924 00428EE4  7C 08 03 A6 */	mtlr r0
 /* 8045F928 00428EE8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045F92C 00428EEC  4E 80 00 20 */	blr 
-.endfn func_8045F8C8
+.endfn __dt__8045F8C8
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -760,7 +760,7 @@ lbl_80526AE4:
 __vt__CLibLayout:
 	.4byte __RTTI__CLibLayout
 	.4byte 0
-	.4byte func_8045F04C
+	.4byte __dt__CLibLayout_1
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -849,7 +849,7 @@ lbl_80667FE8:
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x000001E0
-	.4byte func_8045F000
+	.4byte __dt__CLibLayout
 .endobj "@etb_8001D7D0"
 
 .obj "@etb_8001D7EC", local
@@ -954,21 +954,21 @@ lbl_80667FE8:
 
 .obj "@eti_800353D8", local
 .hidden "@eti_800353D8"
-	.4byte func_8045EF84
+	.4byte __ct__CLibLayout
 	.4byte 0x0000007C
 	.4byte "@etb_8001D7C0"
 .endobj "@eti_800353D8"
 
 .obj "@eti_800353E4", local
 .hidden "@eti_800353E4"
-	.4byte func_8045F000
+	.4byte __dt__CLibLayout
 	.4byte 0x0000004C
 	.4byte "@etb_8001D7C8"
 .endobj "@eti_800353E4"
 
 .obj "@eti_800353F0", local
 .hidden "@eti_800353F0"
-	.4byte func_8045F04C
+	.4byte __dt__CLibLayout_1
 	.4byte 0x00000074
 	.4byte "@etb_8001D7D0"
 .endobj "@eti_800353F0"
@@ -1024,7 +1024,7 @@ lbl_80667FE8:
 
 .obj "@eti_80035450", local
 .hidden "@eti_80035450"
-	.4byte func_8045F580
+	.4byte __dt__8045F580
 	.4byte 0x00000100
 	.4byte "@etb_8001D86C"
 .endobj "@eti_80035450"
@@ -1059,7 +1059,7 @@ lbl_80667FE8:
 
 .obj "@eti_8003548C", local
 .hidden "@eti_8003548C"
-	.4byte func_8045F8C8
+	.4byte __dt__8045F8C8
 	.4byte 0x00000068
 	.4byte "@etb_8001D894"
 .endobj "@eti_8003548C"

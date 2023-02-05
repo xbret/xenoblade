@@ -1802,10 +1802,10 @@
 /* 800BD5A4 00086B64  81 8C 00 9C */	lwz r12, 0x9c(r12)
 /* 800BD5A8 00086B68  7D 89 03 A6 */	mtctr r12
 /* 800BD5AC 00086B6C  4E 80 04 21 */	bctrl 
-/* 800BD5B0 00086B70  3C 80 80 4F */	lis r4, lbl_804F7D78@ha
+/* 800BD5B0 00086B70  3C 80 80 4F */	lis r4, CfObjectMove_strpool@ha
 /* 800BD5B4 00086B74  80 6D A8 18 */	lwz r3, lbl_80666998@sda21(r13)
 /* 800BD5B8 00086B78  80 AD A8 F4 */	lwz r5, lbl_80666A74@sda21(r13)
-/* 800BD5BC 00086B7C  38 84 7D 78 */	addi r4, r4, lbl_804F7D78@l
+/* 800BD5BC 00086B7C  38 84 7D 78 */	addi r4, r4, CfObjectMove_strpool@l
 /* 800BD5C0 00086B80  4B F7 D5 89 */	bl func_8003AB48
 /* 800BD5C4 00086B84  90 61 00 08 */	stw r3, 8(r1)
 /* 800BD5C8 00086B88  88 81 00 08 */	lbz r4, 8(r1)
@@ -3657,9 +3657,9 @@
 .endfn func_800BED64
 
 .fn func_800BED6C, global
-/* 800BED6C 0008832C  3C C0 80 4F */	lis r6, lbl_804F7D78@ha
+/* 800BED6C 0008832C  3C C0 80 4F */	lis r6, CfObjectMove_strpool@ha
 /* 800BED70 00088330  7C 85 23 78 */	mr r5, r4
-/* 800BED74 00088334  38 C6 7D 78 */	addi r6, r6, lbl_804F7D78@l
+/* 800BED74 00088334  38 C6 7D 78 */	addi r6, r6, CfObjectMove_strpool@l
 /* 800BED78 00088338  38 86 00 07 */	addi r4, r6, 7
 /* 800BED7C 0008833C  48 08 35 E0 */	b func_8014235C
 .endfn func_800BED6C
@@ -3667,12 +3667,12 @@
 .fn func_800BED80, global
 /* 800BED80 00088340  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800BED84 00088344  7C 08 02 A6 */	mflr r0
-/* 800BED88 00088348  3C C0 80 4F */	lis r6, lbl_804F7D78@ha
+/* 800BED88 00088348  3C C0 80 4F */	lis r6, CfObjectMove_strpool@ha
 /* 800BED8C 0008834C  7C 85 23 78 */	mr r5, r4
 /* 800BED90 00088350  90 01 00 14 */	stw r0, 0x14(r1)
 /* 800BED94 00088354  54 80 08 3C */	slwi r0, r4, 1
 /* 800BED98 00088358  7C 63 02 14 */	add r3, r3, r0
-/* 800BED9C 0008835C  38 C6 7D 78 */	addi r6, r6, lbl_804F7D78@l
+/* 800BED9C 0008835C  38 C6 7D 78 */	addi r6, r6, CfObjectMove_strpool@l
 /* 800BEDA0 00088360  A0 63 07 10 */	lhz r3, 0x710(r3)
 /* 800BEDA4 00088364  38 86 00 07 */	addi r4, r6, 7
 /* 800BEDA8 00088368  48 08 35 B5 */	bl func_8014235C
@@ -3687,12 +3687,12 @@
 .fn func_800BEDC4, global
 /* 800BEDC4 00088384  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800BEDC8 00088388  7C 08 02 A6 */	mflr r0
-/* 800BEDCC 0008838C  3C C0 80 4F */	lis r6, lbl_804F7D78@ha
+/* 800BEDCC 0008838C  3C C0 80 4F */	lis r6, CfObjectMove_strpool@ha
 /* 800BEDD0 00088390  7C 85 23 78 */	mr r5, r4
 /* 800BEDD4 00088394  90 01 00 14 */	stw r0, 0x14(r1)
 /* 800BEDD8 00088398  54 80 08 3C */	slwi r0, r4, 1
 /* 800BEDDC 0008839C  7C 63 02 14 */	add r3, r3, r0
-/* 800BEDE0 000883A0  38 C6 7D 78 */	addi r6, r6, lbl_804F7D78@l
+/* 800BEDE0 000883A0  38 C6 7D 78 */	addi r6, r6, CfObjectMove_strpool@l
 /* 800BEDE4 000883A4  A0 63 07 10 */	lhz r3, 0x710(r3)
 /* 800BEDE8 000883A8  38 86 00 11 */	addi r4, r6, 0x11
 /* 800BEDEC 000883AC  48 08 35 71 */	bl func_8014235C
@@ -3705,9 +3705,9 @@
 .endfn func_800BEDC4
 
 .fn func_800BEE08, global
-/* 800BEE08 000883C8  3C C0 80 4F */	lis r6, lbl_804F7D78@ha
+/* 800BEE08 000883C8  3C C0 80 4F */	lis r6, CfObjectMove_strpool@ha
 /* 800BEE0C 000883CC  7C 85 23 78 */	mr r5, r4
-/* 800BEE10 000883D0  38 C6 7D 78 */	addi r6, r6, lbl_804F7D78@l
+/* 800BEE10 000883D0  38 C6 7D 78 */	addi r6, r6, CfObjectMove_strpool@l
 /* 800BEE14 000883D4  38 86 00 11 */	addi r4, r6, 0x11
 /* 800BEE18 000883D8  48 08 35 44 */	b func_8014235C
 .endfn func_800BEE08
@@ -3737,9 +3737,9 @@
 /* 800BEE58 00088418  7C 7C 1B 78 */	mr r28, r3
 /* 800BEE5C 0008841C  7F A3 EB 78 */	mr r3, r29
 /* 800BEE60 00088420  48 08 34 49 */	bl func_801422A8
-/* 800BEE64 00088424  3C 80 80 4F */	lis r4, lbl_804F7D78@ha
+/* 800BEE64 00088424  3C 80 80 4F */	lis r4, CfObjectMove_strpool@ha
 /* 800BEE68 00088428  7C 7F 1B 78 */	mr r31, r3
-/* 800BEE6C 0008842C  38 84 7D 78 */	addi r4, r4, lbl_804F7D78@l
+/* 800BEE6C 0008842C  38 84 7D 78 */	addi r4, r4, CfObjectMove_strpool@l
 /* 800BEE70 00088430  B3 BC 07 10 */	sth r29, 0x710(r28)
 /* 800BEE74 00088434  7F A3 EB 78 */	mr r3, r29
 /* 800BEE78 00088438  38 A0 00 00 */	li r5, 0
@@ -3803,9 +3803,9 @@
 /* 800BEF4C 0008850C  7C 7E 1B 78 */	mr r30, r3
 /* 800BEF50 00088510  7F A3 EB 78 */	mr r3, r29
 /* 800BEF54 00088514  48 08 33 55 */	bl func_801422A8
-/* 800BEF58 00088518  3C 80 80 4F */	lis r4, lbl_804F7D78@ha
+/* 800BEF58 00088518  3C 80 80 4F */	lis r4, CfObjectMove_strpool@ha
 /* 800BEF5C 0008851C  7C 7F 1B 78 */	mr r31, r3
-/* 800BEF60 00088520  38 84 7D 78 */	addi r4, r4, lbl_804F7D78@l
+/* 800BEF60 00088520  38 84 7D 78 */	addi r4, r4, CfObjectMove_strpool@l
 /* 800BEF64 00088524  B3 BC 07 10 */	sth r29, 0x710(r28)
 /* 800BEF68 00088528  7F A3 EB 78 */	mr r3, r29
 /* 800BEF6C 0008852C  38 A0 00 00 */	li r5, 0
@@ -3867,9 +3867,9 @@
 /* 800BF038 000885F8  7C 7C 1B 78 */	mr r28, r3
 /* 800BF03C 000885FC  7F A3 EB 78 */	mr r3, r29
 /* 800BF040 00088600  48 08 32 69 */	bl func_801422A8
-/* 800BF044 00088604  3C 80 80 4F */	lis r4, lbl_804F7D78@ha
+/* 800BF044 00088604  3C 80 80 4F */	lis r4, CfObjectMove_strpool@ha
 /* 800BF048 00088608  7C 7F 1B 78 */	mr r31, r3
-/* 800BF04C 0008860C  38 84 7D 78 */	addi r4, r4, lbl_804F7D78@l
+/* 800BF04C 0008860C  38 84 7D 78 */	addi r4, r4, CfObjectMove_strpool@l
 /* 800BF050 00088610  B3 BC 07 12 */	sth r29, 0x712(r28)
 /* 800BF054 00088614  7F A3 EB 78 */	mr r3, r29
 /* 800BF058 00088618  38 A0 00 01 */	li r5, 1
@@ -3933,9 +3933,9 @@
 /* 800BF12C 000886EC  7C 7E 1B 78 */	mr r30, r3
 /* 800BF130 000886F0  7F A3 EB 78 */	mr r3, r29
 /* 800BF134 000886F4  48 08 31 75 */	bl func_801422A8
-/* 800BF138 000886F8  3C 80 80 4F */	lis r4, lbl_804F7D78@ha
+/* 800BF138 000886F8  3C 80 80 4F */	lis r4, CfObjectMove_strpool@ha
 /* 800BF13C 000886FC  7C 7F 1B 78 */	mr r31, r3
-/* 800BF140 00088700  38 84 7D 78 */	addi r4, r4, lbl_804F7D78@l
+/* 800BF140 00088700  38 84 7D 78 */	addi r4, r4, CfObjectMove_strpool@l
 /* 800BF144 00088704  B3 BC 07 12 */	sth r29, 0x712(r28)
 /* 800BF148 00088708  7F A3 EB 78 */	mr r3, r29
 /* 800BF14C 0008870C  38 A0 00 01 */	li r5, 1
@@ -4111,8 +4111,8 @@
 
 
 
-.global lbl_804F7D78
-lbl_804F7D78:
+.global CfObjectMove_strpool
+CfObjectMove_strpool:
 	.asciz "mapATR"
 	.asciz "def_mount"
 	.asciz "bat_mount"

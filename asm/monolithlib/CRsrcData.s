@@ -61,7 +61,7 @@
 .L_80439D7C:
 /* 80439D7C 0040333C  7F C3 F3 78 */	mr r3, r30
 /* 80439D80 00403340  38 80 00 00 */	li r4, 0
-/* 80439D84 00403344  4B FF DD 45 */	bl func_80437AC8
+/* 80439D84 00403344  4B FF DD 45 */	bl __dt__CWorkThread
 /* 80439D88 00403348  2C 1F 00 00 */	cmpwi r31, 0
 /* 80439D8C 0040334C  40 81 00 0C */	ble .L_80439D98
 /* 80439D90 00403350  7F C3 F3 78 */	mr r3, r30
@@ -417,7 +417,7 @@ __RTTI__CRsrcData:
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_80437AC8
+	.4byte __dt__CWorkThread
 .endobj "@etb_8001C280"
 
 .obj "@etb_8001C29C", local

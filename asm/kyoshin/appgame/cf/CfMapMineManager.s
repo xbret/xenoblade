@@ -735,10 +735,10 @@
 /* 802064B4 001CFA74  39 61 00 60 */	addi r11, r1, 0x60
 /* 802064B8 001CFA78  48 0B 3C 99 */	bl _savegpr_26
 /* 802064BC 001CFA7C  83 4D A8 38 */	lwz r26, lbl_806669B8@sda21(r13)
-/* 802064C0 001CFA80  3F E0 80 50 */	lis r31, lbl_80503B44@ha
+/* 802064C0 001CFA80  3F E0 80 50 */	lis r31, CfMapMineManager_strpool@ha
 /* 802064C4 001CFA84  7C 9C 23 78 */	mr r28, r4
 /* 802064C8 001CFA88  7C BD 2B 78 */	mr r29, r5
-/* 802064CC 001CFA8C  3B FF 3B 44 */	addi r31, r31, lbl_80503B44@l
+/* 802064CC 001CFA8C  3B FF 3B 44 */	addi r31, r31, CfMapMineManager_strpool@l
 /* 802064D0 001CFA90  7C DE 33 78 */	mr r30, r6
 /* 802064D4 001CFA94  7F 43 D3 78 */	mr r3, r26
 /* 802064D8 001CFA98  7F 85 E3 78 */	mr r5, r28
@@ -892,9 +892,9 @@
 /* 8020670C 001CFCCC  2C 03 00 00 */	cmpwi r3, 0
 /* 80206710 001CFCD0  7C 7D 1B 78 */	mr r29, r3
 /* 80206714 001CFCD4  41 82 00 AC */	beq .L_802067C0
-/* 80206718 001CFCD8  3F E0 80 50 */	lis r31, lbl_80503B44@ha
+/* 80206718 001CFCD8  3F E0 80 50 */	lis r31, CfMapMineManager_strpool@ha
 /* 8020671C 001CFCDC  90 7B 00 04 */	stw r3, 4(r27)
-/* 80206720 001CFCE0  3B FF 3B 44 */	addi r31, r31, lbl_80503B44@l
+/* 80206720 001CFCE0  3B FF 3B 44 */	addi r31, r31, CfMapMineManager_strpool@l
 /* 80206724 001CFCE4  38 7F 00 37 */	addi r3, r31, 0x37
 /* 80206728 001CFCE8  4B E3 43 7D */	bl func_8003AAA4
 /* 8020672C 001CFCEC  80 1B 00 20 */	lwz r0, 0x20(r27)
@@ -973,8 +973,8 @@
 /* 80206838 001CFDF8  38 A0 00 34 */	li r5, 0x34
 /* 8020683C 001CFDFC  4B DF DB 15 */	bl memset
 /* 80206840 001CFE00  80 11 00 20 */	lwz r0, 0x20(r17)
-/* 80206844 001CFE04  3E 80 80 50 */	lis r20, lbl_80503B44@ha
-/* 80206848 001CFE08  3A 94 3B 44 */	addi r20, r20, lbl_80503B44@l
+/* 80206844 001CFE04  3E 80 80 50 */	lis r20, CfMapMineManager_strpool@ha
+/* 80206848 001CFE08  3A 94 3B 44 */	addi r20, r20, CfMapMineManager_strpool@l
 /* 8020684C 001CFE0C  7F 63 DB 78 */	mr r3, r27
 /* 80206850 001CFE10  38 94 00 1F */	addi r4, r20, 0x1f
 /* 80206854 001CFE14  54 05 55 BE */	srwi r5, r0, 0x16
@@ -1532,13 +1532,13 @@
 /* 8020703C 001D05FC  40 82 00 D0 */	bne .L_8020710C
 /* 80207040 001D0600  83 6D A8 38 */	lwz r27, lbl_806669B8@sda21(r13)
 /* 80207044 001D0604  54 7C 55 BE */	srwi r28, r3, 0x16
-/* 80207048 001D0608  3F A0 80 50 */	lis r29, lbl_80503B44@ha
+/* 80207048 001D0608  3F A0 80 50 */	lis r29, CfMapMineManager_strpool@ha
 /* 8020704C 001D060C  7F 63 DB 78 */	mr r3, r27
 /* 80207050 001D0610  7F 85 E3 78 */	mr r5, r28
-/* 80207054 001D0614  38 9D 3B 44 */	addi r4, r29, lbl_80503B44@l
+/* 80207054 001D0614  38 9D 3B 44 */	addi r4, r29, CfMapMineManager_strpool@l
 /* 80207058 001D0618  4B E3 3A F1 */	bl func_8003AB48
 /* 8020705C 001D061C  90 61 00 08 */	stw r3, 8(r1)
-/* 80207060 001D0620  38 9D 3B 44 */	addi r4, r29, lbl_80503B44@l
+/* 80207060 001D0620  38 9D 3B 44 */	addi r4, r29, CfMapMineManager_strpool@l
 /* 80207064 001D0624  7F 85 E3 78 */	mr r5, r28
 /* 80207068 001D0628  7F 63 DB 78 */	mr r3, r27
 /* 8020706C 001D062C  8B 81 00 08 */	lbz r28, 8(r1)
@@ -1632,11 +1632,11 @@
 /* 802071B0 001D0770  3B A0 00 00 */	li r29, 0
 .L_802071B4:
 /* 802071B4 001D0774  80 77 00 04 */	lwz r3, 4(r23)
-/* 802071B8 001D0778  3F E0 80 50 */	lis r31, lbl_80503B44@ha
+/* 802071B8 001D0778  3F E0 80 50 */	lis r31, CfMapMineManager_strpool@ha
 /* 802071BC 001D077C  C3 62 A7 F0 */	lfs f27, float_8066AB70@sda21(r2)
 /* 802071C0 001D0780  3B C1 00 10 */	addi r30, r1, 0x10
 /* 802071C4 001D0784  82 83 00 00 */	lwz r20, 0(r3)
-/* 802071C8 001D0788  3B FF 3B 44 */	addi r31, r31, lbl_80503B44@l
+/* 802071C8 001D0788  3B FF 3B 44 */	addi r31, r31, CfMapMineManager_strpool@l
 /* 802071CC 001D078C  C3 82 A8 08 */	lfs f28, float_8066AB88@sda21(r2)
 /* 802071D0 001D0790  3A 60 00 00 */	li r19, 0
 /* 802071D4 001D0794  C3 A2 A8 0C */	lfs f29, float_8066AB8C@sda21(r2)
@@ -2071,8 +2071,8 @@
 /* 8020780C 001D0DCC  4B EB 83 E9 */	bl func_800BFBF4
 .L_80207810:
 /* 80207810 001D0DD0  80 1F 00 28 */	lwz r0, 0x28(r31)
-/* 80207814 001D0DD4  3C 80 80 50 */	lis r4, lbl_80503B44@ha
-/* 80207818 001D0DD8  38 84 3B 44 */	addi r4, r4, lbl_80503B44@l
+/* 80207814 001D0DD4  3C 80 80 50 */	lis r4, CfMapMineManager_strpool@ha
+/* 80207818 001D0DD8  38 84 3B 44 */	addi r4, r4, CfMapMineManager_strpool@l
 /* 8020781C 001D0DDC  80 6D A8 38 */	lwz r3, lbl_806669B8@sda21(r13)
 /* 80207820 001D0DE0  38 84 00 6C */	addi r4, r4, 0x6c
 /* 80207824 001D0DE4  54 05 55 BE */	srwi r5, r0, 0x16
@@ -2259,8 +2259,8 @@
 /* 80207AC4 001D1084  90 0D A5 A4 */	stw r0, lbl_80666724@sda21(r13)
 /* 80207AC8 001D1088  48 00 00 2C */	b .L_80207AF4
 .L_80207ACC:
-/* 80207ACC 001D108C  3F C0 80 50 */	lis r30, lbl_80503B44@ha
-/* 80207AD0 001D1090  3B DE 3B 44 */	addi r30, r30, lbl_80503B44@l
+/* 80207ACC 001D108C  3F C0 80 50 */	lis r30, CfMapMineManager_strpool@ha
+/* 80207AD0 001D1090  3B DE 3B 44 */	addi r30, r30, CfMapMineManager_strpool@l
 /* 80207AD4 001D1094  38 7E 00 77 */	addi r3, r30, 0x77
 /* 80207AD8 001D1098  4B E3 2F CD */	bl func_8003AAA4
 /* 80207ADC 001D109C  38 9E 00 4E */	addi r4, r30, 0x4e
@@ -2601,8 +2601,8 @@ _reslist_base_cf_CfMapMineManager_MinePoint_typestr:
 	.balign 4
 
 
-.global lbl_80503B44
-lbl_80503B44:
+.global CfMapMineManager_strpool
+CfMapMineManager_strpool:
 	.asciz "cnt_min"
 	.asciz "cnt_max"
 	.asciz "posX"

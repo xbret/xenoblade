@@ -46,8 +46,8 @@
 /* 80225D7C 001EF33C  7C 08 02 A6 */	mflr r0
 /* 80225D80 001EF340  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80225D84 001EF344  BF C1 00 08 */	stmw r30, 8(r1)
-/* 80225D88 001EF348  3F E0 80 50 */	lis r31, lbl_80504CFC@ha
-/* 80225D8C 001EF34C  3B FF 4C FC */	addi r31, r31, lbl_80504CFC@l
+/* 80225D88 001EF348  3F E0 80 50 */	lis r31, CMCEffCrystal_strpool@ha
+/* 80225D8C 001EF34C  3B FF 4C FC */	addi r31, r31, CMCEffCrystal_strpool@l
 /* 80225D90 001EF350  7C 7E 1B 78 */	mr r30, r3
 /* 80225D94 001EF354  38 BF 03 A4 */	addi r5, r31, 0x3a4
 /* 80225D98 001EF358  80 83 00 08 */	lwz r4, 8(r3)
@@ -248,9 +248,9 @@
 .endfn func_80225FD0
 
 .fn func_80226024, global
-/* 80226024 001EF5E4  3C C0 80 50 */	lis r6, lbl_80504CFC@ha
+/* 80226024 001EF5E4  3C C0 80 50 */	lis r6, CMCEffCrystal_strpool@ha
 /* 80226028 001EF5E8  80 63 00 0C */	lwz r3, 0xc(r3)
-/* 8022602C 001EF5EC  38 C6 4C FC */	addi r6, r6, lbl_80504CFC@l
+/* 8022602C 001EF5EC  38 C6 4C FC */	addi r6, r6, CMCEffCrystal_strpool@l
 /* 80226030 001EF5F0  7C 85 23 78 */	mr r5, r4
 /* 80226034 001EF5F4  38 86 04 06 */	addi r4, r6, 0x406
 /* 80226038 001EF5F8  4B F1 08 D8 */	b func_80136910

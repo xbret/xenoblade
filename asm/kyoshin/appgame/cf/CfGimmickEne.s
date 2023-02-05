@@ -27,13 +27,13 @@
 /* 8026E1BC 0023777C  38 C1 00 50 */	addi r6, r1, 0x50
 /* 8026E1C0 00237780  B3 DD 00 64 */	sth r30, 0x64(r29)
 /* 8026E1C4 00237784  4B F9 AD 71 */	bl func_80208F34
-/* 8026E1C8 00237788  3F 60 80 51 */	lis r27, lbl_80509D34@ha
+/* 8026E1C8 00237788  3F 60 80 51 */	lis r27, CfGimmickEne_strpool@ha
 /* 8026E1CC 0023778C  80 61 00 50 */	lwz r3, 0x50(r1)
 /* 8026E1D0 00237790  7F C5 F3 78 */	mr r5, r30
-/* 8026E1D4 00237794  38 9B 9D 34 */	addi r4, r27, lbl_80509D34@l
+/* 8026E1D4 00237794  38 9B 9D 34 */	addi r4, r27, CfGimmickEne_strpool@l
 /* 8026E1D8 00237798  4B DC C9 71 */	bl func_8003AB48
 /* 8026E1DC 0023779C  90 61 00 4C */	stw r3, 0x4c(r1)
-/* 8026E1E0 002377A0  3B 7B 9D 34 */	addi r27, r27, lbl_80509D34@l
+/* 8026E1E0 002377A0  3B 7B 9D 34 */	addi r27, r27, CfGimmickEne_strpool@l
 /* 8026E1E4 002377A4  7F C5 F3 78 */	mr r5, r30
 /* 8026E1E8 002377A8  A0 01 00 4C */	lhz r0, 0x4c(r1)
 /* 8026E1EC 002377AC  38 9B 00 06 */	addi r4, r27, 6
@@ -112,9 +112,9 @@
 /* 8026E300 002378C0  2C 1F 00 02 */	cmpwi r31, 2
 /* 8026E304 002378C4  98 03 00 8E */	stb r0, 0x8e(r3)
 /* 8026E308 002378C8  41 80 FF 28 */	blt .L_8026E230
-/* 8026E30C 002378CC  3F E0 80 51 */	lis r31, lbl_80509D34@ha
+/* 8026E30C 002378CC  3F E0 80 51 */	lis r31, CfGimmickEne_strpool@ha
 /* 8026E310 002378D0  80 61 00 50 */	lwz r3, 0x50(r1)
-/* 8026E314 002378D4  3B FF 9D 34 */	addi r31, r31, lbl_80509D34@l
+/* 8026E314 002378D4  3B FF 9D 34 */	addi r31, r31, CfGimmickEne_strpool@l
 /* 8026E318 002378D8  7F C5 F3 78 */	mr r5, r30
 /* 8026E31C 002378DC  38 9F 00 12 */	addi r4, r31, 0x12
 /* 8026E320 002378E0  4B DC C8 29 */	bl func_8003AB48
@@ -159,9 +159,9 @@
 /* 8026E3B8 00237978  2C 19 00 03 */	cmpwi r25, 3
 /* 8026E3BC 0023797C  98 03 00 97 */	stb r0, 0x97(r3)
 /* 8026E3C0 00237980  41 80 FF D0 */	blt .L_8026E390
-/* 8026E3C4 00237984  3F E0 80 51 */	lis r31, lbl_80509D34@ha
+/* 8026E3C4 00237984  3F E0 80 51 */	lis r31, CfGimmickEne_strpool@ha
 /* 8026E3C8 00237988  80 61 00 50 */	lwz r3, 0x50(r1)
-/* 8026E3CC 0023798C  3B FF 9D 34 */	addi r31, r31, lbl_80509D34@l
+/* 8026E3CC 0023798C  3B FF 9D 34 */	addi r31, r31, CfGimmickEne_strpool@l
 /* 8026E3D0 00237990  7F C5 F3 78 */	mr r5, r30
 /* 8026E3D4 00237994  38 9F 00 1F */	addi r4, r31, 0x1f
 /* 8026E3D8 00237998  4B DC C7 71 */	bl func_8003AB48
@@ -1288,8 +1288,8 @@ cf_CfGimmickEne_typestr:
 	.balign 4
 
 
-.global lbl_80509D34
-lbl_80509D34:
+.global CfGimmickEne_strpool
+CfGimmickEne_strpool:
 	.asciz "eneID"
 	.asciz "artID"
 	.asciz "state"

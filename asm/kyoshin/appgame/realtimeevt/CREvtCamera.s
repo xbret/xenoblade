@@ -339,12 +339,12 @@
 .fn func_80180414, global
 /* 80180414 001499D4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80180418 001499D8  7C 08 02 A6 */	mflr r0
-/* 8018041C 001499DC  3C 80 80 50 */	lis r4, lbl_804FEF08@ha
+/* 8018041C 001499DC  3C 80 80 50 */	lis r4, CREvtCamera_strpool@ha
 /* 80180420 001499E0  38 A0 00 00 */	li r5, 0
 /* 80180424 001499E4  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80180428 001499E8  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8018042C 001499EC  7C 7F 1B 78 */	mr r31, r3
-/* 80180430 001499F0  38 64 EF 08 */	addi r3, r4, lbl_804FEF08@l
+/* 80180430 001499F0  38 64 EF 08 */	addi r3, r4, CREvtCamera_strpool@l
 /* 80180434 001499F4  38 81 00 08 */	addi r4, r1, 8
 /* 80180438 001499F8  48 2D F7 81 */	bl func_8045FBB8
 /* 8018043C 001499FC  80 81 00 08 */	lwz r4, 8(r1)
@@ -561,9 +561,9 @@
 /* 80180744 00149D04  80 7E 00 1C */	lwz r3, 0x1c(r30)
 /* 80180748 00149D08  48 30 49 5D */	bl func_804850A4
 /* 8018074C 00149D0C  48 13 98 E1 */	bl __cvt_fp2unsigned
-/* 80180750 00149D10  3F A0 80 50 */	lis r29, lbl_804FEF08@ha
+/* 80180750 00149D10  3F A0 80 50 */	lis r29, CREvtCamera_strpool@ha
 /* 80180754 00149D14  90 7E 04 3C */	stw r3, 0x43c(r30)
-/* 80180758 00149D18  3B BD EF 08 */	addi r29, r29, lbl_804FEF08@l
+/* 80180758 00149D18  3B BD EF 08 */	addi r29, r29, CREvtCamera_strpool@l
 /* 8018075C 00149D1C  80 7E 00 20 */	lwz r3, 0x20(r30)
 /* 80180760 00149D20  38 9D 00 04 */	addi r4, r29, 4
 /* 80180764 00149D24  38 BE 00 98 */	addi r5, r30, 0x98
@@ -588,9 +588,9 @@
 /* 801807B0 00149D70  38 00 00 01 */	li r0, 1
 /* 801807B4 00149D74  90 03 01 B8 */	stw r0, 0x1b8(r3)
 .L_801807B8:
-/* 801807B8 00149D78  3C 80 80 50 */	lis r4, lbl_804FEF08@ha
+/* 801807B8 00149D78  3C 80 80 50 */	lis r4, CREvtCamera_strpool@ha
 /* 801807BC 00149D7C  80 7E 00 20 */	lwz r3, 0x20(r30)
-/* 801807C0 00149D80  38 84 EF 08 */	addi r4, r4, lbl_804FEF08@l
+/* 801807C0 00149D80  38 84 EF 08 */	addi r4, r4, CREvtCamera_strpool@l
 /* 801807C4 00149D84  38 A1 00 10 */	addi r5, r1, 0x10
 /* 801807C8 00149D88  38 84 00 26 */	addi r4, r4, 0x26
 /* 801807CC 00149D8C  4B FE AD D9 */	bl func_8016B5A4
@@ -629,9 +629,9 @@
 /* 8018084C 00149E0C  38 C0 00 00 */	li r6, 0
 /* 80180850 00149E10  4B ED 91 91 */	bl func_800599E0
 .L_80180854:
-/* 80180854 00149E14  3C 80 80 50 */	lis r4, lbl_804FEF08@ha
+/* 80180854 00149E14  3C 80 80 50 */	lis r4, CREvtCamera_strpool@ha
 /* 80180858 00149E18  80 7E 00 20 */	lwz r3, 0x20(r30)
-/* 8018085C 00149E1C  38 84 EF 08 */	addi r4, r4, lbl_804FEF08@l
+/* 8018085C 00149E1C  38 84 EF 08 */	addi r4, r4, CREvtCamera_strpool@l
 /* 80180860 00149E20  38 A1 00 08 */	addi r5, r1, 8
 /* 80180864 00149E24  38 84 00 2B */	addi r4, r4, 0x2b
 /* 80180868 00149E28  38 C1 00 0C */	addi r6, r1, 0xc
@@ -657,9 +657,9 @@
 /* 801808B0 00149E70  7C 07 00 00 */	cmpw r7, r0
 /* 801808B4 00149E74  41 80 FF D0 */	blt .L_80180884
 .L_801808B8:
-/* 801808B8 00149E78  3C 80 80 50 */	lis r4, lbl_804FEF08@ha
+/* 801808B8 00149E78  3C 80 80 50 */	lis r4, CREvtCamera_strpool@ha
 /* 801808BC 00149E7C  80 7E 00 20 */	lwz r3, 0x20(r30)
-/* 801808C0 00149E80  38 84 EF 08 */	addi r4, r4, lbl_804FEF08@l
+/* 801808C0 00149E80  38 84 EF 08 */	addi r4, r4, CREvtCamera_strpool@l
 /* 801808C4 00149E84  38 A1 00 08 */	addi r5, r1, 8
 /* 801808C8 00149E88  38 84 00 33 */	addi r4, r4, 0x33
 /* 801808CC 00149E8C  38 C1 00 0C */	addi r6, r1, 0xc
@@ -757,8 +757,8 @@ cf_CREvtCamera_typestr:
 	.asciz "cf::CREvtCamera"
 
 
-.global lbl_804FEF08
-lbl_804FEF08:
+.global CREvtCamera_strpool
+CREvtCamera_strpool:
 	.asciz "CAM"
 	.asciz "Monochrome"
 	.asciz "MonoRGB"

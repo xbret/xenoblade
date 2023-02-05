@@ -45,7 +45,7 @@
 /* 8029A14C 0026370C  38 7C 00 B4 */	addi r3, r28, 0xb4
 /* 8029A150 00263710  38 80 00 00 */	li r4, 0
 /* 8029A154 00263714  38 A0 00 00 */	li r5, 0
-/* 8029A158 00263718  4B F2 9D 79 */	bl func_801C3ED0
+/* 8029A158 00263718  4B F2 9D 79 */	bl __ct__CTitleAHelp
 /* 8029A15C 0026371C  9B FC 00 EC */	stb r31, 0xec(r28)
 /* 8029A160 00263720  9B DC 00 ED */	stb r30, 0xed(r28)
 /* 8029A164 00263724  9B FC 00 EE */	stb r31, 0xee(r28)
@@ -92,7 +92,7 @@
 /* 8029A1F4 002637B4  41 82 00 38 */	beq .L_8029A22C
 /* 8029A1F8 002637B8  38 80 FF FF */	li r4, -1
 /* 8029A1FC 002637BC  38 63 00 B4 */	addi r3, r3, 0xb4
-/* 8029A200 002637C0  4B F2 9D 51 */	bl func_801C3F50
+/* 8029A200 002637C0  4B F2 9D 51 */	bl __dt__CTitleAHelp
 /* 8029A204 002637C4  38 7E 00 60 */	addi r3, r30, 0x60
 /* 8029A208 002637C8  38 80 FF FF */	li r4, -1
 /* 8029A20C 002637CC  48 00 07 C9 */	bl func_8029A9D4
@@ -115,21 +115,21 @@
 .fn func_8029A244, global
 /* 8029A244 00263804  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 8029A248 00263808  7C 08 02 A6 */	mflr r0
-/* 8029A24C 0026380C  3C 80 80 51 */	lis r4, lbl_8050B858@ha
+/* 8029A24C 0026380C  3C 80 80 51 */	lis r4, CMenuTutorial_strpool@ha
 /* 8029A250 00263810  38 A0 00 23 */	li r5, 0x23
 /* 8029A254 00263814  90 01 00 A4 */	stw r0, 0xa4(r1)
 /* 8029A258 00263818  93 E1 00 9C */	stw r31, 0x9c(r1)
 /* 8029A25C 0026381C  7C 7F 1B 78 */	mr r31, r3
-/* 8029A260 00263820  38 64 B8 58 */	addi r3, r4, lbl_8050B858@l
+/* 8029A260 00263820  38 64 B8 58 */	addi r3, r4, CMenuTutorial_strpool@l
 /* 8029A264 00263824  38 83 00 09 */	addi r4, r3, 9
 /* 8029A268 00263828  4B E9 BF 29 */	bl func_80136190
 /* 8029A26C 0026382C  7C 64 1B 78 */	mr r4, r3
 /* 8029A270 00263830  38 61 00 08 */	addi r3, r1, 8
 /* 8029A274 00263834  38 A0 00 6F */	li r5, 0x6f
-/* 8029A278 00263838  4B F2 9C 59 */	bl func_801C3ED0
+/* 8029A278 00263838  4B F2 9C 59 */	bl __ct__CTitleAHelp
 /* 8029A27C 0026383C  38 7F 00 B8 */	addi r3, r31, 0xb8
 /* 8029A280 00263840  38 81 00 0C */	addi r4, r1, 0xc
-/* 8029A284 00263844  4B E8 26 F1 */	bl func_8011C974
+/* 8029A284 00263844  4B E8 26 F1 */	bl __ct__8011C974
 /* 8029A288 00263848  80 01 00 1C */	lwz r0, 0x1c(r1)
 /* 8029A28C 0026384C  38 61 00 08 */	addi r3, r1, 8
 /* 8029A290 00263850  90 1F 00 C8 */	stw r0, 0xc8(r31)
@@ -156,7 +156,7 @@
 /* 8029A2E4 002638A4  98 1F 00 EA */	stb r0, 0xea(r31)
 /* 8029A2E8 002638A8  88 01 00 3F */	lbz r0, 0x3f(r1)
 /* 8029A2EC 002638AC  98 1F 00 EB */	stb r0, 0xeb(r31)
-/* 8029A2F0 002638B0  4B F2 9C 61 */	bl func_801C3F50
+/* 8029A2F0 002638B0  4B F2 9C 61 */	bl __dt__CTitleAHelp
 /* 8029A2F4 002638B4  38 7F 00 B4 */	addi r3, r31, 0xb4
 /* 8029A2F8 002638B8  4B F2 9C AD */	bl func_801C3FA4
 /* 8029A2FC 002638BC  88 9F 00 ED */	lbz r4, 0xed(r31)
@@ -165,10 +165,10 @@
 /* 8029A308 002638C8  48 00 06 2D */	bl func_8029A934
 /* 8029A30C 002638CC  38 7F 00 64 */	addi r3, r31, 0x64
 /* 8029A310 002638D0  38 81 00 44 */	addi r4, r1, 0x44
-/* 8029A314 002638D4  4B E8 26 61 */	bl func_8011C974
+/* 8029A314 002638D4  4B E8 26 61 */	bl __ct__8011C974
 /* 8029A318 002638D8  38 7F 00 74 */	addi r3, r31, 0x74
 /* 8029A31C 002638DC  38 81 00 54 */	addi r4, r1, 0x54
-/* 8029A320 002638E0  4B E8 26 55 */	bl func_8011C974
+/* 8029A320 002638E0  4B E8 26 55 */	bl __ct__8011C974
 /* 8029A324 002638E4  80 01 00 64 */	lwz r0, 0x64(r1)
 /* 8029A328 002638E8  38 61 00 40 */	addi r3, r1, 0x40
 /* 8029A32C 002638EC  90 1F 00 84 */	stw r0, 0x84(r31)
@@ -427,9 +427,9 @@
 /* 8029A698 00263C58  41 82 00 B8 */	beq .L_8029A750
 /* 8029A69C 00263C5C  38 7F 00 B4 */	addi r3, r31, 0xb4
 /* 8029A6A0 00263C60  4B F2 A0 C1 */	bl func_801C4760
-/* 8029A6A4 00263C64  3C 80 80 51 */	lis r4, lbl_8050B858@ha
+/* 8029A6A4 00263C64  3C 80 80 51 */	lis r4, CMenuTutorial_strpool@ha
 /* 8029A6A8 00263C68  88 BF 00 ED */	lbz r5, 0xed(r31)
-/* 8029A6AC 00263C6C  38 84 B8 58 */	addi r4, r4, lbl_8050B858@l
+/* 8029A6AC 00263C6C  38 84 B8 58 */	addi r4, r4, CMenuTutorial_strpool@l
 /* 8029A6B0 00263C70  38 64 00 0E */	addi r3, r4, 0xe
 /* 8029A6B4 00263C74  38 84 00 17 */	addi r4, r4, 0x17
 /* 8029A6B8 00263C78  4B E9 BA D9 */	bl func_80136190
@@ -635,8 +635,8 @@ CMenuTutorial_typestr:
 	.balign 4
 
 
-.global lbl_8050B858
-lbl_8050B858:
+.global CMenuTutorial_strpool
+CMenuTutorial_strpool:
 	.asciz "MNU_main"
 	.asciz "name"
 	.asciz "MNU_ttrl"
@@ -715,7 +715,7 @@ lbl_80667318:
 	.4byte 0x00000000
 	.4byte 0x0780001C
 	.4byte 0x000000B4
-	.4byte func_801C3F50
+	.4byte __dt__CTitleAHelp
 	.4byte 0x0780001C
 	.4byte 0x00000060
 	.4byte func_8029A9D4
@@ -737,10 +737,10 @@ lbl_80667318:
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x000000B4
-	.4byte func_801C3F50
+	.4byte __dt__CTitleAHelp
 	.4byte 0x0780001E
 	.4byte 0x000000B4
-	.4byte func_801C3F50
+	.4byte __dt__CTitleAHelp
 	.4byte 0x0780001E
 	.4byte 0x00000060
 	.4byte func_8029A9D4

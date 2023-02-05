@@ -1523,9 +1523,9 @@
 /* 800C6FCC 0009058C  4B FF 7D F9 */	bl func_800BEDC4
 /* 800C6FD0 00090590  7C 7E 1B 78 */	mr r30, r3
 .L_800C6FD4:
-/* 800C6FD4 00090594  3C 80 80 4F */	lis r4, lbl_804F7F78@ha
+/* 800C6FD4 00090594  3C 80 80 4F */	lis r4, CfObjectImplPc_strpool@ha
 /* 800C6FD8 00090598  7F C3 F3 78 */	mr r3, r30
-/* 800C6FDC 0009059C  38 84 7F 78 */	addi r4, r4, lbl_804F7F78@l
+/* 800C6FDC 0009059C  38 84 7F 78 */	addi r4, r4, CfObjectImplPc_strpool@l
 /* 800C6FE0 000905A0  48 1F B8 55 */	bl strcmp
 /* 800C6FE4 000905A4  2C 03 00 00 */	cmpwi r3, 0
 /* 800C6FE8 000905A8  40 82 00 08 */	bne .L_800C6FF0
@@ -1563,9 +1563,9 @@
 /* 800C7058 00090618  4B FF 7D 29 */	bl func_800BED80
 /* 800C705C 0009061C  7C 7E 1B 78 */	mr r30, r3
 .L_800C7060:
-/* 800C7060 00090620  3C 80 80 4F */	lis r4, lbl_804F7F78@ha
+/* 800C7060 00090620  3C 80 80 4F */	lis r4, CfObjectImplPc_strpool@ha
 /* 800C7064 00090624  7F C3 F3 78 */	mr r3, r30
-/* 800C7068 00090628  38 84 7F 78 */	addi r4, r4, lbl_804F7F78@l
+/* 800C7068 00090628  38 84 7F 78 */	addi r4, r4, CfObjectImplPc_strpool@l
 /* 800C706C 0009062C  48 1F B7 C9 */	bl strcmp
 /* 800C7070 00090630  2C 03 00 00 */	cmpwi r3, 0
 /* 800C7074 00090634  40 82 00 08 */	bne .L_800C707C
@@ -1993,9 +1993,9 @@
 /* 800C7650 00090C10  81 8C 00 10 */	lwz r12, 0x10(r12)
 /* 800C7654 00090C14  7D 89 03 A6 */	mtctr r12
 /* 800C7658 00090C18  4E 80 04 21 */	bctrl 
-/* 800C765C 00090C1C  3F E0 80 4F */	lis r31, lbl_804F7F78@ha
+/* 800C765C 00090C1C  3F E0 80 4F */	lis r31, CfObjectImplPc_strpool@ha
 /* 800C7660 00090C20  38 7E 00 1C */	addi r3, r30, 0x1c
-/* 800C7664 00090C24  3B FF 7F 78 */	addi r31, r31, lbl_804F7F78@l
+/* 800C7664 00090C24  3B FF 7F 78 */	addi r31, r31, CfObjectImplPc_strpool@l
 /* 800C7668 00090C28  38 9F 00 01 */	addi r4, r31, 1
 /* 800C766C 00090C2C  48 1F B1 C9 */	bl strcmp
 /* 800C7670 00090C30  2C 03 00 00 */	cmpwi r3, 0
@@ -2690,9 +2690,9 @@
 /* 800C80C0 00091680  88 1E 00 0A */	lbz r0, 0xa(r30)
 /* 800C80C4 00091684  28 00 00 12 */	cmplwi r0, 0x12
 /* 800C80C8 00091688  40 82 00 9C */	bne .L_800C8164
-/* 800C80CC 0009168C  3C 80 80 4F */	lis r4, lbl_804F7F78@ha
+/* 800C80CC 0009168C  3C 80 80 4F */	lis r4, CfObjectImplPc_strpool@ha
 /* 800C80D0 00091690  38 7E 00 1C */	addi r3, r30, 0x1c
-/* 800C80D4 00091694  38 84 7F 78 */	addi r4, r4, lbl_804F7F78@l
+/* 800C80D4 00091694  38 84 7F 78 */	addi r4, r4, CfObjectImplPc_strpool@l
 /* 800C80D8 00091698  38 84 00 01 */	addi r4, r4, 1
 /* 800C80DC 0009169C  48 1F A7 59 */	bl strcmp
 /* 800C80E0 000916A0  2C 03 00 00 */	cmpwi r3, 0
@@ -5121,8 +5121,8 @@
 /* 800CA498 00093A58  28 03 01 67 */	cmplwi r3, 0x167
 /* 800CA49C 00093A5C  41 80 00 2C */	blt .L_800CA4C8
 /* 800CA4A0 00093A60  80 7F 00 14 */	lwz r3, 0x14(r31)
-/* 800CA4A4 00093A64  3C 80 80 4F */	lis r4, lbl_804F7F78@ha
-/* 800CA4A8 00093A68  38 84 7F 78 */	addi r4, r4, lbl_804F7F78@l
+/* 800CA4A4 00093A64  3C 80 80 4F */	lis r4, CfObjectImplPc_strpool@ha
+/* 800CA4A8 00093A68  38 84 7F 78 */	addi r4, r4, CfObjectImplPc_strpool@l
 /* 800CA4AC 00093A6C  38 A0 00 00 */	li r5, 0
 /* 800CA4B0 00093A70  80 63 00 98 */	lwz r3, 0x98(r3)
 /* 800CA4B4 00093A74  38 84 00 3B */	addi r4, r4, 0x3b
@@ -5176,8 +5176,8 @@ lbl_804F7F50:
 	.4byte 0
 
 
-.global lbl_804F7F78
-lbl_804F7F78:
+.global CfObjectImplPc_strpool
+CfObjectImplPc_strpool:
 	.byte 0x00
 	.asciz "INPUT"
 	.asciz "ENCO"

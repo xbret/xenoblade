@@ -44,13 +44,13 @@
 /* 80223DB4 001ED374  7C 08 02 A6 */	mflr r0
 /* 80223DB8 001ED378  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80223DBC 001ED37C  BF C1 00 08 */	stmw r30, 8(r1)
-/* 80223DC0 001ED380  3F E0 80 50 */	lis r31, lbl_80504CFC@ha
+/* 80223DC0 001ED380  3F E0 80 50 */	lis r31, CMCEffCrystal_strpool@ha
 /* 80223DC4 001ED384  7C 7E 1B 78 */	mr r30, r3
-/* 80223DC8 001ED388  38 BF 4C FC */	addi r5, r31, lbl_80504CFC@l
+/* 80223DC8 001ED388  38 BF 4C FC */	addi r5, r31, CMCEffCrystal_strpool@l
 /* 80223DCC 001ED38C  80 83 00 08 */	lwz r4, 8(r3)
 /* 80223DD0 001ED390  38 63 00 0C */	addi r3, r3, 0xc
 /* 80223DD4 001ED394  4B F1 30 B1 */	bl func_80136E84
-/* 80223DD8 001ED398  38 DF 4C FC */	addi r6, r31, lbl_80504CFC@l
+/* 80223DD8 001ED398  38 DF 4C FC */	addi r6, r31, CMCEffCrystal_strpool@l
 /* 80223DDC 001ED39C  80 7E 00 0C */	lwz r3, 0xc(r30)
 /* 80223DE0 001ED3A0  80 BE 00 08 */	lwz r5, 8(r30)
 /* 80223DE4 001ED3A4  38 9E 00 10 */	addi r4, r30, 0x10
@@ -243,8 +243,8 @@ CMCEffStart_typestr:
 	.asciz "CMCEffStart"
 
 
-.global lbl_80504CFC
-lbl_80504CFC:
+.global CMCEffCrystal_strpool
+CMCEffCrystal_strpool:
 	.asciz "mf10_cry06_start.brlyt"
 	.asciz "mf10_cry06_start_in.brlan"
 	.asciz "mf10_cry02_prt00.brlyt"

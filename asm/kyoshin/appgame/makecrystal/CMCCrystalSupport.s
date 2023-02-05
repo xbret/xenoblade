@@ -44,13 +44,13 @@
 /* 8022E8FC 001F7EBC  7C 08 02 A6 */	mflr r0
 /* 8022E900 001F7EC0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8022E904 001F7EC4  BF C1 00 08 */	stmw r30, 8(r1)
-/* 8022E908 001F7EC8  3F E0 80 50 */	lis r31, lbl_8050613C@ha
+/* 8022E908 001F7EC8  3F E0 80 50 */	lis r31, CMCCrystalSupport_strpool@ha
 /* 8022E90C 001F7ECC  7C 7E 1B 78 */	mr r30, r3
-/* 8022E910 001F7ED0  38 BF 61 3C */	addi r5, r31, lbl_8050613C@l
+/* 8022E910 001F7ED0  38 BF 61 3C */	addi r5, r31, CMCCrystalSupport_strpool@l
 /* 8022E914 001F7ED4  80 83 00 04 */	lwz r4, 4(r3)
 /* 8022E918 001F7ED8  38 63 00 08 */	addi r3, r3, 8
 /* 8022E91C 001F7EDC  4B F0 85 69 */	bl func_80136E84
-/* 8022E920 001F7EE0  38 DF 61 3C */	addi r6, r31, lbl_8050613C@l
+/* 8022E920 001F7EE0  38 DF 61 3C */	addi r6, r31, CMCCrystalSupport_strpool@l
 /* 8022E924 001F7EE4  80 7E 00 08 */	lwz r3, 8(r30)
 /* 8022E928 001F7EE8  80 BE 00 04 */	lwz r5, 4(r30)
 /* 8022E92C 001F7EEC  38 9E 00 0C */	addi r4, r30, 0xc
@@ -164,9 +164,9 @@
 /* 8022EA90 001F8050  7C 85 23 78 */	mr r5, r4
 /* 8022EA94 001F8054  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8022EA98 001F8058  BF C1 00 08 */	stmw r30, 8(r1)
-/* 8022EA9C 001F805C  3F E0 80 50 */	lis r31, lbl_8050613C@ha
+/* 8022EA9C 001F805C  3F E0 80 50 */	lis r31, CMCCrystalSupport_strpool@ha
 /* 8022EAA0 001F8060  7C 7E 1B 78 */	mr r30, r3
-/* 8022EAA4 001F8064  3B FF 61 3C */	addi r31, r31, lbl_8050613C@l
+/* 8022EAA4 001F8064  3B FF 61 3C */	addi r31, r31, CMCCrystalSupport_strpool@l
 /* 8022EAA8 001F8068  38 9F 00 2D */	addi r4, r31, 0x2d
 /* 8022EAAC 001F806C  80 6D A8 00 */	lwz r3, lbl_80666980@sda21(r13)
 /* 8022EAB0 001F8070  4B F0 77 A5 */	bl func_80136254
@@ -230,13 +230,13 @@
 /* 8022EB78 001F8138  41 82 00 50 */	beq .L_8022EBC8
 /* 8022EB7C 001F813C  38 80 FF FF */	li r4, -1
 /* 8022EB80 001F8140  38 63 00 B8 */	addi r3, r3, 0xb8
-/* 8022EB84 001F8144  48 00 49 31 */	bl func_802334B4
+/* 8022EB84 001F8144  48 00 49 31 */	bl __dt__CArtsList
 /* 8022EB88 001F8148  38 7E 00 80 */	addi r3, r30, 0x80
 /* 8022EB8C 001F814C  38 80 FF FF */	li r4, -1
-/* 8022EB90 001F8150  4B F9 53 C1 */	bl func_801C3F50
+/* 8022EB90 001F8150  4B F9 53 C1 */	bl __dt__CTitleAHelp
 /* 8022EB94 001F8154  38 7E 00 60 */	addi r3, r30, 0x60
 /* 8022EB98 001F8158  38 80 FF FF */	li r4, -1
-/* 8022EB9C 001F815C  4B F9 4E 35 */	bl func_801C39D0
+/* 8022EB9C 001F815C  4B F9 4E 35 */	bl __dt__CBgTex
 /* 8022EBA0 001F8160  2C 1E 00 00 */	cmpwi r30, 0
 /* 8022EBA4 001F8164  41 82 00 14 */	beq .L_8022EBB8
 /* 8022EBA8 001F8168  41 82 00 10 */	beq .L_8022EBB8
@@ -268,7 +268,7 @@
 /* 8022EBFC 001F81BC  4B E5 3D 51 */	bl func_8008294C
 /* 8022EC00 001F81C0  38 61 00 08 */	addi r3, r1, 8
 /* 8022EC04 001F81C4  38 80 00 00 */	li r4, 0
-/* 8022EC08 001F81C8  4B F9 4D 6D */	bl func_801C3974
+/* 8022EC08 001F81C8  4B F9 4D 6D */	bl __ct__CBgTex
 /* 8022EC0C 001F81CC  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 8022EC10 001F81D0  38 61 00 08 */	addi r3, r1, 8
 /* 8022EC14 001F81D4  90 1F 00 64 */	stw r0, 0x64(r31)
@@ -289,7 +289,7 @@
 /* 8022EC50 001F8210  98 1F 00 7D */	stb r0, 0x7d(r31)
 /* 8022EC54 001F8214  88 01 00 26 */	lbz r0, 0x26(r1)
 /* 8022EC58 001F8218  98 1F 00 7E */	stb r0, 0x7e(r31)
-/* 8022EC5C 001F821C  4B F9 4D 75 */	bl func_801C39D0
+/* 8022EC5C 001F821C  4B F9 4D 75 */	bl __dt__CBgTex
 /* 8022EC60 001F8220  38 7F 00 60 */	addi r3, r31, 0x60
 /* 8022EC64 001F8224  4B F9 4F B1 */	bl func_801C3C14
 /* 8022EC68 001F8228  3C 60 80 50 */	lis r3, lbl_80506198@ha
@@ -300,7 +300,7 @@
 /* 8022EC7C 001F823C  7C 64 1B 78 */	mr r4, r3
 /* 8022EC80 001F8240  38 61 00 28 */	addi r3, r1, 0x28
 /* 8022EC84 001F8244  38 A0 00 00 */	li r5, 0
-/* 8022EC88 001F8248  4B F9 52 49 */	bl func_801C3ED0
+/* 8022EC88 001F8248  4B F9 52 49 */	bl __ct__CTitleAHelp
 /* 8022EC8C 001F824C  80 01 00 2C */	lwz r0, 0x2c(r1)
 /* 8022EC90 001F8250  38 61 00 28 */	addi r3, r1, 0x28
 /* 8022EC94 001F8254  90 1F 00 84 */	stw r0, 0x84(r31)
@@ -335,7 +335,7 @@
 /* 8022ED08 001F82C8  98 1F 00 B6 */	stb r0, 0xb6(r31)
 /* 8022ED0C 001F82CC  88 01 00 5F */	lbz r0, 0x5f(r1)
 /* 8022ED10 001F82D0  98 1F 00 B7 */	stb r0, 0xb7(r31)
-/* 8022ED14 001F82D4  4B F9 52 3D */	bl func_801C3F50
+/* 8022ED14 001F82D4  4B F9 52 3D */	bl __dt__CTitleAHelp
 /* 8022ED18 001F82D8  38 7F 00 80 */	addi r3, r31, 0x80
 /* 8022ED1C 001F82DC  4B F9 52 89 */	bl func_801C3FA4
 /* 8022ED20 001F82E0  38 61 00 60 */	addi r3, r1, 0x60
@@ -618,7 +618,7 @@
 /* 8022F170 001F8730  98 1F 03 5D */	stb r0, 0x35d(r31)
 /* 8022F174 001F8734  88 01 03 06 */	lbz r0, 0x306(r1)
 /* 8022F178 001F8738  98 1F 03 5E */	stb r0, 0x35e(r31)
-/* 8022F17C 001F873C  48 00 43 39 */	bl func_802334B4
+/* 8022F17C 001F873C  48 00 43 39 */	bl __dt__CArtsList
 /* 8022F180 001F8740  38 7F 00 B8 */	addi r3, r31, 0xb8
 /* 8022F184 001F8744  48 00 43 A9 */	bl func_8023352C
 /* 8022F188 001F8748  2C 1F 00 00 */	cmpwi r31, 0
@@ -814,8 +814,8 @@ CMCCrystalSupport_typestr:
 	.balign 4
 
 
-.global lbl_8050613C
-lbl_8050613C:
+.global CMCCrystalSupport_strpool
+CMCCrystalSupport_strpool:
 	.asciz "mf10_cry02_sup.brlyt"
 	.asciz "mf10_cry02_sup_in.brlan"
 	.asciz "icon_type3"
@@ -946,22 +946,22 @@ float_8066AEF4:
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x000000B8
-	.4byte func_802334B4
+	.4byte __dt__CArtsList
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte func_802334B4
+	.4byte __dt__CArtsList
 	.4byte 0x8780001E
 	.4byte 0x00000080
-	.4byte func_801C3F50
+	.4byte __dt__CTitleAHelp
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte func_802334B4
+	.4byte __dt__CArtsList
 	.4byte 0x0780001E
 	.4byte 0x00000080
-	.4byte func_801C3F50
+	.4byte __dt__CTitleAHelp
 	.4byte 0x0780001E
 	.4byte 0x00000060
-	.4byte func_801C39D0
+	.4byte __dt__CBgTex
 	.4byte 0x8680001E
 	.4byte 0x00000058
 	.4byte func_8004031C

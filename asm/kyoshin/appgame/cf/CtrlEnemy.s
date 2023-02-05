@@ -1445,8 +1445,8 @@ IActParamEvent_typestr:
 	.balign 4
 
 
-.global lbl_804F7094
-lbl_804F7094:
+.global CtrlEnemy_strpool
+CtrlEnemy_strpool:
 	.asciz "bgmlist"
 	.asciz "file_name"
 	.asciz "e%02d_loop"

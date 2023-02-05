@@ -13,16 +13,16 @@
 /* 8039CE8C 0036644C  48 00 4F C1 */	bl MWSFD_IsEnableHndl
 /* 8039CE90 00366450  2C 03 00 01 */	cmpwi r3, 1
 /* 8039CE94 00366454  41 82 00 18 */	beq .L_8039CEAC
-/* 8039CE98 00366458  3C 60 80 52 */	lis r3, lbl_8051D1D0@ha
-/* 8039CE9C 0036645C  38 63 D1 D0 */	addi r3, r3, lbl_8051D1D0@l
+/* 8039CE98 00366458  3C 60 80 52 */	lis r3, mwsfdsl_strpool@ha
+/* 8039CE9C 0036645C  38 63 D1 D0 */	addi r3, r3, mwsfdsl_strpool@l
 /* 8039CEA0 00366460  4C C6 31 82 */	crclr 6
 /* 8039CEA4 00366464  48 00 0D 95 */	bl MWSFSVM_Error
 /* 8039CEA8 00366468  48 00 00 D4 */	b .L_8039CF7C
 .L_8039CEAC:
 /* 8039CEAC 0036646C  2C 1F 00 00 */	cmpwi r31, 0
 /* 8039CEB0 00366470  40 82 00 1C */	bne .L_8039CECC
-/* 8039CEB4 00366474  3C 60 80 52 */	lis r3, lbl_8051D1D0@ha
-/* 8039CEB8 00366478  38 63 D1 D0 */	addi r3, r3, lbl_8051D1D0@l
+/* 8039CEB4 00366474  3C 60 80 52 */	lis r3, mwsfdsl_strpool@ha
+/* 8039CEB8 00366478  38 63 D1 D0 */	addi r3, r3, mwsfdsl_strpool@l
 /* 8039CEBC 0036647C  38 63 00 2D */	addi r3, r3, 0x2d
 /* 8039CEC0 00366480  4C C6 31 82 */	crclr 6
 /* 8039CEC4 00366484  48 00 0D 75 */	bl MWSFSVM_Error
@@ -51,8 +51,8 @@
 /* 8039CF18 003664D8  2C 03 00 00 */	cmpwi r3, 0
 /* 8039CF1C 003664DC  40 80 00 28 */	bge .L_8039CF44
 /* 8039CF20 003664E0  38 00 00 04 */	li r0, 4
-/* 8039CF24 003664E4  3C 60 80 52 */	lis r3, lbl_8051D1D0@ha
-/* 8039CF28 003664E8  38 63 D1 D0 */	addi r3, r3, lbl_8051D1D0@l
+/* 8039CF24 003664E4  3C 60 80 52 */	lis r3, mwsfdsl_strpool@ha
+/* 8039CF28 003664E8  38 63 D1 D0 */	addi r3, r3, mwsfdsl_strpool@l
 /* 8039CF2C 003664EC  90 1E 00 04 */	stw r0, 4(r30)
 /* 8039CF30 003664F0  7F E4 FB 78 */	mr r4, r31
 /* 8039CF34 003664F4  38 63 00 55 */	addi r3, r3, 0x55
@@ -93,8 +93,8 @@
 /* 8039CFA8 00366568  48 00 4E A5 */	bl MWSFD_IsEnableHndl
 /* 8039CFAC 0036656C  2C 03 00 01 */	cmpwi r3, 1
 /* 8039CFB0 00366570  41 82 00 1C */	beq .L_8039CFCC
-/* 8039CFB4 00366574  3C 60 80 52 */	lis r3, lbl_8051D1D0@ha
-/* 8039CFB8 00366578  38 63 D1 D0 */	addi r3, r3, lbl_8051D1D0@l
+/* 8039CFB4 00366574  3C 60 80 52 */	lis r3, mwsfdsl_strpool@ha
+/* 8039CFB8 00366578  38 63 D1 D0 */	addi r3, r3, mwsfdsl_strpool@l
 /* 8039CFBC 0036657C  38 63 00 84 */	addi r3, r3, 0x84
 /* 8039CFC0 00366580  4C C6 31 82 */	crclr 6
 /* 8039CFC4 00366584  48 00 0C 75 */	bl MWSFSVM_Error
@@ -117,8 +117,8 @@
 /* 8039D000 003665C0  48 00 4E 4D */	bl MWSFD_IsEnableHndl
 /* 8039D004 003665C4  2C 03 00 01 */	cmpwi r3, 1
 /* 8039D008 003665C8  41 82 00 1C */	beq .L_8039D024
-/* 8039D00C 003665CC  3C 60 80 52 */	lis r3, lbl_8051D1D0@ha
-/* 8039D010 003665D0  38 63 D1 D0 */	addi r3, r3, lbl_8051D1D0@l
+/* 8039D00C 003665CC  3C 60 80 52 */	lis r3, mwsfdsl_strpool@ha
+/* 8039D010 003665D0  38 63 D1 D0 */	addi r3, r3, mwsfdsl_strpool@l
 /* 8039D014 003665D4  38 63 00 B4 */	addi r3, r3, 0xb4
 /* 8039D018 003665D8  4C C6 31 82 */	crclr 6
 /* 8039D01C 003665DC  48 00 0C 1D */	bl MWSFSVM_Error
@@ -175,8 +175,8 @@
 /* 8039D0CC 0036668C  48 00 4D 81 */	bl MWSFD_IsEnableHndl
 /* 8039D0D0 00366690  2C 03 00 01 */	cmpwi r3, 1
 /* 8039D0D4 00366694  41 82 00 1C */	beq .L_8039D0F0
-/* 8039D0D8 00366698  3C 60 80 52 */	lis r3, lbl_8051D1D0@ha
-/* 8039D0DC 0036669C  38 63 D1 D0 */	addi r3, r3, lbl_8051D1D0@l
+/* 8039D0D8 00366698  3C 60 80 52 */	lis r3, mwsfdsl_strpool@ha
+/* 8039D0DC 0036669C  38 63 D1 D0 */	addi r3, r3, mwsfdsl_strpool@l
 /* 8039D0E0 003666A0  38 63 00 DE */	addi r3, r3, 0xde
 /* 8039D0E4 003666A4  4C C6 31 82 */	crclr 6
 /* 8039D0E8 003666A8  48 00 0B 51 */	bl MWSFSVM_Error
@@ -230,8 +230,8 @@
 /* 8039D190 00366750  48 00 4C BD */	bl MWSFD_IsEnableHndl
 /* 8039D194 00366754  2C 03 00 01 */	cmpwi r3, 1
 /* 8039D198 00366758  41 82 00 1C */	beq .L_8039D1B4
-/* 8039D19C 0036675C  3C 60 80 52 */	lis r3, lbl_8051D1D0@ha
-/* 8039D1A0 00366760  38 63 D1 D0 */	addi r3, r3, lbl_8051D1D0@l
+/* 8039D19C 0036675C  3C 60 80 52 */	lis r3, mwsfdsl_strpool@ha
+/* 8039D1A0 00366760  38 63 D1 D0 */	addi r3, r3, mwsfdsl_strpool@l
 /* 8039D1A4 00366764  38 63 01 09 */	addi r3, r3, 0x109
 /* 8039D1A8 00366768  4C C6 31 82 */	crclr 6
 /* 8039D1AC 0036676C  48 00 0A 8D */	bl MWSFSVM_Error
@@ -239,8 +239,8 @@
 .L_8039D1B4:
 /* 8039D1B4 00366774  2C 1F 00 00 */	cmpwi r31, 0
 /* 8039D1B8 00366778  40 82 00 1C */	bne .L_8039D1D4
-/* 8039D1BC 0036677C  3C 60 80 52 */	lis r3, lbl_8051D1D0@ha
-/* 8039D1C0 00366780  38 63 D1 D0 */	addi r3, r3, lbl_8051D1D0@l
+/* 8039D1BC 0036677C  3C 60 80 52 */	lis r3, mwsfdsl_strpool@ha
+/* 8039D1C0 00366780  38 63 D1 D0 */	addi r3, r3, mwsfdsl_strpool@l
 /* 8039D1C4 00366784  38 63 01 38 */	addi r3, r3, 0x138
 /* 8039D1C8 00366788  4C C6 31 82 */	crclr 6
 /* 8039D1CC 0036678C  48 00 0A 6D */	bl MWSFSVM_Error
@@ -277,8 +277,8 @@
 /* 8039D240 00366800  48 00 4C 0D */	bl MWSFD_IsEnableHndl
 /* 8039D244 00366804  2C 03 00 01 */	cmpwi r3, 1
 /* 8039D248 00366808  41 82 00 1C */	beq .L_8039D264
-/* 8039D24C 0036680C  3C 60 80 52 */	lis r3, lbl_8051D1D0@ha
-/* 8039D250 00366810  38 63 D1 D0 */	addi r3, r3, lbl_8051D1D0@l
+/* 8039D24C 0036680C  3C 60 80 52 */	lis r3, mwsfdsl_strpool@ha
+/* 8039D250 00366810  38 63 D1 D0 */	addi r3, r3, mwsfdsl_strpool@l
 /* 8039D254 00366814  38 63 00 DE */	addi r3, r3, 0xde
 /* 8039D258 00366818  4C C6 31 82 */	crclr 6
 /* 8039D25C 0036681C  48 00 09 DD */	bl MWSFSVM_Error
@@ -359,8 +359,8 @@
 /* 8039D368 00366928  48 00 4A E5 */	bl MWSFD_IsEnableHndl
 /* 8039D36C 0036692C  2C 03 00 01 */	cmpwi r3, 1
 /* 8039D370 00366930  41 82 00 1C */	beq .L_8039D38C
-/* 8039D374 00366934  3C 60 80 52 */	lis r3, lbl_8051D1D0@ha
-/* 8039D378 00366938  38 63 D1 D0 */	addi r3, r3, lbl_8051D1D0@l
+/* 8039D374 00366934  3C 60 80 52 */	lis r3, mwsfdsl_strpool@ha
+/* 8039D378 00366938  38 63 D1 D0 */	addi r3, r3, mwsfdsl_strpool@l
 /* 8039D37C 0036693C  38 63 02 7A */	addi r3, r3, 0x27a
 /* 8039D380 00366940  4C C6 31 82 */	crclr 6
 /* 8039D384 00366944  48 00 08 B5 */	bl MWSFSVM_Error
@@ -376,8 +376,8 @@
 /* 8039D3A8 00366968  48 00 4A A5 */	bl MWSFD_IsEnableHndl
 /* 8039D3AC 0036696C  2C 03 00 01 */	cmpwi r3, 1
 /* 8039D3B0 00366970  41 82 00 1C */	beq .L_8039D3CC
-/* 8039D3B4 00366974  3C 60 80 52 */	lis r3, lbl_8051D1D0@ha
-/* 8039D3B8 00366978  38 63 D1 D0 */	addi r3, r3, lbl_8051D1D0@l
+/* 8039D3B4 00366974  3C 60 80 52 */	lis r3, mwsfdsl_strpool@ha
+/* 8039D3B8 00366978  38 63 D1 D0 */	addi r3, r3, mwsfdsl_strpool@l
 /* 8039D3BC 0036697C  38 63 02 49 */	addi r3, r3, 0x249
 /* 8039D3C0 00366980  4C C6 31 82 */	crclr 6
 /* 8039D3C4 00366984  48 00 08 75 */	bl MWSFSVM_Error
@@ -396,8 +396,8 @@
 /* 8039D3F0 003669B0  48 00 4A 5D */	bl MWSFD_IsEnableHndl
 /* 8039D3F4 003669B4  2C 03 00 01 */	cmpwi r3, 1
 /* 8039D3F8 003669B8  41 82 00 1C */	beq .L_8039D414
-/* 8039D3FC 003669BC  3C 60 80 52 */	lis r3, lbl_8051D1D0@ha
-/* 8039D400 003669C0  38 63 D1 D0 */	addi r3, r3, lbl_8051D1D0@l
+/* 8039D3FC 003669BC  3C 60 80 52 */	lis r3, mwsfdsl_strpool@ha
+/* 8039D400 003669C0  38 63 D1 D0 */	addi r3, r3, mwsfdsl_strpool@l
 /* 8039D404 003669C4  38 63 00 DE */	addi r3, r3, 0xde
 /* 8039D408 003669C8  4C C6 31 82 */	crclr 6
 /* 8039D40C 003669CC  48 00 08 2D */	bl MWSFSVM_Error
@@ -497,8 +497,8 @@
 /* 8039D544 00366B04  48 00 49 09 */	bl MWSFD_IsEnableHndl
 /* 8039D548 00366B08  2C 03 00 01 */	cmpwi r3, 1
 /* 8039D54C 00366B0C  41 82 00 1C */	beq .L_8039D568
-/* 8039D550 00366B10  3C 60 80 52 */	lis r3, lbl_8051D1D0@ha
-/* 8039D554 00366B14  38 63 D1 D0 */	addi r3, r3, lbl_8051D1D0@l
+/* 8039D550 00366B10  3C 60 80 52 */	lis r3, mwsfdsl_strpool@ha
+/* 8039D554 00366B14  38 63 D1 D0 */	addi r3, r3, mwsfdsl_strpool@l
 /* 8039D558 00366B18  38 63 00 B4 */	addi r3, r3, 0xb4
 /* 8039D55C 00366B1C  4C C6 31 82 */	crclr 6
 /* 8039D560 00366B20  48 00 06 D9 */	bl MWSFSVM_Error
@@ -553,8 +553,8 @@
 /* 8039D60C 00366BCC  80 01 00 30 */	lwz r0, 0x30(r1)
 /* 8039D610 00366BD0  2C 00 00 00 */	cmpwi r0, 0
 /* 8039D614 00366BD4  41 81 00 28 */	bgt .L_8039D63C
-/* 8039D618 00366BD8  3C 60 80 52 */	lis r3, lbl_8051D1D0@ha
-/* 8039D61C 00366BDC  38 63 D1 D0 */	addi r3, r3, lbl_8051D1D0@l
+/* 8039D618 00366BD8  3C 60 80 52 */	lis r3, mwsfdsl_strpool@ha
+/* 8039D61C 00366BDC  38 63 D1 D0 */	addi r3, r3, mwsfdsl_strpool@l
 /* 8039D620 00366BE0  38 63 03 0B */	addi r3, r3, 0x30b
 /* 8039D624 00366BE4  4C C6 31 82 */	crclr 6
 /* 8039D628 00366BE8  48 00 06 11 */	bl MWSFSVM_Error
@@ -620,8 +620,8 @@
 /* 8039D700 00366CC0  48 00 47 4D */	bl MWSFD_IsEnableHndl
 /* 8039D704 00366CC4  2C 03 00 01 */	cmpwi r3, 1
 /* 8039D708 00366CC8  41 82 00 1C */	beq .L_8039D724
-/* 8039D70C 00366CCC  3C 60 80 52 */	lis r3, lbl_8051D1D0@ha
-/* 8039D710 00366CD0  38 63 D1 D0 */	addi r3, r3, lbl_8051D1D0@l
+/* 8039D70C 00366CCC  3C 60 80 52 */	lis r3, mwsfdsl_strpool@ha
+/* 8039D710 00366CD0  38 63 D1 D0 */	addi r3, r3, mwsfdsl_strpool@l
 /* 8039D714 00366CD4  38 63 02 1C */	addi r3, r3, 0x21c
 /* 8039D718 00366CD8  4C C6 31 82 */	crclr 6
 /* 8039D71C 00366CDC  48 00 05 1D */	bl MWSFSVM_Error
@@ -633,8 +633,8 @@
 /* 8039D730 00366CF0  48 00 47 1D */	bl MWSFD_IsEnableHndl
 /* 8039D734 00366CF4  2C 03 00 01 */	cmpwi r3, 1
 /* 8039D738 00366CF8  41 82 00 1C */	beq .L_8039D754
-/* 8039D73C 00366CFC  3C 60 80 52 */	lis r3, lbl_8051D1D0@ha
-/* 8039D740 00366D00  38 63 D1 D0 */	addi r3, r3, lbl_8051D1D0@l
+/* 8039D73C 00366CFC  3C 60 80 52 */	lis r3, mwsfdsl_strpool@ha
+/* 8039D740 00366D00  38 63 D1 D0 */	addi r3, r3, mwsfdsl_strpool@l
 /* 8039D744 00366D04  38 63 01 C0 */	addi r3, r3, 0x1c0
 /* 8039D748 00366D08  4C C6 31 82 */	crclr 6
 /* 8039D74C 00366D0C  48 00 04 ED */	bl MWSFSVM_Error
@@ -660,9 +660,9 @@
 /* 8039D798 00366D58  4B FF 49 2D */	bl LSC_EntryFileRange
 /* 8039D79C 00366D5C  48 00 00 20 */	b .L_8039D7BC
 .L_8039D7A0:
-/* 8039D7A0 00366D60  3C 60 80 52 */	lis r3, lbl_8051D1D0@ha
+/* 8039D7A0 00366D60  3C 60 80 52 */	lis r3, mwsfdsl_strpool@ha
 /* 8039D7A4 00366D64  7F C4 F3 78 */	mr r4, r30
-/* 8039D7A8 00366D68  38 63 D1 D0 */	addi r3, r3, lbl_8051D1D0@l
+/* 8039D7A8 00366D68  38 63 D1 D0 */	addi r3, r3, mwsfdsl_strpool@l
 /* 8039D7AC 00366D6C  7F E5 FB 78 */	mr r5, r31
 /* 8039D7B0 00366D70  38 63 01 EB */	addi r3, r3, 0x1eb
 /* 8039D7B4 00366D74  4C C6 31 82 */	crclr 6
@@ -674,8 +674,8 @@
 /* 8039D7C8 00366D88  48 00 46 85 */	bl MWSFD_IsEnableHndl
 /* 8039D7CC 00366D8C  2C 03 00 01 */	cmpwi r3, 1
 /* 8039D7D0 00366D90  41 82 00 1C */	beq .L_8039D7EC
-/* 8039D7D4 00366D94  3C 60 80 52 */	lis r3, lbl_8051D1D0@ha
-/* 8039D7D8 00366D98  38 63 D1 D0 */	addi r3, r3, lbl_8051D1D0@l
+/* 8039D7D4 00366D94  3C 60 80 52 */	lis r3, mwsfdsl_strpool@ha
+/* 8039D7D8 00366D98  38 63 D1 D0 */	addi r3, r3, mwsfdsl_strpool@l
 /* 8039D7DC 00366D9C  38 63 00 DE */	addi r3, r3, 0xde
 /* 8039D7E0 00366DA0  4C C6 31 82 */	crclr 6
 /* 8039D7E4 00366DA4  48 00 04 55 */	bl MWSFSVM_Error
@@ -760,8 +760,8 @@
 /* 8039D908 00366EC8  48 00 45 45 */	bl MWSFD_IsEnableHndl
 /* 8039D90C 00366ECC  2C 03 00 01 */	cmpwi r3, 1
 /* 8039D910 00366ED0  41 82 00 1C */	beq .L_8039D92C
-/* 8039D914 00366ED4  3C 60 80 52 */	lis r3, lbl_8051D1D0@ha
-/* 8039D918 00366ED8  38 63 D1 D0 */	addi r3, r3, lbl_8051D1D0@l
+/* 8039D914 00366ED4  3C 60 80 52 */	lis r3, mwsfdsl_strpool@ha
+/* 8039D918 00366ED8  38 63 D1 D0 */	addi r3, r3, mwsfdsl_strpool@l
 /* 8039D91C 00366EDC  38 63 01 62 */	addi r3, r3, 0x162
 /* 8039D920 00366EE0  4C C6 31 82 */	crclr 6
 /* 8039D924 00366EE4  48 00 03 15 */	bl MWSFSVM_Error
@@ -786,8 +786,8 @@
 /* 8039D968 00366F28  48 00 44 E5 */	bl MWSFD_IsEnableHndl
 /* 8039D96C 00366F2C  2C 03 00 01 */	cmpwi r3, 1
 /* 8039D970 00366F30  41 82 00 1C */	beq .L_8039D98C
-/* 8039D974 00366F34  3C 60 80 52 */	lis r3, lbl_8051D1D0@ha
-/* 8039D978 00366F38  38 63 D1 D0 */	addi r3, r3, lbl_8051D1D0@l
+/* 8039D974 00366F34  3C 60 80 52 */	lis r3, mwsfdsl_strpool@ha
+/* 8039D978 00366F38  38 63 D1 D0 */	addi r3, r3, mwsfdsl_strpool@l
 /* 8039D97C 00366F3C  38 63 00 DE */	addi r3, r3, 0xde
 /* 8039D980 00366F40  4C C6 31 82 */	crclr 6
 /* 8039D984 00366F44  48 00 02 B5 */	bl MWSFSVM_Error
@@ -827,8 +827,8 @@
 /* 8039DA00 00366FC0  48 00 44 4D */	bl MWSFD_IsEnableHndl
 /* 8039DA04 00366FC4  2C 03 00 01 */	cmpwi r3, 1
 /* 8039DA08 00366FC8  41 82 00 1C */	beq .L_8039DA24
-/* 8039DA0C 00366FCC  3C 60 80 52 */	lis r3, lbl_8051D1D0@ha
-/* 8039DA10 00366FD0  38 63 D1 D0 */	addi r3, r3, lbl_8051D1D0@l
+/* 8039DA0C 00366FCC  3C 60 80 52 */	lis r3, mwsfdsl_strpool@ha
+/* 8039DA10 00366FD0  38 63 D1 D0 */	addi r3, r3, mwsfdsl_strpool@l
 /* 8039DA14 00366FD4  38 63 01 8E */	addi r3, r3, 0x18e
 /* 8039DA18 00366FD8  4C C6 31 82 */	crclr 6
 /* 8039DA1C 00366FDC  48 00 02 1D */	bl MWSFSVM_Error
@@ -851,8 +851,8 @@
 /* 8039DA58 00367018  48 00 43 F5 */	bl MWSFD_IsEnableHndl
 /* 8039DA5C 0036701C  2C 03 00 01 */	cmpwi r3, 1
 /* 8039DA60 00367020  41 82 00 1C */	beq .L_8039DA7C
-/* 8039DA64 00367024  3C 60 80 52 */	lis r3, lbl_8051D1D0@ha
-/* 8039DA68 00367028  38 63 D1 D0 */	addi r3, r3, lbl_8051D1D0@l
+/* 8039DA64 00367024  3C 60 80 52 */	lis r3, mwsfdsl_strpool@ha
+/* 8039DA68 00367028  38 63 D1 D0 */	addi r3, r3, mwsfdsl_strpool@l
 /* 8039DA6C 0036702C  38 63 00 B4 */	addi r3, r3, 0xb4
 /* 8039DA70 00367030  4C C6 31 82 */	crclr 6
 /* 8039DA74 00367034  48 00 01 C5 */	bl MWSFSVM_Error
@@ -908,8 +908,8 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051D1D0
-lbl_8051D1D0:
+.global mwsfdsl_strpool
+mwsfdsl_strpool:
 	.asciz "E1122633 mwPlyEntryFname: handle is invalid."
 	.asciz "E10915B mwPlyEntryFname: fname is NULL."
 	.asciz "E204021: mwPlyEntryFname: Can't entry file'%s'"

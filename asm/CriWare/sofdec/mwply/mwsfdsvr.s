@@ -43,9 +43,9 @@
 /* 803A245C 0036BA1C  38 60 FF 9A */	li r3, -102
 /* 803A2460 0036BA20  90 1F 00 04 */	stw r0, 4(r31)
 /* 803A2464 0036BA24  4B FF EB 51 */	bl MWSFLIB_SetErrCode
-/* 803A2468 0036BA28  3C 60 80 52 */	lis r3, lbl_8051F450@ha
+/* 803A2468 0036BA28  3C 60 80 52 */	lis r3, mwsfdsvr_strpool@ha
 /* 803A246C 0036BA2C  80 9F 04 D8 */	lwz r4, 0x4d8(r31)
-/* 803A2470 0036BA30  38 63 F4 50 */	addi r3, r3, lbl_8051F450@l
+/* 803A2470 0036BA30  38 63 F4 50 */	addi r3, r3, mwsfdsvr_strpool@l
 /* 803A2474 0036BA34  4C C6 31 82 */	crclr 6
 /* 803A2478 0036BA38  4B FF B7 C1 */	bl MWSFSVM_Error
 /* 803A247C 0036BA3C  38 00 00 00 */	li r0, 0
@@ -553,8 +553,8 @@
 .L_803A2B7C:
 /* 803A2B7C 0036C13C  2C 03 00 00 */	cmpwi r3, 0
 /* 803A2B80 0036C140  40 82 00 20 */	bne .L_803A2BA0
-/* 803A2B84 0036C144  3C 60 80 52 */	lis r3, lbl_8051F450@ha
-/* 803A2B88 0036C148  38 63 F4 50 */	addi r3, r3, lbl_8051F450@l
+/* 803A2B84 0036C144  3C 60 80 52 */	lis r3, mwsfdsvr_strpool@ha
+/* 803A2B88 0036C148  38 63 F4 50 */	addi r3, r3, mwsfdsvr_strpool@l
 /* 803A2B8C 0036C14C  38 63 00 29 */	addi r3, r3, 0x29
 /* 803A2B90 0036C150  4C C6 31 82 */	crclr 6
 /* 803A2B94 0036C154  4B FF B0 A5 */	bl MWSFSVM_Error
@@ -847,8 +847,8 @@
 /* 803A2F6C 0036C52C  4B FF EE E1 */	bl MWSFD_IsEnableHndl
 /* 803A2F70 0036C530  2C 03 00 01 */	cmpwi r3, 1
 /* 803A2F74 0036C534  41 82 00 20 */	beq .L_803A2F94
-/* 803A2F78 0036C538  3C 60 80 52 */	lis r3, lbl_8051F450@ha
-/* 803A2F7C 0036C53C  38 63 F4 50 */	addi r3, r3, lbl_8051F450@l
+/* 803A2F78 0036C538  3C 60 80 52 */	lis r3, mwsfdsvr_strpool@ha
+/* 803A2F7C 0036C53C  38 63 F4 50 */	addi r3, r3, mwsfdsvr_strpool@l
 /* 803A2F80 0036C540  38 63 00 51 */	addi r3, r3, 0x51
 /* 803A2F84 0036C544  4C C6 31 82 */	crclr 6
 /* 803A2F88 0036C548  4B FF AC B1 */	bl MWSFSVM_Error
@@ -1023,8 +1023,8 @@
 
 
 
-.global lbl_8051F450
-lbl_8051F450:
+.global mwsfdsvr_strpool
+mwsfdsvr_strpool:
 	.asciz "E211141 MWSTM_ReqStart: can't start '%s'"
 	.asciz "E1071901 mwPlyExecSvrHndl: NULL handle."
 	.asciz "E2011101 MWSFSVR_IsSvrBdrHndl: handle is invalid."

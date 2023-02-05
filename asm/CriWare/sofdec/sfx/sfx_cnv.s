@@ -184,9 +184,9 @@
 /* 803D4C70 0039E230  48 00 00 41 */	bl SFXCNV_MakeCcirFromY
 /* 803D4C74 0039E234  48 00 00 1C */	b .L_803D4C90
 .L_803D4C78:
-/* 803D4C78 0039E238  3C A0 80 52 */	lis r5, lbl_80520860@ha
+/* 803D4C78 0039E238  3C A0 80 52 */	lis r5, sfx_cnv_strpool@ha
 /* 803D4C7C 0039E23C  7F 83 E3 78 */	mr r3, r28
-/* 803D4C80 0039E240  38 A5 08 60 */	addi r5, r5, lbl_80520860@l
+/* 803D4C80 0039E240  38 A5 08 60 */	addi r5, r5, sfx_cnv_strpool@l
 /* 803D4C84 0039E244  7F A4 EB 78 */	mr r4, r29
 /* 803D4C88 0039E248  38 A5 00 30 */	addi r5, r5, 0x30
 /* 803D4C8C 0039E24C  48 00 0F 3D */	bl SFXLIB_Error
@@ -434,9 +434,9 @@
 /* 803D4FEC 0039E5AC  80 03 00 04 */	lwz r0, 4(r3)
 /* 803D4FF0 0039E5B0  2C 00 00 00 */	cmpwi r0, 0
 /* 803D4FF4 0039E5B4  40 82 00 20 */	bne .L_803D5014
-/* 803D4FF8 0039E5B8  3C 80 80 52 */	lis r4, lbl_80520860@ha
+/* 803D4FF8 0039E5B8  3C 80 80 52 */	lis r4, sfx_cnv_strpool@ha
 /* 803D4FFC 0039E5BC  7F C3 F3 78 */	mr r3, r30
-/* 803D5000 0039E5C0  38 84 08 60 */	addi r4, r4, lbl_80520860@l
+/* 803D5000 0039E5C0  38 84 08 60 */	addi r4, r4, sfx_cnv_strpool@l
 /* 803D5004 0039E5C4  38 84 00 BA */	addi r4, r4, 0xba
 /* 803D5008 0039E5C8  48 00 08 19 */	bl SFXINF_GetStmInf
 /* 803D500C 0039E5CC  7C 60 1B 78 */	mr r0, r3
@@ -559,9 +559,9 @@
 /* 803D51AC 0039E76C  48 00 00 3D */	bl sfxcnv_ExecCnvFrmByCbFunc
 /* 803D51B0 0039E770  48 00 00 1C */	b .L_803D51CC
 .L_803D51B4:
-/* 803D51B4 0039E774  3C A0 80 52 */	lis r5, lbl_80520860@ha
+/* 803D51B4 0039E774  3C A0 80 52 */	lis r5, sfx_cnv_strpool@ha
 /* 803D51B8 0039E778  7F A3 EB 78 */	mr r3, r29
-/* 803D51BC 0039E77C  38 A5 08 60 */	addi r5, r5, lbl_80520860@l
+/* 803D51BC 0039E77C  38 A5 08 60 */	addi r5, r5, sfx_cnv_strpool@l
 /* 803D51C0 0039E780  7F C4 F3 78 */	mr r4, r30
 /* 803D51C4 0039E784  38 A5 00 C0 */	addi r5, r5, 0xc0
 /* 803D51C8 0039E788  48 00 0A 01 */	bl SFXLIB_Error
@@ -609,8 +609,8 @@
 /* 803D5258 0039E818  2C 00 00 00 */	cmpwi r0, 0
 /* 803D525C 0039E81C  40 82 00 28 */	bne .L_803D5284
 /* 803D5260 0039E820  80 1C 00 48 */	lwz r0, 0x48(r28)
-/* 803D5264 0039E824  3C A0 80 52 */	lis r5, lbl_80520860@ha
-/* 803D5268 0039E828  38 A5 08 60 */	addi r5, r5, lbl_80520860@l
+/* 803D5264 0039E824  3C A0 80 52 */	lis r5, sfx_cnv_strpool@ha
+/* 803D5268 0039E828  38 A5 08 60 */	addi r5, r5, sfx_cnv_strpool@l
 /* 803D526C 0039E82C  7F E3 FB 78 */	mr r3, r31
 /* 803D5270 0039E830  90 01 00 20 */	stw r0, 0x20(r1)
 /* 803D5274 0039E834  7F 84 E3 78 */	mr r4, r28
@@ -749,9 +749,9 @@
 /* 803D5454 0039EA14  90 1F 00 30 */	stw r0, 0x30(r31)
 /* 803D5458 0039EA18  48 00 00 1C */	b .L_803D5474
 .L_803D545C:
-/* 803D545C 0039EA1C  3C A0 80 52 */	lis r5, lbl_80520860@ha
+/* 803D545C 0039EA1C  3C A0 80 52 */	lis r5, sfx_cnv_strpool@ha
 /* 803D5460 0039EA20  7F A3 EB 78 */	mr r3, r29
-/* 803D5464 0039EA24  38 A5 08 60 */	addi r5, r5, lbl_80520860@l
+/* 803D5464 0039EA24  38 A5 08 60 */	addi r5, r5, sfx_cnv_strpool@l
 /* 803D5468 0039EA28  7F C4 F3 78 */	mr r4, r30
 /* 803D546C 0039EA2C  38 A5 01 38 */	addi r5, r5, 0x138
 /* 803D5470 0039EA30  48 00 07 59 */	bl SFXLIB_Error
@@ -813,8 +813,8 @@
 /* 803D553C 0039EAFC  2C 03 00 00 */	cmpwi r3, 0
 /* 803D5540 0039EB00  40 82 00 2C */	bne .L_803D556C
 /* 803D5544 0039EB04  80 01 00 94 */	lwz r0, 0x94(r1)
-/* 803D5548 0039EB08  3C A0 80 52 */	lis r5, lbl_80520860@ha
-/* 803D554C 0039EB0C  38 A5 08 60 */	addi r5, r5, lbl_80520860@l
+/* 803D5548 0039EB08  3C A0 80 52 */	lis r5, sfx_cnv_strpool@ha
+/* 803D554C 0039EB0C  38 A5 08 60 */	addi r5, r5, sfx_cnv_strpool@l
 /* 803D5550 0039EB10  7F A3 EB 78 */	mr r3, r29
 /* 803D5554 0039EB14  54 00 10 3A */	slwi r0, r0, 2
 /* 803D5558 0039EB18  7F C4 F3 78 */	mr r4, r30
@@ -836,9 +836,9 @@
 /* 803D5590 0039EB50  90 61 00 38 */	stw r3, 0x38(r1)
 /* 803D5594 0039EB54  48 00 00 1C */	b .L_803D55B0
 .L_803D5598:
-/* 803D5598 0039EB58  3C A0 80 52 */	lis r5, lbl_80520860@ha
+/* 803D5598 0039EB58  3C A0 80 52 */	lis r5, sfx_cnv_strpool@ha
 /* 803D559C 0039EB5C  7F A3 EB 78 */	mr r3, r29
-/* 803D55A0 0039EB60  38 A5 08 60 */	addi r5, r5, lbl_80520860@l
+/* 803D55A0 0039EB60  38 A5 08 60 */	addi r5, r5, sfx_cnv_strpool@l
 /* 803D55A4 0039EB64  7F C4 F3 78 */	mr r4, r30
 /* 803D55A8 0039EB68  38 A5 01 B0 */	addi r5, r5, 0x1b0
 /* 803D55AC 0039EB6C  48 00 06 1D */	bl SFXLIB_Error
@@ -932,9 +932,9 @@
 /* 803D56D0 0039EC90  38 00 00 01 */	li r0, 1
 /* 803D56D4 0039EC94  48 00 00 1C */	b .L_803D56F0
 .L_803D56D8:
-/* 803D56D8 0039EC98  3C A0 80 52 */	lis r5, lbl_80520860@ha
+/* 803D56D8 0039EC98  3C A0 80 52 */	lis r5, sfx_cnv_strpool@ha
 /* 803D56DC 0039EC9C  38 60 00 00 */	li r3, 0
-/* 803D56E0 0039ECA0  38 A5 08 60 */	addi r5, r5, lbl_80520860@l
+/* 803D56E0 0039ECA0  38 A5 08 60 */	addi r5, r5, sfx_cnv_strpool@l
 /* 803D56E4 0039ECA4  38 80 00 00 */	li r4, 0
 /* 803D56E8 0039ECA8  48 00 04 E1 */	bl SFXLIB_Error
 /* 803D56EC 0039ECAC  38 00 00 00 */	li r0, 0
@@ -956,9 +956,9 @@
 /* 803D5720 0039ECE0  83 9E 00 08 */	lwz r28, 8(r30)
 /* 803D5724 0039ECE4  2C 1C 00 00 */	cmpwi r28, 0
 /* 803D5728 0039ECE8  40 82 00 24 */	bne .L_803D574C
-/* 803D572C 0039ECEC  3C A0 80 52 */	lis r5, lbl_80520860@ha
+/* 803D572C 0039ECEC  3C A0 80 52 */	lis r5, sfx_cnv_strpool@ha
 /* 803D5730 0039ECF0  83 9B 00 44 */	lwz r28, 0x44(r27)
-/* 803D5734 0039ECF4  38 A5 08 60 */	addi r5, r5, lbl_80520860@l
+/* 803D5734 0039ECF4  38 A5 08 60 */	addi r5, r5, sfx_cnv_strpool@l
 /* 803D5738 0039ECF8  7F C3 F3 78 */	mr r3, r30
 /* 803D573C 0039ECFC  7F 64 DB 78 */	mr r4, r27
 /* 803D5740 0039ED00  38 A5 01 F2 */	addi r5, r5, 0x1f2
@@ -1040,8 +1040,8 @@ lbl_80520854:
 double_80520858:
 	.8byte 0x4330000080000000 #signed int to float constant
 
-.global lbl_80520860
-lbl_80520860:
+.global sfx_cnv_strpool
+sfx_cnv_strpool:
 	.asciz "E201312: sfxcnv_IsCnvUpHalf : compo is invalid."
 	.asciz "E201311: sfxcnv_MakeTable : compo is not support."
 	.asciz "E202282: SFX_MakeTblZ16 : zclip is not set."

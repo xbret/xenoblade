@@ -41,6 +41,7 @@ MONOLITHLIB_FILES:=\
 	$(BUILD_DIR)/asm/monolithlib/device/CDeviceFontLoader.o\
 	$(BUILD_DIR)/asm/monolithlib/device/CDeviceGX.o\
 	$(BUILD_DIR)/asm/monolithlib/CDesktop.o\
+	$(BUILD_DIR)/asm/monolithlib/code_80456134.o\
 	$(BUILD_DIR)/asm/monolithlib/CException.o\
 	$(BUILD_DIR)/asm/monolithlib/lib/CLib.o\
 	$(BUILD_DIR)/asm/monolithlib/lib/CLibCri.o\
@@ -53,6 +54,7 @@ MONOLITHLIB_FILES:=\
 	$(BUILD_DIR)/asm/monolithlib/lib/CLibStaticData.o\
 	$(BUILD_DIR)/asm/monolithlib/lib/CLibVM.o\
 	$(BUILD_DIR)/asm/monolithlib/CTaskLOD.o\
+	$(BUILD_DIR)/asm/monolithlib/code_8046376C.o\
 	$(BUILD_DIR)/asm/monolithlib/code_804645CC.o\
 	$(BUILD_DIR)/asm/monolithlib/code_80468434.o\
 	$(BUILD_DIR)/asm/monolithlib/code_8046A530.o\
@@ -63,6 +65,7 @@ MONOLITHLIB_FILES:=\
 	$(BUILD_DIR)/asm/monolithlib/mpfsys/MPFDrawBillboard.o\
 	$(BUILD_DIR)/asm/monolithlib/mpfsys/MPFDrawCross.o\
 	$(BUILD_DIR)/asm/monolithlib/mpfsys/MPFDrawBillLayTex.o\
+	$(BUILD_DIR)/asm/monolithlib/mpfsys/code_8047BB54.o\
 	$(BUILD_DIR)/asm/monolithlib/code_8047CA88.o\
 	$(BUILD_DIR)/asm/monolithlib/code_8047D2AC.o\
 	$(BUILD_DIR)/asm/monolithlib/scn/CScnItemCameraNw4r.o\
@@ -84,6 +87,7 @@ MONOLITHLIB_FILES:=\
 	$(BUILD_DIR)/asm/monolithlib/CVirtualLightDir.o\
 	$(BUILD_DIR)/asm/monolithlib/CVirtualLightObj.o\
 	$(BUILD_DIR)/asm/monolithlib/scn/CScn.o\
+	$(BUILD_DIR)/asm/monolithlib/scn/CScn_80496B0C.o\
 	$(BUILD_DIR)/asm/monolithlib/scn/CScnBlend.o\
 	$(BUILD_DIR)/asm/monolithlib/scn/CScnBloom.o\
 	$(BUILD_DIR)/asm/monolithlib/scn/CScnCameraMan.o\
@@ -96,7 +100,8 @@ MONOLITHLIB_FILES:=\
 	$(BUILD_DIR)/asm/monolithlib/scn/CScnIdMan.o\
 	$(BUILD_DIR)/asm/monolithlib/scn/CScnItemAnim.o\
 	$(BUILD_DIR)/asm/monolithlib/scn/CScnItemCamera.o\
-	$(BUILD_DIR)/asm/monolithlib/code_8049FCAC.o\
+	$(BUILD_DIR)/asm/monolithlib/CScriptBinary.o\
+	$(BUILD_DIR)/asm/monolithlib/code_804A6C60.o\
 	$(BUILD_DIR)/asm/monolithlib/CColiProc.o\
 	$(BUILD_DIR)/asm/monolithlib/code_804B2FF0.o\
 	$(BUILD_DIR)/asm/monolithlib/code_804B59C8.o\
@@ -111,7 +116,9 @@ MONOLITHLIB_FILES:=\
 	$(BUILD_DIR)/asm/monolithlib/code_804C8718.o\
 	$(BUILD_DIR)/asm/monolithlib/code_804CC2B8.o\
 	$(BUILD_DIR)/asm/monolithlib/effect/CETrail.o\
+	$(BUILD_DIR)/asm/monolithlib/effect/code_804D854C.o\
 	$(BUILD_DIR)/asm/monolithlib/work/CWorkSystemCache.o\
+	$(BUILD_DIR)/asm/monolithlib/code_804D9274.o\
 	$(BUILD_DIR)/asm/monolithlib/nand/CNand.o\
 	$(BUILD_DIR)/asm/monolithlib/nand/code_804DA4CC.o\
 	$(BUILD_DIR)/asm/monolithlib/nand/CNReqtaskSave.o\

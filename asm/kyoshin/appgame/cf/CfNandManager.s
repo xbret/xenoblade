@@ -842,8 +842,8 @@
 /* 8023C8CC 00205E8C  4B E6 23 D1 */	bl func_8009EC9C
 /* 8023C8D0 00205E90  4B E6 3F 5D */	bl func_800A082C
 /* 8023C8D4 00205E94  B0 7E 00 64 */	sth r3, 0x64(r30)
-/* 8023C8D8 00205E98  3C 60 80 50 */	lis r3, lbl_80506B70@ha
-/* 8023C8DC 00205E9C  38 63 6B 70 */	addi r3, r3, lbl_80506B70@l
+/* 8023C8D8 00205E98  3C 60 80 50 */	lis r3, CfNandManager_strpool@ha
+/* 8023C8DC 00205E9C  38 63 6B 70 */	addi r3, r3, CfNandManager_strpool@l
 /* 8023C8E0 00205EA0  80 BE 00 14 */	lwz r5, 0x14(r30)
 /* 8023C8E4 00205EA4  9B FE 00 66 */	stb r31, 0x66(r30)
 /* 8023C8E8 00205EA8  38 83 00 12 */	addi r4, r3, 0x12
@@ -2931,16 +2931,16 @@
 /* 8023E750 00207D10  98 01 00 10 */	stb r0, 0x10(r1)
 /* 8023E754 00207D14  90 01 00 30 */	stw r0, 0x30(r1)
 /* 8023E758 00207D18  41 82 00 20 */	beq .L_8023E778
-/* 8023E75C 00207D1C  3C 80 80 50 */	lis r4, lbl_80506B70@ha
+/* 8023E75C 00207D1C  3C 80 80 50 */	lis r4, CfNandManager_strpool@ha
 /* 8023E760 00207D20  80 AD 90 38 */	lwz r5, lbl_806651B8@sda21(r13)
 /* 8023E764 00207D24  38 61 00 10 */	addi r3, r1, 0x10
-/* 8023E768 00207D28  38 84 6B 70 */	addi r4, r4, lbl_80506B70@l
+/* 8023E768 00207D28  38 84 6B 70 */	addi r4, r4, CfNandManager_strpool@l
 /* 8023E76C 00207D2C  4C C6 31 82 */	crclr 6
 /* 8023E770 00207D30  4B E0 58 49 */	bl func_80043FB8
 /* 8023E774 00207D34  48 00 00 28 */	b .L_8023E79C
 .L_8023E778:
-/* 8023E778 00207D38  3C 60 80 50 */	lis r3, lbl_80506B70@ha
-/* 8023E77C 00207D3C  38 63 6B 70 */	addi r3, r3, lbl_80506B70@l
+/* 8023E778 00207D38  3C 60 80 50 */	lis r3, CfNandManager_strpool@ha
+/* 8023E77C 00207D3C  38 63 6B 70 */	addi r3, r3, CfNandManager_strpool@l
 /* 8023E780 00207D40  3B A3 00 07 */	addi r29, r3, 7
 /* 8023E784 00207D44  7F A3 EB 78 */	mr r3, r29
 /* 8023E788 00207D48  48 07 AE 31 */	bl strlen
@@ -3237,10 +3237,10 @@
 /* 8023EB7C 0020813C  7C 08 02 A6 */	mflr r0
 /* 8023EB80 00208140  90 01 00 74 */	stw r0, 0x74(r1)
 /* 8023EB84 00208144  BE C1 00 48 */	stmw r22, 0x48(r1)
-/* 8023EB88 00208148  3F 20 80 50 */	lis r25, lbl_80506B70@ha
+/* 8023EB88 00208148  3F 20 80 50 */	lis r25, CfNandManager_strpool@ha
 /* 8023EB8C 0020814C  7C 7C 1B 78 */	mr r28, r3
 /* 8023EB90 00208150  3F 60 80 66 */	lis r27, lbl_806625C0@ha
-/* 8023EB94 00208154  3B 59 6B 70 */	addi r26, r25, lbl_80506B70@l
+/* 8023EB94 00208154  3B 59 6B 70 */	addi r26, r25, CfNandManager_strpool@l
 /* 8023EB98 00208158  3B 00 00 00 */	li r24, 0
 /* 8023EB9C 0020815C  3B C0 3F FF */	li r30, 0x3fff
 /* 8023EBA0 00208160  3B A0 00 01 */	li r29, 1
@@ -3283,7 +3283,7 @@
 /* 8023EC30 002081F0  41 82 00 1C */	beq .L_8023EC4C
 /* 8023EC34 002081F4  80 AD 90 38 */	lwz r5, lbl_806651B8@sda21(r13)
 /* 8023EC38 002081F8  38 61 00 20 */	addi r3, r1, 0x20
-/* 8023EC3C 002081FC  38 99 6B 70 */	addi r4, r25, lbl_80506B70@l
+/* 8023EC3C 002081FC  38 99 6B 70 */	addi r4, r25, CfNandManager_strpool@l
 /* 8023EC40 00208200  4C C6 31 82 */	crclr 6
 /* 8023EC44 00208204  4B E0 53 75 */	bl func_80043FB8
 /* 8023EC48 00208208  48 00 00 20 */	b .L_8023EC68
@@ -5154,8 +5154,8 @@ CTTask_cf_CfNandManager_typestr:
 	.balign 4
 
 
-.global lbl_80506B70
-lbl_80506B70:
+.global CfNandManager_strpool
+CfNandManager_strpool:
 	.asciz "%s%02d"
 	.asciz "banner.bin"
 	.asciz "name"

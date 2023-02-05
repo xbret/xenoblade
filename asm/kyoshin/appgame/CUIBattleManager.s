@@ -116,9 +116,9 @@
 /* 8012E140 000F7700  90 1D 00 44 */	stw r0, 0x44(r29)
 /* 8012E144 000F7704  48 30 62 5D */	bl func_804343A0
 /* 8012E148 000F7708  3C 80 00 04 */	lis r4, 0x00044800@ha
-/* 8012E14C 000F770C  3C A0 80 50 */	lis r5, lbl_804FB76C@ha
+/* 8012E14C 000F770C  3C A0 80 50 */	lis r5, CUIBattleManager_strpool@ha
 /* 8012E150 000F7710  38 84 48 00 */	addi r4, r4, 0x00044800@l
-/* 8012E154 000F7714  38 A5 B7 6C */	addi r5, r5, lbl_804FB76C@l
+/* 8012E154 000F7714  38 A5 B7 6C */	addi r5, r5, CUIBattleManager_strpool@l
 /* 8012E158 000F7718  48 30 5E E9 */	bl func_80434040
 /* 8012E15C 000F771C  90 7D 00 EC */	stw r3, 0xec(r29)
 /* 8012E160 000F7720  4B FD 42 71 */	bl func_801023D0
@@ -900,9 +900,9 @@
 /* 8012EC14 000F81D4  41 82 00 08 */	beq .L_8012EC1C
 /* 8012EC18 000F81D8  38 BE 00 54 */	addi r5, r30, 0x54
 .L_8012EC1C:
-/* 8012EC1C 000F81DC  3C 80 80 50 */	lis r4, lbl_804FB76C@ha
+/* 8012EC1C 000F81DC  3C 80 80 50 */	lis r4, CUIBattleManager_strpool@ha
 /* 8012EC20 000F81E0  80 7E 00 EC */	lwz r3, 0xec(r30)
-/* 8012EC24 000F81E4  38 84 B7 6C */	addi r4, r4, lbl_804FB76C@l
+/* 8012EC24 000F81E4  38 84 B7 6C */	addi r4, r4, CUIBattleManager_strpool@l
 /* 8012EC28 000F81E8  38 C0 00 00 */	li r6, 0
 /* 8012EC2C 000F81EC  38 84 00 0A */	addi r4, r4, 0xa
 /* 8012EC30 000F81F0  38 E0 00 00 */	li r7, 0
@@ -917,9 +917,9 @@
 /* 8012EC50 000F8210  41 82 00 08 */	beq .L_8012EC58
 /* 8012EC54 000F8214  38 BE 00 54 */	addi r5, r30, 0x54
 .L_8012EC58:
-/* 8012EC58 000F8218  3C 80 80 50 */	lis r4, lbl_804FB76C@ha
+/* 8012EC58 000F8218  3C 80 80 50 */	lis r4, CUIBattleManager_strpool@ha
 /* 8012EC5C 000F821C  80 7E 00 EC */	lwz r3, 0xec(r30)
-/* 8012EC60 000F8220  38 84 B7 6C */	addi r4, r4, lbl_804FB76C@l
+/* 8012EC60 000F8220  38 84 B7 6C */	addi r4, r4, CUIBattleManager_strpool@l
 /* 8012EC64 000F8224  38 C0 00 00 */	li r6, 0
 /* 8012EC68 000F8228  38 84 00 21 */	addi r4, r4, 0x21
 /* 8012EC6C 000F822C  38 E0 00 00 */	li r7, 0
@@ -952,9 +952,9 @@
 /* 8012ECD0 000F8290  40 82 00 08 */	bne .L_8012ECD8
 /* 8012ECD4 000F8294  3B 20 00 0C */	li r25, 0xc
 .L_8012ECD8:
-/* 8012ECD8 000F8298  3C 80 80 50 */	lis r4, lbl_804FB76C@ha
+/* 8012ECD8 000F8298  3C 80 80 50 */	lis r4, CUIBattleManager_strpool@ha
 /* 8012ECDC 000F829C  38 7F 01 78 */	addi r3, r31, 0x178
-/* 8012ECE0 000F82A0  38 84 B7 6C */	addi r4, r4, lbl_804FB76C@l
+/* 8012ECE0 000F82A0  38 84 B7 6C */	addi r4, r4, CUIBattleManager_strpool@l
 /* 8012ECE4 000F82A4  57 25 06 3E */	clrlwi r5, r25, 0x18
 /* 8012ECE8 000F82A8  38 84 00 37 */	addi r4, r4, 0x37
 /* 8012ECEC 000F82AC  4C C6 31 82 */	crclr 6
@@ -971,9 +971,9 @@
 /* 8012ED14 000F82D4  48 31 FA 81 */	bl func_8044E794
 /* 8012ED18 000F82D8  90 7C 00 94 */	stw r3, 0x94(r28)
 .L_8012ED1C:
-/* 8012ED1C 000F82DC  3C 80 80 50 */	lis r4, lbl_804FB76C@ha
+/* 8012ED1C 000F82DC  3C 80 80 50 */	lis r4, CUIBattleManager_strpool@ha
 /* 8012ED20 000F82E0  7F 45 D3 78 */	mr r5, r26
-/* 8012ED24 000F82E4  38 84 B7 6C */	addi r4, r4, lbl_804FB76C@l
+/* 8012ED24 000F82E4  38 84 B7 6C */	addi r4, r4, CUIBattleManager_strpool@l
 /* 8012ED28 000F82E8  38 7F 00 F8 */	addi r3, r31, 0xf8
 /* 8012ED2C 000F82EC  38 84 00 50 */	addi r4, r4, 0x50
 /* 8012ED30 000F82F0  4C C6 31 82 */	crclr 6
@@ -1396,9 +1396,9 @@
 /* 8012F2EC 000F88AC  3B 80 00 00 */	li r28, 0
 /* 8012F2F0 000F88B0  93 85 00 04 */	stw r28, 4(r5)
 /* 8012F2F4 000F88B4  48 32 FE C1 */	bl func_8045F1B4
-/* 8012F2F8 000F88B8  3C A0 80 50 */	lis r5, lbl_804FB76C@ha
+/* 8012F2F8 000F88B8  3C A0 80 50 */	lis r5, CUIBattleManager_strpool@ha
 /* 8012F2FC 000F88BC  90 7E 00 88 */	stw r3, 0x88(r30)
-/* 8012F300 000F88C0  38 A5 B7 6C */	addi r5, r5, lbl_804FB76C@l
+/* 8012F300 000F88C0  38 A5 B7 6C */	addi r5, r5, CUIBattleManager_strpool@l
 /* 8012F304 000F88C4  7F A4 EB 78 */	mr r4, r29
 /* 8012F308 000F88C8  38 A5 00 6A */	addi r5, r5, 0x6a
 /* 8012F30C 000F88CC  48 2D AB FD */	bl Attach__Q34nw4r3lyt19ArcResourceAccessorFPvPCc
@@ -1413,9 +1413,9 @@
 /* 8012F32C 000F88EC  3B 80 00 00 */	li r28, 0
 /* 8012F330 000F88F0  93 83 00 04 */	stw r28, 4(r3)
 /* 8012F334 000F88F4  48 32 FE 81 */	bl func_8045F1B4
-/* 8012F338 000F88F8  3C A0 80 50 */	lis r5, lbl_804FB76C@ha
+/* 8012F338 000F88F8  3C A0 80 50 */	lis r5, CUIBattleManager_strpool@ha
 /* 8012F33C 000F88FC  90 7E 00 90 */	stw r3, 0x90(r30)
-/* 8012F340 000F8900  38 A5 B7 6C */	addi r5, r5, lbl_804FB76C@l
+/* 8012F340 000F8900  38 A5 B7 6C */	addi r5, r5, CUIBattleManager_strpool@l
 /* 8012F344 000F8904  7F A4 EB 78 */	mr r4, r29
 /* 8012F348 000F8908  38 A5 00 6A */	addi r5, r5, 0x6a
 /* 8012F34C 000F890C  48 2D AB BD */	bl Attach__Q34nw4r3lyt19ArcResourceAccessorFPvPCc
@@ -1423,9 +1423,9 @@
 /* 8012F354 000F8914  38 60 00 01 */	li r3, 1
 /* 8012F358 000F8918  48 00 01 EC */	b .L_8012F544
 .L_8012F35C:
-/* 8012F35C 000F891C  3F A0 80 50 */	lis r29, lbl_804FB76C@ha
+/* 8012F35C 000F891C  3F A0 80 50 */	lis r29, CUIBattleManager_strpool@ha
 /* 8012F360 000F8920  7F DA F3 78 */	mr r26, r30
-/* 8012F364 000F8924  3B BD B7 6C */	addi r29, r29, lbl_804FB76C@l
+/* 8012F364 000F8924  3B BD B7 6C */	addi r29, r29, CUIBattleManager_strpool@l
 /* 8012F368 000F8928  3B E0 00 00 */	li r31, 0
 /* 8012F36C 000F892C  3B 20 00 00 */	li r25, 0
 /* 8012F370 000F8930  3B 80 00 00 */	li r28, 0
@@ -1444,9 +1444,9 @@
 /* 8012F3A0 000F8960  83 A3 00 04 */	lwz r29, 4(r3)
 /* 8012F3A4 000F8964  90 03 00 04 */	stw r0, 4(r3)
 /* 8012F3A8 000F8968  48 32 FE 0D */	bl func_8045F1B4
-/* 8012F3AC 000F896C  3C A0 80 50 */	lis r5, lbl_804FB76C@ha
+/* 8012F3AC 000F896C  3C A0 80 50 */	lis r5, CUIBattleManager_strpool@ha
 /* 8012F3B0 000F8970  90 7C 00 A0 */	stw r3, 0xa0(r28)
-/* 8012F3B4 000F8974  38 A5 B7 6C */	addi r5, r5, lbl_804FB76C@l
+/* 8012F3B4 000F8974  38 A5 B7 6C */	addi r5, r5, CUIBattleManager_strpool@l
 /* 8012F3B8 000F8978  7F A4 EB 78 */	mr r4, r29
 /* 8012F3BC 000F897C  38 A5 00 6A */	addi r5, r5, 0x6a
 /* 8012F3C0 000F8980  48 2D AB 49 */	bl Attach__Q34nw4r3lyt19ArcResourceAccessorFPvPCc
@@ -1497,9 +1497,9 @@
 /* 8012F46C 000F8A2C  7C 9E 02 14 */	add r4, r30, r0
 /* 8012F470 000F8A30  90 64 00 B8 */	stw r3, 0xb8(r4)
 .L_8012F474:
-/* 8012F474 000F8A34  3C 80 80 50 */	lis r4, lbl_804FB76C@ha
+/* 8012F474 000F8A34  3C 80 80 50 */	lis r4, CUIBattleManager_strpool@ha
 /* 8012F478 000F8A38  80 6D A8 00 */	lwz r3, lbl_80666980@sda21(r13)
-/* 8012F47C 000F8A3C  38 84 B7 6C */	addi r4, r4, lbl_804FB76C@l
+/* 8012F47C 000F8A3C  38 84 B7 6C */	addi r4, r4, CUIBattleManager_strpool@l
 /* 8012F480 000F8A40  7F 65 DB 78 */	mr r5, r27
 /* 8012F484 000F8A44  38 84 00 79 */	addi r4, r4, 0x79
 /* 8012F488 000F8A48  48 00 6D CD */	bl func_80136254
@@ -1520,9 +1520,9 @@
 /* 8012F4C4 000F8A84  7C 9E 02 14 */	add r4, r30, r0
 /* 8012F4C8 000F8A88  90 64 00 BC */	stw r3, 0xbc(r4)
 .L_8012F4CC:
-/* 8012F4CC 000F8A8C  3C 80 80 50 */	lis r4, lbl_804FB76C@ha
+/* 8012F4CC 000F8A8C  3C 80 80 50 */	lis r4, CUIBattleManager_strpool@ha
 /* 8012F4D0 000F8A90  80 6D A8 00 */	lwz r3, lbl_80666980@sda21(r13)
-/* 8012F4D4 000F8A94  38 84 B7 6C */	addi r4, r4, lbl_804FB76C@l
+/* 8012F4D4 000F8A94  38 84 B7 6C */	addi r4, r4, CUIBattleManager_strpool@l
 /* 8012F4D8 000F8A98  7F 65 DB 78 */	mr r5, r27
 /* 8012F4DC 000F8A9C  38 84 00 84 */	addi r4, r4, 0x84
 /* 8012F4E0 000F8AA0  48 00 6D 75 */	bl func_80136254
@@ -3510,11 +3510,11 @@
 /* 80130F1C 000FA4DC  28 00 00 07 */	cmplwi r0, 7
 /* 80130F20 000FA4E0  40 82 00 2C */	bne .L_80130F4C
 /* 80130F24 000FA4E4  38 00 00 05 */	li r0, 5
-/* 80130F28 000FA4E8  3C 80 80 50 */	lis r4, lbl_804FB8E0@ha
+/* 80130F28 000FA4E8  3C 80 80 50 */	lis r4, strpool_804FB8E0@ha
 /* 80130F2C 000FA4EC  98 06 00 00 */	stb r0, 0(r6)
 /* 80130F30 000FA4F0  7F A5 EB 78 */	mr r5, r29
 /* 80130F34 000FA4F4  38 66 00 E6 */	addi r3, r6, 0xe6
-/* 80130F38 000FA4F8  38 84 B8 E0 */	addi r4, r4, lbl_804FB8E0@l
+/* 80130F38 000FA4F8  38 84 B8 E0 */	addi r4, r4, strpool_804FB8E0@l
 /* 80130F3C 000FA4FC  3B C0 00 01 */	li r30, 1
 /* 80130F40 000FA500  4C C6 31 82 */	crclr 6
 /* 80130F44 000FA504  48 19 00 F5 */	bl sprintf
@@ -3667,17 +3667,17 @@
 /* 80131130 000FA6F0  28 00 00 07 */	cmplwi r0, 7
 /* 80131134 000FA6F4  40 82 00 40 */	bne .L_80131174
 /* 80131138 000FA6F8  38 00 00 06 */	li r0, 6
-/* 8013113C 000FA6FC  3F 80 80 50 */	lis r28, lbl_804FB8E0@ha
+/* 8013113C 000FA6FC  3F 80 80 50 */	lis r28, strpool_804FB8E0@ha
 /* 80131140 000FA700  98 1A 00 00 */	stb r0, 0(r26)
 /* 80131144 000FA704  7F C5 F3 78 */	mr r5, r30
 /* 80131148 000FA708  38 7A 00 E6 */	addi r3, r26, 0xe6
-/* 8013114C 000FA70C  38 9C B8 E0 */	addi r4, r28, lbl_804FB8E0@l
+/* 8013114C 000FA70C  38 9C B8 E0 */	addi r4, r28, strpool_804FB8E0@l
 /* 80131150 000FA710  3B 60 00 01 */	li r27, 1
 /* 80131154 000FA714  4C C6 31 82 */	crclr 6
 /* 80131158 000FA718  48 18 FE E1 */	bl sprintf
 /* 8013115C 000FA71C  7F E5 FB 78 */	mr r5, r31
 /* 80131160 000FA720  38 7A 01 26 */	addi r3, r26, 0x126
-/* 80131164 000FA724  38 9C B8 E0 */	addi r4, r28, lbl_804FB8E0@l
+/* 80131164 000FA724  38 9C B8 E0 */	addi r4, r28, strpool_804FB8E0@l
 /* 80131168 000FA728  4C C6 31 82 */	crclr 6
 /* 8013116C 000FA72C  48 18 FE CD */	bl sprintf
 /* 80131170 000FA730  48 00 00 0C */	b .L_8013117C
@@ -4594,8 +4594,8 @@ CTTask_CUIBattleManager_typestr:
 	.balign 4
 
 
-.global lbl_804FB76C
-lbl_804FB76C:
+.global CUIBattleManager_strpool
+CUIBattleManager_strpool:
 	.asciz "ARTS_FACE"
 	.asciz "menu/tpl/arts_elem.arc"
 	.asciz "menu/tpl/arts_sys.arc"

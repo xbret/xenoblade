@@ -52,7 +52,7 @@
 /* 8027E560 00247B20  90 1D 00 70 */	stw r0, 0x70(r29)
 /* 8027E564 00247B24  93 FD 00 74 */	stw r31, 0x74(r29)
 /* 8027E568 00247B28  93 FD 00 78 */	stw r31, 0x78(r29)
-/* 8027E56C 00247B2C  48 1E 0F F9 */	bl func_8045F564
+/* 8027E56C 00247B2C  48 1E 0F F9 */	bl __ct__8045F564
 /* 8027E570 00247B30  93 DD 00 8C */	stw r30, 0x8c(r29)
 /* 8027E574 00247B34  38 60 00 01 */	li r3, 1
 /* 8027E578 00247B38  9B FD 00 90 */	stb r31, 0x90(r29)
@@ -84,7 +84,7 @@
 /* 8027E5D4 00247B94  41 82 00 38 */	beq .L_8027E60C
 /* 8027E5D8 00247B98  38 80 FF FF */	li r4, -1
 /* 8027E5DC 00247B9C  38 63 00 7C */	addi r3, r3, 0x7c
-/* 8027E5E0 00247BA0  48 1E 0F A1 */	bl func_8045F580
+/* 8027E5E0 00247BA0  48 1E 0F A1 */	bl __dt__8045F580
 /* 8027E5E4 00247BA4  2C 1E 00 00 */	cmpwi r30, 0
 /* 8027E5E8 00247BA8  41 82 00 14 */	beq .L_8027E5FC
 /* 8027E5EC 00247BAC  41 82 00 10 */	beq .L_8027E5FC
@@ -128,9 +128,9 @@
 /* 8027E66C 00247C2C  3B FE 00 6C */	addi r31, r30, 0x6c
 .L_8027E670:
 /* 8027E670 00247C30  48 1B 5D 31 */	bl func_804343A0
-/* 8027E674 00247C34  3C 80 80 51 */	lis r4, lbl_8050A4A8@ha
+/* 8027E674 00247C34  3C 80 80 51 */	lis r4, CSysWinScenarioLog_strpool@ha
 /* 8027E678 00247C38  7F E5 FB 78 */	mr r5, r31
-/* 8027E67C 00247C3C  38 84 A4 A8 */	addi r4, r4, lbl_8050A4A8@l
+/* 8027E67C 00247C3C  38 84 A4 A8 */	addi r4, r4, CSysWinScenarioLog_strpool@l
 /* 8027E680 00247C40  38 C0 00 00 */	li r6, 0
 /* 8027E684 00247C44  38 E0 00 00 */	li r7, 0
 /* 8027E688 00247C48  48 1D 01 0D */	bl func_8044E794
@@ -141,9 +141,9 @@
 /* 8027E69C 00247C5C  3B FE 00 6C */	addi r31, r30, 0x6c
 .L_8027E6A0:
 /* 8027E6A0 00247C60  4B E2 B6 F1 */	bl func_800A9D90
-/* 8027E6A4 00247C64  3C 80 80 51 */	lis r4, lbl_8050A4A8@ha
+/* 8027E6A4 00247C64  3C 80 80 51 */	lis r4, CSysWinScenarioLog_strpool@ha
 /* 8027E6A8 00247C68  7F E5 FB 78 */	mr r5, r31
-/* 8027E6AC 00247C6C  38 84 A4 A8 */	addi r4, r4, lbl_8050A4A8@l
+/* 8027E6AC 00247C6C  38 84 A4 A8 */	addi r4, r4, CSysWinScenarioLog_strpool@l
 /* 8027E6B0 00247C70  38 C0 00 00 */	li r6, 0
 /* 8027E6B4 00247C74  38 84 00 16 */	addi r4, r4, 0x16
 /* 8027E6B8 00247C78  38 E0 00 00 */	li r7, 0
@@ -443,9 +443,9 @@
 /* 8027EAB8 00248078  80 6D B0 7C */	lwz r3, lbl_806671FC@sda21(r13)
 /* 8027EABC 0024807C  3B A0 00 01 */	li r29, 1
 /* 8027EAC0 00248080  4B DB C7 2D */	bl func_8003B1EC
-/* 8027EAC4 00248084  3F E0 80 51 */	lis r31, lbl_8050A4A8@ha
+/* 8027EAC4 00248084  3F E0 80 51 */	lis r31, CSysWinScenarioLog_strpool@ha
 /* 8027EAC8 00248088  54 7C 04 3E */	clrlwi r28, r3, 0x10
-/* 8027EACC 0024808C  3B FF A4 A8 */	addi r31, r31, lbl_8050A4A8@l
+/* 8027EACC 0024808C  3B FF A4 A8 */	addi r31, r31, CSysWinScenarioLog_strpool@l
 /* 8027EAD0 00248090  3B 60 00 01 */	li r27, 1
 /* 8027EAD4 00248094  48 00 00 2C */	b .L_8027EB00
 .L_8027EAD8:
@@ -465,9 +465,9 @@
 /* 8027EB04 002480C4  7C 00 E0 40 */	cmplw r0, r28
 /* 8027EB08 002480C8  40 81 FF D0 */	ble .L_8027EAD8
 .L_8027EB0C:
-/* 8027EB0C 002480CC  3F E0 80 51 */	lis r31, lbl_8050A4A8@ha
+/* 8027EB0C 002480CC  3F E0 80 51 */	lis r31, CSysWinScenarioLog_strpool@ha
 /* 8027EB10 002480D0  38 A0 00 19 */	li r5, 0x19
-/* 8027EB14 002480D4  3B FF A4 A8 */	addi r31, r31, lbl_8050A4A8@l
+/* 8027EB14 002480D4  3B FF A4 A8 */	addi r31, r31, CSysWinScenarioLog_strpool@l
 /* 8027EB18 002480D8  38 7F 00 34 */	addi r3, r31, 0x34
 /* 8027EB1C 002480DC  38 9F 00 3D */	addi r4, r31, 0x3d
 /* 8027EB20 002480E0  4B EB 76 71 */	bl func_80136190
@@ -501,9 +501,9 @@
 /* 8027EB90 00248150  41 82 00 08 */	beq .L_8027EB98
 /* 8027EB94 00248154  38 9F 00 7B */	addi r4, r31, 0x7b
 .L_8027EB98:
-/* 8027EB98 00248158  3F E0 80 51 */	lis r31, lbl_8050A4A8@ha
+/* 8027EB98 00248158  3F E0 80 51 */	lis r31, CSysWinScenarioLog_strpool@ha
 /* 8027EB9C 0024815C  38 A0 00 2C */	li r5, 0x2c
-/* 8027EBA0 00248160  3B FF A4 A8 */	addi r31, r31, lbl_8050A4A8@l
+/* 8027EBA0 00248160  3B FF A4 A8 */	addi r31, r31, CSysWinScenarioLog_strpool@l
 /* 8027EBA4 00248164  38 7F 00 61 */	addi r3, r31, 0x61
 /* 8027EBA8 00248168  4B EB 74 C5 */	bl func_8013606C
 /* 8027EBAC 0024816C  54 63 04 3E */	clrlwi r3, r3, 0x10
@@ -575,9 +575,9 @@
 /* 8027ECA4 00248264  7C 00 20 40 */	cmplw r0, r4
 /* 8027ECA8 00248268  40 82 01 5C */	bne .L_8027EE04
 /* 8027ECAC 0024826C  48 1B 56 F5 */	bl func_804343A0
-/* 8027ECB0 00248270  3C C0 80 51 */	lis r6, lbl_8050A4A8@ha
+/* 8027ECB0 00248270  3C C0 80 51 */	lis r6, CSysWinScenarioLog_strpool@ha
 /* 8027ECB4 00248274  3C A0 00 01 */	lis r5, 1
-/* 8027ECB8 00248278  38 C6 A4 A8 */	addi r6, r6, lbl_8050A4A8@l
+/* 8027ECB8 00248278  38 C6 A4 A8 */	addi r6, r6, CSysWinScenarioLog_strpool@l
 /* 8027ECBC 0024827C  7C 64 1B 78 */	mr r4, r3
 /* 8027ECC0 00248280  38 7D 00 7C */	addi r3, r29, 0x7c
 /* 8027ECC4 00248284  38 A5 80 00 */	addi r5, r5, -0x8000
@@ -603,9 +603,9 @@
 .L_8027ED14:
 /* 8027ED14 002482D4  90 7D 00 94 */	stw r3, 0x94(r29)
 /* 8027ED18 002482D8  48 1E 04 9D */	bl func_8045F1B4
-/* 8027ED1C 002482DC  3F E0 80 51 */	lis r31, lbl_8050A4A8@ha
+/* 8027ED1C 002482DC  3F E0 80 51 */	lis r31, CSysWinScenarioLog_strpool@ha
 /* 8027ED20 002482E0  90 7D 00 98 */	stw r3, 0x98(r29)
-/* 8027ED24 002482E4  3B FF A4 A8 */	addi r31, r31, lbl_8050A4A8@l
+/* 8027ED24 002482E4  3B FF A4 A8 */	addi r31, r31, CSysWinScenarioLog_strpool@l
 /* 8027ED28 002482E8  7F C4 F3 78 */	mr r4, r30
 /* 8027ED2C 002482EC  38 BF 00 AA */	addi r5, r31, 0xaa
 /* 8027ED30 002482F0  48 18 B1 D9 */	bl Attach__Q34nw4r3lyt19ArcResourceAccessorFPvPCc
@@ -658,7 +658,7 @@
 /* 8027EDEC 002483AC  48 1E 0A 25 */	bl func_8045F810
 /* 8027EDF0 002483B0  38 61 00 08 */	addi r3, r1, 8
 /* 8027EDF4 002483B4  38 80 FF FF */	li r4, -1
-/* 8027EDF8 002483B8  48 1E 0A D1 */	bl func_8045F8C8
+/* 8027EDF8 002483B8  48 1E 0A D1 */	bl __dt__8045F8C8
 /* 8027EDFC 002483BC  38 60 00 01 */	li r3, 1
 /* 8027EE00 002483C0  48 00 00 4C */	b .L_8027EE4C
 .L_8027EE04:
@@ -671,8 +671,8 @@
 /* 8027EE1C 002483DC  93 E5 00 04 */	stw r31, 4(r5)
 /* 8027EE20 002483E0  4B DB BC 59 */	bl func_8003AA78
 /* 8027EE24 002483E4  4B DB BC 11 */	bl func_8003AA34
-/* 8027EE28 002483E8  3C 60 80 51 */	lis r3, lbl_8050A4A8@ha
-/* 8027EE2C 002483EC  38 63 A4 A8 */	addi r3, r3, lbl_8050A4A8@l
+/* 8027EE28 002483E8  3C 60 80 51 */	lis r3, CSysWinScenarioLog_strpool@ha
+/* 8027EE2C 002483EC  38 63 A4 A8 */	addi r3, r3, CSysWinScenarioLog_strpool@l
 /* 8027EE30 002483F0  38 63 00 E3 */	addi r3, r3, 0xe3
 /* 8027EE34 002483F4  4B DB BC 71 */	bl func_8003AAA4
 /* 8027EE38 002483F8  90 6D B0 7C */	stw r3, lbl_806671FC@sda21(r13)
@@ -3394,8 +3394,8 @@ CSysWinScenarioLog_typestr:
 	.4byte 0
 
 
-.global lbl_8050A4A8
-lbl_8050A4A8:
+.global CSysWinScenarioLog_strpool
+CSysWinScenarioLog_strpool:
 	.asciz "/menu/ScenarioLog.arc"
 	.asciz "/common/jp/bdat_slog.bin"
 	.asciz "flag"
@@ -3563,7 +3563,7 @@ lbl_80667208:
 	.4byte 0x00000000
 	.4byte 0x0780001D
 	.4byte 0x0000007C
-	.4byte func_8045F580
+	.4byte __dt__8045F580
 	.4byte 0x0680001D
 	.4byte 0x00000070
 	.4byte func_8004031C
@@ -3583,7 +3583,7 @@ lbl_80667208:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x0000007C
-	.4byte func_8045F580
+	.4byte __dt__8045F580
 	.4byte 0x0680001E
 	.4byte 0x00000070
 	.4byte func_8004031C
@@ -3639,7 +3639,7 @@ lbl_80667208:
 	.4byte 0x003E0010
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte func_8045F8C8
+	.4byte __dt__8045F8C8
 .endobj "@etb_80018B88"
 
 .obj "@etb_80018BA0", local

@@ -4,7 +4,7 @@
 
 
 
-.fn func_8021A634, global
+.fn __ct__CMCCrystalInfo, global
 /* 8021A634 001E3BF4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8021A638 001E3BF8  7C 08 02 A6 */	mflr r0
 /* 8021A63C 001E3BFC  3C 80 80 54 */	lis r4, __vt__CMCCrystalInfo@ha
@@ -14,9 +14,9 @@
 /* 8021A64C 001E3C0C  7C 7F 1B 78 */	mr r31, r3
 /* 8021A650 001E3C10  90 83 00 00 */	stw r4, 0(r3)
 /* 8021A654 001E3C14  38 63 00 04 */	addi r3, r3, 4
-/* 8021A658 001E3C18  48 24 4F 0D */	bl func_8045F564
+/* 8021A658 001E3C18  48 24 4F 0D */	bl __ct__8045F564
 /* 8021A65C 001E3C1C  38 7F 00 14 */	addi r3, r31, 0x14
-/* 8021A660 001E3C20  48 24 4F 05 */	bl func_8045F564
+/* 8021A660 001E3C20  48 24 4F 05 */	bl __ct__8045F564
 /* 8021A664 001E3C24  38 80 00 00 */	li r4, 0
 /* 8021A668 001E3C28  38 00 00 01 */	li r0, 1
 /* 8021A66C 001E3C2C  90 9F 00 24 */	stw r4, 0x24(r31)
@@ -38,9 +38,9 @@
 /* 8021A6AC 001E3C6C  7C 08 03 A6 */	mtlr r0
 /* 8021A6B0 001E3C70  38 21 00 10 */	addi r1, r1, 0x10
 /* 8021A6B4 001E3C74  4E 80 00 20 */	blr 
-.endfn func_8021A634
+.endfn __ct__CMCCrystalInfo
 
-.fn func_8021A6B8, global
+.fn __dt__CMCCrystalInfo, global
 /* 8021A6B8 001E3C78  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8021A6BC 001E3C7C  7C 08 02 A6 */	mflr r0
 /* 8021A6C0 001E3C80  2C 03 00 00 */	cmpwi r3, 0
@@ -51,10 +51,10 @@
 /* 8021A6D4 001E3C94  41 82 00 2C */	beq .L_8021A700
 /* 8021A6D8 001E3C98  38 80 FF FF */	li r4, -1
 /* 8021A6DC 001E3C9C  38 63 00 14 */	addi r3, r3, 0x14
-/* 8021A6E0 001E3CA0  48 24 4E A1 */	bl func_8045F580
+/* 8021A6E0 001E3CA0  48 24 4E A1 */	bl __dt__8045F580
 /* 8021A6E4 001E3CA4  38 7E 00 04 */	addi r3, r30, 4
 /* 8021A6E8 001E3CA8  38 80 FF FF */	li r4, -1
-/* 8021A6EC 001E3CAC  48 24 4E 95 */	bl func_8045F580
+/* 8021A6EC 001E3CAC  48 24 4E 95 */	bl __dt__8045F580
 /* 8021A6F0 001E3CB0  2C 1F 00 00 */	cmpwi r31, 0
 /* 8021A6F4 001E3CB4  40 81 00 0C */	ble .L_8021A700
 /* 8021A6F8 001E3CB8  7F C3 F3 78 */	mr r3, r30
@@ -66,7 +66,7 @@
 /* 8021A70C 001E3CCC  7C 08 03 A6 */	mtlr r0
 /* 8021A710 001E3CD0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8021A714 001E3CD4  4E 80 00 20 */	blr 
-.endfn func_8021A6B8
+.endfn __dt__CMCCrystalInfo
 
 .fn func_8021A718, global
 /* 8021A718 001E3CD8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -75,15 +75,15 @@
 /* 8021A724 001E3CE4  BF C1 00 08 */	stmw r30, 8(r1)
 /* 8021A728 001E3CE8  7C 7E 1B 78 */	mr r30, r3
 /* 8021A72C 001E3CEC  48 21 9C 75 */	bl func_804343A0
-/* 8021A730 001E3CF0  3F E0 80 50 */	lis r31, lbl_80504510@ha
+/* 8021A730 001E3CF0  3F E0 80 50 */	lis r31, CMCCrystalInfo_strpool@ha
 /* 8021A734 001E3CF4  7F C5 F3 78 */	mr r5, r30
-/* 8021A738 001E3CF8  38 9F 45 10 */	addi r4, r31, lbl_80504510@l
+/* 8021A738 001E3CF8  38 9F 45 10 */	addi r4, r31, CMCCrystalInfo_strpool@l
 /* 8021A73C 001E3CFC  38 C0 00 00 */	li r6, 0
 /* 8021A740 001E3D00  38 E0 00 00 */	li r7, 0
 /* 8021A744 001E3D04  48 23 40 51 */	bl func_8044E794
 /* 8021A748 001E3D08  90 7E 00 24 */	stw r3, 0x24(r30)
 /* 8021A74C 001E3D0C  48 21 9C 55 */	bl func_804343A0
-/* 8021A750 001E3D10  38 9F 45 10 */	addi r4, r31, lbl_80504510@l
+/* 8021A750 001E3D10  38 9F 45 10 */	addi r4, r31, CMCCrystalInfo_strpool@l
 /* 8021A754 001E3D14  7F C5 F3 78 */	mr r5, r30
 /* 8021A758 001E3D18  38 84 00 18 */	addi r4, r4, 0x18
 /* 8021A75C 001E3D1C  38 C0 00 00 */	li r6, 0
@@ -352,10 +352,10 @@
 /* 8021AAA0 001E4060  7C 08 02 A6 */	mflr r0
 /* 8021AAA4 001E4064  90 01 00 54 */	stw r0, 0x54(r1)
 /* 8021AAA8 001E4068  BF 21 00 34 */	stmw r25, 0x34(r1)
-/* 8021AAAC 001E406C  3F C0 80 50 */	lis r30, lbl_80504510@ha
+/* 8021AAAC 001E406C  3F C0 80 50 */	lis r30, CMCCrystalInfo_strpool@ha
 /* 8021AAB0 001E4070  7C 7F 1B 78 */	mr r31, r3
 /* 8021AAB4 001E4074  7C B9 2B 78 */	mr r25, r5
-/* 8021AAB8 001E4078  3B DE 45 10 */	addi r30, r30, lbl_80504510@l
+/* 8021AAB8 001E4078  3B DE 45 10 */	addi r30, r30, CMCCrystalInfo_strpool@l
 /* 8021AABC 001E407C  7C 9C 23 78 */	mr r28, r4
 /* 8021AAC0 001E4080  7C DA 33 78 */	mr r26, r6
 /* 8021AAC4 001E4084  7C FB 3B 78 */	mr r27, r7
@@ -387,9 +387,9 @@
 /* 8021AB28 001E40E8  38 AD AE 58 */	addi r5, r13, lbl_80666FD8@sda21
 .L_8021AB2C:
 /* 8021AB2C 001E40EC  4B F1 EE ED */	bl func_80139A18
-/* 8021AB30 001E40F0  3C 80 80 50 */	lis r4, lbl_80504510@ha
+/* 8021AB30 001E40F0  3C 80 80 50 */	lis r4, CMCCrystalInfo_strpool@ha
 /* 8021AB34 001E40F4  7F A5 EB 78 */	mr r5, r29
-/* 8021AB38 001E40F8  38 84 45 10 */	addi r4, r4, lbl_80504510@l
+/* 8021AB38 001E40F8  38 84 45 10 */	addi r4, r4, CMCCrystalInfo_strpool@l
 /* 8021AB3C 001E40FC  38 61 00 08 */	addi r3, r1, 8
 /* 8021AB40 001E4100  38 84 00 48 */	addi r4, r4, 0x48
 /* 8021AB44 001E4104  4C C6 31 82 */	crclr 6
@@ -411,9 +411,9 @@
 /* 8021AB80 001E4140  38 AD AE 78 */	addi r5, r13, lbl_80666FF8@sda21
 .L_8021AB84:
 /* 8021AB84 001E4144  4B F1 EE 95 */	bl func_80139A18
-/* 8021AB88 001E4148  3F C0 80 50 */	lis r30, lbl_80504510@ha
+/* 8021AB88 001E4148  3F C0 80 50 */	lis r30, CMCCrystalInfo_strpool@ha
 /* 8021AB8C 001E414C  7F A5 EB 78 */	mr r5, r29
-/* 8021AB90 001E4150  3B DE 45 10 */	addi r30, r30, lbl_80504510@l
+/* 8021AB90 001E4150  3B DE 45 10 */	addi r30, r30, CMCCrystalInfo_strpool@l
 /* 8021AB94 001E4154  38 61 00 08 */	addi r3, r1, 8
 /* 8021AB98 001E4158  38 9E 00 5A */	addi r4, r30, 0x5a
 /* 8021AB9C 001E415C  4C C6 31 82 */	crclr 6
@@ -440,9 +440,9 @@
 /* 8021ABEC 001E41AC  38 AD AE 78 */	addi r5, r13, lbl_80666FF8@sda21
 .L_8021ABF0:
 /* 8021ABF0 001E41B0  4B F1 EE 29 */	bl func_80139A18
-/* 8021ABF4 001E41B4  3F C0 80 50 */	lis r30, lbl_80504510@ha
+/* 8021ABF4 001E41B4  3F C0 80 50 */	lis r30, CMCCrystalInfo_strpool@ha
 /* 8021ABF8 001E41B8  80 6D A8 48 */	lwz r3, lbl_806669C8@sda21(r13)
-/* 8021ABFC 001E41BC  3B DE 45 10 */	addi r30, r30, lbl_80504510@l
+/* 8021ABFC 001E41BC  3B DE 45 10 */	addi r30, r30, CMCCrystalInfo_strpool@l
 /* 8021AC00 001E41C0  7F 25 CB 78 */	mr r5, r25
 /* 8021AC04 001E41C4  38 9E 00 74 */	addi r4, r30, 0x74
 /* 8021AC08 001E41C8  3B 80 00 00 */	li r28, 0
@@ -548,9 +548,9 @@
 .L_8021AD7C:
 /* 8021AD7C 001E433C  2C 1C 00 00 */	cmpwi r28, 0
 /* 8021AD80 001E4340  41 82 00 30 */	beq .L_8021ADB0
-/* 8021AD84 001E4344  3C 80 80 50 */	lis r4, lbl_80504510@ha
+/* 8021AD84 001E4344  3C 80 80 50 */	lis r4, CMCCrystalInfo_strpool@ha
 /* 8021AD88 001E4348  7F A5 EB 78 */	mr r5, r29
-/* 8021AD8C 001E434C  38 84 45 10 */	addi r4, r4, lbl_80504510@l
+/* 8021AD8C 001E434C  38 84 45 10 */	addi r4, r4, CMCCrystalInfo_strpool@l
 /* 8021AD90 001E4350  38 61 00 08 */	addi r3, r1, 8
 /* 8021AD94 001E4354  38 84 01 17 */	addi r4, r4, 0x117
 /* 8021AD98 001E4358  4C C6 31 82 */	crclr 6
@@ -572,10 +572,10 @@
 /* 8021ADC8 001E4388  7C 08 02 A6 */	mflr r0
 /* 8021ADCC 001E438C  90 01 00 44 */	stw r0, 0x44(r1)
 /* 8021ADD0 001E4390  BF 61 00 2C */	stmw r27, 0x2c(r1)
-/* 8021ADD4 001E4394  3F C0 80 50 */	lis r30, lbl_80504510@ha
+/* 8021ADD4 001E4394  3F C0 80 50 */	lis r30, CMCCrystalInfo_strpool@ha
 /* 8021ADD8 001E4398  7C 7B 1B 78 */	mr r27, r3
 /* 8021ADDC 001E439C  3B A0 00 01 */	li r29, 1
-/* 8021ADE0 001E43A0  3B DE 45 10 */	addi r30, r30, lbl_80504510@l
+/* 8021ADE0 001E43A0  3B DE 45 10 */	addi r30, r30, CMCCrystalInfo_strpool@l
 /* 8021ADE4 001E43A4  3F E0 74 69 */	lis r31, 0x7469
 .L_8021ADE8:
 /* 8021ADE8 001E43A8  38 61 00 08 */	addi r3, r1, 8
@@ -644,10 +644,10 @@
 /* 8021AED4 001E4494  7C 08 02 A6 */	mflr r0
 /* 8021AED8 001E4498  90 01 00 44 */	stw r0, 0x44(r1)
 /* 8021AEDC 001E449C  BF 81 00 30 */	stmw r28, 0x30(r1)
-/* 8021AEE0 001E44A0  3F E0 80 50 */	lis r31, lbl_80504510@ha
+/* 8021AEE0 001E44A0  3F E0 80 50 */	lis r31, CMCCrystalInfo_strpool@ha
 /* 8021AEE4 001E44A4  7C 7C 1B 78 */	mr r28, r3
 /* 8021AEE8 001E44A8  7C 9D 23 78 */	mr r29, r4
-/* 8021AEEC 001E44AC  3B FF 45 10 */	addi r31, r31, lbl_80504510@l
+/* 8021AEEC 001E44AC  3B FF 45 10 */	addi r31, r31, CMCCrystalInfo_strpool@l
 /* 8021AEF0 001E44B0  38 61 00 08 */	addi r3, r1, 8
 /* 8021AEF4 001E44B4  38 9F 01 3A */	addi r4, r31, 0x13a
 /* 8021AEF8 001E44B8  4C C6 31 82 */	crclr 6
@@ -869,10 +869,10 @@
 /* 8021B1D4 001E4794  81 8C 00 08 */	lwz r12, 8(r12)
 /* 8021B1D8 001E4798  7D 89 03 A6 */	mtctr r12
 /* 8021B1DC 001E479C  4E 80 04 21 */	bctrl 
-/* 8021B1E0 001E47A0  3C A0 80 50 */	lis r5, lbl_80504510@ha
+/* 8021B1E0 001E47A0  3C A0 80 50 */	lis r5, CMCCrystalInfo_strpool@ha
 /* 8021B1E4 001E47A4  54 64 06 3E */	clrlwi r4, r3, 0x18
 /* 8021B1E8 001E47A8  98 61 00 08 */	stb r3, 8(r1)
-/* 8021B1EC 001E47AC  3B A5 45 10 */	addi r29, r5, lbl_80504510@l
+/* 8021B1EC 001E47AC  3B A5 45 10 */	addi r29, r5, CMCCrystalInfo_strpool@l
 /* 8021B1F0 001E47B0  38 04 FF FF */	addi r0, r4, -1
 /* 8021B1F4 001E47B4  38 7D 00 6B */	addi r3, r29, 0x6b
 /* 8021B1F8 001E47B8  38 9D 00 32 */	addi r4, r29, 0x32
@@ -963,9 +963,9 @@
 /* 8021B330 001E48F0  94 05 00 08 */	stwu r0, 8(r5)
 /* 8021B334 001E48F4  42 00 FF F0 */	bdnz .L_8021B324
 /* 8021B338 001E48F8  80 04 00 04 */	lwz r0, 4(r4)
-/* 8021B33C 001E48FC  3C 60 80 50 */	lis r3, lbl_80504510@ha
+/* 8021B33C 001E48FC  3C 60 80 50 */	lis r3, CMCCrystalInfo_strpool@ha
 /* 8021B340 001E4900  90 05 00 04 */	stw r0, 4(r5)
-/* 8021B344 001E4904  3B A3 45 10 */	addi r29, r3, lbl_80504510@l
+/* 8021B344 001E4904  3B A3 45 10 */	addi r29, r3, CMCCrystalInfo_strpool@l
 /* 8021B348 001E4908  38 9D 01 56 */	addi r4, r29, 0x156
 /* 8021B34C 001E490C  38 C0 00 00 */	li r6, 0
 /* 8021B350 001E4910  80 7F 00 34 */	lwz r3, 0x34(r31)
@@ -1030,11 +1030,11 @@
 .fn func_8021B42C, global
 /* 8021B42C 001E49EC  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8021B430 001E49F0  7C 08 02 A6 */	mflr r0
-/* 8021B434 001E49F4  3C 80 80 50 */	lis r4, lbl_80504510@ha
+/* 8021B434 001E49F4  3C 80 80 50 */	lis r4, CMCCrystalInfo_strpool@ha
 /* 8021B438 001E49F8  38 C0 00 00 */	li r6, 0
 /* 8021B43C 001E49FC  90 01 00 44 */	stw r0, 0x44(r1)
 /* 8021B440 001E4A00  BF 81 00 30 */	stmw r28, 0x30(r1)
-/* 8021B444 001E4A04  3B E4 45 10 */	addi r31, r4, lbl_80504510@l
+/* 8021B444 001E4A04  3B E4 45 10 */	addi r31, r4, CMCCrystalInfo_strpool@l
 /* 8021B448 001E4A08  7C 7C 1B 78 */	mr r28, r3
 /* 8021B44C 001E4A0C  38 9F 01 56 */	addi r4, r31, 0x156
 /* 8021B450 001E4A10  38 BF 01 26 */	addi r5, r31, 0x126
@@ -1258,9 +1258,9 @@
 /* 8021B768 001E4D28  7C 00 20 40 */	cmplw r0, r4
 /* 8021B76C 001E4D2C  40 82 03 B0 */	bne .L_8021BB1C
 /* 8021B770 001E4D30  48 21 8C 31 */	bl func_804343A0
-/* 8021B774 001E4D34  3C 80 80 50 */	lis r4, lbl_80504510@ha
+/* 8021B774 001E4D34  3C 80 80 50 */	lis r4, CMCCrystalInfo_strpool@ha
 /* 8021B778 001E4D38  3C A0 00 02 */	lis r5, 0x00018000@ha
-/* 8021B77C 001E4D3C  3B A4 45 10 */	addi r29, r4, lbl_80504510@l
+/* 8021B77C 001E4D3C  3B A4 45 10 */	addi r29, r4, CMCCrystalInfo_strpool@l
 /* 8021B780 001E4D40  38 E0 00 00 */	li r7, 0
 /* 8021B784 001E4D44  7C 64 1B 78 */	mr r4, r3
 /* 8021B788 001E4D48  38 7F 00 04 */	addi r3, r31, 4
@@ -1388,9 +1388,9 @@
 /* 8021B968 001E4F28  81 8C 00 38 */	lwz r12, 0x38(r12)
 /* 8021B96C 001E4F2C  7D 89 03 A6 */	mtctr r12
 /* 8021B970 001E4F30  4E 80 04 21 */	bctrl 
-/* 8021B974 001E4F34  3F A0 80 50 */	lis r29, lbl_80504510@ha
+/* 8021B974 001E4F34  3F A0 80 50 */	lis r29, CMCCrystalInfo_strpool@ha
 /* 8021B978 001E4F38  38 A0 00 18 */	li r5, 0x18
-/* 8021B97C 001E4F3C  3B BD 45 10 */	addi r29, r29, lbl_80504510@l
+/* 8021B97C 001E4F3C  3B BD 45 10 */	addi r29, r29, CMCCrystalInfo_strpool@l
 /* 8021B980 001E4F40  38 7D 00 6B */	addi r3, r29, 0x6b
 /* 8021B984 001E4F44  38 9D 00 32 */	addi r4, r29, 0x32
 /* 8021B988 001E4F48  4B F1 A8 09 */	bl func_80136190
@@ -1491,7 +1491,7 @@
 /* 8021BB04 001E50C4  48 24 3D 0D */	bl func_8045F810
 /* 8021BB08 001E50C8  38 61 00 0C */	addi r3, r1, 0xc
 /* 8021BB0C 001E50CC  38 80 FF FF */	li r4, -1
-/* 8021BB10 001E50D0  48 24 3D B9 */	bl func_8045F8C8
+/* 8021BB10 001E50D0  48 24 3D B9 */	bl __dt__8045F8C8
 /* 8021BB14 001E50D4  38 60 00 01 */	li r3, 1
 /* 8021BB18 001E50D8  48 00 00 98 */	b .L_8021BBB0
 .L_8021BB1C:
@@ -1499,9 +1499,9 @@
 /* 8021BB20 001E50E0  7C 00 20 40 */	cmplw r0, r4
 /* 8021BB24 001E50E4  40 82 00 88 */	bne .L_8021BBAC
 /* 8021BB28 001E50E8  48 21 88 79 */	bl func_804343A0
-/* 8021BB2C 001E50EC  3F A0 80 50 */	lis r29, lbl_80504510@ha
+/* 8021BB2C 001E50EC  3F A0 80 50 */	lis r29, CMCCrystalInfo_strpool@ha
 /* 8021BB30 001E50F0  7C 64 1B 78 */	mr r4, r3
-/* 8021BB34 001E50F4  3B BD 45 10 */	addi r29, r29, lbl_80504510@l
+/* 8021BB34 001E50F4  3B BD 45 10 */	addi r29, r29, CMCCrystalInfo_strpool@l
 /* 8021BB38 001E50F8  38 7F 00 14 */	addi r3, r31, 0x14
 /* 8021BB3C 001E50FC  38 DD 02 CC */	addi r6, r29, 0x2cc
 /* 8021BB40 001E5100  38 A0 01 00 */	li r5, 0x100
@@ -1528,7 +1528,7 @@
 /* 8021BB94 001E5154  48 24 3C 7D */	bl func_8045F810
 /* 8021BB98 001E5158  38 61 00 08 */	addi r3, r1, 8
 /* 8021BB9C 001E515C  38 80 FF FF */	li r4, -1
-/* 8021BBA0 001E5160  48 24 3D 29 */	bl func_8045F8C8
+/* 8021BBA0 001E5160  48 24 3D 29 */	bl __dt__8045F8C8
 /* 8021BBA4 001E5164  38 60 00 01 */	li r3, 1
 /* 8021BBA8 001E5168  48 00 00 08 */	b .L_8021BBB0
 .L_8021BBAC:
@@ -1604,8 +1604,8 @@ CMCCrystalInfo_typestr:
 	.balign 4
 
 
-.global lbl_80504510
-lbl_80504510:
+.global CMCCrystalInfo_strpool
+CMCCrystalInfo_strpool:
 	.asciz "/menu/McCrystalInfo.arc"
 	.asciz "/menu/tpl/CrystalIcon.arc"
 	.asciz "name"
@@ -1662,7 +1662,7 @@ lbl_80504510:
 __vt__CMCCrystalInfo:
 	.4byte __RTTI__CMCCrystalInfo
 	.4byte 0
-	.4byte func_8021A6B8
+	.4byte __dt__CMCCrystalInfo
 	.4byte func_80039E28
 	.4byte func_8021B74C
 	.4byte func_80039E18
@@ -1763,7 +1763,7 @@ lbl_80667000:
 	.4byte 0x00000000
 	.4byte 0x0780001F
 	.4byte 0x00000004
-	.4byte func_8045F580
+	.4byte __dt__8045F580
 	.4byte 0x8680001F
 	.4byte 0x00000000
 	.4byte __dt__IWorkEvent
@@ -1777,7 +1777,7 @@ lbl_80667000:
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x00000014
-	.4byte func_8045F580
+	.4byte __dt__8045F580
 .endobj "@etb_80013E3C"
 
 .obj "@etb_80013E58", local
@@ -1915,9 +1915,9 @@ lbl_80667000:
 	.4byte 0x000A0020
 	.4byte 0x00000000
 	.4byte 0x8200000C
-	.4byte func_8045F8C8
+	.4byte __dt__8045F8C8
 	.4byte 0x82000008
-	.4byte func_8045F8C8
+	.4byte __dt__8045F8C8
 .endobj "@etb_80013F00"
 
 .obj "@etb_80013F28", local
@@ -1932,14 +1932,14 @@ lbl_80667000:
 
 .obj "@eti_8002D7A0", local
 .hidden "@eti_8002D7A0"
-	.4byte func_8021A634
+	.4byte __ct__CMCCrystalInfo
 	.4byte 0x00000084
 	.4byte "@etb_80013E0C"
 .endobj "@eti_8002D7A0"
 
 .obj "@eti_8002D7AC", local
 .hidden "@eti_8002D7AC"
-	.4byte func_8021A6B8
+	.4byte __dt__CMCCrystalInfo
 	.4byte 0x00000060
 	.4byte "@etb_80013E3C"
 .endobj "@eti_8002D7AC"

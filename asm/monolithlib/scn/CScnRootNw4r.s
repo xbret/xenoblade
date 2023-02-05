@@ -1029,8 +1029,8 @@ CScnRootNw4r_typestr:
 	.balign 4
 
 
-.global lbl_80527908
-lbl_80527908:
+.global CScnRootNw4r_strpool
+CScnRootNw4r_strpool:
 	.asciz "NW4R Mem"
 	.asciz "NW4R Mem(P)"
 	.asciz "NW4R Mem(S)"

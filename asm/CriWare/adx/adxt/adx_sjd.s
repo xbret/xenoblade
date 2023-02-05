@@ -405,8 +405,8 @@
 /* 8037FF34 003494F4  48 00 71 CD */	bl func_80387100
 /* 8037FF38 003494F8  2C 03 00 00 */	cmpwi r3, 0
 /* 8037FF3C 003494FC  40 82 00 14 */	bne .L_8037FF50
-/* 8037FF40 00349500  3C 60 80 52 */	lis r3, lbl_80519750@ha
-/* 8037FF44 00349504  38 63 97 50 */	addi r3, r3, lbl_80519750@l
+/* 8037FF40 00349500  3C 60 80 52 */	lis r3, adx_sjd_strpool@ha
+/* 8037FF44 00349504  38 63 97 50 */	addi r3, r3, adx_sjd_strpool@l
 /* 8037FF48 00349508  38 83 00 1E */	addi r4, r3, 0x1e
 /* 8037FF4C 0034950C  48 00 A3 51 */	bl ADXERR_CallErrFunc2_
 .L_8037FF50:
@@ -847,8 +847,8 @@
 /* 8038058C 00349B4C  4E 80 04 21 */	bctrl 
 /* 80380590 00349B50  48 00 00 18 */	b .L_803805A8
 .L_80380594:
-/* 80380594 00349B54  3C 80 80 52 */	lis r4, lbl_80519750@ha
-/* 80380598 00349B58  38 84 97 50 */	addi r4, r4, lbl_80519750@l
+/* 80380594 00349B54  3C 80 80 52 */	lis r4, adx_sjd_strpool@ha
+/* 80380598 00349B58  38 84 97 50 */	addi r4, r4, adx_sjd_strpool@l
 /* 8038059C 00349B5C  38 64 00 3F */	addi r3, r4, 0x3f
 /* 803805A0 00349B60  38 84 00 60 */	addi r4, r4, 0x60
 /* 803805A4 00349B64  48 00 9C F9 */	bl ADXERR_CallErrFunc2_
@@ -1552,8 +1552,8 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_80519750
-lbl_80519750:
+.global adx_sjd_strpool
+adx_sjd_strpool:
 	.asciz "E03010901 ADXB_DecodeHeader: "
 	.asciz "Can not decode this file format."
 	.asciz "E07021901 adxsjd_decexec_start: "

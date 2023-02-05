@@ -123,16 +123,16 @@
 /* 80399194 00362754  90 01 00 34 */	stw r0, 0x34(r1)
 /* 80399198 00362758  BF 41 00 18 */	stmw r26, 0x18(r1)
 /* 8039919C 0036275C  41 81 00 18 */	bgt .L_803991B4
-/* 803991A0 00362760  3C 60 80 52 */	lis r3, lbl_8051C790@ha
-/* 803991A4 00362764  38 63 C7 90 */	addi r3, r3, lbl_8051C790@l
+/* 803991A0 00362760  3C 60 80 52 */	lis r3, ax_rna_strpool@ha
+/* 803991A4 00362764  38 63 C7 90 */	addi r3, r3, ax_rna_strpool@l
 /* 803991A8 00362768  4B FF FE 15 */	bl RNAERR_CallErrFunc
 /* 803991AC 0036276C  38 60 00 00 */	li r3, 0
 /* 803991B0 00362770  48 00 04 08 */	b .L_803995B8
 .L_803991B4:
 /* 803991B4 00362774  2C 03 00 00 */	cmpwi r3, 0
 /* 803991B8 00362778  40 82 00 1C */	bne .L_803991D4
-/* 803991BC 0036277C  3C 60 80 52 */	lis r3, lbl_8051C790@ha
-/* 803991C0 00362780  38 63 C7 90 */	addi r3, r3, lbl_8051C790@l
+/* 803991BC 0036277C  3C 60 80 52 */	lis r3, ax_rna_strpool@ha
+/* 803991C0 00362780  38 63 C7 90 */	addi r3, r3, ax_rna_strpool@l
 /* 803991C4 00362784  38 63 00 28 */	addi r3, r3, 0x28
 /* 803991C8 00362788  4B FF FD F5 */	bl RNAERR_CallErrFunc
 /* 803991CC 0036278C  38 60 00 00 */	li r3, 0
@@ -146,8 +146,8 @@
 /* 803991E4 003627A4  80 06 00 00 */	lwz r0, 0(r6)
 /* 803991E8 003627A8  2C 00 00 00 */	cmpwi r0, 0
 /* 803991EC 003627AC  40 82 00 1C */	bne .L_80399208
-/* 803991F0 003627B0  3C 60 80 52 */	lis r3, lbl_8051C790@ha
-/* 803991F4 003627B4  38 63 C7 90 */	addi r3, r3, lbl_8051C790@l
+/* 803991F0 003627B0  3C 60 80 52 */	lis r3, ax_rna_strpool@ha
+/* 803991F4 003627B4  38 63 C7 90 */	addi r3, r3, ax_rna_strpool@l
 /* 803991F8 003627B8  38 63 00 4E */	addi r3, r3, 0x4e
 /* 803991FC 003627BC  4B FF FD C1 */	bl RNAERR_CallErrFunc
 /* 80399200 003627C0  38 60 00 00 */	li r3, 0
@@ -199,8 +199,8 @@
 .L_803992AC:
 /* 803992AC 0036286C  28 07 00 10 */	cmplwi r7, 0x10
 /* 803992B0 00362870  40 82 00 1C */	bne .L_803992CC
-/* 803992B4 00362874  3C 60 80 52 */	lis r3, lbl_8051C790@ha
-/* 803992B8 00362878  38 63 C7 90 */	addi r3, r3, lbl_8051C790@l
+/* 803992B4 00362874  3C 60 80 52 */	lis r3, ax_rna_strpool@ha
+/* 803992B8 00362878  38 63 C7 90 */	addi r3, r3, ax_rna_strpool@l
 /* 803992BC 0036287C  38 63 00 76 */	addi r3, r3, 0x76
 /* 803992C0 00362880  4B FF FC FD */	bl RNAERR_CallErrFunc
 /* 803992C4 00362884  38 60 00 00 */	li r3, 0
@@ -251,8 +251,8 @@
 /* 80399368 00362928  2C 03 00 00 */	cmpwi r3, 0
 /* 8039936C 0036292C  90 7B 00 30 */	stw r3, 0x30(r27)
 /* 80399370 00362930  40 82 00 24 */	bne .L_80399394
-/* 80399374 00362934  3C 60 80 52 */	lis r3, lbl_8051C790@ha
-/* 80399378 00362938  38 63 C7 90 */	addi r3, r3, lbl_8051C790@l
+/* 80399374 00362934  3C 60 80 52 */	lis r3, ax_rna_strpool@ha
+/* 80399378 00362938  38 63 C7 90 */	addi r3, r3, ax_rna_strpool@l
 /* 8039937C 0036293C  38 63 00 97 */	addi r3, r3, 0x97
 /* 80399380 00362940  4B FF FC 3D */	bl RNAERR_CallErrFunc
 /* 80399384 00362944  7F E3 FB 78 */	mr r3, r31
@@ -267,8 +267,8 @@
 /* 803993A4 00362964  2C 03 00 00 */	cmpwi r3, 0
 /* 803993A8 00362968  90 7B 00 08 */	stw r3, 8(r27)
 /* 803993AC 0036296C  40 82 00 24 */	bne .L_803993D0
-/* 803993B0 00362970  3C 60 80 52 */	lis r3, lbl_8051C790@ha
-/* 803993B4 00362974  38 63 C7 90 */	addi r3, r3, lbl_8051C790@l
+/* 803993B0 00362970  3C 60 80 52 */	lis r3, ax_rna_strpool@ha
+/* 803993B4 00362974  38 63 C7 90 */	addi r3, r3, ax_rna_strpool@l
 /* 803993B8 00362978  38 63 00 B2 */	addi r3, r3, 0xb2
 /* 803993BC 0036297C  4B FF FC 01 */	bl RNAERR_CallErrFunc
 /* 803993C0 00362980  7F E3 FB 78 */	mr r3, r31
@@ -605,8 +605,8 @@
 .L_80399868:
 /* 80399868 00362E28  2C 08 00 C8 */	cmpwi r8, 0xc8
 /* 8039986C 00362E2C  40 82 00 18 */	bne .L_80399884
-/* 80399870 00362E30  3C 60 80 52 */	lis r3, lbl_8051C790@ha
-/* 80399874 00362E34  38 63 C7 90 */	addi r3, r3, lbl_8051C790@l
+/* 80399870 00362E30  3C 60 80 52 */	lis r3, ax_rna_strpool@ha
+/* 80399874 00362E34  38 63 C7 90 */	addi r3, r3, ax_rna_strpool@l
 /* 80399878 00362E38  38 63 00 D5 */	addi r3, r3, 0xd5
 /* 8039987C 00362E3C  4B FF F7 41 */	bl RNAERR_CallErrFunc
 /* 80399880 00362E40  48 00 00 FC */	b .L_8039997C
@@ -658,8 +658,8 @@
 .L_80399930:
 /* 80399930 00362EF0  2C 08 00 C8 */	cmpwi r8, 0xc8
 /* 80399934 00362EF4  40 82 00 18 */	bne .L_8039994C
-/* 80399938 00362EF8  3C 60 80 52 */	lis r3, lbl_8051C790@ha
-/* 8039993C 00362EFC  38 63 C7 90 */	addi r3, r3, lbl_8051C790@l
+/* 80399938 00362EF8  3C 60 80 52 */	lis r3, ax_rna_strpool@ha
+/* 8039993C 00362EFC  38 63 C7 90 */	addi r3, r3, ax_rna_strpool@l
 /* 80399940 00362F00  38 63 01 0B */	addi r3, r3, 0x10b
 /* 80399944 00362F04  4B FF F6 79 */	bl RNAERR_CallErrFunc
 /* 80399948 00362F08  48 00 00 34 */	b .L_8039997C
@@ -674,8 +674,8 @@
 /* 80399964 00362F24  98 03 00 01 */	stb r0, 1(r3)
 /* 80399968 00362F28  48 00 00 14 */	b .L_8039997C
 .L_8039996C:
-/* 8039996C 00362F2C  3C 60 80 52 */	lis r3, lbl_8051C790@ha
-/* 80399970 00362F30  38 63 C7 90 */	addi r3, r3, lbl_8051C790@l
+/* 8039996C 00362F2C  3C 60 80 52 */	lis r3, ax_rna_strpool@ha
+/* 80399970 00362F30  38 63 C7 90 */	addi r3, r3, ax_rna_strpool@l
 /* 80399974 00362F34  38 63 01 42 */	addi r3, r3, 0x142
 /* 80399978 00362F38  4B FF F6 45 */	bl RNAERR_CallErrFunc
 .L_8039997C:
@@ -790,8 +790,8 @@
 /* 80399AF0 003630B0  98 1A 00 01 */	stb r0, 1(r26)
 /* 80399AF4 003630B4  48 00 00 14 */	b .L_80399B08
 .L_80399AF8:
-/* 80399AF8 003630B8  3C 60 80 52 */	lis r3, lbl_8051C790@ha
-/* 80399AFC 003630BC  38 63 C7 90 */	addi r3, r3, lbl_8051C790@l
+/* 80399AF8 003630B8  3C 60 80 52 */	lis r3, ax_rna_strpool@ha
+/* 80399AFC 003630BC  38 63 C7 90 */	addi r3, r3, ax_rna_strpool@l
 /* 80399B00 003630C0  38 63 01 63 */	addi r3, r3, 0x163
 /* 80399B04 003630C4  4B FF F4 B9 */	bl RNAERR_CallErrFunc
 .L_80399B08:
@@ -1121,8 +1121,8 @@
 /* 80399F8C 0036354C  7C 00 1A 14 */	add r0, r0, r3
 /* 80399F90 00363550  54 18 00 3A */	rlwinm r24, r0, 0, 0, 0x1d
 /* 80399F94 00363554  40 81 00 18 */	ble .L_80399FAC
-/* 80399F98 00363558  3C 60 80 52 */	lis r3, lbl_8051C790@ha
-/* 80399F9C 0036355C  38 63 C7 90 */	addi r3, r3, lbl_8051C790@l
+/* 80399F98 00363558  3C 60 80 52 */	lis r3, ax_rna_strpool@ha
+/* 80399F9C 0036355C  38 63 C7 90 */	addi r3, r3, ax_rna_strpool@l
 /* 80399FA0 00363560  38 63 04 50 */	addi r3, r3, 0x450
 /* 80399FA4 00363564  4B FF F0 19 */	bl RNAERR_CallErrFunc
 /* 80399FA8 00363568  48 00 03 6C */	b .L_8039A314
@@ -1169,8 +1169,8 @@
 /* 8039A040 00363600  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8039A044 00363604  7C 00 E0 40 */	cmplw r0, r28
 /* 8039A048 00363608  40 80 00 3C */	bge .L_8039A084
-/* 8039A04C 0036360C  3C 60 80 52 */	lis r3, lbl_8051C790@ha
-/* 8039A050 00363610  38 63 C7 90 */	addi r3, r3, lbl_8051C790@l
+/* 8039A04C 0036360C  3C 60 80 52 */	lis r3, ax_rna_strpool@ha
+/* 8039A050 00363610  38 63 C7 90 */	addi r3, r3, ax_rna_strpool@l
 /* 8039A054 00363614  38 63 04 88 */	addi r3, r3, 0x488
 /* 8039A058 00363618  4B FF EF 65 */	bl RNAERR_CallErrFunc
 /* 8039A05C 0036361C  57 40 10 3A */	slwi r0, r26, 2
@@ -1555,8 +1555,8 @@
 /* 8039A5B8 00363B78  41 82 00 C0 */	beq .L_8039A678
 /* 8039A5BC 00363B7C  2C 04 7D 1C */	cmpwi r4, 0x7d1c
 /* 8039A5C0 00363B80  40 82 00 14 */	bne .L_8039A5D4
-/* 8039A5C4 00363B84  3C 60 80 52 */	lis r3, lbl_8051C790@ha
-/* 8039A5C8 00363B88  38 63 C7 90 */	addi r3, r3, lbl_8051C790@l
+/* 8039A5C4 00363B84  3C 60 80 52 */	lis r3, ax_rna_strpool@ha
+/* 8039A5C8 00363B88  38 63 C7 90 */	addi r3, r3, ax_rna_strpool@l
 /* 8039A5CC 00363B8C  38 63 04 B5 */	addi r3, r3, 0x4b5
 /* 8039A5D0 00363B90  4B FF E9 ED */	bl RNAERR_CallErrFunc
 .L_8039A5D4:
@@ -1748,8 +1748,8 @@
 /* 8039A83C 00363DFC  2C 04 00 03 */	cmpwi r4, 3
 /* 8039A840 00363E00  40 81 00 18 */	ble .L_8039A858
 .L_8039A844:
-/* 8039A844 00363E04  3C 60 80 52 */	lis r3, lbl_8051C790@ha
-/* 8039A848 00363E08  38 63 C7 90 */	addi r3, r3, lbl_8051C790@l
+/* 8039A844 00363E04  3C 60 80 52 */	lis r3, ax_rna_strpool@ha
+/* 8039A848 00363E08  38 63 C7 90 */	addi r3, r3, ax_rna_strpool@l
 /* 8039A84C 00363E0C  38 63 04 E4 */	addi r3, r3, 0x4e4
 /* 8039A850 00363E10  4B FF E7 6D */	bl RNAERR_CallErrFunc #E8043001
 /* 8039A854 00363E14  48 00 00 78 */	b .L_8039A8CC
@@ -1901,8 +1901,8 @@ lbl_8051C78C:
 	.4byte lbl_8051C760
 
 
-.global lbl_8051C790
-lbl_8051C790:
+.global ax_rna_strpool
+ax_rna_strpool:
 	.asciz "E1070301:Invalid parameter(maxnch<=0).\n"
 	.asciz "E1070302:Invalid parameter(sj=null).\n"
 	.asciz "E1070303:Invalid parameter(sj[]=null).\n"

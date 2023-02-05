@@ -55,11 +55,11 @@
 /* 801679A8 00130F68  90 BE 00 10 */	stw r5, 0x10(r30)
 /* 801679AC 00130F6C  90 1E 00 58 */	stw r0, 0x58(r30)
 /* 801679B0 00130F70  93 7E 00 5C */	stw r27, 0x5c(r30)
-/* 801679B4 00130F74  48 05 BF C1 */	bl func_801C3974
+/* 801679B4 00130F74  48 05 BF C1 */	bl __ct__CBgTex
 /* 801679B8 00130F78  38 7E 00 80 */	addi r3, r30, 0x80
 /* 801679BC 00130F7C  38 80 00 00 */	li r4, 0
 /* 801679C0 00130F80  38 A0 00 00 */	li r5, 0
-/* 801679C4 00130F84  48 05 C5 0D */	bl func_801C3ED0
+/* 801679C4 00130F84  48 05 C5 0D */	bl __ct__CTitleAHelp
 /* 801679C8 00130F88  38 7E 00 B8 */	addi r3, r30, 0xb8
 /* 801679CC 00130F8C  38 80 00 00 */	li r4, 0
 /* 801679D0 00130F90  38 A0 00 00 */	li r5, 0
@@ -334,10 +334,10 @@ lbl_80666B48:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000080
-	.4byte func_801C3F50
+	.4byte __dt__CTitleAHelp
 	.4byte 0x0780001E
 	.4byte 0x00000060
-	.4byte func_801C39D0
+	.4byte __dt__CBgTex
 	.4byte 0x0680001E
 	.4byte 0x00000058
 	.4byte func_8004031C

@@ -54,7 +54,7 @@
 /* 8012BCFC 000F52BC  90 99 00 6C */	stw r4, 0x6c(r25)
 /* 8012BD00 000F52C0  90 19 00 70 */	stw r0, 0x70(r25)
 /* 8012BD04 000F52C4  93 59 00 74 */	stw r26, 0x74(r25)
-/* 8012BD08 000F52C8  48 33 38 5D */	bl func_8045F564
+/* 8012BD08 000F52C8  48 33 38 5D */	bl __ct__8045F564
 /* 8012BD0C 000F52CC  92 F9 00 88 */	stw r23, 0x88(r25)
 /* 8012BD10 000F52D0  7F 23 CB 78 */	mr r3, r25
 /* 8012BD14 000F52D4  92 F9 00 8C */	stw r23, 0x8c(r25)
@@ -89,7 +89,7 @@
 /* 8012BD7C 000F533C  41 82 00 38 */	beq .L_8012BDB4
 /* 8012BD80 000F5340  38 80 FF FF */	li r4, -1
 /* 8012BD84 000F5344  38 63 00 78 */	addi r3, r3, 0x78
-/* 8012BD88 000F5348  48 33 37 F9 */	bl func_8045F580
+/* 8012BD88 000F5348  48 33 37 F9 */	bl __dt__8045F580
 /* 8012BD8C 000F534C  2C 1E 00 00 */	cmpwi r30, 0
 /* 8012BD90 000F5350  41 82 00 14 */	beq .L_8012BDA4
 /* 8012BD94 000F5354  41 82 00 10 */	beq .L_8012BDA4
@@ -125,11 +125,11 @@
 /* 8012BDEC 000F53AC  48 18 E3 61 */	bl _savegpr_25
 /* 8012BDF0 000F53B0  7C 79 1B 78 */	mr r25, r3
 /* 8012BDF4 000F53B4  48 30 85 AD */	bl func_804343A0
-/* 8012BDF8 000F53B8  3C C0 80 50 */	lis r6, lbl_804FB4E4@ha
+/* 8012BDF8 000F53B8  3C C0 80 50 */	lis r6, CTalkWindow_strpool@ha
 /* 8012BDFC 000F53BC  7C 64 1B 78 */	mr r4, r3
 /* 8012BE00 000F53C0  38 79 00 78 */	addi r3, r25, 0x78
 /* 8012BE04 000F53C4  38 A0 40 00 */	li r5, 0x4000
-/* 8012BE08 000F53C8  38 C6 B4 E4 */	addi r6, r6, lbl_804FB4E4@l
+/* 8012BE08 000F53C8  38 C6 B4 E4 */	addi r6, r6, CTalkWindow_strpool@l
 /* 8012BE0C 000F53CC  38 E0 00 00 */	li r7, 0
 /* 8012BE10 000F53D0  48 33 38 71 */	bl func_8045F680
 /* 8012BE14 000F53D4  38 61 00 08 */	addi r3, r1, 8
@@ -224,9 +224,9 @@
 /* 8012BF50 000F5510  88 1D 08 16 */	lbz r0, 0x816(r29)
 /* 8012BF54 000F5514  90 19 00 A4 */	stw r0, 0xa4(r25)
 /* 8012BF58 000F5518  48 00 96 9D */	bl func_801355F4
-/* 8012BF5C 000F551C  3F C0 80 50 */	lis r30, lbl_804FB4E4@ha
+/* 8012BF5C 000F551C  3F C0 80 50 */	lis r30, CTalkWindow_strpool@ha
 /* 8012BF60 000F5520  7C 64 1B 78 */	mr r4, r3
-/* 8012BF64 000F5524  3B DE B4 E4 */	addi r30, r30, lbl_804FB4E4@l
+/* 8012BF64 000F5524  3B DE B4 E4 */	addi r30, r30, CTalkWindow_strpool@l
 /* 8012BF68 000F5528  38 79 00 54 */	addi r3, r25, 0x54
 /* 8012BF6C 000F552C  38 BE 00 0C */	addi r5, r30, 0xc
 /* 8012BF70 000F5530  48 00 AF 15 */	bl func_80136E84
@@ -506,8 +506,8 @@
 /* 8012C3AC 000F596C  7D 89 03 A6 */	mtctr r12
 /* 8012C3B0 000F5970  4E 80 04 21 */	bctrl 
 /* 8012C3B4 000F5974  80 79 00 54 */	lwz r3, 0x54(r25)
-/* 8012C3B8 000F5978  3F C0 80 50 */	lis r30, lbl_804FB4E4@ha
-/* 8012C3BC 000F597C  3B DE B4 E4 */	addi r30, r30, lbl_804FB4E4@l
+/* 8012C3B8 000F5978  3F C0 80 50 */	lis r30, CTalkWindow_strpool@ha
+/* 8012C3BC 000F597C  3B DE B4 E4 */	addi r30, r30, CTalkWindow_strpool@l
 /* 8012C3C0 000F5980  8B 7D 08 15 */	lbz r27, 0x815(r29)
 /* 8012C3C4 000F5984  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 8012C3C8 000F5988  38 9E 01 3B */	addi r4, r30, 0x13b
@@ -723,10 +723,10 @@
 /* 8012C700 000F5CC0  41 82 00 6C */	beq .L_8012C76C
 /* 8012C704 000F5CC4  38 00 00 01 */	li r0, 1
 /* 8012C708 000F5CC8  98 0D A7 B8 */	stb r0, lbl_80666938@sda21(r13)
-/* 8012C70C 000F5CCC  3F 80 80 50 */	lis r28, lbl_804FB4E4@ha
+/* 8012C70C 000F5CCC  3F 80 80 50 */	lis r28, CTalkWindow_strpool@ha
 /* 8012C710 000F5CD0  38 A0 00 01 */	li r5, 1
 /* 8012C714 000F5CD4  80 79 00 54 */	lwz r3, 0x54(r25)
-/* 8012C718 000F5CD8  3B 9C B4 E4 */	addi r28, r28, lbl_804FB4E4@l
+/* 8012C718 000F5CD8  3B 9C B4 E4 */	addi r28, r28, CTalkWindow_strpool@l
 /* 8012C71C 000F5CDC  38 9C 01 1E */	addi r4, r28, 0x11e
 /* 8012C720 000F5CE0  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 8012C724 000F5CE4  81 83 00 00 */	lwz r12, 0(r3)
@@ -755,9 +755,9 @@
 .L_8012C77C:
 /* 8012C77C 000F5D3C  2C 1A 00 00 */	cmpwi r26, 0
 /* 8012C780 000F5D40  41 82 00 2C */	beq .L_8012C7AC
-/* 8012C784 000F5D44  3F 60 80 50 */	lis r27, lbl_804FB4E4@ha
+/* 8012C784 000F5D44  3F 60 80 50 */	lis r27, CTalkWindow_strpool@ha
 /* 8012C788 000F5D48  80 79 00 54 */	lwz r3, 0x54(r25)
-/* 8012C78C 000F5D4C  3B 7B B4 E4 */	addi r27, r27, lbl_804FB4E4@l
+/* 8012C78C 000F5D4C  3B 7B B4 E4 */	addi r27, r27, CTalkWindow_strpool@l
 /* 8012C790 000F5D50  7F 45 D3 78 */	mr r5, r26
 /* 8012C794 000F5D54  38 9B 01 1E */	addi r4, r27, 0x11e
 /* 8012C798 000F5D58  48 00 B6 E5 */	bl func_80137E7C
@@ -780,7 +780,7 @@
 /* 8012C7D0 000F5D90  48 33 30 41 */	bl func_8045F810
 /* 8012C7D4 000F5D94  38 61 00 08 */	addi r3, r1, 8
 /* 8012C7D8 000F5D98  38 80 FF FF */	li r4, -1
-/* 8012C7DC 000F5D9C  48 33 30 ED */	bl func_8045F8C8
+/* 8012C7DC 000F5D9C  48 33 30 ED */	bl __dt__8045F8C8
 /* 8012C7E0 000F5DA0  39 61 00 30 */	addi r11, r1, 0x30
 /* 8012C7E4 000F5DA4  48 18 D9 B5 */	bl _restgpr_25
 /* 8012C7E8 000F5DA8  80 01 00 34 */	lwz r0, 0x34(r1)
@@ -947,9 +947,9 @@
 /* 8012CA28 000F5FE8  7D 89 03 A6 */	mtctr r12
 /* 8012CA2C 000F5FEC  4E 80 04 21 */	bctrl 
 /* 8012CA30 000F5FF0  80 7F 00 98 */	lwz r3, 0x98(r31)
-/* 8012CA34 000F5FF4  3F C0 80 50 */	lis r30, lbl_804FB4E4@ha
+/* 8012CA34 000F5FF4  3F C0 80 50 */	lis r30, CTalkWindow_strpool@ha
 /* 8012CA38 000F5FF8  C0 02 97 C8 */	lfs f0, float_80669B48@sda21(r2)
-/* 8012CA3C 000F5FFC  3B DE B4 E4 */	addi r30, r30, lbl_804FB4E4@l
+/* 8012CA3C 000F5FFC  3B DE B4 E4 */	addi r30, r30, CTalkWindow_strpool@l
 /* 8012CA40 000F6000  D0 03 00 10 */	stfs f0, 0x10(r3)
 /* 8012CA44 000F6004  38 9E 00 F1 */	addi r4, r30, 0xf1
 /* 8012CA48 000F6008  38 A0 00 01 */	li r5, 1
@@ -1188,8 +1188,8 @@
 /* 8012CD94 000F6354  48 00 06 24 */	b .L_8012D3B8
 .L_8012CD98:
 /* 8012CD98 000F6358  81 83 00 00 */	lwz r12, 0(r3)
-/* 8012CD9C 000F635C  3C 80 80 50 */	lis r4, lbl_804FB4E4@ha
-/* 8012CDA0 000F6360  38 84 B4 E4 */	addi r4, r4, lbl_804FB4E4@l
+/* 8012CD9C 000F635C  3C 80 80 50 */	lis r4, CTalkWindow_strpool@ha
+/* 8012CDA0 000F6360  38 84 B4 E4 */	addi r4, r4, CTalkWindow_strpool@l
 /* 8012CDA4 000F6364  81 8C 01 20 */	lwz r12, 0x120(r12)
 /* 8012CDA8 000F6368  38 84 01 E3 */	addi r4, r4, 0x1e3
 /* 8012CDAC 000F636C  7D 89 03 A6 */	mtctr r12
@@ -1364,8 +1364,8 @@
 /* 8012D02C 000F65EC  C3 E2 97 C8 */	lfs f31, float_80669B48@sda21(r2)
 .L_8012D030:
 /* 8012D030 000F65F0  80 7F 00 54 */	lwz r3, 0x54(r31)
-/* 8012D034 000F65F4  3C 80 80 50 */	lis r4, lbl_804FB4E4@ha
-/* 8012D038 000F65F8  38 84 B4 E4 */	addi r4, r4, lbl_804FB4E4@l
+/* 8012D034 000F65F4  3C 80 80 50 */	lis r4, CTalkWindow_strpool@ha
+/* 8012D038 000F65F8  38 84 B4 E4 */	addi r4, r4, CTalkWindow_strpool@l
 /* 8012D03C 000F65FC  38 A0 00 01 */	li r5, 1
 /* 8012D040 000F6600  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 8012D044 000F6604  38 84 01 1E */	addi r4, r4, 0x11e
@@ -1481,8 +1481,8 @@
 /* 8012D1F0 000F67B0  48 2D 3F 4D */	bl SetTexCoord__Q34nw4r3lyt7PictureFUlPCQ34nw4r4math4VEC2
 .L_8012D1F4:
 /* 8012D1F4 000F67B4  80 7F 00 54 */	lwz r3, 0x54(r31)
-/* 8012D1F8 000F67B8  3C 80 80 50 */	lis r4, lbl_804FB4E4@ha
-/* 8012D1FC 000F67BC  38 84 B4 E4 */	addi r4, r4, lbl_804FB4E4@l
+/* 8012D1F8 000F67B8  3C 80 80 50 */	lis r4, CTalkWindow_strpool@ha
+/* 8012D1FC 000F67BC  38 84 B4 E4 */	addi r4, r4, CTalkWindow_strpool@l
 /* 8012D200 000F67C0  38 A0 00 01 */	li r5, 1
 /* 8012D204 000F67C4  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 8012D208 000F67C8  38 84 01 2C */	addi r4, r4, 0x12c
@@ -1615,8 +1615,8 @@
 /* 8012D3E8 000F69A8  93 E1 00 EC */	stw r31, 0xec(r1)
 /* 8012D3EC 000F69AC  7C 7F 1B 78 */	mr r31, r3
 /* 8012D3F0 000F69B0  93 C1 00 E8 */	stw r30, 0xe8(r1)
-/* 8012D3F4 000F69B4  3F C0 80 50 */	lis r30, lbl_804FB4E4@ha
-/* 8012D3F8 000F69B8  3B DE B4 E4 */	addi r30, r30, lbl_804FB4E4@l
+/* 8012D3F4 000F69B4  3F C0 80 50 */	lis r30, CTalkWindow_strpool@ha
+/* 8012D3F8 000F69B8  3B DE B4 E4 */	addi r30, r30, CTalkWindow_strpool@l
 /* 8012D3FC 000F69BC  80 83 00 54 */	lwz r4, 0x54(r3)
 /* 8012D400 000F69C0  80 64 00 10 */	lwz r3, 0x10(r4)
 /* 8012D404 000F69C4  38 9E 00 B0 */	addi r4, r30, 0xb0
@@ -1775,8 +1775,8 @@
 /* 8012D668 000F6C28  D0 01 00 CC */	stfs f0, 0xcc(r1)
 .L_8012D66C:
 /* 8012D66C 000F6C2C  81 86 00 00 */	lwz r12, 0(r6)
-/* 8012D670 000F6C30  3F C0 80 50 */	lis r30, lbl_804FB4E4@ha
-/* 8012D674 000F6C34  3B DE B4 E4 */	addi r30, r30, lbl_804FB4E4@l
+/* 8012D670 000F6C30  3F C0 80 50 */	lis r30, CTalkWindow_strpool@ha
+/* 8012D674 000F6C34  3B DE B4 E4 */	addi r30, r30, CTalkWindow_strpool@l
 /* 8012D678 000F6C38  7C C3 33 78 */	mr r3, r6
 /* 8012D67C 000F6C3C  81 8C 00 3C */	lwz r12, 0x3c(r12)
 /* 8012D680 000F6C40  38 9E 01 1E */	addi r4, r30, 0x11e
@@ -2047,10 +2047,10 @@
 /* 8012DA7C 000F703C  48 18 C6 D9 */	bl _savegpr_27
 /* 8012DA80 000F7040  80 83 00 54 */	lwz r4, 0x54(r3)
 /* 8012DA84 000F7044  7C 7E 1B 78 */	mr r30, r3
-/* 8012DA88 000F7048  3F A0 80 50 */	lis r29, lbl_804FB4E4@ha
+/* 8012DA88 000F7048  3F A0 80 50 */	lis r29, CTalkWindow_strpool@ha
 /* 8012DA8C 000F704C  38 A0 00 01 */	li r5, 1
 /* 8012DA90 000F7050  80 64 00 10 */	lwz r3, 0x10(r4)
-/* 8012DA94 000F7054  3B BD B4 E4 */	addi r29, r29, lbl_804FB4E4@l
+/* 8012DA94 000F7054  3B BD B4 E4 */	addi r29, r29, CTalkWindow_strpool@l
 /* 8012DA98 000F7058  38 9D 00 F1 */	addi r4, r29, 0xf1
 /* 8012DA9C 000F705C  81 83 00 00 */	lwz r12, 0(r3)
 /* 8012DAA0 000F7060  81 8C 00 3C */	lwz r12, 0x3c(r12)
@@ -2417,8 +2417,8 @@ CTalkWindow_typestr:
 	.asciz "CTalkWindow"
 
 
-.global lbl_804FB4E4
-lbl_804FB4E4:
+.global CTalkWindow_strpool
+CTalkWindow_strpool:
 	.asciz "CTalkWindow"
 	.asciz "mf70_cf00_twin00.brlyt"
 	.asciz "mf70_cf00_twin00_in.brlan"
@@ -2716,7 +2716,7 @@ lbl_8066693C:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000078
-	.4byte func_8045F580
+	.4byte __dt__8045F580
 	.4byte 0x0680001E
 	.4byte 0x00000070
 	.4byte func_8004031C
@@ -2732,7 +2732,7 @@ lbl_8066693C:
 	.4byte 0x02690010
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte func_8045F8C8
+	.4byte __dt__8045F8C8
 .endobj "@etb_8000C284"
 
 .obj "@etb_8000C29C", local

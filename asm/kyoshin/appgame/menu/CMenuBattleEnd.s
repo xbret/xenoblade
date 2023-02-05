@@ -51,7 +51,7 @@
 /* 8026F428 002389E8  90 9C 00 6C */	stw r4, 0x6c(r28)
 /* 8026F42C 002389EC  90 1C 00 70 */	stw r0, 0x70(r28)
 /* 8026F430 002389F0  93 BC 00 74 */	stw r29, 0x74(r28)
-/* 8026F434 002389F4  48 1F 01 31 */	bl func_8045F564
+/* 8026F434 002389F4  48 1F 01 31 */	bl __ct__8045F564
 /* 8026F438 002389F8  38 9C 00 9C */	addi r4, r28, 0x9c
 /* 8026F43C 002389FC  38 7C 00 B4 */	addi r3, r28, 0xb4
 /* 8026F440 00238A00  7C 04 18 40 */	cmplw r4, r3
@@ -105,7 +105,7 @@
 /* 8026F4EC 00238AAC  41 82 00 38 */	beq .L_8026F524
 /* 8026F4F0 00238AB0  38 80 FF FF */	li r4, -1
 /* 8026F4F4 00238AB4  38 63 00 78 */	addi r3, r3, 0x78
-/* 8026F4F8 00238AB8  48 1F 00 89 */	bl func_8045F580
+/* 8026F4F8 00238AB8  48 1F 00 89 */	bl __dt__8045F580
 /* 8026F4FC 00238ABC  2C 1E 00 00 */	cmpwi r30, 0
 /* 8026F500 00238AC0  41 82 00 14 */	beq .L_8026F514
 /* 8026F504 00238AC4  41 82 00 10 */	beq .L_8026F514
@@ -136,18 +136,18 @@
 /* 8026F554 00238B14  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8026F558 00238B18  7C 7D 1B 78 */	mr r29, r3
 /* 8026F55C 00238B1C  48 1C 4E 45 */	bl func_804343A0
-/* 8026F560 00238B20  3F E0 80 51 */	lis r31, lbl_80509D88@ha
+/* 8026F560 00238B20  3F E0 80 51 */	lis r31, CMenuBattleEnd_strpool@ha
 /* 8026F564 00238B24  7C 64 1B 78 */	mr r4, r3
 /* 8026F568 00238B28  38 7D 00 78 */	addi r3, r29, 0x78
 /* 8026F56C 00238B2C  38 A0 40 00 */	li r5, 0x4000
-/* 8026F570 00238B30  38 DF 9D 88 */	addi r6, r31, lbl_80509D88@l
+/* 8026F570 00238B30  38 DF 9D 88 */	addi r6, r31, CMenuBattleEnd_strpool@l
 /* 8026F574 00238B34  38 E0 00 00 */	li r7, 0
 /* 8026F578 00238B38  48 1F 01 09 */	bl func_8045F680
 /* 8026F57C 00238B3C  38 61 00 08 */	addi r3, r1, 8
 /* 8026F580 00238B40  38 9D 00 78 */	addi r4, r29, 0x78
 /* 8026F584 00238B44  48 1F 02 D5 */	bl func_8045F858
 /* 8026F588 00238B48  4B EC 60 6D */	bl func_801355F4
-/* 8026F58C 00238B4C  3B FF 9D 88 */	addi r31, r31, lbl_80509D88@l
+/* 8026F58C 00238B4C  3B FF 9D 88 */	addi r31, r31, CMenuBattleEnd_strpool@l
 /* 8026F590 00238B50  7C 64 1B 78 */	mr r4, r3
 /* 8026F594 00238B54  38 7D 00 54 */	addi r3, r29, 0x54
 /* 8026F598 00238B58  38 BF 00 0F */	addi r5, r31, 0xf
@@ -244,7 +244,7 @@
 /* 8026F6F0 00238CB0  48 1F 01 21 */	bl func_8045F810
 /* 8026F6F4 00238CB4  38 61 00 08 */	addi r3, r1, 8
 /* 8026F6F8 00238CB8  38 80 FF FF */	li r4, -1
-/* 8026F6FC 00238CBC  48 1F 01 CD */	bl func_8045F8C8
+/* 8026F6FC 00238CBC  48 1F 01 CD */	bl __dt__8045F8C8
 /* 8026F700 00238CC0  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8026F704 00238CC4  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 8026F708 00238CC8  83 C1 00 18 */	lwz r30, 0x18(r1)
@@ -448,12 +448,12 @@
 /* 8026F9B8 00238F78  7D 89 03 A6 */	mtctr r12
 /* 8026F9BC 00238F7C  4E 80 04 21 */	bctrl 
 /* 8026F9C0 00238F80  80 BC 00 90 */	lwz r5, 0x90(r28)
-/* 8026F9C4 00238F84  3C 60 80 51 */	lis r3, lbl_80509D88@ha
+/* 8026F9C4 00238F84  3C 60 80 51 */	lis r3, CMenuBattleEnd_strpool@ha
 /* 8026F9C8 00238F88  C0 02 AE BC */	lfs f0, float_8066B23C@sda21(r2)
 /* 8026F9CC 00238F8C  38 80 00 00 */	li r4, 0
 /* 8026F9D0 00238F90  D0 05 00 10 */	stfs f0, 0x10(r5)
 /* 8026F9D4 00238F94  38 00 00 01 */	li r0, 1
-/* 8026F9D8 00238F98  3B E3 9D 88 */	addi r31, r3, lbl_80509D88@l
+/* 8026F9D8 00238F98  3B E3 9D 88 */	addi r31, r3, CMenuBattleEnd_strpool@l
 /* 8026F9DC 00238F9C  3B A0 00 00 */	li r29, 0
 /* 8026F9E0 00238FA0  90 9C 00 90 */	stw r4, 0x90(r28)
 /* 8026F9E4 00238FA4  98 1C 00 B4 */	stb r0, 0xb4(r28)
@@ -676,8 +676,8 @@ CMenuBattleEnd_typestr:
 	.balign 4
 
 
-.global lbl_80509D88
-lbl_80509D88:
+.global CMenuBattleEnd_strpool
+CMenuBattleEnd_strpool:
 	.asciz "CMenuBattleEnd"
 	.asciz "mf70_cf53_sideinfo.brlyt"
 	.asciz "mf70_cf53_sideinfo_battle.brlan"
@@ -822,7 +822,7 @@ lbl_80667188:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000078
-	.4byte func_8045F580
+	.4byte __dt__8045F580
 	.4byte 0x0680001E
 	.4byte 0x00000070
 	.4byte func_8004031C
@@ -838,7 +838,7 @@ lbl_80667188:
 	.4byte 0x005A0010
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte func_8045F8C8
+	.4byte __dt__8045F8C8
 .endobj "@etb_80017E04"
 
 .obj "@etb_80017E1C", local

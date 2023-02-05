@@ -28,9 +28,9 @@
 /* 803D70F8 003A06B8  38 60 00 00 */	li r3, 0
 /* 803D70FC 003A06BC  48 00 00 24 */	b .L_803D7120
 .L_803D7100:
-/* 803D7100 003A06C0  3C 80 80 52 */	lis r4, lbl_80520D94@ha
+/* 803D7100 003A06C0  3C 80 80 52 */	lis r4, sud_lib_strpool@ha
 /* 803D7104 003A06C4  38 A0 00 01 */	li r5, 1
-/* 803D7108 003A06C8  38 84 0D 94 */	addi r4, r4, lbl_80520D94@l
+/* 803D7108 003A06C8  38 84 0D 94 */	addi r4, r4, sud_lib_strpool@l
 /* 803D710C 003A06CC  38 63 00 12 */	addi r3, r3, 0x12
 /* 803D7110 003A06D0  38 84 00 15 */	addi r4, r4, 0x15
 /* 803D7114 003A06D4  4B EE B8 3D */	bl strncmp
@@ -55,9 +55,9 @@
 /* 803D714C 003A070C  38 60 00 00 */	li r3, 0
 /* 803D7150 003A0710  48 00 00 24 */	b .L_803D7174
 .L_803D7154:
-/* 803D7154 003A0714  3C 80 80 52 */	lis r4, lbl_80520D94@ha
+/* 803D7154 003A0714  3C 80 80 52 */	lis r4, sud_lib_strpool@ha
 /* 803D7158 003A0718  38 A0 00 01 */	li r5, 1
-/* 803D715C 003A071C  38 84 0D 94 */	addi r4, r4, lbl_80520D94@l
+/* 803D715C 003A071C  38 84 0D 94 */	addi r4, r4, sud_lib_strpool@l
 /* 803D7160 003A0720  38 63 00 13 */	addi r3, r3, 0x13
 /* 803D7164 003A0724  38 84 00 17 */	addi r4, r4, 0x17
 /* 803D7168 003A0728  4B EE B7 E9 */	bl strncmp
@@ -88,9 +88,9 @@
 /* 803D71BC 003A077C  41 81 00 08 */	bgt .L_803D71C4
 /* 803D71C0 003A0780  48 00 00 70 */	b .L_803D7230
 .L_803D71C4:
-/* 803D71C4 003A0784  3F C0 80 52 */	lis r30, lbl_80520D94@ha
+/* 803D71C4 003A0784  3F C0 80 52 */	lis r30, sud_lib_strpool@ha
 /* 803D71C8 003A0788  3B A0 00 00 */	li r29, 0
-/* 803D71CC 003A078C  3B DE 0D 94 */	addi r30, r30, lbl_80520D94@l
+/* 803D71CC 003A078C  3B DE 0D 94 */	addi r30, r30, sud_lib_strpool@l
 /* 803D71D0 003A0790  3B E0 00 23 */	li r31, 0x23
 /* 803D71D4 003A0794  48 00 00 54 */	b .L_803D7228
 .L_803D71D8:
@@ -134,8 +134,8 @@ lbl_80520D60:
 	.balign 4
 
 
-.global lbl_80520D94
-lbl_80520D94:
+.global sud_lib_strpool
+sud_lib_strpool:
 	.asciz "<SUDPS_>"
 	.asciz "<%06X>"
 	.asciz "02"

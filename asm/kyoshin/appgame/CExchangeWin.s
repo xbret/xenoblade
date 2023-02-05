@@ -14,7 +14,7 @@
 /* 8022CE88 001F6448  7C 7F 1B 78 */	mr r31, r3
 /* 8022CE8C 001F644C  90 83 00 00 */	stw r4, 0(r3)
 /* 8022CE90 001F6450  38 63 00 04 */	addi r3, r3, 4
-/* 8022CE94 001F6454  48 23 26 D1 */	bl func_8045F564
+/* 8022CE94 001F6454  48 23 26 D1 */	bl __ct__8045F564
 /* 8022CE98 001F6458  38 80 00 00 */	li r4, 0
 /* 8022CE9C 001F645C  38 00 00 01 */	li r0, 1
 /* 8022CEA0 001F6460  90 9F 00 14 */	stw r4, 0x14(r31)
@@ -44,7 +44,7 @@
 /* 8022CEF4 001F64B4  41 82 00 20 */	beq .L_8022CF14
 /* 8022CEF8 001F64B8  38 80 FF FF */	li r4, -1
 /* 8022CEFC 001F64BC  38 63 00 04 */	addi r3, r3, 4
-/* 8022CF00 001F64C0  48 23 26 81 */	bl func_8045F580
+/* 8022CF00 001F64C0  48 23 26 81 */	bl __dt__8045F580
 /* 8022CF04 001F64C4  2C 1F 00 00 */	cmpwi r31, 0
 /* 8022CF08 001F64C8  40 81 00 0C */	ble .L_8022CF14
 /* 8022CF0C 001F64CC  7F C3 F3 78 */	mr r3, r30
@@ -65,9 +65,9 @@
 /* 8022CF38 001F64F8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8022CF3C 001F64FC  7C 7F 1B 78 */	mr r31, r3
 /* 8022CF40 001F6500  48 20 74 61 */	bl func_804343A0
-/* 8022CF44 001F6504  3C 80 80 50 */	lis r4, lbl_80505E40@ha
+/* 8022CF44 001F6504  3C 80 80 50 */	lis r4, CExchangeWin_strpool@ha
 /* 8022CF48 001F6508  7F E5 FB 78 */	mr r5, r31
-/* 8022CF4C 001F650C  38 84 5E 40 */	addi r4, r4, lbl_80505E40@l
+/* 8022CF4C 001F650C  38 84 5E 40 */	addi r4, r4, CExchangeWin_strpool@l
 /* 8022CF50 001F6510  38 C0 00 00 */	li r6, 0
 /* 8022CF54 001F6514  38 E0 00 00 */	li r7, 0
 /* 8022CF58 001F6518  48 22 18 3D */	bl func_8044E794
@@ -211,10 +211,10 @@
 /* 8022D0FC 001F66BC  7C 08 02 A6 */	mflr r0
 /* 8022D100 001F66C0  90 01 00 44 */	stw r0, 0x44(r1)
 /* 8022D104 001F66C4  BF 81 00 30 */	stmw r28, 0x30(r1)
-/* 8022D108 001F66C8  3F E0 80 50 */	lis r31, lbl_80505E40@ha
+/* 8022D108 001F66C8  3F E0 80 50 */	lis r31, CExchangeWin_strpool@ha
 /* 8022D10C 001F66CC  7C 7C 1B 78 */	mr r28, r3
 /* 8022D110 001F66D0  7C 9D 23 78 */	mr r29, r4
-/* 8022D114 001F66D4  3B FF 5E 40 */	addi r31, r31, lbl_80505E40@l
+/* 8022D114 001F66D4  3B FF 5E 40 */	addi r31, r31, CExchangeWin_strpool@l
 /* 8022D118 001F66D8  38 61 00 08 */	addi r3, r1, 8
 /* 8022D11C 001F66DC  38 9F 00 16 */	addi r4, r31, 0x16
 /* 8022D120 001F66E0  4C C6 31 82 */	crclr 6
@@ -256,10 +256,10 @@
 /* 8022D1A4 001F6764  38 C0 00 00 */	li r6, 0
 /* 8022D1A8 001F6768  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8022D1AC 001F676C  BF A1 00 14 */	stmw r29, 0x14(r1)
-/* 8022D1B0 001F6770  3F E0 80 50 */	lis r31, lbl_80505E40@ha
+/* 8022D1B0 001F6770  3F E0 80 50 */	lis r31, CExchangeWin_strpool@ha
 /* 8022D1B4 001F6774  7C 7D 1B 78 */	mr r29, r3
 /* 8022D1B8 001F6778  7C BE 2B 78 */	mr r30, r5
-/* 8022D1BC 001F677C  3B FF 5E 40 */	addi r31, r31, lbl_80505E40@l
+/* 8022D1BC 001F677C  3B FF 5E 40 */	addi r31, r31, CExchangeWin_strpool@l
 /* 8022D1C0 001F6780  7C 85 23 78 */	mr r5, r4
 /* 8022D1C4 001F6784  38 9F 00 32 */	addi r4, r31, 0x32
 /* 8022D1C8 001F6788  80 63 00 1C */	lwz r3, 0x1c(r3)
@@ -335,9 +335,9 @@
 /* 8022D2B4 001F6874  7C 05 00 40 */	cmplw r5, r0
 /* 8022D2B8 001F6878  40 82 02 98 */	bne .L_8022D550
 /* 8022D2BC 001F687C  48 20 70 E5 */	bl func_804343A0
-/* 8022D2C0 001F6880  3F C0 80 50 */	lis r30, lbl_80505E40@ha
+/* 8022D2C0 001F6880  3F C0 80 50 */	lis r30, CExchangeWin_strpool@ha
 /* 8022D2C4 001F6884  3C A0 00 01 */	lis r5, 1
-/* 8022D2C8 001F6888  3B DE 5E 40 */	addi r30, r30, lbl_80505E40@l
+/* 8022D2C8 001F6888  3B DE 5E 40 */	addi r30, r30, CExchangeWin_strpool@l
 /* 8022D2CC 001F688C  7C 64 1B 78 */	mr r4, r3
 /* 8022D2D0 001F6890  38 7F 00 04 */	addi r3, r31, 4
 /* 8022D2D4 001F6894  38 A5 80 00 */	addi r5, r5, -0x8000
@@ -434,9 +434,9 @@
 /* 8022D440 001F6A00  41 82 00 08 */	beq .L_8022D448
 /* 8022D444 001F6A04  38 9E 00 E2 */	addi r4, r30, 0xe2
 .L_8022D448:
-/* 8022D448 001F6A08  3F C0 80 50 */	lis r30, lbl_80505E40@ha
+/* 8022D448 001F6A08  3F C0 80 50 */	lis r30, CExchangeWin_strpool@ha
 /* 8022D44C 001F6A0C  38 A0 00 2B */	li r5, 0x2b
-/* 8022D450 001F6A10  3B DE 5E 40 */	addi r30, r30, lbl_80505E40@l
+/* 8022D450 001F6A10  3B DE 5E 40 */	addi r30, r30, CExchangeWin_strpool@l
 /* 8022D454 001F6A14  38 7E 00 C3 */	addi r3, r30, 0xc3
 /* 8022D458 001F6A18  4B F0 8C 15 */	bl func_8013606C
 /* 8022D45C 001F6A1C  54 63 04 3E */	clrlwi r3, r3, 0x10
@@ -499,7 +499,7 @@
 /* 8022D538 001F6AF8  48 23 22 D9 */	bl func_8045F810
 /* 8022D53C 001F6AFC  38 61 00 08 */	addi r3, r1, 8
 /* 8022D540 001F6B00  38 80 FF FF */	li r4, -1
-/* 8022D544 001F6B04  48 23 23 85 */	bl func_8045F8C8
+/* 8022D544 001F6B04  48 23 23 85 */	bl __dt__8045F8C8
 /* 8022D548 001F6B08  38 60 00 01 */	li r3, 1
 /* 8022D54C 001F6B0C  48 00 00 08 */	b .L_8022D554
 .L_8022D550:
@@ -523,8 +523,8 @@ CExchangeWin_typestr:
 	.balign 4
 
 
-.global lbl_80505E40
-lbl_80505E40:
+.global CExchangeWin_strpool
+CExchangeWin_strpool:
 	.asciz "/menu/ExchangeWin.arc"
 	.asciz "txt_slct%02d"
 	.asciz "nul_proportion"
@@ -689,7 +689,7 @@ double_8066AED8:
 	.4byte 0x008D0010
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte func_8045F8C8
+	.4byte __dt__8045F8C8
 .endobj "@etb_80015744"
 
 .section extabindex, "a" # 0x80021020 - 0x80039220

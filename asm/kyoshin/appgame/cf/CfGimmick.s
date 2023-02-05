@@ -619,12 +619,12 @@
 /* 80209164 001D2724  90 01 00 44 */	stw r0, 0x44(r1)
 /* 80209168 001D2728  3C 00 43 30 */	lis r0, 0x4330
 /* 8020916C 001D272C  93 E1 00 3C */	stw r31, 0x3c(r1)
-/* 80209170 001D2730  3F E0 80 50 */	lis r31, lbl_80503D54@ha
+/* 80209170 001D2730  3F E0 80 50 */	lis r31, CfGimmick_strpool@ha
 /* 80209174 001D2734  93 C1 00 38 */	stw r30, 0x38(r1)
 /* 80209178 001D2738  7C DE 33 78 */	mr r30, r6
 /* 8020917C 001D273C  93 A1 00 34 */	stw r29, 0x34(r1)
 /* 80209180 001D2740  7C 9D 23 78 */	mr r29, r4
-/* 80209184 001D2744  38 9F 3D 54 */	addi r4, r31, lbl_80503D54@l
+/* 80209184 001D2744  38 9F 3D 54 */	addi r4, r31, CfGimmick_strpool@l
 /* 80209188 001D2748  93 81 00 30 */	stw r28, 0x30(r1)
 /* 8020918C 001D274C  7C 7C 1B 78 */	mr r28, r3
 /* 80209190 001D2750  90 01 00 18 */	stw r0, 0x18(r1)
@@ -633,7 +633,7 @@
 /* 8020919C 001D275C  A0 BC 00 64 */	lhz r5, 0x64(r28)
 /* 802091A0 001D2760  4B E3 19 A9 */	bl func_8003AB48
 /* 802091A4 001D2764  90 61 00 14 */	stw r3, 0x14(r1)
-/* 802091A8 001D2768  3B FF 3D 54 */	addi r31, r31, lbl_80503D54@l
+/* 802091A8 001D2768  3B FF 3D 54 */	addi r31, r31, CfGimmick_strpool@l
 /* 802091AC 001D276C  C8 42 A8 B0 */	lfd f2, double_8066AC30@sda21(r2)
 /* 802091B0 001D2770  38 9F 00 0A */	addi r4, r31, 0xa
 /* 802091B4 001D2774  A0 01 00 14 */	lhz r0, 0x14(r1)
@@ -2019,9 +2019,9 @@
 /* 8020A514 001D3AD4  7C 00 1B 78 */	or r0, r0, r3
 /* 8020A518 001D3AD8  54 00 0F FF */	rlwinm. r0, r0, 1, 0x1f, 0x1f
 /* 8020A51C 001D3ADC  40 82 00 3C */	bne .L_8020A558
-/* 8020A520 001D3AE0  3C 80 80 50 */	lis r4, lbl_80503D54@ha
+/* 8020A520 001D3AE0  3C 80 80 50 */	lis r4, CfGimmick_strpool@ha
 /* 8020A524 001D3AE4  3F C0 80 58 */	lis r30, lbl_80579DD0@ha
-/* 8020A528 001D3AE8  38 84 3D 54 */	addi r4, r4, lbl_80503D54@l
+/* 8020A528 001D3AE8  38 84 3D 54 */	addi r4, r4, CfGimmick_strpool@l
 /* 8020A52C 001D3AEC  7F E5 FB 78 */	mr r5, r31
 /* 8020A530 001D3AF0  38 7E 9D D0 */	addi r3, r30, lbl_80579DD0@l
 /* 8020A534 001D3AF4  38 84 00 2A */	addi r4, r4, 0x2a
@@ -2046,9 +2046,9 @@
 /* 8020A578 001D3B38  7C 00 1B 78 */	or r0, r0, r3
 /* 8020A57C 001D3B3C  54 00 0F FF */	rlwinm. r0, r0, 1, 0x1f, 0x1f
 /* 8020A580 001D3B40  40 82 00 3C */	bne .L_8020A5BC
-/* 8020A584 001D3B44  3C 80 80 50 */	lis r4, lbl_80503D54@ha
+/* 8020A584 001D3B44  3C 80 80 50 */	lis r4, CfGimmick_strpool@ha
 /* 8020A588 001D3B48  3F E0 80 58 */	lis r31, lbl_80579DD0@ha
-/* 8020A58C 001D3B4C  38 84 3D 54 */	addi r4, r4, lbl_80503D54@l
+/* 8020A58C 001D3B4C  38 84 3D 54 */	addi r4, r4, CfGimmick_strpool@l
 /* 8020A590 001D3B50  7F C5 F3 78 */	mr r5, r30
 /* 8020A594 001D3B54  38 7F 9D D0 */	addi r3, r31, lbl_80579DD0@l
 /* 8020A598 001D3B58  38 84 00 2A */	addi r4, r4, 0x2a
@@ -2553,8 +2553,8 @@ lbl_80503D48:
 	.balign 4
 
 
-.global lbl_80503D54
-lbl_80503D54:
+.global CfGimmick_strpool
+CfGimmick_strpool:
 	.asciz "cl_area_x"
 	.asciz "cl_area_py"
 	.asciz "cl_area_my"

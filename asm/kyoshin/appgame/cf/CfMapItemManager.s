@@ -180,15 +180,15 @@
 /* 80173418 0013C9D8  4E 80 04 21 */	bctrl 
 /* 8017341C 0013C9DC  3B ED 8B 98 */	addi r31, r13, lbl_80664D18@sda21
 /* 80173420 0013C9E0  38 16 00 31 */	addi r0, r22, 0x31
-/* 80173424 0013C9E4  3E E0 80 50 */	lis r23, lbl_804FEBF0@ha
+/* 80173424 0013C9E4  3E E0 80 50 */	lis r23, CfMapItemManager_strpool@ha
 /* 80173428 0013C9E8  98 1F 00 03 */	stb r0, 3(r31)
 /* 8017342C 0013C9EC  7C 7B 1B 78 */	mr r27, r3
 /* 80173430 0013C9F0  7E 85 A3 78 */	mr r5, r20
-/* 80173434 0013C9F4  38 97 EB F0 */	addi r4, r23, lbl_804FEBF0@l
+/* 80173434 0013C9F4  38 97 EB F0 */	addi r4, r23, CfMapItemManager_strpool@l
 /* 80173438 0013C9F8  4B EC 77 11 */	bl func_8003AB48
 /* 8017343C 0013C9FC  90 61 00 20 */	stw r3, 0x20(r1)
 /* 80173440 0013CA00  3F 00 43 30 */	lis r24, 0x4330
-/* 80173444 0013CA04  3A F7 EB F0 */	addi r23, r23, lbl_804FEBF0@l
+/* 80173444 0013CA04  3A F7 EB F0 */	addi r23, r23, CfMapItemManager_strpool@l
 /* 80173448 0013CA08  C8 22 9C E0 */	lfd f1, double_8066A060@sda21(r2)
 /* 8017344C 0013CA0C  A8 01 00 20 */	lha r0, 0x20(r1)
 /* 80173450 0013CA10  7F 63 DB 78 */	mr r3, r27
@@ -541,11 +541,11 @@
 .L_80173940:
 /* 80173940 0013CF00  38 00 00 01 */	li r0, 1
 /* 80173944 0013CF04  3F C0 80 66 */	lis r30, lbl_80659DB0@ha
-/* 80173948 0013CF08  3F A0 80 50 */	lis r29, lbl_804FEBF0@ha
+/* 80173948 0013CF08  3F A0 80 50 */	lis r29, CfMapItemManager_strpool@ha
 /* 8017394C 0013CF0C  B0 17 38 04 */	sth r0, 0x3804(r23)
 /* 80173950 0013CF10  C3 E2 9C C0 */	lfs f31, float_8066A040@sda21(r2)
 /* 80173954 0013CF14  3B DE 9D B0 */	addi r30, r30, lbl_80659DB0@l
-/* 80173958 0013CF18  3B BD EB F0 */	addi r29, r29, lbl_804FEBF0@l
+/* 80173958 0013CF18  3B BD EB F0 */	addi r29, r29, CfMapItemManager_strpool@l
 /* 8017395C 0013CF1C  3B E0 00 00 */	li r31, 0
 /* 80173960 0013CF20  48 00 01 5C */	b .L_80173ABC
 .L_80173964:
@@ -675,11 +675,11 @@
 /* 80173B30 0013D0F0  7F A3 EB 78 */	mr r3, r29
 /* 80173B34 0013D0F4  4B EC 76 B9 */	bl func_8003B1EC
 /* 80173B38 0013D0F8  38 00 00 01 */	li r0, 1
-/* 80173B3C 0013D0FC  3F C0 80 50 */	lis r30, lbl_804FEBF0@ha
+/* 80173B3C 0013D0FC  3F C0 80 50 */	lis r30, CfMapItemManager_strpool@ha
 /* 80173B40 0013D100  B0 18 38 04 */	sth r0, 0x3804(r24)
 /* 80173B44 0013D104  7F 9B 1A 14 */	add r28, r27, r3
 /* 80173B48 0013D108  C3 E2 9C C0 */	lfs f31, float_8066A040@sda21(r2)
-/* 80173B4C 0013D10C  3B DE EB F0 */	addi r30, r30, lbl_804FEBF0@l
+/* 80173B4C 0013D10C  3B DE EB F0 */	addi r30, r30, CfMapItemManager_strpool@l
 /* 80173B50 0013D110  3B E0 00 00 */	li r31, 0
 /* 80173B54 0013D114  48 00 00 F0 */	b .L_80173C44
 .L_80173B58:
@@ -818,7 +818,7 @@
 /* 80173D3C 0013D2FC  54 74 04 3E */	clrlwi r20, r3, 0x10
 /* 80173D40 0013D300  4B F0 E5 B5 */	bl func_800822F4
 /* 80173D44 0013D304  C3 E2 9C FC */	lfs f31, float_8066A07C@sda21(r2)
-/* 80173D48 0013D308  3C 80 80 50 */	lis r4, lbl_804FEBF0@ha
+/* 80173D48 0013D308  3C 80 80 50 */	lis r4, CfMapItemManager_strpool@ha
 /* 80173D4C 0013D30C  C2 E2 9C C0 */	lfs f23, float_8066A040@sda21(r2)
 /* 80173D50 0013D310  54 73 04 3E */	clrlwi r19, r3, 0x10
 /* 80173D54 0013D314  FF 40 F8 90 */	fmr f26, f31
@@ -826,7 +826,7 @@
 /* 80173D5C 0013D31C  C3 82 9D 08 */	lfs f28, float_8066A088@sda21(r2)
 /* 80173D60 0013D320  3A E1 00 24 */	addi r23, r1, 0x24
 /* 80173D64 0013D324  C3 C2 9D 10 */	lfs f30, float_8066A090@sda21(r2)
-/* 80173D68 0013D328  3B 24 EB F0 */	addi r25, r4, lbl_804FEBF0@l
+/* 80173D68 0013D328  3B 24 EB F0 */	addi r25, r4, CfMapItemManager_strpool@l
 /* 80173D6C 0013D32C  C3 A2 9D 0C */	lfs f29, float_8066A08C@sda21(r2)
 /* 80173D70 0013D330  3A 40 00 00 */	li r18, 0
 /* 80173D74 0013D334  C3 22 9D 00 */	lfs f25, float_8066A080@sda21(r2)
@@ -1377,9 +1377,9 @@
 .L_80174580:
 /* 80174580 0013DB40  7F C3 F3 78 */	mr r3, r30
 /* 80174584 0013DB44  4B FC 0C 41 */	bl func_801351C4
-/* 80174588 0013DB48  3C 80 80 50 */	lis r4, lbl_804FEBF0@ha
+/* 80174588 0013DB48  3C 80 80 50 */	lis r4, CfMapItemManager_strpool@ha
 /* 8017458C 0013DB4C  80 6D A8 18 */	lwz r3, lbl_80666998@sda21(r13)
-/* 80174590 0013DB50  38 84 EB F0 */	addi r4, r4, lbl_804FEBF0@l
+/* 80174590 0013DB50  38 84 EB F0 */	addi r4, r4, CfMapItemManager_strpool@l
 /* 80174594 0013DB54  80 AD A8 F4 */	lwz r5, lbl_80666A74@sda21(r13)
 /* 80174598 0013DB58  38 84 00 6A */	addi r4, r4, 0x6a
 /* 8017459C 0013DB5C  4B EC 65 AD */	bl func_8003AB48
@@ -2315,8 +2315,8 @@ cf_CfMapItemManager_typestr:
 	.balign 4
 
 
-.global lbl_804FEBF0
-lbl_804FEBF0:
+.global CfMapItemManager_strpool
+CfMapItemManager_strpool:
 	.asciz "posX"
 	.asciz "posY"
 	.asciz "posZ"

@@ -75,8 +75,8 @@
 /* 8039DF90 00367550  38 00 00 03 */	li r0, 3
 /* 8039DF94 00367554  48 00 00 18 */	b .L_8039DFAC
 .L_8039DF98:
-/* 8039DF98 00367558  3C 60 80 52 */	lis r3, lbl_8051D508@ha
-/* 8039DF9C 0036755C  38 63 D5 08 */	addi r3, r3, lbl_8051D508@l
+/* 8039DF98 00367558  3C 60 80 52 */	lis r3, mwsfdsfx_strpool@ha
+/* 8039DF9C 0036755C  38 63 D5 08 */	addi r3, r3, mwsfdsfx_strpool@l
 /* 8039DFA0 00367560  4C C6 31 82 */	crclr 6
 /* 8039DFA4 00367564  4B FF FC 95 */	bl MWSFSVM_Error
 /* 8039DFA8 00367568  38 00 00 03 */	li r0, 3
@@ -121,8 +121,8 @@
 /* 8039E030 003675F0  3B 80 00 03 */	li r28, 3
 /* 8039E034 003675F4  48 00 00 18 */	b .L_8039E04C
 .L_8039E038:
-/* 8039E038 003675F8  3C 60 80 52 */	lis r3, lbl_8051D508@ha
-/* 8039E03C 003675FC  38 63 D5 08 */	addi r3, r3, lbl_8051D508@l
+/* 8039E038 003675F8  3C 60 80 52 */	lis r3, mwsfdsfx_strpool@ha
+/* 8039E03C 003675FC  38 63 D5 08 */	addi r3, r3, mwsfdsfx_strpool@l
 /* 8039E040 00367600  38 63 00 26 */	addi r3, r3, 0x26
 /* 8039E044 00367604  4C C6 31 82 */	crclr 6
 /* 8039E048 00367608  4B FF FB F1 */	bl MWSFSVM_Error
@@ -150,8 +150,8 @@
 /* 8039E08C 0036764C  3B 80 00 03 */	li r28, 3
 /* 8039E090 00367650  48 00 00 18 */	b .L_8039E0A8
 .L_8039E094:
-/* 8039E094 00367654  3C 60 80 52 */	lis r3, lbl_8051D508@ha
-/* 8039E098 00367658  38 63 D5 08 */	addi r3, r3, lbl_8051D508@l
+/* 8039E094 00367654  3C 60 80 52 */	lis r3, mwsfdsfx_strpool@ha
+/* 8039E098 00367658  38 63 D5 08 */	addi r3, r3, mwsfdsfx_strpool@l
 /* 8039E09C 0036765C  38 63 00 4C */	addi r3, r3, 0x4c
 /* 8039E0A0 00367660  4C C6 31 82 */	crclr 6
 /* 8039E0A4 00367664  4B FF FB 95 */	bl MWSFSVM_Error
@@ -178,8 +178,8 @@
 /* 8039E0EC 003676AC  3B 80 00 01 */	li r28, 1
 /* 8039E0F0 003676B0  48 00 00 18 */	b .L_8039E108
 .L_8039E0F4:
-/* 8039E0F4 003676B4  3C 60 80 52 */	lis r3, lbl_8051D508@ha
-/* 8039E0F8 003676B8  38 63 D5 08 */	addi r3, r3, lbl_8051D508@l
+/* 8039E0F4 003676B4  3C 60 80 52 */	lis r3, mwsfdsfx_strpool@ha
+/* 8039E0F8 003676B8  38 63 D5 08 */	addi r3, r3, mwsfdsfx_strpool@l
 /* 8039E0FC 003676BC  38 63 00 6E */	addi r3, r3, 0x6e
 /* 8039E100 003676C0  4C C6 31 82 */	crclr 6
 /* 8039E104 003676C4  4B FF FB 35 */	bl MWSFSVM_Error
@@ -200,8 +200,8 @@
 /* 8039E134 003676F4  3B 80 00 01 */	li r28, 1
 /* 8039E138 003676F8  48 00 00 18 */	b .L_8039E150
 .L_8039E13C:
-/* 8039E13C 003676FC  3C 60 80 52 */	lis r3, lbl_8051D508@ha
-/* 8039E140 00367700  38 63 D5 08 */	addi r3, r3, lbl_8051D508@l
+/* 8039E13C 003676FC  3C 60 80 52 */	lis r3, mwsfdsfx_strpool@ha
+/* 8039E140 00367700  38 63 D5 08 */	addi r3, r3, mwsfdsfx_strpool@l
 /* 8039E144 00367704  38 63 00 6E */	addi r3, r3, 0x6e
 /* 8039E148 00367708  4C C6 31 82 */	crclr 6
 /* 8039E14C 0036770C  4B FF FA ED */	bl MWSFSVM_Error
@@ -442,8 +442,8 @@
 /* 8039E464 00367A24  48 00 39 E9 */	bl MWSFD_IsEnableHndl
 /* 8039E468 00367A28  2C 03 00 01 */	cmpwi r3, 1
 /* 8039E46C 00367A2C  41 82 00 20 */	beq .L_8039E48C
-/* 8039E470 00367A30  3C 60 80 52 */	lis r3, lbl_8051D508@ha
-/* 8039E474 00367A34  38 63 D5 08 */	addi r3, r3, lbl_8051D508@l
+/* 8039E470 00367A30  3C 60 80 52 */	lis r3, mwsfdsfx_strpool@ha
+/* 8039E474 00367A34  38 63 D5 08 */	addi r3, r3, mwsfdsfx_strpool@l
 /* 8039E478 00367A38  38 63 02 01 */	addi r3, r3, 0x201
 /* 8039E47C 00367A3C  4C C6 31 82 */	crclr 6
 /* 8039E480 00367A40  4B FF F7 B9 */	bl MWSFSVM_Error
@@ -472,8 +472,8 @@
 /* 8039E4C8 00367A88  48 00 39 85 */	bl MWSFD_IsEnableHndl
 /* 8039E4CC 00367A8C  2C 03 00 01 */	cmpwi r3, 1
 /* 8039E4D0 00367A90  41 82 00 1C */	beq .L_8039E4EC
-/* 8039E4D4 00367A94  3C 60 80 52 */	lis r3, lbl_8051D508@ha
-/* 8039E4D8 00367A98  38 63 D5 08 */	addi r3, r3, lbl_8051D508@l
+/* 8039E4D4 00367A94  3C 60 80 52 */	lis r3, mwsfdsfx_strpool@ha
+/* 8039E4D8 00367A98  38 63 D5 08 */	addi r3, r3, mwsfdsfx_strpool@l
 /* 8039E4DC 00367A9C  38 63 02 32 */	addi r3, r3, 0x232
 /* 8039E4E0 00367AA0  4C C6 31 82 */	crclr 6
 /* 8039E4E4 00367AA4  4B FF F7 55 */	bl MWSFSVM_Error
@@ -539,8 +539,8 @@
 /* 8039E59C 00367B5C  4B FF 5E 0D */	bl SJRBF_Create
 /* 8039E5A0 00367B60  2C 03 00 00 */	cmpwi r3, 0
 /* 8039E5A4 00367B64  40 82 00 24 */	bne .L_8039E5C8
-/* 8039E5A8 00367B68  3C 60 80 52 */	lis r3, lbl_8051D508@ha
-/* 8039E5AC 00367B6C  38 63 D5 08 */	addi r3, r3, lbl_8051D508@l
+/* 8039E5A8 00367B68  3C 60 80 52 */	lis r3, mwsfdsfx_strpool@ha
+/* 8039E5AC 00367B6C  38 63 D5 08 */	addi r3, r3, mwsfdsfx_strpool@l
 /* 8039E5B0 00367B70  38 63 03 62 */	addi r3, r3, 0x362
 /* 8039E5B4 00367B74  4C C6 31 82 */	crclr 6
 /* 8039E5B8 00367B78  4B FF F6 81 */	bl MWSFSVM_Error
@@ -653,8 +653,8 @@
 /* 8039E70C 00367CCC  48 00 00 58 */	b .L_8039E764
 .L_8039E710:
 /* 8039E710 00367CD0  90 01 00 08 */	stw r0, 8(r1)
-/* 8039E714 00367CD4  3C A0 80 52 */	lis r5, lbl_8051D508@ha
-/* 8039E718 00367CD8  38 A5 D5 08 */	addi r5, r5, lbl_8051D508@l
+/* 8039E714 00367CD4  3C A0 80 52 */	lis r5, mwsfdsfx_strpool@ha
+/* 8039E718 00367CD8  38 A5 D5 08 */	addi r5, r5, mwsfdsfx_strpool@l
 /* 8039E71C 00367CDC  38 61 00 08 */	addi r3, r1, 8
 /* 8039E720 00367CE0  80 1E 04 D0 */	lwz r0, 0x4d0(r30)
 /* 8039E724 00367CE4  38 85 03 8D */	addi r4, r5, 0x38d
@@ -707,8 +707,8 @@
 /* 8039E7CC 00367D8C  48 00 01 44 */	b .L_8039E910
 .L_8039E7D0:
 /* 8039E7D0 00367D90  80 1F 04 B4 */	lwz r0, 0x4b4(r31)
-/* 8039E7D4 00367D94  3C A0 80 52 */	lis r5, lbl_8051D508@ha
-/* 8039E7D8 00367D98  38 A5 D5 08 */	addi r5, r5, lbl_8051D508@l
+/* 8039E7D4 00367D94  3C A0 80 52 */	lis r5, mwsfdsfx_strpool@ha
+/* 8039E7D8 00367D98  38 A5 D5 08 */	addi r5, r5, mwsfdsfx_strpool@l
 /* 8039E7DC 00367D9C  38 C1 00 10 */	addi r6, r1, 0x10
 /* 8039E7E0 00367DA0  90 61 00 1C */	stw r3, 0x1c(r1)
 /* 8039E7E4 00367DA4  38 85 03 9D */	addi r4, r5, 0x39d
@@ -835,8 +835,8 @@
 /* 8039E994 00367F54  38 00 00 03 */	li r0, 3
 /* 8039E998 00367F58  48 00 00 18 */	b .L_8039E9B0
 .L_8039E99C:
-/* 8039E99C 00367F5C  3C 60 80 52 */	lis r3, lbl_8051D508@ha
-/* 8039E9A0 00367F60  38 63 D5 08 */	addi r3, r3, lbl_8051D508@l
+/* 8039E99C 00367F5C  3C 60 80 52 */	lis r3, mwsfdsfx_strpool@ha
+/* 8039E9A0 00367F60  38 63 D5 08 */	addi r3, r3, mwsfdsfx_strpool@l
 /* 8039E9A4 00367F64  4C C6 31 82 */	crclr 6
 /* 8039E9A8 00367F68  4B FF F2 91 */	bl MWSFSVM_Error
 /* 8039E9AC 00367F6C  38 00 00 03 */	li r0, 3
@@ -881,8 +881,8 @@
 /* 8039EA34 00367FF4  3B 40 00 03 */	li r26, 3
 /* 8039EA38 00367FF8  48 00 00 18 */	b .L_8039EA50
 .L_8039EA3C:
-/* 8039EA3C 00367FFC  3C 60 80 52 */	lis r3, lbl_8051D508@ha
-/* 8039EA40 00368000  38 63 D5 08 */	addi r3, r3, lbl_8051D508@l
+/* 8039EA3C 00367FFC  3C 60 80 52 */	lis r3, mwsfdsfx_strpool@ha
+/* 8039EA40 00368000  38 63 D5 08 */	addi r3, r3, mwsfdsfx_strpool@l
 /* 8039EA44 00368004  38 63 00 26 */	addi r3, r3, 0x26
 /* 8039EA48 00368008  4C C6 31 82 */	crclr 6
 /* 8039EA4C 0036800C  4B FF F1 ED */	bl MWSFSVM_Error
@@ -910,8 +910,8 @@
 /* 8039EA90 00368050  3B 40 00 03 */	li r26, 3
 /* 8039EA94 00368054  48 00 00 18 */	b .L_8039EAAC
 .L_8039EA98:
-/* 8039EA98 00368058  3C 60 80 52 */	lis r3, lbl_8051D508@ha
-/* 8039EA9C 0036805C  38 63 D5 08 */	addi r3, r3, lbl_8051D508@l
+/* 8039EA98 00368058  3C 60 80 52 */	lis r3, mwsfdsfx_strpool@ha
+/* 8039EA9C 0036805C  38 63 D5 08 */	addi r3, r3, mwsfdsfx_strpool@l
 /* 8039EAA0 00368060  38 63 00 4C */	addi r3, r3, 0x4c
 /* 8039EAA4 00368064  4C C6 31 82 */	crclr 6
 /* 8039EAA8 00368068  4B FF F1 91 */	bl MWSFSVM_Error
@@ -938,8 +938,8 @@
 /* 8039EAF0 003680B0  3B 40 00 01 */	li r26, 1
 /* 8039EAF4 003680B4  48 00 00 18 */	b .L_8039EB0C
 .L_8039EAF8:
-/* 8039EAF8 003680B8  3C 60 80 52 */	lis r3, lbl_8051D508@ha
-/* 8039EAFC 003680BC  38 63 D5 08 */	addi r3, r3, lbl_8051D508@l
+/* 8039EAF8 003680B8  3C 60 80 52 */	lis r3, mwsfdsfx_strpool@ha
+/* 8039EAFC 003680BC  38 63 D5 08 */	addi r3, r3, mwsfdsfx_strpool@l
 /* 8039EB00 003680C0  38 63 00 6E */	addi r3, r3, 0x6e
 /* 8039EB04 003680C4  4C C6 31 82 */	crclr 6
 /* 8039EB08 003680C8  4B FF F1 31 */	bl MWSFSVM_Error
@@ -960,8 +960,8 @@
 /* 8039EB38 003680F8  3B 40 00 01 */	li r26, 1
 /* 8039EB3C 003680FC  48 00 00 18 */	b .L_8039EB54
 .L_8039EB40:
-/* 8039EB40 00368100  3C 60 80 52 */	lis r3, lbl_8051D508@ha
-/* 8039EB44 00368104  38 63 D5 08 */	addi r3, r3, lbl_8051D508@l
+/* 8039EB40 00368100  3C 60 80 52 */	lis r3, mwsfdsfx_strpool@ha
+/* 8039EB44 00368104  38 63 D5 08 */	addi r3, r3, mwsfdsfx_strpool@l
 /* 8039EB48 00368108  38 63 00 6E */	addi r3, r3, 0x6e
 /* 8039EB4C 0036810C  4C C6 31 82 */	crclr 6
 /* 8039EB50 00368110  4B FF F0 E9 */	bl MWSFSVM_Error
@@ -1064,8 +1064,8 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051D508
-lbl_8051D508:
+.global mwsfdsfx_strpool
+mwsfdsfx_strpool:
 	.asciz "E201184 MwsfdBufFmt value is invalid."
 	.asciz "E301272 picture_structure is invalid."
 	.asciz "E301273 chroma_format is invalid."

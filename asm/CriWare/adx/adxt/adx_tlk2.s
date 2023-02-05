@@ -39,8 +39,8 @@
 /* 80382404 0034B9C4  93 A1 00 34 */	stw r29, 0x34(r1)
 /* 80382408 0034B9C8  7C 7D 1B 78 */	mr r29, r3
 /* 8038240C 0034B9CC  40 82 00 14 */	bne .L_80382420
-/* 80382410 0034B9D0  3C 60 80 52 */	lis r3, lbl_80519838@ha
-/* 80382414 0034B9D4  38 63 98 38 */	addi r3, r3, lbl_80519838@l
+/* 80382410 0034B9D0  3C 60 80 52 */	lis r3, adx_tlk2_strpool@ha
+/* 80382414 0034B9D4  38 63 98 38 */	addi r3, r3, adx_tlk2_strpool@l
 /* 80382418 0034B9D8  48 00 7E 01 */	bl ADXERR_CallErrFunc1_
 /* 8038241C 0034B9DC  48 00 00 B0 */	b .L_803824CC
 .L_80382420:
@@ -62,9 +62,9 @@
 /* 8038245C 0034BA1C  38 A1 00 18 */	addi r5, r1, 0x18
 /* 80382460 0034BA20  38 C0 00 10 */	li r6, 0x10
 /* 80382464 0034BA24  48 00 81 69 */	bl ADXERR_ItoA2
-/* 80382468 0034BA28  3C 60 80 52 */	lis r3, lbl_80519838@ha
+/* 80382468 0034BA28  3C 60 80 52 */	lis r3, adx_tlk2_strpool@ha
 /* 8038246C 0034BA2C  38 81 00 18 */	addi r4, r1, 0x18
-/* 80382470 0034BA30  38 63 98 38 */	addi r3, r3, lbl_80519838@l
+/* 80382470 0034BA30  38 63 98 38 */	addi r3, r3, adx_tlk2_strpool@l
 /* 80382474 0034BA34  38 63 00 29 */	addi r3, r3, 0x29
 /* 80382478 0034BA38  48 00 7E 25 */	bl ADXERR_CallErrFunc2_
 /* 8038247C 0034BA3C  38 60 FF FF */	li r3, -1
@@ -112,8 +112,8 @@
 /* 80382510 0034BAD0  2C 1F 00 00 */	cmpwi r31, 0
 /* 80382514 0034BAD4  40 82 00 18 */	bne .L_8038252C
 .L_80382518:
-/* 80382518 0034BAD8  3C 60 80 52 */	lis r3, lbl_80519838@ha
-/* 8038251C 0034BADC  38 63 98 38 */	addi r3, r3, lbl_80519838@l
+/* 80382518 0034BAD8  3C 60 80 52 */	lis r3, adx_tlk2_strpool@ha
+/* 8038251C 0034BADC  38 63 98 38 */	addi r3, r3, adx_tlk2_strpool@l
 /* 80382520 0034BAE0  38 63 00 4D */	addi r3, r3, 0x4d
 /* 80382524 0034BAE4  48 00 7C F5 */	bl ADXERR_CallErrFunc1_
 /* 80382528 0034BAE8  48 00 00 58 */	b .L_80382580
@@ -152,8 +152,8 @@
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
 
-.global lbl_80519838
-lbl_80519838:
+.global adx_tlk2_strpool
+adx_tlk2_strpool:
 	.asciz "E02080811 adxt_StartAfs: parameter error"
 	.asciz "E8101202 adxt_StartAfs: can't open "
 	.asciz "E02080807 adxt_StartFnameRange: parameter error"

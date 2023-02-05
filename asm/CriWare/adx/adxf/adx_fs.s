@@ -68,8 +68,8 @@
 /* 8037C860 00345E20  90 E1 00 08 */	stw r7, 8(r1)
 /* 8037C864 00345E24  2C 00 00 02 */	cmpwi r0, 2
 /* 8037C868 00345E28  40 82 00 1C */	bne .L_8037C884
-/* 8037C86C 00345E2C  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037C870 00345E30  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037C86C 00345E2C  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037C870 00345E30  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037C874 00345E34  38 63 00 61 */	addi r3, r3, 0x61
 /* 8037C878 00345E38  48 00 D9 A1 */	bl ADXERR_CallErrFunc1_
 /* 8037C87C 00345E3C  38 60 FF FF */	li r3, -1
@@ -107,8 +107,8 @@
 /* 8037C8F8 00345EB8  90 67 00 0C */	stw r3, 0xc(r7)
 /* 8037C8FC 00345EBC  90 09 3C 90 */	stw r0, adxf_hstry_no@l(r9)
 /* 8037C900 00345EC0  41 82 01 00 */	beq .L_8037CA00
-/* 8037C904 00345EC4  3F C0 80 52 */	lis r30, lbl_80518E78@ha
-/* 8037C908 00345EC8  3B DE 8E 78 */	addi r30, r30, lbl_80518E78@l
+/* 8037C904 00345EC4  3F C0 80 52 */	lis r30, adx_fs_strpool@ha
+/* 8037C908 00345EC8  3B DE 8E 78 */	addi r30, r30, adx_fs_strpool@l
 .L_8037C90C:
 /* 8037C90C 00345ECC  2C 1D 00 00 */	cmpwi r29, 0
 /* 8037C910 00345ED0  40 82 00 14 */	bne .L_8037C924
@@ -189,8 +189,8 @@
 /* 8037CA20 00345FE0  90 83 3C A0 */	stw r4, lbl_805E3CA0@l(r3)
 /* 8037CA24 00345FE4  90 1D 3C A4 */	stw r0, lbl_805E3CA4@l(r29)
 /* 8037CA28 00345FE8  40 82 00 24 */	bne .L_8037CA4C
-/* 8037CA2C 00345FEC  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037CA30 00345FF0  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037CA2C 00345FEC  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037CA30 00345FF0  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037CA34 00345FF4  38 63 00 C3 */	addi r3, r3, 0xc3
 /* 8037CA38 00345FF8  48 00 D7 E1 */	bl ADXERR_CallErrFunc1_
 /* 8037CA3C 00345FFC  38 00 00 04 */	li r0, 4
@@ -200,8 +200,8 @@
 .L_8037CA4C:
 /* 8037CA4C 0034600C  2C 1B 00 00 */	cmpwi r27, 0
 /* 8037CA50 00346010  41 81 00 24 */	bgt .L_8037CA74
-/* 8037CA54 00346014  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037CA58 00346018  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037CA54 00346014  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037CA58 00346018  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037CA5C 0034601C  38 63 00 EE */	addi r3, r3, 0xee
 /* 8037CA60 00346020  48 00 D7 B9 */	bl ADXERR_CallErrFunc1_
 /* 8037CA64 00346024  38 00 00 04 */	li r0, 4
@@ -214,16 +214,16 @@
 /* 8037CA7C 0034603C  2C 13 01 00 */	cmpwi r19, 0x100
 /* 8037CA80 00346040  41 80 00 18 */	blt .L_8037CA98
 .L_8037CA84:
-/* 8037CA84 00346044  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037CA88 00346048  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037CA84 00346044  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037CA88 00346048  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037CA8C 0034604C  48 00 D7 8D */	bl ADXERR_CallErrFunc1_
 /* 8037CA90 00346050  38 60 FF FD */	li r3, -3
 /* 8037CA94 00346054  48 00 00 28 */	b .L_8037CABC
 .L_8037CA98:
 /* 8037CA98 00346058  2C 19 00 00 */	cmpwi r25, 0
 /* 8037CA9C 0034605C  40 82 00 1C */	bne .L_8037CAB8
-/* 8037CAA0 00346060  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037CAA4 00346064  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037CAA0 00346060  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037CAA4 00346064  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037CAA8 00346068  38 63 00 37 */	addi r3, r3, 0x37
 /* 8037CAAC 0034606C  48 00 D7 6D */	bl ADXERR_CallErrFunc1_
 /* 8037CAB0 00346070  38 60 FF FD */	li r3, -3
@@ -242,8 +242,8 @@
 /* 8037CAD8 00346098  80 07 3C A0 */	lwz r0, lbl_805E3CA0@l(r7)
 /* 8037CADC 0034609C  2C 00 00 00 */	cmpwi r0, 0
 /* 8037CAE0 003460A0  41 80 00 28 */	blt .L_8037CB08
-/* 8037CAE4 003460A4  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037CAE8 003460A8  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037CAE4 003460A4  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037CAE8 003460A8  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037CAEC 003460AC  38 63 01 16 */	addi r3, r3, 0x116
 /* 8037CAF0 003460B0  48 00 D7 29 */	bl ADXERR_CallErrFunc1_
 /* 8037CAF4 003460B4  38 00 00 04 */	li r0, 4
@@ -355,8 +355,8 @@
 /* 8037CC94 00346254  90 0A 3C 90 */	stw r0, adxf_hstry_no@l(r10)
 /* 8037CC98 00346258  93 E3 3C 9C */	stw r31, adxf_ldptnw_hn@l(r3)
 /* 8037CC9C 0034625C  40 82 00 28 */	bne .L_8037CCC4
-/* 8037CCA0 00346260  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037CCA4 00346264  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037CCA0 00346260  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037CCA4 00346264  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037CCA8 00346268  38 63 01 45 */	addi r3, r3, 0x145
 /* 8037CCAC 0034626C  48 00 D5 6D */	bl ADXERR_CallErrFunc1_
 /* 8037CCB0 00346270  38 00 00 04 */	li r0, 4
@@ -464,8 +464,8 @@
 /* 8037CE38 003463F8  90 0A 3C 90 */	stw r0, adxf_hstry_no@l(r10)
 /* 8037CE3C 003463FC  93 E3 3C 9C */	stw r31, adxf_ldptnw_hn@l(r3)
 /* 8037CE40 00346400  40 82 00 28 */	bne .L_8037CE68
-/* 8037CE44 00346404  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037CE48 00346408  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037CE44 00346404  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037CE48 00346408  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037CE4C 0034640C  38 63 01 45 */	addi r3, r3, 0x145
 /* 8037CE50 00346410  48 00 D3 C9 */	bl ADXERR_CallErrFunc1_
 /* 8037CE54 00346414  38 00 00 04 */	li r0, 4
@@ -530,8 +530,8 @@
 /* 8037CF1C 003464DC  80 04 3C A0 */	lwz r0, lbl_805E3CA0@l(r4)
 /* 8037CF20 003464E0  7C 03 00 00 */	cmpw r3, r0
 /* 8037CF24 003464E4  41 82 00 1C */	beq .L_8037CF40
-/* 8037CF28 003464E8  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037CF2C 003464EC  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037CF28 003464E8  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037CF2C 003464EC  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037CF30 003464F0  38 63 01 96 */	addi r3, r3, 0x196
 /* 8037CF34 003464F4  48 00 D2 E5 */	bl ADXERR_CallErrFunc1_
 /* 8037CF38 003464F8  38 60 FF FD */	li r3, -3
@@ -551,8 +551,8 @@
 /* 8037CF68 00346528  80 63 3C 9C */	lwz r3, adxf_ldptnw_hn@l(r3)
 /* 8037CF6C 0034652C  2C 03 00 00 */	cmpwi r3, 0
 /* 8037CF70 00346530  40 82 00 1C */	bne .L_8037CF8C
-/* 8037CF74 00346534  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037CF78 00346538  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037CF74 00346534  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037CF78 00346538  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037CF7C 0034653C  38 63 01 6F */	addi r3, r3, 0x16f
 /* 8037CF80 00346540  48 00 D2 99 */	bl ADXERR_CallErrFunc1_
 /* 8037CF84 00346544  3B E0 FF FD */	li r31, -3
@@ -574,8 +574,8 @@
 /* 8037CFB8 00346578  48 00 C4 4D */	bl ADXCRS_Enter
 /* 8037CFBC 0034657C  2C 19 00 00 */	cmpwi r25, 0
 /* 8037CFC0 00346580  40 82 00 1C */	bne .L_8037CFDC
-/* 8037CFC4 00346584  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037CFC8 00346588  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037CFC4 00346584  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037CFC8 00346588  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037CFCC 0034658C  38 63 00 9D */	addi r3, r3, 0x9d
 /* 8037CFD0 00346590  48 00 D2 49 */	bl ADXERR_CallErrFunc1_
 /* 8037CFD4 00346594  3B 20 00 00 */	li r25, 0
@@ -602,8 +602,8 @@
 /* 8037D01C 003465DC  54 A0 06 FF */	clrlwi. r0, r5, 0x1b
 /* 8037D020 003465E0  80 63 3C 9C */	lwz r3, adxf_ldptnw_hn@l(r3)
 /* 8037D024 003465E4  41 82 00 1C */	beq .L_8037D040
-/* 8037D028 003465E8  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037D02C 003465EC  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037D028 003465E8  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037D02C 003465EC  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037D030 003465F0  38 63 01 C9 */	addi r3, r3, 0x1c9
 /* 8037D034 003465F4  48 00 D1 E5 */	bl ADXERR_CallErrFunc1_
 /* 8037D038 003465F8  38 60 FF FD */	li r3, -3
@@ -644,8 +644,8 @@
 /* 8037D0BC 0034667C  90 69 00 0C */	stw r3, 0xc(r9)
 /* 8037D0C0 00346680  90 08 3C 90 */	stw r0, adxf_hstry_no@l(r8)
 /* 8037D0C4 00346684  41 82 01 00 */	beq .L_8037D1C4
-/* 8037D0C8 00346688  3F 40 80 52 */	lis r26, lbl_80518E78@ha
-/* 8037D0CC 0034668C  3B 5A 8E 78 */	addi r26, r26, lbl_80518E78@l
+/* 8037D0C8 00346688  3F 40 80 52 */	lis r26, adx_fs_strpool@ha
+/* 8037D0CC 0034668C  3B 5A 8E 78 */	addi r26, r26, adx_fs_strpool@l
 .L_8037D0D0:
 /* 8037D0D0 00346690  2C 1F 00 00 */	cmpwi r31, 0
 /* 8037D0D4 00346694  40 82 00 14 */	bne .L_8037D0E8
@@ -749,9 +749,9 @@
 /* 8037D230 003467F0  2C 00 00 00 */	cmpwi r0, 0
 /* 8037D234 003467F4  40 82 04 68 */	bne .L_8037D69C
 /* 8037D238 003467F8  3C 80 80 5E */	lis r4, adxf_ldpt_buf@ha
-/* 8037D23C 003467FC  3C 60 80 52 */	lis r3, lbl_80518E78@ha
+/* 8037D23C 003467FC  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
 /* 8037D240 00346800  83 24 3C A8 */	lwz r25, adxf_ldpt_buf@l(r4)
-/* 8037D244 00346804  3B E3 8E 78 */	addi r31, r3, lbl_80518E78@l
+/* 8037D244 00346804  3B E3 8E 78 */	addi r31, r3, adx_fs_strpool@l
 /* 8037D248 00346808  38 9F 01 FD */	addi r4, r31, 0x1fd
 /* 8037D24C 0034680C  38 A0 00 03 */	li r5, 3
 /* 8037D250 00346810  7F 23 CB 78 */	mr r3, r25
@@ -1107,8 +1107,8 @@
 .L_8037D768:
 /* 8037D768 00346D28  54 E0 00 1F */	rlwinm. r0, r7, 0, 0, 0xf
 /* 8037D76C 00346D2C  41 82 01 B8 */	beq .L_8037D924
-/* 8037D770 00346D30  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037D774 00346D34  3B E3 8E 78 */	addi r31, r3, lbl_80518E78@l
+/* 8037D770 00346D30  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037D774 00346D34  3B E3 8E 78 */	addi r31, r3, adx_fs_strpool@l
 /* 8037D778 00346D38  38 7F 02 6E */	addi r3, r31, 0x26e
 /* 8037D77C 00346D3C  48 00 CA 9D */	bl ADXERR_CallErrFunc1_
 /* 8037D780 00346D40  3D 00 80 5E */	lis r8, adxf_hstry_no@ha
@@ -1265,8 +1265,8 @@
 /* 8037D9B8 00346F78  90 6A 00 0C */	stw r3, 0xc(r10)
 /* 8037D9BC 00346F7C  90 08 3C 90 */	stw r0, adxf_hstry_no@l(r8)
 /* 8037D9C0 00346F80  41 82 01 00 */	beq .L_8037DAC0
-/* 8037D9C4 00346F84  3F 40 80 52 */	lis r26, lbl_80518E78@ha
-/* 8037D9C8 00346F88  3B 5A 8E 78 */	addi r26, r26, lbl_80518E78@l
+/* 8037D9C4 00346F84  3F 40 80 52 */	lis r26, adx_fs_strpool@ha
+/* 8037D9C8 00346F88  3B 5A 8E 78 */	addi r26, r26, adx_fs_strpool@l
 .L_8037D9CC:
 /* 8037D9CC 00346F8C  2C 1E 00 00 */	cmpwi r30, 0
 /* 8037D9D0 00346F90  40 82 00 14 */	bne .L_8037D9E4
@@ -1358,8 +1358,8 @@
 /* 8037DB08 003470C8  54 A0 06 FF */	clrlwi. r0, r5, 0x1b
 /* 8037DB0C 003470CC  80 63 3C 9C */	lwz r3, adxf_ldptnw_hn@l(r3)
 /* 8037DB10 003470D0  41 82 00 1C */	beq .L_8037DB2C
-/* 8037DB14 003470D4  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037DB18 003470D8  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037DB14 003470D4  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037DB18 003470D8  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037DB1C 003470DC  38 63 01 C9 */	addi r3, r3, 0x1c9
 /* 8037DB20 003470E0  48 00 C6 F9 */	bl ADXERR_CallErrFunc1_
 /* 8037DB24 003470E4  38 60 FF FD */	li r3, -3
@@ -1403,8 +1403,8 @@
 /* 8037DBB4 00347174  90 69 00 0C */	stw r3, 0xc(r9)
 /* 8037DBB8 00347178  90 08 3C 90 */	stw r0, adxf_hstry_no@l(r8)
 /* 8037DBBC 0034717C  41 82 01 00 */	beq .L_8037DCBC
-/* 8037DBC0 00347180  3F 40 80 52 */	lis r26, lbl_80518E78@ha
-/* 8037DBC4 00347184  3B 5A 8E 78 */	addi r26, r26, lbl_80518E78@l
+/* 8037DBC0 00347180  3F 40 80 52 */	lis r26, adx_fs_strpool@ha
+/* 8037DBC4 00347184  3B 5A 8E 78 */	addi r26, r26, adx_fs_strpool@l
 .L_8037DBC8:
 /* 8037DBC8 00347188  2C 1E 00 00 */	cmpwi r30, 0
 /* 8037DBCC 0034718C  40 82 00 14 */	bne .L_8037DBE0
@@ -1486,8 +1486,8 @@
 /* 8037DCE0 003472A0  80 63 3C 9C */	lwz r3, adxf_ldptnw_hn@l(r3)
 /* 8037DCE4 003472A4  2C 03 00 00 */	cmpwi r3, 0
 /* 8037DCE8 003472A8  40 82 00 1C */	bne .L_8037DD04
-/* 8037DCEC 003472AC  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037DCF0 003472B0  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037DCEC 003472AC  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037DCF0 003472B0  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037DCF4 003472B4  38 63 01 6F */	addi r3, r3, 0x16f
 /* 8037DCF8 003472B8  48 00 C5 21 */	bl ADXERR_CallErrFunc1_
 /* 8037DCFC 003472BC  38 00 FF FD */	li r0, -3
@@ -1536,8 +1536,8 @@
 .L_8037DD84:
 /* 8037DD84 00347344  2C 1F 00 00 */	cmpwi r31, 0
 /* 8037DD88 00347348  40 82 00 1C */	bne .L_8037DDA4
-/* 8037DD8C 0034734C  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037DD90 00347350  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037DD8C 0034734C  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037DD90 00347350  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037DD94 00347354  38 63 02 B2 */	addi r3, r3, 0x2b2
 /* 8037DD98 00347358  48 00 C4 81 */	bl ADXERR_CallErrFunc1_
 /* 8037DD9C 0034735C  38 60 00 00 */	li r3, 0
@@ -1549,8 +1549,8 @@
 /* 8037DDB0 00347370  2C 03 00 00 */	cmpwi r3, 0
 /* 8037DDB4 00347374  90 7F 00 04 */	stw r3, 4(r31)
 /* 8037DDB8 00347378  40 82 00 1C */	bne .L_8037DDD4
-/* 8037DDBC 0034737C  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037DDC0 00347380  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037DDBC 0034737C  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037DDC0 00347380  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037DDC4 00347384  38 63 02 E6 */	addi r3, r3, 0x2e6
 /* 8037DDC8 00347388  48 00 C4 51 */	bl ADXERR_CallErrFunc1_
 /* 8037DDCC 0034738C  38 60 00 00 */	li r3, 0
@@ -1590,8 +1590,8 @@
 /* 8037DE40 00347400  48 00 B5 C5 */	bl ADXCRS_Enter
 /* 8037DE44 00347404  2C 1D 00 00 */	cmpwi r29, 0
 /* 8037DE48 00347408  40 82 00 1C */	bne .L_8037DE64
-/* 8037DE4C 0034740C  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037DE50 00347410  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037DE4C 0034740C  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037DE50 00347410  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037DE54 00347414  38 63 03 CD */	addi r3, r3, 0x3cd
 /* 8037DE58 00347418  48 00 C3 C1 */	bl ADXERR_CallErrFunc1_
 /* 8037DE5C 0034741C  3B E0 00 00 */	li r31, 0
@@ -1630,8 +1630,8 @@
 /* 8037DEDC 0034749C  41 82 00 54 */	beq .L_8037DF30
 /* 8037DEE0 003474A0  2C 1D 00 00 */	cmpwi r29, 0
 /* 8037DEE4 003474A4  40 82 00 18 */	bne .L_8037DEFC
-/* 8037DEE8 003474A8  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037DEEC 003474AC  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037DEE8 003474A8  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037DEEC 003474AC  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037DEF0 003474B0  38 63 03 81 */	addi r3, r3, 0x381
 /* 8037DEF4 003474B4  48 00 C3 25 */	bl ADXERR_CallErrFunc1_
 /* 8037DEF8 003474B8  48 00 00 38 */	b .L_8037DF30
@@ -1696,8 +1696,8 @@
 /* 8037DFCC 0034758C  48 00 B4 39 */	bl ADXCRS_Enter
 /* 8037DFD0 00347590  2C 1F 00 00 */	cmpwi r31, 0
 /* 8037DFD4 00347594  40 82 00 1C */	bne .L_8037DFF0
-/* 8037DFD8 00347598  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037DFDC 0034759C  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037DFD8 00347598  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037DFDC 0034759C  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037DFE0 003475A0  38 63 00 9D */	addi r3, r3, 0x9d
 /* 8037DFE4 003475A4  48 00 C2 35 */	bl ADXERR_CallErrFunc1_
 /* 8037DFE8 003475A8  3B E0 00 00 */	li r31, 0
@@ -1753,8 +1753,8 @@
 /* 8037E09C 0034765C  90 67 00 0C */	stw r3, 0xc(r7)
 /* 8037E0A0 00347660  90 09 3C 90 */	stw r0, adxf_hstry_no@l(r9)
 /* 8037E0A4 00347664  41 82 00 FC */	beq .L_8037E1A0
-/* 8037E0A8 00347668  3F C0 80 52 */	lis r30, lbl_80518E78@ha
-/* 8037E0AC 0034766C  3B DE 8E 78 */	addi r30, r30, lbl_80518E78@l
+/* 8037E0A8 00347668  3F C0 80 52 */	lis r30, adx_fs_strpool@ha
+/* 8037E0AC 0034766C  3B DE 8E 78 */	addi r30, r30, adx_fs_strpool@l
 .L_8037E0B0:
 /* 8037E0B0 00347670  2C 1F 00 00 */	cmpwi r31, 0
 /* 8037E0B4 00347674  40 82 00 14 */	bne .L_8037E0C8
@@ -1841,11 +1841,11 @@
 /* 8037E1D4 00347794  3E C0 80 5E */	lis r22, lbl_805E3B70@ha
 /* 8037E1D8 00347798  3F 20 80 5E */	lis r25, adxf_cmd_ncall@ha
 /* 8037E1DC 0034779C  3F 60 80 5E */	lis r27, lbl_805E3430@ha
-/* 8037E1E0 003477A0  3F A0 80 52 */	lis r29, lbl_80518E78@ha
+/* 8037E1E0 003477A0  3F A0 80 52 */	lis r29, adx_fs_strpool@ha
 /* 8037E1E4 003477A4  80 7F 3C 90 */	lwz r3, adxf_hstry_no@l(r31)
 /* 8037E1E8 003477A8  3B 7B 34 30 */	addi r27, r27, lbl_805E3430@l
 /* 8037E1EC 003477AC  3A D6 3B 70 */	addi r22, r22, lbl_805E3B70@l
-/* 8037E1F0 003477B0  3B BD 8E 78 */	addi r29, r29, lbl_80518E78@l
+/* 8037E1F0 003477B0  3B BD 8E 78 */	addi r29, r29, adx_fs_strpool@l
 /* 8037E1F4 003477B4  3B 39 3C 70 */	addi r25, r25, adxf_cmd_ncall@l
 /* 8037E1F8 003477B8  3B 80 00 00 */	li r28, 0
 /* 8037E1FC 003477BC  3B C0 00 00 */	li r30, 0
@@ -2055,8 +2055,8 @@
 /* 8037E4E4 00347AA4  90 AA 00 0C */	stw r5, 0xc(r10)
 /* 8037E4E8 00347AA8  90 0C 3C 90 */	stw r0, adxf_hstry_no@l(r12)
 /* 8037E4EC 00347AAC  40 82 00 1C */	bne .L_8037E508
-/* 8037E4F0 00347AB0  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037E4F4 00347AB4  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037E4F0 00347AB0  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037E4F4 00347AB4  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037E4F8 00347AB8  38 63 04 6B */	addi r3, r3, 0x46b
 /* 8037E4FC 00347ABC  48 00 BD 1D */	bl ADXERR_CallErrFunc1_
 /* 8037E500 00347AC0  38 60 FF FD */	li r3, -3
@@ -2064,8 +2064,8 @@
 .L_8037E508:
 /* 8037E508 00347AC8  2C 04 00 00 */	cmpwi r4, 0
 /* 8037E50C 00347ACC  40 80 00 1C */	bge .L_8037E528
-/* 8037E510 00347AD0  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037E514 00347AD4  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037E510 00347AD0  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037E514 00347AD4  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037E518 00347AD8  38 63 04 93 */	addi r3, r3, 0x493
 /* 8037E51C 00347ADC  48 00 BC FD */	bl ADXERR_CallErrFunc1_
 /* 8037E520 00347AE0  38 60 FF FD */	li r3, -3
@@ -2074,8 +2074,8 @@
 /* 8037E528 00347AE8  3C 00 00 10 */	lis r0, 0x10
 /* 8037E52C 00347AEC  7C 04 00 00 */	cmpw r4, r0
 /* 8037E530 00347AF0  41 80 00 1C */	blt .L_8037E54C
-/* 8037E534 00347AF4  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037E538 00347AF8  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037E534 00347AF4  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037E538 00347AF8  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037E53C 00347AFC  38 63 04 BF */	addi r3, r3, 0x4bf
 /* 8037E540 00347B00  48 00 BC D9 */	bl ADXERR_CallErrFunc1_
 /* 8037E544 00347B04  38 60 FF FD */	li r3, -3
@@ -2083,8 +2083,8 @@
 .L_8037E54C:
 /* 8037E54C 00347B0C  2C 05 00 00 */	cmpwi r5, 0
 /* 8037E550 00347B10  40 82 00 1C */	bne .L_8037E56C
-/* 8037E554 00347B14  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037E558 00347B18  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037E554 00347B14  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037E558 00347B18  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037E55C 00347B1C  38 63 04 EE */	addi r3, r3, 0x4ee
 /* 8037E560 00347B20  48 00 BC B9 */	bl ADXERR_CallErrFunc1_
 /* 8037E564 00347B24  38 60 FF FD */	li r3, -3
@@ -2102,8 +2102,8 @@
 /* 8037E58C 00347B4C  2C 1C 00 00 */	cmpwi r28, 0
 /* 8037E590 00347B50  7C 7F 1B 78 */	mr r31, r3
 /* 8037E594 00347B54  40 82 00 1C */	bne .L_8037E5B0
-/* 8037E598 00347B58  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037E59C 00347B5C  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037E598 00347B58  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037E59C 00347B5C  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037E5A0 00347B60  38 63 00 9D */	addi r3, r3, 0x9d
 /* 8037E5A4 00347B64  48 00 BC 75 */	bl ADXERR_CallErrFunc1_
 /* 8037E5A8 00347B68  3B 60 00 00 */	li r27, 0
@@ -2127,8 +2127,8 @@
 /* 8037E5E4 00347BA4  80 1C 00 08 */	lwz r0, 8(r28)
 /* 8037E5E8 00347BA8  2C 00 00 00 */	cmpwi r0, 0
 /* 8037E5EC 00347BAC  41 82 00 20 */	beq .L_8037E60C
-/* 8037E5F0 00347BB0  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037E5F4 00347BB4  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037E5F0 00347BB0  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037E5F4 00347BB4  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037E5F8 00347BB8  38 63 05 15 */	addi r3, r3, 0x515
 /* 8037E5FC 00347BBC  48 00 BC 1D */	bl ADXERR_CallErrFunc1_
 /* 8037E600 00347BC0  48 00 AE 01 */	bl ADXCRS_Unlock
@@ -2228,8 +2228,8 @@
 /* 8037E754 00347D14  48 00 AC B1 */	bl ADXCRS_Enter
 /* 8037E758 00347D18  57 E0 06 FF */	clrlwi. r0, r31, 0x1b
 /* 8037E75C 00347D1C  41 82 00 1C */	beq .L_8037E778
-/* 8037E760 00347D20  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037E764 00347D24  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037E760 00347D20  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037E764 00347D24  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037E768 00347D28  38 63 01 C9 */	addi r3, r3, 0x1c9
 /* 8037E76C 00347D2C  48 00 BA AD */	bl ADXERR_CallErrFunc1_
 /* 8037E770 00347D30  3B E0 FF FD */	li r31, -3
@@ -2307,8 +2307,8 @@
 /* 8037E870 00347E30  90 88 00 0C */	stw r4, 0xc(r8)
 /* 8037E874 00347E34  90 0A 3C 90 */	stw r0, adxf_hstry_no@l(r10)
 /* 8037E878 00347E38  40 82 00 1C */	bne .L_8037E894
-/* 8037E87C 00347E3C  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037E880 00347E40  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037E87C 00347E3C  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037E880 00347E40  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037E884 00347E44  38 63 05 40 */	addi r3, r3, 0x540
 /* 8037E888 00347E48  48 00 B9 91 */	bl ADXERR_CallErrFunc1_
 /* 8037E88C 00347E4C  38 60 FF FD */	li r3, -3
@@ -2331,8 +2331,8 @@
 /* 8037E8C4 00347E84  80 63 00 04 */	lwz r3, 4(r3)
 /* 8037E8C8 00347E88  2C 03 00 00 */	cmpwi r3, 0
 /* 8037E8CC 00347E8C  40 82 00 1C */	bne .L_8037E8E8
-/* 8037E8D0 00347E90  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037E8D4 00347E94  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037E8D0 00347E90  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037E8D4 00347E94  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037E8D8 00347E98  38 63 05 64 */	addi r3, r3, 0x564
 /* 8037E8DC 00347E9C  48 00 B9 3D */	bl ADXERR_CallErrFunc1_
 /* 8037E8E0 00347EA0  38 60 FF FF */	li r3, -1
@@ -2636,8 +2636,8 @@
 /* 8037ED18 003482D8  7C 7D 1B 78 */	mr r29, r3
 /* 8037ED1C 003482DC  93 81 00 10 */	stw r28, 0x10(r1)
 /* 8037ED20 003482E0  40 86 00 1C */	bne cr1, .L_8037ED3C
-/* 8037ED24 003482E4  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037ED28 003482E8  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037ED24 003482E4  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037ED28 003482E8  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037ED2C 003482EC  38 63 05 DE */	addi r3, r3, 0x5de
 /* 8037ED30 003482F0  48 00 B4 E9 */	bl ADXERR_CallErrFunc1_
 /* 8037ED34 003482F4  38 60 FF FD */	li r3, -3
@@ -2674,16 +2674,16 @@
 /* 8037EDAC 0034836C  28 00 FF FF */	cmplwi r0, 0xffff
 /* 8037EDB0 00348370  40 82 00 B8 */	bne .L_8037EE68
 /* 8037EDB4 00348374  40 86 00 1C */	bne cr1, .L_8037EDD0
-/* 8037EDB8 00348378  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037EDBC 0034837C  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037EDB8 00348378  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037EDBC 0034837C  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037EDC0 00348380  38 63 03 56 */	addi r3, r3, 0x356
 /* 8037EDC4 00348384  48 00 B4 55 */	bl ADXERR_CallErrFunc1_
 /* 8037EDC8 00348388  38 A0 FF FD */	li r5, -3
 /* 8037EDCC 0034838C  48 00 00 98 */	b .L_8037EE64
 .L_8037EDD0:
 /* 8037EDD0 00348390  40 82 00 94 */	bne .L_8037EE64
-/* 8037EDD4 00348394  3F 80 80 52 */	lis r28, lbl_80518E78@ha
-/* 8037EDD8 00348398  3B 9C 8E 78 */	addi r28, r28, lbl_80518E78@l
+/* 8037EDD4 00348394  3F 80 80 52 */	lis r28, adx_fs_strpool@ha
+/* 8037EDD8 00348398  3B 9C 8E 78 */	addi r28, r28, adx_fs_strpool@l
 .L_8037EDDC:
 /* 8037EDDC 0034839C  2C 1D 00 00 */	cmpwi r29, 0
 /* 8037EDE0 003483A0  40 82 00 14 */	bne .L_8037EDF4
@@ -2750,8 +2750,8 @@
 /* 8037EEB4 00348474  90 1D 00 10 */	stw r0, 0x10(r29)
 /* 8037EEB8 00348478  48 00 00 1C */	b .L_8037EED4
 .L_8037EEBC:
-/* 8037EEBC 0034847C  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037EEC0 00348480  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037EEBC 0034847C  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037EEC0 00348480  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037EEC4 00348484  38 63 06 02 */	addi r3, r3, 0x602
 /* 8037EEC8 00348488  48 00 B3 51 */	bl ADXERR_CallErrFunc1_
 /* 8037EECC 0034848C  38 60 FF FD */	li r3, -3
@@ -2815,8 +2815,8 @@
 /* 8037EF98 00348558  48 00 A4 6D */	bl ADXCRS_Enter
 /* 8037EF9C 0034855C  2C 1E 00 00 */	cmpwi r30, 0
 /* 8037EFA0 00348560  40 82 00 1C */	bne .L_8037EFBC
-/* 8037EFA4 00348564  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037EFA8 00348568  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037EFA4 00348564  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037EFA8 00348568  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037EFAC 0034856C  38 63 03 56 */	addi r3, r3, 0x356
 /* 8037EFB0 00348570  48 00 B2 69 */	bl ADXERR_CallErrFunc1_
 /* 8037EFB4 00348574  3B E0 FF FD */	li r31, -3
@@ -2826,8 +2826,8 @@
 /* 8037EFC0 00348580  3C 1F FF F1 */	addis r0, r31, 0xfff1
 /* 8037EFC4 00348584  28 00 FF FF */	cmplwi r0, 0xffff
 /* 8037EFC8 00348588  40 82 00 94 */	bne .L_8037F05C
-/* 8037EFCC 0034858C  3F E0 80 52 */	lis r31, lbl_80518E78@ha
-/* 8037EFD0 00348590  3B FF 8E 78 */	addi r31, r31, lbl_80518E78@l
+/* 8037EFCC 0034858C  3F E0 80 52 */	lis r31, adx_fs_strpool@ha
+/* 8037EFD0 00348590  3B FF 8E 78 */	addi r31, r31, adx_fs_strpool@l
 .L_8037EFD4:
 /* 8037EFD4 00348594  2C 1E 00 00 */	cmpwi r30, 0
 /* 8037EFD8 00348598  40 82 00 14 */	bne .L_8037EFEC
@@ -2887,15 +2887,15 @@
 /* 8037F094 00348654  48 00 A3 71 */	bl ADXCRS_Enter
 /* 8037F098 00348658  2C 1E 00 00 */	cmpwi r30, 0
 /* 8037F09C 0034865C  40 82 00 1C */	bne .L_8037F0B8
-/* 8037F0A0 00348660  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037F0A4 00348664  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037F0A0 00348660  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037F0A4 00348664  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037F0A8 00348668  38 63 06 4D */	addi r3, r3, 0x64d
 /* 8037F0AC 0034866C  48 00 B1 6D */	bl ADXERR_CallErrFunc1_
 /* 8037F0B0 00348670  3B E0 FF FD */	li r31, -3
 /* 8037F0B4 00348674  48 00 00 6C */	b .L_8037F120
 .L_8037F0B8:
-/* 8037F0B8 00348678  3F E0 80 52 */	lis r31, lbl_80518E78@ha
-/* 8037F0BC 0034867C  3B FF 8E 78 */	addi r31, r31, lbl_80518E78@l
+/* 8037F0B8 00348678  3F E0 80 52 */	lis r31, adx_fs_strpool@ha
+/* 8037F0BC 0034867C  3B FF 8E 78 */	addi r31, r31, adx_fs_strpool@l
 .L_8037F0C0:
 /* 8037F0C0 00348680  2C 1E 00 00 */	cmpwi r30, 0
 /* 8037F0C4 00348684  40 82 00 14 */	bne .L_8037F0D8
@@ -2944,8 +2944,8 @@
 /* 8037F154 00348714  48 00 A2 B1 */	bl ADXCRS_Enter
 /* 8037F158 00348718  2C 1F 00 00 */	cmpwi r31, 0
 /* 8037F15C 0034871C  40 82 00 1C */	bne .L_8037F178
-/* 8037F160 00348720  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037F164 00348724  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037F160 00348720  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037F164 00348724  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037F168 00348728  38 63 01 6F */	addi r3, r3, 0x16f
 /* 8037F16C 0034872C  48 00 B0 AD */	bl ADXERR_CallErrFunc1_
 /* 8037F170 00348730  3B E0 FF FD */	li r31, -3
@@ -2972,8 +2972,8 @@
 /* 8037F1B0 00348770  2C 03 01 00 */	cmpwi r3, 0x100
 /* 8037F1B4 00348774  41 80 00 1C */	blt .L_8037F1D0
 .L_8037F1B8:
-/* 8037F1B8 00348778  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037F1BC 0034877C  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037F1B8 00348778  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037F1BC 0034877C  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037F1C0 00348780  38 63 07 06 */	addi r3, r3, 0x706
 /* 8037F1C4 00348784  48 00 B0 55 */	bl ADXERR_CallErrFunc1_
 /* 8037F1C8 00348788  38 60 FF FD */	li r3, -3
@@ -2985,8 +2985,8 @@
 /* 8037F1DC 0034879C  7C 65 00 2E */	lwzx r3, r5, r0
 /* 8037F1E0 003487A0  2C 03 00 00 */	cmpwi r3, 0
 /* 8037F1E4 003487A4  40 82 00 1C */	bne .L_8037F200
-/* 8037F1E8 003487A8  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037F1EC 003487AC  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037F1E8 003487A8  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037F1EC 003487AC  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037F1F0 003487B0  38 63 07 06 */	addi r3, r3, 0x706
 /* 8037F1F4 003487B4  48 00 B0 25 */	bl ADXERR_CallErrFunc1_
 /* 8037F1F8 003487B8  38 60 FF FD */	li r3, -3
@@ -2995,8 +2995,8 @@
 /* 8037F200 003487C0  80 03 00 08 */	lwz r0, 8(r3)
 /* 8037F204 003487C4  2C 00 00 00 */	cmpwi r0, 0
 /* 8037F208 003487C8  41 81 00 1C */	bgt .L_8037F224
-/* 8037F20C 003487CC  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037F210 003487D0  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037F20C 003487CC  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037F210 003487D0  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037F214 003487D4  38 63 07 2D */	addi r3, r3, 0x72d
 /* 8037F218 003487D8  48 00 B0 01 */	bl ADXERR_CallErrFunc1_
 /* 8037F21C 003487DC  38 60 FF FD */	li r3, -3
@@ -3007,8 +3007,8 @@
 /* 8037F22C 003487EC  7C 04 00 00 */	cmpw r4, r0
 /* 8037F230 003487F0  41 80 00 1C */	blt .L_8037F24C
 .L_8037F234:
-/* 8037F234 003487F4  3C 60 80 52 */	lis r3, lbl_80518E78@ha
-/* 8037F238 003487F8  38 63 8E 78 */	addi r3, r3, lbl_80518E78@l
+/* 8037F234 003487F4  3C 60 80 52 */	lis r3, adx_fs_strpool@ha
+/* 8037F238 003487F8  38 63 8E 78 */	addi r3, r3, adx_fs_strpool@l
 /* 8037F23C 003487FC  38 63 07 60 */	addi r3, r3, 0x760
 /* 8037F240 00348800  48 00 AF D9 */	bl ADXERR_CallErrFunc1_
 /* 8037F244 00348804  38 60 FF FD */	li r3, -3
@@ -3248,8 +3248,8 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_80518E78
-lbl_80518E78:
+.global adx_fs_strpool
+adx_fs_strpool:
 	.asciz "E9040801:partition ID is range outside.(adxf_ChkPrmPt)"
 	.asciz "E9040802:'ptinfo' is NULL.(adxf_ChkPrmPt)"
 	.asciz "E20040917 : It is impossible to load AFS files in parallel."

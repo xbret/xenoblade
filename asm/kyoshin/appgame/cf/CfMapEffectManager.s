@@ -191,13 +191,13 @@
 /* 8016EFDC 0013859C  7C 08 02 A6 */	mflr r0
 /* 8016EFE0 001385A0  90 01 00 44 */	stw r0, 0x44(r1)
 /* 8016EFE4 001385A4  93 E1 00 3C */	stw r31, 0x3c(r1)
-/* 8016EFE8 001385A8  3F E0 80 50 */	lis r31, lbl_804FEA78@ha
+/* 8016EFE8 001385A8  3F E0 80 50 */	lis r31, CfMapEffectManager_strpool@ha
 /* 8016EFEC 001385AC  93 C1 00 38 */	stw r30, 0x38(r1)
 /* 8016EFF0 001385B0  93 A1 00 34 */	stw r29, 0x34(r1)
 /* 8016EFF4 001385B4  93 81 00 30 */	stw r28, 0x30(r1)
 /* 8016EFF8 001385B8  7C 9C 23 78 */	mr r28, r4
 /* 8016EFFC 001385BC  7F 85 E3 78 */	mr r5, r28
-/* 8016F000 001385C0  38 9F EA 78 */	addi r4, r31, lbl_804FEA78@l
+/* 8016F000 001385C0  38 9F EA 78 */	addi r4, r31, CfMapEffectManager_strpool@l
 /* 8016F004 001385C4  83 CD A8 1C */	lwz r30, lbl_8066699C@sda21(r13)
 /* 8016F008 001385C8  7F C3 F3 78 */	mr r3, r30
 /* 8016F00C 001385CC  4B EC BB 3D */	bl func_8003AB48
@@ -206,7 +206,7 @@
 /* 8016F018 001385D8  2C 03 00 00 */	cmpwi r3, 0
 /* 8016F01C 001385DC  41 82 00 58 */	beq .L_8016F074
 /* 8016F020 001385E0  4B F1 33 35 */	bl func_80082354
-/* 8016F024 001385E4  3B FF EA 78 */	addi r31, r31, lbl_804FEA78@l
+/* 8016F024 001385E4  3B FF EA 78 */	addi r31, r31, CfMapEffectManager_strpool@l
 /* 8016F028 001385E8  54 7D 04 3E */	clrlwi r29, r3, 0x10
 /* 8016F02C 001385EC  7F C3 F3 78 */	mr r3, r30
 /* 8016F030 001385F0  7F 85 E3 78 */	mr r5, r28
@@ -229,9 +229,9 @@
 /* 8016F070 00138630  48 00 00 B0 */	b .L_8016F120
 .L_8016F074:
 /* 8016F074 00138634  4B F1 32 81 */	bl func_800822F4
-/* 8016F078 00138638  3F E0 80 50 */	lis r31, lbl_804FEA78@ha
+/* 8016F078 00138638  3F E0 80 50 */	lis r31, CfMapEffectManager_strpool@ha
 /* 8016F07C 0013863C  54 7D 04 3E */	clrlwi r29, r3, 0x10
-/* 8016F080 00138640  3B FF EA 78 */	addi r31, r31, lbl_804FEA78@l
+/* 8016F080 00138640  3B FF EA 78 */	addi r31, r31, CfMapEffectManager_strpool@l
 /* 8016F084 00138644  7F C3 F3 78 */	mr r3, r30
 /* 8016F088 00138648  7F 85 E3 78 */	mr r5, r28
 /* 8016F08C 0013864C  38 9F 00 1A */	addi r4, r31, 0x1a
@@ -407,9 +407,9 @@
 /* 8016F2DC 0013889C  90 E1 00 80 */	stw r7, 0x80(r1)
 /* 8016F2E0 001388A0  7C B7 2B 78 */	mr r23, r5
 /* 8016F2E4 001388A4  41 82 00 58 */	beq .L_8016F33C
-/* 8016F2E8 001388A8  3C 80 80 50 */	lis r4, lbl_804FEA78@ha
+/* 8016F2E8 001388A8  3C 80 80 50 */	lis r4, CfMapEffectManager_strpool@ha
 /* 8016F2EC 001388AC  7E E3 BB 78 */	mr r3, r23
-/* 8016F2F0 001388B0  38 84 EA 78 */	addi r4, r4, lbl_804FEA78@l
+/* 8016F2F0 001388B0  38 84 EA 78 */	addi r4, r4, CfMapEffectManager_strpool@l
 /* 8016F2F4 001388B4  7E C5 B3 78 */	mr r5, r22
 /* 8016F2F8 001388B8  38 84 00 32 */	addi r4, r4, 0x32
 /* 8016F2FC 001388BC  4B EC B8 4D */	bl func_8003AB48
@@ -435,9 +435,9 @@
 /* 8016F348 00138908  54 7A 04 3E */	clrlwi r26, r3, 0x10
 /* 8016F34C 0013890C  4B F1 7A 59 */	bl func_80086DA4
 /* 8016F350 00138910  4B FF EB DD */	bl func_8016DF2C
-/* 8016F354 00138914  3F 00 80 50 */	lis r24, lbl_804FEA78@ha
+/* 8016F354 00138914  3F 00 80 50 */	lis r24, CfMapEffectManager_strpool@ha
 /* 8016F358 00138918  7C 7D 1B 78 */	mr r29, r3
-/* 8016F35C 0013891C  3B 18 EA 78 */	addi r24, r24, lbl_804FEA78@l
+/* 8016F35C 0013891C  3B 18 EA 78 */	addi r24, r24, CfMapEffectManager_strpool@l
 /* 8016F360 00138920  7E E3 BB 78 */	mr r3, r23
 /* 8016F364 00138924  7E C5 B3 78 */	mr r5, r22
 /* 8016F368 00138928  38 98 00 38 */	addi r4, r24, 0x38
@@ -470,9 +470,9 @@
 /* 8016F3D4 00138994  B0 03 00 E4 */	sth r0, 0xe4(r3)
 /* 8016F3D8 00138998  B0 03 00 9C */	sth r0, 0x9c(r3)
 .L_8016F3DC:
-/* 8016F3DC 0013899C  3C 80 80 50 */	lis r4, lbl_804FEA78@ha
+/* 8016F3DC 0013899C  3C 80 80 50 */	lis r4, CfMapEffectManager_strpool@ha
 /* 8016F3E0 001389A0  7E E3 BB 78 */	mr r3, r23
-/* 8016F3E4 001389A4  38 84 EA 78 */	addi r4, r4, lbl_804FEA78@l
+/* 8016F3E4 001389A4  38 84 EA 78 */	addi r4, r4, CfMapEffectManager_strpool@l
 /* 8016F3E8 001389A8  7E C5 B3 78 */	mr r5, r22
 /* 8016F3EC 001389AC  38 84 00 4D */	addi r4, r4, 0x4d
 /* 8016F3F0 001389B0  4B EC B7 59 */	bl func_8003AB48
@@ -518,9 +518,9 @@
 /* 8016F484 00138A44  41 82 00 08 */	beq .L_8016F48C
 /* 8016F488 00138A48  3B 80 00 00 */	li r28, 0
 .L_8016F48C:
-/* 8016F48C 00138A4C  3F 20 80 50 */	lis r25, lbl_804FEA78@ha
+/* 8016F48C 00138A4C  3F 20 80 50 */	lis r25, CfMapEffectManager_strpool@ha
 /* 8016F490 00138A50  7E E3 BB 78 */	mr r3, r23
-/* 8016F494 00138A54  3B 39 EA 78 */	addi r25, r25, lbl_804FEA78@l
+/* 8016F494 00138A54  3B 39 EA 78 */	addi r25, r25, CfMapEffectManager_strpool@l
 /* 8016F498 00138A58  7E C5 B3 78 */	mr r5, r22
 /* 8016F49C 00138A5C  38 99 00 55 */	addi r4, r25, 0x55
 /* 8016F4A0 00138A60  3B A0 00 00 */	li r29, 0
@@ -633,9 +633,9 @@
 /* 8016F624 00138BE4  40 82 03 08 */	bne .L_8016F92C
 /* 8016F628 00138BE8  2C 19 00 00 */	cmpwi r25, 0
 /* 8016F62C 00138BEC  41 82 03 00 */	beq .L_8016F92C
-/* 8016F630 00138BF0  3F 20 80 50 */	lis r25, lbl_804FEA78@ha
+/* 8016F630 00138BF0  3F 20 80 50 */	lis r25, CfMapEffectManager_strpool@ha
 /* 8016F634 00138BF4  7E E3 BB 78 */	mr r3, r23
-/* 8016F638 00138BF8  3B 39 EA 78 */	addi r25, r25, lbl_804FEA78@l
+/* 8016F638 00138BF8  3B 39 EA 78 */	addi r25, r25, CfMapEffectManager_strpool@l
 /* 8016F63C 00138BFC  7E C5 B3 78 */	mr r5, r22
 /* 8016F640 00138C00  38 99 00 73 */	addi r4, r25, 0x73
 /* 8016F644 00138C04  4B EC B5 05 */	bl func_8003AB48
@@ -674,9 +674,9 @@
 /* 8016F6C0 00138C80  7C 95 02 14 */	add r4, r21, r0
 /* 8016F6C4 00138C84  B0 A4 00 9C */	sth r5, 0x9c(r4)
 .L_8016F6C8:
-/* 8016F6C8 00138C88  3F 00 80 50 */	lis r24, lbl_804FEA78@ha
+/* 8016F6C8 00138C88  3F 00 80 50 */	lis r24, CfMapEffectManager_strpool@ha
 /* 8016F6CC 00138C8C  92 A3 00 B0 */	stw r21, 0xb0(r3)
-/* 8016F6D0 00138C90  3B 18 EA 78 */	addi r24, r24, lbl_804FEA78@l
+/* 8016F6D0 00138C90  3B 18 EA 78 */	addi r24, r24, CfMapEffectManager_strpool@l
 /* 8016F6D4 00138C94  7E E3 BB 78 */	mr r3, r23
 /* 8016F6D8 00138C98  7E C5 B3 78 */	mr r5, r22
 /* 8016F6DC 00138C9C  38 98 00 84 */	addi r4, r24, 0x84
@@ -800,9 +800,9 @@
 /* 8016F8B0 00138E70  A0 01 00 24 */	lhz r0, 0x24(r1)
 /* 8016F8B4 00138E74  2C 00 00 00 */	cmpwi r0, 0
 /* 8016F8B8 00138E78  41 82 00 74 */	beq .L_8016F92C
-/* 8016F8BC 00138E7C  3F 00 80 50 */	lis r24, lbl_804FEA78@ha
+/* 8016F8BC 00138E7C  3F 00 80 50 */	lis r24, CfMapEffectManager_strpool@ha
 /* 8016F8C0 00138E80  7E E3 BB 78 */	mr r3, r23
-/* 8016F8C4 00138E84  3B 18 EA 78 */	addi r24, r24, lbl_804FEA78@l
+/* 8016F8C4 00138E84  3B 18 EA 78 */	addi r24, r24, CfMapEffectManager_strpool@l
 /* 8016F8C8 00138E88  7E C5 B3 78 */	mr r5, r22
 /* 8016F8CC 00138E8C  38 98 00 A2 */	addi r4, r24, 0xa2
 /* 8016F8D0 00138E90  4B EC B2 79 */	bl func_8003AB48
@@ -1241,8 +1241,8 @@ cf_CfMapEffectManager_typestr:
 	.balign 4
 
 
-.global lbl_804FEA78
-lbl_804FEA78:
+.global CfMapEffectManager_strpool
+CfMapEffectManager_strpool:
 	.asciz "questID"
 	.asciz "qst_sflg"
 	.asciz "qst_eflg"

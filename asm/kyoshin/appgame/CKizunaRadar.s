@@ -44,14 +44,14 @@
 /* 80257B00 002210C0  7C 08 02 A6 */	mflr r0
 /* 80257B04 002210C4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80257B08 002210C8  BF C1 00 08 */	stmw r30, 8(r1)
-/* 80257B0C 002210CC  3F E0 80 51 */	lis r31, lbl_805081A8@ha
+/* 80257B0C 002210CC  3F E0 80 51 */	lis r31, CKizunagram_strpool@ha
 /* 80257B10 002210D0  7C 7E 1B 78 */	mr r30, r3
-/* 80257B14 002210D4  38 BF 81 A8 */	addi r5, r31, lbl_805081A8@l
+/* 80257B14 002210D4  38 BF 81 A8 */	addi r5, r31, CKizunagram_strpool@l
 /* 80257B18 002210D8  80 83 00 04 */	lwz r4, 4(r3)
 /* 80257B1C 002210DC  38 63 00 08 */	addi r3, r3, 8
 /* 80257B20 002210E0  4B ED F3 65 */	bl func_80136E84
 /* 80257B24 002210E4  80 DE 00 08 */	lwz r6, 8(r30)
-/* 80257B28 002210E8  38 7F 81 A8 */	addi r3, r31, lbl_805081A8@l
+/* 80257B28 002210E8  38 7F 81 A8 */	addi r3, r31, CKizunagram_strpool@l
 /* 80257B2C 002210EC  38 83 00 13 */	addi r4, r3, 0x13
 /* 80257B30 002210F0  38 A0 00 01 */	li r5, 1
 /* 80257B34 002210F4  80 66 00 10 */	lwz r3, 0x10(r6)
@@ -100,9 +100,9 @@
 /* 80257BD4 00221194  EF C2 00 28 */	fsubs f30, f2, f0
 /* 80257BD8 00221198  4B EC FF ED */	bl func_80127BC4
 /* 80257BDC 0022119C  C0 21 00 20 */	lfs f1, 0x20(r1)
-/* 80257BE0 002211A0  3C 60 80 51 */	lis r3, lbl_805081A8@ha
+/* 80257BE0 002211A0  3C 60 80 51 */	lis r3, CKizunagram_strpool@ha
 /* 80257BE4 002211A4  C0 01 00 24 */	lfs f0, 0x24(r1)
-/* 80257BE8 002211A8  38 63 81 A8 */	addi r3, r3, lbl_805081A8@l
+/* 80257BE8 002211A8  38 63 81 A8 */	addi r3, r3, CKizunagram_strpool@l
 /* 80257BEC 002211AC  EC 21 07 F2 */	fmuls f1, f1, f31
 /* 80257BF0 002211B0  38 83 00 13 */	addi r4, r3, 0x13
 /* 80257BF4 002211B4  EC 00 07 B2 */	fmuls f0, f0, f30
@@ -123,9 +123,9 @@
 /* 80257C2C 002211EC  2C 1E 00 00 */	cmpwi r30, 0
 /* 80257C30 002211F0  41 82 01 20 */	beq .L_80257D50
 /* 80257C34 002211F4  80 7E 00 2C */	lwz r3, 0x2c(r30)
-/* 80257C38 002211F8  3F E0 80 51 */	lis r31, lbl_805081A8@ha
+/* 80257C38 002211F8  3F E0 80 51 */	lis r31, CKizunagram_strpool@ha
 /* 80257C3C 002211FC  80 1E 00 30 */	lwz r0, 0x30(r30)
-/* 80257C40 00221200  3B FF 81 A8 */	addi r31, r31, lbl_805081A8@l
+/* 80257C40 00221200  3B FF 81 A8 */	addi r31, r31, CKizunagram_strpool@l
 /* 80257C44 00221204  90 01 00 34 */	stw r0, 0x34(r1)
 /* 80257C48 00221208  38 9F 00 13 */	addi r4, r31, 0x13
 /* 80257C4C 0022120C  C0 22 AD 60 */	lfs f1, float_8066B0E0@sda21(r2)

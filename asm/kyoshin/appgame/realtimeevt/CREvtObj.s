@@ -1244,13 +1244,13 @@
 /* 8018671C 0014FCDC  90 01 00 80 */	stw r0, 0x80(r1)
 /* 80186720 0014FCE0  4B EB 43 15 */	bl func_8003AA34
 /* 80186724 0014FCE4  83 ED A8 20 */	lwz r31, lbl_806669A0@sda21(r13)
-/* 80186728 0014FCE8  3F 60 80 50 */	lis r27, lbl_804FF0F0@ha
+/* 80186728 0014FCE8  3F 60 80 50 */	lis r27, CREvtObj_strpool@ha
 /* 8018672C 0014FCEC  7F A5 EB 78 */	mr r5, r29
 /* 80186730 0014FCF0  7F E3 FB 78 */	mr r3, r31
-/* 80186734 0014FCF4  38 9B F0 F0 */	addi r4, r27, lbl_804FF0F0@l
+/* 80186734 0014FCF4  38 9B F0 F0 */	addi r4, r27, CREvtObj_strpool@l
 /* 80186738 0014FCF8  4B EB 44 11 */	bl func_8003AB48
 /* 8018673C 0014FCFC  90 61 00 28 */	stw r3, 0x28(r1)
-/* 80186740 0014FD00  3B 7B F0 F0 */	addi r27, r27, lbl_804FF0F0@l
+/* 80186740 0014FD00  3B 7B F0 F0 */	addi r27, r27, CREvtObj_strpool@l
 /* 80186744 0014FD04  7F E3 FB 78 */	mr r3, r31
 /* 80186748 0014FD08  7F A5 EB 78 */	mr r5, r29
 /* 8018674C 0014FD0C  38 9B 00 06 */	addi r4, r27, 6
@@ -1430,9 +1430,9 @@
 /* 801869FC 0014FFBC  81 8C 01 54 */	lwz r12, 0x154(r12)
 /* 80186A00 0014FFC0  7D 89 03 A6 */	mtctr r12
 /* 80186A04 0014FFC4  4E 80 04 21 */	bctrl 
-/* 80186A08 0014FFC8  3C 80 80 50 */	lis r4, lbl_804FF0F0@ha
+/* 80186A08 0014FFC8  3C 80 80 50 */	lis r4, CREvtObj_strpool@ha
 /* 80186A0C 0014FFCC  7F E3 FB 78 */	mr r3, r31
-/* 80186A10 0014FFD0  38 84 F0 F0 */	addi r4, r4, lbl_804FF0F0@l
+/* 80186A10 0014FFD0  38 84 F0 F0 */	addi r4, r4, CREvtObj_strpool@l
 /* 80186A14 0014FFD4  7F A5 EB 78 */	mr r5, r29
 /* 80186A18 0014FFD8  38 84 00 40 */	addi r4, r4, 0x40
 /* 80186A1C 0014FFDC  4B EB 41 2D */	bl func_8003AB48
@@ -1667,11 +1667,11 @@
 /* 80186D40 00150300  7C 78 1B 78 */	mr r24, r3
 /* 80186D44 00150304  7E C3 B3 78 */	mr r3, r22
 /* 80186D48 00150308  4B EB 44 A5 */	bl func_8003B1EC
-/* 80186D4C 0015030C  3F A0 80 50 */	lis r29, lbl_804FF0F0@ha
+/* 80186D4C 0015030C  3F A0 80 50 */	lis r29, CREvtObj_strpool@ha
 /* 80186D50 00150310  57 04 10 3A */	slwi r4, r24, 2
 /* 80186D54 00150314  57 00 08 3C */	slwi r0, r24, 1
 /* 80186D58 00150318  7F 38 1A 14 */	add r25, r24, r3
-/* 80186D5C 0015031C  3B BD F0 F0 */	addi r29, r29, lbl_804FF0F0@l
+/* 80186D5C 0015031C  3B BD F0 F0 */	addi r29, r29, CREvtObj_strpool@l
 /* 80186D60 00150320  7F 97 22 14 */	add r28, r23, r4
 /* 80186D64 00150324  7F 77 02 14 */	add r27, r23, r0
 /* 80186D68 00150328  3B E0 00 00 */	li r31, 0
@@ -1853,8 +1853,8 @@ lbl_804FF0D8:
 	.4byte 0
 
 
-.global lbl_804FF0F0
-lbl_804FF0F0:
+.global CREvtObj_strpool
+CREvtObj_strpool:
 	.asciz "model"
 	.asciz "motion"
 	.asciz "posX"

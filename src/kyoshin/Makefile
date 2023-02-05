@@ -7,6 +7,7 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTaskGame.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CTaskGameCf.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTaskGameEff.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_800468E0.o\
 	$(BUILD_DIR)/asm/kyoshin/action/CActParamAnim.o\
 	$(BUILD_DIR)/asm/kyoshin/action/CActParamData.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CMcaFile.o\
@@ -39,6 +40,7 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CtrlRemote.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CtrlObjectParam.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/code_8009ED08.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_800A3B24.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/code_800AA008.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfCollCircleImpl.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfCollSphereImpl.o\
@@ -64,6 +66,7 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CtrlAct.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/code_800D7A04.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CBattleManager.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_800F42AC.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfObjectEnumList.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfObjectSelectorObj.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CMainMenu.o\
@@ -123,10 +126,13 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/realtimeevt/CREvtEffect.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/realtimeevt/CREvtObj.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuPTGauge.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/menu/code_80187F14.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuSelectShop.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuShopSell.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuShopBuy.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/menu/code_8018C5FC.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfResPcImpl.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_8018F8D8.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuPTState.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CPartsChange.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CtrlMovePC.o\
@@ -136,6 +142,8 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CSimpleEveTalkWin.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CTaskCulling.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CVision.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_801A929C.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_801AAD20.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuVision.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuBattleCommu.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CPcEffect07.o\
@@ -143,7 +151,9 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CSuddenCommu.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuKizunaTalk.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuItemExchange.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_801BF76C.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfPadTask.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_801C2C14.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/realtimeevt/CREvtLight.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CBgTex.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTitleAHelp.o\
@@ -159,6 +169,7 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CIBLTabCur.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CItemBoxLine.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CScrollBar.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_801F3BE0.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfGimmickObject.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfObjectTbox.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfResTboxImpl.o\
@@ -177,6 +188,7 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfGimmickItem.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMenuMakeCrystal.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMakeCrystalWin.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/code_80213488.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCCrystalBox.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCCrystalInfo.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CModelDispMakeCrystal.o\
@@ -224,6 +236,7 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CKizunagram.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CPcKizunaCur.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CPcKizunagram.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_8025FB10.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuPassiveSkill.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/UI/CPassiveSkillCur.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/UI/CPassiveSkillInfo.o\
@@ -304,6 +317,7 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuGCItem.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuGameClear.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfHikariItemManager.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_802B3750.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CUIErrMesWin.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuTitle.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTitleLogo.o\

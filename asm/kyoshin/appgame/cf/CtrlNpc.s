@@ -259,8 +259,8 @@
 /* 80093A40 0005D000  7D 89 03 A6 */	mtctr r12
 /* 80093A44 0005D004  4E 80 04 21 */	bctrl 
 /* 80093A48 0005D008  80 7F 00 28 */	lwz r3, 0x28(r31)
-/* 80093A4C 0005D00C  3C A0 80 4F */	lis r5, lbl_804F737C@ha
-/* 80093A50 0005D010  38 A5 73 7C */	addi r5, r5, lbl_804F737C@l
+/* 80093A4C 0005D00C  3C A0 80 4F */	lis r5, CtrlNpc_strpool@ha
+/* 80093A50 0005D010  38 A5 73 7C */	addi r5, r5, CtrlNpc_strpool@l
 /* 80093A54 0005D014  38 80 00 00 */	li r4, 0
 /* 80093A58 0005D018  81 83 00 00 */	lwz r12, 0(r3)
 /* 80093A5C 0005D01C  81 8C 01 AC */	lwz r12, 0x1ac(r12)
@@ -721,8 +721,8 @@
 /* 800940F8 0005D6B8  2C 03 00 00 */	cmpwi r3, 0
 /* 800940FC 0005D6BC  41 82 00 60 */	beq .L_8009415C
 /* 80094100 0005D6C0  81 83 00 00 */	lwz r12, 0(r3)
-/* 80094104 0005D6C4  3C 80 80 4F */	lis r4, lbl_804F737C@ha
-/* 80094108 0005D6C8  38 84 73 7C */	addi r4, r4, lbl_804F737C@l
+/* 80094104 0005D6C4  3C 80 80 4F */	lis r4, CtrlNpc_strpool@ha
+/* 80094108 0005D6C8  38 84 73 7C */	addi r4, r4, CtrlNpc_strpool@l
 /* 8009410C 0005D6CC  81 8C 00 44 */	lwz r12, 0x44(r12)
 /* 80094110 0005D6D0  7D 89 03 A6 */	mtctr r12
 /* 80094114 0005D6D4  4E 80 04 21 */	bctrl 
@@ -739,8 +739,8 @@
 /* 8009413C 0005D6FC  38 84 3E 9C */	addi r4, r4, 0x3e9c
 .L_80094140:
 /* 80094140 0005D700  80 70 00 28 */	lwz r3, 0x28(r16)
-/* 80094144 0005D704  3C A0 80 4F */	lis r5, lbl_804F737C@ha
-/* 80094148 0005D708  38 A5 73 7C */	addi r5, r5, lbl_804F737C@l
+/* 80094144 0005D704  3C A0 80 4F */	lis r5, CtrlNpc_strpool@ha
+/* 80094148 0005D708  38 A5 73 7C */	addi r5, r5, CtrlNpc_strpool@l
 /* 8009414C 0005D70C  81 83 00 00 */	lwz r12, 0(r3)
 /* 80094150 0005D710  81 8C 01 AC */	lwz r12, 0x1ac(r12)
 /* 80094154 0005D714  7D 89 03 A6 */	mtctr r12
@@ -915,8 +915,8 @@
 .L_800943D8:
 /* 800943D8 0005D998  4B FA 66 5D */	bl func_8003AA34
 /* 800943DC 0005D99C  4B FA 66 59 */	bl func_8003AA34
-/* 800943E0 0005D9A0  3C 60 80 4F */	lis r3, lbl_804F737C@ha
-/* 800943E4 0005D9A4  3A C3 73 7C */	addi r22, r3, lbl_804F737C@l
+/* 800943E0 0005D9A0  3C 60 80 4F */	lis r3, CtrlNpc_strpool@ha
+/* 800943E4 0005D9A4  3A C3 73 7C */	addi r22, r3, CtrlNpc_strpool@l
 /* 800943E8 0005D9A8  38 76 00 07 */	addi r3, r22, 7
 /* 800943EC 0005D9AC  4B FA 66 B9 */	bl func_8003AAA4
 /* 800943F0 0005D9B0  39 C0 00 00 */	li r14, 0
@@ -1143,9 +1143,9 @@
 /* 80094748 0005DD08  7C 0F 00 00 */	cmpw r15, r0
 /* 8009474C 0005DD0C  40 82 00 50 */	bne .L_8009479C
 .L_80094750:
-/* 80094750 0005DD10  3C 80 80 4F */	lis r4, lbl_804F737C@ha
+/* 80094750 0005DD10  3C 80 80 4F */	lis r4, CtrlNpc_strpool@ha
 /* 80094754 0005DD14  7E 63 9B 78 */	mr r3, r19
-/* 80094758 0005DD18  38 84 73 7C */	addi r4, r4, lbl_804F737C@l
+/* 80094758 0005DD18  38 84 73 7C */	addi r4, r4, CtrlNpc_strpool@l
 /* 8009475C 0005DD1C  7E 25 8B 78 */	mr r5, r17
 /* 80094760 0005DD20  38 84 00 A9 */	addi r4, r4, 0xa9
 /* 80094764 0005DD24  4B FA 63 E5 */	bl func_8003AB48
@@ -3568,8 +3568,8 @@ cf_CtrlNpc_typestr:
 	.asciz "cf::CtrlNpc"
 
 
-.global lbl_804F737C
-lbl_804F737C:
+.global CtrlNpc_strpool
+CtrlNpc_strpool:
 	.asciz "JUhead"
 	.asciz "FLD_npclist"
 	.asciz "autotalklist%02d%02d"

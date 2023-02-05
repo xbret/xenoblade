@@ -43,7 +43,7 @@
 /* 80444938 0040DEF8  38 00 00 00 */	li r0, 0
 /* 8044493C 0040DEFC  90 0D BD 80 */	stw r0, lbl_80667F00@sda21(r13)
 /* 80444940 0040DF00  38 80 00 00 */	li r4, 0
-/* 80444944 0040DF04  4B FF 31 85 */	bl func_80437AC8
+/* 80444944 0040DF04  4B FF 31 85 */	bl __dt__CWorkThread
 /* 80444948 0040DF08  2C 1F 00 00 */	cmpwi r31, 0
 /* 8044494C 0040DF0C  40 81 00 0C */	ble .L_80444958
 /* 80444950 0040DF10  7F C3 F3 78 */	mr r3, r30
@@ -208,7 +208,7 @@ lbl_80667F00:
 	.4byte 0x00000000
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte func_80437AC8
+	.4byte __dt__CWorkThread
 .endobj "@etb_8001C870"
 
 .obj "@etb_8001C88C", local

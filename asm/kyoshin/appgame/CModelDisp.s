@@ -452,9 +452,9 @@
 /* 801FC3C4 001C5984  3C A0 80 50 */	lis r5, lbl_80503428@ha
 /* 801FC3C8 001C5988  84 85 34 28 */	lwzu r4, lbl_80503428@l(r5)
 /* 801FC3CC 001C598C  7C 78 1B 78 */	mr r24, r3
-/* 801FC3D0 001C5990  3F C0 80 50 */	lis r30, lbl_8050344C@ha
+/* 801FC3D0 001C5990  3F C0 80 50 */	lis r30, CModelDisp_strpool@ha
 /* 801FC3D4 001C5994  80 65 00 04 */	lwz r3, 4(r5)
-/* 801FC3D8 001C5998  3B FE 34 4C */	addi r31, r30, lbl_8050344C@l
+/* 801FC3D8 001C5998  3B FE 34 4C */	addi r31, r30, CModelDisp_strpool@l
 /* 801FC3DC 001C599C  80 05 00 08 */	lwz r0, 8(r5)
 /* 801FC3E0 001C59A0  3B 81 00 30 */	addi r28, r1, 0x30
 /* 801FC3E4 001C59A4  90 81 00 30 */	stw r4, 0x30(r1)
@@ -661,7 +661,7 @@
 /* 801FC6D0 001C5C90  28 13 00 05 */	cmplwi r19, 5
 /* 801FC6D4 001C5C94  40 81 FF 80 */	ble .L_801FC654
 /* 801FC6D8 001C5C98  80 78 00 04 */	lwz r3, 4(r24)
-/* 801FC6DC 001C5C9C  38 BE 34 4C */	addi r5, r30, lbl_8050344C@l
+/* 801FC6DC 001C5C9C  38 BE 34 4C */	addi r5, r30, CModelDisp_strpool@l
 /* 801FC6E0 001C5CA0  80 9D 3F 30 */	lwz r4, 0x3f30(r29)
 /* 801FC6E4 001C5CA4  4B E5 BD D5 */	bl func_800584B8
 /* 801FC6E8 001C5CA8  90 7A 00 04 */	stw r3, 4(r26)
@@ -1226,8 +1226,8 @@ CModelDisp_typestr:
 	.balign 4
 
 
-.global lbl_8050344C
-lbl_8050344C:
+.global CModelDisp_strpool
+CModelDisp_strpool:
 	.asciz "BBB"
 	.asciz "FFF"
 	.asciz "AAA"

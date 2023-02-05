@@ -39,7 +39,7 @@
 /* 80443784 0040CD44  38 00 00 00 */	li r0, 0
 /* 80443788 0040CD48  90 0D BD 38 */	stw r0, lbl_80667EB8@sda21(r13)
 /* 8044378C 0040CD4C  38 80 00 00 */	li r4, 0
-/* 80443790 0040CD50  4B FF 43 39 */	bl func_80437AC8
+/* 80443790 0040CD50  4B FF 43 39 */	bl __dt__CWorkThread
 /* 80443794 0040CD54  2C 1F 00 00 */	cmpwi r31, 0
 /* 80443798 0040CD58  40 81 00 0C */	ble .L_804437A4
 /* 8044379C 0040CD5C  7F C3 F3 78 */	mr r3, r30
@@ -69,9 +69,9 @@
 /* 804437E0 0040CDA0  38 60 00 01 */	li r3, 1
 /* 804437E4 0040CDA4  48 00 00 48 */	b .L_8044382C
 .L_804437E8:
-/* 804437E8 0040CDA8  3C 60 80 52 */	lis r3, lbl_80525FA0@ha
+/* 804437E8 0040CDA8  3C 60 80 52 */	lis r3, CWorkControl_strpool@ha
 /* 804437EC 0040CDAC  83 CD BD 38 */	lwz r30, lbl_80667EB8@sda21(r13)
-/* 804437F0 0040CDB0  38 63 5F A0 */	addi r3, r3, lbl_80525FA0@l
+/* 804437F0 0040CDB0  38 63 5F A0 */	addi r3, r3, CWorkControl_strpool@l
 /* 804437F4 0040CDB4  3B E3 00 10 */	addi r31, r3, 0x10
 /* 804437F8 0040CDB8  4B FF 3D BD */	bl func_804375B4
 /* 804437FC 0040CDBC  7C 64 1B 78 */	mr r4, r3
@@ -188,9 +188,9 @@
 .fn CWorkControl_create, global
 /* 80443958 0040CF18  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8044395C 0040CF1C  7C 08 02 A6 */	mflr r0
-/* 80443960 0040CF20  3C 80 80 52 */	lis r4, lbl_80525FA0@ha
+/* 80443960 0040CF20  3C 80 80 52 */	lis r4, CWorkControl_strpool@ha
 /* 80443964 0040CF24  90 01 00 24 */	stw r0, 0x24(r1)
-/* 80443968 0040CF28  38 84 5F A0 */	addi r4, r4, lbl_80525FA0@l
+/* 80443968 0040CF28  38 84 5F A0 */	addi r4, r4, CWorkControl_strpool@l
 /* 8044396C 0040CF2C  BF A1 00 14 */	stmw r29, 0x14(r1)
 /* 80443970 0040CF30  7C 7D 1B 78 */	mr r29, r3
 /* 80443974 0040CF34  3B E4 00 6C */	addi r31, r4, 0x6c
@@ -227,8 +227,8 @@ CWorkControl_typestr:
 	.asciz "CWorkControl"
 	.balign 4
 
-.global lbl_80525FA0
-lbl_80525FA0:
+.global CWorkControl_strpool
+CWorkControl_strpool:
 	.asciz "CWorkFlowTvMode"
 	.asciz "CWorkFlowSetup"
 	.asciz "CWorkFlowShutdownAll"

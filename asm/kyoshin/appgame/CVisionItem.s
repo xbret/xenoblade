@@ -37,10 +37,10 @@
 .fn func_801C5254, global
 /* 801C5254 0018E814  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801C5258 0018E818  7C 08 02 A6 */	mflr r0
-/* 801C525C 0018E81C  3C 80 80 50 */	lis r4, lbl_80500E74@ha
+/* 801C525C 0018E81C  3C 80 80 50 */	lis r4, CItemBoxGrid_strpool@ha
 /* 801C5260 0018E820  90 01 00 24 */	stw r0, 0x24(r1)
 /* 801C5264 0018E824  BF 41 00 08 */	stmw r26, 8(r1)
-/* 801C5268 0018E828  3B C4 0E 74 */	addi r30, r4, lbl_80500E74@l
+/* 801C5268 0018E828  3B C4 0E 74 */	addi r30, r4, CItemBoxGrid_strpool@l
 /* 801C526C 0018E82C  7C 7A 1B 78 */	mr r26, r3
 /* 801C5270 0018E830  38 7E 00 D5 */	addi r3, r30, 0xd5
 /* 801C5274 0018E834  4B E7 58 31 */	bl func_8003AAA4
