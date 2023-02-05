@@ -35,7 +35,7 @@ extern void func_8014A86C();
 extern void func_8014A8F8();
 extern void func_8045D480();
 extern void func_8045D4FC();
-extern void CScriptBinary_InitMem();
+extern void vmInit();
 extern void func_80045814();
 void main(int argc, char* argv[]);
 }

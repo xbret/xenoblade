@@ -1,17 +1,16 @@
 .include "macros.inc"
 
-#guess name
-#look at xcde to try to find the real name
+#yvm2.c in xcde?
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn CScriptBinary_InitMem, global
-/* 8049FCAC 0046926C  3C 60 80 66 */	lis r3, sbScriptMemory@ha
+.fn vmInit, global
+/* 8049FCAC 0046926C  3C 60 80 66 */	lis r3, vmMemory@ha
 /* 8049FCB0 00469270  38 80 00 00 */	li r4, 0
-/* 8049FCB4 00469274  38 63 AF 38 */	addi r3, r3, sbScriptMemory@l
+/* 8049FCB4 00469274  38 63 AF 38 */	addi r3, r3, vmMemory@l
 /* 8049FCB8 00469278  38 A0 49 0C */	li r5, 0x490c
 /* 8049FCBC 0046927C  4B B6 46 94 */	b memset
-.endfn CScriptBinary_InitMem
+.endfn vmInit
 
 .fn func_8049FCC0, global
 /* 8049FCC0 00469280  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -53,18 +52,18 @@
 /* 8049FD40 00469300  38 60 00 00 */	li r3, 0
 /* 8049FD44 00469304  48 00 08 64 */	b .L_804A05A8
 .L_8049FD48:
-/* 8049FD48 00469308  3C 80 80 66 */	lis r4, sbScriptMemory@ha
+/* 8049FD48 00469308  3C 80 80 66 */	lis r4, vmMemory@ha
 /* 8049FD4C 0046930C  38 00 00 08 */	li r0, 8
-/* 8049FD50 00469310  38 84 AF 38 */	addi r4, r4, sbScriptMemory@l
+/* 8049FD50 00469310  38 84 AF 38 */	addi r4, r4, vmMemory@l
 /* 8049FD54 00469314  38 A0 00 00 */	li r5, 0
 /* 8049FD58 00469318  7C 09 03 A6 */	mtctr r0
 .L_8049FD5C:
 /* 8049FD5C 0046931C  80 04 00 00 */	lwz r0, 0(r4)
 /* 8049FD60 00469320  7C 00 18 40 */	cmplw r0, r3
 /* 8049FD64 00469324  40 82 00 18 */	bne .L_8049FD7C
-/* 8049FD68 00469328  3C 80 80 66 */	lis r4, sbScriptMemory@ha
+/* 8049FD68 00469328  3C 80 80 66 */	lis r4, vmMemory@ha
 /* 8049FD6C 0046932C  54 A0 18 38 */	slwi r0, r5, 3
-/* 8049FD70 00469330  38 84 AF 38 */	addi r4, r4, sbScriptMemory@l
+/* 8049FD70 00469330  38 84 AF 38 */	addi r4, r4, vmMemory@l
 /* 8049FD74 00469334  7C 04 02 14 */	add r0, r4, r0
 /* 8049FD78 00469338  48 00 00 14 */	b .L_8049FD8C
 .L_8049FD7C:
@@ -78,9 +77,9 @@
 /* 8049FD94 00469354  38 00 00 01 */	li r0, 1
 /* 8049FD98 00469358  48 00 00 38 */	b .L_8049FDD0
 .L_8049FD9C:
-/* 8049FD9C 0046935C  3C 80 80 66 */	lis r4, sbScriptMemory@ha
+/* 8049FD9C 0046935C  3C 80 80 66 */	lis r4, vmMemory@ha
 /* 8049FDA0 00469360  38 00 00 08 */	li r0, 8
-/* 8049FDA4 00469364  38 84 AF 38 */	addi r4, r4, sbScriptMemory@l
+/* 8049FDA4 00469364  38 84 AF 38 */	addi r4, r4, vmMemory@l
 /* 8049FDA8 00469368  7C 09 03 A6 */	mtctr r0
 .L_8049FDAC:
 /* 8049FDAC 0046936C  80 04 00 00 */	lwz r0, 0(r4)
@@ -179,7 +178,7 @@
 .L_8049FF10:
 /* 8049FF10 004694D0  80 7C 00 20 */	lwz r3, 0x20(r28)
 /* 8049FF14 004694D4  3B A0 00 00 */	li r29, 0
-/* 8049FF18 004694D8  3F 40 80 66 */	lis r26, sbScriptMemory@ha
+/* 8049FF18 004694D8  3F 40 80 66 */	lis r26, vmMemory@ha
 /* 8049FF1C 004694DC  80 03 00 00 */	lwz r0, 0(r3)
 /* 8049FF20 004694E0  7F E3 02 14 */	add r31, r3, r0
 /* 8049FF24 004694E4  48 00 01 10 */	b .L_804A0034
@@ -211,7 +210,7 @@
 /* 8049FF7C 0046953C  7C 03 00 2E */	lwzx r0, r3, r0
 .L_8049FF80:
 /* 8049FF80 00469540  7E 83 02 14 */	add r20, r3, r0
-/* 8049FF84 00469544  3A FA AF 38 */	addi r23, r26, sbScriptMemory@l
+/* 8049FF84 00469544  3A FA AF 38 */	addi r23, r26, vmMemory@l
 /* 8049FF88 00469548  3B 00 00 00 */	li r24, 0
 .L_8049FF8C:
 /* 8049FF8C 0046954C  80 77 46 88 */	lwz r3, 0x4688(r23)
@@ -269,7 +268,7 @@
 /* 804A0040 00469600  41 80 FE E8 */	blt .L_8049FF28
 /* 804A0044 00469604  80 7C 00 24 */	lwz r3, 0x24(r28)
 /* 804A0048 00469608  3B E0 00 00 */	li r31, 0
-/* 804A004C 0046960C  3F 60 80 66 */	lis r27, sbScriptMemory@ha
+/* 804A004C 0046960C  3F 60 80 66 */	lis r27, vmMemory@ha
 /* 804A0050 00469610  80 03 00 00 */	lwz r0, 0(r3)
 /* 804A0054 00469614  7F 23 02 14 */	add r25, r3, r0
 /* 804A0058 00469618  48 00 00 94 */	b .L_804A00EC
@@ -288,7 +287,7 @@
 /* 804A0084 00469644  7C 03 00 2E */	lwzx r0, r3, r0
 .L_804A0088:
 /* 804A0088 00469648  7E A3 02 14 */	add r21, r3, r0
-/* 804A008C 0046964C  3B 5B AF 38 */	addi r26, r27, sbScriptMemory@l
+/* 804A008C 0046964C  3B 5B AF 38 */	addi r26, r27, vmMemory@l
 /* 804A0090 00469650  3B 00 00 00 */	li r24, 0
 .L_804A0094:
 /* 804A0094 00469654  80 7A 48 08 */	lwz r3, 0x4808(r26)
@@ -372,8 +371,8 @@
 /* 804A01A0 00469760  7C 1F 00 00 */	cmpw r31, r0
 /* 804A01A4 00469764  41 80 FF 6C */	blt .L_804A0110
 /* 804A01A8 00469768  80 BC 00 2C */	lwz r5, 0x2c(r28)
-/* 804A01AC 0046976C  3C 60 80 66 */	lis r3, sbScriptMemory@ha
-/* 804A01B0 00469770  38 63 AF 38 */	addi r3, r3, sbScriptMemory@l
+/* 804A01AC 0046976C  3C 60 80 66 */	lis r3, vmMemory@ha
+/* 804A01B0 00469770  38 63 AF 38 */	addi r3, r3, vmMemory@l
 /* 804A01B4 00469774  38 80 00 00 */	li r4, 0
 /* 804A01B8 00469778  80 05 00 00 */	lwz r0, 0(r5)
 /* 804A01BC 0046977C  7C A5 02 14 */	add r5, r5, r0
@@ -490,9 +489,9 @@
 /* 804A0330 004698F0  80 06 00 04 */	lwz r0, 4(r6)
 /* 804A0334 004698F4  7C 04 00 40 */	cmplw r4, r0
 /* 804A0338 004698F8  41 80 FE 8C */	blt .L_804A01C4
-/* 804A033C 004698FC  3C 60 80 66 */	lis r3, sbScriptMemory@ha
+/* 804A033C 004698FC  3C 60 80 66 */	lis r3, vmMemory@ha
 /* 804A0340 00469900  38 80 00 00 */	li r4, 0
-/* 804A0344 00469904  38 63 AF 38 */	addi r3, r3, sbScriptMemory@l
+/* 804A0344 00469904  38 63 AF 38 */	addi r3, r3, vmMemory@l
 /* 804A0348 00469908  48 00 01 B4 */	b .L_804A04FC
 .L_804A034C:
 /* 804A034C 0046990C  80 E6 00 08 */	lwz r7, 8(r6)
@@ -652,18 +651,18 @@
 .L_804A0558:
 /* 804A0558 00469B18  7C 83 02 14 */	add r4, r3, r0
 .L_804A055C:
-/* 804A055C 00469B1C  3C 60 80 66 */	lis r3, sbScriptMemory@ha
+/* 804A055C 00469B1C  3C 60 80 66 */	lis r3, vmMemory@ha
 /* 804A0560 00469B20  38 00 00 08 */	li r0, 8
-/* 804A0564 00469B24  38 63 AF 38 */	addi r3, r3, sbScriptMemory@l
+/* 804A0564 00469B24  38 63 AF 38 */	addi r3, r3, vmMemory@l
 /* 804A0568 00469B28  38 A0 00 00 */	li r5, 0
 /* 804A056C 00469B2C  7C 09 03 A6 */	mtctr r0
 .L_804A0570:
 /* 804A0570 00469B30  80 03 00 00 */	lwz r0, 0(r3)
 /* 804A0574 00469B34  7C 00 E0 40 */	cmplw r0, r28
 /* 804A0578 00469B38  40 82 00 18 */	bne .L_804A0590
-/* 804A057C 00469B3C  3C 60 80 66 */	lis r3, sbScriptMemory@ha
+/* 804A057C 00469B3C  3C 60 80 66 */	lis r3, vmMemory@ha
 /* 804A0580 00469B40  54 A0 18 38 */	slwi r0, r5, 3
-/* 804A0584 00469B44  38 63 AF 38 */	addi r3, r3, sbScriptMemory@l
+/* 804A0584 00469B44  38 63 AF 38 */	addi r3, r3, vmMemory@l
 /* 804A0588 00469B48  7C 63 02 14 */	add r3, r3, r0
 /* 804A058C 00469B4C  48 00 00 14 */	b .L_804A05A0
 .L_804A0590:
@@ -683,18 +682,18 @@
 .endfn func_8049FCC0
 
 .fn func_804A05BC, global
-/* 804A05BC 00469B7C  3C 80 80 66 */	lis r4, sbScriptMemory@ha
+/* 804A05BC 00469B7C  3C 80 80 66 */	lis r4, vmMemory@ha
 /* 804A05C0 00469B80  38 00 00 08 */	li r0, 8
-/* 804A05C4 00469B84  38 84 AF 38 */	addi r4, r4, sbScriptMemory@l
+/* 804A05C4 00469B84  38 84 AF 38 */	addi r4, r4, vmMemory@l
 /* 804A05C8 00469B88  38 A0 00 00 */	li r5, 0
 /* 804A05CC 00469B8C  7C 09 03 A6 */	mtctr r0
 .L_804A05D0:
 /* 804A05D0 00469B90  80 04 00 00 */	lwz r0, 0(r4)
 /* 804A05D4 00469B94  7C 00 18 40 */	cmplw r0, r3
 /* 804A05D8 00469B98  40 82 00 18 */	bne .L_804A05F0
-/* 804A05DC 00469B9C  3C 80 80 66 */	lis r4, sbScriptMemory@ha
+/* 804A05DC 00469B9C  3C 80 80 66 */	lis r4, vmMemory@ha
 /* 804A05E0 00469BA0  54 A0 18 38 */	slwi r0, r5, 3
-/* 804A05E4 00469BA4  38 84 AF 38 */	addi r4, r4, sbScriptMemory@l
+/* 804A05E4 00469BA4  38 84 AF 38 */	addi r4, r4, vmMemory@l
 /* 804A05E8 00469BA8  7C 84 02 14 */	add r4, r4, r0
 /* 804A05EC 00469BAC  48 00 00 14 */	b .L_804A0600
 .L_804A05F0:
@@ -705,8 +704,8 @@
 .L_804A0600:
 /* 804A0600 00469BC0  2C 04 00 00 */	cmpwi r4, 0
 /* 804A0604 00469BC4  41 82 01 60 */	beq .L_804A0764
-/* 804A0608 00469BC8  3C A0 80 66 */	lis r5, sbScriptMemory@ha
-/* 804A060C 00469BCC  84 05 AF 38 */	lwzu r0, sbScriptMemory@l(r5)
+/* 804A0608 00469BC8  3C A0 80 66 */	lis r5, vmMemory@ha
+/* 804A060C 00469BCC  84 05 AF 38 */	lwzu r0, vmMemory@l(r5)
 /* 804A0610 00469BD0  7C 00 18 40 */	cmplw r0, r3
 /* 804A0614 00469BD4  40 82 00 0C */	bne .L_804A0620
 /* 804A0618 00469BD8  38 A0 00 00 */	li r5, 0
@@ -756,9 +755,9 @@
 .L_804A06AC:
 /* 804A06AC 00469C6C  38 A0 FF FF */	li r5, -1
 .L_804A06B0:
-/* 804A06B0 00469C70  3C C0 80 66 */	lis r6, sbScriptMemory@ha
+/* 804A06B0 00469C70  3C C0 80 66 */	lis r6, vmMemory@ha
 /* 804A06B4 00469C74  38 00 00 02 */	li r0, 2
-/* 804A06B8 00469C78  38 C6 AF 38 */	addi r6, r6, sbScriptMemory@l
+/* 804A06B8 00469C78  38 C6 AF 38 */	addi r6, r6, vmMemory@l
 /* 804A06BC 00469C7C  38 E0 00 00 */	li r7, 0
 /* 804A06C0 00469C80  38 60 00 00 */	li r3, 0
 /* 804A06C4 00469C84  7C 09 03 A6 */	mtctr r0
@@ -824,10 +823,10 @@
 .fn func_804A0778, global
 /* 804A0778 00469D38  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 804A077C 00469D3C  7C 08 02 A6 */	mflr r0
-/* 804A0780 00469D40  3D 00 80 66 */	lis r8, sbScriptMemory@ha
+/* 804A0780 00469D40  3D 00 80 66 */	lis r8, vmMemory@ha
 /* 804A0784 00469D44  38 60 00 00 */	li r3, 0
 /* 804A0788 00469D48  90 01 00 34 */	stw r0, 0x34(r1)
-/* 804A078C 00469D4C  39 08 AF 38 */	addi r8, r8, sbScriptMemory@l
+/* 804A078C 00469D4C  39 08 AF 38 */	addi r8, r8, vmMemory@l
 /* 804A0790 00469D50  38 00 00 04 */	li r0, 4
 /* 804A0794 00469D54  38 80 00 00 */	li r4, 0
 /* 804A0798 00469D58  BE C1 00 08 */	stmw r22, 8(r1)
@@ -911,10 +910,10 @@
 /* 804A08AC 00469E6C  2C 04 00 00 */	cmpwi r4, 0
 /* 804A08B0 00469E70  41 82 00 58 */	beq .L_804A0908
 /* 804A08B4 00469E74  20 03 00 0F */	subfic r0, r3, 0xf
-/* 804A08B8 00469E78  3C A0 80 66 */	lis r5, sbScriptMemory@ha
+/* 804A08B8 00469E78  3C A0 80 66 */	lis r5, vmMemory@ha
 /* 804A08BC 00469E7C  54 66 10 3A */	slwi r6, r3, 2
 /* 804A08C0 00469E80  38 80 00 00 */	li r4, 0
-/* 804A08C4 00469E84  38 A5 AF 38 */	addi r5, r5, sbScriptMemory@l
+/* 804A08C4 00469E84  38 A5 AF 38 */	addi r5, r5, vmMemory@l
 /* 804A08C8 00469E88  54 00 E8 FE */	srwi r0, r0, 3
 /* 804A08CC 00469E8C  7C A5 32 14 */	add r5, r5, r6
 /* 804A08D0 00469E90  7C 09 03 A6 */	mtctr r0
@@ -933,9 +932,9 @@
 /* 804A0900 00469EC0  38 A5 00 20 */	addi r5, r5, 0x20
 /* 804A0904 00469EC4  42 00 FF D8 */	bdnz .L_804A08DC
 .L_804A0908:
-/* 804A0908 00469EC8  3C 80 80 66 */	lis r4, sbScriptMemory@ha
+/* 804A0908 00469EC8  3C 80 80 66 */	lis r4, vmMemory@ha
 /* 804A090C 00469ECC  54 65 10 3A */	slwi r5, r3, 2
-/* 804A0910 00469ED0  38 84 AF 38 */	addi r4, r4, sbScriptMemory@l
+/* 804A0910 00469ED0  38 84 AF 38 */	addi r4, r4, vmMemory@l
 /* 804A0914 00469ED4  20 03 00 10 */	subfic r0, r3, 0x10
 /* 804A0918 00469ED8  7C A4 2A 14 */	add r5, r4, r5
 /* 804A091C 00469EDC  38 80 00 00 */	li r4, 0
@@ -947,9 +946,9 @@
 /* 804A0930 00469EF0  38 A5 00 04 */	addi r5, r5, 4
 /* 804A0934 00469EF4  42 00 FF F8 */	bdnz .L_804A092C
 .L_804A0938:
-/* 804A0938 00469EF8  3F C0 80 66 */	lis r30, sbScriptMemory@ha
+/* 804A0938 00469EF8  3F C0 80 66 */	lis r30, vmMemory@ha
 /* 804A093C 00469EFC  3F 00 80 57 */	lis r24, lbl_80572880@ha
-/* 804A0940 00469F00  3B FE AF 38 */	addi r31, r30, sbScriptMemory@l
+/* 804A0940 00469F00  3B FE AF 38 */	addi r31, r30, vmMemory@l
 /* 804A0944 00469F04  3B A0 00 00 */	li r29, 0
 /* 804A0948 00469F08  93 BF 00 40 */	stw r29, 0x40(r31)
 /* 804A094C 00469F0C  7F FC FB 78 */	mr r28, r31
@@ -995,7 +994,7 @@
 /* 804A09D8 00469F98  41 82 FF B0 */	beq .L_804A0988
 /* 804A09DC 00469F9C  2C 03 00 03 */	cmpwi r3, 3
 /* 804A09E0 00469FA0  40 82 01 8C */	bne .L_804A0B6C
-/* 804A09E4 00469FA4  38 BE AF 38 */	addi r5, r30, sbScriptMemory@l
+/* 804A09E4 00469FA4  38 BE AF 38 */	addi r5, r30, vmMemory@l
 /* 804A09E8 00469FA8  80 96 00 44 */	lwz r4, 0x44(r22)
 /* 804A09EC 00469FAC  38 60 00 00 */	li r3, 0
 /* 804A09F0 00469FB0  7F 49 03 A6 */	mtctr r26
@@ -1122,8 +1121,8 @@
 /* 804A0B9C 0046A15C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 804A0BA0 0046A160  3B E0 00 00 */	li r31, 0
 /* 804A0BA4 0046A164  93 C1 00 18 */	stw r30, 0x18(r1)
-/* 804A0BA8 0046A168  3F C0 80 66 */	lis r30, sbScriptMemory@ha
-/* 804A0BAC 0046A16C  3B DE AF 38 */	addi r30, r30, sbScriptMemory@l
+/* 804A0BA8 0046A168  3F C0 80 66 */	lis r30, vmMemory@ha
+/* 804A0BAC 0046A16C  3B DE AF 38 */	addi r30, r30, vmMemory@l
 /* 804A0BB0 0046A170  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 804A0BB4 0046A174  7C 9D 23 78 */	mr r29, r4
 /* 804A0BB8 0046A178  93 81 00 10 */	stw r28, 0x10(r1)
@@ -1150,18 +1149,18 @@
 /* 804A0C00 0046A1C0  38 60 00 01 */	li r3, 1
 /* 804A0C04 0046A1C4  48 00 00 54 */	b .L_804A0C58
 .L_804A0C08:
-/* 804A0C08 0046A1C8  3C 60 80 66 */	lis r3, sbScriptMemory@ha
+/* 804A0C08 0046A1C8  3C 60 80 66 */	lis r3, vmMemory@ha
 /* 804A0C0C 0046A1CC  38 00 00 30 */	li r0, 0x30
-/* 804A0C10 0046A1D0  38 63 AF 38 */	addi r3, r3, sbScriptMemory@l
+/* 804A0C10 0046A1D0  38 63 AF 38 */	addi r3, r3, vmMemory@l
 /* 804A0C14 0046A1D4  38 A0 00 00 */	li r5, 0
 /* 804A0C18 0046A1D8  7C 09 03 A6 */	mtctr r0
 .L_804A0C1C:
 /* 804A0C1C 0046A1DC  80 03 46 88 */	lwz r0, 0x4688(r3)
 /* 804A0C20 0046A1E0  2C 00 00 00 */	cmpwi r0, 0
 /* 804A0C24 0046A1E4  40 82 00 24 */	bne .L_804A0C48
-/* 804A0C28 0046A1E8  3C 80 80 66 */	lis r4, sbScriptMemory@ha
+/* 804A0C28 0046A1E8  3C 80 80 66 */	lis r4, vmMemory@ha
 /* 804A0C2C 0046A1EC  54 A0 18 38 */	slwi r0, r5, 3
-/* 804A0C30 0046A1F0  38 84 AF 38 */	addi r4, r4, sbScriptMemory@l
+/* 804A0C30 0046A1F0  38 84 AF 38 */	addi r4, r4, vmMemory@l
 /* 804A0C34 0046A1F4  38 60 00 01 */	li r3, 1
 /* 804A0C38 0046A1F8  7C 84 02 14 */	add r4, r4, r0
 /* 804A0C3C 0046A1FC  93 84 46 88 */	stw r28, 0x4688(r4)
@@ -1500,8 +1499,8 @@
 /* 804A1050 0046A610  2C 03 00 00 */	cmpwi r3, 0
 /* 804A1054 0046A614  40 82 FF EC */	bne .L_804A1040
 .L_804A1058:
-/* 804A1058 0046A618  3C 60 80 66 */	lis r3, sbScriptMemory@ha
-/* 804A105C 0046A61C  38 63 AF 38 */	addi r3, r3, sbScriptMemory@l
+/* 804A1058 0046A618  3C 60 80 66 */	lis r3, vmMemory@ha
+/* 804A105C 0046A61C  38 63 AF 38 */	addi r3, r3, vmMemory@l
 /* 804A1060 0046A620  93 C3 48 C8 */	stw r30, 0x48c8(r3)
 /* 804A1064 0046A624  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 804A1068 0046A628  83 C1 00 08 */	lwz r30, 8(r1)
@@ -1519,8 +1518,8 @@
 /* 804A108C 0046A64C  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 804A1090 0046A650  3B C0 00 00 */	li r30, 0
 /* 804A1094 0046A654  93 A1 00 14 */	stw r29, 0x14(r1)
-/* 804A1098 0046A658  3F A0 80 66 */	lis r29, sbScriptMemory@ha
-/* 804A109C 0046A65C  3B BD AF 38 */	addi r29, r29, sbScriptMemory@l
+/* 804A1098 0046A658  3F A0 80 66 */	lis r29, vmMemory@ha
+/* 804A109C 0046A65C  3B BD AF 38 */	addi r29, r29, vmMemory@l
 /* 804A10A0 0046A660  93 81 00 10 */	stw r28, 0x10(r1)
 /* 804A10A4 0046A664  7C 7C 1B 78 */	mr r28, r3
 /* 804A10A8 0046A668  83 E3 00 00 */	lwz r31, 0(r3)
@@ -1547,18 +1546,18 @@
 /* 804A10F0 0046A6B0  38 60 00 01 */	li r3, 1
 /* 804A10F4 0046A6B4  48 00 00 A0 */	b .L_804A1194
 .L_804A10F8:
-/* 804A10F8 0046A6B8  3C 60 80 66 */	lis r3, sbScriptMemory@ha
+/* 804A10F8 0046A6B8  3C 60 80 66 */	lis r3, vmMemory@ha
 /* 804A10FC 0046A6BC  38 00 00 30 */	li r0, 0x30
-/* 804A1100 0046A6C0  38 63 AF 38 */	addi r3, r3, sbScriptMemory@l
+/* 804A1100 0046A6C0  38 63 AF 38 */	addi r3, r3, vmMemory@l
 /* 804A1104 0046A6C4  38 80 00 00 */	li r4, 0
 /* 804A1108 0046A6C8  7C 09 03 A6 */	mtctr r0
 .L_804A110C:
 /* 804A110C 0046A6CC  80 03 48 08 */	lwz r0, 0x4808(r3)
 /* 804A1110 0046A6D0  2C 00 00 00 */	cmpwi r0, 0
 /* 804A1114 0046A6D4  40 82 00 70 */	bne .L_804A1184
-/* 804A1118 0046A6D8  3C 60 80 66 */	lis r3, sbScriptMemory@ha
+/* 804A1118 0046A6D8  3C 60 80 66 */	lis r3, vmMemory@ha
 /* 804A111C 0046A6DC  54 80 10 3A */	slwi r0, r4, 2
-/* 804A1120 0046A6E0  38 63 AF 38 */	addi r3, r3, sbScriptMemory@l
+/* 804A1120 0046A6E0  38 63 AF 38 */	addi r3, r3, vmMemory@l
 /* 804A1124 0046A6E4  7C 63 02 14 */	add r3, r3, r0
 /* 804A1128 0046A6E8  93 83 48 08 */	stw r28, 0x4808(r3)
 /* 804A112C 0046A6EC  83 BC 00 08 */	lwz r29, 8(r28)
@@ -1634,9 +1633,9 @@
 .endfn func_804A11F4
 
 .fn func_804A120C, global
-/* 804A120C 0046A7CC  3C 80 80 66 */	lis r4, sbScriptMemory@ha
+/* 804A120C 0046A7CC  3C 80 80 66 */	lis r4, vmMemory@ha
 /* 804A1210 0046A7D0  38 00 00 02 */	li r0, 2
-/* 804A1214 0046A7D4  38 84 AF 38 */	addi r4, r4, sbScriptMemory@l
+/* 804A1214 0046A7D4  38 84 AF 38 */	addi r4, r4, vmMemory@l
 /* 804A1218 0046A7D8  38 A0 00 00 */	li r5, 0
 /* 804A121C 0046A7DC  7C 09 03 A6 */	mtctr r0
 .L_804A1220:
@@ -1705,11 +1704,11 @@
 .fn func_804A12F0, global
 /* 804A12F0 0046A8B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804A12F4 0046A8B4  7C 08 02 A6 */	mflr r0
-/* 804A12F8 0046A8B8  3C 60 80 66 */	lis r3, sbScriptMemory@ha
+/* 804A12F8 0046A8B8  3C 60 80 66 */	lis r3, vmMemory@ha
 /* 804A12FC 0046A8BC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804A1300 0046A8C0  7C 80 86 70 */	srawi r0, r4, 0x10
 /* 804A1304 0046A8C4  54 00 18 38 */	slwi r0, r0, 3
-/* 804A1308 0046A8C8  38 63 AF 38 */	addi r3, r3, sbScriptMemory@l
+/* 804A1308 0046A8C8  38 63 AF 38 */	addi r3, r3, vmMemory@l
 /* 804A130C 0046A8CC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804A1310 0046A8D0  7C BF 2B 78 */	mr r31, r5
 /* 804A1314 0046A8D4  54 84 04 3E */	clrlwi r4, r4, 0x10
@@ -1737,11 +1736,11 @@
 .fn func_804A135C, global
 /* 804A135C 0046A91C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804A1360 0046A920  7C 08 02 A6 */	mflr r0
-/* 804A1364 0046A924  3C C0 80 66 */	lis r6, sbScriptMemory@ha
+/* 804A1364 0046A924  3C C0 80 66 */	lis r6, vmMemory@ha
 /* 804A1368 0046A928  38 A0 00 00 */	li r5, 0
 /* 804A136C 0046A92C  90 01 00 24 */	stw r0, 0x24(r1)
 /* 804A1370 0046A930  38 00 00 10 */	li r0, 0x10
-/* 804A1374 0046A934  38 C6 AF 38 */	addi r6, r6, sbScriptMemory@l
+/* 804A1374 0046A934  38 C6 AF 38 */	addi r6, r6, vmMemory@l
 /* 804A1378 0046A938  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 804A137C 0046A93C  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 804A1380 0046A940  93 A1 00 14 */	stw r29, 0x14(r1)
@@ -1754,8 +1753,8 @@
 /* 804A1398 0046A958  7C 04 00 40 */	cmplw r4, r0
 /* 804A139C 0046A95C  40 82 00 1C */	bne .L_804A13B8
 /* 804A13A0 0046A960  1C 05 00 60 */	mulli r0, r5, 0x60
-/* 804A13A4 0046A964  3C 80 80 66 */	lis r4, sbScriptMemory@ha
-/* 804A13A8 0046A968  38 84 AF 38 */	addi r4, r4, sbScriptMemory@l
+/* 804A13A4 0046A964  3C 80 80 66 */	lis r4, vmMemory@ha
+/* 804A13A8 0046A968  38 84 AF 38 */	addi r4, r4, vmMemory@l
 /* 804A13AC 0046A96C  7C 84 02 14 */	add r4, r4, r0
 /* 804A13B0 0046A970  3B E4 00 88 */	addi r31, r4, 0x88
 /* 804A13B4 0046A974  48 00 00 14 */	b .L_804A13C8
@@ -1806,9 +1805,9 @@
 .endfn func_804A135C
 
 .fn func_804A1460, global
-/* 804A1460 0046AA20  3C A0 80 66 */	lis r5, sbScriptMemory@ha
+/* 804A1460 0046AA20  3C A0 80 66 */	lis r5, vmMemory@ha
 /* 804A1464 0046AA24  38 00 00 10 */	li r0, 0x10
-/* 804A1468 0046AA28  38 A5 AF 38 */	addi r5, r5, sbScriptMemory@l
+/* 804A1468 0046AA28  38 A5 AF 38 */	addi r5, r5, vmMemory@l
 /* 804A146C 0046AA2C  38 80 00 00 */	li r4, 0
 /* 804A1470 0046AA30  7C 09 03 A6 */	mtctr r0
 .L_804A1474:
@@ -1819,8 +1818,8 @@
 /* 804A1484 0046AA44  7C 03 00 40 */	cmplw r3, r0
 /* 804A1488 0046AA48  40 82 00 1C */	bne .L_804A14A4
 /* 804A148C 0046AA4C  1C 04 00 60 */	mulli r0, r4, 0x60
-/* 804A1490 0046AA50  3C 60 80 66 */	lis r3, sbScriptMemory@ha
-/* 804A1494 0046AA54  38 63 AF 38 */	addi r3, r3, sbScriptMemory@l
+/* 804A1490 0046AA50  3C 60 80 66 */	lis r3, vmMemory@ha
+/* 804A1494 0046AA54  38 63 AF 38 */	addi r3, r3, vmMemory@l
 /* 804A1498 0046AA58  7C 63 02 14 */	add r3, r3, r0
 /* 804A149C 0046AA5C  38 63 00 88 */	addi r3, r3, 0x88
 /* 804A14A0 0046AA60  48 00 00 14 */	b .L_804A14B4
@@ -1842,9 +1841,9 @@
 .endfn func_804A1460
 
 .fn func_804A14D4, global
-/* 804A14D4 0046AA94  3C A0 80 66 */	lis r5, sbScriptMemory@ha
+/* 804A14D4 0046AA94  3C A0 80 66 */	lis r5, vmMemory@ha
 /* 804A14D8 0046AA98  38 00 00 10 */	li r0, 0x10
-/* 804A14DC 0046AA9C  38 A5 AF 38 */	addi r5, r5, sbScriptMemory@l
+/* 804A14DC 0046AA9C  38 A5 AF 38 */	addi r5, r5, vmMemory@l
 /* 804A14E0 0046AAA0  38 80 00 00 */	li r4, 0
 /* 804A14E4 0046AAA4  7C 09 03 A6 */	mtctr r0
 .L_804A14E8:
@@ -1855,8 +1854,8 @@
 /* 804A14F8 0046AAB8  7C 03 00 40 */	cmplw r3, r0
 /* 804A14FC 0046AABC  40 82 00 1C */	bne .L_804A1518
 /* 804A1500 0046AAC0  1C 04 00 60 */	mulli r0, r4, 0x60
-/* 804A1504 0046AAC4  3C 60 80 66 */	lis r3, sbScriptMemory@ha
-/* 804A1508 0046AAC8  38 63 AF 38 */	addi r3, r3, sbScriptMemory@l
+/* 804A1504 0046AAC4  3C 60 80 66 */	lis r3, vmMemory@ha
+/* 804A1508 0046AAC8  38 63 AF 38 */	addi r3, r3, vmMemory@l
 /* 804A150C 0046AACC  7C 63 02 14 */	add r3, r3, r0
 /* 804A1510 0046AAD0  38 03 00 88 */	addi r0, r3, 0x88
 /* 804A1514 0046AAD4  48 00 00 14 */	b .L_804A1528
@@ -1876,9 +1875,9 @@
 .endfn func_804A14D4
 
 .fn func_804A1540, global
-/* 804A1540 0046AB00  3C A0 80 66 */	lis r5, sbScriptMemory@ha
+/* 804A1540 0046AB00  3C A0 80 66 */	lis r5, vmMemory@ha
 /* 804A1544 0046AB04  38 00 00 10 */	li r0, 0x10
-/* 804A1548 0046AB08  38 A5 AF 38 */	addi r5, r5, sbScriptMemory@l
+/* 804A1548 0046AB08  38 A5 AF 38 */	addi r5, r5, vmMemory@l
 /* 804A154C 0046AB0C  38 80 00 00 */	li r4, 0
 /* 804A1550 0046AB10  7C 09 03 A6 */	mtctr r0
 .L_804A1554:
@@ -1889,8 +1888,8 @@
 /* 804A1564 0046AB24  7C 03 00 40 */	cmplw r3, r0
 /* 804A1568 0046AB28  40 82 00 1C */	bne .L_804A1584
 /* 804A156C 0046AB2C  1C 04 00 60 */	mulli r0, r4, 0x60
-/* 804A1570 0046AB30  3C 60 80 66 */	lis r3, sbScriptMemory@ha
-/* 804A1574 0046AB34  38 63 AF 38 */	addi r3, r3, sbScriptMemory@l
+/* 804A1570 0046AB30  3C 60 80 66 */	lis r3, vmMemory@ha
+/* 804A1574 0046AB34  38 63 AF 38 */	addi r3, r3, vmMemory@l
 /* 804A1578 0046AB38  7C 63 02 14 */	add r3, r3, r0
 /* 804A157C 0046AB3C  38 83 00 88 */	addi r4, r3, 0x88
 /* 804A1580 0046AB40  48 00 00 14 */	b .L_804A1594
@@ -1913,9 +1912,9 @@
 .endfn func_804A1540
 
 .fn func_804A15B8, global
-/* 804A15B8 0046AB78  3C A0 80 66 */	lis r5, sbScriptMemory@ha
+/* 804A15B8 0046AB78  3C A0 80 66 */	lis r5, vmMemory@ha
 /* 804A15BC 0046AB7C  38 00 00 10 */	li r0, 0x10
-/* 804A15C0 0046AB80  38 A5 AF 38 */	addi r5, r5, sbScriptMemory@l
+/* 804A15C0 0046AB80  38 A5 AF 38 */	addi r5, r5, vmMemory@l
 /* 804A15C4 0046AB84  38 80 00 00 */	li r4, 0
 /* 804A15C8 0046AB88  7C 09 03 A6 */	mtctr r0
 .L_804A15CC:
@@ -1926,8 +1925,8 @@
 /* 804A15DC 0046AB9C  7C 03 00 40 */	cmplw r3, r0
 /* 804A15E0 0046ABA0  40 82 00 1C */	bne .L_804A15FC
 /* 804A15E4 0046ABA4  1C 04 00 60 */	mulli r0, r4, 0x60
-/* 804A15E8 0046ABA8  3C 60 80 66 */	lis r3, sbScriptMemory@ha
-/* 804A15EC 0046ABAC  38 63 AF 38 */	addi r3, r3, sbScriptMemory@l
+/* 804A15E8 0046ABA8  3C 60 80 66 */	lis r3, vmMemory@ha
+/* 804A15EC 0046ABAC  38 63 AF 38 */	addi r3, r3, vmMemory@l
 /* 804A15F0 0046ABB0  7C 63 02 14 */	add r3, r3, r0
 /* 804A15F4 0046ABB4  38 83 00 88 */	addi r4, r3, 0x88
 /* 804A15F8 0046ABB8  48 00 00 14 */	b .L_804A160C
@@ -2092,8 +2091,8 @@
 /* 804A1824 0046ADE4  7C 08 02 A6 */	mflr r0
 /* 804A1828 0046ADE8  90 01 00 24 */	stw r0, 0x24(r1)
 /* 804A182C 0046ADEC  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 804A1830 0046ADF0  3F E0 80 66 */	lis r31, sbScriptMemory@ha
-/* 804A1834 0046ADF4  3B FF AF 38 */	addi r31, r31, sbScriptMemory@l
+/* 804A1830 0046ADF0  3F E0 80 66 */	lis r31, vmMemory@ha
+/* 804A1834 0046ADF4  3B FF AF 38 */	addi r31, r31, vmMemory@l
 /* 804A1838 0046ADF8  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 804A183C 0046ADFC  3B C0 00 00 */	li r30, 0
 /* 804A1840 0046AE00  93 A1 00 14 */	stw r29, 0x14(r1)
@@ -2224,11 +2223,11 @@
 /* 804A19DC 0046AF9C  7C 08 02 A6 */	mflr r0
 /* 804A19E0 0046AFA0  90 01 00 24 */	stw r0, 0x24(r1)
 /* 804A19E4 0046AFA4  BF 41 00 08 */	stmw r26, 8(r1)
-/* 804A19E8 0046AFA8  3F C0 80 66 */	lis r30, sbScriptMemory@ha
+/* 804A19E8 0046AFA8  3F C0 80 66 */	lis r30, vmMemory@ha
 /* 804A19EC 0046AFAC  7C 7A 1B 78 */	mr r26, r3
 /* 804A19F0 0046AFB0  7C 9F 23 78 */	mr r31, r4
 /* 804A19F4 0046AFB4  3B 80 00 00 */	li r28, 0
-/* 804A19F8 0046AFB8  3B DE AF 38 */	addi r30, r30, sbScriptMemory@l
+/* 804A19F8 0046AFB8  3B DE AF 38 */	addi r30, r30, vmMemory@l
 .L_804A19FC:
 /* 804A19FC 0046AFBC  80 7E 00 04 */	lwz r3, 4(r30)
 /* 804A1A00 0046AFC0  2C 03 00 00 */	cmpwi r3, 0
@@ -2237,9 +2236,9 @@
 /* 804A1A0C 0046AFCC  4B E2 0E 29 */	bl strcmp
 /* 804A1A10 0046AFD0  2C 03 00 00 */	cmpwi r3, 0
 /* 804A1A14 0046AFD4  40 82 00 90 */	bne .L_804A1AA4
-/* 804A1A18 0046AFD8  3C 60 80 66 */	lis r3, sbScriptMemory@ha
+/* 804A1A18 0046AFD8  3C 60 80 66 */	lis r3, vmMemory@ha
 /* 804A1A1C 0046AFDC  57 80 18 38 */	slwi r0, r28, 3
-/* 804A1A20 0046AFE0  38 63 AF 38 */	addi r3, r3, sbScriptMemory@l
+/* 804A1A20 0046AFE0  38 63 AF 38 */	addi r3, r3, vmMemory@l
 /* 804A1A24 0046AFE4  3B 60 00 00 */	li r27, 0
 /* 804A1A28 0046AFE8  7F 43 00 2E */	lwzx r26, r3, r0
 /* 804A1A2C 0046AFEC  80 7A 00 1C */	lwz r3, 0x1c(r26)
@@ -2294,11 +2293,11 @@
 .fn func_804A1ACC, global
 /* 804A1ACC 0046B08C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804A1AD0 0046B090  7C 08 02 A6 */	mflr r0
-/* 804A1AD4 0046B094  3C A0 80 66 */	lis r5, sbScriptMemory@ha
+/* 804A1AD4 0046B094  3C A0 80 66 */	lis r5, vmMemory@ha
 /* 804A1AD8 0046B098  39 20 00 00 */	li r9, 0
 /* 804A1ADC 0046B09C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804A1AE0 0046B0A0  38 00 00 10 */	li r0, 0x10
-/* 804A1AE4 0046B0A4  38 A5 AF 38 */	addi r5, r5, sbScriptMemory@l
+/* 804A1AE4 0046B0A4  38 A5 AF 38 */	addi r5, r5, vmMemory@l
 /* 804A1AE8 0046B0A8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804A1AEC 0046B0AC  7C 09 03 A6 */	mtctr r0
 .L_804A1AF0:
@@ -2306,9 +2305,9 @@
 /* 804A1AF4 0046B0B4  2C 00 00 00 */	cmpwi r0, 0
 /* 804A1AF8 0046B0B8  40 82 01 B4 */	bne .L_804A1CAC
 /* 804A1AFC 0046B0BC  1C A9 00 60 */	mulli r5, r9, 0x60
-/* 804A1B00 0046B0C0  3C C0 80 66 */	lis r6, sbScriptMemory@ha
+/* 804A1B00 0046B0C0  3C C0 80 66 */	lis r6, vmMemory@ha
 /* 804A1B04 0046B0C4  38 00 00 10 */	li r0, 0x10
-/* 804A1B08 0046B0C8  38 C6 AF 38 */	addi r6, r6, sbScriptMemory@l
+/* 804A1B08 0046B0C8  38 C6 AF 38 */	addi r6, r6, vmMemory@l
 /* 804A1B0C 0046B0CC  7C A6 2A 14 */	add r5, r6, r5
 /* 804A1B10 0046B0D0  38 E0 00 00 */	li r7, 0
 /* 804A1B14 0046B0D4  3B E5 00 88 */	addi r31, r5, 0x88
@@ -2317,9 +2316,9 @@
 /* 804A1B1C 0046B0DC  80 06 00 48 */	lwz r0, 0x48(r6)
 /* 804A1B20 0046B0E0  2C 00 00 00 */	cmpwi r0, 0
 /* 804A1B24 0046B0E4  40 82 00 1C */	bne .L_804A1B40
-/* 804A1B28 0046B0E8  3C A0 80 66 */	lis r5, sbScriptMemory@ha
+/* 804A1B28 0046B0E8  3C A0 80 66 */	lis r5, vmMemory@ha
 /* 804A1B2C 0046B0EC  54 E0 10 3A */	slwi r0, r7, 2
-/* 804A1B30 0046B0F0  38 A5 AF 38 */	addi r5, r5, sbScriptMemory@l
+/* 804A1B30 0046B0F0  38 A5 AF 38 */	addi r5, r5, vmMemory@l
 /* 804A1B34 0046B0F4  7C A5 02 14 */	add r5, r5, r0
 /* 804A1B38 0046B0F8  93 E5 00 48 */	stw r31, 0x48(r5)
 /* 804A1B3C 0046B0FC  48 00 00 10 */	b .L_804A1B4C
@@ -2332,7 +2331,7 @@
 /* 804A1B50 0046B110  1C C4 00 14 */	mulli r6, r4, 0x14
 /* 804A1B54 0046B114  38 00 00 00 */	li r0, 0
 /* 804A1B58 0046B118  80 A7 00 00 */	lwz r5, 0(r7)
-/* 804A1B5C 0046B11C  3D 00 80 66 */	lis r8, sbScriptMemory@ha
+/* 804A1B5C 0046B11C  3D 00 80 66 */	lis r8, vmMemory@ha
 /* 804A1B60 0046B120  7C A7 2A 14 */	add r5, r7, r5
 /* 804A1B64 0046B124  7C A6 2A 14 */	add r5, r6, r5
 /* 804A1B68 0046B128  80 A5 00 0C */	lwz r5, 0xc(r5)
@@ -2341,7 +2340,7 @@
 /* 804A1B74 0046B134  90 1F 00 08 */	stw r0, 8(r31)
 /* 804A1B78 0046B138  90 1F 00 0C */	stw r0, 0xc(r31)
 /* 804A1B7C 0046B13C  90 1F 00 10 */	stw r0, 0x10(r31)
-/* 804A1B80 0046B140  84 08 AF 38 */	lwzu r0, sbScriptMemory@l(r8)
+/* 804A1B80 0046B140  84 08 AF 38 */	lwzu r0, vmMemory@l(r8)
 /* 804A1B84 0046B144  7C 00 18 40 */	cmplw r0, r3
 /* 804A1B88 0046B148  40 82 00 0C */	bne .L_804A1B94
 /* 804A1B8C 0046B14C  38 A0 00 00 */	li r5, 0
@@ -2392,11 +2391,11 @@
 /* 804A1C20 0046B1E0  38 A0 FF FF */	li r5, -1
 .L_804A1C24:
 /* 804A1C24 0046B1E4  B0 BF 00 24 */	sth r5, 0x24(r31)
-/* 804A1C28 0046B1E8  3D 00 80 66 */	lis r8, sbScriptMemory@ha
+/* 804A1C28 0046B1E8  3D 00 80 66 */	lis r8, vmMemory@ha
 /* 804A1C2C 0046B1EC  55 20 50 2A */	slwi r0, r9, 0xa
 /* 804A1C30 0046B1F0  38 C0 00 80 */	li r6, 0x80
 /* 804A1C34 0046B1F4  90 9F 00 28 */	stw r4, 0x28(r31)
-/* 804A1C38 0046B1F8  39 08 AF 38 */	addi r8, r8, sbScriptMemory@l
+/* 804A1C38 0046B1F8  39 08 AF 38 */	addi r8, r8, vmMemory@l
 /* 804A1C3C 0046B1FC  7C 88 02 14 */	add r4, r8, r0
 /* 804A1C40 0046B200  38 00 00 00 */	li r0, 0
 /* 804A1C44 0046B204  B0 BF 00 2C */	sth r5, 0x2c(r31)
@@ -6089,11 +6088,11 @@
 /* 804A4FF4 0046E5B4  7C 05 48 00 */	cmpw r5, r9
 /* 804A4FF8 0046E5B8  41 82 00 50 */	beq .L_804A5048
 /* 804A4FFC 0046E5BC  80 88 00 04 */	lwz r4, 4(r8)
-/* 804A5000 0046E5C0  3C E0 80 66 */	lis r7, sbScriptMemory@ha
+/* 804A5000 0046E5C0  3C E0 80 66 */	lis r7, vmMemory@ha
 /* 804A5004 0046E5C4  80 C3 00 00 */	lwz r6, 0(r3)
 /* 804A5008 0046E5C8  55 20 1B 78 */	rlwinm r0, r9, 3, 0xd, 0x1c
 /* 804A500C 0046E5CC  B1 23 00 2C */	sth r9, 0x2c(r3)
-/* 804A5010 0046E5D0  38 E7 AF 38 */	addi r7, r7, sbScriptMemory@l
+/* 804A5010 0046E5D0  38 E7 AF 38 */	addi r7, r7, vmMemory@l
 /* 804A5014 0046E5D4  38 C6 00 01 */	addi r6, r6, 1
 /* 804A5018 0046E5D8  7C E7 00 2E */	lwzx r7, r7, r0
 /* 804A501C 0046E5DC  90 E3 00 30 */	stw r7, 0x30(r3)
@@ -6115,9 +6114,9 @@
 /* 804A5058 0046E618  48 00 01 60 */	b .L_804A51B8
 .L_804A505C:
 /* 804A505C 0046E61C  A0 08 00 02 */	lhz r0, 2(r8)
-/* 804A5060 0046E620  3C A0 80 66 */	lis r5, sbScriptMemory@ha
+/* 804A5060 0046E620  3C A0 80 66 */	lis r5, vmMemory@ha
 /* 804A5064 0046E624  80 E8 00 04 */	lwz r7, 4(r8)
-/* 804A5068 0046E628  38 A5 AF 38 */	addi r5, r5, sbScriptMemory@l
+/* 804A5068 0046E628  38 A5 AF 38 */	addi r5, r5, vmMemory@l
 /* 804A506C 0046E62C  54 04 18 38 */	slwi r4, r0, 3
 /* 804A5070 0046E630  83 A8 FF FC */	lwz r29, -4(r8)
 /* 804A5074 0046E634  38 C0 00 00 */	li r6, 0
@@ -6261,10 +6260,10 @@
 /* 804A5270 0046E830  A8 03 00 2C */	lha r0, 0x2c(r3)
 /* 804A5274 0046E834  7C 08 00 00 */	cmpw r8, r0
 /* 804A5278 0046E838  41 82 00 3C */	beq .L_804A52B4
-/* 804A527C 0046E83C  3C 80 80 66 */	lis r4, sbScriptMemory@ha
+/* 804A527C 0046E83C  3C 80 80 66 */	lis r4, vmMemory@ha
 /* 804A5280 0046E840  B1 03 00 2C */	sth r8, 0x2c(r3)
 /* 804A5284 0046E844  55 00 18 38 */	slwi r0, r8, 3
-/* 804A5288 0046E848  38 84 AF 38 */	addi r4, r4, sbScriptMemory@l
+/* 804A5288 0046E848  38 84 AF 38 */	addi r4, r4, vmMemory@l
 /* 804A528C 0046E84C  7C 84 00 2E */	lwzx r4, r4, r0
 /* 804A5290 0046E850  90 83 00 30 */	stw r4, 0x30(r3)
 /* 804A5294 0046E854  80 A4 00 08 */	lwz r5, 8(r4)
@@ -6413,11 +6412,11 @@
 /* 804A5498 0046EA58  7C 84 02 14 */	add r4, r4, r0
 /* 804A549C 0046EA5C  7C 05 3A 2E */	lhzx r0, r5, r7
 /* 804A54A0 0046EA60  83 A4 FF FC */	lwz r29, -4(r4)
-/* 804A54A4 0046EA64  3C 80 80 66 */	lis r4, sbScriptMemory@ha
+/* 804A54A4 0046EA64  3C 80 80 66 */	lis r4, vmMemory@ha
 /* 804A54A8 0046EA68  38 A0 00 00 */	li r5, 0
 /* 804A54AC 0046EA6C  54 00 18 38 */	slwi r0, r0, 3
 /* 804A54B0 0046EA70  90 A3 00 4C */	stw r5, 0x4c(r3)
-/* 804A54B4 0046EA74  38 84 AF 38 */	addi r4, r4, sbScriptMemory@l
+/* 804A54B4 0046EA74  38 84 AF 38 */	addi r4, r4, vmMemory@l
 /* 804A54B8 0046EA78  7C 64 02 14 */	add r3, r4, r0
 /* 804A54BC 0046EA7C  54 C0 18 38 */	slwi r0, r6, 3
 /* 804A54C0 0046EA80  80 83 46 8C */	lwz r4, 0x468c(r3)
@@ -6602,11 +6601,11 @@
 /* 804A5750 0046ED10  42 00 FF EC */	bdnz .L_804A573C
 .L_804A5754:
 /* 804A5754 0046ED14  55 40 10 3A */	slwi r0, r10, 2
-/* 804A5758 0046ED18  3C C0 80 66 */	lis r6, sbScriptMemory@ha
+/* 804A5758 0046ED18  3C C0 80 66 */	lis r6, vmMemory@ha
 /* 804A575C 0046ED1C  7C 85 02 14 */	add r4, r5, r0
 /* 804A5760 0046ED20  7D 25 02 2E */	lhzx r9, r5, r0
 /* 804A5764 0046ED24  A8 E7 00 04 */	lha r7, 4(r7)
-/* 804A5768 0046ED28  38 C6 AF 38 */	addi r6, r6, sbScriptMemory@l
+/* 804A5768 0046ED28  38 C6 AF 38 */	addi r6, r6, vmMemory@l
 /* 804A576C 0046ED2C  A0 84 00 02 */	lhz r4, 2(r4)
 /* 804A5770 0046ED30  55 20 18 38 */	slwi r0, r9, 3
 /* 804A5774 0046ED34  A8 A3 00 2C */	lha r5, 0x2c(r3)
@@ -6739,7 +6738,7 @@
 /* 804A594C 0046EF0C  42 00 FF EC */	bdnz .L_804A5938
 .L_804A5950:
 /* 804A5950 0046EF10  80 E3 00 30 */	lwz r7, 0x30(r3)
-/* 804A5954 0046EF14  3C C0 80 66 */	lis r6, sbScriptMemory@ha
+/* 804A5954 0046EF14  3C C0 80 66 */	lis r6, vmMemory@ha
 /* 804A5958 0046EF18  80 83 00 04 */	lwz r4, 4(r3)
 /* 804A595C 0046EF1C  38 A0 00 00 */	li r5, 0
 /* 804A5960 0046EF20  81 27 00 24 */	lwz r9, 0x24(r7)
@@ -6747,7 +6746,7 @@
 /* 804A5968 0046EF28  80 E3 00 3C */	lwz r7, 0x3c(r3)
 /* 804A596C 0046EF2C  54 84 18 38 */	slwi r4, r4, 3
 /* 804A5970 0046EF30  81 09 00 00 */	lwz r8, 0(r9)
-/* 804A5974 0046EF34  38 C6 AF 38 */	addi r6, r6, sbScriptMemory@l
+/* 804A5974 0046EF34  38 C6 AF 38 */	addi r6, r6, vmMemory@l
 /* 804A5978 0046EF38  7C E7 22 14 */	add r7, r7, r4
 /* 804A597C 0046EF3C  38 80 00 00 */	li r4, 0
 /* 804A5980 0046EF40  83 A7 FF FC */	lwz r29, -4(r7)
@@ -6960,9 +6959,9 @@
 /* 804A5C7C 0046F23C  48 00 01 84 */	b .L_804A5E00
 .L_804A5C80:
 /* 804A5C80 0046F240  80 63 00 30 */	lwz r3, 0x30(r3)
-/* 804A5C84 0046F244  3C A0 80 66 */	lis r5, sbScriptMemory@ha
+/* 804A5C84 0046F244  3C A0 80 66 */	lis r5, vmMemory@ha
 /* 804A5C88 0046F248  A0 9E 00 02 */	lhz r4, 2(r30)
-/* 804A5C8C 0046F24C  38 A5 AF 38 */	addi r5, r5, sbScriptMemory@l
+/* 804A5C8C 0046F24C  38 A5 AF 38 */	addi r5, r5, vmMemory@l
 /* 804A5C90 0046F250  80 C3 00 0C */	lwz r6, 0xc(r3)
 /* 804A5C94 0046F254  54 83 10 3A */	slwi r3, r4, 2
 /* 804A5C98 0046F258  80 E6 00 08 */	lwz r7, 8(r6)
@@ -7204,9 +7203,9 @@
 /* 804A5FF4 0046F5B4  48 00 01 90 */	b .L_804A6184
 .L_804A5FF8:
 /* 804A5FF8 0046F5B8  80 63 00 30 */	lwz r3, 0x30(r3)
-/* 804A5FFC 0046F5BC  3C A0 80 66 */	lis r5, sbScriptMemory@ha
+/* 804A5FFC 0046F5BC  3C A0 80 66 */	lis r5, vmMemory@ha
 /* 804A6000 0046F5C0  A0 9E 00 02 */	lhz r4, 2(r30)
-/* 804A6004 0046F5C4  38 A5 AF 38 */	addi r5, r5, sbScriptMemory@l
+/* 804A6004 0046F5C4  38 A5 AF 38 */	addi r5, r5, vmMemory@l
 /* 804A6008 0046F5C8  80 C3 00 0C */	lwz r6, 0xc(r3)
 /* 804A600C 0046F5CC  54 83 10 3A */	slwi r3, r4, 2
 /* 804A6010 0046F5D0  80 E6 00 08 */	lwz r7, 8(r6)
@@ -7451,9 +7450,9 @@
 /* 804A6378 0046F938  48 00 02 DC */	b .L_804A6654
 .L_804A637C:
 /* 804A637C 0046F93C  80 63 00 30 */	lwz r3, 0x30(r3)
-/* 804A6380 0046F940  3C 80 80 66 */	lis r4, sbScriptMemory@ha
+/* 804A6380 0046F940  3C 80 80 66 */	lis r4, vmMemory@ha
 /* 804A6384 0046F944  A0 1D 00 02 */	lhz r0, 2(r29)
-/* 804A6388 0046F948  38 84 AF 38 */	addi r4, r4, sbScriptMemory@l
+/* 804A6388 0046F948  38 84 AF 38 */	addi r4, r4, vmMemory@l
 /* 804A638C 0046F94C  83 83 00 0C */	lwz r28, 0xc(r3)
 /* 804A6390 0046F950  54 00 10 3A */	slwi r0, r0, 2
 /* 804A6394 0046F954  83 7D FF FC */	lwz r27, -4(r29)
@@ -7505,8 +7504,8 @@
 .L_804A6434:
 /* 804A6434 0046F9F4  2C 1A 00 00 */	cmpwi r26, 0
 /* 804A6438 0046F9F8  40 80 01 08 */	bge .L_804A6540
-/* 804A643C 0046F9FC  3C 60 80 66 */	lis r3, sbScriptMemory@ha
-/* 804A6440 0046FA00  38 63 AF 38 */	addi r3, r3, sbScriptMemory@l
+/* 804A643C 0046F9FC  3C 60 80 66 */	lis r3, vmMemory@ha
+/* 804A6440 0046FA00  38 63 AF 38 */	addi r3, r3, vmMemory@l
 /* 804A6444 0046FA04  82 43 48 C8 */	lwz r18, 0x48c8(r3)
 /* 804A6448 0046FA08  2C 12 00 00 */	cmpwi r18, 0
 /* 804A644C 0046FA0C  41 82 00 AC */	beq .L_804A64F8
@@ -8039,9 +8038,9 @@
 .fn func_804A6B98, global
 /* 804A6B98 00470158  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804A6B9C 0047015C  7C 08 02 A6 */	mflr r0
-/* 804A6BA0 00470160  3C 60 80 66 */	lis r3, sbScriptMemory@ha
+/* 804A6BA0 00470160  3C 60 80 66 */	lis r3, vmMemory@ha
 /* 804A6BA4 00470164  90 01 00 14 */	stw r0, 0x14(r1)
-/* 804A6BA8 00470168  38 63 AF 38 */	addi r3, r3, sbScriptMemory@l
+/* 804A6BA8 00470168  38 63 AF 38 */	addi r3, r3, vmMemory@l
 /* 804A6BAC 0047016C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804A6BB0 00470170  83 E3 00 40 */	lwz r31, 0x40(r3)
 /* 804A6BB4 00470174  80 9F 00 34 */	lwz r4, 0x34(r31)
@@ -8063,9 +8062,9 @@
 .fn func_804A6BEC, global
 /* 804A6BEC 004701AC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804A6BF0 004701B0  7C 08 02 A6 */	mflr r0
-/* 804A6BF4 004701B4  3C 60 80 66 */	lis r3, sbScriptMemory@ha
+/* 804A6BF4 004701B4  3C 60 80 66 */	lis r3, vmMemory@ha
 /* 804A6BF8 004701B8  90 01 00 14 */	stw r0, 0x14(r1)
-/* 804A6BFC 004701BC  38 63 AF 38 */	addi r3, r3, sbScriptMemory@l
+/* 804A6BFC 004701BC  38 63 AF 38 */	addi r3, r3, vmMemory@l
 /* 804A6C00 004701C0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804A6C04 004701C4  83 E3 00 40 */	lwz r31, 0x40(r3)
 /* 804A6C08 004701C8  80 7F 00 34 */	lwz r3, 0x34(r31)
@@ -8953,8 +8952,8 @@ lbl_8066D5CC:
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global sbScriptMemory
-sbScriptMemory:
+.global vmMemory
+vmMemory:
 	.skip 0x4928
 
 
