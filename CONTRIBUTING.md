@@ -82,8 +82,11 @@ The extra directives are to ensure the file isn't included multiple times (heade
 The final step is to change the path of the file in the corresponding library's Makefile, in this case PowerPC_EABI_Support. The Makefiles are located in each library/module's src folder. (for example, the one we need to modify is at src/PowerPC_EABI_Support/Makefile):
 
 Before:
+
 ``$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/ansi_files.o\``
+
 After:
+
 ``$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/ansi_files.o\``
 
 Now, you can try building the repository to make sure your new file matches. For a file this simple, as long as you formatted everything correctly, it should easily work. If not, find out what was wrong and keep trying to fix it.
