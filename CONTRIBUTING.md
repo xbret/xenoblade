@@ -35,8 +35,8 @@ The file only has the following function:
 This function may look a bit complicated at first, but it can be simplified to this code:
 
 ```
-float sqrt(float n){
-	return sqrtf(n);
+float sqrtf(float n){
+	return sqrt(n);
 }
 ```
 
