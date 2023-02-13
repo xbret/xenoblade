@@ -4,9 +4,9 @@
 #include "types.h"
 #include "PowerPC_EABI_Support/Runtime/__mem.h"
 
-/*#ifdef __cplusplus
+#ifdef __cplusplus
 extern "C" {
-#endif*/
+#endif
 
 
 struct SBOpcode{
@@ -29,9 +29,11 @@ inline void writeUInt(u8* array, int offset, u32 val){
     *(u32*)(array + offset) = val;
 }
 
+void vmInit();
 
 
-/*#ifdef __cplusplus
+
+#ifdef __cplusplus
 }
-#endif*/
+#endif
 #endif

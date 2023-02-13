@@ -5,6 +5,7 @@
 #SB script plugin functions
 
 
+
 .fn func_8003A53C, global
 /* 8003A53C 00003AFC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8003A540 00003B00  7C 08 02 A6 */	mflr r0

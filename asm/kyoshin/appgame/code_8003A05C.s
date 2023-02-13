@@ -2,124 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_80039EFC, global
-/* 80039EFC 000034BC  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 80039F00 000034C0  7C 08 02 A6 */	mflr r0
-/* 80039F04 000034C4  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80039F08 000034C8  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80039F0C 000034CC  7C 7F 1B 78 */	mr r31, r3
-/* 80039F10 000034D0  48 00 0B 41 */	bl func_8003AA50
-/* 80039F14 000034D4  7F E4 FB 78 */	mr r4, r31
-/* 80039F18 000034D8  38 60 00 00 */	li r3, 0
-/* 80039F1C 000034DC  48 00 0B 5D */	bl func_8003AA78
-/* 80039F20 000034E0  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 80039F24 000034E4  83 E1 00 0C */	lwz r31, 0xc(r1)
-/* 80039F28 000034E8  7C 08 03 A6 */	mtlr r0
-/* 80039F2C 000034EC  38 21 00 10 */	addi r1, r1, 0x10
-/* 80039F30 000034F0  4E 80 00 20 */	blr
-.endfn func_80039EFC
-
-
-.fn func_80039F34, global
-/* 80039F34 000034F4  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 80039F38 000034F8  7C 08 02 A6 */	mflr r0
-/* 80039F3C 000034FC  38 60 00 00 */	li r3, 0
-/* 80039F40 00003500  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80039F44 00003504  48 00 0B 49 */	bl func_8003AA8C
-/* 80039F48 00003508  48 00 0B 09 */	bl func_8003AA50
-/* 80039F4C 0000350C  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 80039F50 00003510  7C 08 03 A6 */	mtlr r0
-/* 80039F54 00003514  38 21 00 10 */	addi r1, r1, 0x10
-/* 80039F58 00003518  4E 80 00 20 */	blr
-.endfn func_80039F34
-
-.fn func_80039F5C, global
-/* 80039F5C 0000351C  48 11 09 10 */	b func_8014A86C
-.endfn func_80039F5C
-
-.fn func_80039F60, global
-/* 80039F60 00003520  48 11 09 98 */	b func_8014A8F8
-.endfn func_80039F60
-
-.fn func_80039F64, global
-/* 80039F64 00003524  48 42 35 1C */	b func_8045D480
-.endfn func_80039F64
-
-.fn func_80039F68, global
-/* 80039F68 00003528  48 42 35 94 */	b func_8045D4FC
-.endfn func_80039F68
-
-.fn func_80039F6C, global
-/* 80039F6C 0000352C  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 80039F70 00003530  7C 08 02 A6 */	mflr r0
-/* 80039F74 00003534  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80039F78 00003538  48 46 5D 35 */	bl vmInit
-/* 80039F7C 0000353C  48 00 B8 99 */	bl func_80045814
-/* 80039F80 00003540  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 80039F84 00003544  7C 08 03 A6 */	mtlr r0
-/* 80039F88 00003548  38 21 00 10 */	addi r1, r1, 0x10
-/* 80039F8C 0000354C  4E 80 00 20 */	blr
-.endfn func_80039F6C
-
-.fn func_80039F90, global
-/* 80039F90 00003550  48 46 5D 1C */	b vmInit
-.endfn func_80039F90
-
-.fn main, global
-/* 80039F94 00003554  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 80039F98 00003558  7C 08 02 A6 */	mflr r0
-/* 80039F9C 0000355C  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80039FA0 00003560  48 27 4B D5 */	bl func_802AEB74__Fv
-/* 80039FA4 00003564  48 41 6B 71 */	bl func_80450B14__FPPUl
-/* 80039FA8 00003568  48 27 4B D5 */	bl func_802AEB7C__Fv
-/* 80039FAC 0000356C  48 41 6B 71 */	bl func_80450B1C__FPPUl
-/* 80039FB0 00003570  48 27 4B D5 */	bl func_802AEB84__Fv
-/* 80039FB4 00003574  48 41 6B 71 */	bl func_80450B24__FPPUl
-/* 80039FB8 00003578  48 27 4B F5 */	bl func_802AEBAC__Fv
-/* 80039FBC 0000357C  48 4A 0A D5 */	bl func_804DAA90
-/* 80039FC0 00003580  48 27 4B F5 */	bl func_802AEBB4__Fv
-/* 80039FC4 00003584  48 4A 0A D5 */	bl func_804DAA98
-/* 80039FC8 00003588  48 27 4B F5 */	bl func_802AEBBC__Fv
-/* 80039FCC 0000358C  48 4A 0A D5 */	bl func_804DAAA0
-/* 80039FD0 00003590  38 00 00 00 */	li r0, 0x0
-/* 80039FD4 00003594  98 0D A2 B8 */	stb r0, lbl_80666438@sda21(r13)
-/* 80039FD8 00003598  3C 60 00 68 */	lis r3, 0x68
-/* 80039FDC 0000359C  38 80 00 00 */	li r4, 0x0
-/* 80039FE0 000035A0  48 3F 97 05 */	bl SetArenaMemorySize
-/* 80039FE4 000035A4  38 60 00 00 */	li r3, 0x0
-/* 80039FE8 000035A8  48 40 EE 91 */	bl func_80448E78
-/* 80039FEC 000035AC  38 60 00 00 */	li r3, 0x0
-/* 80039FF0 000035B0  3C 80 00 18 */	lis r4, 0x18
-/* 80039FF4 000035B4  48 41 B9 B5 */	bl func_804559A8
-/* 80039FF8 000035B8  3C 60 80 53 */	lis r3, lbl_80528380@ha
-/* 80039FFC 000035BC  38 80 00 01 */	li r4, 0x1
-/* 8003A000 000035C0  38 63 83 80 */	addi r3, r3, lbl_80528380@l
-/* 8003A004 000035C4  48 41 BF C5 */	bl CDesktop_SaveStartFunctionCallback
-/* 8003A008 000035C8  3C 60 80 53 */	lis r3, lbl_80528390@ha
-/* 8003A00C 000035CC  38 63 83 90 */	addi r3, r3, lbl_80528390@l
-/* 8003A010 000035D0  48 42 5B A1 */	bl func_8045FBB0
-/* 8003A014 000035D4  3C 60 80 04 */	lis r3, func_80039F6C@ha
-/* 8003A018 000035D8  3C 80 80 04 */	lis r4, func_80039F90@ha
-/* 8003A01C 000035DC  38 63 9F 6C */	addi r3, r3, func_80039F6C@l
-/* 8003A020 000035E0  38 84 9F 90 */	addi r4, r4, func_80039F90@l
-/* 8003A024 000035E4  48 42 62 19 */	bl CLibVM_SetCallbacks
-/* 8003A028 000035E8  38 62 80 20 */	addi r3, r2, staticArcStr@sda21
-/* 8003A02C 000035EC  48 4A 3E 09 */	bl SaveStaticArcFilenameStringPtr
-/* 8003A030 000035F0  3C 60 80 4F */	lis r3, pkhFilenames@ha
-/* 8003A034 000035F4  38 63 5B E0 */	addi r3, r3, pkhFilenames@l
-/* 8003A038 000035F8  48 4A 3D F5 */	bl SavePkhFilenamesArrayPtr
-/* 8003A03C 000035FC  48 01 DC A1 */	bl func_80057CDC
-/* 8003A040 00003600  38 60 00 01 */	li r3, 0x1
-/* 8003A044 00003604  48 42 35 85 */	bl func_8045D5C8
-/* 8003A048 00003608  48 40 A2 91 */	bl CWorkRoot_Run
-/* 8003A04C 0000360C  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 8003A050 00003610  7C 08 03 A6 */	mtlr r0
-/* 8003A054 00003614  38 21 00 10 */	addi r1, r1, 0x10
-/* 8003A058 00003618  4E 80 00 20 */	blr
-.endfn main
-
 .fn put, global
 /* 8003A05C 0000361C  38 60 00 00 */	li r3, 0
 /* 8003A060 00003620  4E 80 00 20 */	blr 
@@ -510,6 +392,7 @@
 /* 8003A538 00003AF8  4E 80 00 20 */	blr
 .endfn sinit_8003A4F8
 
+
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 
 .balign 4
@@ -517,70 +400,51 @@
 .4byte sinit_8003A4F8
 
 
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_804F5CF0
+lbl_804F5CF0:
+	.asciz "performanceStart"
+	.balign 4
+
+.global lbl_804F5D04
+lbl_804F5D04:
+	.asciz "performanceEnd"
+	.balign 4
+
+
+.global lbl_804F5D14
+lbl_804F5D14:
+	.asciz "deb"
+
+
+.global lbl_804F5D18
+lbl_804F5D18:
+	.asciz "wait"
+	.balign 4
+
+.global lbl_804F5D20
+lbl_804F5D20:
+	.asciz "isExistProperty"
+
+.global lbl_804F5D30
+lbl_804F5D30:
+	.asciz "isExistSelector"
+
+.global lbl_804F5D40
+lbl_804F5D40:
+	.asciz "getOCName"
+	.balign 4
+	.4byte 0
+
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-
-
-.global lbl_80528380
-lbl_80528380:
-	.4byte lbl_804F5B88
-	.4byte GameMain
-	.4byte 0
-	.4byte 0
-
-.global lbl_80528390
-lbl_80528390:
-	.4byte lbl_806683E0
-	.4byte lbl_804F5C14
-	.4byte 0x00000001
-	.4byte 0
-	.4byte 0
-	.4byte lbl_806683E4
-	.4byte lbl_804F5C2C
-	.4byte 0x00000001
-	.4byte 0
-	.4byte 0
-	.4byte lbl_806683E8
-	.4byte lbl_804F5C40
-	.4byte 0x00000001
-	.4byte 0
-	.4byte 0
-	.4byte lbl_806683EC
-	.4byte lbl_804F5C54
-	.4byte 0x00000001
-	.4byte 0
-	.4byte 0
-	.4byte lbl_806683F4
-	.4byte lbl_804F5C70
-	.4byte 0x00000001
-	.4byte 0
-	.4byte 0
-	.4byte lbl_806683F8
-	.4byte lbl_804F5C88
-	.4byte 0x00000001
-	.4byte func_80039EFC
-	.4byte func_80039F34
-	.4byte lbl_80668400
-	.4byte lbl_804F5CA4
-	.4byte 0x00000001
-	.4byte func_80039F5C
-	.4byte func_80039F60
-	.4byte lbl_80668408
-	.4byte lbl_804F5CB8
-	.4byte 0x00000001
-	.4byte 0
-	.4byte 0
-	.4byte lbl_80668410
-	.4byte lbl_804F5CD8
-	.4byte 0x00000001
-	.4byte func_80039F64
-	.4byte func_80039F68
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-
+#padding?
+.4byte 0
+.4byte 0
+.4byte 0
+.4byte 0
+.4byte 0
 
 .global lbl_80528458
 lbl_80528458:
@@ -658,234 +522,7 @@ lbl_80528520:
 	.4byte lbl_805284C8
 
 
-.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
-
-
-
-.global lbl_804F5B88
-lbl_804F5B88:
-	#ゲームメイン
-	.4byte 0x8351815B
-	.4byte 0x83808381
-	.4byte 0x83438393
-	.4byte 0
-	.balign 4
-
-.global lbl_804F5B98
-lbl_804F5B98:
-	.asciz "static.arc"
-	.balign 4
-
-.global lbl_804F5BA4
-lbl_804F5BA4:
-	.asciz "common.pkh"
-	.balign 4
-
-.global lbl_804F5BB0
-lbl_804F5BB0:
-	.asciz "font.pkh"
-	.balign 4
-
-.global lbl_804F5BBC
-lbl_804F5BBC:
-	.asciz "menu.pkh"
-	.balign 4
-
-.global lbl_804F5BC8
-lbl_804F5BC8:
-	.asciz "script.pkh"
-	.balign 4
-
-.global lbl_804F5BD4
-lbl_804F5BD4:
-	.asciz "work.pkh"
-	.balign 4
-
-
-.global pkhFilenames
-pkhFilenames:
-	.4byte lbl_806683A8
-	.4byte lbl_806683B0
-	.4byte lbl_806683B8
-	.4byte lbl_804F5BA4
-	.4byte lbl_806683C0
-	.4byte lbl_804F5BB0
-	.4byte lbl_806683C8
-	.4byte lbl_804F5BBC
-	.4byte lbl_806683D0
-	.4byte lbl_804F5BC8
-	.4byte lbl_806683D8
-	.4byte lbl_804F5BD4
-	.4byte 0
-
-
-.global lbl_804F5C14
-lbl_804F5C14:
-	.asciz "dvddata/etc/shadow.sha"
-	.balign 4
-
-.global lbl_804F5C2C
-lbl_804F5C2C:
-	.asciz "dvddata/etc/cam.chr"
-
-.global lbl_804F5C40
-lbl_804F5C40:
-	.asciz "dvddata/etc/eff.chr"
-
-.global lbl_804F5C54
-lbl_804F5C54:
-	.asciz "dvddata/etc/arrow.mdo"
-	.balign 4
-	.4byte 0
-
-.global lbl_804F5C70
-lbl_804F5C70:
-	.asciz "dvddata/menu/Mode43.arc"
-
-.global lbl_804F5C88
-lbl_804F5C88:
-	.asciz "dvddata/common/jp/bdat.bin"
-	.balign 4
-
-.global lbl_804F5CA4
-lbl_804F5CA4:
-	.asciz "dvddata/etc/ai.bin"
-	.balign 4
-
-.global lbl_804F5CB8
-lbl_804F5CB8:
-	.asciz "dvddata/etc/hikari.brres"
-	.balign 4
-	.4byte 0
-
-.global lbl_804F5CD8
-lbl_804F5CD8:
-	.asciz "dvddata/etc/hbmstop.tpl"
-
-.global lbl_804F5CF0
-lbl_804F5CF0:
-	.asciz "performanceStart"
-	.balign 4
-
-.global lbl_804F5D04
-lbl_804F5D04:
-	.asciz "performanceEnd"
-	.balign 4
-
-
-.global lbl_804F5D14
-lbl_804F5D14:
-	.asciz "deb"
-
-
-.global lbl_804F5D18
-lbl_804F5D18:
-	.asciz "wait"
-	.balign 4
-
-.global lbl_804F5D20
-lbl_804F5D20:
-	.asciz "isExistProperty"
-
-.global lbl_804F5D30
-lbl_804F5D30:
-	.asciz "isExistSelector"
-
-.global lbl_804F5D40
-lbl_804F5D40:
-	.asciz "getOCName"
-	.balign 4
-	.4byte 0
-
-.section .bss, "wa"  # 0x80573C80 - 0x8066417B
-
-
-.global lbl_80573CC8
-lbl_80573CC8:
-	.skip 0x70
-.global lbl_80573D38
-lbl_80573D38:
-	.skip 0x98
-
-
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
-
-
-
-.global staticArcStr
-staticArcStr:
-	.4byte lbl_804F5B98
-	.4byte 0
-
-.balign 8
-.global lbl_806683A8
-lbl_806683A8:
-	.asciz "ahx.pkh"
-
-.global lbl_806683B0
-lbl_806683B0:
-	.asciz "adx.pkh"
-
-.global lbl_806683B8
-lbl_806683B8:
-	.asciz "chr.pkh"
-
-.global lbl_806683C0
-lbl_806683C0:
-	.asciz "eff.pkh"
-
-.global lbl_806683C8
-lbl_806683C8:
-	.asciz "map.pkh"
-
-.global lbl_806683D0
-lbl_806683D0:
-	.asciz "obj.pkh"
-
-.global lbl_806683D8
-lbl_806683D8:
-	.asciz "snd.pkh"
-
-.global lbl_806683E0
-lbl_806683E0:
-	.asciz "SHA"
-
-.global lbl_806683E4
-lbl_806683E4:
-	.asciz "CAM"
-
-.global lbl_806683E8
-lbl_806683E8:
-	.asciz "EFF"
-
-.global lbl_806683EC
-lbl_806683EC:
-	.asciz "ARROW"
-	.balign 4
-
-.global lbl_806683F4
-lbl_806683F4:
-	.asciz "43"
-	.byte 0x00
-
-.global lbl_806683F8
-lbl_806683F8:
-	.asciz "BDAT"
-	.balign 4
-
-.global lbl_80668400
-lbl_80668400:
-	.asciz "AIDAT"
-	.balign 4
-
-.global lbl_80668408
-lbl_80668408:
-	.asciz "HIKARI"
-	.balign 4
-
-.global lbl_80668410
-lbl_80668410:
-	.asciz "HBMSTOP"
 
 .global lbl_80668418
 lbl_80668418:
@@ -935,32 +572,21 @@ lbl_80668460:
 	.asciz "thread"
 	.balign 4
 
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+
+.global lbl_80573CC8
+lbl_80573CC8:
+	.skip 0x70
+.global lbl_80573D38
+lbl_80573D38:
+	.skip 0x98
+
+
+
 .section extab, "a" # 0x800066E0 - 0x80021020
 
 .balign 4
-
-.obj "@etb_800067C4", local
-.hidden "@etb_800067C4"
-	.4byte 0x08080000
-	.4byte 0x00000000
-.endobj "@etb_800067C4"
-
-.obj "@etb_800067CC", local
-.hidden "@etb_800067CC"
-	.4byte 0x00080000
-	.4byte 0x00000000
-.endobj "@etb_800067CC"
-
-.obj "@etb_800067D4", local
-.hidden "@etb_800067D4"
-	.4byte 0x00080000
-	.4byte 0x00000000
-.endobj "@etb_800067D4"
-
-.obj "@10", local
-	.4byte 0x00080000
-	.4byte 0x00000000
-.endobj "@10"
 
 .obj "@etb_800067E4", local
 .hidden "@etb_800067E4"
@@ -1043,34 +669,6 @@ lbl_80668460:
 .section extabindex, "a" # 0x80021020 - 0x80039220
 
 .balign 4
-
-.obj "@eti_80021104", local
-.hidden "@eti_80021104"
-	.4byte func_80039EFC
-	.4byte 0x00000038
-	.4byte "@etb_800067C4"
-.endobj "@eti_80021104"
-
-.obj "@eti_80021110", local
-.hidden "@eti_80021110"
-	.4byte func_80039F34
-	.4byte 0x00000028
-	.4byte "@etb_800067CC"
-.endobj "@eti_80021110"
-
-.obj "@eti_8002111C", local
-.hidden "@eti_8002111C"
-	.4byte func_80039F6C
-	.4byte 0x00000024
-	.4byte "@etb_800067D4"
-.endobj "@eti_8002111C"
-
-.obj "@eti_80021128", local
-.hidden "@eti_80021128"
-	.4byte main
-	.4byte 0x000000C8
-	.4byte "@10"
-.endobj "@eti_80021128"
 
 .obj "@eti_80021134", local
 .hidden "@eti_80021134"

@@ -2,7 +2,8 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CGame.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/IWorkEvent.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CGameRestart.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/main.o\
+	$(BUILD_DIR)/src/kyoshin/appgame/main.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_8003A05C.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/code_8003A53C.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTaskGame.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CTaskGameCf.o\

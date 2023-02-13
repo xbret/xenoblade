@@ -2,12 +2,76 @@
 #include "kyoshin/appgame/CGame.hpp"
 #include "kyoshin/appgame/code_802AEB74.hpp"
 
-extern char* pkhFilenames[];
-extern u32 lbl_80528390[];
-
+FunctionStruct lbl_80528380 = {"ゲームメイン", &GameMain};
 const char* const staticArcStr = "static.arc";
-//FunctionStruct lbl_80528380 = {"ゲームメイン", &GameMain};
-extern u32 lbl_80528380[]; //fakematch
+
+const char* const pkhFilenames[13] = {
+    "ahx.pkh",
+    "adx.pkh",
+    "chr.pkh",
+    "common.pkh",
+    "eff.pkh",
+    "font.pkh",
+    "map.pkh",
+    "menu.pkh",
+    "obj.pkh",
+    "script.pkh",
+    "snd.pkh",
+    "work.pkh"
+};
+
+const u32 padding = 0;
+
+StaticArcFile staticArcFiles[9] = {
+	{"SHA","dvddata/etc/shadow.sha",1,0,0},
+	{"CAM","dvddata/etc/cam.chr",1,0,0},
+	{"EFF","dvddata/etc/eff.chr",1,0,0},
+	{"ARROW","dvddata/etc/arrow.mdo",1,0,0},
+	{"43","dvddata/menu/Mode43.arc",1,0,0},
+	{"BDAT","dvddata/common/jp/bdat.bin",1,&func_80039EFC,&func_80039F34},
+	{"AIDAT","dvddata/etc/ai.bin",1,&func_80039F5C,&func_80039F60},
+	{"HIKARI","dvddata/etc/hikari.brres",1,0,0},
+	{"HBMSTOP","dvddata/etc/hbmstop.tpl",1,&func_80039F64,&func_80039F68}
+};
+
+
+
+
+void func_80039EFC(int arg0) {
+    func_8003AA50();
+    func_8003AA78(0, arg0);
+}
+
+void func_80039F34(void) {
+    func_8003AA8C(0);
+    func_8003AA50();
+}
+
+
+void func_80039F5C(int arg0){
+    func_8014A86C(arg0);
+}
+
+void func_80039F60(){
+    func_8014A8F8();
+}
+
+void func_80039F64(int arg0){
+    func_8045D480(arg0);
+}
+
+void func_80039F68(){
+    func_8045D4FC();
+}
+
+void vmInitCallback1(){
+    vmInit();
+    func_80045814();
+}
+
+void vmInitCallback(){
+    vmInit();
+}
 
 void main(int argc, char* argv[]) {
     /*
@@ -26,9 +90,9 @@ void main(int argc, char* argv[]) {
     SetArenaMemorySize(0x680000, 0);
     func_80448E78(0);
     func_804559A8(0, 0x180000);
-    CDesktop_SaveStartFunctionCallback((FunctionStruct*)lbl_80528380, 1); //Pass the start function struct to CDesktop to have it be run later
-    func_8045FBB0(lbl_80528390);
-    CLibVM_SetCallbacks(&func_80039F6C, &func_80039F90);
+    CDesktop_SaveStartFunctionCallback(&lbl_80528380, 1); //Pass the start function struct to CDesktop to have it be run later
+    func_8045FBB0(staticArcFiles);
+    CLibVM_SetCallbacks(&vmInitCallback1, &vmInitCallback);
     SaveStaticArcFilenameStringPtr(&staticArcStr);
     SavePkhFilenamesArrayPtr(pkhFilenames);
     func_80057CDC();
