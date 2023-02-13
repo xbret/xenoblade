@@ -477,7 +477,7 @@
 /* 8044E790 00417D50  4E 80 00 20 */	blr 
 .endfn func_8044E780
 
-#get arc file at the given path?
+#Opens either an arc file (in/outside an archive), or gets a file outside of an archive?
 #might reference files in pkb archives (cannot find list of archive file names anywhere though)
 #r3: ?, r4: path string pointer, r5, r6, r7
 .fn func_8044E794, global
@@ -757,7 +757,8 @@
 /* 8044EB60 00418120  4E 80 00 20 */	blr 
 .endfn func_8044E794
 
-#does something with bdat files?
+#Similar to the above function, but used to open files in archives that aren't sound
+#files (usually) or arc files?
 .fn func_8044EB64, global
 /* 8044EB64 00418124  94 21 FF 10 */	stwu r1, -0xf0(r1)
 /* 8044EB68 00418128  7C 08 02 A6 */	mflr r0

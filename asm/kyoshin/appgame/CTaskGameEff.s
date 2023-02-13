@@ -936,6 +936,8 @@
 /* 800456F0 0000ECB0  4E 80 00 20 */	blr 
 .endfn func_800456C4
 
+#SB script plugin functions
+
 .fn getTimeIdxMin, global
 /* 800456F4 0000ECB4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800456F8 0000ECB8  7C 08 02 A6 */	mflr r0
@@ -2200,6 +2202,11 @@
 /* 80046814 0000FDD4  48 45 A3 7C */	b func_804A0B90
 .endfn func_80046800
 
+#Writes the formatted string to the specified destination address using the given format string and arguments.
+#Parameters:
+#r3: dest address?
+#r4: string
+#r5-: args
 .fn CTaskGameEff_vsnprintf, global
 /* 80046818 0000FDD8  94 21 FE 70 */	stwu r1, -0x190(r1)
 /* 8004681C 0000FDDC  7C 08 02 A6 */	mflr r0

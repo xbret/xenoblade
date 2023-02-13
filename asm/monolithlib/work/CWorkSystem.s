@@ -132,7 +132,7 @@
 /* 804445B0 0040DB70  88 1F 01 C9 */	lbz r0, 0x1c9(r31)
 /* 804445B4 0040DB74  2C 00 00 00 */	cmpwi r0, 0
 /* 804445B8 0040DB78  40 82 00 5C */	bne .L_80444614
-/* 804445BC 0040DB7C  48 0A 9E D1 */	bl func_804EE48C
+/* 804445BC 0040DB7C  48 0A 9E D1 */	bl func_804EE48C #OSPanic triggers here when trying to shift Shutdown
 /* 804445C0 0040DB80  2C 03 00 00 */	cmpwi r3, 0
 /* 804445C4 0040DB84  41 82 00 50 */	beq .L_80444614
 /* 804445C8 0040DB88  38 00 00 01 */	li r0, 1
@@ -353,8 +353,6 @@
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
-
-
 
 .global CWorkSystem_typestr
 CWorkSystem_typestr:

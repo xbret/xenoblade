@@ -2,6 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+#SB script plugin functions
 
 
 .fn func_8003A53C, global

@@ -4314,7 +4314,7 @@ lbl_8066D880:
 
 .obj "@etb_80020318", local
 .hidden "@etb_80020318"
-	.4byte func_8049FCC0+0x340
+	.4byte 0x804A0000
 	.4byte 0x00000000
 .endobj "@etb_80020318"
 

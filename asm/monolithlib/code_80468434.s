@@ -2433,7 +2433,7 @@ lbl_8065AC98:
 
 .obj "@etb_8001DCAC", local
 .hidden "@etb_8001DCAC"
-	.4byte func_8049FCC0+0x340
+	.4byte 0x804A0000
 	.4byte 0x00000000
 .endobj "@etb_8001DCAC"
 

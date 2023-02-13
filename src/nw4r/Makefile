@@ -150,6 +150,11 @@ NW4R_FILES:=\
 	$(BUILD_DIR)/asm/nw4r/ut/ut_CharWriter.o\
 	$(BUILD_DIR)/asm/nw4r/ut/ut_TextWriterBase.o\
 
+
+#NW4R uses GC 3.0
+$(NDEV_FILES): MWCC_VERSION := 3.0
+$(NDEV_FILES): CONSOLE := GC
+
 DEPENDS += $(NW4R_FILES:.o=.d)
 
 $(BUILD_DIR)/src/nw4r/nw4r.a: $(NW4R_FILES)

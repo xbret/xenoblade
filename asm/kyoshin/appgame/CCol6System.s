@@ -6240,7 +6240,7 @@ __RTTI__CCol6CheckBat:
 
 .obj "@etb_8000D824", local
 .hidden "@etb_8000D824"
-	.4byte func_8009F8B8+0x748
+	.4byte 0x800A0000
 	.4byte 0x000000B4
 	.4byte 0x00000060
 	.4byte 0x000000F0

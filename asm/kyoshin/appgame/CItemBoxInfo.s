@@ -14990,7 +14990,7 @@ lbl_80666EC4:
 
 .obj "@etb_8001182C", local
 .hidden "@etb_8001182C"
-	.4byte func_8007FF6C+0x94
+	.4byte 0x80080000
 	.4byte 0x00000000
 .endobj "@etb_8001182C"
 

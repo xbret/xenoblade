@@ -829,8 +829,6 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-
-
 .global _unnamed_CGame_cpp_CGameRestart_typestr
 _unnamed_CGame_cpp_CGameRestart_typestr:
 	.asciz "@unnamed@CGame_cpp@::CGameRestart"

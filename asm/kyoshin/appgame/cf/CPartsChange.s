@@ -7931,7 +7931,7 @@ lbl_80666C04:
 
 .obj "@etb_8000F40C", local
 .hidden "@etb_8000F40C"
-	.4byte func_8049FCC0+0x340
+	.4byte 0x804A0000
 	.4byte 0x00000000
 .endobj "@etb_8000F40C"
 

@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_804EE0F4, global
+.fn __ct__804EE0F4, global
 /* 804EE0F4 004B76B4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804EE0F8 004B76B8  7C 08 02 A6 */	mflr r0
 /* 804EE0FC 004B76BC  3C 80 80 4F */	lis r4, func_804EE46C@ha
@@ -27,9 +25,9 @@
 /* 804EE140 004B7700  7C 08 03 A6 */	mtlr r0
 /* 804EE144 004B7704  38 21 00 10 */	addi r1, r1, 0x10
 /* 804EE148 004B7708  4E 80 00 20 */	blr
-.endfn func_804EE0F4
+.endfn __ct__804EE0F4
 
-.fn func_804EE14C, global
+.fn __dt__804EE14C, global
 /* 804EE14C 004B770C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804EE150 004B7710  7C 08 02 A6 */	mflr r0
 /* 804EE154 004B7714  2C 03 00 00 */	cmpwi r3, 0
@@ -49,7 +47,7 @@
 /* 804EE188 004B7748  7C 08 03 A6 */	mtlr r0
 /* 804EE18C 004B774C  38 21 00 10 */	addi r1, r1, 0x10
 /* 804EE190 004B7750  4E 80 00 20 */	blr 
-.endfn func_804EE14C
+.endfn __dt__804EE14C
 
 .fn func_804EE194, global
 /* 804EE194 004B7754  80 AD C1 B8 */	lwz r5, lbl_80668338@sda21(r13)
@@ -230,6 +228,7 @@
 /* 804EE40C 004B79CC  4E 80 00 20 */	blr
 .endfn func_804EE338
 
+#Shifting this function causes an OSPanic error. why???
 .fn Shutdown, global
 /* 804EE410 004B79D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804EE414 004B79D4  7C 08 02 A6 */	mflr r0
@@ -2589,14 +2588,14 @@ lbl_8066833D:
 
 .obj "@eti_80039008", local
 .hidden "@eti_80039008"
-	.4byte func_804EE0F4
+	.4byte __ct__804EE0F4
 	.4byte 0x00000058
 	.4byte "@etb_80020EB4"
 .endobj "@eti_80039008"
 
 .obj "@eti_80039014", local
 .hidden "@eti_80039014"
-	.4byte func_804EE14C
+	.4byte __dt__804EE14C
 	.4byte 0x00000048
 	.4byte "@etb_80020EBC"
 .endobj "@eti_80039014"
