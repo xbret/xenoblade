@@ -62,7 +62,7 @@
 /* 8005A4C8 00023A88  4E 80 00 20 */	blr 
 .endfn func_8005A46C
 
-.fn func_8005A4CC, global
+.fn __dt__8005A4CC, global
 /* 8005A4CC 00023A8C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8005A4D0 00023A90  7C 08 02 A6 */	mflr r0
 /* 8005A4D4 00023A94  2C 03 00 00 */	cmpwi r3, 0
@@ -73,7 +73,7 @@
 /* 8005A4E8 00023AA8  7C 7E 1B 78 */	mr r30, r3
 /* 8005A4EC 00023AAC  41 82 00 1C */	beq .L_8005A508
 /* 8005A4F0 00023AB0  38 80 00 00 */	li r4, 0
-/* 8005A4F4 00023AB4  4B FF 0B C5 */	bl func_8004B0B8
+/* 8005A4F4 00023AB4  4B FF 0B C5 */	bl __dt__8004B0B8
 /* 8005A4F8 00023AB8  2C 1F 00 00 */	cmpwi r31, 0
 /* 8005A4FC 00023ABC  40 81 00 0C */	ble .L_8005A508
 /* 8005A500 00023AC0  7F C3 F3 78 */	mr r3, r30
@@ -86,7 +86,7 @@
 /* 8005A518 00023AD8  7C 08 03 A6 */	mtlr r0
 /* 8005A51C 00023ADC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8005A520 00023AE0  4E 80 00 20 */	blr 
-.endfn func_8005A4CC
+.endfn __dt__8005A4CC
 
 .fn func_8005A524, global
 /* 8005A524 00023AE4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -6495,7 +6495,7 @@
 __vt__cf_CActParamAnimGame:
 	.4byte __RTTI__cf_CActParamAnimGame
 	.4byte 0
-	.4byte func_8005A4CC
+	.4byte __dt__8005A4CC
 	.4byte func_8004B854
 	.4byte func_8004B898
 	.4byte func_8004B86C
@@ -6990,7 +6990,7 @@ lbl_80666674:
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_8004B0B8
+	.4byte __dt__8004B0B8
 .endobj "@etb_800077EC"
 
 .obj "@etb_80007808", local
@@ -7001,7 +7001,7 @@ lbl_80666674:
 	.4byte 0x00000000
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte func_8004B0B8
+	.4byte __dt__8004B0B8
 .endobj "@etb_80007808"
 
 .obj "@etb_80007824", local
@@ -7174,7 +7174,7 @@ lbl_80666674:
 
 .obj "@eti_80022808", local
 .hidden "@eti_80022808"
-	.4byte func_8005A4CC
+	.4byte __dt__8005A4CC
 	.4byte 0x00000058
 	.4byte "@etb_80007824"
 .endobj "@eti_80022808"

@@ -22,9 +22,9 @@
 /* 803A8A40 00372000  54 E0 07 7E */	clrlwi r0, r7, 0x1d
 /* 803A8A44 00372004  28 00 00 07 */	cmplwi r0, 7
 /* 803A8A48 00372008  4D 81 00 20 */	bgtlr 
-/* 803A8A4C 0037200C  3C 80 80 57 */	lis r4, lbl_8056A918@ha
+/* 803A8A4C 0037200C  3C 80 80 57 */	lis r4, jumptable_8056A918@ha
 /* 803A8A50 00372010  54 00 10 3A */	slwi r0, r0, 2
-/* 803A8A54 00372014  38 84 A9 18 */	addi r4, r4, lbl_8056A918@l
+/* 803A8A54 00372014  38 84 A9 18 */	addi r4, r4, jumptable_8056A918@l
 /* 803A8A58 00372018  7C 84 00 2E */	lwzx r4, r4, r0
 /* 803A8A5C 0037201C  7C 89 03 A6 */	mtctr r4
 /* 803A8A60 00372020  4E 80 04 20 */	bctr
@@ -887,8 +887,8 @@ lbl_8051F820:
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056A918
-lbl_8056A918:
+.global jumptable_8056A918
+jumptable_8056A918:
 	.4byte .L_803A8A64
 	.4byte .L_803A8C70
 	.4byte .L_803A8B44

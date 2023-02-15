@@ -78,7 +78,7 @@
 /* 804551F4 0041E7B4  4E 80 00 20 */	blr
 .endfn __ct__CDeviceGX
 
-.fn func_804551F8, global
+.fn __dt__804551F8, global
 /* 804551F8 0041E7B8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804551FC 0041E7BC  7C 08 02 A6 */	mflr r0
 /* 80455200 0041E7C0  2C 03 00 00 */	cmpwi r3, 0
@@ -105,10 +105,10 @@
 /* 80455250 0041E810  90 0D BD F8 */	stw r0, lbl_80667F78@sda21(r13)
 /* 80455254 0041E814  38 7E 02 7C */	addi r3, r30, 0x27c
 /* 80455258 0041E818  38 80 FF FF */	li r4, -1
-/* 8045525C 0041E81C  4B FF 4A A9 */	bl func_80449D04
+/* 8045525C 0041E81C  4B FF 4A A9 */	bl __dt__80449D04
 /* 80455260 0041E820  38 7E 01 C8 */	addi r3, r30, 0x1c8
 /* 80455264 0041E824  38 80 00 00 */	li r4, 0
-/* 80455268 0041E828  4B FF 3D 15 */	bl func_80448F7C
+/* 80455268 0041E828  4B FF 3D 15 */	bl __dt__80448F7C
 /* 8045526C 0041E82C  2C 1E 00 00 */	cmpwi r30, 0
 /* 80455270 0041E830  41 82 00 10 */	beq .L_80455280
 /* 80455274 0041E834  7F C3 F3 78 */	mr r3, r30
@@ -127,7 +127,7 @@
 /* 804552A0 0041E860  7C 08 03 A6 */	mtlr r0
 /* 804552A4 0041E864  38 21 00 10 */	addi r1, r1, 0x10
 /* 804552A8 0041E868  4E 80 00 20 */	blr 
-.endfn func_804551F8
+.endfn __dt__804551F8
 
 .fn func_804552AC, global
 /* 804552AC 0041E86C  80 6D BD F8 */	lwz r3, lbl_80667F78@sda21(r13)
@@ -389,7 +389,7 @@
 /* 8045562C 0041EBEC  48 00 17 81 */	bl func_80456DAC
 /* 80455630 0041EBF0  38 61 00 98 */	addi r3, r1, 0x98
 /* 80455634 0041EBF4  38 80 FF FF */	li r4, -1
-/* 80455638 0041EBF8  48 00 0B 75 */	bl func_804561AC
+/* 80455638 0041EBF8  48 00 0B 75 */	bl __dt__804561AC
 /* 8045563C 0041EBFC  48 00 00 0C */	b .L_80455648
 .L_80455640:
 /* 80455640 0041EC00  80 6D 9E FC */	lwz r3, lbl_8066607C@sda21(r13)
@@ -663,7 +663,7 @@
 
 .fn func_804559C4, global
 /* 804559C4 0041EF84  38 63 FE 38 */	addi r3, r3, -456
-/* 804559C8 0041EF88  4B FF F8 30 */	b func_804551F8
+/* 804559C8 0041EF88  4B FF F8 30 */	b __dt__804551F8
 .endfn func_804559C4
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -685,7 +685,7 @@ CDeviceGX_typestr:
 __vt__CDeviceGX:
 	.4byte __RTTI__CDeviceGX
 	.4byte 0
-	.4byte func_804551F8
+	.4byte __dt__804551F8
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -828,13 +828,13 @@ lbl_80667F78:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x0000027C
-	.4byte func_80449D04
+	.4byte __dt__80449D04
 	.4byte 0x0680001E
 	.4byte 0x000001C8
-	.4byte func_80448F7C
+	.4byte __dt__80448F7C
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_80447900
+	.4byte __dt__80447900
 .endobj "@etb_8001D224"
 
 .obj "@etb_8001D268", local
@@ -847,13 +847,13 @@ lbl_80667F78:
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x0000027C
-	.4byte func_80449D04
+	.4byte __dt__80449D04
 	.4byte 0x0780001E
 	.4byte 0x0000027C
-	.4byte func_80449D04
+	.4byte __dt__80449D04
 	.4byte 0x8680001E
 	.4byte 0x000001C8
-	.4byte func_80448F7C
+	.4byte __dt__80448F7C
 .endobj "@etb_8001D268"
 
 .obj "@etb_8001D2A4", local
@@ -869,7 +869,7 @@ lbl_80667F78:
 	.4byte 0x000F0010
 	.4byte 0x00000000
 	.4byte 0x82000098
-	.4byte func_804561AC
+	.4byte __dt__804561AC
 .endobj "@etb_8001D2AC"
 
 .obj "@etb_8001D2C4", local
@@ -909,7 +909,7 @@ lbl_80667F78:
 
 .obj "@eti_80034EC8", local
 .hidden "@eti_80034EC8"
-	.4byte func_804551F8
+	.4byte __dt__804551F8
 	.4byte 0x000000B4
 	.4byte "@etb_8001D268"
 .endobj "@eti_80034EC8"

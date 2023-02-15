@@ -26,7 +26,7 @@
 /* 80499220 004627E0  4E 80 00 20 */	blr
 .endfn func_804991D8
 
-.fn func_80499224, global
+.fn __dt__80499224, global
 /* 80499224 004627E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80499228 004627E8  7C 08 02 A6 */	mflr r0
 /* 8049922C 004627EC  2C 03 00 00 */	cmpwi r3, 0
@@ -38,10 +38,10 @@
 /* 80499244 00462804  41 82 00 2C */	beq .L_80499270
 /* 80499248 00462808  38 80 00 00 */	li r4, 0
 /* 8049924C 0046280C  38 63 00 48 */	addi r3, r3, 0x48
-/* 80499250 00462810  48 00 35 D9 */	bl func_8049C828
+/* 80499250 00462810  48 00 35 D9 */	bl __dt__8049C828
 /* 80499254 00462814  7F C3 F3 78 */	mr r3, r30
 /* 80499258 00462818  38 80 00 00 */	li r4, 0
-/* 8049925C 0046281C  48 00 05 75 */	bl func_804997D0
+/* 8049925C 0046281C  48 00 05 75 */	bl __dt__804997D0
 /* 80499260 00462820  2C 1F 00 00 */	cmpwi r31, 0
 /* 80499264 00462824  40 81 00 0C */	ble .L_80499270
 /* 80499268 00462828  7F C3 F3 78 */	mr r3, r30
@@ -54,7 +54,7 @@
 /* 80499280 00462840  7C 08 03 A6 */	mtlr r0
 /* 80499284 00462844  38 21 00 10 */	addi r1, r1, 0x10
 /* 80499288 00462848  4E 80 00 20 */	blr
-.endfn func_80499224
+.endfn __dt__80499224
 
 .fn func_8049928C, global
 /* 8049928C 0046284C  94 21 FF 60 */	stwu r1, -0xa0(r1)
@@ -347,7 +347,7 @@
 /* 804996DC 00462C9C  4B FF FB B0 */	b func_8049928C
 .L_804996E0:
 /* 804996E0 00462CA0  38 63 FF B8 */	addi r3, r3, -72
-/* 804996E4 00462CA4  4B FF FB 40 */	b func_80499224
+/* 804996E4 00462CA4  4B FF FB 40 */	b __dt__80499224
 .endfn func_804996D8
 
 .fn func_804996E8, global
@@ -414,7 +414,7 @@
 /* 804997CC 00462D8C  4E 80 00 20 */	blr 
 .endfn func_80499718
 
-.fn func_804997D0, global
+.fn __dt__804997D0, global
 /* 804997D0 00462D90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804997D4 00462D94  7C 08 02 A6 */	mflr r0
 /* 804997D8 00462D98  2C 03 00 00 */	cmpwi r3, 0
@@ -432,7 +432,7 @@
 /* 80499804 00462DC4  7C 08 03 A6 */	mtlr r0
 /* 80499808 00462DC8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8049980C 00462DCC  4E 80 00 20 */	blr 
-.endfn func_804997D0
+.endfn __dt__804997D0
 
 .fn func_80499810, global
 /* 80499810 00462DD0  94 21 FE 40 */	stwu r1, -0x1c0(r1)
@@ -1015,7 +1015,7 @@
 /* 8049A0CC 0046368C  4E 80 00 20 */	blr 
 .endfn func_80499FD0
 
-.fn func_8049A0D0, global
+.fn __dt__8049A0D0, global
 /* 8049A0D0 00463690  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049A0D4 00463694  7C 08 02 A6 */	mflr r0
 /* 8049A0D8 00463698  2C 03 00 00 */	cmpwi r3, 0
@@ -1026,7 +1026,7 @@
 /* 8049A0EC 004636AC  7C 7E 1B 78 */	mr r30, r3
 /* 8049A0F0 004636B0  41 82 00 1C */	beq .L_8049A10C
 /* 8049A0F4 004636B4  38 80 00 00 */	li r4, 0
-/* 8049A0F8 004636B8  4B FF F6 D9 */	bl func_804997D0
+/* 8049A0F8 004636B8  4B FF F6 D9 */	bl __dt__804997D0
 /* 8049A0FC 004636BC  2C 1F 00 00 */	cmpwi r31, 0
 /* 8049A100 004636C0  40 81 00 0C */	ble .L_8049A10C
 /* 8049A104 004636C4  7F C3 F3 78 */	mr r3, r30
@@ -1039,7 +1039,7 @@
 /* 8049A11C 004636DC  7C 08 03 A6 */	mtlr r0
 /* 8049A120 004636E0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8049A124 004636E4  4E 80 00 20 */	blr 
-.endfn func_8049A0D0
+.endfn __dt__8049A0D0
 
 .fn func_8049A128, global
 /* 8049A128 004636E8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1865,7 +1865,7 @@ __vt__CScnBloom:
 	.4byte .L_804996E0
 	.4byte func_8049C868
 	.4byte func_804996D8
-	.4byte func_80499224
+	.4byte __dt__80499224
 	.4byte func_8049928C
 
 .global CScnBloom_hierarchy
@@ -1980,7 +1980,7 @@ float_8066D300:
 	.4byte 0x00000000
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte func_804997D0
+	.4byte __dt__804997D0
 .endobj "@etb_8001F2E4"
 
 .obj "@etb_8001F300", local
@@ -1991,7 +1991,7 @@ float_8066D300:
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000048
-	.4byte func_8049C828
+	.4byte __dt__8049C828
 .endobj "@etb_8001F300"
 
 .obj "@etb_8001F31C", local
@@ -2073,7 +2073,7 @@ float_8066D300:
 
 .obj "@eti_80036D70", local
 .hidden "@eti_80036D70"
-	.4byte func_80499224
+	.4byte __dt__80499224
 	.4byte 0x00000068
 	.4byte "@etb_8001F300"
 .endobj "@eti_80036D70"
@@ -2101,7 +2101,7 @@ float_8066D300:
 
 .obj "@eti_80036DA0", local
 .hidden "@eti_80036DA0"
-	.4byte func_804997D0
+	.4byte __dt__804997D0
 	.4byte 0x00000040
 	.4byte "@etb_8001F334"
 .endobj "@eti_80036DA0"
@@ -2122,7 +2122,7 @@ float_8066D300:
 
 .obj "@eti_80036DC4", local
 .hidden "@eti_80036DC4"
-	.4byte func_8049A0D0
+	.4byte __dt__8049A0D0
 	.4byte 0x00000058
 	.4byte "@etb_8001F34C"
 .endobj "@eti_80036DC4"

@@ -982,9 +982,9 @@
 /* 803D3A78 0039D038  38 03 FF DF */	addi r0, r3, -33
 /* 803D3A7C 0039D03C  28 00 00 06 */	cmplwi r0, 6
 /* 803D3A80 0039D040  41 81 00 54 */	bgt .L_803D3AD4
-/* 803D3A84 0039D044  3C 60 80 57 */	lis r3, lbl_8056C768@ha
+/* 803D3A84 0039D044  3C 60 80 57 */	lis r3, jumptable_8056C768@ha
 /* 803D3A88 0039D048  54 00 10 3A */	slwi r0, r0, 2
-/* 803D3A8C 0039D04C  38 63 C7 68 */	addi r3, r3, lbl_8056C768@l
+/* 803D3A8C 0039D04C  38 63 C7 68 */	addi r3, r3, jumptable_8056C768@l
 /* 803D3A90 0039D050  7C 63 00 2E */	lwzx r3, r3, r0
 /* 803D3A94 0039D054  7C 69 03 A6 */	mtctr r3
 /* 803D3A98 0039D058  4E 80 04 20 */	bctr
@@ -1190,9 +1190,9 @@
 /* 803D3D24 0039D2E4  38 03 FF BF */	addi r0, r3, -65
 /* 803D3D28 0039D2E8  28 00 00 09 */	cmplwi r0, 9
 /* 803D3D2C 0039D2EC  41 81 00 54 */	bgt .L_803D3D80
-/* 803D3D30 0039D2F0  3C 60 80 57 */	lis r3, lbl_8056C784@ha
+/* 803D3D30 0039D2F0  3C 60 80 57 */	lis r3, jumptable_8056C784@ha
 /* 803D3D34 0039D2F4  54 00 10 3A */	slwi r0, r0, 2
-/* 803D3D38 0039D2F8  38 63 C7 84 */	addi r3, r3, lbl_8056C784@l
+/* 803D3D38 0039D2F8  38 63 C7 84 */	addi r3, r3, jumptable_8056C784@l
 /* 803D3D3C 0039D2FC  7C 63 00 2E */	lwzx r3, r3, r0
 /* 803D3D40 0039D300  7C 69 03 A6 */	mtctr r3
 /* 803D3D44 0039D304  4E 80 04 20 */	bctr
@@ -1709,8 +1709,8 @@ lbl_80520818:
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056C768
-lbl_8056C768:
+.global jumptable_8056C768
+jumptable_8056C768:
 	.4byte .L_803D3A9C
 	.4byte .L_803D3AA4
 	.4byte .L_803D3AAC
@@ -1720,8 +1720,8 @@ lbl_8056C768:
 	.4byte .L_803D3ACC
 
 
-.global lbl_8056C784
-lbl_8056C784:
+.global jumptable_8056C784
+jumptable_8056C784:
 	.4byte .L_803D3D48
 	.4byte .L_803D3D50
 	.4byte .L_803D3D58

@@ -30,7 +30,7 @@
 /* 8043A9D8 00403F98  4E 80 00 20 */	blr 
 .endfn func_8043A984
 
-.fn func_8043A9DC, global
+.fn __dt__8043A9DC, global
 /* 8043A9DC 00403F9C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8043A9E0 00403FA0  7C 08 02 A6 */	mflr r0
 /* 8043A9E4 00403FA4  2C 03 00 00 */	cmpwi r3, 0
@@ -48,7 +48,7 @@
 /* 8043AA10 00403FD0  7C 08 03 A6 */	mtlr r0
 /* 8043AA14 00403FD4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8043AA18 00403FD8  4E 80 00 20 */	blr 
-.endfn func_8043A9DC
+.endfn __dt__8043A9DC
 
 .fn func_8043AA1C, global
 /* 8043AA1C 00403FDC  38 00 00 00 */	li r0, 0
@@ -267,7 +267,7 @@
 /* 8043ACF8 004042B8  7F DC F3 78 */	mr r28, r30
 /* 8043ACFC 004042BC  3B B8 01 04 */	addi r29, r24, 0x104
 /* 8043AD00 004042C0  3B 60 00 00 */	li r27, 0
-/* 8043AD04 004042C4  3F E0 80 57 */	lis r31, lbl_8056ED78@ha
+/* 8043AD04 004042C4  3F E0 80 57 */	lis r31, jumptable_8056ED78@ha
 .L_8043AD08:
 /* 8043AD08 004042C8  88 7E 00 00 */	lbz r3, 0(r30)
 /* 8043AD0C 004042CC  7C 60 07 75 */	extsb. r0, r3
@@ -276,7 +276,7 @@
 /* 8043AD18 004042D8  40 80 07 EC */	bge .L_8043B504
 /* 8043AD1C 004042DC  28 00 00 0A */	cmplwi r0, 0xa
 /* 8043AD20 004042E0  41 81 08 14 */	bgt .L_8043B534
-/* 8043AD24 004042E4  38 7F ED 78 */	addi r3, r31, lbl_8056ED78@l
+/* 8043AD24 004042E4  38 7F ED 78 */	addi r3, r31, jumptable_8056ED78@l
 /* 8043AD28 004042E8  54 00 10 3A */	slwi r0, r0, 2
 /* 8043AD2C 004042EC  7C 63 00 2E */	lwzx r3, r3, r0
 /* 8043AD30 004042F0  7C 69 03 A6 */	mtctr r3
@@ -1391,8 +1391,8 @@ lbl_8056ED48:
 	.4byte lbl_8066CAB8
 	.4byte 0
 
-.global lbl_8056ED78
-lbl_8056ED78:
+.global jumptable_8056ED78
+jumptable_8056ED78:
 	.4byte .L_8043B534
 	.4byte .L_8043AD38
 	.4byte .L_8043ADB4
@@ -1410,7 +1410,7 @@ lbl_8056ED78:
 __vt__CToken:
 	.4byte __RTTI__CToken
 	.4byte 0
-	.4byte func_8043A9DC
+	.4byte __dt__8043A9DC
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -1540,7 +1540,7 @@ CToken_typestr:
 
 .obj "@eti_80033FA4", local
 .hidden "@eti_80033FA4"
-	.4byte func_8043A9DC
+	.4byte __dt__8043A9DC
 	.4byte 0x00000040
 	.4byte "@etb_8001C340"
 .endobj "@eti_80033FA4"

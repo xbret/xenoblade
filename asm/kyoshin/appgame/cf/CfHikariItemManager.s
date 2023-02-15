@@ -112,7 +112,7 @@
 /* 802B27C8 0027BD88  4E 80 00 20 */	blr 
 .endfn func_802B2634
 
-.fn func_802B27CC, global
+.fn __dt__802B27CC, global
 /* 802B27CC 0027BD8C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802B27D0 0027BD90  7C 08 02 A6 */	mflr r0
 /* 802B27D4 0027BD94  2C 03 00 00 */	cmpwi r3, 0
@@ -134,7 +134,7 @@
 /* 802B2810 0027BDD0  41 82 00 1C */	beq .L_802B282C
 /* 802B2814 0027BDD4  41 82 00 14 */	beq .L_802B2828
 /* 802B2818 0027BDD8  38 80 00 01 */	li r4, 1
-/* 802B281C 0027BDDC  48 00 0F 99 */	bl func_802B37B4
+/* 802B281C 0027BDDC  48 00 0F 99 */	bl __dt__802B37B4
 /* 802B2820 0027BDE0  7C 9B EA 14 */	add r4, r27, r29
 /* 802B2824 0027BDE4  97 E4 00 04 */	stwu r31, 4(r4)
 .L_802B2828:
@@ -167,7 +167,7 @@
 /* 802B2888 0027BE48  7C 08 03 A6 */	mtlr r0
 /* 802B288C 0027BE4C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802B2890 0027BE50  4E 80 00 20 */	blr 
-.endfn func_802B27CC
+.endfn __dt__802B27CC
 
 .fn func_802B2894, global
 /* 802B2894 0027BE54  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -239,7 +239,7 @@
 /* 802B2980 0027BF40  41 82 00 10 */	beq .L_802B2990
 /* 802B2984 0027BF44  7C 83 23 78 */	mr r3, r4
 /* 802B2988 0027BF48  38 80 00 01 */	li r4, 1
-/* 802B298C 0027BF4C  48 00 0E 29 */	bl func_802B37B4
+/* 802B298C 0027BF4C  48 00 0E 29 */	bl __dt__802B37B4
 .L_802B2990:
 /* 802B2990 0027BF50  57 E0 10 3A */	slwi r0, r31, 2
 /* 802B2994 0027BF54  38 80 00 00 */	li r4, 0
@@ -303,7 +303,7 @@
 /* 802B2A4C 0027C00C  41 82 00 18 */	beq .L_802B2A64
 /* 802B2A50 0027C010  41 82 00 10 */	beq .L_802B2A60
 /* 802B2A54 0027C014  38 80 00 01 */	li r4, 1
-/* 802B2A58 0027C018  48 00 0D 5D */	bl func_802B37B4
+/* 802B2A58 0027C018  48 00 0D 5D */	bl __dt__802B37B4
 /* 802B2A5C 0027C01C  93 FE 00 04 */	stw r31, 4(r30)
 .L_802B2A60:
 /* 802B2A60 0027C020  93 FE 00 04 */	stw r31, 4(r30)
@@ -699,7 +699,7 @@
 /* 802B3020 0027C5E0  57 20 10 3A */	slwi r0, r25, 2
 /* 802B3024 0027C5E4  38 80 00 01 */	li r4, 1
 /* 802B3028 0027C5E8  7F 9D 02 14 */	add r28, r29, r0
-/* 802B302C 0027C5EC  48 00 07 89 */	bl func_802B37B4
+/* 802B302C 0027C5EC  48 00 07 89 */	bl __dt__802B37B4
 /* 802B3030 0027C5F0  93 7C 00 04 */	stw r27, 4(r28)
 .L_802B3034:
 /* 802B3034 0027C5F4  80 7D 11 98 */	lwz r3, 0x1198(r29)
@@ -1081,7 +1081,7 @@ lbl_8050C9A8:
 __vt__cf_CfHikariItemManager:
 	.4byte __RTTI__cf_CfHikariItemManager
 	.4byte 0
-	.4byte func_802B27CC
+	.4byte __dt__802B27CC
 	.4byte func_802B2AE0
 
 .global cf_CfHikariItemManager_hierarchy
@@ -1183,7 +1183,7 @@ lbl_80667504:
 	.4byte 0x00000000
 	.4byte 0x8680001D
 	.4byte 0x00000000
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 .endobj "@etb_8001B8B4"
 
 .obj "@etb_8001B8D0", local
@@ -1194,7 +1194,7 @@ lbl_80667504:
 	.4byte 0x00000000
 	.4byte 0x8680001B
 	.4byte 0x00000000
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 .endobj "@etb_8001B8D0"
 
 .obj "@etb_8001B8EC", local
@@ -1234,7 +1234,7 @@ lbl_80667504:
 
 .obj "@eti_80033410", local
 .hidden "@eti_80033410"
-	.4byte func_802B27CC
+	.4byte __dt__802B27CC
 	.4byte 0x000000C8
 	.4byte "@etb_8001B8D0"
 .endobj "@eti_80033410"

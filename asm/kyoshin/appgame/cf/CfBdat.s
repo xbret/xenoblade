@@ -672,6 +672,7 @@
 /* 80141E8C 0010B44C  4E 80 00 20 */	blr 
 .endfn func_80141DC4
 
+#FUN_002c2ce4 in xc3d
 .fn func_80141E90, global
 /* 80141E90 0010B450  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80141E94 0010B454  7C 08 02 A6 */	mflr r0
@@ -1465,7 +1466,7 @@ lbl_80531EC0:
 __vt__cf_CfBdat:
 	.4byte __RTTI__cf_CfBdat
 	.4byte 0
-	.4byte func_8014148C
+	.4byte __dt__8014148C
 	.4byte func_80039E28
 	.4byte func_801424BC
 	.4byte func_80039E18

@@ -63,7 +63,7 @@
 /* 8018B794 00154D54  4E 80 00 20 */	blr
 .endfn __ct__CMenuShopBuy
 
-.fn func_8018B798, global
+.fn __dt__8018B798, global
 /* 8018B798 00154D58  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8018B79C 00154D5C  7C 08 02 A6 */	mflr r0
 /* 8018B7A0 00154D60  2C 03 00 00 */	cmpwi r3, 0
@@ -74,7 +74,7 @@
 /* 8018B7B4 00154D74  41 82 00 44 */	beq .L_8018B7F8
 /* 8018B7B8 00154D78  38 80 FF FF */	li r4, -1
 /* 8018B7BC 00154D7C  38 63 00 BC */	addi r3, r3, 0xbc
-/* 8018B7C0 00154D80  48 06 1A 99 */	bl func_801ED258
+/* 8018B7C0 00154D80  48 06 1A 99 */	bl __dt__801ED258
 /* 8018B7C4 00154D84  38 7E 00 84 */	addi r3, r30, 0x84
 /* 8018B7C8 00154D88  38 80 FF FF */	li r4, -1
 /* 8018B7CC 00154D8C  48 03 87 85 */	bl __dt__CTitleAHelp
@@ -83,7 +83,7 @@
 /* 8018B7D8 00154D98  48 03 81 F9 */	bl __dt__CBgTex
 /* 8018B7DC 00154D9C  7F C3 F3 78 */	mr r3, r30
 /* 8018B7E0 00154DA0  38 80 00 00 */	li r4, 0
-/* 8018B7E4 00154DA4  4B F7 35 29 */	bl func_800FED0C
+/* 8018B7E4 00154DA4  4B F7 35 29 */	bl __dt__800FED0C
 /* 8018B7E8 00154DA8  2C 1F 00 00 */	cmpwi r31, 0
 /* 8018B7EC 00154DAC  40 81 00 0C */	ble .L_8018B7F8
 /* 8018B7F0 00154DB0  7F C3 F3 78 */	mr r3, r30
@@ -95,7 +95,7 @@
 /* 8018B804 00154DC4  7C 08 03 A6 */	mtlr r0
 /* 8018B808 00154DC8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8018B80C 00154DCC  4E 80 00 20 */	blr 
-.endfn func_8018B798
+.endfn __dt__8018B798
 
 .fn func_8018B810, global
 /* 8018B810 00154DD0  94 21 F9 50 */	stwu r1, -0x6b0(r1)
@@ -468,7 +468,7 @@
 /* 8018BDC8 00155388  48 00 00 AD */	bl func_8018BE74
 /* 8018BDCC 0015538C  38 61 00 60 */	addi r3, r1, 0x60
 /* 8018BDD0 00155390  38 80 FF FF */	li r4, -1
-/* 8018BDD4 00155394  48 06 14 85 */	bl func_801ED258
+/* 8018BDD4 00155394  48 06 14 85 */	bl __dt__801ED258
 /* 8018BDD8 00155398  38 7F 00 BC */	addi r3, r31, 0xbc
 /* 8018BDDC 0015539C  48 06 1C 2D */	bl func_801EDA08
 /* 8018BDE0 001553A0  38 7F 00 BC */	addi r3, r31, 0xbc
@@ -1071,7 +1071,7 @@
 
 .fn func_8018C5F4, global
 /* 8018C5F4 00155BB4  38 63 FF A8 */	addi r3, r3, -88
-/* 8018C5F8 00155BB8  4B FF F1 A0 */	b func_8018B798
+/* 8018C5F8 00155BB8  4B FF F1 A0 */	b __dt__8018B798
 .endfn func_8018C5F4
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -1099,7 +1099,7 @@ lbl_804FF348:
 __vt__CMenuShopBuy:
 	.4byte __RTTI__CMenuShopBuy
 	.4byte 0
-	.4byte func_8018B798
+	.4byte __dt__8018B798
 	.4byte CChildListNode_Reset
 	.4byte func_8018B810
 	.4byte func_8018BF40
@@ -1188,10 +1188,10 @@ lbl_80666BE8:
 	.4byte __dt__CBgTex
 	.4byte 0x0680001C
 	.4byte 0x00000058
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 	.4byte 0x8680001C
 	.4byte 0x00000000
-	.4byte func_800FED0C
+	.4byte __dt__800FED0C
 .endobj "@etb_8000EEAC"
 
 .obj "@etb_8000EEFC", local
@@ -1206,16 +1206,16 @@ lbl_80666BE8:
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x000000BC
-	.4byte func_801ED258
+	.4byte __dt__801ED258
 	.4byte 0x0780001E
 	.4byte 0x000000BC
-	.4byte func_801ED258
+	.4byte __dt__801ED258
 	.4byte 0x8780001E
 	.4byte 0x00000084
 	.4byte __dt__CTitleAHelp
 	.4byte 0x0780001E
 	.4byte 0x000000BC
-	.4byte func_801ED258
+	.4byte __dt__801ED258
 	.4byte 0x0780001E
 	.4byte 0x00000084
 	.4byte __dt__CTitleAHelp
@@ -1224,7 +1224,7 @@ lbl_80666BE8:
 	.4byte __dt__CBgTex
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 .endobj "@etb_8000EEFC"
 
 .obj "@etb_8000EF70", local
@@ -1299,7 +1299,7 @@ lbl_80666BE8:
 
 .obj "@eti_80029CF0", local
 .hidden "@eti_80029CF0"
-	.4byte func_8018B798
+	.4byte __dt__8018B798
 	.4byte 0x00000078
 	.4byte "@etb_8000EEFC"
 .endobj "@eti_80029CF0"

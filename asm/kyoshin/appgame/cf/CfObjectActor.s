@@ -2694,7 +2694,7 @@
 
 .fn func_801725DC, global
 /* 801725DC 0013BB9C  38 63 C1 64 */	addi r3, r3, -16028
-/* 801725E0 0013BBA0  4B F3 B3 48 */	b func_800AD928
+/* 801725E0 0013BBA0  4B F3 B3 48 */	b __dt__800AD928
 .endfn func_801725DC
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
@@ -3070,7 +3070,7 @@ __vt__cf_CfObjectActor:
 	.4byte func_800BE5F4
 	.4byte func_800BE65C
 	.4byte func_800BE858
-	.4byte func_800AD928
+	.4byte __dt__800AD928
 	.4byte func_800AFAF4
 	.4byte func_80171768
 	.4byte func_801717C0
@@ -3157,10 +3157,10 @@ float_8066A02C:
 	.4byte 0x00000000
 	.4byte 0x0680001F
 	.4byte 0x00003E9C
-	.4byte func_800BBD6C
+	.4byte __dt__800BBD6C
 	.4byte 0x8680001F
 	.4byte 0x00003380
-	.4byte func_800AD9A8
+	.4byte __dt__800AD9A8
 .endobj "@etb_8000E1BC"
 
 .obj "@etb_8000E1EC", local

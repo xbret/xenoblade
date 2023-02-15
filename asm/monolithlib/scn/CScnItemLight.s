@@ -42,7 +42,7 @@
 /* 80482328 0044B8E8  4E 80 00 20 */	blr 
 .endfn func_804822A0
 
-.fn func_8048232C, global
+.fn __dt__8048232C, global
 /* 8048232C 0044B8EC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80482330 0044B8F0  7C 08 02 A6 */	mflr r0
 /* 80482334 0044B8F4  2C 03 00 00 */	cmpwi r3, 0
@@ -54,7 +54,7 @@
 /* 8048234C 0044B90C  41 82 00 20 */	beq .L_8048236C
 /* 80482350 0044B910  38 80 FF FF */	li r4, -1
 /* 80482354 0044B914  38 63 00 14 */	addi r3, r3, 0x14
-/* 80482358 0044B918  48 01 2E A9 */	bl func_80495200
+/* 80482358 0044B918  48 01 2E A9 */	bl __dt__80495200
 /* 8048235C 0044B91C  2C 1F 00 00 */	cmpwi r31, 0
 /* 80482360 0044B920  40 81 00 0C */	ble .L_8048236C
 /* 80482364 0044B924  7F C3 F3 78 */	mr r3, r30
@@ -67,7 +67,7 @@
 /* 8048237C 0044B93C  7C 08 03 A6 */	mtlr r0
 /* 80482380 0044B940  38 21 00 10 */	addi r1, r1, 0x10
 /* 80482384 0044B944  4E 80 00 20 */	blr 
-.endfn func_8048232C
+.endfn __dt__8048232C
 
 .fn func_80482388, global
 /* 80482388 0044B948  80 A3 00 04 */	lwz r5, 4(r3)
@@ -86,7 +86,7 @@
 /* 804823A4 0044B964  4E 80 00 20 */	blr 
 .endfn func_804823A0
 
-.fn func_804823A8, global
+.fn __dt__804823A8, global
 /* 804823A8 0044B968  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804823AC 0044B96C  7C 08 02 A6 */	mflr r0
 /* 804823B0 0044B970  2C 03 00 00 */	cmpwi r3, 0
@@ -97,7 +97,7 @@
 /* 804823C4 0044B984  7C 7E 1B 78 */	mr r30, r3
 /* 804823C8 0044B988  41 82 00 1C */	beq .L_804823E4
 /* 804823CC 0044B98C  38 80 00 00 */	li r4, 0
-/* 804823D0 0044B990  4B FF FF 5D */	bl func_8048232C
+/* 804823D0 0044B990  4B FF FF 5D */	bl __dt__8048232C
 /* 804823D4 0044B994  2C 1F 00 00 */	cmpwi r31, 0
 /* 804823D8 0044B998  40 81 00 0C */	ble .L_804823E4
 /* 804823DC 0044B99C  7F C3 F3 78 */	mr r3, r30
@@ -110,7 +110,7 @@
 /* 804823F4 0044B9B4  7C 08 03 A6 */	mtlr r0
 /* 804823F8 0044B9B8  38 21 00 10 */	addi r1, r1, 0x10
 /* 804823FC 0044B9BC  4E 80 00 20 */	blr 
-.endfn func_804823A8
+.endfn __dt__804823A8
 
 .fn func_80482400, global
 /* 80482400 0044B9C0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -148,7 +148,7 @@ CScnItemLight_typestr:
 __vt__CScnItemLight:
 	.4byte __RTTI__CScnItemLight
 	.4byte 0
-	.4byte func_8048232C
+	.4byte __dt__8048232C
 	.4byte func_80482388
 	.4byte func_80482048
 	.4byte func_80482288
@@ -183,7 +183,7 @@ __RTTI__CScnItemLight:
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_80482054
+	.4byte __dt__80482054
 .endobj "@etb_8001E284"
 
 .obj "@etb_8001E2A0", local
@@ -217,14 +217,14 @@ __RTTI__CScnItemLight:
 
 .obj "@eti_800361F4", local
 .hidden "@eti_800361F4"
-	.4byte func_8048232C
+	.4byte __dt__8048232C
 	.4byte 0x0000005C
 	.4byte "@etb_8001E2A0"
 .endobj "@eti_800361F4"
 
 .obj "@eti_80036200", local
 .hidden "@eti_80036200"
-	.4byte func_804823A8
+	.4byte __dt__804823A8
 	.4byte 0x00000058
 	.4byte "@etb_8001E2A8"
 .endobj "@eti_80036200"

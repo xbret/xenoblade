@@ -91,7 +91,7 @@
 /* 80270C60 0023A220  4E 80 00 20 */	blr 
 .endfn func_80270B14
 
-.fn func_80270C64, global
+.fn __dt__80270C64, global
 /* 80270C64 0023A224  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80270C68 0023A228  7C 08 02 A6 */	mflr r0
 /* 80270C6C 0023A22C  2C 03 00 00 */	cmpwi r3, 0
@@ -102,9 +102,9 @@
 /* 80270C80 0023A240  41 82 00 54 */	beq .L_80270CD4
 /* 80270C84 0023A244  34 63 00 94 */	addic. r3, r3, 0x94
 /* 80270C88 0023A248  41 82 00 18 */	beq .L_80270CA0
-/* 80270C8C 0023A24C  3C 80 80 27 */	lis r4, func_802706D4@ha
+/* 80270C8C 0023A24C  3C 80 80 27 */	lis r4, __dt__802706D4@ha
 /* 80270C90 0023A250  38 A0 00 08 */	li r5, 8
-/* 80270C94 0023A254  38 84 06 D4 */	addi r4, r4, func_802706D4@l
+/* 80270C94 0023A254  38 84 06 D4 */	addi r4, r4, __dt__802706D4@l
 /* 80270C98 0023A258  38 C0 02 00 */	li r6, 0x200
 /* 80270C9C 0023A25C  48 04 8F 5D */	bl __destroy_arr
 .L_80270CA0:
@@ -128,7 +128,7 @@
 /* 80270CE0 0023A2A0  7C 08 03 A6 */	mtlr r0
 /* 80270CE4 0023A2A4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80270CE8 0023A2A8  4E 80 00 20 */	blr 
-.endfn func_80270C64
+.endfn __dt__80270C64
 
 .fn func_80270CEC, global
 /* 80270CEC 0023A2AC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1105,10 +1105,10 @@
 /* 80271A60 0023B020  7C 05 00 40 */	cmplw r5, r0
 /* 80271A64 0023B024  41 80 FF E4 */	blt .L_80271A48
 /* 80271A68 0023B028  88 01 10 08 */	lbz r0, 0x1008(r1)
-/* 80271A6C 0023B02C  3C 80 80 27 */	lis r4, func_802706D4@ha
+/* 80271A6C 0023B02C  3C 80 80 27 */	lis r4, __dt__802706D4@ha
 /* 80271A70 0023B030  98 1F 10 94 */	stb r0, 0x1094(r31)
 /* 80271A74 0023B034  38 61 00 08 */	addi r3, r1, 8
-/* 80271A78 0023B038  38 84 06 D4 */	addi r4, r4, func_802706D4@l
+/* 80271A78 0023B038  38 84 06 D4 */	addi r4, r4, __dt__802706D4@l
 /* 80271A7C 0023B03C  38 A0 00 08 */	li r5, 8
 /* 80271A80 0023B040  88 01 10 09 */	lbz r0, 0x1009(r1)
 /* 80271A84 0023B044  38 C0 02 00 */	li r6, 0x200
@@ -1390,7 +1390,7 @@ CMenuPlayAward_strpool:
 __vt__CPlayAwardList:
 	.4byte __RTTI__CPlayAwardList
 	.4byte 0
-	.4byte func_80270C64
+	.4byte __dt__80270C64
 	.4byte func_80039E28
 	.4byte func_80271AE4
 	.4byte func_80039E18
@@ -1478,7 +1478,7 @@ float_8066B268:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000094
-	.4byte func_80270714
+	.4byte __dt__80270714
 	.4byte 0x0780001E
 	.4byte 0x00000048
 	.4byte __dt__CScrollBar
@@ -1505,16 +1505,16 @@ float_8066B268:
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x00000094
-	.4byte func_80270714
+	.4byte __dt__80270714
 	.4byte 0x0780001E
 	.4byte 0x00000094
-	.4byte func_80270714
+	.4byte __dt__80270714
 	.4byte 0x8780001E
 	.4byte 0x00000048
 	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000094
-	.4byte func_80270714
+	.4byte __dt__80270714
 	.4byte 0x0780001E
 	.4byte 0x00000048
 	.4byte __dt__CScrollBar
@@ -1678,7 +1678,7 @@ float_8066B268:
 
 .obj "@eti_80030788", local
 .hidden "@eti_80030788"
-	.4byte func_80270C64
+	.4byte __dt__80270C64
 	.4byte 0x00000088
 	.4byte "@etb_80018004"
 .endobj "@eti_80030788"

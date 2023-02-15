@@ -32,7 +32,7 @@
 /* 800AB420 000749E0  4E 80 00 20 */	blr 
 .endfn func_800AB3EC
 
-.fn func_800AB424, global
+.fn __dt__800AB424, global
 /* 800AB424 000749E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800AB428 000749E8  7C 08 02 A6 */	mflr r0
 /* 800AB42C 000749EC  2C 03 00 00 */	cmpwi r3, 0
@@ -50,7 +50,7 @@
 /* 800AB45C 00074A1C  4E 80 04 21 */	bctrl 
 /* 800AB460 00074A20  7F C3 F3 78 */	mr r3, r30
 /* 800AB464 00074A24  38 80 00 00 */	li r4, 0
-/* 800AB468 00074A28  48 01 5E 0D */	bl func_800C1274
+/* 800AB468 00074A28  48 01 5E 0D */	bl __dt__800C1274
 /* 800AB46C 00074A2C  2C 1F 00 00 */	cmpwi r31, 0
 /* 800AB470 00074A30  40 81 00 0C */	ble .L_800AB47C
 /* 800AB474 00074A34  7F C3 F3 78 */	mr r3, r30
@@ -63,7 +63,7 @@
 /* 800AB48C 00074A4C  7C 08 03 A6 */	mtlr r0
 /* 800AB490 00074A50  38 21 00 10 */	addi r1, r1, 0x10
 /* 800AB494 00074A54  4E 80 00 20 */	blr 
-.endfn func_800AB424
+.endfn __dt__800AB424
 
 .fn func_800AB498, global
 /* 800AB498 00074A58  81 83 00 00 */	lwz r12, 0(r3)
@@ -1504,7 +1504,7 @@ __vt__cf_CfObjectColl:
 	.4byte func_800C136C
 	.4byte func_8003E664
 	.4byte func_8003DC74
-	.4byte func_800AB424
+	.4byte __dt__800AB424
 	.4byte func_800AB3EC
 	.4byte func_800AB498
 	.4byte func_800C14CC
@@ -1854,7 +1854,7 @@ lbl_806667C4:
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_800C1274
+	.4byte __dt__800C1274
 .endobj "@etb_800093CC"
 
 .obj "@etb_800093E8", local
@@ -1984,7 +1984,7 @@ lbl_806667C4:
 
 .obj "@eti_80024C20", local
 .hidden "@eti_80024C20"
-	.4byte func_800AB424
+	.4byte __dt__800AB424
 	.4byte 0x00000074
 	.4byte "@etb_800093CC"
 .endobj "@eti_80024C20"

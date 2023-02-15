@@ -348,9 +348,9 @@
 /* 803643FC 0032D9BC  80 AD BA 88 */	lwz r5, lbl_80667C08@sda21(r13)
 /* 80364400 0032D9C0  28 05 00 08 */	cmplwi r5, 8
 /* 80364404 0032D9C4  41 81 00 30 */	bgt .L_80364434
-/* 80364408 0032D9C8  3C 80 80 56 */	lis r4, lbl_8055FD88@ha
+/* 80364408 0032D9C8  3C 80 80 56 */	lis r4, jumptable_8055FD88@ha
 /* 8036440C 0032D9CC  54 A0 10 3A */	slwi r0, r5, 2
-/* 80364410 0032D9D0  38 84 FD 88 */	addi r4, r4, lbl_8055FD88@l
+/* 80364410 0032D9D0  38 84 FD 88 */	addi r4, r4, jumptable_8055FD88@l
 /* 80364414 0032D9D4  7C 84 00 2E */	lwzx r4, r4, r0
 /* 80364418 0032D9D8  7C 89 03 A6 */	mtctr r4
 /* 8036441C 0032D9DC  4E 80 04 20 */	bctr 
@@ -756,9 +756,9 @@
 .fn getTiming, global
 /* 80364980 0032DF40  28 03 00 22 */	cmplwi r3, 0x22
 /* 80364984 0032DF44  41 81 01 0C */	bgt .L_80364A90
-/* 80364988 0032DF48  3C 80 80 56 */	lis r4, lbl_8055FDAC@ha
+/* 80364988 0032DF48  3C 80 80 56 */	lis r4, jumptable_8055FDAC@ha
 /* 8036498C 0032DF4C  54 60 10 3A */	slwi r0, r3, 2
-/* 80364990 0032DF50  38 84 FD AC */	addi r4, r4, lbl_8055FDAC@l
+/* 80364990 0032DF50  38 84 FD AC */	addi r4, r4, jumptable_8055FDAC@l
 /* 80364994 0032DF54  7C 84 00 2E */	lwzx r4, r4, r0
 /* 80364998 0032DF58  7C 89 03 A6 */	mtctr r4
 /* 8036499C 0032DF5C  4E 80 04 20 */	bctr 
@@ -1277,9 +1277,9 @@
 /* 80365110 0032E6D0  80 AD BA 88 */	lwz r5, lbl_80667C08@sda21(r13)
 /* 80365114 0032E6D4  28 05 00 08 */	cmplwi r5, 8
 /* 80365118 0032E6D8  41 81 00 30 */	bgt .L_80365148
-/* 8036511C 0032E6DC  3C 80 80 56 */	lis r4, lbl_8055FE38@ha
+/* 8036511C 0032E6DC  3C 80 80 56 */	lis r4, jumptable_8055FE38@ha
 /* 80365120 0032E6E0  54 A0 10 3A */	slwi r0, r5, 2
-/* 80365124 0032E6E4  38 84 FE 38 */	addi r4, r4, lbl_8055FE38@l
+/* 80365124 0032E6E4  38 84 FE 38 */	addi r4, r4, jumptable_8055FE38@l
 /* 80365128 0032E6E8  7C 84 00 2E */	lwzx r4, r4, r0
 /* 8036512C 0032E6EC  7C 89 03 A6 */	mtctr r4
 /* 80365130 0032E6F0  4E 80 04 20 */	bctr 
@@ -2662,9 +2662,9 @@
 /* 80366514 0032FAD4  83 ED BA 88 */	lwz r31, lbl_80667C08@sda21(r13)
 /* 80366518 0032FAD8  28 1F 00 08 */	cmplwi r31, 8
 /* 8036651C 0032FADC  41 81 00 28 */	bgt .L_80366544
-/* 80366520 0032FAE0  3C 80 80 56 */	lis r4, lbl_8055FFB0@ha
+/* 80366520 0032FAE0  3C 80 80 56 */	lis r4, jumptable_8055FFB0@ha
 /* 80366524 0032FAE4  57 E0 10 3A */	slwi r0, r31, 2
-/* 80366528 0032FAE8  38 84 FF B0 */	addi r4, r4, lbl_8055FFB0@l
+/* 80366528 0032FAE8  38 84 FF B0 */	addi r4, r4, jumptable_8055FFB0@l
 /* 8036652C 0032FAEC  7C 84 00 2E */	lwzx r4, r4, r0
 /* 80366530 0032FAF0  7C 89 03 A6 */	mtctr r4
 /* 80366534 0032FAF4  4E 80 04 20 */	bctr
@@ -2947,9 +2947,9 @@
 /* 803668F0 0032FEB0  83 ED BA 88 */	lwz r31, lbl_80667C08@sda21(r13)
 /* 803668F4 0032FEB4  28 1F 00 08 */	cmplwi r31, 8
 /* 803668F8 0032FEB8  41 81 00 28 */	bgt .L_80366920
-/* 803668FC 0032FEBC  3C 80 80 56 */	lis r4, lbl_8055FFD4@ha
+/* 803668FC 0032FEBC  3C 80 80 56 */	lis r4, jumptable_8055FFD4@ha
 /* 80366900 0032FEC0  57 E0 10 3A */	slwi r0, r31, 2
-/* 80366904 0032FEC4  38 84 FF D4 */	addi r4, r4, lbl_8055FFD4@l
+/* 80366904 0032FEC4  38 84 FF D4 */	addi r4, r4, jumptable_8055FFD4@l
 /* 80366908 0032FEC8  7C 84 00 2E */	lwzx r4, r4, r0
 /* 8036690C 0032FECC  7C 89 03 A6 */	mtctr r4
 /* 80366910 0032FED0  4E 80 04 20 */	bctr 
@@ -3217,8 +3217,8 @@ lbl_8055FD78:
 	.4byte 0
 
 
-.global lbl_8055FD88
-lbl_8055FD88:
+.global jumptable_8055FD88
+jumptable_8055FD88:
 	.4byte .L_80364420
 	.4byte .L_80364428
 	.4byte .L_80364430
@@ -3230,8 +3230,8 @@ lbl_8055FD88:
 	.4byte .L_80364420
 
 
-.global lbl_8055FDAC
-lbl_8055FDAC:
+.global jumptable_8055FDAC
+jumptable_8055FDAC:
 	.4byte .L_803649A0
 	.4byte .L_803649AC
 	.4byte .L_80364A18
@@ -3269,8 +3269,8 @@ lbl_8055FDAC:
 	.4byte .L_80364A88
 
 
-.global lbl_8055FE38
-lbl_8055FE38:
+.global jumptable_8055FE38
+jumptable_8055FE38:
 	.4byte .L_80365134
 	.4byte .L_8036513C
 	.4byte .L_80365144
@@ -3297,8 +3297,8 @@ lbl_8055FE38:
 	.balign 4
 
 
-.global lbl_8055FFB0
-lbl_8055FFB0:
+.global jumptable_8055FFB0
+jumptable_8055FFB0:
 	.4byte .L_80366538
 	.4byte .L_80366540
 	.4byte .L_80366544
@@ -3310,8 +3310,8 @@ lbl_8055FFB0:
 	.4byte .L_80366538
 
 
-.global lbl_8055FFD4
-lbl_8055FFD4:
+.global jumptable_8055FFD4
+jumptable_8055FFD4:
 	.4byte .L_80366914
 	.4byte .L_8036691C
 	.4byte .L_80366920

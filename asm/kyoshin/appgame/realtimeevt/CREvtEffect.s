@@ -967,7 +967,7 @@ float_8066A220:
 	.4byte 0x00000000
 	.4byte 0x0680001E
 	.4byte 0x00000014
-	.4byte func_80081C20
+	.4byte __dt__80081C20
 	.4byte 0x8680001E
 	.4byte 0x00000000
 	.4byte func_801856C0
@@ -983,13 +983,13 @@ float_8066A220:
 	.4byte 0x00000000
 	.4byte 0x0680001E
 	.4byte 0x00000014
-	.4byte func_80081C20
+	.4byte __dt__80081C20
 	.4byte 0x8680001E
 	.4byte 0x00000000
 	.4byte func_801856C0
 	.4byte 0x8680001E
 	.4byte 0x00000014
-	.4byte func_80081C20
+	.4byte __dt__80081C20
 .endobj "@etb_8000E910"
 
 .obj "@etb_8000E94C", local

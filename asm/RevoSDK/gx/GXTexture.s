@@ -6,9 +6,9 @@
 .fn GXGetTexBufferSize, global
 /* 8031C0C0 002E5680  28 05 00 3C */	cmplwi r5, 0x3c
 /* 8031C0C4 002E5684  41 81 00 40 */	bgt .L_8031C104
-/* 8031C0C8 002E5688  3D 00 80 55 */	lis r8, lbl_8054BE70@ha
+/* 8031C0C8 002E5688  3D 00 80 55 */	lis r8, jumptable_8054BE70@ha
 /* 8031C0CC 002E568C  54 A0 10 3A */	slwi r0, r5, 2
-/* 8031C0D0 002E5690  39 08 BE 70 */	addi r8, r8, lbl_8054BE70@l
+/* 8031C0D0 002E5690  39 08 BE 70 */	addi r8, r8, jumptable_8054BE70@l
 /* 8031C0D4 002E5694  7D 08 00 2E */	lwzx r8, r8, r0
 /* 8031C0D8 002E5698  7D 09 03 A6 */	mtctr r8
 /* 8031C0DC 002E569C  4E 80 04 20 */	bctr 
@@ -97,9 +97,9 @@
 .fn __GetImageTileCount, global
 /* 8031C1F0 002E57B0  28 03 00 3C */	cmplwi r3, 0x3c
 /* 8031C1F4 002E57B4  41 81 00 40 */	bgt .L_8031C234
-/* 8031C1F8 002E57B8  3D 20 80 55 */	lis r9, lbl_8054BF64@ha
+/* 8031C1F8 002E57B8  3D 20 80 55 */	lis r9, jumptable_8054BF64@ha
 /* 8031C1FC 002E57BC  54 60 10 3A */	slwi r0, r3, 2
-/* 8031C200 002E57C0  39 29 BF 64 */	addi r9, r9, lbl_8054BF64@l
+/* 8031C200 002E57C0  39 29 BF 64 */	addi r9, r9, jumptable_8054BF64@l
 /* 8031C204 002E57C4  7D 29 00 2E */	lwzx r9, r9, r0
 /* 8031C208 002E57C8  7D 29 03 A6 */	mtctr r9
 /* 8031C20C 002E57CC  4E 80 04 20 */	bctr 
@@ -237,9 +237,9 @@
 /* 8031C3D0 002E5990  90 9F 00 08 */	stw r4, 8(r31)
 /* 8031C3D4 002E5994  90 1F 00 0C */	stw r0, 0xc(r31)
 /* 8031C3D8 002E5998  41 81 00 80 */	bgt .L_8031C458
-/* 8031C3DC 002E599C  3C 60 80 55 */	lis r3, lbl_8054C058@ha
+/* 8031C3DC 002E599C  3C 60 80 55 */	lis r3, jumptable_8054C058@ha
 /* 8031C3E0 002E59A0  54 A0 10 3A */	slwi r0, r5, 2
-/* 8031C3E4 002E59A4  38 63 C0 58 */	addi r3, r3, lbl_8054C058@l
+/* 8031C3E4 002E59A4  38 63 C0 58 */	addi r3, r3, jumptable_8054C058@l
 /* 8031C3E8 002E59A8  7C 63 00 2E */	lwzx r3, r3, r0
 /* 8031C3EC 002E59AC  7C 69 03 A6 */	mtctr r3
 /* 8031C3F0 002E59B0  4E 80 04 20 */	bctr 
@@ -1200,8 +1200,8 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8054BE70
-lbl_8054BE70:
+.global jumptable_8054BE70
+jumptable_8054BE70:
 	.4byte .L_8031C0E0
 	.4byte .L_8031C0EC
 	.4byte .L_8031C0EC
@@ -1265,8 +1265,8 @@ lbl_8054BE70:
 	.4byte .L_8031C0F8
 
 
-.global lbl_8054BF64
-lbl_8054BF64:
+.global jumptable_8054BF64
+jumptable_8054BF64:
 	.4byte .L_8031C210
 	.4byte .L_8031C21C
 	.4byte .L_8031C21C
@@ -1330,8 +1330,8 @@ lbl_8054BF64:
 	.4byte .L_8031C228
 
 
-.global lbl_8054C058
-lbl_8054C058:
+.global jumptable_8054C058
+jumptable_8054C058:
 	.4byte .L_8031C3F4
 	.4byte .L_8031C408
 	.4byte .L_8031C408

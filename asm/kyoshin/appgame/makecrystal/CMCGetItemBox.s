@@ -202,7 +202,7 @@
 /* 80297728 00260CE8  42 00 FF F0 */	bdnz .L_80297718
 /* 8029772C 00260CEC  38 61 02 00 */	addi r3, r1, 0x200
 /* 80297730 00260CF0  38 80 FF FF */	li r4, -1
-/* 80297734 00260CF4  4B F3 C8 C1 */	bl func_801D3FF4
+/* 80297734 00260CF4  4B F3 C8 C1 */	bl __dt__801D3FF4
 /* 80297738 00260CF8  38 61 00 08 */	addi r3, r1, 8
 /* 8029773C 00260CFC  38 80 00 00 */	li r4, 0
 /* 80297740 00260D00  4B F9 3E D9 */	bl __ct__CSysWin
@@ -288,7 +288,7 @@
 /* 8029787C 00260E3C  4E 80 00 20 */	blr 
 .endfn func_80297430
 
-.fn func_80297880, global
+.fn __dt__80297880, global
 /* 80297880 00260E40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80297884 00260E44  7C 08 02 A6 */	mflr r0
 /* 80297888 00260E48  2C 03 00 00 */	cmpwi r3, 0
@@ -299,7 +299,7 @@
 /* 8029789C 00260E5C  41 82 00 74 */	beq .L_80297910
 /* 802978A0 00260E60  38 80 FF FF */	li r4, -1
 /* 802978A4 00260E64  38 63 00 F4 */	addi r3, r3, 0xf4
-/* 802978A8 00260E68  4B F3 C7 4D */	bl func_801D3FF4
+/* 802978A8 00260E68  4B F3 C7 4D */	bl __dt__801D3FF4
 /* 802978AC 00260E6C  38 7E 00 B8 */	addi r3, r30, 0xb8
 /* 802978B0 00260E70  38 80 FF FF */	li r4, -1
 /* 802978B4 00260E74  4B F9 3D ED */	bl __dt__CSysWin
@@ -332,7 +332,7 @@
 /* 8029791C 00260EDC  7C 08 03 A6 */	mtlr r0
 /* 80297920 00260EE0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80297924 00260EE4  4E 80 00 20 */	blr 
-.endfn func_80297880
+.endfn __dt__80297880
 
 .fn func_80297928, global
 /* 80297928 00260EE8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -3222,7 +3222,7 @@ CMCGetItemBox_strpool:
 __vt__CMCGetItemBox:
 	.4byte __RTTI__CMCGetItemBox
 	.4byte 0
-	.4byte func_80297880
+	.4byte __dt__80297880
 	.4byte func_80039E28
 	.4byte func_80299B38
 	.4byte func_80039E18
@@ -3347,10 +3347,10 @@ lbl_80667310:
 	.4byte 0x00000000
 	.4byte 0x0780001F
 	.4byte 0x00000314
-	.4byte func_80296BB0
+	.4byte __dt__80296BB0
 	.4byte 0x0780001F
 	.4byte 0x000000F4
-	.4byte func_801D3FF4
+	.4byte __dt__801D3FF4
 	.4byte 0x0780001F
 	.4byte 0x000000B8
 	.4byte __dt__CSysWin
@@ -3399,28 +3399,28 @@ lbl_80667310:
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x00000314
-	.4byte func_80296BB0
+	.4byte __dt__80296BB0
 	.4byte 0x0780001E
 	.4byte 0x00000314
-	.4byte func_80296BB0
+	.4byte __dt__80296BB0
 	.4byte 0x8780001E
 	.4byte 0x000000F4
-	.4byte func_801D3FF4
+	.4byte __dt__801D3FF4
 	.4byte 0x0780001E
 	.4byte 0x00000314
-	.4byte func_80296BB0
+	.4byte __dt__80296BB0
 	.4byte 0x0780001E
 	.4byte 0x000000F4
-	.4byte func_801D3FF4
+	.4byte __dt__801D3FF4
 	.4byte 0x8780001E
 	.4byte 0x000000B8
 	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x00000314
-	.4byte func_80296BB0
+	.4byte __dt__80296BB0
 	.4byte 0x0780001E
 	.4byte 0x000000F4
-	.4byte func_801D3FF4
+	.4byte __dt__801D3FF4
 	.4byte 0x0780001E
 	.4byte 0x000000B8
 	.4byte __dt__CSysWin
@@ -3429,10 +3429,10 @@ lbl_80667310:
 	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000314
-	.4byte func_80296BB0
+	.4byte __dt__80296BB0
 	.4byte 0x0780001E
 	.4byte 0x000000F4
-	.4byte func_801D3FF4
+	.4byte __dt__801D3FF4
 	.4byte 0x0780001E
 	.4byte 0x000000B8
 	.4byte __dt__CSysWin
@@ -3444,10 +3444,10 @@ lbl_80667310:
 	.4byte __dt__801D2938
 	.4byte 0x0780001E
 	.4byte 0x00000314
-	.4byte func_80296BB0
+	.4byte __dt__80296BB0
 	.4byte 0x0780001E
 	.4byte 0x000000F4
-	.4byte func_801D3FF4
+	.4byte __dt__801D3FF4
 	.4byte 0x0780001E
 	.4byte 0x000000B8
 	.4byte __dt__CSysWin
@@ -3462,10 +3462,10 @@ lbl_80667310:
 	.4byte __dt__801D2438
 	.4byte 0x0780001E
 	.4byte 0x00000314
-	.4byte func_80296BB0
+	.4byte __dt__80296BB0
 	.4byte 0x0780001E
 	.4byte 0x000000F4
-	.4byte func_801D3FF4
+	.4byte __dt__801D3FF4
 	.4byte 0x0780001E
 	.4byte 0x000000B8
 	.4byte __dt__CSysWin
@@ -3483,10 +3483,10 @@ lbl_80667310:
 	.4byte __dt__801D2338
 	.4byte 0x0780001E
 	.4byte 0x00000314
-	.4byte func_80296BB0
+	.4byte __dt__80296BB0
 	.4byte 0x0780001E
 	.4byte 0x000000F4
-	.4byte func_801D3FF4
+	.4byte __dt__801D3FF4
 	.4byte 0x0780001E
 	.4byte 0x000000B8
 	.4byte __dt__CSysWin
@@ -3714,7 +3714,7 @@ lbl_80667310:
 
 .obj "@eti_80031F04", local
 .hidden "@eti_80031F04"
-	.4byte func_80297880
+	.4byte __dt__80297880
 	.4byte 0x000000A8
 	.4byte "@etb_80019D10"
 .endobj "@eti_80031F04"

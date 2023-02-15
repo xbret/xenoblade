@@ -184,9 +184,9 @@
 .fn SetScnObjOption__Q34nw4r3g3d6ScnObjFUlUl, global
 /* 803F4678 003BDC38  28 04 00 09 */	cmplwi r4, 9
 /* 803F467C 003BDC3C  41 81 01 84 */	bgt .L_803F4800
-/* 803F4680 003BDC40  3C C0 80 57 */	lis r6, lbl_8056CED8@ha
+/* 803F4680 003BDC40  3C C0 80 57 */	lis r6, jumptable_8056CED8@ha
 /* 803F4684 003BDC44  54 80 10 3A */	slwi r0, r4, 2
-/* 803F4688 003BDC48  38 C6 CE D8 */	addi r6, r6, lbl_8056CED8@l
+/* 803F4688 003BDC48  38 C6 CE D8 */	addi r6, r6, jumptable_8056CED8@l
 /* 803F468C 003BDC4C  7C C6 00 2E */	lwzx r6, r6, r0
 /* 803F4690 003BDC50  7C C9 03 A6 */	mtctr r6
 /* 803F4694 003BDC54  4E 80 04 20 */	bctr 
@@ -314,9 +314,9 @@
 .L_803F4820:
 /* 803F4820 003BDDE0  28 04 00 09 */	cmplwi r4, 9
 /* 803F4824 003BDDE4  41 81 00 AC */	bgt .L_803F48D0
-/* 803F4828 003BDDE8  3C C0 80 57 */	lis r6, lbl_8056CF00@ha
+/* 803F4828 003BDDE8  3C C0 80 57 */	lis r6, jumptable_8056CF00@ha
 /* 803F482C 003BDDEC  54 80 10 3A */	slwi r0, r4, 2
-/* 803F4830 003BDDF0  38 C6 CF 00 */	addi r6, r6, lbl_8056CF00@l
+/* 803F4830 003BDDF0  38 C6 CF 00 */	addi r6, r6, jumptable_8056CF00@l
 /* 803F4834 003BDDF4  7C C6 00 2E */	lwzx r6, r6, r0
 /* 803F4838 003BDDF8  7C C9 03 A6 */	mtctr r6
 /* 803F483C 003BDDFC  4E 80 04 20 */	bctr 
@@ -1828,8 +1828,8 @@ lbl_80521080:
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056CED8
-lbl_8056CED8:
+.global jumptable_8056CED8
+jumptable_8056CED8:
 	.4byte .L_803F4800
 	.4byte .L_803F4698
 	.4byte .L_803F46C0
@@ -1842,8 +1842,8 @@ lbl_8056CED8:
 	.4byte .L_803F47D8
 
 
-.global lbl_8056CF00
-lbl_8056CF00:
+.global jumptable_8056CF00
+jumptable_8056CF00:
 	.4byte .L_803F48D0
 	.4byte .L_803F4840
 	.4byte .L_803F4850

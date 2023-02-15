@@ -34,7 +34,7 @@
 /* 80447BB8 00411178  4E 80 00 20 */	blr 
 .endfn func_80447B50
 
-.fn func_80447BBC, global
+.fn __dt__80447BBC, global
 /* 80447BBC 0041117C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80447BC0 00411180  7C 08 02 A6 */	mflr r0
 /* 80447BC4 00411184  2C 03 00 00 */	cmpwi r3, 0
@@ -62,7 +62,7 @@
 /* 80447C14 004111D4  7C 08 03 A6 */	mtlr r0
 /* 80447C18 004111D8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80447C1C 004111DC  4E 80 00 20 */	blr 
-.endfn func_80447BBC
+.endfn __dt__80447BBC
 
 .fn func_80447C20, global
 /* 80447C20 004111E0  80 6D BD A0 */	lwz r3, lbl_80667F20@sda21(r13)
@@ -225,7 +225,7 @@ CDeviceSC_typestr:
 __vt__CDeviceSC:
 	.4byte __RTTI__CDeviceSC
 	.4byte 0
-	.4byte func_80447BBC
+	.4byte __dt__80447BBC
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -304,7 +304,7 @@ lbl_80667F20:
 	.4byte 0x00000000
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte func_80447900
+	.4byte __dt__80447900
 .endobj "@etb_8001CA3C"
 
 .obj "@etb_8001CA58", local
@@ -338,7 +338,7 @@ lbl_80667F20:
 
 .obj "@eti_8003467C", local
 .hidden "@eti_8003467C"
-	.4byte func_80447BBC
+	.4byte __dt__80447BBC
 	.4byte 0x00000064
 	.4byte "@etb_8001CA58"
 .endobj "@eti_8003467C"

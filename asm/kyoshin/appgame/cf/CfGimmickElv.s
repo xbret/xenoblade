@@ -407,7 +407,7 @@
 /* 8020B17C 001D473C  4E 80 00 20 */	blr 
 .endfn func_8020AB80
 
-.fn func_8020B180, global
+.fn __dt__8020B180, global
 /* 8020B180 001D4740  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8020B184 001D4744  7C 08 02 A6 */	mflr r0
 /* 8020B188 001D4748  2C 03 00 00 */	cmpwi r3, 0
@@ -431,7 +431,7 @@
 /* 8020B1D0 001D4790  4B FF F2 65 */	bl func_8020A434
 /* 8020B1D4 001D4794  7F C3 F3 78 */	mr r3, r30
 /* 8020B1D8 001D4798  38 80 00 00 */	li r4, 0
-/* 8020B1DC 001D479C  4B FF D7 51 */	bl func_8020892C
+/* 8020B1DC 001D479C  4B FF D7 51 */	bl __dt__8020892C
 /* 8020B1E0 001D47A0  2C 1F 00 00 */	cmpwi r31, 0
 /* 8020B1E4 001D47A4  40 81 00 0C */	ble .L_8020B1F0
 /* 8020B1E8 001D47A8  7F C3 F3 78 */	mr r3, r30
@@ -444,7 +444,7 @@
 /* 8020B200 001D47C0  7C 08 03 A6 */	mtlr r0
 /* 8020B204 001D47C4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8020B208 001D47C8  4E 80 00 20 */	blr 
-.endfn func_8020B180
+.endfn __dt__8020B180
 
 .fn func_8020B20C, global
 /* 8020B20C 001D47CC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1734,7 +1734,7 @@ lbl_80539020:
 __vt__cf_CfGimmickElv:
 	.4byte __RTTI__cf_CfGimmickElv
 	.4byte 0
-	.4byte func_8020B180
+	.4byte __dt__8020B180
 	.4byte func_8020896C
 	.4byte func_8020B20C
 	.4byte func_801F4B64
@@ -1818,7 +1818,7 @@ float_8066AC60:
 	.4byte 0x00000000
 	.4byte 0x8680001C
 	.4byte 0x00000000
-	.4byte func_8020892C
+	.4byte __dt__8020892C
 .endobj "@etb_80013028"
 
 .obj "@etb_80013044", local
@@ -1829,7 +1829,7 @@ float_8066AC60:
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_8020892C
+	.4byte __dt__8020892C
 .endobj "@etb_80013044"
 
 .obj "@etb_80013060", local
@@ -1905,7 +1905,7 @@ float_8066AC60:
 
 .obj "@eti_8002D044", local
 .hidden "@eti_8002D044"
-	.4byte func_8020B180
+	.4byte __dt__8020B180
 	.4byte 0x0000008C
 	.4byte "@etb_80013044"
 .endobj "@eti_8002D044"

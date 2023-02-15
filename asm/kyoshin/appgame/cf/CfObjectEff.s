@@ -89,7 +89,7 @@
 .endfn func_800AC75C
 
 
-.fn func_800AC760, global
+.fn __dt__800AC760, global
 /* 800AC760 00075D20  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800AC764 00075D24  7C 08 02 A6 */	mflr r0
 /* 800AC768 00075D28  2C 03 00 00 */	cmpwi r3, 0
@@ -117,7 +117,7 @@
 /* 800AC7BC 00075D7C  7C 08 03 A6 */	mtlr r0
 /* 800AC7C0 00075D80  38 21 00 10 */	addi r1, r1, 0x10
 /* 800AC7C4 00075D84  4E 80 00 20 */	blr 
-.endfn func_800AC760
+.endfn __dt__800AC760
 
 .fn func_800AC7C8, global
 /* 800AC7C8 00075D88  4E 80 00 20 */	blr 
@@ -1328,7 +1328,7 @@
 /* 800AD77C 00076D3C  4E 80 00 20 */	blr
 .endfn func_800AD68C
 
-.fn func_800AD780, global
+.fn __dt__800AD780, global
 /* 800AD780 00076D40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800AD784 00076D44  7C 08 02 A6 */	mflr r0
 /* 800AD788 00076D48  2C 03 00 00 */	cmpwi r3, 0
@@ -1369,7 +1369,7 @@
 /* 800AD80C 00076DCC  7C 08 03 A6 */	mtlr r0
 /* 800AD810 00076DD0  38 21 00 10 */	addi r1, r1, 0x10
 /* 800AD814 00076DD4  4E 80 00 20 */	blr 
-.endfn func_800AD780
+.endfn __dt__800AD780
 
 .fn func_800AD818, global
 /* 800AD818 00076DD8  A0 03 00 A4 */	lhz r0, 0xa4(r3)
@@ -1401,7 +1401,7 @@
 
 .fn func_800AD858, global
 /* 800AD858 00076E18  38 63 FF 70 */	addi r3, r3, -144
-/* 800AD85C 00076E1C  4B FF FF 24 */	b func_800AD780
+/* 800AD85C 00076E1C  4B FF FF 24 */	b __dt__800AD780
 .endfn func_800AD858
 
 .fn func_800AD860, global
@@ -1456,7 +1456,7 @@ __vt__cf_CfObjectEff:
 	.4byte func_80080640
 	.4byte func_8003E664
 	.4byte func_8003DC74
-	.4byte func_800AD780
+	.4byte __dt__800AD780
 	.4byte func_800AC7CC
 	.4byte func_800AC75C
 	.4byte func_800AD3A4
@@ -1577,10 +1577,10 @@ float_8066922C:
 	.4byte 0x00000000
 	.4byte 0x0680001E
 	.4byte 0x00000090
-	.4byte func_80081C20
+	.4byte __dt__80081C20
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_800AC760
+	.4byte __dt__800AC760
 .endobj "@etb_80009480"
 
 .obj "@etb_800094A8", local
@@ -1713,13 +1713,13 @@ float_8066922C:
 	.4byte 0x00000000
 	.4byte 0x0680001E
 	.4byte 0x00000090
-	.4byte func_80081C20
+	.4byte __dt__80081C20
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_800AC760
+	.4byte __dt__800AC760
 	.4byte 0x8680001E
 	.4byte 0x00000090
-	.4byte func_80081C20
+	.4byte __dt__80081C20
 .endobj "@etb_80009548"
 
 .section extabindex, "a" # 0x80021020 - 0x80039220
@@ -1735,7 +1735,7 @@ float_8066922C:
 
 .obj "@eti_80024D1C", local
 .hidden "@eti_80024D1C"
-	.4byte func_800AC760
+	.4byte __dt__800AC760
 	.4byte 0x00000068
 	.4byte "@etb_800094A8"
 .endobj "@eti_80024D1C"
@@ -1875,7 +1875,7 @@ float_8066922C:
 
 .obj "@eti_80024E0C", local
 .hidden "@eti_80024E0C"
-	.4byte func_800AD780
+	.4byte __dt__800AD780
 	.4byte 0x00000098
 	.4byte "@etb_80009548"
 .endobj "@eti_80024E0C"

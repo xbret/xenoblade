@@ -47,7 +47,7 @@
 /* 8045D3F0 004269B0  4E 80 00 20 */	blr 
 .endfn __ct__CLibHbm
 
-.fn func_8045D3F4, global
+.fn __dt__8045D3F4, global
 /* 8045D3F4 004269B4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045D3F8 004269B8  7C 08 02 A6 */	mflr r0
 /* 8045D3FC 004269BC  2C 03 00 00 */	cmpwi r3, 0
@@ -73,7 +73,7 @@
 /* 8045D448 00426A08  7C 08 03 A6 */	mtlr r0
 /* 8045D44C 00426A0C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045D450 00426A10  4E 80 00 20 */	blr 
-.endfn func_8045D3F4
+.endfn __dt__8045D3F4
 
 .fn func_8045D454, global
 /* 8045D454 00426A14  80 6D BE 50 */	lwz r3, lbl_80667FD0@sda21(r13)
@@ -1266,7 +1266,7 @@
 /* 8045E49C 00427A5C  4B FE 49 0D */	bl func_80442DA8
 /* 8045E4A0 00427A60  38 61 00 18 */	addi r3, r1, 0x18
 /* 8045E4A4 00427A64  38 80 FF FF */	li r4, -1
-/* 8045E4A8 00427A68  4B FF 7D 05 */	bl func_804561AC
+/* 8045E4A8 00427A68  4B FF 7D 05 */	bl __dt__804561AC
 .L_8045E4AC:
 /* 8045E4AC 00427A6C  80 01 01 14 */	lwz r0, 0x114(r1)
 /* 8045E4B0 00427A70  83 E1 01 0C */	lwz r31, 0x10c(r1)
@@ -1277,7 +1277,7 @@
 /* 8045E4C4 00427A84  4E 80 00 20 */	blr 
 .endfn func_8045E0CC
 
-.fn func_8045E4C8, global
+.fn __dt__8045E4C8, global
 /* 8045E4C8 00427A88  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045E4CC 00427A8C  7C 08 02 A6 */	mflr r0
 /* 8045E4D0 00427A90  2C 03 00 00 */	cmpwi r3, 0
@@ -1290,7 +1290,7 @@
 /* 8045E4EC 00427AAC  38 00 00 00 */	li r0, 0
 /* 8045E4F0 00427AB0  90 0D BE 60 */	stw r0, lbl_80667FE0@sda21(r13)
 /* 8045E4F4 00427AB4  38 80 00 00 */	li r4, 0
-/* 8045E4F8 00427AB8  4B FD A9 D1 */	bl func_80438EC8
+/* 8045E4F8 00427AB8  4B FD A9 D1 */	bl __dt__80438EC8
 /* 8045E4FC 00427ABC  2C 1F 00 00 */	cmpwi r31, 0
 /* 8045E500 00427AC0  40 81 00 0C */	ble .L_8045E50C
 /* 8045E504 00427AC4  7F C3 F3 78 */	mr r3, r30
@@ -1303,7 +1303,7 @@
 /* 8045E51C 00427ADC  7C 08 03 A6 */	mtlr r0
 /* 8045E520 00427AE0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045E524 00427AE4  4E 80 00 20 */	blr 
-.endfn func_8045E4C8
+.endfn __dt__8045E4C8
 
 .fn func_8045E528, global
 /* 8045E528 00427AE8  80 6D BE 60 */	lwz r3, lbl_80667FE0@sda21(r13)
@@ -1349,7 +1349,7 @@ CLibHbm_strpool:
 __vt__CLibHbm:
 	.4byte __RTTI__CLibHbm
 	.4byte 0
-	.4byte func_8045D3F4
+	.4byte __dt__8045D3F4
 	.4byte func_80039E28
 	.4byte func_8045DEC0
 	.4byte func_80039E18
@@ -1594,7 +1594,7 @@ lbl_80667FE0:
 	.4byte 0x009C0010
 	.4byte 0x00000000
 	.4byte 0x82000018
-	.4byte func_804561AC
+	.4byte __dt__804561AC
 .endobj "@etb_8001D768"
 
 .obj "@etb_8001D780", local
@@ -1616,7 +1616,7 @@ lbl_80667FE0:
 
 .obj "@eti_800352F4", local
 .hidden "@eti_800352F4"
-	.4byte func_8045D3F4
+	.4byte __dt__8045D3F4
 	.4byte 0x00000060
 	.4byte "@etb_8001D708"
 .endobj "@eti_800352F4"
@@ -1707,7 +1707,7 @@ lbl_80667FE0:
 
 .obj "@eti_80035390", local
 .hidden "@eti_80035390"
-	.4byte func_8045E4C8
+	.4byte __dt__8045E4C8
 	.4byte 0x00000060
 	.4byte "@etb_8001D780"
 .endobj "@eti_80035390"

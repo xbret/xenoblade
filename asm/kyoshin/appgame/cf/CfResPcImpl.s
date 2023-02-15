@@ -46,7 +46,7 @@
 /* 8018CA58 00156018  4E 80 00 20 */	blr 
 .endfn func_8018C9C4
 
-.fn func_8018CA5C, global
+.fn __dt__8018CA5C, global
 /* 8018CA5C 0015601C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8018CA60 00156020  7C 08 02 A6 */	mflr r0
 /* 8018CA64 00156024  2C 03 00 00 */	cmpwi r3, 0
@@ -96,7 +96,7 @@
 /* 8018CB08 001560C8  7C 08 03 A6 */	mtlr r0
 /* 8018CB0C 001560CC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8018CB10 001560D0  4E 80 00 20 */	blr 
-.endfn func_8018CA5C
+.endfn __dt__8018CA5C
 
 .fn func_8018CB14, global
 /* 8018CB14 001560D4  A0 83 00 08 */	lhz r4, 8(r3)
@@ -2639,7 +2639,7 @@
 /* 8018EF48 00158508  4E 80 00 20 */	blr 
 .endfn func_8018EF3C
 
-.fn func_8018EF4C, global
+.fn __dt__8018EF4C, global
 /* 8018EF4C 0015850C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8018EF50 00158510  7C 08 02 A6 */	mflr r0
 /* 8018EF54 00158514  2C 03 00 00 */	cmpwi r3, 0
@@ -2667,7 +2667,7 @@
 /* 8018EFA8 00158568  7C 08 03 A6 */	mtlr r0
 /* 8018EFAC 0015856C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8018EFB0 00158570  4E 80 00 20 */	blr 
-.endfn func_8018EF4C
+.endfn __dt__8018EF4C
 
 .fn func_8018EFB4, global
 /* 8018EFB4 00158574  38 00 00 00 */	li r0, 0
@@ -3424,7 +3424,7 @@ CScnItemModelNw4r_hierarchy:
 __vt__cf_CfResPcImpl:
 	.4byte __RTTI__cf_CfResPcImpl
 	.4byte 0
-	.4byte func_8018CA5C
+	.4byte __dt__8018CA5C
 	.4byte func_8018EEF0
 	.4byte func_8018D570
 	.4byte func_8018CB14
@@ -3584,13 +3584,13 @@ float_8066A328:
 	.4byte 0x00000000
 	.4byte 0x0680001C
 	.4byte 0x00000000
-	.4byte func_800BAA24
+	.4byte __dt__800BAA24
 	.4byte 0x0680001C
 	.4byte 0x00000000
-	.4byte func_800BAA24
+	.4byte __dt__800BAA24
 	.4byte 0x8680001C
 	.4byte 0x00000000
-	.4byte func_800BAA24
+	.4byte __dt__800BAA24
 .endobj "@etb_8000EFE8"
 
 .obj "@etb_8000F01C", local
@@ -3798,7 +3798,7 @@ float_8066A328:
 
 .obj "@eti_80029D98", local
 .hidden "@eti_80029D98"
-	.4byte func_8018CA5C
+	.4byte __dt__8018CA5C
 	.4byte 0x000000B8
 	.4byte "@etb_8000EFE8"
 .endobj "@eti_80029D98"
@@ -3952,7 +3952,7 @@ float_8066A328:
 
 .obj "@eti_80029EA0", local
 .hidden "@eti_80029EA0"
-	.4byte func_8018EF4C
+	.4byte __dt__8018EF4C
 	.4byte 0x00000068
 	.4byte "@etb_8000F0C4"
 .endobj "@eti_80029EA0"

@@ -1423,7 +1423,7 @@ lbl_805334D8:
 __vt__cf_CCharEffect:
 	.4byte __RTTI__cf_CCharEffect
 	.4byte 0
-	.4byte func_80080580
+	.4byte __dt__80080580
 	.4byte func_8015BF04
 	.4byte func_8015C9A0
 	.4byte func_800CEE7C

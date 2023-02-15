@@ -81,7 +81,7 @@
 /* 8046D100 004366C0  4E 80 00 20 */	blr 
 .endfn func_8046CFE0
 
-.fn func_8046D104, global
+.fn __dt__8046D104, global
 /* 8046D104 004366C4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8046D108 004366C8  7C 08 02 A6 */	mflr r0
 /* 8046D10C 004366CC  2C 03 00 00 */	cmpwi r3, 0
@@ -99,9 +99,9 @@
 /* 8046D138 004366F8  7C 08 03 A6 */	mtlr r0
 /* 8046D13C 004366FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8046D140 00436700  4E 80 00 20 */	blr 
-.endfn func_8046D104
+.endfn __dt__8046D104
 
-.fn func_8046D144, global
+.fn __dt__8046D144, global
 /* 8046D144 00436704  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8046D148 00436708  7C 08 02 A6 */	mflr r0
 /* 8046D14C 0043670C  2C 03 00 00 */	cmpwi r3, 0
@@ -166,7 +166,7 @@
 /* 8046D228 004367E8  38 80 FF FF */	li r4, -1
 /* 8046D22C 004367EC  54 00 05 28 */	rlwinm r0, r0, 0, 0x14, 0x14
 /* 8046D230 004367F0  90 1E 00 6C */	stw r0, 0x6c(r30)
-/* 8046D234 004367F4  4B FF D3 51 */	bl func_8046A584
+/* 8046D234 004367F4  4B FF D3 51 */	bl __dt__8046A584
 /* 8046D238 004367F8  2C 1F 00 00 */	cmpwi r31, 0
 /* 8046D23C 004367FC  40 81 00 0C */	ble .L_8046D248
 /* 8046D240 00436800  7F C3 F3 78 */	mr r3, r30
@@ -179,7 +179,7 @@
 /* 8046D258 00436818  7C 08 03 A6 */	mtlr r0
 /* 8046D25C 0043681C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8046D260 00436820  4E 80 00 20 */	blr 
-.endfn func_8046D144
+.endfn __dt__8046D144
 
 .fn func_8046D264, global
 /* 8046D264 00436824  94 21 FF 50 */	stwu r1, -0xb0(r1)
@@ -9141,7 +9141,7 @@ lbl_80571340:
 __vt__LOD_LODMemMan:
 	.4byte __RTTI__LOD_LODMemMan
 	.4byte 0
-	.4byte func_8046D104
+	.4byte __dt__8046D104
 	.4byte func_80039E28
 	.4byte func_80471E9C
 	.4byte func_80039E18
@@ -9648,7 +9648,7 @@ float_8066815C:
 	.4byte 0x00000000
 	.4byte 0x8780001F
 	.4byte 0x00000A44
-	.4byte func_8046D104
+	.4byte __dt__8046D104
 .endobj "@etb_8001DD2C"
 
 .obj "@etb_8001DD48", local
@@ -9665,10 +9665,10 @@ float_8066815C:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000ABC
-	.4byte func_8046A584
+	.4byte __dt__8046A584
 	.4byte 0x8780001E
 	.4byte 0x00000A44
-	.4byte func_8046D104
+	.4byte __dt__8046D104
 .endobj "@etb_8001DD50"
 
 .obj "@etb_8001DD78", local
@@ -10104,14 +10104,14 @@ float_8066815C:
 
 .obj "@eti_80035A98", local
 .hidden "@eti_80035A98"
-	.4byte func_8046D104
+	.4byte __dt__8046D104
 	.4byte 0x00000040
 	.4byte "@etb_8001DD48"
 .endobj "@eti_80035A98"
 
 .obj "@eti_80035AA4", local
 .hidden "@eti_80035AA4"
-	.4byte func_8046D144
+	.4byte __dt__8046D144
 	.4byte 0x00000120
 	.4byte "@etb_8001DD50"
 .endobj "@eti_80035AA4"

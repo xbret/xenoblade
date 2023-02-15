@@ -881,9 +881,9 @@
 /* 802A4630 0026DBF0  38 03 FF 89 */	addi r0, r3, -119
 /* 802A4634 0026DBF4  28 00 00 08 */	cmplwi r0, 8
 /* 802A4638 0026DBF8  41 81 01 3C */	bgt .L_802A4774
-/* 802A463C 0026DBFC  3C 60 80 54 */	lis r3, lbl_8053D0C0@ha
+/* 802A463C 0026DBFC  3C 60 80 54 */	lis r3, jumptable_8053D0C0@ha
 /* 802A4640 0026DC00  54 00 10 3A */	slwi r0, r0, 2
-/* 802A4644 0026DC04  38 63 D0 C0 */	addi r3, r3, lbl_8053D0C0@l
+/* 802A4644 0026DC04  38 63 D0 C0 */	addi r3, r3, jumptable_8053D0C0@l
 /* 802A4648 0026DC08  7C 63 00 2E */	lwzx r3, r3, r0
 /* 802A464C 0026DC0C  7C 69 03 A6 */	mtctr r3
 /* 802A4650 0026DC10  4E 80 04 20 */	bctr
@@ -1091,8 +1091,8 @@ __vt__cf_CVS_THREAD:
 	.4byte 0
 
 
-.global lbl_8053D0C0
-lbl_8053D0C0:
+.global jumptable_8053D0C0
+jumptable_8053D0C0:
 	.4byte .L_802A4654
 	.4byte .L_802A4668
 	.4byte .L_802A467C

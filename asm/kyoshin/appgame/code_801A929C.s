@@ -896,7 +896,7 @@
 /* 801A9F74 00173534  4E 80 00 20 */	blr 
 .endfn func_801A9CCC
 
-.fn func_801A9F78, global
+.fn __dt__801A9F78, global
 /* 801A9F78 00173538  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801A9F7C 0017353C  7C 08 02 A6 */	mflr r0
 /* 801A9F80 00173540  2C 03 00 00 */	cmpwi r3, 0
@@ -916,7 +916,7 @@
 /* 801A9FB4 00173574  7C 08 03 A6 */	mtlr r0
 /* 801A9FB8 00173578  38 21 00 10 */	addi r1, r1, 0x10
 /* 801A9FBC 0017357C  4E 80 00 20 */	blr 
-.endfn func_801A9F78
+.endfn __dt__801A9F78
 
 .fn func_801A9FC0, global
 /* 801A9FC0 00173580  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -2077,7 +2077,7 @@ lbl_80666C20:
 
 .obj "@eti_8002A7B8", local
 .hidden "@eti_8002A7B8"
-	.4byte func_801A9F78
+	.4byte __dt__801A9F78
 	.4byte 0x00000048
 	.4byte "@etb_8000FAC4"
 .endobj "@eti_8002A7B8"

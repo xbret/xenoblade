@@ -90,7 +90,7 @@
 /* 80273268 0023C828  4E 80 00 20 */	blr 
 .endfn func_80273120
 
-.fn func_8027326C, global
+.fn __dt__8027326C, global
 /* 8027326C 0023C82C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80273270 0023C830  7C 08 02 A6 */	mflr r0
 /* 80273274 0023C834  2C 03 00 00 */	cmpwi r3, 0
@@ -101,9 +101,9 @@
 /* 80273288 0023C848  41 82 00 54 */	beq .L_802732DC
 /* 8027328C 0023C84C  34 63 00 8C */	addic. r3, r3, 0x8c
 /* 80273290 0023C850  41 82 00 18 */	beq .L_802732A8
-/* 80273294 0023C854  3C 80 80 27 */	lis r4, func_80272774@ha
+/* 80273294 0023C854  3C 80 80 27 */	lis r4, __dt__80272774@ha
 /* 80273298 0023C858  38 A0 00 14 */	li r5, 0x14
-/* 8027329C 0023C85C  38 84 27 74 */	addi r4, r4, func_80272774@l
+/* 8027329C 0023C85C  38 84 27 74 */	addi r4, r4, __dt__80272774@l
 /* 802732A0 0023C860  38 C0 01 00 */	li r6, 0x100
 /* 802732A4 0023C864  48 04 69 55 */	bl __destroy_arr
 .L_802732A8:
@@ -127,7 +127,7 @@
 /* 802732E8 0023C8A8  7C 08 03 A6 */	mtlr r0
 /* 802732EC 0023C8AC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802732F0 0023C8B0  4E 80 00 20 */	blr 
-.endfn func_8027326C
+.endfn __dt__8027326C
 
 .fn func_802732F4, global
 /* 802732F4 0023C8B4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1205,10 +1205,10 @@
 /* 80274208 0023D7C8  7C 1D F8 40 */	cmplw r29, r31
 /* 8027420C 0023D7CC  41 80 FF E8 */	blt .L_802741F4
 /* 80274210 0023D7D0  88 01 14 08 */	lbz r0, 0x1408(r1)
-/* 80274214 0023D7D4  3C 80 80 27 */	lis r4, func_80272774@ha
+/* 80274214 0023D7D4  3C 80 80 27 */	lis r4, __dt__80272774@ha
 /* 80274218 0023D7D8  98 1C 14 8C */	stb r0, 0x148c(r28)
 /* 8027421C 0023D7DC  38 61 00 08 */	addi r3, r1, 8
-/* 80274220 0023D7E0  38 84 27 74 */	addi r4, r4, func_80272774@l
+/* 80274220 0023D7E0  38 84 27 74 */	addi r4, r4, __dt__80272774@l
 /* 80274224 0023D7E4  38 A0 00 14 */	li r5, 0x14
 /* 80274228 0023D7E8  80 01 14 0C */	lwz r0, 0x140c(r1)
 /* 8027422C 0023D7EC  38 C0 01 00 */	li r6, 0x100
@@ -1456,7 +1456,7 @@ CMenuKizunaTalkList_strpool:
 __vt__CKizunaTalkList:
 	.4byte __RTTI__CKizunaTalkList
 	.4byte 0
-	.4byte func_8027326C
+	.4byte __dt__8027326C
 	.4byte func_80039E28
 	.4byte func_80274268
 	.4byte func_80039E18
@@ -1569,7 +1569,7 @@ lbl_806671C8:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x0000008C
-	.4byte func_802727B4
+	.4byte __dt__802727B4
 	.4byte 0x0780001E
 	.4byte 0x00000044
 	.4byte __dt__CScrollBar
@@ -1596,16 +1596,16 @@ lbl_806671C8:
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x0000008C
-	.4byte func_802727B4
+	.4byte __dt__802727B4
 	.4byte 0x0780001E
 	.4byte 0x0000008C
-	.4byte func_802727B4
+	.4byte __dt__802727B4
 	.4byte 0x8780001E
 	.4byte 0x00000044
 	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x0000008C
-	.4byte func_802727B4
+	.4byte __dt__802727B4
 	.4byte 0x0780001E
 	.4byte 0x00000044
 	.4byte __dt__CScrollBar
@@ -1763,7 +1763,7 @@ lbl_806671C8:
 
 .obj "@eti_80030974", local
 .hidden "@eti_80030974"
-	.4byte func_8027326C
+	.4byte __dt__8027326C
 	.4byte 0x00000088
 	.4byte "@etb_800182E4"
 .endobj "@eti_80030974"

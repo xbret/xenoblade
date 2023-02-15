@@ -114,7 +114,7 @@
 /* 8045E6D4 00427C94  C3 E2 C9 B0 */	lfs f31, float_8066CD30@sda21(r2)
 /* 8045E6D8 00427C98  3B 80 00 00 */	li r28, 0
 /* 8045E6DC 00427C9C  C3 42 C9 B4 */	lfs f26, float_8066CD34@sda21(r2)
-/* 8045E6E0 00427CA0  3F 60 80 57 */	lis r27, lbl_80570AA8@ha
+/* 8045E6E0 00427CA0  3F 60 80 57 */	lis r27, jumptable_80570AA8@ha
 /* 8045E6E4 00427CA4  C3 A2 C9 B8 */	lfs f29, float_8066CD38@sda21(r2)
 /* 8045E6E8 00427CA8  C3 C2 C9 C4 */	lfs f30, float_8066CD44@sda21(r2)
 .L_8045E6EC:
@@ -149,7 +149,7 @@
 /* 8045E758 00427D18  EC 1A 07 F2 */	fmuls f0, f26, f31
 /* 8045E75C 00427D1C  FC 40 08 90 */	fmr f2, f1
 /* 8045E760 00427D20  41 81 00 64 */	bgt .L_8045E7C4
-/* 8045E764 00427D24  38 9B 0A A8 */	addi r4, r27, lbl_80570AA8@l
+/* 8045E764 00427D24  38 9B 0A A8 */	addi r4, r27, jumptable_80570AA8@l
 /* 8045E768 00427D28  54 00 10 3A */	slwi r0, r0, 2
 /* 8045E76C 00427D2C  7C 84 00 2E */	lwzx r4, r4, r0
 /* 8045E770 00427D30  7C 89 03 A6 */	mtctr r4
@@ -519,7 +519,7 @@
 /* 8045EC9C 0042825C  4B FE 41 0D */	bl func_80442DA8
 /* 8045ECA0 00428260  38 61 00 60 */	addi r3, r1, 0x60
 /* 8045ECA4 00428264  38 80 FF FF */	li r4, -1
-/* 8045ECA8 00428268  4B FF 75 05 */	bl func_804561AC
+/* 8045ECA8 00428268  4B FF 75 05 */	bl __dt__804561AC
 /* 8045ECAC 0042826C  80 01 01 54 */	lwz r0, 0x154(r1)
 /* 8045ECB0 00428270  E3 E1 01 48 */	psq_l f31, 328(r1), 0, qr0
 /* 8045ECB4 00428274  CB E1 01 40 */	lfd f31, 0x140(r1)
@@ -736,8 +736,8 @@ CLibHbmControl_strpool:
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80570AA8
-lbl_80570AA8:
+.global jumptable_80570AA8
+jumptable_80570AA8:
 	.4byte .L_8045E7C4
 	.4byte .L_8045E778
 	.4byte .L_8045E780
@@ -755,7 +755,7 @@ lbl_80570AA8:
 __vt__CLibHbmControl:
 	.4byte __RTTI__CLibHbmControl
 	.4byte 0
-	.4byte func_8045E4C8
+	.4byte __dt__8045E4C8
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -908,7 +908,7 @@ double_8066CD68:
 	.4byte 0x009F0010
 	.4byte 0x00000000
 	.4byte 0x82000060
-	.4byte func_804561AC
+	.4byte __dt__804561AC
 .endobj "@etb_8001D790"
 
 .obj "@etb_8001D7A8", local

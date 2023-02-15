@@ -897,7 +897,7 @@
 /* 804E42F0 004AD8B0  4E 80 00 20 */	blr 
 .endfn func_804E424C
 
-.fn func_804E42F4, global
+.fn __dt__804E42F4, global
 /* 804E42F4 004AD8B4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804E42F8 004AD8B8  7C 08 02 A6 */	mflr r0
 /* 804E42FC 004AD8BC  2C 03 00 00 */	cmpwi r3, 0
@@ -915,7 +915,7 @@
 /* 804E4328 004AD8E8  7C 08 03 A6 */	mtlr r0
 /* 804E432C 004AD8EC  38 21 00 10 */	addi r1, r1, 0x10
 /* 804E4330 004AD8F0  4E 80 00 20 */	blr 
-.endfn func_804E42F4
+.endfn __dt__804E42F4
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
@@ -1085,7 +1085,7 @@ double_8066DA98:
 
 .obj "@eti_80038CA8", local
 .hidden "@eti_80038CA8"
-	.4byte func_804E42F4
+	.4byte __dt__804E42F4
 	.4byte 0x00000040
 	.4byte "@etb_80020B70"
 .endobj "@eti_80038CA8"

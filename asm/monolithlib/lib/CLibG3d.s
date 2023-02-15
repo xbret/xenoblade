@@ -26,7 +26,7 @@
 /* 8045D198 00426758  4E 80 00 20 */	blr 
 .endfn func_8045D150
 
-.fn func_8045D19C, global
+.fn __dt__8045D19C, global
 /* 8045D19C 0042675C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045D1A0 00426760  7C 08 02 A6 */	mflr r0
 /* 8045D1A4 00426764  2C 03 00 00 */	cmpwi r3, 0
@@ -52,7 +52,7 @@
 /* 8045D1F0 004267B0  7C 08 03 A6 */	mtlr r0
 /* 8045D1F4 004267B4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045D1F8 004267B8  4E 80 00 20 */	blr 
-.endfn func_8045D19C
+.endfn __dt__8045D19C
 
 .fn func_8045D1FC, global
 /* 8045D1FC 004267BC  80 6D BE 48 */	lwz r3, lbl_80667FC8@sda21(r13)
@@ -172,7 +172,7 @@
 __vt__CLibG3d:
 	.4byte __RTTI__CLibG3d
 	.4byte 0
-	.4byte func_8045D19C
+	.4byte __dt__8045D19C
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -288,7 +288,7 @@ lbl_80667FC8:
 
 .obj "@eti_800352C4", local
 .hidden "@eti_800352C4"
-	.4byte func_8045D19C
+	.4byte __dt__8045D19C
 	.4byte 0x00000060
 	.4byte "@etb_8001D6E8"
 .endobj "@eti_800352C4"

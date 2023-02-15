@@ -722,10 +722,10 @@
 /* 8006934C 0003290C  3F E0 80 57 */	lis r31, lbl_80574110@ha
 /* 80069350 00032910  3C 80 80 07 */	lis r4, func_800693A0@ha
 /* 80069354 00032914  3B FF 41 10 */	addi r31, r31, lbl_80574110@l
-/* 80069358 00032918  3C A0 80 07 */	lis r5, func_800693CC@ha
+/* 80069358 00032918  3C A0 80 07 */	lis r5, __dt__800693CC@ha
 /* 8006935C 0003291C  7F E3 FB 78 */	mr r3, r31
 /* 80069360 00032920  38 84 93 A0 */	addi r4, r4, func_800693A0@l
-/* 80069364 00032924  38 A5 93 CC */	addi r5, r5, func_800693CC@l
+/* 80069364 00032924  38 A5 93 CC */	addi r5, r5, __dt__800693CC@l
 /* 80069368 00032928  38 C0 00 58 */	li r6, 0x58
 /* 8006936C 0003292C  38 E0 00 03 */	li r7, 3
 /* 80069370 00032930  48 25 07 91 */	bl __construct_array
@@ -757,7 +757,7 @@
 /* 800693C8 00032988  4E 80 00 20 */	blr
 .endfn func_800693A0
 
-.fn func_800693CC, global
+.fn __dt__800693CC, global
 /* 800693CC 0003298C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800693D0 00032990  7C 08 02 A6 */	mflr r0
 /* 800693D4 00032994  2C 03 00 00 */	cmpwi r3, 0
@@ -775,7 +775,7 @@
 /* 80069400 000329C0  7C 08 03 A6 */	mtlr r0
 /* 80069404 000329C4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80069408 000329C8  4E 80 00 20 */	blr 
-.endfn func_800693CC
+.endfn __dt__800693CC
 
 .fn func_8006940C, global
 /* 8006940C 000329CC  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1022,7 +1022,7 @@ lbl_8052A5A0:
 __vt__cf_CfScript:
 	.4byte __RTTI__cf_CfScript
 	.4byte 0
-	.4byte func_800693CC
+	.4byte __dt__800693CC
 	.4byte func_80039E28
 	.4byte func_8006923C
 	.4byte func_80039E18
@@ -1259,7 +1259,7 @@ lbl_80574110:
 	.4byte 0x00000000
 	.4byte 0x00000003
 	.4byte 0x00000058
-	.4byte func_800693CC
+	.4byte __dt__800693CC
 .endobj "@etb_80007ED4"
 
 .obj "@etb_80007EF8", local
@@ -1458,7 +1458,7 @@ lbl_80574110:
 
 .obj "@eti_80023180", local
 .hidden "@eti_80023180"
-	.4byte func_800693CC
+	.4byte __dt__800693CC
 	.4byte 0x00000040
 	.4byte "@etb_80007EF8"
 .endobj "@eti_80023180"

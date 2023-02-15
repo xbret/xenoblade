@@ -50,7 +50,7 @@
 /* 801B1970 0017AF30  4E 80 00 20 */	blr
 .endfn func_801B18D0
 
-.fn func_801B1974, global
+.fn __dt__801B1974, global
 /* 801B1974 0017AF34  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801B1978 0017AF38  7C 08 02 A6 */	mflr r0
 /* 801B197C 0017AF3C  2C 03 00 00 */	cmpwi r3, 0
@@ -84,7 +84,7 @@
 /* 801B19E4 0017AFA4  7C 08 03 A6 */	mtlr r0
 /* 801B19E8 0017AFA8  38 21 00 10 */	addi r1, r1, 0x10
 /* 801B19EC 0017AFAC  4E 80 00 20 */	blr 
-.endfn func_801B1974
+.endfn __dt__801B1974
 
 .fn func_801B19F0, global
 /* 801B19F0 0017AFB0  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -955,7 +955,7 @@
 
 .fn func_801B255C, global
 /* 801B255C 0017BB1C  38 63 FF FC */	addi r3, r3, -4
-/* 801B2560 0017BB20  4B FF F4 14 */	b func_801B1974
+/* 801B2560 0017BB20  4B FF F4 14 */	b __dt__801B1974
 .endfn func_801B255C
 
 
@@ -997,7 +997,7 @@ lbl_80536EF0:
 __vt__cf_CPcEffect07:
 	.4byte __RTTI__cf_CPcEffect07
 	.4byte 0
-	.4byte func_801B1974
+	.4byte __dt__801B1974
 	.4byte func_801B218C
 	.4byte __RTTI__cf_CPcEffect07
 	.4byte 0xFFFFFFFC
@@ -1117,7 +1117,7 @@ lbl_80666C88:
 
 .obj "@eti_8002A9E0", local
 .hidden "@eti_8002A9E0"
-	.4byte func_801B1974
+	.4byte __dt__801B1974
 	.4byte 0x0000007C
 	.4byte "@etb_8000FD24"
 .endobj "@eti_8002A9E0"

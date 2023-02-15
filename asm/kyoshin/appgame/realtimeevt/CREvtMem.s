@@ -24,7 +24,7 @@
 /* 80167C80 00131240  4E 80 00 20 */	blr 
 .endfn func_80167C40
 
-.fn func_80167C84, global
+.fn __dt__80167C84, global
 /* 80167C84 00131244  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80167C88 00131248  7C 08 02 A6 */	mflr r0
 /* 80167C8C 0013124C  2C 03 00 00 */	cmpwi r3, 0
@@ -75,7 +75,7 @@
 /* 80167D34 001312F4  7C 08 03 A6 */	mtlr r0
 /* 80167D38 001312F8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80167D3C 001312FC  4E 80 00 20 */	blr 
-.endfn func_80167C84
+.endfn __dt__80167C84
 
 .fn func_80167D40, global
 /* 80167D40 00131300  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -319,7 +319,7 @@ cf_CREvtMem_typestr:
 __vt__cf_CREvtMem:
 	.4byte __RTTI__cf_CREvtMem
 	.4byte 0
-	.4byte func_80167C84
+	.4byte __dt__80167C84
 	.4byte 0
 
 
@@ -383,7 +383,7 @@ lbl_80666B50:
 
 .obj "@eti_80028DCC", local
 .hidden "@eti_80028DCC"
-	.4byte func_80167C84
+	.4byte __dt__80167C84
 	.4byte 0x000000BC
 	.4byte "@etb_8000DE34"
 .endobj "@eti_80028DCC"

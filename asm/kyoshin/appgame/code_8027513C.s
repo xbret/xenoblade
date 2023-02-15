@@ -598,7 +598,7 @@
 /* 80275964 0023EF24  4B E5 A6 3C */	b func_800CFFA0
 .endfn func_8027594C
 
-.fn func_80275968, global
+.fn __dt__80275968, global
 /* 80275968 0023EF28  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027596C 0023EF2C  7C 08 02 A6 */	mflr r0
 /* 80275970 0023EF30  2C 03 00 00 */	cmpwi r3, 0
@@ -616,7 +616,7 @@
 /* 8027599C 0023EF5C  7C 08 03 A6 */	mtlr r0
 /* 802759A0 0023EF60  38 21 00 10 */	addi r1, r1, 0x10
 /* 802759A4 0023EF64  4E 80 00 20 */	blr 
-.endfn func_80275968
+.endfn __dt__80275968
 
 .fn func_802759A8, global
 /* 802759A8 0023EF68  38 60 00 00 */	li r3, 0
@@ -625,7 +625,7 @@
 
 .fn func_802759B0, global
 /* 802759B0 0023EF70  38 63 FF F4 */	addi r3, r3, -12
-/* 802759B4 0023EF74  4B FF FF B4 */	b func_80275968
+/* 802759B4 0023EF74  4B FF FF B4 */	b __dt__80275968
 .endfn func_802759B0
 
 .fn func_802759B8, global
@@ -635,7 +635,7 @@
 
 .fn func_802759C0, global
 /* 802759C0 0023EF80  38 63 FF F0 */	addi r3, r3, -16
-/* 802759C4 0023EF84  4B FF FF A4 */	b func_80275968
+/* 802759C4 0023EF84  4B FF FF A4 */	b __dt__80275968
 .endfn func_802759C0
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -764,7 +764,7 @@ lbl_8053B750:
 __vt__cf_CfObjectImplTbox:
 	.4byte __RTTI__cf_CfObjectImplTbox
 	.4byte 0
-	.4byte func_80275968
+	.4byte __dt__80275968
 	.4byte func_80054A20
 	.4byte func_800CC5DC
 	.4byte func_800CC638
@@ -1122,7 +1122,7 @@ lbl_806671EC:
 
 .obj "@eti_80030C80", local
 .hidden "@eti_80030C80"
-	.4byte func_80275968
+	.4byte __dt__80275968
 	.4byte 0x00000040
 	.4byte "@etb_800185D8"
 .endobj "@eti_80030C80"

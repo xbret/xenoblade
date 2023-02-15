@@ -36,7 +36,7 @@
 /* 802B8204 002817C4  4E 80 00 20 */	blr
 .endfn func_802B8198
 
-.fn func_802B8208, global
+.fn __dt__802B8208, global
 /* 802B8208 002817C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802B820C 002817CC  7C 08 02 A6 */	mflr r0
 /* 802B8210 002817D0  2C 03 00 00 */	cmpwi r3, 0
@@ -69,7 +69,7 @@
 /* 802B8274 00281834  7C 08 03 A6 */	mtlr r0
 /* 802B8278 00281838  38 21 00 10 */	addi r1, r1, 0x10
 /* 802B827C 0028183C  4E 80 00 20 */	blr 
-.endfn func_802B8208
+.endfn __dt__802B8208
 
 .fn func_802B8280, global
 /* 802B8280 00281840  38 00 00 00 */	li r0, 0
@@ -157,7 +157,7 @@
 
 .fn func_802B8390, global
 /* 802B8390 00281950  38 63 FF F4 */	addi r3, r3, -12
-/* 802B8394 00281954  4B FF FE 74 */	b func_802B8208
+/* 802B8394 00281954  4B FF FE 74 */	b __dt__802B8208
 .endfn func_802B8390
 
 .section extab, "a" # 0x800066E0 - 0x80021020
@@ -172,7 +172,7 @@
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x0000000C
-	.4byte func_801320F0
+	.4byte __dt__801320F0
 .endobj "@etb_8001BDA8"
 
 .obj "@etb_8001BDC4", local
@@ -183,7 +183,7 @@
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x0000000C
-	.4byte func_801320F0
+	.4byte __dt__801320F0
 .endobj "@etb_8001BDC4"
 
 .obj "@etb_8001BDE0", local
@@ -211,7 +211,7 @@
 
 .obj "@eti_80033950", local
 .hidden "@eti_80033950"
-	.4byte func_802B8208
+	.4byte __dt__802B8208
 	.4byte 0x00000078
 	.4byte "@etb_8001BDC4"
 .endobj "@eti_80033950"

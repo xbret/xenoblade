@@ -330,9 +330,9 @@
 /* 802BC848 00285E08  93 C1 00 68 */	stw r30, 0x68(r1)
 /* 802BC84C 00285E0C  7C 9E 23 78 */	mr r30, r4
 /* 802BC850 00285E10  41 81 02 10 */	bgt .L_802BCA60
-/* 802BC854 00285E14  3C A0 80 54 */	lis r5, lbl_8053F230@ha
+/* 802BC854 00285E14  3C A0 80 54 */	lis r5, jumptable_8053F230@ha
 /* 802BC858 00285E18  54 00 10 3A */	slwi r0, r0, 2
-/* 802BC85C 00285E1C  38 A5 F2 30 */	addi r5, r5, lbl_8053F230@l
+/* 802BC85C 00285E1C  38 A5 F2 30 */	addi r5, r5, jumptable_8053F230@l
 /* 802BC860 00285E20  7C A5 00 2E */	lwzx r5, r5, r0
 /* 802BC864 00285E24  7C A9 03 A6 */	mtctr r5
 /* 802BC868 00285E28  4E 80 04 20 */	bctr 
@@ -1780,8 +1780,8 @@
 .endfn __dec2num
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
-.global lbl_8053F230
-lbl_8053F230:
+.global jumptable_8053F230
+jumptable_8053F230:
 	.4byte .L_802BC86C
 	.4byte .L_802BCA60
 	.4byte .L_802BCA60

@@ -26,7 +26,7 @@
 /* 80443A14 0040CFD4  4E 80 00 20 */	blr 
 .endfn func_804439CC
 
-.fn func_80443A18, global
+.fn __dt__80443A18, global
 /* 80443A18 0040CFD8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80443A1C 0040CFDC  7C 08 02 A6 */	mflr r0
 /* 80443A20 0040CFE0  2C 03 00 00 */	cmpwi r3, 0
@@ -50,7 +50,7 @@
 /* 80443A64 0040D024  7C 08 03 A6 */	mtlr r0
 /* 80443A68 0040D028  38 21 00 10 */	addi r1, r1, 0x10
 /* 80443A6C 0040D02C  4E 80 00 20 */	blr 
-.endfn func_80443A18
+.endfn __dt__80443A18
 
 .fn func_80443A70, global
 /* 80443A70 0040D030  80 6D BD 40 */	lwz r3, lbl_80667EC0@sda21(r13)
@@ -134,7 +134,7 @@ CWorkFlowSetup_typestr:
 __vt__CWorkFlowSetup:
 	.4byte __RTTI__CWorkFlowSetup
 	.4byte 0
-	.4byte func_80443A18
+	.4byte __dt__80443A18
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -246,7 +246,7 @@ lbl_80667EE0:
 
 .obj "@eti_80034364", local
 .hidden "@eti_80034364"
-	.4byte func_80443A18
+	.4byte __dt__80443A18
 	.4byte 0x00000058
 	.4byte "@etb_8001C764"
 .endobj "@eti_80034364"

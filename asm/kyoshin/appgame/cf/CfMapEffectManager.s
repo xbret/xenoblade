@@ -49,7 +49,7 @@
 /* 8016EDF4 001383B4  4E 80 00 20 */	blr 
 .endfn func_8016ED50
 
-.fn func_8016EDF8, global
+.fn __dt__8016EDF8, global
 /* 8016EDF8 001383B8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8016EDFC 001383BC  7C 08 02 A6 */	mflr r0
 /* 8016EE00 001383C0  2C 03 00 00 */	cmpwi r3, 0
@@ -99,7 +99,7 @@
 /* 8016EEA4 00138464  7C 08 03 A6 */	mtlr r0
 /* 8016EEA8 00138468  38 21 00 20 */	addi r1, r1, 0x20
 /* 8016EEAC 0013846C  4E 80 00 20 */	blr 
-.endfn func_8016EDF8
+.endfn __dt__8016EDF8
 
 .fn func_8016EEB0, global
 /* 8016EEB0 00138470  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1279,7 +1279,7 @@ CfMapEffectManager_strpool:
 __vt__cf_CfMapEffectManager:
 	.4byte __RTTI__cf_CfMapEffectManager
 	.4byte 0
-	.4byte func_8016EDF8
+	.4byte __dt__8016EDF8
 	.4byte func_8016FC98
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -1369,7 +1369,7 @@ lbl_80666B80:
 	.4byte 0x00000000
 	.4byte 0x8680001D
 	.4byte 0x00000000
-	.4byte func_800804C0
+	.4byte __dt__800804C0
 .endobj "@etb_8000E158"
 
 .obj "@etb_8000E174", local
@@ -1439,7 +1439,7 @@ lbl_80666B80:
 
 .obj "@eti_8002918C", local
 .hidden "@eti_8002918C"
-	.4byte func_8016EDF8
+	.4byte __dt__8016EDF8
 	.4byte 0x000000B8
 	.4byte "@etb_8000E158"
 .endobj "@eti_8002918C"

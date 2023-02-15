@@ -61,7 +61,7 @@
 /* 804B5A78 0047F038  4E 80 00 20 */	blr 
 .endfn func_804B5A70
 
-.fn func_804B5A7C, global
+.fn __dt__804B5A7C, global
 /* 804B5A7C 0047F03C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804B5A80 0047F040  7C 08 02 A6 */	mflr r0
 /* 804B5A84 0047F044  2C 03 00 00 */	cmpwi r3, 0
@@ -84,9 +84,9 @@
 /* 804B5AC4 0047F084  7C 08 03 A6 */	mtlr r0
 /* 804B5AC8 0047F088  38 21 00 10 */	addi r1, r1, 0x10
 /* 804B5ACC 0047F08C  4E 80 00 20 */	blr
-.endfn func_804B5A7C
+.endfn __dt__804B5A7C
 
-.fn func_804B5AD0, global
+.fn __dt__804B5AD0, global
 /* 804B5AD0 0047F090  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804B5AD4 0047F094  7C 08 02 A6 */	mflr r0
 /* 804B5AD8 0047F098  2C 03 00 00 */	cmpwi r3, 0
@@ -114,7 +114,7 @@
 /* 804B5B28 0047F0E8  7C 08 03 A6 */	mtlr r0
 /* 804B5B2C 0047F0EC  38 21 00 10 */	addi r1, r1, 0x10
 /* 804B5B30 0047F0F0  4E 80 00 20 */	blr 
-.endfn func_804B5AD0
+.endfn __dt__804B5AD0
 
 .fn func_804B5B34, global
 /* 804B5B34 0047F0F4  4E 80 00 20 */	blr 
@@ -5789,10 +5789,10 @@
 /* 804BADD8 00484398  90 1F 00 60 */	stw r0, 0x60(r31)
 /* 804BADDC 0048439C  7F E3 FB 78 */	mr r3, r31
 /* 804BADE0 004843A0  4B FF CA 25 */	bl func_804B7804
-/* 804BADE4 004843A4  3C 80 80 4B */	lis r4, func_804B5AD0@ha
+/* 804BADE4 004843A4  3C 80 80 4B */	lis r4, __dt__804B5AD0@ha
 /* 804BADE8 004843A8  3C A0 80 66 */	lis r5, lbl_80661BE0@ha
 /* 804BADEC 004843AC  7F E3 FB 78 */	mr r3, r31
-/* 804BADF0 004843B0  38 84 5A D0 */	addi r4, r4, func_804B5AD0@l
+/* 804BADF0 004843B0  38 84 5A D0 */	addi r4, r4, __dt__804B5AD0@l
 /* 804BADF4 004843B4  38 A5 1B E0 */	addi r5, r5, lbl_80661BE0@l
 /* 804BADF8 004843B8  4B DF E8 A5 */	bl __register_global_object
 /* 804BADFC 004843BC  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -6183,7 +6183,7 @@ lbl_80661CE8:
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_804B5A7C
+	.4byte __dt__804B5A7C
 .endobj "@etb_8001FD94"
 
 .obj "@etb_8001FDB0", local
@@ -6398,7 +6398,7 @@ lbl_80661CE8:
 	.4byte 0x00000000
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte func_804B5A7C
+	.4byte __dt__804B5A7C
 .endobj "@etb_8001FEC0"
 
 .section extabindex, "a" # 0x80021020 - 0x80039220
@@ -6414,14 +6414,14 @@ lbl_80661CE8:
 
 .obj "@eti_80037A3C", local
 .hidden "@eti_80037A3C"
-	.4byte func_804B5A7C
+	.4byte __dt__804B5A7C
 	.4byte 0x00000054
 	.4byte "@etb_8001FD8C"
 .endobj "@eti_80037A3C"
 
 .obj "@eti_80037A48", local
 .hidden "@eti_80037A48"
-	.4byte func_804B5AD0
+	.4byte __dt__804B5AD0
 	.4byte 0x00000064
 	.4byte "@etb_8001FD94"
 .endobj "@eti_80037A48"

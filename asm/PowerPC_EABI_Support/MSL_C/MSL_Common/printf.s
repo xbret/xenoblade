@@ -263,9 +263,9 @@
 /* 802BEFBC 0028857C  98 C1 00 0D */	stb r6, 0xd(r1)
 /* 802BEFC0 00288580  28 00 00 37 */	cmplwi r0, 0x37
 /* 802BEFC4 00288584  41 81 01 FC */	bgt .L_802BF1C0
-/* 802BEFC8 00288588  3C 60 80 54 */	lis r3, lbl_8053F590@ha
+/* 802BEFC8 00288588  3C 60 80 54 */	lis r3, jumptable_8053F590@ha
 /* 802BEFCC 0028858C  54 00 10 3A */	slwi r0, r0, 2
-/* 802BEFD0 00288590  38 63 F5 90 */	addi r3, r3, lbl_8053F590@l
+/* 802BEFD0 00288590  38 63 F5 90 */	addi r3, r3, jumptable_8053F590@l
 /* 802BEFD4 00288594  7C 63 00 2E */	lwzx r3, r3, r0
 /* 802BEFD8 00288598  7C 69 03 A6 */	mtctr r3
 /* 802BEFDC 0028859C  4E 80 04 20 */	bctr 
@@ -1747,7 +1747,7 @@
 /* 802C03B0 00289970  3A D6 D5 28 */	addi r22, r22, lbl_8050D528@l
 /* 802C03B4 00289974  3A A1 02 7F */	addi r21, r1, 0x27f
 /* 802C03B8 00289978  3A 20 00 00 */	li r17, 0
-/* 802C03BC 0028997C  3E 80 80 54 */	lis r20, lbl_8053F670@ha
+/* 802C03BC 0028997C  3E 80 80 54 */	lis r20, jumptable_8053F670@ha
 /* 802C03C0 00289980  3A E0 00 25 */	li r23, 0x25
 /* 802C03C4 00289984  9B 01 00 09 */	stb r24, 9(r1)
 /* 802C03C8 00289988  48 00 08 44 */	b .L_802C0C0C
@@ -1796,7 +1796,7 @@
 /* 802C0468 00289A28  38 04 FF DB */	addi r0, r4, -37
 /* 802C046C 00289A2C  28 00 00 53 */	cmplwi r0, 0x53
 /* 802C0470 00289A30  41 81 05 BC */	bgt .L_802C0A2C
-/* 802C0474 00289A34  38 74 F6 70 */	addi r3, r20, lbl_8053F670@l
+/* 802C0474 00289A34  38 74 F6 70 */	addi r3, r20, jumptable_8053F670@l
 /* 802C0478 00289A38  54 00 10 3A */	slwi r0, r0, 2
 /* 802C047C 00289A3C  7C 63 00 2E */	lwzx r3, r3, r0
 /* 802C0480 00289A40  7C 69 03 A6 */	mtctr r3
@@ -2887,8 +2887,8 @@ _current_locale:
 	.4byte _loc_num_C #0x40
 	.4byte _loc_tim_C #0x44
 
-.global lbl_8053F590
-lbl_8053F590:
+.global jumptable_8053F590
+jumptable_8053F590:
 	.4byte .L_802BF070
 	.4byte .L_802BF1C0
 	.4byte .L_802BF1C0
@@ -2946,8 +2946,8 @@ lbl_8053F590:
 	.4byte .L_802BF1C0
 	.4byte .L_802BEFE0
 
-.global lbl_8053F670
-lbl_8053F670:
+.global jumptable_8053F670
+jumptable_8053F670:
 	.4byte .L_802C0A1C #%
 	.4byte .L_802C0A2C
 	.4byte .L_802C0A2C

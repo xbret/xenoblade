@@ -4,7 +4,7 @@
 
 
 
-.fn func_8049E5DC, global
+.fn __dt__8049E5DC, global
 /* 8049E5DC 00467B9C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049E5E0 00467BA0  7C 08 02 A6 */	mflr r0
 /* 8049E5E4 00467BA4  2C 03 00 00 */	cmpwi r3, 0
@@ -33,7 +33,7 @@
 /* 8049E63C 00467BFC  7C 08 03 A6 */	mtlr r0
 /* 8049E640 00467C00  38 21 00 10 */	addi r1, r1, 0x10
 /* 8049E644 00467C04  4E 80 00 20 */	blr 
-.endfn func_8049E5DC
+.endfn __dt__8049E5DC
 
 .fn func_8049E648, global
 /* 8049E648 00467C08  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -242,7 +242,7 @@ CScnItemAnim_typestr:
 __vt__CScnItemAnim:
 	.4byte __RTTI__CScnItemAnim
 	.4byte 0
-	.4byte func_8049E5DC
+	.4byte __dt__8049E5DC
 	.4byte func_8048228C
 	.4byte func_80482048
 	.4byte func_80482288
@@ -283,7 +283,7 @@ lbl_806663A8:
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_80482054
+	.4byte __dt__80482054
 .endobj "@etb_8001F700"
 
 .obj "@etb_8001F71C", local
@@ -302,7 +302,7 @@ lbl_806663A8:
 	.4byte 0x00000000
 	.4byte 0x0680001D
 	.4byte 0x00000000
-	.4byte func_80482054
+	.4byte __dt__80482054
 	.4byte 0x90000000
 	.4byte 0x00000000
 	.4byte 0x00000164
@@ -316,7 +316,7 @@ lbl_806663A8:
 
 .obj "@eti_800371C0", local
 .hidden "@eti_800371C0"
-	.4byte func_8049E5DC
+	.4byte __dt__8049E5DC
 	.4byte 0x0000006C
 	.4byte "@etb_8001F700"
 .endobj "@eti_800371C0"

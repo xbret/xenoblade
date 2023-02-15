@@ -33,7 +33,7 @@
 /* 8022C718 001F5CD8  4E 80 00 20 */	blr 
 .endfn func_8022C6B4
 
-.fn func_8022C71C, global
+.fn __dt__8022C71C, global
 /* 8022C71C 001F5CDC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8022C720 001F5CE0  7C 08 02 A6 */	mflr r0
 /* 8022C724 001F5CE4  2C 03 00 00 */	cmpwi r3, 0
@@ -56,7 +56,7 @@
 /* 8022C764 001F5D24  7C 08 03 A6 */	mtlr r0
 /* 8022C768 001F5D28  38 21 00 10 */	addi r1, r1, 0x10
 /* 8022C76C 001F5D2C  4E 80 00 20 */	blr 
-.endfn func_8022C71C
+.endfn __dt__8022C71C
 
 .fn func_8022C770, global
 /* 8022C770 001F5D30  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -604,7 +604,7 @@ CSelShopWin_strpool:
 __vt__CSelShopWin:
 	.4byte __RTTI__CSelShopWin
 	.4byte 0
-	.4byte func_8022C71C
+	.4byte __dt__8022C71C
 	.4byte func_80039E28
 	.4byte func_8022CA88
 	.4byte func_80039E18
@@ -747,7 +747,7 @@ double_8066AEC8:
 
 .obj "@eti_8002E5A4", local
 .hidden "@eti_8002E5A4"
-	.4byte func_8022C71C
+	.4byte __dt__8022C71C
 	.4byte 0x00000054
 	.4byte "@etb_80015698"
 .endobj "@eti_8002E5A4"

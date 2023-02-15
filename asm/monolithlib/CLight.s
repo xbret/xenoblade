@@ -675,7 +675,7 @@
 __vt__CLight:
 	.4byte __RTTI__CLight
 	.4byte 0
-	.4byte func_80492034
+	.4byte __dt__80492034
 	.4byte 0
 
 

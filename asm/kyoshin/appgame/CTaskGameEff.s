@@ -68,7 +68,7 @@
 /* 80044BAC 0000E16C  4E 80 00 20 */	blr 
 .endfn __ct__CTaskGameEff
 
-.fn func_80044BB0, global
+.fn __dt__80044BB0, global
 /* 80044BB0 0000E170  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80044BB4 0000E174  7C 08 02 A6 */	mflr r0
 /* 80044BB8 0000E178  2C 03 00 00 */	cmpwi r3, 0
@@ -86,9 +86,9 @@
 /* 80044BE4 0000E1A4  7C 08 03 A6 */	mtlr r0
 /* 80044BE8 0000E1A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80044BEC 0000E1AC  4E 80 00 20 */	blr 
-.endfn func_80044BB0
+.endfn __dt__80044BB0
 
-.fn func_80044BF0, global
+.fn __dt__80044BF0, global
 /* 80044BF0 0000E1B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80044BF4 0000E1B4  7C 08 02 A6 */	mflr r0
 /* 80044BF8 0000E1B8  2C 03 00 00 */	cmpwi r3, 0
@@ -98,7 +98,7 @@
 /* 80044C08 0000E1C8  7C 9F 23 78 */	mr r31, r4
 /* 80044C0C 0000E1CC  41 82 00 1C */	beq .L_80044C28
 /* 80044C10 0000E1D0  38 80 00 00 */	li r4, 0
-/* 80044C14 0000E1D4  48 3F FF 25 */	bl func_80444B38
+/* 80044C14 0000E1D4  48 3F FF 25 */	bl __dt__80444B38
 /* 80044C18 0000E1D8  2C 1F 00 00 */	cmpwi r31, 0
 /* 80044C1C 0000E1DC  40 81 00 0C */	ble .L_80044C28
 /* 80044C20 0000E1E0  7F C3 F3 78 */	mr r3, r30
@@ -110,9 +110,9 @@
 /* 80044C34 0000E1F4  7C 08 03 A6 */	mtlr r0
 /* 80044C38 0000E1F8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80044C3C 0000E1FC  4E 80 00 20 */	blr 
-.endfn func_80044BF0
+.endfn __dt__80044BF0
 
-.fn func_80044C40, global
+.fn __dt__80044C40, global
 /* 80044C40 0000E200  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80044C44 0000E204  7C 08 02 A6 */	mflr r0
 /* 80044C48 0000E208  2C 03 00 00 */	cmpwi r3, 0
@@ -130,9 +130,9 @@
 /* 80044C74 0000E234  7C 08 03 A6 */	mtlr r0
 /* 80044C78 0000E238  38 21 00 10 */	addi r1, r1, 0x10
 /* 80044C7C 0000E23C  4E 80 00 20 */	blr 
-.endfn func_80044C40
+.endfn __dt__80044C40
 
-.fn func_80044C80, global
+.fn __dt__80044C80, global
 /* 80044C80 0000E240  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80044C84 0000E244  7C 08 02 A6 */	mflr r0
 /* 80044C88 0000E248  2C 03 00 00 */	cmpwi r3, 0
@@ -180,9 +180,9 @@
 /* 80044D20 0000E2E0  7C 08 03 A6 */	mtlr r0
 /* 80044D24 0000E2E4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80044D28 0000E2E8  4E 80 00 20 */	blr 
-.endfn func_80044C80
+.endfn __dt__80044C80
 
-.fn func_80044D2C, global
+.fn __dt__80044D2C, global
 /* 80044D2C 0000E2EC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80044D30 0000E2F0  7C 08 02 A6 */	mflr r0
 /* 80044D34 0000E2F4  2C 03 00 00 */	cmpwi r3, 0
@@ -192,7 +192,7 @@
 /* 80044D44 0000E304  7C 9F 23 78 */	mr r31, r4
 /* 80044D48 0000E308  41 82 00 1C */	beq .L_80044D64
 /* 80044D4C 0000E30C  38 80 00 00 */	li r4, 0
-/* 80044D50 0000E310  4B FF FF 31 */	bl func_80044C80
+/* 80044D50 0000E310  4B FF FF 31 */	bl __dt__80044C80
 /* 80044D54 0000E314  2C 1F 00 00 */	cmpwi r31, 0
 /* 80044D58 0000E318  40 81 00 0C */	ble .L_80044D64
 /* 80044D5C 0000E31C  7F C3 F3 78 */	mr r3, r30
@@ -204,9 +204,9 @@
 /* 80044D70 0000E330  7C 08 03 A6 */	mtlr r0
 /* 80044D74 0000E334  38 21 00 10 */	addi r1, r1, 0x10
 /* 80044D78 0000E338  4E 80 00 20 */	blr
-.endfn func_80044D2C
+.endfn __dt__80044D2C
 
-.fn func_80044D7C, global
+.fn __dt__80044D7C, global
 /* 80044D7C 0000E33C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80044D80 0000E340  7C 08 02 A6 */	mflr r0
 /* 80044D84 0000E344  2C 03 00 00 */	cmpwi r3, 0
@@ -218,16 +218,16 @@
 /* 80044D9C 0000E35C  34 63 00 74 */	addic. r3, r3, 0x74
 /* 80044DA0 0000E360  41 82 00 0C */	beq .L_80044DAC
 /* 80044DA4 0000E364  38 80 00 00 */	li r4, 0
-/* 80044DA8 0000E368  4B FF FE D9 */	bl func_80044C80
+/* 80044DA8 0000E368  4B FF FE D9 */	bl __dt__80044C80
 .L_80044DAC:
 /* 80044DAC 0000E36C  38 7E 00 70 */	addi r3, r30, 0x70
 /* 80044DB0 0000E370  38 80 FF FF */	li r4, -1
-/* 80044DB4 0000E374  4B FF FE 8D */	bl func_80044C40
+/* 80044DB4 0000E374  4B FF FE 8D */	bl __dt__80044C40
 /* 80044DB8 0000E378  2C 1E 00 00 */	cmpwi r30, 0
 /* 80044DBC 0000E37C  41 82 00 10 */	beq .L_80044DCC
 /* 80044DC0 0000E380  7F C3 F3 78 */	mr r3, r30
 /* 80044DC4 0000E384  38 80 00 00 */	li r4, 0
-/* 80044DC8 0000E388  48 3F FD 71 */	bl func_80444B38
+/* 80044DC8 0000E388  48 3F FD 71 */	bl __dt__80444B38
 .L_80044DCC:
 /* 80044DCC 0000E38C  2C 1F 00 00 */	cmpwi r31, 0
 /* 80044DD0 0000E390  40 81 00 0C */	ble .L_80044DDC
@@ -240,7 +240,7 @@
 /* 80044DE8 0000E3A8  7C 08 03 A6 */	mtlr r0
 /* 80044DEC 0000E3AC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80044DF0 0000E3B0  4E 80 00 20 */	blr 
-.endfn func_80044D7C
+.endfn __dt__80044D7C
 
 .fn func_80044DF4, global
 /* 80044DF4 0000E3B4  80 6D A4 C0 */	lwz r3, lbl_80666640@sda21(r13)
@@ -804,7 +804,7 @@
 
 .fn func_80045548, global
 /* 80045548 0000EB08  38 63 FF AC */	addi r3, r3, -84
-/* 8004554C 0000EB0C  4B FF F8 30 */	b func_80044D7C
+/* 8004554C 0000EB0C  4B FF F8 30 */	b __dt__80044D7C
 .endfn func_80045548
 
 .fn func_80045550, global
@@ -814,7 +814,7 @@
 
 .fn func_80045558, global
 /* 80045558 0000EB18  38 63 FF A8 */	addi r3, r3, -88
-/* 8004555C 0000EB1C  4B FF F8 20 */	b func_80044D7C
+/* 8004555C 0000EB1C  4B FF F8 20 */	b __dt__80044D7C
 .endfn func_80045558
 
 .fn func_80045560, global
@@ -1593,7 +1593,7 @@
 .L_80045FD8:
 /* 80045FD8 0000F598  38 61 00 08 */	addi r3, r1, 8
 /* 80045FDC 0000F59C  38 80 FF FF */	li r4, -1
-/* 80045FE0 0000F5A0  4B FF DE A9 */	bl func_80043E88
+/* 80045FE0 0000F5A0  4B FF DE A9 */	bl __dt__80043E88
 .L_80045FE4:
 /* 80045FE4 0000F5A4  BB 41 00 28 */	lmw r26, 0x28(r1)
 /* 80045FE8 0000F5A8  38 60 00 00 */	li r3, 0
@@ -2281,7 +2281,7 @@ cf_CfObjectEff_hierarchy:
 __vt__CTaskGameEff:
 	.4byte __RTTI__CTaskGameEff
 	.4byte 0
-	.4byte func_80044D7C
+	.4byte __dt__80044D7C
 	.4byte CChildListNode_Reset
 	.4byte func_80044DFC
 	.4byte func_80044EF8
@@ -2316,7 +2316,7 @@ CTaskGameEff_hierarchy:
 __vt__reslist_CScn:
 	.4byte __RTTI__reslist_CScn
 	.4byte 0
-	.4byte func_80044D2C
+	.4byte __dt__80044D2C
 
 .global reslist_CScn_hierarchy
 reslist_CScn_hierarchy:
@@ -2329,14 +2329,14 @@ reslist_CScn_hierarchy:
 __vt___reslist_base_CScn:
 	.4byte __RTTI___reslist_base_CScn
 	.4byte 0
-	.4byte func_80044C80
+	.4byte __dt__80044C80
 
 
 .global __vt__CTaskGameEff_CEffRenderHighPrio
 __vt__CTaskGameEff_CEffRenderHighPrio:
 	.4byte __RTTI__CTaskGameEff_CEffRenderHighPrio
 	.4byte 0
-	.4byte func_80044C40
+	.4byte __dt__80044C40
 	.4byte func_80045284
 
 .global CTaskGameEff_CEffRenderHighPrio_hierarchy
@@ -2350,7 +2350,7 @@ CTaskGameEff_CEffRenderHighPrio_hierarchy:
 __vt__CTTask_CTaskGameEff:
 	.4byte __RTTI__CTTask_CTaskGameEff
 	.4byte 0
-	.4byte func_80044BF0
+	.4byte __dt__80044BF0
 	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
@@ -2885,16 +2885,16 @@ lbl_80668688:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000074
-	.4byte func_80044D2C
+	.4byte __dt__80044D2C
 	.4byte 0x0780001E
 	.4byte 0x00000070
-	.4byte func_80044C40
+	.4byte __dt__80044C40
 	.4byte 0x0680001E
 	.4byte 0x00000058
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 	.4byte 0x8680001E
 	.4byte 0x00000054
-	.4byte func_80044BB0
+	.4byte __dt__80044BB0
 .endobj "@etb_80006EF8"
 
 .obj "@etb_80006F38", local
@@ -3114,7 +3114,7 @@ lbl_80668688:
 	.4byte 0x003F0010
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte func_80043E88
+	.4byte __dt__80043E88
 .endobj "@etb_80007050"
 
 .obj "@etb_80007068", local
@@ -3256,42 +3256,42 @@ lbl_80668688:
 
 .obj "@eti_80021B00", local
 .hidden "@eti_80021B00"
-	.4byte func_80044BB0
+	.4byte __dt__80044BB0
 	.4byte 0x00000040
 	.4byte "@etb_80006ED0"
 .endobj "@eti_80021B00"
 
 .obj "@eti_80021B0C", local
 .hidden "@eti_80021B0C"
-	.4byte func_80044BF0
+	.4byte __dt__80044BF0
 	.4byte 0x00000050
 	.4byte "@etb_80006ED8"
 .endobj "@eti_80021B0C"
 
 .obj "@eti_80021B18", local
 .hidden "@eti_80021B18"
-	.4byte func_80044C40
+	.4byte __dt__80044C40
 	.4byte 0x00000040
 	.4byte "@etb_80006EE0"
 .endobj "@eti_80021B18"
 
 .obj "@eti_80021B24", local
 .hidden "@eti_80021B24"
-	.4byte func_80044C80
+	.4byte __dt__80044C80
 	.4byte 0x000000AC
 	.4byte "@etb_80006EE8"
 .endobj "@eti_80021B24"
 
 .obj "@eti_80021B30", local
 .hidden "@eti_80021B30"
-	.4byte func_80044D2C
+	.4byte __dt__80044D2C
 	.4byte 0x00000050
 	.4byte "@etb_80006EF0"
 .endobj "@eti_80021B30"
 
 .obj "@eti_80021B3C", local
 .hidden "@eti_80021B3C"
-	.4byte func_80044D7C
+	.4byte __dt__80044D7C
 	.4byte 0x00000078
 	.4byte "@etb_80006EF8"
 .endobj "@eti_80021B3C"

@@ -32,7 +32,7 @@
 /* 80444478 0040DA38  4E 80 00 20 */	blr 
 .endfn func_80444418
 
-.fn func_8044447C, global
+.fn __dt__8044447C, global
 /* 8044447C 0040DA3C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80444480 0040DA40  7C 08 02 A6 */	mflr r0
 /* 80444484 0040DA44  2C 03 00 00 */	cmpwi r3, 0
@@ -56,7 +56,7 @@
 /* 804444C8 0040DA88  7C 08 03 A6 */	mtlr r0
 /* 804444CC 0040DA8C  38 21 00 10 */	addi r1, r1, 0x10
 /* 804444D0 0040DA90  4E 80 00 20 */	blr 
-.endfn func_8044447C
+.endfn __dt__8044447C
 
 .fn func_804444D4, global
 /* 804444D4 0040DA94  80 6D BD 7C */	lwz r3, lbl_80667EFC@sda21(r13)
@@ -385,7 +385,7 @@ CWorkSystem_strpool:
 __vt__CWorkSystem:
 	.4byte __RTTI__CWorkSystem
 	.4byte 0
-	.4byte func_8044447C
+	.4byte __dt__8044447C
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -513,7 +513,7 @@ lbl_80667EFC:
 
 .obj "@eti_8003443C", local
 .hidden "@eti_8003443C"
-	.4byte func_8044447C
+	.4byte __dt__8044447C
 	.4byte 0x00000058
 	.4byte "@etb_8001C840"
 .endobj "@eti_8003443C"

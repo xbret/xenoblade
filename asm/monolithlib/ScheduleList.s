@@ -4,7 +4,7 @@
 
 
 
-.fn func_804E4334, global
+.fn __dt__804E4334, global
 /* 804E4334 004AD8F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804E4338 004AD8F8  7C 08 02 A6 */	mflr r0
 /* 804E433C 004AD8FC  2C 03 00 00 */	cmpwi r3, 0
@@ -54,9 +54,9 @@
 /* 804E43DC 004AD99C  7C 08 03 A6 */	mtlr r0
 /* 804E43E0 004AD9A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 804E43E4 004AD9A4  4E 80 00 20 */	blr 
-.endfn func_804E4334
+.endfn __dt__804E4334
 
-.fn func_804E43E8, global
+.fn __dt__804E43E8, global
 /* 804E43E8 004AD9A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804E43EC 004AD9AC  7C 08 02 A6 */	mflr r0
 /* 804E43F0 004AD9B0  2C 03 00 00 */	cmpwi r3, 0
@@ -107,9 +107,9 @@
 /* 804E4494 004ADA54  7C 08 03 A6 */	mtlr r0
 /* 804E4498 004ADA58  38 21 00 10 */	addi r1, r1, 0x10
 /* 804E449C 004ADA5C  4E 80 00 20 */	blr 
-.endfn func_804E43E8
+.endfn __dt__804E43E8
 
-.fn func_804E44A0, global
+.fn __dt__804E44A0, global
 /* 804E44A0 004ADA60  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804E44A4 004ADA64  7C 08 02 A6 */	mflr r0
 /* 804E44A8 004ADA68  2C 03 00 00 */	cmpwi r3, 0
@@ -205,7 +205,7 @@
 /* 804E45E8 004ADBA8  7C 08 03 A6 */	mtlr r0
 /* 804E45EC 004ADBAC  38 21 00 20 */	addi r1, r1, 0x20
 /* 804E45F0 004ADBB0  4E 80 00 20 */	blr 
-.endfn func_804E44A0
+.endfn __dt__804E44A0
 
 .fn func_804E45F4, global
 /* 804E45F4 004ADBB4  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1303,7 +1303,7 @@ IScheduleContainer_typestr:
 __vt__ScheduleList:
 	.4byte __RTTI__ScheduleList
 	.4byte 0
-	.4byte func_804E44A0
+	.4byte __dt__804E44A0
 	.4byte func_804E45F4
 	.4byte func_804E4718
 	.4byte func_804E479C
@@ -1325,7 +1325,7 @@ ScheduleList_hierarchy:
 __vt__reslist_CSchedule:
 	.4byte __RTTI__reslist_CSchedule
 	.4byte 0
-	.4byte func_804E43E8
+	.4byte __dt__804E43E8
 
 .global reslist_CSchedule_hierarchy
 reslist_CSchedule_hierarchy:
@@ -1338,7 +1338,7 @@ reslist_CSchedule_hierarchy:
 __vt___reslist_base_CSchedule:
 	.4byte __RTTI___reslist_base_CSchedule
 	.4byte 0
-	.4byte func_804E4334
+	.4byte __dt__804E4334
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -1401,10 +1401,10 @@ lbl_8066832C:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000004
-	.4byte func_804E43E8
+	.4byte __dt__804E43E8
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_804E42F4
+	.4byte __dt__804E42F4
 .endobj "@etb_80020B88"
 
 .obj "@etb_80020BB0", local
@@ -1451,10 +1451,10 @@ lbl_8066832C:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000004
-	.4byte func_804E43E8
+	.4byte __dt__804E43E8
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_804E42F4
+	.4byte __dt__804E42F4
 .endobj "@etb_80020BE0"
 
 .obj "@etb_80020C08", local
@@ -1497,16 +1497,16 @@ lbl_8066832C:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000004
-	.4byte func_804E43E8
+	.4byte __dt__804E43E8
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_804E42F4
+	.4byte __dt__804E42F4
 	.4byte 0x0780001E
 	.4byte 0x00000004
-	.4byte func_804E43E8
+	.4byte __dt__804E43E8
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_804E42F4
+	.4byte __dt__804E42F4
 .endobj "@etb_80020C30"
 
 .obj "@etb_80020C78", local
@@ -1527,21 +1527,21 @@ lbl_8066832C:
 
 .obj "@eti_80038CB4", local
 .hidden "@eti_80038CB4"
-	.4byte func_804E4334
+	.4byte __dt__804E4334
 	.4byte 0x000000B4
 	.4byte "@etb_80020B78"
 .endobj "@eti_80038CB4"
 
 .obj "@eti_80038CC0", local
 .hidden "@eti_80038CC0"
-	.4byte func_804E43E8
+	.4byte __dt__804E43E8
 	.4byte 0x000000B8
 	.4byte "@etb_80020B80"
 .endobj "@eti_80038CC0"
 
 .obj "@eti_80038CCC", local
 .hidden "@eti_80038CCC"
-	.4byte func_804E44A0
+	.4byte __dt__804E44A0
 	.4byte 0x00000154
 	.4byte "@etb_80020B88"
 .endobj "@eti_80038CCC"

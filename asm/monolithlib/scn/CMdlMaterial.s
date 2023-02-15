@@ -20,7 +20,7 @@
 /* 804E5474 004AEA34  4E 80 00 20 */	blr 
 .endfn func_804E5444
 
-.fn func_804E5478, global
+.fn __dt__804E5478, global
 /* 804E5478 004AEA38  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804E547C 004AEA3C  7C 08 02 A6 */	mflr r0
 /* 804E5480 004AEA40  2C 03 00 00 */	cmpwi r3, 0
@@ -38,7 +38,7 @@
 /* 804E54AC 004AEA6C  7C 08 03 A6 */	mtlr r0
 /* 804E54B0 004AEA70  38 21 00 10 */	addi r1, r1, 0x10
 /* 804E54B4 004AEA74  4E 80 00 20 */	blr 
-.endfn func_804E5478
+.endfn __dt__804E5478
 
 .fn func_804E54B8, global
 /* 804E54B8 004AEA78  94 21 FF 60 */	stwu r1, -0xa0(r1)
@@ -698,7 +698,7 @@
 /* 804E5DDC 004AF39C  4E 80 00 20 */	blr 
 .endfn func_804E5990
 
-.fn func_804E5DE0, global
+.fn __dt__804E5DE0, global
 /* 804E5DE0 004AF3A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804E5DE4 004AF3A4  7C 08 02 A6 */	mflr r0
 /* 804E5DE8 004AF3A8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -723,7 +723,7 @@
 /* 804E5E2C 004AF3EC  7C 08 03 A6 */	mtlr r0
 /* 804E5E30 004AF3F0  38 21 00 10 */	addi r1, r1, 0x10
 /* 804E5E34 004AF3F4  4E 80 00 20 */	blr
-.endfn func_804E5DE0
+.endfn __dt__804E5DE0
 
 .fn func_804E5E38, global
 /* 804E5E38 004AF3F8  94 21 FF 70 */	stwu r1, -0x90(r1)
@@ -1241,7 +1241,7 @@ CMdlMaterial_typestr:
 __vt__CMdlMaterial:
 	.4byte __RTTI__CMdlMaterial
 	.4byte 0
-	.4byte func_804E5478
+	.4byte __dt__804E5478
 
 .global lbl_8057392C
 lbl_8057392C:
@@ -1409,7 +1409,7 @@ float_8066DAAC:
 
 .obj "@eti_80038D8C", local
 .hidden "@eti_80038D8C"
-	.4byte func_804E5478
+	.4byte __dt__804E5478
 	.4byte 0x00000040
 	.4byte "@etb_80020C88"
 .endobj "@eti_80038D8C"
@@ -1430,7 +1430,7 @@ float_8066DAAC:
 
 .obj "@eti_80038DB0", local
 .hidden "@eti_80038DB0"
-	.4byte func_804E5DE0
+	.4byte __dt__804E5DE0
 	.4byte 0x00000058
 	.4byte "@etb_80020CA0"
 .endobj "@eti_80038DB0"

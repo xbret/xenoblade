@@ -283,7 +283,7 @@
 /* 801F9224 001C27E4  4E 80 00 20 */	blr 
 .endfn func_801F91B4
 
-.fn func_801F9228, global
+.fn __dt__801F9228, global
 /* 801F9228 001C27E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801F922C 001C27EC  7C 08 02 A6 */	mflr r0
 /* 801F9230 001C27F0  2C 03 00 00 */	cmpwi r3, 0
@@ -301,7 +301,7 @@
 /* 801F925C 001C281C  7C 08 03 A6 */	mtlr r0
 /* 801F9260 001C2820  38 21 00 10 */	addi r1, r1, 0x10
 /* 801F9264 001C2824  4E 80 00 20 */	blr 
-.endfn func_801F9228
+.endfn __dt__801F9228
 
 .fn func_801F9268, global
 /* 801F9268 001C2828  1C 04 00 49 */	mulli r0, r4, 0x49
@@ -373,7 +373,7 @@ lbl_80538998:
 __vt__cf_CfResTboxImpl:
 	.4byte __RTTI__cf_CfResTboxImpl
 	.4byte 0
-	.4byte func_801F9228
+	.4byte __dt__801F9228
 	.4byte func_801F91B4
 	.4byte func_800BEA34
 	.4byte func_8016C860
@@ -505,7 +505,7 @@ lbl_80666F50:
 
 .obj "@eti_8002C5C4", local
 .hidden "@eti_8002C5C4"
-	.4byte func_801F9228
+	.4byte __dt__801F9228
 	.4byte 0x00000040
 	.4byte "@etb_80012458"
 .endobj "@eti_8002C5C4"

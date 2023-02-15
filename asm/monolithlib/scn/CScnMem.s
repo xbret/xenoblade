@@ -16,7 +16,7 @@
 /* 8048EAC8 00458088  4E 80 00 20 */	blr 
 .endfn func_8048EAA8
 
-.fn func_8048EACC, global
+.fn __dt__8048EACC, global
 /* 8048EACC 0045808C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8048EAD0 00458090  7C 08 02 A6 */	mflr r0
 /* 8048EAD4 00458094  2C 03 00 00 */	cmpwi r3, 0
@@ -43,7 +43,7 @@
 /* 8048EB24 004580E4  7C 08 03 A6 */	mtlr r0
 /* 8048EB28 004580E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8048EB2C 004580EC  4E 80 00 20 */	blr 
-.endfn func_8048EACC
+.endfn __dt__8048EACC
 
 .fn func_8048EB30, global
 /* 8048EB30 004580F0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -86,7 +86,7 @@
 /* 8048EBB8 00458178  4E 80 00 20 */	blr
 .endfn func_8048EB78
 
-.fn func_8048EBBC, global
+.fn __dt__8048EBBC, global
 /* 8048EBBC 0045817C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8048EBC0 00458180  7C 08 02 A6 */	mflr r0
 /* 8048EBC4 00458184  2C 03 00 00 */	cmpwi r3, 0
@@ -97,7 +97,7 @@
 /* 8048EBD8 00458198  7C 7E 1B 78 */	mr r30, r3
 /* 8048EBDC 0045819C  41 82 00 1C */	beq .L_8048EBF8
 /* 8048EBE0 004581A0  38 80 00 00 */	li r4, 0
-/* 8048EBE4 004581A4  48 00 71 D5 */	bl func_80495DB8
+/* 8048EBE4 004581A4  48 00 71 D5 */	bl __dt__80495DB8
 /* 8048EBE8 004581A8  2C 1F 00 00 */	cmpwi r31, 0
 /* 8048EBEC 004581AC  40 81 00 0C */	ble .L_8048EBF8
 /* 8048EBF0 004581B0  7F C3 F3 78 */	mr r3, r30
@@ -110,7 +110,7 @@
 /* 8048EC08 004581C8  7C 08 03 A6 */	mtlr r0
 /* 8048EC0C 004581CC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8048EC10 004581D0  4E 80 00 20 */	blr 
-.endfn func_8048EBBC
+.endfn __dt__8048EBBC
 
 .fn func_8048EC14, global
 /* 8048EC14 004581D4  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -214,7 +214,7 @@
 
 .fn func_8048ED1C, global
 /* 8048ED1C 004582DC  38 63 FF AC */	addi r3, r3, -84
-/* 8048ED20 004582E0  4B FF FE 9C */	b func_8048EBBC
+/* 8048ED20 004582E0  4B FF FE 9C */	b __dt__8048EBBC
 .endfn func_8048ED1C
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -244,14 +244,14 @@ CTTask_CScn_typestr:
 __vt__CScnMem:
 	.4byte __RTTI__CScnMem
 	.4byte 0
-	.4byte func_8048EACC
+	.4byte __dt__8048EACC
 	.4byte 0
 
 .global __vt__CScnNw4r
 __vt__CScnNw4r:
 	.4byte __RTTI__CScnNw4r
 	.4byte 0
-	.4byte func_8048EBBC
+	.4byte __dt__8048EBBC
 	.4byte CChildListNode_Reset
 	.4byte func_80496580
 	.4byte func_80496584
@@ -425,7 +425,7 @@ CScn_typestr:
 
 .obj "@eti_800367C4", local
 .hidden "@eti_800367C4"
-	.4byte func_8048EACC
+	.4byte __dt__8048EACC
 	.4byte 0x00000064
 	.4byte "@etb_8001EBC8"
 .endobj "@eti_800367C4"
@@ -446,7 +446,7 @@ CScn_typestr:
 
 .obj "@eti_800367E8", local
 .hidden "@eti_800367E8"
-	.4byte func_8048EBBC
+	.4byte __dt__8048EBBC
 	.4byte 0x00000058
 	.4byte "@etb_8001EBE0"
 .endobj "@eti_800367E8"

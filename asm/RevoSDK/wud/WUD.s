@@ -5855,9 +5855,9 @@
 /* 8037ADF8 003443B8  48 00 17 D9 */	bl WUD_DEBUGPrint
 /* 8037ADFC 003443BC  28 19 00 08 */	cmplwi r25, 8
 /* 8037AE00 003443C0  41 81 04 FC */	bgt .L_8037B2FC
-/* 8037AE04 003443C4  3C 60 80 56 */	lis r3, lbl_80562FA0@ha
+/* 8037AE04 003443C4  3C 60 80 56 */	lis r3, jumptable_80562FA0@ha
 /* 8037AE08 003443C8  57 20 10 3A */	slwi r0, r25, 2
-/* 8037AE0C 003443CC  38 63 2F A0 */	addi r3, r3, lbl_80562FA0@l
+/* 8037AE0C 003443CC  38 63 2F A0 */	addi r3, r3, jumptable_80562FA0@l
 /* 8037AE10 003443D0  7C 63 00 2E */	lwzx r3, r3, r0
 /* 8037AE14 003443D4  7C 69 03 A6 */	mtctr r3
 /* 8037AE18 003443D8  4E 80 04 20 */	bctr 
@@ -7543,8 +7543,8 @@ lbl_80562D24:
 	.balign 4
 
 
-.global lbl_80562FA0
-lbl_80562FA0:
+.global jumptable_80562FA0
+jumptable_80562FA0:
 	.4byte .L_8037AE1C
 	.4byte .L_8037AEC8
 	.4byte .L_8037AEE4

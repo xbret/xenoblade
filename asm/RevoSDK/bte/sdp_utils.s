@@ -268,9 +268,9 @@
 /* 80307878 002D0E38  80 04 00 00 */	lwz r0, 0(r4)
 /* 8030787C 002D0E3C  28 00 00 10 */	cmplwi r0, 0x10
 /* 80307880 002D0E40  41 81 00 7C */	bgt .L_803078FC
-/* 80307884 002D0E44  3C A0 80 55 */	lis r5, lbl_805494E8@ha
+/* 80307884 002D0E44  3C A0 80 55 */	lis r5, jumptable_805494E8@ha
 /* 80307888 002D0E48  54 00 10 3A */	slwi r0, r0, 2
-/* 8030788C 002D0E4C  38 A5 94 E8 */	addi r5, r5, lbl_805494E8@l
+/* 8030788C 002D0E4C  38 A5 94 E8 */	addi r5, r5, jumptable_805494E8@l
 /* 80307890 002D0E50  7C A5 00 2E */	lwzx r5, r5, r0
 /* 80307894 002D0E54  7C A9 03 A6 */	mtctr r5
 /* 80307898 002D0E58  4E 80 04 20 */	bctr 
@@ -429,9 +429,9 @@
 .L_80307AA8:
 /* 80307AA8 002D1068  28 06 00 07 */	cmplwi r6, 7
 /* 80307AAC 002D106C  41 81 00 8C */	bgt .L_80307B38
-/* 80307AB0 002D1070  3C 60 80 55 */	lis r3, lbl_805495A0@ha
+/* 80307AB0 002D1070  3C 60 80 55 */	lis r3, jumptable_805495A0@ha
 /* 80307AB4 002D1074  54 C0 10 3A */	slwi r0, r6, 2
-/* 80307AB8 002D1078  38 63 95 A0 */	addi r3, r3, lbl_805495A0@l
+/* 80307AB8 002D1078  38 63 95 A0 */	addi r3, r3, jumptable_805495A0@l
 /* 80307ABC 002D107C  7C 63 00 2E */	lwzx r3, r3, r0
 /* 80307AC0 002D1080  7C 69 03 A6 */	mtctr r3
 /* 80307AC4 002D1084  4E 80 04 20 */	bctr 
@@ -479,7 +479,7 @@
 /* 80307B4C 002D110C  4E 80 00 20 */	blr
 .L_80307B50:
 /* 80307B50 002D1110  7C 08 02 14 */	add r0, r8, r0
-/* 80307B54 002D1114  3C 80 80 55 */	lis r4, lbl_80549580@ha
+/* 80307B54 002D1114  3C 80 80 55 */	lis r4, jumptable_80549580@ha
 /* 80307B58 002D1118  3C 60 80 00 */	lis r3, 0x8000
 /* 80307B5C 002D111C  48 00 02 58 */	b .L_80307DB4
 .L_80307B60:
@@ -494,7 +494,7 @@
 .L_80307B80:
 /* 80307B80 002D1140  28 09 00 07 */	cmplwi r9, 7
 /* 80307B84 002D1144  41 81 00 88 */	bgt .L_80307C0C
-/* 80307B88 002D1148  38 E4 95 80 */	addi r7, r4, lbl_80549580@l
+/* 80307B88 002D1148  38 E4 95 80 */	addi r7, r4, jumptable_80549580@l
 /* 80307B8C 002D114C  55 26 10 3A */	slwi r6, r9, 2
 /* 80307B90 002D1150  7C E7 30 2E */	lwzx r7, r7, r6
 /* 80307B94 002D1154  7C E9 03 A6 */	mtctr r7
@@ -838,9 +838,9 @@
 /* 80308024 002D15E4  7C 68 1B 78 */	mr r8, r3
 /* 80308028 002D15E8  28 00 00 07 */	cmplwi r0, 7
 /* 8030802C 002D15EC  41 81 00 BC */	bgt .L_803080E8
-/* 80308030 002D15F0  3C 80 80 55 */	lis r4, lbl_805495C0@ha
+/* 80308030 002D15F0  3C 80 80 55 */	lis r4, jumptable_805495C0@ha
 /* 80308034 002D15F4  54 00 10 3A */	slwi r0, r0, 2
-/* 80308038 002D15F8  38 84 95 C0 */	addi r4, r4, lbl_805495C0@l
+/* 80308038 002D15F8  38 84 95 C0 */	addi r4, r4, jumptable_805495C0@l
 /* 8030803C 002D15FC  7C 84 00 2E */	lwzx r4, r4, r0
 /* 80308040 002D1600  7C 89 03 A6 */	mtctr r4
 /* 80308044 002D1604  4E 80 04 20 */	bctr 
@@ -1209,8 +1209,8 @@
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
-.global lbl_805494E8
-lbl_805494E8:
+.global jumptable_805494E8
+jumptable_805494E8:
 	.4byte .L_803078FC
 	.4byte .L_8030789C
 	.4byte .L_803078AC
@@ -1241,8 +1241,8 @@ lbl_80549564:
 	.asciz "SDP - no buf for err msg"
 	.balign 4
 
-.global lbl_80549580
-lbl_80549580:
+.global jumptable_80549580
+jumptable_80549580:
 	.4byte .L_80307C0C
 	.4byte .L_80307B9C
 	.4byte .L_80307BA4
@@ -1253,8 +1253,8 @@ lbl_80549580:
 	.4byte .L_80307BDC
 
 
-.global lbl_805495A0
-lbl_805495A0:
+.global jumptable_805495A0
+jumptable_805495A0:
 	.4byte .L_80307B38
 	.4byte .L_80307AC8
 	.4byte .L_80307AD0
@@ -1265,8 +1265,8 @@ lbl_805495A0:
 	.4byte .L_80307B08
 
 
-.global lbl_805495C0
-lbl_805495C0:
+.global jumptable_805495C0
+jumptable_805495C0:
 	.4byte .L_80308048
 	.4byte .L_80308054
 	.4byte .L_80308060

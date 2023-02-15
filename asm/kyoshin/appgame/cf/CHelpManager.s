@@ -71,7 +71,7 @@
 /* 80295968 0025EF28  4E 80 00 20 */	blr 
 .endfn func_80295924
 
-.fn func_8029596C, global
+.fn __dt__8029596C, global
 /* 8029596C 0025EF2C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80295970 0025EF30  7C 08 02 A6 */	mflr r0
 /* 80295974 0025EF34  2C 03 00 00 */	cmpwi r3, 0
@@ -89,7 +89,7 @@
 /* 802959A0 0025EF60  7C 08 03 A6 */	mtlr r0
 /* 802959A4 0025EF64  38 21 00 10 */	addi r1, r1, 0x10
 /* 802959A8 0025EF68  4E 80 00 20 */	blr 
-.endfn func_8029596C
+.endfn __dt__8029596C
 
 .fn func_802959AC, global
 /* 802959AC 0025EF6C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -981,9 +981,9 @@
 /* 80296674 0025FC34  90 06 00 0C */	stw r0, 0xc(r6)
 /* 80296678 0025FC38  38 C0 00 06 */	li r6, 6
 /* 8029667C 0025FC3C  48 02 1B 1D */	bl func_802B8198
-/* 80296680 0025FC40  3C 80 80 2C */	lis r4, func_802B8208@ha
+/* 80296680 0025FC40  3C 80 80 2C */	lis r4, __dt__802B8208@ha
 /* 80296684 0025FC44  38 76 04 B4 */	addi r3, r22, 0x4b4
-/* 80296688 0025FC48  38 84 82 08 */	addi r4, r4, func_802B8208@l
+/* 80296688 0025FC48  38 84 82 08 */	addi r4, r4, __dt__802B8208@l
 /* 8029668C 0025FC4C  38 B6 04 A8 */	addi r5, r22, 0x4a8
 /* 80296690 0025FC50  48 02 30 0D */	bl __register_global_object
 /* 80296694 0025FC54  38 76 04 D0 */	addi r3, r22, 0x4d0
@@ -1562,7 +1562,7 @@ cf_CHelpSwitch_hierarchy:
 __vt__cf_CHelpManager:
 	.4byte __RTTI__cf_CHelpManager
 	.4byte 0
-	.4byte func_8029596C
+	.4byte __dt__8029596C
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -2104,7 +2104,7 @@ lbl_8057A9B8:
 
 .obj "@eti_80031E20", local
 .hidden "@eti_80031E20"
-	.4byte func_8029596C
+	.4byte __dt__8029596C
 	.4byte 0x00000040
 	.4byte "@etb_80019BB8"
 .endobj "@eti_80031E20"

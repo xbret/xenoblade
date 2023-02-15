@@ -34,7 +34,7 @@
 /* 8029F110 002686D0  4E 80 00 20 */	blr 
 .endfn func_8029F0A8
 
-.fn func_8029F114, global
+.fn __dt__8029F114, global
 /* 8029F114 002686D4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029F118 002686D8  7C 08 02 A6 */	mflr r0
 /* 8029F11C 002686DC  2C 03 00 00 */	cmpwi r3, 0
@@ -57,7 +57,7 @@
 /* 8029F15C 0026871C  7C 08 03 A6 */	mtlr r0
 /* 8029F160 00268720  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029F164 00268724  4E 80 00 20 */	blr 
-.endfn func_8029F114
+.endfn __dt__8029F114
 
 .fn func_8029F168, global
 /* 8029F168 00268728  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -828,7 +828,7 @@
 
 .obj "@eti_800324BC", local
 .hidden "@eti_800324BC"
-	.4byte func_8029F114
+	.4byte __dt__8029F114
 	.4byte 0x00000054
 	.4byte "@etb_8001A6D0"
 .endobj "@eti_800324BC"

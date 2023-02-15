@@ -1382,7 +1382,7 @@ CDeviceRemotePad_typestr:
 __vt__CDeviceRemotePad:
 	.4byte __RTTI__CDeviceRemotePad
 	.4byte 0
-	.4byte func_80447958
+	.4byte __dt__80447958
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18

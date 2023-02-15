@@ -47,7 +47,7 @@
 /* 8029A9D0 00263F90  4E 80 00 20 */	blr 
 .endfn func_8029A934
 
-.fn func_8029A9D4, global
+.fn __dt__8029A9D4, global
 /* 8029A9D4 00263F94  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029A9D8 00263F98  7C 08 02 A6 */	mflr r0
 /* 8029A9DC 00263F9C  2C 03 00 00 */	cmpwi r3, 0
@@ -73,7 +73,7 @@
 /* 8029AA28 00263FE8  7C 08 03 A6 */	mtlr r0
 /* 8029AA2C 00263FEC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029AA30 00263FF0  4E 80 00 20 */	blr 
-.endfn func_8029A9D4
+.endfn __dt__8029A9D4
 
 .fn func_8029AA34, global
 /* 8029AA34 00263FF4  94 21 FF B0 */	stwu r1, -0x50(r1)
@@ -902,7 +902,7 @@ CTutorial_strpool:
 __vt__CTutorial:
 	.4byte __RTTI__CTutorial
 	.4byte 0
-	.4byte func_8029A9D4
+	.4byte __dt__8029A9D4
 	.4byte func_80039E28
 	.4byte func_8029B218
 	.4byte func_80039E18
@@ -1105,7 +1105,7 @@ lbl_80667320:
 
 .obj "@eti_80032114", local
 .hidden "@eti_80032114"
-	.4byte func_8029A9D4
+	.4byte __dt__8029A9D4
 	.4byte 0x00000060
 	.4byte "@etb_8001A140"
 .endobj "@eti_80032114"

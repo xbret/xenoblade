@@ -2417,9 +2417,9 @@
 /* 8030CB24 002D60E4  90 6D B6 D0 */	stw r3, lbl_80667850@sda21(r13)
 /* 8030CB28 002D60E8  28 00 00 2A */	cmplwi r0, 0x2a
 /* 8030CB2C 002D60EC  41 81 00 7C */	bgt .L_8030CBA8
-/* 8030CB30 002D60F0  3C 60 80 55 */	lis r3, lbl_8054999C@ha
+/* 8030CB30 002D60F0  3C 60 80 55 */	lis r3, jumptable_8054999C@ha
 /* 8030CB34 002D60F4  54 00 10 3A */	slwi r0, r0, 2
-/* 8030CB38 002D60F8  38 63 99 9C */	addi r3, r3, lbl_8054999C@l
+/* 8030CB38 002D60F8  38 63 99 9C */	addi r3, r3, jumptable_8054999C@l
 /* 8030CB3C 002D60FC  7C 63 00 2E */	lwzx r3, r3, r0
 /* 8030CB40 002D6100  7C 69 03 A6 */	mtctr r3
 /* 8030CB44 002D6104  4E 80 04 20 */	bctr 
@@ -3437,9 +3437,9 @@
 /* 8030D994 002D6F54  83 C3 00 08 */	lwz r30, 8(r3)
 /* 8030D998 002D6F58  28 1E 00 2A */	cmplwi r30, 0x2a
 /* 8030D99C 002D6F5C  41 81 00 A0 */	bgt .L_8030DA3C
-/* 8030D9A0 002D6F60  3C 80 80 55 */	lis r4, lbl_80549AF4@ha
+/* 8030D9A0 002D6F60  3C 80 80 55 */	lis r4, jumptable_80549AF4@ha
 /* 8030D9A4 002D6F64  57 C0 10 3A */	slwi r0, r30, 2
-/* 8030D9A8 002D6F68  38 84 9A F4 */	addi r4, r4, lbl_80549AF4@l
+/* 8030D9A8 002D6F68  38 84 9A F4 */	addi r4, r4, jumptable_80549AF4@l
 /* 8030D9AC 002D6F6C  7C 84 00 2E */	lwzx r4, r4, r0
 /* 8030D9B0 002D6F70  7C 89 03 A6 */	mtctr r4
 /* 8030D9B4 002D6F74  4E 80 04 20 */	bctr 
@@ -3482,9 +3482,9 @@
 /* 8030DA3C 002D6FFC  80 1D 00 08 */	lwz r0, 8(r29)
 /* 8030DA40 002D7000  28 00 00 2A */	cmplwi r0, 0x2a
 /* 8030DA44 002D7004  41 81 04 AC */	bgt .L_8030DEF0
-/* 8030DA48 002D7008  3C 60 80 55 */	lis r3, lbl_80549A48@ha
+/* 8030DA48 002D7008  3C 60 80 55 */	lis r3, jumptable_80549A48@ha
 /* 8030DA4C 002D700C  54 00 10 3A */	slwi r0, r0, 2
-/* 8030DA50 002D7010  38 63 9A 48 */	addi r3, r3, lbl_80549A48@l
+/* 8030DA50 002D7010  38 63 9A 48 */	addi r3, r3, jumptable_80549A48@l
 /* 8030DA54 002D7014  7C 63 00 2E */	lwzx r3, r3, r0
 /* 8030DA58 002D7018  7C 69 03 A6 */	mtctr r3
 /* 8030DA5C 002D701C  4E 80 04 20 */	bctr 
@@ -4823,9 +4823,9 @@
 /* 8030ECCC 002D828C  38 04 00 01 */	addi r0, r4, 1
 /* 8030ECD0 002D8290  28 00 00 0D */	cmplwi r0, 0xd
 /* 8030ECD4 002D8294  41 81 03 08 */	bgt .L_8030EFDC
-/* 8030ECD8 002D8298  3C 80 80 55 */	lis r4, lbl_80549C58@ha
+/* 8030ECD8 002D8298  3C 80 80 55 */	lis r4, jumptable_80549C58@ha
 /* 8030ECDC 002D829C  54 00 10 3A */	slwi r0, r0, 2
-/* 8030ECE0 002D82A0  38 84 9C 58 */	addi r4, r4, lbl_80549C58@l
+/* 8030ECE0 002D82A0  38 84 9C 58 */	addi r4, r4, jumptable_80549C58@l
 /* 8030ECE4 002D82A4  7C 84 00 2E */	lwzx r4, r4, r0
 /* 8030ECE8 002D82A8  7C 89 03 A6 */	mtctr r4
 /* 8030ECEC 002D82AC  4E 80 04 20 */	bctr 
@@ -4891,9 +4891,9 @@
 /* 8030EDC0 002D8380  80 1D 00 08 */	lwz r0, 8(r29)
 /* 8030EDC4 002D8384  28 00 00 2A */	cmplwi r0, 0x2a
 /* 8030EDC8 002D8388  41 81 00 9C */	bgt .L_8030EE64
-/* 8030EDCC 002D838C  3C 60 80 55 */	lis r3, lbl_80549BAC@ha
+/* 8030EDCC 002D838C  3C 60 80 55 */	lis r3, jumptable_80549BAC@ha
 /* 8030EDD0 002D8390  54 00 10 3A */	slwi r0, r0, 2
-/* 8030EDD4 002D8394  38 63 9B AC */	addi r3, r3, lbl_80549BAC@l
+/* 8030EDD4 002D8394  38 63 9B AC */	addi r3, r3, jumptable_80549BAC@l
 /* 8030EDD8 002D8398  7C 63 00 2E */	lwzx r3, r3, r0
 /* 8030EDDC 002D839C  7C 69 03 A6 */	mtctr r3
 /* 8030EDE0 002D83A0  4E 80 04 20 */	bctr 
@@ -5075,7 +5075,7 @@
 .L_8030F048:
 /* 8030F048 002D8608  48 04 99 69 */	bl OSDisableInterrupts
 /* 8030F04C 002D860C  7C 7E 1B 78 */	mr r30, r3
-/* 8030F050 002D8610  3F E0 80 55 */	lis r31, lbl_80549C90@ha
+/* 8030F050 002D8610  3F E0 80 55 */	lis r31, jumptable_80549C90@ha
 .L_8030F054:
 /* 8030F054 002D8614  80 1D 00 0C */	lwz r0, 0xc(r29)
 /* 8030F058 002D8618  2C 00 00 00 */	cmpwi r0, 0
@@ -5090,7 +5090,7 @@
 /* 8030F07C 002D863C  38 03 FF FC */	addi r0, r3, -4
 /* 8030F080 002D8640  28 00 00 26 */	cmplwi r0, 0x26
 /* 8030F084 002D8644  41 81 00 18 */	bgt .L_8030F09C
-/* 8030F088 002D8648  38 7F 9C 90 */	addi r3, r31, lbl_80549C90@l
+/* 8030F088 002D8648  38 7F 9C 90 */	addi r3, r31, jumptable_80549C90@l
 /* 8030F08C 002D864C  54 00 10 3A */	slwi r0, r0, 2
 /* 8030F090 002D8650  7C 63 00 2E */	lwzx r3, r3, r0
 /* 8030F094 002D8654  7C 69 03 A6 */	mtctr r3
@@ -5405,8 +5405,8 @@ lbl_80549968:
 	.asciz "DVDChangeDisk(): FST in the new disc is too big.   "
 
 
-.global lbl_8054999C
-lbl_8054999C:
+.global jumptable_8054999C
+jumptable_8054999C:
 	.4byte .L_8030CBA8
 	.4byte .L_8030CB9C
 	.4byte .L_8030CB9C
@@ -5452,8 +5452,8 @@ lbl_8054999C:
 	.4byte .L_8030CB48
 
 
-.global lbl_80549A48
-lbl_80549A48:
+.global jumptable_80549A48
+jumptable_80549A48:
 	.4byte .L_8030DEF0
 	.4byte .L_8030DA84
 	.4byte .L_8030DBAC
@@ -5499,8 +5499,8 @@ lbl_80549A48:
 	.4byte .L_8030DEBC
 
 
-.global lbl_80549AF4
-lbl_80549AF4:
+.global jumptable_80549AF4
+jumptable_80549AF4:
 	.4byte .L_8030DA3C
 	.4byte .L_8030DA3C
 	.4byte .L_8030D9B8
@@ -5551,8 +5551,8 @@ lbl_80549BA0:
 	.4byte 0xFFFFFFFF
 
 
-.global lbl_80549BAC
-lbl_80549BAC:
+.global jumptable_80549BAC
+jumptable_80549BAC:
 	.4byte .L_8030EE64
 	.4byte .L_8030EE04
 	.4byte .L_8030EE04
@@ -5598,8 +5598,8 @@ lbl_80549BAC:
 	.4byte .L_8030EDE4
 
 
-.global lbl_80549C58
-lbl_80549C58:
+.global jumptable_80549C58
+jumptable_80549C58:
 	.4byte .L_8030ECF0
 	.4byte .L_8030ECF0
 	.4byte .L_8030ED10
@@ -5615,8 +5615,8 @@ lbl_80549C58:
 	.4byte .L_8030EE90
 	.4byte .L_8030EF8C
 	
-.global lbl_80549C90
-lbl_80549C90:
+.global jumptable_80549C90
+jumptable_80549C90:
 	.4byte .L_8030F0A8
 	.4byte .L_8030F0A8
 	.4byte .L_8030F09C

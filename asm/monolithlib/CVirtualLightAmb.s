@@ -24,7 +24,7 @@
 /* 804946B8 0045DC78  4E 80 00 20 */	blr 
 .endfn func_80494678
 
-.fn func_804946BC, global
+.fn __dt__804946BC, global
 /* 804946BC 0045DC7C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804946C0 0045DC80  7C 08 02 A6 */	mflr r0
 /* 804946C4 0045DC84  2C 03 00 00 */	cmpwi r3, 0
@@ -42,7 +42,7 @@
 /* 804946F0 0045DCB0  7C 08 03 A6 */	mtlr r0
 /* 804946F4 0045DCB4  38 21 00 10 */	addi r1, r1, 0x10
 /* 804946F8 0045DCB8  4E 80 00 20 */	blr 
-.endfn func_804946BC
+.endfn __dt__804946BC
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -62,7 +62,7 @@ CVirtualLightAmb_typestr:
 __vt__CVirtualLightAmb:
 	.4byte __RTTI__CVirtualLightAmb
 	.4byte 0
-	.4byte func_804946BC
+	.4byte __dt__804946BC
 	.4byte func_804947EC
 	.4byte func_8049488C
 
@@ -111,7 +111,7 @@ __RTTI__CVirtualLightAmb:
 
 .obj "@eti_80036AD0", local
 .hidden "@eti_80036AD0"
-	.4byte func_804946BC
+	.4byte __dt__804946BC
 	.4byte 0x00000040
 	.4byte "@etb_8001EF1C"
 .endobj "@eti_80036AD0"

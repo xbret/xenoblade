@@ -115,7 +115,7 @@
 /* 80117BC4 000E1184  4E 80 00 20 */	blr 
 .endfn func_80117A18
 
-.fn func_80117BC8, global
+.fn __dt__80117BC8, global
 /* 80117BC8 000E1188  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80117BCC 000E118C  7C 08 02 A6 */	mflr r0
 /* 80117BD0 000E1190  2C 03 00 00 */	cmpwi r3, 0
@@ -143,7 +143,7 @@
 /* 80117C24 000E11E4  7C 08 03 A6 */	mtlr r0
 /* 80117C28 000E11E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80117C2C 000E11EC  4E 80 00 20 */	blr 
-.endfn func_80117BC8
+.endfn __dt__80117BC8
 
 .fn func_80117C30, global
 /* 80117C30 000E11F0  94 21 FF A0 */	stwu r1, -0x60(r1)
@@ -3724,7 +3724,7 @@
 /* 8011B00C 000E45CC  48 34 48 BD */	bl __dt__8045F8C8
 /* 8011B010 000E45D0  38 61 00 10 */	addi r3, r1, 0x10
 /* 8011B014 000E45D4  38 80 FF FF */	li r4, -1
-/* 8011B018 000E45D8  4B F2 8E 71 */	bl func_80043E88
+/* 8011B018 000E45D8  4B F2 8E 71 */	bl __dt__80043E88
 .L_8011B01C:
 /* 8011B01C 000E45DC  39 61 03 F0 */	addi r11, r1, 0x3f0
 /* 8011B020 000E45E0  E3 E1 04 38 */	psq_l f31, 1080(r1), 0, qr0
@@ -4183,7 +4183,7 @@
 /* 8011B6D0 000E4C90  4E 80 00 20 */	blr
 .endfn func_8011B05C
 
-.fn func_8011B6D4, global
+.fn __dt__8011B6D4, global
 /* 8011B6D4 000E4C94  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8011B6D8 000E4C98  7C 08 02 A6 */	mflr r0
 /* 8011B6DC 000E4C9C  2C 03 00 00 */	cmpwi r3, 0
@@ -4214,7 +4214,7 @@
 /* 8011B738 000E4CF8  41 82 00 10 */	beq .L_8011B748
 /* 8011B73C 000E4CFC  7F A3 EB 78 */	mr r3, r29
 /* 8011B740 000E4D00  38 80 00 00 */	li r4, 0
-/* 8011B744 000E4D04  48 32 93 F5 */	bl func_80444B38
+/* 8011B744 000E4D04  48 32 93 F5 */	bl __dt__80444B38
 .L_8011B748:
 /* 8011B748 000E4D08  2C 1E 00 00 */	cmpwi r30, 0
 /* 8011B74C 000E4D0C  40 81 00 0C */	ble .L_8011B758
@@ -4229,7 +4229,7 @@
 /* 8011B76C 000E4D2C  7C 08 03 A6 */	mtlr r0
 /* 8011B770 000E4D30  38 21 00 20 */	addi r1, r1, 0x20
 /* 8011B774 000E4D34  4E 80 00 20 */	blr 
-.endfn func_8011B6D4
+.endfn __dt__8011B6D4
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -4599,7 +4599,7 @@ lbl_8052FFB8:
 __vt__CMenuMiniMap2:
 	.4byte __RTTI__CMenuMiniMap2
 	.4byte 0
-	.4byte func_8011B6D4
+	.4byte __dt__8011B6D4
 	.4byte CChildListNode_Reset
 	.4byte func_8011B778
 	.4byte func_8011BB18
@@ -4670,7 +4670,7 @@ CMenuMiniMap2_hierarchy:
 __vt__CMiniMap:
 	.4byte __RTTI__CMiniMap
 	.4byte 0
-	.4byte func_80117BC8
+	.4byte __dt__80117BC8
 	.4byte func_80039E28
 	.4byte func_80118428
 	.4byte func_80039E18
@@ -4715,7 +4715,7 @@ CMiniMap_hierarchy:
 __vt__CMMTex:
 	.4byte __RTTI__CMMTex
 	.4byte 0
-	.4byte func_801176F4
+	.4byte __dt__801176F4
 	.4byte func_80039E28
 	.4byte func_801179DC
 	.4byte func_80039E18
@@ -4887,7 +4887,7 @@ lbl_806668B4:
 	.4byte __dt__8045F580
 	.4byte 0x0780001F
 	.4byte 0x0000002C
-	.4byte func_801176F4
+	.4byte __dt__801176F4
 	.4byte 0x8680001F
 	.4byte 0x00000000
 	.4byte __dt__IWorkEvent
@@ -4941,7 +4941,7 @@ lbl_806668B4:
 	.4byte 0x02000008
 	.4byte __dt__8045F8C8
 	.4byte 0x82000010
-	.4byte func_80043E88
+	.4byte __dt__80043E88
 .endobj "@etb_8000B75C"
 
 .obj "@etb_8000B794", local
@@ -4965,16 +4965,16 @@ lbl_806668B4:
 	.4byte __dt__8045F580
 	.4byte 0x8780001D
 	.4byte 0x00000090
-	.4byte func_80117BC8
+	.4byte __dt__80117BC8
 	.4byte 0x0780001D
 	.4byte 0x00000090
-	.4byte func_80117BC8
+	.4byte __dt__80117BC8
 	.4byte 0x0780001D
 	.4byte 0x00000064
-	.4byte func_80117540
+	.4byte __dt__80117540
 	.4byte 0x0680001D
 	.4byte 0x0000005C
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 	.4byte 0x8680001D
 	.4byte 0x00000058
 	.4byte __dt__IWorkEvent
@@ -4993,7 +4993,7 @@ lbl_806668B4:
 
 .obj "@eti_80026CC0", local
 .hidden "@eti_80026CC0"
-	.4byte func_80117BC8
+	.4byte __dt__80117BC8
 	.4byte 0x00000068
 	.4byte "@etb_8000B718"
 .endobj "@eti_80026CC0"
@@ -5035,7 +5035,7 @@ lbl_806668B4:
 
 .obj "@eti_80026D08", local
 .hidden "@eti_80026D08"
-	.4byte func_8011B6D4
+	.4byte __dt__8011B6D4
 	.4byte 0x000000A4
 	.4byte "@etb_8000B79C"
 .endobj "@eti_80026D08"

@@ -237,7 +237,7 @@
 /* 80437900 00400EC0  4E 80 00 20 */	blr 
 .endfn __ct__CWorkThread
 
-.fn func_80437904, global
+.fn __dt__80437904, global
 /* 80437904 00400EC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80437908 00400EC8  7C 08 02 A6 */	mflr r0
 /* 8043790C 00400ECC  2C 03 00 00 */	cmpwi r3, 0
@@ -287,9 +287,9 @@
 /* 804379AC 00400F6C  7C 08 03 A6 */	mtlr r0
 /* 804379B0 00400F70  38 21 00 10 */	addi r1, r1, 0x10
 /* 804379B4 00400F74  4E 80 00 20 */	blr 
-.endfn func_80437904
+.endfn __dt__80437904
 
-.fn func_804379B8, global
+.fn __dt__804379B8, global
 /* 804379B8 00400F78  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804379BC 00400F7C  7C 08 02 A6 */	mflr r0
 /* 804379C0 00400F80  2C 03 00 00 */	cmpwi r3, 0
@@ -340,9 +340,9 @@
 /* 80437A64 00401024  7C 08 03 A6 */	mtlr r0
 /* 80437A68 00401028  38 21 00 10 */	addi r1, r1, 0x10
 /* 80437A6C 0040102C  4E 80 00 20 */	blr 
-.endfn func_804379B8
+.endfn __dt__804379B8
 
-.fn func_80437A70, global
+.fn __dt__80437A70, global
 /* 80437A70 00401030  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80437A74 00401034  7C 08 02 A6 */	mflr r0
 /* 80437A78 00401038  2C 03 00 00 */	cmpwi r3, 0
@@ -367,7 +367,7 @@
 /* 80437ABC 0040107C  7C 08 03 A6 */	mtlr r0
 /* 80437AC0 00401080  38 21 00 10 */	addi r1, r1, 0x10
 /* 80437AC4 00401084  4E 80 00 20 */	blr 
-.endfn func_80437A70
+.endfn __dt__80437A70
 
 .fn __dt__CWorkThread, global
 /* 80437AC8 00401088  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -462,7 +462,7 @@
 /* 80437C0C 004011CC  4E 80 00 20 */	blr 
 .endfn __dt__CWorkThread
 
-.fn func_80437C10, global
+.fn __dt__80437C10, global
 /* 80437C10 004011D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80437C14 004011D4  7C 08 02 A6 */	mflr r0
 /* 80437C18 004011D8  2C 04 00 00 */	cmpwi r4, 0
@@ -574,7 +574,7 @@
 /* 80437D9C 0040135C  7C 08 03 A6 */	mtlr r0
 /* 80437DA0 00401360  38 21 00 10 */	addi r1, r1, 0x10
 /* 80437DA4 00401364  4E 80 00 20 */	blr
-.endfn func_80437C10
+.endfn __dt__80437C10
 
 .fn func_80437DA8, global
 /* 80437DA8 00401368  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -1195,7 +1195,7 @@
 /* 804385D8 00401B98  90 01 00 34 */	stw r0, 0x34(r1)
 /* 804385DC 00401B9C  BE E1 00 0C */	stmw r23, 0xc(r1)
 /* 804385E0 00401BA0  7C 7C 1B 78 */	mr r28, r3
-/* 804385E4 00401BA4  3F E0 80 57 */	lis r31, lbl_8056E958@ha
+/* 804385E4 00401BA4  3F E0 80 57 */	lis r31, jumptable_8056E958@ha
 /* 804385E8 00401BA8  80 03 00 7C */	lwz r0, 0x7c(r3)
 /* 804385EC 00401BAC  54 00 04 3E */	clrlwi r0, r0, 0x10
 /* 804385F0 00401BB0  90 03 00 7C */	stw r0, 0x7c(r3)
@@ -1211,7 +1211,7 @@
 /* 80438614 00401BD4  7C 05 20 2E */	lwzx r0, r5, r4
 /* 80438618 00401BD8  28 00 00 0B */	cmplwi r0, 0xb
 /* 8043861C 00401BDC  41 81 01 48 */	bgt .L_80438764
-/* 80438620 00401BE0  38 7F E9 58 */	addi r3, r31, lbl_8056E958@l
+/* 80438620 00401BE0  38 7F E9 58 */	addi r3, r31, jumptable_8056E958@l
 /* 80438624 00401BE4  54 00 10 3A */	slwi r0, r0, 2
 /* 80438628 00401BE8  7C 63 00 2E */	lwzx r3, r3, r0
 /* 8043862C 00401BEC  7C 69 03 A6 */	mtctr r3
@@ -1709,8 +1709,8 @@ lbl_80525DD8:
 
 
 
-.global lbl_8056E958
-lbl_8056E958:
+.global jumptable_8056E958
+jumptable_8056E958:
 	.4byte .L_80438764
 	.4byte .L_80438634
 	.4byte .L_80438644
@@ -1771,14 +1771,14 @@ __vt__CWorkThread:
 __vt__CMsgParam_8:
 	.4byte __RTTI__CMsgParam_8
 	.4byte 0
-	.4byte func_80437A70
+	.4byte __dt__80437A70
 
 
 .global __vt__reslist_CWorkThread
 __vt__reslist_CWorkThread:
 	.4byte __RTTI__reslist_CWorkThread
 	.4byte 0
-	.4byte func_804379B8
+	.4byte __dt__804379B8
 
 .global reslist_CWorkThread_hierarchy
 reslist_CWorkThread_hierarchy:
@@ -1791,7 +1791,7 @@ reslist_CWorkThread_hierarchy:
 __vt___reslist_base_CWorkThread:
 	.4byte __RTTI___reslist_base_CWorkThread
 	.4byte 0
-	.4byte func_80437904
+	.4byte __dt__80437904
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -1825,10 +1825,10 @@ __RTTI___reslist_base_CWorkThread:
 	.4byte 0x00000000
 	.4byte 0x0780001D
 	.4byte 0x00000080
-	.4byte func_80437A70
+	.4byte __dt__80437A70
 	.4byte 0x0780001D
 	.4byte 0x0000005C
-	.4byte func_804379B8
+	.4byte __dt__804379B8
 	.4byte 0x8680001D
 	.4byte 0x00000000
 	.4byte __dt__IWorkEvent
@@ -1943,21 +1943,21 @@ __RTTI___reslist_base_CWorkThread:
 
 .obj "@eti_80033D58", local
 .hidden "@eti_80033D58"
-	.4byte func_80437904
+	.4byte __dt__80437904
 	.4byte 0x000000B4
 	.4byte "@etb_8001C134"
 .endobj "@eti_80033D58"
 
 .obj "@eti_80033D64", local
 .hidden "@eti_80033D64"
-	.4byte func_804379B8
+	.4byte __dt__804379B8
 	.4byte 0x000000B8
 	.4byte "@etb_8001C13C"
 .endobj "@eti_80033D64"
 
 .obj "@eti_80033D70", local
 .hidden "@eti_80033D70"
-	.4byte func_80437A70
+	.4byte __dt__80437A70
 	.4byte 0x00000058
 	.4byte "@etb_8001C144"
 .endobj "@eti_80033D70"
@@ -1971,7 +1971,7 @@ __RTTI___reslist_base_CWorkThread:
 
 .obj "@eti_80033D88", local
 .hidden "@eti_80033D88"
-	.4byte func_80437C10
+	.4byte __dt__80437C10
 	.4byte 0x00000198
 	.4byte "@etb_8001C154"
 .endobj "@eti_80033D88"

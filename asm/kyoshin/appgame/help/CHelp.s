@@ -491,7 +491,7 @@ __vt__cf_CHelp_LandMark:
 	.4byte 0xFFFFFFF4
 	.4byte func_802B8390
 	.4byte func_802B8388
-	.4byte func_802B8208
+	.4byte __dt__802B8208
 	.4byte func_802B8290
 
 .global cf_CHelp_LandMark_hierarchy

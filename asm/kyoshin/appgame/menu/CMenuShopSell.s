@@ -59,7 +59,7 @@
 /* 8018A6F4 00153CB4  4E 80 00 20 */	blr
 .endfn __ct__CMenuShopSell
 
-.fn func_8018A6F8, global
+.fn __dt__8018A6F8, global
 /* 8018A6F8 00153CB8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8018A6FC 00153CBC  7C 08 02 A6 */	mflr r0
 /* 8018A700 00153CC0  2C 03 00 00 */	cmpwi r3, 0
@@ -79,7 +79,7 @@
 /* 8018A738 00153CF8  48 03 92 99 */	bl __dt__CBgTex
 /* 8018A73C 00153CFC  7F C3 F3 78 */	mr r3, r30
 /* 8018A740 00153D00  38 80 00 00 */	li r4, 0
-/* 8018A744 00153D04  4B F7 45 C9 */	bl func_800FED0C
+/* 8018A744 00153D04  4B F7 45 C9 */	bl __dt__800FED0C
 /* 8018A748 00153D08  2C 1F 00 00 */	cmpwi r31, 0
 /* 8018A74C 00153D0C  40 81 00 0C */	ble .L_8018A758
 /* 8018A750 00153D10  7F C3 F3 78 */	mr r3, r30
@@ -91,7 +91,7 @@
 /* 8018A764 00153D24  7C 08 03 A6 */	mtlr r0
 /* 8018A768 00153D28  38 21 00 10 */	addi r1, r1, 0x10
 /* 8018A76C 00153D2C  4E 80 00 20 */	blr 
-.endfn func_8018A6F8
+.endfn __dt__8018A6F8
 
 .fn func_8018A770, global
 /* 8018A770 00153D30  94 21 B5 80 */	stwu r1, -0x4a80(r1)
@@ -1150,7 +1150,7 @@
 
 .fn func_8018B6B0, global
 /* 8018B6B0 00154C70  38 63 FF A8 */	addi r3, r3, -88
-/* 8018B6B4 00154C74  4B FF F0 44 */	b func_8018A6F8
+/* 8018B6B4 00154C74  4B FF F0 44 */	b __dt__8018A6F8
 .endfn func_8018B6B0
 
 
@@ -1178,7 +1178,7 @@ lbl_804FF328:
 __vt__CMenuShopSell:
 	.4byte __RTTI__CMenuShopSell
 	.4byte 0
-	.4byte func_8018A6F8
+	.4byte __dt__8018A6F8
 	.4byte CChildListNode_Reset
 	.4byte func_8018A770
 	.4byte func_8018B160
@@ -1247,10 +1247,10 @@ lbl_80666BE0:
 	.4byte __dt__CBgTex
 	.4byte 0x0680001D
 	.4byte 0x00000058
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 	.4byte 0x8680001D
 	.4byte 0x00000000
-	.4byte func_800FED0C
+	.4byte __dt__800FED0C
 .endobj "@etb_8000ED90"
 
 .obj "@etb_8000EDE0", local
@@ -1283,7 +1283,7 @@ lbl_80666BE0:
 	.4byte __dt__CBgTex
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 .endobj "@etb_8000EDE0"
 
 .obj "@etb_8000EE54", local
@@ -1357,7 +1357,7 @@ lbl_80666BE0:
 
 .obj "@eti_80029C6C", local
 .hidden "@eti_80029C6C"
-	.4byte func_8018A6F8
+	.4byte __dt__8018A6F8
 	.4byte 0x00000078
 	.4byte "@etb_8000EDE0"
 .endobj "@eti_80029C6C"

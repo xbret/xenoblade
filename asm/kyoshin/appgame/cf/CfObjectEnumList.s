@@ -10060,7 +10060,7 @@
 /* 800FD6A4 000C6C64  4B FF 70 F4 */	b func_800F4798
 .endfn func_800FD6A0
 
-.fn func_800FD6A8, global
+.fn __dt__800FD6A8, global
 /* 800FD6A8 000C6C68  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800FD6AC 000C6C6C  7C 08 02 A6 */	mflr r0
 /* 800FD6B0 000C6C70  2C 03 00 00 */	cmpwi r3, 0
@@ -10116,7 +10116,7 @@
 /* 800FD768 000C6D28  7C 08 03 A6 */	mtlr r0
 /* 800FD76C 000C6D2C  38 21 00 20 */	addi r1, r1, 0x20
 /* 800FD770 000C6D30  4E 80 00 20 */	blr 
-.endfn func_800FD6A8
+.endfn __dt__800FD6A8
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -10155,7 +10155,7 @@ lbl_804F8544:
 __vt__cf_CfObjEnumList:
 	.4byte __RTTI__cf_CfObjEnumList
 	.4byte 0
-	.4byte func_800408E8
+	.4byte __dt__800408E8
 
 .global cf_CfObjEnumList_hierarchy
 cf_CfObjEnumList_hierarchy:
@@ -10296,7 +10296,7 @@ lbl_80666800:
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_8004093C
+	.4byte __dt__8004093C
 .endobj "@etb_8000ABE0"
 
 .obj "@etb_8000ABFC", local
@@ -10695,7 +10695,7 @@ lbl_80666800:
 
 .obj "@eti_800265D0", local
 .hidden "@eti_800265D0"
-	.4byte func_800FD6A8
+	.4byte __dt__800FD6A8
 	.4byte 0x000000CC
 	.4byte "@etb_8000ACE4"
 .endobj "@eti_800265D0"

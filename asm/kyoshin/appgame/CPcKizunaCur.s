@@ -20,7 +20,7 @@
 /* 8025D4A0 00226A60  4E 80 00 20 */	blr 
 .endfn func_8025D470
 
-.fn func_8025D4A4, global
+.fn __dt__8025D4A4, global
 /* 8025D4A4 00226A64  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8025D4A8 00226A68  7C 08 02 A6 */	mflr r0
 /* 8025D4AC 00226A6C  2C 03 00 00 */	cmpwi r3, 0
@@ -38,7 +38,7 @@
 /* 8025D4D8 00226A98  7C 08 03 A6 */	mtlr r0
 /* 8025D4DC 00226A9C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8025D4E0 00226AA0  4E 80 00 20 */	blr 
-.endfn func_8025D4A4
+.endfn __dt__8025D4A4
 
 .fn func_8025D4E4, global
 /* 8025D4E4 00226AA4  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -274,7 +274,7 @@
 
 .obj "@eti_8002FDEC", local
 .hidden "@eti_8002FDEC"
-	.4byte func_8025D4A4
+	.4byte __dt__8025D4A4
 	.4byte 0x00000040
 	.4byte "@etb_800175E0"
 .endobj "@eti_8002FDEC"

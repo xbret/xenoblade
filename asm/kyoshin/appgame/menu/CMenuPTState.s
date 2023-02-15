@@ -95,7 +95,7 @@
 
 .fn func_80192BEC, global
 /* 80192BEC 0015C1AC  38 63 FF A8 */	addi r3, r3, -88
-/* 80192BF0 0015C1B0  4B FF E8 30 */	b func_80191420
+/* 80192BF0 0015C1B0  4B FF E8 30 */	b __dt__80191420
 .endfn func_80192BEC
 
 .fn func_80192BF4, global
@@ -199,7 +199,7 @@
 .L_80192D48:
 /* 80192D48 0015C308  38 61 00 08 */	addi r3, r1, 8
 /* 80192D4C 0015C30C  38 80 FF FF */	li r4, -1
-/* 80192D50 0015C310  4B EB 11 39 */	bl func_80043E88
+/* 80192D50 0015C310  4B EB 11 39 */	bl __dt__80043E88
 /* 80192D54 0015C314  38 00 00 01 */	li r0, 1
 /* 80192D58 0015C318  48 00 00 2C */	b .L_80192D84
 .L_80192D5C:
@@ -212,7 +212,7 @@
 /* 80192D70 0015C330  41 80 FF 90 */	blt .L_80192D00
 /* 80192D74 0015C334  38 61 00 08 */	addi r3, r1, 8
 /* 80192D78 0015C338  38 80 FF FF */	li r4, -1
-/* 80192D7C 0015C33C  4B EB 11 0D */	bl func_80043E88
+/* 80192D7C 0015C33C  4B EB 11 0D */	bl __dt__80043E88
 /* 80192D80 0015C340  38 00 00 00 */	li r0, 0
 .L_80192D84:
 /* 80192D84 0015C344  2C 00 00 00 */	cmpwi r0, 0
@@ -260,7 +260,7 @@ CMenuPTState_typestr:
 __vt__CMenuPTState:
 	.4byte __RTTI__CMenuPTState
 	.4byte 0
-	.4byte func_80191420
+	.4byte __dt__80191420
 	.4byte CChildListNode_Reset
 	.4byte func_801914A0
 	.4byte func_80192840
@@ -339,10 +339,10 @@ float_8066A368:
 	.4byte __dt__CBgTex
 	.4byte 0x0680001E
 	.4byte 0x00000058
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_800FED0C
+	.4byte __dt__800FED0C
 .endobj "@etb_8000F2A4"
 
 .obj "@etb_8000F2E0", local
@@ -360,7 +360,7 @@ float_8066A368:
 	.4byte 0x00000018
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte func_80043E88
+	.4byte __dt__80043E88
 .endobj "@etb_8000F2E8"
 
 .section extabindex, "a" # 0x80021020 - 0x80039220

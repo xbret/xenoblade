@@ -126,7 +126,7 @@
 /* 8028F1B4 00258774  4E 80 00 20 */	blr 
 .endfn func_8028EFDC
 
-.fn func_8028F1B8, global
+.fn __dt__8028F1B8, global
 /* 8028F1B8 00258778  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8028F1BC 0025877C  7C 08 02 A6 */	mflr r0
 /* 8028F1C0 00258780  2C 03 00 00 */	cmpwi r3, 0
@@ -161,7 +161,7 @@
 /* 8028F230 002587F0  7C 08 03 A6 */	mtlr r0
 /* 8028F234 002587F4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8028F238 002587F8  4E 80 00 20 */	blr 
-.endfn func_8028F1B8
+.endfn __dt__8028F1B8
 
 .fn func_8028F23C, global
 /* 8028F23C 002587FC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -214,9 +214,9 @@
 /* 8028F2EC 002588AC  88 03 01 21 */	lbz r0, 0x121(r3)
 /* 8028F2F0 002588B0  28 00 00 0C */	cmplwi r0, 0xc
 /* 8028F2F4 002588B4  41 81 00 84 */	bgt .L_8028F378
-/* 8028F2F8 002588B8  3C 80 80 54 */	lis r4, lbl_8053BF38@ha
+/* 8028F2F8 002588B8  3C 80 80 54 */	lis r4, jumptable_8053BF38@ha
 /* 8028F2FC 002588BC  54 00 10 3A */	slwi r0, r0, 2
-/* 8028F300 002588C0  38 84 BF 38 */	addi r4, r4, lbl_8053BF38@l
+/* 8028F300 002588C0  38 84 BF 38 */	addi r4, r4, jumptable_8053BF38@l
 /* 8028F304 002588C4  7C 84 00 2E */	lwzx r4, r4, r0
 /* 8028F308 002588C8  7C 89 03 A6 */	mtctr r4
 /* 8028F30C 002588CC  4E 80 04 20 */	bctr
@@ -2835,7 +2835,7 @@
 /* 80291840 0025AE00  4E 80 00 20 */	blr
 .endfn func_8029183C
 
-.fn func_80291844, global
+.fn __dt__80291844, global
 /* 80291844 0025AE04  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80291848 0025AE08  7C 08 02 A6 */	mflr r0
 /* 8029184C 0025AE0C  2C 03 00 00 */	cmpwi r3, 0
@@ -2863,7 +2863,7 @@
 /* 802918A0 0025AE60  7C 08 03 A6 */	mtlr r0
 /* 802918A4 0025AE64  38 21 00 10 */	addi r1, r1, 0x10
 /* 802918A8 0025AE68  4E 80 00 20 */	blr 
-.endfn func_80291844
+.endfn __dt__80291844
 
 .fn func_802918AC, global
 /* 802918AC 0025AE6C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -4649,9 +4649,9 @@
 /* 80293108 0025C6C8  38 6D B1 68 */	addi r3, r13, lbl_806672E8@sda21
 /* 8029310C 0025C6CC  90 0D B1 68 */	stw r0, lbl_806672E8@sda21(r13)
 /* 80293110 0025C6D0  4B E0 A3 05 */	bl func_8009D414
-/* 80293114 0025C6D4  3C 80 80 29 */	lis r4, func_80291844@ha
+/* 80293114 0025C6D4  3C 80 80 29 */	lis r4, __dt__80291844@ha
 /* 80293118 0025C6D8  3C A0 80 58 */	lis r5, lbl_8057A3F8@ha
-/* 8029311C 0025C6DC  38 84 18 44 */	addi r4, r4, func_80291844@l
+/* 8029311C 0025C6DC  38 84 18 44 */	addi r4, r4, __dt__80291844@l
 /* 80293120 0025C6E0  38 6D B1 68 */	addi r3, r13, lbl_806672E8@sda21
 /* 80293124 0025C6E4  38 A5 A3 F8 */	addi r5, r5, lbl_8057A3F8@l
 /* 80293128 0025C6E8  48 02 65 75 */	bl __register_global_object
@@ -4763,8 +4763,8 @@ cf_CAwardBase_typestr:
 
 
 
-.global lbl_8053BF38
-lbl_8053BF38:
+.global jumptable_8053BF38
+jumptable_8053BF38:
 	.4byte .L_8028F378
 	.4byte .L_8028F310
 	.4byte .L_8028F318
@@ -4785,7 +4785,7 @@ lbl_8053BF38:
 __vt__CSaveLoad:
 	.4byte __RTTI__CSaveLoad
 	.4byte 0
-	.4byte func_8028F1B8
+	.4byte __dt__8028F1B8
 	.4byte func_80039E28
 	.4byte func_802912D4
 	.4byte func_80039E18
@@ -4838,9 +4838,9 @@ __vt__cf_CfAward:
 	.4byte 0
 	.4byte __RTTI__cf_CfAward
 	.4byte 0
-	.4byte func_80291844
+	.4byte __dt__80291844
 	.4byte func_80291B18
-	.4byte func_80291844
+	.4byte __dt__80291844
 	.4byte func_80291B18
 
 .global cf_CfAward_hierarchy
@@ -4958,10 +4958,10 @@ lbl_806672E8:
 	.4byte 0x00000000
 	.4byte 0x0780001C
 	.4byte 0x0000013C
-	.4byte func_8028E7F8
+	.4byte __dt__8028E7F8
 	.4byte 0x0780001C
 	.4byte 0x00000110
-	.4byte func_8028ED30
+	.4byte __dt__8028ED30
 	.4byte 0x0780001C
 	.4byte 0x000000D4
 	.4byte __dt__CSysWin
@@ -4976,7 +4976,7 @@ lbl_806672E8:
 	.4byte __dt__801D2A38
 	.4byte 0x0780001C
 	.4byte 0x00000028
-	.4byte func_8028EA34
+	.4byte __dt__8028EA34
 	.4byte 0x0780001C
 	.4byte 0x00000004
 	.4byte __dt__8045F580
@@ -5001,25 +5001,25 @@ lbl_806672E8:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x0000013C
-	.4byte func_8028E7F8
+	.4byte __dt__8028E7F8
 	.4byte 0x8780001E
 	.4byte 0x00000110
-	.4byte func_8028ED30
+	.4byte __dt__8028ED30
 	.4byte 0x0780001E
 	.4byte 0x0000013C
-	.4byte func_8028E7F8
+	.4byte __dt__8028E7F8
 	.4byte 0x0780001E
 	.4byte 0x00000110
-	.4byte func_8028ED30
+	.4byte __dt__8028ED30
 	.4byte 0x8780001E
 	.4byte 0x000000D4
 	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x0000013C
-	.4byte func_8028E7F8
+	.4byte __dt__8028E7F8
 	.4byte 0x0780001E
 	.4byte 0x00000110
-	.4byte func_8028ED30
+	.4byte __dt__8028ED30
 	.4byte 0x0780001E
 	.4byte 0x000000D4
 	.4byte __dt__CSysWin
@@ -5028,10 +5028,10 @@ lbl_806672E8:
 	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x0000013C
-	.4byte func_8028E7F8
+	.4byte __dt__8028E7F8
 	.4byte 0x0780001E
 	.4byte 0x00000110
-	.4byte func_8028ED30
+	.4byte __dt__8028ED30
 	.4byte 0x0780001E
 	.4byte 0x000000D4
 	.4byte __dt__CSysWin
@@ -5043,10 +5043,10 @@ lbl_806672E8:
 	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x0000013C
-	.4byte func_8028E7F8
+	.4byte __dt__8028E7F8
 	.4byte 0x0780001E
 	.4byte 0x00000110
-	.4byte func_8028ED30
+	.4byte __dt__8028ED30
 	.4byte 0x0780001E
 	.4byte 0x000000D4
 	.4byte __dt__CSysWin
@@ -5061,7 +5061,7 @@ lbl_806672E8:
 	.4byte __dt__801D2A38
 	.4byte 0x8780001E
 	.4byte 0x00000028
-	.4byte func_8028EA34
+	.4byte __dt__8028EA34
 .endobj "@etb_80019554"
 
 .obj "@etb_80019680", local
@@ -5268,7 +5268,7 @@ lbl_806672E8:
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_801320F0
+	.4byte __dt__801320F0
 .endobj "@etb_80019790"
 
 .obj "@etb_800197AC", local
@@ -5351,7 +5351,7 @@ lbl_806672E8:
 	.4byte 0x00000000
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte func_801320F0
+	.4byte __dt__801320F0
 .endobj "@etb_8001980C"
 
 .section extabindex, "a" # 0x80021020 - 0x80039220
@@ -5367,7 +5367,7 @@ lbl_806672E8:
 
 .obj "@eti_800319AC", local
 .hidden "@eti_800319AC"
-	.4byte func_8028F1B8
+	.4byte __dt__8028F1B8
 	.4byte 0x00000084
 	.4byte "@etb_80019554"
 .endobj "@eti_800319AC"
@@ -5598,7 +5598,7 @@ lbl_806672E8:
 
 .obj "@eti_80031B38", local
 .hidden "@eti_80031B38"
-	.4byte func_80291844
+	.4byte __dt__80291844
 	.4byte 0x00000068
 	.4byte "@etb_80019790"
 .endobj "@eti_80031B38"

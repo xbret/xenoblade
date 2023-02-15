@@ -30,7 +30,7 @@
 /* 8049E4B0 00467A70  4E 80 00 20 */	blr 
 .endfn func_8049E458
 
-.fn func_8049E4B4, global
+.fn __dt__8049E4B4, global
 /* 8049E4B4 00467A74  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049E4B8 00467A78  7C 08 02 A6 */	mflr r0
 /* 8049E4BC 00467A7C  2C 03 00 00 */	cmpwi r3, 0
@@ -58,7 +58,7 @@
 /* 8049E510 00467AD0  7C 08 03 A6 */	mtlr r0
 /* 8049E514 00467AD4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8049E518 00467AD8  4E 80 00 20 */	blr 
-.endfn func_8049E4B4
+.endfn __dt__8049E4B4
 
 .fn func_8049E51C, global
 /* 8049E51C 00467ADC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -136,7 +136,7 @@ CScnIdMan_typestr:
 __vt__CScnIdMan:
 	.4byte __RTTI__CScnIdMan
 	.4byte 0
-	.4byte func_8049E4B4
+	.4byte __dt__8049E4B4
 	.4byte func_8049E570
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -160,7 +160,7 @@ __RTTI__CScnIdMan:
 	.4byte 0x00000000
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 .endobj "@etb_8001F6B8"
 
 .obj "@etb_8001F6D4", local
@@ -171,7 +171,7 @@ __RTTI__CScnIdMan:
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 .endobj "@etb_8001F6D4"
 
 .obj "@etb_8001F6F0", local
@@ -199,7 +199,7 @@ __RTTI__CScnIdMan:
 
 .obj "@eti_8003719C", local
 .hidden "@eti_8003719C"
-	.4byte func_8049E4B4
+	.4byte __dt__8049E4B4
 	.4byte 0x00000068
 	.4byte "@etb_8001F6D4"
 .endobj "@eti_8003719C"

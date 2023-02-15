@@ -4,7 +4,7 @@
 
 
 
-.fn func_800C1274, global
+.fn __dt__800C1274, global
 /* 800C1274 0008A834  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800C1278 0008A838  7C 08 02 A6 */	mflr r0
 /* 800C127C 0008A83C  2C 03 00 00 */	cmpwi r3, 0
@@ -52,7 +52,7 @@
 /* 800C1318 0008A8D8  7C 08 03 A6 */	mtlr r0
 /* 800C131C 0008A8DC  38 21 00 10 */	addi r1, r1, 0x10
 /* 800C1320 0008A8E0  4E 80 00 20 */	blr 
-.endfn func_800C1274
+.endfn __dt__800C1274
 
 .fn func_800C1324, global
 /* 800C1324 0008A8E4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1397,7 +1397,7 @@
 /* 800C25D4 0008BB94  4B FC 24 2D */	bl func_80084A00
 /* 800C25D8 0008BB98  38 61 00 10 */	addi r3, r1, 0x10
 /* 800C25DC 0008BB9C  38 80 FF FF */	li r4, -1
-/* 800C25E0 0008BBA0  4B F8 18 A9 */	bl func_80043E88
+/* 800C25E0 0008BBA0  4B F8 18 A9 */	bl __dt__80043E88
 /* 800C25E4 0008BBA4  48 00 01 10 */	b .L_800C26F4
 .L_800C25E8:
 /* 800C25E8 0008BBA8  4B FB B4 95 */	bl func_8007DA7C
@@ -1455,7 +1455,7 @@
 .L_800C26A8:
 /* 800C26A8 0008BC68  38 61 00 10 */	addi r3, r1, 0x10
 /* 800C26AC 0008BC6C  38 80 FF FF */	li r4, -1
-/* 800C26B0 0008BC70  4B F8 17 D9 */	bl func_80043E88
+/* 800C26B0 0008BC70  4B F8 17 D9 */	bl __dt__80043E88
 .L_800C26B4:
 /* 800C26B4 0008BC74  83 DF 00 18 */	lwz r30, 0x18(r31)
 /* 800C26B8 0008BC78  80 7E 00 04 */	lwz r3, 4(r30)
@@ -1720,7 +1720,7 @@
 .L_800C2A90:
 /* 800C2A90 0008C050  38 61 00 20 */	addi r3, r1, 0x20
 /* 800C2A94 0008C054  38 80 FF FF */	li r4, -1
-/* 800C2A98 0008C058  4B F8 13 F1 */	bl func_80043E88
+/* 800C2A98 0008C058  4B F8 13 F1 */	bl __dt__80043E88
 .L_800C2A9C:
 /* 800C2A9C 0008C05C  48 03 BB F1 */	bl func_800FE68C
 /* 800C2AA0 0008C060  3C 63 00 01 */	addis r3, r3, 1
@@ -2017,7 +2017,7 @@ __vt__cf_CfObjectPoint:
 	.4byte func_800C136C
 	.4byte func_8003E664
 	.4byte func_8003DC74
-	.4byte func_800C1274
+	.4byte __dt__800C1274
 	.4byte func_800C1244
 	.4byte func_800C1324
 	.4byte func_800C14CC
@@ -2177,7 +2177,7 @@ lbl_805771F0:
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_800AC760
+	.4byte __dt__800AC760
 .endobj "@etb_8000A058"
 
 .obj "@etb_8000A074", local
@@ -2285,7 +2285,7 @@ lbl_805771F0:
 	.4byte 0x002F0018
 	.4byte 0x00000000
 	.4byte 0x82000010
-	.4byte func_80043E88
+	.4byte __dt__80043E88
 .endobj "@etb_8000A0F4"
 
 .obj "@etb_8000A114", local
@@ -2295,7 +2295,7 @@ lbl_805771F0:
 	.4byte 0x005A0010
 	.4byte 0x00000000
 	.4byte 0x82000020
-	.4byte func_80043E88
+	.4byte __dt__80043E88
 .endobj "@etb_8000A114"
 
 .obj "@etb_8000A12C", local
@@ -2310,7 +2310,7 @@ lbl_805771F0:
 
 .obj "@eti_80025B98", local
 .hidden "@eti_80025B98"
-	.4byte func_800C1274
+	.4byte __dt__800C1274
 	.4byte 0x000000B0
 	.4byte "@etb_8000A058"
 .endobj "@eti_80025B98"

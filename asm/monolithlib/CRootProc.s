@@ -156,7 +156,7 @@
 /* 8043BEBC 0040547C  4E 80 00 20 */	blr 
 .endfn func_8043BC84
 
-.fn func_8043BEC0, global
+.fn __dt__8043BEC0, global
 /* 8043BEC0 00405480  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8043BEC4 00405484  7C 08 02 A6 */	mflr r0
 /* 8043BEC8 00405488  2C 03 00 00 */	cmpwi r3, 0
@@ -167,7 +167,7 @@
 /* 8043BEDC 0040549C  7C 7E 1B 78 */	mr r30, r3
 /* 8043BEE0 004054A0  41 82 00 1C */	beq .L_8043BEFC
 /* 8043BEE4 004054A4  38 80 00 00 */	li r4, 0
-/* 8043BEE8 004054A8  48 00 8C 51 */	bl func_80444B38
+/* 8043BEE8 004054A8  48 00 8C 51 */	bl __dt__80444B38
 /* 8043BEEC 004054AC  2C 1F 00 00 */	cmpwi r31, 0
 /* 8043BEF0 004054B0  40 81 00 0C */	ble .L_8043BEFC
 /* 8043BEF4 004054B4  7F C3 F3 78 */	mr r3, r30
@@ -180,7 +180,7 @@
 /* 8043BF0C 004054CC  7C 08 03 A6 */	mtlr r0
 /* 8043BF10 004054D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8043BF14 004054D4  4E 80 00 20 */	blr
-.endfn func_8043BEC0
+.endfn __dt__8043BEC0
 
 .fn func_8043BF18, global
 /* 8043BF18 004054D8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -439,7 +439,7 @@
 /* 8043C264 00405824  4E 80 00 20 */	blr 
 .endfn func_8043C220
 
-.fn func_8043C268, global
+.fn __dt__8043C268, global
 /* 8043C268 00405828  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8043C26C 0040582C  7C 08 02 A6 */	mflr r0
 /* 8043C270 00405830  2C 03 00 00 */	cmpwi r3, 0
@@ -451,7 +451,7 @@
 /* 8043C288 00405848  41 82 00 20 */	beq .L_8043C2A8
 /* 8043C28C 0040584C  41 82 00 0C */	beq .L_8043C298
 /* 8043C290 00405850  38 80 00 00 */	li r4, 0
-/* 8043C294 00405854  48 00 88 A5 */	bl func_80444B38
+/* 8043C294 00405854  48 00 88 A5 */	bl __dt__80444B38
 .L_8043C298:
 /* 8043C298 00405858  2C 1F 00 00 */	cmpwi r31, 0
 /* 8043C29C 0040585C  40 81 00 0C */	ble .L_8043C2A8
@@ -465,7 +465,7 @@
 /* 8043C2B8 00405878  7C 08 03 A6 */	mtlr r0
 /* 8043C2BC 0040587C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8043C2C0 00405880  4E 80 00 20 */	blr 
-.endfn func_8043C268
+.endfn __dt__8043C268
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -490,7 +490,7 @@ CTTask_unnamed_CTaskManager_cpp_CRootProc_typestr:
 __vt___unnamed_CTaskManager_cpp_CRootProc:
 	.4byte __RTTI___unnamed_CTaskManager_cpp_CRootProc
 	.4byte 0
-	.4byte func_8043C268
+	.4byte __dt__8043C268
 	.4byte CChildListNode_Reset
 	.4byte func_8043C1D4
 	.4byte func_8043C1D0
@@ -515,7 +515,7 @@ _unnamed_CTaskManager_cpp_CRootProc_hierarchy:
 __vt__CTTask_unnamed_CTaskManager_cpp_CRootProc:
 	.4byte __RTTI__CTTask_unnamed_CTaskManager_cpp_CRootProc
 	.4byte 0
-	.4byte func_8043BEC0
+	.4byte __dt__8043BEC0
 	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
@@ -631,7 +631,7 @@ lbl_80667EA4:
 
 .obj "@eti_80034010", local
 .hidden "@eti_80034010"
-	.4byte func_8043BEC0
+	.4byte __dt__8043BEC0
 	.4byte 0x00000058
 	.4byte "@etb_8001C388"
 .endobj "@eti_80034010"
@@ -673,7 +673,7 @@ lbl_80667EA4:
 
 .obj "@eti_80034058", local
 .hidden "@eti_80034058"
-	.4byte func_8043C268
+	.4byte __dt__8043C268
 	.4byte 0x0000005C
 	.4byte "@etb_8001C3B8"
 .endobj "@eti_80034058"

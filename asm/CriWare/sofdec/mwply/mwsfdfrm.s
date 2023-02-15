@@ -891,9 +891,9 @@
 /* 8039C83C 00365DFC  80 01 00 10 */	lwz r0, 0x10(r1)
 /* 8039C840 00365E00  28 00 00 08 */	cmplwi r0, 8
 /* 8039C844 00365E04  41 81 00 34 */	bgt .L_8039C878
-/* 8039C848 00365E08  3C 60 80 57 */	lis r3, lbl_805697A8@ha
+/* 8039C848 00365E08  3C 60 80 57 */	lis r3, jumptable_805697A8@ha
 /* 8039C84C 00365E0C  54 00 10 3A */	slwi r0, r0, 2
-/* 8039C850 00365E10  38 63 97 A8 */	addi r3, r3, lbl_805697A8@l
+/* 8039C850 00365E10  38 63 97 A8 */	addi r3, r3, jumptable_805697A8@l
 /* 8039C854 00365E14  7C 63 00 2E */	lwzx r3, r3, r0
 /* 8039C858 00365E18  7C 69 03 A6 */	mtctr r3
 /* 8039C85C 00365E1C  4E 80 04 20 */	bctr
@@ -1358,8 +1358,8 @@ mwsfdfrm_strpool:
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_805697A8
-lbl_805697A8:
+.global jumptable_805697A8
+jumptable_805697A8:
 	.4byte .L_8039C878
 	.4byte .L_8039C860
 	.4byte .L_8039C878

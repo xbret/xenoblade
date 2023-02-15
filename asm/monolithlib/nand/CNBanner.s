@@ -61,7 +61,7 @@
 /* 804F5220 004BE7E0  4E 80 00 20 */	blr 
 .endfn func_804F5158
 
-.fn func_804F5224, global
+.fn __dt__804F5224, global
 /* 804F5224 004BE7E4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804F5228 004BE7E8  7C 08 02 A6 */	mflr r0
 /* 804F522C 004BE7EC  2C 03 00 00 */	cmpwi r3, 0
@@ -121,7 +121,7 @@
 /* 804F52EC 004BE8AC  7C 08 03 A6 */	mtlr r0
 /* 804F52F0 004BE8B0  38 21 00 20 */	addi r1, r1, 0x20
 /* 804F52F4 004BE8B4  4E 80 00 20 */	blr 
-.endfn func_804F5224
+.endfn __dt__804F5224
 
 .fn func_804F52F8, global
 /* 804F52F8 004BE8B8  4C C6 31 82 */	crclr 6
@@ -430,7 +430,7 @@
 /* 804F5734 004BECF4  4E 80 00 20 */	blr 
 .endfn func_804F53DC
 
-.fn func_804F5738, global
+.fn __dt__804F5738, global
 /* 804F5738 004BECF8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804F573C 004BECFC  7C 08 02 A6 */	mflr r0
 /* 804F5740 004BED00  90 01 00 24 */	stw r0, 0x24(r1)
@@ -480,7 +480,7 @@
 /* 804F57DC 004BED9C  7C 08 03 A6 */	mtlr r0
 /* 804F57E0 004BEDA0  38 21 00 20 */	addi r1, r1, 0x20
 /* 804F57E4 004BEDA4  4E 80 00 20 */	blr 
-.endfn func_804F5738
+.endfn __dt__804F5738
 
 .fn func_804F57E8, global
 /* 804F57E8 004BEDA8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -578,7 +578,7 @@ lbl_805281C4:
 __vt__CNBanner:
 	.4byte __RTTI__CNBanner
 	.4byte 0
-	.4byte func_804F5224
+	.4byte __dt__804F5224
 	.4byte func_80039E28
 	.4byte func_804F57E8
 	.4byte func_80039E18
@@ -684,7 +684,7 @@ __RTTI__CNBanner:
 
 .obj "@eti_800391C4", local
 .hidden "@eti_800391C4"
-	.4byte func_804F5224
+	.4byte __dt__804F5224
 	.4byte 0x000000D4
 	.4byte "@etb_80020FDC"
 .endobj "@eti_800391C4"
@@ -705,7 +705,7 @@ __RTTI__CNBanner:
 
 .obj "@eti_800391E8", local
 .hidden "@eti_800391E8"
-	.4byte func_804F5738
+	.4byte __dt__804F5738
 	.4byte 0x000000B0
 	.4byte "@etb_80021008"
 .endobj "@eti_800391E8"

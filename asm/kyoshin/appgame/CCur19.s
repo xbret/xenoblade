@@ -22,7 +22,7 @@
 /* 8029BF14 002654D4  4E 80 00 20 */	blr 
 .endfn func_8029BEDC
 
-.fn func_8029BF18, global
+.fn __dt__8029BF18, global
 /* 8029BF18 002654D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029BF1C 002654DC  7C 08 02 A6 */	mflr r0
 /* 8029BF20 002654E0  2C 03 00 00 */	cmpwi r3, 0
@@ -32,7 +32,7 @@
 /* 8029BF30 002654F0  7C 9F 23 78 */	mr r31, r4
 /* 8029BF34 002654F4  41 82 00 1C */	beq .L_8029BF50
 /* 8029BF38 002654F8  38 80 00 00 */	li r4, 0
-/* 8029BF3C 002654FC  4B F3 60 B1 */	bl func_801D1FEC
+/* 8029BF3C 002654FC  4B F3 60 B1 */	bl __dt__801D1FEC
 /* 8029BF40 00265500  2C 1F 00 00 */	cmpwi r31, 0
 /* 8029BF44 00265504  40 81 00 0C */	ble .L_8029BF50
 /* 8029BF48 00265508  7F C3 F3 78 */	mr r3, r30
@@ -44,7 +44,7 @@
 /* 8029BF5C 0026551C  7C 08 03 A6 */	mtlr r0
 /* 8029BF60 00265520  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029BF64 00265524  4E 80 00 20 */	blr 
-.endfn func_8029BF18
+.endfn __dt__8029BF18
 
 .fn func_8029BF68, global
 /* 8029BF68 00265528  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -276,7 +276,7 @@
 
 .obj "@eti_80032258", local
 .hidden "@eti_80032258"
-	.4byte func_8029BF18
+	.4byte __dt__8029BF18
 	.4byte 0x00000050
 	.4byte "@etb_8001A310"
 .endobj "@eti_80032258"

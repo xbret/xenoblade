@@ -1942,7 +1942,7 @@
 /* 804B4B1C 0047E0DC  4E 80 00 20 */	blr 
 .endfn func_804B49B8
 
-.fn func_804B4B20, global
+.fn __dt__804B4B20, global
 /* 804B4B20 0047E0E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804B4B24 0047E0E4  7C 08 02 A6 */	mflr r0
 /* 804B4B28 0047E0E8  2C 03 00 00 */	cmpwi r3, 0
@@ -1953,7 +1953,7 @@
 /* 804B4B3C 0047E0FC  7C 7E 1B 78 */	mr r30, r3
 /* 804B4B40 0047E100  41 82 00 1C */	beq .L_804B4B5C
 /* 804B4B44 0047E104  38 80 00 00 */	li r4, 0
-/* 804B4B48 0047E108  4B F8 FF F1 */	bl func_80444B38
+/* 804B4B48 0047E108  4B F8 FF F1 */	bl __dt__80444B38
 /* 804B4B4C 0047E10C  2C 1F 00 00 */	cmpwi r31, 0
 /* 804B4B50 0047E110  40 81 00 0C */	ble .L_804B4B5C
 /* 804B4B54 0047E114  7F C3 F3 78 */	mr r3, r30
@@ -1966,9 +1966,9 @@
 /* 804B4B6C 0047E12C  7C 08 03 A6 */	mtlr r0
 /* 804B4B70 0047E130  38 21 00 10 */	addi r1, r1, 0x10
 /* 804B4B74 0047E134  4E 80 00 20 */	blr 
-.endfn func_804B4B20
+.endfn __dt__804B4B20
 
-.fn func_804B4B78, global
+.fn __dt__804B4B78, global
 /* 804B4B78 0047E138  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804B4B7C 0047E13C  7C 08 02 A6 */	mflr r0
 /* 804B4B80 0047E140  2C 03 00 00 */	cmpwi r3, 0
@@ -1982,7 +1982,7 @@
 /* 804B4BA0 0047E160  90 0D C0 B0 */	stw r0, lbl_80668230@sda21(r13)
 /* 804B4BA4 0047E164  41 82 00 0C */	beq .L_804B4BB0
 /* 804B4BA8 0047E168  38 80 00 00 */	li r4, 0
-/* 804B4BAC 0047E16C  4B F8 FF 8D */	bl func_80444B38
+/* 804B4BAC 0047E16C  4B F8 FF 8D */	bl __dt__80444B38
 .L_804B4BB0:
 /* 804B4BB0 0047E170  2C 1F 00 00 */	cmpwi r31, 0
 /* 804B4BB4 0047E174  40 81 00 0C */	ble .L_804B4BC0
@@ -1996,7 +1996,7 @@
 /* 804B4BD0 0047E190  7C 08 03 A6 */	mtlr r0
 /* 804B4BD4 0047E194  38 21 00 10 */	addi r1, r1, 0x10
 /* 804B4BD8 0047E198  4E 80 00 20 */	blr 
-.endfn func_804B4B78
+.endfn __dt__804B4B78
 
 .fn func_804B4BDC, global
 /* 804B4BDC 0047E19C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -3049,7 +3049,7 @@ CColiManCall_typestr:
 __vt__CTaskColiManager:
 	.4byte __RTTI__CTaskColiManager
 	.4byte 0
-	.4byte func_804B4B78
+	.4byte __dt__804B4B78
 	.4byte CChildListNode_Reset
 	.4byte func_804B4D50
 	.4byte func_804B4D54
@@ -3074,7 +3074,7 @@ CTaskColiManager_hierarchy:
 __vt__CTTask_CTaskColiManager:
 	.4byte __RTTI__CTTask_CTaskColiManager
 	.4byte 0
-	.4byte func_804B4B20
+	.4byte __dt__804B4B20
 	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
@@ -3334,7 +3334,7 @@ lbl_8065F9F8:
 	.4byte 0x00000000
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte func_804B4B20
+	.4byte __dt__804B4B20
 .endobj "@etb_8001FD50"
 
 .obj "@etb_8001FD6C", local
@@ -3466,14 +3466,14 @@ lbl_8065F9F8:
 
 .obj "@eti_80037988", local
 .hidden "@eti_80037988"
-	.4byte func_804B4B20
+	.4byte __dt__804B4B20
 	.4byte 0x00000058
 	.4byte "@etb_8001FD00"
 .endobj "@eti_80037988"
 
 .obj "@eti_80037994", local
 .hidden "@eti_80037994"
-	.4byte func_804B4B78
+	.4byte __dt__804B4B78
 	.4byte 0x00000064
 	.4byte "@etb_8001FD08"
 .endobj "@eti_80037994"

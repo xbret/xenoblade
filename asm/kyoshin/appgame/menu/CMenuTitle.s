@@ -397,7 +397,7 @@
 
 .fn func_802B6314, global
 /* 802B6314 0027F8D4  38 63 FF AC */	addi r3, r3, -84
-/* 802B6318 0027F8D8  4B FF F9 08 */	b func_802B5C20
+/* 802B6318 0027F8D8  4B FF F9 08 */	b __dt__802B5C20
 .endfn func_802B6314
 
 .fn func_802B631C, global
@@ -407,7 +407,7 @@
 
 .fn func_802B6324, global
 /* 802B6324 0027F8E4  38 63 FF A8 */	addi r3, r3, -88
-/* 802B6328 0027F8E8  4B FF F8 F8 */	b func_802B5C20
+/* 802B6328 0027F8E8  4B FF F8 F8 */	b __dt__802B5C20
 .endfn func_802B6324
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -432,7 +432,7 @@ CTTask_CMenuTitle_typestr:
 __vt__CMenuTitle:
 	.4byte __RTTI__CMenuTitle
 	.4byte 0
-	.4byte func_802B5C20
+	.4byte __dt__802B5C20
 	.4byte CChildListNode_Reset
 	.4byte func_802B5C90
 	.4byte func_802B5CE0
@@ -500,7 +500,7 @@ CMenuTitle_hierarchy:
 __vt__CTTask_CMenuTitle:
 	.4byte __RTTI__CTTask_CMenuTitle
 	.4byte 0
-	.4byte func_802B5BC8
+	.4byte __dt__802B5BC8
 	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
@@ -573,13 +573,13 @@ lbl_80667510:
 	.4byte 0x00000000
 	.4byte 0x0680001E
 	.4byte 0x00000058
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 	.4byte 0x0680001E
 	.4byte 0x00000054
 	.4byte __dt__IWorkEvent
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_802B5BC8
+	.4byte __dt__802B5BC8
 .endobj "@etb_8001BAD8"
 
 .obj "@etb_8001BB0C", local

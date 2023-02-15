@@ -42,7 +42,7 @@
 /* 8025D81C 00226DDC  4E 80 00 20 */	blr 
 .endfn func_8025D794
 
-.fn func_8025D820, global
+.fn __dt__8025D820, global
 /* 8025D820 00226DE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8025D824 00226DE4  7C 08 02 A6 */	mflr r0
 /* 8025D828 00226DE8  2C 03 00 00 */	cmpwi r3, 0
@@ -65,7 +65,7 @@
 /* 8025D868 00226E28  7C 08 03 A6 */	mtlr r0
 /* 8025D86C 00226E2C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8025D870 00226E30  4E 80 00 20 */	blr 
-.endfn func_8025D820
+.endfn __dt__8025D820
 
 .fn func_8025D874, global
 /* 8025D874 00226E34  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2641,7 +2641,7 @@ lbl_805091B0:
 __vt__CPcKizunagram:
 	.4byte __RTTI__CPcKizunagram
 	.4byte 0
-	.4byte func_8025D820
+	.4byte __dt__8025D820
 	.4byte func_80039E28
 	.4byte func_8025EA68
 	.4byte func_80039E18
@@ -2685,7 +2685,7 @@ CPcKizunagram_hierarchy:
 __vt__CPcKizunaCur:
 	.4byte __RTTI__CPcKizunaCur
 	.4byte 0
-	.4byte func_8025D4A4
+	.4byte __dt__8025D4A4
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -2800,7 +2800,7 @@ double_8066B160:
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x0000002C
-	.4byte func_8025D4A4
+	.4byte __dt__8025D4A4
 .endobj "@etb_80017624"
 
 .obj "@etb_80017640", local
@@ -2994,7 +2994,7 @@ double_8066B160:
 
 .obj "@eti_8002FE34", local
 .hidden "@eti_8002FE34"
-	.4byte func_8025D820
+	.4byte __dt__8025D820
 	.4byte 0x00000054
 	.4byte "@etb_80017624"
 .endobj "@eti_8002FE34"

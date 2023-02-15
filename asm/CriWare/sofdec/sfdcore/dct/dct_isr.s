@@ -490,7 +490,7 @@
 /* 803BA4A8 00383A68  90 01 00 54 */	stw r0, 0x54(r1)
 /* 803BA4AC 00383A6C  39 29 F9 28 */	addi r9, r9, lbl_8051F928@l
 /* 803BA4B0 00383A70  38 09 00 00 */	addi r0, r9, 0
-/* 803BA4B4 00383A74  3D 00 80 57 */	lis r8, lbl_8056B598@ha
+/* 803BA4B4 00383A74  3D 00 80 57 */	lis r8, jumptable_8056B598@ha
 /* 803BA4B8 00383A78  BE 01 00 10 */	stmw r16, 0x10(r1)
 /* 803BA4BC 00383A7C  7C 80 22 14 */	add r4, r0, r4
 /* 803BA4C0 00383A80  88 04 00 01 */	lbz r0, 1(r4)
@@ -501,7 +501,7 @@
 /* 803BA4D4 00383A94  3B C0 00 00 */	li r30, 0
 /* 803BA4D8 00383A98  7C 9C 07 74 */	extsb r28, r4
 /* 803BA4DC 00383A9C  7C 00 07 74 */	extsb r0, r0
-/* 803BA4E0 00383AA0  3C E0 80 57 */	lis r7, lbl_8056B558@ha
+/* 803BA4E0 00383AA0  3C E0 80 57 */	lis r7, jumptable_8056B558@ha
 /* 803BA4E4 00383AA4  3C A0 FF FF */	lis r5, 0xffff
 /* 803BA4E8 00383AA8  3C C0 00 01 */	lis r6, 1
 /* 803BA4EC 00383AAC  3C 80 00 03 */	lis r4, 3
@@ -512,7 +512,7 @@
 /* 803BA4FC 00383ABC  7D 6B 07 74 */	extsb r11, r11
 /* 803BA500 00383AC0  28 0B 00 07 */	cmplwi r11, 7
 /* 803BA504 00383AC4  41 81 01 F4 */	bgt .L_803BA6F8
-/* 803BA508 00383AC8  39 88 B5 98 */	addi r12, r8, lbl_8056B598@l
+/* 803BA508 00383AC8  39 88 B5 98 */	addi r12, r8, jumptable_8056B598@l
 /* 803BA50C 00383ACC  55 6B 10 3A */	slwi r11, r11, 2
 /* 803BA510 00383AD0  7D 8C 58 2E */	lwzx r12, r12, r11
 /* 803BA514 00383AD4  7D 89 03 A6 */	mtctr r12
@@ -672,7 +672,7 @@
 .L_803BA754:
 /* 803BA754 00383D14  28 0C 00 0F */	cmplwi r12, 0xf
 /* 803BA758 00383D18  41 81 02 E8 */	bgt .L_803BAA40
-/* 803BA75C 00383D1C  3A 07 B5 58 */	addi r16, r7, lbl_8056B558@l
+/* 803BA75C 00383D1C  3A 07 B5 58 */	addi r16, r7, jumptable_8056B558@l
 /* 803BA760 00383D20  55 8C 10 3A */	slwi r12, r12, 2
 /* 803BA764 00383D24  7E 10 60 2E */	lwzx r16, r16, r12
 /* 803BA768 00383D28  7E 09 03 A6 */	mtctr r16
@@ -2096,8 +2096,8 @@ lbl_8051F928:
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
 
-.global lbl_8056B558
-lbl_8056B558:
+.global jumptable_8056B558
+jumptable_8056B558:
 	.4byte .L_803BA770
 	.4byte .L_803BA7B4
 	.4byte .L_803BA7EC
@@ -2115,8 +2115,8 @@ lbl_8056B558:
 	.4byte .L_803BAA08
 	.4byte .L_803BAA40
 	
-.global lbl_8056B598
-lbl_8056B598:
+.global jumptable_8056B598
+jumptable_8056B598:
 	.4byte .L_803BA51C
 	.4byte .L_803BA550
 	.4byte .L_803BA580

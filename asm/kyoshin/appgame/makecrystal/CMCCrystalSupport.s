@@ -19,7 +19,7 @@
 /* 8022E8B4 001F7E74  4E 80 00 20 */	blr 
 .endfn func_8022E888
 
-.fn func_8022E8B8, global
+.fn __dt__8022E8B8, global
 /* 8022E8B8 001F7E78  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8022E8BC 001F7E7C  7C 08 02 A6 */	mflr r0
 /* 8022E8C0 001F7E80  2C 03 00 00 */	cmpwi r3, 0
@@ -37,7 +37,7 @@
 /* 8022E8EC 001F7EAC  7C 08 03 A6 */	mtlr r0
 /* 8022E8F0 001F7EB0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8022E8F4 001F7EB4  4E 80 00 20 */	blr 
-.endfn func_8022E8B8
+.endfn __dt__8022E8B8
 
 .fn func_8022E8F8, global
 /* 8022E8F8 001F7EB8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -218,7 +218,7 @@
 /* 8022EB54 001F8114  4E 80 00 20 */	blr
 .endfn func_8022EB0C
 
-.fn func_8022EB58, global
+.fn __dt__8022EB58, global
 /* 8022EB58 001F8118  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8022EB5C 001F811C  7C 08 02 A6 */	mflr r0
 /* 8022EB60 001F8120  2C 03 00 00 */	cmpwi r3, 0
@@ -242,7 +242,7 @@
 /* 8022EBA8 001F8168  41 82 00 10 */	beq .L_8022EBB8
 /* 8022EBAC 001F816C  7F C3 F3 78 */	mr r3, r30
 /* 8022EBB0 001F8170  38 80 00 00 */	li r4, 0
-/* 8022EBB4 001F8174  48 21 5F 85 */	bl func_80444B38
+/* 8022EBB4 001F8174  48 21 5F 85 */	bl __dt__80444B38
 .L_8022EBB8:
 /* 8022EBB8 001F8178  2C 1F 00 00 */	cmpwi r31, 0
 /* 8022EBBC 001F817C  40 81 00 0C */	ble .L_8022EBC8
@@ -256,7 +256,7 @@
 /* 8022EBD8 001F8198  7C 08 03 A6 */	mtlr r0
 /* 8022EBDC 001F819C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8022EBE0 001F81A0  4E 80 00 20 */	blr 
-.endfn func_8022EB58
+.endfn __dt__8022EB58
 
 .fn func_8022EBE4, global
 /* 8022EBE4 001F81A4  94 21 FC F0 */	stwu r1, -0x310(r1)
@@ -831,7 +831,7 @@ CMCCrystalSupport_strpool:
 __vt__CMCCrystalSupport:
 	.4byte __RTTI__CMCCrystalSupport
 	.4byte 0
-	.4byte func_8022E8B8
+	.4byte __dt__8022E8B8
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -964,7 +964,7 @@ float_8066AEF4:
 	.4byte __dt__CBgTex
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 .endobj "@etb_80015804"
 
 .obj "@etb_80015878", local
@@ -1001,7 +1001,7 @@ float_8066AEF4:
 
 .obj "@eti_8002E730", local
 .hidden "@eti_8002E730"
-	.4byte func_8022E8B8
+	.4byte __dt__8022E8B8
 	.4byte 0x00000040
 	.4byte "@etb_800157D4"
 .endobj "@eti_8002E730"
@@ -1043,7 +1043,7 @@ float_8066AEF4:
 
 .obj "@eti_8002E778", local
 .hidden "@eti_8002E778"
-	.4byte func_8022EB58
+	.4byte __dt__8022EB58
 	.4byte 0x0000008C
 	.4byte "@etb_80015804"
 .endobj "@eti_8002E778"

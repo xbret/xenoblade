@@ -66,7 +66,7 @@
 /* 800392FC 000028BC  90 0D A4 80 */	stw r0, lbl_80666600@sda21(r13)
 /* 80039300 000028C0  7F C3 F3 78 */	mr r3, r30
 /* 80039304 000028C4  38 80 00 00 */	li r4, 0
-/* 80039308 000028C8  48 3F FB C1 */	bl func_80438EC8
+/* 80039308 000028C8  48 3F FB C1 */	bl __dt__80438EC8
 /* 8003930C 000028CC  2C 1F 00 00 */	cmpwi r31, 0
 /* 80039310 000028D0  40 81 00 0C */	ble .L_8003931C
 /* 80039314 000028D4  7F C3 F3 78 */	mr r3, r30
@@ -541,6 +541,7 @@
 /* 80039978 00002F38  4E 80 00 20 */	blr 
 .endfn func_80039890
 
+#part of lyt_arcResourceAccessor
 .fn func_8003997C, global
 /* 8003997C 00002F3C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039980 00002F40  7C 08 02 A6 */	mflr r0
@@ -571,7 +572,7 @@
 /* 800399DC 00002F9C  4E 80 00 20 */	blr 
 .endfn func_8003997C
 
-.fn func_800399E0, global
+.fn __dt__800399E0, global
 /* 800399E0 00002FA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800399E4 00002FA4  7C 08 02 A6 */	mflr r0
 /* 800399E8 00002FA8  2C 03 00 00 */	cmpwi r3, 0
@@ -593,7 +594,7 @@
 /* 80039A24 00002FE4  7C 08 03 A6 */	mtlr r0
 /* 80039A28 00002FE8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80039A2C 00002FEC  4E 80 00 20 */	blr 
-.endfn func_800399E0
+.endfn __dt__800399E0
 
 .fn GameMain, global
 /* 80039A30 00002FF0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -864,7 +865,7 @@ CGame_strpool:
 __vt___unnamed_CGame_cpp_CGameRestart:
 	.4byte __RTTI___unnamed_CGame_cpp_CGameRestart
 	.4byte 0
-	.4byte func_80039E90
+	.4byte __dt__80039E90
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -1076,7 +1077,7 @@ lbl_80666608:
 	.4byte 0x00000000
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte func_80438EC8
+	.4byte __dt__80438EC8
 .endobj "@etb_800066E0"
 
 .obj "@etb_800066FC", local
@@ -1087,7 +1088,7 @@ lbl_80666608:
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_80438EC8
+	.4byte __dt__80438EC8
 .endobj "@etb_800066FC"
 
 .obj "@etb_80006718", local
@@ -1150,7 +1151,7 @@ lbl_80666608:
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x00000024
-	.4byte func_800399E0
+	.4byte __dt__800399E0
 .endobj "@etb_80006768"
 
 .obj "@etb_80006784", local
@@ -1272,7 +1273,7 @@ lbl_80666608:
 
 .obj "@eti_800210A4", local
 .hidden "@eti_800210A4"
-	.4byte func_800399E0
+	.4byte __dt__800399E0
 	.4byte 0x00000050
 	.4byte "@etb_80006784"
 .endobj "@eti_800210A4"

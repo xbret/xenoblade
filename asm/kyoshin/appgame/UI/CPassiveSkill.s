@@ -37,7 +37,7 @@
 /* 8026D538 00236AF8  4E 80 00 20 */	blr 
 .endfn func_8026D4C0
 
-.fn func_8026D53C, global
+.fn __dt__8026D53C, global
 /* 8026D53C 00236AFC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8026D540 00236B00  7C 08 02 A6 */	mflr r0
 /* 8026D544 00236B04  2C 03 00 00 */	cmpwi r3, 0
@@ -51,7 +51,7 @@
 /* 8026D564 00236B24  4B FB E1 3D */	bl __dt__CSysWin
 /* 8026D568 00236B28  38 7E 00 28 */	addi r3, r30, 0x28
 /* 8026D56C 00236B2C  38 80 FF FF */	li r4, -1
-/* 8026D570 00236B30  4B FF 95 A9 */	bl func_80266B18
+/* 8026D570 00236B30  4B FF 95 A9 */	bl __dt__80266B18
 /* 8026D574 00236B34  38 7E 00 08 */	addi r3, r30, 8
 /* 8026D578 00236B38  38 80 FF FF */	li r4, -1
 /* 8026D57C 00236B3C  48 1F 20 05 */	bl __dt__8045F580
@@ -66,7 +66,7 @@
 /* 8026D59C 00236B5C  7C 08 03 A6 */	mtlr r0
 /* 8026D5A0 00236B60  38 21 00 10 */	addi r1, r1, 0x10
 /* 8026D5A4 00236B64  4E 80 00 20 */	blr 
-.endfn func_8026D53C
+.endfn __dt__8026D53C
 
 .fn func_8026D5A8, global
 /* 8026D5A8 00236B68  94 21 FF A0 */	stwu r1, -0x60(r1)
@@ -896,7 +896,7 @@
 /* 8026E074 00237634  4B FF 92 B9 */	bl func_8026732C
 /* 8026E078 00237638  38 61 00 10 */	addi r3, r1, 0x10
 /* 8026E07C 0023763C  38 80 FF FF */	li r4, -1
-/* 8026E080 00237640  4B FF 8A 99 */	bl func_80266B18
+/* 8026E080 00237640  4B FF 8A 99 */	bl __dt__80266B18
 /* 8026E084 00237644  38 7F 00 28 */	addi r3, r31, 0x28
 /* 8026E088 00237648  4B FF 8A F1 */	bl func_80266B78
 /* 8026E08C 0023764C  7F E3 FB 78 */	mr r3, r31
@@ -1296,7 +1296,7 @@ lbl_80667184:
 	.4byte 0x00000000
 	.4byte 0x0780001F
 	.4byte 0x00000028
-	.4byte func_80266B18
+	.4byte __dt__80266B18
 	.4byte 0x0780001F
 	.4byte 0x00000008
 	.4byte __dt__8045F580
@@ -1321,7 +1321,7 @@ lbl_80667184:
 	.4byte __dt__CSysWin
 	.4byte 0x8780001E
 	.4byte 0x00000028
-	.4byte func_80266B18
+	.4byte __dt__80266B18
 .endobj "@etb_80017C58"
 
 .obj "@etb_80017C94", local
@@ -1419,7 +1419,7 @@ lbl_80667184:
 
 .obj "@eti_80030518", local
 .hidden "@eti_80030518"
-	.4byte func_8026D53C
+	.4byte __dt__8026D53C
 	.4byte 0x0000006C
 	.4byte "@etb_80017C58"
 .endobj "@eti_80030518"

@@ -36,7 +36,7 @@
 /* 80296BAC 0026016C  4E 80 00 20 */	blr 
 .endfn func_80296B44
 
-.fn func_80296BB0, global
+.fn __dt__80296BB0, global
 /* 80296BB0 00260170  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80296BB4 00260174  7C 08 02 A6 */	mflr r0
 /* 80296BB8 00260178  2C 03 00 00 */	cmpwi r3, 0
@@ -54,7 +54,7 @@
 /* 80296BE4 002601A4  7C 08 03 A6 */	mtlr r0
 /* 80296BE8 002601A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80296BEC 002601AC  4E 80 00 20 */	blr 
-.endfn func_80296BB0
+.endfn __dt__80296BB0
 
 .fn func_80296BF0, global
 /* 80296BF0 002601B0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -762,7 +762,7 @@ lbl_8066B490:
 
 .obj "@eti_80031EBC", local
 .hidden "@eti_80031EBC"
-	.4byte func_80296BB0
+	.4byte __dt__80296BB0
 	.4byte 0x00000040
 	.4byte "@etb_80019C20"
 .endobj "@eti_80031EBC"

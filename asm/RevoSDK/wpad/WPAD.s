@@ -711,9 +711,9 @@
 /* 803696BC 00332C7C  38 06 FF FD */	addi r0, r6, -3
 /* 803696C0 00332C80  28 00 00 0C */	cmplwi r0, 0xc
 /* 803696C4 00332C84  41 81 05 68 */	bgt .L_80369C2C
-/* 803696C8 00332C88  3C C0 80 56 */	lis r6, lbl_805606E4@ha
+/* 803696C8 00332C88  3C C0 80 56 */	lis r6, jumptable_805606E4@ha
 /* 803696CC 00332C8C  54 00 10 3A */	slwi r0, r0, 2
-/* 803696D0 00332C90  38 C6 06 E4 */	addi r6, r6, lbl_805606E4@l
+/* 803696D0 00332C90  38 C6 06 E4 */	addi r6, r6, jumptable_805606E4@l
 /* 803696D4 00332C94  7C C6 00 2E */	lwzx r6, r6, r0
 /* 803696D8 00332C98  7C C9 03 A6 */	mtctr r6
 /* 803696DC 00332C9C  4E 80 04 20 */	bctr 
@@ -4386,9 +4386,9 @@
 /* 8036CBC0 00336180  7C 7F 1A 14 */	add r3, r31, r3
 /* 8036CBC4 00336184  38 83 00 A0 */	addi r4, r3, 0xa0
 /* 8036CBC8 00336188  41 81 00 4C */	bgt .L_8036CC14
-/* 8036CBCC 0033618C  3C 60 80 56 */	lis r3, lbl_80560950@ha
+/* 8036CBCC 0033618C  3C 60 80 56 */	lis r3, jumptable_80560950@ha
 /* 8036CBD0 00336190  54 00 10 3A */	slwi r0, r0, 2
-/* 8036CBD4 00336194  38 63 09 50 */	addi r3, r3, lbl_80560950@l
+/* 8036CBD4 00336194  38 63 09 50 */	addi r3, r3, jumptable_80560950@l
 /* 8036CBD8 00336198  7C 63 00 2E */	lwzx r3, r3, r0
 /* 8036CBDC 0033619C  7C 69 03 A6 */	mtctr r3
 /* 8036CBE0 003361A0  4E 80 04 20 */	bctr 
@@ -4456,9 +4456,9 @@
 /* 8036CCAC 0033626C  38 03 FF FD */	addi r0, r3, -3
 /* 8036CCB0 00336270  28 00 00 0C */	cmplwi r0, 0xc
 /* 8036CCB4 00336274  41 81 00 4C */	bgt .L_8036CD00
-/* 8036CCB8 00336278  3C 60 80 56 */	lis r3, lbl_80560984@ha
+/* 8036CCB8 00336278  3C 60 80 56 */	lis r3, jumptable_80560984@ha
 /* 8036CCBC 0033627C  54 00 10 3A */	slwi r0, r0, 2
-/* 8036CCC0 00336280  38 63 09 84 */	addi r3, r3, lbl_80560984@l
+/* 8036CCC0 00336280  38 63 09 84 */	addi r3, r3, jumptable_80560984@l
 /* 8036CCC4 00336284  7C 63 00 2E */	lwzx r3, r3, r0
 /* 8036CCC8 00336288  7C 69 03 A6 */	mtctr r3
 /* 8036CCCC 0033628C  4E 80 04 20 */	bctr 
@@ -4661,9 +4661,9 @@
 /* 8036CF80 00336540  7C 7F 1A 14 */	add r3, r31, r3
 /* 8036CF84 00336544  38 83 00 A0 */	addi r4, r3, 0xa0
 /* 8036CF88 00336548  41 81 00 4C */	bgt .L_8036CFD4
-/* 8036CF8C 0033654C  3C 60 80 56 */	lis r3, lbl_805609B8@ha
+/* 8036CF8C 0033654C  3C 60 80 56 */	lis r3, jumptable_805609B8@ha
 /* 8036CF90 00336550  54 00 10 3A */	slwi r0, r0, 2
-/* 8036CF94 00336554  38 63 09 B8 */	addi r3, r3, lbl_805609B8@l
+/* 8036CF94 00336554  38 63 09 B8 */	addi r3, r3, jumptable_805609B8@l
 /* 8036CF98 00336558  7C 63 00 2E */	lwzx r3, r3, r0
 /* 8036CF9C 0033655C  7C 69 03 A6 */	mtctr r3
 /* 8036CFA0 00336560  4E 80 04 20 */	bctr 
@@ -7898,9 +7898,9 @@
 /* 8036FF34 003394F4  98 01 00 3C */	stb r0, 0x3c(r1)
 /* 8036FF38 003394F8  90 C1 00 64 */	stw r6, 0x64(r1)
 /* 8036FF3C 003394FC  41 81 00 D8 */	bgt .L_80370014
-/* 8036FF40 00339500  3C 60 80 56 */	lis r3, lbl_805609EC@ha
+/* 8036FF40 00339500  3C 60 80 56 */	lis r3, jumptable_805609EC@ha
 /* 8036FF44 00339504  54 80 10 3A */	slwi r0, r4, 2
-/* 8036FF48 00339508  38 63 09 EC */	addi r3, r3, lbl_805609EC@l
+/* 8036FF48 00339508  38 63 09 EC */	addi r3, r3, jumptable_805609EC@l
 /* 8036FF4C 0033950C  7C 63 00 2E */	lwzx r3, r3, r0
 /* 8036FF50 00339510  7C 69 03 A6 */	mtctr r3
 /* 8036FF54 00339514  4E 80 04 20 */	bctr 
@@ -8508,8 +8508,8 @@ lbl_805606C8:
 	.balign 4
 
 
-.global lbl_805606E4
-lbl_805606E4:
+.global jumptable_805606E4
+jumptable_805606E4:
 	.4byte .L_803696E0
 	.4byte .L_803696E0
 	.4byte .L_803696E0
@@ -8583,8 +8583,8 @@ lbl_80560900:
 	.asciz "         Please call KPADSetConnectCallback instead of WPADSetConnectCallback.\n"
 
 
-.global lbl_80560950
-lbl_80560950:
+.global jumptable_80560950
+jumptable_80560950:
 	.4byte .L_8036CBE4
 	.4byte .L_8036CBE4
 	.4byte .L_8036CBE4
@@ -8600,8 +8600,8 @@ lbl_80560950:
 	.4byte .L_8036CBEC
 
 
-.global lbl_80560984
-lbl_80560984:
+.global jumptable_80560984
+jumptable_80560984:
 	.4byte .L_8036CCD0
 	.4byte .L_8036CCD0
 	.4byte .L_8036CCD0
@@ -8617,8 +8617,8 @@ lbl_80560984:
 	.4byte .L_8036CCD8
 
 
-.global lbl_805609B8
-lbl_805609B8:
+.global jumptable_805609B8
+jumptable_805609B8:
 	.4byte .L_8036CFA4
 	.4byte .L_8036CFA4
 	.4byte .L_8036CFA4
@@ -8634,8 +8634,8 @@ lbl_805609B8:
 	.4byte .L_8036CFAC
 
 
-.global lbl_805609EC
-lbl_805609EC:
+.global jumptable_805609EC
+jumptable_805609EC:
 	.4byte .L_8036FF58
 	.4byte .L_8036FF64
 	.4byte .L_8036FF70

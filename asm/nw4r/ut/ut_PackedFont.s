@@ -215,13 +215,13 @@
 /* 8042DDE8 003F73A8  3B E0 00 03 */	li r31, 3
 /* 8042DDEC 003F73AC  7F 63 DB 78 */	mr r3, r27
 /* 8042DDF0 003F73B0  4B FF FA F5 */	bl Attach__Q54nw4r2ut6detail15ArchiveFontBase18CachedStreamReaderFPCvUl
-/* 8042DDF4 003F73B4  3F 80 80 57 */	lis r28, lbl_8056E8C8@ha
+/* 8042DDF4 003F73B4  3F 80 80 57 */	lis r28, jumptable_8056E8C8@ha
 /* 8042DDF8 003F73B8  48 00 01 50 */	b .L_8042DF48
 .L_8042DDFC:
 /* 8042DDFC 003F73BC  80 1E 00 0C */	lwz r0, 0xc(r30)
 /* 8042DE00 003F73C0  28 00 00 0C */	cmplwi r0, 0xc
 /* 8042DE04 003F73C4  41 81 01 34 */	bgt .L_8042DF38
-/* 8042DE08 003F73C8  38 7C E8 C8 */	addi r3, r28, lbl_8056E8C8@l
+/* 8042DE08 003F73C8  38 7C E8 C8 */	addi r3, r28, jumptable_8056E8C8@l
 /* 8042DE0C 003F73CC  54 00 10 3A */	slwi r0, r0, 2
 /* 8042DE10 003F73D0  7C 63 00 2E */	lwzx r3, r3, r0
 /* 8042DE14 003F73D4  7C 69 03 A6 */	mtctr r3
@@ -1423,8 +1423,8 @@
 
 
 
-.global lbl_8056E8C8
-lbl_8056E8C8:
+.global jumptable_8056E8C8
+jumptable_8056E8C8:
 	.4byte .L_8042DE1C
 	.4byte .L_8042DE30
 	.4byte .L_8042DE44

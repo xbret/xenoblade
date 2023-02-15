@@ -329,7 +329,7 @@
 
 .fn func_802B2624, global
 /* 802B2624 0027BBE4  38 63 FF A8 */	addi r3, r3, -88
-/* 802B2628 0027BBE8  4B FF E8 F0 */	b func_802B0F18
+/* 802B2628 0027BBE8  4B FF E8 F0 */	b __dt__802B0F18
 .endfn func_802B2624
 
 .fn func_802B262C, global
@@ -368,7 +368,7 @@ CMenuGameClear_strpool:
 __vt__CMenuGameClear:
 	.4byte __RTTI__CMenuGameClear
 	.4byte 0
-	.4byte func_802B0F18
+	.4byte __dt__802B0F18
 	.4byte CChildListNode_Reset
 	.4byte func_802B0FA4
 	.4byte func_802B13BC
@@ -442,10 +442,10 @@ lbl_806674E8:
 	.4byte __dt__8045F580
 	.4byte 0x0680001D
 	.4byte 0x00000058
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 	.4byte 0x8680001D
 	.4byte 0x00000000
-	.4byte func_800FED0C
+	.4byte __dt__800FED0C
 .endobj "@etb_8001B840"
 
 .obj "@etb_8001B8A4", local

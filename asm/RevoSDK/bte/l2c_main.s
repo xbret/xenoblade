@@ -318,7 +318,7 @@
 /* 802F9FB8 002C3578  3B 80 00 01 */	li r28, 1
 /* 802F9FBC 002C357C  3F A0 00 08 */	lis r29, 8
 /* 802F9FC0 002C3580  3F 60 80 5C */	lis r27, lbl_805C2AC0@ha
-/* 802F9FC4 002C3584  3F 40 80 55 */	lis r26, lbl_805480BC@ha
+/* 802F9FC4 002C3584  3F 40 80 55 */	lis r26, jumptable_805480BC@ha
 .L_802F9FC8:
 /* 802F9FC8 002C3588  7C 15 C0 40 */	cmplw r21, r24
 /* 802F9FCC 002C358C  7E B0 AB 78 */	mr r16, r21
@@ -348,7 +348,7 @@
 .L_802FA02C:
 /* 802FA02C 002C35EC  28 07 00 0B */	cmplwi r7, 0xb
 /* 802FA030 002C35F0  41 81 09 68 */	bgt .L_802FA998
-/* 802FA034 002C35F4  38 7A 80 BC */	addi r3, r26, lbl_805480BC@l
+/* 802FA034 002C35F4  38 7A 80 BC */	addi r3, r26, jumptable_805480BC@l
 /* 802FA038 002C35F8  54 E0 10 3A */	slwi r0, r7, 2
 /* 802FA03C 002C35FC  7C 63 00 2E */	lwzx r3, r3, r0
 /* 802FA040 002C3600  7C 69 03 A6 */	mtctr r3
@@ -1163,8 +1163,8 @@ lbl_80547E18:
 	.asciz "L2CAP - bad cmd code: %d"
 	.balign 4
 
-.global lbl_805480BC
-lbl_805480BC:
+.global jumptable_805480BC
+jumptable_805480BC:
 	.4byte .L_802FA998
 	.4byte .L_802FA048
 	.4byte .L_802FA11C

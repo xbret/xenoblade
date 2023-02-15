@@ -226,7 +226,7 @@
 .L_80185958:
 /* 80185958 0014EF18  38 61 00 08 */	addi r3, r1, 8
 /* 8018595C 0014EF1C  38 80 FF FF */	li r4, -1
-/* 80185960 0014EF20  4B EB E5 29 */	bl func_80043E88
+/* 80185960 0014EF20  4B EB E5 29 */	bl __dt__80043E88
 .L_80185964:
 /* 80185964 0014EF24  7F E0 00 34 */	cntlzw r0, r31
 /* 80185968 0014EF28  7F C3 F3 78 */	mr r3, r30
@@ -387,7 +387,7 @@
 /* 80185B88 0014F148  41 80 FF BC */	blt .L_80185B44
 /* 80185B8C 0014F14C  38 61 00 08 */	addi r3, r1, 8
 /* 80185B90 0014F150  38 80 FF FF */	li r4, -1
-/* 80185B94 0014F154  4B EB E2 F5 */	bl func_80043E88
+/* 80185B94 0014F154  4B EB E2 F5 */	bl __dt__80043E88
 /* 80185B98 0014F158  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80185B9C 0014F15C  38 60 00 00 */	li r3, 0
 /* 80185BA0 0014F160  83 C1 00 18 */	lwz r30, 0x18(r1)
@@ -465,7 +465,7 @@
 /* 80185CA8 0014F268  4B F7 8C C5 */	bl func_800FE96C
 /* 80185CAC 0014F26C  38 61 00 08 */	addi r3, r1, 8
 /* 80185CB0 0014F270  38 80 FF FF */	li r4, -1
-/* 80185CB4 0014F274  4B EB E1 D5 */	bl func_80043E88
+/* 80185CB4 0014F274  4B EB E1 D5 */	bl __dt__80043E88
 .L_80185CB8:
 /* 80185CB8 0014F278  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 80185CBC 0014F27C  38 60 00 00 */	li r3, 0
@@ -1141,7 +1141,7 @@
 /* 801865C0 0014FB80  4E 80 00 20 */	blr 
 .endfn func_80186578
 
-.fn func_801865C4, global
+.fn __dt__801865C4, global
 /* 801865C4 0014FB84  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801865C8 0014FB88  7C 08 02 A6 */	mflr r0
 /* 801865CC 0014FB8C  2C 03 00 00 */	cmpwi r3, 0
@@ -1186,7 +1186,7 @@
 /* 80186658 0014FC18  7C 08 03 A6 */	mtlr r0
 /* 8018665C 0014FC1C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80186660 0014FC20  4E 80 00 20 */	blr 
-.endfn func_801865C4
+.endfn __dt__801865C4
 
 .fn func_80186664, global
 /* 80186664 0014FC24  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -2112,7 +2112,7 @@ lbl_80666BC0:
 	.4byte 0x00060010
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte func_80043E88
+	.4byte __dt__80043E88
 .endobj "@etb_8000E9BC"
 
 .obj "@etb_8000E9D4", local
@@ -2134,7 +2134,7 @@ lbl_80666BC0:
 	.4byte 0x00140010
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte func_80043E88
+	.4byte __dt__80043E88
 .endobj "@etb_8000E9E4"
 
 .obj "@etb_8000E9FC", local
@@ -2144,7 +2144,7 @@ lbl_80666BC0:
 	.4byte 0x001B0010
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte func_80043E88
+	.4byte __dt__80043E88
 .endobj "@etb_8000E9FC"
 
 .obj "@etb_8000EA14", local
@@ -2435,7 +2435,7 @@ lbl_80666BC0:
 
 .obj "@eti_800299CC", local
 .hidden "@eti_800299CC"
-	.4byte func_801865C4
+	.4byte __dt__801865C4
 	.4byte 0x000000A0
 	.4byte "@etb_8000EA74"
 .endobj "@eti_800299CC"

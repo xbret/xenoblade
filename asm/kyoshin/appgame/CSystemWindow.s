@@ -84,7 +84,7 @@
 /* 8012470C 000EDCCC  4E 80 00 20 */	blr
 .endfn func_801245EC
 
-.fn func_80124710, global
+.fn __dt__80124710, global
 /* 80124710 000EDCD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80124714 000EDCD4  7C 08 02 A6 */	mflr r0
 /* 80124718 000EDCD8  2C 03 00 00 */	cmpwi r3, 0
@@ -102,7 +102,7 @@
 /* 80124748 000EDD08  41 82 00 10 */	beq .L_80124758
 /* 8012474C 000EDD0C  7F C3 F3 78 */	mr r3, r30
 /* 80124750 000EDD10  38 80 00 00 */	li r4, 0
-/* 80124754 000EDD14  48 32 03 E5 */	bl func_80444B38
+/* 80124754 000EDD14  48 32 03 E5 */	bl __dt__80444B38
 .L_80124758:
 /* 80124758 000EDD18  2C 1F 00 00 */	cmpwi r31, 0
 /* 8012475C 000EDD1C  40 81 00 0C */	ble .L_80124768
@@ -116,7 +116,7 @@
 /* 80124778 000EDD38  7C 08 03 A6 */	mtlr r0
 /* 8012477C 000EDD3C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80124780 000EDD40  4E 80 00 20 */	blr 
-.endfn func_80124710
+.endfn __dt__80124710
 
 .fn func_80124784, global
 /* 80124784 000EDD44  94 21 FF B0 */	stwu r1, -0x50(r1)
@@ -432,7 +432,7 @@ CSystemWindow_typestr:
 __vt__CSysWinSelect:
 	.4byte __RTTI__CSysWinSelect
 	.4byte 0
-	.4byte func_80124CD0
+	.4byte __dt__80124CD0
 	.4byte CChildListNode_Reset
 	.4byte func_80124D50
 	.4byte func_80124E0C
@@ -503,7 +503,7 @@ CSysWinSelect_hierarchy:
 __vt__CSystemWindow:
 	.4byte __RTTI__CSystemWindow
 	.4byte 0
-	.4byte func_80124710
+	.4byte __dt__80124710
 	.4byte CChildListNode_Reset
 	.4byte func_80124784
 	.4byte func_801248A0
@@ -606,13 +606,13 @@ lbl_806668D4:
 	.4byte 0x00000000
 	.4byte 0x0680001B
 	.4byte 0x00000070
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 	.4byte 0x0680001B
 	.4byte 0x0000006C
 	.4byte __dt__IWorkEvent
 	.4byte 0x8680001B
 	.4byte 0x00000000
-	.4byte func_8012235C
+	.4byte __dt__8012235C
 .endobj "@etb_8000BDB4"
 
 .obj "@etb_8000BDE8", local
@@ -626,7 +626,7 @@ lbl_806668D4:
 	.4byte __dt__CSysWin
 	.4byte 0x0680001E
 	.4byte 0x00000070
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 	.4byte 0x8680001E
 	.4byte 0x0000006C
 	.4byte __dt__IWorkEvent
@@ -679,7 +679,7 @@ lbl_806668D4:
 
 .obj "@eti_80027068", local
 .hidden "@eti_80027068"
-	.4byte func_80124710
+	.4byte __dt__80124710
 	.4byte 0x00000074
 	.4byte "@etb_8000BDE8"
 .endobj "@eti_80027068"

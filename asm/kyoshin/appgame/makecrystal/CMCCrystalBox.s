@@ -464,7 +464,7 @@
 /* 80213F08 001DD4C8  4E 80 00 20 */	blr 
 .endfn __dt__80213ECC
 
-.fn func_80213F0C, global
+.fn __dt__80213F0C, global
 /* 80213F0C 001DD4CC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80213F10 001DD4D0  7C 08 02 A6 */	mflr r0
 /* 80213F14 001DD4D4  2C 03 00 00 */	cmpwi r3, 0
@@ -520,7 +520,7 @@
 /* 80213FD8 001DD598  7C 08 03 A6 */	mtlr r0
 /* 80213FDC 001DD59C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80213FE0 001DD5A0  4E 80 00 20 */	blr 
-.endfn func_80213F0C
+.endfn __dt__80213F0C
 
 .fn func_80213FE4, global
 /* 80213FE4 001DD5A4  94 21 FE 10 */	stwu r1, -0x1f0(r1)
@@ -724,9 +724,9 @@
 /* 802142EC 001DD8AC  41 82 01 08 */	beq .L_802143F4
 /* 802142F0 001DD8B0  28 00 00 0E */	cmplwi r0, 0xe
 /* 802142F4 001DD8B4  41 81 00 98 */	bgt .L_8021438C
-/* 802142F8 001DD8B8  3C 80 80 54 */	lis r4, lbl_805393D8@ha
+/* 802142F8 001DD8B8  3C 80 80 54 */	lis r4, jumptable_805393D8@ha
 /* 802142FC 001DD8BC  54 00 10 3A */	slwi r0, r0, 2
-/* 80214300 001DD8C0  38 84 93 D8 */	addi r4, r4, lbl_805393D8@l
+/* 80214300 001DD8C0  38 84 93 D8 */	addi r4, r4, jumptable_805393D8@l
 /* 80214304 001DD8C4  7C 84 00 2E */	lwzx r4, r4, r0
 /* 80214308 001DD8C8  7C 89 03 A6 */	mtctr r4
 /* 8021430C 001DD8CC  4E 80 04 20 */	bctr
@@ -7849,8 +7849,8 @@ CMCCrystalBox_strpool:
 
 
 
-.global lbl_805393D8
-lbl_805393D8:
+.global jumptable_805393D8
+jumptable_805393D8:
 	.4byte .L_8021438C
 	.4byte .L_80214310
 	.4byte .L_80214318
@@ -7873,7 +7873,7 @@ lbl_805393D8:
 __vt__CMCCrystalBox:
 	.4byte __RTTI__CMCCrystalBox
 	.4byte 0
-	.4byte func_80213F0C
+	.4byte __dt__80213F0C
 	.4byte func_80039E28
 	.4byte func_80219D24
 	.4byte func_80039E18
@@ -8869,7 +8869,7 @@ lbl_80666FC0:
 
 .obj "@eti_8002D494", local
 .hidden "@eti_8002D494"
-	.4byte func_80213F0C
+	.4byte __dt__80213F0C
 	.4byte 0x000000D8
 	.4byte "@etb_800136BC"
 .endobj "@eti_8002D494"

@@ -92,7 +92,7 @@
 /* 802431FC 0020C7BC  3B E0 00 02 */	li r31, 2
 /* 80243200 0020C7C0  3F 40 80 50 */	lis r26, CMapSel_strpool@ha
 /* 80243204 0020C7C4  54 1D 06 3E */	clrlwi r29, r0, 0x18
-/* 80243208 0020C7C8  3E E0 80 54 */	lis r23, lbl_8053A550@ha
+/* 80243208 0020C7C8  3E E0 80 54 */	lis r23, jumptable_8053A550@ha
 /* 8024320C 0020C7CC  48 00 00 64 */	b .L_80243270
 .L_80243210:
 /* 80243210 0020C7D0  57 F8 06 3E */	clrlwi r24, r31, 0x18
@@ -127,7 +127,7 @@
 /* 80243270 0020C830  57 E0 06 3E */	clrlwi r0, r31, 0x18
 /* 80243274 0020C834  28 00 00 1C */	cmplwi r0, 0x1c
 /* 80243278 0020C838  41 81 00 18 */	bgt .L_80243290
-/* 8024327C 0020C83C  38 77 A5 50 */	addi r3, r23, lbl_8053A550@l
+/* 8024327C 0020C83C  38 77 A5 50 */	addi r3, r23, jumptable_8053A550@l
 /* 80243280 0020C840  54 00 10 3A */	slwi r0, r0, 2
 /* 80243284 0020C844  7C 63 00 2E */	lwzx r3, r3, r0
 /* 80243288 0020C848  7C 69 03 A6 */	mtctr r3
@@ -226,7 +226,7 @@
 /* 802433CC 0020C98C  4E 80 00 20 */	blr 
 .endfn func_802430AC
 
-.fn func_802433D0, global
+.fn __dt__802433D0, global
 /* 802433D0 0020C990  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802433D4 0020C994  7C 08 02 A6 */	mflr r0
 /* 802433D8 0020C998  2C 03 00 00 */	cmpwi r3, 0
@@ -255,7 +255,7 @@
 /* 80243430 0020C9F0  7C 08 03 A6 */	mtlr r0
 /* 80243434 0020C9F4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80243438 0020C9F8  4E 80 00 20 */	blr 
-.endfn func_802433D0
+.endfn __dt__802433D0
 
 .fn func_8024343C, global
 /* 8024343C 0020C9FC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1338,8 +1338,8 @@ CMapSel_strpool:
 
 
 
-.global lbl_8053A550
-lbl_8053A550:
+.global jumptable_8053A550
+jumptable_8053A550:
 	.4byte .L_80243210
 	.4byte .L_80243210
 	.4byte .L_80243210
@@ -1376,7 +1376,7 @@ lbl_8053A550:
 __vt__CMapSel:
 	.4byte __RTTI__CMapSel
 	.4byte 0
-	.4byte func_802433D0
+	.4byte __dt__802433D0
 	.4byte func_80039E28
 	.4byte func_802440E0
 	.4byte func_80039E18
@@ -1650,7 +1650,7 @@ CMapSel_typestr:
 
 .obj "@eti_8002F18C", local
 .hidden "@eti_8002F18C"
-	.4byte func_802433D0
+	.4byte __dt__802433D0
 	.4byte 0x0000006C
 	.4byte "@etb_80016378"
 .endobj "@eti_8002F18C"

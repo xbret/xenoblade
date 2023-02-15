@@ -135,12 +135,12 @@ MONOLITHLIB_FILES:=\
 	$(BUILD_DIR)/asm/monolithlib/CSchedule.o\
 	$(BUILD_DIR)/asm/monolithlib/code_804E36DC.o\
 	$(BUILD_DIR)/asm/monolithlib/ScheduleList.o\
-	$(BUILD_DIR)/asm/monolithlib/CMdlMaterial.o\
-	$(BUILD_DIR)/asm/monolithlib/CMdlMouth.o\
-	$(BUILD_DIR)/asm/monolithlib/CMdlAnmUV.o\
-	$(BUILD_DIR)/asm/monolithlib/CMdlAnmEye.o\
-	$(BUILD_DIR)/asm/monolithlib/CMdlLook.o\
-	$(BUILD_DIR)/asm/monolithlib/CMdlDynamics.o\
+	$(BUILD_DIR)/asm/monolithlib/scn/CMdlMaterial.o\
+	$(BUILD_DIR)/asm/monolithlib/scn/CMdlMouth.o\
+	$(BUILD_DIR)/asm/monolithlib/scn/CMdlAnmUV.o\
+	$(BUILD_DIR)/asm/monolithlib/scn/CMdlAnmEye.o\
+	$(BUILD_DIR)/asm/monolithlib/scn/CMdlLook.o\
+	$(BUILD_DIR)/asm/monolithlib/scn/CMdlDynamics.o\
 	$(BUILD_DIR)/asm/monolithlib/code_804EE0F4.o\
 	$(BUILD_DIR)/asm/monolithlib/code_804F0258.o\
 	$(BUILD_DIR)/asm/monolithlib/nand/CNReqtaskSaveBanner.o\

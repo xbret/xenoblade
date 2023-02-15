@@ -59,8 +59,8 @@
 /* 804A6D2C 004702EC  7C 1A D8 00 */	cmpw r26, r27
 /* 804A6D30 004702F0  41 80 FF D0 */	blt .L_804A6D00
 /* 804A6D34 004702F4  88 1F 00 02 */	lbz r0, 2(r31)
-/* 804A6D38 004702F8  3C 80 80 57 */	lis r4, lbl_80572A00@ha
-/* 804A6D3C 004702FC  38 84 2A 00 */	addi r4, r4, lbl_80572A00@l
+/* 804A6D38 004702F8  3C 80 80 57 */	lis r4, jumptable_80572A00@ha
+/* 804A6D3C 004702FC  38 84 2A 00 */	addi r4, r4, jumptable_80572A00@l
 /* 804A6D40 00470300  7F C3 F3 78 */	mr r3, r30
 /* 804A6D44 00470304  54 00 10 3A */	slwi r0, r0, 2
 /* 804A6D48 00470308  7F E5 FB 78 */	mr r5, r31
@@ -10958,7 +10958,7 @@
 /* 804B0958 00479F18  4E 80 00 20 */	blr 
 .endfn func_804B0924
 
-.fn func_804B095C, global
+.fn __dt__804B095C, global
 /* 804B095C 00479F1C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804B0960 00479F20  7C 08 02 A6 */	mflr r0
 /* 804B0964 00479F24  2C 03 00 00 */	cmpwi r3, 0
@@ -10988,7 +10988,7 @@
 /* 804B09BC 00479F7C  7C 08 03 A6 */	mtlr r0
 /* 804B09C0 00479F80  38 21 00 10 */	addi r1, r1, 0x10
 /* 804B09C4 00479F84  4E 80 00 20 */	blr 
-.endfn func_804B095C
+.endfn __dt__804B095C
 
 .fn func_804B09C8, global
 /* 804B09C8 00479F88  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -13004,8 +13004,8 @@ CColiObjCall_typestr:
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80572A00
-lbl_80572A00:
+.global jumptable_80572A00
+jumptable_80572A00:
 	.4byte .L_804A6DC0
 	.4byte func_804A6E20
 	.4byte func_804A70F8
@@ -14248,7 +14248,7 @@ lbl_80668210:
 
 .obj "@eti_80037784", local
 .hidden "@eti_80037784"
-	.4byte func_804B095C
+	.4byte __dt__804B095C
 	.4byte 0x0000006C
 	.4byte "@etb_8001FBA8"
 .endobj "@eti_80037784"

@@ -1312,9 +1312,9 @@
 /* 800D2408 0009B9C8  88 01 00 55 */	lbz r0, 0x55(r1)
 /* 800D240C 0009B9CC  28 00 00 58 */	cmplwi r0, 0x58
 /* 800D2410 0009B9D0  41 81 05 B0 */	bgt .L_800D29C0
-/* 800D2414 0009B9D4  3C 60 80 53 */	lis r3, lbl_8052E6C0@ha
+/* 800D2414 0009B9D4  3C 60 80 53 */	lis r3, jumptable_8052E6C0@ha
 /* 800D2418 0009B9D8  54 00 10 3A */	slwi r0, r0, 2
-/* 800D241C 0009B9DC  38 63 E6 C0 */	addi r3, r3, lbl_8052E6C0@l
+/* 800D241C 0009B9DC  38 63 E6 C0 */	addi r3, r3, jumptable_8052E6C0@l
 /* 800D2420 0009B9E0  7C 63 00 2E */	lwzx r3, r3, r0
 /* 800D2424 0009B9E4  7C 69 03 A6 */	mtctr r3
 /* 800D2428 0009B9E8  4E 80 04 20 */	bctr
@@ -2537,9 +2537,9 @@
 /* 800D35FC 0009CBBC  54 00 27 3E */	srwi r0, r0, 0x1c
 /* 800D3600 0009CBC0  28 00 00 0A */	cmplwi r0, 0xa
 /* 800D3604 0009CBC4  41 81 01 54 */	bgt .L_800D3758
-/* 800D3608 0009CBC8  3C 60 80 53 */	lis r3, lbl_8052E824@ha
+/* 800D3608 0009CBC8  3C 60 80 53 */	lis r3, jumptable_8052E824@ha
 /* 800D360C 0009CBCC  54 00 10 3A */	slwi r0, r0, 2
-/* 800D3610 0009CBD0  38 63 E8 24 */	addi r3, r3, lbl_8052E824@l
+/* 800D3610 0009CBD0  38 63 E8 24 */	addi r3, r3, jumptable_8052E824@l
 /* 800D3614 0009CBD4  7C 63 00 2E */	lwzx r3, r3, r0
 /* 800D3618 0009CBD8  7C 69 03 A6 */	mtctr r3
 /* 800D361C 0009CBDC  4E 80 04 20 */	bctr
@@ -5159,7 +5159,7 @@
 .L_800D5BB4:
 /* 800D5BB4 0009F174  38 61 00 08 */	addi r3, r1, 8
 /* 800D5BB8 0009F178  38 80 FF FF */	li r4, -1
-/* 800D5BBC 0009F17C  4B F6 E2 CD */	bl func_80043E88
+/* 800D5BBC 0009F17C  4B F6 E2 CD */	bl __dt__80043E88
 /* 800D5BC0 0009F180  3B 9C 00 01 */	addi r28, r28, 1
 /* 800D5BC4 0009F184  3B FF 00 04 */	addi r31, r31, 4
 /* 800D5BC8 0009F188  2C 1C 00 03 */	cmpwi r28, 3
@@ -7276,8 +7276,8 @@ lbl_804F803C:
 
 
 
-.global lbl_8052E6C0
-lbl_8052E6C0:
+.global jumptable_8052E6C0
+jumptable_8052E6C0:
 	.4byte .L_800D29C0
 	.4byte .L_800D29C0
 	.4byte .L_800D242C
@@ -7369,8 +7369,8 @@ lbl_8052E6C0:
 	.4byte .L_800D2448
 
 
-.global lbl_8052E824
-lbl_8052E824:
+.global jumptable_8052E824
+jumptable_8052E824:
 	.4byte .L_800D3758
 	.4byte .L_800D3620
 	.4byte .L_800D362C
@@ -7388,7 +7388,7 @@ lbl_8052E824:
 __vt__cf_CtrlAct:
 	.4byte __RTTI__cf_CtrlAct
 	.4byte 0
-	.4byte func_80087608
+	.4byte __dt__80087608
 	.4byte 0
 	.4byte func_80096854
 	.4byte func_800D5860
@@ -7705,10 +7705,10 @@ float_806667F0:
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_80087688
+	.4byte __dt__80087688
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_80087648
+	.4byte __dt__80087648
 .endobj "@etb_8000A4FC"
 
 .obj "@etb_8000A52C", local
@@ -7820,7 +7820,7 @@ float_806667F0:
 	.4byte 0x00380010
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte func_80043E88
+	.4byte __dt__80043E88
 .endobj "@etb_8000A5B4"
 
 .obj "@etb_8000A5CC", local

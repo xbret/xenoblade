@@ -196,7 +196,7 @@
 /* 80149A58 00113018  4E 80 00 20 */	blr
 .endfn func_80149970
 
-.fn func_80149A5C, global
+.fn __dt__80149A5C, global
 /* 80149A5C 0011301C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80149A60 00113020  7C 08 02 A6 */	mflr r0
 /* 80149A64 00113024  2C 03 00 00 */	cmpwi r3, 0
@@ -214,7 +214,7 @@
 /* 80149A94 00113054  41 82 00 10 */	beq .L_80149AA4
 /* 80149A98 00113058  7F C3 F3 78 */	mr r3, r30
 /* 80149A9C 0011305C  38 80 00 00 */	li r4, 0
-/* 80149AA0 00113060  48 2F B0 99 */	bl func_80444B38
+/* 80149AA0 00113060  48 2F B0 99 */	bl __dt__80444B38
 .L_80149AA4:
 /* 80149AA4 00113064  2C 1F 00 00 */	cmpwi r31, 0
 /* 80149AA8 00113068  40 81 00 0C */	ble .L_80149AB4
@@ -228,7 +228,7 @@
 /* 80149AC4 00113084  7C 08 03 A6 */	mtlr r0
 /* 80149AC8 00113088  38 21 00 10 */	addi r1, r1, 0x10
 /* 80149ACC 0011308C  4E 80 00 20 */	blr 
-.endfn func_80149A5C
+.endfn __dt__80149A5C
 
 .fn func_80149AD0, global
 /* 80149AD0 00113090  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1209,7 +1209,7 @@
 
 .fn func_8014A854, global
 /* 8014A854 00113E14  38 63 FF A8 */	addi r3, r3, -88
-/* 8014A858 00113E18  4B FF F2 04 */	b func_80149A5C
+/* 8014A858 00113E18  4B FF F2 04 */	b __dt__80149A5C
 .endfn func_8014A854
 
 .fn func_8014A85C, global
@@ -1219,7 +1219,7 @@
 
 .fn func_8014A864, global
 /* 8014A864 00113E24  38 63 FF A4 */	addi r3, r3, -92
-/* 8014A868 00113E28  4B FF F1 F4 */	b func_80149A5C
+/* 8014A868 00113E28  4B FF F1 F4 */	b __dt__80149A5C
 .endfn func_8014A864
 
 
@@ -1258,7 +1258,7 @@ CMenuGetItem_strpool:
 __vt__CMenuGetItem:
 	.4byte __RTTI__CMenuGetItem
 	.4byte 0
-	.4byte func_80149A5C
+	.4byte __dt__80149A5C
 	.4byte CChildListNode_Reset
 	.4byte func_80149AD0
 	.4byte func_80149DC4
@@ -1373,13 +1373,13 @@ lbl_80666A98:
 	.4byte 0x00000000
 	.4byte 0x0680001C
 	.4byte 0x0000005C
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 	.4byte 0x0680001C
 	.4byte 0x00000058
 	.4byte __dt__IWorkEvent
 	.4byte 0x8680001C
 	.4byte 0x00000000
-	.4byte func_800FED0C
+	.4byte __dt__800FED0C
 .endobj "@etb_8000D04C"
 
 .obj "@etb_8000D080", local
@@ -1390,13 +1390,13 @@ lbl_80666A98:
 	.4byte 0x00000000
 	.4byte 0x0680001C
 	.4byte 0x0000005C
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 	.4byte 0x0680001C
 	.4byte 0x00000058
 	.4byte __dt__IWorkEvent
 	.4byte 0x8680001C
 	.4byte 0x00000000
-	.4byte func_800FED0C
+	.4byte __dt__800FED0C
 .endobj "@etb_8000D080"
 
 .obj "@etb_8000D0B4", local
@@ -1407,13 +1407,13 @@ lbl_80666A98:
 	.4byte 0x00000000
 	.4byte 0x0680001B
 	.4byte 0x0000005C
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 	.4byte 0x0680001B
 	.4byte 0x00000058
 	.4byte __dt__IWorkEvent
 	.4byte 0x8680001B
 	.4byte 0x00000000
-	.4byte func_800FED0C
+	.4byte __dt__800FED0C
 .endobj "@etb_8000D0B4"
 
 .obj "@etb_8000D0E8", local
@@ -1427,7 +1427,7 @@ lbl_80666A98:
 	.4byte __dt__8045F580
 	.4byte 0x0680001E
 	.4byte 0x0000005C
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 	.4byte 0x8680001E
 	.4byte 0x00000058
 	.4byte __dt__IWorkEvent
@@ -1534,7 +1534,7 @@ lbl_80666A98:
 
 .obj "@eti_8002837C", local
 .hidden "@eti_8002837C"
-	.4byte func_80149A5C
+	.4byte __dt__80149A5C
 	.4byte 0x00000074
 	.4byte "@etb_8000D0E8"
 .endobj "@eti_8002837C"

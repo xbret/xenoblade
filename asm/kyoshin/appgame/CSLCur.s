@@ -18,7 +18,7 @@
 /* 8028EA30 00257FF0  4E 80 00 20 */	blr 
 .endfn func_8028EA08
 
-.fn func_8028EA34, global
+.fn __dt__8028EA34, global
 /* 8028EA34 00257FF4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8028EA38 00257FF8  7C 08 02 A6 */	mflr r0
 /* 8028EA3C 00257FFC  2C 03 00 00 */	cmpwi r3, 0
@@ -36,7 +36,7 @@
 /* 8028EA68 00258028  7C 08 03 A6 */	mtlr r0
 /* 8028EA6C 0025802C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8028EA70 00258030  4E 80 00 20 */	blr 
-.endfn func_8028EA34
+.endfn __dt__8028EA34
 
 .fn func_8028EA74, global
 /* 8028EA74 00258034  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -244,7 +244,7 @@
 /* 8028ED2C 002582EC  4E 80 00 20 */	blr 
 .endfn func_8028ED0C
 
-.fn func_8028ED30, global
+.fn __dt__8028ED30, global
 /* 8028ED30 002582F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8028ED34 002582F4  7C 08 02 A6 */	mflr r0
 /* 8028ED38 002582F8  2C 03 00 00 */	cmpwi r3, 0
@@ -262,7 +262,7 @@
 /* 8028ED64 00258324  7C 08 03 A6 */	mtlr r0
 /* 8028ED68 00258328  38 21 00 10 */	addi r1, r1, 0x10
 /* 8028ED6C 0025832C  4E 80 00 20 */	blr 
-.endfn func_8028ED30
+.endfn __dt__8028ED30
 
 .fn func_8028ED70, global
 /* 8028ED70 00258330  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -536,7 +536,7 @@
 
 .obj "@eti_80031904", local
 .hidden "@eti_80031904"
-	.4byte func_8028EA34
+	.4byte __dt__8028EA34
 	.4byte 0x00000040
 	.4byte "@etb_80019448"
 .endobj "@eti_80031904"
@@ -578,7 +578,7 @@
 
 .obj "@eti_8003194C", local
 .hidden "@eti_8003194C"
-	.4byte func_8028ED30
+	.4byte __dt__8028ED30
 	.4byte 0x00000040
 	.4byte "@etb_80019478"
 .endobj "@eti_8003194C"

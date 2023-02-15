@@ -264,7 +264,7 @@ cf_CChainEffect_typestr:
 __vt__cf_CChainEffect:
 	.4byte __RTTI__cf_CChainEffect
 	.4byte 0
-	.4byte func_800D8D3C
+	.4byte __dt__800D8D3C
 	.4byte func_802A0AE0
 
 .global cf_CChainEffect_hierarchy

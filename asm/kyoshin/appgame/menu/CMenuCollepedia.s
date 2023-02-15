@@ -59,7 +59,7 @@
 /* 8025270C 0021BCCC  4E 80 00 20 */	blr
 .endfn __ct__CMenuCollepedia
 
-.fn func_80252710, global
+.fn __dt__80252710, global
 /* 80252710 0021BCD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80252714 0021BCD4  7C 08 02 A6 */	mflr r0
 /* 80252718 0021BCD8  2C 03 00 00 */	cmpwi r3, 0
@@ -70,7 +70,7 @@
 /* 8025272C 0021BCEC  41 82 00 44 */	beq .L_80252770
 /* 80252730 0021BCF0  38 80 FF FF */	li r4, -1
 /* 80252734 0021BCF4  38 63 00 B8 */	addi r3, r3, 0xb8
-/* 80252738 0021BCF8  48 00 21 71 */	bl func_802548A8
+/* 80252738 0021BCF8  48 00 21 71 */	bl __dt__802548A8
 /* 8025273C 0021BCFC  38 7E 00 80 */	addi r3, r30, 0x80
 /* 80252740 0021BD00  38 80 FF FF */	li r4, -1
 /* 80252744 0021BD04  4B F7 18 0D */	bl __dt__CTitleAHelp
@@ -79,7 +79,7 @@
 /* 80252750 0021BD10  4B F7 12 81 */	bl __dt__CBgTex
 /* 80252754 0021BD14  7F C3 F3 78 */	mr r3, r30
 /* 80252758 0021BD18  38 80 00 00 */	li r4, 0
-/* 8025275C 0021BD1C  4B EA C5 B1 */	bl func_800FED0C
+/* 8025275C 0021BD1C  4B EA C5 B1 */	bl __dt__800FED0C
 /* 80252760 0021BD20  2C 1F 00 00 */	cmpwi r31, 0
 /* 80252764 0021BD24  40 81 00 0C */	ble .L_80252770
 /* 80252768 0021BD28  7F C3 F3 78 */	mr r3, r30
@@ -91,7 +91,7 @@
 /* 8025277C 0021BD3C  7C 08 03 A6 */	mtlr r0
 /* 80252780 0021BD40  38 21 00 10 */	addi r1, r1, 0x10
 /* 80252784 0021BD44  4E 80 00 20 */	blr 
-.endfn func_80252710
+.endfn __dt__80252710
 
 .fn func_80252788, global
 /* 80252788 0021BD48  94 21 D6 90 */	stwu r1, -0x2970(r1)
@@ -288,7 +288,7 @@
 /* 80252A80 0021C040  98 1F 29 B1 */	stb r0, 0x29b1(r31)
 /* 80252A84 0021C044  88 01 29 5A */	lbz r0, 0x295a(r1)
 /* 80252A88 0021C048  98 1F 29 B2 */	stb r0, 0x29b2(r31)
-/* 80252A8C 0021C04C  48 00 1E 1D */	bl func_802548A8
+/* 80252A8C 0021C04C  48 00 1E 1D */	bl __dt__802548A8
 /* 80252A90 0021C050  38 7F 00 B8 */	addi r3, r31, 0xb8
 /* 80252A94 0021C054  48 00 1E 99 */	bl func_8025492C
 /* 80252A98 0021C058  2C 1F 00 00 */	cmpwi r31, 0
@@ -822,7 +822,7 @@
 
 .fn func_80253190, global
 /* 80253190 0021C750  38 63 FF A8 */	addi r3, r3, -88
-/* 80253194 0021C754  4B FF F5 7C */	b func_80252710
+/* 80253194 0021C754  4B FF F5 7C */	b __dt__80252710
 .endfn func_80253190
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -849,7 +849,7 @@ lbl_80507D18:
 __vt__CMenuCollepedia:
 	.4byte __RTTI__CMenuCollepedia
 	.4byte 0
-	.4byte func_80252710
+	.4byte __dt__80252710
 	.4byte CChildListNode_Reset
 	.4byte func_80252788
 	.4byte func_80252ACC
@@ -948,10 +948,10 @@ lbl_806670C0:
 	.4byte __dt__CBgTex
 	.4byte 0x0680001D
 	.4byte 0x00000058
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 	.4byte 0x8680001D
 	.4byte 0x00000000
-	.4byte func_800FED0C
+	.4byte __dt__800FED0C
 .endobj "@etb_80016C4C"
 
 .obj "@etb_80016C9C", local
@@ -966,16 +966,16 @@ lbl_806670C0:
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x000000B8
-	.4byte func_802548A8
+	.4byte __dt__802548A8
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte func_802548A8
+	.4byte __dt__802548A8
 	.4byte 0x8780001E
 	.4byte 0x00000080
 	.4byte __dt__CTitleAHelp
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte func_802548A8
+	.4byte __dt__802548A8
 	.4byte 0x0780001E
 	.4byte 0x00000080
 	.4byte __dt__CTitleAHelp
@@ -984,7 +984,7 @@ lbl_806670C0:
 	.4byte __dt__CBgTex
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 .endobj "@etb_80016C9C"
 
 .obj "@etb_80016D10", local
@@ -1070,7 +1070,7 @@ lbl_806670C0:
 
 .obj "@eti_8002F714", local
 .hidden "@eti_8002F714"
-	.4byte func_80252710
+	.4byte __dt__80252710
 	.4byte 0x00000078
 	.4byte "@etb_80016C9C"
 .endobj "@eti_8002F714"

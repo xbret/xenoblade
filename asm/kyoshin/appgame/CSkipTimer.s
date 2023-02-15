@@ -43,7 +43,7 @@
 /* 8029FB70 00269130  4E 80 00 20 */	blr 
 .endfn func_8029FAE4
 
-.fn func_8029FB74, global
+.fn __dt__8029FB74, global
 /* 8029FB74 00269134  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029FB78 00269138  7C 08 02 A6 */	mflr r0
 /* 8029FB7C 0026913C  2C 03 00 00 */	cmpwi r3, 0
@@ -54,7 +54,7 @@
 /* 8029FB90 00269150  41 82 00 38 */	beq .L_8029FBC8
 /* 8029FB94 00269154  38 80 FF FF */	li r4, -1
 /* 8029FB98 00269158  38 63 00 70 */	addi r3, r3, 0x70
-/* 8029FB9C 0026915C  4B FF F5 79 */	bl func_8029F114
+/* 8029FB9C 0026915C  4B FF F5 79 */	bl __dt__8029F114
 /* 8029FBA0 00269160  38 7E 00 34 */	addi r3, r30, 0x34
 /* 8029FBA4 00269164  38 80 FF FF */	li r4, -1
 /* 8029FBA8 00269168  4B F8 BA F9 */	bl __dt__CSysWin
@@ -72,7 +72,7 @@
 /* 8029FBD4 00269194  7C 08 03 A6 */	mtlr r0
 /* 8029FBD8 00269198  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029FBDC 0026919C  4E 80 00 20 */	blr 
-.endfn func_8029FB74
+.endfn __dt__8029FB74
 
 .fn func_8029FBE0, global
 /* 8029FBE0 002691A0  94 21 FF B0 */	stwu r1, -0x50(r1)
@@ -939,7 +939,7 @@
 /* 802A0780 00269D40  98 1C 00 93 */	stb r0, 0x93(r28)
 /* 802A0784 00269D44  88 01 00 34 */	lbz r0, 0x34(r1)
 /* 802A0788 00269D48  98 1C 00 94 */	stb r0, 0x94(r28)
-/* 802A078C 00269D4C  4B FF E9 89 */	bl func_8029F114
+/* 802A078C 00269D4C  4B FF E9 89 */	bl __dt__8029F114
 /* 802A0790 00269D50  38 7C 00 70 */	addi r3, r28, 0x70
 /* 802A0794 00269D54  4B FF E9 D5 */	bl func_8029F168
 /* 802A0798 00269D58  7F 83 E3 78 */	mr r3, r28
@@ -1028,7 +1028,7 @@ CSkipTimer_strpool:
 __vt__CSkipTimer:
 	.4byte __RTTI__CSkipTimer
 	.4byte 0
-	.4byte func_8029FB74
+	.4byte __dt__8029FB74
 	.4byte func_80039E28
 	.4byte func_802A066C
 	.4byte func_80039E18
@@ -1072,7 +1072,7 @@ CSkipTimer_hierarchy:
 __vt__CSkipTimer2:
 	.4byte __RTTI__CSkipTimer2
 	.4byte 0
-	.4byte func_8029F114
+	.4byte __dt__8029F114
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -1164,10 +1164,10 @@ float_80667338:
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x00000070
-	.4byte func_8029F114
+	.4byte __dt__8029F114
 	.4byte 0x0780001E
 	.4byte 0x00000070
-	.4byte func_8029F114
+	.4byte __dt__8029F114
 	.4byte 0x8780001E
 	.4byte 0x00000034
 	.4byte __dt__CSysWin
@@ -1304,7 +1304,7 @@ float_80667338:
 
 .obj "@eti_80032558", local
 .hidden "@eti_80032558"
-	.4byte func_8029FB74
+	.4byte __dt__8029FB74
 	.4byte 0x0000006C
 	.4byte "@etb_8001A784"
 .endobj "@eti_80032558"

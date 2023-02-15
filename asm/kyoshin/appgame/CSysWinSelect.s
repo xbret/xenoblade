@@ -97,7 +97,7 @@
 /* 80124CCC 000EE28C  4E 80 00 20 */	blr
 .endfn func_80124B80
 
-.fn func_80124CD0, global
+.fn __dt__80124CD0, global
 /* 80124CD0 000EE290  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80124CD4 000EE294  7C 08 02 A6 */	mflr r0
 /* 80124CD8 000EE298  2C 03 00 00 */	cmpwi r3, 0
@@ -118,7 +118,7 @@
 /* 80124D14 000EE2D4  41 82 00 10 */	beq .L_80124D24
 /* 80124D18 000EE2D8  7F C3 F3 78 */	mr r3, r30
 /* 80124D1C 000EE2DC  38 80 00 00 */	li r4, 0
-/* 80124D20 000EE2E0  48 31 FE 19 */	bl func_80444B38
+/* 80124D20 000EE2E0  48 31 FE 19 */	bl __dt__80444B38
 .L_80124D24:
 /* 80124D24 000EE2E4  2C 1F 00 00 */	cmpwi r31, 0
 /* 80124D28 000EE2E8  40 81 00 0C */	ble .L_80124D34
@@ -132,7 +132,7 @@
 /* 80124D44 000EE304  7C 08 03 A6 */	mtlr r0
 /* 80124D48 000EE308  38 21 00 10 */	addi r1, r1, 0x10
 /* 80124D4C 000EE30C  4E 80 00 20 */	blr 
-.endfn func_80124CD0
+.endfn __dt__80124CD0
 
 .fn func_80124D50, global
 /* 80124D50 000EE310  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -515,7 +515,7 @@
 
 .fn func_801252A0, global
 /* 801252A0 000EE860  38 63 FF 94 */	addi r3, r3, -108
-/* 801252A4 000EE864  4B FF F4 6C */	b func_80124710
+/* 801252A4 000EE864  4B FF F4 6C */	b __dt__80124710
 .endfn func_801252A0
 
 .fn func_801252A8, global
@@ -525,12 +525,12 @@
 
 .fn func_801252B0, global
 /* 801252B0 000EE870  38 63 FF 90 */	addi r3, r3, -112
-/* 801252B4 000EE874  4B FF F4 5C */	b func_80124710
+/* 801252B4 000EE874  4B FF F4 5C */	b __dt__80124710
 .endfn func_801252B0
 
 .fn func_801252B8, global
 /* 801252B8 000EE878  38 63 FF 94 */	addi r3, r3, -108
-/* 801252BC 000EE87C  4B FF FA 14 */	b func_80124CD0
+/* 801252BC 000EE87C  4B FF FA 14 */	b __dt__80124CD0
 .endfn func_801252B8
 
 .fn func_801252C0, global
@@ -540,7 +540,7 @@
 
 .fn func_801252C8, global
 /* 801252C8 000EE888  38 63 FF 90 */	addi r3, r3, -112
-/* 801252CC 000EE88C  4B FF FA 04 */	b func_80124CD0
+/* 801252CC 000EE88C  4B FF FA 04 */	b __dt__80124CD0
 .endfn func_801252C8
 
 #__dt__Q34nw4r2ut5ColorFv duplicate
@@ -581,13 +581,13 @@
 	.4byte __dt__CSysWin
 	.4byte 0x0680001B
 	.4byte 0x00000070
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 	.4byte 0x0680001B
 	.4byte 0x0000006C
 	.4byte __dt__IWorkEvent
 	.4byte 0x8680001B
 	.4byte 0x00000000
-	.4byte func_8012235C
+	.4byte __dt__8012235C
 .endobj "@etb_8000BE54"
 
 .obj "@etb_8000BE9C", local
@@ -609,7 +609,7 @@
 	.4byte __dt__CSysWin
 	.4byte 0x0680001E
 	.4byte 0x00000070
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 	.4byte 0x8680001E
 	.4byte 0x0000006C
 	.4byte __dt__IWorkEvent
@@ -674,7 +674,7 @@
 
 .obj "@eti_800270BC", local
 .hidden "@eti_800270BC"
-	.4byte func_80124CD0
+	.4byte __dt__80124CD0
 	.4byte 0x00000080
 	.4byte "@etb_8000BE9C"
 .endobj "@eti_800270BC"

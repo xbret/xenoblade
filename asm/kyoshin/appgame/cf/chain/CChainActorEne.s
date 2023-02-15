@@ -500,7 +500,7 @@ cf_CChainActorEne_typestr:
 __vt__cf_CChainActorEne:
 	.4byte __RTTI__cf_CChainActorEne
 	.4byte 0
-	.4byte func_8027AD30
+	.4byte __dt__8027AD30
 	.4byte func_80281308
 	.4byte func_80279B34
 	.4byte func_8028133C

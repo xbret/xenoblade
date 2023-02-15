@@ -64,7 +64,7 @@ TChildListHeader_CChildListNode_typestr:
 __vt__CChildListNode:
 	.4byte __RTTI__CChildListNode
 	.4byte 0
-	.4byte func_80444A78
+	.4byte __dt__80444A78
 	.4byte CChildListNode_Reset
 
 
@@ -72,7 +72,7 @@ __vt__CChildListNode:
 __vt__TChildListHeader_CChildListNode:
 	.4byte __RTTI__TChildListHeader_CChildListNode
 	.4byte 0
-	.4byte func_80444AB8
+	.4byte __dt__80444AB8
 	.4byte 0
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600

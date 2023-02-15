@@ -59,7 +59,7 @@
 /* 8004422C 0000D7EC  4E 80 00 20 */	blr 
 .endfn func_80044168
 
-.fn func_80044230, global
+.fn __dt__80044230, global
 /* 80044230 0000D7F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80044234 0000D7F4  7C 08 02 A6 */	mflr r0
 /* 80044238 0000D7F8  2C 03 00 00 */	cmpwi r3, 0
@@ -69,7 +69,7 @@
 /* 80044248 0000D808  7C 9F 23 78 */	mr r31, r4
 /* 8004424C 0000D80C  41 82 00 1C */	beq .L_80044268
 /* 80044250 0000D810  38 80 00 00 */	li r4, 0
-/* 80044254 0000D814  48 40 08 E5 */	bl func_80444B38
+/* 80044254 0000D814  48 40 08 E5 */	bl __dt__80444B38
 /* 80044258 0000D818  2C 1F 00 00 */	cmpwi r31, 0
 /* 8004425C 0000D81C  40 81 00 0C */	ble .L_80044268
 /* 80044260 0000D820  7F C3 F3 78 */	mr r3, r30
@@ -81,9 +81,9 @@
 /* 80044274 0000D834  7C 08 03 A6 */	mtlr r0
 /* 80044278 0000D838  38 21 00 10 */	addi r1, r1, 0x10
 /* 8004427C 0000D83C  4E 80 00 20 */	blr 
-.endfn func_80044230
+.endfn __dt__80044230
 
-.fn func_80044280, global
+.fn __dt__80044280, global
 /* 80044280 0000D840  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80044284 0000D844  7C 08 02 A6 */	mflr r0
 /* 80044288 0000D848  2C 03 00 00 */	cmpwi r3, 0
@@ -94,7 +94,7 @@
 /* 8004429C 0000D85C  41 82 00 20 */	beq .L_800442BC
 /* 800442A0 0000D860  41 82 00 0C */	beq .L_800442AC
 /* 800442A4 0000D864  38 80 00 00 */	li r4, 0
-/* 800442A8 0000D868  48 40 08 91 */	bl func_80444B38
+/* 800442A8 0000D868  48 40 08 91 */	bl __dt__80444B38
 .L_800442AC:
 /* 800442AC 0000D86C  2C 1F 00 00 */	cmpwi r31, 0
 /* 800442B0 0000D870  40 81 00 0C */	ble .L_800442BC
@@ -107,7 +107,7 @@
 /* 800442C8 0000D888  7C 08 03 A6 */	mtlr r0
 /* 800442CC 0000D88C  38 21 00 10 */	addi r1, r1, 0x10
 /* 800442D0 0000D890  4E 80 00 20 */	blr 
-.endfn func_80044280
+.endfn __dt__80044280
 
 .fn func_800442D4, global
 /* 800442D4 0000D894  80 6D A4 B8 */	lwz r3, lbl_80666638@sda21(r13)
@@ -602,7 +602,7 @@
 /* 80044960 0000DF20  40 82 00 08 */	bne .L_80044968
 /* 80044964 0000DF24  48 03 98 B5 */	bl func_8007E218
 .L_80044968:
-/* 80044968 0000DF28  48 0B 92 B5 */	bl func_800FDC1C
+/* 80044968 0000DF28  48 0B 92 B5 */	bl __dt__800FDC1C
 /* 8004496C 0000DF2C  3C 80 80 53 */	lis r4, lbl_805293A0@ha
 /* 80044970 0000DF30  84 64 93 A0 */	lwzu r3, lbl_805293A0@l(r4)
 /* 80044974 0000DF34  80 04 00 04 */	lwz r0, 4(r4)
@@ -793,7 +793,7 @@ lbl_805293A0:
 __vt__cf_CTaskGameCf:
 	.4byte __RTTI__cf_CTaskGameCf
 	.4byte 0
-	.4byte func_80044280
+	.4byte __dt__80044280
 	.4byte CChildListNode_Reset
 	.4byte func_800443DC
 	.4byte func_800443E4
@@ -818,7 +818,7 @@ cf_CTaskGameCf_hierarchy:
 __vt__CTTask_cf_CTaskGameCf:
 	.4byte __RTTI__CTTask_cf_CTaskGameCf
 	.4byte 0
-	.4byte func_80044230
+	.4byte __dt__80044230
 	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
@@ -976,14 +976,14 @@ float_80668624:
 
 .obj "@eti_80021A70", local
 .hidden "@eti_80021A70"
-	.4byte func_80044230
+	.4byte __dt__80044230
 	.4byte 0x00000050
 	.4byte "@etb_80006E70"
 .endobj "@eti_80021A70"
 
 .obj "@eti_80021A7C", local
 .hidden "@eti_80021A7C"
-	.4byte func_80044280
+	.4byte __dt__80044280
 	.4byte 0x00000054
 	.4byte "@etb_80006E78"
 .endobj "@eti_80021A7C"

@@ -47,7 +47,7 @@
 /* 800BFD24 000892E4  4E 80 00 20 */	blr
 .endfn func_800BFC90
 
-.fn func_800BFD28, global
+.fn __dt__800BFD28, global
 /* 800BFD28 000892E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800BFD2C 000892EC  7C 08 02 A6 */	mflr r0
 /* 800BFD30 000892F0  2C 03 00 00 */	cmpwi r3, 0
@@ -73,7 +73,7 @@
 /* 800BFD80 00089340  41 82 00 34 */	beq .L_800BFDB4
 /* 800BFD84 00089344  38 7E 3E 9C */	addi r3, r30, 0x3e9c
 /* 800BFD88 00089348  38 80 00 00 */	li r4, 0
-/* 800BFD8C 0008934C  4B FF BF E1 */	bl func_800BBD6C
+/* 800BFD8C 0008934C  4B FF BF E1 */	bl __dt__800BBD6C
 /* 800BFD90 00089350  34 1E 33 80 */	addic. r0, r30, 0x3380
 /* 800BFD94 00089354  41 82 00 20 */	beq .L_800BFDB4
 /* 800BFD98 00089358  34 60 00 04 */	addic. r3, r0, 4
@@ -96,7 +96,7 @@
 /* 800BFDD4 00089394  7C 08 03 A6 */	mtlr r0
 /* 800BFDD8 00089398  38 21 00 10 */	addi r1, r1, 0x10
 /* 800BFDDC 0008939C  4E 80 00 20 */	blr 
-.endfn func_800BFD28
+.endfn __dt__800BFD28
 
 .fn func_800BFDE0, global
 /* 800BFDE0 000893A0  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -1548,7 +1548,7 @@
 
 .fn func_800C1220, global
 /* 800C1220 0008A7E0  38 63 C1 64 */	addi r3, r3, -16028
-/* 800C1224 0008A7E4  4B FF EB 04 */	b func_800BFD28
+/* 800C1224 0008A7E4  4B FF EB 04 */	b __dt__800BFD28
 .endfn func_800C1220
 
 .fn func_800C1228, global
@@ -1971,7 +1971,7 @@ __vt__cf_CfObjectPc:
 	.4byte func_800BE5F4
 	.4byte func_800BE65C
 	.4byte func_800BE858
-	.4byte func_800BFD28
+	.4byte __dt__800BFD28
 	.4byte func_800AFAF4
 	.4byte func_80171768
 	.4byte func_801717C0
@@ -2076,7 +2076,7 @@ double_80669408:
 	.4byte 0x00000000
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte func_800AD928
+	.4byte __dt__800AD928
 .endobj "@etb_80009F70"
 
 .obj "@etb_80009F8C", local
@@ -2087,7 +2087,7 @@ double_80669408:
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_800AD928
+	.4byte __dt__800AD928
 .endobj "@etb_80009F8C"
 
 .obj "@etb_80009FA8", local
@@ -2235,7 +2235,7 @@ double_80669408:
 
 .obj "@eti_80025A84", local
 .hidden "@eti_80025A84"
-	.4byte func_800BFD28
+	.4byte __dt__800BFD28
 	.4byte 0x000000B8
 	.4byte "@etb_80009F8C"
 .endobj "@eti_80025A84"

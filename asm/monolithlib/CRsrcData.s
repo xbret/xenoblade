@@ -39,7 +39,7 @@
 /* 80439D30 004032F0  4E 80 00 20 */	blr 
 .endfn func_80439CB4
 
-.fn func_80439D34, global
+.fn __dt__80439D34, global
 /* 80439D34 004032F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80439D38 004032F8  7C 08 02 A6 */	mflr r0
 /* 80439D3C 004032FC  2C 03 00 00 */	cmpwi r3, 0
@@ -73,7 +73,7 @@
 /* 80439DA4 00403364  7C 08 03 A6 */	mtlr r0
 /* 80439DA8 00403368  38 21 00 10 */	addi r1, r1, 0x10
 /* 80439DAC 0040336C  4E 80 00 20 */	blr
-.endfn func_80439D34
+.endfn __dt__80439D34
 
 .fn func_80439DB0, global
 /* 80439DB0 00403370  80 A3 04 D8 */	lwz r5, 0x4d8(r3)
@@ -342,7 +342,7 @@ lbl_80525E4C:
 __vt__CRsrcData:
 	.4byte __RTTI__CRsrcData
 	.4byte 0
-	.4byte func_80439D34
+	.4byte __dt__80439D34
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -469,7 +469,7 @@ __RTTI__CRsrcData:
 
 .obj "@eti_80033EFC", local
 .hidden "@eti_80033EFC"
-	.4byte func_80439D34
+	.4byte __dt__80439D34
 	.4byte 0x0000007C
 	.4byte "@etb_8001C280"
 .endobj "@eti_80033EFC"

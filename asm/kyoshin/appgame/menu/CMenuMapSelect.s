@@ -528,7 +528,7 @@
 /* 802429DC 0020BF9C  80 01 33 4C */	lwz r0, 0x334c(r1)
 /* 802429E0 0020BFA0  90 1F 34 D8 */	stw r0, 0x34d8(r31)
 /* 802429E4 0020BFA4  90 BF 34 D4 */	stw r5, 0x34d4(r31)
-/* 802429E8 0020BFA8  48 00 93 9D */	bl func_8024BD84
+/* 802429E8 0020BFA8  48 00 93 9D */	bl __dt__8024BD84
 /* 802429EC 0020BFAC  38 7F 00 B8 */	addi r3, r31, 0xb8
 /* 802429F0 0020BFB0  48 00 10 AD */	bl func_80243A9C
 /* 802429F4 0020BFB4  7C 60 1B 78 */	mr r0, r3
@@ -1020,7 +1020,7 @@
 
 .fn func_802430A4, global
 /* 802430A4 0020C664  38 63 FF A8 */	addi r3, r3, -88
-/* 802430A8 0020C668  4B FF E3 C4 */	b func_8024146C
+/* 802430A8 0020C668  4B FF E3 C4 */	b __dt__8024146C
 .endfn func_802430A4
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -1048,7 +1048,7 @@ lbl_80506B98:
 __vt__CMenuMapSelect:
 	.4byte __RTTI__CMenuMapSelect
 	.4byte 0
-	.4byte func_8024146C
+	.4byte __dt__8024146C
 	.4byte CChildListNode_Reset
 	.4byte func_80241510
 	.4byte func_80241DB4
@@ -1127,10 +1127,10 @@ float_8066AFE8:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x0000016C
-	.4byte func_80244348
+	.4byte __dt__80244348
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte func_802433D0
+	.4byte __dt__802433D0
 	.4byte 0x0780001E
 	.4byte 0x00000080
 	.4byte __dt__CTitleAHelp
@@ -1139,10 +1139,10 @@ float_8066AFE8:
 	.4byte __dt__CBgTex
 	.4byte 0x0680001E
 	.4byte 0x00000058
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_800FED0C
+	.4byte __dt__800FED0C
 .endobj "@etb_80016290"
 
 .obj "@etb_80016308", local

@@ -16,7 +16,7 @@
 /* 804E6C34 004B01F4  4E 80 00 20 */	blr 
 .endfn func_804E6C14
 
-.fn func_804E6C38, global
+.fn __dt__804E6C38, global
 /* 804E6C38 004B01F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804E6C3C 004B01FC  7C 08 02 A6 */	mflr r0
 /* 804E6C40 004B0200  2C 03 00 00 */	cmpwi r3, 0
@@ -34,7 +34,7 @@
 /* 804E6C6C 004B022C  7C 08 03 A6 */	mtlr r0
 /* 804E6C70 004B0230  38 21 00 10 */	addi r1, r1, 0x10
 /* 804E6C74 004B0234  4E 80 00 20 */	blr 
-.endfn func_804E6C38
+.endfn __dt__804E6C38
 
 .fn func_804E6C78, global
 /* 804E6C78 004B0238  80 6D A4 0C */	lwz r3, lbl_8066658C@sda21(r13)
@@ -674,7 +674,7 @@ lbl_805280D4:
 __vt__CMdlAnmUV:
 	.4byte __RTTI__CMdlAnmUV
 	.4byte 0
-	.4byte func_804E6C38
+	.4byte __dt__804E6C38
 	.4byte 0
 
 
@@ -758,7 +758,7 @@ float_8066DAFC:
 
 .obj "@eti_80038E34", local
 .hidden "@eti_80038E34"
-	.4byte func_804E6C38
+	.4byte __dt__804E6C38
 	.4byte 0x00000040
 	.4byte "@etb_80020CF8"
 .endobj "@eti_80038E34"

@@ -94,7 +94,7 @@
 /* 801732F4 0013C8B4  4E 80 00 20 */	blr 
 .endfn func_801731B4
 
-.fn func_801732F8, global
+.fn __dt__801732F8, global
 /* 801732F8 0013C8B8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801732FC 0013C8BC  7C 08 02 A6 */	mflr r0
 /* 80173300 0013C8C0  2C 03 00 00 */	cmpwi r3, 0
@@ -112,7 +112,7 @@
 /* 8017332C 0013C8EC  7C 08 03 A6 */	mtlr r0
 /* 80173330 0013C8F0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80173334 0013C8F4  4E 80 00 20 */	blr 
-.endfn func_801732F8
+.endfn __dt__801732F8
 
 .fn func_80173338, global
 /* 80173338 0013C8F8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1908,9 +1908,9 @@
 /* 80174D00 0013E2C0  38 05 F8 00 */	addi r0, r5, -2048
 /* 80174D04 0013E2C4  28 00 00 07 */	cmplwi r0, 7
 /* 80174D08 0013E2C8  41 81 04 A4 */	bgt .L_801751AC
-/* 80174D0C 0013E2CC  3C 60 80 53 */	lis r3, lbl_80534EE0@ha
+/* 80174D0C 0013E2CC  3C 60 80 53 */	lis r3, jumptable_80534EE0@ha
 /* 80174D10 0013E2D0  54 00 10 3A */	slwi r0, r0, 2
-/* 80174D14 0013E2D4  38 63 4E E0 */	addi r3, r3, lbl_80534EE0@l
+/* 80174D14 0013E2D4  38 63 4E E0 */	addi r3, r3, jumptable_80534EE0@l
 /* 80174D18 0013E2D8  7C 63 00 2E */	lwzx r3, r3, r0
 /* 80174D1C 0013E2DC  7C 69 03 A6 */	mtctr r3
 /* 80174D20 0013E2E0  4E 80 04 20 */	bctr
@@ -2366,8 +2366,8 @@ __vt__cf_CfMapItemManager:
 	.4byte func_8017389C
 
 
-.global lbl_80534EE0
-lbl_80534EE0:
+.global jumptable_80534EE0
+jumptable_80534EE0:
 	.4byte .L_80174D24
 	.4byte .L_80174D60
 	.4byte .L_80174D9C
@@ -2633,7 +2633,7 @@ lbl_80666B88:
 
 .obj "@eti_8002933C", local
 .hidden "@eti_8002933C"
-	.4byte func_801732F8
+	.4byte __dt__801732F8
 	.4byte 0x00000040
 	.4byte "@etb_8000E2F8"
 .endobj "@eti_8002933C"

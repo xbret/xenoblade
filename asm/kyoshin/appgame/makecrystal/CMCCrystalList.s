@@ -50,7 +50,7 @@
 /* 802227E4 001EBDA4  4E 80 00 20 */	blr 
 .endfn func_80222740
 
-.fn func_802227E8, global
+.fn __dt__802227E8, global
 /* 802227E8 001EBDA8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802227EC 001EBDAC  7C 08 02 A6 */	mflr r0
 /* 802227F0 001EBDB0  2C 03 00 00 */	cmpwi r3, 0
@@ -76,7 +76,7 @@
 /* 8022283C 001EBDFC  7C 08 03 A6 */	mtlr r0
 /* 80222840 001EBE00  38 21 00 10 */	addi r1, r1, 0x10
 /* 80222844 001EBE04  4E 80 00 20 */	blr 
-.endfn func_802227E8
+.endfn __dt__802227E8
 
 .fn func_80222848, global
 /* 80222848 001EBE08  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -121,9 +121,9 @@
 /* 802228D8 001EBE98  88 03 00 4D */	lbz r0, 0x4d(r3)
 /* 802228DC 001EBE9C  28 00 00 08 */	cmplwi r0, 8
 /* 802228E0 001EBEA0  41 81 00 58 */	bgt .L_80222938
-/* 802228E4 001EBEA4  3C 80 80 54 */	lis r4, lbl_80539710@ha
+/* 802228E4 001EBEA4  3C 80 80 54 */	lis r4, jumptable_80539710@ha
 /* 802228E8 001EBEA8  54 00 10 3A */	slwi r0, r0, 2
-/* 802228EC 001EBEAC  38 84 97 10 */	addi r4, r4, lbl_80539710@l
+/* 802228EC 001EBEAC  38 84 97 10 */	addi r4, r4, jumptable_80539710@l
 /* 802228F0 001EBEB0  7C 84 00 2E */	lwzx r4, r4, r0
 /* 802228F4 001EBEB4  7C 89 03 A6 */	mtctr r4
 /* 802228F8 001EBEB8  4E 80 04 20 */	bctr
@@ -176,7 +176,7 @@
 /* 80222980 001EBF40  4E 80 00 20 */	blr 
 .endfn func_80222964
 
-.fn func_80222984, global
+.fn __dt__80222984, global
 /* 80222984 001EBF44  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80222988 001EBF48  7C 08 02 A6 */	mflr r0
 /* 8022298C 001EBF4C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -232,7 +232,7 @@
 /* 80222A44 001EC004  7C 08 03 A6 */	mtlr r0
 /* 80222A48 001EC008  38 21 00 10 */	addi r1, r1, 0x10
 /* 80222A4C 001EC00C  4E 80 00 20 */	blr 
-.endfn func_80222984
+.endfn __dt__80222984
 
 .fn func_80222A50, global
 /* 80222A50 001EC010  88 63 00 56 */	lbz r3, 0x56(r3)
@@ -1627,8 +1627,8 @@ CMCCrystalList_strpool:
 
 
 
-.global lbl_80539710
-lbl_80539710:
+.global jumptable_80539710
+jumptable_80539710:
 	.4byte .L_80222938
 	.4byte .L_802228FC
 	.4byte .L_80222904
@@ -1645,7 +1645,7 @@ lbl_80539710:
 __vt__CMCCrystalList:
 	.4byte __RTTI__CMCCrystalList
 	.4byte 0
-	.4byte func_802227E8
+	.4byte __dt__802227E8
 	.4byte func_80039E28
 	.4byte func_80223A50
 	.4byte func_80039E18
@@ -1909,7 +1909,7 @@ double_8066AE08:
 
 .obj "@eti_8002DCD4", local
 .hidden "@eti_8002DCD4"
-	.4byte func_802227E8
+	.4byte __dt__802227E8
 	.4byte 0x00000060
 	.4byte "@etb_80014E90"
 .endobj "@eti_8002DCD4"
@@ -1930,7 +1930,7 @@ double_8066AE08:
 
 .obj "@eti_8002DCF8", local
 .hidden "@eti_8002DCF8"
-	.4byte func_80222984
+	.4byte __dt__80222984
 	.4byte 0x000000CC
 	.4byte "@etb_80014EBC"
 .endobj "@eti_8002DCF8"

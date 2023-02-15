@@ -4971,9 +4971,9 @@
 /* 804A40B4 0046D674  38 03 FF CB */	addi r0, r3, -53
 /* 804A40B8 0046D678  28 00 00 08 */	cmplwi r0, 8
 /* 804A40BC 0046D67C  41 81 00 8C */	bgt .L_804A4148
-/* 804A40C0 0046D680  3C 60 80 57 */	lis r3, lbl_8057285C@ha
+/* 804A40C0 0046D680  3C 60 80 57 */	lis r3, jumptable_8057285C@ha
 /* 804A40C4 0046D684  54 00 10 3A */	slwi r0, r0, 2
-/* 804A40C8 0046D688  38 63 28 5C */	addi r3, r3, lbl_8057285C@l
+/* 804A40C8 0046D688  38 63 28 5C */	addi r3, r3, jumptable_8057285C@l
 /* 804A40CC 0046D68C  7C 63 00 2E */	lwzx r3, r3, r0
 /* 804A40D0 0046D690  7C 69 03 A6 */	mtctr r3
 /* 804A40D4 0046D694  4E 80 04 20 */	bctr
@@ -8491,8 +8491,8 @@ sbScriptTypes:
 	.4byte lbl_8066D5CC #sys
 
 
-.global lbl_8057285C
-lbl_8057285C:
+.global jumptable_8057285C
+jumptable_8057285C:
 	.4byte .L_804A40D8
 	.4byte .L_804A40E0
 	.4byte .L_804A40E8

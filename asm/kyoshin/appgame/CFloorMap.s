@@ -313,7 +313,7 @@
 /* 8024BD80 00215340  4E 80 00 20 */	blr 
 .endfn func_8024B8D4
 
-.fn func_8024BD84, global
+.fn __dt__8024BD84, global
 /* 8024BD84 00215344  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8024BD88 00215348  7C 08 02 A6 */	mflr r0
 /* 8024BD8C 0021534C  2C 03 00 00 */	cmpwi r3, 0
@@ -353,7 +353,7 @@
 /* 8024BE10 002153D0  7C 08 03 A6 */	mtlr r0
 /* 8024BE14 002153D4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8024BE18 002153D8  4E 80 00 20 */	blr 
-.endfn func_8024BD84
+.endfn __dt__8024BD84
 
 .fn func_8024BE1C, global
 /* 8024BE1C 002153DC  94 21 CE 20 */	stwu r1, -0x31e0(r1)
@@ -3972,9 +3972,9 @@
 /* 8024F208 002187C8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8024F20C 002187CC  98 8D AF 08 */	stb r4, lbl_80667088@sda21(r13)
 /* 8024F210 002187D0  41 81 03 10 */	bgt .L_8024F520
-/* 8024F214 002187D4  3C 60 80 54 */	lis r3, lbl_8053A768@ha
+/* 8024F214 002187D4  3C 60 80 54 */	lis r3, jumptable_8053A768@ha
 /* 8024F218 002187D8  54 80 10 3A */	slwi r0, r4, 2
-/* 8024F21C 002187DC  38 63 A7 68 */	addi r3, r3, lbl_8053A768@l
+/* 8024F21C 002187DC  38 63 A7 68 */	addi r3, r3, jumptable_8053A768@l
 /* 8024F220 002187E0  7C 63 00 2E */	lwzx r3, r3, r0
 /* 8024F224 002187E4  7C 69 03 A6 */	mtctr r3
 /* 8024F228 002187E8  4E 80 04 20 */	bctr
@@ -6410,8 +6410,8 @@ CFloorMap_strpool:
 
 
 
-.global lbl_8053A768
-lbl_8053A768:
+.global jumptable_8053A768
+jumptable_8053A768:
 	.4byte .L_8024F520
 	.4byte .L_8024F520
 	.4byte .L_8024F22C
@@ -6448,7 +6448,7 @@ lbl_8053A768:
 __vt__CFloorMap:
 	.4byte __RTTI__CFloorMap
 	.4byte 0
-	.4byte func_8024BD84
+	.4byte __dt__8024BD84
 	.4byte func_80039E28
 	.4byte func_8024FD40
 	.4byte func_80039E18
@@ -6653,22 +6653,22 @@ lbl_806670A8:
 	.4byte 0x00000000
 	.4byte 0x0780001F
 	.4byte 0x00003334
-	.4byte func_80244724
+	.4byte __dt__80244724
 	.4byte 0x0780001F
 	.4byte 0x000001FC
-	.4byte func_8024503C
+	.4byte __dt__8024503C
 	.4byte 0x0780001F
 	.4byte 0x00000150
-	.4byte func_802462F0
+	.4byte __dt__802462F0
 	.4byte 0x0780001F
 	.4byte 0x00000140
-	.4byte func_802468C8
+	.4byte __dt__802468C8
 	.4byte 0x0780001F
 	.4byte 0x00000138
-	.4byte func_8024B6B8
+	.4byte __dt__8024B6B8
 	.4byte 0x0780001F
 	.4byte 0x00000130
-	.4byte func_8024B894
+	.4byte __dt__8024B894
 	.4byte 0x0780001F
 	.4byte 0x000000F4
 	.4byte __dt__CSysWin
@@ -6710,61 +6710,61 @@ lbl_806670A8:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00003334
-	.4byte func_80244724
+	.4byte __dt__80244724
 	.4byte 0x0780001E
 	.4byte 0x000001FC
-	.4byte func_8024503C
+	.4byte __dt__8024503C
 	.4byte 0x0780001E
 	.4byte 0x00000150
-	.4byte func_802462F0
+	.4byte __dt__802462F0
 	.4byte 0x0780001E
 	.4byte 0x00000140
-	.4byte func_802468C8
+	.4byte __dt__802468C8
 	.4byte 0x0780001E
 	.4byte 0x00000138
-	.4byte func_8024B6B8
+	.4byte __dt__8024B6B8
 	.4byte 0x8780001E
 	.4byte 0x00000130
-	.4byte func_8024B894
+	.4byte __dt__8024B894
 	.4byte 0x0780001E
 	.4byte 0x00003334
-	.4byte func_80244724
+	.4byte __dt__80244724
 	.4byte 0x0780001E
 	.4byte 0x000001FC
-	.4byte func_8024503C
+	.4byte __dt__8024503C
 	.4byte 0x0780001E
 	.4byte 0x00000150
-	.4byte func_802462F0
+	.4byte __dt__802462F0
 	.4byte 0x0780001E
 	.4byte 0x00000140
-	.4byte func_802468C8
+	.4byte __dt__802468C8
 	.4byte 0x0780001E
 	.4byte 0x00000138
-	.4byte func_8024B6B8
+	.4byte __dt__8024B6B8
 	.4byte 0x0780001E
 	.4byte 0x00000130
-	.4byte func_8024B894
+	.4byte __dt__8024B894
 	.4byte 0x8780001E
 	.4byte 0x000000F4
 	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x00003334
-	.4byte func_80244724
+	.4byte __dt__80244724
 	.4byte 0x0780001E
 	.4byte 0x000001FC
-	.4byte func_8024503C
+	.4byte __dt__8024503C
 	.4byte 0x0780001E
 	.4byte 0x00000150
-	.4byte func_802462F0
+	.4byte __dt__802462F0
 	.4byte 0x0780001E
 	.4byte 0x00000140
-	.4byte func_802468C8
+	.4byte __dt__802468C8
 	.4byte 0x0780001E
 	.4byte 0x00000138
-	.4byte func_8024B6B8
+	.4byte __dt__8024B6B8
 	.4byte 0x0780001E
 	.4byte 0x00000130
-	.4byte func_8024B894
+	.4byte __dt__8024B894
 	.4byte 0x0780001E
 	.4byte 0x000000F4
 	.4byte __dt__CSysWin
@@ -6773,22 +6773,22 @@ lbl_806670A8:
 	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x00003334
-	.4byte func_80244724
+	.4byte __dt__80244724
 	.4byte 0x0780001E
 	.4byte 0x000001FC
-	.4byte func_8024503C
+	.4byte __dt__8024503C
 	.4byte 0x0780001E
 	.4byte 0x00000150
-	.4byte func_802462F0
+	.4byte __dt__802462F0
 	.4byte 0x0780001E
 	.4byte 0x00000140
-	.4byte func_802468C8
+	.4byte __dt__802468C8
 	.4byte 0x0780001E
 	.4byte 0x00000138
-	.4byte func_8024B6B8
+	.4byte __dt__8024B6B8
 	.4byte 0x0780001E
 	.4byte 0x00000130
-	.4byte func_8024B894
+	.4byte __dt__8024B894
 	.4byte 0x0780001E
 	.4byte 0x000000F4
 	.4byte __dt__CSysWin
@@ -6800,22 +6800,22 @@ lbl_806670A8:
 	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00003334
-	.4byte func_80244724
+	.4byte __dt__80244724
 	.4byte 0x0780001E
 	.4byte 0x000001FC
-	.4byte func_8024503C
+	.4byte __dt__8024503C
 	.4byte 0x0780001E
 	.4byte 0x00000150
-	.4byte func_802462F0
+	.4byte __dt__802462F0
 	.4byte 0x0780001E
 	.4byte 0x00000140
-	.4byte func_802468C8
+	.4byte __dt__802468C8
 	.4byte 0x0780001E
 	.4byte 0x00000138
-	.4byte func_8024B6B8
+	.4byte __dt__8024B6B8
 	.4byte 0x0780001E
 	.4byte 0x00000130
-	.4byte func_8024B894
+	.4byte __dt__8024B894
 	.4byte 0x0780001E
 	.4byte 0x000000F4
 	.4byte __dt__CSysWin
@@ -6830,22 +6830,22 @@ lbl_806670A8:
 	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00003334
-	.4byte func_80244724
+	.4byte __dt__80244724
 	.4byte 0x0780001E
 	.4byte 0x000001FC
-	.4byte func_8024503C
+	.4byte __dt__8024503C
 	.4byte 0x0780001E
 	.4byte 0x00000150
-	.4byte func_802462F0
+	.4byte __dt__802462F0
 	.4byte 0x0780001E
 	.4byte 0x00000140
-	.4byte func_802468C8
+	.4byte __dt__802468C8
 	.4byte 0x0780001E
 	.4byte 0x00000138
-	.4byte func_8024B6B8
+	.4byte __dt__8024B6B8
 	.4byte 0x0780001E
 	.4byte 0x00000130
-	.4byte func_8024B894
+	.4byte __dt__8024B894
 	.4byte 0x0780001E
 	.4byte 0x000000F4
 	.4byte __dt__CSysWin
@@ -7046,7 +7046,7 @@ lbl_806670A8:
 
 .obj "@eti_8002F4C8", local
 .hidden "@eti_8002F4C8"
-	.4byte func_8024BD84
+	.4byte __dt__8024BD84
 	.4byte 0x00000098
 	.4byte "@etb_800166DC"
 .endobj "@eti_8002F4C8"

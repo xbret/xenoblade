@@ -93,7 +93,7 @@ lbl_805277F4:
 __vt__CScnItemLightNw4r:
 	.4byte __RTTI__CScnItemLightNw4r
 	.4byte 0
-	.4byte func_804823A8
+	.4byte __dt__804823A8
 	.4byte func_80482388
 	.4byte func_80482048
 	.4byte func_80482400

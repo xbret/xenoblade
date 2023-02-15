@@ -1251,7 +1251,7 @@
 /* 8016DEE8 001374A8  4E 80 00 20 */	blr 
 .endfn func_8016DED4
 
-.fn func_8016DEEC, global
+.fn __dt__8016DEEC, global
 /* 8016DEEC 001374AC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8016DEF0 001374B0  7C 08 02 A6 */	mflr r0
 /* 8016DEF4 001374B4  2C 03 00 00 */	cmpwi r3, 0
@@ -1269,7 +1269,7 @@
 /* 8016DF20 001374E0  7C 08 03 A6 */	mtlr r0
 /* 8016DF24 001374E4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8016DF28 001374E8  4E 80 00 20 */	blr 
-.endfn func_8016DEEC
+.endfn __dt__8016DEEC
 
 .fn func_8016DF2C, global
 /* 8016DF2C 001374EC  A0 6D A9 E8 */	lhz r3, lbl_80666B68@sda21(r13)
@@ -2377,7 +2377,7 @@ lbl_80534790:
 __vt__cf_CfResReloadImpl:
 	.4byte __RTTI__cf_CfResReloadImpl
 	.4byte 0
-	.4byte func_8016DEEC
+	.4byte __dt__8016DEEC
 	.4byte func_8016DE8C
 	.4byte func_8016D240
 	.4byte func_8016CE3C
@@ -2830,7 +2830,7 @@ lbl_80666B78:
 
 .obj "@eti_800290FC", local
 .hidden "@eti_800290FC"
-	.4byte func_8016DEEC
+	.4byte __dt__8016DEEC
 	.4byte 0x00000040
 	.4byte "@etb_8000E0F8"
 .endobj "@eti_800290FC"

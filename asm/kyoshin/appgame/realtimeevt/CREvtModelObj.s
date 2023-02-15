@@ -2397,7 +2397,7 @@ lbl_80666BB0:
 	.4byte 0x00000000
 	.4byte 0x0680001F
 	.4byte 0x0000003C
-	.4byte func_80081C20
+	.4byte __dt__80081C20
 	.4byte 0x0680001F
 	.4byte 0x00000038
 	.4byte __dt__IWorkEvent
@@ -2416,7 +2416,7 @@ lbl_80666BB0:
 	.4byte 0x00000000
 	.4byte 0x0680001E
 	.4byte 0x0000003C
-	.4byte func_80081C20
+	.4byte __dt__80081C20
 	.4byte 0x0680001E
 	.4byte 0x00000038
 	.4byte __dt__IWorkEvent
@@ -2425,7 +2425,7 @@ lbl_80666BB0:
 	.4byte func_80172668
 	.4byte 0x0680001E
 	.4byte 0x0000003C
-	.4byte func_80081C20
+	.4byte __dt__80081C20
 	.4byte 0x8680001E
 	.4byte 0x00000038
 	.4byte __dt__IWorkEvent

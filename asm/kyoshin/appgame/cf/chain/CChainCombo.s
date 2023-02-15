@@ -164,7 +164,7 @@
 /* 80293FB4 0025D574  4E 80 00 20 */	blr
 .endfn func_80293EEC
 
-.fn func_80293FB8, global
+.fn __dt__80293FB8, global
 /* 80293FB8 0025D578  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80293FBC 0025D57C  7C 08 02 A6 */	mflr r0
 /* 80293FC0 0025D580  2C 03 00 00 */	cmpwi r3, 0
@@ -188,7 +188,7 @@
 /* 80294008 0025D5C8  41 82 00 10 */	beq .L_80294018
 /* 8029400C 0025D5CC  7F C3 F3 78 */	mr r3, r30
 /* 80294010 0025D5D0  38 80 00 00 */	li r4, 0
-/* 80294014 0025D5D4  48 1B 0B 25 */	bl func_80444B38
+/* 80294014 0025D5D4  48 1B 0B 25 */	bl __dt__80444B38
 .L_80294018:
 /* 80294018 0025D5D8  2C 1F 00 00 */	cmpwi r31, 0
 /* 8029401C 0025D5DC  40 81 00 0C */	ble .L_80294028
@@ -202,7 +202,7 @@
 /* 80294038 0025D5F8  7C 08 03 A6 */	mtlr r0
 /* 8029403C 0025D5FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80294040 0025D600  4E 80 00 20 */	blr 
-.endfn func_80293FB8
+.endfn __dt__80293FB8
 
 .fn func_80294044, global
 /* 80294044 0025D604  94 21 FF 90 */	stwu r1, -0x70(r1)
@@ -545,7 +545,7 @@ lbl_8053C140:
 __vt__cf_CChainCombo:
 	.4byte __RTTI__cf_CChainCombo
 	.4byte 0
-	.4byte func_800D8C1C
+	.4byte __dt__800D8C1C
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
@@ -623,7 +623,7 @@ double_8066B440:
 	.4byte __dt__8045F580
 	.4byte 0x0680001E
 	.4byte 0x00000070
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 	.4byte 0x8680001E
 	.4byte 0x0000006C
 	.4byte __dt__IWorkEvent
@@ -695,7 +695,7 @@ double_8066B440:
 
 .obj "@eti_80031C94", local
 .hidden "@eti_80031C94"
-	.4byte func_80293FB8
+	.4byte __dt__80293FB8
 	.4byte 0x0000008C
 	.4byte "@etb_80019950"
 .endobj "@eti_80031C94"

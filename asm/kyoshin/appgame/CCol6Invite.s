@@ -82,7 +82,7 @@
 
 .fn func_801640D0, global
 /* 801640D0 0012D690  38 63 FF 94 */	addi r3, r3, -108
-/* 801640D4 0012D694  4B FF 90 00 */	b func_8015D0D4
+/* 801640D4 0012D694  4B FF 90 00 */	b __dt__8015D0D4
 .endfn func_801640D0
 
 .fn func_801640D8, global
@@ -92,7 +92,7 @@
 
 .fn func_801640E0, global
 /* 801640E0 0012D6A0  38 63 FF 94 */	addi r3, r3, -108
-/* 801640E4 0012D6A4  4B FF 94 B0 */	b func_8015D594
+/* 801640E4 0012D6A4  4B FF 94 B0 */	b __dt__8015D594
 .endfn func_801640E0
 
 .fn func_801640E8, global
@@ -102,7 +102,7 @@
 
 .fn func_801640F0, global
 /* 801640F0 0012D6B0  38 63 FF 90 */	addi r3, r3, -112
-/* 801640F4 0012D6B4  4B FF 94 A0 */	b func_8015D594
+/* 801640F4 0012D6B4  4B FF 94 A0 */	b __dt__8015D594
 .endfn func_801640F0
 
 .fn func_801640F8, global
@@ -112,7 +112,7 @@
 
 .fn func_80164100, global
 /* 80164100 0012D6C0  38 63 FF 94 */	addi r3, r3, -108
-/* 80164104 0012D6C4  4B FF AA B0 */	b func_8015EBB4
+/* 80164104 0012D6C4  4B FF AA B0 */	b __dt__8015EBB4
 .endfn func_80164100
 
 .fn func_80164108, global
@@ -122,12 +122,12 @@
 
 .fn func_80164110, global
 /* 80164110 0012D6D0  38 63 FF 90 */	addi r3, r3, -112
-/* 80164114 0012D6D4  4B FF AA A0 */	b func_8015EBB4
+/* 80164114 0012D6D4  4B FF AA A0 */	b __dt__8015EBB4
 .endfn func_80164110
 
 .fn func_80164118, global
 /* 80164118 0012D6D8  38 63 FF 94 */	addi r3, r3, -108
-/* 8016411C 0012D6DC  4B FF FB EC */	b func_80163D08
+/* 8016411C 0012D6DC  4B FF FB EC */	b __dt__80163D08
 .endfn func_80164118
 
 .section extab, "a" # 0x800066E0 - 0x80021020

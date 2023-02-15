@@ -231,7 +231,7 @@
 
 .fn func_8029480C, global
 /* 8029480C 0025DDCC  38 63 FF 94 */	addi r3, r3, -108
-/* 80294810 0025DDD0  4B FF F7 A8 */	b func_80293FB8
+/* 80294810 0025DDD0  4B FF F7 A8 */	b __dt__80293FB8
 .endfn func_8029480C
 
 .fn func_80294814, global
@@ -241,7 +241,7 @@
 
 .fn func_8029481C, global
 /* 8029481C 0025DDDC  38 63 FF 90 */	addi r3, r3, -112
-/* 80294820 0025DDE0  4B FF F7 98 */	b func_80293FB8
+/* 80294820 0025DDE0  4B FF F7 98 */	b __dt__80293FB8
 .endfn func_8029481C
 
 .fn func_80294824, global
@@ -296,7 +296,7 @@ CSysWinSave_strpool:
 __vt__CSysWinSave:
 	.4byte __RTTI__CSysWinSave
 	.4byte 0
-	.4byte func_80293FB8
+	.4byte __dt__80293FB8
 	.4byte CChildListNode_Reset
 	.4byte func_80294044
 	.4byte func_802941F0
@@ -427,13 +427,13 @@ lbl_80667300:
 	.4byte __dt__8045F580
 	.4byte 0x0680001C
 	.4byte 0x00000070
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 	.4byte 0x0680001C
 	.4byte 0x0000006C
 	.4byte __dt__IWorkEvent
 	.4byte 0x8680001C
 	.4byte 0x00000000
-	.4byte func_8012235C
+	.4byte __dt__8012235C
 .endobj "@etb_80019A10"
 
 .obj "@etb_80019A6C", local

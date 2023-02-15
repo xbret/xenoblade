@@ -397,9 +397,9 @@
 /* 802A6494 0026FA54  48 00 13 55 */	bl func_802A77E8
 /* 802A6498 0026FA58  28 03 00 0A */	cmplwi r3, 0xa
 /* 802A649C 0026FA5C  41 81 00 90 */	bgt .L_802A652C
-/* 802A64A0 0026FA60  3C 80 80 54 */	lis r4, lbl_8053D278@ha
+/* 802A64A0 0026FA60  3C 80 80 54 */	lis r4, jumptable_8053D278@ha
 /* 802A64A4 0026FA64  54 60 10 3A */	slwi r0, r3, 2
-/* 802A64A8 0026FA68  38 84 D2 78 */	addi r4, r4, lbl_8053D278@l
+/* 802A64A8 0026FA68  38 84 D2 78 */	addi r4, r4, jumptable_8053D278@l
 /* 802A64AC 0026FA6C  7C 84 00 2E */	lwzx r4, r4, r0
 /* 802A64B0 0026FA70  7C 89 03 A6 */	mtctr r4
 /* 802A64B4 0026FA74  4E 80 04 20 */	bctr
@@ -898,8 +898,8 @@ lbl_8053D26C:
 	.4byte func_802A658C
 
 
-.global lbl_8053D278
-lbl_8053D278:
+.global jumptable_8053D278
+jumptable_8053D278:
 	.4byte .L_802A652C
 	.4byte .L_802A64B8
 	.4byte .L_802A64C0

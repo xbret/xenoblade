@@ -507,9 +507,9 @@
 /* 80417CFC 003E12BC  38 05 FF 7F */	addi r0, r5, -129
 /* 80417D00 003E12C0  28 00 00 7C */	cmplwi r0, 0x7c
 /* 80417D04 003E12C4  41 81 08 B8 */	bgt .L_804185BC
-/* 80417D08 003E12C8  3C 60 80 57 */	lis r3, lbl_8056E198@ha
+/* 80417D08 003E12C8  3C 60 80 57 */	lis r3, jumptable_8056E198@ha
 /* 80417D0C 003E12CC  54 00 10 3A */	slwi r0, r0, 2
-/* 80417D10 003E12D0  38 63 E1 98 */	addi r3, r3, lbl_8056E198@l
+/* 80417D10 003E12D0  38 63 E1 98 */	addi r3, r3, jumptable_8056E198@l
 /* 80417D14 003E12D4  7C 63 00 2E */	lwzx r3, r3, r0
 /* 80417D18 003E12D8  7C 69 03 A6 */	mtctr r3
 /* 80417D1C 003E12DC  4E 80 04 20 */	bctr
@@ -1317,8 +1317,8 @@ lbl_8056E170:
 	.balign 4
 
 
-.global lbl_8056E198
-lbl_8056E198:
+.global jumptable_8056E198
+jumptable_8056E198:
 	.4byte .L_80417D48
 	.4byte .L_804185BC
 	.4byte .L_804185BC

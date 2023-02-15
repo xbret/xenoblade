@@ -876,7 +876,7 @@ cf_CfCamFollow_typestr:
 __vt__cf_CfCamEvent:
 	.4byte __RTTI__cf_CfCamEvent
 	.4byte 0
-	.4byte func_8006B6C8
+	.4byte __dt__8006B6C8
 	.4byte func_8006A8C4
 	.4byte func_8006B6B8
 	.4byte func_8006AA34
@@ -1150,7 +1150,7 @@ lbl_806666C4:
 	.4byte 0x00000000
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte func_8006BF20
+	.4byte __dt__8006BF20
 .endobj "@etb_8000806C"
 
 .section extabindex, "a" # 0x80021020 - 0x80039220

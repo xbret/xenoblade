@@ -40,7 +40,7 @@
 /* 80096918 0005FED8  4E 80 00 20 */	blr 
 .endfn func_8009689C
 
-.fn func_8009691C, global
+.fn __dt__8009691C, global
 /* 8009691C 0005FEDC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80096920 0005FEE0  7C 08 02 A6 */	mflr r0
 /* 80096924 0005FEE4  2C 03 00 00 */	cmpwi r3, 0
@@ -51,7 +51,7 @@
 /* 80096938 0005FEF8  7C 7E 1B 78 */	mr r30, r3
 /* 8009693C 0005FEFC  41 82 00 1C */	beq .L_80096958
 /* 80096940 0005FF00  38 80 00 00 */	li r4, 0
-/* 80096944 0005FF04  48 00 07 8D */	bl func_800970D0
+/* 80096944 0005FF04  48 00 07 8D */	bl __dt__800970D0
 /* 80096948 0005FF08  2C 1F 00 00 */	cmpwi r31, 0
 /* 8009694C 0005FF0C  40 81 00 0C */	ble .L_80096958
 /* 80096950 0005FF10  7F C3 F3 78 */	mr r3, r30
@@ -64,7 +64,7 @@
 /* 80096968 0005FF28  7C 08 03 A6 */	mtlr r0
 /* 8009696C 0005FF2C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80096970 0005FF30  4E 80 00 20 */	blr 
-.endfn func_8009691C
+.endfn __dt__8009691C
 
 .fn func_80096974, global
 /* 80096974 0005FF34  94 21 FF B0 */	stwu r1, -0x50(r1)
@@ -530,7 +530,7 @@
 /* 80096FA4 00060564  4E 80 00 20 */	blr 
 .endfn func_80096F9C
 
-.fn func_80096FA8, global
+.fn __dt__80096FA8, global
 /* 80096FA8 00060568  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80096FAC 0006056C  7C 08 02 A6 */	mflr r0
 /* 80096FB0 00060570  2C 03 00 00 */	cmpwi r3, 0
@@ -542,7 +542,7 @@
 /* 80096FC8 00060588  41 82 00 20 */	beq .L_80096FE8
 /* 80096FCC 0006058C  41 82 00 0C */	beq .L_80096FD8
 /* 80096FD0 00060590  38 80 00 00 */	li r4, 0
-/* 80096FD4 00060594  48 00 00 FD */	bl func_800970D0
+/* 80096FD4 00060594  48 00 00 FD */	bl __dt__800970D0
 .L_80096FD8:
 /* 80096FD8 00060598  2C 1F 00 00 */	cmpwi r31, 0
 /* 80096FDC 0006059C  40 81 00 0C */	ble .L_80096FE8
@@ -556,7 +556,7 @@
 /* 80096FF8 000605B8  7C 08 03 A6 */	mtlr r0
 /* 80096FFC 000605BC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80097000 000605C0  4E 80 00 20 */	blr 
-.endfn func_80096FA8
+.endfn __dt__80096FA8
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -615,7 +615,7 @@ lbl_8052B3D8:
 __vt__cf_CtrlPad:
 	.4byte __RTTI__cf_CtrlPad
 	.4byte 0
-	.4byte func_80096FA8
+	.4byte __dt__80096FA8
 	.4byte func_80098CB8
 	.4byte func_8009C860
 	.4byte func_8009C87C
@@ -736,7 +736,7 @@ float_80668FA0:
 	.4byte 0x00000000
 	.4byte 0x8680001D
 	.4byte 0x00000000
-	.4byte func_8009691C
+	.4byte __dt__8009691C
 .endobj "@etb_80008DA4"
 
 .obj "@etb_80008DC0", local
@@ -770,7 +770,7 @@ float_80668FA0:
 
 .obj "@eti_80024464", local
 .hidden "@eti_80024464"
-	.4byte func_8009691C
+	.4byte __dt__8009691C
 	.4byte 0x00000058
 	.4byte "@etb_80008DC0"
 .endobj "@eti_80024464"
@@ -784,7 +784,7 @@ float_80668FA0:
 
 .obj "@eti_8002447C", local
 .hidden "@eti_8002447C"
-	.4byte func_80096FA8
+	.4byte __dt__80096FA8
 	.4byte 0x0000005C
 	.4byte "@etb_80008DD0"
 .endobj "@eti_8002447C"

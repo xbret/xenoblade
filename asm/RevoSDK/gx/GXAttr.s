@@ -6,9 +6,9 @@
 .fn GXSetVtxDesc, global
 /* 80319230 002E27F0  28 03 00 19 */	cmplwi r3, 0x19
 /* 80319234 002E27F4  41 81 02 10 */	bgt .L_80319444
-/* 80319238 002E27F8  3C A0 80 55 */	lis r5, lbl_8054B8F0@ha
+/* 80319238 002E27F8  3C A0 80 55 */	lis r5, jumptable_8054B8F0@ha
 /* 8031923C 002E27FC  54 60 10 3A */	slwi r0, r3, 2
-/* 80319240 002E2800  38 A5 B8 F0 */	addi r5, r5, lbl_8054B8F0@l
+/* 80319240 002E2800  38 A5 B8 F0 */	addi r5, r5, jumptable_8054B8F0@l
 /* 80319244 002E2804  7C A5 00 2E */	lwzx r5, r5, r0
 /* 80319248 002E2808  7C A9 03 A6 */	mtctr r5
 /* 8031924C 002E280C  4E 80 04 20 */	bctr 
@@ -343,9 +343,9 @@
 /* 803196CC 002E2C8C  54 64 10 3A */	slwi r4, r3, 2
 /* 803196D0 002E2C90  7D 08 22 14 */	add r8, r8, r4
 /* 803196D4 002E2C94  41 81 01 5C */	bgt .L_80319830
-/* 803196D8 002E2C98  3C 80 80 55 */	lis r4, lbl_8054B958@ha
+/* 803196D8 002E2C98  3C 80 80 55 */	lis r4, jumptable_8054B958@ha
 /* 803196DC 002E2C9C  54 00 10 3A */	slwi r0, r0, 2
-/* 803196E0 002E2CA0  38 84 B9 58 */	addi r4, r4, lbl_8054B958@l
+/* 803196E0 002E2CA0  38 84 B9 58 */	addi r4, r4, jumptable_8054B958@l
 /* 803196E4 002E2CA4  7C 84 00 2E */	lwzx r4, r4, r0
 /* 803196E8 002E2CA8  7C 89 03 A6 */	mtctr r4
 /* 803196EC 002E2CAC  4E 80 04 20 */	bctr 
@@ -461,7 +461,7 @@
 .fn GXSetVtxAttrFmtv, global
 /* 80319860 002E2E20  80 C2 BC 20 */	lwz r6, lbl_8066BFA0@sda21(r2)
 /* 80319864 002E2E24  54 60 10 3A */	slwi r0, r3, 2
-/* 80319868 002E2E28  3C A0 80 55 */	lis r5, lbl_8054B99C@ha
+/* 80319868 002E2E28  3C A0 80 55 */	lis r5, jumptable_8054B99C@ha
 /* 8031986C 002E2E2C  7D 06 02 14 */	add r8, r6, r0
 /* 80319870 002E2E30  48 00 01 7C */	b .L_803199EC
 /* 80319874 002E2E34  60 00 00 00 */	nop 
@@ -473,7 +473,7 @@
 /* 80319888 002E2E48  28 00 00 10 */	cmplwi r0, 0x10
 /* 8031988C 002E2E4C  81 24 00 04 */	lwz r9, 4(r4)
 /* 80319890 002E2E50  41 81 01 58 */	bgt .L_803199E8
-/* 80319894 002E2E54  38 C5 B9 9C */	addi r6, r5, lbl_8054B99C@l
+/* 80319894 002E2E54  38 C5 B9 9C */	addi r6, r5, jumptable_8054B99C@l
 /* 80319898 002E2E58  54 00 10 3A */	slwi r0, r0, 2
 /* 8031989C 002E2E5C  7C C6 00 2E */	lwzx r6, r6, r0
 /* 803198A0 002E2E60  7C C9 03 A6 */	mtctr r6
@@ -665,9 +665,9 @@
 /* 80319B08 002E30C8  39 80 00 00 */	li r12, 0
 /* 80319B0C 002E30CC  39 60 00 05 */	li r11, 5
 /* 80319B10 002E30D0  41 81 00 98 */	bgt .L_80319BA8
-/* 80319B14 002E30D4  3D 20 80 55 */	lis r9, lbl_8054B9E0@ha
+/* 80319B14 002E30D4  3D 20 80 55 */	lis r9, jumptable_8054B9E0@ha
 /* 80319B18 002E30D8  54 A0 10 3A */	slwi r0, r5, 2
-/* 80319B1C 002E30DC  39 29 B9 E0 */	addi r9, r9, lbl_8054B9E0@l
+/* 80319B1C 002E30DC  39 29 B9 E0 */	addi r9, r9, jumptable_8054B9E0@l
 /* 80319B20 002E30E0  7D 29 00 2E */	lwzx r9, r9, r0
 /* 80319B24 002E30E4  7D 29 03 A6 */	mtctr r9
 /* 80319B28 002E30E8  4E 80 04 20 */	bctr 
@@ -853,8 +853,8 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8054B8F0
-lbl_8054B8F0:
+.global jumptable_8054B8F0
+jumptable_8054B8F0:
 	.4byte .L_80319250
 	.4byte .L_80319264
 	.4byte .L_80319278
@@ -883,8 +883,8 @@ lbl_8054B8F0:
 	.4byte .L_8031934C
 
 
-.global lbl_8054B958
-lbl_8054B958:
+.global jumptable_8054B958
+jumptable_8054B958:
 	.4byte .L_803196F0
 	.4byte .L_80319708
 	.4byte .L_80319744
@@ -903,8 +903,8 @@ lbl_8054B958:
 	.4byte .L_80319830
 	.4byte .L_80319708
 
-.global lbl_8054B99C
-lbl_8054B99C:
+.global jumptable_8054B99C
+jumptable_8054B99C:
 	.4byte .L_803198A8
 	.4byte .L_803198C0
 	.4byte .L_803198FC
@@ -924,8 +924,8 @@ lbl_8054B99C:
 	.4byte .L_803198C0
 
 
-.global lbl_8054B9E0
-lbl_8054B9E0:
+.global jumptable_8054B9E0
+jumptable_8054B9E0:
 	.4byte .L_80319B2C
 	.4byte .L_80319B38
 	.4byte .L_80319B44

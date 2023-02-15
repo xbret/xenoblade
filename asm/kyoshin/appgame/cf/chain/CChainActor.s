@@ -186,9 +186,9 @@
 .L_80276E84:
 /* 80276E84 00240444  28 05 00 0A */	cmplwi r5, 0xa
 /* 80276E88 00240448  41 81 00 B4 */	bgt .L_80276F3C
-/* 80276E8C 0024044C  3C 60 80 54 */	lis r3, lbl_8053B98C@ha
+/* 80276E8C 0024044C  3C 60 80 54 */	lis r3, jumptable_8053B98C@ha
 /* 80276E90 00240450  54 A0 10 3A */	slwi r0, r5, 2
-/* 80276E94 00240454  38 63 B9 8C */	addi r3, r3, lbl_8053B98C@l
+/* 80276E94 00240454  38 63 B9 8C */	addi r3, r3, jumptable_8053B98C@l
 /* 80276E98 00240458  7C 63 00 2E */	lwzx r3, r3, r0
 /* 80276E9C 0024045C  7C 69 03 A6 */	mtctr r3
 /* 80276EA0 00240460  4E 80 04 20 */	bctr
@@ -1233,9 +1233,9 @@
 /* 80277CB8 00241278  88 BE 00 02 */	lbz r5, 2(r30)
 /* 80277CBC 0024127C  28 05 00 1A */	cmplwi r5, 0x1a
 /* 80277CC0 00241280  41 81 11 28 */	bgt .L_80278DE8
-/* 80277CC4 00241284  3C 60 80 54 */	lis r3, lbl_8053B9B8@ha
+/* 80277CC4 00241284  3C 60 80 54 */	lis r3, jumptable_8053B9B8@ha
 /* 80277CC8 00241288  54 A0 10 3A */	slwi r0, r5, 2
-/* 80277CCC 0024128C  38 63 B9 B8 */	addi r3, r3, lbl_8053B9B8@l
+/* 80277CCC 0024128C  38 63 B9 B8 */	addi r3, r3, jumptable_8053B9B8@l
 /* 80277CD0 00241290  7C 63 00 2E */	lwzx r3, r3, r0
 /* 80277CD4 00241294  7C 69 03 A6 */	mtctr r3
 /* 80277CD8 00241298  4E 80 04 20 */	bctr
@@ -4569,7 +4569,7 @@
 /* 8027AA0C 00243FCC  4E 80 00 20 */	blr 
 .endfn func_8027AA0C
 
-.fn func_8027AA10, global
+.fn __dt__8027AA10, global
 /* 8027AA10 00243FD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027AA14 00243FD4  7C 08 02 A6 */	mflr r0
 /* 8027AA18 00243FD8  2C 03 00 00 */	cmpwi r3, 0
@@ -4587,7 +4587,7 @@
 /* 8027AA44 00244004  7C 08 03 A6 */	mtlr r0
 /* 8027AA48 00244008  38 21 00 10 */	addi r1, r1, 0x10
 /* 8027AA4C 0024400C  4E 80 00 20 */	blr 
-.endfn func_8027AA10
+.endfn __dt__8027AA10
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -4624,8 +4624,8 @@ lbl_8053B980:
 	.4byte 0x000007DF
 
 
-.global lbl_8053B98C
-lbl_8053B98C:
+.global jumptable_8053B98C
+jumptable_8053B98C:
 	.4byte .L_80276F3C
 	.4byte .L_80276EA4
 	.4byte .L_80276EB8
@@ -4639,8 +4639,8 @@ lbl_8053B98C:
 	.4byte .L_80276F38
 
 
-.global lbl_8053B9B8
-lbl_8053B9B8:
+.global jumptable_8053B9B8
+jumptable_8053B9B8:
 	.4byte .L_80278DE8
 	.4byte .L_80277CDC
 	.4byte .L_80277EBC
@@ -4674,28 +4674,28 @@ lbl_8053B9B8:
 __vt__cf_CChainChance:
 	.4byte __RTTI__cf_CChainChance
 	.4byte 0
-	.4byte func_800D8C5C
+	.4byte __dt__800D8C5C
 
 
 .global __vt__cf_CChainTimer
 __vt__cf_CChainTimer:
 	.4byte __RTTI__cf_CChainTimer
 	.4byte 0
-	.4byte func_800D8C9C
+	.4byte __dt__800D8C9C
 
 
 .global __vt__cf_CChainMember
 __vt__cf_CChainMember:
 	.4byte __RTTI__cf_CChainMember
 	.4byte 0
-	.4byte func_800D8D7C
+	.4byte __dt__800D8D7C
 
 
 .global __vt__cf_CChainActor
 __vt__cf_CChainActor:
 	.4byte __RTTI__cf_CChainActor
 	.4byte 0
-	.4byte func_8027AA10
+	.4byte __dt__8027AA10
 	.4byte func_80279B24
 	.4byte func_80279B34
 	.4byte func_80279DC0
@@ -4899,25 +4899,25 @@ float_8066B308:
 	.4byte 0x00000000
 	.4byte 0x0780001D
 	.4byte 0x00001EF4
-	.4byte func_800D8C1C
+	.4byte __dt__800D8C1C
 	.4byte 0x0780001D
 	.4byte 0x00001EDC
-	.4byte func_800D8C5C
+	.4byte __dt__800D8C5C
 	.4byte 0x0780001D
 	.4byte 0x00001EC4
-	.4byte func_800D8CDC
+	.4byte __dt__800D8CDC
 	.4byte 0x0780001D
 	.4byte 0x00001EBC
-	.4byte func_800D8C9C
+	.4byte __dt__800D8C9C
 	.4byte 0x0780001D
 	.4byte 0x00001EB4
-	.4byte func_800D8C9C
+	.4byte __dt__800D8C9C
 	.4byte 0x0780001D
 	.4byte 0x00001DC8
-	.4byte func_800D8D7C
+	.4byte __dt__800D8D7C
 	.4byte 0x8780001D
 	.4byte 0x00000018
-	.4byte func_8027AF5C
+	.4byte __dt__8027AF5C
 .endobj "@etb_800186D8"
 
 .obj "@etb_80018754", local
@@ -5286,7 +5286,7 @@ float_8066B308:
 
 .obj "@eti_80030E78", local
 .hidden "@eti_80030E78"
-	.4byte func_8027AA10
+	.4byte __dt__8027AA10
 	.4byte 0x00000040
 	.4byte "@etb_80018814"
 .endobj "@eti_80030E78"

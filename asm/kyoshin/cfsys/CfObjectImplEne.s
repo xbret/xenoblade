@@ -713,7 +713,7 @@
 /* 800D0A24 00099FE4  41 80 FF BC */	blt .L_800D09E0
 /* 800D0A28 00099FE8  38 61 00 38 */	addi r3, r1, 0x38
 /* 800D0A2C 00099FEC  38 80 FF FF */	li r4, -1
-/* 800D0A30 00099FF0  4B F7 34 59 */	bl func_80043E88
+/* 800D0A30 00099FF0  4B F7 34 59 */	bl __dt__80043E88
 .L_800D0A34:
 /* 800D0A34 00099FF4  80 01 00 64 */	lwz r0, 0x64(r1)
 /* 800D0A38 00099FF8  E3 E1 00 58 */	psq_l f31, 88(r1), 0, qr0
@@ -1159,7 +1159,7 @@
 /* 800D1070 0009A630  4E 80 00 20 */	blr
 .endfn func_800D1020
 
-.fn func_800D1074, global
+.fn __dt__800D1074, global
 /* 800D1074 0009A634  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800D1078 0009A638  7C 08 02 A6 */	mflr r0
 /* 800D107C 0009A63C  2C 03 00 00 */	cmpwi r3, 0
@@ -1177,7 +1177,7 @@
 /* 800D10A8 0009A668  7C 08 03 A6 */	mtlr r0
 /* 800D10AC 0009A66C  38 21 00 10 */	addi r1, r1, 0x10
 /* 800D10B0 0009A670  4E 80 00 20 */	blr 
-.endfn func_800D1074
+.endfn __dt__800D1074
 
 .fn func_800D10B4, global
 /* 800D10B4 0009A674  38 63 FF F4 */	addi r3, r3, -12
@@ -1186,12 +1186,12 @@
 
 .fn func_800D10BC, global
 /* 800D10BC 0009A67C  38 63 FF F4 */	addi r3, r3, -12
-/* 800D10C0 0009A680  4B FF FF B4 */	b func_800D1074
+/* 800D10C0 0009A680  4B FF FF B4 */	b __dt__800D1074
 .endfn func_800D10BC
 
 .fn func_800D10C4, global
 /* 800D10C4 0009A684  38 63 FF F0 */	addi r3, r3, -16
-/* 800D10C8 0009A688  4B FF FF AC */	b func_800D1074
+/* 800D10C8 0009A688  4B FF FF AC */	b __dt__800D1074
 .endfn func_800D10C4
 
 .fn func_800D10CC, global
@@ -1201,7 +1201,7 @@
 
 .fn func_800D10D4, global
 /* 800D10D4 0009A694  38 63 FF 98 */	addi r3, r3, -104
-/* 800D10D8 0009A698  4B FF FF 9C */	b func_800D1074
+/* 800D10D8 0009A698  4B FF FF 9C */	b __dt__800D1074
 .endfn func_800D10D4
 
 
@@ -1222,7 +1222,7 @@ cf_CfObjectImplEne_typestr:
 __vt__cf_CfObjectImplEne:
 	.4byte __RTTI__cf_CfObjectImplEne
 	.4byte 0
-	.4byte func_800D1074
+	.4byte __dt__800D1074
 	.4byte func_80054A20
 	.4byte func_800CC5DC
 	.4byte func_800CC638
@@ -1383,7 +1383,7 @@ float_806695BC:
 	.4byte 0x00140010
 	.4byte 0x00000000
 	.4byte 0x82000038
-	.4byte func_80043E88
+	.4byte __dt__80043E88
 .endobj "@etb_8000A4BC"
 
 .obj "@etb_8000A4D4", local
@@ -1478,7 +1478,7 @@ float_806695BC:
 
 .obj "@eti_8002600C", local
 .hidden "@eti_8002600C"
-	.4byte func_800D1074
+	.4byte __dt__800D1074
 	.4byte 0x00000040
 	.4byte "@etb_8000A4F4"
 .endobj "@eti_8002600C"

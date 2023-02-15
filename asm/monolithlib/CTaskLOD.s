@@ -91,7 +91,7 @@
 /* 80462A3C 0042BFFC  41 82 00 18 */	beq .L_80462A54
 /* 80462A40 0042C000  41 82 00 14 */	beq .L_80462A54
 /* 80462A44 0042C004  38 80 00 01 */	li r4, 1
-/* 80462A48 0042C008  48 00 A6 FD */	bl func_8046D144
+/* 80462A48 0042C008  48 00 A6 FD */	bl __dt__8046D144
 /* 80462A4C 0042C00C  38 00 00 00 */	li r0, 0
 /* 80462A50 0042C010  90 1F 1D 3C */	stw r0, 0x1d3c(r31)
 .L_80462A54:
@@ -145,7 +145,7 @@
 /* 80462AF4 0042C0B4  41 82 00 18 */	beq .L_80462B0C
 /* 80462AF8 0042C0B8  41 82 00 14 */	beq .L_80462B0C
 /* 80462AFC 0042C0BC  38 80 00 01 */	li r4, 1
-/* 80462B00 0042C0C0  48 00 A6 45 */	bl func_8046D144
+/* 80462B00 0042C0C0  48 00 A6 45 */	bl __dt__8046D144
 /* 80462B04 0042C0C4  38 00 00 00 */	li r0, 0
 /* 80462B08 0042C0C8  90 1F 1D 3C */	stw r0, 0x1d3c(r31)
 .L_80462B0C:
@@ -194,7 +194,7 @@
 /* 80462B8C 0042C14C  41 82 00 18 */	beq .L_80462BA4
 /* 80462B90 0042C150  41 82 00 14 */	beq .L_80462BA4
 /* 80462B94 0042C154  38 80 00 01 */	li r4, 1
-/* 80462B98 0042C158  48 00 A5 AD */	bl func_8046D144
+/* 80462B98 0042C158  48 00 A5 AD */	bl __dt__8046D144
 /* 80462B9C 0042C15C  38 00 00 00 */	li r0, 0
 /* 80462BA0 0042C160  90 1F 1D 3C */	stw r0, 0x1d3c(r31)
 .L_80462BA4:
@@ -1128,7 +1128,7 @@ CTTask_CTaskLOD_typestr:
 __vt__CTaskLOD:
 	.4byte __RTTI__CTaskLOD
 	.4byte 0
-	.4byte func_80462830
+	.4byte __dt__80462830
 	.4byte CChildListNode_Reset
 	.4byte func_804628A0
 	.4byte func_804628A4
@@ -1153,7 +1153,7 @@ CTaskLOD_hierarchy:
 __vt__CTTask_CTaskLOD:
 	.4byte __RTTI__CTTask_CTaskLOD
 	.4byte 0
-	.4byte func_804627D8
+	.4byte __dt__804627D8
 	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
@@ -1299,10 +1299,10 @@ lbl_80668038:
 	.4byte 0x00000000
 	.4byte 0x0780001F
 	.4byte 0x0000005C
-	.4byte func_8046D144
+	.4byte __dt__8046D144
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte func_804627D8
+	.4byte __dt__804627D8
 .endobj "@etb_8001D9C4"
 
 .obj "@etb_8001D9F4", local

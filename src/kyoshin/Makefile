@@ -58,12 +58,12 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfObjectObj.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfObjectPc.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfObjectPoint.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfObjectImplWalker.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfObjectImplPc.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfObjectImplObj.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfObjectImplNpc.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfObjectImplMove.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfObjectImplEne.o\
+	$(BUILD_DIR)/asm/kyoshin/cfsys/CfObjectImplWalker.o\
+	$(BUILD_DIR)/asm/kyoshin/cfsys/CfObjectImplPc.o\
+	$(BUILD_DIR)/asm/kyoshin/cfsys/CfObjectImplObj.o\
+	$(BUILD_DIR)/asm/kyoshin/cfsys/CfObjectImplNpc.o\
+	$(BUILD_DIR)/asm/kyoshin/cfsys/CfObjectImplMove.o\
+	$(BUILD_DIR)/asm/kyoshin/cfsys/CfObjectImplEne.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CtrlAct.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/code_800D7A04.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CBattleManager.o\

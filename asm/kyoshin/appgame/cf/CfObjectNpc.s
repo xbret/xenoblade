@@ -57,7 +57,7 @@
 /* 800BF3F4 000889B4  4E 80 00 20 */	blr 
 .endfn func_800BF340
 
-.fn func_800BF3F8, global
+.fn __dt__800BF3F8, global
 /* 800BF3F8 000889B8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800BF3FC 000889BC  7C 08 02 A6 */	mflr r0
 /* 800BF400 000889C0  2C 03 00 00 */	cmpwi r3, 0
@@ -75,7 +75,7 @@
 /* 800BF430 000889F0  4E 80 04 21 */	bctrl 
 /* 800BF434 000889F4  7F C3 F3 78 */	mr r3, r30
 /* 800BF438 000889F8  38 80 00 00 */	li r4, 0
-/* 800BF43C 000889FC  4B FF C9 31 */	bl func_800BBD6C
+/* 800BF43C 000889FC  4B FF C9 31 */	bl __dt__800BBD6C
 /* 800BF440 00088A00  2C 1F 00 00 */	cmpwi r31, 0
 /* 800BF444 00088A04  40 81 00 0C */	ble .L_800BF450
 /* 800BF448 00088A08  7F C3 F3 78 */	mr r3, r30
@@ -88,7 +88,7 @@
 /* 800BF460 00088A20  7C 08 03 A6 */	mtlr r0
 /* 800BF464 00088A24  38 21 00 10 */	addi r1, r1, 0x10
 /* 800BF468 00088A28  4E 80 00 20 */	blr 
-.endfn func_800BF3F8
+.endfn __dt__800BF3F8
 
 .fn func_800BF46C, global
 /* 800BF46C 00088A2C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -491,7 +491,7 @@ __vt__cf_CfObjectNpc:
 	.4byte func_800BF764
 	.4byte func_8003E664
 	.4byte func_8003DC74
-	.4byte func_800BF3F8
+	.4byte __dt__800BF3F8
 	.4byte func_800BF46C
 	.4byte func_800AC75C
 	.4byte func_800BF4DC
@@ -696,7 +696,7 @@ double_806693C8:
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_800BBD6C
+	.4byte __dt__800BBD6C
 .endobj "@etb_80009EB8"
 
 .obj "@etb_80009ED4", local
@@ -707,7 +707,7 @@ double_806693C8:
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte func_800BBD6C
+	.4byte __dt__800BBD6C
 .endobj "@etb_80009ED4"
 
 .obj "@etb_80009EF0", local
@@ -753,7 +753,7 @@ double_806693C8:
 
 .obj "@eti_800259E8", local
 .hidden "@eti_800259E8"
-	.4byte func_800BF3F8
+	.4byte __dt__800BF3F8
 	.4byte 0x00000074
 	.4byte "@etb_80009ED4"
 .endobj "@eti_800259E8"

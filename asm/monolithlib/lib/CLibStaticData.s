@@ -41,7 +41,7 @@
 /* 8045F9B4 00428F74  4E 80 00 20 */	blr 
 .endfn func_8045F930
 
-.fn func_8045F9B8, global
+.fn __dt__8045F9B8, global
 /* 8045F9B8 00428F78  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8045F9BC 00428F7C  7C 08 02 A6 */	mflr r0
 /* 8045F9C0 00428F80  2C 03 00 00 */	cmpwi r3, 0
@@ -82,9 +82,9 @@
 /* 8045FA44 00429004  7C 08 03 A6 */	mtlr r0
 /* 8045FA48 00429008  38 21 00 20 */	addi r1, r1, 0x20
 /* 8045FA4C 0042900C  4E 80 00 20 */	blr 
-.endfn func_8045F9B8
+.endfn __dt__8045F9B8
 
-.fn func_8045FA50, global
+.fn __dt__8045FA50, global
 /* 8045FA50 00429010  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8045FA54 00429014  7C 08 02 A6 */	mflr r0
 /* 8045FA58 00429018  2C 03 00 00 */	cmpwi r3, 0
@@ -132,7 +132,7 @@
 /* 8045FAF4 004290B4  7C 08 03 A6 */	mtlr r0
 /* 8045FAF8 004290B8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8045FAFC 004290BC  4E 80 00 20 */	blr 
-.endfn func_8045FA50
+.endfn __dt__8045FA50
 
 .fn func_8045FB00, global
 /* 8045FB00 004290C0  80 6D BE 70 */	lwz r3, lbl_80667FF0@sda21(r13)
@@ -256,6 +256,7 @@
 /* 8045FC80 00429240  4E 80 00 20 */	blr 
 .endfn func_8045FBB8
 
+#called from func_804385D0
 .fn func_8045FC84, global
 /* 8045FC84 00429244  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045FC88 00429248  7C 08 02 A6 */	mflr r0
@@ -300,7 +301,7 @@
 /* 8045FD10 004292D0  2C 03 00 00 */	cmpwi r3, 0
 /* 8045FD14 004292D4  41 82 00 0C */	beq .L_8045FD20
 /* 8045FD18 004292D8  7F C4 F3 78 */	mr r4, r30
-/* 8045FD1C 004292DC  48 00 01 8D */	bl func_8045FEA8
+/* 8045FD1C 004292DC  48 00 01 8D */	bl __ct__CLibStaticData_CItem
 .L_8045FD20:
 /* 8045FD20 004292E0  80 9F 01 CC */	lwz r4, 0x1cc(r31)
 /* 8045FD24 004292E4  3B DE 00 14 */	addi r30, r30, 0x14
@@ -420,7 +421,8 @@
 /* 8045FEA4 00429464  4E 80 00 20 */	blr 
 .endfn func_8045FDB8
 
-.fn func_8045FEA8, global
+#r4: StaticArcFile struct
+.fn __ct__CLibStaticData_CItem, global
 /* 8045FEA8 00429468  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8045FEAC 0042946C  7C 08 02 A6 */	mflr r0
 /* 8045FEB0 00429470  3C A0 80 57 */	lis r5, __vt__CLibStaticData_CItem@ha
@@ -486,9 +488,9 @@
 /* 8045FF90 00429550  7C 08 03 A6 */	mtlr r0
 /* 8045FF94 00429554  38 21 00 20 */	addi r1, r1, 0x20
 /* 8045FF98 00429558  4E 80 00 20 */	blr 
-.endfn func_8045FEA8
+.endfn __ct__CLibStaticData_CItem
 
-.fn func_8045FF9C, global
+.fn __dt__8045FF9C, global
 /* 8045FF9C 0042955C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045FFA0 00429560  7C 08 02 A6 */	mflr r0
 /* 8045FFA4 00429564  2C 03 00 00 */	cmpwi r3, 0
@@ -543,7 +545,7 @@
 /* 80460054 00429614  7C 08 03 A6 */	mtlr r0
 /* 80460058 00429618  38 21 00 10 */	addi r1, r1, 0x10
 /* 8046005C 0042961C  4E 80 00 20 */	blr 
-.endfn func_8045FF9C
+.endfn __dt__8045FF9C
 
 .fn func_80460060, global
 /* 80460060 00429620  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -606,7 +608,7 @@ CLibStaticData_CItem_typestr:
 __vt__CLibStaticData:
 	.4byte __RTTI__CLibStaticData
 	.4byte 0
-	.4byte func_8045FA50
+	.4byte __dt__8045FA50
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -659,7 +661,7 @@ CLibStaticData_hierarchy:
 __vt__CLibStaticData_CItem:
 	.4byte __RTTI__CLibStaticData_CItem
 	.4byte 0
-	.4byte func_8045FF9C
+	.4byte __dt__8045FF9C
 	.4byte func_80039E28
 	.4byte func_80460060
 	.4byte func_80039E18
@@ -730,7 +732,7 @@ lbl_80667FF4:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x000001C8
-	.4byte func_8045F9B8
+	.4byte __dt__8045F9B8
 	.4byte 0x8680001E
 	.4byte 0x00000000
 	.4byte __dt__CWorkThread
@@ -750,7 +752,7 @@ lbl_80667FF4:
 	.4byte 0x00000000
 	.4byte 0x8780001D
 	.4byte 0x000001C8
-	.4byte func_8045F9B8
+	.4byte __dt__8045F9B8
 .endobj "@etb_8001D8CC"
 
 .obj "@etb_8001D8E8", local
@@ -812,14 +814,14 @@ lbl_80667FF4:
 
 .obj "@eti_800354A4", local
 .hidden "@eti_800354A4"
-	.4byte func_8045F9B8
+	.4byte __dt__8045F9B8
 	.4byte 0x00000098
 	.4byte "@etb_8001D8C4"
 .endobj "@eti_800354A4"
 
 .obj "@eti_800354B0", local
 .hidden "@eti_800354B0"
-	.4byte func_8045FA50
+	.4byte __dt__8045FA50
 	.4byte 0x000000B0
 	.4byte "@etb_8001D8CC"
 .endobj "@eti_800354B0"
@@ -847,14 +849,14 @@ lbl_80667FF4:
 
 .obj "@eti_800354E0", local
 .hidden "@eti_800354E0"
-	.4byte func_8045FEA8
+	.4byte __ct__CLibStaticData_CItem
 	.4byte 0x000000F4
 	.4byte "@etb_8001D900"
 .endobj "@eti_800354E0"
 
 .obj "@eti_800354EC", local
 .hidden "@eti_800354EC"
-	.4byte func_8045FF9C
+	.4byte __dt__8045FF9C
 	.4byte 0x000000C4
 	.4byte "@etb_8001D91C"
 .endobj "@eti_800354EC"

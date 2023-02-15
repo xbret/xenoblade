@@ -113,7 +113,7 @@
 /* 800AAFC0 00074580  48 3A BE D1 */	bl func_80456E90
 /* 800AAFC4 00074584  38 61 00 78 */	addi r3, r1, 0x78
 /* 800AAFC8 00074588  38 80 FF FF */	li r4, -1
-/* 800AAFCC 0007458C  48 3A B1 E1 */	bl func_804561AC
+/* 800AAFCC 0007458C  48 3A B1 E1 */	bl __dt__804561AC
 /* 800AAFD0 00074590  80 01 01 74 */	lwz r0, 0x174(r1)
 /* 800AAFD4 00074594  E3 E1 01 68 */	psq_l f31, 360(r1), 0, qr0
 /* 800AAFD8 00074598  CB E1 01 60 */	lfd f31, 0x160(r1)
@@ -146,7 +146,7 @@
 	.4byte 0x00140010
 	.4byte 0x00000000
 	.4byte 0x82000078
-	.4byte func_804561AC
+	.4byte __dt__804561AC
 .endobj "@etb_80009394"
 
 .section extabindex, "a" # 0x80021020 - 0x80039220

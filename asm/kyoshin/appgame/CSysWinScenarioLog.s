@@ -72,7 +72,7 @@
 /* 8027E5B0 00247B70  4E 80 00 20 */	blr
 .endfn func_8027E4B0
 
-.fn func_8027E5B4, global
+.fn __dt__8027E5B4, global
 /* 8027E5B4 00247B74  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027E5B8 00247B78  7C 08 02 A6 */	mflr r0
 /* 8027E5BC 00247B7C  2C 03 00 00 */	cmpwi r3, 0
@@ -90,7 +90,7 @@
 /* 8027E5EC 00247BAC  41 82 00 10 */	beq .L_8027E5FC
 /* 8027E5F0 00247BB0  7F C3 F3 78 */	mr r3, r30
 /* 8027E5F4 00247BB4  38 80 00 00 */	li r4, 0
-/* 8027E5F8 00247BB8  48 1C 65 41 */	bl func_80444B38
+/* 8027E5F8 00247BB8  48 1C 65 41 */	bl __dt__80444B38
 .L_8027E5FC:
 /* 8027E5FC 00247BBC  2C 1F 00 00 */	cmpwi r31, 0
 /* 8027E600 00247BC0  40 81 00 0C */	ble .L_8027E60C
@@ -104,7 +104,7 @@
 /* 8027E61C 00247BDC  7C 08 03 A6 */	mtlr r0
 /* 8027E620 00247BE0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8027E624 00247BE4  4E 80 00 20 */	blr 
-.endfn func_8027E5B4
+.endfn __dt__8027E5B4
 
 .fn func_8027E628, global
 /* 8027E628 00247BE8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -698,7 +698,7 @@
 
 .fn func_8027EE70, global
 /* 8027EE70 00248430  38 63 FF 94 */	addi r3, r3, -108
-/* 8027EE74 00248434  4B FF F7 40 */	b func_8027E5B4
+/* 8027EE74 00248434  4B FF F7 40 */	b __dt__8027E5B4
 .endfn func_8027EE70
 
 .fn func_8027EE78, global
@@ -708,7 +708,7 @@
 
 .fn func_8027EE80, global
 /* 8027EE80 00248440  38 63 FF 90 */	addi r3, r3, -112
-/* 8027EE84 00248444  4B FF F7 30 */	b func_8027E5B4
+/* 8027EE84 00248444  4B FF F7 30 */	b __dt__8027E5B4
 .endfn func_8027EE80
 
 .fn func_8027EE88, global
@@ -3423,7 +3423,7 @@ CSysWinScenarioLog_strpool:
 __vt__CSysWinScenarioLog:
 	.4byte __RTTI__CSysWinScenarioLog
 	.4byte 0
-	.4byte func_8027E5B4
+	.4byte __dt__8027E5B4
 	.4byte CChildListNode_Reset
 	.4byte func_8027E628
 	.4byte func_8027E6DC
@@ -3566,13 +3566,13 @@ lbl_80667208:
 	.4byte __dt__8045F580
 	.4byte 0x0680001D
 	.4byte 0x00000070
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 	.4byte 0x0680001D
 	.4byte 0x0000006C
 	.4byte __dt__IWorkEvent
 	.4byte 0x8680001D
 	.4byte 0x00000000
-	.4byte func_8012235C
+	.4byte __dt__8012235C
 .endobj "@etb_80018ACC"
 
 .obj "@etb_80018B14", local
@@ -3586,7 +3586,7 @@ lbl_80667208:
 	.4byte __dt__8045F580
 	.4byte 0x0680001E
 	.4byte 0x00000070
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 	.4byte 0x8680001E
 	.4byte 0x0000006C
 	.4byte __dt__IWorkEvent
@@ -3787,7 +3787,7 @@ lbl_80667208:
 
 .obj "@eti_80031100", local
 .hidden "@eti_80031100"
-	.4byte func_8027E5B4
+	.4byte __dt__8027E5B4
 	.4byte 0x00000074
 	.4byte "@etb_80018B14"
 .endobj "@eti_80031100"

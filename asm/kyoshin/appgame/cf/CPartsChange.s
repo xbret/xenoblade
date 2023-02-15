@@ -29,7 +29,7 @@
 /* 80192E3C 0015C3FC  4E 80 00 20 */	blr 
 .endfn func_80192DE8
 
-.fn func_80192E40, global
+.fn __dt__80192E40, global
 /* 80192E40 0015C400  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80192E44 0015C404  7C 08 02 A6 */	mflr r0
 /* 80192E48 0015C408  2C 03 00 00 */	cmpwi r3, 0
@@ -47,7 +47,7 @@
 /* 80192E74 0015C434  7C 08 03 A6 */	mtlr r0
 /* 80192E78 0015C438  38 21 00 10 */	addi r1, r1, 0x10
 /* 80192E7C 0015C43C  4E 80 00 20 */	blr 
-.endfn func_80192E40
+.endfn __dt__80192E40
 
 .fn func_80192E80, global
 /* 80192E80 0015C440  94 21 FF B0 */	stwu r1, -0x50(r1)
@@ -424,7 +424,7 @@
 /* 801933C8 0015C988  4E 80 00 20 */	blr 
 .endfn func_80193270
 
-.fn func_801933CC, global
+.fn __dt__801933CC, global
 /* 801933CC 0015C98C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801933D0 0015C990  7C 08 02 A6 */	mflr r0
 /* 801933D4 0015C994  2C 03 00 00 */	cmpwi r3, 0
@@ -474,9 +474,9 @@
 /* 80193474 0015CA34  7C 08 03 A6 */	mtlr r0
 /* 80193478 0015CA38  38 21 00 10 */	addi r1, r1, 0x10
 /* 8019347C 0015CA3C  4E 80 00 20 */	blr 
-.endfn func_801933CC
+.endfn __dt__801933CC
 
-.fn func_80193480, global
+.fn __dt__80193480, global
 /* 80193480 0015CA40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80193484 0015CA44  7C 08 02 A6 */	mflr r0
 /* 80193488 0015CA48  2C 03 00 00 */	cmpwi r3, 0
@@ -527,9 +527,9 @@
 /* 8019352C 0015CAEC  7C 08 03 A6 */	mtlr r0
 /* 80193530 0015CAF0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80193534 0015CAF4  4E 80 00 20 */	blr 
-.endfn func_80193480
+.endfn __dt__80193480
 
-.fn func_80193538, global
+.fn __dt__80193538, global
 /* 80193538 0015CAF8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8019353C 0015CAFC  7C 08 02 A6 */	mflr r0
 /* 80193540 0015CB00  2C 03 00 00 */	cmpwi r3, 0
@@ -615,7 +615,7 @@
 /* 80193664 0015CC24  7C 08 03 A6 */	mtlr r0
 /* 80193668 0015CC28  38 21 00 20 */	addi r1, r1, 0x20
 /* 8019366C 0015CC2C  4E 80 00 20 */	blr 
-.endfn func_80193538
+.endfn __dt__80193538
 
 .fn func_80193670, global
 /* 80193670 0015CC30  80 6D AA 7C */	lwz r3, lbl_80666BFC@sda21(r13)
@@ -7401,7 +7401,7 @@ CPartsChange_strpool:
 __vt__cf_CPartsChange:
 	.4byte __RTTI__cf_CPartsChange
 	.4byte 0
-	.4byte func_80192E40
+	.4byte __dt__80192E40
 	.4byte 0
 
 
@@ -7418,7 +7418,7 @@ lbl_80536270:
 __vt__reslist_cf_CfPartyInfo:
 	.4byte __RTTI__reslist_cf_CfPartyInfo
 	.4byte 0
-	.4byte func_80193480
+	.4byte __dt__80193480
 
 .global reslist_cf_CfPartyInfo_hierarchy
 reslist_cf_CfPartyInfo_hierarchy:
@@ -7431,7 +7431,7 @@ reslist_cf_CfPartyInfo_hierarchy:
 __vt___reslist_base_cf_CfPartyInfo:
 	.4byte __RTTI___reslist_base_cf_CfPartyInfo
 	.4byte 0
-	.4byte func_801933CC
+	.4byte __dt__801933CC
 
 
 .global lbl_805362A8
@@ -7788,7 +7788,7 @@ lbl_80666C04:
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x0000A808
-	.4byte func_80193480
+	.4byte __dt__80193480
 .endobj "@etb_8000F338"
 
 .obj "@etb_8000F354", local
@@ -8086,7 +8086,7 @@ lbl_80666C04:
 
 .obj "@eti_8002A0D4", local
 .hidden "@eti_8002A0D4"
-	.4byte func_80192E40
+	.4byte __dt__80192E40
 	.4byte 0x00000040
 	.4byte "@etb_8000F310"
 .endobj "@eti_8002A0D4"
@@ -8128,21 +8128,21 @@ lbl_80666C04:
 
 .obj "@eti_8002A11C", local
 .hidden "@eti_8002A11C"
-	.4byte func_801933CC
+	.4byte __dt__801933CC
 	.4byte 0x000000B4
 	.4byte "@etb_8000F354"
 .endobj "@eti_8002A11C"
 
 .obj "@eti_8002A128", local
 .hidden "@eti_8002A128"
-	.4byte func_80193480
+	.4byte __dt__80193480
 	.4byte 0x000000B8
 	.4byte "@etb_8000F35C"
 .endobj "@eti_8002A128"
 
 .obj "@eti_8002A134", local
 .hidden "@eti_8002A134"
-	.4byte func_80193538
+	.4byte __dt__80193538
 	.4byte 0x00000138
 	.4byte "@etb_8000F364"
 .endobj "@eti_8002A134"

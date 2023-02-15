@@ -46,7 +46,7 @@
 /* 80451EC4 0041B484  4E 80 00 20 */	blr 
 .endfn func_80451EC0
 
-.fn func_80451EC8, global
+.fn __dt__80451EC8, global
 /* 80451EC8 0041B488  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80451ECC 0041B48C  7C 08 02 A6 */	mflr r0
 /* 80451ED0 0041B490  2C 03 00 00 */	cmpwi r3, 0
@@ -70,7 +70,7 @@
 /* 80451F14 0041B4D4  7C 08 03 A6 */	mtlr r0
 /* 80451F18 0041B4D8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80451F1C 0041B4DC  4E 80 00 20 */	blr 
-.endfn func_80451EC8
+.endfn __dt__80451EC8
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -90,7 +90,7 @@ CDeviceFileJob_typestr:
 __vt__CDeviceFileJob:
 	.4byte __RTTI__CDeviceFileJob
 	.4byte 0
-	.4byte func_80451EC8
+	.4byte __dt__80451EC8
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -178,7 +178,7 @@ __RTTI__CDeviceFileJob:
 
 .obj "@eti_80034C70", local
 .hidden "@eti_80034C70"
-	.4byte func_80451EC8
+	.4byte __dt__80451EC8
 	.4byte 0x00000058
 	.4byte "@etb_8001CFA4"
 .endobj "@eti_80034C70"

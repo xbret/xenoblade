@@ -63,7 +63,7 @@
 /* 80266B14 002300D4  4E 80 00 20 */	blr 
 .endfn func_80266A34
 
-.fn func_80266B18, global
+.fn __dt__80266B18, global
 /* 80266B18 002300D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80266B1C 002300DC  7C 08 02 A6 */	mflr r0
 /* 80266B20 002300E0  2C 03 00 00 */	cmpwi r3, 0
@@ -77,7 +77,7 @@
 /* 80266B40 00230100  4B F6 BE F9 */	bl __dt__801D2A38
 /* 80266B44 00230104  38 7E 01 20 */	addi r3, r30, 0x120
 /* 80266B48 00230108  38 80 FF FF */	li r4, -1
-/* 80266B4C 0023010C  4B FF DB 5D */	bl func_802646A8
+/* 80266B4C 0023010C  4B FF DB 5D */	bl __dt__802646A8
 /* 80266B50 00230110  2C 1F 00 00 */	cmpwi r31, 0
 /* 80266B54 00230114  40 81 00 0C */	ble .L_80266B60
 /* 80266B58 00230118  7F C3 F3 78 */	mr r3, r30
@@ -89,7 +89,7 @@
 /* 80266B6C 0023012C  7C 08 03 A6 */	mtlr r0
 /* 80266B70 00230130  38 21 00 10 */	addi r1, r1, 0x10
 /* 80266B74 00230134  4E 80 00 20 */	blr 
-.endfn func_80266B18
+.endfn __dt__80266B18
 
 .fn func_80266B78, global
 /* 80266B78 00230138  94 21 FF 20 */	stwu r1, -0xe0(r1)
@@ -314,7 +314,7 @@
 /* 80266EDC 0023049C  48 00 03 8D */	bl func_80267268
 /* 80266EE0 002304A0  38 61 00 70 */	addi r3, r1, 0x70
 /* 80266EE4 002304A4  38 80 FF FF */	li r4, -1
-/* 80266EE8 002304A8  4B FF D7 C1 */	bl func_802646A8
+/* 80266EE8 002304A8  4B FF D7 C1 */	bl __dt__802646A8
 /* 80266EEC 002304AC  38 7D 01 20 */	addi r3, r29, 0x120
 /* 80266EF0 002304B0  4B FF D7 F9 */	bl func_802646E8
 /* 80266EF4 002304B4  80 9D 00 04 */	lwz r4, 4(r29)
@@ -636,9 +636,9 @@
 /* 80267380 00230940  88 03 00 E8 */	lbz r0, 0xe8(r3)
 /* 80267384 00230944  28 00 00 10 */	cmplwi r0, 0x10
 /* 80267388 00230948  41 81 00 90 */	bgt .L_80267418
-/* 8026738C 0023094C  3C 80 80 54 */	lis r4, lbl_8053B0D8@ha
+/* 8026738C 0023094C  3C 80 80 54 */	lis r4, jumptable_8053B0D8@ha
 /* 80267390 00230950  54 00 10 3A */	slwi r0, r0, 2
-/* 80267394 00230954  38 84 B0 D8 */	addi r4, r4, lbl_8053B0D8@l
+/* 80267394 00230954  38 84 B0 D8 */	addi r4, r4, jumptable_8053B0D8@l
 /* 80267398 00230958  7C 84 00 2E */	lwzx r4, r4, r0
 /* 8026739C 0023095C  7C 89 03 A6 */	mtctr r4
 /* 802673A0 00230960  4E 80 04 20 */	bctr
@@ -7096,7 +7096,7 @@
 .L_8026D060:
 /* 8026D060 00236620  38 61 00 08 */	addi r3, r1, 8
 /* 8026D064 00236624  38 80 FF FF */	li r4, -1
-/* 8026D068 00236628  4B DD 6E 21 */	bl func_80043E88
+/* 8026D068 00236628  4B DD 6E 21 */	bl __dt__80043E88
 .L_8026D06C:
 /* 8026D06C 0023662C  BB 01 00 30 */	lmw r24, 0x30(r1)
 /* 8026D070 00236630  80 01 00 54 */	lwz r0, 0x54(r1)
@@ -7402,8 +7402,8 @@
 
 .balign 8
 
-.global lbl_8053B0D8
-lbl_8053B0D8:
+.global jumptable_8053B0D8
+jumptable_8053B0D8:
 	.4byte .L_80267418
 	.4byte .L_802673A4
 	.4byte .L_802673AC
@@ -7428,7 +7428,7 @@ lbl_8053B0D8:
 __vt__UI_CPassiveSkill:
 	.4byte __RTTI__UI_CPassiveSkill
 	.4byte 0
-	.4byte func_8026D53C
+	.4byte __dt__8026D53C
 	.4byte func_80039E28
 	.4byte func_8026DE8C
 	.4byte func_80039E18
@@ -7472,21 +7472,21 @@ UI_CPassiveSkill_hierarchy:
 __vt__UI_CPassiveSkillLine:
 	.4byte __RTTI__UI_CPassiveSkillLine
 	.4byte 0
-	.4byte func_80266B18
+	.4byte __dt__80266B18
 
 
 .global __vt__UI_CPassiveSkillInfo
 __vt__UI_CPassiveSkillInfo:
 	.4byte __RTTI__UI_CPassiveSkillInfo
 	.4byte 0
-	.4byte func_802646A8
+	.4byte __dt__802646A8
 
 
 .global __vt__UI_CPassiveSkillCur
 __vt__UI_CPassiveSkillCur:
 	.4byte __RTTI__UI_CPassiveSkillCur
 	.4byte 0
-	.4byte func_80263EF0
+	.4byte __dt__80263EF0
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
@@ -7524,10 +7524,10 @@ __RTTI__UI_CPassiveSkillCur:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x0000015C
-	.4byte func_80263EF0
+	.4byte __dt__80263EF0
 	.4byte 0x8780001E
 	.4byte 0x00000120
-	.4byte func_802646A8
+	.4byte __dt__802646A8
 .endobj "@etb_80017A54"
 
 .obj "@etb_80017A7C", local
@@ -7807,7 +7807,7 @@ __RTTI__UI_CPassiveSkillCur:
 	.4byte 0x00180010
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte func_80043E88
+	.4byte __dt__80043E88
 .endobj "@etb_80017BE4"
 
 .obj "@etb_80017BFC", local
@@ -7841,7 +7841,7 @@ __RTTI__UI_CPassiveSkillCur:
 
 .obj "@eti_800302C0", local
 .hidden "@eti_800302C0"
-	.4byte func_80266B18
+	.4byte __dt__80266B18
 	.4byte 0x00000060
 	.4byte "@etb_80017A7C"
 .endobj "@eti_800302C0"

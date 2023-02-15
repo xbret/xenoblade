@@ -33,7 +33,7 @@
 /* 80244344 0020D904  4E 80 00 20 */	blr 
 .endfn func_802442E0
 
-.fn func_80244348, global
+.fn __dt__80244348, global
 /* 80244348 0020D908  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8024434C 0020D90C  7C 08 02 A6 */	mflr r0
 /* 80244350 0020D910  2C 03 00 00 */	cmpwi r3, 0
@@ -56,7 +56,7 @@
 /* 80244390 0020D950  7C 08 03 A6 */	mtlr r0
 /* 80244394 0020D954  38 21 00 10 */	addi r1, r1, 0x10
 /* 80244398 0020D958  4E 80 00 20 */	blr 
-.endfn func_80244348
+.endfn __dt__80244348
 
 .fn func_8024439C, global
 /* 8024439C 0020D95C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -330,7 +330,7 @@
 /* 80244720 0020DCE0  4E 80 00 20 */	blr 
 .endfn func_8024460C
 
-.fn func_80244724, global
+.fn __dt__80244724, global
 /* 80244724 0020DCE4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80244728 0020DCE8  7C 08 02 A6 */	mflr r0
 /* 8024472C 0020DCEC  2C 03 00 00 */	cmpwi r3, 0
@@ -348,7 +348,7 @@
 /* 80244758 0020DD18  7C 08 03 A6 */	mtlr r0
 /* 8024475C 0020DD1C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80244760 0020DD20  4E 80 00 20 */	blr 
-.endfn func_80244724
+.endfn __dt__80244724
 
 .fn func_80244764, global
 /* 80244764 0020DD24  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -894,7 +894,7 @@ CFade_strpool:
 __vt__CFade:
 	.4byte __RTTI__CFade
 	.4byte 0
-	.4byte func_80244348
+	.4byte __dt__80244348
 	.4byte func_80039E28
 	.4byte func_8024460C
 	.4byte func_80039E18
@@ -1067,7 +1067,7 @@ CFade_typestr:
 
 .obj "@eti_8002F2AC", local
 .hidden "@eti_8002F2AC"
-	.4byte func_80244348
+	.4byte __dt__80244348
 	.4byte 0x00000054
 	.4byte "@etb_80016490"
 .endobj "@eti_8002F2AC"
@@ -1116,7 +1116,7 @@ CFade_typestr:
 
 .obj "@eti_8002F300", local
 .hidden "@eti_8002F300"
-	.4byte func_80244724
+	.4byte __dt__80244724
 	.4byte 0x00000040
 	.4byte "@etb_800164D8"
 .endobj "@eti_8002F300"

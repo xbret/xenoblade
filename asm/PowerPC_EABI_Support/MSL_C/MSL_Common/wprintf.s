@@ -244,9 +244,9 @@
 /* 802C503C 0028E5FC  38 03 FF BF */	addi r0, r3, -65
 /* 802C5040 0028E600  28 00 00 37 */	cmplwi r0, 0x37
 /* 802C5044 0028E604  41 81 02 0C */	bgt .L_802C5250
-/* 802C5048 0028E608  3C 60 80 54 */	lis r3, lbl_8053FA30@ha
+/* 802C5048 0028E608  3C 60 80 54 */	lis r3, jumptable_8053FA30@ha
 /* 802C504C 0028E60C  54 00 10 3A */	slwi r0, r0, 2
-/* 802C5050 0028E610  38 63 FA 30 */	addi r3, r3, lbl_8053FA30@l
+/* 802C5050 0028E610  38 63 FA 30 */	addi r3, r3, jumptable_8053FA30@l
 /* 802C5054 0028E614  7C 63 00 2E */	lwzx r3, r3, r0
 /* 802C5058 0028E618  7C 69 03 A6 */	mtctr r3
 /* 802C505C 0028E61C  4E 80 04 20 */	bctr 
@@ -1770,7 +1770,7 @@
 /* 802C64D8 0028FA98  3A 01 04 7E */	addi r16, r1, 0x47e
 /* 802C64DC 0028FA9C  3B E0 00 00 */	li r31, 0
 /* 802C64E0 0028FAA0  3E 40 80 51 */	lis r18, lbl_8050DB88@ha
-/* 802C64E4 0028FAA4  3D E0 80 54 */	lis r15, lbl_8053FB10@ha
+/* 802C64E4 0028FAA4  3D E0 80 54 */	lis r15, jumptable_8053FB10@ha
 /* 802C64E8 0028FAA8  39 C0 00 25 */	li r14, 0x25
 /* 802C64EC 0028FAAC  B2 61 00 0C */	sth r19, 0xc(r1)
 /* 802C64F0 0028FAB0  48 00 09 20 */	b .L_802C6E10
@@ -1822,7 +1822,7 @@
 /* 802C659C 0028FB5C  38 04 FF DB */	addi r0, r4, -37
 /* 802C65A0 0028FB60  28 00 00 53 */	cmplwi r0, 0x53
 /* 802C65A4 0028FB64  41 81 06 94 */	bgt .L_802C6C38
-/* 802C65A8 0028FB68  38 6F FB 10 */	addi r3, r15, lbl_8053FB10@l
+/* 802C65A8 0028FB68  38 6F FB 10 */	addi r3, r15, jumptable_8053FB10@l
 /* 802C65AC 0028FB6C  54 00 10 3A */	slwi r0, r0, 2
 /* 802C65B0 0028FB70  7C 63 00 2E */	lwzx r3, r3, r0
 /* 802C65B4 0028FB74  7C 69 03 A6 */	mtctr r3
@@ -2516,8 +2516,8 @@
 .endfn vswprintf
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
-.global lbl_8053FA30
-lbl_8053FA30:
+.global jumptable_8053FA30
+jumptable_8053FA30:
 	.4byte .L_802C50F0
 	.4byte .L_802C5250
 	.4byte .L_802C5250
@@ -2575,8 +2575,8 @@ lbl_8053FA30:
 	.4byte .L_802C5250
 	.4byte .L_802C5060
 
-.global lbl_8053FB10
-lbl_8053FB10:
+.global jumptable_8053FB10
+jumptable_8053FB10:
 	.4byte .L_802C6C28 #%
 	.4byte .L_802C6C38
 	.4byte .L_802C6C38

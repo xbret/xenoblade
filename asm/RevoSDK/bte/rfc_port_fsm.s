@@ -59,9 +59,9 @@
 /* 802FFA70 002C9030  93 C1 00 08 */	stw r30, 8(r1)
 /* 802FFA74 002C9034  7C 7E 1B 78 */	mr r30, r3
 /* 802FFA78 002C9038  41 81 01 10 */	bgt .L_802FFB88
-/* 802FFA7C 002C903C  3C C0 80 55 */	lis r6, lbl_80548AC8@ha
+/* 802FFA7C 002C903C  3C C0 80 55 */	lis r6, jumptable_80548AC8@ha
 /* 802FFA80 002C9040  54 80 10 3A */	slwi r0, r4, 2
-/* 802FFA84 002C9044  38 C6 8A C8 */	addi r6, r6, lbl_80548AC8@l
+/* 802FFA84 002C9044  38 C6 8A C8 */	addi r6, r6, jumptable_80548AC8@l
 /* 802FFA88 002C9048  7C C6 00 2E */	lwzx r6, r6, r0
 /* 802FFA8C 002C904C  7C C9 03 A6 */	mtctr r6
 /* 802FFA90 002C9050  4E 80 04 20 */	bctr 
@@ -166,9 +166,9 @@
 /* 802FFBE4 002C91A4  93 C1 00 08 */	stw r30, 8(r1)
 /* 802FFBE8 002C91A8  7C 7E 1B 78 */	mr r30, r3
 /* 802FFBEC 002C91AC  41 81 01 38 */	bgt .L_802FFD24
-/* 802FFBF0 002C91B0  3C C0 80 55 */	lis r6, lbl_80548B30@ha
+/* 802FFBF0 002C91B0  3C C0 80 55 */	lis r6, jumptable_80548B30@ha
 /* 802FFBF4 002C91B4  54 80 10 3A */	slwi r0, r4, 2
-/* 802FFBF8 002C91B8  38 C6 8B 30 */	addi r6, r6, lbl_80548B30@l
+/* 802FFBF8 002C91B8  38 C6 8B 30 */	addi r6, r6, jumptable_80548B30@l
 /* 802FFBFC 002C91BC  7C C6 00 2E */	lwzx r6, r6, r0
 /* 802FFC00 002C91C0  7C C9 03 A6 */	mtctr r6
 /* 802FFC04 002C91C4  4E 80 04 20 */	bctr 
@@ -286,9 +286,9 @@
 /* 802FFD88 002C9348  93 C1 00 08 */	stw r30, 8(r1)
 /* 802FFD8C 002C934C  7C 7E 1B 78 */	mr r30, r3
 /* 802FFD90 002C9350  41 81 01 54 */	bgt .L_802FFEE4
-/* 802FFD94 002C9354  3C C0 80 55 */	lis r6, lbl_80548BC8@ha
+/* 802FFD94 002C9354  3C C0 80 55 */	lis r6, jumptable_80548BC8@ha
 /* 802FFD98 002C9358  54 80 10 3A */	slwi r0, r4, 2
-/* 802FFD9C 002C935C  38 C6 8B C8 */	addi r6, r6, lbl_80548BC8@l
+/* 802FFD9C 002C935C  38 C6 8B C8 */	addi r6, r6, jumptable_80548BC8@l
 /* 802FFDA0 002C9360  7C C6 00 2E */	lwzx r6, r6, r0
 /* 802FFDA4 002C9364  7C C9 03 A6 */	mtctr r6
 /* 802FFDA8 002C9368  4E 80 04 20 */	bctr 
@@ -413,9 +413,9 @@
 /* 802FFF44 002C9504  93 C1 00 08 */	stw r30, 8(r1)
 /* 802FFF48 002C9508  7C 7E 1B 78 */	mr r30, r3
 /* 802FFF4C 002C950C  41 81 00 E8 */	bgt .L_80300034
-/* 802FFF50 002C9510  3C C0 80 55 */	lis r6, lbl_80548C68@ha
+/* 802FFF50 002C9510  3C C0 80 55 */	lis r6, jumptable_80548C68@ha
 /* 802FFF54 002C9514  54 80 10 3A */	slwi r0, r4, 2
-/* 802FFF58 002C9518  38 C6 8C 68 */	addi r6, r6, lbl_80548C68@l
+/* 802FFF58 002C9518  38 C6 8C 68 */	addi r6, r6, jumptable_80548C68@l
 /* 802FFF5C 002C951C  7C C6 00 2E */	lwzx r6, r6, r0
 /* 802FFF60 002C9520  7C C9 03 A6 */	mtctr r6
 /* 802FFF64 002C9524  4E 80 04 20 */	bctr 
@@ -507,9 +507,9 @@
 /* 8030008C 002C964C  93 C1 00 08 */	stw r30, 8(r1)
 /* 80300090 002C9650  7C 9E 23 78 */	mr r30, r4
 /* 80300094 002C9654  41 81 01 88 */	bgt .L_8030021C
-/* 80300098 002C9658  3C C0 80 55 */	lis r6, lbl_80548CCC@ha
+/* 80300098 002C9658  3C C0 80 55 */	lis r6, jumptable_80548CCC@ha
 /* 8030009C 002C965C  54 80 10 3A */	slwi r0, r4, 2
-/* 803000A0 002C9660  38 C6 8C CC */	addi r6, r6, lbl_80548CCC@l
+/* 803000A0 002C9660  38 C6 8C CC */	addi r6, r6, jumptable_80548CCC@l
 /* 803000A4 002C9664  7C C6 00 2E */	lwzx r6, r6, r0
 /* 803000A8 002C9668  7C C9 03 A6 */	mtctr r6
 /* 803000AC 002C966C  4E 80 04 20 */	bctr 
@@ -646,9 +646,9 @@
 /* 80300274 002C9834  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80300278 002C9838  7C 7F 1B 78 */	mr r31, r3
 /* 8030027C 002C983C  41 81 00 C0 */	bgt .L_8030033C
-/* 80300280 002C9840  3C E0 80 55 */	lis r7, lbl_80548D34@ha
+/* 80300280 002C9840  3C E0 80 55 */	lis r7, jumptable_80548D34@ha
 /* 80300284 002C9844  54 80 10 3A */	slwi r0, r4, 2
-/* 80300288 002C9848  38 E7 8D 34 */	addi r7, r7, lbl_80548D34@l
+/* 80300288 002C9848  38 E7 8D 34 */	addi r7, r7, jumptable_80548D34@l
 /* 8030028C 002C984C  7C E7 00 2E */	lwzx r7, r7, r0
 /* 80300290 002C9850  7C E9 03 A6 */	mtctr r7
 /* 80300294 002C9854  4E 80 04 20 */	bctr 
@@ -1320,8 +1320,8 @@ lbl_80548AA4:
 	.balign 4
 
 
-.global lbl_80548AC8
-lbl_80548AC8:
+.global jumptable_80548AC8
+jumptable_80548AC8:
 	.4byte .L_802FFADC
 	.4byte .L_802FFB14
 	.4byte .L_802FFB18
@@ -1345,8 +1345,8 @@ lbl_80548B04:
 	.balign 4
 
 
-.global lbl_80548B30
-lbl_80548B30:
+.global jumptable_80548B30
+jumptable_80548B30:
 	.4byte .L_802FFCE4
 	.4byte .L_802FFC74
 	.4byte .L_802FFC98
@@ -1367,8 +1367,8 @@ lbl_80548B30:
 	.asciz "Port state term_wait_sec_check Event ignored %d"
 
 
-.global lbl_80548BC8
-lbl_80548BC8:
+.global jumptable_80548BC8
+jumptable_80548BC8:
 	.4byte .L_802FFE64
 	.4byte .L_802FFEE4
 	.4byte .L_802FFEE4
@@ -1391,8 +1391,8 @@ lbl_80548BC8:
 	.asciz "Port state orig_wait_sec_check Event ignored %d"
 
 
-.global lbl_80548C68
-lbl_80548C68:
+.global jumptable_80548C68
+jumptable_80548C68:
 	.4byte .L_802FFFB8
 	.4byte .L_80300034
 	.4byte .L_80300034
@@ -1417,8 +1417,8 @@ lbl_80548CA8:
 	.balign 4
 
 
-.global lbl_80548CCC
-lbl_80548CCC:
+.global jumptable_80548CCC
+jumptable_80548CCC:
 	.4byte .L_80300188
 	.4byte .L_80300184
 	.4byte .L_80300198
@@ -1442,8 +1442,8 @@ lbl_80548D08:
 	.balign 4
 
 
-.global lbl_80548D34
-lbl_80548D34:
+.global jumptable_80548D34
+jumptable_80548D34:
 	.4byte .L_803002F0
 	.4byte .L_803002D8
 	.4byte .L_803002E4

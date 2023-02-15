@@ -170,7 +170,7 @@ lbl_80525F84:
 __vt__CViewRoot:
 	.4byte __RTTI__CViewRoot
 	.4byte 0
-	.4byte func_804420D0
+	.4byte __dt__804420D0
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -239,16 +239,16 @@ __RTTI__CViewRoot:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x000004F4
-	.4byte func_80438E10
+	.4byte __dt__80438E10
 	.4byte 0x0780001E
 	.4byte 0x000003E4
-	.4byte func_80442084
+	.4byte __dt__80442084
 	.4byte 0x0780001E
 	.4byte 0x000002D4
-	.4byte func_80442084
+	.4byte __dt__80442084
 	.4byte 0x0780001E
 	.4byte 0x000001C4
-	.4byte func_80442084
+	.4byte __dt__80442084
 	.4byte 0x8680001E
 	.4byte 0x00000000
 	.4byte __dt__CWorkThread

@@ -19,7 +19,7 @@
 /* 80223D6C 001ED32C  4E 80 00 20 */	blr 
 .endfn func_80223D40
 
-.fn func_80223D70, global
+.fn __dt__80223D70, global
 /* 80223D70 001ED330  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80223D74 001ED334  7C 08 02 A6 */	mflr r0
 /* 80223D78 001ED338  2C 03 00 00 */	cmpwi r3, 0
@@ -37,7 +37,7 @@
 /* 80223DA4 001ED364  7C 08 03 A6 */	mtlr r0
 /* 80223DA8 001ED368  38 21 00 10 */	addi r1, r1, 0x10
 /* 80223DAC 001ED36C  4E 80 00 20 */	blr 
-.endfn func_80223D70
+.endfn __dt__80223D70
 
 .fn func_80223DB0, global
 /* 80223DB0 001ED370  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -306,7 +306,7 @@ CMCEffCrystal_strpool:
 __vt__CMCEffCylinder:
 	.4byte __RTTI__CMCEffCylinder
 	.4byte 0
-	.4byte func_80225D38
+	.4byte __dt__80225D38
 	.4byte func_80225D78
 
 
@@ -314,7 +314,7 @@ __vt__CMCEffCylinder:
 __vt__CMCEffDivide:
 	.4byte __RTTI__CMCEffDivide
 	.4byte 0
-	.4byte func_80225C08
+	.4byte __dt__80225C08
 	.4byte func_80225C48
 	.4byte func_80225CD8
 
@@ -329,7 +329,7 @@ CMCEffDivide_hierarchy:
 __vt__CMCEffUpRank:
 	.4byte __RTTI__CMCEffUpRank
 	.4byte 0
-	.4byte func_80225AD4
+	.4byte __dt__80225AD4
 	.4byte func_80225B14
 	.4byte func_80225BA4
 
@@ -344,7 +344,7 @@ CMCEffUpRank_hierarchy:
 __vt__CMCEffCrystal:
 	.4byte __RTTI__CMCEffCrystal
 	.4byte 0
-	.4byte func_80224CA4
+	.4byte __dt__80224CA4
 	.4byte func_80224CE4
 
 
@@ -352,7 +352,7 @@ __vt__CMCEffCrystal:
 __vt__CMCEffFailure:
 	.4byte __RTTI__CMCEffFailure
 	.4byte 0
-	.4byte func_80224B7C
+	.4byte __dt__80224B7C
 	.4byte func_80224BBC
 	.4byte func_80223F24
 
@@ -367,7 +367,7 @@ CMCEffFailure_hierarchy:
 __vt__CMCEffSuccess:
 	.4byte __RTTI__CMCEffSuccess
 	.4byte 0
-	.4byte func_80224720
+	.4byte __dt__80224720
 	.4byte func_80224760
 
 
@@ -375,14 +375,14 @@ __vt__CMCEffSuccess:
 __vt__CMCEffUpPrm:
 	.4byte __RTTI__CMCEffUpPrm
 	.4byte 0
-	.4byte func_80224374
+	.4byte __dt__80224374
 
 
 .global __vt__CMCEffUpGreen
 __vt__CMCEffUpGreen:
 	.4byte __RTTI__CMCEffUpGreen
 	.4byte 0
-	.4byte func_80224234
+	.4byte __dt__80224234
 	.4byte func_80224274
 	.4byte func_80224304
 
@@ -397,7 +397,7 @@ CMCEffUpGreen_hierarchy:
 __vt__CMCEffUpBlue:
 	.4byte __RTTI__CMCEffUpBlue
 	.4byte 0
-	.4byte func_80224100
+	.4byte __dt__80224100
 	.4byte func_80224140
 	.4byte func_802241D0
 
@@ -412,7 +412,7 @@ CMCEffUpBlue_hierarchy:
 __vt__CMCEffUpRed:
 	.4byte __RTTI__CMCEffUpRed
 	.4byte 0
-	.4byte func_80223FCC
+	.4byte __dt__80223FCC
 	.4byte func_8022400C
 	.4byte func_8022409C
 
@@ -427,7 +427,7 @@ CMCEffUpRed_hierarchy:
 __vt__CMCEffStart:
 	.4byte __RTTI__CMCEffStart
 	.4byte 0
-	.4byte func_80223D70
+	.4byte __dt__80223D70
 	.4byte func_80223DB0
 	.4byte func_80223F24
 
@@ -554,7 +554,7 @@ float_8066AE20:
 
 .obj "@eti_8002DE00", local
 .hidden "@eti_8002DE00"
-	.4byte func_80223D70
+	.4byte __dt__80223D70
 	.4byte 0x00000040
 	.4byte "@etb_80014F8C"
 .endobj "@eti_8002DE00"

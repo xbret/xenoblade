@@ -650,7 +650,7 @@ lbl_8050BCEC:
 __vt__cf_CCharVoice:
 	.4byte __RTTI__cf_CCharVoice
 	.4byte 0
-	.4byte func_80080500
+	.4byte __dt__80080500
 	.4byte 0
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600

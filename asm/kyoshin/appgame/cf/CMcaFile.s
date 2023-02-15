@@ -32,7 +32,7 @@
 /* 80058474 00021A34  4E 80 00 20 */	blr 
 .endfn func_80058414
 
-.fn func_80058478, global
+.fn __dt__80058478, global
 /* 80058478 00021A38  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8005847C 00021A3C  7C 08 02 A6 */	mflr r0
 /* 80058480 00021A40  2C 03 00 00 */	cmpwi r3, 0
@@ -50,7 +50,7 @@
 /* 800584AC 00021A6C  7C 08 03 A6 */	mtlr r0
 /* 800584B0 00021A70  38 21 00 10 */	addi r1, r1, 0x10
 /* 800584B4 00021A74  4E 80 00 20 */	blr 
-.endfn func_80058478
+.endfn __dt__80058478
 
 .fn func_800584B8, global
 /* 800584B8 00021A78  94 21 FF 60 */	stwu r1, -0xa0(r1)
@@ -116,7 +116,7 @@
 __vt__CMcaFile:
 	.4byte __RTTI__CMcaFile
 	.4byte 0
-	.4byte func_80058478
+	.4byte __dt__80058478
 
 
 #These are referenced by Scn classes (should be in a separate base class file?)
@@ -173,7 +173,7 @@ __RTTI__CMcaFile:
 
 .obj "@eti_800226C4", local
 .hidden "@eti_800226C4"
-	.4byte func_80058478
+	.4byte __dt__80058478
 	.4byte 0x00000040
 	.4byte "@etb_80007704"
 .endobj "@eti_800226C4"

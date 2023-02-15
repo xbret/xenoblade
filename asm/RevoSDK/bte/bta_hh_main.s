@@ -358,9 +358,9 @@
 /* 802E40A8 002AD668  28 00 00 0F */	cmplwi r0, 0xf
 /* 802E40AC 002AD66C  38 84 46 C0 */	addi r4, r4, lbl_805446C0@l
 /* 802E40B0 002AD670  41 81 00 9C */	bgt .L_802E414C
-/* 802E40B4 002AD674  3C 60 80 54 */	lis r3, lbl_80544960@ha
+/* 802E40B4 002AD674  3C 60 80 54 */	lis r3, jumptable_80544960@ha
 /* 802E40B8 002AD678  54 00 10 3A */	slwi r0, r0, 2
-/* 802E40BC 002AD67C  38 63 49 60 */	addi r3, r3, lbl_80544960@l
+/* 802E40BC 002AD67C  38 63 49 60 */	addi r3, r3, jumptable_80544960@l
 /* 802E40C0 002AD680  7C 63 00 2E */	lwzx r3, r3, r0
 /* 802E40C4 002AD684  7C 69 03 A6 */	mtctr r3
 /* 802E40C8 002AD688  4E 80 04 20 */	bctr 
@@ -472,8 +472,8 @@ lbl_8054479C:
 	.asciz "unknown HID Host event code"
 
 
-.global lbl_80544960
-lbl_80544960:
+.global jumptable_80544960
+jumptable_80544960:
 	.4byte .L_802E40DC
 	.4byte .L_802E40E4
 	.4byte .L_802E40EC

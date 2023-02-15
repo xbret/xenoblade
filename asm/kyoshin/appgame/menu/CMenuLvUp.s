@@ -4,7 +4,7 @@
 
 
 
-.fn func_802759C8, global
+.fn __dt__802759C8, global
 /* 802759C8 0023EF88  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802759CC 0023EF8C  7C 08 02 A6 */	mflr r0
 /* 802759D0 0023EF90  2C 03 00 00 */	cmpwi r3, 0
@@ -22,7 +22,7 @@
 /* 80275A00 0023EFC0  41 82 00 10 */	beq .L_80275A10
 /* 80275A04 0023EFC4  7F C3 F3 78 */	mr r3, r30
 /* 80275A08 0023EFC8  38 80 00 00 */	li r4, 0
-/* 80275A0C 0023EFCC  48 1C F1 2D */	bl func_80444B38
+/* 80275A0C 0023EFCC  48 1C F1 2D */	bl __dt__80444B38
 .L_80275A10:
 /* 80275A10 0023EFD0  2C 1F 00 00 */	cmpwi r31, 0
 /* 80275A14 0023EFD4  40 81 00 0C */	ble .L_80275A20
@@ -36,7 +36,7 @@
 /* 80275A30 0023EFF0  7C 08 03 A6 */	mtlr r0
 /* 80275A34 0023EFF4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80275A38 0023EFF8  4E 80 00 20 */	blr 
-.endfn func_802759C8
+.endfn __dt__802759C8
 
 .fn func_80275A3C, global
 /* 80275A3C 0023EFFC  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -1278,7 +1278,7 @@
 
 .fn func_80276C18, global
 /* 80276C18 002401D8  38 63 FF A8 */	addi r3, r3, -88
-/* 80276C1C 002401DC  4B FF ED AC */	b func_802759C8
+/* 80276C1C 002401DC  4B FF ED AC */	b __dt__802759C8
 .endfn func_80276C18
 
 .fn func_80276C20, global
@@ -1288,7 +1288,7 @@
 
 .fn func_80276C28, global
 /* 80276C28 002401E8  38 63 FF A4 */	addi r3, r3, -92
-/* 80276C2C 002401EC  4B FF ED 9C */	b func_802759C8
+/* 80276C2C 002401EC  4B FF ED 9C */	b __dt__802759C8
 .endfn func_80276C28
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -1324,7 +1324,7 @@ CMenuLvUp_strpool:
 __vt__CMenuLvUp:
 	.4byte __RTTI__CMenuLvUp
 	.4byte 0
-	.4byte func_802759C8
+	.4byte __dt__802759C8
 	.4byte CChildListNode_Reset
 	.4byte func_80275A3C
 	.4byte func_80275BE4
@@ -1452,7 +1452,7 @@ lbl_806671F0:
 	.4byte __dt__8045F580
 	.4byte 0x0680001E
 	.4byte 0x0000005C
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 	.4byte 0x8680001E
 	.4byte 0x00000058
 	.4byte __dt__IWorkEvent
@@ -1498,13 +1498,13 @@ lbl_806671F0:
 	.4byte 0x00000000
 	.4byte 0x0680001F
 	.4byte 0x0000005C
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 	.4byte 0x0680001F
 	.4byte 0x00000058
 	.4byte __dt__IWorkEvent
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte func_800FED0C
+	.4byte __dt__800FED0C
 .endobj "@etb_80018654"
 
 .obj "@etb_80018688", local
@@ -1543,7 +1543,7 @@ lbl_806671F0:
 
 .obj "@eti_80030C8C", local
 .hidden "@eti_80030C8C"
-	.4byte func_802759C8
+	.4byte __dt__802759C8
 	.4byte 0x00000074
 	.4byte "@etb_800185E0"
 .endobj "@eti_80030C8C"

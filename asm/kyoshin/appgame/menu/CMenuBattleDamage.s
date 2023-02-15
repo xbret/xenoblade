@@ -125,7 +125,7 @@
 /* 80108E24 000D23E4  4E 80 00 20 */	blr
 .endfn __ct__CMenuBattleDamage
 
-.fn func_80108E28, global
+.fn __dt__80108E28, global
 /* 80108E28 000D23E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80108E2C 000D23EC  7C 08 02 A6 */	mflr r0
 /* 80108E30 000D23F0  2C 03 00 00 */	cmpwi r3, 0
@@ -143,7 +143,7 @@
 /* 80108E60 000D2420  41 82 00 10 */	beq .L_80108E70
 /* 80108E64 000D2424  7F C3 F3 78 */	mr r3, r30
 /* 80108E68 000D2428  38 80 00 00 */	li r4, 0
-/* 80108E6C 000D242C  48 33 BC CD */	bl func_80444B38
+/* 80108E6C 000D242C  48 33 BC CD */	bl __dt__80444B38
 .L_80108E70:
 /* 80108E70 000D2430  2C 1F 00 00 */	cmpwi r31, 0
 /* 80108E74 000D2434  40 81 00 0C */	ble .L_80108E80
@@ -157,7 +157,7 @@
 /* 80108E90 000D2450  7C 08 03 A6 */	mtlr r0
 /* 80108E94 000D2454  38 21 00 10 */	addi r1, r1, 0x10
 /* 80108E98 000D2458  4E 80 00 20 */	blr 
-.endfn func_80108E28
+.endfn __dt__80108E28
 
 .fn func_80108E9C, global
 /* 80108E9C 000D245C  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -1184,9 +1184,9 @@
 /* 80109CE8 000D32A8  88 18 07 74 */	lbz r0, 0x774(r24)
 /* 80109CEC 000D32AC  28 00 00 0A */	cmplwi r0, 0xa
 /* 80109CF0 000D32B0  41 81 02 04 */	bgt .L_80109EF4
-/* 80109CF4 000D32B4  3C 60 80 53 */	lis r3, lbl_8052F9D0@ha
+/* 80109CF4 000D32B4  3C 60 80 53 */	lis r3, jumptable_8052F9D0@ha
 /* 80109CF8 000D32B8  54 00 10 3A */	slwi r0, r0, 2
-/* 80109CFC 000D32BC  38 63 F9 D0 */	addi r3, r3, lbl_8052F9D0@l
+/* 80109CFC 000D32BC  38 63 F9 D0 */	addi r3, r3, jumptable_8052F9D0@l
 /* 80109D00 000D32C0  7C 63 00 2E */	lwzx r3, r3, r0
 /* 80109D04 000D32C4  7C 69 03 A6 */	mtctr r3
 /* 80109D08 000D32C8  4E 80 04 20 */	bctr
@@ -1841,7 +1841,7 @@
 
 .fn func_8010A67C, global
 /* 8010A67C 000D3C3C  38 63 FF A8 */	addi r3, r3, -88
-/* 8010A680 000D3C40  4B FF E7 A8 */	b func_80108E28
+/* 8010A680 000D3C40  4B FF E7 A8 */	b __dt__80108E28
 .endfn func_8010A67C
 
 .fn func_8010A684, global
@@ -1851,10 +1851,10 @@
 
 .fn func_8010A68C, global
 /* 8010A68C 000D3C4C  38 63 FF A4 */	addi r3, r3, -92
-/* 8010A690 000D3C50  4B FF E7 98 */	b func_80108E28
+/* 8010A690 000D3C50  4B FF E7 98 */	b __dt__80108E28
 .endfn func_8010A68C
 
-.fn func_8010A694, global
+.fn __dt__8010A694, global
 /* 8010A694 000D3C54  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8010A698 000D3C58  7C 08 02 A6 */	mflr r0
 /* 8010A69C 000D3C5C  2C 03 00 00 */	cmpwi r3, 0
@@ -1879,7 +1879,7 @@
 /* 8010A6E4 000D3CA4  7C 08 03 A6 */	mtlr r0
 /* 8010A6E8 000D3CA8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8010A6EC 000D3CAC  4E 80 00 20 */	blr 
-.endfn func_8010A694
+.endfn __dt__8010A694
 
 .fn func_8010A6F0, global
 /* 8010A6F0 000D3CB0  80 03 00 2C */	lwz r0, 0x2c(r3)
@@ -2451,7 +2451,7 @@ IUIBattle_hierarchy:
 __vt__CTTask_IUIBattle:
 	.4byte __RTTI__CTTask_IUIBattle
 	.4byte 0
-	.4byte func_801022A8
+	.4byte __dt__801022A8
 	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
@@ -2470,8 +2470,8 @@ CTTask_IUIBattle_hierarchy:
 	.4byte 0
 
 
-.global lbl_8052F9D0
-lbl_8052F9D0:
+.global jumptable_8052F9D0
+jumptable_8052F9D0:
 	.4byte .L_80109D0C
 	.4byte .L_80109D30
 	.4byte .L_80109D54
@@ -2490,7 +2490,7 @@ lbl_8052F9D0:
 __vt__CMenuBattleDamage:
 	.4byte __RTTI__CMenuBattleDamage
 	.4byte 0
-	.4byte func_80108E28
+	.4byte __dt__80108E28
 	.4byte CChildListNode_Reset
 	.4byte func_80108E9C
 	.4byte func_80109084
@@ -2628,13 +2628,13 @@ lbl_80666820:
 	.4byte 0x00000000
 	.4byte 0x0680001F
 	.4byte 0x0000005C
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 	.4byte 0x0680001F
 	.4byte 0x00000058
 	.4byte __dt__IWorkEvent
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte func_80102300
+	.4byte __dt__80102300
 .endobj "@etb_8000B0AC"
 
 .obj "@etb_8000B0E0", local
@@ -2648,7 +2648,7 @@ lbl_80666820:
 	.4byte __dt__8045F580
 	.4byte 0x0680001E
 	.4byte 0x0000005C
-	.4byte func_8004031C
+	.4byte __dt__8004031C
 	.4byte 0x8680001E
 	.4byte 0x00000058
 	.4byte __dt__IWorkEvent
@@ -2759,7 +2759,7 @@ lbl_80666820:
 
 .obj "@eti_800268DC", local
 .hidden "@eti_800268DC"
-	.4byte func_80108E28
+	.4byte __dt__80108E28
 	.4byte 0x00000074
 	.4byte "@etb_8000B0E0"
 .endobj "@eti_800268DC"
@@ -2815,7 +2815,7 @@ lbl_80666820:
 
 .obj "@eti_8002693C", local
 .hidden "@eti_8002693C"
-	.4byte func_8010A694
+	.4byte __dt__8010A694
 	.4byte 0x0000005C
 	.4byte "@etb_8000B16C"
 .endobj "@eti_8002693C"

@@ -160,7 +160,7 @@
 /* 802B37B0 0027CD70  4E 80 00 20 */	blr 
 .endfn func_802B3750
 
-.fn func_802B37B4, global
+.fn __dt__802B37B4, global
 /* 802B37B4 0027CD74  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802B37B8 0027CD78  7C 08 02 A6 */	mflr r0
 /* 802B37BC 0027CD7C  2C 03 00 00 */	cmpwi r3, 0
@@ -178,7 +178,7 @@
 /* 802B37E8 0027CDA8  7C 08 03 A6 */	mtlr r0
 /* 802B37EC 0027CDAC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802B37F0 0027CDB0  4E 80 00 20 */	blr 
-.endfn func_802B37B4
+.endfn __dt__802B37B4
 
 .fn func_802B37F4, global
 /* 802B37F4 0027CDB4  A0 03 00 42 */	lhz r0, 0x42(r3)
@@ -1661,7 +1661,7 @@ lbl_8057AE50:
 
 .obj "@eti_80033458", local
 .hidden "@eti_80033458"
-	.4byte func_802B37B4
+	.4byte __dt__802B37B4
 	.4byte 0x00000040
 	.4byte "@etb_8001B914"
 .endobj "@eti_80033458"

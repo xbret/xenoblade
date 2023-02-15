@@ -2811,13 +2811,13 @@ __RTTI__CArtsList:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000174
-	.4byte func_80231A08
+	.4byte __dt__80231A08
 	.4byte 0x0780001E
 	.4byte 0x00000148
-	.4byte func_80230484
+	.4byte __dt__80230484
 	.4byte 0x0780001E
 	.4byte 0x00000124
-	.4byte func_8022FA90
+	.4byte __dt__8022FA90
 	.4byte 0x0780001E
 	.4byte 0x000000E8
 	.4byte __dt__CSysWin
@@ -2849,34 +2849,34 @@ __RTTI__CArtsList:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000174
-	.4byte func_80231A08
+	.4byte __dt__80231A08
 	.4byte 0x0780001E
 	.4byte 0x00000148
-	.4byte func_80230484
+	.4byte __dt__80230484
 	.4byte 0x8780001E
 	.4byte 0x00000124
-	.4byte func_8022FA90
+	.4byte __dt__8022FA90
 	.4byte 0x0780001E
 	.4byte 0x00000174
-	.4byte func_80231A08
+	.4byte __dt__80231A08
 	.4byte 0x0780001E
 	.4byte 0x00000148
-	.4byte func_80230484
+	.4byte __dt__80230484
 	.4byte 0x0780001E
 	.4byte 0x00000124
-	.4byte func_8022FA90
+	.4byte __dt__8022FA90
 	.4byte 0x8780001E
 	.4byte 0x000000E8
 	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x00000174
-	.4byte func_80231A08
+	.4byte __dt__80231A08
 	.4byte 0x0780001E
 	.4byte 0x00000148
-	.4byte func_80230484
+	.4byte __dt__80230484
 	.4byte 0x0780001E
 	.4byte 0x00000124
-	.4byte func_8022FA90
+	.4byte __dt__8022FA90
 	.4byte 0x0780001E
 	.4byte 0x000000E8
 	.4byte __dt__CSysWin
@@ -2885,13 +2885,13 @@ __RTTI__CArtsList:
 	.4byte __dt__CArtsInfo
 	.4byte 0x0780001E
 	.4byte 0x00000174
-	.4byte func_80231A08
+	.4byte __dt__80231A08
 	.4byte 0x0780001E
 	.4byte 0x00000148
-	.4byte func_80230484
+	.4byte __dt__80230484
 	.4byte 0x0780001E
 	.4byte 0x00000124
-	.4byte func_8022FA90
+	.4byte __dt__8022FA90
 	.4byte 0x0780001E
 	.4byte 0x000000E8
 	.4byte __dt__CSysWin

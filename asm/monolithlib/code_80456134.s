@@ -35,7 +35,7 @@
 /* 804561A8 0041F768  4E 80 00 20 */	blr 
 .endfn func_80456134
 
-.fn func_804561AC, global
+.fn __dt__804561AC, global
 /* 804561AC 0041F76C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804561B0 0041F770  7C 08 02 A6 */	mflr r0
 /* 804561B4 0041F774  2C 03 00 00 */	cmpwi r3, 0
@@ -59,7 +59,7 @@
 /* 804561F8 0041F7B8  7C 08 03 A6 */	mtlr r0
 /* 804561FC 0041F7BC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80456200 0041F7C0  4E 80 00 20 */	blr 
-.endfn func_804561AC
+.endfn __dt__804561AC
 
 .fn func_80456204, global
 /* 80456204 0041F7C4  C0 02 C8 A8 */	lfs f0, float_8066CC28@sda21(r2)
@@ -361,9 +361,9 @@
 /* 80456604 0041FBC4  54 07 04 3E */	clrlwi r7, r0, 0x10
 /* 80456608 0041FBC8  90 E3 00 00 */	stw r7, 0(r3)
 /* 8045660C 0041FBCC  41 81 00 E0 */	bgt .L_804566EC
-/* 80456610 0041FBD0  3C C0 80 57 */	lis r6, lbl_805704FC@ha
+/* 80456610 0041FBD0  3C C0 80 57 */	lis r6, jumptable_805704FC@ha
 /* 80456614 0041FBD4  54 80 10 3A */	slwi r0, r4, 2
-/* 80456618 0041FBD8  38 C6 04 FC */	addi r6, r6, lbl_805704FC@l
+/* 80456618 0041FBD8  38 C6 04 FC */	addi r6, r6, jumptable_805704FC@l
 /* 8045661C 0041FBDC  7C C6 00 2E */	lwzx r6, r6, r0
 /* 80456620 0041FBE0  7C C9 03 A6 */	mtctr r6
 /* 80456624 0041FBE4  4E 80 04 20 */	bctr
@@ -429,9 +429,9 @@
 .L_804566EC:
 /* 804566EC 0041FCAC  28 04 00 0A */	cmplwi r4, 0xa
 /* 804566F0 0041FCB0  41 81 00 7C */	bgt .L_8045676C
-/* 804566F4 0041FCB4  3C C0 80 57 */	lis r6, lbl_805704D0@ha
+/* 804566F4 0041FCB4  3C C0 80 57 */	lis r6, jumptable_805704D0@ha
 /* 804566F8 0041FCB8  54 80 10 3A */	slwi r0, r4, 2
-/* 804566FC 0041FCBC  38 C6 04 D0 */	addi r6, r6, lbl_805704D0@l
+/* 804566FC 0041FCBC  38 C6 04 D0 */	addi r6, r6, jumptable_805704D0@l
 /* 80456700 0041FCC0  7C C6 00 2E */	lwzx r6, r6, r0
 /* 80456704 0041FCC4  7C C9 03 A6 */	mtctr r6
 /* 80456708 0041FCC8  4E 80 04 20 */	bctr
@@ -1866,8 +1866,8 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_805704D0
-lbl_805704D0:
+.global jumptable_805704D0
+jumptable_805704D0:
 	.4byte .L_8045676C
 	.4byte .L_8045670C
 	.4byte .L_80456714
@@ -1881,8 +1881,8 @@ lbl_805704D0:
 	.4byte .L_8045672C
 
 
-.global lbl_805704FC
-lbl_805704FC:
+.global jumptable_805704FC
+jumptable_805704FC:
 	.4byte .L_804566EC
 	.4byte .L_80456628
 	.4byte .L_8045663C
@@ -2008,7 +2008,7 @@ double_8066CC38:
 
 .obj "@eti_80034FC4", local
 .hidden "@eti_80034FC4"
-	.4byte func_804561AC
+	.4byte __dt__804561AC
 	.4byte 0x00000058
 	.4byte "@etb_8001D368"
 .endobj "@eti_80034FC4"

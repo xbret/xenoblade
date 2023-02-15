@@ -74,7 +74,7 @@
 __vt__CLib:
 	.4byte __RTTI__CLib
 	.4byte 0
-	.4byte func_80459390
+	.4byte __dt__80459390
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18

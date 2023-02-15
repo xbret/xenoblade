@@ -1497,16 +1497,16 @@ float_8066B370:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x0000009C
-	.4byte func_800D8C9C
+	.4byte __dt__800D8C9C
 	.4byte 0x0780001E
 	.4byte 0x00000084
-	.4byte func_800D8CDC
+	.4byte __dt__800D8CDC
 	.4byte 0x0780001E
 	.4byte 0x0000001C
-	.4byte func_800D8E30
+	.4byte __dt__800D8E30
 	.4byte 0x8780001E
 	.4byte 0x00000010
-	.4byte func_800D8E70
+	.4byte __dt__800D8E70
 .endobj "@etb_80018A34"
 
 .obj "@etb_80018A7C", local

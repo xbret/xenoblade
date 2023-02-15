@@ -30,7 +30,7 @@
 /* 8046A580 00433B40  4E 80 00 20 */	blr 
 .endfn func_8046A530
 
-.fn func_8046A584, global
+.fn __dt__8046A584, global
 /* 8046A584 00433B44  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8046A588 00433B48  7C 08 02 A6 */	mflr r0
 /* 8046A58C 00433B4C  2C 03 00 00 */	cmpwi r3, 0
@@ -48,7 +48,7 @@
 /* 8046A5B8 00433B78  7C 08 03 A6 */	mtlr r0
 /* 8046A5BC 00433B7C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8046A5C0 00433B80  4E 80 00 20 */	blr 
-.endfn func_8046A584
+.endfn __dt__8046A584
 
 .fn func_8046A5C4, global
 /* 8046A5C4 00433B84  94 21 FF 70 */	stwu r1, -0x90(r1)
@@ -3109,7 +3109,7 @@ float_8066CE7C:
 
 .obj "@eti_80035A38", local
 .hidden "@eti_80035A38"
-	.4byte func_8046A584
+	.4byte __dt__8046A584
 	.4byte 0x00000040
 	.4byte "@etb_8001DCF4"
 .endobj "@eti_80035A38"

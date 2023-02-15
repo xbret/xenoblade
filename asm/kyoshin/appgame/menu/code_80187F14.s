@@ -540,7 +540,7 @@
 /* 801886E8 00151CA8  4E 80 00 20 */	blr 
 .endfn func_80188584
 
-.fn func_801886EC, global
+.fn __dt__801886EC, global
 /* 801886EC 00151CAC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801886F0 00151CB0  7C 08 02 A6 */	mflr r0
 /* 801886F4 00151CB4  2C 03 00 00 */	cmpwi r3, 0
@@ -577,7 +577,7 @@
 /* 80188768 00151D28  7C 08 03 A6 */	mtlr r0
 /* 8018876C 00151D2C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80188770 00151D30  4E 80 00 20 */	blr 
-.endfn func_801886EC
+.endfn __dt__801886EC
 
 .fn func_80188774, global
 /* 80188774 00151D34  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2532,7 +2532,7 @@ float_80666BD4:
 
 .obj "@eti_80029AF8", local
 .hidden "@eti_80029AF8"
-	.4byte func_801886EC
+	.4byte __dt__801886EC
 	.4byte 0x00000088
 	.4byte "@etb_8000EBB4"
 .endobj "@eti_80029AF8"
