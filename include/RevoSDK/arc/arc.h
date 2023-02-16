@@ -1,11 +1,9 @@
 #ifndef RVL_SDK_ARC_H
 #define RVL_SDK_ARC_H
-
+#include "types.h"
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-#include "types.h"
 
 /**
  * Modified from decompilation by riidefi in WiiCore
@@ -81,6 +79,7 @@ typedef struct ARCDir {
     u32 path_end;      // at 0xC
 } ARCDir;
 
+BOOL ARCGetCurrentDir(ARCHandle*, char*, u32);
 BOOL ARCInitHandle(void*, ARCHandle*);
 BOOL ARCOpen(ARCHandle*, const char*, ARCFileInfo*);
 BOOL ARCFastOpen(ARCHandle*, s32, ARCFileInfo*);

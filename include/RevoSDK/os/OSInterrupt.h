@@ -1,11 +1,15 @@
-
 #ifndef RVL_SDK_OS_INTERRUPT_H
 #define RVL_SDK_OS_INTERRUPT_H
-#include "RevoSDK/os/OSContext.h"
 #include "types.h"
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+// Forward declarations
+typedef struct OSContext;
+
+// Create mask from interrupt ID
+#define OS_INTR_MASK(intr) (1 << (31 - intr))
 
 typedef enum {
     OS_INTR_MEM_0,
@@ -44,7 +48,7 @@ typedef enum {
     OS_INTR_MAX
 } OSInterruptType;
 
-typedef void (*OSInterruptHandler)(u32, OSContext*);
+typedef void (*OSInterruptHandler)(int, struct OSContext*); //s16?
 
 extern u32 __OSLastInterruptSrr0;
 extern s16 __OSLastInterrupt;
@@ -61,6 +65,7 @@ void __OSInterruptInit(void);
 
 u32 __OSMaskInterrupts(u32);
 u32 __OSUnmaskInterrupts(u32);
+void __OSDispatchInterrupt(u8, struct OSContext*);
 
 void __RAS_OSDisableInterrupts_begin(void);
 void __RAS_OSDisableInterrupts_end(void);

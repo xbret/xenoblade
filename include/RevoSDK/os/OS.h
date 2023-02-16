@@ -1,10 +1,12 @@
 #ifndef RVL_SDK_OS_H
 #define RVL_SDK_OS_H
 #include "RevoSDK/os/OSContext.h"
+#include "RevoSDK/os/OSExec.h"
 #include "types.h"
 #ifdef __cplusplus
 extern "C" {
 #endif
+
 
 u32 OS_BUS_SPEED : 0x800000F8;
 
@@ -39,7 +41,7 @@ typedef enum {
 
     OS_CONSOLE_RVL_PP_1 = 0x00000011,
     OS_CONSOLE_RVL_PP_2_1 = 0x00000012,
-    OS_CONSOLE_RVL_PP_2_2 = 0x00000100,
+    OS_CONSOLE_RVL_PP_2_2 = 0x00000020,
 
     OS_CONSOLE_RVL_EMU = 0x10000008,
     OS_CONSOLE_NDEV_1_0 = 0x10000010,
@@ -48,6 +50,32 @@ typedef enum {
     OS_CONSOLE_NDEV_2_0 = 0x10000020,
     OS_CONSOLE_NDEV_2_1 = 0x10000021,
 } OSConsoleType;
+
+typedef enum {
+    OS_APP_TYPE_IPL = 0x40,
+    OS_APP_TYPE_DVD = 0x80,
+    OS_APP_TYPE_CHANNEL = 0x81,
+} OSAppType;
+
+typedef enum {
+    OS_EXC_SYSTEM_RESET,
+    OS_EXC_MACHINE_CHECK,
+    OS_EXC_DSI,
+    OS_EXC_ISI,
+    OS_EXC_EXT_INTERRUPT,
+    OS_EXC_ALIGNMENT,
+    OS_EXC_PROGRAM,
+    OS_EXC_FP_UNAVAIL,
+    OS_EXC_DECREMENTER,
+    OS_EXC_SYSTEM_CALL,
+    OS_EXC_TRACE,
+    OS_EXC_PERF_MONITOR,
+    OS_EXC_IABR,
+    OS_EXC_SMI,
+    OS_EXC_THERMAL_INT,
+
+    OS_EXC_MAX
+} OSExceptionType;
 
 typedef struct OSIOSRev {
     u8 idHi;       // at 0x0
@@ -59,29 +87,37 @@ typedef struct OSIOSRev {
     u16 buildYear; // at 0x6
 } OSIOSRev;
 
-typedef struct OSBootInfo {
-    char UNK_0x0[0x2C];
-    u32 consoleType; // at 0x2C
-} OSBootInfo;
-
 typedef void (*OSExceptionHandler)(u8, OSContext*);
 
 extern BOOL __OSInIPL;
 extern BOOL __OSInNandBoot;
+extern BOOL __OSIsGcam;
 extern s64 __OSStartTime;
-extern const char* __OSVersion;
+extern OSExecParams __OSRebootParams;
 
+void __OSFPRInit(void);
 u32 __OSGetHollywoodRev(void);
 void __OSGetIOSRev(OSIOSRev*);
 u32 OSGetConsoleType(void);
-
-OSExceptionHandler __OSSetExceptionHandler(u16, OSExceptionHandler);
-OSExceptionHandler __OSGetExceptionHandler(u16);
+void OSInit(void);
+OSExceptionHandler __OSSetExceptionHandler(u8, OSExceptionHandler);
+OSExceptionHandler __OSGetExceptionHandler(u8);
 void OSDefaultExceptionHandler(u8, OSContext*);
 void __OSPSInit(void);
 u32 __OSGetDIConfig(void);
 void OSRegisterVersion(const char*);
 const char* OSGetAppGamename(void);
+u8 OSGetAppType(void);
+
+void __OSDBINTSTART(void);
+void __OSDBINTEND(void);
+void __OSDBJUMPSTART(void);
+void __OSDBJUMPDEST(void);
+void __OSDBJUMPEND(void);
+void __OSEVStart(void);
+void __DBVECTOR(void);
+void __OSEVSetNumber(void);
+void __OSEVEnd(void);
 
 #ifdef __cplusplus
 }

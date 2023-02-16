@@ -1,23 +1,12 @@
-#ifndef _REVOSDK_DB_H
-#define _REVOSDK_DB_H
+#ifndef RVL_SDK_PUBLIC_DB_H
+#define RVL_SDK_PUBLIC_DB_H
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-#include "types.h"
+#include "RevoSDK/db/db.h"
 
-#define ExceptionHookDestination 0x80000048
-#define IsDebuggerPresent        0x80000040
-
-// static int __DBInterface;
-
-struct DBInterface {
-	u8 filler0[4];
-	u32 unk4;
-};
-
-static struct DBInterface* __DBInterface;
-static int DBVerbose;
-
-void DBInit(void);
-void DBInitComm(int* inputFlagPtr, int* mtrCallback);
-static void __DBExceptionDestination(void);
-
+#ifdef __cplusplus
+}
+#endif
 #endif

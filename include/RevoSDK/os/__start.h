@@ -1,5 +1,5 @@
 #include "types.h"
-#include "RevoSDK/db.h"
+#include "RevoSDK/DB.h"
 #include "PowerPC_EABI_Support/Runtime/__ppc_eabi_linker.h"
 
 #define PAD3_BUTTON_ADDR        0x800030E4

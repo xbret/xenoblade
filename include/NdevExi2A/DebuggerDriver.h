@@ -1,6 +1,6 @@
-#ifndef NDEV_EXI2A_DEBUGGER_DRIVER_H
-#define NDEV_EXI2A_DEBUGGER_DRIVER_H
-#include "RevoSDK/os/OSInterrupt.h"
+#ifndef RVL_SDK_NDEV_EXI2AD_DEBUGGER_DRIVER_H
+#define RVL_SDK_NDEV_EXI2AD_DEBUGGER_DRIVER_H
+#include "RevoSDK/OS.h"
 #include "types.h"
 #ifdef __cplusplus
 extern "C" {

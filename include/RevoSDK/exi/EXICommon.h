@@ -1,11 +1,12 @@
-
 #ifndef RVL_SDK_EXI_COMMON_H
 #define RVL_SDK_EXI_COMMON_H
-#include "RevoSDK/os/OSContext.h"
 #include "types.h"
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+// Forward declarations
+typedef struct OSContext;
 
 typedef enum {
     EXI_STATE_DMA_ACCESS = (1 << 0),
@@ -21,7 +22,7 @@ typedef enum { EXI_CHAN_0, EXI_CHAN_1, EXI_CHAN_2, EXI_MAX_CHAN } EXIChannel;
 
 typedef enum { EXI_READ, EXI_WRITE, EXI_TYPE_2, EXI_MAX_TYPE } EXIType;
 
-typedef void (*EXICallback)(EXIChannel, OSContext*);
+typedef void (*EXICallback)(EXIChannel, struct OSContext*);
 
 extern const u32 __EXIFreq;
 
@@ -30,7 +31,7 @@ static inline u32 __EXISwap32(u32 val) {
            val << 8 & 0x00FF0000 | val << 24 & 0xFF000000;
 }
 
-BOOL EXIWriteReg(EXIChannel, u32, s32, const void*, s32);
+BOOL EXIWriteReg(EXIChannel, u32, u32, const void*, s32);
 
 #ifdef __cplusplus
 }

@@ -1,5 +1,5 @@
 #include "RevoSDK/arc/arc.h"
-#include "RevoSDK/os/OSError.h"
+#include "RevoSDK/OS.h"
 #include "stl/ctype.h"
 
 /**

@@ -3,9 +3,7 @@
 #include "NdevExi2A/ODEMU.h"
 #include "NdevExi2A/exi2.h"
 
-#include "RevoSDK/os/OS.h"
-#include "RevoSDK/os/OSContext.h"
-#include "RevosDK/os/OSInterrupt.h"
+#include "RevoSDK/OS.h"
 
 static u32 __DBRecvDataSize;
 static u32 __DBRecvMail;

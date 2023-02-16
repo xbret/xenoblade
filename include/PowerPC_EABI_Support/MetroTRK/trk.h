@@ -2,7 +2,7 @@
 #define _METROTRK_TRK_H
 
 #include "types.h"
-#include "RevoSDK/db.h"
+#include "RevoSDK/DB.h"
 
 #ifdef __cplusplus
 extern "C" {

@@ -1,6 +1,9 @@
 #ifndef _TYPES_H
 #define _TYPES_H
 
+
+#include "macros.h"
+
 // r2 is  80670380
 // r13 is 8066C180
 
