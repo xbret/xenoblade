@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_8044DB24, global
 /* 8044DB24 004170E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044DB28 004170E8  7C 08 02 A6 */	mflr r0
@@ -97,7 +95,7 @@
 /* 8044DC88 00417248  4E 80 00 20 */	blr 
 .endfn func_8044DB24
 
-.fn __dt__8044DC8C, global
+.fn __dt___reslist_base_IDeviceClockFrame, global
 /* 8044DC8C 0041724C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044DC90 00417250  7C 08 02 A6 */	mflr r0
 /* 8044DC94 00417254  2C 03 00 00 */	cmpwi r3, 0
@@ -147,9 +145,9 @@
 /* 8044DD34 004172F4  7C 08 03 A6 */	mtlr r0
 /* 8044DD38 004172F8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8044DD3C 004172FC  4E 80 00 20 */	blr 
-.endfn __dt__8044DC8C
+.endfn __dt___reslist_base_IDeviceClockFrame
 
-.fn __dt__8044DD40, global
+.fn __dt__reslist_IDeviceClockFrame, global
 /* 8044DD40 00417300  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044DD44 00417304  7C 08 02 A6 */	mflr r0
 /* 8044DD48 00417308  2C 03 00 00 */	cmpwi r3, 0
@@ -200,9 +198,9 @@
 /* 8044DDEC 004173AC  7C 08 03 A6 */	mtlr r0
 /* 8044DDF0 004173B0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8044DDF4 004173B4  4E 80 00 20 */	blr 
-.endfn __dt__8044DD40
+.endfn __dt__reslist_IDeviceClockFrame
 
-.fn __dt__8044DDF8, global
+.fn __dt__CDeviceClock, global
 /* 8044DDF8 004173B8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8044DDFC 004173BC  7C 08 02 A6 */	mflr r0
 /* 8044DE00 004173C0  2C 03 00 00 */	cmpwi r3, 0
@@ -264,7 +262,7 @@
 /* 8044DECC 0041748C  7C 08 03 A6 */	mtlr r0
 /* 8044DED0 00417490  38 21 00 20 */	addi r1, r1, 0x20
 /* 8044DED4 00417494  4E 80 00 20 */	blr 
-.endfn __dt__8044DDF8
+.endfn __dt__CDeviceClock
 
 .fn func_8044DED8, global
 /* 8044DED8 00417498  80 6D BD B8 */	lwz r3, lbl_80667F38@sda21(r13)
@@ -488,7 +486,7 @@ _reslist_base_IDeviceClockFrame_typestr:
 __vt__CDeviceClock:
 	.4byte __RTTI__CDeviceClock
 	.4byte 0
-	.4byte __dt__8044DDF8
+	.4byte __dt__CDeviceClock
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -542,7 +540,7 @@ CDeviceClock_hierarchy:
 __vt__reslist_IDeviceClockFrame:
 	.4byte __RTTI__reslist_IDeviceClockFrame
 	.4byte 0
-	.4byte __dt__8044DD40
+	.4byte __dt__reslist_IDeviceClockFrame
 
 .global reslist_IDeviceClockFrame_hierarchy
 reslist_IDeviceClockFrame_hierarchy:
@@ -555,7 +553,7 @@ reslist_IDeviceClockFrame_hierarchy:
 __vt___reslist_base_IDeviceClockFrame:
 	.4byte __RTTI___reslist_base_IDeviceClockFrame
 	.4byte 0
-	.4byte __dt__8044DC8C
+	.4byte __dt___reslist_base_IDeviceClockFrame
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -597,10 +595,10 @@ lbl_80667F38:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x000001CC
-	.4byte __dt__8044DD40
+	.4byte __dt__reslist_IDeviceClockFrame
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__80447900
+	.4byte __dt__CDeviceBase
 .endobj "@etb_8001CD08"
 
 .obj "@etb_8001CD30", local
@@ -623,7 +621,7 @@ lbl_80667F38:
 	.4byte 0x00000000
 	.4byte 0x8780001D
 	.4byte 0x000001CC
-	.4byte __dt__8044DD40
+	.4byte __dt__reslist_IDeviceClockFrame
 .endobj "@etb_8001CD40"
 
 .obj "@etb_8001CD5C", local
@@ -669,21 +667,21 @@ lbl_80667F38:
 
 .obj "@eti_800349AC", local
 .hidden "@eti_800349AC"
-	.4byte __dt__8044DC8C
+	.4byte __dt___reslist_base_IDeviceClockFrame
 	.4byte 0x000000B4
 	.4byte "@etb_8001CD30"
 .endobj "@eti_800349AC"
 
 .obj "@eti_800349B8", local
 .hidden "@eti_800349B8"
-	.4byte __dt__8044DD40
+	.4byte __dt__reslist_IDeviceClockFrame
 	.4byte 0x000000B8
 	.4byte "@etb_8001CD38"
 .endobj "@eti_800349B8"
 
 .obj "@eti_800349C4", local
 .hidden "@eti_800349C4"
-	.4byte __dt__8044DDF8
+	.4byte __dt__CDeviceClock
 	.4byte 0x000000E0
 	.4byte "@etb_8001CD40"
 .endobj "@eti_800349C4"

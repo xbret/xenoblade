@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__cf_CAIAction, global
 /* 8014A904 00113EC4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8014A908 00113EC8  7C 08 02 A6 */	mflr r0

@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_800D10DC, global
 /* 800D10DC 0009A69C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800D10E0 0009A6A0  7C 08 02 A6 */	mflr r0
@@ -7388,7 +7386,7 @@ jumptable_8052E824:
 __vt__cf_CtrlAct:
 	.4byte __RTTI__cf_CtrlAct
 	.4byte 0
-	.4byte __dt__80087608
+	.4byte __dt__cf_CtrlAct
 	.4byte 0
 	.4byte func_80096854
 	.4byte func_800D5860
@@ -7708,7 +7706,7 @@ float_806667F0:
 	.4byte __dt__80087688
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__80087648
+	.4byte __dt__cf_CtrlBase
 .endobj "@etb_8000A4FC"
 
 .obj "@etb_8000A52C", local

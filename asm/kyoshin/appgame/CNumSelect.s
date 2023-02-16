@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_801EADC0, global
+.fn __ct__CNumSelect, global
 /* 801EADC0 001B4380  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801EADC4 001B4384  7C 08 02 A6 */	mflr r0
 /* 801EADC8 001B4388  3C A0 80 54 */	lis r5, __vt__CNumSelect@ha
@@ -35,9 +33,9 @@
 /* 801EAE2C 001B43EC  7C 08 03 A6 */	mtlr r0
 /* 801EAE30 001B43F0  38 21 00 10 */	addi r1, r1, 0x10
 /* 801EAE34 001B43F4  4E 80 00 20 */	blr 
-.endfn func_801EADC0
+.endfn __ct__CNumSelect
 
-.fn __dt__801EAE38, global
+.fn __dt__CNumSelect, global
 /* 801EAE38 001B43F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801EAE3C 001B43FC  7C 08 02 A6 */	mflr r0
 /* 801EAE40 001B4400  2C 03 00 00 */	cmpwi r3, 0
@@ -60,7 +58,7 @@
 /* 801EAE80 001B4440  7C 08 03 A6 */	mtlr r0
 /* 801EAE84 001B4444  38 21 00 10 */	addi r1, r1, 0x10
 /* 801EAE88 001B4448  4E 80 00 20 */	blr 
-.endfn __dt__801EAE38
+.endfn __dt__CNumSelect
 
 .fn func_801EAE8C, global
 /* 801EAE8C 001B444C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2487,7 +2485,7 @@ lbl_805028F4:
 __vt__CNumSelect:
 	.4byte __RTTI__CNumSelect
 	.4byte 0
-	.4byte __dt__801EAE38
+	.4byte __dt__CNumSelect
 	.4byte func_80039E28
 	.4byte func_801EB708
 	.4byte func_80039E18
@@ -2786,14 +2784,14 @@ lbl_8066A9B0:
 
 .obj "@eti_8002BF10", local
 .hidden "@eti_8002BF10"
-	.4byte func_801EADC0
+	.4byte __ct__CNumSelect
 	.4byte 0x00000078
 	.4byte "@etb_80011AD8"
 .endobj "@eti_8002BF10"
 
 .obj "@eti_8002BF1C", local
 .hidden "@eti_8002BF1C"
-	.4byte __dt__801EAE38
+	.4byte __dt__CNumSelect
 	.4byte 0x00000054
 	.4byte "@etb_80011AF4"
 .endobj "@eti_8002BF1C"

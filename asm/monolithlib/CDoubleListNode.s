@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__15CDoubleListNodeFv, global
 /* 80446578 0040FB38  3C A0 80 57 */	lis r5, __vt__CDoubleListNode@ha
 /* 8044657C 0040FB3C  38 80 00 00 */	li r4, 0

@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_802ACE24, global
 /* 802ACE24 002763E4  94 21 FD B0 */	stwu r1, -0x250(r1)
 /* 802ACE28 002763E8  7C 08 02 A6 */	mflr r0
@@ -122,7 +120,7 @@
 /* 802ACFE4 002765A4  4E 80 00 20 */	blr 
 .endfn func_802ACE24
 
-.fn __dt__802ACFE8, global
+.fn __dt__CTutorialList, global
 /* 802ACFE8 002765A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802ACFEC 002765AC  7C 08 02 A6 */	mflr r0
 /* 802ACFF0 002765B0  2C 03 00 00 */	cmpwi r3, 0
@@ -154,7 +152,7 @@
 /* 802AD054 00276614  7C 08 03 A6 */	mtlr r0
 /* 802AD058 00276618  38 21 00 10 */	addi r1, r1, 0x10
 /* 802AD05C 0027661C  4E 80 00 20 */	blr 
-.endfn __dt__802ACFE8
+.endfn __dt__CTutorialList
 
 .fn func_802AD060, global
 /* 802AD060 00276620  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1630,7 +1628,7 @@ CTutorialList_strpool:
 __vt__CTutorialList:
 	.4byte __RTTI__CTutorialList
 	.4byte 0
-	.4byte __dt__802ACFE8
+	.4byte __dt__CTutorialList
 	.4byte func_80039E28
 	.4byte func_802AE07C
 	.4byte func_80039E18
@@ -1982,7 +1980,7 @@ lbl_806674D8:
 
 .obj "@eti_80033020", local
 .hidden "@eti_80033020"
-	.4byte __dt__802ACFE8
+	.4byte __dt__CTutorialList
 	.4byte 0x00000078
 	.4byte "@etb_8001B348"
 .endobj "@eti_80033020"

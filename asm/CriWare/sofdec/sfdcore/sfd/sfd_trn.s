@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
 .fn SFTRN_Init, global
 /* 803CE3F0 003979B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CE3F4 003979B4  7C 08 02 A6 */	mflr r0

@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CMenuBattleChain, global
 /* 802A9B8C 0027314C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802A9B90 00273150  7C 08 02 A6 */	mflr r0
@@ -73,7 +71,7 @@
 /* 802A9C90 00273250  4E 80 00 20 */	blr
 .endfn __ct__CMenuBattleChain
 
-.fn __dt__802A9C94, global
+.fn __dt__CMenuBattleChain, global
 /* 802A9C94 00273254  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A9C98 00273258  7C 08 02 A6 */	mflr r0
 /* 802A9C9C 0027325C  2C 03 00 00 */	cmpwi r3, 0
@@ -91,7 +89,7 @@
 /* 802A9CCC 0027328C  41 82 00 10 */	beq .L_802A9CDC
 /* 802A9CD0 00273290  7F C3 F3 78 */	mr r3, r30
 /* 802A9CD4 00273294  38 80 00 00 */	li r4, 0
-/* 802A9CD8 00273298  48 19 AE 61 */	bl __dt__80444B38
+/* 802A9CD8 00273298  48 19 AE 61 */	bl __dt__CProcess
 .L_802A9CDC:
 /* 802A9CDC 0027329C  2C 1F 00 00 */	cmpwi r31, 0
 /* 802A9CE0 002732A0  40 81 00 0C */	ble .L_802A9CEC
@@ -105,7 +103,7 @@
 /* 802A9CFC 002732BC  7C 08 03 A6 */	mtlr r0
 /* 802A9D00 002732C0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A9D04 002732C4  4E 80 00 20 */	blr 
-.endfn __dt__802A9C94
+.endfn __dt__CMenuBattleChain
 
 .fn func_802A9D08, global
 /* 802A9D08 002732C8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1628,7 +1626,7 @@
 
 .fn func_802AB3B8, global
 /* 802AB3B8 00274978  38 63 FF 94 */	addi r3, r3, -108
-/* 802AB3BC 0027497C  4B FF E8 D8 */	b __dt__802A9C94
+/* 802AB3BC 0027497C  4B FF E8 D8 */	b __dt__CMenuBattleChain
 .endfn func_802AB3B8
 
 .fn func_802AB3C0, global
@@ -1638,7 +1636,7 @@
 
 .fn func_802AB3C8, global
 /* 802AB3C8 00274988  38 63 FF 90 */	addi r3, r3, -112
-/* 802AB3CC 0027498C  4B FF E8 C8 */	b __dt__802A9C94
+/* 802AB3CC 0027498C  4B FF E8 C8 */	b __dt__CMenuBattleChain
 .endfn func_802AB3C8
 
 .fn func_802AB3D0, global
@@ -1883,7 +1881,7 @@ jumptable_8053D5B4:
 __vt__CMenuBattleChain:
 	.4byte __RTTI__CMenuBattleChain
 	.4byte 0
-	.4byte __dt__802A9C94
+	.4byte __dt__CMenuBattleChain
 	.4byte CChildListNode_Reset
 	.4byte func_802A9D08
 	.4byte func_802A9EBC
@@ -2254,13 +2252,13 @@ lbl_806674C8:
 	.4byte 0x00000000
 	.4byte 0x0680001C
 	.4byte 0x00000070
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x0680001C
 	.4byte 0x0000006C
 	.4byte __dt__IWorkEvent
 	.4byte 0x8680001C
 	.4byte 0x00000000
-	.4byte __dt__8012235C
+	.4byte __dt__IUIWindow
 .endobj "@etb_8001AFC0"
 
 .obj "@etb_8001AFF4", local
@@ -2274,7 +2272,7 @@ lbl_806674C8:
 	.4byte __dt__8045F580
 	.4byte 0x0680001E
 	.4byte 0x00000070
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x8680001E
 	.4byte 0x0000006C
 	.4byte __dt__IWorkEvent
@@ -2397,7 +2395,7 @@ lbl_806674C8:
 
 .obj "@eti_80032E28", local
 .hidden "@eti_80032E28"
-	.4byte __dt__802A9C94
+	.4byte __dt__CMenuBattleChain
 	.4byte 0x00000074
 	.4byte "@etb_8001AFF4"
 .endobj "@eti_80032E28"

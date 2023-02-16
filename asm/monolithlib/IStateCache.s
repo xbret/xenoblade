@@ -2,9 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-
 .fn func_8044A578, global
 /* 8044A578 00413B38  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8044A57C 00413B3C  7C 08 02 A6 */	mflr r0
@@ -2942,7 +2939,7 @@
 /* 8044CFEC 004165AC  4E 80 00 20 */	blr 
 .endfn func_8044CF74
 
-.fn __dt__8044CFF0, global
+.fn __dt__CDevice, global
 /* 8044CFF0 004165B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044CFF4 004165B4  7C 08 02 A6 */	mflr r0
 /* 8044CFF8 004165B8  2C 03 00 00 */	cmpwi r3, 0
@@ -2968,7 +2965,7 @@
 /* 8044D044 00416604  7C 08 03 A6 */	mtlr r0
 /* 8044D048 00416608  38 21 00 10 */	addi r1, r1, 0x10
 /* 8044D04C 0041660C  4E 80 00 20 */	blr 
-.endfn __dt__8044CFF0
+.endfn __dt__CDevice
 
 .fn func_8044D050, global
 /* 8044D050 00416610  80 6D BD B0 */	lwz r3, lbl_80667F30@sda21(r13)
@@ -3501,7 +3498,7 @@
 /* 8044D740 00416D00  41 82 00 10 */	beq .L_8044D750
 /* 8044D744 00416D04  7F C4 F3 78 */	mr r4, r30
 /* 8044D748 00416D08  7F E5 FB 78 */	mr r5, r31
-/* 8044D74C 00416D0C  48 00 4B 51 */	bl func_8045229C
+/* 8044D74C 00416D0C  48 00 4B 51 */	bl __ct__CDeviceFont
 .L_8044D750:
 /* 8044D750 00416D10  7F E4 FB 78 */	mr r4, r31
 /* 8044D754 00416D14  38 A0 00 00 */	li r5, 0
@@ -3897,7 +3894,7 @@ lbl_80667F34:
 
 .obj "@eti_80034928", local
 .hidden "@eti_80034928"
-	.4byte __dt__8044CFF0
+	.4byte __dt__CDevice
 	.4byte 0x00000060
 	.4byte "@etb_8001CCB8"
 .endobj "@eti_80034928"

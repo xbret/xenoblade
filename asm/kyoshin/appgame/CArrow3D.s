@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_8011DA34, global
 /* 8011DA34 000E6FF4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8011DA38 000E6FF8  7C 08 02 A6 */	mflr r0
@@ -118,7 +116,7 @@
 /* 8011DBDC 000E719C  4E 80 00 20 */	blr 
 .endfn func_8011DA34
 
-.fn __dt__8011DBE0, global
+.fn __dt__CTTask_CArrow3D, global
 /* 8011DBE0 000E71A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8011DBE4 000E71A4  7C 08 02 A6 */	mflr r0
 /* 8011DBE8 000E71A8  2C 03 00 00 */	cmpwi r3, 0
@@ -129,7 +127,7 @@
 /* 8011DBFC 000E71BC  7C 7E 1B 78 */	mr r30, r3
 /* 8011DC00 000E71C0  41 82 00 1C */	beq .L_8011DC1C
 /* 8011DC04 000E71C4  38 80 00 00 */	li r4, 0
-/* 8011DC08 000E71C8  48 32 6F 31 */	bl __dt__80444B38
+/* 8011DC08 000E71C8  48 32 6F 31 */	bl __dt__CProcess
 /* 8011DC0C 000E71CC  2C 1F 00 00 */	cmpwi r31, 0
 /* 8011DC10 000E71D0  40 81 00 0C */	ble .L_8011DC1C
 /* 8011DC14 000E71D4  7F C3 F3 78 */	mr r3, r30
@@ -142,7 +140,7 @@
 /* 8011DC2C 000E71EC  7C 08 03 A6 */	mtlr r0
 /* 8011DC30 000E71F0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8011DC34 000E71F4  4E 80 00 20 */	blr 
-.endfn __dt__8011DBE0
+.endfn __dt__CTTask_CArrow3D
 
 .fn func_8011DC38, global
 /* 8011DC38 000E71F8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -3651,7 +3649,7 @@
 /* 80120EF0 000EA4B0  4E 80 00 20 */	blr
 .endfn func_801209BC
 
-.fn __dt__80120EF4, global
+.fn __dt__CArrow3D, global
 /* 80120EF4 000EA4B4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80120EF8 000EA4B8  7C 08 02 A6 */	mflr r0
 /* 80120EFC 000EA4BC  2C 03 00 00 */	cmpwi r3, 0
@@ -3663,7 +3661,7 @@
 /* 80120F14 000EA4D4  41 82 00 20 */	beq .L_80120F34
 /* 80120F18 000EA4D8  41 82 00 0C */	beq .L_80120F24
 /* 80120F1C 000EA4DC  38 80 00 00 */	li r4, 0
-/* 80120F20 000EA4E0  48 32 3C 19 */	bl __dt__80444B38
+/* 80120F20 000EA4E0  48 32 3C 19 */	bl __dt__CProcess
 .L_80120F24:
 /* 80120F24 000EA4E4  2C 1F 00 00 */	cmpwi r31, 0
 /* 80120F28 000EA4E8  40 81 00 0C */	ble .L_80120F34
@@ -3677,7 +3675,7 @@
 /* 80120F44 000EA504  7C 08 03 A6 */	mtlr r0
 /* 80120F48 000EA508  38 21 00 10 */	addi r1, r1, 0x10
 /* 80120F4C 000EA50C  4E 80 00 20 */	blr
-.endfn __dt__80120EF4
+.endfn __dt__CArrow3D
 
 .fn func_80120F50, global
 /* 80120F50 000EA510  94 21 FC F0 */	stwu r1, -0x310(r1)
@@ -4908,7 +4906,7 @@
 
 .fn func_8012213C, global
 /* 8012213C 000EB6FC  38 63 FF A8 */	addi r3, r3, -88
-/* 80122140 000EB700  4B FF B8 80 */	b __dt__8011D9C0
+/* 80122140 000EB700  4B FF B8 80 */	b __dt__CMenuSymbolMark
 .endfn func_8012213C
 
 .fn func_80122144, global
@@ -4918,7 +4916,7 @@
 
 .fn func_8012214C, global
 /* 8012214C 000EB70C  38 63 FF A4 */	addi r3, r3, -92
-/* 80122150 000EB710  4B FF B8 70 */	b __dt__8011D9C0
+/* 80122150 000EB710  4B FF B8 70 */	b __dt__CMenuSymbolMark
 .endfn func_8012214C
 
 .fn func_80122154, global
@@ -4928,7 +4926,7 @@
 
 .fn func_8012215C, global
 /* 8012215C 000EB71C  38 63 FF AC */	addi r3, r3, -84
-/* 80122160 000EB720  4B FF ED 94 */	b __dt__80120EF4
+/* 80122160 000EB720  4B FF ED 94 */	b __dt__CArrow3D
 .endfn func_8012215C
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -5005,7 +5003,7 @@ lbl_80530508:
 __vt__CArrow3D:
 	.4byte __RTTI__CArrow3D
 	.4byte 0
-	.4byte __dt__80120EF4
+	.4byte __dt__CArrow3D
 	.4byte CChildListNode_Reset
 	.4byte func_80121F14
 	.4byte func_80121EA4
@@ -5037,7 +5035,7 @@ CArrow3D_hierarchy:
 __vt__CTTask_CArrow3D:
 	.4byte __RTTI__CTTask_CArrow3D
 	.4byte 0
-	.4byte __dt__8011DBE0
+	.4byte __dt__CTTask_CArrow3D
 	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
@@ -5061,7 +5059,7 @@ CTTask_CArrow3D_hierarchy:
 __vt__CMenuSymbolMark:
 	.4byte __RTTI__CMenuSymbolMark
 	.4byte 0
-	.4byte __dt__8011D9C0
+	.4byte __dt__CMenuSymbolMark
 	.4byte CChildListNode_Reset
 	.4byte func_8011DA34
 	.4byte func_8011DC38
@@ -5464,7 +5462,7 @@ lbl_806668C0:
 	.4byte __dt__8011D2F8
 	.4byte 0x8680001E
 	.4byte 0x00000054
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 .endobj "@etb_8000BBB0"
 
 .obj "@etb_8000BBD8", local
@@ -5514,7 +5512,7 @@ lbl_806668C0:
 
 .obj "@eti_80026E70", local
 .hidden "@eti_80026E70"
-	.4byte __dt__8011DBE0
+	.4byte __dt__CTTask_CArrow3D
 	.4byte 0x00000058
 	.4byte "@etb_8000BB28"
 .endobj "@eti_80026E70"
@@ -5619,7 +5617,7 @@ lbl_806668C0:
 
 .obj "@eti_80026F24", local
 .hidden "@eti_80026F24"
-	.4byte __dt__80120EF4
+	.4byte __dt__CArrow3D
 	.4byte 0x0000005C
 	.4byte "@etb_8000BBB0"
 .endobj "@eti_80026F24"

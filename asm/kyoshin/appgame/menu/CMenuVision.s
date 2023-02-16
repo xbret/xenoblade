@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CMenuVision, global
 /* 801ABE00 001753C0  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 801ABE04 001753C4  7C 08 02 A6 */	mflr r0
@@ -143,7 +141,7 @@
 /* 801AC010 001755D0  4E 80 00 20 */	blr
 .endfn __ct__CMenuVision
 
-.fn __dt__801AC014, global
+.fn __dt__CMenuVision, global
 /* 801AC014 001755D4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801AC018 001755D8  7C 08 02 A6 */	mflr r0
 /* 801AC01C 001755DC  2C 03 00 00 */	cmpwi r3, 0
@@ -161,7 +159,7 @@
 /* 801AC04C 0017560C  41 82 00 10 */	beq .L_801AC05C
 /* 801AC050 00175610  7F C3 F3 78 */	mr r3, r30
 /* 801AC054 00175614  38 80 00 00 */	li r4, 0
-/* 801AC058 00175618  48 29 8A E1 */	bl __dt__80444B38
+/* 801AC058 00175618  48 29 8A E1 */	bl __dt__CProcess
 .L_801AC05C:
 /* 801AC05C 0017561C  2C 1F 00 00 */	cmpwi r31, 0
 /* 801AC060 00175620  40 81 00 0C */	ble .L_801AC06C
@@ -175,7 +173,7 @@
 /* 801AC07C 0017563C  7C 08 03 A6 */	mtlr r0
 /* 801AC080 00175640  38 21 00 10 */	addi r1, r1, 0x10
 /* 801AC084 00175644  4E 80 00 20 */	blr 
-.endfn __dt__801AC014
+.endfn __dt__CMenuVision
 
 .fn func_801AC088, global
 /* 801AC088 00175648  80 6D AA F8 */	lwz r3, lbl_80666C78@sda21(r13)
@@ -4378,7 +4376,7 @@
 
 .fn func_801AFE04, global
 /* 801AFE04 001793C4  38 63 FF A8 */	addi r3, r3, -88
-/* 801AFE08 001793C8  4B FF C2 0C */	b __dt__801AC014
+/* 801AFE08 001793C8  4B FF C2 0C */	b __dt__CMenuVision
 .endfn func_801AFE04
 
 .fn func_801AFE0C, global
@@ -4388,7 +4386,7 @@
 
 .fn func_801AFE14, global
 /* 801AFE14 001793D4  38 63 FF A4 */	addi r3, r3, -92
-/* 801AFE18 001793D8  4B FF C1 FC */	b __dt__801AC014
+/* 801AFE18 001793D8  4B FF C1 FC */	b __dt__CMenuVision
 .endfn func_801AFE14
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
@@ -4615,7 +4613,7 @@ jumptable_80536CBC:
 __vt__CMenuVision:
 	.4byte __RTTI__CMenuVision
 	.4byte 0
-	.4byte __dt__801AC014
+	.4byte __dt__CMenuVision
 	.4byte CChildListNode_Reset
 	.4byte func_801AC210
 	.4byte func_801AC6C8
@@ -4867,7 +4865,7 @@ lbl_80666C78:
 	.4byte 0x00000000
 	.4byte 0x0680001F
 	.4byte 0x0000005C
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x0680001F
 	.4byte 0x00000058
 	.4byte __dt__IWorkEvent
@@ -4887,7 +4885,7 @@ lbl_80666C78:
 	.4byte __dt__8045F580
 	.4byte 0x0680001E
 	.4byte 0x0000005C
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x8680001E
 	.4byte 0x00000058
 	.4byte __dt__IWorkEvent
@@ -4974,7 +4972,7 @@ lbl_80666C78:
 
 .obj "@eti_8002A8E4", local
 .hidden "@eti_8002A8E4"
-	.4byte __dt__801AC014
+	.4byte __dt__CMenuVision
 	.4byte 0x00000074
 	.4byte "@etb_8000FBB8"
 .endobj "@eti_8002A8E4"

@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_802ABB40, global
 /* 802ABB40 00275100  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802ABB44 00275104  7C 08 02 A6 */	mflr r0
@@ -78,7 +76,7 @@
 /* 802ABC58 00275218  4E 80 00 20 */	blr 
 .endfn func_802ABB40
 
-.fn __dt__802ABC5C, global
+.fn __dt__cf_CfGimmickSaveOff, global
 /* 802ABC5C 0027521C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802ABC60 00275220  7C 08 02 A6 */	mflr r0
 /* 802ABC64 00275224  2C 03 00 00 */	cmpwi r3, 0
@@ -89,7 +87,7 @@
 /* 802ABC78 00275238  7C 7E 1B 78 */	mr r30, r3
 /* 802ABC7C 0027523C  41 82 00 1C */	beq .L_802ABC98
 /* 802ABC80 00275240  38 80 00 00 */	li r4, 0
-/* 802ABC84 00275244  4B F5 CC A9 */	bl __dt__8020892C
+/* 802ABC84 00275244  4B F5 CC A9 */	bl __dt__cf_CfGimmick
 /* 802ABC88 00275248  2C 1F 00 00 */	cmpwi r31, 0
 /* 802ABC8C 0027524C  40 81 00 0C */	ble .L_802ABC98
 /* 802ABC90 00275250  7F C3 F3 78 */	mr r3, r30
@@ -102,7 +100,7 @@
 /* 802ABCA8 00275268  7C 08 03 A6 */	mtlr r0
 /* 802ABCAC 0027526C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802ABCB0 00275270  4E 80 00 20 */	blr 
-.endfn __dt__802ABC5C
+.endfn __dt__cf_CfGimmickSaveOff
 
 .fn func_802ABCB4, global
 /* 802ABCB4 00275274  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -200,7 +198,7 @@ lbl_8050C140:
 __vt__cf_CfGimmickSaveOff:
 	.4byte __RTTI__cf_CfGimmickSaveOff
 	.4byte 0
-	.4byte __dt__802ABC5C
+	.4byte __dt__cf_CfGimmickSaveOff
 	.4byte func_8020896C
 	.4byte func_802ABCB4
 	.4byte func_801F4B64
@@ -238,7 +236,7 @@ __RTTI__cf_CfGimmickSaveOff:
 	.4byte 0x00000000
 	.4byte 0x8680001D
 	.4byte 0x00000000
-	.4byte __dt__8020892C
+	.4byte __dt__cf_CfGimmick
 .endobj "@etb_8001B10C"
 
 .obj "@etb_8001B128", local
@@ -266,7 +264,7 @@ __RTTI__cf_CfGimmickSaveOff:
 
 .obj "@eti_80032F30", local
 .hidden "@eti_80032F30"
-	.4byte __dt__802ABC5C
+	.4byte __dt__cf_CfGimmickSaveOff
 	.4byte 0x00000058
 	.4byte "@etb_8001B128"
 .endobj "@eti_80032F30"

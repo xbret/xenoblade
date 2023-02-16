@@ -2,15 +2,13 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_800BF98C, global
+.fn __ct__cf_CfObjectObj, global
 /* 800BF98C 00088F4C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800BF990 00088F50  7C 08 02 A6 */	mflr r0
 /* 800BF994 00088F54  90 01 00 14 */	stw r0, 0x14(r1)
 /* 800BF998 00088F58  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 800BF99C 00088F5C  7C 7F 1B 78 */	mr r31, r3
-/* 800BF9A0 00088F60  4B FF C2 AD */	bl func_800BBC4C
+/* 800BF9A0 00088F60  4B FF C2 AD */	bl __ct__cf_CfObjectMove
 /* 800BF9A4 00088F64  3C 60 80 53 */	lis r3, __vt__cf_CfObjectObj@ha
 /* 800BF9A8 00088F68  38 00 00 00 */	li r0, 0
 /* 800BF9AC 00088F6C  38 63 D3 1C */	addi r3, r3, __vt__cf_CfObjectObj@l
@@ -41,7 +39,7 @@
 /* 800BFA08 00088FC8  7C 08 03 A6 */	mtlr r0
 /* 800BFA0C 00088FCC  38 21 00 10 */	addi r1, r1, 0x10
 /* 800BFA10 00088FD0  4E 80 00 20 */	blr 
-.endfn func_800BF98C
+.endfn __ct__cf_CfObjectObj
 
 .fn __dt__800BFA14, global
 /* 800BFA14 00088FD4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -493,7 +491,7 @@ __RTTI__cf_CfObjectObj:
 
 .obj "@eti_80025A30", local
 .hidden "@eti_80025A30"
-	.4byte func_800BF98C
+	.4byte __ct__cf_CfObjectObj
 	.4byte 0x00000088
 	.4byte "@etb_80009F18"
 .endobj "@eti_80025A30"

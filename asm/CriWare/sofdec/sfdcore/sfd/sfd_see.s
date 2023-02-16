@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
 .fn SFSEE_InitHn, global
 /* 803CBC88 00395248  38 A0 00 00 */	li r5, 0
 /* 803CBC8C 0039524C  38 80 FF FD */	li r4, -3

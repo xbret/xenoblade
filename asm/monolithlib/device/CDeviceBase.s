@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn __dt__80447900, global
+.fn __dt__CDeviceBase, global
 /* 80447900 00410EC0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80447904 00410EC4  7C 08 02 A6 */	mflr r0
 /* 80447908 00410EC8  2C 03 00 00 */	cmpwi r3, 0
@@ -28,9 +26,9 @@
 /* 8044794C 00410F0C  7C 08 03 A6 */	mtlr r0
 /* 80447950 00410F10  38 21 00 10 */	addi r1, r1, 0x10
 /* 80447954 00410F14  4E 80 00 20 */	blr 
-.endfn __dt__80447900
+.endfn __dt__CDeviceBase
 
-.fn __dt__80447958, global
+.fn __dt__CDeviceRemotePad, global
 /* 80447958 00410F18  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044795C 00410F1C  7C 08 02 A6 */	mflr r0
 /* 80447960 00410F20  2C 03 00 00 */	cmpwi r3, 0
@@ -58,7 +56,7 @@
 /* 804479B0 00410F70  7C 08 03 A6 */	mtlr r0
 /* 804479B4 00410F74  38 21 00 10 */	addi r1, r1, 0x10
 /* 804479B8 00410F78  4E 80 00 20 */	blr 
-.endfn __dt__80447958
+.endfn __dt__CDeviceRemotePad
 
 .fn func_804479BC, global
 /* 804479BC 00410F7C  80 6D BD 98 */	lwz r3, lbl_80667F18@sda21(r13)
@@ -213,7 +211,7 @@ CDeviceBase_typestr:
 __vt__CDeviceBase:
 	.4byte __RTTI__CDeviceBase
 	.4byte 0
-	.4byte __dt__80447900
+	.4byte __dt__CDeviceBase
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -313,14 +311,14 @@ lbl_80667F18:
 
 .obj "@eti_80034640", local
 .hidden "@eti_80034640"
-	.4byte __dt__80447900
+	.4byte __dt__CDeviceBase
 	.4byte 0x00000058
 	.4byte "@etb_8001CA1C"
 .endobj "@eti_80034640"
 
 .obj "@eti_8003464C", local
 .hidden "@eti_8003464C"
-	.4byte __dt__80447958
+	.4byte __dt__CDeviceRemotePad
 	.4byte 0x00000064
 	.4byte "@etb_8001CA24"
 .endobj "@eti_8003464C"

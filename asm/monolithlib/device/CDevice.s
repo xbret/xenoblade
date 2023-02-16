@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CDeviceException, global
 /* 8044D820 00416DE0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8044D824 00416DE4  7C 08 02 A6 */	mflr r0
@@ -176,7 +174,7 @@
 /* 8044DA78 00417038  4E 80 00 20 */	blr 
 .endfn func_8044DA44
 
-.fn __dt__8044DA7C, global
+.fn __dt___unnamed_CDevice_cpp_CDeviceException, global
 /* 8044DA7C 0041703C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044DA80 00417040  7C 08 02 A6 */	mflr r0
 /* 8044DA84 00417044  2C 03 00 00 */	cmpwi r3, 0
@@ -202,7 +200,7 @@
 /* 8044DAD0 00417090  7C 08 03 A6 */	mtlr r0
 /* 8044DAD4 00417094  38 21 00 10 */	addi r1, r1, 0x10
 /* 8044DAD8 00417098  4E 80 00 20 */	blr 
-.endfn __dt__8044DA7C
+.endfn __dt___unnamed_CDevice_cpp_CDeviceException
 
 .fn func_8044DADC, global
 /* 8044DADC 0041709C  80 83 00 60 */	lwz r4, 0x60(r3)
@@ -279,7 +277,7 @@ lbl_805263E8:
 __vt___unnamed_CDevice_cpp_CDeviceException:
 	.4byte __RTTI___unnamed_CDevice_cpp_CDeviceException
 	.4byte 0
-	.4byte __dt__8044DA7C
+	.4byte __dt___unnamed_CDevice_cpp_CDeviceException
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -332,7 +330,7 @@ _unnamed_CDevice_cpp_CDeviceException_hierarchy:
 __vt__CDevice:
 	.4byte __RTTI__CDevice
 	.4byte 0
-	.4byte __dt__8044CFF0
+	.4byte __dt__CDevice
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -495,7 +493,7 @@ __RTTI__CDevice:
 
 .obj "@eti_80034994", local
 .hidden "@eti_80034994"
-	.4byte __dt__8044DA7C
+	.4byte __dt___unnamed_CDevice_cpp_CDeviceException
 	.4byte 0x00000060
 	.4byte "@etb_8001CD00"
 .endobj "@eti_80034994"

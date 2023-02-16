@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_802430AC, global
 /* 802430AC 0020C66C  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 802430B0 0020C670  7C 08 02 A6 */	mflr r0
@@ -226,7 +224,7 @@
 /* 802433CC 0020C98C  4E 80 00 20 */	blr 
 .endfn func_802430AC
 
-.fn __dt__802433D0, global
+.fn __dt__CMapSel, global
 /* 802433D0 0020C990  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802433D4 0020C994  7C 08 02 A6 */	mflr r0
 /* 802433D8 0020C998  2C 03 00 00 */	cmpwi r3, 0
@@ -255,7 +253,7 @@
 /* 80243430 0020C9F0  7C 08 03 A6 */	mtlr r0
 /* 80243434 0020C9F4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80243438 0020C9F8  4E 80 00 20 */	blr 
-.endfn __dt__802433D0
+.endfn __dt__CMapSel
 
 .fn func_8024343C, global
 /* 8024343C 0020C9FC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1376,7 +1374,7 @@ jumptable_8053A550:
 __vt__CMapSel:
 	.4byte __RTTI__CMapSel
 	.4byte 0
-	.4byte __dt__802433D0
+	.4byte __dt__CMapSel
 	.4byte func_80039E28
 	.4byte func_802440E0
 	.4byte func_80039E18
@@ -1650,7 +1648,7 @@ CMapSel_typestr:
 
 .obj "@eti_8002F18C", local
 .hidden "@eti_8002F18C"
-	.4byte __dt__802433D0
+	.4byte __dt__CMapSel
 	.4byte 0x0000006C
 	.4byte "@etb_80016378"
 .endobj "@eti_8002F18C"

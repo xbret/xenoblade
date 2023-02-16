@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
 .fn SFD_SetElementOutSj, global
 /* 803C0EF0 0038A4B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803C0EF4 0038A4B4  7C 08 02 A6 */	mflr r0

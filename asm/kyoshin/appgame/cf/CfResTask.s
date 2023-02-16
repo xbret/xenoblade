@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn __dt__80065848, global
+.fn __dt__CTTask_cf_CfResTask, global
 /* 80065848 0002EE08  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8006584C 0002EE0C  7C 08 02 A6 */	mflr r0
 /* 80065850 0002EE10  2C 03 00 00 */	cmpwi r3, 0
@@ -15,7 +13,7 @@
 /* 80065864 0002EE24  7C 7E 1B 78 */	mr r30, r3
 /* 80065868 0002EE28  41 82 00 1C */	beq .L_80065884
 /* 8006586C 0002EE2C  38 80 00 00 */	li r4, 0
-/* 80065870 0002EE30  48 3D F2 C9 */	bl __dt__80444B38
+/* 80065870 0002EE30  48 3D F2 C9 */	bl __dt__CProcess
 /* 80065874 0002EE34  2C 1F 00 00 */	cmpwi r31, 0
 /* 80065878 0002EE38  40 81 00 0C */	ble .L_80065884
 /* 8006587C 0002EE3C  7F C3 F3 78 */	mr r3, r30
@@ -28,9 +26,9 @@
 /* 80065894 0002EE54  7C 08 03 A6 */	mtlr r0
 /* 80065898 0002EE58  38 21 00 10 */	addi r1, r1, 0x10
 /* 8006589C 0002EE5C  4E 80 00 20 */	blr 
-.endfn __dt__80065848
+.endfn __dt__CTTask_cf_CfResTask
 
-.fn __dt__800658A0, global
+.fn __dt__cf_CfRes, global
 /* 800658A0 0002EE60  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800658A4 0002EE64  7C 08 02 A6 */	mflr r0
 /* 800658A8 0002EE68  2C 03 00 00 */	cmpwi r3, 0
@@ -55,9 +53,9 @@
 /* 800658F0 0002EEB0  7C 08 03 A6 */	mtlr r0
 /* 800658F4 0002EEB4  38 21 00 10 */	addi r1, r1, 0x10
 /* 800658F8 0002EEB8  4E 80 00 20 */	blr 
-.endfn __dt__800658A0
+.endfn __dt__cf_CfRes
 
-.fn __dt__800658FC, global
+.fn __dt__cf_CfResTask, global
 /* 800658FC 0002EEBC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80065900 0002EEC0  7C 08 02 A6 */	mflr r0
 /* 80065904 0002EEC4  2C 03 00 00 */	cmpwi r3, 0
@@ -77,7 +75,7 @@
 /* 80065938 0002EEF8  41 82 00 10 */	beq .L_80065948
 /* 8006593C 0002EEFC  7F C3 F3 78 */	mr r3, r30
 /* 80065940 0002EF00  38 80 00 00 */	li r4, 0
-/* 80065944 0002EF04  48 3D F1 F5 */	bl __dt__80444B38
+/* 80065944 0002EF04  48 3D F1 F5 */	bl __dt__CProcess
 .L_80065948:
 /* 80065948 0002EF08  2C 1F 00 00 */	cmpwi r31, 0
 /* 8006594C 0002EF0C  40 81 00 0C */	ble .L_80065958
@@ -91,7 +89,7 @@
 /* 80065968 0002EF28  7C 08 03 A6 */	mtlr r0
 /* 8006596C 0002EF2C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80065970 0002EF30  4E 80 00 20 */	blr 
-.endfn __dt__800658FC
+.endfn __dt__cf_CfResTask
 
 .fn func_80065974, global
 /* 80065974 0002EF34  4E 80 00 20 */	blr 
@@ -146,7 +144,7 @@
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x00000054
-	.4byte __dt__800658A0
+	.4byte __dt__cf_CfRes
 .endobj "@etb_80007C54"
 
 .obj "@etb_80007C70", local
@@ -161,21 +159,21 @@
 
 .obj "@eti_80022E38", local
 .hidden "@eti_80022E38"
-	.4byte __dt__80065848
+	.4byte __dt__CTTask_cf_CfResTask
 	.4byte 0x00000058
 	.4byte "@etb_80007C44"
 .endobj "@eti_80022E38"
 
 .obj "@eti_80022E44", local
 .hidden "@eti_80022E44"
-	.4byte __dt__800658A0
+	.4byte __dt__cf_CfRes
 	.4byte 0x0000005C
 	.4byte "@etb_80007C4C"
 .endobj "@eti_80022E44"
 
 .obj "@eti_80022E50", local
 .hidden "@eti_80022E50"
-	.4byte __dt__800658FC
+	.4byte __dt__cf_CfResTask
 	.4byte 0x00000078
 	.4byte "@etb_80007C54"
 .endobj "@eti_80022E50"

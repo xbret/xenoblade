@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_8022CE70, global
 /* 8022CE70 001F6430  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8022CE74 001F6434  7C 08 02 A6 */	mflr r0
@@ -33,7 +31,7 @@
 /* 8022CED4 001F6494  4E 80 00 20 */	blr 
 .endfn func_8022CE70
 
-.fn __dt__8022CED8, global
+.fn __dt__CExchangeWin, global
 /* 8022CED8 001F6498  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8022CEDC 001F649C  7C 08 02 A6 */	mflr r0
 /* 8022CEE0 001F64A0  2C 03 00 00 */	cmpwi r3, 0
@@ -56,7 +54,7 @@
 /* 8022CF20 001F64E0  7C 08 03 A6 */	mtlr r0
 /* 8022CF24 001F64E4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8022CF28 001F64E8  4E 80 00 20 */	blr 
-.endfn __dt__8022CED8
+.endfn __dt__CExchangeWin
 
 .fn func_8022CF2C, global
 /* 8022CF2C 001F64EC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -555,7 +553,7 @@ CExchangeWin_strpool:
 __vt__CExchangeWin:
 	.4byte __RTTI__CExchangeWin
 	.4byte 0
-	.4byte __dt__8022CED8
+	.4byte __dt__CExchangeWin
 	.4byte func_80039E28
 	.4byte func_8022D294
 	.4byte func_80039E18
@@ -705,7 +703,7 @@ double_8066AED8:
 
 .obj "@eti_8002E610", local
 .hidden "@eti_8002E610"
-	.4byte __dt__8022CED8
+	.4byte __dt__CExchangeWin
 	.4byte 0x00000054
 	.4byte "@etb_80015704"
 .endobj "@eti_8002E610"

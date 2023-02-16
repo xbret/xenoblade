@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CLibLayout, global
 /* 8045EF84 00428544  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045EF88 00428548  7C 08 02 A6 */	mflr r0

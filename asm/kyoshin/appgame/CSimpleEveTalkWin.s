@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_801A1864, global
 /* 801A1864 0016AE24  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801A1868 0016AE28  7C 08 02 A6 */	mflr r0
@@ -71,7 +69,7 @@
 /* 801A1960 0016AF20  4E 80 00 20 */	blr
 .endfn func_801A1864
 
-.fn __dt__801A1964, global
+.fn __dt__CSimpleEveTalkWin, global
 /* 801A1964 0016AF24  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801A1968 0016AF28  7C 08 02 A6 */	mflr r0
 /* 801A196C 0016AF2C  2C 03 00 00 */	cmpwi r3, 0
@@ -89,7 +87,7 @@
 /* 801A199C 0016AF5C  41 82 00 10 */	beq .L_801A19AC
 /* 801A19A0 0016AF60  7F C3 F3 78 */	mr r3, r30
 /* 801A19A4 0016AF64  38 80 00 00 */	li r4, 0
-/* 801A19A8 0016AF68  48 2A 31 91 */	bl __dt__80444B38
+/* 801A19A8 0016AF68  48 2A 31 91 */	bl __dt__CProcess
 .L_801A19AC:
 /* 801A19AC 0016AF6C  2C 1F 00 00 */	cmpwi r31, 0
 /* 801A19B0 0016AF70  40 81 00 0C */	ble .L_801A19BC
@@ -103,7 +101,7 @@
 /* 801A19CC 0016AF8C  7C 08 03 A6 */	mtlr r0
 /* 801A19D0 0016AF90  38 21 00 10 */	addi r1, r1, 0x10
 /* 801A19D4 0016AF94  4E 80 00 20 */	blr 
-.endfn __dt__801A1964
+.endfn __dt__CSimpleEveTalkWin
 
 .fn func_801A19D8, global
 /* 801A19D8 0016AF98  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -1200,7 +1198,7 @@
 
 .fn func_801A29B4, global
 /* 801A29B4 0016BF74  38 63 FF 94 */	addi r3, r3, -108
-/* 801A29B8 0016BF78  4B FF EF AC */	b __dt__801A1964
+/* 801A29B8 0016BF78  4B FF EF AC */	b __dt__CSimpleEveTalkWin
 .endfn func_801A29B4
 
 .fn func_801A29BC, global
@@ -1210,7 +1208,7 @@
 
 .fn func_801A29C4, global
 /* 801A29C4 0016BF84  38 63 FF 90 */	addi r3, r3, -112
-/* 801A29C8 0016BF88  4B FF EF 9C */	b __dt__801A1964
+/* 801A29C8 0016BF88  4B FF EF 9C */	b __dt__CSimpleEveTalkWin
 .endfn func_801A29C4
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -1250,7 +1248,7 @@ CSimpleEveTalkWin_strpool:
 __vt__CSimpleEveTalkWin:
 	.4byte __RTTI__CSimpleEveTalkWin
 	.4byte 0
-	.4byte __dt__801A1964
+	.4byte __dt__CSimpleEveTalkWin
 	.4byte CChildListNode_Reset
 	.4byte func_801A19D8
 	.4byte func_801A1DF8
@@ -1377,13 +1375,13 @@ lbl_80666C14:
 	.4byte 0x00000000
 	.4byte 0x0680001B
 	.4byte 0x00000070
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x0680001B
 	.4byte 0x0000006C
 	.4byte __dt__IWorkEvent
 	.4byte 0x8680001B
 	.4byte 0x00000000
-	.4byte __dt__8012235C
+	.4byte __dt__IUIWindow
 .endobj "@etb_8000F6B0"
 
 .obj "@etb_8000F6E4", local
@@ -1397,7 +1395,7 @@ lbl_80666C14:
 	.4byte __dt__8045F580
 	.4byte 0x0680001E
 	.4byte 0x00000070
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x8680001E
 	.4byte 0x0000006C
 	.4byte __dt__IWorkEvent
@@ -1474,7 +1472,7 @@ lbl_80666C14:
 
 .obj "@eti_8002A530", local
 .hidden "@eti_8002A530"
-	.4byte __dt__801A1964
+	.4byte __dt__CSimpleEveTalkWin
 	.4byte 0x00000074
 	.4byte "@etb_8000F6E4"
 .endobj "@eti_8002A530"

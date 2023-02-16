@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn __dt__8048F338, global
+.fn __dt__CScnRootNw4r, global
 /* 8048F338 004588F8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8048F33C 004588FC  7C 08 02 A6 */	mflr r0
 /* 8048F340 00458900  2C 03 00 00 */	cmpwi r3, 0
@@ -108,7 +106,7 @@
 /* 8048F498 00458A58  90 1B 04 C4 */	stw r0, 0x4c4(r27)
 /* 8048F49C 00458A5C  7F 63 DB 78 */	mr r3, r27
 /* 8048F4A0 00458A60  38 80 00 00 */	li r4, 0
-/* 8048F4A4 00458A64  4B FF F8 9D */	bl __dt__8048ED40
+/* 8048F4A4 00458A64  4B FF F8 9D */	bl __dt__CScnRoot
 /* 8048F4A8 00458A68  2C 1C 00 00 */	cmpwi r28, 0
 /* 8048F4AC 00458A6C  40 81 00 0C */	ble .L_8048F4B8
 /* 8048F4B0 00458A70  7F 63 DB 78 */	mr r3, r27
@@ -120,7 +118,7 @@
 /* 8048F4C4 00458A84  7C 08 03 A6 */	mtlr r0
 /* 8048F4C8 00458A88  38 21 00 30 */	addi r1, r1, 0x30
 /* 8048F4CC 00458A8C  4E 80 00 20 */	blr 
-.endfn __dt__8048F338
+.endfn __dt__CScnRootNw4r
 
 .fn func_8048F4D0, global
 /* 8048F4D0 00458A90  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -999,7 +997,7 @@
 
 .fn func_80490090, global
 /* 80490090 00459650  38 63 FF F4 */	addi r3, r3, -12
-/* 80490094 00459654  4B FF F2 A4 */	b __dt__8048F338
+/* 80490094 00459654  4B FF F2 A4 */	b __dt__CScnRootNw4r
 .endfn func_80490090
 
 .fn func_80490098, global
@@ -1045,7 +1043,7 @@ CScnRootNw4r_strpool:
 __vt__CScnRootNw4r:
 	.4byte __RTTI__CScnRootNw4r
 	.4byte 0
-	.4byte __dt__8048F338
+	.4byte __dt__CScnRootNw4r
 	.4byte func_8048F5C8
 	.4byte func_8048F4D0
 	.4byte func_8048F8E8
@@ -1099,7 +1097,7 @@ __RTTI__CScnRootNw4r:
 	.4byte __dt__Q34nw4r3g3d15IScnObjCallbackFv
 	.4byte 0x8680001B
 	.4byte 0x00000000
-	.4byte __dt__8048ED40
+	.4byte __dt__CScnRoot
 	.4byte 0x8680001B
 	.4byte 0x0000000C
 	.4byte __dt__Q34nw4r3g3d15IScnObjCallbackFv
@@ -1171,7 +1169,7 @@ __RTTI__CScnRootNw4r:
 
 .obj "@eti_80036830", local
 .hidden "@eti_80036830"
-	.4byte __dt__8048F338
+	.4byte __dt__CScnRootNw4r
 	.4byte 0x00000198
 	.4byte "@etb_8001EC30"
 .endobj "@eti_80036830"

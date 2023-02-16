@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
 .fn UTY_CmpTime, global
 /* 803D43DC 0039D99C  7C E3 30 96 */	mulhw r7, r3, r6
 /* 803D43E0 0039D9A0  7C 05 20 96 */	mulhw r0, r5, r4

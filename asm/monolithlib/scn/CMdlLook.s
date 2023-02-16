@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_804E7A80, global
 /* 804E7A80 004B1040  C0 02 D7 98 */	lfs f0, float_8066DB18@sda21(r2)
 /* 804E7A84 004B1044  3C 80 80 57 */	lis r4, __vt__CMdlLook@ha
@@ -37,7 +35,7 @@
 /* 804E7AF4 004B10B4  4E 80 00 20 */	blr 
 .endfn func_804E7A80
 
-.fn __dt__804E7AF8, global
+.fn __dt__CMdlLook, global
 /* 804E7AF8 004B10B8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804E7AFC 004B10BC  7C 08 02 A6 */	mflr r0
 /* 804E7B00 004B10C0  2C 03 00 00 */	cmpwi r3, 0
@@ -55,7 +53,7 @@
 /* 804E7B2C 004B10EC  7C 08 03 A6 */	mtlr r0
 /* 804E7B30 004B10F0  38 21 00 10 */	addi r1, r1, 0x10
 /* 804E7B34 004B10F4  4E 80 00 20 */	blr 
-.endfn __dt__804E7AF8
+.endfn __dt__CMdlLook
 
 .fn func_804E7B38, global
 /* 804E7B38 004B10F8  94 21 FE 00 */	stwu r1, -0x200(r1)
@@ -1811,7 +1809,7 @@ CMdlLook_strpool:
 __vt__CMdlLook:
 	.4byte __RTTI__CMdlLook
 	.4byte 0
-	.4byte __dt__804E7AF8
+	.4byte __dt__CMdlLook
 	.4byte 0
 
 
@@ -1979,7 +1977,7 @@ lbl_80668334:
 
 .obj "@eti_80038E7C", local
 .hidden "@eti_80038E7C"
-	.4byte __dt__804E7AF8
+	.4byte __dt__CMdlLook
 	.4byte 0x00000040
 	.4byte "@etb_80020D28"
 .endobj "@eti_80038E7C"

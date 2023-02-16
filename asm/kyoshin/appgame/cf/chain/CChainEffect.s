@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_802A07F4, global
 /* 802A07F4 00269DB4  2C 04 00 00 */	cmpwi r4, 0
 /* 802A07F8 00269DB8  41 82 00 08 */	beq .L_802A0800
@@ -264,7 +262,7 @@ cf_CChainEffect_typestr:
 __vt__cf_CChainEffect:
 	.4byte __RTTI__cf_CChainEffect
 	.4byte 0
-	.4byte __dt__800D8D3C
+	.4byte __dt__cf_CChainEffect
 	.4byte func_802A0AE0
 
 .global cf_CChainEffect_hierarchy

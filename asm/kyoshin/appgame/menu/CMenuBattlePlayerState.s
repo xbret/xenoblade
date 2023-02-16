@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CMenuBattlePlayerState, global
 /* 8010ADA4 000D4364  94 21 FD 50 */	stwu r1, -0x2b0(r1)
 /* 8010ADA8 000D4368  7C 08 02 A6 */	mflr r0
@@ -469,7 +467,7 @@
 /* 8010B480 000D4A40  4E 80 00 20 */	blr
 .endfn __dt__8010B444
 
-.fn __dt__8010B484, global
+.fn __dt__CMenuBattlePlayerState, global
 /* 8010B484 000D4A44  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8010B488 000D4A48  7C 08 02 A6 */	mflr r0
 /* 8010B48C 000D4A4C  2C 03 00 00 */	cmpwi r3, 0
@@ -499,7 +497,7 @@
 /* 8010B4E8 000D4AA8  41 82 00 10 */	beq .L_8010B4F8
 /* 8010B4EC 000D4AAC  7F C3 F3 78 */	mr r3, r30
 /* 8010B4F0 000D4AB0  38 80 00 00 */	li r4, 0
-/* 8010B4F4 000D4AB4  48 33 96 45 */	bl __dt__80444B38
+/* 8010B4F4 000D4AB4  48 33 96 45 */	bl __dt__CProcess
 .L_8010B4F8:
 /* 8010B4F8 000D4AB8  2C 1F 00 00 */	cmpwi r31, 0
 /* 8010B4FC 000D4ABC  40 81 00 0C */	ble .L_8010B508
@@ -513,7 +511,7 @@
 /* 8010B518 000D4AD8  7C 08 03 A6 */	mtlr r0
 /* 8010B51C 000D4ADC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8010B520 000D4AE0  4E 80 00 20 */	blr 
-.endfn __dt__8010B484
+.endfn __dt__CMenuBattlePlayerState
 
 .fn func_8010B524, global
 /* 8010B524 000D4AE4  94 21 FD 70 */	stwu r1, -0x290(r1)
@@ -4131,7 +4129,7 @@
 
 .fn func_8010EA4C, global
 /* 8010EA4C 000D800C  38 63 FF A8 */	addi r3, r3, -88
-/* 8010EA50 000D8010  4B FF CA 34 */	b __dt__8010B484
+/* 8010EA50 000D8010  4B FF CA 34 */	b __dt__CMenuBattlePlayerState
 .endfn func_8010EA4C
 
 .fn func_8010EA54, global
@@ -4141,7 +4139,7 @@
 
 .fn func_8010EA5C, global
 /* 8010EA5C 000D801C  38 63 FF A4 */	addi r3, r3, -92
-/* 8010EA60 000D8020  4B FF CA 24 */	b __dt__8010B484
+/* 8010EA60 000D8020  4B FF CA 24 */	b __dt__CMenuBattlePlayerState
 .endfn func_8010EA5C
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
@@ -4237,7 +4235,7 @@ CMenuBattlePlayerState_strpool:
 __vt__CMenuBattlePlayerState:
 	.4byte __RTTI__CMenuBattlePlayerState
 	.4byte 0
-	.4byte __dt__8010B484
+	.4byte __dt__CMenuBattlePlayerState
 	.4byte CChildListNode_Reset
 	.4byte func_8010B524
 	.4byte func_8010C180
@@ -4446,7 +4444,7 @@ lbl_80666840:
 	.4byte __dt__8045F580
 	.4byte 0x0680001B
 	.4byte 0x0000005C
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x0680001B
 	.4byte 0x00000058
 	.4byte __dt__IWorkEvent
@@ -4473,10 +4471,10 @@ lbl_80666840:
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x000007CC
-	.4byte __dt__8010A694
+	.4byte __dt__CPcSelectCursor01
 	.4byte 0x0780001E
 	.4byte 0x000007CC
-	.4byte __dt__8010A694
+	.4byte __dt__CPcSelectCursor01
 	.4byte 0x8980001E
 	.4byte 0x00000074
 	.4byte 0x00000003
@@ -4484,7 +4482,7 @@ lbl_80666840:
 	.4byte __dt__8010B444
 	.4byte 0x0780001E
 	.4byte 0x000007CC
-	.4byte __dt__8010A694
+	.4byte __dt__CPcSelectCursor01
 	.4byte 0x0980001E
 	.4byte 0x00000074
 	.4byte 0x00000003
@@ -4495,7 +4493,7 @@ lbl_80666840:
 	.4byte __dt__8045F580
 	.4byte 0x0680001E
 	.4byte 0x0000005C
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x8680001E
 	.4byte 0x00000058
 	.4byte __dt__IWorkEvent
@@ -4601,7 +4599,7 @@ lbl_80666840:
 
 .obj "@eti_800269A8", local
 .hidden "@eti_800269A8"
-	.4byte __dt__8010B484
+	.4byte __dt__CMenuBattlePlayerState
 	.4byte 0x000000A0
 	.4byte "@etb_8000B210"
 .endobj "@eti_800269A8"

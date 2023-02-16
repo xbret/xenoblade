@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CMenuPTState, global
 /* 80192AB8 0015C078  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80192ABC 0015C07C  7C 08 02 A6 */	mflr r0
@@ -95,7 +93,7 @@
 
 .fn func_80192BEC, global
 /* 80192BEC 0015C1AC  38 63 FF A8 */	addi r3, r3, -88
-/* 80192BF0 0015C1B0  4B FF E8 30 */	b __dt__80191420
+/* 80192BF0 0015C1B0  4B FF E8 30 */	b __dt__CMenuPTState
 .endfn func_80192BEC
 
 .fn func_80192BF4, global
@@ -260,7 +258,7 @@ CMenuPTState_typestr:
 __vt__CMenuPTState:
 	.4byte __RTTI__CMenuPTState
 	.4byte 0
-	.4byte __dt__80191420
+	.4byte __dt__CMenuPTState
 	.4byte CChildListNode_Reset
 	.4byte func_801914A0
 	.4byte func_80192840
@@ -339,7 +337,7 @@ float_8066A368:
 	.4byte __dt__CBgTex
 	.4byte 0x0680001E
 	.4byte 0x00000058
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x8680001E
 	.4byte 0x00000000
 	.4byte __dt__800FED0C

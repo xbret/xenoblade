@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_8022774C, global
 /* 8022774C 001F0D0C  94 21 DE 80 */	stwu r1, -0x2180(r1)
 /* 80227750 001F0D10  7C 08 02 A6 */	mflr r0
@@ -174,7 +172,7 @@
 /* 802279C8 001F0F88  4E 80 00 20 */	blr 
 .endfn func_80227994
 
-.fn __dt__802279CC, global
+.fn __dt__CQstLogList, global
 /* 802279CC 001F0F8C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802279D0 001F0F90  7C 08 02 A6 */	mflr r0
 /* 802279D4 001F0F94  2C 03 00 00 */	cmpwi r3, 0
@@ -214,7 +212,7 @@
 /* 80227A54 001F1014  7C 08 03 A6 */	mtlr r0
 /* 80227A58 001F1018  38 21 00 10 */	addi r1, r1, 0x10
 /* 80227A5C 001F101C  4E 80 00 20 */	blr 
-.endfn __dt__802279CC
+.endfn __dt__CQstLogList
 
 .fn func_80227A60, global
 /* 80227A60 001F1020  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2124,7 +2122,7 @@ jumptable_805399E0:
 __vt__CQstLogList:
 	.4byte __RTTI__CQstLogList
 	.4byte 0
-	.4byte __dt__802279CC
+	.4byte __dt__CQstLogList
 	.4byte func_80039E28
 	.4byte func_80228CD8
 	.4byte func_80039E18
@@ -2497,7 +2495,7 @@ lbl_80667028:
 
 .obj "@eti_8002E28C", local
 .hidden "@eti_8002E28C"
-	.4byte __dt__802279CC
+	.4byte __dt__CQstLogList
 	.4byte 0x00000094
 	.4byte "@etb_80015384"
 .endobj "@eti_8002E28C"

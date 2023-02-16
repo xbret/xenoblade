@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_80444418, global
 /* 80444418 0040D9D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044441C 0040D9DC  7C 08 02 A6 */	mflr r0
@@ -32,7 +30,7 @@
 /* 80444478 0040DA38  4E 80 00 20 */	blr 
 .endfn func_80444418
 
-.fn __dt__8044447C, global
+.fn __dt__CWorkSystem, global
 /* 8044447C 0040DA3C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80444480 0040DA40  7C 08 02 A6 */	mflr r0
 /* 80444484 0040DA44  2C 03 00 00 */	cmpwi r3, 0
@@ -56,7 +54,7 @@
 /* 804444C8 0040DA88  7C 08 03 A6 */	mtlr r0
 /* 804444CC 0040DA8C  38 21 00 10 */	addi r1, r1, 0x10
 /* 804444D0 0040DA90  4E 80 00 20 */	blr 
-.endfn __dt__8044447C
+.endfn __dt__CWorkSystem
 
 .fn func_804444D4, global
 /* 804444D4 0040DA94  80 6D BD 7C */	lwz r3, lbl_80667EFC@sda21(r13)
@@ -203,7 +201,7 @@
 /* 804446B4 0040DC74  41 82 00 10 */	beq .L_804446C4
 /* 804446B8 0040DC78  7F E4 FB 78 */	mr r4, r31
 /* 804446BC 0040DC7C  7F C5 F3 78 */	mr r5, r30
-/* 804446C0 0040DC80  48 09 46 D1 */	bl func_804D8D90
+/* 804446C0 0040DC80  48 09 46 D1 */	bl __ct__CWorkSystemCache
 .L_804446C4:
 /* 804446C4 0040DC84  7F C4 F3 78 */	mr r4, r30
 /* 804446C8 0040DC88  38 A0 00 00 */	li r5, 0
@@ -385,7 +383,7 @@ CWorkSystem_strpool:
 __vt__CWorkSystem:
 	.4byte __RTTI__CWorkSystem
 	.4byte 0
-	.4byte __dt__8044447C
+	.4byte __dt__CWorkSystem
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -513,7 +511,7 @@ lbl_80667EFC:
 
 .obj "@eti_8003443C", local
 .hidden "@eti_8003443C"
-	.4byte __dt__8044447C
+	.4byte __dt__CWorkSystem
 	.4byte 0x00000058
 	.4byte "@etb_8001C840"
 .endobj "@eti_8003443C"

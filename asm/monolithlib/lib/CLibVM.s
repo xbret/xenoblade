@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_804600E0, global
 /* 804600E0 004296A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804600E4 004296A4  7C 08 02 A6 */	mflr r0
@@ -26,7 +24,7 @@
 /* 80460128 004296E8  4E 80 00 20 */	blr 
 .endfn func_804600E0
 
-.fn __dt__8046012C, global
+.fn __dt__CLibVM, global
 /* 8046012C 004296EC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80460130 004296F0  7C 08 02 A6 */	mflr r0
 /* 80460134 004296F4  2C 03 00 00 */	cmpwi r3, 0
@@ -52,7 +50,7 @@
 /* 80460180 00429740  7C 08 03 A6 */	mtlr r0
 /* 80460184 00429744  38 21 00 10 */	addi r1, r1, 0x10
 /* 80460188 00429748  4E 80 00 20 */	blr 
-.endfn __dt__8046012C
+.endfn __dt__CLibVM
 
 .fn func_8046018C, global
 /* 8046018C 0042974C  80 6D BE 78 */	lwz r3, lbl_80667FF8@sda21(r13)
@@ -2813,7 +2811,7 @@
 /* 804627D4 0042BD94  4E 80 00 20 */	blr 
 .endfn func_80462068
 
-.fn __dt__804627D8, global
+.fn __dt__CTTask_CTaskLOD, global
 /* 804627D8 0042BD98  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804627DC 0042BD9C  7C 08 02 A6 */	mflr r0
 /* 804627E0 0042BDA0  2C 03 00 00 */	cmpwi r3, 0
@@ -2824,7 +2822,7 @@
 /* 804627F4 0042BDB4  7C 7E 1B 78 */	mr r30, r3
 /* 804627F8 0042BDB8  41 82 00 1C */	beq .L_80462814
 /* 804627FC 0042BDBC  38 80 00 00 */	li r4, 0
-/* 80462800 0042BDC0  4B FE 23 39 */	bl __dt__80444B38
+/* 80462800 0042BDC0  4B FE 23 39 */	bl __dt__CProcess
 /* 80462804 0042BDC4  2C 1F 00 00 */	cmpwi r31, 0
 /* 80462808 0042BDC8  40 81 00 0C */	ble .L_80462814
 /* 8046280C 0042BDCC  7F C3 F3 78 */	mr r3, r30
@@ -2837,9 +2835,9 @@
 /* 80462824 0042BDE4  7C 08 03 A6 */	mtlr r0
 /* 80462828 0042BDE8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8046282C 0042BDEC  4E 80 00 20 */	blr 
-.endfn __dt__804627D8
+.endfn __dt__CTTask_CTaskLOD
 
-.fn __dt__80462830, global
+.fn __dt__CTaskLOD, global
 /* 80462830 0042BDF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80462834 0042BDF4  7C 08 02 A6 */	mflr r0
 /* 80462838 0042BDF8  2C 03 00 00 */	cmpwi r3, 0
@@ -2856,7 +2854,7 @@
 /* 80462864 0042BE24  41 82 00 10 */	beq .L_80462874
 /* 80462868 0042BE28  7F C3 F3 78 */	mr r3, r30
 /* 8046286C 0042BE2C  38 80 00 00 */	li r4, 0
-/* 80462870 0042BE30  4B FE 22 C9 */	bl __dt__80444B38
+/* 80462870 0042BE30  4B FE 22 C9 */	bl __dt__CProcess
 .L_80462874:
 /* 80462874 0042BE34  2C 1F 00 00 */	cmpwi r31, 0
 /* 80462878 0042BE38  40 81 00 0C */	ble .L_80462884
@@ -2870,7 +2868,7 @@
 /* 80462894 0042BE54  7C 08 03 A6 */	mtlr r0
 /* 80462898 0042BE58  38 21 00 10 */	addi r1, r1, 0x10
 /* 8046289C 0042BE5C  4E 80 00 20 */	blr 
-.endfn __dt__80462830
+.endfn __dt__CTaskLOD
 
 .fn func_804628A0, global
 /* 804628A0 0042BE60  4E 80 00 20 */	blr 
@@ -3590,7 +3588,7 @@ lbl_80527648:
 __vt__CLibVM:
 	.4byte __RTTI__CLibVM
 	.4byte 0
-	.4byte __dt__8046012C
+	.4byte __dt__CLibVM
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -3810,7 +3808,7 @@ lbl_80668000:
 
 .obj "@eti_80035510", local
 .hidden "@eti_80035510"
-	.4byte __dt__8046012C
+	.4byte __dt__CLibVM
 	.4byte 0x00000060
 	.4byte "@etb_8001D948"
 .endobj "@eti_80035510"
@@ -3880,14 +3878,14 @@ lbl_80668000:
 
 .obj "@eti_80035588", local
 .hidden "@eti_80035588"
-	.4byte __dt__804627D8
+	.4byte __dt__CTTask_CTaskLOD
 	.4byte 0x00000058
 	.4byte "@etb_8001D998"
 .endobj "@eti_80035588"
 
 .obj "@eti_80035594", local
 .hidden "@eti_80035594"
-	.4byte __dt__80462830
+	.4byte __dt__CTaskLOD
 	.4byte 0x00000070
 	.4byte "@etb_8001D9A0"
 .endobj "@eti_80035594"

@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_80093698, global
 /* 80093698 0005CC58  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009369C 0005CC5C  7C 08 02 A6 */	mflr r0
@@ -3468,7 +3466,7 @@
 /* 80096858 0005FE18  4E 80 00 20 */	blr 
 .endfn func_80096854
 
-.fn __dt__8009685C, global
+.fn __dt__cf_CtrlNpc, global
 /* 8009685C 0005FE1C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80096860 0005FE20  7C 08 02 A6 */	mflr r0
 /* 80096864 0005FE24  2C 03 00 00 */	cmpwi r3, 0
@@ -3486,7 +3484,7 @@
 /* 80096890 0005FE50  7C 08 03 A6 */	mtlr r0
 /* 80096894 0005FE54  38 21 00 10 */	addi r1, r1, 0x10
 /* 80096898 0005FE58  4E 80 00 20 */	blr 
-.endfn __dt__8009685C
+.endfn __dt__cf_CtrlNpc
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -3687,7 +3685,7 @@ lbl_8052B2E0:
 __vt__cf_CtrlNpc:
 	.4byte __RTTI__cf_CtrlNpc
 	.4byte 0
-	.4byte __dt__8009685C
+	.4byte __dt__cf_CtrlNpc
 	.4byte func_80093938
 	.4byte func_8009684C
 	.4byte func_8004B524
@@ -3724,7 +3722,7 @@ cf_CtrlNpc_hierarchy:
 __vt__cf_CtrlBase:
 	.4byte __RTTI__cf_CtrlBase
 	.4byte 0
-	.4byte __dt__80087648
+	.4byte __dt__cf_CtrlBase
 	.4byte 0
 	.4byte func_80096854
 	.4byte func_8004B524
@@ -3923,7 +3921,7 @@ float_80668F9C:
 	.4byte __dt__80087688
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__80087648
+	.4byte __dt__cf_CtrlBase
 .endobj "@etb_80008CC4"
 
 .obj "@etb_80008CF4", local
@@ -4218,7 +4216,7 @@ float_80668F9C:
 
 .obj "@eti_8002444C", local
 .hidden "@eti_8002444C"
-	.4byte __dt__8009685C
+	.4byte __dt__cf_CtrlNpc
 	.4byte 0x00000040
 	.4byte "@etb_80008D9C"
 .endobj "@eti_8002444C"

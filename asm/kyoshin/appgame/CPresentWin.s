@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_8022D56C, global
 /* 8022D56C 001F6B2C  3C A0 80 54 */	lis r5, __vt__CPresentWin@ha
 /* 8022D570 001F6B30  38 80 00 00 */	li r4, 0
@@ -33,7 +31,7 @@
 /* 8022D5D0 001F6B90  4E 80 00 20 */	blr 
 .endfn func_8022D56C
 
-.fn __dt__8022D5D4, global
+.fn __dt__CPresentWin, global
 /* 8022D5D4 001F6B94  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8022D5D8 001F6B98  7C 08 02 A6 */	mflr r0
 /* 8022D5DC 001F6B9C  2C 03 00 00 */	cmpwi r3, 0
@@ -51,7 +49,7 @@
 /* 8022D608 001F6BC8  7C 08 03 A6 */	mtlr r0
 /* 8022D60C 001F6BCC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8022D610 001F6BD0  4E 80 00 20 */	blr 
-.endfn __dt__8022D5D4
+.endfn __dt__CPresentWin
 
 .fn func_8022D614, global
 /* 8022D614 001F6BD4  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -1423,7 +1421,7 @@ CPresentWin_strpool:
 __vt__CPresentWin:
 	.4byte __RTTI__CPresentWin
 	.4byte 0
-	.4byte __dt__8022D5D4
+	.4byte __dt__CPresentWin
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -1589,7 +1587,7 @@ float_8066AEEC:
 
 .obj "@eti_8002E67C", local
 .hidden "@eti_8002E67C"
-	.4byte __dt__8022D5D4
+	.4byte __dt__CPresentWin
 	.4byte 0x00000040
 	.4byte "@etb_8001575C"
 .endobj "@eti_8002E67C"

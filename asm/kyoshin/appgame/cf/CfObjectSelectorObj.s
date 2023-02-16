@@ -1462,7 +1462,7 @@ cf_CfObjectSelectorObj_typestr:
 __vt__cf_CfObjectSelectorObj:
 	.4byte __RTTI__cf_CfObjectSelectorObj
 	.4byte 0
-	.4byte __dt__800FD6A8
+	.4byte __dt__cf_CfObjectSelectorObj
 	.4byte 0
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -1543,13 +1543,13 @@ lbl_8066680C:
 	.4byte 0x00000000
 	.4byte 0x0780001D
 	.4byte 0x000060A0
-	.4byte __dt__800FD6A8
+	.4byte __dt__cf_CfObjectSelectorObj
 	.4byte 0x0780001D
 	.4byte 0x00003040
-	.4byte __dt__800408E8
+	.4byte __dt__cf_CfObjEnumList
 	.4byte 0x8780001D
 	.4byte 0x00000000
-	.4byte __dt__800408E8
+	.4byte __dt__cf_CfObjEnumList
 .endobj "@etb_8000ACF4"
 
 .obj "@etb_8000AD38", local

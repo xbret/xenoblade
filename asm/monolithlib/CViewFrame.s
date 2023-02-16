@@ -2,14 +2,12 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_8043FBC4, global
 /* 8043FBC4 00409184  38 63 FE 3C */	addi r3, r3, -452
-/* 8043FBC8 00409188  4B FF CC 18 */	b __dt__8043C7E0
+/* 8043FBC8 00409188  4B FF CC 18 */	b __dt__CView
 .endfn func_8043FBC4
 
-.fn func_8043FBCC, global
+.fn __ct__CViewFrame, global
 /* 8043FBCC 0040918C  C0 A2 C7 68 */	lfs f5, float_8066CAE8@sda21(r2)
 /* 8043FBD0 00409190  3C C0 80 57 */	lis r6, __vt__CViewFrame@ha
 /* 8043FBD4 00409194  38 A0 00 00 */	li r5, 0
@@ -47,7 +45,7 @@
 /* 8043FC54 00409214  B0 A3 00 54 */	sth r5, 0x54(r3)
 /* 8043FC58 00409218  B0 A3 00 56 */	sth r5, 0x56(r3)
 /* 8043FC5C 0040921C  4E 80 00 20 */	blr 
-.endfn func_8043FBCC
+.endfn __ct__CViewFrame
 
 .fn func_8043FC60, global
 /* 8043FC60 00409220  90 83 00 04 */	stw r4, 4(r3)
@@ -2566,7 +2564,7 @@
 /* 804420CC 0040B68C  4E 80 00 20 */	blr 
 .endfn __dt__80442084
 
-.fn __dt__804420D0, global
+.fn __dt__CViewRoot, global
 /* 804420D0 0040B690  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804420D4 0040B694  7C 08 02 A6 */	mflr r0
 /* 804420D8 0040B698  2C 03 00 00 */	cmpwi r3, 0
@@ -2643,7 +2641,7 @@
 /* 804421D8 0040B798  7C 08 03 A6 */	mtlr r0
 /* 804421DC 0040B79C  38 21 00 20 */	addi r1, r1, 0x20
 /* 804421E0 0040B7A0  4E 80 00 20 */	blr 
-.endfn __dt__804420D0
+.endfn __dt__CViewRoot
 
 .fn func_804421E4, global
 /* 804421E4 0040B7A4  80 6D BD 30 */	lwz r3, lbl_80667EB0@sda21(r13)
@@ -4110,7 +4108,7 @@ CViewFrame_typestr:
 __vt__CViewFrame:
 	.4byte __RTTI__CViewFrame
 	.4byte 0
-	.4byte __dt__8043C5DC
+	.4byte __dt__CViewFrame
 	.4byte 0
 
 
@@ -4267,7 +4265,7 @@ lbl_80667EB4:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x000004F4
-	.4byte __dt__80438E10
+	.4byte __dt__reslist_unsigned_long
 	.4byte 0x0780001E
 	.4byte 0x000003E4
 	.4byte __dt__80442084
@@ -4420,7 +4418,7 @@ lbl_80667EB4:
 
 .obj "@eti_8003425C", local
 .hidden "@eti_8003425C"
-	.4byte __dt__804420D0
+	.4byte __dt__CViewRoot
 	.4byte 0x00000114
 	.4byte "@etb_8001C638"
 .endobj "@eti_8003425C"

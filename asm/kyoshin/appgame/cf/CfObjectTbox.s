@@ -2,15 +2,13 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_801F8CB4, global
+.fn __ct__cf_CfObjectTbox, global
 /* 801F8CB4 001C2274  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801F8CB8 001C2278  7C 08 02 A6 */	mflr r0
 /* 801F8CBC 001C227C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801F8CC0 001C2280  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801F8CC4 001C2284  7C 7F 1B 78 */	mr r31, r3
-/* 801F8CC8 001C2288  4B EC 6C C5 */	bl func_800BF98C
+/* 801F8CC8 001C2288  4B EC 6C C5 */	bl __ct__cf_CfObjectObj
 /* 801F8CCC 001C228C  80 7F 00 B0 */	lwz r3, 0xb0(r31)
 /* 801F8CD0 001C2290  3C 80 80 54 */	lis r4, __vt__cf_CfObjectTbox@ha
 /* 801F8CD4 001C2294  38 84 87 70 */	addi r4, r4, __vt__cf_CfObjectTbox@l
@@ -50,9 +48,9 @@
 /* 801F8D50 001C2310  7C 08 03 A6 */	mtlr r0
 /* 801F8D54 001C2314  38 21 00 10 */	addi r1, r1, 0x10
 /* 801F8D58 001C2318  4E 80 00 20 */	blr 
-.endfn func_801F8CB4
+.endfn __ct__cf_CfObjectTbox
 
-.fn __dt__801F8D5C, global
+.fn __dt__cf_CfObjectTbox, global
 /* 801F8D5C 001C231C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801F8D60 001C2320  7C 08 02 A6 */	mflr r0
 /* 801F8D64 001C2324  2C 03 00 00 */	cmpwi r3, 0
@@ -83,7 +81,7 @@
 /* 801F8DC4 001C2384  7C 08 03 A6 */	mtlr r0
 /* 801F8DC8 001C2388  38 21 00 10 */	addi r1, r1, 0x10
 /* 801F8DCC 001C238C  4E 80 00 20 */	blr 
-.endfn __dt__801F8D5C
+.endfn __dt__cf_CfObjectTbox
 
 .fn func_801F8DD0, global
 /* 801F8DD0 001C2390  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -143,7 +141,7 @@ __vt__cf_CfObjectTbox:
 	.4byte func_800BFAAC
 	.4byte func_8003E664
 	.4byte func_8003DC74
-	.4byte __dt__801F8D5C
+	.4byte __dt__cf_CfObjectTbox
 	.4byte func_800BFA88
 	.4byte func_800AC75C
 	.4byte func_801F8DD0
@@ -299,14 +297,14 @@ __vt__cf_CfObjectTbox:
 
 .obj "@eti_8002C570", local
 .hidden "@eti_8002C570"
-	.4byte func_801F8CB4
+	.4byte __ct__cf_CfObjectTbox
 	.4byte 0x000000A8
 	.4byte "@etb_800123F8"
 .endobj "@eti_8002C570"
 
 .obj "@eti_8002C57C", local
 .hidden "@eti_8002C57C"
-	.4byte __dt__801F8D5C
+	.4byte __dt__cf_CfObjectTbox
 	.4byte 0x00000074
 	.4byte "@etb_80012414"
 .endobj "@eti_8002C57C"

@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CMenuItem, global
 /* 801678F0 00130EB0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801678F4 00130EB4  7C 08 02 A6 */	mflr r0
@@ -243,7 +241,7 @@
 
 .fn func_80167C38, global
 /* 80167C38 001311F8  38 63 FF A8 */	addi r3, r3, -88
-/* 80167C3C 001311FC  4B FF EB FC */	b __dt__80166838
+/* 80167C3C 001311FC  4B FF EB FC */	b __dt__CMenuItem
 .endfn func_80167C38
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -271,7 +269,7 @@ lbl_804FE86C:
 __vt__CMenuItem:
 	.4byte __RTTI__CMenuItem
 	.4byte 0
-	.4byte __dt__80166838
+	.4byte __dt__CMenuItem
 	.4byte CChildListNode_Reset
 	.4byte func_801668C4
 	.4byte func_80167624
@@ -340,7 +338,7 @@ lbl_80666B48:
 	.4byte __dt__CBgTex
 	.4byte 0x0680001E
 	.4byte 0x00000058
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x8680001E
 	.4byte 0x00000000
 	.4byte __dt__800FED0C

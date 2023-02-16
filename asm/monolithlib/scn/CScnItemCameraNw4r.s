@@ -2,15 +2,13 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_80481E6C, global
+.fn __ct__CScnItemCameraNw4r, global
 /* 80481E6C 0044B42C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80481E70 0044B430  7C 08 02 A6 */	mflr r0
 /* 80481E74 0044B434  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80481E78 0044B438  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80481E7C 0044B43C  7C 7F 1B 78 */	mr r31, r3
-/* 80481E80 0044B440  48 01 CA 45 */	bl func_8049E8C4
+/* 80481E80 0044B440  48 01 CA 45 */	bl __ct__CScnItemCamera
 /* 80481E84 0044B444  3C 80 80 57 */	lis r4, __vt__CScnItemCameraNw4r@ha
 /* 80481E88 0044B448  7F E3 FB 78 */	mr r3, r31
 /* 80481E8C 0044B44C  38 84 14 D8 */	addi r4, r4, __vt__CScnItemCameraNw4r@l
@@ -20,9 +18,9 @@
 /* 80481E9C 0044B45C  7C 08 03 A6 */	mtlr r0
 /* 80481EA0 0044B460  38 21 00 10 */	addi r1, r1, 0x10
 /* 80481EA4 0044B464  4E 80 00 20 */	blr 
-.endfn func_80481E6C
+.endfn __ct__CScnItemCameraNw4r
 
-.fn __dt__80481EA8, global
+.fn __dt__CScnItemCameraNw4r, global
 /* 80481EA8 0044B468  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80481EAC 0044B46C  7C 08 02 A6 */	mflr r0
 /* 80481EB0 0044B470  2C 03 00 00 */	cmpwi r3, 0
@@ -33,7 +31,7 @@
 /* 80481EC4 0044B484  7C 7E 1B 78 */	mr r30, r3
 /* 80481EC8 0044B488  41 82 00 1C */	beq .L_80481EE4
 /* 80481ECC 0044B48C  38 80 00 00 */	li r4, 0
-/* 80481ED0 0044B490  48 01 CC 0D */	bl __dt__8049EADC
+/* 80481ED0 0044B490  48 01 CC 0D */	bl __dt__CScnItemCamera
 /* 80481ED4 0044B494  2C 1F 00 00 */	cmpwi r31, 0
 /* 80481ED8 0044B498  40 81 00 0C */	ble .L_80481EE4
 /* 80481EDC 0044B49C  7F C3 F3 78 */	mr r3, r30
@@ -46,7 +44,7 @@
 /* 80481EF4 0044B4B4  7C 08 03 A6 */	mtlr r0
 /* 80481EF8 0044B4B8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80481EFC 0044B4BC  4E 80 00 20 */	blr 
-.endfn __dt__80481EA8
+.endfn __dt__CScnItemCameraNw4r
 
 .fn func_80481F00, global
 /* 80481F00 0044B4C0  94 21 FF B0 */	stwu r1, -0x50(r1)
@@ -195,7 +193,7 @@ CScnItemCamera_typestr:
 __vt__CScnItemCameraNw4r:
 	.4byte __RTTI__CScnItemCameraNw4r
 	.4byte 0
-	.4byte __dt__80481EA8
+	.4byte __dt__CScnItemCameraNw4r
 	.4byte func_8049F9A4
 	.4byte func_80482048
 	.4byte func_80481F9C
@@ -273,14 +271,14 @@ __RTTI__CScnItemCamera:
 
 .obj "@eti_80036194", local
 .hidden "@eti_80036194"
-	.4byte func_80481E6C
+	.4byte __ct__CScnItemCameraNw4r
 	.4byte 0x0000003C
 	.4byte "@etb_8001E210"
 .endobj "@eti_80036194"
 
 .obj "@eti_800361A0", local
 .hidden "@eti_800361A0"
-	.4byte __dt__80481EA8
+	.4byte __dt__CScnItemCameraNw4r
 	.4byte 0x00000058
 	.4byte "@etb_8001E218"
 .endobj "@eti_800361A0"

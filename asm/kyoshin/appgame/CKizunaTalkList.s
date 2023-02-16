@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_80273120, global
 /* 80273120 0023C6E0  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80273124 0023C6E4  7C 08 02 A6 */	mflr r0
@@ -90,7 +88,7 @@
 /* 80273268 0023C828  4E 80 00 20 */	blr 
 .endfn func_80273120
 
-.fn __dt__8027326C, global
+.fn __dt__CKizunaTalkList, global
 /* 8027326C 0023C82C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80273270 0023C830  7C 08 02 A6 */	mflr r0
 /* 80273274 0023C834  2C 03 00 00 */	cmpwi r3, 0
@@ -127,7 +125,7 @@
 /* 802732E8 0023C8A8  7C 08 03 A6 */	mtlr r0
 /* 802732EC 0023C8AC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802732F0 0023C8B0  4E 80 00 20 */	blr 
-.endfn __dt__8027326C
+.endfn __dt__CKizunaTalkList
 
 .fn func_802732F4, global
 /* 802732F4 0023C8B4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1456,7 +1454,7 @@ CMenuKizunaTalkList_strpool:
 __vt__CKizunaTalkList:
 	.4byte __RTTI__CKizunaTalkList
 	.4byte 0
-	.4byte __dt__8027326C
+	.4byte __dt__CKizunaTalkList
 	.4byte func_80039E28
 	.4byte func_80274268
 	.4byte func_80039E18
@@ -1763,7 +1761,7 @@ lbl_806671C8:
 
 .obj "@eti_80030974", local
 .hidden "@eti_80030974"
-	.4byte __dt__8027326C
+	.4byte __dt__CKizunaTalkList
 	.4byte 0x00000088
 	.4byte "@etb_800182E4"
 .endobj "@eti_80030974"

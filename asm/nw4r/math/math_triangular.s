@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
 .fn SinFIdx__Q24nw4r4mathFf, global
 /* 8040AD2C 003D42EC  FC 60 0A 10 */	fabs f3, f1
 /* 8040AD30 003D42F0  94 21 FF F0 */	stwu r1, -0x10(r1)

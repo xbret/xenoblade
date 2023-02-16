@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __dt__801C189C, global
 /* 801C189C 0018AE5C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801C18A0 0018AE60  7C 08 02 A6 */	mflr r0
@@ -80,7 +78,7 @@
 /* 801C1994 0018AF54  4E 80 00 20 */	blr 
 .endfn __dt__801C1958
 
-.fn __dt__801C1998, global
+.fn __dt__CTTask_cf_CfPadTask, global
 /* 801C1998 0018AF58  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801C199C 0018AF5C  7C 08 02 A6 */	mflr r0
 /* 801C19A0 0018AF60  2C 03 00 00 */	cmpwi r3, 0
@@ -91,7 +89,7 @@
 /* 801C19B4 0018AF74  7C 7E 1B 78 */	mr r30, r3
 /* 801C19B8 0018AF78  41 82 00 1C */	beq .L_801C19D4
 /* 801C19BC 0018AF7C  38 80 00 00 */	li r4, 0
-/* 801C19C0 0018AF80  48 28 31 79 */	bl __dt__80444B38
+/* 801C19C0 0018AF80  48 28 31 79 */	bl __dt__CProcess
 /* 801C19C4 0018AF84  2C 1F 00 00 */	cmpwi r31, 0
 /* 801C19C8 0018AF88  40 81 00 0C */	ble .L_801C19D4
 /* 801C19CC 0018AF8C  7F C3 F3 78 */	mr r3, r30
@@ -104,9 +102,9 @@
 /* 801C19E4 0018AFA4  7C 08 03 A6 */	mtlr r0
 /* 801C19E8 0018AFA8  38 21 00 10 */	addi r1, r1, 0x10
 /* 801C19EC 0018AFAC  4E 80 00 20 */	blr
-.endfn __dt__801C1998
+.endfn __dt__CTTask_cf_CfPadTask
 
-.fn __dt__801C19F0, global
+.fn __dt__cf_CfPadTask, global
 /* 801C19F0 0018AFB0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801C19F4 0018AFB4  7C 08 02 A6 */	mflr r0
 /* 801C19F8 0018AFB8  2C 03 00 00 */	cmpwi r3, 0
@@ -136,7 +134,7 @@
 /* 801C1A54 0018B014  41 82 00 10 */	beq .L_801C1A64
 /* 801C1A58 0018B018  7F C3 F3 78 */	mr r3, r30
 /* 801C1A5C 0018B01C  38 80 00 00 */	li r4, 0
-/* 801C1A60 0018B020  48 28 30 D9 */	bl __dt__80444B38
+/* 801C1A60 0018B020  48 28 30 D9 */	bl __dt__CProcess
 .L_801C1A64:
 /* 801C1A64 0018B024  2C 1F 00 00 */	cmpwi r31, 0
 /* 801C1A68 0018B028  40 81 00 0C */	ble .L_801C1A74
@@ -150,7 +148,7 @@
 /* 801C1A84 0018B044  7C 08 03 A6 */	mtlr r0
 /* 801C1A88 0018B048  38 21 00 10 */	addi r1, r1, 0x10
 /* 801C1A8C 0018B04C  4E 80 00 20 */	blr 
-.endfn __dt__801C19F0
+.endfn __dt__cf_CfPadTask
 
 .fn func_801C1A90, global
 /* 801C1A90 0018B050  38 00 00 00 */	li r0, 0
@@ -1419,7 +1417,7 @@
 
 .fn func_801C2BF4, global
 /* 801C2BF4 0018C1B4  38 63 FF AC */	addi r3, r3, -84
-/* 801C2BF8 0018C1B8  4B FF ED F8 */	b __dt__801C19F0
+/* 801C2BF8 0018C1B8  4B FF ED F8 */	b __dt__cf_CfPadTask
 .endfn func_801C2BF4
 
 .fn func_801C2BFC, global
@@ -1434,7 +1432,7 @@
 
 .fn func_801C2C0C, global
 /* 801C2C0C 0018C1CC  38 63 FF A8 */	addi r3, r3, -88
-/* 801C2C10 0018C1D0  4B FF ED E0 */	b __dt__801C19F0
+/* 801C2C10 0018C1D0  4B FF ED E0 */	b __dt__cf_CfPadTask
 .endfn func_801C2C0C
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -1459,7 +1457,7 @@ CTTask_cf_CfPadTask_typestr:
 __vt__cf_CfPadTask:
 	.4byte __RTTI__cf_CfPadTask
 	.4byte 0
-	.4byte __dt__801C19F0
+	.4byte __dt__cf_CfPadTask
 	.4byte CChildListNode_Reset
 	.4byte func_801C1A90
 	.4byte func_801C1AA4
@@ -1496,7 +1494,7 @@ cf_CfPadTask_hierarchy:
 __vt__CTTask_cf_CfPadTask:
 	.4byte __RTTI__CTTask_cf_CfPadTask
 	.4byte 0
-	.4byte __dt__801C1998
+	.4byte __dt__CTTask_cf_CfPadTask
 	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
@@ -1654,7 +1652,7 @@ float_80666D48:
 	.4byte __dt__8004035C
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__801C1998
+	.4byte __dt__CTTask_cf_CfPadTask
 	.4byte 0x0680001E
 	.4byte 0x00000058
 	.4byte __dt__801C1958
@@ -1695,7 +1693,7 @@ float_80666D48:
 	.4byte __dt__8004035C
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte __dt__801C1998
+	.4byte __dt__CTTask_cf_CfPadTask
 .endobj "@etb_800106BC"
 
 .obj "@etb_800106F0", local
@@ -1755,14 +1753,14 @@ float_80666D48:
 
 .obj "@eti_8002B058", local
 .hidden "@eti_8002B058"
-	.4byte __dt__801C1998
+	.4byte __dt__CTTask_cf_CfPadTask
 	.4byte 0x00000058
 	.4byte "@etb_80010648"
 .endobj "@eti_8002B058"
 
 .obj "@eti_8002B064", local
 .hidden "@eti_8002B064"
-	.4byte __dt__801C19F0
+	.4byte __dt__cf_CfPadTask
 	.4byte 0x000000A0
 	.4byte "@etb_80010650"
 .endobj "@eti_8002B064"

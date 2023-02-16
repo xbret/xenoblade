@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_8044676C, global
 /* 8044676C 0040FD2C  1C 03 0B 00 */	mulli r0, r3, 0xb00
 /* 80446770 0040FD30  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
@@ -1382,7 +1380,7 @@ CDeviceRemotePad_typestr:
 __vt__CDeviceRemotePad:
 	.4byte __RTTI__CDeviceRemotePad
 	.4byte 0
-	.4byte __dt__80447958
+	.4byte __dt__CDeviceRemotePad
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18

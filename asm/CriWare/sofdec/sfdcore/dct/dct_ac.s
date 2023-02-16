@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
 .fn DCT_AcInit, global
 /* 803B9AC8 00383088  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 803B9ACC 0038308C  7C 08 02 A6 */	mflr r0

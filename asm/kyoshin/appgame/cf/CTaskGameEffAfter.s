@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_800614F4, global
 /* 800614F4 0002AAB4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800614F8 0002AAB8  7C 08 02 A6 */	mflr r0
@@ -51,7 +49,7 @@
 /* 8006159C 0002AB5C  4E 80 00 20 */	blr 
 .endfn func_800614F4
 
-.fn __dt__800615A0, global
+.fn __dt__CTTask_CTaskGameEffAfter, global
 /* 800615A0 0002AB60  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800615A4 0002AB64  7C 08 02 A6 */	mflr r0
 /* 800615A8 0002AB68  2C 03 00 00 */	cmpwi r3, 0
@@ -61,7 +59,7 @@
 /* 800615B8 0002AB78  7C 9F 23 78 */	mr r31, r4
 /* 800615BC 0002AB7C  41 82 00 1C */	beq .L_800615D8
 /* 800615C0 0002AB80  38 80 00 00 */	li r4, 0
-/* 800615C4 0002AB84  48 3E 35 75 */	bl __dt__80444B38
+/* 800615C4 0002AB84  48 3E 35 75 */	bl __dt__CProcess
 /* 800615C8 0002AB88  2C 1F 00 00 */	cmpwi r31, 0
 /* 800615CC 0002AB8C  40 81 00 0C */	ble .L_800615D8
 /* 800615D0 0002AB90  7F C3 F3 78 */	mr r3, r30
@@ -73,7 +71,7 @@
 /* 800615E4 0002ABA4  7C 08 03 A6 */	mtlr r0
 /* 800615E8 0002ABA8  38 21 00 10 */	addi r1, r1, 0x10
 /* 800615EC 0002ABAC  4E 80 00 20 */	blr 
-.endfn __dt__800615A0
+.endfn __dt__CTTask_CTaskGameEffAfter
 
 .fn func_800615F0, global
 /* 800615F0 0002ABB0  4E 80 00 20 */	blr 
@@ -87,7 +85,7 @@
 /* 800615F8 0002ABB8  4E 80 00 20 */	blr 
 .endfn func_800615F8
 
-.fn __dt__800615FC, global
+.fn __dt__CTaskGameEffAfter, global
 /* 800615FC 0002ABBC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80061600 0002ABC0  7C 08 02 A6 */	mflr r0
 /* 80061604 0002ABC4  2C 03 00 00 */	cmpwi r3, 0
@@ -98,7 +96,7 @@
 /* 80061618 0002ABD8  41 82 00 20 */	beq .L_80061638
 /* 8006161C 0002ABDC  41 82 00 0C */	beq .L_80061628
 /* 80061620 0002ABE0  38 80 00 00 */	li r4, 0
-/* 80061624 0002ABE4  48 3E 35 15 */	bl __dt__80444B38
+/* 80061624 0002ABE4  48 3E 35 15 */	bl __dt__CProcess
 .L_80061628:
 /* 80061628 0002ABE8  2C 1F 00 00 */	cmpwi r31, 0
 /* 8006162C 0002ABEC  40 81 00 0C */	ble .L_80061638
@@ -111,7 +109,7 @@
 /* 80061644 0002AC04  7C 08 03 A6 */	mtlr r0
 /* 80061648 0002AC08  38 21 00 10 */	addi r1, r1, 0x10
 /* 8006164C 0002AC0C  4E 80 00 20 */	blr 
-.endfn __dt__800615FC
+.endfn __dt__CTaskGameEffAfter
 
 .fn func_80061650, global
 /* 80061650 0002AC10  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -5260,7 +5258,7 @@
 __vt__CTaskGameEffAfter:
 	.4byte __RTTI__CTaskGameEffAfter
 	.4byte 0
-	.4byte __dt__800615FC
+	.4byte __dt__CTaskGameEffAfter
 	.4byte CChildListNode_Reset
 	.4byte func_800615F8
 	.4byte func_800615F4
@@ -5285,7 +5283,7 @@ CTaskGameEffAfter_hierarchy:
 __vt__CTTask_CTaskGameEffAfter:
 	.4byte __RTTI__CTTask_CTaskGameEffAfter
 	.4byte 0
-	.4byte __dt__800615A0
+	.4byte __dt__CTTask_CTaskGameEffAfter
 	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
@@ -6011,14 +6009,14 @@ lbl_80666680:
 
 .obj "@eti_80022A30", local
 .hidden "@eti_80022A30"
-	.4byte __dt__800615A0
+	.4byte __dt__CTTask_CTaskGameEffAfter
 	.4byte 0x00000050
 	.4byte "@etb_80007994"
 .endobj "@eti_80022A30"
 
 .obj "@eti_80022A3C", local
 .hidden "@eti_80022A3C"
-	.4byte __dt__800615FC
+	.4byte __dt__CTaskGameEffAfter
 	.4byte 0x00000054
 	.4byte "@etb_8000799C"
 .endobj "@eti_80022A3C"

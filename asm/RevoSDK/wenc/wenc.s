@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
 .fn WENCGetEncodeData, global
 /* 80368A8C 0033204C  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 80368A90 00332050  7C 08 02 A6 */	mflr r0

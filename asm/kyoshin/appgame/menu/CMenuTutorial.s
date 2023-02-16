@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CMenuTutorial, global
 /* 8029A0B8 00263678  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8029A0BC 0026367C  7C 08 02 A6 */	mflr r0
@@ -81,7 +79,7 @@
 /* 8029A1D4 00263794  4E 80 00 20 */	blr
 .endfn __ct__CMenuTutorial
 
-.fn __dt__8029A1D8, global
+.fn __dt__CMenuTutorial, global
 /* 8029A1D8 00263798  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029A1DC 0026379C  7C 08 02 A6 */	mflr r0
 /* 8029A1E0 002637A0  2C 03 00 00 */	cmpwi r3, 0
@@ -95,7 +93,7 @@
 /* 8029A200 002637C0  4B F2 9D 51 */	bl __dt__CTitleAHelp
 /* 8029A204 002637C4  38 7E 00 60 */	addi r3, r30, 0x60
 /* 8029A208 002637C8  38 80 FF FF */	li r4, -1
-/* 8029A20C 002637CC  48 00 07 C9 */	bl __dt__8029A9D4
+/* 8029A20C 002637CC  48 00 07 C9 */	bl __dt__CTutorial
 /* 8029A210 002637D0  7F C3 F3 78 */	mr r3, r30
 /* 8029A214 002637D4  38 80 00 00 */	li r4, 0
 /* 8029A218 002637D8  4B E6 4A F5 */	bl __dt__800FED0C
@@ -110,7 +108,7 @@
 /* 8029A238 002637F8  7C 08 03 A6 */	mtlr r0
 /* 8029A23C 002637FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029A240 00263800  4E 80 00 20 */	blr 
-.endfn __dt__8029A1D8
+.endfn __dt__CMenuTutorial
 
 .fn func_8029A244, global
 /* 8029A244 00263804  94 21 FF 60 */	stwu r1, -0xa0(r1)
@@ -207,7 +205,7 @@
 /* 8029A3B0 00263970  98 1F 00 B2 */	stb r0, 0xb2(r31)
 /* 8029A3B4 00263974  88 01 00 93 */	lbz r0, 0x93(r1)
 /* 8029A3B8 00263978  98 1F 00 B3 */	stb r0, 0xb3(r31)
-/* 8029A3BC 0026397C  48 00 06 19 */	bl __dt__8029A9D4
+/* 8029A3BC 0026397C  48 00 06 19 */	bl __dt__CTutorial
 /* 8029A3C0 00263980  38 7F 00 60 */	addi r3, r31, 0x60
 /* 8029A3C4 00263984  48 00 06 71 */	bl func_8029AA34
 /* 8029A3C8 00263988  2C 1F 00 00 */	cmpwi r31, 0
@@ -622,7 +620,7 @@
 
 .fn func_8029A92C, global
 /* 8029A92C 00263EEC  38 63 FF A8 */	addi r3, r3, -88
-/* 8029A930 00263EF0  4B FF F8 A8 */	b __dt__8029A1D8
+/* 8029A930 00263EF0  4B FF F8 A8 */	b __dt__CMenuTutorial
 .endfn func_8029A92C
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -651,7 +649,7 @@ CMenuTutorial_strpool:
 __vt__CMenuTutorial:
 	.4byte __RTTI__CMenuTutorial
 	.4byte 0
-	.4byte __dt__8029A1D8
+	.4byte __dt__CMenuTutorial
 	.4byte CChildListNode_Reset
 	.4byte func_8029A244
 	.4byte func_8029A3FC
@@ -718,10 +716,10 @@ lbl_80667318:
 	.4byte __dt__CTitleAHelp
 	.4byte 0x0780001C
 	.4byte 0x00000060
-	.4byte __dt__8029A9D4
+	.4byte __dt__CTutorial
 	.4byte 0x0680001C
 	.4byte 0x00000058
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x8680001C
 	.4byte 0x00000000
 	.4byte __dt__800FED0C
@@ -743,10 +741,10 @@ lbl_80667318:
 	.4byte __dt__CTitleAHelp
 	.4byte 0x0780001E
 	.4byte 0x00000060
-	.4byte __dt__8029A9D4
+	.4byte __dt__CTutorial
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 .endobj "@etb_8001A070"
 
 .obj "@etb_8001A0B8", local
@@ -820,7 +818,7 @@ lbl_80667318:
 
 .obj "@eti_80032090", local
 .hidden "@eti_80032090"
-	.4byte __dt__8029A1D8
+	.4byte __dt__CMenuTutorial
 	.4byte 0x0000006C
 	.4byte "@etb_8001A070"
 .endobj "@eti_80032090"

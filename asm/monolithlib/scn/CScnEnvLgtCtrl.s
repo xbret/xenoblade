@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_804C0BE4, global
+.fn __ct__reslist_IScnEnvCtl, global
 /* 804C0BE4 0048A1A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804C0BE8 0048A1A8  7C 08 02 A6 */	mflr r0
 /* 804C0BEC 0048A1AC  3C E0 80 57 */	lis r7, __vt___reslist_base_IScnEnvCtl@ha
@@ -67,9 +65,9 @@
 /* 804C0CD0 0048A290  7C 08 03 A6 */	mtlr r0
 /* 804C0CD4 0048A294  38 21 00 10 */	addi r1, r1, 0x10
 /* 804C0CD8 0048A298  4E 80 00 20 */	blr 
-.endfn func_804C0BE4
+.endfn __ct__reslist_IScnEnvCtl
 
-.fn __dt__804C0CDC, global
+.fn __dt___reslist_base_IScnEnvCtl, global
 /* 804C0CDC 0048A29C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804C0CE0 0048A2A0  7C 08 02 A6 */	mflr r0
 /* 804C0CE4 0048A2A4  2C 03 00 00 */	cmpwi r3, 0
@@ -119,9 +117,9 @@
 /* 804C0D84 0048A344  7C 08 03 A6 */	mtlr r0
 /* 804C0D88 0048A348  38 21 00 10 */	addi r1, r1, 0x10
 /* 804C0D8C 0048A34C  4E 80 00 20 */	blr 
-.endfn __dt__804C0CDC
+.endfn __dt___reslist_base_IScnEnvCtl
 
-.fn __dt__804C0D90, global
+.fn __dt__reslist_IScnEnvCtl, global
 /* 804C0D90 0048A350  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804C0D94 0048A354  7C 08 02 A6 */	mflr r0
 /* 804C0D98 0048A358  2C 03 00 00 */	cmpwi r3, 0
@@ -172,7 +170,7 @@
 /* 804C0E3C 0048A3FC  7C 08 03 A6 */	mtlr r0
 /* 804C0E40 0048A400  38 21 00 10 */	addi r1, r1, 0x10
 /* 804C0E44 0048A404  4E 80 00 20 */	blr 
-.endfn __dt__804C0D90
+.endfn __dt__reslist_IScnEnvCtl
 
 .fn __dt__804C0E48, global
 /* 804C0E48 0048A408  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -373,7 +371,7 @@
 /* 804C10F0 0048A6B0  4B F7 39 6D */	bl mm_malloc
 /* 804C10F4 0048A6B4  2C 03 00 00 */	cmpwi r3, 0
 /* 804C10F8 0048A6B8  41 82 00 08 */	beq .L_804C1100
-/* 804C10FC 0048A6BC  4B FD 80 DD */	bl func_804991D8
+/* 804C10FC 0048A6BC  4B FD 80 DD */	bl __ct__CScnBloom
 .L_804C1100:
 /* 804C1100 0048A6C0  90 7F 00 2C */	stw r3, 0x2c(r31)
 /* 804C1104 0048A6C4  80 7F 00 04 */	lwz r3, 4(r31)
@@ -2151,7 +2149,7 @@
 /* 804C299C 0048BF5C  4E 80 00 20 */	blr 
 .endfn func_804C26F0
 
-.fn func_804C29A0, global
+.fn __ct__CScnEnvLgtCtrl, global
 /* 804C29A0 0048BF60  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 804C29A4 0048BF64  7C 08 02 A6 */	mflr r0
 /* 804C29A8 0048BF68  90 01 00 34 */	stw r0, 0x34(r1)
@@ -2634,9 +2632,9 @@
 /* 804C3060 0048C620  7C 08 03 A6 */	mtlr r0
 /* 804C3064 0048C624  38 21 00 30 */	addi r1, r1, 0x30
 /* 804C3068 0048C628  4E 80 00 20 */	blr 
-.endfn func_804C29A0
+.endfn __ct__CScnEnvLgtCtrl
 
-.fn __dt__804C306C, global
+.fn __dt__CScnEnvLgtCtrl, global
 /* 804C306C 0048C62C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804C3070 0048C630  7C 08 02 A6 */	mflr r0
 /* 804C3074 0048C634  2C 03 00 00 */	cmpwi r3, 0
@@ -2670,7 +2668,7 @@
 /* 804C30DC 0048C69C  7C 08 03 A6 */	mtlr r0
 /* 804C30E0 0048C6A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 804C30E4 0048C6A4  4E 80 00 20 */	blr 
-.endfn __dt__804C306C
+.endfn __dt__CScnEnvLgtCtrl
 
 .fn func_804C30E8, global
 /* 804C30E8 0048C6A8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -6763,7 +6761,7 @@
 /* 804C6AAC 0049006C  41 82 00 18 */	beq .L_804C6AC4
 /* 804C6AB0 00490070  7F C4 F3 78 */	mr r4, r30
 /* 804C6AB4 00490074  7F E5 FB 78 */	mr r5, r31
-/* 804C6AB8 00490078  4B FF BE E9 */	bl func_804C29A0
+/* 804C6AB8 00490078  4B FF BE E9 */	bl __ct__CScnEnvLgtCtrl
 /* 804C6ABC 0049007C  48 00 00 08 */	b .L_804C6AC4
 .L_804C6AC0:
 /* 804C6AC0 00490080  38 60 00 00 */	li r3, 0
@@ -8878,7 +8876,7 @@ lbl_80527DF8:
 __vt__reslist_IScnEnvCtl:
 	.4byte __RTTI__reslist_IScnEnvCtl
 	.4byte 0
-	.4byte __dt__804C0D90
+	.4byte __dt__reslist_IScnEnvCtl
 
 .global reslist_IScnEnvCtl_hierarchy
 reslist_IScnEnvCtl_hierarchy:
@@ -8891,7 +8889,7 @@ reslist_IScnEnvCtl_hierarchy:
 __vt___reslist_base_IScnEnvCtl:
 	.4byte __RTTI___reslist_base_IScnEnvCtl
 	.4byte 0
-	.4byte __dt__804C0CDC
+	.4byte __dt___reslist_base_IScnEnvCtl
 	.4byte 0
 
 
@@ -8911,7 +8909,7 @@ lbl_805731F0:
 __vt__CScnEnvLgtCtrl:
 	.4byte __RTTI__CScnEnvLgtCtrl
 	.4byte 0
-	.4byte __dt__804C306C
+	.4byte __dt__CScnEnvLgtCtrl
 	.4byte func_804C30E8
 	.4byte func_804C31C8
 	.4byte func_804C6BA0
@@ -9325,7 +9323,7 @@ lbl_80662490:
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x00000008
-	.4byte __dt__804C0D90
+	.4byte __dt__reslist_IScnEnvCtl
 .endobj "@etb_80020058"
 
 .obj "@etb_80020074", local
@@ -9348,7 +9346,7 @@ lbl_80662490:
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x00000008
-	.4byte __dt__804C0D90
+	.4byte __dt__reslist_IScnEnvCtl
 .endobj "@etb_80020084"
 
 .obj "@etb_800200A0", local
@@ -9775,21 +9773,21 @@ lbl_80662490:
 
 .obj "@eti_80037DB4", local
 .hidden "@eti_80037DB4"
-	.4byte func_804C0BE4
+	.4byte __ct__reslist_IScnEnvCtl
 	.4byte 0x000000F8
 	.4byte "@etb_80020058"
 .endobj "@eti_80037DB4"
 
 .obj "@eti_80037DC0", local
 .hidden "@eti_80037DC0"
-	.4byte __dt__804C0CDC
+	.4byte __dt___reslist_base_IScnEnvCtl
 	.4byte 0x000000B4
 	.4byte "@etb_80020074"
 .endobj "@eti_80037DC0"
 
 .obj "@eti_80037DCC", local
 .hidden "@eti_80037DCC"
-	.4byte __dt__804C0D90
+	.4byte __dt__reslist_IScnEnvCtl
 	.4byte 0x000000B8
 	.4byte "@etb_8002007C"
 .endobj "@eti_80037DCC"
@@ -9950,14 +9948,14 @@ lbl_80662490:
 
 .obj "@eti_80037EE0", local
 .hidden "@eti_80037EE0"
-	.4byte func_804C29A0
+	.4byte __ct__CScnEnvLgtCtrl
 	.4byte 0x000006CC
 	.4byte "@etb_80020148"
 .endobj "@eti_80037EE0"
 
 .obj "@eti_80037EEC", local
 .hidden "@eti_80037EEC"
-	.4byte __dt__804C306C
+	.4byte __dt__CScnEnvLgtCtrl
 	.4byte 0x0000007C
 	.4byte "@etb_80020164"
 .endobj "@eti_80037EEC"

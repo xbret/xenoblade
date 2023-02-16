@@ -2,9 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-
 #likely multiple files
 #contains IFactoryEvent?
 
@@ -372,7 +369,7 @@
 /* 800B0B8C 0007A14C  4E 80 00 20 */	blr 
 .endfn func_800B0B8C
 
-.fn __dt__800B0B90, global
+.fn __dt___reslist_base_cf_TboxInfo, global
 /* 800B0B90 0007A150  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800B0B94 0007A154  7C 08 02 A6 */	mflr r0
 /* 800B0B98 0007A158  2C 03 00 00 */	cmpwi r3, 0
@@ -425,9 +422,9 @@
 /* 800B0C40 0007A200  7C 08 03 A6 */	mtlr r0
 /* 800B0C44 0007A204  38 21 00 10 */	addi r1, r1, 0x10
 /* 800B0C48 0007A208  4E 80 00 20 */	blr 
-.endfn __dt__800B0B90
+.endfn __dt___reslist_base_cf_TboxInfo
 
-.fn __dt__800B0C4C, global
+.fn __dt__reslist_cf_TboxInfo, global
 /* 800B0C4C 0007A20C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800B0C50 0007A210  7C 08 02 A6 */	mflr r0
 /* 800B0C54 0007A214  2C 03 00 00 */	cmpwi r3, 0
@@ -481,7 +478,7 @@
 /* 800B0D00 0007A2C0  7C 08 03 A6 */	mtlr r0
 /* 800B0D04 0007A2C4  38 21 00 10 */	addi r1, r1, 0x10
 /* 800B0D08 0007A2C8  4E 80 00 20 */	blr 
-.endfn __dt__800B0C4C
+.endfn __dt__reslist_cf_TboxInfo
 
 .fn func_800B0D0C, global
 /* 800B0D0C 0007A2CC  3C 80 80 53 */	lis r4, __vt___reslist_base_cf_IFactoryEvent@ha
@@ -501,7 +498,7 @@
 /* 800B0D44 0007A304  4E 80 00 20 */	blr 
 .endfn func_800B0D0C
 
-.fn __dt__800B0D48, global
+.fn __dt___reslist_base_cf_IFactoryEvent, global
 /* 800B0D48 0007A308  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800B0D4C 0007A30C  7C 08 02 A6 */	mflr r0
 /* 800B0D50 0007A310  2C 03 00 00 */	cmpwi r3, 0
@@ -551,9 +548,9 @@
 /* 800B0DF0 0007A3B0  7C 08 03 A6 */	mtlr r0
 /* 800B0DF4 0007A3B4  38 21 00 10 */	addi r1, r1, 0x10
 /* 800B0DF8 0007A3B8  4E 80 00 20 */	blr 
-.endfn __dt__800B0D48
+.endfn __dt___reslist_base_cf_IFactoryEvent
 
-.fn __dt__800B0DFC, global
+.fn __dt__reslist_cf_IFactoryEvent, global
 /* 800B0DFC 0007A3BC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800B0E00 0007A3C0  7C 08 02 A6 */	mflr r0
 /* 800B0E04 0007A3C4  2C 03 00 00 */	cmpwi r3, 0
@@ -604,7 +601,7 @@
 /* 800B0EA8 0007A468  7C 08 03 A6 */	mtlr r0
 /* 800B0EAC 0007A46C  38 21 00 10 */	addi r1, r1, 0x10
 /* 800B0EB0 0007A470  4E 80 00 20 */	blr
-.endfn __dt__800B0DFC
+.endfn __dt__reslist_cf_IFactoryEvent
 
 .fn __dt__800B0EB4, global
 /* 800B0EB4 0007A474  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -618,43 +615,43 @@
 /* 800B0ED4 0007A494  41 82 00 B0 */	beq .L_800B0F84
 /* 800B0ED8 0007A498  38 80 FF FF */	li r4, -1
 /* 800B0EDC 0007A49C  38 63 0C 80 */	addi r3, r3, 0xc80
-/* 800B0EE0 0007A4A0  4B FF FF 1D */	bl __dt__800B0DFC
+/* 800B0EE0 0007A4A0  4B FF FF 1D */	bl __dt__reslist_cf_IFactoryEvent
 /* 800B0EE4 0007A4A4  38 7E 0C 48 */	addi r3, r30, 0xc48
 /* 800B0EE8 0007A4A8  38 80 FF FF */	li r4, -1
-/* 800B0EEC 0007A4AC  4B FF FD 61 */	bl __dt__800B0C4C
+/* 800B0EEC 0007A4AC  4B FF FD 61 */	bl __dt__reslist_cf_TboxInfo
 /* 800B0EF0 0007A4B0  38 7E 0C 28 */	addi r3, r30, 0xc28
 /* 800B0EF4 0007A4B4  38 80 FF FF */	li r4, -1
-/* 800B0EF8 0007A4B8  4B F8 FA 45 */	bl __dt__8004093C
+/* 800B0EF8 0007A4B8  4B F8 FA 45 */	bl __dt__reslist_cf_CfObject
 /* 800B0EFC 0007A4BC  38 7E 0C 08 */	addi r3, r30, 0xc08
 /* 800B0F00 0007A4C0  38 80 FF FF */	li r4, -1
-/* 800B0F04 0007A4C4  4B F8 FA 39 */	bl __dt__8004093C
+/* 800B0F04 0007A4C4  4B F8 FA 39 */	bl __dt__reslist_cf_CfObject
 /* 800B0F08 0007A4C8  38 7E 0B E8 */	addi r3, r30, 0xbe8
 /* 800B0F0C 0007A4CC  38 80 FF FF */	li r4, -1
-/* 800B0F10 0007A4D0  4B F8 FA 2D */	bl __dt__8004093C
+/* 800B0F10 0007A4D0  4B F8 FA 2D */	bl __dt__reslist_cf_CfObject
 /* 800B0F14 0007A4D4  38 7E 0B C8 */	addi r3, r30, 0xbc8
 /* 800B0F18 0007A4D8  38 80 FF FF */	li r4, -1
-/* 800B0F1C 0007A4DC  4B F8 FA 21 */	bl __dt__8004093C
+/* 800B0F1C 0007A4DC  4B F8 FA 21 */	bl __dt__reslist_cf_CfObject
 /* 800B0F20 0007A4E0  38 7E 0B A8 */	addi r3, r30, 0xba8
 /* 800B0F24 0007A4E4  38 80 FF FF */	li r4, -1
-/* 800B0F28 0007A4E8  4B F8 FA 15 */	bl __dt__8004093C
+/* 800B0F28 0007A4E8  4B F8 FA 15 */	bl __dt__reslist_cf_CfObject
 /* 800B0F2C 0007A4EC  38 7E 0B 88 */	addi r3, r30, 0xb88
 /* 800B0F30 0007A4F0  38 80 FF FF */	li r4, -1
-/* 800B0F34 0007A4F4  4B F8 FA 09 */	bl __dt__8004093C
+/* 800B0F34 0007A4F4  4B F8 FA 09 */	bl __dt__reslist_cf_CfObject
 /* 800B0F38 0007A4F8  38 7E 0B 68 */	addi r3, r30, 0xb68
 /* 800B0F3C 0007A4FC  38 80 FF FF */	li r4, -1
-/* 800B0F40 0007A500  4B F8 F9 FD */	bl __dt__8004093C
+/* 800B0F40 0007A500  4B F8 F9 FD */	bl __dt__reslist_cf_CfObject
 /* 800B0F44 0007A504  38 7E 0B 48 */	addi r3, r30, 0xb48
 /* 800B0F48 0007A508  38 80 FF FF */	li r4, -1
-/* 800B0F4C 0007A50C  4B F8 F9 F1 */	bl __dt__8004093C
+/* 800B0F4C 0007A50C  4B F8 F9 F1 */	bl __dt__reslist_cf_CfObject
 /* 800B0F50 0007A510  38 7E 0B 28 */	addi r3, r30, 0xb28
 /* 800B0F54 0007A514  38 80 FF FF */	li r4, -1
-/* 800B0F58 0007A518  4B F8 F9 E5 */	bl __dt__8004093C
+/* 800B0F58 0007A518  4B F8 F9 E5 */	bl __dt__reslist_cf_CfObject
 /* 800B0F5C 0007A51C  38 7E 00 20 */	addi r3, r30, 0x20
 /* 800B0F60 0007A520  38 80 FF FF */	li r4, -1
 /* 800B0F64 0007A524  4B FF FB 91 */	bl __dt__800B0AF4
 /* 800B0F68 0007A528  7F C3 F3 78 */	mr r3, r30
 /* 800B0F6C 0007A52C  38 80 FF FF */	li r4, -1
-/* 800B0F70 0007A530  4B F8 F9 CD */	bl __dt__8004093C
+/* 800B0F70 0007A530  4B F8 F9 CD */	bl __dt__reslist_cf_CfObject
 /* 800B0F74 0007A534  2C 1F 00 00 */	cmpwi r31, 0
 /* 800B0F78 0007A538  40 81 00 0C */	ble .L_800B0F84
 /* 800B0F7C 0007A53C  7F C3 F3 78 */	mr r3, r30
@@ -838,7 +835,7 @@
 /* 800B11F4 0007A7B4  48 38 38 69 */	bl mm_malloc
 /* 800B11F8 0007A7B8  2C 03 00 00 */	cmpwi r3, 0
 /* 800B11FC 0007A7BC  41 82 00 08 */	beq .L_800B1204
-/* 800B1200 0007A7C0  48 0C 1F B5 */	bl func_801731B4
+/* 800B1200 0007A7C0  48 0C 1F B5 */	bl __ct__cf_CfMapItemManager
 .L_800B1204:
 /* 800B1204 0007A7C4  90 7F 0C A4 */	stw r3, 0xca4(r31)
 /* 800B1208 0007A7C8  4B FB 0D F5 */	bl func_80061FFC
@@ -928,7 +925,7 @@
 /* 800B1334 0007A8F4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 800B1338 0007A8F8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 800B133C 0007A8FC  7C 7F 1B 78 */	mr r31, r3
-/* 800B1340 0007A900  48 0C 1E 75 */	bl func_801731B4
+/* 800B1340 0007A900  48 0C 1E 75 */	bl __ct__cf_CfMapItemManager
 /* 800B1344 0007A904  3C 80 80 53 */	lis r4, __vt__cf_CfValueItemManager@ha
 /* 800B1348 0007A908  7F E3 FB 78 */	mr r3, r31
 /* 800B134C 0007A90C  38 84 4E A0 */	addi r4, r4, __vt__cf_CfValueItemManager@l
@@ -2123,7 +2120,7 @@
 /* 800B2274 0007B834  2C 03 00 00 */	cmpwi r3, 0
 /* 800B2278 0007B838  41 82 00 0C */	beq .L_800B2284
 /* 800B227C 0007B83C  38 80 00 01 */	li r4, 1
-/* 800B2280 0007B840  48 00 D0 C1 */	bl func_800BF340
+/* 800B2280 0007B840  48 00 D0 C1 */	bl __ct__cf_CfObjectNpc
 .L_800B2284:
 /* 800B2284 0007B844  7C 7F 1B 78 */	mr r31, r3
 /* 800B2288 0007B848  48 00 00 30 */	b .L_800B22B8
@@ -2134,7 +2131,7 @@
 /* 800B2298 0007B858  48 38 27 C5 */	bl mm_malloc
 /* 800B229C 0007B85C  2C 03 00 00 */	cmpwi r3, 0
 /* 800B22A0 0007B860  41 82 00 08 */	beq .L_800B22A8
-/* 800B22A4 0007B864  48 00 D9 ED */	bl func_800BFC90
+/* 800B22A4 0007B864  48 00 D9 ED */	bl __ct__cf_CfObjectPc
 .L_800B22A8:
 /* 800B22A8 0007B868  2C 03 00 00 */	cmpwi r3, 0
 /* 800B22AC 0007B86C  41 82 00 08 */	beq .L_800B22B4
@@ -2479,7 +2476,7 @@
 /* 800B27A4 0007BD64  48 38 22 B9 */	bl mm_malloc
 /* 800B27A8 0007BD68  2C 03 00 00 */	cmpwi r3, 0
 /* 800B27AC 0007BD6C  41 82 00 08 */	beq .L_800B27B4
-/* 800B27B0 0007BD70  4B FF B0 D9 */	bl func_800AD888
+/* 800B27B0 0007BD70  4B FF B0 D9 */	bl __ct__cf_CfObjectEne
 .L_800B27B4:
 /* 800B27B4 0007BD74  2C 03 00 00 */	cmpwi r3, 0
 /* 800B27B8 0007BD78  41 82 00 08 */	beq .L_800B27C0
@@ -2495,7 +2492,7 @@
 /* 800B27D8 0007BD98  2C 03 00 00 */	cmpwi r3, 0
 /* 800B27DC 0007BD9C  41 82 00 0C */	beq .L_800B27E8
 /* 800B27E0 0007BDA0  38 80 00 00 */	li r4, 0
-/* 800B27E4 0007BDA4  48 00 CB 5D */	bl func_800BF340
+/* 800B27E4 0007BDA4  48 00 CB 5D */	bl __ct__cf_CfObjectNpc
 .L_800B27E8:
 /* 800B27E8 0007BDA8  7C 7F 1B 78 */	mr r31, r3
 .L_800B27EC:
@@ -2544,7 +2541,7 @@
 /* 800B2888 0007BE48  2C 03 00 00 */	cmpwi r3, 0
 /* 800B288C 0007BE4C  7C 7F 1B 78 */	mr r31, r3
 /* 800B2890 0007BE50  41 82 00 0C */	beq .L_800B289C
-/* 800B2894 0007BE54  48 00 D0 F9 */	bl func_800BF98C
+/* 800B2894 0007BE54  48 00 D0 F9 */	bl __ct__cf_CfObjectObj
 /* 800B2898 0007BE58  7C 7F 1B 78 */	mr r31, r3
 .L_800B289C:
 /* 800B289C 0007BE5C  2C 1F 00 00 */	cmpwi r31, 0
@@ -2576,7 +2573,7 @@
 /* 800B28F8 0007BEB8  2C 03 00 00 */	cmpwi r3, 0
 /* 800B28FC 0007BEBC  7C 7F 1B 78 */	mr r31, r3
 /* 800B2900 0007BEC0  41 82 00 0C */	beq .L_800B290C
-/* 800B2904 0007BEC4  48 14 63 B1 */	bl func_801F8CB4
+/* 800B2904 0007BEC4  48 14 63 B1 */	bl __ct__cf_CfObjectTbox
 /* 800B2908 0007BEC8  7C 7F 1B 78 */	mr r31, r3
 .L_800B290C:
 /* 800B290C 0007BECC  2C 1F 00 00 */	cmpwi r31, 0
@@ -12011,7 +12008,7 @@ jumptable_8052C828:
 __vt__reslist_cf_IFactoryEvent:
 	.4byte __RTTI__reslist_cf_IFactoryEvent
 	.4byte 0
-	.4byte __dt__800B0DFC
+	.4byte __dt__reslist_cf_IFactoryEvent
 
 .global reslist_cf_IFactoryEvent_hierarchy
 reslist_cf_IFactoryEvent_hierarchy:
@@ -12024,14 +12021,14 @@ reslist_cf_IFactoryEvent_hierarchy:
 __vt___reslist_base_cf_IFactoryEvent:
 	.4byte __RTTI___reslist_base_cf_IFactoryEvent
 	.4byte 0
-	.4byte __dt__800B0D48
+	.4byte __dt___reslist_base_cf_IFactoryEvent
 
 
 .global __vt__reslist_cf_TboxInfo
 __vt__reslist_cf_TboxInfo:
 	.4byte __RTTI__reslist_cf_TboxInfo
 	.4byte 0
-	.4byte __dt__800B0C4C
+	.4byte __dt__reslist_cf_TboxInfo
 
 .global reslist_cf_TboxInfo_hierarchy
 reslist_cf_TboxInfo_hierarchy:
@@ -12044,14 +12041,14 @@ reslist_cf_TboxInfo_hierarchy:
 __vt___reslist_base_cf_TboxInfo:
 	.4byte __RTTI___reslist_base_cf_TboxInfo
 	.4byte 0
-	.4byte __dt__800B0B90
+	.4byte __dt___reslist_base_cf_TboxInfo
 
 
 .global __vt__reslist_cf_CfObject
 __vt__reslist_cf_CfObject:
 	.4byte __RTTI__reslist_cf_CfObject
 	.4byte 0
-	.4byte __dt__8004093C
+	.4byte __dt__reslist_cf_CfObject
 
 .global reslist_cf_CfObject_hierarchy
 reslist_cf_CfObject_hierarchy:
@@ -13447,28 +13444,28 @@ lbl_806667E8:
 
 .obj "@eti_80024F50", local
 .hidden "@eti_80024F50"
-	.4byte __dt__800B0B90
+	.4byte __dt___reslist_base_cf_TboxInfo
 	.4byte 0x000000BC
 	.4byte "@etb_8000967C"
 .endobj "@eti_80024F50"
 
 .obj "@eti_80024F5C", local
 .hidden "@eti_80024F5C"
-	.4byte __dt__800B0C4C
+	.4byte __dt__reslist_cf_TboxInfo
 	.4byte 0x000000C0
 	.4byte "@etb_80009684"
 .endobj "@eti_80024F5C"
 
 .obj "@eti_80024F68", local
 .hidden "@eti_80024F68"
-	.4byte __dt__800B0D48
+	.4byte __dt___reslist_base_cf_IFactoryEvent
 	.4byte 0x000000B4
 	.4byte "@etb_8000968C"
 .endobj "@eti_80024F68"
 
 .obj "@eti_80024F74", local
 .hidden "@eti_80024F74"
-	.4byte __dt__800B0DFC
+	.4byte __dt__reslist_cf_IFactoryEvent
 	.4byte 0x000000B8
 	.4byte "@etb_80009694"
 .endobj "@eti_80024F74"

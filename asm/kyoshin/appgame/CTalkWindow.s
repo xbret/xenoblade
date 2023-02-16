@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_8012BC44, global
 /* 8012BC44 000F5204  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8012BC48 000F5208  7C 08 02 A6 */	mflr r0
@@ -77,7 +75,7 @@
 /* 8012BD58 000F5318  4E 80 00 20 */	blr
 .endfn func_8012BC44
 
-.fn __dt__8012BD5C, global
+.fn __dt__CTalkWindow, global
 /* 8012BD5C 000F531C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8012BD60 000F5320  7C 08 02 A6 */	mflr r0
 /* 8012BD64 000F5324  2C 03 00 00 */	cmpwi r3, 0
@@ -95,7 +93,7 @@
 /* 8012BD94 000F5354  41 82 00 10 */	beq .L_8012BDA4
 /* 8012BD98 000F5358  7F C3 F3 78 */	mr r3, r30
 /* 8012BD9C 000F535C  38 80 00 00 */	li r4, 0
-/* 8012BDA0 000F5360  48 31 8D 99 */	bl __dt__80444B38
+/* 8012BDA0 000F5360  48 31 8D 99 */	bl __dt__CProcess
 .L_8012BDA4:
 /* 8012BDA4 000F5364  2C 1F 00 00 */	cmpwi r31, 0
 /* 8012BDA8 000F5368  40 81 00 0C */	ble .L_8012BDB4
@@ -109,7 +107,7 @@
 /* 8012BDC4 000F5384  7C 08 03 A6 */	mtlr r0
 /* 8012BDC8 000F5388  38 21 00 10 */	addi r1, r1, 0x10
 /* 8012BDCC 000F538C  4E 80 00 20 */	blr 
-.endfn __dt__8012BD5C
+.endfn __dt__CTalkWindow
 
 .fn func_8012BDD0, global
 /* 8012BDD0 000F5390  38 00 00 00 */	li r0, 0
@@ -2388,7 +2386,7 @@
 
 .fn func_8012DF78, global
 /* 8012DF78 000F7538  38 63 FF 94 */	addi r3, r3, -108
-/* 8012DF7C 000F753C  4B FF DD E0 */	b __dt__8012BD5C
+/* 8012DF7C 000F753C  4B FF DD E0 */	b __dt__CTalkWindow
 .endfn func_8012DF78
 
 .fn func_8012DF80, global
@@ -2398,7 +2396,7 @@
 
 .fn func_8012DF88, global
 /* 8012DF88 000F7548  38 63 FF 90 */	addi r3, r3, -112
-/* 8012DF8C 000F754C  4B FF DD D0 */	b __dt__8012BD5C
+/* 8012DF8C 000F754C  4B FF DD D0 */	b __dt__CTalkWindow
 .endfn func_8012DF88
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
@@ -2479,7 +2477,7 @@ jumptable_80531750:
 __vt__CTalkWindow:
 	.4byte __RTTI__CTalkWindow
 	.4byte 0
-	.4byte __dt__8012BD5C
+	.4byte __dt__CTalkWindow
 	.4byte CChildListNode_Reset
 	.4byte func_8012BDDC
 	.4byte func_8012C7F8
@@ -2699,13 +2697,13 @@ lbl_8066693C:
 	.4byte 0x00000000
 	.4byte 0x06800019
 	.4byte 0x00000070
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x06800019
 	.4byte 0x0000006C
 	.4byte __dt__IWorkEvent
 	.4byte 0x86800019
 	.4byte 0x00000000
-	.4byte __dt__8012235C
+	.4byte __dt__IUIWindow
 .endobj "@etb_8000C21C"
 
 .obj "@etb_8000C250", local
@@ -2719,7 +2717,7 @@ lbl_8066693C:
 	.4byte __dt__8045F580
 	.4byte 0x0680001E
 	.4byte 0x00000070
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x8680001E
 	.4byte 0x0000006C
 	.4byte __dt__IWorkEvent
@@ -2800,7 +2798,7 @@ lbl_8066693C:
 
 .obj "@eti_80027500", local
 .hidden "@eti_80027500"
-	.4byte __dt__8012BD5C
+	.4byte __dt__CTalkWindow
 	.4byte 0x00000074
 	.4byte "@etb_8000C250"
 .endobj "@eti_80027500"

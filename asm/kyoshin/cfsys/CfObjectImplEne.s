@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_800CFFCC, global
 /* 800CFFCC 0009958C  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 800CFFD0 00099590  7C 08 02 A6 */	mflr r0
@@ -1159,7 +1157,7 @@
 /* 800D1070 0009A630  4E 80 00 20 */	blr
 .endfn func_800D1020
 
-.fn __dt__800D1074, global
+.fn __dt__cf_CfObjectImplEne, global
 /* 800D1074 0009A634  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800D1078 0009A638  7C 08 02 A6 */	mflr r0
 /* 800D107C 0009A63C  2C 03 00 00 */	cmpwi r3, 0
@@ -1177,7 +1175,7 @@
 /* 800D10A8 0009A668  7C 08 03 A6 */	mtlr r0
 /* 800D10AC 0009A66C  38 21 00 10 */	addi r1, r1, 0x10
 /* 800D10B0 0009A670  4E 80 00 20 */	blr 
-.endfn __dt__800D1074
+.endfn __dt__cf_CfObjectImplEne
 
 .fn func_800D10B4, global
 /* 800D10B4 0009A674  38 63 FF F4 */	addi r3, r3, -12
@@ -1186,12 +1184,12 @@
 
 .fn func_800D10BC, global
 /* 800D10BC 0009A67C  38 63 FF F4 */	addi r3, r3, -12
-/* 800D10C0 0009A680  4B FF FF B4 */	b __dt__800D1074
+/* 800D10C0 0009A680  4B FF FF B4 */	b __dt__cf_CfObjectImplEne
 .endfn func_800D10BC
 
 .fn func_800D10C4, global
 /* 800D10C4 0009A684  38 63 FF F0 */	addi r3, r3, -16
-/* 800D10C8 0009A688  4B FF FF AC */	b __dt__800D1074
+/* 800D10C8 0009A688  4B FF FF AC */	b __dt__cf_CfObjectImplEne
 .endfn func_800D10C4
 
 .fn func_800D10CC, global
@@ -1201,7 +1199,7 @@
 
 .fn func_800D10D4, global
 /* 800D10D4 0009A694  38 63 FF 98 */	addi r3, r3, -104
-/* 800D10D8 0009A698  4B FF FF 9C */	b __dt__800D1074
+/* 800D10D8 0009A698  4B FF FF 9C */	b __dt__cf_CfObjectImplEne
 .endfn func_800D10D4
 
 
@@ -1222,7 +1220,7 @@ cf_CfObjectImplEne_typestr:
 __vt__cf_CfObjectImplEne:
 	.4byte __RTTI__cf_CfObjectImplEne
 	.4byte 0
-	.4byte __dt__800D1074
+	.4byte __dt__cf_CfObjectImplEne
 	.4byte func_80054A20
 	.4byte func_800CC5DC
 	.4byte func_800CC638
@@ -1478,7 +1476,7 @@ float_806695BC:
 
 .obj "@eti_8002600C", local
 .hidden "@eti_8002600C"
-	.4byte __dt__800D1074
+	.4byte __dt__cf_CfObjectImplEne
 	.4byte 0x00000040
 	.4byte "@etb_8000A4F4"
 .endobj "@eti_8002600C"

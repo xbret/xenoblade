@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_80462904, global
 /* 80462904 0042BEC4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80462908 0042BEC8  7C 08 02 A6 */	mflr r0
@@ -45,7 +43,7 @@
 /* 80462998 0042BF58  90 9F 00 10 */	stw r4, 0x10(r31)
 /* 8046299C 0042BF5C  93 7F 00 54 */	stw r27, 0x54(r31)
 /* 804629A0 0042BF60  93 9F 00 58 */	stw r28, 0x58(r31)
-/* 804629A4 0042BF64  48 00 A6 3D */	bl func_8046CFE0
+/* 804629A4 0042BF64  48 00 A6 3D */	bl __ct__LOD_LODMemMan
 /* 804629A8 0042BF68  38 00 00 00 */	li r0, 0
 /* 804629AC 0042BF6C  90 1F 1D 3C */	stw r0, 0x1d3c(r31)
 /* 804629B0 0042BF70  38 1F 00 5C */	addi r0, r31, 0x5c
@@ -102,7 +100,7 @@
 /* 80462A64 0042C024  2C 03 00 00 */	cmpwi r3, 0
 /* 80462A68 0042C028  7C 60 1B 78 */	mr r0, r3
 /* 80462A6C 0042C02C  41 82 00 0C */	beq .L_80462A78
-/* 80462A70 0042C030  48 00 A5 71 */	bl func_8046CFE0
+/* 80462A70 0042C030  48 00 A5 71 */	bl __ct__LOD_LODMemMan
 /* 80462A74 0042C034  7C 60 1B 78 */	mr r0, r3
 .L_80462A78:
 /* 80462A78 0042C038  90 1F 1D 3C */	stw r0, 0x1d3c(r31)
@@ -1128,7 +1126,7 @@ CTTask_CTaskLOD_typestr:
 __vt__CTaskLOD:
 	.4byte __RTTI__CTaskLOD
 	.4byte 0
-	.4byte __dt__80462830
+	.4byte __dt__CTaskLOD
 	.4byte CChildListNode_Reset
 	.4byte func_804628A0
 	.4byte func_804628A4
@@ -1153,7 +1151,7 @@ CTaskLOD_hierarchy:
 __vt__CTTask_CTaskLOD:
 	.4byte __RTTI__CTTask_CTaskLOD
 	.4byte 0
-	.4byte __dt__804627D8
+	.4byte __dt__CTTask_CTaskLOD
 	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
@@ -1302,7 +1300,7 @@ lbl_80668038:
 	.4byte __dt__8046D144
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte __dt__804627D8
+	.4byte __dt__CTTask_CTaskLOD
 .endobj "@etb_8001D9C4"
 
 .obj "@etb_8001D9F4", local

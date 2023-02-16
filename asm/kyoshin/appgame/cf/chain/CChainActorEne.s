@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_80281308, global
 /* 80281308 0024A8C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8028130C 0024A8CC  7C 08 02 A6 */	mflr r0
@@ -500,7 +498,7 @@ cf_CChainActorEne_typestr:
 __vt__cf_CChainActorEne:
 	.4byte __RTTI__cf_CChainActorEne
 	.4byte 0
-	.4byte __dt__8027AD30
+	.4byte __dt__cf_CChainActorEne
 	.4byte func_80281308
 	.4byte func_80279B34
 	.4byte func_8028133C

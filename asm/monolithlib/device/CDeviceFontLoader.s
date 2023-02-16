@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_80454E80, global
 /* 80454E80 0041E440  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80454E84 0041E444  7C 08 02 A6 */	mflr r0
@@ -29,7 +27,7 @@
 /* 80454ED4 0041E494  4E 80 00 20 */	blr 
 .endfn func_80454E80
 
-.fn __dt__80454ED8, global
+.fn __dt__CDeviceFontLoader, global
 /* 80454ED8 0041E498  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80454EDC 0041E49C  7C 08 02 A6 */	mflr r0
 /* 80454EE0 0041E4A0  2C 03 00 00 */	cmpwi r3, 0
@@ -53,7 +51,7 @@
 /* 80454F24 0041E4E4  7C 08 03 A6 */	mtlr r0
 /* 80454F28 0041E4E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80454F2C 0041E4EC  4E 80 00 20 */	blr 
-.endfn __dt__80454ED8
+.endfn __dt__CDeviceFontLoader
 
 .fn func_80454F30, global
 /* 80454F30 0041E4F0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -204,7 +202,7 @@ CDeviceFontLoader_typestr:
 __vt__CDeviceFontLoader:
 	.4byte __RTTI__CDeviceFontLoader
 	.4byte 0
-	.4byte __dt__80454ED8
+	.4byte __dt__CDeviceFontLoader
 	.4byte func_80039E28
 	.4byte func_80455074
 	.4byte func_80039E18
@@ -314,7 +312,7 @@ __RTTI__CDeviceFontLoader:
 
 .obj "@eti_80034E80", local
 .hidden "@eti_80034E80"
-	.4byte __dt__80454ED8
+	.4byte __dt__CDeviceFontLoader
 	.4byte 0x00000058
 	.4byte "@etb_8001D1FC"
 .endobj "@eti_80034E80"

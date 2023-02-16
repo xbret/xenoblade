@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_8045229C, global
+.fn __ct__CDeviceFont, global
 /* 8045229C 0041B85C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804522A0 0041B860  7C 08 02 A6 */	mflr r0
 /* 804522A4 0041B864  38 C0 02 00 */	li r6, 0x200
@@ -62,9 +60,9 @@
 /* 80452374 0041B934  7C 08 03 A6 */	mtlr r0
 /* 80452378 0041B938  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045237C 0041B93C  4E 80 00 20 */	blr 
-.endfn func_8045229C
+.endfn __ct__CDeviceFont
 
-.fn __dt__80452380, global
+.fn __dt___reslist_base_IDeviceFontInfo, global
 /* 80452380 0041B940  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80452384 0041B944  7C 08 02 A6 */	mflr r0
 /* 80452388 0041B948  2C 03 00 00 */	cmpwi r3, 0
@@ -114,9 +112,9 @@
 /* 80452428 0041B9E8  7C 08 03 A6 */	mtlr r0
 /* 8045242C 0041B9EC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80452430 0041B9F0  4E 80 00 20 */	blr 
-.endfn __dt__80452380
+.endfn __dt___reslist_base_IDeviceFontInfo
 
-.fn __dt__80452434, global
+.fn __dt__reslist_IDeviceFontInfo, global
 /* 80452434 0041B9F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80452438 0041B9F8  7C 08 02 A6 */	mflr r0
 /* 8045243C 0041B9FC  2C 03 00 00 */	cmpwi r3, 0
@@ -167,9 +165,9 @@
 /* 804524E0 0041BAA0  7C 08 03 A6 */	mtlr r0
 /* 804524E4 0041BAA4  38 21 00 10 */	addi r1, r1, 0x10
 /* 804524E8 0041BAA8  4E 80 00 20 */	blr 
-.endfn __dt__80452434
+.endfn __dt__reslist_IDeviceFontInfo
 
-.fn __dt__804524EC, global
+.fn __dt__CDeviceFont, global
 /* 804524EC 0041BAAC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804524F0 0041BAB0  7C 08 02 A6 */	mflr r0
 /* 804524F4 0041BAB4  2C 03 00 00 */	cmpwi r3, 0
@@ -231,7 +229,7 @@
 /* 804525C0 0041BB80  7C 08 03 A6 */	mtlr r0
 /* 804525C4 0041BB84  38 21 00 20 */	addi r1, r1, 0x20
 /* 804525C8 0041BB88  4E 80 00 20 */	blr 
-.endfn __dt__804524EC
+.endfn __dt__CDeviceFont
 
 .fn func_804525CC, global
 /* 804525CC 0041BB8C  80 6D BD D8 */	lwz r3, lbl_80667F58@sda21(r13)
@@ -275,7 +273,7 @@
 /* 80452644 0041BC04  41 82 00 14 */	beq .L_80452658
 /* 80452648 0041BC08  7F E4 FB 78 */	mr r4, r31
 /* 8045264C 0041BC0C  7F A5 EB 78 */	mr r5, r29
-/* 80452650 0041BC10  48 00 11 E9 */	bl func_80453838
+/* 80452650 0041BC10  48 00 11 E9 */	bl __ct__CDeviceFontLayer
 /* 80452654 0041BC14  7C 7E 1B 78 */	mr r30, r3
 .L_80452658:
 /* 80452658 0041BC18  7F C3 F3 78 */	mr r3, r30
@@ -1293,7 +1291,7 @@ lbl_805266F4:
 __vt__CDeviceFont:
 	.4byte __RTTI__CDeviceFont
 	.4byte 0
-	.4byte __dt__804524EC
+	.4byte __dt__CDeviceFont
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -1347,7 +1345,7 @@ CDeviceFont_hierarchy:
 __vt__reslist_IDeviceFontInfo:
 	.4byte __RTTI__reslist_IDeviceFontInfo
 	.4byte 0
-	.4byte __dt__80452434
+	.4byte __dt__reslist_IDeviceFontInfo
 
 .global reslist_IDeviceFontInfo_hierarchy
 reslist_IDeviceFontInfo_hierarchy:
@@ -1360,7 +1358,7 @@ reslist_IDeviceFontInfo_hierarchy:
 __vt___reslist_base_IDeviceFontInfo:
 	.4byte __RTTI___reslist_base_IDeviceFontInfo
 	.4byte 0
-	.4byte __dt__80452380
+	.4byte __dt___reslist_base_IDeviceFontInfo
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -1420,10 +1418,10 @@ lbl_80667F58:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x000001C8
-	.4byte __dt__80452434
+	.4byte __dt__reslist_IDeviceFontInfo
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__80447900
+	.4byte __dt__CDeviceBase
 .endobj "@etb_8001CFEC"
 
 .obj "@etb_8001D014", local
@@ -1446,7 +1444,7 @@ lbl_80667F58:
 	.4byte 0x00000000
 	.4byte 0x8780001D
 	.4byte 0x000001C8
-	.4byte __dt__80452434
+	.4byte __dt__reslist_IDeviceFontInfo
 .endobj "@etb_8001D024"
 
 .obj "@etb_8001D040", local
@@ -1503,28 +1501,28 @@ lbl_80667F58:
 
 .obj "@eti_80034CDC", local
 .hidden "@eti_80034CDC"
-	.4byte func_8045229C
+	.4byte __ct__CDeviceFont
 	.4byte 0x000000E4
 	.4byte "@etb_8001CFEC"
 .endobj "@eti_80034CDC"
 
 .obj "@eti_80034CE8", local
 .hidden "@eti_80034CE8"
-	.4byte __dt__80452380
+	.4byte __dt___reslist_base_IDeviceFontInfo
 	.4byte 0x000000B4
 	.4byte "@etb_8001D014"
 .endobj "@eti_80034CE8"
 
 .obj "@eti_80034CF4", local
 .hidden "@eti_80034CF4"
-	.4byte __dt__80452434
+	.4byte __dt__reslist_IDeviceFontInfo
 	.4byte 0x000000B8
 	.4byte "@etb_8001D01C"
 .endobj "@eti_80034CF4"
 
 .obj "@eti_80034D00", local
 .hidden "@eti_80034D00"
-	.4byte __dt__804524EC
+	.4byte __dt__CDeviceFont
 	.4byte 0x000000E0
 	.4byte "@etb_8001D024"
 .endobj "@eti_80034D00"

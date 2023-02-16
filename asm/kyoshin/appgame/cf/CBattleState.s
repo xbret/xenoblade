@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__cf_CBattleState, global
 /* 80145B1C 0010F0DC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80145B20 0010F0E0  7C 08 02 A6 */	mflr r0

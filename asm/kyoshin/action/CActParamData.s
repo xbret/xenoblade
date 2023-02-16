@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_800539EC, global
 /* 800539EC 0001CFAC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800539F0 0001CFB0  7C 08 02 A6 */	mflr r0
@@ -32,7 +30,7 @@
 /* 80053A4C 0001D00C  4E 80 00 20 */	blr 
 .endfn func_800539EC
 
-.fn __dt__80053A50, global
+.fn __dt__CActParamData, global
 /* 80053A50 0001D010  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80053A54 0001D014  7C 08 02 A6 */	mflr r0
 /* 80053A58 0001D018  2C 03 00 00 */	cmpwi r3, 0
@@ -50,7 +48,7 @@
 /* 80053A84 0001D044  7C 08 03 A6 */	mtlr r0
 /* 80053A88 0001D048  38 21 00 10 */	addi r1, r1, 0x10
 /* 80053A8C 0001D04C  4E 80 00 20 */	blr 
-.endfn __dt__80053A50
+.endfn __dt__CActParamData
 
 .fn func_80053A90, global
 /* 80053A90 0001D050  38 00 00 00 */	li r0, 0
@@ -5714,7 +5712,7 @@
 __vt__CActParamData:
 	.4byte __RTTI__CActParamData
 	.4byte 0
-	.4byte __dt__80053A50
+	.4byte __dt__CActParamData
 	.4byte 0
 
 
@@ -6020,7 +6018,7 @@ double_80668828:
 
 .obj "@eti_80022520", local
 .hidden "@eti_80022520"
-	.4byte __dt__80053A50
+	.4byte __dt__CActParamData
 	.4byte 0x00000040
 	.4byte "@etb_800075EC"
 .endobj "@eti_80022520"

@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_804434FC, global
 /* 804434FC 0040CABC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80443500 0040CAC0  7C 08 02 A6 */	mflr r0
@@ -170,7 +168,7 @@ lbl_80525F84:
 __vt__CViewRoot:
 	.4byte __RTTI__CViewRoot
 	.4byte 0
-	.4byte __dt__804420D0
+	.4byte __dt__CViewRoot
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -239,7 +237,7 @@ __RTTI__CViewRoot:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x000004F4
-	.4byte __dt__80438E10
+	.4byte __dt__reslist_unsigned_long
 	.4byte 0x0780001E
 	.4byte 0x000003E4
 	.4byte __dt__80442084

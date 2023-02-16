@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CMenuKizunaTalkList, global
 /* 80271DD4 0023B394  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80271DD8 0023B398  7C 08 02 A6 */	mflr r0
@@ -56,7 +54,7 @@
 /* 80271E94 0023B454  4E 80 00 20 */	blr
 .endfn __ct__CMenuKizunaTalkList
 
-.fn __dt__80271E98, global
+.fn __dt__CMenuKizunaTalkList, global
 /* 80271E98 0023B458  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80271E9C 0023B45C  7C 08 02 A6 */	mflr r0
 /* 80271EA0 0023B460  2C 03 00 00 */	cmpwi r3, 0
@@ -67,7 +65,7 @@
 /* 80271EB4 0023B474  41 82 00 44 */	beq .L_80271EF8
 /* 80271EB8 0023B478  38 80 FF FF */	li r4, -1
 /* 80271EBC 0023B47C  38 63 00 B8 */	addi r3, r3, 0xb8
-/* 80271EC0 0023B480  48 00 13 AD */	bl __dt__8027326C
+/* 80271EC0 0023B480  48 00 13 AD */	bl __dt__CKizunaTalkList
 /* 80271EC4 0023B484  38 7E 00 80 */	addi r3, r30, 0x80
 /* 80271EC8 0023B488  38 80 FF FF */	li r4, -1
 /* 80271ECC 0023B48C  4B F5 20 85 */	bl __dt__CTitleAHelp
@@ -88,7 +86,7 @@
 /* 80271F04 0023B4C4  7C 08 03 A6 */	mtlr r0
 /* 80271F08 0023B4C8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80271F0C 0023B4CC  4E 80 00 20 */	blr 
-.endfn __dt__80271E98
+.endfn __dt__CMenuKizunaTalkList
 
 .fn func_80271F10, global
 /* 80271F10 0023B4D0  94 21 EB 00 */	stwu r1, -0x1500(r1)
@@ -261,7 +259,7 @@
 /* 802721A8 0023B768  38 80 FF FF */	li r4, -1
 /* 802721AC 0023B76C  80 01 14 F0 */	lwz r0, 0x14f0(r1)
 /* 802721B0 0023B770  90 1F 15 48 */	stw r0, 0x1548(r31)
-/* 802721B4 0023B774  48 00 10 B9 */	bl __dt__8027326C
+/* 802721B4 0023B774  48 00 10 B9 */	bl __dt__CKizunaTalkList
 /* 802721B8 0023B778  38 7F 00 B8 */	addi r3, r31, 0xb8
 /* 802721BC 0023B77C  48 00 11 39 */	bl func_802732F4
 /* 802721C0 0023B780  2C 1F 00 00 */	cmpwi r31, 0
@@ -657,7 +655,7 @@
 
 .fn func_802726EC, global
 /* 802726EC 0023BCAC  38 63 FF A8 */	addi r3, r3, -88
-/* 802726F0 0023BCB0  4B FF F7 A8 */	b __dt__80271E98
+/* 802726F0 0023BCB0  4B FF F7 A8 */	b __dt__CMenuKizunaTalkList
 .endfn func_802726EC
 
 .fn func_802726F4, global
@@ -1401,7 +1399,7 @@ lbl_80509FF8:
 __vt__CMenuKizunaTalkList:
 	.4byte __RTTI__CMenuKizunaTalkList
 	.4byte 0
-	.4byte __dt__80271E98
+	.4byte __dt__CMenuKizunaTalkList
 	.4byte CChildListNode_Reset
 	.4byte func_80271F10
 	.4byte func_802721F4
@@ -1471,7 +1469,7 @@ lbl_806671A0:
 	.4byte __dt__CBgTex
 	.4byte 0x0680001D
 	.4byte 0x00000058
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x8680001D
 	.4byte 0x00000000
 	.4byte __dt__800FED0C
@@ -1489,16 +1487,16 @@ lbl_806671A0:
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x000000B8
-	.4byte __dt__8027326C
+	.4byte __dt__CKizunaTalkList
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte __dt__8027326C
+	.4byte __dt__CKizunaTalkList
 	.4byte 0x8780001E
 	.4byte 0x00000080
 	.4byte __dt__CTitleAHelp
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte __dt__8027326C
+	.4byte __dt__CKizunaTalkList
 	.4byte 0x0780001E
 	.4byte 0x00000080
 	.4byte __dt__CTitleAHelp
@@ -1507,7 +1505,7 @@ lbl_806671A0:
 	.4byte __dt__CBgTex
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 .endobj "@etb_80018184"
 
 .obj "@etb_800181F8", local
@@ -1611,7 +1609,7 @@ lbl_806671A0:
 
 .obj "@eti_800308B4", local
 .hidden "@eti_800308B4"
-	.4byte __dt__80271E98
+	.4byte __dt__CMenuKizunaTalkList
 	.4byte 0x00000078
 	.4byte "@etb_80018184"
 .endobj "@eti_800308B4"

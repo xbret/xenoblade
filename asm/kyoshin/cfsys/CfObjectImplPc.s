@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_800C5998, global
 /* 800C5998 0008EF58  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800C599C 0008EF5C  7C 08 02 A6 */	mflr r0
@@ -5141,12 +5139,12 @@
 
 .fn func_800CA4DC, global
 /* 800CA4DC 00093A9C  38 63 FF F4 */	addi r3, r3, -12
-/* 800CA4E0 00093AA0  4B FB 61 20 */	b __dt__80080600
+/* 800CA4E0 00093AA0  4B FB 61 20 */	b __dt__cf_CfObjectImplPc
 .endfn func_800CA4DC
 
 .fn func_800CA4E4, global
 /* 800CA4E4 00093AA4  38 63 FF F0 */	addi r3, r3, -16
-/* 800CA4E8 00093AA8  4B FB 61 18 */	b __dt__80080600
+/* 800CA4E8 00093AA8  4B FB 61 18 */	b __dt__cf_CfObjectImplPc
 .endfn func_800CA4E4
 
 
@@ -5293,7 +5291,7 @@ jumptable_8052DF28:
 __vt__cf_CfObjectImplPc:
 	.4byte __RTTI__cf_CfObjectImplPc
 	.4byte 0
-	.4byte __dt__80080600
+	.4byte __dt__cf_CfObjectImplPc
 	.4byte func_800C6F30
 	.4byte func_800CC5DC
 	.4byte func_800C70BC

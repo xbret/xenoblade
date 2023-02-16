@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_8049E380, global
 /* 8049E380 00467940  C0 02 D0 10 */	lfs f0, float_8066D390@sda21(r2)
 /* 8049E384 00467944  3C A0 80 57 */	lis r5, __vt__CScnFrame@ha
@@ -17,7 +15,7 @@
 /* 8049E3A4 00467964  4E 80 00 20 */	blr 
 .endfn func_8049E380
 
-.fn __dt__8049E3A8, global
+.fn __dt__CScnFrame, global
 /* 8049E3A8 00467968  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049E3AC 0046796C  7C 08 02 A6 */	mflr r0
 /* 8049E3B0 00467970  2C 03 00 00 */	cmpwi r3, 0
@@ -35,7 +33,7 @@
 /* 8049E3DC 0046799C  7C 08 03 A6 */	mtlr r0
 /* 8049E3E0 004679A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8049E3E4 004679A4  4E 80 00 20 */	blr 
-.endfn __dt__8049E3A8
+.endfn __dt__CScnFrame
 
 .fn func_8049E3E8, global
 /* 8049E3E8 004679A8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -89,7 +87,7 @@ CScnFrame_typestr:
 __vt__CScnFrame:
 	.4byte __RTTI__CScnFrame
 	.4byte 0
-	.4byte __dt__8049E3A8
+	.4byte __dt__CScnFrame
 	.4byte 0
 
 
@@ -143,7 +141,7 @@ double_8066D398:
 
 .obj "@eti_80037178", local
 .hidden "@eti_80037178"
-	.4byte __dt__8049E3A8
+	.4byte __dt__CScnFrame
 	.4byte 0x00000040
 	.4byte "@etb_8001F6A8"
 .endobj "@eti_80037178"

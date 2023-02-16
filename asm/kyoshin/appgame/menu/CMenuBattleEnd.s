@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CMenuBattleEnd, global
 /* 8026F37C 0023893C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8026F380 00238940  7C 08 02 A6 */	mflr r0
@@ -93,7 +91,7 @@
 /* 8026F4C8 00238A88  4E 80 00 20 */	blr
 .endfn __ct__CMenuBattleEnd
 
-.fn __dt__8026F4CC, global
+.fn __dt__CMenuBattleEnd, global
 /* 8026F4CC 00238A8C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8026F4D0 00238A90  7C 08 02 A6 */	mflr r0
 /* 8026F4D4 00238A94  2C 03 00 00 */	cmpwi r3, 0
@@ -111,7 +109,7 @@
 /* 8026F504 00238AC4  41 82 00 10 */	beq .L_8026F514
 /* 8026F508 00238AC8  7F C3 F3 78 */	mr r3, r30
 /* 8026F50C 00238ACC  38 80 00 00 */	li r4, 0
-/* 8026F510 00238AD0  48 1D 56 29 */	bl __dt__80444B38
+/* 8026F510 00238AD0  48 1D 56 29 */	bl __dt__CProcess
 .L_8026F514:
 /* 8026F514 00238AD4  2C 1F 00 00 */	cmpwi r31, 0
 /* 8026F518 00238AD8  40 81 00 0C */	ble .L_8026F524
@@ -125,7 +123,7 @@
 /* 8026F534 00238AF4  7C 08 03 A6 */	mtlr r0
 /* 8026F538 00238AF8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8026F53C 00238AFC  4E 80 00 20 */	blr 
-.endfn __dt__8026F4CC
+.endfn __dt__CMenuBattleEnd
 
 .fn func_8026F540, global
 /* 8026F540 00238B00  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -653,7 +651,7 @@
 
 .fn func_8026FC90, global
 /* 8026FC90 00239250  38 63 FF 94 */	addi r3, r3, -108
-/* 8026FC94 00239254  4B FF F8 38 */	b __dt__8026F4CC
+/* 8026FC94 00239254  4B FF F8 38 */	b __dt__CMenuBattleEnd
 .endfn func_8026FC90
 
 .fn func_8026FC98, global
@@ -663,7 +661,7 @@
 
 .fn func_8026FCA0, global
 /* 8026FCA0 00239260  38 63 FF 90 */	addi r3, r3, -112
-/* 8026FCA4 00239264  4B FF F8 28 */	b __dt__8026F4CC
+/* 8026FCA4 00239264  4B FF F8 28 */	b __dt__CMenuBattleEnd
 .endfn func_8026FCA0
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -695,7 +693,7 @@ CMenuBattleEnd_strpool:
 __vt__CMenuBattleEnd:
 	.4byte __RTTI__CMenuBattleEnd
 	.4byte 0
-	.4byte __dt__8026F4CC
+	.4byte __dt__CMenuBattleEnd
 	.4byte CChildListNode_Reset
 	.4byte func_8026F540
 	.4byte func_8026F71C
@@ -805,13 +803,13 @@ lbl_80667188:
 	.4byte 0x00000000
 	.4byte 0x0680001C
 	.4byte 0x00000070
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x0680001C
 	.4byte 0x0000006C
 	.4byte __dt__IWorkEvent
 	.4byte 0x8680001C
 	.4byte 0x00000000
-	.4byte __dt__8012235C
+	.4byte __dt__IUIWindow
 .endobj "@etb_80017D9C"
 
 .obj "@etb_80017DD0", local
@@ -825,7 +823,7 @@ lbl_80667188:
 	.4byte __dt__8045F580
 	.4byte 0x0680001E
 	.4byte 0x00000070
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x8680001E
 	.4byte 0x0000006C
 	.4byte __dt__IWorkEvent
@@ -894,7 +892,7 @@ lbl_80667188:
 
 .obj "@eti_80030668", local
 .hidden "@eti_80030668"
-	.4byte __dt__8026F4CC
+	.4byte __dt__CMenuBattleEnd
 	.4byte 0x00000074
 	.4byte "@etb_80017DD0"
 .endobj "@eti_80030668"

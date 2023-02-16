@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_8044F5C4, global
+.fn __ct__CDeviceFileCri, global
 /* 8044F5C4 00418B84  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044F5C8 00418B88  7C 08 02 A6 */	mflr r0
 /* 8044F5CC 00418B8C  38 C0 01 00 */	li r6, 0x100
@@ -44,7 +42,7 @@
 /* 8044F650 00418C10  7C 08 03 A6 */	mtlr r0
 /* 8044F654 00418C14  38 21 00 10 */	addi r1, r1, 0x10
 /* 8044F658 00418C18  4E 80 00 20 */	blr 
-.endfn func_8044F5C4
+.endfn __ct__CDeviceFileCri
 
 .fn __dt__8044F65C, global
 /* 8044F65C 00418C1C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -66,7 +64,7 @@
 /* 8044F698 00418C58  4E 80 00 20 */	blr
 .endfn __dt__8044F65C
 
-.fn __dt__8044F69C, global
+.fn __dt__CDeviceFileCri, global
 /* 8044F69C 00418C5C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8044F6A0 00418C60  7C 08 02 A6 */	mflr r0
 /* 8044F6A4 00418C64  2C 03 00 00 */	cmpwi r3, 0
@@ -112,7 +110,7 @@
 /* 8044F738 00418CF8  7C 08 03 A6 */	mtlr r0
 /* 8044F73C 00418CFC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8044F740 00418D00  4E 80 00 20 */	blr 
-.endfn __dt__8044F69C
+.endfn __dt__CDeviceFileCri
 
 .fn func_8044F744, global
 /* 8044F744 00418D04  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1642,7 +1640,7 @@ jumptable_8056FB70:
 __vt__CDeviceFileCri:
 	.4byte __RTTI__CDeviceFileCri
 	.4byte 0
-	.4byte __dt__8044F69C
+	.4byte __dt__CDeviceFileCri
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -1876,7 +1874,7 @@ lbl_80667F48:
 
 .obj "@eti_80034ACC", local
 .hidden "@eti_80034ACC"
-	.4byte func_8044F5C4
+	.4byte __ct__CDeviceFileCri
 	.4byte 0x00000098
 	.4byte "@etb_8001CE38"
 .endobj "@eti_80034ACC"
@@ -1890,7 +1888,7 @@ lbl_80667F48:
 
 .obj "@eti_80034AE4", local
 .hidden "@eti_80034AE4"
-	.4byte __dt__8044F69C
+	.4byte __dt__CDeviceFileCri
 	.4byte 0x000000A8
 	.4byte "@etb_8001CE68"
 .endobj "@eti_80034AE4"

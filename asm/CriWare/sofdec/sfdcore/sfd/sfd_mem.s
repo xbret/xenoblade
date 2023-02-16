@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
 .fn SFMEM_Init, global
 /* 803C0E40 0038A400  38 60 00 00 */	li r3, 0
 /* 803C0E44 0038A404  4E 80 00 20 */	blr 

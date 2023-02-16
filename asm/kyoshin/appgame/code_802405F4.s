@@ -2,9 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-
 .fn func_80240614, global
 /* 80240614 00209BD4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80240618 00209BD8  7C 08 02 A6 */	mflr r0
@@ -1009,7 +1006,7 @@
 /* 80241468 0020AA28  4E 80 00 20 */	blr
 .endfn func_80241344
 
-.fn __dt__8024146C, global
+.fn __dt__CMenuMapSelect, global
 /* 8024146C 0020AA2C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80241470 0020AA30  7C 08 02 A6 */	mflr r0
 /* 80241474 0020AA34  2C 03 00 00 */	cmpwi r3, 0
@@ -1021,13 +1018,13 @@
 /* 8024148C 0020AA4C  41 82 00 68 */	beq .L_802414F4
 /* 80241490 0020AA50  38 80 FF FF */	li r4, -1
 /* 80241494 0020AA54  38 63 01 94 */	addi r3, r3, 0x194
-/* 80241498 0020AA58  48 00 A8 ED */	bl __dt__8024BD84
+/* 80241498 0020AA58  48 00 A8 ED */	bl __dt__CFloorMap
 /* 8024149C 0020AA5C  38 7E 01 6C */	addi r3, r30, 0x16c
 /* 802414A0 0020AA60  38 80 FF FF */	li r4, -1
-/* 802414A4 0020AA64  48 00 2E A5 */	bl __dt__80244348
+/* 802414A4 0020AA64  48 00 2E A5 */	bl __dt__CFade
 /* 802414A8 0020AA68  38 7E 00 B8 */	addi r3, r30, 0xb8
 /* 802414AC 0020AA6C  38 80 FF FF */	li r4, -1
-/* 802414B0 0020AA70  48 00 1F 21 */	bl __dt__802433D0
+/* 802414B0 0020AA70  48 00 1F 21 */	bl __dt__CMapSel
 /* 802414B4 0020AA74  38 7E 00 80 */	addi r3, r30, 0x80
 /* 802414B8 0020AA78  38 80 FF FF */	li r4, -1
 /* 802414BC 0020AA7C  4B F8 2A 95 */	bl __dt__CTitleAHelp
@@ -1039,7 +1036,7 @@
 /* 802414D4 0020AA94  41 82 00 10 */	beq .L_802414E4
 /* 802414D8 0020AA98  7F C3 F3 78 */	mr r3, r30
 /* 802414DC 0020AA9C  38 80 00 00 */	li r4, 0
-/* 802414E0 0020AAA0  48 20 36 59 */	bl __dt__80444B38
+/* 802414E0 0020AAA0  48 20 36 59 */	bl __dt__CProcess
 .L_802414E4:
 /* 802414E4 0020AAA4  2C 1F 00 00 */	cmpwi r31, 0
 /* 802414E8 0020AAA8  40 81 00 0C */	ble .L_802414F4
@@ -1053,7 +1050,7 @@
 /* 80241504 0020AAC4  7C 08 03 A6 */	mtlr r0
 /* 80241508 0020AAC8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8024150C 0020AACC  4E 80 00 20 */	blr 
-.endfn __dt__8024146C
+.endfn __dt__CMenuMapSelect
 
 .fn func_80241510, global
 /* 80241510 0020AAD0  94 21 CB 70 */	stwu r1, -0x3490(r1)
@@ -1098,17 +1095,17 @@
 /* 802415AC 0020AB6C  48 00 00 95 */	bl func_80241640
 /* 802415B0 0020AB70  38 61 00 88 */	addi r3, r1, 0x88
 /* 802415B4 0020AB74  38 80 FF FF */	li r4, -1
-/* 802415B8 0020AB78  48 00 1E 19 */	bl __dt__802433D0
+/* 802415B8 0020AB78  48 00 1E 19 */	bl __dt__CMapSel
 /* 802415BC 0020AB7C  38 7F 00 B8 */	addi r3, r31, 0xb8
 /* 802415C0 0020AB80  48 00 1E 7D */	bl func_8024343C
 /* 802415C4 0020AB84  38 61 00 28 */	addi r3, r1, 0x28
-/* 802415C8 0020AB88  48 00 2D 19 */	bl func_802442E0
+/* 802415C8 0020AB88  48 00 2D 19 */	bl __ct__CFade
 /* 802415CC 0020AB8C  38 7F 01 6C */	addi r3, r31, 0x16c
 /* 802415D0 0020AB90  38 81 00 28 */	addi r4, r1, 0x28
 /* 802415D4 0020AB94  48 00 02 C9 */	bl func_8024189C
 /* 802415D8 0020AB98  38 61 00 28 */	addi r3, r1, 0x28
 /* 802415DC 0020AB9C  38 80 FF FF */	li r4, -1
-/* 802415E0 0020ABA0  48 00 2D 69 */	bl __dt__80244348
+/* 802415E0 0020ABA0  48 00 2D 69 */	bl __dt__CFade
 /* 802415E4 0020ABA4  38 7F 01 6C */	addi r3, r31, 0x16c
 /* 802415E8 0020ABA8  48 00 2D B5 */	bl func_8024439C
 /* 802415EC 0020ABAC  38 61 01 40 */	addi r3, r1, 0x140
@@ -1118,7 +1115,7 @@
 /* 802415FC 0020ABBC  48 00 03 25 */	bl func_80241920
 /* 80241600 0020ABC0  38 61 01 40 */	addi r3, r1, 0x140
 /* 80241604 0020ABC4  38 80 FF FF */	li r4, -1
-/* 80241608 0020ABC8  48 00 A7 7D */	bl __dt__8024BD84
+/* 80241608 0020ABC8  48 00 A7 7D */	bl __dt__CFloorMap
 /* 8024160C 0020ABCC  2C 1F 00 00 */	cmpwi r31, 0
 /* 80241610 0020ABD0  7F E4 FB 78 */	mr r4, r31
 /* 80241614 0020ABD4  41 82 00 08 */	beq .L_8024161C
@@ -2060,43 +2057,43 @@ lbl_80667080:
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x00000194
-	.4byte __dt__8024BD84
+	.4byte __dt__CFloorMap
 	.4byte 0x0780001E
 	.4byte 0x00000194
-	.4byte __dt__8024BD84
+	.4byte __dt__CFloorMap
 	.4byte 0x8780001E
 	.4byte 0x0000016C
-	.4byte __dt__80244348
+	.4byte __dt__CFade
 	.4byte 0x0780001E
 	.4byte 0x00000194
-	.4byte __dt__8024BD84
+	.4byte __dt__CFloorMap
 	.4byte 0x0780001E
 	.4byte 0x0000016C
-	.4byte __dt__80244348
+	.4byte __dt__CFade
 	.4byte 0x8780001E
 	.4byte 0x000000B8
-	.4byte __dt__802433D0
+	.4byte __dt__CMapSel
 	.4byte 0x0780001E
 	.4byte 0x00000194
-	.4byte __dt__8024BD84
+	.4byte __dt__CFloorMap
 	.4byte 0x0780001E
 	.4byte 0x0000016C
-	.4byte __dt__80244348
+	.4byte __dt__CFade
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte __dt__802433D0
+	.4byte __dt__CMapSel
 	.4byte 0x8780001E
 	.4byte 0x00000080
 	.4byte __dt__CTitleAHelp
 	.4byte 0x0780001E
 	.4byte 0x00000194
-	.4byte __dt__8024BD84
+	.4byte __dt__CFloorMap
 	.4byte 0x0780001E
 	.4byte 0x0000016C
-	.4byte __dt__80244348
+	.4byte __dt__CFade
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte __dt__802433D0
+	.4byte __dt__CMapSel
 	.4byte 0x0780001E
 	.4byte 0x00000080
 	.4byte __dt__CTitleAHelp
@@ -2105,7 +2102,7 @@ lbl_80667080:
 	.4byte __dt__CBgTex
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 .endobj "@etb_80016160"
 
 .obj "@etb_80016250", local
@@ -2189,7 +2186,7 @@ lbl_80667080:
 
 .obj "@eti_8002F0FC", local
 .hidden "@eti_8002F0FC"
-	.4byte __dt__8024146C
+	.4byte __dt__CMenuMapSelect
 	.4byte 0x000000A4
 	.4byte "@etb_80016160"
 .endobj "@eti_8002F0FC"

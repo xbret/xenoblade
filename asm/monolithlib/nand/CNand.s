@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn __dt__804DA0B8, global
+.fn __dt__CNand, global
 /* 804DA0B8 004A3678  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DA0BC 004A367C  7C 08 02 A6 */	mflr r0
 /* 804DA0C0 004A3680  2C 03 00 00 */	cmpwi r3, 0
@@ -13,9 +11,9 @@
 /* 804DA0CC 004A368C  7C 7E 1B 78 */	mr r30, r3
 /* 804DA0D0 004A3690  7C 9F 23 78 */	mr r31, r4
 /* 804DA0D4 004A3694  41 82 00 28 */	beq .L_804DA0FC
-/* 804DA0D8 004A3698  3C 80 80 4E */	lis r4, __dt__804DA114@ha
+/* 804DA0D8 004A3698  3C 80 80 4E */	lis r4, __dt__CNRequest@ha
 /* 804DA0DC 004A369C  38 A0 00 24 */	li r5, 0x24
-/* 804DA0E0 004A36A0  38 84 A1 14 */	addi r4, r4, __dt__804DA114@l
+/* 804DA0E0 004A36A0  38 84 A1 14 */	addi r4, r4, __dt__CNRequest@l
 /* 804DA0E4 004A36A4  38 C0 00 08 */	li r6, 8
 /* 804DA0E8 004A36A8  4B DD FB 11 */	bl __destroy_arr
 /* 804DA0EC 004A36AC  2C 1F 00 00 */	cmpwi r31, 0
@@ -29,9 +27,9 @@
 /* 804DA108 004A36C8  7C 08 03 A6 */	mtlr r0
 /* 804DA10C 004A36CC  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DA110 004A36D0  4E 80 00 20 */	blr
-.endfn __dt__804DA0B8
+.endfn __dt__CNand
 
-.fn __dt__804DA114, global
+.fn __dt__CNRequest, global
 /* 804DA114 004A36D4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DA118 004A36D8  7C 08 02 A6 */	mflr r0
 /* 804DA11C 004A36DC  2C 03 00 00 */	cmpwi r3, 0
@@ -49,7 +47,7 @@
 /* 804DA148 004A3708  7C 08 03 A6 */	mtlr r0
 /* 804DA14C 004A370C  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DA150 004A3710  4E 80 00 20 */	blr
-.endfn __dt__804DA114
+.endfn __dt__CNRequest
 
 
 .fn func_804DA154, global
@@ -58,12 +56,12 @@
 /* 804DA15C 004A371C  3C C0 80 57 */	lis r6, __vt__CNand@ha
 /* 804DA160 004A3720  3C 80 80 4E */	lis r4, __ct__CNRequest@ha
 /* 804DA164 004A3724  90 01 00 14 */	stw r0, 0x14(r1)
-/* 804DA168 004A3728  3C A0 80 4E */	lis r5, __dt__804DA114@ha
+/* 804DA168 004A3728  3C A0 80 4E */	lis r5, __dt__CNRequest@ha
 /* 804DA16C 004A372C  38 C6 35 90 */	addi r6, r6, __vt__CNand@l
 /* 804DA170 004A3730  38 84 AA A8 */	addi r4, r4, __ct__CNRequest@l
 /* 804DA174 004A3734  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804DA178 004A3738  7C 7F 1B 78 */	mr r31, r3
-/* 804DA17C 004A373C  38 A5 A1 14 */	addi r5, r5, __dt__804DA114@l
+/* 804DA17C 004A373C  38 A5 A1 14 */	addi r5, r5, __dt__CNRequest@l
 /* 804DA180 004A3740  38 E0 00 08 */	li r7, 8
 /* 804DA184 004A3744  90 C3 01 28 */	stw r6, 0x128(r3)
 /* 804DA188 004A3748  38 C0 00 24 */	li r6, 0x24
@@ -365,7 +363,7 @@ CNRequest_typestr:
 __vt__CNand:
 	.4byte __RTTI__CNand
 	.4byte 0
-	.4byte __dt__804DA0B8
+	.4byte __dt__CNand
 	.4byte 0
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -466,14 +464,14 @@ lbl_806625C0:
 
 .obj "@eti_800385C4", local
 .hidden "@eti_800385C4"
-	.4byte __dt__804DA0B8
+	.4byte __dt__CNand
 	.4byte 0x0000005C
 	.4byte "@etb_80020650"
 .endobj "@eti_800385C4"
 
 .obj "@eti_800385D0", local
 .hidden "@eti_800385D0"
-	.4byte __dt__804DA114
+	.4byte __dt__CNRequest
 	.4byte 0x00000040
 	.4byte "@etb_80020658"
 .endobj "@eti_800385D0"

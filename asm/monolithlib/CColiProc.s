@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_804B2578, global
 /* 804B2578 0047BB38  3C 80 80 57 */	lis r4, __vt__CColiProc@ha
 /* 804B257C 0047BB3C  38 00 00 00 */	li r0, 0

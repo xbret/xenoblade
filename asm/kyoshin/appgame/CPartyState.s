@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_801FCE70, global
 /* 801FCE70 001C6430  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801FCE74 001C6434  7C 08 02 A6 */	mflr r0
@@ -42,7 +40,7 @@
 /* 801FCEF8 001C64B8  4E 80 00 20 */	blr 
 .endfn func_801FCE70
 
-.fn __dt__801FCEFC, global
+.fn __dt__CPartyState, global
 /* 801FCEFC 001C64BC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801FCF00 001C64C0  7C 08 02 A6 */	mflr r0
 /* 801FCF04 001C64C4  2C 03 00 00 */	cmpwi r3, 0
@@ -68,7 +66,7 @@
 /* 801FCF50 001C6510  7C 08 03 A6 */	mtlr r0
 /* 801FCF54 001C6514  38 21 00 10 */	addi r1, r1, 0x10
 /* 801FCF58 001C6518  4E 80 00 20 */	blr 
-.endfn __dt__801FCEFC
+.endfn __dt__CPartyState
 
 .fn func_801FCF5C, global
 /* 801FCF5C 001C651C  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -2892,7 +2890,7 @@ lbl_80503718:
 __vt__CPartyState:
 	.4byte __RTTI__CPartyState
 	.4byte 0
-	.4byte __dt__801FCEFC
+	.4byte __dt__CPartyState
 	.4byte func_80039E28
 	.4byte func_801FE4AC
 	.4byte func_80039E18
@@ -3316,7 +3314,7 @@ lbl_8066AB28:
 
 .obj "@eti_8002C834", local
 .hidden "@eti_8002C834"
-	.4byte __dt__801FCEFC
+	.4byte __dt__CPartyState
 	.4byte 0x00000060
 	.4byte "@etb_80012814"
 .endobj "@eti_8002C834"

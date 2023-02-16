@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
 .fn SFPTS_InitPtsQue, global
 /* 803CB858 00394E18  38 00 00 00 */	li r0, 0
 /* 803CB85C 00394E1C  90 03 00 00 */	stw r0, 0(r3)

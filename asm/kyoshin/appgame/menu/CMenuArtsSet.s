@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CMenuArtsSet, global
 /* 8022F408 001F89C8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8022F40C 001F89CC  7C 08 02 A6 */	mflr r0
@@ -461,7 +459,7 @@
 
 .fn func_8022FA50, global
 /* 8022FA50 001F9010  38 63 FF A8 */	addi r3, r3, -88
-/* 8022FA54 001F9014  4B FF F1 04 */	b __dt__8022EB58
+/* 8022FA54 001F9014  4B FF F1 04 */	b __dt__CMenuArtsSet
 .endfn func_8022FA50
 
 #file boundary?
@@ -4627,7 +4625,7 @@ lbl_8050634C:
 __vt__CMenuArtsSet:
 	.4byte __RTTI__CMenuArtsSet
 	.4byte 0
-	.4byte __dt__8022EB58
+	.4byte __dt__CMenuArtsSet
 	.4byte CChildListNode_Reset
 	.4byte func_8022EBE4
 	.4byte func_8022F1BC
@@ -4832,7 +4830,7 @@ lbl_80667030:
 	.4byte __dt__CBgTex
 	.4byte 0x0680001E
 	.4byte 0x00000058
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x8680001E
 	.4byte 0x00000000
 	.4byte __dt__800FED0C

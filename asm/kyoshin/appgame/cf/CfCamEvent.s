@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_8006A82C, global
 /* 8006A82C 00033DEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8006A830 00033DF0  7C 08 02 A6 */	mflr r0
@@ -876,7 +874,7 @@ cf_CfCamFollow_typestr:
 __vt__cf_CfCamEvent:
 	.4byte __RTTI__cf_CfCamEvent
 	.4byte 0
-	.4byte __dt__8006B6C8
+	.4byte __dt__cf_CfCamEvent
 	.4byte func_8006A8C4
 	.4byte func_8006B6B8
 	.4byte func_8006AA34
@@ -1150,7 +1148,7 @@ lbl_806666C4:
 	.4byte 0x00000000
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte __dt__8006BF20
+	.4byte __dt__cf_CfCamFollow
 .endobj "@etb_8000806C"
 
 .section extabindex, "a" # 0x80021020 - 0x80039220

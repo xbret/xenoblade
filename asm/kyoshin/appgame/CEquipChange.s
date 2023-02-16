@@ -2,9 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-
 .fn func_80201A84, global
 /* 80201A84 001CB044  94 21 D6 30 */	stwu r1, -0x29d0(r1)
 /* 80201A88 001CB048  7C 08 02 A6 */	mflr r0
@@ -141,7 +138,7 @@
 /* 80201C94 001CB254  4B F8 A1 E1 */	bl func_8018BE74
 /* 80201C98 001CB258  38 61 27 B0 */	addi r3, r1, 0x27b0
 /* 80201C9C 001CB25C  38 80 FF FF */	li r4, -1
-/* 80201CA0 001CB260  4B FD 23 55 */	bl __dt__801D3FF4
+/* 80201CA0 001CB260  4B FD 23 55 */	bl __dt__CItemBoxInfo
 /* 80201CA4 001CB264  38 61 00 08 */	addi r3, r1, 8
 /* 80201CA8 001CB268  48 08 40 D5 */	bl func_80285D7C
 /* 80201CAC 001CB26C  38 7F 02 B4 */	addi r3, r31, 0x2b4
@@ -350,7 +347,7 @@
 /* 80201FC8 001CB588  38 61 00 08 */	addi r3, r1, 8
 /* 80201FCC 001CB58C  90 1F 2A 54 */	stw r0, 0x2a54(r31)
 /* 80201FD0 001CB590  38 80 FF FF */	li r4, -1
-/* 80201FD4 001CB594  48 08 41 39 */	bl __dt__8028610C
+/* 80201FD4 001CB594  48 08 41 39 */	bl __dt__CEquipItemBox
 /* 80201FD8 001CB598  7F E3 FB 78 */	mr r3, r31
 /* 80201FDC 001CB59C  83 E1 29 CC */	lwz r31, 0x29cc(r1)
 /* 80201FE0 001CB5A0  83 C1 29 C8 */	lwz r30, 0x29c8(r1)
@@ -360,7 +357,7 @@
 /* 80201FF0 001CB5B0  4E 80 00 20 */	blr 
 .endfn func_80201A84
 
-.fn __dt__80201FF4, global
+.fn __dt__CEquipChange, global
 /* 80201FF4 001CB5B4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80201FF8 001CB5B8  7C 08 02 A6 */	mflr r0
 /* 80201FFC 001CB5BC  2C 03 00 00 */	cmpwi r3, 0
@@ -371,10 +368,10 @@
 /* 80202010 001CB5D0  41 82 00 68 */	beq .L_80202078
 /* 80202014 001CB5D4  38 80 FF FF */	li r4, -1
 /* 80202018 001CB5D8  38 63 02 B0 */	addi r3, r3, 0x2b0
-/* 8020201C 001CB5DC  48 08 40 F1 */	bl __dt__8028610C
+/* 8020201C 001CB5DC  48 08 40 F1 */	bl __dt__CEquipItemBox
 /* 80202020 001CB5E0  38 7E 00 A4 */	addi r3, r30, 0xa4
 /* 80202024 001CB5E4  38 80 FF FF */	li r4, -1
-/* 80202028 001CB5E8  4B FD 1F CD */	bl __dt__801D3FF4
+/* 80202028 001CB5E8  4B FD 1F CD */	bl __dt__CItemBoxInfo
 /* 8020202C 001CB5EC  38 7E 00 80 */	addi r3, r30, 0x80
 /* 80202030 001CB5F0  38 80 FF FF */	li r4, -1
 /* 80202034 001CB5F4  4B FD 0D 55 */	bl __dt__801D2D88
@@ -401,7 +398,7 @@
 /* 80202084 001CB644  7C 08 03 A6 */	mtlr r0
 /* 80202088 001CB648  38 21 00 10 */	addi r1, r1, 0x10
 /* 8020208C 001CB64C  4E 80 00 20 */	blr 
-.endfn __dt__80201FF4
+.endfn __dt__CEquipChange
 
 .fn func_80202090, global
 /* 80202090 001CB650  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -4766,7 +4763,7 @@ jumptable_80538E04:
 __vt__CEquipChange:
 	.4byte __RTTI__CEquipChange
 	.4byte 0
-	.4byte __dt__80201FF4
+	.4byte __dt__CEquipChange
 	.4byte func_80039E28
 	.4byte func_802055E8
 	.4byte func_80039E18
@@ -4897,10 +4894,10 @@ lbl_80666F8C:
 	.4byte 0x00000000
 	.4byte 0x0780001F
 	.4byte 0x000002B0
-	.4byte __dt__8028610C
+	.4byte __dt__CEquipItemBox
 	.4byte 0x0780001F
 	.4byte 0x000000A4
-	.4byte __dt__801D3FF4
+	.4byte __dt__CItemBoxInfo
 	.4byte 0x0780001F
 	.4byte 0x00000080
 	.4byte __dt__801D2D88
@@ -4939,28 +4936,28 @@ lbl_80666F8C:
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x000002B0
-	.4byte __dt__8028610C
+	.4byte __dt__CEquipItemBox
 	.4byte 0x0780001E
 	.4byte 0x000002B0
-	.4byte __dt__8028610C
+	.4byte __dt__CEquipItemBox
 	.4byte 0x8780001E
 	.4byte 0x000000A4
-	.4byte __dt__801D3FF4
+	.4byte __dt__CItemBoxInfo
 	.4byte 0x0780001E
 	.4byte 0x000002B0
-	.4byte __dt__8028610C
+	.4byte __dt__CEquipItemBox
 	.4byte 0x0780001E
 	.4byte 0x000000A4
-	.4byte __dt__801D3FF4
+	.4byte __dt__CItemBoxInfo
 	.4byte 0x8780001E
 	.4byte 0x00000080
 	.4byte __dt__801D2D88
 	.4byte 0x0780001E
 	.4byte 0x000002B0
-	.4byte __dt__8028610C
+	.4byte __dt__CEquipItemBox
 	.4byte 0x0780001E
 	.4byte 0x000000A4
-	.4byte __dt__801D3FF4
+	.4byte __dt__CItemBoxInfo
 	.4byte 0x0780001E
 	.4byte 0x00000080
 	.4byte __dt__801D2D88
@@ -4969,10 +4966,10 @@ lbl_80666F8C:
 	.4byte __dt__801D2838
 	.4byte 0x0780001E
 	.4byte 0x000002B0
-	.4byte __dt__8028610C
+	.4byte __dt__CEquipItemBox
 	.4byte 0x0780001E
 	.4byte 0x000000A4
-	.4byte __dt__801D3FF4
+	.4byte __dt__CItemBoxInfo
 	.4byte 0x0780001E
 	.4byte 0x00000080
 	.4byte __dt__801D2D88
@@ -4984,10 +4981,10 @@ lbl_80666F8C:
 	.4byte __dt__801D2738
 	.4byte 0x0780001E
 	.4byte 0x000002B0
-	.4byte __dt__8028610C
+	.4byte __dt__CEquipItemBox
 	.4byte 0x0780001E
 	.4byte 0x000000A4
-	.4byte __dt__801D3FF4
+	.4byte __dt__CItemBoxInfo
 	.4byte 0x0780001E
 	.4byte 0x00000080
 	.4byte __dt__801D2D88
@@ -5255,7 +5252,7 @@ lbl_80666F8C:
 
 .obj "@eti_8002CB70", local
 .hidden "@eti_8002CB70"
-	.4byte __dt__80201FF4
+	.4byte __dt__CEquipChange
 	.4byte 0x0000009C
 	.4byte "@etb_80012B7C"
 .endobj "@eti_8002CB70"

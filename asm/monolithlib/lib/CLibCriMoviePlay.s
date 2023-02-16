@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_80459C98, global
 /* 80459C98 00423258  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80459C9C 0042325C  7C 08 02 A6 */	mflr r0
@@ -66,7 +64,7 @@
 /* 80459D78 00423338  4E 80 00 20 */	blr
 .endfn func_80459C98
 
-.fn __dt__80459D7C, global
+.fn __dt__CLibCriMoviePlay, global
 /* 80459D7C 0042333C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80459D80 00423340  7C 08 02 A6 */	mflr r0
 /* 80459D84 00423344  2C 03 00 00 */	cmpwi r3, 0
@@ -80,7 +78,7 @@
 /* 80459DA4 00423364  90 0D BE 38 */	stw r0, lbl_80667FB8@sda21(r13)
 /* 80459DA8 00423368  38 80 00 00 */	li r4, 0
 /* 80459DAC 0042336C  38 63 01 C4 */	addi r3, r3, 0x1c4
-/* 80459DB0 00423370  4B FE F1 CD */	bl __dt__80448F7C
+/* 80459DB0 00423370  4B FE F1 CD */	bl __dt__CDeviceVICb
 /* 80459DB4 00423374  7F C3 F3 78 */	mr r3, r30
 /* 80459DB8 00423378  38 80 00 00 */	li r4, 0
 /* 80459DBC 0042337C  4B FD DD 0D */	bl __dt__CWorkThread
@@ -96,7 +94,7 @@
 /* 80459DE0 004233A0  7C 08 03 A6 */	mtlr r0
 /* 80459DE4 004233A4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80459DE8 004233A8  4E 80 00 20 */	blr 
-.endfn __dt__80459D7C
+.endfn __dt__CLibCriMoviePlay
 
 .fn func_80459DEC, global
 /* 80459DEC 004233AC  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -1676,7 +1674,7 @@
 
 .fn func_8045B3E4, global
 /* 8045B3E4 004249A4  38 63 FE 3C */	addi r3, r3, -452
-/* 8045B3E8 004249A8  4B FF E9 94 */	b __dt__80459D7C
+/* 8045B3E8 004249A8  4B FF E9 94 */	b __dt__CLibCriMoviePlay
 .endfn func_8045B3E4
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -1729,7 +1727,7 @@ lbl_8052693C:
 __vt__CLibCriMoviePlay:
 	.4byte __RTTI__CLibCriMoviePlay
 	.4byte 0
-	.4byte __dt__80459D7C
+	.4byte __dt__CLibCriMoviePlay
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -1876,7 +1874,7 @@ lbl_80667FB8:
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x000001C4
-	.4byte __dt__80448F7C
+	.4byte __dt__CDeviceVICb
 .endobj "@etb_8001D580"
 
 .obj "@etb_8001D59C", local
@@ -1974,7 +1972,7 @@ lbl_80667FB8:
 
 .obj "@eti_8003515C", local
 .hidden "@eti_8003515C"
-	.4byte __dt__80459D7C
+	.4byte __dt__CLibCriMoviePlay
 	.4byte 0x00000070
 	.4byte "@etb_8001D580"
 .endobj "@eti_8003515C"

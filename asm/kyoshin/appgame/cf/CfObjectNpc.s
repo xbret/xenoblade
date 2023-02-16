@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_800BF340, global
+.fn __ct__cf_CfObjectNpc, global
 /* 800BF340 00088900  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800BF344 00088904  7C 08 02 A6 */	mflr r0
 /* 800BF348 00088908  90 01 00 14 */	stw r0, 0x14(r1)
@@ -12,7 +10,7 @@
 /* 800BF350 00088910  7C 9F 23 78 */	mr r31, r4
 /* 800BF354 00088914  93 C1 00 08 */	stw r30, 8(r1)
 /* 800BF358 00088918  7C 7E 1B 78 */	mr r30, r3
-/* 800BF35C 0008891C  4B FF C8 F1 */	bl func_800BBC4C
+/* 800BF35C 0008891C  4B FF C8 F1 */	bl __ct__cf_CfObjectMove
 /* 800BF360 00088920  3C 60 80 53 */	lis r3, __vt__cf_CfObjectNpc@ha
 /* 800BF364 00088924  2C 1F 00 00 */	cmpwi r31, 0
 /* 800BF368 00088928  38 63 D0 88 */	addi r3, r3, __vt__cf_CfObjectNpc@l
@@ -55,7 +53,7 @@
 /* 800BF3EC 000889AC  7C 08 03 A6 */	mtlr r0
 /* 800BF3F0 000889B0  38 21 00 10 */	addi r1, r1, 0x10
 /* 800BF3F4 000889B4  4E 80 00 20 */	blr 
-.endfn func_800BF340
+.endfn __ct__cf_CfObjectNpc
 
 .fn __dt__800BF3F8, global
 /* 800BF3F8 000889B8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -746,7 +744,7 @@ double_806693C8:
 
 .obj "@eti_800259DC", local
 .hidden "@eti_800259DC"
-	.4byte func_800BF340
+	.4byte __ct__cf_CfObjectNpc
 	.4byte 0x000000B8
 	.4byte "@etb_80009EB8"
 .endobj "@eti_800259DC"

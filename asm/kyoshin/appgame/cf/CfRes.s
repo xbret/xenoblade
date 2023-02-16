@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_800659C4, global
+.fn __ct__cf_CfRes, global
 /* 800659C4 0002EF84  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800659C8 0002EF88  7C 08 02 A6 */	mflr r0
 /* 800659CC 0002EF8C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -109,7 +107,7 @@
 /* 80065B44 0002F104  7C 08 03 A6 */	mtlr r0
 /* 80065B48 0002F108  38 21 00 20 */	addi r1, r1, 0x20
 /* 80065B4C 0002F10C  4E 80 00 20 */	blr 
-.endfn func_800659C4
+.endfn __ct__cf_CfRes
 
 .fn func_80065B50, global
 /* 80065B50 0002F110  4E 80 00 20 */	blr 
@@ -1963,7 +1961,7 @@
 /* 800673DC 0003099C  4E 80 00 20 */	blr 
 .endfn func_80066F9C
 
-.fn __dt__800673E0, global
+.fn __dt___reslist_base_unsigned_short, global
 /* 800673E0 000309A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800673E4 000309A4  7C 08 02 A6 */	mflr r0
 /* 800673E8 000309A8  2C 03 00 00 */	cmpwi r3, 0
@@ -2013,9 +2011,9 @@
 /* 80067488 00030A48  7C 08 03 A6 */	mtlr r0
 /* 8006748C 00030A4C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80067490 00030A50  4E 80 00 20 */	blr 
-.endfn __dt__800673E0
+.endfn __dt___reslist_base_unsigned_short
 
-.fn __dt__80067494, global
+.fn __dt__reslist_unsigned_short, global
 /* 80067494 00030A54  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80067498 00030A58  7C 08 02 A6 */	mflr r0
 /* 8006749C 00030A5C  2C 03 00 00 */	cmpwi r3, 0
@@ -2066,7 +2064,7 @@
 /* 80067540 00030B00  7C 08 03 A6 */	mtlr r0
 /* 80067544 00030B04  38 21 00 10 */	addi r1, r1, 0x10
 /* 80067548 00030B08  4E 80 00 20 */	blr 
-.endfn __dt__80067494
+.endfn __dt__reslist_unsigned_short
 
 .fn __dt__8006754C, global
 /* 8006754C 00030B0C  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -3528,7 +3526,7 @@
 __vt__cf_CfResTask:
 	.4byte __RTTI__cf_CfResTask
 	.4byte 0
-	.4byte __dt__800658FC
+	.4byte __dt__cf_CfResTask
 	.4byte CChildListNode_Reset
 	.4byte func_80065974
 	.4byte func_80065978
@@ -3553,7 +3551,7 @@ cf_CfResTask_hierarchy:
 __vt__CTTask_cf_CfResTask:
 	.4byte __RTTI__CTTask_cf_CfResTask
 	.4byte 0
-	.4byte __dt__80065848
+	.4byte __dt__CTTask_cf_CfResTask
 	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
@@ -3577,7 +3575,7 @@ CTTask_cf_CfResTask_hierarchy:
 __vt__cf_CfRes:
 	.4byte __RTTI__cf_CfRes
 	.4byte 0
-	.4byte __dt__800658A0
+	.4byte __dt__cf_CfRes
 	.4byte func_80039E28
 	.4byte func_80064A20
 	.4byte func_80039E18
@@ -3722,13 +3720,13 @@ lbl_80664340:
 	.4byte __dt__IWorkEvent
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte __dt__80065848
+	.4byte __dt__CTTask_cf_CfResTask
 	.4byte 0x0780001F
 	.4byte 0x00000054
-	.4byte __dt__800658A0
+	.4byte __dt__cf_CfRes
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte __dt__80065848
+	.4byte __dt__CTTask_cf_CfResTask
 .endobj "@etb_80007C78"
 
 .obj "@etb_80007CC0", local
@@ -3895,7 +3893,7 @@ lbl_80664340:
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x00001E70
-	.4byte __dt__80067494
+	.4byte __dt__reslist_unsigned_short
 .endobj "@etb_80007D90"
 
 .obj "@etb_80007DAC", local
@@ -4000,7 +3998,7 @@ lbl_80664340:
 
 .obj "@eti_80022E68", local
 .hidden "@eti_80022E68"
-	.4byte func_800659C4
+	.4byte __ct__cf_CfRes
 	.4byte 0x0000018C
 	.4byte "@etb_80007C78"
 .endobj "@eti_80022E68"
@@ -4196,14 +4194,14 @@ lbl_80664340:
 
 .obj "@eti_80022FB8", local
 .hidden "@eti_80022FB8"
-	.4byte __dt__800673E0
+	.4byte __dt___reslist_base_unsigned_short
 	.4byte 0x000000B4
 	.4byte "@etb_80007DAC"
 .endobj "@eti_80022FB8"
 
 .obj "@eti_80022FC4", local
 .hidden "@eti_80022FC4"
-	.4byte __dt__80067494
+	.4byte __dt__reslist_unsigned_short
 	.4byte 0x000000B8
 	.4byte "@etb_80007DB4"
 .endobj "@eti_80022FC4"

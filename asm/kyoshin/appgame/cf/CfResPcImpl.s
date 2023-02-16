@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_8018C9C4, global
 /* 8018C9C4 00155F84  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8018C9C8 00155F88  7C 08 02 A6 */	mflr r0
@@ -46,7 +44,7 @@
 /* 8018CA58 00156018  4E 80 00 20 */	blr 
 .endfn func_8018C9C4
 
-.fn __dt__8018CA5C, global
+.fn __dt__cf_CfResPcImpl, global
 /* 8018CA5C 0015601C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8018CA60 00156020  7C 08 02 A6 */	mflr r0
 /* 8018CA64 00156024  2C 03 00 00 */	cmpwi r3, 0
@@ -96,7 +94,7 @@
 /* 8018CB08 001560C8  7C 08 03 A6 */	mtlr r0
 /* 8018CB0C 001560CC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8018CB10 001560D0  4E 80 00 20 */	blr 
-.endfn __dt__8018CA5C
+.endfn __dt__cf_CfResPcImpl
 
 .fn func_8018CB14, global
 /* 8018CB14 001560D4  A0 83 00 08 */	lhz r4, 8(r3)
@@ -3424,7 +3422,7 @@ CScnItemModelNw4r_hierarchy:
 __vt__cf_CfResPcImpl:
 	.4byte __RTTI__cf_CfResPcImpl
 	.4byte 0
-	.4byte __dt__8018CA5C
+	.4byte __dt__cf_CfResPcImpl
 	.4byte func_8018EEF0
 	.4byte func_8018D570
 	.4byte func_8018CB14
@@ -3798,7 +3796,7 @@ float_8066A328:
 
 .obj "@eti_80029D98", local
 .hidden "@eti_80029D98"
-	.4byte __dt__8018CA5C
+	.4byte __dt__cf_CfResPcImpl
 	.4byte 0x000000B8
 	.4byte "@etb_8000EFE8"
 .endobj "@eti_80029D98"

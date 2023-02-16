@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
 .fn SFD_IsVersionCompatible, global
 /* 803C0A60 0038A020  38 04 C6 78 */	addi r0, r4, -14728
 /* 803C0A64 0038A024  7C 00 00 34 */	cntlzw r0, r0

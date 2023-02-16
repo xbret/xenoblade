@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_80294874, global
 /* 80294874 0025DE34  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80294878 0025DE38  7C 08 02 A6 */	mflr r0
@@ -13,7 +11,7 @@
 /* 80294888 0025DE48  38 80 00 04 */	li r4, 4
 /* 8029488C 0025DE4C  93 C1 00 08 */	stw r30, 8(r1)
 /* 80294890 0025DE50  7C 7E 1B 78 */	mr r30, r3
-/* 80294894 0025DE54  4B EF 0D FD */	bl func_80185690
+/* 80294894 0025DE54  4B EF 0D FD */	bl __ct__cf_CREvtObj
 /* 80294898 0025DE58  3C 60 80 54 */	lis r3, __vt__cf_CREvtMovie@ha
 /* 8029489C 0025DE5C  38 00 00 00 */	li r0, 0
 /* 802948A0 0025DE60  38 63 C2 58 */	addi r3, r3, __vt__cf_CREvtMovie@l

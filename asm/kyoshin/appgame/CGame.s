@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CGame, global
 /* 80039220 000027E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039224 000027E4  7C 08 02 A6 */	mflr r0
@@ -66,7 +64,7 @@
 /* 800392FC 000028BC  90 0D A4 80 */	stw r0, lbl_80666600@sda21(r13)
 /* 80039300 000028C0  7F C3 F3 78 */	mr r3, r30
 /* 80039304 000028C4  38 80 00 00 */	li r4, 0
-/* 80039308 000028C8  48 3F FB C1 */	bl __dt__80438EC8
+/* 80039308 000028C8  48 3F FB C1 */	bl __dt__CProc
 /* 8003930C 000028CC  2C 1F 00 00 */	cmpwi r31, 0
 /* 80039310 000028D0  40 81 00 0C */	ble .L_8003931C
 /* 80039314 000028D4  7F C3 F3 78 */	mr r3, r30
@@ -865,7 +863,7 @@ CGame_strpool:
 __vt___unnamed_CGame_cpp_CGameRestart:
 	.4byte __RTTI___unnamed_CGame_cpp_CGameRestart
 	.4byte 0
-	.4byte __dt__80039E90
+	.4byte __dt___unnamed_CGame_cpp_CGameRestart
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -1077,7 +1075,7 @@ lbl_80666608:
 	.4byte 0x00000000
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte __dt__80438EC8
+	.4byte __dt__CProc
 .endobj "@etb_800066E0"
 
 .obj "@etb_800066FC", local
@@ -1088,7 +1086,7 @@ lbl_80666608:
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__80438EC8
+	.4byte __dt__CProc
 .endobj "@etb_800066FC"
 
 .obj "@etb_80006718", local

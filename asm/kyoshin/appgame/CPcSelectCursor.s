@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_8010EA64, global
 /* 8010EA64 000D8024  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8010EA68 000D8028  7C 08 02 A6 */	mflr r0
@@ -40,7 +38,7 @@
 /* 8010EAE4 000D80A4  4E 80 00 20 */	blr 
 .endfn func_8010EA64
 
-.fn __dt__8010EAE8, global
+.fn __dt__CPcSelectCursor, global
 /* 8010EAE8 000D80A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8010EAEC 000D80AC  7C 08 02 A6 */	mflr r0
 /* 8010EAF0 000D80B0  2C 03 00 00 */	cmpwi r3, 0
@@ -65,7 +63,7 @@
 /* 8010EB38 000D80F8  7C 08 03 A6 */	mtlr r0
 /* 8010EB3C 000D80FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8010EB40 000D8100  4E 80 00 20 */	blr 
-.endfn __dt__8010EAE8
+.endfn __dt__CPcSelectCursor
 
 .fn func_8010EB44, global
 /* 8010EB44 000D8104  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -509,7 +507,7 @@
 __vt__CPcSelectCursor01:
 	.4byte __RTTI__CPcSelectCursor01
 	.4byte 0
-	.4byte __dt__8010A694
+	.4byte __dt__CPcSelectCursor01
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
@@ -577,7 +575,7 @@ __RTTI__CPcSelectCursor01:
 
 .obj "@eti_80026A44", local
 .hidden "@eti_80026A44"
-	.4byte __dt__8010EAE8
+	.4byte __dt__CPcSelectCursor
 	.4byte 0x0000005C
 	.4byte "@etb_8000B338"
 .endobj "@eti_80026A44"

@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_802088E0, global
 /* 802088E0 001D1EA0  3C 80 80 54 */	lis r4, __vt__cf_CfGimmick@ha
 /* 802088E4 001D1EA4  38 00 00 00 */	li r0, 0
@@ -26,7 +24,7 @@
 /* 80208928 001D1EE8  4E 80 00 20 */	blr 
 .endfn func_802088E0
 
-.fn __dt__8020892C, global
+.fn __dt__cf_CfGimmick, global
 /* 8020892C 001D1EEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80208930 001D1EF0  7C 08 02 A6 */	mflr r0
 /* 80208934 001D1EF4  2C 03 00 00 */	cmpwi r3, 0
@@ -44,7 +42,7 @@
 /* 80208960 001D1F20  7C 08 03 A6 */	mtlr r0
 /* 80208964 001D1F24  38 21 00 10 */	addi r1, r1, 0x10
 /* 80208968 001D1F28  4E 80 00 20 */	blr 
-.endfn __dt__8020892C
+.endfn __dt__cf_CfGimmick
 
 .fn func_8020896C, global
 /* 8020896C 001D1F2C  80 A3 00 78 */	lwz r5, 0x78(r3)
@@ -2602,7 +2600,7 @@ lbl_80538FE8:
 __vt__cf_CfGimmick:
 	.4byte __RTTI__cf_CfGimmick
 	.4byte 0
-	.4byte __dt__8020892C
+	.4byte __dt__cf_CfGimmick
 	.4byte func_8020896C
 	.4byte func_801F4994
 	.4byte func_801F4B64
@@ -2974,7 +2972,7 @@ lbl_80666FB0:
 
 .obj "@eti_8002CE7C", local
 .hidden "@eti_8002CE7C"
-	.4byte __dt__8020892C
+	.4byte __dt__cf_CfGimmick
 	.4byte 0x00000040
 	.4byte "@etb_80012F00"
 .endobj "@eti_8002CE7C"

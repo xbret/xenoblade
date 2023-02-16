@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_80494798, global
+.fn __ct__CVirtualLightObj, global
 /* 80494798 0045DD58  C0 02 CE C8 */	lfs f0, float_8066D248@sda21(r2)
 /* 8049479C 0045DD5C  3C C0 80 57 */	lis r6, __vt__CVirtualLightObj@ha
 /* 804947A0 0045DD60  38 80 00 00 */	li r4, 0
@@ -26,7 +24,7 @@
 /* 804947E0 0045DDA0  90 83 00 2C */	stw r4, 0x2c(r3)
 /* 804947E4 0045DDA4  90 03 00 30 */	stw r0, 0x30(r3)
 /* 804947E8 0045DDA8  4E 80 00 20 */	blr 
-.endfn func_80494798
+.endfn __ct__CVirtualLightObj
 
 .fn func_804947EC, global
 /* 804947EC 0045DDAC  88 04 00 18 */	lbz r0, 0x18(r4)
@@ -674,28 +672,28 @@
 /* 80495148 0045E708  39 00 00 04 */	li r8, 4
 /* 8049514C 0045E70C  4B F6 87 01 */	bl __ct__Q34nw4r3g3d12LightSettingFPQ34nw4r3g3d8LightObjPQ34nw4r3g3d11AmbLightObjUlPQ34nw4r3g3d12LightSetDataUl
 /* 80495150 0045E710  3F C0 80 4C */	lis r30, func_804C0280@ha
-/* 80495154 0045E714  3F E0 80 49 */	lis r31, __dt__80492034@ha
+/* 80495154 0045E714  3F E0 80 49 */	lis r31, __dt__CLight@ha
 /* 80495158 0045E718  38 7C 09 40 */	addi r3, r28, 0x940
 /* 8049515C 0045E71C  38 C0 00 40 */	li r6, 0x40
 /* 80495160 0045E720  38 9E 02 80 */	addi r4, r30, func_804C0280@l
-/* 80495164 0045E724  38 BF 20 34 */	addi r5, r31, __dt__80492034@l
+/* 80495164 0045E724  38 BF 20 34 */	addi r5, r31, __dt__CLight@l
 /* 80495168 0045E728  38 E0 00 08 */	li r7, 8
 /* 8049516C 0045E72C  4B E2 49 95 */	bl __construct_array
 /* 80495170 0045E730  38 7C 0B 40 */	addi r3, r28, 0xb40
 /* 80495174 0045E734  38 9E 02 80 */	addi r4, r30, func_804C0280@l
-/* 80495178 0045E738  38 BF 20 34 */	addi r5, r31, __dt__80492034@l
+/* 80495178 0045E738  38 BF 20 34 */	addi r5, r31, __dt__CLight@l
 /* 8049517C 0045E73C  38 C0 00 40 */	li r6, 0x40
 /* 80495180 0045E740  38 E0 00 08 */	li r7, 8
 /* 80495184 0045E744  4B E2 49 7D */	bl __construct_array
 /* 80495188 0045E748  38 7C 0D 40 */	addi r3, r28, 0xd40
 /* 8049518C 0045E74C  38 9E 02 80 */	addi r4, r30, func_804C0280@l
-/* 80495190 0045E750  38 BF 20 34 */	addi r5, r31, __dt__80492034@l
+/* 80495190 0045E750  38 BF 20 34 */	addi r5, r31, __dt__CLight@l
 /* 80495194 0045E754  38 C0 00 40 */	li r6, 0x40
 /* 80495198 0045E758  38 E0 00 08 */	li r7, 8
 /* 8049519C 0045E75C  4B E2 49 65 */	bl __construct_array
 /* 804951A0 0045E760  38 7C 0F 40 */	addi r3, r28, 0xf40
 /* 804951A4 0045E764  38 9E 02 80 */	addi r4, r30, func_804C0280@l
-/* 804951A8 0045E768  38 BF 20 34 */	addi r5, r31, __dt__80492034@l
+/* 804951A8 0045E768  38 BF 20 34 */	addi r5, r31, __dt__CLight@l
 /* 804951AC 0045E76C  38 C0 00 40 */	li r6, 0x40
 /* 804951B0 0045E770  38 E0 00 08 */	li r7, 8
 /* 804951B4 0045E774  4B E2 49 4D */	bl __construct_array
@@ -730,24 +728,24 @@
 /* 8049521C 0045E7DC  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80495220 0045E7E0  7C 7D 1B 78 */	mr r29, r3
 /* 80495224 0045E7E4  41 82 00 80 */	beq .L_804952A4
-/* 80495228 0045E7E8  3F E0 80 49 */	lis r31, __dt__80492034@ha
+/* 80495228 0045E7E8  3F E0 80 49 */	lis r31, __dt__CLight@ha
 /* 8049522C 0045E7EC  38 A0 00 40 */	li r5, 0x40
-/* 80495230 0045E7F0  38 9F 20 34 */	addi r4, r31, __dt__80492034@l
+/* 80495230 0045E7F0  38 9F 20 34 */	addi r4, r31, __dt__CLight@l
 /* 80495234 0045E7F4  38 C0 00 08 */	li r6, 8
 /* 80495238 0045E7F8  38 63 0F 40 */	addi r3, r3, 0xf40
 /* 8049523C 0045E7FC  4B E2 49 BD */	bl __destroy_arr
 /* 80495240 0045E800  38 7D 0D 40 */	addi r3, r29, 0xd40
-/* 80495244 0045E804  38 9F 20 34 */	addi r4, r31, __dt__80492034@l
+/* 80495244 0045E804  38 9F 20 34 */	addi r4, r31, __dt__CLight@l
 /* 80495248 0045E808  38 A0 00 40 */	li r5, 0x40
 /* 8049524C 0045E80C  38 C0 00 08 */	li r6, 8
 /* 80495250 0045E810  4B E2 49 A9 */	bl __destroy_arr
 /* 80495254 0045E814  38 7D 0B 40 */	addi r3, r29, 0xb40
-/* 80495258 0045E818  38 9F 20 34 */	addi r4, r31, __dt__80492034@l
+/* 80495258 0045E818  38 9F 20 34 */	addi r4, r31, __dt__CLight@l
 /* 8049525C 0045E81C  38 A0 00 40 */	li r5, 0x40
 /* 80495260 0045E820  38 C0 00 08 */	li r6, 8
 /* 80495264 0045E824  4B E2 49 95 */	bl __destroy_arr
 /* 80495268 0045E828  38 7D 09 40 */	addi r3, r29, 0x940
-/* 8049526C 0045E82C  38 9F 20 34 */	addi r4, r31, __dt__80492034@l
+/* 8049526C 0045E82C  38 9F 20 34 */	addi r4, r31, __dt__CLight@l
 /* 80495270 0045E830  38 A0 00 40 */	li r5, 0x40
 /* 80495274 0045E834  38 C0 00 08 */	li r6, 8
 /* 80495278 0045E838  4B E2 49 81 */	bl __destroy_arr
@@ -1434,7 +1432,7 @@
 __vt__CVirtualLightObj:
 	.4byte __RTTI__CVirtualLightObj
 	.4byte 0
-	.4byte __dt__80492980
+	.4byte __dt__CVirtualLightObj
 	.4byte func_804947EC
 	.4byte func_8049488C
 	.4byte 0
@@ -1543,22 +1541,22 @@ float_8066D26C:
 	.4byte 0x00000F40
 	.4byte 0x00000008
 	.4byte 0x00000040
-	.4byte __dt__80492034
+	.4byte __dt__CLight
 	.4byte 0x0980001C
 	.4byte 0x00000D40
 	.4byte 0x00000008
 	.4byte 0x00000040
-	.4byte __dt__80492034
+	.4byte __dt__CLight
 	.4byte 0x0980001C
 	.4byte 0x00000B40
 	.4byte 0x00000008
 	.4byte 0x00000040
-	.4byte __dt__80492034
+	.4byte __dt__CLight
 	.4byte 0x0980001C
 	.4byte 0x00000940
 	.4byte 0x00000008
 	.4byte 0x00000040
-	.4byte __dt__80492034
+	.4byte __dt__CLight
 	.4byte 0x0780001C
 	.4byte 0x00000930
 	.4byte __dt__Q34nw4r3g3d12LightSettingFv
@@ -1585,52 +1583,52 @@ float_8066D26C:
 	.4byte 0x00000F40
 	.4byte 0x00000008
 	.4byte 0x00000040
-	.4byte __dt__80492034
+	.4byte __dt__CLight
 	.4byte 0x0980001D
 	.4byte 0x00000F40
 	.4byte 0x00000008
 	.4byte 0x00000040
-	.4byte __dt__80492034
+	.4byte __dt__CLight
 	.4byte 0x8980001D
 	.4byte 0x00000D40
 	.4byte 0x00000008
 	.4byte 0x00000040
-	.4byte __dt__80492034
+	.4byte __dt__CLight
 	.4byte 0x0980001D
 	.4byte 0x00000F40
 	.4byte 0x00000008
 	.4byte 0x00000040
-	.4byte __dt__80492034
+	.4byte __dt__CLight
 	.4byte 0x0980001D
 	.4byte 0x00000D40
 	.4byte 0x00000008
 	.4byte 0x00000040
-	.4byte __dt__80492034
+	.4byte __dt__CLight
 	.4byte 0x8980001D
 	.4byte 0x00000B40
 	.4byte 0x00000008
 	.4byte 0x00000040
-	.4byte __dt__80492034
+	.4byte __dt__CLight
 	.4byte 0x0980001D
 	.4byte 0x00000F40
 	.4byte 0x00000008
 	.4byte 0x00000040
-	.4byte __dt__80492034
+	.4byte __dt__CLight
 	.4byte 0x0980001D
 	.4byte 0x00000D40
 	.4byte 0x00000008
 	.4byte 0x00000040
-	.4byte __dt__80492034
+	.4byte __dt__CLight
 	.4byte 0x0980001D
 	.4byte 0x00000B40
 	.4byte 0x00000008
 	.4byte 0x00000040
-	.4byte __dt__80492034
+	.4byte __dt__CLight
 	.4byte 0x0980001D
 	.4byte 0x00000940
 	.4byte 0x00000008
 	.4byte 0x00000040
-	.4byte __dt__80492034
+	.4byte __dt__CLight
 	.4byte 0x8780001D
 	.4byte 0x00000930
 	.4byte __dt__Q34nw4r3g3d12LightSettingFv

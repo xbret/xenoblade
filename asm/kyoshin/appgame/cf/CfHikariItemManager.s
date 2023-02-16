@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_802B2634, global
 /* 802B2634 0027BBF4  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802B2638 0027BBF8  7C 08 02 A6 */	mflr r0
@@ -112,7 +110,7 @@
 /* 802B27C8 0027BD88  4E 80 00 20 */	blr 
 .endfn func_802B2634
 
-.fn __dt__802B27CC, global
+.fn __dt__cf_CfHikariItemManager, global
 /* 802B27CC 0027BD8C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802B27D0 0027BD90  7C 08 02 A6 */	mflr r0
 /* 802B27D4 0027BD94  2C 03 00 00 */	cmpwi r3, 0
@@ -167,7 +165,7 @@
 /* 802B2888 0027BE48  7C 08 03 A6 */	mtlr r0
 /* 802B288C 0027BE4C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802B2890 0027BE50  4E 80 00 20 */	blr 
-.endfn __dt__802B27CC
+.endfn __dt__cf_CfHikariItemManager
 
 .fn func_802B2894, global
 /* 802B2894 0027BE54  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1081,7 +1079,7 @@ lbl_8050C9A8:
 __vt__cf_CfHikariItemManager:
 	.4byte __RTTI__cf_CfHikariItemManager
 	.4byte 0
-	.4byte __dt__802B27CC
+	.4byte __dt__cf_CfHikariItemManager
 	.4byte func_802B2AE0
 
 .global cf_CfHikariItemManager_hierarchy
@@ -1183,7 +1181,7 @@ lbl_80667504:
 	.4byte 0x00000000
 	.4byte 0x8680001D
 	.4byte 0x00000000
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 .endobj "@etb_8001B8B4"
 
 .obj "@etb_8001B8D0", local
@@ -1194,7 +1192,7 @@ lbl_80667504:
 	.4byte 0x00000000
 	.4byte 0x8680001B
 	.4byte 0x00000000
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 .endobj "@etb_8001B8D0"
 
 .obj "@etb_8001B8EC", local
@@ -1234,7 +1232,7 @@ lbl_80667504:
 
 .obj "@eti_80033410", local
 .hidden "@eti_80033410"
-	.4byte __dt__802B27CC
+	.4byte __dt__cf_CfHikariItemManager
 	.4byte 0x000000C8
 	.4byte "@etb_8001B8D0"
 .endobj "@eti_80033410"

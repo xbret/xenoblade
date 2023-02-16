@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_8006994C, global
 /* 8006994C 00032F0C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80069950 00032F10  7C 08 02 A6 */	mflr r0
@@ -387,7 +385,7 @@
 /* 80069E5C 0003341C  4E 80 00 20 */	blr 
 .endfn func_80069DD4
 
-.fn __dt__80069E60, global
+.fn __dt__cf_CfTFile, global
 /* 80069E60 00033420  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80069E64 00033424  7C 08 02 A6 */	mflr r0
 /* 80069E68 00033428  2C 03 00 00 */	cmpwi r3, 0
@@ -405,7 +403,7 @@
 /* 80069E94 00033454  7C 08 03 A6 */	mtlr r0
 /* 80069E98 00033458  38 21 00 10 */	addi r1, r1, 0x10
 /* 80069E9C 0003345C  4E 80 00 20 */	blr 
-.endfn __dt__80069E60
+.endfn __dt__cf_CfTFile
 
 .fn func_80069EA0, global
 /* 80069EA0 00033460  C0 2D 82 68 */	lfs f1, float_806643E8@sda21(r13)
@@ -1156,7 +1154,7 @@ CfTFile_strpool:
 __vt__cf_CfTFile:
 	.4byte __RTTI__cf_CfTFile
 	.4byte 0
-	.4byte __dt__80069E60
+	.4byte __dt__cf_CfTFile
 	.4byte func_80039E28
 	.4byte func_80069DD4
 	.4byte func_80039E18
@@ -1510,7 +1508,7 @@ lbl_806666A8:
 
 .obj "@eti_8002324C", local
 .hidden "@eti_8002324C"
-	.4byte __dt__80069E60
+	.4byte __dt__cf_CfTFile
 	.4byte 0x00000040
 	.4byte "@etb_80007F94"
 .endobj "@eti_8002324C"

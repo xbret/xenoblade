@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_8015E950, global
 /* 8015E950 00127F10  94 21 FF 50 */	stwu r1, -0xb0(r1)
 /* 8015E954 00127F14  7C 08 02 A6 */	mflr r0
@@ -160,7 +158,7 @@
 /* 8015EBB0 00128170  4E 80 00 20 */	blr
 .endfn func_8015E950
 
-.fn __dt__8015EBB4, global
+.fn __dt__CCol6System, global
 /* 8015EBB4 00128174  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8015EBB8 00128178  7C 08 02 A6 */	mflr r0
 /* 8015EBBC 0012817C  2C 03 00 00 */	cmpwi r3, 0
@@ -190,7 +188,7 @@
 /* 8015EC1C 001281DC  41 82 00 10 */	beq .L_8015EC2C
 /* 8015EC20 001281E0  7F C3 F3 78 */	mr r3, r30
 /* 8015EC24 001281E4  38 80 00 00 */	li r4, 0
-/* 8015EC28 001281E8  48 2E 5F 11 */	bl __dt__80444B38
+/* 8015EC28 001281E8  48 2E 5F 11 */	bl __dt__CProcess
 .L_8015EC2C:
 /* 8015EC2C 001281EC  2C 1F 00 00 */	cmpwi r31, 0
 /* 8015EC30 001281F0  40 81 00 0C */	ble .L_8015EC3C
@@ -204,7 +202,7 @@
 /* 8015EC4C 0012820C  7C 08 03 A6 */	mtlr r0
 /* 8015EC50 00128210  38 21 00 10 */	addi r1, r1, 0x10
 /* 8015EC54 00128214  4E 80 00 20 */	blr 
-.endfn __dt__8015EBB4
+.endfn __dt__CCol6System
 
 .fn func_8015EC58, global
 /* 8015EC58 00128218  94 21 FF 70 */	stwu r1, -0x90(r1)
@@ -5700,7 +5698,7 @@
 /* 80163D04 0012D2C4  4E 80 00 20 */	blr
 .endfn func_80163AF4
 
-.fn __dt__80163D08, global
+.fn __dt__CCol6Invite, global
 /* 80163D08 0012D2C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80163D0C 0012D2CC  7C 08 02 A6 */	mflr r0
 /* 80163D10 0012D2D0  2C 03 00 00 */	cmpwi r3, 0
@@ -5713,7 +5711,7 @@
 /* 80163D2C 0012D2EC  41 82 00 10 */	beq .L_80163D3C
 /* 80163D30 0012D2F0  41 82 00 0C */	beq .L_80163D3C
 /* 80163D34 0012D2F4  38 80 00 00 */	li r4, 0
-/* 80163D38 0012D2F8  48 2E 0E 01 */	bl __dt__80444B38
+/* 80163D38 0012D2F8  48 2E 0E 01 */	bl __dt__CProcess
 .L_80163D3C:
 /* 80163D3C 0012D2FC  2C 1F 00 00 */	cmpwi r31, 0
 /* 80163D40 0012D300  40 81 00 0C */	ble .L_80163D4C
@@ -5727,7 +5725,7 @@
 /* 80163D5C 0012D31C  7C 08 03 A6 */	mtlr r0
 /* 80163D60 0012D320  38 21 00 10 */	addi r1, r1, 0x10
 /* 80163D64 0012D324  4E 80 00 20 */	blr 
-.endfn __dt__80163D08
+.endfn __dt__CCol6Invite
 
 .fn func_80163D68, global
 /* 80163D68 0012D328  94 21 FF 50 */	stwu r1, -0xb0(r1)
@@ -5946,7 +5944,7 @@ jumptable_80533668:
 __vt__CCol6Invite:
 	.4byte __RTTI__CCol6Invite
 	.4byte 0
-	.4byte __dt__80163D08
+	.4byte __dt__CCol6Invite
 	.4byte CChildListNode_Reset
 	.4byte func_80163D68
 	.4byte func_80163E68
@@ -6009,7 +6007,7 @@ CCol6Invite_hierarchy:
 __vt__CCol6System:
 	.4byte __RTTI__CCol6System
 	.4byte 0
-	.4byte __dt__8015EBB4
+	.4byte __dt__CCol6System
 	.4byte CChildListNode_Reset
 	.4byte func_8015EC58
 	.4byte func_8015EE2C
@@ -6080,7 +6078,7 @@ CCol6System_hierarchy:
 __vt__CCol6Hint:
 	.4byte __RTTI__CCol6Hint
 	.4byte 0
-	.4byte __dt__8015D594
+	.4byte __dt__CCol6Hint
 	.4byte CChildListNode_Reset
 	.4byte func_8015D620
 	.4byte func_8015D72C
@@ -6151,7 +6149,7 @@ CCol6Hint_hierarchy:
 __vt__CCol6CheckBat:
 	.4byte __RTTI__CCol6CheckBat
 	.4byte 0
-	.4byte __dt__8015D0D4
+	.4byte __dt__CCol6CheckBat
 	.4byte CChildListNode_Reset
 	.4byte func_8015D134
 	.4byte func_8015D138
@@ -6266,13 +6264,13 @@ __RTTI__CCol6CheckBat:
 	.4byte __dt__8045F580
 	.4byte 0x0680001E
 	.4byte 0x00000070
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x0680001E
 	.4byte 0x0000006C
 	.4byte __dt__IWorkEvent
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__8012235C
+	.4byte __dt__IUIWindow
 .endobj "@etb_8000D824"
 
 .obj "@etb_8000D8A8", local
@@ -6336,7 +6334,7 @@ __RTTI__CCol6CheckBat:
 	.4byte __dt__8045F580
 	.4byte 0x0680001E
 	.4byte 0x00000070
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x8680001E
 	.4byte 0x0000006C
 	.4byte __dt__IWorkEvent
@@ -6512,7 +6510,7 @@ __RTTI__CCol6CheckBat:
 
 .obj "@eti_80028A90", local
 .hidden "@eti_80028A90"
-	.4byte __dt__8015EBB4
+	.4byte __dt__CCol6System
 	.4byte 0x000000A4
 	.4byte "@etb_8000D8A8"
 .endobj "@eti_80028A90"
@@ -6666,7 +6664,7 @@ __RTTI__CCol6CheckBat:
 
 .obj "@eti_80028B98", local
 .hidden "@eti_80028B98"
-	.4byte __dt__80163D08
+	.4byte __dt__CCol6Invite
 	.4byte 0x00000060
 	.4byte "@etb_8000DA6C"
 .endobj "@eti_80028B98"

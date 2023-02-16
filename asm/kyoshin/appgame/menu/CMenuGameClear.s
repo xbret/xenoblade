@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CMenuGameClear, global
 /* 802B219C 0027B75C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802B21A0 0027B760  7C 08 02 A6 */	mflr r0
@@ -329,7 +327,7 @@
 
 .fn func_802B2624, global
 /* 802B2624 0027BBE4  38 63 FF A8 */	addi r3, r3, -88
-/* 802B2628 0027BBE8  4B FF E8 F0 */	b __dt__802B0F18
+/* 802B2628 0027BBE8  4B FF E8 F0 */	b __dt__CMenuGameClear
 .endfn func_802B2624
 
 .fn func_802B262C, global
@@ -368,7 +366,7 @@ CMenuGameClear_strpool:
 __vt__CMenuGameClear:
 	.4byte __RTTI__CMenuGameClear
 	.4byte 0
-	.4byte __dt__802B0F18
+	.4byte __dt__CMenuGameClear
 	.4byte CChildListNode_Reset
 	.4byte func_802B0FA4
 	.4byte func_802B13BC
@@ -442,7 +440,7 @@ lbl_806674E8:
 	.4byte __dt__8045F580
 	.4byte 0x0680001D
 	.4byte 0x00000058
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x8680001D
 	.4byte 0x00000000
 	.4byte __dt__800FED0C

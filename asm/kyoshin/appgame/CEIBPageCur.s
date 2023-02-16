@@ -2,15 +2,13 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_80285C08, global
+.fn __ct__CEIBPageCur, global
 /* 80285C08 0024F1C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80285C0C 0024F1CC  7C 08 02 A6 */	mflr r0
 /* 80285C10 0024F1D0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80285C14 0024F1D4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80285C18 0024F1D8  7C 7F 1B 78 */	mr r31, r3
-/* 80285C1C 0024F1DC  4B FF FD 0D */	bl func_80285928
+/* 80285C1C 0024F1DC  4B FF FD 0D */	bl __ct__CEIBCur
 /* 80285C20 0024F1E0  3C 80 80 54 */	lis r4, __vt__CEIBPageCur@ha
 /* 80285C24 0024F1E4  7F E3 FB 78 */	mr r3, r31
 /* 80285C28 0024F1E8  38 84 BE A4 */	addi r4, r4, __vt__CEIBPageCur@l
@@ -20,7 +18,7 @@
 /* 80285C38 0024F1F8  7C 08 03 A6 */	mtlr r0
 /* 80285C3C 0024F1FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80285C40 0024F200  4E 80 00 20 */	blr 
-.endfn func_80285C08
+.endfn __ct__CEIBPageCur
 
 .fn __dt__80285C44, global
 /* 80285C44 0024F204  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -135,7 +133,7 @@
 
 .obj "@eti_80031568", local
 .hidden "@eti_80031568"
-	.4byte func_80285C08
+	.4byte __ct__CEIBPageCur
 	.4byte 0x0000003C
 	.4byte "@etb_80018E68"
 .endobj "@eti_80031568"

@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_802B632C, global
 /* 802B632C 0027F8EC  3C A0 80 54 */	lis r5, __vt__CTitleLogo@ha
 /* 802B6330 0027F8F0  38 80 00 00 */	li r4, 0
@@ -21,7 +19,7 @@
 /* 802B6360 0027F920  4E 80 00 20 */	blr 
 .endfn func_802B632C
 
-.fn __dt__802B6364, global
+.fn __dt__CTitleLogo, global
 /* 802B6364 0027F924  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802B6368 0027F928  7C 08 02 A6 */	mflr r0
 /* 802B636C 0027F92C  2C 03 00 00 */	cmpwi r3, 0
@@ -39,7 +37,7 @@
 /* 802B6398 0027F958  7C 08 03 A6 */	mtlr r0
 /* 802B639C 0027F95C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802B63A0 0027F960  4E 80 00 20 */	blr 
-.endfn __dt__802B6364
+.endfn __dt__CTitleLogo
 
 .fn func_802B63A4, global
 /* 802B63A4 0027F964  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -513,7 +511,7 @@
 
 .obj "@eti_80033680", local
 .hidden "@eti_80033680"
-	.4byte __dt__802B6364
+	.4byte __dt__CTitleLogo
 	.4byte 0x00000040
 	.4byte "@etb_8001BB54"
 .endobj "@eti_80033680"

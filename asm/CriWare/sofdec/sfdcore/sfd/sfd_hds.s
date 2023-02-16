@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
 .fn SFHDS_Finish, global
 /* 803C005C 0038961C  48 01 05 B4 */	b SFH_Finish
 .endfn SFHDS_Finish

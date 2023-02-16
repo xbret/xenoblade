@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_80088904, global
 /* 80088904 00051EC4  3C E0 80 53 */	lis r7, __vt__cf_CtrlMoveBase@ha
 /* 80088908 00051EC8  38 C0 00 00 */	li r6, 0

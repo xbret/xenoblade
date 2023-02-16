@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_8020C334, global
 /* 8020C334 001D58F4  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8020C338 001D58F8  7C 08 02 A6 */	mflr r0
@@ -148,7 +146,7 @@
 /* 8020C554 001D5B14  4E 80 00 20 */	blr 
 .endfn func_8020C334
 
-.fn __dt__8020C558, global
+.fn __dt__cf_CfGimmickLock, global
 /* 8020C558 001D5B18  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8020C55C 001D5B1C  7C 08 02 A6 */	mflr r0
 /* 8020C560 001D5B20  2C 03 00 00 */	cmpwi r3, 0
@@ -198,7 +196,7 @@
 /* 8020C604 001D5BC4  48 2A 43 59 */	bl __dt__804B095C
 /* 8020C608 001D5BC8  7F C3 F3 78 */	mr r3, r30
 /* 8020C60C 001D5BCC  38 80 00 00 */	li r4, 0
-/* 8020C610 001D5BD0  4B FF C3 1D */	bl __dt__8020892C
+/* 8020C610 001D5BD0  4B FF C3 1D */	bl __dt__cf_CfGimmick
 /* 8020C614 001D5BD4  2C 1F 00 00 */	cmpwi r31, 0
 /* 8020C618 001D5BD8  40 81 00 0C */	ble .L_8020C624
 /* 8020C61C 001D5BDC  7F C3 F3 78 */	mr r3, r30
@@ -211,7 +209,7 @@
 /* 8020C634 001D5BF4  7C 08 03 A6 */	mtlr r0
 /* 8020C638 001D5BF8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8020C63C 001D5BFC  4E 80 00 20 */	blr 
-.endfn __dt__8020C558
+.endfn __dt__cf_CfGimmickLock
 
 .fn func_8020C640, global
 /* 8020C640 001D5C00  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -1182,7 +1180,7 @@ lbl_80503E0C:
 __vt__cf_CfGimmickLock:
 	.4byte __RTTI__cf_CfGimmickLock
 	.4byte 0
-	.4byte __dt__8020C558
+	.4byte __dt__cf_CfGimmickLock
 	.4byte func_8020896C
 	.4byte func_8020C640
 	.4byte func_801F4B64
@@ -1274,7 +1272,7 @@ float_8066AC84:
 	.4byte __dt__804B095C
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte __dt__8020892C
+	.4byte __dt__cf_CfGimmick
 .endobj "@etb_800130B0"
 
 .obj "@etb_800130F4", local
@@ -1295,7 +1293,7 @@ float_8066AC84:
 	.4byte __dt__804B095C
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__8020892C
+	.4byte __dt__cf_CfGimmick
 	.4byte 0x8780001E
 	.4byte 0x00000140
 	.4byte __dt__804B095C
@@ -1356,7 +1354,7 @@ float_8066AC84:
 
 .obj "@eti_8002D0D4", local
 .hidden "@eti_8002D0D4"
-	.4byte __dt__8020C558
+	.4byte __dt__cf_CfGimmickLock
 	.4byte 0x000000E8
 	.4byte "@etb_800130F4"
 .endobj "@eti_8002D0D4"

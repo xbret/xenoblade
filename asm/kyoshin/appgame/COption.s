@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_8029C1F8, global
 /* 8029C1F8 002657B8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029C1FC 002657BC  7C 08 02 A6 */	mflr r0
@@ -44,7 +42,7 @@
 /* 8029C288 00265848  4B F3 67 75 */	bl func_801D29FC
 /* 8029C28C 0026584C  38 7E 00 90 */	addi r3, r30, 0x90
 /* 8029C290 00265850  38 80 00 00 */	li r4, 0
-/* 8029C294 00265854  4B FF FC 49 */	bl func_8029BEDC
+/* 8029C294 00265854  4B FF FC 49 */	bl __ct__CCur19
 /* 8029C298 00265858  38 7E 00 A8 */	addi r3, r30, 0xa8
 /* 8029C29C 0026585C  38 80 00 00 */	li r4, 0
 /* 8029C2A0 00265860  4B F8 F3 79 */	bl __ct__CSysWin
@@ -59,7 +57,7 @@
 /* 8029C2C4 00265884  4E 80 00 20 */	blr 
 .endfn func_8029C1F8
 
-.fn __dt__8029C2C8, global
+.fn __dt__COption, global
 /* 8029C2C8 00265888  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029C2CC 0026588C  7C 08 02 A6 */	mflr r0
 /* 8029C2D0 00265890  2C 03 00 00 */	cmpwi r3, 0
@@ -99,7 +97,7 @@
 /* 8029C350 00265910  7C 08 03 A6 */	mtlr r0
 /* 8029C354 00265914  38 21 00 10 */	addi r1, r1, 0x10
 /* 8029C358 00265918  4E 80 00 20 */	blr 
-.endfn __dt__8029C2C8
+.endfn __dt__COption
 
 .fn func_8029C35C, global
 /* 8029C35C 0026591C  94 21 FF 70 */	stwu r1, -0x90(r1)
@@ -2709,7 +2707,7 @@
 /* 8029E720 00267CE0  4E 80 04 21 */	bctrl 
 /* 8029E724 00267CE4  80 9C 00 18 */	lwz r4, 0x18(r28)
 /* 8029E728 00267CE8  38 61 00 28 */	addi r3, r1, 0x28
-/* 8029E72C 00267CEC  4B FF D7 B1 */	bl func_8029BEDC
+/* 8029E72C 00267CEC  4B FF D7 B1 */	bl __ct__CCur19
 /* 8029E730 00267CF0  38 7C 00 90 */	addi r3, r28, 0x90
 /* 8029E734 00267CF4  38 81 00 28 */	addi r4, r1, 0x28
 /* 8029E738 00267CF8  4B EE C9 C5 */	bl func_8018B0FC
@@ -3017,7 +3015,7 @@ jumptable_8053CD74:
 __vt__COption:
 	.4byte __RTTI__COption
 	.4byte 0
-	.4byte __dt__8029C2C8
+	.4byte __dt__COption
 	.4byte func_80039E28
 	.4byte func_8029E5FC
 	.4byte func_80039E18
@@ -3472,7 +3470,7 @@ lbl_8057AA08:
 
 .obj "@eti_800322A0", local
 .hidden "@eti_800322A0"
-	.4byte __dt__8029C2C8
+	.4byte __dt__COption
 	.4byte 0x00000094
 	.4byte "@etb_8001A3B8"
 .endobj "@eti_800322A0"

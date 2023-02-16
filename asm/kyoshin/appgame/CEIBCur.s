@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_80285928, global
+.fn __ct__CEIBCur, global
 /* 80285928 0024EEE8  3C A0 80 54 */	lis r5, __vt__CEIBCur@ha
 /* 8028592C 0024EEEC  38 00 00 00 */	li r0, 0
 /* 80285930 0024EEF0  38 A5 BE BC */	addi r5, r5, __vt__CEIBCur@l
@@ -16,7 +14,7 @@
 /* 80285948 0024EF08  98 03 00 14 */	stb r0, 0x14(r3)
 /* 8028594C 0024EF0C  98 03 00 15 */	stb r0, 0x15(r3)
 /* 80285950 0024EF10  4E 80 00 20 */	blr 
-.endfn func_80285928
+.endfn __ct__CEIBCur
 
 .fn __dt__80285954, global
 /* 80285954 0024EF14  94 21 FF F0 */	stwu r1, -0x10(r1)

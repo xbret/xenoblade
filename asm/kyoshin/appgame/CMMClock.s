@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_8011B778, global
 /* 8011B778 000E4D38  94 21 F6 C0 */	stwu r1, -0x940(r1)
 /* 8011B77C 000E4D3C  7C 08 02 A6 */	mflr r0
@@ -890,7 +888,7 @@
 
 .fn func_8011C434, global
 /* 8011C434 000E59F4  38 63 FF A8 */	addi r3, r3, -88
-/* 8011C438 000E59F8  4B FF F2 9C */	b __dt__8011B6D4
+/* 8011C438 000E59F8  4B FF F2 9C */	b __dt__CMenuMiniMap2
 .endfn func_8011C434
 
 .fn func_8011C43C, global
@@ -900,7 +898,7 @@
 
 .fn func_8011C444, global
 /* 8011C444 000E5A04  38 63 FF A4 */	addi r3, r3, -92
-/* 8011C448 000E5A08  4B FF F2 8C */	b __dt__8011B6D4
+/* 8011C448 000E5A08  4B FF F2 8C */	b __dt__CMenuMiniMap2
 .endfn func_8011C444
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
@@ -918,7 +916,7 @@
 __vt__CMMClock:
 	.4byte __RTTI__CMMClock
 	.4byte 0
-	.4byte __dt__80117540
+	.4byte __dt__CMMClock
 	.4byte func_80039E28
 	.4byte func_8011759C
 	.4byte func_80039E18
@@ -1089,7 +1087,7 @@ float_80669994:
 	.4byte __dt__IWorkEvent
 	.4byte 0x0680001C
 	.4byte 0x0000005C
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x0680001C
 	.4byte 0x00000058
 	.4byte __dt__IWorkEvent
@@ -1098,7 +1096,7 @@ float_80669994:
 	.4byte __dt__800FED0C
 	.4byte 0x0780001C
 	.4byte 0x00000064
-	.4byte __dt__80117540
+	.4byte __dt__CMMClock
 	.4byte 0x01000024
 .endobj "@etb_8000B870"
 

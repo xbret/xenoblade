@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CSysWin, global
 /* 8022B618 001F4BD8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8022B61C 001F4BDC  7C 08 02 A6 */	mflr r0

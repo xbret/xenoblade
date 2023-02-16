@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn sinit_8008A0C8, local
 /* 8008A0C8 00053688  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8008A0CC 0005368C  7C 08 02 A6 */	mflr r0

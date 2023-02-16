@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_802B72F4, global
 /* 802B72F4 002808B4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802B72F8 002808B8  7C 08 02 A6 */	mflr r0
@@ -39,7 +37,7 @@
 /* 802B7370 00280930  4E 80 00 20 */	blr 
 .endfn func_802B72F4
 
-.fn __dt__802B7374, global
+.fn __dt__CTitle, global
 /* 802B7374 00280934  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802B7378 00280938  7C 08 02 A6 */	mflr r0
 /* 802B737C 0028093C  2C 03 00 00 */	cmpwi r3, 0
@@ -65,7 +63,7 @@
 /* 802B73C8 00280988  7C 08 03 A6 */	mtlr r0
 /* 802B73CC 0028098C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802B73D0 00280990  4E 80 00 20 */	blr 
-.endfn __dt__802B7374
+.endfn __dt__CTitle
 
 .fn func_802B73D4, global
 /* 802B73D4 00280994  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -779,7 +777,7 @@ lbl_8053E98C:
 __vt__CTitle:
 	.4byte __RTTI__CTitle
 	.4byte 0
-	.4byte __dt__802B7374
+	.4byte __dt__CTitle
 	.4byte func_80039E28
 	.4byte func_802B795C
 	.4byte func_80039E18
@@ -823,14 +821,14 @@ CTitle_hierarchy:
 __vt__CTitleMenu:
 	.4byte __RTTI__CTitleMenu
 	.4byte 0
-	.4byte __dt__802B6930
+	.4byte __dt__CTitleMenu
 
 
 .global __vt__CTitleLogo
 __vt__CTitleLogo:
 	.4byte __RTTI__CTitleLogo
 	.4byte 0
-	.4byte __dt__802B6364
+	.4byte __dt__CTitleLogo
 	.4byte 0
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -874,10 +872,10 @@ lbl_80667518:
 	.4byte 0x00000000
 	.4byte 0x0780001F
 	.4byte 0x00000048
-	.4byte __dt__802B6930
+	.4byte __dt__CTitleMenu
 	.4byte 0x0780001F
 	.4byte 0x0000002C
-	.4byte __dt__802B6364
+	.4byte __dt__CTitleLogo
 	.4byte 0x0780001F
 	.4byte 0x00000004
 	.4byte __dt__8045F580
@@ -897,10 +895,10 @@ lbl_80667518:
 	.4byte __dt__801D2A38
 	.4byte 0x0780001E
 	.4byte 0x00000048
-	.4byte __dt__802B6930
+	.4byte __dt__CTitleMenu
 	.4byte 0x8780001E
 	.4byte 0x0000002C
-	.4byte __dt__802B6364
+	.4byte __dt__CTitleLogo
 .endobj "@etb_8001BC9C"
 
 .obj "@etb_8001BCD0", local
@@ -998,7 +996,7 @@ lbl_80667518:
 
 .obj "@eti_8003380C", local
 .hidden "@eti_8003380C"
-	.4byte __dt__802B7374
+	.4byte __dt__CTitle
 	.4byte 0x00000060
 	.4byte "@etb_8001BC9C"
 .endobj "@eti_8003380C"

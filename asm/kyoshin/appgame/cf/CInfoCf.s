@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_80166704, global
 /* 80166704 0012FCC4  3C 80 80 53 */	lis r4, __vt__cf_CInfoCf@ha
 /* 80166708 0012FCC8  38 00 00 00 */	li r0, 0
@@ -15,7 +13,7 @@
 /* 80166720 0012FCE0  4E 80 00 20 */	blr 
 .endfn func_80166704
 
-.fn __dt__80166724, global
+.fn __dt__cf_CInfoCf, global
 /* 80166724 0012FCE4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80166728 0012FCE8  7C 08 02 A6 */	mflr r0
 /* 8016672C 0012FCEC  2C 03 00 00 */	cmpwi r3, 0
@@ -35,7 +33,7 @@
 /* 80166760 0012FD20  7C 08 03 A6 */	mtlr r0
 /* 80166764 0012FD24  38 21 00 10 */	addi r1, r1, 0x10
 /* 80166768 0012FD28  4E 80 00 20 */	blr 
-.endfn __dt__80166724
+.endfn __dt__cf_CInfoCf
 
 .fn func_8016676C, global
 /* 8016676C 0012FD2C  80 6D A9 C0 */	lwz r3, lbl_80666B40@sda21(r13)
@@ -107,7 +105,7 @@
 /* 80166834 0012FDF4  4E 80 00 20 */	blr
 .endfn func_80166830
 
-.fn __dt__80166838, global
+.fn __dt__CMenuItem, global
 /* 80166838 0012FDF8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8016683C 0012FDFC  7C 08 02 A6 */	mflr r0
 /* 80166840 0012FE00  2C 03 00 00 */	cmpwi r3, 0
@@ -131,7 +129,7 @@
 /* 80166888 0012FE48  41 82 00 10 */	beq .L_80166898
 /* 8016688C 0012FE4C  7F C3 F3 78 */	mr r3, r30
 /* 80166890 0012FE50  38 80 00 00 */	li r4, 0
-/* 80166894 0012FE54  48 2D E2 A5 */	bl __dt__80444B38
+/* 80166894 0012FE54  48 2D E2 A5 */	bl __dt__CProcess
 .L_80166898:
 /* 80166898 0012FE58  2C 1F 00 00 */	cmpwi r31, 0
 /* 8016689C 0012FE5C  40 81 00 0C */	ble .L_801668A8
@@ -145,7 +143,7 @@
 /* 801668B8 0012FE78  7C 08 03 A6 */	mtlr r0
 /* 801668BC 0012FE7C  38 21 00 10 */	addi r1, r1, 0x10
 /* 801668C0 0012FE80  4E 80 00 20 */	blr 
-.endfn __dt__80166838
+.endfn __dt__CMenuItem
 
 .fn func_801668C4, global
 /* 801668C4 0012FE84  94 21 B5 80 */	stwu r1, -0x4a80(r1)
@@ -1265,7 +1263,7 @@ cf_CInfoCf_typestr:
 __vt__cf_CInfoCf:
 	.4byte __RTTI__cf_CInfoCf
 	.4byte 0
-	.4byte __dt__80166724
+	.4byte __dt__cf_CInfoCf
 	.4byte 0
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -1331,7 +1329,7 @@ lbl_80666B40:
 	.4byte __dt__CBgTex
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 .endobj "@etb_8000DD10"
 
 .obj "@etb_8000DD84", local
@@ -1398,7 +1396,7 @@ lbl_80666B40:
 
 .obj "@eti_80028D24", local
 .hidden "@eti_80028D24"
-	.4byte __dt__80166724
+	.4byte __dt__cf_CInfoCf
 	.4byte 0x00000048
 	.4byte "@etb_8000DD00"
 .endobj "@eti_80028D24"
@@ -1412,7 +1410,7 @@ lbl_80666B40:
 
 .obj "@eti_80028D3C", local
 .hidden "@eti_80028D3C"
-	.4byte __dt__80166838
+	.4byte __dt__CMenuItem
 	.4byte 0x0000008C
 	.4byte "@etb_8000DD10"
 .endobj "@eti_80028D3C"

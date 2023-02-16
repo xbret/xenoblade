@@ -30,7 +30,7 @@
 /* 80039E8C 0000344C  4E 80 00 20 */	blr 
 .endfn func_80039E40
 
-.fn __dt__80039E90, global
+.fn __dt___unnamed_CGame_cpp_CGameRestart, global
 /* 80039E90 00003450  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039E94 00003454  7C 08 02 A6 */	mflr r0
 /* 80039E98 00003458  2C 03 00 00 */	cmpwi r3, 0
@@ -40,7 +40,7 @@
 /* 80039EA8 00003468  7C 9F 23 78 */	mr r31, r4
 /* 80039EAC 0000346C  41 82 00 1C */	beq .L_80039EC8
 /* 80039EB0 00003470  38 80 00 00 */	li r4, 0
-/* 80039EB4 00003474  48 3F F0 15 */	bl __dt__80438EC8
+/* 80039EB4 00003474  48 3F F0 15 */	bl __dt__CProc
 /* 80039EB8 00003478  2C 1F 00 00 */	cmpwi r31, 0
 /* 80039EBC 0000347C  40 81 00 0C */	ble .L_80039EC8
 /* 80039EC0 00003480  7F C3 F3 78 */	mr r3, r30
@@ -52,7 +52,7 @@
 /* 80039ED4 00003494  7C 08 03 A6 */	mtlr r0
 /* 80039ED8 00003498  38 21 00 10 */	addi r1, r1, 0x10
 /* 80039EDC 0000349C  4E 80 00 20 */	blr
-.endfn __dt__80039E90
+.endfn __dt___unnamed_CGame_cpp_CGameRestart
 
 .fn sinit_80039EE0, local
 /* 80039EE0 000034A0  3C 60 80 57 */	lis r3, lbl_80573C80@ha
@@ -118,7 +118,7 @@ lbl_8066660C:
 
 .obj "@eti_800210F8", local
 .hidden "@eti_800210F8"
-	.4byte __dt__80039E90
+	.4byte __dt___unnamed_CGame_cpp_CGameRestart
 	.4byte 0x00000050
 	.4byte "@etb_800067BC"
 .endobj "@eti_800210F8"

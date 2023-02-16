@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_801445A8, global
 /* 801445A8 0010DB68  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801445AC 0010DB6C  7C 08 02 A6 */	mflr r0
@@ -135,7 +133,7 @@
 /* 8014478C 0010DD4C  4E 80 00 20 */	blr
 .endfn func_801445A8
 
-.fn __dt__80144790, global
+.fn __dt__CMenuLandTelop, global
 /* 80144790 0010DD50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80144794 0010DD54  7C 08 02 A6 */	mflr r0
 /* 80144798 0010DD58  2C 03 00 00 */	cmpwi r3, 0
@@ -153,7 +151,7 @@
 /* 801447C8 0010DD88  41 82 00 10 */	beq .L_801447D8
 /* 801447CC 0010DD8C  7F C3 F3 78 */	mr r3, r30
 /* 801447D0 0010DD90  38 80 00 00 */	li r4, 0
-/* 801447D4 0010DD94  48 30 03 65 */	bl __dt__80444B38
+/* 801447D4 0010DD94  48 30 03 65 */	bl __dt__CProcess
 .L_801447D8:
 /* 801447D8 0010DD98  2C 1F 00 00 */	cmpwi r31, 0
 /* 801447DC 0010DD9C  40 81 00 0C */	ble .L_801447E8
@@ -167,7 +165,7 @@
 /* 801447F8 0010DDB8  7C 08 03 A6 */	mtlr r0
 /* 801447FC 0010DDBC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80144800 0010DDC0  4E 80 00 20 */	blr 
-.endfn __dt__80144790
+.endfn __dt__CMenuLandTelop
 
 .fn func_80144804, global
 /* 80144804 0010DDC4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1480,7 +1478,7 @@
 
 .fn func_80145A90, global
 /* 80145A90 0010F050  38 63 FF 94 */	addi r3, r3, -108
-/* 80145A94 0010F054  4B FF EC FC */	b __dt__80144790
+/* 80145A94 0010F054  4B FF EC FC */	b __dt__CMenuLandTelop
 .endfn func_80145A90
 
 .fn func_80145A98, global
@@ -1490,7 +1488,7 @@
 
 .fn func_80145AA0, global
 /* 80145AA0 0010F060  38 63 FF 90 */	addi r3, r3, -112
-/* 80145AA4 0010F064  4B FF EC EC */	b __dt__80144790
+/* 80145AA4 0010F064  4B FF EC EC */	b __dt__CMenuLandTelop
 .endfn func_80145AA0
 
 .fn func_80145AA8, global
@@ -1579,7 +1577,7 @@ CMenuLandTelop_strpool:
 __vt__CMenuLandTelop:
 	.4byte __RTTI__CMenuLandTelop
 	.4byte 0
-	.4byte __dt__80144790
+	.4byte __dt__CMenuLandTelop
 	.4byte CChildListNode_Reset
 	.4byte func_80144804
 	.4byte func_80144860
@@ -1724,13 +1722,13 @@ lbl_80666A90:
 	.4byte 0x00000000
 	.4byte 0x0680001C
 	.4byte 0x00000070
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x0680001C
 	.4byte 0x0000006C
 	.4byte __dt__IWorkEvent
 	.4byte 0x8680001C
 	.4byte 0x00000000
-	.4byte __dt__8012235C
+	.4byte __dt__IUIWindow
 .endobj "@etb_8000CF14"
 
 .obj "@etb_8000CF48", local
@@ -1744,7 +1742,7 @@ lbl_80666A90:
 	.4byte __dt__8045F580
 	.4byte 0x0680001E
 	.4byte 0x00000070
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x8680001E
 	.4byte 0x0000006C
 	.4byte __dt__IWorkEvent
@@ -1825,7 +1823,7 @@ lbl_80666A90:
 
 .obj "@eti_80028244", local
 .hidden "@eti_80028244"
-	.4byte __dt__80144790
+	.4byte __dt__CMenuLandTelop
 	.4byte 0x00000074
 	.4byte "@etb_8000CF48"
 .endobj "@eti_80028244"

@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_80270B14, global
 /* 80270B14 0023A0D4  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80270B18 0023A0D8  7C 08 02 A6 */	mflr r0
@@ -91,7 +89,7 @@
 /* 80270C60 0023A220  4E 80 00 20 */	blr 
 .endfn func_80270B14
 
-.fn __dt__80270C64, global
+.fn __dt__CPlayAwardList, global
 /* 80270C64 0023A224  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80270C68 0023A228  7C 08 02 A6 */	mflr r0
 /* 80270C6C 0023A22C  2C 03 00 00 */	cmpwi r3, 0
@@ -128,7 +126,7 @@
 /* 80270CE0 0023A2A0  7C 08 03 A6 */	mtlr r0
 /* 80270CE4 0023A2A4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80270CE8 0023A2A8  4E 80 00 20 */	blr 
-.endfn __dt__80270C64
+.endfn __dt__CPlayAwardList
 
 .fn func_80270CEC, global
 /* 80270CEC 0023A2AC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1390,7 +1388,7 @@ CMenuPlayAward_strpool:
 __vt__CPlayAwardList:
 	.4byte __RTTI__CPlayAwardList
 	.4byte 0
-	.4byte __dt__80270C64
+	.4byte __dt__CPlayAwardList
 	.4byte func_80039E28
 	.4byte func_80271AE4
 	.4byte func_80039E18
@@ -1678,7 +1676,7 @@ float_8066B268:
 
 .obj "@eti_80030788", local
 .hidden "@eti_80030788"
-	.4byte __dt__80270C64
+	.4byte __dt__CPlayAwardList
 	.4byte 0x00000088
 	.4byte "@etb_80018004"
 .endobj "@eti_80030788"

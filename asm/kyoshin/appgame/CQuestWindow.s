@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_80122164, global
 /* 80122164 000EB724  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80122168 000EB728  7C 08 02 A6 */	mflr r0
@@ -114,7 +112,7 @@
 /* 80122308 000EB8C8  4E 80 00 20 */	blr 
 .endfn func_80122164
 
-.fn __dt__8012230C, global
+.fn __dt__CTTask_IUIWindow, global
 /* 8012230C 000EB8CC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80122310 000EB8D0  7C 08 02 A6 */	mflr r0
 /* 80122314 000EB8D4  2C 03 00 00 */	cmpwi r3, 0
@@ -124,7 +122,7 @@
 /* 80122324 000EB8E4  7C 9F 23 78 */	mr r31, r4
 /* 80122328 000EB8E8  41 82 00 1C */	beq .L_80122344
 /* 8012232C 000EB8EC  38 80 00 00 */	li r4, 0
-/* 80122330 000EB8F0  48 32 28 09 */	bl __dt__80444B38
+/* 80122330 000EB8F0  48 32 28 09 */	bl __dt__CProcess
 /* 80122334 000EB8F4  2C 1F 00 00 */	cmpwi r31, 0
 /* 80122338 000EB8F8  40 81 00 0C */	ble .L_80122344
 /* 8012233C 000EB8FC  7F C3 F3 78 */	mr r3, r30
@@ -136,9 +134,9 @@
 /* 80122350 000EB910  7C 08 03 A6 */	mtlr r0
 /* 80122354 000EB914  38 21 00 10 */	addi r1, r1, 0x10
 /* 80122358 000EB918  4E 80 00 20 */	blr 
-.endfn __dt__8012230C
+.endfn __dt__CTTask_IUIWindow
 
-.fn __dt__8012235C, global
+.fn __dt__IUIWindow, global
 /* 8012235C 000EB91C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80122360 000EB920  7C 08 02 A6 */	mflr r0
 /* 80122364 000EB924  2C 03 00 00 */	cmpwi r3, 0
@@ -149,7 +147,7 @@
 /* 80122378 000EB938  41 82 00 20 */	beq .L_80122398
 /* 8012237C 000EB93C  41 82 00 0C */	beq .L_80122388
 /* 80122380 000EB940  38 80 00 00 */	li r4, 0
-/* 80122384 000EB944  48 32 27 B5 */	bl __dt__80444B38
+/* 80122384 000EB944  48 32 27 B5 */	bl __dt__CProcess
 .L_80122388:
 /* 80122388 000EB948  2C 1F 00 00 */	cmpwi r31, 0
 /* 8012238C 000EB94C  40 81 00 0C */	ble .L_80122398
@@ -162,9 +160,9 @@
 /* 801223A4 000EB964  7C 08 03 A6 */	mtlr r0
 /* 801223A8 000EB968  38 21 00 10 */	addi r1, r1, 0x10
 /* 801223AC 000EB96C  4E 80 00 20 */	blr
-.endfn __dt__8012235C
+.endfn __dt__IUIWindow
 
-.fn __dt__801223B0, global
+.fn __dt__CQuestWindow, global
 /* 801223B0 000EB970  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801223B4 000EB974  7C 08 02 A6 */	mflr r0
 /* 801223B8 000EB978  2C 03 00 00 */	cmpwi r3, 0
@@ -191,7 +189,7 @@
 /* 8012240C 000EB9CC  48 33 D1 75 */	bl __dt__8045F580
 /* 80122410 000EB9D0  7F C3 F3 78 */	mr r3, r30
 /* 80122414 000EB9D4  38 80 00 00 */	li r4, 0
-/* 80122418 000EB9D8  4B FF FF 45 */	bl __dt__8012235C
+/* 80122418 000EB9D8  4B FF FF 45 */	bl __dt__IUIWindow
 /* 8012241C 000EB9DC  2C 1F 00 00 */	cmpwi r31, 0
 /* 80122420 000EB9E0  40 81 00 0C */	ble .L_8012242C
 /* 80122424 000EB9E4  7F C3 F3 78 */	mr r3, r30
@@ -204,7 +202,7 @@
 /* 8012243C 000EB9FC  7C 08 03 A6 */	mtlr r0
 /* 80122440 000EBA00  38 21 00 10 */	addi r1, r1, 0x10
 /* 80122444 000EBA04  4E 80 00 20 */	blr 
-.endfn __dt__801223B0
+.endfn __dt__CQuestWindow
 
 .fn func_80122448, global
 /* 80122448 000EBA08  80 6D A7 48 */	lwz r3, lbl_806668C8@sda21(r13)
@@ -2562,7 +2560,7 @@
 
 .fn func_801245D4, global
 /* 801245D4 000EDB94  38 63 FF 94 */	addi r3, r3, -108
-/* 801245D8 000EDB98  4B FF DD D8 */	b __dt__801223B0
+/* 801245D8 000EDB98  4B FF DD D8 */	b __dt__CQuestWindow
 .endfn func_801245D4
 
 .fn func_801245DC, global
@@ -2572,7 +2570,7 @@
 
 .fn func_801245E4, global
 /* 801245E4 000EDBA4  38 63 FF 90 */	addi r3, r3, -112
-/* 801245E8 000EDBA8  4B FF DD C8 */	b __dt__801223B0
+/* 801245E8 000EDBA8  4B FF DD C8 */	b __dt__CQuestWindow
 .endfn func_801245E4
 
 
@@ -3064,7 +3062,7 @@ jumptable_80530888:
 __vt__CQuestWindow:
 	.4byte __RTTI__CQuestWindow
 	.4byte 0
-	.4byte __dt__801223B0
+	.4byte __dt__CQuestWindow
 	.4byte CChildListNode_Reset
 	.4byte func_80122490
 	.4byte func_80122524
@@ -3135,7 +3133,7 @@ CQuestWindow_hierarchy:
 __vt__IUIWindow:
 	.4byte __RTTI__IUIWindow
 	.4byte 0
-	.4byte __dt__8012235C
+	.4byte __dt__IUIWindow
 	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
@@ -3160,7 +3158,7 @@ IUIWindow_hierarchy:
 __vt__CTTask_IUIWindow:
 	.4byte __RTTI__CTTask_IUIWindow
 	.4byte 0
-	.4byte __dt__8012230C
+	.4byte __dt__CTTask_IUIWindow
 	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
@@ -3302,13 +3300,13 @@ lbl_806668CC:
 	.4byte __dt__8045F580
 	.4byte 0x0680001C
 	.4byte 0x00000070
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x0680001C
 	.4byte 0x0000006C
 	.4byte __dt__IWorkEvent
 	.4byte 0x8680001C
 	.4byte 0x00000000
-	.4byte __dt__8012235C
+	.4byte __dt__IUIWindow
 .endobj "@etb_8000BC10"
 
 .obj "@etb_8000BC6C", local
@@ -3341,13 +3339,13 @@ lbl_806668CC:
 	.4byte __dt__8045F580
 	.4byte 0x0680001E
 	.4byte 0x00000070
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x0680001E
 	.4byte 0x0000006C
 	.4byte __dt__IWorkEvent
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__8012235C
+	.4byte __dt__IUIWindow
 	.4byte 0x8780001E
 	.4byte 0x000000A0
 	.4byte __dt__801D2A38
@@ -3359,7 +3357,7 @@ lbl_806668CC:
 	.4byte __dt__8045F580
 	.4byte 0x0680001E
 	.4byte 0x00000070
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x8680001E
 	.4byte 0x0000006C
 	.4byte __dt__IWorkEvent
@@ -3482,21 +3480,21 @@ lbl_806668CC:
 
 .obj "@eti_80026F78", local
 .hidden "@eti_80026F78"
-	.4byte __dt__8012230C
+	.4byte __dt__CTTask_IUIWindow
 	.4byte 0x00000050
 	.4byte "@etb_8000BC6C"
 .endobj "@eti_80026F78"
 
 .obj "@eti_80026F84", local
 .hidden "@eti_80026F84"
-	.4byte __dt__8012235C
+	.4byte __dt__IUIWindow
 	.4byte 0x00000054
 	.4byte "@etb_8000BC74"
 .endobj "@eti_80026F84"
 
 .obj "@eti_80026F90", local
 .hidden "@eti_80026F90"
-	.4byte __dt__801223B0
+	.4byte __dt__CQuestWindow
 	.4byte 0x00000098
 	.4byte "@etb_8000BC7C"
 .endobj "@eti_80026F90"

@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CChildListNode, global
 /* 804466E0 0040FCA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804466E4 0040FCA4  7C 08 02 A6 */	mflr r0
@@ -64,7 +62,7 @@ TChildListHeader_CChildListNode_typestr:
 __vt__CChildListNode:
 	.4byte __RTTI__CChildListNode
 	.4byte 0
-	.4byte __dt__80444A78
+	.4byte __dt__CChildListNode
 	.4byte CChildListNode_Reset
 
 
@@ -72,7 +70,7 @@ __vt__CChildListNode:
 __vt__TChildListHeader_CChildListNode:
 	.4byte __RTTI__TChildListHeader_CChildListNode
 	.4byte 0
-	.4byte __dt__80444AB8
+	.4byte __dt__TChildListHeader_CChildListNode
 	.4byte 0
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600

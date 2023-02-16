@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CMenuGetItemMulti, global
 /* 801B2564 0017BB24  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801B2568 0017BB28  7C 08 02 A6 */	mflr r0
@@ -268,7 +266,7 @@
 /* 801B2950 0017BF10  4E 80 00 20 */	blr
 .endfn func_801B2794
 
-.fn __dt__801B2954, global
+.fn __dt__CMenuGetItemMulti, global
 /* 801B2954 0017BF14  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801B2958 0017BF18  7C 08 02 A6 */	mflr r0
 /* 801B295C 0017BF1C  2C 03 00 00 */	cmpwi r3, 0
@@ -292,7 +290,7 @@
 /* 801B29A4 0017BF64  41 82 00 10 */	beq .L_801B29B4
 /* 801B29A8 0017BF68  7F C3 F3 78 */	mr r3, r30
 /* 801B29AC 0017BF6C  38 80 00 00 */	li r4, 0
-/* 801B29B0 0017BF70  48 29 21 89 */	bl __dt__80444B38
+/* 801B29B0 0017BF70  48 29 21 89 */	bl __dt__CProcess
 .L_801B29B4:
 /* 801B29B4 0017BF74  2C 1F 00 00 */	cmpwi r31, 0
 /* 801B29B8 0017BF78  40 81 00 0C */	ble .L_801B29C4
@@ -306,7 +304,7 @@
 /* 801B29D4 0017BF94  7C 08 03 A6 */	mtlr r0
 /* 801B29D8 0017BF98  38 21 00 10 */	addi r1, r1, 0x10
 /* 801B29DC 0017BF9C  4E 80 00 20 */	blr 
-.endfn __dt__801B2954
+.endfn __dt__CMenuGetItemMulti
 
 .fn func_801B29E0, global
 /* 801B29E0 0017BFA0  38 00 00 00 */	li r0, 0
@@ -8487,7 +8485,7 @@
 
 .fn func_801BA134, global
 /* 801BA134 001836F4  38 63 FF 94 */	addi r3, r3, -108
-/* 801BA138 001836F8  4B FF 88 1C */	b __dt__801B2954
+/* 801BA138 001836F8  4B FF 88 1C */	b __dt__CMenuGetItemMulti
 .endfn func_801BA134
 
 .fn func_801BA13C, global
@@ -8497,7 +8495,7 @@
 
 .fn func_801BA144, global
 /* 801BA144 00183704  38 63 FF 90 */	addi r3, r3, -112
-/* 801BA148 00183708  4B FF 88 0C */	b __dt__801B2954
+/* 801BA148 00183708  4B FF 88 0C */	b __dt__CMenuGetItemMulti
 .endfn func_801BA144
 
 
@@ -8765,7 +8763,7 @@ jumptable_80537050:
 __vt__CMenuGetItemMulti:
 	.4byte __RTTI__CMenuGetItemMulti
 	.4byte 0
-	.4byte __dt__801B2954
+	.4byte __dt__CMenuGetItemMulti
 	.4byte CChildListNode_Reset
 	.4byte func_801B29EC
 	.4byte func_801B3F68
@@ -8966,13 +8964,13 @@ lbl_80666D08:
 	.4byte __dt__8045F580
 	.4byte 0x06800017
 	.4byte 0x00000070
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x06800017
 	.4byte 0x0000006C
 	.4byte __dt__IWorkEvent
 	.4byte 0x86800017
 	.4byte 0x00000000
-	.4byte __dt__8012235C
+	.4byte __dt__IUIWindow
 .endobj "@etb_8000FD5C"
 
 .obj "@etb_8000FDB8", local
@@ -8999,13 +8997,13 @@ lbl_80666D08:
 	.4byte __dt__8045F580
 	.4byte 0x0680001F
 	.4byte 0x00000070
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x0680001F
 	.4byte 0x0000006C
 	.4byte __dt__IWorkEvent
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte __dt__8012235C
+	.4byte __dt__IUIWindow
 .endobj "@etb_8000FDC0"
 
 .obj "@etb_8000FE1C", local
@@ -9052,7 +9050,7 @@ lbl_80666D08:
 	.4byte __dt__8045F580
 	.4byte 0x0680001E
 	.4byte 0x00000070
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x8680001E
 	.4byte 0x0000006C
 	.4byte __dt__IWorkEvent
@@ -9231,7 +9229,7 @@ lbl_80666D08:
 
 .obj "@eti_8002AA58", local
 .hidden "@eti_8002AA58"
-	.4byte __dt__801B2954
+	.4byte __dt__CMenuGetItemMulti
 	.4byte 0x0000008C
 	.4byte "@etb_8000FE1C"
 .endobj "@eti_8002AA58"

@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_80212504, global
 /* 80212504 001DBAC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80212508 001DBAC8  7C 08 02 A6 */	mflr r0
@@ -26,13 +24,13 @@
 /* 8021254C 001DBB0C  4B FB 19 85 */	bl __ct__CTitleAHelp
 /* 80212550 001DBB10  38 7E 00 50 */	addi r3, r30, 0x50
 /* 80212554 001DBB14  38 80 00 00 */	li r4, 0
-/* 80212558 001DBB18  48 00 97 19 */	bl func_8021BC70
+/* 80212558 001DBB18  48 00 97 19 */	bl __ct__CModelDispMakeCrystal
 /* 8021255C 001DBB1C  38 7E 2E 08 */	addi r3, r30, 0x2e08
 /* 80212560 001DBB20  38 80 00 00 */	li r4, 0
 /* 80212564 001DBB24  48 00 16 8D */	bl func_80213BF0
 /* 80212568 001DBB28  38 7E 43 10 */	addi r3, r30, 0x4310
 /* 8021256C 001DBB2C  38 80 00 00 */	li r4, 0
-/* 80212570 001DBB30  48 09 BE CD */	bl func_802AE43C
+/* 80212570 001DBB30  48 09 BE CD */	bl __ct__CLoad
 /* 80212574 001DBB34  9B FE 43 40 */	stb r31, 0x4340(r30)
 /* 80212578 001DBB38  7F C3 F3 78 */	mr r3, r30
 /* 8021257C 001DBB3C  9B FE 43 41 */	stb r31, 0x4341(r30)
@@ -43,7 +41,7 @@
 /* 80212590 001DBB50  4E 80 00 20 */	blr 
 .endfn func_80212504
 
-.fn __dt__80212594, global
+.fn __dt__CMakeCrystalWin, global
 /* 80212594 001DBB54  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80212598 001DBB58  7C 08 02 A6 */	mflr r0
 /* 8021259C 001DBB5C  2C 03 00 00 */	cmpwi r3, 0
@@ -54,13 +52,13 @@
 /* 802125B0 001DBB70  41 82 00 44 */	beq .L_802125F4
 /* 802125B4 001DBB74  38 80 FF FF */	li r4, -1
 /* 802125B8 001DBB78  38 63 43 10 */	addi r3, r3, 0x4310
-/* 802125BC 001DBB7C  48 09 BE F9 */	bl __dt__802AE4B4
+/* 802125BC 001DBB7C  48 09 BE F9 */	bl __dt__CLoad
 /* 802125C0 001DBB80  38 7E 2E 08 */	addi r3, r30, 0x2e08
 /* 802125C4 001DBB84  38 80 FF FF */	li r4, -1
-/* 802125C8 001DBB88  48 00 19 45 */	bl __dt__80213F0C
+/* 802125C8 001DBB88  48 00 19 45 */	bl __dt__CMCCrystalBox
 /* 802125CC 001DBB8C  38 7E 00 50 */	addi r3, r30, 0x50
 /* 802125D0 001DBB90  38 80 FF FF */	li r4, -1
-/* 802125D4 001DBB94  48 00 9F C1 */	bl __dt__8021C594
+/* 802125D4 001DBB94  48 00 9F C1 */	bl __dt__CModelDispMakeCrystal
 /* 802125D8 001DBB98  38 7E 00 18 */	addi r3, r30, 0x18
 /* 802125DC 001DBB9C  38 80 FF FF */	li r4, -1
 /* 802125E0 001DBBA0  4B FB 19 71 */	bl __dt__CTitleAHelp
@@ -75,7 +73,7 @@
 /* 80212600 001DBBC0  7C 08 03 A6 */	mtlr r0
 /* 80212604 001DBBC4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80212608 001DBBC8  4E 80 00 20 */	blr 
-.endfn __dt__80212594
+.endfn __dt__CMakeCrystalWin
 
 .fn func_8021260C, global
 /* 8021260C 001DBBCC  94 21 BC 50 */	stwu r1, -0x43b0(r1)
@@ -247,23 +245,23 @@
 /* 8021289C 001DBE5C  4B FF F4 51 */	bl func_80211CEC
 /* 802128A0 001DBE60  38 61 2E 98 */	addi r3, r1, 0x2e98
 /* 802128A4 001DBE64  38 80 FF FF */	li r4, -1
-/* 802128A8 001DBE68  48 00 16 65 */	bl __dt__80213F0C
+/* 802128A8 001DBE68  48 00 16 65 */	bl __dt__CMCCrystalBox
 /* 802128AC 001DBE6C  38 7F 2E 08 */	addi r3, r31, 0x2e08
 /* 802128B0 001DBE70  48 00 17 35 */	bl func_80213FE4
 /* 802128B4 001DBE74  80 9F 00 10 */	lwz r4, 0x10(r31)
 /* 802128B8 001DBE78  38 61 00 E0 */	addi r3, r1, 0xe0
-/* 802128BC 001DBE7C  48 00 93 B5 */	bl func_8021BC70
+/* 802128BC 001DBE7C  48 00 93 B5 */	bl __ct__CModelDispMakeCrystal
 /* 802128C0 001DBE80  38 7F 00 50 */	addi r3, r31, 0x50
 /* 802128C4 001DBE84  38 81 00 E0 */	addi r4, r1, 0xe0
 /* 802128C8 001DBE88  4B FF E5 D5 */	bl func_80210E9C
 /* 802128CC 001DBE8C  38 61 00 E0 */	addi r3, r1, 0xe0
 /* 802128D0 001DBE90  38 80 FF FF */	li r4, -1
-/* 802128D4 001DBE94  48 00 9C C1 */	bl __dt__8021C594
+/* 802128D4 001DBE94  48 00 9C C1 */	bl __dt__CModelDispMakeCrystal
 /* 802128D8 001DBE98  38 7F 00 50 */	addi r3, r31, 0x50
 /* 802128DC 001DBE9C  48 00 9E 09 */	bl func_8021C6E4
 /* 802128E0 001DBEA0  38 61 00 50 */	addi r3, r1, 0x50
 /* 802128E4 001DBEA4  38 80 00 01 */	li r4, 1
-/* 802128E8 001DBEA8  48 09 BB 55 */	bl func_802AE43C
+/* 802128E8 001DBEA8  48 09 BB 55 */	bl __ct__CLoad
 /* 802128EC 001DBEAC  38 7F 43 14 */	addi r3, r31, 0x4314
 /* 802128F0 001DBEB0  38 81 00 54 */	addi r4, r1, 0x54
 /* 802128F4 001DBEB4  4B F0 A0 81 */	bl __ct__8011C974
@@ -291,7 +289,7 @@
 /* 8021294C 001DBF0C  98 1F 43 3C */	stb r0, 0x433c(r31)
 /* 80212950 001DBF10  88 01 00 7D */	lbz r0, 0x7d(r1)
 /* 80212954 001DBF14  98 1F 43 3D */	stb r0, 0x433d(r31)
-/* 80212958 001DBF18  48 09 BB 5D */	bl __dt__802AE4B4
+/* 80212958 001DBF18  48 09 BB 5D */	bl __dt__CLoad
 /* 8021295C 001DBF1C  38 7F 43 10 */	addi r3, r31, 0x4310
 /* 80212960 001DBF20  48 09 BB A9 */	bl func_802AE508
 /* 80212964 001DBF24  2C 1F 00 00 */	cmpwi r31, 0
@@ -1039,18 +1037,18 @@
 /* 80213358 001DC918  4B FF E9 95 */	bl func_80211CEC
 /* 8021335C 001DC91C  38 61 2D C0 */	addi r3, r1, 0x2dc0
 /* 80213360 001DC920  38 80 FF FF */	li r4, -1
-/* 80213364 001DC924  48 00 0B A9 */	bl __dt__80213F0C
+/* 80213364 001DC924  48 00 0B A9 */	bl __dt__CMCCrystalBox
 /* 80213368 001DC928  38 7F 2E 08 */	addi r3, r31, 0x2e08
 /* 8021336C 001DC92C  48 00 0C 79 */	bl func_80213FE4
 /* 80213370 001DC930  80 9F 00 10 */	lwz r4, 0x10(r31)
 /* 80213374 001DC934  38 61 00 08 */	addi r3, r1, 8
-/* 80213378 001DC938  48 00 88 F9 */	bl func_8021BC70
+/* 80213378 001DC938  48 00 88 F9 */	bl __ct__CModelDispMakeCrystal
 /* 8021337C 001DC93C  38 7F 00 50 */	addi r3, r31, 0x50
 /* 80213380 001DC940  38 81 00 08 */	addi r4, r1, 8
 /* 80213384 001DC944  4B FF DB 19 */	bl func_80210E9C
 /* 80213388 001DC948  38 61 00 08 */	addi r3, r1, 8
 /* 8021338C 001DC94C  38 80 FF FF */	li r4, -1
-/* 80213390 001DC950  48 00 92 05 */	bl __dt__8021C594
+/* 80213390 001DC950  48 00 92 05 */	bl __dt__CModelDispMakeCrystal
 /* 80213394 001DC954  38 7F 00 50 */	addi r3, r31, 0x50
 /* 80213398 001DC958  48 00 93 4D */	bl func_8021C6E4
 /* 8021339C 001DC95C  38 7F 00 18 */	addi r3, r31, 0x18
@@ -1124,7 +1122,7 @@
 
 .fn func_80213480, global
 /* 80213480 001DCA40  38 63 FF FC */	addi r3, r3, -4
-/* 80213484 001DCA44  4B FF F1 10 */	b __dt__80212594
+/* 80213484 001DCA44  4B FF F1 10 */	b __dt__CMakeCrystalWin
 .endfn func_80213480
 
 
@@ -1171,7 +1169,7 @@ jumptable_805392F8:
 __vt__CMakeCrystalWin:
 	.4byte __RTTI__CMakeCrystalWin
 	.4byte 0
-	.4byte __dt__80212594
+	.4byte __dt__CMakeCrystalWin
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -1259,16 +1257,16 @@ float_8066AD14:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00002E08
-	.4byte __dt__80213F0C
+	.4byte __dt__CMCCrystalBox
 	.4byte 0x0780001E
 	.4byte 0x00000050
-	.4byte __dt__8021C594
+	.4byte __dt__CModelDispMakeCrystal
 	.4byte 0x0780001E
 	.4byte 0x00000018
 	.4byte __dt__CTitleAHelp
 	.4byte 0x0680001E
 	.4byte 0x00000004
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x8680001E
 	.4byte 0x00000000
 	.4byte __dt__IWorkEvent
@@ -1286,22 +1284,22 @@ float_8066AD14:
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x00004310
-	.4byte __dt__802AE4B4
+	.4byte __dt__CLoad
 	.4byte 0x0780001E
 	.4byte 0x00004310
-	.4byte __dt__802AE4B4
+	.4byte __dt__CLoad
 	.4byte 0x8780001E
 	.4byte 0x00002E08
-	.4byte __dt__80213F0C
+	.4byte __dt__CMCCrystalBox
 	.4byte 0x0780001E
 	.4byte 0x00004310
-	.4byte __dt__802AE4B4
+	.4byte __dt__CLoad
 	.4byte 0x0780001E
 	.4byte 0x00002E08
-	.4byte __dt__80213F0C
+	.4byte __dt__CMCCrystalBox
 	.4byte 0x8780001E
 	.4byte 0x00000050
-	.4byte __dt__8021C594
+	.4byte __dt__CModelDispMakeCrystal
 .endobj "@etb_8001344C"
 
 .obj "@etb_800134B4", local
@@ -1311,7 +1309,7 @@ float_8066AD14:
 	.4byte 0x00000010
 	.4byte 0x00000000
 	.4byte 0x820000E0
-	.4byte __dt__8021C594
+	.4byte __dt__CModelDispMakeCrystal
 .endobj "@etb_800134B4"
 
 .obj "@etb_800134CC", local
@@ -1405,7 +1403,7 @@ float_8066AD14:
 	.4byte 0x00000010
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte __dt__8021C594
+	.4byte __dt__CModelDispMakeCrystal
 .endobj "@etb_8001353C"
 
 .obj "@etb_80013554", local
@@ -1431,7 +1429,7 @@ float_8066AD14:
 
 .obj "@eti_8002D32C", local
 .hidden "@eti_8002D32C"
-	.4byte __dt__80212594
+	.4byte __dt__CMakeCrystalWin
 	.4byte 0x00000078
 	.4byte "@etb_8001344C"
 .endobj "@eti_8002D32C"

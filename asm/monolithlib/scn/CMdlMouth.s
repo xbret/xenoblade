@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_804E6544, global
 /* 804E6544 004AFB04  C0 22 D7 38 */	lfs f1, float_8066DAB8@sda21(r2)
 /* 804E6548 004AFB08  3C A0 80 57 */	lis r5, __vt__CMdlMouth@ha
@@ -25,7 +23,7 @@
 /* 804E6588 004AFB48  4E 80 00 20 */	blr 
 .endfn func_804E6544
 
-.fn __dt__804E658C, global
+.fn __dt__CMdlMouth, global
 /* 804E658C 004AFB4C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804E6590 004AFB50  7C 08 02 A6 */	mflr r0
 /* 804E6594 004AFB54  2C 03 00 00 */	cmpwi r3, 0
@@ -43,7 +41,7 @@
 /* 804E65C0 004AFB80  7C 08 03 A6 */	mtlr r0
 /* 804E65C4 004AFB84  38 21 00 10 */	addi r1, r1, 0x10
 /* 804E65C8 004AFB88  4E 80 00 20 */	blr 
-.endfn __dt__804E658C
+.endfn __dt__CMdlMouth
 
 .fn func_804E65CC, global
 /* 804E65CC 004AFB8C  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -518,7 +516,7 @@ CMdlMouth_typestr:
 __vt__CMdlMouth:
 	.4byte __RTTI__CMdlMouth
 	.4byte 0
-	.4byte __dt__804E658C
+	.4byte __dt__CMdlMouth
 	.4byte 0
 
 
@@ -645,7 +643,7 @@ float_8066DAE0:
 
 .obj "@eti_80038DF8", local
 .hidden "@eti_80038DF8"
-	.4byte __dt__804E658C
+	.4byte __dt__CMdlMouth
 	.4byte 0x00000040
 	.4byte "@etb_80020CD0"
 .endobj "@eti_80038DF8"

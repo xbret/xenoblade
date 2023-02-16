@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_801E119C, global
 /* 801E119C 001AA75C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801E11A0 001AA760  7C 08 02 A6 */	mflr r0
@@ -64,7 +62,7 @@
 /* 801E127C 001AA83C  4E 80 00 20 */	blr 
 .endfn func_801E119C
 
-.fn __dt__801E1280, global
+.fn __dt__CItemBoxInfo2, global
 /* 801E1280 001AA840  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801E1284 001AA844  7C 08 02 A6 */	mflr r0
 /* 801E1288 001AA848  2C 03 00 00 */	cmpwi r3, 0
@@ -90,7 +88,7 @@
 /* 801E12D4 001AA894  7C 08 03 A6 */	mtlr r0
 /* 801E12D8 001AA898  38 21 00 10 */	addi r1, r1, 0x10
 /* 801E12DC 001AA89C  4E 80 00 20 */	blr 
-.endfn __dt__801E1280
+.endfn __dt__CItemBoxInfo2
 
 .fn func_801E12E0, global
 /* 801E12E0 001AA8A0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -10638,7 +10636,7 @@
 __vt__CItemBoxInfo2:
 	.4byte __RTTI__CItemBoxInfo2
 	.4byte 0
-	.4byte __dt__801E1280
+	.4byte __dt__CItemBoxInfo2
 	.4byte func_80039E28
 	.4byte func_801E9B94
 	.4byte func_80039E18
@@ -10683,7 +10681,7 @@ CItemBoxInfo2_hierarchy:
 __vt__CItemBoxInfo:
 	.4byte __RTTI__CItemBoxInfo
 	.4byte 0
-	.4byte __dt__801D3FF4
+	.4byte __dt__CItemBoxInfo
 	.4byte func_80039E28
 	.4byte func_801E0260
 	.4byte func_80039E18
@@ -11045,7 +11043,7 @@ __RTTI__CItemBoxInfo:
 
 .obj "@eti_8002BD18", local
 .hidden "@eti_8002BD18"
-	.4byte __dt__801E1280
+	.4byte __dt__CItemBoxInfo2
 	.4byte 0x00000060
 	.4byte "@etb_80011934"
 .endobj "@eti_8002BD18"

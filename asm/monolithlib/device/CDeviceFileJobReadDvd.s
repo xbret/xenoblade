@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CDeviceFileJobReadDvd, global
 /* 80451F20 0041B4E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80451F24 0041B4E4  7C 08 02 A6 */	mflr r0
@@ -24,7 +22,7 @@
 /* 80451F60 0041B520  4E 80 00 20 */	blr 
 .endfn __ct__CDeviceFileJobReadDvd
 
-.fn __dt__80451F64, global
+.fn __dt__CDeviceFileJobReadDvd, global
 /* 80451F64 0041B524  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80451F68 0041B528  7C 08 02 A6 */	mflr r0
 /* 80451F6C 0041B52C  2C 03 00 00 */	cmpwi r3, 0
@@ -50,7 +48,7 @@
 /* 80451FB4 0041B574  7C 08 03 A6 */	mtlr r0
 /* 80451FB8 0041B578  38 21 00 10 */	addi r1, r1, 0x10
 /* 80451FBC 0041B57C  4E 80 00 20 */	blr 
-.endfn __dt__80451F64
+.endfn __dt__CDeviceFileJobReadDvd
 
 .fn func_80451FC0, global
 /* 80451FC0 0041B580  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -293,7 +291,7 @@ CDeviceFileJobReadDvd_typestr:
 __vt__CDeviceFileJobReadDvd:
 	.4byte __RTTI__CDeviceFileJobReadDvd
 	.4byte 0
-	.4byte __dt__80451F64
+	.4byte __dt__CDeviceFileJobReadDvd
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -420,7 +418,7 @@ __RTTI__CDeviceFileJobReadDvd:
 
 .obj "@eti_80034C88", local
 .hidden "@eti_80034C88"
-	.4byte __dt__80451F64
+	.4byte __dt__CDeviceFileJobReadDvd
 	.4byte 0x0000005C
 	.4byte "@etb_8001CFB4"
 .endobj "@eti_80034C88"

@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CDesktop, global
 /* 804559CC 0041EF8C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804559D0 0041EF90  7C 08 02 A6 */	mflr r0
@@ -48,7 +46,7 @@
 /* 80455A60 0041F020  38 00 00 00 */	li r0, 0
 /* 80455A64 0041F024  90 0D BE 04 */	stw r0, lbl_80667F84@sda21(r13)
 /* 80455A68 0041F028  38 80 00 00 */	li r4, 0
-/* 80455A6C 0041F02C  4B FE 34 5D */	bl __dt__80438EC8
+/* 80455A6C 0041F02C  4B FE 34 5D */	bl __dt__CProc
 /* 80455A70 0041F030  2C 1F 00 00 */	cmpwi r31, 0
 /* 80455A74 0041F034  40 81 00 0C */	ble .L_80455A80
 /* 80455A78 0041F038  7F C3 F3 78 */	mr r3, r30
@@ -472,7 +470,7 @@
 /* 80455FF8 0041F5B8  4E 80 00 20 */	blr 
 .endfn func_80455FD4
 
-.fn __dt__80455FFC, global
+.fn __dt___unnamed_CDesktop_cpp_CDesktopBackGround, global
 /* 80455FFC 0041F5BC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80456000 0041F5C0  7C 08 02 A6 */	mflr r0
 /* 80456004 0041F5C4  2C 03 00 00 */	cmpwi r3, 0
@@ -484,7 +482,7 @@
 /* 8045601C 0041F5DC  38 00 00 00 */	li r0, 0
 /* 80456020 0041F5E0  90 0D BE 0C */	stw r0, lbl_80667F8C@sda21(r13)
 /* 80456024 0041F5E4  38 80 00 00 */	li r4, 0
-/* 80456028 0041F5E8  4B FE 2E A1 */	bl __dt__80438EC8
+/* 80456028 0041F5E8  4B FE 2E A1 */	bl __dt__CProc
 /* 8045602C 0041F5EC  2C 1F 00 00 */	cmpwi r31, 0
 /* 80456030 0041F5F0  40 81 00 0C */	ble .L_8045603C
 /* 80456034 0041F5F4  7F C3 F3 78 */	mr r3, r30
@@ -496,9 +494,9 @@
 /* 80456048 0041F608  7C 08 03 A6 */	mtlr r0
 /* 8045604C 0041F60C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80456050 0041F610  4E 80 00 20 */	blr 
-.endfn __dt__80455FFC
+.endfn __dt___unnamed_CDesktop_cpp_CDesktopBackGround
 
-.fn __dt__80456054, global
+.fn __dt___unnamed_CDesktop_cpp_CDesktopException, global
 /* 80456054 0041F614  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80456058 0041F618  7C 08 02 A6 */	mflr r0
 /* 8045605C 0041F61C  2C 03 00 00 */	cmpwi r3, 0
@@ -510,7 +508,7 @@
 /* 80456074 0041F634  38 00 00 00 */	li r0, 0
 /* 80456078 0041F638  90 0D BE 10 */	stw r0, lbl_80667F90@sda21(r13)
 /* 8045607C 0041F63C  38 80 00 00 */	li r4, 0
-/* 80456080 0041F640  4B FE 2E 49 */	bl __dt__80438EC8
+/* 80456080 0041F640  4B FE 2E 49 */	bl __dt__CProc
 /* 80456084 0041F644  2C 1F 00 00 */	cmpwi r31, 0
 /* 80456088 0041F648  40 81 00 0C */	ble .L_80456094
 /* 8045608C 0041F64C  7F C3 F3 78 */	mr r3, r30
@@ -522,7 +520,7 @@
 /* 804560A0 0041F660  7C 08 03 A6 */	mtlr r0
 /* 804560A4 0041F664  38 21 00 10 */	addi r1, r1, 0x10
 /* 804560A8 0041F668  4E 80 00 20 */	blr 
-.endfn __dt__80456054
+.endfn __dt___unnamed_CDesktop_cpp_CDesktopException
 
 .fn func_804560AC, global
 /* 804560AC 0041F66C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -605,7 +603,7 @@ lbl_8052685C:
 __vt___unnamed_CDesktop_cpp_CDesktopException:
 	.4byte __RTTI___unnamed_CDesktop_cpp_CDesktopException
 	.4byte 0
-	.4byte __dt__80456054
+	.4byte __dt___unnamed_CDesktop_cpp_CDesktopException
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -660,7 +658,7 @@ _unnamed_CDesktop_cpp_CDesktopException_hierarchy:
 __vt___unnamed_CDesktop_cpp_CDesktopBackGround:
 	.4byte __RTTI___unnamed_CDesktop_cpp_CDesktopBackGround
 	.4byte 0
-	.4byte __dt__80455FFC
+	.4byte __dt___unnamed_CDesktop_cpp_CDesktopBackGround
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -851,7 +849,7 @@ lbl_80667F90:
 	.4byte 0x00000000
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte __dt__80438EC8
+	.4byte __dt__CProc
 .endobj "@etb_8001D2E4"
 
 .obj "@etb_8001D300", local
@@ -995,14 +993,14 @@ lbl_80667F90:
 
 .obj "@eti_80034F88", local
 .hidden "@eti_80034F88"
-	.4byte __dt__80455FFC
+	.4byte __dt___unnamed_CDesktop_cpp_CDesktopBackGround
 	.4byte 0x00000058
 	.4byte "@etb_8001D340"
 .endobj "@eti_80034F88"
 
 .obj "@eti_80034F94", local
 .hidden "@eti_80034F94"
-	.4byte __dt__80456054
+	.4byte __dt___unnamed_CDesktop_cpp_CDesktopException
 	.4byte 0x00000058
 	.4byte "@etb_8001D348"
 .endobj "@eti_80034F94"

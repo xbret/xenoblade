@@ -2,10 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-
-.fn func_804F5158, global
+.fn __ct__CNBanner, global
 /* 804F5158 004BE718  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804F515C 004BE71C  7C 08 02 A6 */	mflr r0
 /* 804F5160 004BE720  3C C0 80 57 */	lis r6, __vt__CNBanner@ha
@@ -59,9 +56,9 @@
 /* 804F5218 004BE7D8  7C 08 03 A6 */	mtlr r0
 /* 804F521C 004BE7DC  38 21 00 10 */	addi r1, r1, 0x10
 /* 804F5220 004BE7E0  4E 80 00 20 */	blr 
-.endfn func_804F5158
+.endfn __ct__CNBanner
 
-.fn __dt__804F5224, global
+.fn __dt__CNBanner, global
 /* 804F5224 004BE7E4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804F5228 004BE7E8  7C 08 02 A6 */	mflr r0
 /* 804F522C 004BE7EC  2C 03 00 00 */	cmpwi r3, 0
@@ -121,7 +118,7 @@
 /* 804F52EC 004BE8AC  7C 08 03 A6 */	mtlr r0
 /* 804F52F0 004BE8B0  38 21 00 20 */	addi r1, r1, 0x20
 /* 804F52F4 004BE8B4  4E 80 00 20 */	blr 
-.endfn __dt__804F5224
+.endfn __dt__CNBanner
 
 .fn func_804F52F8, global
 /* 804F52F8 004BE8B8  4C C6 31 82 */	crclr 6
@@ -578,7 +575,7 @@ lbl_805281C4:
 __vt__CNBanner:
 	.4byte __RTTI__CNBanner
 	.4byte 0
-	.4byte __dt__804F5224
+	.4byte __dt__CNBanner
 	.4byte func_80039E28
 	.4byte func_804F57E8
 	.4byte func_80039E18
@@ -677,14 +674,14 @@ __RTTI__CNBanner:
 
 .obj "@eti_800391B8", local
 .hidden "@eti_800391B8"
-	.4byte func_804F5158
+	.4byte __ct__CNBanner
 	.4byte 0x000000CC
 	.4byte "@etb_80020FD4"
 .endobj "@eti_800391B8"
 
 .obj "@eti_800391C4", local
 .hidden "@eti_800391C4"
-	.4byte __dt__804F5224
+	.4byte __dt__CNBanner
 	.4byte 0x000000D4
 	.4byte "@etb_80020FDC"
 .endobj "@eti_800391C4"

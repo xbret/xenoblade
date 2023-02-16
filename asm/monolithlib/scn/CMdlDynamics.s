@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_804E942C, global
+.fn __ct__CMdlDynamics, global
 /* 804E942C 004B29EC  3C A0 80 57 */	lis r5, __vt__CMdlDynamics@ha
 /* 804E9430 004B29F0  38 80 00 00 */	li r4, 0
 /* 804E9434 004B29F4  38 00 FF FF */	li r0, -1
@@ -18,7 +16,7 @@
 /* 804E9454 004B2A14  90 83 00 1C */	stw r4, 0x1c(r3)
 /* 804E9458 004B2A18  90 03 00 24 */	stw r0, 0x24(r3)
 /* 804E945C 004B2A1C  4E 80 00 20 */	blr 
-.endfn func_804E942C
+.endfn __ct__CMdlDynamics
 
 .fn __dt__804E9460, global
 /* 804E9460 004B2A20  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -63,7 +61,7 @@
 /* 804E94F4 004B2AB4  4E 80 00 20 */	blr 
 .endfn __dt__804E9460
 
-.fn __dt__804E94F8, global
+.fn __dt__CMdlDynamics, global
 /* 804E94F8 004B2AB8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804E94FC 004B2ABC  7C 08 02 A6 */	mflr r0
 /* 804E9500 004B2AC0  2C 03 00 00 */	cmpwi r3, 0
@@ -127,7 +125,7 @@
 /* 804E95D4 004B2B94  7C 08 03 A6 */	mtlr r0
 /* 804E95D8 004B2B98  38 21 00 20 */	addi r1, r1, 0x20
 /* 804E95DC 004B2B9C  4E 80 00 20 */	blr 
-.endfn __dt__804E94F8
+.endfn __dt__CMdlDynamics
 
 .fn func_804E95E0, global
 /* 804E95E0 004B2BA0  94 21 FE D0 */	stwu r1, -0x130(r1)
@@ -5497,7 +5495,7 @@ lbl_80573A38:
 __vt__CMdlDynamics:
 	.4byte __RTTI__CMdlDynamics
 	.4byte 0
-	.4byte __dt__804E94F8
+	.4byte __dt__CMdlDynamics
 
 
 .global lbl_80573A50
@@ -5848,7 +5846,7 @@ float_8066DBA4:
 
 .obj "@eti_80038EC4", local
 .hidden "@eti_80038EC4"
-	.4byte __dt__804E94F8
+	.4byte __dt__CMdlDynamics
 	.4byte 0x000000E8
 	.4byte "@etb_80020D58"
 .endobj "@eti_80038EC4"

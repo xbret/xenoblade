@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_801ECB84, global
+.fn __ct__CIBLTabCur, global
 /* 801ECB84 001B6144  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801ECB88 001B6148  7C 08 02 A6 */	mflr r0
 /* 801ECB8C 001B614C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -20,7 +18,7 @@
 /* 801ECBB4 001B6174  7C 08 03 A6 */	mtlr r0
 /* 801ECBB8 001B6178  38 21 00 10 */	addi r1, r1, 0x10
 /* 801ECBBC 001B617C  4E 80 00 20 */	blr 
-.endfn func_801ECB84
+.endfn __ct__CIBLTabCur
 
 .fn __dt__801ECBC0, global
 /* 801ECBC0 001B6180  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -110,7 +108,7 @@
 
 .obj "@eti_8002C03C", local
 .hidden "@eti_8002C03C"
-	.4byte func_801ECB84
+	.4byte __ct__CIBLTabCur
 	.4byte 0x0000003C
 	.4byte "@etb_80011BC4"
 .endobj "@eti_8002C03C"

@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_801414CC, global
 /* 801414CC 0010AA8C  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 801414D0 0010AA90  7C 08 02 A6 */	mflr r0
@@ -1466,7 +1464,7 @@ lbl_80531EC0:
 __vt__cf_CfBdat:
 	.4byte __RTTI__cf_CfBdat
 	.4byte 0
-	.4byte __dt__8014148C
+	.4byte __dt__cf_CfBdat
 	.4byte func_80039E28
 	.4byte func_801424BC
 	.4byte func_80039E18

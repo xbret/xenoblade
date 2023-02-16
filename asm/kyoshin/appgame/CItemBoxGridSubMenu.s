@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_80207F40, global
 /* 80207F40 001D1500  3C A0 80 54 */	lis r5, __vt__CItemBoxGridSubMenu@ha
 /* 80207F44 001D1504  38 80 00 00 */	li r4, 0
@@ -25,7 +23,7 @@
 /* 80207F84 001D1544  4E 80 00 20 */	blr 
 .endfn func_80207F40
 
-.fn __dt__80207F88, global
+.fn __dt__CItemBoxGridSubMenu, global
 /* 80207F88 001D1548  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80207F8C 001D154C  7C 08 02 A6 */	mflr r0
 /* 80207F90 001D1550  2C 03 00 00 */	cmpwi r3, 0
@@ -43,7 +41,7 @@
 /* 80207FBC 001D157C  7C 08 03 A6 */	mtlr r0
 /* 80207FC0 001D1580  38 21 00 10 */	addi r1, r1, 0x10
 /* 80207FC4 001D1584  4E 80 00 20 */	blr 
-.endfn __dt__80207F88
+.endfn __dt__CItemBoxGridSubMenu
 
 .fn func_80207FC8, global
 /* 80207FC8 001D1588  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -748,7 +746,7 @@ CItemBoxGridSubMenu_strpool:
 __vt__CItemBoxGridSubMenu:
 	.4byte __RTTI__CItemBoxGridSubMenu
 	.4byte 0
-	.4byte __dt__80207F88
+	.4byte __dt__CItemBoxGridSubMenu
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -903,7 +901,7 @@ float_8066ABDC:
 
 .obj "@eti_8002CE1C", local
 .hidden "@eti_8002CE1C"
-	.4byte __dt__80207F88
+	.4byte __dt__CItemBoxGridSubMenu
 	.4byte 0x00000040
 	.4byte "@etb_80012EC0"
 .endobj "@eti_8002CE1C"

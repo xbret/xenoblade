@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CPackItem, global
 /* 804DE38C 004A794C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804DE390 004A7950  7C 08 02 A6 */	mflr r0

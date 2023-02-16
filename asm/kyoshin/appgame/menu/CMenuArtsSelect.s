@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CMenuArtsSelect, global
 /* 80102020 000CB5E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80102024 000CB5E4  7C 08 02 A6 */	mflr r0
@@ -175,7 +173,7 @@
 /* 801022A4 000CB864  4E 80 00 20 */	blr 
 .endfn __ct__CMenuArtsSelect
 
-.fn __dt__801022A8, global
+.fn __dt__CTTask_IUIBattle, global
 /* 801022A8 000CB868  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801022AC 000CB86C  7C 08 02 A6 */	mflr r0
 /* 801022B0 000CB870  2C 03 00 00 */	cmpwi r3, 0
@@ -186,7 +184,7 @@
 /* 801022C4 000CB884  7C 7E 1B 78 */	mr r30, r3
 /* 801022C8 000CB888  41 82 00 1C */	beq .L_801022E4
 /* 801022CC 000CB88C  38 80 00 00 */	li r4, 0
-/* 801022D0 000CB890  48 34 28 69 */	bl __dt__80444B38
+/* 801022D0 000CB890  48 34 28 69 */	bl __dt__CProcess
 /* 801022D4 000CB894  2C 1F 00 00 */	cmpwi r31, 0
 /* 801022D8 000CB898  40 81 00 0C */	ble .L_801022E4
 /* 801022DC 000CB89C  7F C3 F3 78 */	mr r3, r30
@@ -199,7 +197,7 @@
 /* 801022F4 000CB8B4  7C 08 03 A6 */	mtlr r0
 /* 801022F8 000CB8B8  38 21 00 10 */	addi r1, r1, 0x10
 /* 801022FC 000CB8BC  4E 80 00 20 */	blr 
-.endfn __dt__801022A8
+.endfn __dt__CTTask_IUIBattle
 
 .fn __dt__80102300, global
 /* 80102300 000CB8C0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -213,7 +211,7 @@
 /* 80102320 000CB8E0  41 82 00 20 */	beq .L_80102340
 /* 80102324 000CB8E4  41 82 00 0C */	beq .L_80102330
 /* 80102328 000CB8E8  38 80 00 00 */	li r4, 0
-/* 8010232C 000CB8EC  48 34 28 0D */	bl __dt__80444B38
+/* 8010232C 000CB8EC  48 34 28 0D */	bl __dt__CProcess
 .L_80102330:
 /* 80102330 000CB8F0  2C 1F 00 00 */	cmpwi r31, 0
 /* 80102334 000CB8F4  40 81 00 0C */	ble .L_80102340
@@ -229,7 +227,7 @@
 /* 80102358 000CB918  4E 80 00 20 */	blr
 .endfn __dt__80102300
 
-.fn __dt__8010235C, global
+.fn __dt__CMenuArtsSelect, global
 /* 8010235C 000CB91C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80102360 000CB920  7C 08 02 A6 */	mflr r0
 /* 80102364 000CB924  2C 03 00 00 */	cmpwi r3, 0
@@ -247,7 +245,7 @@
 /* 80102394 000CB954  41 82 00 10 */	beq .L_801023A4
 /* 80102398 000CB958  7F C3 F3 78 */	mr r3, r30
 /* 8010239C 000CB95C  38 80 00 00 */	li r4, 0
-/* 801023A0 000CB960  48 34 27 99 */	bl __dt__80444B38
+/* 801023A0 000CB960  48 34 27 99 */	bl __dt__CProcess
 .L_801023A4:
 /* 801023A4 000CB964  2C 1F 00 00 */	cmpwi r31, 0
 /* 801023A8 000CB968  40 81 00 0C */	ble .L_801023B4
@@ -261,7 +259,7 @@
 /* 801023C4 000CB984  7C 08 03 A6 */	mtlr r0
 /* 801023C8 000CB988  38 21 00 10 */	addi r1, r1, 0x10
 /* 801023CC 000CB98C  4E 80 00 20 */	blr 
-.endfn __dt__8010235C
+.endfn __dt__CMenuArtsSelect
 
 .fn func_801023D0, global
 /* 801023D0 000CB990  38 00 00 00 */	li r0, 0
@@ -7597,7 +7595,7 @@
 
 .fn func_80108C30, global
 /* 80108C30 000D21F0  38 63 FF A8 */	addi r3, r3, -88
-/* 80108C34 000D21F4  4B FF 97 28 */	b __dt__8010235C
+/* 80108C34 000D21F4  4B FF 97 28 */	b __dt__CMenuArtsSelect
 .endfn func_80108C30
 
 .fn func_80108C38, global
@@ -7607,7 +7605,7 @@
 
 .fn func_80108C40, global
 /* 80108C40 000D2200  38 63 FF A4 */	addi r3, r3, -92
-/* 80108C44 000D2204  4B FF 97 18 */	b __dt__8010235C
+/* 80108C44 000D2204  4B FF 97 18 */	b __dt__CMenuArtsSelect
 .endfn func_80108C40
 
 .fn func_80108C48, global
@@ -7617,7 +7615,7 @@
 
 .fn func_80108C50, global
 /* 80108C50 000D2210  38 63 FF A0 */	addi r3, r3, -96
-/* 80108C54 000D2214  4B FF 97 08 */	b __dt__8010235C
+/* 80108C54 000D2214  4B FF 97 08 */	b __dt__CMenuArtsSelect
 .endfn func_80108C50
 
 
@@ -7830,7 +7828,7 @@ jumptable_8052F820:
 __vt__CMenuArtsSelect:
 	.4byte __RTTI__CMenuArtsSelect
 	.4byte 0
-	.4byte __dt__8010235C
+	.4byte __dt__CMenuArtsSelect
 	.4byte CChildListNode_Reset
 	.4byte func_801023DC
 	.4byte func_80103038
@@ -8025,7 +8023,7 @@ lbl_8066681C:
 	.4byte __dt__800804C0
 	.4byte 0x0680001E
 	.4byte 0x0000005C
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x0680001E
 	.4byte 0x00000058
 	.4byte __dt__IWorkEvent
@@ -8060,7 +8058,7 @@ lbl_8066681C:
 	.4byte __dt__800804C0
 	.4byte 0x0680001E
 	.4byte 0x0000005C
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x8680001E
 	.4byte 0x00000058
 	.4byte __dt__IWorkEvent
@@ -8253,7 +8251,7 @@ lbl_8066681C:
 
 .obj "@eti_80026768", local
 .hidden "@eti_80026768"
-	.4byte __dt__801022A8
+	.4byte __dt__CTTask_IUIBattle
 	.4byte 0x00000058
 	.4byte "@etb_8000AF54"
 .endobj "@eti_80026768"
@@ -8267,7 +8265,7 @@ lbl_8066681C:
 
 .obj "@eti_80026780", local
 .hidden "@eti_80026780"
-	.4byte __dt__8010235C
+	.4byte __dt__CMenuArtsSelect
 	.4byte 0x00000074
 	.4byte "@etb_8000AF64"
 .endobj "@eti_80026780"

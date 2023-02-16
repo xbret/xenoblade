@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_8027D0E8, global
 /* 8027D0E8 002466A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027D0EC 002466AC  7C 08 02 A6 */	mflr r0
@@ -1497,16 +1495,16 @@ float_8066B370:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x0000009C
-	.4byte __dt__800D8C9C
+	.4byte __dt__cf_CChainTimer
 	.4byte 0x0780001E
 	.4byte 0x00000084
-	.4byte __dt__800D8CDC
+	.4byte __dt__cf_CChainTime
 	.4byte 0x0780001E
 	.4byte 0x0000001C
-	.4byte __dt__800D8E30
+	.4byte __dt__cf_CChainTemp
 	.4byte 0x8780001E
 	.4byte 0x00000010
-	.4byte __dt__800D8E70
+	.4byte __dt__cf_Flusher_cf_CfObjectActor
 .endobj "@etb_80018A34"
 
 .obj "@etb_80018A7C", local

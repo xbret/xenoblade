@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_8007C0F8, global
 /* 8007C0F8 000456B8  3C C0 80 57 */	lis r6, lbl_80574E50@ha
 /* 8007C0FC 000456BC  3C 80 80 57 */	lis r4, lbl_80574EF0@ha
@@ -1977,7 +1975,7 @@
 /* 8007DBF0 000471B0  90 6D A5 A0 */	stw r3, lbl_80666720@sda21(r13)
 /* 8007DBF4 000471B4  48 3B E5 BD */	bl func_8043C1B0
 /* 8007DBF8 000471B8  7F 64 DB 78 */	mr r4, r27
-/* 8007DBFC 000471BC  4B FE 7D C9 */	bl func_800659C4
+/* 8007DBFC 000471BC  4B FE 7D C9 */	bl __ct__cf_CfRes
 /* 8007DC00 000471C0  90 6D A5 98 */	stw r3, lbl_80666718@sda21(r13)
 /* 8007DC04 000471C4  48 3B E5 AD */	bl func_8043C1B0
 /* 8007DC08 000471C8  7F 64 DB 78 */	mr r4, r27
@@ -5019,7 +5017,7 @@
 /* 800804FC 00049ABC  4E 80 00 20 */	blr 
 .endfn __dt__800804C0
 
-.fn __dt__80080500, global
+.fn __dt__cf_CCharVoice, global
 /* 80080500 00049AC0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80080504 00049AC4  7C 08 02 A6 */	mflr r0
 /* 80080508 00049AC8  2C 03 00 00 */	cmpwi r3, 0
@@ -5037,9 +5035,9 @@
 /* 80080534 00049AF4  7C 08 03 A6 */	mtlr r0
 /* 80080538 00049AF8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8008053C 00049AFC  4E 80 00 20 */	blr
-.endfn __dt__80080500
+.endfn __dt__cf_CCharVoice
 
-.fn __dt__80080540, global
+.fn __dt__cf_CfObjectImplMove, global
 /* 80080540 00049B00  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80080544 00049B04  7C 08 02 A6 */	mflr r0
 /* 80080548 00049B08  2C 03 00 00 */	cmpwi r3, 0
@@ -5057,9 +5055,9 @@
 /* 80080574 00049B34  7C 08 03 A6 */	mtlr r0
 /* 80080578 00049B38  38 21 00 10 */	addi r1, r1, 0x10
 /* 8008057C 00049B3C  4E 80 00 20 */	blr 
-.endfn __dt__80080540
+.endfn __dt__cf_CfObjectImplMove
 
-.fn __dt__80080580, global
+.fn __dt__cf_CCharEffect, global
 /* 80080580 00049B40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80080584 00049B44  7C 08 02 A6 */	mflr r0
 /* 80080588 00049B48  2C 03 00 00 */	cmpwi r3, 0
@@ -5077,9 +5075,9 @@
 /* 800805B4 00049B74  7C 08 03 A6 */	mtlr r0
 /* 800805B8 00049B78  38 21 00 10 */	addi r1, r1, 0x10
 /* 800805BC 00049B7C  4E 80 00 20 */	blr 
-.endfn __dt__80080580
+.endfn __dt__cf_CCharEffect
 
-.fn __dt__800805C0, global
+.fn __dt__cf_CCharEffectPc, global
 /* 800805C0 00049B80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800805C4 00049B84  7C 08 02 A6 */	mflr r0
 /* 800805C8 00049B88  2C 03 00 00 */	cmpwi r3, 0
@@ -5097,9 +5095,9 @@
 /* 800805F4 00049BB4  7C 08 03 A6 */	mtlr r0
 /* 800805F8 00049BB8  38 21 00 10 */	addi r1, r1, 0x10
 /* 800805FC 00049BBC  4E 80 00 20 */	blr
-.endfn __dt__800805C0
+.endfn __dt__cf_CCharEffectPc
 
-.fn __dt__80080600, global
+.fn __dt__cf_CfObjectImplPc, global
 /* 80080600 00049BC0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80080604 00049BC4  7C 08 02 A6 */	mflr r0
 /* 80080608 00049BC8  2C 03 00 00 */	cmpwi r3, 0
@@ -5117,7 +5115,7 @@
 /* 80080634 00049BF4  7C 08 03 A6 */	mtlr r0
 /* 80080638 00049BF8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8008063C 00049BFC  4E 80 00 20 */	blr 
-.endfn __dt__80080600
+.endfn __dt__cf_CfObjectImplPc
 
 .fn func_80080640, global
 /* 80080640 00049C00  38 00 00 00 */	li r0, 0
@@ -6265,7 +6263,7 @@
 /* 80081560 0004AB20  4E 80 00 20 */	blr 
 .endfn func_800814BC
 
-.fn __dt__80081564, global
+.fn __dt__cf_CCharEffectNpc, global
 /* 80081564 0004AB24  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80081568 0004AB28  7C 08 02 A6 */	mflr r0
 /* 8008156C 0004AB2C  2C 03 00 00 */	cmpwi r3, 0
@@ -6283,7 +6281,7 @@
 /* 80081598 0004AB58  7C 08 03 A6 */	mtlr r0
 /* 8008159C 0004AB5C  38 21 00 10 */	addi r1, r1, 0x10
 /* 800815A0 0004AB60  4E 80 00 20 */	blr 
-.endfn __dt__80081564
+.endfn __dt__cf_CCharEffectNpc
 
 .fn func_800815A4, global
 /* 800815A4 0004AB64  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -6322,7 +6320,7 @@
 /* 80081628 0004ABE8  38 7E 03 68 */	addi r3, r30, 0x368
 /* 8008162C 0004ABEC  38 84 36 08 */	addi r4, r4, __vt__cf_CCharEffectObj@l
 /* 80081630 0004ABF0  90 9F 00 00 */	stw r4, 0(r31)
-/* 80081634 0004ABF4  48 11 17 B5 */	bl func_80192DE8
+/* 80081634 0004ABF4  48 11 17 B5 */	bl __ct__cf_CPartsChange
 /* 80081638 0004ABF8  7F C3 F3 78 */	mr r3, r30
 /* 8008163C 0004ABFC  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80081640 0004AC00  83 C1 00 08 */	lwz r30, 8(r1)
@@ -6332,7 +6330,7 @@
 /* 80081650 0004AC10  4E 80 00 20 */	blr 
 .endfn func_800815A4
 
-.fn __dt__80081654, global
+.fn __dt__cf_CCharEffectObj, global
 /* 80081654 0004AC14  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80081658 0004AC18  7C 08 02 A6 */	mflr r0
 /* 8008165C 0004AC1C  2C 03 00 00 */	cmpwi r3, 0
@@ -6350,7 +6348,7 @@
 /* 80081688 0004AC48  7C 08 03 A6 */	mtlr r0
 /* 8008168C 0004AC4C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80081690 0004AC50  4E 80 00 20 */	blr 
-.endfn __dt__80081654
+.endfn __dt__cf_CCharEffectObj
 
 .fn func_80081694, global
 /* 80081694 0004AC54  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -6777,7 +6775,7 @@
 /* 80081C5C 0004B21C  4E 80 00 20 */	blr 
 .endfn __dt__80081C20
 
-.fn __dt__80081C60, global
+.fn __dt__cf_CCharEffectEne, global
 /* 80081C60 0004B220  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80081C64 0004B224  7C 08 02 A6 */	mflr r0
 /* 80081C68 0004B228  2C 03 00 00 */	cmpwi r3, 0
@@ -6795,7 +6793,7 @@
 /* 80081C94 0004B254  7C 08 03 A6 */	mtlr r0
 /* 80081C98 0004B258  38 21 00 10 */	addi r1, r1, 0x10
 /* 80081C9C 0004B25C  4E 80 00 20 */	blr 
-.endfn __dt__80081C60
+.endfn __dt__cf_CCharEffectEne
 
 .fn func_80081CA0, global
 /* 80081CA0 0004B260  54 80 23 36 */	rlwinm r0, r4, 4, 0xc, 0x1b
@@ -14186,7 +14184,7 @@ lbl_80666778:
 	.4byte __dt__80080440
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__80080540
+	.4byte __dt__cf_CfObjectImplMove
 .endobj "@etb_80008584"
 
 .obj "@etb_800085CC", local
@@ -14208,7 +14206,7 @@ lbl_80666778:
 	.4byte __dt__80080440
 	.4byte 0x8680001D
 	.4byte 0x00000000
-	.4byte __dt__80080540
+	.4byte __dt__cf_CfObjectImplMove
 .endobj "@etb_800085CC"
 
 .obj "@etb_80008614", local
@@ -14326,7 +14324,7 @@ lbl_80666778:
 	.4byte __dt__80080440
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__80080540
+	.4byte __dt__cf_CfObjectImplMove
 .endobj "@etb_80008694"
 
 .obj "@etb_800086DC", local
@@ -14356,10 +14354,10 @@ lbl_80666778:
 	.4byte __dt__80080440
 	.4byte 0x0780001E
 	.4byte 0x00000068
-	.4byte __dt__80081654
+	.4byte __dt__cf_CCharEffectObj
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__80080540
+	.4byte __dt__cf_CfObjectImplMove
 .endobj "@etb_800086E4"
 
 .obj "@etb_80008740", local
@@ -14426,7 +14424,7 @@ lbl_80666778:
 	.4byte __dt__80081C20
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__80080540
+	.4byte __dt__cf_CfObjectImplMove
 .endobj "@etb_80008778"
 
 .obj "@etb_800087CC", local
@@ -15344,35 +15342,35 @@ lbl_80666778:
 
 .obj "@eti_80023B40", local
 .hidden "@eti_80023B40"
-	.4byte __dt__80080500
+	.4byte __dt__cf_CCharVoice
 	.4byte 0x00000040
 	.4byte "@etb_80008634"
 .endobj "@eti_80023B40"
 
 .obj "@eti_80023B4C", local
 .hidden "@eti_80023B4C"
-	.4byte __dt__80080540
+	.4byte __dt__cf_CfObjectImplMove
 	.4byte 0x00000040
 	.4byte "@etb_8000863C"
 .endobj "@eti_80023B4C"
 
 .obj "@eti_80023B58", local
 .hidden "@eti_80023B58"
-	.4byte __dt__80080580
+	.4byte __dt__cf_CCharEffect
 	.4byte 0x00000040
 	.4byte "@etb_80008644"
 .endobj "@eti_80023B58"
 
 .obj "@eti_80023B64", local
 .hidden "@eti_80023B64"
-	.4byte __dt__800805C0
+	.4byte __dt__cf_CCharEffectPc
 	.4byte 0x00000040
 	.4byte "@etb_8000864C"
 .endobj "@eti_80023B64"
 
 .obj "@eti_80023B70", local
 .hidden "@eti_80023B70"
-	.4byte __dt__80080600
+	.4byte __dt__cf_CfObjectImplPc
 	.4byte 0x00000040
 	.4byte "@etb_80008654"
 .endobj "@eti_80023B70"
@@ -15435,7 +15433,7 @@ lbl_80666778:
 
 .obj "@eti_80023BDC", local
 .hidden "@eti_80023BDC"
-	.4byte __dt__80081564
+	.4byte __dt__cf_CCharEffectNpc
 	.4byte 0x00000040
 	.4byte "@etb_800086DC"
 .endobj "@eti_80023BDC"
@@ -15449,7 +15447,7 @@ lbl_80666778:
 
 .obj "@eti_80023BF4", local
 .hidden "@eti_80023BF4"
-	.4byte __dt__80081654
+	.4byte __dt__cf_CCharEffectObj
 	.4byte 0x00000040
 	.4byte "@etb_80008740"
 .endobj "@eti_80023BF4"
@@ -15512,7 +15510,7 @@ lbl_80666778:
 
 .obj "@eti_80023C60", local
 .hidden "@eti_80023C60"
-	.4byte __dt__80081C60
+	.4byte __dt__cf_CCharEffectEne
 	.4byte 0x00000040
 	.4byte "@etb_800087D4"
 .endobj "@eti_80023C60"

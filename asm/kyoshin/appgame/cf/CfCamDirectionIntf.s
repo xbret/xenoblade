@@ -2,9 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-
 .fn CfCamDirectionIntf_update, global
 /* 8006B3EC 000349AC  4E 80 00 20 */	blr 
 .endfn CfCamDirectionIntf_update

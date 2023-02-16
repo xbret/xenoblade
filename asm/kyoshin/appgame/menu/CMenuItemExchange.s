@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CMenuItemExchange, global
 /* 801BDDA4 00187364  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801BDDA8 00187368  7C 08 02 A6 */	mflr r0
@@ -80,7 +78,7 @@
 /* 801BDEC4 00187484  4E 80 00 20 */	blr
 .endfn __ct__CMenuItemExchange
 
-.fn __dt__801BDEC8, global
+.fn __dt__CMenuItemExchange, global
 /* 801BDEC8 00187488  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801BDECC 0018748C  7C 08 02 A6 */	mflr r0
 /* 801BDED0 00187490  2C 03 00 00 */	cmpwi r3, 0
@@ -94,7 +92,7 @@
 /* 801BDEF0 001874B0  48 00 CA 75 */	bl __dt__CItemBoxGrid
 /* 801BDEF4 001874B4  38 7E 00 D0 */	addi r3, r30, 0xd0
 /* 801BDEF8 001874B8  38 80 FF FF */	li r4, -1
-/* 801BDEFC 001874BC  48 02 F3 5D */	bl __dt__801ED258
+/* 801BDEFC 001874BC  48 02 F3 5D */	bl __dt__CItemBoxLine
 /* 801BDF00 001874C0  38 7E 00 98 */	addi r3, r30, 0x98
 /* 801BDF04 001874C4  38 80 FF FF */	li r4, -1
 /* 801BDF08 001874C8  48 00 60 49 */	bl __dt__CTitleAHelp
@@ -103,7 +101,7 @@
 /* 801BDF14 001874D4  48 00 5A BD */	bl __dt__CBgTex
 /* 801BDF18 001874D8  7F C3 F3 78 */	mr r3, r30
 /* 801BDF1C 001874DC  38 80 00 00 */	li r4, 0
-/* 801BDF20 001874E0  4B F6 44 3D */	bl __dt__8012235C
+/* 801BDF20 001874E0  4B F6 44 3D */	bl __dt__IUIWindow
 /* 801BDF24 001874E4  2C 1F 00 00 */	cmpwi r31, 0
 /* 801BDF28 001874E8  40 81 00 0C */	ble .L_801BDF34
 /* 801BDF2C 001874EC  7F C3 F3 78 */	mr r3, r30
@@ -115,7 +113,7 @@
 /* 801BDF40 00187500  7C 08 03 A6 */	mtlr r0
 /* 801BDF44 00187504  38 21 00 10 */	addi r1, r1, 0x10
 /* 801BDF48 00187508  4E 80 00 20 */	blr 
-.endfn __dt__801BDEC8
+.endfn __dt__CMenuItemExchange
 
 .fn func_801BDF4C, global
 /* 801BDF4C 0018750C  94 21 AF 50 */	stwu r1, -0x50b0(r1)
@@ -163,7 +161,7 @@
 /* 801BDFF4 001875B4  48 00 02 15 */	bl func_801BE208
 /* 801BDFF8 001875B8  38 61 4A 6C */	addi r3, r1, 0x4a6c
 /* 801BDFFC 001875BC  38 80 FF FF */	li r4, -1
-/* 801BE000 001875C0  48 02 F2 59 */	bl __dt__801ED258
+/* 801BE000 001875C0  48 02 F2 59 */	bl __dt__CItemBoxLine
 /* 801BE004 001875C4  38 7F 00 D0 */	addi r3, r31, 0xd0
 /* 801BE008 001875C8  48 02 FA 01 */	bl func_801EDA08
 /* 801BE00C 001875CC  38 7F 00 D0 */	addi r3, r31, 0xd0
@@ -1794,7 +1792,7 @@
 
 .fn func_801BF764, global
 /* 801BF764 00188D24  38 63 FF 94 */	addi r3, r3, -108
-/* 801BF768 00188D28  4B FF E7 60 */	b __dt__801BDEC8
+/* 801BF768 00188D28  4B FF E7 60 */	b __dt__CMenuItemExchange
 .endfn func_801BF764
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -1834,7 +1832,7 @@ jumptable_80537350:
 __vt__CMenuItemExchange:
 	.4byte __RTTI__CMenuItemExchange
 	.4byte 0
-	.4byte __dt__801BDEC8
+	.4byte __dt__CMenuItemExchange
 	.4byte CChildListNode_Reset
 	.4byte func_801BDF4C
 	.4byte func_801BEBC8
@@ -1925,7 +1923,7 @@ lbl_80666D1C:
 	.4byte 0x00000000
 	.4byte 0x0780001C
 	.4byte 0x000000D0
-	.4byte __dt__801ED258
+	.4byte __dt__CItemBoxLine
 	.4byte 0x0780001C
 	.4byte 0x00000098
 	.4byte __dt__CTitleAHelp
@@ -1934,10 +1932,10 @@ lbl_80666D1C:
 	.4byte __dt__CBgTex
 	.4byte 0x0680001C
 	.4byte 0x0000006C
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x8680001C
 	.4byte 0x00000000
-	.4byte __dt__8012235C
+	.4byte __dt__IUIWindow
 .endobj "@etb_80010234"
 
 .obj "@etb_80010298", local
@@ -1960,13 +1958,13 @@ lbl_80666D1C:
 	.4byte __dt__CItemBoxGrid
 	.4byte 0x8780001E
 	.4byte 0x000000D0
-	.4byte __dt__801ED258
+	.4byte __dt__CItemBoxLine
 	.4byte 0x0780001E
 	.4byte 0x0000070C
 	.4byte __dt__CItemBoxGrid
 	.4byte 0x0780001E
 	.4byte 0x000000D0
-	.4byte __dt__801ED258
+	.4byte __dt__CItemBoxLine
 	.4byte 0x8780001E
 	.4byte 0x00000098
 	.4byte __dt__CTitleAHelp
@@ -1975,7 +1973,7 @@ lbl_80666D1C:
 	.4byte __dt__CItemBoxGrid
 	.4byte 0x0780001E
 	.4byte 0x000000D0
-	.4byte __dt__801ED258
+	.4byte __dt__CItemBoxLine
 	.4byte 0x0780001E
 	.4byte 0x00000098
 	.4byte __dt__CTitleAHelp
@@ -1984,7 +1982,7 @@ lbl_80666D1C:
 	.4byte __dt__CBgTex
 	.4byte 0x8680001E
 	.4byte 0x0000006C
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 .endobj "@etb_80010298"
 
 .obj "@etb_80010344", local
@@ -2112,7 +2110,7 @@ lbl_80666D1C:
 
 .obj "@eti_8002AD70", local
 .hidden "@eti_8002AD70"
-	.4byte __dt__801BDEC8
+	.4byte __dt__CMenuItemExchange
 	.4byte 0x00000084
 	.4byte "@etb_80010298"
 .endobj "@eti_8002AD70"

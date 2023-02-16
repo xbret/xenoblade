@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn __dt__80251DF8, global
+.fn __dt__CMenuPause, global
 /* 80251DF8 0021B3B8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80251DFC 0021B3BC  7C 08 02 A6 */	mflr r0
 /* 80251E00 0021B3C0  2C 03 00 00 */	cmpwi r3, 0
@@ -20,7 +20,7 @@
 /* 80251E30 0021B3F0  41 82 00 10 */	beq .L_80251E40
 /* 80251E34 0021B3F4  7F C3 F3 78 */	mr r3, r30
 /* 80251E38 0021B3F8  38 80 00 00 */	li r4, 0
-/* 80251E3C 0021B3FC  48 1F 2C FD */	bl __dt__80444B38
+/* 80251E3C 0021B3FC  48 1F 2C FD */	bl __dt__CProcess
 .L_80251E40:
 /* 80251E40 0021B400  2C 1F 00 00 */	cmpwi r31, 0
 /* 80251E44 0021B404  40 81 00 0C */	ble .L_80251E50
@@ -34,7 +34,7 @@
 /* 80251E60 0021B420  7C 08 03 A6 */	mtlr r0
 /* 80251E64 0021B424  38 21 00 10 */	addi r1, r1, 0x10
 /* 80251E68 0021B428  4E 80 00 20 */	blr 
-.endfn __dt__80251DF8
+.endfn __dt__CMenuPause
 
 .fn func_80251E6C, global
 /* 80251E6C 0021B42C  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -582,7 +582,7 @@
 
 .fn func_80252628, global
 /* 80252628 0021BBE8  38 63 FF A8 */	addi r3, r3, -88
-/* 8025262C 0021BBEC  4B FF F7 CC */	b __dt__80251DF8
+/* 8025262C 0021BBEC  4B FF F7 CC */	b __dt__CMenuPause
 .endfn func_80252628
 
 .fn func_80252630, global
@@ -592,7 +592,7 @@
 
 .fn func_80252638, global
 /* 80252638 0021BBF8  38 63 FF A4 */	addi r3, r3, -92
-/* 8025263C 0021BBFC  4B FF F7 BC */	b __dt__80251DF8
+/* 8025263C 0021BBFC  4B FF F7 BC */	b __dt__CMenuPause
 .endfn func_80252638
 
 
@@ -633,7 +633,7 @@ CMenuPause_strpool:
 __vt__CMenuPause:
 	.4byte __RTTI__CMenuPause
 	.4byte 0
-	.4byte __dt__80251DF8
+	.4byte __dt__CMenuPause
 	.4byte CChildListNode_Reset
 	.4byte func_80251E6C
 	.4byte func_802521FC
@@ -746,7 +746,7 @@ lbl_806670B8:
 	.4byte __dt__8045F580
 	.4byte 0x0680001E
 	.4byte 0x0000005C
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x8680001E
 	.4byte 0x00000058
 	.4byte __dt__IWorkEvent
@@ -792,7 +792,7 @@ lbl_806670B8:
 	.4byte 0x00000000
 	.4byte 0x0680001E
 	.4byte 0x0000005C
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x0680001E
 	.4byte 0x00000058
 	.4byte __dt__IWorkEvent
@@ -813,7 +813,7 @@ lbl_806670B8:
 
 .obj "@eti_8002F6B4", local
 .hidden "@eti_8002F6B4"
-	.4byte __dt__80251DF8
+	.4byte __dt__CMenuPause
 	.4byte 0x00000074
 	.4byte "@etb_80016B9C"
 .endobj "@eti_8002F6B4"

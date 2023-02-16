@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_8024B8D4, global
 /* 8024B8D4 00214E94  94 21 FF 30 */	stwu r1, -0xd0(r1)
 /* 8024B8D8 00214E98  7C 08 02 A6 */	mflr r0
@@ -313,7 +311,7 @@
 /* 8024BD80 00215340  4E 80 00 20 */	blr 
 .endfn func_8024B8D4
 
-.fn __dt__8024BD84, global
+.fn __dt__CFloorMap, global
 /* 8024BD84 00215344  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8024BD88 00215348  7C 08 02 A6 */	mflr r0
 /* 8024BD8C 0021534C  2C 03 00 00 */	cmpwi r3, 0
@@ -353,7 +351,7 @@
 /* 8024BE10 002153D0  7C 08 03 A6 */	mtlr r0
 /* 8024BE14 002153D4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8024BE18 002153D8  4E 80 00 20 */	blr 
-.endfn __dt__8024BD84
+.endfn __dt__CFloorMap
 
 .fn func_8024BE1C, global
 /* 8024BE1C 002153DC  94 21 CE 20 */	stwu r1, -0x31e0(r1)
@@ -6448,7 +6446,7 @@ jumptable_8053A768:
 __vt__CFloorMap:
 	.4byte __RTTI__CFloorMap
 	.4byte 0
-	.4byte __dt__8024BD84
+	.4byte __dt__CFloorMap
 	.4byte func_80039E28
 	.4byte func_8024FD40
 	.4byte func_80039E18
@@ -7046,7 +7044,7 @@ lbl_806670A8:
 
 .obj "@eti_8002F4C8", local
 .hidden "@eti_8002F4C8"
-	.4byte __dt__8024BD84
+	.4byte __dt__CFloorMap
 	.4byte 0x00000098
 	.4byte "@etb_800166DC"
 .endobj "@eti_8002F4C8"

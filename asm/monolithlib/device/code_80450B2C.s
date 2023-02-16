@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn sinit_80450B2C, local
 /* 80450B2C 0041A0EC  3C 80 80 66 */	lis r4, lbl_8065A780@ha
 /* 80450B30 0041A0F0  38 00 00 00 */	li r0, 0
@@ -22,7 +20,7 @@
 
 .fn func_80450B4C, global
 /* 80450B4C 0041A10C  38 63 FE 3C */	addi r3, r3, -452
-/* 80450B50 0041A110  4B FF EB 4C */	b __dt__8044F69C
+/* 80450B50 0041A110  4B FF EB 4C */	b __dt__CDeviceFileCri
 .endfn func_80450B4C
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00

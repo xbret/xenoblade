@@ -2,15 +2,13 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_804946FC, global
 /* 804946FC 0045DCBC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80494700 0045DCC0  7C 08 02 A6 */	mflr r0
 /* 80494704 0045DCC4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80494708 0045DCC8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8049470C 0045DCCC  7C 7F 1B 78 */	mr r31, r3
-/* 80494710 0045DCD0  48 00 00 89 */	bl func_80494798
+/* 80494710 0045DCD0  48 00 00 89 */	bl __ct__CVirtualLightObj
 /* 80494714 0045DCD4  C0 02 CE C0 */	lfs f0, float_8066D240@sda21(r2)
 /* 80494718 0045DCD8  3C 60 80 57 */	lis r3, __vt__CVirtualLightDir@ha
 /* 8049471C 0045DCDC  38 63 20 E0 */	addi r3, r3, __vt__CVirtualLightDir@l
@@ -33,7 +31,7 @@
 /* 80494754 0045DD14  4E 80 00 20 */	blr 
 .endfn func_8049474C
 
-.fn __dt__80494758, global
+.fn __dt__CVirtualLightDir, global
 /* 80494758 0045DD18  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049475C 0045DD1C  7C 08 02 A6 */	mflr r0
 /* 80494760 0045DD20  2C 03 00 00 */	cmpwi r3, 0
@@ -51,7 +49,7 @@
 /* 8049478C 0045DD4C  7C 08 03 A6 */	mtlr r0
 /* 80494790 0045DD50  38 21 00 10 */	addi r1, r1, 0x10
 /* 80494794 0045DD54  4E 80 00 20 */	blr 
-.endfn __dt__80494758
+.endfn __dt__CVirtualLightDir
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -76,7 +74,7 @@ CVirtualLightDir_typestr:
 __vt__CVirtualLightDir:
 	.4byte __RTTI__CVirtualLightDir
 	.4byte 0
-	.4byte __dt__80494758
+	.4byte __dt__CVirtualLightDir
 	.4byte func_804947EC
 	.4byte func_8049488C
 
@@ -139,7 +137,7 @@ float_8066D240:
 
 .obj "@eti_80036AE8", local
 .hidden "@eti_80036AE8"
-	.4byte __dt__80494758
+	.4byte __dt__CVirtualLightDir
 	.4byte 0x00000040
 	.4byte "@etb_8001EF2C"
 .endobj "@eti_80036AE8"

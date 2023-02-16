@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_80222740, global
+.fn __ct__CMCCrystalList, global
 /* 80222740 001EBD00  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80222744 001EBD04  7C 08 02 A6 */	mflr r0
 /* 80222748 001EBD08  3C 80 80 54 */	lis r4, __vt__CMCCrystalList@ha
@@ -48,9 +46,9 @@
 /* 802227DC 001EBD9C  7C 08 03 A6 */	mtlr r0
 /* 802227E0 001EBDA0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802227E4 001EBDA4  4E 80 00 20 */	blr 
-.endfn func_80222740
+.endfn __ct__CMCCrystalList
 
-.fn __dt__802227E8, global
+.fn __dt__CMCCrystalList, global
 /* 802227E8 001EBDA8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802227EC 001EBDAC  7C 08 02 A6 */	mflr r0
 /* 802227F0 001EBDB0  2C 03 00 00 */	cmpwi r3, 0
@@ -76,7 +74,7 @@
 /* 8022283C 001EBDFC  7C 08 03 A6 */	mtlr r0
 /* 80222840 001EBE00  38 21 00 10 */	addi r1, r1, 0x10
 /* 80222844 001EBE04  4E 80 00 20 */	blr 
-.endfn __dt__802227E8
+.endfn __dt__CMCCrystalList
 
 .fn func_80222848, global
 /* 80222848 001EBE08  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1645,7 +1643,7 @@ jumptable_80539710:
 __vt__CMCCrystalList:
 	.4byte __RTTI__CMCCrystalList
 	.4byte 0
-	.4byte __dt__802227E8
+	.4byte __dt__CMCCrystalList
 	.4byte func_80039E28
 	.4byte func_80223A50
 	.4byte func_80039E18
@@ -1902,14 +1900,14 @@ double_8066AE08:
 
 .obj "@eti_8002DCC8", local
 .hidden "@eti_8002DCC8"
-	.4byte func_80222740
+	.4byte __ct__CMCCrystalList
 	.4byte 0x000000A8
 	.4byte "@etb_80014E60"
 .endobj "@eti_8002DCC8"
 
 .obj "@eti_8002DCD4", local
 .hidden "@eti_8002DCD4"
-	.4byte __dt__802227E8
+	.4byte __dt__CMCCrystalList
 	.4byte 0x00000060
 	.4byte "@etb_80014E90"
 .endobj "@eti_8002DCD4"

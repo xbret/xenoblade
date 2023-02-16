@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn __dt__8045365C, global
+.fn __dt__CDeviceFontInfoRom, global
 /* 8045365C 0041CC1C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80453660 0041CC20  7C 08 02 A6 */	mflr r0
 /* 80453664 0041CC24  2C 03 00 00 */	cmpwi r3, 0
@@ -39,7 +37,7 @@
 /* 804536D0 0041CC90  7C 08 03 A6 */	mtlr r0
 /* 804536D4 0041CC94  38 21 00 10 */	addi r1, r1, 0x10
 /* 804536D8 0041CC98  4E 80 00 20 */	blr 
-.endfn __dt__8045365C
+.endfn __dt__CDeviceFontInfoRom
 
 .fn func_804536DC, global
 /* 804536DC 0041CC9C  7C 83 23 78 */	mr r3, r4
@@ -188,7 +186,7 @@ CDeviceFontInfoRom_typestr:
 __vt__CDeviceFontInfoRom:
 	.4byte __RTTI__CDeviceFontInfoRom
 	.4byte 0
-	.4byte __dt__8045365C
+	.4byte __dt__CDeviceFontInfoRom
 	.4byte func_80453830
 	.4byte func_80453824
 	.4byte func_80453818
@@ -259,7 +257,7 @@ lbl_80667F60:
 
 .obj "@eti_80034D9C", local
 .hidden "@eti_80034D9C"
-	.4byte __dt__8045365C
+	.4byte __dt__CDeviceFontInfoRom
 	.4byte 0x00000080
 	.4byte "@etb_8001D0E8"
 .endobj "@eti_80034D9C"

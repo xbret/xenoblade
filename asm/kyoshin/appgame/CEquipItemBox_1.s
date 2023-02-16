@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_80285D7C, global
 /* 80285D7C 0024F33C  94 21 DA 50 */	stwu r1, -0x25b0(r1)
 /* 80285D80 0024F340  7C 08 02 A6 */	mflr r0
@@ -33,10 +31,10 @@
 /* 80285DE0 0024F3A0  9B BF 00 41 */	stb r29, 0x41(r31)
 /* 80285DE4 0024F3A4  9B BF 00 42 */	stb r29, 0x42(r31)
 /* 80285DE8 0024F3A8  9B DF 00 43 */	stb r30, 0x43(r31)
-/* 80285DEC 0024F3AC  4B FF FB 3D */	bl func_80285928
+/* 80285DEC 0024F3AC  4B FF FB 3D */	bl __ct__CEIBCur
 /* 80285DF0 0024F3B0  38 7F 00 5C */	addi r3, r31, 0x5c
 /* 80285DF4 0024F3B4  38 80 00 00 */	li r4, 0
-/* 80285DF8 0024F3B8  4B FF FE 11 */	bl func_80285C08
+/* 80285DF8 0024F3B8  4B FF FE 11 */	bl __ct__CEIBPageCur
 /* 80285DFC 0024F3BC  38 7F 00 74 */	addi r3, r31, 0x74
 /* 80285E00 0024F3C0  38 80 00 00 */	li r4, 0
 /* 80285E04 0024F3C4  4B F4 CB F9 */	bl func_801D29FC
@@ -239,7 +237,7 @@
 /* 80286108 0024F6C8  4E 80 00 20 */	blr 
 .endfn func_80285D7C
 
-.fn __dt__8028610C, global
+.fn __dt__CEquipItemBox, global
 /* 8028610C 0024F6CC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80286110 0024F6D0  7C 08 02 A6 */	mflr r0
 /* 80286114 0024F6D4  2C 03 00 00 */	cmpwi r3, 0
@@ -280,7 +278,7 @@
 /* 8028619C 0024F75C  7C 08 03 A6 */	mtlr r0
 /* 802861A0 0024F760  38 21 00 10 */	addi r1, r1, 0x10
 /* 802861A4 0024F764  4E 80 00 20 */	blr 
-.endfn __dt__8028610C
+.endfn __dt__CEquipItemBox
 
 .fn func_802861A8, global
 /* 802861A8 0024F768  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -8359,7 +8357,7 @@
 /* 8028D500 00256AC0  B0 05 00 06 */	sth r0, 6(r5)
 /* 8028D504 00256AC4  B1 84 00 06 */	sth r12, 6(r4)
 /* 8028D508 00256AC8  80 9E 00 30 */	lwz r4, 0x30(r30)
-/* 8028D50C 00256ACC  4B FF 84 1D */	bl func_80285928
+/* 8028D50C 00256ACC  4B FF 84 1D */	bl __ct__CEIBCur
 /* 8028D510 00256AD0  38 7E 00 44 */	addi r3, r30, 0x44
 /* 8028D514 00256AD4  38 81 00 88 */	addi r4, r1, 0x88
 /* 8028D518 00256AD8  4B F6 CD 09 */	bl func_801FA220
@@ -8370,7 +8368,7 @@
 /* 8028D52C 00256AEC  4E 80 04 21 */	bctrl 
 /* 8028D530 00256AF0  80 9E 00 30 */	lwz r4, 0x30(r30)
 /* 8028D534 00256AF4  38 61 00 70 */	addi r3, r1, 0x70
-/* 8028D538 00256AF8  4B FF 86 D1 */	bl func_80285C08
+/* 8028D538 00256AF8  4B FF 86 D1 */	bl __ct__CEIBPageCur
 /* 8028D53C 00256AFC  38 7E 00 5C */	addi r3, r30, 0x5c
 /* 8028D540 00256B00  38 81 00 70 */	addi r4, r1, 0x70
 /* 8028D544 00256B04  4B F6 CC DD */	bl func_801FA220
@@ -9118,7 +9116,7 @@ jumptable_8053BDD4:
 __vt__CEquipItemBox:
 	.4byte __RTTI__CEquipItemBox
 	.4byte 0
-	.4byte __dt__8028610C
+	.4byte __dt__CEquipItemBox
 	.4byte func_80039E28
 	.4byte func_8028D1A0
 	.4byte func_80039E18
@@ -9898,7 +9896,7 @@ lbl_806672D0:
 
 .obj "@eti_80031598", local
 .hidden "@eti_80031598"
-	.4byte __dt__8028610C
+	.4byte __dt__CEquipItemBox
 	.4byte 0x0000009C
 	.4byte "@etb_80018F44"
 .endobj "@eti_80031598"

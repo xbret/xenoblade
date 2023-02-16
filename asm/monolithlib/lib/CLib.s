@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CLib, global
 /* 80459790 00422D50  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80459794 00422D54  7C 08 02 A6 */	mflr r0
@@ -74,7 +72,7 @@
 __vt__CLib:
 	.4byte __RTTI__CLib
 	.4byte 0
-	.4byte __dt__80459390
+	.4byte __dt__CLib
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18

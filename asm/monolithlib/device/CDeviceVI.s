@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CDeviceVI, global
 /* 80447DD4 00411394  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80447DD8 00411398  7C 08 02 A6 */	mflr r0
@@ -160,7 +158,7 @@
 /* 80448018 004115D8  4E 80 00 20 */	blr 
 .endfn __dt__80447FDC
 
-.fn __dt__8044801C, global
+.fn __dt___reslist_base_CDeviceVICb, global
 /* 8044801C 004115DC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80448020 004115E0  7C 08 02 A6 */	mflr r0
 /* 80448024 004115E4  2C 03 00 00 */	cmpwi r3, 0
@@ -210,9 +208,9 @@
 /* 804480C4 00411684  7C 08 03 A6 */	mtlr r0
 /* 804480C8 00411688  38 21 00 10 */	addi r1, r1, 0x10
 /* 804480CC 0041168C  4E 80 00 20 */	blr 
-.endfn __dt__8044801C
+.endfn __dt___reslist_base_CDeviceVICb
 
-.fn __dt__804480D0, global
+.fn __dt__reslist_CDeviceVICb, global
 /* 804480D0 00411690  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804480D4 00411694  7C 08 02 A6 */	mflr r0
 /* 804480D8 00411698  2C 03 00 00 */	cmpwi r3, 0
@@ -263,9 +261,9 @@
 /* 8044817C 0041173C  7C 08 03 A6 */	mtlr r0
 /* 80448180 00411740  38 21 00 10 */	addi r1, r1, 0x10
 /* 80448184 00411744  4E 80 00 20 */	blr
-.endfn __dt__804480D0
+.endfn __dt__reslist_CDeviceVICb
 
-.fn __dt__80448188, global
+.fn __dt__CDeviceVI, global
 /* 80448188 00411748  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8044818C 0041174C  7C 08 02 A6 */	mflr r0
 /* 80448190 00411750  2C 03 00 00 */	cmpwi r3, 0
@@ -345,7 +343,7 @@
 /* 8044829C 0041185C  7C 08 03 A6 */	mtlr r0
 /* 804482A0 00411860  38 21 00 20 */	addi r1, r1, 0x20
 /* 804482A4 00411864  4E 80 00 20 */	blr 
-.endfn __dt__80448188
+.endfn __dt__CDeviceVI
 
 .fn func_804482A8, global
 /* 804482A8 00411868  80 6D BD A8 */	lwz r3, lbl_80667F28@sda21(r13)
@@ -1423,7 +1421,7 @@ lbl_8056F670:
 __vt__CDeviceVI:
 	.4byte __RTTI__CDeviceVI
 	.4byte 0
-	.4byte __dt__80448188
+	.4byte __dt__CDeviceVI
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -1482,7 +1480,7 @@ CDeviceVI_hierarchy:
 __vt__reslist_CDeviceVICb:
 	.4byte __RTTI__reslist_CDeviceVICb
 	.4byte 0
-	.4byte __dt__804480D0
+	.4byte __dt__reslist_CDeviceVICb
 
 .global reslist_CDeviceVICb_hierarchy
 reslist_CDeviceVICb_hierarchy:
@@ -1495,7 +1493,7 @@ reslist_CDeviceVICb_hierarchy:
 __vt___reslist_base_CDeviceVICb:
 	.4byte __RTTI___reslist_base_CDeviceVICb
 	.4byte 0
-	.4byte __dt__8044801C
+	.4byte __dt___reslist_base_CDeviceVICb
 	.4byte 0
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -1572,13 +1570,13 @@ lbl_80667F2C:
 	.4byte 0x00000000
 	.4byte 0x0780001F
 	.4byte 0x000001D0
-	.4byte __dt__804480D0
+	.4byte __dt__reslist_CDeviceVICb
 	.4byte 0x0680001F
 	.4byte 0x000001C8
 	.4byte __dt__80447FDC
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte __dt__80447900
+	.4byte __dt__CDeviceBase
 .endobj "@etb_8001CA70"
 
 .obj "@etb_8001CAA4", local
@@ -1609,16 +1607,16 @@ lbl_80667F2C:
 	.4byte 0x00000000
 	.4byte 0x0780001D
 	.4byte 0x000001D0
-	.4byte __dt__804480D0
+	.4byte __dt__reslist_CDeviceVICb
 	.4byte 0x0680001D
 	.4byte 0x000001C8
 	.4byte __dt__80447FDC
 	.4byte 0x8680001D
 	.4byte 0x00000000
-	.4byte __dt__80447900
+	.4byte __dt__CDeviceBase
 	.4byte 0x0780001D
 	.4byte 0x000001D0
-	.4byte __dt__804480D0
+	.4byte __dt__reslist_CDeviceVICb
 	.4byte 0x8680001D
 	.4byte 0x000001C8
 	.4byte __dt__80447FDC
@@ -1710,21 +1708,21 @@ lbl_80667F2C:
 
 .obj "@eti_800346B8", local
 .hidden "@eti_800346B8"
-	.4byte __dt__8044801C
+	.4byte __dt___reslist_base_CDeviceVICb
 	.4byte 0x000000B4
 	.4byte "@etb_8001CAAC"
 .endobj "@eti_800346B8"
 
 .obj "@eti_800346C4", local
 .hidden "@eti_800346C4"
-	.4byte __dt__804480D0
+	.4byte __dt__reslist_CDeviceVICb
 	.4byte 0x000000B8
 	.4byte "@etb_8001CAB4"
 .endobj "@eti_800346C4"
 
 .obj "@eti_800346D0", local
 .hidden "@eti_800346D0"
-	.4byte __dt__80448188
+	.4byte __dt__CDeviceVI
 	.4byte 0x00000120
 	.4byte "@etb_8001CABC"
 .endobj "@eti_800346D0"

@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_80482440, global
 /* 80482440 0044BA00  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80482444 0044BA04  7C 08 02 A6 */	mflr r0
@@ -93,7 +91,7 @@ lbl_805277F4:
 __vt__CScnItemLightNw4r:
 	.4byte __RTTI__CScnItemLightNw4r
 	.4byte 0
-	.4byte __dt__804823A8
+	.4byte __dt__CScnItemLightNw4r
 	.4byte func_80482388
 	.4byte func_80482048
 	.4byte func_80482400

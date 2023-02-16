@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
 .fn MWInitializeCriticalSection, global
 /* 802CB7A4 00294D64  4E 80 00 20 */	blr 
 .endfn MWInitializeCriticalSection

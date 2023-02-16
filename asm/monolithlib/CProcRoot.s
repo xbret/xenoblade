@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn __dt__8043974C, global
+.fn __dt__CProcRoot, global
 /* 8043974C 00402D0C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80439750 00402D10  7C 08 02 A6 */	mflr r0
 /* 80439754 00402D14  2C 03 00 00 */	cmpwi r3, 0
@@ -30,7 +28,7 @@
 /* 804397A0 00402D60  7C 08 03 A6 */	mtlr r0
 /* 804397A4 00402D64  38 21 00 10 */	addi r1, r1, 0x10
 /* 804397A8 00402D68  4E 80 00 20 */	blr 
-.endfn __dt__8043974C
+.endfn __dt__CProcRoot
 
 .fn func_804397AC, global
 /* 804397AC 00402D6C  80 6D BD 00 */	lwz r3, lbl_80667E80@sda21(r13)
@@ -454,7 +452,7 @@ lbl_80525E2C:
 __vt__CProcRoot:
 	.4byte __RTTI__CProcRoot
 	.4byte 0
-	.4byte __dt__8043974C
+	.4byte __dt__CProcRoot
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -596,7 +594,7 @@ lbl_80667E88:
 
 .obj "@eti_80033E84", local
 .hidden "@eti_80033E84"
-	.4byte __dt__8043974C
+	.4byte __dt__CProcRoot
 	.4byte 0x00000060
 	.4byte "@etb_8001C230"
 .endobj "@eti_80033E84"

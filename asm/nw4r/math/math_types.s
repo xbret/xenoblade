@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
 .fn MTX33Identity__Q24nw4r4mathFPQ34nw4r4math5MTX33, global
 /* 8040B000 003D45C0  C0 02 C2 C0 */	lfs f0, float_8066C640@sda21(r2)
 /* 8040B004 003D45C4  C0 22 C2 C4 */	lfs f1, float_8066C644@sda21(r2)

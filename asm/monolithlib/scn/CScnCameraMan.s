@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_8049ACBC, global
 /* 8049ACBC 0046427C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8049ACC0 00464280  7C 08 02 A6 */	mflr r0
@@ -93,7 +91,7 @@
 /* 8049AE0C 004643CC  4E 80 00 20 */	blr 
 .endfn func_8049ACBC
 
-.fn __dt__8049AE10, global
+.fn __dt__CScnCameraMan, global
 /* 8049AE10 004643D0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8049AE14 004643D4  7C 08 02 A6 */	mflr r0
 /* 8049AE18 004643D8  2C 03 00 00 */	cmpwi r3, 0
@@ -148,7 +146,7 @@
 /* 8049AEC8 00464488  7C 08 03 A6 */	mtlr r0
 /* 8049AECC 0046448C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8049AED0 00464490  4E 80 00 20 */	blr
-.endfn __dt__8049AE10
+.endfn __dt__CScnCameraMan
 
 .fn func_8049AED4, global
 /* 8049AED4 00464494  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -962,7 +960,7 @@ CScnCameraMan_typestr:
 __vt__CScnCameraMan:
 	.4byte __RTTI__CScnCameraMan
 	.4byte 0
-	.4byte __dt__8049AE10
+	.4byte __dt__CScnCameraMan
 	.4byte func_8049B410
 	.4byte func_80039E20
 	.4byte func_8049B348
@@ -1184,7 +1182,7 @@ float_8066D32C:
 
 .obj "@eti_80036E0C", local
 .hidden "@eti_80036E0C"
-	.4byte __dt__8049AE10
+	.4byte __dt__CScnCameraMan
 	.4byte 0x000000C4
 	.4byte "@etb_8001F390"
 .endobj "@eti_80036E0C"

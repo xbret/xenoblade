@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_8015BAA8, global
 /* 8015BAA8 00125068  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8015BAAC 0012506C  7C 08 02 A6 */	mflr r0
@@ -1423,7 +1421,7 @@ lbl_805334D8:
 __vt__cf_CCharEffect:
 	.4byte __RTTI__cf_CCharEffect
 	.4byte 0
-	.4byte __dt__80080580
+	.4byte __dt__cf_CCharEffect
 	.4byte func_8015BF04
 	.4byte func_8015C9A0
 	.4byte func_800CEE7C

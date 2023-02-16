@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_80221E6C, global
 /* 80221E6C 001EB42C  C0 02 AA 58 */	lfs f0, float_8066ADD8@sda21(r2)
 /* 80221E70 001EB430  3C C0 80 54 */	lis r6, __vt__CMCCylinderGauge@ha
@@ -25,7 +23,7 @@
 /* 80221EB0 001EB470  4E 80 00 20 */	blr 
 .endfn func_80221E6C
 
-.fn __dt__80221EB4, global
+.fn __dt__CMCCylinderGauge, global
 /* 80221EB4 001EB474  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80221EB8 001EB478  7C 08 02 A6 */	mflr r0
 /* 80221EBC 001EB47C  2C 03 00 00 */	cmpwi r3, 0
@@ -43,7 +41,7 @@
 /* 80221EE8 001EB4A8  7C 08 03 A6 */	mtlr r0
 /* 80221EEC 001EB4AC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80221EF0 001EB4B0  4E 80 00 20 */	blr 
-.endfn __dt__80221EB4
+.endfn __dt__CMCCylinderGauge
 
 .fn func_80221EF4, global
 /* 80221EF4 001EB4B4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -681,7 +679,7 @@ CMCCylinderGauge_strpool:
 __vt__CMCCylinderGauge:
 	.4byte __RTTI__CMCCylinderGauge
 	.4byte 0
-	.4byte __dt__80221EB4
+	.4byte __dt__CMCCylinderGauge
 	.4byte 0
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -826,7 +824,7 @@ float_8066ADF8:
 
 .obj "@eti_8002DC14", local
 .hidden "@eti_8002DC14"
-	.4byte __dt__80221EB4
+	.4byte __dt__CMCCylinderGauge
 	.4byte 0x00000040
 	.4byte "@etb_80014DE8"
 .endobj "@eti_8002DC14"

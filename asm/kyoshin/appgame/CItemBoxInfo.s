@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_801D3F08, global
 /* 801D3F08 0019D4C8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801D3F0C 0019D4CC  7C 08 02 A6 */	mflr r0
@@ -69,7 +67,7 @@
 /* 801D3FF0 0019D5B0  4E 80 00 20 */	blr 
 .endfn func_801D3FF0
 
-.fn __dt__801D3FF4, global
+.fn __dt__CItemBoxInfo, global
 /* 801D3FF4 0019D5B4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801D3FF8 0019D5B8  7C 08 02 A6 */	mflr r0
 /* 801D3FFC 0019D5BC  2C 03 00 00 */	cmpwi r3, 0
@@ -95,7 +93,7 @@
 /* 801D4048 0019D608  7C 08 03 A6 */	mtlr r0
 /* 801D404C 0019D60C  38 21 00 10 */	addi r1, r1, 0x10
 /* 801D4050 0019D610  4E 80 00 20 */	blr 
-.endfn __dt__801D3FF4
+.endfn __dt__CItemBoxInfo
 
 .fn func_801D4054, global
 /* 801D4054 0019D614  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -15147,7 +15145,7 @@ lbl_80666EC4:
 
 .obj "@eti_8002BAD8", local
 .hidden "@eti_8002BAD8"
-	.4byte __dt__801D3FF4
+	.4byte __dt__CItemBoxInfo
 	.4byte 0x00000060
 	.4byte "@etb_80011738"
 .endobj "@eti_8002BAD8"

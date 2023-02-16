@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
 .fn strlen, global
 /* 802B95B8 00282B78  38 83 FF FF */	addi r4, r3, -1
 /* 802B95BC 00282B7C  38 60 FF FF */	li r3, -1

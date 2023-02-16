@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_804D8D90, global
+.fn __ct__CWorkSystemCache, global
 /* 804D8D90 004A2350  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804D8D94 004A2354  7C 08 02 A6 */	mflr r0
 /* 804D8D98 004A2358  38 C0 00 00 */	li r6, 0
@@ -53,9 +51,9 @@
 /* 804D8E40 004A2400  7C 08 03 A6 */	mtlr r0
 /* 804D8E44 004A2404  38 21 00 10 */	addi r1, r1, 0x10
 /* 804D8E48 004A2408  4E 80 00 20 */	blr 
-.endfn func_804D8D90
+.endfn __ct__CWorkSystemCache
 
-.fn __dt__804D8E4C, global
+.fn __dt___reslist_base_CCacheItem, global
 /* 804D8E4C 004A240C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804D8E50 004A2410  7C 08 02 A6 */	mflr r0
 /* 804D8E54 004A2414  2C 03 00 00 */	cmpwi r3, 0
@@ -89,7 +87,7 @@
 /* 804D8EBC 004A247C  7C 08 03 A6 */	mtlr r0
 /* 804D8EC0 004A2480  38 21 00 10 */	addi r1, r1, 0x10
 /* 804D8EC4 004A2484  4E 80 00 20 */	blr 
-.endfn __dt__804D8E4C
+.endfn __dt___reslist_base_CCacheItem
 
 .fn func_804D8EC8, global
 /* 804D8EC8 004A2488  80 83 00 04 */	lwz r4, 4(r3)
@@ -108,7 +106,7 @@
 /* 804D8EF4 004A24B4  4E 80 00 20 */	blr 
 .endfn func_804D8EC8
 
-.fn __dt__804D8EF8, global
+.fn __dt__reslist_CCacheItem, global
 /* 804D8EF8 004A24B8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804D8EFC 004A24BC  7C 08 02 A6 */	mflr r0
 /* 804D8F00 004A24C0  2C 03 00 00 */	cmpwi r3, 0
@@ -118,7 +116,7 @@
 /* 804D8F10 004A24D0  7C 9F 23 78 */	mr r31, r4
 /* 804D8F14 004A24D4  41 82 00 1C */	beq .L_804D8F30
 /* 804D8F18 004A24D8  38 80 00 00 */	li r4, 0
-/* 804D8F1C 004A24DC  4B FF FF 31 */	bl __dt__804D8E4C
+/* 804D8F1C 004A24DC  4B FF FF 31 */	bl __dt___reslist_base_CCacheItem
 /* 804D8F20 004A24E0  2C 1F 00 00 */	cmpwi r31, 0
 /* 804D8F24 004A24E4  40 81 00 0C */	ble .L_804D8F30
 /* 804D8F28 004A24E8  7F C3 F3 78 */	mr r3, r30
@@ -130,9 +128,9 @@
 /* 804D8F3C 004A24FC  7C 08 03 A6 */	mtlr r0
 /* 804D8F40 004A2500  38 21 00 10 */	addi r1, r1, 0x10
 /* 804D8F44 004A2504  4E 80 00 20 */	blr 
-.endfn __dt__804D8EF8
+.endfn __dt__reslist_CCacheItem
 
-.fn __dt__804D8F48, global
+.fn __dt__CWorkSystemCache, global
 /* 804D8F48 004A2508  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804D8F4C 004A250C  7C 08 02 A6 */	mflr r0
 /* 804D8F50 004A2510  2C 03 00 00 */	cmpwi r3, 0
@@ -146,7 +144,7 @@
 /* 804D8F70 004A2530  90 0D C1 20 */	stw r0, lbl_806682A0@sda21(r13)
 /* 804D8F74 004A2534  41 82 00 0C */	beq .L_804D8F80
 /* 804D8F78 004A2538  38 80 00 00 */	li r4, 0
-/* 804D8F7C 004A253C  4B FF FE D1 */	bl __dt__804D8E4C
+/* 804D8F7C 004A253C  4B FF FE D1 */	bl __dt___reslist_base_CCacheItem
 .L_804D8F80:
 /* 804D8F80 004A2540  7F C3 F3 78 */	mr r3, r30
 /* 804D8F84 004A2544  38 80 00 00 */	li r4, 0
@@ -162,7 +160,7 @@
 /* 804D8FA8 004A2568  7C 08 03 A6 */	mtlr r0
 /* 804D8FAC 004A256C  38 21 00 10 */	addi r1, r1, 0x10
 /* 804D8FB0 004A2570  4E 80 00 20 */	blr 
-.endfn __dt__804D8F48
+.endfn __dt__CWorkSystemCache
 
 .fn func_804D8FB4, global
 /* 804D8FB4 004A2574  80 8D C1 20 */	lwz r4, lbl_806682A0@sda21(r13)
@@ -409,7 +407,7 @@ _reslist_base_CCacheItem_typestr:
 __vt__CWorkSystemCache:
 	.4byte __RTTI__CWorkSystemCache
 	.4byte 0
-	.4byte __dt__804D8F48
+	.4byte __dt__CWorkSystemCache
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -461,7 +459,7 @@ CWorkSystemCache_hierarchy:
 __vt__reslist_CCacheItem:
 	.4byte __RTTI__reslist_CCacheItem
 	.4byte 0
-	.4byte __dt__804D8EF8
+	.4byte __dt__reslist_CCacheItem
 
 .global reslist_CCacheItem_hierarchy
 reslist_CCacheItem_hierarchy:
@@ -474,7 +472,7 @@ reslist_CCacheItem_hierarchy:
 __vt___reslist_base_CCacheItem:
 	.4byte __RTTI___reslist_base_CCacheItem
 	.4byte 0
-	.4byte __dt__804D8E4C
+	.4byte __dt___reslist_base_CCacheItem
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
@@ -513,7 +511,7 @@ lbl_806682A0:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x000001C4
-	.4byte __dt__804D8EF8
+	.4byte __dt__reslist_CCacheItem
 	.4byte 0x8680001E
 	.4byte 0x00000000
 	.4byte __dt__CWorkThread
@@ -539,7 +537,7 @@ lbl_806682A0:
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x000001C4
-	.4byte __dt__804D8EF8
+	.4byte __dt__reslist_CCacheItem
 .endobj "@etb_800205FC"
 
 .obj "@etb_80020618", local
@@ -560,28 +558,28 @@ lbl_806682A0:
 
 .obj "@eti_80038540", local
 .hidden "@eti_80038540"
-	.4byte func_804D8D90
+	.4byte __ct__CWorkSystemCache
 	.4byte 0x000000BC
 	.4byte "@etb_800205C4"
 .endobj "@eti_80038540"
 
 .obj "@eti_8003854C", local
 .hidden "@eti_8003854C"
-	.4byte __dt__804D8E4C
+	.4byte __dt___reslist_base_CCacheItem
 	.4byte 0x0000007C
 	.4byte "@etb_800205EC"
 .endobj "@eti_8003854C"
 
 .obj "@eti_80038558", local
 .hidden "@eti_80038558"
-	.4byte __dt__804D8EF8
+	.4byte __dt__reslist_CCacheItem
 	.4byte 0x00000050
 	.4byte "@etb_800205F4"
 .endobj "@eti_80038558"
 
 .obj "@eti_80038564", local
 .hidden "@eti_80038564"
-	.4byte __dt__804D8F48
+	.4byte __dt__CWorkSystemCache
 	.4byte 0x0000006C
 	.4byte "@etb_800205FC"
 .endobj "@eti_80038564"

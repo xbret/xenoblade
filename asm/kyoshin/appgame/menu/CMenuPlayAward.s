@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CMenuPlayAward, global
 /* 8026FCA8 00239268  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8026FCAC 0023926C  7C 08 02 A6 */	mflr r0
@@ -60,7 +58,7 @@
 /* 8026FD78 00239338  4E 80 00 20 */	blr
 .endfn __ct__CMenuPlayAward
 
-.fn __dt__8026FD7C, global
+.fn __dt__CMenuPlayAward, global
 /* 8026FD7C 0023933C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8026FD80 00239340  7C 08 02 A6 */	mflr r0
 /* 8026FD84 00239344  2C 03 00 00 */	cmpwi r3, 0
@@ -71,7 +69,7 @@
 /* 8026FD98 00239358  41 82 00 44 */	beq .L_8026FDDC
 /* 8026FD9C 0023935C  38 80 FF FF */	li r4, -1
 /* 8026FDA0 00239360  38 63 00 B8 */	addi r3, r3, 0xb8
-/* 8026FDA4 00239364  48 00 0E C1 */	bl __dt__80270C64
+/* 8026FDA4 00239364  48 00 0E C1 */	bl __dt__CPlayAwardList
 /* 8026FDA8 00239368  38 7E 00 80 */	addi r3, r30, 0x80
 /* 8026FDAC 0023936C  38 80 FF FF */	li r4, -1
 /* 8026FDB0 00239370  4B F5 41 A1 */	bl __dt__CTitleAHelp
@@ -92,7 +90,7 @@
 /* 8026FDE8 002393A8  7C 08 03 A6 */	mtlr r0
 /* 8026FDEC 002393AC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8026FDF0 002393B0  4E 80 00 20 */	blr 
-.endfn __dt__8026FD7C
+.endfn __dt__CMenuPlayAward
 
 .fn func_8026FDF4, global
 /* 8026FDF4 002393B4  94 21 EE F0 */	stwu r1, -0x1110(r1)
@@ -269,7 +267,7 @@
 /* 8027009C 0023965C  B0 1F 11 58 */	sth r0, 0x1158(r31)
 /* 802700A0 00239660  A8 01 11 02 */	lha r0, 0x1102(r1)
 /* 802700A4 00239664  B0 1F 11 5A */	sth r0, 0x115a(r31)
-/* 802700A8 00239668  48 00 0B BD */	bl __dt__80270C64
+/* 802700A8 00239668  48 00 0B BD */	bl __dt__CPlayAwardList
 /* 802700AC 0023966C  38 7F 00 B8 */	addi r3, r31, 0xb8
 /* 802700B0 00239670  48 00 0C 3D */	bl func_80270CEC
 /* 802700B4 00239674  2C 1F 00 00 */	cmpwi r31, 0
@@ -694,7 +692,7 @@
 
 .fn func_8027064C, global
 /* 8027064C 00239C0C  38 63 FF A8 */	addi r3, r3, -88
-/* 80270650 00239C10  4B FF F7 2C */	b __dt__8026FD7C
+/* 80270650 00239C10  4B FF F7 2C */	b __dt__CMenuPlayAward
 .endfn func_8027064C
 
 .fn func_80270654, global
@@ -1067,7 +1065,7 @@ lbl_80509E30:
 __vt__CMenuPlayAward:
 	.4byte __RTTI__CMenuPlayAward
 	.4byte 0
-	.4byte __dt__8026FD7C
+	.4byte __dt__CMenuPlayAward
 	.4byte CChildListNode_Reset
 	.4byte func_8026FDF4
 	.4byte func_802700E8
@@ -1173,7 +1171,7 @@ lbl_80667198:
 	.4byte __dt__CBgTex
 	.4byte 0x0680001D
 	.4byte 0x00000058
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x8680001D
 	.4byte 0x00000000
 	.4byte __dt__800FED0C
@@ -1191,16 +1189,16 @@ lbl_80667198:
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x000000B8
-	.4byte __dt__80270C64
+	.4byte __dt__CPlayAwardList
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte __dt__80270C64
+	.4byte __dt__CPlayAwardList
 	.4byte 0x8780001E
 	.4byte 0x00000080
 	.4byte __dt__CTitleAHelp
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte __dt__80270C64
+	.4byte __dt__CPlayAwardList
 	.4byte 0x0780001E
 	.4byte 0x00000080
 	.4byte __dt__CTitleAHelp
@@ -1209,7 +1207,7 @@ lbl_80667198:
 	.4byte __dt__CBgTex
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 .endobj "@etb_80017EAC"
 
 .obj "@etb_80017F20", local
@@ -1307,7 +1305,7 @@ lbl_80667198:
 
 .obj "@eti_800306D4", local
 .hidden "@eti_800306D4"
-	.4byte __dt__8026FD7C
+	.4byte __dt__CMenuPlayAward
 	.4byte 0x00000078
 	.4byte "@etb_80017EAC"
 .endobj "@eti_800306D4"

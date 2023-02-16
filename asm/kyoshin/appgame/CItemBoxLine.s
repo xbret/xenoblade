@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_801ECC94, global
 /* 801ECC94 001B6254  94 21 FB E0 */	stwu r1, -0x420(r1)
 /* 801ECC98 001B6258  7C 08 02 A6 */	mflr r0
@@ -47,7 +45,7 @@
 /* 801ECD30 001B62F0  4B FE 5C CD */	bl func_801D29FC
 /* 801ECD34 001B62F4  38 7F 00 A0 */	addi r3, r31, 0xa0
 /* 801ECD38 001B62F8  38 80 00 00 */	li r4, 0
-/* 801ECD3C 001B62FC  4B FF FE 49 */	bl func_801ECB84
+/* 801ECD3C 001B62FC  4B FF FE 49 */	bl __ct__CIBLTabCur
 /* 801ECD40 001B6300  38 7F 00 B8 */	addi r3, r31, 0xb8
 /* 801ECD44 001B6304  38 80 00 00 */	li r4, 0
 /* 801ECD48 001B6308  4B FE 60 05 */	bl func_801D2D4C
@@ -57,7 +55,7 @@
 /* 801ECD58 001B6318  4B FF 44 45 */	bl func_801E119C
 /* 801ECD5C 001B631C  38 7F 02 DC */	addi r3, r31, 0x2dc
 /* 801ECD60 001B6320  38 80 00 01 */	li r4, 1
-/* 801ECD64 001B6324  4B FF E0 5D */	bl func_801EADC0
+/* 801ECD64 001B6324  4B FF E0 5D */	bl __ct__CNumSelect
 /* 801ECD68 001B6328  38 7F 03 10 */	addi r3, r31, 0x310
 /* 801ECD6C 001B632C  38 80 00 00 */	li r4, 0
 /* 801ECD70 001B6330  48 00 66 A1 */	bl __ct__CScrollBar
@@ -234,10 +232,10 @@
 /* 801ED004 001B65C4  42 00 FF F0 */	bdnz .L_801ECFF4
 /* 801ED008 001B65C8  38 61 01 F8 */	addi r3, r1, 0x1f8
 /* 801ED00C 001B65CC  38 80 FF FF */	li r4, -1
-/* 801ED010 001B65D0  4B FF 42 71 */	bl __dt__801E1280
+/* 801ED010 001B65D0  4B FF 42 71 */	bl __dt__CItemBoxInfo2
 /* 801ED014 001B65D4  38 61 00 88 */	addi r3, r1, 0x88
 /* 801ED018 001B65D8  38 80 00 00 */	li r4, 0
-/* 801ED01C 001B65DC  4B FF DD A5 */	bl func_801EADC0
+/* 801ED01C 001B65DC  4B FF DD A5 */	bl __ct__CNumSelect
 /* 801ED020 001B65E0  38 7F 02 E0 */	addi r3, r31, 0x2e0
 /* 801ED024 001B65E4  38 81 00 8C */	addi r4, r1, 0x8c
 /* 801ED028 001B65E8  4B F2 F9 4D */	bl __ct__8011C974
@@ -265,7 +263,7 @@
 /* 801ED080 001B6640  98 1F 03 0B */	stb r0, 0x30b(r31)
 /* 801ED084 001B6644  88 01 00 B8 */	lbz r0, 0xb8(r1)
 /* 801ED088 001B6648  98 1F 03 0C */	stb r0, 0x30c(r31)
-/* 801ED08C 001B664C  4B FF DD AD */	bl __dt__801EAE38
+/* 801ED08C 001B664C  4B FF DD AD */	bl __dt__CNumSelect
 /* 801ED090 001B6650  38 61 00 48 */	addi r3, r1, 0x48
 /* 801ED094 001B6654  38 80 00 00 */	li r4, 0
 /* 801ED098 001B6658  48 00 63 79 */	bl __ct__CScrollBar
@@ -383,7 +381,7 @@
 /* 801ED254 001B6814  4E 80 00 20 */	blr 
 .endfn func_801ECC94
 
-.fn __dt__801ED258, global
+.fn __dt__CItemBoxLine, global
 /* 801ED258 001B6818  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801ED25C 001B681C  7C 08 02 A6 */	mflr r0
 /* 801ED260 001B6820  2C 03 00 00 */	cmpwi r3, 0
@@ -400,10 +398,10 @@
 /* 801ED28C 001B684C  48 00 62 15 */	bl __dt__CScrollBar
 /* 801ED290 001B6850  38 7E 02 DC */	addi r3, r30, 0x2dc
 /* 801ED294 001B6854  38 80 FF FF */	li r4, -1
-/* 801ED298 001B6858  4B FF DB A1 */	bl __dt__801EAE38
+/* 801ED298 001B6858  4B FF DB A1 */	bl __dt__CNumSelect
 /* 801ED29C 001B685C  38 7E 00 D0 */	addi r3, r30, 0xd0
 /* 801ED2A0 001B6860  38 80 FF FF */	li r4, -1
-/* 801ED2A4 001B6864  4B FF 3F DD */	bl __dt__801E1280
+/* 801ED2A4 001B6864  4B FF 3F DD */	bl __dt__CItemBoxInfo2
 /* 801ED2A8 001B6868  38 7E 00 B8 */	addi r3, r30, 0xb8
 /* 801ED2AC 001B686C  38 80 FF FF */	li r4, -1
 /* 801ED2B0 001B6870  4B FE 5A D9 */	bl __dt__801D2D88
@@ -435,7 +433,7 @@
 /* 801ED310 001B68D0  7C 08 03 A6 */	mtlr r0
 /* 801ED314 001B68D4  38 21 00 10 */	addi r1, r1, 0x10
 /* 801ED318 001B68D8  4E 80 00 20 */	blr 
-.endfn __dt__801ED258
+.endfn __dt__CItemBoxLine
 
 .fn func_801ED31C, global
 /* 801ED31C 001B68DC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -6885,7 +6883,7 @@
 /* 801F30A8 001BC668  4E 80 04 21 */	bctrl 
 /* 801F30AC 001BC66C  80 9F 00 38 */	lwz r4, 0x38(r31)
 /* 801F30B0 001BC670  38 61 00 60 */	addi r3, r1, 0x60
-/* 801F30B4 001BC674  4B FF 9A D1 */	bl func_801ECB84
+/* 801F30B4 001BC674  4B FF 9A D1 */	bl __ct__CIBLTabCur
 /* 801F30B8 001BC678  38 7F 00 A0 */	addi r3, r31, 0xa0
 /* 801F30BC 001BC67C  38 81 00 60 */	addi r4, r1, 0x60
 /* 801F30C0 001BC680  4B F9 80 3D */	bl func_8018B0FC
@@ -7354,7 +7352,7 @@ jumptable_80538478:
 __vt__CItemBoxLine:
 	.4byte __RTTI__CItemBoxLine
 	.4byte 0
-	.4byte __dt__801ED258
+	.4byte __dt__CItemBoxLine
 	.4byte func_80039E28
 	.4byte func_801F299C
 	.4byte func_80039E18
@@ -7588,10 +7586,10 @@ lbl_80666F40:
 	.4byte __dt__CScrollBar
 	.4byte 0x0780001F
 	.4byte 0x000002DC
-	.4byte __dt__801EAE38
+	.4byte __dt__CNumSelect
 	.4byte 0x0780001F
 	.4byte 0x000000D0
-	.4byte __dt__801E1280
+	.4byte __dt__CItemBoxInfo2
 	.4byte 0x0780001F
 	.4byte 0x000000B8
 	.4byte __dt__801D2D88
@@ -7680,7 +7678,7 @@ lbl_80666F40:
 	.4byte __dt__CScrollBar
 	.4byte 0x8780001E
 	.4byte 0x000002DC
-	.4byte __dt__801EAE38
+	.4byte __dt__CNumSelect
 	.4byte 0x0780001E
 	.4byte 0x000004E0
 	.4byte __dt__801B2754
@@ -7695,10 +7693,10 @@ lbl_80666F40:
 	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x000002DC
-	.4byte __dt__801EAE38
+	.4byte __dt__CNumSelect
 	.4byte 0x8780001E
 	.4byte 0x000000D0
-	.4byte __dt__801E1280
+	.4byte __dt__CItemBoxInfo2
 	.4byte 0x0780001E
 	.4byte 0x000004E0
 	.4byte __dt__801B2754
@@ -7713,10 +7711,10 @@ lbl_80666F40:
 	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x000002DC
-	.4byte __dt__801EAE38
+	.4byte __dt__CNumSelect
 	.4byte 0x0780001E
 	.4byte 0x000000D0
-	.4byte __dt__801E1280
+	.4byte __dt__CItemBoxInfo2
 	.4byte 0x8780001E
 	.4byte 0x000000B8
 	.4byte __dt__801D2D88
@@ -7734,10 +7732,10 @@ lbl_80666F40:
 	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x000002DC
-	.4byte __dt__801EAE38
+	.4byte __dt__CNumSelect
 	.4byte 0x0780001E
 	.4byte 0x000000D0
-	.4byte __dt__801E1280
+	.4byte __dt__CItemBoxInfo2
 	.4byte 0x0780001E
 	.4byte 0x000000B8
 	.4byte __dt__801D2D88
@@ -7758,10 +7756,10 @@ lbl_80666F40:
 	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x000002DC
-	.4byte __dt__801EAE38
+	.4byte __dt__CNumSelect
 	.4byte 0x0780001E
 	.4byte 0x000000D0
-	.4byte __dt__801E1280
+	.4byte __dt__CItemBoxInfo2
 	.4byte 0x0780001E
 	.4byte 0x000000B8
 	.4byte __dt__801D2D88
@@ -7785,10 +7783,10 @@ lbl_80666F40:
 	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x000002DC
-	.4byte __dt__801EAE38
+	.4byte __dt__CNumSelect
 	.4byte 0x0780001E
 	.4byte 0x000000D0
-	.4byte __dt__801E1280
+	.4byte __dt__CItemBoxInfo2
 	.4byte 0x0780001E
 	.4byte 0x000000B8
 	.4byte __dt__801D2D88
@@ -7815,10 +7813,10 @@ lbl_80666F40:
 	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x000002DC
-	.4byte __dt__801EAE38
+	.4byte __dt__CNumSelect
 	.4byte 0x0780001E
 	.4byte 0x000000D0
-	.4byte __dt__801E1280
+	.4byte __dt__CItemBoxInfo2
 	.4byte 0x0780001E
 	.4byte 0x000000B8
 	.4byte __dt__801D2D88
@@ -8163,7 +8161,7 @@ lbl_80666F40:
 
 .obj "@eti_8002C06C", local
 .hidden "@eti_8002C06C"
-	.4byte __dt__801ED258
+	.4byte __dt__CItemBoxLine
 	.4byte 0x000000C4
 	.4byte "@etb_80011CD8"
 .endobj "@eti_8002C06C"

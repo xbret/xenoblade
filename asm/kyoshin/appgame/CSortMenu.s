@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CSortMenu, global
 /* 801D2F80 0019C540  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801D2F84 0019C544  7C 08 02 A6 */	mflr r0

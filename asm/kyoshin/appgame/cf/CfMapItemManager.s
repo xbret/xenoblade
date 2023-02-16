@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_801731B4, global
+.fn __ct__cf_CfMapItemManager, global
 /* 801731B4 0013C774  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801731B8 0013C778  7C 08 02 A6 */	mflr r0
 /* 801731BC 0013C77C  3C 80 80 53 */	lis r4, __vt__cf_CfMapItemManager@ha
@@ -92,7 +90,7 @@
 /* 801732EC 0013C8AC  7C 08 03 A6 */	mtlr r0
 /* 801732F0 0013C8B0  38 21 00 10 */	addi r1, r1, 0x10
 /* 801732F4 0013C8B4  4E 80 00 20 */	blr 
-.endfn func_801731B4
+.endfn __ct__cf_CfMapItemManager
 
 .fn __dt__801732F8, global
 /* 801732F8 0013C8B8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2626,7 +2624,7 @@ lbl_80666B88:
 
 .obj "@eti_80029330", local
 .hidden "@eti_80029330"
-	.4byte func_801731B4
+	.4byte __ct__cf_CfMapItemManager
 	.4byte 0x00000144
 	.4byte "@etb_8000E2F0"
 .endobj "@eti_80029330"

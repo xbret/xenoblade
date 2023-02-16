@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_80294CB4, global
 /* 80294CB4 0025E274  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80294CB8 0025E278  7C 08 02 A6 */	mflr r0
@@ -71,7 +69,7 @@
 /* 80294DB0 0025E370  4E 80 00 20 */	blr 
 .endfn func_80294CB4
 
-.fn __dt__80294DB4, global
+.fn __dt__CTTask_CTaskGamePic, global
 /* 80294DB4 0025E374  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80294DB8 0025E378  7C 08 02 A6 */	mflr r0
 /* 80294DBC 0025E37C  2C 03 00 00 */	cmpwi r3, 0
@@ -81,7 +79,7 @@
 /* 80294DCC 0025E38C  7C 9F 23 78 */	mr r31, r4
 /* 80294DD0 0025E390  41 82 00 1C */	beq .L_80294DEC
 /* 80294DD4 0025E394  38 80 00 00 */	li r4, 0
-/* 80294DD8 0025E398  48 1A FD 61 */	bl __dt__80444B38
+/* 80294DD8 0025E398  48 1A FD 61 */	bl __dt__CProcess
 /* 80294DDC 0025E39C  2C 1F 00 00 */	cmpwi r31, 0
 /* 80294DE0 0025E3A0  40 81 00 0C */	ble .L_80294DEC
 /* 80294DE4 0025E3A4  7F C3 F3 78 */	mr r3, r30
@@ -93,9 +91,9 @@
 /* 80294DF8 0025E3B8  7C 08 03 A6 */	mtlr r0
 /* 80294DFC 0025E3BC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80294E00 0025E3C0  4E 80 00 20 */	blr
-.endfn __dt__80294DB4
+.endfn __dt__CTTask_CTaskGamePic
 
-.fn __dt__80294E04, global
+.fn __dt__CTaskGamePic, global
 /* 80294E04 0025E3C4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80294E08 0025E3C8  7C 08 02 A6 */	mflr r0
 /* 80294E0C 0025E3CC  2C 03 00 00 */	cmpwi r3, 0
@@ -106,7 +104,7 @@
 /* 80294E20 0025E3E0  41 82 00 20 */	beq .L_80294E40
 /* 80294E24 0025E3E4  41 82 00 0C */	beq .L_80294E30
 /* 80294E28 0025E3E8  38 80 00 00 */	li r4, 0
-/* 80294E2C 0025E3EC  48 1A FD 0D */	bl __dt__80444B38
+/* 80294E2C 0025E3EC  48 1A FD 0D */	bl __dt__CProcess
 .L_80294E30:
 /* 80294E30 0025E3F0  2C 1F 00 00 */	cmpwi r31, 0
 /* 80294E34 0025E3F4  40 81 00 0C */	ble .L_80294E40
@@ -119,7 +117,7 @@
 /* 80294E4C 0025E40C  7C 08 03 A6 */	mtlr r0
 /* 80294E50 0025E410  38 21 00 10 */	addi r1, r1, 0x10
 /* 80294E54 0025E414  4E 80 00 20 */	blr 
-.endfn __dt__80294E04
+.endfn __dt__CTaskGamePic
 
 .fn func_80294E58, global
 /* 80294E58 0025E418  54 8C 40 2E */	slwi r12, r4, 8
@@ -623,7 +621,7 @@
 
 .fn func_8029554C, global
 /* 8029554C 0025EB0C  38 63 FF AC */	addi r3, r3, -84
-/* 80295550 0025EB10  4B FF F8 B4 */	b __dt__80294E04
+/* 80295550 0025EB10  4B FF F8 B4 */	b __dt__CTaskGamePic
 .endfn func_8029554C
 
 .fn func_80295554, global
@@ -633,7 +631,7 @@
 
 .fn func_8029555C, global
 /* 8029555C 0025EB1C  38 63 FF A8 */	addi r3, r3, -88
-/* 80295560 0025EB20  4B FF F8 A4 */	b __dt__80294E04
+/* 80295560 0025EB20  4B FF F8 A4 */	b __dt__CTaskGamePic
 .endfn func_8029555C
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -658,7 +656,7 @@ CTTask_CTaskGamePic_typestr:
 __vt__CTaskGamePic:
 	.4byte __RTTI__CTaskGamePic
 	.4byte 0
-	.4byte __dt__80294E04
+	.4byte __dt__CTaskGamePic
 	.4byte CChildListNode_Reset
 	.4byte func_80294F24
 	.4byte func_80294F44
@@ -723,7 +721,7 @@ CTaskGamePic_hierarchy:
 __vt__CTTask_CTaskGamePic:
 	.4byte __RTTI__CTTask_CTaskGamePic
 	.4byte 0
-	.4byte __dt__80294DB4
+	.4byte __dt__CTTask_CTaskGamePic
 	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
@@ -805,7 +803,7 @@ double_8066B468:
 	.4byte 0x00000000
 	.4byte 0x0680001E
 	.4byte 0x00000058
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x8680001E
 	.4byte 0x00000054
 	.4byte __dt__IWorkEvent
@@ -880,14 +878,14 @@ double_8066B468:
 
 .obj "@eti_80031D3C", local
 .hidden "@eti_80031D3C"
-	.4byte __dt__80294DB4
+	.4byte __dt__CTTask_CTaskGamePic
 	.4byte 0x00000050
 	.4byte "@etb_80019AC0"
 .endobj "@eti_80031D3C"
 
 .obj "@eti_80031D48", local
 .hidden "@eti_80031D48"
-	.4byte __dt__80294E04
+	.4byte __dt__CTaskGamePic
 	.4byte 0x00000054
 	.4byte "@etb_80019AC8"
 .endobj "@eti_80031D48"

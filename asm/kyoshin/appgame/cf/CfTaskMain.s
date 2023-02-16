@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn __dt__80069710, global
+.fn __dt__CTTask_cf_CfTaskMain, global
 /* 80069710 00032CD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80069714 00032CD4  7C 08 02 A6 */	mflr r0
 /* 80069718 00032CD8  2C 03 00 00 */	cmpwi r3, 0
@@ -15,7 +13,7 @@
 /* 8006972C 00032CEC  7C 7E 1B 78 */	mr r30, r3
 /* 80069730 00032CF0  41 82 00 1C */	beq .L_8006974C
 /* 80069734 00032CF4  38 80 00 00 */	li r4, 0
-/* 80069738 00032CF8  48 3D B4 01 */	bl __dt__80444B38
+/* 80069738 00032CF8  48 3D B4 01 */	bl __dt__CProcess
 /* 8006973C 00032CFC  2C 1F 00 00 */	cmpwi r31, 0
 /* 80069740 00032D00  40 81 00 0C */	ble .L_8006974C
 /* 80069744 00032D04  7F C3 F3 78 */	mr r3, r30
@@ -28,9 +26,9 @@
 /* 8006975C 00032D1C  7C 08 03 A6 */	mtlr r0
 /* 80069760 00032D20  38 21 00 10 */	addi r1, r1, 0x10
 /* 80069764 00032D24  4E 80 00 20 */	blr
-.endfn __dt__80069710
+.endfn __dt__CTTask_cf_CfTaskMain
 
-.fn __dt__80069768, global
+.fn __dt__cf_CfTaskMain, global
 /* 80069768 00032D28  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8006976C 00032D2C  7C 08 02 A6 */	mflr r0
 /* 80069770 00032D30  2C 03 00 00 */	cmpwi r3, 0
@@ -42,7 +40,7 @@
 /* 80069788 00032D48  41 82 00 20 */	beq .L_800697A8
 /* 8006978C 00032D4C  41 82 00 0C */	beq .L_80069798
 /* 80069790 00032D50  38 80 00 00 */	li r4, 0
-/* 80069794 00032D54  48 3D B3 A5 */	bl __dt__80444B38
+/* 80069794 00032D54  48 3D B3 A5 */	bl __dt__CProcess
 .L_80069798:
 /* 80069798 00032D58  2C 1F 00 00 */	cmpwi r31, 0
 /* 8006979C 00032D5C  40 81 00 0C */	ble .L_800697A8
@@ -56,7 +54,7 @@
 /* 800697B8 00032D78  7C 08 03 A6 */	mtlr r0
 /* 800697BC 00032D7C  38 21 00 10 */	addi r1, r1, 0x10
 /* 800697C0 00032D80  4E 80 00 20 */	blr 
-.endfn __dt__80069768
+.endfn __dt__cf_CfTaskMain
 
 .fn func_800697C4, global
 /* 800697C4 00032D84  4E 80 00 20 */	blr 
@@ -183,7 +181,7 @@
 
 .fn func_80069944, global
 /* 80069944 00032F04  38 63 FF AC */	addi r3, r3, -84
-/* 80069948 00032F08  4B FF FE 20 */	b __dt__80069768
+/* 80069948 00032F08  4B FF FE 20 */	b __dt__cf_CfTaskMain
 .endfn func_80069944
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -208,7 +206,7 @@ CTTask_cf_CfTaskMain_typestr:
 __vt__cf_CfTaskMain:
 	.4byte __RTTI__cf_CfTaskMain
 	.4byte 0
-	.4byte __dt__80069768
+	.4byte __dt__cf_CfTaskMain
 	.4byte CChildListNode_Reset
 	.4byte func_800697C4
 	.4byte func_800697C8
@@ -269,7 +267,7 @@ cf_CfTaskMain_hierarchy:
 __vt__CTTask_cf_CfTaskMain:
 	.4byte __RTTI__CTTask_cf_CfTaskMain
 	.4byte 0
-	.4byte __dt__80069710
+	.4byte __dt__CTTask_cf_CfTaskMain
 	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
@@ -349,14 +347,14 @@ __RTTI__CTTask_cf_CfTaskMain:
 
 .obj "@eti_800231C8", local
 .hidden "@eti_800231C8"
-	.4byte __dt__80069710
+	.4byte __dt__CTTask_cf_CfTaskMain
 	.4byte 0x00000058
 	.4byte "@etb_80007F28"
 .endobj "@eti_800231C8"
 
 .obj "@eti_800231D4", local
 .hidden "@eti_800231D4"
-	.4byte __dt__80069768
+	.4byte __dt__cf_CfTaskMain
 	.4byte 0x0000005C
 	.4byte "@etb_80007F30"
 .endobj "@eti_800231D4"

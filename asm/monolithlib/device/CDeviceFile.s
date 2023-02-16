@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CDeviceFile, global
 /* 8044E148 00417708  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044E14C 0041770C  7C 08 02 A6 */	mflr r0
@@ -102,7 +100,7 @@
 /* 8044E2BC 0041787C  4E 80 00 20 */	blr 
 .endfn __ct__CDeviceFile
 
-.fn __dt__8044E2C0, global
+.fn __dt___reslist_base_CFileHandle, global
 /* 8044E2C0 00417880  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044E2C4 00417884  7C 08 02 A6 */	mflr r0
 /* 8044E2C8 00417888  2C 03 00 00 */	cmpwi r3, 0
@@ -152,9 +150,9 @@
 /* 8044E368 00417928  7C 08 03 A6 */	mtlr r0
 /* 8044E36C 0041792C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8044E370 00417930  4E 80 00 20 */	blr 
-.endfn __dt__8044E2C0
+.endfn __dt___reslist_base_CFileHandle
 
-.fn __dt__8044E374, global
+.fn __dt__reslist_CFileHandle, global
 /* 8044E374 00417934  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044E378 00417938  7C 08 02 A6 */	mflr r0
 /* 8044E37C 0041793C  2C 03 00 00 */	cmpwi r3, 0
@@ -205,9 +203,9 @@
 /* 8044E420 004179E0  7C 08 03 A6 */	mtlr r0
 /* 8044E424 004179E4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8044E428 004179E8  4E 80 00 20 */	blr 
-.endfn __dt__8044E374
+.endfn __dt__reslist_CFileHandle
 
-.fn __dt__8044E42C, global
+.fn __dt__CDeviceFile, global
 /* 8044E42C 004179EC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8044E430 004179F0  7C 08 02 A6 */	mflr r0
 /* 8044E434 004179F4  2C 03 00 00 */	cmpwi r3, 0
@@ -269,7 +267,7 @@
 /* 8044E500 00417AC0  7C 08 03 A6 */	mtlr r0
 /* 8044E504 00417AC4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8044E508 00417AC8  4E 80 00 20 */	blr 
-.endfn __dt__8044E42C
+.endfn __dt__CDeviceFile
 
 .fn func_8044E50C, global
 /* 8044E50C 00417ACC  80 6D BD C0 */	lwz r3, lbl_80667F40@sda21(r13)
@@ -1461,7 +1459,7 @@
 /* 8044F4A4 00418A64  41 82 00 10 */	beq .L_8044F4B4
 /* 8044F4A8 00418A68  7F E4 FB 78 */	mr r4, r31
 /* 8044F4AC 00418A6C  7F C5 F3 78 */	mr r5, r30
-/* 8044F4B0 00418A70  48 00 01 15 */	bl func_8044F5C4
+/* 8044F4B0 00418A70  48 00 01 15 */	bl __ct__CDeviceFileCri
 .L_8044F4B4:
 /* 8044F4B4 00418A74  7F C4 F3 78 */	mr r4, r30
 /* 8044F4B8 00418A78  38 A0 00 00 */	li r5, 0
@@ -1586,7 +1584,7 @@ CDeviceFile_strpool:
 __vt__CDeviceFile:
 	.4byte __RTTI__CDeviceFile
 	.4byte 0
-	.4byte __dt__8044E42C
+	.4byte __dt__CDeviceFile
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -1640,7 +1638,7 @@ CDeviceFile_hierarchy:
 __vt__reslist_CFileHandle:
 	.4byte __RTTI__reslist_CFileHandle
 	.4byte 0
-	.4byte __dt__8044E374
+	.4byte __dt__reslist_CFileHandle
 
 .global reslist_CFileHandle_hierarchy
 reslist_CFileHandle_hierarchy:
@@ -1653,7 +1651,7 @@ reslist_CFileHandle_hierarchy:
 __vt___reslist_base_CFileHandle:
 	.4byte __RTTI___reslist_base_CFileHandle
 	.4byte 0
-	.4byte __dt__8044E2C0
+	.4byte __dt___reslist_base_CFileHandle
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -1701,10 +1699,10 @@ lbl_80667F40:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x000001CC
-	.4byte __dt__8044E374
+	.4byte __dt__reslist_CFileHandle
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__80447900
+	.4byte __dt__CDeviceBase
 .endobj "@etb_8001CD84"
 
 .obj "@etb_8001CDAC", local
@@ -1727,7 +1725,7 @@ lbl_80667F40:
 	.4byte 0x00000000
 	.4byte 0x8780001D
 	.4byte 0x000001CC
-	.4byte __dt__8044E374
+	.4byte __dt__reslist_CFileHandle
 .endobj "@etb_8001CDBC"
 
 .obj "@etb_8001CDD8", local
@@ -1815,21 +1813,21 @@ lbl_80667F40:
 
 .obj "@eti_80034A18", local
 .hidden "@eti_80034A18"
-	.4byte __dt__8044E2C0
+	.4byte __dt___reslist_base_CFileHandle
 	.4byte 0x000000B4
 	.4byte "@etb_8001CDAC"
 .endobj "@eti_80034A18"
 
 .obj "@eti_80034A24", local
 .hidden "@eti_80034A24"
-	.4byte __dt__8044E374
+	.4byte __dt__reslist_CFileHandle
 	.4byte 0x000000B8
 	.4byte "@etb_8001CDB4"
 .endobj "@eti_80034A24"
 
 .obj "@eti_80034A30", local
 .hidden "@eti_80034A30"
-	.4byte __dt__8044E42C
+	.4byte __dt__CDeviceFile
 	.4byte 0x000000E0
 	.4byte "@etb_8001CDBC"
 .endobj "@eti_80034A30"

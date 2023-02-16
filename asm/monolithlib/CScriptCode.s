@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn __dt__8043A0E0, global
+.fn __dt__CScriptCode, global
 /* 8043A0E0 004036A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8043A0E4 004036A4  7C 08 02 A6 */	mflr r0
 /* 8043A0E8 004036A8  2C 03 00 00 */	cmpwi r3, 0
@@ -58,7 +56,7 @@
 /* 8043A190 00403750  38 80 FF FF */	li r4, -1
 /* 8043A194 00403754  B0 1B 05 C8 */	sth r0, 0x5c8(r27)
 /* 8043A198 00403758  90 0D BD 10 */	stw r0, lbl_80667E90@sda21(r13)
-/* 8043A19C 0040375C  48 00 08 41 */	bl __dt__8043A9DC
+/* 8043A19C 0040375C  48 00 08 41 */	bl __dt__CToken
 /* 8043A1A0 00403760  7F 63 DB 78 */	mr r3, r27
 /* 8043A1A4 00403764  38 80 00 00 */	li r4, 0
 /* 8043A1A8 00403768  4B FF D9 21 */	bl __dt__CWorkThread
@@ -73,7 +71,7 @@
 /* 8043A1C8 00403788  7C 08 03 A6 */	mtlr r0
 /* 8043A1CC 0040378C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8043A1D0 00403790  4E 80 00 20 */	blr 
-.endfn __dt__8043A0E0
+.endfn __dt__CScriptCode
 
 .fn func_8043A1D4, global
 /* 8043A1D4 00403794  80 6D BD 10 */	lwz r3, lbl_80667E90@sda21(r13)
@@ -666,7 +664,7 @@ lbl_80525E64:
 __vt__CScriptCode:
 	.4byte __RTTI__CScriptCode
 	.4byte 0
-	.4byte __dt__8043A0E0
+	.4byte __dt__CScriptCode
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -743,7 +741,7 @@ lbl_80667E90:
 	.4byte 0x00000000
 	.4byte 0x8780001B
 	.4byte 0x000005CC
-	.4byte __dt__8043A9DC
+	.4byte __dt__CToken
 .endobj "@etb_8001C2CC"
 
 .obj "@etb_8001C2E8", local
@@ -786,7 +784,7 @@ lbl_80667E90:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x000005CC
-	.4byte __dt__8043A9DC
+	.4byte __dt__CToken
 	.4byte 0x8680001E
 	.4byte 0x00000000
 	.4byte __dt__CWorkThread
@@ -798,7 +796,7 @@ lbl_80667E90:
 
 .obj "@eti_80033F50", local
 .hidden "@eti_80033F50"
-	.4byte __dt__8043A0E0
+	.4byte __dt__CScriptCode
 	.4byte 0x000000F4
 	.4byte "@etb_8001C2CC"
 .endobj "@eti_80033F50"

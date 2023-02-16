@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CMenuMakeCrystal, global
 /* 80210C20 001DA1E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80210C24 001DA1E4  7C 08 02 A6 */	mflr r0
@@ -55,7 +53,7 @@
 /* 80210CDC 001DA29C  4E 80 00 20 */	blr
 .endfn __ct__CMenuMakeCrystal
 
-.fn __dt__80210CE0, global
+.fn __dt__CMenuMakeCrystal, global
 /* 80210CE0 001DA2A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80210CE4 001DA2A4  7C 08 02 A6 */	mflr r0
 /* 80210CE8 001DA2A8  2C 03 00 00 */	cmpwi r3, 0
@@ -66,7 +64,7 @@
 /* 80210CFC 001DA2BC  41 82 00 38 */	beq .L_80210D34
 /* 80210D00 001DA2C0  38 80 FF FF */	li r4, -1
 /* 80210D04 001DA2C4  38 63 00 80 */	addi r3, r3, 0x80
-/* 80210D08 001DA2C8  48 00 18 8D */	bl __dt__80212594
+/* 80210D08 001DA2C8  48 00 18 8D */	bl __dt__CMakeCrystalWin
 /* 80210D0C 001DA2CC  38 7E 00 60 */	addi r3, r30, 0x60
 /* 80210D10 001DA2D0  38 80 FF FF */	li r4, -1
 /* 80210D14 001DA2D4  4B FB 2C BD */	bl __dt__CBgTex
@@ -84,7 +82,7 @@
 /* 80210D40 001DA300  7C 08 03 A6 */	mtlr r0
 /* 80210D44 001DA304  38 21 00 10 */	addi r1, r1, 0x10
 /* 80210D48 001DA308  4E 80 00 20 */	blr 
-.endfn __dt__80210CE0
+.endfn __dt__CMenuMakeCrystal
 
 .fn func_80210D4C, global
 /* 80210D4C 001DA30C  94 21 BC 80 */	stwu r1, -0x4380(r1)
@@ -148,7 +146,7 @@
 /* 80210E34 001DA3F4  38 80 FF FF */	li r4, -1
 /* 80210E38 001DA3F8  88 01 43 69 */	lbz r0, 0x4369(r1)
 /* 80210E3C 001DA3FC  98 1F 43 C1 */	stb r0, 0x43c1(r31)
-/* 80210E40 001DA400  48 00 17 55 */	bl __dt__80212594
+/* 80210E40 001DA400  48 00 17 55 */	bl __dt__CMakeCrystalWin
 /* 80210E44 001DA404  2C 1F 00 00 */	cmpwi r31, 0
 /* 80210E48 001DA408  7F E4 FB 78 */	mr r4, r31
 /* 80210E4C 001DA40C  41 82 00 08 */	beq .L_80210E54
@@ -1688,7 +1686,7 @@
 
 .fn func_802124FC, global
 /* 802124FC 001DBABC  38 63 FF A8 */	addi r3, r3, -88
-/* 80212500 001DBAC0  4B FF E7 E0 */	b __dt__80210CE0
+/* 80212500 001DBAC0  4B FF E7 E0 */	b __dt__CMenuMakeCrystal
 .endfn func_802124FC
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -1709,7 +1707,7 @@ CMenuMakeCrystal_typestr:
 __vt__CMenuMakeCrystal:
 	.4byte __RTTI__CMenuMakeCrystal
 	.4byte 0
-	.4byte __dt__80210CE0
+	.4byte __dt__CMenuMakeCrystal
 	.4byte CChildListNode_Reset
 	.4byte func_80210D4C
 	.4byte func_802121EC
@@ -1773,7 +1771,7 @@ instance:
 	.4byte __dt__CBgTex
 	.4byte 0x0680001D
 	.4byte 0x00000058
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x8680001D
 	.4byte 0x00000000
 	.4byte __dt__800FED0C
@@ -1789,16 +1787,16 @@ instance:
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x00000080
-	.4byte __dt__80212594
+	.4byte __dt__CMakeCrystalWin
 	.4byte 0x0780001E
 	.4byte 0x00000080
-	.4byte __dt__80212594
+	.4byte __dt__CMakeCrystalWin
 	.4byte 0x0780001E
 	.4byte 0x00000060
 	.4byte __dt__CBgTex
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 .endobj "@etb_80013338"
 
 .obj "@etb_80013380", local
@@ -1808,7 +1806,7 @@ instance:
 	.4byte 0x00000010
 	.4byte 0x00000000
 	.4byte 0x82000028
-	.4byte __dt__80212594
+	.4byte __dt__CMakeCrystalWin
 .endobj "@etb_80013380"
 
 .obj "@etb_80013398", local
@@ -1876,7 +1874,7 @@ instance:
 
 .obj "@eti_8002D2A8", local
 .hidden "@eti_8002D2A8"
-	.4byte __dt__80210CE0
+	.4byte __dt__CMenuMakeCrystal
 	.4byte 0x0000006C
 	.4byte "@etb_80013338"
 .endobj "@eti_8002D2A8"

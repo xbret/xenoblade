@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_804C0280, global
 /* 804C0280 00489840  C0 62 D3 D8 */	lfs f3, float_8066D758@sda21(r2)
 /* 804C0284 00489844  38 80 00 00 */	li r4, 0
@@ -675,7 +673,7 @@
 __vt__CLight:
 	.4byte __RTTI__CLight
 	.4byte 0
-	.4byte __dt__80492034
+	.4byte __dt__CLight
 	.4byte 0
 
 

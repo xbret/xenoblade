@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_801A30D8, global
+.fn __ct__cf_CVision, global
 /* 801A30D8 0016C698  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 801A30DC 0016C69C  7C 08 02 A6 */	mflr r0
 /* 801A30E0 0016C6A0  90 01 00 54 */	stw r0, 0x54(r1)
@@ -192,7 +192,7 @@
 /* 801A33A0 0016C960  7C 08 03 A6 */	mtlr r0
 /* 801A33A4 0016C964  38 21 00 50 */	addi r1, r1, 0x50
 /* 801A33A8 0016C968  4E 80 00 20 */	blr
-.endfn func_801A30D8
+.endfn __ct__cf_CVision
 
 .fn func_801A33AC, global
 /* 801A33AC 0016C96C  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -7536,7 +7536,7 @@ double_8066A618:
 
 .obj "@eti_8002A608", local
 .hidden "@eti_8002A608"
-	.4byte func_801A30D8
+	.4byte __ct__cf_CVision
 	.4byte 0x000002D4
 	.4byte "@etb_8000F864"
 .endobj "@eti_8002A608"

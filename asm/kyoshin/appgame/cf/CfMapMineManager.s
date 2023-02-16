@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_80205A7C, global
 /* 80205A7C 001CF03C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80205A80 001CF040  7C 08 02 A6 */	mflr r0
@@ -360,7 +358,7 @@
 /* 80205FA4 001CF564  4E 80 00 20 */	blr 
 .endfn func_80205F78
 
-.fn __dt__80205FA8, global
+.fn __dt___reslist_base_cf_CfMapMineManager_MinePoint, global
 /* 80205FA8 001CF568  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80205FAC 001CF56C  7C 08 02 A6 */	mflr r0
 /* 80205FB0 001CF570  2C 03 00 00 */	cmpwi r3, 0
@@ -413,9 +411,9 @@
 /* 80206058 001CF618  7C 08 03 A6 */	mtlr r0
 /* 8020605C 001CF61C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80206060 001CF620  4E 80 00 20 */	blr 
-.endfn __dt__80205FA8
+.endfn __dt___reslist_base_cf_CfMapMineManager_MinePoint
 
-.fn __dt__80206064, global
+.fn __dt__reslist_cf_CfMapMineManager_MinePoint, global
 /* 80206064 001CF624  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80206068 001CF628  7C 08 02 A6 */	mflr r0
 /* 8020606C 001CF62C  2C 03 00 00 */	cmpwi r3, 0
@@ -469,7 +467,7 @@
 /* 80206118 001CF6D8  7C 08 03 A6 */	mtlr r0
 /* 8020611C 001CF6DC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80206120 001CF6E0  4E 80 00 20 */	blr 
-.endfn __dt__80206064
+.endfn __dt__reslist_cf_CfMapMineManager_MinePoint
 
 .fn __dt__80206124, global
 /* 80206124 001CF6E4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2635,7 +2633,7 @@ lbl_80538ED8:
 __vt__reslist_cf_CfMapMineManager_MinePoint:
 	.4byte __RTTI__reslist_cf_CfMapMineManager_MinePoint
 	.4byte 0
-	.4byte __dt__80206064
+	.4byte __dt__reslist_cf_CfMapMineManager_MinePoint
 
 .global reslist_cf_CfMapMineManager_MinePoint_hierarchy
 reslist_cf_CfMapMineManager_MinePoint_hierarchy:
@@ -2648,7 +2646,7 @@ reslist_cf_CfMapMineManager_MinePoint_hierarchy:
 __vt___reslist_base_cf_CfMapMineManager_MinePoint:
 	.4byte __RTTI___reslist_base_cf_CfMapMineManager_MinePoint
 	.4byte 0
-	.4byte __dt__80205FA8
+	.4byte __dt___reslist_base_cf_CfMapMineManager_MinePoint
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
@@ -2786,7 +2784,7 @@ lbl_80666F98:
 	.4byte __dt__80206124
 	.4byte 0x8780001F
 	.4byte 0x00000004
-	.4byte __dt__80206064
+	.4byte __dt__reslist_cf_CfMapMineManager_MinePoint
 .endobj "@etb_80012E10"
 
 .obj "@etb_80012E38", local
@@ -2904,14 +2902,14 @@ lbl_80666F98:
 
 .obj "@eti_8002CD50", local
 .hidden "@eti_8002CD50"
-	.4byte __dt__80205FA8
+	.4byte __dt___reslist_base_cf_CfMapMineManager_MinePoint
 	.4byte 0x000000BC
 	.4byte "@etb_80012E38"
 .endobj "@eti_8002CD50"
 
 .obj "@eti_8002CD5C", local
 .hidden "@eti_8002CD5C"
-	.4byte __dt__80206064
+	.4byte __dt__reslist_cf_CfMapMineManager_MinePoint
 	.4byte 0x000000C0
 	.4byte "@etb_80012E40"
 .endobj "@eti_8002CD5C"

@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
 .fn AXRNA_EntryErrFunc, global
 /* 80399014 003625D4  4B FF FF 94 */	b RNAERR_EntryErrFunc
 .endfn AXRNA_EntryErrFunc

@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_8043C2C4, global
+.fn __ct__CView, global
 /* 8043C2C4 00405884  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8043C2C8 00405888  7C 08 02 A6 */	mflr r0
 /* 8043C2CC 0040588C  38 C0 00 02 */	li r6, 2
@@ -24,7 +22,7 @@
 /* 8043C304 004058C4  90 1E 01 C4 */	stw r0, 0x1c4(r30)
 /* 8043C308 004058C8  48 01 CF 69 */	bl func_80459270
 /* 8043C30C 004058CC  38 7E 01 DC */	addi r3, r30, 0x1dc
-/* 8043C310 004058D0  48 00 38 BD */	bl func_8043FBCC
+/* 8043C310 004058D0  48 00 38 BD */	bl __ct__CViewFrame
 /* 8043C314 004058D4  3C 60 80 57 */	lis r3, __vt___reslist_base_unsigned_long@ha
 /* 8043C318 004058D8  3B E0 00 00 */	li r31, 0
 /* 8043C31C 004058DC  38 63 EB 10 */	addi r3, r3, __vt___reslist_base_unsigned_long@l
@@ -187,7 +185,7 @@
 /* 8043C590 00405B50  7C 08 03 A6 */	mtlr r0
 /* 8043C594 00405B54  38 21 00 20 */	addi r1, r1, 0x20
 /* 8043C598 00405B58  4E 80 00 20 */	blr 
-.endfn func_8043C2C4
+.endfn __ct__CView
 
 .fn __dt__8043C59C, global
 /* 8043C59C 00405B5C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -209,7 +207,7 @@
 /* 8043C5D8 00405B98  4E 80 00 20 */	blr 
 .endfn __dt__8043C59C
 
-.fn __dt__8043C5DC, global
+.fn __dt__CViewFrame, global
 /* 8043C5DC 00405B9C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8043C5E0 00405BA0  7C 08 02 A6 */	mflr r0
 /* 8043C5E4 00405BA4  2C 03 00 00 */	cmpwi r3, 0
@@ -227,9 +225,9 @@
 /* 8043C610 00405BD0  7C 08 03 A6 */	mtlr r0
 /* 8043C614 00405BD4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8043C618 00405BD8  4E 80 00 20 */	blr 
-.endfn __dt__8043C5DC
+.endfn __dt__CViewFrame
 
-.fn __dt__8043C61C, global
+.fn __dt___reslist_base_IWorkEvent, global
 /* 8043C61C 00405BDC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8043C620 00405BE0  7C 08 02 A6 */	mflr r0
 /* 8043C624 00405BE4  2C 03 00 00 */	cmpwi r3, 0
@@ -279,9 +277,9 @@
 /* 8043C6C4 00405C84  7C 08 03 A6 */	mtlr r0
 /* 8043C6C8 00405C88  38 21 00 10 */	addi r1, r1, 0x10
 /* 8043C6CC 00405C8C  4E 80 00 20 */	blr 
-.endfn __dt__8043C61C
+.endfn __dt___reslist_base_IWorkEvent
 
-.fn __dt__8043C6D0, global
+.fn __dt__reslist_IWorkEvent, global
 /* 8043C6D0 00405C90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8043C6D4 00405C94  7C 08 02 A6 */	mflr r0
 /* 8043C6D8 00405C98  2C 03 00 00 */	cmpwi r3, 0
@@ -332,9 +330,9 @@
 /* 8043C77C 00405D3C  7C 08 03 A6 */	mtlr r0
 /* 8043C780 00405D40  38 21 00 10 */	addi r1, r1, 0x10
 /* 8043C784 00405D44  4E 80 00 20 */	blr 
-.endfn __dt__8043C6D0
+.endfn __dt__reslist_IWorkEvent
 
-.fn __dt__8043C788, global
+.fn __dt__CMsgParam_10, global
 /* 8043C788 00405D48  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8043C78C 00405D4C  7C 08 02 A6 */	mflr r0
 /* 8043C790 00405D50  2C 03 00 00 */	cmpwi r3, 0
@@ -359,9 +357,9 @@
 /* 8043C7D4 00405D94  7C 08 03 A6 */	mtlr r0
 /* 8043C7D8 00405D98  38 21 00 10 */	addi r1, r1, 0x10
 /* 8043C7DC 00405D9C  4E 80 00 20 */	blr
-.endfn __dt__8043C788
+.endfn __dt__CMsgParam_10
 
-.fn __dt__8043C7E0, global
+.fn __dt__CView, global
 /* 8043C7E0 00405DA0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8043C7E4 00405DA4  7C 08 02 A6 */	mflr r0
 /* 8043C7E8 00405DA8  2C 03 00 00 */	cmpwi r3, 0
@@ -465,7 +463,7 @@
 .L_8043C948:
 /* 8043C948 00405F08  38 7E 01 C4 */	addi r3, r30, 0x1c4
 /* 8043C94C 00405F0C  38 80 00 00 */	li r4, 0
-/* 8043C950 00405F10  48 00 C6 C9 */	bl __dt__80449018
+/* 8043C950 00405F10  48 00 C6 C9 */	bl __dt__CFontLayer
 /* 8043C954 00405F14  7F C3 F3 78 */	mr r3, r30
 /* 8043C958 00405F18  38 80 00 00 */	li r4, 0
 /* 8043C95C 00405F1C  4B FF B1 6D */	bl __dt__CWorkThread
@@ -482,7 +480,7 @@
 /* 8043C984 00405F44  7C 08 03 A6 */	mtlr r0
 /* 8043C988 00405F48  38 21 00 20 */	addi r1, r1, 0x20
 /* 8043C98C 00405F4C  4E 80 00 20 */	blr 
-.endfn __dt__8043C7E0
+.endfn __dt__CView
 
 .fn func_8043C990, global
 /* 8043C990 00405F50  80 C3 00 00 */	lwz r6, 0(r3)
@@ -4247,7 +4245,7 @@ jumptable_8056EE38:
 __vt__CView:
 	.4byte __RTTI__CView
 	.4byte 0
-	.4byte __dt__8043C7E0
+	.4byte __dt__CView
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -4313,14 +4311,14 @@ CView_hierarchy:
 __vt__CMsgParam_10:
 	.4byte __RTTI__CMsgParam_10
 	.4byte 0
-	.4byte __dt__8043C788
+	.4byte __dt__CMsgParam_10
 
 
 .global __vt__reslist_IWorkEvent
 __vt__reslist_IWorkEvent:
 	.4byte __RTTI__reslist_IWorkEvent
 	.4byte 0
-	.4byte __dt__8043C6D0
+	.4byte __dt__reslist_IWorkEvent
 
 .global reslist_IWorkEvent_hierarchy
 reslist_IWorkEvent_hierarchy:
@@ -4333,7 +4331,7 @@ reslist_IWorkEvent_hierarchy:
 __vt___reslist_base_IWorkEvent:
 	.4byte __RTTI___reslist_base_IWorkEvent
 	.4byte 0
-	.4byte __dt__8043C61C
+	.4byte __dt___reslist_base_IWorkEvent
 	.4byte 0
 
 
@@ -4431,22 +4429,22 @@ lbl_80667EA8:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000280
-	.4byte __dt__8043C788
+	.4byte __dt__CMsgParam_10
 	.4byte 0x0780001E
 	.4byte 0x00000258
-	.4byte __dt__8043C6D0
+	.4byte __dt__reslist_IWorkEvent
 	.4byte 0x0780001E
 	.4byte 0x00000238
-	.4byte __dt__80438E10
+	.4byte __dt__reslist_unsigned_long
 	.4byte 0x0780001E
 	.4byte 0x000001DC
-	.4byte __dt__8043C5DC
+	.4byte __dt__CViewFrame
 	.4byte 0x0780001E
 	.4byte 0x000001C8
 	.4byte __dt__8043C59C
 	.4byte 0x0680001E
 	.4byte 0x000001C4
-	.4byte __dt__80449018
+	.4byte __dt__CFontLayer
 	.4byte 0x8680001E
 	.4byte 0x00000000
 	.4byte __dt__CWorkThread
@@ -4492,37 +4490,37 @@ lbl_80667EA8:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000280
-	.4byte __dt__8043C788
+	.4byte __dt__CMsgParam_10
 	.4byte 0x0780001E
 	.4byte 0x00000258
-	.4byte __dt__8043C6D0
+	.4byte __dt__reslist_IWorkEvent
 	.4byte 0x0780001E
 	.4byte 0x00000238
-	.4byte __dt__80438E10
+	.4byte __dt__reslist_unsigned_long
 	.4byte 0x0780001E
 	.4byte 0x000001DC
-	.4byte __dt__8043C5DC
+	.4byte __dt__CViewFrame
 	.4byte 0x8780001E
 	.4byte 0x000001C8
 	.4byte __dt__8043C59C
 	.4byte 0x0780001E
 	.4byte 0x00000280
-	.4byte __dt__8043C788
+	.4byte __dt__CMsgParam_10
 	.4byte 0x0780001E
 	.4byte 0x00000258
-	.4byte __dt__8043C6D0
+	.4byte __dt__reslist_IWorkEvent
 	.4byte 0x0780001E
 	.4byte 0x00000238
-	.4byte __dt__80438E10
+	.4byte __dt__reslist_unsigned_long
 	.4byte 0x0780001E
 	.4byte 0x000001DC
-	.4byte __dt__8043C5DC
+	.4byte __dt__CViewFrame
 	.4byte 0x0780001E
 	.4byte 0x000001C8
 	.4byte __dt__8043C59C
 	.4byte 0x8680001E
 	.4byte 0x000001C4
-	.4byte __dt__80449018
+	.4byte __dt__CFontLayer
 .endobj "@etb_8001C464"
 
 .obj "@etb_8001C500", local
@@ -4691,7 +4689,7 @@ lbl_80667EA8:
 
 .obj "@eti_80034064", local
 .hidden "@eti_80034064"
-	.4byte func_8043C2C4
+	.4byte __ct__CView
 	.4byte 0x000002D8
 	.4byte "@etb_8001C3C0"
 .endobj "@eti_80034064"
@@ -4705,35 +4703,35 @@ lbl_80667EA8:
 
 .obj "@eti_8003407C", local
 .hidden "@eti_8003407C"
-	.4byte __dt__8043C5DC
+	.4byte __dt__CViewFrame
 	.4byte 0x00000040
 	.4byte "@etb_8001C444"
 .endobj "@eti_8003407C"
 
 .obj "@eti_80034088", local
 .hidden "@eti_80034088"
-	.4byte __dt__8043C61C
+	.4byte __dt___reslist_base_IWorkEvent
 	.4byte 0x000000B4
 	.4byte "@etb_8001C44C"
 .endobj "@eti_80034088"
 
 .obj "@eti_80034094", local
 .hidden "@eti_80034094"
-	.4byte __dt__8043C6D0
+	.4byte __dt__reslist_IWorkEvent
 	.4byte 0x000000B8
 	.4byte "@etb_8001C454"
 .endobj "@eti_80034094"
 
 .obj "@eti_800340A0", local
 .hidden "@eti_800340A0"
-	.4byte __dt__8043C788
+	.4byte __dt__CMsgParam_10
 	.4byte 0x00000058
 	.4byte "@etb_8001C45C"
 .endobj "@eti_800340A0"
 
 .obj "@eti_800340AC", local
 .hidden "@eti_800340AC"
-	.4byte __dt__8043C7E0
+	.4byte __dt__CView
 	.4byte 0x000001B0
 	.4byte "@etb_8001C464"
 .endobj "@eti_800340AC"

@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_802293F0, global
 /* 802293F0 001F29B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802293F4 001F29B4  7C 08 02 A6 */	mflr r0
@@ -38,7 +36,7 @@
 /* 80229468 001F2A28  4E 80 00 20 */	blr 
 .endfn func_802293F0
 
-.fn __dt__8022946C, global
+.fn __dt__CQstLogInfo, global
 /* 8022946C 001F2A2C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80229470 001F2A30  7C 08 02 A6 */	mflr r0
 /* 80229474 001F2A34  2C 03 00 00 */	cmpwi r3, 0
@@ -61,7 +59,7 @@
 /* 802294B4 001F2A74  7C 08 03 A6 */	mtlr r0
 /* 802294B8 001F2A78  38 21 00 10 */	addi r1, r1, 0x10
 /* 802294BC 001F2A7C  4E 80 00 20 */	blr 
-.endfn __dt__8022946C
+.endfn __dt__CQstLogInfo
 
 .fn func_802294C0, global
 /* 802294C0 001F2A80  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2857,7 +2855,7 @@ jumptable_80539BF8:
 __vt__CQstLogInfo:
 	.4byte __RTTI__CQstLogInfo
 	.4byte 0
-	.4byte __dt__8022946C
+	.4byte __dt__CQstLogInfo
 	.4byte func_80039E28
 	.4byte func_8022B35C
 	.4byte func_80039E18
@@ -3073,7 +3071,7 @@ float_8066AE50:
 
 .obj "@eti_8002E3E8", local
 .hidden "@eti_8002E3E8"
-	.4byte __dt__8022946C
+	.4byte __dt__CQstLogInfo
 	.4byte 0x00000054
 	.4byte "@etb_80015528"
 .endobj "@eti_8002E3E8"

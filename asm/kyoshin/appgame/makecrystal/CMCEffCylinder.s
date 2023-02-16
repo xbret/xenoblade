@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_80225D00, global
 /* 80225D00 001EF2C0  3C C0 80 54 */	lis r6, __vt__CMCEffCylinder@ha
 /* 80225D04 001EF2C4  38 A0 00 00 */	li r5, 0
@@ -21,7 +19,7 @@
 /* 80225D34 001EF2F4  4E 80 00 20 */	blr 
 .endfn func_80225D00
 
-.fn __dt__80225D38, global
+.fn __dt__CMCEffCylinder, global
 /* 80225D38 001EF2F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80225D3C 001EF2FC  7C 08 02 A6 */	mflr r0
 /* 80225D40 001EF300  2C 03 00 00 */	cmpwi r3, 0
@@ -39,7 +37,7 @@
 /* 80225D6C 001EF32C  7C 08 03 A6 */	mtlr r0
 /* 80225D70 001EF330  38 21 00 10 */	addi r1, r1, 0x10
 /* 80225D74 001EF334  4E 80 00 20 */	blr 
-.endfn __dt__80225D38
+.endfn __dt__CMCEffCylinder
 
 .fn func_80225D78, global
 /* 80225D78 001EF338  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -524,7 +522,7 @@
 
 .obj "@eti_8002E124", local
 .hidden "@eti_8002E124"
-	.4byte __dt__80225D38
+	.4byte __dt__CMCEffCylinder
 	.4byte 0x00000040
 	.4byte "@etb_800151A4"
 .endobj "@eti_8002E124"

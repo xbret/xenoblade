@@ -2,9 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-
 .fn __ct__CDeviceFileDvd, global
 /* 80450B54 0041A114  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80450B58 0041A118  7C 08 02 A6 */	mflr r0
@@ -32,7 +29,7 @@
 /* 80450BB0 0041A170  4E 80 00 20 */	blr 
 .endfn __ct__CDeviceFileDvd
 
-.fn __dt__80450BB4, global
+.fn __dt__CDeviceFileDvd, global
 /* 80450BB4 0041A174  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80450BB8 0041A178  7C 08 02 A6 */	mflr r0
 /* 80450BBC 0041A17C  2C 03 00 00 */	cmpwi r3, 0
@@ -58,7 +55,7 @@
 /* 80450C08 0041A1C8  7C 08 03 A6 */	mtlr r0
 /* 80450C0C 0041A1CC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80450C10 0041A1D0  4E 80 00 20 */	blr 
-.endfn __dt__80450BB4
+.endfn __dt__CDeviceFileDvd
 
 .fn func_80450C14, global
 /* 80450C14 0041A1D4  80 6D BD D0 */	lwz r3, lbl_80667F50@sda21(r13)
@@ -1493,7 +1490,7 @@ lbl_805265D0:
 __vt__CDeviceFileDvd:
 	.4byte __RTTI__CDeviceFileDvd
 	.4byte 0
-	.4byte __dt__80450BB4
+	.4byte __dt__CDeviceFileDvd
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -1677,7 +1674,7 @@ lbl_80667F50:
 
 .obj "@eti_80034BA4", local
 .hidden "@eti_80034BA4"
-	.4byte __dt__80450BB4
+	.4byte __dt__CDeviceFileDvd
 	.4byte 0x00000060
 	.4byte "@etb_8001CF1C"
 .endobj "@eti_80034BA4"

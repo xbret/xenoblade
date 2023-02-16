@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__18CERandomizerSimpleFv, global
 /* 804DB438 004A49F8  C0 02 D6 58 */	lfs f0, float_8066D9D8@sda21(r2)
 /* 804DB43C 004A49FC  3C 80 80 57 */	lis r4, __vt__18CERandomizerSimple@ha

@@ -2,11 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-
-
-.fn __dt__801C4B74, global
+.fn __dt__CQuestItem, global
 /* 801C4B74 0018E134  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801C4B78 0018E138  7C 08 02 A6 */	mflr r0
 /* 801C4B7C 0018E13C  2C 03 00 00 */	cmpwi r3, 0
@@ -24,7 +20,7 @@
 /* 801C4BA8 0018E168  7C 08 03 A6 */	mtlr r0
 /* 801C4BAC 0018E16C  38 21 00 10 */	addi r1, r1, 0x10
 /* 801C4BB0 0018E170  4E 80 00 20 */	blr 
-.endfn __dt__801C4B74
+.endfn __dt__CQuestItem
 
 .fn func_801C4BB4, global
 /* 801C4BB4 0018E174  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -489,7 +485,7 @@
 
 .obj "@eti_8002B280", local
 .hidden "@eti_8002B280"
-	.4byte __dt__801C4B74
+	.4byte __dt__CQuestItem
 	.4byte 0x00000040
 	.4byte "@etb_800109A0"
 .endobj "@eti_8002B280"

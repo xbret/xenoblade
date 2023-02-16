@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_802AE43C, global
+.fn __ct__CLoad, global
 /* 802AE43C 002779FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802AE440 00277A00  7C 08 02 A6 */	mflr r0
 /* 802AE444 00277A04  3C A0 80 54 */	lis r5, __vt__CLoad@ha
@@ -35,9 +33,9 @@
 /* 802AE4A8 00277A68  7C 08 03 A6 */	mtlr r0
 /* 802AE4AC 00277A6C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802AE4B0 00277A70  4E 80 00 20 */	blr 
-.endfn func_802AE43C
+.endfn __ct__CLoad
 
-.fn __dt__802AE4B4, global
+.fn __dt__CLoad, global
 /* 802AE4B4 00277A74  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802AE4B8 00277A78  7C 08 02 A6 */	mflr r0
 /* 802AE4BC 00277A7C  2C 03 00 00 */	cmpwi r3, 0
@@ -60,7 +58,7 @@
 /* 802AE4FC 00277ABC  7C 08 03 A6 */	mtlr r0
 /* 802AE500 00277AC0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802AE504 00277AC4  4E 80 00 20 */	blr 
-.endfn __dt__802AE4B4
+.endfn __dt__CLoad
 
 .fn func_802AE508, global
 /* 802AE508 00277AC8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -478,7 +476,7 @@
 /* 802AEA98 00278058  3F E0 80 58 */	lis r31, lbl_8057AA58@ha
 /* 802AEA9C 0027805C  3B FF AA 58 */	addi r31, r31, lbl_8057AA58@l
 /* 802AEAA0 00278060  7F E3 FB 78 */	mr r3, r31
-/* 802AEAA4 00278064  48 24 66 B5 */	bl func_804F5158
+/* 802AEAA4 00278064  48 24 66 B5 */	bl __ct__CNBanner
 /* 802AEAA8 00278068  80 8D 95 78 */	lwz r4, lbl_806656F8@sda21(r13)
 /* 802AEAAC 0027806C  7F E3 FB 78 */	mr r3, r31
 /* 802AEAB0 00278070  48 24 68 49 */	bl func_804F52F8
@@ -521,7 +519,7 @@
 /* 802AEB38 002780F8  7C 7E 1B 78 */	mr r30, r3
 /* 802AEB3C 002780FC  41 82 00 1C */	beq .L_802AEB58
 /* 802AEB40 00278100  38 80 FF FF */	li r4, -1
-/* 802AEB44 00278104  48 24 66 E1 */	bl __dt__804F5224
+/* 802AEB44 00278104  48 24 66 E1 */	bl __dt__CNBanner
 /* 802AEB48 00278108  2C 1F 00 00 */	cmpwi r31, 0
 /* 802AEB4C 0027810C  40 81 00 0C */	ble .L_802AEB58
 /* 802AEB50 00278110  7F C3 F3 78 */	mr r3, r30
@@ -934,7 +932,7 @@ lbl_8050C808:
 __vt__CLoad:
 	.4byte __RTTI__CLoad
 	.4byte 0
-	.4byte __dt__802AE4B4
+	.4byte __dt__CLoad
 	.4byte func_80039E28
 	.4byte func_802AE8FC
 	.4byte func_80039E18
@@ -1187,7 +1185,7 @@ lbl_8057AA58:
 	.4byte 0x00000000
 	.4byte 0x8780001F
 	.4byte 0x00000000
-	.4byte __dt__804F5224
+	.4byte __dt__CNBanner
 .endobj "@etb_8001B54C"
 
 .obj "@etb_8001B568", local
@@ -1202,14 +1200,14 @@ lbl_8057AA58:
 
 .obj "@eti_8003317C", local
 .hidden "@eti_8003317C"
-	.4byte func_802AE43C
+	.4byte __ct__CLoad
 	.4byte 0x00000078
 	.4byte "@etb_8001B4D8"
 .endobj "@eti_8003317C"
 
 .obj "@eti_80033188", local
 .hidden "@eti_80033188"
-	.4byte __dt__802AE4B4
+	.4byte __dt__CLoad
 	.4byte 0x00000054
 	.4byte "@etb_8001B4F4"
 .endobj "@eti_80033188"

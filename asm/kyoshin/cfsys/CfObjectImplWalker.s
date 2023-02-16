@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_800C2E3C, global
 /* 800C2E3C 0008C3FC  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 800C2E40 0008C400  7C 08 02 A6 */	mflr r0
@@ -2980,7 +2978,7 @@
 /* 800C5928 0008EEE8  4E 80 00 20 */	blr
 .endfn func_800C5928
 
-.fn __dt__800C592C, global
+.fn __dt__cf_CfObjectImplWalker, global
 /* 800C592C 0008EEEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800C5930 0008EEF0  7C 08 02 A6 */	mflr r0
 /* 800C5934 0008EEF4  2C 03 00 00 */	cmpwi r3, 0
@@ -2998,7 +2996,7 @@
 /* 800C5960 0008EF20  7C 08 03 A6 */	mtlr r0
 /* 800C5964 0008EF24  38 21 00 10 */	addi r1, r1, 0x10
 /* 800C5968 0008EF28  4E 80 00 20 */	blr 
-.endfn __dt__800C592C
+.endfn __dt__cf_CfObjectImplWalker
 
 
 .fn func_800C596C, global
@@ -3017,7 +3015,7 @@
 
 .fn func_800C5980, global
 /* 800C5980 0008EF40  38 63 FF F4 */	addi r3, r3, -12
-/* 800C5984 0008EF44  4B FF FF A8 */	b __dt__800C592C
+/* 800C5984 0008EF44  4B FF FF A8 */	b __dt__cf_CfObjectImplWalker
 .endfn func_800C5980
 
 .fn func_800C5988, global
@@ -3027,7 +3025,7 @@
 
 .fn func_800C5990, global
 /* 800C5990 0008EF50  38 63 FF F0 */	addi r3, r3, -16
-/* 800C5994 0008EF54  4B FF FF 98 */	b __dt__800C592C
+/* 800C5994 0008EF54  4B FF FF 98 */	b __dt__cf_CfObjectImplWalker
 .endfn func_800C5990
 
 
@@ -3083,7 +3081,7 @@ CfObjectImplWalker_strpool:
 __vt__cf_CfObjectImplWalker:
 	.4byte __RTTI__cf_CfObjectImplWalker
 	.4byte 0
-	.4byte __dt__800C592C
+	.4byte __dt__cf_CfObjectImplWalker
 	.4byte func_800C6F30
 	.4byte func_800C3658
 	.4byte func_800C70BC
@@ -3492,7 +3490,7 @@ float_80669488:
 
 .obj "@eti_80025D30", local
 .hidden "@eti_80025D30"
-	.4byte __dt__800C592C
+	.4byte __dt__cf_CfObjectImplWalker
 	.4byte 0x00000040
 	.4byte "@etb_8000A25C"
 .endobj "@eti_80025D30"

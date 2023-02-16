@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CMenuEnemyState, global
 /* 8010F170 000D8730  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8010F174 000D8734  7C 08 02 A6 */	mflr r0
@@ -156,7 +154,7 @@
 /* 8010F3BC 000D897C  4E 80 00 20 */	blr
 .endfn __ct__CMenuEnemyState
 
-.fn __dt__8010F3C0, global
+.fn __dt__CMenuEnemyState, global
 /* 8010F3C0 000D8980  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8010F3C4 000D8984  7C 08 02 A6 */	mflr r0
 /* 8010F3C8 000D8988  2C 03 00 00 */	cmpwi r3, 0
@@ -180,7 +178,7 @@
 /* 8010F40C 000D89CC  41 82 00 10 */	beq .L_8010F41C
 /* 8010F410 000D89D0  7F C3 F3 78 */	mr r3, r30
 /* 8010F414 000D89D4  38 80 00 00 */	li r4, 0
-/* 8010F418 000D89D8  48 33 57 21 */	bl __dt__80444B38
+/* 8010F418 000D89D8  48 33 57 21 */	bl __dt__CProcess
 .L_8010F41C:
 /* 8010F41C 000D89DC  2C 1F 00 00 */	cmpwi r31, 0
 /* 8010F420 000D89E0  40 81 00 0C */	ble .L_8010F42C
@@ -194,7 +192,7 @@
 /* 8010F43C 000D89FC  7C 08 03 A6 */	mtlr r0
 /* 8010F440 000D8A00  38 21 00 10 */	addi r1, r1, 0x10
 /* 8010F444 000D8A04  4E 80 00 20 */	blr 
-.endfn __dt__8010F3C0
+.endfn __dt__CMenuEnemyState
 
 .fn func_8010F448, global
 /* 8010F448 000D8A08  94 21 FF 20 */	stwu r1, -0xe0(r1)
@@ -4674,7 +4672,7 @@
 
 .fn func_801135C8, global
 /* 801135C8 000DCB88  38 63 FF A8 */	addi r3, r3, -88
-/* 801135CC 000DCB8C  4B FF BD F4 */	b __dt__8010F3C0
+/* 801135CC 000DCB8C  4B FF BD F4 */	b __dt__CMenuEnemyState
 .endfn func_801135C8
 
 .fn func_801135D0, global
@@ -4684,7 +4682,7 @@
 
 .fn func_801135D8, global
 /* 801135D8 000DCB98  38 63 FF A4 */	addi r3, r3, -92
-/* 801135DC 000DCB9C  4B FF BD E4 */	b __dt__8010F3C0
+/* 801135DC 000DCB9C  4B FF BD E4 */	b __dt__CMenuEnemyState
 .endfn func_801135D8
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
@@ -4797,7 +4795,7 @@ CMenuEnemyState_strpool:
 __vt__CMenuEnemyState:
 	.4byte __RTTI__CMenuEnemyState
 	.4byte 0
-	.4byte __dt__8010F3C0
+	.4byte __dt__CMenuEnemyState
 	.4byte CChildListNode_Reset
 	.4byte func_8010F448
 	.4byte func_8010FC70
@@ -4867,7 +4865,7 @@ CMenuEnemyState_hierarchy:
 __vt__CPcSelectCursor:
 	.4byte __RTTI__CPcSelectCursor
 	.4byte 0
-	.4byte __dt__8010EAE8
+	.4byte __dt__CPcSelectCursor
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
@@ -5085,13 +5083,13 @@ lbl_80666890:
 	.4byte 0x00000000
 	.4byte 0x0780001F
 	.4byte 0x000007E4
-	.4byte __dt__8010EAE8
+	.4byte __dt__CPcSelectCursor
 	.4byte 0x0780001F
 	.4byte 0x00000064
 	.4byte __dt__8045F580
 	.4byte 0x0680001F
 	.4byte 0x0000005C
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x0680001F
 	.4byte 0x00000058
 	.4byte __dt__IWorkEvent
@@ -5110,16 +5108,16 @@ lbl_80666890:
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x000007E4
-	.4byte __dt__8010EAE8
+	.4byte __dt__CPcSelectCursor
 	.4byte 0x0780001E
 	.4byte 0x000007E4
-	.4byte __dt__8010EAE8
+	.4byte __dt__CPcSelectCursor
 	.4byte 0x0780001E
 	.4byte 0x00000064
 	.4byte __dt__8045F580
 	.4byte 0x0680001E
 	.4byte 0x0000005C
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x8680001E
 	.4byte 0x00000058
 	.4byte __dt__IWorkEvent
@@ -5242,7 +5240,7 @@ lbl_80666890:
 
 .obj "@eti_80026A8C", local
 .hidden "@eti_80026A8C"
-	.4byte __dt__8010F3C0
+	.4byte __dt__CMenuEnemyState
 	.4byte 0x00000088
 	.4byte "@etb_8000B3CC"
 .endobj "@eti_80026A8C"

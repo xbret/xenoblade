@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_80192DE8, global
+.fn __ct__cf_CPartsChange, global
 /* 80192DE8 0015C3A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80192DEC 0015C3AC  7C 08 02 A6 */	mflr r0
 /* 80192DF0 0015C3B0  3C 80 80 53 */	lis r4, __vt__cf_CPartsChange@ha
@@ -27,9 +25,9 @@
 /* 80192E34 0015C3F4  7C 08 03 A6 */	mtlr r0
 /* 80192E38 0015C3F8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80192E3C 0015C3FC  4E 80 00 20 */	blr 
-.endfn func_80192DE8
+.endfn __ct__cf_CPartsChange
 
-.fn __dt__80192E40, global
+.fn __dt__cf_CPartsChange, global
 /* 80192E40 0015C400  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80192E44 0015C404  7C 08 02 A6 */	mflr r0
 /* 80192E48 0015C408  2C 03 00 00 */	cmpwi r3, 0
@@ -47,7 +45,7 @@
 /* 80192E74 0015C434  7C 08 03 A6 */	mtlr r0
 /* 80192E78 0015C438  38 21 00 10 */	addi r1, r1, 0x10
 /* 80192E7C 0015C43C  4E 80 00 20 */	blr 
-.endfn __dt__80192E40
+.endfn __dt__cf_CPartsChange
 
 .fn func_80192E80, global
 /* 80192E80 0015C440  94 21 FF B0 */	stwu r1, -0x50(r1)
@@ -424,7 +422,7 @@
 /* 801933C8 0015C988  4E 80 00 20 */	blr 
 .endfn func_80193270
 
-.fn __dt__801933CC, global
+.fn __dt___reslist_base_cf_CfPartyInfo, global
 /* 801933CC 0015C98C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801933D0 0015C990  7C 08 02 A6 */	mflr r0
 /* 801933D4 0015C994  2C 03 00 00 */	cmpwi r3, 0
@@ -474,9 +472,9 @@
 /* 80193474 0015CA34  7C 08 03 A6 */	mtlr r0
 /* 80193478 0015CA38  38 21 00 10 */	addi r1, r1, 0x10
 /* 8019347C 0015CA3C  4E 80 00 20 */	blr 
-.endfn __dt__801933CC
+.endfn __dt___reslist_base_cf_CfPartyInfo
 
-.fn __dt__80193480, global
+.fn __dt__reslist_cf_CfPartyInfo, global
 /* 80193480 0015CA40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80193484 0015CA44  7C 08 02 A6 */	mflr r0
 /* 80193488 0015CA48  2C 03 00 00 */	cmpwi r3, 0
@@ -527,7 +525,7 @@
 /* 8019352C 0015CAEC  7C 08 03 A6 */	mtlr r0
 /* 80193530 0015CAF0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80193534 0015CAF4  4E 80 00 20 */	blr 
-.endfn __dt__80193480
+.endfn __dt__reslist_cf_CfPartyInfo
 
 .fn __dt__80193538, global
 /* 80193538 0015CAF8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -7401,7 +7399,7 @@ CPartsChange_strpool:
 __vt__cf_CPartsChange:
 	.4byte __RTTI__cf_CPartsChange
 	.4byte 0
-	.4byte __dt__80192E40
+	.4byte __dt__cf_CPartsChange
 	.4byte 0
 
 
@@ -7418,7 +7416,7 @@ lbl_80536270:
 __vt__reslist_cf_CfPartyInfo:
 	.4byte __RTTI__reslist_cf_CfPartyInfo
 	.4byte 0
-	.4byte __dt__80193480
+	.4byte __dt__reslist_cf_CfPartyInfo
 
 .global reslist_cf_CfPartyInfo_hierarchy
 reslist_cf_CfPartyInfo_hierarchy:
@@ -7431,7 +7429,7 @@ reslist_cf_CfPartyInfo_hierarchy:
 __vt___reslist_base_cf_CfPartyInfo:
 	.4byte __RTTI___reslist_base_cf_CfPartyInfo
 	.4byte 0
-	.4byte __dt__801933CC
+	.4byte __dt___reslist_base_cf_CfPartyInfo
 
 
 .global lbl_805362A8
@@ -7788,7 +7786,7 @@ lbl_80666C04:
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x0000A808
-	.4byte __dt__80193480
+	.4byte __dt__reslist_cf_CfPartyInfo
 .endobj "@etb_8000F338"
 
 .obj "@etb_8000F354", local
@@ -8079,14 +8077,14 @@ lbl_80666C04:
 
 .obj "@eti_8002A0C8", local
 .hidden "@eti_8002A0C8"
-	.4byte func_80192DE8
+	.4byte __ct__cf_CPartsChange
 	.4byte 0x00000058
 	.4byte "@etb_8000F308"
 .endobj "@eti_8002A0C8"
 
 .obj "@eti_8002A0D4", local
 .hidden "@eti_8002A0D4"
-	.4byte __dt__80192E40
+	.4byte __dt__cf_CPartsChange
 	.4byte 0x00000040
 	.4byte "@etb_8000F310"
 .endobj "@eti_8002A0D4"
@@ -8128,14 +8126,14 @@ lbl_80666C04:
 
 .obj "@eti_8002A11C", local
 .hidden "@eti_8002A11C"
-	.4byte __dt__801933CC
+	.4byte __dt___reslist_base_cf_CfPartyInfo
 	.4byte 0x000000B4
 	.4byte "@etb_8000F354"
 .endobj "@eti_8002A11C"
 
 .obj "@eti_8002A128", local
 .hidden "@eti_8002A128"
-	.4byte __dt__80193480
+	.4byte __dt__reslist_cf_CfPartyInfo
 	.4byte 0x000000B8
 	.4byte "@etb_8000F35C"
 .endobj "@eti_8002A128"

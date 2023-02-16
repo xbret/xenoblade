@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_80459864, global
 /* 80459864 00422E24  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80459868 00422E28  7C 08 02 A6 */	mflr r0
@@ -38,7 +36,7 @@
 /* 804598D8 00422E98  4E 80 00 20 */	blr
 .endfn func_80459864
 
-.fn __dt__804598DC, global
+.fn __dt__CLibCri, global
 /* 804598DC 00422E9C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804598E0 00422EA0  7C 08 02 A6 */	mflr r0
 /* 804598E4 00422EA4  2C 03 00 00 */	cmpwi r3, 0
@@ -65,7 +63,7 @@
 /* 80459934 00422EF4  90 0D BE 30 */	stw r0, lbl_80667FB0@sda21(r13)
 /* 80459938 00422EF8  38 7E 01 C4 */	addi r3, r30, 0x1c4
 /* 8045993C 00422EFC  38 80 00 00 */	li r4, 0
-/* 80459940 00422F00  4B FE F6 3D */	bl __dt__80448F7C
+/* 80459940 00422F00  4B FE F6 3D */	bl __dt__CDeviceVICb
 /* 80459944 00422F04  7F C3 F3 78 */	mr r3, r30
 /* 80459948 00422F08  38 80 00 00 */	li r4, 0
 /* 8045994C 00422F0C  4B FD E1 7D */	bl __dt__CWorkThread
@@ -81,7 +79,7 @@
 /* 80459970 00422F30  7C 08 03 A6 */	mtlr r0
 /* 80459974 00422F34  38 21 00 10 */	addi r1, r1, 0x10
 /* 80459978 00422F38  4E 80 00 20 */	blr 
-.endfn __dt__804598DC
+.endfn __dt__CLibCri
 
 .fn func_8045997C, global
 /* 8045997C 00422F3C  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -376,7 +374,7 @@
 
 .fn func_80459C80, global
 /* 80459C80 00423240  38 63 FE 3C */	addi r3, r3, -452
-/* 80459C84 00423244  4B FF FC 58 */	b __dt__804598DC
+/* 80459C84 00423244  4B FF FC 58 */	b __dt__CLibCri
 .endfn func_80459C80
 
 .fn func_80459C88, global
@@ -386,7 +384,7 @@
 
 .fn func_80459C90, global
 /* 80459C90 00423250  38 63 FE 38 */	addi r3, r3, -456
-/* 80459C94 00423254  4B FF FC 48 */	b __dt__804598DC
+/* 80459C94 00423254  4B FF FC 48 */	b __dt__CLibCri
 .endfn func_80459C90
 
 
@@ -410,7 +408,7 @@ lbl_805268F8:
 __vt__CLibCri:
 	.4byte __RTTI__CLibCri
 	.4byte 0
-	.4byte __dt__804598DC
+	.4byte __dt__CLibCri
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -519,7 +517,7 @@ lbl_80667FB4:
 	.4byte __dt__80447FDC
 	.4byte 0x0680001F
 	.4byte 0x000001C4
-	.4byte __dt__80448F7C
+	.4byte __dt__CDeviceVICb
 	.4byte 0x8680001F
 	.4byte 0x00000000
 	.4byte __dt__CWorkThread
@@ -540,7 +538,7 @@ lbl_80667FB4:
 	.4byte __dt__80447FDC
 	.4byte 0x0680001E
 	.4byte 0x000001C4
-	.4byte __dt__80448F7C
+	.4byte __dt__CDeviceVICb
 	.4byte 0x8680001E
 	.4byte 0x00000000
 	.4byte __dt__CWorkThread
@@ -552,7 +550,7 @@ lbl_80667FB4:
 	.4byte __dt__80447FDC
 	.4byte 0x8680001E
 	.4byte 0x000001C4
-	.4byte __dt__80448F7C
+	.4byte __dt__CDeviceVICb
 .endobj "@etb_8001D4E4"
 
 .obj "@etb_8001D54C", local
@@ -586,7 +584,7 @@ lbl_80667FB4:
 
 .obj "@eti_80035120", local
 .hidden "@eti_80035120"
-	.4byte __dt__804598DC
+	.4byte __dt__CLibCri
 	.4byte 0x000000A0
 	.4byte "@etb_8001D4E4"
 .endobj "@eti_80035120"

@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CWorkRootThread, global
 /* 80443B08 0040D0C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80443B0C 0040D0CC  7C 08 02 A6 */	mflr r0
@@ -143,7 +141,7 @@
 /* 80443CD8 0040D298  4E 80 00 20 */	blr 
 .endfn func_80443C8C
 
-.fn __dt__80443CDC, global
+.fn __dt___unnamed_CWorkRoot_cpp_CWorkRootThread, global
 /* 80443CDC 0040D29C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80443CE0 0040D2A0  7C 08 02 A6 */	mflr r0
 /* 80443CE4 0040D2A4  2C 03 00 00 */	cmpwi r3, 0
@@ -155,12 +153,12 @@
 /* 80443CFC 0040D2BC  34 63 01 E4 */	addic. r3, r3, 0x1e4
 /* 80443D00 0040D2C0  41 82 00 0C */	beq .L_80443D0C
 /* 80443D04 0040D2C4  38 80 00 00 */	li r4, 0
-/* 80443D08 0040D2C8  4B FF 3B FD */	bl __dt__80437904
+/* 80443D08 0040D2C8  4B FF 3B FD */	bl __dt___reslist_base_CWorkThread
 .L_80443D0C:
 /* 80443D0C 0040D2CC  34 7E 01 C4 */	addic. r3, r30, 0x1c4
 /* 80443D10 0040D2D0  41 82 00 0C */	beq .L_80443D1C
 /* 80443D14 0040D2D4  38 80 00 00 */	li r4, 0
-/* 80443D18 0040D2D8  4B FF 3B ED */	bl __dt__80437904
+/* 80443D18 0040D2D8  4B FF 3B ED */	bl __dt___reslist_base_CWorkThread
 .L_80443D1C:
 /* 80443D1C 0040D2DC  7F C3 F3 78 */	mr r3, r30
 /* 80443D20 0040D2E0  38 80 00 00 */	li r4, 0
@@ -176,7 +174,7 @@
 /* 80443D44 0040D304  7C 08 03 A6 */	mtlr r0
 /* 80443D48 0040D308  38 21 00 10 */	addi r1, r1, 0x10
 /* 80443D4C 0040D30C  4E 80 00 20 */	blr 
-.endfn __dt__80443CDC
+.endfn __dt___unnamed_CWorkRoot_cpp_CWorkRootThread
 
 .fn func_80443D50, global
 /* 80443D50 0040D310  2C 04 00 00 */	cmpwi r4, 0
@@ -745,7 +743,7 @@ CWorkRoot_strpool:
 __vt___unnamed_CWorkRoot_cpp_CWorkRootThread:
 	.4byte __RTTI___unnamed_CWorkRoot_cpp_CWorkRootThread
 	.4byte 0
-	.4byte __dt__80443CDC
+	.4byte __dt___unnamed_CWorkRoot_cpp_CWorkRootThread
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -839,10 +837,10 @@ lbl_80667EF0:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x000001E4
-	.4byte __dt__804379B8
+	.4byte __dt__reslist_CWorkThread
 	.4byte 0x0780001E
 	.4byte 0x000001C4
-	.4byte __dt__804379B8
+	.4byte __dt__reslist_CWorkThread
 	.4byte 0x8680001E
 	.4byte 0x00000000
 	.4byte __dt__CWorkThread
@@ -868,10 +866,10 @@ lbl_80667EF0:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x000001E4
-	.4byte __dt__804379B8
+	.4byte __dt__reslist_CWorkThread
 	.4byte 0x8780001E
 	.4byte 0x000001C4
-	.4byte __dt__804379B8
+	.4byte __dt__reslist_CWorkThread
 .endobj "@etb_8001C7B8"
 
 .obj "@etb_8001C7E0", local
@@ -967,7 +965,7 @@ lbl_80667EF0:
 
 .obj "@eti_800343A0", local
 .hidden "@eti_800343A0"
-	.4byte __dt__80443CDC
+	.4byte __dt___unnamed_CWorkRoot_cpp_CWorkRootThread
 	.4byte 0x00000074
 	.4byte "@etb_8001C7B8"
 .endobj "@eti_800343A0"

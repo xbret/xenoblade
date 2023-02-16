@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
 .fn SJUNI_Error, global
 /* 80395678 0035EC38  3C 60 80 52 */	lis r3, sj_uni_strpool@ha
 /* 8039567C 0035EC3C  38 63 C4 40 */	addi r3, r3, sj_uni_strpool@l

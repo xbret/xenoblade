@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_804B59C8, global
 /* 804B59C8 0047EF88  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804B59CC 0047EF8C  E0 03 00 50 */	psq_l f0, 80(r3), 0, qr0

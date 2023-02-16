@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_80059EB8, global
+.fn __ct__CTimeLightGrp, global
 /* 80059EB8 00023478  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80059EBC 0002347C  7C 08 02 A6 */	mflr r0
 /* 80059EC0 00023480  3C A0 80 53 */	lis r5, __vt__CTimeLightGrp@ha
@@ -103,7 +101,7 @@
 /* 8005A030 000235F0  7C 08 03 A6 */	mtlr r0
 /* 8005A034 000235F4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8005A038 000235F8  4E 80 00 20 */	blr 
-.endfn func_80059EB8
+.endfn __ct__CTimeLightGrp
 
 .fn __dt__8005A03C, global
 /* 8005A03C 000235FC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -125,7 +123,7 @@
 /* 8005A078 00023638  4E 80 00 20 */	blr 
 .endfn __dt__8005A03C
 
-.fn __dt__8005A07C, global
+.fn __dt___reslist_base_CVirtualLightObj, global
 /* 8005A07C 0002363C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8005A080 00023640  7C 08 02 A6 */	mflr r0
 /* 8005A084 00023644  2C 03 00 00 */	cmpwi r3, 0
@@ -175,9 +173,9 @@
 /* 8005A124 000236E4  7C 08 03 A6 */	mtlr r0
 /* 8005A128 000236E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8005A12C 000236EC  4E 80 00 20 */	blr 
-.endfn __dt__8005A07C
+.endfn __dt___reslist_base_CVirtualLightObj
 
-.fn __dt__8005A130, global
+.fn __dt__reslist_CVirtualLightObj, global
 /* 8005A130 000236F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8005A134 000236F4  7C 08 02 A6 */	mflr r0
 /* 8005A138 000236F8  2C 03 00 00 */	cmpwi r3, 0
@@ -228,9 +226,9 @@
 /* 8005A1DC 0002379C  7C 08 03 A6 */	mtlr r0
 /* 8005A1E0 000237A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8005A1E4 000237A4  4E 80 00 20 */	blr 
-.endfn __dt__8005A130
+.endfn __dt__reslist_CVirtualLightObj
 
-.fn __dt__8005A1E8, global
+.fn __dt__CTimeLightGrp, global
 /* 8005A1E8 000237A8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8005A1EC 000237AC  7C 08 02 A6 */	mflr r0
 /* 8005A1F0 000237B0  2C 03 00 00 */	cmpwi r3, 0
@@ -303,7 +301,7 @@
 /* 8005A2E4 000238A4  7C 08 03 A6 */	mtlr r0
 /* 8005A2E8 000238A8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8005A2EC 000238AC  4E 80 00 20 */	blr 
-.endfn __dt__8005A1E8
+.endfn __dt__CTimeLightGrp
 
 .fn func_8005A2F0, global
 /* 8005A2F0 000238B0  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -394,7 +392,7 @@
 __vt__CTimeLightGrp:
 	.4byte __RTTI__CTimeLightGrp
 	.4byte 0
-	.4byte __dt__8005A1E8
+	.4byte __dt__CTimeLightGrp
 
 .global CTimeLightGrp_hierarchy
 CTimeLightGrp_hierarchy:
@@ -407,7 +405,7 @@ CTimeLightGrp_hierarchy:
 __vt__reslist_CVirtualLightObj:
 	.4byte __RTTI__reslist_CVirtualLightObj
 	.4byte 0
-	.4byte __dt__8005A130
+	.4byte __dt__reslist_CVirtualLightObj
 
 .global reslist_CVirtualLightObj_hierarchy
 reslist_CVirtualLightObj_hierarchy:
@@ -420,7 +418,7 @@ reslist_CVirtualLightObj_hierarchy:
 __vt___reslist_base_CVirtualLightObj:
 	.4byte __RTTI___reslist_base_CVirtualLightObj
 	.4byte 0
-	.4byte __dt__8005A07C
+	.4byte __dt___reslist_base_CVirtualLightObj
 	.4byte 0
 
 
@@ -493,7 +491,7 @@ float_806688C8:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000008
-	.4byte __dt__8005A130
+	.4byte __dt__reslist_CVirtualLightObj
 	.4byte 0x8680001E
 	.4byte 0x00000000
 	.4byte __dt__8005A03C
@@ -541,7 +539,7 @@ float_806688C8:
 
 .obj "@eti_8002279C", local
 .hidden "@eti_8002279C"
-	.4byte func_80059EB8
+	.4byte __ct__CTimeLightGrp
 	.4byte 0x00000184
 	.4byte "@etb_80007794"
 .endobj "@eti_8002279C"
@@ -555,21 +553,21 @@ float_806688C8:
 
 .obj "@eti_800227B4", local
 .hidden "@eti_800227B4"
-	.4byte __dt__8005A07C
+	.4byte __dt___reslist_base_CVirtualLightObj
 	.4byte 0x000000B4
 	.4byte "@etb_800077C4"
 .endobj "@eti_800227B4"
 
 .obj "@eti_800227C0", local
 .hidden "@eti_800227C0"
-	.4byte __dt__8005A130
+	.4byte __dt__reslist_CVirtualLightObj
 	.4byte 0x000000B8
 	.4byte "@etb_800077CC"
 .endobj "@eti_800227C0"
 
 .obj "@eti_800227CC", local
 .hidden "@eti_800227CC"
-	.4byte __dt__8005A1E8
+	.4byte __dt__CTimeLightGrp
 	.4byte 0x00000108
 	.4byte "@etb_800077D4"
 .endobj "@eti_800227CC"

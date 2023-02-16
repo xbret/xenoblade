@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
 .fn MPVERR_Init, global
 /* 803A6154 0036F714  3C 80 80 60 */	lis r4, lbl_80605F38@ha
 /* 803A6158 0036F718  38 00 00 00 */	li r0, 0

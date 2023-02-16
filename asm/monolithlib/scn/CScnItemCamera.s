@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_8049E8C4, global
+.fn __ct__CScnItemCamera, global
 /* 8049E8C4 00467E84  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8049E8C8 00467E88  7C 08 02 A6 */	mflr r0
 /* 8049E8CC 00467E8C  3C C0 80 57 */	lis r6, __vt__CScnItemCamera@ha
@@ -122,7 +120,7 @@
 /* 8049EA8C 0046804C  7C 08 03 A6 */	mtlr r0
 /* 8049EA90 00468050  38 21 00 40 */	addi r1, r1, 0x40
 /* 8049EA94 00468054  4E 80 00 20 */	blr
-.endfn func_8049E8C4
+.endfn __ct__CScnItemCamera
 
 .fn func_8049EA98, global
 /* 8049EA98 00468058  4E 80 00 20 */	blr
@@ -148,7 +146,7 @@
 /* 8049EAD8 00468098  4E 80 00 20 */	blr 
 .endfn __dt__8049EA9C
 
-.fn __dt__8049EADC, global
+.fn __dt__CScnItemCamera, global
 /* 8049EADC 0046809C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8049EAE0 004680A0  7C 08 02 A6 */	mflr r0
 /* 8049EAE4 004680A4  2C 03 00 00 */	cmpwi r3, 0
@@ -183,7 +181,7 @@
 /* 8049EB54 00468114  7C 08 03 A6 */	mtlr r0
 /* 8049EB58 00468118  38 21 00 20 */	addi r1, r1, 0x20
 /* 8049EB5C 0046811C  4E 80 00 20 */	blr 
-.endfn __dt__8049EADC
+.endfn __dt__CScnItemCamera
 
 .fn func_8049EB60, global
 /* 8049EB60 00468120  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1177,7 +1175,7 @@
 /* 8049FA2C 00468FEC  90 3F 00 44 */	stw r1, 0x44(r31)
 /* 8049FA30 00468FF0  7F C4 F3 78 */	mr r4, r30
 /* 8049FA34 00468FF4  38 BF 00 48 */	addi r5, r31, 0x48
-/* 8049FA38 00468FF8  4B FE 24 35 */	bl func_80481E6C
+/* 8049FA38 00468FF8  4B FE 24 35 */	bl __ct__CScnItemCameraNw4r
 /* 8049FA3C 00468FFC  48 00 00 14 */	b .L_8049FA50
 /* 8049FA40 00469000  38 60 00 00 */	li r3, 0
 /* 8049FA44 00469004  38 80 00 00 */	li r4, 0
@@ -1369,7 +1367,7 @@ lbl_80527B80:
 __vt__CScnItemCamera:
 	.4byte __RTTI__CScnItemCamera
 	.4byte 0
-	.4byte __dt__8049EADC
+	.4byte __dt__CScnItemCamera
 	.4byte func_8049F9A4
 	.4byte func_80482048
 	.4byte func_8049F8E4
@@ -1595,7 +1593,7 @@ lbl_8065AF1C:
 
 .obj "@eti_800371E4", local
 .hidden "@eti_800371E4"
-	.4byte func_8049E8C4
+	.4byte __ct__CScnItemCamera
 	.4byte 0x000001D4
 	.4byte "@etb_8001F75C"
 .endobj "@eti_800371E4"
@@ -1609,7 +1607,7 @@ lbl_8065AF1C:
 
 .obj "@eti_800371FC", local
 .hidden "@eti_800371FC"
-	.4byte __dt__8049EADC
+	.4byte __dt__CScnItemCamera
 	.4byte 0x00000084
 	.4byte "@etb_8001F7B8"
 .endobj "@eti_800371FC"

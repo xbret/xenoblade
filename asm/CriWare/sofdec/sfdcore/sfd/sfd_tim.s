@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
 .fn SFTIM_Init, global
 /* 803CC71C 00395CDC  3C A0 66 66 */	lis r5, 0x66666667@ha
 /* 803CC720 00395CE0  38 E0 00 00 */	li r7, 0

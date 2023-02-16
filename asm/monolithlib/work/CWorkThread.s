@@ -2,9 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-
 .fn __ct__CWorkThread, global
 /* 804375BC 00400B7C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804375C0 00400B80  7C 08 02 A6 */	mflr r0
@@ -237,7 +234,7 @@
 /* 80437900 00400EC0  4E 80 00 20 */	blr 
 .endfn __ct__CWorkThread
 
-.fn __dt__80437904, global
+.fn __dt___reslist_base_CWorkThread, global
 /* 80437904 00400EC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80437908 00400EC8  7C 08 02 A6 */	mflr r0
 /* 8043790C 00400ECC  2C 03 00 00 */	cmpwi r3, 0
@@ -287,9 +284,9 @@
 /* 804379AC 00400F6C  7C 08 03 A6 */	mtlr r0
 /* 804379B0 00400F70  38 21 00 10 */	addi r1, r1, 0x10
 /* 804379B4 00400F74  4E 80 00 20 */	blr 
-.endfn __dt__80437904
+.endfn __dt___reslist_base_CWorkThread
 
-.fn __dt__804379B8, global
+.fn __dt__reslist_CWorkThread, global
 /* 804379B8 00400F78  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804379BC 00400F7C  7C 08 02 A6 */	mflr r0
 /* 804379C0 00400F80  2C 03 00 00 */	cmpwi r3, 0
@@ -340,9 +337,9 @@
 /* 80437A64 00401024  7C 08 03 A6 */	mtlr r0
 /* 80437A68 00401028  38 21 00 10 */	addi r1, r1, 0x10
 /* 80437A6C 0040102C  4E 80 00 20 */	blr 
-.endfn __dt__804379B8
+.endfn __dt__reslist_CWorkThread
 
-.fn __dt__80437A70, global
+.fn __dt__CMsgParam_8, global
 /* 80437A70 00401030  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80437A74 00401034  7C 08 02 A6 */	mflr r0
 /* 80437A78 00401038  2C 03 00 00 */	cmpwi r3, 0
@@ -367,7 +364,7 @@
 /* 80437ABC 0040107C  7C 08 03 A6 */	mtlr r0
 /* 80437AC0 00401080  38 21 00 10 */	addi r1, r1, 0x10
 /* 80437AC4 00401084  4E 80 00 20 */	blr 
-.endfn __dt__80437A70
+.endfn __dt__CMsgParam_8
 
 .fn __dt__CWorkThread, global
 /* 80437AC8 00401088  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1771,14 +1768,14 @@ __vt__CWorkThread:
 __vt__CMsgParam_8:
 	.4byte __RTTI__CMsgParam_8
 	.4byte 0
-	.4byte __dt__80437A70
+	.4byte __dt__CMsgParam_8
 
 
 .global __vt__reslist_CWorkThread
 __vt__reslist_CWorkThread:
 	.4byte __RTTI__reslist_CWorkThread
 	.4byte 0
-	.4byte __dt__804379B8
+	.4byte __dt__reslist_CWorkThread
 
 .global reslist_CWorkThread_hierarchy
 reslist_CWorkThread_hierarchy:
@@ -1791,7 +1788,7 @@ reslist_CWorkThread_hierarchy:
 __vt___reslist_base_CWorkThread:
 	.4byte __RTTI___reslist_base_CWorkThread
 	.4byte 0
-	.4byte __dt__80437904
+	.4byte __dt___reslist_base_CWorkThread
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -1825,10 +1822,10 @@ __RTTI___reslist_base_CWorkThread:
 	.4byte 0x00000000
 	.4byte 0x0780001D
 	.4byte 0x00000080
-	.4byte __dt__80437A70
+	.4byte __dt__CMsgParam_8
 	.4byte 0x0780001D
 	.4byte 0x0000005C
-	.4byte __dt__804379B8
+	.4byte __dt__reslist_CWorkThread
 	.4byte 0x8680001D
 	.4byte 0x00000000
 	.4byte __dt__IWorkEvent
@@ -1943,21 +1940,21 @@ __RTTI___reslist_base_CWorkThread:
 
 .obj "@eti_80033D58", local
 .hidden "@eti_80033D58"
-	.4byte __dt__80437904
+	.4byte __dt___reslist_base_CWorkThread
 	.4byte 0x000000B4
 	.4byte "@etb_8001C134"
 .endobj "@eti_80033D58"
 
 .obj "@eti_80033D64", local
 .hidden "@eti_80033D64"
-	.4byte __dt__804379B8
+	.4byte __dt__reslist_CWorkThread
 	.4byte 0x000000B8
 	.4byte "@etb_8001C13C"
 .endobj "@eti_80033D64"
 
 .obj "@eti_80033D70", local
 .hidden "@eti_80033D70"
-	.4byte __dt__80437A70
+	.4byte __dt__CMsgParam_8
 	.4byte 0x00000058
 	.4byte "@etb_8001C144"
 .endobj "@eti_80033D70"

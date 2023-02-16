@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
 .fn func_802138B8, global
 /* 802138B8 001DCE78  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802138BC 001DCE7C  7C 08 02 A6 */	mflr r0
@@ -464,7 +463,7 @@
 /* 80213F08 001DD4C8  4E 80 00 20 */	blr 
 .endfn __dt__80213ECC
 
-.fn __dt__80213F0C, global
+.fn __dt__CMCCrystalBox, global
 /* 80213F0C 001DD4CC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80213F10 001DD4D0  7C 08 02 A6 */	mflr r0
 /* 80213F14 001DD4D4  2C 03 00 00 */	cmpwi r3, 0
@@ -520,7 +519,7 @@
 /* 80213FD8 001DD598  7C 08 03 A6 */	mtlr r0
 /* 80213FDC 001DD59C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80213FE0 001DD5A0  4E 80 00 20 */	blr 
-.endfn __dt__80213F0C
+.endfn __dt__CMCCrystalBox
 
 .fn func_80213FE4, global
 /* 80213FE4 001DD5A4  94 21 FE 10 */	stwu r1, -0x1f0(r1)
@@ -7873,7 +7872,7 @@ jumptable_805393D8:
 __vt__CMCCrystalBox:
 	.4byte __RTTI__CMCCrystalBox
 	.4byte 0
-	.4byte __dt__80213F0C
+	.4byte __dt__CMCCrystalBox
 	.4byte func_80039E28
 	.4byte func_80219D24
 	.4byte func_80039E18
@@ -8869,7 +8868,7 @@ lbl_80666FC0:
 
 .obj "@eti_8002D494", local
 .hidden "@eti_8002D494"
-	.4byte __dt__80213F0C
+	.4byte __dt__CMCCrystalBox
 	.4byte 0x000000D8
 	.4byte "@etb_800136BC"
 .endobj "@eti_8002D494"

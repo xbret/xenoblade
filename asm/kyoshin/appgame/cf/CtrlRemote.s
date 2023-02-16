@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_80098BE4, global
 /* 80098BE4 000621A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098BE8 000621A8  7C 08 02 A6 */	mflr r0
@@ -5198,7 +5196,7 @@ lbl_804F7490:
 __vt__cf_CtrlRemote:
 	.4byte __RTTI__cf_CtrlRemote
 	.4byte 0
-	.4byte __dt__8009691C
+	.4byte __dt__cf_CtrlRemote
 	.4byte func_80098CB8
 	.4byte func_8009C860
 	.4byte func_8009C87C
@@ -5408,7 +5406,7 @@ lbl_80666780:
 	.4byte 0x00000000
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte __dt__800970D0
+	.4byte __dt__cf_CtrlPc
 .endobj "@etb_80008EA0"
 
 .obj "@etb_80008EBC", local

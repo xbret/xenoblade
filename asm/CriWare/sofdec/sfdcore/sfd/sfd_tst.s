@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
 .fn SFTST_Create, global
 /* 803CF0E8 003986A8  94 21 FE D0 */	stwu r1, -0x130(r1)
 /* 803CF0EC 003986AC  7C 08 02 A6 */	mflr r0

@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CBgTex, global
 /* 801C3974 0018CF34  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801C3978 0018CF38  7C 08 02 A6 */	mflr r0

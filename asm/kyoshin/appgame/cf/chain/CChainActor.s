@@ -425,7 +425,7 @@
 /* 80277188 00240748  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8027718C 0024074C  7C 7D 1B 78 */	mr r29, r3
 /* 80277190 00240750  38 63 00 18 */	addi r3, r3, 0x18
-/* 80277194 00240754  48 00 38 BD */	bl func_8027AA50
+/* 80277194 00240754  48 00 38 BD */	bl __ct__cf_CChainActorList
 /* 80277198 00240758  3C 80 80 54 */	lis r4, __vt__cf_CChainMember@ha
 /* 8027719C 0024075C  38 7D 1D C8 */	addi r3, r29, 0x1dc8
 /* 802771A0 00240760  38 84 BA 3C */	addi r4, r4, __vt__cf_CChainMember@l
@@ -4569,7 +4569,7 @@
 /* 8027AA0C 00243FCC  4E 80 00 20 */	blr 
 .endfn func_8027AA0C
 
-.fn __dt__8027AA10, global
+.fn __dt__cf_CChainActor, global
 /* 8027AA10 00243FD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027AA14 00243FD4  7C 08 02 A6 */	mflr r0
 /* 8027AA18 00243FD8  2C 03 00 00 */	cmpwi r3, 0
@@ -4587,7 +4587,7 @@
 /* 8027AA44 00244004  7C 08 03 A6 */	mtlr r0
 /* 8027AA48 00244008  38 21 00 10 */	addi r1, r1, 0x10
 /* 8027AA4C 0024400C  4E 80 00 20 */	blr 
-.endfn __dt__8027AA10
+.endfn __dt__cf_CChainActor
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -4674,28 +4674,28 @@ jumptable_8053B9B8:
 __vt__cf_CChainChance:
 	.4byte __RTTI__cf_CChainChance
 	.4byte 0
-	.4byte __dt__800D8C5C
+	.4byte __dt__cf_CChainChance
 
 
 .global __vt__cf_CChainTimer
 __vt__cf_CChainTimer:
 	.4byte __RTTI__cf_CChainTimer
 	.4byte 0
-	.4byte __dt__800D8C9C
+	.4byte __dt__cf_CChainTimer
 
 
 .global __vt__cf_CChainMember
 __vt__cf_CChainMember:
 	.4byte __RTTI__cf_CChainMember
 	.4byte 0
-	.4byte __dt__800D8D7C
+	.4byte __dt__cf_CChainMember
 
 
 .global __vt__cf_CChainActor
 __vt__cf_CChainActor:
 	.4byte __RTTI__cf_CChainActor
 	.4byte 0
-	.4byte __dt__8027AA10
+	.4byte __dt__cf_CChainActor
 	.4byte func_80279B24
 	.4byte func_80279B34
 	.4byte func_80279DC0
@@ -4899,25 +4899,25 @@ float_8066B308:
 	.4byte 0x00000000
 	.4byte 0x0780001D
 	.4byte 0x00001EF4
-	.4byte __dt__800D8C1C
+	.4byte __dt__cf_CChainCombo
 	.4byte 0x0780001D
 	.4byte 0x00001EDC
-	.4byte __dt__800D8C5C
+	.4byte __dt__cf_CChainChance
 	.4byte 0x0780001D
 	.4byte 0x00001EC4
-	.4byte __dt__800D8CDC
+	.4byte __dt__cf_CChainTime
 	.4byte 0x0780001D
 	.4byte 0x00001EBC
-	.4byte __dt__800D8C9C
+	.4byte __dt__cf_CChainTimer
 	.4byte 0x0780001D
 	.4byte 0x00001EB4
-	.4byte __dt__800D8C9C
+	.4byte __dt__cf_CChainTimer
 	.4byte 0x0780001D
 	.4byte 0x00001DC8
-	.4byte __dt__800D8D7C
+	.4byte __dt__cf_CChainMember
 	.4byte 0x8780001D
 	.4byte 0x00000018
-	.4byte __dt__8027AF5C
+	.4byte __dt__cf_CChainActorList
 .endobj "@etb_800186D8"
 
 .obj "@etb_80018754", local
@@ -5286,7 +5286,7 @@ float_8066B308:
 
 .obj "@eti_80030E78", local
 .hidden "@eti_80030E78"
-	.4byte __dt__8027AA10
+	.4byte __dt__cf_CChainActor
 	.4byte 0x00000040
 	.4byte "@etb_80018814"
 .endobj "@eti_80030E78"

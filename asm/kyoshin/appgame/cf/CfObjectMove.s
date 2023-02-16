@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_800BBC4C, global
+.fn __ct__cf_CfObjectMove, global
 /* 800BBC4C 0008520C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800BBC50 00085210  7C 08 02 A6 */	mflr r0
 /* 800BBC54 00085214  90 01 00 14 */	stw r0, 0x14(r1)
@@ -77,7 +75,7 @@
 /* 800BBD60 00085320  7C 08 03 A6 */	mtlr r0
 /* 800BBD64 00085324  38 21 00 10 */	addi r1, r1, 0x10
 /* 800BBD68 00085328  4E 80 00 20 */	blr 
-.endfn func_800BBC4C
+.endfn __ct__cf_CfObjectMove
 
 .fn __dt__800BBD6C, global
 /* 800BBD6C 0008532C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -106,7 +104,7 @@
 /* 800BBDC4 00085384  48 3F 4B 99 */	bl __dt__804B095C
 /* 800BBDC8 00085388  38 7E 00 D0 */	addi r3, r30, 0xd0
 /* 800BBDCC 0008538C  38 80 FF FF */	li r4, -1
-/* 800BBDD0 00085390  4B F9 E6 FD */	bl __dt__8005A4CC
+/* 800BBDD0 00085390  4B F9 E6 FD */	bl __dt__cf_CActParamAnimGame
 /* 800BBDD4 00085394  7F C3 F3 78 */	mr r3, r30
 /* 800BBDD8 00085398  38 80 00 00 */	li r4, 0
 /* 800BBDDC 0008539C  4B FF EB 6D */	bl __dt__800BA948
@@ -2027,7 +2025,7 @@
 /* 800BD8C4 00086E84  2C 03 00 00 */	cmpwi r3, 0
 /* 800BD8C8 00086E88  41 82 00 0C */	beq .L_800BD8D4
 /* 800BD8CC 00086E8C  7F 84 E3 78 */	mr r4, r28
-/* 800BD8D0 00086E90  4B FC 9C D9 */	bl func_800875A8
+/* 800BD8D0 00086E90  4B FC 9C D9 */	bl __ct__cf_CtrlEnemy
 .L_800BD8D4:
 /* 800BD8D4 00086E94  7C 7F 1B 78 */	mr r31, r3
 /* 800BD8D8 00086E98  48 00 00 FC */	b .L_800BD9D4
@@ -4395,7 +4393,7 @@ float_806693A0:
 	.4byte __dt__804B095C
 	.4byte 0x0780001E
 	.4byte 0x000000D0
-	.4byte __dt__8005A4CC
+	.4byte __dt__cf_CActParamAnimGame
 	.4byte 0x8680001E
 	.4byte 0x00000000
 	.4byte __dt__800BA948
@@ -4416,7 +4414,7 @@ float_806693A0:
 	.4byte __dt__804B095C
 	.4byte 0x0780001E
 	.4byte 0x000000D0
-	.4byte __dt__8005A4CC
+	.4byte __dt__cf_CActParamAnimGame
 	.4byte 0x8680001E
 	.4byte 0x00000000
 	.4byte __dt__800BA948
@@ -4428,7 +4426,7 @@ float_806693A0:
 	.4byte __dt__804B095C
 	.4byte 0x8780001E
 	.4byte 0x000000D0
-	.4byte __dt__8005A4CC
+	.4byte __dt__cf_CActParamAnimGame
 .endobj "@etb_80009CD0"
 
 .obj "@etb_80009D38", local
@@ -4725,7 +4723,7 @@ float_806693A0:
 
 .obj "@eti_80025784", local
 .hidden "@eti_80025784"
-	.4byte func_800BBC4C
+	.4byte __ct__cf_CfObjectMove
 	.4byte 0x00000120
 	.4byte "@etb_80009C8C"
 .endobj "@eti_80025784"

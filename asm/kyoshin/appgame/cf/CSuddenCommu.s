@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_801BA14C, global
 /* 801BA14C 0018370C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801BA150 00183710  7C 08 02 A6 */	mflr r0
@@ -2956,7 +2954,7 @@ cf_CSuddenCommu_typestr:
 __vt__cf_CSuddenCommu:
 	.4byte __RTTI__cf_CSuddenCommu
 	.4byte 0
-	.4byte __dt__800D8EB0
+	.4byte __dt__cf_CSuddenCommu
 	.4byte func_801BA250
 
 .global cf_CSuddenCommu_hierarchy

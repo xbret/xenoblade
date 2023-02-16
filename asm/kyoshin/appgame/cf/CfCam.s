@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_8006B6A0, global
 /* 8006B6A0 00034C60  38 63 00 10 */	addi r3, r3, 0x10
 /* 8006B6A4 00034C64  4E 80 00 20 */	blr 
@@ -29,7 +27,7 @@
 /* 8006B6C4 00034C84  4E 80 00 20 */	blr 
 .endfn func_8006B6C0
 
-.fn __dt__8006B6C8, global
+.fn __dt__cf_CfCamEvent, global
 /* 8006B6C8 00034C88  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8006B6CC 00034C8C  7C 08 02 A6 */	mflr r0
 /* 8006B6D0 00034C90  2C 03 00 00 */	cmpwi r3, 0
@@ -40,7 +38,7 @@
 /* 8006B6E4 00034CA4  7C 7E 1B 78 */	mr r30, r3
 /* 8006B6E8 00034CA8  41 82 00 1C */	beq .L_8006B704
 /* 8006B6EC 00034CAC  38 80 00 00 */	li r4, 0
-/* 8006B6F0 00034CB0  48 00 08 31 */	bl __dt__8006BF20
+/* 8006B6F0 00034CB0  48 00 08 31 */	bl __dt__cf_CfCamFollow
 /* 8006B6F4 00034CB4  2C 1F 00 00 */	cmpwi r31, 0
 /* 8006B6F8 00034CB8  40 81 00 0C */	ble .L_8006B704
 /* 8006B6FC 00034CBC  7F C3 F3 78 */	mr r3, r30
@@ -53,7 +51,7 @@
 /* 8006B714 00034CD4  7C 08 03 A6 */	mtlr r0
 /* 8006B718 00034CD8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8006B71C 00034CDC  4E 80 00 20 */	blr 
-.endfn __dt__8006B6C8
+.endfn __dt__cf_CfCamEvent
 
 .fn func_8006B720, global
 /* 8006B720 00034CE0  94 21 FF 60 */	stwu r1, -0xa0(r1)
@@ -758,7 +756,7 @@ double_80668B70:
 
 .obj "@eti_800233CC", local
 .hidden "@eti_800233CC"
-	.4byte __dt__8006B6C8
+	.4byte __dt__cf_CfCamEvent
 	.4byte 0x00000058
 	.4byte "@etb_800080A8"
 .endobj "@eti_800233CC"

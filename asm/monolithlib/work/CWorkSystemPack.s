@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CWorkSystemPack, global
 /* 804DD8F4 004A6EB4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804DD8F8 004A6EB8  7C 08 02 A6 */	mflr r0
@@ -105,7 +103,7 @@
 /* 804DDA5C 004A701C  4E 80 00 20 */	blr 
 .endfn __ct__CWorkSystemPack
 
-.fn __dt__804DDA60, global
+.fn __dt___reslist_base_CPackItem, global
 /* 804DDA60 004A7020  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DDA64 004A7024  7C 08 02 A6 */	mflr r0
 /* 804DDA68 004A7028  2C 03 00 00 */	cmpwi r3, 0
@@ -139,7 +137,7 @@
 /* 804DDAD0 004A7090  7C 08 03 A6 */	mtlr r0
 /* 804DDAD4 004A7094  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DDAD8 004A7098  4E 80 00 20 */	blr 
-.endfn __dt__804DDA60
+.endfn __dt___reslist_base_CPackItem
 
 .fn func_804DDADC, global
 /* 804DDADC 004A709C  80 83 00 04 */	lwz r4, 4(r3)
@@ -158,7 +156,7 @@
 /* 804DDB08 004A70C8  4E 80 00 20 */	blr 
 .endfn func_804DDADC
 
-.fn __dt__804DDB0C, global
+.fn __dt__reslist_CPackItem, global
 /* 804DDB0C 004A70CC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DDB10 004A70D0  7C 08 02 A6 */	mflr r0
 /* 804DDB14 004A70D4  2C 03 00 00 */	cmpwi r3, 0
@@ -168,7 +166,7 @@
 /* 804DDB24 004A70E4  7C 9F 23 78 */	mr r31, r4
 /* 804DDB28 004A70E8  41 82 00 1C */	beq .L_804DDB44
 /* 804DDB2C 004A70EC  38 80 00 00 */	li r4, 0
-/* 804DDB30 004A70F0  4B FF FF 31 */	bl __dt__804DDA60
+/* 804DDB30 004A70F0  4B FF FF 31 */	bl __dt___reslist_base_CPackItem
 /* 804DDB34 004A70F4  2C 1F 00 00 */	cmpwi r31, 0
 /* 804DDB38 004A70F8  40 81 00 0C */	ble .L_804DDB44
 /* 804DDB3C 004A70FC  7F C3 F3 78 */	mr r3, r30
@@ -180,9 +178,9 @@
 /* 804DDB50 004A7110  7C 08 03 A6 */	mtlr r0
 /* 804DDB54 004A7114  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DDB58 004A7118  4E 80 00 20 */	blr 
-.endfn __dt__804DDB0C
+.endfn __dt__reslist_CPackItem
 
-.fn __dt__804DDB5C, global
+.fn __dt___reslist_base_CArcItem, global
 /* 804DDB5C 004A711C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DDB60 004A7120  7C 08 02 A6 */	mflr r0
 /* 804DDB64 004A7124  2C 03 00 00 */	cmpwi r3, 0
@@ -216,7 +214,7 @@
 /* 804DDBCC 004A718C  7C 08 03 A6 */	mtlr r0
 /* 804DDBD0 004A7190  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DDBD4 004A7194  4E 80 00 20 */	blr 
-.endfn __dt__804DDB5C
+.endfn __dt___reslist_base_CArcItem
 
 .fn func_804DDBD8, global
 /* 804DDBD8 004A7198  80 83 00 04 */	lwz r4, 4(r3)
@@ -235,7 +233,7 @@
 /* 804DDC04 004A71C4  4E 80 00 20 */	blr 
 .endfn func_804DDBD8
 
-.fn __dt__804DDC08, global
+.fn __dt__reslist_CArcItem, global
 /* 804DDC08 004A71C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DDC0C 004A71CC  7C 08 02 A6 */	mflr r0
 /* 804DDC10 004A71D0  2C 03 00 00 */	cmpwi r3, 0
@@ -245,7 +243,7 @@
 /* 804DDC20 004A71E0  7C 9F 23 78 */	mr r31, r4
 /* 804DDC24 004A71E4  41 82 00 1C */	beq .L_804DDC40
 /* 804DDC28 004A71E8  38 80 00 00 */	li r4, 0
-/* 804DDC2C 004A71EC  4B FF FF 31 */	bl __dt__804DDB5C
+/* 804DDC2C 004A71EC  4B FF FF 31 */	bl __dt___reslist_base_CArcItem
 /* 804DDC30 004A71F0  2C 1F 00 00 */	cmpwi r31, 0
 /* 804DDC34 004A71F4  40 81 00 0C */	ble .L_804DDC40
 /* 804DDC38 004A71F8  7F C3 F3 78 */	mr r3, r30
@@ -257,9 +255,9 @@
 /* 804DDC4C 004A720C  7C 08 03 A6 */	mtlr r0
 /* 804DDC50 004A7210  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DDC54 004A7214  4E 80 00 20 */	blr 
-.endfn __dt__804DDC08
+.endfn __dt__reslist_CArcItem
 
-.fn __dt__804DDC58, global
+.fn __dt__CWorkSystemPack, global
 /* 804DDC58 004A7218  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DDC5C 004A721C  7C 08 02 A6 */	mflr r0
 /* 804DDC60 004A7220  2C 03 00 00 */	cmpwi r3, 0
@@ -273,12 +271,12 @@
 /* 804DDC80 004A7240  90 0D C1 68 */	stw r0, lbl_806682E8@sda21(r13)
 /* 804DDC84 004A7244  41 82 00 0C */	beq .L_804DDC90
 /* 804DDC88 004A7248  38 80 00 00 */	li r4, 0
-/* 804DDC8C 004A724C  4B FF FE D1 */	bl __dt__804DDB5C
+/* 804DDC8C 004A724C  4B FF FE D1 */	bl __dt___reslist_base_CArcItem
 .L_804DDC90:
 /* 804DDC90 004A7250  34 7E 01 C4 */	addic. r3, r30, 0x1c4
 /* 804DDC94 004A7254  41 82 00 0C */	beq .L_804DDCA0
 /* 804DDC98 004A7258  38 80 00 00 */	li r4, 0
-/* 804DDC9C 004A725C  4B FF FD C5 */	bl __dt__804DDA60
+/* 804DDC9C 004A725C  4B FF FD C5 */	bl __dt___reslist_base_CPackItem
 .L_804DDCA0:
 /* 804DDCA0 004A7260  7F C3 F3 78 */	mr r3, r30
 /* 804DDCA4 004A7264  38 80 00 00 */	li r4, 0
@@ -294,7 +292,7 @@
 /* 804DDCC8 004A7288  7C 08 03 A6 */	mtlr r0
 /* 804DDCCC 004A728C  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DDCD0 004A7290  4E 80 00 20 */	blr 
-.endfn __dt__804DDC58
+.endfn __dt__CWorkSystemPack
 
 .fn func_804DDCD4, global
 /* 804DDCD4 004A7294  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -860,7 +858,7 @@ _reslist_base_CPackItem_typestr:
 __vt__CWorkSystemPack:
 	.4byte __RTTI__CWorkSystemPack
 	.4byte 0
-	.4byte __dt__804DDC58
+	.4byte __dt__CWorkSystemPack
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -912,7 +910,7 @@ CWorkSystemPack_hierarchy:
 __vt__reslist_CArcItem:
 	.4byte __RTTI__reslist_CArcItem
 	.4byte 0
-	.4byte __dt__804DDC08
+	.4byte __dt__reslist_CArcItem
 
 .global reslist_CArcItem_hierarchy
 reslist_CArcItem_hierarchy:
@@ -925,14 +923,14 @@ reslist_CArcItem_hierarchy:
 __vt___reslist_base_CArcItem:
 	.4byte __RTTI___reslist_base_CArcItem
 	.4byte 0
-	.4byte __dt__804DDB5C
+	.4byte __dt___reslist_base_CArcItem
 
 
 .global __vt__reslist_CPackItem
 __vt__reslist_CPackItem:
 	.4byte __RTTI__reslist_CPackItem
 	.4byte 0
-	.4byte __dt__804DDB0C
+	.4byte __dt__reslist_CPackItem
 
 .global reslist_CPackItem_hierarchy
 reslist_CPackItem_hierarchy:
@@ -945,7 +943,7 @@ reslist_CPackItem_hierarchy:
 __vt___reslist_base_CPackItem:
 	.4byte __RTTI___reslist_base_CPackItem
 	.4byte 0
-	.4byte __dt__804DDA60
+	.4byte __dt___reslist_base_CPackItem
 	.4byte 0
 
 
@@ -1004,10 +1002,10 @@ staticArcFilenameString:
 	.4byte 0x00000000
 	.4byte 0x0780001F
 	.4byte 0x000001E4
-	.4byte __dt__804DDC08
+	.4byte __dt__reslist_CArcItem
 	.4byte 0x0780001F
 	.4byte 0x000001C4
-	.4byte __dt__804DDB0C
+	.4byte __dt__reslist_CPackItem
 	.4byte 0x8680001F
 	.4byte 0x00000000
 	.4byte __dt__CWorkThread
@@ -1045,10 +1043,10 @@ staticArcFilenameString:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x000001E4
-	.4byte __dt__804DDC08
+	.4byte __dt__reslist_CArcItem
 	.4byte 0x8780001E
 	.4byte 0x000001C4
-	.4byte __dt__804DDB0C
+	.4byte __dt__reslist_CPackItem
 .endobj "@etb_80020884"
 
 .obj "@etb_800208AC", local
@@ -1118,35 +1116,35 @@ staticArcFilenameString:
 
 .obj "@eti_800388A0", local
 .hidden "@eti_800388A0"
-	.4byte __dt__804DDA60
+	.4byte __dt___reslist_base_CPackItem
 	.4byte 0x0000007C
 	.4byte "@etb_80020864"
 .endobj "@eti_800388A0"
 
 .obj "@eti_800388AC", local
 .hidden "@eti_800388AC"
-	.4byte __dt__804DDB0C
+	.4byte __dt__reslist_CPackItem
 	.4byte 0x00000050
 	.4byte "@etb_8002086C"
 .endobj "@eti_800388AC"
 
 .obj "@eti_800388B8", local
 .hidden "@eti_800388B8"
-	.4byte __dt__804DDB5C
+	.4byte __dt___reslist_base_CArcItem
 	.4byte 0x0000007C
 	.4byte "@etb_80020874"
 .endobj "@eti_800388B8"
 
 .obj "@eti_800388C4", local
 .hidden "@eti_800388C4"
-	.4byte __dt__804DDC08
+	.4byte __dt__reslist_CArcItem
 	.4byte 0x00000050
 	.4byte "@etb_8002087C"
 .endobj "@eti_800388C4"
 
 .obj "@eti_800388D0", local
 .hidden "@eti_800388D0"
-	.4byte __dt__804DDC58
+	.4byte __dt__CWorkSystemPack
 	.4byte 0x0000007C
 	.4byte "@etb_80020884"
 .endobj "@eti_800388D0"

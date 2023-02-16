@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
 .fn func_8045E558, global
 /* 8045E558 00427B18  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 8045E55C 00427B1C  7C 08 02 A6 */	mflr r0
@@ -755,7 +754,7 @@ jumptable_80570AA8:
 __vt__CLibHbmControl:
 	.4byte __RTTI__CLibHbmControl
 	.4byte 0
-	.4byte __dt__8045E4C8
+	.4byte __dt__CLibHbmControl
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18

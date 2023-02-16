@@ -2,9 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-
 .fn CamLookatIntf_update, global
 /* 8006B508 00034AC8  4E 80 00 20 */	blr 
 .endfn CamLookatIntf_update

@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_800CA6E4, global
 /* 800CA6E4 00093CA4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800CA6E8 00093CA8  7C 08 02 A6 */	mflr r0
@@ -151,7 +149,7 @@
 /* 800CA8E0 00093EA0  4E 80 00 20 */	blr
 .endfn func_800CA854
 
-.fn __dt__800CA8E4, global
+.fn __dt__cf_CfObjectImplNpc, global
 /* 800CA8E4 00093EA4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800CA8E8 00093EA8  7C 08 02 A6 */	mflr r0
 /* 800CA8EC 00093EAC  2C 03 00 00 */	cmpwi r3, 0
@@ -169,7 +167,7 @@
 /* 800CA918 00093ED8  7C 08 03 A6 */	mtlr r0
 /* 800CA91C 00093EDC  38 21 00 10 */	addi r1, r1, 0x10
 /* 800CA920 00093EE0  4E 80 00 20 */	blr 
-.endfn __dt__800CA8E4
+.endfn __dt__cf_CfObjectImplNpc
 
 .fn func_800CA924, global
 /* 800CA924 00093EE4  38 63 00 68 */	addi r3, r3, 0x68
@@ -190,12 +188,12 @@
 
 .fn func_800CA938, global
 /* 800CA938 00093EF8  38 63 FF F4 */	addi r3, r3, -12
-/* 800CA93C 00093EFC  4B FF FF A8 */	b __dt__800CA8E4
+/* 800CA93C 00093EFC  4B FF FF A8 */	b __dt__cf_CfObjectImplNpc
 .endfn func_800CA938
 
 .fn func_800CA940, global
 /* 800CA940 00093F00  38 63 FF F0 */	addi r3, r3, -16
-/* 800CA944 00093F04  4B FF FF A0 */	b __dt__800CA8E4
+/* 800CA944 00093F04  4B FF FF A0 */	b __dt__cf_CfObjectImplNpc
 .endfn func_800CA940
 
 
@@ -250,7 +248,7 @@ lbl_8052E1D0:
 __vt__cf_CfObjectImplNpc:
 	.4byte __RTTI__cf_CfObjectImplNpc
 	.4byte 0
-	.4byte __dt__800CA8E4
+	.4byte __dt__cf_CfObjectImplNpc
 	.4byte func_80054A20
 	.4byte func_800CC5DC
 	.4byte func_800CC638
@@ -436,7 +434,7 @@ lbl_80669518:
 
 .obj "@eti_80025E68", local
 .hidden "@eti_80025E68"
-	.4byte __dt__800CA8E4
+	.4byte __dt__cf_CfObjectImplNpc
 	.4byte 0x00000040
 	.4byte "@etb_8000A3AC"
 .endobj "@eti_80025E68"

@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_800FF300, global
 /* 800FF300 000C88C0  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 800FF304 000C88C4  7C 08 02 A6 */	mflr r0
@@ -275,7 +273,7 @@
 /* 800FF6FC 000C8CBC  2C 03 00 00 */	cmpwi r3, 0
 /* 800FF700 000C8CC0  41 82 00 0C */	beq .L_800FF70C
 /* 800FF704 000C8CC4  7F E4 FB 78 */	mr r4, r31
-/* 800FF708 000C8CC8  4B FF F4 7D */	bl func_800FEB84
+/* 800FF708 000C8CC8  4B FF F4 7D */	bl __ct__CMainMenu
 .L_800FF70C:
 /* 800FF70C 000C8CCC  90 6D A6 90 */	stw r3, lbl_80666810@sda21(r13)
 /* 800FF710 000C8CD0  7F C4 F3 78 */	mr r4, r30
@@ -3101,7 +3099,7 @@
 
 .fn func_80102008, global
 /* 80102008 000CB5C8  38 63 FF A8 */	addi r3, r3, -88
-/* 8010200C 000CB5CC  4B FF CD 5C */	b __dt__800FED68
+/* 8010200C 000CB5CC  4B FF CD 5C */	b __dt__CMainMenu
 .endfn func_80102008
 
 .fn func_80102010, global
@@ -3111,7 +3109,7 @@
 
 .fn func_80102018, global
 /* 80102018 000CB5D8  38 63 FF A4 */	addi r3, r3, -92
-/* 8010201C 000CB5DC  4B FF CD 4C */	b __dt__800FED68
+/* 8010201C 000CB5DC  4B FF CD 4C */	b __dt__CMainMenu
 .endfn func_80102018
 
 

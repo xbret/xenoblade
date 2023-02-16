@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_80453838, global
+.fn __ct__CDeviceFontLayer, global
 /* 80453838 0041CDF8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045383C 0041CDFC  7C 08 02 A6 */	mflr r0
 /* 80453840 0041CE00  38 C0 00 00 */	li r6, 0
@@ -83,9 +81,9 @@
 /* 8045395C 0041CF1C  7C 08 03 A6 */	mtlr r0
 /* 80453960 0041CF20  38 21 00 10 */	addi r1, r1, 0x10
 /* 80453964 0041CF24  4E 80 00 20 */	blr 
-.endfn func_80453838
+.endfn __ct__CDeviceFontLayer
 
-.fn __dt__80453968, global
+.fn __dt___reslist_base_const_CDeviceFontLayer_LAYER_QUE, global
 /* 80453968 0041CF28  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045396C 0041CF2C  7C 08 02 A6 */	mflr r0
 /* 80453970 0041CF30  2C 03 00 00 */	cmpwi r3, 0
@@ -135,9 +133,9 @@
 /* 80453A10 0041CFD0  7C 08 03 A6 */	mtlr r0
 /* 80453A14 0041CFD4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80453A18 0041CFD8  4E 80 00 20 */	blr 
-.endfn __dt__80453968
+.endfn __dt___reslist_base_const_CDeviceFontLayer_LAYER_QUE
 
-.fn __dt__80453A1C, global
+.fn __dt__reslist_const_CDeviceFontLayer_LAYER_QUE, global
 /* 80453A1C 0041CFDC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80453A20 0041CFE0  7C 08 02 A6 */	mflr r0
 /* 80453A24 0041CFE4  2C 03 00 00 */	cmpwi r3, 0
@@ -188,9 +186,9 @@
 /* 80453AC8 0041D088  7C 08 03 A6 */	mtlr r0
 /* 80453ACC 0041D08C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80453AD0 0041D090  4E 80 00 20 */	blr 
-.endfn __dt__80453A1C
+.endfn __dt__reslist_const_CDeviceFontLayer_LAYER_QUE
 
-.fn __dt__80453AD4, global
+.fn __dt__CDeviceFontLayer, global
 /* 80453AD4 0041D094  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80453AD8 0041D098  7C 08 02 A6 */	mflr r0
 /* 80453ADC 0041D09C  2C 03 00 00 */	cmpwi r3, 0
@@ -251,7 +249,7 @@
 /* 80453BA8 0041D168  7C 08 03 A6 */	mtlr r0
 /* 80453BAC 0041D16C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80453BB0 0041D170  4E 80 00 20 */	blr
-.endfn __dt__80453AD4
+.endfn __dt__CDeviceFontLayer
 
 .fn func_80453BB4, global
 /* 80453BB4 0041D174  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -1620,7 +1618,7 @@ _reslist_base_const_CDeviceFontLayer_LAYER_QUE_typestr:
 __vt__CDeviceFontLayer:
 	.4byte __RTTI__CDeviceFontLayer
 	.4byte 0
-	.4byte __dt__80453AD4
+	.4byte __dt__CDeviceFontLayer
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -1672,7 +1670,7 @@ CDeviceFontLayer_hierarchy:
 __vt__reslist_const_CDeviceFontLayer_LAYER_QUE:
 	.4byte __RTTI__reslist_const_CDeviceFontLayer_LAYER_QUE
 	.4byte 0
-	.4byte __dt__80453A1C
+	.4byte __dt__reslist_const_CDeviceFontLayer_LAYER_QUE
 
 .global reslist_const_CDeviceFontLayer_LAYER_QUE_hierarchy
 reslist_const_CDeviceFontLayer_LAYER_QUE_hierarchy:
@@ -1685,7 +1683,7 @@ reslist_const_CDeviceFontLayer_LAYER_QUE_hierarchy:
 __vt___reslist_base_const_CDeviceFontLayer_LAYER_QUE:
 	.4byte __RTTI___reslist_base_const_CDeviceFontLayer_LAYER_QUE
 	.4byte 0
-	.4byte __dt__80453968
+	.4byte __dt___reslist_base_const_CDeviceFontLayer_LAYER_QUE
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -1762,7 +1760,7 @@ lbl_80667F6C:
 	.4byte __dt__804561AC
 	.4byte 0x0780001E
 	.4byte 0x000001C4
-	.4byte __dt__80453A1C
+	.4byte __dt__reslist_const_CDeviceFontLayer_LAYER_QUE
 	.4byte 0x8680001E
 	.4byte 0x00000000
 	.4byte __dt__CWorkThread
@@ -1791,7 +1789,7 @@ lbl_80667F6C:
 	.4byte __dt__804561AC
 	.4byte 0x8780001D
 	.4byte 0x000001C4
-	.4byte __dt__80453A1C
+	.4byte __dt__reslist_const_CDeviceFontLayer_LAYER_QUE
 .endobj "@etb_8001D16C"
 
 .obj "@etb_8001D194", local
@@ -1872,28 +1870,28 @@ lbl_80667F6C:
 
 .obj "@eti_80034DB4", local
 .hidden "@eti_80034DB4"
-	.4byte func_80453838
+	.4byte __ct__CDeviceFontLayer
 	.4byte 0x00000130
 	.4byte "@etb_8001D120"
 .endobj "@eti_80034DB4"
 
 .obj "@eti_80034DC0", local
 .hidden "@eti_80034DC0"
-	.4byte __dt__80453968
+	.4byte __dt___reslist_base_const_CDeviceFontLayer_LAYER_QUE
 	.4byte 0x000000B4
 	.4byte "@etb_8001D15C"
 .endobj "@eti_80034DC0"
 
 .obj "@eti_80034DCC", local
 .hidden "@eti_80034DCC"
-	.4byte __dt__80453A1C
+	.4byte __dt__reslist_const_CDeviceFontLayer_LAYER_QUE
 	.4byte 0x000000B8
 	.4byte "@etb_8001D164"
 .endobj "@eti_80034DCC"
 
 .obj "@eti_80034DD8", local
 .hidden "@eti_80034DD8"
-	.4byte __dt__80453AD4
+	.4byte __dt__CDeviceFontLayer
 	.4byte 0x000000E0
 	.4byte "@etb_8001D16C"
 .endobj "@eti_80034DD8"

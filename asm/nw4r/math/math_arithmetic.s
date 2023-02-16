@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
 .fn FExp__Q34nw4r4math6detailFf, global
 /* 8040ABF0 003D41B0  C0 02 C2 80 */	lfs f0, float_8066C600@sda21(r2)
 /* 8040ABF4 003D41B4  94 21 FF E0 */	stwu r1, -0x20(r1)

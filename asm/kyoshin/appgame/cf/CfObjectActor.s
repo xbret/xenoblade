@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_8016FE68, global
 /* 8016FE68 00139428  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8016FE6C 0013942C  7C 08 02 A6 */	mflr r0
@@ -21,7 +19,7 @@
 /* 8016FE98 00139458  38 7F 33 80 */	addi r3, r31, 0x3380
 /* 8016FE9C 0013945C  4B FD AA 69 */	bl __ct__cf_CAIAction
 /* 8016FEA0 00139460  38 7F 3E 9C */	addi r3, r31, 0x3e9c
-/* 8016FEA4 00139464  4B F4 BD A9 */	bl func_800BBC4C
+/* 8016FEA4 00139464  4B F4 BD A9 */	bl __ct__cf_CfObjectMove
 /* 8016FEA8 00139468  3C E0 80 53 */	lis r7, __vt__cf_CfObjectActor@ha
 /* 8016FEAC 0013946C  7F E3 FB 78 */	mr r3, r31
 /* 8016FEB0 00139470  38 E7 48 6C */	addi r7, r7, __vt__cf_CfObjectActor@l

@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_8046CFE0, global
+.fn __ct__LOD_LODMemMan, global
 /* 8046CFE0 004365A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8046CFE4 004365A4  7C 08 02 A6 */	mflr r0
 /* 8046CFE8 004365A8  38 83 00 D4 */	addi r4, r3, 0xd4
@@ -79,9 +77,9 @@
 /* 8046D0F8 004366B8  7C 08 03 A6 */	mtlr r0
 /* 8046D0FC 004366BC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8046D100 004366C0  4E 80 00 20 */	blr 
-.endfn func_8046CFE0
+.endfn __ct__LOD_LODMemMan
 
-.fn __dt__8046D104, global
+.fn __dt__LOD_LODMemMan, global
 /* 8046D104 004366C4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8046D108 004366C8  7C 08 02 A6 */	mflr r0
 /* 8046D10C 004366CC  2C 03 00 00 */	cmpwi r3, 0
@@ -99,7 +97,7 @@
 /* 8046D138 004366F8  7C 08 03 A6 */	mtlr r0
 /* 8046D13C 004366FC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8046D140 00436700  4E 80 00 20 */	blr 
-.endfn __dt__8046D104
+.endfn __dt__LOD_LODMemMan
 
 .fn __dt__8046D144, global
 /* 8046D144 00436704  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -9141,7 +9139,7 @@ lbl_80571340:
 __vt__LOD_LODMemMan:
 	.4byte __RTTI__LOD_LODMemMan
 	.4byte 0
-	.4byte __dt__8046D104
+	.4byte __dt__LOD_LODMemMan
 	.4byte func_80039E28
 	.4byte func_80471E9C
 	.4byte func_80039E18
@@ -9648,7 +9646,7 @@ float_8066815C:
 	.4byte 0x00000000
 	.4byte 0x8780001F
 	.4byte 0x00000A44
-	.4byte __dt__8046D104
+	.4byte __dt__LOD_LODMemMan
 .endobj "@etb_8001DD2C"
 
 .obj "@etb_8001DD48", local
@@ -9668,7 +9666,7 @@ float_8066815C:
 	.4byte __dt__8046A584
 	.4byte 0x8780001E
 	.4byte 0x00000A44
-	.4byte __dt__8046D104
+	.4byte __dt__LOD_LODMemMan
 .endobj "@etb_8001DD50"
 
 .obj "@etb_8001DD78", local
@@ -10097,14 +10095,14 @@ float_8066815C:
 
 .obj "@eti_80035A8C", local
 .hidden "@eti_80035A8C"
-	.4byte func_8046CFE0
+	.4byte __ct__LOD_LODMemMan
 	.4byte 0x00000124
 	.4byte "@etb_8001DD2C"
 .endobj "@eti_80035A8C"
 
 .obj "@eti_80035A98", local
 .hidden "@eti_80035A98"
-	.4byte __dt__8046D104
+	.4byte __dt__LOD_LODMemMan
 	.4byte 0x00000040
 	.4byte "@etb_8001DD48"
 .endobj "@eti_80035A98"

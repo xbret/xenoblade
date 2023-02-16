@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_8049B994, global
 /* 8049B994 00464F54  3C 80 80 57 */	lis r4, __vt__CScnEffectActNw4r@ha
 /* 8049B998 00464F58  38 00 00 00 */	li r0, 0
@@ -13,7 +11,7 @@
 /* 8049B9A8 00464F68  4E 80 00 20 */	blr 
 .endfn func_8049B994
 
-.fn __dt__8049B9AC, global
+.fn __dt__CScnEffectActNw4r, global
 /* 8049B9AC 00464F6C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049B9B0 00464F70  7C 08 02 A6 */	mflr r0
 /* 8049B9B4 00464F74  2C 03 00 00 */	cmpwi r3, 0
@@ -31,7 +29,7 @@
 /* 8049B9E0 00464FA0  7C 08 03 A6 */	mtlr r0
 /* 8049B9E4 00464FA4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8049B9E8 00464FA8  4E 80 00 20 */	blr 
-.endfn __dt__8049B9AC
+.endfn __dt__CScnEffectActNw4r
 
 .fn func_8049B9EC, global
 /* 8049B9EC 00464FAC  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -848,7 +846,7 @@ IEffectAct_typestr:
 __vt__CScnEffectActNw4r:
 	.4byte __RTTI__CScnEffectActNw4r
 	.4byte 0
-	.4byte __dt__8049B9AC
+	.4byte __dt__CScnEffectActNw4r
 	.4byte func_8049BEA4
 	.4byte func_8049BA44
 	.4byte func_8049BEAC
@@ -1004,7 +1002,7 @@ float_8066D334:
 
 .obj "@eti_80036EB4", local
 .hidden "@eti_80036EB4"
-	.4byte __dt__8049B9AC
+	.4byte __dt__CScnEffectActNw4r
 	.4byte 0x00000040
 	.4byte "@etb_8001F42C"
 .endobj "@eti_80036EB4"

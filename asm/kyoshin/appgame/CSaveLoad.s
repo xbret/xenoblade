@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_8028EFDC, global
+.fn __ct__CSaveLoad, global
 /* 8028EFDC 0025859C  94 21 FF 30 */	stwu r1, -0xd0(r1)
 /* 8028EFE0 002585A0  7C 08 02 A6 */	mflr r0
 /* 8028EFE4 002585A4  90 01 00 D4 */	stw r0, 0xd4(r1)
@@ -26,7 +24,7 @@
 /* 8028F024 002585E4  93 FC 00 1C */	stw r31, 0x1c(r28)
 /* 8028F028 002585E8  93 FC 00 20 */	stw r31, 0x20(r28)
 /* 8028F02C 002585EC  93 FC 00 24 */	stw r31, 0x24(r28)
-/* 8028F030 002585F0  4B FF F9 D9 */	bl func_8028EA08
+/* 8028F030 002585F0  4B FF F9 D9 */	bl __ct__CSLCur
 /* 8028F034 002585F4  38 7C 00 40 */	addi r3, r28, 0x40
 /* 8028F038 002585F8  38 80 00 00 */	li r4, 0
 /* 8028F03C 002585FC  4B F4 39 C1 */	bl func_801D29FC
@@ -124,9 +122,9 @@
 /* 8028F1AC 0025876C  7C 08 03 A6 */	mtlr r0
 /* 8028F1B0 00258770  38 21 00 D0 */	addi r1, r1, 0xd0
 /* 8028F1B4 00258774  4E 80 00 20 */	blr 
-.endfn func_8028EFDC
+.endfn __ct__CSaveLoad
 
-.fn __dt__8028F1B8, global
+.fn __dt__CSaveLoad, global
 /* 8028F1B8 00258778  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8028F1BC 0025877C  7C 08 02 A6 */	mflr r0
 /* 8028F1C0 00258780  2C 03 00 00 */	cmpwi r3, 0
@@ -161,7 +159,7 @@
 /* 8028F230 002587F0  7C 08 03 A6 */	mtlr r0
 /* 8028F234 002587F4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8028F238 002587F8  4E 80 00 20 */	blr 
-.endfn __dt__8028F1B8
+.endfn __dt__CSaveLoad
 
 .fn func_8028F23C, global
 /* 8028F23C 002587FC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2713,7 +2711,7 @@
 /* 8029166C 0025AC2C  4B E9 2C 05 */	bl func_80124270
 /* 80291670 0025AC30  80 9F 00 18 */	lwz r4, 0x18(r31)
 /* 80291674 0025AC34  38 61 00 50 */	addi r3, r1, 0x50
-/* 80291678 0025AC38  4B FF D3 91 */	bl func_8028EA08
+/* 80291678 0025AC38  4B FF D3 91 */	bl __ct__CSLCur
 /* 8029167C 0025AC3C  80 01 00 54 */	lwz r0, 0x54(r1)
 /* 80291680 0025AC40  38 7F 00 28 */	addi r3, r31, 0x28
 /* 80291684 0025AC44  90 1F 00 2C */	stw r0, 0x2c(r31)
@@ -4785,7 +4783,7 @@ jumptable_8053BF38:
 __vt__CSaveLoad:
 	.4byte __RTTI__CSaveLoad
 	.4byte 0
-	.4byte __dt__8028F1B8
+	.4byte __dt__CSaveLoad
 	.4byte func_80039E28
 	.4byte func_802912D4
 	.4byte func_80039E18
@@ -5360,14 +5358,14 @@ lbl_806672E8:
 
 .obj "@eti_800319A0", local
 .hidden "@eti_800319A0"
-	.4byte func_8028EFDC
+	.4byte __ct__CSaveLoad
 	.4byte 0x000001DC
 	.4byte "@etb_800194B0"
 .endobj "@eti_800319A0"
 
 .obj "@eti_800319AC", local
 .hidden "@eti_800319AC"
-	.4byte __dt__8028F1B8
+	.4byte __dt__CSaveLoad
 	.4byte 0x00000084
 	.4byte "@etb_80019554"
 .endobj "@eti_800319AC"

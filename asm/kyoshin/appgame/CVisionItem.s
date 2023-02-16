@@ -2,9 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-
 .fn func_801C51FC, global
 /* 801C51FC 0018E7BC  3C 80 80 53 */	lis r4, __vt__CVisionItem@ha
 /* 801C5200 0018E7C0  38 00 00 00 */	li r0, 0
@@ -14,7 +11,7 @@
 /* 801C5210 0018E7D0  4E 80 00 20 */	blr 
 .endfn func_801C51FC
 
-.fn __dt__801C5214, global
+.fn __dt__CVisionItem, global
 /* 801C5214 0018E7D4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801C5218 0018E7D8  7C 08 02 A6 */	mflr r0
 /* 801C521C 0018E7DC  2C 03 00 00 */	cmpwi r3, 0
@@ -32,7 +29,7 @@
 /* 801C5248 0018E808  7C 08 03 A6 */	mtlr r0
 /* 801C524C 0018E80C  38 21 00 10 */	addi r1, r1, 0x10
 /* 801C5250 0018E810  4E 80 00 20 */	blr 
-.endfn __dt__801C5214
+.endfn __dt__CVisionItem
 
 .fn func_801C5254, global
 /* 801C5254 0018E814  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -140,7 +137,7 @@
 
 .obj "@eti_8002B2A4", local
 .hidden "@eti_8002B2A4"
-	.4byte __dt__801C5214
+	.4byte __dt__CVisionItem
 	.4byte 0x00000040
 	.4byte "@etb_800109B8"
 .endobj "@eti_8002B2A4"

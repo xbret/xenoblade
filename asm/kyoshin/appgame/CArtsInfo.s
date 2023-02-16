@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CArtsInfo, global
 /* 80235708 001FECC8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8023570C 001FECCC  7C 08 02 A6 */	mflr r0

@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_8023BCF0, global
+.fn __ct__cf_CfNandManager, global
 /* 8023BCF0 002052B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8023BCF4 002052B4  7C 08 02 A6 */	mflr r0
 /* 8023BCF8 002052B8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -172,9 +170,9 @@
 /* 8023BF68 00205528  7C 08 03 A6 */	mtlr r0
 /* 8023BF6C 0020552C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8023BF70 00205530  4E 80 00 20 */	blr 
-.endfn func_8023BCF0
+.endfn __ct__cf_CfNandManager
 
-.fn __dt__8023BF74, global
+.fn __dt__CTTask_cf_CfNandManager, global
 /* 8023BF74 00205534  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8023BF78 00205538  7C 08 02 A6 */	mflr r0
 /* 8023BF7C 0020553C  2C 03 00 00 */	cmpwi r3, 0
@@ -185,7 +183,7 @@
 /* 8023BF90 00205550  7C 7E 1B 78 */	mr r30, r3
 /* 8023BF94 00205554  41 82 00 1C */	beq .L_8023BFB0
 /* 8023BF98 00205558  38 80 00 00 */	li r4, 0
-/* 8023BF9C 0020555C  48 20 8B 9D */	bl __dt__80444B38
+/* 8023BF9C 0020555C  48 20 8B 9D */	bl __dt__CProcess
 /* 8023BFA0 00205560  2C 1F 00 00 */	cmpwi r31, 0
 /* 8023BFA4 00205564  40 81 00 0C */	ble .L_8023BFB0
 /* 8023BFA8 00205568  7F C3 F3 78 */	mr r3, r30
@@ -198,7 +196,7 @@
 /* 8023BFC0 00205580  7C 08 03 A6 */	mtlr r0
 /* 8023BFC4 00205584  38 21 00 10 */	addi r1, r1, 0x10
 /* 8023BFC8 00205588  4E 80 00 20 */	blr 
-.endfn __dt__8023BF74
+.endfn __dt__CTTask_cf_CfNandManager
 
 .fn __dt__8023BFCC, global
 /* 8023BFCC 0020558C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -223,7 +221,7 @@
 /* 8023C014 002055D4  4E 80 00 20 */	blr
 .endfn __dt__8023BFCC
 
-.fn __dt__8023C018, global
+.fn __dt__cf_CfNandManager, global
 /* 8023C018 002055D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8023C01C 002055DC  7C 08 02 A6 */	mflr r0
 /* 8023C020 002055E0  2C 03 00 00 */	cmpwi r3, 0
@@ -273,7 +271,7 @@
 /* 8023C0C0 00205680  41 82 00 10 */	beq .L_8023C0D0
 /* 8023C0C4 00205684  7F C3 F3 78 */	mr r3, r30
 /* 8023C0C8 00205688  38 80 00 00 */	li r4, 0
-/* 8023C0CC 0020568C  48 20 8A 6D */	bl __dt__80444B38
+/* 8023C0CC 0020568C  48 20 8A 6D */	bl __dt__CProcess
 .L_8023C0D0:
 /* 8023C0D0 00205690  2C 1F 00 00 */	cmpwi r31, 0
 /* 8023C0D4 00205694  40 81 00 0C */	ble .L_8023C0E0
@@ -287,7 +285,7 @@
 /* 8023C0F0 002056B0  7C 08 03 A6 */	mtlr r0
 /* 8023C0F4 002056B4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8023C0F8 002056B8  4E 80 00 20 */	blr 
-.endfn __dt__8023C018
+.endfn __dt__cf_CfNandManager
 
 .fn func_8023C0FC, global
 /* 8023C0FC 002056BC  3C 60 80 66 */	lis r3, lbl_806625C0@ha
@@ -4697,7 +4695,7 @@
 /* 80240018 002095D8  7C 7F 1B 78 */	mr r31, r3
 /* 8024001C 002095DC  41 82 00 10 */	beq .L_8024002C
 /* 80240020 002095E0  7F C4 F3 78 */	mr r4, r30
-/* 80240024 002095E4  4B FF BC CD */	bl func_8023BCF0
+/* 80240024 002095E4  4B FF BC CD */	bl __ct__cf_CfNandManager
 /* 80240028 002095E8  7C 7F 1B 78 */	mr r31, r3
 .L_8024002C:
 /* 8024002C 002095EC  7F E3 FB 78 */	mr r3, r31
@@ -5120,7 +5118,7 @@
 
 .fn func_802405FC, global
 /* 802405FC 00209BBC  38 63 FF AC */	addi r3, r3, -84
-/* 80240600 00209BC0  4B FF BA 18 */	b __dt__8023C018
+/* 80240600 00209BC0  4B FF BA 18 */	b __dt__cf_CfNandManager
 .endfn func_802405FC
 
 .fn func_80240604, global
@@ -5130,7 +5128,7 @@
 
 .fn func_8024060C, global
 /* 8024060C 00209BCC  38 63 FF A8 */	addi r3, r3, -88
-/* 80240610 00209BD0  4B FF BA 08 */	b __dt__8023C018
+/* 80240610 00209BD0  4B FF BA 08 */	b __dt__cf_CfNandManager
 .endfn func_8024060C
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
@@ -5216,7 +5214,7 @@ jumptable_8053A2E4:
 __vt__cf_CfNandManager:
 	.4byte __RTTI__cf_CfNandManager
 	.4byte 0
-	.4byte __dt__8023C018
+	.4byte __dt__cf_CfNandManager
 	.4byte CChildListNode_Reset
 	.4byte func_8023C0FC
 	.4byte __dt__8023C108
@@ -5285,7 +5283,7 @@ cf_CfNandManager_hierarchy:
 __vt__CTTask_cf_CfNandManager:
 	.4byte __RTTI__CTTask_cf_CfNandManager
 	.4byte 0
-	.4byte __dt__8023BF74
+	.4byte __dt__CTTask_cf_CfNandManager
 	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
@@ -5437,19 +5435,19 @@ lbl_80667070:
 	.4byte __dt__8023BFCC
 	.4byte 0x0680001E
 	.4byte 0x00000058
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x0680001E
 	.4byte 0x00000054
 	.4byte __dt__IWorkEvent
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__8023BF74
+	.4byte __dt__CTTask_cf_CfNandManager
 	.4byte 0x0780001E
 	.4byte 0x00000060
 	.4byte __dt__8023BFCC
 	.4byte 0x0680001E
 	.4byte 0x00000058
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x8680001E
 	.4byte 0x00000054
 	.4byte __dt__IWorkEvent
@@ -5617,14 +5615,14 @@ lbl_80667070:
 
 .obj "@eti_8002EF58", local
 .hidden "@eti_8002EF58"
-	.4byte func_8023BCF0
+	.4byte __ct__cf_CfNandManager
 	.4byte 0x00000284
 	.4byte "@etb_80015FE4"
 .endobj "@eti_8002EF58"
 
 .obj "@eti_8002EF64", local
 .hidden "@eti_8002EF64"
-	.4byte __dt__8023BF74
+	.4byte __dt__CTTask_cf_CfNandManager
 	.4byte 0x00000058
 	.4byte "@etb_80015FEC"
 .endobj "@eti_8002EF64"
@@ -5638,7 +5636,7 @@ lbl_80667070:
 
 .obj "@eti_8002EF7C", local
 .hidden "@eti_8002EF7C"
-	.4byte __dt__8023C018
+	.4byte __dt__cf_CfNandManager
 	.4byte 0x000000E4
 	.4byte "@etb_80015FFC"
 .endobj "@eti_8002EF7C"

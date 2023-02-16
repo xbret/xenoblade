@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_8028EA08, global
+.fn __ct__CSLCur, global
 /* 8028EA08 00257FC8  3C A0 80 54 */	lis r5, __vt__CSLCur@ha
 /* 8028EA0C 00257FCC  38 00 00 00 */	li r0, 0
 /* 8028EA10 00257FD0  38 A5 C0 04 */	addi r5, r5, __vt__CSLCur@l
@@ -16,7 +14,7 @@
 /* 8028EA28 00257FE8  98 03 00 14 */	stb r0, 0x14(r3)
 /* 8028EA2C 00257FEC  98 03 00 15 */	stb r0, 0x15(r3)
 /* 8028EA30 00257FF0  4E 80 00 20 */	blr 
-.endfn func_8028EA08
+.endfn __ct__CSLCur
 
 .fn __dt__8028EA34, global
 /* 8028EA34 00257FF4  94 21 FF F0 */	stwu r1, -0x10(r1)

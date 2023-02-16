@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_8048ED24, global
 /* 8048ED24 004582E4  3C A0 80 57 */	lis r5, __vt__CScnRoot@ha
 /* 8048ED28 004582E8  38 00 00 00 */	li r0, 0
@@ -14,7 +12,7 @@
 /* 8048ED3C 004582FC  4E 80 00 20 */	blr 
 .endfn func_8048ED24
 
-.fn __dt__8048ED40, global
+.fn __dt__CScnRoot, global
 /* 8048ED40 00458300  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8048ED44 00458304  7C 08 02 A6 */	mflr r0
 /* 8048ED48 00458308  2C 03 00 00 */	cmpwi r3, 0
@@ -32,7 +30,7 @@
 /* 8048ED74 00458334  7C 08 03 A6 */	mtlr r0
 /* 8048ED78 00458338  38 21 00 10 */	addi r1, r1, 0x10
 /* 8048ED7C 0045833C  4E 80 00 20 */	blr 
-.endfn __dt__8048ED40
+.endfn __dt__CScnRoot
 
 .fn func_8048ED80, global
 /* 8048ED80 00458340  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -457,7 +455,7 @@ CScnRoot_typestr:
 __vt__CScnRoot:
 	.4byte __RTTI__CScnRoot
 	.4byte 0
-	.4byte __dt__8048ED40
+	.4byte __dt__CScnRoot
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -536,7 +534,7 @@ double_8066D1B8:
 	.4byte __dt__Q34nw4r3g3d15IScnObjCallbackFv
 	.4byte 0x8680001C
 	.4byte 0x00000000
-	.4byte __dt__8048ED40
+	.4byte __dt__CScnRoot
 .endobj "@etb_8001EC00"
 
 .obj "@etb_8001EC28", local
@@ -551,7 +549,7 @@ double_8066D1B8:
 
 .obj "@eti_80036800", local
 .hidden "@eti_80036800"
-	.4byte __dt__8048ED40
+	.4byte __dt__CScnRoot
 	.4byte 0x00000040
 	.4byte "@etb_8001EBF0"
 .endobj "@eti_80036800"

@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn SFD_SetMpvCond, global
 /* 803C2E98 0038C458  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803C2E9C 0038C45C  7C 08 02 A6 */	mflr r0

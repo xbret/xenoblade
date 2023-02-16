@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CCharVoiceMan, global
 /* 802A13BC 0026A97C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A13C0 0026A980  7C 08 02 A6 */	mflr r0
@@ -44,7 +42,7 @@
 /* 802A144C 0026AA0C  4E 80 00 20 */	blr 
 .endfn __ct__CCharVoiceMan
 
-.fn __dt__802A1450, global
+.fn __dt__cf_CCharVoiceMan, global
 /* 802A1450 0026AA10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A1454 0026AA14  7C 08 02 A6 */	mflr r0
 /* 802A1458 0026AA18  2C 03 00 00 */	cmpwi r3, 0
@@ -72,7 +70,7 @@
 /* 802A14AC 0026AA6C  7C 08 03 A6 */	mtlr r0
 /* 802A14B0 0026AA70  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A14B4 0026AA74  4E 80 00 20 */	blr 
-.endfn __dt__802A1450
+.endfn __dt__cf_CCharVoiceMan
 
 .fn func_802A14B8, global
 /* 802A14B8 0026AA78  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2968,7 +2966,7 @@ lbl_8053D050:
 __vt__cf_CCharVoiceMan:
 	.4byte __RTTI__cf_CCharVoiceMan
 	.4byte 0
-	.4byte __dt__802A1450
+	.4byte __dt__cf_CCharVoiceMan
 	.4byte func_800B2D84
 	.4byte func_802A3804
 	.4byte func_800B1378
@@ -3391,7 +3389,7 @@ lbl_80667344:
 
 .obj "@eti_800326CC", local
 .hidden "@eti_800326CC"
-	.4byte __dt__802A1450
+	.4byte __dt__cf_CCharVoiceMan
 	.4byte 0x00000068
 	.4byte "@etb_8001A8D4"
 .endobj "@eti_800326CC"

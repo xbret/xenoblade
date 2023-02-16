@@ -124,7 +124,7 @@
 __vt__reslist_unsigned_short:
 	.4byte __RTTI__reslist_unsigned_short
 	.4byte 0
-	.4byte __dt__80067494
+	.4byte __dt__reslist_unsigned_short
 
 .global reslist_unsigned_short_hierarchy
 reslist_unsigned_short_hierarchy:
@@ -137,7 +137,7 @@ reslist_unsigned_short_hierarchy:
 __vt___reslist_base_unsigned_short:
 	.4byte __RTTI___reslist_base_unsigned_short
 	.4byte 0
-	.4byte __dt__800673E0
+	.4byte __dt___reslist_base_unsigned_short
 
 
 .global __vt__cf_IResInfoEneNpcEvent

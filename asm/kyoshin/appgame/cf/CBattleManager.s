@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_800D84FC, global
+.fn __ct__cf_CBattleManager, global
 /* 800D84FC 000A1ABC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800D8500 000A1AC0  7C 08 02 A6 */	mflr r0
 /* 800D8504 000A1AC4  3C 80 80 53 */	lis r4, __vt__cf_CBattleManager@ha
@@ -86,7 +84,7 @@
 /* 800D8630 000A1BF0  38 7D 21 6C */	addi r3, r29, 0x216c
 /* 800D8634 000A1BF4  48 0E 1B 19 */	bl func_801BA14C
 /* 800D8638 000A1BF8  38 7D 21 9C */	addi r3, r29, 0x219c
-/* 800D863C 000A1BFC  48 0C AA 9D */	bl func_801A30D8
+/* 800D863C 000A1BFC  48 0C AA 9D */	bl __ct__cf_CVision
 /* 800D8640 000A1C00  48 35 EF 75 */	bl func_804375B4
 /* 800D8644 000A1C04  7C 7E 1B 78 */	mr r30, r3
 /* 800D8648 000A1C08  38 60 03 00 */	li r3, 0x300
@@ -234,7 +232,7 @@
 /* 800D8878 000A1E38  7C 08 03 A6 */	mtlr r0
 /* 800D887C 000A1E3C  38 21 00 20 */	addi r1, r1, 0x20
 /* 800D8880 000A1E40  4E 80 00 20 */	blr 
-.endfn func_800D84FC
+.endfn __ct__cf_CBattleManager
 
 .fn __dt__800D8884, global
 /* 800D8884 000A1E44  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -256,7 +254,7 @@
 /* 800D88C0 000A1E80  4E 80 00 20 */	blr 
 .endfn __dt__800D8884
 
-.fn __dt__800D88C4, global
+.fn __dt___reslist_base_cf_CfObjectActor, global
 /* 800D88C4 000A1E84  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800D88C8 000A1E88  7C 08 02 A6 */	mflr r0
 /* 800D88CC 000A1E8C  2C 03 00 00 */	cmpwi r3, 0
@@ -306,9 +304,9 @@
 /* 800D896C 000A1F2C  7C 08 03 A6 */	mtlr r0
 /* 800D8970 000A1F30  38 21 00 10 */	addi r1, r1, 0x10
 /* 800D8974 000A1F34  4E 80 00 20 */	blr 
-.endfn __dt__800D88C4
+.endfn __dt___reslist_base_cf_CfObjectActor
 
-.fn __dt__800D8978, global
+.fn __dt__reslist_cf_CfObjectActor, global
 /* 800D8978 000A1F38  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800D897C 000A1F3C  7C 08 02 A6 */	mflr r0
 /* 800D8980 000A1F40  2C 03 00 00 */	cmpwi r3, 0
@@ -359,9 +357,9 @@
 /* 800D8A24 000A1FE4  7C 08 03 A6 */	mtlr r0
 /* 800D8A28 000A1FE8  38 21 00 10 */	addi r1, r1, 0x10
 /* 800D8A2C 000A1FEC  4E 80 00 20 */	blr 
-.endfn __dt__800D8978
+.endfn __dt__reslist_cf_CfObjectActor
 
-.fn __dt__800D8A30, global
+.fn __dt___reslist_base_cf_IBattleEvent, global
 /* 800D8A30 000A1FF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800D8A34 000A1FF4  7C 08 02 A6 */	mflr r0
 /* 800D8A38 000A1FF8  2C 03 00 00 */	cmpwi r3, 0
@@ -411,9 +409,9 @@
 /* 800D8AD8 000A2098  7C 08 03 A6 */	mtlr r0
 /* 800D8ADC 000A209C  38 21 00 10 */	addi r1, r1, 0x10
 /* 800D8AE0 000A20A0  4E 80 00 20 */	blr 
-.endfn __dt__800D8A30
+.endfn __dt___reslist_base_cf_IBattleEvent
 
-.fn __dt__800D8AE4, global
+.fn __dt__reslist_cf_IBattleEvent, global
 /* 800D8AE4 000A20A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800D8AE8 000A20A8  7C 08 02 A6 */	mflr r0
 /* 800D8AEC 000A20AC  2C 03 00 00 */	cmpwi r3, 0
@@ -464,7 +462,7 @@
 /* 800D8B90 000A2150  7C 08 03 A6 */	mtlr r0
 /* 800D8B94 000A2154  38 21 00 10 */	addi r1, r1, 0x10
 /* 800D8B98 000A2158  4E 80 00 20 */	blr 
-.endfn __dt__800D8AE4
+.endfn __dt__reslist_cf_IBattleEvent
 
 .fn __dt__800D8B9C, global
 /* 800D8B9C 000A215C  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -487,7 +485,7 @@
 .L_800D8BE0:
 /* 800D8BE0 000A21A0  38 7D 00 18 */	addi r3, r29, 0x18
 /* 800D8BE4 000A21A4  38 80 FF FF */	li r4, -1
-/* 800D8BE8 000A21A8  48 1A 23 75 */	bl __dt__8027AF5C
+/* 800D8BE8 000A21A8  48 1A 23 75 */	bl __dt__cf_CChainActorList
 /* 800D8BEC 000A21AC  2C 1E 00 00 */	cmpwi r30, 0
 /* 800D8BF0 000A21B0  40 81 00 0C */	ble .L_800D8BFC
 /* 800D8BF4 000A21B4  7F A3 EB 78 */	mr r3, r29
@@ -503,7 +501,7 @@
 /* 800D8C18 000A21D8  4E 80 00 20 */	blr 
 .endfn __dt__800D8B9C
 
-.fn __dt__800D8C1C, global
+.fn __dt__cf_CChainCombo, global
 /* 800D8C1C 000A21DC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800D8C20 000A21E0  7C 08 02 A6 */	mflr r0
 /* 800D8C24 000A21E4  2C 03 00 00 */	cmpwi r3, 0
@@ -521,9 +519,9 @@
 /* 800D8C50 000A2210  7C 08 03 A6 */	mtlr r0
 /* 800D8C54 000A2214  38 21 00 10 */	addi r1, r1, 0x10
 /* 800D8C58 000A2218  4E 80 00 20 */	blr 
-.endfn __dt__800D8C1C
+.endfn __dt__cf_CChainCombo
 
-.fn __dt__800D8C5C, global
+.fn __dt__cf_CChainChance, global
 /* 800D8C5C 000A221C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800D8C60 000A2220  7C 08 02 A6 */	mflr r0
 /* 800D8C64 000A2224  2C 03 00 00 */	cmpwi r3, 0
@@ -541,9 +539,9 @@
 /* 800D8C90 000A2250  7C 08 03 A6 */	mtlr r0
 /* 800D8C94 000A2254  38 21 00 10 */	addi r1, r1, 0x10
 /* 800D8C98 000A2258  4E 80 00 20 */	blr 
-.endfn __dt__800D8C5C
+.endfn __dt__cf_CChainChance
 
-.fn __dt__800D8C9C, global
+.fn __dt__cf_CChainTimer, global
 /* 800D8C9C 000A225C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800D8CA0 000A2260  7C 08 02 A6 */	mflr r0
 /* 800D8CA4 000A2264  2C 03 00 00 */	cmpwi r3, 0
@@ -561,9 +559,9 @@
 /* 800D8CD0 000A2290  7C 08 03 A6 */	mtlr r0
 /* 800D8CD4 000A2294  38 21 00 10 */	addi r1, r1, 0x10
 /* 800D8CD8 000A2298  4E 80 00 20 */	blr 
-.endfn __dt__800D8C9C
+.endfn __dt__cf_CChainTimer
 
-.fn __dt__800D8CDC, global
+.fn __dt__cf_CChainTime, global
 /* 800D8CDC 000A229C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800D8CE0 000A22A0  7C 08 02 A6 */	mflr r0
 /* 800D8CE4 000A22A4  2C 03 00 00 */	cmpwi r3, 0
@@ -589,9 +587,9 @@
 /* 800D8D30 000A22F0  7C 08 03 A6 */	mtlr r0
 /* 800D8D34 000A22F4  38 21 00 10 */	addi r1, r1, 0x10
 /* 800D8D38 000A22F8  4E 80 00 20 */	blr 
-.endfn __dt__800D8CDC
+.endfn __dt__cf_CChainTime
 
-.fn __dt__800D8D3C, global
+.fn __dt__cf_CChainEffect, global
 /* 800D8D3C 000A22FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800D8D40 000A2300  7C 08 02 A6 */	mflr r0
 /* 800D8D44 000A2304  2C 03 00 00 */	cmpwi r3, 0
@@ -609,9 +607,9 @@
 /* 800D8D70 000A2330  7C 08 03 A6 */	mtlr r0
 /* 800D8D74 000A2334  38 21 00 10 */	addi r1, r1, 0x10
 /* 800D8D78 000A2338  4E 80 00 20 */	blr 
-.endfn __dt__800D8D3C
+.endfn __dt__cf_CChainEffect
 
-.fn __dt__800D8D7C, global
+.fn __dt__cf_CChainMember, global
 /* 800D8D7C 000A233C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800D8D80 000A2340  7C 08 02 A6 */	mflr r0
 /* 800D8D84 000A2344  2C 03 00 00 */	cmpwi r3, 0
@@ -629,7 +627,7 @@
 /* 800D8DB0 000A2370  7C 08 03 A6 */	mtlr r0
 /* 800D8DB4 000A2374  38 21 00 10 */	addi r1, r1, 0x10
 /* 800D8DB8 000A2378  4E 80 00 20 */	blr 
-.endfn __dt__800D8D7C
+.endfn __dt__cf_CChainMember
 
 .fn __dt__800D8DBC, global
 /* 800D8DBC 000A237C  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -665,7 +663,7 @@
 /* 800D8E2C 000A23EC  4E 80 00 20 */	blr 
 .endfn __dt__800D8DBC
 
-.fn __dt__800D8E30, global
+.fn __dt__cf_CChainTemp, global
 /* 800D8E30 000A23F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800D8E34 000A23F4  7C 08 02 A6 */	mflr r0
 /* 800D8E38 000A23F8  2C 03 00 00 */	cmpwi r3, 0
@@ -683,9 +681,9 @@
 /* 800D8E64 000A2424  7C 08 03 A6 */	mtlr r0
 /* 800D8E68 000A2428  38 21 00 10 */	addi r1, r1, 0x10
 /* 800D8E6C 000A242C  4E 80 00 20 */	blr 
-.endfn __dt__800D8E30
+.endfn __dt__cf_CChainTemp
 
-.fn __dt__800D8E70, global
+.fn __dt__cf_Flusher_cf_CfObjectActor, global
 /* 800D8E70 000A2430  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800D8E74 000A2434  7C 08 02 A6 */	mflr r0
 /* 800D8E78 000A2438  2C 03 00 00 */	cmpwi r3, 0
@@ -703,9 +701,9 @@
 /* 800D8EA4 000A2464  7C 08 03 A6 */	mtlr r0
 /* 800D8EA8 000A2468  38 21 00 10 */	addi r1, r1, 0x10
 /* 800D8EAC 000A246C  4E 80 00 20 */	blr 
-.endfn __dt__800D8E70
+.endfn __dt__cf_Flusher_cf_CfObjectActor
 
-.fn __dt__800D8EB0, global
+.fn __dt__cf_CSuddenCommu, global
 /* 800D8EB0 000A2470  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800D8EB4 000A2474  7C 08 02 A6 */	mflr r0
 /* 800D8EB8 000A2478  2C 03 00 00 */	cmpwi r3, 0
@@ -723,9 +721,9 @@
 /* 800D8EE4 000A24A4  7C 08 03 A6 */	mtlr r0
 /* 800D8EE8 000A24A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 800D8EEC 000A24AC  4E 80 00 20 */	blr 
-.endfn __dt__800D8EB0
+.endfn __dt__cf_CSuddenCommu
 
-.fn __dt__800D8EF0, global
+.fn __dt__cf_CBattleManager, global
 /* 800D8EF0 000A24B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800D8EF4 000A24B4  7C 08 02 A6 */	mflr r0
 /* 800D8EF8 000A24B8  2C 03 00 00 */	cmpwi r3, 0
@@ -768,7 +766,7 @@
 .L_800D8F88:
 /* 800D8F88 000A2548  38 7C 00 18 */	addi r3, r28, 0x18
 /* 800D8F8C 000A254C  38 80 FF FF */	li r4, -1
-/* 800D8F90 000A2550  48 1A 1F CD */	bl __dt__8027AF5C
+/* 800D8F90 000A2550  48 1A 1F CD */	bl __dt__cf_CChainActorList
 .L_800D8F94:
 /* 800D8F94 000A2554  37 9E 00 64 */	addic. r28, r30, 0x64
 /* 800D8F98 000A2558  41 82 00 6C */	beq .L_800D9004
@@ -908,7 +906,7 @@
 /* 800D917C 000A273C  7C 08 03 A6 */	mtlr r0
 /* 800D9180 000A2740  38 21 00 20 */	addi r1, r1, 0x20
 /* 800D9184 000A2744  4E 80 00 20 */	blr 
-.endfn __dt__800D8EF0
+.endfn __dt__cf_CBattleManager
 
 .fn func_800D9188, global
 /* 800D9188 000A2748  80 6D A6 78 */	lwz r3, lbl_806667F8@sda21(r13)
@@ -926,7 +924,7 @@
 /* 800D91AC 000A276C  48 35 B8 B1 */	bl mm_malloc
 /* 800D91B0 000A2770  2C 03 00 00 */	cmpwi r3, 0
 /* 800D91B4 000A2774  41 82 00 08 */	beq .L_800D91BC
-/* 800D91B8 000A2778  4B FF F3 45 */	bl func_800D84FC
+/* 800D91B8 000A2778  4B FF F3 45 */	bl __ct__cf_CBattleManager
 .L_800D91BC:
 /* 800D91BC 000A277C  90 6D A6 78 */	stw r3, lbl_806667F8@sda21(r13)
 /* 800D91C0 000A2780  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -32277,7 +32275,7 @@ jumptable_8052F484:
 __vt__cf_CBattleManager:
 	.4byte __RTTI__cf_CBattleManager
 	.4byte 0
-	.4byte __dt__800D8EF0
+	.4byte __dt__cf_CBattleManager
 	.4byte func_800B2D84
 	.4byte func_800D963C
 	.4byte func_800B1378
@@ -32303,7 +32301,7 @@ cf_CBattleManager_hierarchy:
 __vt__reslist_cf_IBattleEvent:
 	.4byte __RTTI__reslist_cf_IBattleEvent
 	.4byte 0
-	.4byte __dt__800D8AE4
+	.4byte __dt__reslist_cf_IBattleEvent
 
 .global reslist_cf_IBattleEvent_hierarchy
 reslist_cf_IBattleEvent_hierarchy:
@@ -32316,14 +32314,14 @@ reslist_cf_IBattleEvent_hierarchy:
 __vt___reslist_base_cf_IBattleEvent:
 	.4byte __RTTI___reslist_base_cf_IBattleEvent
 	.4byte 0
-	.4byte __dt__800D8A30
+	.4byte __dt___reslist_base_cf_IBattleEvent
 
 
 .global __vt__reslist_cf_CfObjectActor
 __vt__reslist_cf_CfObjectActor:
 	.4byte __RTTI__reslist_cf_CfObjectActor
 	.4byte 0
-	.4byte __dt__800D8978
+	.4byte __dt__reslist_cf_CfObjectActor
 
 .global reslist_cf_CfObjectActor_hierarchy
 reslist_cf_CfObjectActor_hierarchy:
@@ -32336,14 +32334,14 @@ reslist_cf_CfObjectActor_hierarchy:
 __vt___reslist_base_cf_CfObjectActor:
 	.4byte __RTTI___reslist_base_cf_CfObjectActor
 	.4byte 0
-	.4byte __dt__800D88C4
+	.4byte __dt___reslist_base_cf_CfObjectActor
 
 
 .global __vt__cf_CChainTime
 __vt__cf_CChainTime:
 	.4byte __RTTI__cf_CChainTime
 	.4byte 0
-	.4byte __dt__800D8CDC
+	.4byte __dt__cf_CChainTime
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -32590,7 +32588,7 @@ lbl_806667F8:
 	.4byte __dt__cf_CVision
 	.4byte 0x0780001D
 	.4byte 0x0000216C
-	.4byte __dt__800D8EB0
+	.4byte __dt__cf_CSuddenCommu
 	.4byte 0x0780001D
 	.4byte 0x000020C8
 	.4byte __dt__800D8DBC
@@ -32599,16 +32597,16 @@ lbl_806667F8:
 	.4byte __dt__800D8B9C
 	.4byte 0x0780001D
 	.4byte 0x00000064
-	.4byte __dt__800D8AE4
+	.4byte __dt__reslist_cf_IBattleEvent
 	.4byte 0x0780001D
 	.4byte 0x00000044
-	.4byte __dt__800D8978
+	.4byte __dt__reslist_cf_CfObjectActor
 	.4byte 0x0780001D
 	.4byte 0x00000024
-	.4byte __dt__800D8978
+	.4byte __dt__reslist_cf_CfObjectActor
 	.4byte 0x0780001D
 	.4byte 0x00000004
-	.4byte __dt__800D8978
+	.4byte __dt__reslist_cf_CfObjectActor
 	.4byte 0x8680001D
 	.4byte 0x00000000
 	.4byte __dt__800D8884
@@ -32654,31 +32652,31 @@ lbl_806667F8:
 	.4byte 0x00000000
 	.4byte 0x0780001F
 	.4byte 0x00000008
-	.4byte __dt__800D8D3C
+	.4byte __dt__cf_CChainEffect
 	.4byte 0x0780001D
 	.4byte 0x00001EF4
-	.4byte __dt__800D8C1C
+	.4byte __dt__cf_CChainCombo
 	.4byte 0x8780001D
 	.4byte 0x00001EDC
-	.4byte __dt__800D8C5C
+	.4byte __dt__cf_CChainChance
 	.4byte 0x0780001D
 	.4byte 0x00001EF4
-	.4byte __dt__800D8C1C
+	.4byte __dt__cf_CChainCombo
 	.4byte 0x0780001D
 	.4byte 0x00001EDC
-	.4byte __dt__800D8C5C
+	.4byte __dt__cf_CChainChance
 	.4byte 0x0780001D
 	.4byte 0x00001EC4
-	.4byte __dt__800D8CDC
+	.4byte __dt__cf_CChainTime
 	.4byte 0x0780001D
 	.4byte 0x00001EBC
-	.4byte __dt__800D8C9C
+	.4byte __dt__cf_CChainTimer
 	.4byte 0x0780001D
 	.4byte 0x00001EB4
-	.4byte __dt__800D8C9C
+	.4byte __dt__cf_CChainTimer
 	.4byte 0x8780001D
 	.4byte 0x00001DC8
-	.4byte __dt__800D8D7C
+	.4byte __dt__cf_CChainMember
 .endobj "@etb_8000A6E0"
 
 .obj "@etb_8000A764", local
@@ -32707,7 +32705,7 @@ lbl_806667F8:
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x00000008
-	.4byte __dt__800D8D3C
+	.4byte __dt__cf_CChainEffect
 .endobj "@etb_8000A77C"
 
 .obj "@etb_8000A798", local
@@ -32730,10 +32728,10 @@ lbl_806667F8:
 	.4byte 0x00000000
 	.4byte 0x0780001F
 	.4byte 0x00000008
-	.4byte __dt__800D8D3C
+	.4byte __dt__cf_CChainEffect
 	.4byte 0x8780001D
 	.4byte 0x0000009C
-	.4byte __dt__800D8C9C
+	.4byte __dt__cf_CChainTimer
 .endobj "@etb_8000A7A8"
 
 .obj "@etb_8000A7D0", local
@@ -32771,7 +32769,7 @@ lbl_806667F8:
 	.4byte __dt__cf_CVision
 	.4byte 0x0780001E
 	.4byte 0x0000216C
-	.4byte __dt__800D8EB0
+	.4byte __dt__cf_CSuddenCommu
 	.4byte 0x0780001E
 	.4byte 0x000020C8
 	.4byte __dt__800D8DBC
@@ -32780,67 +32778,67 @@ lbl_806667F8:
 	.4byte __dt__800D8B9C
 	.4byte 0x0780001E
 	.4byte 0x00000064
-	.4byte __dt__800D8AE4
+	.4byte __dt__reslist_cf_IBattleEvent
 	.4byte 0x0780001E
 	.4byte 0x00000044
-	.4byte __dt__800D8978
+	.4byte __dt__reslist_cf_CfObjectActor
 	.4byte 0x0780001E
 	.4byte 0x00000024
-	.4byte __dt__800D8978
+	.4byte __dt__reslist_cf_CfObjectActor
 	.4byte 0x0780001E
 	.4byte 0x00000004
-	.4byte __dt__800D8978
+	.4byte __dt__reslist_cf_CfObjectActor
 	.4byte 0x8680001E
 	.4byte 0x00000000
 	.4byte __dt__800D8884
 	.4byte 0x0780001C
 	.4byte 0x00000008
-	.4byte __dt__800D8D3C
+	.4byte __dt__cf_CChainEffect
 	.4byte 0x0780001D
 	.4byte 0x0000009C
-	.4byte __dt__800D8C9C
+	.4byte __dt__cf_CChainTimer
 	.4byte 0x0780001E
 	.4byte 0x0000219C
 	.4byte __dt__cf_CVision
 	.4byte 0x8780001E
 	.4byte 0x0000216C
-	.4byte __dt__800D8EB0
+	.4byte __dt__cf_CSuddenCommu
 	.4byte 0x0780001D
 	.4byte 0x00000008
-	.4byte __dt__800D8D3C
+	.4byte __dt__cf_CChainEffect
 	.4byte 0x0780001C
 	.4byte 0x00001EF4
-	.4byte __dt__800D8C1C
+	.4byte __dt__cf_CChainCombo
 	.4byte 0x0780001C
 	.4byte 0x00001EDC
-	.4byte __dt__800D8C5C
+	.4byte __dt__cf_CChainChance
 	.4byte 0x0780001E
 	.4byte 0x0000219C
 	.4byte __dt__cf_CVision
 	.4byte 0x0780001E
 	.4byte 0x0000216C
-	.4byte __dt__800D8EB0
+	.4byte __dt__cf_CSuddenCommu
 	.4byte 0x8780001E
 	.4byte 0x000020C8
 	.4byte __dt__800D8DBC
 	.4byte 0x0780001C
 	.4byte 0x00001EF4
-	.4byte __dt__800D8C1C
+	.4byte __dt__cf_CChainCombo
 	.4byte 0x0780001C
 	.4byte 0x00001EDC
-	.4byte __dt__800D8C5C
+	.4byte __dt__cf_CChainChance
 	.4byte 0x0780001C
 	.4byte 0x00001EC4
-	.4byte __dt__800D8CDC
+	.4byte __dt__cf_CChainTime
 	.4byte 0x0780001C
 	.4byte 0x00001EBC
-	.4byte __dt__800D8C9C
+	.4byte __dt__cf_CChainTimer
 	.4byte 0x0780001C
 	.4byte 0x00001EB4
-	.4byte __dt__800D8C9C
+	.4byte __dt__cf_CChainTimer
 	.4byte 0x0780001C
 	.4byte 0x00001DC8
-	.4byte __dt__800D8D7C
+	.4byte __dt__cf_CChainMember
 	.4byte 0x010000E8
 .endobj "@etb_8000A7E8"
 
@@ -33168,7 +33166,7 @@ lbl_806667F8:
 
 .obj "@eti_80026174", local
 .hidden "@eti_80026174"
-	.4byte func_800D84FC
+	.4byte __ct__cf_CBattleManager
 	.4byte 0x00000388
 	.4byte "@etb_8000A61C"
 .endobj "@eti_80026174"
@@ -33182,28 +33180,28 @@ lbl_806667F8:
 
 .obj "@eti_8002618C", local
 .hidden "@eti_8002618C"
-	.4byte __dt__800D88C4
+	.4byte __dt___reslist_base_cf_CfObjectActor
 	.4byte 0x000000B4
 	.4byte "@etb_8000A6C0"
 .endobj "@eti_8002618C"
 
 .obj "@eti_80026198", local
 .hidden "@eti_80026198"
-	.4byte __dt__800D8978
+	.4byte __dt__reslist_cf_CfObjectActor
 	.4byte 0x000000B8
 	.4byte "@etb_8000A6C8"
 .endobj "@eti_80026198"
 
 .obj "@eti_800261A4", local
 .hidden "@eti_800261A4"
-	.4byte __dt__800D8A30
+	.4byte __dt___reslist_base_cf_IBattleEvent
 	.4byte 0x000000B4
 	.4byte "@etb_8000A6D0"
 .endobj "@eti_800261A4"
 
 .obj "@eti_800261B0", local
 .hidden "@eti_800261B0"
-	.4byte __dt__800D8AE4
+	.4byte __dt__reslist_cf_IBattleEvent
 	.4byte 0x000000B8
 	.4byte "@etb_8000A6D8"
 .endobj "@eti_800261B0"
@@ -33217,42 +33215,42 @@ lbl_806667F8:
 
 .obj "@eti_800261C8", local
 .hidden "@eti_800261C8"
-	.4byte __dt__800D8C1C
+	.4byte __dt__cf_CChainCombo
 	.4byte 0x00000040
 	.4byte "@etb_8000A764"
 .endobj "@eti_800261C8"
 
 .obj "@eti_800261D4", local
 .hidden "@eti_800261D4"
-	.4byte __dt__800D8C5C
+	.4byte __dt__cf_CChainChance
 	.4byte 0x00000040
 	.4byte "@etb_8000A76C"
 .endobj "@eti_800261D4"
 
 .obj "@eti_800261E0", local
 .hidden "@eti_800261E0"
-	.4byte __dt__800D8C9C
+	.4byte __dt__cf_CChainTimer
 	.4byte 0x00000040
 	.4byte "@etb_8000A774"
 .endobj "@eti_800261E0"
 
 .obj "@eti_800261EC", local
 .hidden "@eti_800261EC"
-	.4byte __dt__800D8CDC
+	.4byte __dt__cf_CChainTime
 	.4byte 0x00000060
 	.4byte "@etb_8000A77C"
 .endobj "@eti_800261EC"
 
 .obj "@eti_800261F8", local
 .hidden "@eti_800261F8"
-	.4byte __dt__800D8D3C
+	.4byte __dt__cf_CChainEffect
 	.4byte 0x00000040
 	.4byte "@etb_8000A798"
 .endobj "@eti_800261F8"
 
 .obj "@eti_80026204", local
 .hidden "@eti_80026204"
-	.4byte __dt__800D8D7C
+	.4byte __dt__cf_CChainMember
 	.4byte 0x00000040
 	.4byte "@etb_8000A7A0"
 .endobj "@eti_80026204"
@@ -33266,28 +33264,28 @@ lbl_806667F8:
 
 .obj "@eti_8002621C", local
 .hidden "@eti_8002621C"
-	.4byte __dt__800D8E30
+	.4byte __dt__cf_CChainTemp
 	.4byte 0x00000040
 	.4byte "@etb_8000A7D0"
 .endobj "@eti_8002621C"
 
 .obj "@eti_80026228", local
 .hidden "@eti_80026228"
-	.4byte __dt__800D8E70
+	.4byte __dt__cf_Flusher_cf_CfObjectActor
 	.4byte 0x00000040
 	.4byte "@etb_8000A7D8"
 .endobj "@eti_80026228"
 
 .obj "@eti_80026234", local
 .hidden "@eti_80026234"
-	.4byte __dt__800D8EB0
+	.4byte __dt__cf_CSuddenCommu
 	.4byte 0x00000040
 	.4byte "@etb_8000A7E0"
 .endobj "@eti_80026234"
 
 .obj "@eti_80026240", local
 .hidden "@eti_80026240"
-	.4byte __dt__800D8EF0
+	.4byte __dt__cf_CBattleManager
 	.4byte 0x00000298
 	.4byte "@etb_8000A7E8"
 .endobj "@eti_80026240"

@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn SFH_Finish, global
 /* 803D0610 00399BD0  3C 80 80 62 */	lis r4, lbl_8061CE20@ha
 /* 803D0614 00399BD4  80 64 CE 20 */	lwz r3, lbl_8061CE20@l(r4)

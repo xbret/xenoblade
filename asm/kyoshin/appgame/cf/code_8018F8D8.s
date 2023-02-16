@@ -1969,7 +1969,7 @@
 /* 8019141C 0015A9DC  4E 80 00 20 */	blr
 .endfn func_80190940
 
-.fn __dt__80191420, global
+.fn __dt__CMenuPTState, global
 /* 80191420 0015A9E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80191424 0015A9E4  7C 08 02 A6 */	mflr r0
 /* 80191428 0015A9E8  2C 03 00 00 */	cmpwi r3, 0
@@ -1981,7 +1981,7 @@
 /* 80191440 0015AA00  41 82 00 44 */	beq .L_80191484
 /* 80191444 0015AA04  38 80 FF FF */	li r4, -1
 /* 80191448 0015AA08  38 63 00 80 */	addi r3, r3, 0x80
-/* 8019144C 0015AA0C  48 06 7F 41 */	bl __dt__801F938C
+/* 8019144C 0015AA0C  48 06 7F 41 */	bl __dt__CPartyStateWin
 /* 80191450 0015AA10  38 7E 00 60 */	addi r3, r30, 0x60
 /* 80191454 0015AA14  38 80 FF FF */	li r4, -1
 /* 80191458 0015AA18  48 03 25 79 */	bl __dt__CBgTex
@@ -1990,7 +1990,7 @@
 /* 80191464 0015AA24  41 82 00 10 */	beq .L_80191474
 /* 80191468 0015AA28  7F C3 F3 78 */	mr r3, r30
 /* 8019146C 0015AA2C  38 80 00 00 */	li r4, 0
-/* 80191470 0015AA30  48 2B 36 C9 */	bl __dt__80444B38
+/* 80191470 0015AA30  48 2B 36 C9 */	bl __dt__CProcess
 .L_80191474:
 /* 80191474 0015AA34  2C 1F 00 00 */	cmpwi r31, 0
 /* 80191478 0015AA38  40 81 00 0C */	ble .L_80191484
@@ -2004,7 +2004,7 @@
 /* 80191494 0015AA54  7C 08 03 A6 */	mtlr r0
 /* 80191498 0015AA58  38 21 00 10 */	addi r1, r1, 0x10
 /* 8019149C 0015AA5C  4E 80 00 20 */	blr 
-.endfn __dt__80191420
+.endfn __dt__CMenuPTState
 
 .fn func_801914A0, global
 /* 801914A0 0015AA60  94 21 93 E0 */	stwu r1, -0x6c20(r1)
@@ -2497,7 +2497,7 @@
 /* 80191C38 0015B1F8  98 1F 6C 65 */	stb r0, 0x6c65(r31)
 /* 80191C3C 0015B1FC  C0 01 6C 10 */	lfs f0, 0x6c10(r1)
 /* 80191C40 0015B200  D0 1F 6C 68 */	stfs f0, 0x6c68(r31)
-/* 80191C44 0015B204  48 06 77 49 */	bl __dt__801F938C
+/* 80191C44 0015B204  48 06 77 49 */	bl __dt__CPartyStateWin
 /* 80191C48 0015B208  2C 1F 00 00 */	cmpwi r31, 0
 /* 80191C4C 0015B20C  7F E4 FB 78 */	mr r4, r31
 /* 80191C50 0015B210  41 82 00 08 */	beq .L_80191C58
@@ -3829,16 +3829,16 @@ lbl_80666BF0:
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x00000080
-	.4byte __dt__801F938C
+	.4byte __dt__CPartyStateWin
 	.4byte 0x0780001E
 	.4byte 0x00000080
-	.4byte __dt__801F938C
+	.4byte __dt__CPartyStateWin
 	.4byte 0x0780001E
 	.4byte 0x00000060
 	.4byte __dt__CBgTex
 	.4byte 0x8680001E
 	.4byte 0x00000058
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 .endobj "@etb_8000F22C"
 
 .obj "@etb_8000F274", local
@@ -4062,7 +4062,7 @@ lbl_80666BF0:
 
 .obj "@eti_8002A068", local
 .hidden "@eti_8002A068"
-	.4byte __dt__80191420
+	.4byte __dt__CMenuPTState
 	.4byte 0x00000080
 	.4byte "@etb_8000F22C"
 .endobj "@eti_8002A068"

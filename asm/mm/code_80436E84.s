@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn sinit_80436E84, local
 /* 80436E84 00400444  3C C0 80 66 */	lis r6, lbl_80659FE8@ha
 /* 80436E88 00400448  3C 80 80 66 */	lis r4, lbl_8065A028@ha

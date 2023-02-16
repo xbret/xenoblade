@@ -2,9 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-
 .fn __ct__CWorkControl, global
 /* 80443718 0040CCD8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044371C 0040CCDC  7C 08 02 A6 */	mflr r0
@@ -27,7 +24,7 @@
 /* 80443760 0040CD20  4E 80 00 20 */	blr 
 .endfn __ct__CWorkControl
 
-.fn __dt__80443764, global
+.fn __dt__CWorkControl, global
 /* 80443764 0040CD24  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80443768 0040CD28  7C 08 02 A6 */	mflr r0
 /* 8044376C 0040CD2C  2C 03 00 00 */	cmpwi r3, 0
@@ -51,7 +48,7 @@
 /* 804437B0 0040CD70  7C 08 03 A6 */	mtlr r0
 /* 804437B4 0040CD74  38 21 00 10 */	addi r1, r1, 0x10
 /* 804437B8 0040CD78  4E 80 00 20 */	blr 
-.endfn __dt__80443764
+.endfn __dt__CWorkControl
 
 .fn func_804437BC, global
 /* 804437BC 0040CD7C  80 6D BD 38 */	lwz r3, lbl_80667EB8@sda21(r13)
@@ -248,7 +245,7 @@ CWorkControl_strpool:
 __vt__CWorkControl:
 	.4byte __RTTI__CWorkControl
 	.4byte 0
-	.4byte __dt__80443764
+	.4byte __dt__CWorkControl
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -373,7 +370,7 @@ lbl_80667EB8:
 
 .obj "@eti_80034310", local
 .hidden "@eti_80034310"
-	.4byte __dt__80443764
+	.4byte __dt__CWorkControl
 	.4byte 0x00000058
 	.4byte "@etb_8001C72C"
 .endobj "@eti_80034310"

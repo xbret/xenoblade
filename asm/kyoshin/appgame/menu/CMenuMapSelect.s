@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CMenuMapSelect, global
 /* 8024221C 0020B7DC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80242220 0020B7E0  7C 08 02 A6 */	mflr r0
@@ -64,7 +62,7 @@
 /* 802422F8 0020B8B8  38 7E 00 B8 */	addi r3, r30, 0xb8
 /* 802422FC 0020B8BC  48 00 0D B1 */	bl func_802430AC
 /* 80242300 0020B8C0  38 7E 01 6C */	addi r3, r30, 0x16c
-/* 80242304 0020B8C4  48 00 1F DD */	bl func_802442E0
+/* 80242304 0020B8C4  48 00 1F DD */	bl __ct__CFade
 /* 80242308 0020B8C8  38 7E 01 94 */	addi r3, r30, 0x194
 /* 8024230C 0020B8CC  48 00 95 C9 */	bl func_8024B8D4
 /* 80242310 0020B8D0  9B FE 34 DC */	stb r31, 0x34dc(r30)
@@ -528,7 +526,7 @@
 /* 802429DC 0020BF9C  80 01 33 4C */	lwz r0, 0x334c(r1)
 /* 802429E0 0020BFA0  90 1F 34 D8 */	stw r0, 0x34d8(r31)
 /* 802429E4 0020BFA4  90 BF 34 D4 */	stw r5, 0x34d4(r31)
-/* 802429E8 0020BFA8  48 00 93 9D */	bl __dt__8024BD84
+/* 802429E8 0020BFA8  48 00 93 9D */	bl __dt__CFloorMap
 /* 802429EC 0020BFAC  38 7F 00 B8 */	addi r3, r31, 0xb8
 /* 802429F0 0020BFB0  48 00 10 AD */	bl func_80243A9C
 /* 802429F4 0020BFB4  7C 60 1B 78 */	mr r0, r3
@@ -1020,7 +1018,7 @@
 
 .fn func_802430A4, global
 /* 802430A4 0020C664  38 63 FF A8 */	addi r3, r3, -88
-/* 802430A8 0020C668  4B FF E3 C4 */	b __dt__8024146C
+/* 802430A8 0020C668  4B FF E3 C4 */	b __dt__CMenuMapSelect
 .endfn func_802430A4
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -1048,7 +1046,7 @@ lbl_80506B98:
 __vt__CMenuMapSelect:
 	.4byte __RTTI__CMenuMapSelect
 	.4byte 0
-	.4byte __dt__8024146C
+	.4byte __dt__CMenuMapSelect
 	.4byte CChildListNode_Reset
 	.4byte func_80241510
 	.4byte func_80241DB4
@@ -1127,10 +1125,10 @@ float_8066AFE8:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x0000016C
-	.4byte __dt__80244348
+	.4byte __dt__CFade
 	.4byte 0x0780001E
 	.4byte 0x000000B8
-	.4byte __dt__802433D0
+	.4byte __dt__CMapSel
 	.4byte 0x0780001E
 	.4byte 0x00000080
 	.4byte __dt__CTitleAHelp
@@ -1139,7 +1137,7 @@ float_8066AFE8:
 	.4byte __dt__CBgTex
 	.4byte 0x0680001E
 	.4byte 0x00000058
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x8680001E
 	.4byte 0x00000000
 	.4byte __dt__800FED0C

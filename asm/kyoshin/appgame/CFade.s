@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_802442E0, global
+.fn __ct__CFade, global
 /* 802442E0 0020D8A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802442E4 0020D8A4  7C 08 02 A6 */	mflr r0
 /* 802442E8 0020D8A8  3C 80 80 54 */	lis r4, __vt__CFade@ha
@@ -31,9 +29,9 @@
 /* 8024433C 0020D8FC  7C 08 03 A6 */	mtlr r0
 /* 80244340 0020D900  38 21 00 10 */	addi r1, r1, 0x10
 /* 80244344 0020D904  4E 80 00 20 */	blr 
-.endfn func_802442E0
+.endfn __ct__CFade
 
-.fn __dt__80244348, global
+.fn __dt__CFade, global
 /* 80244348 0020D908  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8024434C 0020D90C  7C 08 02 A6 */	mflr r0
 /* 80244350 0020D910  2C 03 00 00 */	cmpwi r3, 0
@@ -56,7 +54,7 @@
 /* 80244390 0020D950  7C 08 03 A6 */	mtlr r0
 /* 80244394 0020D954  38 21 00 10 */	addi r1, r1, 0x10
 /* 80244398 0020D958  4E 80 00 20 */	blr 
-.endfn __dt__80244348
+.endfn __dt__CFade
 
 .fn func_8024439C, global
 /* 8024439C 0020D95C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -894,7 +892,7 @@ CFade_strpool:
 __vt__CFade:
 	.4byte __RTTI__CFade
 	.4byte 0
-	.4byte __dt__80244348
+	.4byte __dt__CFade
 	.4byte func_80039E28
 	.4byte func_8024460C
 	.4byte func_80039E18
@@ -1060,14 +1058,14 @@ CFade_typestr:
 
 .obj "@eti_8002F2A0", local
 .hidden "@eti_8002F2A0"
-	.4byte func_802442E0
+	.4byte __ct__CFade
 	.4byte 0x00000068
 	.4byte "@etb_80016474"
 .endobj "@eti_8002F2A0"
 
 .obj "@eti_8002F2AC", local
 .hidden "@eti_8002F2AC"
-	.4byte __dt__80244348
+	.4byte __dt__CFade
 	.4byte 0x00000054
 	.4byte "@etb_80016490"
 .endobj "@eti_8002F2AC"

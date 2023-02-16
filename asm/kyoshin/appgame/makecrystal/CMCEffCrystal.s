@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_80224C4C, global
 /* 80224C4C 001EE20C  3C C0 80 54 */	lis r6, __vt__CMCEffCrystal@ha
 /* 80224C50 001EE210  38 A0 00 00 */	li r5, 0
@@ -29,7 +27,7 @@
 /* 80224CA0 001EE260  4E 80 00 20 */	blr 
 .endfn func_80224C4C
 
-.fn __dt__80224CA4, global
+.fn __dt__CMCEffCrystal, global
 /* 80224CA4 001EE264  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80224CA8 001EE268  7C 08 02 A6 */	mflr r0
 /* 80224CAC 001EE26C  2C 03 00 00 */	cmpwi r3, 0
@@ -47,7 +45,7 @@
 /* 80224CD8 001EE298  7C 08 03 A6 */	mtlr r0
 /* 80224CDC 001EE29C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80224CE0 001EE2A0  4E 80 00 20 */	blr 
-.endfn __dt__80224CA4
+.endfn __dt__CMCEffCrystal
 
 .fn func_80224CE4, global
 /* 80224CE4 001EE2A4  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1179,7 +1177,7 @@
 
 .obj "@eti_8002DFB0", local
 .hidden "@eti_8002DFB0"
-	.4byte __dt__80224CA4
+	.4byte __dt__CMCEffCrystal
 	.4byte 0x00000040
 	.4byte "@etb_800150AC"
 .endobj "@eti_8002DFB0"

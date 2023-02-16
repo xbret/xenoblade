@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
 .fn func_80263EBC, global
 /* 80263EBC 0022D47C  3C C0 80 54 */	lis r6, __vt__UI_CPassiveSkillCur@ha
 /* 80263EC0 0022D480  38 A0 00 00 */	li r5, 0
@@ -19,7 +18,7 @@
 /* 80263EEC 0022D4AC  4E 80 00 20 */	blr 
 .endfn func_80263EBC
 
-.fn __dt__80263EF0, global
+.fn __dt__UI_CPassiveSkillCur, global
 /* 80263EF0 0022D4B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80263EF4 0022D4B4  7C 08 02 A6 */	mflr r0
 /* 80263EF8 0022D4B8  2C 03 00 00 */	cmpwi r3, 0
@@ -37,7 +36,7 @@
 /* 80263F24 0022D4E4  7C 08 03 A6 */	mtlr r0
 /* 80263F28 0022D4E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80263F2C 0022D4EC  4E 80 00 20 */	blr 
-.endfn __dt__80263EF0
+.endfn __dt__UI_CPassiveSkillCur
 
 .fn func_80263F30, global
 /* 80263F30 0022D4F0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -636,7 +635,7 @@
 
 .obj "@eti_800300E0", local
 .hidden "@eti_800300E0"
-	.4byte __dt__80263EF0
+	.4byte __dt__UI_CPassiveSkillCur
 	.4byte 0x00000040
 	.4byte "@etb_8001791C"
 .endobj "@eti_800300E0"

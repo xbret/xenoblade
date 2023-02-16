@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CProc, global
 /* 80438C30 004021F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80438C34 004021F4  7C 08 02 A6 */	mflr r0
@@ -82,7 +80,7 @@
 /* 80438D58 00402318  4E 80 00 20 */	blr 
 .endfn __ct__CProc
 
-.fn __dt__80438D5C, global
+.fn __dt___reslist_base_unsigned_long, global
 /* 80438D5C 0040231C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80438D60 00402320  7C 08 02 A6 */	mflr r0
 /* 80438D64 00402324  2C 03 00 00 */	cmpwi r3, 0
@@ -132,9 +130,9 @@
 /* 80438E04 004023C4  7C 08 03 A6 */	mtlr r0
 /* 80438E08 004023C8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80438E0C 004023CC  4E 80 00 20 */	blr 
-.endfn __dt__80438D5C
+.endfn __dt___reslist_base_unsigned_long
 
-.fn __dt__80438E10, global
+.fn __dt__reslist_unsigned_long, global
 /* 80438E10 004023D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80438E14 004023D4  7C 08 02 A6 */	mflr r0
 /* 80438E18 004023D8  2C 03 00 00 */	cmpwi r3, 0
@@ -185,9 +183,9 @@
 /* 80438EBC 0040247C  7C 08 03 A6 */	mtlr r0
 /* 80438EC0 00402480  38 21 00 10 */	addi r1, r1, 0x10
 /* 80438EC4 00402484  4E 80 00 20 */	blr 
-.endfn __dt__80438E10
+.endfn __dt__reslist_unsigned_long
 
-.fn __dt__80438EC8, global
+.fn __dt__CProc, global
 /* 80438EC8 00402488  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80438ECC 0040248C  7C 08 02 A6 */	mflr r0
 /* 80438ED0 00402490  2C 03 00 00 */	cmpwi r3, 0
@@ -256,7 +254,7 @@
 /* 80438FB4 00402574  7C 08 03 A6 */	mtlr r0
 /* 80438FB8 00402578  38 21 00 20 */	addi r1, r1, 0x20
 /* 80438FBC 0040257C  4E 80 00 20 */	blr 
-.endfn __dt__80438EC8
+.endfn __dt__CProc
 
 .fn func_80438FC0, global
 /* 80438FC0 00402580  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -550,7 +548,7 @@
 /* 80439378 00402938  41 82 00 14 */	beq .L_8043938C
 /* 8043937C 0040293C  7F 65 DB 78 */	mr r5, r27
 /* 80439380 00402940  38 9F 00 68 */	addi r4, r31, 0x68
-/* 80439384 00402944  48 00 2F 41 */	bl func_8043C2C4
+/* 80439384 00402944  48 00 2F 41 */	bl __ct__CView
 /* 80439388 00402948  7C 7D 1B 78 */	mr r29, r3
 .L_8043938C:
 /* 8043938C 0040294C  7F A3 EB 78 */	mr r3, r29
@@ -856,7 +854,7 @@ lbl_80525E18:
 __vt__CProc:
 	.4byte __RTTI__CProc
 	.4byte 0
-	.4byte __dt__80438EC8
+	.4byte __dt__CProc
 	.4byte func_80039E28
 	.4byte func_80039E20
 	.4byte func_80039E18
@@ -900,7 +898,7 @@ __vt__CProc:
 __vt__reslist_unsigned_long:
 	.4byte __RTTI__reslist_unsigned_long
 	.4byte 0
-	.4byte __dt__80438E10
+	.4byte __dt__reslist_unsigned_long
 
 .global reslist_unsigned_long_hierarchy
 reslist_unsigned_long_hierarchy:
@@ -913,7 +911,7 @@ reslist_unsigned_long_hierarchy:
 __vt___reslist_base_unsigned_long:
 	.4byte __RTTI___reslist_base_unsigned_long
 	.4byte 0
-	.4byte __dt__80438D5C
+	.4byte __dt___reslist_base_unsigned_long
 	.4byte 0
 
 
@@ -957,7 +955,7 @@ double_8066CA80:
 	.4byte 0x00000000
 	.4byte 0x0780001F
 	.4byte 0x000001C4
-	.4byte __dt__80438E10
+	.4byte __dt__reslist_unsigned_long
 	.4byte 0x8680001F
 	.4byte 0x00000000
 	.4byte __dt__CWorkThread
@@ -983,7 +981,7 @@ double_8066CA80:
 	.4byte 0x00000000
 	.4byte 0x8780001D
 	.4byte 0x000001C4
-	.4byte __dt__80438E10
+	.4byte __dt__reslist_unsigned_long
 .endobj "@etb_8001C1EC"
 
 .obj "@etb_8001C208", local
@@ -1029,21 +1027,21 @@ double_8066CA80:
 
 .obj "@eti_80033E24", local
 .hidden "@eti_80033E24"
-	.4byte __dt__80438D5C
+	.4byte __dt___reslist_base_unsigned_long
 	.4byte 0x000000B4
 	.4byte "@etb_8001C1DC"
 .endobj "@eti_80033E24"
 
 .obj "@eti_80033E30", local
 .hidden "@eti_80033E30"
-	.4byte __dt__80438E10
+	.4byte __dt__reslist_unsigned_long
 	.4byte 0x000000B8
 	.4byte "@etb_8001C1E4"
 .endobj "@eti_80033E30"
 
 .obj "@eti_80033E3C", local
 .hidden "@eti_80033E3C"
-	.4byte __dt__80438EC8
+	.4byte __dt__CProc
 	.4byte 0x000000F8
 	.4byte "@etb_8001C1EC"
 .endobj "@eti_80033E3C"

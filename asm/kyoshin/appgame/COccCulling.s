@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_801A04A4, global
+.fn __ct__COccCulling, global
 /* 801A04A4 00169A64  3C A0 80 53 */	lis r5, __vt__COccCulling@ha
 /* 801A04A8 00169A68  38 80 00 00 */	li r4, 0
 /* 801A04AC 00169A6C  38 00 FF FF */	li r0, -1
@@ -22,7 +20,7 @@
 /* 801A04DC 00169A9C  98 83 00 2D */	stb r4, 0x2d(r3)
 /* 801A04E0 00169AA0  98 83 00 2E */	stb r4, 0x2e(r3)
 /* 801A04E4 00169AA4  4E 80 00 20 */	blr 
-.endfn func_801A04A4
+.endfn __ct__COccCulling
 
 .fn __dt__801A04E8, global
 /* 801A04E8 00169AA8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -67,7 +65,7 @@
 /* 801A057C 00169B3C  4E 80 00 20 */	blr 
 .endfn __dt__801A04E8
 
-.fn __dt__801A0580, global
+.fn __dt__COccCulling, global
 /* 801A0580 00169B40  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801A0584 00169B44  7C 08 02 A6 */	mflr r0
 /* 801A0588 00169B48  2C 03 00 00 */	cmpwi r3, 0
@@ -169,7 +167,7 @@
 /* 801A06EC 00169CAC  7C 08 03 A6 */	mtlr r0
 /* 801A06F0 00169CB0  38 21 00 20 */	addi r1, r1, 0x20
 /* 801A06F4 00169CB4  4E 80 00 20 */	blr 
-.endfn __dt__801A0580
+.endfn __dt__COccCulling
 
 .fn func_801A06F8, global
 /* 801A06F8 00169CB8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1403,7 +1401,7 @@ lbl_804FF61C:
 __vt__COccCulling:
 	.4byte __RTTI__COccCulling
 	.4byte 0
-	.4byte __dt__801A0580
+	.4byte __dt__COccCulling
 	.4byte 0
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -1536,7 +1534,7 @@ lbl_80578FE8:
 
 .obj "@eti_8002A4C4", local
 .hidden "@eti_8002A4C4"
-	.4byte __dt__801A0580
+	.4byte __dt__COccCulling
 	.4byte 0x00000178
 	.4byte "@etb_8000F63C"
 .endobj "@eti_8002A4C4"

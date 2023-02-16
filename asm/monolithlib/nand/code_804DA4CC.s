@@ -657,7 +657,7 @@
 __vt__CNRequest:
 	.4byte __RTTI__CNRequest
 	.4byte 0
-	.4byte __dt__804DA114
+	.4byte __dt__CNRequest
 	.4byte 0
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600

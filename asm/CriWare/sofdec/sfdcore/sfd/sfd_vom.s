@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
 .fn SFVOM_Init, global
 /* 803CEC9C 0039825C  38 60 00 00 */	li r3, 0
 /* 803CECA0 00398260  4E 80 00 20 */	blr 

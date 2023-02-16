@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_804532D4, global
 /* 804532D4 0041C894  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 804532D8 0041C898  7C 08 02 A6 */	mflr r0
@@ -75,7 +73,7 @@
 /* 804533DC 0041C99C  4E 80 00 20 */	blr 
 .endfn func_804532D4
 
-.fn __dt__804533E0, global
+.fn __dt__CDeviceFontInfoExt, global
 /* 804533E0 0041C9A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804533E4 0041C9A4  7C 08 02 A6 */	mflr r0
 /* 804533E8 0041C9A8  2C 03 00 00 */	cmpwi r3, 0
@@ -112,7 +110,7 @@
 /* 8045345C 0041CA1C  7C 08 03 A6 */	mtlr r0
 /* 80453460 0041CA20  38 21 00 10 */	addi r1, r1, 0x10
 /* 80453464 0041CA24  4E 80 00 20 */	blr 
-.endfn __dt__804533E0
+.endfn __dt__CDeviceFontInfoExt
 
 .fn func_80453468, global
 /* 80453468 0041CA28  94 21 FF B0 */	stwu r1, -0x50(r1)
@@ -305,7 +303,7 @@ IDeviceFontInfo_typestr:
 __vt__CDeviceFontInfoExt:
 	.4byte __RTTI__CDeviceFontInfoExt
 	.4byte 0
-	.4byte __dt__804533E0
+	.4byte __dt__CDeviceFontInfoExt
 	.4byte func_80453654
 	.4byte func_8045364C
 	.4byte func_80453644
@@ -418,7 +416,7 @@ lbl_8066DCF8:
 
 .obj "@eti_80034D78", local
 .hidden "@eti_80034D78"
-	.4byte __dt__804533E0
+	.4byte __dt__CDeviceFontInfoExt
 	.4byte 0x00000088
 	.4byte "@etb_8001D0B0"
 .endobj "@eti_80034D78"

@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_8015D208, global
 /* 8015D208 001267C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8015D20C 001267CC  7C 08 02 A6 */	mflr r0
@@ -251,7 +249,7 @@
 /* 8015D590 00126B50  4E 80 00 20 */	blr
 .endfn func_8015D470
 
-.fn __dt__8015D594, global
+.fn __dt__CCol6Hint, global
 /* 8015D594 00126B54  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8015D598 00126B58  7C 08 02 A6 */	mflr r0
 /* 8015D59C 00126B5C  2C 03 00 00 */	cmpwi r3, 0
@@ -275,7 +273,7 @@
 /* 8015D5E4 00126BA4  41 82 00 10 */	beq .L_8015D5F4
 /* 8015D5E8 00126BA8  7F C3 F3 78 */	mr r3, r30
 /* 8015D5EC 00126BAC  38 80 00 00 */	li r4, 0
-/* 8015D5F0 00126BB0  48 2E 75 49 */	bl __dt__80444B38
+/* 8015D5F0 00126BB0  48 2E 75 49 */	bl __dt__CProcess
 .L_8015D5F4:
 /* 8015D5F4 00126BB4  2C 1F 00 00 */	cmpwi r31, 0
 /* 8015D5F8 00126BB8  40 81 00 0C */	ble .L_8015D604
@@ -289,7 +287,7 @@
 /* 8015D614 00126BD4  7C 08 03 A6 */	mtlr r0
 /* 8015D618 00126BD8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8015D61C 00126BDC  4E 80 00 20 */	blr 
-.endfn __dt__8015D594
+.endfn __dt__CCol6Hint
 
 .fn func_8015D620, global
 /* 8015D620 00126BE0  94 21 FF B0 */	stwu r1, -0x50(r1)
@@ -1905,13 +1903,13 @@ lbl_80666B2C:
 	.4byte __dt__8045F580
 	.4byte 0x0680001D
 	.4byte 0x00000070
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x0680001D
 	.4byte 0x0000006C
 	.4byte __dt__IWorkEvent
 	.4byte 0x8680001D
 	.4byte 0x00000000
-	.4byte __dt__8012235C
+	.4byte __dt__IUIWindow
 .endobj "@etb_8000D6E8"
 
 .obj "@etb_8000D744", local
@@ -1944,7 +1942,7 @@ lbl_80666B2C:
 	.4byte __dt__8045F580
 	.4byte 0x0680001E
 	.4byte 0x00000070
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x8680001E
 	.4byte 0x0000006C
 	.4byte __dt__IWorkEvent
@@ -2040,7 +2038,7 @@ lbl_80666B2C:
 
 .obj "@eti_80028A18", local
 .hidden "@eti_80028A18"
-	.4byte __dt__8015D594
+	.4byte __dt__CCol6Hint
 	.4byte 0x0000008C
 	.4byte "@etb_8000D744"
 .endobj "@eti_80028A18"

@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
 .fn SFTMR_GetTmr, global
 /* 803CEE60 00398420  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CEE64 00398424  7C 08 02 A6 */	mflr r0

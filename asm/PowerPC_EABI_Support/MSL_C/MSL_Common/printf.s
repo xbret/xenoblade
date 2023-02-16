@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
 .fn parse_format, local
 /* 802BEC4C 0028820C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802BEC50 00288210  7C 08 02 A6 */	mflr r0

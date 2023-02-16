@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CMenuSymbolMark, global
 /* 8011D424 000E69E4  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8011D428 000E69E8  7C 08 02 A6 */	mflr r0
@@ -375,7 +373,7 @@
 /* 8011D9BC 000E6F7C  4E 80 00 20 */	blr
 .endfn __ct__CMenuSymbolMark
 
-.fn __dt__8011D9C0, global
+.fn __dt__CMenuSymbolMark, global
 /* 8011D9C0 000E6F80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8011D9C4 000E6F84  7C 08 02 A6 */	mflr r0
 /* 8011D9C8 000E6F88  2C 03 00 00 */	cmpwi r3, 0
@@ -393,7 +391,7 @@
 /* 8011D9F8 000E6FB8  41 82 00 10 */	beq .L_8011DA08
 /* 8011D9FC 000E6FBC  7F C3 F3 78 */	mr r3, r30
 /* 8011DA00 000E6FC0  38 80 00 00 */	li r4, 0
-/* 8011DA04 000E6FC4  48 32 71 35 */	bl __dt__80444B38
+/* 8011DA04 000E6FC4  48 32 71 35 */	bl __dt__CProcess
 .L_8011DA08:
 /* 8011DA08 000E6FC8  2C 1F 00 00 */	cmpwi r31, 0
 /* 8011DA0C 000E6FCC  40 81 00 0C */	ble .L_8011DA18
@@ -407,7 +405,7 @@
 /* 8011DA28 000E6FE8  7C 08 03 A6 */	mtlr r0
 /* 8011DA2C 000E6FEC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8011DA30 000E6FF0  4E 80 00 20 */	blr 
-.endfn __dt__8011D9C0
+.endfn __dt__CMenuSymbolMark
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -608,7 +606,7 @@ lbl_80530478:
 	.4byte __dt__8045F580
 	.4byte 0x0680001F
 	.4byte 0x0000005C
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x0680001F
 	.4byte 0x00000058
 	.4byte __dt__IWorkEvent
@@ -628,7 +626,7 @@ lbl_80530478:
 	.4byte __dt__8045F580
 	.4byte 0x0680001E
 	.4byte 0x0000005C
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x8680001E
 	.4byte 0x00000058
 	.4byte __dt__IWorkEvent
@@ -647,7 +645,7 @@ lbl_80530478:
 
 .obj "@eti_80026E58", local
 .hidden "@eti_80026E58"
-	.4byte __dt__8011D9C0
+	.4byte __dt__CMenuSymbolMark
 	.4byte 0x00000074
 	.4byte "@etb_8000BADC"
 .endobj "@eti_80026E58"

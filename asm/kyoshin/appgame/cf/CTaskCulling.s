@@ -2,9 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-.fn func_801A29CC, global
+.fn __ct__cf_CTaskCulling, global
 /* 801A29CC 0016BF8C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801A29D0 0016BF90  7C 08 02 A6 */	mflr r0
 /* 801A29D4 0016BF94  90 01 00 14 */	stw r0, 0x14(r1)
@@ -39,7 +37,7 @@
 /* 801A2A48 0016C008  90 BE 00 54 */	stw r5, 0x54(r30)
 /* 801A2A4C 0016C00C  90 9E 00 58 */	stw r4, 0x58(r30)
 /* 801A2A50 0016C010  90 1E 00 5C */	stw r0, 0x5c(r30)
-/* 801A2A54 0016C014  4B FF DA 51 */	bl func_801A04A4
+/* 801A2A54 0016C014  4B FF DA 51 */	bl __ct__COccCulling
 /* 801A2A58 0016C018  38 00 00 00 */	li r0, 0
 /* 801A2A5C 0016C01C  93 FE 00 90 */	stw r31, 0x90(r30)
 /* 801A2A60 0016C020  2C 1E 00 00 */	cmpwi r30, 0
@@ -67,7 +65,7 @@
 /* 801A2AB4 0016C074  7C 08 03 A6 */	mtlr r0
 /* 801A2AB8 0016C078  38 21 00 10 */	addi r1, r1, 0x10
 /* 801A2ABC 0016C07C  4E 80 00 20 */	blr 
-.endfn func_801A29CC
+.endfn __ct__cf_CTaskCulling
 
 .fn __dt__801A2AC0, global
 /* 801A2AC0 0016C080  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -89,7 +87,7 @@
 /* 801A2AFC 0016C0BC  4E 80 00 20 */	blr 
 .endfn __dt__801A2AC0
 
-.fn __dt__801A2B00, global
+.fn __dt__CTTask_cf_CTaskCulling, global
 /* 801A2B00 0016C0C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801A2B04 0016C0C4  7C 08 02 A6 */	mflr r0
 /* 801A2B08 0016C0C8  2C 03 00 00 */	cmpwi r3, 0
@@ -100,7 +98,7 @@
 /* 801A2B1C 0016C0DC  7C 7E 1B 78 */	mr r30, r3
 /* 801A2B20 0016C0E0  41 82 00 1C */	beq .L_801A2B3C
 /* 801A2B24 0016C0E4  38 80 00 00 */	li r4, 0
-/* 801A2B28 0016C0E8  48 2A 20 11 */	bl __dt__80444B38
+/* 801A2B28 0016C0E8  48 2A 20 11 */	bl __dt__CProcess
 /* 801A2B2C 0016C0EC  2C 1F 00 00 */	cmpwi r31, 0
 /* 801A2B30 0016C0F0  40 81 00 0C */	ble .L_801A2B3C
 /* 801A2B34 0016C0F4  7F C3 F3 78 */	mr r3, r30
@@ -113,9 +111,9 @@
 /* 801A2B4C 0016C10C  7C 08 03 A6 */	mtlr r0
 /* 801A2B50 0016C110  38 21 00 10 */	addi r1, r1, 0x10
 /* 801A2B54 0016C114  4E 80 00 20 */	blr
-.endfn __dt__801A2B00
+.endfn __dt__CTTask_cf_CTaskCulling
 
-.fn __dt__801A2B58, global
+.fn __dt__cf_CTaskCulling, global
 /* 801A2B58 0016C118  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801A2B5C 0016C11C  7C 08 02 A6 */	mflr r0
 /* 801A2B60 0016C120  2C 03 00 00 */	cmpwi r3, 0
@@ -129,12 +127,12 @@
 /* 801A2B80 0016C140  90 0D AA 98 */	stw r0, lbl_80666C18@sda21(r13)
 /* 801A2B84 0016C144  38 80 FF FF */	li r4, -1
 /* 801A2B88 0016C148  38 63 00 60 */	addi r3, r3, 0x60
-/* 801A2B8C 0016C14C  4B FF D9 F5 */	bl __dt__801A0580
+/* 801A2B8C 0016C14C  4B FF D9 F5 */	bl __dt__COccCulling
 /* 801A2B90 0016C150  2C 1E 00 00 */	cmpwi r30, 0
 /* 801A2B94 0016C154  41 82 00 10 */	beq .L_801A2BA4
 /* 801A2B98 0016C158  7F C3 F3 78 */	mr r3, r30
 /* 801A2B9C 0016C15C  38 80 00 00 */	li r4, 0
-/* 801A2BA0 0016C160  48 2A 1F 99 */	bl __dt__80444B38
+/* 801A2BA0 0016C160  48 2A 1F 99 */	bl __dt__CProcess
 .L_801A2BA4:
 /* 801A2BA4 0016C164  2C 1F 00 00 */	cmpwi r31, 0
 /* 801A2BA8 0016C168  40 81 00 0C */	ble .L_801A2BB4
@@ -148,7 +146,7 @@
 /* 801A2BC4 0016C184  7C 08 03 A6 */	mtlr r0
 /* 801A2BC8 0016C188  38 21 00 10 */	addi r1, r1, 0x10
 /* 801A2BCC 0016C18C  4E 80 00 20 */	blr 
-.endfn __dt__801A2B58
+.endfn __dt__cf_CTaskCulling
 
 .fn func_801A2BD0, global
 /* 801A2BD0 0016C190  80 8D AA 98 */	lwz r4, lbl_80666C18@sda21(r13)
@@ -444,7 +442,7 @@
 /* 801A2F64 0016C524  7C 7F 1B 78 */	mr r31, r3
 /* 801A2F68 0016C528  41 82 00 10 */	beq .L_801A2F78
 /* 801A2F6C 0016C52C  7F C4 F3 78 */	mr r4, r30
-/* 801A2F70 0016C530  4B FF FA 5D */	bl func_801A29CC
+/* 801A2F70 0016C530  4B FF FA 5D */	bl __ct__cf_CTaskCulling
 /* 801A2F74 0016C534  7C 7F 1B 78 */	mr r31, r3
 .L_801A2F78:
 /* 801A2F78 0016C538  7F E3 FB 78 */	mr r3, r31
@@ -536,7 +534,7 @@
 
 .fn func_801A30A0, global
 /* 801A30A0 0016C660  38 63 FF AC */	addi r3, r3, -84
-/* 801A30A4 0016C664  4B FF FA B4 */	b __dt__801A2B58
+/* 801A30A4 0016C664  4B FF FA B4 */	b __dt__cf_CTaskCulling
 .endfn func_801A30A0
 
 .fn func_801A30A8, global
@@ -546,7 +544,7 @@
 
 .fn func_801A30B0, global
 /* 801A30B0 0016C670  38 63 FF A8 */	addi r3, r3, -88
-/* 801A30B4 0016C674  4B FF FA A4 */	b __dt__801A2B58
+/* 801A30B4 0016C674  4B FF FA A4 */	b __dt__cf_CTaskCulling
 .endfn func_801A30B0
 
 .fn func_801A30B8, global
@@ -566,7 +564,7 @@
 
 .fn func_801A30D0, global
 /* 801A30D0 0016C690  38 63 FF A4 */	addi r3, r3, -92
-/* 801A30D4 0016C694  4B FF FA 84 */	b __dt__801A2B58
+/* 801A30D4 0016C694  4B FF FA 84 */	b __dt__cf_CTaskCulling
 .endfn func_801A30D0
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
@@ -604,7 +602,7 @@ lbl_804FF780:
 __vt__cf_CTaskCulling:
 	.4byte __RTTI__cf_CTaskCulling
 	.4byte 0
-	.4byte __dt__801A2B58
+	.4byte __dt__cf_CTaskCulling
 	.4byte CChildListNode_Reset
 	.4byte func_801A2E40
 	.4byte func_801A2EA0
@@ -677,7 +675,7 @@ cf_CTaskCulling_hierarchy:
 __vt__CTTask_cf_CTaskCulling:
 	.4byte __RTTI__CTTask_cf_CTaskCulling
 	.4byte 0
-	.4byte __dt__801A2B00
+	.4byte __dt__CTTask_cf_CTaskCulling
 	.4byte CChildListNode_Reset
 	.4byte 0
 	.4byte 0
@@ -772,19 +770,19 @@ lbl_80666C18:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000060
-	.4byte __dt__801A0580
+	.4byte __dt__COccCulling
 	.4byte 0x0680001E
 	.4byte 0x0000005C
 	.4byte __dt__801A2AC0
 	.4byte 0x0680001E
 	.4byte 0x00000058
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x0680001E
 	.4byte 0x00000054
 	.4byte __dt__IWorkEvent
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__801A2B00
+	.4byte __dt__CTTask_cf_CTaskCulling
 .endobj "@etb_8000F790"
 
 .obj "@etb_8000F7E4", local
@@ -807,13 +805,13 @@ lbl_80666C18:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000060
-	.4byte __dt__801A0580
+	.4byte __dt__COccCulling
 	.4byte 0x0680001E
 	.4byte 0x0000005C
 	.4byte __dt__801A2AC0
 	.4byte 0x0680001E
 	.4byte 0x00000058
-	.4byte __dt__8004031C
+	.4byte __dt__IScnRender
 	.4byte 0x8680001E
 	.4byte 0x00000054
 	.4byte __dt__IWorkEvent
@@ -861,7 +859,7 @@ lbl_80666C18:
 
 .obj "@eti_8002A590", local
 .hidden "@eti_8002A590"
-	.4byte func_801A29CC
+	.4byte __ct__cf_CTaskCulling
 	.4byte 0x000000F4
 	.4byte "@etb_8000F790"
 .endobj "@eti_8002A590"
@@ -875,14 +873,14 @@ lbl_80666C18:
 
 .obj "@eti_8002A5A8", local
 .hidden "@eti_8002A5A8"
-	.4byte __dt__801A2B00
+	.4byte __dt__CTTask_cf_CTaskCulling
 	.4byte 0x00000058
 	.4byte "@etb_8000F7EC"
 .endobj "@eti_8002A5A8"
 
 .obj "@eti_8002A5B4", local
 .hidden "@eti_8002A5B4"
-	.4byte __dt__801A2B58
+	.4byte __dt__cf_CTaskCulling
 	.4byte 0x00000078
 	.4byte "@etb_8000F7F4"
 .endobj "@eti_8002A5B4"

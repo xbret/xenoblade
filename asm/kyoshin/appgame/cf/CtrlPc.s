@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn func_80097004, global
 /* 80097004 000605C4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80097008 000605C8  7C 08 02 A6 */	mflr r0
@@ -60,7 +58,7 @@
 /* 800970CC 0006068C  4E 80 00 20 */	blr 
 .endfn func_80097004
 
-.fn __dt__800970D0, global
+.fn __dt__cf_CtrlPc, global
 /* 800970D0 00060690  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800970D4 00060694  7C 08 02 A6 */	mflr r0
 /* 800970D8 00060698  2C 03 00 00 */	cmpwi r3, 0
@@ -87,7 +85,7 @@
 /* 80097128 000606E8  7C 08 03 A6 */	mtlr r0
 /* 8009712C 000606EC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80097130 000606F0  4E 80 00 20 */	blr 
-.endfn __dt__800970D0
+.endfn __dt__cf_CtrlPc
 
 .fn func_80097134, global
 /* 80097134 000606F4  94 21 FF B0 */	stwu r1, -0x50(r1)
@@ -1998,7 +1996,7 @@ cf_CfObjectImplMove_typestr:
 __vt__cf_CtrlPc:
 	.4byte __RTTI__cf_CtrlPc
 	.4byte 0
-	.4byte __dt__800970D0
+	.4byte __dt__cf_CtrlPc
 	.4byte func_80097134
 	.4byte func_80098B6C
 	.4byte func_800D5860
@@ -2182,7 +2180,7 @@ float_80668FB0:
 	.4byte 0x00000000
 	.4byte 0x8680001D
 	.4byte 0x00000000
-	.4byte __dt__80087608
+	.4byte __dt__cf_CtrlAct
 .endobj "@etb_80008DD8"
 
 .obj "@etb_80008DF4", local
@@ -2193,7 +2191,7 @@ float_80668FB0:
 	.4byte 0x00000000
 	.4byte 0x8680001E
 	.4byte 0x00000000
-	.4byte __dt__80087608
+	.4byte __dt__cf_CtrlAct
 .endobj "@etb_80008DF4"
 
 .obj "@etb_80008E10", local
@@ -2297,7 +2295,7 @@ float_80668FB0:
 
 .obj "@eti_80024494", local
 .hidden "@eti_80024494"
-	.4byte __dt__800970D0
+	.4byte __dt__cf_CtrlPc
 	.4byte 0x00000064
 	.4byte "@etb_80008DF4"
 .endobj "@eti_80024494"

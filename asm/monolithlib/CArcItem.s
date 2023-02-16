@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __ct__CArcItem, global
 /* 804DEB14 004A80D4  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 804DEB18 004A80D8  7C 08 02 A6 */	mflr r0

@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 .fn __dt__804D6C60, global
 /* 804D6C60 004A0220  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 804D6C64 004A0224  7C 08 02 A6 */	mflr r0
@@ -339,7 +337,7 @@
 /* 804D710C 004A06CC  4E 80 00 20 */	blr 
 .endfn func_804D70A0
 
-.fn __dt__804D7110, global
+.fn __dt___reslist_base_CETrail_POINT, global
 /* 804D7110 004A06D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804D7114 004A06D4  7C 08 02 A6 */	mflr r0
 /* 804D7118 004A06D8  2C 03 00 00 */	cmpwi r3, 0
@@ -392,9 +390,9 @@
 /* 804D71C0 004A0780  7C 08 03 A6 */	mtlr r0
 /* 804D71C4 004A0784  38 21 00 10 */	addi r1, r1, 0x10
 /* 804D71C8 004A0788  4E 80 00 20 */	blr 
-.endfn __dt__804D7110
+.endfn __dt___reslist_base_CETrail_POINT
 
-.fn __dt__804D71CC, global
+.fn __dt__reslist_CETrail_POINT, global
 /* 804D71CC 004A078C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804D71D0 004A0790  7C 08 02 A6 */	mflr r0
 /* 804D71D4 004A0794  2C 03 00 00 */	cmpwi r3, 0
@@ -448,9 +446,9 @@
 /* 804D7280 004A0840  7C 08 03 A6 */	mtlr r0
 /* 804D7284 004A0844  38 21 00 10 */	addi r1, r1, 0x10
 /* 804D7288 004A0848  4E 80 00 20 */	blr 
-.endfn __dt__804D71CC
+.endfn __dt__reslist_CETrail_POINT
 
-.fn __dt__804D728C, global
+.fn __dt__CETrail, global
 /* 804D728C 004A084C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804D7290 004A0850  7C 08 02 A6 */	mflr r0
 /* 804D7294 004A0854  2C 03 00 00 */	cmpwi r3, 0
@@ -555,7 +553,7 @@
 /* 804D73F0 004A09B0  7C 08 03 A6 */	mtlr r0
 /* 804D73F4 004A09B4  38 21 00 10 */	addi r1, r1, 0x10
 /* 804D73F8 004A09B8  4E 80 00 20 */	blr 
-.endfn __dt__804D728C
+.endfn __dt__CETrail
 
 .fn func_804D73FC, global
 /* 804D73FC 004A09BC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1774,14 +1772,14 @@ _reslist_base_CETrail_POINT_typestr:
 __vt__CETrail:
 	.4byte __RTTI__CETrail
 	.4byte 0
-	.4byte __dt__804D728C
+	.4byte __dt__CETrail
 
 
 .global __vt__reslist_CETrail_POINT
 __vt__reslist_CETrail_POINT:
 	.4byte __RTTI__reslist_CETrail_POINT
 	.4byte 0
-	.4byte __dt__804D71CC
+	.4byte __dt__reslist_CETrail_POINT
 
 .global reslist_CETrail_POINT_hierarchy
 reslist_CETrail_POINT_hierarchy:
@@ -1794,7 +1792,7 @@ reslist_CETrail_POINT_hierarchy:
 __vt___reslist_base_CETrail_POINT:
 	.4byte __RTTI___reslist_base_CETrail_POINT
 	.4byte 0
-	.4byte __dt__804D7110
+	.4byte __dt___reslist_base_CETrail_POINT
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
@@ -1908,7 +1906,7 @@ lbl_80668294:
 	.4byte 0x00000000
 	.4byte 0x87800018
 	.4byte 0x00000000
-	.4byte __dt__804D71CC
+	.4byte __dt__reslist_CETrail_POINT
 .endobj "@etb_80020518"
 
 .obj "@etb_80020534", local
@@ -2009,21 +2007,21 @@ lbl_80668294:
 
 .obj "@eti_80038474", local
 .hidden "@eti_80038474"
-	.4byte __dt__804D7110
+	.4byte __dt___reslist_base_CETrail_POINT
 	.4byte 0x000000BC
 	.4byte "@etb_8002053C"
 .endobj "@eti_80038474"
 
 .obj "@eti_80038480", local
 .hidden "@eti_80038480"
-	.4byte __dt__804D71CC
+	.4byte __dt__reslist_CETrail_POINT
 	.4byte 0x000000C0
 	.4byte "@etb_80020544"
 .endobj "@eti_80038480"
 
 .obj "@eti_8003848C", local
 .hidden "@eti_8003848C"
-	.4byte __dt__804D728C
+	.4byte __dt__CETrail
 	.4byte 0x00000170
 	.4byte "@etb_8002054C"
 .endobj "@eti_8003848C"
