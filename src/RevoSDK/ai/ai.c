@@ -60,30 +60,15 @@ void AIInitDMA(void* buffer, u32 length) {
 
 void AIStartDMA(void) { DSP_HW_REGS[DSP_AI_DMA_CSR] |= DSP_AI_DMA_CSR_PLAY; }
 
+//void AIStopDMA(void) {}
+
 u32 AIGetDMABytesLeft(void) {
     return (DSP_HW_REGS[DSP_AI_DMA_BYTES_LEFT] & 0x7FFF) * 32;
 }
 
-void AISetDSPSampleRate(u32 rate) {
-    BOOL enabled;
-
-    if (rate != AIGetDSPSampleRate()) {
-        AI_HW_REGS[AI_AICR] &= ~AI_AICR_SAMPLERATE;
-
-        if (rate == AI_DSP_32KHZ) {
-            enabled = OSDisableInterrupts();
-
-            __AI_SRC_INIT();
-            AI_HW_REGS[AI_AICR] |= AI_AICR_SAMPLERATE;
-
-            OSRestoreInterrupts(enabled);
-        }
-    }
-}
-
-u32 AIGetDSPSampleRate(void) {
-    return ((AI_HW_REGS[AI_AICR] & AI_AICR_SAMPLERATE) >> 6) ^ 1;
-}
+//AIGetDMAStartAddr
+//AIGetDMALength
+//AICheckInit
 
 void AIInit(void* stack) {
     if (__AI_init_flag != TRUE) {
@@ -116,7 +101,7 @@ void AIInit(void* stack) {
     }
 }
 
-void __AIDHandler(s16 intr, OSContext* ctx) {
+void __AIDHandler(int intr, OSContext* ctx) {
 #pragma unused(intr)
 
     OSContext tempCtx;

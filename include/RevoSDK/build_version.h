@@ -11,6 +11,6 @@
 #define BUILD_TYPE "release"
 #endif
 
-#define SDK_LIB_VERSION(lib,date,time) "<< RVL_SDK - " #lib " \t" BUILD_TYPE " build: " #date " " #time " (" CW_VER ") >>"
+#define SDK_LIB_VERSION(lib,date,time) "<< RVL_SDK - " #lib " \t" BUILD_TYPE " build: " date " " time " (" CW_VER ") >>"
 
 #endif

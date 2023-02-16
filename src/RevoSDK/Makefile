@@ -238,6 +238,12 @@ RVL_SDK_FILES:=\
 	$(BUILD_DIR)/asm/RevoSDK/wud/WUDHidHost.o\
 	$(BUILD_DIR)/asm/RevoSDK/wud/debug_msg.o\
 
+#Wii SDK uses Wii 1.0
+$(RVL_SDK_FILES): MWCC_VERSION := 1.0
+
+#CXSecureUncompression.c needs 1.1
+$(BUILD_DIR)/src/RevoSDK/cx/CXSecureUncompression.o: MWCC_VERSION := 1.1
+
 #All the functions in the Wii SDK except for bte are aligned to 16 bytes, so this is necessary.
 $(RVL_SDK_FILES): CFLAGS += -Cpp_exceptions off -inline on -func_align 16
 
