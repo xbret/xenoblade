@@ -1475,7 +1475,7 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-
+.balign 8 #needed to align TPL.c
 
 .global lbl_8055F270
 lbl_8055F270:

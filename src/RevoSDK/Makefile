@@ -223,7 +223,7 @@ RVL_SDK_FILES:=\
 	$(BUILD_DIR)/asm/RevoSDK/sc/scapi_prdinfo.o\
 	$(BUILD_DIR)/asm/RevoSDK/si/SIBios.o\
 	$(BUILD_DIR)/asm/RevoSDK/si/SISamplingRate.o\
-	$(BUILD_DIR)/asm/RevoSDK/tpl/TPL.o\
+	$(BUILD_DIR)/src/RevoSDK/tpl/TPL.o\
 	$(BUILD_DIR)/asm/RevoSDK/usb/usb.o\
 	$(BUILD_DIR)/asm/RevoSDK/vi/vi.o\
 	$(BUILD_DIR)/asm/RevoSDK/vi/i2c.o\
@@ -238,14 +238,12 @@ RVL_SDK_FILES:=\
 	$(BUILD_DIR)/asm/RevoSDK/wud/WUDHidHost.o\
 	$(BUILD_DIR)/asm/RevoSDK/wud/debug_msg.o\
 
-#Wii SDK uses Wii 1.0
-$(RVL_SDK_FILES): MWCC_VERSION := 1.0
-
-#CXSecureUncompression.c needs 1.1
-$(BUILD_DIR)/src/RevoSDK/cx/CXSecureUncompression.o: MWCC_VERSION := 1.1
+#Wii SDK uses 4.3 build 145
 
 #All the functions in the Wii SDK except for bte are aligned to 16 bytes, so this is necessary.
 $(RVL_SDK_FILES): CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -proc gekko -fp hard -O4,p -nodefaults -func_align 16 $(INCLUDES)
+
+#USB uses pooling?
 
 DEPENDS += $(RVL_SDK_FILES:.o=.d)
 
