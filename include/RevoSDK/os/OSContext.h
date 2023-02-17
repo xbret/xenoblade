@@ -24,10 +24,6 @@ typedef struct OSContext {
     f64 psfs[32]; // at 0x1C8
 } OSContext;
 
-OSContext* OS_CURRENT_CONTEXT_PHYS : 0x800000C0;
-OSContext* OS_CURRENT_CONTEXT : 0x800000D4;
-OSContext* OS_CURRENT_FPU_CONTEXT : 0x800000D8;
-
 void OSSaveFPUContext(OSContext*);
 void OSSetCurrentContext(OSContext*);
 OSContext* OSGetCurrentContext(void);

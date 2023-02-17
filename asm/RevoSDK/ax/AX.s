@@ -76,6 +76,8 @@ lbl_806658B0:
 	.4byte 0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
+.balign 8 #needed to align ai.c
+
 .global lbl_80667608
 lbl_80667608:
 	.skip 0x8

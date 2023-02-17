@@ -1,5 +1,5 @@
 RVL_SDK_FILES:=\
-	$(BUILD_DIR)/asm/RevoSDK/ai/ai.o\
+	$(BUILD_DIR)/src/RevoSDK/ai/ai.o\
 	$(BUILD_DIR)/src/RevoSDK/arc/arc.o\
 	$(BUILD_DIR)/asm/RevoSDK/ax/AX.o\
 	$(BUILD_DIR)/asm/RevoSDK/ax/AXAlloc.o\
@@ -245,10 +245,7 @@ $(RVL_SDK_FILES): MWCC_VERSION := 1.0
 $(BUILD_DIR)/src/RevoSDK/cx/CXSecureUncompression.o: MWCC_VERSION := 1.1
 
 #All the functions in the Wii SDK except for bte are aligned to 16 bytes, so this is necessary.
-$(RVL_SDK_FILES): CFLAGS += -Cpp_exceptions off -inline on -func_align 16
-
-#arc.c doesn't use -use_lmw_stmw on, and uses -ipa file and (maybe rest of wii sdk too?)
-$(BUILD_DIR)/src/RevoSDK/arc/arc.o: CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -proc gekko -fp hard -O4,p -nodefaults -func_align 16 $(INCLUDES)
+$(RVL_SDK_FILES): CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -proc gekko -fp hard -O4,p -nodefaults -func_align 16 $(INCLUDES)
 
 DEPENDS += $(RVL_SDK_FILES:.o=.d)
 

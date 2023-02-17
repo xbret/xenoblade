@@ -1,12 +1,12 @@
 #include "RevoSDK/AI.h"
 #include "RevoSDK/DSP.h"
 #include "RevoSDK/OS.h"
-#include "RevoSDK/build_version.h"
+//#include "RevoSDK/build_version.h"
 
-#define BUILD_DATE "Feb 27 2009"
-#define BUILD_TIME "10:01:30"
+//#define BUILD_DATE "Feb 27 2009"
+//#define BUILD_TIME "10:01:30"
 
-const char* __AIVersion = SDK_LIB_VERSION(AI,BUILD_DATE,BUILD_TIME);
+const char* __AIVersion = "<< RVL_SDK - AI \trelease build: Feb 27 2009 10:01:30 (0x4302_145) >>";
 
 static AIDMACallback __AID_Callback;
 
@@ -60,15 +60,43 @@ void AIInitDMA(void* buffer, u32 length) {
 
 void AIStartDMA(void) { DSP_HW_REGS[DSP_AI_DMA_CSR] |= DSP_AI_DMA_CSR_PLAY; }
 
-//void AIStopDMA(void) {}
+void AIStopDMA(void) { DSP_HW_REGS[DSP_AI_DMA_CSR] &= ~DSP_AI_DMA_CSR_PLAY; }
 
 u32 AIGetDMABytesLeft(void) {
     return (DSP_HW_REGS[DSP_AI_DMA_BYTES_LEFT] & 0x7FFF) * 32;
 }
 
-//AIGetDMAStartAddr
-//AIGetDMALength
-//AICheckInit
+
+inline void AISetDSPSampleRate(u32 rate) {
+    BOOL enabled;
+
+    if (rate != AIGetDSPSampleRate()) {
+        AI_HW_REGS[AI_AICR] &= ~AI_AICR_SAMPLERATE;
+
+        if (rate == AI_DSP_32KHZ) {
+            enabled = OSDisableInterrupts();
+
+            __AI_SRC_INIT();
+            AI_HW_REGS[AI_AICR] |= AI_AICR_SAMPLERATE;
+
+            OSRestoreInterrupts(enabled);
+        }
+    }
+}
+
+inline u32 AIGetDSPSampleRate(void) {
+    return ((AI_HW_REGS[AI_AICR] & AI_AICR_SAMPLERATE) >> 6) ^ 1;
+}
+
+u32 AIGetDMAStartAddr(void) {
+    return ((DSP_HW_REGS[DSP_AI_DMA_START_H] & 0x1FFF) << 16) | (DSP_HW_REGS[DSP_AI_DMA_START_L] & 0xFFE0);
+}
+
+u32 AIGetDMALength(void) {
+    return (DSP_HW_REGS[DSP_AI_DMA_CSR] & 0x7FFF) << 5;
+}
+
+BOOL AICheckInit(void) { return __AI_init_flag; }
 
 void AIInit(void* stack) {
     if (__AI_init_flag != TRUE) {
@@ -156,13 +184,14 @@ static asm void __AICallbackStackSwitch(register AIDMACallback callback) {
     // clang-format on
 }
 
-static void __AI_SRC_INIT(void) {
-    s64 start = 0;
+void __AI_SRC_INIT(void) {
+     s64 start = 0;
     s64 end = 0;
     BOOL exit = FALSE;
+    u32 samples = 0;
     s64 diff = 0;
     s64 wait = 0;
-    u32 samples = 0;
+    
 
     while (!exit) {
         AI_HW_REGS[AI_AICR] =
