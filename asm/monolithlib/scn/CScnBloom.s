@@ -343,7 +343,8 @@
 .fn func_804996D8, global
 /* 804996D8 00462C98  38 63 FF B8 */	addi r3, r3, -72
 /* 804996DC 00462C9C  4B FF FB B0 */	b func_8049928C
-.L_804996E0:
+
+.fn func_804996E0, global
 /* 804996E0 00462CA0  38 63 FF B8 */	addi r3, r3, -72
 /* 804996E4 00462CA4  4B FF FB 40 */	b __dt__80499224
 .endfn func_804996D8
@@ -1860,7 +1861,7 @@ __vt__CScnBloom:
 	.4byte 0
 	.4byte __RTTI__CScnBloom
 	.4byte 0xFFFFFFB8
-	.4byte .L_804996E0
+	.4byte func_804996E0
 	.4byte func_8049C868
 	.4byte func_804996D8
 	.4byte __dt__80499224

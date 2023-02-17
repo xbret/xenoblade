@@ -1649,7 +1649,7 @@ float_80666D48:
 	.4byte __dt__801C1958
 	.4byte 0x0680001E
 	.4byte 0x00000054
-	.4byte __dt__8004035C
+	.4byte __dt__IGameException
 	.4byte 0x8680001E
 	.4byte 0x00000000
 	.4byte __dt__CTTask_cf_CfPadTask
@@ -1658,7 +1658,7 @@ float_80666D48:
 	.4byte __dt__801C1958
 	.4byte 0x8680001E
 	.4byte 0x00000054
-	.4byte __dt__8004035C
+	.4byte __dt__IGameException
 .endobj "@etb_80010650"
 
 .obj "@etb_800106A4", local
@@ -1690,7 +1690,7 @@ float_80666D48:
 	.4byte __dt__801C1958
 	.4byte 0x0680001F
 	.4byte 0x00000054
-	.4byte __dt__8004035C
+	.4byte __dt__IGameException
 	.4byte 0x8680001F
 	.4byte 0x00000000
 	.4byte __dt__CTTask_cf_CfPadTask

@@ -147,7 +147,7 @@
 /* 80040358 00009918  4E 80 00 20 */	blr 
 .endfn __dt__IScnRender
 
-.fn __dt__8004035C, global
+.fn __dt__IGameException, global
 /* 8004035C 0000991C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80040360 00009920  7C 08 02 A6 */	mflr r0
 /* 80040364 00009924  2C 03 00 00 */	cmpwi r3, 0
@@ -165,9 +165,9 @@
 /* 80040390 00009950  7C 08 03 A6 */	mtlr r0
 /* 80040394 00009954  38 21 00 10 */	addi r1, r1, 0x10
 /* 80040398 00009958  4E 80 00 20 */	blr 
-.endfn __dt__8004035C
+.endfn __dt__IGameException
 
-.fn __dt__8004039C, global
+.fn __dt__ITitleMenu, global
 /* 8004039C 0000995C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800403A0 00009960  7C 08 02 A6 */	mflr r0
 /* 800403A4 00009964  2C 03 00 00 */	cmpwi r3, 0
@@ -185,9 +185,9 @@
 /* 800403D0 00009990  7C 08 03 A6 */	mtlr r0
 /* 800403D4 00009994  38 21 00 10 */	addi r1, r1, 0x10
 /* 800403D8 00009998  4E 80 00 20 */	blr 
-.endfn __dt__8004039C
+.endfn __dt__ITitleMenu
 
-.fn __dt__800403DC, global
+.fn __dt__IErrMesWinSel, global
 /* 800403DC 0000999C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800403E0 000099A0  7C 08 02 A6 */	mflr r0
 /* 800403E4 000099A4  2C 03 00 00 */	cmpwi r3, 0
@@ -205,7 +205,7 @@
 /* 80040410 000099D0  7C 08 03 A6 */	mtlr r0
 /* 80040414 000099D4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80040418 000099D8  4E 80 00 20 */	blr 
-.endfn __dt__800403DC
+.endfn __dt__IErrMesWinSel
 
 .fn func_8004041C, global
 /* 8004041C 000099DC  98 83 00 00 */	stb r4, 0(r3)
@@ -5145,37 +5145,37 @@ __vt__CTaskGame:
 	.4byte __RTTI__CTaskGame
 	.4byte 0xFFFFFFAC
 	.4byte func_80044120
-	.4byte func_80039E28
+	.4byte IWorkEvent_80039E28
 	.4byte func_80044118
-	.4byte func_80039E18
-	.4byte func_80039E10
-	.4byte func_80039E0C
-	.4byte func_80039E04
-	.4byte func_80039DFC
-	.4byte func_80039DF4
-	.4byte func_80039DEC
-	.4byte func_80039DE4
-	.4byte func_80039DDC
-	.4byte func_80039DD4
-	.4byte func_80039DCC
-	.4byte func_80039DC4
-	.4byte func_80039DBC
-	.4byte func_80039DB4
-	.4byte func_80039DAC
-	.4byte func_80039DA4
-	.4byte func_80039D9C
-	.4byte func_80039D94
-	.4byte func_80039D8C
-	.4byte func_80039D84
-	.4byte func_80039D7C
-	.4byte func_80039D74
-	.4byte func_80039D6C
-	.4byte func_80039D64
-	.4byte func_80039D5C
-	.4byte func_80039D54
-	.4byte func_80039D4C
-	.4byte func_80039D44
-	.4byte func_80039D40
+	.4byte IWorkEvent_80039E18
+	.4byte IWorkEvent_80039E10
+	.4byte IWorkEvent_80039E0C
+	.4byte IWorkEvent_80039E04
+	.4byte IWorkEvent_80039DFC
+	.4byte IWorkEvent_80039DF4
+	.4byte IWorkEvent_80039DEC
+	.4byte IWorkEvent_80039DE4
+	.4byte IWorkEvent_80039DDC
+	.4byte IWorkEvent_80039DD4
+	.4byte IWorkEvent_80039DCC
+	.4byte IWorkEvent_80039DC4
+	.4byte IWorkEvent_80039DBC
+	.4byte IWorkEvent_80039DB4
+	.4byte IWorkEvent_80039DAC
+	.4byte IWorkEvent_80039DA4
+	.4byte IWorkEvent_80039D9C
+	.4byte IWorkEvent_80039D94
+	.4byte IWorkEvent_80039D8C
+	.4byte IWorkEvent_80039D84
+	.4byte IWorkEvent_80039D7C
+	.4byte IWorkEvent_80039D74
+	.4byte IWorkEvent_80039D6C
+	.4byte IWorkEvent_80039D64
+	.4byte IWorkEvent_80039D5C
+	.4byte IWorkEvent_80039D54
+	.4byte IWorkEvent_80039D4C
+	.4byte IWorkEvent_80039D44
+	.4byte IWorkEvent_80039D40
 	.4byte __RTTI__CTaskGame
 	.4byte 0xFFFFFFA8
 	.4byte func_80044130
@@ -5233,17 +5233,27 @@ CTTask_CTaskGame_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+
+#unreferenced vtables?
+.global __vt__IErrMesWinSel
+__vt__IErrMesWinSel:
 	.4byte __RTTI__IErrMesWinSel
 	.4byte 0
-	.4byte __dt__800403DC
+	.4byte __dt__IErrMesWinSel
 	.4byte 0
+
+.global __vt__ITitleMenu
+__vt__ITitleMenu:
 	.4byte __RTTI__ITitleMenu
 	.4byte 0
-	.4byte __dt__8004039C
+	.4byte __dt__ITitleMenu
 	.4byte 0
+
+.global __vt__IGameException
+__vt__IGameException:
 	.4byte __RTTI__IGameException
 	.4byte 0
-	.4byte __dt__8004035C
+	.4byte __dt__IGameException
 	.4byte 0
 
 
@@ -5260,37 +5270,37 @@ __vt__IWorkEvent:
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __dt__IWorkEvent
-	.4byte func_80039E28
-	.4byte func_80039E20
-	.4byte func_80039E18
-	.4byte func_80039E10
-	.4byte func_80039E0C
-	.4byte func_80039E04
-	.4byte func_80039DFC
-	.4byte func_80039DF4
-	.4byte func_80039DEC
-	.4byte func_80039DE4
-	.4byte func_80039DDC
-	.4byte func_80039DD4
-	.4byte func_80039DCC
-	.4byte func_80039DC4
-	.4byte func_80039DBC
-	.4byte func_80039DB4
-	.4byte func_80039DAC
-	.4byte func_80039DA4
-	.4byte func_80039D9C
-	.4byte func_80039D94
-	.4byte func_80039D8C
-	.4byte func_80039D84
-	.4byte func_80039D7C
-	.4byte func_80039D74
-	.4byte func_80039D6C
-	.4byte func_80039D64
-	.4byte func_80039D5C
-	.4byte func_80039D54
-	.4byte func_80039D4C
-	.4byte func_80039D44
-	.4byte func_80039D40
+	.4byte IWorkEvent_80039E28
+	.4byte IWorkEvent_80039E20
+	.4byte IWorkEvent_80039E18
+	.4byte IWorkEvent_80039E10
+	.4byte IWorkEvent_80039E0C
+	.4byte IWorkEvent_80039E04
+	.4byte IWorkEvent_80039DFC
+	.4byte IWorkEvent_80039DF4
+	.4byte IWorkEvent_80039DEC
+	.4byte IWorkEvent_80039DE4
+	.4byte IWorkEvent_80039DDC
+	.4byte IWorkEvent_80039DD4
+	.4byte IWorkEvent_80039DCC
+	.4byte IWorkEvent_80039DC4
+	.4byte IWorkEvent_80039DBC
+	.4byte IWorkEvent_80039DB4
+	.4byte IWorkEvent_80039DAC
+	.4byte IWorkEvent_80039DA4
+	.4byte IWorkEvent_80039D9C
+	.4byte IWorkEvent_80039D94
+	.4byte IWorkEvent_80039D8C
+	.4byte IWorkEvent_80039D84
+	.4byte IWorkEvent_80039D7C
+	.4byte IWorkEvent_80039D74
+	.4byte IWorkEvent_80039D6C
+	.4byte IWorkEvent_80039D64
+	.4byte IWorkEvent_80039D5C
+	.4byte IWorkEvent_80039D54
+	.4byte IWorkEvent_80039D4C
+	.4byte IWorkEvent_80039D44
+	.4byte IWorkEvent_80039D40
 
 .global CProcess_hierarchy
 CProcess_hierarchy:
@@ -5692,13 +5702,13 @@ double_80668618:
 	.4byte 0x00000000
 	.4byte 0x0680001E
 	.4byte 0x00000064
-	.4byte __dt__800403DC
+	.4byte __dt__IErrMesWinSel
 	.4byte 0x0680001E
 	.4byte 0x00000060
-	.4byte __dt__8004039C
+	.4byte __dt__ITitleMenu
 	.4byte 0x0680001E
 	.4byte 0x0000005C
-	.4byte __dt__8004035C
+	.4byte __dt__IGameException
 	.4byte 0x0680001E
 	.4byte 0x00000058
 	.4byte __dt__IScnRender
@@ -6108,21 +6118,21 @@ double_80668618:
 
 .obj "@eti_8002174C", local
 .hidden "@eti_8002174C"
-	.4byte __dt__8004035C
+	.4byte __dt__IGameException
 	.4byte 0x00000040
 	.4byte "@etb_80006BF4"
 .endobj "@eti_8002174C"
 
 .obj "@eti_80021758", local
 .hidden "@eti_80021758"
-	.4byte __dt__8004039C
+	.4byte __dt__ITitleMenu
 	.4byte 0x00000040
 	.4byte "@etb_80006BFC"
 .endobj "@eti_80021758"
 
 .obj "@eti_80021764", local
 .hidden "@eti_80021764"
-	.4byte __dt__800403DC
+	.4byte __dt__IErrMesWinSel
 	.4byte 0x00000040
 	.4byte "@etb_80006C04"
 .endobj "@eti_80021764"

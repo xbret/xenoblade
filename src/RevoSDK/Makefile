@@ -238,7 +238,7 @@ RVL_SDK_FILES:=\
 	$(BUILD_DIR)/asm/RevoSDK/wud/WUDHidHost.o\
 	$(BUILD_DIR)/asm/RevoSDK/wud/debug_msg.o\
 
-#Wii SDK uses 4.3 build 145
+#Wii SDK uses 4.3 build 145, but the 1.1 version (4.3 build 151) seems close enough so far.
 
 #All the functions in the Wii SDK except for bte are aligned to 16 bytes, so this is necessary.
 $(RVL_SDK_FILES): CFLAGS = -Cpp_exceptions off -enum int -inline auto -ipa file -proc gekko -fp hard -O4,p -nodefaults -func_align 16 $(INCLUDES)

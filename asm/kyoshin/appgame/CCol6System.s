@@ -5954,37 +5954,37 @@ __vt__CCol6Invite:
 	.4byte __RTTI__CCol6Invite
 	.4byte 0xFFFFFF94
 	.4byte func_80164118
-	.4byte func_80039E28
-	.4byte func_80039E20
-	.4byte func_80039E18
-	.4byte func_80039E10
-	.4byte func_80039E0C
-	.4byte func_80039E04
-	.4byte func_80039DFC
-	.4byte func_80039DF4
-	.4byte func_80039DEC
-	.4byte func_80039DE4
-	.4byte func_80039DDC
-	.4byte func_80039DD4
-	.4byte func_80039DCC
-	.4byte func_80039DC4
-	.4byte func_80039DBC
-	.4byte func_80039DB4
-	.4byte func_80039DAC
-	.4byte func_80039DA4
-	.4byte func_80039D9C
-	.4byte func_80039D94
-	.4byte func_80039D8C
-	.4byte func_80039D84
-	.4byte func_80039D7C
-	.4byte func_80039D74
-	.4byte func_80039D6C
-	.4byte func_80039D64
-	.4byte func_80039D5C
-	.4byte func_80039D54
-	.4byte func_80039D4C
-	.4byte func_80039D44
-	.4byte func_80039D40
+	.4byte IWorkEvent_80039E28
+	.4byte IWorkEvent_80039E20
+	.4byte IWorkEvent_80039E18
+	.4byte IWorkEvent_80039E10
+	.4byte IWorkEvent_80039E0C
+	.4byte IWorkEvent_80039E04
+	.4byte IWorkEvent_80039DFC
+	.4byte IWorkEvent_80039DF4
+	.4byte IWorkEvent_80039DEC
+	.4byte IWorkEvent_80039DE4
+	.4byte IWorkEvent_80039DDC
+	.4byte IWorkEvent_80039DD4
+	.4byte IWorkEvent_80039DCC
+	.4byte IWorkEvent_80039DC4
+	.4byte IWorkEvent_80039DBC
+	.4byte IWorkEvent_80039DB4
+	.4byte IWorkEvent_80039DAC
+	.4byte IWorkEvent_80039DA4
+	.4byte IWorkEvent_80039D9C
+	.4byte IWorkEvent_80039D94
+	.4byte IWorkEvent_80039D8C
+	.4byte IWorkEvent_80039D84
+	.4byte IWorkEvent_80039D7C
+	.4byte IWorkEvent_80039D74
+	.4byte IWorkEvent_80039D6C
+	.4byte IWorkEvent_80039D64
+	.4byte IWorkEvent_80039D5C
+	.4byte IWorkEvent_80039D54
+	.4byte IWorkEvent_80039D4C
+	.4byte IWorkEvent_80039D44
+	.4byte IWorkEvent_80039D40
 
 .global CCol6Invite_hierarchy
 CCol6Invite_hierarchy:
@@ -6017,37 +6017,37 @@ __vt__CCol6System:
 	.4byte __RTTI__CCol6System
 	.4byte 0xFFFFFF94
 	.4byte func_80164100
-	.4byte func_80039E28
+	.4byte IWorkEvent_80039E28
 	.4byte func_801640F8
-	.4byte func_80039E18
-	.4byte func_80039E10
-	.4byte func_80039E0C
-	.4byte func_80039E04
-	.4byte func_80039DFC
-	.4byte func_80039DF4
-	.4byte func_80039DEC
-	.4byte func_80039DE4
-	.4byte func_80039DDC
-	.4byte func_80039DD4
-	.4byte func_80039DCC
-	.4byte func_80039DC4
-	.4byte func_80039DBC
-	.4byte func_80039DB4
-	.4byte func_80039DAC
-	.4byte func_80039DA4
-	.4byte func_80039D9C
-	.4byte func_80039D94
-	.4byte func_80039D8C
-	.4byte func_80039D84
-	.4byte func_80039D7C
-	.4byte func_80039D74
-	.4byte func_80039D6C
-	.4byte func_80039D64
-	.4byte func_80039D5C
-	.4byte func_80039D54
-	.4byte func_80039D4C
-	.4byte func_80039D44
-	.4byte func_80039D40
+	.4byte IWorkEvent_80039E18
+	.4byte IWorkEvent_80039E10
+	.4byte IWorkEvent_80039E0C
+	.4byte IWorkEvent_80039E04
+	.4byte IWorkEvent_80039DFC
+	.4byte IWorkEvent_80039DF4
+	.4byte IWorkEvent_80039DEC
+	.4byte IWorkEvent_80039DE4
+	.4byte IWorkEvent_80039DDC
+	.4byte IWorkEvent_80039DD4
+	.4byte IWorkEvent_80039DCC
+	.4byte IWorkEvent_80039DC4
+	.4byte IWorkEvent_80039DBC
+	.4byte IWorkEvent_80039DB4
+	.4byte IWorkEvent_80039DAC
+	.4byte IWorkEvent_80039DA4
+	.4byte IWorkEvent_80039D9C
+	.4byte IWorkEvent_80039D94
+	.4byte IWorkEvent_80039D8C
+	.4byte IWorkEvent_80039D84
+	.4byte IWorkEvent_80039D7C
+	.4byte IWorkEvent_80039D74
+	.4byte IWorkEvent_80039D6C
+	.4byte IWorkEvent_80039D64
+	.4byte IWorkEvent_80039D5C
+	.4byte IWorkEvent_80039D54
+	.4byte IWorkEvent_80039D4C
+	.4byte IWorkEvent_80039D44
+	.4byte IWorkEvent_80039D40
 	.4byte __RTTI__CCol6System
 	.4byte 0xFFFFFF90
 	.4byte func_80164110
@@ -6088,37 +6088,37 @@ __vt__CCol6Hint:
 	.4byte __RTTI__CCol6Hint
 	.4byte 0xFFFFFF94
 	.4byte func_801640E0
-	.4byte func_80039E28
+	.4byte IWorkEvent_80039E28
 	.4byte func_801640D8
-	.4byte func_80039E18
-	.4byte func_80039E10
-	.4byte func_80039E0C
-	.4byte func_80039E04
-	.4byte func_80039DFC
-	.4byte func_80039DF4
-	.4byte func_80039DEC
-	.4byte func_80039DE4
-	.4byte func_80039DDC
-	.4byte func_80039DD4
-	.4byte func_80039DCC
-	.4byte func_80039DC4
-	.4byte func_80039DBC
-	.4byte func_80039DB4
-	.4byte func_80039DAC
-	.4byte func_80039DA4
-	.4byte func_80039D9C
-	.4byte func_80039D94
-	.4byte func_80039D8C
-	.4byte func_80039D84
-	.4byte func_80039D7C
-	.4byte func_80039D74
-	.4byte func_80039D6C
-	.4byte func_80039D64
-	.4byte func_80039D5C
-	.4byte func_80039D54
-	.4byte func_80039D4C
-	.4byte func_80039D44
-	.4byte func_80039D40
+	.4byte IWorkEvent_80039E18
+	.4byte IWorkEvent_80039E10
+	.4byte IWorkEvent_80039E0C
+	.4byte IWorkEvent_80039E04
+	.4byte IWorkEvent_80039DFC
+	.4byte IWorkEvent_80039DF4
+	.4byte IWorkEvent_80039DEC
+	.4byte IWorkEvent_80039DE4
+	.4byte IWorkEvent_80039DDC
+	.4byte IWorkEvent_80039DD4
+	.4byte IWorkEvent_80039DCC
+	.4byte IWorkEvent_80039DC4
+	.4byte IWorkEvent_80039DBC
+	.4byte IWorkEvent_80039DB4
+	.4byte IWorkEvent_80039DAC
+	.4byte IWorkEvent_80039DA4
+	.4byte IWorkEvent_80039D9C
+	.4byte IWorkEvent_80039D94
+	.4byte IWorkEvent_80039D8C
+	.4byte IWorkEvent_80039D84
+	.4byte IWorkEvent_80039D7C
+	.4byte IWorkEvent_80039D74
+	.4byte IWorkEvent_80039D6C
+	.4byte IWorkEvent_80039D64
+	.4byte IWorkEvent_80039D5C
+	.4byte IWorkEvent_80039D54
+	.4byte IWorkEvent_80039D4C
+	.4byte IWorkEvent_80039D44
+	.4byte IWorkEvent_80039D40
 	.4byte __RTTI__CCol6Hint
 	.4byte 0xFFFFFF90
 	.4byte func_801640F0
@@ -6159,37 +6159,37 @@ __vt__CCol6CheckBat:
 	.4byte __RTTI__CCol6CheckBat
 	.4byte 0xFFFFFF94
 	.4byte func_801640D0
-	.4byte func_80039E28
-	.4byte func_80039E20
-	.4byte func_80039E18
-	.4byte func_80039E10
-	.4byte func_80039E0C
-	.4byte func_80039E04
-	.4byte func_80039DFC
-	.4byte func_80039DF4
-	.4byte func_80039DEC
-	.4byte func_80039DE4
-	.4byte func_80039DDC
-	.4byte func_80039DD4
-	.4byte func_80039DCC
-	.4byte func_80039DC4
-	.4byte func_80039DBC
-	.4byte func_80039DB4
-	.4byte func_80039DAC
-	.4byte func_80039DA4
-	.4byte func_80039D9C
-	.4byte func_80039D94
-	.4byte func_80039D8C
-	.4byte func_80039D84
-	.4byte func_80039D7C
-	.4byte func_80039D74
-	.4byte func_80039D6C
-	.4byte func_80039D64
-	.4byte func_80039D5C
-	.4byte func_80039D54
-	.4byte func_80039D4C
-	.4byte func_80039D44
-	.4byte func_80039D40
+	.4byte IWorkEvent_80039E28
+	.4byte IWorkEvent_80039E20
+	.4byte IWorkEvent_80039E18
+	.4byte IWorkEvent_80039E10
+	.4byte IWorkEvent_80039E0C
+	.4byte IWorkEvent_80039E04
+	.4byte IWorkEvent_80039DFC
+	.4byte IWorkEvent_80039DF4
+	.4byte IWorkEvent_80039DEC
+	.4byte IWorkEvent_80039DE4
+	.4byte IWorkEvent_80039DDC
+	.4byte IWorkEvent_80039DD4
+	.4byte IWorkEvent_80039DCC
+	.4byte IWorkEvent_80039DC4
+	.4byte IWorkEvent_80039DBC
+	.4byte IWorkEvent_80039DB4
+	.4byte IWorkEvent_80039DAC
+	.4byte IWorkEvent_80039DA4
+	.4byte IWorkEvent_80039D9C
+	.4byte IWorkEvent_80039D94
+	.4byte IWorkEvent_80039D8C
+	.4byte IWorkEvent_80039D84
+	.4byte IWorkEvent_80039D7C
+	.4byte IWorkEvent_80039D74
+	.4byte IWorkEvent_80039D6C
+	.4byte IWorkEvent_80039D64
+	.4byte IWorkEvent_80039D5C
+	.4byte IWorkEvent_80039D54
+	.4byte IWorkEvent_80039D4C
+	.4byte IWorkEvent_80039D44
+	.4byte IWorkEvent_80039D40
 
 .global CCol6CheckBat_hierarchy
 CCol6CheckBat_hierarchy:

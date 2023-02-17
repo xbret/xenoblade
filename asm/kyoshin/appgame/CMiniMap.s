@@ -4607,37 +4607,37 @@ __vt__CMenuMiniMap2:
 	.4byte __RTTI__CMenuMiniMap2
 	.4byte 0xFFFFFFA8
 	.4byte func_8011C434
-	.4byte func_80039E28
-	.4byte func_80039E20
-	.4byte func_80039E18
-	.4byte func_80039E10
-	.4byte func_80039E0C
-	.4byte func_80039E04
-	.4byte func_80039DFC
-	.4byte func_80039DF4
-	.4byte func_80039DEC
-	.4byte func_80039DE4
-	.4byte func_80039DDC
-	.4byte func_80039DD4
-	.4byte func_80039DCC
-	.4byte func_80039DC4
-	.4byte func_80039DBC
-	.4byte func_80039DB4
-	.4byte func_80039DAC
-	.4byte func_80039DA4
-	.4byte func_80039D9C
-	.4byte func_80039D94
-	.4byte func_80039D8C
-	.4byte func_80039D84
-	.4byte func_80039D7C
-	.4byte func_80039D74
-	.4byte func_80039D6C
-	.4byte func_80039D64
-	.4byte func_80039D5C
-	.4byte func_80039D54
-	.4byte func_80039D4C
-	.4byte func_80039D44
-	.4byte func_80039D40
+	.4byte IWorkEvent_80039E28
+	.4byte IWorkEvent_80039E20
+	.4byte IWorkEvent_80039E18
+	.4byte IWorkEvent_80039E10
+	.4byte IWorkEvent_80039E0C
+	.4byte IWorkEvent_80039E04
+	.4byte IWorkEvent_80039DFC
+	.4byte IWorkEvent_80039DF4
+	.4byte IWorkEvent_80039DEC
+	.4byte IWorkEvent_80039DE4
+	.4byte IWorkEvent_80039DDC
+	.4byte IWorkEvent_80039DD4
+	.4byte IWorkEvent_80039DCC
+	.4byte IWorkEvent_80039DC4
+	.4byte IWorkEvent_80039DBC
+	.4byte IWorkEvent_80039DB4
+	.4byte IWorkEvent_80039DAC
+	.4byte IWorkEvent_80039DA4
+	.4byte IWorkEvent_80039D9C
+	.4byte IWorkEvent_80039D94
+	.4byte IWorkEvent_80039D8C
+	.4byte IWorkEvent_80039D84
+	.4byte IWorkEvent_80039D7C
+	.4byte IWorkEvent_80039D74
+	.4byte IWorkEvent_80039D6C
+	.4byte IWorkEvent_80039D64
+	.4byte IWorkEvent_80039D5C
+	.4byte IWorkEvent_80039D54
+	.4byte IWorkEvent_80039D4C
+	.4byte IWorkEvent_80039D44
+	.4byte IWorkEvent_80039D40
 	.4byte __RTTI__CMenuMiniMap2
 	.4byte 0xFFFFFFA4
 	.4byte func_8011C444
@@ -4669,37 +4669,37 @@ __vt__CMiniMap:
 	.4byte __RTTI__CMiniMap
 	.4byte 0
 	.4byte __dt__CMiniMap
-	.4byte func_80039E28
+	.4byte IWorkEvent_80039E28
 	.4byte func_80118428
-	.4byte func_80039E18
-	.4byte func_80039E10
-	.4byte func_80039E0C
-	.4byte func_80039E04
-	.4byte func_80039DFC
-	.4byte func_80039DF4
-	.4byte func_80039DEC
-	.4byte func_80039DE4
-	.4byte func_80039DDC
-	.4byte func_80039DD4
-	.4byte func_80039DCC
-	.4byte func_80039DC4
-	.4byte func_80039DBC
-	.4byte func_80039DB4
-	.4byte func_80039DAC
-	.4byte func_80039DA4
-	.4byte func_80039D9C
-	.4byte func_80039D94
-	.4byte func_80039D8C
-	.4byte func_80039D84
-	.4byte func_80039D7C
-	.4byte func_80039D74
-	.4byte func_80039D6C
-	.4byte func_80039D64
-	.4byte func_80039D5C
-	.4byte func_80039D54
-	.4byte func_80039D4C
-	.4byte func_80039D44
-	.4byte func_80039D40
+	.4byte IWorkEvent_80039E18
+	.4byte IWorkEvent_80039E10
+	.4byte IWorkEvent_80039E0C
+	.4byte IWorkEvent_80039E04
+	.4byte IWorkEvent_80039DFC
+	.4byte IWorkEvent_80039DF4
+	.4byte IWorkEvent_80039DEC
+	.4byte IWorkEvent_80039DE4
+	.4byte IWorkEvent_80039DDC
+	.4byte IWorkEvent_80039DD4
+	.4byte IWorkEvent_80039DCC
+	.4byte IWorkEvent_80039DC4
+	.4byte IWorkEvent_80039DBC
+	.4byte IWorkEvent_80039DB4
+	.4byte IWorkEvent_80039DAC
+	.4byte IWorkEvent_80039DA4
+	.4byte IWorkEvent_80039D9C
+	.4byte IWorkEvent_80039D94
+	.4byte IWorkEvent_80039D8C
+	.4byte IWorkEvent_80039D84
+	.4byte IWorkEvent_80039D7C
+	.4byte IWorkEvent_80039D74
+	.4byte IWorkEvent_80039D6C
+	.4byte IWorkEvent_80039D64
+	.4byte IWorkEvent_80039D5C
+	.4byte IWorkEvent_80039D54
+	.4byte IWorkEvent_80039D4C
+	.4byte IWorkEvent_80039D44
+	.4byte IWorkEvent_80039D40
 
 .global CMiniMap_hierarchy
 CMiniMap_hierarchy:
@@ -4714,37 +4714,37 @@ __vt__CMMTex:
 	.4byte __RTTI__CMMTex
 	.4byte 0
 	.4byte __dt__CMMTex
-	.4byte func_80039E28
+	.4byte IWorkEvent_80039E28
 	.4byte func_801179DC
-	.4byte func_80039E18
-	.4byte func_80039E10
-	.4byte func_80039E0C
-	.4byte func_80039E04
-	.4byte func_80039DFC
-	.4byte func_80039DF4
-	.4byte func_80039DEC
-	.4byte func_80039DE4
-	.4byte func_80039DDC
-	.4byte func_80039DD4
-	.4byte func_80039DCC
-	.4byte func_80039DC4
-	.4byte func_80039DBC
-	.4byte func_80039DB4
-	.4byte func_80039DAC
-	.4byte func_80039DA4
-	.4byte func_80039D9C
-	.4byte func_80039D94
-	.4byte func_80039D8C
-	.4byte func_80039D84
-	.4byte func_80039D7C
-	.4byte func_80039D74
-	.4byte func_80039D6C
-	.4byte func_80039D64
-	.4byte func_80039D5C
-	.4byte func_80039D54
-	.4byte func_80039D4C
-	.4byte func_80039D44
-	.4byte func_80039D40
+	.4byte IWorkEvent_80039E18
+	.4byte IWorkEvent_80039E10
+	.4byte IWorkEvent_80039E0C
+	.4byte IWorkEvent_80039E04
+	.4byte IWorkEvent_80039DFC
+	.4byte IWorkEvent_80039DF4
+	.4byte IWorkEvent_80039DEC
+	.4byte IWorkEvent_80039DE4
+	.4byte IWorkEvent_80039DDC
+	.4byte IWorkEvent_80039DD4
+	.4byte IWorkEvent_80039DCC
+	.4byte IWorkEvent_80039DC4
+	.4byte IWorkEvent_80039DBC
+	.4byte IWorkEvent_80039DB4
+	.4byte IWorkEvent_80039DAC
+	.4byte IWorkEvent_80039DA4
+	.4byte IWorkEvent_80039D9C
+	.4byte IWorkEvent_80039D94
+	.4byte IWorkEvent_80039D8C
+	.4byte IWorkEvent_80039D84
+	.4byte IWorkEvent_80039D7C
+	.4byte IWorkEvent_80039D74
+	.4byte IWorkEvent_80039D6C
+	.4byte IWorkEvent_80039D64
+	.4byte IWorkEvent_80039D5C
+	.4byte IWorkEvent_80039D54
+	.4byte IWorkEvent_80039D4C
+	.4byte IWorkEvent_80039D44
+	.4byte IWorkEvent_80039D40
 
 .global CMMTex_hierarchy
 CMMTex_hierarchy:
