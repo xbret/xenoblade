@@ -1,8 +1,7 @@
 #include "mm/MathConstants.hpp"
+#include "stl/math.h"
 
 //General math constants
-
-#define PI 3.14159265
 
 namespace mm {
     const float pi = PI;
