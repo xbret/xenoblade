@@ -384,6 +384,9 @@ lbl_80667528:
 	.skip 0x8
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+#Needed to align GCN_mem_alloc.s
+.balign 4
+
 .global lbl_8050CF00
 lbl_8050CF00:
 	.4byte 0x00000004

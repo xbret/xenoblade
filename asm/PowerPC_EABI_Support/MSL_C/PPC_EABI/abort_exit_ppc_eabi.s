@@ -28,6 +28,10 @@
 .endfn __msl_runtime_constraint_violation_s
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+#needed to align uart_console_io_gcn.c
+.balign 8
+
 .global lbl_80667540
 lbl_80667540:
 	.skip 0x4

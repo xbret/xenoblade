@@ -5,14 +5,14 @@
 .balign 16, 0
 .fn __AXFXAllocFunction, global
 /* 802DAB00 002A40C0  7C 64 1B 78 */	mr r4, r3
-/* 802DAB04 002A40C4  80 6D 99 D8 */	lwz r3, lbl_80665B58@sda21(r13)
+/* 802DAB04 002A40C4  80 6D 99 D8 */	lwz r3, __OSCurrHeap@sda21(r13)
 /* 802DAB08 002A40C8  48 07 8C 28 */	b OSAllocFromHeap
 .endfn __AXFXAllocFunction
 
 .balign 16, 0
 .fn __AXFXFreeFunction, global
 /* 802DAB10 002A40D0  7C 64 1B 78 */	mr r4, r3
-/* 802DAB14 002A40D4  80 6D 99 D8 */	lwz r3, lbl_80665B58@sda21(r13)
+/* 802DAB14 002A40D4  80 6D 99 D8 */	lwz r3, __OSCurrHeap@sda21(r13)
 /* 802DAB18 002A40D8  48 07 8D 18 */	b OSFreeToHeap
 .endfn __AXFXFreeFunction
 

@@ -7,8 +7,8 @@ extern "C" {
 #include "RevoSDK/os/OS.h"
 #include "RevoSDK/os/OSAddress.h"
 //#include "RevoSDK/os/OSAlarm.h"
-//#include "RevoSDK/os/OSAlloc.h"
-//#include "RevoSDK/os/OSArena.h"
+#include "RevoSDK/os/OSAlloc.h"
+#include "RevoSDK/os/OSArena.h"
 //#include "RevoSDK/os/OSAudioSystem.h"
 //#include "RevoSDK/os/OSCache.h"
 #include "RevoSDK/os/OSContext.h"
@@ -33,6 +33,7 @@ extern "C" {
 //#include "RevoSDK/os/OSSync.h"
 #include "RevoSDK/os/OSThread.h"
 #include "RevoSDK/os/OSTime.h"
+#include "RevoSDK/os/OSUtils.h"
 //#include "RevoSDK/os/OSUtf.h"
 //#include "RevoSDK/os/__ppc_eabi_init.h"
 

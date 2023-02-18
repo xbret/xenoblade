@@ -172,8 +172,8 @@
 
 .balign 16, 0
 .fn OSSetCurrentHeap, global
-/* 803538B0 0031CE70  80 0D 99 D8 */	lwz r0, lbl_80665B58@sda21(r13)
-/* 803538B4 0031CE74  90 6D 99 D8 */	stw r3, lbl_80665B58@sda21(r13)
+/* 803538B0 0031CE70  80 0D 99 D8 */	lwz r0, __OSCurrHeap@sda21(r13)
+/* 803538B4 0031CE74  90 6D 99 D8 */	stw r3, __OSCurrHeap@sda21(r13)
 /* 803538B8 0031CE78  7C 03 03 78 */	mr r3, r0
 /* 803538BC 0031CE7C  4E 80 00 20 */	blr 
 .endfn OSSetCurrentHeap
@@ -203,7 +203,7 @@
 /* 80353908 0031CEC8  80 6D B8 DC */	lwz r3, lbl_80667A5C@sda21(r13)
 /* 8035390C 0031CECC  54 80 00 34 */	rlwinm r0, r4, 0, 0, 0x1a
 /* 80353910 0031CED0  38 80 FF FF */	li r4, -1
-/* 80353914 0031CED4  90 8D 99 D8 */	stw r4, lbl_80665B58@sda21(r13)
+/* 80353914 0031CED4  90 8D 99 D8 */	stw r4, __OSCurrHeap@sda21(r13)
 /* 80353918 0031CED8  7C 63 3A 14 */	add r3, r3, r7
 /* 8035391C 0031CEDC  38 63 00 1F */	addi r3, r3, 0x1f
 /* 80353920 0031CEE0  90 0D B8 D0 */	stw r0, lbl_80667A50@sda21(r13)
@@ -249,8 +249,8 @@
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665B58
-lbl_80665B58:
+.global __OSCurrHeap
+__OSCurrHeap:
 	.4byte 0xFFFFFFFF
 	.4byte 0
 
