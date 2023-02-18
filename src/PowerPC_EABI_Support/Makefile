@@ -42,8 +42,8 @@ MW_FILES:=\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/wchar_io.o\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/PPC_EABI/uart_console_io_gcn.o\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/PPC_EABI/abort_exit_ppc_eabi.o\
-	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/math_double.o\
-	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/math_sun.o\
+	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/math_double.o\
+	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/math_sun.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/e_acos.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/e_asin.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/e_atan2.o\
@@ -74,7 +74,7 @@ MW_FILES:=\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/w_log10.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/w_pow.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/e_sqrt.o\
-	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/PPC_EABI/math_ppc.o\
+	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/PPC_EABI/math_ppc.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/w_sqrt.o\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/extras.o\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/targsupp.o\
