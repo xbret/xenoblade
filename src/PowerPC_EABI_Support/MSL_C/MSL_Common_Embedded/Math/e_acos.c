@@ -78,7 +78,7 @@ double __ieee754_acos(x) double x;
 		else return pi+2.0*pio2_lo;	/* acos(-1)= pi */
 	    }
 		errno = 33;
-	    return __float_nan;		/* acos(|x|>1) is NaN */
+	    return NaN;		/* acos(|x|>1) is NaN */
 	}
 	if(ix<0x3fe00000) {	/* |x| < 0.5 */
 	    if(ix<=0x3c600000) return pio2_hi+pio2_lo;/*if|x|<2**-57*/
