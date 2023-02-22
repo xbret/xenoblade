@@ -257,13 +257,13 @@
 .L_802C2DAC:
 /* 802C2DAC 0028C36C  2C 0E 00 00 */	cmpwi r14, 0
 /* 802C2DB0 0028C370  41 82 00 14 */	beq .L_802C2DC4
-/* 802C2DB4 0028C374  3C 60 80 66 */	lis r3, lbl_8066588C@ha
-/* 802C2DB8 0028C378  C0 03 58 8C */	lfs f0, lbl_8066588C@l(r3)
+/* 802C2DB4 0028C374  3C 60 80 66 */	lis r3, __float_huge@ha
+/* 802C2DB8 0028C378  C0 03 58 8C */	lfs f0, __float_huge@l(r3)
 /* 802C2DBC 0028C37C  FC 20 00 50 */	fneg f1, f0
 /* 802C2DC0 0028C380  48 00 00 0C */	b .L_802C2DCC
 .L_802C2DC4:
-/* 802C2DC4 0028C384  3C 60 80 66 */	lis r3, lbl_8066588C@ha
-/* 802C2DC8 0028C388  C0 23 58 8C */	lfs f1, lbl_8066588C@l(r3)
+/* 802C2DC4 0028C384  3C 60 80 66 */	lis r3, __float_huge@ha
+/* 802C2DC8 0028C388  C0 23 58 8C */	lfs f1, __float_huge@l(r3)
 .L_802C2DCC:
 /* 802C2DCC 0028C38C  80 01 00 98 */	lwz r0, 0x98(r1)
 /* 802C2DD0 0028C390  80 61 00 0C */	lwz r3, 0xc(r1)
@@ -1269,13 +1269,13 @@
 .L_802C3B30:
 /* 802C3B30 0028D0F0  2C 0E 00 00 */	cmpwi r14, 0
 /* 802C3B34 0028D0F4  41 82 00 14 */	beq .L_802C3B48
-/* 802C3B38 0028D0F8  3C 60 80 66 */	lis r3, double_80665890@ha
-/* 802C3B3C 0028D0FC  C8 03 58 90 */	lfd f0, double_80665890@l(r3)
+/* 802C3B38 0028D0F8  3C 60 80 66 */	lis r3, __double_huge@ha
+/* 802C3B3C 0028D0FC  C8 03 58 90 */	lfd f0, __double_huge@l(r3)
 /* 802C3B40 0028D100  FC 20 00 50 */	fneg f1, f0
 /* 802C3B44 0028D104  48 00 01 F4 */	b .L_802C3D38
 .L_802C3B48:
-/* 802C3B48 0028D108  3C 60 80 66 */	lis r3, double_80665890@ha
-/* 802C3B4C 0028D10C  C8 23 58 90 */	lfd f1, double_80665890@l(r3)
+/* 802C3B48 0028D108  3C 60 80 66 */	lis r3, __double_huge@ha
+/* 802C3B4C 0028D10C  C8 23 58 90 */	lfd f1, __double_huge@l(r3)
 /* 802C3B50 0028D110  48 00 01 E8 */	b .L_802C3D38
 .L_802C3B54:
 /* 802C3B54 0028D114  B3 81 00 6A */	sth r28, 0x6a(r1)
@@ -1296,8 +1296,8 @@
 /* 802C3B8C 0028D14C  40 81 00 14 */	ble .L_802C3BA0
 /* 802C3B90 0028D150  38 00 00 01 */	li r0, 1
 /* 802C3B94 0028D154  90 13 00 00 */	stw r0, 0(r19)
-/* 802C3B98 0028D158  3C 60 80 66 */	lis r3, double_80665890@ha
-/* 802C3B9C 0028D15C  C8 23 58 90 */	lfd f1, double_80665890@l(r3)
+/* 802C3B98 0028D158  3C 60 80 66 */	lis r3, __double_huge@ha
+/* 802C3B9C 0028D15C  C8 23 58 90 */	lfd f1, __double_huge@l(r3)
 .L_802C3BA0:
 /* 802C3BA0 0028D160  2C 0E 00 00 */	cmpwi r14, 0
 /* 802C3BA4 0028D164  41 82 01 94 */	beq .L_802C3D38
@@ -1449,16 +1449,6 @@
 /* 802C3DA8 0028D368  4E 80 00 20 */	blr 
 .endfn strtof
 
-.section .sdata, "wa"  # 0x80664180 - 0x80666600
-
-.global lbl_8066588C
-lbl_8066588C:
-	.4byte 0x7F800000 #infinity
-
-
-.global double_80665890
-double_80665890:
-	.8byte 0x7FF0000000000000 #infinity
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 .global lbl_8066B878

@@ -36,8 +36,8 @@
 lbl_80667540:
 	.skip 0x4
 #used in misc_io.s
-.global lbl_80667544
-lbl_80667544:
+.global __stdio_exit
+__stdio_exit:
 	.skip 0x4
 .global lbl_80667548
 lbl_80667548:

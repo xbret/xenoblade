@@ -4,8 +4,8 @@
 
 #include "macros.h"
 
-// r2 is  80670380
-// r13 is 8066C180
+
+typedef int BOOL;
 
 typedef signed char s8;
 typedef signed short s16;
@@ -13,11 +13,10 @@ typedef signed long s32;
 typedef signed long long s64;
 typedef unsigned char u8;
 typedef unsigned short u16;
+typedef unsigned int uint;
 typedef unsigned long u32;
 typedef unsigned long size_t;
 typedef unsigned long long u64;
-
-typedef unsigned int uint;
 
 typedef volatile u8 vu8;
 typedef volatile u16 vu16;
@@ -33,40 +32,17 @@ typedef double f64;
 typedef volatile f32 vf32;
 typedef volatile f64 vf64;
 
-typedef int BOOL;
+typedef u32 unknown;
 
 typedef unsigned int uintptr_t; // Manually added
 
-// Pointer to unknown, to be determined at a later date.
-typedef void* unkptr;
+typedef void (*funcptr_t)(void);
 
-typedef u32 unknown;
-
-#ifndef TRUE
-#define TRUE 1
-#endif // ifndef TRUE
-
-#ifndef FALSE
+// Basic defines to allow newer-like C++ code to be written
+#define TRUE  1
 #define FALSE 0
-#endif // ifndef FALSE
-
-#ifndef NULL
-#define NULL ((void*)0)
-#endif // ifndef NULL
-
-#ifndef nullptr
+#define NULL  ((void*)0)
 #define nullptr 0
-#endif // ifndef nullptr
-
-// Array size define
-#define ARRAY_SIZE(o) (sizeof((o)) / sizeof(*(o)))
-
-// Align X to the previous N bytes (N must be power of two)
-#define ALIGN_PREV(X, N) ((X) & ~((N)-1))
-// Align X to the next N bytes (N must be power of two)
-#define ALIGN_NEXT(X, N) ALIGN_PREV(((X) + (N)-1), N)
-// Align object to num bytes (num should be power of two)
-#define ATTRIBUTE_ALIGN(num) __attribute__((aligned(num)))
 
 // For functions that return 0 on a success and -1 on failure
 #ifndef EXIT_SUCCESS
@@ -80,5 +56,3 @@ typedef u32 unknown;
 	}
 
 #endif
-
-#define ROUND_UP(x, align) (((x) + (align)-1) & (-(align)))

@@ -216,7 +216,7 @@ RVL_SDK_FILES:=\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSPlayTime.o\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSCrc.o\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSLaunch.o\
-	$(BUILD_DIR)/asm/RevoSDK/os/__ppc_eabi_init.o\
+	$(BUILD_DIR)/src/RevoSDK/os/__ppc_eabi_init.o\
 	$(BUILD_DIR)/asm/RevoSDK/pad/Pad.o\
 	$(BUILD_DIR)/asm/RevoSDK/sc/scsystem.o\
 	$(BUILD_DIR)/asm/RevoSDK/sc/scapi.o\

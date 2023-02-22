@@ -2422,7 +2422,7 @@
 /* 802C0CF0 0028A2B0  4E 80 00 20 */	blr 
 .endfn __StringWrite
 
-.fn printf, global
+.fn fprintf, global
 /* 802C0CF4 0028A2B4  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 802C0CF8 0028A2B8  7C 08 02 A6 */	mflr r0
 /* 802C0CFC 0028A2BC  90 01 00 84 */	stw r0, 0x84(r1)
@@ -2476,7 +2476,7 @@
 /* 802C0DB0 0028A370  7C 08 03 A6 */	mtlr r0
 /* 802C0DB4 0028A374  38 21 00 80 */	addi r1, r1, 0x80
 /* 802C0DB8 0028A378  4E 80 00 20 */	blr 
-.endfn printf
+.endfn fprintf
 
 .fn vprintf, global
 /* 802C0DBC 0028A37C  94 21 FF E0 */	stwu r1, -0x20(r1)

@@ -10,7 +10,7 @@ extern "C" {
 #include "RevoSDK/os/OSAlloc.h"
 #include "RevoSDK/os/OSArena.h"
 //#include "RevoSDK/os/OSAudioSystem.h"
-//#include "RevoSDK/os/OSCache.h"
+#include "RevoSDK/os/OSCache.h"
 #include "RevoSDK/os/OSContext.h"
 #include "RevoSDK/os/OSError.h"
 #include "RevoSDK/os/OSExec.h"
@@ -35,7 +35,7 @@ extern "C" {
 #include "RevoSDK/os/OSTime.h"
 #include "RevoSDK/os/OSUtils.h"
 //#include "RevoSDK/os/OSUtf.h"
-//#include "RevoSDK/os/__ppc_eabi_init.h"
+#include "RevoSDK/os/__ppc_eabi_init.h"
 
 #ifdef __cplusplus
 }

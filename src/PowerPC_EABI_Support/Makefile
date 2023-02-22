@@ -13,9 +13,9 @@ MW_FILES:=\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/Runtime/GCN_mem_alloc.o\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/alloc.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/ansi_files.o\
-	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/ansi_fp.o\
+	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/ansi_fp.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/arith.o\
-	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/assert.o\
+	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/assert.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/buffer_io.o\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/direct_io.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/errno.o\
@@ -25,7 +25,7 @@ MW_FILES:=\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/mem.o\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/mem_funcs.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/math_api.o\
-	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/misc_io.o\
+	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/misc_io.o\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/printf.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/rand.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/float.o\
@@ -39,7 +39,7 @@ MW_FILES:=\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/wprintf.o\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/wscanf.o\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/wstring.o\
-	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/wchar_io.o\
+	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/wchar_io.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/PPC_EABI/uart_console_io_gcn.o\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/PPC_EABI/abort_exit_ppc_eabi.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/math_double.o\
@@ -104,9 +104,6 @@ MW_FILES:=\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/target_options.o\
 
 $(MW_O_FILES): CFLAGS += -Cpp_exceptions off -inline on -str pool,readonly,reuse
-
-#strcpy needs O4,s
-$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/string.o: CFLAGS = -use_lmw_stmw on -inline on -proc gekko -fp hard -O4,s -str pool,readonly,reuse -func_align 4 $(INCLUDES)
 
 #Runtime has exceptions turned on for 3 specific files
 $(BUILD_DIR)/src/PowerPC_EABI_Support/Runtime/%.o: CFLAGS = -Cpp_exceptions off -use_lmw_stmw on -inline on -proc gekko -fp hard -O4,p -str pool,readonly,reuse -func_align 4 $(INCLUDES)
