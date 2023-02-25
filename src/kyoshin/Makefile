@@ -83,7 +83,6 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CMMClock.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuQuestLog.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuSymbolMark.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/CArrow3D.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CQuestWindow.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CSystemWindow.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CSysWinSelect.o\
@@ -104,7 +103,6 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CItem.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CCharEffect.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CCharEffectEne.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/CCol6CheckBat.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CCol6System.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CCol6Invite.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CTaskREvent.o\
@@ -158,14 +156,10 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/realtimeevt/CREvtLight.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CBgTex.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTitleAHelp.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/CQuestItem.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/CVisionItem.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/CArtsBookItem.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CItemBoxGrid.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CCur.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CSortMenu.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CItemBoxInfo.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/CItemBoxInfo2.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CNumSelect.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CIBLTabCur.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CItemBoxLine.o\
@@ -217,7 +211,6 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuMapSelectSC.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuPause.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuCollepedia.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/CCLPCur.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CCollepedia.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuKizunagram.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CKizunagram.o\
@@ -225,10 +218,7 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CPcKizunagram.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/code_8025FB10.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuPassiveSkill.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/UI/CPassiveSkillCur.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/UI/CPassiveSkillInfo.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/UI/CPassiveSkillLine.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/UI/CPassiveSkill.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/CPassiveSkill.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfGimmickEne.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuBattleEnd.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuPlayAward.o\
@@ -307,8 +297,6 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_802B3750.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CUIErrMesWin.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuTitle.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/CTitleLogo.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/CTitleMenu.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTitle.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/help/CHelp.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/help/CHelp_ArtsAttack.o\
