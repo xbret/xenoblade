@@ -634,15 +634,14 @@
 /* 80318EFC 002E24BC  4E 80 00 20 */	blr 
 .endfn GXGetCPUFifo
 
-#either GXGetFifoPtrs or GXGetFifoLimits
 .balign 16, 0
-.fn func_80318F00, global
+.fn GXGetFifoPtrs, global
 /* 80318F00 002E24C0  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 80318F04 002E24C4  90 04 00 00 */	stw r0, 0(r4)
 /* 80318F08 002E24C8  80 03 00 18 */	lwz r0, 0x18(r3)
 /* 80318F0C 002E24CC  90 05 00 00 */	stw r0, 0(r5)
 /* 80318F10 002E24D0  4E 80 00 20 */	blr 
-.endfn func_80318F00
+.endfn GXGetFifoPtrs
 
 .balign 16, 0
 .fn GXSetBreakPtCallback, global

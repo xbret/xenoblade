@@ -360,19 +360,19 @@
 /* 8039AEC0 00364480  4B FC 0C F1 */	bl OSCreateThread
 /* 8039AEC4 00364484  4B FC 07 1D */	bl OSGetCurrentThread
 /* 8039AEC8 00364488  80 1F 00 14 */	lwz r0, 0x14(r31)
-/* 8039AECC 0036448C  3F E0 80 60 */	lis r31, lbl_805FF038@ha
-/* 8039AED0 00364490  90 7F F0 38 */	stw r3, lbl_805FF038@l(r31)
+/* 8039AECC 0036448C  3F E0 80 60 */	lis r31, adxm_main_thread@ha
+/* 8039AED0 00364490  90 7F F0 38 */	stw r3, adxm_main_thread@l(r31)
 /* 8039AED4 00364494  2C 00 00 10 */	cmpwi r0, 0x10
 /* 8039AED8 00364498  41 82 00 4C */	beq .L_8039AF24
 /* 8039AEDC 0036449C  4B FB DA D5 */	bl OSDisableInterrupts
 /* 8039AEE0 003644A0  7C 7D 1B 78 */	mr r29, r3
 /* 8039AEE4 003644A4  4B FC 07 0D */	bl OSDisableScheduler
 /* 8039AEE8 003644A8  38 00 00 01 */	li r0, 1
-/* 8039AEEC 003644AC  80 7F F0 38 */	lwz r3, lbl_805FF038@l(r31)
+/* 8039AEEC 003644AC  80 7F F0 38 */	lwz r3, adxm_main_thread@l(r31)
 /* 8039AEF0 003644B0  90 1E 00 70 */	stw r0, 0x70(r30)
 /* 8039AEF4 003644B4  4B FC 1A 5D */	bl OSGetThreadPriority
 /* 8039AEF8 003644B8  7C 7C 1B 78 */	mr r28, r3
-/* 8039AEFC 003644BC  80 7F F0 38 */	lwz r3, lbl_805FF038@l(r31)
+/* 8039AEFC 003644BC  80 7F F0 38 */	lwz r3, adxm_main_thread@l(r31)
 /* 8039AF00 003644C0  7F 84 E3 78 */	mr r4, r28
 /* 8039AF04 003644C4  4B FC 19 5D */	bl OSSetThreadPriority
 /* 8039AF08 003644C8  3C 60 80 60 */	lis r3, lbl_805FF03C@ha
@@ -396,9 +396,9 @@
 .fn ADXM_SetupThrd, global
 /* 8039AF44 00364504  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8039AF48 00364508  7C 08 02 A6 */	mflr r0
-/* 8039AF4C 0036450C  3C 80 80 52 */	lis r4, lbl_8051CD10@ha
+/* 8039AF4C 0036450C  3C 80 80 52 */	lis r4, adxwii_build@ha
 /* 8039AF50 00364510  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8039AF54 00364514  80 04 CD 10 */	lwz r0, lbl_8051CD10@l(r4)
+/* 8039AF54 00364514  80 04 CD 10 */	lwz r0, adxwii_build@l(r4)
 /* 8039AF58 00364518  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8039AF5C 0036451C  3F E0 80 5F */	lis r31, lbl_805F7010@ha
 /* 8039AF60 00364520  3B FF 70 10 */	addi r31, r31, lbl_805F7010@l
@@ -531,10 +531,10 @@
 /* 8039B134 003646F4  7C 7E 1B 78 */	mr r30, r3
 /* 8039B138 003646F8  4B FC 04 B9 */	bl OSDisableScheduler
 /* 8039B13C 003646FC  38 00 00 01 */	li r0, 1
-/* 8039B140 00364700  3C 60 80 60 */	lis r3, lbl_805FF038@ha
+/* 8039B140 00364700  3C 60 80 60 */	lis r3, adxm_main_thread@ha
 /* 8039B144 00364704  3C 80 80 60 */	lis r4, lbl_805FF03C@ha
 /* 8039B148 00364708  90 1F 00 70 */	stw r0, 0x70(r31)
-/* 8039B14C 0036470C  80 63 F0 38 */	lwz r3, lbl_805FF038@l(r3)
+/* 8039B14C 0036470C  80 63 F0 38 */	lwz r3, adxm_main_thread@l(r3)
 /* 8039B150 00364710  80 84 F0 3C */	lwz r4, lbl_805FF03C@l(r4)
 /* 8039B154 00364714  4B FC 17 0D */	bl OSSetThreadPriority
 /* 8039B158 00364718  38 00 00 00 */	li r0, 0
@@ -644,8 +644,7 @@ lbl_8051CCE0:
 	.balign 4
 
 
-.global lbl_8051CD10
-lbl_8051CD10:
+adxwii_build:
 	.4byte lbl_8051CCE0
 
 
@@ -659,8 +658,8 @@ lbl_8051CD14:
 .global lbl_805F7010
 lbl_805F7010:
 	.skip 0x8028
-.global lbl_805FF038
-lbl_805FF038:
+.global adxm_main_thread
+adxm_main_thread:
 	.skip 0x4
 .global lbl_805FF03C
 lbl_805FF03C:

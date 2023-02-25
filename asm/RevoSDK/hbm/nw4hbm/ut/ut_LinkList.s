@@ -43,7 +43,7 @@
 .endfn __dt__Q46nw4hbm2ut6detail12LinkListImplFv
 
 .balign 16, 0
-.fn func_803385D0, global
+.fn Erase__Q46nw4hbm2ut6detail12LinkListImplFQ56nw4hbm2ut6detail12LinkListImpl8Iterator, global
 /* 803385D0 00301B90  80 C4 00 00 */	lwz r6, 0(r4)
 /* 803385D4 00301B94  38 00 00 00 */	li r0, 0
 /* 803385D8 00301B98  80 A6 00 00 */	lwz r5, 0(r6)
@@ -64,10 +64,10 @@
 /* 8033860C 00301BCC  40 82 FF D4 */	bne .L_803385E0
 /* 80338610 00301BD0  7C A3 2B 78 */	mr r3, r5
 /* 80338614 00301BD4  4E 80 00 20 */	blr 
-.endfn func_803385D0
+.endfn Erase__Q46nw4hbm2ut6detail12LinkListImplFQ56nw4hbm2ut6detail12LinkListImpl8Iterator
 
 .balign 16, 0
-.fn func_80338620, global
+.fn Insert__Q46nw4hbm2ut6detail12LinkListImplFQ56nw4hbm2ut6detail12LinkListImpl8IteratorPQ36nw4hbm2ut12LinkListNode, global
 /* 80338620 00301BE0  80 84 00 00 */	lwz r4, 0(r4)
 /* 80338624 00301BE4  80 C4 00 04 */	lwz r6, 4(r4)
 /* 80338628 00301BE8  90 C5 00 04 */	stw r6, 4(r5)
@@ -79,4 +79,4 @@
 /* 80338640 00301C00  90 03 00 00 */	stw r0, 0(r3)
 /* 80338644 00301C04  7C A3 2B 78 */	mr r3, r5
 /* 80338648 00301C08  4E 80 00 20 */	blr 
-.endfn func_80338620
+.endfn Insert__Q46nw4hbm2ut6detail12LinkListImplFQ56nw4hbm2ut6detail12LinkListImpl8IteratorPQ36nw4hbm2ut12LinkListNode

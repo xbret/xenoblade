@@ -201,8 +201,8 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_80520678
-lbl_80520678:
+.global SFD_tr_uo
+SFD_tr_uo:
 	.4byte SFUO_Init
 	.4byte SFUO_Finish
 	.4byte SFUO_ExecServer

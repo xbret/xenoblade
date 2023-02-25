@@ -2861,8 +2861,8 @@
 
 .fn mpvvlc_SetDflPtr, global
 /* 803AC2B8 00375878  94 21 FF C0 */	stwu r1, -0x40(r1)
-/* 803AC2BC 0037587C  3C 60 80 52 */	lis r3, lbl_8051F830@ha
-/* 803AC2C0 00375880  38 63 F8 30 */	addi r3, r3, lbl_8051F830@l
+/* 803AC2BC 0037587C  3C 60 80 52 */	lis r3, mpvvlt_run_level_0c@ha
+/* 803AC2C0 00375880  38 63 F8 30 */	addi r3, r3, mpvvlt_run_level_0c@l
 /* 803AC2C4 00375884  BE 81 00 10 */	stmw r20, 0x10(r1)
 /* 803AC2C8 00375888  3E 80 80 60 */	lis r20, lbl_806064B8@ha
 /* 803AC2CC 0037588C  3A 94 64 B8 */	addi r20, r20, lbl_806064B8@l
@@ -2925,8 +2925,8 @@
 /* 803AC3A4 00375964  3F E0 80 60 */	lis r31, lbl_806064B8@ha
 /* 803AC3A8 00375968  3B FF 64 B8 */	addi r31, r31, lbl_806064B8@l
 /* 803AC3AC 0037596C  93 C1 00 18 */	stw r30, 0x18(r1)
-/* 803AC3B0 00375970  3F C0 80 52 */	lis r30, lbl_8051F830@ha
-/* 803AC3B4 00375974  3B DE F8 30 */	addi r30, r30, lbl_8051F830@l
+/* 803AC3B0 00375970  3F C0 80 52 */	lis r30, mpvvlt_run_level_0c@ha
+/* 803AC3B4 00375974  3B DE F8 30 */	addi r30, r30, mpvvlt_run_level_0c@l
 /* 803AC3B8 00375978  38 9F 14 30 */	addi r4, r31, 0x1430
 /* 803AC3BC 0037597C  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 803AC3C0 00375980  7C 7D 1B 78 */	mr r29, r3
@@ -2976,52 +2976,106 @@
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
 
-.global lbl_8051F830
-lbl_8051F830:
-	.4byte 0x12011101
-	.4byte 0x10010F01
-	.4byte 0x03060210
-	.4byte 0x020F020E
-	.4byte 0x020D020C
-	.4byte 0x020B011F
-	.4byte 0x011E011D
-	.4byte 0x011C011B
-	.4byte 0x28002700
-	.4byte 0x26002500
-	.4byte 0x24002300
-	.4byte 0x22002100
-	.4byte 0x20000E01
-	.4byte 0x0D010C01
-	.4byte 0x0B010A01
-	.4byte 0x09010801
-	.4byte 0x1F001E00
-	.4byte 0x1D001C00
-	.4byte 0x1B001A00
-	.4byte 0x19001800
-	.4byte 0x17001600
-	.4byte 0x15001400
-	.4byte 0x13001200
-	.4byte 0x11001000
-	.4byte 0x020A0209
-	.4byte 0x03050403
-	.4byte 0x05020701
-	.4byte 0x06010F00
-	.4byte 0x0E000D00
-	.4byte 0x0C00011A
-	.4byte 0x01190118
-	.4byte 0x01170116
-	.4byte 0x0B000208
-	.4byte 0x03040A00
-	.4byte 0x04020207
-	.4byte 0x01150114
-	.4byte 0x09000113
-	.4byte 0x01120501
-	.4byte 0x03030800
-	.4byte 0x02060111
-	.4byte 0x01100205
-	.4byte 0x07000302
-	.4byte 0x0401010F
-	.4byte 0x010E0204
+.global mpvvlt_run_level_0c
+mpvvlt_run_level_0c:
+	.2byte 0x1201
+	.2byte 0x1101
+	.2byte 0x1001
+	.2byte 0x0F01
+	.2byte 0x0306
+	.2byte 0x0210
+	.2byte 0x020F
+	.2byte 0x020E
+	.2byte 0x020D
+	.2byte 0x020C
+	.2byte 0x020B
+	.2byte 0x011F
+	.2byte 0x011E
+	.2byte 0x011D
+	.2byte 0x011C
+	.2byte 0x011B
+
+mpvvlt_run_level_0b:
+	.2byte 0x2800
+	.2byte 0x2700
+	.2byte 0x2600
+	.2byte 0x2500
+	.2byte 0x2400
+	.2byte 0x2300
+	.2byte 0x2200
+	.2byte 0x2100
+	.2byte 0x2000
+	.2byte 0x0E01
+	.2byte 0x0D01
+	.2byte 0x0C01
+	.2byte 0x0B01
+	.2byte 0x0A01
+	.2byte 0x0901
+	.2byte 0x0801
+
+mpvvlt_run_level_0a:
+	.2byte 0x1F00
+	.2byte 0x1E00
+	.2byte 0x1D00
+	.2byte 0x1C00
+	.2byte 0x1B00
+	.2byte 0x1A00
+	.2byte 0x1900
+	.2byte 0x1800
+	.2byte 0x1700
+	.2byte 0x1600
+	.2byte 0x1500
+	.2byte 0x1400
+	.2byte 0x1300
+	.2byte 0x1200
+	.2byte 0x1100
+	.2byte 0x1000
+
+mpvvlt_run_level_1:
+	.2byte 0x020A
+	.2byte 0x0209
+	.2byte 0x0305
+	.2byte 0x0403
+	.2byte 0x0502
+	.2byte 0x0701
+	.2byte 0x0601
+	.2byte 0x0F00
+	.2byte 0x0E00
+	.2byte 0x0D00
+	.2byte 0x0C00
+	.2byte 0x011A
+	.2byte 0x0119
+	.2byte 0x0118
+	.2byte 0x0117
+	.2byte 0x0116
+
+mpvvlt_run_level_2:
+	.2byte 0x0B00
+	.2byte 0x0208
+	.2byte 0x0304
+	.2byte 0x0A00
+	.2byte 0x0402
+	.2byte 0x0207
+	.2byte 0x0115
+	.2byte 0x0114
+	.2byte 0x0900
+	.2byte 0x0113
+	.2byte 0x0112
+	.2byte 0x0501
+	.2byte 0x0303
+	.2byte 0x0800
+	.2byte 0x0206
+	.2byte 0x0111
+
+mpvvlt_run_level_4:
+	.2byte 0x0110
+	.2byte 0x0205
+	.2byte 0x0700
+	.2byte 0x0302
+	.2byte 0x0401
+	.2byte 0x010F
+	.2byte 0x010E
+	.2byte 0x0204
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

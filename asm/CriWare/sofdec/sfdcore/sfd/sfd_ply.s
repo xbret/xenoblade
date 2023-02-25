@@ -2930,8 +2930,8 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_805203F0
-lbl_805203F0:
+.global SFPLY_cond_dfl
+SFPLY_cond_dfl:
 	.4byte 0x00000001
 	.4byte 0x00000001
 	.4byte 0x00000001

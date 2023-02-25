@@ -5,8 +5,8 @@
 .balign 16, 0
 .fn __HBMSYNGetRelativePitch, global
 /* 80341810 0030ADD0  80 63 00 28 */	lwz r3, 0x28(r3)
-/* 80341814 0030ADD4  3C E0 80 55 */	lis r7, lbl_80550020@ha
-/* 80341818 0030ADD8  38 E7 00 20 */	addi r7, r7, lbl_80550020@l
+/* 80341814 0030ADD4  3C E0 80 55 */	lis r7, __HBMSYNCentsTable@ha
+/* 80341818 0030ADD8  38 E7 00 20 */	addi r7, r7, __HBMSYNCentsTable@l
 /* 8034181C 0030ADDC  7C 60 86 70 */	srawi r0, r3, 0x10
 /* 80341820 0030ADE0  7C 60 01 95 */	addze. r3, r0
 /* 80341824 0030ADE4  40 81 00 90 */	ble .L_803418B4
@@ -78,7 +78,7 @@
 .endfn __HBMSYNGetRelativePitch
 
 
-.fn func_80341920, global
+.fn __HBMSYNSetupPitch, global
 /* 80341920 0030AEE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80341924 0030AEE4  3C 00 43 30 */	lis r0, 0x4330
 /* 80341928 0030AEE8  3C A0 80 52 */	lis r5, double_80518B80@ha
@@ -105,10 +105,10 @@
 /* 8034197C 0030AF3C  90 03 00 28 */	stw r0, 0x28(r3)
 /* 80341980 0030AF40  38 21 00 10 */	addi r1, r1, 0x10
 /* 80341984 0030AF44  4E 80 00 20 */	blr 
-.endfn func_80341920
+.endfn __HBMSYNSetupPitch
 
 .balign 16, 0
-.fn func_80341990, global
+.fn __HBMSYNSetupSrc, global
 /* 80341990 0030AF50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80341994 0030AF54  7C 08 02 A6 */	mflr r0
 /* 80341998 0030AF58  90 01 00 14 */	stw r0, 0x14(r1)
@@ -148,7 +148,7 @@
 /* 80341A20 0030AFE0  7C 08 03 A6 */	mtlr r0
 /* 80341A24 0030AFE4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80341A28 0030AFE8  4E 80 00 20 */	blr 
-.endfn func_80341990
+.endfn __HBMSYNSetupSrc
 
 .balign 16, 0
 .fn __HBMSYNUpdateSrc, global
@@ -201,8 +201,8 @@ lbl_80518B88:
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80550020
-lbl_80550020:
+#the tables after are accessed by adding their offset from the first table
+__HBMSYNCentsTable:
 	.float 1.0
 	.float 1.000578 #0x3F8012F1
 	.float 1.001156 #0x3F8025E1
@@ -303,6 +303,8 @@ lbl_80550020:
 	.float 1.057629 #0x3F876063
 	.float 1.0582401 #0x3F877469
 	.float 1.058851 #0x3F87886E
+
+__HBMSYNOctavesTableUp:
 	.float 1.0
 	.float 2 #0x40000000
 	.float 4 #0x40800000
@@ -315,6 +317,8 @@ lbl_80550020:
 	.float 512 #0x44000000
 	.float 1024 #0x44800000
 	.float 2048 #0x45000000
+
+__HBMSYNSemitonesTableUp:
 	.float 1.0
 	.float 1.059463 #0x3F879C7C
 	.float 1.122462 #0x3F8FACD6
@@ -327,6 +331,8 @@ lbl_80550020:
 	.float 1.681793 #0x3FD744FE
 	.float 1.7817971 #0x3FE411ED
 	.float 1.887749 #0x3FF1A1C2
+
+__HBMSYNSemitonesTableDown:
 	.float 1.0
 	.float 0.943874 #0x3F71A1BA
 	.float 0.890899 #0x3F6411F5

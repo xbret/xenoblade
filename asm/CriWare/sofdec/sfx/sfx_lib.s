@@ -12,9 +12,9 @@
 /* 803D5840 0039EE00  80 1F 00 00 */	lwz r0, 0(r31)
 /* 803D5844 0039EE04  2C 00 00 01 */	cmpwi r0, 1
 /* 803D5848 0039EE08  40 80 00 58 */	bge .L_803D58A0
-/* 803D584C 0039EE0C  3C A0 80 52 */	lis r5, lbl_80520A90@ha
+/* 803D584C 0039EE0C  3C A0 80 52 */	lis r5, sfx_ver_str@ha
 /* 803D5850 0039EE10  38 7F 00 10 */	addi r3, r31, 0x10
-/* 803D5854 0039EE14  38 A5 0A 90 */	addi r5, r5, lbl_80520A90@l
+/* 803D5854 0039EE14  38 A5 0A 90 */	addi r5, r5, sfx_ver_str@l
 /* 803D5858 0039EE18  38 80 00 00 */	li r4, 0
 /* 803D585C 0039EE1C  90 BF 00 08 */	stw r5, 8(r31)
 /* 803D5860 0039EE20  38 A0 05 28 */	li r5, 0x528
@@ -296,8 +296,8 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_80520A90
-lbl_80520A90:
+.global sfx_ver_str
+sfx_ver_str:
 	.asciz "\nCRI SFX/WII Ver.2.48 Build:Nov 13 2008 18:22:09\n"
 	.balign 4
 

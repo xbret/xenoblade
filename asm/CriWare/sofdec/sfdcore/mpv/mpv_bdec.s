@@ -12,9 +12,9 @@
 /* 803A3BC4 0036D184  38 C6 5E D0 */	addi r6, r6, lbl_80605ED0@l
 /* 803A3BC8 0036D188  39 81 00 08 */	addi r12, r1, 8
 /* 803A3BCC 0036D18C  BE C1 00 48 */	stmw r22, 0x48(r1)
-/* 803A3BD0 0036D190  3F E0 80 52 */	lis r31, lbl_8051F538@ha
+/* 803A3BD0 0036D190  3F E0 80 52 */	lis r31, mpvbdec_bitmsk@ha
 /* 803A3BD4 0036D194  7C 7E 1B 78 */	mr r30, r3
-/* 803A3BD8 0036D198  3B FF F5 38 */	addi r31, r31, lbl_8051F538@l
+/* 803A3BD8 0036D198  3B FF F5 38 */	addi r31, r31, mpvbdec_bitmsk@l
 /* 803A3BDC 0036D19C  7C 09 03 A6 */	mtctr r0
 .L_803A3BE0:
 /* 803A3BE0 0036D1A0  99 6C 00 00 */	stb r11, 0(r12)
@@ -265,52 +265,102 @@
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
 
-.global lbl_8051F538
-lbl_8051F538:
-	.4byte 0xFFFF7FFF
-	.4byte 0x3FFF1FFF
-	.4byte 0x0FFF07FF
-	.4byte 0x03FF01FF
-	.4byte 0x00FF007F
-	.4byte 0x003F001F
-	.4byte 0x000F0007
-	.4byte 0x00030001
-	.4byte 0x00010810
-	.4byte 0x0902030A
-	.4byte 0x11182019
-	.4byte 0x120B0405
-	.4byte 0x0C131A21
-	.4byte 0x28302922
-	.4byte 0x1B140D06
-	.4byte 0x070E151C
-	.4byte 0x232A3138
-	.4byte 0x39322B24
-	.4byte 0x1D160F17
-	.4byte 0x1E252C33
-	.4byte 0x3A3B342D
-	.4byte 0x261F272E
-	.4byte 0x353C3D36
-	.4byte 0x2F373E3F
-	.4byte 0x08101316
-	.4byte 0x1A1B1D22
-	.4byte 0x10101618
-	.4byte 0x1B1D2225
-	.4byte 0x13161A1B
-	.4byte 0x1D222226
-	.4byte 0x16161A1B
-	.4byte 0x1D222528
-	.4byte 0x161A1B1D
-	.4byte 0x20232830
-	.4byte 0x1A1B1D20
-	.4byte 0x2328303A
-	.4byte 0x1A1B1D22
-	.4byte 0x262E3845
-	.4byte 0x1B1D2326
-	.4byte 0x2E384553
-	.4byte 0x05040303
-	.4byte 0x02020202
-	.4byte 0x01010101
-	.4byte 0x01010101
+.global mpvbdec_bitmsk
+mpvbdec_bitmsk:
+	.2byte 0xFFFF
+	.2byte 0x7FFF
+	.2byte 0x3FFF
+	.2byte 0x1FFF
+	.2byte 0x0FFF
+	.2byte 0x07FF
+	.2byte 0x03FF
+	.2byte 0x01FF
+	.2byte 0x00FF
+	.2byte 0x007F
+	.2byte 0x003F
+	.2byte 0x001F
+	.2byte 0x000F
+	.2byte 0x0007
+	.2byte 0x0003
+	.2byte 0x0001
+
+zigzag2seq:
+	.2byte 0x0001
+	.2byte 0x0810
+	.2byte 0x0902
+	.2byte 0x030A
+	.2byte 0x1118
+	.2byte 0x2019
+	.2byte 0x120B
+	.2byte 0x0405
+	.2byte 0x0C13
+	.2byte 0x1A21
+	.2byte 0x2830
+	.2byte 0x2922
+	.2byte 0x1B14
+	.2byte 0x0D06
+	.2byte 0x070E
+	.2byte 0x151C
+	.2byte 0x232A
+	.2byte 0x3138
+	.2byte 0x3932
+	.2byte 0x2B24
+	.2byte 0x1D16
+	.2byte 0x0F17
+	.2byte 0x1E25
+	.2byte 0x2C33
+	.2byte 0x3A3B
+	.2byte 0x342D
+	.2byte 0x261F
+	.2byte 0x272E
+	.2byte 0x353C
+	.2byte 0x3D36
+	.2byte 0x2F37
+	.2byte 0x3E3F
+
+org_iqm:
+	.2byte 0x0810
+	.2byte 0x1316
+	.2byte 0x1A1B
+	.2byte 0x1D22
+	.2byte 0x1010
+	.2byte 0x1618
+	.2byte 0x1B1D
+	.2byte 0x2225
+	.2byte 0x1316
+	.2byte 0x1A1B
+	.2byte 0x1D22
+	.2byte 0x2226
+	.2byte 0x1616
+	.2byte 0x1A1B
+	.2byte 0x1D22
+	.2byte 0x2528
+	.2byte 0x161A
+	.2byte 0x1B1D
+	.2byte 0x2023
+	.2byte 0x2830
+	.2byte 0x1A1B
+	.2byte 0x1D20
+	.2byte 0x2328
+	.2byte 0x303A
+	.2byte 0x1A1B
+	.2byte 0x1D22
+	.2byte 0x262E
+	.2byte 0x3845
+	.2byte 0x1B1D
+	.2byte 0x2326
+	.2byte 0x2E38
+	.2byte 0x4553
+
+group_tbl:
+	.2byte 0x0504
+	.2byte 0x0303
+	.2byte 0x0202
+	.2byte 0x0202
+	.2byte 0x0101
+	.2byte 0x0101
+	.2byte 0x0101
+	.2byte 0x0101
 	.4byte 0
 	.4byte 0
 	.4byte 0

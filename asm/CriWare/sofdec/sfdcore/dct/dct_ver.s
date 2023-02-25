@@ -20,6 +20,5 @@ DCT_version_str:
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global cri_verstr_ptr
 cri_verstr_ptr:
 	.skip 0x8

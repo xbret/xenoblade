@@ -1892,18 +1892,16 @@
 .endfn ReserveGXMem__Q36nw4hbm3lyt8MaterialFUcUcUcUcbUcUcbbbb
 
 .balign 16, 0
-#GetTexSRTAry__Q36nw4hbm3lyt8MaterialFv or GetTexSRTAry__Q36nw4hbm3lyt8MaterialCFv
-.fn func_803300F0, global
+.fn GetTexSRTAry__Q36nw4hbm3lyt8MaterialFv, global
 /* 803300F0 002F96B0  80 03 00 4C */	lwz r0, 0x4c(r3)
 /* 803300F4 002F96B4  80 63 00 58 */	lwz r3, 0x58(r3)
 /* 803300F8 002F96B8  54 00 4D F4 */	rlwinm r0, r0, 9, 0x17, 0x1a
 /* 803300FC 002F96BC  7C 63 02 14 */	add r3, r3, r0
 /* 80330100 002F96C0  4E 80 00 20 */	blr 
-.endfn func_803300F0
+.endfn GetTexSRTAry__Q36nw4hbm3lyt8MaterialFv
 
 .balign 16, 0
-#GetTexCoordGenAry__Q36nw4hbm3lyt8MaterialCFv or GetTexCoordGenAry__Q36nw4hbm3lyt8MaterialFv
-.fn func_80330110, global
+.fn GetTexCoordGenAry__Q36nw4hbm3lyt8MaterialFv, global
 /* 80330110 002F96D0  80 83 00 4C */	lwz r4, 0x4c(r3)
 /* 80330114 002F96D4  80 A3 00 58 */	lwz r5, 0x58(r3)
 /* 80330118 002F96D8  54 80 47 3E */	rlwinm r0, r4, 8, 0x1c, 0x1f
@@ -1912,11 +1910,10 @@
 /* 80330124 002F96E4  7C 05 02 14 */	add r0, r5, r0
 /* 80330128 002F96E8  7C 63 02 14 */	add r3, r3, r0
 /* 8033012C 002F96EC  4E 80 00 20 */	blr 
-.endfn func_80330110
+.endfn GetTexCoordGenAry__Q36nw4hbm3lyt8MaterialFv
 
-#GetIndTexSRTAry__Q36nw4hbm3lyt8MaterialCFv or GetIndTexSRTAry__Q36nw4hbm3lyt8MaterialFv
 .balign 16, 0
-.fn func_80330130, global
+.fn GetIndTexSRTAry__Q36nw4hbm3lyt8MaterialFv, global
 /* 80330130 002F96F0  81 23 00 4C */	lwz r9, 0x4c(r3)
 /* 80330134 002F96F4  81 63 00 58 */	lwz r11, 0x58(r3)
 /* 80330138 002F96F8  55 20 47 3E */	rlwinm r0, r9, 8, 0x1c, 0x1f
@@ -1939,7 +1936,7 @@
 /* 8033017C 002F973C  7C 0B 02 14 */	add r0, r11, r0
 /* 80330180 002F9740  7C 63 02 14 */	add r3, r3, r0
 /* 80330184 002F9744  4E 80 00 20 */	blr 
-.endfn func_80330130
+.endfn GetIndTexSRTAry__Q36nw4hbm3lyt8MaterialFv
 
 .balign 16, 0
 .fn SetTextureNum__Q36nw4hbm3lyt8MaterialFUc, global
@@ -3266,7 +3263,7 @@
 /* 803314B8 002FAA78  93 81 00 08 */	stw r28, 8(r1)
 /* 803314BC 002FAA7C  38 7A 00 18 */	addi r3, r26, 0x18
 /* 803314C0 002FAA80  38 81 00 08 */	addi r4, r1, 8
-/* 803314C4 002FAA84  48 00 71 0D */	bl func_803385D0
+/* 803314C4 002FAA84  48 00 71 0D */	bl Erase__Q46nw4hbm2ut6detail12LinkListImplFQ56nw4hbm2ut6detail12LinkListImpl8Iterator
 /* 803314C8 002FAA88  93 BC 00 08 */	stw r29, 8(r28)
 /* 803314CC 002FAA8C  B3 BC 00 0C */	sth r29, 0xc(r28)
 .L_803314D0:
@@ -3336,7 +3333,7 @@
 /* 803315A4 002FAB64  38 63 00 18 */	addi r3, r3, 0x18
 /* 803315A8 002FAB68  38 81 00 08 */	addi r4, r1, 8
 /* 803315AC 002FAB6C  90 01 00 08 */	stw r0, 8(r1)
-/* 803315B0 002FAB70  48 00 70 71 */	bl func_80338620
+/* 803315B0 002FAB70  48 00 70 71 */	bl Insert__Q46nw4hbm2ut6detail12LinkListImplFQ56nw4hbm2ut6detail12LinkListImpl8IteratorPQ36nw4hbm2ut12LinkListNode
 /* 803315B4 002FAB74  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 803315B8 002FAB78  7C 08 03 A6 */	mtlr r0
 /* 803315BC 002FAB7C  38 21 00 10 */	addi r1, r1, 0x10

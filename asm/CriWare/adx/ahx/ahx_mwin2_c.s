@@ -2,7 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-#the others are ahxsbf_mult_float_win1-15
 
 .fn ahxsbf_mult_float_win0, global
 /* 8038AEA8 00354468  94 21 FF E0 */	stwu r1, -0x20(r1)

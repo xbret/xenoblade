@@ -124,8 +124,7 @@
 .endfn WBCGetTGCWeightDummy
 
 .balign 16, 0
-#OnShutdown
-.fn func_80368E90, global
+.fn OnShutdown, local
 /* 80368E90 00332450  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80368E94 00332454  7C 08 02 A6 */	mflr r0
 /* 80368E98 00332458  90 01 00 14 */	stw r0, 0x14(r1)
@@ -257,10 +256,11 @@
 /* 8036904C 0033260C  7C 08 03 A6 */	mtlr r0
 /* 80369050 00332610  38 21 00 10 */	addi r1, r1, 0x10
 /* 80369054 00332614  4E 80 00 20 */	blr 
-.endfn func_80368E90
+.endfn OnShutdown
 
+#same as WPADiSendData
 .balign 16, 0
-.fn  WPADiSendData, global
+.fn  __wpadSendDataSub, global
 /* 80369060 00332620  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80369064 00332624  7C 08 02 A6 */	mflr r0
 /* 80369068 00332628  90 01 00 34 */	stw r0, 0x34(r1)
@@ -389,10 +389,11 @@
 /* 80369228 003327E8  7C 08 03 A6 */	mtlr r0
 /* 8036922C 003327EC  38 21 00 30 */	addi r1, r1, 0x30
 /* 80369230 003327F0  4E 80 00 20 */	blr 
-.endfn  WPADiSendData
+.endfn  __wpadSendDataSub
 
+#same as WPADiRadioSensitivity?
 .balign 16, 0
-.fn WPADiRadioSensitivity, global
+.fn __wpadCalcRadioQuality, global
 /* 80369240 00332800  A0 0D BA EA */	lhz r0, lbl_80667C6A@sda21(r13)
 /* 80369244 00332804  3C 80 80 5E */	lis r4, __rvl_p_wpadcb@ha
 /* 80369248 00332808  54 63 10 3A */	slwi r3, r3, 2
@@ -465,10 +466,11 @@
 /* 80369344 00332904  98 07 08 CD */	stb r0, 0x8cd(r7)
 /* 80369348 00332908  98 87 08 CE */	stb r4, 0x8ce(r7)
 /* 8036934C 0033290C  4E 80 00 20 */	blr 
-.endfn WPADiRadioSensitivity
+.endfn __wpadCalcRadioQuality
 
+#IsControllerDataChanged
 .balign 16, 0
-.fn IsControllerDataChanged, global
+.fn __wpadIsControllerDataChanged, global
 /* 80369350 00332910  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80369354 00332914  39 40 00 00 */	li r10, 0
 /* 80369358 00332918  93 E1 00 1C */	stw r31, 0x1c(r1)
@@ -1099,10 +1101,11 @@
 /* 80369C3C 003331FC  83 81 00 10 */	lwz r28, 0x10(r1)
 /* 80369C40 00333200  38 21 00 20 */	addi r1, r1, 0x20
 /* 80369C44 00333204  4E 80 00 20 */	blr 
-.endfn IsControllerDataChanged
+.endfn __wpadIsControllerDataChanged
 
+#CheckButtonCombination
 .balign 16, 0
-.fn CheckButtonCombination, global
+.fn __wpadCalcRecalibration, global
 /* 80369C50 00333210  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80369C54 00333214  7C 08 02 A6 */	mflr r0
 /* 80369C58 00333218  3C A0 80 5E */	lis r5, __rvl_p_wpadcb@ha
@@ -1154,10 +1157,11 @@
 /* 80369D00 003332C0  7C 08 03 A6 */	mtlr r0
 /* 80369D04 003332C4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80369D08 003332C8  4E 80 00 20 */	blr 
-.endfn CheckButtonCombination
+.endfn __wpadCalcRecalibration
 
+#WPADiCheckContInputs
 .balign 16, 0
-.fn  WPADiCheckContInputs, global
+.fn  __wpadCalcControllerData, global
 /* 80369D10 003332D0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80369D14 003332D4  7C 08 02 A6 */	mflr r0
 /* 80369D18 003332D8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1183,11 +1187,11 @@
 /* 80369D68 00333328  7F A3 EB 78 */	mr r3, r29
 /* 80369D6C 0033332C  7F 64 DB 78 */	mr r4, r27
 /* 80369D70 00333330  38 BD 00 40 */	addi r5, r29, 0x40
-/* 80369D74 00333334  4B FF F5 DD */	bl IsControllerDataChanged
+/* 80369D74 00333334  4B FF F5 DD */	bl __wpadIsControllerDataChanged
 /* 80369D78 00333338  7C 7A 1B 78 */	mr r26, r3
 /* 80369D7C 0033333C  7F 23 CB 78 */	mr r3, r25
 /* 80369D80 00333340  7F 64 DB 78 */	mr r4, r27
-/* 80369D84 00333344  4B FF FE CD */	bl CheckButtonCombination
+/* 80369D84 00333344  4B FF FE CD */	bl __wpadCalcRecalibration
 /* 80369D88 00333348  2C 1A 00 00 */	cmpwi r26, 0
 /* 80369D8C 0033334C  41 82 00 28 */	beq .L_80369DB4
 /* 80369D90 00333350  3B 80 00 01 */	li r28, 1
@@ -1265,10 +1269,11 @@
 /* 80369E98 00333458  7C 08 03 A6 */	mtlr r0
 /* 80369E9C 0033345C  38 21 00 30 */	addi r1, r1, 0x30
 /* 80369EA0 00333460  4E 80 00 20 */	blr
-.endfn  WPADiCheckContInputs
+.endfn  __wpadCalcControllerData
 
+#WPADiManageHandler
 .balign 16, 0
-.fn WPADiManageHandler, global
+.fn __wpadManageHandler, global
 /* 80369EB0 00333470  94 21 FE 20 */	stwu r1, -0x1e0(r1)
 /* 80369EB4 00333474  7C 08 02 A6 */	mflr r0
 /* 80369EB8 00333478  90 01 01 E4 */	stw r0, 0x1e4(r1)
@@ -1286,13 +1291,13 @@
 /* 80369EE8 003334A8  40 82 09 8C */	bne .L_8036A874
 /* 80369EEC 003334AC  38 80 00 01 */	li r4, 1
 /* 80369EF0 003334B0  38 00 00 32 */	li r0, 0x32
-/* 80369EF4 003334B4  3C 60 80 37 */	lis r3, WPADiConnCallback@ha
+/* 80369EF4 003334B4  3C 60 80 37 */	lis r3, __wpadConnectionCallback@ha
 /* 80369EF8 003334B8  90 8D BB 24 */	stw r4, lbl_80667CA4@sda21(r13)
-/* 80369EFC 003334BC  38 63 BA C0 */	addi r3, r3, WPADiConnCallback@l
+/* 80369EFC 003334BC  38 63 BA C0 */	addi r3, r3, __wpadConnectionCallback@l
 /* 80369F00 003334C0  90 0D BA FC */	stw r0, lbl_80667C7C@sda21(r13)
 /* 80369F04 003334C4  48 00 F8 4D */	bl WUDSetHidConnCallback
-/* 80369F08 003334C8  3C 60 80 37 */	lis r3, WPADiRecvCallback@ha
-/* 80369F0C 003334CC  38 63 BF 80 */	addi r3, r3, WPADiRecvCallback@l
+/* 80369F08 003334C8  3C 60 80 37 */	lis r3, __wpadReceiveCallback@ha
+/* 80369F0C 003334CC  38 63 BF 80 */	addi r3, r3, __wpadReceiveCallback@l
 /* 80369F10 003334D0  48 00 F7 E1 */	bl WUDSetHidRecvCallback
 /* 80369F14 003334D4  48 00 09 60 */	b .L_8036A874
 .L_80369F18:
@@ -1519,7 +1524,7 @@
 /* 8036A248 00333808  90 C1 01 8C */	stw r6, 0x18c(r1)
 /* 8036A24C 0033380C  90 A1 01 90 */	stw r5, 0x190(r1)
 /* 8036A250 00333810  90 01 01 94 */	stw r0, 0x194(r1)
-/* 8036A254 00333814  4B FF EE 0D */	bl  WPADiSendData
+/* 8036A254 00333814  4B FF EE 0D */	bl  __wpadSendDataSub
 .L_8036A258:
 /* 8036A258 00333818  2C 19 FF FE */	cmpwi r25, -2
 /* 8036A25C 0033381C  40 82 00 AC */	bne .L_8036A308
@@ -1727,7 +1732,7 @@
 /* 8036A54C 00333B0C  90 C1 00 FC */	stw r6, 0xfc(r1)
 /* 8036A550 00333B10  90 A1 01 00 */	stw r5, 0x100(r1)
 /* 8036A554 00333B14  90 01 01 04 */	stw r0, 0x104(r1)
-/* 8036A558 00333B18  4B FF EB 09 */	bl  WPADiSendData
+/* 8036A558 00333B18  4B FF EB 09 */	bl  __wpadSendDataSub
 .L_8036A55C:
 /* 8036A55C 00333B1C  2C 18 FF FE */	cmpwi r24, -2
 /* 8036A560 00333B20  40 82 00 AC */	bne .L_8036A60C
@@ -1879,7 +1884,7 @@
 /* 8036A77C 00333D3C  90 A1 00 6C */	stw r5, 0x6c(r1)
 /* 8036A780 00333D40  90 01 00 70 */	stw r0, 0x70(r1)
 /* 8036A784 00333D44  93 A1 00 74 */	stw r29, 0x74(r1)
-/* 8036A788 00333D48  4B FF E8 D9 */	bl  WPADiSendData
+/* 8036A788 00333D48  4B FF E8 D9 */	bl  __wpadSendDataSub
 .L_8036A78C:
 /* 8036A78C 00333D4C  80 77 00 00 */	lwz r3, 0(r23)
 /* 8036A790 00333D50  80 03 08 D0 */	lwz r0, 0x8d0(r3)
@@ -1893,9 +1898,9 @@
 .L_8036A7AC:
 /* 8036A7AC 00333D6C  98 15 00 00 */	stb r0, 0(r21)
 /* 8036A7B0 00333D70  7E 83 A3 78 */	mr r3, r20
-/* 8036A7B4 00333D74  4B FF F5 5D */	bl  WPADiCheckContInputs
+/* 8036A7B4 00333D74  4B FF F5 5D */	bl  __wpadCalcControllerData
 /* 8036A7B8 00333D78  7E 83 A3 78 */	mr r3, r20
-/* 8036A7BC 00333D7C  4B FF EA 85 */	bl WPADiRadioSensitivity
+/* 8036A7BC 00333D7C  4B FF EA 85 */	bl __wpadCalcRadioQuality
 .L_8036A7C0:
 /* 8036A7C0 00333D80  80 97 00 00 */	lwz r4, 0(r23)
 /* 8036A7C4 00333D84  88 04 09 91 */	lbz r0, 0x991(r4)
@@ -1950,22 +1955,23 @@
 /* 8036A880 00333E40  7C 08 03 A6 */	mtlr r0
 /* 8036A884 00333E44  38 21 01 E0 */	addi r1, r1, 0x1e0
 /* 8036A888 00333E48  4E 80 00 20 */	blr
-.endfn WPADiManageHandler
+.endfn __wpadManageHandler
 
 .balign 16, 0
-.fn WPADiManageHandler0, global
+.fn __wpadManageHandler0, global
 /* 8036A890 00333E50  3D 00 80 5E */	lis r8, _wpadHandle2PortTable@ha
-/* 8036A894 00333E54  3C E0 80 37 */	lis r7, WPADiManageHandler@ha
+/* 8036A894 00333E54  3C E0 80 37 */	lis r7, __wpadManageHandler@ha
 /* 8036A898 00333E58  39 08 DA E0 */	addi r8, r8, _wpadHandle2PortTable@l
 /* 8036A89C 00333E5C  38 A0 00 00 */	li r5, 0
-/* 8036A8A0 00333E60  38 E7 9E B0 */	addi r7, r7, WPADiManageHandler@l
+/* 8036A8A0 00333E60  38 E7 9E B0 */	addi r7, r7, __wpadManageHandler@l
 /* 8036A8A4 00333E64  38 C0 00 00 */	li r6, 0
 /* 8036A8A8 00333E68  39 08 10 00 */	addi r8, r8, 0x1000
 /* 8036A8AC 00333E6C  4B FE A1 E4 */	b OSSwitchFiberEx
-.endfn WPADiManageHandler0
+.endfn __wpadManageHandler0
 
+#__ClearControlBlock
 .balign 16, 0
-.fn __ClearControlBlock, global
+.fn __wpadClearControlBlock, global
 /* 8036A8B0 00333E70  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8036A8B4 00333E74  7C 08 02 A6 */	mflr r0
 /* 8036A8B8 00333E78  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2123,10 +2129,11 @@
 /* 8036AB18 003340D8  7C 08 03 A6 */	mtlr r0
 /* 8036AB1C 003340DC  38 21 00 20 */	addi r1, r1, 0x20
 /* 8036AB20 003340E0  4E 80 00 20 */	blr
-.endfn __ClearControlBlock
+.endfn __wpadClearControlBlock
 
+#WPADiInitSub
 .balign 16, 0
-.fn WPADiInitSub, global
+.fn __wpadInitSub, global
 /* 8036AB30 003340F0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8036AB34 003340F4  7C 08 02 A6 */	mflr r0
 /* 8036AB38 003340F8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -2174,7 +2181,7 @@
 /* 8036ABDC 0033419C  7F 03 C3 78 */	mr r3, r24
 /* 8036ABE0 003341A0  9B DB 00 00 */	stb r30, 0(r27)
 /* 8036ABE4 003341A4  93 DD 08 A4 */	stw r30, 0x8a4(r29)
-/* 8036ABE8 003341A8  4B FF FC C9 */	bl __ClearControlBlock
+/* 8036ABE8 003341A8  4B FF FC C9 */	bl __wpadClearControlBlock
 /* 8036ABEC 003341AC  38 7D 08 E4 */	addi r3, r29, 0x8e4
 /* 8036ABF0 003341B0  4B FF 09 E1 */	bl OSInitThreadQueue
 /* 8036ABF4 003341B4  3B 18 00 01 */	addi r24, r24, 1
@@ -2268,11 +2275,11 @@
 /* 8036AD34 003342F4  4B FE 80 ED */	bl OSCreateAlarm
 /* 8036AD38 003342F8  4B FF 1C 29 */	bl OSGetTime
 /* 8036AD3C 003342FC  3C A0 80 00 */	lis r5, 0x800000F8@ha
-/* 8036AD40 00334300  3D 20 80 37 */	lis r9, WPADiManageHandler0@ha
+/* 8036AD40 00334300  3D 20 80 37 */	lis r9, __wpadManageHandler0@ha
 /* 8036AD44 00334304  80 05 00 F8 */	lwz r0, 0x800000F8@l(r5)
 /* 8036AD48 00334308  3C C0 10 62 */	lis r6, 0x10624DD3@ha
 /* 8036AD4C 0033430C  7C 65 1B 78 */	mr r5, r3
-/* 8036AD50 00334310  39 29 A8 90 */	addi r9, r9, WPADiManageHandler0@l
+/* 8036AD50 00334310  39 29 A8 90 */	addi r9, r9, __wpadManageHandler0@l
 /* 8036AD54 00334314  38 66 4D D3 */	addi r3, r6, 0x10624DD3@l
 /* 8036AD58 00334318  54 00 F0 BE */	srwi r0, r0, 2
 /* 8036AD5C 0033431C  7C 03 00 16 */	mulhwu r0, r3, r0
@@ -2287,7 +2294,7 @@
 /* 8036AD80 00334340  7C 08 03 A6 */	mtlr r0
 /* 8036AD84 00334344  38 21 00 30 */	addi r1, r1, 0x30
 /* 8036AD88 00334348  4E 80 00 20 */	blr
-.endfn WPADiInitSub
+.endfn __wpadInitSub
 
 .balign 16, 0
 .fn WPADInit, global
@@ -2314,7 +2321,7 @@
 /* 8036ADDC 0033439C  90 8D BB 24 */	stw r4, lbl_80667CA4@sda21(r13)
 /* 8036ADE0 003343A0  90 6D 9B BC */	stw r3, lbl_80665D3C@sda21(r13)
 /* 8036ADE4 003343A4  90 0D BA FC */	stw r0, lbl_80667C7C@sda21(r13)
-/* 8036ADE8 003343A8  4B FF FD 49 */	bl WPADiInitSub
+/* 8036ADE8 003343A8  4B FF FD 49 */	bl __wpadInitSub
 .L_8036ADEC:
 /* 8036ADEC 003343AC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8036ADF0 003343B0  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -2386,8 +2393,9 @@
 /* 8036AED0 00334490  4E 80 00 20 */	blr
 .endfn WPADGetSensorBarPosition
 
+#setupCallback
 .balign 16, 0
-.fn setupCallback, global
+.fn __wpadSetupConnectionCallback, global
 /* 8036AEE0 003344A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8036AEE4 003344A4  7C 08 02 A6 */	mflr r0
 /* 8036AEE8 003344A8  2C 04 00 00 */	cmpwi r4, 0
@@ -2443,10 +2451,11 @@
 /* 8036AFA0 00334560  7C 08 03 A6 */	mtlr r0
 /* 8036AFA4 00334564  38 21 00 20 */	addi r1, r1, 0x20
 /* 8036AFA8 00334568  4E 80 00 20 */	blr
-.endfn setupCallback
+.endfn __wpadSetupConnectionCallback
 
+#abortConnCallback
 .balign 16, 0
-.fn abortConnCallback, global
+.fn __wpadAbortConnectionCallback, global
 /* 8036AFB0 00334570  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8036AFB4 00334574  7C 08 02 A6 */	mflr r0
 /* 8036AFB8 00334578  2C 04 00 00 */	cmpwi r4, 0
@@ -2508,10 +2517,11 @@
 /* 8036B08C 0033464C  7C 08 03 A6 */	mtlr r0
 /* 8036B090 00334650  38 21 00 20 */	addi r1, r1, 0x20
 /* 8036B094 00334654  4E 80 00 20 */	blr
-.endfn abortConnCallback
+.endfn __wpadAbortConnectionCallback
 
+#firmwareCheckCallback
 .balign 16, 0
-.fn firmwareCheckCallback, local
+.fn __wpadInitConnectionCallback, local
 /* 8036B0A0 00334660  94 21 FD 80 */	stwu r1, -0x280(r1)
 /* 8036B0A4 00334664  7C 08 02 A6 */	mflr r0
 /* 8036B0A8 00334668  90 01 02 84 */	stw r0, 0x284(r1)
@@ -2558,17 +2568,17 @@
 /* 8036B144 00334704  41 82 00 08 */	beq .L_8036B14C
 /* 8036B148 00334708  7C 63 D8 30 */	slw r3, r3, r27
 .L_8036B14C:
-/* 8036B14C 0033470C  3F C0 80 37 */	lis r30, abortConnCallback@ha
+/* 8036B14C 0033470C  3F C0 80 37 */	lis r30, __wpadAbortConnectionCallback@ha
 /* 8036B150 00334710  88 BD 09 8E */	lbz r5, 0x98e(r29)
 /* 8036B154 00334714  54 7B 06 3E */	clrlwi r27, r3, 0x18
 /* 8036B158 00334718  38 7D 01 60 */	addi r3, r29, 0x160
-/* 8036B15C 0033471C  38 DE AF B0 */	addi r6, r30, abortConnCallback@l
+/* 8036B15C 0033471C  38 DE AF B0 */	addi r6, r30, __wpadAbortConnectionCallback@l
 /* 8036B160 00334720  38 80 00 00 */	li r4, 0
 /* 8036B164 00334724  48 00 4D 8D */	bl WPADiSendSetReportType
 /* 8036B168 00334728  38 00 00 01 */	li r0, 1
 /* 8036B16C 0033472C  B0 01 02 1A */	sth r0, 0x21a(r1)
 /* 8036B170 00334730  38 00 00 00 */	li r0, 0
-/* 8036B174 00334734  39 9E AF B0 */	addi r12, r30, abortConnCallback@l
+/* 8036B174 00334734  39 9E AF B0 */	addi r12, r30, __wpadAbortConnectionCallback@l
 /* 8036B178 00334738  98 01 02 04 */	stb r0, 0x204(r1)
 /* 8036B17C 0033473C  3B C0 00 1A */	li r30, 0x1a
 /* 8036B180 00334740  81 41 02 08 */	lwz r10, 0x208(r1)
@@ -2651,8 +2661,8 @@
 /* 8036B2A8 00334868  38 00 00 01 */	li r0, 1
 /* 8036B2AC 0033486C  3B 60 00 11 */	li r27, 0x11
 /* 8036B2B0 00334870  B0 01 01 BA */	sth r0, 0x1ba(r1)
-/* 8036B2B4 00334874  3D 80 80 37 */	lis r12, abortConnCallback@ha
-/* 8036B2B8 00334878  39 8C AF B0 */	addi r12, r12, abortConnCallback@l
+/* 8036B2B4 00334874  3D 80 80 37 */	lis r12, __wpadAbortConnectionCallback@ha
+/* 8036B2B8 00334878  39 8C AF B0 */	addi r12, r12, __wpadAbortConnectionCallback@l
 /* 8036B2BC 0033487C  81 61 01 A4 */	lwz r11, 0x1a4(r1)
 /* 8036B2C0 00334880  81 41 01 A8 */	lwz r10, 0x1a8(r1)
 /* 8036B2C4 00334884  81 21 01 AC */	lwz r9, 0x1ac(r1)
@@ -2728,9 +2738,9 @@
 /* 8036B3D4 00334994  98 1D 01 61 */	stb r0, 0x161(r29)
 /* 8036B3D8 00334998  4B FE D6 19 */	bl OSRestoreInterrupts
 .L_8036B3DC:
-/* 8036B3DC 0033499C  3C C0 80 37 */	lis r6, abortConnCallback@ha
+/* 8036B3DC 0033499C  3C C0 80 37 */	lis r6, __wpadAbortConnectionCallback@ha
 /* 8036B3E0 003349A0  38 60 00 2A */	li r3, 0x2a
-/* 8036B3E4 003349A4  38 C6 AF B0 */	addi r6, r6, abortConnCallback@l
+/* 8036B3E4 003349A4  38 C6 AF B0 */	addi r6, r6, __wpadAbortConnectionCallback@l
 /* 8036B3E8 003349A8  39 00 00 38 */	li r8, 0x38
 /* 8036B3EC 003349AC  38 E0 00 17 */	li r7, 0x17
 /* 8036B3F0 003349B0  38 00 00 06 */	li r0, 6
@@ -2826,9 +2836,9 @@
 /* 8036B550 00334B10  98 1D 01 61 */	stb r0, 0x161(r29)
 /* 8036B554 00334B14  4B FE D4 9D */	bl OSRestoreInterrupts
 .L_8036B558:
-/* 8036B558 00334B18  3C C0 80 37 */	lis r6, abortConnCallback@ha
+/* 8036B558 00334B18  3C C0 80 37 */	lis r6, __wpadAbortConnectionCallback@ha
 /* 8036B55C 00334B1C  38 60 00 62 */	li r3, 0x62
-/* 8036B560 00334B20  38 C6 AF B0 */	addi r6, r6, abortConnCallback@l
+/* 8036B560 00334B20  38 C6 AF B0 */	addi r6, r6, __wpadAbortConnectionCallback@l
 /* 8036B564 00334B24  39 00 00 38 */	li r8, 0x38
 /* 8036B568 00334B28  38 E0 00 17 */	li r7, 0x17
 /* 8036B56C 00334B2C  38 00 00 06 */	li r0, 6
@@ -2924,9 +2934,9 @@
 /* 8036B6CC 00334C8C  98 1D 01 61 */	stb r0, 0x161(r29)
 /* 8036B6D0 00334C90  4B FE D3 21 */	bl OSRestoreInterrupts
 .L_8036B6D4:
-/* 8036B6D4 00334C94  3C C0 80 37 */	lis r6, setupCallback@ha
+/* 8036B6D4 00334C94  3C C0 80 37 */	lis r6, __wpadSetupConnectionCallback@ha
 /* 8036B6D8 00334C98  38 E0 00 17 */	li r7, 0x17
-/* 8036B6DC 00334C9C  38 C6 AE E0 */	addi r6, r6, setupCallback@l
+/* 8036B6DC 00334C9C  38 C6 AE E0 */	addi r6, r6, __wpadSetupConnectionCallback@l
 /* 8036B6E0 00334CA0  38 00 00 06 */	li r0, 6
 /* 8036B6E4 00334CA4  93 81 00 10 */	stw r28, 0x10(r1)
 /* 8036B6E8 00334CA8  38 61 00 84 */	addi r3, r1, 0x84
@@ -3106,10 +3116,11 @@
 /* 8036B988 00334F48  7C 08 03 A6 */	mtlr r0
 /* 8036B98C 00334F4C  38 21 02 80 */	addi r1, r1, 0x280
 /* 8036B990 00334F50  4E 80 00 20 */	blr
-.endfn firmwareCheckCallback
+.endfn __wpadInitConnectionCallback
 
+#WPADiRetrieveChannel
 .balign 16, 0
-.fn WPADiRetrieveChannel, global
+.fn __wpadRetrieveChannel, global
 /* 8036B9A0 00334F60  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8036B9A4 00334F64  7C 08 02 A6 */	mflr r0
 /* 8036B9A8 00334F68  90 01 00 24 */	stw r0, 0x24(r1)
@@ -3189,9 +3200,10 @@
 /* 8036BAB4 00335074  7C 08 03 A6 */	mtlr r0
 /* 8036BAB8 00335078  38 21 00 20 */	addi r1, r1, 0x20
 /* 8036BABC 0033507C  4E 80 00 20 */	blr
-.endfn WPADiRetrieveChannel
+.endfn __wpadRetrieveChannel
 
-.fn WPADiConnCallback, local
+#WPADiConnCallback
+.fn __wpadConnectionCallback, local
 /* 8036BAC0 00335080  94 21 FF 40 */	stwu r1, -0xc0(r1)
 /* 8036BAC4 00335084  7C 08 02 A6 */	mflr r0
 /* 8036BAC8 00335088  90 01 00 C4 */	stw r0, 0xc4(r1)
@@ -3213,14 +3225,14 @@
 /* 8036BB04 003350C4  2C 1C 00 00 */	cmpwi r28, 0
 /* 8036BB08 003350C8  41 82 02 54 */	beq .L_8036BD5C
 /* 8036BB0C 003350CC  7F C3 F3 78 */	mr r3, r30
-/* 8036BB10 003350D0  4B FF FE 91 */	bl WPADiRetrieveChannel
+/* 8036BB10 003350D0  4B FF FE 91 */	bl __wpadRetrieveChannel
 /* 8036BB14 003350D4  2C 03 00 00 */	cmpwi r3, 0
 /* 8036BB18 003350D8  7C 7C 1B 78 */	mr r28, r3
 /* 8036BB1C 003350DC  41 80 04 40 */	blt .L_8036BF5C
 /* 8036BB20 003350E0  3C 80 80 5E */	lis r4, lbl_805DEAE0@ha
 /* 8036BB24 003350E4  38 84 EA E0 */	addi r4, r4, lbl_805DEAE0@l
 /* 8036BB28 003350E8  7C 64 D9 AE */	stbx r3, r4, r27
-/* 8036BB2C 003350EC  4B FF ED 85 */	bl __ClearControlBlock
+/* 8036BB2C 003350EC  4B FF ED 85 */	bl __wpadClearControlBlock
 /* 8036BB30 003350F0  3C 80 80 5E */	lis r4, __rvl_p_wpadcb@ha
 /* 8036BB34 003350F4  57 80 10 3A */	slwi r0, r28, 2
 /* 8036BB38 003350F8  38 84 DA D0 */	addi r4, r4, __rvl_p_wpadcb@l
@@ -3258,11 +3270,11 @@
 .L_8036BBB0:
 /* 8036BBB0 00335170  9B 7D 08 C3 */	stb r27, 0x8c3(r29)
 /* 8036BBB4 00335174  39 40 00 01 */	li r10, 1
-/* 8036BBB8 00335178  3C C0 80 37 */	lis r6, firmwareCheckCallback@ha
+/* 8036BBB8 00335178  3C C0 80 37 */	lis r6, __wpadInitConnectionCallback@ha
 /* 8036BBBC 0033517C  39 20 00 00 */	li r9, 0
 /* 8036BBC0 00335180  91 5D 08 D8 */	stw r10, 0x8d8(r29)
 /* 8036BBC4 00335184  38 80 00 64 */	li r4, 0x64
-/* 8036BBC8 00335188  38 C6 B0 A0 */	addi r6, r6, firmwareCheckCallback@l
+/* 8036BBC8 00335188  38 C6 B0 A0 */	addi r6, r6, __wpadInitConnectionCallback@l
 /* 8036BBCC 0033518C  39 00 17 70 */	li r8, 0x1770
 /* 8036BBD0 00335190  91 3D 08 BC */	stw r9, 0x8bc(r29)
 /* 8036BBD4 00335194  38 E0 00 17 */	li r7, 0x17
@@ -3490,7 +3502,7 @@
 /* 8036BF18 003354D8  48 00 0D 49 */	bl WPADSetAutoSamplingBuf
 .L_8036BF1C:
 /* 8036BF1C 003354DC  7F C3 F3 78 */	mr r3, r30
-/* 8036BF20 003354E0  4B FF E9 91 */	bl __ClearControlBlock
+/* 8036BF20 003354E0  4B FF E9 91 */	bl __wpadClearControlBlock
 /* 8036BF24 003354E4  38 6D BB 28 */	addi r3, r13, lbl_80667CA8@sda21
 /* 8036BF28 003354E8  38 00 00 00 */	li r0, 0
 /* 8036BF2C 003354EC  7C 03 F1 AE */	stbx r0, r3, r30
@@ -3513,11 +3525,12 @@
 /* 8036BF68 00335528  7C 08 03 A6 */	mtlr r0
 /* 8036BF6C 0033552C  38 21 00 C0 */	addi r1, r1, 0xc0
 /* 8036BF70 00335530  4E 80 00 20 */	blr
-.endfn WPADiConnCallback
+.endfn __wpadConnectionCallback
 
 
+#WPADiRecvCallback
 .balign 16, 0
-.fn WPADiRecvCallback, global
+.fn __wpadReceiveCallback, global
 /* 8036BF80 00335540  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8036BF84 00335544  7C 08 02 A6 */	mflr r0
 /* 8036BF88 00335548  3C A0 80 5E */	lis r5, lbl_805DEAE0@ha
@@ -3539,7 +3552,7 @@
 /* 8036BFC4 00335584  7C 08 03 A6 */	mtlr r0
 /* 8036BFC8 00335588  38 21 00 10 */	addi r1, r1, 0x10
 /* 8036BFCC 0033558C  4E 80 00 20 */	blr 
-.endfn WPADiRecvCallback
+.endfn __wpadReceiveCallback
 
 .balign 16, 0
 .fn WPADGetAccGravityUnit, global
@@ -3601,8 +3614,9 @@
 /* 8036C0A0 00335660  4E 80 00 20 */	blr
 .endfn WPADGetAccGravityUnit
 
+#CloseCallback
 .balign 16, 0
-.fn CloseCallback, local
+.fn __wpadDisconnectCallback, local
 /* 8036C0B0 00335670  3C A0 80 5E */	lis r5, __rvl_p_wpadcb@ha
 /* 8036C0B4 00335674  2C 04 FF FF */	cmpwi r4, -1
 /* 8036C0B8 00335678  54 60 10 3A */	slwi r0, r3, 2
@@ -3612,7 +3626,7 @@
 /* 8036C0C8 00335688  88 63 08 C3 */	lbz r3, 0x8c3(r3)
 /* 8036C0CC 0033568C  4B F7 78 24 */	b BTA_HhClose
 /* 8036C0D0 00335690  4E 80 00 20 */	blr 
-.endfn CloseCallback
+.endfn __wpadDisconnectCallback
 
 .balign 16, 0
 .fn WPADDisconnect, global
@@ -3652,9 +3666,9 @@
 /* 8036C160 00335720  38 00 00 01 */	li r0, 1
 /* 8036C164 00335724  98 1F 09 86 */	stb r0, 0x986(r31)
 /* 8036C168 00335728  4B FE C8 89 */	bl OSRestoreInterrupts
-/* 8036C16C 0033572C  3C A0 80 37 */	lis r5, CloseCallback@ha
+/* 8036C16C 0033572C  3C A0 80 37 */	lis r5, __wpadDisconnectCallback@ha
 /* 8036C170 00335730  7F 83 E3 78 */	mr r3, r28
-/* 8036C174 00335734  38 A5 C0 B0 */	addi r5, r5, CloseCallback@l
+/* 8036C174 00335734  38 A5 C0 B0 */	addi r5, r5, __wpadDisconnectCallback@l
 /* 8036C178 00335738  38 80 00 00 */	li r4, 0
 /* 8036C17C 0033573C  48 00 07 55 */	bl WPADControlLed
 .L_8036C180:
@@ -3908,8 +3922,9 @@
 /* 8036C4F4 00335AB4  4E 80 00 20 */	blr
 .endfn WPADSetDataFormat
 
+#__infoCallback
 .balign 16, 0
-.fn __infoCallback, local
+.fn __wpadInfoCallback, local
 /* 8036C500 00335AC0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8036C504 00335AC4  7C 08 02 A6 */	mflr r0
 /* 8036C508 00335AC8  3C A0 80 5E */	lis r5, __rvl_p_wpadcb@ha
@@ -3932,7 +3947,7 @@
 /* 8036C548 00335B08  7C 08 03 A6 */	mtlr r0
 /* 8036C54C 00335B0C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8036C550 00335B10  4E 80 00 20 */	blr 
-.endfn __infoCallback
+.endfn __wpadInfoCallback
 
 .balign 16, 0
 .fn WPADGetInfoAsync, global
@@ -3973,8 +3988,8 @@
 /* 8036C5E0 00335BA0  39 80 00 15 */	li r12, 0x15
 /* 8036C5E4 00335BA4  81 21 00 10 */	lwz r9, 0x10(r1)
 /* 8036C5E8 00335BA8  98 01 00 0C */	stb r0, 0xc(r1)
-/* 8036C5EC 00335BAC  3D 60 80 37 */	lis r11, __infoCallback@ha
-/* 8036C5F0 00335BB0  39 6B C5 00 */	addi r11, r11, __infoCallback@l
+/* 8036C5EC 00335BAC  3D 60 80 37 */	lis r11, __wpadInfoCallback@ha
+/* 8036C5F0 00335BB0  39 6B C5 00 */	addi r11, r11, __wpadInfoCallback@l
 /* 8036C5F4 00335BB4  81 01 00 14 */	lwz r8, 0x14(r1)
 /* 8036C5F8 00335BB8  81 41 00 0C */	lwz r10, 0xc(r1)
 /* 8036C5FC 00335BBC  80 E1 00 18 */	lwz r7, 0x18(r1)
@@ -6269,8 +6284,9 @@
 /* 8036E74C 00337D0C  4E 80 00 20 */	blr 
 .endfn WPADSetSpeakerVolume
 
+#IsBusyStream
 .balign 16, 0
-.fn IsBusyStream, global
+.fn __wpadIsBusyStream, global
 /* 8036E750 00337D10  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8036E754 00337D14  7C 08 02 A6 */	mflr r0
 /* 8036E758 00337D18  90 01 00 34 */	stw r0, 0x34(r1)
@@ -6356,7 +6372,7 @@
 /* 8036E87C 00337E3C  7C 08 03 A6 */	mtlr r0
 /* 8036E880 00337E40  38 21 00 30 */	addi r1, r1, 0x30
 /* 8036E884 00337E44  4E 80 00 20 */	blr 
-.endfn IsBusyStream
+.endfn __wpadIsBusyStream
 
 .balign 16, 0
 .fn WPADCanSendStreamData, global
@@ -6380,7 +6396,7 @@
 /* 8036E8D4 00337E94  2C 1F 00 00 */	cmpwi r31, 0
 /* 8036E8D8 00337E98  41 82 00 14 */	beq .L_8036E8EC
 /* 8036E8DC 00337E9C  7F A3 EB 78 */	mr r3, r29
-/* 8036E8E0 00337EA0  4B FF FE 71 */	bl IsBusyStream
+/* 8036E8E0 00337EA0  4B FF FE 71 */	bl __wpadIsBusyStream
 /* 8036E8E4 00337EA4  2C 03 00 00 */	cmpwi r3, 0
 /* 8036E8E8 00337EA8  41 82 00 0C */	beq .L_8036E8F4
 .L_8036E8EC:
@@ -6427,7 +6443,7 @@
 /* 8036E97C 00337F3C  48 00 01 9C */	b .L_8036EB18
 .L_8036E980:
 /* 8036E980 00337F40  7F 43 D3 78 */	mr r3, r26
-/* 8036E984 00337F44  4B FF FD CD */	bl IsBusyStream
+/* 8036E984 00337F44  4B FF FD CD */	bl __wpadIsBusyStream
 /* 8036E988 00337F48  2C 03 00 00 */	cmpwi r3, 0
 /* 8036E98C 00337F4C  41 82 00 0C */	beq .L_8036E998
 /* 8036E990 00337F50  38 60 FF FE */	li r3, -2
@@ -6608,8 +6624,9 @@
 /* 8036EC14 003381D4  4E 80 00 20 */	blr
 .endfn WPADGetDpdFormat
 
+#__dpdCb
 .balign 16, 0
-.fn __dpdCb, local
+.fn __wpadDpdCallback, local
 /* 8036EC20 003381E0  3C 80 80 5E */	lis r4, __rvl_p_wpadcb@ha
 /* 8036EC24 003381E4  54 63 10 3A */	slwi r3, r3, 2
 /* 8036EC28 003381E8  38 84 DA D0 */	addi r4, r4, __rvl_p_wpadcb@l
@@ -6624,7 +6641,7 @@
 /* 8036EC4C 0033820C  54 00 0F FE */	srwi r0, r0, 0x1f
 /* 8036EC50 00338210  90 04 08 38 */	stw r0, 0x838(r4)
 /* 8036EC54 00338214  4E 80 00 20 */	blr 
-.endfn __dpdCb
+.endfn __wpadDpdCallback
 
 .balign 16, 0
 .fn WPADControlDpd, global
@@ -6764,8 +6781,8 @@
 /* 8036EE5C 0033841C  38 00 00 00 */	li r0, 0
 /* 8036EE60 00338420  3B 60 00 1A */	li r27, 0x1a
 /* 8036EE64 00338424  98 01 03 8C */	stb r0, 0x38c(r1)
-/* 8036EE68 00338428  3D 80 80 37 */	lis r12, __dpdCb@ha
-/* 8036EE6C 0033842C  39 8C EC 20 */	addi r12, r12, __dpdCb@l
+/* 8036EE68 00338428  3D 80 80 37 */	lis r12, __wpadDpdCallback@ha
+/* 8036EE6C 0033842C  39 8C EC 20 */	addi r12, r12, __wpadDpdCallback@l
 /* 8036EE70 00338430  81 41 03 90 */	lwz r10, 0x390(r1)
 /* 8036EE74 00338434  81 61 03 8C */	lwz r11, 0x38c(r1)
 /* 8036EE78 00338438  81 21 03 94 */	lwz r9, 0x394(r1)
@@ -7522,11 +7539,11 @@
 /* 8036F9CC 00338F8C  4B FE 90 25 */	bl OSRestoreInterrupts
 .L_8036F9D0:
 /* 8036F9D0 00338F90  3C 60 04 B0 */	lis r3, 0x04B00030@ha
-/* 8036F9D4 00338F94  3C C0 80 37 */	lis r6, __dpdCb@ha
+/* 8036F9D4 00338F94  3C C0 80 37 */	lis r6, __wpadDpdCallback@ha
 /* 8036F9D8 00338F98  39 23 00 30 */	addi r9, r3, 0x04B00030@l
 /* 8036F9DC 00338F9C  39 00 00 01 */	li r8, 1
 /* 8036F9E0 00338FA0  38 60 00 08 */	li r3, 8
-/* 8036F9E4 00338FA4  38 C6 EC 20 */	addi r6, r6, __dpdCb@l
+/* 8036F9E4 00338FA4  38 C6 EC 20 */	addi r6, r6, __wpadDpdCallback@l
 /* 8036F9E8 00338FA8  38 E0 00 16 */	li r7, 0x16
 /* 8036F9EC 00338FAC  38 00 00 15 */	li r0, 0x15
 /* 8036F9F0 00338FB0  98 61 00 09 */	stb r3, 9(r1)
@@ -8496,7 +8513,7 @@ lbl_80560690:
 
 .global lbl_805606B8
 lbl_805606B8:
-	.4byte func_80368E90
+	.4byte OnShutdown
 	.4byte 0x0000007F
 	.4byte 0
 	.4byte 0

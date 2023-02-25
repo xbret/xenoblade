@@ -133,8 +133,8 @@
 /* 80390B44 0035A104  7C 08 02 A6 */	mflr r0
 /* 80390B48 0035A108  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80390B4C 0035A10C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80390B50 0035A110  3F E0 80 5F */	lis r31, lbl_805EA1C8@ha
-/* 80390B54 0035A114  3B FF A1 C8 */	addi r31, r31, lbl_805EA1C8@l
+/* 80390B50 0035A110  3F E0 80 5F */	lis r31, gcg_ci_obj@ha
+/* 80390B54 0035A114  3B FF A1 C8 */	addi r31, r31, gcg_ci_obj@l
 /* 80390B58 0035A118  93 C1 00 08 */	stw r30, 8(r1)
 /* 80390B5C 0035A11C  3B C0 00 00 */	li r30, 0
 .L_80390B60:
@@ -1117,8 +1117,8 @@ lbl_805EA1B8:
 .global lbl_805EA1BC
 lbl_805EA1BC:
 	.skip 0xC
-.global lbl_805EA1C8
-lbl_805EA1C8:
+.global gcg_ci_obj
+gcg_ci_obj:
 	.skip 0xFA0
 .global lbl_805EB168
 lbl_805EB168:

@@ -4014,7 +4014,7 @@
 .endfn __dt__Q44nw4r3g3d8G3DState11IndMtxOpStdFv
 
 
-.fn sinit_803EB3B4, local
+.fn "__sinit_\g3d_state_cpp", local
 /* 803EB3B4 003B4974  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803EB3B8 003B4978  7C 08 02 A6 */	mflr r0
 /* 803EB3BC 003B497C  38 80 00 00 */	li r4, 0
@@ -4183,7 +4183,7 @@
 /* 803EB63C 003B4BFC  7C 08 03 A6 */	mtlr r0
 /* 803EB640 003B4C00  38 21 00 20 */	addi r1, r1, 0x20
 /* 803EB644 003B4C04  4E 80 00 20 */	blr
-.endfn sinit_803EB3B4
+.endfn "__sinit_\g3d_state_cpp"
 
 
 #__dt__Q54nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@10LightStateFv
@@ -4219,7 +4219,7 @@
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 
-.4byte sinit_803EB3B4
+.4byte "__sinit_\g3d_state_cpp"
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

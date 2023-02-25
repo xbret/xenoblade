@@ -34,7 +34,7 @@
 /* 803BD2E8 003868A8  4B EF CE 6D */	bl _savegpr_27
 /* 803BD2EC 003868AC  80 C3 20 A4 */	lwz r6, 0x20a4(r3)
 /* 803BD2F0 003868B0  3C 00 43 30 */	lis r0, 0x4330
-/* 803BD2F4 003868B4  3F E0 80 52 */	lis r31, lbl_8051FEE0@ha
+/* 803BD2F4 003868B4  3F E0 80 52 */	lis r31, SFD_tr_ad_adxt@ha
 /* 803BD2F8 003868B8  90 01 00 08 */	stw r0, 8(r1)
 /* 803BD2FC 003868BC  83 C6 00 00 */	lwz r30, 0(r6)
 /* 803BD300 003868C0  7C 7B 1B 78 */	mr r27, r3
@@ -42,7 +42,7 @@
 /* 803BD308 003868C8  7C 9C 23 78 */	mr r28, r4
 /* 803BD30C 003868CC  2C 1E 00 00 */	cmpwi r30, 0
 /* 803BD310 003868D0  7C BD 2B 78 */	mr r29, r5
-/* 803BD314 003868D4  3B FF FE E0 */	addi r31, r31, lbl_8051FEE0@l
+/* 803BD314 003868D4  3B FF FE E0 */	addi r31, r31, SFD_tr_ad_adxt@l
 /* 803BD318 003868D8  41 82 01 30 */	beq .L_803BD448
 /* 803BD31C 003868DC  2C 05 00 00 */	cmpwi r5, 0
 /* 803BD320 003868E0  40 82 00 0C */	bne .L_803BD32C
@@ -775,11 +775,11 @@
 .L_803BDD38:
 /* 803BDD38 003872F8  3B DC FF EE */	addi r30, r28, -18
 /* 803BDD3C 003872FC  3B 80 00 00 */	li r28, 0
-/* 803BDD40 00387300  3F A0 80 52 */	lis r29, lbl_8051FF18@ha
+/* 803BDD40 00387300  3F A0 80 52 */	lis r29, sfadxt_silence@ha
 /* 803BDD44 00387304  48 00 00 34 */	b .L_803BDD78
 .L_803BDD48:
 /* 803BDD48 00387308  7F 43 D3 78 */	mr r3, r26
-/* 803BDD4C 0038730C  38 9D FF 18 */	addi r4, r29, lbl_8051FF18@l
+/* 803BDD4C 0038730C  38 9D FF 18 */	addi r4, r29, sfadxt_silence@l
 /* 803BDD50 00387310  38 A0 00 12 */	li r5, 0x12
 /* 803BDD54 00387314  4B F0 0A D9 */	bl memcmp
 /* 803BDD58 00387318  2C 03 00 00 */	cmpwi r3, 0
@@ -860,8 +860,8 @@
 /* 803BDE54 00387414  2C 03 00 00 */	cmpwi r3, 0
 /* 803BDE58 00387418  7C 7C 1B 78 */	mr r28, r3
 /* 803BDE5C 0038741C  41 82 00 0C */	beq .L_803BDE68
-/* 803BDE60 00387420  3C 80 80 61 */	lis r4, lbl_8060A2BC@ha
-/* 803BDE64 00387424  90 64 A2 BC */	stw r3, lbl_8060A2BC@l(r4)
+/* 803BDE60 00387420  3C 80 80 61 */	lis r4, sfadxt_adxterr@ha
+/* 803BDE64 00387424  90 64 A2 BC */	stw r3, sfadxt_adxterr@l(r4)
 .L_803BDE68:
 /* 803BDE68 00387428  7F 23 CB 78 */	mr r3, r25
 /* 803BDE6C 0038742C  38 80 00 1A */	li r4, 0x1a
@@ -1287,9 +1287,9 @@
 /* 803BE460 00387A20  40 82 00 8C */	bne .L_803BE4EC
 /* 803BE464 00387A24  7F C3 F3 78 */	mr r3, r30
 /* 803BE468 00387A28  4B FC 4D 15 */	bl ADXT_GetStat
-/* 803BE46C 00387A2C  3C A0 80 61 */	lis r5, lbl_8060A2C0@ha
+/* 803BE46C 00387A2C  3C A0 80 61 */	lis r5, sfadxt_stat@ha
 /* 803BE470 00387A30  38 81 00 08 */	addi r4, r1, 8
-/* 803BE474 00387A34  90 65 A2 C0 */	stw r3, lbl_8060A2C0@l(r5)
+/* 803BE474 00387A34  90 65 A2 C0 */	stw r3, sfadxt_stat@l(r5)
 /* 803BE478 00387A38  7F C3 F3 78 */	mr r3, r30
 /* 803BE47C 00387A3C  38 A1 00 0C */	addi r5, r1, 0xc
 /* 803BE480 00387A40  4B FC 4E BD */	bl ADXT_GetTime
@@ -1619,8 +1619,8 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051FEE0
-lbl_8051FEE0:
+.global SFD_tr_ad_adxt
+SFD_tr_ad_adxt:
 	.4byte SFADXT_Init
 	.4byte SFADXT_Finish
 	.4byte SFADXT_ExecServer
@@ -1636,18 +1636,18 @@ lbl_8051FEE0:
 	.4byte SFADXT_AddRead
 	.4byte SFADXT_Seek
 	
-.global lbl_8051FF18
-lbl_8051FF18:
+.global sfadxt_silence
+sfadxt_silence:
 	.4byte 0
 	.4byte 0
 	.4byte 0
 	.4byte 0
 	.4byte 0
+
 	.4byte 0x44D8677D
-	.float 0.01 #0x3C23D70A
+	.float 0.01
 	.float 0.5
-	.4byte 0x43300000
-	.4byte 0x80000000
+	.8byte 0x4330000080000000
 	.asciz "(c)CRI"
 	.balign 4
 
@@ -1656,11 +1656,11 @@ lbl_8051FF18:
 .global sfadxt_para
 sfadxt_para:
 	.skip 0x1C
-.global lbl_8060A2BC
-lbl_8060A2BC:
+.global sfadxt_adxterr
+sfadxt_adxterr:
 	.skip 0x4
-.global lbl_8060A2C0
-lbl_8060A2C0:
+.global sfadxt_stat
+sfadxt_stat:
 	.skip 0x4
 .global lbl_8060A2C4
 lbl_8060A2C4:

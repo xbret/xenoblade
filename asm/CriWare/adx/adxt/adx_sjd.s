@@ -5,22 +5,22 @@
 .fn ADXSJD_Init, global
 /* 8037F9BC 00348F7C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8037F9C0 00348F80  7C 08 02 A6 */	mflr r0
-/* 8037F9C4 00348F84  3C 60 80 5E */	lis r3, lbl_805E69C0@ha
+/* 8037F9C4 00348F84  3C 60 80 5E */	lis r3, adxsjd_init_cnt@ha
 /* 8037F9C8 00348F88  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8037F9CC 00348F8C  80 03 69 C0 */	lwz r0, lbl_805E69C0@l(r3)
+/* 8037F9CC 00348F8C  80 03 69 C0 */	lwz r0, adxsjd_init_cnt@l(r3)
 /* 8037F9D0 00348F90  2C 00 00 00 */	cmpwi r0, 0
 /* 8037F9D4 00348F94  40 82 00 1C */	bne .L_8037F9F0
 /* 8037F9D8 00348F98  48 00 77 35 */	bl ADXB_Init
-/* 8037F9DC 00348F9C  3C 60 80 5E */	lis r3, lbl_805E69D8@ha
+/* 8037F9DC 00348F9C  3C 60 80 5E */	lis r3, adxsjd_obj@ha
 /* 8037F9E0 00348FA0  38 80 00 00 */	li r4, 0
-/* 8037F9E4 00348FA4  38 63 69 D8 */	addi r3, r3, lbl_805E69D8@l
+/* 8037F9E4 00348FA4  38 63 69 D8 */	addi r3, r3, adxsjd_obj@l
 /* 8037F9E8 00348FA8  38 A0 0B 40 */	li r5, 0xb40
 /* 8037F9EC 00348FAC  4B C8 49 65 */	bl memset
 .L_8037F9F0:
-/* 8037F9F0 00348FB0  3C 80 80 5E */	lis r4, lbl_805E69C0@ha
-/* 8037F9F4 00348FB4  80 64 69 C0 */	lwz r3, lbl_805E69C0@l(r4)
+/* 8037F9F0 00348FB0  3C 80 80 5E */	lis r4, adxsjd_init_cnt@ha
+/* 8037F9F4 00348FB4  80 64 69 C0 */	lwz r3, adxsjd_init_cnt@l(r4)
 /* 8037F9F8 00348FB8  38 03 00 01 */	addi r0, r3, 1
-/* 8037F9FC 00348FBC  90 04 69 C0 */	stw r0, lbl_805E69C0@l(r4)
+/* 8037F9FC 00348FBC  90 04 69 C0 */	stw r0, adxsjd_init_cnt@l(r4)
 /* 8037FA00 00348FC0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8037FA04 00348FC4  7C 08 03 A6 */	mtlr r0
 /* 8037FA08 00348FC8  38 21 00 10 */	addi r1, r1, 0x10
@@ -28,16 +28,16 @@
 .endfn ADXSJD_Init
 
 .fn ADXSJD_Finish, global
-/* 8037FA10 00348FD0  3C 80 80 5E */	lis r4, lbl_805E69C0@ha
-/* 8037FA14 00348FD4  80 64 69 C0 */	lwz r3, lbl_805E69C0@l(r4)
+/* 8037FA10 00348FD0  3C 80 80 5E */	lis r4, adxsjd_init_cnt@ha
+/* 8037FA14 00348FD4  80 64 69 C0 */	lwz r3, adxsjd_init_cnt@l(r4)
 /* 8037FA18 00348FD8  38 03 FF FF */	addi r0, r3, -1
-/* 8037FA1C 00348FDC  90 04 69 C0 */	stw r0, lbl_805E69C0@l(r4)
-/* 8037FA20 00348FE0  80 04 69 C0 */	lwz r0, lbl_805E69C0@l(r4)
+/* 8037FA1C 00348FDC  90 04 69 C0 */	stw r0, adxsjd_init_cnt@l(r4)
+/* 8037FA20 00348FE0  80 04 69 C0 */	lwz r0, adxsjd_init_cnt@l(r4)
 /* 8037FA24 00348FE4  2C 00 00 00 */	cmpwi r0, 0
 /* 8037FA28 00348FE8  4C 82 00 20 */	bnelr 
-/* 8037FA2C 00348FEC  3C 60 80 5E */	lis r3, lbl_805E69D8@ha
+/* 8037FA2C 00348FEC  3C 60 80 5E */	lis r3, adxsjd_obj@ha
 /* 8037FA30 00348FF0  38 80 00 00 */	li r4, 0
-/* 8037FA34 00348FF4  38 63 69 D8 */	addi r3, r3, lbl_805E69D8@l
+/* 8037FA34 00348FF4  38 63 69 D8 */	addi r3, r3, adxsjd_obj@l
 /* 8037FA38 00348FF8  38 A0 0B 40 */	li r5, 0xb40
 /* 8037FA3C 00348FFC  4B C8 49 14 */	b memset
 /* 8037FA40 00349000  4E 80 00 20 */	blr 
@@ -46,10 +46,10 @@
 .fn ADXSJD_Create, global
 /* 8037FA44 00349004  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8037FA48 00349008  7C 08 02 A6 */	mflr r0
-/* 8037FA4C 0034900C  3C C0 80 5E */	lis r6, lbl_805E69D8@ha
+/* 8037FA4C 0034900C  3C C0 80 5E */	lis r6, adxsjd_obj@ha
 /* 8037FA50 00349010  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8037FA54 00349014  38 00 00 02 */	li r0, 2
-/* 8037FA58 00349018  38 C6 69 D8 */	addi r6, r6, lbl_805E69D8@l
+/* 8037FA58 00349018  38 C6 69 D8 */	addi r6, r6, adxsjd_obj@l
 /* 8037FA5C 0034901C  BF 41 00 08 */	stmw r26, 8(r1)
 /* 8037FA60 00349020  7C 7C 1B 78 */	mr r28, r3
 /* 8037FA64 00349024  7C 9D 23 78 */	mr r29, r4
@@ -99,9 +99,9 @@
 /* 8037FB0C 003490CC  48 00 01 BC */	b .L_8037FCC8
 .L_8037FB10:
 /* 8037FB10 003490D0  1C 03 00 B4 */	mulli r0, r3, 0xb4
-/* 8037FB14 003490D4  3C 80 80 5E */	lis r4, lbl_805E69D8@ha
+/* 8037FB14 003490D4  3C 80 80 5E */	lis r4, adxsjd_obj@ha
 /* 8037FB18 003490D8  7F 43 D3 78 */	mr r3, r26
-/* 8037FB1C 003490DC  38 84 69 D8 */	addi r4, r4, lbl_805E69D8@l
+/* 8037FB1C 003490DC  38 84 69 D8 */	addi r4, r4, adxsjd_obj@l
 /* 8037FB20 003490E0  7F E4 02 14 */	add r31, r4, r0
 /* 8037FB24 003490E4  48 01 58 1D */	bl SJRBF_GetBufPtr
 /* 8037FB28 003490E8  7C 7B 1B 78 */	mr r27, r3
@@ -504,8 +504,8 @@
 /* 8038009C 0034965C  80 1F 00 E0 */	lwz r0, 0xe0(r31)
 /* 803800A0 00349660  2C 00 00 00 */	cmpwi r0, 0
 /* 803800A4 00349664  41 82 00 24 */	beq .L_803800C8
-/* 803800A8 00349668  3C 60 80 5E */	lis r3, lbl_805E69D4@ha
-/* 803800AC 0034966C  81 83 69 D4 */	lwz r12, lbl_805E69D4@l(r3)
+/* 803800A8 00349668  3C 60 80 5E */	lis r3, pl2setsfreqfunc@ha
+/* 803800AC 0034966C  81 83 69 D4 */	lwz r12, pl2setsfreqfunc@l(r3)
 /* 803800B0 00349670  2C 0C 00 00 */	cmpwi r12, 0
 /* 803800B4 00349674  41 82 00 14 */	beq .L_803800C8
 /* 803800B8 00349678  7F E3 FB 78 */	mr r3, r31
@@ -1261,8 +1261,8 @@
 /* 80380B54 0034A114  7C 08 02 A6 */	mflr r0
 /* 80380B58 0034A118  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80380B5C 0034A11C  BF 61 00 0C */	stmw r27, 0xc(r1)
-/* 80380B60 0034A120  3F A0 80 5E */	lis r29, lbl_805E69C0@ha
-/* 80380B64 0034A124  3B BD 69 C0 */	addi r29, r29, lbl_805E69C0@l
+/* 80380B60 0034A120  3F A0 80 5E */	lis r29, adxsjd_init_cnt@ha
+/* 80380B64 0034A124  3B BD 69 C0 */	addi r29, r29, adxsjd_init_cnt@l
 /* 80380B68 0034A128  81 9D 00 04 */	lwz r12, 4(r29)
 /* 80380B6C 0034A12C  2C 0C 00 00 */	cmpwi r12, 0
 /* 80380B70 0034A130  41 82 00 10 */	beq .L_80380B80
@@ -1561,12 +1561,12 @@ adx_sjd_strpool:
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805E69C0
-lbl_805E69C0:
+.global adxsjd_init_cnt
+adxsjd_init_cnt:
 	.skip 0x14
-.global lbl_805E69D4
-lbl_805E69D4:
+.global pl2setsfreqfunc
+pl2setsfreqfunc:
 	.skip 0x4
-.global lbl_805E69D8
-lbl_805E69D8:
+.global adxsjd_obj
+adxsjd_obj:
 	.skip 0xB40

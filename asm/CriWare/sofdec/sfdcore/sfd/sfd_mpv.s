@@ -190,8 +190,8 @@
 .L_803C3100:
 /* 803C3100 0038C6C0  48 00 4A B1 */	bl SFMPVF_InitPool
 /* 803C3104 0038C6C4  38 00 00 00 */	li r0, 0
-/* 803C3108 0038C6C8  3C 60 80 62 */	lis r3, lbl_8061CD50@ha
-/* 803C310C 0038C6CC  90 03 CD 50 */	stw r0, lbl_8061CD50@l(r3)
+/* 803C3108 0038C6C8  3C 60 80 62 */	lis r3, sfmpv_discard_wsiz@ha
+/* 803C310C 0038C6CC  90 03 CD 50 */	stw r0, sfmpv_discard_wsiz@l(r3)
 /* 803C3110 0038C6D0  38 60 00 00 */	li r3, 0
 .L_803C3114:
 /* 803C3114 0038C6D4  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -1613,8 +1613,8 @@
 /* 803C44A0 0038DA60  48 00 00 94 */	b .L_803C4534
 .L_803C44A4:
 /* 803C44A4 0038DA64  80 9E 00 00 */	lwz r4, 0(r30)
-/* 803C44A8 0038DA68  3C 60 80 52 */	lis r3, lbl_8051FEE0@ha
-/* 803C44AC 0038DA6C  38 63 FE E0 */	addi r3, r3, lbl_8051FEE0@l
+/* 803C44A8 0038DA68  3C 60 80 52 */	lis r3, SFD_tr_ad_adxt@ha
+/* 803C44AC 0038DA6C  38 63 FE E0 */	addi r3, r3, SFD_tr_ad_adxt@l
 /* 803C44B0 0038DA70  80 04 00 0C */	lwz r0, 0xc(r4)
 /* 803C44B4 0038DA74  7C 00 18 40 */	cmplw r0, r3
 /* 803C44B8 0038DA78  41 82 00 1C */	beq .L_803C44D4
@@ -2211,9 +2211,9 @@
 .fn sfmpv_ComplementPts, global
 /* 803C4D4C 0038E30C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803C4D50 0038E310  7C 08 02 A6 */	mflr r0
-/* 803C4D54 0038E314  3D 60 80 52 */	lis r11, lbl_805205D8@ha
+/* 803C4D54 0038E314  3D 60 80 52 */	lis r11, SFTIM_prate@ha
 /* 803C4D58 0038E318  90 01 00 34 */	stw r0, 0x34(r1)
-/* 803C4D5C 0038E31C  39 6B 05 D8 */	addi r11, r11, lbl_805205D8@l
+/* 803C4D5C 0038E31C  39 6B 05 D8 */	addi r11, r11, SFTIM_prate@l
 /* 803C4D60 0038E320  BE E1 00 0C */	stmw r23, 0xc(r1)
 /* 803C4D64 0038E324  3B E0 00 00 */	li r31, 0
 /* 803C4D68 0038E328  6F EA 80 00 */	xoris r10, r31, 0x8000
@@ -2888,13 +2888,13 @@
 .fn sfmpv_Pts2Tc, global
 /* 803C5724 0038ECE4  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803C5728 0038ECE8  7C 08 02 A6 */	mflr r0
-/* 803C572C 0038ECEC  3D 20 80 52 */	lis r9, lbl_805205D8@ha
+/* 803C572C 0038ECEC  3D 20 80 52 */	lis r9, SFTIM_prate@ha
 /* 803C5730 0038ECF0  90 01 00 34 */	stw r0, 0x34(r1)
 /* 803C5734 0038ECF4  54 A0 10 3A */	slwi r0, r5, 2
-/* 803C5738 0038ECF8  39 29 05 D8 */	addi r9, r9, lbl_805205D8@l
+/* 803C5738 0038ECF8  39 29 05 D8 */	addi r9, r9, SFTIM_prate@l
 /* 803C573C 0038ECFC  BF 21 00 14 */	stmw r25, 0x14(r1)
-/* 803C5740 0038ED00  3F A0 80 52 */	lis r29, lbl_80520320@ha
-/* 803C5744 0038ED04  3B BD 03 20 */	addi r29, r29, lbl_80520320@l
+/* 803C5740 0038ED00  3F A0 80 52 */	lis r29, SFD_tr_vd_mpv@ha
+/* 803C5744 0038ED04  3B BD 03 20 */	addi r29, r29, SFD_tr_vd_mpv@l
 /* 803C5748 0038ED08  7C FB 3B 78 */	mr r27, r7
 /* 803C574C 0038ED0C  38 FD 00 38 */	addi r7, r29, 0x38
 /* 803C5750 0038ED10  7F 89 00 2E */	lwzx r28, r9, r0
@@ -3015,8 +3015,8 @@
 
 .fn sfmpv_NextTc, global
 /* 803C58FC 0038EEBC  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 803C5900 0038EEC0  3D 20 80 52 */	lis r9, lbl_80520358@ha
-/* 803C5904 0038EEC4  39 29 03 58 */	addi r9, r9, lbl_80520358@l
+/* 803C5900 0038EEC0  3D 20 80 52 */	lis r9, sfmpv_fps_round@ha
+/* 803C5904 0038EEC4  39 29 03 58 */	addi r9, r9, sfmpv_fps_round@l
 /* 803C5908 0038EEC8  3C C0 88 89 */	lis r6, 0x88888889@ha
 /* 803C590C 0038EECC  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 803C5910 0038EED0  3B E6 88 89 */	addi r31, r6, 0x88888889@l
@@ -5507,8 +5507,8 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_80520320
-lbl_80520320:
+.global SFD_tr_vd_mpv
+SFD_tr_vd_mpv:
 	.4byte SFMPV_Init
 	.4byte SFMPV_Finish
 	.4byte SFMPV_ExecServer
@@ -5525,8 +5525,8 @@ lbl_80520320:
 	.4byte SFMPV_Seek
 
 
-.global lbl_80520358
-lbl_80520358:
+.global sfmpv_fps_round
+sfmpv_fps_round:
 	.4byte 0
 	.4byte 0x00000018
 	.4byte 0x00000018
@@ -5537,6 +5537,8 @@ lbl_80520358:
 	.4byte 0x0000003C
 	.4byte 0x0000003C
 	.4byte 0
+
+sfmpv_conv_29_97:
 	.4byte 0x0001A574
 	.4byte 0x0000463E
 	.4byte 0x00000708
@@ -5545,6 +5547,8 @@ lbl_80520358:
 	.4byte 0x0000001E
 	.4byte 0x0000000A
 	.4byte 0x00000002
+
+sfmpv_conv_59_94:
 	.4byte 0x00034AE8
 	.4byte 0x00008C7C
 	.4byte 0x00000E10
@@ -5570,6 +5574,8 @@ sfd_mpv_strpool:
 .global sfmpv_work
 sfmpv_work:
 	.skip 0x12020
-.global lbl_8061CD50
-lbl_8061CD50:
-	.skip 0x8
+.global sfmpv_discard_wsiz
+sfmpv_discard_wsiz:
+	.skip 0x4
+
+.skip 0x4

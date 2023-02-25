@@ -6,9 +6,9 @@
 #here be dragons
 
 .fn MPVABDEC_Init, global
-/* 803AEFF8 003785B8  3C 80 80 52 */	lis r4, lbl_8051F8F0@ha
+/* 803AEFF8 003785B8  3C 80 80 52 */	lis r4, mpvabdec_funcs_isr@ha
 /* 803AEFFC 003785BC  3C 60 80 60 */	lis r3, lbl_80607B68@ha
-/* 803AF000 003785C0  38 84 F8 F0 */	addi r4, r4, lbl_8051F8F0@l
+/* 803AF000 003785C0  38 84 F8 F0 */	addi r4, r4, mpvabdec_funcs_isr@l
 /* 803AF004 003785C4  38 63 7B 68 */	addi r3, r3, lbl_80607B68@l
 /* 803AF008 003785C8  90 83 00 08 */	stw r4, 8(r3)
 /* 803AF00C 003785CC  4E 80 00 20 */	blr 
@@ -11326,8 +11326,8 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051F8F0
-lbl_8051F8F0:
+.global mpvabdec_funcs_isr
+mpvabdec_funcs_isr:
 	.4byte mpvabdec_IntraBlock_Isr
 	.4byte mpvabdec_IntraBlockDc11_Isr
 	.4byte mpvabdec_NintraBlock_Isr

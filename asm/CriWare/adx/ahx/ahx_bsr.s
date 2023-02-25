@@ -336,11 +336,11 @@
 /* 8038D7A8 00356D68  48 00 00 34 */	b .L_8038D7DC
 .L_8038D7AC:
 /* 8038D7AC 00356D6C  80 1E 00 10 */	lwz r0, 0x10(r30)
-/* 8038D7B0 00356D70  3C 60 80 52 */	lis r3, lbl_8051AC10@ha
+/* 8038D7B0 00356D70  3C 60 80 52 */	lis r3, ahxbsr_maxi_val@ha
 /* 8038D7B4 00356D74  57 E4 10 3A */	slwi r4, r31, 2
 /* 8038D7B8 00356D78  80 DE 00 08 */	lwz r6, 8(r30)
 /* 8038D7BC 00356D7C  7C BF 28 50 */	subf r5, r31, r5
-/* 8038D7C0 00356D80  38 63 AC 10 */	addi r3, r3, lbl_8051AC10@l
+/* 8038D7C0 00356D80  38 63 AC 10 */	addi r3, r3, ahxbsr_maxi_val@l
 /* 8038D7C4 00356D84  7C 00 FA 14 */	add r0, r0, r31
 /* 8038D7C8 00356D88  7C 63 20 2E */	lwzx r3, r3, r4
 /* 8038D7CC 00356D8C  7C C6 2E 30 */	sraw r6, r6, r5
@@ -498,8 +498,8 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051AC10
-lbl_8051AC10:
+.global ahxbsr_maxi_val
+ahxbsr_maxi_val:
 	.4byte 0
 	.4byte 0x00000001
 	.4byte 0x00000003

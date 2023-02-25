@@ -9,10 +9,10 @@
 /* 803D5DD0 0039F390  38 A0 02 6C */	li r5, 0x26c
 /* 803D5DD4 0039F394  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803D5DD8 0039F398  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 803D5DDC 0039F39C  3F E0 80 62 */	lis r31, lbl_8061D498@ha
-/* 803D5DE0 0039F3A0  38 7F D4 98 */	addi r3, r31, lbl_8061D498@l
+/* 803D5DDC 0039F39C  3F E0 80 62 */	lis r31, sfxz_work@ha
+/* 803D5DE0 0039F3A0  38 7F D4 98 */	addi r3, r31, sfxz_work@l
 /* 803D5DE4 0039F3A4  4B C2 E5 6D */	bl memset
-/* 803D5DE8 0039F3A8  38 7F D4 98 */	addi r3, r31, lbl_8061D498@l
+/* 803D5DE8 0039F3A8  38 7F D4 98 */	addi r3, r31, sfxz_work@l
 /* 803D5DEC 0039F3AC  38 80 00 08 */	li r4, 8
 /* 803D5DF0 0039F3B0  38 00 00 00 */	li r0, 0
 /* 803D5DF4 0039F3B4  90 83 00 08 */	stw r4, 8(r3)
@@ -25,8 +25,8 @@
 .endfn SFXZ_Init
 
 .fn SFXZ_Create, global
-/* 803D5E10 0039F3D0  3C 60 80 62 */	lis r3, lbl_8061D498@ha
-/* 803D5E14 0039F3D4  38 63 D4 98 */	addi r3, r3, lbl_8061D498@l
+/* 803D5E10 0039F3D0  3C 60 80 62 */	lis r3, sfxz_work@ha
+/* 803D5E14 0039F3D4  38 63 D4 98 */	addi r3, r3, sfxz_work@l
 /* 803D5E18 0039F3D8  80 03 00 08 */	lwz r0, 8(r3)
 /* 803D5E1C 0039F3DC  38 63 00 0C */	addi r3, r3, 0xc
 /* 803D5E20 0039F3E0  7C 09 03 A6 */	mtctr r0
@@ -48,16 +48,16 @@
 /* 803D5E50 0039F410  3C A0 80 52 */	lis r5, lbl_80520B30@ha
 /* 803D5E54 0039F414  38 80 00 00 */	li r4, 0
 /* 803D5E58 0039F418  C0 05 0B 30 */	lfs f0, lbl_80520B30@l(r5)
-/* 803D5E5C 0039F41C  3C A0 80 62 */	lis r5, lbl_8061D498@ha
+/* 803D5E5C 0039F41C  3C A0 80 62 */	lis r5, sfxz_work@ha
 /* 803D5E60 0039F420  38 00 00 01 */	li r0, 1
 /* 803D5E64 0039F424  D0 03 00 3C */	stfs f0, 0x3c(r3)
 /* 803D5E68 0039F428  D0 03 00 40 */	stfs f0, 0x40(r3)
 /* 803D5E6C 0039F42C  90 83 00 44 */	stw r4, 0x44(r3)
 /* 803D5E70 0039F430  90 83 00 48 */	stw r4, 0x48(r3)
 /* 803D5E74 0039F434  90 83 00 04 */	stw r4, 4(r3)
-/* 803D5E78 0039F438  80 85 D4 98 */	lwz r4, lbl_8061D498@l(r5)
+/* 803D5E78 0039F438  80 85 D4 98 */	lwz r4, sfxz_work@l(r5)
 /* 803D5E7C 0039F43C  38 84 00 01 */	addi r4, r4, 1
-/* 803D5E80 0039F440  90 85 D4 98 */	stw r4, lbl_8061D498@l(r5)
+/* 803D5E80 0039F440  90 85 D4 98 */	stw r4, sfxz_work@l(r5)
 /* 803D5E84 0039F444  90 03 00 00 */	stw r0, 0(r3)
 /* 803D5E88 0039F448  4E 80 00 20 */	blr 
 .endfn SFXZ_Create
@@ -66,11 +66,11 @@
 /* 803D5E8C 0039F44C  2C 03 00 00 */	cmpwi r3, 0
 /* 803D5E90 0039F450  4D 82 00 20 */	beqlr 
 /* 803D5E94 0039F454  38 00 00 00 */	li r0, 0
-/* 803D5E98 0039F458  3C 80 80 62 */	lis r4, lbl_8061D498@ha
+/* 803D5E98 0039F458  3C 80 80 62 */	lis r4, sfxz_work@ha
 /* 803D5E9C 0039F45C  90 03 00 00 */	stw r0, 0(r3)
-/* 803D5EA0 0039F460  80 64 D4 98 */	lwz r3, lbl_8061D498@l(r4)
+/* 803D5EA0 0039F460  80 64 D4 98 */	lwz r3, sfxz_work@l(r4)
 /* 803D5EA4 0039F464  38 03 FF FF */	addi r0, r3, -1
-/* 803D5EA8 0039F468  90 04 D4 98 */	stw r0, lbl_8061D498@l(r4)
+/* 803D5EA8 0039F468  90 04 D4 98 */	stw r0, sfxz_work@l(r4)
 /* 803D5EAC 0039F46C  4E 80 00 20 */	blr 
 .endfn SFXZ_Destroy
 
@@ -987,8 +987,8 @@
 
 .fn sfxzmv_MakeZ16TblFromOrgZ32, global
 /* 803D6C24 003A01E4  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 803D6C28 003A01E8  3C C0 80 62 */	lis r6, lbl_8061D498@ha
-/* 803D6C2C 003A01EC  38 C6 D4 98 */	addi r6, r6, lbl_8061D498@l
+/* 803D6C28 003A01E8  3C C0 80 62 */	lis r6, sfxz_work@ha
+/* 803D6C2C 003A01EC  38 C6 D4 98 */	addi r6, r6, sfxz_work@l
 /* 803D6C30 003A01F0  3C E0 80 52 */	lis r7, lbl_80520B30@ha
 /* 803D6C34 003A01F4  80 06 00 04 */	lwz r0, 4(r6)
 /* 803D6C38 003A01F8  38 E7 0B 30 */	addi r7, r7, lbl_80520B30@l
@@ -1130,9 +1130,9 @@
 /* 803D6E34 003A03F4  F3 61 00 38 */	psq_st f27, 56(r1), 0, qr0
 /* 803D6E38 003A03F8  39 61 00 30 */	addi r11, r1, 0x30
 /* 803D6E3C 003A03FC  4B EE 33 19 */	bl _savegpr_27
-/* 803D6E40 003A0400  3C C0 80 62 */	lis r6, lbl_8061D498@ha
+/* 803D6E40 003A0400  3C C0 80 62 */	lis r6, sfxz_work@ha
 /* 803D6E44 003A0404  3C E0 80 52 */	lis r7, lbl_80520B30@ha
-/* 803D6E48 003A0408  38 C6 D4 98 */	addi r6, r6, lbl_8061D498@l
+/* 803D6E48 003A0408  38 C6 D4 98 */	addi r6, r6, sfxz_work@l
 /* 803D6E4C 003A040C  C0 63 00 3C */	lfs f3, 0x3c(r3)
 /* 803D6E50 003A0410  80 06 00 04 */	lwz r0, 4(r6)
 /* 803D6E54 003A0414  38 E7 0B 30 */	addi r7, r7, lbl_80520B30@l
@@ -1304,6 +1304,6 @@ sfx_zmv_strpool:
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_8061D498
-lbl_8061D498:
+.global sfxz_work
+sfxz_work:
 	.skip 0x270

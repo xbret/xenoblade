@@ -35,8 +35,8 @@
 /* 8038C3D4 00355994  7C C4 33 78 */	mr r4, r6
 /* 8038C3D8 00355998  4B FF E5 D9 */	bl ahxsbf_mult_flt_ex
 /* 8038C3DC 0035599C  80 9F 00 04 */	lwz r4, 4(r31)
-/* 8038C3E0 003559A0  3C 60 80 56 */	lis r3, lbl_805657B8@ha
-/* 8038C3E4 003559A4  38 63 57 B8 */	addi r3, r3, lbl_805657B8@l
+/* 8038C3E0 003559A0  3C 60 80 56 */	lis r3, pfn_ahxsbf_mult_float_win@ha
+/* 8038C3E4 003559A4  38 63 57 B8 */	addi r3, r3, pfn_ahxsbf_mult_float_win@l
 /* 8038C3E8 003559A8  7F A5 EB 78 */	mr r5, r29
 /* 8038C3EC 003559AC  7C 80 36 70 */	srawi r0, r4, 6
 /* 8038C3F0 003559B0  54 86 10 3A */	slwi r6, r4, 2
@@ -59,8 +59,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_805657B8
-lbl_805657B8:
+#unconfirmed name
+.global pfn_ahxsbf_mult_float_win
+pfn_ahxsbf_mult_float_win:
 	.4byte ahxsbf_mult_float_win0
 	.4byte ahxsbf_mult_float_win1
 	.4byte ahxsbf_mult_float_win2

@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-#OnShutdown
-.fn func_80363F30, global
+.fn OnShutdown, local
 /* 80363F30 0032D4F0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80363F34 0032D4F4  7C 08 02 A6 */	mflr r0
 /* 80363F38 0032D4F8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -117,7 +116,7 @@
 /* 803640BC 0032D67C  7C 08 03 A6 */	mtlr r0
 /* 803640C0 0032D680  38 21 00 20 */	addi r1, r1, 0x20
 /* 803640C4 0032D684  4E 80 00 20 */	blr
-.endfn func_80363F30
+.endfn OnShutdown
 
 .balign 16, 0
 .fn __VIRetraceHandler, global
@@ -386,20 +385,20 @@
 /* 8036447C 0032DA3C  48 00 00 20 */	b .L_8036449C
 .L_80364480:
 /* 80364480 0032DA40  38 00 75 30 */	li r0, 0x7530
-/* 80364484 0032DA44  90 0D BA 2C */	stw r0, lbl_80667BAC@sda21(r13)
+/* 80364484 0032DA44  90 0D BA 2C */	stw r0, NEW_TIME_TO_DIMMING@sda21(r13)
 /* 80364488 0032DA48  48 00 00 1C */	b .L_803644A4
 .L_8036448C:
 /* 8036448C 0032DA4C  3C 60 00 01 */	lis r3, 0x0000AFC8@ha
 /* 80364490 0032DA50  38 03 AF C8 */	addi r0, r3, 0x0000AFC8@l
-/* 80364494 0032DA54  90 0D BA 2C */	stw r0, lbl_80667BAC@sda21(r13)
+/* 80364494 0032DA54  90 0D BA 2C */	stw r0, NEW_TIME_TO_DIMMING@sda21(r13)
 /* 80364498 0032DA58  48 00 00 0C */	b .L_803644A4
 .L_8036449C:
 /* 8036449C 0032DA5C  38 00 3A 98 */	li r0, 0x3a98
-/* 803644A0 0032DA60  90 0D BA 2C */	stw r0, lbl_80667BAC@sda21(r13)
+/* 803644A0 0032DA60  90 0D BA 2C */	stw r0, NEW_TIME_TO_DIMMING@sda21(r13)
 .L_803644A4:
 /* 803644A4 0032DA64  3C 60 00 01 */	lis r3, 0x00015F90@ha
 /* 803644A8 0032DA68  38 03 5F 90 */	addi r0, r3, 0x00015F90@l
-/* 803644AC 0032DA6C  90 0D BA 30 */	stw r0, lbl_80667BB0@sda21(r13)
+/* 803644AC 0032DA6C  90 0D BA 30 */	stw r0, THD_TIME_TO_DVD_STOP@sda21(r13)
 /* 803644B0 0032DA70  48 00 00 50 */	b .L_80364500
 .L_803644B4:
 /* 803644B4 0032DA74  80 0D BA B0 */	lwz r0, lbl_80667C30@sda21(r13)
@@ -411,24 +410,24 @@
 .L_803644CC:
 /* 803644CC 0032DA8C  3C 60 00 01 */	lis r3, 0x00008CA0@ha
 /* 803644D0 0032DA90  38 03 8C A0 */	addi r0, r3, 0x00008CA0@l
-/* 803644D4 0032DA94  90 0D BA 2C */	stw r0, lbl_80667BAC@sda21(r13)
+/* 803644D4 0032DA94  90 0D BA 2C */	stw r0, NEW_TIME_TO_DIMMING@sda21(r13)
 /* 803644D8 0032DA98  48 00 00 1C */	b .L_803644F4
 .L_803644DC:
 /* 803644DC 0032DA9C  3C 60 00 01 */	lis r3, 0x0000D2F0@ha
 /* 803644E0 0032DAA0  38 03 D2 F0 */	addi r0, r3, 0x0000D2F0@l
-/* 803644E4 0032DAA4  90 0D BA 2C */	stw r0, lbl_80667BAC@sda21(r13)
+/* 803644E4 0032DAA4  90 0D BA 2C */	stw r0, NEW_TIME_TO_DIMMING@sda21(r13)
 /* 803644E8 0032DAA8  48 00 00 0C */	b .L_803644F4
 .L_803644EC:
 /* 803644EC 0032DAAC  38 00 46 50 */	li r0, 0x4650
-/* 803644F0 0032DAB0  90 0D BA 2C */	stw r0, lbl_80667BAC@sda21(r13)
+/* 803644F0 0032DAB0  90 0D BA 2C */	stw r0, NEW_TIME_TO_DIMMING@sda21(r13)
 .L_803644F4:
 /* 803644F4 0032DAB4  3C 60 00 02 */	lis r3, 0x0001A5E0@ha
 /* 803644F8 0032DAB8  38 03 A5 E0 */	addi r0, r3, 0x0001A5E0@l
-/* 803644FC 0032DABC  90 0D BA 30 */	stw r0, lbl_80667BB0@sda21(r13)
+/* 803644FC 0032DABC  90 0D BA 30 */	stw r0, THD_TIME_TO_DVD_STOP@sda21(r13)
 .L_80364500:
 /* 80364500 0032DAC0  38 00 00 00 */	li r0, 0
-/* 80364504 0032DAC4  90 0D BA 34 */	stw r0, lbl_80667BB4@sda21(r13)
-/* 80364508 0032DAC8  90 0D BA 38 */	stw r0, lbl_80667BB8@sda21(r13)
+/* 80364504 0032DAC4  90 0D BA 34 */	stw r0, _gIdleCount_dimming@sda21(r13)
+/* 80364508 0032DAC8  90 0D BA 38 */	stw r0, _gIdleCount_dvd@sda21(r13)
 .L_8036450C:
 /* 8036450C 0032DACC  80 0D BA BC */	lwz r0, lbl_80667C3C@sda21(r13)
 /* 80364510 0032DAD0  93 AD 9B 8C */	stw r29, lbl_80665D0C@sda21(r13)
@@ -529,7 +528,7 @@
 /* 8036464C 0032DC0C  40 82 00 10 */	bne .L_8036465C
 /* 80364650 0032DC10  38 00 00 00 */	li r0, 0
 /* 80364654 0032DC14  90 0D BA 24 */	stw r0, lbl_80667BA4@sda21(r13)
-/* 80364658 0032DC18  90 0D BA 34 */	stw r0, lbl_80667BB4@sda21(r13)
+/* 80364658 0032DC18  90 0D BA 34 */	stw r0, _gIdleCount_dimming@sda21(r13)
 .L_8036465C:
 /* 8036465C 0032DC1C  38 00 00 0A */	li r0, 0xa
 /* 80364660 0032DC20  38 7E 01 48 */	addi r3, r30, 0x148
@@ -557,44 +556,44 @@
 /* 803646AC 0032DC6C  80 0D BA B8 */	lwz r0, lbl_80667C38@sda21(r13)
 /* 803646B0 0032DC70  2C 00 00 01 */	cmpwi r0, 1
 /* 803646B4 0032DC74  40 82 00 20 */	bne .L_803646D4
-/* 803646B8 0032DC78  80 6D BA 34 */	lwz r3, lbl_80667BB4@sda21(r13)
+/* 803646B8 0032DC78  80 6D BA 34 */	lwz r3, _gIdleCount_dimming@sda21(r13)
 /* 803646BC 0032DC7C  38 00 FF FF */	li r0, -1
 /* 803646C0 0032DC80  7C 03 00 40 */	cmplw r3, r0
 /* 803646C4 0032DC84  40 80 00 10 */	bge .L_803646D4
-/* 803646C8 0032DC88  80 6D BA 34 */	lwz r3, lbl_80667BB4@sda21(r13)
+/* 803646C8 0032DC88  80 6D BA 34 */	lwz r3, _gIdleCount_dimming@sda21(r13)
 /* 803646CC 0032DC8C  38 03 00 01 */	addi r0, r3, 1
-/* 803646D0 0032DC90  90 0D BA 34 */	stw r0, lbl_80667BB4@sda21(r13)
+/* 803646D0 0032DC90  90 0D BA 34 */	stw r0, _gIdleCount_dimming@sda21(r13)
 .L_803646D4:
 /* 803646D4 0032DC94  80 0D BA B4 */	lwz r0, lbl_80667C34@sda21(r13)
 /* 803646D8 0032DC98  2C 00 00 01 */	cmpwi r0, 1
 /* 803646DC 0032DC9C  40 82 00 64 */	bne .L_80364740
-/* 803646E0 0032DCA0  80 6D BA 38 */	lwz r3, lbl_80667BB8@sda21(r13)
+/* 803646E0 0032DCA0  80 6D BA 38 */	lwz r3, _gIdleCount_dvd@sda21(r13)
 /* 803646E4 0032DCA4  38 00 FF FF */	li r0, -1
 /* 803646E8 0032DCA8  7C 03 00 40 */	cmplw r3, r0
 /* 803646EC 0032DCAC  40 80 00 54 */	bge .L_80364740
-/* 803646F0 0032DCB0  80 6D BA 38 */	lwz r3, lbl_80667BB8@sda21(r13)
+/* 803646F0 0032DCB0  80 6D BA 38 */	lwz r3, _gIdleCount_dvd@sda21(r13)
 /* 803646F4 0032DCB4  38 03 00 01 */	addi r0, r3, 1
-/* 803646F8 0032DCB8  90 0D BA 38 */	stw r0, lbl_80667BB8@sda21(r13)
+/* 803646F8 0032DCB8  90 0D BA 38 */	stw r0, _gIdleCount_dvd@sda21(r13)
 /* 803646FC 0032DCBC  48 00 00 44 */	b .L_80364740
 .L_80364700:
-/* 80364700 0032DCC0  80 6D BA 34 */	lwz r3, lbl_80667BB4@sda21(r13)
-/* 80364704 0032DCC4  80 0D BA 28 */	lwz r0, lbl_80667BA8@sda21(r13)
+/* 80364700 0032DCC0  80 6D BA 34 */	lwz r3, _gIdleCount_dimming@sda21(r13)
+/* 80364704 0032DCC4  80 0D BA 28 */	lwz r0, THD_TIME_TO_DIMMING@sda21(r13)
 /* 80364708 0032DCC8  7C 03 00 40 */	cmplw r3, r0
 /* 8036470C 0032DCCC  41 80 00 0C */	blt .L_80364718
 /* 80364710 0032DCD0  38 00 00 01 */	li r0, 1
 /* 80364714 0032DCD4  90 0D BA 78 */	stw r0, lbl_80667BF8@sda21(r13)
 .L_80364718:
-/* 80364718 0032DCD8  80 6D BA 38 */	lwz r3, lbl_80667BB8@sda21(r13)
-/* 8036471C 0032DCDC  80 0D BA 30 */	lwz r0, lbl_80667BB0@sda21(r13)
+/* 80364718 0032DCD8  80 6D BA 38 */	lwz r3, _gIdleCount_dvd@sda21(r13)
+/* 8036471C 0032DCDC  80 0D BA 30 */	lwz r0, THD_TIME_TO_DVD_STOP@sda21(r13)
 /* 80364720 0032DCE0  7C 03 00 40 */	cmplw r3, r0
 /* 80364724 0032DCE4  41 80 00 08 */	blt .L_8036472C
 /* 80364728 0032DCE8  4B FA AD 39 */	bl __DVDRestartMotor
 .L_8036472C:
 /* 8036472C 0032DCEC  38 00 00 00 */	li r0, 0
-/* 80364730 0032DCF0  90 0D BA 34 */	stw r0, lbl_80667BB4@sda21(r13)
-/* 80364734 0032DCF4  90 0D BA 38 */	stw r0, lbl_80667BB8@sda21(r13)
-/* 80364738 0032DCF8  80 0D BA 2C */	lwz r0, lbl_80667BAC@sda21(r13)
-/* 8036473C 0032DCFC  90 0D BA 28 */	stw r0, lbl_80667BA8@sda21(r13)
+/* 80364730 0032DCF0  90 0D BA 34 */	stw r0, _gIdleCount_dimming@sda21(r13)
+/* 80364734 0032DCF4  90 0D BA 38 */	stw r0, _gIdleCount_dvd@sda21(r13)
+/* 80364738 0032DCF8  80 0D BA 2C */	lwz r0, NEW_TIME_TO_DIMMING@sda21(r13)
+/* 8036473C 0032DCFC  90 0D BA 28 */	stw r0, THD_TIME_TO_DIMMING@sda21(r13)
 .L_80364740:
 /* 80364740 0032DD00  80 6D 9B 90 */	lwz r3, lbl_80665D10@sda21(r13)
 /* 80364744 0032DD04  80 0D BA B8 */	lwz r0, lbl_80667C38@sda21(r13)
@@ -603,20 +602,20 @@
 /* 80364750 0032DD10  80 0D BA B8 */	lwz r0, lbl_80667C38@sda21(r13)
 /* 80364754 0032DD14  2C 00 00 00 */	cmpwi r0, 0
 /* 80364758 0032DD18  40 82 00 1C */	bne .L_80364774
-/* 8036475C 0032DD1C  80 6D BA 34 */	lwz r3, lbl_80667BB4@sda21(r13)
-/* 80364760 0032DD20  80 0D BA 28 */	lwz r0, lbl_80667BA8@sda21(r13)
+/* 8036475C 0032DD1C  80 6D BA 34 */	lwz r3, _gIdleCount_dimming@sda21(r13)
+/* 80364760 0032DD20  80 0D BA 28 */	lwz r0, THD_TIME_TO_DIMMING@sda21(r13)
 /* 80364764 0032DD24  7C 03 00 40 */	cmplw r3, r0
 /* 80364768 0032DD28  41 80 00 0C */	blt .L_80364774
 /* 8036476C 0032DD2C  38 00 00 01 */	li r0, 1
 /* 80364770 0032DD30  90 0D BA 78 */	stw r0, lbl_80667BF8@sda21(r13)
 .L_80364774:
 /* 80364774 0032DD34  38 00 00 00 */	li r0, 0
-/* 80364778 0032DD38  90 0D BA 34 */	stw r0, lbl_80667BB4@sda21(r13)
-/* 8036477C 0032DD3C  80 0D BA 2C */	lwz r0, lbl_80667BAC@sda21(r13)
-/* 80364780 0032DD40  90 0D BA 28 */	stw r0, lbl_80667BA8@sda21(r13)
+/* 80364778 0032DD38  90 0D BA 34 */	stw r0, _gIdleCount_dimming@sda21(r13)
+/* 8036477C 0032DD3C  80 0D BA 2C */	lwz r0, NEW_TIME_TO_DIMMING@sda21(r13)
+/* 80364780 0032DD40  90 0D BA 28 */	stw r0, THD_TIME_TO_DIMMING@sda21(r13)
 .L_80364784:
-/* 80364784 0032DD44  80 6D BA 34 */	lwz r3, lbl_80667BB4@sda21(r13)
-/* 80364788 0032DD48  80 0D BA 28 */	lwz r0, lbl_80667BA8@sda21(r13)
+/* 80364784 0032DD44  80 6D BA 34 */	lwz r3, _gIdleCount_dimming@sda21(r13)
+/* 80364788 0032DD48  80 0D BA 28 */	lwz r0, THD_TIME_TO_DIMMING@sda21(r13)
 /* 8036478C 0032DD4C  7C 03 00 40 */	cmplw r3, r0
 /* 80364790 0032DD50  40 82 00 0C */	bne .L_8036479C
 /* 80364794 0032DD54  38 00 00 01 */	li r0, 1
@@ -656,17 +655,17 @@
 /* 80364810 0032DDD0  80 0D BA B4 */	lwz r0, lbl_80667C34@sda21(r13)
 /* 80364814 0032DDD4  2C 00 00 00 */	cmpwi r0, 0
 /* 80364818 0032DDD8  40 82 00 18 */	bne .L_80364830
-/* 8036481C 0032DDDC  80 6D BA 38 */	lwz r3, lbl_80667BB8@sda21(r13)
-/* 80364820 0032DDE0  80 0D BA 30 */	lwz r0, lbl_80667BB0@sda21(r13)
+/* 8036481C 0032DDDC  80 6D BA 38 */	lwz r3, _gIdleCount_dvd@sda21(r13)
+/* 80364820 0032DDE0  80 0D BA 30 */	lwz r0, THD_TIME_TO_DVD_STOP@sda21(r13)
 /* 80364824 0032DDE4  7C 03 00 40 */	cmplw r3, r0
 /* 80364828 0032DDE8  41 80 00 08 */	blt .L_80364830
 /* 8036482C 0032DDEC  4B FA AC 35 */	bl __DVDRestartMotor
 .L_80364830:
 /* 80364830 0032DDF0  38 00 00 00 */	li r0, 0
-/* 80364834 0032DDF4  90 0D BA 38 */	stw r0, lbl_80667BB8@sda21(r13)
+/* 80364834 0032DDF4  90 0D BA 38 */	stw r0, _gIdleCount_dvd@sda21(r13)
 .L_80364838:
-/* 80364838 0032DDF8  80 6D BA 38 */	lwz r3, lbl_80667BB8@sda21(r13)
-/* 8036483C 0032DDFC  80 0D BA 30 */	lwz r0, lbl_80667BB0@sda21(r13)
+/* 80364838 0032DDF8  80 6D BA 38 */	lwz r3, _gIdleCount_dvd@sda21(r13)
+/* 8036483C 0032DDFC  80 0D BA 30 */	lwz r0, THD_TIME_TO_DVD_STOP@sda21(r13)
 /* 80364840 0032DE00  7C 03 00 40 */	cmplw r3, r0
 /* 80364844 0032DE04  40 82 00 14 */	bne .L_80364858
 /* 80364848 0032DE08  3C 60 80 5D */	lis r3, lbl_805CC950@ha
@@ -690,8 +689,8 @@
 /* 8036488C 0032DE4C  90 03 00 24 */	stw r0, 0x24(r3)
 /* 80364890 0032DE50  80 AD BA B8 */	lwz r5, lbl_80667C38@sda21(r13)
 /* 80364894 0032DE54  80 8D BA B4 */	lwz r4, lbl_80667C34@sda21(r13)
-/* 80364898 0032DE58  80 6D BA 2C */	lwz r3, lbl_80667BAC@sda21(r13)
-/* 8036489C 0032DE5C  80 0D BA 34 */	lwz r0, lbl_80667BB4@sda21(r13)
+/* 80364898 0032DE58  80 6D BA 2C */	lwz r3, NEW_TIME_TO_DIMMING@sda21(r13)
+/* 8036489C 0032DE5C  80 0D BA 34 */	lwz r0, _gIdleCount_dimming@sda21(r13)
 /* 803648A0 0032DE60  90 AD 9B 90 */	stw r5, lbl_80665D10@sda21(r13)
 /* 803648A4 0032DE64  7C 03 00 40 */	cmplw r3, r0
 /* 803648A8 0032DE68  90 8D 9B 94 */	stw r4, lbl_80665D14@sda21(r13)
@@ -699,8 +698,8 @@
 /* 803648B0 0032DE70  80 0D BA 3C */	lwz r0, lbl_80667BBC@sda21(r13)
 /* 803648B4 0032DE74  2C 00 00 00 */	cmpwi r0, 0
 /* 803648B8 0032DE78  40 82 00 0C */	bne .L_803648C4
-/* 803648BC 0032DE7C  80 0D BA 2C */	lwz r0, lbl_80667BAC@sda21(r13)
-/* 803648C0 0032DE80  90 0D BA 28 */	stw r0, lbl_80667BA8@sda21(r13)
+/* 803648BC 0032DE7C  80 0D BA 2C */	lwz r0, NEW_TIME_TO_DIMMING@sda21(r13)
+/* 803648C0 0032DE80  90 0D BA 28 */	stw r0, THD_TIME_TO_DIMMING@sda21(r13)
 .L_803648C4:
 /* 803648C4 0032DE84  39 61 02 F0 */	addi r11, r1, 0x2f0
 /* 803648C8 0032DE88  4B F5 58 D5 */	bl _restgpr_26
@@ -763,76 +762,76 @@
 /* 80364998 0032DF58  7C 89 03 A6 */	mtctr r4
 /* 8036499C 0032DF5C  4E 80 04 20 */	bctr 
 .L_803649A0:
-/* 803649A0 0032DF60  3C 60 80 56 */	lis r3, lbl_8055FAE8@ha
-/* 803649A4 0032DF64  38 63 FA E8 */	addi r3, r3, lbl_8055FAE8@l
+/* 803649A0 0032DF60  3C 60 80 56 */	lis r3, timing@ha
+/* 803649A4 0032DF64  38 63 FA E8 */	addi r3, r3, timing@l
 /* 803649A8 0032DF68  4E 80 00 20 */	blr 
 .L_803649AC:
-/* 803649AC 0032DF6C  3C 60 80 56 */	lis r3, lbl_8055FAE8@ha
-/* 803649B0 0032DF70  38 63 FA E8 */	addi r3, r3, lbl_8055FAE8@l
+/* 803649AC 0032DF6C  3C 60 80 56 */	lis r3, timing@ha
+/* 803649B0 0032DF70  38 63 FA E8 */	addi r3, r3, timing@l
 /* 803649B4 0032DF74  38 63 00 26 */	addi r3, r3, 0x26
 /* 803649B8 0032DF78  4E 80 00 20 */	blr 
 .L_803649BC:
-/* 803649BC 0032DF7C  3C 60 80 56 */	lis r3, lbl_8055FAE8@ha
-/* 803649C0 0032DF80  38 63 FA E8 */	addi r3, r3, lbl_8055FAE8@l
+/* 803649BC 0032DF7C  3C 60 80 56 */	lis r3, timing@ha
+/* 803649C0 0032DF80  38 63 FA E8 */	addi r3, r3, timing@l
 /* 803649C4 0032DF84  38 63 00 4C */	addi r3, r3, 0x4c
 /* 803649C8 0032DF88  4E 80 00 20 */	blr 
 .L_803649CC:
-/* 803649CC 0032DF8C  3C 60 80 56 */	lis r3, lbl_8055FAE8@ha
-/* 803649D0 0032DF90  38 63 FA E8 */	addi r3, r3, lbl_8055FAE8@l
+/* 803649CC 0032DF8C  3C 60 80 56 */	lis r3, timing@ha
+/* 803649D0 0032DF90  38 63 FA E8 */	addi r3, r3, timing@l
 /* 803649D4 0032DF94  38 63 00 72 */	addi r3, r3, 0x72
 /* 803649D8 0032DF98  4E 80 00 20 */	blr 
 .L_803649DC:
-/* 803649DC 0032DF9C  3C 60 80 56 */	lis r3, lbl_8055FAE8@ha
-/* 803649E0 0032DFA0  38 63 FA E8 */	addi r3, r3, lbl_8055FAE8@l
+/* 803649DC 0032DF9C  3C 60 80 56 */	lis r3, timing@ha
+/* 803649E0 0032DFA0  38 63 FA E8 */	addi r3, r3, timing@l
 /* 803649E4 0032DFA4  4E 80 00 20 */	blr 
 .L_803649E8:
-/* 803649E8 0032DFA8  3C 60 80 56 */	lis r3, lbl_8055FAE8@ha
-/* 803649EC 0032DFAC  38 63 FA E8 */	addi r3, r3, lbl_8055FAE8@l
+/* 803649E8 0032DFA8  3C 60 80 56 */	lis r3, timing@ha
+/* 803649EC 0032DFAC  38 63 FA E8 */	addi r3, r3, timing@l
 /* 803649F0 0032DFB0  38 63 00 26 */	addi r3, r3, 0x26
 /* 803649F4 0032DFB4  4E 80 00 20 */	blr 
 .L_803649F8:
-/* 803649F8 0032DFB8  3C 60 80 56 */	lis r3, lbl_8055FAE8@ha
-/* 803649FC 0032DFBC  38 63 FA E8 */	addi r3, r3, lbl_8055FAE8@l
+/* 803649F8 0032DFB8  3C 60 80 56 */	lis r3, timing@ha
+/* 803649FC 0032DFBC  38 63 FA E8 */	addi r3, r3, timing@l
 /* 80364A00 0032DFC0  38 63 00 98 */	addi r3, r3, 0x98
 /* 80364A04 0032DFC4  4E 80 00 20 */	blr 
 .L_80364A08:
-/* 80364A08 0032DFC8  3C 60 80 56 */	lis r3, lbl_8055FAE8@ha
-/* 80364A0C 0032DFCC  38 63 FA E8 */	addi r3, r3, lbl_8055FAE8@l
+/* 80364A08 0032DFC8  3C 60 80 56 */	lis r3, timing@ha
+/* 80364A0C 0032DFCC  38 63 FA E8 */	addi r3, r3, timing@l
 /* 80364A10 0032DFD0  38 63 00 BE */	addi r3, r3, 0xbe
 /* 80364A14 0032DFD4  4E 80 00 20 */	blr 
 .L_80364A18:
-/* 80364A18 0032DFD8  3C 60 80 56 */	lis r3, lbl_8055FAE8@ha
-/* 80364A1C 0032DFDC  38 63 FA E8 */	addi r3, r3, lbl_8055FAE8@l
+/* 80364A18 0032DFD8  3C 60 80 56 */	lis r3, timing@ha
+/* 80364A1C 0032DFDC  38 63 FA E8 */	addi r3, r3, timing@l
 /* 80364A20 0032DFE0  38 63 00 E4 */	addi r3, r3, 0xe4
 /* 80364A24 0032DFE4  4E 80 00 20 */	blr 
 .L_80364A28:
-/* 80364A28 0032DFE8  3C 60 80 56 */	lis r3, lbl_8055FAE8@ha
-/* 80364A2C 0032DFEC  38 63 FA E8 */	addi r3, r3, lbl_8055FAE8@l
+/* 80364A28 0032DFE8  3C 60 80 56 */	lis r3, timing@ha
+/* 80364A2C 0032DFEC  38 63 FA E8 */	addi r3, r3, timing@l
 /* 80364A30 0032DFF0  38 63 01 0A */	addi r3, r3, 0x10a
 /* 80364A34 0032DFF4  4E 80 00 20 */	blr 
 .L_80364A38:
-/* 80364A38 0032DFF8  3C 60 80 56 */	lis r3, lbl_8055FAE8@ha
-/* 80364A3C 0032DFFC  38 63 FA E8 */	addi r3, r3, lbl_8055FAE8@l
+/* 80364A38 0032DFF8  3C 60 80 56 */	lis r3, timing@ha
+/* 80364A3C 0032DFFC  38 63 FA E8 */	addi r3, r3, timing@l
 /* 80364A40 0032E000  38 63 00 4C */	addi r3, r3, 0x4c
 /* 80364A44 0032E004  4E 80 00 20 */	blr 
 .L_80364A48:
-/* 80364A48 0032E008  3C 60 80 56 */	lis r3, lbl_8055FAE8@ha
-/* 80364A4C 0032E00C  38 63 FA E8 */	addi r3, r3, lbl_8055FAE8@l
+/* 80364A48 0032E008  3C 60 80 56 */	lis r3, timing@ha
+/* 80364A4C 0032E00C  38 63 FA E8 */	addi r3, r3, timing@l
 /* 80364A50 0032E010  38 63 00 72 */	addi r3, r3, 0x72
 /* 80364A54 0032E014  4E 80 00 20 */	blr 
 .L_80364A58:
-/* 80364A58 0032E018  3C 60 80 56 */	lis r3, lbl_8055FAE8@ha
-/* 80364A5C 0032E01C  38 63 FA E8 */	addi r3, r3, lbl_8055FAE8@l
+/* 80364A58 0032E018  3C 60 80 56 */	lis r3, timing@ha
+/* 80364A5C 0032E01C  38 63 FA E8 */	addi r3, r3, timing@l
 /* 80364A60 0032E020  38 63 01 30 */	addi r3, r3, 0x130
 /* 80364A64 0032E024  4E 80 00 20 */	blr 
 .L_80364A68:
-/* 80364A68 0032E028  3C 60 80 56 */	lis r3, lbl_8055FAE8@ha
-/* 80364A6C 0032E02C  38 63 FA E8 */	addi r3, r3, lbl_8055FAE8@l
+/* 80364A68 0032E028  3C 60 80 56 */	lis r3, timing@ha
+/* 80364A6C 0032E02C  38 63 FA E8 */	addi r3, r3, timing@l
 /* 80364A70 0032E030  38 63 01 56 */	addi r3, r3, 0x156
 /* 80364A74 0032E034  4E 80 00 20 */	blr 
 .L_80364A78:
-/* 80364A78 0032E038  3C 60 80 56 */	lis r3, lbl_8055FAE8@ha
-/* 80364A7C 0032E03C  38 63 FA E8 */	addi r3, r3, lbl_8055FAE8@l
+/* 80364A78 0032E038  3C 60 80 56 */	lis r3, timing@ha
+/* 80364A7C 0032E03C  38 63 FA E8 */	addi r3, r3, timing@l
 /* 80364A80 0032E040  38 63 01 7C */	addi r3, r3, 0x17c
 /* 80364A84 0032E044  4E 80 00 20 */	blr 
 .L_80364A88:
@@ -1001,13 +1000,13 @@
 /* 80364CE0 0032E2A0  38 60 00 00 */	li r3, 0
 /* 80364CE4 0032E2A4  4B FF FD BD */	bl __VIInit
 .L_80364CE8:
-/* 80364CE8 0032E2A8  3C 80 80 56 */	lis r4, lbl_8055FC8C@ha
+/* 80364CE8 0032E2A8  3C 80 80 56 */	lis r4, taps@ha
 /* 80364CEC 0032E2AC  3B A0 00 00 */	li r29, 0
-/* 80364CF0 0032E2B0  38 64 FC 8C */	addi r3, r4, lbl_8055FC8C@l
+/* 80364CF0 0032E2B0  38 64 FC 8C */	addi r3, r4, taps@l
 /* 80364CF4 0032E2B4  93 AD BA C4 */	stw r29, lbl_80667C44@sda21(r13)
 /* 80364CF8 0032E2B8  A0 C3 00 02 */	lhz r6, 2(r3)
 /* 80364CFC 0032E2BC  3F C0 CC 00 */	lis r30, 0xCC00204E@ha
-/* 80364D00 0032E2C0  A0 A4 FC 8C */	lhz r5, lbl_8055FC8C@l(r4)
+/* 80364D00 0032E2C0  A0 A4 FC 8C */	lhz r5, taps@l(r4)
 /* 80364D04 0032E2C4  93 AD BA 54 */	stw r29, lbl_80667BD4@sda21(r13)
 /* 80364D08 0032E2C8  54 C0 54 2A */	rlwinm r0, r6, 0xa, 0x10, 0x15
 /* 80364D0C 0032E2CC  7C A0 03 78 */	or r0, r5, r0
@@ -1270,8 +1269,8 @@
 /* 803650F4 0032E6B4  4B FF 39 2D */	bl __OSSetInterruptHandler
 /* 803650F8 0032E6B8  38 60 00 80 */	li r3, 0x80
 /* 803650FC 0032E6BC  4B FF 3D 05 */	bl __OSUnmaskInterrupts
-/* 80365100 0032E6C0  3C 60 80 56 */	lis r3, lbl_8055FD78@ha
-/* 80365104 0032E6C4  38 63 FD 78 */	addi r3, r3, lbl_8055FD78@l
+/* 80365100 0032E6C0  3C 60 80 56 */	lis r3, ShutdownFunctionInfo@ha
+/* 80365104 0032E6C4  38 63 FD 78 */	addi r3, r3, ShutdownFunctionInfo@l
 /* 80365108 0032E6C8  4B FF 4E 09 */	bl OSRegisterShutdownFunction
 /* 8036510C 0032E6CC  4B FF 38 A5 */	bl OSDisableInterrupts
 /* 80365110 0032E6D0  80 AD BA 88 */	lwz r5, lbl_80667C08@sda21(r13)
@@ -1297,24 +1296,24 @@
 /* 80365150 0032E710  40 82 00 20 */	bne .L_80365170
 /* 80365154 0032E714  3C 60 00 01 */	lis r3, 0x00015F90@ha
 /* 80365158 0032E718  38 80 3A 98 */	li r4, 0x3a98
-/* 8036515C 0032E71C  90 8D BA 28 */	stw r4, lbl_80667BA8@sda21(r13)
+/* 8036515C 0032E71C  90 8D BA 28 */	stw r4, THD_TIME_TO_DIMMING@sda21(r13)
 /* 80365160 0032E720  38 03 5F 90 */	addi r0, r3, 0x00015F90@l
-/* 80365164 0032E724  90 8D BA 2C */	stw r4, lbl_80667BAC@sda21(r13)
-/* 80365168 0032E728  90 0D BA 30 */	stw r0, lbl_80667BB0@sda21(r13)
+/* 80365164 0032E724  90 8D BA 2C */	stw r4, NEW_TIME_TO_DIMMING@sda21(r13)
+/* 80365168 0032E728  90 0D BA 30 */	stw r0, THD_TIME_TO_DVD_STOP@sda21(r13)
 /* 8036516C 0032E72C  48 00 00 1C */	b .L_80365188
 .L_80365170:
 /* 80365170 0032E730  3C 60 00 02 */	lis r3, 0x0001A5E0@ha
 /* 80365174 0032E734  38 80 46 50 */	li r4, 0x4650
-/* 80365178 0032E738  90 8D BA 28 */	stw r4, lbl_80667BA8@sda21(r13)
+/* 80365178 0032E738  90 8D BA 28 */	stw r4, THD_TIME_TO_DIMMING@sda21(r13)
 /* 8036517C 0032E73C  38 03 A5 E0 */	addi r0, r3, 0x0001A5E0@l
-/* 80365180 0032E740  90 8D BA 2C */	stw r4, lbl_80667BAC@sda21(r13)
-/* 80365184 0032E744  90 0D BA 30 */	stw r0, lbl_80667BB0@sda21(r13)
+/* 80365180 0032E740  90 8D BA 2C */	stw r4, NEW_TIME_TO_DIMMING@sda21(r13)
+/* 80365184 0032E744  90 0D BA 30 */	stw r0, THD_TIME_TO_DVD_STOP@sda21(r13)
 .L_80365188:
 /* 80365188 0032E748  38 60 00 00 */	li r3, 0
-/* 8036518C 0032E74C  90 6D BA 34 */	stw r3, lbl_80667BB4@sda21(r13)
+/* 8036518C 0032E74C  90 6D BA 34 */	stw r3, _gIdleCount_dimming@sda21(r13)
 /* 80365190 0032E750  38 00 00 01 */	li r0, 1
 /* 80365194 0032E754  3B 60 00 01 */	li r27, 1
-/* 80365198 0032E758  90 6D BA 38 */	stw r3, lbl_80667BB8@sda21(r13)
+/* 80365198 0032E758  90 6D BA 38 */	stw r3, _gIdleCount_dvd@sda21(r13)
 /* 8036519C 0032E75C  90 6D BA B0 */	stw r3, lbl_80667C30@sda21(r13)
 /* 803651A0 0032E760  90 0D BA 24 */	stw r0, lbl_80667BA4@sda21(r13)
 /* 803651A4 0032E764  90 6D BA 3C */	stw r3, lbl_80667BBC@sda21(r13)
@@ -2894,19 +2893,18 @@
 .endfn __VIDisplayPositionToXY
 
 .balign 16, 0
-#VIGetDimmingCount or VIGetDVDStopMotorCount
-.fn func_80366840, global
-/* 80366840 0032FE00  80 0D BA 34 */	lwz r0, lbl_80667BB4@sda21(r13)
-/* 80366844 0032FE04  80 AD BA 28 */	lwz r5, lbl_80667BA8@sda21(r13)
-/* 80366848 0032FE08  80 6D BA 34 */	lwz r3, lbl_80667BB4@sda21(r13)
+.fn VIGetDimmingCount, global
+/* 80366840 0032FE00  80 0D BA 34 */	lwz r0, _gIdleCount_dimming@sda21(r13)
+/* 80366844 0032FE04  80 AD BA 28 */	lwz r5, THD_TIME_TO_DIMMING@sda21(r13)
+/* 80366848 0032FE08  80 6D BA 34 */	lwz r3, _gIdleCount_dimming@sda21(r13)
 /* 8036684C 0032FE0C  7C 05 00 10 */	subfc r0, r5, r0
-/* 80366850 0032FE10  80 0D BA 28 */	lwz r0, lbl_80667BA8@sda21(r13)
+/* 80366850 0032FE10  80 0D BA 28 */	lwz r0, THD_TIME_TO_DIMMING@sda21(r13)
 /* 80366854 0032FE14  7C 85 01 94 */	addze r4, r5
 /* 80366858 0032FE18  7C 84 28 50 */	subf r4, r4, r5
 /* 8036685C 0032FE1C  7C 03 00 50 */	subf r0, r3, r0
 /* 80366860 0032FE20  7C 03 20 78 */	andc r3, r0, r4
 /* 80366864 0032FE24  4E 80 00 20 */	blr 
-.endfn func_80366840
+.endfn VIGetDimmingCount
 
 .balign 16, 0
 .fn VIEnableDimming, global
@@ -2970,16 +2968,16 @@
 /* 80366940 0032FF00  48 00 00 20 */	b .L_80366960
 .L_80366944:
 /* 80366944 0032FF04  38 00 75 30 */	li r0, 0x7530
-/* 80366948 0032FF08  90 0D BA 2C */	stw r0, lbl_80667BAC@sda21(r13)
+/* 80366948 0032FF08  90 0D BA 2C */	stw r0, NEW_TIME_TO_DIMMING@sda21(r13)
 /* 8036694C 0032FF0C  48 00 00 60 */	b .L_803669AC
 .L_80366950:
 /* 80366950 0032FF10  3C 60 00 01 */	lis r3, 0x0000AFC8@ha
 /* 80366954 0032FF14  38 03 AF C8 */	addi r0, r3, 0x0000AFC8@l
-/* 80366958 0032FF18  90 0D BA 2C */	stw r0, lbl_80667BAC@sda21(r13)
+/* 80366958 0032FF18  90 0D BA 2C */	stw r0, NEW_TIME_TO_DIMMING@sda21(r13)
 /* 8036695C 0032FF1C  48 00 00 50 */	b .L_803669AC
 .L_80366960:
 /* 80366960 0032FF20  38 00 3A 98 */	li r0, 0x3a98
-/* 80366964 0032FF24  90 0D BA 2C */	stw r0, lbl_80667BAC@sda21(r13)
+/* 80366964 0032FF24  90 0D BA 2C */	stw r0, NEW_TIME_TO_DIMMING@sda21(r13)
 /* 80366968 0032FF28  48 00 00 44 */	b .L_803669AC
 .L_8036696C:
 /* 8036696C 0032FF2C  80 0D BA B0 */	lwz r0, lbl_80667C30@sda21(r13)
@@ -2991,16 +2989,16 @@
 .L_80366984:
 /* 80366984 0032FF44  3C 60 00 01 */	lis r3, 0x00008CA0@ha
 /* 80366988 0032FF48  38 03 8C A0 */	addi r0, r3, 0x00008CA0@l
-/* 8036698C 0032FF4C  90 0D BA 2C */	stw r0, lbl_80667BAC@sda21(r13)
+/* 8036698C 0032FF4C  90 0D BA 2C */	stw r0, NEW_TIME_TO_DIMMING@sda21(r13)
 /* 80366990 0032FF50  48 00 00 1C */	b .L_803669AC
 .L_80366994:
 /* 80366994 0032FF54  3C 60 00 01 */	lis r3, 0x0000D2F0@ha
 /* 80366998 0032FF58  38 03 D2 F0 */	addi r0, r3, 0x0000D2F0@l
-/* 8036699C 0032FF5C  90 0D BA 2C */	stw r0, lbl_80667BAC@sda21(r13)
+/* 8036699C 0032FF5C  90 0D BA 2C */	stw r0, NEW_TIME_TO_DIMMING@sda21(r13)
 /* 803669A0 0032FF60  48 00 00 0C */	b .L_803669AC
 .L_803669A4:
 /* 803669A4 0032FF64  38 00 46 50 */	li r0, 0x4650
-/* 803669A8 0032FF68  90 0D BA 2C */	stw r0, lbl_80667BAC@sda21(r13)
+/* 803669A8 0032FF68  90 0D BA 2C */	stw r0, NEW_TIME_TO_DIMMING@sda21(r13)
 .L_803669AC:
 /* 803669AC 0032FF6C  7F C3 F3 78 */	mr r3, r30
 /* 803669B0 0032FF70  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -3037,181 +3035,350 @@ lbl_8055FAA0:
 	.balign 4
 
 
-.global lbl_8055FAE8
-lbl_8055FAE8:
-	.4byte 0x060000F0
-	.4byte 0x00180019
-	.4byte 0x00030002
-	.4byte 0x0C0D0C0D
-	.4byte 0x02080207
-	.4byte 0x02080207
-	.4byte 0x020D01AD
-	.4byte 0x404769A2
-	.4byte 0x01757A00
-	.4byte 0x019C0600
-	.4byte 0x00F00018
-	.4byte 0x00180004
-	.4byte 0x00040C0C
-	.4byte 0x0C0C0208
-	.4byte 0x02080208
-	.4byte 0x0208020E
-	.4byte 0x01AD4047
-	.4byte 0x69A20175
-	.4byte 0x7A00019C
-	.4byte 0x0500011F
-	.4byte 0x00230024
-	.4byte 0x00010000
-	.4byte 0x0D0C0B0A
-	.4byte 0x026B026A
-	.4byte 0x0269026C
-	.4byte 0x027101B0
-	.4byte 0x404B6AAC
-	.4byte 0x017C8500
-	.4byte 0x01A40500
-	.4byte 0x011F0021
-	.4byte 0x00210002
-	.4byte 0x00020D0B
-	.4byte 0x0D0B026B
-	.4byte 0x026D026B
-	.4byte 0x026D0270
-	.4byte 0x01B0404B
-	.4byte 0x6AAC017C
-	.4byte 0x850001A4
-	.4byte 0x060000F0
-	.4byte 0x00180019
-	.4byte 0x00030002
-	.4byte 0x100F0E0D
-	.4byte 0x02060205
-	.4byte 0x02040207
-	.4byte 0x020D01AD
-	.4byte 0x404E70A2
-	.4byte 0x01757A00
-	.4byte 0x019C0600
-	.4byte 0x00F00018
-	.4byte 0x00180004
-	.4byte 0x0004100E
-	.4byte 0x100E0206
-	.4byte 0x02080206
-	.4byte 0x0208020E
-	.4byte 0x01AD404E
-	.4byte 0x70A20175
-	.4byte 0x7A00019C
-	.4byte 0x0C0001E0
-	.4byte 0x00300030
-	.4byte 0x00060006
-	.4byte 0x18181818
-	.4byte 0x040E040E
-	.4byte 0x040E040E
-	.4byte 0x041A01AD
-	.4byte 0x404769A2
-	.4byte 0x01757A00
-	.4byte 0x019C0C00
-	.4byte 0x01E0002C
-	.4byte 0x002C000A
-	.4byte 0x000A1818
-	.4byte 0x1818040E
-	.4byte 0x040E040E
-	.4byte 0x040E041A
-	.4byte 0x01AD4047
-	.4byte 0x69A8017B
-	.4byte 0x7A00019C
-	.4byte 0x060000F1
-	.4byte 0x00180019
-	.4byte 0x00010000
-	.4byte 0x0C0D0C0D
-	.4byte 0x02080207
-	.4byte 0x02080207
-	.4byte 0x020D01AD
-	.4byte 0x4047699F
-	.4byte 0x01727A00
-	.4byte 0x019C0C00
-	.4byte 0x01E00030
-	.4byte 0x00300006
-	.4byte 0x00061818
-	.4byte 0x1818040E
-	.4byte 0x040E040E
-	.4byte 0x040E041A
-	.4byte 0x01AD4047
-	.4byte 0x69B40187
-	.4byte 0x7A00019C
-	.4byte 0x0A000240
-	.4byte 0x003E003E
-	.4byte 0x00060006
-	.4byte 0x14141414
-	.4byte 0x04D804D8
-	.4byte 0x04D804D8
-	.4byte 0x04E201B0
-	.4byte 0x404B6AAC
-	.4byte 0x017C7A00
-	.4byte 0x019C0000
+timing:
+	.2byte 0x0600
+	.2byte 0x00F0
+	.2byte 0x0018
+	.2byte 0x0019
+	.2byte 0x0003
+	.2byte 0x0002
+	.2byte 0x0C0D
+	.2byte 0x0C0D
+	.2byte 0x0208
+	.2byte 0x0207
+	.2byte 0x0208
+	.2byte 0x0207
+	.2byte 0x020D
+	.2byte 0x01AD
+	.2byte 0x4047
+	.2byte 0x69A2
+	.2byte 0x0175
+	.2byte 0x7A00
+	.2byte 0x019C
+	.2byte 0x0600
+	.2byte 0x00F0
+	.2byte 0x0018
+	.2byte 0x0018
+	.2byte 0x0004
+	.2byte 0x0004
+	.2byte 0x0C0C
+	.2byte 0x0C0C
+	.2byte 0x0208
+	.2byte 0x0208
+	.2byte 0x0208
+	.2byte 0x0208
+	.2byte 0x020E
+	.2byte 0x01AD
+	.2byte 0x4047
+	.2byte 0x69A2
+	.2byte 0x0175
+	.2byte 0x7A00
+	.2byte 0x019C
+	.2byte 0x0500
+	.2byte 0x011F
+	.2byte 0x0023
+	.2byte 0x0024
+	.2byte 0x0001
+	.2byte 0x0000
+	.2byte 0x0D0C
+	.2byte 0x0B0A
+	.2byte 0x026B
+	.2byte 0x026A
+	.2byte 0x0269
+	.2byte 0x026C
+	.2byte 0x0271
+	.2byte 0x01B0
+	.2byte 0x404B
+	.2byte 0x6AAC
+	.2byte 0x017C
+	.2byte 0x8500
+	.2byte 0x01A4
+	.2byte 0x0500
+	.2byte 0x011F
+	.2byte 0x0021
+	.2byte 0x0021
+	.2byte 0x0002
+	.2byte 0x0002
+	.2byte 0x0D0B
+	.2byte 0x0D0B
+	.2byte 0x026B
+	.2byte 0x026D
+	.2byte 0x026B
+	.2byte 0x026D
+	.2byte 0x0270
+	.2byte 0x01B0
+	.2byte 0x404B
+	.2byte 0x6AAC
+	.2byte 0x017C
+	.2byte 0x8500
+	.2byte 0x01A4
+	.2byte 0x0600
+	.2byte 0x00F0
+	.2byte 0x0018
+	.2byte 0x0019
+	.2byte 0x0003
+	.2byte 0x0002
+	.2byte 0x100F
+	.2byte 0x0E0D
+	.2byte 0x0206
+	.2byte 0x0205
+	.2byte 0x0204
+	.2byte 0x0207
+	.2byte 0x020D
+	.2byte 0x01AD
+	.2byte 0x404E
+	.2byte 0x70A2
+	.2byte 0x0175
+	.2byte 0x7A00
+	.2byte 0x019C
+	.2byte 0x0600
+	.2byte 0x00F0
+	.2byte 0x0018
+	.2byte 0x0018
+	.2byte 0x0004
+	.2byte 0x0004
+	.2byte 0x100E
+	.2byte 0x100E
+	.2byte 0x0206
+	.2byte 0x0208
+	.2byte 0x0206
+	.2byte 0x0208
+	.2byte 0x020E
+	.2byte 0x01AD
+	.2byte 0x404E
+	.2byte 0x70A2
+	.2byte 0x0175
+	.2byte 0x7A00
+	.2byte 0x019C
+	.2byte 0x0C00
+	.2byte 0x01E0
+	.2byte 0x0030
+	.2byte 0x0030
+	.2byte 0x0006
+	.2byte 0x0006
+	.2byte 0x1818
+	.2byte 0x1818
+	.2byte 0x040E
+	.2byte 0x040E
+	.2byte 0x040E
+	.2byte 0x040E
+	.2byte 0x041A
+	.2byte 0x01AD
+	.2byte 0x4047
+	.2byte 0x69A2
+	.2byte 0x0175
+	.2byte 0x7A00
+	.2byte 0x019C
+	.2byte 0x0C00
+	.2byte 0x01E0
+	.2byte 0x002C
+	.2byte 0x002C
+	.2byte 0x000A
+	.2byte 0x000A
+	.2byte 0x1818
+	.2byte 0x1818
+	.2byte 0x040E
+	.2byte 0x040E
+	.2byte 0x040E
+	.2byte 0x040E
+	.2byte 0x041A
+	.2byte 0x01AD
+	.2byte 0x4047
+	.2byte 0x69A8
+	.2byte 0x017B
+	.2byte 0x7A00
+	.2byte 0x019C
+	.2byte 0x0600
+	.2byte 0x00F1
+	.2byte 0x0018
+	.2byte 0x0019
+	.2byte 0x0001
+	.2byte 0x0000
+	.2byte 0x0C0D
+	.2byte 0x0C0D
+	.2byte 0x0208
+	.2byte 0x0207
+	.2byte 0x0208
+	.2byte 0x0207
+	.2byte 0x020D
+	.2byte 0x01AD
+	.2byte 0x4047
+	.2byte 0x699F
+	.2byte 0x0172
+	.2byte 0x7A00
+	.2byte 0x019C
+	.2byte 0x0C00
+	.2byte 0x01E0
+	.2byte 0x0030
+	.2byte 0x0030
+	.2byte 0x0006
+	.2byte 0x0006
+	.2byte 0x1818
+	.2byte 0x1818
+	.2byte 0x040E
+	.2byte 0x040E
+	.2byte 0x040E
+	.2byte 0x040E
+	.2byte 0x041A
+	.2byte 0x01AD
+	.2byte 0x4047
+	.2byte 0x69B4
+	.2byte 0x0187
+	.2byte 0x7A00
+	.2byte 0x019C
+	.2byte 0x0A00
+	.2byte 0x0240
+	.2byte 0x003E
+	.2byte 0x003E
+	.2byte 0x0006
+	.2byte 0x0006
+	.2byte 0x1414
+	.2byte 0x1414
+	.2byte 0x04D8
+	.2byte 0x04D8
+	.2byte 0x04D8
+	.2byte 0x04D8
+	.2byte 0x04E2
+	.2byte 0x01B0
+	.2byte 0x404B
+	.2byte 0x6AAC
+	.2byte 0x017C
+	.2byte 0x7A00
+	.2byte 0x019C
+	.2byte 0x0000
+
+#The arrays after are accessed by adding their offsets to the first array's address
+
+taps:
+	.2byte 0x01F0
+	.2byte 0x01DC
+	.2byte 0x01AE
+	.2byte 0x0174
+	.2byte 0x0129
+	.2byte 0x00DB
+	.2byte 0x008E
+	.2byte 0x0046
+	.2byte 0x000C
+	.2byte 0x00E2
+	.2byte 0x00CB
+	.2byte 0x00C0
+	.2byte 0x00C4
+	.2byte 0x00CF
+	.2byte 0x00DE
+	.2byte 0x00EC
+	.2byte 0x00FC
+	.2byte 0x0008
+	.2byte 0x000F
+	.2byte 0x0013
+	.2byte 0x0013
+	.2byte 0x000F
+	.2byte 0x000C
+	.2byte 0x0008
+	.2byte 0x0001
+	.2byte 0x0000
 
 
-.global lbl_8055FC8C
-lbl_8055FC8C:
-	.4byte 0x01F001DC
-	.4byte 0x01AE0174
-	.4byte 0x012900DB
-	.4byte 0x008E0046
-	.4byte 0x000C00E2
-	.4byte 0x00CB00C0
-	.4byte 0x00C400CF
-	.4byte 0x00DE00EC
-	.4byte 0x00FC0008
-	.4byte 0x000F0013
-	.4byte 0x0013000F
-	.4byte 0x000C0008
-	.4byte 0x00010000
-	.4byte 0x00000006
-	.4byte 0x02800210
-	.4byte 0x02100028
-	.4byte 0x00170280
-	.4byte 0x02100000
-	.4byte 0
-	.4byte 0x00000606
-	.4byte 0x06060606
-	.4byte 0x06060606
-	.4byte 0x06060606
-	.4byte 0x06060606
-	.4byte 0x06060606
-	.4byte 0x06060000
-	.4byte 0x15161500
-	.4byte 0
-	.4byte 0x00000006
-	.4byte 0x02800210
-	.4byte 0x02100028
-	.4byte 0x00170280
-	.4byte 0x02100000
-	.4byte 0
-	.4byte 0x00000606
-	.4byte 0x06060606
-	.4byte 0x06060606
-	.4byte 0x06060606
-	.4byte 0x06060606
-	.4byte 0x06060606
-	.4byte 0x06060808
-	.4byte 0x0A0C0A08
-	.4byte 0x08000000
-	.4byte 0x00000006
-	.4byte 0x02800108
-	.4byte 0x020C0028
-	.4byte 0x00170280
-	.4byte 0x020C0000
-	.4byte 0
-	.4byte 0x00010302
-	.4byte 0x0906030A
-	.4byte 0x03020906
-	.4byte 0x030A0902
-	.4byte 0x0306090A
-	.4byte 0x09020306
-	.4byte 0x090A0408
-	.4byte 0x0C100C08
-	.4byte 0x04000000
-	.4byte 0
+GXPal528Prog:
+	.2byte 0x0000
+	.2byte 0x0006
+	.2byte 0x0280
+	.2byte 0x0210
+	.2byte 0x0210
+	.2byte 0x0028
+	.2byte 0x0017
+	.2byte 0x0280
+	.2byte 0x0210
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0606
+	.2byte 0x0606
+	.2byte 0x0606
+	.2byte 0x0606
+	.2byte 0x0606
+	.2byte 0x0606
+	.2byte 0x0606
+	.2byte 0x0606
+	.2byte 0x0606
+	.2byte 0x0606
+	.2byte 0x0606
+	.2byte 0x0606
+	.2byte 0x0000
+	.2byte 0x1516
+	.2byte 0x1500
+	.2byte 0x0000
+	.2byte 0x0000
+
+GXPal528ProgSoft:
+	.2byte 0x0000
+	.2byte 0x0006
+	.2byte 0x0280
+	.2byte 0x0210
+	.2byte 0x0210
+	.2byte 0x0028
+	.2byte 0x0017
+	.2byte 0x0280
+	.2byte 0x0210
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0606
+	.2byte 0x0606
+	.2byte 0x0606
+	.2byte 0x0606
+	.2byte 0x0606
+	.2byte 0x0606
+	.2byte 0x0606
+	.2byte 0x0606
+	.2byte 0x0606
+	.2byte 0x0606
+	.2byte 0x0606
+	.2byte 0x0606
+	.2byte 0x0808
+	.2byte 0x0A0C
+	.2byte 0x0A08
+	.2byte 0x0800
+	.2byte 0x0000
+
+GXPal524ProgAa:
+	.2byte 0x0000
+	.2byte 0x0006
+	.2byte 0x0280
+	.2byte 0x0108
+	.2byte 0x020C
+	.2byte 0x0028
+	.2byte 0x0017
+	.2byte 0x0280
+	.2byte 0x020C
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0001
+	.2byte 0x0302
+	.2byte 0x0906
+	.2byte 0x030A
+	.2byte 0x0302
+	.2byte 0x0906
+	.2byte 0x030A
+	.2byte 0x0902
+	.2byte 0x0306
+	.2byte 0x090A
+	.2byte 0x0902
+	.2byte 0x0306
+	.2byte 0x090A
+	.2byte 0x0408
+	.2byte 0x0C10
+	.2byte 0x0C08
+	.2byte 0x0400
+	.2byte 0x0000
+	.2byte 0x0000
+	.2byte 0x0000
 
 
-.global lbl_8055FD78
-lbl_8055FD78:
-	.4byte func_80363F30
+ShutdownFunctionInfo:
+	.4byte OnShutdown
 	.4byte 0x0000007F
 	.4byte 0
 	.4byte 0
@@ -3388,20 +3555,20 @@ lbl_80667BA0:
 .global lbl_80667BA4
 lbl_80667BA4:
 	.skip 0x4
-.global lbl_80667BA8
-lbl_80667BA8:
+.global THD_TIME_TO_DIMMING
+THD_TIME_TO_DIMMING:
 	.skip 0x4
-.global lbl_80667BAC
-lbl_80667BAC:
+.global NEW_TIME_TO_DIMMING
+NEW_TIME_TO_DIMMING:
 	.skip 0x4
-.global lbl_80667BB0
-lbl_80667BB0:
+.global THD_TIME_TO_DVD_STOP
+THD_TIME_TO_DVD_STOP:
 	.skip 0x4
-.global lbl_80667BB4
-lbl_80667BB4:
+.global _gIdleCount_dimming
+_gIdleCount_dimming:
 	.skip 0x4
-.global lbl_80667BB8
-lbl_80667BB8:
+.global _gIdleCount_dvd
+_gIdleCount_dvd:
 	.skip 0x4
 .global lbl_80667BBC
 lbl_80667BBC:

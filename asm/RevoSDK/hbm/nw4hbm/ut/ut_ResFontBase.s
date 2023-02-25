@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.fn func_80338AC0, global
+.fn __ct__Q46nw4hbm2ut6detail11ResFontBaseFv, global
 /* 80338AC0 00302080  3C 80 80 55 */	lis r4, __vt__8054EE18@ha
 /* 80338AC4 00302084  3C E0 80 55 */	lis r7, lbl_8054EDB0@ha
 /* 80338AC8 00302088  38 84 EE 18 */	addi r4, r4, __vt__8054EE18@l
@@ -21,10 +21,10 @@
 /* 80338AF8 003020B8  90 03 00 10 */	stw r0, 0x10(r3)
 /* 80338AFC 003020BC  90 03 00 14 */	stw r0, 0x14(r3)
 /* 80338B00 003020C0  4E 80 00 20 */	blr 
-.endfn func_80338AC0
+.endfn __ct__Q46nw4hbm2ut6detail11ResFontBaseFv
 
 .balign 16, 0
-.fn func_80338B10, global
+.fn __dt__Q46nw4hbm2ut6detail11ResFontBaseFv, global
 /* 80338B10 003020D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80338B14 003020D4  7C 08 02 A6 */	mflr r0
 /* 80338B18 003020D8  2C 03 00 00 */	cmpwi r3, 0
@@ -42,112 +42,112 @@
 /* 80338B44 00302104  7C 08 03 A6 */	mtlr r0
 /* 80338B48 00302108  38 21 00 10 */	addi r1, r1, 0x10
 /* 80338B4C 0030210C  4E 80 00 20 */	blr 
-.endfn func_80338B10
+.endfn __dt__Q46nw4hbm2ut6detail11ResFontBaseFv
 
 .balign 16, 0
-.fn func_80338B50, global
+.fn SetResourceBuffer__Q46nw4hbm2ut6detail11ResFontBaseFPvPQ36nw4hbm2ut15FontInformation, global
 /* 80338B50 00302110  90 83 00 10 */	stw r4, 0x10(r3)
 /* 80338B54 00302114  90 A3 00 14 */	stw r5, 0x14(r3)
 /* 80338B58 00302118  4E 80 00 20 */	blr 
-.endfn func_80338B50
+.endfn SetResourceBuffer__Q46nw4hbm2ut6detail11ResFontBaseFPvPQ36nw4hbm2ut15FontInformation
 
 .balign 16, 0
-.fn func_80338B60, global
+.fn GetWidth__Q46nw4hbm2ut6detail11ResFontBaseCFv, global
 /* 80338B60 00302120  80 63 00 14 */	lwz r3, 0x14(r3)
 /* 80338B64 00302124  88 63 00 15 */	lbz r3, 0x15(r3)
 /* 80338B68 00302128  4E 80 00 20 */	blr 
-.endfn func_80338B60
+.endfn GetWidth__Q46nw4hbm2ut6detail11ResFontBaseCFv
 
 .balign 16, 0
-.fn func_80338B70, global
+.fn GetHeight__Q46nw4hbm2ut6detail11ResFontBaseCFv, global
 /* 80338B70 00302130  80 63 00 14 */	lwz r3, 0x14(r3)
 /* 80338B74 00302134  88 63 00 14 */	lbz r3, 0x14(r3)
 /* 80338B78 00302138  4E 80 00 20 */	blr 
-.endfn func_80338B70
+.endfn GetHeight__Q46nw4hbm2ut6detail11ResFontBaseCFv
 
 .balign 16, 0
-.fn func_80338B80, global
+.fn GetAscent__Q46nw4hbm2ut6detail11ResFontBaseCFv, global
 /* 80338B80 00302140  80 63 00 14 */	lwz r3, 0x14(r3)
 /* 80338B84 00302144  88 63 00 16 */	lbz r3, 0x16(r3)
 /* 80338B88 00302148  4E 80 00 20 */	blr 
-.endfn func_80338B80
+.endfn GetAscent__Q46nw4hbm2ut6detail11ResFontBaseCFv
 
 .balign 16, 0
-.fn func_80338B90, global
+.fn GetDescent__Q46nw4hbm2ut6detail11ResFontBaseCFv, global
 /* 80338B90 00302150  80 83 00 14 */	lwz r4, 0x14(r3)
 /* 80338B94 00302154  88 64 00 16 */	lbz r3, 0x16(r4)
 /* 80338B98 00302158  88 04 00 14 */	lbz r0, 0x14(r4)
 /* 80338B9C 0030215C  7C 63 00 50 */	subf r3, r3, r0
 /* 80338BA0 00302160  4E 80 00 20 */	blr 
-.endfn func_80338B90
+.endfn GetDescent__Q46nw4hbm2ut6detail11ResFontBaseCFv
 
 .balign 16, 0
-.fn func_80338BB0, global
+.fn GetBaselinePos__Q46nw4hbm2ut6detail11ResFontBaseCFv, global
 /* 80338BB0 00302170  80 63 00 14 */	lwz r3, 0x14(r3)
 /* 80338BB4 00302174  80 63 00 08 */	lwz r3, 8(r3)
 /* 80338BB8 00302178  88 63 00 02 */	lbz r3, 2(r3)
 /* 80338BBC 0030217C  7C 63 07 74 */	extsb r3, r3
 /* 80338BC0 00302180  4E 80 00 20 */	blr 
-.endfn func_80338BB0
+.endfn GetBaselinePos__Q46nw4hbm2ut6detail11ResFontBaseCFv
 
 .balign 16, 0
-.fn func_80338BD0, global
+.fn GetCellHeight__Q46nw4hbm2ut6detail11ResFontBaseCFv, global
 /* 80338BD0 00302190  80 63 00 14 */	lwz r3, 0x14(r3)
 /* 80338BD4 00302194  80 63 00 08 */	lwz r3, 8(r3)
 /* 80338BD8 00302198  88 63 00 01 */	lbz r3, 1(r3)
 /* 80338BDC 0030219C  4E 80 00 20 */	blr 
-.endfn func_80338BD0
+.endfn GetCellHeight__Q46nw4hbm2ut6detail11ResFontBaseCFv
 
 .balign 16, 0
-.fn func_80338BE0, global
+.fn GetCellWidth__Q46nw4hbm2ut6detail11ResFontBaseCFv, global
 /* 80338BE0 003021A0  80 63 00 14 */	lwz r3, 0x14(r3)
 /* 80338BE4 003021A4  80 63 00 08 */	lwz r3, 8(r3)
 /* 80338BE8 003021A8  88 63 00 00 */	lbz r3, 0(r3)
 /* 80338BEC 003021AC  4E 80 00 20 */	blr 
-.endfn func_80338BE0
+.endfn GetCellWidth__Q46nw4hbm2ut6detail11ResFontBaseCFv
 
 .balign 16, 0
-.fn func_80338BF0, global
+.fn GetMaxCharWidth__Q46nw4hbm2ut6detail11ResFontBaseCFv, global
 /* 80338BF0 003021B0  80 63 00 14 */	lwz r3, 0x14(r3)
 /* 80338BF4 003021B4  80 63 00 08 */	lwz r3, 8(r3)
 /* 80338BF8 003021B8  88 63 00 03 */	lbz r3, 3(r3)
 /* 80338BFC 003021BC  4E 80 00 20 */	blr 
-.endfn func_80338BF0
+.endfn GetMaxCharWidth__Q46nw4hbm2ut6detail11ResFontBaseCFv
 
 .balign 16, 0
-.fn func_80338C00, global
+.fn GetType__Q46nw4hbm2ut6detail11ResFontBaseCFv, global
 /* 80338C00 003021C0  38 60 00 02 */	li r3, 2
 /* 80338C04 003021C4  4E 80 00 20 */	blr 
-.endfn func_80338C00
+.endfn GetType__Q46nw4hbm2ut6detail11ResFontBaseCFv
 
 .balign 16, 0
-.fn func_80338C10, global
+.fn GetTextureFormat__Q46nw4hbm2ut6detail11ResFontBaseCFv, global
 /* 80338C10 003021D0  80 63 00 14 */	lwz r3, 0x14(r3)
 /* 80338C14 003021D4  80 63 00 08 */	lwz r3, 8(r3)
 /* 80338C18 003021D8  A0 63 00 0A */	lhz r3, 0xa(r3)
 /* 80338C1C 003021DC  4E 80 00 20 */	blr 
-.endfn func_80338C10
+.endfn GetTextureFormat__Q46nw4hbm2ut6detail11ResFontBaseCFv
 
 .balign 16, 0
-.fn func_80338C20, global
+.fn GetLineFeed__Q46nw4hbm2ut6detail11ResFontBaseCFv, global
 /* 80338C20 003021E0  80 63 00 14 */	lwz r3, 0x14(r3)
 /* 80338C24 003021E4  88 63 00 01 */	lbz r3, 1(r3)
 /* 80338C28 003021E8  7C 63 07 74 */	extsb r3, r3
 /* 80338C2C 003021EC  4E 80 00 20 */	blr 
-.endfn func_80338C20
+.endfn GetLineFeed__Q46nw4hbm2ut6detail11ResFontBaseCFv
 
 .balign 16, 0
-.fn func_80338C30, global
+.fn GetDefaultCharWidths__Q46nw4hbm2ut6detail11ResFontBaseCFv, global
 /* 80338C30 003021F0  80 83 00 14 */	lwz r4, 0x14(r3)
 /* 80338C34 003021F4  A0 04 00 04 */	lhz r0, 4(r4)
 /* 80338C38 003021F8  54 03 80 1E */	slwi r3, r0, 0x10
 /* 80338C3C 003021FC  88 04 00 06 */	lbz r0, 6(r4)
 /* 80338C40 00302200  50 03 44 2E */	rlwimi r3, r0, 8, 0x10, 0x17
 /* 80338C44 00302204  4E 80 00 20 */	blr 
-.endfn func_80338C30
+.endfn GetDefaultCharWidths__Q46nw4hbm2ut6detail11ResFontBaseCFv
 
 .balign 16, 0
-.fn func_80338C50, global
+.fn SetDefaultCharWidths__Q46nw4hbm2ut6detail11ResFontBaseFRCQ36nw4hbm2ut10CharWidths, global
 /* 80338C50 00302210  80 63 00 14 */	lwz r3, 0x14(r3)
 /* 80338C54 00302214  88 04 00 00 */	lbz r0, 0(r4)
 /* 80338C58 00302218  98 03 00 04 */	stb r0, 4(r3)
@@ -156,10 +156,10 @@
 /* 80338C64 00302224  88 04 00 02 */	lbz r0, 2(r4)
 /* 80338C68 00302228  98 03 00 06 */	stb r0, 6(r3)
 /* 80338C6C 0030222C  4E 80 00 20 */	blr 
-.endfn func_80338C50
+.endfn SetDefaultCharWidths__Q46nw4hbm2ut6detail11ResFontBaseFRCQ36nw4hbm2ut10CharWidths
 
 .balign 16, 0
-.fn func_80338C70, global
+.fn SetAlternateChar__Q46nw4hbm2ut6detail11ResFontBaseFUs, global
 /* 80338C70 00302230  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80338C74 00302234  7C 08 02 A6 */	mflr r0
 /* 80338C78 00302238  7C 85 23 78 */	mr r5, r4
@@ -179,7 +179,7 @@
 /* 80338CAC 0030226C  41 81 00 18 */	bgt .L_80338CC4
 /* 80338CB0 00302270  7F E3 FB 78 */	mr r3, r31
 /* 80338CB4 00302274  7C C4 33 78 */	mr r4, r6
-/* 80338CB8 00302278  48 00 02 79 */	bl func_80338F30
+/* 80338CB8 00302278  48 00 02 79 */	bl FindGlyphIndex__Q46nw4hbm2ut6detail11ResFontBaseCFPCQ36nw4hbm2ut11FontCodeMapUs
 /* 80338CBC 0030227C  7C 65 1B 78 */	mr r5, r3
 /* 80338CC0 00302280  48 00 00 18 */	b .L_80338CD8
 .L_80338CC4:
@@ -205,17 +205,17 @@
 /* 80338D00 003022C0  7C 08 03 A6 */	mtlr r0
 /* 80338D04 003022C4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80338D08 003022C8  4E 80 00 20 */	blr 
-.endfn func_80338C70
+.endfn SetAlternateChar__Q46nw4hbm2ut6detail11ResFontBaseFUs
 
 .balign 16, 0
-.fn func_80338D10, global
+.fn SetLineFeed__Q46nw4hbm2ut6detail11ResFontBaseFi, global
 /* 80338D10 003022D0  80 63 00 14 */	lwz r3, 0x14(r3)
 /* 80338D14 003022D4  98 83 00 01 */	stb r4, 1(r3)
 /* 80338D18 003022D8  4E 80 00 20 */	blr 
-.endfn func_80338D10
+.endfn SetLineFeed__Q46nw4hbm2ut6detail11ResFontBaseFi
 
 .balign 16, 0
-.fn func_80338D20, global
+.fn GetCharWidth__Q46nw4hbm2ut6detail11ResFontBaseCFUs, global
 /* 80338D20 003022E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80338D24 003022E4  7C 08 02 A6 */	mflr r0
 /* 80338D28 003022E8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -233,10 +233,10 @@
 /* 80338D58 00302318  7C 08 03 A6 */	mtlr r0
 /* 80338D5C 0030231C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80338D60 00302320  4E 80 00 20 */	blr 
-.endfn func_80338D20
+.endfn GetCharWidth__Q46nw4hbm2ut6detail11ResFontBaseCFUs
 
 .balign 16, 0
-.fn func_80338D70, global
+.fn GetCharWidths__Q46nw4hbm2ut6detail11ResFontBaseCFUs, global
 /* 80338D70 00302330  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80338D74 00302334  7C 08 02 A6 */	mflr r0
 /* 80338D78 00302338  7C 85 23 78 */	mr r5, r4
@@ -256,7 +256,7 @@
 /* 80338DAC 0030236C  41 81 00 14 */	bgt .L_80338DC0
 /* 80338DB0 00302370  7F E3 FB 78 */	mr r3, r31
 /* 80338DB4 00302374  7C C4 33 78 */	mr r4, r6
-/* 80338DB8 00302378  48 00 01 79 */	bl func_80338F30
+/* 80338DB8 00302378  48 00 01 79 */	bl FindGlyphIndex__Q46nw4hbm2ut6detail11ResFontBaseCFPCQ36nw4hbm2ut11FontCodeMapUs
 /* 80338DBC 0030237C  48 00 00 18 */	b .L_80338DD4
 .L_80338DC0:
 /* 80338DC0 00302380  80 C6 00 08 */	lwz r6, 8(r6)
@@ -308,10 +308,10 @@
 /* 80338E58 00302418  7C 08 03 A6 */	mtlr r0
 /* 80338E5C 0030241C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80338E60 00302420  4E 80 00 20 */	blr 
-.endfn func_80338D70
+.endfn GetCharWidths__Q46nw4hbm2ut6detail11ResFontBaseCFUs
 
 .balign 16, 0
-.fn func_80338E70, global
+.fn GetGlyph__Q46nw4hbm2ut6detail11ResFontBaseCFPQ36nw4hbm2ut5GlyphUs, global
 /* 80338E70 00302430  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80338E74 00302434  7C 08 02 A6 */	mflr r0
 /* 80338E78 00302438  90 01 00 14 */	stw r0, 0x14(r1)
@@ -330,7 +330,7 @@
 /* 80338EA8 00302468  7C 05 00 40 */	cmplw r5, r0
 /* 80338EAC 0030246C  41 81 00 14 */	bgt .L_80338EC0
 /* 80338EB0 00302470  7F C3 F3 78 */	mr r3, r30
-/* 80338EB4 00302474  48 00 00 7D */	bl func_80338F30
+/* 80338EB4 00302474  48 00 00 7D */	bl FindGlyphIndex__Q46nw4hbm2ut6detail11ResFontBaseCFPCQ36nw4hbm2ut11FontCodeMapUs
 /* 80338EB8 00302478  7C 65 1B 78 */	mr r5, r3
 /* 80338EBC 0030247C  48 00 00 18 */	b .L_80338ED4
 .L_80338EC0:
@@ -352,24 +352,24 @@
 /* 80338EF0 003024B0  A0 A5 00 02 */	lhz r5, 2(r5)
 .L_80338EF4:
 /* 80338EF4 003024B4  54 A5 04 3E */	clrlwi r5, r5, 0x10
-/* 80338EF8 003024B8  48 00 01 09 */	bl func_80339000
+/* 80338EF8 003024B8  48 00 01 09 */	bl GetGlyphFromIndex__Q46nw4hbm2ut6detail11ResFontBaseCFPQ36nw4hbm2ut5GlyphUs
 /* 80338EFC 003024BC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80338F00 003024C0  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80338F04 003024C4  83 C1 00 08 */	lwz r30, 8(r1)
 /* 80338F08 003024C8  7C 08 03 A6 */	mtlr r0
 /* 80338F0C 003024CC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80338F10 003024D0  4E 80 00 20 */	blr 
-.endfn func_80338E70
+.endfn GetGlyph__Q46nw4hbm2ut6detail11ResFontBaseCFPQ36nw4hbm2ut5GlyphUs
 
 .balign 16, 0
-.fn func_80338F20, global
+.fn GetEncoding__Q46nw4hbm2ut6detail11ResFontBaseCFv, global
 /* 80338F20 003024E0  80 63 00 14 */	lwz r3, 0x14(r3)
 /* 80338F24 003024E4  88 63 00 07 */	lbz r3, 7(r3)
 /* 80338F28 003024E8  4E 80 00 20 */	blr 
-.endfn func_80338F20
+.endfn GetEncoding__Q46nw4hbm2ut6detail11ResFontBaseCFv
 
 .balign 16, 0
-.fn func_80338F30, global
+.fn FindGlyphIndex__Q46nw4hbm2ut6detail11ResFontBaseCFPCQ36nw4hbm2ut11FontCodeMapUs, global
 /* 80338F30 003024F0  A0 04 00 04 */	lhz r0, 4(r4)
 /* 80338F34 003024F4  3C 60 00 01 */	lis r3, 0x0000FFFF@ha
 /* 80338F38 003024F8  38 63 FF FF */	addi r3, r3, 0x0000FFFF@l
@@ -402,7 +402,7 @@
 /* 80338F98 00302558  54 00 10 3A */	slwi r0, r0, 2
 /* 80338F9C 0030255C  7C 86 02 14 */	add r4, r6, r0
 /* 80338FA0 00302560  38 C4 00 02 */	addi r6, r4, 2
-/* 80338FA4 00302564  48 00 00 4C */	b func_80338FF0
+/* 80338FA4 00302564  48 00 00 4C */	b .L_80338FF0
 .L_80338FA8:
 /* 80338FA8 00302568  7C 07 30 50 */	subf r0, r7, r6
 /* 80338FAC 0030256C  7C 00 16 70 */	srawi r0, r0, 2
@@ -415,26 +415,23 @@
 /* 80338FC8 00302588  7C 00 28 40 */	cmplw r0, r5
 /* 80338FCC 0030258C  40 80 00 0C */	bge .L_80338FD8
 /* 80338FD0 00302590  38 E4 00 04 */	addi r7, r4, 4
-/* 80338FD4 00302594  48 00 00 1C */	b func_80338FF0
+/* 80338FD4 00302594  48 00 00 1C */	b .L_80338FF0
 .L_80338FD8:
 /* 80338FD8 00302598  7C 05 00 40 */	cmplw r5, r0
 /* 80338FDC 0030259C  40 80 00 0C */	bge .L_80338FE8
 /* 80338FE0 003025A0  38 C4 FF FC */	addi r6, r4, -4
-/* 80338FE4 003025A4  48 00 00 0C */	b func_80338FF0
+/* 80338FE4 003025A4  48 00 00 0C */	b .L_80338FF0
 .L_80338FE8:
 /* 80338FE8 003025A8  A0 64 00 02 */	lhz r3, 2(r4)
 /* 80338FEC 003025AC  4E 80 00 20 */	blr
-.endfn func_80338F30
-
-
-.fn func_80338FF0, global
+.L_80338FF0:
 /* 80338FF0 003025B0  7C 07 30 40 */	cmplw r7, r6
 /* 80338FF4 003025B4  40 81 FF B4 */	ble .L_80338FA8
 /* 80338FF8 003025B8  4E 80 00 20 */	blr 
-.endfn func_80338FF0
+.endfn FindGlyphIndex__Q46nw4hbm2ut6detail11ResFontBaseCFPCQ36nw4hbm2ut11FontCodeMapUs
 
 .balign 16, 0
-.fn func_80339000, global
+.fn GetGlyphFromIndex__Q46nw4hbm2ut6detail11ResFontBaseCFPQ36nw4hbm2ut5GlyphUs, global
 /* 80339000 003025C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80339004 003025C4  81 83 00 14 */	lwz r12, 0x14(r3)
 /* 80339008 003025C8  93 E1 00 0C */	stw r31, 0xc(r1)
@@ -505,102 +502,15 @@
 /* 803390FC 003026BC  83 C1 00 08 */	lwz r30, 8(r1)
 /* 80339100 003026C0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80339104 003026C4  4E 80 00 20 */	blr 
-.endfn func_80339000
+.endfn GetGlyphFromIndex__Q46nw4hbm2ut6detail11ResFontBaseCFPQ36nw4hbm2ut5GlyphUs
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
-
-
-.global lbl_8054ECA0
-lbl_8054ECA0:
-	.4byte 0
-	.4byte 0xFFFFFFFF
-	.4byte func_80336970
-	.4byte 0
-	.4byte 0xFFFFFFFF
-	.4byte func_803369F0
-	.4byte 0
-	.4byte 0xFFFFFFFF
-	.4byte func_80336A30
-	.4byte 0
-	.4byte 0xFFFFFFFF
-	.4byte func_80336A10
-
-
-.global __vt__8054ECD0
-__vt__8054ECD0:
-	.4byte lbl_8054ED50
-	.4byte 0
-	.4byte func_80338800
-	.4byte func_80338B60
-	.4byte func_80338B70
-	.4byte func_80338B80
-	.4byte func_80338B90
-	.4byte func_80338BB0
-	.4byte func_80338BD0
-	.4byte func_80338BE0
-	.4byte func_80338BF0
-	.4byte func_80338C00
-	.4byte func_80338C10
-	.4byte func_80338C20
-	.4byte func_80338C30
-	.4byte func_80338C50
-	.4byte func_80338C70
-	.4byte func_80338D10
-	.4byte func_80338D20
-	.4byte func_80338D70
-	.4byte func_80338E70
-	.4byte func_80338F20
-
-#dol offset: 0x54ae28
-.global lbl_8054ED28
-lbl_8054ED28:
-	.asciz "nw4hbm::ut::ResFont"
-
-.global lbl_8054ED3C
-lbl_8054ED3C:
-	.4byte lbl_8054EDA8
-	.4byte 0
-	.4byte lbl_8054ED88
-	.4byte 0
-	.4byte 0
-
-.global lbl_8054ED50
-lbl_8054ED50:
-	.4byte lbl_8054ED28
-	.4byte lbl_8054ED3C
-
-.global lbl_8054ED58
-lbl_8054ED58:
-	.asciz "nw4hbm::ut::detail::ResFontBase"
-
-.global lbl_8054ED78
-lbl_8054ED78:
-	.4byte lbl_8054EDA8
-	.4byte 0
-	.4byte 0
-	.4byte 0
-
-.global lbl_8054ED88
-lbl_8054ED88:
-	.4byte lbl_8054ED58
-	.4byte lbl_8054ED78
-
-.global lbl_8054ED90
-lbl_8054ED90:
-	.asciz "nw4hbm::ut::Font"
-	.balign 4
-	.4byte 0
-
-.global lbl_8054EDA8
-lbl_8054EDA8:
-	.4byte lbl_8054ED90
-	.4byte 0
 
 .global lbl_8054EDB0
 lbl_8054EDB0:
 	.4byte 0
 	.4byte 0xFFFFFFFF
-	.4byte func_80336A10
+	.4byte ReadNextCharCP1252__Q36nw4hbm2ut14CharStrmReaderFv
 	.4byte 0
 
 
@@ -608,33 +518,33 @@ lbl_8054EDB0:
 lbl_8054EDC0:
 	.4byte lbl_8054ED88
 	.4byte 0
-	.4byte func_80338B10
-	.4byte func_80338B60
-	.4byte func_80338B70
-	.4byte func_80338B80
-	.4byte func_80338B90
-	.4byte func_80338BB0
-	.4byte func_80338BD0
-	.4byte func_80338BE0
-	.4byte func_80338BF0
-	.4byte func_80338C00
-	.4byte func_80338C10
-	.4byte func_80338C20
-	.4byte func_80338C30
-	.4byte func_80338C50
-	.4byte func_80338C70
-	.4byte func_80338D10
-	.4byte func_80338D20
-	.4byte func_80338D70
-	.4byte func_80338E70
-	.4byte func_80338F20
+	.4byte __dt__Q46nw4hbm2ut6detail11ResFontBaseFv
+	.4byte GetWidth__Q46nw4hbm2ut6detail11ResFontBaseCFv
+	.4byte GetHeight__Q46nw4hbm2ut6detail11ResFontBaseCFv
+	.4byte GetAscent__Q46nw4hbm2ut6detail11ResFontBaseCFv
+	.4byte GetDescent__Q46nw4hbm2ut6detail11ResFontBaseCFv
+	.4byte GetBaselinePos__Q46nw4hbm2ut6detail11ResFontBaseCFv
+	.4byte GetCellHeight__Q46nw4hbm2ut6detail11ResFontBaseCFv
+	.4byte GetCellWidth__Q46nw4hbm2ut6detail11ResFontBaseCFv
+	.4byte GetMaxCharWidth__Q46nw4hbm2ut6detail11ResFontBaseCFv
+	.4byte GetType__Q46nw4hbm2ut6detail11ResFontBaseCFv
+	.4byte GetTextureFormat__Q46nw4hbm2ut6detail11ResFontBaseCFv
+	.4byte GetLineFeed__Q46nw4hbm2ut6detail11ResFontBaseCFv
+	.4byte GetDefaultCharWidths__Q46nw4hbm2ut6detail11ResFontBaseCFv
+	.4byte SetDefaultCharWidths__Q46nw4hbm2ut6detail11ResFontBaseFRCQ36nw4hbm2ut10CharWidths
+	.4byte SetAlternateChar__Q46nw4hbm2ut6detail11ResFontBaseFUs
+	.4byte SetLineFeed__Q46nw4hbm2ut6detail11ResFontBaseFi
+	.4byte GetCharWidth__Q46nw4hbm2ut6detail11ResFontBaseCFUs
+	.4byte GetCharWidths__Q46nw4hbm2ut6detail11ResFontBaseCFUs
+	.4byte GetGlyph__Q46nw4hbm2ut6detail11ResFontBaseCFPQ36nw4hbm2ut5GlyphUs
+	.4byte GetEncoding__Q46nw4hbm2ut6detail11ResFontBaseCFv
 
 
 .global __vt__8054EE18
 __vt__8054EE18:
 	.4byte lbl_8054EDA8
 	.4byte 0
-	.4byte func_80333F60
+	.4byte __dt__Q36nw4hbm2ut4FontFv
 	.4byte 0
 	.4byte 0
 	.4byte 0

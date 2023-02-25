@@ -10,9 +10,9 @@
 .fn ADXWII_SetupDvdFs, global
 /* 8039B298 00364858  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8039B29C 0036485C  7C 08 02 A6 */	mflr r0
-/* 8039B2A0 00364860  3C 80 80 52 */	lis r4, lbl_8051CD84@ha
+/* 8039B2A0 00364860  3C 80 80 52 */	lis r4, adxwiisdk_build@ha
 /* 8039B2A4 00364864  90 01 00 24 */	stw r0, 0x24(r1)
-/* 8039B2A8 00364868  80 04 CD 84 */	lwz r0, lbl_8051CD84@l(r4)
+/* 8039B2A8 00364868  80 04 CD 84 */	lwz r0, adxwiisdk_build@l(r4)
 /* 8039B2AC 0036486C  38 80 00 00 */	li r4, 0
 /* 8039B2B0 00364870  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8039B2B4 00364874  93 C1 00 18 */	stw r30, 0x18(r1)
@@ -69,12 +69,11 @@ lbl_8051CD48:
 	.asciz "\nADXWIISDK Ver.30Jul2008Patch02 Build:Nov 13 2008 10:53:01\n"
 
 
-.global lbl_8051CD84
-lbl_8051CD84:
+adxwiisdk_build:
 	.4byte lbl_8051CD48
 
 
 .global lbl_8051CD88
 lbl_8051CD88:
-	.4byte 0x4D465300
-	.4byte 0x47434400
+	.asciz "MFS"
+	.asciz "GCD"

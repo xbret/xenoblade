@@ -564,15 +564,15 @@
 /* 8041B2F4 003E48B4  4E 80 00 20 */	blr
 .endfn GetRuntimeTypeInfo__Q44nw4r3snd6detail8SeqSoundCFv
 
-.fn sinit_8041B2F8, local
+.fn "__sinit_\snd_SeqSound_cpp", local
 /* 8041B2F8 003E48B8  38 0D BC 30 */	addi r0, r13, lbl_80667DB0@sda21
 /* 8041B2FC 003E48BC  90 0D BC 58 */	stw r0, lbl_80667DD8@sda21(r13)
 /* 8041B300 003E48C0  4E 80 00 20 */	blr
-.endfn sinit_8041B2F8
+.endfn "__sinit_\snd_SeqSound_cpp"
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 
-.4byte sinit_8041B2F8
+.4byte "__sinit_\snd_SeqSound_cpp"
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

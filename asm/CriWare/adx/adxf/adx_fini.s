@@ -9,8 +9,8 @@
 /* 8037C62C 00345BEC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8037C630 00345BF0  38 63 8E 20 */	addi r3, r3, adxf_build@l
 /* 8037C634 00345BF4  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8037C638 00345BF8  3F E0 80 5E */	lis r31, lbl_805E3428@ha
-/* 8037C63C 00345BFC  3B FF 34 28 */	addi r31, r31, lbl_805E3428@l
+/* 8037C638 00345BF8  3F E0 80 5E */	lis r31, adxf_init_cnt@ha
+/* 8037C63C 00345BFC  3B FF 34 28 */	addi r31, r31, adxf_init_cnt@l
 /* 8037C640 00345C00  80 1F 00 00 */	lwz r0, 0(r31)
 /* 8037C644 00345C04  90 7F 00 04 */	stw r3, 4(r31)
 /* 8037C648 00345C08  2C 00 00 00 */	cmpwi r0, 0
@@ -56,8 +56,8 @@
 /* 8037C6D8 00345C98  7C 08 02 A6 */	mflr r0
 /* 8037C6DC 00345C9C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8037C6E0 00345CA0  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8037C6E4 00345CA4  3F E0 80 5E */	lis r31, lbl_805E3428@ha
-/* 8037C6E8 00345CA8  3B FF 34 28 */	addi r31, r31, lbl_805E3428@l
+/* 8037C6E4 00345CA4  3F E0 80 5E */	lis r31, adxf_init_cnt@ha
+/* 8037C6E8 00345CA8  3B FF 34 28 */	addi r31, r31, adxf_init_cnt@l
 /* 8037C6EC 00345CAC  80 1F 00 00 */	lwz r0, 0(r31)
 /* 8037C6F0 00345CB0  34 00 FF FF */	addic. r0, r0, -1
 /* 8037C6F4 00345CB4  90 1F 00 00 */	stw r0, 0(r31)
@@ -107,6 +107,49 @@ adxf_build:
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805E3428
-lbl_805E3428:
-	.skip 0x8
+.global adxf_init_cnt
+adxf_init_cnt:
+	.skip 0x4
+
+cri_verstr_ptr:
+	.skip 0x4
+
+.global adxf_obj
+adxf_obj:
+	.skip 0x340
+
+.global adxf_ptinfo
+adxf_ptinfo:
+	.skip 0x400
+
+.global adxf_cmd_hstry
+adxf_cmd_hstry:
+	.skip 0x100
+
+.global adxf_cmd_ncall
+adxf_cmd_ncall:
+	.skip 0x20
+
+.global adxf_hstry_no
+adxf_hstry_no:
+	.skip 0x4
+
+.global adxf_ocbi_fg
+adxf_ocbi_fg:
+	.skip 0x4
+
+.global adxf_flno
+adxf_flno:
+	.skip 0x4
+
+.global adxf_ldptnw_hn
+adxf_ldptnw_hn:
+	.skip 0x4
+
+.global adxf_ldptnw_ptid
+adxf_ldptnw_ptid:
+	.skip 0x4
+
+.global adxf_ldptnw_last_stat
+adxf_ldptnw_last_stat:
+	.skip 0x4

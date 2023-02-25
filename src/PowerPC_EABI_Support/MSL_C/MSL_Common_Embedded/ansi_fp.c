@@ -21,17 +21,14 @@ static int __count_trailing_zero(double n){
 }
 
 static int __must_round(const decimal* d, int digits){
-    //regswap fun here
     u8 const* sigText = d->sig.text + digits;
-    u8 const* end;
             
     if (*sigText > 5) {
         return 1;
     } else if (*sigText < 5) {
         return -1;
     } 
-        end = d->sig.text + d->sig.length;
-        for(sigText++; sigText < end; sigText++){
+        for(sigText++; sigText < d->sig.text + d->sig.length; sigText++){
             if (*sigText != 0) {
                return 1;
             }
@@ -42,7 +39,6 @@ static int __must_round(const decimal* d, int digits){
         }
 
         return -1;
-    
 }
 
 static void __dorounddecup(decimal* d, int digits){

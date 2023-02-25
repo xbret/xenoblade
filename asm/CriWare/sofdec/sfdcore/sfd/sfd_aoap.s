@@ -347,8 +347,8 @@
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
 
-.global lbl_8051FF48
-lbl_8051FF48:
+.global SFD_tr_ao_auto_p
+SFD_tr_ao_auto_p:
 	.4byte SFAOAP_Init
 	.4byte SFAOAP_Finish
 	.4byte SFAOAP_ExecServer

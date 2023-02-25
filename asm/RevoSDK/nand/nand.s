@@ -2,6 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+#nandCreate is at the start, but it got inlined here
+
 .balign 16, 0
 .fn NANDPrivateCreate, global
 /* 8034E730 00317CF0  94 21 FF 90 */	stwu r1, -0x70(r1)
@@ -71,7 +73,7 @@
 .endfn NANDPrivateCreate
 
 .balign 16, 0
-.fn func_8034E820, global
+.fn NANDCreateAsync, global
 /* 8034E820 00317DE0  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8034E824 00317DE4  7C 08 02 A6 */	mflr r0
 /* 8034E828 00317DE8  90 01 00 74 */	stw r0, 0x74(r1)
@@ -147,7 +149,7 @@
 /* 8034E92C 00317EEC  7C 08 03 A6 */	mtlr r0
 /* 8034E930 00317EF0  38 21 00 70 */	addi r1, r1, 0x70
 /* 8034E934 00317EF4  4E 80 00 20 */	blr 
-.endfn func_8034E820
+.endfn NANDCreateAsync
 
 .balign 16, 0
 .fn NANDPrivateCreateAsync, global

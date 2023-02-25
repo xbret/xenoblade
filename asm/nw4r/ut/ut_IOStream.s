@@ -29,12 +29,12 @@
 /* 8042BDEC 003F53AC  4E 80 00 20 */	blr
 .endfn func_8042BDE8
 
-.fn sinit_8042BDF0, local
+.fn "__sinit_\ut_IOStream_cpp", local
 /* 8042BDF0 003F53B0  38 00 00 00 */	li r0, 0
 /* 8042BDF4 003F53B4  90 0D BC A0 */	stw r0, lbl_80667E20@sda21(r13)
 /* 8042BDF8 003F53B8  4E 80 00 20 */	blr
-.endfn sinit_8042BDF0
+.endfn "__sinit_\ut_IOStream_cpp"
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 
-.4byte sinit_8042BDF0
+.4byte "__sinit_\ut_IOStream_cpp"

@@ -3,16 +3,16 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.fn func_803409B0, global
+.fn __HBMSYNRemoveSynthFromList__FP11HBMSYNSYNTH, global
 /* 803409B0 00309F70  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803409B4 00309F74  7C 08 02 A6 */	mflr r0
 /* 803409B8 00309F78  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803409BC 00309F7C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 803409C0 00309F80  7C 7F 1B 78 */	mr r31, r3
 /* 803409C4 00309F84  48 01 7F ED */	bl OSDisableInterrupts
-/* 803409C8 00309F88  3C 80 80 5D */	lis r4, lbl_805CDEE8@ha
+/* 803409C8 00309F88  3C 80 80 5D */	lis r4, __HBMSYNSynthList@ha
 /* 803409CC 00309F8C  38 A0 00 00 */	li r5, 0
-/* 803409D0 00309F90  80 C4 DE E8 */	lwz r6, lbl_805CDEE8@l(r4)
+/* 803409D0 00309F90  80 C4 DE E8 */	lwz r6, __HBMSYNSynthList@l(r4)
 /* 803409D4 00309F94  38 80 00 00 */	li r4, 0
 /* 803409D8 00309F98  48 00 00 30 */	b .L_80340A08
 /* 803409DC 00309F9C  60 00 00 00 */	nop 
@@ -37,24 +37,24 @@
 /* 80340A18 00309FD8  38 00 00 00 */	li r0, 0
 /* 80340A1C 00309FDC  90 04 00 00 */	stw r0, 0(r4)
 .L_80340A20:
-/* 80340A20 00309FE0  3C 80 80 5D */	lis r4, lbl_805CDEE8@ha
-/* 80340A24 00309FE4  90 A4 DE E8 */	stw r5, lbl_805CDEE8@l(r4)
+/* 80340A20 00309FE0  3C 80 80 5D */	lis r4, __HBMSYNSynthList@ha
+/* 80340A24 00309FE4  90 A4 DE E8 */	stw r5, __HBMSYNSynthList@l(r4)
 /* 80340A28 00309FE8  48 01 7F C9 */	bl OSRestoreInterrupts
 /* 80340A2C 00309FEC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80340A30 00309FF0  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80340A34 00309FF4  7C 08 03 A6 */	mtlr r0
 /* 80340A38 00309FF8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80340A3C 00309FFC  4E 80 00 20 */	blr 
-.endfn func_803409B0
+.endfn __HBMSYNRemoveSynthFromList__FP11HBMSYNSYNTH
 
 .balign 16, 0
-.fn func_80340A40, global
+.fn HBMSYNInit, global
 /* 80340A40 0030A000  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80340A44 0030A004  7C 08 02 A6 */	mflr r0
 /* 80340A48 0030A008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80340A4C 0030A00C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80340A50 0030A010  3F E0 80 5D */	lis r31, lbl_805CDEE8@ha
-/* 80340A54 0030A014  3B FF DE E8 */	addi r31, r31, lbl_805CDEE8@l
+/* 80340A50 0030A010  3F E0 80 5D */	lis r31, __HBMSYNSynthList@ha
+/* 80340A54 0030A014  3B FF DE E8 */	addi r31, r31, __HBMSYNSynthList@l
 /* 80340A58 0030A018  4B F9 16 A9 */	bl AXIsInit
 /* 80340A5C 0030A01C  2C 03 00 00 */	cmpwi r3, 0
 /* 80340A60 0030A020  41 82 00 A4 */	beq .L_80340B04
@@ -104,20 +104,20 @@
 /* 80340B0C 0030A0CC  7C 08 03 A6 */	mtlr r0
 /* 80340B10 0030A0D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80340B14 0030A0D4  4E 80 00 20 */	blr 
-.endfn func_80340A40
+.endfn HBMSYNInit
 
 .balign 16, 0
-.fn func_80340B20, global
+.fn HBMSYNQuit, global
 /* 80340B20 0030A0E0  3C 80 80 5D */	lis r4, lbl_805CDEEC@ha
 /* 80340B24 0030A0E4  3C 60 80 5D */	lis r3, lbl_805CE3B0@ha
 /* 80340B28 0030A0E8  38 00 00 00 */	li r0, 0
 /* 80340B2C 0030A0EC  90 04 DE EC */	stw r0, lbl_805CDEEC@l(r4)
 /* 80340B30 0030A0F0  90 03 E3 B0 */	stw r0, lbl_805CE3B0@l(r3)
 /* 80340B34 0030A0F4  4E 80 00 20 */	blr 
-.endfn func_80340B20
+.endfn HBMSYNQuit
 
 .balign 16, 0
-.fn func_80340B40, global
+.fn HBMSYNRunAudioFrame, global
 /* 80340B40 0030A100  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80340B44 0030A104  7C 08 02 A6 */	mflr r0
 /* 80340B48 0030A108  3C 60 80 5D */	lis r3, lbl_805CE3B0@ha
@@ -129,12 +129,12 @@
 /* 80340B60 0030A120  3B E0 00 00 */	li r31, 0
 .L_80340B64:
 /* 80340B64 0030A124  7F E3 FB 78 */	mr r3, r31
-/* 80340B68 0030A128  48 00 14 69 */	bl func_80341FD0
+/* 80340B68 0030A128  48 00 14 69 */	bl __HBMSYNServiceVoice
 /* 80340B6C 0030A12C  3B FF 00 01 */	addi r31, r31, 1
 /* 80340B70 0030A130  2C 1F 00 10 */	cmpwi r31, 0x10
 /* 80340B74 0030A134  41 80 FF F0 */	blt .L_80340B64
-/* 80340B78 0030A138  3C 60 80 5D */	lis r3, lbl_805CDEE8@ha
-/* 80340B7C 0030A13C  83 E3 DE E8 */	lwz r31, lbl_805CDEE8@l(r3)
+/* 80340B78 0030A138  3C 60 80 5D */	lis r3, __HBMSYNSynthList@ha
+/* 80340B7C 0030A13C  83 E3 DE E8 */	lwz r31, __HBMSYNSynthList@l(r3)
 /* 80340B80 0030A140  48 00 00 10 */	b .L_80340B90
 .L_80340B84:
 /* 80340B84 0030A144  7F E3 FB 78 */	mr r3, r31
@@ -149,10 +149,10 @@
 /* 80340BA0 0030A160  7C 08 03 A6 */	mtlr r0
 /* 80340BA4 0030A164  38 21 00 10 */	addi r1, r1, 0x10
 /* 80340BA8 0030A168  4E 80 00 20 */	blr 
-.endfn func_80340B40
+.endfn HBMSYNRunAudioFrame
 
 .balign 16, 0
-.fn func_80340BB0, global
+.fn HBMSYNInitSynth, global
 /* 80340BB0 0030A170  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80340BB4 0030A174  7C 08 02 A6 */	mflr r0
 /* 80340BB8 0030A178  3C E5 80 00 */	addis r7, r5, 0x8000
@@ -236,8 +236,8 @@
 /* 80340CE8 0030A2A8  28 05 00 10 */	cmplwi r5, 0x10
 /* 80340CEC 0030A2AC  41 80 FF 64 */	blt .L_80340C50
 /* 80340CF0 0030A2B0  48 01 7C C1 */	bl OSDisableInterrupts
-/* 80340CF4 0030A2B4  3C 80 80 5D */	lis r4, lbl_805CDEE8@ha
-/* 80340CF8 0030A2B8  80 04 DE E8 */	lwz r0, lbl_805CDEE8@l(r4)
+/* 80340CF4 0030A2B4  3C 80 80 5D */	lis r4, __HBMSYNSynthList@ha
+/* 80340CF8 0030A2B8  80 04 DE E8 */	lwz r0, __HBMSYNSynthList@l(r4)
 /* 80340CFC 0030A2BC  2C 00 00 00 */	cmpwi r0, 0
 /* 80340D00 0030A2C0  41 82 00 0C */	beq .L_80340D0C
 /* 80340D04 0030A2C4  90 1F 00 00 */	stw r0, 0(r31)
@@ -246,8 +246,8 @@
 /* 80340D0C 0030A2CC  38 00 00 00 */	li r0, 0
 /* 80340D10 0030A2D0  90 1F 00 00 */	stw r0, 0(r31)
 .L_80340D14:
-/* 80340D14 0030A2D4  3C 80 80 5D */	lis r4, lbl_805CDEE8@ha
-/* 80340D18 0030A2D8  93 E4 DE E8 */	stw r31, lbl_805CDEE8@l(r4)
+/* 80340D14 0030A2D4  3C 80 80 5D */	lis r4, __HBMSYNSynthList@ha
+/* 80340D18 0030A2D8  93 E4 DE E8 */	stw r31, __HBMSYNSynthList@l(r4)
 /* 80340D1C 0030A2DC  48 01 7C D5 */	bl OSRestoreInterrupts
 /* 80340D20 0030A2E0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80340D24 0030A2E4  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -255,7 +255,7 @@
 /* 80340D2C 0030A2EC  7C 08 03 A6 */	mtlr r0
 /* 80340D30 0030A2F0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80340D34 0030A2F4  4E 80 00 20 */	blr 
-.endfn func_80340BB0
+.endfn HBMSYNInitSynth
 
 .balign 16, 0
 .fn HBMSYNQuitSynth, global
@@ -295,7 +295,7 @@
 /* 80340DBC 0030A37C  41 80 FF C0 */	blt .L_80340D7C
 .L_80340DC0:
 /* 80340DC0 0030A380  7F 23 CB 78 */	mr r3, r25
-/* 80340DC4 0030A384  4B FF FB ED */	bl func_803409B0
+/* 80340DC4 0030A384  4B FF FB ED */	bl __HBMSYNRemoveSynthFromList__FP11HBMSYNSYNTH
 /* 80340DC8 0030A388  7F 63 DB 78 */	mr r3, r27
 /* 80340DCC 0030A38C  48 01 7C 25 */	bl OSRestoreInterrupts
 /* 80340DD0 0030A390  39 61 00 30 */	addi r11, r1, 0x30
@@ -307,7 +307,7 @@
 .endfn HBMSYNQuitSynth
 
 .balign 16, 0
-.fn func_80340DF0, global
+.fn HBMSYNMidiInput, global
 /* 80340DF0 0030A3B0  80 A3 03 FC */	lwz r5, 0x3fc(r3)
 /* 80340DF4 0030A3B4  88 04 00 00 */	lbz r0, 0(r4)
 /* 80340DF8 0030A3B8  98 05 00 00 */	stb r0, 0(r5)
@@ -328,19 +328,19 @@
 /* 80340E34 0030A3F4  38 04 00 01 */	addi r0, r4, 1
 /* 80340E38 0030A3F8  90 03 04 00 */	stw r0, 0x400(r3)
 /* 80340E3C 0030A3FC  4E 80 00 20 */	blr
-.endfn func_80340DF0
+.endfn HBMSYNMidiInput
 
 .balign 16, 0
-.fn func_80340E40, global
+.fn HBMSYNSetMasterVolume, global
 /* 80340E40 0030A400  54 80 80 1E */	slwi r0, r4, 0x10
 /* 80340E44 0030A404  90 03 00 68 */	stw r0, 0x68(r3)
 /* 80340E48 0030A408  4E 80 00 20 */	blr 
-.endfn func_80340E40
+.endfn HBMSYNSetMasterVolume
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805CDEE8
-lbl_805CDEE8:
+.global __HBMSYNSynthList
+__HBMSYNSynthList:
 	.skip 0x4
 .global lbl_805CDEEC
 lbl_805CDEEC:

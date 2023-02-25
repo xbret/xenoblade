@@ -4,10 +4,10 @@
 
 .balign 16, 0
 .fn __HBMSYNResetAllControllers, global
-/* 80340E50 0030A410  3C A0 80 55 */	lis r5, lbl_8054FC90@ha
+/* 80340E50 0030A410  3C A0 80 55 */	lis r5, __HBMSYNVolumeAttenuation@ha
 /* 80340E54 0030A414  38 00 00 02 */	li r0, 2
-/* 80340E58 0030A418  38 85 FC 90 */	addi r4, r5, lbl_8054FC90@l
-/* 80340E5C 0030A41C  80 E5 FC 90 */	lwz r7, lbl_8054FC90@l(r5)
+/* 80340E58 0030A418  38 85 FC 90 */	addi r4, r5, __HBMSYNVolumeAttenuation@l
+/* 80340E5C 0030A41C  80 E5 FC 90 */	lwz r7, __HBMSYNVolumeAttenuation@l(r5)
 /* 80340E60 0030A420  80 C4 01 90 */	lwz r6, 0x190(r4)
 /* 80340E64 0030A424  39 20 00 00 */	li r9, 0
 /* 80340E68 0030A428  38 80 00 40 */	li r4, 0x40
@@ -82,7 +82,7 @@
 /* 80340F6C 0030A52C  7C 7E F8 2E */	lwzx r3, r30, r31
 /* 80340F70 0030A530  2C 03 00 00 */	cmpwi r3, 0
 /* 80340F74 0030A534  41 82 00 10 */	beq .L_80340F84
-/* 80340F78 0030A538  48 00 10 49 */	bl func_80341FC0
+/* 80340F78 0030A538  48 00 10 49 */	bl __HBMSYNSetVoiceToRelease
 /* 80340F7C 0030A53C  38 00 00 00 */	li r0, 0
 /* 80340F80 0030A540  7C 1E F9 2E */	stwx r0, r30, r31
 .L_80340F84:
@@ -95,7 +95,7 @@
 /* 80340F9C 0030A55C  7C 7D 1B 78 */	mr r29, r3
 /* 80340FA0 0030A560  41 82 01 A4 */	beq .L_80341144
 /* 80340FA4 0030A564  80 63 00 18 */	lwz r3, 0x18(r3)
-/* 80340FA8 0030A568  4B FF F9 29 */	bl func_803408D0
+/* 80340FA8 0030A568  4B FF F9 29 */	bl HBMAllocIndex
 /* 80340FAC 0030A56C  2C 03 00 00 */	cmpwi r3, 0
 /* 80340FB0 0030A570  7C 7C 1B 78 */	mr r28, r3
 /* 80340FB4 0030A574  41 80 01 5C */	blt .L_80341110
@@ -146,18 +146,18 @@
 /* 80341060 0030A620  80 97 04 04 */	lwz r4, 0x404(r23)
 /* 80341064 0030A624  38 04 00 01 */	addi r0, r4, 1
 /* 80341068 0030A628  90 17 04 04 */	stw r0, 0x404(r23)
-/* 8034106C 0030A62C  48 00 08 B5 */	bl func_80341920
+/* 8034106C 0030A62C  48 00 08 B5 */	bl __HBMSYNSetupPitch
 /* 80341070 0030A630  7F 63 DB 78 */	mr r3, r27
-/* 80341074 0030A634  48 00 06 5D */	bl func_803416D0
+/* 80341074 0030A634  48 00 06 5D */	bl __HBMSYNSetupVolume
 /* 80341078 0030A638  7F 63 DB 78 */	mr r3, r27
-/* 8034107C 0030A63C  48 00 06 85 */	bl func_80341700
+/* 8034107C 0030A63C  48 00 06 85 */	bl __HBMSYNSetupPan
 /* 80341080 0030A640  7F 63 DB 78 */	mr r3, r27
 /* 80341084 0030A644  48 00 02 6D */	bl __HBMSYNSetupVolumeEnvelope
 /* 80341088 0030A648  7F 63 DB 78 */	mr r3, r27
-/* 8034108C 0030A64C  48 00 06 B5 */	bl func_80341740
+/* 8034108C 0030A64C  48 00 06 B5 */	bl __HBMSYNGetVoiceFader
 /* 80341090 0030A650  7C 79 1B 78 */	mr r25, r3
 /* 80341094 0030A654  7F 63 DB 78 */	mr r3, r27
-/* 80341098 0030A658  48 00 06 89 */	bl func_80341720
+/* 80341098 0030A658  48 00 06 89 */	bl __HBMSYNGetVoiceInput
 /* 8034109C 0030A65C  57 00 15 BA */	rlwinm r0, r24, 2, 0x16, 0x1d
 /* 803410A0 0030A660  7C 64 1B 78 */	mr r4, r3
 /* 803410A4 0030A664  7C D7 02 14 */	add r6, r23, r0
@@ -167,11 +167,11 @@
 /* 803410B4 0030A674  88 C5 00 EC */	lbz r6, 0xec(r5)
 /* 803410B8 0030A678  7F 27 CB 78 */	mr r7, r25
 /* 803410BC 0030A67C  7C 05 86 70 */	srawi r5, r0, 0x10
-/* 803410C0 0030A680  4B FF E2 51 */	bl func_8033F310
+/* 803410C0 0030A680  4B FF E2 51 */	bl HBMMIXInitChannel
 /* 803410C4 0030A684  7F 63 DB 78 */	mr r3, r27
 /* 803410C8 0030A688  48 00 0E 09 */	bl __HBMSYNSetupSample
 /* 803410CC 0030A68C  7F 63 DB 78 */	mr r3, r27
-/* 803410D0 0030A690  48 00 08 C1 */	bl func_80341990
+/* 803410D0 0030A690  48 00 08 C1 */	bl __HBMSYNSetupSrc
 /* 803410D4 0030A694  38 00 00 01 */	li r0, 1
 /* 803410D8 0030A698  B0 1D 00 38 */	sth r0, 0x38(r29)
 /* 803410DC 0030A69C  80 1D 00 1C */	lwz r0, 0x1c(r29)
@@ -184,7 +184,7 @@
 /* 803410F4 0030A6B4  7F A3 EB 78 */	mr r3, r29
 /* 803410F8 0030A6B8  4B FF EB 69 */	bl HBMMIXReleaseChannel
 /* 803410FC 0030A6BC  7F 83 E3 78 */	mr r3, r28
-/* 80341100 0030A6C0  4B FF F8 51 */	bl func_80340950
+/* 80341100 0030A6C0  4B FF F8 51 */	bl HBMFreeIndex
 /* 80341104 0030A6C4  7F A3 EB 78 */	mr r3, r29
 /* 80341108 0030A6C8  4B F9 12 F9 */	bl AXFreeVoice
 /* 8034110C 0030A6CC  48 00 00 38 */	b .L_80341144
@@ -200,7 +200,7 @@
 /* 8034112C 0030A6EC  80 77 04 08 */	lwz r3, 0x408(r23)
 /* 80341130 0030A6F0  2C 03 00 00 */	cmpwi r3, 0
 /* 80341134 0030A6F4  41 82 00 10 */	beq .L_80341144
-/* 80341138 0030A6F8  48 00 0E 89 */	bl func_80341FC0
+/* 80341138 0030A6F8  48 00 0E 89 */	bl __HBMSYNSetVoiceToRelease
 /* 8034113C 0030A6FC  38 00 00 00 */	li r0, 0
 /* 80341140 0030A700  90 17 04 08 */	stw r0, 0x408(r23)
 .L_80341144:
@@ -240,7 +240,7 @@
 /* 803411B8 0030A778  80 7F 04 08 */	lwz r3, 0x408(r31)
 /* 803411BC 0030A77C  2C 03 00 00 */	cmpwi r3, 0
 /* 803411C0 0030A780  41 82 00 A8 */	beq .L_80341268
-/* 803411C4 0030A784  48 00 0D FD */	bl func_80341FC0
+/* 803411C4 0030A784  48 00 0D FD */	bl __HBMSYNSetVoiceToRelease
 /* 803411C8 0030A788  38 00 00 00 */	li r0, 0
 /* 803411CC 0030A78C  90 1F 04 08 */	stw r0, 0x408(r31)
 /* 803411D0 0030A790  48 00 00 98 */	b .L_80341268
@@ -259,10 +259,10 @@
 /* 803411FC 0030A7BC  41 82 00 34 */	beq .L_80341230
 /* 80341200 0030A7C0  48 00 00 68 */	b .L_80341268
 .L_80341204:
-/* 80341204 0030A7C4  3C 80 80 55 */	lis r4, lbl_8054FC90@ha
+/* 80341204 0030A7C4  3C 80 80 55 */	lis r4, __HBMSYNVolumeAttenuation@ha
 /* 80341208 0030A7C8  54 E0 15 BA */	rlwinm r0, r7, 2, 0x16, 0x1d
 /* 8034120C 0030A7CC  54 C5 15 BA */	rlwinm r5, r6, 2, 0x16, 0x1d
-/* 80341210 0030A7D0  38 84 FC 90 */	addi r4, r4, lbl_8054FC90@l
+/* 80341210 0030A7D0  38 84 FC 90 */	addi r4, r4, __HBMSYNVolumeAttenuation@l
 /* 80341214 0030A7D4  7C 63 02 14 */	add r3, r3, r0
 /* 80341218 0030A7D8  7C 04 28 2E */	lwzx r0, r4, r5
 /* 8034121C 0030A7DC  90 03 00 6C */	stw r0, 0x6c(r3)
@@ -272,10 +272,10 @@
 /* 80341228 0030A7E8  98 C3 00 EC */	stb r6, 0xec(r3)
 /* 8034122C 0030A7EC  48 00 00 3C */	b .L_80341268
 .L_80341230:
-/* 80341230 0030A7F0  3C 80 80 55 */	lis r4, lbl_8054FC90@ha
+/* 80341230 0030A7F0  3C 80 80 55 */	lis r4, __HBMSYNVolumeAttenuation@ha
 /* 80341234 0030A7F4  54 E0 15 BA */	rlwinm r0, r7, 2, 0x16, 0x1d
 /* 80341238 0030A7F8  54 C5 15 BA */	rlwinm r5, r6, 2, 0x16, 0x1d
-/* 8034123C 0030A7FC  38 84 FC 90 */	addi r4, r4, lbl_8054FC90@l
+/* 8034123C 0030A7FC  38 84 FC 90 */	addi r4, r4, __HBMSYNVolumeAttenuation@l
 /* 80341240 0030A800  7C 63 02 14 */	add r3, r3, r0
 /* 80341244 0030A804  7C 04 28 2E */	lwzx r0, r4, r5
 /* 80341248 0030A808  90 03 00 AC */	stw r0, 0xac(r3)
@@ -326,3 +326,137 @@
 /* 803412E0 0030A8A0  38 21 00 10 */	addi r1, r1, 0x10
 /* 803412E4 0030A8A4  4E 80 00 20 */	blr 
 .endfn __HBMSYNRunInputBufferEvents
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __HBMSYNn128
+__HBMSYNn128:
+	.float 0.0
+	.float 0.007813
+	.float 0.015625
+	.float 0.023438
+	.float 0.03125
+	.float 0.039063
+	.float 0.046875
+	.float 0.054688
+	.float 0.0625
+	.float 0.070313
+	.float 0.078125
+	.float 0.085938
+	.float 0.09375
+	.float 0.101563
+	.float 0.109375
+	.float 0.117188
+	.float 0.125
+	.float 0.132813
+	.float 0.140625
+	.float 0.148438
+	.float 0.15625
+	.float 0.164063
+	.float 0.171875
+	.float 0.179688
+	.float 0.1875
+	.float 0.195313
+	.float 0.203125
+	.float 0.210938
+	.float 0.21875
+	.float 0.226563
+	.float 0.234375
+	.float 0.242188
+	.float 0.25
+	.float 0.257813
+	.float 0.265625
+	.float 0.273438
+	.float 0.28125
+	.float 0.289063
+	.float 0.296875
+	.float 0.304688
+	.float 0.3125
+	.float 0.320313
+	.float 0.328125
+	.float 0.335938
+	.float 0.34375
+	.float 0.351563
+	.float 0.359375
+	.float 0.367188
+	.float 0.375
+	.float 0.382813
+	.float 0.390625
+	.float 0.398438
+	.float 0.40625
+	.float 0.414063
+	.float 0.421875
+	.float 0.429688
+	.float 0.4375
+	.float 0.445313
+	.float 0.453125
+	.float 0.460938
+	.float 0.46875
+	.float 0.476563
+	.float 0.484375
+	.float 0.492188
+	.float 0.5
+	.float 0.507813
+	.float 0.515625
+	.float 0.523438
+	.float 0.53125
+	.float 0.539063
+	.float 0.546875
+	.float 0.554688
+	.float 0.5625
+	.float 0.570313
+	.float 0.578125
+	.float 0.585938
+	.float 0.59375
+	.float 0.601563
+	.float 0.609375
+	.float 0.617188
+	.float 0.625
+	.float 0.632813
+	.float 0.640625
+	.float 0.648438
+	.float 0.65625
+	.float 0.664063
+	.float 0.671875
+	.float 0.679688
+	.float 0.6875
+	.float 0.695313
+	.float 0.703125
+	.float 0.710938
+	.float 0.71875
+	.float 0.726563
+	.float 0.734375
+	.float 0.742188
+	.float 0.75
+	.float 0.757813
+	.float 0.765625
+	.float 0.773438
+	.float 0.78125
+	.float 0.789063
+	.float 0.796875
+	.float 0.804688
+	.float 0.8125
+	.float 0.820313
+	.float 0.828125
+	.float 0.835938
+	.float 0.84375
+	.float 0.851563
+	.float 0.859375
+	.float 0.867188
+	.float 0.875
+	.float 0.882813
+	.float 0.890625
+	.float 0.898438
+	.float 0.90625
+	.float 0.914063
+	.float 0.921875
+	.float 0.929688
+	.float 0.9375
+	.float 0.945313
+	.float 0.953125
+	.float 0.960938
+	.float 0.96875
+	.float 0.976563
+	.float 0.984375
+	.float 0.992188

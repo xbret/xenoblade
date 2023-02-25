@@ -1034,9 +1034,9 @@
 /* 803C1D2C 0038B2EC  92 DA 00 00 */	stw r22, 0(r26)
 /* 803C1D30 0038B2F0  48 00 00 2C */	b .L_803C1D5C
 .L_803C1D34:
-/* 803C1D34 0038B2F4  3C A0 80 52 */	lis r5, lbl_80520310@ha
+/* 803C1D34 0038B2F4  3C A0 80 52 */	lis r5, sfmps_CopyPketFn@ha
 /* 803C1D38 0038B2F8  54 C0 10 3A */	slwi r0, r6, 2
-/* 803C1D3C 0038B2FC  38 A5 03 10 */	addi r5, r5, lbl_80520310@l
+/* 803C1D3C 0038B2FC  38 A5 03 10 */	addi r5, r5, sfmps_CopyPketFn@l
 /* 803C1D40 0038B300  7F E3 FB 78 */	mr r3, r31
 /* 803C1D44 0038B304  7D 85 00 2E */	lwzx r12, r5, r0
 /* 803C1D48 0038B308  7F 05 C3 78 */	mr r5, r24
@@ -2342,8 +2342,8 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_805202D8
-lbl_805202D8:
+.global SFD_tr_sd_mps
+SFD_tr_sd_mps:
 	.4byte SFMPS_Init
 	.4byte SFMPS_Finish
 	.4byte SFMPS_ExecServer
@@ -2360,8 +2360,8 @@ lbl_805202D8:
 	.4byte SFMPS_Seek
 
 
-.global lbl_80520310
-lbl_80520310:
+.global sfmps_CopyPketFn
+sfmps_CopyPketFn:
 	.4byte sfmps_CopyAudio
 	.4byte sfmps_CopyVideo
 	.4byte sfmps_CopyPrvate

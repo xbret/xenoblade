@@ -634,11 +634,11 @@
 /* 8039F56C 00368B2C  BD C1 00 A8 */	stmw r14, 0xa8(r1)
 /* 8039F570 00368B30  3F 20 80 60 */	lis r25, lbl_806028A0@ha
 /* 8039F574 00368B34  3B 39 28 A0 */	addi r25, r25, lbl_806028A0@l
-/* 8039F578 00368B38  3F 00 80 57 */	lis r24, lbl_805697D0@ha
+/* 8039F578 00368B38  3F 00 80 57 */	lis r24, mwsfd_sfdmps_crepara@ha
 /* 8039F57C 00368B3C  7C 90 23 78 */	mr r16, r4
 /* 8039F580 00368B40  7C 6F 1B 78 */	mr r15, r3
 /* 8039F584 00368B44  7E 03 83 78 */	mr r3, r16
-/* 8039F588 00368B48  3B 18 97 D0 */	addi r24, r24, lbl_805697D0@l
+/* 8039F588 00368B48  3B 18 97 D0 */	addi r24, r24, mwsfd_sfdmps_crepara@l
 /* 8039F58C 00368B4C  38 B9 00 08 */	addi r5, r25, 8
 /* 8039F590 00368B50  38 D9 00 0C */	addi r6, r25, 0xc
 /* 8039F594 00368B54  38 F9 00 10 */	addi r7, r25, 0x10
@@ -2244,41 +2244,41 @@
 
 
 
-.global lbl_8051DA00
-lbl_8051DA00:
-	.4byte lbl_805202A0
-	.4byte lbl_805202D8
-	.4byte lbl_80520320
-	.4byte lbl_8051FEE0
+.global mwsfd_mps_trsetup
+mwsfd_mps_trsetup:
+	.4byte SFD_tr_in_mem
+	.4byte SFD_tr_sd_mps
+	.4byte SFD_tr_vd_mpv
+	.4byte SFD_tr_ad_adxt
 	.4byte 0
 	.4byte 0
-	.4byte lbl_805206B0
-	.4byte lbl_8051FF48
-	.4byte lbl_80520678
+	.4byte SFD_tr_vo_manu
+	.4byte SFD_tr_ao_auto_p
+	.4byte SFD_tr_uo
 
-.global lbl_8051DA24
-lbl_8051DA24:
-	.4byte lbl_805202A0
+.global mwsfd_mpv_trsetup
+mwsfd_mpv_trsetup:
+	.4byte SFD_tr_in_mem
 	.4byte 0
-	.4byte lbl_80520320
+	.4byte SFD_tr_vd_mpv
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte lbl_805206B0
+	.4byte SFD_tr_vo_manu
 	.4byte 0
 	.4byte 0
 
-.global lbl_8051DA48
-lbl_8051DA48:
-	.4byte lbl_805202A0
-	.4byte lbl_805202D8
-	.4byte lbl_80520320
+.global mwsfd_vonlysfd_trsetup
+mwsfd_vonlysfd_trsetup:
+	.4byte SFD_tr_in_mem
+	.4byte SFD_tr_sd_mps
+	.4byte SFD_tr_vd_mpv
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte lbl_805206B0
+	.4byte SFD_tr_vo_manu
 	.4byte 0
-	.4byte lbl_80520678
+	.4byte SFD_tr_uo
 
 
 .global lbl_8051DA6C
@@ -2334,69 +2334,11 @@ mwsfdcre_strpool:
 	.4byte 0
 
 
-.global lbl_8051E0E0
-lbl_8051E0E0:
-	.asciz "\nMWSFD/WII Ver.4.75 Build:Nov 13 2008 18:21:20\n"
-	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
-
-.global lbl_8051E134
-lbl_8051E134:
-	.4byte lbl_805202A0
-	.4byte lbl_805202D8
-	.4byte lbl_80520320
-	.4byte lbl_805206B0
-	.4byte lbl_8051FEE0
-	.4byte lbl_8051FF48
-	.4byte lbl_80520678
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-
-
-.global lbl_8051E170
-lbl_8051E170:
-	.4byte lbl_8051E134
-	.4byte 0x0000EA24
-	.4byte 0x00000670
-
-.global lbl_8051E17C
-lbl_8051E17C:
-	.asciz "mwPlyInitSfdFx"
-	.balign 4
-	.asciz "mwPlyFinishSfdFx"
-	.balign 4
-
-.global lbl_8051E1A0
-lbl_8051E1A0:
-	.asciz "mwPlyCreateSofdec"
-	.balign 4
-
-.global lbl_8051E1B4
-lbl_8051E1B4:
-	.asciz "cpara_members"
-	.balign 4
-
-.global lbl_8051E1C4
-lbl_8051E1C4:
-	.asciz "mwply"
-	.balign 4
-
-.global lbl_8051E1CC
-lbl_8051E1CC:
-	.asciz "mwPlyDestroy"
-	.balign 4
-	.4byte 0
-
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_805697D0
-lbl_805697D0:
-	.4byte lbl_8051DA00
+.global mwsfd_sfdmps_crepara
+mwsfd_sfdmps_crepara:
+	.4byte mwsfd_mps_trsetup
 	.4byte 0
 	.4byte 0x00010000
 	.4byte 0x00050800
@@ -2415,7 +2357,9 @@ lbl_805697D0:
 	.4byte 0x00000003
 	.4byte 0
 	.4byte 0
-	.4byte lbl_8051DA24
+
+mwsfd_sfdmpv_crepara:
+	.4byte mwsfd_mpv_trsetup
 	.4byte 0
 	.4byte 0x00010000
 	.4byte 0x00050800
@@ -2434,7 +2378,9 @@ lbl_805697D0:
 	.4byte 0x00000003
 	.4byte 0
 	.4byte 0
-	.4byte lbl_8051DA48
+
+mwsfd_vonlysfd_crepara:
+	.4byte mwsfd_vonlysfd_trsetup
 	.4byte 0
 	.4byte 0x00010000
 	.4byte 0x00050800
@@ -2453,6 +2399,8 @@ lbl_805697D0:
 	.4byte 0x00000003
 	.4byte 0
 	.4byte 0
+
+mwsfd_mpvpara:
 	.4byte 0x000000C0
 	.4byte 0x000000F0
 	.4byte 0x00000160
@@ -2462,6 +2410,8 @@ lbl_805697D0:
 	.4byte 0x000001E0
 	.4byte 0x00000004
 	.4byte 0
+
+mwsfd_adxtpara:
 	.4byte 0x00005DCC
 	.4byte 0x00000120
 	.4byte 0
@@ -2469,6 +2419,8 @@ lbl_805697D0:
 	.4byte 0x0000BB80
 	.4byte 0x0000C1C0
 	.4byte 0
+
+mwsfd_packsize:
 	.4byte 0x00000800
 
 .global jumptable_805698F8

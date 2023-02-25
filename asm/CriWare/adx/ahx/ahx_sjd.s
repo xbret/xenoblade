@@ -6,12 +6,12 @@
 /* 8038C760 00355D20  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8038C764 00355D24  7C 08 02 A6 */	mflr r0
 /* 8038C768 00355D28  3C 60 80 5F */	lis r3, lbl_805E9B00@ha
-/* 8038C76C 00355D2C  3C 80 80 52 */	lis r4, lbl_8051AC08@ha
+/* 8038C76C 00355D2C  3C 80 80 52 */	lis r4, ahxsjd_build@ha
 /* 8038C770 00355D30  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8038C774 00355D34  80 03 9B 00 */	lwz r0, lbl_805E9B00@l(r3)
-/* 8038C778 00355D38  80 64 AC 08 */	lwz r3, lbl_8051AC08@l(r4)
+/* 8038C778 00355D38  80 64 AC 08 */	lwz r3, ahxsjd_build@l(r4)
 /* 8038C77C 00355D3C  2C 00 00 00 */	cmpwi r0, 0
-/* 8038C780 00355D40  80 04 AC 08 */	lwz r0, lbl_8051AC08@l(r4)
+/* 8038C780 00355D40  80 04 AC 08 */	lwz r0, ahxsjd_build@l(r4)
 /* 8038C784 00355D44  40 82 00 68 */	bne .L_8038C7EC
 /* 8038C788 00355D48  38 61 00 0C */	addi r3, r1, 0xc
 /* 8038C78C 00355D4C  38 81 00 08 */	addi r4, r1, 8
@@ -556,10 +556,10 @@
 /* 8038CEEC 003564AC  48 00 19 18 */	b AHXDCD_SetExtPrm
 .endfn func_8038CEE8
 
-.fn .L_8038CEF0, global
+.fn func_8038CEF0, global
 /* 8038CEF0 003564B0  90 83 00 34 */	stw r4, 0x34(r3)
 /* 8038CEF4 003564B4  4E 80 00 20 */	blr
-.endfn .L_8038CEF0
+.endfn func_8038CEF0
 
 .fn func_8038CEF8, global
 /* 8038CEF8 003564B8  38 00 00 01 */	li r0, 1
@@ -575,8 +575,8 @@ lbl_8051ABD8:
 	.balign 4
 
 
-.global lbl_8051AC08
-lbl_8051AC08:
+.global ahxsjd_build
+ahxsjd_build:
 	.4byte lbl_8051ABD8
 	.4byte 0
 

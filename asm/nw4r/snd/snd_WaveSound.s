@@ -271,15 +271,15 @@
 /* 80429F28 003F34E8  4E 80 00 20 */	blr
 .endfn GetRuntimeTypeInfo__Q44nw4r3snd6detail9WaveSoundCFv
 
-.fn sinit_80429F2C, local
+.fn "__sinit_\snd_WaveSound_cpp", local
 /* 80429F2C 003F34EC  38 0D BC 30 */	addi r0, r13, lbl_80667DB0@sda21
 /* 80429F30 003F34F0  90 0D BC 98 */	stw r0, lbl_80667E18@sda21(r13)
 /* 80429F34 003F34F4  4E 80 00 20 */	blr
-.endfn sinit_80429F2C
+.endfn "__sinit_\snd_WaveSound_cpp"
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 
-.4byte sinit_80429F2C
+.4byte "__sinit_\snd_WaveSound_cpp"
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

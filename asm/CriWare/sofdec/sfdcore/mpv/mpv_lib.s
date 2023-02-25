@@ -48,9 +48,9 @@
 /* 803A7FCC 0037158C  38 63 00 20 */	addi r3, r3, 0x20
 /* 803A7FD0 00371590  42 00 FF F4 */	bdnz .L_803A7FC4
 .L_803A7FD4:
-/* 803A7FD4 00371594  3C 80 80 52 */	lis r4, lbl_8051F7D0@ha
+/* 803A7FD4 00371594  3C 80 80 52 */	lis r4, mpvlib_cond_dfl@ha
 /* 803A7FD8 00371598  38 7F 00 08 */	addi r3, r31, 8
-/* 803A7FDC 0037159C  38 84 F7 D0 */	addi r4, r4, lbl_8051F7D0@l
+/* 803A7FDC 0037159C  38 84 F7 D0 */	addi r4, r4, mpvlib_cond_dfl@l
 /* 803A7FE0 003715A0  38 A0 00 40 */	li r5, 0x40
 /* 803A7FE4 003715A4  48 01 37 49 */	bl MEM_Copy
 /* 803A7FE8 003715A8  38 7F 00 08 */	addi r3, r31, 8
@@ -798,8 +798,8 @@ lbl_8051F778:
 	.balign 4
 
 
-.global lbl_8051F7D0
-lbl_8051F7D0:
+.global mpvlib_cond_dfl
+mpvlib_cond_dfl:
 	.4byte 0
 	.4byte 0x00000001
 	.4byte 0x00000001

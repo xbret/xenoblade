@@ -100,7 +100,7 @@
 /* 803318A8 002FAE68  38 7A 00 10 */	addi r3, r26, 0x10
 /* 803318AC 002FAE6C  38 81 00 08 */	addi r4, r1, 8
 /* 803318B0 002FAE70  93 81 00 08 */	stw r28, 8(r1)
-/* 803318B4 002FAE74  48 00 6D 1D */	bl func_803385D0
+/* 803318B4 002FAE74  48 00 6D 1D */	bl Erase__Q46nw4hbm2ut6detail12LinkListImplFQ56nw4hbm2ut6detail12LinkListImpl8Iterator
 /* 803318B8 002FAE78  88 1C 00 CC */	lbz r0, 0xcc(r28)
 /* 803318BC 002FAE7C  2C 00 00 00 */	cmpwi r0, 0
 /* 803318C0 002FAE80  40 82 00 2C */	bne .L_803318EC
@@ -164,7 +164,7 @@
 .endfn __dt__Q36nw4hbm3lyt4PaneFv
 
 .balign 16, 0
-.fn func_803319A0, global
+.fn AppendChild__Q36nw4hbm3lyt4PaneFPQ36nw4hbm3lyt4Pane, global
 /* 803319A0 002FAF60  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803319A4 002FAF64  7C 08 02 A6 */	mflr r0
 /* 803319A8 002FAF68  90 01 00 24 */	stw r0, 0x24(r1)
@@ -177,7 +177,7 @@
 /* 803319C4 002FAF84  38 63 00 10 */	addi r3, r3, 0x10
 /* 803319C8 002FAF88  38 BF 00 04 */	addi r5, r31, 4
 /* 803319CC 002FAF8C  90 01 00 08 */	stw r0, 8(r1)
-/* 803319D0 002FAF90  48 00 6C 51 */	bl func_80338620
+/* 803319D0 002FAF90  48 00 6C 51 */	bl Insert__Q46nw4hbm2ut6detail12LinkListImplFQ56nw4hbm2ut6detail12LinkListImpl8IteratorPQ36nw4hbm2ut12LinkListNode
 /* 803319D4 002FAF94  93 DF 00 0C */	stw r30, 0xc(r31)
 /* 803319D8 002FAF98  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 803319DC 002FAF9C  83 C1 00 18 */	lwz r30, 0x18(r1)
@@ -185,10 +185,10 @@
 /* 803319E4 002FAFA4  7C 08 03 A6 */	mtlr r0
 /* 803319E8 002FAFA8  38 21 00 20 */	addi r1, r1, 0x20
 /* 803319EC 002FAFAC  4E 80 00 20 */	blr 
-.endfn func_803319A0
+.endfn AppendChild__Q36nw4hbm3lyt4PaneFPQ36nw4hbm3lyt4Pane
 
 .balign 16, 0
-.fn func_803319F0, global
+.fn GetPaneRect__Q36nw4hbm3lyt4PaneCFRCQ36nw4hbm3lyt8DrawInfo, global
 /* 803319F0 002FAFB0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803319F4 002FAFB4  7C 08 02 A6 */	mflr r0
 /* 803319F8 002FAFB8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -206,7 +206,7 @@
 /* 80331A28 002FAFE8  D0 03 00 08 */	stfs f0, 8(r3)
 /* 80331A2C 002FAFEC  D0 03 00 0C */	stfs f0, 0xc(r3)
 /* 80331A30 002FAFF0  7F A3 EB 78 */	mr r3, r29
-/* 80331A34 002FAFF4  48 00 0B FD */	bl func_80332630
+/* 80331A34 002FAFF4  48 00 0B FD */	bl GetVtxPos__Q36nw4hbm3lyt4PaneCFv
 /* 80331A38 002FAFF8  90 61 00 10 */	stw r3, 0x10(r1)
 /* 80331A3C 002FAFFC  C0 3E 00 40 */	lfs f1, 0x40(r30)
 /* 80331A40 002FB000  90 81 00 14 */	stw r4, 0x14(r1)
@@ -242,22 +242,22 @@
 /* 80331AB4 002FB074  7C 08 03 A6 */	mtlr r0
 /* 80331AB8 002FB078  38 21 00 30 */	addi r1, r1, 0x30
 /* 80331ABC 002FB07C  4E 80 00 20 */	blr 
-.endfn func_803319F0
+.endfn GetPaneRect__Q36nw4hbm3lyt4PaneCFRCQ36nw4hbm3lyt8DrawInfo
 
 .balign 16, 0
-.fn func_80331AC0, global
+.fn GetVtxColor__Q36nw4hbm3lyt4PaneCFUl, global
 /* 80331AC0 002FB080  38 00 FF FF */	li r0, -1
 /* 80331AC4 002FB084  90 03 00 00 */	stw r0, 0(r3)
 /* 80331AC8 002FB088  4E 80 00 20 */	blr 
-.endfn func_80331AC0
+.endfn GetVtxColor__Q36nw4hbm3lyt4PaneCFUl
 
 .balign 16, 0
-.fn func_80331AD0, global
+.fn SetVtxColor__Q36nw4hbm3lyt4PaneFUlQ36nw4hbm2ut5Color, global
 /* 80331AD0 002FB090  4E 80 00 20 */	blr 
-.endfn func_80331AD0
+.endfn SetVtxColor__Q36nw4hbm3lyt4PaneFUlQ36nw4hbm2ut5Color
 
 .balign 16, 0
-.fn func_80331AE0, global
+.fn GetColorElement__Q36nw4hbm3lyt4PaneCFUl, global
 /* 80331AE0 002FB0A0  28 04 00 10 */	cmplwi r4, 0x10
 /* 80331AE4 002FB0A4  40 82 00 0C */	bne .L_80331AF0
 /* 80331AE8 002FB0A8  88 63 00 CD */	lbz r3, 0xcd(r3)
@@ -268,10 +268,10 @@
 /* 80331AF8 002FB0B8  7D 89 03 A6 */	mtctr r12
 /* 80331AFC 002FB0BC  4E 80 04 20 */	bctr 
 /* 80331B00 002FB0C0  4E 80 00 20 */	blr 
-.endfn func_80331AE0
+.endfn GetColorElement__Q36nw4hbm3lyt4PaneCFUl
 
 .balign 16, 0
-.fn func_80331B10, global
+.fn SetColorElement__Q36nw4hbm3lyt4PaneFUlUc, global
 /* 80331B10 002FB0D0  28 04 00 10 */	cmplwi r4, 0x10
 /* 80331B14 002FB0D4  40 82 00 0C */	bne .L_80331B20
 /* 80331B18 002FB0D8  98 A3 00 CD */	stb r5, 0xcd(r3)
@@ -282,21 +282,21 @@
 /* 80331B28 002FB0E8  7D 89 03 A6 */	mtctr r12
 /* 80331B2C 002FB0EC  4E 80 04 20 */	bctr 
 /* 80331B30 002FB0F0  4E 80 00 20 */	blr 
-.endfn func_80331B10
+.endfn SetColorElement__Q36nw4hbm3lyt4PaneFUlUc
 
 .balign 16, 0
-.fn func_80331B40, global
+.fn GetVtxColorElement__Q36nw4hbm3lyt4PaneCFUl, global
 /* 80331B40 002FB100  38 60 00 FF */	li r3, 0xff
 /* 80331B44 002FB104  4E 80 00 20 */	blr 
-.endfn func_80331B40
+.endfn GetVtxColorElement__Q36nw4hbm3lyt4PaneCFUl
 
 .balign 16, 0
-.fn func_80331B50, global
+.fn SetVtxColorElement__Q36nw4hbm3lyt4PaneFUlUc, global
 /* 80331B50 002FB110  4E 80 00 20 */	blr 
-.endfn func_80331B50
+.endfn SetVtxColorElement__Q36nw4hbm3lyt4PaneFUlUc
 
 .balign 16, 0
-.fn func_80331B60, global
+.fn FindPaneByName__Q36nw4hbm3lyt4PaneFPCcb, global
 /* 80331B60 002FB120  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80331B64 002FB124  7C 08 02 A6 */	mflr r0
 /* 80331B68 002FB128  90 01 00 24 */	stw r0, 0x24(r1)
@@ -346,10 +346,10 @@
 /* 80331C00 002FB1C0  7C 08 03 A6 */	mtlr r0
 /* 80331C04 002FB1C4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80331C08 002FB1C8  4E 80 00 20 */	blr 
-.endfn func_80331B60
+.endfn FindPaneByName__Q36nw4hbm3lyt4PaneFPCcb
 
 .balign 16, 0
-.fn func_80331C10, global
+.fn FindMaterialByName__Q36nw4hbm3lyt4PaneFPCcb, global
 /* 80331C10 002FB1D0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80331C14 002FB1D4  7C 08 02 A6 */	mflr r0
 /* 80331C18 002FB1D8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -402,10 +402,10 @@
 /* 80331CBC 002FB27C  7C 08 03 A6 */	mtlr r0
 /* 80331CC0 002FB280  38 21 00 20 */	addi r1, r1, 0x20
 /* 80331CC4 002FB284  4E 80 00 20 */	blr 
-.endfn func_80331C10
+.endfn FindMaterialByName__Q36nw4hbm3lyt4PaneFPCcb
 
 .balign 16, 0
-.fn func_80331CD0, global
+.fn CalculateMtx__Q36nw4hbm3lyt4PaneFRCQ36nw4hbm3lyt8DrawInfo, global
 /* 80331CD0 002FB290  94 21 FF 20 */	stwu r1, -0xe0(r1)
 /* 80331CD4 002FB294  7C 08 02 A6 */	mflr r0
 /* 80331CD8 002FB298  90 01 00 E4 */	stw r0, 0xe4(r1)
@@ -610,10 +610,10 @@
 /* 80331FC4 002FB584  7C 08 03 A6 */	mtlr r0
 /* 80331FC8 002FB588  38 21 00 E0 */	addi r1, r1, 0xe0
 /* 80331FCC 002FB58C  4E 80 00 20 */	blr 
-.endfn func_80331CD0
+.endfn CalculateMtx__Q36nw4hbm3lyt4PaneFRCQ36nw4hbm3lyt8DrawInfo
 
 .balign 16, 0
-.fn func_80331FD0, global
+.fn Draw__Q36nw4hbm3lyt4PaneFRCQ36nw4hbm3lyt8DrawInfo, global
 /* 80331FD0 002FB590  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80331FD4 002FB594  7C 08 02 A6 */	mflr r0
 /* 80331FD8 002FB598  90 01 00 24 */	stw r0, 0x24(r1)
@@ -650,10 +650,10 @@
 /* 80332048 002FB608  7C 08 03 A6 */	mtlr r0
 /* 8033204C 002FB60C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80332050 002FB610  4E 80 00 20 */	blr 
-.endfn func_80331FD0
+.endfn Draw__Q36nw4hbm3lyt4PaneFRCQ36nw4hbm3lyt8DrawInfo
 
 .balign 16, 0
-.fn func_80332060, global
+.fn DrawSelf__Q36nw4hbm3lyt4PaneFRCQ36nw4hbm3lyt8DrawInfo, global
 /* 80332060 002FB620  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80332064 002FB624  7C 08 02 A6 */	mflr r0
 /* 80332068 002FB628  90 01 00 24 */	stw r0, 0x24(r1)
@@ -673,7 +673,7 @@
 /* 803320A0 002FB660  7F E3 FB 78 */	mr r3, r31
 /* 803320A4 002FB664  38 04 00 FF */	addi r0, r4, 0x00FF00FF@l
 /* 803320A8 002FB668  90 01 00 08 */	stw r0, 8(r1)
-/* 803320AC 002FB66C  48 00 05 85 */	bl func_80332630
+/* 803320AC 002FB66C  48 00 05 85 */	bl GetVtxPos__Q36nw4hbm3lyt4PaneCFv
 /* 803320B0 002FB670  90 81 00 14 */	stw r4, 0x14(r1)
 /* 803320B4 002FB674  38 9F 00 4C */	addi r4, r31, 0x4c
 /* 803320B8 002FB678  38 A1 00 08 */	addi r5, r1, 8
@@ -686,10 +686,10 @@
 /* 803320D0 002FB690  7C 08 03 A6 */	mtlr r0
 /* 803320D4 002FB694  38 21 00 20 */	addi r1, r1, 0x20
 /* 803320D8 002FB698  4E 80 00 20 */	blr 
-.endfn func_80332060
+.endfn DrawSelf__Q36nw4hbm3lyt4PaneFRCQ36nw4hbm3lyt8DrawInfo
 
 .balign 16, 0
-.fn func_803320E0, global
+.fn Animate__Q36nw4hbm3lyt4PaneFUl, global
 /* 803320E0 002FB6A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803320E4 002FB6A4  7C 08 02 A6 */	mflr r0
 /* 803320E8 002FB6A8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -729,10 +729,10 @@
 /* 80332160 002FB720  7C 08 03 A6 */	mtlr r0
 /* 80332164 002FB724  38 21 00 20 */	addi r1, r1, 0x20
 /* 80332168 002FB728  4E 80 00 20 */	blr 
-.endfn func_803320E0
+.endfn Animate__Q36nw4hbm3lyt4PaneFUl
 
 .balign 16, 0
-.fn func_80332170, global
+.fn AnimateSelf__Q36nw4hbm3lyt4PaneFUl, global
 /* 80332170 002FB730  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80332174 002FB734  7C 08 02 A6 */	mflr r0
 /* 80332178 002FB738  90 01 00 24 */	stw r0, 0x24(r1)
@@ -783,10 +783,10 @@
 /* 80332218 002FB7D8  7C 08 03 A6 */	mtlr r0
 /* 8033221C 002FB7DC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80332220 002FB7E0  4E 80 00 20 */	blr 
-.endfn func_80332170
+.endfn AnimateSelf__Q36nw4hbm3lyt4PaneFUl
 
 .balign 16, 0
-.fn func_80332230, global
+.fn BindAnimation__Q36nw4hbm3lyt4PaneFPQ36nw4hbm3lyt13AnimTransformb, global
 /* 80332230 002FB7F0  81 84 00 00 */	lwz r12, 0(r4)
 /* 80332234 002FB7F4  7C 60 1B 78 */	mr r0, r3
 /* 80332238 002FB7F8  7C 83 23 78 */	mr r3, r4
@@ -794,10 +794,10 @@
 /* 80332240 002FB800  7C 04 03 78 */	mr r4, r0
 /* 80332244 002FB804  7D 89 03 A6 */	mtctr r12
 /* 80332248 002FB808  4E 80 04 20 */	bctr 
-.endfn func_80332230
+.endfn BindAnimation__Q36nw4hbm3lyt4PaneFPQ36nw4hbm3lyt13AnimTransformb
 
 .balign 16, 0
-.fn func_80332250, global
+.fn UnbindAnimation__Q36nw4hbm3lyt4PaneFPQ36nw4hbm3lyt13AnimTransformb, global
 /* 80332250 002FB810  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80332254 002FB814  7C 08 02 A6 */	mflr r0
 /* 80332258 002FB818  90 01 00 24 */	stw r0, 0x24(r1)
@@ -837,20 +837,20 @@
 /* 803322D4 002FB894  7C 08 03 A6 */	mtlr r0
 /* 803322D8 002FB898  38 21 00 20 */	addi r1, r1, 0x20
 /* 803322DC 002FB89C  4E 80 00 20 */	blr 
-.endfn func_80332250
+.endfn UnbindAnimation__Q36nw4hbm3lyt4PaneFPQ36nw4hbm3lyt13AnimTransformb
 
 .balign 16, 0
-.fn func_803322E0, global
+.fn UnbindAllAnimation__Q36nw4hbm3lyt4PaneFb, global
 /* 803322E0 002FB8A0  81 83 00 00 */	lwz r12, 0(r3)
 /* 803322E4 002FB8A4  7C 85 23 78 */	mr r5, r4
 /* 803322E8 002FB8A8  38 80 00 00 */	li r4, 0
 /* 803322EC 002FB8AC  81 8C 00 48 */	lwz r12, 0x48(r12)
 /* 803322F0 002FB8B0  7D 89 03 A6 */	mtctr r12
 /* 803322F4 002FB8B4  4E 80 04 20 */	bctr 
-.endfn func_803322E0
+.endfn UnbindAllAnimation__Q36nw4hbm3lyt4PaneFb
 
 .balign 16, 0
-.fn func_80332300, global
+.fn UnbindAnimationSelf__Q36nw4hbm3lyt4PaneFPQ36nw4hbm3lyt13AnimTransform, global
 /* 80332300 002FB8C0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80332304 002FB8C4  7C 08 02 A6 */	mflr r0
 /* 80332308 002FB8C8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -883,7 +883,7 @@
 /* 80332368 002FB928  93 81 00 08 */	stw r28, 8(r1)
 /* 8033236C 002FB92C  38 7A 00 1C */	addi r3, r26, 0x1c
 /* 80332370 002FB930  38 81 00 08 */	addi r4, r1, 8
-/* 80332374 002FB934  48 00 62 5D */	bl func_803385D0
+/* 80332374 002FB934  48 00 62 5D */	bl Erase__Q46nw4hbm2ut6detail12LinkListImplFQ56nw4hbm2ut6detail12LinkListImpl8Iterator
 /* 80332378 002FB938  93 BC 00 08 */	stw r29, 8(r28)
 /* 8033237C 002FB93C  B3 BC 00 0C */	sth r29, 0xc(r28)
 .L_80332380:
@@ -895,10 +895,10 @@
 /* 80332394 002FB954  7C 08 03 A6 */	mtlr r0
 /* 80332398 002FB958  38 21 00 30 */	addi r1, r1, 0x30
 /* 8033239C 002FB95C  4E 80 00 20 */	blr 
-.endfn func_80332300
+.endfn UnbindAnimationSelf__Q36nw4hbm3lyt4PaneFPQ36nw4hbm3lyt13AnimTransform
 
 .balign 16, 0
-.fn func_803323A0, global
+.fn AddAnimationLink__Q36nw4hbm3lyt4PaneFPQ36nw4hbm3lyt13AnimationLink, global
 /* 803323A0 002FB960  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803323A4 002FB964  7C 08 02 A6 */	mflr r0
 /* 803323A8 002FB968  7C 85 23 78 */	mr r5, r4
@@ -907,15 +907,15 @@
 /* 803323B4 002FB974  38 63 00 1C */	addi r3, r3, 0x1c
 /* 803323B8 002FB978  38 81 00 08 */	addi r4, r1, 8
 /* 803323BC 002FB97C  90 01 00 08 */	stw r0, 8(r1)
-/* 803323C0 002FB980  48 00 62 61 */	bl func_80338620
+/* 803323C0 002FB980  48 00 62 61 */	bl Insert__Q46nw4hbm2ut6detail12LinkListImplFQ56nw4hbm2ut6detail12LinkListImpl8IteratorPQ36nw4hbm2ut12LinkListNode
 /* 803323C4 002FB984  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 803323C8 002FB988  7C 08 03 A6 */	mtlr r0
 /* 803323CC 002FB98C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803323D0 002FB990  4E 80 00 20 */	blr 
-.endfn func_803323A0
+.endfn AddAnimationLink__Q36nw4hbm3lyt4PaneFPQ36nw4hbm3lyt13AnimationLink
 
 .balign 16, 0
-.fn func_803323E0, global
+.fn FindAnimationLink__Q36nw4hbm3lyt4PaneFPQ36nw4hbm3lyt13AnimTransform, global
 /* 803323E0 002FB9A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803323E4 002FB9A4  7C 08 02 A6 */	mflr r0
 /* 803323E8 002FB9A8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -949,10 +949,10 @@
 /* 8033244C 002FBA0C  7C 08 03 A6 */	mtlr r0
 /* 80332450 002FBA10  38 21 00 10 */	addi r1, r1, 0x10
 /* 80332454 002FBA14  4E 80 00 20 */	blr 
-.endfn func_803323E0
+.endfn FindAnimationLink__Q36nw4hbm3lyt4PaneFPQ36nw4hbm3lyt13AnimTransform
 
 .balign 16, 0
-.fn func_80332460, global
+.fn SetAnimationEnable__Q36nw4hbm3lyt4PaneFPQ36nw4hbm3lyt13AnimTransformbb, global
 /* 80332460 002FBA20  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80332464 002FBA24  7C 08 02 A6 */	mflr r0
 /* 80332468 002FBA28  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1004,10 +1004,10 @@
 /* 8033250C 002FBACC  7C 08 03 A6 */	mtlr r0
 /* 80332510 002FBAD0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80332514 002FBAD4  4E 80 00 20 */	blr 
-.endfn func_80332460
+.endfn SetAnimationEnable__Q36nw4hbm3lyt4PaneFPQ36nw4hbm3lyt13AnimTransformbb
 
 .balign 16, 0
-.fn func_80332520, global
+.fn LoadMtx__Q36nw4hbm3lyt4PaneFRCQ36nw4hbm3lyt8DrawInfo, global
 /* 80332520 002FBAE0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80332524 002FBAE4  7C 08 02 A6 */	mflr r0
 /* 80332528 002FBAE8  7C 65 1B 78 */	mr r5, r3
@@ -1078,10 +1078,10 @@
 /* 8033261C 002FBBDC  7C 08 03 A6 */	mtlr r0
 /* 80332620 002FBBE0  38 21 00 40 */	addi r1, r1, 0x40
 /* 80332624 002FBBE4  4E 80 00 20 */	blr 
-.endfn func_80332520
+.endfn LoadMtx__Q36nw4hbm3lyt4PaneFRCQ36nw4hbm3lyt8DrawInfo
 
 .balign 16, 0
-.fn func_80332630, global
+.fn GetVtxPos__Q36nw4hbm3lyt4PaneCFv, global
 /* 80332630 002FBBF0  3C 80 55 55 */	lis r4, 0x55555556@ha
 /* 80332634 002FBBF4  88 C3 00 CC */	lbz r6, 0xcc(r3)
 /* 80332638 002FBBF8  38 04 55 56 */	addi r0, r4, 0x55555556@l
@@ -1144,25 +1144,25 @@
 /* 80332704 002FBCC4  80 81 00 0C */	lwz r4, 0xc(r1)
 /* 80332708 002FBCC8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8033270C 002FBCCC  4E 80 00 20 */	blr 
-.endfn func_80332630
+.endfn GetVtxPos__Q36nw4hbm3lyt4PaneCFv
 
 .balign 16, 0
-.fn func_80332710, global
+.fn GetMaterial__Q36nw4hbm3lyt4PaneCFv, global
 /* 80332710 002FBCD0  80 63 00 28 */	lwz r3, 0x28(r3)
 /* 80332714 002FBCD4  4E 80 00 20 */	blr 
-.endfn func_80332710
+.endfn GetMaterial__Q36nw4hbm3lyt4PaneCFv
 
 .balign 16, 0
-.fn sinit_80332720, local
+.fn "__sinit_\lyt_pane_cpp", local
 /* 80332720 002FBCE0  3C 60 80 5D */	lis r3, lbl_805CD7C0@ha
 /* 80332724 002FBCE4  38 00 00 00 */	li r0, 0
 /* 80332728 002FBCE8  90 03 D7 C0 */	stw r0, lbl_805CD7C0@l(r3)
 /* 8033272C 002FBCEC  4E 80 00 20 */	blr 
-.endfn sinit_80332720
+.endfn "__sinit_\lyt_pane_cpp"
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 
-.4byte sinit_80332720
+.4byte "__sinit_\lyt_pane_cpp"
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -1190,25 +1190,25 @@ lbl_8054D8D0:
 	.4byte 0
 	.4byte __dt__Q36nw4hbm3lyt4PaneFv
 	.4byte GetRuntimeTypeInfo__Q36nw4hbm3lyt4PaneCFv
-	.4byte func_80331CD0
-	.4byte func_80331FD0
-	.4byte func_80332060
-	.4byte func_803320E0
-	.4byte func_80332170
-	.4byte func_80331AC0
-	.4byte func_80331AD0
-	.4byte func_80331AE0
-	.4byte func_80331B10
-	.4byte func_80331B40
-	.4byte func_80331B50
-	.4byte func_80331B60
-	.4byte func_80331C10
-	.4byte func_80332230
-	.4byte func_80332250
-	.4byte func_803322E0
-	.4byte func_80332300
-	.4byte func_803323E0
-	.4byte func_80332460
-	.4byte func_80332710
-	.4byte func_80332520
+	.4byte CalculateMtx__Q36nw4hbm3lyt4PaneFRCQ36nw4hbm3lyt8DrawInfo
+	.4byte Draw__Q36nw4hbm3lyt4PaneFRCQ36nw4hbm3lyt8DrawInfo
+	.4byte DrawSelf__Q36nw4hbm3lyt4PaneFRCQ36nw4hbm3lyt8DrawInfo
+	.4byte Animate__Q36nw4hbm3lyt4PaneFUl
+	.4byte AnimateSelf__Q36nw4hbm3lyt4PaneFUl
+	.4byte GetVtxColor__Q36nw4hbm3lyt4PaneCFUl
+	.4byte SetVtxColor__Q36nw4hbm3lyt4PaneFUlQ36nw4hbm2ut5Color
+	.4byte GetColorElement__Q36nw4hbm3lyt4PaneCFUl
+	.4byte SetColorElement__Q36nw4hbm3lyt4PaneFUlUc
+	.4byte GetVtxColorElement__Q36nw4hbm3lyt4PaneCFUl
+	.4byte SetVtxColorElement__Q36nw4hbm3lyt4PaneFUlUc
+	.4byte FindPaneByName__Q36nw4hbm3lyt4PaneFPCcb
+	.4byte FindMaterialByName__Q36nw4hbm3lyt4PaneFPCcb
+	.4byte BindAnimation__Q36nw4hbm3lyt4PaneFPQ36nw4hbm3lyt13AnimTransformb
+	.4byte UnbindAnimation__Q36nw4hbm3lyt4PaneFPQ36nw4hbm3lyt13AnimTransformb
+	.4byte UnbindAllAnimation__Q36nw4hbm3lyt4PaneFb
+	.4byte UnbindAnimationSelf__Q36nw4hbm3lyt4PaneFPQ36nw4hbm3lyt13AnimTransform
+	.4byte FindAnimationLink__Q36nw4hbm3lyt4PaneFPQ36nw4hbm3lyt13AnimTransform
+	.4byte SetAnimationEnable__Q36nw4hbm3lyt4PaneFPQ36nw4hbm3lyt13AnimTransformbb
+	.4byte GetMaterial__Q36nw4hbm3lyt4PaneCFv
+	.4byte LoadMtx__Q36nw4hbm3lyt4PaneFRCQ36nw4hbm3lyt8DrawInfo
 	.4byte 0

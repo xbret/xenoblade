@@ -519,13 +519,11 @@
 lbl_8051AAD8:
 	.float 6.2831853
 	.4byte 0
-	.4byte 0x40000000
-	.4byte 0
+	.8byte 0x4000000000000000
 	.float 1.0
 	.4byte 0x45800000
 	.4byte 0x40000000
 	.4byte 0
-	.4byte 0x43300000
-	.4byte 0x80000000
+	.8byte 0x4330000080000000
 	.asciz "(c)CRI"
 	.balign 4

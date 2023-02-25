@@ -10,8 +10,8 @@
 /* 803B9DFC 003833BC  3F E0 80 60 */	lis r31, lbl_80607F80@ha
 /* 803B9E00 003833C0  3B FF 7F 80 */	addi r31, r31, lbl_80607F80@l
 /* 803B9E04 003833C4  93 C1 00 58 */	stw r30, 0x58(r1)
-/* 803B9E08 003833C8  3F C0 80 52 */	lis r30, lbl_8051F928@ha
-/* 803B9E0C 003833CC  3B DE F9 28 */	addi r30, r30, lbl_8051F928@l
+/* 803B9E08 003833C8  3F C0 80 52 */	lis r30, sfsd_short_cut@ha
+/* 803B9E0C 003833CC  3B DE F9 28 */	addi r30, r30, sfsd_short_cut@l
 /* 803B9E10 003833D0  93 A1 00 54 */	stw r29, 0x54(r1)
 /* 803B9E14 003833D4  93 81 00 50 */	stw r28, 0x50(r1)
 /* 803B9E18 003833D8  48 00 19 01 */	bl DCT_GetVerStr
@@ -125,9 +125,9 @@
 /* 803B9F88 00383548  39 61 04 F0 */	addi r11, r1, 0x4f0
 /* 803B9F8C 0038354C  4B F0 01 35 */	bl _savefpr_28
 /* 803B9F90 00383550  BF 01 04 B0 */	stmw r24, 0x4b0(r1)
-/* 803B9F94 00383554  3F 20 80 52 */	lis r25, lbl_8051F928@ha
+/* 803B9F94 00383554  3F 20 80 52 */	lis r25, sfsd_short_cut@ha
 /* 803B9F98 00383558  3F 00 80 61 */	lis r24, lbl_80608288@ha
-/* 803B9F9C 0038355C  3B 39 F9 28 */	addi r25, r25, lbl_8051F928@l
+/* 803B9F9C 0038355C  3B 39 F9 28 */	addi r25, r25, sfsd_short_cut@l
 /* 803B9FA0 00383560  38 80 00 00 */	li r4, 0
 /* 803B9FA4 00383564  38 78 82 88 */	addi r3, r24, lbl_80608288@l
 /* 803B9FA8 00383568  38 A0 20 00 */	li r5, 0x2000
@@ -485,10 +485,10 @@
 .fn MSID_JRevDctDense, global
 /* 803BA498 00383A58  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803BA49C 00383A5C  7C 08 02 A6 */	mflr r0
-/* 803BA4A0 00383A60  3D 20 80 52 */	lis r9, lbl_8051F928@ha
+/* 803BA4A0 00383A60  3D 20 80 52 */	lis r9, sfsd_short_cut@ha
 /* 803BA4A4 00383A64  54 84 20 36 */	slwi r4, r4, 4
 /* 803BA4A8 00383A68  90 01 00 54 */	stw r0, 0x54(r1)
-/* 803BA4AC 00383A6C  39 29 F9 28 */	addi r9, r9, lbl_8051F928@l
+/* 803BA4AC 00383A6C  39 29 F9 28 */	addi r9, r9, sfsd_short_cut@l
 /* 803BA4B0 00383A70  38 09 00 00 */	addi r0, r9, 0
 /* 803BA4B4 00383A74  3D 00 80 57 */	lis r8, jumptable_8056B598@ha
 /* 803BA4B8 00383A78  BE 01 00 10 */	stmw r16, 0x10(r1)
@@ -1768,8 +1768,8 @@
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
 
-.global lbl_8051F928
-lbl_8051F928:
+.global sfsd_short_cut
+sfsd_short_cut:
 	.4byte 0x800100FF
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
@@ -2026,6 +2026,8 @@ lbl_8051F928:
 	.4byte 0x07070707
 	.4byte 0x0707FFFF
 	.4byte 0xFFFFFFFF
+
+idct_column_func:
 	.4byte IdctColumn_0000_1
 	.4byte IdctColumn_0000_0
 	.4byte IdctColumn_0001_1
@@ -2058,8 +2060,11 @@ lbl_8051F928:
 	.4byte IdctColumn_1111_0
 	.4byte IdctColumn_1111_1
 	.4byte IdctColumn_1111_0
-	.4byte 0x7FF7BFFB
-	.4byte 0xDFFDEFFE
+
+col_sw_off_msk:
+	.8byte 0x7FF7BFFBDFFDEFFE
+
+scale8_f:
 	.4byte 0x3FD6A09E
 	.4byte 0x667F3BCD
 	.4byte 0x3FDF6297
@@ -2076,22 +2081,23 @@ lbl_8051F928:
 	.4byte 0xA6AEA963
 	.4byte 0x3FB8F8B8
 	.4byte 0x3C69A60B
+
+dctisr_pre_idct_bits:
 	.4byte 0x0000000B
+
+dctisr_upscale_bit_i:
 	.4byte 0x00000010
+
+dctisr_line_descale_bit:
 	.4byte 0x00000010
 	.4byte 0
-	.4byte 0x3FE00000
-	.4byte 0
-	.float 8.0
-	.4byte 0
-	.4byte 0x41400000
-	.4byte 0
-	.4byte 0x43300000
-	.4byte 0x80000000
-	.4byte 0x41500000
-	.4byte 0
-	.4byte 0
-	.4byte 0
+
+	.8byte 0x3FE0000000000000
+	.8byte 0x4100000000000000
+	.8byte 0x4140000000000000
+	.8byte 0x4330000080000000
+	.8byte 0x4150000000000000
+	.8byte 0
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

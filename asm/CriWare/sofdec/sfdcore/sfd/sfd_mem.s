@@ -90,8 +90,8 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_805202A0
-lbl_805202A0:
+.global SFD_tr_in_mem
+SFD_tr_in_mem:
 	.4byte SFMEM_Init
 	.4byte SFMEM_Finish
 	.4byte SFMEM_ExecServer

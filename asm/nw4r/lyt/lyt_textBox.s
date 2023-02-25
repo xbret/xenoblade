@@ -1956,15 +1956,15 @@
 /* 80402E18 003CC3D8  4E 80 00 20 */	blr
 .endfn GetRuntimeTypeInfo__Q34nw4r3lyt7TextBoxCFv
 
-.fn sinit_80402E1C, local
+.fn "__sinit_\lyt_textBox_cpp", local
 /* 80402E1C 003CC3DC  38 0D BB D0 */	addi r0, r13, lbl_80667D50@sda21
 /* 80402E20 003CC3E0  90 0D BB E8 */	stw r0, lbl_80667D68@sda21(r13)
 /* 80402E24 003CC3E4  4E 80 00 20 */	blr 
-.endfn sinit_80402E1C
+.endfn "__sinit_\lyt_textBox_cpp"
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 
-.4byte sinit_80402E1C
+.4byte "__sinit_\lyt_textBox_cpp"
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

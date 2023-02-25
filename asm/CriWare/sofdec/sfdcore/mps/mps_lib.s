@@ -9,7 +9,7 @@
 /* 803BCCF8 003862B8  3C C0 80 52 */	lis r6, MPSLIB_version_str@ha
 /* 803BCCFC 003862BC  90 01 00 24 */	stw r0, 0x24(r1)
 /* 803BCD00 003862C0  38 05 03 04 */	addi r0, r5, 0x01020304@l
-/* 803BCD04 003862C4  3C A0 80 61 */	lis r5, cri_mps_verstr_ptr@ha
+/* 803BCD04 003862C4  3C A0 80 61 */	lis r5, cri_verstr_ptr@ha
 /* 803BCD08 003862C8  38 C6 FE 88 */	addi r6, r6, MPSLIB_version_str@l
 /* 803BCD0C 003862CC  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 803BCD10 003862D0  7C 7F 1B 78 */	mr r31, r3
@@ -17,7 +17,7 @@
 /* 803BCD18 003862D8  88 01 00 08 */	lbz r0, 8(r1)
 /* 803BCD1C 003862DC  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 803BCD20 003862E0  28 00 00 01 */	cmplwi r0, 1
-/* 803BCD24 003862E4  90 C5 A2 90 */	stw r6, cri_mps_verstr_ptr@l(r5)
+/* 803BCD24 003862E4  90 C5 A2 90 */	stw r6, cri_verstr_ptr@l(r5)
 /* 803BCD28 003862E8  41 82 00 14 */	beq .L_803BCD3C
 .L_803BCD2C:
 /* 803BCD2C 003862EC  39 80 FF FF */	li r12, -1
@@ -441,10 +441,7 @@ MPSLIB_version_str:
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-#actually cri_verstr_ptr, only named this to avoid conflicts for now
-#change later
-.global cri_mps_verstr_ptr
-cri_mps_verstr_ptr:
+cri_verstr_ptr:
 	.skip 0x4
 .global MPSLIB_libwork
 MPSLIB_libwork:

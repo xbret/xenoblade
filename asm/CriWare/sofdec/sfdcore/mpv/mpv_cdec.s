@@ -13,9 +13,9 @@
 /* 803A3FA8 0036D568  48 01 5E 45 */	bl DCT_IsrInit
 /* 803A3FAC 0036D56C  38 7F 11 60 */	addi r3, r31, 0x1160
 /* 803A3FB0 0036D570  48 01 5F A9 */	bl DCT_IsrInitScaleTbl
-/* 803A3FB4 0036D574  3C 80 80 52 */	lis r4, lbl_8051F5F8@ha
+/* 803A3FB4 0036D574  3C 80 80 52 */	lis r4, mpvcdec_funcs_int1@ha
 /* 803A3FB8 0036D578  3C 60 80 60 */	lis r3, lbl_80605F2C@ha
-/* 803A3FBC 0036D57C  38 84 F5 F8 */	addi r4, r4, lbl_8051F5F8@l
+/* 803A3FBC 0036D57C  38 84 F5 F8 */	addi r4, r4, mpvcdec_funcs_int1@l
 /* 803A3FC0 0036D580  38 63 5F 2C */	addi r3, r3, lbl_80605F2C@l
 /* 803A3FC4 0036D584  90 83 00 08 */	stw r4, 8(r3)
 /* 803A3FC8 0036D588  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -440,8 +440,8 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051F5F8
-lbl_8051F5F8:
+.global mpvcdec_funcs_int1
+mpvcdec_funcs_int1:
 	.4byte mpvcdec_IntraBlocksInt1
 	.4byte mpvcdec_NintraBlocksInt1
 

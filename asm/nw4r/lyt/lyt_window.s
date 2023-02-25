@@ -2539,15 +2539,15 @@
 /* 804053CC 003CE98C  4E 80 00 20 */	blr
 .endfn GetRuntimeTypeInfo__Q34nw4r3lyt6WindowCFv
 
-.fn sinit_804053D0, local
+.fn "__sinit_\lyt_window_cpp", local
 /* 804053D0 003CE990  38 0D BB D0 */	addi r0, r13, lbl_80667D50@sda21
 /* 804053D4 003CE994  90 0D BB F0 */	stw r0, lbl_80667D70@sda21(r13)
 /* 804053D8 003CE998  4E 80 00 20 */	blr 
-.endfn sinit_804053D0
+.endfn "__sinit_\lyt_window_cpp"
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 
-.4byte sinit_804053D0
+.4byte "__sinit_\lyt_window_cpp"
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

@@ -1135,12 +1135,12 @@
 .L_803A7684:
 /* 803A7684 00370C44  81 3D 0B 28 */	lwz r9, 0xb28(r29)
 /* 803A7688 00370C48  54 CA 10 3A */	slwi r10, r6, 2
-/* 803A768C 00370C4C  3C E0 80 52 */	lis r7, lbl_8051F750@ha
+/* 803A768C 00370C4C  3C E0 80 52 */	lis r7, dec_mbs_func@ha
 /* 803A7690 00370C50  81 9D 0B 20 */	lwz r12, 0xb20(r29)
 /* 803A7694 00370C54  21 09 00 03 */	subfic r8, r9, 3
 /* 803A7698 00370C58  38 C9 FF FD */	addi r6, r9, -3
 /* 803A769C 00370C5C  7D 06 33 78 */	or r6, r8, r6
-/* 803A76A0 00370C60  38 E7 F7 50 */	addi r7, r7, lbl_8051F750@l
+/* 803A76A0 00370C60  38 E7 F7 50 */	addi r7, r7, dec_mbs_func@l
 /* 803A76A4 00370C64  54 C6 0F FE */	srwi r6, r6, 0x1f
 /* 803A76A8 00370C68  7C E7 50 2E */	lwzx r7, r7, r10
 /* 803A76AC 00370C6C  1D 66 00 14 */	mulli r11, r6, 0x14
@@ -1748,8 +1748,8 @@
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
 
-.global lbl_8051F750
-lbl_8051F750:
+.global dec_mbs_func
+dec_mbs_func:
 	.4byte 0
 	.4byte MPVDEC_DecIpicMb
 	.4byte MPVDEC_DecPpicMb

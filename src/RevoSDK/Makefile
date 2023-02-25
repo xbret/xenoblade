@@ -129,6 +129,7 @@ RVL_SDK_FILES:=\
 	$(BUILD_DIR)/asm/RevoSDK/hbm/HBMController.o\
 	$(BUILD_DIR)/asm/RevoSDK/hbm/HBMRemoteSpk.o\
 	$(BUILD_DIR)/asm/RevoSDK/hbm/HBMAxSound.o\
+	$(BUILD_DIR)/asm/RevoSDK/hbm/HBMCommon.o\
 	$(BUILD_DIR)/asm/RevoSDK/hbm/HBMBase.o\
 	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/lyt/lyt_animation.o\
 	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/lyt/lyt_arcResourceAccessor.o\
@@ -145,6 +146,7 @@ RVL_SDK_FILES:=\
 	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/lyt/lyt_window.o\
 	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/math/math_triangular.o\
 	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/ut/ut_binaryFileFormat.o\
+	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/ut/ut_CharStrmReader.o\
 	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/ut/ut_CharWriter.o\
 	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/ut/ut_Font.o\
 	$(BUILD_DIR)/asm/RevoSDK/hbm/nw4hbm/ut/ut_LinkList.o\
@@ -166,7 +168,7 @@ RVL_SDK_FILES:=\
 	$(BUILD_DIR)/asm/RevoSDK/ipc/ipcclt.o\
 	$(BUILD_DIR)/asm/RevoSDK/ipc/memory.o\
 	$(BUILD_DIR)/asm/RevoSDK/ipc/ipcProfile.o\
-	$(BUILD_DIR)/asm/RevoSDK/kpad/kpad.o\
+	$(BUILD_DIR)/asm/RevoSDK/kpad/KPAD.o\
 	$(BUILD_DIR)/asm/RevoSDK/mem/mem_heapCommon.o\
 	$(BUILD_DIR)/asm/RevoSDK/mem/mem_expHeap.o\
 	$(BUILD_DIR)/asm/RevoSDK/mem/mem_frameHeap.o\

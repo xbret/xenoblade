@@ -32,6 +32,7 @@ CRIWARE_FILES :=\
 	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_sjd.o\
 	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_wtbl.o\
 	$(BUILD_DIR)/asm/CriWare/adx/ahx/adx_hdr.o\
+	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_atbl.o\
 	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_bsr.o\
 	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_cmn.o\
 	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_dcd.o\

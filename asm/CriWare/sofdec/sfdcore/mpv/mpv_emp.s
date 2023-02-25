@@ -149,9 +149,9 @@
 /* 803A5CC4 0036F284  38 60 00 00 */	li r3, 0
 /* 803A5CC8 0036F288  4E 80 00 20 */	blr
 .L_803A5CCC:
-/* 803A5CCC 0036F28C  3C A0 80 52 */	lis r5, lbl_8051F708@ha
+/* 803A5CCC 0036F28C  3C A0 80 52 */	lis r5, mpvemp_mbai@ha
 /* 803A5CD0 0036F290  55 00 08 3C */	slwi r0, r8, 1
-/* 803A5CD4 0036F294  38 A5 F7 08 */	addi r5, r5, lbl_8051F708@l
+/* 803A5CD4 0036F294  38 A5 F7 08 */	addi r5, r5, mpvemp_mbai@l
 /* 803A5CD8 0036F298  7C A5 02 AE */	lhax r5, r5, r0
 /* 803A5CDC 0036F29C  54 A0 06 3E */	clrlwi r0, r5, 0x18
 /* 803A5CE0 0036F2A0  21 00 00 20 */	subfic r8, r0, 0x20
@@ -363,9 +363,9 @@
 /* 803A5F8C 0036F54C  38 60 00 00 */	li r3, 0
 /* 803A5F90 0036F550  48 00 01 A8 */	b .L_803A6138
 .L_803A5F94:
-/* 803A5F94 0036F554  3C A0 80 52 */	lis r5, lbl_8051F708@ha
+/* 803A5F94 0036F554  3C A0 80 52 */	lis r5, mpvemp_mbai@ha
 /* 803A5F98 0036F558  55 00 08 3C */	slwi r0, r8, 1
-/* 803A5F9C 0036F55C  38 A5 F7 08 */	addi r5, r5, lbl_8051F708@l
+/* 803A5F9C 0036F55C  38 A5 F7 08 */	addi r5, r5, mpvemp_mbai@l
 /* 803A5FA0 0036F560  7C A5 02 AE */	lhax r5, r5, r0
 /* 803A5FA4 0036F564  54 A0 06 3E */	clrlwi r0, r5, 0x18
 /* 803A5FA8 0036F568  21 00 00 20 */	subfic r8, r0, 0x20
@@ -499,23 +499,41 @@
 
 
 
-.global lbl_8051F708
-lbl_8051F708:
-	.4byte 0x00000101
-	.4byte 0x03030203
-	.4byte 0x03040204
-	.4byte 0x03050205
-	.4byte 0x07070607
-	.4byte 0x0B080A08
-	.4byte 0x09080808
-	.4byte 0x07080608
-	.4byte 0x170A160A
-	.4byte 0x150A140A
-	.4byte 0x130A120A
-	.4byte 0x230B220B
-	.4byte 0x210B200B
-	.4byte 0x1F0B1E0B
-	.4byte 0x1D0B1C0B
-	.4byte 0x1B0B1A0B
-	.4byte 0x190B180B
-	.4byte 0x0F0B080B
+.global mpvemp_mbai
+mpvemp_mbai:
+	.2byte 0x0000
+	.2byte 0x0101
+	.2byte 0x0303
+	.2byte 0x0203
+	.2byte 0x0304
+	.2byte 0x0204
+	.2byte 0x0305
+	.2byte 0x0205
+	.2byte 0x0707
+	.2byte 0x0607
+	.2byte 0x0B08
+	.2byte 0x0A08
+	.2byte 0x0908
+	.2byte 0x0808
+	.2byte 0x0708
+	.2byte 0x0608
+	.2byte 0x170A
+	.2byte 0x160A
+	.2byte 0x150A
+	.2byte 0x140A
+	.2byte 0x130A
+	.2byte 0x120A
+	.2byte 0x230B
+	.2byte 0x220B
+	.2byte 0x210B
+	.2byte 0x200B
+	.2byte 0x1F0B
+	.2byte 0x1E0B
+	.2byte 0x1D0B
+	.2byte 0x1C0B
+	.2byte 0x1B0B
+	.2byte 0x1A0B
+	.2byte 0x190B
+	.2byte 0x180B
+	.2byte 0x0F0B
+	.2byte 0x080B

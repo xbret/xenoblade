@@ -66,7 +66,7 @@
 /* 8032C4E4 002F5AA4  7F E3 FB 78 */	mr r3, r31
 /* 8032C4E8 002F5AA8  38 04 00 FF */	addi r0, r4, 0x00FF00FF@l
 /* 8032C4EC 002F5AAC  90 01 00 08 */	stw r0, 8(r1)
-/* 8032C4F0 002F5AB0  48 00 61 41 */	bl func_80332630
+/* 8032C4F0 002F5AB0  48 00 61 41 */	bl GetVtxPos__Q36nw4hbm3lyt4PaneCFv
 /* 8032C4F4 002F5AB4  90 81 00 14 */	stw r4, 0x14(r1)
 /* 8032C4F8 002F5AB8  38 9F 00 4C */	addi r4, r31, 0x4c
 /* 8032C4FC 002F5ABC  38 A1 00 08 */	addi r5, r1, 8
@@ -131,27 +131,27 @@ lbl_8054D6B8:
 	.4byte 0
 	.4byte __dt__Q36nw4hbm3lyt8BoundingFv
 	.4byte GetRuntimeTypeInfo__Q36nw4hbm3lyt8BoundingCFv
-	.4byte func_80331CD0
-	.4byte func_80331FD0
+	.4byte CalculateMtx__Q36nw4hbm3lyt4PaneFRCQ36nw4hbm3lyt8DrawInfo
+	.4byte Draw__Q36nw4hbm3lyt4PaneFRCQ36nw4hbm3lyt8DrawInfo
 	.4byte DrawSelf__Q36nw4hbm3lyt8BoundingFRCQ36nw4hbm3lyt8DrawInfo
-	.4byte func_803320E0
-	.4byte func_80332170
-	.4byte func_80331AC0
-	.4byte func_80331AD0
-	.4byte func_80331AE0
-	.4byte func_80331B10
-	.4byte func_80331B40
-	.4byte func_80331B50
-	.4byte func_80331B60
-	.4byte func_80331C10
-	.4byte func_80332230
-	.4byte func_80332250
-	.4byte func_803322E0
-	.4byte func_80332300
-	.4byte func_803323E0
-	.4byte func_80332460
-	.4byte func_80332710
-	.4byte func_80332520
+	.4byte Animate__Q36nw4hbm3lyt4PaneFUl
+	.4byte AnimateSelf__Q36nw4hbm3lyt4PaneFUl
+	.4byte GetVtxColor__Q36nw4hbm3lyt4PaneCFUl
+	.4byte SetVtxColor__Q36nw4hbm3lyt4PaneFUlQ36nw4hbm2ut5Color
+	.4byte GetColorElement__Q36nw4hbm3lyt4PaneCFUl
+	.4byte SetColorElement__Q36nw4hbm3lyt4PaneFUlUc
+	.4byte GetVtxColorElement__Q36nw4hbm3lyt4PaneCFUl
+	.4byte SetVtxColorElement__Q36nw4hbm3lyt4PaneFUlUc
+	.4byte FindPaneByName__Q36nw4hbm3lyt4PaneFPCcb
+	.4byte FindMaterialByName__Q36nw4hbm3lyt4PaneFPCcb
+	.4byte BindAnimation__Q36nw4hbm3lyt4PaneFPQ36nw4hbm3lyt13AnimTransformb
+	.4byte UnbindAnimation__Q36nw4hbm3lyt4PaneFPQ36nw4hbm3lyt13AnimTransformb
+	.4byte UnbindAllAnimation__Q36nw4hbm3lyt4PaneFb
+	.4byte UnbindAnimationSelf__Q36nw4hbm3lyt4PaneFPQ36nw4hbm3lyt13AnimTransform
+	.4byte FindAnimationLink__Q36nw4hbm3lyt4PaneFPQ36nw4hbm3lyt13AnimTransform
+	.4byte SetAnimationEnable__Q36nw4hbm3lyt4PaneFPQ36nw4hbm3lyt13AnimTransformbb
+	.4byte GetMaterial__Q36nw4hbm3lyt4PaneCFv
+	.4byte LoadMtx__Q36nw4hbm3lyt4PaneFRCQ36nw4hbm3lyt8DrawInfo
 
 .global lbl_8054D71C
 lbl_8054D71C:

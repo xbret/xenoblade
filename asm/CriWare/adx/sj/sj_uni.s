@@ -144,11 +144,11 @@
 /* 8039585C 0035EE1C  7F E6 02 14 */	add r31, r6, r0
 /* 80395860 0035EE20  38 E7 93 38 */	addi r7, r7, sjuni_vtbl@l
 /* 80395864 0035EE24  38 00 00 01 */	li r0, 1
-/* 80395868 0035EE28  3C C0 80 52 */	lis r6, lbl_8051C430@ha
+/* 80395868 0035EE28  3C C0 80 52 */	lis r6, sjuni_uuid@ha
 /* 8039586C 0035EE2C  98 1F 00 04 */	stb r0, 4(r31)
 /* 80395870 0035EE30  7C A0 26 70 */	srawi r0, r5, 4
 /* 80395874 0035EE34  3C A0 80 39 */	lis r5, SJUNI_Error@ha
-/* 80395878 0035EE38  38 C6 C4 30 */	addi r6, r6, lbl_8051C430@l
+/* 80395878 0035EE38  38 C6 C4 30 */	addi r6, r6, sjuni_uuid@l
 /* 8039587C 0035EE3C  90 FF 00 00 */	stw r7, 0(r31)
 /* 80395880 0035EE40  7C 00 01 94 */	addze r0, r0
 /* 80395884 0035EE44  38 A5 56 78 */	addi r5, r5, SJUNI_Error@l
@@ -1154,8 +1154,8 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051C430
-lbl_8051C430:
+.global sjuni_uuid
+sjuni_uuid:
 	.4byte 0x2E534FA3
 	.4byte 0xAF9711D2
 	.4byte 0xA5270060

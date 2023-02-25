@@ -158,7 +158,7 @@
 .endfn AHXLINK_DetachAhx
 
 .fn AHXLINK_ExecOneAhx, global
-/* 8038A880 00353E40  48 00 26 70 */	b .L_8038CEF0
+/* 8038A880 00353E40  48 00 26 70 */	b func_8038CEF0
 .endfn AHXLINK_ExecOneAhx
 
 .fn func_8038A884, local

@@ -23,8 +23,8 @@
 /* 803A0C8C 0036A24C  3F E0 80 60 */	lis r31, lbl_80602958@ha
 /* 803A0C90 0036A250  3B FF 29 58 */	addi r31, r31, lbl_80602958@l
 /* 803A0C94 0036A254  93 C1 00 38 */	stw r30, 0x38(r1)
-/* 803A0C98 0036A258  3F C0 80 52 */	lis r30, lbl_8051E0E0@ha
-/* 803A0C9C 0036A25C  3B DE E0 E0 */	addi r30, r30, lbl_8051E0E0@l
+/* 803A0C98 0036A258  3F C0 80 52 */	lis r30, mwsfd_ver_str@ha
+/* 803A0C9C 0036A25C  3B DE E0 E0 */	addi r30, r30, mwsfd_ver_str@l
 /* 803A0CA0 0036A260  93 A1 00 34 */	stw r29, 0x34(r1)
 /* 803A0CA4 0036A264  93 81 00 30 */	stw r28, 0x30(r1)
 /* 803A0CA8 0036A268  7C 7C 1B 78 */	mr r28, r3
@@ -256,9 +256,9 @@
 .fn mwPlySfdInit, global
 /* 803A0FD4 0036A594  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803A0FD8 0036A598  7C 08 02 A6 */	mflr r0
-/* 803A0FDC 0036A59C  3C 80 80 52 */	lis r4, lbl_8051E170@ha
+/* 803A0FDC 0036A59C  3C 80 80 52 */	lis r4, mwsfd_initsfdpara@ha
 /* 803A0FE0 0036A5A0  90 01 00 24 */	stw r0, 0x24(r1)
-/* 803A0FE4 0036A5A4  80 04 E1 70 */	lwz r0, lbl_8051E170@l(r4)
+/* 803A0FE4 0036A5A4  80 04 E1 70 */	lwz r0, mwsfd_initsfdpara@l(r4)
 /* 803A0FE8 0036A5A8  38 80 39 88 */	li r4, 0x3988
 /* 803A0FEC 0036A5AC  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 803A0FF0 0036A5B0  3F E0 80 52 */	lis r31, mwsfdlib_strpool@ha
@@ -501,6 +501,65 @@
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
 
+.global mwsfd_ver_str
+mwsfd_ver_str:
+	.asciz "\nMWSFD/WII Ver.4.75 Build:Nov 13 2008 18:21:20\n"
+	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
+
+.global mwsfd_trentry
+mwsfd_trentry:
+	.4byte SFD_tr_in_mem
+	.4byte SFD_tr_sd_mps
+	.4byte SFD_tr_vd_mpv
+	.4byte SFD_tr_vo_manu
+	.4byte SFD_tr_ad_adxt
+	.4byte SFD_tr_ao_auto_p
+	.4byte SFD_tr_uo
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
+
+.global mwsfd_initsfdpara
+mwsfd_initsfdpara:
+	.4byte mwsfd_trentry
+	.4byte 0x0000EA24
+
+mwsfd_siz_mwplyhn:
+	.4byte 0x00000670
+
+.global lbl_8051E17C
+lbl_8051E17C:
+	.asciz "mwPlyInitSfdFx"
+	.balign 4
+	.asciz "mwPlyFinishSfdFx"
+	.balign 4
+
+.global lbl_8051E1A0
+lbl_8051E1A0:
+	.asciz "mwPlyCreateSofdec"
+	.balign 4
+
+.global lbl_8051E1B4
+lbl_8051E1B4:
+	.asciz "cpara_members"
+	.balign 4
+
+.global lbl_8051E1C4
+lbl_8051E1C4:
+	.asciz "mwply"
+	.balign 4
+
+.global lbl_8051E1CC
+lbl_8051E1CC:
+	.asciz "mwPlyDestroy"
+	.balign 4
+	.4byte 0
 
 .global lbl_8051E1E0
 lbl_8051E1E0:

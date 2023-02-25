@@ -1749,7 +1749,7 @@
 /* 8040DCB0 003D7270  4E 80 00 20 */	blr
 .endfn AuxCallbackFunc__Q44nw4r3snd6detail9AxManagerFPvPv
 
-.fn sinit_8040DCB4, local
+.fn "__sinit_\snd_AxManager_cpp", local
 /* 8040DCB4 003D7274  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040DCB8 003D7278  7C 08 02 A6 */	mflr r0
 /* 8040DCBC 003D727C  3C 60 80 57 */	lis r3, lbl_8056E068@ha
@@ -1801,7 +1801,7 @@
 /* 8040DD74 003D7334  7C 08 03 A6 */	mtlr r0
 /* 8040DD78 003D7338  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040DD7C 003D733C  4E 80 00 20 */	blr
-.endfn sinit_8040DCB4
+.endfn "__sinit_\snd_AxManager_cpp"
 
 .fn func_8040DD80, global
 /* 8040DD80 003D7340  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1905,7 +1905,7 @@
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 
-.4byte sinit_8040DCB4
+.4byte "__sinit_\snd_AxManager_cpp"
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

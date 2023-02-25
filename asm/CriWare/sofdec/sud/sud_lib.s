@@ -139,11 +139,14 @@ sud_lib_strpool:
 	.asciz "<SUDPS_>"
 	.asciz "<%06X>"
 	.asciz "02"
-	.byte 0x0A
-	.4byte 0x00440043
-	.4byte 0x00490050
-	.4byte 0x0041003C
-	.4byte 0
+	.asciz "\n"
+	.asciz "D"
+	.asciz "C"
+	.asciz "I"
+	.asciz "P"
+	.asciz "A"
+	.asciz "<"
+	.balign 4
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

@@ -63,11 +63,11 @@
 /* 803413C4 0030A984  6C 60 80 00 */	xoris r0, r3, 0x8000
 /* 803413C8 0030A988  90 01 00 0C */	stw r0, 0xc(r1)
 /* 803413CC 0030A98C  6C 84 80 00 */	xoris r4, r4, 0x8000
-/* 803413D0 0030A990  3C 60 80 55 */	lis r3, lbl_8054FA90@ha
+/* 803413D0 0030A990  3C 60 80 55 */	lis r3, __HBMSYNn128@ha
 /* 803413D4 0030A994  C8 9F 00 18 */	lfd f4, 0x18(r31)
 /* 803413D8 0030A998  54 A0 15 BA */	rlwinm r0, r5, 2, 0x16, 0x1d
 /* 803413DC 0030A99C  C8 01 00 08 */	lfd f0, 8(r1)
-/* 803413E0 0030A9A0  38 63 FA 90 */	addi r3, r3, lbl_8054FA90@l
+/* 803413E0 0030A9A0  38 63 FA 90 */	addi r3, r3, __HBMSYNn128@l
 /* 803413E4 0030A9A4  90 81 00 14 */	stw r4, 0x14(r1)
 /* 803413E8 0030A9A8  EC 60 20 28 */	fsubs f3, f0, f4
 /* 803413EC 0030A9AC  7C 43 04 2E */	lfsx f2, r3, r0
@@ -146,11 +146,11 @@
 /* 803414FC 0030AABC  6C 80 80 00 */	xoris r0, r4, 0x8000
 /* 80341500 0030AAC0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80341504 0030AAC4  6C 64 80 00 */	xoris r4, r3, 0x8000
-/* 80341508 0030AAC8  3C 60 80 55 */	lis r3, lbl_8054FA90@ha
+/* 80341508 0030AAC8  3C 60 80 55 */	lis r3, __HBMSYNn128@ha
 /* 8034150C 0030AACC  C8 9F 00 18 */	lfd f4, 0x18(r31)
 /* 80341510 0030AAD0  54 A0 15 BA */	rlwinm r0, r5, 2, 0x16, 0x1d
 /* 80341514 0030AAD4  C8 01 00 10 */	lfd f0, 0x10(r1)
-/* 80341518 0030AAD8  38 63 FA 90 */	addi r3, r3, lbl_8054FA90@l
+/* 80341518 0030AAD8  38 63 FA 90 */	addi r3, r3, __HBMSYNn128@l
 /* 8034151C 0030AADC  90 81 00 0C */	stw r4, 0xc(r1)
 /* 80341520 0030AAE0  EC 60 20 28 */	fsubs f3, f0, f4
 /* 80341524 0030AAE4  7C 43 04 2E */	lfsx f2, r3, r0
@@ -197,7 +197,7 @@
 .endfn __HBMSYNSetupVolumeEnvelope
 
 .balign 16, 0
-.fn func_803415C0, global
+.fn __HBMSYNRunVolumeEnvelope, global
 /* 803415C0 0030AB80  80 03 00 30 */	lwz r0, 0x30(r3)
 /* 803415C4 0030AB84  2C 00 00 00 */	cmpwi r0, 0
 /* 803415C8 0030AB88  41 82 00 18 */	beq .L_803415E0
@@ -219,9 +219,9 @@
 /* 80341604 0030ABC4  48 00 00 1C */	b .L_80341620
 .L_80341608:
 /* 80341608 0030ABC8  7C 80 86 70 */	srawi r0, r4, 0x10
-/* 8034160C 0030ABCC  3C 80 80 55 */	lis r4, lbl_8054FE90@ha
+/* 8034160C 0030ABCC  3C 80 80 55 */	lis r4, __HBMSYNAttackAttnTable@ha
 /* 80341610 0030ABD0  54 00 10 3A */	slwi r0, r0, 2
-/* 80341614 0030ABD4  38 84 FE 90 */	addi r4, r4, lbl_8054FE90@l
+/* 80341614 0030ABD4  38 84 FE 90 */	addi r4, r4, __HBMSYNAttackAttnTable@l
 /* 80341618 0030ABD8  7C 04 00 2E */	lwzx r0, r4, r0
 /* 8034161C 0030ABDC  90 03 00 34 */	stw r0, 0x34(r3)
 .L_80341620:
@@ -272,7 +272,7 @@
 /* 803416C0 0030AC80  7C 04 02 14 */	add r0, r4, r0
 /* 803416C4 0030AC84  90 03 00 34 */	stw r0, 0x34(r3)
 /* 803416C8 0030AC88  4E 80 00 20 */	blr 
-.endfn func_803415C0
+.endfn __HBMSYNRunVolumeEnvelope
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -287,136 +287,3 @@ lbl_80518B58:
 	.4byte 0
 	.4byte 0x43300000
 	.4byte 0x80000000
-
-.section .data, "wa"  # 0x805281E0 - 0x80573C60
-
-.global lbl_8054FA90
-lbl_8054FA90:
-	.4byte 0
-	.4byte 0x3C000219
-	.4byte 0x3C800000
-	.4byte 0x3CC0010C
-	.4byte 0x3D000000
-	.4byte 0x3D200086
-	.4byte 0x3D400000
-	.4byte 0x3D600086
-	.4byte 0x3D800000
-	.4byte 0x3D900043
-	.4byte 0x3DA00000
-	.4byte 0x3DB00043
-	.4byte 0x3DC00000
-	.4byte 0x3DD00043
-	.4byte 0x3DE00000
-	.4byte 0x3DF00043
-	.float 0.125
-	.4byte 0x3E080022
-	.4byte 0x3E100000
-	.4byte 0x3E180022
-	.4byte 0x3E200000
-	.4byte 0x3E280022
-	.4byte 0x3E300000
-	.4byte 0x3E380022
-	.4byte 0x3E400000
-	.4byte 0x3E480022
-	.4byte 0x3E500000
-	.4byte 0x3E580022
-	.4byte 0x3E600000
-	.4byte 0x3E680022
-	.4byte 0x3E700000
-	.4byte 0x3E780022
-	.float 0.25
-	.4byte 0x3E840011
-	.4byte 0x3E880000
-	.4byte 0x3E8C0011
-	.4byte 0x3E900000
-	.4byte 0x3E940011
-	.4byte 0x3E980000
-	.4byte 0x3E9C0011
-	.4byte 0x3EA00000
-	.4byte 0x3EA40011
-	.4byte 0x3EA80000
-	.4byte 0x3EAC0011
-	.4byte 0x3EB00000
-	.4byte 0x3EB40011
-	.4byte 0x3EB80000
-	.4byte 0x3EBC0011
-	.4byte 0x3EC00000
-	.4byte 0x3EC40011
-	.4byte 0x3EC80000
-	.4byte 0x3ECC0011
-	.4byte 0x3ED00000
-	.4byte 0x3ED40011
-	.4byte 0x3ED80000
-	.4byte 0x3EDC0011
-	.4byte 0x3EE00000
-	.4byte 0x3EE40011
-	.4byte 0x3EE80000
-	.4byte 0x3EEC0011
-	.4byte 0x3EF00000
-	.4byte 0x3EF40011
-	.4byte 0x3EF80000
-	.4byte 0x3EFC0011
-	.float 0.5
-	.4byte 0x3F020008
-	.4byte 0x3F040000
-	.4byte 0x3F060008
-	.4byte 0x3F080000
-	.4byte 0x3F0A0008
-	.4byte 0x3F0C0000
-	.4byte 0x3F0E0008
-	.4byte 0x3F100000
-	.4byte 0x3F120008
-	.4byte 0x3F140000
-	.4byte 0x3F160008
-	.4byte 0x3F180000
-	.4byte 0x3F1A0008
-	.4byte 0x3F1C0000
-	.4byte 0x3F1E0008
-	.4byte 0x3F200000
-	.4byte 0x3F220008
-	.4byte 0x3F240000
-	.4byte 0x3F260008
-	.4byte 0x3F280000
-	.4byte 0x3F2A0008
-	.4byte 0x3F2C0000
-	.4byte 0x3F2E0008
-	.4byte 0x3F300000
-	.4byte 0x3F320008
-	.4byte 0x3F340000
-	.4byte 0x3F360008
-	.4byte 0x3F380000
-	.4byte 0x3F3A0008
-	.4byte 0x3F3C0000
-	.4byte 0x3F3E0008
-	.float 0.75
-	.4byte 0x3F420008
-	.4byte 0x3F440000
-	.4byte 0x3F460008
-	.4byte 0x3F480000
-	.4byte 0x3F4A0008
-	.4byte 0x3F4C0000
-	.4byte 0x3F4E0008
-	.4byte 0x3F500000
-	.4byte 0x3F520008
-	.4byte 0x3F540000
-	.4byte 0x3F560008
-	.4byte 0x3F580000
-	.4byte 0x3F5A0008
-	.4byte 0x3F5C0000
-	.4byte 0x3F5E0008
-	.4byte 0x3F600000
-	.4byte 0x3F620008
-	.4byte 0x3F640000
-	.4byte 0x3F660008
-	.4byte 0x3F680000
-	.4byte 0x3F6A0008
-	.4byte 0x3F6C0000
-	.4byte 0x3F6E0008
-	.4byte 0x3F700000
-	.4byte 0x3F720008
-	.4byte 0x3F740000
-	.4byte 0x3F760008
-	.4byte 0x3F780000
-	.4byte 0x3F7A0008
-	.4byte 0x3F7C0000
-	.4byte 0x3F7E0008

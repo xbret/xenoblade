@@ -650,9 +650,9 @@
 /* 80382EAC 0034C46C  55 04 58 28 */	slwi r4, r8, 0xb
 /* 80382EB0 0034C470  54 05 58 28 */	slwi r5, r0, 0xb
 /* 80382EB4 0034C474  4B FF F2 A5 */	bl ADXSTM_SetBufSize
-/* 80382EB8 0034C478  3C 80 80 56 */	lis r4, lbl_80563720@ha
+/* 80382EB8 0034C478  3C 80 80 56 */	lis r4, adxstm_seteos_sct@ha
 /* 80382EBC 0034C47C  80 7B 00 08 */	lwz r3, 8(r27)
-/* 80382EC0 0034C480  80 84 37 20 */	lwz r4, lbl_80563720@l(r4)
+/* 80382EC0 0034C480  80 84 37 20 */	lwz r4, adxstm_seteos_sct@l(r4)
 /* 80382EC4 0034C484  4B FF E9 E5 */	bl ADXSTM_SetEos
 /* 80382EC8 0034C488  80 7B 00 08 */	lwz r3, 8(r27)
 /* 80382ECC 0034C48C  38 80 00 00 */	li r4, 0
@@ -1100,8 +1100,8 @@
 /* 803834F0 0034CAB0  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 803834F4 0034CAB4  40 80 01 50 */	bge .L_80383644
 .L_803834F8:
-/* 803834F8 0034CAB8  3C 60 80 56 */	lis r3, lbl_80563724@ha
-/* 803834FC 0034CABC  80 03 37 24 */	lwz r0, lbl_80563724@l(r3)
+/* 803834F8 0034CAB8  3C 60 80 56 */	lis r3, adxt_time_adjust_sw@ha
+/* 803834FC 0034CABC  80 03 37 24 */	lwz r0, adxt_time_adjust_sw@l(r3)
 /* 80383500 0034CAC0  28 00 00 01 */	cmplwi r0, 1
 /* 80383504 0034CAC4  40 82 00 30 */	bne .L_80383534
 /* 80383508 0034CAC8  83 5F 00 20 */	lwz r26, 0x20(r31)
@@ -2461,9 +2461,12 @@ lbl_80519968:
 
 .global lbl_80519970
 lbl_80519970:
-	.8byte 0x4330000080000000
-	.8byte 0x00000000447A0000
-	.8byte 0x42700000C2700000
+	.4byte 0x43300000
+	.4byte 0x80000000
+	.4byte 0x00000000
+	.4byte 0x447A0000
+	.4byte 0x42700000
+	.4byte 0xC2700000
 
 
 .global lbl_80519988
@@ -2523,13 +2526,13 @@ adx_tlk_strpool:
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
 
-.global lbl_80563720
-lbl_80563720:
+.global adxstm_seteos_sct
+adxstm_seteos_sct:
 	.4byte 0x00000019
 
 
-.global lbl_80563724
-lbl_80563724:
+.global adxt_time_adjust_sw
+adxt_time_adjust_sw:
 	.4byte 0x00000001
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

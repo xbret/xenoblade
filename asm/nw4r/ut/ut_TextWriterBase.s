@@ -2172,7 +2172,7 @@
 .endfn AdjustCursor__Q34nw4r2ut17TextWriterBase_w_FPfPfPCwi
 
 
-.fn sinit_804325F4, local
+.fn "__sinit_\ut_TextWriterBase_cpp", local
 /* 804325F4 003FBBB4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804325F8 003FBBB8  7C 08 02 A6 */	mflr r0
 /* 804325FC 003FBBBC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2208,11 +2208,11 @@
 /* 8043266C 003FBC2C  7C 08 03 A6 */	mtlr r0
 /* 80432670 003FBC30  38 21 00 10 */	addi r1, r1, 0x10
 /* 80432674 003FBC34  4E 80 00 20 */	blr 
-.endfn sinit_804325F4
+.endfn "__sinit_\ut_TextWriterBase_cpp"
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 
-.4byte sinit_804325F4
+.4byte "__sinit_\ut_TextWriterBase_cpp"
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

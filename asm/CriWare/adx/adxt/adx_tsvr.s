@@ -698,8 +698,8 @@
 /* 80385154 0034E714  80 7D 00 0C */	lwz r3, 0xc(r29)
 /* 80385158 0034E718  38 80 00 01 */	li r4, 1
 /* 8038515C 0034E71C  48 01 62 59 */	bl ADXRNA_SetTransSw
-/* 80385160 0034E720  3C 60 80 5F */	lis r3, lbl_805E85F0@ha
-/* 80385164 0034E724  81 83 85 F0 */	lwz r12, lbl_805E85F0@l(r3)
+/* 80385160 0034E720  3C 60 80 5F */	lis r3, adxt_enddecinfo_cbfn@ha
+/* 80385164 0034E724  81 83 85 F0 */	lwz r12, adxt_enddecinfo_cbfn@l(r3)
 /* 80385168 0034E728  2C 0C 00 00 */	cmpwi r12, 0
 /* 8038516C 0034E72C  41 82 00 1C */	beq .L_80385188
 /* 80385170 0034E730  7F A3 EB 78 */	mr r3, r29
@@ -942,9 +942,9 @@
 /* 803854BC 0034EA7C  40 82 00 78 */	bne .L_80385534
 /* 803854C0 0034EA80  80 7B 00 04 */	lwz r3, 4(r27)
 /* 803854C4 0034EA84  4B FF B8 71 */	bl ADXSJD_GetNumChan
-/* 803854C8 0034EA88  3C 80 80 5F */	lis r4, lbl_805E85F4@ha
+/* 803854C8 0034EA88  3C 80 80 5F */	lis r4, adxt_dbg_nch@ha
 /* 803854CC 0034EA8C  7C 7E 1B 78 */	mr r30, r3
-/* 803854D0 0034EA90  90 64 85 F4 */	stw r3, lbl_805E85F4@l(r4)
+/* 803854D0 0034EA90  90 64 85 F4 */	stw r3, adxt_dbg_nch@l(r4)
 /* 803854D4 0034EA94  7F 7D DB 78 */	mr r29, r27
 /* 803854D8 0034EA98  3B 80 00 00 */	li r28, 0
 /* 803854DC 0034EA9C  3F E0 80 5F */	lis r31, adxt_dbg_ndt@ha
@@ -1129,11 +1129,11 @@ adx_tsvr_strpool:
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805E85F0
-lbl_805E85F0:
+.global adxt_enddecinfo_cbfn
+adxt_enddecinfo_cbfn:
 	.skip 0x4
-.global lbl_805E85F4
-lbl_805E85F4:
+.global adxt_dbg_nch
+adxt_dbg_nch:
 	.skip 0x4
 .global adxt_dbg_ndt
 adxt_dbg_ndt:

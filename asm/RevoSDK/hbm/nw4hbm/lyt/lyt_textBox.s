@@ -149,12 +149,12 @@
 /* 80332F18 002FC4D8  41 82 00 30 */	beq .L_80332F48
 /* 80332F1C 002FC4DC  7C 7F 1B 78 */	mr r31, r3
 /* 80332F20 002FC4E0  41 82 00 0C */	beq .L_80332F2C
-/* 80332F24 002FC4E4  48 00 58 9D */	bl func_803387C0
+/* 80332F24 002FC4E4  48 00 58 9D */	bl __ct__Q36nw4hbm2ut7ResFontFv
 /* 80332F28 002FC4E8  7C 7F 1B 78 */	mr r31, r3
 .L_80332F2C:
 /* 80332F2C 002FC4EC  7F E3 FB 78 */	mr r3, r31
 /* 80332F30 002FC4F0  7F 64 DB 78 */	mr r4, r27
-/* 80332F34 002FC4F4  48 00 59 2D */	bl func_80338860
+/* 80332F34 002FC4F4  48 00 59 2D */	bl SetResource__Q36nw4hbm2ut7ResFontFPv
 /* 80332F38 002FC4F8  88 1C 00 FD */	lbz r0, 0xfd(r28)
 /* 80332F3C 002FC4FC  93 FC 00 E0 */	stw r31, 0xe0(r28)
 /* 80332F40 002FC500  60 00 00 80 */	ori r0, r0, 0x80
@@ -188,7 +188,7 @@
 .endfn __ct__Q36nw4hbm3lyt7TextBoxFUs
 
 .balign 16, 0
-.fn func_80332FB0, global
+.fn __dt__Q36nw4hbm3lyt7TextBoxFv, global
 /* 80332FB0 002FC570  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80332FB4 002FC574  7C 08 02 A6 */	mflr r0
 /* 80332FB8 002FC578  2C 03 00 00 */	cmpwi r3, 0
@@ -294,19 +294,19 @@
 /* 80333134 002FC6F4  7C 08 03 A6 */	mtlr r0
 /* 80333138 002FC6F8  38 21 00 30 */	addi r1, r1, 0x30
 /* 8033313C 002FC6FC  4E 80 00 20 */	blr 
-.endfn func_80332FB0
+.endfn __dt__Q36nw4hbm3lyt7TextBoxFv
 
 .balign 16, 0
-.fn func_80333140, global
+.fn GetVtxColor__Q36nw4hbm3lyt7TextBoxCFUl, global
 /* 80333140 002FC700  54 A0 08 3A */	rlwinm r0, r5, 1, 0, 0x1d
 /* 80333144 002FC704  7C 84 02 14 */	add r4, r4, r0
 /* 80333148 002FC708  80 04 00 D8 */	lwz r0, 0xd8(r4)
 /* 8033314C 002FC70C  90 03 00 00 */	stw r0, 0(r3)
 /* 80333150 002FC710  4E 80 00 20 */	blr 
-.endfn func_80333140
+.endfn GetVtxColor__Q36nw4hbm3lyt7TextBoxCFUl
 
 .balign 16, 0
-.fn func_80333160, global
+.fn SetVtxColor__Q36nw4hbm3lyt7TextBoxFUlQ36nw4hbm2ut5Color, global
 /* 80333160 002FC720  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80333164 002FC724  54 84 08 3A */	rlwinm r4, r4, 1, 0, 0x1d
 /* 80333168 002FC728  80 05 00 00 */	lwz r0, 0(r5)
@@ -322,30 +322,30 @@
 /* 80333190 002FC750  98 03 00 DB */	stb r0, 0xdb(r3)
 /* 80333194 002FC754  38 21 00 10 */	addi r1, r1, 0x10
 /* 80333198 002FC758  4E 80 00 20 */	blr 
-.endfn func_80333160
+.endfn SetVtxColor__Q36nw4hbm3lyt7TextBoxFUlQ36nw4hbm2ut5Color
 
 .balign 16, 0
-.fn func_803331A0, global
+.fn GetVtxColorElement__Q36nw4hbm3lyt7TextBoxCFUl, global
 /* 803331A0 002FC760  54 85 F8 7A */	rlwinm r5, r4, 0x1f, 1, 0x1d
 /* 803331A4 002FC764  54 80 07 BE */	clrlwi r0, r4, 0x1e
 /* 803331A8 002FC768  7C 63 2A 14 */	add r3, r3, r5
 /* 803331AC 002FC76C  7C 63 02 14 */	add r3, r3, r0
 /* 803331B0 002FC770  88 63 00 D8 */	lbz r3, 0xd8(r3)
 /* 803331B4 002FC774  4E 80 00 20 */	blr 
-.endfn func_803331A0
+.endfn GetVtxColorElement__Q36nw4hbm3lyt7TextBoxCFUl
 
 .balign 16, 0
-.fn func_803331C0, global
+.fn SetVtxColorElement__Q36nw4hbm3lyt7TextBoxFUlUc, global
 /* 803331C0 002FC780  54 86 F8 7A */	rlwinm r6, r4, 0x1f, 1, 0x1d
 /* 803331C4 002FC784  54 80 07 BE */	clrlwi r0, r4, 0x1e
 /* 803331C8 002FC788  7C 63 32 14 */	add r3, r3, r6
 /* 803331CC 002FC78C  7C 63 02 14 */	add r3, r3, r0
 /* 803331D0 002FC790  98 A3 00 D8 */	stb r5, 0xd8(r3)
 /* 803331D4 002FC794  4E 80 00 20 */	blr 
-.endfn func_803331C0
+.endfn SetVtxColorElement__Q36nw4hbm3lyt7TextBoxFUlUc
 
 .balign 16, 0
-.fn func_803331E0, global
+.fn DrawSelf__Q36nw4hbm3lyt7TextBoxFRCQ36nw4hbm3lyt8DrawInfo, global
 /* 803331E0 002FC7A0  94 21 FD E0 */	stwu r1, -0x220(r1)
 /* 803331E4 002FC7A4  7C 08 02 A6 */	mflr r0
 /* 803331E8 002FC7A8  90 01 02 24 */	stw r0, 0x224(r1)
@@ -378,20 +378,20 @@
 /* 80333250 002FC810  7D 89 03 A6 */	mtctr r12
 /* 80333254 002FC814  4E 80 04 21 */	bctrl 
 /* 80333258 002FC818  38 61 01 38 */	addi r3, r1, 0x138
-/* 8033325C 002FC81C  48 00 93 35 */	bl func_8033C590
+/* 8033325C 002FC81C  48 00 93 35 */	bl "__ct__Q36nw4hbm2ut17TextWriterBase<w>Fv"
 /* 80333260 002FC820  80 9E 00 E0 */	lwz r4, 0xe0(r30)
 /* 80333264 002FC824  38 61 01 38 */	addi r3, r1, 0x138
-/* 80333268 002FC828  48 00 3B F9 */	bl func_80336E60
+/* 80333268 002FC828  48 00 3B F9 */	bl SetFont__Q36nw4hbm2ut10CharWriterFRCQ36nw4hbm2ut4Font
 /* 8033326C 002FC82C  C0 3E 00 E4 */	lfs f1, 0xe4(r30)
 /* 80333270 002FC830  38 61 01 38 */	addi r3, r1, 0x138
 /* 80333274 002FC834  C0 5E 00 E8 */	lfs f2, 0xe8(r30)
-/* 80333278 002FC838  48 00 48 99 */	bl func_80337B10
+/* 80333278 002FC838  48 00 48 99 */	bl SetFontSize__Q36nw4hbm2ut10CharWriterFff
 /* 8033327C 002FC83C  C0 3E 00 EC */	lfs f1, 0xec(r30)
 /* 80333280 002FC840  38 61 01 38 */	addi r3, r1, 0x138
-/* 80333284 002FC844  48 00 94 FD */	bl func_8033C780
+/* 80333284 002FC844  48 00 94 FD */	bl "SetLineSpace__Q36nw4hbm2ut17TextWriterBase<w>Ff"
 /* 80333288 002FC848  C0 3E 00 F0 */	lfs f1, 0xf0(r30)
 /* 8033328C 002FC84C  38 61 01 38 */	addi r3, r1, 0x138
-/* 80333290 002FC850  48 00 95 01 */	bl func_8033C790
+/* 80333290 002FC850  48 00 95 01 */	bl "SetCharSpace__Q36nw4hbm2ut17TextWriterBase<w>Ff"
 /* 80333294 002FC854  80 1E 00 D8 */	lwz r0, 0xd8(r30)
 /* 80333298 002FC858  38 61 00 30 */	addi r3, r1, 0x30
 /* 8033329C 002FC85C  90 01 00 28 */	stw r0, 0x28(r1)
@@ -412,7 +412,7 @@
 /* 803332D8 002FC898  41 82 00 08 */	beq .L_803332E0
 /* 803332DC 002FC89C  38 80 00 02 */	li r4, 2
 .L_803332E0:
-/* 803332E0 002FC8A0  48 00 45 41 */	bl func_80337820
+/* 803332E0 002FC8A0  48 00 45 41 */	bl SetGradationMode__Q36nw4hbm2ut10CharWriterFQ46nw4hbm2ut10CharWriter13GradationMode
 /* 803332E4 002FC8A4  80 A1 00 30 */	lwz r5, 0x30(r1)
 /* 803332E8 002FC8A8  38 61 01 38 */	addi r3, r1, 0x138
 /* 803332EC 002FC8AC  80 01 00 2C */	lwz r0, 0x2c(r1)
@@ -420,7 +420,7 @@
 /* 803332F4 002FC8B4  90 A1 00 20 */	stw r5, 0x20(r1)
 /* 803332F8 002FC8B8  38 A1 00 1C */	addi r5, r1, 0x1c
 /* 803332FC 002FC8BC  90 01 00 1C */	stw r0, 0x1c(r1)
-/* 80333300 002FC8C0  48 00 46 71 */	bl func_80337970
+/* 80333300 002FC8C0  48 00 46 71 */	bl SetTextColor__Q36nw4hbm2ut10CharWriterFQ36nw4hbm2ut5ColorQ36nw4hbm2ut5Color
 /* 80333304 002FC8C4  80 7E 00 28 */	lwz r3, 0x28(r30)
 /* 80333308 002FC8C8  80 03 00 24 */	lwz r0, 0x24(r3)
 /* 8033330C 002FC8CC  90 01 00 50 */	stw r0, 0x50(r1)
@@ -534,12 +534,12 @@
 /* 8033347C 002FCA3C  80 C1 00 0C */	lwz r6, 0xc(r1)
 /* 80333480 002FCA40  90 01 00 18 */	stw r0, 0x18(r1)
 /* 80333484 002FCA44  90 C1 00 14 */	stw r6, 0x14(r1)
-/* 80333488 002FCA48  48 00 43 49 */	bl func_803377D0
+/* 80333488 002FCA48  48 00 43 49 */	bl SetColorMapping__Q36nw4hbm2ut10CharWriterFQ36nw4hbm2ut5ColorQ36nw4hbm2ut5Color
 /* 8033348C 002FCA4C  80 9E 00 F4 */	lwz r4, 0xf4(r30)
 /* 80333490 002FCA50  2C 04 00 00 */	cmpwi r4, 0
 /* 80333494 002FCA54  41 82 00 0C */	beq .L_803334A0
 /* 80333498 002FCA58  38 61 01 38 */	addi r3, r1, 0x138
-/* 8033349C 002FCA5C  48 00 93 65 */	bl func_8033C800
+/* 8033349C 002FCA5C  48 00 93 65 */	bl "SetTagProcessor__Q36nw4hbm2ut17TextWriterBase<w>FPQ36nw4hbm2ut19TagProcessorBase<w>"
 .L_803334A0:
 /* 803334A0 002FCA60  38 61 01 38 */	addi r3, r1, 0x138
 /* 803334A4 002FCA64  48 00 39 DD */	bl SetupGX__Q36nw4hbm2ut10CharWriterFv
@@ -550,7 +550,7 @@
 /* 803334B8 002FCA78  D0 21 00 6C */	stfs f1, 0x6c(r1)
 /* 803334BC 002FCA7C  D0 21 00 70 */	stfs f1, 0x70(r1)
 /* 803334C0 002FCA80  D0 21 00 74 */	stfs f1, 0x74(r1)
-/* 803334C4 002FCA84  48 00 49 CD */	bl func_80337E90
+/* 803334C4 002FCA84  48 00 49 CD */	bl SetCursor__Q36nw4hbm2ut10CharWriterFff
 /* 803334C8 002FCA88  C0 3E 00 4C */	lfs f1, 0x4c(r30)
 /* 803334CC 002FCA8C  38 61 00 68 */	addi r3, r1, 0x68
 /* 803334D0 002FCA90  A0 DE 00 FA */	lhz r6, 0xfa(r30)
@@ -608,12 +608,12 @@
 /* 803335A0 002FCB60  90 E1 01 2C */	stw r7, 0x12c(r1)
 /* 803335A4 002FCB64  90 01 01 30 */	stw r0, 0x130(r1)
 /* 803335A8 002FCB68  91 C1 01 34 */	stw r14, 0x134(r1)
-/* 803335AC 002FCB6C  48 00 09 F5 */	bl func_80333FA0
+/* 803335AC 002FCB6C  48 00 09 F5 */	bl "CalcStringRectImpl<w>__25@unnamed@lyt_textBox_cpp@FPQ36nw4hbm2ut4RectPQ36nw4hbm2ut17TextWriterBase<w>PCwif_v"
 /* 803335B0 002FCB70  38 61 00 D8 */	addi r3, r1, 0xd8
 /* 803335B4 002FCB74  38 80 FF FF */	li r4, -1
-/* 803335B8 002FCB78  48 00 90 39 */	bl func_8033C5F0
+/* 803335B8 002FCB78  48 00 90 39 */	bl "__dt__Q36nw4hbm2ut17TextWriterBase<w>Fv"
 /* 803335BC 002FCB7C  7F C3 F3 78 */	mr r3, r30
-/* 803335C0 002FCB80  4B FF F0 71 */	bl func_80332630
+/* 803335C0 002FCB80  4B FF F0 71 */	bl GetVtxPos__Q36nw4hbm3lyt4PaneCFv
 /* 803335C4 002FCB84  3C A0 55 55 */	lis r5, 0x55555556@ha
 /* 803335C8 002FCB88  88 DE 00 FC */	lbz r6, 0xfc(r30)
 /* 803335CC 002FCB8C  38 05 55 56 */	addi r0, r5, 0x55555556@l
@@ -707,7 +707,7 @@
 /* 80333708 002FCCC8  EF A1 00 28 */	fsubs f29, f1, f0
 /* 8033370C 002FCCCC  C0 21 00 68 */	lfs f1, 0x68(r1)
 /* 80333710 002FCCD0  C0 41 00 6C */	lfs f2, 0x6c(r1)
-/* 80333714 002FCCD4  48 00 47 7D */	bl func_80337E90
+/* 80333714 002FCCD4  48 00 47 7D */	bl SetCursor__Q36nw4hbm2ut10CharWriterFff
 /* 80333718 002FCCD8  A1 FE 00 FA */	lhz r15, 0xfa(r30)
 /* 8033371C 002FCCDC  2C 0F 00 00 */	cmpwi r15, 0
 /* 80333720 002FCCE0  40 81 01 90 */	ble .L_803338B0
@@ -775,37 +775,37 @@
 /* 80333814 002FCDD4  90 A1 00 CC */	stw r5, 0xcc(r1)
 /* 80333818 002FCDD8  90 81 00 D0 */	stw r4, 0xd0(r1)
 /* 8033381C 002FCDDC  90 01 00 D4 */	stw r0, 0xd4(r1)
-/* 80333820 002FCDE0  48 00 46 71 */	bl func_80337E90
+/* 80333820 002FCDE0  48 00 46 71 */	bl SetCursor__Q36nw4hbm2ut10CharWriterFff
 /* 80333824 002FCDE4  FC 20 F0 90 */	fmr f1, f30
 /* 80333828 002FCDE8  7D C5 73 78 */	mr r5, r14
 /* 8033382C 002FCDEC  7D E6 7B 78 */	mr r6, r15
 /* 80333830 002FCDF0  38 61 00 58 */	addi r3, r1, 0x58
 /* 80333834 002FCDF4  38 81 00 78 */	addi r4, r1, 0x78
 /* 80333838 002FCDF8  38 E1 00 08 */	addi r7, r1, 8
-/* 8033383C 002FCDFC  48 00 00 C5 */	bl func_80333900
+/* 8033383C 002FCDFC  48 00 00 C5 */	bl "CalcLineRectImpl<w>__25@unnamed@lyt_textBox_cpp@FPQ36nw4hbm2ut4RectPQ36nw4hbm2ut17TextWriterBase<w>PCwifPb_i"
 /* 80333840 002FCE00  C0 21 00 60 */	lfs f1, 0x60(r1)
 /* 80333844 002FCE04  7C 71 1B 78 */	mr r17, r3
 /* 80333848 002FCE08  C0 01 00 58 */	lfs f0, 0x58(r1)
 /* 8033384C 002FCE0C  38 61 00 78 */	addi r3, r1, 0x78
 /* 80333850 002FCE10  38 80 FF FF */	li r4, -1
 /* 80333854 002FCE14  EF C1 00 28 */	fsubs f30, f1, f0
-/* 80333858 002FCE18  48 00 8D 99 */	bl func_8033C5F0
+/* 80333858 002FCE18  48 00 8D 99 */	bl "__dt__Q36nw4hbm2ut17TextWriterBase<w>Fv"
 /* 8033385C 002FCE1C  EC 3D F0 28 */	fsubs f1, f29, f30
 /* 80333860 002FCE20  C0 01 00 68 */	lfs f0, 0x68(r1)
 /* 80333864 002FCE24  38 61 01 38 */	addi r3, r1, 0x138
 /* 80333868 002FCE28  EC 3C 00 72 */	fmuls f1, f28, f1
 /* 8033386C 002FCE2C  EC 20 08 2A */	fadds f1, f0, f1
-/* 80333870 002FCE30  48 00 46 31 */	bl func_80337EA0
+/* 80333870 002FCE30  48 00 46 31 */	bl SetCursorX__Q36nw4hbm2ut10CharWriterFf
 /* 80333874 002FCE34  7D C4 73 78 */	mr r4, r14
 /* 80333878 002FCE38  7E 25 8B 78 */	mr r5, r17
 /* 8033387C 002FCE3C  38 61 01 38 */	addi r3, r1, 0x138
-/* 80333880 002FCE40  48 00 A2 51 */	bl func_8033DAD0
+/* 80333880 002FCE40  48 00 A2 51 */	bl "Print__Q36nw4hbm2ut17TextWriterBase<w>FPCwi"
 /* 80333884 002FCE44  88 01 00 08 */	lbz r0, 8(r1)
 /* 80333888 002FCE48  2C 00 00 00 */	cmpwi r0, 0
 /* 8033388C 002FCE4C  41 82 00 10 */	beq .L_8033389C
 /* 80333890 002FCE50  38 61 01 38 */	addi r3, r1, 0x138
 /* 80333894 002FCE54  38 90 D9 F0 */	addi r4, r16, lbl_8054D9F0@l
-/* 80333898 002FCE58  48 00 A3 99 */	bl func_8033DC30
+/* 80333898 002FCE58  48 00 A3 99 */	bl "Print__Q36nw4hbm2ut17TextWriterBase<w>FPCw"
 .L_8033389C:
 /* 8033389C 002FCE5C  56 20 08 3C */	slwi r0, r17, 1
 /* 803338A0 002FCE60  7D F1 78 50 */	subf r15, r17, r15
@@ -816,7 +816,7 @@
 .L_803338B0:
 /* 803338B0 002FCE70  38 61 01 38 */	addi r3, r1, 0x138
 /* 803338B4 002FCE74  38 80 FF FF */	li r4, -1
-/* 803338B8 002FCE78  48 00 8D 39 */	bl func_8033C5F0
+/* 803338B8 002FCE78  48 00 8D 39 */	bl "__dt__Q36nw4hbm2ut17TextWriterBase<w>Fv"
 .L_803338BC:
 /* 803338BC 002FCE7C  39 61 01 E0 */	addi r11, r1, 0x1e0
 /* 803338C0 002FCE80  E3 E1 02 18 */	psq_l f31, 536(r1), 0, qr0
@@ -832,10 +832,10 @@
 /* 803338E8 002FCEA8  7C 08 03 A6 */	mtlr r0
 /* 803338EC 002FCEAC  38 21 02 20 */	addi r1, r1, 0x220
 /* 803338F0 002FCEB0  4E 80 00 20 */	blr 
-.endfn func_803331E0
+.endfn DrawSelf__Q36nw4hbm3lyt7TextBoxFRCQ36nw4hbm3lyt8DrawInfo
 
 .balign 16, 0
-.fn func_80333900, global
+.fn "CalcLineRectImpl<w>__25@unnamed@lyt_textBox_cpp@FPQ36nw4hbm2ut4RectPQ36nw4hbm2ut17TextWriterBase<w>PCwifPb_i", global
 /* 80333900 002FCEC0  94 21 FF 20 */	stwu r1, -0xe0(r1)
 /* 80333904 002FCEC4  7C 08 02 A6 */	mflr r0
 /* 80333908 002FCEC8  90 01 00 E4 */	stw r0, 0xe4(r1)
@@ -864,7 +864,7 @@
 /* 80333964 002FCF24  90 01 00 58 */	stw r0, 0x58(r1)
 /* 80333968 002FCF28  90 81 00 48 */	stw r4, 0x48(r1)
 /* 8033396C 002FCF2C  90 A1 00 4C */	stw r5, 0x4c(r1)
-/* 80333970 002FCF30  48 00 35 01 */	bl func_80336E70
+/* 80333970 002FCF30  48 00 35 01 */	bl GetFont__Q36nw4hbm2ut10CharWriterCFv
 /* 80333974 002FCF34  80 A3 00 04 */	lwz r5, 4(r3)
 /* 80333978 002FCF38  3E E0 80 52 */	lis r23, lbl_80518AC0@ha
 /* 8033397C 002FCF3C  80 83 00 08 */	lwz r4, 8(r3)
@@ -882,7 +882,7 @@
 /* 803339AC 002FCF6C  90 01 00 10 */	stw r0, 0x10(r1)
 /* 803339B0 002FCF70  D3 F8 00 00 */	stfs f31, 0(r24)
 /* 803339B4 002FCF74  D3 F8 00 08 */	stfs f31, 8(r24)
-/* 803339B8 002FCF78  48 00 8D 39 */	bl func_8033C6F0
+/* 803339B8 002FCF78  48 00 8D 39 */	bl "GetLineHeight__Q36nw4hbm2ut17TextWriterBase<w>CFv"
 /* 803339BC 002FCF7C  FC 00 F8 90 */	fmr f0, f31
 /* 803339C0 002FCF80  FC 00 08 40 */	fcmpo cr0, f0, f1
 /* 803339C4 002FCF84  40 81 00 08 */	ble .L_803339CC
@@ -892,7 +892,7 @@
 .L_803339D0:
 /* 803339D0 002FCF90  D0 38 00 04 */	stfs f1, 4(r24)
 /* 803339D4 002FCF94  7F 23 CB 78 */	mr r3, r25
-/* 803339D8 002FCF98  48 00 8D 19 */	bl func_8033C6F0
+/* 803339D8 002FCF98  48 00 8D 19 */	bl "GetLineHeight__Q36nw4hbm2ut17TextWriterBase<w>CFv"
 /* 803339DC 002FCF9C  3C 60 80 52 */	lis r3, lbl_80518AC0@ha
 /* 803339E0 002FCFA0  C0 03 8A C0 */	lfs f0, lbl_80518AC0@l(r3)
 /* 803339E4 002FCFA4  FC 00 08 40 */	fcmpo cr0, f0, f1
@@ -938,9 +938,9 @@
 /* 80333A78 002FD038  D3 61 00 24 */	stfs f27, 0x24(r1)
 /* 80333A7C 002FD03C  90 81 00 4C */	stw r4, 0x4c(r1)
 /* 80333A80 002FD040  90 01 00 58 */	stw r0, 0x58(r1)
-/* 80333A84 002FD044  48 00 44 1D */	bl func_80337EA0
+/* 80333A84 002FD044  48 00 44 1D */	bl SetCursorX__Q36nw4hbm2ut10CharWriterFf
 /* 80333A88 002FD048  7F 23 CB 78 */	mr r3, r25
-/* 80333A8C 002FD04C  48 00 8D 95 */	bl func_8033C820
+/* 80333A8C 002FD04C  48 00 8D 95 */	bl "GetTagProcessor__Q36nw4hbm2ut17TextWriterBase<w>CFv"
 /* 80333A90 002FD050  81 83 00 00 */	lwz r12, 0(r3)
 /* 80333A94 002FD054  38 81 00 18 */	addi r4, r1, 0x18
 /* 80333A98 002FD058  57 A5 04 3E */	clrlwi r5, r29, 0x10
@@ -988,7 +988,7 @@
 .L_80333B24:
 /* 80333B24 002FD0E4  D0 38 00 0C */	stfs f1, 0xc(r24)
 /* 80333B28 002FD0E8  7F 23 CB 78 */	mr r3, r25
-/* 80333B2C 002FD0EC  48 00 43 B5 */	bl func_80337EE0
+/* 80333B2C 002FD0EC  48 00 43 B5 */	bl GetCursorX__Q36nw4hbm2ut10CharWriterCFv
 /* 80333B30 002FD0F0  C0 58 00 08 */	lfs f2, 8(r24)
 /* 80333B34 002FD0F4  FF E0 08 90 */	fmr f31, f1
 /* 80333B38 002FD0F8  C0 18 00 00 */	lfs f0, 0(r24)
@@ -1021,24 +1021,24 @@
 /* 80333B90 002FD150  2C 1F 00 00 */	cmpwi r31, 0
 /* 80333B94 002FD154  41 82 00 10 */	beq .L_80333BA4
 /* 80333B98 002FD158  7F 23 CB 78 */	mr r3, r25
-/* 80333B9C 002FD15C  48 00 8C 15 */	bl func_8033C7B0
+/* 80333B9C 002FD15C  48 00 8C 15 */	bl "GetCharSpace__Q36nw4hbm2ut17TextWriterBase<w>CFv"
 /* 80333BA0 002FD160  EF FF 08 2A */	fadds f31, f31, f1
 .L_80333BA4:
 /* 80333BA4 002FD164  7F 23 CB 78 */	mr r3, r25
 /* 80333BA8 002FD168  3B E0 00 01 */	li r31, 1
-/* 80333BAC 002FD16C  48 00 41 85 */	bl func_80337D30
+/* 80333BAC 002FD16C  48 00 41 85 */	bl IsWidthFixed__Q36nw4hbm2ut10CharWriterCFv
 /* 80333BB0 002FD170  2C 03 00 00 */	cmpwi r3, 0
 /* 80333BB4 002FD174  41 82 00 14 */	beq .L_80333BC8
 /* 80333BB8 002FD178  7F 23 CB 78 */	mr r3, r25
-/* 80333BBC 002FD17C  48 00 41 85 */	bl func_80337D40
+/* 80333BBC 002FD17C  48 00 41 85 */	bl GetFixedWidth__Q36nw4hbm2ut10CharWriterCFv
 /* 80333BC0 002FD180  EF FF 08 2A */	fadds f31, f31, f1
 /* 80333BC4 002FD184  48 00 00 48 */	b .L_80333C0C
 .L_80333BC8:
 /* 80333BC8 002FD188  7F 23 CB 78 */	mr r3, r25
-/* 80333BCC 002FD18C  48 00 3F 25 */	bl func_80337AF0
+/* 80333BCC 002FD18C  48 00 3F 25 */	bl GetScaleH__Q36nw4hbm2ut10CharWriterCFv
 /* 80333BD0 002FD190  FF 80 08 90 */	fmr f28, f1
 /* 80333BD4 002FD194  7F 23 CB 78 */	mr r3, r25
-/* 80333BD8 002FD198  48 00 32 99 */	bl func_80336E70
+/* 80333BD8 002FD198  48 00 32 99 */	bl GetFont__Q36nw4hbm2ut10CharWriterCFv
 /* 80333BDC 002FD19C  81 83 00 00 */	lwz r12, 0(r3)
 /* 80333BE0 002FD1A0  57 A4 04 3E */	clrlwi r4, r29, 0x10
 /* 80333BE4 002FD1A4  81 8C 00 48 */	lwz r12, 0x48(r12)
@@ -1137,10 +1137,10 @@
 /* 80333D38 002FD2F8  7C 08 03 A6 */	mtlr r0
 /* 80333D3C 002FD2FC  38 21 00 E0 */	addi r1, r1, 0xe0
 /* 80333D40 002FD300  4E 80 00 20 */	blr 
-.endfn func_80333900
+.endfn "CalcLineRectImpl<w>__25@unnamed@lyt_textBox_cpp@FPQ36nw4hbm2ut4RectPQ36nw4hbm2ut17TextWriterBase<w>PCwifPb_i"
 
 .balign 16, 0
-.fn func_80333D50, global
+.fn AllocStringBuffer__Q36nw4hbm3lyt7TextBoxFUs, global
 /* 80333D50 002FD310  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80333D54 002FD314  7C 08 02 A6 */	mflr r0
 /* 80333D58 002FD318  2C 04 00 00 */	cmpwi r4, 0
@@ -1173,7 +1173,7 @@
 /* 80333DC0 002FD380  7C 08 03 A6 */	mtlr r0
 /* 80333DC4 002FD384  38 21 00 10 */	addi r1, r1, 0x10
 /* 80333DC8 002FD388  4E 80 00 20 */	blr 
-.endfn func_80333D50
+.endfn AllocStringBuffer__Q36nw4hbm3lyt7TextBoxFUs
 
 .balign 16, 0
 .fn FreeStringBuffer__Q36nw4hbm3lyt7TextBoxFv, global
@@ -1230,7 +1230,7 @@
 .endfn SetString__Q36nw4hbm3lyt7TextBoxFPCwUs
 
 .balign 16, 0
-.fn func_80333E90, global
+.fn SetString__Q36nw4hbm3lyt7TextBoxFPCwUsUs, global
 /* 80333E90 002FD450  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80333E94 002FD454  7C 08 02 A6 */	mflr r0
 /* 80333E98 002FD458  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1285,10 +1285,10 @@
 /* 80333F4C 002FD50C  7C 08 03 A6 */	mtlr r0
 /* 80333F50 002FD510  38 21 00 20 */	addi r1, r1, 0x20
 /* 80333F54 002FD514  4E 80 00 20 */	blr 
-.endfn func_80333E90
+.endfn SetString__Q36nw4hbm3lyt7TextBoxFPCwUsUs
 
 .balign 16, 0
-.fn func_80333F60, global
+.fn __dt__Q36nw4hbm2ut4FontFv, global
 /* 80333F60 002FD520  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80333F64 002FD524  7C 08 02 A6 */	mflr r0
 /* 80333F68 002FD528  2C 03 00 00 */	cmpwi r3, 0
@@ -1306,10 +1306,10 @@
 /* 80333F94 002FD554  7C 08 03 A6 */	mtlr r0
 /* 80333F98 002FD558  38 21 00 10 */	addi r1, r1, 0x10
 /* 80333F9C 002FD55C  4E 80 00 20 */	blr 
-.endfn func_80333F60
+.endfn __dt__Q36nw4hbm2ut4FontFv
 
 .balign 16, 0
-.fn func_80333FA0, global
+.fn "CalcStringRectImpl<w>__25@unnamed@lyt_textBox_cpp@FPQ36nw4hbm2ut4RectPQ36nw4hbm2ut17TextWriterBase<w>PCwif_v", global
 /* 80333FA0 002FD560  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80333FA4 002FD564  7C 08 02 A6 */	mflr r0
 /* 80333FA8 002FD568  90 01 00 64 */	stw r0, 0x64(r1)
@@ -1332,7 +1332,7 @@
 /* 80333FEC 002FD5AC  D0 23 00 04 */	stfs f1, 4(r3)
 /* 80333FF0 002FD5B0  D0 23 00 0C */	stfs f1, 0xc(r3)
 /* 80333FF4 002FD5B4  7F 63 DB 78 */	mr r3, r27
-/* 80333FF8 002FD5B8  48 00 3E 99 */	bl func_80337E90
+/* 80333FF8 002FD5B8  48 00 3E 99 */	bl SetCursor__Q36nw4hbm2ut10CharWriterFff
 /* 80333FFC 002FD5BC  C3 FE 8A C0 */	lfs f31, lbl_80518AC0@l(r30)
 /* 80334000 002FD5C0  3F E0 80 55 */	lis r31, lbl_8054D9F0@ha
 .L_80334004:
@@ -1346,7 +1346,7 @@
 /* 80334020 002FD5E0  38 61 00 10 */	addi r3, r1, 0x10
 /* 80334024 002FD5E4  38 E1 00 08 */	addi r7, r1, 8
 /* 80334028 002FD5E8  D3 E1 00 1C */	stfs f31, 0x1c(r1)
-/* 8033402C 002FD5EC  4B FF F8 D5 */	bl func_80333900
+/* 8033402C 002FD5EC  4B FF F8 D5 */	bl "CalcLineRectImpl<w>__25@unnamed@lyt_textBox_cpp@FPQ36nw4hbm2ut4RectPQ36nw4hbm2ut17TextWriterBase<w>PCwifPb_i"
 /* 80334030 002FD5F0  88 01 00 08 */	lbz r0, 8(r1)
 /* 80334034 002FD5F4  7C 7E 1B 78 */	mr r30, r3
 /* 80334038 002FD5F8  2C 00 00 00 */	cmpwi r0, 0
@@ -1357,7 +1357,7 @@
 /* 8033404C 002FD60C  38 BF D9 F0 */	addi r5, r31, lbl_8054D9F0@l
 /* 80334050 002FD610  38 E1 00 08 */	addi r7, r1, 8
 /* 80334054 002FD614  38 C0 00 01 */	li r6, 1
-/* 80334058 002FD618  4B FF F8 A9 */	bl func_80333900
+/* 80334058 002FD618  4B FF F8 A9 */	bl "CalcLineRectImpl<w>__25@unnamed@lyt_textBox_cpp@FPQ36nw4hbm2ut4RectPQ36nw4hbm2ut17TextWriterBase<w>PCwifPb_i"
 .L_8033405C:
 /* 8033405C 002FD61C  C0 21 00 10 */	lfs f1, 0x10(r1)
 /* 80334060 002FD620  57 C0 08 3C */	slwi r0, r30, 1
@@ -1410,27 +1410,27 @@
 /* 803340FC 002FD6BC  7C 08 03 A6 */	mtlr r0
 /* 80334100 002FD6C0  38 21 00 60 */	addi r1, r1, 0x60
 /* 80334104 002FD6C4  4E 80 00 20 */	blr 
-.endfn func_80333FA0
+.endfn "CalcStringRectImpl<w>__25@unnamed@lyt_textBox_cpp@FPQ36nw4hbm2ut4RectPQ36nw4hbm2ut17TextWriterBase<w>PCwif_v"
 
 .balign 16, 0
-.fn func_80334110, global
+.fn GetRuntimeTypeInfo__Q36nw4hbm3lyt7TextBoxCFv, global
 /* 80334110 002FD6D0  3C 60 80 5D */	lis r3, lbl_805CD7D0@ha
 /* 80334114 002FD6D4  38 63 D7 D0 */	addi r3, r3, lbl_805CD7D0@l
 /* 80334118 002FD6D8  4E 80 00 20 */	blr 
-.endfn func_80334110
+.endfn GetRuntimeTypeInfo__Q36nw4hbm3lyt7TextBoxCFv
 
 .balign 16, 0
-.fn sinit_80334120, local
+.fn "__sinit_\lyt_textBox_cpp", local
 /* 80334120 002FD6E0  3C 80 80 5D */	lis r4, lbl_805CD7C0@ha
 /* 80334124 002FD6E4  3C 60 80 5D */	lis r3, lbl_805CD7D0@ha
 /* 80334128 002FD6E8  38 84 D7 C0 */	addi r4, r4, lbl_805CD7C0@l
 /* 8033412C 002FD6EC  90 83 D7 D0 */	stw r4, lbl_805CD7D0@l(r3)
 /* 80334130 002FD6F0  4E 80 00 20 */	blr 
-.endfn sinit_80334120
+.endfn "__sinit_\lyt_textBox_cpp"
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 
-.4byte sinit_80334120
+.4byte "__sinit_\lyt_textBox_cpp"
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -1453,33 +1453,33 @@ lbl_80518AC8:
 __vt__8054D9F4:
 	.4byte lbl_8054DA98
 	.4byte 0
-	.4byte func_80332FB0
-	.4byte func_80334110
-	.4byte func_80331CD0
-	.4byte func_80331FD0
-	.4byte func_803331E0
-	.4byte func_803320E0
-	.4byte func_80332170
-	.4byte func_80333140
-	.4byte func_80333160
-	.4byte func_80331AE0
-	.4byte func_80331B10
-	.4byte func_803331A0
-	.4byte func_803331C0
-	.4byte func_80331B60
-	.4byte func_80331C10
-	.4byte func_80332230
-	.4byte func_80332250
-	.4byte func_803322E0
-	.4byte func_80332300
-	.4byte func_803323E0
-	.4byte func_80332460
-	.4byte func_80332710
-	.4byte func_80332520
-	.4byte func_80333D50
+	.4byte __dt__Q36nw4hbm3lyt7TextBoxFv
+	.4byte GetRuntimeTypeInfo__Q36nw4hbm3lyt7TextBoxCFv
+	.4byte CalculateMtx__Q36nw4hbm3lyt4PaneFRCQ36nw4hbm3lyt8DrawInfo
+	.4byte Draw__Q36nw4hbm3lyt4PaneFRCQ36nw4hbm3lyt8DrawInfo
+	.4byte DrawSelf__Q36nw4hbm3lyt7TextBoxFRCQ36nw4hbm3lyt8DrawInfo
+	.4byte Animate__Q36nw4hbm3lyt4PaneFUl
+	.4byte AnimateSelf__Q36nw4hbm3lyt4PaneFUl
+	.4byte GetVtxColor__Q36nw4hbm3lyt7TextBoxCFUl
+	.4byte SetVtxColor__Q36nw4hbm3lyt7TextBoxFUlQ36nw4hbm2ut5Color
+	.4byte GetColorElement__Q36nw4hbm3lyt4PaneCFUl
+	.4byte SetColorElement__Q36nw4hbm3lyt4PaneFUlUc
+	.4byte GetVtxColorElement__Q36nw4hbm3lyt7TextBoxCFUl
+	.4byte SetVtxColorElement__Q36nw4hbm3lyt7TextBoxFUlUc
+	.4byte FindPaneByName__Q36nw4hbm3lyt4PaneFPCcb
+	.4byte FindMaterialByName__Q36nw4hbm3lyt4PaneFPCcb
+	.4byte BindAnimation__Q36nw4hbm3lyt4PaneFPQ36nw4hbm3lyt13AnimTransformb
+	.4byte UnbindAnimation__Q36nw4hbm3lyt4PaneFPQ36nw4hbm3lyt13AnimTransformb
+	.4byte UnbindAllAnimation__Q36nw4hbm3lyt4PaneFb
+	.4byte UnbindAnimationSelf__Q36nw4hbm3lyt4PaneFPQ36nw4hbm3lyt13AnimTransform
+	.4byte FindAnimationLink__Q36nw4hbm3lyt4PaneFPQ36nw4hbm3lyt13AnimTransform
+	.4byte SetAnimationEnable__Q36nw4hbm3lyt4PaneFPQ36nw4hbm3lyt13AnimTransformbb
+	.4byte GetMaterial__Q36nw4hbm3lyt4PaneCFv
+	.4byte LoadMtx__Q36nw4hbm3lyt4PaneFRCQ36nw4hbm3lyt8DrawInfo
+	.4byte AllocStringBuffer__Q36nw4hbm3lyt7TextBoxFUs
 	.4byte FreeStringBuffer__Q36nw4hbm3lyt7TextBoxFv
 	.4byte SetString__Q36nw4hbm3lyt7TextBoxFPCwUs
-	.4byte func_80333E90
+	.4byte SetString__Q36nw4hbm3lyt7TextBoxFPCwUsUs
 
 .global lbl_8054DA68
 lbl_8054DA68:

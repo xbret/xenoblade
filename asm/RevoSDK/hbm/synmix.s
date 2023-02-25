@@ -3,40 +3,40 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.fn func_803416D0, global
+.fn __HBMSYNSetupVolume, global
 /* 803416D0 0030AC90  88 03 00 0E */	lbz r0, 0xe(r3)
-/* 803416D4 0030AC94  3C 80 80 55 */	lis r4, lbl_8054FC90@ha
+/* 803416D4 0030AC94  3C 80 80 55 */	lis r4, __HBMSYNVolumeAttenuation@ha
 /* 803416D8 0030AC98  80 A3 00 10 */	lwz r5, 0x10(r3)
-/* 803416DC 0030AC9C  38 84 FC 90 */	addi r4, r4, lbl_8054FC90@l
+/* 803416DC 0030AC9C  38 84 FC 90 */	addi r4, r4, __HBMSYNVolumeAttenuation@l
 /* 803416E0 0030ACA0  54 00 10 3A */	slwi r0, r0, 2
 /* 803416E4 0030ACA4  80 A5 00 04 */	lwz r5, 4(r5)
 /* 803416E8 0030ACA8  7C 04 00 2E */	lwzx r0, r4, r0
 /* 803416EC 0030ACAC  7C 05 02 14 */	add r0, r5, r0
 /* 803416F0 0030ACB0  90 03 00 2C */	stw r0, 0x2c(r3)
 /* 803416F4 0030ACB4  4E 80 00 20 */	blr 
-.endfn func_803416D0
+.endfn __HBMSYNSetupVolume
 
 .balign 16, 0
-.fn func_80341700, global
+.fn __HBMSYNSetupPan, global
 /* 80341700 0030ACC0  80 83 00 08 */	lwz r4, 8(r3)
 /* 80341704 0030ACC4  88 03 00 0C */	lbz r0, 0xc(r3)
 /* 80341708 0030ACC8  7C 84 02 14 */	add r4, r4, r0
 /* 8034170C 0030ACCC  88 04 00 EC */	lbz r0, 0xec(r4)
 /* 80341710 0030ACD0  98 03 00 0F */	stb r0, 0xf(r3)
 /* 80341714 0030ACD4  4E 80 00 20 */	blr 
-.endfn func_80341700
+.endfn __HBMSYNSetupPan
 
 .balign 16, 0
-.fn func_80341720, global
+.fn __HBMSYNGetVoiceInput, global
 /* 80341720 0030ACE0  80 83 00 2C */	lwz r4, 0x2c(r3)
 /* 80341724 0030ACE4  80 03 00 34 */	lwz r0, 0x34(r3)
 /* 80341728 0030ACE8  7C 04 02 14 */	add r0, r4, r0
 /* 8034172C 0030ACEC  7C 03 86 70 */	srawi r3, r0, 0x10
 /* 80341730 0030ACF0  4E 80 00 20 */	blr 
-.endfn func_80341720
+.endfn __HBMSYNGetVoiceInput
 
 .balign 16, 0
-.fn func_80341740, global
+.fn __HBMSYNGetVoiceFader, global
 /* 80341740 0030AD00  88 03 00 0C */	lbz r0, 0xc(r3)
 /* 80341744 0030AD04  80 83 00 08 */	lwz r4, 8(r3)
 /* 80341748 0030AD08  54 00 10 3A */	slwi r0, r0, 2
@@ -46,7 +46,7 @@
 /* 80341758 0030AD18  7C 04 02 14 */	add r0, r4, r0
 /* 8034175C 0030AD1C  7C 03 86 70 */	srawi r3, r0, 0x10
 /* 80341760 0030AD20  4E 80 00 20 */	blr 
-.endfn func_80341740
+.endfn __HBMSYNGetVoiceFader
 
 .balign 16, 0
 .fn __HBMSYNUpdateMix, global
@@ -94,8 +94,8 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8054FC90
-lbl_8054FC90:
+.global __HBMSYNVolumeAttenuation
+__HBMSYNVolumeAttenuation:
 	.4byte 0xFC400000
 	.4byte 0xFCB67A80
 	.4byte 0xFD2EE3F9
@@ -226,8 +226,8 @@ lbl_8054FC90:
 	.4byte 0
 
 
-.global lbl_8054FE90
-lbl_8054FE90:
+.global __HBMSYNAttackAttnTable
+__HBMSYNAttackAttnTable:
 	.4byte 0xFC400000
 	.4byte 0xFE70DF7B
 	.4byte 0xFEAD1437
