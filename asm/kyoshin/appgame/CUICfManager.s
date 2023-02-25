@@ -109,7 +109,7 @@
 /* 80132038 000FB5F8  48 36 3F CD */	bl func_80496004
 /* 8013203C 000FB5FC  7C 64 1B 78 */	mr r4, r3
 /* 80132040 000FB600  38 60 00 90 */	li r3, 0x90
-/* 80132044 000FB604  48 30 2A 3D */	bl func_80434A80
+/* 80132044 000FB604  48 30 2A 3D */	bl mm_malloc_1
 /* 80132048 000FB608  90 7D 01 38 */	stw r3, 0x138(r29)
 /* 8013204C 000FB60C  38 00 00 0C */	li r0, 0xc
 /* 80132050 000FB610  3C A0 80 53 */	lis r5, lbl_80531A58@ha
@@ -1339,7 +1339,7 @@
 /* 801331A4 000FC764  83 E5 00 04 */	lwz r31, 4(r5)
 /* 801331A8 000FC768  3B A0 00 00 */	li r29, 0
 /* 801331AC 000FC76C  93 A5 00 04 */	stw r29, 4(r5)
-/* 801331B0 000FC770  48 32 C0 05 */	bl func_8045F1B4
+/* 801331B0 000FC770  48 32 C0 05 */	bl CLibLayout_getArcResourceAccessorInstance
 /* 801331B4 000FC774  3F C0 80 50 */	lis r30, strpool_804FB8E0@ha
 /* 801331B8 000FC778  90 7A 00 5C */	stw r3, 0x5c(r26)
 /* 801331BC 000FC77C  3B DE B8 E0 */	addi r30, r30, strpool_804FB8E0@l
@@ -5942,6 +5942,7 @@
 /* 80136E80 00100440  4E 80 00 20 */	blr 
 .endfn func_80136D74
 
+#gets a resource from an arc file using the given ArcResourceAccessor and the filename?
 .fn func_80136E84, global
 /* 80136E84 00100444  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80136E88 00100448  7C 08 02 A6 */	mflr r0

@@ -86,7 +86,7 @@
 /* 8012E0D0 000F7690  48 36 7F 35 */	bl func_80496004
 /* 8012E0D4 000F7694  7C 64 1B 78 */	mr r4, r3
 /* 8012E0D8 000F7698  38 60 00 60 */	li r3, 0x60
-/* 8012E0DC 000F769C  48 30 69 A5 */	bl func_80434A80
+/* 8012E0DC 000F769C  48 30 69 A5 */	bl mm_malloc_1
 /* 8012E0E0 000F76A0  90 7D 00 70 */	stw r3, 0x70(r29)
 /* 8012E0E4 000F76A4  38 00 00 08 */	li r0, 8
 /* 8012E0E8 000F76A8  3C 80 80 53 */	lis r4, lbl_80531878@ha
@@ -1393,7 +1393,7 @@
 /* 8012F2E8 000F88A8  83 A5 00 04 */	lwz r29, 4(r5)
 /* 8012F2EC 000F88AC  3B 80 00 00 */	li r28, 0
 /* 8012F2F0 000F88B0  93 85 00 04 */	stw r28, 4(r5)
-/* 8012F2F4 000F88B4  48 32 FE C1 */	bl func_8045F1B4
+/* 8012F2F4 000F88B4  48 32 FE C1 */	bl CLibLayout_getArcResourceAccessorInstance
 /* 8012F2F8 000F88B8  3C A0 80 50 */	lis r5, CUIBattleManager_strpool@ha
 /* 8012F2FC 000F88BC  90 7E 00 88 */	stw r3, 0x88(r30)
 /* 8012F300 000F88C0  38 A5 B7 6C */	addi r5, r5, CUIBattleManager_strpool@l
@@ -1410,7 +1410,7 @@
 /* 8012F328 000F88E8  83 A3 00 04 */	lwz r29, 4(r3)
 /* 8012F32C 000F88EC  3B 80 00 00 */	li r28, 0
 /* 8012F330 000F88F0  93 83 00 04 */	stw r28, 4(r3)
-/* 8012F334 000F88F4  48 32 FE 81 */	bl func_8045F1B4
+/* 8012F334 000F88F4  48 32 FE 81 */	bl CLibLayout_getArcResourceAccessorInstance
 /* 8012F338 000F88F8  3C A0 80 50 */	lis r5, CUIBattleManager_strpool@ha
 /* 8012F33C 000F88FC  90 7E 00 90 */	stw r3, 0x90(r30)
 /* 8012F340 000F8900  38 A5 B7 6C */	addi r5, r5, CUIBattleManager_strpool@l
@@ -1441,7 +1441,7 @@
 /* 8012F39C 000F895C  80 7C 00 94 */	lwz r3, 0x94(r28)
 /* 8012F3A0 000F8960  83 A3 00 04 */	lwz r29, 4(r3)
 /* 8012F3A4 000F8964  90 03 00 04 */	stw r0, 4(r3)
-/* 8012F3A8 000F8968  48 32 FE 0D */	bl func_8045F1B4
+/* 8012F3A8 000F8968  48 32 FE 0D */	bl CLibLayout_getArcResourceAccessorInstance
 /* 8012F3AC 000F896C  3C A0 80 50 */	lis r5, CUIBattleManager_strpool@ha
 /* 8012F3B0 000F8970  90 7C 00 A0 */	stw r3, 0xa0(r28)
 /* 8012F3B4 000F8974  38 A5 B7 6C */	addi r5, r5, CUIBattleManager_strpool@l
@@ -1462,7 +1462,7 @@
 /* 8012F3E8 000F89A8  83 64 00 04 */	lwz r27, 4(r4)
 /* 8012F3EC 000F89AC  93 84 00 04 */	stw r28, 4(r4)
 /* 8012F3F0 000F89B0  93 9A 00 AC */	stw r28, 0xac(r26)
-/* 8012F3F4 000F89B4  48 32 FD C1 */	bl func_8045F1B4
+/* 8012F3F4 000F89B4  48 32 FD C1 */	bl CLibLayout_getArcResourceAccessorInstance
 /* 8012F3F8 000F89B8  90 7A 00 DC */	stw r3, 0xdc(r26)
 /* 8012F3FC 000F89BC  7F 64 DB 78 */	mr r4, r27
 /* 8012F400 000F89C0  38 BD 00 6A */	addi r5, r29, 0x6a

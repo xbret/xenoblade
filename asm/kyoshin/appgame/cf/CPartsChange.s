@@ -332,7 +332,7 @@
 /* 8019326C 0015C82C  4E 80 00 20 */	blr 
 .endfn func_801931D0
 
-.fn func_80193270, global
+.fn __ct__80193270, global
 /* 80193270 0015C830  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80193274 0015C834  7C 08 02 A6 */	mflr r0
 /* 80193278 0015C838  3D 23 00 01 */	addis r9, r3, 1
@@ -377,7 +377,7 @@
 /* 80193314 0015C8D4  4B EC EC E9 */	bl func_80061FFC
 /* 80193318 0015C8D8  7C 64 1B 78 */	mr r4, r3
 /* 8019331C 0015C8DC  38 60 00 C0 */	li r3, 0xc0
-/* 80193320 0015C8E0  48 2A 17 61 */	bl func_80434A80
+/* 80193320 0015C8E0  48 2A 17 61 */	bl mm_malloc_1
 /* 80193324 0015C8E4  3C BE 00 01 */	addis r5, r30, 1
 /* 80193328 0015C8E8  38 00 00 10 */	li r0, 0x10
 /* 8019332C 0015C8EC  90 65 A8 1C */	stw r3, -0x57e4(r5)
@@ -420,7 +420,7 @@
 /* 801933C0 0015C980  7C 08 03 A6 */	mtlr r0
 /* 801933C4 0015C984  38 21 00 10 */	addi r1, r1, 0x10
 /* 801933C8 0015C988  4E 80 00 20 */	blr 
-.endfn func_80193270
+.endfn __ct__80193270
 
 .fn __dt___reslist_base_cf_CfPartyInfo, global
 /* 801933CC 0015C98C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -8119,7 +8119,7 @@ lbl_80666C04:
 
 .obj "@eti_8002A110", local
 .hidden "@eti_8002A110"
-	.4byte func_80193270
+	.4byte __ct__80193270
 	.4byte 0x0000015C
 	.4byte "@etb_8000F338"
 .endobj "@eti_8002A110"

@@ -1767,7 +1767,7 @@
 .endfn mm_malloc
 
 #this might be a new operator function
-.fn func_80434A80, global
+.fn mm_malloc_1, global
 /* 80434A80 003FE040  54 80 06 3E */	clrlwi r0, r4, 0x18
 /* 80434A84 003FE044  3C C0 80 65 */	lis r6, memoryAllocHeapArray@ha
 /* 80434A88 003FE048  1C 00 00 70 */	mulli r0, r0, 0x70
@@ -1777,7 +1777,7 @@
 /* 80434A98 003FE058  7C 66 02 14 */	add r3, r6, r0
 /* 80434A9C 003FE05C  38 C0 00 04 */	li r6, 4
 /* 80434AA0 003FE060  4B FF F0 F8 */	b func_80433B98
-.endfn func_80434A80
+.endfn mm_malloc_1
 
 .fn func_80434AA4, global
 /* 80434AA4 003FE064  94 21 FF E0 */	stwu r1, -0x20(r1)

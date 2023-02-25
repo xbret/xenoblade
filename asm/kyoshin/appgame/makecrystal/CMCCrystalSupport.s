@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8022E888, global
+.fn __ct__CMCCrystalSupport, global
 /* 8022E888 001F7E48  3C C0 80 54 */	lis r6, __vt__CMCCrystalSupport@ha
 /* 8022E88C 001F7E4C  38 A0 00 00 */	li r5, 0
 /* 8022E890 001F7E50  38 C6 9F 28 */	addi r6, r6, __vt__CMCCrystalSupport@l
@@ -15,7 +15,7 @@
 /* 8022E8AC 001F7E6C  90 A3 00 14 */	stw r5, 0x14(r3)
 /* 8022E8B0 001F7E70  98 03 00 18 */	stb r0, 0x18(r3)
 /* 8022E8B4 001F7E74  4E 80 00 20 */	blr 
-.endfn func_8022E888
+.endfn __ct__CMCCrystalSupport
 
 .fn __dt__CMCCrystalSupport, global
 /* 8022E8B8 001F7E78  94 21 FF F0 */	stwu r1, -0x10(r1)

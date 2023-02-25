@@ -196,16 +196,6 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCCylinderGauge.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCCrystalList.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCEffStart.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCEffUpRed.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCEffUpBlue.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCEffUpGreen.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCEffUpPrm.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCEffSuccess.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCEffFailure.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCEffCrystal.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCEffUpRank.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCEffDivide.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCEffCylinder.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuQstCnt.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CQstLogList.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CQstLogInfo.o\

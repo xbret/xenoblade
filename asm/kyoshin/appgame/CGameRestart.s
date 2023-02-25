@@ -57,15 +57,15 @@
 .fn sinit_80039EE0, local
 /* 80039EE0 000034A0  3C 60 80 57 */	lis r3, lbl_80573C80@ha
 /* 80039EE4 000034A4  38 63 3C 80 */	addi r3, r3, lbl_80573C80@l
-/* 80039EE8 000034A8  48 00 00 04 */	b func_80039EEC
+/* 80039EE8 000034A8  48 00 00 04 */	b __ct__80039EEC
 .endfn sinit_80039EE0
 
-.fn func_80039EEC, global
+.fn __ct__80039EEC, global
 /* 80039EEC 000034AC  38 00 00 00 */	li r0, 0
 /* 80039EF0 000034B0  98 03 00 00 */	stb r0, 0(r3)
 /* 80039EF4 000034B4  90 03 00 40 */	stw r0, 0x40(r3)
 /* 80039EF8 000034B8  4E 80 00 20 */	blr
-.endfn func_80039EEC
+.endfn __ct__80039EEC
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 

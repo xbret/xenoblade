@@ -721,7 +721,7 @@
 /* 8011846C 000E1A2C  38 00 00 00 */	li r0, 0
 /* 80118470 000E1A30  83 C3 00 04 */	lwz r30, 4(r3)
 /* 80118474 000E1A34  90 03 00 04 */	stw r0, 4(r3)
-/* 80118478 000E1A38  48 34 6D 3D */	bl func_8045F1B4
+/* 80118478 000E1A38  48 34 6D 3D */	bl CLibLayout_getArcResourceAccessorInstance
 /* 8011847C 000E1A3C  3F A0 80 50 */	lis r29, CMinimap_strpool@ha
 /* 80118480 000E1A40  90 7F 00 08 */	stw r3, 8(r31)
 /* 80118484 000E1A44  3B BD 9A 44 */	addi r29, r29, CMinimap_strpool@l

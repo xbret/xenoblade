@@ -174,7 +174,7 @@
 /* 8045F1B0 00428770  4E 80 00 20 */	blr 
 .endfn func_8045F17C
 
-.fn func_8045F1B4, global
+.fn CLibLayout_getArcResourceAccessorInstance, global
 /* 8045F1B4 00428774  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045F1B8 00428778  7C 08 02 A6 */	mflr r0
 /* 8045F1BC 0042877C  38 60 00 B0 */	li r3, 0xb0
@@ -190,7 +190,7 @@
 /* 8045F1E0 004287A0  7C 08 03 A6 */	mtlr r0
 /* 8045F1E4 004287A4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045F1E8 004287A8  4E 80 00 20 */	blr 
-.endfn func_8045F1B4
+.endfn CLibLayout_getArcResourceAccessorInstance
 
 .fn func_8045F1EC, global
 /* 8045F1EC 004287AC  94 21 FF B0 */	stwu r1, -0x50(r1)
@@ -535,6 +535,7 @@
 /* 8045F67C 00428C3C  4E 80 00 20 */	blr 
 .endfn __dt__8045F580
 
+#r6: class name
 .fn func_8045F680, global
 /* 8045F680 00428C40  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8045F684 00428C44  7C 08 02 A6 */	mflr r0
@@ -980,7 +981,7 @@ lbl_80667FE8:
 
 .obj "@eti_80035408", local
 .hidden "@eti_80035408"
-	.4byte func_8045F1B4
+	.4byte CLibLayout_getArcResourceAccessorInstance
 	.4byte 0x00000038
 	.4byte "@etb_8001D7F4"
 .endobj "@eti_80035408"

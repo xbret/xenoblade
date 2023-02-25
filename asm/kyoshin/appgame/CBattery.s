@@ -259,7 +259,7 @@
 /* 802B9548 00282B08  83 A4 00 04 */	lwz r29, 4(r4)
 /* 802B954C 00282B0C  93 E4 00 04 */	stw r31, 4(r4)
 /* 802B9550 00282B10  48 17 B4 FD */	bl func_80434A4C
-/* 802B9554 00282B14  48 1A 5C 61 */	bl func_8045F1B4
+/* 802B9554 00282B14  48 1A 5C 61 */	bl CLibLayout_getArcResourceAccessorInstance
 /* 802B9558 00282B18  90 7C 00 18 */	stw r3, 0x18(r28)
 /* 802B955C 00282B1C  7F A4 EB 78 */	mr r4, r29
 /* 802B9560 00282B20  38 BE 00 24 */	addi r5, r30, 0x24
@@ -301,11 +301,11 @@ CBattery_typestr:
 
 .global CBattery_strpool
 CBattery_strpool:
-	.asciz "/menu/Battery.arc"
-	.asciz "pic_%02d"
-	.asciz "CBattery"
-	.asciz "arc"
-	.asciz "mf00_btry.brlyt"
+	.asciz "/menu/Battery.arc" #0x0
+	.asciz "pic_%02d" #0x12
+	.asciz "CBattery" #0x1b
+	.asciz "arc" #0x24
+	.asciz "mf00_btry.brlyt" #0x28
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

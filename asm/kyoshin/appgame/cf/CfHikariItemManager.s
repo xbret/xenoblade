@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_802B2634, global
+.fn __ct__cf_CfHikariItemManager, global
 /* 802B2634 0027BBF4  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802B2638 0027BBF8  7C 08 02 A6 */	mflr r0
 /* 802B263C 0027BBFC  3C 80 80 54 */	lis r4, __vt__cf_CfHikariItemManager@ha
@@ -108,7 +108,7 @@
 /* 802B27C0 0027BD80  7C 08 03 A6 */	mtlr r0
 /* 802B27C4 0027BD84  38 21 00 40 */	addi r1, r1, 0x40
 /* 802B27C8 0027BD88  4E 80 00 20 */	blr 
-.endfn func_802B2634
+.endfn __ct__cf_CfHikariItemManager
 
 .fn __dt__cf_CfHikariItemManager, global
 /* 802B27CC 0027BD8C  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1225,7 +1225,7 @@ lbl_80667504:
 
 .obj "@eti_80033404", local
 .hidden "@eti_80033404"
-	.4byte func_802B2634
+	.4byte __ct__cf_CfHikariItemManager
 	.4byte 0x00000198
 	.4byte "@etb_8001B8B4"
 .endobj "@eti_80033404"

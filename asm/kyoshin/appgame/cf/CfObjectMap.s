@@ -151,7 +151,7 @@
 /* 800B08A8 00079E68  93 C1 00 08 */	stw r30, 8(r1)
 /* 800B08AC 00079E6C  7C 7E 1B 78 */	mr r30, r3
 /* 800B08B0 00079E70  1C 65 00 0C */	mulli r3, r5, 0xc
-/* 800B08B4 00079E74  48 38 41 CD */	bl func_80434A80
+/* 800B08B4 00079E74  48 38 41 CD */	bl mm_malloc_1
 /* 800B08B8 00079E78  2C 9F 00 00 */	cmpwi cr1, r31, 0
 /* 800B08BC 00079E7C  90 7E 00 14 */	stw r3, 0x14(r30)
 /* 800B08C0 00079E80  38 A0 00 00 */	li r5, 0
@@ -232,38 +232,38 @@
 /* 800B09CC 00079F8C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 800B09D0 00079F90  93 C1 00 08 */	stw r30, 8(r1)
 /* 800B09D4 00079F94  7C 7E 1B 78 */	mr r30, r3
-/* 800B09D8 00079F98  48 00 00 C5 */	bl func_800B0A9C
+/* 800B09D8 00079F98  48 00 00 C5 */	bl __ct__reslist_cf_CfObject
 /* 800B09DC 00079F9C  38 7E 00 20 */	addi r3, r30, 0x20
-/* 800B09E0 00079FA0  48 00 00 F9 */	bl func_800B0AD8
+/* 800B09E0 00079FA0  48 00 00 F9 */	bl __ct__800B0AD8
 /* 800B09E4 00079FA4  38 7E 0B 28 */	addi r3, r30, 0xb28
-/* 800B09E8 00079FA8  48 00 00 B5 */	bl func_800B0A9C
+/* 800B09E8 00079FA8  48 00 00 B5 */	bl __ct__reslist_cf_CfObject
 /* 800B09EC 00079FAC  38 7E 0B 48 */	addi r3, r30, 0xb48
-/* 800B09F0 00079FB0  48 00 00 AD */	bl func_800B0A9C
+/* 800B09F0 00079FB0  48 00 00 AD */	bl __ct__reslist_cf_CfObject
 /* 800B09F4 00079FB4  38 7E 0B 68 */	addi r3, r30, 0xb68
-/* 800B09F8 00079FB8  48 00 00 A5 */	bl func_800B0A9C
+/* 800B09F8 00079FB8  48 00 00 A5 */	bl __ct__reslist_cf_CfObject
 /* 800B09FC 00079FBC  38 7E 0B 88 */	addi r3, r30, 0xb88
-/* 800B0A00 00079FC0  48 00 00 9D */	bl func_800B0A9C
+/* 800B0A00 00079FC0  48 00 00 9D */	bl __ct__reslist_cf_CfObject
 /* 800B0A04 00079FC4  38 7E 0B A8 */	addi r3, r30, 0xba8
-/* 800B0A08 00079FC8  48 00 00 95 */	bl func_800B0A9C
+/* 800B0A08 00079FC8  48 00 00 95 */	bl __ct__reslist_cf_CfObject
 /* 800B0A0C 00079FCC  38 7E 0B C8 */	addi r3, r30, 0xbc8
-/* 800B0A10 00079FD0  48 00 00 8D */	bl func_800B0A9C
+/* 800B0A10 00079FD0  48 00 00 8D */	bl __ct__reslist_cf_CfObject
 /* 800B0A14 00079FD4  38 7E 0B E8 */	addi r3, r30, 0xbe8
-/* 800B0A18 00079FD8  48 00 00 85 */	bl func_800B0A9C
+/* 800B0A18 00079FD8  48 00 00 85 */	bl __ct__reslist_cf_CfObject
 /* 800B0A1C 00079FDC  38 7E 0C 08 */	addi r3, r30, 0xc08
-/* 800B0A20 00079FE0  48 00 00 7D */	bl func_800B0A9C
+/* 800B0A20 00079FE0  48 00 00 7D */	bl __ct__reslist_cf_CfObject
 /* 800B0A24 00079FE4  38 7E 0C 28 */	addi r3, r30, 0xc28
-/* 800B0A28 00079FE8  48 00 00 75 */	bl func_800B0A9C
+/* 800B0A28 00079FE8  48 00 00 75 */	bl __ct__reslist_cf_CfObject
 /* 800B0A2C 00079FEC  38 7E 0C 48 */	addi r3, r30, 0xc48
-/* 800B0A30 00079FF0  48 00 01 21 */	bl func_800B0B50
+/* 800B0A30 00079FF0  48 00 01 21 */	bl __ct__reslist_cf_TboxInfo
 /* 800B0A34 00079FF4  38 7E 0C 80 */	addi r3, r30, 0xc80
-/* 800B0A38 00079FF8  48 00 02 D5 */	bl func_800B0D0C
+/* 800B0A38 00079FF8  48 00 02 D5 */	bl __ct__reslist_cf_IFactoryEvent
 /* 800B0A3C 00079FFC  3B E0 00 00 */	li r31, 0
 /* 800B0A40 0007A000  93 FE 0C A0 */	stw r31, 0xca0(r30)
 /* 800B0A44 0007A004  38 7E 0C B0 */	addi r3, r30, 0xcb0
 /* 800B0A48 0007A008  93 FE 0C A4 */	stw r31, 0xca4(r30)
 /* 800B0A4C 0007A00C  93 FE 0C A8 */	stw r31, 0xca8(r30)
 /* 800B0A50 0007A010  93 FE 0C AC */	stw r31, 0xcac(r30)
-/* 800B0A54 0007A014  4B F8 94 99 */	bl func_80039EEC
+/* 800B0A54 0007A014  4B F8 94 99 */	bl __ct__80039EEC
 /* 800B0A58 0007A018  93 FE 0C FC */	stw r31, 0xcfc(r30)
 /* 800B0A5C 0007A01C  38 6D A6 60 */	addi r3, r13, lbl_806667E0@sda21
 /* 800B0A60 0007A020  93 FE 0D 00 */	stw r31, 0xd00(r30)
@@ -289,7 +289,7 @@
 #not sure if the rest belongs here
 
 
-.fn func_800B0A9C, global
+.fn __ct__reslist_cf_CfObject, global
 /* 800B0A9C 0007A05C  3C 80 80 53 */	lis r4, __vt___reslist_base_cf_CfObject@ha
 /* 800B0AA0 0007A060  38 00 00 00 */	li r0, 0
 /* 800B0AA4 0007A064  38 84 90 B4 */	addi r4, r4, __vt___reslist_base_cf_CfObject@l
@@ -305,9 +305,9 @@
 /* 800B0ACC 0007A08C  90 A5 00 04 */	stw r5, 4(r5)
 /* 800B0AD0 0007A090  90 83 00 00 */	stw r4, 0(r3)
 /* 800B0AD4 0007A094  4E 80 00 20 */	blr 
-.endfn func_800B0A9C
+.endfn __ct__reslist_cf_CfObject
 
-.fn func_800B0AD8, global
+.fn __ct__800B0AD8, global
 /* 800B0AD8 0007A098  38 00 00 00 */	li r0, 0
 /* 800B0ADC 0007A09C  38 80 02 BE */	li r4, 0x2be
 /* 800B0AE0 0007A0A0  90 83 0B 04 */	stw r4, 0xb04(r3)
@@ -315,7 +315,7 @@
 /* 800B0AE8 0007A0A8  90 03 0B 00 */	stw r0, 0xb00(r3)
 /* 800B0AEC 0007A0AC  90 03 0A FC */	stw r0, 0xafc(r3)
 /* 800B0AF0 0007A0B0  4E 80 00 20 */	blr 
-.endfn func_800B0AD8
+.endfn __ct__800B0AD8
 
 .fn __dt__800B0AF4, global
 /* 800B0AF4 0007A0B4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -347,7 +347,7 @@
 /* 800B0B4C 0007A10C  4E 80 00 20 */	blr 
 .endfn func_800B0B40
 
-.fn func_800B0B50, global
+.fn __ct__reslist_cf_TboxInfo, global
 /* 800B0B50 0007A110  3C 80 80 53 */	lis r4, __vt___reslist_base_cf_TboxInfo@ha
 /* 800B0B54 0007A114  38 00 00 00 */	li r0, 0
 /* 800B0B58 0007A118  38 84 C8 AC */	addi r4, r4, __vt___reslist_base_cf_TboxInfo@l
@@ -363,7 +363,7 @@
 /* 800B0B80 0007A140  90 A5 00 04 */	stw r5, 4(r5)
 /* 800B0B84 0007A144  90 83 00 00 */	stw r4, 0(r3)
 /* 800B0B88 0007A148  4E 80 00 20 */	blr
-.endfn func_800B0B50
+.endfn __ct__reslist_cf_TboxInfo
 
 .fn func_800B0B8C, global
 /* 800B0B8C 0007A14C  4E 80 00 20 */	blr 
@@ -480,7 +480,7 @@
 /* 800B0D08 0007A2C8  4E 80 00 20 */	blr 
 .endfn __dt__reslist_cf_TboxInfo
 
-.fn func_800B0D0C, global
+.fn __ct__reslist_cf_IFactoryEvent, global
 /* 800B0D0C 0007A2CC  3C 80 80 53 */	lis r4, __vt___reslist_base_cf_IFactoryEvent@ha
 /* 800B0D10 0007A2D0  38 00 00 00 */	li r0, 0
 /* 800B0D14 0007A2D4  38 84 C8 88 */	addi r4, r4, __vt___reslist_base_cf_IFactoryEvent@l
@@ -496,7 +496,7 @@
 /* 800B0D3C 0007A2FC  90 A5 00 04 */	stw r5, 4(r5)
 /* 800B0D40 0007A300  90 83 00 00 */	stw r4, 0(r3)
 /* 800B0D44 0007A304  4E 80 00 20 */	blr 
-.endfn func_800B0D0C
+.endfn __ct__reslist_cf_IFactoryEvent
 
 .fn __dt___reslist_base_cf_IFactoryEvent, global
 /* 800B0D48 0007A308  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -703,7 +703,7 @@
 /* 800B1008 0007A5C8  93 C1 00 08 */	stw r30, 8(r1)
 /* 800B100C 0007A5CC  7C 7E 1B 78 */	mr r30, r3
 /* 800B1010 0007A5D0  1C 65 00 0C */	mulli r3, r5, 0xc
-/* 800B1014 0007A5D4  48 38 3A 6D */	bl func_80434A80
+/* 800B1014 0007A5D4  48 38 3A 6D */	bl mm_malloc_1
 /* 800B1018 0007A5D8  2C 9F 00 00 */	cmpwi cr1, r31, 0
 /* 800B101C 0007A5DC  90 7E 00 14 */	stw r3, 0x14(r30)
 /* 800B1020 0007A5E0  38 A0 00 00 */	li r5, 0
@@ -826,7 +826,7 @@
 /* 800B11D4 0007A794  48 38 38 89 */	bl mm_malloc
 /* 800B11D8 0007A798  2C 03 00 00 */	cmpwi r3, 0
 /* 800B11DC 0007A79C  41 82 00 08 */	beq .L_800B11E4
-/* 800B11E0 0007A7A0  48 0E 20 91 */	bl func_80193270
+/* 800B11E0 0007A7A0  48 0E 20 91 */	bl __ct__80193270
 .L_800B11E4:
 /* 800B11E4 0007A7A4  90 7F 0C A0 */	stw r3, 0xca0(r31)
 /* 800B11E8 0007A7A8  4B FB 0E 15 */	bl func_80061FFC
@@ -844,7 +844,7 @@
 /* 800B1214 0007A7D4  48 38 38 49 */	bl mm_malloc
 /* 800B1218 0007A7D8  2C 03 00 00 */	cmpwi r3, 0
 /* 800B121C 0007A7DC  41 82 00 08 */	beq .L_800B1224
-/* 800B1220 0007A7E0  48 00 01 0D */	bl func_800B132C
+/* 800B1220 0007A7E0  48 00 01 0D */	bl __ct__cf_CfValueItemManager
 .L_800B1224:
 /* 800B1224 0007A7E4  90 7F 0C A8 */	stw r3, 0xca8(r31)
 /* 800B1228 0007A7E8  4B FB 0D D5 */	bl func_80061FFC
@@ -853,7 +853,7 @@
 /* 800B1234 0007A7F4  48 38 38 29 */	bl mm_malloc
 /* 800B1238 0007A7F8  2C 03 00 00 */	cmpwi r3, 0
 /* 800B123C 0007A7FC  41 82 00 08 */	beq .L_800B1244
-/* 800B1240 0007A800  48 14 29 A9 */	bl func_801F3BE8
+/* 800B1240 0007A800  48 14 29 A9 */	bl __ct__801F3BE8
 .L_800B1244:
 /* 800B1244 0007A804  90 7F 0C FC */	stw r3, 0xcfc(r31)
 /* 800B1248 0007A808  4B FB 0D B5 */	bl func_80061FFC
@@ -862,7 +862,7 @@
 /* 800B1254 0007A814  48 38 38 09 */	bl mm_malloc
 /* 800B1258 0007A818  2C 03 00 00 */	cmpwi r3, 0
 /* 800B125C 0007A81C  41 82 00 08 */	beq .L_800B1264
-/* 800B1260 0007A820  48 20 13 D5 */	bl func_802B2634
+/* 800B1260 0007A820  48 20 13 D5 */	bl __ct__cf_CfHikariItemManager
 .L_800B1264:
 /* 800B1264 0007A824  90 7F 0D 00 */	stw r3, 0xd00(r31)
 /* 800B1268 0007A828  4B FB 0D 95 */	bl func_80061FFC
@@ -871,7 +871,7 @@
 /* 800B1274 0007A834  48 38 37 E9 */	bl mm_malloc
 /* 800B1278 0007A838  2C 03 00 00 */	cmpwi r3, 0
 /* 800B127C 0007A83C  41 82 00 08 */	beq .L_800B1284
-/* 800B1280 0007A840  48 15 47 FD */	bl func_80205A7C
+/* 800B1280 0007A840  48 15 47 FD */	bl __ct__reslist_cf_CfMapMineManager_MinePoint
 .L_800B1284:
 /* 800B1284 0007A844  90 7F 0C AC */	stw r3, 0xcac(r31)
 /* 800B1288 0007A848  38 00 00 00 */	li r0, 0
@@ -919,7 +919,7 @@
 /* 800B1328 0007A8E8  4E 80 00 20 */	blr 
 .endfn func_800B1120
 
-.fn func_800B132C, global
+.fn __ct__cf_CfValueItemManager, global
 /* 800B132C 0007A8EC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800B1330 0007A8F0  7C 08 02 A6 */	mflr r0
 /* 800B1334 0007A8F4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -935,7 +935,7 @@
 /* 800B135C 0007A91C  7C 08 03 A6 */	mtlr r0
 /* 800B1360 0007A920  38 21 00 10 */	addi r1, r1, 0x10
 /* 800B1364 0007A924  4E 80 00 20 */	blr 
-.endfn func_800B132C
+.endfn __ct__cf_CfValueItemManager
 
 .fn func_800B1368, global
 /* 800B1368 0007A928  80 0D A6 60 */	lwz r0, lbl_806667E0@sda21(r13)
@@ -959,7 +959,7 @@
 /* 800B1394 0007A954  93 C1 00 08 */	stw r30, 8(r1)
 /* 800B1398 0007A958  7C 7E 1B 78 */	mr r30, r3
 /* 800B139C 0007A95C  38 66 00 10 */	addi r3, r6, 0x10
-/* 800B13A0 0007A960  48 38 36 E1 */	bl func_80434A80
+/* 800B13A0 0007A960  48 38 36 E1 */	bl mm_malloc_1
 /* 800B13A4 0007A964  3C 80 80 0B */	lis r4, func_800B0B8C@ha
 /* 800B13A8 0007A968  7F E7 FB 78 */	mr r7, r31
 /* 800B13AC 0007A96C  38 84 0B 8C */	addi r4, r4, func_800B0B8C@l
@@ -13500,7 +13500,7 @@ lbl_806667E8:
 
 .obj "@eti_80024FB0", local
 .hidden "@eti_80024FB0"
-	.4byte func_800B132C
+	.4byte __ct__cf_CfValueItemManager
 	.4byte 0x0000003C
 	.4byte "@etb_800096BC"
 .endobj "@eti_80024FB0"

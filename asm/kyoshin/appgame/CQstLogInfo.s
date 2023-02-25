@@ -2234,7 +2234,7 @@
 /* 8022B3E0 001F49A0  4B EF AC A5 */	bl func_80126084
 .L_8022B3E4:
 /* 8022B3E4 001F49A4  90 7F 00 2C */	stw r3, 0x2c(r31)
-/* 8022B3E8 001F49A8  48 23 3D CD */	bl func_8045F1B4
+/* 8022B3E8 001F49A8  48 23 3D CD */	bl CLibLayout_getArcResourceAccessorInstance
 /* 8022B3EC 001F49AC  3F C0 80 50 */	lis r30, CQstLogInfo_strpool@ha
 /* 8022B3F0 001F49B0  90 7F 00 1C */	stw r3, 0x1c(r31)
 /* 8022B3F4 001F49B4  3B DE 57 C4 */	addi r30, r30, CQstLogInfo_strpool@l

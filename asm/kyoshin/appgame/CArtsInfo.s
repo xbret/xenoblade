@@ -39,7 +39,7 @@
 /* 8023578C 001FED4C  98 BF 00 56 */	stb r5, 0x56(r31)
 /* 80235790 001FED50  B0 BF 00 58 */	sth r5, 0x58(r31)
 /* 80235794 001FED54  98 BF 00 5A */	stb r5, 0x5a(r31)
-/* 80235798 001FED58  4B F9 D2 65 */	bl func_801D29FC
+/* 80235798 001FED58  4B F9 D2 65 */	bl __ct__CCur18
 /* 8023579C 001FED5C  7F E3 FB 78 */	mr r3, r31
 /* 802357A0 001FED60  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802357A4 001FED64  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -6465,7 +6465,7 @@
 /* 8023B4D0 00204A90  83 C4 00 04 */	lwz r30, 4(r4)
 /* 8023B4D4 00204A94  90 04 00 04 */	stw r0, 4(r4)
 /* 8023B4D8 00204A98  48 1F 95 75 */	bl func_80434A4C
-/* 8023B4DC 00204A9C  48 22 3C D9 */	bl func_8045F1B4
+/* 8023B4DC 00204A9C  48 22 3C D9 */	bl CLibLayout_getArcResourceAccessorInstance
 /* 8023B4E0 00204AA0  90 7F 00 1C */	stw r3, 0x1c(r31)
 /* 8023B4E4 00204AA4  7F C4 F3 78 */	mr r4, r30
 /* 8023B4E8 00204AA8  38 BD 02 CF */	addi r5, r29, 0x2cf
@@ -6897,7 +6897,7 @@
 /* 8023BB80 00205140  4B EF 9A 75 */	bl func_801355F4
 /* 8023BB84 00205144  7C 64 1B 78 */	mr r4, r3
 /* 8023BB88 00205148  38 61 00 38 */	addi r3, r1, 0x38
-/* 8023BB8C 0020514C  4B F9 6E 71 */	bl func_801D29FC
+/* 8023BB8C 0020514C  4B F9 6E 71 */	bl __ct__CCur18
 /* 8023BB90 00205150  80 01 00 3C */	lwz r0, 0x3c(r1)
 /* 8023BB94 00205154  38 61 00 38 */	addi r3, r1, 0x38
 /* 8023BB98 00205158  90 1F 00 60 */	stw r0, 0x60(r31)
@@ -7085,7 +7085,7 @@ CArtsInfo_stringpool:
 	.asciz "sp_val1"
 	.asciz "%s%.2f%s"
 	.asciz "sp_val2"
-	.asciz "CArtsInfo"
+	.asciz "CArtsInfo" #0x2c5
 	.asciz "arc"
 	.asciz "mf15_arts30_set_inf.brlyt"
 	.asciz "mf15_arts30_set_inf_in.brlan"

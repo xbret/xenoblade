@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_80221E6C, global
+.fn __ct__CMCCylinderGauge, global
 /* 80221E6C 001EB42C  C0 02 AA 58 */	lfs f0, float_8066ADD8@sda21(r2)
 /* 80221E70 001EB430  3C C0 80 54 */	lis r6, __vt__CMCCylinderGauge@ha
 /* 80221E74 001EB434  38 A0 00 00 */	li r5, 0
@@ -21,7 +21,7 @@
 /* 80221EA8 001EB468  98 03 00 25 */	stb r0, 0x25(r3)
 /* 80221EAC 001EB46C  D0 03 00 28 */	stfs f0, 0x28(r3)
 /* 80221EB0 001EB470  4E 80 00 20 */	blr 
-.endfn func_80221E6C
+.endfn __ct__CMCCylinderGauge
 
 .fn __dt__CMCCylinderGauge, global
 /* 80221EB4 001EB474  94 21 FF F0 */	stwu r1, -0x10(r1)

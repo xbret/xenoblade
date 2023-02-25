@@ -1,13 +1,16 @@
 #pragma once
 
 #include "types.h"
+#include "monolithlib/IWorkEvent.hpp"
 
-//Interface for work events, which most classes that do any types of tasks seem to inherit.
-class IWorkEvent {
+class CBattery : public IWorkEvent {
 public:
-    virtual ~IWorkEvent();
+    CBattery();
+
+    //vtable
+    virtual ~CBattery(); //0x8
     virtual u32 IWorkEvent_80039E28();
-    virtual u32 IWorkEvent_80039E20();
+    virtual u32 func_802B94D0(); //overrides IWorkEvent_80039E20
     virtual u32 IWorkEvent_80039E18();
     virtual u32 IWorkEvent_80039E10();
     virtual void IWorkEvent_80039E0C();
@@ -37,4 +40,15 @@ public:
     virtual u32 IWorkEvent_80039D4C();
     virtual u32 IWorkEvent_80039D44();
     virtual void IWorkEvent_80039D40();
+
+    //Variables
+    u8 unk4[0x10];
+    int unk14;
+    int unk18;
+    int unk1C;
+    u8 unk20;
+    u8 unk21;
+    u8 unk22;
+    u8 unk23;
+    u8 unk24;
 };

@@ -7,7 +7,7 @@
 /* 801F3BE4 001BD1A4  4E 80 00 20 */	blr 
 .endfn func_801F3BE0
 
-.fn func_801F3BE8, global
+.fn __ct__801F3BE8, global
 /* 801F3BE8 001BD1A8  90 6D AD C8 */	stw r3, lbl_80666F48@sda21(r13)
 /* 801F3BEC 001BD1AC  38 00 00 00 */	li r0, 0
 /* 801F3BF0 001BD1B0  C0 02 A6 98 */	lfs f0, float_8066AA18@sda21(r2)
@@ -16,7 +16,7 @@
 /* 801F3BFC 001BD1BC  90 03 02 18 */	stw r0, 0x218(r3)
 /* 801F3C00 001BD1C0  90 03 02 14 */	stw r0, 0x214(r3)
 /* 801F3C04 001BD1C4  4E 80 00 20 */	blr 
-.endfn func_801F3BE8
+.endfn __ct__801F3BE8
 
 .fn __dt__801F3C08, global
 /* 801F3C08 001BD1C8  94 21 FF E0 */	stwu r1, -0x20(r1)

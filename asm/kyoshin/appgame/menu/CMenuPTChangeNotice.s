@@ -271,7 +271,7 @@
 /* 802934F8 0025CAB8  83 84 00 04 */	lwz r28, 4(r4)
 /* 802934FC 0025CABC  90 04 00 04 */	stw r0, 4(r4)
 /* 80293500 0025CAC0  48 1A 15 4D */	bl func_80434A4C
-/* 80293504 0025CAC4  48 1C BC B1 */	bl func_8045F1B4
+/* 80293504 0025CAC4  48 1C BC B1 */	bl CLibLayout_getArcResourceAccessorInstance
 /* 80293508 0025CAC8  3B 7B B2 58 */	addi r27, r27, CMenuPTChangeNotice_strpool@l
 /* 8029350C 0025CACC  90 7F 00 8C */	stw r3, 0x8c(r31)
 /* 80293510 0025CAD0  7F 84 E3 78 */	mr r4, r28

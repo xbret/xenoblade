@@ -1105,7 +1105,7 @@
 /* 8022C5C8 001F5B88  4B EF 9A BD */	bl func_80126084
 .L_8022C5CC:
 /* 8022C5CC 001F5B8C  90 7D 00 18 */	stw r3, 0x18(r29)
-/* 8022C5D0 001F5B90  48 23 2B E5 */	bl func_8045F1B4
+/* 8022C5D0 001F5B90  48 23 2B E5 */	bl CLibLayout_getArcResourceAccessorInstance
 /* 8022C5D4 001F5B94  3F E0 80 50 */	lis r31, CSysWin_strpool@ha
 /* 8022C5D8 001F5B98  90 7D 00 1C */	stw r3, 0x1c(r29)
 /* 8022C5DC 001F5B9C  3B FF 5B 80 */	addi r31, r31, CSysWin_strpool@l

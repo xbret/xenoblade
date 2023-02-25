@@ -600,7 +600,7 @@
 /* 8027ED10 002482D0  4B EA 73 75 */	bl func_80126084
 .L_8027ED14:
 /* 8027ED14 002482D4  90 7D 00 94 */	stw r3, 0x94(r29)
-/* 8027ED18 002482D8  48 1E 04 9D */	bl func_8045F1B4
+/* 8027ED18 002482D8  48 1E 04 9D */	bl CLibLayout_getArcResourceAccessorInstance
 /* 8027ED1C 002482DC  3F E0 80 51 */	lis r31, CSysWinScenarioLog_strpool@ha
 /* 8027ED20 002482E0  90 7D 00 98 */	stw r3, 0x98(r29)
 /* 8027ED24 002482E4  3B FF A4 A8 */	addi r31, r31, CSysWinScenarioLog_strpool@l

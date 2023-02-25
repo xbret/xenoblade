@@ -379,7 +379,7 @@
 /* 801C3E7C 0018D43C  83 C5 00 04 */	lwz r30, 4(r5)
 /* 801C3E80 0018D440  3B E0 00 00 */	li r31, 0
 /* 801C3E84 0018D444  93 E5 00 04 */	stw r31, 4(r5)
-/* 801C3E88 0018D448  48 29 B3 2D */	bl func_8045F1B4
+/* 801C3E88 0018D448  48 29 B3 2D */	bl CLibLayout_getArcResourceAccessorInstance
 /* 801C3E8C 0018D44C  3C A0 80 50 */	lis r5, CBgTex_strpool@ha
 /* 801C3E90 0018D450  90 6D AB D4 */	stw r3, lbl_80666D54@sda21(r13)
 /* 801C3E94 0018D454  38 A5 0B 88 */	addi r5, r5, CBgTex_strpool@l
