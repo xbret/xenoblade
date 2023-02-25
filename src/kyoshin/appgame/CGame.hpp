@@ -1,8 +1,5 @@
-#ifndef _CGAME_HPP
-#define _CGAME_HPP
+#pragma once
 
 extern "C"{
     void GameMain();
 }
-
-#endif

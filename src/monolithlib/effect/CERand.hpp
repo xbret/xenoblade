@@ -1,5 +1,4 @@
-#ifndef _MLIB_CERAND_HPP
-#define _MLIB_CERAND_HPP
+#pragma once
 
 #include "types.h"
 #include "Vector3.h"
@@ -83,5 +82,3 @@ public:
 
 extern CERandomizer ceRandomizer;
 extern CERandomizerSimple ceRandomizerSimple;
-
-#endif

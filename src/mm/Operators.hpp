@@ -1,5 +1,4 @@
-#ifndef _MM_OPERATORS_HPP
-#define _MM_OPERATORS_HPP
+#pragma once
 
 #include "types.h"
 
@@ -29,5 +28,3 @@ type of macro for those cases? */
 inline void* operator new(size_t size, int param){
     return mm_malloc(size,param);
 }
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef _MM_RANDOM_HPP
-#define _MM_RANDOM_HPP
+#pragma once
 
 #include "types.h"
 

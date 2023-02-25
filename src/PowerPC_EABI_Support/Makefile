@@ -30,7 +30,7 @@ MW_FILES:=\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/rand.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/float.o\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/scanf.o\
-	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/signal.o\
+	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/signal.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/string.o\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/strtold.o\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/strtoul.o\
@@ -41,7 +41,8 @@ MW_FILES:=\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/wstring.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/wchar_io.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/PPC_EABI/uart_console_io_gcn.o\
-	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/PPC_EABI/abort_exit_ppc_eabi.o\
+	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/PPC_EABI/abort_exit_ppc_eabi.o\
+	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/secure_error.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/math_double.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/math_sun.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/e_acos.o\

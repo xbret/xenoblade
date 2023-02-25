@@ -1,5 +1,4 @@
-#ifndef MLIB_CPACKITEM_HPP
-#define MLIB_CPACKITEM_HPP
+#pragma once
 
 #include "types.h"
 #include "stl/string.h"
@@ -78,6 +77,3 @@ public:
     bool CalculatePackFileHash(const char*);
     void func_804DE948();
 };
-
-
-#endif

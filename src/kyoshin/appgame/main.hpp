@@ -1,5 +1,4 @@
-#ifndef _CF_MAIN_HPP
-#define _CF_MAIN_HPP
+#pragma once
 
 #include "types.h"
 #include "kyoshin/appgame/code_802AEB74.hpp"
@@ -49,7 +48,6 @@ extern void func_8045D4FC();
 extern void func_80045814();
 
 
-
 void func_80039EFC(int);
 void func_80039F34();
 void func_80039F5C(int);
@@ -61,5 +59,3 @@ void vmInitCallback();
 void main(int argc, char* argv[]);
 
 }
-
-#endif

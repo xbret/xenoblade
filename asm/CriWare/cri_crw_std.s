@@ -3,9 +3,9 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .fn criCrw_GetVersion, global
-/* 8039B408 003649C8  3C 60 80 52 */	lis r3, lbl_8051CD90@ha
+/* 8039B408 003649C8  3C 60 80 52 */	lis r3, cricrwstd_build@ha
 /* 8039B40C 003649CC  3C 80 80 60 */	lis r4, lbl_80601360@ha
-/* 8039B410 003649D0  38 63 CD 90 */	addi r3, r3, lbl_8051CD90@l
+/* 8039B410 003649D0  38 63 CD 90 */	addi r3, r3, cricrwstd_build@l
 /* 8039B414 003649D4  90 64 13 60 */	stw r3, lbl_80601360@l(r4)
 /* 8039B418 003649D8  4E 80 00 20 */	blr 
 .endfn criCrw_GetVersion
@@ -302,8 +302,8 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051CD90
-lbl_8051CD90:
+#unconfirmed name
+cricrwstd_build:
 	.asciz "\nCRI CRW:STD/WII Ver.0.83 Build:Nov 13 2008 10:53:02\n"
 	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
 	.balign 4

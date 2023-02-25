@@ -1,5 +1,4 @@
-#ifndef MLIB_VM
-#define MLIB_VM
+#pragma once
 
 #include "types.h"
 #include "PowerPC_EABI_Support/Runtime/__mem.h"
@@ -35,5 +34,4 @@ void vmInit();
 
 #ifdef __cplusplus
 }
-#endif
 #endif

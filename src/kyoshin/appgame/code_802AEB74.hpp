@@ -1,5 +1,4 @@
-#ifndef _CODE_802AEB74_HPP
-#define _CODE_802AEB74_HPP
+#pragma once
 
 #include "types.h"
 
@@ -30,5 +29,3 @@ u32** func_802AEBBC();
 
 
 //}
-
-#endif

@@ -1,5 +1,4 @@
-#ifndef _MM_RECT_H
-#define _MM_RECT_H
+#pragma once
 
 #include "types.h"
 
@@ -16,5 +15,3 @@ struct Rect {
         height = 0;
     }
 };
-
-#endif

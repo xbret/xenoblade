@@ -61,8 +61,7 @@
 most notably changing function names.
 This might be the version this is based on: https://gist.github.com/yuikns/10017640 */
 
-#ifndef _MM_MTRAND_HPP
-#define _MM_MTRAND_HPP
+#pragma once
 
 #include "types.h"
 #include "mm/Rect.hpp"
@@ -121,5 +120,3 @@ bool func_80435C9C(s16*, s16*);
 
 }
 }
-
-#endif
