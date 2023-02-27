@@ -7,7 +7,7 @@
 .endfn dthandler__3stdFv
 
 .fn terminate__3stdFv, global
-/* 802B9700 00282CC0  81 8D 96 E0 */	lwz r12, lbl_80665860@sda21(r13)
+/* 802B9700 00282CC0  81 8D 96 E0 */	lwz r12, thandler__3std@sda21(r13)
 /* 802B9704 00282CC4  7D 89 03 A6 */	mtctr r12
 /* 802B9708 00282CC8  4E 80 04 20 */	bctr 
 .endfn terminate__3stdFv

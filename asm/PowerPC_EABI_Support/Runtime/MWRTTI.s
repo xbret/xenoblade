@@ -164,9 +164,9 @@
 .L_802B9F98:
 /* 802B9F98 00283558  2C 07 00 00 */	cmpwi r7, 0
 /* 802B9F9C 0028355C  41 82 00 2C */	beq .L_802B9FC8
-/* 802B9FA0 00283560  3C 80 80 54 */	lis r4, lbl_8053F040@ha
+/* 802B9FA0 00283560  3C 80 80 54 */	lis r4, __vt__std_bad_cast@ha
 /* 802B9FA4 00283564  3C 60 80 51 */	lis r3, lbl_8050CE30@ha
-/* 802B9FA8 00283568  38 84 F0 40 */	addi r4, r4, lbl_8053F040@l
+/* 802B9FA8 00283568  38 84 F0 40 */	addi r4, r4, __vt__std_bad_cast@l
 /* 802B9FAC 0028356C  3C A0 80 2C */	lis r5, __dt__Q23std8bad_castFv@ha
 /* 802B9FB0 00283570  38 63 CE 30 */	addi r3, r3, lbl_8050CE30@l
 /* 802B9FB4 00283574  90 81 00 08 */	stw r4, 8(r1)
@@ -211,8 +211,8 @@
 .endfn what__Q23std8bad_castCFv
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
-.global lbl_8053F040
-lbl_8053F040:
+.global __vt__std_bad_cast
+__vt__std_bad_cast:
 	.4byte __RTTI__std_bad_cast
 	.4byte 0
 	.4byte __dt__Q23std8bad_castFv
@@ -231,13 +231,14 @@ lbl_8053F05C:
 	.balign 4
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
+
 .global __RTTI__std_exception
 __RTTI__std_exception:
 	.4byte std_exception_typestr
 	.4byte 0
 
-.global lbl_80665860
-lbl_80665860:
+.global thandler__3std
+thandler__3std:
 	.4byte dthandler__3stdFv
 	.4byte 0
 
@@ -247,6 +248,7 @@ __RTTI__std_bad_cast:
 	.4byte std_bad_cast_hierarchy
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
 .global std_exception_typestr
 std_exception_typestr:
 	.asciz "std::exception"

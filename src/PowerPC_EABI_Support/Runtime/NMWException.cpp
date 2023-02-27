@@ -1,7 +1,5 @@
 #include "PowerPC_EABI_Support/Runtime/NMWException.h"
 
-extern u32* lbl_80665860;
-
 extern "C"{
 	extern void __dla__FPv();
 	extern void abort();
@@ -15,7 +13,7 @@ void dthandler(){
 }
 
 asm void terminate(){
-	lwz r12, lbl_80665860 //@sda21(r13)
+	lwz r12, thandler__3std //@sda21(r13)
 	mtctr r12
 	bctr 
 }
