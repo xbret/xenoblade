@@ -29,7 +29,7 @@ BUILD_DIR := build/$(NAME).$(VERSION)
 
 # Inputs
 S_FILES := $(wildcard asm/*.s)
-C_FILES := $(wildcard src/*.c)
+C_FILES := $(wildMakefilecard src/*.c)
 CPP_FILES := $(wildcard src/*.cpp)
 CPP_FILES += $(wildcard src/*.cp)
 LDSCRIPT := $(BUILD_DIR)/ldscript.lcf
@@ -46,9 +46,8 @@ endif
 
 include obj_files.mk
 
-O_FILES :=  $(GAME_O_FILES) $(MW_O_FILES) $(NDEV_O_FILES) $(RVL_SDK_O_FILES) \
-			$(CRIWARE_O_FILES) $(NW4R_O_FILES) $(UTILS_O_FILES) \
-			$(MM_O_FILES) $(MONOLITHLIB_O_FILES)
+O_FILES :=  $(GAME) $(MW) $(NDEV) $(RVL_SDK) $(CRIWARE) \
+			$(NW4R) $(UTILS) $(MM) $(MONOLITHLIB)
 
 DEPENDS := $($(filter *.o,O_FILES):.o=.d)
 # If a specific .o file is passed as a target, also process its deps
