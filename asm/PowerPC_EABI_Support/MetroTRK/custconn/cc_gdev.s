@@ -7,11 +7,11 @@
 /* 802CB530 00294AF0  7C 08 02 A6 */	mflr r0
 /* 802CB534 00294AF4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802CB538 00294AF8  48 00 50 E5 */	bl DBInitComm
-/* 802CB53C 00294AFC  3C 60 80 58 */	lis r3, lbl_8057B868@ha
-/* 802CB540 00294B00  3C 80 80 58 */	lis r4, lbl_8057B368@ha
-/* 802CB544 00294B04  38 63 B8 68 */	addi r3, r3, lbl_8057B868@l
+/* 802CB53C 00294AFC  3C 60 80 58 */	lis r3, gRecvCB@ha
+/* 802CB540 00294B00  3C 80 80 58 */	lis r4, gRecvBuf@ha
+/* 802CB544 00294B04  38 63 B8 68 */	addi r3, r3, gRecvCB@l
 /* 802CB548 00294B08  38 A0 05 00 */	li r5, 0x500
-/* 802CB54C 00294B0C  38 84 B3 68 */	addi r4, r4, lbl_8057B368@l
+/* 802CB54C 00294B0C  38 84 B3 68 */	addi r4, r4, gRecvBuf@l
 /* 802CB550 00294B10  48 00 02 99 */	bl CircleBufferInitialize
 /* 802CB554 00294B14  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802CB558 00294B18  38 60 00 00 */	li r3, 0
@@ -26,14 +26,14 @@
 .endfn gdev_cc_shutdown
 
 .fn gdev_cc_open, global
-/* 802CB570 00294B30  80 0D B3 E0 */	lwz r0, lbl_80667560@sda21(r13)
+/* 802CB570 00294B30  80 0D B3 E0 */	lwz r0, gIsInitialized@sda21(r13)
 /* 802CB574 00294B34  2C 00 00 00 */	cmpwi r0, 0
 /* 802CB578 00294B38  41 82 00 0C */	beq .L_802CB584
 /* 802CB57C 00294B3C  38 60 D8 EB */	li r3, -10005
 /* 802CB580 00294B40  4E 80 00 20 */	blr
 .L_802CB584:
 /* 802CB584 00294B44  38 00 00 01 */	li r0, 1
-/* 802CB588 00294B48  90 0D B3 E0 */	stw r0, lbl_80667560@sda21(r13)
+/* 802CB588 00294B48  90 0D B3 E0 */	stw r0, gIsInitialized@sda21(r13)
 /* 802CB58C 00294B4C  38 60 00 00 */	li r3, 0
 /* 802CB590 00294B50  4E 80 00 20 */	blr
 .endfn gdev_cc_open
@@ -51,13 +51,13 @@
 /* 802CB5AC 00294B6C  7C 7B 1B 78 */	mr r27, r3
 /* 802CB5B0 00294B70  7C 9C 23 78 */	mr r28, r4
 /* 802CB5B4 00294B74  3B C0 00 00 */	li r30, 0
-/* 802CB5B8 00294B78  80 0D B3 E0 */	lwz r0, lbl_80667560@sda21(r13)
+/* 802CB5B8 00294B78  80 0D B3 E0 */	lwz r0, gIsInitialized@sda21(r13)
 /* 802CB5BC 00294B7C  2C 00 00 00 */	cmpwi r0, 0
 /* 802CB5C0 00294B80  40 82 00 0C */	bne .L_802CB5CC
 /* 802CB5C4 00294B84  38 60 D8 EF */	li r3, -10001
 /* 802CB5C8 00294B88  48 00 00 74 */	b .L_802CB63C
 .L_802CB5CC:
-/* 802CB5CC 00294B8C  3F E0 80 58 */	lis r31, lbl_8057B868@ha
+/* 802CB5CC 00294B8C  3F E0 80 58 */	lis r31, gRecvCB@ha
 /* 802CB5D0 00294B90  48 00 00 40 */	b .L_802CB610
 .L_802CB5D4:
 /* 802CB5D4 00294B94  3B C0 00 00 */	li r30, 0
@@ -72,11 +72,11 @@
 /* 802CB5F8 00294BB8  7C 7E 1B 78 */	mr r30, r3
 /* 802CB5FC 00294BBC  40 82 00 14 */	bne .L_802CB610
 /* 802CB600 00294BC0  7F A5 EB 78 */	mr r5, r29
-/* 802CB604 00294BC4  38 7F B8 68 */	addi r3, r31, lbl_8057B868@l
+/* 802CB604 00294BC4  38 7F B8 68 */	addi r3, r31, gRecvCB@l
 /* 802CB608 00294BC8  38 81 00 08 */	addi r4, r1, 8
 /* 802CB60C 00294BCC  48 00 02 01 */	bl CircleBufferReadBytes
 .L_802CB610:
-/* 802CB610 00294BD0  38 7F B8 68 */	addi r3, r31, lbl_8057B868@l
+/* 802CB610 00294BD0  38 7F B8 68 */	addi r3, r31, gRecvCB@l
 /* 802CB614 00294BD4  48 00 01 CD */	bl CBGetBytesAvailableForRead
 /* 802CB618 00294BD8  7C 03 E0 40 */	cmplw r3, r28
 /* 802CB61C 00294BDC  41 80 FF B8 */	blt .L_802CB5D4
@@ -84,7 +84,7 @@
 /* 802CB624 00294BE4  40 82 00 14 */	bne .L_802CB638
 /* 802CB628 00294BE8  7F 64 DB 78 */	mr r4, r27
 /* 802CB62C 00294BEC  7F 85 E3 78 */	mr r5, r28
-/* 802CB630 00294BF0  38 7F B8 68 */	addi r3, r31, lbl_8057B868@l
+/* 802CB630 00294BF0  38 7F B8 68 */	addi r3, r31, gRecvCB@l
 /* 802CB634 00294BF4  48 00 02 E1 */	bl CircleBufferWriteBytes
 .L_802CB638:
 /* 802CB638 00294BF8  7F C3 F3 78 */	mr r3, r30
@@ -104,7 +104,7 @@
 /* 802CB660 00294C20  7C 9F 23 78 */	mr r31, r4
 /* 802CB664 00294C24  93 C1 00 08 */	stw r30, 8(r1)
 /* 802CB668 00294C28  7C 7E 1B 78 */	mr r30, r3
-/* 802CB66C 00294C2C  80 0D B3 E0 */	lwz r0, lbl_80667560@sda21(r13)
+/* 802CB66C 00294C2C  80 0D B3 E0 */	lwz r0, gIsInitialized@sda21(r13)
 /* 802CB670 00294C30  2C 00 00 00 */	cmpwi r0, 0
 /* 802CB674 00294C34  40 82 00 2C */	bne .L_802CB6A0
 /* 802CB678 00294C38  38 60 D8 EF */	li r3, -10001
@@ -173,9 +173,9 @@
 /* 802CB73C 00294CFC  48 00 50 35 */	bl DBRead
 /* 802CB740 00294D00  2C 03 00 00 */	cmpwi r3, 0
 /* 802CB744 00294D04  40 82 00 1C */	bne .L_802CB760
-/* 802CB748 00294D08  3C 60 80 58 */	lis r3, lbl_8057B868@ha
+/* 802CB748 00294D08  3C 60 80 58 */	lis r3, gRecvCB@ha
 /* 802CB74C 00294D0C  7F E5 FB 78 */	mr r5, r31
-/* 802CB750 00294D10  38 63 B8 68 */	addi r3, r3, lbl_8057B868@l
+/* 802CB750 00294D10  38 63 B8 68 */	addi r3, r3, gRecvCB@l
 /* 802CB754 00294D14  38 81 00 08 */	addi r4, r1, 8
 /* 802CB758 00294D18  48 00 00 B5 */	bl CircleBufferReadBytes
 /* 802CB75C 00294D1C  48 00 00 0C */	b .L_802CB768
@@ -205,14 +205,16 @@
 .endfn gdev_cc_initinterrupts
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
-.global lbl_8057B368
-lbl_8057B368:
+
+gRecvBuf:
 	.skip 0x500
-.global lbl_8057B868
-lbl_8057B868:
+
+gRecvCB:
 	.skip 0x20
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
-.global lbl_80667560
-lbl_80667560:
-	.skip 0x8
+
+gIsInitialized:
+	.skip 0x4
+
+.skip 0x4

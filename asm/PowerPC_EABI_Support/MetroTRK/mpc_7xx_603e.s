@@ -121,8 +121,8 @@
 .fn TRKRestoreExtended1Block, global
 /* 802CD2BC 0029687C  3C 40 80 57 */	lis r2, gTRKCPUState@h
 /* 802CD2C0 00296880  60 42 D3 F8 */	ori r2, r2, gTRKCPUState@l
-/* 802CD2C4 00296884  3C A0 80 57 */	lis r5, lbl_8057D280@h
-/* 802CD2C8 00296888  60 A5 D2 80 */	ori r5, r5, lbl_8057D280@l
+/* 802CD2C4 00296884  3C A0 80 57 */	lis r5, gTRKRestoreFlags@h
+/* 802CD2C8 00296888  60 A5 D2 80 */	ori r5, r5, gTRKRestoreFlags@l
 /* 802CD2CC 0029688C  88 65 00 00 */	lbz r3, 0(r5)
 /* 802CD2D0 00296890  88 C5 00 01 */	lbz r6, 1(r5)
 /* 802CD2D4 00296894  38 00 00 00 */	li r0, 0

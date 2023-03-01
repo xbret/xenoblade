@@ -8,11 +8,11 @@
 /* 802C2A34 0028BFF4  90 01 00 F4 */	stw r0, 0xf4(r1)
 /* 802C2A38 0028BFF8  39 61 00 F0 */	addi r11, r1, 0xf0
 /* 802C2A3C 0028BFFC  4B FF 76 E5 */	bl _savegpr_14
-/* 802C2A40 0028C000  3D 00 80 54 */	lis r8, lbl_8053F398@ha
+/* 802C2A40 0028C000  3D 00 80 54 */	lis r8, __lconv@ha
 /* 802C2A44 0028C004  3B E0 00 00 */	li r31, 0
 /* 802C2A48 0028C008  93 E1 00 68 */	stw r31, 0x68(r1)
 /* 802C2A4C 0028C00C  7C 91 23 78 */	mr r17, r4
-/* 802C2A50 0028C010  81 08 F3 98 */	lwz r8, lbl_8053F398@l(r8)
+/* 802C2A50 0028C010  81 08 F3 98 */	lwz r8, __lconv@l(r8)
 /* 802C2A54 0028C014  7C B2 2B 78 */	mr r18, r5
 /* 802C2A58 0028C018  93 E1 00 6C */	stw r31, 0x6c(r1)
 /* 802C2A5C 0028C01C  38 00 00 00 */	li r0, 0
@@ -1449,11 +1449,18 @@
 /* 802C3DA8 0028D368  4E 80 00 20 */	blr 
 .endfn strtof
 
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8050D578
+lbl_8050D578:
+	.asciz "INFINITY"
+	.balign 4
+	.4byte 0
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 .global lbl_8066B878
 lbl_8066B878:
-	.4byte 0x4E414E28
+	.4byte 0x4E414E28 #"NAN("
 
 
 .global lbl_8066B87C
@@ -1473,5 +1480,4 @@ double_8066B888:
 
 .global double_8066B890
 double_8066B890:
-	.4byte 0x7FEFFFFF
-	.4byte 0xFFFFFFFF
+	.8byte 0x7FEFFFFFFFFFFFFF

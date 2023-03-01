@@ -1545,6 +1545,22 @@
 /* 802C260C 0028BBCC  4E 80 00 20 */	blr
 .endfn sscanf
 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global lbl_8050D550
+lbl_8050D550:
+	.4byte 0
+	.4byte 0x7FFFFFFF
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 .global jumptable_8053F7C0
 jumptable_8053F7C0:

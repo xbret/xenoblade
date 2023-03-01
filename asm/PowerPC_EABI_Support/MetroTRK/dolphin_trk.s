@@ -90,7 +90,7 @@
 .endfn EnableMetroTRKInterrupts
 
 .fn TRKTargetTranslate, global
-/* 802CC030 002955F0  80 8D B3 F0 */	lwz r4, lbl_80667570@sda21(r13)
+/* 802CC030 002955F0  80 8D B3 F0 */	lwz r4, lc_base@sda21(r13)
 /* 802CC034 002955F4  7C 03 20 40 */	cmplw r3, r4
 /* 802CC038 002955F8  41 80 00 24 */	blt .L_802CC05C
 /* 802CC03C 002955FC  38 04 40 00 */	addi r0, r4, 0x4000
@@ -125,7 +125,7 @@
 /* 802CC09C 0029565C  7C 08 02 A6 */	mflr r0
 /* 802CC0A0 00295660  90 01 00 34 */	stw r0, 0x34(r1)
 /* 802CC0A4 00295664  BE C1 00 08 */	stmw r22, 8(r1)
-/* 802CC0A8 00295668  80 6D B3 F0 */	lwz r3, lbl_80667570@sda21(r13)
+/* 802CC0A8 00295668  80 6D B3 F0 */	lwz r3, lc_base@sda21(r13)
 /* 802CC0AC 0029566C  28 03 00 44 */	cmplwi r3, 0x44
 /* 802CC0B0 00295670  41 81 00 2C */	bgt .L_802CC0DC
 /* 802CC0B4 00295674  38 03 40 00 */	addi r0, r3, 0x4000
@@ -142,11 +142,11 @@
 /* 802CC0DC 0029569C  3C 60 80 00 */	lis r3, 0x80000044@ha
 /* 802CC0E0 002956A0  38 63 00 44 */	addi r3, r3, 0x80000044@l
 .L_802CC0E4:
-/* 802CC0E4 002956A4  3F E0 80 54 */	lis r31, lbl_8053FD40@ha
+/* 802CC0E4 002956A4  3F E0 80 54 */	lis r31, TRK_ISR_OFFSETS@ha
 /* 802CC0E8 002956A8  3F 00 80 58 */	lis r24, gTRKCPUState@ha
 /* 802CC0EC 002956AC  3F 80 80 00 */	lis r28, gTRKInterruptVectorTable@ha
 /* 802CC0F0 002956B0  83 A3 00 00 */	lwz r29, 0(r3)
-/* 802CC0F4 002956B4  3B FF FD 40 */	addi r31, r31, lbl_8053FD40@l
+/* 802CC0F4 002956B4  3B FF FD 40 */	addi r31, r31, TRK_ISR_OFFSETS@l
 /* 802CC0F8 002956B8  3B 18 D3 F8 */	addi r24, r24, gTRKCPUState@l
 /* 802CC0FC 002956BC  3B 9C 43 80 */	addi r28, r28, gTRKInterruptVectorTable@l
 /* 802CC100 002956C0  3B C0 00 00 */	li r30, 0
@@ -161,7 +161,7 @@
 /* 802CC120 002956E0  2C 1E 00 04 */	cmpwi r30, 4
 /* 802CC124 002956E4  41 82 00 84 */	beq .L_802CC1A8
 /* 802CC128 002956E8  80 9F 00 00 */	lwz r4, 0(r31)
-/* 802CC12C 002956EC  80 6D B3 F0 */	lwz r3, lbl_80667570@sda21(r13)
+/* 802CC12C 002956EC  80 6D B3 F0 */	lwz r3, lc_base@sda21(r13)
 /* 802CC130 002956F0  7C 04 18 40 */	cmplw r4, r3
 /* 802CC134 002956F4  41 80 00 24 */	blt .L_802CC158
 /* 802CC138 002956F8  38 03 40 00 */	addi r0, r3, 0x4000
@@ -214,14 +214,14 @@
 /* 802CC1D4 00295794  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802CC1D8 00295798  38 00 00 01 */	li r0, 1
 /* 802CC1DC 0029579C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 802CC1E0 002957A0  3F E0 80 58 */	lis r31, lbl_8057D350@ha
-/* 802CC1E4 002957A4  3B FF D3 50 */	addi r31, r31, lbl_8057D350@l
+/* 802CC1E0 002957A0  3F E0 80 58 */	lis r31, gTRKState@ha
+/* 802CC1E4 002957A4  3B FF D3 50 */	addi r31, r31, gTRKState@l
 /* 802CC1E8 002957A8  90 1F 00 98 */	stw r0, 0x98(r31)
 /* 802CC1EC 002957AC  48 00 2B B5 */	bl __TRK_get_MSR
 /* 802CC1F0 002957B0  90 7F 00 8C */	stw r3, 0x8c(r31)
 /* 802CC1F4 002957B4  3C 00 E0 00 */	lis r0, 0xe000
 /* 802CC1F8 002957B8  38 60 00 00 */	li r3, 0
-/* 802CC1FC 002957BC  90 0D B3 F0 */	stw r0, lbl_80667570@sda21(r13)
+/* 802CC1FC 002957BC  90 0D B3 F0 */	stw r0, lc_base@sda21(r13)
 /* 802CC200 002957C0  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802CC204 002957C4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802CC208 002957C8  7C 08 03 A6 */	mtlr r0
@@ -240,8 +240,7 @@
 
 .balign 16 #needed to align switch jump table for dispatch.c
 
-.global lbl_8053FD40
-lbl_8053FD40:
+TRK_ISR_OFFSETS:
 	.4byte 0x00000100
 	.4byte 0x00000200
 	.4byte 0x00000300
@@ -260,6 +259,8 @@ lbl_8053FD40:
 	.4byte 0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
-.global lbl_80667570
-lbl_80667570:
-	.skip 0x8
+
+lc_base:
+	.skip 0x4
+
+.skip 0x4

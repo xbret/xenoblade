@@ -3,9 +3,9 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .fn __register_fragment, global
-/* 802BA7E4 00283DA4  3C A0 80 58 */	lis r5, lbl_8057AE90@ha
+/* 802BA7E4 00283DA4  3C A0 80 58 */	lis r5, fragmentinfo@ha
 /* 802BA7E8 00283DA8  38 00 00 20 */	li r0, 0x20
-/* 802BA7EC 00283DAC  38 A5 AE 90 */	addi r5, r5, lbl_8057AE90@l
+/* 802BA7EC 00283DAC  38 A5 AE 90 */	addi r5, r5, fragmentinfo@l
 /* 802BA7F0 00283DB0  38 C0 00 00 */	li r6, 0
 /* 802BA7F4 00283DB4  7C 09 03 A6 */	mtctr r0
 .L_802BA7F8:
@@ -30,9 +30,9 @@
 /* 802BA830 00283DF0  28 03 00 1F */	cmplwi r3, 0x1f
 /* 802BA834 00283DF4  4D 81 00 20 */	bgtlr 
 /* 802BA838 00283DF8  1C 83 00 0C */	mulli r4, r3, 0xc
-/* 802BA83C 00283DFC  3C 60 80 58 */	lis r3, lbl_8057AE90@ha
+/* 802BA83C 00283DFC  3C 60 80 58 */	lis r3, fragmentinfo@ha
 /* 802BA840 00283E00  38 00 00 00 */	li r0, 0
-/* 802BA844 00283E04  38 63 AE 90 */	addi r3, r3, lbl_8057AE90@l
+/* 802BA844 00283E04  38 63 AE 90 */	addi r3, r3, fragmentinfo@l
 /* 802BA848 00283E08  7C 03 21 6E */	stwux r0, r3, r4
 /* 802BA84C 00283E0C  90 03 00 04 */	stw r0, 4(r3)
 /* 802BA850 00283E10  90 03 00 08 */	stw r0, 8(r3)
@@ -40,9 +40,9 @@
 .endfn __unregister_fragment
 
 .fn FragmentInfo$7ExPPC_FindExceptionFragment, global
-/* 802BA858 00283E18  3C C0 80 58 */	lis r6, lbl_8057AE90@ha
+/* 802BA858 00283E18  3C C0 80 58 */	lis r6, fragmentinfo@ha
 /* 802BA85C 00283E1C  38 00 00 20 */	li r0, 0x20
-/* 802BA860 00283E20  38 C6 AE 90 */	addi r6, r6, lbl_8057AE90@l
+/* 802BA860 00283E20  38 C6 AE 90 */	addi r6, r6, fragmentinfo@l
 /* 802BA864 00283E24  7C 09 03 A6 */	mtctr r0
 .L_802BA868:
 /* 802BA868 00283E28  80 06 00 08 */	lwz r0, 8(r6)
@@ -1530,6 +1530,7 @@
 .endfn __throw
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .global jumptable_8053F068
 jumptable_8053F068:
 	.4byte .L_802BAC08
@@ -1571,8 +1572,8 @@ jumptable_8053F0AC:
 	.4byte .L_802BB608
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
-.global lbl_8057AE90
-lbl_8057AE90:
+
+fragmentinfo:
 	.skip 0x180
 
 .section extab, "a" # 0x800066E0 - 0x80021020

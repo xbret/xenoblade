@@ -6,8 +6,8 @@
 
 .fn __cvt_fp2unsigned, global
 /* 802BA02C 002835EC  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 802BA030 002835F0  3C 80 80 51 */	lis r4, lbl_8050CE78@ha
-/* 802BA034 002835F4  38 84 CE 78 */	addi r4, r4, lbl_8050CE78@l
+/* 802BA030 002835F0  3C 80 80 51 */	lis r4, __constants@ha
+/* 802BA034 002835F4  38 84 CE 78 */	addi r4, r4, __constants@l
 /* 802BA038 002835F8  38 60 00 00 */	li r3, 0x0
 /* 802BA03C 002835FC  C8 04 00 00 */	lfd f0, 0x0(r4)
 /* 802BA040 00283600  C8 64 00 08 */	lfd f3, 0x8(r4)
@@ -637,8 +637,8 @@
 .endfn __cvt_dbl_ull
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
-.global lbl_8050CE78
-lbl_8050CE78:
+
+__constants:
 	.4byte 0
 	.4byte 0
 	.4byte 0x41F00000

@@ -104,3 +104,14 @@
 /* 802CCA7C 0029603C  38 60 00 00 */	li r3, 0
 /* 802CCA80 00296040  4E 80 00 20 */	blr 
 .endfn TRKTerminateSerialHandler
+
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.balign 8 #needed to align nubinit.c
+
+.global gTRKInputPendingPtr
+gTRKInputPendingPtr:
+	.skip 0x4
+
+.skip 0x4

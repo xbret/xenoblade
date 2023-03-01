@@ -149,10 +149,10 @@
 .fn deallocate_from_fixed_pools, global
 /* 802BBFB0 00285570  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802BBFB4 00285574  7C 08 02 A6 */	mflr r0
-/* 802BBFB8 00285578  3C C0 80 51 */	lis r6, lbl_8050CF00@ha
+/* 802BBFB8 00285578  3C C0 80 51 */	lis r6, fix_pool_sizes@ha
 /* 802BBFBC 0028557C  38 E0 00 00 */	li r7, 0
 /* 802BBFC0 00285580  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802BBFC4 00285584  38 C6 CF 00 */	addi r6, r6, lbl_8050CF00@l
+/* 802BBFC4 00285584  38 C6 CF 00 */	addi r6, r6, fix_pool_sizes@l
 /* 802BBFC8 00285588  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802BBFCC 0028558C  7C 7F 1B 78 */	mr r31, r3
 /* 802BBFD0 00285590  93 C1 00 08 */	stw r30, 8(r1)
@@ -387,8 +387,7 @@ lbl_80667528:
 #Needed to align GCN_mem_alloc.s
 .balign 4
 
-.global lbl_8050CF00
-lbl_8050CF00:
+fix_pool_sizes:
 	.4byte 0x00000004
 	.4byte 0x0000000C
 	.4byte 0x00000014
@@ -397,6 +396,7 @@ lbl_8050CF00:
 	.4byte 0x00000044
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
 .global lbl_8057B010
 lbl_8057B010:
 	.skip 0x38

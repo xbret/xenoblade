@@ -26,20 +26,128 @@ extern "C" {
 #define TRK_DISPATCH_CMD_STOP           26 /* Stop the debugger */
 
 typedef struct _TRK_Msg {
-	u8 _00[8];       // _00
-	u32 m_msgLength; // _08
-	u32 _0C;         // _0C
-	u32 m_msg;       // _10
+	u8 _00[8];      // _00
+	u32 mMsgLength; // _08
+	u32 _0C;        // _0C
+	u32 mMsg;       // _10
 } TRK_Msg;
 
-typedef int TRKResult;
+/**
+ * @size{0xC}
+ */
+typedef struct TRKEvent {
+	int mEventType;
+	int _04;
+	int mBufferIndex;
+} TRKEvent;
+
+/**
+ * @size{0x28}
+ */
+typedef struct TRKEventQueue {
+	u8 _00[4];
+	int mCurrEvtID;
+	int mNextSlotToOverwrite;
+	TRKEvent mEvents[2];
+	u32 _24; /* max of 0x100? */
+} TRKEventQueue;
+
+/**
+ * @size{0xA4}
+ */
+typedef struct TRKState {
+	u32 _00;
+	u32 _04;
+	u32 _08;
+	u32 _0C;
+	u32 _10;
+	u32 _14;
+	u32 _18;
+	u32 _1C;
+	u32 _20;
+	u32 _24;
+	u32 _28;
+	u32 _2C;
+	u32 _30;
+	u32 _34;
+	u32 _38;
+	u32 _3C;
+	u32 _40;
+	u32 _44;
+	u32 _48;
+	u32 _4C;
+	u32 _50;
+	u32 _54;
+	u32 _58;
+	u32 _5C;
+	u32 _60;
+	u32 _64;
+	u32 _68;
+	u32 _6C;
+	u32 _70;
+	u32 _74;
+	u32 _78;
+	u32 _7C;
+	u32 _80;
+	u32 _84;
+	u32 _88;
+	u32 _8C;
+	u32 _90;
+	u32 _94;
+	BOOL mIsStopped;
+	u32 _9C;
+	u32 _A0;
+	u32 _A4;
+	u32 _A8;
+	u32 _AC;
+} TRKState;
+
+typedef struct TRKBuffer {
+	u8 _00[4];
+	u32 _04;
+	s32 _08;
+	u32 _0C;
+	u32 _10;
+	u8 mBuffer[0x87C]; /* _10 */
+} TRKBuffer;
+typedef enum { TRKSuccess = 0, TRKError100 = 0x100, TRKError301 = 0x301, TRKError302 = 0x302 } TRKResult;
+
+extern BOOL gTRKBigEndian;
+
+u32 TRKDoConnect(TRKBuffer*);
+u32 TRKDoDisconnect(TRKBuffer*);
+u32 TRKDoReset(TRKBuffer*);
+u32 TRKDoVersions(TRKBuffer*);
+u32 TRKDoSupportMask(TRKBuffer*);
+u32 TRKDoOverride(TRKBuffer*);
+u32 TRKDoReadMemory(TRKBuffer*);
+u32 TRKDoWriteMemory(TRKBuffer*);
+u32 TRKDoReadRegisters(TRKBuffer*);
+u32 TRKDoWriteRegisters(TRKBuffer*);
+u32 TRKDoSetOption(TRKBuffer*);
+u32 TRKDoContinue(TRKBuffer*);
+u32 TRKDoStep(TRKBuffer*);
+u32 TRKDoStop(TRKBuffer*);
 
 void InitMetroTRK(void);
 void InitMetroTRK_BBA(void);
 void EnableMetroTRKInterrupts(void);
 
+void TRKDestructEvent(TRKEvent*);
+TRKResult TRKDispatchMessage(TRKBuffer*);
+void* TRKGetBuffer(int);
+void TRKReleaseBuffer(int);
+void TRKGetInput();
+BOOL TRKGetNextEvent(TRKEvent*);
+
 TRKResult TRKTargetContinue(void);
+TRKResult TRKTargetInterrupt(TRKEvent*);
+BOOL TRKTargetStopped();
 void TRKTargetSetStopped(uint);
+TRKResult TRKTargetSupportRequest();
+
+TRKResult TRKAppendBuffer_ui8(TRKBuffer*, u8*, int);
+TRKResult TRKSetBufferPosition(TRKBuffer*, u32);
 
 TRKResult TRKMessageSend(TRK_Msg*);
 void TRKSwapAndGo(void);
@@ -49,10 +157,19 @@ TRKResult TRKTerminateNub(void);
 void TRKNubWelcome(void);
 void TRKNubMainLoop(void);
 
-extern s32 TRK_mainError;
+TRKResult TRKInitializeMutex(void*);
+TRKResult TRKAcquireMutex(void*);
+TRKResult TRKReleaseMutex(void*);
+void* TRK_memcpy(void* dst, const void* src, size_t n);
+
+TRKResult TRKInitializeEventQueue();
+TRKResult TRKInitializeMessageBuffers();
+TRKResult TRKInitializeDispatcher();
+TRKResult InitializeProgramEndTrap();
+TRKResult TRKInitializeSerialHandler();
+TRKResult TRKInitializeTarget();
 
 /* EXI2 */
-#define EXI2_Init(inputFlagPtr, mtrCallback) DBInitComm(inputFlagPtr, mtrCallback);
 void UnreserveEXI2Port(void);
 void ReserveEXI2Port(void);
 
@@ -90,6 +207,10 @@ typedef enum {
 } UARTBaudRate;
 
 UARTError InitializeUART(UARTBaudRate baudRate);
+TRKResult TRKInitializeIntDrivenUART(unknown, unknown, void*);
+void usr_put_initialize();
+void TRKTargetSetInputPendingPtr(void*);
+extern void* gTRKInputPendingPtr;
 
 #ifdef __cplusplus
 };

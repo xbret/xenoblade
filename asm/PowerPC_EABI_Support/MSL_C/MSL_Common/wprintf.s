@@ -791,7 +791,7 @@
 .fn double2hex, local
 /* 802C579C 0028ED5C  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 802C57A0 0028ED60  7C 08 02 A6 */	mflr r0
-/* 802C57A4 0028ED64  3C A0 80 54 */	lis r5, lbl_8053F398@ha
+/* 802C57A4 0028ED64  3C A0 80 54 */	lis r5, __lconv@ha
 /* 802C57A8 0028ED68  90 01 00 94 */	stw r0, 0x94(r1)
 /* 802C57AC 0028ED6C  DB E1 00 80 */	stfd f31, 0x80(r1)
 /* 802C57B0 0028ED70  F3 E1 00 88 */	psq_st f31, 136(r1), 0, qr0
@@ -803,7 +803,7 @@
 /* 802C57C8 0028ED88  7C 7D 1B 78 */	mr r29, r3
 /* 802C57CC 0028ED8C  93 81 00 70 */	stw r28, 0x70(r1)
 /* 802C57D0 0028ED90  80 04 00 0C */	lwz r0, 0xc(r4)
-/* 802C57D4 0028ED94  80 A5 F3 98 */	lwz r5, lbl_8053F398@l(r5)
+/* 802C57D4 0028ED94  80 A5 F3 98 */	lwz r5, __lconv@l(r5)
 /* 802C57D8 0028ED98  2C 00 01 FD */	cmpwi r0, 0x1fd
 /* 802C57DC 0028ED9C  D8 21 00 08 */	stfd f1, 8(r1)
 /* 802C57E0 0028EDA0  8B E5 00 00 */	lbz r31, 0(r5)
@@ -1196,7 +1196,7 @@
 .fn float2str, local
 /* 802C5D18 0028F2D8  94 21 FD B0 */	stwu r1, -0x250(r1)
 /* 802C5D1C 0028F2DC  7C 08 02 A6 */	mflr r0
-/* 802C5D20 0028F2E0  3C A0 80 54 */	lis r5, lbl_8053F398@ha
+/* 802C5D20 0028F2E0  3C A0 80 54 */	lis r5, __lconv@ha
 /* 802C5D24 0028F2E4  90 01 02 54 */	stw r0, 0x254(r1)
 /* 802C5D28 0028F2E8  DB E1 02 48 */	stfd f31, 0x248(r1)
 /* 802C5D2C 0028F2EC  FF E0 08 90 */	fmr f31, f1
@@ -1207,7 +1207,7 @@
 /* 802C5D40 0028F300  93 81 02 38 */	stw r28, 0x238(r1)
 /* 802C5D44 0028F304  7C 7C 1B 78 */	mr r28, r3
 /* 802C5D48 0028F308  80 04 00 0C */	lwz r0, 0xc(r4)
-/* 802C5D4C 0028F30C  80 A5 F3 98 */	lwz r5, lbl_8053F398@l(r5)
+/* 802C5D4C 0028F30C  80 A5 F3 98 */	lwz r5, __lconv@l(r5)
 /* 802C5D50 0028F310  2C 00 01 FD */	cmpwi r0, 0x1fd
 /* 802C5D54 0028F314  8B C5 00 00 */	lbz r30, 0(r5)
 /* 802C5D58 0028F318  40 81 00 0C */	ble .L_802C5D64
@@ -2516,6 +2516,7 @@
 .endfn vswprintf
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .global jumptable_8053FA30
 jumptable_8053FA30:
 	.4byte .L_802C50F0
@@ -2664,33 +2665,18 @@ jumptable_8053FB10:
 
 .global lbl_8053FC60
 lbl_8053FC60:
-	.4byte 0x002D0030
-	.4byte 0x00580030
-	.4byte 0x0000002D
-	.4byte 0x00300078
-	.4byte 0x00300000
-	.4byte 0x00300058
-	.4byte 0x00300000
-	.4byte 0x00300078
-	.4byte 0x00300000
-	.4byte 0x002D0049
-	.4byte 0x004E0046
-	.4byte 0x0000002D
-	.4byte 0x0069006E
-	.4byte 0x00660000
-	.4byte 0x0049004E
-	.4byte 0x00460000
-	.4byte 0x0069006E
-	.4byte 0x00660000
-	.4byte 0x002D004E
-	.4byte 0x0041004E
-	.4byte 0x0000002D
-	.4byte 0x006E0061
-	.4byte 0x006E0000
-	.4byte 0x004E0041
-	.4byte 0x004E0000
-	.4byte 0x006E0061
-	.4byte 0x006E0000
+	.2byte 0x002D,0x0030,0x0058,0x0030,0x0000 #-0X0
+	.2byte 0x002D,0x0030,0x0078,0x0030,0x0000 #-0x0
+	.2byte 0x0030,0x0058,0x0030,0x0000 #0X0
+	.2byte 0x0030,0x0078,0x0030,0x0000 #0x0
+	.2byte 0x002D,0x0049,0x004E,0x0046,0x0000 #-INF
+	.2byte 0x002D,0x0069,0x006E,0x0066,0x0000 #-inf
+	.2byte 0x0049,0x004E,0x0046,0x0000 #INF
+	.2byte 0x0069,0x006E,0x0066,0x0000 #-inf
+	.2byte 0x002D,0x004E,0x0041,0x004E,0x0000 #-NAN
+	.2byte 0x002D,0x006E,0x0061,0x006E,0x0000 #-nan
+	.2byte 0x004E,0x0041,0x004E,0x0000 #NAN
+	.2byte 0x006E,0x0061,0x006E,0x0000 #nan
 	.4byte 0
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -2702,5 +2688,4 @@ lbl_8050DB88:
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 .global double_8066B898
 double_8066B898:
-	.4byte 0
-	.4byte 0
+	.8byte 0

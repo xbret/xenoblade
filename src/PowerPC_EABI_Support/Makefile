@@ -3,8 +3,6 @@ MW_FILES:=\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_C.PPCEABI.bare.H.a\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MetroTRK/TRK_Hollywood_Revolution.a\
 
-$(MW_FILES): CFLAGS += -Cpp_exceptions off -inline on -str pool,readonly,reuse
-
 $(BUILD_DIR)/src/PowerPC_EABI_Support/PowerPC_EABI_Support.a: $(MW_FILES)
 	@echo Linking... $@
 	$(QUIET) mkdir -p $(dir $@)

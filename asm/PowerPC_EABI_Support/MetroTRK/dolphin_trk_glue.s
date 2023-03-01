@@ -77,7 +77,7 @@
 /* 802CC320 002958E0  48 08 8B D1 */	bl OSReport
 /* 802CC324 002958E4  2C 1F 00 02 */	cmpwi r31, 2
 /* 802CC328 002958E8  38 00 00 00 */	li r0, 0
-/* 802CC32C 002958EC  98 0D B3 F8 */	stb r0, lbl_80667578@sda21(r13)
+/* 802CC32C 002958EC  98 0D B3 F8 */	stb r0, TRK_Use_BBA@sda21(r13)
 /* 802CC330 002958F0  40 82 00 0C */	bne .L_802CC33C
 /* 802CC334 002958F4  38 60 00 00 */	li r3, 0
 /* 802CC338 002958F8  48 00 00 CC */	b .L_802CC404
@@ -171,7 +171,7 @@
 .endfn TRKInitializeIntDrivenUART
 
 .fn EnableEXI2Interrupts, global
-/* 802CC474 00295A34  88 0D B3 F8 */	lbz r0, lbl_80667578@sda21(r13)
+/* 802CC474 00295A34  88 0D B3 F8 */	lbz r0, TRK_Use_BBA@sda21(r13)
 /* 802CC478 00295A38  2C 00 00 00 */	cmpwi r0, 0
 /* 802CC47C 00295A3C  4C 82 00 20 */	bnelr 
 /* 802CC480 00295A40  3C 60 80 58 */	lis r3, gDBCommTable@ha
@@ -256,7 +256,7 @@
 .fn InitializeProgramEndTrap, global
 /* 802CC56C 00295B2C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CC570 00295B30  7C 08 02 A6 */	mflr r0
-/* 802CC574 00295B34  38 82 BA 30 */	addi r4, r2, lbl_8066BDB0@sda21
+/* 802CC574 00295B34  38 82 BA 30 */	addi r4, r2, EndofProgramInstruction@sda21
 /* 802CC578 00295B38  38 A0 00 04 */	li r5, 4
 /* 802CC57C 00295B3C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802CC580 00295B40  93 E1 00 0C */	stw r31, 0xc(r1)
@@ -292,17 +292,16 @@ lbl_8053FD80:
 	.4byte 0
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
-.global lbl_8066BDB0
-lbl_8066BDB0:
+#EndofProgramInstruction$162
+EndofProgramInstruction:
 	.4byte 0x00454E44
 	.4byte 0
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
-.global gDBCommTable
 gDBCommTable:
 	.skip 0x28
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
-.global lbl_80667578
-lbl_80667578:
-	.skip 0x8
+TRK_Use_BBA:
+	.skip 0x1
+.skip 0x7

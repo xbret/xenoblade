@@ -6,7 +6,7 @@
 /* 802CD420 002969E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CD424 002969E4  7C 08 02 A6 */	mflr r0
 /* 802CD428 002969E8  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802CD42C 002969EC  A0 0D B4 10 */	lhz r0, lbl_80667590@sda21(r13)
+/* 802CD42C 002969EC  A0 0D B4 10 */	lhz r0, gPacketSeq@sda21(r13)
 /* 802CD430 002969F0  2C 00 00 00 */	cmpwi r0, 0
 /* 802CD434 002969F4  40 82 00 08 */	bne .L_802CD43C
 /* 802CD438 002969F8  38 00 00 01 */	li r0, 1
@@ -14,7 +14,7 @@
 /* 802CD43C 002969FC  B0 03 00 12 */	sth r0, 0x12(r3)
 /* 802CD440 00296A00  54 04 04 3E */	clrlwi r4, r0, 0x10
 /* 802CD444 00296A04  38 04 00 01 */	addi r0, r4, 1
-/* 802CD448 00296A08  B0 0D B4 10 */	sth r0, lbl_80667590@sda21(r13)
+/* 802CD448 00296A08  B0 0D B4 10 */	sth r0, gPacketSeq@sda21(r13)
 /* 802CD44C 00296A0C  80 83 00 04 */	lwz r4, 4(r3)
 /* 802CD450 00296A10  38 63 00 0C */	addi r3, r3, 0xc
 /* 802CD454 00296A14  4B FF F0 9D */	bl TRKWriteUARTN
@@ -39,6 +39,8 @@ lbl_8053FEF0:
 	.asciz "MetroTRK - TRK_WriteUARTN returned %ld\n"
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
-.global lbl_80667590
-lbl_80667590:
+
+.balign 8
+
+gPacketSeq:
 	.skip 0x8
