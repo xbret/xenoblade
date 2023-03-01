@@ -79,7 +79,7 @@ float sqrtf(float);
 
 The extra directives are to ensure the file isn't included multiple times (header guard, or the ifndef and define), and to have the function declarations still work when the file is included in a C++ file (#ifdef __cplusplus).
 
-The final step is to change the path of the file in the corresponding library's Makefile, in this case PowerPC_EABI_Support. The Makefiles are located in each library/module's src folder. (for example, the one we need to modify is at src/PowerPC_EABI_Support/Makefile):
+The final step is to change the path of the file in the corresponding library's Makefile, in this case PowerPC_EABI_Support. The Makefiles are located in each library/module's src folder. (for example, the one we need to modify is at src/PowerPC_EABI_Support/MSL_C/Makefile):
 
 Before:
 
@@ -120,4 +120,4 @@ else print("False");
 ```
 
 ### Misc things
-For now, headers use header guards, but I am considering switching to using #pragma once. This will be decided in the future.
+- Header guards/#pragma once: header guards for Metrowerks and Wii SDK code, ``#pragma once`` otherwise
