@@ -10,7 +10,7 @@ TRK_FILES:=\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MetroTRK/dispatch.o\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/dolphin_trk.o\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/dolphin_trk_glue.o\
-	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/notify.o\
+	$(BUILD_DIR)/src/PowerPC_EABI_Support/MetroTRK/notify.o\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/nubevent.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MetroTRK/nubinit.o\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/serpoll.o\
@@ -23,7 +23,7 @@ TRK_FILES:=\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/msghndlr.o\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/mslsupp.o\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/targimpl.o\
-	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/target_options.o\
+	$(BUILD_DIR)/src/PowerPC_EABI_Support/MetroTRK/target_options.o\
 
 DEPENDS += $(TRK_FILES:.o=.d)
 

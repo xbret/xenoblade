@@ -39,6 +39,8 @@
 -include src/RevoSDK/wpad/Makefile
 -include src/RevoSDK/wud/Makefile
 -include src/RevoSDK/Makefile
+-include src/CriWare/adx/Makefile
+-include src/CriWare/sofdec/Makefile
 -include src/CriWare/Makefile
 -include src/nw4r/Makefile
 -include src/mm/Makefile
