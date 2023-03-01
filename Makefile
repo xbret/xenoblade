@@ -146,7 +146,7 @@ $(DOL): $(ELF) | $(DTK)
 	$(QUIET) $(ELF2DOL) $< $@
 	$(QUIET) $(SHASUM) -c sha1/$(NAME).$(VERSION).sha1
 ifneq ($(findstring -map,$(LDFLAGS)),)
-	$(PYTHON) tools/calcprogress.py $(DOL) $(MAP) $(BUILD_DIR)
+	$(PYTHON) tools/calcprogress.py $(DOL) $(MAP) $(BUILD_DIR) -o $(DOL).progress
 endif
 
 clean:
