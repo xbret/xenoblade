@@ -65,8 +65,8 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_80520F68
-lbl_80520F68:
+.global TYPE_NAME__Q34nw4r3g3d6AnmObj
+TYPE_NAME__Q34nw4r3g3d6AnmObj:
 	.4byte 0x00000007
 	.asciz "AnmObj"
 	.balign 4
@@ -74,14 +74,8 @@ lbl_80520F68:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665D88
-lbl_80665D88:
-	.4byte PlayPolicy_Onetime__Q24nw4r3g3dFfff
-	.4byte PlayPolicy_Loop__Q24nw4r3g3dFfff
-
-
-.global float_80665D90
-float_80665D90:
+.global smBaseUpdateRate__Q34nw4r3g3d9FrameCtrl
+smBaseUpdateRate__Q34nw4r3g3d9FrameCtrl:
 	.float 1.0
 	.4byte 0
 

@@ -4,10 +4,10 @@
 
 .fn __ct__Q44nw4r3snd6detail10BasicSoundFii, global
 /* 804124A0 003DBA60  C0 02 C3 6C */	lfs f0, float_8066C6EC@sda21(r2)
-/* 804124A4 003DBA64  3D 00 80 57 */	lis r8, lbl_8056DFF0@ha
+/* 804124A4 003DBA64  3D 00 80 57 */	lis r8, __vt__Q44nw4r3snd6detail10BasicSound@ha
 /* 804124A8 003DBA68  38 E0 00 00 */	li r7, 0
 /* 804124AC 003DBA6C  C0 22 C3 68 */	lfs f1, float_8066C6E8@sda21(r2)
-/* 804124B0 003DBA70  39 08 DF F0 */	addi r8, r8, lbl_8056DFF0@l
+/* 804124B0 003DBA70  39 08 DF F0 */	addi r8, r8, __vt__Q44nw4r3snd6detail10BasicSound@l
 /* 804124B4 003DBA74  38 C0 FF FF */	li r6, -1
 /* 804124B8 003DBA78  38 00 00 01 */	li r0, 1
 /* 804124BC 003DBA7C  91 03 00 00 */	stw r8, 0(r3)
@@ -1628,20 +1628,44 @@
 
 
 .fn GetRuntimeTypeInfo__Q44nw4r3snd6detail10BasicSoundCFv, global
-/* 80413B00 003DD0C0  38 6D BC 30 */	addi r3, r13, lbl_80667DB0@sda21
+/* 80413B00 003DD0C0  38 6D BC 30 */	addi r3, r13, typeInfo__Q44nw4r3snd6detail10BasicSound@sda21
 /* 80413B04 003DD0C4  4E 80 00 20 */	blr 
 .endfn GetRuntimeTypeInfo__Q44nw4r3snd6detail10BasicSoundCFv
 
 
 .fn "__sinit_\snd_BasicSound_cpp", local
 /* 80413B08 003DD0C8  38 00 00 00 */	li r0, 0
-/* 80413B0C 003DD0CC  90 0D BC 30 */	stw r0, lbl_80667DB0@sda21(r13)
+/* 80413B0C 003DD0CC  90 0D BC 30 */	stw r0, typeInfo__Q44nw4r3snd6detail10BasicSound@sda21(r13)
 /* 80413B10 003DD0D0  4E 80 00 20 */	blr
 .endfn "__sinit_\snd_BasicSound_cpp"
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 
 .4byte "__sinit_\snd_BasicSound_cpp"
+
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global __vt__Q44nw4r3snd6detail10BasicSound
+__vt__Q44nw4r3snd6detail10BasicSound:
+	.4byte 0
+	.4byte 0
+	.4byte GetRuntimeTypeInfo__Q44nw4r3snd6detail10BasicSoundCFv
+	.4byte __dt__Q44nw4r3snd6detail10BasicSoundFv
+	.4byte Shutdown__Q44nw4r3snd6detail10BasicSoundFv
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte InitParam__Q44nw4r3snd6detail10BasicSoundFv
+	.4byte 0
+	.4byte 0
+	.4byte OnUpdatePlayerPriority__Q44nw4r3snd6detail10BasicSoundFv
+	.4byte UpdateMoveValue__Q44nw4r3snd6detail10BasicSoundFv
+	.4byte UpdateParam__Q44nw4r3snd6detail10BasicSoundFv
+
+
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
@@ -1658,8 +1682,9 @@ float_8066C6EC:
 .global double_8066C6F0
 double_8066C6F0:
 	.8byte 0x4330000080000000 #signed int to float constant
+
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667DB0
-lbl_80667DB0:
+.global typeInfo__Q44nw4r3snd6detail10BasicSound
+typeInfo__Q44nw4r3snd6detail10BasicSound:
 	.skip 0x8

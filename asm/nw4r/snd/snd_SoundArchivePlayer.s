@@ -83,18 +83,8 @@
 /* 8041DCB8 003E7278  4E 80 00 20 */	blr 
 .endfn __ct__Q34nw4r3snd18SoundArchivePlayerFv
 
-#Possible names for the following 2 functions:
-#__dt__Q44nw4r3snd18SoundArchivePlayer11WsdCallbackFv
-#__dt__Q44nw4r3snd18SoundArchivePlayer17SeqNoteOnCallbackFv
-#__dt__Q44nw4r3snd6detail17SeqTrackAllocatorFv
-#__dt__Q54nw4r3snd6detail9WsdPlayer11WsdCallbackFv
-#__dt__Q44nw4r3snd6detail14NoteOnCallbackFv
-#__dt__Q34nw4r3snd14SoundStartableFv
-#__dt__Q44nw4r2ut36@unnamed@snd_SoundArchivePlayer_cpp@11NonCopyableFv
-#__dt__Q34nw4r2ut12LinkListNodeFv
-#__dt__Q44nw4r3snd6detail15DisposeCallbackFv
 
-.fn func_8041DCBC, global
+.fn __dt__Q44nw4r3snd18SoundArchivePlayer17SeqNoteOnCallbackFv, global
 /* 8041DCBC 003E727C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041DCC0 003E7280  7C 08 02 A6 */	mflr r0
 /* 8041DCC4 003E7284  2C 03 00 00 */	cmpwi r3, 0
@@ -112,9 +102,9 @@
 /* 8041DCF0 003E72B0  7C 08 03 A6 */	mtlr r0
 /* 8041DCF4 003E72B4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8041DCF8 003E72B8  4E 80 00 20 */	blr 
-.endfn func_8041DCBC
+.endfn __dt__Q44nw4r3snd18SoundArchivePlayer17SeqNoteOnCallbackFv
 
-.fn func_8041DCFC, global
+.fn __dt__Q44nw4r3snd18SoundArchivePlayer11WsdCallbackFv, global
 /* 8041DCFC 003E72BC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041DD00 003E72C0  7C 08 02 A6 */	mflr r0
 /* 8041DD04 003E72C4  2C 03 00 00 */	cmpwi r3, 0
@@ -132,7 +122,7 @@
 /* 8041DD30 003E72F0  7C 08 03 A6 */	mtlr r0
 /* 8041DD34 003E72F4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8041DD38 003E72F8  4E 80 00 20 */	blr
-.endfn func_8041DCFC
+.endfn __dt__Q44nw4r3snd18SoundArchivePlayer11WsdCallbackFv
 
 #__ct__Q34nw4r2ut41LinkList<Q44nw4r3snd6detail8SeqSound,240>Fv
 .fn __ct__Q34nw4r2ut41LinkList_Q44nw4r3snd6detail8SeqSound_240_Fv, global
@@ -2981,7 +2971,7 @@ lbl_8056E4C0:
 lbl_8056E4F0:
 	.4byte 0
 	.4byte 0
-	.4byte func_8041DCFC
+	.4byte __dt__Q44nw4r3snd18SoundArchivePlayer11WsdCallbackFv
 	.4byte GetWaveSoundData__Q44nw4r3snd18SoundArchivePlayer11WsdCallbackCFPQ44nw4r3snd6detail13WaveSoundInfoPQ44nw4r3snd6detail17WaveSoundNoteInfoPQ44nw4r3snd6detail8WaveInfoPCviiUl
 
 
@@ -2989,7 +2979,7 @@ lbl_8056E4F0:
 lbl_8056E500:
 	.4byte 0
 	.4byte 0
-	.4byte func_8041DCBC
+	.4byte __dt__Q44nw4r3snd18SoundArchivePlayer17SeqNoteOnCallbackFv
 	.4byte NoteOn__Q44nw4r3snd18SoundArchivePlayer17SeqNoteOnCallbackFPQ44nw4r3snd6detail9SeqPlayeriRCQ44nw4r3snd6detail10NoteOnInfo
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

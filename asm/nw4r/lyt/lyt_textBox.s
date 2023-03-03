@@ -126,7 +126,7 @@
 /* 8040146C 003CAA2C  7D 89 03 A6 */	mtctr r12
 /* 80401470 003CAA30  4E 80 04 21 */	bctrl 
 .L_80401474:
-/* 80401474 003CAA34  80 6D BB D8 */	lwz r3, lbl_80667D58@sda21(r13)
+/* 80401474 003CAA34  80 6D BB D8 */	lwz r3, mspAllocator__Q34nw4r3lyt6Layout@sda21(r13)
 /* 80401478 003CAA38  38 80 00 5C */	li r4, 0x5c
 /* 8040147C 003CAA3C  4B F4 86 15 */	bl MEMAllocFromAllocator
 /* 80401480 003CAA40  2C 03 00 00 */	cmpwi r3, 0
@@ -303,7 +303,7 @@
 /* 80401704 003CACC4  2C 03 00 00 */	cmpwi r3, 0
 /* 80401708 003CACC8  7C 7B 1B 78 */	mr r27, r3
 /* 8040170C 003CACCC  41 82 00 54 */	beq .L_80401760
-/* 80401710 003CACD0  80 6D BB D8 */	lwz r3, lbl_80667D58@sda21(r13)
+/* 80401710 003CACD0  80 6D BB D8 */	lwz r3, mspAllocator__Q34nw4r3lyt6Layout@sda21(r13)
 /* 80401714 003CACD4  38 80 00 1C */	li r4, 0x1c
 /* 80401718 003CACD8  4B F4 83 79 */	bl MEMAllocFromAllocator
 /* 8040171C 003CACDC  2C 03 00 00 */	cmpwi r3, 0
@@ -337,7 +337,7 @@
 /* 80401780 003CAD40  80 1E 00 0C */	lwz r0, 0xc(r30)
 /* 80401784 003CAD44  90 61 00 10 */	stw r3, 0x10(r1)
 /* 80401788 003CAD48  7F 67 32 14 */	add r27, r7, r6
-/* 8040178C 003CAD4C  80 6D BB D8 */	lwz r3, lbl_80667D58@sda21(r13)
+/* 8040178C 003CAD4C  80 6D BB D8 */	lwz r3, mspAllocator__Q34nw4r3lyt6Layout@sda21(r13)
 /* 80401790 003CAD50  90 A1 00 14 */	stw r5, 0x14(r1)
 /* 80401794 003CAD54  90 E1 00 18 */	stw r7, 0x18(r1)
 /* 80401798 003CAD58  90 01 00 1C */	stw r0, 0x1c(r1)
@@ -388,7 +388,7 @@
 /* 80401838 003CADF8  81 8C 00 08 */	lwz r12, 8(r12)
 /* 8040183C 003CADFC  7D 89 03 A6 */	mtctr r12
 /* 80401840 003CAE00  4E 80 04 21 */	bctrl 
-/* 80401844 003CAE04  80 6D BB D8 */	lwz r3, lbl_80667D58@sda21(r13)
+/* 80401844 003CAE04  80 6D BB D8 */	lwz r3, mspAllocator__Q34nw4r3lyt6Layout@sda21(r13)
 /* 80401848 003CAE08  7F E4 FB 78 */	mr r4, r31
 /* 8040184C 003CAE0C  4B F4 82 55 */	bl MEMFreeToAllocator
 .L_80401850:
@@ -440,7 +440,7 @@
 /* 804018F8 003CAEB8  81 8C 00 08 */	lwz r12, 8(r12)
 /* 804018FC 003CAEBC  7D 89 03 A6 */	mtctr r12
 /* 80401900 003CAEC0  4E 80 04 21 */	bctrl 
-/* 80401904 003CAEC4  80 6D BB D8 */	lwz r3, lbl_80667D58@sda21(r13)
+/* 80401904 003CAEC4  80 6D BB D8 */	lwz r3, mspAllocator__Q34nw4r3lyt6Layout@sda21(r13)
 /* 80401908 003CAEC8  7F E4 FB 78 */	mr r4, r31
 /* 8040190C 003CAECC  4B F4 81 95 */	bl MEMFreeToAllocator
 .L_80401910:
@@ -1250,7 +1250,7 @@
 /* 80402460 003CBA20  7D 89 03 A6 */	mtctr r12
 /* 80402464 003CBA24  4E 80 04 21 */	bctrl 
 /* 80402468 003CBA28  38 1E 00 01 */	addi r0, r30, 1
-/* 8040246C 003CBA2C  80 6D BB D8 */	lwz r3, lbl_80667D58@sda21(r13)
+/* 8040246C 003CBA2C  80 6D BB D8 */	lwz r3, mspAllocator__Q34nw4r3lyt6Layout@sda21(r13)
 /* 80402470 003CBA30  54 04 08 3C */	slwi r4, r0, 1
 /* 80402474 003CBA34  4B F4 76 1D */	bl MEMAllocFromAllocator
 /* 80402478 003CBA38  2C 03 00 00 */	cmpwi r3, 0
@@ -1296,7 +1296,7 @@
 /* 804024F8 003CBAB8  2C 04 00 00 */	cmpwi r4, 0
 /* 804024FC 003CBABC  41 82 00 1C */	beq .L_80402518
 /* 80402500 003CBAC0  41 82 00 0C */	beq .L_8040250C
-/* 80402504 003CBAC4  80 6D BB D8 */	lwz r3, lbl_80667D58@sda21(r13)
+/* 80402504 003CBAC4  80 6D BB D8 */	lwz r3, mspAllocator__Q34nw4r3lyt6Layout@sda21(r13)
 /* 80402508 003CBAC8  4B F4 75 99 */	bl MEMFreeToAllocator
 .L_8040250C:
 /* 8040250C 003CBACC  38 00 00 00 */	li r0, 0
@@ -1456,7 +1456,7 @@
 /* 80402720 003CBCE0  81 8C 00 08 */	lwz r12, 8(r12)
 /* 80402724 003CBCE4  7D 89 03 A6 */	mtctr r12
 /* 80402728 003CBCE8  4E 80 04 21 */	bctrl 
-/* 8040272C 003CBCEC  80 6D BB D8 */	lwz r3, lbl_80667D58@sda21(r13)
+/* 8040272C 003CBCEC  80 6D BB D8 */	lwz r3, mspAllocator__Q34nw4r3lyt6Layout@sda21(r13)
 /* 80402730 003CBCF0  7F E4 FB 78 */	mr r4, r31
 /* 80402734 003CBCF4  4B F4 73 6D */	bl MEMFreeToAllocator
 .L_80402738:
@@ -1952,13 +1952,13 @@
 .endfn CalcStringRectImpl_w___Q34nw4r3lyt25_unnamed_lyt_textBox_cpp_FPQ34nw4r2ut4RectPQ34nw4r2ut17TextWriterBase_w_PCwif_v
 
 .fn GetRuntimeTypeInfo__Q34nw4r3lyt7TextBoxCFv, global
-/* 80402E14 003CC3D4  38 6D BB E8 */	addi r3, r13, lbl_80667D68@sda21
+/* 80402E14 003CC3D4  38 6D BB E8 */	addi r3, r13, typeInfo__Q34nw4r3lyt7TextBox@sda21
 /* 80402E18 003CC3D8  4E 80 00 20 */	blr
 .endfn GetRuntimeTypeInfo__Q34nw4r3lyt7TextBoxCFv
 
 .fn "__sinit_\lyt_textBox_cpp", local
-/* 80402E1C 003CC3DC  38 0D BB D0 */	addi r0, r13, lbl_80667D50@sda21
-/* 80402E20 003CC3E0  90 0D BB E8 */	stw r0, lbl_80667D68@sda21(r13)
+/* 80402E1C 003CC3DC  38 0D BB D0 */	addi r0, r13, typeInfo__Q34nw4r3lyt4Pane@sda21
+/* 80402E20 003CC3E0  90 0D BB E8 */	stw r0, typeInfo__Q34nw4r3lyt7TextBox@sda21(r13)
 /* 80402E24 003CC3E4  4E 80 00 20 */	blr 
 .endfn "__sinit_\lyt_textBox_cpp"
 
@@ -2038,6 +2038,6 @@ float_8066C57C:
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667D68
-lbl_80667D68:
+.global typeInfo__Q34nw4r3lyt7TextBox
+typeInfo__Q34nw4r3lyt7TextBox:
 	.skip 0x8

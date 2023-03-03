@@ -42,6 +42,12 @@
 -include src/CriWare/adx/Makefile
 -include src/CriWare/sofdec/Makefile
 -include src/CriWare/Makefile
+-include src/nw4r/db/Makefile
+-include src/nw4r/g3d/Makefile
+-include src/nw4r/lyt/Makefile
+-include src/nw4r/math/Makefile
+-include src/nw4r/snd/Makefile
+-include src/nw4r/ut/Makefile
 -include src/nw4r/Makefile
 -include src/mm/Makefile
 -include src/monolithlib/Makefile

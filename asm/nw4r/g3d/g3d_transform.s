@@ -17,10 +17,10 @@
 /* 803E17DC 003AAD9C  11 61 59 F8 */	ps_msub f11, f1, f7, f11
 /* 803E17E0 003AADA0  11 81 02 32 */	ps_mul f12, f1, f8
 /* 803E17E4 003AADA4  11 A3 6A 38 */	ps_msub f13, f3, f8, f13
-/* 803E17E8 003AADA8  3D 80 80 67 */	lis r12, lbl_8066C340@ha
+/* 803E17E8 003AADA8  3D 80 80 67 */	lis r12, det_epsilon__Q34nw4r3g3d6detail@ha
 /* 803E17EC 003AADAC  11 85 61 B8 */	ps_msub f12, f5, f6, f12
 /* 803E17F0 003AADB0  10 E0 03 72 */	ps_mul f7, f0, f13
-/* 803E17F4 003AADB4  39 8C C3 40 */	addi r12, r12, lbl_8066C340@l
+/* 803E17F4 003AADB4  39 8C C3 40 */	addi r12, r12, det_epsilon__Q34nw4r3g3d6detail@l
 /* 803E17F8 003AADB8  11 43 01 32 */	ps_mul f10, f3, f4
 /* 803E17FC 003AADBC  10 E2 3B 3A */	ps_madd f7, f2, f12, f7
 /* 803E1800 003AADC0  E0 CC 80 00 */	psq_l f6, 0(r12), 1, qr0
@@ -78,10 +78,10 @@
 /* 803E18C0 003AAE80  11 61 59 F8 */	ps_msub f11, f1, f7, f11
 /* 803E18C4 003AAE84  11 81 02 32 */	ps_mul f12, f1, f8
 /* 803E18C8 003AAE88  11 A3 6A 38 */	ps_msub f13, f3, f8, f13
-/* 803E18CC 003AAE8C  3D 80 80 67 */	lis r12, lbl_8066C340@ha
+/* 803E18CC 003AAE8C  3D 80 80 67 */	lis r12, det_epsilon__Q34nw4r3g3d6detail@ha
 /* 803E18D0 003AAE90  11 85 61 B8 */	ps_msub f12, f5, f6, f12
 /* 803E18D4 003AAE94  10 E0 03 72 */	ps_mul f7, f0, f13
-/* 803E18D8 003AAE98  39 8C C3 40 */	addi r12, r12, lbl_8066C340@l
+/* 803E18D8 003AAE98  39 8C C3 40 */	addi r12, r12, det_epsilon__Q34nw4r3g3d6detail@l
 /* 803E18DC 003AAE9C  11 43 01 32 */	ps_mul f10, f3, f4
 /* 803E18E0 003AAEA0  10 E2 3B 3A */	ps_madd f7, f2, f12, f7
 /* 803E18E4 003AAEA4  E0 CC 80 00 */	psq_l f6, 0(r12), 1, qr0
@@ -149,10 +149,10 @@
 /* 803E19C8 003AAF88  11 61 59 F8 */	ps_msub f11, f1, f7, f11
 /* 803E19CC 003AAF8C  11 81 02 32 */	ps_mul f12, f1, f8
 /* 803E19D0 003AAF90  11 A3 6A 38 */	ps_msub f13, f3, f8, f13
-/* 803E19D4 003AAF94  3D 80 80 67 */	lis r12, lbl_8066C340@ha
+/* 803E19D4 003AAF94  3D 80 80 67 */	lis r12, det_epsilon__Q34nw4r3g3d6detail@ha
 /* 803E19D8 003AAF98  11 85 61 B8 */	ps_msub f12, f5, f6, f12
 /* 803E19DC 003AAF9C  10 E0 03 72 */	ps_mul f7, f0, f13
-/* 803E19E0 003AAFA0  39 8C C3 40 */	addi r12, r12, lbl_8066C340@l
+/* 803E19E0 003AAFA0  39 8C C3 40 */	addi r12, r12, det_epsilon__Q34nw4r3g3d6detail@l
 /* 803E19E4 003AAFA4  11 43 01 32 */	ps_mul f10, f3, f4
 /* 803E19E8 003AAFA8  10 E2 3B 3A */	ps_madd f7, f2, f12, f7
 /* 803E19EC 003AAFAC  E0 CC 80 00 */	psq_l f6, 0(r12), 1, qr0
@@ -205,7 +205,6 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C340
-lbl_8066C340:
-	.4byte 0x03AA2425
+det_epsilon__Q34nw4r3g3d6detail:
+	.float 1.0e-36
 	.4byte 0

@@ -195,7 +195,7 @@
 /* 803FEBDC 003C819C  81 8C 00 08 */	lwz r12, 8(r12)
 /* 803FEBE0 003C81A0  7D 89 03 A6 */	mtctr r12
 /* 803FEBE4 003C81A4  4E 80 04 21 */	bctrl 
-/* 803FEBE8 003C81A8  80 6D BB D8 */	lwz r3, lbl_80667D58@sda21(r13)
+/* 803FEBE8 003C81A8  80 6D BB D8 */	lwz r3, mspAllocator__Q34nw4r3lyt6Layout@sda21(r13)
 /* 803FEBEC 003C81AC  7F A4 EB 78 */	mr r4, r29
 /* 803FEBF0 003C81B0  4B F4 AE B1 */	bl MEMFreeToAllocator
 .L_803FEBF4:
@@ -220,7 +220,7 @@
 /* 803FEC3C 003C81FC  81 8C 00 08 */	lwz r12, 8(r12)
 /* 803FEC40 003C8200  7D 89 03 A6 */	mtctr r12
 /* 803FEC44 003C8204  4E 80 04 21 */	bctrl 
-/* 803FEC48 003C8208  80 6D BB D8 */	lwz r3, lbl_80667D58@sda21(r13)
+/* 803FEC48 003C8208  80 6D BB D8 */	lwz r3, mspAllocator__Q34nw4r3lyt6Layout@sda21(r13)
 /* 803FEC4C 003C820C  7F A4 EB 78 */	mr r4, r29
 /* 803FEC50 003C8210  4B F4 AE 51 */	bl MEMFreeToAllocator
 .L_803FEC54:
@@ -1214,14 +1214,14 @@
 
 
 .fn GetRuntimeTypeInfo__Q34nw4r3lyt4PaneCFv, global
-/* 803FF920 003C8EE0  38 6D BB D0 */	addi r3, r13, lbl_80667D50@sda21
+/* 803FF920 003C8EE0  38 6D BB D0 */	addi r3, r13, typeInfo__Q34nw4r3lyt4Pane@sda21
 /* 803FF924 003C8EE4  4E 80 00 20 */	blr
 .endfn GetRuntimeTypeInfo__Q34nw4r3lyt4PaneCFv
 
 
 .fn sinit_lyt_pane_cpp, local
 /* 803FF928 003C8EE8  38 00 00 00 */	li r0, 0
-/* 803FF92C 003C8EEC  90 0D BB D0 */	stw r0, lbl_80667D50@sda21(r13)
+/* 803FF92C 003C8EEC  90 0D BB D0 */	stw r0, typeInfo__Q34nw4r3lyt4Pane@sda21(r13)
 /* 803FF930 003C8EF0  4E 80 00 20 */	blr 
 .endfn sinit_lyt_pane_cpp
 
@@ -1299,9 +1299,6 @@ float_8066C550:
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667D50
-lbl_80667D50:
-	.skip 0x8
-.global lbl_80667D58
-lbl_80667D58:
+.global typeInfo__Q34nw4r3lyt4Pane
+typeInfo__Q34nw4r3lyt4Pane:
 	.skip 0x8

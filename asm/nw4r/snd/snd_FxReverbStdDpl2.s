@@ -529,7 +529,7 @@
 lbl_8056E0C8:
 	.4byte 0
 	.4byte 0
-	.4byte func_801C2D78
+	.4byte __dt__Q34nw4r3snd15FxReverbStdDpl2Fv
 	.4byte StartUp__Q34nw4r3snd15FxReverbStdDpl2Fv
 	.4byte Shutdown__Q34nw4r3snd15FxReverbStdDpl2Fv
 	.4byte UpdateBuffer__Q34nw4r3snd15FxReverbStdDpl2FiPPvUlQ34nw4r3snd12SampleFormatfQ34nw4r3snd10OutputMode

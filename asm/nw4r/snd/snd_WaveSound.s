@@ -267,13 +267,13 @@
 .endfn IsPrepared__Q44nw4r3snd6detail9WaveSoundCFv
 
 .fn GetRuntimeTypeInfo__Q44nw4r3snd6detail9WaveSoundCFv, global
-/* 80429F24 003F34E4  38 6D BC 98 */	addi r3, r13, lbl_80667E18@sda21
+/* 80429F24 003F34E4  38 6D BC 98 */	addi r3, r13, typeInfo__Q44nw4r3snd6detail9WaveSound@sda21
 /* 80429F28 003F34E8  4E 80 00 20 */	blr
 .endfn GetRuntimeTypeInfo__Q44nw4r3snd6detail9WaveSoundCFv
 
 .fn "__sinit_\snd_WaveSound_cpp", local
-/* 80429F2C 003F34EC  38 0D BC 30 */	addi r0, r13, lbl_80667DB0@sda21
-/* 80429F30 003F34F0  90 0D BC 98 */	stw r0, lbl_80667E18@sda21(r13)
+/* 80429F2C 003F34EC  38 0D BC 30 */	addi r0, r13, typeInfo__Q44nw4r3snd6detail10BasicSound@sda21
+/* 80429F30 003F34F0  90 0D BC 98 */	stw r0, typeInfo__Q44nw4r3snd6detail9WaveSound@sda21(r13)
 /* 80429F34 003F34F4  4E 80 00 20 */	blr
 .endfn "__sinit_\snd_WaveSound_cpp"
 
@@ -303,6 +303,6 @@ lbl_8056E650:
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667E18
-lbl_80667E18:
+.global typeInfo__Q44nw4r3snd6detail9WaveSound
+typeInfo__Q44nw4r3snd6detail9WaveSound:
 	.skip 0x8

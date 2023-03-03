@@ -29,14 +29,14 @@
 /* 80421070 003EA630  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80421074 003EA634  39 61 00 20 */	addi r11, r1, 0x20
 /* 80421078 003EA638  4B E9 90 D9 */	bl _savegpr_26
-/* 8042107C 003EA63C  88 0D BC 68 */	lbz r0, lbl_80667DE8@sda21(r13)
+/* 8042107C 003EA63C  88 0D BC 68 */	lbz r0, "sInitialized__Q34nw4r3snd29@unnamed@snd_SoundSystem_cpp@"@sda21(r13)
 /* 80421080 003EA640  7C 7A 1B 78 */	mr r26, r3
 /* 80421084 003EA644  7C 9B 23 78 */	mr r27, r4
 /* 80421088 003EA648  2C 00 00 00 */	cmpwi r0, 0
 /* 8042108C 003EA64C  40 82 01 7C */	bne .L_80421208
 /* 80421090 003EA650  38 00 00 01 */	li r0, 1
-/* 80421094 003EA654  80 6D 9C 98 */	lwz r3, lbl_80665E18@sda21(r13)
-/* 80421098 003EA658  98 0D BC 68 */	stb r0, lbl_80667DE8@sda21(r13)
+/* 80421094 003EA654  80 6D 9C 98 */	lwz r3, NW4R_SND_Version_@sda21(r13)
+/* 80421098 003EA658  98 0D BC 68 */	stb r0, "sInitialized__Q34nw4r3snd29@unnamed@snd_SoundSystem_cpp@"@sda21(r13)
 /* 8042109C 003EA65C  4B F3 1C 65 */	bl OSRegisterVersion
 /* 804210A0 003EA660  4B FE B8 E5 */	bl GetInstance__Q44nw4r3snd6detail9AxManagerFv
 /* 804210A4 003EA664  4B FE B9 BD */	bl Init__Q44nw4r3snd6detail9AxManagerFv
@@ -85,14 +85,14 @@
 /* 80421134 003EA6F4  7F DD F3 78 */	mr r29, r30
 /* 80421138 003EA6F8  7F DE 02 14 */	add r30, r30, r0
 /* 8042113C 003EA6FC  4B EB 45 85 */	bl AXGetMaxVoices
-/* 80421140 003EA700  90 6D BC 6C */	stw r3, lbl_80667DEC@sda21(r13)
+/* 80421140 003EA700  90 6D BC 6C */	stw r3, sMaxVoices__Q34nw4r3snd11SoundSystem@sda21(r13)
 /* 80421144 003EA704  7F DC F3 78 */	mr r28, r30
 /* 80421148 003EA708  4B FE FA 39 */	bl GetInstance__Q44nw4r3snd6detail14AxVoiceManagerFv
-/* 8042114C 003EA70C  80 8D BC 6C */	lwz r4, lbl_80667DEC@sda21(r13)
+/* 8042114C 003EA70C  80 8D BC 6C */	lwz r4, sMaxVoices__Q34nw4r3snd11SoundSystem@sda21(r13)
 /* 80421150 003EA710  4B FE FB 59 */	bl GetRequiredMemSize__Q44nw4r3snd6detail14AxVoiceManagerFi
 /* 80421154 003EA714  7F DE 1A 14 */	add r30, r30, r3
 /* 80421158 003EA718  4B FE FA 29 */	bl GetInstance__Q44nw4r3snd6detail14AxVoiceManagerFv
-/* 8042115C 003EA71C  80 8D BC 6C */	lwz r4, lbl_80667DEC@sda21(r13)
+/* 8042115C 003EA71C  80 8D BC 6C */	lwz r4, sMaxVoices__Q34nw4r3snd11SoundSystem@sda21(r13)
 /* 80421160 003EA720  4B FE FB 49 */	bl GetRequiredMemSize__Q44nw4r3snd6detail14AxVoiceManagerFi
 /* 80421164 003EA724  7C 7F 1B 78 */	mr r31, r3
 /* 80421168 003EA728  4B FE FA 19 */	bl GetInstance__Q44nw4r3snd6detail14AxVoiceManagerFv
@@ -101,11 +101,11 @@
 /* 80421174 003EA734  4B FE FB 41 */	bl Setup__Q44nw4r3snd6detail14AxVoiceManagerFPvUl
 /* 80421178 003EA738  7F DC F3 78 */	mr r28, r30
 /* 8042117C 003EA73C  48 00 7A DD */	bl GetInstance__Q44nw4r3snd6detail12VoiceManagerFv
-/* 80421180 003EA740  80 8D BC 6C */	lwz r4, lbl_80667DEC@sda21(r13)
+/* 80421180 003EA740  80 8D BC 6C */	lwz r4, sMaxVoices__Q34nw4r3snd11SoundSystem@sda21(r13)
 /* 80421184 003EA744  48 00 7B D1 */	bl GetRequiredMemSize__Q44nw4r3snd6detail12VoiceManagerFi
 /* 80421188 003EA748  7F DE 1A 14 */	add r30, r30, r3
 /* 8042118C 003EA74C  48 00 7A CD */	bl GetInstance__Q44nw4r3snd6detail12VoiceManagerFv
-/* 80421190 003EA750  80 8D BC 6C */	lwz r4, lbl_80667DEC@sda21(r13)
+/* 80421190 003EA750  80 8D BC 6C */	lwz r4, sMaxVoices__Q34nw4r3snd11SoundSystem@sda21(r13)
 /* 80421194 003EA754  48 00 7B C1 */	bl GetRequiredMemSize__Q44nw4r3snd6detail12VoiceManagerFi
 /* 80421198 003EA758  7C 7F 1B 78 */	mr r31, r3
 /* 8042119C 003EA75C  48 00 7A BD */	bl GetInstance__Q44nw4r3snd6detail12VoiceManagerFv
@@ -113,10 +113,10 @@
 /* 804211A4 003EA764  7F E5 FB 78 */	mr r5, r31
 /* 804211A8 003EA768  48 00 7B B5 */	bl Setup__Q44nw4r3snd6detail12VoiceManagerFPvUl
 /* 804211AC 003EA76C  4B FF 2C 35 */	bl GetInstance__Q44nw4r3snd6detail14ChannelManagerFv
-/* 804211B0 003EA770  80 8D BC 6C */	lwz r4, lbl_80667DEC@sda21(r13)
+/* 804211B0 003EA770  80 8D BC 6C */	lwz r4, sMaxVoices__Q34nw4r3snd11SoundSystem@sda21(r13)
 /* 804211B4 003EA774  4B FF 2D 09 */	bl GetRequiredMemSize__Q44nw4r3snd6detail14ChannelManagerFi
 /* 804211B8 003EA778  4B FF 2C 29 */	bl GetInstance__Q44nw4r3snd6detail14ChannelManagerFv
-/* 804211BC 003EA77C  80 8D BC 6C */	lwz r4, lbl_80667DEC@sda21(r13)
+/* 804211BC 003EA77C  80 8D BC 6C */	lwz r4, sMaxVoices__Q34nw4r3snd11SoundSystem@sda21(r13)
 /* 804211C0 003EA780  4B FF 2C FD */	bl GetRequiredMemSize__Q44nw4r3snd6detail14ChannelManagerFi
 /* 804211C4 003EA784  7C 7F 1B 78 */	mr r31, r3
 /* 804211C8 003EA788  4B FF 2C 19 */	bl GetInstance__Q44nw4r3snd6detail14ChannelManagerFv
@@ -124,11 +124,11 @@
 /* 804211D0 003EA790  7F E5 FB 78 */	mr r5, r31
 /* 804211D4 003EA794  4B FF 2C F5 */	bl Setup__Q44nw4r3snd6detail14ChannelManagerFPvUl
 /* 804211D8 003EA798  4B FF 85 31 */	bl InitSeqPlayer__Q44nw4r3snd6detail9SeqPlayerFv
-/* 804211DC 003EA79C  3C 60 80 64 */	lis r3, lbl_8063BB10@ha
+/* 804211DC 003EA79C  3C 60 80 64 */	lis r3, sTaskThread__Q34nw4r3snd11SoundSystem@ha
 /* 804211E0 003EA7A0  80 9A 00 08 */	lwz r4, 8(r26)
 /* 804211E4 003EA7A4  80 DA 00 0C */	lwz r6, 0xc(r26)
 /* 804211E8 003EA7A8  7F 65 DB 78 */	mr r5, r27
-/* 804211EC 003EA7AC  38 63 BB 10 */	addi r3, r3, lbl_8063BB10@l
+/* 804211EC 003EA7AC  38 63 BB 10 */	addi r3, r3, sTaskThread__Q34nw4r3snd11SoundSystem@l
 /* 804211F0 003EA7B0  48 00 4D D9 */	bl Create__Q44nw4r3snd6detail10TaskThreadFlPvUl
 /* 804211F4 003EA7B4  48 00 00 F1 */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 804211F8 003EA7B8  80 9A 00 00 */	lwz r4, 0(r26)
@@ -148,15 +148,15 @@
 /* 80421220 003EA7E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80421224 003EA7E4  7C 08 02 A6 */	mflr r0
 /* 80421228 003EA7E8  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8042122C 003EA7EC  88 0D BC 68 */	lbz r0, lbl_80667DE8@sda21(r13)
+/* 8042122C 003EA7EC  88 0D BC 68 */	lbz r0, "sInitialized__Q34nw4r3snd29@unnamed@snd_SoundSystem_cpp@"@sda21(r13)
 /* 80421230 003EA7F0  2C 00 00 00 */	cmpwi r0, 0
 /* 80421234 003EA7F4  41 82 00 50 */	beq .L_80421284
 /* 80421238 003EA7F8  48 00 00 AD */	bl GetInstance__Q44nw4r3snd6detail11SoundThreadFv
 /* 8042123C 003EA7FC  48 00 03 15 */	bl Shutdown__Q44nw4r3snd6detail11SoundThreadFv
 /* 80421240 003EA800  48 00 45 85 */	bl GetInstance__Q44nw4r3snd6detail11TaskManagerFv
 /* 80421244 003EA804  48 00 4B 49 */	bl CancelAllTask__Q44nw4r3snd6detail11TaskManagerFv
-/* 80421248 003EA808  3C 60 80 64 */	lis r3, lbl_8063BB10@ha
-/* 8042124C 003EA80C  38 63 BB 10 */	addi r3, r3, lbl_8063BB10@l
+/* 80421248 003EA808  3C 60 80 64 */	lis r3, sTaskThread__Q34nw4r3snd11SoundSystem@ha
+/* 8042124C 003EA80C  38 63 BB 10 */	addi r3, r3, sTaskThread__Q34nw4r3snd11SoundSystem@l
 /* 80421250 003EA810  48 00 4E 4D */	bl Destroy__Q44nw4r3snd6detail10TaskThreadFv
 /* 80421254 003EA814  4B FF 81 01 */	bl GetInstance__Q44nw4r3snd6detail20RemoteSpeakerManagerFv
 /* 80421258 003EA818  4B FF 82 41 */	bl Shutdown__Q44nw4r3snd6detail20RemoteSpeakerManagerFv
@@ -169,7 +169,7 @@
 /* 80421274 003EA834  4B FE B7 11 */	bl GetInstance__Q44nw4r3snd6detail9AxManagerFv
 /* 80421278 003EA838  4B FE B9 05 */	bl Shutdown__Q44nw4r3snd6detail9AxManagerFv
 /* 8042127C 003EA83C  38 00 00 00 */	li r0, 0
-/* 80421280 003EA840  98 0D BC 68 */	stb r0, lbl_80667DE8@sda21(r13)
+/* 80421280 003EA840  98 0D BC 68 */	stb r0, "sInitialized__Q34nw4r3snd29@unnamed@snd_SoundSystem_cpp@"@sda21(r13)
 .L_80421284:
 /* 80421284 003EA844  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80421288 003EA848  7C 08 03 A6 */	mtlr r0
@@ -178,7 +178,7 @@
 .endfn ShutdownSoundSystem__Q34nw4r3snd11SoundSystemFv
 
 .fn IsInitializedSoundSystem__Q34nw4r3snd11SoundSystemFv, global
-/* 80421294 003EA854  88 6D BC 68 */	lbz r3, lbl_80667DE8@sda21(r13)
+/* 80421294 003EA854  88 6D BC 68 */	lbz r3, "sInitialized__Q34nw4r3snd29@unnamed@snd_SoundSystem_cpp@"@sda21(r13)
 /* 80421298 003EA858  4E 80 00 20 */	blr
 .endfn IsInitializedSoundSystem__Q34nw4r3snd11SoundSystemFv
 
@@ -188,12 +188,12 @@
 /* 804212A0 003EA860  7C 08 02 A6 */	mflr r0
 /* 804212A4 003EA864  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804212A8 003EA868  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 804212AC 003EA86C  3F E0 80 64 */	lis r31, lbl_8063BB10@ha
-/* 804212B0 003EA870  38 7F BB 10 */	addi r3, r31, lbl_8063BB10@l
+/* 804212AC 003EA86C  3F E0 80 64 */	lis r31, sTaskThread__Q34nw4r3snd11SoundSystem@ha
+/* 804212B0 003EA870  38 7F BB 10 */	addi r3, r31, sTaskThread__Q34nw4r3snd11SoundSystem@l
 /* 804212B4 003EA874  48 00 4C 7D */	bl __ct__Q44nw4r3snd6detail10TaskThreadFv
 /* 804212B8 003EA878  3C 80 80 42 */	lis r4, __dt__Q44nw4r3snd6detail10TaskThreadFv@ha
 /* 804212BC 003EA87C  3C A0 80 64 */	lis r5, lbl_8063BB00@ha
-/* 804212C0 003EA880  38 7F BB 10 */	addi r3, r31, lbl_8063BB10@l
+/* 804212C0 003EA880  38 7F BB 10 */	addi r3, r31, sTaskThread__Q34nw4r3snd11SoundSystem@l
 /* 804212C4 003EA884  38 84 5F 44 */	addi r4, r4, __dt__Q44nw4r3snd6detail10TaskThreadFv@l
 /* 804212C8 003EA888  38 A5 BB 00 */	addi r5, r5, lbl_8063BB00@l
 /* 804212CC 003EA88C  4B E9 83 D1 */	bl __register_global_object
@@ -217,8 +217,8 @@ lbl_8056E510:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665E18
-lbl_80665E18:
+.global NW4R_SND_Version_
+NW4R_SND_Version_:
 	.4byte lbl_8056E510
 	.4byte 0
 
@@ -227,18 +227,19 @@ lbl_80665E18:
 .global lbl_8063BB00
 lbl_8063BB00:
 	.skip 0x10
-.global lbl_8063BB10
-lbl_8063BB10:
+
+sTaskThread__Q34nw4r3snd11SoundSystem:
 	.skip 0x330
-.global lbl_8063BE40
+
+#@LOCAL@InitSoundSystem__Q34nw4r3snd11SoundSystemFll@defaultSoundSystemWork
 lbl_8063BE40:
 	.skip 0x16E00
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667DE8
-lbl_80667DE8:
+
+"sInitialized__Q34nw4r3snd29@unnamed@snd_SoundSystem_cpp@":
 	.skip 0x4
-.global lbl_80667DEC
-lbl_80667DEC:
+
+sMaxVoices__Q34nw4r3snd11SoundSystem:
 	.skip 0x4

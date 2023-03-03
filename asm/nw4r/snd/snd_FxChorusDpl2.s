@@ -433,7 +433,7 @@
 lbl_8056E078:
 	.4byte 0
 	.4byte 0
-	.4byte func_801C2E34
+	.4byte __dt__Q34nw4r3snd12FxChorusDpl2Fv
 	.4byte StartUp__Q34nw4r3snd12FxChorusDpl2Fv
 	.4byte Shutdown__Q34nw4r3snd12FxChorusDpl2Fv
 	.4byte UpdateBuffer__Q34nw4r3snd12FxChorusDpl2FiPPvUlQ34nw4r3snd12SampleFormatfQ34nw4r3snd10OutputMode

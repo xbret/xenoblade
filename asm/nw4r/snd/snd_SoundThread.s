@@ -498,12 +498,15 @@
 .global lbl_80652C40
 lbl_80652C40:
 	.skip 0x10
+
+#@LOCAL@GetInstance__Q44nw4r3snd6detail11SoundThreadFv@instance
 .global lbl_80652C50
 lbl_80652C50:
 	.skip 0x3B0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+#@GUARD@GetInstance__Q44nw4r3snd6detail11SoundThreadFv@instance
 .global lbl_80667DF0
 lbl_80667DF0:
 	.skip 0x8

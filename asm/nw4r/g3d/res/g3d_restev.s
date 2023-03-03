@@ -620,6 +620,7 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+#r2c$7871
 .global lbl_80520DB8
 lbl_80520DB8:
 	.4byte 0x00000004
@@ -631,7 +632,7 @@ lbl_80520DB8:
 	.4byte 0x00000008
 	.4byte 0x00000006
 
-
+#dlsize$8134
 .global lbl_80520DD8
 lbl_80520DD8:
 	.4byte 0x000000A0
@@ -654,6 +655,7 @@ lbl_80520DD8:
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+#c2r$7899
 .global lbl_8056C9A0
 lbl_8056C9A0:
 	.4byte 0x00010001

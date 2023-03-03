@@ -3,16 +3,16 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .fn SUD_Init, global
-/* 803D70B0 003A0670  3C A0 80 62 */	lis r5, lbl_8061D708@ha
-/* 803D70B4 003A0674  80 65 D7 08 */	lwz r3, lbl_8061D708@l(r5)
+/* 803D70B0 003A0670  3C A0 80 62 */	lis r5, sud_init_cnt@ha
+/* 803D70B4 003A0674  80 65 D7 08 */	lwz r3, sud_init_cnt@l(r5)
 /* 803D70B8 003A0678  2C 03 00 01 */	cmpwi r3, 1
 /* 803D70BC 003A067C  4C 80 00 20 */	bgelr 
-/* 803D70C0 003A0680  3C 80 80 52 */	lis r4, lbl_80520D60@ha
+/* 803D70C0 003A0680  3C 80 80 52 */	lis r4, sud_ver_str@ha
 /* 803D70C4 003A0684  38 03 00 01 */	addi r0, r3, 1
-/* 803D70C8 003A0688  38 84 0D 60 */	addi r4, r4, lbl_80520D60@l
-/* 803D70CC 003A068C  3C 60 80 62 */	lis r3, lbl_8061D70C@ha
-/* 803D70D0 003A0690  90 83 D7 0C */	stw r4, lbl_8061D70C@l(r3)
-/* 803D70D4 003A0694  90 05 D7 08 */	stw r0, lbl_8061D708@l(r5)
+/* 803D70C8 003A0688  38 84 0D 60 */	addi r4, r4, sud_ver_str@l
+/* 803D70CC 003A068C  3C 60 80 62 */	lis r3, sud_dummy@ha
+/* 803D70D0 003A0690  90 83 D7 0C */	stw r4, sud_dummy@l(r3)
+/* 803D70D4 003A0694  90 05 D7 08 */	stw r0, sud_init_cnt@l(r5)
 /* 803D70D8 003A0698  4E 80 00 20 */	blr 
 .endfn SUD_Init
 
@@ -128,8 +128,8 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_80520D60
-lbl_80520D60:
+
+sud_ver_str:
 	.asciz "\nCRI SUD/WII Ver.0.05 Build:Nov 13 2008 18:22:10\n"
 	.balign 4
 
@@ -150,9 +150,8 @@ sud_lib_strpool:
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_8061D708
-lbl_8061D708:
+sud_init_cnt:
 	.skip 0x4
-.global lbl_8061D70C
-lbl_8061D70C:
+
+sud_dummy:
 	.skip 0x4

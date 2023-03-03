@@ -151,6 +151,7 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+#@LOCAL@GetSinIdx__Q44nw4r3snd6detail3LfoFi@sinTable
 .global lbl_80523858
 lbl_80523858:
 	.4byte 0x00060C13

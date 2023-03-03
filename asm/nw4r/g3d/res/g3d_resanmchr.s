@@ -1760,9 +1760,9 @@
 /* 803DFE20 003A93E0  38 A0 00 00 */	li r5, 0
 .L_803DFE24:
 /* 803DFE24 003A93E4  81 05 00 04 */	lwz r8, 4(r5)
-/* 803DFE28 003A93E8  3C C0 80 52 */	lis r6, lbl_80520E18@ha
+/* 803DFE28 003A93E8  3C C0 80 52 */	lis r6, "gGetAnmResultTable__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@"@ha
 /* 803DFE2C 003A93EC  80 E3 00 00 */	lwz r7, 0(r3)
-/* 803DFE30 003A93F0  38 C6 0E 18 */	addi r6, r6, lbl_80520E18@l
+/* 803DFE30 003A93F0  38 C6 0E 18 */	addi r6, r6, "gGetAnmResultTable__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@"@l
 /* 803DFE34 003A93F4  55 00 66 FA */	rlwinm r0, r8, 0xc, 0x1b, 0x1d
 /* 803DFE38 003A93F8  55 03 04 FE */	clrlwi r3, r8, 0x13
 /* 803DFE3C 003A93FC  7D 86 00 2E */	lwzx r12, r6, r0
@@ -2122,9 +2122,7 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-
-.global lbl_80520E18
-lbl_80520E18:
+"gGetAnmResultTable__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@":
 	.4byte GetAnmResult___Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
 	.4byte GetAnmResult_S__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
 	.4byte GetAnmResult_R__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf

@@ -109,17 +109,17 @@
 /* 80429520 003F2AE0  54 00 40 3E */	rotlwi r0, r0, 8
 /* 80429524 003F2AE4  7C 60 1A 14 */	add r3, r0, r3
 /* 80429528 003F2AE8  41 82 00 18 */	beq .L_80429540
-/* 8042952C 003F2AEC  3C 80 80 52 */	lis r4, lbl_805238A8@ha
+/* 8042952C 003F2AEC  3C 80 80 52 */	lis r4, NoteTable__Q44nw4r3snd6detail4Util@ha
 /* 80429530 003F2AF0  54 A0 10 3A */	slwi r0, r5, 2
-/* 80429534 003F2AF4  38 84 38 A8 */	addi r4, r4, lbl_805238A8@l
+/* 80429534 003F2AF4  38 84 38 A8 */	addi r4, r4, NoteTable__Q44nw4r3snd6detail4Util@l
 /* 80429538 003F2AF8  7C 04 04 2E */	lfsx f0, r4, r0
 /* 8042953C 003F2AFC  EC 21 00 32 */	fmuls f1, f1, f0
 .L_80429540:
 /* 80429540 003F2B00  2C 03 00 00 */	cmpwi r3, 0
 /* 80429544 003F2B04  4D 82 00 20 */	beqlr 
-/* 80429548 003F2B08  3C 80 80 52 */	lis r4, lbl_805238D8@ha
+/* 80429548 003F2B08  3C 80 80 52 */	lis r4, PitchTable__Q44nw4r3snd6detail4Util@ha
 /* 8042954C 003F2B0C  54 60 10 3A */	slwi r0, r3, 2
-/* 80429550 003F2B10  38 84 38 D8 */	addi r4, r4, lbl_805238D8@l
+/* 80429550 003F2B10  38 84 38 D8 */	addi r4, r4, PitchTable__Q44nw4r3snd6detail4Util@l
 /* 80429554 003F2B14  7C 04 04 2E */	lfsx f0, r4, r0
 /* 80429558 003F2B18  EC 21 00 32 */	fmuls f1, f1, f0
 /* 8042955C 003F2B1C  4E 80 00 20 */	blr 
@@ -140,8 +140,8 @@
 /* 80429584 003F2B44  FC 40 08 90 */	fmr f2, f1
 .L_80429588:
 /* 80429588 003F2B48  C0 02 C5 64 */	lfs f0, float_8066C8E4@sda21(r2)
-/* 8042958C 003F2B4C  3C 60 80 52 */	lis r3, lbl_80523CD8@ha
-/* 80429590 003F2B50  38 63 3C D8 */	addi r3, r3, lbl_80523CD8@l
+/* 8042958C 003F2B4C  3C 60 80 52 */	lis r3, Decibel2RatioTable__Q44nw4r3snd6detail4Util@ha
+/* 80429590 003F2B50  38 63 3C D8 */	addi r3, r3, Decibel2RatioTable__Q44nw4r3snd6detail4Util@l
 /* 80429594 003F2B54  EC 00 00 B2 */	fmuls f0, f0, f2
 /* 80429598 003F2B58  FC 00 00 1E */	fctiwz f0, f0
 /* 8042959C 003F2B5C  D8 01 00 08 */	stfd f0, 8(r1)
@@ -168,9 +168,9 @@
 /* 804295DC 003F2B9C  FC 40 08 90 */	fmr f2, f1
 .L_804295E0:
 /* 804295E0 003F2BA0  C0 02 C5 50 */	lfs f0, float_8066C8D0@sda21(r2)
-/* 804295E4 003F2BA4  3C 80 80 57 */	lis r4, lbl_8056E640@ha
+/* 804295E4 003F2BA4  3C 80 80 57 */	lis r4, PanTableTable__Q44nw4r3snd6detail4Util@ha
 /* 804295E8 003F2BA8  80 03 00 00 */	lwz r0, 0(r3)
-/* 804295EC 003F2BAC  38 84 E6 40 */	addi r4, r4, lbl_8056E640@l
+/* 804295EC 003F2BAC  38 84 E6 40 */	addi r4, r4, PanTableTable__Q44nw4r3snd6detail4Util@l
 /* 804295F0 003F2BB0  EC 20 10 2A */	fadds f1, f0, f2
 /* 804295F4 003F2BB4  C0 42 C5 58 */	lfs f2, float_8066C8D8@sda21(r2)
 /* 804295F8 003F2BB8  54 05 10 3A */	slwi r5, r0, 2
@@ -237,9 +237,9 @@
 /* 804296BC 003F2C7C  FC 00 08 90 */	fmr f0, f1
 .L_804296C0:
 /* 804296C0 003F2C80  C0 42 C5 58 */	lfs f2, float_8066C8D8@sda21(r2)
-/* 804296C4 003F2C84  3C 80 80 57 */	lis r4, lbl_8056E640@ha
+/* 804296C4 003F2C84  3C 80 80 57 */	lis r4, PanTableTable__Q44nw4r3snd6detail4Util@ha
 /* 804296C8 003F2C88  80 03 00 00 */	lwz r0, 0(r3)
-/* 804296CC 003F2C8C  38 84 E6 40 */	addi r4, r4, lbl_8056E640@l
+/* 804296CC 003F2C8C  38 84 E6 40 */	addi r4, r4, PanTableTable__Q44nw4r3snd6detail4Util@l
 /* 804296D0 003F2C90  EC 20 00 B2 */	fmuls f1, f0, f2
 /* 804296D4 003F2C94  C0 02 C5 6C */	lfs f0, float_8066C8EC@sda21(r2)
 /* 804296D8 003F2C98  54 00 10 3A */	slwi r0, r0, 2
@@ -297,8 +297,8 @@
 .L_80429780:
 /* 80429780 003F2D40  EC 22 08 28 */	fsubs f1, f2, f1
 /* 80429784 003F2D44  C0 02 C5 7C */	lfs f0, float_8066C8FC@sda21(r2)
-/* 80429788 003F2D48  3C 60 80 52 */	lis r3, lbl_80525CF8@ha
-/* 8042978C 003F2D4C  38 63 5C F8 */	addi r3, r3, lbl_80525CF8@l
+/* 80429788 003F2D48  3C 60 80 52 */	lis r3, CalcLpfFreqTable__Q44nw4r3snd6detail4Util@ha
+/* 8042978C 003F2D4C  38 63 5C F8 */	addi r3, r3, CalcLpfFreqTable__Q44nw4r3snd6detail4Util@l
 /* 80429790 003F2D50  EC 01 00 24 */	fdivs f0, f1, f0
 /* 80429794 003F2D54  FC 00 00 1E */	fctiwz f0, f0
 /* 80429798 003F2D58  D8 01 00 08 */	stfd f0, 8(r1)
@@ -320,8 +320,8 @@
 /* 804297C4 003F2D84  7C 60 00 78 */	andc r0, r3, r0
 .L_804297C8:
 /* 804297C8 003F2D88  1D 20 00 0A */	mulli r9, r0, 0xa
-/* 804297CC 003F2D8C  3C 60 80 52 */	lis r3, lbl_805257F8@ha
-/* 804297D0 003F2D90  38 63 57 F8 */	addi r3, r3, lbl_805257F8@l
+/* 804297CC 003F2D8C  3C 60 80 52 */	lis r3, RemoteFilterCoefTable__Q44nw4r3snd6detail4Util@ha
+/* 804297D0 003F2D90  38 63 57 F8 */	addi r3, r3, RemoteFilterCoefTable__Q44nw4r3snd6detail4Util@l
 /* 804297D4 003F2D94  7C 03 4A 2E */	lhzx r0, r3, r9
 /* 804297D8 003F2D98  7D 23 4A 14 */	add r9, r3, r9
 /* 804297DC 003F2D9C  A0 69 00 02 */	lhz r3, 2(r9)
@@ -365,9 +365,7 @@
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
 
-
-.global lbl_805238A8
-lbl_805238A8:
+NoteTable__Q44nw4r3snd6detail4Util:
     .float 1.0
     .float 1.0594631
     .float 1.122462
@@ -382,8 +380,7 @@ lbl_805238A8:
     .float 1.8877486
 
 
-.global lbl_805238D8
-lbl_805238D8:
+PitchTable__Q44nw4r3snd6detail4Util:
     .float 1.0
     .float 1.0002257
     .float 1.0004513
@@ -642,9 +639,8 @@ lbl_805238D8:
     .float 1.0592241
 
 
-.global lbl_80523CD8
-lbl_80523CD8:
-    .float 0 #0
+Decibel2RatioTable__Q44nw4r3snd6detail4Util:
+    .float 0
     .float 3.0549199E-05
     .float 3.0903E-05
     .float 3.1260799E-05
@@ -1610,9 +1606,7 @@ lbl_80523CD8:
     .float 1.9724227
     .float 1.9952623
 
-
-.global lbl_80524BEC
-lbl_80524BEC:
+Pan2RatioTableSqrt__Q44nw4r3snd6detail4Util:
     .float 1.0
     .float 0.99804497
     .float 0.99608612
@@ -1869,10 +1863,10 @@ lbl_80524BEC:
     .float 0.10825317
     .float 0.088388346
     .float 0.0625
-    .float 0 #0
+    .float 0
 
-.global lbl_80524FF0
-lbl_80524FF0:
+
+Pan2RatioTableSinCos__Q44nw4r3snd6detail4Util:
     .float 1.0
     .float 0.99998116
     .float 0.99992472
@@ -2131,8 +2125,7 @@ lbl_80524FF0:
     .float 0.0061358851
     .float 0 #0
 
-.global lbl_805253F4
-lbl_805253F4:
+Pan2RatioTableLinear__Q44nw4r3snd6detail4Util:
     .float 1.0
     .float 0.99609375
     .float 0.9921875
@@ -2392,8 +2385,7 @@ lbl_805253F4:
     .float 0 #0
 
 
-.global lbl_805257F8
-lbl_805257F8:
+RemoteFilterCoefTable__Q44nw4r3snd6detail4Util:
 	.4byte 0x387C70F7
 	.4byte 0x387C8144
 	.4byte 0xC13E3549
@@ -2716,34 +2708,45 @@ lbl_805257F8:
 	.4byte 0x7F18C0E6
 
 
-.global lbl_80525CF8
-lbl_80525CF8:
-	.4byte 0x00500064
-	.4byte 0x008000A0
-	.4byte 0x00C80100
-	.4byte 0x01400190
-	.4byte 0x01F40280
-	.4byte 0x032003E8
-	.4byte 0x05000640
-	.4byte 0x07D00A00
-	.4byte 0x0C800FA0
-	.4byte 0x14001900
-	.4byte 0x1F402800
-	.4byte 0x32003E80
+CalcLpfFreqTable__Q44nw4r3snd6detail4Util:
+	.2byte 0x0050
+    .2byte 0x0064
+	.2byte 0x0080
+    .2byte 0x00A0
+	.2byte 0x00C8
+    .2byte 0x0100
+	.2byte 0x0140
+    .2byte 0x0190
+	.2byte 0x01F4
+    .2byte 0x0280
+	.2byte 0x0320
+    .2byte 0x03E8
+	.2byte 0x0500
+    .2byte 0x0640
+	.2byte 0x07D0
+    .2byte 0x0A00
+	.2byte 0x0C80
+    .2byte 0x0FA0
+	.2byte 0x1400
+    .2byte 0x1900
+	.2byte 0x1F40
+    .2byte 0x2800
+	.2byte 0x3200
+    .2byte 0x3E80
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
 
-.global lbl_8056E640
-lbl_8056E640:
-	.4byte lbl_80524BEC
-	.4byte lbl_80524FF0
-	.4byte lbl_805253F4
+PanTableTable__Q44nw4r3snd6detail4Util:
+	.4byte Pan2RatioTableSqrt__Q44nw4r3snd6detail4Util
+	.4byte Pan2RatioTableSinCos__Q44nw4r3snd6detail4Util
+	.4byte Pan2RatioTableLinear__Q44nw4r3snd6detail4Util
 	.4byte 0
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+#@LOCAL@CalcRandom__Q44nw4r3snd6detail4UtilFv@u
 .global lbl_80665E20
 lbl_80665E20:
 	.4byte 0x12345678

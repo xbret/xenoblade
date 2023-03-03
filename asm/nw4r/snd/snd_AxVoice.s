@@ -2358,11 +2358,11 @@
 /* 8040FE34 003D93F4  48 00 01 CC */	b .L_80410000
 .L_8040FE38:
 /* 8040FE38 003D93F8  4B FF CB 4D */	bl GetInstance__Q44nw4r3snd6detail9AxManagerFv
-/* 8040FE3C 003D93FC  3C 60 80 64 */	lis r3, lbl_8063AE20@ha
+/* 8040FE3C 003D93FC  3C 60 80 64 */	lis r3, sBiquadFilterCallbackTable__Q44nw4r3snd6detail9AxManager@ha
 /* 8040FE40 003D9400  2C 19 00 00 */	cmpwi r25, 0
 /* 8040FE44 003D9404  57 20 15 BA */	rlwinm r0, r25, 2, 0x16, 0x1d
 /* 8040FE48 003D9408  38 80 00 01 */	li r4, 1
-/* 8040FE4C 003D940C  38 63 AE 20 */	addi r3, r3, lbl_8063AE20@l
+/* 8040FE4C 003D940C  38 63 AE 20 */	addi r3, r3, sBiquadFilterCallbackTable__Q44nw4r3snd6detail9AxManager@l
 /* 8040FE50 003D9410  7C 63 00 2E */	lwzx r3, r3, r0
 /* 8040FE54 003D9414  40 82 00 08 */	bne .L_8040FE5C
 /* 8040FE58 003D9418  38 80 00 00 */	li r4, 0

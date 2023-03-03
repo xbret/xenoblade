@@ -241,11 +241,11 @@
 /* 804057F4 003CEDB4  91 03 00 0C */	stw r8, 0xc(r3)
 /* 804057F8 003CEDB8  38 63 00 28 */	addi r3, r3, 0x28
 /* 804057FC 003CEDBC  4B EB 43 05 */	bl __construct_array
-/* 80405800 003CEDC0  38 A2 D9 70 */	addi r5, r2, lbl_8066DCF0@sda21
+/* 80405800 003CEDC0  38 A2 D9 70 */	addi r5, r2, DefaultBlackColor@sda21
 /* 80405804 003CEDC4  80 1E 00 3C */	lwz r0, 0x3c(r30)
 /* 80405808 003CEDC8  80 7E 00 38 */	lwz r3, 0x38(r30)
 /* 8040580C 003CEDCC  38 E0 00 FF */	li r7, 0xff
-/* 80405810 003CEDD0  A9 42 D9 70 */	lha r10, lbl_8066DCF0@sda21(r2)
+/* 80405810 003CEDD0  A9 42 D9 70 */	lha r10, DefaultBlackColor@sda21(r2)
 /* 80405814 003CEDD4  54 00 06 FE */	clrlwi r0, r0, 0x1b
 /* 80405818 003CEDD8  54 66 06 FE */	clrlwi r6, r3, 0x1b
 /* 8040581C 003CEDDC  A8 85 00 02 */	lha r4, 2(r5)
@@ -1051,12 +1051,12 @@
 .endfn ConvertOffsToPtr_Q44nw4r3lyt3res6TexMap___Q34nw4r3lyt6detailFPCvUi_PCQ44nw4r3lyt3res6TexMap
 
 .fn Init__Q34nw4r3lyt8MaterialFv, global
-/* 80406218 003CF7D8  38 E2 D9 70 */	addi r7, r2, lbl_8066DCF0@sda21
+/* 80406218 003CF7D8  38 E2 D9 70 */	addi r7, r2, DefaultBlackColor@sda21
 /* 8040621C 003CF7DC  80 03 00 3C */	lwz r0, 0x3c(r3)
 /* 80406220 003CF7E0  80 A3 00 38 */	lwz r5, 0x38(r3)
 /* 80406224 003CF7E4  38 C0 00 FF */	li r6, 0xff
 /* 80406228 003CF7E8  38 80 00 00 */	li r4, 0
-/* 8040622C 003CF7EC  A9 42 D9 70 */	lha r10, lbl_8066DCF0@sda21(r2)
+/* 8040622C 003CF7EC  A9 42 D9 70 */	lha r10, DefaultBlackColor@sda21(r2)
 /* 80406230 003CF7F0  A9 27 00 02 */	lha r9, 2(r7)
 /* 80406234 003CF7F4  54 A5 06 FE */	clrlwi r5, r5, 0x1b
 /* 80406238 003CF7F8  A9 07 00 04 */	lha r8, 4(r7)
@@ -1100,7 +1100,7 @@
 /* 804062C4 003CF884  80 9E 00 40 */	lwz r4, 0x40(r30)
 /* 804062C8 003CF888  2C 04 00 00 */	cmpwi r4, 0
 /* 804062CC 003CF88C  41 82 00 14 */	beq .L_804062E0
-/* 804062D0 003CF890  80 6D BB D8 */	lwz r3, lbl_80667D58@sda21(r13)
+/* 804062D0 003CF890  80 6D BB D8 */	lwz r3, mspAllocator__Q34nw4r3lyt6Layout@sda21(r13)
 /* 804062D4 003CF894  4B F4 37 CD */	bl MEMFreeToAllocator
 /* 804062D8 003CF898  38 00 00 00 */	li r0, 0
 /* 804062DC 003CF89C  90 1E 00 40 */	stw r0, 0x40(r30)
@@ -1186,7 +1186,7 @@
 /* 80406400 003CF9C0  80 83 00 40 */	lwz r4, 0x40(r3)
 /* 80406404 003CF9C4  2C 04 00 00 */	cmpwi r4, 0
 /* 80406408 003CF9C8  41 82 00 2C */	beq .L_80406434
-/* 8040640C 003CF9CC  80 6D BB D8 */	lwz r3, lbl_80667D58@sda21(r13)
+/* 8040640C 003CF9CC  80 6D BB D8 */	lwz r3, mspAllocator__Q34nw4r3lyt6Layout@sda21(r13)
 /* 80406410 003CF9D0  4B F4 36 91 */	bl MEMFreeToAllocator
 /* 80406414 003CF9D4  80 74 00 38 */	lwz r3, 0x38(r20)
 /* 80406418 003CF9D8  38 80 00 00 */	li r4, 0
@@ -1206,7 +1206,7 @@
 /* 8040644C 003CFA0C  7C C5 1A 14 */	add r6, r5, r3
 /* 80406450 003CFA10  57 00 25 36 */	rlwinm r0, r24, 4, 0x14, 0x1b
 /* 80406454 003CFA14  1C B5 00 1C */	mulli r5, r21, 0x1c
-/* 80406458 003CFA18  80 6D BB D8 */	lwz r3, lbl_80667D58@sda21(r13)
+/* 80406458 003CFA18  80 6D BB D8 */	lwz r3, mspAllocator__Q34nw4r3lyt6Layout@sda21(r13)
 /* 8040645C 003CFA1C  7C 86 22 14 */	add r4, r6, r4
 /* 80406460 003CFA20  54 84 10 3A */	slwi r4, r4, 2
 /* 80406464 003CFA24  7C 87 22 14 */	add r4, r7, r4
@@ -2891,10 +2891,10 @@
 .L_80407C68:
 /* 80407C68 003D1228  A8 7B 00 10 */	lha r3, 0x10(r27)
 /* 80407C6C 003D122C  38 A0 00 00 */	li r5, 0
-/* 80407C70 003D1230  A8 02 D9 70 */	lha r0, lbl_8066DCF0@sda21(r2)
+/* 80407C70 003D1230  A8 02 D9 70 */	lha r0, DefaultBlackColor@sda21(r2)
 /* 80407C74 003D1234  7C 03 00 00 */	cmpw r3, r0
 /* 80407C78 003D1238  40 82 00 3C */	bne .L_80407CB4
-/* 80407C7C 003D123C  38 82 D9 70 */	addi r4, r2, lbl_8066DCF0@sda21
+/* 80407C7C 003D123C  38 82 D9 70 */	addi r4, r2, DefaultBlackColor@sda21
 /* 80407C80 003D1240  A8 7B 00 12 */	lha r3, 0x12(r27)
 /* 80407C84 003D1244  A8 04 00 02 */	lha r0, 2(r4)
 /* 80407C88 003D1248  7C 03 00 00 */	cmpw r3, r0
@@ -3372,7 +3372,7 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-
+#@LOCAL@SetupGX__Q34nw4r3lyt8MaterialFbUc@kColSels
 .global lbl_8056D4D8
 lbl_8056D4D8:
 	.4byte 0x0000001F
@@ -3384,7 +3384,7 @@ lbl_8056D4D8:
 	.4byte 0x00000016
 	.4byte 0x00000012
 
-
+#@LOCAL@SetupGX__Q34nw4r3lyt8MaterialFbUc@kAlpSels@0
 .global lbl_8056D4F8
 lbl_8056D4F8:
 	.4byte 0x0000001F
@@ -3443,8 +3443,8 @@ float_8066C5A8:
 .global double_8066C5B0
 double_8066C5B0:
 	.8byte 0x4330000000000000 #unsigned int to float constant
+
 .section .sbss2, "", @nobits #0x8066DCE0 - 0x8066DCFB
 
-.global lbl_8066DCF0
-lbl_8066DCF0:
+DefaultBlackColor:
 	.skip 0x8

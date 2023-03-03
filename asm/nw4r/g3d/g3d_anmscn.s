@@ -799,7 +799,7 @@
 /* 803E677C 003AFD3C  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 803E6780 003AFD40  41 82 00 44 */	beq .L_803E67C4
 /* 803E6784 003AFD44  C0 43 00 10 */	lfs f2, 0x10(r3)
-/* 803E6788 003AFD48  C0 2D 9C 10 */	lfs f1, float_80665D90@sda21(r13)
+/* 803E6788 003AFD48  C0 2D 9C 10 */	lfs f1, smBaseUpdateRate__Q34nw4r3g3d9FrameCtrl@sda21(r13)
 /* 803E678C 003AFD4C  C0 03 00 0C */	lfs f0, 0xc(r3)
 /* 803E6790 003AFD50  EC 62 00 72 */	fmuls f3, f2, f1
 /* 803E6794 003AFD54  81 83 00 1C */	lwz r12, 0x1c(r3)
@@ -1543,24 +1543,24 @@
 
 
 .fn IsDerivedFrom__Q34nw4r3g3d9AnmScnResCFQ44nw4r3g3d6G3dObj7TypeObj, global
-/* 803E7194 003B0754  3C 60 80 52 */	lis r3, lbl_80520F48@ha
+/* 803E7194 003B0754  3C 60 80 52 */	lis r3, TYPE_NAME__Q34nw4r3g3d9AnmScnRes@ha
 /* 803E7198 003B0758  80 04 00 00 */	lwz r0, 0(r4)
-/* 803E719C 003B075C  38 63 0F 48 */	addi r3, r3, lbl_80520F48@l
+/* 803E719C 003B075C  38 63 0F 48 */	addi r3, r3, TYPE_NAME__Q34nw4r3g3d9AnmScnRes@l
 /* 803E71A0 003B0760  7C 00 18 40 */	cmplw r0, r3
 /* 803E71A4 003B0764  40 82 00 0C */	bne .L_803E71B0
 /* 803E71A8 003B0768  38 60 00 01 */	li r3, 1
 /* 803E71AC 003B076C  4E 80 00 20 */	blr
 .L_803E71B0:
-/* 803E71B0 003B0770  3C 60 80 52 */	lis r3, lbl_80520F38@ha
+/* 803E71B0 003B0770  3C 60 80 52 */	lis r3, TYPE_NAME__Q34nw4r3g3d6AnmScn@ha
 /* 803E71B4 003B0774  80 04 00 00 */	lwz r0, 0(r4)
-/* 803E71B8 003B0778  38 63 0F 38 */	addi r3, r3, lbl_80520F38@l
+/* 803E71B8 003B0778  38 63 0F 38 */	addi r3, r3, TYPE_NAME__Q34nw4r3g3d6AnmScn@l
 /* 803E71BC 003B077C  7C 00 18 40 */	cmplw r0, r3
 /* 803E71C0 003B0780  40 82 00 0C */	bne .L_803E71CC
 /* 803E71C4 003B0784  38 60 00 01 */	li r3, 1
 /* 803E71C8 003B0788  4E 80 00 20 */	blr
 .L_803E71CC:
-/* 803E71CC 003B078C  3C 60 80 52 */	lis r3, lbl_80520F58@ha
-/* 803E71D0 003B0790  38 63 0F 58 */	addi r3, r3, lbl_80520F58@l
+/* 803E71CC 003B078C  3C 60 80 52 */	lis r3, TYPE_NAME__Q34nw4r3g3d6G3dObj@ha
+/* 803E71D0 003B0790  38 63 0F 58 */	addi r3, r3, TYPE_NAME__Q34nw4r3g3d6G3dObj@l
 /* 803E71D4 003B0794  7C 00 18 50 */	subf r0, r0, r3
 /* 803E71D8 003B0798  7C 00 00 34 */	cntlzw r0, r0
 /* 803E71DC 003B079C  54 03 D9 7E */	srwi r3, r0, 5
@@ -1569,17 +1569,17 @@
 
 
 .fn IsDerivedFrom__Q34nw4r3g3d6AnmScnCFQ44nw4r3g3d6G3dObj7TypeObj, global
-/* 803E71E4 003B07A4  3C 60 80 52 */	lis r3, lbl_80520F38@ha
+/* 803E71E4 003B07A4  3C 60 80 52 */	lis r3, TYPE_NAME__Q34nw4r3g3d6AnmScn@ha
 /* 803E71E8 003B07A8  80 04 00 00 */	lwz r0, 0(r4)
-/* 803E71EC 003B07AC  38 63 0F 38 */	addi r3, r3, lbl_80520F38@l
+/* 803E71EC 003B07AC  38 63 0F 38 */	addi r3, r3, TYPE_NAME__Q34nw4r3g3d6AnmScn@l
 /* 803E71F0 003B07B0  7C 00 18 40 */	cmplw r0, r3
 /* 803E71F4 003B07B4  40 82 00 0C */	bne .L_803E7200
 /* 803E71F8 003B07B8  38 60 00 01 */	li r3, 1
 /* 803E71FC 003B07BC  4E 80 00 20 */	blr
 .L_803E7200:
-/* 803E7200 003B07C0  3C 60 80 52 */	lis r3, lbl_80520F58@ha
+/* 803E7200 003B07C0  3C 60 80 52 */	lis r3, TYPE_NAME__Q34nw4r3g3d6G3dObj@ha
 /* 803E7204 003B07C4  80 04 00 00 */	lwz r0, 0(r4)
-/* 803E7208 003B07C8  38 63 0F 58 */	addi r3, r3, lbl_80520F58@l
+/* 803E7208 003B07C8  38 63 0F 58 */	addi r3, r3, TYPE_NAME__Q34nw4r3g3d6G3dObj@l
 /* 803E720C 003B07CC  7C 00 18 50 */	subf r0, r0, r3
 /* 803E7210 003B07D0  7C 00 00 34 */	cntlzw r0, r0
 /* 803E7214 003B07D4  54 03 D9 7E */	srwi r3, r0, 5
@@ -1604,8 +1604,8 @@
 
 
 .fn GetTypeObj__Q34nw4r3g3d9AnmScnResCFv, global
-/* 803E724C 003B080C  3C 60 80 52 */	lis r3, lbl_80520F48@ha
-/* 803E7250 003B0810  38 63 0F 48 */	addi r3, r3, lbl_80520F48@l
+/* 803E724C 003B080C  3C 60 80 52 */	lis r3, TYPE_NAME__Q34nw4r3g3d9AnmScnRes@ha
+/* 803E7250 003B0810  38 63 0F 48 */	addi r3, r3, TYPE_NAME__Q34nw4r3g3d9AnmScnRes@l
 /* 803E7254 003B0814  4E 80 00 20 */	blr 
 .endfn GetTypeObj__Q34nw4r3g3d9AnmScnResCFv
 
@@ -1627,25 +1627,22 @@
 
 
 .fn GetTypeObj__Q34nw4r3g3d6AnmScnCFv, global
-/* 803E7288 003B0848  3C 60 80 52 */	lis r3, lbl_80520F38@ha
-/* 803E728C 003B084C  38 63 0F 38 */	addi r3, r3, lbl_80520F38@l
+/* 803E7288 003B0848  3C 60 80 52 */	lis r3, TYPE_NAME__Q34nw4r3g3d6AnmScn@ha
+/* 803E728C 003B084C  38 63 0F 38 */	addi r3, r3, TYPE_NAME__Q34nw4r3g3d6AnmScn@l
 /* 803E7290 003B0850  4E 80 00 20 */	blr 
 .endfn GetTypeObj__Q34nw4r3g3d6AnmScnCFv
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-
-.global lbl_80520F38
-lbl_80520F38:
+TYPE_NAME__Q34nw4r3g3d6AnmScn:
 	.4byte 0x00000007
 	.asciz "AnmScn"
 	.balign 4
 	.4byte 0
 
 
-.global lbl_80520F48
-lbl_80520F48:
+TYPE_NAME__Q34nw4r3g3d9AnmScnRes:
 	.4byte 0x0000000A
 	.asciz "AnmScnRes"
 	.balign 4

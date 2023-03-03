@@ -5,12 +5,12 @@
 .fn __ct__Q34nw4r2ut10CharWriterFv, global
 /* 8042EEE0 003F84A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8042EEE4 003F84A4  7C 08 02 A6 */	mflr r0
-/* 8042EEE8 003F84A8  3C E0 80 65 */	lis r7, lbl_806570B8@ha
+/* 8042EEE8 003F84A8  3C E0 80 65 */	lis r7, mLoadingTexture__Q34nw4r2ut10CharWriter@ha
 /* 8042EEEC 003F84AC  C0 02 C5 C0 */	lfs f0, float_8066C940@sda21(r2)
 /* 8042EEF0 003F84B0  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8042EEF4 003F84B4  39 00 FF FF */	li r8, -1
 /* 8042EEF8 003F84B8  38 00 00 FF */	li r0, 0xff
-/* 8042EEFC 003F84BC  38 C7 70 B8 */	addi r6, r7, lbl_806570B8@l
+/* 8042EEFC 003F84BC  38 C7 70 B8 */	addi r6, r7, mLoadingTexture__Q34nw4r2ut10CharWriter@l
 /* 8042EF00 003F84C0  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8042EF04 003F84C4  7C 7F 1B 78 */	mr r31, r3
 /* 8042EF08 003F84C8  38 81 00 08 */	addi r4, r1, 8
@@ -29,7 +29,7 @@
 /* 8042EF3C 003F84FC  9B C3 00 43 */	stb r30, 0x43(r3)
 /* 8042EF40 003F8500  D0 03 00 44 */	stfs f0, 0x44(r3)
 /* 8042EF44 003F8504  93 C3 00 48 */	stw r30, 0x48(r3)
-/* 8042EF48 003F8508  90 07 70 B8 */	stw r0, lbl_806570B8@l(r7)
+/* 8042EF48 003F8508  90 07 70 B8 */	stw r0, mLoadingTexture__Q34nw4r2ut10CharWriter@l(r7)
 /* 8042EF4C 003F850C  93 C6 00 04 */	stw r30, 4(r6)
 /* 8042EF50 003F8510  93 C1 00 08 */	stw r30, 8(r1)
 /* 8042EF54 003F8514  91 01 00 0C */	stw r8, 0xc(r1)
@@ -170,13 +170,13 @@
 .fn SetupGX__Q34nw4r2ut10CharWriterFv, global
 /* 8042F140 003F8700  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8042F144 003F8704  7C 08 02 A6 */	mflr r0
-/* 8042F148 003F8708  3C A0 80 65 */	lis r5, lbl_806570B8@ha
+/* 8042F148 003F8708  3C A0 80 65 */	lis r5, mLoadingTexture__Q34nw4r2ut10CharWriter@ha
 /* 8042F14C 003F870C  90 01 00 34 */	stw r0, 0x34(r1)
 /* 8042F150 003F8710  38 00 00 FF */	li r0, 0xff
-/* 8042F154 003F8714  38 85 70 B8 */	addi r4, r5, lbl_806570B8@l
+/* 8042F154 003F8714  38 85 70 B8 */	addi r4, r5, mLoadingTexture__Q34nw4r2ut10CharWriter@l
 /* 8042F158 003F8718  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 8042F15C 003F871C  3B E0 00 00 */	li r31, 0
-/* 8042F160 003F8720  90 05 70 B8 */	stw r0, lbl_806570B8@l(r5)
+/* 8042F160 003F8720  90 05 70 B8 */	stw r0, mLoadingTexture__Q34nw4r2ut10CharWriter@l(r5)
 /* 8042F164 003F8724  93 E4 00 04 */	stw r31, 4(r4)
 /* 8042F168 003F8728  80 03 00 00 */	lwz r0, 0(r3)
 /* 8042F16C 003F872C  2C 00 00 00 */	cmpwi r0, 0
@@ -229,10 +229,10 @@
 /* 8042F218 003F87D8  88 0D BC B8 */	lbz r0, lbl_80667E38@sda21(r13)
 /* 8042F21C 003F87DC  7C 00 07 75 */	extsb. r0, r0
 /* 8042F220 003F87E0  40 82 00 28 */	bne .L_8042F248
-/* 8042F224 003F87E4  3C 80 80 12 */	lis r4, func_801252D0@ha
+/* 8042F224 003F87E4  3C 80 80 12 */	lis r4, func_801252D0@ha #__dt__Q34nw4r2ut5ColorFv
 /* 8042F228 003F87E8  3C A0 80 65 */	lis r5, lbl_806570A8@ha
 /* 8042F22C 003F87EC  93 ED BC BC */	stw r31, lbl_80667E3C@sda21(r13)
-/* 8042F230 003F87F0  38 84 52 D0 */	addi r4, r4, func_801252D0@l
+/* 8042F230 003F87F0  38 84 52 D0 */	addi r4, r4, func_801252D0@l #__dt__Q34nw4r2ut5ColorFv
 /* 8042F234 003F87F4  38 A5 70 A8 */	addi r5, r5, lbl_806570A8@l
 /* 8042F238 003F87F8  38 6D BC BC */	addi r3, r13, lbl_80667E3C@sda21
 /* 8042F23C 003F87FC  4B E8 A4 61 */	bl __register_global_object
@@ -1108,7 +1108,7 @@
 /* 8042FF50 003F9510  A0 04 00 10 */	lhz r0, 0x10(r4)
 /* 8042FF54 003F9514  39 60 00 00 */	li r11, 0
 /* 8042FF58 003F9518  8B 44 00 07 */	lbz r26, 7(r4)
-/* 8042FF5C 003F951C  3D 00 80 65 */	lis r8, lbl_806570B8@ha
+/* 8042FF5C 003F951C  3D 00 80 65 */	lis r8, mLoadingTexture__Q34nw4r2ut10CharWriter@ha
 /* 8042FF60 003F9520  7C C0 E2 14 */	add r6, r0, r28
 /* 8042FF64 003F9524  A1 24 00 12 */	lhz r9, 0x12(r4)
 /* 8042FF68 003F9528  54 07 78 20 */	slwi r7, r0, 0xf
@@ -1116,7 +1116,7 @@
 /* 8042FF70 003F9530  7C 09 D2 14 */	add r0, r9, r26
 /* 8042FF74 003F9534  54 DB 78 20 */	slwi r27, r6, 0xf
 /* 8042FF78 003F9538  7F C7 2B 96 */	divwu r30, r7, r5
-/* 8042FF7C 003F953C  80 E8 70 B8 */	lwz r7, lbl_806570B8@l(r8)
+/* 8042FF7C 003F953C  80 E8 70 B8 */	lwz r7, mLoadingTexture__Q34nw4r2ut10CharWriter@l(r8)
 /* 8042FF80 003F9540  54 0C 78 20 */	slwi r12, r0, 0xf
 /* 8042FF84 003F9544  93 81 00 3C */	stw r28, 0x3c(r1)
 /* 8042FF88 003F9548  A0 C4 00 0E */	lhz r6, 0xe(r4)
@@ -1155,7 +1155,7 @@
 /* 8043000C 003F95CC  EF C2 00 2A */	fadds f30, f2, f0
 /* 80430010 003F95D0  91 21 00 14 */	stw r9, 0x14(r1)
 /* 80430014 003F95D4  40 82 00 2C */	bne .L_80430040
-/* 80430018 003F95D8  38 E8 70 B8 */	addi r7, r8, lbl_806570B8@l
+/* 80430018 003F95D8  38 E8 70 B8 */	addi r7, r8, mLoadingTexture__Q34nw4r2ut10CharWriter@l
 /* 8043001C 003F95DC  80 67 00 04 */	lwz r3, 4(r7)
 /* 80430020 003F95E0  7C 00 18 40 */	cmplw r0, r3
 /* 80430024 003F95E4  40 82 00 1C */	bne .L_80430040
@@ -1190,13 +1190,13 @@
 /* 80430090 003F9650  38 61 00 18 */	addi r3, r1, 0x18
 /* 80430094 003F9654  38 80 00 00 */	li r4, 0
 /* 80430098 003F9658  4B EE C8 E9 */	bl GXLoadTexObj
-/* 8043009C 003F965C  3C C0 80 65 */	lis r6, lbl_806570B8@ha
+/* 8043009C 003F965C  3C C0 80 65 */	lis r6, mLoadingTexture__Q34nw4r2ut10CharWriter@ha
 /* 804300A0 003F9660  80 E1 00 08 */	lwz r7, 8(r1)
 /* 804300A4 003F9664  80 A1 00 0C */	lwz r5, 0xc(r1)
-/* 804300A8 003F9668  38 86 70 B8 */	addi r4, r6, lbl_806570B8@l
+/* 804300A8 003F9668  38 86 70 B8 */	addi r4, r6, mLoadingTexture__Q34nw4r2ut10CharWriter@l
 /* 804300AC 003F966C  80 61 00 10 */	lwz r3, 0x10(r1)
 /* 804300B0 003F9670  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 804300B4 003F9674  90 E6 70 B8 */	stw r7, lbl_806570B8@l(r6)
+/* 804300B4 003F9674  90 E6 70 B8 */	stw r7, mLoadingTexture__Q34nw4r2ut10CharWriter@l(r6)
 /* 804300B8 003F9678  90 A4 00 04 */	stw r5, 4(r4)
 /* 804300BC 003F967C  90 64 00 08 */	stw r3, 8(r4)
 /* 804300C0 003F9680  90 04 00 0C */	stw r0, 0xc(r4)
@@ -1586,29 +1586,30 @@ float_8066C950:
 .global double_8066C958
 double_8066C958:
 	.8byte 0x4330000000000000 #unsigned int to float constant
+
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .global lbl_806570A8
 lbl_806570A8:
 	.skip 0x10
-.global lbl_806570B8
-lbl_806570B8:
+
+mLoadingTexture__Q34nw4r2ut10CharWriter:
 	.skip 0x10
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667E38
+#@GUARD@SetupGXCommon__27@unnamed@ut_CharWriter_cpp@Fv@fog
 lbl_80667E38:
 	.skip 0x4
-.global lbl_80667E3C
+
 lbl_80667E3C:
 	.skip 0x1
-.global lbl_80667E3D
+
 lbl_80667E3D:
 	.skip 0x1
-.global lbl_80667E3E
+
 lbl_80667E3E:
 	.skip 0x1
-.global lbl_80667E3F
+
 lbl_80667E3F:
 	.skip 0x1

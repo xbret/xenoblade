@@ -562,12 +562,15 @@
 .global lbl_80657060
 lbl_80657060:
 	.skip 0xC
+
+#@LOCAL@GetInstance__Q44nw4r3snd6detail12VoiceManagerFv@instance
 .global lbl_8065706C
 lbl_8065706C:
 	.skip 0x1C
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+#@GUARD@GetInstance__Q44nw4r3snd6detail12VoiceManagerFv@instance
 .global lbl_80667E10
 lbl_80667E10:
 	.skip 0x8

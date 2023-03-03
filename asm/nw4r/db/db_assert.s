@@ -17,7 +17,7 @@
 /* 803D7368 003A0928  D8 E1 00 58 */	stfd f7, 0x58(r1)
 /* 803D736C 003A092C  D9 01 00 60 */	stfd f8, 0x60(r1)
 .L_803D7370:
-/* 803D7370 003A0930  80 0D BB 9C */	lwz r0, lbl_80667D1C@sda21(r13)
+/* 803D7370 003A0930  80 0D BB 9C */	lwz r0, sAssertionConsole__Q24nw4r2db@sda21(r13)
 /* 803D7374 003A0934  39 81 00 88 */	addi r12, r1, 0x88
 /* 803D7378 003A0938  39 61 00 08 */	addi r11, r1, 8
 /* 803D737C 003A093C  3F E0 01 00 */	lis r31, 0x100
@@ -45,7 +45,7 @@
 /* 803D73D0 003A0990  4E 80 00 20 */	blr 
 .endfn Assertion_Printf___Q24nw4r2dbFPCce
 
-.fn func_803D73D4, global
+.fn ShowStack___Q24nw4r2dbFUl, global
 /* 803D73D4 003A0994  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803D73D8 003A0998  7C 08 02 A6 */	mflr r0
 /* 803D73DC 003A099C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -91,7 +91,7 @@
 /* 803D7474 003A0A34  7C 08 03 A6 */	mtlr r0
 /* 803D7478 003A0A38  38 21 00 20 */	addi r1, r1, 0x20
 /* 803D747C 003A0A3C  4E 80 00 20 */	blr 
-.endfn func_803D73D4
+.endfn ShowStack___Q24nw4r2dbFUl
 
 .fn VPanic__Q24nw4r2dbFPCciPCcP16__va_list_structb, global
 /* 803D7480 003A0A40  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -112,8 +112,8 @@
 /* 803D74BC 003A0A7C  38 60 00 00 */	li r3, 0
 /* 803D74C0 003A0A80  4B F8 D4 71 */	bl VISetPostRetraceCallback
 /* 803D74C4 003A0A84  7F C3 F3 78 */	mr r3, r30
-/* 803D74C8 003A0A88  4B FF FF 0D */	bl func_803D73D4
-/* 803D74CC 003A0A8C  80 6D BB 9C */	lwz r3, lbl_80667D1C@sda21(r13)
+/* 803D74C8 003A0A88  4B FF FF 0D */	bl ShowStack___Q24nw4r2dbFUl
+/* 803D74CC 003A0A8C  80 6D BB 9C */	lwz r3, sAssertionConsole__Q24nw4r2db@sda21(r13)
 /* 803D74D0 003A0A90  2C 03 00 00 */	cmpwi r3, 0
 /* 803D74D4 003A0A94  41 82 00 5C */	beq .L_803D7530
 /* 803D74D8 003A0A98  3C 80 80 57 */	lis r4, lbl_8056C810@ha
@@ -122,11 +122,11 @@
 /* 803D74E4 003A0AA4  38 84 C8 10 */	addi r4, r4, lbl_8056C810@l
 /* 803D74E8 003A0AA8  4C C6 31 82 */	crclr 6
 /* 803D74EC 003A0AAC  4B FF FD 59 */	bl Console_Printf__Q24nw4r2dbFPQ44nw4r2db6detail11ConsoleHeadPCce
-/* 803D74F0 003A0AB0  80 6D BB 9C */	lwz r3, lbl_80667D1C@sda21(r13)
+/* 803D74F0 003A0AB0  80 6D BB 9C */	lwz r3, sAssertionConsole__Q24nw4r2db@sda21(r13)
 /* 803D74F4 003A0AB4  38 8D 9C 04 */	addi r4, r13, lbl_80665D84@sda21
 /* 803D74F8 003A0AB8  4C C6 31 82 */	crclr 6
 /* 803D74FC 003A0ABC  4B FF FD 49 */	bl Console_Printf__Q24nw4r2dbFPQ44nw4r2db6detail11ConsoleHeadPCce
-/* 803D7500 003A0AC0  83 CD BB 9C */	lwz r30, lbl_80667D1C@sda21(r13)
+/* 803D7500 003A0AC0  83 CD BB 9C */	lwz r30, sAssertionConsole__Q24nw4r2db@sda21(r13)
 /* 803D7504 003A0AC4  A3 FE 00 20 */	lhz r31, 0x20(r30)
 /* 803D7508 003A0AC8  7F C3 F3 78 */	mr r3, r30
 /* 803D750C 003A0ACC  4B FF FD A1 */	bl Console_GetTotalLines__Q24nw4r2dbFPQ44nw4r2db6detail11ConsoleHead
@@ -136,7 +136,7 @@
 .L_803D751C:
 /* 803D751C 003A0ADC  90 1E 00 18 */	stw r0, 0x18(r30)
 /* 803D7520 003A0AE0  38 00 00 01 */	li r0, 1
-/* 803D7524 003A0AE4  80 6D BB 9C */	lwz r3, lbl_80667D1C@sda21(r13)
+/* 803D7524 003A0AE4  80 6D BB 9C */	lwz r3, sAssertionConsole__Q24nw4r2db@sda21(r13)
 /* 803D7528 003A0AE8  98 03 00 22 */	stb r0, 0x22(r3)
 /* 803D752C 003A0AEC  48 00 00 34 */	b .L_803D7560
 .L_803D7530:
@@ -225,7 +225,7 @@
 /* 803D7654 003A0C14  D8 E1 00 58 */	stfd f7, 0x58(r1)
 /* 803D7658 003A0C18  D9 01 00 60 */	stfd f8, 0x60(r1)
 .L_803D765C:
-/* 803D765C 003A0C1C  83 CD BB 9C */	lwz r30, lbl_80667D1C@sda21(r13)
+/* 803D765C 003A0C1C  83 CD BB 9C */	lwz r30, sAssertionConsole__Q24nw4r2db@sda21(r13)
 /* 803D7660 003A0C20  39 61 00 98 */	addi r11, r1, 0x98
 /* 803D7664 003A0C24  38 01 00 08 */	addi r0, r1, 8
 /* 803D7668 003A0C28  3D 80 03 00 */	lis r12, 0x300
@@ -250,11 +250,11 @@
 /* 803D76B4 003A0C74  38 84 C8 20 */	addi r4, r4, lbl_8056C820@l
 /* 803D76B8 003A0C78  4C C6 31 82 */	crclr 6
 /* 803D76BC 003A0C7C  4B FF FB 89 */	bl Console_Printf__Q24nw4r2dbFPQ44nw4r2db6detail11ConsoleHeadPCce
-/* 803D76C0 003A0C80  80 6D BB 9C */	lwz r3, lbl_80667D1C@sda21(r13)
+/* 803D76C0 003A0C80  80 6D BB 9C */	lwz r3, sAssertionConsole__Q24nw4r2db@sda21(r13)
 /* 803D76C4 003A0C84  38 8D 9C 04 */	addi r4, r13, lbl_80665D84@sda21
 /* 803D76C8 003A0C88  4C C6 31 82 */	crclr 6
 /* 803D76CC 003A0C8C  4B FF FB 79 */	bl Console_Printf__Q24nw4r2dbFPQ44nw4r2db6detail11ConsoleHeadPCce
-/* 803D76D0 003A0C90  83 ED BB 9C */	lwz r31, lbl_80667D1C@sda21(r13)
+/* 803D76D0 003A0C90  83 ED BB 9C */	lwz r31, sAssertionConsole__Q24nw4r2db@sda21(r13)
 /* 803D76D4 003A0C94  A3 DF 00 20 */	lhz r30, 0x20(r31)
 /* 803D76D8 003A0C98  7F E3 FB 78 */	mr r3, r31
 /* 803D76DC 003A0C9C  4B FF FB D1 */	bl Console_GetTotalLines__Q24nw4r2dbFPQ44nw4r2db6detail11ConsoleHead
@@ -263,27 +263,27 @@
 /* 803D76E8 003A0CA8  38 00 00 00 */	li r0, 0
 .L_803D76EC:
 /* 803D76EC 003A0CAC  90 1F 00 18 */	stw r0, 0x18(r31)
-/* 803D76F0 003A0CB0  88 0D 9C 00 */	lbz r0, lbl_80665D80@sda21(r13)
+/* 803D76F0 003A0CB0  88 0D 9C 00 */	lbz r0, sDispWarningAuto__Q24nw4r2db@sda21(r13)
 /* 803D76F4 003A0CB4  2C 00 00 00 */	cmpwi r0, 0
 /* 803D76F8 003A0CB8  41 82 00 A4 */	beq .L_803D779C
-/* 803D76FC 003A0CBC  80 0D BB 9C */	lwz r0, lbl_80667D1C@sda21(r13)
-/* 803D7700 003A0CC0  83 CD BB 98 */	lwz r30, lbl_80667D18@sda21(r13)
+/* 803D76FC 003A0CBC  80 0D BB 9C */	lwz r0, sAssertionConsole__Q24nw4r2db@sda21(r13)
+/* 803D7700 003A0CC0  83 CD BB 98 */	lwz r30, sWarningTime__Q24nw4r2db@sda21(r13)
 /* 803D7704 003A0CC4  2C 00 00 00 */	cmpwi r0, 0
 /* 803D7708 003A0CC8  41 82 00 94 */	beq .L_803D779C
-/* 803D770C 003A0CCC  88 0D BB A0 */	lbz r0, lbl_80667D20@sda21(r13)
+/* 803D770C 003A0CCC  88 0D BB A0 */	lbz r0, sInitializedAlarm@sda21(r13)
 /* 803D7710 003A0CD0  2C 00 00 00 */	cmpwi r0, 0
 /* 803D7714 003A0CD4  40 82 00 18 */	bne .L_803D772C
-/* 803D7718 003A0CD8  3C 60 80 62 */	lis r3, lbl_8061D710@ha
-/* 803D771C 003A0CDC  38 63 D7 10 */	addi r3, r3, lbl_8061D710@l
+/* 803D7718 003A0CD8  3C 60 80 62 */	lis r3, sWarningAlarm@ha
+/* 803D771C 003A0CDC  38 63 D7 10 */	addi r3, r3, sWarningAlarm@l
 /* 803D7720 003A0CE0  4B F7 B7 01 */	bl OSCreateAlarm
 /* 803D7724 003A0CE4  38 00 00 01 */	li r0, 1
-/* 803D7728 003A0CE8  98 0D BB A0 */	stb r0, lbl_80667D20@sda21(r13)
+/* 803D7728 003A0CE8  98 0D BB A0 */	stb r0, sInitializedAlarm@sda21(r13)
 .L_803D772C:
-/* 803D772C 003A0CEC  3F E0 80 62 */	lis r31, lbl_8061D710@ha
-/* 803D7730 003A0CF0  3B FF D7 10 */	addi r31, r31, lbl_8061D710@l
+/* 803D772C 003A0CEC  3F E0 80 62 */	lis r31, sWarningAlarm@ha
+/* 803D7730 003A0CF0  3B FF D7 10 */	addi r31, r31, sWarningAlarm@l
 /* 803D7734 003A0CF4  7F E3 FB 78 */	mr r3, r31
 /* 803D7738 003A0CF8  4B F7 BA 49 */	bl OSCancelAlarm
-/* 803D773C 003A0CFC  80 6D BB 9C */	lwz r3, lbl_80667D1C@sda21(r13)
+/* 803D773C 003A0CFC  80 6D BB 9C */	lwz r3, sAssertionConsole__Q24nw4r2db@sda21(r13)
 /* 803D7740 003A0D00  38 00 00 01 */	li r0, 1
 /* 803D7744 003A0D04  2C 1E 00 00 */	cmpwi r30, 0
 /* 803D7748 003A0D08  98 03 00 22 */	stb r0, 0x22(r3)
@@ -318,7 +318,7 @@
 .endfn Warning__Q24nw4r2dbFPCciPCce
 
 .fn WarningAlarmFunc___Q24nw4r2dbFP7OSAlarmP9OSContext, global
-/* 803D77B4 003A0D74  80 6D BB 9C */	lwz r3, lbl_80667D1C@sda21(r13)
+/* 803D77B4 003A0D74  80 6D BB 9C */	lwz r3, sAssertionConsole__Q24nw4r2db@sda21(r13)
 /* 803D77B8 003A0D78  2C 03 00 00 */	cmpwi r3, 0
 /* 803D77BC 003A0D7C  4D 82 00 20 */	beqlr 
 /* 803D77C0 003A0D80  38 00 00 00 */	li r0, 0
@@ -326,7 +326,7 @@
 /* 803D77C8 003A0D88  4E 80 00 20 */	blr 
 .endfn WarningAlarmFunc___Q24nw4r2dbFP7OSAlarmP9OSContext
 
-#why tf is this here? this should be in lyt_textBox.s
+#relocated from lyt_textBox.s
 .fn SetTextColor__Q34nw4r2ut10CharWriterFQ34nw4r2ut5ColorQ34nw4r2ut5Color, global
 /* 803D77CC 003A0D8C  89 64 00 00 */	lbz r11, 0(r4)
 /* 803D77D0 003A0D90  89 44 00 01 */	lbz r10, 1(r4)
@@ -375,8 +375,7 @@ lbl_8056C820:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665D80
-lbl_80665D80:
+sDispWarningAuto__Q24nw4r2db:
 	.4byte 0x01000000
 
 
@@ -386,18 +385,19 @@ lbl_80665D84:
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_8061D710
-lbl_8061D710:
+#@LOCAL@GetWarningAlarm___Q24nw4r2dbFv@sWarningAlarm@0
+#sWarningAlarm$6610
+sWarningAlarm:
 	.skip 0x30
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667D18
-lbl_80667D18:
+sWarningTime__Q24nw4r2db:
 	.skip 0x4
-.global lbl_80667D1C
-lbl_80667D1C:
+
+sAssertionConsole__Q24nw4r2db:
 	.skip 0x4
-.global lbl_80667D20
-lbl_80667D20:
+
+#sInitializedAlarm$6609
+sInitializedAlarm:
 	.skip 0x8

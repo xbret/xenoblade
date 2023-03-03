@@ -4,8 +4,8 @@
 
 .fn InitSeqPlayer__Q44nw4r3snd6detail9SeqPlayerFv, global
 /* 80419708 003E2CC8  38 00 FF FF */	li r0, -1
-/* 8041970C 003E2CCC  3C 60 80 64 */	lis r3, lbl_8063B4C0@ha
-/* 80419710 003E2CD0  B4 03 B4 C0 */	sthu r0, lbl_8063B4C0@l(r3)
+/* 8041970C 003E2CCC  3C 60 80 64 */	lis r3, mGlobalVariable__Q44nw4r3snd6detail9SeqPlayer@ha
+/* 80419710 003E2CD0  B4 03 B4 C0 */	sthu r0, mGlobalVariable__Q44nw4r3snd6detail9SeqPlayer@l(r3)
 /* 80419714 003E2CD4  B0 03 00 02 */	sth r0, 2(r3)
 /* 80419718 003E2CD8  B0 03 00 04 */	sth r0, 4(r3)
 /* 8041971C 003E2CDC  B0 03 00 06 */	sth r0, 6(r3)
@@ -771,9 +771,9 @@
 /* 8041A19C 003E375C  80 03 01 18 */	lwz r0, 0x118(r3)
 /* 8041A1A0 003E3760  2C 00 00 00 */	cmpwi r0, 0
 /* 8041A1A4 003E3764  41 82 00 50 */	beq .L_8041A1F4
-/* 8041A1A8 003E3768  3C A0 80 64 */	lis r5, lbl_8063B4C0@ha
+/* 8041A1A8 003E3768  3C A0 80 64 */	lis r5, mGlobalVariable__Q44nw4r3snd6detail9SeqPlayer@ha
 /* 8041A1AC 003E376C  38 03 01 60 */	addi r0, r3, 0x160
-/* 8041A1B0 003E3770  38 A5 B4 C0 */	addi r5, r5, lbl_8063B4C0@l
+/* 8041A1B0 003E3770  38 A5 B4 C0 */	addi r5, r5, mGlobalVariable__Q44nw4r3snd6detail9SeqPlayer@l
 /* 8041A1B4 003E3774  90 01 00 08 */	stw r0, 8(r1)
 /* 8041A1B8 003E3778  7F E3 FB 78 */	mr r3, r31
 /* 8041A1BC 003E377C  38 80 00 00 */	li r4, 0
@@ -1048,9 +1048,9 @@
 /* 8041A550 003E3B10  38 60 00 00 */	li r3, 0
 /* 8041A554 003E3B14  4C 80 00 20 */	bgelr 
 /* 8041A558 003E3B18  38 04 FF F0 */	addi r0, r4, -16
-/* 8041A55C 003E3B1C  3C 60 80 64 */	lis r3, lbl_8063B4C0@ha
+/* 8041A55C 003E3B1C  3C 60 80 64 */	lis r3, mGlobalVariable__Q44nw4r3snd6detail9SeqPlayer@ha
 /* 8041A560 003E3B20  54 00 08 3C */	slwi r0, r0, 1
-/* 8041A564 003E3B24  38 63 B4 C0 */	addi r3, r3, lbl_8063B4C0@l
+/* 8041A564 003E3B24  38 63 B4 C0 */	addi r3, r3, mGlobalVariable__Q44nw4r3snd6detail9SeqPlayer@l
 /* 8041A568 003E3B28  7C 63 02 14 */	add r3, r3, r0
 /* 8041A56C 003E3B2C  4E 80 00 20 */	blr
 .endfn GetVariablePtr__Q44nw4r3snd6detail9SeqPlayerFi
@@ -1507,14 +1507,9 @@
 /* 8041ABA4 003E4164  4E 80 04 20 */	bctr 
 .endfn NoteOn__Q44nw4r3snd6detail9SeqPlayerFiRCQ44nw4r3snd6detail10NoteOnInfo
 
-#InvalidateWaveData__Q44nw4r3snd6detail9SeqPlayerFPCvPCv
-#OnUpdateVoiceSoundThread__Q54nw4r3snd6detail11SoundThread14PlayerCallbackFv
-#ChannelCallback__Q44nw4r3snd6detail9SeqPlayerFPQ44nw4r3snd6detail7Channel
-#OnShutdownSoundThread__Q54nw4r3snd6detail11SoundThread14PlayerCallbackFv
-#OnUpdateFrameSoundThread__Q54nw4r3snd6detail11SoundThread14PlayerCallbackFv
-.fn func_8041ABA8, global
+.fn ChannelCallback__Q44nw4r3snd6detail9SeqPlayerFPQ44nw4r3snd6detail7Channel, global
 /* 8041ABA8 003E4168  4E 80 00 20 */	blr 
-.endfn func_8041ABA8
+.endfn ChannelCallback__Q44nw4r3snd6detail9SeqPlayerFPQ44nw4r3snd6detail7Channel
 
 #@180@__dt__Q44nw4r3snd6detail9SeqPlayerFv
 .fn _180___dt__Q44nw4r3snd6detail9SeqPlayerFv, global
@@ -1555,7 +1550,7 @@ lbl_8056E3D8:
 	.4byte _220_OnShutdownSoundThread__Q44nw4r3snd6detail9SeqPlayerFv
 	.4byte InvalidateData__Q44nw4r3snd6detail9SeqPlayerFPCvPCv
 	.4byte InvalidateWaveData__Q44nw4r3snd6detail9SeqPlayerFPCvPCv
-	.4byte func_8041ABA8
+	.4byte ChannelCallback__Q44nw4r3snd6detail9SeqPlayerFPQ44nw4r3snd6detail7Channel
 	.4byte OnUpdateFrameSoundThread__Q44nw4r3snd6detail9SeqPlayerFv
 	.4byte OnShutdownSoundThread__Q44nw4r3snd6detail9SeqPlayerFv
 	.4byte 0
@@ -1583,6 +1578,5 @@ float_8066C810:
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_8063B4C0
-lbl_8063B4C0:
+mGlobalVariable__Q44nw4r3snd6detail9SeqPlayer:
 	.skip 0x20

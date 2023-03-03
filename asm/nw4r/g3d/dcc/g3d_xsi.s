@@ -833,7 +833,7 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-
+#funcTable$7095
 .global lbl_80521010
 lbl_80521010:
 	.4byte MakeTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_xsi_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
@@ -844,7 +844,7 @@ lbl_80521010:
 	.4byte MakeTexSrtMtx_R__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_xsi_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 	.4byte MakeTexSrtMtx_S__Q54nw4r3g3d6detail3dcc21_unnamed_g3d_xsi_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 
-
+#funcTable$7097
 .global lbl_8052102C
 lbl_8052102C:
 	.4byte ProductTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_xsi_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt

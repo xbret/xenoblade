@@ -8,7 +8,7 @@
 /* 803FCD44 003C6304  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803FCD48 003C6308  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 803FCD4C 003C630C  7C 7F 1B 78 */	mr r31, r3
-/* 803FCD50 003C6310  80 6D 9C 60 */	lwz r3, lbl_80665DE0@sda21(r13)
+/* 803FCD50 003C6310  80 6D 9C 60 */	lwz r3, "NW4R_G3D_Version___22@unnamed@g3d_init_cpp@"@sda21(r13)
 /* 803FCD54 003C6314  4B F5 5F AD */	bl OSRegisterVersion
 /* 803FCD58 003C6318  2C 1F 00 00 */	cmpwi r31, 0
 /* 803FCD5C 003C631C  41 82 00 0C */	beq .L_803FCD68
@@ -89,7 +89,6 @@ lbl_8056D108:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665DE0
-lbl_80665DE0:
+"NW4R_G3D_Version___22@unnamed@g3d_init_cpp@":
 	.4byte lbl_8056D108
 	.4byte 0

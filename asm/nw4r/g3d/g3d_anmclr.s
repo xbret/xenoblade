@@ -337,7 +337,7 @@
 /* 803E2034 003AB5F4  FC 00 08 00 */	fcmpu cr0, f0, f1
 /* 803E2038 003AB5F8  41 82 00 8C */	beq .L_803E20C4
 /* 803E203C 003AB5FC  C0 43 00 1C */	lfs f2, 0x1c(r3)
-/* 803E2040 003AB600  C0 2D 9C 10 */	lfs f1, float_80665D90@sda21(r13)
+/* 803E2040 003AB600  C0 2D 9C 10 */	lfs f1, smBaseUpdateRate__Q34nw4r3g3d9FrameCtrl@sda21(r13)
 /* 803E2044 003AB604  C0 03 00 18 */	lfs f0, 0x18(r3)
 /* 803E2048 003AB608  EC 62 00 72 */	fmuls f3, f2, f1
 /* 803E204C 003AB60C  81 83 00 28 */	lwz r12, 0x28(r3)
@@ -892,31 +892,31 @@
 .endfn __or__Q34nw4r2ut5ColorCFUl
 
 .fn IsDerivedFrom__Q34nw4r3g3d15AnmObjMatClrResCFQ44nw4r3g3d6G3dObj7TypeObj, global
-/* 803E27F8 003ABDB8  3C 60 80 52 */	lis r3, lbl_80520E60@ha
+/* 803E27F8 003ABDB8  3C 60 80 52 */	lis r3, TYPE_NAME__Q34nw4r3g3d15AnmObjMatClrRes@ha
 /* 803E27FC 003ABDBC  80 04 00 00 */	lwz r0, 0(r4)
-/* 803E2800 003ABDC0  38 63 0E 60 */	addi r3, r3, lbl_80520E60@l
+/* 803E2800 003ABDC0  38 63 0E 60 */	addi r3, r3, TYPE_NAME__Q34nw4r3g3d15AnmObjMatClrRes@l
 /* 803E2804 003ABDC4  7C 00 18 40 */	cmplw r0, r3
 /* 803E2808 003ABDC8  40 82 00 0C */	bne .L_803E2814
 /* 803E280C 003ABDCC  38 60 00 01 */	li r3, 1
 /* 803E2810 003ABDD0  4E 80 00 20 */	blr
 .L_803E2814:
-/* 803E2814 003ABDD4  3C 60 80 52 */	lis r3, lbl_80520E48@ha
+/* 803E2814 003ABDD4  3C 60 80 52 */	lis r3, TYPE_NAME__Q34nw4r3g3d12AnmObjMatClr@ha
 /* 803E2818 003ABDD8  80 04 00 00 */	lwz r0, 0(r4)
-/* 803E281C 003ABDDC  38 63 0E 48 */	addi r3, r3, lbl_80520E48@l
+/* 803E281C 003ABDDC  38 63 0E 48 */	addi r3, r3, TYPE_NAME__Q34nw4r3g3d12AnmObjMatClr@l
 /* 803E2820 003ABDE0  7C 00 18 40 */	cmplw r0, r3
 /* 803E2824 003ABDE4  40 82 00 0C */	bne .L_803E2830
 /* 803E2828 003ABDE8  38 60 00 01 */	li r3, 1
 /* 803E282C 003ABDEC  4E 80 00 20 */	blr
 .L_803E2830:
-/* 803E2830 003ABDF0  3C 60 80 52 */	lis r3, lbl_80520F68@ha
-/* 803E2834 003ABDF4  38 63 0F 68 */	addi r3, r3, lbl_80520F68@l
+/* 803E2830 003ABDF0  3C 60 80 52 */	lis r3, TYPE_NAME__Q34nw4r3g3d6AnmObj@ha
+/* 803E2834 003ABDF4  38 63 0F 68 */	addi r3, r3, TYPE_NAME__Q34nw4r3g3d6AnmObj@l
 /* 803E2838 003ABDF8  7C 00 18 40 */	cmplw r0, r3
 /* 803E283C 003ABDFC  40 82 00 0C */	bne .L_803E2848
 /* 803E2840 003ABE00  38 60 00 01 */	li r3, 1
 /* 803E2844 003ABE04  4E 80 00 20 */	blr
 .L_803E2848:
-/* 803E2848 003ABE08  3C 60 80 52 */	lis r3, lbl_80520F58@ha
-/* 803E284C 003ABE0C  38 63 0F 58 */	addi r3, r3, lbl_80520F58@l
+/* 803E2848 003ABE08  3C 60 80 52 */	lis r3, TYPE_NAME__Q34nw4r3g3d6G3dObj@ha
+/* 803E284C 003ABE0C  38 63 0F 58 */	addi r3, r3, TYPE_NAME__Q34nw4r3g3d6G3dObj@l
 /* 803E2850 003ABE10  7C 00 18 50 */	subf r0, r0, r3
 /* 803E2854 003ABE14  7C 00 00 34 */	cntlzw r0, r0
 /* 803E2858 003ABE18  54 03 D9 7E */	srwi r3, r0, 5
@@ -924,24 +924,24 @@
 .endfn IsDerivedFrom__Q34nw4r3g3d15AnmObjMatClrResCFQ44nw4r3g3d6G3dObj7TypeObj
 
 .fn IsDerivedFrom__Q34nw4r3g3d12AnmObjMatClrCFQ44nw4r3g3d6G3dObj7TypeObj, global
-/* 803E2860 003ABE20  3C 60 80 52 */	lis r3, lbl_80520E48@ha
+/* 803E2860 003ABE20  3C 60 80 52 */	lis r3, TYPE_NAME__Q34nw4r3g3d12AnmObjMatClr@ha
 /* 803E2864 003ABE24  80 04 00 00 */	lwz r0, 0(r4)
-/* 803E2868 003ABE28  38 63 0E 48 */	addi r3, r3, lbl_80520E48@l
+/* 803E2868 003ABE28  38 63 0E 48 */	addi r3, r3, TYPE_NAME__Q34nw4r3g3d12AnmObjMatClr@l
 /* 803E286C 003ABE2C  7C 00 18 40 */	cmplw r0, r3
 /* 803E2870 003ABE30  40 82 00 0C */	bne .L_803E287C
 /* 803E2874 003ABE34  38 60 00 01 */	li r3, 1
 /* 803E2878 003ABE38  4E 80 00 20 */	blr
 .L_803E287C:
-/* 803E287C 003ABE3C  3C 60 80 52 */	lis r3, lbl_80520F68@ha
+/* 803E287C 003ABE3C  3C 60 80 52 */	lis r3, TYPE_NAME__Q34nw4r3g3d6AnmObj@ha
 /* 803E2880 003ABE40  80 04 00 00 */	lwz r0, 0(r4)
-/* 803E2884 003ABE44  38 63 0F 68 */	addi r3, r3, lbl_80520F68@l
+/* 803E2884 003ABE44  38 63 0F 68 */	addi r3, r3, TYPE_NAME__Q34nw4r3g3d6AnmObj@l
 /* 803E2888 003ABE48  7C 00 18 40 */	cmplw r0, r3
 /* 803E288C 003ABE4C  40 82 00 0C */	bne .L_803E2898
 /* 803E2890 003ABE50  38 60 00 01 */	li r3, 1
 /* 803E2894 003ABE54  4E 80 00 20 */	blr
 .L_803E2898:
-/* 803E2898 003ABE58  3C 60 80 52 */	lis r3, lbl_80520F58@ha
-/* 803E289C 003ABE5C  38 63 0F 58 */	addi r3, r3, lbl_80520F58@l
+/* 803E2898 003ABE58  3C 60 80 52 */	lis r3, TYPE_NAME__Q34nw4r3g3d6G3dObj@ha
+/* 803E289C 003ABE5C  38 63 0F 58 */	addi r3, r3, TYPE_NAME__Q34nw4r3g3d6G3dObj@l
 /* 803E28A0 003ABE60  7C 00 18 50 */	subf r0, r0, r3
 /* 803E28A4 003ABE64  7C 00 00 34 */	cntlzw r0, r0
 /* 803E28A8 003ABE68  54 03 D9 7E */	srwi r3, r0, 5
@@ -964,8 +964,8 @@
 .endfn GetTypeName__Q34nw4r3g3d15AnmObjMatClrResCFv
 
 .fn GetTypeObj__Q34nw4r3g3d15AnmObjMatClrResCFv, global
-/* 803E28E0 003ABEA0  3C 60 80 52 */	lis r3, lbl_80520E60@ha
-/* 803E28E4 003ABEA4  38 63 0E 60 */	addi r3, r3, lbl_80520E60@l
+/* 803E28E0 003ABEA0  3C 60 80 52 */	lis r3, TYPE_NAME__Q34nw4r3g3d15AnmObjMatClrRes@ha
+/* 803E28E4 003ABEA4  38 63 0E 60 */	addi r3, r3, TYPE_NAME__Q34nw4r3g3d15AnmObjMatClrRes@l
 /* 803E28E8 003ABEA8  4E 80 00 20 */	blr 
 .endfn GetTypeObj__Q34nw4r3g3d15AnmObjMatClrResCFv
 
@@ -1006,24 +1006,24 @@
 .endfn GetTypeName__Q34nw4r3g3d12AnmObjMatClrCFv
 
 .fn GetTypeObj__Q34nw4r3g3d12AnmObjMatClrCFv, global
-/* 803E2960 003ABF20  3C 60 80 52 */	lis r3, lbl_80520E48@ha
-/* 803E2964 003ABF24  38 63 0E 48 */	addi r3, r3, lbl_80520E48@l
+/* 803E2960 003ABF20  3C 60 80 52 */	lis r3, TYPE_NAME__Q34nw4r3g3d12AnmObjMatClr@ha
+/* 803E2964 003ABF24  38 63 0E 48 */	addi r3, r3, TYPE_NAME__Q34nw4r3g3d12AnmObjMatClr@l
 /* 803E2968 003ABF28  4E 80 00 20 */	blr 
 .endfn GetTypeObj__Q34nw4r3g3d12AnmObjMatClrCFv
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_80520E48
-lbl_80520E48:
+.global TYPE_NAME__Q34nw4r3g3d12AnmObjMatClr
+TYPE_NAME__Q34nw4r3g3d12AnmObjMatClr:
 	.4byte 0x0000000D
 	.asciz "AnmObjMatClr"
 	.balign 4
 	.4byte 0
 
 
-.global lbl_80520E60
-lbl_80520E60:
+.global TYPE_NAME__Q34nw4r3g3d15AnmObjMatClrRes
+TYPE_NAME__Q34nw4r3g3d15AnmObjMatClrRes:
 	.4byte 0x00000010
 	.asciz "AnmObjMatClrRes"
 	.4byte 0
@@ -1073,6 +1073,17 @@ lbl_8056CAA8:
 	.4byte Attach__Q34nw4r3g3d12AnmObjMatClrFiPQ34nw4r3g3d15AnmObjMatClrRes
 	.4byte Detach__Q34nw4r3g3d12AnmObjMatClrFi
 	.4byte DetachAll__Q34nw4r3g3d12AnmObjMatClrFv
+
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+#@LOCAL@GetAnmPlayPolicy__Q24nw4r3g3dFQ34nw4r3g3d9AnmPolicy@policyTable
+.global lbl_80665D88
+lbl_80665D88:
+	.4byte PlayPolicy_Onetime__Q24nw4r3g3dFfff
+	.4byte PlayPolicy_Loop__Q24nw4r3g3dFfff
+
+
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

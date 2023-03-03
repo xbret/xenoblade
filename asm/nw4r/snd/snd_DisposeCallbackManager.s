@@ -264,12 +264,15 @@
 .global lbl_8063B1D0
 lbl_8063B1D0:
 	.skip 0xC
+
+#@LOCAL@GetInstance__Q44nw4r3snd6detail22DisposeCallbackManagerFv@instance
 .global lbl_8063B1DC
 lbl_8063B1DC:
 	.skip 0xC
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+#@GUARD@GetInstance__Q44nw4r3snd6detail22DisposeCallbackManagerFv@instance
 .global lbl_80667DC0
 lbl_80667DC0:
 	.skip 0x8

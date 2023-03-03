@@ -460,7 +460,7 @@
 lbl_8056E0A0:
 	.4byte 0
 	.4byte 0
-	.4byte func_801C2EB0
+	.4byte __dt__Q34nw4r3snd11FxDelayDpl2Fv
 	.4byte StartUp__Q34nw4r3snd11FxDelayDpl2Fv
 	.4byte Shutdown__Q34nw4r3snd11FxDelayDpl2Fv
 	.4byte UpdateBuffer__Q34nw4r3snd11FxDelayDpl2FiPPvUlQ34nw4r3snd12SampleFormatfQ34nw4r3snd10OutputMode

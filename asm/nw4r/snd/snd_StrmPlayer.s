@@ -45,14 +45,14 @@
 /* 80422634 003EBBF4  93 FE 01 A0 */	stw r31, 0x1a0(r30)
 /* 80422638 003EBBF8  4B E9 74 C9 */	bl __construct_array
 /* 8042263C 003EBBFC  93 FE 08 28 */	stw r31, 0x828(r30)
-/* 80422640 003EBC00  88 0D BC 78 */	lbz r0, lbl_80667DF8@sda21(r13)
+/* 80422640 003EBC00  88 0D BC 78 */	lbz r0, sStaticInitFlag__Q44nw4r3snd6detail10StrmPlayer@sda21(r13)
 /* 80422644 003EBC04  2C 00 00 00 */	cmpwi r0, 0
 /* 80422648 003EBC08  40 82 00 18 */	bne .L_80422660
-/* 8042264C 003EBC0C  3C 60 80 65 */	lis r3, lbl_80657000@ha
-/* 80422650 003EBC10  38 63 70 00 */	addi r3, r3, lbl_80657000@l
+/* 8042264C 003EBC0C  3C 60 80 65 */	lis r3, sLoadBufferMutex__Q44nw4r3snd6detail10StrmPlayer@ha
+/* 80422650 003EBC10  38 63 70 00 */	addi r3, r3, sLoadBufferMutex__Q44nw4r3snd6detail10StrmPlayer@l
 /* 80422654 003EBC14  4B F3 75 CD */	bl OSInitMutex
 /* 80422658 003EBC18  38 00 00 01 */	li r0, 1
-/* 8042265C 003EBC1C  98 0D BC 78 */	stb r0, lbl_80667DF8@sda21(r13)
+/* 8042265C 003EBC1C  98 0D BC 78 */	stb r0, sStaticInitFlag__Q44nw4r3snd6detail10StrmPlayer@sda21(r13)
 .L_80422660:
 /* 80422660 003EBC20  38 7E 01 A0 */	addi r3, r30, 0x1a0
 /* 80422664 003EBC24  38 9E 01 A4 */	addi r4, r30, 0x1a4
@@ -950,9 +950,9 @@
 /* 804232C4 003EC884  90 01 00 74 */	stw r0, 0x74(r1)
 /* 804232C8 003EC888  39 61 00 70 */	addi r11, r1, 0x70
 /* 804232CC 003EC88C  4B E9 6E 85 */	bl _savegpr_26
-/* 804232D0 003EC890  3F E0 80 65 */	lis r31, lbl_80657000@ha
+/* 804232D0 003EC890  3F E0 80 65 */	lis r31, sLoadBufferMutex__Q44nw4r3snd6detail10StrmPlayer@ha
 /* 804232D4 003EC894  7C 7D 1B 78 */	mr r29, r3
-/* 804232D8 003EC898  3B FF 70 00 */	addi r31, r31, lbl_80657000@l
+/* 804232D8 003EC898  3B FF 70 00 */	addi r31, r31, sLoadBufferMutex__Q44nw4r3snd6detail10StrmPlayer@l
 /* 804232DC 003EC89C  7C 9B 23 78 */	mr r27, r4
 /* 804232E0 003EC8A0  7C BA 2B 78 */	mr r26, r5
 /* 804232E4 003EC8A4  7C DE 33 78 */	mr r30, r6
@@ -961,9 +961,9 @@
 /* 804232F0 003EC8B0  93 61 00 08 */	stw r27, 8(r1)
 /* 804232F4 003EC8B4  38 61 00 0C */	addi r3, r1, 0xc
 /* 804232F8 003EC8B8  4B FF E8 F1 */	bl __ct__Q44nw4r3snd6detail14StrmFileReaderFv
-/* 804232FC 003EC8BC  3C 80 80 65 */	lis r4, lbl_80653000@ha
+/* 804232FC 003EC8BC  3C 80 80 65 */	lis r4, sLoadBuffer__Q44nw4r3snd6detail10StrmPlayer@ha
 /* 80423300 003EC8C0  38 61 00 08 */	addi r3, r1, 8
-/* 80423304 003EC8C4  38 84 30 00 */	addi r4, r4, lbl_80653000@l
+/* 80423304 003EC8C4  38 84 30 00 */	addi r4, r4, sLoadBuffer__Q44nw4r3snd6detail10StrmPlayer@l
 /* 80423308 003EC8C8  38 A0 40 00 */	li r5, 0x4000
 /* 8042330C 003EC8CC  4B FF EC C5 */	bl LoadFileHeader__Q44nw4r3snd6detail14StrmFileLoaderFPvUl
 /* 80423310 003EC8D0  2C 03 00 00 */	cmpwi r3, 0
@@ -1158,7 +1158,7 @@
 /* 804235A0 003ECB60  7C F4 3B 78 */	mr r20, r7
 /* 804235A4 003ECB64  7D 15 43 78 */	mr r21, r8
 /* 804235A8 003ECB68  7D 36 4B 78 */	mr r22, r9
-/* 804235AC 003ECB6C  3A 0D BC B0 */	addi r16, r13, lbl_80667E30@sda21
+/* 804235AC 003ECB6C  3A 0D BC B0 */	addi r16, r13, typeInfo__Q34nw4r2ut13DvdFileStream@sda21
 /* 804235B0 003ECB70  41 82 00 4C */	beq .L_804235FC
 /* 804235B4 003ECB74  81 93 00 00 */	lwz r12, 0(r19)
 /* 804235B8 003ECB78  7E 63 9B 78 */	mr r3, r19
@@ -1190,16 +1190,16 @@
 /* 80423608 003ECBC8  38 00 00 01 */	li r0, 1
 /* 8042360C 003ECBCC  90 03 00 68 */	stw r0, 0x68(r3)
 .L_80423610:
-/* 80423610 003ECBD0  3F 80 80 65 */	lis r28, lbl_80657000@ha
-/* 80423614 003ECBD4  3B 9C 70 00 */	addi r28, r28, lbl_80657000@l
+/* 80423610 003ECBD0  3F 80 80 65 */	lis r28, sLoadBufferMutex__Q44nw4r3snd6detail10StrmPlayer@ha
+/* 80423614 003ECBD4  3B 9C 70 00 */	addi r28, r28, sLoadBufferMutex__Q44nw4r3snd6detail10StrmPlayer@l
 /* 80423618 003ECBD8  7F 83 E3 78 */	mr r3, r28
 /* 8042361C 003ECBDC  4B F3 66 45 */	bl OSLockMutex
-/* 80423620 003ECBE0  3F A0 80 65 */	lis r29, lbl_80653000@ha
+/* 80423620 003ECBE0  3F A0 80 65 */	lis r29, sLoadBuffer__Q44nw4r3snd6detail10StrmPlayer@ha
 /* 80423624 003ECBE4  38 80 40 00 */	li r4, 0x4000
-/* 80423628 003ECBE8  38 7D 30 00 */	addi r3, r29, lbl_80653000@l
+/* 80423628 003ECBE8  38 7D 30 00 */	addi r3, r29, sLoadBuffer__Q44nw4r3snd6detail10StrmPlayer@l
 /* 8042362C 003ECBEC  4B F3 09 55 */	bl DCInvalidateRange
 /* 80423630 003ECBF0  A0 12 00 F0 */	lhz r0, 0xf0(r18)
-/* 80423634 003ECBF4  3B DD 30 00 */	addi r30, r29, lbl_80653000@l
+/* 80423634 003ECBF4  3B DD 30 00 */	addi r30, r29, sLoadBuffer__Q44nw4r3snd6detail10StrmPlayer@l
 /* 80423638 003ECBF8  3B E1 00 08 */	addi r31, r1, 8
 /* 8042363C 003ECBFC  3B 40 00 00 */	li r26, 0
 /* 80423640 003ECC00  7F 6F 02 14 */	add r27, r15, r0
@@ -1223,7 +1223,7 @@
 /* 80423680 003ECC40  81 93 00 00 */	lwz r12, 0(r19)
 /* 80423684 003ECC44  7E 63 9B 78 */	mr r3, r19
 /* 80423688 003ECC48  7F 05 C3 78 */	mr r5, r24
-/* 8042368C 003ECC4C  38 9D 30 00 */	addi r4, r29, lbl_80653000@l
+/* 8042368C 003ECC4C  38 9D 30 00 */	addi r4, r29, sLoadBuffer__Q44nw4r3snd6detail10StrmPlayer@l
 /* 80423690 003ECC50  81 8C 00 14 */	lwz r12, 0x14(r12)
 /* 80423694 003ECC54  7D 89 03 A6 */	mtctr r12
 /* 80423698 003ECC58  4E 80 04 21 */	bctrl 
@@ -1590,7 +1590,7 @@
 /* 80423B7C 003ED13C  2C 00 00 00 */	cmpwi r0, 0
 /* 80423B80 003ED140  40 82 00 98 */	bne .L_80423C18
 /* 80423B84 003ED144  83 A3 08 28 */	lwz r29, 0x828(r3)
-/* 80423B88 003ED148  3B CD BC B0 */	addi r30, r13, lbl_80667E30@sda21
+/* 80423B88 003ED148  3B CD BC B0 */	addi r30, r13, typeInfo__Q34nw4r2ut13DvdFileStream@sda21
 /* 80423B8C 003ED14C  2C 1D 00 00 */	cmpwi r29, 0
 /* 80423B90 003ED150  41 82 00 48 */	beq .L_80423BD8
 /* 80423B94 003ED154  81 9D 00 00 */	lwz r12, 0(r29)
@@ -1928,7 +1928,7 @@
 /* 80424050 003ED610  2C 1C 00 00 */	cmpwi r28, 0
 /* 80424054 003ED614  41 82 01 30 */	beq .L_80424184
 /* 80424058 003ED618  83 A3 08 28 */	lwz r29, 0x828(r3)
-/* 8042405C 003ED61C  3B CD BC B0 */	addi r30, r13, lbl_80667E30@sda21
+/* 8042405C 003ED61C  3B CD BC B0 */	addi r30, r13, typeInfo__Q34nw4r2ut13DvdFileStream@sda21
 /* 80424060 003ED620  2C 1D 00 00 */	cmpwi r29, 0
 /* 80424064 003ED624  41 82 00 48 */	beq .L_804240AC
 /* 80424068 003ED628  81 9D 00 00 */	lwz r12, 0(r29)
@@ -3175,15 +3175,15 @@ float_8066C880:
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_80653000
-lbl_80653000:
+
+sLoadBuffer__Q44nw4r3snd6detail10StrmPlayer:
 	.skip 0x4000
-.global lbl_80657000
-lbl_80657000:
+
+sLoadBufferMutex__Q44nw4r3snd6detail10StrmPlayer:
 	.skip 0x18
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667DF8
-lbl_80667DF8:
+.global sStaticInitFlag__Q44nw4r3snd6detail10StrmPlayer
+sStaticInitFlag__Q44nw4r3snd6detail10StrmPlayer:
 	.skip 0x8

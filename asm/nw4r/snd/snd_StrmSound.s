@@ -556,13 +556,13 @@
 .endfn IsPrepared__Q44nw4r3snd6detail9StrmSoundCFv
 
 .fn GetRuntimeTypeInfo__Q44nw4r3snd6detail9StrmSoundCFv, global
-/* 80425738 003EECF8  38 6D BC 80 */	addi r3, r13, lbl_80667E00@sda21
+/* 80425738 003EECF8  38 6D BC 80 */	addi r3, r13, typeInfo__Q44nw4r3snd6detail9StrmSound@sda21
 /* 8042573C 003EECFC  4E 80 00 20 */	blr
 .endfn GetRuntimeTypeInfo__Q44nw4r3snd6detail9StrmSoundCFv
 
 .fn "__sinit_\snd_StrmSound_cpp", local
-/* 80425740 003EED00  38 0D BC 30 */	addi r0, r13, lbl_80667DB0@sda21
-/* 80425744 003EED04  90 0D BC 80 */	stw r0, lbl_80667E00@sda21(r13)
+/* 80425740 003EED00  38 0D BC 30 */	addi r0, r13, typeInfo__Q44nw4r3snd6detail10BasicSound@sda21
+/* 80425744 003EED04  90 0D BC 80 */	stw r0, typeInfo__Q44nw4r3snd6detail9StrmSound@sda21(r13)
 /* 80425748 003EED08  4E 80 00 20 */	blr
 .endfn "__sinit_\snd_StrmSound_cpp"
 
@@ -608,6 +608,6 @@ double_8066C890:
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667E00
-lbl_80667E00:
+.global typeInfo__Q44nw4r3snd6detail9StrmSound
+typeInfo__Q44nw4r3snd6detail9StrmSound:
 	.skip 0x8

@@ -81,8 +81,7 @@
 /* 80418924 003E1EE4  4B FF E5 48 */	b CountImpl__Q44nw4r3snd6detail8PoolImplCFv
 .endfn GetAllocatableTrackCount__Q44nw4r3snd6detail20MmlSeqTrackAllocatorCFv
 
-#__dt__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFv or __dt__Q44nw4r3snd6detail17SeqTrackAllocatorFv
-.fn func_80418928, global
+.fn __dt__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFv, global
 /* 80418928 003E1EE8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8041892C 003E1EEC  7C 08 02 A6 */	mflr r0
 /* 80418930 003E1EF0  2C 03 00 00 */	cmpwi r3, 0
@@ -100,7 +99,7 @@
 /* 8041895C 003E1F1C  7C 08 03 A6 */	mtlr r0
 /* 80418960 003E1F20  38 21 00 10 */	addi r1, r1, 0x10
 /* 80418964 003E1F24  4E 80 00 20 */	blr 
-.endfn func_80418928
+.endfn __dt__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFv
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
@@ -108,7 +107,7 @@
 lbl_8056E3B0:
 	.4byte 0
 	.4byte 0
-	.4byte func_80418928
+	.4byte __dt__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFv
 	.4byte AllocTrack__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPQ44nw4r3snd6detail9SeqPlayer
 	.4byte FreeTrack__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPQ44nw4r3snd6detail8SeqTrack
 	.4byte GetAllocatableTrackCount__Q44nw4r3snd6detail20MmlSeqTrackAllocatorCFv

@@ -163,10 +163,10 @@
 .endfn MTX34RotAxisFIdx__Q24nw4r4mathFPQ34nw4r4math5MTX34PCQ34nw4r4math4VEC3f
 
 .fn MTX34RotXYZFIdx__Q24nw4r4mathFPQ34nw4r4math5MTX34fff, global
-/* 8040B220 003D47E0  3C 80 80 52 */	lis r4, lbl_80521110@ha
+/* 8040B220 003D47E0  3C 80 80 52 */	lis r4, gSinCosTbl__Q34nw4r4math6detail@ha
 /* 8040B224 003D47E4  38 02 C2 D0 */	addi r0, r2, lbl_8066C650@sda21
 /* 8040B228 003D47E8  94 21 FF F0 */	stwu r1, -0x10(r1)
-/* 8040B22C 003D47EC  38 84 11 10 */	addi r4, r4, lbl_80521110@l
+/* 8040B22C 003D47EC  38 84 11 10 */	addi r4, r4, gSinCosTbl__Q34nw4r4math6detail@l
 /* 8040B230 003D47F0  10 00 00 0C */	psq_lx f0, r0, r0, 0, qr0
 /* 8040B234 003D47F4  10 C1 14 20 */	ps_merge00 f6, f1, f2
 /* 8040B238 003D47F8  10 00 04 20 */	ps_merge00 f0, f0, f0

@@ -563,12 +563,15 @@
 .global lbl_80657018
 lbl_80657018:
 	.skip 0xC
+
+#@LOCAL@GetInstance__Q44nw4r3snd6detail11TaskManagerFv@instance
 .global lbl_80657024
 lbl_80657024:
 	.skip 0x3C
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+#@GUARD@GetInstance__Q44nw4r3snd6detail11TaskManagerFv@instance
 .global lbl_80667E08
 lbl_80667E08:
 	.skip 0x8

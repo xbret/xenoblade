@@ -540,7 +540,7 @@
 .endfn func_80039890
 
 #part of lyt_arcResourceAccessor
-.fn func_8003997C, global
+.fn __dt__Q34nw4r3lyt19ArcResourceAccessorFv, global
 /* 8003997C 00002F3C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039980 00002F40  7C 08 02 A6 */	mflr r0
 /* 80039984 00002F44  2C 03 00 00 */	cmpwi r3, 0
@@ -568,7 +568,7 @@
 /* 800399D4 00002F94  7C 08 03 A6 */	mtlr r0
 /* 800399D8 00002F98  38 21 00 10 */	addi r1, r1, 0x10
 /* 800399DC 00002F9C  4E 80 00 20 */	blr 
-.endfn func_8003997C
+.endfn __dt__Q34nw4r3lyt19ArcResourceAccessorFv
 
 .fn __dt__800399E0, global
 /* 800399E0 00002FA0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1264,7 +1264,7 @@ lbl_80666608:
 
 .obj "@eti_80021098", local
 .hidden "@eti_80021098"
-	.4byte func_8003997C
+	.4byte __dt__Q34nw4r3lyt19ArcResourceAccessorFv
 	.4byte 0x00000064
 	.4byte "@etb_80006768"
 .endobj "@eti_80021098"

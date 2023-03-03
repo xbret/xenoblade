@@ -432,15 +432,15 @@
 /* 8040CA7C 003D603C  88 03 00 18 */	lbz r0, 0x18(r3)
 /* 8040CA80 003D6040  2C 00 00 00 */	cmpwi r0, 0
 /* 8040CA84 003D6044  40 82 00 DC */	bne .L_8040CB60
-/* 8040CA88 003D6048  3F C0 80 64 */	lis r30, lbl_8063AD20@ha
+/* 8040CA88 003D6048  3F C0 80 64 */	lis r30, sZeroBuffer__Q44nw4r3snd6detail9AxManager@ha
 /* 8040CA8C 003D604C  38 80 00 00 */	li r4, 0
-/* 8040CA90 003D6050  38 7E AD 20 */	addi r3, r30, lbl_8063AD20@l
+/* 8040CA90 003D6050  38 7E AD 20 */	addi r3, r30, sZeroBuffer__Q44nw4r3snd6detail9AxManager@l
 /* 8040CA94 003D6054  38 A0 01 00 */	li r5, 0x100
 /* 8040CA98 003D6058  4B BF 78 B9 */	bl memset
-/* 8040CA9C 003D605C  38 7E AD 20 */	addi r3, r30, lbl_8063AD20@l
+/* 8040CA9C 003D605C  38 7E AD 20 */	addi r3, r30, sZeroBuffer__Q44nw4r3snd6detail9AxManager@l
 /* 8040CAA0 003D6060  38 80 01 00 */	li r4, 0x100
 /* 8040CAA4 003D6064  4B F4 75 0D */	bl DCFlushRange
-/* 8040CAA8 003D6068  38 1E AD 20 */	addi r0, r30, lbl_8063AD20@l
+/* 8040CAA8 003D6068  38 1E AD 20 */	addi r0, r30, sZeroBuffer__Q44nw4r3snd6detail9AxManager@l
 /* 8040CAAC 003D606C  90 1D 00 04 */	stw r0, 4(r29)
 /* 8040CAB0 003D6070  4B F4 BF 01 */	bl OSDisableInterrupts
 /* 8040CAB4 003D6074  7C 7F 1B 78 */	mr r31, r3
@@ -466,17 +466,17 @@
 /* 8040CB04 003D60C4  38 63 D3 20 */	addi r3, r3, AxCallbackFunc__Q44nw4r3snd6detail9AxManagerFv@l
 /* 8040CB08 003D60C8  4B EC 76 69 */	bl AXRegisterCallback
 /* 8040CB0C 003D60CC  90 7D 00 14 */	stw r3, 0x14(r29)
-/* 8040CB10 003D60D0  3F C0 80 64 */	lis r30, lbl_8063AE20@ha
-/* 8040CB14 003D60D4  38 7E AE 20 */	addi r3, r30, lbl_8063AE20@l
+/* 8040CB10 003D60D0  3F C0 80 64 */	lis r30, sBiquadFilterCallbackTable__Q44nw4r3snd6detail9AxManager@ha
+/* 8040CB14 003D60D4  38 7E AE 20 */	addi r3, r30, sBiquadFilterCallbackTable__Q44nw4r3snd6detail9AxManager@l
 /* 8040CB18 003D60D8  38 80 00 00 */	li r4, 0
 /* 8040CB1C 003D60DC  38 A0 02 00 */	li r5, 0x200
 /* 8040CB20 003D60E0  4B BF 78 31 */	bl memset
-/* 8040CB24 003D60E4  39 1E AE 20 */	addi r8, r30, lbl_8063AE20@l
-/* 8040CB28 003D60E8  38 0D BC 08 */	addi r0, r13, lbl_80667D88@sda21
-/* 8040CB2C 003D60EC  38 ED BC 0C */	addi r7, r13, lbl_80667D8C@sda21
-/* 8040CB30 003D60F0  38 CD BC 10 */	addi r6, r13, lbl_80667D90@sda21
-/* 8040CB34 003D60F4  38 AD BC 14 */	addi r5, r13, lbl_80667D94@sda21
-/* 8040CB38 003D60F8  38 8D BC 18 */	addi r4, r13, lbl_80667D98@sda21
+/* 8040CB24 003D60E4  39 1E AE 20 */	addi r8, r30, sBiquadFilterCallbackTable__Q44nw4r3snd6detail9AxManager@l
+/* 8040CB28 003D60E8  38 0D BC 08 */	addi r0, r13, sBiquadFilterLpf__Q44nw4r3snd6detail9AxManager@sda21
+/* 8040CB2C 003D60EC  38 ED BC 0C */	addi r7, r13, sBiquadFilterHpf__Q44nw4r3snd6detail9AxManager@sda21
+/* 8040CB30 003D60F0  38 CD BC 10 */	addi r6, r13, sBiquadFilterBpf512__Q44nw4r3snd6detail9AxManager@sda21
+/* 8040CB34 003D60F4  38 AD BC 14 */	addi r5, r13, sBiquadFilterBpf1024__Q44nw4r3snd6detail9AxManager@sda21
+/* 8040CB38 003D60F8  38 8D BC 18 */	addi r4, r13, sBiquadFilterBpf2048__Q44nw4r3snd6detail9AxManager@sda21
 /* 8040CB3C 003D60FC  90 08 00 04 */	stw r0, 4(r8)
 /* 8040CB40 003D6100  38 00 00 01 */	li r0, 1
 /* 8040CB44 003D6104  7F E3 FB 78 */	mr r3, r31
@@ -1752,49 +1752,49 @@
 .fn "__sinit_\snd_AxManager_cpp", local
 /* 8040DCB4 003D7274  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040DCB8 003D7278  7C 08 02 A6 */	mflr r0
-/* 8040DCBC 003D727C  3C 60 80 57 */	lis r3, lbl_8056E068@ha
-/* 8040DCC0 003D7280  3C 80 80 41 */	lis r4, func_8040DD80@ha
+/* 8040DCBC 003D727C  3C 60 80 57 */	lis r3, __vt__Q44nw4r3snd6detail15BiquadFilterLpf@ha
+/* 8040DCC0 003D7280  3C 80 80 41 */	lis r4, __dt__Q44nw4r3snd6detail15BiquadFilterLpfFv@ha
 /* 8040DCC4 003D7284  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8040DCC8 003D7288  38 63 E0 68 */	addi r3, r3, lbl_8056E068@l
-/* 8040DCCC 003D728C  38 84 DD 80 */	addi r4, r4, func_8040DD80@l
+/* 8040DCC8 003D7288  38 63 E0 68 */	addi r3, r3, __vt__Q44nw4r3snd6detail15BiquadFilterLpf@l
+/* 8040DCCC 003D728C  38 84 DD 80 */	addi r4, r4, __dt__Q44nw4r3snd6detail15BiquadFilterLpfFv@l
 /* 8040DCD0 003D7290  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8040DCD4 003D7294  3F E0 80 64 */	lis r31, lbl_8063AD20@ha
-/* 8040DCD8 003D7298  3B FF AD 20 */	addi r31, r31, lbl_8063AD20@l
-/* 8040DCDC 003D729C  90 6D BC 08 */	stw r3, lbl_80667D88@sda21(r13)
-/* 8040DCE0 003D72A0  38 6D BC 08 */	addi r3, r13, lbl_80667D88@sda21
+/* 8040DCD4 003D7294  3F E0 80 64 */	lis r31, sZeroBuffer__Q44nw4r3snd6detail9AxManager@ha
+/* 8040DCD8 003D7298  3B FF AD 20 */	addi r31, r31, sZeroBuffer__Q44nw4r3snd6detail9AxManager@l
+/* 8040DCDC 003D729C  90 6D BC 08 */	stw r3, sBiquadFilterLpf__Q44nw4r3snd6detail9AxManager@sda21(r13)
+/* 8040DCE0 003D72A0  38 6D BC 08 */	addi r3, r13, sBiquadFilterLpf__Q44nw4r3snd6detail9AxManager@sda21
 /* 8040DCE4 003D72A4  38 BF 03 00 */	addi r5, r31, 0x300
 /* 8040DCE8 003D72A8  4B EA B9 B5 */	bl __register_global_object
-/* 8040DCEC 003D72AC  3C 60 80 57 */	lis r3, lbl_8056E058@ha
-/* 8040DCF0 003D72B0  3C 80 80 41 */	lis r4, func_8040DDC0@ha
-/* 8040DCF4 003D72B4  38 63 E0 58 */	addi r3, r3, lbl_8056E058@l
+/* 8040DCEC 003D72AC  3C 60 80 57 */	lis r3, __vt__Q44nw4r3snd6detail15BiquadFilterHpf@ha
+/* 8040DCF0 003D72B0  3C 80 80 41 */	lis r4, __dt__Q44nw4r3snd6detail15BiquadFilterHpfFv@ha
+/* 8040DCF4 003D72B4  38 63 E0 58 */	addi r3, r3, __vt__Q44nw4r3snd6detail15BiquadFilterHpf@l
 /* 8040DCF8 003D72B8  38 BF 03 0C */	addi r5, r31, 0x30c
-/* 8040DCFC 003D72BC  90 6D BC 0C */	stw r3, lbl_80667D8C@sda21(r13)
-/* 8040DD00 003D72C0  38 84 DD C0 */	addi r4, r4, func_8040DDC0@l
-/* 8040DD04 003D72C4  38 6D BC 0C */	addi r3, r13, lbl_80667D8C@sda21
+/* 8040DCFC 003D72BC  90 6D BC 0C */	stw r3, sBiquadFilterHpf__Q44nw4r3snd6detail9AxManager@sda21(r13)
+/* 8040DD00 003D72C0  38 84 DD C0 */	addi r4, r4, __dt__Q44nw4r3snd6detail15BiquadFilterHpfFv@l
+/* 8040DD04 003D72C4  38 6D BC 0C */	addi r3, r13, sBiquadFilterHpf__Q44nw4r3snd6detail9AxManager@sda21
 /* 8040DD08 003D72C8  4B EA B9 95 */	bl __register_global_object
-/* 8040DD0C 003D72CC  3C 60 80 57 */	lis r3, lbl_8056E048@ha
-/* 8040DD10 003D72D0  3C 80 80 41 */	lis r4, func_8040DE00@ha
-/* 8040DD14 003D72D4  38 63 E0 48 */	addi r3, r3, lbl_8056E048@l
+/* 8040DD0C 003D72CC  3C 60 80 57 */	lis r3, __vt__Q44nw4r3snd6detail18BiquadFilterBpf512@ha
+/* 8040DD10 003D72D0  3C 80 80 41 */	lis r4, __dt__Q44nw4r3snd6detail18BiquadFilterBpf512Fv@ha
+/* 8040DD14 003D72D4  38 63 E0 48 */	addi r3, r3, __vt__Q44nw4r3snd6detail18BiquadFilterBpf512@l
 /* 8040DD18 003D72D8  38 BF 03 18 */	addi r5, r31, 0x318
-/* 8040DD1C 003D72DC  90 6D BC 10 */	stw r3, lbl_80667D90@sda21(r13)
-/* 8040DD20 003D72E0  38 84 DE 00 */	addi r4, r4, func_8040DE00@l
-/* 8040DD24 003D72E4  38 6D BC 10 */	addi r3, r13, lbl_80667D90@sda21
+/* 8040DD1C 003D72DC  90 6D BC 10 */	stw r3, sBiquadFilterBpf512__Q44nw4r3snd6detail9AxManager@sda21(r13)
+/* 8040DD20 003D72E0  38 84 DE 00 */	addi r4, r4, __dt__Q44nw4r3snd6detail18BiquadFilterBpf512Fv@l
+/* 8040DD24 003D72E4  38 6D BC 10 */	addi r3, r13, sBiquadFilterBpf512__Q44nw4r3snd6detail9AxManager@sda21
 /* 8040DD28 003D72E8  4B EA B9 75 */	bl __register_global_object
-/* 8040DD2C 003D72EC  3C 60 80 57 */	lis r3, lbl_8056E038@ha
-/* 8040DD30 003D72F0  3C 80 80 41 */	lis r4, func_8040DE40@ha
-/* 8040DD34 003D72F4  38 63 E0 38 */	addi r3, r3, lbl_8056E038@l
+/* 8040DD2C 003D72EC  3C 60 80 57 */	lis r3, __vt__Q44nw4r3snd6detail19BiquadFilterBpf1024@ha
+/* 8040DD30 003D72F0  3C 80 80 41 */	lis r4, __dt__Q44nw4r3snd6detail19BiquadFilterBpf1024Fv@ha
+/* 8040DD34 003D72F4  38 63 E0 38 */	addi r3, r3, __vt__Q44nw4r3snd6detail19BiquadFilterBpf1024@l
 /* 8040DD38 003D72F8  38 BF 03 24 */	addi r5, r31, 0x324
-/* 8040DD3C 003D72FC  90 6D BC 14 */	stw r3, lbl_80667D94@sda21(r13)
-/* 8040DD40 003D7300  38 84 DE 40 */	addi r4, r4, func_8040DE40@l
-/* 8040DD44 003D7304  38 6D BC 14 */	addi r3, r13, lbl_80667D94@sda21
+/* 8040DD3C 003D72FC  90 6D BC 14 */	stw r3, sBiquadFilterBpf1024__Q44nw4r3snd6detail9AxManager@sda21(r13)
+/* 8040DD40 003D7300  38 84 DE 40 */	addi r4, r4, __dt__Q44nw4r3snd6detail19BiquadFilterBpf1024Fv@l
+/* 8040DD44 003D7304  38 6D BC 14 */	addi r3, r13, sBiquadFilterBpf1024__Q44nw4r3snd6detail9AxManager@sda21
 /* 8040DD48 003D7308  4B EA B9 55 */	bl __register_global_object
-/* 8040DD4C 003D730C  3C 60 80 57 */	lis r3, lbl_8056E028@ha
-/* 8040DD50 003D7310  3C 80 80 41 */	lis r4, func_8040DE80@ha
-/* 8040DD54 003D7314  38 63 E0 28 */	addi r3, r3, lbl_8056E028@l
+/* 8040DD4C 003D730C  3C 60 80 57 */	lis r3, __vt__Q44nw4r3snd6detail19BiquadFilterBpf2048@ha
+/* 8040DD50 003D7310  3C 80 80 41 */	lis r4, __dt__Q44nw4r3snd6detail19BiquadFilterBpf2048Fv@ha
+/* 8040DD54 003D7314  38 63 E0 28 */	addi r3, r3, __vt__Q44nw4r3snd6detail19BiquadFilterBpf2048@l
 /* 8040DD58 003D7318  38 BF 03 30 */	addi r5, r31, 0x330
-/* 8040DD5C 003D731C  90 6D BC 18 */	stw r3, lbl_80667D98@sda21(r13)
-/* 8040DD60 003D7320  38 84 DE 80 */	addi r4, r4, func_8040DE80@l
-/* 8040DD64 003D7324  38 6D BC 18 */	addi r3, r13, lbl_80667D98@sda21
+/* 8040DD5C 003D731C  90 6D BC 18 */	stw r3, sBiquadFilterBpf2048__Q44nw4r3snd6detail9AxManager@sda21(r13)
+/* 8040DD60 003D7320  38 84 DE 80 */	addi r4, r4, __dt__Q44nw4r3snd6detail19BiquadFilterBpf2048Fv@l
+/* 8040DD64 003D7324  38 6D BC 18 */	addi r3, r13, sBiquadFilterBpf2048__Q44nw4r3snd6detail9AxManager@sda21
 /* 8040DD68 003D7328  4B EA B9 35 */	bl __register_global_object
 /* 8040DD6C 003D732C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8040DD70 003D7330  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -1803,7 +1803,7 @@
 /* 8040DD7C 003D733C  4E 80 00 20 */	blr
 .endfn "__sinit_\snd_AxManager_cpp"
 
-.fn func_8040DD80, global
+.fn __dt__Q44nw4r3snd6detail15BiquadFilterLpfFv, global
 /* 8040DD80 003D7340  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040DD84 003D7344  7C 08 02 A6 */	mflr r0
 /* 8040DD88 003D7348  2C 03 00 00 */	cmpwi r3, 0
@@ -1821,9 +1821,9 @@
 /* 8040DDB4 003D7374  7C 08 03 A6 */	mtlr r0
 /* 8040DDB8 003D7378  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040DDBC 003D737C  4E 80 00 20 */	blr
-.endfn func_8040DD80
+.endfn __dt__Q44nw4r3snd6detail15BiquadFilterLpfFv
 
-.fn func_8040DDC0, global
+.fn __dt__Q44nw4r3snd6detail15BiquadFilterHpfFv, global
 /* 8040DDC0 003D7380  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040DDC4 003D7384  7C 08 02 A6 */	mflr r0
 /* 8040DDC8 003D7388  2C 03 00 00 */	cmpwi r3, 0
@@ -1841,9 +1841,9 @@
 /* 8040DDF4 003D73B4  7C 08 03 A6 */	mtlr r0
 /* 8040DDF8 003D73B8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040DDFC 003D73BC  4E 80 00 20 */	blr
-.endfn func_8040DDC0
+.endfn __dt__Q44nw4r3snd6detail15BiquadFilterHpfFv
 
-.fn func_8040DE00, global
+.fn __dt__Q44nw4r3snd6detail18BiquadFilterBpf512Fv, global
 /* 8040DE00 003D73C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040DE04 003D73C4  7C 08 02 A6 */	mflr r0
 /* 8040DE08 003D73C8  2C 03 00 00 */	cmpwi r3, 0
@@ -1861,9 +1861,9 @@
 /* 8040DE34 003D73F4  7C 08 03 A6 */	mtlr r0
 /* 8040DE38 003D73F8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040DE3C 003D73FC  4E 80 00 20 */	blr
-.endfn func_8040DE00
+.endfn __dt__Q44nw4r3snd6detail18BiquadFilterBpf512Fv
 
-.fn func_8040DE40, global
+.fn __dt__Q44nw4r3snd6detail19BiquadFilterBpf1024Fv, global
 /* 8040DE40 003D7400  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040DE44 003D7404  7C 08 02 A6 */	mflr r0
 /* 8040DE48 003D7408  2C 03 00 00 */	cmpwi r3, 0
@@ -1881,9 +1881,9 @@
 /* 8040DE74 003D7434  7C 08 03 A6 */	mtlr r0
 /* 8040DE78 003D7438  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040DE7C 003D743C  4E 80 00 20 */	blr
-.endfn func_8040DE40
+.endfn __dt__Q44nw4r3snd6detail19BiquadFilterBpf1024Fv
 
-.fn func_8040DE80, global
+.fn __dt__Q44nw4r3snd6detail19BiquadFilterBpf2048Fv, global
 /* 8040DE80 003D7440  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040DE84 003D7444  7C 08 02 A6 */	mflr r0
 /* 8040DE88 003D7448  2C 03 00 00 */	cmpwi r3, 0
@@ -1901,83 +1901,11 @@
 /* 8040DEB4 003D7474  7C 08 03 A6 */	mtlr r0
 /* 8040DEB8 003D7478  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040DEBC 003D747C  4E 80 00 20 */	blr 
-.endfn func_8040DE80
+.endfn __dt__Q44nw4r3snd6detail19BiquadFilterBpf2048Fv
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 
 .4byte "__sinit_\snd_AxManager_cpp"
-
-
-.section .data, "wa"  # 0x805281E0 - 0x80573C60
-
-.global lbl_8056DFC8
-lbl_8056DFC8:
-	.4byte 0
-	.4byte 0
-	.4byte __dt__Q44nw4r3snd6detail11BasicPlayerFv
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-
-.global lbl_8056DFF0
-lbl_8056DFF0:
-	.4byte 0
-	.4byte 0
-	.4byte GetRuntimeTypeInfo__Q44nw4r3snd6detail10BasicSoundCFv
-	.4byte __dt__Q44nw4r3snd6detail10BasicSoundFv
-	.4byte Shutdown__Q44nw4r3snd6detail10BasicSoundFv
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte InitParam__Q44nw4r3snd6detail10BasicSoundFv
-	.4byte 0
-	.4byte 0
-	.4byte OnUpdatePlayerPriority__Q44nw4r3snd6detail10BasicSoundFv
-	.4byte UpdateMoveValue__Q44nw4r3snd6detail10BasicSoundFv
-	.4byte UpdateParam__Q44nw4r3snd6detail10BasicSoundFv
-
-.global lbl_8056E028
-lbl_8056E028:
-	.4byte 0
-	.4byte 0
-	.4byte func_8040DE80
-	.4byte GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf2048CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
-
-
-.global lbl_8056E038
-lbl_8056E038:
-	.4byte 0
-	.4byte 0
-	.4byte func_8040DE40
-	.4byte GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf1024CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
-
-
-.global lbl_8056E048
-lbl_8056E048:
-	.4byte 0
-	.4byte 0
-	.4byte func_8040DE00
-	.4byte GetCoef__Q44nw4r3snd6detail18BiquadFilterBpf512CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
-
-
-.global lbl_8056E058
-lbl_8056E058:
-	.4byte 0
-	.4byte 0
-	.4byte func_8040DDC0
-	.4byte GetCoef__Q44nw4r3snd6detail15BiquadFilterHpfCFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
-
-
-.global lbl_8056E068
-lbl_8056E068:
-	.4byte 0
-	.4byte 0
-	.4byte func_8040DD80
-	.4byte GetCoef__Q44nw4r3snd6detail15BiquadFilterLpfCFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
@@ -2006,36 +1934,39 @@ float_8066C68C:
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_8063AD20
-lbl_8063AD20:
+
+sZeroBuffer__Q44nw4r3snd6detail9AxManager:
 	.skip 0x100
-.global lbl_8063AE20
-lbl_8063AE20:
+
+.global sBiquadFilterCallbackTable__Q44nw4r3snd6detail9AxManager
+sBiquadFilterCallbackTable__Q44nw4r3snd6detail9AxManager:
 	.skip 0x23C
-.global lbl_8063B05C
+
 lbl_8063B05C:
 	.skip 0xC
-.global lbl_8063B068
+
+#@LOCAL@GetInstance__Q44nw4r3snd6detail9AxManagerFv@instance
 lbl_8063B068:
 	.skip 0x100
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667D88
-lbl_80667D88:
+
+sBiquadFilterLpf__Q44nw4r3snd6detail9AxManager:
 	.skip 0x4
-.global lbl_80667D8C
-lbl_80667D8C:
+
+sBiquadFilterHpf__Q44nw4r3snd6detail9AxManager:
 	.skip 0x4
-.global lbl_80667D90
-lbl_80667D90:
+
+sBiquadFilterBpf512__Q44nw4r3snd6detail9AxManager:
 	.skip 0x4
-.global lbl_80667D94
-lbl_80667D94:
+
+sBiquadFilterBpf1024__Q44nw4r3snd6detail9AxManager:
 	.skip 0x4
-.global lbl_80667D98
-lbl_80667D98:
+
+sBiquadFilterBpf2048__Q44nw4r3snd6detail9AxManager:
 	.skip 0x4
-.global lbl_80667D9C
+
+#@GUARD@GetInstance__Q44nw4r3snd6detail9AxManagerFv@instance
 lbl_80667D9C:
 	.skip 0x4

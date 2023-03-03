@@ -1339,12 +1339,15 @@ float_8066C730:
 .global lbl_8063B1A0
 lbl_8063B1A0:
 	.skip 0x10
+
+#@LOCAL@GetInstance__Q44nw4r3snd6detail14ChannelManagerFv@instance
 .global lbl_8063B1B0
 lbl_8063B1B0:
 	.skip 0x20
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+#@GUARD@GetInstance__Q44nw4r3snd6detail14ChannelManagerFv@instance
 .global lbl_80667DB8
 lbl_80667DB8:
 	.skip 0x8

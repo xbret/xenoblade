@@ -8,17 +8,17 @@
 /* 8042BE28 003F53E8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8042BE2C 003F53EC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8042BE30 003F53F0  93 C1 00 08 */	stw r30, 8(r1)
-/* 8042BE34 003F53F4  3F C0 80 65 */	lis r30, lbl_80657088@ha
-/* 8042BE38 003F53F8  38 7E 70 88 */	addi r3, r30, lbl_80657088@l
+/* 8042BE34 003F53F4  3F C0 80 65 */	lis r30, "sLCImpl__Q34nw4r2ut28@unnamed@ut_LockedCache_cpp@"@ha
+/* 8042BE38 003F53F8  38 7E 70 88 */	addi r3, r30, "sLCImpl__Q34nw4r2ut28@unnamed@ut_LockedCache_cpp@"@l
 /* 8042BE3C 003F53FC  3B E3 00 04 */	addi r31, r3, 4
 /* 8042BE40 003F5400  7F E3 FB 78 */	mr r3, r31
 /* 8042BE44 003F5404  4B F2 DE 1D */	bl OSLockMutex
-/* 8042BE48 003F5408  88 1E 70 88 */	lbz r0, lbl_80657088@l(r30)
+/* 8042BE48 003F5408  88 1E 70 88 */	lbz r0, "sLCImpl__Q34nw4r2ut28@unnamed@ut_LockedCache_cpp@"@l(r30)
 /* 8042BE4C 003F540C  2C 00 00 00 */	cmpwi r0, 0
 /* 8042BE50 003F5410  40 82 00 10 */	bne .L_8042BE60
 /* 8042BE54 003F5414  4B F2 83 8D */	bl LCEnable
 /* 8042BE58 003F5418  38 00 00 01 */	li r0, 1
-/* 8042BE5C 003F541C  98 1E 70 88 */	stb r0, lbl_80657088@l(r30)
+/* 8042BE5C 003F541C  98 1E 70 88 */	stb r0, "sLCImpl__Q34nw4r2ut28@unnamed@ut_LockedCache_cpp@"@l(r30)
 .L_8042BE60:
 /* 8042BE60 003F5420  7F E3 FB 78 */	mr r3, r31
 /* 8042BE64 003F5424  4B F2 DE DD */	bl OSUnlockMutex
@@ -36,12 +36,12 @@
 /* 8042BE88 003F5448  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8042BE8C 003F544C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8042BE90 003F5450  93 C1 00 08 */	stw r30, 8(r1)
-/* 8042BE94 003F5454  3F C0 80 65 */	lis r30, lbl_80657088@ha
-/* 8042BE98 003F5458  38 7E 70 88 */	addi r3, r30, lbl_80657088@l
+/* 8042BE94 003F5454  3F C0 80 65 */	lis r30, "sLCImpl__Q34nw4r2ut28@unnamed@ut_LockedCache_cpp@"@ha
+/* 8042BE98 003F5458  38 7E 70 88 */	addi r3, r30, "sLCImpl__Q34nw4r2ut28@unnamed@ut_LockedCache_cpp@"@l
 /* 8042BE9C 003F545C  3B E3 00 04 */	addi r31, r3, 4
 /* 8042BEA0 003F5460  7F E3 FB 78 */	mr r3, r31
 /* 8042BEA4 003F5464  4B F2 DD BD */	bl OSLockMutex
-/* 8042BEA8 003F5468  88 1E 70 88 */	lbz r0, lbl_80657088@l(r30)
+/* 8042BEA8 003F5468  88 1E 70 88 */	lbz r0, "sLCImpl__Q34nw4r2ut28@unnamed@ut_LockedCache_cpp@"@l(r30)
 /* 8042BEAC 003F546C  2C 00 00 00 */	cmpwi r0, 0
 /* 8042BEB0 003F5470  41 82 00 28 */	beq .L_8042BED8
 /* 8042BEB4 003F5474  48 00 00 08 */	b .L_8042BEBC
@@ -53,8 +53,8 @@
 /* 8042BEC4 003F5484  40 82 FF F4 */	bne .L_8042BEB8
 /* 8042BEC8 003F5488  4B F2 83 59 */	bl LCDisable
 /* 8042BECC 003F548C  38 00 00 00 */	li r0, 0
-/* 8042BED0 003F5490  3C 60 80 65 */	lis r3, lbl_80657088@ha
-/* 8042BED4 003F5494  98 03 70 88 */	stb r0, lbl_80657088@l(r3)
+/* 8042BED0 003F5490  3C 60 80 65 */	lis r3, "sLCImpl__Q34nw4r2ut28@unnamed@ut_LockedCache_cpp@"@ha
+/* 8042BED4 003F5494  98 03 70 88 */	stb r0, "sLCImpl__Q34nw4r2ut28@unnamed@ut_LockedCache_cpp@"@l(r3)
 .L_8042BED8:
 /* 8042BED8 003F5498  7F E3 FB 78 */	mr r3, r31
 /* 8042BEDC 003F549C  4B F2 DE 65 */	bl OSUnlockMutex
@@ -72,11 +72,11 @@
 /* 8042BF00 003F54C0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8042BF04 003F54C4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8042BF08 003F54C8  93 C1 00 08 */	stw r30, 8(r1)
-/* 8042BF0C 003F54CC  3F C0 80 65 */	lis r30, lbl_80657088@ha
-/* 8042BF10 003F54D0  3B FE 70 88 */	addi r31, r30, lbl_80657088@l
+/* 8042BF0C 003F54CC  3F C0 80 65 */	lis r30, "sLCImpl__Q34nw4r2ut28@unnamed@ut_LockedCache_cpp@"@ha
+/* 8042BF10 003F54D0  3B FE 70 88 */	addi r31, r30, "sLCImpl__Q34nw4r2ut28@unnamed@ut_LockedCache_cpp@"@l
 /* 8042BF14 003F54D4  38 7F 00 04 */	addi r3, r31, 4
 /* 8042BF18 003F54D8  4B F2 DD 49 */	bl OSLockMutex
-/* 8042BF1C 003F54DC  88 1E 70 88 */	lbz r0, lbl_80657088@l(r30)
+/* 8042BF1C 003F54DC  88 1E 70 88 */	lbz r0, "sLCImpl__Q34nw4r2ut28@unnamed@ut_LockedCache_cpp@"@l(r30)
 /* 8042BF20 003F54E0  2C 00 00 00 */	cmpwi r0, 0
 /* 8042BF24 003F54E4  41 82 00 20 */	beq .L_8042BF44
 /* 8042BF28 003F54E8  48 00 00 08 */	b .L_8042BF30
@@ -112,8 +112,8 @@
 /* 8042BF7C 003F553C  4B F2 83 D5 */	bl LCQueueLength
 /* 8042BF80 003F5540  2C 03 00 00 */	cmpwi r3, 0
 /* 8042BF84 003F5544  40 82 FF F4 */	bne .L_8042BF78
-/* 8042BF88 003F5548  3C 60 80 65 */	lis r3, lbl_80657088@ha
-/* 8042BF8C 003F554C  38 63 70 88 */	addi r3, r3, lbl_80657088@l
+/* 8042BF88 003F5548  3C 60 80 65 */	lis r3, "sLCImpl__Q34nw4r2ut28@unnamed@ut_LockedCache_cpp@"@ha
+/* 8042BF8C 003F554C  38 63 70 88 */	addi r3, r3, "sLCImpl__Q34nw4r2ut28@unnamed@ut_LockedCache_cpp@"@l
 /* 8042BF90 003F5550  38 63 00 04 */	addi r3, r3, 4
 /* 8042BF94 003F5554  4B F2 DD AD */	bl OSUnlockMutex
 /* 8042BF98 003F5558  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -136,10 +136,10 @@
 
 
 .fn "__sinit_\ut_LockedCache_cpp", local
-/* 8042BFB4 003F5574  3C 80 80 65 */	lis r4, lbl_80657088@ha
+/* 8042BFB4 003F5574  3C 80 80 65 */	lis r4, "sLCImpl__Q34nw4r2ut28@unnamed@ut_LockedCache_cpp@"@ha
 /* 8042BFB8 003F5578  38 00 00 00 */	li r0, 0
-/* 8042BFBC 003F557C  38 64 70 88 */	addi r3, r4, lbl_80657088@l
-/* 8042BFC0 003F5580  98 04 70 88 */	stb r0, lbl_80657088@l(r4)
+/* 8042BFBC 003F557C  38 64 70 88 */	addi r3, r4, "sLCImpl__Q34nw4r2ut28@unnamed@ut_LockedCache_cpp@"@l
+/* 8042BFC0 003F5580  98 04 70 88 */	stb r0, "sLCImpl__Q34nw4r2ut28@unnamed@ut_LockedCache_cpp@"@l(r4)
 /* 8042BFC4 003F5584  38 63 00 04 */	addi r3, r3, 4
 /* 8042BFC8 003F5588  4B F2 DC 58 */	b OSInitMutex
 .endfn "__sinit_\ut_LockedCache_cpp"
@@ -150,7 +150,5 @@
 
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
-
-.global lbl_80657088
-lbl_80657088:
+"sLCImpl__Q34nw4r2ut28@unnamed@ut_LockedCache_cpp@":
 	.skip 0x20

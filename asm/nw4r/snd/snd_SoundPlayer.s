@@ -888,12 +888,15 @@ float_8066C85C:
 .global lbl_8063B4E0
 lbl_8063B4E0:
 	.skip 0x10
+
+#@LOCAL@detail_SortPriorityList__Q34nw4r3snd11SoundPlayerFv@tmplist@0
 .global lbl_8063B4F0
 lbl_8063B4F0:
 	.skip 0x610
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+#@GUARD@detail_SortPriorityList__Q34nw4r3snd11SoundPlayerFv@tmplist@0
 .global lbl_80667DE0
 lbl_80667DE0:
 	.skip 0x8

@@ -76,7 +76,7 @@
 /* 80402F34 003CC4F4  80 1B 00 0C */	lwz r0, 0xc(r27)
 /* 80402F38 003CC4F8  7F 87 32 14 */	add r28, r7, r6
 /* 80402F3C 003CC4FC  90 61 00 18 */	stw r3, 0x18(r1)
-/* 80402F40 003CC500  80 6D BB D8 */	lwz r3, lbl_80667D58@sda21(r13)
+/* 80402F40 003CC500  80 6D BB D8 */	lwz r3, mspAllocator__Q34nw4r3lyt6Layout@sda21(r13)
 /* 80402F44 003CC504  90 A1 00 1C */	stw r5, 0x1c(r1)
 /* 80402F48 003CC508  90 E1 00 20 */	stw r7, 0x20(r1)
 /* 80402F4C 003CC50C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -100,7 +100,7 @@
 /* 80402F8C 003CC54C  41 82 01 04 */	beq .L_80403090
 /* 80402F90 003CC550  9B 99 01 04 */	stb r28, 0x104(r25)
 /* 80402F94 003CC554  57 C4 1D 78 */	rlwinm r4, r30, 3, 0x15, 0x1c
-/* 80402F98 003CC558  80 6D BB D8 */	lwz r3, lbl_80667D58@sda21(r13)
+/* 80402F98 003CC558  80 6D BB D8 */	lwz r3, mspAllocator__Q34nw4r3lyt6Layout@sda21(r13)
 /* 80402F9C 003CC55C  4B F4 6A F5 */	bl MEMAllocFromAllocator
 /* 80402FA0 003CC560  2C 03 00 00 */	cmpwi r3, 0
 /* 80402FA4 003CC564  40 82 00 0C */	bne .L_80402FB0
@@ -146,7 +146,7 @@
 /* 8040302C 003CC5EC  80 1B 00 0C */	lwz r0, 0xc(r27)
 /* 80403030 003CC5F0  7F 07 32 14 */	add r24, r7, r6
 /* 80403034 003CC5F4  90 61 00 08 */	stw r3, 8(r1)
-/* 80403038 003CC5F8  80 6D BB D8 */	lwz r3, lbl_80667D58@sda21(r13)
+/* 80403038 003CC5F8  80 6D BB D8 */	lwz r3, mspAllocator__Q34nw4r3lyt6Layout@sda21(r13)
 /* 8040303C 003CC5FC  90 A1 00 0C */	stw r5, 0xc(r1)
 /* 80403040 003CC600  90 E1 00 10 */	stw r7, 0x10(r1)
 /* 80403044 003CC604  90 01 00 14 */	stw r0, 0x14(r1)
@@ -214,7 +214,7 @@
 /* 80403118 003CC6D8  81 8C 00 08 */	lwz r12, 8(r12)
 /* 8040311C 003CC6DC  7D 89 03 A6 */	mtctr r12
 /* 80403120 003CC6E0  4E 80 04 21 */	bctrl 
-/* 80403124 003CC6E4  80 6D BB D8 */	lwz r3, lbl_80667D58@sda21(r13)
+/* 80403124 003CC6E4  80 6D BB D8 */	lwz r3, mspAllocator__Q34nw4r3lyt6Layout@sda21(r13)
 /* 80403128 003CC6E8  7F A4 EB 78 */	mr r4, r29
 /* 8040312C 003CC6EC  4B F4 69 75 */	bl MEMFreeToAllocator
 .L_80403130:
@@ -223,7 +223,7 @@
 .L_80403138:
 /* 80403138 003CC6F8  7C 1C F0 40 */	cmplw r28, r30
 /* 8040313C 003CC6FC  41 80 FF BC */	blt .L_804030F8
-/* 80403140 003CC700  80 6D BB D8 */	lwz r3, lbl_80667D58@sda21(r13)
+/* 80403140 003CC700  80 6D BB D8 */	lwz r3, mspAllocator__Q34nw4r3lyt6Layout@sda21(r13)
 /* 80403144 003CC704  7F E4 FB 78 */	mr r4, r31
 /* 80403148 003CC708  4B F4 69 59 */	bl MEMFreeToAllocator
 .L_8040314C:
@@ -240,7 +240,7 @@
 /* 80403174 003CC734  81 8C 00 08 */	lwz r12, 8(r12)
 /* 80403178 003CC738  7D 89 03 A6 */	mtctr r12
 /* 8040317C 003CC73C  4E 80 04 21 */	bctrl 
-/* 80403180 003CC740  80 6D BB D8 */	lwz r3, lbl_80667D58@sda21(r13)
+/* 80403180 003CC740  80 6D BB D8 */	lwz r3, mspAllocator__Q34nw4r3lyt6Layout@sda21(r13)
 /* 80403184 003CC744  7F 64 DB 78 */	mr r4, r27
 /* 80403188 003CC748  4B F4 69 19 */	bl MEMFreeToAllocator
 .L_8040318C:
@@ -2535,13 +2535,13 @@
 .endfn GetContentMaterial__Q34nw4r3lyt6WindowCFv
 
 .fn GetRuntimeTypeInfo__Q34nw4r3lyt6WindowCFv, global
-/* 804053C8 003CE988  38 6D BB F0 */	addi r3, r13, lbl_80667D70@sda21
+/* 804053C8 003CE988  38 6D BB F0 */	addi r3, r13, typeInfo__Q34nw4r3lyt6Window@sda21
 /* 804053CC 003CE98C  4E 80 00 20 */	blr
 .endfn GetRuntimeTypeInfo__Q34nw4r3lyt6WindowCFv
 
 .fn "__sinit_\lyt_window_cpp", local
-/* 804053D0 003CE990  38 0D BB D0 */	addi r0, r13, lbl_80667D50@sda21
-/* 804053D4 003CE994  90 0D BB F0 */	stw r0, lbl_80667D70@sda21(r13)
+/* 804053D0 003CE990  38 0D BB D0 */	addi r0, r13, typeInfo__Q34nw4r3lyt4Pane@sda21
+/* 804053D4 003CE994  90 0D BB F0 */	stw r0, typeInfo__Q34nw4r3lyt6Window@sda21(r13)
 /* 804053D8 003CE998  4E 80 00 20 */	blr 
 .endfn "__sinit_\lyt_window_cpp"
 
@@ -2552,7 +2552,7 @@
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
 
-
+#flipInfos$8494
 .global lbl_8056D398
 lbl_8056D398:
 	.4byte 0x00000100
@@ -2625,8 +2625,9 @@ double_8066C588:
 .global double_8066C590
 double_8066C590:
 	.8byte 0x4330000080000000 #signed int to float constant
+
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667D70
-lbl_80667D70:
+.global typeInfo__Q34nw4r3lyt6Window
+typeInfo__Q34nw4r3lyt6Window:
 	.skip 0x8

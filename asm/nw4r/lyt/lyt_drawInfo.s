@@ -34,7 +34,7 @@
 /* 804086D8 003D1C98  4E 80 00 20 */	blr 
 .endfn __ct__Q34nw4r3lyt8DrawInfoFv
 
-#could also be __dt__Q34nw4r2ut4RectFv
+
 .fn __dt__Q34nw4r3lyt8DrawInfoFv, global
 /* 804086DC 003D1C9C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804086E0 003D1CA0  7C 08 02 A6 */	mflr r0

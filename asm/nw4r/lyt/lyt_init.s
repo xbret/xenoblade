@@ -6,7 +6,7 @@
 /* 803FE8B0 003C7E70  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803FE8B4 003C7E74  7C 08 02 A6 */	mflr r0
 /* 803FE8B8 003C7E78  90 01 00 14 */	stw r0, 0x14(r1)
-/* 803FE8BC 003C7E7C  80 6D 9C 68 */	lwz r3, lbl_80665DE8@sda21(r13)
+/* 803FE8BC 003C7E7C  80 6D 9C 68 */	lwz r3, "NW4R_LYT_Version___22@unnamed@lyt_init_cpp@"@sda21(r13)
 /* 803FE8C0 003C7E80  4B F5 44 41 */	bl OSRegisterVersion
 /* 803FE8C4 003C7E84  38 60 00 04 */	li r3, 4
 /* 803FE8C8 003C7E88  64 63 00 04 */	oris r3, r3, 4
@@ -34,7 +34,6 @@ lbl_8056D188:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665DE8
-lbl_80665DE8:
+"NW4R_LYT_Version___22@unnamed@lyt_init_cpp@":
 	.4byte lbl_8056D188
 	.4byte 0

@@ -275,7 +275,7 @@
 lbl_8056D598:
 	.4byte 0
 	.4byte 0
-	.4byte func_8003997C
+	.4byte __dt__Q34nw4r3lyt19ArcResourceAccessorFv
 	.4byte GetResource__Q34nw4r3lyt19ArcResourceAccessorFUlPCcPUl
 	.4byte GetFont__Q34nw4r3lyt19ArcResourceAccessorFPCc
 	.4byte 0

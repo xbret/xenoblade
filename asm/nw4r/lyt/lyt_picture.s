@@ -33,7 +33,7 @@
 /* 80400CC0 003CA280  38 7E 00 E8 */	addi r3, r30, 0xe8
 /* 80400CC4 003CA284  38 80 00 01 */	li r4, 1
 /* 80400CC8 003CA288  48 00 94 45 */	bl Reserve__Q44nw4r3lyt6detail11TexCoordAryFUc
-/* 80400CCC 003CA28C  80 6D BB D8 */	lwz r3, lbl_80667D58@sda21(r13)
+/* 80400CCC 003CA28C  80 6D BB D8 */	lwz r3, mspAllocator__Q34nw4r3lyt6Layout@sda21(r13)
 /* 80400CD0 003CA290  38 80 00 5C */	li r4, 0x5c
 /* 80400CD4 003CA294  4B F4 8D BD */	bl MEMAllocFromAllocator
 /* 80400CD8 003CA298  2C 03 00 00 */	cmpwi r3, 0
@@ -140,7 +140,7 @@
 /* 80400E48 003CA408  80 1D 00 0C */	lwz r0, 0xc(r29)
 /* 80400E4C 003CA40C  90 61 00 08 */	stw r3, 8(r1)
 /* 80400E50 003CA410  7F C7 32 14 */	add r30, r7, r6
-/* 80400E54 003CA414  80 6D BB D8 */	lwz r3, lbl_80667D58@sda21(r13)
+/* 80400E54 003CA414  80 6D BB D8 */	lwz r3, mspAllocator__Q34nw4r3lyt6Layout@sda21(r13)
 /* 80400E58 003CA418  90 A1 00 0C */	stw r5, 0xc(r1)
 /* 80400E5C 003CA41C  90 E1 00 10 */	stw r7, 0x10(r1)
 /* 80400E60 003CA420  90 01 00 14 */	stw r0, 0x14(r1)
@@ -194,7 +194,7 @@
 /* 80400F0C 003CA4CC  81 8C 00 08 */	lwz r12, 8(r12)
 /* 80400F10 003CA4D0  7D 89 03 A6 */	mtctr r12
 /* 80400F14 003CA4D4  4E 80 04 21 */	bctrl 
-/* 80400F18 003CA4D8  80 6D BB D8 */	lwz r3, lbl_80667D58@sda21(r13)
+/* 80400F18 003CA4D8  80 6D BB D8 */	lwz r3, mspAllocator__Q34nw4r3lyt6Layout@sda21(r13)
 /* 80400F1C 003CA4DC  7F E4 FB 78 */	mr r4, r31
 /* 80400F20 003CA4E0  4B F4 8B 81 */	bl MEMFreeToAllocator
 .L_80400F24:
@@ -455,13 +455,13 @@
 .endfn DrawSelf__Q34nw4r3lyt7PictureFRCQ34nw4r3lyt8DrawInfo
 
 .fn GetRuntimeTypeInfo__Q34nw4r3lyt7PictureCFv, global
-/* 804012A8 003CA868  38 6D BB E0 */	addi r3, r13, lbl_80667D60@sda21
+/* 804012A8 003CA868  38 6D BB E0 */	addi r3, r13, typeInfo__Q34nw4r3lyt7Picture@sda21
 /* 804012AC 003CA86C  4E 80 00 20 */	blr
 .endfn GetRuntimeTypeInfo__Q34nw4r3lyt7PictureCFv
 
 .fn "__sinit_\lyt_picture_cpp", local
-/* 804012B0 003CA870  38 0D BB D0 */	addi r0, r13, lbl_80667D50@sda21
-/* 804012B4 003CA874  90 0D BB E0 */	stw r0, lbl_80667D60@sda21(r13)
+/* 804012B0 003CA870  38 0D BB D0 */	addi r0, r13, typeInfo__Q34nw4r3lyt4Pane@sda21
+/* 804012B4 003CA874  90 0D BB E0 */	stw r0, typeInfo__Q34nw4r3lyt7Picture@sda21(r13)
 /* 804012B8 003CA878  4E 80 00 20 */	blr
 .endfn "__sinit_\lyt_picture_cpp"
 
@@ -514,6 +514,6 @@ float_8066C560:
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667D60
-lbl_80667D60:
+.global typeInfo__Q34nw4r3lyt7Picture
+typeInfo__Q34nw4r3lyt7Picture:
 	.skip 0x8

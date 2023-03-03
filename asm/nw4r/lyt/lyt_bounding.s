@@ -51,14 +51,14 @@
 .endfn DrawSelf__Q34nw4r3lyt8BoundingFRCQ34nw4r3lyt8DrawInfo
 
 .fn GetRuntimeTypeInfo__Q34nw4r3lyt8BoundingCFv, global
-/* 80405474 003CEA34  38 6D BB F8 */	addi r3, r13, lbl_80667D78@sda21
+/* 80405474 003CEA34  38 6D BB F8 */	addi r3, r13, typeInfo__Q34nw4r3lyt8Bounding@sda21
 /* 80405478 003CEA38  4E 80 00 20 */	blr
 .endfn GetRuntimeTypeInfo__Q34nw4r3lyt8BoundingCFv
 
 
 .fn "__sinit_\lyt_bounding_cpp", local
-/* 8040547C 003CEA3C  38 0D BB D0 */	addi r0, r13, lbl_80667D50@sda21
-/* 80405480 003CEA40  90 0D BB F8 */	stw r0, lbl_80667D78@sda21(r13)
+/* 8040547C 003CEA3C  38 0D BB D0 */	addi r0, r13, typeInfo__Q34nw4r3lyt4Pane@sda21
+/* 80405480 003CEA40  90 0D BB F8 */	stw r0, typeInfo__Q34nw4r3lyt8Bounding@sda21(r13)
 /* 80405484 003CEA44  4E 80 00 20 */	blr 
 .endfn "__sinit_\lyt_bounding_cpp"
 
@@ -105,6 +105,5 @@ lbl_8056D460:
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667D78
-lbl_80667D78:
+typeInfo__Q34nw4r3lyt8Bounding:
 	.skip 0x8

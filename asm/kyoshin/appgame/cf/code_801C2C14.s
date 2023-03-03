@@ -94,7 +94,7 @@
 /* 801C2D74 0018C334  4E 80 00 20 */	blr 
 .endfn func_801C2C14
 
-.fn func_801C2D78, global
+.fn __dt__Q34nw4r3snd15FxReverbStdDpl2Fv, global
 /* 801C2D78 0018C338  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801C2D7C 0018C33C  7C 08 02 A6 */	mflr r0
 /* 801C2D80 0018C340  2C 03 00 00 */	cmpwi r3, 0
@@ -127,7 +127,7 @@
 /* 801C2DE8 0018C3A8  7C 08 03 A6 */	mtlr r0
 /* 801C2DEC 0018C3AC  38 21 00 10 */	addi r1, r1, 0x10
 /* 801C2DF0 0018C3B0  4E 80 00 20 */	blr 
-.endfn func_801C2D78
+.endfn __dt__Q34nw4r3snd15FxReverbStdDpl2Fv
 
 .fn __dt__801C2DF4, global
 /* 801C2DF4 0018C3B4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -149,7 +149,8 @@
 /* 801C2E30 0018C3F0  4E 80 00 20 */	blr 
 .endfn __dt__801C2DF4
 
-.fn func_801C2E34, global
+#relocated
+.fn __dt__Q34nw4r3snd12FxChorusDpl2Fv, global
 /* 801C2E34 0018C3F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801C2E38 0018C3F8  7C 08 02 A6 */	mflr r0
 /* 801C2E3C 0018C3FC  2C 03 00 00 */	cmpwi r3, 0
@@ -182,9 +183,9 @@
 /* 801C2EA4 0018C464  7C 08 03 A6 */	mtlr r0
 /* 801C2EA8 0018C468  38 21 00 10 */	addi r1, r1, 0x10
 /* 801C2EAC 0018C46C  4E 80 00 20 */	blr 
-.endfn func_801C2E34
+.endfn __dt__Q34nw4r3snd12FxChorusDpl2Fv
 
-.fn func_801C2EB0, global
+.fn __dt__Q34nw4r3snd11FxDelayDpl2Fv, global
 /* 801C2EB0 0018C470  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801C2EB4 0018C474  7C 08 02 A6 */	mflr r0
 /* 801C2EB8 0018C478  2C 03 00 00 */	cmpwi r3, 0
@@ -217,7 +218,7 @@
 /* 801C2F20 0018C4E0  7C 08 03 A6 */	mtlr r0
 /* 801C2F24 0018C4E4  38 21 00 10 */	addi r1, r1, 0x10
 /* 801C2F28 0018C4E8  4E 80 00 20 */	blr
-.endfn func_801C2EB0
+.endfn __dt__Q34nw4r3snd11FxDelayDpl2Fv
 
 .fn __dt__801C2F2C, global
 /* 801C2F2C 0018C4EC  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -804,10 +805,10 @@ float_8066A7C4:
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000290
-	.4byte func_801C2E34
+	.4byte __dt__Q34nw4r3snd12FxChorusDpl2Fv
 	.4byte 0x8780001E
 	.4byte 0x00000060
-	.4byte func_801C2D78
+	.4byte __dt__Q34nw4r3snd15FxReverbStdDpl2Fv
 .endobj "@etb_80010718"
 
 .obj "@etb_80010748", local
@@ -863,13 +864,13 @@ float_8066A7C4:
 	.4byte 0x00000000
 	.4byte 0x0780001D
 	.4byte 0x00000414
-	.4byte func_801C2EB0
+	.4byte __dt__Q34nw4r3snd11FxDelayDpl2Fv
 	.4byte 0x0780001D
 	.4byte 0x00000290
-	.4byte func_801C2E34
+	.4byte __dt__Q34nw4r3snd12FxChorusDpl2Fv
 	.4byte 0x8780001D
 	.4byte 0x00000060
-	.4byte func_801C2D78
+	.4byte __dt__Q34nw4r3snd15FxReverbStdDpl2Fv
 	.4byte 0x8680001F
 	.4byte 0x00000000
 	.4byte __dt__801C2DF4
@@ -878,16 +879,16 @@ float_8066A7C4:
 	.4byte __dt__801C2DF4
 	.4byte 0x8780001D
 	.4byte 0x00000414
-	.4byte func_801C2EB0
+	.4byte __dt__Q34nw4r3snd11FxDelayDpl2Fv
 	.4byte 0x0680001F
 	.4byte 0x00000000
 	.4byte __dt__801C2DF4
 	.4byte 0x0780001D
 	.4byte 0x00000414
-	.4byte func_801C2EB0
+	.4byte __dt__Q34nw4r3snd11FxDelayDpl2Fv
 	.4byte 0x8780001D
 	.4byte 0x00000290
-	.4byte func_801C2E34
+	.4byte __dt__Q34nw4r3snd12FxChorusDpl2Fv
 .endobj "@etb_800107A4"
 
 .obj "@etb_80010838", local
@@ -933,7 +934,7 @@ float_8066A7C4:
 
 .obj "@eti_8002B0E8", local
 .hidden "@eti_8002B0E8"
-	.4byte func_801C2D78
+	.4byte __dt__Q34nw4r3snd15FxReverbStdDpl2Fv
 	.4byte 0x0000007C
 	.4byte "@etb_80010748"
 .endobj "@eti_8002B0E8"
@@ -947,14 +948,14 @@ float_8066A7C4:
 
 .obj "@eti_8002B100", local
 .hidden "@eti_8002B100"
-	.4byte func_801C2E34
+	.4byte __dt__Q34nw4r3snd12FxChorusDpl2Fv
 	.4byte 0x0000007C
 	.4byte "@etb_8001076C"
 .endobj "@eti_8002B100"
 
 .obj "@eti_8002B10C", local
 .hidden "@eti_8002B10C"
-	.4byte func_801C2EB0
+	.4byte __dt__Q34nw4r3snd11FxDelayDpl2Fv
 	.4byte 0x0000007C
 	.4byte "@etb_80010788"
 .endobj "@eti_8002B10C"

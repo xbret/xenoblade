@@ -794,7 +794,7 @@
 /* 804180B4 003E1674  98 DF 00 76 */	stb r6, 0x76(r31)
 /* 804180B8 003E1678  48 00 05 04 */	b .L_804185BC
 .L_804180BC:
-/* 804180BC 003E167C  88 0D BC 48 */	lbz r0, lbl_80667DC8@sda21(r13)
+/* 804180BC 003E167C  88 0D BC 48 */	lbz r0, mPrintVarEnabledFlag__Q44nw4r3snd6detail9MmlParser@sda21(r13)
 /* 804180C0 003E1680  2C 00 00 00 */	cmpwi r0, 0
 /* 804180C4 003E1684  41 82 04 F8 */	beq .L_804185BC
 /* 804180C8 003E1688  2C 06 00 20 */	cmpwi r6, 0x20
@@ -1493,8 +1493,8 @@ double_8066C7F0:
 .global double_8066C7F8
 double_8066C7F8:
 	.8byte 0x4330000080000000 #signed int to float constant
+
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667DC8
-lbl_80667DC8:
+mPrintVarEnabledFlag__Q44nw4r3snd6detail9MmlParser:
 	.skip 0x8

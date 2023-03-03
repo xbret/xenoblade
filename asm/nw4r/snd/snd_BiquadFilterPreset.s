@@ -24,8 +24,8 @@
 /* 80413B58 003DD118  7C 64 00 78 */	andc r4, r3, r0
 .L_80413B5C:
 /* 80413B5C 003DD11C  1C 04 00 0A */	mulli r0, r4, 0xa
-/* 80413B60 003DD120  3C 60 80 52 */	lis r3, lbl_80522120@ha
-/* 80413B64 003DD124  38 63 21 20 */	addi r3, r3, lbl_80522120@l
+/* 80413B60 003DD120  3C 60 80 52 */	lis r3, coefTable__Q44nw4r3snd6detail15BiquadFilterLpf@ha
+/* 80413B64 003DD124  38 63 21 20 */	addi r3, r3, coefTable__Q44nw4r3snd6detail15BiquadFilterLpf@l
 /* 80413B68 003DD128  7C E3 02 14 */	add r7, r3, r0
 /* 80413B6C 003DD12C  7D 03 02 2E */	lhzx r8, r3, r0
 /* 80413B70 003DD130  A0 C7 00 02 */	lhz r6, 2(r7)
@@ -64,8 +64,8 @@
 /* 80413BE0 003DD1A0  7C 64 00 78 */	andc r4, r3, r0
 .L_80413BE4:
 /* 80413BE4 003DD1A4  1C 04 00 0A */	mulli r0, r4, 0xa
-/* 80413BE8 003DD1A8  3C 60 80 52 */	lis r3, lbl_80522580@ha
-/* 80413BEC 003DD1AC  38 63 25 80 */	addi r3, r3, lbl_80522580@l
+/* 80413BE8 003DD1A8  3C 60 80 52 */	lis r3, coefTable__Q44nw4r3snd6detail15BiquadFilterHpf@ha
+/* 80413BEC 003DD1AC  38 63 25 80 */	addi r3, r3, coefTable__Q44nw4r3snd6detail15BiquadFilterHpf@l
 /* 80413BF0 003DD1B0  7C E3 02 14 */	add r7, r3, r0
 /* 80413BF4 003DD1B4  7D 03 02 2E */	lhzx r8, r3, r0
 /* 80413BF8 003DD1B8  A0 C7 00 02 */	lhz r6, 2(r7)
@@ -107,8 +107,8 @@
 /* 80413C74 003DD234  7C 64 00 78 */	andc r4, r3, r0
 .L_80413C78:
 /* 80413C78 003DD238  1C 04 00 0A */	mulli r0, r4, 0xa
-/* 80413C7C 003DD23C  3C 60 80 52 */	lis r3, lbl_8052294C@ha
-/* 80413C80 003DD240  38 63 29 4C */	addi r3, r3, lbl_8052294C@l
+/* 80413C7C 003DD23C  3C 60 80 52 */	lis r3, coefTable__Q44nw4r3snd6detail18BiquadFilterBpf512@ha
+/* 80413C80 003DD240  38 63 29 4C */	addi r3, r3, coefTable__Q44nw4r3snd6detail18BiquadFilterBpf512@l
 /* 80413C84 003DD244  7C E3 02 14 */	add r7, r3, r0
 /* 80413C88 003DD248  7D 03 02 2E */	lhzx r8, r3, r0
 /* 80413C8C 003DD24C  A0 C7 00 02 */	lhz r6, 2(r7)
@@ -150,8 +150,8 @@
 /* 80413D08 003DD2C8  7C 64 00 78 */	andc r4, r3, r0
 .L_80413D0C:
 /* 80413D0C 003DD2CC  1C 04 00 0A */	mulli r0, r4, 0xa
-/* 80413D10 003DD2D0  3C 60 80 52 */	lis r3, lbl_80522E10@ha
-/* 80413D14 003DD2D4  38 63 2E 10 */	addi r3, r3, lbl_80522E10@l
+/* 80413D10 003DD2D0  3C 60 80 52 */	lis r3, coefTable__Q44nw4r3snd6detail19BiquadFilterBpf1024@ha
+/* 80413D14 003DD2D4  38 63 2E 10 */	addi r3, r3, coefTable__Q44nw4r3snd6detail19BiquadFilterBpf1024@l
 /* 80413D18 003DD2D8  7C E3 02 14 */	add r7, r3, r0
 /* 80413D1C 003DD2DC  7D 03 02 2E */	lhzx r8, r3, r0
 /* 80413D20 003DD2E0  A0 C7 00 02 */	lhz r6, 2(r7)
@@ -193,8 +193,8 @@
 /* 80413D9C 003DD35C  7C 64 00 78 */	andc r4, r3, r0
 .L_80413DA0:
 /* 80413DA0 003DD360  1C 04 00 0A */	mulli r0, r4, 0xa
-/* 80413DA4 003DD364  3C 60 80 52 */	lis r3, lbl_805231B4@ha
-/* 80413DA8 003DD368  38 63 31 B4 */	addi r3, r3, lbl_805231B4@l
+/* 80413DA4 003DD364  3C 60 80 52 */	lis r3, coefTable__Q44nw4r3snd6detail19BiquadFilterBpf2048@ha
+/* 80413DA8 003DD368  38 63 31 B4 */	addi r3, r3, coefTable__Q44nw4r3snd6detail19BiquadFilterBpf2048@l
 /* 80413DAC 003DD36C  7C E3 02 14 */	add r7, r3, r0
 /* 80413DB0 003DD370  7D 03 02 2E */	lhzx r8, r3, r0
 /* 80413DB4 003DD374  A0 C7 00 02 */	lhz r6, 2(r7)
@@ -213,8 +213,7 @@
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
 
-.global lbl_80522120
-lbl_80522120:
+coefTable__Q44nw4r3snd6detail15BiquadFilterLpf:
 	.4byte 0x3AB37566
 	.4byte 0x3AB383B8
 	.4byte 0xC391371B
@@ -497,8 +496,8 @@ lbl_80522120:
 	.4byte 0x7DB0C241
 
 
-.global lbl_80522580
-lbl_80522580:
+.global coefTable__Q44nw4r3snd6detail15BiquadFilterHpf
+coefTable__Q44nw4r3snd6detail15BiquadFilterHpf:
 	.4byte 0x3BB58895
 	.4byte 0x3BB57E7B
 	.4byte 0xC17F3BAD
@@ -744,8 +743,8 @@ lbl_80522580:
 	.4byte 0xEE800000
 
 
-.global lbl_8052294C
-lbl_8052294C:
+.global coefTable__Q44nw4r3snd6detail18BiquadFilterBpf512
+coefTable__Q44nw4r3snd6detail18BiquadFilterBpf512:
 	.4byte 0x2EFA0000
 	.4byte 0xD10621D7
 	.4byte 0x1DF42E8F
@@ -1053,8 +1052,8 @@ lbl_8052294C:
 	.4byte 0x7ADFC488
 
 
-.global lbl_80522E10
-lbl_80522E10:
+.global coefTable__Q44nw4r3snd6detail19BiquadFilterBpf1024
+coefTable__Q44nw4r3snd6detail19BiquadFilterBpf1024:
 	.4byte 0x2F040000
 	.4byte 0xD0FC21DE
 	.4byte 0x1E082E99
@@ -1290,8 +1289,7 @@ lbl_80522E10:
 	.4byte 0xC7140000
 
 
-.global lbl_805231B4
-lbl_805231B4:
+coefTable__Q44nw4r3snd6detail19BiquadFilterBpf2048:
 	.4byte 0x3F420000
 	.4byte 0xC0BE0136
 	.4byte 0x3E833E8A
@@ -1525,6 +1523,51 @@ lbl_805231B4:
 	.4byte 0x06B60000
 	.4byte 0xF94A6A89
 	.4byte 0xCD6C0000
+
+
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+.global __vt__Q44nw4r3snd6detail19BiquadFilterBpf2048
+__vt__Q44nw4r3snd6detail19BiquadFilterBpf2048:
+	.4byte 0
+	.4byte 0
+	.4byte __dt__Q44nw4r3snd6detail19BiquadFilterBpf2048Fv
+	.4byte GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf2048CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
+
+
+.global __vt__Q44nw4r3snd6detail19BiquadFilterBpf1024
+__vt__Q44nw4r3snd6detail19BiquadFilterBpf1024:
+	.4byte 0
+	.4byte 0
+	.4byte __dt__Q44nw4r3snd6detail19BiquadFilterBpf1024Fv
+	.4byte GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf1024CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
+
+
+.global __vt__Q44nw4r3snd6detail18BiquadFilterBpf512
+__vt__Q44nw4r3snd6detail18BiquadFilterBpf512:
+	.4byte 0
+	.4byte 0
+	.4byte __dt__Q44nw4r3snd6detail18BiquadFilterBpf512Fv
+	.4byte GetCoef__Q44nw4r3snd6detail18BiquadFilterBpf512CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
+
+
+.global __vt__Q44nw4r3snd6detail15BiquadFilterHpf
+__vt__Q44nw4r3snd6detail15BiquadFilterHpf:
+	.4byte 0
+	.4byte 0
+	.4byte __dt__Q44nw4r3snd6detail15BiquadFilterHpfFv
+	.4byte GetCoef__Q44nw4r3snd6detail15BiquadFilterHpfCFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
+
+
+.global __vt__Q44nw4r3snd6detail15BiquadFilterLpf
+__vt__Q44nw4r3snd6detail15BiquadFilterLpf:
+	.4byte 0
+	.4byte 0
+	.4byte __dt__Q44nw4r3snd6detail15BiquadFilterLpfFv
+	.4byte GetCoef__Q44nw4r3snd6detail15BiquadFilterLpfCFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
+
+
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

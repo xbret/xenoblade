@@ -2161,11 +2161,12 @@
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+#@LOCAL@sort<PQ54nw4r3g3d6detail7workmem4MdlZ,PFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b>__3stdFPQ54nw4r3g3d6detail7workmem4MdlZPQ54nw4r3g3d6detail7workmem4MdlZPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b_v@shuffle@0
 .global lbl_80665DA8
 lbl_80665DA8:
 	.4byte 0xFFFFFFFC
 
-
+#@LOCAL@sort<PQ54nw4r3g3d6detail7workmem4MdlZ,RPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b>__3stdFPQ54nw4r3g3d6detail7workmem4MdlZPQ54nw4r3g3d6detail7workmem4MdlZRPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b_v@shuffle@0
 .global lbl_80665DAC
 lbl_80665DAC:
 	.4byte 0xFFFFFFFC

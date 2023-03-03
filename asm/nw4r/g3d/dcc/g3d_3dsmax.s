@@ -752,6 +752,7 @@
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
 
+#funcTable$6185
 .global lbl_80521048
 lbl_80521048:
 	.4byte MakeTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
@@ -763,6 +764,7 @@ lbl_80521048:
 	.4byte MakeTexSrtMtx_S__Q54nw4r3g3d6detail3dcc24_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
 
 
+#funcTable$6187
 .global lbl_80521064
 lbl_80521064:
 	.4byte ProductTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt

@@ -295,7 +295,7 @@
 
 
 .fn GetRuntimeTypeInfo__Q34nw4r2ut10FileStreamCFv, global
-/* 8041751C 003E0ADC  38 6D BC A8 */	addi r3, r13, lbl_80667E28@sda21
+/* 8041751C 003E0ADC  38 6D BC A8 */	addi r3, r13, typeInfo__Q34nw4r2ut10FileStream@sda21
 /* 80417520 003E0AE0  4E 80 00 20 */	blr 
 .endfn GetRuntimeTypeInfo__Q34nw4r2ut10FileStreamCFv
 
@@ -373,10 +373,10 @@ lbl_8056E0F0:
 	.4byte __dt__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFv
 	.4byte Close__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFv
 	.4byte Read__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFPvUl
-	.4byte func_8042BDD0
-	.4byte func_8042BDD8
-	.4byte func_8042BDE0
-	.4byte func_8042BDE8
+	.4byte ReadAsync__Q34nw4r2ut8IOStreamFPvUlPFlPQ34nw4r2ut8IOStreamPv_vPv
+	.4byte Write__Q34nw4r2ut8IOStreamFPCvUl
+	.4byte WriteAsync__Q34nw4r2ut8IOStreamFPCvUlPFlPQ34nw4r2ut8IOStreamPv_vPv
+	.4byte IsBusy__Q34nw4r2ut8IOStreamCFv
 	.4byte CanAsync__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
 	.4byte CanRead__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
 	.4byte CanWrite__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
@@ -385,8 +385,8 @@ lbl_8056E0F0:
 	.4byte GetBufferAlign__Q34nw4r2ut8IOStreamCFv
 	.4byte GetSize__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
 	.4byte Seek__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamFlUl
-	.4byte func_8042BDFC
-	.4byte func_8042BE00
+	.4byte Cancel__Q34nw4r2ut10FileStreamFv
+	.4byte CancelAsync__Q34nw4r2ut10FileStreamFPFlPQ34nw4r2ut8IOStreamPv_vPv
 	.4byte CanSeek__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
 	.4byte CanCancel__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
 	.4byte Tell__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv

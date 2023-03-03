@@ -62,9 +62,9 @@
 
 
 .fn IsDerivedFrom__Q34nw4r3g3d6G3dObjCFQ44nw4r3g3d6G3dObj7TypeObj, global
-/* 803E7358 003B0918  3C 60 80 52 */	lis r3, lbl_80520F58@ha
+/* 803E7358 003B0918  3C 60 80 52 */	lis r3, TYPE_NAME__Q34nw4r3g3d6G3dObj@ha
 /* 803E735C 003B091C  80 04 00 00 */	lwz r0, 0(r4)
-/* 803E7360 003B0920  38 63 0F 58 */	addi r3, r3, lbl_80520F58@l
+/* 803E7360 003B0920  38 63 0F 58 */	addi r3, r3, TYPE_NAME__Q34nw4r3g3d6G3dObj@l
 /* 803E7364 003B0924  7C 00 18 50 */	subf r0, r0, r3
 /* 803E7368 003B0928  7C 00 00 34 */	cntlzw r0, r0
 /* 803E736C 003B092C  54 03 D9 7E */	srwi r3, r0, 5
@@ -89,16 +89,16 @@
 
 
 .fn GetTypeObj__Q34nw4r3g3d6G3dObjCFv, global
-/* 803E73A4 003B0964  3C 60 80 52 */	lis r3, lbl_80520F58@ha
-/* 803E73A8 003B0968  38 63 0F 58 */	addi r3, r3, lbl_80520F58@l
+/* 803E73A4 003B0964  3C 60 80 52 */	lis r3, TYPE_NAME__Q34nw4r3g3d6G3dObj@ha
+/* 803E73A8 003B0968  38 63 0F 58 */	addi r3, r3, TYPE_NAME__Q34nw4r3g3d6G3dObj@l
 /* 803E73AC 003B096C  4E 80 00 20 */	blr 
 .endfn GetTypeObj__Q34nw4r3g3d6G3dObjCFv
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_80520F58
-lbl_80520F58:
+.global TYPE_NAME__Q34nw4r3g3d6G3dObj
+TYPE_NAME__Q34nw4r3g3d6G3dObj:
 	.4byte 0x00000007
 	.asciz "G3dObj"
 	.balign 4

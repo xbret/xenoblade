@@ -51,7 +51,7 @@
 /* 804306BC 003F9C7C  38 A0 00 04 */	li r5, 4
 /* 804306C0 003F9C80  C0 22 C5 E0 */	lfs f1, float_8066C960@sda21(r2)
 /* 804306C4 003F9C84  38 80 00 00 */	li r4, 0
-/* 804306C8 003F9C88  38 0D BC C4 */	addi r0, r13, lbl_80667E44@sda21
+/* 804306C8 003F9C88  38 0D BC C4 */	addi r0, r13, "mDefaultTagProcessor__Q34nw4r2ut17TextWriterBase<w>"@sda21
 /* 804306CC 003F9C8C  D0 1F 00 50 */	stfs f0, 0x50(r31)
 /* 804306D0 003F9C90  7F E3 FB 78 */	mr r3, r31
 /* 804306D4 003F9C94  D0 3F 00 4C */	stfs f1, 0x4c(r31)
@@ -2179,12 +2179,12 @@
 /* 80432600 003FBBC0  88 0D BC C8 */	lbz r0, lbl_80667E48@sda21(r13)
 /* 80432604 003FBBC4  7C 00 07 75 */	extsb. r0, r0
 /* 80432608 003FBBC8  40 82 00 2C */	bne .L_80432634
-/* 8043260C 003FBBCC  38 6D BC C0 */	addi r3, r13, lbl_80667E40@sda21
+/* 8043260C 003FBBCC  38 6D BC C0 */	addi r3, r13, "mDefaultTagProcessor__Q34nw4r2ut17TextWriterBase<c>"@sda21
 /* 80432610 003FBBD0  4B FF 90 F1 */	bl __ct__Q34nw4r2ut19TagProcessorBase_c_Fv
 /* 80432614 003FBBD4  3C 80 80 43 */	lis r4, __dt__Q34nw4r2ut19TagProcessorBase_c_Fv@ha
 /* 80432618 003FBBD8  3C A0 80 65 */	lis r5, lbl_806570C8@ha
 /* 8043261C 003FBBDC  38 84 B7 10 */	addi r4, r4, __dt__Q34nw4r2ut19TagProcessorBase_c_Fv@l
-/* 80432620 003FBBE0  38 6D BC C0 */	addi r3, r13, lbl_80667E40@sda21
+/* 80432620 003FBBE0  38 6D BC C0 */	addi r3, r13, "mDefaultTagProcessor__Q34nw4r2ut17TextWriterBase<c>"@sda21
 /* 80432624 003FBBE4  38 A5 70 C8 */	addi r5, r5, lbl_806570C8@l
 /* 80432628 003FBBE8  4B E8 70 75 */	bl __register_global_object
 /* 8043262C 003FBBEC  38 00 00 01 */	li r0, 1
@@ -2193,12 +2193,12 @@
 /* 80432634 003FBBF4  88 0D BC C9 */	lbz r0, lbl_80667E49@sda21(r13)
 /* 80432638 003FBBF8  7C 00 07 75 */	extsb. r0, r0
 /* 8043263C 003FBBFC  40 82 00 2C */	bne .L_80432668
-/* 80432640 003FBC00  38 6D BC C4 */	addi r3, r13, lbl_80667E44@sda21
+/* 80432640 003FBC00  38 6D BC C4 */	addi r3, r13, "mDefaultTagProcessor__Q34nw4r2ut17TextWriterBase<w>"@sda21
 /* 80432644 003FBC04  4B FF 94 25 */	bl __ct__Q34nw4r2ut19TagProcessorBase_w_Fv
 /* 80432648 003FBC08  3C 80 80 43 */	lis r4, __dt__Q34nw4r2ut19TagProcessorBase_w_Fv@ha
 /* 8043264C 003FBC0C  3C A0 80 65 */	lis r5, lbl_806570D4@ha
 /* 80432650 003FBC10  38 84 BA 78 */	addi r4, r4, __dt__Q34nw4r2ut19TagProcessorBase_w_Fv@l
-/* 80432654 003FBC14  38 6D BC C4 */	addi r3, r13, lbl_80667E44@sda21
+/* 80432654 003FBC14  38 6D BC C4 */	addi r3, r13, "mDefaultTagProcessor__Q34nw4r2ut17TextWriterBase<w>"@sda21
 /* 80432658 003FBC18  38 A5 70 D4 */	addi r5, r5, lbl_806570D4@l
 /* 8043265C 003FBC1C  4B E8 70 41 */	bl __register_global_object
 /* 80432660 003FBC20  38 00 00 01 */	li r0, 1
@@ -2246,15 +2246,18 @@ lbl_806570D4:
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667E40
-lbl_80667E40:
+"mDefaultTagProcessor__Q34nw4r2ut17TextWriterBase<c>":
 	.skip 0x4
-.global lbl_80667E44
-lbl_80667E44:
+
+"mDefaultTagProcessor__Q34nw4r2ut17TextWriterBase<w>":
 	.skip 0x4
+
+#@GUARD@mDefaultTagProcessor__Q34nw4r2ut17TextWriterBase<c>
 .global lbl_80667E48
 lbl_80667E48:
 	.skip 0x1
+
+#@GUARD@mDefaultTagProcessor__Q34nw4r2ut17TextWriterBase<w>
 .global lbl_80667E49
 lbl_80667E49:
 	.skip 0x7

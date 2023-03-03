@@ -560,13 +560,13 @@
 .endfn IsPrepared__Q44nw4r3snd6detail8SeqSoundCFv
 
 .fn GetRuntimeTypeInfo__Q44nw4r3snd6detail8SeqSoundCFv, global
-/* 8041B2F0 003E48B0  38 6D BC 58 */	addi r3, r13, lbl_80667DD8@sda21
+/* 8041B2F0 003E48B0  38 6D BC 58 */	addi r3, r13, typeInfo__Q44nw4r3snd6detail8SeqSound@sda21
 /* 8041B2F4 003E48B4  4E 80 00 20 */	blr
 .endfn GetRuntimeTypeInfo__Q44nw4r3snd6detail8SeqSoundCFv
 
 .fn "__sinit_\snd_SeqSound_cpp", local
-/* 8041B2F8 003E48B8  38 0D BC 30 */	addi r0, r13, lbl_80667DB0@sda21
-/* 8041B2FC 003E48BC  90 0D BC 58 */	stw r0, lbl_80667DD8@sda21(r13)
+/* 8041B2F8 003E48B8  38 0D BC 30 */	addi r0, r13, typeInfo__Q44nw4r3snd6detail10BasicSound@sda21
+/* 8041B2FC 003E48BC  90 0D BC 58 */	stw r0, typeInfo__Q44nw4r3snd6detail8SeqSound@sda21(r13)
 /* 8041B300 003E48C0  4E 80 00 20 */	blr
 .endfn "__sinit_\snd_SeqSound_cpp"
 
@@ -606,6 +606,6 @@ lbl_8056E478:
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667DD8
-lbl_80667DD8:
+.global typeInfo__Q44nw4r3snd6detail8SeqSound
+typeInfo__Q44nw4r3snd6detail8SeqSound:
 	.skip 0x8

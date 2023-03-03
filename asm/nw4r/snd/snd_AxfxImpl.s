@@ -70,8 +70,8 @@
 /* 8041168C 003DAC4C  38 84 17 48 */	addi r4, r4, Free__Q44nw4r3snd6detail8AxfxImplFPv@l
 /* 80411690 003DAC50  4B EC 94 91 */	bl AXFXSetHooks
 /* 80411694 003DAC54  38 00 00 00 */	li r0, 0
-/* 80411698 003DAC58  93 ED BC 28 */	stw r31, lbl_80667DA8@sda21(r13)
-/* 8041169C 003DAC5C  90 0D BC 2C */	stw r0, lbl_80667DAC@sda21(r13)
+/* 80411698 003DAC58  93 ED BC 28 */	stw r31, mCurrentFx__Q44nw4r3snd6detail8AxfxImpl@sda21(r13)
+/* 8041169C 003DAC5C  90 0D BC 2C */	stw r0, mAllocatedSize__Q44nw4r3snd6detail8AxfxImpl@sda21(r13)
 /* 804116A0 003DAC60  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 804116A4 003DAC64  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 804116A8 003DAC68  7C 08 03 A6 */	mtlr r0
@@ -87,8 +87,8 @@
 /* 804116C4 003DAC84  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804116C8 003DAC88  4B EC 94 59 */	bl AXFXSetHooks
 /* 804116CC 003DAC8C  38 00 00 00 */	li r0, 0
-/* 804116D0 003DAC90  80 6D BC 2C */	lwz r3, lbl_80667DAC@sda21(r13)
-/* 804116D4 003DAC94  90 0D BC 28 */	stw r0, lbl_80667DA8@sda21(r13)
+/* 804116D0 003DAC90  80 6D BC 2C */	lwz r3, mAllocatedSize__Q44nw4r3snd6detail8AxfxImpl@sda21(r13)
+/* 804116D4 003DAC94  90 0D BC 28 */	stw r0, mCurrentFx__Q44nw4r3snd6detail8AxfxImpl@sda21(r13)
 /* 804116D8 003DAC98  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 804116DC 003DAC9C  7C 08 03 A6 */	mtlr r0
 /* 804116E0 003DACA0  38 21 00 10 */	addi r1, r1, 0x10
@@ -103,18 +103,18 @@
 /* 804116F8 003DACB8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804116FC 003DACBC  7C 7F 1B 78 */	mr r31, r3
 /* 80411700 003DACC0  7F E4 FB 78 */	mr r4, r31
-/* 80411704 003DACC4  80 CD BC 28 */	lwz r6, lbl_80667DA8@sda21(r13)
+/* 80411704 003DACC4  80 CD BC 28 */	lwz r6, mCurrentFx__Q44nw4r3snd6detail8AxfxImpl@sda21(r13)
 /* 80411708 003DACC8  80 66 00 00 */	lwz r3, 0(r6)
 /* 8041170C 003DACCC  4B F3 81 25 */	bl MEMAllocFromFrmHeapEx
-/* 80411710 003DACD0  80 AD BC 28 */	lwz r5, lbl_80667DA8@sda21(r13)
+/* 80411710 003DACD0  80 AD BC 28 */	lwz r5, mCurrentFx__Q44nw4r3snd6detail8AxfxImpl@sda21(r13)
 /* 80411714 003DACD4  38 1F 00 03 */	addi r0, r31, 3
 /* 80411718 003DACD8  54 00 00 3A */	rlwinm r0, r0, 0, 0, 0x1d
 /* 8041171C 003DACDC  80 85 00 04 */	lwz r4, 4(r5)
 /* 80411720 003DACE0  38 84 00 01 */	addi r4, r4, 1
 /* 80411724 003DACE4  90 85 00 04 */	stw r4, 4(r5)
-/* 80411728 003DACE8  80 8D BC 2C */	lwz r4, lbl_80667DAC@sda21(r13)
+/* 80411728 003DACE8  80 8D BC 2C */	lwz r4, mAllocatedSize__Q44nw4r3snd6detail8AxfxImpl@sda21(r13)
 /* 8041172C 003DACEC  7C 04 02 14 */	add r0, r4, r0
-/* 80411730 003DACF0  90 0D BC 2C */	stw r0, lbl_80667DAC@sda21(r13)
+/* 80411730 003DACF0  90 0D BC 2C */	stw r0, mAllocatedSize__Q44nw4r3snd6detail8AxfxImpl@sda21(r13)
 /* 80411734 003DACF4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80411738 003DACF8  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8041173C 003DACFC  7C 08 03 A6 */	mtlr r0
@@ -123,14 +123,14 @@
 .endfn Alloc__Q44nw4r3snd6detail8AxfxImplFUl
 
 .fn Free__Q44nw4r3snd6detail8AxfxImplFPv, global
-/* 80411748 003DAD08  80 8D BC 28 */	lwz r4, lbl_80667DA8@sda21(r13)
+/* 80411748 003DAD08  80 8D BC 28 */	lwz r4, mCurrentFx__Q44nw4r3snd6detail8AxfxImpl@sda21(r13)
 /* 8041174C 003DAD0C  80 64 00 04 */	lwz r3, 4(r4)
 /* 80411750 003DAD10  2C 03 00 00 */	cmpwi r3, 0
 /* 80411754 003DAD14  41 82 00 0C */	beq .L_80411760
 /* 80411758 003DAD18  38 03 FF FF */	addi r0, r3, -1
 /* 8041175C 003DAD1C  90 04 00 04 */	stw r0, 4(r4)
 .L_80411760:
-/* 80411760 003DAD20  80 6D BC 28 */	lwz r3, lbl_80667DA8@sda21(r13)
+/* 80411760 003DAD20  80 6D BC 28 */	lwz r3, mCurrentFx__Q44nw4r3snd6detail8AxfxImpl@sda21(r13)
 /* 80411764 003DAD24  80 03 00 04 */	lwz r0, 4(r3)
 /* 80411768 003DAD28  2C 00 00 00 */	cmpwi r0, 0
 /* 8041176C 003DAD2C  4C 82 00 20 */	bnelr 
@@ -142,9 +142,9 @@
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667DA8
-lbl_80667DA8:
+
+mCurrentFx__Q44nw4r3snd6detail8AxfxImpl:
 	.skip 0x4
-.global lbl_80667DAC
-lbl_80667DAC:
+
+mAllocatedSize__Q44nw4r3snd6detail8AxfxImpl:
 	.skip 0x4

@@ -122,9 +122,9 @@
 /* 80415540 003DEB00  3C A0 43 30 */	lis r5, 0x4330
 /* 80415544 003DEB04  6C 80 80 00 */	xoris r0, r4, 0x8000
 /* 80415548 003DEB08  88 C3 00 14 */	lbz r6, 0x14(r3)
-/* 8041554C 003DEB0C  3C 80 80 52 */	lis r4, lbl_80523558@ha
+/* 8041554C 003DEB0C  3C 80 80 52 */	lis r4, DecibelSquareTable__Q44nw4r3snd6detail12EnvGenerator@ha
 /* 80415550 003DEB10  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80415554 003DEB14  38 84 35 58 */	addi r4, r4, lbl_80523558@l
+/* 80415554 003DEB14  38 84 35 58 */	addi r4, r4, DecibelSquareTable__Q44nw4r3snd6detail12EnvGenerator@l
 /* 80415558 003DEB18  54 C0 08 3C */	slwi r0, r6, 1
 /* 8041555C 003DEB1C  C8 62 C3 C8 */	lfd f3, double_8066C748@sda21(r2)
 /* 80415560 003DEB20  90 A1 00 10 */	stw r5, 0x10(r1)
@@ -285,8 +285,7 @@
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
 
-.global lbl_80523558
-lbl_80523558:
+DecibelSquareTable__Q44nw4r3snd6detail12EnvGenerator:
 	.2byte 0xFD2D
 	.2byte 0xFD2E
 	.2byte 0xFD2F
@@ -417,6 +416,7 @@ lbl_80523558:
 	.2byte 0x0000
 
 
+#@LOCAL@SetAttack__Q44nw4r3snd6detail12EnvGeneratorFi@attackTable
 .global lbl_80523658
 lbl_80523658:
 	.4byte 0x3F7FCCB8

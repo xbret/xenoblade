@@ -99,8 +99,8 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_80520E38
-lbl_80520E38:
+.global TYPE_NAME__Q34nw4r3g3d9AnmObjVis
+TYPE_NAME__Q34nw4r3g3d9AnmObjVis:
 	.4byte 0x0000000A
 	.asciz "AnmObjVis"
 	.balign 4
