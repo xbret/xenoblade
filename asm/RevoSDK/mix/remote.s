@@ -6,7 +6,7 @@
 .fn MIXRmtSetVolumes, global
 /* 8034CC90 00316250  80 63 00 18 */	lwz r3, 0x18(r3)
 /* 8034CC94 00316254  54 80 07 3E */	clrlwi r0, r4, 0x1c
-/* 8034CC98 00316258  80 8D B8 68 */	lwz r4, lbl_806679E8@sda21(r13)
+/* 8034CC98 00316258  80 8D B8 68 */	lwz r4, __MIXRmtChannel@sda21(r13)
 /* 8034CC9C 0031625C  1C 63 00 44 */	mulli r3, r3, 0x44
 /* 8034CCA0 00316260  81 81 00 08 */	lwz r12, 8(r1)
 /* 8034CCA4 00316264  81 61 00 0C */	lwz r11, 0xc(r1)
@@ -29,7 +29,7 @@
 .fn MIXRmtSetFader, global
 /* 8034CCE0 003162A0  80 03 00 18 */	lwz r0, 0x18(r3)
 /* 8034CCE4 003162A4  2C 04 00 00 */	cmpwi r4, 0
-/* 8034CCE8 003162A8  80 6D B8 68 */	lwz r3, lbl_806679E8@sda21(r13)
+/* 8034CCE8 003162A8  80 6D B8 68 */	lwz r3, __MIXRmtChannel@sda21(r13)
 /* 8034CCEC 003162AC  1C 00 00 44 */	mulli r0, r0, 0x44
 /* 8034CCF0 003162B0  7C 63 02 14 */	add r3, r3, r0
 /* 8034CCF4 003162B4  41 82 00 20 */	beq .L_8034CD14
@@ -67,7 +67,7 @@
 /* 8034CD50 00316310  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8034CD54 00316314  93 C1 00 08 */	stw r30, 8(r1)
 /* 8034CD58 00316318  7C 9E 23 78 */	mr r30, r4
-/* 8034CD5C 0031631C  80 6D B8 68 */	lwz r3, lbl_806679E8@sda21(r13)
+/* 8034CD5C 0031631C  80 6D B8 68 */	lwz r3, __MIXRmtChannel@sda21(r13)
 /* 8034CD60 00316320  7F E3 02 14 */	add r31, r3, r0
 /* 8034CD64 00316324  7C 63 00 2E */	lwzx r3, r3, r0
 /* 8034CD68 00316328  54 60 00 03 */	rlwinm. r0, r3, 0, 0, 1
@@ -363,7 +363,7 @@
 .balign 16, 0
 .fn __MIXRmtResetChannel, global
 /* 8034D180 00316740  1C 83 00 44 */	mulli r4, r3, 0x44
-/* 8034D184 00316744  80 AD B8 68 */	lwz r5, lbl_806679E8@sda21(r13)
+/* 8034D184 00316744  80 AD B8 68 */	lwz r5, __MIXRmtChannel@sda21(r13)
 /* 8034D188 00316748  38 60 00 00 */	li r3, 0
 /* 8034D18C 0031674C  7C 64 29 6E */	stwux r3, r4, r5
 /* 8034D190 00316750  38 00 FC 40 */	li r0, -960
@@ -385,3 +385,16 @@
 /* 8034D1D0 00316790  B0 64 00 24 */	sth r3, 0x24(r4)
 /* 8034D1D4 00316794  4E 80 00 20 */	blr 
 .endfn __MIXRmtResetChannel
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global __s_MIXRmtChannel
+__s_MIXRmtChannel:
+	.skip 0x1988
+
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global __MIXRmtChannel
+__MIXRmtChannel:
+	.skip 0x8

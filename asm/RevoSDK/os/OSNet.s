@@ -36,7 +36,7 @@
 /* 8035E0DC 0032769C  4C C6 31 82 */	crclr 6
 /* 8035E0E0 003276A0  4B FF 6E 11 */	bl OSReport
 .L_8035E0E4:
-/* 8035E0E4 003276A4  80 0D B8 80 */	lwz r0, lbl_80667A00@sda21(r13)
+/* 8035E0E4 003276A4  80 0D B8 80 */	lwz r0, __OSInIPL@sda21(r13)
 /* 8035E0E8 003276A8  2C 00 00 00 */	cmpwi r0, 0
 /* 8035E0EC 003276AC  40 82 00 24 */	bne .L_8035E110
 /* 8035E0F0 003276B0  38 60 00 00 */	li r3, 0
@@ -59,21 +59,21 @@
 .fn NWC24iPrepareShutdown, global
 /* 8035E130 003276F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035E134 003276F4  7C 08 02 A6 */	mflr r0
-/* 8035E138 003276F8  3C 80 80 5D */	lis r4, lbl_805D5440@ha
-/* 8035E13C 003276FC  3C A0 80 36 */	lis r5, NWC24Shutdown@ha
+/* 8035E138 003276F8  3C 80 80 5D */	lis r4, ShutdownFuncInfo@ha
+/* 8035E13C 003276FC  3C A0 80 36 */	lis r5, NWC24Shutdown_@ha
 /* 8035E140 00327700  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8035E144 00327704  38 64 54 40 */	addi r3, r4, lbl_805D5440@l
+/* 8035E144 00327704  38 64 54 40 */	addi r3, r4, ShutdownFuncInfo@l
 /* 8035E148 00327708  38 00 00 6E */	li r0, 0x6e
-/* 8035E14C 0032770C  38 A5 E4 00 */	addi r5, r5, NWC24Shutdown@l
+/* 8035E14C 0032770C  38 A5 E4 00 */	addi r5, r5, NWC24Shutdown_@l
 /* 8035E150 00327710  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8035E154 00327714  3B E0 00 00 */	li r31, 0
-/* 8035E158 00327718  90 A4 54 40 */	stw r5, lbl_805D5440@l(r4)
+/* 8035E158 00327718  90 A4 54 40 */	stw r5, ShutdownFuncInfo@l(r4)
 /* 8035E15C 0032771C  90 03 00 04 */	stw r0, 4(r3)
 /* 8035E160 00327720  4B FF BD B1 */	bl OSRegisterShutdownFunction
-/* 8035E164 00327724  80 0D 9A 28 */	lwz r0, lbl_80665BA8@sda21(r13)
+/* 8035E164 00327724  80 0D 9A 28 */	lwz r0, nwc24ShtFd@sda21(r13)
 /* 8035E168 00327728  2C 00 00 00 */	cmpwi r0, 0
 /* 8035E16C 0032772C  40 80 00 50 */	bge .L_8035E1BC
-/* 8035E170 00327730  38 0D 9A 28 */	addi r0, r13, lbl_80665BA8@sda21
+/* 8035E170 00327730  38 0D 9A 28 */	addi r0, r13, nwc24ShtFd@sda21
 /* 8035E174 00327734  3C 60 80 56 */	lis r3, lbl_8055EDF0@ha
 /* 8035E178 00327738  2C 00 00 00 */	cmpwi r0, 0
 /* 8035E17C 0032773C  38 63 ED F0 */	addi r3, r3, lbl_8055EDF0@l
@@ -84,7 +84,7 @@
 /* 8035E18C 0032774C  38 80 00 01 */	li r4, 1
 /* 8035E190 00327750  4B FE 52 01 */	bl IOS_Open
 /* 8035E194 00327754  2C 03 00 00 */	cmpwi r3, 0
-/* 8035E198 00327758  90 6D 9A 28 */	stw r3, lbl_80665BA8@sda21(r13)
+/* 8035E198 00327758  90 6D 9A 28 */	stw r3, nwc24ShtFd@sda21(r13)
 /* 8035E19C 0032775C  40 80 00 1C */	bge .L_8035E1B8
 /* 8035E1A0 00327760  2C 03 FF FA */	cmpwi r3, -6
 /* 8035E1A4 00327764  40 82 00 0C */	bne .L_8035E1B0
@@ -98,7 +98,7 @@
 .L_8035E1BC:
 /* 8035E1BC 0032777C  2C 1F 00 00 */	cmpwi r31, 0
 /* 8035E1C0 00327780  38 00 00 05 */	li r0, 5
-/* 8035E1C4 00327784  90 0D B9 A8 */	stw r0, lbl_80667B28@sda21(r13)
+/* 8035E1C4 00327784  90 0D B9 A8 */	stw r0, nwc24ShtRetryRest@sda21(r13)
 /* 8035E1C8 00327788  40 82 00 08 */	bne .L_8035E1D0
 /* 8035E1CC 0032778C  3B E0 00 01 */	li r31, 1
 .L_8035E1D0:
@@ -238,7 +238,7 @@
 .endfn NWC24SuspendScheduler
 
 .balign 16, 0
-.fn NWC24iIoctlResourceManagerAsync, global
+.fn NWC24iRequestShutdown, global
 /* 8035E390 00327950  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035E394 00327954  7C 08 02 A6 */	mflr r0
 /* 8035E398 00327958  3C E0 80 5D */	lis r7, lbl_805D54A0@ha
@@ -249,7 +249,7 @@
 /* 8035E3AC 0032796C  38 E7 54 A0 */	addi r7, r7, lbl_805D54A0@l
 /* 8035E3B0 00327970  90 65 54 80 */	stw r3, lbl_805D5480@l(r5)
 /* 8035E3B4 00327974  38 A5 54 80 */	addi r5, r5, lbl_805D5480@l
-/* 8035E3B8 00327978  80 6D 9A 28 */	lwz r3, lbl_80665BA8@sda21(r13)
+/* 8035E3B8 00327978  80 6D 9A 28 */	lwz r3, nwc24ShtFd@sda21(r13)
 /* 8035E3BC 0032797C  39 29 E5 F0 */	addi r9, r9, CallbackAsyncIpc@l
 /* 8035E3C0 00327980  38 80 00 28 */	li r4, 0x28
 /* 8035E3C4 00327984  38 C0 00 20 */	li r6, 0x20
@@ -261,17 +261,17 @@
 /* 8035E3DC 0032799C  48 00 00 10 */	b .L_8035E3EC
 .L_8035E3E0:
 /* 8035E3E0 003279A0  38 00 00 01 */	li r0, 1
-/* 8035E3E4 003279A4  90 0D B9 AC */	stw r0, lbl_80667B2C@sda21(r13)
+/* 8035E3E4 003279A4  90 0D B9 AC */	stw r0, NWC24iIsRequestPending@sda21(r13)
 /* 8035E3E8 003279A8  38 60 00 00 */	li r3, 0
 .L_8035E3EC:
 /* 8035E3EC 003279AC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8035E3F0 003279B0  7C 08 03 A6 */	mtlr r0
 /* 8035E3F4 003279B4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035E3F8 003279B8  4E 80 00 20 */	blr 
-.endfn NWC24iIoctlResourceManagerAsync
+.endfn NWC24iRequestShutdown
 
 .balign 16, 0
-.fn NWC24Shutdown, global
+.fn NWC24Shutdown_, global
 /* 8035E400 003279C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035E404 003279C4  7C 08 02 A6 */	mflr r0
 /* 8035E408 003279C8  2C 03 00 00 */	cmpwi r3, 0
@@ -283,7 +283,7 @@
 /* 8035E41C 003279DC  80 0D B9 B0 */	lwz r0, lbl_80667B30@sda21(r13)
 /* 8035E420 003279E0  2C 00 00 00 */	cmpwi r0, 0
 /* 8035E424 003279E4  41 82 00 64 */	beq .L_8035E488
-/* 8035E428 003279E8  80 0D B9 AC */	lwz r0, lbl_80667B2C@sda21(r13)
+/* 8035E428 003279E8  80 0D B9 AC */	lwz r0, NWC24iIsRequestPending@sda21(r13)
 /* 8035E42C 003279EC  2C 00 00 00 */	cmpwi r0, 0
 /* 8035E430 003279F0  41 82 00 0C */	beq .L_8035E43C
 /* 8035E434 003279F4  38 60 00 00 */	li r3, 0
@@ -295,13 +295,13 @@
 /* 8035E448 00327A08  38 60 00 01 */	li r3, 1
 /* 8035E44C 00327A0C  48 00 00 5C */	b .L_8035E4A8
 .L_8035E450:
-/* 8035E450 00327A10  80 6D B9 A8 */	lwz r3, lbl_80667B28@sda21(r13)
+/* 8035E450 00327A10  80 6D B9 A8 */	lwz r3, nwc24ShtRetryRest@sda21(r13)
 /* 8035E454 00327A14  2C 03 00 00 */	cmpwi r3, 0
 /* 8035E458 00327A18  40 81 00 18 */	ble .L_8035E470
 /* 8035E45C 00327A1C  38 03 FF FF */	addi r0, r3, -1
 /* 8035E460 00327A20  38 60 00 00 */	li r3, 0
 /* 8035E464 00327A24  90 6D B9 B0 */	stw r3, lbl_80667B30@sda21(r13)
-/* 8035E468 00327A28  90 0D B9 A8 */	stw r0, lbl_80667B28@sda21(r13)
+/* 8035E468 00327A28  90 0D B9 A8 */	stw r0, nwc24ShtRetryRest@sda21(r13)
 /* 8035E46C 00327A2C  48 00 00 38 */	b .L_8035E4A4
 .L_8035E470:
 /* 8035E470 00327A30  3C 60 80 56 */	lis r3, lbl_8055EE4C@ha
@@ -313,7 +313,7 @@
 .L_8035E488:
 /* 8035E488 00327A48  7C 83 23 78 */	mr r3, r4
 /* 8035E48C 00327A4C  38 8D B9 B4 */	addi r4, r13, lbl_80667B34@sda21
-/* 8035E490 00327A50  4B FF FF 01 */	bl NWC24iIoctlResourceManagerAsync
+/* 8035E490 00327A50  4B FF FF 01 */	bl NWC24iRequestShutdown
 /* 8035E494 00327A54  2C 03 00 00 */	cmpwi r3, 0
 /* 8035E498 00327A58  41 80 00 0C */	blt .L_8035E4A4
 /* 8035E49C 00327A5C  38 00 00 01 */	li r0, 1
@@ -325,7 +325,7 @@
 /* 8035E4AC 00327A6C  7C 08 03 A6 */	mtlr r0
 /* 8035E4B0 00327A70  38 21 00 10 */	addi r1, r1, 0x10
 /* 8035E4B4 00327A74  4E 80 00 20 */	blr 
-.endfn NWC24Shutdown
+.endfn NWC24Shutdown_
 
 .balign 16, 0
 .fn NWC24iSetRtcCounter, global
@@ -369,12 +369,12 @@
 .L_8035E540:
 /* 8035E540 00327B00  2C 1F 00 00 */	cmpwi r31, 0
 /* 8035E544 00327B04  41 80 00 7C */	blt .L_8035E5C0
-/* 8035E548 00327B08  3C 60 80 5D */	lis r3, lbl_805D54C0@ha
-/* 8035E54C 00327B0C  3C E0 80 5D */	lis r7, lbl_805D54E0@ha
-/* 8035E550 00327B10  38 A3 54 C0 */	addi r5, r3, lbl_805D54C0@l
-/* 8035E554 00327B14  93 83 54 C0 */	stw r28, lbl_805D54C0@l(r3)
+/* 8035E548 00327B08  3C 60 80 5D */	lis r3, nwc24TimeCommonBuffer@ha
+/* 8035E54C 00327B0C  3C E0 80 5D */	lis r7, nwc24TimeCommonResult@ha
+/* 8035E550 00327B10  38 A3 54 C0 */	addi r5, r3, nwc24TimeCommonBuffer@l
+/* 8035E554 00327B14  93 83 54 C0 */	stw r28, nwc24TimeCommonBuffer@l(r3)
 /* 8035E558 00327B18  7F C3 F3 78 */	mr r3, r30
-/* 8035E55C 00327B1C  38 E7 54 E0 */	addi r7, r7, lbl_805D54E0@l
+/* 8035E55C 00327B1C  38 E7 54 E0 */	addi r7, r7, nwc24TimeCommonResult@l
 /* 8035E560 00327B20  93 A5 00 04 */	stw r29, 4(r5)
 /* 8035E564 00327B24  38 80 00 17 */	li r4, 0x17
 /* 8035E568 00327B28  38 C0 00 20 */	li r6, 0x20
@@ -389,8 +389,8 @@
 .L_8035E588:
 /* 8035E588 00327B48  2C 1F 00 00 */	cmpwi r31, 0
 /* 8035E58C 00327B4C  41 80 00 0C */	blt .L_8035E598
-/* 8035E590 00327B50  3C 60 80 5D */	lis r3, lbl_805D54E0@ha
-/* 8035E594 00327B54  83 E3 54 E0 */	lwz r31, lbl_805D54E0@l(r3)
+/* 8035E590 00327B50  3C 60 80 5D */	lis r3, nwc24TimeCommonResult@ha
+/* 8035E594 00327B54  83 E3 54 E0 */	lwz r31, nwc24TimeCommonResult@l(r3)
 .L_8035E598:
 /* 8035E598 00327B58  7F C3 F3 78 */	mr r3, r30
 /* 8035E59C 00327B5C  4B FE 4F E5 */	bl IOS_Close
@@ -424,7 +424,7 @@
 /* 8035E5F8 00327BB8  90 64 00 00 */	stw r3, 0(r4)
 .L_8035E5FC:
 /* 8035E5FC 00327BBC  38 00 00 00 */	li r0, 0
-/* 8035E600 00327BC0  90 0D B9 AC */	stw r0, lbl_80667B2C@sda21(r13)
+/* 8035E600 00327BC0  90 0D B9 AC */	stw r0, NWC24iIsRequestPending@sda21(r13)
 /* 8035E604 00327BC4  38 60 00 00 */	li r3, 0
 /* 8035E608 00327BC8  4E 80 00 20 */	blr 
 .endfn CallbackAsyncIpc
@@ -471,43 +471,46 @@ lbl_8055EE80:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665BA8
-lbl_80665BA8:
+.global nwc24ShtFd
+nwc24ShtFd:
 	.4byte 0xFFFFFFFF
 	.4byte 0
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805D5440
-lbl_805D5440:
+ShutdownFuncInfo:
 	.skip 0x20
-.global lbl_805D5460
+
+#@LOCAL@NWC24SuspendScheduler__Fv@susResult
 lbl_805D5460:
 	.skip 0x20
-.global lbl_805D5480
+
+#@LOCAL@NWC24iRequestShutdown__FUlPl@shtBuffer
 lbl_805D5480:
 	.skip 0x20
-.global lbl_805D54A0
+
+#@LOCAL@NWC24iRequestShutdown__FUlPl@shtResult@0
 lbl_805D54A0:
 	.skip 0x20
-.global lbl_805D54C0
-lbl_805D54C0:
+
+nwc24TimeCommonBuffer:
 	.skip 0x20
-.global lbl_805D54E0
-lbl_805D54E0:
+
+nwc24TimeCommonResult:
 	.skip 0x20
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667B28
-lbl_80667B28:
+nwc24ShtRetryRest:
 	.skip 0x4
-.global lbl_80667B2C
-lbl_80667B2C:
+
+NWC24iIsRequestPending:
 	.skip 0x4
-.global lbl_80667B30
+
+#@LOCAL@NWC24Shutdown___FiUl@shuttingdown
 lbl_80667B30:
 	.skip 0x4
-.global lbl_80667B34
+
+#@LOCAL@NWC24Shutdown___FiUl@result@0
 lbl_80667B34:
 	.skip 0x4

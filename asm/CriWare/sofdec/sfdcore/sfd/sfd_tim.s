@@ -1179,8 +1179,6 @@
 /* 803CD728 00396CE8  4E 80 00 20 */	blr 
 .endfn SFTIM_Tc2Time
 
-#sftim_Tc2TimeN, sftim_Tc2Time23N, sftim_Tc2Time29N, sftim_Tc2Time59N
-
 .fn sftim_Tc2TimeN, global
 /* 803CD72C 00396CEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CD730 00396CF0  93 E1 00 0C */	stw r31, 0xc(r1)

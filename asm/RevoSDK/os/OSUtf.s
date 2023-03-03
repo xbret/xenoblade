@@ -146,9 +146,9 @@
 /* 8035CF4C 0032650C  41 80 00 48 */	blt .L_8035CF94
 /* 8035CF50 00326510  28 03 21 22 */	cmplwi r3, 0x2122
 /* 8035CF54 00326514  41 81 00 40 */	bgt .L_8035CF94
-/* 8035CF58 00326518  3C 80 80 55 */	lis r4, lbl_80552DB8@ha
+/* 8035CF58 00326518  3C 80 80 55 */	lis r4, UcsAnsiTable@ha
 /* 8035CF5C 0032651C  38 00 00 20 */	li r0, 0x20
-/* 8035CF60 00326520  38 84 2D B8 */	addi r4, r4, lbl_80552DB8@l
+/* 8035CF60 00326520  38 84 2D B8 */	addi r4, r4, UcsAnsiTable@l
 /* 8035CF64 00326524  38 A0 00 00 */	li r5, 0
 /* 8035CF68 00326528  7C 09 03 A6 */	mtctr r0
 /* 8035CF6C 0032652C  60 00 00 00 */	nop 
@@ -176,9 +176,9 @@
 /* 8035CFAC 0032656C  38 60 00 00 */	li r3, 0
 /* 8035CFB0 00326570  4E 80 00 20 */	blr
 .L_8035CFB4:
-/* 8035CFB4 00326574  3C 80 80 56 */	lis r4, lbl_8055E7F8@ha
+/* 8035CFB4 00326574  3C 80 80 56 */	lis r4, UcsSjisTable@ha
 /* 8035CFB8 00326578  54 60 D5 BA */	rlwinm r0, r3, 0x1a, 0x16, 0x1d
-/* 8035CFBC 0032657C  38 84 E7 F8 */	addi r4, r4, lbl_8055E7F8@l
+/* 8035CFBC 0032657C  38 84 E7 F8 */	addi r4, r4, UcsSjisTable@l
 /* 8035CFC0 00326580  7C 84 00 2E */	lwzx r4, r4, r0
 /* 8035CFC4 00326584  2C 04 00 00 */	cmpwi r4, 0
 /* 8035CFC8 00326588  41 82 00 10 */	beq .L_8035CFD8
@@ -192,8 +192,8 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80552DB8
-lbl_80552DB8:
+
+UcsAnsiTable:
 	.4byte 0x20AC0000
 	.4byte 0x201A0192
 	.4byte 0x201E2026
@@ -211,8 +211,7 @@ lbl_80552DB8:
 	.4byte 0x01530000
 	.4byte 0x017E0178
 
-.global lbl_80552DF8
-lbl_80552DF8:
+Ucs00:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -342,8 +341,7 @@ lbl_80552DF8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_80552FF8
-lbl_80552FF8:
+Ucs03:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -473,8 +471,7 @@ lbl_80552FF8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_805531F8
-lbl_805531F8:
+Ucs04:
 	.4byte 0x00008446
 	.4byte 0
 	.4byte 0
@@ -604,8 +601,9 @@ lbl_805531F8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_805533F8
-lbl_805533F8:
+
+
+Ucs20:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -735,8 +733,8 @@ lbl_805533F8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_805535F8
-lbl_805535F8:
+
+Ucs21:
 	.4byte 0
 	.4byte 0x0000818E
 	.4byte 0
@@ -866,8 +864,8 @@ lbl_805535F8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_805537F8
-lbl_805537F8:
+
+Ucs22:
 	.4byte 0x81CD0000
 	.4byte 0x81DD81CE
 	.4byte 0
@@ -997,18 +995,17 @@ lbl_805537F8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_805539F8
-lbl_805539F8:
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
 
+Ucs23:
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
 	.4byte 0x81DC0000
 	.4byte 0
 	.4byte 0
@@ -1129,8 +1126,8 @@ lbl_805539F8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_80553BF8
-lbl_80553BF8:
+
+Ucs25:
 	.4byte 0x849F84AA
 	.4byte 0x84A084AB
 	.4byte 0
@@ -1260,8 +1257,8 @@ lbl_80553BF8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_80553DF8
-lbl_80553DF8:
+
+Ucs26:
 	.4byte 0
 	.4byte 0
 	.4byte 0x0000819A
@@ -1391,8 +1388,8 @@ lbl_80553DF8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_80553FF8
-lbl_80553FF8:
+
+Ucs30:
 	.4byte 0x81408141
 	.4byte 0x81428156
 	.4byte 0x00008158
@@ -1522,8 +1519,8 @@ lbl_80553FF8:
 	.4byte 0x815B8152
 	.4byte 0x81530000
 
-.global lbl_805541F8
-lbl_805541F8:
+
+Ucs4E:
 	.4byte 0x88EA929A
 	.4byte 0x00008EB5
 	.4byte 0
@@ -1653,8 +1650,8 @@ lbl_805541F8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_805543F8
-lbl_805543F8:
+
+Ucs4F:
 	.4byte 0x00008AE9
 	.4byte 0
 	.4byte 0
@@ -1784,8 +1781,8 @@ lbl_805543F8:
 	.4byte 0
 	.4byte 0x98EA0000
 
-.global lbl_805545F8
-lbl_805545F8:
+
+Ucs50:
 	.4byte 0
 	.4byte 0
 	.4byte 0x000098E4
@@ -1915,8 +1912,8 @@ lbl_805545F8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_805547F8
-lbl_805547F8:
+
+Ucs51:
 	.4byte 0x8B56994D
 	.4byte 0x994E0000
 	.4byte 0x89AD0000
@@ -2046,8 +2043,8 @@ lbl_805547F8:
 	.4byte 0x0000949F
 	.4byte 0x99820000
 
-.global lbl_805549F8
-lbl_805549F8:
+
+Ucs52:
 	.4byte 0x93810000
 	.4byte 0x0000906E
 	.4byte 0x99830000
@@ -2177,8 +2174,8 @@ lbl_805549F8:
 	.4byte 0
 	.4byte 0x8CF996DC
 
-.global lbl_80554BF8
-lbl_80554BF8:
+
+Ucs53:
 	.4byte 0x000096E6
 	.4byte 0x93F50000
 	.4byte 0x000095EF
@@ -2308,8 +2305,8 @@ lbl_80554BF8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_80554DF8
-lbl_80554DF8:
+
+Ucs54:
 	.4byte 0x000099DC
 	.4byte 0x00008B68
 	.4byte 0x8A650000
@@ -2439,8 +2436,8 @@ lbl_80554DF8:
 	.4byte 0x00009A4A
 	.4byte 0
 
-.global lbl_80554FF8
-lbl_80554FF8:
+
+Ucs55:
 	.4byte 0
 	.4byte 0
 	.4byte 0x89530000
@@ -2570,8 +2567,8 @@ lbl_80554FF8:
 	.4byte 0x00009A75
 	.4byte 0x9A740000
 
-.global lbl_805551F8
-lbl_805551F8:
+
+Ucs56:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -2701,8 +2698,8 @@ lbl_805551F8:
 	.4byte 0x00008D91
 	.4byte 0x00009A9C
 
-.global lbl_805553F8
-lbl_805553F8:
+
+Ucs57:
 	.4byte 0x9A9B0000
 	.4byte 0x000095DE
 	.4byte 0x9A9D0000
@@ -2832,8 +2829,8 @@ lbl_805553F8:
 	.4byte 0x8DE90000
 	.4byte 0
 
-.global lbl_805555F8
-lbl_805555F8:
+
+Ucs58:
 	.4byte 0x96780000
 	.4byte 0x93B00000
 	.4byte 0x00008C98
@@ -2963,8 +2960,8 @@ lbl_805555F8:
 	.4byte 0x9AE59AE6
 	.4byte 0
 
-.global lbl_805557F8
-lbl_805557F8:
+
+Ucs59:
 	.4byte 0
 	.4byte 0x9AE70000
 	.4byte 0
@@ -3094,8 +3091,8 @@ lbl_805557F8:
 	.4byte 0
 	.4byte 0x00008E70
 
-.global lbl_805559F8
-lbl_805559F8:
+
+Ucs5A:
 	.4byte 0x000088D0
 	.4byte 0x000088A1
 	.4byte 0
@@ -3225,8 +3222,8 @@ lbl_805559F8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_80555BF8
-lbl_80555BF8:
+
+Ucs5B:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -3356,8 +3353,8 @@ lbl_80555BF8:
 	.4byte 0
 	.4byte 0x91CE8EF5
 
-.global lbl_80555DF8
-lbl_80555DF8:
+
+Ucs5C:
 	.4byte 0x00009595
 	.4byte 0x90EA0000
 	.4byte 0x8ECB9B91
@@ -3487,8 +3484,8 @@ lbl_80555DF8:
 	.4byte 0x00009BB5
 	.4byte 0
 
-.global lbl_80555FF8
-lbl_80555FF8:
+
+Ucs5D:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -3618,8 +3615,8 @@ lbl_80555FF8:
 	.4byte 0x00009246
 	.4byte 0x8BD00000
 
-.global lbl_805561F8
-lbl_805561F8:
+
+Ucs5E:
 	.4byte 0
 	.4byte 0x8E73957A
 	.4byte 0
@@ -3749,8 +3746,8 @@ lbl_805561F8:
 	.4byte 0x94550000
 	.4byte 0x9C4F93F9
 
-.global lbl_805563F8
-lbl_805563F8:
+
+Ucs5F:
 	.4byte 0x000095D9
 	.4byte 0x00009C50
 	.4byte 0x984D0000
@@ -3880,8 +3877,8 @@ lbl_805563F8:
 	.4byte 0x00008D9A
 	.4byte 0x00009C7C
 
-.global lbl_805565F8
-lbl_805565F8:
+
+Ucs60:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -4011,8 +4008,8 @@ lbl_805565F8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_805567F8
-lbl_805567F8:
+
+Ucs61:
 	.4byte 0x9CB58F44
 	.4byte 0x00009CB8
 	.4byte 0
@@ -4142,8 +4139,8 @@ lbl_805567F8:
 	.4byte 0x9CF49CF3
 	.4byte 0x9CF59CF2
 
-.global lbl_805569F8
-lbl_805569F8:
+
+Ucs62:
 	.4byte 0x9CF60000
 	.4byte 0
 	.4byte 0
@@ -4273,8 +4270,8 @@ lbl_805569F8:
 	.4byte 0
 	.4byte 0x8F459D5C
 
-.global lbl_80556BF8
-lbl_80556BF8:
+
+Ucs63:
 	.4byte 0x00008E9D
 	.4byte 0x9D6B0000
 	.4byte 0
@@ -4404,8 +4401,8 @@ lbl_80556BF8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_80556DF8
-lbl_80556DF8:
+
+Ucs64:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -4535,8 +4532,8 @@ lbl_80556DF8:
 	.4byte 0x00009DB4
 	.4byte 0x8FEF0000
 
-.global lbl_80556FF8
-lbl_80556FF8:
+
+Ucs65:
 	.4byte 0x9DB30000
 	.4byte 0
 	.4byte 0x00009DB7
@@ -4666,8 +4663,8 @@ lbl_80556FF8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_805571F8
-lbl_805571F8:
+
+Ucs66:
 	.4byte 0
 	.4byte 0x8D569DDE
 	.4byte 0
@@ -4797,8 +4794,8 @@ lbl_805571F8:
 	.4byte 0x99D6915D
 	.4byte 0x915C91D6
 
-.global lbl_805573F8
-lbl_805573F8:
+
+Ucs67:
 	.4byte 0x8DC50000
 	.4byte 0x000098F0
 	.4byte 0
@@ -4928,8 +4925,8 @@ lbl_805573F8:
 	.4byte 0
 	.4byte 0x968F8A60
 
-.global lbl_805575F8
-lbl_805575F8:
+
+Ucs68:
 	.4byte 0
 	.4byte 0x92CC93C8
 	.4byte 0x89680000
@@ -5059,8 +5056,8 @@ lbl_805575F8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_805577F8
-lbl_805577F8:
+
+Ucs69:
 	.4byte 0x986F9E96
 	.4byte 0
 	.4byte 0x9EA488D6
@@ -5190,8 +5187,8 @@ lbl_805577F8:
 	.4byte 0x00009185
 	.4byte 0x00009EDB
 
-.global lbl_805579F8
-lbl_805579F8:
+
+Ucs6A:
 	.4byte 0
 	.4byte 0x9ED90000
 	.4byte 0x00009EE0
@@ -5321,8 +5318,8 @@ lbl_805579F8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_80557BF8
-lbl_80557BF8:
+
+Ucs6B:
 	.4byte 0
 	.4byte 0
 	.4byte 0x97939F4F
@@ -5452,8 +5449,8 @@ lbl_80557BF8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_80557DF8
-lbl_80557DF8:
+
+Ucs6C:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -5583,8 +5580,8 @@ lbl_80557DF8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_80557FF8
-lbl_80557FF8:
+
+Ucs6D:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -5714,8 +5711,8 @@ lbl_80557FF8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_805581F8
-lbl_805581F8:
+
+Ucs6E:
 	.4byte 0
 	.4byte 0
 	.4byte 0x000090B4
@@ -5845,8 +5842,8 @@ lbl_805581F8:
 	.4byte 0
 	.4byte 0x9FF69FDE
 
-.global lbl_805583F8
-lbl_805583F8:
+
+Ucs6F:
 	.4byte 0x00008B99
 	.4byte 0x95590000
 	.4byte 0
@@ -5976,8 +5973,8 @@ lbl_805583F8:
 	.4byte 0
 	.4byte 0xE0680000
 
-.global lbl_805585F8
-lbl_805585F8:
+
+Ucs70:
 	.4byte 0x0000E066
 	.4byte 0
 	.4byte 0
@@ -6107,8 +6104,8 @@ lbl_805585F8:
 	.4byte 0x0000E082
 	.4byte 0
 
-.global lbl_805587F8
-lbl_805587F8:
+
+Ucs71:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -6238,8 +6235,8 @@ lbl_805587F8:
 	.4byte 0xE09E0000
 	.4byte 0x0000E0A0
 
-.global lbl_805589F8
-lbl_805589F8:
+
+Ucs72:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -6369,8 +6366,8 @@ lbl_805589F8:
 	.4byte 0x98549482
 	.4byte 0
 
-.global lbl_80558BF8
-lbl_80558BF8:
+
+Ucs73:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -6500,8 +6497,8 @@ lbl_80558BF8:
 	.4byte 0
 	.4byte 0x8CBB0000
 
-.global lbl_80558DF8
-lbl_80558DF8:
+
+Ucs74:
 	.4byte 0
 	.4byte 0x00008B85
 	.4byte 0x0000E0E4
@@ -6631,8 +6628,8 @@ lbl_80558DF8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_80558FF8
-lbl_80558FF8:
+
+Ucs75:
 	.4byte 0
 	.4byte 0x0000E14B
 	.4byte 0xE14AE14C
@@ -6762,8 +6759,8 @@ lbl_80558FF8:
 	.4byte 0xE1800000
 	.4byte 0xE17DE17E
 
-.global lbl_805591F8
-lbl_805591F8:
+
+Ucs76:
 	.4byte 0x0000E181
 	.4byte 0
 	.4byte 0
@@ -6893,8 +6890,8 @@ lbl_805591F8:
 	.4byte 0
 	.4byte 0x8F820000
 
-.global lbl_805593F8
-lbl_805593F8:
+
+Ucs77:
 	.4byte 0x00008FC8
 	.4byte 0
 	.4byte 0xE1BE0000
@@ -7024,8 +7021,8 @@ lbl_805593F8:
 	.4byte 0xE1E30000
 	.4byte 0
 
-.global lbl_805595F8
-lbl_805595F8:
+
+Ucs78:
 	.4byte 0
 	.4byte 0x8DBB0000
 	.4byte 0
@@ -7155,8 +7152,8 @@ lbl_805595F8:
 	.4byte 0x0000E242
 	.4byte 0
 
-.global lbl_805597F8
-lbl_805597F8:
+
+Ucs79:
 	.4byte 0x00008FCA
 	.4byte 0
 	.4byte 0
@@ -7286,8 +7283,8 @@ lbl_805597F8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_805599F8
-lbl_805599F8:
+
+Ucs7A:
 	.4byte 0x8B480000
 	.4byte 0
 	.4byte 0
@@ -7417,8 +7414,8 @@ lbl_805599F8:
 	.4byte 0
 	.4byte 0x00008AC6
 
-.global lbl_80559BF8
-lbl_80559BF8:
+
+Ucs7B:
 	.4byte 0
 	.4byte 0xE2930000
 	.4byte 0xE2A00000
@@ -7548,8 +7545,8 @@ lbl_80559BF8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_80559DF8
-lbl_80559DF8:
+
+Ucs7C:
 	.4byte 0xE2C50000
 	.4byte 0
 	.4byte 0
@@ -7679,8 +7676,8 @@ lbl_80559DF8:
 	.4byte 0
 	.4byte 0x8B8A0000
 
-.global lbl_80559FF8
-lbl_80559FF8:
+
+Ucs7D:
 	.4byte 0x8B490000
 	.4byte 0xE3400000
 	.4byte 0x96F18D67
@@ -7810,8 +7807,8 @@ lbl_80559FF8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8055A1F8
-lbl_8055A1F8:
+
+Ucs7E:
 	.4byte 0x0000898F
 	.4byte 0
 	.4byte 0x93EAE36E
@@ -7941,8 +7938,8 @@ lbl_8055A1F8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8055A3F8
-lbl_8055A3F8:
+
+Ucs7F:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -8072,8 +8069,8 @@ lbl_8055A3F8:
 	.4byte 0x97830000
 	.4byte 0
 
-.global lbl_8055A5F8
-lbl_8055A5F8:
+
+Ucs80:
 	.4byte 0x97739856
 	.4byte 0x00008D6C
 	.4byte 0xE3CC8ED2
@@ -8203,8 +8200,8 @@ lbl_8055A5F8:
 	.4byte 0xE445945C
 	.4byte 0
 
-.global lbl_8055A7F8
-lbl_8055A7F8:
+
+Ucs81:
 	.4byte 0
 	.4byte 0x8E890000
 	.4byte 0x00008BBA
@@ -8334,8 +8331,8 @@ lbl_8055A7F8:
 	.4byte 0x89500000
 	.4byte 0xE46B0000
 
-.global lbl_8055A9F8
-lbl_8055A9F8:
+
+Ucs82:
 	.4byte 0x0000E46C
 	.4byte 0xE46D0000
 	.4byte 0x0000E46E
@@ -8465,8 +8462,8 @@ lbl_8055A9F8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8055ABF8
-lbl_8055ABF8:
+
+Ucs83:
 	.4byte 0
 	.4byte 0x96CEE497
 	.4byte 0x89D68A9D
@@ -8596,8 +8593,8 @@ lbl_8055ABF8:
 	.4byte 0x0000E4C1
 	.4byte 0
 
-.global lbl_8055ADF8
-lbl_8055ADF8:
+
+Ucs84:
 	.4byte 0
 	.4byte 0x0000E4C2
 	.4byte 0x93B80000
@@ -8727,8 +8724,8 @@ lbl_8055ADF8:
 	.4byte 0xE4F80000
 	.4byte 0x0000E4F0
 
-.global lbl_8055AFF8
-lbl_8055AFF8:
+
+Ucs85:
 	.4byte 0x8EC10000
 	.4byte 0
 	.4byte 0
@@ -8858,8 +8855,8 @@ lbl_8055AFF8:
 	.4byte 0
 	.4byte 0xE5600000
 
-.global lbl_8055B1F8
-lbl_8055B1F8:
+
+Ucs86:
 	.4byte 0
 	.4byte 0xE5410000
 	.4byte 0
@@ -8989,8 +8986,8 @@ lbl_8055B1F8:
 	.4byte 0
 	.4byte 0x89E90000
 
-.global lbl_8055B3F8
-lbl_8055B3F8:
+
+Ucs87:
 	.4byte 0xE5860000
 	.4byte 0x9649E587
 	.4byte 0
@@ -9120,8 +9117,8 @@ lbl_8055B3F8:
 	.4byte 0
 	.4byte 0xE5B70000
 
-.global lbl_8055B5F8
-lbl_8055B5F8:
+
+Ucs88:
 	.4byte 0
 	.4byte 0
 	.4byte 0x0000E5A2
@@ -9251,8 +9248,8 @@ lbl_8055B5F8:
 	.4byte 0xE5E790BB
 	.4byte 0x909E0000
 
-.global lbl_8055B7F8
-lbl_8055B7F8:
+
+Ucs89:
 	.4byte 0
 	.4byte 0xE5E60000
 	.4byte 0xE5EB0000
@@ -9382,8 +9379,8 @@ lbl_8055B7F8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8055B9F8
-lbl_8055B9F8:
+
+Ucs8A:
 	.4byte 0x8CBE0000
 	.4byte 0x92F9E65D
 	.4byte 0
@@ -9513,8 +9510,8 @@ lbl_8055B9F8:
 	.4byte 0
 	.4byte 0x91F80000
 
-.global lbl_8055BBF8
-lbl_8055BBF8:
+
+Ucs8B:
 	.4byte 0x96648979
 	.4byte 0x88E00000
 	.4byte 0x93A30000
@@ -9644,8 +9641,8 @@ lbl_8055BBF8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8055BDF8
-lbl_8055BDF8:
+
+Ucs8C:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -9775,8 +9772,8 @@ lbl_8055BDF8:
 	.4byte 0x8D77E6CE
 	.4byte 0
 
-.global lbl_8055BFF8
-lbl_8055BFF8:
+
+Ucs8D:
 	.4byte 0
 	.4byte 0
 	.4byte 0xE6D1E6D2
@@ -9906,8 +9903,8 @@ lbl_8055BFF8:
 	.4byte 0xE6F00000
 	.4byte 0x0000E6F3
 
-.global lbl_8055C1F8
-lbl_8055C1F8:
+
+Ucs8E:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -10037,8 +10034,8 @@ lbl_8055C1F8:
 	.4byte 0xE7648C79
 	.4byte 0xE7670000
 
-.global lbl_8055C3F8
-lbl_8055C3F8:
+
+Ucs8F:
 	.4byte 0
 	.4byte 0x00008A72
 	.4byte 0x0000E769
@@ -10168,8 +10165,8 @@ lbl_8055C3F8:
 	.4byte 0x000092C7
 	.4byte 0
 
-.global lbl_8055C5F8
-lbl_8055C5F8:
+
+Ucs90:
 	.4byte 0x91DE9197
 	.4byte 0x000093A6
 	.4byte 0x0000E790
@@ -10299,8 +10296,8 @@ lbl_8055C5F8:
 	.4byte 0x00009373
 	.4byte 0
 
-.global lbl_8055C7F8
-lbl_8055C7F8:
+
+Ucs91:
 	.4byte 0
 	.4byte 0xE7BD0000
 	.4byte 0
@@ -10430,8 +10427,8 @@ lbl_8055C7F8:
 	.4byte 0xE7DD0000
 	.4byte 0x0000E7E1
 
-.global lbl_8055C9F8
-lbl_8055C9F8:
+
+Ucs92:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -10561,8 +10558,8 @@ lbl_8055C9F8:
 	.4byte 0x8D7C0000
 	.4byte 0
 
-.global lbl_8055CBF8
-lbl_8055CBF8:
+
+Ucs93:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -10692,8 +10689,8 @@ lbl_8055CBF8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8055CDF8
-lbl_8055CDF8:
+
+Ucs94:
 	.4byte 0
 	.4byte 0x0000E85E
 	.4byte 0
@@ -10823,8 +10820,8 @@ lbl_8055CDF8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8055CFF8
-lbl_8055CFF8:
+
+Ucs95:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -10954,8 +10951,8 @@ lbl_8055CFF8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8055D1F8
-lbl_8055D1F8:
+
+Ucs96:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -11085,8 +11082,8 @@ lbl_8055D1F8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8055D3F8
-lbl_8055D3F8:
+
+Ucs97:
 	.4byte 0x8EF90000
 	.4byte 0
 	.4byte 0xE8BA0000
@@ -11216,8 +11213,8 @@ lbl_8055D3F8:
 	.4byte 0
 	.4byte 0x00008BBF
 
-.global lbl_8055D5F8
-lbl_8055D5F8:
+
+Ucs98:
 	.4byte 0x000095C5
 	.4byte 0x92B88DA0
 	.4byte 0x00008D80
@@ -11347,8 +11344,8 @@ lbl_8055D5F8:
 	.4byte 0x8E94964F
 	.4byte 0x8FFC0000
 
-.global lbl_8055D7F8
-lbl_8055D7F8:
+
+Ucs99:
 	.4byte 0
 	.4byte 0x0000E94C
 	.4byte 0x000096DD
@@ -11478,8 +11475,8 @@ lbl_8055D7F8:
 	.4byte 0
 	.4byte 0x00008F78
 
-.global lbl_8055D9F8
-lbl_8055D9F8:
+
+Ucs9A:
 	.4byte 0x0000E974
 	.4byte 0
 	.4byte 0x0000E976
@@ -11609,8 +11606,8 @@ lbl_8055D9F8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8055DBF8
-lbl_8055DBF8:
+
+Ucs9B:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -11740,8 +11737,8 @@ lbl_8055DBF8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8055DDF8
-lbl_8055DDF8:
+
+Ucs9C:
 	.4byte 0
 	.4byte 0
 	.4byte 0xE9D80000
@@ -11871,8 +11868,8 @@ lbl_8055DDF8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8055DFF8
-lbl_8055DFF8:
+
+Ucs9D:
 	.4byte 0
 	.4byte 0x0000E9EE
 	.4byte 0
@@ -12002,8 +11999,8 @@ lbl_8055DFF8:
 	.4byte 0x0000EA5E
 	.4byte 0
 
-.global lbl_8055E1F8
-lbl_8055E1F8:
+
+Ucs9E:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -12133,8 +12130,8 @@ lbl_8055E1F8:
 	.4byte 0xEA85EA86
 	.4byte 0
 
-.global lbl_8055E3F8
-lbl_8055E3F8:
+
+Ucs9F:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -12264,8 +12261,8 @@ lbl_8055E3F8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_8055E5F8
-lbl_8055E5F8:
+
+UcsFF:
 	.4byte 0x00008149
 	.4byte 0x00008194
 	.4byte 0x81908193
@@ -12396,13 +12393,12 @@ lbl_8055E5F8:
 	.4byte 0
 
 
-.global lbl_8055E7F8
-lbl_8055E7F8:
-	.4byte lbl_80552DF8
+UcsSjisTable:
+	.4byte Ucs00
 	.4byte 0
 	.4byte 0
-	.4byte lbl_80552FF8
-	.4byte lbl_805531F8
+	.4byte Ucs03
+	.4byte Ucs04
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -12430,13 +12426,13 @@ lbl_8055E7F8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte lbl_805533F8
-	.4byte lbl_805535F8
-	.4byte lbl_805537F8
-	.4byte lbl_805539F8
+	.4byte Ucs20
+	.4byte Ucs21
+	.4byte Ucs22
+	.4byte Ucs23
 	.4byte 0
-	.4byte lbl_80553BF8
-	.4byte lbl_80553DF8
+	.4byte Ucs25
+	.4byte Ucs26
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -12446,7 +12442,7 @@ lbl_8055E7F8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte lbl_80553FF8
+	.4byte Ucs30
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -12476,88 +12472,88 @@ lbl_8055E7F8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte lbl_805541F8
-	.4byte lbl_805543F8
-	.4byte lbl_805545F8
-	.4byte lbl_805547F8
-	.4byte lbl_805549F8
-	.4byte lbl_80554BF8
-	.4byte lbl_80554DF8
-	.4byte lbl_80554FF8
-	.4byte lbl_805551F8
-	.4byte lbl_805553F8
-	.4byte lbl_805555F8
-	.4byte lbl_805557F8
-	.4byte lbl_805559F8
-	.4byte lbl_80555BF8
-	.4byte lbl_80555DF8
-	.4byte lbl_80555FF8
-	.4byte lbl_805561F8
-	.4byte lbl_805563F8
-	.4byte lbl_805565F8
-	.4byte lbl_805567F8
-	.4byte lbl_805569F8
-	.4byte lbl_80556BF8
-	.4byte lbl_80556DF8
-	.4byte lbl_80556FF8
-	.4byte lbl_805571F8
-	.4byte lbl_805573F8
-	.4byte lbl_805575F8
-	.4byte lbl_805577F8
-	.4byte lbl_805579F8
-	.4byte lbl_80557BF8
-	.4byte lbl_80557DF8
-	.4byte lbl_80557FF8
-	.4byte lbl_805581F8
-	.4byte lbl_805583F8
-	.4byte lbl_805585F8
-	.4byte lbl_805587F8
-	.4byte lbl_805589F8
-	.4byte lbl_80558BF8
-	.4byte lbl_80558DF8
-	.4byte lbl_80558FF8
-	.4byte lbl_805591F8
-	.4byte lbl_805593F8
-	.4byte lbl_805595F8
-	.4byte lbl_805597F8
-	.4byte lbl_805599F8
-	.4byte lbl_80559BF8
-	.4byte lbl_80559DF8
-	.4byte lbl_80559FF8
-	.4byte lbl_8055A1F8
-	.4byte lbl_8055A3F8
-	.4byte lbl_8055A5F8
-	.4byte lbl_8055A7F8
-	.4byte lbl_8055A9F8
-	.4byte lbl_8055ABF8
-	.4byte lbl_8055ADF8
-	.4byte lbl_8055AFF8
-	.4byte lbl_8055B1F8
-	.4byte lbl_8055B3F8
-	.4byte lbl_8055B5F8
-	.4byte lbl_8055B7F8
-	.4byte lbl_8055B9F8
-	.4byte lbl_8055BBF8
-	.4byte lbl_8055BDF8
-	.4byte lbl_8055BFF8
-	.4byte lbl_8055C1F8
-	.4byte lbl_8055C3F8
-	.4byte lbl_8055C5F8
-	.4byte lbl_8055C7F8
-	.4byte lbl_8055C9F8
-	.4byte lbl_8055CBF8
-	.4byte lbl_8055CDF8
-	.4byte lbl_8055CFF8
-	.4byte lbl_8055D1F8
-	.4byte lbl_8055D3F8
-	.4byte lbl_8055D5F8
-	.4byte lbl_8055D7F8
-	.4byte lbl_8055D9F8
-	.4byte lbl_8055DBF8
-	.4byte lbl_8055DDF8
-	.4byte lbl_8055DFF8
-	.4byte lbl_8055E1F8
-	.4byte lbl_8055E3F8
+	.4byte Ucs4E
+	.4byte Ucs4F
+	.4byte Ucs50
+	.4byte Ucs51
+	.4byte Ucs52
+	.4byte Ucs53
+	.4byte Ucs54
+	.4byte Ucs55
+	.4byte Ucs56
+	.4byte Ucs57
+	.4byte Ucs58
+	.4byte Ucs59
+	.4byte Ucs5A
+	.4byte Ucs5B
+	.4byte Ucs5C
+	.4byte Ucs5D
+	.4byte Ucs5E
+	.4byte Ucs5F
+	.4byte Ucs60
+	.4byte Ucs61
+	.4byte Ucs62
+	.4byte Ucs63
+	.4byte Ucs64
+	.4byte Ucs65
+	.4byte Ucs66
+	.4byte Ucs67
+	.4byte Ucs68
+	.4byte Ucs69
+	.4byte Ucs6A
+	.4byte Ucs6B
+	.4byte Ucs6C
+	.4byte Ucs6D
+	.4byte Ucs6E
+	.4byte Ucs6F
+	.4byte Ucs70
+	.4byte Ucs71
+	.4byte Ucs72
+	.4byte Ucs73
+	.4byte Ucs74
+	.4byte Ucs75
+	.4byte Ucs76
+	.4byte Ucs77
+	.4byte Ucs78
+	.4byte Ucs79
+	.4byte Ucs7A
+	.4byte Ucs7B
+	.4byte Ucs7C
+	.4byte Ucs7D
+	.4byte Ucs7E
+	.4byte Ucs7F
+	.4byte Ucs80
+	.4byte Ucs81
+	.4byte Ucs82
+	.4byte Ucs83
+	.4byte Ucs84
+	.4byte Ucs85
+	.4byte Ucs86
+	.4byte Ucs87
+	.4byte Ucs88
+	.4byte Ucs89
+	.4byte Ucs8A
+	.4byte Ucs8B
+	.4byte Ucs8C
+	.4byte Ucs8D
+	.4byte Ucs8E
+	.4byte Ucs8F
+	.4byte Ucs90
+	.4byte Ucs91
+	.4byte Ucs92
+	.4byte Ucs93
+	.4byte Ucs94
+	.4byte Ucs95
+	.4byte Ucs96
+	.4byte Ucs97
+	.4byte Ucs98
+	.4byte Ucs99
+	.4byte Ucs9A
+	.4byte Ucs9B
+	.4byte Ucs9C
+	.4byte Ucs9D
+	.4byte Ucs9E
+	.4byte Ucs9F
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -12653,4 +12649,4 @@ lbl_8055E7F8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte lbl_8055E5F8
+	.4byte UcsFF

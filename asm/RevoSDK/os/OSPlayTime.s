@@ -4,8 +4,8 @@
 
 .balign 16, 0
 .fn OSPlayTimeIsLimited, global
-/* 8035E820 00327DE0  80 0D B9 C8 */	lwz r0, lbl_80667B48@sda21(r13)
-/* 8035E824 00327DE4  80 6D B9 CC */	lwz r3, lbl_80667B4C@sda21(r13)
+/* 8035E820 00327DE0  80 0D B9 C8 */	lwz r0, __OSExpireTime@sda21(r13)
+/* 8035E824 00327DE4  80 6D B9 CC */	lwz r3, __OSExpireTime+0x4@sda21(r13)
 /* 8035E828 00327DE8  7C 60 03 78 */	or r0, r3, r0
 /* 8035E82C 00327DEC  30 60 FF FF */	addic r3, r0, -1
 /* 8035E830 00327DF0  7C 63 01 10 */	subfe r3, r3, r0
@@ -20,41 +20,41 @@
 /* 8035E84C 00327E0C  93 E1 00 3C */	stw r31, 0x3c(r1)
 /* 8035E850 00327E10  93 C1 00 38 */	stw r30, 0x38(r1)
 /* 8035E854 00327E14  93 A1 00 34 */	stw r29, 0x34(r1)
-/* 8035E858 00327E18  80 6D B9 B8 */	lwz r3, lbl_80667B38@sda21(r13)
+/* 8035E858 00327E18  80 6D B9 B8 */	lwz r3, __OSExpireAIFade@sda21(r13)
 /* 8035E85C 00327E1C  81 83 04 90 */	lwz r12, 0x490(r3)
 /* 8035E860 00327E20  2C 0C 00 00 */	cmpwi r12, 0
 /* 8035E864 00327E24  41 82 00 0C */	beq .L_8035E870
 /* 8035E868 00327E28  7D 89 03 A6 */	mtctr r12
 /* 8035E86C 00327E2C  4E 80 04 21 */	bctrl 
 .L_8035E870:
-/* 8035E870 00327E30  80 6D B9 B8 */	lwz r3, lbl_80667B38@sda21(r13)
+/* 8035E870 00327E30  80 6D B9 B8 */	lwz r3, __OSExpireAIFade@sda21(r13)
 /* 8035E874 00327E34  80 03 04 88 */	lwz r0, 0x488(r3)
 /* 8035E878 00327E38  2C 00 00 00 */	cmpwi r0, 0
 /* 8035E87C 00327E3C  40 82 00 14 */	bne .L_8035E890
 /* 8035E880 00327E40  4B F7 29 41 */	bl AIGetDMAStartAddr
-/* 8035E884 00327E44  80 8D B9 B8 */	lwz r4, lbl_80667B38@sda21(r13)
+/* 8035E884 00327E44  80 8D B9 B8 */	lwz r4, __OSExpireAIFade@sda21(r13)
 /* 8035E888 00327E48  3C 03 80 00 */	addis r0, r3, 0x8000
 /* 8035E88C 00327E4C  90 04 04 84 */	stw r0, 0x484(r4)
 .L_8035E890:
-/* 8035E890 00327E50  80 6D B9 B8 */	lwz r3, lbl_80667B38@sda21(r13)
+/* 8035E890 00327E50  80 6D B9 B8 */	lwz r3, __OSExpireAIFade@sda21(r13)
 /* 8035E894 00327E54  80 03 04 88 */	lwz r0, 0x488(r3)
 /* 8035E898 00327E58  28 00 00 01 */	cmplwi r0, 1
 /* 8035E89C 00327E5C  40 82 00 38 */	bne .L_8035E8D4
 /* 8035E8A0 00327E60  80 63 04 84 */	lwz r3, 0x484(r3)
 /* 8035E8A4 00327E64  38 80 00 04 */	li r4, 4
 /* 8035E8A8 00327E68  4B FF 56 D9 */	bl DCInvalidateRange
-/* 8035E8AC 00327E6C  80 8D B9 B8 */	lwz r4, lbl_80667B38@sda21(r13)
+/* 8035E8AC 00327E6C  80 8D B9 B8 */	lwz r4, __OSExpireAIFade@sda21(r13)
 /* 8035E8B0 00327E70  80 64 04 84 */	lwz r3, 0x484(r4)
 /* 8035E8B4 00327E74  A8 03 00 00 */	lha r0, 0(r3)
 /* 8035E8B8 00327E78  38 63 00 02 */	addi r3, r3, 2
 /* 8035E8BC 00327E7C  B0 04 04 8C */	sth r0, 0x48c(r4)
 /* 8035E8C0 00327E80  90 64 04 84 */	stw r3, 0x484(r4)
-/* 8035E8C4 00327E84  80 8D B9 B8 */	lwz r4, lbl_80667B38@sda21(r13)
+/* 8035E8C4 00327E84  80 8D B9 B8 */	lwz r4, __OSExpireAIFade@sda21(r13)
 /* 8035E8C8 00327E88  80 64 04 84 */	lwz r3, 0x484(r4)
 /* 8035E8CC 00327E8C  A8 03 00 00 */	lha r0, 0(r3)
 /* 8035E8D0 00327E90  B0 04 04 8E */	sth r0, 0x48e(r4)
 .L_8035E8D4:
-/* 8035E8D4 00327E94  80 6D B9 B8 */	lwz r3, lbl_80667B38@sda21(r13)
+/* 8035E8D4 00327E94  80 6D B9 B8 */	lwz r3, __OSExpireAIFade@sda21(r13)
 /* 8035E8D8 00327E98  80 03 04 88 */	lwz r0, 0x488(r3)
 /* 8035E8DC 00327E9C  28 00 00 01 */	cmplwi r0, 1
 /* 8035E8E0 00327EA0  41 80 00 F0 */	blt .L_8035E9D0
@@ -70,17 +70,17 @@
 /* 8035E908 00327EC8  3C 80 43 30 */	lis r4, 0x4330
 /* 8035E90C 00327ECC  48 00 00 84 */	b .L_8035E990
 .L_8035E910:
-/* 8035E910 00327ED0  80 6D B9 B8 */	lwz r3, lbl_80667B38@sda21(r13)
+/* 8035E910 00327ED0  80 6D B9 B8 */	lwz r3, __OSExpireAIFade@sda21(r13)
 /* 8035E914 00327ED4  38 A5 FF FC */	addi r5, r5, -4
 /* 8035E918 00327ED8  90 81 00 08 */	stw r4, 8(r1)
 /* 8035E91C 00327EDC  A8 03 04 8C */	lha r0, 0x48c(r3)
 /* 8035E920 00327EE0  B0 1E 00 00 */	sth r0, 0(r30)
-/* 8035E924 00327EE4  80 6D B9 B8 */	lwz r3, lbl_80667B38@sda21(r13)
+/* 8035E924 00327EE4  80 6D B9 B8 */	lwz r3, __OSExpireAIFade@sda21(r13)
 /* 8035E928 00327EE8  90 81 00 18 */	stw r4, 0x18(r1)
 /* 8035E92C 00327EEC  A8 03 04 8E */	lha r0, 0x48e(r3)
 /* 8035E930 00327EF0  B0 1E 00 02 */	sth r0, 2(r30)
 /* 8035E934 00327EF4  3B DE 00 04 */	addi r30, r30, 4
-/* 8035E938 00327EF8  80 6D B9 B8 */	lwz r3, lbl_80667B38@sda21(r13)
+/* 8035E938 00327EF8  80 6D B9 B8 */	lwz r3, __OSExpireAIFade@sda21(r13)
 /* 8035E93C 00327EFC  A8 03 04 8C */	lha r0, 0x48c(r3)
 /* 8035E940 00327F00  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 8035E944 00327F04  90 01 00 0C */	stw r0, 0xc(r1)
@@ -91,7 +91,7 @@
 /* 8035E958 00327F18  D8 01 00 10 */	stfd f0, 0x10(r1)
 /* 8035E95C 00327F1C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8035E960 00327F20  B0 03 04 8C */	sth r0, 0x48c(r3)
-/* 8035E964 00327F24  80 6D B9 B8 */	lwz r3, lbl_80667B38@sda21(r13)
+/* 8035E964 00327F24  80 6D B9 B8 */	lwz r3, __OSExpireAIFade@sda21(r13)
 /* 8035E968 00327F28  A8 03 04 8E */	lha r0, 0x48e(r3)
 /* 8035E96C 00327F2C  6C 00 80 00 */	xoris r0, r0, 0x8000
 /* 8035E970 00327F30  90 01 00 1C */	stw r0, 0x1c(r1)
@@ -111,16 +111,16 @@
 /* 8035E9A4 00327F64  7F E3 FB 78 */	mr r3, r31
 /* 8035E9A8 00327F68  7F A4 EB 78 */	mr r4, r29
 /* 8035E9AC 00327F6C  4B F7 27 45 */	bl AIInitDMA
-/* 8035E9B0 00327F70  80 8D B9 B8 */	lwz r4, lbl_80667B38@sda21(r13)
+/* 8035E9B0 00327F70  80 8D B9 B8 */	lwz r4, __OSExpireAIFade@sda21(r13)
 /* 8035E9B4 00327F74  80 64 04 80 */	lwz r3, 0x480(r4)
 /* 8035E9B8 00327F78  38 03 00 01 */	addi r0, r3, 1
 /* 8035E9BC 00327F7C  90 04 04 80 */	stw r0, 0x480(r4)
-/* 8035E9C0 00327F80  80 6D B9 B8 */	lwz r3, lbl_80667B38@sda21(r13)
+/* 8035E9C0 00327F80  80 6D B9 B8 */	lwz r3, __OSExpireAIFade@sda21(r13)
 /* 8035E9C4 00327F84  80 03 04 80 */	lwz r0, 0x480(r3)
 /* 8035E9C8 00327F88  54 00 07 FE */	clrlwi r0, r0, 0x1f
 /* 8035E9CC 00327F8C  90 03 04 80 */	stw r0, 0x480(r3)
 .L_8035E9D0:
-/* 8035E9D0 00327F90  80 8D B9 B8 */	lwz r4, lbl_80667B38@sda21(r13)
+/* 8035E9D0 00327F90  80 8D B9 B8 */	lwz r4, __OSExpireAIFade@sda21(r13)
 /* 8035E9D4 00327F94  80 64 04 88 */	lwz r3, 0x488(r4)
 /* 8035E9D8 00327F98  38 03 00 01 */	addi r0, r3, 1
 /* 8035E9DC 00327F9C  90 04 04 88 */	stw r0, 0x488(r4)
@@ -214,7 +214,7 @@
 
 .balign 16, 0
 .fn __OSWriteExpiredFlagIfSet, global
-/* 8035EB20 003280E0  80 0D B9 BC */	lwz r0, lbl_80667B3C@sda21(r13)
+/* 8035EB20 003280E0  80 0D B9 BC */	lwz r0, __OSExpireSetExpiredFlag@sda21(r13)
 /* 8035EB24 003280E4  2C 00 00 00 */	cmpwi r0, 0
 /* 8035EB28 003280E8  41 82 00 08 */	beq .L_8035EB30
 /* 8035EB2C 003280EC  4B FF FE D4 */	b __OSWriteExpiredFlag
@@ -237,12 +237,12 @@
 /* 8035EB64 00328124  93 EC FF FC */	stw r31, -4(r12)
 /* 8035EB68 00328128  93 CC FF F8 */	stw r30, -8(r12)
 /* 8035EB6C 0032812C  93 AC FF F4 */	stw r29, -0xc(r12)
-/* 8035EB70 00328130  90 6D B9 B8 */	stw r3, lbl_80667B38@sda21(r13)
+/* 8035EB70 00328130  90 6D B9 B8 */	stw r3, __OSExpireAIFade@sda21(r13)
 /* 8035EB74 00328134  4B CA 57 DD */	bl memset
 /* 8035EB78 00328138  3C 60 80 36 */	lis r3, __OSPlayTimeFadeLastAIDCallback@ha
 /* 8035EB7C 0032813C  38 63 E8 40 */	addi r3, r3, __OSPlayTimeFadeLastAIDCallback@l
 /* 8035EB80 00328140  4B F7 25 21 */	bl AIRegisterDMACallback
-/* 8035EB84 00328144  80 AD B9 B8 */	lwz r5, lbl_80667B38@sda21(r13)
+/* 8035EB84 00328144  80 AD B9 B8 */	lwz r5, __OSExpireAIFade@sda21(r13)
 /* 8035EB88 00328148  3C 80 CC CD */	lis r4, 0xCCCCCCCD@ha
 /* 8035EB8C 0032814C  3B E4 CC CD */	addi r31, r4, 0xCCCCCCCD@l
 /* 8035EB90 00328150  3B C0 00 00 */	li r30, 0
@@ -269,7 +269,7 @@
 /* 8035EBDC 0032819C  48 00 77 65 */	bl VISetBlack
 /* 8035EBE0 003281A0  48 00 75 D1 */	bl VIFlush
 /* 8035EBE4 003281A4  4B FF 9D CD */	bl OSDisableInterrupts
-/* 8035EBE8 003281A8  80 0D B9 BC */	lwz r0, lbl_80667B3C@sda21(r13)
+/* 8035EBE8 003281A8  80 0D B9 BC */	lwz r0, __OSExpireSetExpiredFlag@sda21(r13)
 /* 8035EBEC 003281AC  7C 7F 1B 78 */	mr r31, r3
 /* 8035EBF0 003281B0  2C 00 00 00 */	cmpwi r0, 0
 /* 8035EBF4 003281B4  41 82 00 08 */	beq .L_8035EBFC
@@ -295,7 +295,7 @@
 /* 8035EC34 003281F4  7C 08 02 A6 */	mflr r0
 /* 8035EC38 003281F8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8035EC3C 003281FC  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8035EC40 00328200  81 8D B9 C0 */	lwz r12, lbl_80667B40@sda21(r13)
+/* 8035EC40 00328200  81 8D B9 C0 */	lwz r12, __OSExpireCallback@sda21(r13)
 /* 8035EC44 00328204  2C 0C 00 00 */	cmpwi r12, 0
 /* 8035EC48 00328208  41 82 00 10 */	beq .L_8035EC58
 /* 8035EC4C 0032820C  7D 89 03 A6 */	mtctr r12
@@ -479,10 +479,10 @@
 /* 8035EEB8 00328478  90 0C 00 04 */	stw r0, 4(r12)
 /* 8035EEBC 0032847C  38 00 00 01 */	li r0, 1
 /* 8035EEC0 00328480  93 EC FF FC */	stw r31, -4(r12)
-/* 8035EEC4 00328484  90 6D B9 CC */	stw r3, lbl_80667B4C@sda21(r13)
-/* 8035EEC8 00328488  90 6D B9 C8 */	stw r3, lbl_80667B48@sda21(r13)
-/* 8035EECC 0032848C  90 6D B9 C0 */	stw r3, lbl_80667B40@sda21(r13)
-/* 8035EED0 00328490  90 0D B9 BC */	stw r0, lbl_80667B3C@sda21(r13)
+/* 8035EEC4 00328484  90 6D B9 CC */	stw r3, __OSExpireTime+0x4@sda21(r13)
+/* 8035EEC8 00328488  90 6D B9 C8 */	stw r3, __OSExpireTime@sda21(r13)
+/* 8035EECC 0032848C  90 6D B9 C0 */	stw r3, __OSExpireCallback@sda21(r13)
+/* 8035EED0 00328490  90 0D B9 BC */	stw r0, __OSExpireSetExpiredFlag@sda21(r13)
 /* 8035EED4 00328494  4B FB 48 7D */	bl ESP_InitLib
 /* 8035EED8 00328498  2C 03 00 00 */	cmpwi r3, 0
 /* 8035EEDC 0032849C  41 82 00 08 */	beq .L_8035EEE4
@@ -523,8 +523,8 @@
 /* 8035EF58 00328518  4C C6 31 82 */	crclr 6
 /* 8035EF5C 0032851C  48 18 F5 39 */	bl OSPanic
 .L_8035EF60:
-/* 8035EF60 00328520  3F E0 80 5D */	lis r31, lbl_805D5500@ha
-/* 8035EF64 00328524  38 7F 55 00 */	addi r3, r31, lbl_805D5500@l
+/* 8035EF60 00328520  3F E0 80 5D */	lis r31, __OSExpireAlarm@ha
+/* 8035EF64 00328524  38 7F 55 00 */	addi r3, r31, __OSExpireAlarm@l
 /* 8035EF68 00328528  4B FF 3E B9 */	bl OSCreateAlarm
 /* 8035EF6C 0032852C  3C 60 80 00 */	lis r3, 0x800000F8@ha
 /* 8035EF70 00328530  3C E0 80 36 */	lis r7, __OSPlayTimeAlarmExpired@ha
@@ -533,7 +533,7 @@
 /* 8035EF7C 0032853C  80 A1 00 24 */	lwz r5, 0x24(r1)
 /* 8035EF80 00328540  39 20 00 00 */	li r9, 0
 /* 8035EF84 00328544  54 06 F0 BE */	srwi r6, r0, 2
-/* 8035EF88 00328548  38 7F 55 00 */	addi r3, r31, lbl_805D5500@l
+/* 8035EF88 00328548  38 7F 55 00 */	addi r3, r31, __OSExpireAlarm@l
 /* 8035EF8C 0032854C  7D 05 20 14 */	addc r8, r5, r4
 /* 8035EF90 00328550  38 E7 EC 30 */	addi r7, r7, __OSPlayTimeAlarmExpired@l
 /* 8035EF94 00328554  7C 09 49 14 */	adde r0, r9, r9
@@ -544,14 +544,14 @@
 /* 8035EFA8 00328568  7C C8 31 D6 */	mullw r6, r8, r6
 /* 8035EFAC 0032856C  7C A4 02 14 */	add r5, r4, r0
 /* 8035EFB0 00328570  4B FF 40 D1 */	bl OSSetAlarm
-/* 8035EFB4 00328574  38 9F 55 00 */	addi r4, r31, lbl_805D5500@l
+/* 8035EFB4 00328574  38 9F 55 00 */	addi r4, r31, __OSExpireAlarm@l
 /* 8035EFB8 00328578  3C 60 80 56 */	lis r3, lbl_8055EEDC@ha
 /* 8035EFBC 0032857C  80 04 00 08 */	lwz r0, 8(r4)
 /* 8035EFC0 00328580  38 63 EE DC */	addi r3, r3, lbl_8055EEDC@l
 /* 8035EFC4 00328584  80 84 00 0C */	lwz r4, 0xc(r4)
-/* 8035EFC8 00328588  90 8D B9 CC */	stw r4, lbl_80667B4C@sda21(r13)
+/* 8035EFC8 00328588  90 8D B9 CC */	stw r4, __OSExpireTime+0x4@sda21(r13)
 /* 8035EFCC 0032858C  80 81 00 24 */	lwz r4, 0x24(r1)
-/* 8035EFD0 00328590  90 0D B9 C8 */	stw r0, lbl_80667B48@sda21(r13)
+/* 8035EFD0 00328590  90 0D B9 C8 */	stw r0, __OSExpireTime@sda21(r13)
 /* 8035EFD4 00328594  4C C6 31 82 */	crclr 6
 /* 8035EFD8 00328598  4B FF 5F 19 */	bl OSReport
 .L_8035EFDC:
@@ -602,29 +602,27 @@ float_8066C1D8:
 .global double_8066C1E0
 double_8066C1E0:
 	.8byte 0x4330000080000000 #signed int to float constant
+
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805D5500
-lbl_805D5500:
+__OSExpireAlarm:
 	.skip 0x40
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667B38
-lbl_80667B38:
+
+__OSExpireAIFade:
 	.skip 0x4
-.global lbl_80667B3C
-lbl_80667B3C:
+
+__OSExpireSetExpiredFlag:
 	.skip 0x4
-.global lbl_80667B40
-lbl_80667B40:
+
+__OSExpireCallback:
 	.skip 0x8
-.global lbl_80667B48
-lbl_80667B48:
-	.skip 0x4
-.global lbl_80667B4C
-lbl_80667B4C:
-	.skip 0x4
+
+__OSExpireTime:
+	.skip 0x8
+
 #might belong in another file
 .global lbl_80667B50
 lbl_80667B50:

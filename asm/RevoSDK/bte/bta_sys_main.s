@@ -9,20 +9,20 @@
 /* 802DE968 002A7F28  38 A0 00 8C */	li r5, 0x8c
 /* 802DE96C 002A7F2C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802DE970 002A7F30  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 802DE974 002A7F34  3F E0 80 5C */	lis r31, lbl_805BF558@ha
-/* 802DE978 002A7F38  38 7F F5 58 */	addi r3, r31, lbl_805BF558@l
+/* 802DE974 002A7F34  3F E0 80 5C */	lis r31, bta_sys_cb@ha
+/* 802DE978 002A7F38  38 7F F5 58 */	addi r3, r31, bta_sys_cb@l
 /* 802DE97C 002A7F3C  4B D2 59 D5 */	bl memset
-/* 802DE980 002A7F40  80 AD 97 80 */	lwz r5, lbl_80665900@sda21(r13)
-/* 802DE984 002A7F44  3B FF F5 58 */	addi r31, r31, lbl_805BF558@l
+/* 802DE980 002A7F40  80 AD 97 80 */	lwz r5, p_bta_sys_cfg@sda21(r13)
+/* 802DE984 002A7F44  3B FF F5 58 */	addi r31, r31, bta_sys_cb@l
 /* 802DE988 002A7F48  38 7F 00 68 */	addi r3, r31, 0x68
 /* 802DE98C 002A7F4C  38 80 03 E8 */	li r4, 0x3e8
 /* 802DE990 002A7F50  88 A5 00 03 */	lbz r5, 3(r5)
 /* 802DE994 002A7F54  48 00 02 0D */	bl ptim_init
 /* 802DE998 002A7F58  4B FF E0 29 */	bl GKI_get_taskid
 /* 802DE99C 002A7F5C  98 7F 00 7D */	stb r3, 0x7d(r31)
-/* 802DE9A0 002A7F60  80 6D 97 80 */	lwz r3, lbl_80665900@sda21(r13)
+/* 802DE9A0 002A7F60  80 6D 97 80 */	lwz r3, p_bta_sys_cfg@sda21(r13)
 /* 802DE9A4 002A7F64  88 03 00 04 */	lbz r0, 4(r3)
-/* 802DE9A8 002A7F68  98 0D B5 F8 */	stb r0, lbl_80667778@sda21(r13)
+/* 802DE9A8 002A7F68  98 0D B5 F8 */	stb r0, appl_trace_level@sda21(r13)
 /* 802DE9AC 002A7F6C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802DE9B0 002A7F70  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802DE9B4 002A7F74  7C 08 03 A6 */	mtlr r0
@@ -38,7 +38,7 @@
 /* 802DE9D0 002A7F90  3B E0 00 01 */	li r31, 1
 /* 802DE9D4 002A7F94  93 C1 00 08 */	stw r30, 8(r1)
 /* 802DE9D8 002A7F98  7C 7E 1B 78 */	mr r30, r3
-/* 802DE9DC 002A7F9C  88 0D B5 F8 */	lbz r0, lbl_80667778@sda21(r13)
+/* 802DE9DC 002A7F9C  88 0D B5 F8 */	lbz r0, appl_trace_level@sda21(r13)
 /* 802DE9E0 002A7FA0  28 00 00 04 */	cmplwi r0, 4
 /* 802DE9E4 002A7FA4  41 80 00 18 */	blt .L_802DE9FC
 /* 802DE9E8 002A7FA8  3C 80 80 54 */	lis r4, lbl_80543FD0@ha
@@ -47,9 +47,9 @@
 /* 802DE9F4 002A7FB4  38 60 05 03 */	li r3, 0x503
 /* 802DE9F8 002A7FB8  4B FF F5 C9 */	bl LogMsg_1
 .L_802DE9FC:
-/* 802DE9FC 002A7FBC  3C 60 80 5C */	lis r3, lbl_805BF558@ha
+/* 802DE9FC 002A7FBC  3C 60 80 5C */	lis r3, bta_sys_cb@ha
 /* 802DEA00 002A7FC0  A0 9E 00 00 */	lhz r4, 0(r30)
-/* 802DEA04 002A7FC4  38 63 F5 58 */	addi r3, r3, lbl_805BF558@l
+/* 802DEA04 002A7FC4  38 63 F5 58 */	addi r3, r3, bta_sys_cb@l
 /* 802DEA08 002A7FC8  88 03 00 7E */	lbz r0, 0x7e(r3)
 /* 802DEA0C 002A7FCC  7C 85 46 70 */	srawi r5, r4, 8
 /* 802DEA10 002A7FD0  2C 00 00 00 */	cmpwi r0, 0
@@ -76,7 +76,7 @@
 /* 802DEA5C 002A801C  7C 7F 1B 78 */	mr r31, r3
 /* 802DEA60 002A8020  48 00 00 24 */	b .L_802DEA84
 .L_802DEA64:
-/* 802DEA64 002A8024  88 0D B5 F8 */	lbz r0, lbl_80667778@sda21(r13)
+/* 802DEA64 002A8024  88 0D B5 F8 */	lbz r0, appl_trace_level@sda21(r13)
 /* 802DEA68 002A8028  28 00 00 02 */	cmplwi r0, 2
 /* 802DEA6C 002A802C  41 80 00 18 */	blt .L_802DEA84
 /* 802DEA70 002A8030  3C 80 80 54 */	lis r4, lbl_80543FE4@ha
@@ -99,8 +99,8 @@
 .endfn bta_sys_event
 
 .fn bta_sys_timer_update, global
-/* 802DEAAC 002A806C  3C 60 80 5C */	lis r3, lbl_805BF558@ha
-/* 802DEAB0 002A8070  38 63 F5 58 */	addi r3, r3, lbl_805BF558@l
+/* 802DEAAC 002A806C  3C 60 80 5C */	lis r3, bta_sys_cb@ha
+/* 802DEAB0 002A8070  38 63 F5 58 */	addi r3, r3, bta_sys_cb@l
 /* 802DEAB4 002A8074  88 03 00 7C */	lbz r0, 0x7c(r3)
 /* 802DEAB8 002A8078  2C 00 00 00 */	cmpwi r0, 0
 /* 802DEABC 002A807C  4C 82 00 20 */	bnelr 
@@ -110,17 +110,17 @@
 .endfn bta_sys_timer_update
 
 .fn bta_sys_register, global
-/* 802DEACC 002A808C  3C A0 80 5C */	lis r5, lbl_805BF558@ha
+/* 802DEACC 002A808C  3C A0 80 5C */	lis r5, bta_sys_cb@ha
 /* 802DEAD0 002A8090  54 60 15 BA */	rlwinm r0, r3, 2, 0x16, 0x1d
-/* 802DEAD4 002A8094  38 A5 F5 58 */	addi r5, r5, lbl_805BF558@l
+/* 802DEAD4 002A8094  38 A5 F5 58 */	addi r5, r5, bta_sys_cb@l
 /* 802DEAD8 002A8098  7C 85 01 2E */	stwx r4, r5, r0
 /* 802DEADC 002A809C  4E 80 00 20 */	blr 
 .endfn bta_sys_register
 
 .fn bta_sys_sendmsg, global
-/* 802DEAE0 002A80A0  80 8D 97 80 */	lwz r4, lbl_80665900@sda21(r13)
-/* 802DEAE4 002A80A4  3C C0 80 5C */	lis r6, lbl_805BF558@ha
-/* 802DEAE8 002A80A8  38 C6 F5 58 */	addi r6, r6, lbl_805BF558@l
+/* 802DEAE0 002A80A0  80 8D 97 80 */	lwz r4, p_bta_sys_cfg@sda21(r13)
+/* 802DEAE4 002A80A4  3C C0 80 5C */	lis r6, bta_sys_cb@ha
+/* 802DEAE8 002A80A8  38 C6 F5 58 */	addi r6, r6, bta_sys_cb@l
 /* 802DEAEC 002A80AC  7C 65 1B 78 */	mr r5, r3
 /* 802DEAF0 002A80B0  88 66 00 7D */	lbz r3, 0x7d(r6)
 /* 802DEAF4 002A80B4  88 84 00 02 */	lbz r4, 2(r4)
@@ -128,9 +128,9 @@
 .endfn bta_sys_sendmsg
 
 .fn bta_sys_start_timer, global
-/* 802DEAFC 002A80BC  3C E0 80 5C */	lis r7, lbl_805BF558@ha
+/* 802DEAFC 002A80BC  3C E0 80 5C */	lis r7, bta_sys_cb@ha
 /* 802DEB00 002A80C0  7C 80 23 78 */	mr r0, r4
-/* 802DEB04 002A80C4  38 E7 F5 58 */	addi r7, r7, lbl_805BF558@l
+/* 802DEB04 002A80C4  38 E7 F5 58 */	addi r7, r7, bta_sys_cb@l
 /* 802DEB08 002A80C8  7C A6 2B 78 */	mr r6, r5
 /* 802DEB0C 002A80CC  7C 64 1B 78 */	mr r4, r3
 /* 802DEB10 002A80D0  7C 05 03 78 */	mr r5, r0
@@ -139,9 +139,9 @@
 .endfn bta_sys_start_timer
 
 .fn bta_sys_stop_timer, global
-/* 802DEB1C 002A80DC  3C A0 80 5C */	lis r5, lbl_805BF558@ha
+/* 802DEB1C 002A80DC  3C A0 80 5C */	lis r5, bta_sys_cb@ha
 /* 802DEB20 002A80E0  7C 64 1B 78 */	mr r4, r3
-/* 802DEB24 002A80E4  38 A5 F5 58 */	addi r5, r5, lbl_805BF558@l
+/* 802DEB24 002A80E4  38 A5 F5 58 */	addi r5, r5, bta_sys_cb@l
 /* 802DEB28 002A80E8  38 65 00 68 */	addi r3, r5, 0x68
 /* 802DEB2C 002A80EC  48 00 02 14 */	b ptim_stop_timer
 .endfn bta_sys_stop_timer
@@ -151,8 +151,8 @@
 /* 802DEB34 002A80F4  7C 08 02 A6 */	mflr r0
 /* 802DEB38 002A80F8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802DEB3C 002A80FC  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 802DEB40 002A8100  3F E0 80 5C */	lis r31, lbl_805BF558@ha
-/* 802DEB44 002A8104  3B FF F5 58 */	addi r31, r31, lbl_805BF558@l
+/* 802DEB40 002A8100  3F E0 80 5C */	lis r31, bta_sys_cb@ha
+/* 802DEB44 002A8104  3B FF F5 58 */	addi r31, r31, bta_sys_cb@l
 /* 802DEB48 002A8108  93 C1 00 08 */	stw r30, 8(r1)
 /* 802DEB4C 002A810C  3B C0 00 00 */	li r30, 0
 .L_802DEB50:
@@ -178,11 +178,12 @@
 .endfn bta_sys_disable
 
 .fn bta_sys_set_trace_level, global
-/* 802DEB98 002A8158  98 6D B5 F8 */	stb r3, lbl_80667778@sda21(r13)
+/* 802DEB98 002A8158  98 6D B5 F8 */	stb r3, appl_trace_level@sda21(r13)
 /* 802DEB9C 002A815C  4E 80 00 20 */	blr
 .endfn bta_sys_set_trace_level
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .global lbl_80543FD0
 lbl_80543FD0:
 	.asciz "BTA got event 0x%x"
@@ -195,8 +196,14 @@ lbl_80543FE4:
 	.balign 4
 
 
-.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
-.global lbl_8066BF40
-lbl_8066BF40:
-	.4byte 0x00040201
-	.4byte 0
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global bta_sys_cb
+bta_sys_cb:
+	.skip 0x90
+
+.section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
+.global appl_trace_level
+appl_trace_level:
+	.skip 0x8

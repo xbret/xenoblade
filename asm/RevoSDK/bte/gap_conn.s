@@ -4,7 +4,7 @@
 
 .fn gap_conn_init, global
 /* 802EFD64 002B9324  3D 40 80 2F */	lis r10, gap_connect_ind@ha
-/* 802EFD68 002B9328  3D 20 80 5C */	lis r9, lbl_805C21C0@ha
+/* 802EFD68 002B9328  3D 20 80 5C */	lis r9, gap_cb@ha
 /* 802EFD6C 002B932C  3D 00 80 2F */	lis r8, gap_connect_cfm@ha
 /* 802EFD70 002B9330  3C E0 80 2F */	lis r7, gap_config_ind@ha
 /* 802EFD74 002B9334  3C C0 80 2F */	lis r6, gap_config_cfm@ha
@@ -12,7 +12,7 @@
 /* 802EFD7C 002B933C  3C 80 80 2F */	lis r4, gap_data_ind@ha
 /* 802EFD80 002B9340  3C 60 80 2F */	lis r3, gap_congestion_ind@ha
 /* 802EFD84 002B9344  39 4A FD D4 */	addi r10, r10, gap_connect_ind@l
-/* 802EFD88 002B9348  39 29 21 C0 */	addi r9, r9, lbl_805C21C0@l
+/* 802EFD88 002B9348  39 29 21 C0 */	addi r9, r9, gap_cb@l
 /* 802EFD8C 002B934C  38 00 00 00 */	li r0, 0
 /* 802EFD90 002B9350  39 08 FF 60 */	addi r8, r8, gap_connect_cfm@l
 /* 802EFD94 002B9354  38 E7 01 3C */	addi r7, r7, gap_config_ind@l
@@ -39,9 +39,9 @@
 /* 802EFDDC 002B939C  90 01 00 24 */	stw r0, 0x24(r1)
 /* 802EFDE0 002B93A0  39 61 00 20 */	addi r11, r1, 0x20
 /* 802EFDE4 002B93A4  4B FC A3 6D */	bl _savegpr_26
-/* 802EFDE8 002B93A8  3C E0 80 5C */	lis r7, lbl_805C21C0@ha
+/* 802EFDE8 002B93A8  3C E0 80 5C */	lis r7, gap_cb@ha
 /* 802EFDEC 002B93AC  7C 7A 1B 78 */	mr r26, r3
-/* 802EFDF0 002B93B0  38 E7 21 C0 */	addi r7, r7, lbl_805C21C0@l
+/* 802EFDF0 002B93B0  38 E7 21 C0 */	addi r7, r7, gap_cb@l
 /* 802EFDF4 002B93B4  7C 9F 23 78 */	mr r31, r4
 /* 802EFDF8 002B93B8  7C BB 2B 78 */	mr r27, r5
 /* 802EFDFC 002B93BC  7C DC 33 78 */	mr r28, r6
@@ -72,8 +72,8 @@
 /* 802EFE54 002B9414  57 C0 04 3E */	clrlwi r0, r30, 0x10
 /* 802EFE58 002B9418  28 00 00 08 */	cmplwi r0, 8
 /* 802EFE5C 002B941C  40 82 00 80 */	bne .L_802EFEDC
-/* 802EFE60 002B9420  3C 60 80 5C */	lis r3, lbl_805C21C0@ha
-/* 802EFE64 002B9424  38 63 21 C0 */	addi r3, r3, lbl_805C21C0@l
+/* 802EFE60 002B9420  3C 60 80 5C */	lis r3, gap_cb@ha
+/* 802EFE64 002B9424  38 63 21 C0 */	addi r3, r3, gap_cb@l
 /* 802EFE68 002B9428  88 03 00 28 */	lbz r0, 0x28(r3)
 /* 802EFE6C 002B942C  28 00 00 02 */	cmplwi r0, 2
 /* 802EFE70 002B9430  41 80 00 14 */	blt .L_802EFE84
@@ -82,8 +82,8 @@
 /* 802EFE7C 002B943C  38 63 00 01 */	addi r3, r3, 0x000E0001@l
 /* 802EFE80 002B9440  4B FE E1 21 */	bl LogMsg_0
 .L_802EFE84:
-/* 802EFE84 002B9444  3C 60 80 5C */	lis r3, lbl_805C21C0@ha
-/* 802EFE88 002B9448  38 63 21 C0 */	addi r3, r3, lbl_805C21C0@l
+/* 802EFE84 002B9444  3C 60 80 5C */	lis r3, gap_cb@ha
+/* 802EFE88 002B9448  38 63 21 C0 */	addi r3, r3, gap_cb@l
 /* 802EFE8C 002B944C  88 03 00 28 */	lbz r0, 0x28(r3)
 /* 802EFE90 002B9450  28 00 00 02 */	cmplwi r0, 2
 /* 802EFE94 002B9454  41 80 00 18 */	blt .L_802EFEAC
@@ -93,8 +93,8 @@
 /* 802EFEA4 002B9464  38 84 62 D0 */	addi r4, r4, lbl_805462D0@l
 /* 802EFEA8 002B9468  4B FE E0 F9 */	bl LogMsg_0
 .L_802EFEAC:
-/* 802EFEAC 002B946C  3C 60 80 5C */	lis r3, lbl_805C21C0@ha
-/* 802EFEB0 002B9470  38 63 21 C0 */	addi r3, r3, lbl_805C21C0@l
+/* 802EFEAC 002B946C  3C 60 80 5C */	lis r3, gap_cb@ha
+/* 802EFEB0 002B9470  38 63 21 C0 */	addi r3, r3, gap_cb@l
 /* 802EFEB4 002B9474  88 03 00 28 */	lbz r0, 0x28(r3)
 /* 802EFEB8 002B9478  28 00 00 02 */	cmplwi r0, 2
 /* 802EFEBC 002B947C  41 80 00 14 */	blt .L_802EFED0
@@ -120,8 +120,8 @@
 /* 802EFF04 002B94C4  38 C0 00 00 */	li r6, 0
 /* 802EFF08 002B94C8  38 E0 00 00 */	li r7, 0
 /* 802EFF0C 002B94CC  48 00 6E 59 */	bl L2CA_ConnectRsp
-/* 802EFF10 002B94D0  3C 60 80 5C */	lis r3, lbl_805C21C0@ha
-/* 802EFF14 002B94D4  38 63 21 C0 */	addi r3, r3, lbl_805C21C0@l
+/* 802EFF10 002B94D0  3C 60 80 5C */	lis r3, gap_cb@ha
+/* 802EFF14 002B94D4  38 63 21 C0 */	addi r3, r3, gap_cb@l
 /* 802EFF18 002B94D8  88 03 00 28 */	lbz r0, 0x28(r3)
 /* 802EFF1C 002B94DC  28 00 00 04 */	cmplwi r0, 4
 /* 802EFF20 002B94E0  41 80 00 1C */	blt .L_802EFF3C
@@ -147,10 +147,10 @@
 .fn gap_connect_cfm, global
 /* 802EFF60 002B9520  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802EFF64 002B9524  7C 08 02 A6 */	mflr r0
-/* 802EFF68 002B9528  3C A0 80 5C */	lis r5, lbl_805C21C0@ha
+/* 802EFF68 002B9528  3C A0 80 5C */	lis r5, gap_cb@ha
 /* 802EFF6C 002B952C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802EFF70 002B9530  38 00 00 02 */	li r0, 2
-/* 802EFF74 002B9534  38 A5 21 C0 */	addi r5, r5, lbl_805C21C0@l
+/* 802EFF74 002B9534  38 A5 21 C0 */	addi r5, r5, gap_cb@l
 /* 802EFF78 002B9538  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802EFF7C 002B953C  3B E5 00 AC */	addi r31, r5, 0xac
 /* 802EFF80 002B9540  38 A0 00 00 */	li r5, 0
@@ -228,9 +228,9 @@
 /* 802F0078 002B9638  80 1F 00 14 */	lwz r0, 0x14(r31)
 /* 802F007C 002B963C  2C 00 00 00 */	cmpwi r0, 0
 /* 802F0080 002B9640  40 82 FF EC */	bne .L_802F006C
-/* 802F0084 002B9644  3C 60 80 5C */	lis r3, lbl_805C21C0@ha
+/* 802F0084 002B9644  3C 60 80 5C */	lis r3, gap_cb@ha
 /* 802F0088 002B9648  38 80 00 00 */	li r4, 0
-/* 802F008C 002B964C  38 63 21 C0 */	addi r3, r3, lbl_805C21C0@l
+/* 802F008C 002B964C  38 63 21 C0 */	addi r3, r3, gap_cb@l
 /* 802F0090 002B9650  38 00 00 02 */	li r0, 2
 /* 802F0094 002B9654  98 9F 00 00 */	stb r4, 0(r31)
 /* 802F0098 002B9658  38 83 00 AC */	addi r4, r3, 0xac
@@ -285,11 +285,11 @@
 .fn gap_config_ind, global
 /* 802F013C 002B96FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F0140 002B9700  7C 08 02 A6 */	mflr r0
-/* 802F0144 002B9704  3C A0 80 5C */	lis r5, lbl_805C21C0@ha
+/* 802F0144 002B9704  3C A0 80 5C */	lis r5, gap_cb@ha
 /* 802F0148 002B9708  38 C0 00 00 */	li r6, 0
 /* 802F014C 002B970C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802F0150 002B9710  38 00 00 02 */	li r0, 2
-/* 802F0154 002B9714  38 A5 21 C0 */	addi r5, r5, lbl_805C21C0@l
+/* 802F0154 002B9714  38 A5 21 C0 */	addi r5, r5, gap_cb@l
 /* 802F0158 002B9718  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802F015C 002B971C  3B E5 00 AC */	addi r31, r5, 0xac
 /* 802F0160 002B9720  7C 09 03 A6 */	mtctr r0
@@ -377,11 +377,11 @@
 .fn gap_config_cfm, global
 /* 802F0278 002B9838  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F027C 002B983C  7C 08 02 A6 */	mflr r0
-/* 802F0280 002B9840  3C A0 80 5C */	lis r5, lbl_805C21C0@ha
+/* 802F0280 002B9840  3C A0 80 5C */	lis r5, gap_cb@ha
 /* 802F0284 002B9844  38 C0 00 00 */	li r6, 0
 /* 802F0288 002B9848  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802F028C 002B984C  38 00 00 02 */	li r0, 2
-/* 802F0290 002B9850  38 A5 21 C0 */	addi r5, r5, lbl_805C21C0@l
+/* 802F0290 002B9850  38 A5 21 C0 */	addi r5, r5, gap_cb@l
 /* 802F0294 002B9854  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802F0298 002B9858  3B E5 00 AC */	addi r31, r5, 0xac
 /* 802F029C 002B985C  93 C1 00 08 */	stw r30, 8(r1)
@@ -461,9 +461,9 @@
 /* 802F03A0 002B9960  80 1F 00 14 */	lwz r0, 0x14(r31)
 /* 802F03A4 002B9964  2C 00 00 00 */	cmpwi r0, 0
 /* 802F03A8 002B9968  40 82 FF EC */	bne .L_802F0394
-/* 802F03AC 002B996C  3C 60 80 5C */	lis r3, lbl_805C21C0@ha
+/* 802F03AC 002B996C  3C 60 80 5C */	lis r3, gap_cb@ha
 /* 802F03B0 002B9970  38 80 00 00 */	li r4, 0
-/* 802F03B4 002B9974  38 63 21 C0 */	addi r3, r3, lbl_805C21C0@l
+/* 802F03B4 002B9974  38 63 21 C0 */	addi r3, r3, gap_cb@l
 /* 802F03B8 002B9978  38 00 00 02 */	li r0, 2
 /* 802F03BC 002B997C  98 9F 00 00 */	stb r4, 0(r31)
 /* 802F03C0 002B9980  38 83 00 AC */	addi r4, r3, 0xac
@@ -518,9 +518,9 @@
 .fn gap_disconnect_ind, global
 /* 802F0464 002B9A24  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F0468 002B9A28  7C 08 02 A6 */	mflr r0
-/* 802F046C 002B9A2C  3C A0 80 5C */	lis r5, lbl_805C21C0@ha
+/* 802F046C 002B9A2C  3C A0 80 5C */	lis r5, gap_cb@ha
 /* 802F0470 002B9A30  90 01 00 24 */	stw r0, 0x24(r1)
-/* 802F0474 002B9A34  38 A5 21 C0 */	addi r5, r5, lbl_805C21C0@l
+/* 802F0474 002B9A34  38 A5 21 C0 */	addi r5, r5, gap_cb@l
 /* 802F0478 002B9A38  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 802F047C 002B9A3C  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 802F0480 002B9A40  7C 9E 23 78 */	mr r30, r4
@@ -536,9 +536,9 @@
 /* 802F04A8 002B9A68  38 84 63 40 */	addi r4, r4, lbl_80546340@l
 /* 802F04AC 002B9A6C  4B FE DB 15 */	bl LogMsg_1
 .L_802F04B0:
-/* 802F04B0 002B9A70  3C 60 80 5C */	lis r3, lbl_805C21C0@ha
+/* 802F04B0 002B9A70  3C 60 80 5C */	lis r3, gap_cb@ha
 /* 802F04B4 002B9A74  38 00 00 02 */	li r0, 2
-/* 802F04B8 002B9A78  38 63 21 C0 */	addi r3, r3, lbl_805C21C0@l
+/* 802F04B8 002B9A78  38 63 21 C0 */	addi r3, r3, gap_cb@l
 /* 802F04BC 002B9A7C  38 80 00 00 */	li r4, 0
 /* 802F04C0 002B9A80  3B E3 00 AC */	addi r31, r3, 0xac
 /* 802F04C4 002B9A84  7C 09 03 A6 */	mtctr r0
@@ -605,9 +605,9 @@
 /* 802F0594 002B9B54  80 1F 00 14 */	lwz r0, 0x14(r31)
 /* 802F0598 002B9B58  2C 00 00 00 */	cmpwi r0, 0
 /* 802F059C 002B9B5C  40 82 FF EC */	bne .L_802F0588
-/* 802F05A0 002B9B60  3C 60 80 5C */	lis r3, lbl_805C21C0@ha
+/* 802F05A0 002B9B60  3C 60 80 5C */	lis r3, gap_cb@ha
 /* 802F05A4 002B9B64  38 80 00 00 */	li r4, 0
-/* 802F05A8 002B9B68  38 63 21 C0 */	addi r3, r3, lbl_805C21C0@l
+/* 802F05A8 002B9B68  38 63 21 C0 */	addi r3, r3, gap_cb@l
 /* 802F05AC 002B9B6C  38 00 00 02 */	li r0, 2
 /* 802F05B0 002B9B70  98 9F 00 00 */	stb r4, 0(r31)
 /* 802F05B4 002B9B74  38 83 00 AC */	addi r4, r3, 0xac
@@ -663,10 +663,10 @@
 .fn gap_data_ind, global
 /* 802F065C 002B9C1C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F0660 002B9C20  7C 08 02 A6 */	mflr r0
-/* 802F0664 002B9C24  3C A0 80 5C */	lis r5, lbl_805C21C0@ha
+/* 802F0664 002B9C24  3C A0 80 5C */	lis r5, gap_cb@ha
 /* 802F0668 002B9C28  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802F066C 002B9C2C  38 00 00 02 */	li r0, 2
-/* 802F0670 002B9C30  38 A5 21 C0 */	addi r5, r5, lbl_805C21C0@l
+/* 802F0670 002B9C30  38 A5 21 C0 */	addi r5, r5, gap_cb@l
 /* 802F0674 002B9C34  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802F0678 002B9C38  3B E5 00 AC */	addi r31, r5, 0xac
 /* 802F067C 002B9C3C  38 A0 00 00 */	li r5, 0
@@ -743,9 +743,9 @@
 .fn gap_congestion_ind, global
 /* 802F076C 002B9D2C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F0770 002B9D30  7C 08 02 A6 */	mflr r0
-/* 802F0774 002B9D34  3C A0 80 5C */	lis r5, lbl_805C21C0@ha
+/* 802F0774 002B9D34  3C A0 80 5C */	lis r5, gap_cb@ha
 /* 802F0778 002B9D38  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802F077C 002B9D3C  38 A5 21 C0 */	addi r5, r5, lbl_805C21C0@l
+/* 802F077C 002B9D3C  38 A5 21 C0 */	addi r5, r5, gap_cb@l
 /* 802F0780 002B9D40  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802F0784 002B9D44  7C 9F 23 78 */	mr r31, r4
 /* 802F0788 002B9D48  93 C1 00 08 */	stw r30, 8(r1)
@@ -761,9 +761,9 @@
 /* 802F07B0 002B9D70  38 84 63 68 */	addi r4, r4, lbl_80546368@l
 /* 802F07B4 002B9D74  4B FE D8 2D */	bl LogMsg_2
 .L_802F07B8:
-/* 802F07B8 002B9D78  3C 60 80 5C */	lis r3, lbl_805C21C0@ha
+/* 802F07B8 002B9D78  3C 60 80 5C */	lis r3, gap_cb@ha
 /* 802F07BC 002B9D7C  38 00 00 02 */	li r0, 2
-/* 802F07C0 002B9D80  38 63 21 C0 */	addi r3, r3, lbl_805C21C0@l
+/* 802F07C0 002B9D80  38 63 21 C0 */	addi r3, r3, gap_cb@l
 /* 802F07C4 002B9D84  38 80 00 00 */	li r4, 0
 /* 802F07C8 002B9D88  38 63 00 AC */	addi r3, r3, 0xac
 /* 802F07CC 002B9D8C  7C 09 03 A6 */	mtctr r0
@@ -829,6 +829,7 @@
 .endfn gap_congestion_ind
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .global lbl_805462D0
 lbl_805462D0:
 	.asciz "WARNING: GAP Conn Indication for Unexpected Bd Addr...Disconnecting"
@@ -854,12 +855,7 @@ lbl_80546368:
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
+
 .global lbl_80665940
 lbl_80665940:
 	.asciz "*******"
-
-
-.section .bss, "wa"  # 0x80573C80 - 0x8066417B
-.global lbl_805C21C0
-lbl_805C21C0:
-	.skip 0x3B0

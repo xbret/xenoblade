@@ -52,15 +52,15 @@
 /* 80312F90 002DC550  41 82 00 08 */	beq .L_80312F98
 /* 80312F94 002DC554  48 00 02 D4 */	b .L_80313268
 .L_80312F98:
-/* 80312F98 002DC558  80 0D 98 40 */	lwz r0, lbl_806659C0@sda21(r13)
+/* 80312F98 002DC558  80 0D 98 40 */	lwz r0, enc_tbl_jp_loaded@sda21(r13)
 /* 80312F9C 002DC55C  2C 00 00 00 */	cmpwi r0, 0
 /* 80312FA0 002DC560  40 82 00 0C */	bne .L_80312FAC
 /* 80312FA4 002DC564  38 60 FF FE */	li r3, -2
 /* 80312FA8 002DC568  48 00 02 C0 */	b .L_80313268
 .L_80312FAC:
-/* 80312FAC 002DC56C  3C 60 80 51 */	lis r3, lbl_8050E400@ha
+/* 80312FAC 002DC56C  3C 60 80 51 */	lis r3, enc_tbl_jp_mbtowc@ha
 /* 80312FB0 002DC570  3F E0 00 01 */	lis r31, 1
-/* 80312FB4 002DC574  3B C3 E4 00 */	addi r30, r3, lbl_8050E400@l
+/* 80312FB4 002DC574  3B C3 E4 00 */	addi r30, r3, enc_tbl_jp_mbtowc@l
 /* 80312FB8 002DC578  48 00 02 70 */	b .L_80313228
 .L_80312FBC:
 /* 80312FBC 002DC57C  80 01 00 10 */	lwz r0, 0x10(r1)
@@ -311,7 +311,7 @@
 /* 80313300 002DC8C0  41 82 00 08 */	beq .L_80313308
 /* 80313304 002DC8C4  48 00 02 0C */	b .L_80313510
 .L_80313308:
-/* 80313308 002DC8C8  80 0D 98 40 */	lwz r0, lbl_806659C0@sda21(r13)
+/* 80313308 002DC8C8  80 0D 98 40 */	lwz r0, enc_tbl_jp_loaded@sda21(r13)
 /* 8031330C 002DC8CC  2C 00 00 00 */	cmpwi r0, 0
 /* 80313310 002DC8D0  40 82 00 0C */	bne .L_8031331C
 /* 80313314 002DC8D4  38 60 FF FE */	li r3, -2
@@ -552,19 +552,19 @@
 /* 80313634 002DCBF4  54 86 C6 3E */	rlwinm r6, r4, 0x18, 0x18, 0x1f
 /* 80313638 002DCBF8  41 82 00 1C */	beq .L_80313654
 /* 8031363C 002DCBFC  38 07 FF FF */	addi r0, r7, -1
-/* 80313640 002DCC00  3C 80 80 52 */	lis r4, lbl_80518468@ha
+/* 80313640 002DCC00  3C 80 80 52 */	lis r4, enc_offset_jp@ha
 /* 80313644 002DCC04  54 00 08 3C */	slwi r0, r0, 1
-/* 80313648 002DCC08  38 84 84 68 */	addi r4, r4, lbl_80518468@l
+/* 80313648 002DCC08  38 84 84 68 */	addi r4, r4, enc_offset_jp@l
 /* 8031364C 002DCC0C  7D 04 02 2E */	lhzx r8, r4, r0
 /* 80313650 002DCC10  48 00 00 08 */	b .L_80313658
 .L_80313654:
 /* 80313654 002DCC14  39 00 00 00 */	li r8, 0
 .L_80313658:
-/* 80313658 002DCC18  3C A0 80 52 */	lis r5, lbl_80518468@ha
-/* 8031365C 002DCC1C  3C 80 80 51 */	lis r4, lbl_80512D70@ha
+/* 80313658 002DCC18  3C A0 80 52 */	lis r5, enc_offset_jp@ha
+/* 8031365C 002DCC1C  3C 80 80 51 */	lis r4, enc_tbl_jp_wctomb@ha
 /* 80313660 002DCC20  54 E0 0D FC */	rlwinm r0, r7, 1, 0x17, 0x1e
-/* 80313664 002DCC24  38 A5 84 68 */	addi r5, r5, lbl_80518468@l
-/* 80313668 002DCC28  38 84 2D 70 */	addi r4, r4, lbl_80512D70@l
+/* 80313664 002DCC24  38 A5 84 68 */	addi r5, r5, enc_offset_jp@l
+/* 80313668 002DCC28  38 84 2D 70 */	addi r4, r4, enc_tbl_jp_wctomb@l
 /* 8031366C 002DCC2C  7C A5 02 2E */	lhzx r5, r5, r0
 /* 80313670 002DCC30  38 E5 FF FF */	addi r7, r5, -1
 /* 80313674 002DCC34  48 00 00 5C */	b .L_803136D0
@@ -598,9 +598,9 @@
 /* 803136D4 002DCC94  2C 00 00 01 */	cmpwi r0, 1
 /* 803136D8 002DCC98  41 81 FF A0 */	bgt .L_80313678
 /* 803136DC 002DCC9C  55 00 10 3A */	slwi r0, r8, 2
-/* 803136E0 002DCCA0  3C 80 80 51 */	lis r4, lbl_80512D70@ha
+/* 803136E0 002DCCA0  3C 80 80 51 */	lis r4, enc_tbl_jp_wctomb@ha
 /* 803136E4 002DCCA4  7C 08 00 50 */	subf r0, r8, r0
-/* 803136E8 002DCCA8  38 84 2D 70 */	addi r4, r4, lbl_80512D70@l
+/* 803136E8 002DCCA8  38 84 2D 70 */	addi r4, r4, enc_tbl_jp_wctomb@l
 /* 803136EC 002DCCAC  7C A4 02 14 */	add r5, r4, r0
 /* 803136F0 002DCCB0  7C 04 00 AE */	lbzx r0, r4, r0
 /* 803136F4 002DCCB4  7C 00 30 40 */	cmplw r0, r6
@@ -632,8 +632,7 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8050E400
-lbl_8050E400:
+enc_tbl_jp_mbtowc:
 	.2byte 0x3000
 	.2byte 0x3001
 	.2byte 0x3002
@@ -10035,8 +10034,7 @@ lbl_8050E400:
 	.2byte 0
 	.2byte 0
 
-    .global lbl_80512D70
-lbl_80512D70:
+enc_tbl_jp_wctomb:
 	.4byte 0x2281CD25
 	.4byte 0x849F3081
 	.4byte 0x404E88EA
@@ -15605,8 +15603,7 @@ lbl_80512D70:
 	.4byte 0
 
 
-.global lbl_80518468
-lbl_80518468:
+enc_offset_jp:
 	.2byte 0x001B
 	.2byte 0x0039
 	.2byte 0x0056
@@ -15866,7 +15863,7 @@ lbl_80518468:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_806659C0
-lbl_806659C0:
+.global enc_tbl_jp_loaded
+enc_tbl_jp_loaded:
 	.4byte 0x00000001
 	.4byte 0

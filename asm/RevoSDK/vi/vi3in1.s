@@ -20,19 +20,19 @@
 /* 80367354 00330914  48 00 00 28 */	b .L_8036737C
 .L_80367358:
 /* 80367358 00330918  38 00 00 02 */	li r0, 2
-/* 8036735C 0033091C  90 0D BA E4 */	stw r0, lbl_80667C64@sda21(r13)
+/* 8036735C 0033091C  90 0D BA E4 */	stw r0, Vdac_Flag_Region@sda21(r13)
 /* 80367360 00330920  48 00 00 24 */	b .L_80367384
 .L_80367364:
 /* 80367364 00330924  38 00 00 01 */	li r0, 1
-/* 80367368 00330928  90 0D BA E4 */	stw r0, lbl_80667C64@sda21(r13)
+/* 80367368 00330928  90 0D BA E4 */	stw r0, Vdac_Flag_Region@sda21(r13)
 /* 8036736C 0033092C  48 00 00 18 */	b .L_80367384
 .L_80367370:
 /* 80367370 00330930  38 00 00 00 */	li r0, 0
-/* 80367374 00330934  90 0D BA E4 */	stw r0, lbl_80667C64@sda21(r13)
+/* 80367374 00330934  90 0D BA E4 */	stw r0, Vdac_Flag_Region@sda21(r13)
 /* 80367378 00330938  48 00 00 0C */	b .L_80367384
 .L_8036737C:
 /* 8036737C 0033093C  38 00 00 00 */	li r0, 0
-/* 80367380 00330940  90 0D BA E4 */	stw r0, lbl_80667C64@sda21(r13)
+/* 80367380 00330940  90 0D BA E4 */	stw r0, Vdac_Flag_Region@sda21(r13)
 .L_80367384:
 /* 80367384 00330944  54 63 2C F4 */	rlwinm r3, r3, 5, 0x13, 0x1a
 /* 80367388 00330948  38 80 00 01 */	li r4, 1
@@ -78,10 +78,10 @@
 /* 80367408 003309C8  38 E0 00 05 */	li r7, 5
 /* 8036740C 003309CC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80367410 003309D0  38 81 00 08 */	addi r4, r1, 8
-/* 80367414 003309D4  88 6D 9B AC */	lbz r3, lbl_80665D2C@sda21(r13)
-/* 80367418 003309D8  88 0D 9B AE */	lbz r0, lbl_80665D2E@sda21(r13)
+/* 80367414 003309D4  88 6D 9B AC */	lbz r3, __wd0@sda21(r13)
+/* 80367418 003309D8  88 0D 9B AE */	lbz r0, __wd2@sda21(r13)
 /* 8036741C 003309DC  54 66 07 BE */	clrlwi r6, r3, 0x1e
-/* 80367420 003309E0  88 AD 9B AD */	lbz r5, lbl_80665D2D@sda21(r13)
+/* 80367420 003309E0  88 AD 9B AD */	lbz r5, __wd1@sda21(r13)
 /* 80367424 003309E4  98 E1 00 08 */	stb r7, 8(r1)
 /* 80367428 003309E8  38 60 00 E0 */	li r3, 0xe0
 /* 8036742C 003309EC  50 A6 16 BA */	rlwimi r6, r5, 2, 0x1a, 0x1d
@@ -104,11 +104,11 @@
 /* 80367468 00330A28  38 E0 00 08 */	li r7, 8
 /* 8036746C 00330A2C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80367470 00330A30  38 81 00 08 */	addi r4, r1, 8
-/* 80367474 00330A34  88 6D 9B AF */	lbz r3, lbl_80665D2F@sda21(r13)
-/* 80367478 00330A38  88 0D 9B B1 */	lbz r0, lbl_80665D31@sda21(r13)
+/* 80367474 00330A34  88 6D 9B AF */	lbz r3, __gp1@sda21(r13)
+/* 80367478 00330A38  88 0D 9B B1 */	lbz r0, __gp3@sda21(r13)
 /* 8036747C 00330A3C  54 65 07 3E */	clrlwi r5, r3, 0x1c
-/* 80367480 00330A40  88 CD 9B B0 */	lbz r6, lbl_80665D30@sda21(r13)
-/* 80367484 00330A44  88 6D 9B B2 */	lbz r3, lbl_80665D32@sda21(r13)
+/* 80367480 00330A40  88 CD 9B B0 */	lbz r6, __gp2@sda21(r13)
+/* 80367484 00330A44  88 6D 9B B2 */	lbz r3, __gp4@sda21(r13)
 /* 80367488 00330A48  54 00 07 7E */	clrlwi r0, r0, 0x1d
 /* 8036748C 00330A4C  50 C5 26 36 */	rlwimi r5, r6, 4, 0x18, 0x1b
 /* 80367490 00330A50  98 A1 00 09 */	stb r5, 9(r1)
@@ -133,11 +133,11 @@
 /* 803674D8 00330A98  39 20 00 7A */	li r9, 0x7a
 /* 803674DC 00330A9C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803674E0 00330AA0  38 81 00 08 */	addi r4, r1, 8
-/* 803674E4 00330AA4  88 0D 9B B3 */	lbz r0, lbl_80665D33@sda21(r13)
-/* 803674E8 00330AA8  88 AD 9B B4 */	lbz r5, lbl_80665D34@sda21(r13)
+/* 803674E4 00330AA4  88 0D 9B B3 */	lbz r0, __cc1@sda21(r13)
+/* 803674E8 00330AA8  88 AD 9B B4 */	lbz r5, __cc2@sda21(r13)
 /* 803674EC 00330AAC  54 08 06 7E */	clrlwi r8, r0, 0x19
-/* 803674F0 00330AB0  88 6D 9B B5 */	lbz r3, lbl_80665D35@sda21(r13)
-/* 803674F4 00330AB4  88 0D 9B B6 */	lbz r0, lbl_80665D36@sda21(r13)
+/* 803674F0 00330AB0  88 6D 9B B5 */	lbz r3, __cc3@sda21(r13)
+/* 803674F4 00330AB4  88 0D 9B B6 */	lbz r0, __cc4@sda21(r13)
 /* 803674F8 00330AB8  54 A7 06 7E */	clrlwi r7, r5, 0x19
 /* 803674FC 00330ABC  54 66 06 7E */	clrlwi r6, r3, 0x19
 /* 80367500 00330AC0  99 21 00 08 */	stb r9, 8(r1)
@@ -161,14 +161,14 @@
 .fn __VISetMacrovision, global
 /* 80367540 00330B00  94 21 FE 70 */	stwu r1, -0x190(r1)
 /* 80367544 00330B04  7C 08 02 A6 */	mflr r0
-/* 80367548 00330B08  3C 60 80 56 */	lis r3, lbl_8055FFF8@ha
+/* 80367548 00330B08  3C 60 80 56 */	lis r3, gammaSet@ha
 /* 8036754C 00330B0C  90 01 01 94 */	stw r0, 0x194(r1)
-/* 80367550 00330B10  38 63 FF F8 */	addi r3, r3, lbl_8055FFF8@l
+/* 80367550 00330B10  38 63 FF F8 */	addi r3, r3, gammaSet@l
 /* 80367554 00330B14  93 E1 01 8C */	stw r31, 0x18c(r1)
 /* 80367558 00330B18  93 C1 01 88 */	stw r30, 0x188(r1)
 /* 8036755C 00330B1C  93 A1 01 84 */	stw r29, 0x184(r1)
 /* 80367560 00330B20  93 81 01 80 */	stw r28, 0x180(r1)
-/* 80367564 00330B24  80 0D BA E0 */	lwz r0, lbl_80667C60@sda21(r13)
+/* 80367564 00330B24  80 0D BA E0 */	lwz r0, __type@sda21(r13)
 /* 80367568 00330B28  2C 00 00 02 */	cmpwi r0, 2
 /* 8036756C 00330B2C  41 82 00 20 */	beq .L_8036758C
 /* 80367570 00330B30  2C 00 00 03 */	cmpwi r0, 3
@@ -179,7 +179,7 @@
 /* 80367584 00330B44  41 82 0C 20 */	beq .L_803681A4
 /* 80367588 00330B48  48 00 0D 10 */	b .L_80368298
 .L_8036758C:
-/* 8036758C 00330B4C  80 0D 9B A8 */	lwz r0, lbl_80665D28@sda21(r13)
+/* 8036758C 00330B4C  80 0D 9B A8 */	lwz r0, __tvType@sda21(r13)
 /* 80367590 00330B50  2C 00 00 00 */	cmpwi r0, 0
 /* 80367594 00330B54  41 82 00 20 */	beq .L_803675B4
 /* 80367598 00330B58  28 00 00 01 */	cmplwi r0, 1
@@ -442,7 +442,7 @@
 /* 8036798C 00330F4C  4B FF F0 75 */	bl WaitMicroTime
 /* 80367990 00330F50  48 00 09 08 */	b .L_80368298
 .L_80367994:
-/* 80367994 00330F54  80 0D 9B A8 */	lwz r0, lbl_80665D28@sda21(r13)
+/* 80367994 00330F54  80 0D 9B A8 */	lwz r0, __tvType@sda21(r13)
 /* 80367998 00330F58  2C 00 00 00 */	cmpwi r0, 0
 /* 8036799C 00330F5C  41 82 00 20 */	beq .L_803679BC
 /* 803679A0 00330F60  28 00 00 01 */	cmplwi r0, 1
@@ -705,7 +705,7 @@
 /* 80367D94 00331354  4B FF EC 6D */	bl WaitMicroTime
 /* 80367D98 00331358  48 00 05 00 */	b .L_80368298
 .L_80367D9C:
-/* 80367D9C 0033135C  80 0D 9B A8 */	lwz r0, lbl_80665D28@sda21(r13)
+/* 80367D9C 0033135C  80 0D 9B A8 */	lwz r0, __tvType@sda21(r13)
 /* 80367DA0 00331360  2C 00 00 00 */	cmpwi r0, 0
 /* 80367DA4 00331364  41 82 00 20 */	beq .L_80367DC4
 /* 80367DA8 00331368  28 00 00 01 */	cmplwi r0, 1
@@ -968,8 +968,8 @@
 /* 8036819C 0033175C  4B FF E8 65 */	bl WaitMicroTime
 /* 803681A0 00331760  48 00 00 F8 */	b .L_80368298
 .L_803681A4:
-/* 803681A4 00331764  3F A0 80 5E */	lis r29, lbl_805DDA70@ha
-/* 803681A8 00331768  8F DD DA 70 */	lbzu r30, lbl_805DDA70@l(r29)
+/* 803681A4 00331764  3F A0 80 5E */	lis r29, VIZeroACPType@ha
+/* 803681A8 00331768  8F DD DA 70 */	lbzu r30, VIZeroACPType@l(r29)
 /* 803681AC 0033176C  9B C1 00 09 */	stb r30, 9(r1)
 /* 803681B0 00331770  3B 80 00 40 */	li r28, 0x40
 /* 803681B4 00331774  8B FD 00 01 */	lbz r31, 1(r29)
@@ -1134,17 +1134,17 @@
 
 .balign 16, 0
 .fn __VISetGamma1_0, global
-/* 80368420 003319E0  3C 60 80 56 */	lis r3, lbl_8055FFF8@ha
-/* 80368424 003319E4  38 63 FF F8 */	addi r3, r3, lbl_8055FFF8@l
+/* 80368420 003319E0  3C 60 80 56 */	lis r3, gammaSet@ha
+/* 80368424 003319E4  38 63 FF F8 */	addi r3, r3, gammaSet@l
 /* 80368428 003319E8  38 63 01 54 */	addi r3, r3, 0x154
 /* 8036842C 003319EC  4B FF FE 94 */	b __VISetGammaImm
 .endfn __VISetGamma1_0
 
 .balign 16, 0
 .fn __VISetGamma, global
-/* 80368430 003319F0  80 0D BA DC */	lwz r0, lbl_80667C5C@sda21(r13)
-/* 80368434 003319F4  3C 60 80 56 */	lis r3, lbl_8055FFF8@ha
-/* 80368438 003319F8  38 63 FF F8 */	addi r3, r3, lbl_8055FFF8@l
+/* 80368430 003319F0  80 0D BA DC */	lwz r0, __gamma@sda21(r13)
+/* 80368434 003319F4  3C 60 80 56 */	lis r3, gammaSet@ha
+/* 80368438 003319F8  38 63 FF F8 */	addi r3, r3, gammaSet@l
 /* 8036843C 003319FC  1C 00 00 22 */	mulli r0, r0, 0x22
 /* 80368440 00331A00  7C 63 02 14 */	add r3, r3, r0
 /* 80368444 00331A04  4B FF FE 7C */	b __VISetGammaImm
@@ -1152,13 +1152,13 @@
 
 .balign 16, 0
 .fn VISetGamma, global
-/* 80368450 00331A10  80 0D BA DC */	lwz r0, lbl_80667C5C@sda21(r13)
+/* 80368450 00331A10  80 0D BA DC */	lwz r0, __gamma@sda21(r13)
 /* 80368454 00331A14  7C 00 18 00 */	cmpw r0, r3
 /* 80368458 00331A18  4D 82 00 20 */	beqlr 
-/* 8036845C 00331A1C  80 0D BA D0 */	lwz r0, lbl_80667C50@sda21(r13)
-/* 80368460 00331A20  90 6D BA DC */	stw r3, lbl_80667C5C@sda21(r13)
+/* 8036845C 00331A1C  80 0D BA D0 */	lwz r0, Vdac_Flag_Changed@sda21(r13)
+/* 80368460 00331A20  90 6D BA DC */	stw r3, __gamma@sda21(r13)
 /* 80368464 00331A24  60 00 00 10 */	ori r0, r0, 0x10
-/* 80368468 00331A28  90 0D BA D0 */	stw r0, lbl_80667C50@sda21(r13)
+/* 80368468 00331A28  90 0D BA D0 */	stw r0, Vdac_Flag_Changed@sda21(r13)
 /* 8036846C 00331A2C  4E 80 00 20 */	blr 
 .endfn VISetGamma
 
@@ -1168,7 +1168,7 @@
 /* 80368474 00331A34  7C 08 02 A6 */	mflr r0
 /* 80368478 00331A38  38 60 00 03 */	li r3, 3
 /* 8036847C 00331A3C  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80368480 00331A40  88 0D 9B B7 */	lbz r0, lbl_80665D37@sda21(r13)
+/* 80368480 00331A40  88 0D 9B B7 */	lbz r0, __filter@sda21(r13)
 /* 80368484 00331A44  98 61 00 08 */	stb r3, 8(r1)
 /* 80368488 00331A48  28 00 00 01 */	cmplwi r0, 1
 /* 8036848C 00331A4C  40 82 00 10 */	bne .L_8036849C
@@ -1193,13 +1193,13 @@
 
 .balign 16, 0
 .fn VISetTrapFilter, global
-/* 803684D0 00331A90  88 0D 9B B7 */	lbz r0, lbl_80665D37@sda21(r13)
+/* 803684D0 00331A90  88 0D 9B B7 */	lbz r0, __filter@sda21(r13)
 /* 803684D4 00331A94  7C 00 18 40 */	cmplw r0, r3
 /* 803684D8 00331A98  4D 82 00 20 */	beqlr 
-/* 803684DC 00331A9C  80 0D BA D0 */	lwz r0, lbl_80667C50@sda21(r13)
-/* 803684E0 00331AA0  98 6D 9B B7 */	stb r3, lbl_80665D37@sda21(r13)
+/* 803684DC 00331A9C  80 0D BA D0 */	lwz r0, Vdac_Flag_Changed@sda21(r13)
+/* 803684E0 00331AA0  98 6D 9B B7 */	stb r3, __filter@sda21(r13)
 /* 803684E4 00331AA4  60 00 00 20 */	ori r0, r0, 0x20
-/* 803684E8 00331AA8  90 0D BA D0 */	stw r0, lbl_80667C50@sda21(r13)
+/* 803684E8 00331AA8  90 0D BA D0 */	stw r0, Vdac_Flag_Changed@sda21(r13)
 /* 803684EC 00331AAC  4E 80 00 20 */	blr 
 .endfn VISetTrapFilter
 
@@ -1208,10 +1208,10 @@
 /* 803684F0 00331AB0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803684F4 00331AB4  7C 08 02 A6 */	mflr r0
 /* 803684F8 00331AB8  90 01 00 14 */	stw r0, 0x14(r1)
-/* 803684FC 00331ABC  80 0D BA E4 */	lwz r0, lbl_80667C64@sda21(r13)
+/* 803684FC 00331ABC  80 0D BA E4 */	lwz r0, Vdac_Flag_Region@sda21(r13)
 /* 80368500 00331AC0  2C 00 00 03 */	cmpwi r0, 3
 /* 80368504 00331AC4  40 82 00 38 */	bne .L_8036853C
-/* 80368508 00331AC8  80 0D BA D8 */	lwz r0, lbl_80667C58@sda21(r13)
+/* 80368508 00331AC8  80 0D BA D8 */	lwz r0, __level@sda21(r13)
 /* 8036850C 00331ACC  38 60 00 0A */	li r3, 0xa
 /* 80368510 00331AD0  98 61 00 08 */	stb r3, 8(r1)
 /* 80368514 00331AD4  38 81 00 08 */	addi r4, r1, 8
@@ -1244,9 +1244,9 @@
 
 .balign 16, 0
 .fn VISetRGBModeImm, global
-/* 80368580 00331B40  80 0D BA D0 */	lwz r0, lbl_80667C50@sda21(r13)
+/* 80368580 00331B40  80 0D BA D0 */	lwz r0, Vdac_Flag_Changed@sda21(r13)
 /* 80368584 00331B44  60 00 00 80 */	ori r0, r0, 0x80
-/* 80368588 00331B48  90 0D BA D0 */	stw r0, lbl_80667C50@sda21(r13)
+/* 80368588 00331B48  90 0D BA D0 */	stw r0, Vdac_Flag_Changed@sda21(r13)
 /* 8036858C 00331B4C  4E 80 00 20 */	blr 
 .endfn VISetRGBModeImm
 
@@ -1260,7 +1260,7 @@
 /* 803685A4 00331B64  38 00 00 01 */	li r0, 1
 /* 803685A8 00331B68  38 81 00 08 */	addi r4, r1, 8
 /* 803685AC 00331B6C  38 A0 00 02 */	li r5, 2
-/* 803685B0 00331B70  90 CD BA E4 */	stw r6, lbl_80667C64@sda21(r13)
+/* 803685B0 00331B70  90 CD BA E4 */	stw r6, Vdac_Flag_Region@sda21(r13)
 /* 803685B4 00331B74  98 01 00 08 */	stb r0, 8(r1)
 /* 803685B8 00331B78  98 C1 00 09 */	stb r6, 9(r1)
 /* 803685BC 00331B7C  4B FF E8 25 */	bl __VISendI2CData
@@ -1314,18 +1314,18 @@
 /* 80368674 00331C34  48 00 00 24 */	b .L_80368698
 .L_80368678:
 /* 80368678 00331C38  3B 80 00 02 */	li r28, 2
-/* 8036867C 00331C3C  93 8D BA E4 */	stw r28, lbl_80667C64@sda21(r13)
+/* 8036867C 00331C3C  93 8D BA E4 */	stw r28, Vdac_Flag_Region@sda21(r13)
 /* 80368680 00331C40  48 00 00 20 */	b .L_803686A0
 .L_80368684:
-/* 80368684 00331C44  93 8D BA E4 */	stw r28, lbl_80667C64@sda21(r13)
+/* 80368684 00331C44  93 8D BA E4 */	stw r28, Vdac_Flag_Region@sda21(r13)
 /* 80368688 00331C48  48 00 00 18 */	b .L_803686A0
 .L_8036868C:
 /* 8036868C 00331C4C  3B 80 00 00 */	li r28, 0
-/* 80368690 00331C50  93 8D BA E4 */	stw r28, lbl_80667C64@sda21(r13)
+/* 80368690 00331C50  93 8D BA E4 */	stw r28, Vdac_Flag_Region@sda21(r13)
 /* 80368694 00331C54  48 00 00 0C */	b .L_803686A0
 .L_80368698:
 /* 80368698 00331C58  3B 80 00 00 */	li r28, 0
-/* 8036869C 00331C5C  93 8D BA E4 */	stw r28, lbl_80667C64@sda21(r13)
+/* 8036869C 00331C5C  93 8D BA E4 */	stw r28, Vdac_Flag_Region@sda21(r13)
 .L_803686A0:
 /* 803686A0 00331C60  54 60 2C F4 */	rlwinm r0, r3, 5, 0x13, 0x1a
 /* 803686A4 00331C64  38 60 00 01 */	li r3, 1
@@ -1369,47 +1369,47 @@
 /* 8036873C 00331CFC  38 60 00 02 */	li r3, 2
 /* 80368740 00331D00  4B FF E2 C1 */	bl WaitMicroTime
 /* 80368744 00331D04  38 00 00 05 */	li r0, 5
-/* 80368748 00331D08  9B 8D 9B AC */	stb r28, lbl_80665D2C@sda21(r13)
+/* 80368748 00331D08  9B 8D 9B AC */	stb r28, __wd0@sda21(r13)
 /* 8036874C 00331D0C  38 81 00 28 */	addi r4, r1, 0x28
 /* 80368750 00331D10  38 60 00 E0 */	li r3, 0xe0
-/* 80368754 00331D14  9B 8D 9B AD */	stb r28, lbl_80665D2D@sda21(r13)
+/* 80368754 00331D14  9B 8D 9B AD */	stb r28, __wd1@sda21(r13)
 /* 80368758 00331D18  38 A0 00 03 */	li r5, 3
-/* 8036875C 00331D1C  9B 8D 9B AE */	stb r28, lbl_80665D2E@sda21(r13)
+/* 8036875C 00331D1C  9B 8D 9B AE */	stb r28, __wd2@sda21(r13)
 /* 80368760 00331D20  98 01 00 28 */	stb r0, 0x28(r1)
 /* 80368764 00331D24  9B 81 00 29 */	stb r28, 0x29(r1)
 /* 80368768 00331D28  9B 81 00 2A */	stb r28, 0x2a(r1)
 /* 8036876C 00331D2C  4B FF E6 75 */	bl __VISendI2CData
 /* 80368770 00331D30  38 60 00 02 */	li r3, 2
 /* 80368774 00331D34  4B FF E2 8D */	bl WaitMicroTime
-/* 80368778 00331D38  88 0D 9B AF */	lbz r0, lbl_80665D2F@sda21(r13)
+/* 80368778 00331D38  88 0D 9B AF */	lbz r0, __gp1@sda21(r13)
 /* 8036877C 00331D3C  2C 00 00 00 */	cmpwi r0, 0
 /* 80368780 00331D40  40 82 00 28 */	bne .L_803687A8
-/* 80368784 00331D44  88 0D 9B B0 */	lbz r0, lbl_80665D30@sda21(r13)
+/* 80368784 00331D44  88 0D 9B B0 */	lbz r0, __gp2@sda21(r13)
 /* 80368788 00331D48  2C 00 00 00 */	cmpwi r0, 0
 /* 8036878C 00331D4C  40 82 00 1C */	bne .L_803687A8
-/* 80368790 00331D50  88 0D 9B B1 */	lbz r0, lbl_80665D31@sda21(r13)
+/* 80368790 00331D50  88 0D 9B B1 */	lbz r0, __gp3@sda21(r13)
 /* 80368794 00331D54  2C 00 00 00 */	cmpwi r0, 0
 /* 80368798 00331D58  40 82 00 10 */	bne .L_803687A8
-/* 8036879C 00331D5C  88 0D 9B B2 */	lbz r0, lbl_80665D32@sda21(r13)
+/* 8036879C 00331D5C  88 0D 9B B2 */	lbz r0, __gp4@sda21(r13)
 /* 803687A0 00331D60  2C 00 00 00 */	cmpwi r0, 0
 /* 803687A4 00331D64  41 82 00 24 */	beq .L_803687C8
 .L_803687A8:
-/* 803687A8 00331D68  80 0D BA D0 */	lwz r0, lbl_80667C50@sda21(r13)
+/* 803687A8 00331D68  80 0D BA D0 */	lwz r0, Vdac_Flag_Changed@sda21(r13)
 /* 803687AC 00331D6C  38 60 00 00 */	li r3, 0
-/* 803687B0 00331D70  98 6D 9B AF */	stb r3, lbl_80665D2F@sda21(r13)
+/* 803687B0 00331D70  98 6D 9B AF */	stb r3, __gp1@sda21(r13)
 /* 803687B4 00331D74  60 00 00 02 */	ori r0, r0, 2
-/* 803687B8 00331D78  98 6D 9B B0 */	stb r3, lbl_80665D30@sda21(r13)
-/* 803687BC 00331D7C  98 6D 9B B1 */	stb r3, lbl_80665D31@sda21(r13)
-/* 803687C0 00331D80  98 6D 9B B2 */	stb r3, lbl_80665D32@sda21(r13)
-/* 803687C4 00331D84  90 0D BA D0 */	stw r0, lbl_80667C50@sda21(r13)
+/* 803687B8 00331D78  98 6D 9B B0 */	stb r3, __gp2@sda21(r13)
+/* 803687BC 00331D7C  98 6D 9B B1 */	stb r3, __gp3@sda21(r13)
+/* 803687C0 00331D80  98 6D 9B B2 */	stb r3, __gp4@sda21(r13)
+/* 803687C4 00331D84  90 0D BA D0 */	stw r0, Vdac_Flag_Changed@sda21(r13)
 .L_803687C8:
-/* 803687C8 00331D88  88 6D 9B AF */	lbz r3, lbl_80665D2F@sda21(r13)
+/* 803687C8 00331D88  88 6D 9B AF */	lbz r3, __gp1@sda21(r13)
 /* 803687CC 00331D8C  38 E0 00 08 */	li r7, 8
-/* 803687D0 00331D90  88 0D 9B B1 */	lbz r0, lbl_80665D31@sda21(r13)
+/* 803687D0 00331D90  88 0D 9B B1 */	lbz r0, __gp3@sda21(r13)
 /* 803687D4 00331D94  38 81 00 24 */	addi r4, r1, 0x24
 /* 803687D8 00331D98  54 65 07 3E */	clrlwi r5, r3, 0x1c
-/* 803687DC 00331D9C  88 CD 9B B0 */	lbz r6, lbl_80665D30@sda21(r13)
-/* 803687E0 00331DA0  88 6D 9B B2 */	lbz r3, lbl_80665D32@sda21(r13)
+/* 803687DC 00331D9C  88 CD 9B B0 */	lbz r6, __gp2@sda21(r13)
+/* 803687E0 00331DA0  88 6D 9B B2 */	lbz r3, __gp4@sda21(r13)
 /* 803687E4 00331DA4  54 00 07 7E */	clrlwi r0, r0, 0x1d
 /* 803687E8 00331DA8  50 C5 26 36 */	rlwimi r5, r6, 4, 0x18, 0x1b
 /* 803687EC 00331DAC  98 A1 00 25 */	stb r5, 0x25(r1)
@@ -1421,35 +1421,35 @@
 /* 80368804 00331DC4  4B FF E5 DD */	bl __VISendI2CData
 /* 80368808 00331DC8  38 60 00 02 */	li r3, 2
 /* 8036880C 00331DCC  4B FF E1 F5 */	bl WaitMicroTime
-/* 80368810 00331DD0  88 0D 9B B3 */	lbz r0, lbl_80665D33@sda21(r13)
+/* 80368810 00331DD0  88 0D 9B B3 */	lbz r0, __cc1@sda21(r13)
 /* 80368814 00331DD4  2C 00 00 00 */	cmpwi r0, 0
 /* 80368818 00331DD8  40 82 00 28 */	bne .L_80368840
-/* 8036881C 00331DDC  88 0D 9B B4 */	lbz r0, lbl_80665D34@sda21(r13)
+/* 8036881C 00331DDC  88 0D 9B B4 */	lbz r0, __cc2@sda21(r13)
 /* 80368820 00331DE0  2C 00 00 00 */	cmpwi r0, 0
 /* 80368824 00331DE4  40 82 00 1C */	bne .L_80368840
-/* 80368828 00331DE8  88 0D 9B B5 */	lbz r0, lbl_80665D35@sda21(r13)
+/* 80368828 00331DE8  88 0D 9B B5 */	lbz r0, __cc3@sda21(r13)
 /* 8036882C 00331DEC  2C 00 00 00 */	cmpwi r0, 0
 /* 80368830 00331DF0  40 82 00 10 */	bne .L_80368840
-/* 80368834 00331DF4  88 0D 9B B6 */	lbz r0, lbl_80665D36@sda21(r13)
+/* 80368834 00331DF4  88 0D 9B B6 */	lbz r0, __cc4@sda21(r13)
 /* 80368838 00331DF8  2C 00 00 00 */	cmpwi r0, 0
 /* 8036883C 00331DFC  41 82 00 24 */	beq .L_80368860
 .L_80368840:
-/* 80368840 00331E00  80 0D BA D0 */	lwz r0, lbl_80667C50@sda21(r13)
+/* 80368840 00331E00  80 0D BA D0 */	lwz r0, Vdac_Flag_Changed@sda21(r13)
 /* 80368844 00331E04  38 60 00 00 */	li r3, 0
-/* 80368848 00331E08  98 6D 9B B3 */	stb r3, lbl_80665D33@sda21(r13)
+/* 80368848 00331E08  98 6D 9B B3 */	stb r3, __cc1@sda21(r13)
 /* 8036884C 00331E0C  60 00 00 04 */	ori r0, r0, 4
-/* 80368850 00331E10  98 6D 9B B4 */	stb r3, lbl_80665D34@sda21(r13)
-/* 80368854 00331E14  98 6D 9B B5 */	stb r3, lbl_80665D35@sda21(r13)
-/* 80368858 00331E18  98 6D 9B B6 */	stb r3, lbl_80665D36@sda21(r13)
-/* 8036885C 00331E1C  90 0D BA D0 */	stw r0, lbl_80667C50@sda21(r13)
+/* 80368850 00331E10  98 6D 9B B4 */	stb r3, __cc2@sda21(r13)
+/* 80368854 00331E14  98 6D 9B B5 */	stb r3, __cc3@sda21(r13)
+/* 80368858 00331E18  98 6D 9B B6 */	stb r3, __cc4@sda21(r13)
+/* 8036885C 00331E1C  90 0D BA D0 */	stw r0, Vdac_Flag_Changed@sda21(r13)
 .L_80368860:
-/* 80368860 00331E20  88 0D 9B B3 */	lbz r0, lbl_80665D33@sda21(r13)
+/* 80368860 00331E20  88 0D 9B B3 */	lbz r0, __cc1@sda21(r13)
 /* 80368864 00331E24  39 20 00 7A */	li r9, 0x7a
-/* 80368868 00331E28  88 AD 9B B4 */	lbz r5, lbl_80665D34@sda21(r13)
+/* 80368868 00331E28  88 AD 9B B4 */	lbz r5, __cc2@sda21(r13)
 /* 8036886C 00331E2C  38 81 00 30 */	addi r4, r1, 0x30
 /* 80368870 00331E30  54 08 06 7E */	clrlwi r8, r0, 0x19
-/* 80368874 00331E34  88 6D 9B B5 */	lbz r3, lbl_80665D35@sda21(r13)
-/* 80368878 00331E38  88 0D 9B B6 */	lbz r0, lbl_80665D36@sda21(r13)
+/* 80368874 00331E34  88 6D 9B B5 */	lbz r3, __cc3@sda21(r13)
+/* 80368878 00331E38  88 0D 9B B6 */	lbz r0, __cc4@sda21(r13)
 /* 8036887C 00331E3C  54 A7 06 7E */	clrlwi r7, r5, 0x19
 /* 80368880 00331E40  54 66 06 7E */	clrlwi r6, r3, 0x19
 /* 80368884 00331E44  99 21 00 30 */	stb r9, 0x30(r1)
@@ -1463,8 +1463,8 @@
 /* 803688A4 00331E64  4B FF E5 3D */	bl __VISendI2CData
 /* 803688A8 00331E68  38 60 00 02 */	li r3, 2
 /* 803688AC 00331E6C  4B FF E1 55 */	bl WaitMicroTime
-/* 803688B0 00331E70  3F A0 80 5E */	lis r29, lbl_805DDA70@ha
-/* 803688B4 00331E74  8F DD DA 70 */	lbzu r30, lbl_805DDA70@l(r29)
+/* 803688B0 00331E70  3F A0 80 5E */	lis r29, VIZeroACPType@ha
+/* 803688B4 00331E74  8F DD DA 70 */	lbzu r30, VIZeroACPType@l(r29)
 /* 803688B8 00331E78  9B C1 00 39 */	stb r30, 0x39(r1)
 /* 803688BC 00331E7C  3B 80 00 40 */	li r28, 0x40
 /* 803688C0 00331E80  8B FD 00 01 */	lbz r31, 1(r29)
@@ -1524,19 +1524,19 @@
 /* 80368998 00331F58  4B FF E4 49 */	bl __VISendI2CData
 /* 8036899C 00331F5C  38 60 00 02 */	li r3, 2
 /* 803689A0 00331F60  4B FF E0 61 */	bl WaitMicroTime
-/* 803689A4 00331F64  80 0D BA D8 */	lwz r0, lbl_80667C58@sda21(r13)
+/* 803689A4 00331F64  80 0D BA D8 */	lwz r0, __level@sda21(r13)
 /* 803689A8 00331F68  2C 00 00 00 */	cmpwi r0, 0
 /* 803689AC 00331F6C  41 82 00 18 */	beq .L_803689C4
-/* 803689B0 00331F70  80 0D BA D0 */	lwz r0, lbl_80667C50@sda21(r13)
+/* 803689B0 00331F70  80 0D BA D0 */	lwz r0, Vdac_Flag_Changed@sda21(r13)
 /* 803689B4 00331F74  38 60 00 00 */	li r3, 0
-/* 803689B8 00331F78  90 6D BA D8 */	stw r3, lbl_80667C58@sda21(r13)
+/* 803689B8 00331F78  90 6D BA D8 */	stw r3, __level@sda21(r13)
 /* 803689BC 00331F7C  60 00 00 40 */	ori r0, r0, 0x40
-/* 803689C0 00331F80  90 0D BA D0 */	stw r0, lbl_80667C50@sda21(r13)
+/* 803689C0 00331F80  90 0D BA D0 */	stw r0, Vdac_Flag_Changed@sda21(r13)
 .L_803689C4:
-/* 803689C4 00331F84  80 0D BA E4 */	lwz r0, lbl_80667C64@sda21(r13)
+/* 803689C4 00331F84  80 0D BA E4 */	lwz r0, Vdac_Flag_Region@sda21(r13)
 /* 803689C8 00331F88  2C 00 00 03 */	cmpwi r0, 3
 /* 803689CC 00331F8C  40 82 00 38 */	bne .L_80368A04
-/* 803689D0 00331F90  80 0D BA D8 */	lwz r0, lbl_80667C58@sda21(r13)
+/* 803689D0 00331F90  80 0D BA D8 */	lwz r0, __level@sda21(r13)
 /* 803689D4 00331F94  38 60 00 0A */	li r3, 0xa
 /* 803689D8 00331F98  98 61 00 0C */	stb r3, 0xc(r1)
 /* 803689DC 00331F9C  38 81 00 0C */	addi r4, r1, 0xc
@@ -1571,12 +1571,12 @@
 /* 80368A48 00332008  4B FF E3 99 */	bl __VISendI2CData
 /* 80368A4C 0033200C  38 60 00 02 */	li r3, 2
 /* 80368A50 00332010  4B FF DF B1 */	bl WaitMicroTime
-/* 80368A54 00332014  3C 60 80 56 */	lis r3, lbl_8055FFF8@ha
-/* 80368A58 00332018  38 63 FF F8 */	addi r3, r3, lbl_8055FFF8@l
+/* 80368A54 00332014  3C 60 80 56 */	lis r3, gammaSet@ha
+/* 80368A58 00332018  38 63 FF F8 */	addi r3, r3, gammaSet@l
 /* 80368A5C 0033201C  38 63 01 54 */	addi r3, r3, 0x154
 /* 80368A60 00332020  4B FF F8 61 */	bl __VISetGammaImm
 /* 80368A64 00332024  38 00 00 00 */	li r0, 0
-/* 80368A68 00332028  90 0D BA D4 */	stw r0, lbl_80667C54@sda21(r13)
+/* 80368A68 00332028  90 0D BA D4 */	stw r0, __current_3in1_video_mode@sda21(r13)
 /* 80368A6C 0033202C  83 E1 00 6C */	lwz r31, 0x6c(r1)
 /* 80368A70 00332030  83 C1 00 68 */	lwz r30, 0x68(r1)
 /* 80368A74 00332034  83 A1 00 64 */	lwz r29, 0x64(r1)
@@ -1590,8 +1590,7 @@
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
 
-.global lbl_8055FFF8
-lbl_8055FFF8:
+gammaSet:
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1856,6 +1855,9 @@ lbl_8055FFF8:
 	.4byte 0x8A40A740
 	.4byte 0xC040D680
 	.4byte 0xEB000000
+
+
+VINtscACPType1:
 	.4byte 0x36000000
 	.4byte 0
 	.4byte 0x1B1B2407
@@ -1863,6 +1865,8 @@ lbl_8055FFF8:
 	.4byte 0x0F600000
 	.4byte 0
 	.4byte 0
+
+VINtscACPType2:
 	.4byte 0x3E1D1125
 	.4byte 0x11010700
 	.4byte 0x1B1B2407
@@ -1870,6 +1874,8 @@ lbl_8055FFF8:
 	.4byte 0x0F60010A
 	.4byte 0x00050403
 	.4byte 0xFF000000
+
+VINtscACPType3:
 	.4byte 0x3E171521
 	.4byte 0x15050502
 	.4byte 0x1B1B2407
@@ -1877,6 +1883,8 @@ lbl_8055FFF8:
 	.4byte 0x0F60010A
 	.4byte 0x00050403
 	.4byte 0xFF000000
+
+VIPalACPType1:
 	.4byte 0x361A222A
 	.4byte 0x22050200
 	.4byte 0x1C3D1403
@@ -1884,6 +1892,8 @@ lbl_8055FFF8:
 	.4byte 0x7E600008
 	.4byte 0x00040701
 	.4byte 0x55010000
+
+VIPalACPType2:
 	.4byte 0x361A222A
 	.4byte 0x22050200
 	.4byte 0x1C3D1403
@@ -1891,6 +1901,8 @@ lbl_8055FFF8:
 	.4byte 0x7E600008
 	.4byte 0x00040701
 	.4byte 0x55010000
+
+VIPalACPType3:
 	.4byte 0x361A222A
 	.4byte 0x22050200
 	.4byte 0x1C3D1403
@@ -1898,6 +1910,8 @@ lbl_8055FFF8:
 	.4byte 0x7E600008
 	.4byte 0x00040701
 	.4byte 0x55010000
+
+VIEurgb60ACPType1:
 	.4byte 0x36000000
 	.4byte 0
 	.4byte 0x1B1B2407
@@ -1905,6 +1919,8 @@ lbl_8055FFF8:
 	.4byte 0x1E600000
 	.4byte 0
 	.4byte 0x00010000
+
+VIEurgb60ACPType2:
 	.4byte 0x361D1125
 	.4byte 0x11010700
 	.4byte 0x1B1B2407
@@ -1912,6 +1928,8 @@ lbl_8055FFF8:
 	.4byte 0x1E60010A
 	.4byte 0x00050403
 	.4byte 0xFF010000
+
+VIEurgb60ACPType3:
 	.4byte 0x36171521
 	.4byte 0x15050502
 	.4byte 0x1B1B2407
@@ -1919,6 +1937,8 @@ lbl_8055FFF8:
 	.4byte 0x1E60010A
 	.4byte 0x00050403
 	.4byte 0xFF010000
+
+VIMpalACPType1:
 	.4byte 0x36000000
 	.4byte 0
 	.4byte 0x1B1B2407
@@ -1926,6 +1946,9 @@ lbl_8055FFF8:
 	.4byte 0x0F600000
 	.4byte 0
 	.4byte 0
+
+
+VIMpalACPType2:
 	.4byte 0x361D1125
 	.4byte 0x11010700
 	.4byte 0x1B1B2407
@@ -1933,6 +1956,9 @@ lbl_8055FFF8:
 	.4byte 0x0F60010A
 	.4byte 0x00050403
 	.4byte 0xFF000000
+
+
+VIMpalACPType3:
 	.4byte 0x36171521
 	.4byte 0x15050502
 	.4byte 0x1B1B2407
@@ -1940,6 +1966,8 @@ lbl_8055FFF8:
 	.4byte 0x0F60010A
 	.4byte 0x00050403
 	.4byte 0xFF000000
+
+VIProgressiveACPType:
 	.4byte 0x01000000
 	.4byte 0
 	.4byte 0
@@ -1947,6 +1975,9 @@ lbl_8055FFF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+
+
+
 	.asciz "vi3in1.c"
 	.balign 4
 	.asciz "VISetCGMS(): Tried to set APS Trigger bit(WORD2[3:2]) \nwhen the scan is progressive in DTV mode, which is forbidden\n"
@@ -1954,93 +1985,69 @@ lbl_8055FFF8:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665D28
-lbl_80665D28:
+
+__tvType:
 	.4byte 0x000000FF
 
 
-.global lbl_80665D2C
-lbl_80665D2C:
+__wd0:
 	.byte 0xFF
 
-
-.global lbl_80665D2D
-lbl_80665D2D:
+__wd1:
 	.byte 0xFF
 
-
-.global lbl_80665D2E
-lbl_80665D2E:
+__wd2:
 	.byte 0xFF
 
-
-.global lbl_80665D2F
-lbl_80665D2F:
+__gp1:
 	.byte 0xFF
 
-
-.global lbl_80665D30
-lbl_80665D30:
+__gp2:
 	.byte 0xFF
 
-
-.global lbl_80665D31
-lbl_80665D31:
+__gp3:
 	.byte 0xFF
 
-
-.global lbl_80665D32
-lbl_80665D32:
+__gp4:
 	.byte 0xFF
 
-
-.global lbl_80665D33
-lbl_80665D33:
+__cc1:
 	.byte 0xFF
 
-
-.global lbl_80665D34
-lbl_80665D34:
+__cc2:
 	.byte 0xFF
 
-
-.global lbl_80665D35
-lbl_80665D35:
+__cc3:
 	.byte 0xFF
 
-
-.global lbl_80665D36
-lbl_80665D36:
+__cc4:
 	.byte 0xFF
 
-
-.global lbl_80665D37
-lbl_80665D37:
+__filter:
 	.byte 0xFF
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805DDA70
-lbl_805DDA70:
+VIZeroACPType:
 	.skip 0x30
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667C50
-lbl_80667C50:
+.global Vdac_Flag_Changed
+Vdac_Flag_Changed:
 	.skip 0x4
-.global lbl_80667C54
-lbl_80667C54:
+
+__current_3in1_video_mode:
 	.skip 0x4
-.global lbl_80667C58
-lbl_80667C58:
+
+__level:
 	.skip 0x4
-.global lbl_80667C5C
-lbl_80667C5C:
+
+__gamma:
 	.skip 0x4
-.global lbl_80667C60
-lbl_80667C60:
+
+__type:
 	.skip 0x4
-.global lbl_80667C64
-lbl_80667C64:
+
+Vdac_Flag_Region:
 	.skip 0x4

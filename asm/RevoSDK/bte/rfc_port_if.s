@@ -388,3 +388,9 @@
 /* 8030108C 002CA64C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80301090 002CA650  4E 80 00 20 */	blr
 .endfn RFCOMM_DataReq
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global rfc_cb
+rfc_cb:
+	.skip 0x418

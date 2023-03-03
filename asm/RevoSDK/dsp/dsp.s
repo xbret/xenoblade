@@ -49,10 +49,10 @@
 /* 80309290 002D2850  38 A5 00 74 */	addi r5, r5, 0x74
 /* 80309294 002D2854  4C C6 31 82 */	crclr 6
 /* 80309298 002D2858  48 00 02 19 */	bl __DSP_debug_printf
-/* 8030929C 002D285C  80 0D B6 08 */	lwz r0, lbl_80667788@sda21(r13)
+/* 8030929C 002D285C  80 0D B6 08 */	lwz r0, __DSP_init_flag@sda21(r13)
 /* 803092A0 002D2860  2C 00 00 01 */	cmpwi r0, 1
 /* 803092A4 002D2864  41 82 00 78 */	beq .L_8030931C
-/* 803092A8 002D2868  80 6D 97 E8 */	lwz r3, lbl_80665968@sda21(r13)
+/* 803092A8 002D2868  80 6D 97 E8 */	lwz r3, __DSPVersion@sda21(r13)
 /* 803092AC 002D286C  48 04 9A 55 */	bl OSRegisterVersion
 /* 803092B0 002D2870  48 04 F7 01 */	bl OSDisableInterrupts
 /* 803092B4 002D2874  3C 80 80 31 */	lis r4, __DSPHandler@ha
@@ -75,11 +75,11 @@
 /* 803092F8 002D28B8  A0 C7 50 0A */	lhz r6, 0x500a(r7)
 /* 803092FC 002D28BC  7C C5 28 38 */	and r5, r6, r5
 /* 80309300 002D28C0  B0 A7 50 0A */	sth r5, 0x500a(r7)
-/* 80309304 002D28C4  90 8D B6 18 */	stw r4, lbl_80667798@sda21(r13)
-/* 80309308 002D28C8  90 8D B6 24 */	stw r4, lbl_806677A4@sda21(r13)
-/* 8030930C 002D28CC  90 8D B6 1C */	stw r4, lbl_8066779C@sda21(r13)
-/* 80309310 002D28D0  90 8D B6 20 */	stw r4, lbl_806677A0@sda21(r13)
-/* 80309314 002D28D4  90 0D B6 08 */	stw r0, lbl_80667788@sda21(r13)
+/* 80309304 002D28C4  90 8D B6 18 */	stw r4, __DSP_tmp_task@sda21(r13)
+/* 80309308 002D28C8  90 8D B6 24 */	stw r4, __DSP_curr_task@sda21(r13)
+/* 8030930C 002D28CC  90 8D B6 1C */	stw r4, __DSP_last_task@sda21(r13)
+/* 80309310 002D28D0  90 8D B6 20 */	stw r4, __DSP_first_task@sda21(r13)
+/* 80309314 002D28D4  90 0D B6 08 */	stw r0, __DSP_init_flag@sda21(r13)
 /* 80309318 002D28D8  48 04 F6 D9 */	bl OSRestoreInterrupts
 .L_8030931C:
 /* 8030931C 002D28DC  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -91,7 +91,7 @@
 
 .balign 16, 0
 .fn DSPCheckInit, global
-/* 80309330 002D28F0  80 6D B6 08 */	lwz r3, lbl_80667788@sda21(r13)
+/* 80309330 002D28F0  80 6D B6 08 */	lwz r3, __DSP_init_flag@sda21(r13)
 /* 80309334 002D28F4  4E 80 00 20 */	blr 
 .endfn DSPCheckInit
 
@@ -113,7 +113,7 @@
 /* 80309374 002D2934  7F E3 FB 78 */	mr r3, r31
 /* 80309378 002D2938  90 1E 00 08 */	stw r0, 8(r30)
 /* 8030937C 002D293C  48 04 F6 75 */	bl OSRestoreInterrupts
-/* 80309380 002D2940  80 0D B6 20 */	lwz r0, lbl_806677A0@sda21(r13)
+/* 80309380 002D2940  80 0D B6 20 */	lwz r0, __DSP_first_task@sda21(r13)
 /* 80309384 002D2944  7C 1E 00 40 */	cmplw r30, r0
 /* 80309388 002D2948  40 82 00 0C */	bne .L_80309394
 /* 8030938C 002D294C  7F C3 F3 78 */	mr r3, r30
@@ -157,13 +157,13 @@
 /* 80309400 002D29C0  93 C1 00 08 */	stw r30, 8(r1)
 /* 80309404 002D29C4  7C 7E 1B 78 */	mr r30, r3
 /* 80309408 002D29C8  48 04 F5 A9 */	bl OSDisableInterrupts
-/* 8030940C 002D29CC  80 AD B6 24 */	lwz r5, lbl_806677A4@sda21(r13)
+/* 8030940C 002D29CC  80 AD B6 24 */	lwz r5, __DSP_curr_task@sda21(r13)
 /* 80309410 002D29D0  7C 7F 1B 78 */	mr r31, r3
 /* 80309414 002D29D4  7C 05 F0 40 */	cmplw r5, r30
 /* 80309418 002D29D8  40 82 00 1C */	bne .L_80309434
 /* 8030941C 002D29DC  38 00 00 01 */	li r0, 1
-/* 80309420 002D29E0  93 CD B6 14 */	stw r30, lbl_80667794@sda21(r13)
-/* 80309424 002D29E4  90 0D B6 10 */	stw r0, lbl_80667790@sda21(r13)
+/* 80309420 002D29E0  93 CD B6 14 */	stw r30, __DSP_rude_task@sda21(r13)
+/* 80309424 002D29E4  90 0D B6 10 */	stw r0, __DSP_rude_task_pending@sda21(r13)
 /* 80309428 002D29E8  48 04 F5 C9 */	bl OSRestoreInterrupts
 /* 8030942C 002D29EC  7F C3 F3 78 */	mr r3, r30
 /* 80309430 002D29F0  48 00 00 64 */	b .L_80309494
@@ -173,8 +173,8 @@
 /* 8030943C 002D29FC  7C 04 00 40 */	cmplw r4, r0
 /* 80309440 002D2A00  40 80 00 4C */	bge .L_8030948C
 /* 80309444 002D2A04  38 00 00 01 */	li r0, 1
-/* 80309448 002D2A08  93 CD B6 14 */	stw r30, lbl_80667794@sda21(r13)
-/* 8030944C 002D2A0C  90 0D B6 10 */	stw r0, lbl_80667790@sda21(r13)
+/* 80309448 002D2A08  93 CD B6 14 */	stw r30, __DSP_rude_task@sda21(r13)
+/* 8030944C 002D2A0C  90 0D B6 10 */	stw r0, __DSP_rude_task_pending@sda21(r13)
 /* 80309450 002D2A10  80 05 00 00 */	lwz r0, 0(r5)
 /* 80309454 002D2A14  28 00 00 01 */	cmplwi r0, 1
 /* 80309458 002D2A18  40 82 00 24 */	bne .L_8030947C
@@ -217,23 +217,13 @@ lbl_805495F8:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665968
-lbl_80665968:
+__DSPVersion:
 	.4byte lbl_805495F8
 	.4byte 0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+__DSP_init_flag:
+	.skip 0x4
 
-.global lbl_80667788
-lbl_80667788:
-	.skip 0x8
-.global lbl_80667790
-lbl_80667790:
-	.skip 0x4
-.global lbl_80667794
-lbl_80667794:
-	.skip 0x4
-.global lbl_80667798
-lbl_80667798:
-	.skip 0x4
+.skip 0x4

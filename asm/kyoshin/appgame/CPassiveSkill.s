@@ -11392,22 +11392,38 @@
 
 .global lbl_805091F8
 lbl_805091F8:
-	.4byte 0x00000501
-	.4byte 0x02040305
-	.4byte 0x00000501
-	.4byte 0x02040305
-	.4byte 0x00010002
-	.4byte 0x03050400
-	.4byte 0x00010500
-	.4byte 0x02040305
-	.4byte 0x00010502
-	.4byte 0x00040305
-	.4byte 0x00010502
-	.4byte 0x03000405
-	.4byte 0x00010502
-	.4byte 0x03040005
-	.4byte 0x00010002
-	.4byte 0x03050400
+	.2byte 0x0000
+    .2byte 0x0501
+	.2byte 0x0204
+    .2byte 0x0305
+	.2byte 0x0000
+    .2byte 0x0501
+	.2byte 0x0204
+    .2byte 0x0305
+	.2byte 0x0001
+    .2byte 0x0002
+	.2byte 0x0305
+    .2byte 0x0400
+	.2byte 0x0001
+    .2byte 0x0500
+	.2byte 0x0204
+    .2byte 0x0305
+	.2byte 0x0001
+    .2byte 0x0502
+	.2byte 0x0004
+    .2byte 0x0305
+	.2byte 0x0001
+    .2byte 0x0502
+	.2byte 0x0300
+    .2byte 0x0405
+	.2byte 0x0001
+    .2byte 0x0502
+	.2byte 0x0304
+    .2byte 0x0005
+	.2byte 0x0001
+    .2byte 0x0002
+	.2byte 0x0305
+    .2byte 0x0400
 
 .global lbl_80509238
 lbl_80509238:

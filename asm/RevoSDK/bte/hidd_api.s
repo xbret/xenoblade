@@ -9,11 +9,11 @@
 /* 802F35E4 002BCBA4  38 A0 01 44 */	li r5, 0x144
 /* 802F35E8 002BCBA8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802F35EC 002BCBAC  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 802F35F0 002BCBB0  3F E0 80 5C */	lis r31, lbl_805C2570@ha
-/* 802F35F4 002BCBB4  38 7F 25 70 */	addi r3, r31, lbl_805C2570@l
+/* 802F35F0 002BCBB0  3F E0 80 5C */	lis r31, hd_cb@ha
+/* 802F35F4 002BCBB4  38 7F 25 70 */	addi r3, r31, hd_cb@l
 /* 802F35F8 002BCBB8  4B D1 0D 59 */	bl memset
 /* 802F35FC 002BCBBC  3C 60 80 2F */	lis r3, hidd_proc_repage_timeout@ha
-/* 802F3600 002BCBC0  38 BF 25 70 */	addi r5, r31, lbl_805C2570@l
+/* 802F3600 002BCBC0  38 BF 25 70 */	addi r5, r31, hd_cb@l
 /* 802F3604 002BCBC4  38 C0 00 01 */	li r6, 1
 /* 802F3608 002BCBC8  38 80 00 40 */	li r4, 0x40
 /* 802F360C 002BCBCC  38 63 37 00 */	addi r3, r3, hidd_proc_repage_timeout@l

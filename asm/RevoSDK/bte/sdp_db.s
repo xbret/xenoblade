@@ -8,9 +8,9 @@
 /* 80303D2C 002CD2EC  90 01 00 34 */	stw r0, 0x34(r1)
 /* 80303D30 002CD2F0  39 61 00 30 */	addi r11, r1, 0x30
 /* 80303D34 002CD2F4  4B FB 64 15 */	bl _savegpr_24
-/* 80303D38 002CD2F8  3C A0 80 5C */	lis r5, lbl_805C36C0@ha
+/* 80303D38 002CD2F8  3C A0 80 5C */	lis r5, sdp_cb@ha
 /* 80303D3C 002CD2FC  2C 03 00 00 */	cmpwi r3, 0
-/* 80303D40 002CD300  38 A5 36 C0 */	addi r5, r5, lbl_805C36C0@l
+/* 80303D40 002CD300  38 A5 36 C0 */	addi r5, r5, sdp_cb@l
 /* 80303D44 002CD304  7C 9D 23 78 */	mr r29, r4
 /* 80303D48 002CD308  A0 05 12 22 */	lhz r0, 0x1222(r5)
 /* 80303D4C 002CD30C  1C 00 02 98 */	mulli r0, r0, 0x298
@@ -160,9 +160,9 @@
 .endfn find_uuid_in_seq
 
 .fn sdp_db_find_record, global
-/* 80303F38 002CD4F8  3C A0 80 5C */	lis r5, lbl_805C36C0@ha
+/* 80303F38 002CD4F8  3C A0 80 5C */	lis r5, sdp_cb@ha
 /* 80303F3C 002CD4FC  38 00 02 98 */	li r0, 0x298
-/* 80303F40 002CD500  38 A5 36 C0 */	addi r5, r5, lbl_805C36C0@l
+/* 80303F40 002CD500  38 A5 36 C0 */	addi r5, r5, sdp_cb@l
 /* 80303F44 002CD504  A0 85 12 22 */	lhz r4, 0x1222(r5)
 /* 80303F48 002CD508  38 C5 12 24 */	addi r6, r5, 0x1224
 /* 80303F4C 002CD50C  1C 84 02 98 */	mulli r4, r4, 0x298
@@ -213,9 +213,9 @@
 .fn SDP_CreateRecord, global
 /* 80303FD4 002CD594  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80303FD8 002CD598  7C 08 02 A6 */	mflr r0
-/* 80303FDC 002CD59C  3C 60 80 5C */	lis r3, lbl_805C36C0@ha
+/* 80303FDC 002CD59C  3C 60 80 5C */	lis r3, sdp_cb@ha
 /* 80303FE0 002CD5A0  90 01 00 24 */	stw r0, 0x24(r1)
-/* 80303FE4 002CD5A4  38 63 36 C0 */	addi r3, r3, lbl_805C36C0@l
+/* 80303FE4 002CD5A4  38 63 36 C0 */	addi r3, r3, sdp_cb@l
 /* 80303FE8 002CD5A8  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80303FEC 002CD5AC  3B E3 12 1C */	addi r31, r3, 0x121c
 /* 80303FF0 002CD5B0  A0 03 12 22 */	lhz r0, 0x1222(r3)
@@ -274,18 +274,18 @@
 .endfn SDP_CreateRecord
 
 .fn SDP_DeleteRecord, global
-/* 803040B4 002CD674  3C 80 80 5C */	lis r4, lbl_805C36C0@ha
+/* 803040B4 002CD674  3C 80 80 5C */	lis r4, sdp_cb@ha
 /* 803040B8 002CD678  2C 03 00 00 */	cmpwi r3, 0
-/* 803040BC 002CD67C  38 84 36 C0 */	addi r4, r4, lbl_805C36C0@l
+/* 803040BC 002CD67C  38 84 36 C0 */	addi r4, r4, sdp_cb@l
 /* 803040C0 002CD680  39 44 12 24 */	addi r10, r4, 0x1224
 /* 803040C4 002CD684  41 82 00 10 */	beq .L_803040D4
 /* 803040C8 002CD688  A0 84 12 22 */	lhz r4, 0x1222(r4)
 /* 803040CC 002CD68C  2C 04 00 00 */	cmpwi r4, 0
 /* 803040D0 002CD690  40 82 00 24 */	bne .L_803040F4
 .L_803040D4:
-/* 803040D4 002CD694  3C 80 80 5C */	lis r4, lbl_805C36C0@ha
+/* 803040D4 002CD694  3C 80 80 5C */	lis r4, sdp_cb@ha
 /* 803040D8 002CD698  38 00 00 00 */	li r0, 0
-/* 803040DC 002CD69C  38 84 36 C0 */	addi r4, r4, lbl_805C36C0@l
+/* 803040DC 002CD69C  38 84 36 C0 */	addi r4, r4, sdp_cb@l
 /* 803040E0 002CD6A0  38 60 00 01 */	li r3, 1
 /* 803040E4 002CD6A4  B0 04 12 22 */	sth r0, 0x1222(r4)
 /* 803040E8 002CD6A8  90 04 12 1C */	stw r0, 0x121c(r4)
@@ -298,9 +298,9 @@
 /* 803040FC 002CD6BC  80 0A 00 00 */	lwz r0, 0(r10)
 /* 80304100 002CD6C0  7C 00 18 40 */	cmplw r0, r3
 /* 80304104 002CD6C4  40 82 00 A8 */	bne .L_803041AC
-/* 80304108 002CD6C8  3C A0 80 5C */	lis r5, lbl_805C36C0@ha
+/* 80304108 002CD6C8  3C A0 80 5C */	lis r5, sdp_cb@ha
 /* 8030410C 002CD6CC  38 E0 00 53 */	li r7, 0x53
-/* 80304110 002CD6D0  38 A5 36 C0 */	addi r5, r5, lbl_805C36C0@l
+/* 80304110 002CD6D0  38 A5 36 C0 */	addi r5, r5, sdp_cb@l
 /* 80304114 002CD6D4  48 00 00 60 */	b .L_80304174
 .L_80304118:
 /* 80304118 002CD6D8  39 0A FF FC */	addi r8, r10, -4
@@ -362,9 +362,9 @@
 /* 803041D0 002CD790  90 01 00 34 */	stw r0, 0x34(r1)
 /* 803041D4 002CD794  39 61 00 30 */	addi r11, r1, 0x30
 /* 803041D8 002CD798  4B FB 5F 6D */	bl _savegpr_23
-/* 803041DC 002CD79C  3D 00 80 5C */	lis r8, lbl_805C36C0@ha
+/* 803041DC 002CD79C  3D 00 80 5C */	lis r8, sdp_cb@ha
 /* 803041E0 002CD7A0  7C BA 2B 78 */	mr r26, r5
-/* 803041E4 002CD7A4  39 08 36 C0 */	addi r8, r8, lbl_805C36C0@l
+/* 803041E4 002CD7A4  39 08 36 C0 */	addi r8, r8, sdp_cb@l
 /* 803041E8 002CD7A8  7C 78 1B 78 */	mr r24, r3
 /* 803041EC 002CD7AC  A1 28 12 22 */	lhz r9, 0x1222(r8)
 /* 803041F0 002CD7B0  7C 99 23 78 */	mr r25, r4
@@ -539,8 +539,8 @@
 /* 80304468 002CDA28  7C 06 DA 14 */	add r0, r6, r27
 /* 8030446C 002CDA2C  28 00 01 5E */	cmplwi r0, 0x15e
 /* 80304470 002CDA30  41 80 00 50 */	blt .L_803044C0
-/* 80304474 002CDA34  3C 60 80 5C */	lis r3, lbl_805C36C0@ha
-/* 80304478 002CDA38  38 63 36 C0 */	addi r3, r3, lbl_805C36C0@l
+/* 80304474 002CDA34  3C 60 80 5C */	lis r3, sdp_cb@ha
+/* 80304478 002CDA38  38 63 36 C0 */	addi r3, r3, sdp_cb@l
 /* 8030447C 002CDA3C  88 03 46 30 */	lbz r0, 0x4630(r3)
 /* 80304480 002CDA40  28 00 00 02 */	cmplwi r0, 2
 /* 80304484 002CDA44  41 80 00 20 */	blt .L_803044A4
@@ -578,8 +578,8 @@
 /* 803044FC 002CDABC  7C 00 DA 14 */	add r0, r0, r27
 /* 80304500 002CDAC0  90 1E 00 04 */	stw r0, 4(r30)
 .L_80304504:
-/* 80304504 002CDAC4  3C 60 80 5C */	lis r3, lbl_805C36C0@ha
-/* 80304508 002CDAC8  38 63 36 C0 */	addi r3, r3, lbl_805C36C0@l
+/* 80304504 002CDAC4  3C 60 80 5C */	lis r3, sdp_cb@ha
+/* 80304508 002CDAC8  38 63 36 C0 */	addi r3, r3, sdp_cb@l
 /* 8030450C 002CDACC  80 03 12 1C */	lwz r0, 0x121c(r3)
 /* 80304510 002CDAD0  7C 18 00 40 */	cmplw r24, r0
 /* 80304514 002CDAD4  40 82 00 14 */	bne .L_80304528
@@ -634,8 +634,8 @@
 /* 803045B8 002CDB78  7C 03 F8 50 */	subf r0, r3, r31
 /* 803045BC 002CDB7C  2C 00 00 4D */	cmpwi r0, 0x4d
 /* 803045C0 002CDB80  40 81 00 38 */	ble .L_803045F8
-/* 803045C4 002CDB84  3C 60 80 5C */	lis r3, lbl_805C36C0@ha
-/* 803045C8 002CDB88  38 63 36 C0 */	addi r3, r3, lbl_805C36C0@l
+/* 803045C4 002CDB84  3C 60 80 5C */	lis r3, sdp_cb@ha
+/* 803045C8 002CDB88  38 63 36 C0 */	addi r3, r3, sdp_cb@l
 /* 803045CC 002CDB8C  88 03 46 30 */	lbz r0, 0x4630(r3)
 /* 803045D0 002CDB90  28 00 00 02 */	cmplwi r0, 2
 /* 803045D4 002CDB94  41 80 00 30 */	blt .L_80304604
@@ -775,9 +775,9 @@
 /* 803047BC 002CDD7C  90 01 00 34 */	stw r0, 0x34(r1)
 /* 803047C0 002CDD80  39 61 00 30 */	addi r11, r1, 0x30
 /* 803047C4 002CDD84  4B FB 59 89 */	bl _savegpr_25
-/* 803047C8 002CDD88  3F 60 80 5C */	lis r27, lbl_805C36C0@ha
+/* 803047C8 002CDD88  3F 60 80 5C */	lis r27, sdp_cb@ha
 /* 803047CC 002CDD8C  7C 79 1B 78 */	mr r25, r3
-/* 803047D0 002CDD90  3B 7B 36 C0 */	addi r27, r27, lbl_805C36C0@l
+/* 803047D0 002CDD90  3B 7B 36 C0 */	addi r27, r27, sdp_cb@l
 /* 803047D4 002CDD94  7C 9A 23 78 */	mr r26, r4
 /* 803047D8 002CDD98  3B FB 12 24 */	addi r31, r27, 0x1224
 /* 803047DC 002CDD9C  38 60 00 00 */	li r3, 0
@@ -936,6 +936,7 @@
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .global lbl_80548F50
 lbl_80548F50:
 	.asciz "SDP_AddAttribute: attr_len:%d too long. truncate to (%d)"

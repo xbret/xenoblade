@@ -9,13 +9,13 @@
 /* 802EFD10 002B92D0  38 A0 03 AC */	li r5, 0x3ac
 /* 802EFD14 002B92D4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802EFD18 002B92D8  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 802EFD1C 002B92DC  3F E0 80 5C */	lis r31, lbl_805C21C0@ha
-/* 802EFD20 002B92E0  38 7F 21 C0 */	addi r3, r31, lbl_805C21C0@l
+/* 802EFD1C 002B92DC  3F E0 80 5C */	lis r31, gap_cb@ha
+/* 802EFD20 002B92E0  38 7F 21 C0 */	addi r3, r31, gap_cb@l
 /* 802EFD24 002B92E4  4B D1 46 2D */	bl memset
 /* 802EFD28 002B92E8  3C A0 80 2F */	lis r5, gap_btm_cback0@ha
 /* 802EFD2C 002B92EC  3C 60 80 2F */	lis r3, gap_btm_cback1@ha
 /* 802EFD30 002B92F0  38 A5 0A 78 */	addi r5, r5, gap_btm_cback0@l
-/* 802EFD34 002B92F4  38 9F 21 C0 */	addi r4, r31, lbl_805C21C0@l
+/* 802EFD34 002B92F4  38 9F 21 C0 */	addi r4, r31, gap_cb@l
 /* 802EFD38 002B92F8  38 63 0A 84 */	addi r3, r3, gap_btm_cback1@l
 /* 802EFD3C 002B92FC  38 00 00 05 */	li r0, 5
 /* 802EFD40 002B9300  90 A4 00 20 */	stw r5, 0x20(r4)

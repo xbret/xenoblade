@@ -1458,6 +1458,7 @@ lbl_8050D578:
 	.4byte 0
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
 .global lbl_8066B878
 lbl_8066B878:
 	.4byte 0x4E414E28 #"NAN("

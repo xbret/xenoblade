@@ -14,7 +14,7 @@
 /* 8035F42C 003289EC  7C 7D 1B 78 */	mr r29, r3
 /* 8035F430 003289F0  4B FF 95 81 */	bl OSDisableInterrupts
 /* 8035F434 003289F4  3C 00 80 00 */	lis r0, 0x8000
-/* 8035F438 003289F8  80 8D B9 D4 */	lwz r4, lbl_80667B54@sda21(r13)
+/* 8035F438 003289F8  80 8D B9 D4 */	lwz r4, EnabledBits@sda21(r13)
 /* 8035F43C 003289FC  7C 00 EC 30 */	srw r0, r0, r29
 /* 8035F440 00328A00  7C 7F 1B 78 */	mr r31, r3
 /* 8035F444 00328A04  7C 80 00 39 */	and. r0, r4, r0
@@ -23,7 +23,7 @@
 /* 8035F450 00328A10  48 00 30 C1 */	bl SIGetType
 /* 8035F454 00328A14  54 60 00 85 */	rlwinm. r0, r3, 0, 2, 2
 /* 8035F458 00328A18  40 82 00 4C */	bne .L_8035F4A4
-/* 8035F45C 00328A1C  80 0D 9A 3C */	lwz r0, lbl_80665BBC@sda21(r13)
+/* 8035F45C 00328A1C  80 0D 9A 3C */	lwz r0, Spec@sda21(r13)
 /* 8035F460 00328A20  28 00 00 02 */	cmplwi r0, 2
 /* 8035F464 00328A24  40 80 00 10 */	bge .L_8035F474
 /* 8035F468 00328A28  28 1E 00 02 */	cmplwi r30, 2
@@ -36,7 +36,7 @@
 /* 8035F480 00328A40  41 82 00 08 */	beq .L_8035F488
 /* 8035F484 00328A44  3B C0 00 00 */	li r30, 0
 .L_8035F488:
-/* 8035F488 00328A48  80 8D 9A 38 */	lwz r4, lbl_80665BB8@sda21(r13)
+/* 8035F488 00328A48  80 8D 9A 38 */	lwz r4, AnalogMode@sda21(r13)
 /* 8035F48C 00328A4C  57 C0 07 BE */	clrlwi r0, r30, 0x1e
 /* 8035F490 00328A50  7F A3 EB 78 */	mr r3, r29
 /* 8035F494 00328A54  64 84 00 40 */	oris r4, r4, 0x40
@@ -85,17 +85,13 @@
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665BB8
-lbl_80665BB8:
+AnalogMode:
 	.4byte 0x00000300
 
-
-.global lbl_80665BBC
-lbl_80665BBC:
+Spec:
 	.4byte 0x00000005
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667B54
-lbl_80667B54:
+EnabledBits:
 	.skip 0x4

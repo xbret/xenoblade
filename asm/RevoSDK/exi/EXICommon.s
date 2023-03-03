@@ -110,3 +110,10 @@
 /* 80315EB0 002DF470  38 21 00 20 */	addi r1, r1, 0x20
 /* 80315EB4 002DF474  4E 80 00 20 */	blr 
 .endfn EXIWriteReg
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global __EXIFreq
+__EXIFreq:
+	.4byte 0x00000004
+	.4byte 0

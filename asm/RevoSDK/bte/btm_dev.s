@@ -8,9 +8,9 @@
 /* 802E624C 002AF80C  90 01 00 34 */	stw r0, 0x34(r1)
 /* 802E6250 002AF810  39 61 00 30 */	addi r11, r1, 0x30
 /* 802E6254 002AF814  4B FD 3E F5 */	bl _savegpr_24
-/* 802E6258 002AF818  3D 20 80 5C */	lis r9, lbl_805BF9F8@ha
+/* 802E6258 002AF818  3D 20 80 5C */	lis r9, btm_cb@ha
 /* 802E625C 002AF81C  7C 78 1B 78 */	mr r24, r3
-/* 802E6260 002AF820  39 29 F9 F8 */	addi r9, r9, lbl_805BF9F8@l
+/* 802E6260 002AF820  39 29 F9 F8 */	addi r9, r9, btm_cb@l
 /* 802E6264 002AF824  7C 99 23 78 */	mr r25, r4
 /* 802E6268 002AF828  7C BA 2B 78 */	mr r26, r5
 /* 802E626C 002AF82C  7C DB 33 78 */	mr r27, r6
@@ -46,8 +46,8 @@
 /* 802E62D8 002AF898  38 60 00 00 */	li r3, 0
 /* 802E62DC 002AF89C  48 00 00 D8 */	b .L_802E63B4
 .L_802E62E0:
-/* 802E62E0 002AF8A0  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
-/* 802E62E4 002AF8A4  38 84 F9 F8 */	addi r4, r4, lbl_805BF9F8@l
+/* 802E62E0 002AF8A0  3C 80 80 5C */	lis r4, btm_cb@ha
+/* 802E62E4 002AF8A4  38 84 F9 F8 */	addi r4, r4, btm_cb@l
 /* 802E62E8 002AF8A8  80 64 19 74 */	lwz r3, 0x1974(r4)
 /* 802E62EC 002AF8AC  90 7E 00 0C */	stw r3, 0xc(r30)
 /* 802E62F0 002AF8B0  38 03 00 01 */	addi r0, r3, 1
@@ -117,9 +117,9 @@
 .fn BTM_SecDeleteDevice, global
 /* 802E63CC 002AF98C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E63D0 002AF990  7C 08 02 A6 */	mflr r0
-/* 802E63D4 002AF994  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
+/* 802E63D4 002AF994  3C 80 80 5C */	lis r4, btm_cb@ha
 /* 802E63D8 002AF998  90 01 00 24 */	stw r0, 0x24(r1)
-/* 802E63DC 002AF99C  38 84 F9 F8 */	addi r4, r4, lbl_805BF9F8@l
+/* 802E63DC 002AF99C  38 84 F9 F8 */	addi r4, r4, btm_cb@l
 /* 802E63E0 002AF9A0  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 802E63E4 002AF9A4  3B E0 00 00 */	li r31, 0
 /* 802E63E8 002AF9A8  93 C1 00 18 */	stw r30, 0x18(r1)
@@ -168,9 +168,9 @@
 .fn BTM_SecReadDevName, global
 /* 802E6478 002AFA38  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E647C 002AFA3C  7C 08 02 A6 */	mflr r0
-/* 802E6480 002AFA40  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
+/* 802E6480 002AFA40  3C 80 80 5C */	lis r4, btm_cb@ha
 /* 802E6484 002AFA44  90 01 00 24 */	stw r0, 0x24(r1)
-/* 802E6488 002AFA48  38 84 F9 F8 */	addi r4, r4, lbl_805BF9F8@l
+/* 802E6488 002AFA48  38 84 F9 F8 */	addi r4, r4, btm_cb@l
 /* 802E648C 002AFA4C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 802E6490 002AFA50  3B E0 00 00 */	li r31, 0
 /* 802E6494 002AFA54  93 C1 00 18 */	stw r30, 0x18(r1)
@@ -215,10 +215,10 @@
 .fn btm_sec_alloc_dev, global
 /* 802E6518 002AFAD8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E651C 002AFADC  7C 08 02 A6 */	mflr r0
-/* 802E6520 002AFAE0  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
+/* 802E6520 002AFAE0  3C 80 80 5C */	lis r4, btm_cb@ha
 /* 802E6524 002AFAE4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802E6528 002AFAE8  38 00 00 10 */	li r0, 0x10
-/* 802E652C 002AFAEC  38 84 F9 F8 */	addi r4, r4, lbl_805BF9F8@l
+/* 802E652C 002AFAEC  38 84 F9 F8 */	addi r4, r4, btm_cb@l
 /* 802E6530 002AFAF0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802E6534 002AFAF4  3B E0 00 00 */	li r31, 0
 /* 802E6538 002AFAF8  93 C1 00 08 */	stw r30, 8(r1)
@@ -230,8 +230,8 @@
 /* 802E654C 002AFB0C  54 00 06 31 */	rlwinm. r0, r0, 0, 0x18, 0x18
 /* 802E6550 002AFB10  40 82 00 1C */	bne .L_802E656C
 /* 802E6554 002AFB14  1C 03 00 88 */	mulli r0, r3, 0x88
-/* 802E6558 002AFB18  3C 60 80 5C */	lis r3, lbl_805BF9F8@ha
-/* 802E655C 002AFB1C  38 63 F9 F8 */	addi r3, r3, lbl_805BF9F8@l
+/* 802E6558 002AFB18  3C 60 80 5C */	lis r3, btm_cb@ha
+/* 802E655C 002AFB1C  38 63 F9 F8 */	addi r3, r3, btm_cb@l
 /* 802E6560 002AFB20  7C 63 02 14 */	add r3, r3, r0
 /* 802E6564 002AFB24  3B E3 1F 30 */	addi r31, r3, 0x1f30
 /* 802E6568 002AFB28  48 00 00 10 */	b .L_802E6578
@@ -264,9 +264,9 @@
 /* 802E65C8 002AFB88  4B D1 DA 39 */	bl memcpy
 /* 802E65CC 002AFB8C  48 00 00 1C */	b .L_802E65E8
 .L_802E65D0:
-/* 802E65D0 002AFB90  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
+/* 802E65D0 002AFB90  3C 80 80 5C */	lis r4, btm_cb@ha
 /* 802E65D4 002AFB94  38 7F 00 22 */	addi r3, r31, 0x22
-/* 802E65D8 002AFB98  38 84 F9 F8 */	addi r4, r4, lbl_805BF9F8@l
+/* 802E65D8 002AFB98  38 84 F9 F8 */	addi r4, r4, btm_cb@l
 /* 802E65DC 002AFB9C  38 A0 00 03 */	li r5, 3
 /* 802E65E0 002AFBA0  38 84 27 BA */	addi r4, r4, 0x27ba
 /* 802E65E4 002AFBA4  4B D1 DA 1D */	bl memcpy
@@ -278,8 +278,8 @@
 /* 802E65F8 002AFBB8  7F C3 F3 78 */	mr r3, r30
 /* 802E65FC 002AFBBC  4B FF EE 7D */	bl BTM_GetHCIConnHandle
 /* 802E6600 002AFBC0  B0 7F 00 18 */	sth r3, 0x18(r31)
-/* 802E6604 002AFBC4  3C A0 80 5C */	lis r5, lbl_805BF9F8@ha
-/* 802E6608 002AFBC8  38 A5 F9 F8 */	addi r5, r5, lbl_805BF9F8@l
+/* 802E6604 002AFBC4  3C A0 80 5C */	lis r5, btm_cb@ha
+/* 802E6608 002AFBC8  38 A5 F9 F8 */	addi r5, r5, btm_cb@l
 /* 802E660C 002AFBCC  7F E3 FB 78 */	mr r3, r31
 /* 802E6610 002AFBD0  80 85 19 74 */	lwz r4, 0x1974(r5)
 /* 802E6614 002AFBD4  90 9F 00 0C */	stw r4, 0xc(r31)
@@ -294,9 +294,9 @@
 .endfn btm_sec_alloc_dev
 
 .fn btm_find_dev_by_handle, global
-/* 802E6638 002AFBF8  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
+/* 802E6638 002AFBF8  3C 80 80 5C */	lis r4, btm_cb@ha
 /* 802E663C 002AFBFC  38 00 00 04 */	li r0, 4
-/* 802E6640 002AFC00  38 84 F9 F8 */	addi r4, r4, lbl_805BF9F8@l
+/* 802E6640 002AFC00  38 84 F9 F8 */	addi r4, r4, btm_cb@l
 /* 802E6644 002AFC04  38 A0 00 00 */	li r5, 0
 /* 802E6648 002AFC08  38 84 1F 30 */	addi r4, r4, 0x1f30
 /* 802E664C 002AFC0C  7C 09 03 A6 */	mtctr r0
@@ -350,9 +350,9 @@
 .fn btm_find_dev, global
 /* 802E66F0 002AFCB0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E66F4 002AFCB4  7C 08 02 A6 */	mflr r0
-/* 802E66F8 002AFCB8  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
+/* 802E66F8 002AFCB8  3C 80 80 5C */	lis r4, btm_cb@ha
 /* 802E66FC 002AFCBC  90 01 00 24 */	stw r0, 0x24(r1)
-/* 802E6700 002AFCC0  38 84 F9 F8 */	addi r4, r4, lbl_805BF9F8@l
+/* 802E6700 002AFCC0  38 84 F9 F8 */	addi r4, r4, btm_cb@l
 /* 802E6704 002AFCC4  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 802E6708 002AFCC8  3B E4 1F 30 */	addi r31, r4, 0x1f30
 /* 802E670C 002AFCCC  93 C1 00 18 */	stw r30, 0x18(r1)
@@ -388,9 +388,9 @@
 .endfn btm_find_dev
 
 .fn btm_find_oldest_dev, global
-/* 802E6778 002AFD38  3C 60 80 5C */	lis r3, lbl_805BF9F8@ha
+/* 802E6778 002AFD38  3C 60 80 5C */	lis r3, btm_cb@ha
 /* 802E677C 002AFD3C  38 00 00 04 */	li r0, 4
-/* 802E6780 002AFD40  38 63 F9 F8 */	addi r3, r3, lbl_805BF9F8@l
+/* 802E6780 002AFD40  38 63 F9 F8 */	addi r3, r3, btm_cb@l
 /* 802E6784 002AFD44  38 C0 FF FF */	li r6, -1
 /* 802E6788 002AFD48  38 A3 1F 30 */	addi r5, r3, 0x1f30
 /* 802E678C 002AFD4C  38 E0 00 00 */	li r7, 0
@@ -450,9 +450,9 @@
 /* 802E6850 002AFE10  3C 06 00 01 */	addis r0, r6, 1
 /* 802E6854 002AFE14  28 00 FF FF */	cmplwi r0, 0xffff
 /* 802E6858 002AFE18  4C 82 00 20 */	bnelr 
-/* 802E685C 002AFE1C  3C 80 80 5C */	lis r4, lbl_805BF9F8@ha
+/* 802E685C 002AFE1C  3C 80 80 5C */	lis r4, btm_cb@ha
 /* 802E6860 002AFE20  38 00 00 04 */	li r0, 4
-/* 802E6864 002AFE24  38 84 F9 F8 */	addi r4, r4, lbl_805BF9F8@l
+/* 802E6864 002AFE24  38 84 F9 F8 */	addi r4, r4, btm_cb@l
 /* 802E6868 002AFE28  38 A0 00 00 */	li r5, 0
 /* 802E686C 002AFE2C  38 84 1F 30 */	addi r4, r4, 0x1f30
 /* 802E6870 002AFE30  7C 09 03 A6 */	mtctr r0

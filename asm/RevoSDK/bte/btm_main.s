@@ -9,10 +9,10 @@
 /* 802E9E70 002B3430  38 A0 27 C4 */	li r5, 0x27c4
 /* 802E9E74 002B3434  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802E9E78 002B3438  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 802E9E7C 002B343C  3F E0 80 5C */	lis r31, lbl_805BF9F8@ha
-/* 802E9E80 002B3440  38 7F F9 F8 */	addi r3, r31, lbl_805BF9F8@l
+/* 802E9E7C 002B343C  3F E0 80 5C */	lis r31, btm_cb@ha
+/* 802E9E80 002B3440  38 7F F9 F8 */	addi r3, r31, btm_cb@l
 /* 802E9E84 002B3444  4B D1 A4 CD */	bl memset
-/* 802E9E88 002B3448  38 7F F9 F8 */	addi r3, r31, lbl_805BF9F8@l
+/* 802E9E88 002B3448  38 7F F9 F8 */	addi r3, r31, btm_cb@l
 /* 802E9E8C 002B344C  38 00 00 00 */	li r0, 0
 /* 802E9E90 002B3450  98 03 27 C0 */	stb r0, 0x27c0(r3)
 /* 802E9E94 002B3454  4B FF F4 85 */	bl btm_inq_db_init
@@ -27,3 +27,9 @@
 /* 802E9EB8 002B3478  38 21 00 10 */	addi r1, r1, 0x10
 /* 802E9EBC 002B347C  4E 80 00 20 */	blr
 .endfn btm_init
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global btm_cb
+btm_cb:
+	.skip 0x27C8

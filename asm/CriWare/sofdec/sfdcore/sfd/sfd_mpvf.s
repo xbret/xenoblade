@@ -488,7 +488,6 @@
 /* 803C8260 00391820  4E 80 00 20 */	blr
 .endfn SFMPVF_InitPicUsr
 
-#SFMPVF_GetRead?
 .fn SFMPVF_GetRead, global
 /* 803C8264 00391824  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803C8268 00391828  7C 08 02 A6 */	mflr r0

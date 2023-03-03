@@ -608,7 +608,7 @@
 /* 8031C8E4 002E5EA4  90 03 00 0C */	stw r0, 0xc(r3)
 /* 8031C8E8 002E5EA8  90 1D 80 00 */	stw r0, -0x8000(r29)
 /* 8031C8EC 002E5EAC  40 82 00 38 */	bne .L_8031C924
-/* 8031C8F0 002E5EB0  80 82 BC 20 */	lwz r4, lbl_8066BFA0@sda21(r2)
+/* 8031C8F0 002E5EB0  80 82 BC 20 */	lwz r4, __GXData@sda21(r2)
 /* 8031C8F4 002E5EB4  80 63 00 18 */	lwz r3, 0x18(r3)
 /* 8031C8F8 002E5EB8  81 84 05 1C */	lwz r12, 0x51c(r4)
 /* 8031C8FC 002E5EBC  7D 89 03 A6 */	mtctr r12
@@ -622,7 +622,7 @@
 /* 8031C91C 002E5EDC  80 03 00 04 */	lwz r0, 4(r3)
 /* 8031C920 002E5EE0  90 1D 80 00 */	stw r0, -0x8000(r29)
 .L_8031C924:
-/* 8031C924 002E5EE4  80 C2 BC 20 */	lwz r6, lbl_8066BFA0@sda21(r2)
+/* 8031C924 002E5EE4  80 C2 BC 20 */	lwz r6, __GXData@sda21(r2)
 /* 8031C928 002E5EE8  57 E3 10 3A */	slwi r3, r31, 2
 /* 8031C92C 002E5EEC  80 BE 00 08 */	lwz r5, 8(r30)
 /* 8031C930 002E5EF0  38 00 00 00 */	li r0, 0
@@ -648,7 +648,7 @@
 .fn GXLoadTexObj, global
 /* 8031C980 002E5F40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031C984 002E5F44  7C 08 02 A6 */	mflr r0
-/* 8031C988 002E5F48  80 A2 BC 20 */	lwz r5, lbl_8066BFA0@sda21(r2)
+/* 8031C988 002E5F48  80 A2 BC 20 */	lwz r5, __GXData@sda21(r2)
 /* 8031C98C 002E5F4C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8031C990 002E5F50  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8031C994 002E5F54  7C 9F 23 78 */	mr r31, r4
@@ -687,7 +687,7 @@
 .fn GXLoadTlut, global
 /* 8031CA10 002E5FD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031CA14 002E5FD4  7C 08 02 A6 */	mflr r0
-/* 8031CA18 002E5FD8  80 A2 BC 20 */	lwz r5, lbl_8066BFA0@sda21(r2)
+/* 8031CA18 002E5FD8  80 A2 BC 20 */	lwz r5, __GXData@sda21(r2)
 /* 8031CA1C 002E5FDC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8031CA20 002E5FE0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8031CA24 002E5FE4  93 C1 00 08 */	stw r30, 8(r1)
@@ -815,7 +815,7 @@
 
 .balign 16, 0
 .fn GXSetTexRegionCallback, global
-/* 8031CBD0 002E6190  80 82 BC 20 */	lwz r4, lbl_8066BFA0@sda21(r2)
+/* 8031CBD0 002E6190  80 82 BC 20 */	lwz r4, __GXData@sda21(r2)
 /* 8031CBD4 002E6194  7C 60 1B 78 */	mr r0, r3
 /* 8031CBD8 002E6198  80 64 05 18 */	lwz r3, 0x518(r4)
 /* 8031CBDC 002E619C  90 04 05 18 */	stw r0, 0x518(r4)
@@ -824,7 +824,7 @@
 
 .balign 16, 0
 .fn GXSetTlutRegionCallback, global
-/* 8031CBF0 002E61B0  80 82 BC 20 */	lwz r4, lbl_8066BFA0@sda21(r2)
+/* 8031CBF0 002E61B0  80 82 BC 20 */	lwz r4, __GXData@sda21(r2)
 /* 8031CBF4 002E61B4  7C 60 1B 78 */	mr r0, r3
 /* 8031CBF8 002E61B8  80 64 05 1C */	lwz r3, 0x51c(r4)
 /* 8031CBFC 002E61BC  90 04 05 1C */	stw r0, 0x51c(r4)
@@ -833,7 +833,7 @@
 
 .balign 16, 0
 .fn __SetSURegs, global
-/* 8031CC10 002E61D0  81 62 BC 20 */	lwz r11, lbl_8066BFA0@sda21(r2)
+/* 8031CC10 002E61D0  81 62 BC 20 */	lwz r11, __GXData@sda21(r2)
 /* 8031CC14 002E61D4  54 86 10 3A */	slwi r6, r4, 2
 /* 8031CC18 002E61D8  54 60 10 3A */	slwi r0, r3, 2
 /* 8031CC1C 002E61DC  3C A0 CC 01 */	lis r5, 0xCC008000@ha
@@ -878,7 +878,7 @@
 /* 8031CCA8 002E6268  90 01 00 34 */	stw r0, 0x34(r1)
 /* 8031CCAC 002E626C  39 61 00 30 */	addi r11, r1, 0x30
 /* 8031CCB0 002E6270  4B F9 D4 95 */	bl _savegpr_23
-/* 8031CCB4 002E6274  83 A2 BC 20 */	lwz r29, lbl_8066BFA0@sda21(r2)
+/* 8031CCB4 002E6274  83 A2 BC 20 */	lwz r29, __GXData@sda21(r2)
 /* 8031CCB8 002E6278  80 1D 05 E4 */	lwz r0, 0x5e4(r29)
 /* 8031CCBC 002E627C  28 00 00 FF */	cmplwi r0, 0xff
 /* 8031CCC0 002E6280  41 82 01 2C */	beq .L_8031CDEC
@@ -931,7 +931,7 @@
 .L_8031CD60:
 /* 8031CD60 002E6320  7C 1C D8 40 */	cmplw r28, r27
 /* 8031CD64 002E6324  41 80 FF 7C */	blt .L_8031CCE0
-/* 8031CD68 002E6328  83 82 BC 20 */	lwz r28, lbl_8066BFA0@sda21(r2)
+/* 8031CD68 002E6328  83 82 BC 20 */	lwz r28, __GXData@sda21(r2)
 /* 8031CD6C 002E632C  3B 60 00 00 */	li r27, 0
 /* 8031CD70 002E6330  3A E0 00 01 */	li r23, 1
 /* 8031CD74 002E6334  7F 9F E3 78 */	mr r31, r28

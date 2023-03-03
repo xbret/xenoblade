@@ -2,8 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 #this class is inside CGame.cpp
 
 .fn func_80039E40, global

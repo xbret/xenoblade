@@ -139,7 +139,7 @@
 /* 8031DED0 002E7490  50 E8 C0 0E */	rlwimi r8, r7, 0x18, 0, 7
 /* 8031DED4 002E7494  91 04 80 00 */	stw r8, -0x8000(r4)
 /* 8031DED8 002E7498  38 00 00 F2 */	li r0, 0xf2
-/* 8031DEDC 002E749C  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
+/* 8031DEDC 002E749C  80 62 BC 20 */	lwz r3, __GXData@sda21(r2)
 /* 8031DEE0 002E74A0  50 06 C0 0E */	rlwimi r6, r0, 0x18, 0, 7
 /* 8031DEE4 002E74A4  98 A4 80 00 */	stb r5, -0x8000(r4)
 /* 8031DEE8 002E74A8  38 00 00 00 */	li r0, 0
@@ -318,7 +318,7 @@
 /* 8031E170 002E7730  50 86 05 BE */	rlwimi r6, r4, 0, 0x16, 0x1f
 /* 8031E174 002E7734  38 80 00 E8 */	li r4, 0xe8
 /* 8031E178 002E7738  50 66 55 6A */	rlwimi r6, r3, 0xa, 0x15, 0x15
-/* 8031E17C 002E773C  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
+/* 8031E17C 002E773C  80 62 BC 20 */	lwz r3, __GXData@sda21(r2)
 /* 8031E180 002E7740  50 86 C0 0E */	rlwimi r6, r4, 0x18, 0, 7
 /* 8031E184 002E7744  90 C5 80 00 */	stw r6, -0x8000(r5)
 /* 8031E188 002E7748  B0 03 00 02 */	sth r0, 2(r3)
@@ -327,7 +327,7 @@
 
 .balign 16, 0
 .fn GXSetBlendMode, global
-/* 8031E190 002E7750  81 42 BC 20 */	lwz r10, lbl_8066BFA0@sda21(r2)
+/* 8031E190 002E7750  81 42 BC 20 */	lwz r10, __GXData@sda21(r2)
 /* 8031E194 002E7754  38 03 FF FD */	addi r0, r3, -3
 /* 8031E198 002E7758  39 03 FF FE */	addi r8, r3, -2
 /* 8031E19C 002E775C  3C E0 CC 01 */	lis r7, 0xCC008000@ha
@@ -351,7 +351,7 @@
 
 .balign 16, 0
 .fn GXSetColorUpdate, global
-/* 8031E1E0 002E77A0  80 E2 BC 20 */	lwz r7, lbl_8066BFA0@sda21(r2)
+/* 8031E1E0 002E77A0  80 E2 BC 20 */	lwz r7, __GXData@sda21(r2)
 /* 8031E1E4 002E77A4  3C 80 CC 01 */	lis r4, 0xCC008000@ha
 /* 8031E1E8 002E77A8  38 A0 00 61 */	li r5, 0x61
 /* 8031E1EC 002E77AC  38 00 00 00 */	li r0, 0
@@ -366,7 +366,7 @@
 
 .balign 16, 0
 .fn GXSetAlphaUpdate, global
-/* 8031E210 002E77D0  80 E2 BC 20 */	lwz r7, lbl_8066BFA0@sda21(r2)
+/* 8031E210 002E77D0  80 E2 BC 20 */	lwz r7, __GXData@sda21(r2)
 /* 8031E214 002E77D4  3C 80 CC 01 */	lis r4, 0xCC008000@ha
 /* 8031E218 002E77D8  38 A0 00 61 */	li r5, 0x61
 /* 8031E21C 002E77DC  38 00 00 00 */	li r0, 0
@@ -381,7 +381,7 @@
 
 .balign 16, 0
 .fn GXSetZMode, global
-/* 8031E240 002E7800  81 22 BC 20 */	lwz r9, lbl_8066BFA0@sda21(r2)
+/* 8031E240 002E7800  81 22 BC 20 */	lwz r9, __GXData@sda21(r2)
 /* 8031E244 002E7804  3C C0 CC 01 */	lis r6, 0xCC008000@ha
 /* 8031E248 002E7808  38 E0 00 61 */	li r7, 0x61
 /* 8031E24C 002E780C  38 00 00 00 */	li r0, 0
@@ -398,7 +398,7 @@
 
 .balign 16, 0
 .fn GXSetZCompLoc, global
-/* 8031E280 002E7840  80 E2 BC 20 */	lwz r7, lbl_8066BFA0@sda21(r2)
+/* 8031E280 002E7840  80 E2 BC 20 */	lwz r7, __GXData@sda21(r2)
 /* 8031E284 002E7844  3C 80 CC 01 */	lis r4, 0xCC008000@ha
 /* 8031E288 002E7848  38 A0 00 61 */	li r5, 0x61
 /* 8031E28C 002E784C  38 00 00 00 */	li r0, 0
@@ -414,7 +414,7 @@
 
 .balign 16, 0
 .fn GXSetPixelFmt, global
-/* 8031E2B0 002E7870  81 22 BC 20 */	lwz r9, lbl_8066BFA0@sda21(r2)
+/* 8031E2B0 002E7870  81 22 BC 20 */	lwz r9, __GXData@sda21(r2)
 /* 8031E2B4 002E7874  3C C0 80 55 */	lis r6, lbl_8054C110@ha
 /* 8031E2B8 002E7878  54 67 10 3A */	slwi r7, r3, 2
 /* 8031E2BC 002E787C  38 C6 C1 10 */	addi r6, r6, lbl_8054C110@l
@@ -462,7 +462,7 @@
 
 .balign 16, 0
 .fn GXSetDither, global
-/* 8031E360 002E7920  80 E2 BC 20 */	lwz r7, lbl_8066BFA0@sda21(r2)
+/* 8031E360 002E7920  80 E2 BC 20 */	lwz r7, __GXData@sda21(r2)
 /* 8031E364 002E7924  3C 80 CC 01 */	lis r4, 0xCC008000@ha
 /* 8031E368 002E7928  38 A0 00 61 */	li r5, 0x61
 /* 8031E36C 002E792C  38 00 00 00 */	li r0, 0
@@ -477,7 +477,7 @@
 
 .balign 16, 0
 .fn GXSetDstAlpha, global
-/* 8031E390 002E7950  81 02 BC 20 */	lwz r8, lbl_8066BFA0@sda21(r2)
+/* 8031E390 002E7950  81 02 BC 20 */	lwz r8, __GXData@sda21(r2)
 /* 8031E394 002E7954  3C A0 CC 01 */	lis r5, 0xCC008000@ha
 /* 8031E398 002E7958  38 C0 00 61 */	li r6, 0x61
 /* 8031E39C 002E795C  38 00 00 00 */	li r0, 0
@@ -500,7 +500,7 @@
 /* 8031E3D0 002E7990  38 00 00 44 */	li r0, 0x44
 /* 8031E3D4 002E7994  50 86 07 FE */	rlwimi r6, r4, 0, 0x1f, 0x1f
 /* 8031E3D8 002E7998  50 66 0F BC */	rlwimi r6, r3, 1, 0x1e, 0x1e
-/* 8031E3DC 002E799C  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
+/* 8031E3DC 002E799C  80 62 BC 20 */	lwz r3, __GXData@sda21(r2)
 /* 8031E3E0 002E79A0  50 06 C0 0E */	rlwimi r6, r0, 0x18, 0, 7
 /* 8031E3E4 002E79A4  90 C5 80 00 */	stw r6, -0x8000(r5)
 /* 8031E3E8 002E79A8  38 00 00 00 */	li r0, 0
@@ -512,7 +512,7 @@
 .fn GXSetFieldMode, global
 /* 8031E400 002E79C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8031E404 002E79C4  7C 08 02 A6 */	mflr r0
-/* 8031E408 002E79C8  80 A2 BC 20 */	lwz r5, lbl_8066BFA0@sda21(r2)
+/* 8031E408 002E79C8  80 A2 BC 20 */	lwz r5, __GXData@sda21(r2)
 /* 8031E40C 002E79CC  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8031E410 002E79D0  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8031E414 002E79D4  3F E0 CC 01 */	lis r31, 0xCC008000@ha
@@ -542,7 +542,7 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8054C110
+#@LOCAL@GXSetPixelFmt__F11_GXPixelFmt9_GXZFmt16@p2f
 lbl_8054C110:
 	.4byte 0
 	.4byte 0x00000001

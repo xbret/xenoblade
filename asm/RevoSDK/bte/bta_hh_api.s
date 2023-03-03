@@ -13,7 +13,7 @@
 /* 802E384C 002ACE0C  7C 7D 1B 78 */	mr r29, r3
 /* 802E3850 002ACE10  4B FF 90 91 */	bl GKI_sched_lock
 /* 802E3854 002ACE14  38 60 00 17 */	li r3, 0x17
-/* 802E3858 002ACE18  38 82 BB E0 */	addi r4, r2, lbl_8066BF60@sda21
+/* 802E3858 002ACE18  38 82 BB E0 */	addi r4, r2, bta_hh_reg@sda21
 /* 802E385C 002ACE1C  4B FF B2 71 */	bl bta_sys_register
 /* 802E3860 002ACE20  4B FF 90 91 */	bl GKI_sched_unlock
 /* 802E3864 002ACE24  38 60 00 34 */	li r3, 0x34
@@ -119,7 +119,7 @@
 /* 802E39C4 002ACF84  4B FF B1 1D */	bl bta_sys_sendmsg
 /* 802E39C8 002ACF88  48 00 00 20 */	b .L_802E39E8
 .L_802E39CC:
-/* 802E39CC 002ACF8C  88 0D B5 F8 */	lbz r0, lbl_80667778@sda21(r13)
+/* 802E39CC 002ACF8C  88 0D B5 F8 */	lbz r0, appl_trace_level@sda21(r13)
 /* 802E39D0 002ACF90  28 00 00 01 */	cmplwi r0, 1
 /* 802E39D4 002ACF94  41 80 00 14 */	blt .L_802E39E8
 /* 802E39D8 002ACF98  3C 80 80 54 */	lis r4, lbl_80544690@ha
@@ -281,6 +281,7 @@
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .global lbl_80544690
 lbl_80544690:
 	.asciz "No resource to send HID host Connect request."
@@ -288,7 +289,6 @@ lbl_80544690:
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066BF60
-lbl_8066BF60:
+bta_hh_reg:
 	.4byte bta_hh_hdl_event
 	.4byte BTA_HhDisable

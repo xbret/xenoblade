@@ -238,11 +238,11 @@
 /* 8035CCC0 00326280  38 E0 00 01 */	li r7, 1
 .L_8035CCC4:
 /* 8035CCC4 00326284  2C 07 00 00 */	cmpwi r7, 0
-/* 8035CCC8 00326288  3C E0 80 55 */	lis r7, lbl_80552D58@ha
-/* 8035CCCC 0032628C  38 E7 2D 58 */	addi r7, r7, lbl_80552D58@l
+/* 8035CCC8 00326288  3C E0 80 55 */	lis r7, YearDays@ha
+/* 8035CCCC 0032628C  38 E7 2D 58 */	addi r7, r7, YearDays@l
 /* 8035CCD0 00326290  41 82 00 0C */	beq .L_8035CCDC
-/* 8035CCD4 00326294  3C E0 80 55 */	lis r7, lbl_80552D88@ha
-/* 8035CCD8 00326298  38 E7 2D 88 */	addi r7, r7, lbl_80552D88@l
+/* 8035CCD4 00326294  3C E0 80 55 */	lis r7, LeapYearDays@ha
+/* 8035CCD8 00326298  38 E7 2D 88 */	addi r7, r7, LeapYearDays@l
 .L_8035CCDC:
 /* 8035CCDC 0032629C  38 C0 00 0C */	li r6, 0xc
 /* 8035CCE0 003262A0  38 60 00 30 */	li r3, 0x30
@@ -293,8 +293,7 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80552D58
-lbl_80552D58:
+YearDays:
 	.4byte 0
 	.4byte 0x0000001F
 	.4byte 0x0000003B
@@ -309,8 +308,7 @@ lbl_80552D58:
 	.4byte 0x0000014E
 
 
-.global lbl_80552D88
-lbl_80552D88:
+LeapYearDays:
 	.4byte 0
 	.4byte 0x0000001F
 	.4byte 0x0000003C

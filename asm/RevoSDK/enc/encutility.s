@@ -9,7 +9,7 @@
 /* 80312CB8 002DC278  90 01 00 34 */	stw r0, 0x34(r1)
 /* 80312CBC 002DC27C  39 61 00 30 */	addi r11, r1, 0x30
 /* 80312CC0 002DC280  4B FA 74 85 */	bl _savegpr_23
-/* 80312CC4 002DC284  80 0D B7 40 */	lwz r0, lbl_806678C0@sda21(r13)
+/* 80312CC4 002DC284  80 0D B7 40 */	lwz r0, encRegistered@sda21(r13)
 /* 80312CC8 002DC288  7C 77 1B 78 */	mr r23, r3
 /* 80312CCC 002DC28C  7C 9F 23 78 */	mr r31, r4
 /* 80312CD0 002DC290  7C B8 2B 78 */	mr r24, r5
@@ -21,10 +21,10 @@
 /* 80312CE8 002DC2A8  7D 5D 53 78 */	mr r29, r10
 /* 80312CEC 002DC2AC  3B C0 00 00 */	li r30, 0
 /* 80312CF0 002DC2B0  40 82 00 14 */	bne .L_80312D04
-/* 80312CF4 002DC2B4  80 6D 98 38 */	lwz r3, lbl_806659B8@sda21(r13)
+/* 80312CF4 002DC2B4  80 6D 98 38 */	lwz r3, __ENCVersion@sda21(r13)
 /* 80312CF8 002DC2B8  48 04 00 09 */	bl OSRegisterVersion
 /* 80312CFC 002DC2BC  38 00 00 01 */	li r0, 1
-/* 80312D00 002DC2C0  90 0D B7 40 */	stw r0, lbl_806678C0@sda21(r13)
+/* 80312D00 002DC2C0  90 0D B7 40 */	stw r0, encRegistered@sda21(r13)
 .L_80312D04:
 /* 80312D04 002DC2C4  2C 1B 00 00 */	cmpwi r27, 0
 /* 80312D08 002DC2C8  41 82 00 10 */	beq .L_80312D18
@@ -183,13 +183,13 @@ lbl_8054B5C8:
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 
-.global lbl_806659B8
-lbl_806659B8:
+.global __ENCVersion
+__ENCVersion:
 	.4byte lbl_8054B5C8
 	.4byte 0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_806678C0
-lbl_806678C0:
+.global encRegistered
+encRegistered:
 	.skip 0x8

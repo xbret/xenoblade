@@ -13,9 +13,9 @@
 /* 802F08BC 002B9E7C  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 802F08C0 002B9E80  7C 9E 23 78 */	mr r30, r4
 /* 802F08C4 002B9E84  40 80 01 9C */	bge .L_802F0A60
-/* 802F08C8 002B9E88  3D 00 80 5C */	lis r8, lbl_805C21C0@ha
+/* 802F08C8 002B9E88  3D 00 80 5C */	lis r8, gap_cb@ha
 /* 802F08CC 002B9E8C  54 60 23 36 */	rlwinm r0, r3, 4, 0xc, 0x1b
-/* 802F08D0 002B9E90  39 08 21 C0 */	addi r8, r8, lbl_805C21C0@l
+/* 802F08D0 002B9E90  39 08 21 C0 */	addi r8, r8, gap_cb@l
 /* 802F08D4 002B9E94  7F E8 02 14 */	add r31, r8, r0
 /* 802F08D8 002B9E98  88 1F 00 0F */	lbz r0, 0xf(r31)
 /* 802F08DC 002B9E9C  2C 00 00 00 */	cmpwi r0, 0
@@ -107,9 +107,9 @@
 .L_802F0A04:
 /* 802F0A04 002B9FC4  38 A0 01 14 */	li r5, 0x114
 .L_802F0A08:
-/* 802F0A08 002B9FC8  3C 60 80 5C */	lis r3, lbl_805C21C0@ha
+/* 802F0A08 002B9FC8  3C 60 80 5C */	lis r3, gap_cb@ha
 /* 802F0A0C 002B9FCC  B0 A4 00 00 */	sth r5, 0(r4)
-/* 802F0A10 002B9FD0  38 63 21 C0 */	addi r3, r3, lbl_805C21C0@l
+/* 802F0A10 002B9FD0  38 63 21 C0 */	addi r3, r3, gap_cb@l
 /* 802F0A14 002B9FD4  88 03 00 28 */	lbz r0, 0x28(r3)
 /* 802F0A18 002B9FD8  28 00 00 04 */	cmplwi r0, 4
 /* 802F0A1C 002B9FDC  41 80 00 14 */	blt .L_802F0A30
@@ -157,8 +157,8 @@
 /* 802F0A94 002BA054  7C 08 02 A6 */	mflr r0
 /* 802F0A98 002BA058  90 01 00 24 */	stw r0, 0x24(r1)
 /* 802F0A9C 002BA05C  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 802F0AA0 002BA060  3F E0 80 5C */	lis r31, lbl_805C21C0@ha
-/* 802F0AA4 002BA064  3B FF 21 C0 */	addi r31, r31, lbl_805C21C0@l
+/* 802F0AA0 002BA060  3F E0 80 5C */	lis r31, gap_cb@ha
+/* 802F0AA4 002BA064  3B FF 21 C0 */	addi r31, r31, gap_cb@l
 /* 802F0AA8 002BA068  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 802F0AAC 002BA06C  3B DF 00 34 */	addi r30, r31, 0x34
 /* 802F0AB0 002BA070  93 A1 00 14 */	stw r29, 0x14(r1)
@@ -320,8 +320,8 @@
 /* 802F0CAC 002BA26C  7C 08 02 A6 */	mflr r0
 /* 802F0CB0 002BA270  90 01 00 24 */	stw r0, 0x24(r1)
 /* 802F0CB4 002BA274  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 802F0CB8 002BA278  3F E0 80 5C */	lis r31, lbl_805C21C0@ha
-/* 802F0CBC 002BA27C  3B FF 21 C0 */	addi r31, r31, lbl_805C21C0@l
+/* 802F0CB8 002BA278  3F E0 80 5C */	lis r31, gap_cb@ha
+/* 802F0CBC 002BA27C  3B FF 21 C0 */	addi r31, r31, gap_cb@l
 /* 802F0CC0 002BA280  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 802F0CC4 002BA284  3B DF 00 34 */	addi r30, r31, 0x34
 /* 802F0CC8 002BA288  93 A1 00 14 */	stw r29, 0x14(r1)
@@ -489,6 +489,7 @@
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .global lbl_805463A0
 lbl_805463A0:
 	.asciz "   GAP Inquiry Complete Event (Status 0x%04x, Result(s) %d)"
@@ -509,6 +510,8 @@ jumptable_8054646C:
 	.4byte .L_802F09EC
 	.4byte .L_802F09F4
 	.4byte .L_802F09FC
+
+
 	.asciz "GAP Inquiry Results Callback (bdaddr [%02x%02x%02x%02x%02x%02x])"
 	.balign 4
 	.asciz "                             (COD [%02x%02x%02x], clkoff 0x%04x)"
@@ -595,3 +598,10 @@ jumptable_8054666C:
 	.4byte .L_802F0E9C
 	.4byte .L_802F0EA4
 	.4byte .L_802F0EAC
+
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global gap_cb
+gap_cb:
+	.skip 0x3B0

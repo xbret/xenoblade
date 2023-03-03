@@ -5,16 +5,16 @@
 .balign 16, 0
 .fn __DVDFSInit, global
 /* 80309DA0 002D3360  3C 60 80 00 */	lis r3, 0x80000038@ha
-/* 80309DA4 002D3364  90 6D B6 44 */	stw r3, lbl_806677C4@sda21(r13)
+/* 80309DA4 002D3364  90 6D B6 44 */	stw r3, BootInfo@sda21(r13)
 /* 80309DA8 002D3368  80 63 00 38 */	lwz r3, 0x80000038@l(r3)
-/* 80309DAC 002D336C  90 6D B6 40 */	stw r3, lbl_806677C0@sda21(r13)
+/* 80309DAC 002D336C  90 6D B6 40 */	stw r3, FstStart@sda21(r13)
 /* 80309DB0 002D3370  2C 03 00 00 */	cmpwi r3, 0
 /* 80309DB4 002D3374  4D 82 00 20 */	beqlr 
 /* 80309DB8 002D3378  80 03 00 08 */	lwz r0, 8(r3)
-/* 80309DBC 002D337C  90 0D B6 38 */	stw r0, lbl_806677B8@sda21(r13)
+/* 80309DBC 002D337C  90 0D B6 38 */	stw r0, MaxEntryNum@sda21(r13)
 /* 80309DC0 002D3380  1C 00 00 0C */	mulli r0, r0, 0xc
 /* 80309DC4 002D3384  7C 03 02 14 */	add r0, r3, r0
-/* 80309DC8 002D3388  90 0D B6 3C */	stw r0, lbl_806677BC@sda21(r13)
+/* 80309DC8 002D3388  90 0D B6 3C */	stw r0, FstStringStart@sda21(r13)
 /* 80309DCC 002D338C  4E 80 00 20 */	blr 
 .endfn __DVDFSInit
 
@@ -27,7 +27,7 @@
 /* 80309DE0 002D33A0  4B FB 03 65 */	bl _savegpr_23
 /* 80309DE4 002D33A4  7C 7A 1B 78 */	mr r26, r3
 /* 80309DE8 002D33A8  3F E0 80 54 */	lis r31, _current_locale@ha
-/* 80309DEC 002D33AC  83 AD B6 28 */	lwz r29, lbl_806677A8@sda21(r13)
+/* 80309DEC 002D33AC  83 AD B6 28 */	lwz r29, currentDirectory@sda21(r13)
 /* 80309DF0 002D33B0  7F 5C D3 78 */	mr r28, r26
 /* 80309DF4 002D33B4  3B FF F5 48 */	addi r31, r31, _current_locale@l
 /* 80309DF8 002D33B8  3F C0 80 55 */	lis r30, lbl_805497B8@ha
@@ -55,7 +55,7 @@
 /* 80309E44 002D3404  2C 00 00 2F */	cmpwi r0, 0x2f
 /* 80309E48 002D3408  40 82 00 1C */	bne .L_80309E64
 /* 80309E4C 002D340C  1C 1D 00 0C */	mulli r0, r29, 0xc
-/* 80309E50 002D3410  80 6D B6 40 */	lwz r3, lbl_806677C0@sda21(r13)
+/* 80309E50 002D3410  80 6D B6 40 */	lwz r3, FstStart@sda21(r13)
 /* 80309E54 002D3414  3B 5A 00 03 */	addi r26, r26, 3
 /* 80309E58 002D3418  7C 63 02 14 */	add r3, r3, r0
 /* 80309E5C 002D341C  83 A3 00 04 */	lwz r29, 4(r3)
@@ -64,7 +64,7 @@
 /* 80309E64 002D3424  2C 00 00 00 */	cmpwi r0, 0
 /* 80309E68 002D3428  40 82 00 38 */	bne .L_80309EA0
 /* 80309E6C 002D342C  1C 1D 00 0C */	mulli r0, r29, 0xc
-/* 80309E70 002D3430  80 6D B6 40 */	lwz r3, lbl_806677C0@sda21(r13)
+/* 80309E70 002D3430  80 6D B6 40 */	lwz r3, FstStart@sda21(r13)
 /* 80309E74 002D3434  7C 63 02 14 */	add r3, r3, r0
 /* 80309E78 002D3438  80 63 00 04 */	lwz r3, 4(r3)
 /* 80309E7C 002D343C  48 00 02 44 */	b .L_8030A0C0
@@ -79,7 +79,7 @@
 /* 80309E98 002D3458  7F A3 EB 78 */	mr r3, r29
 /* 80309E9C 002D345C  48 00 02 24 */	b .L_8030A0C0
 .L_80309EA0:
-/* 80309EA0 002D3460  80 0D 97 F0 */	lwz r0, lbl_80665970@sda21(r13)
+/* 80309EA0 002D3460  80 0D 97 F0 */	lwz r0, __DVDLongFileNameFlag@sda21(r13)
 /* 80309EA4 002D3464  2C 00 00 00 */	cmpwi r0, 0
 /* 80309EA8 002D3468  40 82 00 AC */	bne .L_80309F54
 /* 80309EAC 002D346C  7F 57 D3 78 */	mr r23, r26
@@ -147,10 +147,10 @@
 .L_80309F78:
 /* 80309F78 002D3538  88 17 00 00 */	lbz r0, 0(r23)
 /* 80309F7C 002D353C  1C 7D 00 0C */	mulli r3, r29, 0xc
-/* 80309F80 002D3540  80 ED B6 40 */	lwz r7, lbl_806677C0@sda21(r13)
+/* 80309F80 002D3540  80 ED B6 40 */	lwz r7, FstStart@sda21(r13)
 /* 80309F84 002D3544  7D 1A B8 50 */	subf r8, r26, r23
 /* 80309F88 002D3548  7C 05 07 74 */	extsb r5, r0
-/* 80309F8C 002D354C  80 0D B6 3C */	lwz r0, lbl_806677BC@sda21(r13)
+/* 80309F8C 002D354C  80 0D B6 3C */	lwz r0, FstStringStart@sda21(r13)
 /* 80309F90 002D3550  7C 85 00 D0 */	neg r4, r5
 /* 80309F94 002D3554  7C 85 2B 78 */	or r5, r4, r5
 /* 80309F98 002D3558  7C 67 1A 14 */	add r3, r7, r3
@@ -258,11 +258,11 @@
 .fn DVDFastOpen, global
 /* 8030A0E0 002D36A0  2C 03 00 00 */	cmpwi r3, 0
 /* 8030A0E4 002D36A4  41 80 00 24 */	blt .L_8030A108
-/* 8030A0E8 002D36A8  80 0D B6 38 */	lwz r0, lbl_806677B8@sda21(r13)
+/* 8030A0E8 002D36A8  80 0D B6 38 */	lwz r0, MaxEntryNum@sda21(r13)
 /* 8030A0EC 002D36AC  7C 03 00 40 */	cmplw r3, r0
 /* 8030A0F0 002D36B0  40 80 00 18 */	bge .L_8030A108
 /* 8030A0F4 002D36B4  1C E3 00 0C */	mulli r7, r3, 0xc
-/* 8030A0F8 002D36B8  80 6D B6 40 */	lwz r3, lbl_806677C0@sda21(r13)
+/* 8030A0F8 002D36B8  80 6D B6 40 */	lwz r3, FstStart@sda21(r13)
 /* 8030A0FC 002D36BC  7C 03 38 2E */	lwzx r0, r3, r7
 /* 8030A100 002D36C0  54 00 00 0F */	rlwinm. r0, r0, 0, 0, 7
 /* 8030A104 002D36C4  41 82 00 0C */	beq .L_8030A110
@@ -271,13 +271,13 @@
 /* 8030A10C 002D36CC  4E 80 00 20 */	blr
 .L_8030A110:
 /* 8030A110 002D36D0  7C 63 3A 14 */	add r3, r3, r7
-/* 8030A114 002D36D4  80 AD B6 98 */	lwz r5, lbl_80667818@sda21(r13)
+/* 8030A114 002D36D4  80 AD B6 98 */	lwz r5, __DVDLayoutFormat@sda21(r13)
 /* 8030A118 002D36D8  80 C3 00 04 */	lwz r6, 4(r3)
 /* 8030A11C 002D36DC  38 00 00 00 */	li r0, 0
 /* 8030A120 002D36E0  38 60 00 01 */	li r3, 1
 /* 8030A124 002D36E4  7C C5 2C 30 */	srw r5, r6, r5
 /* 8030A128 002D36E8  90 A4 00 30 */	stw r5, 0x30(r4)
-/* 8030A12C 002D36EC  80 AD B6 40 */	lwz r5, lbl_806677C0@sda21(r13)
+/* 8030A12C 002D36EC  80 AD B6 40 */	lwz r5, FstStart@sda21(r13)
 /* 8030A130 002D36F0  7C A5 3A 14 */	add r5, r5, r7
 /* 8030A134 002D36F4  80 A5 00 08 */	lwz r5, 8(r5)
 /* 8030A138 002D36F8  90 A4 00 34 */	stw r5, 0x34(r4)
@@ -298,15 +298,15 @@
 /* 8030A16C 002D372C  4B FF FC 65 */	bl DVDConvertPathToEntrynum
 /* 8030A170 002D3730  2C 03 00 00 */	cmpwi r3, 0
 /* 8030A174 002D3734  40 80 02 28 */	bge .L_8030A39C
-/* 8030A178 002D3738  83 AD B6 28 */	lwz r29, lbl_806677A8@sda21(r13)
+/* 8030A178 002D3738  83 AD B6 28 */	lwz r29, currentDirectory@sda21(r13)
 /* 8030A17C 002D373C  2C 1D 00 00 */	cmpwi r29, 0
 /* 8030A180 002D3740  40 82 00 0C */	bne .L_8030A18C
 /* 8030A184 002D3744  38 80 00 00 */	li r4, 0
 /* 8030A188 002D3748  48 00 01 98 */	b .L_8030A320
 .L_8030A18C:
-/* 8030A18C 002D374C  81 0D B6 40 */	lwz r8, lbl_806677C0@sda21(r13)
+/* 8030A18C 002D374C  81 0D B6 40 */	lwz r8, FstStart@sda21(r13)
 /* 8030A190 002D3750  1C 1D 00 0C */	mulli r0, r29, 0xc
-/* 8030A194 002D3754  80 ED B6 3C */	lwz r7, lbl_806677BC@sda21(r13)
+/* 8030A194 002D3754  80 ED B6 3C */	lwz r7, FstStringStart@sda21(r13)
 /* 8030A198 002D3758  38 C8 00 04 */	addi r6, r8, 4
 /* 8030A19C 002D375C  7C 66 00 2E */	lwzx r3, r6, r0
 /* 8030A1A0 002D3760  7C 08 00 2E */	lwzx r0, r8, r0
@@ -429,7 +429,7 @@
 /* 8030A330 002D38F0  48 00 00 4C */	b .L_8030A37C
 .L_8030A334:
 /* 8030A334 002D38F4  1C 1D 00 0C */	mulli r0, r29, 0xc
-/* 8030A338 002D38F8  80 6D B6 40 */	lwz r3, lbl_806677C0@sda21(r13)
+/* 8030A338 002D38F8  80 6D B6 40 */	lwz r3, FstStart@sda21(r13)
 /* 8030A33C 002D38FC  7C 03 00 2E */	lwzx r0, r3, r0
 /* 8030A340 002D3900  54 00 00 0F */	rlwinm. r0, r0, 0, 0, 7
 /* 8030A344 002D3904  41 82 00 2C */	beq .L_8030A370
@@ -459,7 +459,7 @@
 /* 8030A398 002D3958  48 00 00 54 */	b .L_8030A3EC
 .L_8030A39C:
 /* 8030A39C 002D395C  1C C3 00 0C */	mulli r6, r3, 0xc
-/* 8030A3A0 002D3960  80 6D B6 40 */	lwz r3, lbl_806677C0@sda21(r13)
+/* 8030A3A0 002D3960  80 6D B6 40 */	lwz r3, FstStart@sda21(r13)
 /* 8030A3A4 002D3964  7C 03 30 2E */	lwzx r0, r3, r6
 /* 8030A3A8 002D3968  54 00 00 0F */	rlwinm. r0, r0, 0, 0, 7
 /* 8030A3AC 002D396C  41 82 00 0C */	beq .L_8030A3B8
@@ -467,13 +467,13 @@
 /* 8030A3B4 002D3974  48 00 00 38 */	b .L_8030A3EC
 .L_8030A3B8:
 /* 8030A3B8 002D3978  7C 63 32 14 */	add r3, r3, r6
-/* 8030A3BC 002D397C  80 8D B6 98 */	lwz r4, lbl_80667818@sda21(r13)
+/* 8030A3BC 002D397C  80 8D B6 98 */	lwz r4, __DVDLayoutFormat@sda21(r13)
 /* 8030A3C0 002D3980  80 A3 00 04 */	lwz r5, 4(r3)
 /* 8030A3C4 002D3984  38 00 00 00 */	li r0, 0
 /* 8030A3C8 002D3988  38 60 00 01 */	li r3, 1
 /* 8030A3CC 002D398C  7C A4 24 30 */	srw r4, r5, r4
 /* 8030A3D0 002D3990  90 9B 00 30 */	stw r4, 0x30(r27)
-/* 8030A3D4 002D3994  80 8D B6 40 */	lwz r4, lbl_806677C0@sda21(r13)
+/* 8030A3D4 002D3994  80 8D B6 40 */	lwz r4, FstStart@sda21(r13)
 /* 8030A3D8 002D3998  7C 84 32 14 */	add r4, r4, r6
 /* 8030A3DC 002D399C  80 84 00 08 */	lwz r4, 8(r4)
 /* 8030A3E0 002D39A0  90 9B 00 34 */	stw r4, 0x34(r27)
@@ -515,9 +515,9 @@
 /* 8030A464 002D3A24  38 60 00 00 */	li r3, 0
 /* 8030A468 002D3A28  48 00 01 88 */	b .L_8030A5F0
 .L_8030A46C:
-/* 8030A46C 002D3A2C  81 0D B6 40 */	lwz r8, lbl_806677C0@sda21(r13)
+/* 8030A46C 002D3A2C  81 0D B6 40 */	lwz r8, FstStart@sda21(r13)
 /* 8030A470 002D3A30  1C 03 00 0C */	mulli r0, r3, 0xc
-/* 8030A474 002D3A34  80 ED B6 3C */	lwz r7, lbl_806677BC@sda21(r13)
+/* 8030A474 002D3A34  80 ED B6 3C */	lwz r7, FstStringStart@sda21(r13)
 /* 8030A478 002D3A38  38 C8 00 04 */	addi r6, r8, 4
 /* 8030A47C 002D3A3C  7C 66 00 2E */	lwzx r3, r6, r0
 /* 8030A480 002D3A40  7C 08 00 2E */	lwzx r0, r8, r0
@@ -780,7 +780,7 @@
 /* 8030A7F0 002D3DB0  3B C0 FF FD */	li r30, -3
 /* 8030A7F4 002D3DB4  48 00 00 10 */	b .L_8030A804
 .L_8030A7F8:
-/* 8030A7F8 002D3DB8  38 6D B6 30 */	addi r3, r13, lbl_806677B0@sda21
+/* 8030A7F8 002D3DB8  38 6D B6 30 */	addi r3, r13, __DVDThreadQueue@sda21
 /* 8030A7FC 002D3DBC  48 05 1E 75 */	bl OSSleepThread
 /* 8030A800 002D3DC0  4B FF FF C4 */	b .L_8030A7C4
 .L_8030A804:
@@ -798,7 +798,7 @@
 
 .balign 16, 0
 .fn cbForReadSync, global
-/* 8030A830 002D3DF0  38 6D B6 30 */	addi r3, r13, lbl_806677B0@sda21
+/* 8030A830 002D3DF0  38 6D B6 30 */	addi r3, r13, __DVDThreadQueue@sda21
 /* 8030A834 002D3DF4  48 05 1F 2C */	b OSWakeupThread
 .endfn cbForReadSync
 
@@ -860,8 +860,8 @@ lbl_805498EC:
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 
-.global lbl_80665970
-lbl_80665970:
+.global __DVDLongFileNameFlag
+__DVDLongFileNameFlag:
 	.4byte 0x00000001
 	.4byte 0
 
@@ -872,21 +872,23 @@ lbl_80665978:
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_806677A8
-lbl_806677A8:
+currentDirectory:
 	.skip 0x8
-.global lbl_806677B0
-lbl_806677B0:
+
+.global __DVDThreadQueue
+__DVDThreadQueue:
 	.skip 0x8
-.global lbl_806677B8
-lbl_806677B8:
+
+MaxEntryNum:
 	.skip 0x4
-.global lbl_806677BC
-lbl_806677BC:
+
+FstStringStart:
 	.skip 0x4
-.global lbl_806677C0
-lbl_806677C0:
+
+FstStart:
 	.skip 0x4
-.global lbl_806677C4
-lbl_806677C4:
-	.skip 0x1C
+
+BootInfo:
+	.skip 0x4
+
+.skip 0x18

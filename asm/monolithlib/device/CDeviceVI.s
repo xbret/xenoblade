@@ -73,10 +73,10 @@
 /* 80447ED8 00411498  38 A0 00 20 */	li r5, 0x20
 /* 80447EDC 0041149C  4B FE CC 89 */	bl func_80434B64
 /* 80447EE0 004114A0  90 7F 02 80 */	stw r3, 0x280(r31)
-/* 80447EE4 004114A4  3C 80 80 55 */	lis r4, lbl_8054BAB0@ha
+/* 80447EE4 004114A4  3C 80 80 55 */	lis r4, GXNtsc480Int@ha
 /* 80447EE8 004114A8  38 7F 02 00 */	addi r3, r31, 0x200
 /* 80447EEC 004114AC  38 A0 00 3C */	li r5, 0x3c
-/* 80447EF0 004114B0  38 84 BA B0 */	addi r4, r4, lbl_8054BAB0@l
+/* 80447EF0 004114B0  38 84 BA B0 */	addi r4, r4, GXNtsc480Int@l
 /* 80447EF4 004114B4  4B BB C1 0D */	bl memcpy
 /* 80447EF8 004114B8  80 8D BD A8 */	lwz r4, lbl_80667F28@sda21(r13)
 /* 80447EFC 004114BC  38 60 00 C0 */	li r3, 0xc0
@@ -1399,22 +1399,22 @@ _reslist_base_CDeviceVICb_typestr:
 
 .global lbl_8056F670
 lbl_8056F670:
-	.4byte lbl_8054BA38
-	.4byte lbl_8054BAB0
-	.4byte lbl_8054BAEC
-	.4byte lbl_8054BB28
-	.4byte lbl_8054BC90
-	.4byte lbl_8054BD08
+	.4byte GXNtsc240Ds
+	.4byte GXNtsc480Int
+	.4byte GXNtsc480Prog
+	.4byte GXNtsc480ProgSoft
+	.4byte GXPal264Ds
+	.4byte GXPal528Int
 	.4byte 0
 	.4byte 0
-	.4byte lbl_8054BD44
-	.4byte lbl_8054BDBC
-	.4byte lbl_8054BDF8
-	.4byte lbl_8054BE34
-	.4byte lbl_8054BB64
-	.4byte lbl_8054BBDC
-	.4byte lbl_8054BC18
-	.4byte lbl_8054BC54
+	.4byte GXEurgb60Hz240Ds
+	.4byte GXEurgb60Hz480Int
+	.4byte GXEurgb60Hz480Prog
+	.4byte GXEurgb60Hz480ProgSoft
+	.4byte GXMpal240Ds
+	.4byte GXMpal480Int
+	.4byte GXMpal480Prog
+	.4byte GXMpal480ProgSoft
 
 
 .global __vt__CDeviceVI

@@ -4509,20 +4509,34 @@ CMinimap_strpool:
 
 .global lbl_8052FF10
 lbl_8052FF10:
-	.4byte 0x00000065
-	.4byte 0x00C9012D
-	.4byte 0x01910192
-	.4byte 0x01F50259
-	.4byte 0x02BD0321
-	.4byte 0x038503E9
-	.4byte 0x044D04B1
-	.4byte 0x04B20515
-	.4byte 0x057905DD
-	.4byte 0x06410641
-	.4byte 0x06A50709
-	.4byte 0x076D07D1
-	.4byte 0x08350899
-	.4byte 0x08FD0961
+	.2byte 0x0000
+	.2byte 0x0065
+	.2byte 0x00C9
+	.2byte 0x012D
+	.2byte 0x0191
+	.2byte 0x0192
+	.2byte 0x01F5
+	.2byte 0x0259
+	.2byte 0x02BD
+	.2byte 0x0321
+	.2byte 0x0385
+	.2byte 0x03E9
+	.2byte 0x044D
+	.2byte 0x04B1
+	.2byte 0x04B2
+	.2byte 0x0515
+	.2byte 0x0579
+	.2byte 0x05DD
+	.2byte 0x0641
+	.2byte 0x0641
+	.2byte 0x06A5
+	.2byte 0x0709
+	.2byte 0x076D
+	.2byte 0x07D1
+	.2byte 0x0835
+	.2byte 0x0899
+	.2byte 0x08FD
+	.2byte 0x0961
 	.4byte 0
 	.4byte 0
 	.4byte 0

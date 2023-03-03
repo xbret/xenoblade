@@ -8,10 +8,10 @@
 /* 802DE1F8 002A77B8  38 60 00 01 */	li r3, 1
 /* 802DE1FC 002A77BC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802DE200 002A77C0  38 00 00 00 */	li r0, 0
-/* 802DE204 002A77C4  98 6D 97 98 */	stb r3, lbl_80665918@sda21(r13)
-/* 802DE208 002A77C8  90 6D 97 9C */	stw r3, lbl_8066591C@sda21(r13)
-/* 802DE20C 002A77CC  90 0D B5 F0 */	stw r0, lbl_80667770@sda21(r13)
-/* 802DE210 002A77D0  90 0D B5 F4 */	stw r0, lbl_80667774@sda21(r13)
+/* 802DE204 002A77C4  98 6D 97 98 */	stb r3, btu_count@sda21(r13)
+/* 802DE208 002A77C8  90 6D 97 9C */	stw r3, execute_btu@sda21(r13)
+/* 802DE20C 002A77CC  90 0D B5 F0 */	stw r0, _btu_g_count@sda21(r13)
+/* 802DE210 002A77D0  90 0D B5 F4 */	stw r0, _btu_last_timer_tick@sda21(r13)
 /* 802DE214 002A77D4  48 01 19 99 */	bl btu_init_core
 /* 802DE218 002A77D8  4B FF FC 99 */	bl BTE_InitStack
 /* 802DE21C 002A77DC  48 00 07 41 */	bl bta_sys_init
@@ -29,37 +29,37 @@
 /* 802DE240 002A7800  4B FD BF 11 */	bl _savegpr_26
 /* 802DE244 002A7804  3B C0 00 00 */	li r30, 0
 /* 802DE248 002A7808  48 07 E7 19 */	bl OSGetTime
-/* 802DE24C 002A780C  80 6D B5 F0 */	lwz r3, lbl_80667770@sda21(r13)
+/* 802DE24C 002A780C  80 6D B5 F0 */	lwz r3, _btu_g_count@sda21(r13)
 /* 802DE250 002A7810  38 03 00 01 */	addi r0, r3, 1
-/* 802DE254 002A7814  90 0D B5 F0 */	stw r0, lbl_80667770@sda21(r13)
+/* 802DE254 002A7814  90 0D B5 F0 */	stw r0, _btu_g_count@sda21(r13)
 /* 802DE258 002A7818  4B FF E7 A9 */	bl GKI_disable
-/* 802DE25C 002A781C  80 0D 97 9C */	lwz r0, lbl_8066591C@sda21(r13)
+/* 802DE25C 002A781C  80 0D 97 9C */	lwz r0, execute_btu@sda21(r13)
 /* 802DE260 002A7820  2C 00 00 00 */	cmpwi r0, 0
 /* 802DE264 002A7824  41 82 00 18 */	beq .L_802DE27C
 /* 802DE268 002A7828  38 60 00 00 */	li r3, 0
 /* 802DE26C 002A782C  38 00 00 01 */	li r0, 1
-/* 802DE270 002A7830  90 6D 97 9C */	stw r3, lbl_8066591C@sda21(r13)
-/* 802DE274 002A7834  98 0D 97 98 */	stb r0, lbl_80665918@sda21(r13)
+/* 802DE270 002A7830  90 6D 97 9C */	stw r3, execute_btu@sda21(r13)
+/* 802DE274 002A7834  98 0D 97 98 */	stb r0, btu_count@sda21(r13)
 /* 802DE278 002A7838  48 00 00 18 */	b .L_802DE290
 .L_802DE27C:
-/* 802DE27C 002A783C  88 6D 97 98 */	lbz r3, lbl_80665918@sda21(r13)
+/* 802DE27C 002A783C  88 6D 97 98 */	lbz r3, btu_count@sda21(r13)
 /* 802DE280 002A7840  38 03 00 01 */	addi r0, r3, 1
-/* 802DE284 002A7844  98 0D 97 98 */	stb r0, lbl_80665918@sda21(r13)
+/* 802DE284 002A7844  98 0D 97 98 */	stb r0, btu_count@sda21(r13)
 /* 802DE288 002A7848  4B FF E7 49 */	bl GKI_enable
 /* 802DE28C 002A784C  48 00 03 08 */	b .L_802DE594
 .L_802DE290:
 /* 802DE290 002A7850  4B FF E7 41 */	bl GKI_enable
-/* 802DE294 002A7854  80 6D B5 F4 */	lwz r3, lbl_80667774@sda21(r13)
+/* 802DE294 002A7854  80 6D B5 F4 */	lwz r3, _btu_last_timer_tick@sda21(r13)
 /* 802DE298 002A7858  3B E0 00 05 */	li r31, 5
-/* 802DE29C 002A785C  80 8D B5 F0 */	lwz r4, lbl_80667770@sda21(r13)
+/* 802DE29C 002A785C  80 8D B5 F0 */	lwz r4, _btu_g_count@sda21(r13)
 /* 802DE2A0 002A7860  38 03 01 F4 */	addi r0, r3, 0x1f4
 /* 802DE2A4 002A7864  7C 04 00 40 */	cmplw r4, r0
 /* 802DE2A8 002A7868  40 81 00 0C */	ble .L_802DE2B4
-/* 802DE2AC 002A786C  90 8D B5 F4 */	stw r4, lbl_80667774@sda21(r13)
+/* 802DE2AC 002A786C  90 8D B5 F4 */	stw r4, _btu_last_timer_tick@sda21(r13)
 /* 802DE2B0 002A7870  63 FF 00 30 */	ori r31, r31, 0x30
 .L_802DE2B4:
-/* 802DE2B4 002A7874  3C 60 80 5C */	lis r3, lbl_805BF4D0@ha
-/* 802DE2B8 002A7878  3B A3 F4 D0 */	addi r29, r3, lbl_805BF4D0@l
+/* 802DE2B4 002A7874  3C 60 80 5C */	lis r3, btu_cb@ha
+/* 802DE2B8 002A7878  3B A3 F4 D0 */	addi r29, r3, btu_cb@l
 /* 802DE2BC 002A787C  48 00 02 C8 */	b .L_802DE584
 .L_802DE2C0:
 /* 802DE2C0 002A7880  57 E0 07 FF */	clrlwi. r0, r31, 0x1f
@@ -281,7 +281,7 @@
 /* 802DE588 002A7B48  41 82 FD 38 */	beq .L_802DE2C0
 .L_802DE58C:
 /* 802DE58C 002A7B4C  38 00 00 01 */	li r0, 1
-/* 802DE590 002A7B50  90 0D 97 9C */	stw r0, lbl_8066591C@sda21(r13)
+/* 802DE590 002A7B50  90 0D 97 9C */	stw r0, execute_btu@sda21(r13)
 .L_802DE594:
 /* 802DE594 002A7B54  39 61 00 20 */	addi r11, r1, 0x20
 /* 802DE598 002A7B58  4B FD BC 05 */	bl _restgpr_26
@@ -297,8 +297,8 @@
 /* 802DE5B4 002A7B74  7C 08 02 A6 */	mflr r0
 /* 802DE5B8 002A7B78  90 01 00 24 */	stw r0, 0x24(r1)
 /* 802DE5BC 002A7B7C  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 802DE5C0 002A7B80  3F E0 80 5C */	lis r31, lbl_805BF4D0@ha
-/* 802DE5C4 002A7B84  3B FF F4 D0 */	addi r31, r31, lbl_805BF4D0@l
+/* 802DE5C0 002A7B80  3F E0 80 5C */	lis r31, btu_cb@ha
+/* 802DE5C4 002A7B84  3B FF F4 D0 */	addi r31, r31, btu_cb@l
 /* 802DE5C8 002A7B88  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 802DE5CC 002A7B8C  7C BE 2B 78 */	mr r30, r5
 /* 802DE5D0 002A7B90  93 A1 00 14 */	stw r29, 0x14(r1)
@@ -324,17 +324,34 @@
 .endfn btu_start_timer
 
 .fn btu_stop_timer, global
-/* 802DE620 002A7BE0  3C A0 80 5C */	lis r5, lbl_805BF4D0@ha
+/* 802DE620 002A7BE0  3C A0 80 5C */	lis r5, btu_cb@ha
 /* 802DE624 002A7BE4  7C 64 1B 78 */	mr r4, r3
-/* 802DE628 002A7BE8  38 A5 F4 D0 */	addi r5, r5, lbl_805BF4D0@l
+/* 802DE628 002A7BE8  38 A5 F4 D0 */	addi r5, r5, btu_cb@l
 /* 802DE62C 002A7BEC  38 65 00 40 */	addi r3, r5, 0x40
 /* 802DE630 002A7BF0  4B FF E0 30 */	b GKI_remove_from_timer_list
 .endfn btu_stop_timer
 
+
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+
+btu_count:
+	.4byte 0x01000000
+
+execute_btu:
+	.4byte 0x00000001
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global btu_cb
+btu_cb:
+	.skip 0x88
+
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
-.global lbl_80667770
-lbl_80667770:
+
+.global _btu_g_count
+_btu_g_count:
 	.skip 0x4
-.global lbl_80667774
-lbl_80667774:
+.global _btu_last_timer_tick
+_btu_last_timer_tick:
 	.skip 0x4

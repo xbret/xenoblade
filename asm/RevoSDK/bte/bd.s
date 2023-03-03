@@ -66,3 +66,10 @@
 /* 802DE700 002A7CC0  38 60 00 00 */	li r3, 0
 /* 802DE704 002A7CC4  4E 80 00 20 */	blr
 .endfn bdcmp
+
+
+.section .sbss2, "", @nobits #0x8066DCE0 - 0x8066DCFB
+
+.global bd_addr_null
+bd_addr_null:
+	.skip 0x8

@@ -4,6 +4,9 @@ BTE_FILES:=\
 	$(BUILD_DIR)/asm/RevoSDK/bte/gki_ppc.o\
 	$(BUILD_DIR)/asm/RevoSDK/bte/hcisu_h2.o\
 	$(BUILD_DIR)/asm/RevoSDK/bte/uusb_ppc.o\
+	$(BUILD_DIR)/asm/RevoSDK/bte/bta_dm_cfg.o\
+	$(BUILD_DIR)/asm/RevoSDK/bte/bta_hh_cfg.o\
+	$(BUILD_DIR)/asm/RevoSDK/bte/bta_sys_cfg.o\
 	$(BUILD_DIR)/asm/RevoSDK/bte/bte_hcisu.o\
 	$(BUILD_DIR)/asm/RevoSDK/bte/bte_init.o\
 	$(BUILD_DIR)/asm/RevoSDK/bte/bte_logmsg.o\

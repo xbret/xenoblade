@@ -10,11 +10,11 @@
 /* 802DAD6C 002A432C  39 61 00 40 */	addi r11, r1, 0x40
 /* 802DAD70 002A4330  4B FD F3 C1 */	bl _savegpr_18
 /* 802DAD74 002A4334  38 E4 00 03 */	addi r7, r4, 3
-/* 802DAD78 002A4338  3C 80 80 59 */	lis r4, lbl_80593140@ha
+/* 802DAD78 002A4338  3C 80 80 59 */	lis r4, gki_cb@ha
 /* 802DAD7C 002A433C  54 E9 00 3A */	rlwinm r9, r7, 0, 0, 0x1d
 /* 802DAD80 002A4340  54 79 15 BA */	rlwinm r25, r3, 2, 0x16, 0x1d
 /* 802DAD84 002A4344  3B 49 00 0C */	addi r26, r9, 0xc
-/* 802DAD88 002A4348  38 84 31 40 */	addi r4, r4, lbl_80593140@l
+/* 802DAD88 002A4348  38 84 31 40 */	addi r4, r4, gki_cb@l
 /* 802DAD8C 002A434C  57 48 04 3E */	clrlwi r8, r26, 0x10
 /* 802DAD90 002A4350  54 EC 04 3A */	rlwinm r12, r7, 0, 0x10, 0x1d
 /* 802DAD94 002A4354  39 44 00 54 */	addi r10, r4, 0x54
@@ -150,11 +150,11 @@
 .fn gki_buffer_init, global
 /* 802DAF80 002A4540  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DAF84 002A4544  7C 08 02 A6 */	mflr r0
-/* 802DAF88 002A4548  3C 60 80 59 */	lis r3, lbl_80593140@ha
+/* 802DAF88 002A4548  3C 60 80 59 */	lis r3, gki_cb@ha
 /* 802DAF8C 002A454C  38 C0 00 00 */	li r6, 0
 /* 802DAF90 002A4550  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802DAF94 002A4554  38 00 00 02 */	li r0, 2
-/* 802DAF98 002A4558  38 63 31 40 */	addi r3, r3, lbl_80593140@l
+/* 802DAF98 002A4558  38 63 31 40 */	addi r3, r3, gki_cb@l
 /* 802DAF9C 002A455C  38 80 00 00 */	li r4, 0
 /* 802DAFA0 002A4560  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802DAFA4 002A4564  3B E3 00 54 */	addi r31, r3, 0x54
@@ -336,10 +336,10 @@
 .fn GKI_getbuf, global
 /* 802DB250 002A4810  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DB254 002A4814  7C 08 02 A6 */	mflr r0
-/* 802DB258 002A4818  3C 80 80 59 */	lis r4, lbl_80593140@ha
+/* 802DB258 002A4818  3C 80 80 59 */	lis r4, gki_cb@ha
 /* 802DB25C 002A481C  2C 03 00 00 */	cmpwi r3, 0
 /* 802DB260 002A4820  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802DB264 002A4824  38 84 31 40 */	addi r4, r4, lbl_80593140@l
+/* 802DB264 002A4824  38 84 31 40 */	addi r4, r4, gki_cb@l
 /* 802DB268 002A4828  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802DB26C 002A482C  93 C1 00 08 */	stw r30, 8(r1)
 /* 802DB270 002A4830  3B C4 00 54 */	addi r30, r4, 0x54
@@ -455,10 +455,10 @@
 .fn GKI_getpoolbuf, global
 /* 802DB3F0 002A49B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DB3F4 002A49B4  7C 08 02 A6 */	mflr r0
-/* 802DB3F8 002A49B8  3C 80 80 59 */	lis r4, lbl_80593140@ha
+/* 802DB3F8 002A49B8  3C 80 80 59 */	lis r4, gki_cb@ha
 /* 802DB3FC 002A49BC  28 03 00 09 */	cmplwi r3, 9
 /* 802DB400 002A49C0  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802DB404 002A49C4  38 84 31 40 */	addi r4, r4, lbl_80593140@l
+/* 802DB404 002A49C4  38 84 31 40 */	addi r4, r4, gki_cb@l
 /* 802DB408 002A49C8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802DB40C 002A49CC  7C 7F 1B 78 */	mr r31, r3
 /* 802DB410 002A49D0  93 C1 00 08 */	stw r30, 8(r1)
@@ -537,9 +537,9 @@
 /* 802DB514 002A4AD4  88 1F 00 04 */	lbz r0, 4(r31)
 /* 802DB518 002A4AD8  28 00 00 09 */	cmplwi r0, 9
 /* 802DB51C 002A4ADC  40 80 00 20 */	bge .L_802DB53C
-/* 802DB520 002A4AE0  3C 80 80 59 */	lis r4, lbl_80593140@ha
+/* 802DB520 002A4AE0  3C 80 80 59 */	lis r4, gki_cb@ha
 /* 802DB524 002A4AE4  54 00 25 36 */	rlwinm r0, r0, 4, 0x14, 0x1b
-/* 802DB528 002A4AE8  38 84 31 40 */	addi r4, r4, lbl_80593140@l
+/* 802DB528 002A4AE8  38 84 31 40 */	addi r4, r4, gki_cb@l
 /* 802DB52C 002A4AEC  3C 84 00 03 */	addis r4, r4, 3
 /* 802DB530 002A4AF0  7C 84 02 14 */	add r4, r4, r0
 /* 802DB534 002A4AF4  A0 04 89 E8 */	lhz r0, -0x7618(r4)
@@ -593,8 +593,8 @@
 .L_802DB5D8:
 /* 802DB5D8 002A4B98  48 00 14 29 */	bl GKI_disable
 /* 802DB5DC 002A4B9C  88 1F 00 04 */	lbz r0, 4(r31)
-/* 802DB5E0 002A4BA0  3C 60 80 59 */	lis r3, lbl_80593140@ha
-/* 802DB5E4 002A4BA4  38 63 31 40 */	addi r3, r3, lbl_80593140@l
+/* 802DB5E0 002A4BA0  3C 60 80 59 */	lis r3, gki_cb@ha
+/* 802DB5E4 002A4BA4  38 63 31 40 */	addi r3, r3, gki_cb@l
 /* 802DB5E8 002A4BA8  3C 63 00 03 */	addis r3, r3, 3
 /* 802DB5EC 002A4BAC  54 00 20 36 */	slwi r0, r0, 4
 /* 802DB5F0 002A4BB0  7C 83 02 14 */	add r4, r3, r0
@@ -638,9 +638,9 @@
 /* 802DB664 002A4C24  88 03 00 04 */	lbz r0, 4(r3)
 /* 802DB668 002A4C28  28 00 00 09 */	cmplwi r0, 9
 /* 802DB66C 002A4C2C  40 80 00 20 */	bge .L_802DB68C
-/* 802DB670 002A4C30  3C 60 80 59 */	lis r3, lbl_80593140@ha
+/* 802DB670 002A4C30  3C 60 80 59 */	lis r3, gki_cb@ha
 /* 802DB674 002A4C34  54 00 25 36 */	rlwinm r0, r0, 4, 0x14, 0x1b
-/* 802DB678 002A4C38  38 63 31 40 */	addi r3, r3, lbl_80593140@l
+/* 802DB678 002A4C38  38 63 31 40 */	addi r3, r3, gki_cb@l
 /* 802DB67C 002A4C3C  3C 63 00 03 */	addis r3, r3, 3
 /* 802DB680 002A4C40  7C 63 02 14 */	add r3, r3, r0
 /* 802DB684 002A4C44  A0 63 89 E8 */	lhz r3, -0x7618(r3)
@@ -654,11 +654,11 @@
 .fn GKI_send_msg, global
 /* 802DB6A0 002A4C60  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DB6A4 002A4C64  7C 08 02 A6 */	mflr r0
-/* 802DB6A8 002A4C68  3C E0 80 59 */	lis r7, lbl_80593140@ha
+/* 802DB6A8 002A4C68  3C E0 80 59 */	lis r7, gki_cb@ha
 /* 802DB6AC 002A4C6C  3C C0 80 54 */	lis r6, lbl_80543E18@ha
 /* 802DB6B0 002A4C70  90 01 00 24 */	stw r0, 0x24(r1)
 /* 802DB6B4 002A4C74  28 03 00 08 */	cmplwi r3, 8
-/* 802DB6B8 002A4C78  38 E7 31 40 */	addi r7, r7, lbl_80593140@l
+/* 802DB6B8 002A4C78  38 E7 31 40 */	addi r7, r7, gki_cb@l
 /* 802DB6BC 002A4C7C  38 C6 3E 18 */	addi r6, r6, lbl_80543E18@l
 /* 802DB6C0 002A4C80  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 802DB6C4 002A4C84  7C BF 2B 78 */	mr r31, r5
@@ -799,9 +799,9 @@
 /* 802DB8A0 002A4E60  48 00 00 54 */	b .L_802DB8F4
 .L_802DB8A4:
 /* 802DB8A4 002A4E64  48 00 11 5D */	bl GKI_disable
-/* 802DB8A8 002A4E68  3C 60 80 59 */	lis r3, lbl_80593140@ha
+/* 802DB8A8 002A4E68  3C 60 80 59 */	lis r3, gki_cb@ha
 /* 802DB8AC 002A4E6C  57 E4 25 36 */	rlwinm r4, r31, 4, 0x14, 0x1b
-/* 802DB8B0 002A4E70  38 63 31 40 */	addi r3, r3, lbl_80593140@l
+/* 802DB8B0 002A4E70  38 63 31 40 */	addi r3, r3, gki_cb@l
 /* 802DB8B4 002A4E74  57 A5 15 BA */	rlwinm r5, r29, 2, 0x16, 0x1d
 /* 802DB8B8 002A4E78  3C 03 00 03 */	addis r0, r3, 3
 /* 802DB8BC 002A4E7C  7C 60 22 14 */	add r3, r0, r4
@@ -848,9 +848,9 @@
 /* 802DB944 002A4F04  88 1F 00 04 */	lbz r0, 4(r31)
 /* 802DB948 002A4F08  28 00 00 09 */	cmplwi r0, 9
 /* 802DB94C 002A4F0C  40 80 00 20 */	bge .L_802DB96C
-/* 802DB950 002A4F10  3C 60 80 59 */	lis r3, lbl_80593140@ha
+/* 802DB950 002A4F10  3C 60 80 59 */	lis r3, gki_cb@ha
 /* 802DB954 002A4F14  54 00 25 36 */	rlwinm r0, r0, 4, 0x14, 0x1b
-/* 802DB958 002A4F18  38 63 31 40 */	addi r3, r3, lbl_80593140@l
+/* 802DB958 002A4F18  38 63 31 40 */	addi r3, r3, gki_cb@l
 /* 802DB95C 002A4F1C  3C 63 00 03 */	addis r3, r3, 3
 /* 802DB960 002A4F20  7C 63 02 14 */	add r3, r3, r0
 /* 802DB964 002A4F24  A0 03 89 E8 */	lhz r0, -0x7618(r3)
@@ -941,9 +941,9 @@
 /* 802DBA84 002A5044  88 1F 00 04 */	lbz r0, 4(r31)
 /* 802DBA88 002A5048  28 00 00 09 */	cmplwi r0, 9
 /* 802DBA8C 002A504C  40 80 00 20 */	bge .L_802DBAAC
-/* 802DBA90 002A5050  3C 60 80 59 */	lis r3, lbl_80593140@ha
+/* 802DBA90 002A5050  3C 60 80 59 */	lis r3, gki_cb@ha
 /* 802DBA94 002A5054  54 00 25 36 */	rlwinm r0, r0, 4, 0x14, 0x1b
-/* 802DBA98 002A5058  38 63 31 40 */	addi r3, r3, lbl_80593140@l
+/* 802DBA98 002A5058  38 63 31 40 */	addi r3, r3, gki_cb@l
 /* 802DBA9C 002A505C  3C 63 00 03 */	addis r3, r3, 3
 /* 802DBAA0 002A5060  7C 63 02 14 */	add r3, r3, r0
 /* 802DBAA4 002A5064  A0 03 89 E8 */	lhz r0, -0x7618(r3)
@@ -1157,9 +1157,9 @@
 /* 802DBD48 002A5308  90 01 00 24 */	stw r0, 0x24(r1)
 /* 802DBD4C 002A530C  39 61 00 20 */	addi r11, r1, 0x20
 /* 802DBD50 002A5310  4B FD E4 05 */	bl _savegpr_27
-/* 802DBD54 002A5314  3C E0 80 59 */	lis r7, lbl_80593140@ha
+/* 802DBD54 002A5314  3C E0 80 59 */	lis r7, gki_cb@ha
 /* 802DBD58 002A5318  28 03 FF F3 */	cmplwi r3, 0xfff3
-/* 802DBD5C 002A531C  38 E7 31 40 */	addi r7, r7, lbl_80593140@l
+/* 802DBD5C 002A531C  38 E7 31 40 */	addi r7, r7, gki_cb@l
 /* 802DBD60 002A5320  7C 7B 1B 78 */	mr r27, r3
 /* 802DBD64 002A5324  7C 9C 23 78 */	mr r28, r4
 /* 802DBD68 002A5328  7C BD 2B 78 */	mr r29, r5
@@ -1216,9 +1216,9 @@
 /* 802DBE20 002A53E0  7F 85 E3 78 */	mr r5, r28
 /* 802DBE24 002A53E4  57 E3 06 3E */	clrlwi r3, r31, 0x18
 /* 802DBE28 002A53E8  4B FF EF 39 */	bl gki_init_free_queue
-/* 802DBE2C 002A53EC  3C 60 80 59 */	lis r3, lbl_80593140@ha
+/* 802DBE2C 002A53EC  3C 60 80 59 */	lis r3, gki_cb@ha
 /* 802DBE30 002A53F0  57 E5 25 36 */	rlwinm r5, r31, 4, 0x14, 0x1b
-/* 802DBE34 002A53F4  38 63 31 40 */	addi r3, r3, lbl_80593140@l
+/* 802DBE34 002A53F4  38 63 31 40 */	addi r3, r3, gki_cb@l
 /* 802DBE38 002A53F8  38 80 00 00 */	li r4, 0
 /* 802DBE3C 002A53FC  38 63 00 54 */	addi r3, r3, 0x54
 /* 802DBE40 002A5400  3C C5 00 03 */	addis r6, r5, 3
@@ -1344,8 +1344,8 @@
 /* 802DBFF4 002A55B4  3C 03 00 03 */	addis r0, r3, 3
 /* 802DBFF8 002A55B8  57 E5 06 3E */	clrlwi r5, r31, 0x18
 /* 802DBFFC 002A55BC  7C 80 22 14 */	add r4, r0, r4
-/* 802DC000 002A55C0  3C 60 80 59 */	lis r3, lbl_80593140@ha
-/* 802DC004 002A55C4  38 63 31 40 */	addi r3, r3, lbl_80593140@l
+/* 802DC000 002A55C0  3C 60 80 59 */	lis r3, gki_cb@ha
+/* 802DC004 002A55C4  38 63 31 40 */	addi r3, r3, gki_cb@l
 /* 802DC008 002A55C8  28 05 00 09 */	cmplwi r5, 9
 /* 802DC00C 002A55CC  9B E4 8A 7E */	stb r31, -0x7582(r4)
 /* 802DC010 002A55D0  38 63 00 54 */	addi r3, r3, 0x54
@@ -1391,9 +1391,9 @@
 /* 802DC098 002A5658  90 01 00 24 */	stw r0, 0x24(r1)
 /* 802DC09C 002A565C  39 61 00 20 */	addi r11, r1, 0x20
 /* 802DC0A0 002A5660  4B FD E0 B1 */	bl _savegpr_26
-/* 802DC0A4 002A5664  3F 60 80 59 */	lis r27, lbl_80593140@ha
+/* 802DC0A4 002A5664  3F 60 80 59 */	lis r27, gki_cb@ha
 /* 802DC0A8 002A5668  28 03 00 09 */	cmplwi r3, 9
-/* 802DC0AC 002A566C  3B 7B 31 40 */	addi r27, r27, lbl_80593140@l
+/* 802DC0AC 002A566C  3B 7B 31 40 */	addi r27, r27, gki_cb@l
 /* 802DC0B0 002A5670  7C 7E 1B 78 */	mr r30, r3
 /* 802DC0B4 002A5674  3B FB 00 54 */	addi r31, r27, 0x54
 /* 802DC0B8 002A5678  40 80 01 28 */	bge .L_802DC1E0
@@ -1488,6 +1488,7 @@
 .endfn GKI_delete_pool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .global lbl_80543E18
 lbl_80543E18:
 	.asciz "getbuf: Size is zero"
@@ -1533,8 +1534,3 @@ lbl_80543F48:
 	.asciz "Deleting bad pool"
 	.balign 4
 	.4byte 0
-
-.section .bss, "wa"  # 0x80573C80 - 0x8066417B
-.global lbl_80593140
-lbl_80593140:
-	.skip 0x28AE0

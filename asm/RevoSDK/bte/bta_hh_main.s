@@ -20,8 +20,8 @@
 /* 802E3C38 002AD1F8  4B D2 07 19 */	bl memset
 /* 802E3C3C 002AD1FC  2C 1B 00 00 */	cmpwi r27, 0
 /* 802E3C40 002AD200  40 82 01 58 */	bne .L_802E3D98
-/* 802E3C44 002AD204  3C 60 80 5C */	lis r3, lbl_805BF7C8@ha
-/* 802E3C48 002AD208  38 63 F7 C8 */	addi r3, r3, lbl_805BF7C8@l
+/* 802E3C44 002AD204  3C 60 80 5C */	lis r3, bta_hh_cb@ha
+/* 802E3C48 002AD208  38 63 F7 C8 */	addi r3, r3, bta_hh_cb@l
 /* 802E3C4C 002AD20C  80 03 02 24 */	lwz r0, 0x224(r3)
 /* 802E3C50 002AD210  2C 00 00 00 */	cmpwi r0, 0
 /* 802E3C54 002AD214  41 82 02 E8 */	beq .L_802E3F3C
@@ -98,7 +98,7 @@
 /* 802E3D50 002AD310  98 01 00 09 */	stb r0, 9(r1)
 /* 802E3D54 002AD314  48 00 00 20 */	b .L_802E3D74
 .L_802E3D58:
-/* 802E3D58 002AD318  88 0D B5 F8 */	lbz r0, lbl_80667778@sda21(r13)
+/* 802E3D58 002AD318  88 0D B5 F8 */	lbz r0, appl_trace_level@sda21(r13)
 /* 802E3D5C 002AD31C  28 00 00 01 */	cmplwi r0, 1
 /* 802E3D60 002AD320  41 80 00 14 */	blt .L_802E3D74
 /* 802E3D64 002AD324  A0 BD 00 06 */	lhz r5, 6(r29)
@@ -108,15 +108,15 @@
 .L_802E3D74:
 /* 802E3D74 002AD334  57 C3 04 3F */	clrlwi. r3, r30, 0x10
 /* 802E3D78 002AD338  41 82 01 C4 */	beq .L_802E3F3C
-/* 802E3D7C 002AD33C  3C A0 80 5C */	lis r5, lbl_805BF7C8@ha
+/* 802E3D7C 002AD33C  3C A0 80 5C */	lis r5, bta_hh_cb@ha
 /* 802E3D80 002AD340  38 81 00 08 */	addi r4, r1, 8
-/* 802E3D84 002AD344  38 A5 F7 C8 */	addi r5, r5, lbl_805BF7C8@l
+/* 802E3D84 002AD344  38 A5 F7 C8 */	addi r5, r5, bta_hh_cb@l
 /* 802E3D88 002AD348  81 85 02 24 */	lwz r12, 0x224(r5)
 /* 802E3D8C 002AD34C  7D 89 03 A6 */	mtctr r12
 /* 802E3D90 002AD350  4E 80 04 21 */	bctrl 
 /* 802E3D94 002AD354  48 00 01 A8 */	b .L_802E3F3C
 .L_802E3D98:
-/* 802E3D98 002AD358  88 0D B5 F8 */	lbz r0, lbl_80667778@sda21(r13)
+/* 802E3D98 002AD358  88 0D B5 F8 */	lbz r0, appl_trace_level@sda21(r13)
 /* 802E3D9C 002AD35C  8B DB 00 1C */	lbz r30, 0x1c(r27)
 /* 802E3DA0 002AD360  28 00 00 04 */	cmplwi r0, 4
 /* 802E3DA4 002AD364  41 80 00 70 */	blt .L_802E3E14
@@ -156,8 +156,8 @@
 /* 802E3E10 002AD3D0  4B FF A1 F1 */	bl LogMsg_3
 .L_802E3E14:
 /* 802E3E14 002AD3D4  88 9B 00 1C */	lbz r4, 0x1c(r27)
-/* 802E3E18 002AD3D8  3C 60 80 51 */	lis r3, lbl_8050E230@ha
-/* 802E3E1C 002AD3DC  38 63 E2 30 */	addi r3, r3, lbl_8050E230@l
+/* 802E3E18 002AD3D8  3C 60 80 51 */	lis r3, bta_hh_st_tbl@ha
+/* 802E3E1C 002AD3DC  38 63 E2 30 */	addi r3, r3, bta_hh_st_tbl@l
 /* 802E3E20 002AD3E0  57 9C 06 3E */	clrlwi r28, r28, 0x18
 /* 802E3E24 002AD3E4  38 04 FF FF */	addi r0, r4, -1
 /* 802E3E28 002AD3E8  54 00 10 3A */	slwi r0, r0, 2
@@ -169,9 +169,9 @@
 /* 802E3E40 002AD400  7C 05 20 AE */	lbzx r0, r5, r4
 /* 802E3E44 002AD404  28 00 00 0C */	cmplwi r0, 0xc
 /* 802E3E48 002AD408  41 82 00 24 */	beq .L_802E3E6C
-/* 802E3E4C 002AD40C  3C 80 80 51 */	lis r4, lbl_8050E1B8@ha
+/* 802E3E4C 002AD40C  3C 80 80 51 */	lis r4, bta_hh_action@ha
 /* 802E3E50 002AD410  54 00 15 BA */	rlwinm r0, r0, 2, 0x16, 0x1d
-/* 802E3E54 002AD414  38 84 E1 B8 */	addi r4, r4, lbl_8050E1B8@l
+/* 802E3E54 002AD414  38 84 E1 B8 */	addi r4, r4, bta_hh_action@l
 /* 802E3E58 002AD418  7F 63 DB 78 */	mr r3, r27
 /* 802E3E5C 002AD41C  7D 84 00 2E */	lwzx r12, r4, r0
 /* 802E3E60 002AD420  7F A4 EB 78 */	mr r4, r29
@@ -181,7 +181,7 @@
 /* 802E3E6C 002AD42C  88 7B 00 1C */	lbz r3, 0x1c(r27)
 /* 802E3E70 002AD430  7C 1E 18 40 */	cmplw r30, r3
 /* 802E3E74 002AD434  41 82 00 C8 */	beq .L_802E3F3C
-/* 802E3E78 002AD438  88 0D B5 F8 */	lbz r0, lbl_80667778@sda21(r13)
+/* 802E3E78 002AD438  88 0D B5 F8 */	lbz r0, appl_trace_level@sda21(r13)
 /* 802E3E7C 002AD43C  28 00 00 05 */	cmplwi r0, 5
 /* 802E3E80 002AD440  41 80 00 BC */	blt .L_802E3F3C
 /* 802E3E84 002AD444  2C 1E 00 02 */	cmpwi r30, 2
@@ -304,9 +304,9 @@
 /* 802E3FF4 002AD5B4  7C 66 1B 78 */	mr r6, r3
 /* 802E3FF8 002AD5B8  48 00 00 38 */	b .L_802E4030
 .L_802E3FFC:
-/* 802E3FFC 002AD5BC  3C 80 80 5C */	lis r4, lbl_805BF7C8@ha
+/* 802E3FFC 002AD5BC  3C 80 80 5C */	lis r4, bta_hh_cb@ha
 /* 802E4000 002AD5C0  A0 03 00 06 */	lhz r0, 6(r3)
-/* 802E4004 002AD5C4  38 84 F7 C8 */	addi r4, r4, lbl_805BF7C8@l
+/* 802E4004 002AD5C4  38 84 F7 C8 */	addi r4, r4, bta_hh_cb@l
 /* 802E4008 002AD5C8  7C 64 02 14 */	add r3, r4, r0
 /* 802E400C 002AD5CC  88 C3 02 14 */	lbz r6, 0x214(r3)
 /* 802E4010 002AD5D0  48 00 00 20 */	b .L_802E4030
@@ -314,21 +314,21 @@
 /* 802E4014 002AD5D4  A0 03 00 06 */	lhz r0, 6(r3)
 /* 802E4018 002AD5D8  28 00 00 10 */	cmplwi r0, 0x10
 /* 802E401C 002AD5DC  40 80 00 14 */	bge .L_802E4030
-/* 802E4020 002AD5E0  3C 60 80 5C */	lis r3, lbl_805BF7C8@ha
-/* 802E4024 002AD5E4  38 63 F7 C8 */	addi r3, r3, lbl_805BF7C8@l
+/* 802E4020 002AD5E0  3C 60 80 5C */	lis r3, bta_hh_cb@ha
+/* 802E4024 002AD5E4  38 63 F7 C8 */	addi r3, r3, bta_hh_cb@l
 /* 802E4028 002AD5E8  7C 63 02 14 */	add r3, r3, r0
 /* 802E402C 002AD5EC  88 C3 02 14 */	lbz r6, 0x214(r3)
 .L_802E4030:
 /* 802E4030 002AD5F0  54 C0 06 3E */	clrlwi r0, r6, 0x18
 /* 802E4034 002AD5F4  28 00 00 10 */	cmplwi r0, 0x10
 /* 802E4038 002AD5F8  41 82 00 18 */	beq .L_802E4050
-/* 802E403C 002AD5FC  3C 60 80 5C */	lis r3, lbl_805BF7C8@ha
+/* 802E403C 002AD5FC  3C 60 80 5C */	lis r3, bta_hh_cb@ha
 /* 802E4040 002AD600  54 C0 2C F4 */	rlwinm r0, r6, 5, 0x13, 0x1a
-/* 802E4044 002AD604  38 63 F7 C8 */	addi r3, r3, lbl_805BF7C8@l
+/* 802E4044 002AD604  38 63 F7 C8 */	addi r3, r3, bta_hh_cb@l
 /* 802E4048 002AD608  7C 63 02 14 */	add r3, r3, r0
 /* 802E404C 002AD60C  3B E3 00 10 */	addi r31, r3, 0x10
 .L_802E4050:
-/* 802E4050 002AD610  88 0D B5 F8 */	lbz r0, lbl_80667778@sda21(r13)
+/* 802E4050 002AD610  88 0D B5 F8 */	lbz r0, appl_trace_level@sda21(r13)
 /* 802E4054 002AD614  28 00 00 05 */	cmplwi r0, 5
 /* 802E4058 002AD618  41 80 00 1C */	blt .L_802E4074
 /* 802E405C 002AD61C  3C 80 80 54 */	lis r4, lbl_8054479C@ha
@@ -417,7 +417,55 @@
 /* 802E4150 002AD710  4E 80 00 20 */	blr 
 .endfn bta_hh_evt_code
 
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+bta_hh_action:
+	.4byte bta_hh_api_disc_act
+	.4byte bta_hh_open_act
+	.4byte bta_hh_close_act
+	.4byte bta_hh_data_act
+	.4byte bta_hh_ctrl_dat_act
+	.4byte bta_hh_handsk_act
+	.4byte bta_hh_start_sdp
+	.4byte bta_hh_sdp_cmpl
+	.4byte bta_hh_write_dev_act
+	.4byte bta_hh_get_dscp_act
+	.4byte bta_hh_maint_dev_act
+	.4byte bta_hh_open_cmpl_act
+
+bta_hh_st_idle:
+	.4byte 0x06020C01
+	.4byte 0x01020201
+	.4byte 0x0C010C01
+	.4byte 0x0C010C01
+	.4byte 0x0C010C01
+	.4byte 0x0A010C01
+
+bta_hh_st_w4_conn:
+	.4byte 0x0C020C01
+	.4byte 0x01020201
+	.4byte 0x0C020C02
+	.4byte 0x0C020702
+	.4byte 0x0C020C02
+	.4byte 0x0A010B03
+
+bta_hh_st_connected:
+	.4byte 0x0C030003
+	.4byte 0x01030201
+	.4byte 0x03030403
+	.4byte 0x05030C03
+	.4byte 0x08030903
+	.4byte 0x0A030C03
+
+bta_hh_st_tbl:
+	.4byte bta_hh_st_idle
+	.4byte bta_hh_st_w4_conn
+	.4byte bta_hh_st_connected
+	.4byte 0
+
+
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .global lbl_805446C0
 lbl_805446C0:
 	.asciz "wrong device handle: [%d]"
@@ -491,53 +539,9 @@ jumptable_80544960:
 	.4byte .L_802E4144
 	.4byte .L_802E4124
 
-.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
-.global lbl_8050E1B8
-lbl_8050E1B8:
-	.4byte bta_hh_api_disc_act
-	.4byte bta_hh_open_act
-	.4byte bta_hh_close_act
-	.4byte bta_hh_data_act
-	.4byte bta_hh_ctrl_dat_act
-	.4byte bta_hh_handsk_act
-	.4byte bta_hh_start_sdp
-	.4byte bta_hh_sdp_cmpl
-	.4byte bta_hh_write_dev_act
-	.4byte bta_hh_get_dscp_act
-	.4byte bta_hh_maint_dev_act
-	.4byte bta_hh_open_cmpl_act
 
-.global lbl_8050E1E8
-lbl_8050E1E8:
-	.4byte 0x06020C01
-	.4byte 0x01020201
-	.4byte 0x0C010C01
-	.4byte 0x0C010C01
-	.4byte 0x0C010C01
-	.4byte 0x0A010C01
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_8050E200
-lbl_8050E200:
-	.4byte 0x0C020C01
-	.4byte 0x01020201
-	.4byte 0x0C020C02
-	.4byte 0x0C020702
-	.4byte 0x0C020C02
-	.4byte 0x0A010B03
-
-.global lbl_8050E218
-lbl_8050E218:
-	.4byte 0x0C030003
-	.4byte 0x01030201
-	.4byte 0x03030403
-	.4byte 0x05030C03
-	.4byte 0x08030903
-	.4byte 0x0A030C03
-
-
-.global lbl_8050E230
-lbl_8050E230:
-	.4byte lbl_8050E1E8
-	.4byte lbl_8050E200
-	.4byte lbl_8050E218
-	.4byte 0
+.global bta_hh_cb
+bta_hh_cb:
+	.skip 0x230

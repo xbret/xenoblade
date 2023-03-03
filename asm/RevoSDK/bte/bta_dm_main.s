@@ -7,11 +7,11 @@
 /* 802E1570 002AAB30  7C 08 02 A6 */	mflr r0
 /* 802E1574 002AAB34  90 01 00 24 */	stw r0, 0x24(r1)
 /* 802E1578 002AAB38  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 802E157C 002AAB3C  3F E0 80 51 */	lis r31, lbl_8050E090@ha
-/* 802E1580 002AAB40  3B FF E0 90 */	addi r31, r31, lbl_8050E090@l
+/* 802E157C 002AAB3C  3F E0 80 51 */	lis r31, bta_dm_action@ha
+/* 802E1580 002AAB40  3B FF E0 90 */	addi r31, r31, bta_dm_action@l
 /* 802E1584 002AAB44  93 C1 00 18 */	stw r30, 0x18(r1)
-/* 802E1588 002AAB48  3F C0 80 51 */	lis r30, lbl_8050E0C4@ha
-/* 802E158C 002AAB4C  3B DE E0 C4 */	addi r30, r30, lbl_8050E0C4@l
+/* 802E1588 002AAB48  3F C0 80 51 */	lis r30, bta_dm_st_table@ha
+/* 802E158C 002AAB4C  3B DE E0 C4 */	addi r30, r30, bta_dm_st_table@l
 /* 802E1590 002AAB50  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 802E1594 002AAB54  3B A0 00 00 */	li r29, 0
 /* 802E1598 002AAB58  93 81 00 10 */	stw r28, 0x10(r1)
@@ -49,14 +49,14 @@
 .fn bta_dm_search_sm_execute, global
 /* 802E1604 002AABC4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E1608 002AABC8  7C 08 02 A6 */	mflr r0
-/* 802E160C 002AABCC  3C E0 80 5C */	lis r7, lbl_805BF618@ha
-/* 802E1610 002AABD0  3C A0 80 51 */	lis r5, lbl_8050E1A8@ha
+/* 802E160C 002AABCC  3C E0 80 5C */	lis r7, bta_dm_search_cb@ha
+/* 802E1610 002AABD0  3C A0 80 51 */	lis r5, bta_dm_search_st_tbl@ha
 /* 802E1614 002AABD4  90 01 00 24 */	stw r0, 0x24(r1)
-/* 802E1618 002AABD8  38 E7 F6 18 */	addi r7, r7, lbl_805BF618@l
-/* 802E161C 002AABDC  38 A5 E1 A8 */	addi r5, r5, lbl_8050E1A8@l
+/* 802E1618 002AABD8  38 E7 F6 18 */	addi r7, r7, bta_dm_search_cb@l
+/* 802E161C 002AABDC  38 A5 E1 A8 */	addi r5, r5, bta_dm_search_st_tbl@l
 /* 802E1620 002AABE0  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 802E1624 002AABE4  3F E0 80 51 */	lis r31, lbl_8050E0F0@ha
-/* 802E1628 002AABE8  3B FF E0 F0 */	addi r31, r31, lbl_8050E0F0@l
+/* 802E1624 002AABE4  3F E0 80 51 */	lis r31, bta_dm_search_action@ha
+/* 802E1628 002AABE8  3B FF E0 F0 */	addi r31, r31, bta_dm_search_action@l
 /* 802E162C 002AABEC  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 802E1630 002AABF0  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 802E1634 002AABF4  3B A0 00 00 */	li r29, 0
@@ -102,8 +102,8 @@
 .endfn bta_dm_search_sm_execute
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
-.global lbl_8050E090
-lbl_8050E090:
+
+bta_dm_action:
 	.4byte bta_dm_enable
 	.4byte bta_dm_disable
 	.4byte bta_dm_set_dev_name
@@ -119,8 +119,7 @@ lbl_8050E090:
 	.4byte bta_dm_send_hci_reset
 
 
-.global lbl_8050E0C4
-lbl_8050E0C4:
+bta_dm_st_table:
 	.4byte 0x000D0001
 	.4byte 0x0D00020D
 	.4byte 0x00030D00
@@ -134,8 +133,7 @@ lbl_8050E0C4:
 	.4byte 0
 
 
-.global lbl_8050E0F0
-lbl_8050E0F0:
+bta_dm_search_action:
 	.4byte bta_dm_search_start
 	.4byte bta_dm_search_cancel
 	.4byte bta_dm_discover
@@ -155,8 +153,7 @@ lbl_8050E0F0:
 	.4byte bta_dm_disc_rmt_name
 	.4byte bta_dm_cancel_rmt_name
 
-.global lbl_8050E138
-lbl_8050E138:
+bta_dm_search_idle_st_table:
 	.4byte 0x0012010E
 	.4byte 0x12000212
 	.4byte 0x03121200
@@ -165,8 +162,7 @@ lbl_8050E138:
 	.4byte 0x00121200
 	.4byte 0x12120000
 
-.global lbl_8050E154
-lbl_8050E154:
+bta_dm_search_search_active_st_table:
 	.4byte 0x12120101
 	.4byte 0x12021212
 	.4byte 0x01031201
@@ -175,8 +171,7 @@ lbl_8050E154:
 	.4byte 0x01061200
 	.4byte 0x09120100
 
-.global lbl_8050E170
-lbl_8050E170:
+bta_dm_search_search_cancelling_st_table:
 	.4byte 0x0A12020C
 	.4byte 0x0E020B12
 	.4byte 0x020D1200
@@ -185,8 +180,7 @@ lbl_8050E170:
 	.4byte 0x000D1200
 	.4byte 0x0D120000
 
-.global lbl_8050E18C
-lbl_8050E18C:
+bta_dm_search_disc_active_st_table:
 	.4byte 0x1212030E
 	.4byte 0x12031212
 	.4byte 0x03121203
@@ -196,9 +190,18 @@ lbl_8050E18C:
 	.4byte 0x08120300
 
 
-.global lbl_8050E1A8
-lbl_8050E1A8:
-	.4byte lbl_8050E138
-	.4byte lbl_8050E154
-	.4byte lbl_8050E170
-	.4byte lbl_8050E18C
+bta_dm_search_st_tbl:
+	.4byte bta_dm_search_idle_st_table
+	.4byte bta_dm_search_search_active_st_table
+	.4byte bta_dm_search_search_cancelling_st_table
+	.4byte bta_dm_search_disc_active_st_table
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global bta_dm_search_cb
+bta_dm_search_cb:
+	.skip 0x7C
+
+.global bta_dm_cb
+bta_dm_cb:
+	.skip 0x104

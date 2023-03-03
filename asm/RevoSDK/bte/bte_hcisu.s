@@ -5,7 +5,7 @@
 .balign 16, 0
 .fn bte_hcisu_send, global
 /* 802DDDE0 002A73A0  B0 83 00 00 */	sth r4, 0(r3)
-/* 802DDDE4 002A73A4  80 8D B5 E0 */	lwz r4, lbl_80667760@sda21(r13)
+/* 802DDDE4 002A73A4  80 8D B5 E0 */	lwz r4, p_hcisu_if@sda21(r13)
 /* 802DDDE8 002A73A8  2C 04 00 00 */	cmpwi r4, 0
 /* 802DDDEC 002A73AC  41 82 00 10 */	beq .L_802DDDFC
 /* 802DDDF0 002A73B0  81 84 00 0C */	lwz r12, 0xc(r4)
@@ -20,7 +20,7 @@
 /* 802DDE00 002A73C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DDE04 002A73C4  7C 08 02 A6 */	mflr r0
 /* 802DDE08 002A73C8  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802DDE0C 002A73CC  80 6D B5 E0 */	lwz r3, lbl_80667760@sda21(r13)
+/* 802DDE0C 002A73CC  80 6D B5 E0 */	lwz r3, p_hcisu_if@sda21(r13)
 /* 802DDE10 002A73D0  2C 03 00 00 */	cmpwi r3, 0
 /* 802DDE14 002A73D4  41 82 00 40 */	beq .L_802DDE54
 /* 802DDE18 002A73D8  81 83 00 00 */	lwz r12, 0(r3)
@@ -32,11 +32,11 @@
 /* 802DDE30 002A73F0  7D 89 03 A6 */	mtctr r12
 /* 802DDE34 002A73F4  4E 80 04 21 */	bctrl 
 .L_802DDE38:
-/* 802DDE38 002A73F8  80 6D B5 E0 */	lwz r3, lbl_80667760@sda21(r13)
+/* 802DDE38 002A73F8  80 6D B5 E0 */	lwz r3, p_hcisu_if@sda21(r13)
 /* 802DDE3C 002A73FC  81 83 00 04 */	lwz r12, 4(r3)
 /* 802DDE40 002A7400  2C 0C 00 00 */	cmpwi r12, 0
 /* 802DDE44 002A7404  41 82 00 10 */	beq .L_802DDE54
-/* 802DDE48 002A7408  80 6D B5 E4 */	lwz r3, lbl_80667764@sda21(r13)
+/* 802DDE48 002A7408  80 6D B5 E4 */	lwz r3, p_hcisu_cfg@sda21(r13)
 /* 802DDE4C 002A740C  7D 89 03 A6 */	mtctr r12
 /* 802DDE50 002A7410  4E 80 04 21 */	bctrl 
 .L_802DDE54:
@@ -48,7 +48,7 @@
 
 .balign 16, 0
 .fn bte_hcisu_close, global
-/* 802DDE70 002A7430  80 6D B5 E0 */	lwz r3, lbl_80667760@sda21(r13)
+/* 802DDE70 002A7430  80 6D B5 E0 */	lwz r3, p_hcisu_if@sda21(r13)
 /* 802DDE74 002A7434  2C 03 00 00 */	cmpwi r3, 0
 /* 802DDE78 002A7438  4D 82 00 20 */	beqlr 
 /* 802DDE7C 002A743C  81 83 00 08 */	lwz r12, 8(r3)
@@ -69,9 +69,11 @@
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
-.global lbl_80667760
-lbl_80667760:
+
+.global p_hcisu_if
+p_hcisu_if:
 	.skip 0x4
-.global lbl_80667764
-lbl_80667764:
+
+.global p_hcisu_cfg
+p_hcisu_cfg:
 	.skip 0x4

@@ -51,10 +51,10 @@
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
 .global float_8066BDD8
 float_8066BDD8:
 	.float 0
-
 
 .global float_8066BDDC
 float_8066BDDC:

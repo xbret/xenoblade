@@ -193,7 +193,6 @@
 /* 803BD520 00386AE0  48 00 29 D0 */	b SFCON_WriteTotSmplQue
 .endfn func_803BD518
 
-#SFADXT_ExecServer?
 .fn SFADXT_ExecServer, global
 /* 803BD524 00386AE4  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803BD528 00386AE8  7C 08 02 A6 */	mflr r0

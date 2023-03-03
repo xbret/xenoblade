@@ -9,8 +9,8 @@
 /* 802F364C 002BCC0C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 802F3650 002BCC10  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 802F3654 002BCC14  93 A1 00 14 */	stw r29, 0x14(r1)
-/* 802F3658 002BCC18  3F A0 80 5C */	lis r29, lbl_805C2570@ha
-/* 802F365C 002BCC1C  3B BD 25 70 */	addi r29, r29, lbl_805C2570@l
+/* 802F3658 002BCC18  3F A0 80 5C */	lis r29, hd_cb@ha
+/* 802F365C 002BCC1C  3B BD 25 70 */	addi r29, r29, hd_cb@l
 /* 802F3660 002BCC20  88 1D 01 41 */	lbz r0, 0x141(r29)
 /* 802F3664 002BCC24  28 00 00 04 */	cmplwi r0, 4
 /* 802F3668 002BCC28  41 80 00 18 */	blt .L_802F3680
@@ -22,9 +22,9 @@
 .L_802F3680:
 /* 802F3680 002BCC40  38 00 00 00 */	li r0, 0
 /* 802F3684 002BCC44  3B C0 00 01 */	li r30, 1
-/* 802F3688 002BCC48  3F E0 80 5C */	lis r31, lbl_805C2570@ha
+/* 802F3688 002BCC48  3F E0 80 5C */	lis r31, hd_cb@ha
 /* 802F368C 002BCC4C  B0 1D 00 14 */	sth r0, 0x14(r29)
-/* 802F3690 002BCC50  38 9F 25 70 */	addi r4, r31, lbl_805C2570@l
+/* 802F3690 002BCC50  38 9F 25 70 */	addi r4, r31, hd_cb@l
 /* 802F3694 002BCC54  38 60 00 11 */	li r3, 0x11
 /* 802F3698 002BCC58  B0 1D 00 16 */	sth r0, 0x16(r29)
 /* 802F369C 002BCC5C  9B DD 00 11 */	stb r30, 0x11(r29)
@@ -32,7 +32,7 @@
 /* 802F36A4 002BCC64  54 60 04 3F */	clrlwi. r0, r3, 0x10
 /* 802F36A8 002BCC68  B0 7D 00 14 */	sth r3, 0x14(r29)
 /* 802F36AC 002BCC6C  40 82 00 30 */	bne .L_802F36DC
-/* 802F36B0 002BCC70  38 7F 25 70 */	addi r3, r31, lbl_805C2570@l
+/* 802F36B0 002BCC70  38 7F 25 70 */	addi r3, r31, hd_cb@l
 /* 802F36B4 002BCC74  88 03 01 41 */	lbz r0, 0x141(r3)
 /* 802F36B8 002BCC78  28 00 00 02 */	cmplwi r0, 2
 /* 802F36BC 002BCC7C  41 80 00 18 */	blt .L_802F36D4
@@ -58,6 +58,7 @@
 .endfn hidd_conn_initiate
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .global lbl_80546690
 lbl_80546690:
 	.asciz "HID - Originate started"

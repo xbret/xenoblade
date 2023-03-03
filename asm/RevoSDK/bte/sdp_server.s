@@ -75,8 +75,8 @@
 /* 803068D0 002CFE90  38 A0 00 03 */	li r5, 3
 /* 803068D4 002CFE94  38 C0 00 00 */	li r6, 0
 /* 803068D8 002CFE98  48 00 10 6D */	bl sdpu_build_n_send_error
-/* 803068DC 002CFE9C  3C 60 80 5C */	lis r3, lbl_805C36C0@ha
-/* 803068E0 002CFEA0  38 63 36 C0 */	addi r3, r3, lbl_805C36C0@l
+/* 803068DC 002CFE9C  3C 60 80 5C */	lis r3, sdp_cb@ha
+/* 803068E0 002CFEA0  38 63 36 C0 */	addi r3, r3, sdp_cb@l
 /* 803068E4 002CFEA4  88 03 46 30 */	lbz r0, 0x4630(r3)
 /* 803068E8 002CFEA8  28 00 00 02 */	cmplwi r0, 2
 /* 803068EC 002CFEAC  41 80 00 1C */	blt .L_80306908
@@ -210,8 +210,8 @@
 /* 80306AAC 002D006C  4B FD 49 45 */	bl GKI_getpoolbuf
 /* 80306AB0 002D0070  2C 03 00 00 */	cmpwi r3, 0
 /* 80306AB4 002D0074  40 82 00 2C */	bne .L_80306AE0
-/* 80306AB8 002D0078  3C 60 80 5C */	lis r3, lbl_805C36C0@ha
-/* 80306ABC 002D007C  38 63 36 C0 */	addi r3, r3, lbl_805C36C0@l
+/* 80306AB8 002D0078  3C 60 80 5C */	lis r3, sdp_cb@ha
+/* 80306ABC 002D007C  38 63 36 C0 */	addi r3, r3, sdp_cb@l
 /* 80306AC0 002D0080  88 03 46 30 */	lbz r0, 0x4630(r3)
 /* 80306AC4 002D0084  28 00 00 01 */	cmplwi r0, 1
 /* 80306AC8 002D0088  41 80 02 58 */	blt .L_80306D20
@@ -552,8 +552,8 @@
 /* 80306F9C 002D055C  2C 03 00 00 */	cmpwi r3, 0
 /* 80306FA0 002D0560  7C 7B 1B 78 */	mr r27, r3
 /* 80306FA4 002D0564  40 82 00 2C */	bne .L_80306FD0
-/* 80306FA8 002D0568  3C 60 80 5C */	lis r3, lbl_805C36C0@ha
-/* 80306FAC 002D056C  38 63 36 C0 */	addi r3, r3, lbl_805C36C0@l
+/* 80306FA8 002D0568  3C 60 80 5C */	lis r3, sdp_cb@ha
+/* 80306FAC 002D056C  38 63 36 C0 */	addi r3, r3, sdp_cb@l
 /* 80306FB0 002D0570  88 03 46 30 */	lbz r0, 0x4630(r3)
 /* 80306FB4 002D0574  28 00 00 01 */	cmplwi r0, 1
 /* 80306FB8 002D0578  41 80 00 F8 */	blt .L_803070B0
@@ -844,8 +844,8 @@
 /* 803073B8 002D0978  2C 03 00 00 */	cmpwi r3, 0
 /* 803073BC 002D097C  7C 79 1B 78 */	mr r25, r3
 /* 803073C0 002D0980  40 82 00 2C */	bne .L_803073EC
-/* 803073C4 002D0984  3C 60 80 5C */	lis r3, lbl_805C36C0@ha
-/* 803073C8 002D0988  38 63 36 C0 */	addi r3, r3, lbl_805C36C0@l
+/* 803073C4 002D0984  3C 60 80 5C */	lis r3, sdp_cb@ha
+/* 803073C8 002D0988  38 63 36 C0 */	addi r3, r3, sdp_cb@l
 /* 803073CC 002D098C  88 03 46 30 */	lbz r0, 0x4630(r3)
 /* 803073D0 002D0990  28 00 00 01 */	cmplwi r0, 1
 /* 803073D4 002D0994  41 80 00 F8 */	blt .L_803074CC
@@ -924,6 +924,7 @@
 .endfn process_service_search_attr_req
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .global lbl_805494A8
 lbl_805494A8:
 	.asciz "SDP - server got unknown PDU: 0x%x"

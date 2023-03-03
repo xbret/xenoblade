@@ -13386,8 +13386,6 @@
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
 
-
-
 .global lbl_804F7020
 lbl_804F7020:
 	.4byte 0xFF010203

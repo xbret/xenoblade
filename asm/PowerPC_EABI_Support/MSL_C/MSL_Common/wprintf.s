@@ -2680,12 +2680,14 @@ lbl_8053FC60:
 	.4byte 0
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
 .global lbl_8050DB88
 lbl_8050DB88:
 	.4byte 0
 	.4byte 0
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
 .global double_8066B898
 double_8066B898:
 	.8byte 0

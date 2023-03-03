@@ -9,8 +9,8 @@
 /* 803626D8 0032BC98  28 03 00 0B */	cmplwi r3, 0xb
 /* 803626DC 0032BC9C  90 01 00 24 */	stw r0, 0x24(r1)
 /* 803626E0 0032BCA0  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 803626E4 0032BCA4  3F E0 80 56 */	lis r31, lbl_8055F1A8@ha
-/* 803626E8 0032BCA8  3B FF F1 A8 */	addi r31, r31, lbl_8055F1A8@l
+/* 803626E4 0032BCA4  3F E0 80 56 */	lis r31, XYNTSC@ha
+/* 803626E8 0032BCA8  3B FF F1 A8 */	addi r31, r31, XYNTSC@l
 /* 803626EC 0032BCAC  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 803626F0 0032BCB0  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 803626F4 0032BCB4  7C 7D 1B 78 */	mr r29, r3
@@ -18,7 +18,7 @@
 /* 803626FC 0032BCBC  3B A0 00 0B */	li r29, 0xb
 .L_80362700:
 /* 80362700 0032BCC0  4B FF 62 B1 */	bl OSDisableInterrupts
-/* 80362704 0032BCC4  93 AD BA 00 */	stw r29, lbl_80667B80@sda21(r13)
+/* 80362704 0032BCC4  93 AD BA 00 */	stw r29, SamplingRate@sda21(r13)
 /* 80362708 0032BCC8  7C 7E 1B 78 */	mr r30, r3
 /* 8036270C 0032BCCC  48 00 3D F5 */	bl VIGetTvFormat
 /* 80362710 0032BCD0  2C 03 00 00 */	cmpwi r3, 0
@@ -66,12 +66,47 @@
 
 .balign 16, 0
 .fn SIRefreshSamplingRate, global
-/* 803627B0 0032BD70  80 6D BA 00 */	lwz r3, lbl_80667B80@sda21(r13)
+/* 803627B0 0032BD70  80 6D BA 00 */	lwz r3, SamplingRate@sda21(r13)
 /* 803627B4 0032BD74  4B FF FF 1C */	b SISetSamplingRate
 .endfn SIRefreshSamplingRate
 
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+XYNTSC:
+	.4byte 0x00F60200
+	.4byte 0x000E1300
+	.4byte 0x001E0900
+	.4byte 0x002C0600
+	.4byte 0x00340500
+	.4byte 0x00410400
+	.4byte 0x00570300
+	.4byte 0x00570300
+	.4byte 0x00570300
+	.4byte 0x00830200
+	.4byte 0x00830200
+	.4byte 0x00830200
+
+XYPAL:
+	.4byte 0x01280200
+	.4byte 0x000F1500
+	.4byte 0x001D0B00
+	.4byte 0x002D0700
+	.4byte 0x00340600
+	.4byte 0x003F0500
+	.4byte 0x004E0400
+	.4byte 0x00680300
+	.4byte 0x00680300
+	.4byte 0x00680300
+	.4byte 0x00680300
+	.4byte 0x009C0200
+
+
+	.asciz "SISetSamplingRate: unknown TV format. Use default."
+	.balign 4
+	.4byte 0
+
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667B80
-lbl_80667B80:
+SamplingRate:
 	.skip 0x8

@@ -3,8 +3,8 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .fn sdpu_find_ccb_by_cid, global
-/* 803074E4 002D0AA4  3C 80 80 5C */	lis r4, lbl_805C36C0@ha
-/* 803074E8 002D0AA8  38 84 36 C0 */	addi r4, r4, lbl_805C36C0@l
+/* 803074E4 002D0AA4  3C 80 80 5C */	lis r4, sdp_cb@ha
+/* 803074E8 002D0AA8  38 84 36 C0 */	addi r4, r4, sdp_cb@l
 /* 803074EC 002D0AAC  8C 04 00 3C */	lbzu r0, 0x3c(r4)
 /* 803074F0 002D0AB0  2C 00 00 00 */	cmpwi r0, 0
 /* 803074F4 002D0AB4  41 82 00 18 */	beq .L_8030750C
@@ -48,11 +48,11 @@
 .fn sdpu_allocate_ccb, global
 /* 80307574 002D0B34  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80307578 002D0B38  7C 08 02 A6 */	mflr r0
-/* 8030757C 002D0B3C  3C 60 80 5C */	lis r3, lbl_805C36C0@ha
+/* 8030757C 002D0B3C  3C 60 80 5C */	lis r3, sdp_cb@ha
 /* 80307580 002D0B40  38 80 00 00 */	li r4, 0
 /* 80307584 002D0B44  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80307588 002D0B48  38 00 00 04 */	li r0, 4
-/* 8030758C 002D0B4C  38 63 36 C0 */	addi r3, r3, lbl_805C36C0@l
+/* 8030758C 002D0B4C  38 63 36 C0 */	addi r3, r3, sdp_cb@l
 /* 80307590 002D0B50  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80307594 002D0B54  3B E3 00 3C */	addi r31, r3, 0x3c
 /* 80307598 002D0B58  7C 09 03 A6 */	mtctr r0
@@ -333,9 +333,9 @@
 /* 8030794C 002D0F0C  90 01 00 34 */	stw r0, 0x34(r1)
 /* 80307950 002D0F10  39 61 00 30 */	addi r11, r1, 0x30
 /* 80307954 002D0F14  4B FB 27 F5 */	bl _savegpr_24
-/* 80307958 002D0F18  3C E0 80 5C */	lis r7, lbl_805C36C0@ha
+/* 80307958 002D0F18  3C E0 80 5C */	lis r7, sdp_cb@ha
 /* 8030795C 002D0F1C  7C 7F 1B 78 */	mr r31, r3
-/* 80307960 002D0F20  38 E7 36 C0 */	addi r7, r7, lbl_805C36C0@l
+/* 80307960 002D0F20  38 E7 36 C0 */	addi r7, r7, sdp_cb@l
 /* 80307964 002D0F24  7C 9E 23 78 */	mr r30, r4
 /* 80307968 002D0F28  88 07 46 30 */	lbz r0, 0x4630(r7)
 /* 8030796C 002D0F2C  7C B9 2B 78 */	mr r25, r5
@@ -354,8 +354,8 @@
 /* 8030799C 002D0F5C  2C 03 00 00 */	cmpwi r3, 0
 /* 803079A0 002D0F60  7C 7A 1B 78 */	mr r26, r3
 /* 803079A4 002D0F64  40 82 00 2C */	bne .L_803079D0
-/* 803079A8 002D0F68  3C 60 80 5C */	lis r3, lbl_805C36C0@ha
-/* 803079AC 002D0F6C  38 63 36 C0 */	addi r3, r3, lbl_805C36C0@l
+/* 803079A8 002D0F68  3C 60 80 5C */	lis r3, sdp_cb@ha
+/* 803079AC 002D0F6C  38 63 36 C0 */	addi r3, r3, sdp_cb@l
 /* 803079B0 002D0F70  88 03 46 30 */	lbz r0, 0x4630(r3)
 /* 803079B4 002D0F74  28 00 00 01 */	cmplwi r0, 1
 /* 803079B8 002D0F78  41 80 00 B0 */	blt .L_80307A68
@@ -898,9 +898,9 @@
 .endfn sdpu_get_len_from_type
 
 .fn sdpu_is_base_uuid, global
-/* 803080F0 002D16B0  3C A0 80 51 */	lis r5, lbl_8050E398@ha
+/* 803080F0 002D16B0  3C A0 80 51 */	lis r5, sdp_base_uuid@ha
 /* 803080F4 002D16B4  38 00 00 02 */	li r0, 2
-/* 803080F8 002D16B8  38 A5 E3 98 */	addi r5, r5, lbl_8050E398@l
+/* 803080F8 002D16B8  38 A5 E3 98 */	addi r5, r5, sdp_base_uuid@l
 /* 803080FC 002D16BC  38 C0 00 04 */	li r6, 4
 /* 80308100 002D16C0  7C 09 03 A6 */	mtctr r0
 .L_80308104:
@@ -1051,9 +1051,9 @@
 /* 80308304 002D18C4  38 61 00 18 */	addi r3, r1, 0x18
 /* 80308308 002D18C8  38 A0 00 10 */	li r5, 0x10
 /* 8030830C 002D18CC  4B CF BC F5 */	bl memcpy
-/* 80308310 002D18D0  3C 80 80 51 */	lis r4, lbl_8050E398@ha
+/* 80308310 002D18D0  3C 80 80 51 */	lis r4, sdp_base_uuid@ha
 /* 80308314 002D18D4  38 61 00 08 */	addi r3, r1, 8
-/* 80308318 002D18D8  38 84 E3 98 */	addi r4, r4, lbl_8050E398@l
+/* 80308318 002D18D8  38 84 E3 98 */	addi r4, r4, sdp_base_uuid@l
 /* 8030831C 002D18DC  38 A0 00 10 */	li r5, 0x10
 /* 80308320 002D18E0  4B CF BC E1 */	bl memcpy
 /* 80308324 002D18E4  28 1F 00 04 */	cmplwi r31, 4
@@ -1103,9 +1103,9 @@
 /* 803083C0 002D1980  38 61 00 08 */	addi r3, r1, 8
 /* 803083C4 002D1984  38 A0 00 10 */	li r5, 0x10
 /* 803083C8 002D1988  4B CF BC 39 */	bl memcpy
-/* 803083CC 002D198C  3C 80 80 51 */	lis r4, lbl_8050E398@ha
+/* 803083CC 002D198C  3C 80 80 51 */	lis r4, sdp_base_uuid@ha
 /* 803083D0 002D1990  38 61 00 18 */	addi r3, r1, 0x18
-/* 803083D4 002D1994  38 84 E3 98 */	addi r4, r4, lbl_8050E398@l
+/* 803083D4 002D1994  38 84 E3 98 */	addi r4, r4, sdp_base_uuid@l
 /* 803083D8 002D1998  38 A0 00 10 */	li r5, 0x10
 /* 803083DC 002D199C  4B CF BC 25 */	bl memcpy
 /* 803083E0 002D19A0  28 1D 00 04 */	cmplwi r29, 4
@@ -1209,6 +1209,7 @@
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .global jumptable_805494E8
 jumptable_805494E8:
 	.4byte .L_803078FC
@@ -1277,8 +1278,8 @@ jumptable_805495C0:
 	.4byte .L_803080B4
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
-.global lbl_8050E398
-lbl_8050E398:
+
+sdp_base_uuid:
 	.4byte 0
 	.4byte 0x00001000
 	.4byte 0x80000080

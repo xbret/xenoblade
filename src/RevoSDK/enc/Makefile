@@ -1,6 +1,6 @@
 ENC_FILES:=\
 	$(BUILD_DIR)/asm/RevoSDK/enc/encutility.o\
-	$(BUILD_DIR)/asm/RevoSDK/enc/enc.o\
+	$(BUILD_DIR)/asm/RevoSDK/enc/encjapanese.o\
 
 DEPENDS += $(ENC_FILES:.o=.d)
 

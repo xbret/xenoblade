@@ -47,11 +47,11 @@
 .balign 16, 0
 .fn MEMIntrruptHandler, global
 /* 803594F0 00322AB0  3D 00 CC 00 */	lis r8, 0xCC00
-/* 803594F4 00322AB4  3C 60 80 5D */	lis r3, lbl_805D43B0@ha
+/* 803594F4 00322AB4  3C 60 80 5D */	lis r3, __OSErrorTable@ha
 /* 803594F8 00322AB8  A0 A8 40 1E */	lhz r5, 0x401E(r8)
 /* 803594FC 00322ABC  38 00 00 00 */	li r0, 0
 /* 80359500 00322AC0  A0 E8 40 24 */	lhz r7, 0x4024(r8)
-/* 80359504 00322AC4  38 63 43 B0 */	addi r3, r3, lbl_805D43B0@l
+/* 80359504 00322AC4  38 63 43 B0 */	addi r3, r3, __OSErrorTable@l
 /* 80359508 00322AC8  A0 C8 40 22 */	lhz r6, 0x4022(r8)
 /* 8035950C 00322ACC  50 E6 81 9E */	rlwimi r6, r7, 0x10, 6, 0xf
 /* 80359510 00322AD0  B0 08 40 20 */	sth r0, 0x4020(r8)
@@ -517,8 +517,8 @@
 /* 80359BC8 00323188  38 9F 94 F0 */	addi r4, r31, MEMIntrruptHandler@l
 /* 80359BCC 0032318C  38 60 00 04 */	li r3, 4
 /* 80359BD0 00323190  4B FF EE 51 */	bl __OSSetInterruptHandler
-/* 80359BD4 00323194  3C 60 80 55 */	lis r3, lbl_80552AE0@ha
-/* 80359BD8 00323198  38 63 2A E0 */	addi r3, r3, lbl_80552AE0@l
+/* 80359BD4 00323194  3C 60 80 55 */	lis r3, ShutdownFunctionInfo@ha
+/* 80359BD8 00323198  38 63 2A E0 */	addi r3, r3, ShutdownFunctionInfo@l
 /* 80359BDC 0032319C  48 00 03 35 */	bl OSRegisterShutdownFunction
 /* 80359BE0 003231A0  3C 60 00 0C */	lis r3, 0x000BA2CF@ha
 /* 80359BE4 003231A4  38 63 A2 CF */	addi r3, r3, 0x000BA2CF@l
@@ -540,8 +540,7 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80552AE0
-lbl_80552AE0:
+ShutdownFunctionInfo:
 	.4byte OnShutdown
 	.4byte 0x0000007F
 	.4byte 0
@@ -549,6 +548,6 @@ lbl_80552AE0:
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667AA8
+#@LOCAL@__OSInitMemoryProtection__Fv@initialized
 lbl_80667AA8:
 	.skip 0x8

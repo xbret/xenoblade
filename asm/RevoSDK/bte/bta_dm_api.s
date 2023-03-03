@@ -5,20 +5,20 @@
 .fn BTA_EnableBluetooth, global
 /* 802E1100 002AA6C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E1104 002AA6C4  7C 08 02 A6 */	mflr r0
-/* 802E1108 002AA6C8  3C 80 80 5C */	lis r4, lbl_805BF694@ha
+/* 802E1108 002AA6C8  3C 80 80 5C */	lis r4, bta_dm_cb@ha
 /* 802E110C 002AA6CC  38 A0 01 04 */	li r5, 0x104
 /* 802E1110 002AA6D0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802E1114 002AA6D4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802E1118 002AA6D8  7C 7F 1B 78 */	mr r31, r3
-/* 802E111C 002AA6DC  38 64 F6 94 */	addi r3, r4, lbl_805BF694@l
+/* 802E111C 002AA6DC  38 64 F6 94 */	addi r3, r4, bta_dm_cb@l
 /* 802E1120 002AA6E0  38 80 00 00 */	li r4, 0
 /* 802E1124 002AA6E4  4B D2 32 2D */	bl memset
 /* 802E1128 002AA6E8  4B FF B7 B9 */	bl GKI_sched_lock
 /* 802E112C 002AA6EC  38 60 00 01 */	li r3, 1
-/* 802E1130 002AA6F0  38 82 BB D0 */	addi r4, r2, lbl_8066BF50@sda21
+/* 802E1130 002AA6F0  38 82 BB D0 */	addi r4, r2, bta_dm_reg@sda21
 /* 802E1134 002AA6F4  4B FF D9 99 */	bl bta_sys_register
 /* 802E1138 002AA6F8  38 60 00 02 */	li r3, 2
-/* 802E113C 002AA6FC  38 82 BB D8 */	addi r4, r2, lbl_8066BF58@sda21
+/* 802E113C 002AA6FC  38 82 BB D8 */	addi r4, r2, bta_dm_search_reg@sda21
 /* 802E1140 002AA700  4B FF D9 8D */	bl bta_sys_register
 /* 802E1144 002AA704  4B FF B7 AD */	bl GKI_sched_unlock
 /* 802E1148 002AA708  38 60 00 0C */	li r3, 0xc
@@ -243,9 +243,9 @@
 /* 802E1430 002AA9F0  4B D2 2F 21 */	bl memset
 /* 802E1434 002AA9F4  2C 1B 00 00 */	cmpwi r27, 0
 /* 802E1438 002AA9F8  41 82 00 68 */	beq .L_802E14A0
-/* 802E143C 002AA9FC  3C E0 80 51 */	lis r7, lbl_8050E018@ha
+/* 802E143C 002AA9FC  3C E0 80 51 */	lis r7, bta_service_id_to_btm_srv_id_lkup_tbl@ha
 /* 802E1440 002AAA00  38 A1 00 08 */	addi r5, r1, 8
-/* 802E1444 002AAA04  38 E7 E0 18 */	addi r7, r7, lbl_8050E018@l
+/* 802E1444 002AAA04  38 E7 E0 18 */	addi r7, r7, bta_service_id_to_btm_srv_id_lkup_tbl@l
 /* 802E1448 002AAA08  38 60 00 01 */	li r3, 1
 /* 802E144C 002AAA0C  48 00 00 40 */	b .L_802E148C
 .L_802E1450:
@@ -333,13 +333,11 @@
 .endfn BTA_DmSendHciReset
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
-.global lbl_8066BF50
-lbl_8066BF50:
+
+bta_dm_reg:
 	.4byte bta_dm_sm_execute
 	.4byte 0
 
-
-.global lbl_8066BF58
-lbl_8066BF58:
+bta_dm_search_reg:
 	.4byte bta_dm_search_sm_execute
 	.4byte 0

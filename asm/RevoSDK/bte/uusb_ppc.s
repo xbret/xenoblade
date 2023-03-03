@@ -5,26 +5,26 @@
 .fn uusb_CloseDeviceCB, local
 /* 802DD160 002A6720  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DD164 002A6724  7C 08 02 A6 */	mflr r0
-/* 802DD168 002A6728  3C 80 80 5C */	lis r4, lbl_805BBC60@ha
+/* 802DD168 002A6728  3C 80 80 5C */	lis r4, usb@ha
 /* 802DD16C 002A672C  90 01 00 24 */	stw r0, 0x24(r1)
 /* 802DD170 002A6730  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 802DD174 002A6734  3B E4 BC 60 */	addi r31, r4, lbl_805BBC60@l
+/* 802DD174 002A6734  3B E4 BC 60 */	addi r31, r4, usb@l
 /* 802DD178 002A6738  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 802DD17C 002A673C  3B C0 00 00 */	li r30, 0
 /* 802DD180 002A6740  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 802DD184 002A6744  7C 7D 1B 78 */	mr r29, r3
-/* 802DD188 002A6748  93 C4 BC 60 */	stw r30, lbl_805BBC60@l(r4)
+/* 802DD188 002A6748  93 C4 BC 60 */	stw r30, usb@l(r4)
 /* 802DD18C 002A674C  9B DF 00 10 */	stb r30, 0x10(r31)
 /* 802DD190 002A6750  9B DF 00 11 */	stb r30, 0x11(r31)
 /* 802DD194 002A6754  9B DF 00 12 */	stb r30, 0x12(r31)
 /* 802DD198 002A6758  9B DF 00 13 */	stb r30, 0x13(r31)
-/* 802DD19C 002A675C  9B CD B5 C8 */	stb r30, lbl_80667748@sda21(r13)
+/* 802DD19C 002A675C  9B CD B5 C8 */	stb r30, uusb_g_usb_devid_found@sda21(r13)
 /* 802DD1A0 002A6760  48 08 5A A1 */	bl IUSB_CloseLib
 /* 802DD1A4 002A6764  4B FF F8 5D */	bl GKI_disable
 /* 802DD1A8 002A6768  38 00 00 05 */	li r0, 5
 /* 802DD1AC 002A676C  98 1F 00 29 */	stb r0, 0x29(r31)
 /* 802DD1B0 002A6770  9B DF 00 28 */	stb r30, 0x28(r31)
-/* 802DD1B4 002A6774  9B CD B5 C9 */	stb r30, lbl_80667749@sda21(r13)
+/* 802DD1B4 002A6774  9B CD B5 C9 */	stb r30, uusb_g_trace_state_initialized@sda21(r13)
 /* 802DD1B8 002A6778  4B FF F8 19 */	bl GKI_enable
 /* 802DD1BC 002A677C  81 9F 00 20 */	lwz r12, 0x20(r31)
 /* 802DD1C0 002A6780  2C 0C 00 00 */	cmpwi r12, 0
@@ -52,8 +52,8 @@
 /* 802DD210 002A67D0  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 802DD214 002A67D4  7C 7F 1B 78 */	mr r31, r3
 /* 802DD218 002A67D8  93 C1 00 18 */	stw r30, 0x18(r1)
-/* 802DD21C 002A67DC  3F C0 80 5C */	lis r30, lbl_805BBC60@ha
-/* 802DD220 002A67E0  3B DE BC 60 */	addi r30, r30, lbl_805BBC60@l
+/* 802DD21C 002A67DC  3F C0 80 5C */	lis r30, usb@ha
+/* 802DD220 002A67E0  3B DE BC 60 */	addi r30, r30, usb@l
 /* 802DD224 002A67E4  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 802DD228 002A67E8  7C 9D 23 78 */	mr r29, r4
 /* 802DD22C 002A67EC  93 81 00 10 */	stw r28, 0x10(r1)
@@ -98,9 +98,9 @@
 /* 802DD2BC 002A687C  7F A4 EB 78 */	mr r4, r29
 /* 802DD2C0 002A6880  38 A5 00 04 */	addi r5, r5, 4
 /* 802DD2C4 002A6884  4B D2 6D 3D */	bl memcpy
-/* 802DD2C8 002A6888  3C A0 80 5C */	lis r5, lbl_805BBCC0@ha
+/* 802DD2C8 002A6888  3C A0 80 5C */	lis r5, __uusb_ppc_stack1@ha
 /* 802DD2CC 002A688C  3C E0 80 2E */	lis r7, bta_ci_hci_msg_handler@ha
-/* 802DD2D0 002A6890  38 A5 BC C0 */	addi r5, r5, lbl_805BBCC0@l
+/* 802DD2D0 002A6890  38 A5 BC C0 */	addi r5, r5, __uusb_ppc_stack1@l
 /* 802DD2D4 002A6894  7F 83 E3 78 */	mr r3, r28
 /* 802DD2D8 002A6898  39 05 10 00 */	addi r8, r5, 0x1000
 /* 802DD2DC 002A689C  38 E7 DE A0 */	addi r7, r7, bta_ci_hci_msg_handler@l
@@ -111,8 +111,8 @@
 /* 802DD2F0 002A68B0  7F A3 EB 78 */	mr r3, r29
 /* 802DD2F4 002A68B4  4B FF E1 ED */	bl GKI_freebuf
 .L_802DD2F8:
-/* 802DD2F8 002A68B8  3F C0 80 5C */	lis r30, lbl_805BBC60@ha
-/* 802DD2FC 002A68BC  3B FE BC 60 */	addi r31, r30, lbl_805BBC60@l
+/* 802DD2F8 002A68B8  3F C0 80 5C */	lis r30, usb@ha
+/* 802DD2FC 002A68BC  3B FE BC 60 */	addi r31, r30, usb@l
 .L_802DD300:
 /* 802DD300 002A68C0  88 7F 00 1C */	lbz r3, 0x1c(r31)
 /* 802DD304 002A68C4  4B FF E0 ED */	bl GKI_getpoolbuf
@@ -133,7 +133,7 @@
 /* 802DD340 002A6900  A0 1C 00 04 */	lhz r0, 4(r28)
 /* 802DD344 002A6904  38 A3 FF D8 */	addi r5, r3, -40
 /* 802DD348 002A6908  3C E0 80 2E */	lis r7, uusb_ReadIntrDataCB@ha
-/* 802DD34C 002A690C  80 7E BC 60 */	lwz r3, lbl_805BBC60@l(r30)
+/* 802DD34C 002A690C  80 7E BC 60 */	lwz r3, usb@l(r30)
 /* 802DD350 002A6910  7F A6 EB 78 */	mr r6, r29
 /* 802DD354 002A6914  88 9F 00 12 */	lbz r4, 0x12(r31)
 /* 802DD358 002A6918  7F 88 E3 78 */	mr r8, r28
@@ -145,9 +145,9 @@
 /* 802DD370 002A6930  7F 83 E3 78 */	mr r3, r28
 /* 802DD374 002A6934  4B FF E1 6D */	bl GKI_freebuf
 .L_802DD378:
-/* 802DD378 002A6938  3C 60 80 5C */	lis r3, lbl_805BBC60@ha
+/* 802DD378 002A6938  3C 60 80 5C */	lis r3, usb@ha
 /* 802DD37C 002A693C  38 00 00 01 */	li r0, 1
-/* 802DD380 002A6940  38 63 BC 60 */	addi r3, r3, lbl_805BBC60@l
+/* 802DD380 002A6940  38 63 BC 60 */	addi r3, r3, usb@l
 /* 802DD384 002A6944  98 03 00 2B */	stb r0, 0x2b(r3)
 .L_802DD388:
 /* 802DD388 002A6948  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -167,8 +167,8 @@
 /* 802DD3B8 002A6978  90 01 00 24 */	stw r0, 0x24(r1)
 /* 802DD3BC 002A697C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 802DD3C0 002A6980  93 C1 00 18 */	stw r30, 0x18(r1)
-/* 802DD3C4 002A6984  3F C0 80 5C */	lis r30, lbl_805BBC60@ha
-/* 802DD3C8 002A6988  3B DE BC 60 */	addi r30, r30, lbl_805BBC60@l
+/* 802DD3C4 002A6984  3F C0 80 5C */	lis r30, usb@ha
+/* 802DD3C8 002A6988  3B DE BC 60 */	addi r30, r30, usb@l
 /* 802DD3CC 002A698C  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 802DD3D0 002A6990  7C 9D 23 78 */	mr r29, r4
 /* 802DD3D4 002A6994  93 81 00 10 */	stw r28, 0x10(r1)
@@ -216,9 +216,9 @@
 /* 802DD470 002A6A30  48 01 C4 51 */	bl l2cap_link_chk_pkt_end
 /* 802DD474 002A6A34  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 802DD478 002A6A38  41 82 00 2C */	beq .L_802DD4A4
-/* 802DD47C 002A6A3C  3C A0 80 5C */	lis r5, lbl_805BCCC0@ha
+/* 802DD47C 002A6A3C  3C A0 80 5C */	lis r5, __uusb_ppc_stack2@ha
 /* 802DD480 002A6A40  3C E0 80 2E */	lis r7, bta_ci_hci_msg_handler@ha
-/* 802DD484 002A6A44  38 A5 CC C0 */	addi r5, r5, lbl_805BCCC0@l
+/* 802DD484 002A6A44  38 A5 CC C0 */	addi r5, r5, __uusb_ppc_stack2@l
 /* 802DD488 002A6A48  7F 83 E3 78 */	mr r3, r28
 /* 802DD48C 002A6A4C  39 05 10 00 */	addi r8, r5, 0x1000
 /* 802DD490 002A6A50  38 E7 DE A0 */	addi r7, r7, bta_ci_hci_msg_handler@l
@@ -230,8 +230,8 @@
 /* 802DD4A4 002A6A64  7F A3 EB 78 */	mr r3, r29
 /* 802DD4A8 002A6A68  4B FF E0 39 */	bl GKI_freebuf
 .L_802DD4AC:
-/* 802DD4AC 002A6A6C  3F C0 80 5C */	lis r30, lbl_805BBC60@ha
-/* 802DD4B0 002A6A70  3B FE BC 60 */	addi r31, r30, lbl_805BBC60@l
+/* 802DD4AC 002A6A6C  3F C0 80 5C */	lis r30, usb@ha
+/* 802DD4B0 002A6A70  3B FE BC 60 */	addi r31, r30, usb@l
 .L_802DD4B4:
 /* 802DD4B4 002A6A74  88 7F 00 1D */	lbz r3, 0x1d(r31)
 /* 802DD4B8 002A6A78  4B FF DF 39 */	bl GKI_getpoolbuf
@@ -252,7 +252,7 @@
 /* 802DD4F4 002A6AB4  A0 1C 00 04 */	lhz r0, 4(r28)
 /* 802DD4F8 002A6AB8  38 A3 FF D8 */	addi r5, r3, -40
 /* 802DD4FC 002A6ABC  3C E0 80 2E */	lis r7, uusb_ReadBulkDataCB@ha
-/* 802DD500 002A6AC0  80 7E BC 60 */	lwz r3, lbl_805BBC60@l(r30)
+/* 802DD500 002A6AC0  80 7E BC 60 */	lwz r3, usb@l(r30)
 /* 802DD504 002A6AC4  7F A6 EB 78 */	mr r6, r29
 /* 802DD508 002A6AC8  88 9F 00 11 */	lbz r4, 0x11(r31)
 /* 802DD50C 002A6ACC  7F 88 E3 78 */	mr r8, r28
@@ -287,15 +287,15 @@
 /* 802DD570 002A6B30  7C 83 23 78 */	mr r3, r4
 /* 802DD574 002A6B34  4B FF DF 6D */	bl GKI_freebuf
 /* 802DD578 002A6B38  4B FF F4 89 */	bl GKI_disable
-/* 802DD57C 002A6B3C  3C 80 80 5C */	lis r4, lbl_805BBC60@ha
-/* 802DD580 002A6B40  38 84 BC 60 */	addi r4, r4, lbl_805BBC60@l
+/* 802DD57C 002A6B3C  3C 80 80 5C */	lis r4, usb@ha
+/* 802DD580 002A6B40  38 84 BC 60 */	addi r4, r4, usb@l
 /* 802DD584 002A6B44  88 64 00 48 */	lbz r3, 0x48(r4)
 /* 802DD588 002A6B48  38 03 FF FF */	addi r0, r3, -1
 /* 802DD58C 002A6B4C  98 04 00 48 */	stb r0, 0x48(r4)
 /* 802DD590 002A6B50  4B FF F4 41 */	bl GKI_enable
 .L_802DD594:
-/* 802DD594 002A6B54  3F C0 80 5C */	lis r30, lbl_805BBC60@ha
-/* 802DD598 002A6B58  3B FE BC 60 */	addi r31, r30, lbl_805BBC60@l
+/* 802DD594 002A6B54  3F C0 80 5C */	lis r30, usb@ha
+/* 802DD598 002A6B58  3B FE BC 60 */	addi r31, r30, usb@l
 /* 802DD59C 002A6B5C  88 1F 00 48 */	lbz r0, 0x48(r31)
 /* 802DD5A0 002A6B60  28 00 00 05 */	cmplwi r0, 5
 /* 802DD5A4 002A6B64  40 80 00 7C */	bge .L_802DD620
@@ -310,7 +310,7 @@
 /* 802DD5C8 002A6B88  38 80 00 20 */	li r4, 0x20
 /* 802DD5CC 002A6B8C  A0 03 00 04 */	lhz r0, 4(r3)
 /* 802DD5D0 002A6B90  39 4A D5 50 */	addi r10, r10, uusb_WriteCtrlDataCB@l
-/* 802DD5D4 002A6B94  80 7E BC 60 */	lwz r3, lbl_805BBC60@l(r30)
+/* 802DD5D4 002A6B94  80 7E BC 60 */	lwz r3, usb@l(r30)
 /* 802DD5D8 002A6B98  38 A0 00 00 */	li r5, 0
 /* 802DD5DC 002A6B9C  7C DD 02 14 */	add r6, r29, r0
 /* 802DD5E0 002A6BA0  A1 1D 00 02 */	lhz r8, 2(r29)
@@ -353,15 +353,15 @@
 /* 802DD660 002A6C20  7C 83 23 78 */	mr r3, r4
 /* 802DD664 002A6C24  4B FF DE 7D */	bl GKI_freebuf
 /* 802DD668 002A6C28  4B FF F3 99 */	bl GKI_disable
-/* 802DD66C 002A6C2C  3C 80 80 5C */	lis r4, lbl_805BBC60@ha
-/* 802DD670 002A6C30  38 84 BC 60 */	addi r4, r4, lbl_805BBC60@l
+/* 802DD66C 002A6C2C  3C 80 80 5C */	lis r4, usb@ha
+/* 802DD670 002A6C30  38 84 BC 60 */	addi r4, r4, usb@l
 /* 802DD674 002A6C34  88 64 00 38 */	lbz r3, 0x38(r4)
 /* 802DD678 002A6C38  38 03 FF FF */	addi r0, r3, -1
 /* 802DD67C 002A6C3C  98 04 00 38 */	stb r0, 0x38(r4)
 /* 802DD680 002A6C40  4B FF F3 51 */	bl GKI_enable
 .L_802DD684:
-/* 802DD684 002A6C44  3F C0 80 5C */	lis r30, lbl_805BBC60@ha
-/* 802DD688 002A6C48  3B FE BC 60 */	addi r31, r30, lbl_805BBC60@l
+/* 802DD684 002A6C44  3F C0 80 5C */	lis r30, usb@ha
+/* 802DD688 002A6C48  3B FE BC 60 */	addi r31, r30, usb@l
 /* 802DD68C 002A6C4C  88 1F 00 38 */	lbz r0, 0x38(r31)
 /* 802DD690 002A6C50  28 00 00 05 */	cmplwi r0, 5
 /* 802DD694 002A6C54  40 80 00 70 */	bge .L_802DD704
@@ -373,7 +373,7 @@
 /* 802DD6AC 002A6C6C  A0 03 00 04 */	lhz r0, 4(r3)
 /* 802DD6B0 002A6C70  7C 7D 1B 78 */	mr r29, r3
 /* 802DD6B4 002A6C74  3C E0 80 2E */	lis r7, uusb_WriteBulkDataCB@ha
-/* 802DD6B8 002A6C78  80 7E BC 60 */	lwz r3, lbl_805BBC60@l(r30)
+/* 802DD6B8 002A6C78  80 7E BC 60 */	lwz r3, usb@l(r30)
 /* 802DD6BC 002A6C7C  7C DD 02 14 */	add r6, r29, r0
 /* 802DD6C0 002A6C80  88 9F 00 10 */	lbz r4, 0x10(r31)
 /* 802DD6C4 002A6C84  A0 BD 00 02 */	lhz r5, 2(r29)
@@ -413,21 +413,21 @@
 /* 802DD734 002A6CF4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802DD738 002A6CF8  7C 7F 1B 78 */	mr r31, r3
 /* 802DD73C 002A6CFC  93 C1 00 08 */	stw r30, 8(r1)
-/* 802DD740 002A6D00  3F C0 80 5C */	lis r30, lbl_805BBC60@ha
-/* 802DD744 002A6D04  38 7E BC 60 */	addi r3, r30, lbl_805BBC60@l
+/* 802DD740 002A6D00  3F C0 80 5C */	lis r30, usb@ha
+/* 802DD744 002A6D04  38 7E BC 60 */	addi r3, r30, usb@l
 /* 802DD748 002A6D08  4B D2 6C 09 */	bl memset
 /* 802DD74C 002A6D0C  4B FF F2 B5 */	bl GKI_disable
-/* 802DD750 002A6D10  3B DE BC 60 */	addi r30, r30, lbl_805BBC60@l
+/* 802DD750 002A6D10  3B DE BC 60 */	addi r30, r30, usb@l
 /* 802DD754 002A6D14  38 00 00 05 */	li r0, 5
 /* 802DD758 002A6D18  98 1E 00 29 */	stb r0, 0x29(r30)
 /* 802DD75C 002A6D1C  4B FF F2 75 */	bl GKI_enable
-/* 802DD760 002A6D20  88 0D B5 C9 */	lbz r0, lbl_80667749@sda21(r13)
+/* 802DD760 002A6D20  88 0D B5 C9 */	lbz r0, uusb_g_trace_state_initialized@sda21(r13)
 /* 802DD764 002A6D24  2C 00 00 00 */	cmpwi r0, 0
 /* 802DD768 002A6D28  40 82 00 14 */	bne .L_802DD77C
 /* 802DD76C 002A6D2C  38 60 00 00 */	li r3, 0
 /* 802DD770 002A6D30  38 00 00 01 */	li r0, 1
 /* 802DD774 002A6D34  98 7E 00 28 */	stb r3, 0x28(r30)
-/* 802DD778 002A6D38  98 0D B5 C9 */	stb r0, lbl_80667749@sda21(r13)
+/* 802DD778 002A6D38  98 0D B5 C9 */	stb r0, uusb_g_trace_state_initialized@sda21(r13)
 .L_802DD77C:
 /* 802DD77C 002A6D3C  48 06 57 75 */	bl IPCCltInit
 /* 802DD780 002A6D40  2C 03 00 00 */	cmpwi r3, 0
@@ -435,14 +435,14 @@
 /* 802DD788 002A6D48  48 08 53 B9 */	bl IUSB_OpenLib
 /* 802DD78C 002A6D4C  2C 03 00 00 */	cmpwi r3, 0
 /* 802DD790 002A6D50  40 82 01 80 */	bne .L_802DD910
-/* 802DD794 002A6D54  88 0D B5 D4 */	lbz r0, lbl_80667754@sda21(r13)
-/* 802DD798 002A6D58  3C 80 80 5C */	lis r4, lbl_805BBC60@ha
-/* 802DD79C 002A6D5C  38 84 BC 60 */	addi r4, r4, lbl_805BBC60@l
+/* 802DD794 002A6D54  88 0D B5 D4 */	lbz r0, __ntd_pid_vid_specified@sda21(r13)
+/* 802DD798 002A6D58  3C 80 80 5C */	lis r4, usb@ha
+/* 802DD79C 002A6D5C  38 84 BC 60 */	addi r4, r4, usb@l
 /* 802DD7A0 002A6D60  28 00 00 01 */	cmplwi r0, 1
 /* 802DD7A4 002A6D64  93 E4 00 24 */	stw r31, 0x24(r4)
 /* 802DD7A8 002A6D68  40 82 00 18 */	bne .L_802DD7C0
-/* 802DD7AC 002A6D6C  80 6D B5 D8 */	lwz r3, lbl_80667758@sda21(r13)
-/* 802DD7B0 002A6D70  80 0D B5 DC */	lwz r0, lbl_8066775C@sda21(r13)
+/* 802DD7AC 002A6D6C  80 6D B5 D8 */	lwz r3, __ntd_vid@sda21(r13)
+/* 802DD7B0 002A6D70  80 0D B5 DC */	lwz r0, __ntd_pid@sda21(r13)
 /* 802DD7B4 002A6D74  90 64 00 14 */	stw r3, 0x14(r4)
 /* 802DD7B8 002A6D78  90 04 00 18 */	stw r0, 0x18(r4)
 /* 802DD7BC 002A6D7C  48 00 00 14 */	b .L_802DD7D0
@@ -452,9 +452,9 @@
 /* 802DD7C8 002A6D88  90 64 00 14 */	stw r3, 0x14(r4)
 /* 802DD7CC 002A6D8C  90 04 00 18 */	stw r0, 0x18(r4)
 .L_802DD7D0:
-/* 802DD7D0 002A6D90  80 0D B5 D0 */	lwz r0, lbl_80667750@sda21(r13)
-/* 802DD7D4 002A6D94  3C C0 80 5C */	lis r6, lbl_805BBC60@ha
-/* 802DD7D8 002A6D98  38 C6 BC 60 */	addi r6, r6, lbl_805BBC60@l
+/* 802DD7D0 002A6D90  80 0D B5 D0 */	lwz r0, __ntd_ohci_init_flag@sda21(r13)
+/* 802DD7D4 002A6D94  3C C0 80 5C */	lis r6, usb@ha
+/* 802DD7D8 002A6D98  38 C6 BC 60 */	addi r6, r6, usb@l
 /* 802DD7DC 002A6D9C  38 60 00 00 */	li r3, 0
 /* 802DD7E0 002A6DA0  28 00 00 01 */	cmplwi r0, 1
 /* 802DD7E4 002A6DA4  98 66 00 10 */	stb r3, 0x10(r6)
@@ -464,7 +464,7 @@
 /* 802DD7F4 002A6DB4  98 66 00 12 */	stb r3, 0x12(r6)
 /* 802DD7F8 002A6DB8  98 66 00 13 */	stb r3, 0x13(r6)
 /* 802DD7FC 002A6DBC  40 82 00 48 */	bne .L_802DD844
-/* 802DD800 002A6DC0  80 6D B5 CC */	lwz r3, lbl_8066774C@sda21(r13)
+/* 802DD800 002A6DC0  80 6D B5 CC */	lwz r3, __ntd_ohci@sda21(r13)
 /* 802DD804 002A6DC4  2C 03 00 00 */	cmpwi r3, 0
 /* 802DD808 002A6DC8  40 82 00 1C */	bne .L_802DD824
 /* 802DD80C 002A6DCC  54 04 04 3E */	clrlwi r4, r0, 0x10
@@ -491,13 +491,13 @@
 .L_802DD858:
 /* 802DD858 002A6E18  2C 1E 00 00 */	cmpwi r30, 0
 /* 802DD85C 002A6E1C  41 80 00 08 */	blt .L_802DD864
-/* 802DD860 002A6E20  93 CD 97 4C */	stw r30, lbl_806658CC@sda21(r13)
+/* 802DD860 002A6E20  93 CD 97 4C */	stw r30, __ntd_ios_file_descriptor@sda21(r13)
 .L_802DD864:
 /* 802DD864 002A6E24  2C 1E 00 00 */	cmpwi r30, 0
 /* 802DD868 002A6E28  41 80 00 A8 */	blt .L_802DD910
-/* 802DD86C 002A6E2C  3F C0 80 5C */	lis r30, lbl_805BBC60@ha
+/* 802DD86C 002A6E2C  3F C0 80 5C */	lis r30, usb@ha
 /* 802DD870 002A6E30  38 60 00 02 */	li r3, 2
-/* 802DD874 002A6E34  3B DE BC 60 */	addi r30, r30, lbl_805BBC60@l
+/* 802DD874 002A6E34  3B DE BC 60 */	addi r30, r30, usb@l
 /* 802DD878 002A6E38  38 80 00 82 */	li r4, 0x82
 /* 802DD87C 002A6E3C  38 00 00 81 */	li r0, 0x81
 /* 802DD880 002A6E40  3B E0 00 00 */	li r31, 0
@@ -536,7 +536,7 @@
 /* 802DD900 002A6EC0  98 1E 00 29 */	stb r0, 0x29(r30)
 /* 802DD904 002A6EC4  4B FF F0 CD */	bl GKI_enable
 /* 802DD908 002A6EC8  38 00 00 01 */	li r0, 1
-/* 802DD90C 002A6ECC  90 0D 97 48 */	stw r0, lbl_806658C8@sda21(r13)
+/* 802DD90C 002A6ECC  90 0D 97 48 */	stw r0, wait4hci@sda21(r13)
 .L_802DD910:
 /* 802DD910 002A6ED0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802DD914 002A6ED4  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -552,9 +552,9 @@
 /* 802DD934 002A6EF4  7C 08 02 A6 */	mflr r0
 /* 802DD938 002A6EF8  90 01 00 24 */	stw r0, 0x24(r1)
 /* 802DD93C 002A6EFC  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 802DD940 002A6F00  3F E0 80 5C */	lis r31, lbl_805BBC60@ha
+/* 802DD940 002A6F00  3F E0 80 5C */	lis r31, usb@ha
 /* 802DD944 002A6F04  93 C1 00 18 */	stw r30, 0x18(r1)
-/* 802DD948 002A6F08  3B DF BC 60 */	addi r30, r31, lbl_805BBC60@l
+/* 802DD948 002A6F08  3B DF BC 60 */	addi r30, r31, usb@l
 /* 802DD94C 002A6F0C  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 802DD950 002A6F10  93 81 00 10 */	stw r28, 0x10(r1)
 /* 802DD954 002A6F14  7C 9C 23 78 */	mr r28, r4
@@ -594,7 +594,7 @@
 /* 802DD9D4 002A6F94  A0 1C 00 04 */	lhz r0, 4(r28)
 /* 802DD9D8 002A6F98  38 A3 FF D8 */	addi r5, r3, -40
 /* 802DD9DC 002A6F9C  3C E0 80 2E */	lis r7, uusb_ReadIntrDataCB@ha
-/* 802DD9E0 002A6FA0  80 7F BC 60 */	lwz r3, lbl_805BBC60@l(r31)
+/* 802DD9E0 002A6FA0  80 7F BC 60 */	lwz r3, usb@l(r31)
 /* 802DD9E4 002A6FA4  7F A6 EB 78 */	mr r6, r29
 /* 802DD9E8 002A6FA8  88 9E 00 12 */	lbz r4, 0x12(r30)
 /* 802DD9EC 002A6FAC  7F 88 E3 78 */	mr r8, r28
@@ -606,9 +606,9 @@
 /* 802DDA04 002A6FC4  7F 83 E3 78 */	mr r3, r28
 /* 802DDA08 002A6FC8  4B FF DA D9 */	bl GKI_freebuf
 .L_802DDA0C:
-/* 802DDA0C 002A6FCC  3F C0 80 5C */	lis r30, lbl_805BBC60@ha
+/* 802DDA0C 002A6FCC  3F C0 80 5C */	lis r30, usb@ha
 /* 802DDA10 002A6FD0  38 00 00 01 */	li r0, 1
-/* 802DDA14 002A6FD4  3B FE BC 60 */	addi r31, r30, lbl_805BBC60@l
+/* 802DDA14 002A6FD4  3B FE BC 60 */	addi r31, r30, usb@l
 /* 802DDA18 002A6FD8  98 1F 00 2B */	stb r0, 0x2b(r31)
 .L_802DDA1C:
 /* 802DDA1C 002A6FDC  88 7F 00 1D */	lbz r3, 0x1d(r31)
@@ -630,7 +630,7 @@
 /* 802DDA5C 002A701C  A0 1D 00 04 */	lhz r0, 4(r29)
 /* 802DDA60 002A7020  38 A3 FF D8 */	addi r5, r3, -40
 /* 802DDA64 002A7024  3C E0 80 2E */	lis r7, uusb_ReadBulkDataCB@ha
-/* 802DDA68 002A7028  80 7E BC 60 */	lwz r3, lbl_805BBC60@l(r30)
+/* 802DDA68 002A7028  80 7E BC 60 */	lwz r3, usb@l(r30)
 /* 802DDA6C 002A702C  7F 86 E3 78 */	mr r6, r28
 /* 802DDA70 002A7030  88 9F 00 11 */	lbz r4, 0x11(r31)
 /* 802DDA74 002A7034  7F A8 EB 78 */	mr r8, r29
@@ -643,7 +643,7 @@
 /* 802DDA90 002A7050  4B FF DA 51 */	bl GKI_freebuf
 .L_802DDA94:
 /* 802DDA94 002A7054  38 00 00 00 */	li r0, 0
-/* 802DDA98 002A7058  90 0D 97 48 */	stw r0, lbl_806658C8@sda21(r13)
+/* 802DDA98 002A7058  90 0D 97 48 */	stw r0, wait4hci@sda21(r13)
 .L_802DDA9C:
 /* 802DDA9C 002A705C  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 802DDAA0 002A7060  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -668,9 +668,9 @@
 /* 802DDAD8 002A7098  90 01 00 34 */	stw r0, 0x34(r1)
 /* 802DDADC 002A709C  39 61 00 30 */	addi r11, r1, 0x30
 /* 802DDAE0 002A70A0  4B FD C6 6D */	bl _savegpr_25
-/* 802DDAE4 002A70A4  3F A0 80 5C */	lis r29, lbl_805BBC60@ha
+/* 802DDAE4 002A70A4  3F A0 80 5C */	lis r29, usb@ha
 /* 802DDAE8 002A70A8  7C 99 23 78 */	mr r25, r4
-/* 802DDAEC 002A70AC  3B DD BC 60 */	addi r30, r29, lbl_805BBC60@l
+/* 802DDAEC 002A70AC  3B DD BC 60 */	addi r30, r29, usb@l
 /* 802DDAF0 002A70B0  7C BF 2B 78 */	mr r31, r5
 /* 802DDAF4 002A70B4  88 1E 00 29 */	lbz r0, 0x29(r30)
 /* 802DDAF8 002A70B8  3B 80 00 00 */	li r28, 0
@@ -713,7 +713,7 @@
 /* 802DDB80 002A7140  3D 40 80 2E */	lis r10, uusb_WriteCtrlDataCB@ha
 /* 802DDB84 002A7144  7F E8 FB 78 */	mr r8, r31
 /* 802DDB88 002A7148  7F 69 DB 78 */	mr r9, r27
-/* 802DDB8C 002A714C  80 7D BC 60 */	lwz r3, lbl_805BBC60@l(r29)
+/* 802DDB8C 002A714C  80 7D BC 60 */	lwz r3, usb@l(r29)
 /* 802DDB90 002A7150  39 4A D5 50 */	addi r10, r10, uusb_WriteCtrlDataCB@l
 /* 802DDB94 002A7154  38 80 00 20 */	li r4, 0x20
 /* 802DDB98 002A7158  38 A0 00 00 */	li r5, 0
@@ -723,9 +723,9 @@
 /* 802DDBA8 002A7168  7C 7C 1B 78 */	mr r28, r3
 /* 802DDBAC 002A716C  48 00 00 20 */	b .L_802DDBCC
 .L_802DDBB0:
-/* 802DDBB0 002A7170  3C 60 80 5C */	lis r3, lbl_805BBC60@ha
+/* 802DDBB0 002A7170  3C 60 80 5C */	lis r3, usb@ha
 /* 802DDBB4 002A7174  7F 44 D3 78 */	mr r4, r26
-/* 802DDBB8 002A7178  38 63 BC 60 */	addi r3, r3, lbl_805BBC60@l
+/* 802DDBB8 002A7178  38 63 BC 60 */	addi r3, r3, usb@l
 /* 802DDBBC 002A717C  38 63 00 3C */	addi r3, r3, 0x3c
 /* 802DDBC0 002A7180  4B FF DD 51 */	bl GKI_enqueue
 /* 802DDBC4 002A7184  38 60 00 00 */	li r3, 0
@@ -769,7 +769,7 @@
 /* 802DDC4C 002A720C  2C 00 00 00 */	cmpwi r0, 0
 /* 802DDC50 002A7210  40 82 00 2C */	bne .L_802DDC7C
 /* 802DDC54 002A7214  3C E0 80 2E */	lis r7, uusb_WriteBulkDataCB@ha
-/* 802DDC58 002A7218  80 7D BC 60 */	lwz r3, lbl_805BBC60@l(r29)
+/* 802DDC58 002A7218  80 7D BC 60 */	lwz r3, usb@l(r29)
 /* 802DDC5C 002A721C  88 9E 00 10 */	lbz r4, 0x10(r30)
 /* 802DDC60 002A7220  7F E5 FB 78 */	mr r5, r31
 /* 802DDC64 002A7224  7F 86 E3 78 */	mr r6, r28
@@ -779,9 +779,9 @@
 /* 802DDC74 002A7234  7C 7C 1B 78 */	mr r28, r3
 /* 802DDC78 002A7238  48 00 00 20 */	b .L_802DDC98
 .L_802DDC7C:
-/* 802DDC7C 002A723C  3C 60 80 5C */	lis r3, lbl_805BBC60@ha
+/* 802DDC7C 002A723C  3C 60 80 5C */	lis r3, usb@ha
 /* 802DDC80 002A7240  7F 64 DB 78 */	mr r4, r27
-/* 802DDC84 002A7244  38 63 BC 60 */	addi r3, r3, lbl_805BBC60@l
+/* 802DDC84 002A7244  38 63 BC 60 */	addi r3, r3, usb@l
 /* 802DDC88 002A7248  38 63 00 2C */	addi r3, r3, 0x2c
 /* 802DDC8C 002A724C  4B FF DC 85 */	bl GKI_enqueue
 /* 802DDC90 002A7250  38 60 00 00 */	li r3, 0
@@ -816,9 +816,9 @@
 /* 802DDCE8 002A72A8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802DDCEC 002A72AC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802DDCF0 002A72B0  4B FF ED 11 */	bl GKI_disable
-/* 802DDCF4 002A72B4  3C 60 80 5C */	lis r3, lbl_805BBC60@ha
+/* 802DDCF4 002A72B4  3C 60 80 5C */	lis r3, usb@ha
 /* 802DDCF8 002A72B8  38 00 00 00 */	li r0, 0
-/* 802DDCFC 002A72BC  3B E3 BC 60 */	addi r31, r3, lbl_805BBC60@l
+/* 802DDCFC 002A72BC  3B E3 BC 60 */	addi r31, r3, usb@l
 /* 802DDD00 002A72C0  98 1F 00 29 */	stb r0, 0x29(r31)
 /* 802DDD04 002A72C4  4B FF EC CD */	bl GKI_enable
 /* 802DDD08 002A72C8  A0 1F 00 34 */	lhz r0, 0x34(r31)
@@ -834,8 +834,8 @@
 /* 802DDD28 002A72E8  2C 00 00 00 */	cmpwi r0, 0
 /* 802DDD2C 002A72EC  40 82 FF EC */	bne .L_802DDD18
 .L_802DDD30:
-/* 802DDD30 002A72F0  3C 60 80 5C */	lis r3, lbl_805BBC60@ha
-/* 802DDD34 002A72F4  3B E3 BC 60 */	addi r31, r3, lbl_805BBC60@l
+/* 802DDD30 002A72F0  3C 60 80 5C */	lis r3, usb@ha
+/* 802DDD34 002A72F4  3B E3 BC 60 */	addi r31, r3, usb@l
 /* 802DDD38 002A72F8  A0 1F 00 44 */	lhz r0, 0x44(r31)
 /* 802DDD3C 002A72FC  2C 00 00 00 */	cmpwi r0, 0
 /* 802DDD40 002A7300  41 82 00 20 */	beq .L_802DDD60
@@ -849,9 +849,9 @@
 /* 802DDD58 002A7318  2C 00 00 00 */	cmpwi r0, 0
 /* 802DDD5C 002A731C  40 82 FF EC */	bne .L_802DDD48
 .L_802DDD60:
-/* 802DDD60 002A7320  3C 60 80 5C */	lis r3, lbl_805BBC60@ha
+/* 802DDD60 002A7320  3C 60 80 5C */	lis r3, usb@ha
 /* 802DDD64 002A7324  3C 80 80 2E */	lis r4, uusb_CloseDeviceCB@ha
-/* 802DDD68 002A7328  80 63 BC 60 */	lwz r3, lbl_805BBC60@l(r3)
+/* 802DDD68 002A7328  80 63 BC 60 */	lwz r3, usb@l(r3)
 /* 802DDD6C 002A732C  38 84 D1 60 */	addi r4, r4, uusb_CloseDeviceCB@l
 /* 802DDD70 002A7330  38 A0 00 00 */	li r5, 0
 /* 802DDD74 002A7334  48 08 51 CD */	bl IUSB_CloseDeviceAsync
@@ -869,13 +869,13 @@
 /* 802DDD98 002A7358  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802DDD9C 002A735C  48 08 4E A5 */	bl IUSB_CloseLib
 /* 802DDDA0 002A7360  4B FF EC 61 */	bl GKI_disable
-/* 802DDDA4 002A7364  3C 60 80 5C */	lis r3, lbl_805BBC60@ha
+/* 802DDDA4 002A7364  3C 60 80 5C */	lis r3, usb@ha
 /* 802DDDA8 002A7368  38 00 00 00 */	li r0, 0
-/* 802DDDAC 002A736C  38 63 BC 60 */	addi r3, r3, lbl_805BBC60@l
+/* 802DDDAC 002A736C  38 63 BC 60 */	addi r3, r3, usb@l
 /* 802DDDB0 002A7370  38 80 00 05 */	li r4, 5
 /* 802DDDB4 002A7374  98 83 00 29 */	stb r4, 0x29(r3)
 /* 802DDDB8 002A7378  98 03 00 28 */	stb r0, 0x28(r3)
-/* 802DDDBC 002A737C  98 0D B5 C9 */	stb r0, lbl_80667749@sda21(r13)
+/* 802DDDBC 002A737C  98 0D B5 C9 */	stb r0, uusb_g_trace_state_initialized@sda21(r13)
 /* 802DDDC0 002A7380  4B FF EC 11 */	bl GKI_enable
 /* 802DDDC4 002A7384  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802DDDC8 002A7388  7C 08 03 A6 */	mtlr r0
@@ -884,13 +884,13 @@
 .endfn UUSB_Unregister
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
-.global lbl_806658C8
-lbl_806658C8:
+
+.global wait4hci
+wait4hci:
 	.4byte 0x00000001
 
 
-.global lbl_806658CC
-lbl_806658CC:
+__ntd_ios_file_descriptor:
 	.4byte 0xFFFFFFFF
 
 
@@ -904,35 +904,36 @@ lbl_806658D4:
 	.4byte 0x6F683100
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
-.global lbl_80667748
-lbl_80667748:
+
+
+uusb_g_usb_devid_found:
 	.skip 0x1
-.global lbl_80667749
-lbl_80667749:
+
+uusb_g_trace_state_initialized:
 	.skip 0x3
-.global lbl_8066774C
-lbl_8066774C:
+
+__ntd_ohci:
 	.skip 0x4
-.global lbl_80667750
-lbl_80667750:
+
+__ntd_ohci_init_flag:
 	.skip 0x4
-.global lbl_80667754
-lbl_80667754:
+
+__ntd_pid_vid_specified:
 	.skip 0x4
-.global lbl_80667758
-lbl_80667758:
+
+__ntd_vid:
 	.skip 0x4
-.global lbl_8066775C
-lbl_8066775C:
+
+__ntd_pid:
 	.skip 0x4
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
-.global lbl_805BBC60
-lbl_805BBC60:
+
+usb:
 	.skip 0x60
-.global lbl_805BBCC0
-lbl_805BBCC0:
+
+__uusb_ppc_stack1:
 	.skip 0x1000
-.global lbl_805BCCC0
-lbl_805BCCC0:
+
+__uusb_ppc_stack2:
 	.skip 0x1000

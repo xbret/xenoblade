@@ -23,10 +23,10 @@
 /* 802EFBE4 002B91A4  38 A0 00 84 */	li r5, 0x84
 /* 802EFBE8 002B91A8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802EFBEC 002B91AC  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 802EFBF0 002B91B0  3F E0 80 5C */	lis r31, lbl_805BF4D0@ha
-/* 802EFBF4 002B91B4  38 7F F4 D0 */	addi r3, r31, lbl_805BF4D0@l
+/* 802EFBF0 002B91B0  3F E0 80 5C */	lis r31, btu_cb@ha
+/* 802EFBF4 002B91B4  38 7F F4 D0 */	addi r3, r31, btu_cb@l
 /* 802EFBF8 002B91B8  4B D1 47 59 */	bl memset
-/* 802EFBFC 002B91BC  38 7F F4 D0 */	addi r3, r31, lbl_805BF4D0@l
+/* 802EFBFC 002B91BC  38 7F F4 D0 */	addi r3, r31, btu_cb@l
 /* 802EFC00 002B91C0  38 80 02 A4 */	li r4, 0x2a4
 /* 802EFC04 002B91C4  38 00 00 01 */	li r0, 1
 /* 802EFC08 002B91C8  B0 83 00 7E */	sth r4, 0x7e(r3)
@@ -37,3 +37,10 @@
 /* 802EFC1C 002B91DC  38 21 00 10 */	addi r1, r1, 0x10
 /* 802EFC20 002B91E0  4E 80 00 20 */	blr
 .endfn BTE_Init
+
+.section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.global BT_BD_ANY
+BT_BD_ANY:
+	.4byte 0xFFFFFFFF
+	.4byte 0xFFFF0000

@@ -10,8 +10,8 @@
 /* 8035188C 0031AE4C  7C 78 E2 A6 */	mfspr r3, 0x398
 /* 80351890 0031AE50  54 63 1F FF */	rlwinm. r3, r3, 3, 0x1f, 0x1f
 /* 80351894 0031AE54  41 82 00 8C */	beq .L_80351920
-/* 80351898 0031AE58  3C 60 80 66 */	lis r3, lbl_80667A18@ha
-/* 8035189C 0031AE5C  38 63 7A 18 */	addi r3, r3, lbl_80667A18@l
+/* 80351898 0031AE58  3C 60 80 66 */	lis r3, ZeroPS@ha
+/* 8035189C 0031AE5C  38 63 7A 18 */	addi r3, r3, ZeroPS@l
 /* 803518A0 0031AE60  E0 03 00 00 */	psq_l f0, 0(r3), 0, qr0
 /* 803518A4 0031AE64  10 20 00 90 */	ps_mr f1, f0
 /* 803518A8 0031AE68  10 40 00 90 */	ps_mr f2, f0
@@ -45,7 +45,7 @@
 /* 80351918 0031AED8  13 C0 00 90 */	ps_mr f30, f0
 /* 8035191C 0031AEDC  13 E0 00 90 */	ps_mr f31, f0
 .L_80351920:
-/* 80351920 0031AEE0  C8 0D B8 A0 */	lfd f0, double_80667A20@sda21(r13)
+/* 80351920 0031AEE0  C8 0D B8 A0 */	lfd f0, ZeroF@sda21(r13)
 /* 80351924 0031AEE4  FC 20 00 90 */	fmr f1, f0
 /* 80351928 0031AEE8  FC 40 00 90 */	fmr f2, f0
 /* 8035192C 0031AEEC  FC 60 00 90 */	fmr f3, f0
@@ -118,7 +118,7 @@
 /* 80351A24 0031AFE4  7C 08 02 A6 */	mflr r0
 /* 80351A28 0031AFE8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80351A2C 0031AFEC  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80351A30 0031AFF0  80 6D B8 B8 */	lwz r3, lbl_80667A38@sda21(r13)
+/* 80351A30 0031AFF0  80 6D B8 B8 */	lwz r3, BootInfo@sda21(r13)
 /* 80351A34 0031AFF4  2C 03 00 00 */	cmpwi r3, 0
 /* 80351A38 0031AFF8  41 82 00 10 */	beq .L_80351A48
 /* 80351A3C 0031AFFC  80 03 00 2C */	lwz r0, 0x2c(r3)
@@ -281,7 +281,7 @@
 /* 80351C50 0031B210  38 60 00 21 */	li r3, 0x21
 /* 80351C54 0031B214  48 00 00 0C */	b .L_80351C60
 .L_80351C58:
-/* 80351C58 0031B218  80 6D B8 B8 */	lwz r3, lbl_80667A38@sda21(r13)
+/* 80351C58 0031B218  80 6D B8 B8 */	lwz r3, BootInfo@sda21(r13)
 /* 80351C5C 0031B21C  80 63 00 2C */	lwz r3, 0x2c(r3)
 .L_80351C60:
 /* 80351C60 0031B220  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -322,8 +322,8 @@
 /* 80351CE0 0031B2A0  48 00 22 D1 */	bl DCFlushRange
 /* 80351CE4 0031B2A4  48 00 01 60 */	b .L_80351E44
 .L_80351CE8:
-/* 80351CE8 0031B2A8  3F E0 80 5D */	lis r31, lbl_805D4340@ha
-/* 80351CEC 0031B2AC  3B FF 43 40 */	addi r31, r31, lbl_805D4340@l
+/* 80351CE8 0031B2A8  3F E0 80 5D */	lis r31, __OSRebootParams@ha
+/* 80351CEC 0031B2AC  3B FF 43 40 */	addi r31, r31, __OSRebootParams@l
 /* 80351CF0 0031B2B0  80 1F 00 0C */	lwz r0, 0xc(r31)
 /* 80351CF4 0031B2B4  2C 00 00 00 */	cmpwi r0, 0
 /* 80351CF8 0031B2B8  41 82 00 0C */	beq .L_80351D04
@@ -398,8 +398,8 @@
 /* 80351DE8 0031B3A8  7F C3 F3 78 */	mr r3, r30
 /* 80351DEC 0031B3AC  3C 80 00 04 */	lis r4, 4
 /* 80351DF0 0031B3B0  48 00 21 C1 */	bl DCFlushRange
-/* 80351DF4 0031B3B4  3C 60 80 5D */	lis r3, lbl_805D4340@ha
-/* 80351DF8 0031B3B8  38 63 43 40 */	addi r3, r3, lbl_805D4340@l
+/* 80351DF4 0031B3B4  3C 60 80 5D */	lis r3, __OSRebootParams@ha
+/* 80351DF8 0031B3B8  38 63 43 40 */	addi r3, r3, __OSRebootParams@l
 /* 80351DFC 0031B3BC  83 E3 00 10 */	lwz r31, 0x10(r3)
 /* 80351E00 0031B3C0  48 00 1B C1 */	bl OSGetArenaHi
 /* 80351E04 0031B3C4  7C 03 F8 40 */	cmplw r3, r31
@@ -460,8 +460,8 @@
 /* 80351EC0 0031B480  48 00 20 F1 */	bl DCFlushRange
 /* 80351EC4 0031B484  48 00 01 68 */	b .L_8035202C
 .L_80351EC8:
-/* 80351EC8 0031B488  3F E0 80 5D */	lis r31, lbl_805D4340@ha
-/* 80351ECC 0031B48C  3B FF 43 40 */	addi r31, r31, lbl_805D4340@l
+/* 80351EC8 0031B488  3F E0 80 5D */	lis r31, __OSRebootParams@ha
+/* 80351ECC 0031B48C  3B FF 43 40 */	addi r31, r31, __OSRebootParams@l
 /* 80351ED0 0031B490  80 1F 00 0C */	lwz r0, 0xc(r31)
 /* 80351ED4 0031B494  2C 00 00 00 */	cmpwi r0, 0
 /* 80351ED8 0031B498  41 82 00 14 */	beq .L_80351EEC
@@ -538,8 +538,8 @@
 /* 80351FD0 0031B590  7F C3 F3 78 */	mr r3, r30
 /* 80351FD4 0031B594  3C 80 00 04 */	lis r4, 4
 /* 80351FD8 0031B598  48 00 1F D9 */	bl DCFlushRange
-/* 80351FDC 0031B59C  3C 60 80 5D */	lis r3, lbl_805D4340@ha
-/* 80351FE0 0031B5A0  38 63 43 40 */	addi r3, r3, lbl_805D4340@l
+/* 80351FDC 0031B59C  3C 60 80 5D */	lis r3, __OSRebootParams@ha
+/* 80351FE0 0031B5A0  38 63 43 40 */	addi r3, r3, __OSRebootParams@l
 /* 80351FE4 0031B5A4  83 E3 00 10 */	lwz r31, 0x10(r3)
 /* 80351FE8 0031B5A8  48 00 19 C9 */	bl OSGetMEM2ArenaHi
 /* 80351FEC 0031B5AC  7C 03 F8 40 */	cmplw r3, r31
@@ -576,9 +576,9 @@
 /* 80352058 0031B618  41 82 00 08 */	beq .L_80352060
 /* 8035205C 0031B61C  48 00 00 20 */	b .L_8035207C
 .L_80352060:
-/* 80352060 0031B620  3C 80 80 5D */	lis r4, lbl_805D4360@ha
+/* 80352060 0031B620  3C 80 80 5D */	lis r4, DriveInfo@ha
 /* 80352064 0031B624  3C 60 80 00 */	lis r3, 0x800030E6@ha
-/* 80352068 0031B628  38 84 43 60 */	addi r4, r4, lbl_805D4360@l
+/* 80352068 0031B628  38 84 43 60 */	addi r4, r4, DriveInfo@l
 /* 8035206C 0031B62C  A0 04 00 02 */	lhz r0, 2(r4)
 /* 80352070 0031B630  60 00 80 00 */	ori r0, r0, 0x8000
 /* 80352074 0031B634  B0 03 30 E6 */	sth r0, 0x800030E6@l(r3)
@@ -789,18 +789,18 @@
 /* 80352350 0031B910  3F E0 80 55 */	lis r31, lbl_80551300@ha
 /* 80352354 0031B914  3B FF 13 00 */	addi r31, r31, lbl_80551300@l
 /* 80352358 0031B918  93 C1 00 28 */	stw r30, 0x28(r1)
-/* 8035235C 0031B91C  3F C0 80 5D */	lis r30, lbl_805D4340@ha
-/* 80352360 0031B920  3B DE 43 40 */	addi r30, r30, lbl_805D4340@l
+/* 8035235C 0031B91C  3F C0 80 5D */	lis r30, __OSRebootParams@ha
+/* 80352360 0031B920  3B DE 43 40 */	addi r30, r30, __OSRebootParams@l
 /* 80352364 0031B924  93 A1 00 24 */	stw r29, 0x24(r1)
 /* 80352368 0031B928  93 81 00 20 */	stw r28, 0x20(r1)
-/* 8035236C 0031B92C  80 0D B8 8C */	lwz r0, lbl_80667A0C@sda21(r13)
+/* 8035236C 0031B92C  80 0D B8 8C */	lwz r0, AreWeInitialized@sda21(r13)
 /* 80352370 0031B930  2C 00 00 00 */	cmpwi r0, 0
 /* 80352374 0031B934  40 82 05 00 */	bne .L_80352874
 /* 80352378 0031B938  38 00 00 01 */	li r0, 1
-/* 8035237C 0031B93C  90 0D B8 8C */	stw r0, lbl_80667A0C@sda21(r13)
+/* 8035237C 0031B93C  90 0D B8 8C */	stw r0, AreWeInitialized@sda21(r13)
 /* 80352380 0031B940  48 00 A6 11 */	bl __OSGetSystemTime
-/* 80352384 0031B944  90 8D B8 C4 */	stw r4, lbl_80667A44@sda21(r13)
-/* 80352388 0031B948  90 6D B8 C0 */	stw r3, lbl_80667A40@sda21(r13)
+/* 80352384 0031B944  90 8D B8 C4 */	stw r4, __OSStartTime+0x4@sda21(r13)
+/* 80352388 0031B948  90 6D B8 C0 */	stw r3, __OSStartTime@sda21(r13)
 /* 8035238C 0031B94C  48 00 66 25 */	bl OSDisableInterrupts
 /* 80352390 0031B950  38 7E 00 00 */	addi r3, r30, 0
 /* 80352394 0031B954  48 00 36 7D */	bl __OSGetExecParams
@@ -822,14 +822,14 @@
 /* 803523D4 0031B994  4B F8 89 2D */	bl PPCSetFpNonIEEEMode
 /* 803523D8 0031B998  38 00 00 00 */	li r0, 0
 /* 803523DC 0031B99C  3C 80 80 00 */	lis r4, 0x800000F4@ha
-/* 803523E0 0031B9A0  90 8D B8 B8 */	stw r4, lbl_80667A38@sda21(r13)
-/* 803523E4 0031B9A4  90 0D B8 B4 */	stw r0, lbl_80667A34@sda21(r13)
-/* 803523E8 0031B9A8  90 0D 97 F0 */	stw r0, lbl_80665970@sda21(r13)
+/* 803523E0 0031B9A0  90 8D B8 B8 */	stw r4, BootInfo@sda21(r13)
+/* 803523E4 0031B9A4  90 0D B8 B4 */	stw r0, BI2DebugFlag@sda21(r13)
+/* 803523E8 0031B9A8  90 0D 97 F0 */	stw r0, __DVDLongFileNameFlag@sda21(r13)
 /* 803523EC 0031B9AC  80 A4 00 F4 */	lwz r5, 0x800000F4@l(r4)
 /* 803523F0 0031B9B0  2C 05 00 00 */	cmpwi r5, 0
 /* 803523F4 0031B9B4  41 82 00 28 */	beq .L_8035241C
 /* 803523F8 0031B9B8  38 65 00 0C */	addi r3, r5, 0xc
-/* 803523FC 0031B9BC  90 6D B8 B4 */	stw r3, lbl_80667A34@sda21(r13)
+/* 803523FC 0031B9BC  90 6D B8 B4 */	stw r3, BI2DebugFlag@sda21(r13)
 /* 80352400 0031B9C0  80 05 00 24 */	lwz r0, 0x24(r5)
 /* 80352404 0031B9C4  90 0D B9 D0 */	stw r0, lbl_80667B50@sda21(r13)
 /* 80352408 0031B9C8  80 05 00 0C */	lwz r0, 0xc(r5)
@@ -842,14 +842,14 @@
 /* 80352420 0031B9E0  2C 00 00 00 */	cmpwi r0, 0
 /* 80352424 0031B9E4  41 82 00 1C */	beq .L_80352440
 /* 80352428 0031B9E8  88 64 30 E8 */	lbz r3, 0x30e8(r4)
-/* 8035242C 0031B9EC  38 0D B8 B0 */	addi r0, r13, lbl_80667A30@sda21
-/* 80352430 0031B9F0  90 6D B8 B0 */	stw r3, lbl_80667A30@sda21(r13)
-/* 80352434 0031B9F4  90 0D B8 B4 */	stw r0, lbl_80667A34@sda21(r13)
+/* 8035242C 0031B9EC  38 0D B8 B0 */	addi r0, r13, BI2DebugFlagHolder@sda21
+/* 80352430 0031B9F0  90 6D B8 B0 */	stw r3, BI2DebugFlagHolder@sda21(r13)
+/* 80352434 0031B9F4  90 0D B8 B4 */	stw r0, BI2DebugFlag@sda21(r13)
 /* 80352438 0031B9F8  88 04 30 E9 */	lbz r0, 0x30e9(r4)
 /* 8035243C 0031B9FC  90 0D B9 D0 */	stw r0, lbl_80667B50@sda21(r13)
 .L_80352440:
 /* 80352440 0031BA00  38 00 00 01 */	li r0, 1
-/* 80352444 0031BA04  90 0D 97 F0 */	stw r0, lbl_80665970@sda21(r13)
+/* 80352444 0031BA04  90 0D 97 F0 */	stw r0, __DVDLongFileNameFlag@sda21(r13)
 /* 80352448 0031BA08  3C 80 80 00 */	lis r4, 0x8000310C@ha
 /* 8035244C 0031BA0C  80 64 31 0C */	lwz r3, 0x8000310C@l(r4)
 /* 80352450 0031BA10  2C 03 00 00 */	cmpwi r3, 0
@@ -858,7 +858,7 @@
 /* 8035245C 0031BA1C  38 63 FD 00 */	addi r3, r3, _db_stack_addr@l
 /* 80352460 0031BA20  54 60 00 87 */	rlwinm. r0, r3, 0, 2, 3
 /* 80352464 0031BA24  40 82 00 58 */	bne .L_803524BC
-/* 80352468 0031BA28  80 8D B8 B8 */	lwz r4, lbl_80667A38@sda21(r13)
+/* 80352468 0031BA28  80 8D B8 B8 */	lwz r4, BootInfo@sda21(r13)
 /* 8035246C 0031BA2C  80 04 00 30 */	lwz r0, 0x30(r4)
 /* 80352470 0031BA30  2C 00 00 00 */	cmpwi r0, 0
 /* 80352474 0031BA34  40 82 00 08 */	bne .L_8035247C
@@ -866,11 +866,11 @@
 .L_8035247C:
 /* 8035247C 0031BA3C  7C 03 03 78 */	mr r3, r0
 .L_80352480:
-/* 80352480 0031BA40  80 8D B8 B8 */	lwz r4, lbl_80667A38@sda21(r13)
+/* 80352480 0031BA40  80 8D B8 B8 */	lwz r4, BootInfo@sda21(r13)
 /* 80352484 0031BA44  80 04 00 30 */	lwz r0, 0x30(r4)
 /* 80352488 0031BA48  2C 00 00 00 */	cmpwi r0, 0
 /* 8035248C 0031BA4C  40 82 00 34 */	bne .L_803524C0
-/* 80352490 0031BA50  80 8D B8 B4 */	lwz r4, lbl_80667A34@sda21(r13)
+/* 80352490 0031BA50  80 8D B8 B4 */	lwz r4, BI2DebugFlag@sda21(r13)
 /* 80352494 0031BA54  2C 04 00 00 */	cmpwi r4, 0
 /* 80352498 0031BA58  41 82 00 28 */	beq .L_803524C0
 /* 8035249C 0031BA5C  80 04 00 00 */	lwz r0, 0(r4)
@@ -889,7 +889,7 @@
 /* 803524C8 0031BA88  80 63 31 10 */	lwz r3, 0x80003110@l(r3)
 /* 803524CC 0031BA8C  2C 03 00 00 */	cmpwi r3, 0
 /* 803524D0 0031BA90  40 82 00 1C */	bne .L_803524EC
-/* 803524D4 0031BA94  80 6D B8 B8 */	lwz r3, lbl_80667A38@sda21(r13)
+/* 803524D4 0031BA94  80 6D B8 B8 */	lwz r3, BootInfo@sda21(r13)
 /* 803524D8 0031BA98  80 63 00 34 */	lwz r3, 0x34(r3)
 /* 803524DC 0031BA9C  2C 03 00 00 */	cmpwi r3, 0
 /* 803524E0 0031BAA0  40 82 00 0C */	bne .L_803524EC
@@ -907,7 +907,7 @@
 /* 8035250C 0031BACC  3C 04 F0 00 */	addis r0, r4, 0xf000
 /* 80352510 0031BAD0  28 00 00 00 */	cmplwi r0, 0
 /* 80352514 0031BAD4  40 82 00 34 */	bne .L_80352548
-/* 80352518 0031BAD8  80 8D B8 B4 */	lwz r4, lbl_80667A34@sda21(r13)
+/* 80352518 0031BAD8  80 8D B8 B4 */	lwz r4, BI2DebugFlag@sda21(r13)
 /* 8035251C 0031BADC  7C A3 2B 78 */	mr r3, r5
 /* 80352520 0031BAE0  2C 04 00 00 */	cmpwi r4, 0
 /* 80352524 0031BAE4  41 82 00 40 */	beq .L_80352564
@@ -952,17 +952,17 @@
 /* 803525B0 0031BB70  4B F8 86 F1 */	bl PPCMfhid2
 /* 803525B4 0031BB74  54 63 00 80 */	rlwinm r3, r3, 0, 2, 0
 /* 803525B8 0031BB78  4B F8 86 F9 */	bl PPCMthid2
-/* 803525BC 0031BB7C  80 0D B8 80 */	lwz r0, lbl_80667A00@sda21(r13)
+/* 803525BC 0031BB7C  80 0D B8 80 */	lwz r0, __OSInIPL@sda21(r13)
 /* 803525C0 0031BB80  2C 00 00 00 */	cmpwi r0, 0
 /* 803525C4 0031BB84  40 82 00 08 */	bne .L_803525CC
 /* 803525C8 0031BB88  48 00 75 89 */	bl __OSInitMemoryProtection
 .L_803525CC:
 /* 803525CC 0031BB8C  4B FF FA C5 */	bl ReportOSInfo
-/* 803525D0 0031BB90  80 8D 99 A8 */	lwz r4, lbl_80665B28@sda21(r13)
+/* 803525D0 0031BB90  80 8D 99 A8 */	lwz r4, __OSVersion@sda21(r13)
 /* 803525D4 0031BB94  38 6D 99 BC */	addi r3, r13, lbl_80665B3C@sda21
 /* 803525D8 0031BB98  4C C6 31 82 */	crclr 6
 /* 803525DC 0031BB9C  48 00 29 15 */	bl OSReport
-/* 803525E0 0031BBA0  80 6D B8 B4 */	lwz r3, lbl_80667A34@sda21(r13)
+/* 803525E0 0031BBA0  80 6D B8 B4 */	lwz r3, BI2DebugFlag@sda21(r13)
 /* 803525E4 0031BBA4  2C 03 00 00 */	cmpwi r3, 0
 /* 803525E8 0031BBA8  41 82 00 14 */	beq .L_803525FC
 /* 803525EC 0031BBAC  80 03 00 00 */	lwz r0, 0(r3)
@@ -970,10 +970,10 @@
 /* 803525F4 0031BBB4  41 80 00 08 */	blt .L_803525FC
 /* 803525F8 0031BBB8  4B F7 9A 35 */	bl EnableMetroTRKInterrupts
 .L_803525FC:
-/* 803525FC 0031BBBC  80 0D B8 84 */	lwz r0, lbl_80667A04@sda21(r13)
+/* 803525FC 0031BBBC  80 0D B8 84 */	lwz r0, __OSInNandBoot@sda21(r13)
 /* 80352600 0031BBC0  2C 00 00 00 */	cmpwi r0, 0
 /* 80352604 0031BBC4  40 82 00 18 */	bne .L_8035261C
-/* 80352608 0031BBC8  80 0D B8 F4 */	lwz r0, lbl_80667A74@sda21(r13)
+/* 80352608 0031BBC8  80 0D B8 F4 */	lwz r0, __OSInReboot@sda21(r13)
 /* 8035260C 0031BBCC  2C 00 00 00 */	cmpwi r0, 0
 /* 80352610 0031BBD0  40 82 00 0C */	bne .L_8035261C
 /* 80352614 0031BBD4  4B FF F6 6D */	bl ClearArena
@@ -981,10 +981,10 @@
 .L_8035261C:
 /* 8035261C 0031BBDC  48 00 63 B5 */	bl OSEnableInterrupts
 /* 80352620 0031BBE0  4B FF 08 D1 */	bl IPCCltInit
-/* 80352624 0031BBE4  80 0D B8 84 */	lwz r0, lbl_80667A04@sda21(r13)
+/* 80352624 0031BBE4  80 0D B8 84 */	lwz r0, __OSInNandBoot@sda21(r13)
 /* 80352628 0031BBE8  2C 00 00 00 */	cmpwi r0, 0
 /* 8035262C 0031BBEC  40 82 00 28 */	bne .L_80352654
-/* 80352630 0031BBF0  80 0D B8 F4 */	lwz r0, lbl_80667A74@sda21(r13)
+/* 80352630 0031BBF0  80 0D B8 F4 */	lwz r0, __OSInReboot@sda21(r13)
 /* 80352634 0031BBF4  2C 00 00 00 */	cmpwi r0, 0
 /* 80352638 0031BBF8  40 82 00 1C */	bne .L_80352654
 /* 8035263C 0031BBFC  48 00 AB C5 */	bl __OSInitSTM
@@ -995,7 +995,7 @@
 /* 8035264C 0031BC0C  41 82 FF F8 */	beq .L_80352644
 /* 80352650 0031BC10  48 00 BA 21 */	bl __OSInitNet
 .L_80352654:
-/* 80352654 0031BC14  80 0D B8 80 */	lwz r0, lbl_80667A00@sda21(r13)
+/* 80352654 0031BC14  80 0D B8 80 */	lwz r0, __OSInIPL@sda21(r13)
 /* 80352658 0031BC18  2C 00 00 00 */	cmpwi r0, 0
 /* 8035265C 0031BC1C  40 82 01 D4 */	bne .L_80352830
 /* 80352660 0031BC20  3C 60 80 00 */	lis r3, 0x8000315C@ha
@@ -1084,7 +1084,7 @@
 /* 80352798 0031BD58  48 19 BC FD */	bl OSPanic
 .L_8035279C:
 /* 8035279C 0031BD5C  4B FB 81 D5 */	bl DVDInit
-/* 803527A0 0031BD60  80 0D B8 88 */	lwz r0, lbl_80667A08@sda21(r13)
+/* 803527A0 0031BD60  80 0D B8 88 */	lwz r0, __OSIsGcam@sda21(r13)
 /* 803527A4 0031BD64  2C 00 00 00 */	cmpwi r0, 0
 /* 803527A8 0031BD68  41 82 00 18 */	beq .L_803527C0
 /* 803527AC 0031BD6C  3C 80 00 01 */	lis r4, 0x00009000@ha
@@ -1106,7 +1106,7 @@
 /* 803527E8 0031BDA8  38 A5 20 50 */	addi r5, r5, InquiryCallback@l
 /* 803527EC 0031BDAC  4B FB C2 05 */	bl DVDInquiryAsync
 .L_803527F0:
-/* 803527F0 0031BDB0  80 0D B8 80 */	lwz r0, lbl_80667A00@sda21(r13)
+/* 803527F0 0031BDB0  80 0D B8 80 */	lwz r0, __OSInIPL@sda21(r13)
 /* 803527F4 0031BDB4  2C 00 00 00 */	cmpwi r0, 0
 /* 803527F8 0031BDB8  41 82 00 0C */	beq .L_80352804
 /* 803527FC 0031BDBC  38 00 00 40 */	li r0, 0x40
@@ -1117,7 +1117,7 @@
 .L_8035280C:
 /* 8035280C 0031BDCC  28 00 00 80 */	cmplwi r0, 0x80
 /* 80352810 0031BDD0  40 82 00 20 */	bne .L_80352830
-/* 80352814 0031BDD4  80 0D B8 F4 */	lwz r0, lbl_80667A74@sda21(r13)
+/* 80352814 0031BDD4  80 0D B8 F4 */	lwz r0, __OSInReboot@sda21(r13)
 /* 80352818 0031BDD8  2C 00 00 00 */	cmpwi r0, 0
 /* 8035281C 0031BDDC  40 82 00 14 */	bne .L_80352830
 /* 80352820 0031BDE0  4B FB DB 61 */	bl __DVDCheckDevice
@@ -1125,21 +1125,21 @@
 /* 80352828 0031BDE8  40 82 00 08 */	bne .L_80352830
 /* 8035282C 0031BDEC  48 00 7E 35 */	bl OSReturnToMenu
 .L_80352830:
-/* 80352830 0031BDF0  80 0D B8 80 */	lwz r0, lbl_80667A00@sda21(r13)
+/* 80352830 0031BDF0  80 0D B8 80 */	lwz r0, __OSInIPL@sda21(r13)
 /* 80352834 0031BDF4  2C 00 00 00 */	cmpwi r0, 0
 /* 80352838 0031BDF8  40 82 00 14 */	bne .L_8035284C
-/* 8035283C 0031BDFC  80 0D B8 84 */	lwz r0, lbl_80667A04@sda21(r13)
+/* 8035283C 0031BDFC  80 0D B8 84 */	lwz r0, __OSInNandBoot@sda21(r13)
 /* 80352840 0031BE00  2C 00 00 00 */	cmpwi r0, 0
 /* 80352844 0031BE04  40 82 00 08 */	bne .L_8035284C
 /* 80352848 0031BE08  48 00 C6 59 */	bl __OSInitPlayTime
 .L_8035284C:
-/* 8035284C 0031BE0C  80 0D B8 80 */	lwz r0, lbl_80667A00@sda21(r13)
+/* 8035284C 0031BE0C  80 0D B8 80 */	lwz r0, __OSInIPL@sda21(r13)
 /* 80352850 0031BE10  2C 00 00 00 */	cmpwi r0, 0
 /* 80352854 0031BE14  40 82 00 20 */	bne .L_80352874
-/* 80352858 0031BE18  80 0D B8 84 */	lwz r0, lbl_80667A04@sda21(r13)
+/* 80352858 0031BE18  80 0D B8 84 */	lwz r0, __OSInNandBoot@sda21(r13)
 /* 8035285C 0031BE1C  2C 00 00 00 */	cmpwi r0, 0
 /* 80352860 0031BE20  40 82 00 14 */	bne .L_80352874
-/* 80352864 0031BE24  80 0D B8 F4 */	lwz r0, lbl_80667A74@sda21(r13)
+/* 80352864 0031BE24  80 0D B8 F4 */	lwz r0, __OSInReboot@sda21(r13)
 /* 80352868 0031BE28  2C 00 00 00 */	cmpwi r0, 0
 /* 8035286C 0031BE2C  40 82 00 08 */	bne .L_80352874
 /* 80352870 0031BE30  48 00 B3 91 */	bl __OSStartPlayRecord
@@ -1178,10 +1178,10 @@
 /* 803528EC 0031BEAC  4C C6 31 82 */	crclr 6
 /* 803528F0 0031BEB0  4B FB 68 D1 */	bl DBPrintf
 /* 803528F4 0031BEB4  3C 80 80 35 */	lis r4, __OSDBIntegrator@ha
-/* 803528F8 0031BEB8  3C A0 80 35 */	lis r5, __OSDBJump1@ha
+/* 803528F8 0031BEB8  3C A0 80 35 */	lis r5, __OSDBINTSTART@ha
 /* 803528FC 0031BEBC  38 84 2B 20 */	addi r4, r4, __OSDBIntegrator@l
 /* 80352900 0031BEC0  38 76 00 60 */	addi r3, r22, 0x60
-/* 80352904 0031BEC4  38 A5 2B 44 */	addi r5, r5, __OSDBJump1@l
+/* 80352904 0031BEC4  38 A5 2B 44 */	addi r5, r5, __OSDBINTSTART@l
 /* 80352908 0031BEC8  7E A4 28 50 */	subf r21, r4, r5
 /* 8035290C 0031BECC  7E A5 AB 78 */	mr r5, r21
 /* 80352910 0031BED0  4B CB 16 F1 */	bl memcpy
@@ -1194,16 +1194,16 @@
 /* 8035292C 0031BEEC  48 00 17 75 */	bl ICInvalidateRange
 .L_80352930:
 /* 80352930 0031BEF0  3F E0 80 35 */	lis r31, __OSDBJump@ha
-/* 80352934 0031BEF4  3C 60 80 35 */	lis r3, __OSSetExceptionHandler1@ha
+/* 80352934 0031BEF4  3C 60 80 35 */	lis r3, __OSDBINTEND@ha
 /* 80352938 0031BEF8  38 1F 2B 50 */	addi r0, r31, __OSDBJump@l
 /* 8035293C 0031BEFC  3B 1E 03 D0 */	addi r24, r30, 0x3d0
-/* 80352940 0031BF00  38 63 2B 54 */	addi r3, r3, __OSSetExceptionHandler1@l
+/* 80352940 0031BF00  38 63 2B 54 */	addi r3, r3, __OSDBINTEND@l
 /* 80352944 0031BF04  3B A0 00 00 */	li r29, 0
 /* 80352948 0031BF08  7E A0 18 50 */	subf r21, r0, r3
 /* 8035294C 0031BF0C  3E E0 60 00 */	lis r23, 0x6000
 /* 80352950 0031BF10  3E C0 80 35 */	lis r22, __DBVECTOR@ha
 .L_80352954:
-/* 80352954 0031BF14  80 6D B8 B4 */	lwz r3, lbl_80667A34@sda21(r13)
+/* 80352954 0031BF14  80 6D B8 B4 */	lwz r3, BI2DebugFlag@sda21(r13)
 /* 80352958 0031BF18  2C 03 00 00 */	cmpwi r3, 0
 /* 8035295C 0031BF1C  41 82 00 34 */	beq .L_80352990
 /* 80352960 0031BF20  80 03 00 00 */	lwz r0, 0(r3)
@@ -1284,37 +1284,37 @@
 /* 80352A70 0031C030  3C 60 80 00 */	lis r3, 0x80003000@ha
 /* 80352A74 0031C034  3C A0 80 35 */	lis r5, OSDefaultExceptionHandler@ha
 /* 80352A78 0031C038  38 83 30 00 */	addi r4, r3, 0x80003000@l
-/* 80352A7C 0031C03C  90 8D B8 90 */	stw r4, lbl_80667A10@sda21(r13)
+/* 80352A7C 0031C03C  90 8D B8 90 */	stw r4, OSExceptionTable@sda21(r13)
 /* 80352A80 0031C040  38 A5 2C 30 */	addi r5, r5, OSDefaultExceptionHandler@l
 /* 80352A84 0031C044  38 7E 04 88 */	addi r3, r30, 0x488
 /* 80352A88 0031C048  90 A4 00 00 */	stw r5, 0(r4)
-/* 80352A8C 0031C04C  80 8D B8 90 */	lwz r4, lbl_80667A10@sda21(r13)
+/* 80352A8C 0031C04C  80 8D B8 90 */	lwz r4, OSExceptionTable@sda21(r13)
 /* 80352A90 0031C050  90 A4 00 04 */	stw r5, 4(r4)
-/* 80352A94 0031C054  80 8D B8 90 */	lwz r4, lbl_80667A10@sda21(r13)
+/* 80352A94 0031C054  80 8D B8 90 */	lwz r4, OSExceptionTable@sda21(r13)
 /* 80352A98 0031C058  90 A4 00 08 */	stw r5, 8(r4)
-/* 80352A9C 0031C05C  80 8D B8 90 */	lwz r4, lbl_80667A10@sda21(r13)
+/* 80352A9C 0031C05C  80 8D B8 90 */	lwz r4, OSExceptionTable@sda21(r13)
 /* 80352AA0 0031C060  90 A4 00 0C */	stw r5, 0xc(r4)
-/* 80352AA4 0031C064  80 8D B8 90 */	lwz r4, lbl_80667A10@sda21(r13)
+/* 80352AA4 0031C064  80 8D B8 90 */	lwz r4, OSExceptionTable@sda21(r13)
 /* 80352AA8 0031C068  90 A4 00 10 */	stw r5, 0x10(r4)
-/* 80352AAC 0031C06C  80 8D B8 90 */	lwz r4, lbl_80667A10@sda21(r13)
+/* 80352AAC 0031C06C  80 8D B8 90 */	lwz r4, OSExceptionTable@sda21(r13)
 /* 80352AB0 0031C070  90 A4 00 14 */	stw r5, 0x14(r4)
-/* 80352AB4 0031C074  80 8D B8 90 */	lwz r4, lbl_80667A10@sda21(r13)
+/* 80352AB4 0031C074  80 8D B8 90 */	lwz r4, OSExceptionTable@sda21(r13)
 /* 80352AB8 0031C078  90 A4 00 18 */	stw r5, 0x18(r4)
-/* 80352ABC 0031C07C  80 8D B8 90 */	lwz r4, lbl_80667A10@sda21(r13)
+/* 80352ABC 0031C07C  80 8D B8 90 */	lwz r4, OSExceptionTable@sda21(r13)
 /* 80352AC0 0031C080  90 A4 00 1C */	stw r5, 0x1c(r4)
-/* 80352AC4 0031C084  80 8D B8 90 */	lwz r4, lbl_80667A10@sda21(r13)
+/* 80352AC4 0031C084  80 8D B8 90 */	lwz r4, OSExceptionTable@sda21(r13)
 /* 80352AC8 0031C088  90 A4 00 20 */	stw r5, 0x20(r4)
-/* 80352ACC 0031C08C  80 8D B8 90 */	lwz r4, lbl_80667A10@sda21(r13)
+/* 80352ACC 0031C08C  80 8D B8 90 */	lwz r4, OSExceptionTable@sda21(r13)
 /* 80352AD0 0031C090  90 A4 00 24 */	stw r5, 0x24(r4)
-/* 80352AD4 0031C094  80 8D B8 90 */	lwz r4, lbl_80667A10@sda21(r13)
+/* 80352AD4 0031C094  80 8D B8 90 */	lwz r4, OSExceptionTable@sda21(r13)
 /* 80352AD8 0031C098  90 A4 00 28 */	stw r5, 0x28(r4)
-/* 80352ADC 0031C09C  80 8D B8 90 */	lwz r4, lbl_80667A10@sda21(r13)
+/* 80352ADC 0031C09C  80 8D B8 90 */	lwz r4, OSExceptionTable@sda21(r13)
 /* 80352AE0 0031C0A0  90 A4 00 2C */	stw r5, 0x2c(r4)
-/* 80352AE4 0031C0A4  80 8D B8 90 */	lwz r4, lbl_80667A10@sda21(r13)
+/* 80352AE4 0031C0A4  80 8D B8 90 */	lwz r4, OSExceptionTable@sda21(r13)
 /* 80352AE8 0031C0A8  90 A4 00 30 */	stw r5, 0x30(r4)
-/* 80352AEC 0031C0AC  80 8D B8 90 */	lwz r4, lbl_80667A10@sda21(r13)
+/* 80352AEC 0031C0AC  80 8D B8 90 */	lwz r4, OSExceptionTable@sda21(r13)
 /* 80352AF0 0031C0B0  90 A4 00 34 */	stw r5, 0x34(r4)
-/* 80352AF4 0031C0B4  80 8D B8 90 */	lwz r4, lbl_80667A10@sda21(r13)
+/* 80352AF4 0031C0B4  80 8D B8 90 */	lwz r4, OSExceptionTable@sda21(r13)
 /* 80352AF8 0031C0B8  90 A4 00 38 */	stw r5, 0x38(r4)
 /* 80352AFC 0031C0BC  93 7C 00 00 */	stw r27, 0(r28)
 /* 80352B00 0031C0C0  4C C6 31 82 */	crclr 6
@@ -1342,16 +1342,16 @@
 
 #These extra labels shouldn't exist, but are needed because of alignment shenanigans
 
-__OSDBJump1:
+__OSDBINTSTART:
 .balign 16, 0
 .fn __OSDBJump, global
 /* 80352B50 0031C110  48 00 00 63 */	bla 0x60
 .endfn __OSDBJump
+__OSDBINTEND:
 
-__OSSetExceptionHandler1:
 .balign 16, 0
 .fn __OSSetExceptionHandler, global
-/* 80352B60 0031C120  80 AD B8 90 */	lwz r5, lbl_80667A10@sda21(r13)
+/* 80352B60 0031C120  80 AD B8 90 */	lwz r5, OSExceptionTable@sda21(r13)
 /* 80352B64 0031C124  54 60 15 BA */	rlwinm r0, r3, 2, 0x16, 0x1d
 /* 80352B68 0031C128  7C 65 00 2E */	lwzx r3, r5, r0
 /* 80352B6C 0031C12C  7C 85 01 2E */	stwx r4, r5, r0
@@ -1360,7 +1360,7 @@ __OSSetExceptionHandler1:
 
 .balign 16, 0
 .fn __OSGetExceptionHandler, global
-/* 80352B80 0031C140  80 8D B8 90 */	lwz r4, lbl_80667A10@sda21(r13)
+/* 80352B80 0031C140  80 8D B8 90 */	lwz r4, OSExceptionTable@sda21(r13)
 /* 80352B84 0031C144  54 60 15 BA */	rlwinm r0, r3, 2, 0x16, 0x1d
 /* 80352B88 0031C148  7C 64 00 2E */	lwzx r3, r4, r0
 /* 80352B8C 0031C14C  4E 80 00 20 */	blr
@@ -1490,12 +1490,12 @@ __OSSetExceptionHandler1:
 
 .balign 16, 0
 .fn OSGetAppGamename, global
-/* 80352D10 0031C2D0  80 0D B8 80 */	lwz r0, lbl_80667A00@sda21(r13)
+/* 80352D10 0031C2D0  80 0D B8 80 */	lwz r0, __OSInIPL@sda21(r13)
 /* 80352D14 0031C2D4  3C 60 80 00 */	lis r3, 0x80003194@ha
 /* 80352D18 0031C2D8  38 C3 31 94 */	addi r6, r3, 0x80003194@l
 /* 80352D1C 0031C2DC  2C 00 00 00 */	cmpwi r0, 0
 /* 80352D20 0031C2E0  41 82 00 0C */	beq .L_80352D2C
-/* 80352D24 0031C2E4  80 CD 99 D0 */	lwz r6, lbl_80665B50@sda21(r13)
+/* 80352D24 0031C2E4  80 CD 99 D0 */	lwz r6, AppGameNameForSysMenu@sda21(r13)
 /* 80352D28 0031C2E8  48 00 00 38 */	b .L_80352D60
 .L_80352D2C:
 /* 80352D2C 0031C2EC  88 63 31 94 */	lbz r3, 0x3194(r3)
@@ -1515,12 +1515,12 @@ __OSSetExceptionHandler1:
 /* 80352D5C 0031C31C  38 C3 31 80 */	addi r6, r3, 0x80003180@l
 .L_80352D60:
 /* 80352D60 0031C320  88 06 00 00 */	lbz r0, 0(r6)
-/* 80352D64 0031C324  38 AD B8 A8 */	addi r5, r13, lbl_80667A28@sda21
-/* 80352D68 0031C328  98 0D B8 A8 */	stb r0, lbl_80667A28@sda21(r13)
+/* 80352D64 0031C324  38 AD B8 A8 */	addi r5, r13, GameNameBuffer@sda21
+/* 80352D68 0031C328  98 0D B8 A8 */	stb r0, GameNameBuffer@sda21(r13)
 /* 80352D6C 0031C32C  38 00 00 00 */	li r0, 0
 /* 80352D70 0031C330  88 66 00 01 */	lbz r3, 1(r6)
 /* 80352D74 0031C334  98 65 00 01 */	stb r3, 1(r5)
-/* 80352D78 0031C338  38 6D B8 A8 */	addi r3, r13, lbl_80667A28@sda21
+/* 80352D78 0031C338  38 6D B8 A8 */	addi r3, r13, GameNameBuffer@sda21
 /* 80352D7C 0031C33C  88 86 00 02 */	lbz r4, 2(r6)
 /* 80352D80 0031C340  98 85 00 02 */	stb r4, 2(r5)
 /* 80352D84 0031C344  88 86 00 03 */	lbz r4, 3(r6)
@@ -1531,7 +1531,7 @@ __OSSetExceptionHandler1:
 
 .balign 16, 0
 .fn OSGetAppType, global
-/* 80352DA0 0031C360  80 0D B8 80 */	lwz r0, lbl_80667A00@sda21(r13)
+/* 80352DA0 0031C360  80 0D B8 80 */	lwz r0, __OSInIPL@sda21(r13)
 /* 80352DA4 0031C364  2C 00 00 00 */	cmpwi r0, 0
 /* 80352DA8 0031C368  41 82 00 0C */	beq .L_80352DB4
 /* 80352DAC 0031C36C  38 60 00 40 */	li r3, 0x40
@@ -1623,8 +1623,7 @@ lbl_80551300:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665B28
-lbl_80665B28:
+__OSVersion:
 	.4byte lbl_80551300
 
 
@@ -1656,8 +1655,7 @@ lbl_80665B48:
 	.balign 4
 
 
-.global lbl_80665B50
-lbl_80665B50:
+AppGameNameForSysMenu:
 	.4byte lbl_80665B48
 	.4byte 0
 
@@ -1674,51 +1672,55 @@ lbl_8066C18C:
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805D4340
-lbl_805D4340:
+.global __OSRebootParams
+__OSRebootParams:
 	.skip 0x20
-.global lbl_805D4360
-lbl_805D4360:
-	.skip 0x50
+
+.global DriveInfo
+DriveInfo:
+	.skip 0x20
+
+DriveBlock:
+	.skip 0x30
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667A00
-lbl_80667A00:
+.global __OSInIPL
+__OSInIPL:
 	.skip 0x4
-.global lbl_80667A04
-lbl_80667A04:
+
+.global __OSInNandBoot
+__OSInNandBoot:
 	.skip 0x4
-.global lbl_80667A08
-lbl_80667A08:
+
+.global __OSIsGcam
+__OSIsGcam:
 	.skip 0x4
-.global lbl_80667A0C
-lbl_80667A0C:
+
+AreWeInitialized:
 	.skip 0x4
-.global lbl_80667A10
-lbl_80667A10:
+
+OSExceptionTable:
 	.skip 0x8
-.global lbl_80667A18
-lbl_80667A18:
+
+ZeroPS:
 	.skip 0x8
-.global double_80667A20
-double_80667A20:
+
+ZeroF:
 	.skip 0x8
-.global lbl_80667A28
-lbl_80667A28:
+
+GameNameBuffer:
 	.skip 0x8
-.global lbl_80667A30
-lbl_80667A30:
+
+BI2DebugFlagHolder:
 	.skip 0x4
-.global lbl_80667A34
-lbl_80667A34:
+
+BI2DebugFlag:
 	.skip 0x4
-.global lbl_80667A38
-lbl_80667A38:
+
+BootInfo:
 	.skip 0x8
-.global lbl_80667A40
-lbl_80667A40:
-	.skip 0x4
-.global lbl_80667A44
-lbl_80667A44:
-	.skip 0x4
+
+.global __OSStartTime
+__OSStartTime:
+	.skip 0x8

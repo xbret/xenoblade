@@ -56,9 +56,9 @@
 /* 80354F9C 0031E55C  93 81 00 10 */	stw r28, 0x10(r1)
 /* 80354FA0 0031E560  7C 9C 23 78 */	mr r28, r4
 /* 80354FA4 0031E564  48 00 3A 0D */	bl OSDisableInterrupts
-/* 80354FA8 0031E568  3C 80 80 5D */	lis r4, lbl_805D43B0@ha
+/* 80354FA8 0031E568  3C 80 80 5D */	lis r4, __OSErrorTable@ha
 /* 80354FAC 0031E56C  57 A0 13 BA */	rlwinm r0, r29, 2, 0xe, 0x1d
-/* 80354FB0 0031E570  38 84 43 B0 */	addi r4, r4, lbl_805D43B0@l
+/* 80354FB0 0031E570  38 84 43 B0 */	addi r4, r4, __OSErrorTable@l
 /* 80354FB4 0031E574  28 1D 00 10 */	cmplwi r29, 0x10
 /* 80354FB8 0031E578  7F C4 00 2E */	lwzx r30, r4, r0
 /* 80354FBC 0031E57C  7C 7D 1B 78 */	mr r29, r3
@@ -162,7 +162,7 @@
 /* 8035513C 0031E6FC  42 00 FE F8 */	bdnz .L_80355034
 /* 80355140 0031E700  90 E9 01 94 */	stw r7, 0x194(r9)
 .L_80355144:
-/* 80355144 0031E704  80 8D 99 E8 */	lwz r4, lbl_80665B68@sda21(r13)
+/* 80355144 0031E704  80 8D 99 E8 */	lwz r4, __OSFpscrEnableBits@sda21(r13)
 /* 80355148 0031E708  80 C9 01 94 */	lwz r6, 0x194(r9)
 /* 8035514C 0031E70C  54 84 06 38 */	rlwinm r4, r4, 0, 0x18, 0x1c
 /* 80355150 0031E710  7C C4 23 78 */	or r4, r6, r4
@@ -172,7 +172,7 @@
 .L_80355160:
 /* 80355160 0031E720  2C 09 00 00 */	cmpwi r9, 0
 /* 80355164 0031E724  40 82 FE A4 */	bne .L_80355008
-/* 80355168 0031E728  80 0D 99 E8 */	lwz r0, lbl_80665B68@sda21(r13)
+/* 80355168 0031E728  80 0D 99 E8 */	lwz r0, __OSFpscrEnableBits@sda21(r13)
 /* 8035516C 0031E72C  63 FF 09 00 */	ori r31, r31, 0x900
 /* 80355170 0031E730  54 00 06 38 */	rlwinm r0, r0, 0, 0x18, 0x1c
 /* 80355174 0031E734  7C 64 03 78 */	or r4, r3, r0
@@ -249,8 +249,8 @@
 /* 8035526C 0031E82C  40 82 00 EC */	bne .L_80355358
 /* 80355270 0031E830  54 A0 02 D7 */	rlwinm. r0, r5, 0, 0xb, 0xb
 /* 80355274 0031E834  41 82 00 E4 */	beq .L_80355358
-/* 80355278 0031E838  3C 60 80 5D */	lis r3, lbl_805D43B0@ha
-/* 8035527C 0031E83C  38 63 43 B0 */	addi r3, r3, lbl_805D43B0@l
+/* 80355278 0031E838  3C 60 80 5D */	lis r3, __OSErrorTable@ha
+/* 8035527C 0031E83C  38 63 43 B0 */	addi r3, r3, __OSErrorTable@l
 /* 80355280 0031E840  80 03 00 40 */	lwz r0, 0x40(r3)
 /* 80355284 0031E844  2C 00 00 00 */	cmpwi r0, 0
 /* 80355288 0031E848  41 82 00 D0 */	beq .L_80355358
@@ -282,8 +282,8 @@
 /* 803552EC 0031E8AC  7F 86 E3 78 */	mr r6, r28
 /* 803552F0 0031E8B0  38 60 00 10 */	li r3, 0x10
 /* 803552F4 0031E8B4  4C C6 31 82 */	crclr 6
-/* 803552F8 0031E8B8  3C E0 80 5D */	lis r7, lbl_805D43B0@ha
-/* 803552FC 0031E8BC  38 E7 43 B0 */	addi r7, r7, lbl_805D43B0@l
+/* 803552F8 0031E8B8  3C E0 80 5D */	lis r7, __OSErrorTable@ha
+/* 803552FC 0031E8BC  38 E7 43 B0 */	addi r7, r7, __OSErrorTable@l
 /* 80355300 0031E8C0  81 87 00 40 */	lwz r12, 0x40(r7)
 /* 80355304 0031E8C4  7D 89 03 A6 */	mtctr r12
 /* 80355308 0031E8C8  4E 80 04 21 */	bctrl 
@@ -309,9 +309,9 @@
 /* 80355350 0031E910  7F 43 D3 78 */	mr r3, r26
 /* 80355354 0031E914  4B FF F6 1D */	bl OSLoadContext
 .L_80355358:
-/* 80355358 0031E918  3F 00 80 5D */	lis r24, lbl_805D43B0@ha
+/* 80355358 0031E918  3F 00 80 5D */	lis r24, __OSErrorTable@ha
 /* 8035535C 0031E91C  57 37 15 BA */	rlwinm r23, r25, 2, 0x16, 0x1d
-/* 80355360 0031E920  3B 18 43 B0 */	addi r24, r24, lbl_805D43B0@l
+/* 80355360 0031E920  3B 18 43 B0 */	addi r24, r24, __OSErrorTable@l
 /* 80355364 0031E924  7C 18 B8 2E */	lwzx r0, r24, r23
 /* 80355368 0031E928  2C 00 00 00 */	cmpwi r0, 0
 /* 8035536C 0031E92C  41 82 00 38 */	beq .L_803553A4
@@ -413,11 +413,11 @@
 /* 803554CC 0031EA8C  4C C6 31 82 */	crclr 6
 /* 803554D0 0031EA90  4B FF FA 21 */	bl OSReport
 .L_803554D4:
-/* 803554D4 0031EA94  A8 8D B9 14 */	lha r4, lbl_80667A94@sda21(r13)
+/* 803554D4 0031EA94  A8 8D B9 14 */	lha r4, __OSLastInterrupt@sda21(r13)
 /* 803554D8 0031EA98  38 7F 02 A4 */	addi r3, r31, 0x2a4
-/* 803554DC 0031EA9C  80 AD B9 10 */	lwz r5, lbl_80667A90@sda21(r13)
-/* 803554E0 0031EAA0  80 ED B9 18 */	lwz r7, lbl_80667A98@sda21(r13)
-/* 803554E4 0031EAA4  81 0D B9 1C */	lwz r8, lbl_80667A9C@sda21(r13)
+/* 803554DC 0031EA9C  80 AD B9 10 */	lwz r5, __OSLastInterruptSrr0@sda21(r13)
+/* 803554E0 0031EAA0  80 ED B9 18 */	lwz r7, __OSLastInterruptTime@sda21(r13)
+/* 803554E4 0031EAA4  81 0D B9 1C */	lwz r8, __OSLastInterruptTime+0x4@sda21(r13)
 /* 803554E8 0031EAA8  4C C6 31 82 */	crclr 6
 /* 803554EC 0031EAAC  4B FF FA 05 */	bl OSReport
 /* 803554F0 0031EAB0  4B F8 56 E1 */	bl PPCHalt
@@ -462,8 +462,8 @@ lbl_80551C50:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665B68
-lbl_80665B68:
+.global __OSFpscrEnableBits
+__OSFpscrEnableBits:
 	.4byte 0x000000F8
 
 
@@ -473,6 +473,6 @@ lbl_80665B6C:
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805D43B0
-lbl_805D43B0:
+.global __OSErrorTable
+__OSErrorTable:
 	.skip 0x50

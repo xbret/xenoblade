@@ -11953,19 +11953,32 @@ lbl_804FB800:
 
 .global lbl_804FB814
 lbl_804FB814:
-	.4byte 0x000C000D
-	.4byte 0x000F0010
-	.4byte 0x001A001F
-	.4byte 0x00200026
-	.4byte 0x0029002C
-	.4byte 0x003000B3
-	.4byte 0x00B700BB
-	.4byte 0x00BC00BD
-	.4byte 0x00C300C4
-	.4byte 0x00CD00DB
-	.4byte 0x016C016D
-	.4byte 0x0171019E
-	.4byte 0x02240225
+	.2byte 0x000C
+    .2byte 0x000D
+	.2byte 0x000F
+    .2byte 0x0010
+	.2byte 0x001A
+    .2byte 0x001F
+	.2byte 0x0020
+    .2byte 0x0026
+	.2byte 0x0029
+    .2byte 0x002C
+	.2byte 0x0030
+    .2byte 0x00B3
+	.2byte 0x00B7
+    .2byte 0x00BB
+	.2byte 0x00BC
+    .2byte 0x00BD
+	.2byte 0x00C3
+    .2byte 0x00C4
+	.2byte 0x00CD
+    .2byte 0x00DB
+	.2byte 0x016C
+    .2byte 0x016D
+	.2byte 0x0171
+    .2byte 0x019E
+	.2byte 0x0224
+    .2byte 0x0225
 	.4byte 0
 
 .global CUICfManager_typestr
@@ -12050,20 +12063,34 @@ lbl_804FB940:
 
 .global lbl_804FB9B8
 lbl_804FB9B8:
-	.4byte 0x00000001
-	.4byte 0x00560074
-	.4byte 0x00AE0105
-	.4byte 0x01140137
-	.4byte 0x015F01D1
-	.4byte 0x01D201F0
-	.4byte 0x02180263
-	.4byte 0x02720281
-	.4byte 0x02A902D1
-	.4byte 0x02EF032B
-	.4byte 0x032B0352
-	.4byte 0x0353037B
-	.4byte 0x039903C1
-	.4byte 0x03CA0000
+	.2byte 0x0000
+    .2byte 0x0001
+	.2byte 0x0056
+    .2byte 0x0074
+	.2byte 0x00AE
+    .2byte 0x0105
+	.2byte 0x0114
+    .2byte 0x0137
+	.2byte 0x015F
+    .2byte 0x01D1
+	.2byte 0x01D2
+    .2byte 0x01F0
+	.2byte 0x0218
+    .2byte 0x0263
+	.2byte 0x0272
+    .2byte 0x0281
+	.2byte 0x02A9
+    .2byte 0x02D1
+	.2byte 0x02EF
+    .2byte 0x032B
+	.2byte 0x032B
+    .2byte 0x0352
+	.2byte 0x0353
+    .2byte 0x037B
+	.2byte 0x0399
+    .2byte 0x03C1
+	.2byte 0x03CA
+    .2byte 0x0000
 
 
 .global lbl_804FB9F0

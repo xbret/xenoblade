@@ -5,9 +5,9 @@
 .fn hidd_proc_repage_timeout, global
 /* 802F3700 002BCCC0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F3704 002BCCC4  7C 08 02 A6 */	mflr r0
-/* 802F3708 002BCCC8  3C 60 80 5C */	lis r3, lbl_805C2570@ha
+/* 802F3708 002BCCC8  3C 60 80 5C */	lis r3, hd_cb@ha
 /* 802F370C 002BCCCC  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802F3710 002BCCD0  38 63 25 70 */	addi r3, r3, lbl_805C2570@l
+/* 802F3710 002BCCD0  38 63 25 70 */	addi r3, r3, hd_cb@l
 /* 802F3714 002BCCD4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802F3718 002BCCD8  88 03 01 41 */	lbz r0, 0x141(r3)
 /* 802F371C 002BCCDC  28 00 00 05 */	cmplwi r0, 5
@@ -18,8 +18,8 @@
 /* 802F3730 002BCCF0  38 84 66 C0 */	addi r4, r4, lbl_805466C0@l
 /* 802F3734 002BCCF4  4B FE A8 6D */	bl LogMsg_0
 .L_802F3738:
-/* 802F3738 002BCCF8  3F E0 80 5C */	lis r31, lbl_805C2570@ha
-/* 802F373C 002BCCFC  3B FF 25 70 */	addi r31, r31, lbl_805C2570@l
+/* 802F3738 002BCCF8  3F E0 80 5C */	lis r31, hd_cb@ha
+/* 802F373C 002BCCFC  3B FF 25 70 */	addi r31, r31, hd_cb@l
 /* 802F3740 002BCD00  88 7F 00 09 */	lbz r3, 9(r31)
 /* 802F3744 002BCD04  38 03 00 01 */	addi r0, r3, 1
 /* 802F3748 002BCD08  98 1F 00 09 */	stb r0, 9(r31)
@@ -61,8 +61,16 @@
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .global lbl_805466C0
 lbl_805466C0:
 	.asciz "hidd_proc_repage_timeout"
 	.balign 4
 	.4byte 0
+
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global hd_cb
+hd_cb:
+	.skip 0x148

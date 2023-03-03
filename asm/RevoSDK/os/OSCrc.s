@@ -89,7 +89,7 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_80518D10
+#@LOCAL@OSCalcCRC16__FPCvUl@crc16_table
 lbl_80518D10:
 	.4byte 0x0000CC01
 	.4byte 0xD8011400

@@ -54,7 +54,7 @@
 
 .balign 16, 0
 .fn LogMsg_0, global
-/* 802DDFA0 002A7560  88 0D B5 E8 */	lbz r0, lbl_80667768@sda21(r13)
+/* 802DDFA0 002A7560  88 0D B5 E8 */	lbz r0, bte_target_mode@sda21(r13)
 /* 802DDFA4 002A7564  2C 00 00 00 */	cmpwi r0, 0
 /* 802DDFA8 002A7568  4C 82 00 20 */	bnelr 
 /* 802DDFAC 002A756C  4C C6 31 82 */	crclr 6
@@ -64,7 +64,7 @@
 
 .balign 16, 0
 .fn LogMsg_1, global
-/* 802DDFC0 002A7580  88 0D B5 E8 */	lbz r0, lbl_80667768@sda21(r13)
+/* 802DDFC0 002A7580  88 0D B5 E8 */	lbz r0, bte_target_mode@sda21(r13)
 /* 802DDFC4 002A7584  2C 00 00 00 */	cmpwi r0, 0
 /* 802DDFC8 002A7588  4C 82 00 20 */	bnelr 
 /* 802DDFCC 002A758C  4C C6 31 82 */	crclr 6
@@ -74,7 +74,7 @@
 
 .balign 16, 0
 .fn LogMsg_2, global
-/* 802DDFE0 002A75A0  88 0D B5 E8 */	lbz r0, lbl_80667768@sda21(r13)
+/* 802DDFE0 002A75A0  88 0D B5 E8 */	lbz r0, bte_target_mode@sda21(r13)
 /* 802DDFE4 002A75A4  2C 00 00 00 */	cmpwi r0, 0
 /* 802DDFE8 002A75A8  4C 82 00 20 */	bnelr 
 /* 802DDFEC 002A75AC  4C C6 31 82 */	crclr 6
@@ -84,7 +84,7 @@
 
 .balign 16, 0
 .fn LogMsg_3, global
-/* 802DE000 002A75C0  88 0D B5 E8 */	lbz r0, lbl_80667768@sda21(r13)
+/* 802DE000 002A75C0  88 0D B5 E8 */	lbz r0, bte_target_mode@sda21(r13)
 /* 802DE004 002A75C4  2C 00 00 00 */	cmpwi r0, 0
 /* 802DE008 002A75C8  4C 82 00 20 */	bnelr 
 /* 802DE00C 002A75CC  4C C6 31 82 */	crclr 6
@@ -94,7 +94,7 @@
 
 .balign 16, 0
 .fn LogMsg_4, global
-/* 802DE020 002A75E0  88 0D B5 E8 */	lbz r0, lbl_80667768@sda21(r13)
+/* 802DE020 002A75E0  88 0D B5 E8 */	lbz r0, bte_target_mode@sda21(r13)
 /* 802DE024 002A75E4  2C 00 00 00 */	cmpwi r0, 0
 /* 802DE028 002A75E8  4C 82 00 20 */	bnelr 
 /* 802DE02C 002A75EC  4C C6 31 82 */	crclr 6
@@ -104,7 +104,7 @@
 
 .balign 16, 0
 .fn LogMsg_5, global
-/* 802DE040 002A7600  88 0D B5 E8 */	lbz r0, lbl_80667768@sda21(r13)
+/* 802DE040 002A7600  88 0D B5 E8 */	lbz r0, bte_target_mode@sda21(r13)
 /* 802DE044 002A7604  2C 00 00 00 */	cmpwi r0, 0
 /* 802DE048 002A7608  4C 82 00 20 */	bnelr 
 /* 802DE04C 002A760C  4C C6 31 82 */	crclr 6
@@ -114,7 +114,7 @@
 
 .balign 16, 0
 .fn LogMsg_6, global
-/* 802DE060 002A7620  88 0D B5 E8 */	lbz r0, lbl_80667768@sda21(r13)
+/* 802DE060 002A7620  88 0D B5 E8 */	lbz r0, bte_target_mode@sda21(r13)
 /* 802DE064 002A7624  2C 00 00 00 */	cmpwi r0, 0
 /* 802DE068 002A7628  4C 82 00 20 */	bnelr 
 /* 802DE06C 002A762C  4C C6 31 82 */	crclr 6
@@ -123,12 +123,16 @@
 .endfn LogMsg_6
 
 
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.global lbl_80665908
+lbl_80665908:
+	.asciz "%s\n"
+	.4byte 0
+
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+#@LOCAL@LogMsg__FUlPCce@tmp
 .global lbl_805BDCC0
 lbl_805BDCC0:
 	.skip 0x7E0
-
-.section .sbss, "wa"  # 0x80666600 - 0x8066836F
-.global lbl_80667768
-lbl_80667768:
-	.skip 0x4

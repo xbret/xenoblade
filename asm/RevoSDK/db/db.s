@@ -7,12 +7,12 @@
 /* 80309110 002D26D0  3C 80 80 00 */	lis r4, 0x80000040@ha
 /* 80309114 002D26D4  3C 60 80 31 */	lis r3, __DBExceptionDestination@ha
 /* 80309118 002D26D8  38 04 00 40 */	addi r0, r4, 0x80000040@l
-/* 8030911C 002D26DC  90 0D B6 00 */	stw r0, lbl_80667780@sda21(r13)
+/* 8030911C 002D26DC  90 0D B6 00 */	stw r0, __DBInterface@sda21(r13)
 /* 80309120 002D26E0  38 63 91 90 */	addi r3, r3, __DBExceptionDestination@l
 /* 80309124 002D26E4  3C 63 80 00 */	addis r3, r3, 0x8000
 /* 80309128 002D26E8  90 64 00 48 */	stw r3, 0x48(r4)
 /* 8030912C 002D26EC  38 00 00 01 */	li r0, 1
-/* 80309130 002D26F0  90 0D B6 04 */	stw r0, lbl_80667784@sda21(r13)
+/* 80309130 002D26F0  90 0D B6 04 */	stw r0, DBVerbose@sda21(r13)
 /* 80309134 002D26F4  4E 80 00 20 */	blr
 .endfn DBInit
 
@@ -48,7 +48,7 @@
 
 .balign 16, 0
 .fn __DBIsExceptionMarked, global
-/* 803091A0 002D2760  80 8D B6 00 */	lwz r4, lbl_80667780@sda21(r13)
+/* 803091A0 002D2760  80 8D B6 00 */	lwz r4, __DBInterface@sda21(r13)
 /* 803091A4 002D2764  38 00 00 01 */	li r0, 1
 /* 803091A8 002D2768  7C 00 18 30 */	slw r0, r0, r3
 /* 803091AC 002D276C  80 64 00 04 */	lwz r3, 4(r4)
@@ -89,9 +89,9 @@ lbl_805495E0:
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667780
-lbl_80667780:
+
+__DBInterface:
 	.skip 0x4
-.global lbl_80667784
-lbl_80667784:
+
+DBVerbose:
 	.skip 0x4

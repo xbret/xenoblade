@@ -120,8 +120,8 @@
 /* 80361554 0032AB14  38 81 00 08 */	addi r4, r1, 8
 /* 80361558 0032AB18  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8036155C 0032AB1C  93 C1 00 18 */	stw r30, 0x18(r1)
-/* 80361560 0032AB20  3F C0 80 56 */	lis r30, lbl_8055F0D8@ha
-/* 80361564 0032AB24  3B DE F0 D8 */	addi r30, r30, lbl_8055F0D8@l
+/* 80361560 0032AB20  3F C0 80 56 */	lis r30, ProductAreaAndStringTbl@ha
+/* 80361564 0032AB24  3B DE F0 D8 */	addi r30, r30, ProductAreaAndStringTbl@l
 /* 80361568 0032AB28  4B FF FE 69 */	bl __SCF1
 /* 8036156C 0032AB2C  2C 03 00 00 */	cmpwi r3, 0
 /* 80361570 0032AB30  41 82 00 38 */	beq .L_803615A8
@@ -153,7 +153,7 @@
 .endfn SCGetProductArea
 
 .balign 16, 0
-.fn SCGetProductSN, global
+.fn SCGetProductGameRegion, global
 /* 803615D0 0032AB90  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803615D4 0032AB94  7C 08 02 A6 */	mflr r0
 /* 803615D8 0032AB98  38 6D 9B 58 */	addi r3, r13, lbl_80665CD8@sda21
@@ -162,8 +162,8 @@
 /* 803615E4 0032ABA4  38 81 00 08 */	addi r4, r1, 8
 /* 803615E8 0032ABA8  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 803615EC 0032ABAC  93 C1 00 18 */	stw r30, 0x18(r1)
-/* 803615F0 0032ABB0  3F C0 80 56 */	lis r30, lbl_8055F120@ha
-/* 803615F4 0032ABB4  3B DE F1 20 */	addi r30, r30, lbl_8055F120@l
+/* 803615F0 0032ABB0  3F C0 80 56 */	lis r30, ProductGameRegionAndStringTbl@ha
+/* 803615F4 0032ABB4  3B DE F1 20 */	addi r30, r30, ProductGameRegionAndStringTbl@l
 /* 803615F8 0032ABB8  4B FF FD D9 */	bl __SCF1
 /* 803615FC 0032ABBC  2C 03 00 00 */	cmpwi r3, 0
 /* 80361600 0032ABC0  41 82 00 38 */	beq .L_80361638
@@ -192,40 +192,55 @@
 /* 80361648 0032AC08  7C 08 03 A6 */	mtlr r0
 /* 8036164C 0032AC0C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80361650 0032AC10  4E 80 00 20 */	blr 
-.endfn SCGetProductSN
+.endfn SCGetProductGameRegion
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8055F0D8
-lbl_8055F0D8:
-	.4byte 0x004A504E
-	.4byte 0x00015553
-	.4byte 0x41000245
-	.4byte 0x55520003
-	.4byte 0x41555300
-	.4byte 0x04425241
-	.4byte 0x00055457
-	.4byte 0x4E000552
-	.4byte 0x4F430006
-	.4byte 0x4B4F5200
-	.4byte 0x07484B47
-	.4byte 0x00084153
-	.4byte 0x4900094C
-	.4byte 0x544E000A
-	.4byte 0x53414600
-	.4byte 0x0B43484E
-	.4byte 0x00FF0000
+ProductAreaAndStringTbl:
+	.byte 0x00
+	.asciz "JPN"
+	.byte 0x01
+	.asciz "USA"
+	.byte 0x02
+	.asciz "EUR"
+	.byte 0x03
+	.asciz "AUS"
+	.byte 0x04
+	.asciz "BRA"
+	.byte 0x05
+	.asciz "TWN"
+	.byte 0x05
+	.asciz "ROC"
+	.byte 0x06
+	.asciz "KOR"
+	.byte 0x07
+	.asciz "HKG"
+	.byte 0x08
+	.asciz "ASI"
+	.byte 0x09
+	.asciz "LTN"
+	.byte 0x0A
+	.asciz "SAF"
+	.byte 0x0B
+	.asciz "CHN"
+	.byte 0xFF
+	.2byte 0
 	.4byte 0
 
-
-.global lbl_8055F120
-lbl_8055F120:
-	.4byte 0x004A5000
-	.4byte 0x01555300
-	.4byte 0x02455500
-	.4byte 0x044B5200
-	.4byte 0x05434E00
-	.4byte 0xFF000000
+ProductGameRegionAndStringTbl:
+	.byte 0x00
+	.asciz "JP"
+	.byte 0x01
+	.asciz "US"
+	.byte 0x02
+	.asciz "EU"
+	.byte 0x04
+	.asciz "KR"
+	.byte 0x05
+	.asciz "CN"
+	.byte 0xFF
+	.2byte 0
+	.byte 0
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 

@@ -4,9 +4,9 @@
 
 .balign 16, 0
 .fn lowCallback, local
-/* 80310370 002D9930  90 6D B7 10 */	stw r3, lbl_80667890@sda21(r13)
+/* 80310370 002D9930  90 6D B7 10 */	stw r3, lowIntType@sda21(r13)
 /* 80310374 002D9934  38 00 00 01 */	li r0, 1
-/* 80310378 002D9938  90 0D 98 20 */	stw r0, lbl_806659A0@sda21(r13)
+/* 80310378 002D9938  90 0D 98 20 */	stw r0, lowDone@sda21(r13)
 /* 8031037C 002D993C  4E 80 00 20 */	blr 
 .endfn lowCallback
 
@@ -44,19 +44,19 @@
 /* 803103E8 002D99A8  3F A0 7E D4 */	lis r29, 0x7ed4
 .L_803103EC:
 /* 803103EC 002D99AC  38 00 00 00 */	li r0, 0
-/* 803103F0 002D99B0  3C 60 80 5D */	lis r3, lbl_805CCC40@ha
+/* 803103F0 002D99B0  3C 60 80 5D */	lis r3, CheckBuffer@ha
 /* 803103F4 002D99B4  3C C0 80 31 */	lis r6, lowCallback@ha
-/* 803103F8 002D99B8  90 0D 98 20 */	stw r0, lbl_806659A0@sda21(r13)
+/* 803103F8 002D99B8  90 0D 98 20 */	stw r0, lowDone@sda21(r13)
 /* 803103FC 002D99BC  7F A5 EB 78 */	mr r5, r29
-/* 80310400 002D99C0  38 63 CC 40 */	addi r3, r3, lbl_805CCC40@l
+/* 80310400 002D99C0  38 63 CC 40 */	addi r3, r3, CheckBuffer@l
 /* 80310404 002D99C4  38 C6 03 70 */	addi r6, r6, lowCallback@l
 /* 80310408 002D99C8  38 80 00 20 */	li r4, 0x20
 /* 8031040C 002D99CC  48 00 12 C5 */	bl DVDLowUnencryptedRead
 .L_80310410:
-/* 80310410 002D99D0  80 0D 98 20 */	lwz r0, lbl_806659A0@sda21(r13)
+/* 80310410 002D99D0  80 0D 98 20 */	lwz r0, lowDone@sda21(r13)
 /* 80310414 002D99D4  2C 00 00 00 */	cmpwi r0, 0
 /* 80310418 002D99D8  41 82 FF F8 */	beq .L_80310410
-/* 8031041C 002D99DC  80 0D B7 10 */	lwz r0, lbl_80667890@sda21(r13)
+/* 8031041C 002D99DC  80 0D B7 10 */	lwz r0, lowIntType@sda21(r13)
 /* 80310420 002D99E0  2C 00 00 02 */	cmpwi r0, 2
 /* 80310424 002D99E4  41 82 00 14 */	beq .L_80310438
 /* 80310428 002D99E8  40 80 01 B0 */	bge .L_803105D8
@@ -66,16 +66,16 @@
 .L_80310438:
 /* 80310438 002D99F8  38 00 00 00 */	li r0, 0
 /* 8031043C 002D99FC  3C 60 80 31 */	lis r3, lowCallback@ha
-/* 80310440 002D9A00  90 0D 98 20 */	stw r0, lbl_806659A0@sda21(r13)
+/* 80310440 002D9A00  90 0D 98 20 */	stw r0, lowDone@sda21(r13)
 /* 80310444 002D9A04  38 63 03 70 */	addi r3, r3, lowCallback@l
 /* 80310448 002D9A08  48 00 17 39 */	bl DVDLowRequestError
 /* 8031044C 002D9A0C  60 00 00 00 */	nop 
 .L_80310450:
-/* 80310450 002D9A10  80 0D 98 20 */	lwz r0, lbl_806659A0@sda21(r13)
+/* 80310450 002D9A10  80 0D 98 20 */	lwz r0, lowDone@sda21(r13)
 /* 80310454 002D9A14  2C 00 00 00 */	cmpwi r0, 0
 /* 80310458 002D9A18  41 82 FF F8 */	beq .L_80310450
 /* 8031045C 002D9A1C  48 00 26 A5 */	bl DVDLowGetImmBufferReg
-/* 80310460 002D9A20  80 0D B7 10 */	lwz r0, lbl_80667890@sda21(r13)
+/* 80310460 002D9A20  80 0D B7 10 */	lwz r0, lowIntType@sda21(r13)
 /* 80310464 002D9A24  2C 00 00 01 */	cmpwi r0, 1
 /* 80310468 002D9A28  41 82 00 08 */	beq .L_80310470
 /* 8031046C 002D9A2C  48 00 01 6C */	b .L_803105D8
@@ -92,20 +92,20 @@
 /* 80310494 002D9A54  48 00 00 CC */	b .L_80310560
 .L_80310498:
 /* 80310498 002D9A58  38 00 00 00 */	li r0, 0
-/* 8031049C 002D9A5C  3C 60 80 5D */	lis r3, lbl_805CCC40@ha
+/* 8031049C 002D9A5C  3C 60 80 5D */	lis r3, CheckBuffer@ha
 /* 803104A0 002D9A60  3C C0 80 31 */	lis r6, lowCallback@ha
-/* 803104A4 002D9A64  90 0D 98 20 */	stw r0, lbl_806659A0@sda21(r13)
-/* 803104A8 002D9A68  38 63 CC 40 */	addi r3, r3, lbl_805CCC40@l
+/* 803104A4 002D9A64  90 0D 98 20 */	stw r0, lowDone@sda21(r13)
+/* 803104A8 002D9A68  38 63 CC 40 */	addi r3, r3, CheckBuffer@l
 /* 803104AC 002D9A6C  3C 80 00 04 */	lis r4, 4
 /* 803104B0 002D9A70  38 C6 03 70 */	addi r6, r6, lowCallback@l
 /* 803104B4 002D9A74  38 A0 00 00 */	li r5, 0
 /* 803104B8 002D9A78  48 00 1B 69 */	bl DVDLowReportKey
 /* 803104BC 002D9A7C  60 00 00 00 */	nop 
 .L_803104C0:
-/* 803104C0 002D9A80  80 0D 98 20 */	lwz r0, lbl_806659A0@sda21(r13)
+/* 803104C0 002D9A80  80 0D 98 20 */	lwz r0, lowDone@sda21(r13)
 /* 803104C4 002D9A84  2C 00 00 00 */	cmpwi r0, 0
 /* 803104C8 002D9A88  41 82 FF F8 */	beq .L_803104C0
-/* 803104CC 002D9A8C  80 0D B7 10 */	lwz r0, lbl_80667890@sda21(r13)
+/* 803104CC 002D9A8C  80 0D B7 10 */	lwz r0, lowIntType@sda21(r13)
 /* 803104D0 002D9A90  2C 00 00 02 */	cmpwi r0, 2
 /* 803104D4 002D9A94  41 82 00 14 */	beq .L_803104E8
 /* 803104D8 002D9A98  40 80 01 00 */	bge .L_803105D8
@@ -115,16 +115,16 @@
 .L_803104E8:
 /* 803104E8 002D9AA8  38 00 00 00 */	li r0, 0
 /* 803104EC 002D9AAC  3C 60 80 31 */	lis r3, lowCallback@ha
-/* 803104F0 002D9AB0  90 0D 98 20 */	stw r0, lbl_806659A0@sda21(r13)
+/* 803104F0 002D9AB0  90 0D 98 20 */	stw r0, lowDone@sda21(r13)
 /* 803104F4 002D9AB4  38 63 03 70 */	addi r3, r3, lowCallback@l
 /* 803104F8 002D9AB8  48 00 16 89 */	bl DVDLowRequestError
 /* 803104FC 002D9ABC  60 00 00 00 */	nop 
 .L_80310500:
-/* 80310500 002D9AC0  80 0D 98 20 */	lwz r0, lbl_806659A0@sda21(r13)
+/* 80310500 002D9AC0  80 0D 98 20 */	lwz r0, lowDone@sda21(r13)
 /* 80310504 002D9AC4  2C 00 00 00 */	cmpwi r0, 0
 /* 80310508 002D9AC8  41 82 FF F8 */	beq .L_80310500
 /* 8031050C 002D9ACC  48 00 25 F5 */	bl DVDLowGetImmBufferReg
-/* 80310510 002D9AD0  80 0D B7 10 */	lwz r0, lbl_80667890@sda21(r13)
+/* 80310510 002D9AD0  80 0D B7 10 */	lwz r0, lowIntType@sda21(r13)
 /* 80310514 002D9AD4  2C 00 00 01 */	cmpwi r0, 1
 /* 80310518 002D9AD8  41 82 00 08 */	beq .L_80310520
 /* 8031051C 002D9ADC  48 00 00 BC */	b .L_803105D8
@@ -159,8 +159,8 @@
 /* 80310580 002D9B40  38 60 00 00 */	li r3, 0
 /* 80310584 002D9B44  48 04 74 8D */	bl OSSetFontEncode
 .L_80310588:
-/* 80310588 002D9B48  3F A0 80 51 */	lis r29, lbl_8050E3E0@ha
-/* 8031058C 002D9B4C  3B BD E3 E0 */	addi r29, r29, lbl_8050E3E0@l
+/* 80310588 002D9B48  3F A0 80 51 */	lis r29, __DVDDeviceErrorMessage@ha
+/* 8031058C 002D9B4C  3B BD E3 E0 */	addi r29, r29, __DVDDeviceErrorMessage@l
 /* 80310590 002D9B50  48 05 0A 81 */	bl SCGetLanguage
 /* 80310594 002D9B54  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 80310598 002D9B58  28 00 00 06 */	cmplwi r0, 6
@@ -197,8 +197,7 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8050E3E0
-lbl_8050E3E0:
+__DVDDeviceErrorMessage:
 	.4byte lbl_8054A528
 	.4byte lbl_8054A564
 	.4byte lbl_8054A59C
@@ -210,9 +209,7 @@ lbl_8050E3E0:
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8054A528
-lbl_8054A528:
-	#"\n\n\nエラーコード００１。\n不明なデバイスが見つかりました。"
+#"\n\n\nエラーコード００１。\n不明なデバイスが見つかりました。"
 .global lbl_8054A528
 lbl_8054A528:
 	.4byte 0x0A0A0A83
@@ -286,8 +283,7 @@ lbl_8054A690:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_806659A0
-lbl_806659A0:
+lowDone:
 	.4byte 0x00000001
 	.4byte 0
 
@@ -300,13 +296,12 @@ lbl_8066BF90:
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805CCC40
-lbl_805CCC40:
+CheckBuffer:
 	.skip 0x20
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+lowIntType:
+	.skip 0x4
 
-.global lbl_80667890
-lbl_80667890:
-	.skip 0x8
+.skip 0x4

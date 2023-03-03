@@ -1562,6 +1562,7 @@ lbl_8050D550:
 	.4byte 0
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .global jumptable_8053F7C0
 jumptable_8053F7C0:
 	.4byte .L_802C141C

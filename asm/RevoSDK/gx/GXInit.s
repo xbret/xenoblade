@@ -28,19 +28,19 @@
 /* 803174C4 002E0A84  40 82 00 48 */	bne .L_8031750C
 /* 803174C8 002E0A88  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 803174CC 002E0A8C  41 82 00 18 */	beq .L_803174E4
-/* 803174D0 002E0A90  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
+/* 803174D0 002E0A90  80 62 BC 20 */	lwz r3, __GXData@sda21(r2)
 /* 803174D4 002E0A94  57 C0 20 36 */	slwi r0, r30, 4
 /* 803174D8 002E0A98  7C 63 02 14 */	add r3, r3, r0
 /* 803174DC 002E0A9C  38 63 03 58 */	addi r3, r3, 0x358
 /* 803174E0 002E0AA0  48 00 00 58 */	b .L_80317538
 .L_803174E4:
-/* 803174E4 002E0AA4  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
+/* 803174E4 002E0AA4  80 62 BC 20 */	lwz r3, __GXData@sda21(r2)
 /* 803174E8 002E0AA8  57 C0 20 36 */	slwi r0, r30, 4
 /* 803174EC 002E0AAC  7C 63 02 14 */	add r3, r3, r0
 /* 803174F0 002E0AB0  38 63 02 D8 */	addi r3, r3, 0x2d8
 /* 803174F4 002E0AB4  48 00 00 44 */	b .L_80317538
 .L_803174F8:
-/* 803174F8 002E0AB8  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
+/* 803174F8 002E0AB8  80 62 BC 20 */	lwz r3, __GXData@sda21(r2)
 /* 803174FC 002E0ABC  57 C0 20 36 */	slwi r0, r30, 4
 /* 80317500 002E0AC0  7C 63 02 14 */	add r3, r3, r0
 /* 80317504 002E0AC4  38 63 02 58 */	addi r3, r3, 0x258
@@ -48,13 +48,13 @@
 .L_8031750C:
 /* 8031750C 002E0ACC  54 60 06 3F */	clrlwi. r0, r3, 0x18
 /* 80317510 002E0AD0  41 82 00 18 */	beq .L_80317528
-/* 80317514 002E0AD4  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
+/* 80317514 002E0AD4  80 62 BC 20 */	lwz r3, __GXData@sda21(r2)
 /* 80317518 002E0AD8  57 C0 20 36 */	slwi r0, r30, 4
 /* 8031751C 002E0ADC  7C 63 02 14 */	add r3, r3, r0
 /* 80317520 002E0AE0  38 63 02 D8 */	addi r3, r3, 0x2d8
 /* 80317524 002E0AE4  48 00 00 14 */	b .L_80317538
 .L_80317528:
-/* 80317528 002E0AE8  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
+/* 80317528 002E0AE8  80 62 BC 20 */	lwz r3, __GXData@sda21(r2)
 /* 8031752C 002E0AEC  57 C0 20 36 */	slwi r0, r30, 4
 /* 80317530 002E0AF0  7C 63 02 14 */	add r3, r3, r0
 /* 80317534 002E0AF4  38 63 02 58 */	addi r3, r3, 0x258
@@ -75,7 +75,7 @@
 /* 80317568 002E0B28  38 60 00 00 */	li r3, 0
 /* 8031756C 002E0B2C  4E 80 00 20 */	blr
 .L_80317570:
-/* 80317570 002E0B30  80 82 BC 20 */	lwz r4, lbl_8066BFA0@sda21(r2)
+/* 80317570 002E0B30  80 82 BC 20 */	lwz r4, __GXData@sda21(r2)
 /* 80317574 002E0B34  54 60 20 36 */	slwi r0, r3, 4
 /* 80317578 002E0B38  7C 64 02 14 */	add r3, r4, r0
 /* 8031757C 002E0B3C  38 63 03 D8 */	addi r3, r3, 0x3d8
@@ -93,7 +93,7 @@
 /* 803175A8 002E0B68  80 0D B7 A8 */	lwz r0, lbl_80667928@sda21(r13)
 /* 803175AC 002E0B6C  2C 00 00 00 */	cmpwi r0, 0
 /* 803175B0 002E0B70  40 82 00 4C */	bne .L_803175FC
-/* 803175B4 002E0B74  80 AD B7 94 */	lwz r5, lbl_80667914@sda21(r13)
+/* 803175B4 002E0B74  80 AD B7 94 */	lwz r5, __memReg@sda21(r13)
 /* 803175B8 002E0B78  A0 85 00 4E */	lhz r4, 0x4e(r5)
 /* 803175BC 002E0B7C  60 00 00 00 */	nop 
 .L_803175C0:
@@ -109,12 +109,12 @@
 /* 803175E4 002E0BA4  90 6D B7 A0 */	stw r3, lbl_80667920@sda21(r13)
 /* 803175E8 002E0BA8  38 00 00 01 */	li r0, 1
 /* 803175EC 002E0BAC  38 60 00 00 */	li r3, 0
-/* 803175F0 002E0BB0  90 8D B7 A4 */	stw r4, lbl_80667924@sda21(r13)
+/* 803175F0 002E0BB0  90 8D B7 A4 */	stw r4, lbl_80667920+0x4@sda21(r13)
 /* 803175F4 002E0BB4  90 0D B7 A8 */	stw r0, lbl_80667928@sda21(r13)
 /* 803175F8 002E0BB8  48 00 00 F4 */	b .L_803176EC
 .L_803175FC:
 /* 803175FC 002E0BBC  48 04 53 65 */	bl OSGetTime
-/* 80317600 002E0BC0  80 AD B7 94 */	lwz r5, lbl_80667914@sda21(r13)
+/* 80317600 002E0BC0  80 AD B7 94 */	lwz r5, __memReg@sda21(r13)
 /* 80317604 002E0BC4  A0 E5 00 4E */	lhz r7, 0x4e(r5)
 .L_80317608:
 /* 80317608 002E0BC8  7C E0 3B 78 */	mr r0, r7
@@ -122,7 +122,7 @@
 /* 80317610 002E0BD0  A0 E5 00 4E */	lhz r7, 0x4e(r5)
 /* 80317614 002E0BD4  7C 07 00 40 */	cmplw r7, r0
 /* 80317618 002E0BD8  40 82 FF F0 */	bne .L_80317608
-/* 8031761C 002E0BDC  80 AD B7 A4 */	lwz r5, lbl_80667924@sda21(r13)
+/* 8031761C 002E0BDC  80 AD B7 A4 */	lwz r5, lbl_80667920+0x4@sda21(r13)
 /* 80317620 002E0BE0  38 00 00 00 */	li r0, 0
 /* 80317624 002E0BE4  80 CD B7 A0 */	lwz r6, lbl_80667920@sda21(r13)
 /* 80317628 002E0BE8  54 E9 80 1E */	slwi r9, r7, 0x10
@@ -146,7 +146,7 @@
 /* 8031766C 002E0C2C  90 6D B7 A0 */	stw r3, lbl_80667920@sda21(r13)
 /* 80317670 002E0C30  38 60 00 00 */	li r3, 0
 /* 80317674 002E0C34  90 AD B7 98 */	stw r5, lbl_80667918@sda21(r13)
-/* 80317678 002E0C38  90 8D B7 A4 */	stw r4, lbl_80667924@sda21(r13)
+/* 80317678 002E0C38  90 8D B7 A4 */	stw r4, lbl_80667920+0x4@sda21(r13)
 /* 8031767C 002E0C3C  48 00 00 70 */	b .L_803176EC
 .L_80317680:
 /* 80317680 002E0C40  38 60 00 00 */	li r3, 0
@@ -166,12 +166,12 @@
 /* 803176B8 002E0C78  93 E3 80 00 */	stw r31, -0x8000(r3)
 /* 803176BC 002E0C7C  93 E3 80 00 */	stw r31, -0x8000(r3)
 /* 803176C0 002E0C80  4B FC 35 01 */	bl PPCSync
-/* 803176C4 002E0C84  80 8D B7 8C */	lwz r4, lbl_8066790C@sda21(r13)
+/* 803176C4 002E0C84  80 8D B7 8C */	lwz r4, __cpReg@sda21(r13)
 /* 803176C8 002E0C88  38 A0 00 03 */	li r5, 3
-/* 803176CC 002E0C8C  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
+/* 803176CC 002E0C8C  80 62 BC 20 */	lwz r3, __GXData@sda21(r2)
 /* 803176D0 002E0C90  38 00 00 01 */	li r0, 1
 /* 803176D4 002E0C94  B3 E4 00 02 */	sth r31, 2(r4)
-/* 803176D8 002E0C98  80 8D B7 8C */	lwz r4, lbl_8066790C@sda21(r13)
+/* 803176D8 002E0C98  80 8D B7 8C */	lwz r4, __cpReg@sda21(r13)
 /* 803176DC 002E0C9C  B0 A4 00 04 */	sth r5, 4(r4)
 /* 803176E0 002E0CA0  98 03 05 FA */	stb r0, 0x5fa(r3)
 /* 803176E4 002E0CA4  48 00 27 7D */	bl __GXAbort
@@ -188,7 +188,7 @@
 .balign 16, 0
 .fn __GXInitRevisionBits, global
 /* 80317700 002E0CC0  38 00 00 02 */	li r0, 2
-/* 80317704 002E0CC4  80 C2 BC 20 */	lwz r6, lbl_8066BFA0@sda21(r2)
+/* 80317704 002E0CC4  80 C2 BC 20 */	lwz r6, __GXData@sda21(r2)
 /* 80317708 002E0CC8  38 E0 00 00 */	li r7, 0
 /* 8031770C 002E0CCC  38 A0 00 08 */	li r5, 8
 /* 80317710 002E0CD0  3C 80 CC 01 */	lis r4, 0xCC008000@ha
@@ -274,10 +274,10 @@
 /* 8031783C 002E0DFC  39 61 00 20 */	addi r11, r1, 0x20
 /* 80317840 002E0E00  4B FA 29 11 */	bl _savegpr_26
 /* 80317844 002E0E04  7C 7B 1B 78 */	mr r27, r3
-/* 80317848 002E0E08  80 6D 98 70 */	lwz r3, lbl_806659F0@sda21(r13)
+/* 80317848 002E0E08  80 6D 98 70 */	lwz r3, __GXVersion@sda21(r13)
 /* 8031784C 002E0E0C  7C 9A 23 78 */	mr r26, r4
 /* 80317850 002E0E10  48 03 B4 B1 */	bl OSRegisterVersion
-/* 80317854 002E0E14  83 E2 BC 20 */	lwz r31, lbl_8066BFA0@sda21(r2)
+/* 80317854 002E0E14  83 E2 BC 20 */	lwz r31, __GXData@sda21(r2)
 /* 80317858 002E0E18  38 00 00 00 */	li r0, 0
 /* 8031785C 002E0E1C  3B A0 00 01 */	li r29, 1
 /* 80317860 002E0E20  38 60 00 01 */	li r3, 1
@@ -289,28 +289,28 @@
 /* 80317878 002E0E38  90 1F 05 E8 */	stw r0, 0x5e8(r31)
 /* 8031787C 002E0E3C  48 00 25 05 */	bl GXSetMisc
 /* 80317880 002E0E40  3C 80 CC 00 */	lis r4, 0xCC003000@ha
-/* 80317884 002E0E44  90 8D B7 8C */	stw r4, lbl_8066790C@sda21(r13)
+/* 80317884 002E0E44  90 8D B7 8C */	stw r4, __cpReg@sda21(r13)
 /* 80317888 002E0E48  38 A4 30 00 */	addi r5, r4, 0xCC003000@l
 /* 8031788C 002E0E4C  38 64 10 00 */	addi r3, r4, 0x1000
 /* 80317890 002E0E50  38 04 40 00 */	addi r0, r4, 0x4000
-/* 80317894 002E0E54  90 AD B7 88 */	stw r5, lbl_80667908@sda21(r13)
-/* 80317898 002E0E58  90 6D B7 90 */	stw r3, lbl_80667910@sda21(r13)
-/* 8031789C 002E0E5C  90 0D B7 94 */	stw r0, lbl_80667914@sda21(r13)
+/* 80317894 002E0E54  90 AD B7 88 */	stw r5, __piReg@sda21(r13)
+/* 80317898 002E0E58  90 6D B7 90 */	stw r3, __peReg@sda21(r13)
+/* 8031789C 002E0E5C  90 0D B7 94 */	stw r0, __memReg@sda21(r13)
 /* 803178A0 002E0E60  48 00 17 71 */	bl __GXFifoInit
-/* 803178A4 002E0E64  3F 80 80 5D */	lis r28, lbl_805CCEE0@ha
+/* 803178A4 002E0E64  3F 80 80 5D */	lis r28, FifoObj@ha
 /* 803178A8 002E0E68  7F 64 DB 78 */	mr r4, r27
 /* 803178AC 002E0E6C  7F 45 D3 78 */	mr r5, r26
-/* 803178B0 002E0E70  38 7C CE E0 */	addi r3, r28, lbl_805CCEE0@l
+/* 803178B0 002E0E70  38 7C CE E0 */	addi r3, r28, FifoObj@l
 /* 803178B4 002E0E74  48 00 0E AD */	bl GXInitFifoBase
-/* 803178B8 002E0E78  38 7C CE E0 */	addi r3, r28, lbl_805CCEE0@l
+/* 803178B8 002E0E78  38 7C CE E0 */	addi r3, r28, FifoObj@l
 /* 803178BC 002E0E7C  48 00 10 35 */	bl GXSetCPUFifo
-/* 803178C0 002E0E80  38 7C CE E0 */	addi r3, r28, lbl_805CCEE0@l
+/* 803178C0 002E0E80  38 7C CE E0 */	addi r3, r28, FifoObj@l
 /* 803178C4 002E0E84  48 00 12 0D */	bl GXSetGPFifo
 /* 803178C8 002E0E88  80 0D B7 AC */	lwz r0, lbl_8066792C@sda21(r13)
 /* 803178CC 002E0E8C  2C 00 00 00 */	cmpwi r0, 0
 /* 803178D0 002E0E90  40 82 00 14 */	bne .L_803178E4
-/* 803178D4 002E0E94  3C 60 80 55 */	lis r3, lbl_8054B8B0@ha
-/* 803178D8 002E0E98  38 63 B8 B0 */	addi r3, r3, lbl_8054B8B0@l
+/* 803178D4 002E0E94  3C 60 80 55 */	lis r3, GXShutdownFuncInfo@ha
+/* 803178D8 002E0E98  38 63 B8 B0 */	addi r3, r3, GXShutdownFuncInfo@l
 /* 803178DC 002E0E9C  48 04 26 35 */	bl OSRegisterShutdownFunction
 /* 803178E0 002E0EA0  93 AD B7 AC */	stw r29, lbl_8066792C@sda21(r13)
 .L_803178E4:
@@ -322,7 +322,7 @@
 /* 803178F8 002E0EB8  4B FC 33 C9 */	bl PPCMtwpar
 /* 803178FC 002E0EBC  67 83 40 00 */	oris r3, r28, 0x4000
 /* 80317900 002E0EC0  4B FC 33 B1 */	bl PPCMthid2
-/* 80317904 002E0EC4  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
+/* 80317904 002E0EC4  80 62 BC 20 */	lwz r3, __GXData@sda21(r2)
 /* 80317908 002E0EC8  39 00 00 00 */	li r8, 0
 /* 8031790C 002E0ECC  38 00 00 0F */	li r0, 0xf
 /* 80317910 002E0ED0  38 A0 00 FF */	li r5, 0xff
@@ -432,7 +432,7 @@
 /* 80317AA8 002E1068  90 03 01 34 */	stw r0, 0x134(r3)
 /* 80317AAC 002E106C  38 63 00 10 */	addi r3, r3, 0x10
 /* 80317AB0 002E1070  42 00 FF 7C */	bdnz .L_80317A2C
-/* 80317AB4 002E1074  83 C2 BC 20 */	lwz r30, lbl_8066BFA0@sda21(r2)
+/* 80317AB4 002E1074  83 C2 BC 20 */	lwz r30, __GXData@sda21(r2)
 /* 80317AB8 002E1078  3C 60 10 62 */	lis r3, 0x10624DD3@ha
 /* 80317ABC 002E107C  38 80 00 20 */	li r4, 0x20
 /* 80317AC0 002E1080  38 00 00 21 */	li r0, 0x21
@@ -491,11 +491,11 @@
 /* 80317B94 002E1154  60 00 02 00 */	ori r0, r0, 0x200
 /* 80317B98 002E1158  90 1D 80 00 */	stw r0, -0x8000(r29)
 /* 80317B9C 002E115C  4B FF FB 65 */	bl __GXInitRevisionBits
-/* 80317BA0 002E1160  3F 80 80 55 */	lis r28, lbl_8054B7F0@ha
+/* 80317BA0 002E1160  3F 80 80 55 */	lis r28, GXTexRegionAddrTable@ha
 /* 80317BA4 002E1164  3B BE 02 58 */	addi r29, r30, 0x258
 /* 80317BA8 002E1168  3B 7E 02 D8 */	addi r27, r30, 0x2d8
 /* 80317BAC 002E116C  3B DE 03 58 */	addi r30, r30, 0x358
-/* 80317BB0 002E1170  3B 9C B7 F0 */	addi r28, r28, lbl_8054B7F0@l
+/* 80317BB0 002E1170  3B 9C B7 F0 */	addi r28, r28, GXTexRegionAddrTable@l
 /* 80317BB4 002E1174  3B 40 00 00 */	li r26, 0
 .L_80317BB8:
 /* 80317BB8 002E1178  80 BC 00 00 */	lwz r5, 0(r28)
@@ -554,7 +554,7 @@
 /* 80317C84 002E1244  28 1B 00 04 */	cmplwi r27, 4
 /* 80317C88 002E1248  3B 9C 80 00 */	addi r28, r28, -32768
 /* 80317C8C 002E124C  41 80 FF D8 */	blt .L_80317C64
-/* 80317C90 002E1250  80 6D B7 8C */	lwz r3, lbl_8066790C@sda21(r13)
+/* 80317C90 002E1250  80 6D B7 8C */	lwz r3, __cpReg@sda21(r13)
 /* 80317C94 002E1254  39 60 00 00 */	li r11, 0
 /* 80317C98 002E1258  3D 20 CC 01 */	lis r9, 0xCC008000@ha
 /* 80317C9C 002E125C  39 40 00 08 */	li r10, 8
@@ -587,9 +587,9 @@
 /* 80317D08 002E12C8  38 60 00 02 */	li r3, 2
 /* 80317D0C 002E12CC  48 00 51 05 */	bl __GXSetTmemConfig
 /* 80317D10 002E12D0  48 00 00 31 */	bl __GXInitGX
-/* 80317D14 002E12D4  3C 60 80 5D */	lis r3, lbl_805CCEE0@ha
+/* 80317D14 002E12D4  3C 60 80 5D */	lis r3, FifoObj@ha
 /* 80317D18 002E12D8  39 61 00 20 */	addi r11, r1, 0x20
-/* 80317D1C 002E12DC  38 63 CE E0 */	addi r3, r3, lbl_805CCEE0@l
+/* 80317D1C 002E12DC  38 63 CE E0 */	addi r3, r3, FifoObj@l
 /* 80317D20 002E12E0  4B FA 24 7D */	bl _restgpr_26
 /* 80317D24 002E12E4  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80317D28 002E12E8  7C 08 03 A6 */	mtlr r0
@@ -625,24 +625,24 @@
 /* 80317D98 002E1358  41 82 00 20 */	beq .L_80317DB8
 /* 80317D9C 002E135C  48 00 00 34 */	b .L_80317DD0
 .L_80317DA0:
-/* 80317DA0 002E1360  3F 60 80 55 */	lis r27, lbl_8054BA74@ha
-/* 80317DA4 002E1364  3B 7B BA 74 */	addi r27, r27, lbl_8054BA74@l
+/* 80317DA0 002E1360  3F 60 80 55 */	lis r27, GXNtsc480IntDf@ha
+/* 80317DA4 002E1364  3B 7B BA 74 */	addi r27, r27, GXNtsc480IntDf@l
 /* 80317DA8 002E1368  48 00 00 30 */	b .L_80317DD8
 .L_80317DAC:
-/* 80317DAC 002E136C  3F 60 80 55 */	lis r27, lbl_8054BCCC@ha
-/* 80317DB0 002E1370  3B 7B BC CC */	addi r27, r27, lbl_8054BCCC@l
+/* 80317DAC 002E136C  3F 60 80 55 */	lis r27, GXPal528IntDf@ha
+/* 80317DB0 002E1370  3B 7B BC CC */	addi r27, r27, GXPal528IntDf@l
 /* 80317DB4 002E1374  48 00 00 24 */	b .L_80317DD8
 .L_80317DB8:
-/* 80317DB8 002E1378  3F 60 80 55 */	lis r27, lbl_8054BD80@ha
-/* 80317DBC 002E137C  3B 7B BD 80 */	addi r27, r27, lbl_8054BD80@l
+/* 80317DB8 002E1378  3F 60 80 55 */	lis r27, GXEurgb60Hz480IntDf@ha
+/* 80317DBC 002E137C  3B 7B BD 80 */	addi r27, r27, GXEurgb60Hz480IntDf@l
 /* 80317DC0 002E1380  48 00 00 18 */	b .L_80317DD8
 .L_80317DC4:
-/* 80317DC4 002E1384  3F 60 80 55 */	lis r27, lbl_8054BBA0@ha
-/* 80317DC8 002E1388  3B 7B BB A0 */	addi r27, r27, lbl_8054BBA0@l
+/* 80317DC4 002E1384  3F 60 80 55 */	lis r27, GXMpal480IntDf@ha
+/* 80317DC8 002E1388  3B 7B BB A0 */	addi r27, r27, GXMpal480IntDf@l
 /* 80317DCC 002E138C  48 00 00 0C */	b .L_80317DD8
 .L_80317DD0:
-/* 80317DD0 002E1390  3F 60 80 55 */	lis r27, lbl_8054BA74@ha
-/* 80317DD4 002E1394  3B 7B BA 74 */	addi r27, r27, lbl_8054BA74@l
+/* 80317DD0 002E1390  3F 60 80 55 */	lis r27, GXNtsc480IntDf@ha
+/* 80317DD4 002E1394  3B 7B BA 74 */	addi r27, r27, GXNtsc480IntDf@l
 .L_80317DD8:
 /* 80317DD8 002E1398  3C 80 01 00 */	lis r4, 0x00FFFFFF@ha
 /* 80317DDC 002E139C  93 E1 00 1C */	stw r31, 0x1c(r1)
@@ -711,7 +711,7 @@
 /* 80317ED8 002E1498  48 00 1C 19 */	bl GXInvalidateVtxCache
 /* 80317EDC 002E149C  3B E0 00 09 */	li r31, 9
 .L_80317EE0:
-/* 80317EE0 002E14A0  80 82 BC 20 */	lwz r4, lbl_8066BFA0@sda21(r2)
+/* 80317EE0 002E14A0  80 82 BC 20 */	lwz r4, __GXData@sda21(r2)
 /* 80317EE4 002E14A4  7F E3 FB 78 */	mr r3, r31
 /* 80317EE8 002E14A8  38 A0 00 00 */	li r5, 0
 /* 80317EEC 002E14AC  48 00 1B C5 */	bl GXSetArray
@@ -1181,12 +1181,15 @@
 lbl_8054B680:
 	.asciz "<< RVL_SDK - GX \trelease build: Feb 27 2009 10:04:13 (0x4302_145) >>"
 	.balign 4
+
 	.4byte 0
 	.4byte 0
 	.4byte 0
 	.4byte 0
 	.4byte 0
 	.4byte 0
+
+DefaultTexData:
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
@@ -1195,6 +1198,8 @@ lbl_8054B680:
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+
+GXDefaultVATList:
 	.4byte 0x00000009
 	.4byte 0x00000001
 	.4byte 0x00000004
@@ -1247,18 +1252,19 @@ lbl_8054B680:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+
+GXDefaultProjData:
 	.float 1.0
-	.4byte 0
+	.float 0
 	.float 1.0
-	.4byte 0
+	.float 0
 	.float -1.0
-	.4byte 0xC0000000
+	.float -2.0
 	.4byte 0
 	.4byte 0
 
 
-.global lbl_8054B7F0
-lbl_8054B7F0:
+GXTexRegionAddrTable:
 	.4byte 0
 	.4byte 0x00010000
 	.4byte 0x00020000
@@ -1309,8 +1315,7 @@ lbl_8054B7F0:
 	.4byte 0x00070000
 
 
-.global lbl_8054B8B0
-lbl_8054B8B0:
+GXShutdownFuncInfo:
 	.4byte __GXShutdown
 	.4byte 0x0000007F
 	.4byte 0
@@ -1318,16 +1323,16 @@ lbl_8054B8B0:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_806659F0
-lbl_806659F0:
+.global __GXVersion
+__GXVersion:
 	.4byte lbl_8054B680
 	.4byte 0
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066BFA0
-lbl_8066BFA0:
-	.4byte lbl_805CCF60
+.global __GXData
+__GXData:
+	.4byte gxData
 
 
 .global float_8066BFA4
@@ -1364,41 +1369,45 @@ float_8066BFB8:
 .global double_8066BFC0
 double_8066BFC0:
 	.8byte 0x4330000000000000 #unsigned int to float constant
+
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805CCEE0
-lbl_805CCEE0:
+FifoObj:
 	.skip 0x80
-.global lbl_805CCF60
-lbl_805CCF60:
+
+gxData:
 	.skip 0x600
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667908
-lbl_80667908:
+.global __piReg
+__piReg:
 	.skip 0x4
-.global lbl_8066790C
-lbl_8066790C:
+
+.global __cpReg
+__cpReg:
 	.skip 0x4
-.global lbl_80667910
-lbl_80667910:
+
+.global __peReg
+__peReg:
 	.skip 0x4
-.global lbl_80667914
-lbl_80667914:
+
+.global __memReg
+__memReg:
 	.skip 0x4
-.global lbl_80667918
+
+#@LOCAL@__GXShutdown__FiUl@peCount
 lbl_80667918:
 	.skip 0x8
-.global lbl_80667920
+
+#@LOCAL@__GXShutdown__FiUl@time@0
 lbl_80667920:
-	.skip 0x4
-.global lbl_80667924
-lbl_80667924:
-	.skip 0x4
-.global lbl_80667928
+	.skip 0x8
+
+#@LOCAL@__GXShutdown__FiUl@calledOnce@1
 lbl_80667928:
 	.skip 0x4
-.global lbl_8066792C
+
+#@LOCAL@GXInit__FPvUl@shutdownFuncRegistered
 lbl_8066792C:
 	.skip 0x4

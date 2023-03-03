@@ -6,10 +6,10 @@
 .fn WriteSramCallback, global
 /* 8035a800  94 21 ff e0 */		stwu r1, -0x20(r1)
 /* 8035a804  7c 08 02 a6 */		mflr r0
-/* 8035a808  3c c0 80 5d */		lis r6, lbl_805D4700@ha
+/* 8035a808  3c c0 80 5d */		lis r6, Scb@ha
 /* 8035a80c  3c a0 80 36 */		lis r5, WriteSramCallback@ha
 /* 8035a810  90 01 00 24 */		stw r0,36(r1)
-/* 8035a814  38 c6 47 00 */		addi r6,r6,lbl_805D4700@l
+/* 8035a814  38 c6 47 00 */		addi r6,r6,Scb@l
 /* 8035a818  38 60 00 00 */		li r3,0
 /* 8035a81c  38 a5 a8 00 */		addi r5,r5,WriteSramCallback@l
 /* 8035a820  93 e1 00 1c */		stw r31,28(r1)
@@ -71,9 +71,9 @@
 /* 8035a8f8  7f a0 00 34 */		cntlzw r0,r29
 /* 8035a8fc  54 00 d9 7e */		rlwinm r0,r0,27,5,31
 .L_8035A900:
-/* 8035a900  3c 60 80 5d */		lis r3, lbl_805D4700@ha
+/* 8035a900  3c 60 80 5d */		lis r3, Scb@ha
 /* 8035a904  2c 00 00 00 */		cmpwi r0,0
-/* 8035a908  38 63 47 00 */		addi r3,r3, lbl_805D4700@l
+/* 8035a908  38 63 47 00 */		addi r3,r3, Scb@l
 /* 8035a90c  90 03 00 4c */		stw r0,76(r3)
 /* 8035a910  41 82 00 0c */		beq .L_8035A91C
 /* 8035a914  38 00 00 40 */		li r0,64
@@ -99,8 +99,8 @@
 /* 8035A950 00323F10  38 00 00 00 */	li r0, 0
 /* 8035A954 00323F14  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8035A958 00323F18  93 C1 00 18 */	stw r30, 0x18(r1)
-/* 8035A95C 00323F1C  3F C0 80 5D */	lis r30, lbl_805D4700@ha
-/* 8035A960 00323F20  3B DE 47 00 */	addi r30, r30, lbl_805D4700@l
+/* 8035A95C 00323F1C  3F C0 80 5D */	lis r30, Scb@ha
+/* 8035A960 00323F20  3B DE 47 00 */	addi r30, r30, Scb@l
 /* 8035A964 00323F24  90 1E 00 44 */	stw r0, 0x44(r30)
 /* 8035A968 00323F28  7F C3 F3 78 */	mr r3, r30
 /* 8035A96C 00323F2C  90 1E 00 48 */	stw r0, 0x48(r30)
@@ -165,9 +165,9 @@
 /* 8035AA50 00324010  7F C0 00 34 */	cntlzw r0, r30
 /* 8035AA54 00324014  54 03 D9 7E */	srwi r3, r0, 5
 .L_8035AA58:
-/* 8035AA58 00324018  3F E0 80 5D */	lis r31, lbl_805D4700@ha
+/* 8035AA58 00324018  3F E0 80 5D */	lis r31, Scb@ha
 /* 8035AA5C 0032401C  38 00 00 40 */	li r0, 0x40
-/* 8035AA60 00324020  3B FF 47 00 */	addi r31, r31, lbl_805D4700@l
+/* 8035AA60 00324020  3B FF 47 00 */	addi r31, r31, Scb@l
 /* 8035AA64 00324024  90 7F 00 4C */	stw r3, 0x4c(r31)
 /* 8035AA68 00324028  90 1F 00 40 */	stw r0, 0x40(r31)
 /* 8035AA6C 0032402C  4B FF DF 45 */	bl OSDisableInterrupts
@@ -197,8 +197,8 @@
 /* 8035AAC0 00324080  3B C0 00 00 */	li r30, 0
 .L_8035AAC4:
 /* 8035AAC4 00324084  4B FF DE ED */	bl OSDisableInterrupts
-/* 8035AAC8 00324088  3C 80 80 5D */	lis r4, lbl_805D4700@ha
-/* 8035AACC 0032408C  38 84 47 00 */	addi r4, r4, lbl_805D4700@l
+/* 8035AAC8 00324088  3C 80 80 5D */	lis r4, Scb@ha
+/* 8035AACC 0032408C  38 84 47 00 */	addi r4, r4, Scb@l
 /* 8035AAD0 00324090  80 04 00 48 */	lwz r0, 0x48(r4)
 /* 8035AAD4 00324094  2C 00 00 00 */	cmpwi r0, 0
 /* 8035AAD8 00324098  41 82 00 10 */	beq .L_8035AAE8
@@ -245,8 +245,8 @@
 /* 8035AB5C 0032411C  41 82 02 8C */	beq .L_8035ADE8
 /* 8035AB60 00324120  2C 04 00 00 */	cmpwi r4, 0
 /* 8035AB64 00324124  40 82 01 30 */	bne .L_8035AC94
-/* 8035AB68 00324128  3D 00 80 5D */	lis r8, lbl_805D4700@ha
-/* 8035AB6C 0032412C  39 08 47 00 */	addi r8, r8, lbl_805D4700@l
+/* 8035AB68 00324128  3D 00 80 5D */	lis r8, Scb@ha
+/* 8035AB6C 0032412C  39 08 47 00 */	addi r8, r8, Scb@l
 /* 8035AB70 00324130  88 68 00 13 */	lbz r3, 0x13(r8)
 /* 8035AB74 00324134  54 60 07 BE */	clrlwi r0, r3, 0x1e
 /* 8035AB78 00324138  28 00 00 02 */	cmplwi r0, 2
@@ -254,9 +254,9 @@
 /* 8035AB80 00324140  54 60 06 3A */	rlwinm r0, r3, 0, 0x18, 0x1d
 /* 8035AB84 00324144  98 08 00 13 */	stb r0, 0x13(r8)
 .L_8035AB88:
-/* 8035AB88 00324148  3C 60 80 5D */	lis r3, lbl_805D4700@ha
+/* 8035AB88 00324148  3C 60 80 5D */	lis r3, Scb@ha
 /* 8035AB8C 0032414C  38 00 00 00 */	li r0, 0
-/* 8035AB90 00324150  38 63 47 00 */	addi r3, r3, lbl_805D4700@l
+/* 8035AB90 00324150  38 63 47 00 */	addi r3, r3, Scb@l
 /* 8035AB94 00324154  38 E8 00 0C */	addi r7, r8, 0xc
 /* 8035AB98 00324158  38 A3 00 14 */	addi r5, r3, 0x14
 /* 8035AB9C 0032415C  B0 08 00 02 */	sth r0, 2(r8)
@@ -325,15 +325,15 @@
 /* 8035AC8C 0032424C  B0 08 00 02 */	sth r0, 2(r8)
 /* 8035AC90 00324250  42 00 FF D8 */	bdnz .L_8035AC68
 .L_8035AC94:
-/* 8035AC94 00324254  3C 60 80 5D */	lis r3, lbl_805D4700@ha
-/* 8035AC98 00324258  38 63 47 00 */	addi r3, r3, lbl_805D4700@l
+/* 8035AC94 00324254  3C 60 80 5D */	lis r3, Scb@ha
+/* 8035AC98 00324258  38 63 47 00 */	addi r3, r3, Scb@l
 /* 8035AC9C 0032425C  80 03 00 40 */	lwz r0, 0x40(r3)
 /* 8035ACA0 00324260  7C 04 00 40 */	cmplw r4, r0
 /* 8035ACA4 00324264  40 80 00 08 */	bge .L_8035ACAC
 /* 8035ACA8 00324268  90 83 00 40 */	stw r4, 0x40(r3)
 .L_8035ACAC:
-/* 8035ACAC 0032426C  3C 80 80 5D */	lis r4, lbl_805D4700@ha
-/* 8035ACB0 00324270  38 84 47 00 */	addi r4, r4, lbl_805D4700@l
+/* 8035ACAC 0032426C  3C 80 80 5D */	lis r4, Scb@ha
+/* 8035ACB0 00324270  38 84 47 00 */	addi r4, r4, Scb@l
 /* 8035ACB4 00324274  80 04 00 40 */	lwz r0, 0x40(r4)
 /* 8035ACB8 00324278  28 00 00 14 */	cmplwi r0, 0x14
 /* 8035ACBC 0032427C  41 81 00 28 */	bgt .L_8035ACE4
@@ -348,9 +348,9 @@
 /* 8035ACDC 0032429C  38 00 00 00 */	li r0, 0
 /* 8035ACE0 003242A0  B0 04 00 3C */	sth r0, 0x3c(r4)
 .L_8035ACE4:
-/* 8035ACE4 003242A4  3C C0 80 5D */	lis r6, lbl_805D4700@ha
+/* 8035ACE4 003242A4  3C C0 80 5D */	lis r6, Scb@ha
 /* 8035ACE8 003242A8  3C A0 80 36 */	lis r5, WriteSramCallback@ha
-/* 8035ACEC 003242AC  38 C6 47 00 */	addi r6, r6, lbl_805D4700@l
+/* 8035ACEC 003242AC  38 C6 47 00 */	addi r6, r6, Scb@l
 /* 8035ACF0 003242B0  38 60 00 00 */	li r3, 0
 /* 8035ACF4 003242B4  83 E6 00 40 */	lwz r31, 0x40(r6)
 /* 8035ACF8 003242B8  38 A5 A8 00 */	addi r5, r5, WriteSramCallback@l
@@ -409,17 +409,17 @@
 /* 8035ADC4 00324384  7F A0 00 34 */	cntlzw r0, r29
 /* 8035ADC8 00324388  54 00 D9 7E */	srwi r0, r0, 5
 .L_8035ADCC:
-/* 8035ADCC 0032438C  3C 60 80 5D */	lis r3, lbl_805D4700@ha
+/* 8035ADCC 0032438C  3C 60 80 5D */	lis r3, Scb@ha
 /* 8035ADD0 00324390  2C 00 00 00 */	cmpwi r0, 0
-/* 8035ADD4 00324394  38 63 47 00 */	addi r3, r3, lbl_805D4700@l
+/* 8035ADD4 00324394  38 63 47 00 */	addi r3, r3, Scb@l
 /* 8035ADD8 00324398  90 03 00 4C */	stw r0, 0x4c(r3)
 /* 8035ADDC 0032439C  41 82 00 0C */	beq .L_8035ADE8
 /* 8035ADE0 003243A0  38 00 00 40 */	li r0, 0x40
 /* 8035ADE4 003243A4  90 03 00 40 */	stw r0, 0x40(r3)
 .L_8035ADE8:
-/* 8035ADE8 003243A8  3F E0 80 5D */	lis r31, lbl_805D4700@ha
+/* 8035ADE8 003243A8  3F E0 80 5D */	lis r31, Scb@ha
 /* 8035ADEC 003243AC  38 00 00 00 */	li r0, 0
-/* 8035ADF0 003243B0  3B FF 47 00 */	addi r31, r31, lbl_805D4700@l
+/* 8035ADF0 003243B0  3B FF 47 00 */	addi r31, r31, Scb@l
 /* 8035ADF4 003243B4  90 1F 00 48 */	stw r0, 0x48(r31)
 /* 8035ADF8 003243B8  80 7F 00 44 */	lwz r3, 0x44(r31)
 /* 8035ADFC 003243BC  4B FF DB F5 */	bl OSRestoreInterrupts
@@ -435,8 +435,8 @@
 
 .balign 16, 0
 .fn __OSSyncSram, global
-/* 8035AE20 003243E0  3C 60 80 5D */	lis r3, lbl_805D4700@ha
-/* 8035AE24 003243E4  38 63 47 00 */	addi r3, r3, lbl_805D4700@l
+/* 8035AE20 003243E0  3C 60 80 5D */	lis r3, Scb@ha
+/* 8035AE24 003243E4  38 63 47 00 */	addi r3, r3, Scb@l
 /* 8035AE28 003243E8  80 63 00 4C */	lwz r3, 0x4c(r3)
 /* 8035AE2C 003243EC  4E 80 00 20 */	blr 
 .endfn __OSSyncSram
@@ -529,8 +529,8 @@
 /* 8035AF6C 0032452C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8035AF70 00324530  7C 7F 1B 78 */	mr r31, r3
 /* 8035AF74 00324534  4B FF DA 3D */	bl OSDisableInterrupts
-/* 8035AF78 00324538  3C 80 80 5D */	lis r4, lbl_805D4700@ha
-/* 8035AF7C 0032453C  38 84 47 00 */	addi r4, r4, lbl_805D4700@l
+/* 8035AF78 00324538  3C 80 80 5D */	lis r4, Scb@ha
+/* 8035AF7C 0032453C  38 84 47 00 */	addi r4, r4, Scb@l
 /* 8035AF80 00324540  80 04 00 48 */	lwz r0, 0x48(r4)
 /* 8035AF84 00324544  2C 00 00 00 */	cmpwi r0, 0
 /* 8035AF88 00324548  41 82 00 10 */	beq .L_8035AF98
@@ -567,8 +567,8 @@
 /* 8035AFF4 003245B4  93 C1 00 08 */	stw r30, 8(r1)
 /* 8035AFF8 003245B8  7C 7E 1B 78 */	mr r30, r3
 /* 8035AFFC 003245BC  4B FF D9 B5 */	bl OSDisableInterrupts
-/* 8035B000 003245C0  3C 80 80 5D */	lis r4, lbl_805D4700@ha
-/* 8035B004 003245C4  38 84 47 00 */	addi r4, r4, lbl_805D4700@l
+/* 8035B000 003245C0  3C 80 80 5D */	lis r4, Scb@ha
+/* 8035B004 003245C4  38 84 47 00 */	addi r4, r4, Scb@l
 /* 8035B008 003245C8  80 04 00 48 */	lwz r0, 0x48(r4)
 /* 8035B00C 003245CC  2C 00 00 00 */	cmpwi r0, 0
 /* 8035B010 003245D0  41 82 00 10 */	beq .L_8035B020
@@ -759,6 +759,5 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805D4700
-lbl_805D4700:
+Scb:
 	.skip 0x58

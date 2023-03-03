@@ -22,22 +22,22 @@
 /* 80310238 002D97F8  38 60 00 00 */	li r3, 0
 /* 8031023C 002D97FC  48 04 77 D5 */	bl OSSetFontEncode
 .L_80310240:
-/* 80310240 002D9800  48 05 13 91 */	bl SCGetProductSN
+/* 80310240 002D9800  48 05 13 91 */	bl SCGetProductGameRegion
 /* 80310244 002D9804  7C 63 07 74 */	extsb r3, r3
 /* 80310248 002D9808  38 03 FF FC */	addi r0, r3, -4
 /* 8031024C 002D980C  28 00 00 01 */	cmplwi r0, 1
 /* 80310250 002D9810  40 81 00 24 */	ble .L_80310274
 /* 80310254 002D9814  2C 03 00 02 */	cmpwi r3, 2
 /* 80310258 002D9818  41 82 00 10 */	beq .L_80310268
-/* 8031025C 002D981C  3F A0 80 51 */	lis r29, lbl_8050E3A8@ha
-/* 80310260 002D9820  3B BD E3 A8 */	addi r29, r29, lbl_8050E3A8@l
+/* 8031025C 002D981C  3F A0 80 51 */	lis r29, __DVDErrorMessageDefault@ha
+/* 80310260 002D9820  3B BD E3 A8 */	addi r29, r29, __DVDErrorMessageDefault@l
 /* 80310264 002D9824  48 00 00 14 */	b .L_80310278
 .L_80310268:
-/* 80310268 002D9828  3F A0 80 51 */	lis r29, lbl_8050E3C4@ha
-/* 8031026C 002D982C  3B BD E3 C4 */	addi r29, r29, lbl_8050E3C4@l
+/* 80310268 002D9828  3F A0 80 51 */	lis r29, __DVDErrorMessageEurope@ha
+/* 8031026C 002D982C  3B BD E3 C4 */	addi r29, r29, __DVDErrorMessageEurope@l
 /* 80310270 002D9830  48 00 00 08 */	b .L_80310278
 .L_80310274:
-/* 80310274 002D9834  3B AD 98 18 */	addi r29, r13, lbl_80665998@sda21
+/* 80310274 002D9834  3B AD 98 18 */	addi r29, r13, __DVDErrorMessageChinaKorea@sda21
 .L_80310278:
 /* 80310278 002D9838  48 05 0D 99 */	bl SCGetLanguage
 /* 8031027C 002D983C  54 60 06 3E */	clrlwi r0, r3, 0x18
@@ -72,7 +72,7 @@
 /* 803102DC 002D989C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 803102E0 002D98A0  7C 7F 1B 78 */	mr r31, r3
 /* 803102E4 002D98A4  48 04 86 CD */	bl OSDisableInterrupts
-/* 803102E8 002D98A8  80 AD B7 08 */	lwz r5, lbl_80667888@sda21(r13)
+/* 803102E8 002D98A8  80 AD B7 08 */	lwz r5, FatalFunc@sda21(r13)
 /* 803102EC 002D98AC  2C 1F 00 00 */	cmpwi r31, 0
 /* 803102F0 002D98B0  38 80 00 00 */	li r4, 0
 /* 803102F4 002D98B4  7C 05 00 D0 */	neg r0, r5
@@ -82,7 +82,7 @@
 /* 80310304 002D98C4  3C 80 80 31 */	lis r4, __DVDShowFatalMessage@ha
 /* 80310308 002D98C8  38 84 02 00 */	addi r4, r4, __DVDShowFatalMessage@l
 .L_8031030C:
-/* 8031030C 002D98CC  90 8D B7 08 */	stw r4, lbl_80667888@sda21(r13)
+/* 8031030C 002D98CC  90 8D B7 08 */	stw r4, FatalFunc@sda21(r13)
 /* 80310310 002D98D0  48 04 86 E1 */	bl OSRestoreInterrupts
 /* 80310314 002D98D4  7F E3 FB 78 */	mr r3, r31
 /* 80310318 002D98D8  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -94,7 +94,7 @@
 
 .balign 16, 0
 .fn __DVDGetAutoFatalMessaging, global
-/* 80310330 002D98F0  80 6D B7 08 */	lwz r3, lbl_80667888@sda21(r13)
+/* 80310330 002D98F0  80 6D B7 08 */	lwz r3, FatalFunc@sda21(r13)
 /* 80310334 002D98F4  7C 03 00 D0 */	neg r0, r3
 /* 80310338 002D98F8  7C 00 1B 78 */	or r0, r0, r3
 /* 8031033C 002D98FC  54 03 0F FE */	srwi r3, r0, 0x1f
@@ -103,7 +103,7 @@
 
 .balign 16, 0
 .fn __DVDPrintFatalMessage, global
-/* 80310350 002D9910  81 8D B7 08 */	lwz r12, lbl_80667888@sda21(r13)
+/* 80310350 002D9910  81 8D B7 08 */	lwz r12, FatalFunc@sda21(r13)
 /* 80310354 002D9914  2C 0C 00 00 */	cmpwi r12, 0
 /* 80310358 002D9918  4D 82 00 20 */	beqlr 
 /* 8031035C 002D991C  7D 89 03 A6 */	mtctr r12
@@ -112,8 +112,8 @@
 .endfn __DVDPrintFatalMessage
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
-.global lbl_8050E3A8
-lbl_8050E3A8:
+
+__DVDErrorMessageDefault:
 	.4byte lbl_80549D60
 	.4byte lbl_80549DF0
 	.4byte lbl_80549EA0
@@ -122,9 +122,7 @@ lbl_8050E3A8:
 	.4byte lbl_8054A0A8
 	.4byte lbl_8054A154
 
-
-.global lbl_8050E3C4
-lbl_8050E3C4:
+__DVDErrorMessageEurope:
 	.4byte lbl_80549D60
 	.4byte lbl_8054A1E8
 	.4byte lbl_80549EA0
@@ -410,9 +408,7 @@ lbl_8054A330:
 	.4byte 0x616369F3
 	.4byte 0x6E2E0000
 	
-.global lbl_8054A3DC
-lbl_8054A3DC:
-	#"\n\nエラーコード１０４。\nエラーが発生しました。\n\nイジェクトボタンを押してディスクを取り出してか\nら、本体の電源をOFFにして、本体の取扱説明書の\n指示に従ってください。"
+#"\n\nエラーコード１０４。\nエラーが発生しました。\n\nイジェクトボタンを押してディスクを取り出してか\nら、本体の電源をOFFにして、本体の取扱説明書の\n指示に従ってください。"
 .global lbl_8054A3DC
 lbl_8054A3DC:
 	.4byte 0x0A0A8347
@@ -464,8 +460,7 @@ lbl_8054A480:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665998
-lbl_80665998:
+__DVDErrorMessageChinaKorea:
 	.4byte lbl_8054A3DC
 	.4byte lbl_8054A480
 
@@ -478,6 +473,5 @@ lbl_8066BF88:
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667888
-lbl_80667888:
+FatalFunc:
 	.skip 0x8

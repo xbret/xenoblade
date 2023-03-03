@@ -22,7 +22,7 @@
 /* 80359EBC 0032347C  7F E3 FB 78 */	mr r3, r31
 /* 80359EC0 00323480  80 04 31 94 */	lwz r0, 0x80003194@l(r4)
 /* 80359EC4 00323484  67 C4 80 00 */	oris r4, r30, 0x8000
-/* 80359EC8 00323488  90 0D B8 E8 */	stw r0, lbl_80667A68@sda21(r13)
+/* 80359EC8 00323488  90 0D B8 E8 */	stw r0, __OSNextPartitionType@sda21(r13)
 /* 80359ECC 0032348C  38 A1 00 08 */	addi r5, r1, 8
 /* 80359ED0 00323490  4B FF CA 41 */	bl __OSBootDol
 /* 80359ED4 00323494  80 01 00 24 */	lwz r0, 0x24(r1)
@@ -35,18 +35,17 @@
 
 .balign 16, 0
 .fn OSGetSaveRegion, global
-/* 80359EF0 003234B0  80 0D B9 30 */	lwz r0, lbl_80667AB0@sda21(r13)
+/* 80359EF0 003234B0  80 0D B9 30 */	lwz r0, SaveStart@sda21(r13)
 /* 80359EF4 003234B4  90 03 00 00 */	stw r0, 0(r3)
-/* 80359EF8 003234B8  80 0D B9 34 */	lwz r0, lbl_80667AB4@sda21(r13)
+/* 80359EF8 003234B8  80 0D B9 34 */	lwz r0, SaveEnd@sda21(r13)
 /* 80359EFC 003234BC  90 04 00 00 */	stw r0, 0(r4)
 /* 80359F00 003234C0  4E 80 00 20 */	blr 
 .endfn OSGetSaveRegion
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667AB0
-lbl_80667AB0:
+SaveStart:
 	.skip 0x4
-.global lbl_80667AB4
-lbl_80667AB4:
+
+SaveEnd:
 	.skip 0x4

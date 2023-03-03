@@ -155,7 +155,7 @@
 /* 80353CC4 0031D284  7C 08 02 A6 */	mflr r0
 /* 80353CC8 0031D288  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80353CCC 0031D28C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80353CD0 0031D290  80 0D B8 80 */	lwz r0, lbl_80667A00@sda21(r13)
+/* 80353CD0 0031D290  80 0D B8 80 */	lwz r0, __OSInIPL@sda21(r13)
 /* 80353CD4 0031D294  2C 00 00 00 */	cmpwi r0, 0
 /* 80353CD8 0031D298  40 82 00 0C */	bne .L_80353CE4
 /* 80353CDC 0031D29C  38 60 00 01 */	li r3, 1
@@ -166,9 +166,9 @@
 /* 80353CEC 0031D2AC  38 A0 00 80 */	li r5, 0x80
 /* 80353CF0 0031D2B0  38 63 FF 80 */	addi r3, r3, -128
 /* 80353CF4 0031D2B4  4B CB 03 0D */	bl memcpy
-/* 80353CF8 0031D2B8  3C 80 80 55 */	lis r4, lbl_805517B8@ha
+/* 80353CF8 0031D2B8  3C 80 80 55 */	lis r4, DSPInitCode@ha
 /* 80353CFC 0031D2BC  3C 60 81 00 */	lis r3, 0x8100
-/* 80353D00 0031D2C0  38 84 17 B8 */	addi r4, r4, lbl_805517B8@l
+/* 80353D00 0031D2C0  38 84 17 B8 */	addi r4, r4, DSPInitCode@l
 /* 80353D04 0031D2C4  38 A0 00 80 */	li r5, 0x80
 /* 80353D08 0031D2C8  4B CB 02 F9 */	bl memcpy
 /* 80353D0C 0031D2CC  3C 60 81 00 */	lis r3, 0x8100
@@ -347,37 +347,66 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_805517B8
-lbl_805517B8:
-	.4byte 0x029F0010
-	.4byte 0x029F0033
-	.4byte 0x029F0034
-	.4byte 0x029F0035
-	.4byte 0x029F0036
-	.4byte 0x029F0037
-	.4byte 0x029F0038
-	.4byte 0x029F0039
-	.4byte 0x12061203
-	.4byte 0x12041205
-	.4byte 0x00808000
-	.4byte 0x0088FFFF
-	.4byte 0x00841000
-	.4byte 0x0064001D
-	.4byte 0x02180000
-	.4byte 0x81001C1E
-	.4byte 0x00441B1E
-	.4byte 0x00840800
-	.4byte 0x00640027
-	.4byte 0x191E0000
-	.4byte 0x00DEFFFC
-	.4byte 0x02A08000
-	.4byte 0x029C0028
-	.4byte 0x16FC0054
-	.4byte 0x16FD4348
-	.4byte 0x002102FF
-	.4byte 0x02FF02FF
-	.4byte 0x02FF02FF
-	.4byte 0x02FF02FF
+
+DSPInitCode:
+	.2byte 0x029F
+	.2byte 0x0010
+	.2byte 0x029F
+	.2byte 0x0033
+	.2byte 0x029F
+	.2byte 0x0034
+	.2byte 0x029F
+	.2byte 0x0035
+	.2byte 0x029F
+	.2byte 0x0036
+	.2byte 0x029F
+	.2byte 0x0037
+	.2byte 0x029F
+	.2byte 0x0038
+	.2byte 0x029F
+	.2byte 0x0039
+	.2byte 0x1206
+	.2byte 0x1203
+	.2byte 0x1204
+	.2byte 0x1205
+	.2byte 0x0080
+	.2byte 0x8000
+	.2byte 0x0088
+	.2byte 0xFFFF
+	.2byte 0x0084
+	.2byte 0x1000
+	.2byte 0x0064
+	.2byte 0x001D
+	.2byte 0x0218
+	.2byte 0x0000
+	.2byte 0x8100
+	.2byte 0x1C1E
+	.2byte 0x0044
+	.2byte 0x1B1E
+	.2byte 0x0084
+	.2byte 0x0800
+	.2byte 0x0064
+	.2byte 0x0027
+	.2byte 0x191E
+	.2byte 0x0000
+	.2byte 0x00DE
+	.2byte 0xFFFC
+	.2byte 0x02A0
+	.2byte 0x8000
+	.2byte 0x029C
+	.2byte 0x0028
+	.2byte 0x16FC
+	.2byte 0x0054
+	.2byte 0x16FD
+	.2byte 0x4348
+	.2byte 0x0021
+	.2byte 0x02FF
+	.2byte 0x02FF
+	.2byte 0x02FF
+	.2byte 0x02FF
+	.2byte 0x02FF
+	.2byte 0x02FF
+	.2byte 0x02FF
 	.4byte 0
 	.4byte 0
 	.4byte 0

@@ -58,7 +58,7 @@
 .balign 16, 0
 .fn OSAllocFromHeap, global
 /* 80353730 0031CCF0  1C 63 00 0C */	mulli r3, r3, 0xc
-/* 80353734 0031CCF4  80 AD B8 DC */	lwz r5, lbl_80667A5C@sda21(r13)
+/* 80353734 0031CCF4  80 AD B8 DC */	lwz r5, HeapArray@sda21(r13)
 /* 80353738 0031CCF8  38 04 00 3F */	addi r0, r4, 0x3f
 /* 8035373C 0031CCFC  7C A5 1A 14 */	add r5, r5, r3
 /* 80353740 0031CD00  54 04 00 34 */	rlwinm r4, r0, 0, 0, 0x1a
@@ -141,7 +141,7 @@
 /* 8035383C 0031CDFC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80353840 0031CE00  1C 03 00 0C */	mulli r0, r3, 0xc
 /* 80353844 0031CE04  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80353848 0031CE08  80 AD B8 DC */	lwz r5, lbl_80667A5C@sda21(r13)
+/* 80353848 0031CE08  80 AD B8 DC */	lwz r5, HeapArray@sda21(r13)
 /* 8035384C 0031CE0C  80 C4 00 04 */	lwz r6, 4(r4)
 /* 80353850 0031CE10  7F E5 02 14 */	add r31, r5, r0
 /* 80353854 0031CE14  2C 06 00 00 */	cmpwi r6, 0
@@ -181,15 +181,15 @@
 .balign 16, 0
 .fn OSInitAlloc, global
 /* 803538C0 0031CE80  1C E5 00 0C */	mulli r7, r5, 0xc
-/* 803538C4 0031CE84  90 6D B8 DC */	stw r3, lbl_80667A5C@sda21(r13)
+/* 803538C4 0031CE84  90 6D B8 DC */	stw r3, HeapArray@sda21(r13)
 /* 803538C8 0031CE88  39 00 00 00 */	li r8, 0
-/* 803538CC 0031CE8C  90 AD B8 D8 */	stw r5, lbl_80667A58@sda21(r13)
+/* 803538CC 0031CE8C  90 AD B8 D8 */	stw r5, NumHeaps@sda21(r13)
 /* 803538D0 0031CE90  38 C0 00 00 */	li r6, 0
 /* 803538D4 0031CE94  38 A0 FF FF */	li r5, -1
 /* 803538D8 0031CE98  38 60 00 00 */	li r3, 0
 /* 803538DC 0031CE9C  48 00 00 20 */	b .L_803538FC
 .L_803538E0:
-/* 803538E0 0031CEA0  80 0D B8 DC */	lwz r0, lbl_80667A5C@sda21(r13)
+/* 803538E0 0031CEA0  80 0D B8 DC */	lwz r0, HeapArray@sda21(r13)
 /* 803538E4 0031CEA4  39 08 00 01 */	addi r8, r8, 1
 /* 803538E8 0031CEA8  7C A6 01 2E */	stwx r5, r6, r0
 /* 803538EC 0031CEAC  7D 20 32 14 */	add r9, r0, r6
@@ -197,28 +197,28 @@
 /* 803538F4 0031CEB4  90 69 00 08 */	stw r3, 8(r9)
 /* 803538F8 0031CEB8  90 69 00 04 */	stw r3, 4(r9)
 .L_803538FC:
-/* 803538FC 0031CEBC  80 0D B8 D8 */	lwz r0, lbl_80667A58@sda21(r13)
+/* 803538FC 0031CEBC  80 0D B8 D8 */	lwz r0, NumHeaps@sda21(r13)
 /* 80353900 0031CEC0  7C 08 00 00 */	cmpw r8, r0
 /* 80353904 0031CEC4  41 80 FF DC */	blt .L_803538E0
-/* 80353908 0031CEC8  80 6D B8 DC */	lwz r3, lbl_80667A5C@sda21(r13)
+/* 80353908 0031CEC8  80 6D B8 DC */	lwz r3, HeapArray@sda21(r13)
 /* 8035390C 0031CECC  54 80 00 34 */	rlwinm r0, r4, 0, 0, 0x1a
 /* 80353910 0031CED0  38 80 FF FF */	li r4, -1
 /* 80353914 0031CED4  90 8D 99 D8 */	stw r4, __OSCurrHeap@sda21(r13)
 /* 80353918 0031CED8  7C 63 3A 14 */	add r3, r3, r7
 /* 8035391C 0031CEDC  38 63 00 1F */	addi r3, r3, 0x1f
-/* 80353920 0031CEE0  90 0D B8 D0 */	stw r0, lbl_80667A50@sda21(r13)
+/* 80353920 0031CEE0  90 0D B8 D0 */	stw r0, ArenaEnd@sda21(r13)
 /* 80353924 0031CEE4  54 63 00 34 */	rlwinm r3, r3, 0, 0, 0x1a
-/* 80353928 0031CEE8  90 6D B8 D4 */	stw r3, lbl_80667A54@sda21(r13)
+/* 80353928 0031CEE8  90 6D B8 D4 */	stw r3, ArenaStart@sda21(r13)
 /* 8035392C 0031CEEC  4E 80 00 20 */	blr 
 .endfn OSInitAlloc
 
 .balign 16, 0
 .fn OSCreateHeap, global
-/* 80353930 0031CEF0  80 CD B8 D8 */	lwz r6, lbl_80667A58@sda21(r13)
+/* 80353930 0031CEF0  80 CD B8 D8 */	lwz r6, NumHeaps@sda21(r13)
 /* 80353934 0031CEF4  38 03 00 1F */	addi r0, r3, 0x1f
 /* 80353938 0031CEF8  54 07 00 34 */	rlwinm r7, r0, 0, 0, 0x1a
 /* 8035393C 0031CEFC  54 84 00 34 */	rlwinm r4, r4, 0, 0, 0x1a
-/* 80353940 0031CF00  80 AD B8 DC */	lwz r5, lbl_80667A5C@sda21(r13)
+/* 80353940 0031CF00  80 AD B8 DC */	lwz r5, HeapArray@sda21(r13)
 /* 80353944 0031CF04  38 60 00 00 */	li r3, 0
 /* 80353948 0031CF08  7C C9 03 A6 */	mtctr r6
 /* 8035394C 0031CF0C  2C 06 00 00 */	cmpwi r6, 0
@@ -256,15 +256,14 @@ __OSCurrHeap:
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667A50
-lbl_80667A50:
+ArenaEnd:
 	.skip 0x4
-.global lbl_80667A54
-lbl_80667A54:
+
+ArenaStart:
 	.skip 0x4
-.global lbl_80667A58
-lbl_80667A58:
+
+NumHeaps:
 	.skip 0x4
-.global lbl_80667A5C
-lbl_80667A5C:
+
+HeapArray:
 	.skip 0x4

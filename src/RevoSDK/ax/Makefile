@@ -7,6 +7,8 @@ AX_FILES:=\
 	$(BUILD_DIR)/asm/RevoSDK/ax/AXSPB.o\
 	$(BUILD_DIR)/asm/RevoSDK/ax/AXVPB.o\
 	$(BUILD_DIR)/asm/RevoSDK/ax/AXProf.o\
+	$(BUILD_DIR)/asm/RevoSDK/ax/AXComp.o\
+	$(BUILD_DIR)/asm/RevoSDK/ax/DSPCode.o\
 
 DEPENDS += $(AX_FILES:.o=.d)
 

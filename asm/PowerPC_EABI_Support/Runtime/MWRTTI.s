@@ -211,6 +211,7 @@
 .endfn what__Q23std8bad_castCFv
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .global __vt__std_bad_cast
 __vt__std_bad_cast:
 	.4byte __RTTI__std_bad_cast

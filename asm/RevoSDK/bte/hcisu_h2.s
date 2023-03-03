@@ -28,19 +28,19 @@
 .L_802DCAF0:
 /* 802DCAF0 002A60B0  3A 83 00 01 */	addi r20, r3, 1
 /* 802DCAF4 002A60B4  54 60 0B FC */	rlwinm r0, r3, 1, 0xf, 0x1e
-/* 802DCAF8 002A60B8  3F E0 80 5C */	lis r31, lbl_805BBC20@ha
+/* 802DCAF8 002A60B8  3F E0 80 5C */	lis r31, hcisu_h2_cb@ha
 /* 802DCAFC 002A60BC  7E C4 1A 14 */	add r22, r4, r3
 /* 802DCB00 002A60C0  56 90 04 3E */	clrlwi r16, r20, 0x10
 /* 802DCB04 002A60C4  54 77 13 BA */	rlwinm r23, r3, 2, 0xe, 0x1d
 /* 802DCB08 002A60C8  7E A4 02 14 */	add r21, r4, r0
-/* 802DCB0C 002A60CC  3B FF BC 20 */	addi r31, r31, lbl_805BBC20@l
+/* 802DCB0C 002A60CC  3B FF BC 20 */	addi r31, r31, hcisu_h2_cb@l
 /* 802DCB10 002A60D0  3B A0 00 00 */	li r29, 0
 /* 802DCB14 002A60D4  3B C0 00 04 */	li r30, 4
-/* 802DCB18 002A60D8  3B 82 BB B0 */	addi r28, r2, lbl_8066BF30@sda21
+/* 802DCB18 002A60D8  3B 82 BB B0 */	addi r28, r2, hcisu_preamble_table@sda21
 /* 802DCB1C 002A60DC  3B 20 00 03 */	li r25, 3
 /* 802DCB20 002A60E0  3B 00 00 02 */	li r24, 2
 /* 802DCB24 002A60E4  3D C0 80 54 */	lis r14, lbl_80543F60@ha
-/* 802DCB28 002A60E8  3B 42 BB B8 */	addi r26, r2, lbl_8066BF38@sda21
+/* 802DCB28 002A60E8  3B 42 BB B8 */	addi r26, r2, hcisu_msg_evt_table@sda21
 /* 802DCB2C 002A60EC  3B 60 00 01 */	li r27, 1
 .L_802DCB30:
 /* 802DCB30 002A60F0  56 03 06 3E */	clrlwi r3, r16, 0x18
@@ -296,9 +296,9 @@
 .L_802DCEB4:
 /* 802DCEB4 002A6474  28 05 21 00 */	cmplwi r5, 0x2100
 /* 802DCEB8 002A6478  40 82 01 20 */	bne .L_802DCFD8
-/* 802DCEBC 002A647C  3C 60 80 5C */	lis r3, lbl_805BF4D0@ha
+/* 802DCEBC 002A647C  3C 60 80 5C */	lis r3, btu_cb@ha
 /* 802DCEC0 002A6480  A0 84 00 02 */	lhz r4, 2(r4)
-/* 802DCEC4 002A6484  3B C3 F4 D0 */	addi r30, r3, lbl_805BF4D0@l
+/* 802DCEC4 002A6484  3B C3 F4 D0 */	addi r30, r3, btu_cb@l
 /* 802DCEC8 002A6488  A0 1E 00 7E */	lhz r0, 0x7e(r30)
 /* 802DCECC 002A648C  7C 04 00 40 */	cmplw r4, r0
 /* 802DCED0 002A6490  40 81 01 08 */	ble .L_802DCFD8
@@ -358,9 +358,9 @@
 /* 802DCF9C 002A655C  54 00 04 3F */	clrlwi. r0, r0, 0x10
 /* 802DCFA0 002A6560  40 82 00 28 */	bne .L_802DCFC8
 /* 802DCFA4 002A6564  38 00 19 00 */	li r0, 0x1900
-/* 802DCFA8 002A6568  3C 60 80 5C */	lis r3, lbl_805BBC20@ha
+/* 802DCFA8 002A6568  3C 60 80 5C */	lis r3, hcisu_h2_cb@ha
 /* 802DCFAC 002A656C  B0 1B 00 00 */	sth r0, 0(r27)
-/* 802DCFB0 002A6570  38 63 BC 20 */	addi r3, r3, lbl_805BBC20@l
+/* 802DCFB0 002A6570  38 63 BC 20 */	addi r3, r3, hcisu_h2_cb@l
 /* 802DCFB4 002A6574  7F 65 DB 78 */	mr r5, r27
 /* 802DCFB8 002A6578  38 80 00 00 */	li r4, 0
 /* 802DCFBC 002A657C  88 63 00 1F */	lbz r3, 0x1f(r3)
@@ -390,9 +390,9 @@
 
 .balign 16, 0
 .fn hcisu_h2_init, global
-/* 802DD010 002A65D0  3C C0 80 5C */	lis r6, lbl_805BBC20@ha
+/* 802DD010 002A65D0  3C C0 80 5C */	lis r6, hcisu_h2_cb@ha
 /* 802DD014 002A65D4  38 00 00 00 */	li r0, 0
-/* 802DD018 002A65D8  38 C6 BC 20 */	addi r6, r6, lbl_805BBC20@l
+/* 802DD018 002A65D8  38 C6 BC 20 */	addi r6, r6, hcisu_h2_cb@l
 /* 802DD01C 002A65DC  98 06 00 1E */	stb r0, 0x1e(r6)
 /* 802DD020 002A65E0  98 06 00 1A */	stb r0, 0x1a(r6)
 /* 802DD024 002A65E4  98 06 00 1B */	stb r0, 0x1b(r6)
@@ -407,10 +407,10 @@
 .fn hcisu_h2_open, global
 /* 802DD040 002A6600  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802DD044 002A6604  7C 08 02 A6 */	mflr r0
-/* 802DD048 002A6608  3C A0 80 5C */	lis r5, lbl_805BBC20@ha
+/* 802DD048 002A6608  3C A0 80 5C */	lis r5, hcisu_h2_cb@ha
 /* 802DD04C 002A660C  90 01 00 24 */	stw r0, 0x24(r1)
 /* 802DD050 002A6610  38 00 00 00 */	li r0, 0
-/* 802DD054 002A6614  38 A5 BC 20 */	addi r5, r5, lbl_805BBC20@l
+/* 802DD054 002A6614  38 A5 BC 20 */	addi r5, r5, hcisu_h2_cb@l
 /* 802DD058 002A6618  98 01 00 13 */	stb r0, 0x13(r1)
 /* 802DD05C 002A661C  38 00 00 02 */	li r0, 2
 /* 802DD060 002A6620  A0 83 00 00 */	lhz r4, 0(r3)
@@ -437,9 +437,9 @@
 .fn hcisu_h2_close, global
 /* 802DD0B0 002A6670  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DD0B4 002A6674  7C 08 02 A6 */	mflr r0
-/* 802DD0B8 002A6678  3C 60 80 5C */	lis r3, lbl_805BBC20@ha
+/* 802DD0B8 002A6678  3C 60 80 5C */	lis r3, hcisu_h2_cb@ha
 /* 802DD0BC 002A667C  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802DD0C0 002A6680  38 63 BC 20 */	addi r3, r3, lbl_805BBC20@l
+/* 802DD0C0 002A6680  38 63 BC 20 */	addi r3, r3, hcisu_h2_cb@l
 /* 802DD0C4 002A6684  38 00 00 00 */	li r0, 0
 /* 802DD0C8 002A6688  98 03 00 1E */	stb r0, 0x1e(r3)
 /* 802DD0CC 002A668C  48 00 0C 15 */	bl UUSB_Close
@@ -454,10 +454,10 @@
 .fn hcisu_h2_send, global
 /* 802DD0F0 002A66B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DD0F4 002A66B4  7C 08 02 A6 */	mflr r0
-/* 802DD0F8 002A66B8  3C A0 80 5C */	lis r5, lbl_805BBC20@ha
+/* 802DD0F8 002A66B8  3C A0 80 5C */	lis r5, hcisu_h2_cb@ha
 /* 802DD0FC 002A66BC  7C 64 1B 78 */	mr r4, r3
 /* 802DD100 002A66C0  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802DD104 002A66C4  38 65 BC 20 */	addi r3, r5, lbl_805BBC20@l
+/* 802DD104 002A66C4  38 65 BC 20 */	addi r3, r5, hcisu_h2_cb@l
 /* 802DD108 002A66C8  4B FF FD 59 */	bl hcisu_h2_send_msg_now
 /* 802DD10C 002A66CC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 802DD110 002A66D0  38 60 00 01 */	li r3, 1
@@ -470,9 +470,9 @@
 .fn hcisu_h2_handle_event, global
 /* 802DD120 002A66E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802DD124 002A66E4  7C 08 02 A6 */	mflr r0
-/* 802DD128 002A66E8  3C 80 80 5C */	lis r4, lbl_805BBC20@ha
+/* 802DD128 002A66E8  3C 80 80 5C */	lis r4, hcisu_h2_cb@ha
 /* 802DD12C 002A66EC  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802DD130 002A66F0  38 84 BC 20 */	addi r4, r4, lbl_805BBC20@l
+/* 802DD130 002A66F0  38 84 BC 20 */	addi r4, r4, hcisu_h2_cb@l
 /* 802DD134 002A66F4  38 03 FF F8 */	addi r0, r3, -8
 /* 802DD138 002A66F8  A0 64 00 12 */	lhz r3, 0x12(r4)
 /* 802DD13C 002A66FC  7C 03 00 50 */	subf r0, r3, r0
@@ -485,8 +485,20 @@
 /* 802DD158 002A6718  4E 80 00 20 */	blr 
 .endfn hcisu_h2_handle_event
 
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.global hcisu_h2
+hcisu_h2:
+	.4byte hcisu_h2_init
+	.4byte hcisu_h2_open
+	.4byte hcisu_h2_close
+	.4byte hcisu_h2_send
+	.4byte hcisu_h2_handle_event
+	.4byte 0
+
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .global lbl_80543F60
 lbl_80543F60:
 	.asciz "HCIS: Unable to allocate buffer for incoming HCI message."
@@ -500,18 +512,16 @@ lbl_80543F9C:
 	.4byte 0
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
-.global lbl_8066BF30
-lbl_8066BF30:
+
+hcisu_preamble_table:
 	.4byte 0x03040302
 	.4byte 0
 
 
-.global lbl_8066BF38
-lbl_8066BF38:
-	.4byte 0x13001100
-	.4byte 0x12001000
+hcisu_msg_evt_table:
+	.8byte 0x1300110012001000
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
-.global lbl_805BBC20
-lbl_805BBC20:
+
+hcisu_h2_cb:
 	.skip 0x40

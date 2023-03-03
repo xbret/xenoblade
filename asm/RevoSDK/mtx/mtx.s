@@ -864,5 +864,5 @@ float_8066C13C:
 
 .global float_8066C140
 float_8066C140:
-	.4byte 0x3C8EFA35
+	.float 0.017453292
 	.4byte 0

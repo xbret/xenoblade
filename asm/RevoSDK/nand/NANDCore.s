@@ -310,7 +310,7 @@
 
 .balign 16, 0
 .fn nandIsInitialized, global
-/* 80350200 003197C0  80 6D B8 70 */	lwz r3, lbl_806679F0@sda21(r13)
+/* 80350200 003197C0  80 6D B8 70 */	lwz r3, s_libState@sda21(r13)
 /* 80350204 003197C4  38 03 FF FE */	addi r0, r3, -2
 /* 80350208 003197C8  7C 00 00 34 */	cntlzw r0, r0
 /* 8035020C 003197CC  54 03 D9 7E */	srwi r3, r0, 5
@@ -448,10 +448,10 @@
 .L_803503E4:
 /* 803503E4 003199A4  2C 00 00 00 */	cmpwi r0, 0
 /* 803503E8 003199A8  41 82 00 1C */	beq .L_80350404
-/* 803503EC 003199AC  3C 80 80 55 */	lis r4, lbl_805510E0@ha
+/* 803503EC 003199AC  3C 80 80 55 */	lis r4, s_currentDir@ha
 /* 803503F0 003199B0  7F C3 F3 78 */	mr r3, r30
 /* 803503F4 003199B4  7F E5 FB 78 */	mr r5, r31
-/* 803503F8 003199B8  38 84 10 E0 */	addi r4, r4, lbl_805510E0@l
+/* 803503F8 003199B8  38 84 10 E0 */	addi r4, r4, s_currentDir@l
 /* 803503FC 003199BC  4B FF FC 25 */	bl nandConvertPath
 /* 80350400 003199C0  48 00 00 40 */	b .L_80350440
 .L_80350404:
@@ -489,7 +489,7 @@
 /* 80350474 00319A34  3B FF 10 80 */	addi r31, r31, lbl_80551080@l
 /* 80350478 00319A38  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8035047C 00319A3C  48 00 85 35 */	bl OSDisableInterrupts
-/* 80350480 00319A40  80 0D B8 70 */	lwz r0, lbl_806679F0@sda21(r13)
+/* 80350480 00319A40  80 0D B8 70 */	lwz r0, s_libState@sda21(r13)
 /* 80350484 00319A44  2C 00 00 01 */	cmpwi r0, 1
 /* 80350488 00319A48  40 82 00 10 */	bne .L_80350498
 /* 8035048C 00319A4C  48 00 85 65 */	bl OSRestoreInterrupts
@@ -503,7 +503,7 @@
 /* 803504A8 00319A68  48 00 00 CC */	b .L_80350574
 .L_803504AC:
 /* 803504AC 00319A6C  38 00 00 01 */	li r0, 1
-/* 803504B0 00319A70  90 0D B8 70 */	stw r0, lbl_806679F0@sda21(r13)
+/* 803504B0 00319A70  90 0D B8 70 */	stw r0, s_libState@sda21(r13)
 /* 803504B4 00319A74  48 00 85 3D */	bl OSRestoreInterrupts
 /* 803504B8 00319A78  4B FC 5A 09 */	bl ISFS_OpenLib
 /* 803504BC 00319A7C  2C 03 00 00 */	cmpwi r3, 0
@@ -519,18 +519,18 @@
 .L_803504E4:
 /* 803504E4 00319AA4  2C 1E 00 00 */	cmpwi r30, 0
 /* 803504E8 00319AA8  40 82 00 1C */	bne .L_80350504
-/* 803504EC 00319AAC  3C A0 80 5D */	lis r5, lbl_805D4000@ha
+/* 803504EC 00319AAC  3C A0 80 5D */	lis r5, s_homeDir@ha
 /* 803504F0 00319AB0  80 61 00 08 */	lwz r3, 8(r1)
 /* 803504F4 00319AB4  80 81 00 0C */	lwz r4, 0xc(r1)
-/* 803504F8 00319AB8  38 A5 40 00 */	addi r5, r5, lbl_805D4000@l
-/* 803504FC 00319ABC  4B FC 36 65 */	bl ESP_GetTmdView
+/* 803504F8 00319AB8  38 A5 40 00 */	addi r5, r5, s_homeDir@l
+/* 803504FC 00319ABC  4B FC 36 65 */	bl ESP_GetDataDir
 /* 80350500 00319AC0  7C 7E 1B 78 */	mr r30, r3
 .L_80350504:
 /* 80350504 00319AC4  2C 1E 00 00 */	cmpwi r30, 0
 /* 80350508 00319AC8  40 82 00 14 */	bne .L_8035051C
-/* 8035050C 00319ACC  3C 80 80 5D */	lis r4, lbl_805D4000@ha
+/* 8035050C 00319ACC  3C 80 80 5D */	lis r4, s_homeDir@ha
 /* 80350510 00319AD0  38 7F 00 60 */	addi r3, r31, 0x60
-/* 80350514 00319AD4  38 84 40 00 */	addi r4, r4, lbl_805D4000@l
+/* 80350514 00319AD4  38 84 40 00 */	addi r4, r4, s_homeDir@l
 /* 80350518 00319AD8  4B F7 21 A1 */	bl strcpy
 .L_8035051C:
 /* 8035051C 00319ADC  4B FC 32 95 */	bl ESP_CloseLib
@@ -544,7 +544,7 @@
 /* 80350538 00319AF8  48 00 99 D9 */	bl OSRegisterShutdownFunction
 /* 8035053C 00319AFC  48 00 84 75 */	bl OSDisableInterrupts
 /* 80350540 00319B00  38 00 00 02 */	li r0, 2
-/* 80350544 00319B04  90 0D B8 70 */	stw r0, lbl_806679F0@sda21(r13)
+/* 80350544 00319B04  90 0D B8 70 */	stw r0, s_libState@sda21(r13)
 /* 80350548 00319B08  48 00 84 A9 */	bl OSRestoreInterrupts
 /* 8035054C 00319B0C  80 6D 99 68 */	lwz r3, lbl_80665AE8@sda21(r13)
 /* 80350550 00319B10  48 00 27 B1 */	bl OSRegisterVersion
@@ -553,7 +553,7 @@
 .L_8035055C:
 /* 8035055C 00319B1C  48 00 84 55 */	bl OSDisableInterrupts
 /* 80350560 00319B20  38 00 00 00 */	li r0, 0
-/* 80350564 00319B24  90 0D B8 70 */	stw r0, lbl_806679F0@sda21(r13)
+/* 80350564 00319B24  90 0D B8 70 */	stw r0, s_libState@sda21(r13)
 /* 80350568 00319B28  48 00 84 89 */	bl OSRestoreInterrupts
 /* 8035056C 00319B2C  7F C3 F3 78 */	mr r3, r30
 /* 80350570 00319B30  4B FF FC B1 */	bl nandConvertErrorCode
@@ -664,10 +664,10 @@
 .L_803506D0:
 /* 803506D0 00319C90  2C 00 00 00 */	cmpwi r0, 0
 /* 803506D4 00319C94  41 82 00 1C */	beq .L_803506F0
-/* 803506D8 00319C98  3C 80 80 55 */	lis r4, lbl_805510E0@ha
+/* 803506D8 00319C98  3C 80 80 55 */	lis r4, s_currentDir@ha
 /* 803506DC 00319C9C  7F A5 EB 78 */	mr r5, r29
 /* 803506E0 00319CA0  38 7E 00 34 */	addi r3, r30, 0x34
-/* 803506E4 00319CA4  38 84 10 E0 */	addi r4, r4, lbl_805510E0@l
+/* 803506E4 00319CA4  38 84 10 E0 */	addi r4, r4, s_currentDir@l
 /* 803506E8 00319CA8  4B FF F9 39 */	bl nandConvertPath
 /* 803506EC 00319CAC  48 00 00 40 */	b .L_8035072C
 .L_803506F0:
@@ -751,10 +751,10 @@
 .L_80350808:
 /* 80350808 00319DC8  2C 00 00 00 */	cmpwi r0, 0
 /* 8035080C 00319DCC  41 82 00 1C */	beq .L_80350828
-/* 80350810 00319DD0  3C 80 80 55 */	lis r4, lbl_805510E0@ha
+/* 80350810 00319DD0  3C 80 80 55 */	lis r4, s_currentDir@ha
 /* 80350814 00319DD4  7F A5 EB 78 */	mr r5, r29
 /* 80350818 00319DD8  38 61 00 10 */	addi r3, r1, 0x10
-/* 8035081C 00319DDC  38 84 10 E0 */	addi r4, r4, lbl_805510E0@l
+/* 8035081C 00319DDC  38 84 10 E0 */	addi r4, r4, s_currentDir@l
 /* 80350820 00319DE0  4B FF F8 01 */	bl nandConvertPath
 /* 80350824 00319DE4  48 00 00 44 */	b .L_80350868
 .L_80350828:
@@ -802,9 +802,9 @@
 /* 803508BC 00319E7C  7C 7F 1B 78 */	mr r31, r3
 /* 803508C0 00319E80  40 82 00 24 */	bne .L_803508E4
 /* 803508C4 00319E84  48 00 80 ED */	bl OSDisableInterrupts
-/* 803508C8 00319E88  3C 80 80 55 */	lis r4, lbl_805510E0@ha
+/* 803508C8 00319E88  3C 80 80 55 */	lis r4, s_currentDir@ha
 /* 803508CC 00319E8C  7C 7E 1B 78 */	mr r30, r3
-/* 803508D0 00319E90  38 64 10 E0 */	addi r3, r4, lbl_805510E0@l
+/* 803508D0 00319E90  38 64 10 E0 */	addi r3, r4, s_currentDir@l
 /* 803508D4 00319E94  38 81 00 10 */	addi r4, r1, 0x10
 /* 803508D8 00319E98  4B F7 1D E1 */	bl strcpy
 /* 803508DC 00319E9C  7F C3 F3 78 */	mr r3, r30
@@ -826,7 +826,7 @@
 /* 80350910 00319ED0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80350914 00319ED4  7C 08 02 A6 */	mflr r0
 /* 80350918 00319ED8  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8035091C 00319EDC  80 0D B8 70 */	lwz r0, lbl_806679F0@sda21(r13)
+/* 8035091C 00319EDC  80 0D B8 70 */	lwz r0, s_libState@sda21(r13)
 /* 80350920 00319EE0  2C 00 00 02 */	cmpwi r0, 2
 /* 80350924 00319EE4  41 82 00 0C */	beq .L_80350930
 /* 80350928 00319EE8  38 60 FF 80 */	li r3, -128
@@ -858,9 +858,9 @@
 /* 80350980 00319F40  7C 7D 1B 78 */	mr r29, r3
 /* 80350984 00319F44  40 82 00 24 */	bne .L_803509A8
 /* 80350988 00319F48  48 00 80 29 */	bl OSDisableInterrupts
-/* 8035098C 00319F4C  3C 80 80 55 */	lis r4, lbl_805510E0@ha
+/* 8035098C 00319F4C  3C 80 80 55 */	lis r4, s_currentDir@ha
 /* 80350990 00319F50  7C 7E 1B 78 */	mr r30, r3
-/* 80350994 00319F54  38 64 10 E0 */	addi r3, r4, lbl_805510E0@l
+/* 80350994 00319F54  38 64 10 E0 */	addi r3, r4, s_currentDir@l
 /* 80350998 00319F58  38 9F 00 34 */	addi r4, r31, 0x34
 /* 8035099C 00319F5C  4B F7 1D 1D */	bl strcpy
 /* 803509A0 00319F60  7F C3 F3 78 */	mr r3, r30
@@ -889,7 +889,7 @@
 /* 803509EC 00319FAC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 803509F0 00319FB0  93 C1 00 08 */	stw r30, 8(r1)
 /* 803509F4 00319FB4  7C 7E 1B 78 */	mr r30, r3
-/* 803509F8 00319FB8  80 0D B8 70 */	lwz r0, lbl_806679F0@sda21(r13)
+/* 803509F8 00319FB8  80 0D B8 70 */	lwz r0, s_libState@sda21(r13)
 /* 803509FC 00319FBC  2C 00 00 02 */	cmpwi r0, 2
 /* 80350A00 00319FC0  40 82 00 0C */	bne .L_80350A0C
 /* 80350A04 00319FC4  38 00 00 01 */	li r0, 1
@@ -903,10 +903,10 @@
 /* 80350A1C 00319FDC  48 00 00 28 */	b .L_80350A44
 .L_80350A20:
 /* 80350A20 00319FE0  48 00 7F 91 */	bl OSDisableInterrupts
-/* 80350A24 00319FE4  3C 80 80 55 */	lis r4, lbl_805510E0@ha
+/* 80350A24 00319FE4  3C 80 80 55 */	lis r4, s_currentDir@ha
 /* 80350A28 00319FE8  7C 7F 1B 78 */	mr r31, r3
 /* 80350A2C 00319FEC  7F C3 F3 78 */	mr r3, r30
-/* 80350A30 00319FF0  38 84 10 E0 */	addi r4, r4, lbl_805510E0@l
+/* 80350A30 00319FF0  38 84 10 E0 */	addi r4, r4, s_currentDir@l
 /* 80350A34 00319FF4  4B F7 1C 85 */	bl strcpy
 /* 80350A38 00319FF8  7F E3 FB 78 */	mr r3, r31
 /* 80350A3C 00319FFC  48 00 7F B5 */	bl OSRestoreInterrupts
@@ -925,7 +925,7 @@
 /* 80350A60 0031A020  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80350A64 0031A024  7C 08 02 A6 */	mflr r0
 /* 80350A68 0031A028  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80350A6C 0031A02C  80 0D B8 70 */	lwz r0, lbl_806679F0@sda21(r13)
+/* 80350A6C 0031A02C  80 0D B8 70 */	lwz r0, s_libState@sda21(r13)
 /* 80350A70 0031A030  2C 00 00 02 */	cmpwi r0, 2
 /* 80350A74 0031A034  40 82 00 0C */	bne .L_80350A80
 /* 80350A78 0031A038  38 00 00 01 */	li r0, 1
@@ -938,8 +938,8 @@
 /* 80350A8C 0031A04C  38 60 FF 80 */	li r3, -128
 /* 80350A90 0031A050  48 00 00 14 */	b .L_80350AA4
 .L_80350A94:
-/* 80350A94 0031A054  3C 80 80 5D */	lis r4, lbl_805D4000@ha
-/* 80350A98 0031A058  38 84 40 00 */	addi r4, r4, lbl_805D4000@l
+/* 80350A94 0031A054  3C 80 80 5D */	lis r4, s_homeDir@ha
+/* 80350A98 0031A058  38 84 40 00 */	addi r4, r4, s_homeDir@l
 /* 80350A9C 0031A05C  4B F7 1C 1D */	bl strcpy
 /* 80350AA0 0031A060  38 60 00 00 */	li r3, 0
 .L_80350AA4:
@@ -1007,10 +1007,10 @@
 .L_80350B7C:
 /* 80350B7C 0031A13C  2C 00 00 00 */	cmpwi r0, 0
 /* 80350B80 0031A140  41 82 00 1C */	beq .L_80350B9C
-/* 80350B84 0031A144  3C 80 80 55 */	lis r4, lbl_805510E0@ha
+/* 80350B84 0031A144  3C 80 80 55 */	lis r4, s_currentDir@ha
 /* 80350B88 0031A148  7F 65 DB 78 */	mr r5, r27
 /* 80350B8C 0031A14C  38 7C 00 34 */	addi r3, r28, 0x34
-/* 80350B90 0031A150  38 84 10 E0 */	addi r4, r4, lbl_805510E0@l
+/* 80350B90 0031A150  38 84 10 E0 */	addi r4, r4, s_currentDir@l
 /* 80350B94 0031A154  4B FF F4 8D */	bl nandConvertPath
 /* 80350B98 0031A158  48 00 00 40 */	b .L_80350BD8
 .L_80350B9C:
@@ -1098,10 +1098,10 @@
 .L_80350CC4:
 /* 80350CC4 0031A284  2C 00 00 00 */	cmpwi r0, 0
 /* 80350CC8 0031A288  41 82 00 1C */	beq .L_80350CE4
-/* 80350CCC 0031A28C  3C 80 80 55 */	lis r4, lbl_805510E0@ha
+/* 80350CCC 0031A28C  3C 80 80 55 */	lis r4, s_currentDir@ha
 /* 80350CD0 0031A290  7F 65 DB 78 */	mr r5, r27
 /* 80350CD4 0031A294  38 61 00 10 */	addi r3, r1, 0x10
-/* 80350CD8 0031A298  38 84 10 E0 */	addi r4, r4, lbl_805510E0@l
+/* 80350CD8 0031A298  38 84 10 E0 */	addi r4, r4, s_currentDir@l
 /* 80350CDC 0031A29C  4B FF F3 45 */	bl nandConvertPath
 /* 80350CE0 0031A2A0  48 00 00 44 */	b .L_80350D24
 .L_80350CE4:
@@ -1179,7 +1179,7 @@
 /* 80350DE0 0031A3A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80350DE4 0031A3A4  7C 08 02 A6 */	mflr r0
 /* 80350DE8 0031A3A8  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80350DEC 0031A3AC  80 0D B8 70 */	lwz r0, lbl_806679F0@sda21(r13)
+/* 80350DEC 0031A3AC  80 0D B8 70 */	lwz r0, s_libState@sda21(r13)
 /* 80350DF0 0031A3B0  2C 00 00 02 */	cmpwi r0, 2
 /* 80350DF4 0031A3B4  41 82 00 0C */	beq .L_80350E00
 /* 80350DF8 0031A3B8  38 60 FF 80 */	li r3, -128
@@ -1237,8 +1237,8 @@
 
 .balign 16, 0
 .fn nandGetHomeDir, global
-/* 80350EB0 0031A470  3C 60 80 5D */	lis r3, lbl_805D4000@ha
-/* 80350EB4 0031A474  38 63 40 00 */	addi r3, r3, lbl_805D4000@l
+/* 80350EB0 0031A470  3C 60 80 5D */	lis r3, s_homeDir@ha
+/* 80350EB4 0031A474  38 63 40 00 */	addi r3, r3, s_homeDir@l
 /* 80350EB8 0031A478  4E 80 00 20 */	blr 
 .endfn nandGetHomeDir
 
@@ -1406,8 +1406,8 @@ lbl_80551080:
 	.4byte 0
 
 
-.global lbl_805510E0
-lbl_805510E0:
+
+s_currentDir:
 	.4byte 0x2F000000
 	.4byte 0
 	.4byte 0
@@ -1424,6 +1424,8 @@ lbl_805510E0:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+
+s_shutdownFuncInfo:
 	.4byte nandOnShutdown
 	.4byte 0x000000FF
 	.4byte 0
@@ -1497,13 +1499,10 @@ lbl_80665B0C:
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805D4000
-lbl_805D4000:
+s_homeDir:
 	.skip 0x40
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-
-.global lbl_806679F0
-lbl_806679F0:
+s_libState:
 	.skip 0x8

@@ -216,11 +216,11 @@
 /* 80315CF4 002DF2B4  2C 03 00 00 */	cmpwi r3, 0
 /* 80315CF8 002DF2B8  41 82 00 1C */	beq .L_80315D14
 /* 80315CFC 002DF2BC  3C 60 A5 FF */	lis r3, 0xA5FF005A@ha
-/* 80315D00 002DF2C0  93 CD B7 6C */	stw r30, lbl_806678EC@sda21(r13)
+/* 80315D00 002DF2C0  93 CD B7 6C */	stw r30, Chan@sda21(r13)
 /* 80315D04 002DF2C4  38 03 00 5A */	addi r0, r3, 0xA5FF005A@l
-/* 80315D08 002DF2C8  93 ED B7 68 */	stw r31, lbl_806678E8@sda21(r13)
-/* 80315D0C 002DF2CC  90 0D B7 64 */	stw r0, lbl_806678E4@sda21(r13)
-/* 80315D10 002DF2D0  90 0D B7 60 */	stw r0, lbl_806678E0@sda21(r13)
+/* 80315D08 002DF2C8  93 ED B7 68 */	stw r31, Dev@sda21(r13)
+/* 80315D0C 002DF2CC  90 0D B7 64 */	stw r0, BarnacleEnabled@sda21(r13)
+/* 80315D10 002DF2D0  90 0D B7 60 */	stw r0, Enabled@sda21(r13)
 .L_80315D14:
 /* 80315D14 002DF2D4  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80315D18 002DF2D8  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -232,16 +232,14 @@
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+Enabled:
+	.skip 0x4
 
-.global lbl_806678E0
-lbl_806678E0:
+BarnacleEnabled:
 	.skip 0x4
-.global lbl_806678E4
-lbl_806678E4:
+
+Dev:
 	.skip 0x4
-.global lbl_806678E8
-lbl_806678E8:
-	.skip 0x4
-.global lbl_806678EC
-lbl_806678EC:
+
+Chan:
 	.skip 0x4

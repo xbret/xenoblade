@@ -313,10 +313,10 @@
 /* 80356F5C 0032051C  7C BD 2B 78 */	mr r29, r5
 /* 80356F60 00320520  48 00 1A 51 */	bl OSDisableInterrupts
 /* 80356F64 00320524  48 00 46 8D */	bl OSDisableScheduler
-/* 80356F68 00320528  3F 00 80 5D */	lis r24, lbl_805D4420@ha
-/* 80356F6C 0032052C  38 78 44 20 */	addi r3, r24, lbl_805D4420@l
+/* 80356F68 00320528  3F 00 80 5D */	lis r24, FatalContext@ha
+/* 80356F6C 0032052C  38 78 44 20 */	addi r3, r24, FatalContext@l
 /* 80356F70 00320530  4B FF DB 51 */	bl OSClearContext
-/* 80356F74 00320534  38 78 44 20 */	addi r3, r24, lbl_805D4420@l
+/* 80356F74 00320534  38 78 44 20 */	addi r3, r24, FatalContext@l
 /* 80356F78 00320538  4B FF D9 09 */	bl OSSetCurrentContext
 /* 80356F7C 0032053C  4B FF CF 15 */	bl __OSStopAudioSystem
 /* 80356F80 00320540  48 00 DD 21 */	bl VIInit
@@ -417,8 +417,8 @@
 /* 803570E0 003206A0  4B FF C9 41 */	bl OSSetArenaHi
 .L_803570E4:
 /* 803570E4 003206A4  80 1B 00 00 */	lwz r0, 0(r27)
-/* 803570E8 003206A8  3C 60 80 5D */	lis r3, lbl_805D46E8@ha
-/* 803570EC 003206AC  94 03 46 E8 */	stwu r0, lbl_805D46E8@l(r3)
+/* 803570E8 003206A8  3C 60 80 5D */	lis r3, FatalParam@ha
+/* 803570EC 003206AC  94 03 46 E8 */	stwu r0, FatalParam@l(r3)
 /* 803570F0 003206B0  80 1C 00 00 */	lwz r0, 0(r28)
 /* 803570F4 003206B4  90 03 00 04 */	stw r0, 4(r3)
 /* 803570F8 003206B8  93 A3 00 08 */	stw r29, 8(r3)
@@ -448,8 +448,8 @@
 /* 80357150 00320710  90 01 00 20 */	stw r0, 0x20(r1)
 /* 80357154 00320714  90 01 00 28 */	stw r0, 0x28(r1)
 /* 80357158 00320718  48 00 18 79 */	bl OSEnableInterrupts
-/* 8035715C 0032071C  3F A0 80 5D */	lis r29, lbl_805D46E8@ha
-/* 80357160 00320720  3B BD 46 E8 */	addi r29, r29, lbl_805D46E8@l
+/* 8035715C 0032071C  3F A0 80 5D */	lis r29, FatalParam@ha
+/* 80357160 00320720  3B BD 46 E8 */	addi r29, r29, FatalParam@l
 /* 80357164 00320724  83 9D 00 08 */	lwz r28, 8(r29)
 /* 80357168 00320728  7F 83 E3 78 */	mr r3, r28
 /* 8035716C 0032072C  4B F6 24 4D */	bl strlen
@@ -919,11 +919,11 @@ float_8066C1C0:
 .global double_8066C1C8
 double_8066C1C8:
 	.8byte 0x4330000000000000 #unsigned int to float constant
+
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805D4420
-lbl_805D4420:
+FatalContext:
 	.skip 0x2C8
-.global lbl_805D46E8
-lbl_805D46E8:
+
+FatalParam:
 	.skip 0x18

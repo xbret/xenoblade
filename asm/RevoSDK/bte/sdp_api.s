@@ -23,8 +23,8 @@
 /* 80302F00 002CC4C0  28 05 00 03 */	cmplwi r5, 3
 /* 80302F04 002CC4C4  40 81 00 40 */	ble .L_80302F44
 .L_80302F08:
-/* 80302F08 002CC4C8  3C 60 80 5C */	lis r3, lbl_805C36C0@ha
-/* 80302F0C 002CC4CC  38 63 36 C0 */	addi r3, r3, lbl_805C36C0@l
+/* 80302F08 002CC4C8  3C 60 80 5C */	lis r3, sdp_cb@ha
+/* 80302F0C 002CC4CC  38 63 36 C0 */	addi r3, r3, sdp_cb@l
 /* 80302F10 002CC4D0  88 03 46 30 */	lbz r0, 0x4630(r3)
 /* 80302F14 002CC4D4  28 00 00 01 */	cmplwi r0, 1
 /* 80302F18 002CC4D8  41 80 00 24 */	blt .L_80302F3C
@@ -480,8 +480,8 @@
 /* 80303534 002CCAF4  88 03 00 08 */	lbz r0, 8(r3)
 /* 80303538 002CCAF8  28 00 00 01 */	cmplwi r0, 1
 /* 8030353C 002CCAFC  40 82 00 1C */	bne .L_80303558
-/* 80303540 002CCB00  3C 60 80 5C */	lis r3, lbl_805C36C0@ha
-/* 80303544 002CCB04  38 63 36 C0 */	addi r3, r3, lbl_805C36C0@l
+/* 80303540 002CCB00  3C 60 80 5C */	lis r3, sdp_cb@ha
+/* 80303544 002CCB04  38 63 36 C0 */	addi r3, r3, sdp_cb@l
 /* 80303548 002CCB08  83 C3 12 1C */	lwz r30, 0x121c(r3)
 /* 8030354C 002CCB0C  2C 1E 00 00 */	cmpwi r30, 0
 /* 80303550 002CCB10  41 82 00 08 */	beq .L_80303558
@@ -680,8 +680,8 @@
 /* 80303814 002CCDD4  88 1D 00 08 */	lbz r0, 8(r29)
 /* 80303818 002CCDD8  28 00 00 01 */	cmplwi r0, 1
 /* 8030381C 002CCDDC  40 82 00 10 */	bne .L_8030382C
-/* 80303820 002CCDE0  3C 60 80 5C */	lis r3, lbl_805C36C0@ha
-/* 80303824 002CCDE4  38 63 36 C0 */	addi r3, r3, lbl_805C36C0@l
+/* 80303820 002CCDE0  3C 60 80 5C */	lis r3, sdp_cb@ha
+/* 80303824 002CCDE4  38 63 36 C0 */	addi r3, r3, sdp_cb@l
 /* 80303828 002CCDE8  93 C3 12 1C */	stw r30, 0x121c(r3)
 .L_8030382C:
 /* 8030382C 002CCDEC  7F E3 FB 78 */	mr r3, r31
@@ -710,8 +710,8 @@
 /* 80303878 002CCE38  80 04 00 00 */	lwz r0, 0(r4)
 /* 8030387C 002CCE3C  2C 00 00 00 */	cmpwi r0, 0
 /* 80303880 002CCE40  40 82 00 14 */	bne .L_80303894
-/* 80303884 002CCE44  3C 60 80 5C */	lis r3, lbl_805C36C0@ha
-/* 80303888 002CCE48  38 63 36 C0 */	addi r3, r3, lbl_805C36C0@l
+/* 80303884 002CCE44  3C 60 80 5C */	lis r3, sdp_cb@ha
+/* 80303888 002CCE48  38 63 36 C0 */	addi r3, r3, sdp_cb@l
 /* 8030388C 002CCE4C  80 03 12 1C */	lwz r0, 0x121c(r3)
 /* 80303890 002CCE50  90 04 00 00 */	stw r0, 0(r4)
 .L_80303894:
@@ -1028,18 +1028,19 @@
 .fn SDP_SetTraceLevel, global
 /* 80303D00 002CD2C0  28 03 00 FF */	cmplwi r3, 0xff
 /* 80303D04 002CD2C4  41 82 00 10 */	beq .L_80303D14
-/* 80303D08 002CD2C8  3C 80 80 5C */	lis r4, lbl_805C36C0@ha
-/* 80303D0C 002CD2CC  38 84 36 C0 */	addi r4, r4, lbl_805C36C0@l
+/* 80303D08 002CD2C8  3C 80 80 5C */	lis r4, sdp_cb@ha
+/* 80303D0C 002CD2CC  38 84 36 C0 */	addi r4, r4, sdp_cb@l
 /* 80303D10 002CD2D0  98 64 46 30 */	stb r3, 0x4630(r4)
 .L_80303D14:
-/* 80303D14 002CD2D4  3C 60 80 5C */	lis r3, lbl_805C36C0@ha
-/* 80303D18 002CD2D8  38 63 36 C0 */	addi r3, r3, lbl_805C36C0@l
+/* 80303D14 002CD2D4  3C 60 80 5C */	lis r3, sdp_cb@ha
+/* 80303D18 002CD2D8  38 63 36 C0 */	addi r3, r3, sdp_cb@l
 /* 80303D1C 002CD2DC  88 63 46 30 */	lbz r3, 0x4630(r3)
 /* 80303D20 002CD2E0  4E 80 00 20 */	blr
 .endfn SDP_SetTraceLevel
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
 .global lbl_80548F00
 lbl_80548F00:
 	.asciz "SDP_InitDiscoveryDb Illegal param: p_db 0x%x, len %d, num_uuid %d, num_attr %d"

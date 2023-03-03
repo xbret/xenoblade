@@ -5,8 +5,8 @@
 .balign 16, 0
 .fn GXSetTevOp, global
 /* 8031D620 002E6BE0  2C 03 00 00 */	cmpwi r3, 0
-/* 8031D624 002E6BE4  3C A0 80 55 */	lis r5, lbl_8054C098@ha
-/* 8031D628 002E6BE8  38 A5 C0 98 */	addi r5, r5, lbl_8054C098@l
+/* 8031D624 002E6BE4  3C A0 80 55 */	lis r5, TEVCOpTableST0@ha
+/* 8031D628 002E6BE8  38 A5 C0 98 */	addi r5, r5, TEVCOpTableST0@l
 /* 8031D62C 002E6BEC  40 82 00 1C */	bne .L_8031D648
 /* 8031D630 002E6BF0  54 86 10 3A */	slwi r6, r4, 2
 /* 8031D634 002E6BF4  38 85 00 00 */	addi r4, r5, 0
@@ -21,7 +21,7 @@
 /* 8031D654 002E6C14  7D 04 32 14 */	add r8, r4, r6
 /* 8031D658 002E6C18  7D 20 32 14 */	add r9, r0, r6
 .L_8031D65C:
-/* 8031D65C 002E6C1C  80 E2 BC 20 */	lwz r7, lbl_8066BFA0@sda21(r2)
+/* 8031D65C 002E6C1C  80 E2 BC 20 */	lwz r7, __GXData@sda21(r2)
 /* 8031D660 002E6C20  54 60 10 3A */	slwi r0, r3, 2
 /* 8031D664 002E6C24  80 68 00 00 */	lwz r3, 0(r8)
 /* 8031D668 002E6C28  3C 80 CC 01 */	lis r4, 0xCC008000@ha
@@ -47,7 +47,7 @@
 
 .balign 16, 0
 .fn GXSetTevColorIn, global
-/* 8031D6C0 002E6C80  81 62 BC 20 */	lwz r11, lbl_8066BFA0@sda21(r2)
+/* 8031D6C0 002E6C80  81 62 BC 20 */	lwz r11, __GXData@sda21(r2)
 /* 8031D6C4 002E6C84  54 60 10 3A */	slwi r0, r3, 2
 /* 8031D6C8 002E6C88  3C 60 CC 01 */	lis r3, 0xCC008000@ha
 /* 8031D6CC 002E6C8C  39 00 00 61 */	li r8, 0x61
@@ -67,7 +67,7 @@
 
 .balign 16, 0
 .fn GXSetTevAlphaIn, global
-/* 8031D700 002E6CC0  81 62 BC 20 */	lwz r11, lbl_8066BFA0@sda21(r2)
+/* 8031D700 002E6CC0  81 62 BC 20 */	lwz r11, __GXData@sda21(r2)
 /* 8031D704 002E6CC4  54 60 10 3A */	slwi r0, r3, 2
 /* 8031D708 002E6CC8  3C 60 CC 01 */	lis r3, 0xCC008000@ha
 /* 8031D70C 002E6CCC  39 00 00 61 */	li r8, 0x61
@@ -87,7 +87,7 @@
 
 .balign 16, 0
 .fn GXSetTevColorOp, global
-/* 8031D740 002E6D00  81 42 BC 20 */	lwz r10, lbl_8066BFA0@sda21(r2)
+/* 8031D740 002E6D00  81 42 BC 20 */	lwz r10, __GXData@sda21(r2)
 /* 8031D744 002E6D04  54 60 10 3A */	slwi r0, r3, 2
 /* 8031D748 002E6D08  2C 04 00 01 */	cmpwi r4, 1
 /* 8031D74C 002E6D0C  7D 2A 02 14 */	add r9, r10, r0
@@ -115,7 +115,7 @@
 
 .balign 16, 0
 .fn GXSetTevAlphaOp, global
-/* 8031D7A0 002E6D60  81 42 BC 20 */	lwz r10, lbl_8066BFA0@sda21(r2)
+/* 8031D7A0 002E6D60  81 42 BC 20 */	lwz r10, __GXData@sda21(r2)
 /* 8031D7A4 002E6D64  54 60 10 3A */	slwi r0, r3, 2
 /* 8031D7A8 002E6D68  2C 04 00 01 */	cmpwi r4, 1
 /* 8031D7AC 002E6D6C  7D 2A 02 14 */	add r9, r10, r0
@@ -155,7 +155,7 @@
 /* 8031D824 002E6DE4  51 07 63 26 */	rlwimi r7, r8, 0xc, 0xc, 0x13
 /* 8031D828 002E6DE8  90 E4 80 00 */	stw r7, -0x8000(r4)
 /* 8031D82C 002E6DEC  54 06 C0 0E */	slwi r6, r0, 0x18
-/* 8031D830 002E6DF0  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
+/* 8031D830 002E6DF0  80 62 BC 20 */	lwz r3, __GXData@sda21(r2)
 /* 8031D834 002E6DF4  98 A4 80 00 */	stb r5, -0x8000(r4)
 /* 8031D838 002E6DF8  51 06 C6 3E */	rlwimi r6, r8, 0x18, 0x18, 0x1f
 /* 8031D83C 002E6DFC  51 06 E3 26 */	rlwimi r6, r8, 0x1c, 0xc, 0x13
@@ -184,7 +184,7 @@
 /* 8031D888 002E6E48  51 27 62 66 */	rlwimi r7, r9, 0xc, 9, 0x13
 /* 8031D88C 002E6E4C  90 E5 80 00 */	stw r7, -0x8000(r5)
 /* 8031D890 002E6E50  54 C6 C0 0E */	slwi r6, r6, 0x18
-/* 8031D894 002E6E54  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
+/* 8031D894 002E6E54  80 62 BC 20 */	lwz r3, __GXData@sda21(r2)
 /* 8031D898 002E6E58  98 85 80 00 */	stb r4, -0x8000(r5)
 /* 8031D89C 002E6E5C  51 26 85 7E */	rlwimi r6, r9, 0x10, 0x15, 0x1f
 /* 8031D8A0 002E6E60  51 06 62 66 */	rlwimi r6, r8, 0xc, 9, 0x13
@@ -210,7 +210,7 @@
 /* 8031D8EC 002E6EAC  54 08 C0 0E */	slwi r8, r0, 0x18
 /* 8031D8F0 002E6EB0  38 03 00 E1 */	addi r0, r3, 0xe1
 /* 8031D8F4 002E6EB4  51 28 46 3E */	rlwimi r8, r9, 8, 0x18, 0x1f
-/* 8031D8F8 002E6EB8  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
+/* 8031D8F8 002E6EB8  80 62 BC 20 */	lwz r3, __GXData@sda21(r2)
 /* 8031D8FC 002E6EBC  51 28 63 26 */	rlwimi r8, r9, 0xc, 0xc, 0x13
 /* 8031D900 002E6EC0  54 06 C0 0E */	slwi r6, r0, 0x18
 /* 8031D904 002E6EC4  50 E8 A2 16 */	rlwimi r8, r7, 0x14, 8, 0xb
@@ -228,7 +228,7 @@
 .balign 16, 0
 .fn GXSetTevKColorSel, global
 /* 8031D930 002E6EF0  54 60 07 FF */	clrlwi. r0, r3, 0x1f
-/* 8031D934 002E6EF4  80 A2 BC 20 */	lwz r5, lbl_8066BFA0@sda21(r2)
+/* 8031D934 002E6EF4  80 A2 BC 20 */	lwz r5, __GXData@sda21(r2)
 /* 8031D938 002E6EF8  54 60 08 3A */	rlwinm r0, r3, 1, 0, 0x1d
 /* 8031D93C 002E6EFC  7C 65 02 14 */	add r3, r5, r0
 /* 8031D940 002E6F00  41 82 00 14 */	beq .L_8031D954
@@ -254,7 +254,7 @@
 .balign 16, 0
 .fn GXSetTevKAlphaSel, global
 /* 8031D980 002E6F40  54 60 07 FF */	clrlwi. r0, r3, 0x1f
-/* 8031D984 002E6F44  80 A2 BC 20 */	lwz r5, lbl_8066BFA0@sda21(r2)
+/* 8031D984 002E6F44  80 A2 BC 20 */	lwz r5, __GXData@sda21(r2)
 /* 8031D988 002E6F48  54 60 08 3A */	rlwinm r0, r3, 1, 0, 0x1d
 /* 8031D98C 002E6F4C  7C 65 02 14 */	add r3, r5, r0
 /* 8031D990 002E6F50  41 82 00 14 */	beq .L_8031D9A4
@@ -279,7 +279,7 @@
 
 .balign 16, 0
 .fn GXSetTevSwapMode, global
-/* 8031D9D0 002E6F90  81 22 BC 20 */	lwz r9, lbl_8066BFA0@sda21(r2)
+/* 8031D9D0 002E6F90  81 22 BC 20 */	lwz r9, __GXData@sda21(r2)
 /* 8031D9D4 002E6F94  54 60 10 3A */	slwi r0, r3, 2
 /* 8031D9D8 002E6F98  3C C0 CC 01 */	lis r6, 0xCC008000@ha
 /* 8031D9DC 002E6F9C  38 60 00 61 */	li r3, 0x61
@@ -307,7 +307,7 @@
 /* 8031DA28 002E6FE8  38 6C 00 01 */	addi r3, r12, 1
 /* 8031DA2C 002E6FEC  38 00 00 00 */	li r0, 0
 /* 8031DA30 002E6FF0  93 C1 00 08 */	stw r30, 8(r1)
-/* 8031DA34 002E6FF4  83 C2 BC 20 */	lwz r30, lbl_8066BFA0@sda21(r2)
+/* 8031DA34 002E6FF4  83 C2 BC 20 */	lwz r30, __GXData@sda21(r2)
 /* 8031DA38 002E6FF8  3B FE 02 00 */	addi r31, r30, 0x200
 /* 8031DA3C 002E6FFC  7D 5F 58 2E */	lwzx r10, r31, r11
 /* 8031DA40 002E7000  50 8A 07 BE */	rlwimi r10, r4, 0, 0x1e, 0x1f
@@ -338,7 +338,7 @@
 /* 8031DA98 002E7058  98 08 80 00 */	stb r0, 0xCC008000@l(r8)
 /* 8031DA9C 002E705C  3D 20 F3 00 */	lis r9, 0xf300
 /* 8031DAA0 002E7060  50 89 06 3E */	rlwimi r9, r4, 0, 0x18, 0x1f
-/* 8031DAA4 002E7064  80 82 BC 20 */	lwz r4, lbl_8066BFA0@sda21(r2)
+/* 8031DAA4 002E7064  80 82 BC 20 */	lwz r4, __GXData@sda21(r2)
 /* 8031DAA8 002E7068  50 E9 44 2E */	rlwimi r9, r7, 8, 0x10, 0x17
 /* 8031DAAC 002E706C  38 00 00 00 */	li r0, 0
 /* 8031DAB0 002E7070  50 69 83 5E */	rlwimi r9, r3, 0x10, 0xd, 0xf
@@ -382,7 +382,7 @@
 /* 8031DB2C 002E70EC  38 A0 00 F5 */	li r5, 0xf5
 /* 8031DB30 002E70F0  90 E4 80 00 */	stw r7, -0x8000(r4)
 /* 8031DB34 002E70F4  50 66 17 3A */	rlwimi r6, r3, 2, 0x1c, 0x1d
-/* 8031DB38 002E70F8  80 62 BC 20 */	lwz r3, lbl_8066BFA0@sda21(r2)
+/* 8031DB38 002E70F8  80 62 BC 20 */	lwz r3, __GXData@sda21(r2)
 /* 8031DB3C 002E70FC  50 A6 C0 0E */	rlwimi r6, r5, 0x18, 0, 7
 /* 8031DB40 002E7100  98 04 80 00 */	stb r0, -0x8000(r4)
 /* 8031DB44 002E7104  38 00 00 00 */	li r0, 0
@@ -396,7 +396,7 @@
 /* 8031DB60 002E7120  54 AB 06 2C */	rlwinm r11, r5, 0, 0x18, 0x16
 /* 8031DB64 002E7124  38 E0 00 08 */	li r7, 8
 /* 8031DB68 002E7128  54 69 0F FE */	srwi r9, r3, 0x1f
-/* 8031DB6C 002E712C  81 42 BC 20 */	lwz r10, lbl_8066BFA0@sda21(r2)
+/* 8031DB6C 002E712C  81 42 BC 20 */	lwz r10, __GXData@sda21(r2)
 /* 8031DB70 002E7130  7C 07 58 10 */	subfc r0, r7, r11
 /* 8031DB74 002E7134  54 68 10 3A */	slwi r8, r3, 2
 /* 8031DB78 002E7138  7C 07 01 94 */	addze r0, r7
@@ -482,7 +482,7 @@
 /* 8031DC90 002E7250  38 00 00 61 */	li r0, 0x61
 /* 8031DC94 002E7254  98 04 80 00 */	stb r0, 0xCC008000@l(r4)
 /* 8031DC98 002E7258  38 00 00 00 */	li r0, 0
-/* 8031DC9C 002E725C  80 A2 BC 20 */	lwz r5, lbl_8066BFA0@sda21(r2)
+/* 8031DC9C 002E725C  80 A2 BC 20 */	lwz r5, __GXData@sda21(r2)
 /* 8031DCA0 002E7260  80 67 01 50 */	lwz r3, 0x150(r7)
 /* 8031DCA4 002E7264  90 64 80 00 */	stw r3, -0x8000(r4)
 /* 8031DCA8 002E7268  B0 05 00 02 */	sth r0, 2(r5)
@@ -494,7 +494,7 @@
 
 .balign 16, 0
 .fn GXSetNumTevStages, global
-/* 8031DCC0 002E7280  80 82 BC 20 */	lwz r4, lbl_8066BFA0@sda21(r2)
+/* 8031DCC0 002E7280  80 82 BC 20 */	lwz r4, __GXData@sda21(r2)
 /* 8031DCC4 002E7284  38 03 FF FF */	addi r0, r3, -1
 /* 8031DCC8 002E7288  80 64 02 54 */	lwz r3, 0x254(r4)
 /* 8031DCCC 002E728C  50 03 54 AA */	rlwimi r3, r0, 0xa, 0x12, 0x15
@@ -507,31 +507,35 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8054C098
-lbl_8054C098:
+TEVCOpTableST0:
 	.4byte 0xC008F8AF
 	.4byte 0xC008A89F
 	.4byte 0xC008AC8F
 	.4byte 0xC008FFF8
 	.4byte 0xC008FFFA
+
+TEVCOpTableST1:
 	.4byte 0xC008F80F
 	.4byte 0xC008089F
 	.4byte 0xC0080C8F
 	.4byte 0xC008FFF8
 	.4byte 0xC008FFF0
+
+TEVAOpTableST0:
 	.4byte 0xC108F2F0
 	.4byte 0xC108FFD0
 	.4byte 0xC108F2F0
 	.4byte 0xC108FFC0
 	.4byte 0xC108FFD0
+
+TEVAOpTableST1:
 	.4byte 0xC108F070
 	.4byte 0xC108FF80
 	.4byte 0xC108F070
 	.4byte 0xC108FFC0
 	.4byte 0xC108FF80
 
-
-.global lbl_8054C0E8
+#@LOCAL@GXSetTevOrder__F13_GXTevStageID13_GXTexCoordID11_GXTexMapID12_GXChannelID@c2r
 lbl_8054C0E8:
 	.4byte 0
 	.4byte 0x00000001
