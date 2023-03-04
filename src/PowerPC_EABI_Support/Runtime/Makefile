@@ -1,7 +1,6 @@
 RUNTIME_FILES:=\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/Runtime/__mem.o\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MetroTRK/__exception.o\
-	$(BUILD_DIR)/src/PowerPC_EABI_Support/Runtime/strlen.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/Runtime/__va_arg.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/Runtime/global_destructor_chain.o\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/Runtime/NMWException.o\

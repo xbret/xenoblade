@@ -5898,9 +5898,9 @@
 /* 8037AE50 00344410  89 3D 07 07 */	lbz r9, 0x707(r29)
 /* 8037AE54 00344414  4C C6 31 82 */	crclr 6
 /* 8037AE58 00344418  48 00 17 79 */	bl WUD_DEBUGPrint
-/* 8037AE5C 0034441C  3C 80 80 38 */	lis r4, WUDHidHostCallback@ha
+/* 8037AE5C 0034441C  3C 80 80 38 */	lis r4, WUDiHidHostEventCallback@ha
 /* 8037AE60 00344420  38 60 00 12 */	li r3, 0x12
-/* 8037AE64 00344424  38 84 BF E0 */	addi r4, r4, WUDHidHostCallback@l
+/* 8037AE64 00344424  38 84 BF E0 */	addi r4, r4, WUDiHidHostEventCallback@l
 /* 8037AE68 00344428  4B F6 89 C9 */	bl BTA_HhEnable
 /* 8037AE6C 0034442C  38 00 00 01 */	li r0, 1
 /* 8037AE70 00344430  98 1D 00 0F */	stb r0, 0xf(r29)

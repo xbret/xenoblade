@@ -363,8 +363,7 @@
 /* 804DB8FC 004A4EBC  4E 80 00 20 */	blr
 .endfn randF__18CERandomizerSimpleFv
 
-#__sinit_\CERand_cpp
-.fn __sinit_CERand_cpp, global
+.fn "__sinit_\CERand_cpp", local
 /* 804DB900 004A4EC0  3C A0 80 66 */	lis r5, ceRandomizerSimple@ha
 /* 804DB904 004A4EC4  3C C0 80 57 */	lis r6, __vt__CERandomizer@ha
 /* 804DB908 004A4EC8  3C 80 80 57 */	lis r4, __vt__18CERandomizerSimple@ha
@@ -379,7 +378,7 @@
 /* 804DB92C 004A4EEC  B0 03 00 06 */	sth r0, 6(r3)
 /* 804DB930 004A4EF0  D0 03 00 08 */	stfs f0, 8(r3)
 /* 804DB934 004A4EF4  4E 80 00 20 */	blr
-.endfn __sinit_CERand_cpp
+.endfn "__sinit_\CERand_cpp"
 
 .fn randF__12CERandomizerFv, global
 /* 804DB938 004A4EF8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -409,7 +408,7 @@
 
 .balign 4
 
-.4byte __sinit_CERand_cpp
+.4byte "__sinit_\CERand_cpp"
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0

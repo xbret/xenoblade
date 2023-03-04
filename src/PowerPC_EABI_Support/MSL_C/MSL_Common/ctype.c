@@ -1,10 +1,6 @@
-.include "macros.inc"
+ 
 
-
-.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
-
-.global __ctype_mapC
-__ctype_mapC:
+unsigned char __ctype_mapC[256] = {
 	.2byte 0x0004
 	.2byte 0x0004
 	.2byte 0x0004
@@ -197,6 +193,7 @@ __ctype_mapC:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+};
 
 .global __lower_mapC
 __lower_mapC:

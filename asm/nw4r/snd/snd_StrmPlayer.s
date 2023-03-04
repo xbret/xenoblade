@@ -2791,7 +2791,7 @@
 /* 80424C00 003EE1C0  4E 80 00 20 */	blr 
 .endfn SetTrackVolume__Q44nw4r3snd6detail10StrmPlayerFUlf
 
-#GetPlayerTrack__Q44nw4r3snd6detail10StrmPlayerCFi or GetPlayerTrack__Q44nw4r3snd6detail10StrmPlayerFi
+#could also be GetPlayerTrack__Q44nw4r3snd6detail10StrmPlayerCFi
 .fn GetPlayerTrack__Q44nw4r3snd6detail10StrmPlayerFi, global
 /* 80424C04 003EE1C4  2C 04 00 07 */	cmpwi r4, 7
 /* 80424C08 003EE1C8  40 81 00 0C */	ble .L_80424C14

@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-#SetTagProcessorImpl__24@unnamed@lyt_layout_cpp@FPQ36nw4hbm3lyt4PanePQ36nw4hbm2ut19TagProcessorBase<w>
-.fn SetTagProcessorImpl__24_unnamed_lyt_layout_cpp_FPQ36nw4hbm3lyt4PanePQ36nw4hbm2ut19TagProcessorBase_w_, global
+.fn "SetTagProcessorImpl__24@unnamed@lyt_layout_cpp@FPQ36nw4hbm3lyt4PanePQ36nw4hbm2ut19TagProcessorBase<w>", global
 /* 8032D830 002F6DF0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8032D834 002F6DF4  7C 08 02 A6 */	mflr r0
 /* 8032D838 002F6DF8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -117,7 +116,7 @@
 .L_8032D988:
 /* 8032D988 002F6F48  7F 04 C3 78 */	mr r4, r24
 /* 8032D98C 002F6F4C  38 7D FF FC */	addi r3, r29, -4
-/* 8032D990 002F6F50  4B FF FE A1 */	bl SetTagProcessorImpl__24_unnamed_lyt_layout_cpp_FPQ36nw4hbm3lyt4PanePQ36nw4hbm2ut19TagProcessorBase_w_
+/* 8032D990 002F6F50  4B FF FE A1 */	bl "SetTagProcessorImpl__24@unnamed@lyt_layout_cpp@FPQ36nw4hbm3lyt4PanePQ36nw4hbm2ut19TagProcessorBase<w>"
 /* 8032D994 002F6F54  83 BD 00 00 */	lwz r29, 0(r29)
 .L_8032D998:
 /* 8032D998 002F6F58  7C 1D D0 40 */	cmplw r29, r26
@@ -136,7 +135,7 @@
 /* 8032D9C4 002F6F84  7C 08 03 A6 */	mtlr r0
 /* 8032D9C8 002F6F88  38 21 00 30 */	addi r1, r1, 0x30
 /* 8032D9CC 002F6F8C  4E 80 00 20 */	blr 
-.endfn SetTagProcessorImpl__24_unnamed_lyt_layout_cpp_FPQ36nw4hbm3lyt4PanePQ36nw4hbm2ut19TagProcessorBase_w_
+.endfn "SetTagProcessorImpl__24@unnamed@lyt_layout_cpp@FPQ36nw4hbm3lyt4PanePQ36nw4hbm2ut19TagProcessorBase<w>"
 
 .balign 16, 0
 .fn __ct__Q36nw4hbm3lyt6LayoutFv, global
@@ -679,8 +678,7 @@
 .endfn GetLayoutRect__Q36nw4hbm3lyt6LayoutCFv
 
 .balign 16, 0
-#SetTagProcessor__Q36nw4hbm3lyt6LayoutFPQ36nw4hbm2ut19TagProcessorBase<w>
-.fn SetTagProcessor__Q36nw4hbm3lyt6LayoutFPQ36nw4hbm2ut19TagProcessorBase_w_, global
+.fn "SetTagProcessor__Q36nw4hbm3lyt6LayoutFPQ36nw4hbm2ut19TagProcessorBase<w>", global
 /* 8032E120 002F76E0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8032E124 002F76E4  7C 08 02 A6 */	mflr r0
 /* 8032E128 002F76E8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -795,7 +793,7 @@
 .L_8032E280:
 /* 8032E280 002F7840  7F E4 FB 78 */	mr r4, r31
 /* 8032E284 002F7844  38 7C FF FC */	addi r3, r28, -4
-/* 8032E288 002F7848  4B FF F5 A9 */	bl SetTagProcessorImpl__24_unnamed_lyt_layout_cpp_FPQ36nw4hbm3lyt4PanePQ36nw4hbm2ut19TagProcessorBase_w_
+/* 8032E288 002F7848  4B FF F5 A9 */	bl "SetTagProcessorImpl__24@unnamed@lyt_layout_cpp@FPQ36nw4hbm3lyt4PanePQ36nw4hbm2ut19TagProcessorBase<w>"
 /* 8032E28C 002F784C  83 9C 00 00 */	lwz r28, 0(r28)
 .L_8032E290:
 /* 8032E290 002F7850  7C 1C C8 40 */	cmplw r28, r25
@@ -814,7 +812,7 @@
 /* 8032E2BC 002F787C  7C 08 03 A6 */	mtlr r0
 /* 8032E2C0 002F7880  38 21 00 30 */	addi r1, r1, 0x30
 /* 8032E2C4 002F7884  4E 80 00 20 */	blr 
-.endfn SetTagProcessor__Q36nw4hbm3lyt6LayoutFPQ36nw4hbm2ut19TagProcessorBase_w_
+.endfn "SetTagProcessor__Q36nw4hbm3lyt6LayoutFPQ36nw4hbm2ut19TagProcessorBase<w>"
 
 .balign 16, 0
 .fn BuildPaneObj__Q36nw4hbm3lyt6LayoutFlPCvRCQ36nw4hbm3lyt11ResBlockSet, global
@@ -986,7 +984,7 @@ lbl_8054D7F8:
 	.4byte CalculateMtx__Q36nw4hbm3lyt6LayoutFRCQ36nw4hbm3lyt8DrawInfo
 	.4byte Draw__Q36nw4hbm3lyt6LayoutFRCQ36nw4hbm3lyt8DrawInfo
 	.4byte Animate__Q36nw4hbm3lyt6LayoutFUl
-	.4byte SetTagProcessor__Q36nw4hbm3lyt6LayoutFPQ36nw4hbm2ut19TagProcessorBase_w_
+	.4byte "SetTagProcessor__Q36nw4hbm3lyt6LayoutFPQ36nw4hbm2ut19TagProcessorBase<w>"
 
 .global lbl_8054D82C
 lbl_8054D82C:

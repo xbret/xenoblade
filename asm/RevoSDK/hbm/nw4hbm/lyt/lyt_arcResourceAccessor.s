@@ -3,7 +3,6 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-#"FindNameResource__37@unnamed@lyt_arcResourceAccessor_cpp@FP9ARCHandlePCc"
 .fn "FindNameResource__37@unnamed@lyt_arcResourceAccessor_cpp@FP9ARCHandlePCc", local
 /* 8032C070 002F5630  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8032C074 002F5634  7C 08 02 A6 */	mflr r0
@@ -67,7 +66,6 @@
 .endfn "FindNameResource__37@unnamed@lyt_arcResourceAccessor_cpp@FP9ARCHandlePCc"
 
 .balign 16, 0
-#"GetResourceSub__37@unnamed@lyt_arcResourceAccessor_cpp@FP9ARCHandlePCcUlPCcPUl"
 .fn "GetResourceSub__37@unnamed@lyt_arcResourceAccessor_cpp@FP9ARCHandlePCcUlPCcPUl", local
 /* 8032C150 002F5710  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8032C154 002F5714  7C 08 02 A6 */	mflr r0

@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-#GetFreePlayer__24@unnamed@HBMAxSound_cpp@Fi
-.fn GetFreePlayer__24_unnamed_HBMAxSound_cpp_Fi, global
+.fn "GetFreePlayer__24@unnamed@HBMAxSound_cpp@Fi", global
 /* 803222B0 002EB870  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803222B4 002EB874  7C 08 02 A6 */	mflr r0
 /* 803222B8 002EB878  2C 03 00 04 */	cmpwi r3, 4
@@ -124,11 +123,10 @@
 /* 8032243C 002EB9FC  7C 08 03 A6 */	mtlr r0
 /* 80322440 002EBA00  38 21 00 10 */	addi r1, r1, 0x10
 /* 80322444 002EBA04  4E 80 00 20 */	blr 
-.endfn GetFreePlayer__24_unnamed_HBMAxSound_cpp_Fi
+.endfn "GetFreePlayer__24@unnamed@HBMAxSound_cpp@Fi"
 
 .balign 16, 0
-#AudioFrameCallback__24@unnamed@HBMAxSound_cpp@Fv@l
-.fn AudioFrameCallback__24_unnamed_HBMAxSound_cpp_Fv, global
+.fn "AudioFrameCallback__24@unnamed@HBMAxSound_cpp@Fv", global
 /* 80322450 002EBA10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80322454 002EBA14  7C 08 02 A6 */	mflr r0
 /* 80322458 002EBA18  90 01 00 14 */	stw r0, 0x14(r1)
@@ -155,11 +153,10 @@
 /* 803224A8 002EBA68  7C 08 03 A6 */	mtlr r0
 /* 803224AC 002EBA6C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803224B0 002EBA70  4E 80 00 20 */	blr
-.endfn AudioFrameCallback__24_unnamed_HBMAxSound_cpp_Fv
+.endfn "AudioFrameCallback__24@unnamed@HBMAxSound_cpp@Fv"
 
 .balign 16, 0
-#AudioSoundThreadProc__24@unnamed@HBMAxSound_cpp@FPv
-.fn AudioSoundThreadProc__24_unnamed_HBMAxSound_cpp_FPv, global
+.fn "AudioSoundThreadProc__24@unnamed@HBMAxSound_cpp@FPv", global
 /* 803224C0 002EBA80  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803224C4 002EBA84  7C 08 02 A6 */	mflr r0
 /* 803224C8 002EBA88  90 01 00 34 */	stw r0, 0x34(r1)
@@ -326,7 +323,7 @@
 /* 803226F4 002EBCB4  7C 08 03 A6 */	mtlr r0
 /* 803226F8 002EBCB8  38 21 00 30 */	addi r1, r1, 0x30
 /* 803226FC 002EBCBC  4E 80 00 20 */	blr 
-.endfn AudioSoundThreadProc__24_unnamed_HBMAxSound_cpp_FPv
+.endfn "AudioSoundThreadProc__24@unnamed@HBMAxSound_cpp@FPv"
 
 .balign 16, 0
 .fn PlaySeq__10homebuttonFi, global
@@ -360,7 +357,7 @@
 /* 80322764 002EBD24  2C 1E 00 00 */	cmpwi r30, 0
 /* 80322768 002EBD28  41 82 00 B4 */	beq .L_8032281C
 /* 8032276C 002EBD2C  7F 83 E3 78 */	mr r3, r28
-/* 80322770 002EBD30  4B FF FB 41 */	bl GetFreePlayer__24_unnamed_HBMAxSound_cpp_Fi
+/* 80322770 002EBD30  4B FF FB 41 */	bl "GetFreePlayer__24@unnamed@HBMAxSound_cpp@Fi"
 /* 80322774 002EBD34  3F E0 80 5D */	lis r31, "sWork__24@unnamed@HBMAxSound_cpp@"@ha
 /* 80322778 002EBD38  7C 7D 1B 78 */	mr r29, r3
 /* 8032277C 002EBD3C  80 BF D7 50 */	lwz r5, "sWork__24@unnamed@HBMAxSound_cpp@"@l(r31)
@@ -514,9 +511,9 @@
 /* 803229A8 002EBF68  3C FF FF FF */	addis r7, r31, 0xffff
 /* 803229AC 002EBF6C  80 03 46 B0 */	lwz r0, 0x46b0(r3)
 /* 803229B0 002EBF70  38 C7 B9 00 */	addi r6, r7, -18176
-/* 803229B4 002EBF74  3C 80 80 32 */	lis r4, AudioSoundThreadProc__24_unnamed_HBMAxSound_cpp_FPv@ha
+/* 803229B4 002EBF74  3C 80 80 32 */	lis r4, "AudioSoundThreadProc__24@unnamed@HBMAxSound_cpp@FPv"@ha
 /* 803229B8 002EBF78  38 A0 00 00 */	li r5, 0
-/* 803229BC 002EBF7C  38 84 24 C0 */	addi r4, r4, AudioSoundThreadProc__24_unnamed_HBMAxSound_cpp_FPv@l
+/* 803229BC 002EBF7C  38 84 24 C0 */	addi r4, r4, "AudioSoundThreadProc__24@unnamed@HBMAxSound_cpp@FPv"@l
 /* 803229C0 002EBF80  7C C0 32 14 */	add r6, r0, r6
 /* 803229C4 002EBF84  39 00 00 04 */	li r8, 4
 /* 803229C8 002EBF88  39 20 00 00 */	li r9, 0
@@ -531,9 +528,9 @@
 /* 803229EC 002EBFAC  38 63 43 68 */	addi r3, r3, 0x4368
 /* 803229F0 002EBFB0  48 03 98 51 */	bl OSResumeThread
 /* 803229F4 002EBFB4  48 03 5F BD */	bl OSDisableInterrupts
-/* 803229F8 002EBFB8  3C 80 80 32 */	lis r4, AudioFrameCallback__24_unnamed_HBMAxSound_cpp_Fv@ha
+/* 803229F8 002EBFB8  3C 80 80 32 */	lis r4, "AudioFrameCallback__24@unnamed@HBMAxSound_cpp@Fv"@ha
 /* 803229FC 002EBFBC  7C 7F 1B 78 */	mr r31, r3
-/* 80322A00 002EBFC0  38 64 24 50 */	addi r3, r4, AudioFrameCallback__24_unnamed_HBMAxSound_cpp_Fv@l
+/* 80322A00 002EBFC0  38 64 24 50 */	addi r3, r4, "AudioFrameCallback__24@unnamed@HBMAxSound_cpp@Fv"@l
 /* 80322A04 002EBFC4  4B FB 17 6D */	bl AXRegisterCallback
 /* 80322A08 002EBFC8  3C 9E 00 01 */	addis r4, r30, 1
 /* 80322A0C 002EBFCC  90 64 43 48 */	stw r3, 0x4348(r4)

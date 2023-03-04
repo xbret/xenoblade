@@ -3,8 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-#CalcTextureMtx__26@unnamed@lyt_material_cpp@FPQ36nw4hbm4math5MTX34RCQ36nw4hbm3lyt6TexSRT
-.fn CalcTextureMtx__26_unnamed_lyt_material_cpp_FPQ36nw4hbm4math5MTX34RCQ36nw4hbm3lyt6TexSRT, global
+.fn "CalcTextureMtx__26@unnamed@lyt_material_cpp@FPQ36nw4hbm4math5MTX34RCQ36nw4hbm3lyt6TexSRT", global
 /* 8032E4D0 002F7A90  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8032E4D4 002F7A94  7C 08 02 A6 */	mflr r0
 /* 8032E4D8 002F7A98  C0 24 00 08 */	lfs f1, 8(r4)
@@ -75,11 +74,10 @@
 /* 8032E5DC 002F7B9C  7C 08 03 A6 */	mtlr r0
 /* 8032E5E0 002F7BA0  38 21 00 30 */	addi r1, r1, 0x30
 /* 8032E5E4 002F7BA4  4E 80 00 20 */	blr 
-.endfn CalcTextureMtx__26_unnamed_lyt_material_cpp_FPQ36nw4hbm4math5MTX34RCQ36nw4hbm3lyt6TexSRT
+.endfn "CalcTextureMtx__26@unnamed@lyt_material_cpp@FPQ36nw4hbm4math5MTX34RCQ36nw4hbm3lyt6TexSRT"
 
 .balign 16, 0
-#SetIndTexMtx__26@unnamed@lyt_material_cpp@F14_GXIndTexMtxIDPA3_Cf
-.fn SetIndTexMtx__26_unnamed_lyt_material_cpp_F14_GXIndTexMtxIDPA3_Cf, global
+.fn "SetIndTexMtx__26@unnamed@lyt_material_cpp@F14_GXIndTexMtxIDPA3_Cf", global
 /* 8032E5F0 002F7BB0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8032E5F4 002F7BB4  7C 08 02 A6 */	mflr r0
 /* 8032E5F8 002F7BB8  C0 44 00 00 */	lfs f2, 0(r4)
@@ -215,7 +213,7 @@
 /* 8032E7EC 002F7DAC  7C 08 03 A6 */	mtlr r0
 /* 8032E7F0 002F7DB0  38 21 00 20 */	addi r1, r1, 0x20
 /* 8032E7F4 002F7DB4  4E 80 00 20 */	blr 
-.endfn SetIndTexMtx__26_unnamed_lyt_material_cpp_F14_GXIndTexMtxIDPA3_Cf
+.endfn "SetIndTexMtx__26@unnamed@lyt_material_cpp@F14_GXIndTexMtxIDPA3_Cf"
 
 .balign 16, 0
 .fn __ct__Q36nw4hbm2ut5ColorFv, global
@@ -2475,7 +2473,7 @@
 /* 80330930 002F9EF0  1C 03 00 14 */	mulli r0, r3, 0x14
 /* 80330934 002F9EF4  38 61 00 A0 */	addi r3, r1, 0xa0
 /* 80330938 002F9EF8  7C 97 02 14 */	add r4, r23, r0
-/* 8033093C 002F9EFC  4B FF DB 95 */	bl CalcTextureMtx__26_unnamed_lyt_material_cpp_FPQ36nw4hbm4math5MTX34RCQ36nw4hbm3lyt6TexSRT
+/* 8033093C 002F9EFC  4B FF DB 95 */	bl "CalcTextureMtx__26@unnamed@lyt_material_cpp@FPQ36nw4hbm4math5MTX34RCQ36nw4hbm3lyt6TexSRT"
 /* 80330940 002F9F00  57 83 06 3E */	clrlwi r3, r28, 0x18
 /* 80330944 002F9F04  57 80 15 BA */	rlwinm r0, r28, 2, 0x16, 0x1d
 /* 80330948 002F9F08  7C 83 00 50 */	subf r4, r3, r0
@@ -3088,7 +3086,7 @@
 /* 80331248 002FA808  D0 01 00 78 */	stfs f0, 0x78(r1)
 /* 8033124C 002FA80C  C0 18 00 04 */	lfs f0, 4(r24)
 /* 80331250 002FA810  D0 01 00 7C */	stfs f0, 0x7c(r1)
-/* 80331254 002FA814  4B FF D3 9D */	bl SetIndTexMtx__26_unnamed_lyt_material_cpp_F14_GXIndTexMtxIDPA3_Cf
+/* 80331254 002FA814  4B FF D3 9D */	bl "SetIndTexMtx__26@unnamed@lyt_material_cpp@F14_GXIndTexMtxIDPA3_Cf"
 .L_80331258:
 /* 80331258 002FA818  3B FF 00 01 */	addi r31, r31, 1
 /* 8033125C 002FA81C  3B 18 00 14 */	addi r24, r24, 0x14
@@ -3343,7 +3341,7 @@
 .balign 16, 0
 .fn FindAnimationLink__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransform, global
 /* 803315D0 002FAB90  38 63 00 18 */	addi r3, r3, 0x18
-/* 803315D4 002FAB94  4B FF AA 5C */	b FindAnimationLink__Q36nw4hbm3lyt6detailFPQ36nw4hbm2ut40LinkList_Q36nw4hbm3lyt13AnimationLink_0_PQ36nw4hbm3lyt13AnimTransform
+/* 803315D4 002FAB94  4B FF AA 5C */	b "FindAnimationLink__Q36nw4hbm3lyt6detailFPQ36nw4hbm2ut40LinkList<Q36nw4hbm3lyt13AnimationLink,0>PQ36nw4hbm3lyt13AnimTransform"
 .endfn FindAnimationLink__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransform
 
 .balign 16, 0

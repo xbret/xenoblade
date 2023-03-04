@@ -3,17 +3,15 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-#__ct__Q36nw4hbm2ut19TagProcessorBase<c>Fv
-.fn __ct__Q36nw4hbm2ut19TagProcessorBase_c_Fv, global
+.fn "__ct__Q36nw4hbm2ut19TagProcessorBase<c>Fv", global
 /* 80339110 003026D0  3C 80 80 55 */	lis r4, lbl_8054EEB8@ha
 /* 80339114 003026D4  38 84 EE B8 */	addi r4, r4, lbl_8054EEB8@l
 /* 80339118 003026D8  90 83 00 00 */	stw r4, 0(r3)
 /* 8033911C 003026DC  4E 80 00 20 */	blr
-.endfn __ct__Q36nw4hbm2ut19TagProcessorBase_c_Fv
+.endfn "__ct__Q36nw4hbm2ut19TagProcessorBase<c>Fv"
 
 .balign 16, 0
-#__dt__Q36nw4hbm2ut19TagProcessorBase<c>Fv
-.fn __dt__Q36nw4hbm2ut19TagProcessorBase_c_Fv, global
+.fn "__dt__Q36nw4hbm2ut19TagProcessorBase<c>Fv", global
 /* 80339120 003026E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80339124 003026E4  7C 08 02 A6 */	mflr r0
 /* 80339128 003026E8  2C 03 00 00 */	cmpwi r3, 0
@@ -31,7 +29,7 @@
 /* 80339154 00302714  7C 08 03 A6 */	mtlr r0
 /* 80339158 00302718  38 21 00 10 */	addi r1, r1, 0x10
 /* 8033915C 0030271C  4E 80 00 20 */	blr 
-.endfn __dt__Q36nw4hbm2ut19TagProcessorBase_c_Fv
+.endfn "__dt__Q36nw4hbm2ut19TagProcessorBase<c>Fv"
 
 .balign 16, 0
 .fn "Process__Q36nw4hbm2ut19TagProcessorBase<c>FUsPQ36nw4hbm2ut15PrintContext<c>", global
@@ -385,13 +383,12 @@
 .endfn "ProcessTab__Q36nw4hbm2ut19TagProcessorBase<c>FPQ36nw4hbm2ut15PrintContext<c>"
 
 .balign 16, 0
-#__ct__Q36nw4hbm2ut19TagProcessorBase<w>Fv
-.fn __ct__Q36nw4hbm2ut19TagProcessorBase_w_Fv, global
+.fn "__ct__Q36nw4hbm2ut19TagProcessorBase<w>Fv", global
 /* 80339670 00302C30  3C 80 80 55 */	lis r4, __vt__8054EE70@ha
 /* 80339674 00302C34  38 84 EE 70 */	addi r4, r4, __vt__8054EE70@l
 /* 80339678 00302C38  90 83 00 00 */	stw r4, 0(r3)
 /* 8033967C 00302C3C  4E 80 00 20 */	blr
-.endfn __ct__Q36nw4hbm2ut19TagProcessorBase_w_Fv
+.endfn "__ct__Q36nw4hbm2ut19TagProcessorBase<w>Fv"
 
 .balign 16, 0
 .fn "__dt__Q36nw4hbm2ut19TagProcessorBase<w>Fv", global
@@ -798,7 +795,7 @@ lbl_8054EEB0:
 lbl_8054EEB8:
 	.4byte lbl_8054EEF0
 	.4byte 0
-	.4byte __dt__Q36nw4hbm2ut19TagProcessorBase_c_Fv
+	.4byte "__dt__Q36nw4hbm2ut19TagProcessorBase<c>Fv"
 	.4byte "Process__Q36nw4hbm2ut19TagProcessorBase<c>FUsPQ36nw4hbm2ut15PrintContext<c>"
 	.4byte "CalcRect__Q36nw4hbm2ut19TagProcessorBase<c>FPQ36nw4hbm2ut4RectUsPQ36nw4hbm2ut15PrintContext<c>"
 

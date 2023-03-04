@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-#ADXF_LoadPartitionFromAfsFmgLongNw or ADXF_LoadPartitionFmgLongNw or ADXF_LoadPartitionFromAfsNw or ADXF_LoadPartitionNw
+#ADXF_LoadPartitionFmgLongNw or ADXF_LoadPartitionNw
 .fn func_8037C778, global
 /* 8037C778 00345D38  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8037C77C 00345D3C  7C 08 02 A6 */	mflr r0
@@ -3224,8 +3224,8 @@
 /* 8037F52C 00348AEC  4E 80 00 20 */	blr 
 .endfn adxf_GetFnameRangeEx
 
-#ADXF_GetNumFilesFromPt or ADXF_GetFnameFromPt
-.fn func_8037F530, global
+
+.fn ADXF_GetFnameFromPt, global
 /* 8037F530 00348AF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8037F534 00348AF4  7C 08 02 A6 */	mflr r0
 /* 8037F538 00348AF8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3244,7 +3244,7 @@
 /* 8037F56C 00348B2C  7C 08 03 A6 */	mtlr r0
 /* 8037F570 00348B30  38 21 00 10 */	addi r1, r1, 0x10
 /* 8037F574 00348B34  4E 80 00 20 */	blr 
-.endfn func_8037F530
+.endfn ADXF_GetFnameFromPt
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

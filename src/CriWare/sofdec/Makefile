@@ -63,6 +63,7 @@ SOFDEC_FILES :=\
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfd/sfd_tmr.o\
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfd/sfd_tst.o\
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfd/sfd_seeki.o\
+	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfh/sfh_local.o\
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfh/sfh_main.o\
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfh/sfh_ver1.o\
 	$(BUILD_DIR)/asm/CriWare/sofdec/sfdcore/sfh/sfh_ver2.o\

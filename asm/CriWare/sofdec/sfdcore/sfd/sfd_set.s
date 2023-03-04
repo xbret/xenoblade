@@ -24,7 +24,7 @@
 /* 803CC340 00395900  4E 80 00 20 */	blr 
 .endfn SFD_GetHnStat
 
-.fn func_803CC344, global
+.fn SFD_SetCond, global
 /* 803CC344 00395904  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803CC348 00395908  7C 08 02 A6 */	mflr r0
 /* 803CC34C 0039590C  2C 03 00 00 */	cmpwi r3, 0
@@ -165,7 +165,7 @@
 /* 803CC528 00395AE8  7C 08 03 A6 */	mtlr r0
 /* 803CC52C 00395AEC  38 21 00 20 */	addi r1, r1, 0x20
 /* 803CC530 00395AF0  4E 80 00 20 */	blr 
-.endfn func_803CC344
+.endfn SFD_SetCond
 
 .fn SFSET_SetCond, global
 /* 803CC534 00395AF4  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -268,11 +268,11 @@
 /* 803CC680 00395C40  4E 80 00 20 */	blr
 .endfn SFSET_GetCond
 
-.fn func_803CC684, global
+.fn SFD_SetSfdHeaderFn, global
 /* 803CC684 00395C44  90 A3 0D 38 */	stw r5, 0xd38(r3)
 /* 803CC688 00395C48  90 83 0D 34 */	stw r4, 0xd34(r3)
 /* 803CC68C 00395C4C  4E 80 00 20 */	blr 
-.endfn func_803CC684
+.endfn SFD_SetSfdHeaderFn
 
 .fn SFD_GetSofdecHeader, global
 /* 803CC690 00395C50  94 21 FF E0 */	stwu r1, -0x20(r1)

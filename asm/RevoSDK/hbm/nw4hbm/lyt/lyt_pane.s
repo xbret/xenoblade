@@ -924,7 +924,7 @@
 /* 803323F4 002FB9B4  93 C1 00 08 */	stw r30, 8(r1)
 /* 803323F8 002FB9B8  7C 7E 1B 78 */	mr r30, r3
 /* 803323FC 002FB9BC  38 63 00 1C */	addi r3, r3, 0x1c
-/* 80332400 002FB9C0  4B FF 9C 31 */	bl FindAnimationLink__Q36nw4hbm3lyt6detailFPQ36nw4hbm2ut40LinkList_Q36nw4hbm3lyt13AnimationLink_0_PQ36nw4hbm3lyt13AnimTransform
+/* 80332400 002FB9C0  4B FF 9C 31 */	bl "FindAnimationLink__Q36nw4hbm3lyt6detailFPQ36nw4hbm2ut40LinkList<Q36nw4hbm3lyt13AnimationLink,0>PQ36nw4hbm3lyt13AnimTransform"
 /* 80332404 002FB9C4  2C 03 00 00 */	cmpwi r3, 0
 /* 80332408 002FB9C8  41 82 00 08 */	beq .L_80332410
 /* 8033240C 002FB9CC  48 00 00 34 */	b .L_80332440
@@ -963,7 +963,7 @@
 /* 8033247C 002FBA3C  7C BC 2B 78 */	mr r28, r5
 /* 80332480 002FBA40  7C DD 33 78 */	mr r29, r6
 /* 80332484 002FBA44  38 63 00 1C */	addi r3, r3, 0x1c
-/* 80332488 002FBA48  4B FF 9B A9 */	bl FindAnimationLink__Q36nw4hbm3lyt6detailFPQ36nw4hbm2ut40LinkList_Q36nw4hbm3lyt13AnimationLink_0_PQ36nw4hbm3lyt13AnimTransform
+/* 80332488 002FBA48  4B FF 9B A9 */	bl "FindAnimationLink__Q36nw4hbm3lyt6detailFPQ36nw4hbm2ut40LinkList<Q36nw4hbm3lyt13AnimationLink,0>PQ36nw4hbm3lyt13AnimTransform"
 /* 8033248C 002FBA4C  2C 03 00 00 */	cmpwi r3, 0
 /* 80332490 002FBA50  41 82 00 10 */	beq .L_803324A0
 /* 80332494 002FBA54  7F 80 00 34 */	cntlzw r0, r28

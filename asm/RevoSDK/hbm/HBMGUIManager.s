@@ -964,8 +964,7 @@
 .endfn addLayoutScene__Q310homebutton3gui11PaneManagerFRCQ36nw4hbm3lyt6Layout
 
 .balign 16, 0
-#walkinchildren__q310homebutton3gui11panemanagerfrq36nw4hbm2ut30linklist<Q36nw4hbm3lyt4Pane,4>
-.fn walkinchildren__q310homebutton3gui11panemanagerfrq36nw4hbm2ut30linklist_Q36nw4hbm3lyt4Pane_4_, global
+.fn "walkInChildren__Q310homebutton3gui11PaneManagerFRQ36nw4hbm2ut30LinkList<Q36nw4hbm3lyt4Pane,4>", global
 /* 803202A0 002E9860  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803202A4 002E9864  7C 08 02 A6 */	mflr r0
 /* 803202A8 002E9868  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1153,7 +1152,7 @@
 /* 8032052C 002E9AEC  7C 08 03 A6 */	mtlr r0
 /* 80320530 002E9AF0  38 21 00 40 */	addi r1, r1, 0x40
 /* 80320534 002E9AF4  4E 80 00 20 */	blr 
-.endfn walkinchildren__q310homebutton3gui11panemanagerfrq36nw4hbm2ut30linklist_Q36nw4hbm3lyt4Pane_4_
+.endfn "walkInChildren__Q310homebutton3gui11PaneManagerFRQ36nw4hbm2ut30LinkList<Q36nw4hbm3lyt4Pane,4>"
 
 .balign 16, 0
 .fn setPane__Q310homebutton3gui13PaneComponentFPQ36nw4hbm3lyt4Pane, global
@@ -1179,8 +1178,7 @@
 .endfn delLayoutScene__Q310homebutton3gui11PaneManagerFRCQ36nw4hbm3lyt6Layout
 
 .balign 16, 0
-#walkInChildrenDel__Q310homebutton3gui11PaneManagerFRQ36nw4hbm2ut30LinkList<Q36nw4hbm3lyt4Pane,4>
-.fn walkInChildrenDel__Q310homebutton3gui11PaneManagerFRQ36nw4hbm2ut30LinkList_Q36nw4hbm3lyt4Pane_4_, global
+.fn "walkInChildrenDel__Q310homebutton3gui11PaneManagerFRQ36nw4hbm2ut30LinkList<Q36nw4hbm3lyt4Pane,4>", global
 /* 80320580 002E9B40  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80320584 002E9B44  7C 08 02 A6 */	mflr r0
 /* 80320588 002E9B48  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1260,7 +1258,7 @@
 /* 80320690 002E9C50  7C 08 03 A6 */	mtlr r0
 /* 80320694 002E9C54  38 21 00 20 */	addi r1, r1, 0x20
 /* 80320698 002E9C58  4E 80 00 20 */	blr 
-.endfn walkInChildrenDel__Q310homebutton3gui11PaneManagerFRQ36nw4hbm2ut30LinkList_Q36nw4hbm3lyt4Pane_4_
+.endfn "walkInChildrenDel__Q310homebutton3gui11PaneManagerFRQ36nw4hbm2ut30LinkList<Q36nw4hbm3lyt4Pane,4>"
 
 .balign 16, 0
 .fn getPaneComponentByPane__Q310homebutton3gui11PaneManagerFPQ36nw4hbm3lyt4Pane, global
@@ -1871,8 +1869,8 @@ __vt__homebutton_gui_PaneManager:
 	.4byte getDrawInfo__Q310homebutton3gui11PaneManagerFv
 	.4byte setDrawInfo__Q310homebutton3gui11PaneManagerFPCQ36nw4hbm3lyt8DrawInfo
 	.4byte setAllBoundingBoxComponentTriggerTarget__Q310homebutton3gui11PaneManagerFb
-	.4byte walkinchildren__q310homebutton3gui11panemanagerfrq36nw4hbm2ut30linklist_Q36nw4hbm3lyt4Pane_4_
-	.4byte walkInChildrenDel__Q310homebutton3gui11PaneManagerFRQ36nw4hbm2ut30LinkList_Q36nw4hbm3lyt4Pane_4_
+	.4byte "walkInChildren__Q310homebutton3gui11PaneManagerFRQ36nw4hbm2ut30LinkList<Q36nw4hbm3lyt4Pane,4>"
+	.4byte "walkInChildrenDel__Q310homebutton3gui11PaneManagerFRQ36nw4hbm2ut30LinkList<Q36nw4hbm3lyt4Pane,4>"
 
 .global homebutton_gui_PaneManager_typestr
 homebutton_gui_PaneManager_typestr:

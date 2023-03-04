@@ -2073,12 +2073,12 @@
 /* 803CE374 00397934  4E 80 00 20 */	blr 
 .endfn SFD_CalcCycleFromFps
 
-.fn func_803CE378, global
+.fn SFD_SetLimitTime, global
 /* 803CE378 00397938  90 83 13 8C */	stw r4, 0x138c(r3)
 /* 803CE37C 0039793C  4E 80 00 20 */	blr 
-.endfn func_803CE378
+.endfn SFD_SetLimitTime
 
-.fn func_803CE380, global
+.fn SFD_GetLimitTime, global
 /* 803CE380 00397940  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803CE384 00397944  7C 08 02 A6 */	mflr r0
 /* 803CE388 00397948  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2111,7 +2111,7 @@
 /* 803CE3E4 003979A4  7C 08 03 A6 */	mtlr r0
 /* 803CE3E8 003979A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803CE3EC 003979AC  4E 80 00 20 */	blr 
-.endfn func_803CE380
+.endfn SFD_GetLimitTime
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

@@ -379,7 +379,7 @@
 .endfn GetRuntimeTypeInfo__Q36nw4hbm3lyt7PictureCFv
 
 .balign 16, 0
-.fn "__sinit_\lyt_picture_cpp", global
+.fn "__sinit_\lyt_picture_cpp", local
 /* 80332C70 002FC230  3C 80 80 5D */	lis r4, typeInfo__Q36nw4hbm3lyt4Pane@ha
 /* 80332C74 002FC234  3C 60 80 5D */	lis r3, typeInfo__Q36nw4hbm3lyt7Picture@ha
 /* 80332C78 002FC238  38 84 D7 C0 */	addi r4, r4, typeInfo__Q36nw4hbm3lyt4Pane@l

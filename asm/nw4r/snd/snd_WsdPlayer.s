@@ -1159,42 +1159,35 @@
 /* 8042B350 003F4910  4E 80 00 20 */	blr 
 .endfn IsActive__Q44nw4r3snd6detail9WsdPlayerCFv
 
-
-#@180@InvalidateWaveData__Q44nw4r3snd6detail9WsdPlayerFPCvPCv
-.fn _180_InvalidateWaveData__Q44nw4r3snd6detail9WsdPlayerFPCvPCv, global
+.fn "@180@InvalidateWaveData__Q44nw4r3snd6detail9WsdPlayerFPCvPCv", global
 /* 8042B354 003F4914  38 63 FF 2C */	addi r3, r3, -212
 /* 8042B358 003F4918  4B FF FF BC */	b InvalidateWaveData__Q44nw4r3snd6detail9WsdPlayerFPCvPCv
-.endfn _180_InvalidateWaveData__Q44nw4r3snd6detail9WsdPlayerFPCvPCv
+.endfn "@180@InvalidateWaveData__Q44nw4r3snd6detail9WsdPlayerFPCvPCv"
 
-#@180@InvalidateData__Q44nw4r3snd6detail9WsdPlayerFPCvPCv
-.fn _180_InvalidateData__Q44nw4r3snd6detail9WsdPlayerFPCvPCv, global
+.fn "@180@InvalidateData__Q44nw4r3snd6detail9WsdPlayerFPCvPCv", global
 /* 8042B35C 003F491C  38 63 FF 2C */	addi r3, r3, -212
 /* 8042B360 003F4920  4B FF F4 D8 */	b InvalidateData__Q44nw4r3snd6detail9WsdPlayerFPCvPCv
-.endfn _180_InvalidateData__Q44nw4r3snd6detail9WsdPlayerFPCvPCv
+.endfn "@180@InvalidateData__Q44nw4r3snd6detail9WsdPlayerFPCvPCv"
 
-#@180@__dt__Q44nw4r3snd6detail9WsdPlayerFv
-.fn _180___dt__Q44nw4r3snd6detail9WsdPlayerFv, global
+.fn "@180@__dt__Q44nw4r3snd6detail9WsdPlayerFv", global
 /* 8042B364 003F4924  38 63 FF 2C */	addi r3, r3, -212
 /* 8042B368 003F4928  4B FF E8 D8 */	b __dt__Q44nw4r3snd6detail9WsdPlayerFv
-.endfn _180___dt__Q44nw4r3snd6detail9WsdPlayerFv
+.endfn "@180@__dt__Q44nw4r3snd6detail9WsdPlayerFv"
 
-#@192@OnShutdownSoundThread__Q44nw4r3snd6detail9WsdPlayerFv
-.fn _192_OnShutdownSoundThread__Q44nw4r3snd6detail9WsdPlayerFv, global
+.fn "@192@OnShutdownSoundThread__Q44nw4r3snd6detail9WsdPlayerFv", global
 /* 8042B36C 003F492C  38 63 FF 20 */	addi r3, r3, -224
 /* 8042B370 003F4930  4B FF FF 94 */	b OnShutdownSoundThread__Q44nw4r3snd6detail9WsdPlayerFv
-.endfn _192_OnShutdownSoundThread__Q44nw4r3snd6detail9WsdPlayerFv
+.endfn "@192@OnShutdownSoundThread__Q44nw4r3snd6detail9WsdPlayerFv"
 
-#@192@OnUpdateFrameSoundThread__Q44nw4r3snd6detail9WsdPlayerFv
-.fn _192_OnUpdateFrameSoundThread__Q44nw4r3snd6detail9WsdPlayerFv, global
+.fn "@192@OnUpdateFrameSoundThread__Q44nw4r3snd6detail9WsdPlayerFv", global
 /* 8042B374 003F4934  38 63 FF 20 */	addi r3, r3, -224
 /* 8042B378 003F4938  4B FF FF 88 */	b OnUpdateFrameSoundThread__Q44nw4r3snd6detail9WsdPlayerFv
-.endfn _192_OnUpdateFrameSoundThread__Q44nw4r3snd6detail9WsdPlayerFv
+.endfn "@192@OnUpdateFrameSoundThread__Q44nw4r3snd6detail9WsdPlayerFv"
 
-#@192@__dt__Q44nw4r3snd6detail9WsdPlayerFv
-.fn _192___dt__Q44nw4r3snd6detail9WsdPlayerFv, global
+.fn "@192@__dt__Q44nw4r3snd6detail9WsdPlayerFv", global
 /* 8042B37C 003F493C  38 63 FF 20 */	addi r3, r3, -224
 /* 8042B380 003F4940  4B FF E8 C0 */	b __dt__Q44nw4r3snd6detail9WsdPlayerFv
-.endfn _192___dt__Q44nw4r3snd6detail9WsdPlayerFv
+.endfn "@192@__dt__Q44nw4r3snd6detail9WsdPlayerFv"
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
@@ -1212,15 +1205,15 @@ lbl_8056E688:
 	.4byte IsPause__Q44nw4r3snd6detail9WsdPlayerCFv
 	.4byte 0
 	.4byte 0
-	.4byte _180___dt__Q44nw4r3snd6detail9WsdPlayerFv
-	.4byte _180_InvalidateData__Q44nw4r3snd6detail9WsdPlayerFPCvPCv
-	.4byte _180_InvalidateWaveData__Q44nw4r3snd6detail9WsdPlayerFPCvPCv
+	.4byte "@180@__dt__Q44nw4r3snd6detail9WsdPlayerFv"
+	.4byte "@180@InvalidateData__Q44nw4r3snd6detail9WsdPlayerFPCvPCv"
+	.4byte "@180@InvalidateWaveData__Q44nw4r3snd6detail9WsdPlayerFPCvPCv"
 	.4byte 0
 	.4byte 0
-	.4byte _192___dt__Q44nw4r3snd6detail9WsdPlayerFv
-	.4byte _192_OnUpdateFrameSoundThread__Q44nw4r3snd6detail9WsdPlayerFv
+	.4byte "@192@__dt__Q44nw4r3snd6detail9WsdPlayerFv"
+	.4byte "@192@OnUpdateFrameSoundThread__Q44nw4r3snd6detail9WsdPlayerFv"
 	.4byte OnUpdateVoiceSoundThread__Q54nw4r3snd6detail11SoundThread14PlayerCallbackFv
-	.4byte _192_OnShutdownSoundThread__Q44nw4r3snd6detail9WsdPlayerFv
+	.4byte "@192@OnShutdownSoundThread__Q44nw4r3snd6detail9WsdPlayerFv"
 	.4byte InvalidateData__Q44nw4r3snd6detail9WsdPlayerFPCvPCv
 	.4byte InvalidateWaveData__Q44nw4r3snd6detail9WsdPlayerFPCvPCv
 	.4byte OnUpdateFrameSoundThread__Q44nw4r3snd6detail9WsdPlayerFv

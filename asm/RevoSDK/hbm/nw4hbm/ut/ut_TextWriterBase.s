@@ -5768,11 +5768,11 @@
 /* 8033EFB0 00308570  40 82 00 30 */	bne .L_8033EFE0
 /* 8033EFB4 00308574  3F C0 80 5D */	lis r30, "mDefaultTagProcessor__Q36nw4hbm2ut17TextWriterBase<c>"@ha
 /* 8033EFB8 00308578  38 7E D8 14 */	addi r3, r30, "mDefaultTagProcessor__Q36nw4hbm2ut17TextWriterBase<c>"@l
-/* 8033EFBC 0030857C  4B FF A1 55 */	bl __ct__Q36nw4hbm2ut19TagProcessorBase_c_Fv
-/* 8033EFC0 00308580  3C 80 80 34 */	lis r4, __dt__Q36nw4hbm2ut19TagProcessorBase_c_Fv@ha
+/* 8033EFBC 0030857C  4B FF A1 55 */	bl "__ct__Q36nw4hbm2ut19TagProcessorBase<c>Fv"
+/* 8033EFC0 00308580  3C 80 80 34 */	lis r4, "__dt__Q36nw4hbm2ut19TagProcessorBase<c>Fv"@ha
 /* 8033EFC4 00308584  3C A0 80 5D */	lis r5, lbl_805CD7F8@ha
 /* 8033EFC8 00308588  38 7E D8 14 */	addi r3, r30, "mDefaultTagProcessor__Q36nw4hbm2ut17TextWriterBase<c>"@l
-/* 8033EFCC 0030858C  38 84 91 20 */	addi r4, r4, __dt__Q36nw4hbm2ut19TagProcessorBase_c_Fv@l
+/* 8033EFCC 0030858C  38 84 91 20 */	addi r4, r4, "__dt__Q36nw4hbm2ut19TagProcessorBase<c>Fv"@l
 /* 8033EFD0 00308590  38 A5 D7 F8 */	addi r5, r5, lbl_805CD7F8@l
 /* 8033EFD4 00308594  4B F7 A6 C9 */	bl __register_global_object
 /* 8033EFD8 00308598  38 00 00 01 */	li r0, 1
@@ -5784,7 +5784,7 @@
 /* 8033EFEC 003085AC  40 82 00 30 */	bne .L_8033F01C
 /* 8033EFF0 003085B0  3F E0 80 5D */	lis r31, "mDefaultTagProcessor__Q36nw4hbm2ut17TextWriterBase<w>"@ha
 /* 8033EFF4 003085B4  38 7F D8 1C */	addi r3, r31, "mDefaultTagProcessor__Q36nw4hbm2ut17TextWriterBase<w>"@l
-/* 8033EFF8 003085B8  4B FF A6 79 */	bl __ct__Q36nw4hbm2ut19TagProcessorBase_w_Fv
+/* 8033EFF8 003085B8  4B FF A6 79 */	bl "__ct__Q36nw4hbm2ut19TagProcessorBase<w>Fv"
 /* 8033EFFC 003085BC  3C 80 80 34 */	lis r4, "__dt__Q36nw4hbm2ut19TagProcessorBase<w>Fv"@ha
 /* 8033F000 003085C0  3C A0 80 5D */	lis r5, lbl_805CD804@ha
 /* 8033F004 003085C4  38 7F D8 1C */	addi r3, r31, "mDefaultTagProcessor__Q36nw4hbm2ut17TextWriterBase<w>"@l

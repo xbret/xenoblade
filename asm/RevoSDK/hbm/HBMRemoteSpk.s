@@ -377,7 +377,7 @@
 .endfn Stop__Q210homebutton9RemoteSpkFv
 
 .balign 16, 0
-.fn DelaySpeakerOnCallback, global
+.fn DelaySpeakerOnCallback__Q210homebutton9RemoteSpkFP7OSAlarmP9OSContext, global
 /* 80321EE0 002EB4A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80321EE4 002EB4A4  7C 08 02 A6 */	mflr r0
 /* 80321EE8 002EB4A8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -390,7 +390,7 @@
 /* 80321F04 002EB4C4  7C 08 03 A6 */	mtlr r0
 /* 80321F08 002EB4C8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80321F0C 002EB4CC  4E 80 00 20 */	blr
-.endfn DelaySpeakerOnCallback
+.endfn DelaySpeakerOnCallback__Q210homebutton9RemoteSpkFP7OSAlarmP9OSContext
 
 .balign 16, 0
 .fn SpeakerOnCallback__Q210homebutton9RemoteSpkFll, global
@@ -434,11 +434,11 @@
 /* 80321F98 002EB558  7F E3 FB 78 */	mr r3, r31
 /* 80321F9C 002EB55C  48 03 11 E5 */	bl OSCancelAlarm
 /* 80321FA0 002EB560  3C 80 80 00 */	lis r4, 0x800000F8@ha
-/* 80321FA4 002EB564  3C E0 80 32 */	lis r7, DelaySpeakerOnCallback@ha
+/* 80321FA4 002EB564  3C E0 80 32 */	lis r7, DelaySpeakerOnCallback__Q210homebutton9RemoteSpkFP7OSAlarmP9OSContext@ha
 /* 80321FA8 002EB568  80 04 00 F8 */	lwz r0, 0x800000F8@l(r4)
 /* 80321FAC 002EB56C  3C 60 10 62 */	lis r3, 0x10624DD3@ha
 /* 80321FB0 002EB570  38 83 4D D3 */	addi r4, r3, 0x10624DD3@l
-/* 80321FB4 002EB574  38 E7 1E E0 */	addi r7, r7, DelaySpeakerOnCallback@l
+/* 80321FB4 002EB574  38 E7 1E E0 */	addi r7, r7, DelaySpeakerOnCallback__Q210homebutton9RemoteSpkFP7OSAlarmP9OSContext@l
 /* 80321FB8 002EB578  54 00 F0 BE */	srwi r0, r0, 2
 /* 80321FBC 002EB57C  7F E3 FB 78 */	mr r3, r31
 /* 80321FC0 002EB580  7C 04 00 16 */	mulhwu r0, r4, r0

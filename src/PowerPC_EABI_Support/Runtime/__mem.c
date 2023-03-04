@@ -1,4 +1,5 @@
 #include "PowerPC_EABI_Support/Runtime/__mem.h"
+#include "stl/string.h"
 
 #pragma section code_type ".init"
 
@@ -267,4 +268,18 @@ void __fill_mem(void * dest, int val, size_t count)
 void* memset(void* dest, int val, size_t count) {
     __fill_mem(dest, val, count);
     return dest;
+}
+
+
+#pragma section code_type ".text"
+
+size_t strlen(const char* str){
+    int length = -1;
+    u8* p = (u8*)str - 1;
+
+    do{
+        length++;
+    }while(*++p);
+
+    return length;
 }

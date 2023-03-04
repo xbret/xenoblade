@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-#GetParent__Q34nw4r3g3d6ResMatFv or GetParent__Q34nw4r3g3d6ResMatCFv
+#could also be GetParent__Q34nw4r3g3d6ResMatCFv
 .fn GetParent__Q34nw4r3g3d6ResMatFv, global
 /* 803DB780 003A4D40  80 63 00 00 */	lwz r3, 0(r3)
 /* 803DB784 003A4D44  80 03 00 04 */	lwz r0, 4(r3)

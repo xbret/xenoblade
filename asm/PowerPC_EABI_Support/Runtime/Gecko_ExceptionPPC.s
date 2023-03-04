@@ -39,7 +39,7 @@
 /* 802BA854 00283E14  4E 80 00 20 */	blr 
 .endfn __unregister_fragment
 
-.fn FragmentInfo$7ExPPC_FindExceptionFragment, global
+.fn ExPPC_FindExceptionFragment__FPcP12FragmentInfo, global
 /* 802BA858 00283E18  3C C0 80 58 */	lis r6, fragmentinfo@ha
 /* 802BA85C 00283E1C  38 00 00 20 */	li r0, 0x20
 /* 802BA860 00283E20  38 C6 AE 90 */	addi r6, r6, fragmentinfo@l
@@ -82,9 +82,9 @@
 /* 802BA8E4 00283EA4  42 00 FF 84 */	bdnz .L_802BA868
 /* 802BA8E8 00283EA8  38 60 00 00 */	li r3, 0
 /* 802BA8EC 00283EAC  4E 80 00 20 */	blr 
-.endfn FragmentInfo$7ExPPC_FindExceptionFragment
+.endfn ExPPC_FindExceptionFragment__FPcP12FragmentInfo
 
-.fn MWExceptionInfo$7ExPPC_FindExceptionRecord, global
+.fn ExPPC_FindExceptionRecord__FPcP15MWExceptionInfo, global
 /* 802BA8F0 00283EB0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802BA8F4 00283EB4  7C 08 02 A6 */	mflr r0
 /* 802BA8F8 00283EB8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -96,7 +96,7 @@
 /* 802BA910 00283ED0  90 04 00 00 */	stw r0, 0(r4)
 /* 802BA914 00283ED4  90 04 00 08 */	stw r0, 8(r4)
 /* 802BA918 00283ED8  38 81 00 08 */	addi r4, r1, 8
-/* 802BA91C 00283EDC  4B FF FF 3D */	bl FragmentInfo$7ExPPC_FindExceptionFragment
+/* 802BA91C 00283EDC  4B FF FF 3D */	bl ExPPC_FindExceptionFragment__FPcP12FragmentInfo
 /* 802BA920 00283EE0  2C 03 00 00 */	cmpwi r3, 0
 /* 802BA924 00283EE4  41 82 01 64 */	beq .L_802BAA88
 /* 802BA928 00283EE8  80 01 00 10 */	lwz r0, 0x10(r1)
@@ -206,9 +206,9 @@
 /* 802BAA94 00284054  7C 08 03 A6 */	mtlr r0
 /* 802BAA98 00284058  38 21 00 30 */	addi r1, r1, 0x30
 /* 802BAA9C 0028405C  4E 80 00 20 */	blr 
-.endfn MWExceptionInfo$7ExPPC_FindExceptionRecord
+.endfn ExPPC_FindExceptionRecord__FPcP15MWExceptionInfo
 
-.fn ActionIterator$7ExPPC_NextAction, global
+.fn ExPPC_NextAction__FP14ActionIterator, global
 /* 802BAAA0 00284060  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802BAAA4 00284064  7C 08 02 A6 */	mflr r0
 /* 802BAAA8 00284068  90 01 00 14 */	stw r0, 0x14(r1)
@@ -236,7 +236,7 @@
 .L_802BAAF8:
 /* 802BAAF8 002840B8  80 7E 00 04 */	lwz r3, 4(r30)
 /* 802BAAFC 002840BC  7F E4 FB 78 */	mr r4, r31
-/* 802BAB00 002840C0  4B FF FD F1 */	bl MWExceptionInfo$7ExPPC_FindExceptionRecord
+/* 802BAB00 002840C0  4B FF FD F1 */	bl ExPPC_FindExceptionRecord__FPcP15MWExceptionInfo
 /* 802BAB04 002840C4  80 1F 00 00 */	lwz r0, 0(r31)
 /* 802BAB08 002840C8  2C 00 00 00 */	cmpwi r0, 0
 /* 802BAB0C 002840CC  40 82 00 08 */	bne .L_802BAB14
@@ -339,9 +339,9 @@
 /* 802BAC44 00284204  7C 08 03 A6 */	mtlr r0
 /* 802BAC48 00284208  38 21 00 10 */	addi r1, r1, 0x10
 /* 802BAC4C 0028420C  4E 80 00 20 */	blr 
-.endfn ActionIterator$7ExPPC_NextAction
+.endfn ExPPC_NextAction__FP14ActionIterator
 
-.fn ThrowContext$7ExPPC_PopStackFrame, global
+.fn ExPPC_PopStackFrame__FP12ThrowContextP15MWExceptionInfo, global
 /* 802BAC50 00284210  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802BAC54 00284214  7C 08 02 A6 */	mflr r0
 /* 802BAC58 00284218  90 01 00 24 */	stw r0, 0x24(r1)
@@ -709,9 +709,9 @@
 /* 802BB198 00284758  7C 08 03 A6 */	mtlr r0
 /* 802BB19C 0028475C  38 21 00 20 */	addi r1, r1, 0x20
 /* 802BB1A0 00284760  4E 80 00 20 */	blr 
-.endfn ThrowContext$7ExPPC_PopStackFrame
+.endfn ExPPC_PopStackFrame__FP12ThrowContextP15MWExceptionInfo
 
-.fn ThrowContext$7ExPPC_UnwindStack, global
+.fn ExPPC_UnwindStack__FP12ThrowContextP15MWExceptionInfoPv, global
 /* 802BB1A4 00284764  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802BB1A8 00284768  7C 08 02 A6 */	mflr r0
 /* 802BB1AC 0028476C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -727,9 +727,9 @@
 /* 802BB1D0 00284790  40 82 00 4C */	bne .L_802BB21C
 /* 802BB1D4 00284794  7F 43 D3 78 */	mr r3, r26
 /* 802BB1D8 00284798  7F 64 DB 78 */	mr r4, r27
-/* 802BB1DC 0028479C  4B FF FA 75 */	bl ThrowContext$7ExPPC_PopStackFrame
+/* 802BB1DC 0028479C  4B FF FA 75 */	bl ExPPC_PopStackFrame__FP12ThrowContextP15MWExceptionInfo
 /* 802BB1E0 002847A0  7F 64 DB 78 */	mr r4, r27
-/* 802BB1E4 002847A4  4B FF F7 0D */	bl MWExceptionInfo$7ExPPC_FindExceptionRecord
+/* 802BB1E4 002847A4  4B FF F7 0D */	bl ExPPC_FindExceptionRecord__FPcP15MWExceptionInfo
 /* 802BB1E8 002847A8  80 1B 00 00 */	lwz r0, 0(r27)
 /* 802BB1EC 002847AC  2C 00 00 00 */	cmpwi r0, 0
 /* 802BB1F0 002847B0  40 82 00 08 */	bne .L_802BB1F8
@@ -1087,9 +1087,9 @@
 /* 802BB6A4 00284C64  7C 08 03 A6 */	mtlr r0
 /* 802BB6A8 00284C68  38 21 00 30 */	addi r1, r1, 0x30
 /* 802BB6AC 00284C6C  4E 80 00 20 */	blr 
-.endfn ThrowContext$7ExPPC_UnwindStack
+.endfn ExPPC_UnwindStack__FP12ThrowContextP15MWExceptionInfoPv
 
-.fn ThrowContext$7ExPPC_LongJump, global
+.fn ExPPC_LongJump__FP12ThrowContextPvPv, global
 /* 802BB6B0 00284C70  7C A8 2B 78 */	mr r8, r5
 /* 802BB6B4 00284C74  7C 82 23 78 */	mr r2, r4
 /* 802BB6B8 00284C78  80 03 02 80 */	lwz r0, 0x280(r3)
@@ -1155,9 +1155,9 @@
 /* 802BB7A8 00284D68  80 63 00 00 */	lwz r3, 0(r3)
 /* 802BB7AC 00284D6C  90 61 00 00 */	stw r3, 0(r1)
 /* 802BB7B0 00284D70  4E 80 00 20 */	blr 
-.endfn ThrowContext$7ExPPC_LongJump
+.endfn ExPPC_LongJump__FP12ThrowContextPvPv
 
-.fn ThrowContext$7ExPPC_ThrowHandler, global
+.fn ExPPC_ThrowHandler__FP12ThrowContext, global
 /* 802BB7B4 00284D74  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 802BB7B8 00284D78  7C 08 02 A6 */	mflr r0
 /* 802BB7BC 00284D7C  90 01 00 74 */	stw r0, 0x74(r1)
@@ -1165,7 +1165,7 @@
 /* 802BB7C4 00284D84  BF 61 00 5C */	stmw r27, 0x5c(r1)
 /* 802BB7C8 00284D88  7C 7E 1B 78 */	mr r30, r3
 /* 802BB7CC 00284D8C  80 63 02 90 */	lwz r3, 0x290(r3)
-/* 802BB7D0 00284D90  4B FF F1 21 */	bl MWExceptionInfo$7ExPPC_FindExceptionRecord
+/* 802BB7D0 00284D90  4B FF F1 21 */	bl ExPPC_FindExceptionRecord__FPcP15MWExceptionInfo
 /* 802BB7D4 00284D94  80 01 00 10 */	lwz r0, 0x10(r1)
 /* 802BB7D8 00284D98  2C 00 00 00 */	cmpwi r0, 0
 /* 802BB7DC 00284D9C  40 82 00 08 */	bne .L_802BB7E4
@@ -1224,7 +1224,7 @@
 /* 802BB89C 00284E5C  48 00 00 10 */	b .L_802BB8AC
 .L_802BB8A0:
 /* 802BB8A0 00284E60  38 61 00 28 */	addi r3, r1, 0x28
-/* 802BB8A4 00284E64  4B FF F1 FD */	bl ActionIterator$7ExPPC_NextAction
+/* 802BB8A4 00284E64  4B FF F1 FD */	bl ExPPC_NextAction__FP14ActionIterator
 /* 802BB8A8 00284E68  4B FF FF C4 */	b .L_802BB86C
 .L_802BB8AC:
 /* 802BB8AC 00284E6C  80 61 00 30 */	lwz r3, 0x30(r1)
@@ -1332,7 +1332,7 @@
 /* 802BBA18 00284FD8  7F C3 F3 78 */	mr r3, r30
 /* 802BBA1C 00284FDC  38 81 00 10 */	addi r4, r1, 0x10
 /* 802BBA20 00284FE0  7F 85 E3 78 */	mr r5, r28
-/* 802BBA24 00284FE4  4B FF F7 81 */	bl ThrowContext$7ExPPC_UnwindStack
+/* 802BBA24 00284FE4  4B FF F7 81 */	bl ExPPC_UnwindStack__FP12ThrowContextP15MWExceptionInfoPv
 /* 802BBA28 00284FE8  80 BE 02 88 */	lwz r5, 0x288(r30)
 /* 802BBA2C 00284FEC  7F C3 F3 78 */	mr r3, r30
 /* 802BBA30 00284FF0  80 9C 00 08 */	lwz r4, 8(r28)
@@ -1347,14 +1347,14 @@
 /* 802BBA54 00285014  80 1C 00 04 */	lwz r0, 4(r28)
 /* 802BBA58 00285018  80 81 00 24 */	lwz r4, 0x24(r1)
 /* 802BBA5C 0028501C  7C A5 02 14 */	add r5, r5, r0
-/* 802BBA60 00285020  4B FF FC 51 */	bl ThrowContext$7ExPPC_LongJump
+/* 802BBA60 00285020  4B FF FC 51 */	bl ExPPC_LongJump__FP12ThrowContextPvPv
 /* 802BBA64 00285024  48 00 00 0C */	b .L_802BBA70
 .L_802BBA68:
 /* 802BBA68 00285028  4B FF DC 99 */	bl terminate__3stdFv
 /* 802BBA6C 0028502C  48 00 00 14 */	b .L_802BBA80
 .L_802BBA70:
 /* 802BBA70 00285030  38 61 00 28 */	addi r3, r1, 0x28
-/* 802BBA74 00285034  4B FF F0 2D */	bl ActionIterator$7ExPPC_NextAction
+/* 802BBA74 00285034  4B FF F0 2D */	bl ExPPC_NextAction__FP14ActionIterator
 /* 802BBA78 00285038  7C 7B 1B 78 */	mr r27, r3
 /* 802BBA7C 0028503C  4B FF FE C8 */	b .L_802BB944
 .L_802BBA80:
@@ -1365,7 +1365,7 @@
 /* 802BBA90 00285050  7F C3 F3 78 */	mr r3, r30
 /* 802BBA94 00285054  38 81 00 10 */	addi r4, r1, 0x10
 /* 802BBA98 00285058  7F E5 FB 78 */	mr r5, r31
-/* 802BBA9C 0028505C  4B FF F7 09 */	bl ThrowContext$7ExPPC_UnwindStack
+/* 802BBA9C 0028505C  4B FF F7 09 */	bl ExPPC_UnwindStack__FP12ThrowContextP15MWExceptionInfoPv
 /* 802BBAA0 00285060  80 9E 02 88 */	lwz r4, 0x288(r30)
 /* 802BBAA4 00285064  80 7F 00 0C */	lwz r3, 0xc(r31)
 /* 802BBAA8 00285068  80 1E 02 98 */	lwz r0, 0x298(r30)
@@ -1397,14 +1397,14 @@
 /* 802BBB08 002850C8  80 1F 00 08 */	lwz r0, 8(r31)
 /* 802BBB0C 002850CC  80 81 00 24 */	lwz r4, 0x24(r1)
 /* 802BBB10 002850D0  7C A5 02 14 */	add r5, r5, r0
-/* 802BBB14 002850D4  4B FF FB 9D */	bl ThrowContext$7ExPPC_LongJump
+/* 802BBB14 002850D4  4B FF FB 9D */	bl ExPPC_LongJump__FP12ThrowContextPvPv
 /* 802BBB18 002850D8  48 00 00 90 */	b .L_802BBBA8
 .L_802BBB1C:
 /* 802BBB1C 002850DC  83 E1 00 30 */	lwz r31, 0x30(r1)
 /* 802BBB20 002850E0  7F C3 F3 78 */	mr r3, r30
 /* 802BBB24 002850E4  38 81 00 10 */	addi r4, r1, 0x10
 /* 802BBB28 002850E8  7F E5 FB 78 */	mr r5, r31
-/* 802BBB2C 002850EC  4B FF F6 79 */	bl ThrowContext$7ExPPC_UnwindStack
+/* 802BBB2C 002850EC  4B FF F6 79 */	bl ExPPC_UnwindStack__FP12ThrowContextP15MWExceptionInfoPv
 /* 802BBB30 002850F0  80 9E 02 88 */	lwz r4, 0x288(r30)
 /* 802BBB34 002850F4  A8 7F 00 0A */	lha r3, 0xa(r31)
 /* 802BBB38 002850F8  80 1E 02 98 */	lwz r0, 0x298(r30)
@@ -1436,14 +1436,14 @@
 /* 802BBB98 00285158  A0 1F 00 08 */	lhz r0, 8(r31)
 /* 802BBB9C 0028515C  80 81 00 24 */	lwz r4, 0x24(r1)
 /* 802BBBA0 00285160  7C A5 02 14 */	add r5, r5, r0
-/* 802BBBA4 00285164  4B FF FB 0D */	bl ThrowContext$7ExPPC_LongJump
+/* 802BBBA4 00285164  4B FF FB 0D */	bl ExPPC_LongJump__FP12ThrowContextPvPv
 .L_802BBBA8:
 /* 802BBBA8 00285168  BB 61 00 5C */	lmw r27, 0x5c(r1)
 /* 802BBBAC 0028516C  80 01 00 74 */	lwz r0, 0x74(r1)
 /* 802BBBB0 00285170  7C 08 03 A6 */	mtlr r0
 /* 802BBBB4 00285174  38 21 00 70 */	addi r1, r1, 0x70
 /* 802BBBB8 00285178  4E 80 00 20 */	blr 
-.endfn ThrowContext$7ExPPC_ThrowHandler
+.endfn ExPPC_ThrowHandler__FP12ThrowContext
 
 .fn __throw, global
 /* 802BBBBC 0028517C  94 21 FD 40 */	stwu r1, -0x2c0(r1)
@@ -1521,7 +1521,7 @@
 /* 802BBCDC 0028529C  80 61 00 10 */	lwz r3, 0x10(r1)
 /* 802BBCE0 002852A0  90 61 02 B4 */	stw r3, 0x2b4(r1)
 /* 802BBCE4 002852A4  38 61 00 18 */	addi r3, r1, 0x18
-/* 802BBCE8 002852A8  4B FF FA CD */	bl ThrowContext$7ExPPC_ThrowHandler
+/* 802BBCE8 002852A8  4B FF FA CD */	bl ExPPC_ThrowHandler__FP12ThrowContext
 /* 802BBCEC 002852AC  60 00 00 00 */	nop 
 /* 802BBCF0 002852B0  80 01 02 C4 */	lwz r0, 0x2c4(r1)
 /* 802BBCF4 002852B4  7C 08 03 A6 */	mtlr r0
@@ -1622,35 +1622,35 @@ fragmentinfo:
 
 .obj "@eti_80033AD0", local
 .hidden "@eti_80033AD0"
-	.4byte MWExceptionInfo$7ExPPC_FindExceptionRecord
+	.4byte ExPPC_FindExceptionRecord__FPcP15MWExceptionInfo
 	.4byte 0x000001B0
 	.4byte "@etb_8001BF40"
 .endobj "@eti_80033AD0"
 
 .obj "@eti_80033ADC", local
 .hidden "@eti_80033ADC"
-	.4byte ActionIterator$7ExPPC_NextAction
+	.4byte ExPPC_NextAction__FP14ActionIterator
 	.4byte 0x000001B0
 	.4byte "@etb_8001BF48"
 .endobj "@eti_80033ADC"
 
 .obj "@eti_80033AE8", local
 .hidden "@eti_80033AE8"
-	.4byte ThrowContext$7ExPPC_PopStackFrame
+	.4byte ExPPC_PopStackFrame__FP12ThrowContextP15MWExceptionInfo
 	.4byte 0x00000554
 	.4byte "@etb_8001BF50"
 .endobj "@eti_80033AE8"
 
 .obj "@eti_80033AF4", local
 .hidden "@eti_80033AF4"
-	.4byte ThrowContext$7ExPPC_UnwindStack
+	.4byte ExPPC_UnwindStack__FP12ThrowContextP15MWExceptionInfoPv
 	.4byte 0x0000050C
 	.4byte "@etb_8001BF58"
 .endobj "@eti_80033AF4"
 
 .obj "@eti_80033B00", local
 .hidden "@eti_80033B00"
-	.4byte ThrowContext$7ExPPC_ThrowHandler
+	.4byte ExPPC_ThrowHandler__FP12ThrowContext
 	.4byte 0x00000408
 	.4byte "@etb_8001BF6C"
 .endobj "@eti_80033B00"

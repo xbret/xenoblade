@@ -110,18 +110,17 @@
 .endfn GetRuntimeTypeInfo__Q36nw4hbm3lyt8BoundingCFv
 
 .balign 16, 0
-#__sinit_\lyt_bounding_cpp
-.fn __sinit_lyt_bounding_cpp, global
+.fn "__sinit_\lyt_bounding_cpp", local
 /* 8032C570 002F5B30  3C 80 80 5D */	lis r4, typeInfo__Q36nw4hbm3lyt4Pane@ha
 /* 8032C574 002F5B34  3C 60 80 5D */	lis r3, typeInfo__Q36nw4hbm3lyt8Bounding@ha
 /* 8032C578 002F5B38  38 84 D7 C0 */	addi r4, r4, typeInfo__Q36nw4hbm3lyt4Pane@l
 /* 8032C57C 002F5B3C  90 83 D7 88 */	stw r4, typeInfo__Q36nw4hbm3lyt8Bounding@l(r3)
 /* 8032C580 002F5B40  4E 80 00 20 */	blr 
-.endfn __sinit_lyt_bounding_cpp
+.endfn "__sinit_\lyt_bounding_cpp"
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 
-.4byte __sinit_lyt_bounding_cpp
+.4byte "__sinit_\lyt_bounding_cpp"
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

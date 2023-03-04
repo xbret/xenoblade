@@ -14,7 +14,7 @@
 .endfn __ct__Q210homebutton18GroupAnmControllerFv
 
 .balign 16, 0
-.fn __dt__Q210homebutton15FrameControllerFv, global
+.fn __dt__Q210homebutton18GroupAnmControllerFv, global
 /* 8031F470 002E8A30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8031F474 002E8A34  7C 08 02 A6 */	mflr r0
 /* 8031F478 002E8A38  2C 03 00 00 */	cmpwi r3, 0
@@ -32,7 +32,7 @@
 /* 8031F4A4 002E8A64  7C 08 03 A6 */	mtlr r0
 /* 8031F4A8 002E8A68  38 21 00 10 */	addi r1, r1, 0x10
 /* 8031F4AC 002E8A6C  4E 80 00 20 */	blr 
-.endfn __dt__Q210homebutton15FrameControllerFv
+.endfn __dt__Q210homebutton18GroupAnmControllerFv
 
 .balign 16, 0
 .fn do_calc__Q210homebutton18GroupAnmControllerFv, global
@@ -92,7 +92,7 @@
 __vt__homebutton_GroupAnmController:
 	.4byte __RTTI__homebutton_GroupAnmController
 	.4byte 0
-	.4byte __dt__Q210homebutton15FrameControllerFv
+	.4byte __dt__Q210homebutton18GroupAnmControllerFv
 	.4byte calc__Q210homebutton15FrameControllerFv
 
 .global homebutton_GroupAnmController_typestr
