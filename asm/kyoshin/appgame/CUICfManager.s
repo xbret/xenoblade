@@ -13649,13 +13649,13 @@ lbl_80666974:
 	.4byte 0x00000040
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv_1
 	.4byte 0x8200000C
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv_1
 	.4byte 0x82000010
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv_1
 	.4byte 0x82000014
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv_1
 .endobj "@etb_8000C878"
 
 .obj "@etb_8000C8C0", local
@@ -13671,13 +13671,13 @@ lbl_80666974:
 	.4byte 0x00000040
 	.4byte 0x00000000
 	.4byte 0x82000014
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv_1
 	.4byte 0x82000010
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv_1
 	.4byte 0x8200000C
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv_1
 	.4byte 0x82000008
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv_1
 .endobj "@etb_8000C8C0"
 
 .obj "@etb_8000C908", local
@@ -13693,13 +13693,13 @@ lbl_80666974:
 	.4byte 0x00000040
 	.4byte 0x00000000
 	.4byte 0x82000008
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv_1
 	.4byte 0x8200000C
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv_1
 	.4byte 0x82000010
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv_1
 	.4byte 0x82000014
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv_1
 .endobj "@etb_8000C908"
 
 .obj "@etb_8000C950", local
@@ -13715,13 +13715,13 @@ lbl_80666974:
 	.4byte 0x00000040
 	.4byte 0x00000000
 	.4byte 0x82000014
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv_1
 	.4byte 0x82000010
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv_1
 	.4byte 0x8200000C
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv_1
 	.4byte 0x82000008
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv_1
 .endobj "@etb_8000C950"
 
 .obj "@etb_8000C998", local

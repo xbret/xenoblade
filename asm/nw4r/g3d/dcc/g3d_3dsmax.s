@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-#MakeTexSrtMtx_S__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
-.fn MakeTexSrtMtx_S__Q54nw4r3g3d6detail3dcc24_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt, global
+.fn "MakeTexSrtMtx_S__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt", global
 /* 803F395C 003BCF1C  C0 A4 00 00 */	lfs f5, 0(r4)
 /* 803F3960 003BCF20  C0 02 C1 48 */	lfs f0, float_8066C4C8@sda21(r2)
 /* 803F3964 003BCF24  C0 24 00 04 */	lfs f1, 4(r4)
@@ -22,10 +21,9 @@
 /* 803F3998 003BCF58  D0 83 00 18 */	stfs f4, 0x18(r3)
 /* 803F399C 003BCF5C  D0 03 00 1C */	stfs f0, 0x1c(r3)
 /* 803F39A0 003BCF60  4E 80 00 20 */	blr 
-.endfn MakeTexSrtMtx_S__Q54nw4r3g3d6detail3dcc24_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
+.endfn "MakeTexSrtMtx_S__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 
-#MakeTexSrtMtx_R__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
-.fn MakeTexSrtMtx_R__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt, global
+.fn "MakeTexSrtMtx_R__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt", global
 /* 803F39A4 003BCF64  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803F39A8 003BCF68  7C 08 02 A6 */	mflr r0
 /* 803F39AC 003BCF6C  C0 24 00 08 */	lfs f1, 8(r4)
@@ -69,10 +67,9 @@
 /* 803F3A44 003BD004  7C 08 03 A6 */	mtlr r0
 /* 803F3A48 003BD008  38 21 00 20 */	addi r1, r1, 0x20
 /* 803F3A4C 003BD00C  4E 80 00 20 */	blr 
-.endfn MakeTexSrtMtx_R__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
+.endfn "MakeTexSrtMtx_R__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 
-#MakeTexSrtMtx_T__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
-.fn MakeTexSrtMtx_T__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt, global
+.fn "MakeTexSrtMtx_T__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt", global
 /* 803F3A50 003BD010  C0 04 00 0C */	lfs f0, 0xc(r4)
 /* 803F3A54 003BD014  C0 42 C1 40 */	lfs f2, float_8066C4C0@sda21(r2)
 /* 803F3A58 003BD018  FC 20 00 50 */	fneg f1, f0
@@ -87,10 +84,9 @@
 /* 803F3A7C 003BD03C  D0 43 00 18 */	stfs f2, 0x18(r3)
 /* 803F3A80 003BD040  D0 03 00 1C */	stfs f0, 0x1c(r3)
 /* 803F3A84 003BD044  4E 80 00 20 */	blr 
-.endfn MakeTexSrtMtx_T__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
+.endfn "MakeTexSrtMtx_T__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 
-#MakeTexSrtMtx_SR__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
-.fn MakeTexSrtMtx_SR__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt, global
+.fn "MakeTexSrtMtx_SR__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt", global
 /* 803F3A88 003BD048  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803F3A8C 003BD04C  7C 08 02 A6 */	mflr r0
 /* 803F3A90 003BD050  C0 24 00 08 */	lfs f1, 8(r4)
@@ -136,10 +132,9 @@
 /* 803F3B30 003BD0F0  7C 08 03 A6 */	mtlr r0
 /* 803F3B34 003BD0F4  38 21 00 20 */	addi r1, r1, 0x20
 /* 803F3B38 003BD0F8  4E 80 00 20 */	blr 
-.endfn MakeTexSrtMtx_SR__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
+.endfn "MakeTexSrtMtx_SR__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 
-#MakeTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
-.fn MakeTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt, global
+.fn "MakeTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt", global
 /* 803F3B3C 003BD0FC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803F3B40 003BD100  7C 08 02 A6 */	mflr r0
 /* 803F3B44 003BD104  C0 24 00 08 */	lfs f1, 8(r4)
@@ -191,10 +186,9 @@
 /* 803F3BFC 003BD1BC  7C 08 03 A6 */	mtlr r0
 /* 803F3C00 003BD1C0  38 21 00 20 */	addi r1, r1, 0x20
 /* 803F3C04 003BD1C4  4E 80 00 20 */	blr 
-.endfn MakeTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
+.endfn "MakeTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 
-#MakeTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
-.fn MakeTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt, global
+.fn "MakeTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt", global
 /* 803F3C08 003BD1C8  C0 C4 00 00 */	lfs f6, 0(r4)
 /* 803F3C0C 003BD1CC  C0 62 C1 44 */	lfs f3, float_8066C4C4@sda21(r2)
 /* 803F3C10 003BD1D0  C0 24 00 0C */	lfs f1, 0xc(r4)
@@ -217,10 +211,9 @@
 /* 803F3C54 003BD214  D0 A3 00 18 */	stfs f5, 0x18(r3)
 /* 803F3C58 003BD218  D0 03 00 1C */	stfs f0, 0x1c(r3)
 /* 803F3C5C 003BD21C  4E 80 00 20 */	blr 
-.endfn MakeTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
+.endfn "MakeTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 
-#MakeTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
-.fn MakeTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt, global
+.fn "MakeTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt", global
 /* 803F3C60 003BD220  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803F3C64 003BD224  7C 08 02 A6 */	mflr r0
 /* 803F3C68 003BD228  C0 24 00 08 */	lfs f1, 8(r4)
@@ -272,10 +265,9 @@
 /* 803F3D20 003BD2E0  7C 08 03 A6 */	mtlr r0
 /* 803F3D24 003BD2E4  38 21 00 20 */	addi r1, r1, 0x20
 /* 803F3D28 003BD2E8  4E 80 00 20 */	blr 
-.endfn MakeTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
+.endfn "MakeTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 
-#ProductTexSrtMtx_S__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
-.fn ProductTexSrtMtx_S__Q54nw4r3g3d6detail3dcc24_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt, global
+.fn "ProductTexSrtMtx_S__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt", global
 /* 803F3D2C 003BD2EC  C0 23 00 0C */	lfs f1, 0xc(r3)
 /* 803F3D30 003BD2F0  C0 C2 C1 44 */	lfs f6, float_8066C4C4@sda21(r2)
 /* 803F3D34 003BD2F4  C0 03 00 1C */	lfs f0, 0x1c(r3)
@@ -308,10 +300,9 @@
 /* 803F3DA0 003BD360  D0 23 00 18 */	stfs f1, 0x18(r3)
 /* 803F3DA4 003BD364  D0 03 00 1C */	stfs f0, 0x1c(r3)
 /* 803F3DA8 003BD368  4E 80 00 20 */	blr 
-.endfn ProductTexSrtMtx_S__Q54nw4r3g3d6detail3dcc24_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
+.endfn "ProductTexSrtMtx_S__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 
-#ProductTexSrtMtx_R__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
-.fn ProductTexSrtMtx_R__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt, global
+.fn "ProductTexSrtMtx_R__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt", global
 /* 803F3DAC 003BD36C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803F3DB0 003BD370  7C 08 02 A6 */	mflr r0
 /* 803F3DB4 003BD374  C0 24 00 08 */	lfs f1, 8(r4)
@@ -385,10 +376,9 @@
 /* 803F3EC4 003BD484  7C 08 03 A6 */	mtlr r0
 /* 803F3EC8 003BD488  38 21 00 20 */	addi r1, r1, 0x20
 /* 803F3ECC 003BD48C  4E 80 00 20 */	blr 
-.endfn ProductTexSrtMtx_R__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
+.endfn "ProductTexSrtMtx_R__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 
-#ProductTexSrtMtx_T__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
-.fn ProductTexSrtMtx_T__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt, global
+.fn "ProductTexSrtMtx_T__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt", global
 /* 803F3ED0 003BD490  C0 63 00 0C */	lfs f3, 0xc(r3)
 /* 803F3ED4 003BD494  C0 44 00 0C */	lfs f2, 0xc(r4)
 /* 803F3ED8 003BD498  C0 23 00 1C */	lfs f1, 0x1c(r3)
@@ -398,10 +388,9 @@
 /* 803F3EE8 003BD4A8  D0 43 00 0C */	stfs f2, 0xc(r3)
 /* 803F3EEC 003BD4AC  D0 03 00 1C */	stfs f0, 0x1c(r3)
 /* 803F3EF0 003BD4B0  4E 80 00 20 */	blr 
-.endfn ProductTexSrtMtx_T__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
+.endfn "ProductTexSrtMtx_T__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 
-#ProductTexSrtMtx_SR__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
-.fn ProductTexSrtMtx_SR__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt, global
+.fn "ProductTexSrtMtx_SR__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt", global
 /* 803F3EF4 003BD4B4  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803F3EF8 003BD4B8  7C 08 02 A6 */	mflr r0
 /* 803F3EFC 003BD4BC  90 01 00 44 */	stw r0, 0x44(r1)
@@ -483,10 +472,9 @@
 /* 803F402C 003BD5EC  7C 08 03 A6 */	mtlr r0
 /* 803F4030 003BD5F0  38 21 00 40 */	addi r1, r1, 0x40
 /* 803F4034 003BD5F4  4E 80 00 20 */	blr 
-.endfn ProductTexSrtMtx_SR__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
+.endfn "ProductTexSrtMtx_SR__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 
-#ProductTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
-.fn ProductTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt, global
+.fn "ProductTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt", global
 /* 803F4038 003BD5F8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803F403C 003BD5FC  7C 08 02 A6 */	mflr r0
 /* 803F4040 003BD600  C0 24 00 08 */	lfs f1, 8(r4)
@@ -567,10 +555,9 @@
 /* 803F416C 003BD72C  7C 08 03 A6 */	mtlr r0
 /* 803F4170 003BD730  38 21 00 20 */	addi r1, r1, 0x20
 /* 803F4174 003BD734  4E 80 00 20 */	blr 
-.endfn ProductTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
+.endfn "ProductTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 
-#ProductTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
-.fn ProductTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt, global
+.fn "ProductTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt", global
 /* 803F4178 003BD738  C0 23 00 1C */	lfs f1, 0x1c(r3)
 /* 803F417C 003BD73C  C0 04 00 10 */	lfs f0, 0x10(r4)
 /* 803F4180 003BD740  C0 63 00 0C */	lfs f3, 0xc(r3)
@@ -608,10 +595,9 @@
 /* 803F4200 003BD7C0  D0 43 00 18 */	stfs f2, 0x18(r3)
 /* 803F4204 003BD7C4  D0 03 00 1C */	stfs f0, 0x1c(r3)
 /* 803F4208 003BD7C8  4E 80 00 20 */	blr 
-.endfn ProductTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
+.endfn "ProductTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 
-#ProductTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
-.fn ProductTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt, global
+.fn "ProductTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt", global
 /* 803F420C 003BD7CC  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803F4210 003BD7D0  7C 08 02 A6 */	mflr r0
 /* 803F4214 003BD7D4  90 01 00 54 */	stw r0, 0x54(r1)
@@ -701,7 +687,7 @@
 /* 803F4364 003BD924  7C 08 03 A6 */	mtlr r0
 /* 803F4368 003BD928  38 21 00 50 */	addi r1, r1, 0x50
 /* 803F436C 003BD92C  4E 80 00 20 */	blr 
-.endfn ProductTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
+.endfn "ProductTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 
 .fn CalcTexMtx_3dsmax__Q44nw4r3g3d6detail3dccFPQ34nw4r4math5MTX34bRCQ34nw4r3g3d6TexSrtQ44nw4r3g3d6TexSrt4Flag, global
 /* 803F4370 003BD930  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -755,25 +741,25 @@
 #funcTable$6185
 .global lbl_80521048
 lbl_80521048:
-	.4byte MakeTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
-	.4byte MakeTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
-	.4byte MakeTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
-	.4byte MakeTexSrtMtx_T__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
-	.4byte MakeTexSrtMtx_SR__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
-	.4byte MakeTexSrtMtx_R__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
-	.4byte MakeTexSrtMtx_S__Q54nw4r3g3d6detail3dcc24_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
+	.4byte "MakeTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
+	.4byte "MakeTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
+	.4byte "MakeTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
+	.4byte "MakeTexSrtMtx_T__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
+	.4byte "MakeTexSrtMtx_SR__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
+	.4byte "MakeTexSrtMtx_R__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
+	.4byte "MakeTexSrtMtx_S__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 
 
 #funcTable$6187
 .global lbl_80521064
 lbl_80521064:
-	.4byte ProductTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
-	.4byte ProductTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
-	.4byte ProductTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
-	.4byte ProductTexSrtMtx_T__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
-	.4byte ProductTexSrtMtx_SR__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
-	.4byte ProductTexSrtMtx_R__Q54nw4r3g3d6detail3dcc22_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
-	.4byte ProductTexSrtMtx_S__Q54nw4r3g3d6detail3dcc24_unnamed_g3d_3dsmax_cpp_FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt
+	.4byte "ProductTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
+	.4byte "ProductTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
+	.4byte "ProductTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
+	.4byte "ProductTexSrtMtx_T__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
+	.4byte "ProductTexSrtMtx_SR__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
+	.4byte "ProductTexSrtMtx_R__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
+	.4byte "ProductTexSrtMtx_S__Q54nw4r3g3d6detail3dcc24@unnamed@g3d_3dsmax_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

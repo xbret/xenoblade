@@ -907,7 +907,7 @@
 .L_803FF540:
 /* 803FF540 003C8B00  7F E4 FB 78 */	mr r4, r31
 /* 803FF544 003C8B04  38 7E 00 1C */	addi r3, r30, 0x1c
-/* 803FF548 003C8B08  48 00 A6 7D */	bl UnbindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList_Q34nw4r3lyt13AnimationLink_0_PQ34nw4r3lyt13AnimTransform
+/* 803FF548 003C8B08  48 00 A6 7D */	bl "UnbindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList<Q34nw4r3lyt13AnimationLink,0>PQ34nw4r3lyt13AnimTransform"
 /* 803FF54C 003C8B0C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 803FF550 003C8B10  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 803FF554 003C8B14  83 C1 00 08 */	lwz r30, 8(r1)
@@ -934,12 +934,12 @@
 
 .fn FindAnimationLinkSelf__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransform, global
 /* 803FF598 003C8B58  38 63 00 1C */	addi r3, r3, 0x1c
-/* 803FF59C 003C8B5C  48 00 A5 B8 */	b FindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList_Q34nw4r3lyt13AnimationLink_0_PQ34nw4r3lyt13AnimTransform
+/* 803FF59C 003C8B5C  48 00 A5 B8 */	b "FindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList<Q34nw4r3lyt13AnimationLink,0>PQ34nw4r3lyt13AnimTransform"
 .endfn FindAnimationLinkSelf__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransform
 
 .fn FindAnimationLinkSelf__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt12AnimResource, global
 /* 803FF5A0 003C8B60  38 63 00 1C */	addi r3, r3, 0x1c
-/* 803FF5A4 003C8B64  48 00 A5 E4 */	b FindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList_Q34nw4r3lyt13AnimationLink_0_RCQ34nw4r3lyt12AnimResource
+/* 803FF5A4 003C8B64  48 00 A5 E4 */	b "FindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList<Q34nw4r3lyt13AnimationLink,0>RCQ34nw4r3lyt12AnimResource"
 .endfn FindAnimationLinkSelf__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt12AnimResource
 
 .fn SetAnimationEnable__Q34nw4r3lyt4PaneFPQ34nw4r3lyt13AnimTransformbb, global

@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-#FindNameResource__37@unnamed@lyt_arcResourceAccessor_cpp@FP9ARCHandlePCc
-.fn FindNameResource__37_unnamed_lyt_arcResourceAccessor_cpp_FP9ARCHandlePCc, local
+.fn "FindNameResource__37@unnamed@lyt_arcResourceAccessor_cpp@FP9ARCHandlePCc", local
 /* 80409CA0 003D3260  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80409CA4 003D3264  7C 08 02 A6 */	mflr r0
 /* 80409CA8 003D3268  90 01 00 44 */	stw r0, 0x44(r1)
@@ -26,7 +25,7 @@
 /* 80409CE8 003D32A8  4B EC 81 B9 */	bl ARCChangeDir
 /* 80409CEC 003D32AC  7F A3 EB 78 */	mr r3, r29
 /* 80409CF0 003D32B0  7F C4 F3 78 */	mr r4, r30
-/* 80409CF4 003D32B4  4B FF FF AD */	bl FindNameResource__37_unnamed_lyt_arcResourceAccessor_cpp_FP9ARCHandlePCc
+/* 80409CF4 003D32B4  4B FF FF AD */	bl "FindNameResource__37@unnamed@lyt_arcResourceAccessor_cpp@FP9ARCHandlePCc"
 /* 80409CF8 003D32B8  7C 7F 1B 78 */	mr r31, r3
 /* 80409CFC 003D32BC  7F A3 EB 78 */	mr r3, r29
 /* 80409D00 003D32C0  38 8D 9C 7C */	addi r4, r13, lbl_80665DFC@sda21
@@ -59,10 +58,9 @@
 /* 80409D60 003D3320  7C 08 03 A6 */	mtlr r0
 /* 80409D64 003D3324  38 21 00 40 */	addi r1, r1, 0x40
 /* 80409D68 003D3328  4E 80 00 20 */	blr
-.endfn FindNameResource__37_unnamed_lyt_arcResourceAccessor_cpp_FP9ARCHandlePCc
+.endfn "FindNameResource__37@unnamed@lyt_arcResourceAccessor_cpp@FP9ARCHandlePCc"
 
-#GetResourceSub__37@unnamed@lyt_arcResourceAccessor_cpp@FP9ARCHandlePCcUlPCcPUl
-.fn GetResourceSub__37_unnamed_lyt_arcResourceAccessor_cpp_FP9ARCHandlePCcUlPCcPUl, local
+.fn "GetResourceSub__37@unnamed@lyt_arcResourceAccessor_cpp@FP9ARCHandlePCcUlPCcPUl", local
 /* 80409D6C 003D332C  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80409D70 003D3330  7C 08 02 A6 */	mflr r0
 /* 80409D74 003D3334  90 01 00 44 */	stw r0, 0x44(r1)
@@ -86,7 +84,7 @@
 /* 80409DBC 003D337C  40 82 00 18 */	bne .L_80409DD4
 /* 80409DC0 003D3380  7F 43 D3 78 */	mr r3, r26
 /* 80409DC4 003D3384  7F A4 EB 78 */	mr r4, r29
-/* 80409DC8 003D3388  4B FF FE D9 */	bl FindNameResource__37_unnamed_lyt_arcResourceAccessor_cpp_FP9ARCHandlePCc
+/* 80409DC8 003D3388  4B FF FE D9 */	bl "FindNameResource__37@unnamed@lyt_arcResourceAccessor_cpp@FP9ARCHandlePCc"
 /* 80409DCC 003D338C  7C 7F 1B 78 */	mr r31, r3
 /* 80409DD0 003D3390  48 00 00 6C */	b .L_80409E3C
 .L_80409DD4:
@@ -149,7 +147,7 @@
 /* 80409EA0 003D3460  7C 08 03 A6 */	mtlr r0
 /* 80409EA4 003D3464  38 21 00 40 */	addi r1, r1, 0x40
 /* 80409EA8 003D3468  4E 80 00 20 */	blr 
-.endfn GetResourceSub__37_unnamed_lyt_arcResourceAccessor_cpp_FP9ARCHandlePCcUlPCcPUl
+.endfn "GetResourceSub__37@unnamed@lyt_arcResourceAccessor_cpp@FP9ARCHandlePCcUlPCcPUl"
 
 .fn __ct__Q34nw4r3lyt19ArcResourceAccessorFv, global
 /* 80409EAC 003D346C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -230,7 +228,7 @@
 /* 80409FA8 003D3568  7D 05 43 78 */	mr r5, r8
 /* 80409FAC 003D356C  7C 06 03 78 */	mr r6, r0
 /* 80409FB0 003D3570  38 63 00 04 */	addi r3, r3, 4
-/* 80409FB4 003D3574  4B FF FD B8 */	b GetResourceSub__37_unnamed_lyt_arcResourceAccessor_cpp_FP9ARCHandlePCcUlPCcPUl
+/* 80409FB4 003D3574  4B FF FD B8 */	b "GetResourceSub__37@unnamed@lyt_arcResourceAccessor_cpp@FP9ARCHandlePCcUlPCcPUl"
 .endfn GetResource__Q34nw4r3lyt19ArcResourceAccessorFUlPCcPUl
 
 .fn GetFont__Q34nw4r3lyt19ArcResourceAccessorFPCc, global

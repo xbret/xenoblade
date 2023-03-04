@@ -11,12 +11,12 @@
 /* 804257D8 003EED98  7C 00 07 75 */	extsb. r0, r0
 /* 804257DC 003EED9C  40 82 00 68 */	bne .L_80425844
 /* 804257E0 003EEDA0  3F E0 80 65 */	lis r31, lbl_80657024@ha
-/* 804257E4 003EEDA4  3C 80 80 42 */	lis r4, __ct__Q34nw4r2ut35LinkList_Q44nw4r3snd6detail4Task_4_Fv@ha
+/* 804257E4 003EEDA4  3C 80 80 42 */	lis r4, "__ct__q34nw4r2ut35linklist<Q44nw4r3snd6detail4Task,4>Fv"@ha
 /* 804257E8 003EEDA8  3B FF 70 24 */	addi r31, r31, lbl_80657024@l
-/* 804257EC 003EEDAC  3C A0 80 42 */	lis r5, __dt__Q34nw4r2ut35LinkList_Q44nw4r3snd6detail4Task_4_Fv@ha
+/* 804257EC 003EEDAC  3C A0 80 42 */	lis r5, "__dt__Q34nw4r2ut35LinkList<Q44nw4r3snd6detail4Task,4>Fv"@ha
 /* 804257F0 003EEDB0  7F E3 FB 78 */	mr r3, r31
-/* 804257F4 003EEDB4  38 84 59 1C */	addi r4, r4, __ct__Q34nw4r2ut35LinkList_Q44nw4r3snd6detail4Task_4_Fv@l
-/* 804257F8 003EEDB8  38 A5 58 C4 */	addi r5, r5, __dt__Q34nw4r2ut35LinkList_Q44nw4r3snd6detail4Task_4_Fv@l
+/* 804257F4 003EEDB4  38 84 59 1C */	addi r4, r4, "__ct__q34nw4r2ut35linklist<Q44nw4r3snd6detail4Task,4>Fv"@l
+/* 804257F8 003EEDB8  38 A5 58 C4 */	addi r5, r5, "__dt__Q34nw4r2ut35LinkList<Q44nw4r3snd6detail4Task,4>Fv"@l
 /* 804257FC 003EEDBC  38 C0 00 0C */	li r6, 0xc
 /* 80425800 003EEDC0  38 E0 00 03 */	li r7, 3
 /* 80425804 003EEDC4  4B E9 42 FD */	bl __construct_array
@@ -55,9 +55,9 @@
 /* 80425878 003EEE38  93 C1 00 08 */	stw r30, 8(r1)
 /* 8042587C 003EEE3C  7C 7E 1B 78 */	mr r30, r3
 /* 80425880 003EEE40  41 82 00 28 */	beq .L_804258A8
-/* 80425884 003EEE44  3C 80 80 42 */	lis r4, __dt__Q34nw4r2ut35LinkList_Q44nw4r3snd6detail4Task_4_Fv@ha
+/* 80425884 003EEE44  3C 80 80 42 */	lis r4, "__dt__Q34nw4r2ut35LinkList<Q44nw4r3snd6detail4Task,4>Fv"@ha
 /* 80425888 003EEE48  38 A0 00 0C */	li r5, 0xc
-/* 8042588C 003EEE4C  38 84 58 C4 */	addi r4, r4, __dt__Q34nw4r2ut35LinkList_Q44nw4r3snd6detail4Task_4_Fv@l
+/* 8042588C 003EEE4C  38 84 58 C4 */	addi r4, r4, "__dt__Q34nw4r2ut35LinkList<Q44nw4r3snd6detail4Task,4>Fv"@l
 /* 80425890 003EEE50  38 C0 00 03 */	li r6, 3
 /* 80425894 003EEE54  4B E9 43 65 */	bl __destroy_arr
 /* 80425898 003EEE58  2C 1F 00 00 */	cmpwi r31, 0
@@ -74,8 +74,7 @@
 /* 804258C0 003EEE80  4E 80 00 20 */	blr
 .endfn __dt__Q44nw4r3snd6detail11TaskManagerFv
 
-#__dt__Q34nw4r2ut35LinkList<Q44nw4r3snd6detail4Task,4>Fv
-.fn __dt__Q34nw4r2ut35LinkList_Q44nw4r3snd6detail4Task_4_Fv, global
+.fn "__dt__Q34nw4r2ut35LinkList<Q44nw4r3snd6detail4Task,4>Fv", global
 /* 804258C4 003EEE84  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804258C8 003EEE88  7C 08 02 A6 */	mflr r0
 /* 804258CC 003EEE8C  2C 03 00 00 */	cmpwi r3, 0
@@ -99,10 +98,9 @@
 /* 80425910 003EEED0  7C 08 03 A6 */	mtlr r0
 /* 80425914 003EEED4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80425918 003EEED8  4E 80 00 20 */	blr
-.endfn __dt__Q34nw4r2ut35LinkList_Q44nw4r3snd6detail4Task_4_Fv
+.endfn "__dt__Q34nw4r2ut35LinkList<Q44nw4r3snd6detail4Task,4>Fv"
 
-#__ct__q34nw4r2ut35linklist<Q44nw4r3snd6detail4Task,4>Fv
-.fn __ct__Q34nw4r2ut35LinkList_Q44nw4r3snd6detail4Task_4_Fv, global
+.fn "__ct__q34nw4r2ut35linklist<Q44nw4r3snd6detail4Task,4>Fv", global
 /* 8042591C 003EEEDC  38 00 00 00 */	li r0, 0
 /* 80425920 003EEEE0  38 83 00 04 */	addi r4, r3, 4
 /* 80425924 003EEEE4  90 03 00 04 */	stw r0, 4(r3)
@@ -111,7 +109,7 @@
 /* 80425930 003EEEF0  90 83 00 04 */	stw r4, 4(r3)
 /* 80425934 003EEEF4  90 83 00 08 */	stw r4, 8(r3)
 /* 80425938 003EEEF8  4E 80 00 20 */	blr 
-.endfn __ct__Q34nw4r2ut35LinkList_Q44nw4r3snd6detail4Task_4_Fv
+.endfn "__ct__q34nw4r2ut35linklist<Q44nw4r3snd6detail4Task,4>Fv"
 
 .fn AppendTask__Q44nw4r3snd6detail11TaskManagerFPQ44nw4r3snd6detail4TaskQ54nw4r3snd6detail11TaskManager12TaskPriority, global
 /* 8042593C 003EEEFC  94 21 FF E0 */	stwu r1, -0x20(r1)

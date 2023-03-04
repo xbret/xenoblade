@@ -17,16 +17,16 @@
 /* 803222D4 002EB894  2C 03 00 19 */	cmpwi r3, 0x19
 /* 803222D8 002EB898  40 82 00 1C */	bne .L_803222F4
 .L_803222DC:
-/* 803222DC 002EB89C  3C 80 80 5D */	lis r4, lbl_805CD750@ha
+/* 803222DC 002EB89C  3C 80 80 5D */	lis r4, "sWork__24@unnamed@HBMAxSound_cpp@"@ha
 /* 803222E0 002EB8A0  38 00 00 03 */	li r0, 3
-/* 803222E4 002EB8A4  80 84 D7 50 */	lwz r4, lbl_805CD750@l(r4)
+/* 803222E4 002EB8A4  80 84 D7 50 */	lwz r4, "sWork__24@unnamed@HBMAxSound_cpp@"@l(r4)
 /* 803222E8 002EB8A8  3C A4 00 01 */	addis r5, r4, 1
 /* 803222EC 002EB8AC  38 A5 B8 B0 */	addi r5, r5, -18256
 /* 803222F0 002EB8B0  48 00 00 10 */	b .L_80322300
 .L_803222F4:
-/* 803222F4 002EB8B4  3C 80 80 5D */	lis r4, lbl_805CD750@ha
+/* 803222F4 002EB8B4  3C 80 80 5D */	lis r4, "sWork__24@unnamed@HBMAxSound_cpp@"@ha
 /* 803222F8 002EB8B8  38 00 00 04 */	li r0, 4
-/* 803222FC 002EB8BC  80 A4 D7 50 */	lwz r5, lbl_805CD750@l(r4)
+/* 803222FC 002EB8BC  80 A4 D7 50 */	lwz r5, "sWork__24@unnamed@HBMAxSound_cpp@"@l(r4)
 .L_80322300:
 /* 80322300 002EB8C0  7C A4 2B 78 */	mr r4, r5
 /* 80322304 002EB8C4  3B E0 00 00 */	li r31, 0
@@ -57,14 +57,14 @@
 /* 8032235C 002EB91C  2C 03 00 19 */	cmpwi r3, 0x19
 /* 80322360 002EB920  40 82 00 18 */	bne .L_80322378
 .L_80322364:
-/* 80322364 002EB924  3C 60 80 5D */	lis r3, lbl_805CD750@ha
-/* 80322368 002EB928  80 83 D7 50 */	lwz r4, lbl_805CD750@l(r3)
+/* 80322364 002EB924  3C 60 80 5D */	lis r3, "sWork__24@unnamed@HBMAxSound_cpp@"@ha
+/* 80322368 002EB928  80 83 D7 50 */	lwz r4, "sWork__24@unnamed@HBMAxSound_cpp@"@l(r3)
 /* 8032236C 002EB92C  3C 64 00 01 */	addis r3, r4, 1
 /* 80322370 002EB930  38 63 43 3C */	addi r3, r3, 0x433c
 /* 80322374 002EB934  48 00 00 14 */	b .L_80322388
 .L_80322378:
-/* 80322378 002EB938  3C 60 80 5D */	lis r3, lbl_805CD750@ha
-/* 8032237C 002EB93C  80 83 D7 50 */	lwz r4, lbl_805CD750@l(r3)
+/* 80322378 002EB938  3C 60 80 5D */	lis r3, "sWork__24@unnamed@HBMAxSound_cpp@"@ha
+/* 8032237C 002EB93C  80 83 D7 50 */	lwz r4, "sWork__24@unnamed@HBMAxSound_cpp@"@l(r3)
 /* 80322380 002EB940  3C 64 00 01 */	addis r3, r4, 1
 /* 80322384 002EB944  38 63 43 34 */	addi r3, r3, 0x4334
 .L_80322388:
@@ -133,8 +133,8 @@
 /* 80322454 002EBA14  7C 08 02 A6 */	mflr r0
 /* 80322458 002EBA18  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8032245C 002EBA1C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80322460 002EBA20  3F E0 80 5D */	lis r31, lbl_805CD750@ha
-/* 80322464 002EBA24  80 7F D7 50 */	lwz r3, lbl_805CD750@l(r31)
+/* 80322460 002EBA20  3F E0 80 5D */	lis r31, "sWork__24@unnamed@HBMAxSound_cpp@"@ha
+/* 80322464 002EBA24  80 7F D7 50 */	lwz r3, "sWork__24@unnamed@HBMAxSound_cpp@"@l(r31)
 /* 80322468 002EBA28  2C 03 00 00 */	cmpwi r3, 0
 /* 8032246C 002EBA2C  41 82 00 34 */	beq .L_803224A0
 /* 80322470 002EBA30  3C 63 00 01 */	addis r3, r3, 1
@@ -142,7 +142,7 @@
 /* 80322478 002EBA38  38 A0 00 00 */	li r5, 0
 /* 8032247C 002EBA3C  38 63 46 80 */	addi r3, r3, 0x4680
 /* 80322480 002EBA40  48 03 6D 81 */	bl OSSendMessage
-/* 80322484 002EBA44  80 7F D7 50 */	lwz r3, lbl_805CD750@l(r31)
+/* 80322484 002EBA44  80 7F D7 50 */	lwz r3, "sWork__24@unnamed@HBMAxSound_cpp@"@l(r31)
 /* 80322488 002EBA48  3C 63 00 01 */	addis r3, r3, 1
 /* 8032248C 002EBA4C  81 83 43 48 */	lwz r12, 0x4348(r3)
 /* 80322490 002EBA50  2C 0C 00 00 */	cmpwi r12, 0
@@ -167,9 +167,9 @@
 /* 803224D0 002EBA90  4B F9 7C 85 */	bl _savegpr_27
 /* 803224D4 002EBA94  3B E0 00 00 */	li r31, 0
 /* 803224D8 002EBA98  93 E1 00 08 */	stw r31, 8(r1)
-/* 803224DC 002EBA9C  3F C0 80 5D */	lis r30, lbl_805CD750@ha
+/* 803224DC 002EBA9C  3F C0 80 5D */	lis r30, "sWork__24@unnamed@HBMAxSound_cpp@"@ha
 .L_803224E0:
-/* 803224E0 002EBAA0  80 7E D7 50 */	lwz r3, lbl_805CD750@l(r30)
+/* 803224E0 002EBAA0  80 7E D7 50 */	lwz r3, "sWork__24@unnamed@HBMAxSound_cpp@"@l(r30)
 /* 803224E4 002EBAA4  38 81 00 08 */	addi r4, r1, 8
 /* 803224E8 002EBAA8  38 A0 00 01 */	li r5, 1
 /* 803224EC 002EBAAC  3C 63 00 01 */	addis r3, r3, 1
@@ -181,7 +181,7 @@
 /* 80322504 002EBAC4  48 02 00 8D */	bl HBMSEQRunAudioFrame
 /* 80322508 002EBAC8  48 01 E6 39 */	bl HBMSYNRunAudioFrame
 /* 8032250C 002EBACC  48 01 D8 C5 */	bl HBMMIXUpdateSettings
-/* 80322510 002EBAD0  80 7E D7 50 */	lwz r3, lbl_805CD750@l(r30)
+/* 80322510 002EBAD0  80 7E D7 50 */	lwz r3, "sWork__24@unnamed@HBMAxSound_cpp@"@l(r30)
 /* 80322514 002EBAD4  2C 03 00 00 */	cmpwi r3, 0
 /* 80322518 002EBAD8  41 82 FF C8 */	beq .L_803224E0
 /* 8032251C 002EBADC  3C 63 00 01 */	addis r3, r3, 1
@@ -207,12 +207,12 @@
 /* 80322568 002EBB28  2C 00 00 19 */	cmpwi r0, 0x19
 /* 8032256C 002EBB2C  40 82 00 14 */	bne .L_80322580
 .L_80322570:
-/* 80322570 002EBB30  80 7E D7 50 */	lwz r3, lbl_805CD750@l(r30)
+/* 80322570 002EBB30  80 7E D7 50 */	lwz r3, "sWork__24@unnamed@HBMAxSound_cpp@"@l(r30)
 /* 80322574 002EBB34  3F A3 00 01 */	addis r29, r3, 1
 /* 80322578 002EBB38  3B BD 43 3C */	addi r29, r29, 0x433c
 /* 8032257C 002EBB3C  48 00 00 10 */	b .L_8032258C
 .L_80322580:
-/* 80322580 002EBB40  80 7E D7 50 */	lwz r3, lbl_805CD750@l(r30)
+/* 80322580 002EBB40  80 7E D7 50 */	lwz r3, "sWork__24@unnamed@HBMAxSound_cpp@"@l(r30)
 /* 80322584 002EBB44  3F A3 00 01 */	addis r29, r3, 1
 /* 80322588 002EBB48  3B BD 43 34 */	addi r29, r29, 0x4334
 .L_8032258C:
@@ -249,7 +249,7 @@
 .L_803225F0:
 /* 803225F0 002EBBB0  2C 1B 00 00 */	cmpwi r27, 0
 /* 803225F4 002EBBB4  40 82 FF 34 */	bne .L_80322528
-/* 803225F8 002EBBB8  80 7E D7 50 */	lwz r3, lbl_805CD750@l(r30)
+/* 803225F8 002EBBB8  80 7E D7 50 */	lwz r3, "sWork__24@unnamed@HBMAxSound_cpp@"@l(r30)
 /* 803225FC 002EBBBC  3C 63 00 01 */	addis r3, r3, 1
 /* 80322600 002EBBC0  83 A3 43 3C */	lwz r29, 0x433c(r3)
 /* 80322604 002EBBC4  48 00 00 CC */	b .L_803226D0
@@ -273,12 +273,12 @@
 /* 80322648 002EBC08  2C 00 00 19 */	cmpwi r0, 0x19
 /* 8032264C 002EBC0C  40 82 00 14 */	bne .L_80322660
 .L_80322650:
-/* 80322650 002EBC10  80 7E D7 50 */	lwz r3, lbl_805CD750@l(r30)
+/* 80322650 002EBC10  80 7E D7 50 */	lwz r3, "sWork__24@unnamed@HBMAxSound_cpp@"@l(r30)
 /* 80322654 002EBC14  3F 63 00 01 */	addis r27, r3, 1
 /* 80322658 002EBC18  3B 7B 43 3C */	addi r27, r27, 0x433c
 /* 8032265C 002EBC1C  48 00 00 10 */	b .L_8032266C
 .L_80322660:
-/* 80322660 002EBC20  80 7E D7 50 */	lwz r3, lbl_805CD750@l(r30)
+/* 80322660 002EBC20  80 7E D7 50 */	lwz r3, "sWork__24@unnamed@HBMAxSound_cpp@"@l(r30)
 /* 80322664 002EBC24  3F 63 00 01 */	addis r27, r3, 1
 /* 80322668 002EBC28  3B 7B 43 34 */	addi r27, r27, 0x4334
 .L_8032266C:
@@ -332,7 +332,7 @@
 .fn PlaySeq__10homebuttonFi, global
 /* 80322700 002EBCC0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80322704 002EBCC4  7C 08 02 A6 */	mflr r0
-/* 80322708 002EBCC8  3C 80 80 5D */	lis r4, lbl_805CD750@ha
+/* 80322708 002EBCC8  3C 80 80 5D */	lis r4, "sWork__24@unnamed@HBMAxSound_cpp@"@ha
 /* 8032270C 002EBCCC  90 01 00 34 */	stw r0, 0x34(r1)
 /* 80322710 002EBCD0  54 60 10 3A */	slwi r0, r3, 2
 /* 80322714 002EBCD4  38 A1 00 08 */	addi r5, r1, 8
@@ -341,9 +341,9 @@
 /* 80322720 002EBCE0  93 A1 00 24 */	stw r29, 0x24(r1)
 /* 80322724 002EBCE4  93 81 00 20 */	stw r28, 0x20(r1)
 /* 80322728 002EBCE8  7C 7C 1B 78 */	mr r28, r3
-/* 8032272C 002EBCEC  80 C4 D7 50 */	lwz r6, lbl_805CD750@l(r4)
-/* 80322730 002EBCF0  3C 80 80 55 */	lis r4, lbl_8054C808@ha
-/* 80322734 002EBCF4  38 84 C8 08 */	addi r4, r4, lbl_8054C808@l
+/* 8032272C 002EBCEC  80 C4 D7 50 */	lwz r6, "sWork__24@unnamed@HBMAxSound_cpp@"@l(r4)
+/* 80322730 002EBCF0  3C 80 80 55 */	lis r4, SOUND_FILENAME@ha
+/* 80322734 002EBCF4  38 84 C8 08 */	addi r4, r4, SOUND_FILENAME@l
 /* 80322738 002EBCF8  3C 66 00 01 */	addis r3, r6, 1
 /* 8032273C 002EBCFC  7C 84 00 2E */	lwzx r4, r4, r0
 /* 80322740 002EBD00  38 63 43 4C */	addi r3, r3, 0x434c
@@ -361,9 +361,9 @@
 /* 80322768 002EBD28  41 82 00 B4 */	beq .L_8032281C
 /* 8032276C 002EBD2C  7F 83 E3 78 */	mr r3, r28
 /* 80322770 002EBD30  4B FF FB 41 */	bl GetFreePlayer__24_unnamed_HBMAxSound_cpp_Fi
-/* 80322774 002EBD34  3F E0 80 5D */	lis r31, lbl_805CD750@ha
+/* 80322774 002EBD34  3F E0 80 5D */	lis r31, "sWork__24@unnamed@HBMAxSound_cpp@"@ha
 /* 80322778 002EBD38  7C 7D 1B 78 */	mr r29, r3
-/* 8032277C 002EBD3C  80 BF D7 50 */	lwz r5, lbl_805CD750@l(r31)
+/* 8032277C 002EBD3C  80 BF D7 50 */	lwz r5, "sWork__24@unnamed@HBMAxSound_cpp@"@l(r31)
 /* 80322780 002EBD40  7F C4 F3 78 */	mr r4, r30
 /* 80322784 002EBD44  38 E0 00 00 */	li r7, 0
 /* 80322788 002EBD48  3C C5 00 01 */	addis r6, r5, 1
@@ -381,13 +381,13 @@
 /* 803227B8 002EBD78  2C 1C 00 19 */	cmpwi r28, 0x19
 /* 803227BC 002EBD7C  40 82 00 18 */	bne .L_803227D4
 .L_803227C0:
-/* 803227C0 002EBD80  3C 60 80 5D */	lis r3, lbl_805CD750@ha
-/* 803227C4 002EBD84  80 63 D7 50 */	lwz r3, lbl_805CD750@l(r3)
+/* 803227C0 002EBD80  3C 60 80 5D */	lis r3, "sWork__24@unnamed@HBMAxSound_cpp@"@ha
+/* 803227C4 002EBD84  80 63 D7 50 */	lwz r3, "sWork__24@unnamed@HBMAxSound_cpp@"@l(r3)
 /* 803227C8 002EBD88  3C 83 00 01 */	addis r4, r3, 1
 /* 803227CC 002EBD8C  38 84 43 3C */	addi r4, r4, 0x433c
 /* 803227D0 002EBD90  48 00 00 10 */	b .L_803227E0
 .L_803227D4:
-/* 803227D4 002EBD94  80 7F D7 50 */	lwz r3, lbl_805CD750@l(r31)
+/* 803227D4 002EBD94  80 7F D7 50 */	lwz r3, "sWork__24@unnamed@HBMAxSound_cpp@"@l(r31)
 /* 803227D8 002EBD98  3C 83 00 01 */	addis r4, r3, 1
 /* 803227DC 002EBD9C  38 84 43 34 */	addi r4, r4, 0x4334
 .L_803227E0:
@@ -482,8 +482,8 @@
 /* 80322928 002EBEE8  2C 03 00 00 */	cmpwi r3, 0
 /* 8032292C 002EBEEC  41 82 00 EC */	beq .L_80322A18
 /* 80322930 002EBEF0  3C 7E 00 01 */	addis r3, r30, 1
-/* 80322934 002EBEF4  3C 80 80 52 */	lis r4, lbl_80518690@ha
-/* 80322938 002EBEF8  38 84 86 90 */	addi r4, r4, lbl_80518690@l
+/* 80322934 002EBEF4  3C 80 80 52 */	lis r4, "@unnamed@HBMAxSound_cpp@::WT_FILENAME"@ha
+/* 80322938 002EBEF8  38 84 86 90 */	addi r4, r4, "@unnamed@HBMAxSound_cpp@::WT_FILENAME"@l
 /* 8032293C 002EBEFC  38 A1 00 14 */	addi r5, r1, 0x14
 /* 80322940 002EBF00  38 63 43 4C */	addi r3, r3, 0x434c
 /* 80322944 002EBF04  4B FA ED CD */	bl ARCOpen
@@ -492,10 +492,10 @@
 /* 80322950 002EBF10  38 61 00 14 */	addi r3, r1, 0x14
 /* 80322954 002EBF14  4B FA F5 0D */	bl ARCGetStartAddrInMem
 /* 80322958 002EBF18  3C BE 00 01 */	addis r5, r30, 1
-/* 8032295C 002EBF1C  3C 80 80 52 */	lis r4, lbl_805186A4@ha
+/* 8032295C 002EBF1C  3C 80 80 52 */	lis r4, "@unnamed@HBMAxSound_cpp@::PCM_FILENAME"@ha
 /* 80322960 002EBF20  90 65 46 B4 */	stw r3, 0x46b4(r5)
 /* 80322964 002EBF24  7C A3 2B 78 */	mr r3, r5
-/* 80322968 002EBF28  38 84 86 A4 */	addi r4, r4, lbl_805186A4@l
+/* 80322968 002EBF28  38 84 86 A4 */	addi r4, r4, "@unnamed@HBMAxSound_cpp@::PCM_FILENAME"@l
 /* 8032296C 002EBF2C  38 A1 00 08 */	addi r5, r1, 8
 /* 80322970 002EBF30  38 63 43 4C */	addi r3, r3, 0x434c
 /* 80322974 002EBF34  4B FA ED 9D */	bl ARCOpen
@@ -525,9 +525,9 @@
 /* 803229D4 002EBF94  48 03 91 DD */	bl OSCreateThread
 /* 803229D8 002EBF98  2C 03 00 00 */	cmpwi r3, 0
 /* 803229DC 002EBF9C  41 82 00 3C */	beq .L_80322A18
-/* 803229E0 002EBFA0  3C 80 80 5D */	lis r4, lbl_805CD750@ha
+/* 803229E0 002EBFA0  3C 80 80 5D */	lis r4, "sWork__24@unnamed@HBMAxSound_cpp@"@ha
 /* 803229E4 002EBFA4  3C 7E 00 01 */	addis r3, r30, 1
-/* 803229E8 002EBFA8  93 C4 D7 50 */	stw r30, lbl_805CD750@l(r4)
+/* 803229E8 002EBFA8  93 C4 D7 50 */	stw r30, "sWork__24@unnamed@HBMAxSound_cpp@"@l(r4)
 /* 803229EC 002EBFAC  38 63 43 68 */	addi r3, r3, 0x4368
 /* 803229F0 002EBFB0  48 03 98 51 */	bl OSResumeThread
 /* 803229F4 002EBFB4  48 03 5F BD */	bl OSDisableInterrupts
@@ -555,22 +555,22 @@
 /* 80322A44 002EC004  7C 08 02 A6 */	mflr r0
 /* 80322A48 002EC008  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80322A4C 002EC00C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80322A50 002EC010  3F E0 80 5D */	lis r31, lbl_805CD750@ha
-/* 80322A54 002EC014  80 1F D7 50 */	lwz r0, lbl_805CD750@l(r31)
+/* 80322A50 002EC010  3F E0 80 5D */	lis r31, "sWork__24@unnamed@HBMAxSound_cpp@"@ha
+/* 80322A54 002EC014  80 1F D7 50 */	lwz r0, "sWork__24@unnamed@HBMAxSound_cpp@"@l(r31)
 /* 80322A58 002EC018  2C 00 00 00 */	cmpwi r0, 0
 /* 80322A5C 002EC01C  41 82 00 58 */	beq .L_80322AB4
 /* 80322A60 002EC020  48 00 00 81 */	bl StopAllSeq__10homebuttonFv
-/* 80322A64 002EC024  80 7F D7 50 */	lwz r3, lbl_805CD750@l(r31)
+/* 80322A64 002EC024  80 7F D7 50 */	lwz r3, "sWork__24@unnamed@HBMAxSound_cpp@"@l(r31)
 /* 80322A68 002EC028  3C 63 00 01 */	addis r3, r3, 1
 /* 80322A6C 002EC02C  80 63 43 48 */	lwz r3, 0x4348(r3)
 /* 80322A70 002EC030  4B FB 17 01 */	bl AXRegisterCallback
-/* 80322A74 002EC034  80 7F D7 50 */	lwz r3, lbl_805CD750@l(r31)
+/* 80322A74 002EC034  80 7F D7 50 */	lwz r3, "sWork__24@unnamed@HBMAxSound_cpp@"@l(r31)
 /* 80322A78 002EC038  38 80 00 08 */	li r4, 8
 /* 80322A7C 002EC03C  38 A0 00 01 */	li r5, 1
 /* 80322A80 002EC040  3C 63 00 01 */	addis r3, r3, 1
 /* 80322A84 002EC044  38 63 46 80 */	addi r3, r3, 0x4680
 /* 80322A88 002EC048  48 03 69 29 */	bl OSJamMessage
-/* 80322A8C 002EC04C  80 7F D7 50 */	lwz r3, lbl_805CD750@l(r31)
+/* 80322A8C 002EC04C  80 7F D7 50 */	lwz r3, "sWork__24@unnamed@HBMAxSound_cpp@"@l(r31)
 /* 80322A90 002EC050  38 80 00 00 */	li r4, 0
 /* 80322A94 002EC054  3C 63 00 01 */	addis r3, r3, 1
 /* 80322A98 002EC058  38 63 43 68 */	addi r3, r3, 0x4368
@@ -579,7 +579,7 @@
 /* 80322AA4 002EC064  48 01 E0 7D */	bl HBMSYNQuit
 /* 80322AA8 002EC068  48 01 C8 39 */	bl HBMMIXQuit
 /* 80322AAC 002EC06C  38 00 00 00 */	li r0, 0
-/* 80322AB0 002EC070  90 1F D7 50 */	stw r0, lbl_805CD750@l(r31)
+/* 80322AB0 002EC070  90 1F D7 50 */	stw r0, "sWork__24@unnamed@HBMAxSound_cpp@"@l(r31)
 .L_80322AB4:
 /* 80322AB4 002EC074  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80322AB8 002EC078  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -600,15 +600,15 @@
 /* 80322AE8 002EC0A8  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80322AEC 002EC0AC  39 61 00 20 */	addi r11, r1, 0x20
 /* 80322AF0 002EC0B0  4B F9 76 61 */	bl _savegpr_26
-/* 80322AF4 002EC0B4  3F E0 80 5D */	lis r31, lbl_805CD750@ha
-/* 80322AF8 002EC0B8  80 1F D7 50 */	lwz r0, lbl_805CD750@l(r31)
+/* 80322AF4 002EC0B4  3F E0 80 5D */	lis r31, "sWork__24@unnamed@HBMAxSound_cpp@"@ha
+/* 80322AF8 002EC0B8  80 1F D7 50 */	lwz r0, "sWork__24@unnamed@HBMAxSound_cpp@"@l(r31)
 /* 80322AFC 002EC0BC  2C 00 00 00 */	cmpwi r0, 0
 /* 80322B00 002EC0C0  41 82 01 8C */	beq .L_80322C8C
 /* 80322B04 002EC0C4  3B 60 00 00 */	li r27, 0
 /* 80322B08 002EC0C8  3B 80 00 00 */	li r28, 0
 /* 80322B0C 002EC0CC  3B C0 00 00 */	li r30, 0
 .L_80322B10:
-/* 80322B10 002EC0D0  80 7F D7 50 */	lwz r3, lbl_805CD750@l(r31)
+/* 80322B10 002EC0D0  80 7F D7 50 */	lwz r3, "sWork__24@unnamed@HBMAxSound_cpp@"@l(r31)
 /* 80322B14 002EC0D4  7F 43 E2 14 */	add r26, r3, r28
 /* 80322B18 002EC0D8  88 1A 2E 1C */	lbz r0, 0x2e1c(r26)
 /* 80322B1C 002EC0DC  2C 00 00 00 */	cmpwi r0, 0
@@ -664,9 +664,9 @@
 /* 80322BC4 002EC184  3B 40 00 00 */	li r26, 0
 /* 80322BC8 002EC188  3B 80 00 00 */	li r28, 0
 /* 80322BCC 002EC18C  3B E0 00 00 */	li r31, 0
-/* 80322BD0 002EC190  3F C0 80 5D */	lis r30, lbl_805CD750@ha
+/* 80322BD0 002EC190  3F C0 80 5D */	lis r30, "sWork__24@unnamed@HBMAxSound_cpp@"@ha
 .L_80322BD4:
-/* 80322BD4 002EC194  80 BE D7 50 */	lwz r5, lbl_805CD750@l(r30)
+/* 80322BD4 002EC194  80 BE D7 50 */	lwz r5, "sWork__24@unnamed@HBMAxSound_cpp@"@l(r30)
 /* 80322BD8 002EC198  3C 85 00 01 */	addis r4, r5, 1
 /* 80322BDC 002EC19C  7C 64 E2 14 */	add r3, r4, r28
 /* 80322BE0 002EC1A0  88 03 E6 CC */	lbz r0, -0x1934(r3)
@@ -733,15 +733,15 @@
 .fn SetVolumeAllSeq__10homebuttonFf, global
 /* 80322CB0 002EC270  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80322CB4 002EC274  7C 08 02 A6 */	mflr r0
-/* 80322CB8 002EC278  3C 60 80 5D */	lis r3, lbl_805CD750@ha
+/* 80322CB8 002EC278  3C 60 80 5D */	lis r3, "sWork__24@unnamed@HBMAxSound_cpp@"@ha
 /* 80322CBC 002EC27C  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80322CC0 002EC280  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 80322CC4 002EC284  3F E0 80 52 */	lis r31, lbl_80518690@ha
-/* 80322CC8 002EC288  3B FF 86 90 */	addi r31, r31, lbl_80518690@l
+/* 80322CC4 002EC284  3F E0 80 52 */	lis r31, "@unnamed@HBMAxSound_cpp@::WT_FILENAME"@ha
+/* 80322CC8 002EC288  3B FF 86 90 */	addi r31, r31, "@unnamed@HBMAxSound_cpp@::WT_FILENAME"@l
 /* 80322CCC 002EC28C  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80322CD0 002EC290  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80322CD4 002EC294  93 81 00 10 */	stw r28, 0x10(r1)
-/* 80322CD8 002EC298  80 03 D7 50 */	lwz r0, lbl_805CD750@l(r3)
+/* 80322CD8 002EC298  80 03 D7 50 */	lwz r0, "sWork__24@unnamed@HBMAxSound_cpp@"@l(r3)
 /* 80322CDC 002EC29C  2C 00 00 00 */	cmpwi r0, 0
 /* 80322CE0 002EC2A0  41 82 00 D0 */	beq .L_80322DB0
 /* 80322CE4 002EC2A4  C0 1F 00 28 */	lfs f0, 0x28(r31)
@@ -771,9 +771,9 @@
 .L_80322D38:
 /* 80322D38 002EC2F8  3B 80 00 00 */	li r28, 0
 /* 80322D3C 002EC2FC  3B C0 00 00 */	li r30, 0
-/* 80322D40 002EC300  3F E0 80 5D */	lis r31, lbl_805CD750@ha
+/* 80322D40 002EC300  3F E0 80 5D */	lis r31, "sWork__24@unnamed@HBMAxSound_cpp@"@ha
 .L_80322D44:
-/* 80322D44 002EC304  80 1F D7 50 */	lwz r0, lbl_805CD750@l(r31)
+/* 80322D44 002EC304  80 1F D7 50 */	lwz r0, "sWork__24@unnamed@HBMAxSound_cpp@"@l(r31)
 /* 80322D48 002EC308  7C 60 F2 14 */	add r3, r0, r30
 /* 80322D4C 002EC30C  88 03 2E 1C */	lbz r0, 0x2e1c(r3)
 /* 80322D50 002EC310  2C 00 00 00 */	cmpwi r0, 0
@@ -787,9 +787,9 @@
 /* 80322D6C 002EC32C  41 80 FF D8 */	blt .L_80322D44
 /* 80322D70 002EC330  3B 80 00 00 */	li r28, 0
 /* 80322D74 002EC334  3B C0 00 00 */	li r30, 0
-/* 80322D78 002EC338  3F E0 80 5D */	lis r31, lbl_805CD750@ha
+/* 80322D78 002EC338  3F E0 80 5D */	lis r31, "sWork__24@unnamed@HBMAxSound_cpp@"@ha
 .L_80322D7C:
-/* 80322D7C 002EC33C  80 7F D7 50 */	lwz r3, lbl_805CD750@l(r31)
+/* 80322D7C 002EC33C  80 7F D7 50 */	lwz r3, "sWork__24@unnamed@HBMAxSound_cpp@"@l(r31)
 /* 80322D80 002EC340  3C 03 00 01 */	addis r0, r3, 1
 /* 80322D84 002EC344  7C 60 F2 14 */	add r3, r0, r30
 /* 80322D88 002EC348  38 63 B8 B0 */	addi r3, r3, -18256
@@ -821,18 +821,18 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_80518690
-lbl_80518690:
+"@unnamed@HBMAxSound_cpp@::WT_FILENAME":
 	.asciz "wt\\HomeButtonSe.wt"
 	.balign 4
 
 
-.global lbl_805186A4
-lbl_805186A4:
+"@unnamed@HBMAxSound_cpp@::PCM_FILENAME":
 	.asciz "wt\\HomeButtonSe.pcm"
+
+
 	.4byte 0
 	.float 10.0
-	.4byte 0x41A00000
+	.float 20.0
 	.4byte 0
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
@@ -973,8 +973,8 @@ lbl_8054C7E8:
 	.balign 4
 
 
-.global lbl_8054C808
-lbl_8054C808:
+#SOUND_FILENAME$6705
+SOUND_FILENAME:
 	.4byte lbl_8054C528
 	.4byte lbl_8054C540
 	.4byte lbl_8054C558
@@ -1006,6 +1006,5 @@ lbl_8054C808:
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805CD750
-lbl_805CD750:
+"sWork__24@unnamed@HBMAxSound_cpp@":
 	.skip 0x8

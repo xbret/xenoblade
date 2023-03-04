@@ -226,22 +226,6 @@
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
 
-.global lbl_8054ECA0
-lbl_8054ECA0:
-	.4byte 0
-	.4byte 0xFFFFFFFF
-	.4byte ReadNextCharUTF8__Q36nw4hbm2ut14CharStrmReaderFv
-	.4byte 0
-	.4byte 0xFFFFFFFF
-	.4byte ReadNextCharUTF16__Q36nw4hbm2ut14CharStrmReaderFv
-	.4byte 0
-	.4byte 0xFFFFFFFF
-	.4byte ReadNextCharSJIS__Q36nw4hbm2ut14CharStrmReaderFv
-	.4byte 0
-	.4byte 0xFFFFFFFF
-	.4byte ReadNextCharCP1252__Q36nw4hbm2ut14CharStrmReaderFv
-
-
 .global __vt__8054ECD0
 __vt__8054ECD0:
 	.4byte lbl_8054ED50

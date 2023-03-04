@@ -398,7 +398,7 @@
 /* 8048F2AC 0045886C  4B F6 56 A5 */	bl EnableScnObjCallbackTiming__Q34nw4r3g3d6ScnObjFQ44nw4r3g3d6ScnObj6Timing
 /* 8048F2B0 00458870  7F A3 EB 78 */	mr r3, r29
 /* 8048F2B4 00458874  38 80 00 01 */	li r4, 1
-/* 8048F2B8 00458878  4B F6 56 D9 */	bl func_803F4990
+/* 8048F2B8 00458878  4B F6 56 D9 */	bl EnableScnObjCallbackExecOp__Q34nw4r3g3d6ScnObjFQ44nw4r3g3d6ScnObj6ExecOp
 /* 8048F2BC 0045887C  3B 7B 00 01 */	addi r27, r27, 1
 /* 8048F2C0 00458880  3B 5A 00 02 */	addi r26, r26, 2
 /* 8048F2C4 00458884  28 1B 00 0A */	cmplwi r27, 0xa

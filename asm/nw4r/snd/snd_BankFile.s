@@ -80,7 +80,7 @@
 .L_80411AF0:
 /* 80411AF0 003DB0B0  28 00 00 01 */	cmplwi r0, 1
 /* 80411AF4 003DB0B4  41 82 00 1C */	beq .L_80411B10
-/* 80411AF8 003DB0B8  48 00 02 39 */	bl GetReferenceToSubRegion__Q44nw4r3snd6detail14BankFileReaderCFPCQ54nw4r3snd6detail4Util128DataRef_v_Q54nw4r3snd6detail8BankFile9InstParam_Q54nw4r3snd6detail8BankFile10RangeTable_Q54nw4r3snd6detail8BankFile10IndexTable_i
+/* 80411AF8 003DB0B8  48 00 02 39 */	bl "GetReferenceToSubRegion__Q44nw4r3snd6detail14BankFileReaderCFPCQ54nw4r3snd6detail4Util128DataRef<v,Q54nw4r3snd6detail8BankFile9InstParam,Q54nw4r3snd6detail8BankFile10RangeTable,Q54nw4r3snd6detail8BankFile10IndexTable>i"
 /* 80411AFC 003DB0BC  2C 03 00 00 */	cmpwi r3, 0
 /* 80411B00 003DB0C0  7C 64 1B 78 */	mr r4, r3
 /* 80411B04 003DB0C4  40 82 00 0C */	bne .L_80411B10
@@ -97,7 +97,7 @@
 /* 80411B28 003DB0E8  41 82 00 24 */	beq .L_80411B4C
 /* 80411B2C 003DB0EC  7F C3 F3 78 */	mr r3, r30
 /* 80411B30 003DB0F0  7F E5 FB 78 */	mr r5, r31
-/* 80411B34 003DB0F4  48 00 01 FD */	bl GetReferenceToSubRegion__Q44nw4r3snd6detail14BankFileReaderCFPCQ54nw4r3snd6detail4Util128DataRef_v_Q54nw4r3snd6detail8BankFile9InstParam_Q54nw4r3snd6detail8BankFile10RangeTable_Q54nw4r3snd6detail8BankFile10IndexTable_i
+/* 80411B34 003DB0F4  48 00 01 FD */	bl "GetReferenceToSubRegion__Q44nw4r3snd6detail14BankFileReaderCFPCQ54nw4r3snd6detail4Util128DataRef<v,Q54nw4r3snd6detail8BankFile9InstParam,Q54nw4r3snd6detail8BankFile10RangeTable,Q54nw4r3snd6detail8BankFile10IndexTable>i"
 /* 80411B38 003DB0F8  2C 03 00 00 */	cmpwi r3, 0
 /* 80411B3C 003DB0FC  7C 64 1B 78 */	mr r4, r3
 /* 80411B40 003DB100  40 82 00 0C */	bne .L_80411B4C
@@ -247,8 +247,7 @@
 /* 80411D2C 003DB2EC  4E 80 00 20 */	blr 
 .endfn ReadInstInfo__Q44nw4r3snd6detail14BankFileReaderCFPQ44nw4r3snd6detail8InstInfoiii
 
-#GetReferenceToSubRegion__Q44nw4r3snd6detail14BankFileReaderCFPCQ54nw4r3snd6detail4Util128DataRef<v,Q54nw4r3snd6detail8BankFile9InstParam,Q54nw4r3snd6detail8BankFile10RangeTable,Q54nw4r3snd6detail8BankFile10IndexTable>i
-.fn GetReferenceToSubRegion__Q44nw4r3snd6detail14BankFileReaderCFPCQ54nw4r3snd6detail4Util128DataRef_v_Q54nw4r3snd6detail8BankFile9InstParam_Q54nw4r3snd6detail8BankFile10RangeTable_Q54nw4r3snd6detail8BankFile10IndexTable_i, global
+.fn "GetReferenceToSubRegion__Q44nw4r3snd6detail14BankFileReaderCFPCQ54nw4r3snd6detail4Util128DataRef<v,Q54nw4r3snd6detail8BankFile9InstParam,Q54nw4r3snd6detail8BankFile10RangeTable,Q54nw4r3snd6detail8BankFile10IndexTable>i", global
 /* 80411D30 003DB2F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80411D34 003DB2F4  7C 08 02 A6 */	mflr r0
 /* 80411D38 003DB2F8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -335,7 +334,7 @@
 /* 80411E4C 003DB40C  7C 08 03 A6 */	mtlr r0
 /* 80411E50 003DB410  38 21 00 10 */	addi r1, r1, 0x10
 /* 80411E54 003DB414  4E 80 00 20 */	blr 
-.endfn GetReferenceToSubRegion__Q44nw4r3snd6detail14BankFileReaderCFPCQ54nw4r3snd6detail4Util128DataRef_v_Q54nw4r3snd6detail8BankFile9InstParam_Q54nw4r3snd6detail8BankFile10RangeTable_Q54nw4r3snd6detail8BankFile10IndexTable_i
+.endfn "GetReferenceToSubRegion__Q44nw4r3snd6detail14BankFileReaderCFPCQ54nw4r3snd6detail4Util128DataRef<v,Q54nw4r3snd6detail8BankFile9InstParam,Q54nw4r3snd6detail8BankFile10RangeTable,Q54nw4r3snd6detail8BankFile10IndexTable>i"
 
 .fn ReadWaveInfo__Q44nw4r3snd6detail14BankFileReaderCFPQ44nw4r3snd6detail8WaveInfoRCQ54nw4r3snd6detail8InstInfo16WaveDataLocationPCvPPCQ44nw4r3snd6detail8WaveInfo, global
 /* 80411E58 003DB418  94 21 FF D0 */	stwu r1, -0x30(r1)

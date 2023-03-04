@@ -1424,12 +1424,10 @@
 /* 80413880 003DCE40  4E 80 00 20 */	blr 
 .endfn SetVolume__Q44nw4r3snd6detail10BasicSoundFfi
 
-#SetPitch__Q44nw4r3snd6detail10BasicSoundFf, SetPan__Q44nw4r3snd6detail10BasicSoundFf, SetSurroundPan__Q44nw4r3snd6detail10BasicSoundFf, SetLpfFreq__Q44nw4r3snd6detail10BasicSoundFf,
-#SetOutputLine__Q44nw4r3snd6detail10BasicSoundFi or SetMainSend__Q44nw4r3snd6detail10BasicSoundFf
-.fn func_80413884, global
+.fn SetPan__Q44nw4r3snd6detail10BasicSoundFf, global
 /* 80413884 003DCE44  D0 23 00 B0 */	stfs f1, 0xb0(r3)
 /* 80413888 003DCE48  4E 80 00 20 */	blr 
-.endfn func_80413884
+.endfn SetPan__Q44nw4r3snd6detail10BasicSoundFf
 
 .fn SetRemoteFilter__Q44nw4r3snd6detail10BasicSoundFi, global
 /* 8041388C 003DCE4C  94 21 FF F0 */	stwu r1, -0x10(r1)

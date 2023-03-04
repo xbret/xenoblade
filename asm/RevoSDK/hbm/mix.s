@@ -4,9 +4,9 @@
 
 .balign 16, 0
 .fn __HBMMIXSetPan__FP13HBMMIXChannel, global
-/* 8033F040 00308600  3C 80 80 5D */	lis r4, lbl_805CD898@ha
+/* 8033F040 00308600  3C 80 80 5D */	lis r4, __HBMMIXSoundMode@ha
 /* 8033F044 00308604  3C C0 80 55 */	lis r6, __HBMMIXVolumeTable@ha
-/* 8033F048 00308608  80 04 D8 98 */	lwz r0, lbl_805CD898@l(r4)
+/* 8033F048 00308608  80 04 D8 98 */	lwz r0, __HBMMIXSoundMode@l(r4)
 /* 8033F04C 0030860C  38 C6 EF 00 */	addi r6, r6, __HBMMIXVolumeTable@l
 /* 8033F050 00308610  80 A3 00 10 */	lwz r5, 0x10(r3)
 /* 8033F054 00308614  28 00 00 02 */	cmplwi r0, 2
@@ -54,8 +54,8 @@
 /* 8033F0E8 003086A8  90 01 00 34 */	stw r0, 0x34(r1)
 /* 8033F0EC 003086AC  39 61 00 30 */	addi r11, r1, 0x30
 /* 8033F0F0 003086B0  4B F7 B0 5D */	bl _savegpr_25
-/* 8033F0F4 003086B4  3F 60 80 5D */	lis r27, lbl_805CD828@ha
-/* 8033F0F8 003086B8  3B 7B D8 28 */	addi r27, r27, lbl_805CD828@l
+/* 8033F0F4 003086B4  3F 60 80 5D */	lis r27, sIndex2IdTable@ha
+/* 8033F0F8 003086B8  3B 7B D8 28 */	addi r27, r27, sIndex2IdTable@l
 /* 8033F0FC 003086BC  4B F9 30 05 */	bl AXIsInit
 /* 8033F100 003086C0  2C 03 00 00 */	cmpwi r3, 0
 /* 8033F104 003086C4  41 82 01 C4 */	beq .L_8033F2C8
@@ -184,18 +184,18 @@
 
 .balign 16, 0
 .fn HBMMIXQuit, global
-/* 8033F2E0 003088A0  3C 80 80 5D */	lis r4, lbl_805CD89C@ha
-/* 8033F2E4 003088A4  3C 60 80 5D */	lis r3, lbl_805CDEE0@ha
+/* 8033F2E0 003088A0  3C 80 80 5D */	lis r4, __HBMMIXChannel@ha
+/* 8033F2E4 003088A4  3C 60 80 5D */	lis r3, __init@ha
 /* 8033F2E8 003088A8  38 00 00 00 */	li r0, 0
-/* 8033F2EC 003088AC  90 04 D8 9C */	stw r0, lbl_805CD89C@l(r4)
-/* 8033F2F0 003088B0  90 03 DE E0 */	stw r0, lbl_805CDEE0@l(r3)
+/* 8033F2EC 003088AC  90 04 D8 9C */	stw r0, __HBMMIXChannel@l(r4)
+/* 8033F2F0 003088B0  90 03 DE E0 */	stw r0, __init@l(r3)
 /* 8033F2F4 003088B4  4E 80 00 20 */	blr 
 .endfn HBMMIXQuit
 
 .balign 16, 0
 .fn HBMMIXSetSoundMode, global
-/* 8033F300 003088C0  3C 80 80 5D */	lis r4, lbl_805CD898@ha
-/* 8033F304 003088C4  90 64 D8 98 */	stw r3, lbl_805CD898@l(r4)
+/* 8033F300 003088C0  3C 80 80 5D */	lis r4, __HBMMIXSoundMode@ha
+/* 8033F304 003088C4  90 64 D8 98 */	stw r3, __HBMMIXSoundMode@l(r4)
 /* 8033F308 003088C8  4E 80 00 20 */	blr 
 .endfn HBMMIXSetSoundMode
 
@@ -206,8 +206,8 @@
 /* 8033F318 003088D8  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8033F31C 003088DC  38 00 00 00 */	li r0, 0
 /* 8033F320 003088E0  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 8033F324 003088E4  3F E0 80 5D */	lis r31, lbl_805CD828@ha
-/* 8033F328 003088E8  3B FF D8 28 */	addi r31, r31, lbl_805CD828@l
+/* 8033F324 003088E4  3F E0 80 5D */	lis r31, sIndex2IdTable@ha
+/* 8033F328 003088E8  3B FF D8 28 */	addi r31, r31, sIndex2IdTable@l
 /* 8033F32C 003088EC  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8033F330 003088F0  39 1F 00 10 */	addi r8, r31, 0x10
 /* 8033F334 003088F4  93 A1 00 14 */	stw r29, 0x14(r1)
@@ -878,13 +878,13 @@
 
 .balign 16, 0
 .fn HBMMIXReleaseChannel, global
-/* 8033FC60 00309220  3C 80 80 5D */	lis r4, lbl_805CD838@ha
+/* 8033FC60 00309220  3C 80 80 5D */	lis r4, sId2IndexTable@ha
 /* 8033FC64 00309224  80 03 00 18 */	lwz r0, 0x18(r3)
-/* 8033FC68 00309228  38 84 D8 38 */	addi r4, r4, lbl_805CD838@l
-/* 8033FC6C 0030922C  3C 60 80 5D */	lis r3, lbl_805CD89C@ha
+/* 8033FC68 00309228  38 84 D8 38 */	addi r4, r4, sId2IndexTable@l
+/* 8033FC6C 0030922C  3C 60 80 5D */	lis r3, __HBMMIXChannel@ha
 /* 8033FC70 00309230  7C 04 00 AE */	lbzx r0, r4, r0
 /* 8033FC74 00309234  38 80 00 00 */	li r4, 0
-/* 8033FC78 00309238  80 63 D8 9C */	lwz r3, lbl_805CD89C@l(r3)
+/* 8033FC78 00309238  80 63 D8 9C */	lwz r3, __HBMMIXChannel@l(r3)
 /* 8033FC7C 0030923C  7C 00 07 74 */	extsb r0, r0
 /* 8033FC80 00309240  1C 00 00 64 */	mulli r0, r0, 0x64
 /* 8033FC84 00309244  7C 83 01 2E */	stwx r4, r3, r0
@@ -893,12 +893,12 @@
 
 .balign 16, 0
 .fn HBMMIXSetInput, global
-/* 8033FC90 00309250  3C A0 80 5D */	lis r5, lbl_805CD838@ha
+/* 8033FC90 00309250  3C A0 80 5D */	lis r5, sId2IndexTable@ha
 /* 8033FC94 00309254  80 03 00 18 */	lwz r0, 0x18(r3)
-/* 8033FC98 00309258  38 A5 D8 38 */	addi r5, r5, lbl_805CD838@l
-/* 8033FC9C 0030925C  3C 60 80 5D */	lis r3, lbl_805CD89C@ha
+/* 8033FC98 00309258  38 A5 D8 38 */	addi r5, r5, sId2IndexTable@l
+/* 8033FC9C 0030925C  3C 60 80 5D */	lis r3, __HBMMIXChannel@ha
 /* 8033FCA0 00309260  7C 05 00 AE */	lbzx r0, r5, r0
-/* 8033FCA4 00309264  80 63 D8 9C */	lwz r3, lbl_805CD89C@l(r3)
+/* 8033FCA4 00309264  80 63 D8 9C */	lwz r3, __HBMMIXChannel@l(r3)
 /* 8033FCA8 00309268  7C 00 07 74 */	extsb r0, r0
 /* 8033FCAC 0030926C  1C 00 00 64 */	mulli r0, r0, 0x64
 /* 8033FCB0 00309270  7C 63 02 14 */	add r3, r3, r0
@@ -911,12 +911,12 @@
 
 .balign 16, 0
 .fn HBMMIXSetAuxA, global
-/* 8033FCD0 00309290  3C A0 80 5D */	lis r5, lbl_805CD838@ha
+/* 8033FCD0 00309290  3C A0 80 5D */	lis r5, sId2IndexTable@ha
 /* 8033FCD4 00309294  80 03 00 18 */	lwz r0, 0x18(r3)
-/* 8033FCD8 00309298  38 A5 D8 38 */	addi r5, r5, lbl_805CD838@l
-/* 8033FCDC 0030929C  3C 60 80 5D */	lis r3, lbl_805CD89C@ha
+/* 8033FCD8 00309298  38 A5 D8 38 */	addi r5, r5, sId2IndexTable@l
+/* 8033FCDC 0030929C  3C 60 80 5D */	lis r3, __HBMMIXChannel@ha
 /* 8033FCE0 003092A0  7C 05 00 AE */	lbzx r0, r5, r0
-/* 8033FCE4 003092A4  80 63 D8 9C */	lwz r3, lbl_805CD89C@l(r3)
+/* 8033FCE4 003092A4  80 63 D8 9C */	lwz r3, __HBMMIXChannel@l(r3)
 /* 8033FCE8 003092A8  7C 00 07 74 */	extsb r0, r0
 /* 8033FCEC 003092AC  1C 00 00 64 */	mulli r0, r0, 0x64
 /* 8033FCF0 003092B0  7C 63 02 14 */	add r3, r3, r0
@@ -931,14 +931,14 @@
 .fn HBMMIXSetPan, global
 /* 8033FD10 003092D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8033FD14 003092D4  7C 08 02 A6 */	mflr r0
-/* 8033FD18 003092D8  3C A0 80 5D */	lis r5, lbl_805CD838@ha
+/* 8033FD18 003092D8  3C A0 80 5D */	lis r5, sId2IndexTable@ha
 /* 8033FD1C 003092DC  2C 04 00 00 */	cmpwi r4, 0
 /* 8033FD20 003092E0  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8033FD24 003092E4  38 A5 D8 38 */	addi r5, r5, lbl_805CD838@l
+/* 8033FD24 003092E4  38 A5 D8 38 */	addi r5, r5, sId2IndexTable@l
 /* 8033FD28 003092E8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8033FD2C 003092EC  80 03 00 18 */	lwz r0, 0x18(r3)
-/* 8033FD30 003092F0  3C 60 80 5D */	lis r3, lbl_805CD89C@ha
-/* 8033FD34 003092F4  80 63 D8 9C */	lwz r3, lbl_805CD89C@l(r3)
+/* 8033FD30 003092F0  3C 60 80 5D */	lis r3, __HBMMIXChannel@ha
+/* 8033FD34 003092F4  80 63 D8 9C */	lwz r3, __HBMMIXChannel@l(r3)
 /* 8033FD38 003092F8  7C 05 00 AE */	lbzx r0, r5, r0
 /* 8033FD3C 003092FC  7C 00 07 74 */	extsb r0, r0
 /* 8033FD40 00309300  1C 00 00 64 */	mulli r0, r0, 0x64
@@ -967,12 +967,12 @@
 
 .balign 16, 0
 .fn HBMMIXSetFader, global
-/* 8033FD90 00309350  3C A0 80 5D */	lis r5, lbl_805CD838@ha
+/* 8033FD90 00309350  3C A0 80 5D */	lis r5, sId2IndexTable@ha
 /* 8033FD94 00309354  80 03 00 18 */	lwz r0, 0x18(r3)
-/* 8033FD98 00309358  38 A5 D8 38 */	addi r5, r5, lbl_805CD838@l
-/* 8033FD9C 0030935C  3C 60 80 5D */	lis r3, lbl_805CD89C@ha
+/* 8033FD98 00309358  38 A5 D8 38 */	addi r5, r5, sId2IndexTable@l
+/* 8033FD9C 0030935C  3C 60 80 5D */	lis r3, __HBMMIXChannel@ha
 /* 8033FDA0 00309360  7C 05 00 AE */	lbzx r0, r5, r0
-/* 8033FDA4 00309364  80 63 D8 9C */	lwz r3, lbl_805CD89C@l(r3)
+/* 8033FDA4 00309364  80 63 D8 9C */	lwz r3, __HBMMIXChannel@l(r3)
 /* 8033FDA8 00309368  7C 00 07 74 */	extsb r0, r0
 /* 8033FDAC 0030936C  1C 00 00 64 */	mulli r0, r0, 0x64
 /* 8033FDB0 00309370  7C 63 02 14 */	add r3, r3, r0
@@ -986,8 +986,8 @@
 .balign 16, 0
 .fn HBMMIXUpdateSettings, global
 /* 8033FDD0 00309390  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 8033FDD4 00309394  3C C0 80 5D */	lis r6, lbl_805CD828@ha
-/* 8033FDD8 00309398  38 C6 D8 28 */	addi r6, r6, lbl_805CD828@l
+/* 8033FDD4 00309394  3C C0 80 5D */	lis r6, sIndex2IdTable@ha
+/* 8033FDD8 00309398  38 C6 D8 28 */	addi r6, r6, sIndex2IdTable@l
 /* 8033FDDC 0030939C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8033FDE0 003093A0  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8033FDE4 003093A4  93 A1 00 14 */	stw r29, 0x14(r1)
@@ -1790,9 +1790,9 @@
 
 .balign 16, 0
 .fn HBMAllocIndex, global
-/* 803408D0 00309E90  3C 80 80 5D */	lis r4, lbl_805CD828@ha
+/* 803408D0 00309E90  3C 80 80 5D */	lis r4, sIndex2IdTable@ha
 /* 803408D4 00309E94  38 00 00 10 */	li r0, 0x10
-/* 803408D8 00309E98  38 84 D8 28 */	addi r4, r4, lbl_805CD828@l
+/* 803408D8 00309E98  38 84 D8 28 */	addi r4, r4, sIndex2IdTable@l
 /* 803408DC 00309E9C  38 C0 00 00 */	li r6, 0
 /* 803408E0 00309EA0  7C 09 03 A6 */	mtctr r0
 /* 803408E4 00309EA4  60 00 00 00 */	nop 
@@ -1800,10 +1800,10 @@
 /* 803408E8 00309EA8  88 04 00 00 */	lbz r0, 0(r4)
 /* 803408EC 00309EAC  7C 00 07 75 */	extsb. r0, r0
 /* 803408F0 00309EB0  40 80 00 24 */	bge .L_80340914
-/* 803408F4 00309EB4  3C A0 80 5D */	lis r5, lbl_805CD828@ha
-/* 803408F8 00309EB8  3C 80 80 5D */	lis r4, lbl_805CD838@ha
-/* 803408FC 00309EBC  38 A5 D8 28 */	addi r5, r5, lbl_805CD828@l
-/* 80340900 00309EC0  38 84 D8 38 */	addi r4, r4, lbl_805CD838@l
+/* 803408F4 00309EB4  3C A0 80 5D */	lis r5, sIndex2IdTable@ha
+/* 803408F8 00309EB8  3C 80 80 5D */	lis r4, sId2IndexTable@ha
+/* 803408FC 00309EBC  38 A5 D8 28 */	addi r5, r5, sIndex2IdTable@l
+/* 80340900 00309EC0  38 84 D8 38 */	addi r4, r4, sId2IndexTable@l
 /* 80340904 00309EC4  7C 65 31 AE */	stbx r3, r5, r6
 /* 80340908 00309EC8  7C C4 19 AE */	stbx r6, r4, r3
 /* 8034090C 00309ECC  7C C3 33 78 */	mr r3, r6
@@ -1818,8 +1818,8 @@
 
 .balign 16, 0
 .fn HBMGetIndex, global
-/* 80340930 00309EF0  3C 80 80 5D */	lis r4, lbl_805CD838@ha
-/* 80340934 00309EF4  38 84 D8 38 */	addi r4, r4, lbl_805CD838@l
+/* 80340930 00309EF0  3C 80 80 5D */	lis r4, sId2IndexTable@ha
+/* 80340934 00309EF4  38 84 D8 38 */	addi r4, r4, sId2IndexTable@l
 /* 80340938 00309EF8  7C 64 18 AE */	lbzx r3, r4, r3
 /* 8034093C 00309EFC  7C 63 07 74 */	extsb r3, r3
 /* 80340940 00309F00  4E 80 00 20 */	blr 
@@ -1827,12 +1827,12 @@
 
 .balign 16, 0
 .fn HBMFreeIndex, global
-/* 80340950 00309F10  3C A0 80 5D */	lis r5, lbl_805CD828@ha
-/* 80340954 00309F14  3C 80 80 5D */	lis r4, lbl_805CD838@ha
-/* 80340958 00309F18  38 A5 D8 28 */	addi r5, r5, lbl_805CD828@l
+/* 80340950 00309F10  3C A0 80 5D */	lis r5, sIndex2IdTable@ha
+/* 80340954 00309F14  3C 80 80 5D */	lis r4, sId2IndexTable@ha
+/* 80340958 00309F18  38 A5 D8 28 */	addi r5, r5, sIndex2IdTable@l
 /* 8034095C 00309F1C  38 00 FF FF */	li r0, -1
 /* 80340960 00309F20  7C C5 18 AE */	lbzx r6, r5, r3
-/* 80340964 00309F24  38 84 D8 38 */	addi r4, r4, lbl_805CD838@l
+/* 80340964 00309F24  38 84 D8 38 */	addi r4, r4, sId2IndexTable@l
 /* 80340968 00309F28  7C C6 07 74 */	extsb r6, r6
 /* 8034096C 00309F2C  7C 05 19 AE */	stbx r0, r5, r3
 /* 80340970 00309F30  7C 04 31 AE */	stbx r0, r4, r6
@@ -1841,14 +1841,14 @@
 
 .balign 16, 0
 .fn HBMFreeIndexByKey, global
-/* 80340980 00309F40  3C A0 80 5D */	lis r5, lbl_805CD838@ha
-/* 80340984 00309F44  38 A5 D8 38 */	addi r5, r5, lbl_805CD838@l
+/* 80340980 00309F40  3C A0 80 5D */	lis r5, sId2IndexTable@ha
+/* 80340984 00309F44  38 A5 D8 38 */	addi r5, r5, sId2IndexTable@l
 /* 80340988 00309F48  7C C5 18 AE */	lbzx r6, r5, r3
 /* 8034098C 00309F4C  7C C6 07 75 */	extsb. r6, r6
 /* 80340990 00309F50  4D 80 00 20 */	bltlr 
-/* 80340994 00309F54  3C 80 80 5D */	lis r4, lbl_805CD828@ha
+/* 80340994 00309F54  3C 80 80 5D */	lis r4, sIndex2IdTable@ha
 /* 80340998 00309F58  38 00 FF FF */	li r0, -1
-/* 8034099C 00309F5C  38 84 D8 28 */	addi r4, r4, lbl_805CD828@l
+/* 8034099C 00309F5C  38 84 D8 28 */	addi r4, r4, sIndex2IdTable@l
 /* 803409A0 00309F60  7C 05 19 AE */	stbx r0, r5, r3
 /* 803409A4 00309F64  7C 04 31 AE */	stbx r0, r4, r6
 /* 803409A8 00309F68  4E 80 00 20 */	blr 
@@ -3349,18 +3349,20 @@ __HBMMIX_DPL2_rear:
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805CD828
-lbl_805CD828:
+sIndex2IdTable:
 	.skip 0x10
-.global lbl_805CD838
-lbl_805CD838:
+
+sId2IndexTable:
 	.skip 0x60
-.global lbl_805CD898
-lbl_805CD898:
+
+__HBMMIXSoundMode:
 	.skip 0x4
-.global lbl_805CD89C
-lbl_805CD89C:
-	.skip 0x644
-.global lbl_805CDEE0
-lbl_805CDEE0:
+
+__HBMMIXChannel:
+	.skip 0x4
+
+__s_HBMMIXChannel:
+	.skip 0x640
+
+__init:
 	.skip 0x8

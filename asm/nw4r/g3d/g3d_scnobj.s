@@ -434,14 +434,13 @@
 /* 803F498C 003BDF4C  4E 80 00 20 */	blr 
 .endfn EnableScnObjCallbackTiming__Q34nw4r3g3d6ScnObjFQ44nw4r3g3d6ScnObj6Timing
 
-#EnableScnObjCallbackExecOp__Q34nw4r3g3d6ScnObjFQ44nw4r3g3d6ScnObj6ExecOp or DisableScnObjCallbackExecOp__Q34nw4r3g3d6ScnObjFQ44nw4r3g3d6ScnObj6ExecOp
-.fn func_803F4990, global
+.fn EnableScnObjCallbackExecOp__Q34nw4r3g3d6ScnObjFQ44nw4r3g3d6ScnObj6ExecOp, global
 /* 803F4990 003BDF50  A0 A3 00 DA */	lhz r5, 0xda(r3)
 /* 803F4994 003BDF54  54 80 04 3E */	clrlwi r0, r4, 0x10
 /* 803F4998 003BDF58  7C A0 03 78 */	or r0, r5, r0
 /* 803F499C 003BDF5C  B0 03 00 DA */	sth r0, 0xda(r3)
 /* 803F49A0 003BDF60  4E 80 00 20 */	blr 
-.endfn func_803F4990
+.endfn EnableScnObjCallbackExecOp__Q34nw4r3g3d6ScnObjFQ44nw4r3g3d6ScnObj6ExecOp
 
 .fn SetBoundingVolume__Q34nw4r3g3d6ScnObjFQ44nw4r3g3d6ScnObj24ScnObjBoundingVolumeTypePCQ34nw4r4math4AABB, global
 /* 803F49A4 003BDF64  2C 05 00 00 */	cmpwi r5, 0

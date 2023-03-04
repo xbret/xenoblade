@@ -304,7 +304,7 @@
 /* 8041CEAC 003E646C  7F A3 EB 78 */	mr r3, r29
 /* 8041CEB0 003E6470  7F C4 F3 78 */	mr r4, r30
 /* 8041CEB4 003E6474  38 A1 00 08 */	addi r5, r1, 8
-/* 8041CEB8 003E6478  48 00 0B CD */	bl impl_GetSoundInfoOffset__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ54nw4r3snd6detail4Util165DataRef_v_Q54nw4r3snd6detail16SoundArchiveFile12SeqSoundInfo_Q54nw4r3snd6detail16SoundArchiveFile13StrmSoundInfo_Q54nw4r3snd6detail16SoundArchiveFile13WaveSoundInfo_
+/* 8041CEB8 003E6478  48 00 0B CD */	bl "impl_GetSoundInfoOffset__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ54nw4r3snd6detail4Util165DataRef<v,Q54nw4r3snd6detail16SoundArchiveFile12SeqSoundInfo,Q54nw4r3snd6detail16SoundArchiveFile13StrmSoundInfo,Q54nw4r3snd6detail16SoundArchiveFile13WaveSoundInfo>"
 /* 8041CEBC 003E647C  2C 03 00 00 */	cmpwi r3, 0
 /* 8041CEC0 003E6480  40 82 00 0C */	bne .L_8041CECC
 /* 8041CEC4 003E6484  38 60 00 00 */	li r3, 0
@@ -371,7 +371,7 @@
 /* 8041CF90 003E6550  7F A3 EB 78 */	mr r3, r29
 /* 8041CF94 003E6554  7F C4 F3 78 */	mr r4, r30
 /* 8041CF98 003E6558  38 A1 00 08 */	addi r5, r1, 8
-/* 8041CF9C 003E655C  48 00 0A E9 */	bl impl_GetSoundInfoOffset__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ54nw4r3snd6detail4Util165DataRef_v_Q54nw4r3snd6detail16SoundArchiveFile12SeqSoundInfo_Q54nw4r3snd6detail16SoundArchiveFile13StrmSoundInfo_Q54nw4r3snd6detail16SoundArchiveFile13WaveSoundInfo_
+/* 8041CF9C 003E655C  48 00 0A E9 */	bl "impl_GetSoundInfoOffset__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ54nw4r3snd6detail4Util165DataRef<v,Q54nw4r3snd6detail16SoundArchiveFile12SeqSoundInfo,Q54nw4r3snd6detail16SoundArchiveFile13StrmSoundInfo,Q54nw4r3snd6detail16SoundArchiveFile13WaveSoundInfo>"
 /* 8041CFA0 003E6560  2C 03 00 00 */	cmpwi r3, 0
 /* 8041CFA4 003E6564  40 82 00 0C */	bne .L_8041CFB0
 /* 8041CFA8 003E6568  38 60 00 00 */	li r3, 0
@@ -450,7 +450,7 @@
 /* 8041D094 003E6654  7F A3 EB 78 */	mr r3, r29
 /* 8041D098 003E6658  7F C4 F3 78 */	mr r4, r30
 /* 8041D09C 003E665C  38 A1 00 08 */	addi r5, r1, 8
-/* 8041D0A0 003E6660  48 00 09 E5 */	bl impl_GetSoundInfoOffset__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ54nw4r3snd6detail4Util165DataRef_v_Q54nw4r3snd6detail16SoundArchiveFile12SeqSoundInfo_Q54nw4r3snd6detail16SoundArchiveFile13StrmSoundInfo_Q54nw4r3snd6detail16SoundArchiveFile13WaveSoundInfo_
+/* 8041D0A0 003E6660  48 00 09 E5 */	bl "impl_GetSoundInfoOffset__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ54nw4r3snd6detail4Util165DataRef<v,Q54nw4r3snd6detail16SoundArchiveFile12SeqSoundInfo,Q54nw4r3snd6detail16SoundArchiveFile13StrmSoundInfo,Q54nw4r3snd6detail16SoundArchiveFile13WaveSoundInfo>"
 /* 8041D0A4 003E6664  2C 03 00 00 */	cmpwi r3, 0
 /* 8041D0A8 003E6668  40 82 00 0C */	bne .L_8041D0B4
 /* 8041D0AC 003E666C  38 60 00 00 */	li r3, 0
@@ -1195,8 +1195,7 @@
 /* 8041DA80 003E7040  4E 80 00 20 */	blr 
 .endfn ConvertLabelStringToId__Q44nw4r3snd6detail22SoundArchiveFileReaderCFPCQ54nw4r3snd6detail16SoundArchiveFile10StringTreePCc
 
-#impl_GetSoundInfoOffset__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ54nw4r3snd6detail4Util165DataRef<v,Q54nw4r3snd6detail16SoundArchiveFile12SeqSoundInfo,Q54nw4r3snd6detail16SoundArchiveFile13StrmSoundInfo,Q54nw4r3snd6detail16SoundArchiveFile13WaveSoundInfo>
-.fn impl_GetSoundInfoOffset__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ54nw4r3snd6detail4Util165DataRef_v_Q54nw4r3snd6detail16SoundArchiveFile12SeqSoundInfo_Q54nw4r3snd6detail16SoundArchiveFile13StrmSoundInfo_Q54nw4r3snd6detail16SoundArchiveFile13WaveSoundInfo_, global
+.fn "impl_GetSoundInfoOffset__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ54nw4r3snd6detail4Util165DataRef<v,Q54nw4r3snd6detail16SoundArchiveFile12SeqSoundInfo,Q54nw4r3snd6detail16SoundArchiveFile13StrmSoundInfo,Q54nw4r3snd6detail16SoundArchiveFile13WaveSoundInfo>", global
 /* 8041DA84 003E7044  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8041DA88 003E7048  7C 08 02 A6 */	mflr r0
 /* 8041DA8C 003E704C  80 C3 00 28 */	lwz r6, 0x28(r3)
@@ -1266,4 +1265,4 @@
 /* 8041DB78 003E7138  7C 08 03 A6 */	mtlr r0
 /* 8041DB7C 003E713C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8041DB80 003E7140  4E 80 00 20 */	blr 
-.endfn impl_GetSoundInfoOffset__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ54nw4r3snd6detail4Util165DataRef_v_Q54nw4r3snd6detail16SoundArchiveFile12SeqSoundInfo_Q54nw4r3snd6detail16SoundArchiveFile13StrmSoundInfo_Q54nw4r3snd6detail16SoundArchiveFile13WaveSoundInfo_
+.endfn "impl_GetSoundInfoOffset__Q44nw4r3snd6detail22SoundArchiveFileReaderCFUlPQ54nw4r3snd6detail4Util165DataRef<v,Q54nw4r3snd6detail16SoundArchiveFile12SeqSoundInfo,Q54nw4r3snd6detail16SoundArchiveFile13StrmSoundInfo,Q54nw4r3snd6detail16SoundArchiveFile13WaveSoundInfo>"

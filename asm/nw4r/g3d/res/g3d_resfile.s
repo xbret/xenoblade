@@ -1867,18 +1867,6 @@
 /* 803D95B0 003A2B70  4E 80 00 20 */	blr 
 .endfn CheckRevision__Q34nw4r3g3d7ResFileCFv
 
-.fn func_803D95B4, global
-/* 803D95B4 003A2B74  80 63 00 00 */	lwz r3, 0(r3)
-/* 803D95B8 003A2B78  80 03 00 0C */	lwz r0, 0xc(r3)
-/* 803D95BC 003A2B7C  2C 00 00 00 */	cmpwi r0, 0
-/* 803D95C0 003A2B80  41 82 00 0C */	beq .L_803D95CC
-/* 803D95C4 003A2B84  7C 63 02 14 */	add r3, r3, r0
-/* 803D95C8 003A2B88  4E 80 00 20 */	blr
-.L_803D95CC:
-/* 803D95CC 003A2B8C  38 60 00 00 */	li r3, 0
-/* 803D95D0 003A2B90  4E 80 00 20 */	blr 
-.endfn func_803D95B4
-
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

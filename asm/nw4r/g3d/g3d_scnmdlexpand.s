@@ -57,36 +57,36 @@
 /* 803FC040 003C5600  28 05 00 00 */	cmplwi r5, 0
 /* 803FC044 003C5604  40 81 00 8C */	ble .L_803FC0D0
 .L_803FC048:
-/* 803FC048 003C5608  80 0D 9C 58 */	lwz r0, lbl_80665DD8@sda21(r13)
+/* 803FC048 003C5608  80 0D 9C 58 */	lwz r0, "INVALID_NODE_ID__Q34nw4r3g3d30@unnamed@g3d_scnmdlexpand_cpp@"@sda21(r13)
 /* 803FC04C 003C560C  38 63 00 08 */	addi r3, r3, 8
 /* 803FC050 003C5610  80 BF 00 EC */	lwz r5, 0xec(r31)
 /* 803FC054 003C5614  7C 05 21 2E */	stwx r0, r5, r4
 /* 803FC058 003C5618  80 1F 00 EC */	lwz r0, 0xec(r31)
-/* 803FC05C 003C561C  80 CD 9C 58 */	lwz r6, lbl_80665DD8@sda21(r13)
+/* 803FC05C 003C561C  80 CD 9C 58 */	lwz r6, "INVALID_NODE_ID__Q34nw4r3g3d30@unnamed@g3d_scnmdlexpand_cpp@"@sda21(r13)
 /* 803FC060 003C5620  7C A0 22 14 */	add r5, r0, r4
 /* 803FC064 003C5624  90 C5 00 04 */	stw r6, 4(r5)
 /* 803FC068 003C5628  80 1F 00 EC */	lwz r0, 0xec(r31)
-/* 803FC06C 003C562C  80 CD 9C 58 */	lwz r6, lbl_80665DD8@sda21(r13)
+/* 803FC06C 003C562C  80 CD 9C 58 */	lwz r6, "INVALID_NODE_ID__Q34nw4r3g3d30@unnamed@g3d_scnmdlexpand_cpp@"@sda21(r13)
 /* 803FC070 003C5630  7C A0 22 14 */	add r5, r0, r4
 /* 803FC074 003C5634  90 C5 00 08 */	stw r6, 8(r5)
 /* 803FC078 003C5638  80 1F 00 EC */	lwz r0, 0xec(r31)
-/* 803FC07C 003C563C  80 CD 9C 58 */	lwz r6, lbl_80665DD8@sda21(r13)
+/* 803FC07C 003C563C  80 CD 9C 58 */	lwz r6, "INVALID_NODE_ID__Q34nw4r3g3d30@unnamed@g3d_scnmdlexpand_cpp@"@sda21(r13)
 /* 803FC080 003C5640  7C A0 22 14 */	add r5, r0, r4
 /* 803FC084 003C5644  90 C5 00 0C */	stw r6, 0xc(r5)
 /* 803FC088 003C5648  80 1F 00 EC */	lwz r0, 0xec(r31)
-/* 803FC08C 003C564C  80 CD 9C 58 */	lwz r6, lbl_80665DD8@sda21(r13)
+/* 803FC08C 003C564C  80 CD 9C 58 */	lwz r6, "INVALID_NODE_ID__Q34nw4r3g3d30@unnamed@g3d_scnmdlexpand_cpp@"@sda21(r13)
 /* 803FC090 003C5650  7C A0 22 14 */	add r5, r0, r4
 /* 803FC094 003C5654  90 C5 00 10 */	stw r6, 0x10(r5)
 /* 803FC098 003C5658  80 1F 00 EC */	lwz r0, 0xec(r31)
-/* 803FC09C 003C565C  80 CD 9C 58 */	lwz r6, lbl_80665DD8@sda21(r13)
+/* 803FC09C 003C565C  80 CD 9C 58 */	lwz r6, "INVALID_NODE_ID__Q34nw4r3g3d30@unnamed@g3d_scnmdlexpand_cpp@"@sda21(r13)
 /* 803FC0A0 003C5660  7C A0 22 14 */	add r5, r0, r4
 /* 803FC0A4 003C5664  90 C5 00 14 */	stw r6, 0x14(r5)
 /* 803FC0A8 003C5668  80 1F 00 EC */	lwz r0, 0xec(r31)
-/* 803FC0AC 003C566C  80 CD 9C 58 */	lwz r6, lbl_80665DD8@sda21(r13)
+/* 803FC0AC 003C566C  80 CD 9C 58 */	lwz r6, "INVALID_NODE_ID__Q34nw4r3g3d30@unnamed@g3d_scnmdlexpand_cpp@"@sda21(r13)
 /* 803FC0B0 003C5670  7C A0 22 14 */	add r5, r0, r4
 /* 803FC0B4 003C5674  90 C5 00 18 */	stw r6, 0x18(r5)
 /* 803FC0B8 003C5678  80 1F 00 EC */	lwz r0, 0xec(r31)
-/* 803FC0BC 003C567C  80 CD 9C 58 */	lwz r6, lbl_80665DD8@sda21(r13)
+/* 803FC0BC 003C567C  80 CD 9C 58 */	lwz r6, "INVALID_NODE_ID__Q34nw4r3g3d30@unnamed@g3d_scnmdlexpand_cpp@"@sda21(r13)
 /* 803FC0C0 003C5680  7C A0 22 14 */	add r5, r0, r4
 /* 803FC0C4 003C5684  38 84 00 20 */	addi r4, r4, 0x20
 /* 803FC0C8 003C5688  90 C5 00 1C */	stw r6, 0x1c(r5)
@@ -98,7 +98,7 @@
 /* 803FC0DC 003C569C  7C 03 E8 40 */	cmplw r3, r29
 /* 803FC0E0 003C56A0  40 80 00 18 */	bge .L_803FC0F8
 .L_803FC0E4:
-/* 803FC0E4 003C56A4  80 0D 9C 58 */	lwz r0, lbl_80665DD8@sda21(r13)
+/* 803FC0E4 003C56A4  80 0D 9C 58 */	lwz r0, "INVALID_NODE_ID__Q34nw4r3g3d30@unnamed@g3d_scnmdlexpand_cpp@"@sda21(r13)
 /* 803FC0E8 003C56A8  80 7F 00 EC */	lwz r3, 0xec(r31)
 /* 803FC0EC 003C56AC  7C 03 21 2E */	stwx r0, r3, r4
 /* 803FC0F0 003C56B0  38 84 00 04 */	addi r4, r4, 4
@@ -190,8 +190,7 @@
 /* 803FC218 003C57D8  4E 80 00 20 */	blr 
 .endfn PushBack__Q34nw4r3g3d12ScnMdlExpandFPQ34nw4r3g3d6ScnObjUl
 
-#Insert__Q34nw4r3g3d12ScnMdlExpandFUlPQ34nw4r3g3d6ScnObj or Insert__Q34nw4r3g3d12ScnMdlExpandFUlPQ34nw4r3g3d6ScnObjUl
-.fn func_803FC21C, global
+.fn Insert__Q34nw4r3g3d12ScnMdlExpandFUlPQ34nw4r3g3d6ScnObj, global
 /* 803FC21C 003C57DC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803FC220 003C57E0  7C 08 02 A6 */	mflr r0
 /* 803FC224 003C57E4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -200,7 +199,7 @@
 /* 803FC230 003C57F0  7C 9E 23 78 */	mr r30, r4
 /* 803FC234 003C57F4  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 803FC238 003C57F8  7C 7D 1B 78 */	mr r29, r3
-/* 803FC23C 003C57FC  83 ED 9C 58 */	lwz r31, lbl_80665DD8@sda21(r13)
+/* 803FC23C 003C57FC  83 ED 9C 58 */	lwz r31, "INVALID_NODE_ID__Q34nw4r3g3d30@unnamed@g3d_scnmdlexpand_cpp@"@sda21(r13)
 /* 803FC240 003C5800  4B FF 95 01 */	bl Insert__Q34nw4r3g3d8ScnGroupFUlPQ34nw4r3g3d6ScnObj
 /* 803FC244 003C5804  2C 03 00 00 */	cmpwi r3, 0
 /* 803FC248 003C5808  41 82 01 08 */	beq .L_803FC350
@@ -281,7 +280,7 @@
 /* 803FC360 003C5920  7C 08 03 A6 */	mtlr r0
 /* 803FC364 003C5924  38 21 00 20 */	addi r1, r1, 0x20
 /* 803FC368 003C5928  4E 80 00 20 */	blr 
-.endfn func_803FC21C
+.endfn Insert__Q34nw4r3g3d12ScnMdlExpandFUlPQ34nw4r3g3d6ScnObj
 
 .fn Remove__Q34nw4r3g3d12ScnMdlExpandFUl, global
 /* 803FC36C 003C592C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -509,7 +508,7 @@
 /* 803FC68C 003C5C4C  48 00 00 78 */	b .L_803FC704
 .L_803FC690:
 /* 803FC690 003C5C50  80 7D 00 EC */	lwz r3, 0xec(r29)
-/* 803FC694 003C5C54  80 0D 9C 58 */	lwz r0, lbl_80665DD8@sda21(r13)
+/* 803FC694 003C5C54  80 0D 9C 58 */	lwz r0, "INVALID_NODE_ID__Q34nw4r3g3d30@unnamed@g3d_scnmdlexpand_cpp@"@sda21(r13)
 /* 803FC698 003C5C58  7C C3 D8 2E */	lwzx r6, r3, r27
 /* 803FC69C 003C5C5C  83 01 00 08 */	lwz r24, 8(r1)
 /* 803FC6A0 003C5C60  7C 06 00 40 */	cmplw r6, r0
@@ -732,13 +731,12 @@ __vt__g3d_scnmdlexpand:
 	.4byte GetValueForSortOpa__Q34nw4r3g3d6ScnObjCFv
 	.4byte GetValueForSortXlu__Q34nw4r3g3d6ScnObjCFv
 	.4byte CalcWorldMtx__Q34nw4r3g3d6ScnObjFPCQ34nw4r4math5MTX34PUl
-	.4byte func_803FC21C
+	.4byte Insert__Q34nw4r3g3d12ScnMdlExpandFUlPQ34nw4r3g3d6ScnObj
 	.4byte Remove__Q34nw4r3g3d12ScnMdlExpandFUl
 	.4byte Remove__Q34nw4r3g3d12ScnMdlExpandFPQ34nw4r3g3d6ScnObj
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665DD8
-lbl_80665DD8:
+"INVALID_NODE_ID__Q34nw4r3g3d30@unnamed@g3d_scnmdlexpand_cpp@":
 	.4byte 0xFFFFFFFF
 	.4byte 0

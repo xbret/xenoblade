@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-#GetStepCurveValue__Q34nw4r3lyt27@unnamed@lyt_animation_cpp@FfPCQ44nw4r3lyt3res7StepKeyUl
-.fn GetStepCurveValue__Q34nw4r3lyt27_unnamed_lyt_animation_cpp_FfPCQ44nw4r3lyt3res7StepKeyUl, global
+.fn "GetStepCurveValue__Q34nw4r3lyt27@unnamed@lyt_animation_cpp@FfPCQ44nw4r3lyt3res7StepKeyUl", global
 /* 8040871C 003D1CDC  28 04 00 01 */	cmplwi r4, 1
 /* 80408720 003D1CE0  41 82 00 14 */	beq .L_80408734
 /* 80408724 003D1CE4  C0 03 00 00 */	lfs f0, 0(r3)
@@ -71,10 +70,9 @@
 /* 804087F8 003D1DB8  7C 63 02 14 */	add r3, r3, r0
 /* 804087FC 003D1DBC  A0 63 00 04 */	lhz r3, 4(r3)
 /* 80408800 003D1DC0  4E 80 00 20 */	blr 
-.endfn GetStepCurveValue__Q34nw4r3lyt27_unnamed_lyt_animation_cpp_FfPCQ44nw4r3lyt3res7StepKeyUl
+.endfn "GetStepCurveValue__Q34nw4r3lyt27@unnamed@lyt_animation_cpp@FfPCQ44nw4r3lyt3res7StepKeyUl"
 
-#GetHermiteCurveValue__Q34nw4r3lyt27@unnamed@lyt_animation_cpp@FfPCQ44nw4r3lyt3res10HermiteKeyUl
-.fn GetHermiteCurveValue__Q34nw4r3lyt27_unnamed_lyt_animation_cpp_FfPCQ44nw4r3lyt3res10HermiteKeyUl, global
+.fn "GetHermiteCurveValue__Q34nw4r3lyt27@unnamed@lyt_animation_cpp@FfPCQ44nw4r3lyt3res10HermiteKeyUl", global
 /* 80408804 003D1DC4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80408808 003D1DC8  DB E1 00 10 */	stfd f31, 0x10(r1)
 /* 8040880C 003D1DCC  F3 E1 00 18 */	psq_st f31, 24(r1), 0, qr0
@@ -197,7 +195,7 @@
 /* 804089B4 003D1F74  CB E1 00 10 */	lfd f31, 0x10(r1)
 /* 804089B8 003D1F78  38 21 00 20 */	addi r1, r1, 0x20
 /* 804089BC 003D1F7C  4E 80 00 20 */	blr 
-.endfn GetHermiteCurveValue__Q34nw4r3lyt27_unnamed_lyt_animation_cpp_FfPCQ44nw4r3lyt3res10HermiteKeyUl
+.endfn "GetHermiteCurveValue__Q34nw4r3lyt27@unnamed@lyt_animation_cpp@FfPCQ44nw4r3lyt3res10HermiteKeyUl"
 
 .fn GetFrameSize__Q34nw4r3lyt13AnimTransformCFv, global
 /* 804089C0 003D1F80  80 63 00 0C */	lwz r3, 0xc(r3)
@@ -652,7 +650,7 @@
 /* 80408FA0 003D2560  80 15 00 08 */	lwz r0, 8(r21)
 /* 80408FA4 003D2564  A0 95 00 04 */	lhz r4, 4(r21)
 /* 80408FA8 003D2568  7C 75 02 14 */	add r3, r21, r0
-/* 80408FAC 003D256C  4B FF F8 59 */	bl GetHermiteCurveValue__Q34nw4r3lyt27_unnamed_lyt_animation_cpp_FfPCQ44nw4r3lyt3res10HermiteKeyUl
+/* 80408FAC 003D256C  4B FF F8 59 */	bl "GetHermiteCurveValue__Q34nw4r3lyt27@unnamed@lyt_animation_cpp@FfPCQ44nw4r3lyt3res10HermiteKeyUl"
 /* 80408FB0 003D2570  88 15 00 01 */	lbz r0, 1(r21)
 /* 80408FB4 003D2574  3B 39 00 04 */	addi r25, r25, 4
 /* 80408FB8 003D2578  3B BD 00 01 */	addi r29, r29, 1
@@ -675,7 +673,7 @@
 /* 80408FF0 003D25B0  80 03 00 08 */	lwz r0, 8(r3)
 /* 80408FF4 003D25B4  A0 83 00 04 */	lhz r4, 4(r3)
 /* 80408FF8 003D25B8  7C 63 02 14 */	add r3, r3, r0
-/* 80408FFC 003D25BC  4B FF F7 21 */	bl GetStepCurveValue__Q34nw4r3lyt27_unnamed_lyt_animation_cpp_FfPCQ44nw4r3lyt3res7StepKeyUl
+/* 80408FFC 003D25BC  4B FF F7 21 */	bl "GetStepCurveValue__Q34nw4r3lyt27@unnamed@lyt_animation_cpp@FfPCQ44nw4r3lyt3res7StepKeyUl"
 /* 80409000 003D25C0  54 64 04 3E */	clrlwi r4, r3, 0x10
 /* 80409004 003D25C4  88 17 00 BB */	lbz r0, 0xbb(r23)
 /* 80409008 003D25C8  7C 64 00 D0 */	neg r3, r4
@@ -704,7 +702,7 @@
 /* 80409058 003D2618  80 15 00 08 */	lwz r0, 8(r21)
 /* 8040905C 003D261C  A0 95 00 04 */	lhz r4, 4(r21)
 /* 80409060 003D2620  7C 75 02 14 */	add r3, r21, r0
-/* 80409064 003D2624  4B FF F7 A1 */	bl GetHermiteCurveValue__Q34nw4r3lyt27_unnamed_lyt_animation_cpp_FfPCQ44nw4r3lyt3res10HermiteKeyUl
+/* 80409064 003D2624  4B FF F7 A1 */	bl "GetHermiteCurveValue__Q34nw4r3lyt27@unnamed@lyt_animation_cpp@FfPCQ44nw4r3lyt3res10HermiteKeyUl"
 /* 80409068 003D2628  EC 01 F8 2A */	fadds f0, f1, f31
 /* 8040906C 003D262C  F0 01 A0 08 */	psq_st f0, 8(r1), 1, qr2
 /* 80409070 003D2630  7E E3 BB 78 */	mr r3, r23
@@ -801,7 +799,7 @@
 /* 804091B0 003D2770  80 17 00 08 */	lwz r0, 8(r23)
 /* 804091B4 003D2774  A0 97 00 04 */	lhz r4, 4(r23)
 /* 804091B8 003D2778  7C 77 02 14 */	add r3, r23, r0
-/* 804091BC 003D277C  4B FF F6 49 */	bl GetHermiteCurveValue__Q34nw4r3lyt27_unnamed_lyt_animation_cpp_FfPCQ44nw4r3lyt3res10HermiteKeyUl
+/* 804091BC 003D277C  4B FF F6 49 */	bl "GetHermiteCurveValue__Q34nw4r3lyt27@unnamed@lyt_animation_cpp@FfPCQ44nw4r3lyt3res10HermiteKeyUl"
 /* 804091C0 003D2780  EC 01 F0 2A */	fadds f0, f1, f30
 /* 804091C4 003D2784  F0 01 D0 08 */	psq_st f0, 8(r1), 1, qr5
 /* 804091C8 003D2788  38 C0 FC 00 */	li r6, -1024
@@ -843,7 +841,7 @@
 /* 80409244 003D2804  FC 20 E8 90 */	fmr f1, f29
 /* 80409248 003D2808  A0 97 00 04 */	lhz r4, 4(r23)
 /* 8040924C 003D280C  7C 77 02 14 */	add r3, r23, r0
-/* 80409250 003D2810  4B FF F5 B5 */	bl GetHermiteCurveValue__Q34nw4r3lyt27_unnamed_lyt_animation_cpp_FfPCQ44nw4r3lyt3res10HermiteKeyUl
+/* 80409250 003D2810  4B FF F5 B5 */	bl "GetHermiteCurveValue__Q34nw4r3lyt27@unnamed@lyt_animation_cpp@FfPCQ44nw4r3lyt3res10HermiteKeyUl"
 /* 80409254 003D2814  FF E0 08 90 */	fmr f31, f1
 /* 80409258 003D2818  8A 77 00 01 */	lbz r19, 1(r23)
 /* 8040925C 003D281C  8A F7 00 00 */	lbz r23, 0(r23)
@@ -880,7 +878,7 @@
 /* 804092C8 003D2888  FC 20 E8 90 */	fmr f1, f29
 /* 804092CC 003D288C  A0 9A 00 04 */	lhz r4, 4(r26)
 /* 804092D0 003D2890  7C 7A 02 14 */	add r3, r26, r0
-/* 804092D4 003D2894  4B FF F4 49 */	bl GetStepCurveValue__Q34nw4r3lyt27_unnamed_lyt_animation_cpp_FfPCQ44nw4r3lyt3res7StepKeyUl
+/* 804092D4 003D2894  4B FF F4 49 */	bl "GetStepCurveValue__Q34nw4r3lyt27@unnamed@lyt_animation_cpp@FfPCQ44nw4r3lyt3res7StepKeyUl"
 /* 804092D8 003D2898  54 73 13 BA */	rlwinm r19, r3, 2, 0xe, 0x1d
 /* 804092DC 003D289C  7C 17 98 2E */	lwzx r0, r23, r19
 /* 804092E0 003D28A0  2C 00 00 00 */	cmpwi r0, 0
@@ -917,7 +915,7 @@
 /* 8040934C 003D290C  FC 20 E8 90 */	fmr f1, f29
 /* 80409350 003D2910  A0 97 00 04 */	lhz r4, 4(r23)
 /* 80409354 003D2914  7C 77 02 14 */	add r3, r23, r0
-/* 80409358 003D2918  4B FF F4 AD */	bl GetHermiteCurveValue__Q34nw4r3lyt27_unnamed_lyt_animation_cpp_FfPCQ44nw4r3lyt3res10HermiteKeyUl
+/* 80409358 003D2918  4B FF F4 AD */	bl "GetHermiteCurveValue__Q34nw4r3lyt27@unnamed@lyt_animation_cpp@FfPCQ44nw4r3lyt3res10HermiteKeyUl"
 /* 8040935C 003D291C  FF E0 08 90 */	fmr f31, f1
 /* 80409360 003D2920  8A 77 00 01 */	lbz r19, 1(r23)
 /* 80409364 003D2924  8A F7 00 00 */	lbz r23, 0(r23)
@@ -1523,8 +1521,7 @@
 /* 80409B50 003D3110  4E 80 00 20 */	blr
 .endfn Bind__Q44nw4r3lyt6detail12AnimPaneTreeCFPQ34nw4r3lyt6LayoutPQ34nw4r3lyt4PanePQ34nw4r3lyt16ResourceAccessor
 
-#FindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList<Q34nw4r3lyt13AnimationLink,0>PQ34nw4r3lyt13AnimTransform
-.fn FindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList_Q34nw4r3lyt13AnimationLink_0_PQ34nw4r3lyt13AnimTransform, global
+.fn "FindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList<Q34nw4r3lyt13AnimationLink,0>PQ34nw4r3lyt13AnimTransform", global
 /* 80409B54 003D3114  80 A3 00 04 */	lwz r5, 4(r3)
 /* 80409B58 003D3118  38 03 00 04 */	addi r0, r3, 4
 /* 80409B5C 003D311C  48 00 00 1C */	b .L_80409B78
@@ -1541,10 +1538,9 @@
 /* 80409B7C 003D313C  40 82 FF E4 */	bne .L_80409B60
 /* 80409B80 003D3140  38 60 00 00 */	li r3, 0
 /* 80409B84 003D3144  4E 80 00 20 */	blr
-.endfn FindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList_Q34nw4r3lyt13AnimationLink_0_PQ34nw4r3lyt13AnimTransform
+.endfn "FindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList<Q34nw4r3lyt13AnimationLink,0>PQ34nw4r3lyt13AnimTransform"
 
-#FindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList<Q34nw4r3lyt13AnimationLink,0>RCQ34nw4r3lyt12AnimResource
-.fn FindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList_Q34nw4r3lyt13AnimationLink_0_RCQ34nw4r3lyt12AnimResource, global
+.fn "FindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList<Q34nw4r3lyt13AnimationLink,0>RCQ34nw4r3lyt12AnimResource", global
 /* 80409B88 003D3148  80 A3 00 04 */	lwz r5, 4(r3)
 /* 80409B8C 003D314C  38 03 00 04 */	addi r0, r3, 4
 /* 80409B90 003D3150  48 00 00 24 */	b .L_80409BB4
@@ -1563,10 +1559,9 @@
 /* 80409BB8 003D3178  40 82 FF DC */	bne .L_80409B94
 /* 80409BBC 003D317C  38 60 00 00 */	li r3, 0
 /* 80409BC0 003D3180  4E 80 00 20 */	blr 
-.endfn FindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList_Q34nw4r3lyt13AnimationLink_0_RCQ34nw4r3lyt12AnimResource
+.endfn "FindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList<Q34nw4r3lyt13AnimationLink,0>RCQ34nw4r3lyt12AnimResource"
 
-#UnbindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList<Q34nw4r3lyt13AnimationLink,0>PQ34nw4r3lyt13AnimTransform
-.fn UnbindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList_Q34nw4r3lyt13AnimationLink_0_PQ34nw4r3lyt13AnimTransform, global
+.fn "UnbindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList<Q34nw4r3lyt13AnimationLink,0>PQ34nw4r3lyt13AnimTransform", global
 /* 80409BC4 003D3184  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80409BC8 003D3188  7C 08 02 A6 */	mflr r0
 /* 80409BCC 003D318C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1603,7 +1598,7 @@
 /* 80409C3C 003D31FC  7C 08 03 A6 */	mtlr r0
 /* 80409C40 003D3200  38 21 00 30 */	addi r1, r1, 0x30
 /* 80409C44 003D3204  4E 80 00 20 */	blr 
-.endfn UnbindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList_Q34nw4r3lyt13AnimationLink_0_PQ34nw4r3lyt13AnimTransform
+.endfn "UnbindAnimationLink__Q34nw4r3lyt6detailFPQ34nw4r2ut38LinkList<Q34nw4r3lyt13AnimationLink,0>PQ34nw4r3lyt13AnimTransform"
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

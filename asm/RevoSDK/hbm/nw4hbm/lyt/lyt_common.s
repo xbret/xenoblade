@@ -84,8 +84,8 @@
 /* 8032C694 002F5C54  80 83 00 04 */	lwz r4, 4(r3)
 /* 8032C698 002F5C58  2C 04 00 00 */	cmpwi r4, 0
 /* 8032C69C 002F5C5C  41 82 00 20 */	beq .L_8032C6BC
-/* 8032C6A0 002F5C60  3C 60 80 5D */	lis r3, lbl_805CD7B8@ha
-/* 8032C6A4 002F5C64  80 63 D7 B8 */	lwz r3, lbl_805CD7B8@l(r3)
+/* 8032C6A0 002F5C60  3C 60 80 5D */	lis r3, mspAllocator__Q36nw4hbm3lyt6Layout@ha
+/* 8032C6A4 002F5C64  80 63 D7 B8 */	lwz r3, mspAllocator__Q36nw4hbm3lyt6Layout@l(r3)
 /* 8032C6A8 002F5C68  48 01 D3 F9 */	bl MEMFreeToAllocator
 /* 8032C6AC 002F5C6C  38 00 00 00 */	li r0, 0
 /* 8032C6B0 002F5C70  90 1F 00 04 */	stw r0, 4(r31)
@@ -114,17 +114,17 @@
 /* 8032C6F8 002F5CB8  80 83 00 04 */	lwz r4, 4(r3)
 /* 8032C6FC 002F5CBC  2C 04 00 00 */	cmpwi r4, 0
 /* 8032C700 002F5CC0  41 82 00 20 */	beq .L_8032C720
-/* 8032C704 002F5CC4  3C 60 80 5D */	lis r3, lbl_805CD7B8@ha
-/* 8032C708 002F5CC8  80 63 D7 B8 */	lwz r3, lbl_805CD7B8@l(r3)
+/* 8032C704 002F5CC4  3C 60 80 5D */	lis r3, mspAllocator__Q36nw4hbm3lyt6Layout@ha
+/* 8032C708 002F5CC8  80 63 D7 B8 */	lwz r3, mspAllocator__Q36nw4hbm3lyt6Layout@l(r3)
 /* 8032C70C 002F5CCC  48 01 D3 95 */	bl MEMFreeToAllocator
 /* 8032C710 002F5CD0  38 00 00 00 */	li r0, 0
 /* 8032C714 002F5CD4  90 1E 00 04 */	stw r0, 4(r30)
 /* 8032C718 002F5CD8  98 1E 00 00 */	stb r0, 0(r30)
 /* 8032C71C 002F5CDC  98 1E 00 01 */	stb r0, 1(r30)
 .L_8032C720:
-/* 8032C720 002F5CE0  3C 60 80 5D */	lis r3, lbl_805CD7B8@ha
+/* 8032C720 002F5CE0  3C 60 80 5D */	lis r3, mspAllocator__Q36nw4hbm3lyt6Layout@ha
 /* 8032C724 002F5CE4  57 E4 2C F4 */	rlwinm r4, r31, 5, 0x13, 0x1a
-/* 8032C728 002F5CE8  80 63 D7 B8 */	lwz r3, lbl_805CD7B8@l(r3)
+/* 8032C728 002F5CE8  80 63 D7 B8 */	lwz r3, mspAllocator__Q36nw4hbm3lyt6Layout@l(r3)
 /* 8032C72C 002F5CEC  48 01 D3 65 */	bl MEMAllocFromAllocator
 /* 8032C730 002F5CF0  2C 03 00 00 */	cmpwi r3, 0
 /* 8032C734 002F5CF4  90 7E 00 04 */	stw r3, 4(r30)
@@ -1037,11 +1037,15 @@ lbl_80518A4C:
 .global double_80518A50
 double_80518A50:
 	.8byte 0x4330000000000000 #unsigned int to float constant
+
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
+#@GUARD@texCoords$7412
 .global lbl_805CD790
 lbl_805CD790:
 	.skip 0x8
+
+#texCoords$7412
 .global lbl_805CD798
 lbl_805CD798:
 	.skip 0x20

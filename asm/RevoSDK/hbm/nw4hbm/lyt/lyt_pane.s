@@ -92,7 +92,7 @@
 /* 8033188C 002FAE4C  38 84 D8 D0 */	addi r4, r4, lbl_8054D8D0@l
 /* 80331890 002FAE50  90 83 00 00 */	stw r4, 0(r3)
 /* 80331894 002FAE54  3B C3 00 14 */	addi r30, r3, 0x14
-/* 80331898 002FAE58  3F A0 80 5D */	lis r29, lbl_805CD7B8@ha
+/* 80331898 002FAE58  3F A0 80 5D */	lis r29, mspAllocator__Q36nw4hbm3lyt6Layout@ha
 /* 8033189C 002FAE5C  48 00 00 50 */	b .L_803318EC
 .L_803318A0:
 /* 803318A0 002FAE60  7F FC FB 78 */	mr r28, r31
@@ -111,7 +111,7 @@
 /* 803318D4 002FAE94  81 8C 00 08 */	lwz r12, 8(r12)
 /* 803318D8 002FAE98  7D 89 03 A6 */	mtctr r12
 /* 803318DC 002FAE9C  4E 80 04 21 */	bctrl 
-/* 803318E0 002FAEA0  80 7D D7 B8 */	lwz r3, lbl_805CD7B8@l(r29)
+/* 803318E0 002FAEA0  80 7D D7 B8 */	lwz r3, mspAllocator__Q36nw4hbm3lyt6Layout@l(r29)
 /* 803318E4 002FAEA4  7F 84 E3 78 */	mr r4, r28
 /* 803318E8 002FAEA8  48 01 81 B9 */	bl MEMFreeToAllocator
 .L_803318EC:
@@ -134,9 +134,9 @@
 /* 8033192C 002FAEEC  81 8C 00 08 */	lwz r12, 8(r12)
 /* 80331930 002FAEF0  7D 89 03 A6 */	mtctr r12
 /* 80331934 002FAEF4  4E 80 04 21 */	bctrl 
-/* 80331938 002FAEF8  3C 60 80 5D */	lis r3, lbl_805CD7B8@ha
+/* 80331938 002FAEF8  3C 60 80 5D */	lis r3, mspAllocator__Q36nw4hbm3lyt6Layout@ha
 /* 8033193C 002FAEFC  80 9A 00 28 */	lwz r4, 0x28(r26)
-/* 80331940 002FAF00  80 63 D7 B8 */	lwz r3, lbl_805CD7B8@l(r3)
+/* 80331940 002FAF00  80 63 D7 B8 */	lwz r3, mspAllocator__Q36nw4hbm3lyt6Layout@l(r3)
 /* 80331944 002FAF04  48 01 81 5D */	bl MEMFreeToAllocator
 .L_80331948:
 /* 80331948 002FAF08  34 7A 00 1C */	addic. r3, r26, 0x1c
@@ -1154,9 +1154,9 @@
 
 .balign 16, 0
 .fn "__sinit_\lyt_pane_cpp", local
-/* 80332720 002FBCE0  3C 60 80 5D */	lis r3, lbl_805CD7C0@ha
+/* 80332720 002FBCE0  3C 60 80 5D */	lis r3, typeInfo__Q36nw4hbm3lyt4Pane@ha
 /* 80332724 002FBCE4  38 00 00 00 */	li r0, 0
-/* 80332728 002FBCE8  90 03 D7 C0 */	stw r0, lbl_805CD7C0@l(r3)
+/* 80332728 002FBCE8  90 03 D7 C0 */	stw r0, typeInfo__Q36nw4hbm3lyt4Pane@l(r3)
 /* 8033272C 002FBCEC  4E 80 00 20 */	blr 
 .endfn "__sinit_\lyt_pane_cpp"
 
@@ -1172,6 +1172,7 @@ lbl_80518A98:
 	.4byte 0
 	.float 1.0
 	.4byte 0x3C8EFA35
+#@LOCAL@CalculateMtx__Q36nw4hbm3lyt4PaneFRCQ36nw4hbm3lyt8DrawInfo@invAlpha
 	.4byte 0x3B808081
 	.4byte 0x43300000
 	.4byte 0
@@ -1212,3 +1213,9 @@ lbl_8054D8D0:
 	.4byte GetMaterial__Q36nw4hbm3lyt4PaneCFv
 	.4byte LoadMtx__Q36nw4hbm3lyt4PaneFRCQ36nw4hbm3lyt8DrawInfo
 	.4byte 0
+
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.global typeInfo__Q36nw4hbm3lyt4Pane
+typeInfo__Q36nw4hbm3lyt4Pane:
+	.skip 0x8

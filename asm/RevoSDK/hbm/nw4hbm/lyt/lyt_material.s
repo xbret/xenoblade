@@ -12,8 +12,8 @@
 /* 8032E4E0 002F7AA0  DB E1 00 20 */	stfd f31, 0x20(r1)
 /* 8032E4E4 002F7AA4  F3 E1 00 28 */	psq_st f31, 40(r1), 0, qr0
 /* 8032E4E8 002F7AA8  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 8032E4EC 002F7AAC  3F E0 80 52 */	lis r31, lbl_80518A68@ha
-/* 8032E4F0 002F7AB0  3B FF 8A 68 */	addi r31, r31, lbl_80518A68@l
+/* 8032E4EC 002F7AAC  3F E0 80 52 */	lis r31, DefaultBlackColor@ha
+/* 8032E4F0 002F7AB0  3B FF 8A 68 */	addi r31, r31, DefaultBlackColor@l
 /* 8032E4F4 002F7AB4  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8032E4F8 002F7AB8  7C 9E 23 78 */	mr r30, r4
 /* 8032E4FC 002F7ABC  C0 5F 00 10 */	lfs f2, 0x10(r31)
@@ -83,8 +83,8 @@
 /* 8032E5F0 002F7BB0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8032E5F4 002F7BB4  7C 08 02 A6 */	mflr r0
 /* 8032E5F8 002F7BB8  C0 44 00 00 */	lfs f2, 0(r4)
-/* 8032E5FC 002F7BBC  3C A0 80 52 */	lis r5, lbl_80518A68@ha
-/* 8032E600 002F7BC0  38 A5 8A 68 */	addi r5, r5, lbl_80518A68@l
+/* 8032E5FC 002F7BBC  3C A0 80 52 */	lis r5, DefaultBlackColor@ha
+/* 8032E600 002F7BC0  38 A5 8A 68 */	addi r5, r5, DefaultBlackColor@l
 /* 8032E604 002F7BC4  C0 64 00 04 */	lfs f3, 4(r4)
 /* 8032E608 002F7BC8  FD 00 12 10 */	fabs f8, f2
 /* 8032E60C 002F7BCC  C0 05 00 1C */	lfs f0, 0x1c(r5)
@@ -250,11 +250,11 @@
 /* 8032E864 002F7E24  90 03 00 20 */	stw r0, 0x20(r3)
 /* 8032E868 002F7E28  38 63 00 3C */	addi r3, r3, 0x3c
 /* 8032E86C 002F7E2C  4B F8 B2 95 */	bl __construct_array
-/* 8032E870 002F7E30  3C 80 80 52 */	lis r4, lbl_80518A68@ha
+/* 8032E870 002F7E30  3C 80 80 52 */	lis r4, DefaultBlackColor@ha
 /* 8032E874 002F7E34  38 E0 00 FF */	li r7, 0xff
-/* 8032E878 002F7E38  38 A4 8A 68 */	addi r5, r4, lbl_80518A68@l
+/* 8032E878 002F7E38  38 A4 8A 68 */	addi r5, r4, DefaultBlackColor@l
 /* 8032E87C 002F7E3C  80 0F 00 50 */	lwz r0, 0x50(r15)
-/* 8032E880 002F7E40  A9 64 8A 68 */	lha r11, lbl_80518A68@l(r4)
+/* 8032E880 002F7E40  A9 64 8A 68 */	lha r11, DefaultBlackColor@l(r4)
 /* 8032E884 002F7E44  7E 04 83 78 */	mr r4, r16
 /* 8032E888 002F7E48  80 6F 00 4C */	lwz r3, 0x4c(r15)
 /* 8032E88C 002F7E4C  54 00 06 FE */	clrlwi r0, r0, 0x1b
@@ -1419,8 +1419,8 @@
 /* 8032F9DC 002F8F9C  80 9E 00 58 */	lwz r4, 0x58(r30)
 /* 8032F9E0 002F8FA0  2C 04 00 00 */	cmpwi r4, 0
 /* 8032F9E4 002F8FA4  41 82 00 18 */	beq .L_8032F9FC
-/* 8032F9E8 002F8FA8  3C 60 80 5D */	lis r3, lbl_805CD7B8@ha
-/* 8032F9EC 002F8FAC  80 63 D7 B8 */	lwz r3, lbl_805CD7B8@l(r3)
+/* 8032F9E8 002F8FA8  3C 60 80 5D */	lis r3, mspAllocator__Q36nw4hbm3lyt6Layout@ha
+/* 8032F9EC 002F8FAC  80 63 D7 B8 */	lwz r3, mspAllocator__Q36nw4hbm3lyt6Layout@l(r3)
 /* 8032F9F0 002F8FB0  48 01 A0 B1 */	bl MEMFreeToAllocator
 /* 8032F9F4 002F8FB4  38 00 00 00 */	li r0, 0
 /* 8032F9F8 002F8FB8  90 1E 00 58 */	stw r0, 0x58(r30)
@@ -1507,8 +1507,8 @@
 /* 8032FB1C 002F90DC  80 83 00 58 */	lwz r4, 0x58(r3)
 /* 8032FB20 002F90E0  2C 04 00 00 */	cmpwi r4, 0
 /* 8032FB24 002F90E4  41 82 00 30 */	beq .L_8032FB54
-/* 8032FB28 002F90E8  3C 60 80 5D */	lis r3, lbl_805CD7B8@ha
-/* 8032FB2C 002F90EC  80 63 D7 B8 */	lwz r3, lbl_805CD7B8@l(r3)
+/* 8032FB28 002F90E8  3C 60 80 5D */	lis r3, mspAllocator__Q36nw4hbm3lyt6Layout@ha
+/* 8032FB2C 002F90EC  80 63 D7 B8 */	lwz r3, mspAllocator__Q36nw4hbm3lyt6Layout@l(r3)
 /* 8032FB30 002F90F0  48 01 9F 71 */	bl MEMFreeToAllocator
 /* 8032FB34 002F90F4  80 74 00 4C */	lwz r3, 0x4c(r20)
 /* 8032FB38 002F90F8  38 80 00 00 */	li r4, 0
@@ -1526,13 +1526,13 @@
 /* 8032FB64 002F9124  7C 7A BA 14 */	add r3, r26, r23
 /* 8032FB68 002F9128  7C 1E 02 14 */	add r0, r30, r0
 /* 8032FB6C 002F912C  7C 64 1A 14 */	add r3, r4, r3
-/* 8032FB70 002F9130  3C E0 80 5D */	lis r7, lbl_805CD7B8@ha
+/* 8032FB70 002F9130  3C E0 80 5D */	lis r7, mspAllocator__Q36nw4hbm3lyt6Layout@ha
 /* 8032FB74 002F9134  7C 03 02 14 */	add r0, r3, r0
 /* 8032FB78 002F9138  56 A5 2C F4 */	rlwinm r5, r21, 5, 0x13, 0x1a
 /* 8032FB7C 002F913C  54 00 10 3A */	slwi r0, r0, 2
 /* 8032FB80 002F9140  57 04 25 36 */	rlwinm r4, r24, 4, 0x14, 0x1b
 /* 8032FB84 002F9144  7C 06 02 14 */	add r0, r6, r0
-/* 8032FB88 002F9148  80 67 D7 B8 */	lwz r3, lbl_805CD7B8@l(r7)
+/* 8032FB88 002F9148  80 67 D7 B8 */	lwz r3, mspAllocator__Q36nw4hbm3lyt6Layout@l(r7)
 /* 8032FB8C 002F914C  7C 05 02 14 */	add r0, r5, r0
 /* 8032FB90 002F9150  7C 84 02 14 */	add r4, r4, r0
 /* 8032FB94 002F9154  48 01 9E FD */	bl MEMAllocFromAllocator
@@ -2914,13 +2914,13 @@
 /* 80330FB8 002FA578  7C 17 00 40 */	cmplw r23, r0
 /* 80330FBC 002FA57C  41 80 FF 68 */	blt .L_80330F24
 .L_80330FC0:
-/* 80330FC0 002FA580  3C 60 80 52 */	lis r3, lbl_80518A68@ha
+/* 80330FC0 002FA580  3C 60 80 52 */	lis r3, DefaultBlackColor@ha
 /* 80330FC4 002FA584  A8 9A 00 24 */	lha r4, 0x24(r26)
-/* 80330FC8 002FA588  A8 03 8A 68 */	lha r0, lbl_80518A68@l(r3)
+/* 80330FC8 002FA588  A8 03 8A 68 */	lha r0, DefaultBlackColor@l(r3)
 /* 80330FCC 002FA58C  38 A0 00 00 */	li r5, 0
 /* 80330FD0 002FA590  7C 04 00 00 */	cmpw r4, r0
 /* 80330FD4 002FA594  40 82 00 3C */	bne .L_80331010
-/* 80330FD8 002FA598  38 83 8A 68 */	addi r4, r3, lbl_80518A68@l
+/* 80330FD8 002FA598  38 83 8A 68 */	addi r4, r3, DefaultBlackColor@l
 /* 80330FDC 002FA59C  A8 7A 00 26 */	lha r3, 0x26(r26)
 /* 80330FE0 002FA5A0  A8 04 00 02 */	lha r0, 2(r4)
 /* 80330FE4 002FA5A4  7C 03 00 00 */	cmpw r3, r0
@@ -3447,13 +3447,14 @@
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
 
+DefaultBlackColor:
+	.8byte 0
 
-.global lbl_80518A68
-lbl_80518A68:
-	.4byte 0
-	.4byte 0
+DefaultWhiteColor:
 	.4byte 0x00FF00FF
 	.4byte 0x00FF00FF
+
+
 	.float 0.5
 
 

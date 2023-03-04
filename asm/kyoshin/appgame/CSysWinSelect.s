@@ -542,7 +542,7 @@
 .endfn func_801252C8
 
 #__dt__Q34nw4r2ut5ColorFv duplicate
-.fn func_801252D0, global
+.fn __dt__Q34nw4r2ut5ColorFv_1, global
 /* 801252D0 000EE890  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801252D4 000EE894  7C 08 02 A6 */	mflr r0
 /* 801252D8 000EE898  2C 03 00 00 */	cmpwi r3, 0
@@ -560,7 +560,7 @@
 /* 80125304 000EE8C4  7C 08 03 A6 */	mtlr r0
 /* 80125308 000EE8C8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8012530C 000EE8CC  4E 80 00 20 */	blr 
-.endfn func_801252D0
+.endfn __dt__Q34nw4r2ut5ColorFv_1
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 
@@ -721,7 +721,7 @@
 
 .obj "@eti_80027110", local
 .hidden "@eti_80027110"
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv_1
 	.4byte 0x00000040
 	.4byte "@etb_8000BF30"
 .endobj "@eti_80027110"

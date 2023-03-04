@@ -2,16 +2,14 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-#__ct__Q34nw4r2ut19TagProcessorBase<c>Fv
-.fn __ct__Q34nw4r2ut19TagProcessorBase_c_Fv, global
+.fn "__ct__Q34nw4r2ut19TagProcessorBase<c>Fv", global
 /* 8042B700 003F4CC0  3C 80 80 57 */	lis r4, lbl_8056E6FC@ha
 /* 8042B704 003F4CC4  38 84 E6 FC */	addi r4, r4, lbl_8056E6FC@l
 /* 8042B708 003F4CC8  90 83 00 00 */	stw r4, 0(r3)
 /* 8042B70C 003F4CCC  4E 80 00 20 */	blr
-.endfn __ct__Q34nw4r2ut19TagProcessorBase_c_Fv
+.endfn "__ct__Q34nw4r2ut19TagProcessorBase<c>Fv"
 
-#__dt__Q34nw4r2ut19TagProcessorBase<c>Fv
-.fn __dt__Q34nw4r2ut19TagProcessorBase_c_Fv, global
+.fn "__dt__Q34nw4r2ut19TagProcessorBase<c>Fv", global
 /* 8042B710 003F4CD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8042B714 003F4CD4  7C 08 02 A6 */	mflr r0
 /* 8042B718 003F4CD8  2C 03 00 00 */	cmpwi r3, 0
@@ -29,10 +27,9 @@
 /* 8042B744 003F4D04  7C 08 03 A6 */	mtlr r0
 /* 8042B748 003F4D08  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042B74C 003F4D0C  4E 80 00 20 */	blr 
-.endfn __dt__Q34nw4r2ut19TagProcessorBase_c_Fv
+.endfn "__dt__Q34nw4r2ut19TagProcessorBase<c>Fv"
 
-#Process__Q34nw4r2ut19TagProcessorBase<c>FUsPQ34nw4r2ut15PrintContext<c>
-.fn Process__Q34nw4r2ut19TagProcessorBase_c_FUsPQ34nw4r2ut15PrintContext_c, global
+.fn "Process__Q34nw4r2ut19TagProcessorBase<c>FUsPQ34nw4r2ut15PrintContext<c>", global
 /* 8042B750 003F4D10  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 8042B754 003F4D14  7C 08 02 A6 */	mflr r0
 /* 8042B758 003F4D18  90 01 00 54 */	stw r0, 0x54(r1)
@@ -55,7 +52,7 @@
 /* 8042B798 003F4D58  C3 E5 00 08 */	lfs f31, 8(r5)
 /* 8042B79C 003F4D5C  C3 DF 00 30 */	lfs f30, 0x30(r31)
 /* 8042B7A0 003F4D60  7F E3 FB 78 */	mr r3, r31
-/* 8042B7A4 003F4D64  48 00 4E 81 */	bl GetLineHeight__Q34nw4r2ut17TextWriterBase_c_CFv
+/* 8042B7A4 003F4D64  48 00 4E 81 */	bl "GetLineHeight__Q34nw4r2ut17TextWriterBase<c>CFv"
 /* 8042B7A8 003F4D68  EC 1E 08 2A */	fadds f0, f30, f1
 /* 8042B7AC 003F4D6C  D3 FF 00 2C */	stfs f31, 0x2c(r31)
 /* 8042B7B0 003F4D70  38 60 00 03 */	li r3, 3
@@ -116,10 +113,9 @@
 /* 8042B874 003F4E34  7C 08 03 A6 */	mtlr r0
 /* 8042B878 003F4E38  38 21 00 50 */	addi r1, r1, 0x50
 /* 8042B87C 003F4E3C  4E 80 00 20 */	blr 
-.endfn Process__Q34nw4r2ut19TagProcessorBase_c_FUsPQ34nw4r2ut15PrintContext_c
+.endfn "Process__Q34nw4r2ut19TagProcessorBase<c>FUsPQ34nw4r2ut15PrintContext<c>"
 
-#CalcRect__Q34nw4r2ut19TagProcessorBase<c>FPQ34nw4r2ut4RectUsPQ34nw4r2ut15PrintContext<c>
-.fn CalcRect__Q34nw4r2ut19TagProcessorBase_c_FPQ34nw4r2ut4RectUsPQ34nw4r2ut15PrintContext_c, global
+.fn "CalcRect__Q34nw4r2ut19TagProcessorBase<c>FPQ34nw4r2ut4RectUsPQ34nw4r2ut15PrintContext<c>", global
 /* 8042B880 003F4E40  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8042B884 003F4E44  7C 08 02 A6 */	mflr r0
 /* 8042B888 003F4E48  90 01 00 64 */	stw r0, 0x64(r1)
@@ -147,7 +143,7 @@
 /* 8042B8DC 003F4E9C  C3 E6 00 08 */	lfs f31, 8(r6)
 /* 8042B8E0 003F4EA0  C3 DF 00 30 */	lfs f30, 0x30(r31)
 /* 8042B8E4 003F4EA4  7F E3 FB 78 */	mr r3, r31
-/* 8042B8E8 003F4EA8  48 00 4D 3D */	bl GetLineHeight__Q34nw4r2ut17TextWriterBase_c_CFv
+/* 8042B8E8 003F4EA8  48 00 4D 3D */	bl "GetLineHeight__Q34nw4r2ut17TextWriterBase<c>CFv"
 /* 8042B8EC 003F4EAC  EC 1E 08 2A */	fadds f0, f30, f1
 /* 8042B8F0 003F4EB0  D3 FF 00 2C */	stfs f31, 0x2c(r31)
 /* 8042B8F4 003F4EB4  D0 1F 00 30 */	stfs f0, 0x30(r31)
@@ -249,18 +245,16 @@
 /* 8042BA5C 003F501C  7C 08 03 A6 */	mtlr r0
 /* 8042BA60 003F5020  38 21 00 60 */	addi r1, r1, 0x60
 /* 8042BA64 003F5024  4E 80 00 20 */	blr 
-.endfn CalcRect__Q34nw4r2ut19TagProcessorBase_c_FPQ34nw4r2ut4RectUsPQ34nw4r2ut15PrintContext_c
+.endfn "CalcRect__Q34nw4r2ut19TagProcessorBase<c>FPQ34nw4r2ut4RectUsPQ34nw4r2ut15PrintContext<c>"
 
-#__ct__Q34nw4r2ut19TagProcessorBase<w>Fv
-.fn __ct__Q34nw4r2ut19TagProcessorBase_w_Fv, global
+.fn "__ct__Q34nw4r2ut19TagProcessorBase<w>Fv", global
 /* 8042BA68 003F5028  3C 80 80 57 */	lis r4, lbl_8056E6E8@ha
 /* 8042BA6C 003F502C  38 84 E6 E8 */	addi r4, r4, lbl_8056E6E8@l
 /* 8042BA70 003F5030  90 83 00 00 */	stw r4, 0(r3)
 /* 8042BA74 003F5034  4E 80 00 20 */	blr 
-.endfn __ct__Q34nw4r2ut19TagProcessorBase_w_Fv
+.endfn "__ct__Q34nw4r2ut19TagProcessorBase<w>Fv"
 
-#__dt__Q34nw4r2ut19TagProcessorBase<w>Fv
-.fn __dt__Q34nw4r2ut19TagProcessorBase_w_Fv, global
+.fn "__dt__Q34nw4r2ut19TagProcessorBase<w>Fv", global
 /* 8042BA78 003F5038  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8042BA7C 003F503C  7C 08 02 A6 */	mflr r0
 /* 8042BA80 003F5040  2C 03 00 00 */	cmpwi r3, 0
@@ -278,10 +272,9 @@
 /* 8042BAAC 003F506C  7C 08 03 A6 */	mtlr r0
 /* 8042BAB0 003F5070  38 21 00 10 */	addi r1, r1, 0x10
 /* 8042BAB4 003F5074  4E 80 00 20 */	blr 
-.endfn __dt__Q34nw4r2ut19TagProcessorBase_w_Fv
+.endfn "__dt__Q34nw4r2ut19TagProcessorBase<w>Fv"
 
-#Process__Q34nw4r2ut19TagProcessorBase<w>FUsPQ34nw4r2ut15PrintContext<w>
-.fn Process__Q34nw4r2ut19TagProcessorBase_w_FUsPQ34nw4r2ut15PrintContext_w, global
+.fn "Process__Q34nw4r2ut19TagProcessorBase<w>FUsPQ34nw4r2ut15PrintContext<w>", global
 /* 8042BAB8 003F5078  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 8042BABC 003F507C  7C 08 02 A6 */	mflr r0
 /* 8042BAC0 003F5080  90 01 00 54 */	stw r0, 0x54(r1)
@@ -304,7 +297,7 @@
 /* 8042BB00 003F50C0  C3 E5 00 08 */	lfs f31, 8(r5)
 /* 8042BB04 003F50C4  C3 DF 00 30 */	lfs f30, 0x30(r31)
 /* 8042BB08 003F50C8  7F E3 FB 78 */	mr r3, r31
-/* 8042BB0C 003F50CC  48 00 4C 49 */	bl GetLineHeight__Q34nw4r2ut17TextWriterBase_w_CFv
+/* 8042BB0C 003F50CC  48 00 4C 49 */	bl "GetLineHeight__Q34nw4r2ut17TextWriterBase<w>CFv"
 /* 8042BB10 003F50D0  EC 1E 08 2A */	fadds f0, f30, f1
 /* 8042BB14 003F50D4  D3 FF 00 2C */	stfs f31, 0x2c(r31)
 /* 8042BB18 003F50D8  38 60 00 03 */	li r3, 3
@@ -365,10 +358,9 @@
 /* 8042BBDC 003F519C  7C 08 03 A6 */	mtlr r0
 /* 8042BBE0 003F51A0  38 21 00 50 */	addi r1, r1, 0x50
 /* 8042BBE4 003F51A4  4E 80 00 20 */	blr 
-.endfn Process__Q34nw4r2ut19TagProcessorBase_w_FUsPQ34nw4r2ut15PrintContext_w
+.endfn "Process__Q34nw4r2ut19TagProcessorBase<w>FUsPQ34nw4r2ut15PrintContext<w>"
 
-#CalcRect__Q34nw4r2ut19TagProcessorBase<w>FPQ34nw4r2ut4RectUsPQ34nw4r2ut15PrintContext<w>
-.fn CalcRect__Q34nw4r2ut19TagProcessorBase_w_FPQ34nw4r2ut4RectUsPQ34nw4r2ut15PrintContext_w, global
+.fn "CalcRect__Q34nw4r2ut19TagProcessorBase<w>FPQ34nw4r2ut4RectUsPQ34nw4r2ut15PrintContext<w>", global
 /* 8042BBE8 003F51A8  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8042BBEC 003F51AC  7C 08 02 A6 */	mflr r0
 /* 8042BBF0 003F51B0  90 01 00 64 */	stw r0, 0x64(r1)
@@ -396,7 +388,7 @@
 /* 8042BC44 003F5204  C3 E6 00 08 */	lfs f31, 8(r6)
 /* 8042BC48 003F5208  C3 DF 00 30 */	lfs f30, 0x30(r31)
 /* 8042BC4C 003F520C  7F E3 FB 78 */	mr r3, r31
-/* 8042BC50 003F5210  48 00 4B 05 */	bl GetLineHeight__Q34nw4r2ut17TextWriterBase_w_CFv
+/* 8042BC50 003F5210  48 00 4B 05 */	bl "GetLineHeight__Q34nw4r2ut17TextWriterBase<w>CFv"
 /* 8042BC54 003F5214  EC 1E 08 2A */	fadds f0, f30, f1
 /* 8042BC58 003F5218  D3 FF 00 2C */	stfs f31, 0x2c(r31)
 /* 8042BC5C 003F521C  D0 1F 00 30 */	stfs f0, 0x30(r31)
@@ -498,7 +490,7 @@
 /* 8042BDC4 003F5384  7C 08 03 A6 */	mtlr r0
 /* 8042BDC8 003F5388  38 21 00 60 */	addi r1, r1, 0x60
 /* 8042BDCC 003F538C  4E 80 00 20 */	blr
-.endfn CalcRect__Q34nw4r2ut19TagProcessorBase_w_FPQ34nw4r2ut4RectUsPQ34nw4r2ut15PrintContext_w
+.endfn "CalcRect__Q34nw4r2ut19TagProcessorBase<w>FPQ34nw4r2ut4RectUsPQ34nw4r2ut15PrintContext<w>"
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
@@ -508,18 +500,18 @@
 lbl_8056E6E8:
 	.4byte 0
 	.4byte 0
-	.4byte __dt__Q34nw4r2ut19TagProcessorBase_w_Fv
-	.4byte Process__Q34nw4r2ut19TagProcessorBase_w_FUsPQ34nw4r2ut15PrintContext_w
-	.4byte CalcRect__Q34nw4r2ut19TagProcessorBase_w_FPQ34nw4r2ut4RectUsPQ34nw4r2ut15PrintContext_w
+	.4byte "__dt__Q34nw4r2ut19TagProcessorBase<w>Fv"
+	.4byte "Process__Q34nw4r2ut19TagProcessorBase<w>FUsPQ34nw4r2ut15PrintContext<w>"
+	.4byte "CalcRect__Q34nw4r2ut19TagProcessorBase<w>FPQ34nw4r2ut4RectUsPQ34nw4r2ut15PrintContext<w>"
 
 
 .global lbl_8056E6FC
 lbl_8056E6FC:
 	.4byte 0
 	.4byte 0
-	.4byte __dt__Q34nw4r2ut19TagProcessorBase_c_Fv
-	.4byte Process__Q34nw4r2ut19TagProcessorBase_c_FUsPQ34nw4r2ut15PrintContext_c
-	.4byte CalcRect__Q34nw4r2ut19TagProcessorBase_c_FPQ34nw4r2ut4RectUsPQ34nw4r2ut15PrintContext_c
+	.4byte "__dt__Q34nw4r2ut19TagProcessorBase<c>Fv"
+	.4byte "Process__Q34nw4r2ut19TagProcessorBase<c>FUsPQ34nw4r2ut15PrintContext<c>"
+	.4byte "CalcRect__Q34nw4r2ut19TagProcessorBase<c>FPQ34nw4r2ut4RectUsPQ34nw4r2ut15PrintContext<c>"
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

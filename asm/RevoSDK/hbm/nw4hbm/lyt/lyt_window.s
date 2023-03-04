@@ -66,9 +66,9 @@
 /* 80334228 002FD7E8  57 45 06 3E */	clrlwi r5, r26, 0x18
 /* 8033422C 002FD7EC  4B FF 86 35 */	bl Copy__Q46nw4hbm3lyt6detail11TexCoordAryFPCvUc
 .L_80334230:
-/* 80334230 002FD7F0  3C 60 80 5D */	lis r3, lbl_805CD7B8@ha
+/* 80334230 002FD7F0  3C 60 80 5D */	lis r3, mspAllocator__Q36nw4hbm3lyt6Layout@ha
 /* 80334234 002FD7F4  38 80 00 5C */	li r4, 0x5c
-/* 80334238 002FD7F8  80 63 D7 B8 */	lwz r3, lbl_805CD7B8@l(r3)
+/* 80334238 002FD7F8  80 63 D7 B8 */	lwz r3, mspAllocator__Q36nw4hbm3lyt6Layout@l(r3)
 /* 8033423C 002FD7FC  48 01 58 55 */	bl MEMAllocFromAllocator
 /* 80334240 002FD800  2C 03 00 00 */	cmpwi r3, 0
 /* 80334244 002FD804  41 82 00 28 */	beq .L_8033426C
@@ -89,9 +89,9 @@
 /* 80334278 002FD838  88 18 00 5C */	lbz r0, 0x5c(r24)
 /* 8033427C 002FD83C  2C 00 00 00 */	cmpwi r0, 0
 /* 80334280 002FD840  41 82 00 B4 */	beq .L_80334334
-/* 80334284 002FD844  3F E0 80 5D */	lis r31, lbl_805CD7B8@ha
+/* 80334284 002FD844  3F E0 80 5D */	lis r31, mspAllocator__Q36nw4hbm3lyt6Layout@ha
 /* 80334288 002FD848  54 04 1D 78 */	rlwinm r4, r0, 3, 0x15, 0x1c
-/* 8033428C 002FD84C  80 7F D7 B8 */	lwz r3, lbl_805CD7B8@l(r31)
+/* 8033428C 002FD84C  80 7F D7 B8 */	lwz r3, mspAllocator__Q36nw4hbm3lyt6Layout@l(r31)
 /* 80334290 002FD850  48 01 58 01 */	bl MEMAllocFromAllocator
 /* 80334294 002FD854  2C 03 00 00 */	cmpwi r3, 0
 /* 80334298 002FD858  90 77 00 FC */	stw r3, 0xfc(r23)
@@ -113,7 +113,7 @@
 /* 803342D4 002FD894  80 17 00 FC */	lwz r0, 0xfc(r23)
 /* 803342D8 002FD898  7C 60 E2 14 */	add r3, r0, r28
 /* 803342DC 002FD89C  93 C3 00 04 */	stw r30, 4(r3)
-/* 803342E0 002FD8A0  80 7F D7 B8 */	lwz r3, lbl_805CD7B8@l(r31)
+/* 803342E0 002FD8A0  80 7F D7 B8 */	lwz r3, mspAllocator__Q36nw4hbm3lyt6Layout@l(r31)
 /* 803342E4 002FD8A4  48 01 57 AD */	bl MEMAllocFromAllocator
 /* 803342E8 002FD8A8  2C 03 00 00 */	cmpwi r3, 0
 /* 803342EC 002FD8AC  41 82 00 30 */	beq .L_8033431C
@@ -166,7 +166,7 @@
 /* 80334388 002FD948  41 82 00 6C */	beq .L_803343F4
 /* 8033438C 002FD94C  3B A0 00 00 */	li r29, 0
 /* 80334390 002FD950  3B C0 00 00 */	li r30, 0
-/* 80334394 002FD954  3F E0 80 5D */	lis r31, lbl_805CD7B8@ha
+/* 80334394 002FD954  3F E0 80 5D */	lis r31, mspAllocator__Q36nw4hbm3lyt6Layout@ha
 /* 80334398 002FD958  48 00 00 40 */	b .L_803343D8
 .L_8033439C:
 /* 8033439C 002FD95C  80 1B 00 FC */	lwz r0, 0xfc(r27)
@@ -178,7 +178,7 @@
 /* 803343B4 002FD974  7D 89 03 A6 */	mtctr r12
 /* 803343B8 002FD978  4E 80 04 21 */	bctrl 
 /* 803343BC 002FD97C  80 1B 00 FC */	lwz r0, 0xfc(r27)
-/* 803343C0 002FD980  80 7F D7 B8 */	lwz r3, lbl_805CD7B8@l(r31)
+/* 803343C0 002FD980  80 7F D7 B8 */	lwz r3, mspAllocator__Q36nw4hbm3lyt6Layout@l(r31)
 /* 803343C4 002FD984  7C 80 F2 14 */	add r4, r0, r30
 /* 803343C8 002FD988  80 84 00 04 */	lwz r4, 4(r4)
 /* 803343CC 002FD98C  48 01 56 D5 */	bl MEMFreeToAllocator
@@ -188,9 +188,9 @@
 /* 803343D8 002FD998  88 1B 01 00 */	lbz r0, 0x100(r27)
 /* 803343DC 002FD99C  7C 1D 00 00 */	cmpw r29, r0
 /* 803343E0 002FD9A0  41 80 FF BC */	blt .L_8033439C
-/* 803343E4 002FD9A4  3C 60 80 5D */	lis r3, lbl_805CD7B8@ha
+/* 803343E4 002FD9A4  3C 60 80 5D */	lis r3, mspAllocator__Q36nw4hbm3lyt6Layout@ha
 /* 803343E8 002FD9A8  80 9B 00 FC */	lwz r4, 0xfc(r27)
-/* 803343EC 002FD9AC  80 63 D7 B8 */	lwz r3, lbl_805CD7B8@l(r3)
+/* 803343EC 002FD9AC  80 63 D7 B8 */	lwz r3, mspAllocator__Q36nw4hbm3lyt6Layout@l(r3)
 /* 803343F0 002FD9B0  48 01 56 B1 */	bl MEMFreeToAllocator
 .L_803343F4:
 /* 803343F4 002FD9B4  80 7B 00 28 */	lwz r3, 0x28(r27)
@@ -204,9 +204,9 @@
 /* 80334414 002FD9D4  81 8C 00 08 */	lwz r12, 8(r12)
 /* 80334418 002FD9D8  7D 89 03 A6 */	mtctr r12
 /* 8033441C 002FD9DC  4E 80 04 21 */	bctrl 
-/* 80334420 002FD9E0  3C 60 80 5D */	lis r3, lbl_805CD7B8@ha
+/* 80334420 002FD9E0  3C 60 80 5D */	lis r3, mspAllocator__Q36nw4hbm3lyt6Layout@ha
 /* 80334424 002FD9E4  80 9B 00 28 */	lwz r4, 0x28(r27)
-/* 80334428 002FD9E8  80 63 D7 B8 */	lwz r3, lbl_805CD7B8@l(r3)
+/* 80334428 002FD9E8  80 63 D7 B8 */	lwz r3, mspAllocator__Q36nw4hbm3lyt6Layout@l(r3)
 /* 8033442C 002FD9EC  48 01 56 75 */	bl MEMFreeToAllocator
 /* 80334430 002FD9F0  38 00 00 00 */	li r0, 0
 /* 80334434 002FD9F4  90 1B 00 28 */	stw r0, 0x28(r27)
@@ -2455,17 +2455,17 @@
 
 
 .fn GetRuntimeTypeInfo__Q36nw4hbm3lyt6WindowCFv, global
-/* 80336610 002FFBD0  3C 60 80 5D */	lis r3, lbl_805CD7D8@ha
-/* 80336614 002FFBD4  38 63 D7 D8 */	addi r3, r3, lbl_805CD7D8@l
+/* 80336610 002FFBD0  3C 60 80 5D */	lis r3, typeInfo__Q36nw4hbm3lyt6Window@ha
+/* 80336614 002FFBD4  38 63 D7 D8 */	addi r3, r3, typeInfo__Q36nw4hbm3lyt6Window@l
 /* 80336618 002FFBD8  4E 80 00 20 */	blr 
 .endfn GetRuntimeTypeInfo__Q36nw4hbm3lyt6WindowCFv
 
 .balign 16, 0
 .fn "__sinit_\lyt_window_cpp", local
-/* 80336620 002FFBE0  3C 80 80 5D */	lis r4, lbl_805CD7C0@ha
-/* 80336624 002FFBE4  3C 60 80 5D */	lis r3, lbl_805CD7D8@ha
-/* 80336628 002FFBE8  38 84 D7 C0 */	addi r4, r4, lbl_805CD7C0@l
-/* 8033662C 002FFBEC  90 83 D7 D8 */	stw r4, lbl_805CD7D8@l(r3)
+/* 80336620 002FFBE0  3C 80 80 5D */	lis r4, typeInfo__Q36nw4hbm3lyt4Pane@ha
+/* 80336624 002FFBE4  3C 60 80 5D */	lis r3, typeInfo__Q36nw4hbm3lyt6Window@ha
+/* 80336628 002FFBE8  38 84 D7 C0 */	addi r4, r4, typeInfo__Q36nw4hbm3lyt4Pane@l
+/* 8033662C 002FFBEC  90 83 D7 D8 */	stw r4, typeInfo__Q36nw4hbm3lyt6Window@l(r3)
 /* 80336630 002FFBF0  4E 80 00 20 */	blr 
 .endfn "__sinit_\lyt_window_cpp"
 
@@ -2489,9 +2489,10 @@ double_80518AE0:
 .global double_80518AE8
 double_80518AE8:
 	.8byte 0x4330000080000000 #signed int to float constant
+
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-
+#@LOCAL@GetTexutreFlipInfo__24@unnamed@lyt_window_cpp@FUc@flipInfos
 .global lbl_8054DAA0
 lbl_8054DAA0:
 	.4byte 0x00000100
@@ -2564,6 +2565,6 @@ lbl_8054DB80:
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805CD7D8
-lbl_805CD7D8:
+.global typeInfo__Q36nw4hbm3lyt6Window
+typeInfo__Q36nw4hbm3lyt6Window:
 	.skip 0x8

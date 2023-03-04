@@ -2,8 +2,8 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-#GetResUserData__Q34nw4r3g3d9ResAnmChrFv or GetResUserData__Q34nw4r3g3d9ResAnmChrCFv
-.fn func_803DE5F0, global
+#could also be GetResUserData__Q34nw4r3g3d9ResAnmChrCFv
+.fn GetResUserData__Q34nw4r3g3d9ResAnmChrFv, global
 /* 803DE5F0 003A7BB0  80 63 00 00 */	lwz r3, 0(r3)
 /* 803DE5F4 003A7BB4  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 803DE5F8 003A7BB8  2C 00 00 00 */	cmpwi r0, 0
@@ -13,10 +13,9 @@
 .L_803DE608:
 /* 803DE608 003A7BC8  38 60 00 00 */	li r3, 0
 /* 803DE60C 003A7BCC  4E 80 00 20 */	blr 
-.endfn func_803DE5F0
+.endfn GetResUserData__Q34nw4r3g3d9ResAnmChrFv
 
-#GetAnmScale__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r4math4VEC3PCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf
-.fn GetAnmScale__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r4math4VEC3PCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf, global
+.fn "GetAnmScale__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r4math4VEC3PCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf", global
 /* 803DE610 003A7BD0  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803DE614 003A7BD4  7C 08 02 A6 */	mflr r0
 /* 803DE618 003A7BD8  90 01 00 54 */	stw r0, 0x54(r1)
@@ -75,7 +74,7 @@
 .L_803DE6DC:
 /* 803DE6DC 003A7C9C  80 03 00 00 */	lwz r0, 0(r3)
 /* 803DE6E0 003A7CA0  7C 60 22 14 */	add r3, r0, r4
-/* 803DE6E4 003A7CA4  48 00 04 81 */	bl CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS32Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
+/* 803DE6E4 003A7CA4  48 00 04 81 */	bl "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS32Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f"
 .L_803DE6E8:
 /* 803DE6E8 003A7CA8  57 E0 06 F7 */	rlwinm. r0, r31, 0, 0x1b, 0x1b
 /* 803DE6EC 003A7CAC  FF E0 08 90 */	fmr f31, f1
@@ -93,7 +92,7 @@
 /* 803DE714 003A7CD4  80 03 00 00 */	lwz r0, 0(r3)
 /* 803DE718 003A7CD8  FC 20 E8 90 */	fmr f1, f29
 /* 803DE71C 003A7CDC  7C 60 EA 14 */	add r3, r0, r29
-/* 803DE720 003A7CE0  48 00 04 45 */	bl CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS32Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
+/* 803DE720 003A7CE0  48 00 04 45 */	bl "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS32Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f"
 .L_803DE724:
 /* 803DE724 003A7CE4  57 E0 04 21 */	rlwinm. r0, r31, 0, 0x10, 0x10
 /* 803DE728 003A7CE8  FF C0 08 90 */	fmr f30, f1
@@ -106,7 +105,7 @@
 /* 803DE740 003A7D00  80 03 00 00 */	lwz r0, 0(r3)
 /* 803DE744 003A7D04  FC 20 E8 90 */	fmr f1, f29
 /* 803DE748 003A7D08  7C 60 EA 14 */	add r3, r0, r29
-/* 803DE74C 003A7D0C  48 00 04 19 */	bl CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS32Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
+/* 803DE74C 003A7D0C  48 00 04 19 */	bl "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS32Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f"
 /* 803DE750 003A7D10  48 00 01 30 */	b .L_803DE880
 .L_803DE754:
 /* 803DE754 003A7D14  57 E0 04 A5 */	rlwinm. r0, r31, 0, 0x12, 0x12
@@ -118,7 +117,7 @@
 .L_803DE76C:
 /* 803DE76C 003A7D2C  80 03 00 00 */	lwz r0, 0(r3)
 /* 803DE770 003A7D30  7C 60 22 14 */	add r3, r0, r4
-/* 803DE774 003A7D34  48 00 02 81 */	bl CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS48Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
+/* 803DE774 003A7D34  48 00 02 81 */	bl "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS48Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f"
 .L_803DE778:
 /* 803DE778 003A7D38  57 E0 06 F7 */	rlwinm. r0, r31, 0, 0x1b, 0x1b
 /* 803DE77C 003A7D3C  FF E0 08 90 */	fmr f31, f1
@@ -136,7 +135,7 @@
 /* 803DE7A4 003A7D64  80 03 00 00 */	lwz r0, 0(r3)
 /* 803DE7A8 003A7D68  FC 20 E8 90 */	fmr f1, f29
 /* 803DE7AC 003A7D6C  7C 60 EA 14 */	add r3, r0, r29
-/* 803DE7B0 003A7D70  48 00 02 45 */	bl CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS48Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
+/* 803DE7B0 003A7D70  48 00 02 45 */	bl "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS48Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f"
 .L_803DE7B4:
 /* 803DE7B4 003A7D74  57 E0 04 21 */	rlwinm. r0, r31, 0, 0x10, 0x10
 /* 803DE7B8 003A7D78  FF C0 08 90 */	fmr f30, f1
@@ -149,7 +148,7 @@
 /* 803DE7D0 003A7D90  80 03 00 00 */	lwz r0, 0(r3)
 /* 803DE7D4 003A7D94  FC 20 E8 90 */	fmr f1, f29
 /* 803DE7D8 003A7D98  7C 60 EA 14 */	add r3, r0, r29
-/* 803DE7DC 003A7D9C  48 00 02 19 */	bl CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS48Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
+/* 803DE7DC 003A7D9C  48 00 02 19 */	bl "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS48Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f"
 /* 803DE7E0 003A7DA0  48 00 00 A0 */	b .L_803DE880
 .L_803DE7E4:
 /* 803DE7E4 003A7DA4  57 E0 04 A5 */	rlwinm. r0, r31, 0, 0x12, 0x12
@@ -161,7 +160,7 @@
 .L_803DE7FC:
 /* 803DE7FC 003A7DBC  80 03 00 00 */	lwz r0, 0(r3)
 /* 803DE800 003A7DC0  7C 60 22 14 */	add r3, r0, r4
-/* 803DE804 003A7DC4  48 00 00 C5 */	bl CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS96Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
+/* 803DE804 003A7DC4  48 00 00 C5 */	bl "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS96Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f"
 .L_803DE808:
 /* 803DE808 003A7DC8  57 E0 06 F7 */	rlwinm. r0, r31, 0, 0x1b, 0x1b
 /* 803DE80C 003A7DCC  FF E0 08 90 */	fmr f31, f1
@@ -179,7 +178,7 @@
 /* 803DE834 003A7DF4  80 03 00 00 */	lwz r0, 0(r3)
 /* 803DE838 003A7DF8  FC 20 E8 90 */	fmr f1, f29
 /* 803DE83C 003A7DFC  7C 60 EA 14 */	add r3, r0, r29
-/* 803DE840 003A7E00  48 00 00 89 */	bl CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS96Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
+/* 803DE840 003A7E00  48 00 00 89 */	bl "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS96Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f"
 .L_803DE844:
 /* 803DE844 003A7E04  57 E0 04 21 */	rlwinm. r0, r31, 0, 0x10, 0x10
 /* 803DE848 003A7E08  FF C0 08 90 */	fmr f30, f1
@@ -192,7 +191,7 @@
 /* 803DE860 003A7E20  80 03 00 00 */	lwz r0, 0(r3)
 /* 803DE864 003A7E24  FC 20 E8 90 */	fmr f1, f29
 /* 803DE868 003A7E28  7C 60 EA 14 */	add r3, r0, r29
-/* 803DE86C 003A7E2C  48 00 00 5D */	bl CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS96Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
+/* 803DE86C 003A7E2C  48 00 00 5D */	bl "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS96Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f"
 /* 803DE870 003A7E30  48 00 00 10 */	b .L_803DE880
 .L_803DE874:
 /* 803DE874 003A7E34  C3 E2 BF 60 */	lfs f31, float_8066C2E0@sda21(r2)
@@ -217,10 +216,9 @@
 /* 803DE8BC 003A7E7C  7C 08 03 A6 */	mtlr r0
 /* 803DE8C0 003A7E80  38 21 00 50 */	addi r1, r1, 0x50
 /* 803DE8C4 003A7E84  4E 80 00 20 */	blr 
-.endfn GetAnmScale__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r4math4VEC3PCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf
+.endfn "GetAnmScale__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r4math4VEC3PCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf"
 
-#CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS96Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
-.fn CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS96Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f, global
+.fn "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS96Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f", global
 /* 803DE8C8 003A7E88  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803DE8CC 003A7E8C  38 A3 00 08 */	addi r5, r3, 8
 /* 803DE8D0 003A7E90  A0 C3 00 00 */	lhz r6, 0(r3)
@@ -303,10 +301,9 @@
 .L_803DE9EC:
 /* 803DE9EC 003A7FAC  38 21 00 10 */	addi r1, r1, 0x10
 /* 803DE9F0 003A7FB0  4E 80 00 20 */	blr 
-.endfn CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS96Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
+.endfn "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS96Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f"
 
-#CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS48Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
-.fn CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS48Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f, global
+.fn "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS48Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f", global
 /* 803DE9F4 003A7FB4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803DE9F8 003A7FB8  38 A3 00 10 */	addi r5, r3, 0x10
 /* 803DE9FC 003A7FBC  A0 C3 00 00 */	lhz r6, 0(r3)
@@ -406,10 +403,9 @@
 .L_803DEB5C:
 /* 803DEB5C 003A811C  38 21 00 10 */	addi r1, r1, 0x10
 /* 803DEB60 003A8120  4E 80 00 20 */	blr 
-.endfn CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS48Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
+.endfn "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS48Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f"
 
-#CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS32Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
-.fn CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS32Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f, global
+.fn "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS32Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f", global
 /* 803DEB64 003A8124  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803DEB68 003A8128  38 A3 00 10 */	addi r5, r3, 0x10
 /* 803DEB6C 003A812C  A0 C3 00 00 */	lhz r6, 0(r3)
@@ -529,10 +525,9 @@
 .L_803DED1C:
 /* 803DED1C 003A82DC  38 21 00 20 */	addi r1, r1, 0x20
 /* 803DED20 003A82E0  4E 80 00 20 */	blr 
-.endfn CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS32Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
+.endfn "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS32Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f"
 
-#GetAnmRotation__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r4math5MTX34PQ34nw4r4math4VEC3RCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf
-.fn GetAnmRotation__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r4math5MTX34PQ34nw4r4math4VEC3RCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf, global
+.fn "GetAnmRotation__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r4math5MTX34PQ34nw4r4math4VEC3RCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf", global
 /* 803DED24 003A82E4  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 803DED28 003A82E8  7C 08 02 A6 */	mflr r0
 /* 803DED2C 003A82EC  90 01 00 94 */	stw r0, 0x94(r1)
@@ -600,7 +595,7 @@
 .L_803DEE10:
 /* 803DEE10 003A83D0  80 03 00 00 */	lwz r0, 0(r3)
 /* 803DEE14 003A83D4  7C 60 32 14 */	add r3, r0, r6
-/* 803DEE18 003A83D8  4B FF FD 4D */	bl CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS32Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
+/* 803DEE18 003A83D8  4B FF FD 4D */	bl "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS32Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f"
 .L_803DEE1C:
 /* 803DEE1C 003A83DC  57 E0 03 9D */	rlwinm. r0, r31, 0, 0xe, 0xe
 /* 803DEE20 003A83E0  FF E0 08 90 */	fmr f31, f1
@@ -613,7 +608,7 @@
 /* 803DEE38 003A83F8  80 03 00 00 */	lwz r0, 0(r3)
 /* 803DEE3C 003A83FC  FC 20 E8 90 */	fmr f1, f29
 /* 803DEE40 003A8400  7C 60 EA 14 */	add r3, r0, r29
-/* 803DEE44 003A8404  4B FF FD 21 */	bl CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS32Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
+/* 803DEE44 003A8404  4B FF FD 21 */	bl "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS32Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f"
 .L_803DEE48:
 /* 803DEE48 003A8408  57 E0 03 5B */	rlwinm. r0, r31, 0, 0xd, 0xd
 /* 803DEE4C 003A840C  FF C0 08 90 */	fmr f30, f1
@@ -626,7 +621,7 @@
 /* 803DEE64 003A8424  80 03 00 00 */	lwz r0, 0(r3)
 /* 803DEE68 003A8428  FC 20 E8 90 */	fmr f1, f29
 /* 803DEE6C 003A842C  7C 60 EA 14 */	add r3, r0, r29
-/* 803DEE70 003A8430  4B FF FC F5 */	bl CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS32Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
+/* 803DEE70 003A8430  4B FF FC F5 */	bl "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS32Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f"
 .L_803DEE74:
 /* 803DEE74 003A8434  FF A0 08 90 */	fmr f29, f1
 /* 803DEE78 003A8438  48 00 08 B0 */	b .L_803DF728
@@ -640,7 +635,7 @@
 .L_803DEE94:
 /* 803DEE94 003A8454  80 03 00 00 */	lwz r0, 0(r3)
 /* 803DEE98 003A8458  7C 60 32 14 */	add r3, r0, r6
-/* 803DEE9C 003A845C  4B FF FB 59 */	bl CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS48Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
+/* 803DEE9C 003A845C  4B FF FB 59 */	bl "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS48Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f"
 .L_803DEEA0:
 /* 803DEEA0 003A8460  57 E0 03 9D */	rlwinm. r0, r31, 0, 0xe, 0xe
 /* 803DEEA4 003A8464  FF E0 08 90 */	fmr f31, f1
@@ -653,7 +648,7 @@
 /* 803DEEBC 003A847C  80 03 00 00 */	lwz r0, 0(r3)
 /* 803DEEC0 003A8480  FC 20 E8 90 */	fmr f1, f29
 /* 803DEEC4 003A8484  7C 60 EA 14 */	add r3, r0, r29
-/* 803DEEC8 003A8488  4B FF FB 2D */	bl CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS48Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
+/* 803DEEC8 003A8488  4B FF FB 2D */	bl "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS48Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f"
 .L_803DEECC:
 /* 803DEECC 003A848C  57 E0 03 5B */	rlwinm. r0, r31, 0, 0xd, 0xd
 /* 803DEED0 003A8490  FF C0 08 90 */	fmr f30, f1
@@ -666,7 +661,7 @@
 /* 803DEEE8 003A84A8  80 03 00 00 */	lwz r0, 0(r3)
 /* 803DEEEC 003A84AC  FC 20 E8 90 */	fmr f1, f29
 /* 803DEEF0 003A84B0  7C 60 EA 14 */	add r3, r0, r29
-/* 803DEEF4 003A84B4  4B FF FB 01 */	bl CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS48Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
+/* 803DEEF4 003A84B4  4B FF FB 01 */	bl "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS48Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f"
 .L_803DEEF8:
 /* 803DEEF8 003A84B8  FF A0 08 90 */	fmr f29, f1
 /* 803DEEFC 003A84BC  48 00 08 2C */	b .L_803DF728
@@ -680,7 +675,7 @@
 .L_803DEF18:
 /* 803DEF18 003A84D8  80 03 00 00 */	lwz r0, 0(r3)
 /* 803DEF1C 003A84DC  7C 60 32 14 */	add r3, r0, r6
-/* 803DEF20 003A84E0  4B FF F9 A9 */	bl CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS96Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
+/* 803DEF20 003A84E0  4B FF F9 A9 */	bl "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS96Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f"
 .L_803DEF24:
 /* 803DEF24 003A84E4  57 E0 03 9D */	rlwinm. r0, r31, 0, 0xe, 0xe
 /* 803DEF28 003A84E8  FF E0 08 90 */	fmr f31, f1
@@ -693,7 +688,7 @@
 /* 803DEF40 003A8500  80 03 00 00 */	lwz r0, 0(r3)
 /* 803DEF44 003A8504  FC 20 E8 90 */	fmr f1, f29
 /* 803DEF48 003A8508  7C 60 EA 14 */	add r3, r0, r29
-/* 803DEF4C 003A850C  4B FF F9 7D */	bl CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS96Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
+/* 803DEF4C 003A850C  4B FF F9 7D */	bl "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS96Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f"
 .L_803DEF50:
 /* 803DEF50 003A8510  57 E0 03 5B */	rlwinm. r0, r31, 0, 0xd, 0xd
 /* 803DEF54 003A8514  FF C0 08 90 */	fmr f30, f1
@@ -706,7 +701,7 @@
 /* 803DEF6C 003A852C  80 03 00 00 */	lwz r0, 0(r3)
 /* 803DEF70 003A8530  FC 20 E8 90 */	fmr f1, f29
 /* 803DEF74 003A8534  7C 60 EA 14 */	add r3, r0, r29
-/* 803DEF78 003A8538  4B FF F9 51 */	bl CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS96Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
+/* 803DEF78 003A8538  4B FF F9 51 */	bl "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS96Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f"
 .L_803DEF7C:
 /* 803DEF7C 003A853C  FF A0 08 90 */	fmr f29, f1
 /* 803DEF80 003A8540  48 00 07 A8 */	b .L_803DF728
@@ -1268,10 +1263,9 @@
 /* 803DF774 003A8D34  7C 08 03 A6 */	mtlr r0
 /* 803DF778 003A8D38  38 21 00 90 */	addi r1, r1, 0x90
 /* 803DF77C 003A8D3C  4E 80 00 20 */	blr 
-.endfn GetAnmRotation__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r4math5MTX34PQ34nw4r4math4VEC3RCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf
+.endfn "GetAnmRotation__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r4math5MTX34PQ34nw4r4math4VEC3RCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf"
 
-#GetAnmTranslation__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r4math4VEC3PCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf
-.fn GetAnmTranslation__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r4math4VEC3PCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf, global
+.fn "GetAnmTranslation__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r4math4VEC3PCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf", global
 /* 803DF780 003A8D40  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803DF784 003A8D44  7C 08 02 A6 */	mflr r0
 /* 803DF788 003A8D48  90 01 00 54 */	stw r0, 0x54(r1)
@@ -1323,7 +1317,7 @@
 .L_803DF834:
 /* 803DF834 003A8DF4  80 03 00 00 */	lwz r0, 0(r3)
 /* 803DF838 003A8DF8  7C 60 22 14 */	add r3, r0, r4
-/* 803DF83C 003A8DFC  4B FF F3 29 */	bl CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS32Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
+/* 803DF83C 003A8DFC  4B FF F3 29 */	bl "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS32Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f"
 .L_803DF840:
 /* 803DF840 003A8E00  57 E0 02 D7 */	rlwinm. r0, r31, 0, 0xb, 0xb
 /* 803DF844 003A8E04  FF E0 08 90 */	fmr f31, f1
@@ -1336,7 +1330,7 @@
 /* 803DF85C 003A8E1C  80 03 00 00 */	lwz r0, 0(r3)
 /* 803DF860 003A8E20  FC 20 E8 90 */	fmr f1, f29
 /* 803DF864 003A8E24  7C 60 EA 14 */	add r3, r0, r29
-/* 803DF868 003A8E28  4B FF F2 FD */	bl CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS32Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
+/* 803DF868 003A8E28  4B FF F2 FD */	bl "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS32Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f"
 .L_803DF86C:
 /* 803DF86C 003A8E2C  57 E0 02 95 */	rlwinm. r0, r31, 0, 0xa, 0xa
 /* 803DF870 003A8E30  FF C0 08 90 */	fmr f30, f1
@@ -1349,7 +1343,7 @@
 /* 803DF888 003A8E48  80 03 00 00 */	lwz r0, 0(r3)
 /* 803DF88C 003A8E4C  FC 20 E8 90 */	fmr f1, f29
 /* 803DF890 003A8E50  7C 60 EA 14 */	add r3, r0, r29
-/* 803DF894 003A8E54  4B FF F2 D1 */	bl CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS32Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
+/* 803DF894 003A8E54  4B FF F2 D1 */	bl "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS32Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f"
 /* 803DF898 003A8E58  48 00 01 10 */	b .L_803DF9A8
 .L_803DF89C:
 /* 803DF89C 003A8E5C  57 E0 03 19 */	rlwinm. r0, r31, 0, 0xc, 0xc
@@ -1361,7 +1355,7 @@
 .L_803DF8B4:
 /* 803DF8B4 003A8E74  80 03 00 00 */	lwz r0, 0(r3)
 /* 803DF8B8 003A8E78  7C 60 22 14 */	add r3, r0, r4
-/* 803DF8BC 003A8E7C  4B FF F1 39 */	bl CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS48Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
+/* 803DF8BC 003A8E7C  4B FF F1 39 */	bl "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS48Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f"
 .L_803DF8C0:
 /* 803DF8C0 003A8E80  57 E0 02 D7 */	rlwinm. r0, r31, 0, 0xb, 0xb
 /* 803DF8C4 003A8E84  FF E0 08 90 */	fmr f31, f1
@@ -1374,7 +1368,7 @@
 /* 803DF8DC 003A8E9C  80 03 00 00 */	lwz r0, 0(r3)
 /* 803DF8E0 003A8EA0  FC 20 E8 90 */	fmr f1, f29
 /* 803DF8E4 003A8EA4  7C 60 EA 14 */	add r3, r0, r29
-/* 803DF8E8 003A8EA8  4B FF F1 0D */	bl CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS48Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
+/* 803DF8E8 003A8EA8  4B FF F1 0D */	bl "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS48Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f"
 .L_803DF8EC:
 /* 803DF8EC 003A8EAC  57 E0 02 95 */	rlwinm. r0, r31, 0, 0xa, 0xa
 /* 803DF8F0 003A8EB0  FF C0 08 90 */	fmr f30, f1
@@ -1387,7 +1381,7 @@
 /* 803DF908 003A8EC8  80 03 00 00 */	lwz r0, 0(r3)
 /* 803DF90C 003A8ECC  FC 20 E8 90 */	fmr f1, f29
 /* 803DF910 003A8ED0  7C 60 EA 14 */	add r3, r0, r29
-/* 803DF914 003A8ED4  4B FF F0 E1 */	bl CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS48Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
+/* 803DF914 003A8ED4  4B FF F0 E1 */	bl "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS48Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f"
 /* 803DF918 003A8ED8  48 00 00 90 */	b .L_803DF9A8
 .L_803DF91C:
 /* 803DF91C 003A8EDC  57 E0 03 19 */	rlwinm. r0, r31, 0, 0xc, 0xc
@@ -1399,7 +1393,7 @@
 .L_803DF934:
 /* 803DF934 003A8EF4  80 03 00 00 */	lwz r0, 0(r3)
 /* 803DF938 003A8EF8  7C 60 22 14 */	add r3, r0, r4
-/* 803DF93C 003A8EFC  4B FF EF 8D */	bl CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS96Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
+/* 803DF93C 003A8EFC  4B FF EF 8D */	bl "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS96Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f"
 .L_803DF940:
 /* 803DF940 003A8F00  57 E0 02 D7 */	rlwinm. r0, r31, 0, 0xb, 0xb
 /* 803DF944 003A8F04  FF E0 08 90 */	fmr f31, f1
@@ -1412,7 +1406,7 @@
 /* 803DF95C 003A8F1C  80 03 00 00 */	lwz r0, 0(r3)
 /* 803DF960 003A8F20  FC 20 E8 90 */	fmr f1, f29
 /* 803DF964 003A8F24  7C 60 EA 14 */	add r3, r0, r29
-/* 803DF968 003A8F28  4B FF EF 61 */	bl CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS96Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
+/* 803DF968 003A8F28  4B FF EF 61 */	bl "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS96Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f"
 .L_803DF96C:
 /* 803DF96C 003A8F2C  57 E0 02 95 */	rlwinm. r0, r31, 0, 0xa, 0xa
 /* 803DF970 003A8F30  FF C0 08 90 */	fmr f30, f1
@@ -1425,7 +1419,7 @@
 /* 803DF988 003A8F48  80 03 00 00 */	lwz r0, 0(r3)
 /* 803DF98C 003A8F4C  FC 20 E8 90 */	fmr f1, f29
 /* 803DF990 003A8F50  7C 60 EA 14 */	add r3, r0, r29
-/* 803DF994 003A8F54  4B FF EF 35 */	bl CalcAnimationFVS_Q44nw4r3g3d27_unnamed_g3d_resanmchr_cpp_46CAnmFmtTraits_Q34nw4r3g3d18ResAnmChrFVS96Data____Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f
+/* 803DF994 003A8F54  4B FF EF 35 */	bl "CalcAnimationFVS<Q44nw4r3g3d27@unnamed@g3d_resanmchr_cpp@46CAnmFmtTraits<Q34nw4r3g3d18ResAnmChrFVS96Data>>__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPCQ34nw4r3g3d16ResAnmChrFVSDataf_f"
 /* 803DF998 003A8F58  48 00 00 10 */	b .L_803DF9A8
 .L_803DF99C:
 /* 803DF99C 003A8F5C  C3 E2 BF 60 */	lfs f31, float_8066C2E0@sda21(r2)
@@ -1450,20 +1444,18 @@
 /* 803DF9E4 003A8FA4  7C 08 03 A6 */	mtlr r0
 /* 803DF9E8 003A8FA8  38 21 00 50 */	addi r1, r1, 0x50
 /* 803DF9EC 003A8FAC  4E 80 00 20 */	blr 
-.endfn GetAnmTranslation__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r4math4VEC3PCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf
+.endfn "GetAnmTranslation__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r4math4VEC3PCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf"
 
-#GetAnmResult___Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
-.fn GetAnmResult___Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf, global
+.fn "GetAnmResult___Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf", global
 /* 803DF9F0 003A8FB0  C0 02 BF 64 */	lfs f0, float_8066C2E4@sda21(r2)
 /* 803DF9F4 003A8FB4  D0 03 00 04 */	stfs f0, 4(r3)
 /* 803DF9F8 003A8FB8  D0 03 00 08 */	stfs f0, 8(r3)
 /* 803DF9FC 003A8FBC  D0 03 00 0C */	stfs f0, 0xc(r3)
 /* 803DFA00 003A8FC0  38 63 00 1C */	addi r3, r3, 0x1c
 /* 803DFA04 003A8FC4  4B F6 D7 DC */	b PSMTXIdentity
-.endfn GetAnmResult___Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
+.endfn "GetAnmResult___Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf"
 
-#GetAnmResult_T__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
-.fn GetAnmResult_T__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf, global
+.fn "GetAnmResult_T__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf", global
 /* 803DFA08 003A8FC8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803DFA0C 003A8FCC  7C 08 02 A6 */	mflr r0
 /* 803DFA10 003A8FD0  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1484,7 +1476,7 @@
 /* 803DFA4C 003A900C  7F E4 FB 78 */	mr r4, r31
 /* 803DFA50 003A9010  38 61 00 08 */	addi r3, r1, 8
 /* 803DFA54 003A9014  38 BF 00 08 */	addi r5, r31, 8
-/* 803DFA58 003A9018  4B FF FD 29 */	bl GetAnmTranslation__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r4math4VEC3PCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf
+/* 803DFA58 003A9018  4B FF FD 29 */	bl "GetAnmTranslation__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r4math4VEC3PCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf"
 /* 803DFA5C 003A901C  C0 01 00 08 */	lfs f0, 8(r1)
 /* 803DFA60 003A9020  D0 1E 00 28 */	stfs f0, 0x28(r30)
 /* 803DFA64 003A9024  C0 01 00 0C */	lfs f0, 0xc(r1)
@@ -1499,10 +1491,9 @@
 /* 803DFA88 003A9048  7C 08 03 A6 */	mtlr r0
 /* 803DFA8C 003A904C  38 21 00 30 */	addi r1, r1, 0x30
 /* 803DFA90 003A9050  4E 80 00 20 */	blr 
-.endfn GetAnmResult_T__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
+.endfn "GetAnmResult_T__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf"
 
-#GetAnmResult_R__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
-.fn GetAnmResult_R__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf, global
+.fn "GetAnmResult_R__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf", global
 /* 803DFA94 003A9054  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803DFA98 003A9058  7C 08 02 A6 */	mflr r0
 /* 803DFA9C 003A905C  7C A6 2B 78 */	mr r6, r5
@@ -1517,7 +1508,7 @@
 /* 803DFAC0 003A9080  D0 03 00 08 */	stfs f0, 8(r3)
 /* 803DFAC4 003A9084  D0 03 00 0C */	stfs f0, 0xc(r3)
 /* 803DFAC8 003A9088  38 63 00 1C */	addi r3, r3, 0x1c
-/* 803DFACC 003A908C  4B FF F2 59 */	bl GetAnmRotation__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r4math5MTX34PQ34nw4r4math4VEC3RCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf
+/* 803DFACC 003A908C  4B FF F2 59 */	bl "GetAnmRotation__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r4math5MTX34PQ34nw4r4math4VEC3RCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf"
 /* 803DFAD0 003A9090  80 1F 00 00 */	lwz r0, 0(r31)
 /* 803DFAD4 003A9094  C0 02 BF 60 */	lfs f0, float_8066C2E0@sda21(r2)
 /* 803DFAD8 003A9098  64 00 80 00 */	oris r0, r0, 0x8000
@@ -1530,10 +1521,9 @@
 /* 803DFAF4 003A90B4  7C 08 03 A6 */	mtlr r0
 /* 803DFAF8 003A90B8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803DFAFC 003A90BC  4E 80 00 20 */	blr 
-.endfn GetAnmResult_R__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
+.endfn "GetAnmResult_R__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf"
 
-#GetAnmResult_S__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
-.fn GetAnmResult_S__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf, global
+.fn "GetAnmResult_S__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf", global
 /* 803DFB00 003A90C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803DFB04 003A90C4  7C 08 02 A6 */	mflr r0
 /* 803DFB08 003A90C8  7C A4 2B 78 */	mr r4, r5
@@ -1542,7 +1532,7 @@
 /* 803DFB14 003A90D4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 803DFB18 003A90D8  7C 7F 1B 78 */	mr r31, r3
 /* 803DFB1C 003A90DC  38 63 00 04 */	addi r3, r3, 4
-/* 803DFB20 003A90E0  4B FF EA F1 */	bl GetAnmScale__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r4math4VEC3PCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf
+/* 803DFB20 003A90E0  4B FF EA F1 */	bl "GetAnmScale__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r4math4VEC3PCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf"
 /* 803DFB24 003A90E4  38 7F 00 1C */	addi r3, r31, 0x1c
 /* 803DFB28 003A90E8  4B F6 D6 B9 */	bl PSMTXIdentity
 /* 803DFB2C 003A90EC  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -1550,10 +1540,9 @@
 /* 803DFB34 003A90F4  7C 08 03 A6 */	mtlr r0
 /* 803DFB38 003A90F8  38 21 00 10 */	addi r1, r1, 0x10
 /* 803DFB3C 003A90FC  4E 80 00 20 */	blr 
-.endfn GetAnmResult_S__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
+.endfn "GetAnmResult_S__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf"
 
-#GetAnmResult_RT__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
-.fn GetAnmResult_RT__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf, global
+.fn "GetAnmResult_RT__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf", global
 /* 803DFB40 003A9100  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803DFB44 003A9104  7C 08 02 A6 */	mflr r0
 /* 803DFB48 003A9108  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1573,7 +1562,7 @@
 /* 803DFB80 003A9140  D0 03 00 08 */	stfs f0, 8(r3)
 /* 803DFB84 003A9144  D0 03 00 0C */	stfs f0, 0xc(r3)
 /* 803DFB88 003A9148  38 63 00 1C */	addi r3, r3, 0x1c
-/* 803DFB8C 003A914C  4B FF F1 99 */	bl GetAnmRotation__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r4math5MTX34PQ34nw4r4math4VEC3RCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf
+/* 803DFB8C 003A914C  4B FF F1 99 */	bl "GetAnmRotation__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r4math5MTX34PQ34nw4r4math4VEC3RCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf"
 /* 803DFB90 003A9150  80 1E 00 00 */	lwz r0, 0(r30)
 /* 803DFB94 003A9154  7C 65 1B 78 */	mr r5, r3
 /* 803DFB98 003A9158  FC 20 F8 90 */	fmr f1, f31
@@ -1581,7 +1570,7 @@
 /* 803DFBA0 003A9160  64 00 80 00 */	oris r0, r0, 0x8000
 /* 803DFBA4 003A9164  38 61 00 08 */	addi r3, r1, 8
 /* 803DFBA8 003A9168  90 1E 00 00 */	stw r0, 0(r30)
-/* 803DFBAC 003A916C  4B FF FB D5 */	bl GetAnmTranslation__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r4math4VEC3PCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf
+/* 803DFBAC 003A916C  4B FF FB D5 */	bl "GetAnmTranslation__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r4math4VEC3PCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf"
 /* 803DFBB0 003A9170  C0 01 00 08 */	lfs f0, 8(r1)
 /* 803DFBB4 003A9174  D0 1E 00 28 */	stfs f0, 0x28(r30)
 /* 803DFBB8 003A9178  C0 01 00 0C */	lfs f0, 0xc(r1)
@@ -1596,10 +1585,9 @@
 /* 803DFBDC 003A919C  7C 08 03 A6 */	mtlr r0
 /* 803DFBE0 003A91A0  38 21 00 30 */	addi r1, r1, 0x30
 /* 803DFBE4 003A91A4  4E 80 00 20 */	blr 
-.endfn GetAnmResult_RT__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
+.endfn "GetAnmResult_RT__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf"
 
-#GetAnmResult_SR__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
-.fn GetAnmResult_SR__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf, global
+.fn "GetAnmResult_SR__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf", global
 /* 803DFBE8 003A91A8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803DFBEC 003A91AC  7C 08 02 A6 */	mflr r0
 /* 803DFBF0 003A91B0  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1615,14 +1603,14 @@
 /* 803DFC18 003A91D8  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 803DFC1C 003A91DC  7C 7D 1B 78 */	mr r29, r3
 /* 803DFC20 003A91E0  38 63 00 04 */	addi r3, r3, 4
-/* 803DFC24 003A91E4  4B FF E9 ED */	bl GetAnmScale__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r4math4VEC3PCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf
+/* 803DFC24 003A91E4  4B FF E9 ED */	bl "GetAnmScale__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r4math4VEC3PCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf"
 /* 803DFC28 003A91E8  FC 20 F8 90 */	fmr f1, f31
 /* 803DFC2C 003A91EC  7C 67 1B 78 */	mr r7, r3
 /* 803DFC30 003A91F0  7F C5 F3 78 */	mr r5, r30
 /* 803DFC34 003A91F4  7F E6 FB 78 */	mr r6, r31
 /* 803DFC38 003A91F8  38 7D 00 1C */	addi r3, r29, 0x1c
 /* 803DFC3C 003A91FC  38 9D 00 10 */	addi r4, r29, 0x10
-/* 803DFC40 003A9200  4B FF F0 E5 */	bl GetAnmRotation__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r4math5MTX34PQ34nw4r4math4VEC3RCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf
+/* 803DFC40 003A9200  4B FF F0 E5 */	bl "GetAnmRotation__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r4math5MTX34PQ34nw4r4math4VEC3RCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf"
 /* 803DFC44 003A9204  80 1D 00 00 */	lwz r0, 0(r29)
 /* 803DFC48 003A9208  C0 02 BF 60 */	lfs f0, float_8066C2E0@sda21(r2)
 /* 803DFC4C 003A920C  64 00 80 00 */	oris r0, r0, 0x8000
@@ -1639,10 +1627,9 @@
 /* 803DFC78 003A9238  7C 08 03 A6 */	mtlr r0
 /* 803DFC7C 003A923C  38 21 00 30 */	addi r1, r1, 0x30
 /* 803DFC80 003A9240  4E 80 00 20 */	blr 
-.endfn GetAnmResult_SR__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
+.endfn "GetAnmResult_SR__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf"
 
-#GetAnmResult_ST__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
-.fn GetAnmResult_ST__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf, global
+.fn "GetAnmResult_ST__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf", global
 /* 803DFC84 003A9244  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803DFC88 003A9248  7C 08 02 A6 */	mflr r0
 /* 803DFC8C 003A924C  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1657,7 +1644,7 @@
 /* 803DFCB0 003A9270  93 A1 00 24 */	stw r29, 0x24(r1)
 /* 803DFCB4 003A9274  7C 7D 1B 78 */	mr r29, r3
 /* 803DFCB8 003A9278  38 63 00 04 */	addi r3, r3, 4
-/* 803DFCBC 003A927C  4B FF E9 55 */	bl GetAnmScale__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r4math4VEC3PCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf
+/* 803DFCBC 003A927C  4B FF E9 55 */	bl "GetAnmScale__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r4math4VEC3PCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf"
 /* 803DFCC0 003A9280  7C 7F 1B 78 */	mr r31, r3
 /* 803DFCC4 003A9284  38 7D 00 1C */	addi r3, r29, 0x1c
 /* 803DFCC8 003A9288  4B F6 D5 19 */	bl PSMTXIdentity
@@ -1665,7 +1652,7 @@
 /* 803DFCD0 003A9290  7F C4 F3 78 */	mr r4, r30
 /* 803DFCD4 003A9294  7F E5 FB 78 */	mr r5, r31
 /* 803DFCD8 003A9298  38 61 00 08 */	addi r3, r1, 8
-/* 803DFCDC 003A929C  4B FF FA A5 */	bl GetAnmTranslation__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r4math4VEC3PCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf
+/* 803DFCDC 003A929C  4B FF FA A5 */	bl "GetAnmTranslation__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r4math4VEC3PCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf"
 /* 803DFCE0 003A92A0  C0 01 00 08 */	lfs f0, 8(r1)
 /* 803DFCE4 003A92A4  D0 1D 00 28 */	stfs f0, 0x28(r29)
 /* 803DFCE8 003A92A8  C0 01 00 0C */	lfs f0, 0xc(r1)
@@ -1681,10 +1668,9 @@
 /* 803DFD10 003A92D0  7C 08 03 A6 */	mtlr r0
 /* 803DFD14 003A92D4  38 21 00 40 */	addi r1, r1, 0x40
 /* 803DFD18 003A92D8  4E 80 00 20 */	blr 
-.endfn GetAnmResult_ST__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
+.endfn "GetAnmResult_ST__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf"
 
-#GetAnmResult_SRT__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
-.fn GetAnmResult_SRT__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf, global
+.fn "GetAnmResult_SRT__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf", global
 /* 803DFD1C 003A92DC  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803DFD20 003A92E0  7C 08 02 A6 */	mflr r0
 /* 803DFD24 003A92E4  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1700,19 +1686,19 @@
 /* 803DFD4C 003A930C  93 A1 00 24 */	stw r29, 0x24(r1)
 /* 803DFD50 003A9310  7C 7D 1B 78 */	mr r29, r3
 /* 803DFD54 003A9314  38 63 00 04 */	addi r3, r3, 4
-/* 803DFD58 003A9318  4B FF E8 B9 */	bl GetAnmScale__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r4math4VEC3PCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf
+/* 803DFD58 003A9318  4B FF E8 B9 */	bl "GetAnmScale__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r4math4VEC3PCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf"
 /* 803DFD5C 003A931C  FC 20 F8 90 */	fmr f1, f31
 /* 803DFD60 003A9320  7C 67 1B 78 */	mr r7, r3
 /* 803DFD64 003A9324  7F C5 F3 78 */	mr r5, r30
 /* 803DFD68 003A9328  7F E6 FB 78 */	mr r6, r31
 /* 803DFD6C 003A932C  38 7D 00 1C */	addi r3, r29, 0x1c
 /* 803DFD70 003A9330  38 9D 00 10 */	addi r4, r29, 0x10
-/* 803DFD74 003A9334  4B FF EF B1 */	bl GetAnmRotation__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r4math5MTX34PQ34nw4r4math4VEC3RCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf
+/* 803DFD74 003A9334  4B FF EF B1 */	bl "GetAnmRotation__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r4math5MTX34PQ34nw4r4math4VEC3RCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf"
 /* 803DFD78 003A9338  FC 20 F8 90 */	fmr f1, f31
 /* 803DFD7C 003A933C  7C 65 1B 78 */	mr r5, r3
 /* 803DFD80 003A9340  7F E4 FB 78 */	mr r4, r31
 /* 803DFD84 003A9344  38 61 00 08 */	addi r3, r1, 8
-/* 803DFD88 003A9348  4B FF F9 F9 */	bl GetAnmTranslation__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r4math4VEC3PCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf
+/* 803DFD88 003A9348  4B FF F9 F9 */	bl "GetAnmTranslation__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r4math4VEC3PCQ34nw4r3g3d17ResAnmChrNodeDataPCQ44nw4r3g3d17ResAnmChrNodeData7AnmDataf"
 /* 803DFD8C 003A934C  80 1D 00 00 */	lwz r0, 0(r29)
 /* 803DFD90 003A9350  64 00 80 00 */	oris r0, r0, 0x8000
 /* 803DFD94 003A9354  90 1D 00 00 */	stw r0, 0(r29)
@@ -1731,7 +1717,7 @@
 /* 803DFDC8 003A9388  7C 08 03 A6 */	mtlr r0
 /* 803DFDCC 003A938C  38 21 00 40 */	addi r1, r1, 0x40
 /* 803DFDD0 003A9390  4E 80 00 20 */	blr 
-.endfn GetAnmResult_SRT__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
+.endfn "GetAnmResult_SRT__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf"
 
 .fn GetAnmResult__Q34nw4r3g3d9ResAnmChrCFPQ34nw4r3g3d12ChrAnmResultUlf, global
 /* 803DFDD4 003A9394  80 C3 00 00 */	lwz r6, 0(r3)
@@ -2123,14 +2109,14 @@
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
 "gGetAnmResultTable__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@":
-	.4byte GetAnmResult___Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
-	.4byte GetAnmResult_S__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
-	.4byte GetAnmResult_R__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
-	.4byte GetAnmResult_SR__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
-	.4byte GetAnmResult_T__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
-	.4byte GetAnmResult_ST__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
-	.4byte GetAnmResult_RT__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
-	.4byte GetAnmResult_SRT__Q34nw4r3g3d27_unnamed_g3d_resanmchr_cpp_FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf
+	.4byte "GetAnmResult___Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf"
+	.4byte "GetAnmResult_S__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf"
+	.4byte "GetAnmResult_R__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf"
+	.4byte "GetAnmResult_SR__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf"
+	.4byte "GetAnmResult_T__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf"
+	.4byte "GetAnmResult_ST__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf"
+	.4byte "GetAnmResult_RT__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf"
+	.4byte "GetAnmResult_SRT__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf"
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

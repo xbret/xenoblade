@@ -4,17 +4,17 @@
 
 .balign 16, 0
 .fn HBMAllocMem__FUl, global
-/* 80322DE0 002EC3A0  3C A0 80 55 */	lis r5, lbl_8054C8C4@ha
+/* 80322DE0 002EC3A0  3C A0 80 55 */	lis r5, spAllocator@ha
 /* 80322DE4 002EC3A4  7C 64 1B 78 */	mr r4, r3
-/* 80322DE8 002EC3A8  80 65 C8 C4 */	lwz r3, lbl_8054C8C4@l(r5)
+/* 80322DE8 002EC3A8  80 65 C8 C4 */	lwz r3, spAllocator@l(r5)
 /* 80322DEC 002EC3AC  48 02 6C A4 */	b MEMAllocFromAllocator
 .endfn HBMAllocMem__FUl
 
 .balign 16, 0
 .fn HBMFreeMem__FPv, global
-/* 80322DF0 002EC3B0  3C A0 80 55 */	lis r5, lbl_8054C8C4@ha
+/* 80322DF0 002EC3B0  3C A0 80 55 */	lis r5, spAllocator@ha
 /* 80322DF4 002EC3B4  7C 64 1B 78 */	mr r4, r3
-/* 80322DF8 002EC3B8  80 65 C8 C4 */	lwz r3, lbl_8054C8C4@l(r5)
+/* 80322DF8 002EC3B8  80 65 C8 C4 */	lwz r3, spAllocator@l(r5)
 /* 80322DFC 002EC3BC  48 02 6C A4 */	b MEMFreeToAllocator
 .endfn HBMFreeMem__FPv
 
@@ -44,14 +44,14 @@
 /* 80322E4C 002EC40C  38 A0 00 00 */	li r5, 0
 /* 80322E50 002EC410  80 9F 00 2C */	lwz r4, 0x2c(r31)
 /* 80322E54 002EC414  48 02 66 BD */	bl MEMCreateExpHeapEx
-/* 80322E58 002EC418  3F C0 80 5D */	lis r30, lbl_805CD758@ha
+/* 80322E58 002EC418  3F C0 80 5D */	lis r30, sAllocator@ha
 /* 80322E5C 002EC41C  7C 64 1B 78 */	mr r4, r3
-/* 80322E60 002EC420  38 7E D7 58 */	addi r3, r30, lbl_805CD758@l
+/* 80322E60 002EC420  38 7E D7 58 */	addi r3, r30, sAllocator@l
 /* 80322E64 002EC424  38 A0 00 20 */	li r5, 0x20
 /* 80322E68 002EC428  48 02 6C 49 */	bl MEMInitAllocatorForExpHeap
-/* 80322E6C 002EC42C  3C 60 80 55 */	lis r3, lbl_8054C8C4@ha
-/* 80322E70 002EC430  38 1E D7 58 */	addi r0, r30, lbl_805CD758@l
-/* 80322E74 002EC434  90 03 C8 C4 */	stw r0, lbl_8054C8C4@l(r3)
+/* 80322E6C 002EC42C  3C 60 80 55 */	lis r3, spAllocator@ha
+/* 80322E70 002EC430  38 1E D7 58 */	addi r0, r30, sAllocator@l
+/* 80322E74 002EC434  90 03 C8 C4 */	stw r0, spAllocator@l(r3)
 .L_80322E78:
 /* 80322E78 002EC438  80 BF 00 3C */	lwz r5, 0x3c(r31)
 /* 80322E7C 002EC43C  2C 05 00 00 */	cmpwi r5, 0
@@ -73,23 +73,23 @@
 /* 80322EB4 002EC474  41 82 00 34 */	beq .L_80322EE8
 /* 80322EB8 002EC478  48 00 00 40 */	b .L_80322EF8
 .L_80322EBC:
-/* 80322EBC 002EC47C  3C 80 80 5D */	lis r4, lbl_805CD7B8@ha
+/* 80322EBC 002EC47C  3C 80 80 5D */	lis r4, mspAllocator__Q36nw4hbm3lyt6Layout@ha
 /* 80322EC0 002EC480  80 1F 00 3C */	lwz r0, 0x3c(r31)
-/* 80322EC4 002EC484  3C 60 80 55 */	lis r3, lbl_8054C8C4@ha
-/* 80322EC8 002EC488  90 A4 D7 B8 */	stw r5, lbl_805CD7B8@l(r4)
-/* 80322ECC 002EC48C  90 03 C8 C4 */	stw r0, lbl_8054C8C4@l(r3)
+/* 80322EC4 002EC484  3C 60 80 55 */	lis r3, spAllocator@ha
+/* 80322EC8 002EC488  90 A4 D7 B8 */	stw r5, mspAllocator__Q36nw4hbm3lyt6Layout@l(r4)
+/* 80322ECC 002EC48C  90 03 C8 C4 */	stw r0, spAllocator@l(r3)
 /* 80322ED0 002EC490  48 00 00 28 */	b .L_80322EF8
 .L_80322ED4:
-/* 80322ED4 002EC494  3C 80 80 55 */	lis r4, lbl_8054C8C4@ha
-/* 80322ED8 002EC498  3C 60 80 5D */	lis r3, lbl_805CD7B8@ha
-/* 80322EDC 002EC49C  80 04 C8 C4 */	lwz r0, lbl_8054C8C4@l(r4)
-/* 80322EE0 002EC4A0  90 03 D7 B8 */	stw r0, lbl_805CD7B8@l(r3)
+/* 80322ED4 002EC494  3C 80 80 55 */	lis r4, spAllocator@ha
+/* 80322ED8 002EC498  3C 60 80 5D */	lis r3, mspAllocator__Q36nw4hbm3lyt6Layout@ha
+/* 80322EDC 002EC49C  80 04 C8 C4 */	lwz r0, spAllocator@l(r4)
+/* 80322EE0 002EC4A0  90 03 D7 B8 */	stw r0, mspAllocator__Q36nw4hbm3lyt6Layout@l(r3)
 /* 80322EE4 002EC4A4  48 00 00 14 */	b .L_80322EF8
 .L_80322EE8:
-/* 80322EE8 002EC4A8  3C 80 80 5D */	lis r4, lbl_805CD7B8@ha
-/* 80322EEC 002EC4AC  3C 60 80 55 */	lis r3, lbl_8054C8C4@ha
-/* 80322EF0 002EC4B0  80 04 D7 B8 */	lwz r0, lbl_805CD7B8@l(r4)
-/* 80322EF4 002EC4B4  90 03 C8 C4 */	stw r0, lbl_8054C8C4@l(r3)
+/* 80322EE8 002EC4A8  3C 80 80 5D */	lis r4, mspAllocator__Q36nw4hbm3lyt6Layout@ha
+/* 80322EEC 002EC4AC  3C 60 80 55 */	lis r3, spAllocator@ha
+/* 80322EF0 002EC4B0  80 04 D7 B8 */	lwz r0, mspAllocator__Q36nw4hbm3lyt6Layout@l(r4)
+/* 80322EF4 002EC4B4  90 03 C8 C4 */	stw r0, spAllocator@l(r3)
 .L_80322EF8:
 /* 80322EF8 002EC4B8  7F E3 FB 78 */	mr r3, r31
 /* 80322EFC 002EC4BC  48 00 08 05 */	bl createInstance__Q210homebutton10HomeButtonFPC11HBMDataInfo
@@ -126,8 +126,8 @@
 .L_80322F64:
 /* 80322F64 002EC524  2C 03 00 01 */	cmpwi r3, 1
 /* 80322F68 002EC528  40 82 00 14 */	bne .L_80322F7C
-/* 80322F6C 002EC52C  3C 60 80 55 */	lis r3, lbl_8054C8C4@ha
-/* 80322F70 002EC530  80 63 C8 C4 */	lwz r3, lbl_8054C8C4@l(r3)
+/* 80322F6C 002EC52C  3C 60 80 55 */	lis r3, spAllocator@ha
+/* 80322F70 002EC530  80 63 C8 C4 */	lwz r3, spAllocator@l(r3)
 /* 80322F74 002EC534  80 63 00 04 */	lwz r3, 4(r3)
 /* 80322F78 002EC538  48 02 66 49 */	bl MEMDestroyExpHeap
 .L_80322F7C:
@@ -142,9 +142,9 @@
 .fn HBMInit, global
 /* 80322F90 002EC550  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80322F94 002EC554  7C 08 02 A6 */	mflr r0
-/* 80322F98 002EC558  3C 60 80 55 */	lis r3, lbl_8054C8C0@ha
+/* 80322F98 002EC558  3C 60 80 55 */	lis r3, __HBMVersion@ha
 /* 80322F9C 002EC55C  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80322FA0 002EC560  80 63 C8 C0 */	lwz r3, lbl_8054C8C0@l(r3)
+/* 80322FA0 002EC560  80 63 C8 C0 */	lwz r3, __HBMVersion@l(r3)
 /* 80322FA4 002EC564  48 02 FD 5D */	bl OSRegisterVersion
 /* 80322FA8 002EC568  48 00 07 F9 */	bl getInstance__Q210homebutton10HomeButtonFv
 /* 80322FAC 002EC56C  48 00 12 65 */	bl init__Q210homebutton10HomeButtonFv
@@ -256,18 +256,16 @@ lbl_8054C878:
 	.balign 4
 
 
-.global lbl_8054C8C0
-lbl_8054C8C0:
+__HBMVersion:
 	.4byte lbl_8054C878
 
 
-.global lbl_8054C8C4
-lbl_8054C8C4:
-	.4byte lbl_805CD758
+.global spAllocator
+spAllocator:
+	.4byte sAllocator
 
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805CD758
-lbl_805CD758:
+sAllocator:
 	.skip 0x10

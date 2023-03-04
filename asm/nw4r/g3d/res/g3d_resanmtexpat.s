@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-#SearchFrame__Q34nw4r3g3d30@unnamed@g3d_resanmtexpat_cpp@FPCQ34nw4r3g3d19ResAnmTexPatAnmDataf
-.fn SearchFrame__Q34nw4r3g3d30_unnamed_g3d_resanmtexpat_cpp_FPCQ34nw4r3g3d19ResAnmTexPatAnmDataf, global
+.fn "SearchFrame__Q34nw4r3g3d30@unnamed@g3d_resanmtexpat_cpp@FPCQ34nw4r3g3d19ResAnmTexPatAnmDataf", global
 /* 803DDE40 003A7400  A0 A3 00 00 */	lhz r5, 0(r3)
 /* 803DDE44 003A7404  38 C3 00 08 */	addi r6, r3, 8
 /* 803DDE48 003A7408  C0 43 00 08 */	lfs f2, 8(r3)
@@ -52,7 +51,7 @@
 .L_803DDEE4:
 /* 803DDEE4 003A74A4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803DDEE8 003A74A8  4E 80 00 20 */	blr 
-.endfn SearchFrame__Q34nw4r3g3d30_unnamed_g3d_resanmtexpat_cpp_FPCQ34nw4r3g3d19ResAnmTexPatAnmDataf
+.endfn "SearchFrame__Q34nw4r3g3d30@unnamed@g3d_resanmtexpat_cpp@FPCQ34nw4r3g3d19ResAnmTexPatAnmDataf"
 
 .fn GetAnmResult__Q34nw4r3g3d12ResAnmTexPatCFPQ34nw4r3g3d15TexPatAnmResultUlf, global
 /* 803DDEEC 003A74AC  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -125,7 +124,7 @@
 /* 803DDFCC 003A758C  80 1B 00 00 */	lwz r0, 0(r27)
 /* 803DDFD0 003A7590  FC 20 F8 90 */	fmr f1, f31
 /* 803DDFD4 003A7594  7C 60 FA 14 */	add r3, r0, r31
-/* 803DDFD8 003A7598  4B FF FE 69 */	bl SearchFrame__Q34nw4r3g3d30_unnamed_g3d_resanmtexpat_cpp_FPCQ34nw4r3g3d19ResAnmTexPatAnmDataf
+/* 803DDFD8 003A7598  4B FF FE 69 */	bl "SearchFrame__Q34nw4r3g3d30@unnamed@g3d_resanmtexpat_cpp@FPCQ34nw4r3g3d19ResAnmTexPatAnmDataf"
 /* 803DDFDC 003A759C  A0 83 00 04 */	lhz r4, 4(r3)
 /* 803DDFE0 003A75A0  A0 63 00 06 */	lhz r3, 6(r3)
 .L_803DDFE4:

@@ -222,8 +222,8 @@
 /* 803DDA84 003A7044  4E 80 00 20 */	blr 
 .endfn CalcChrAnmResult__Q34nw4r3g3d7ResNodeCFPQ34nw4r3g3d12ChrAnmResult
 
-#GetResUserData__Q34nw4r3g3d7ResNodeCFv or GetResUserData__Q34nw4r3g3d7ResNodeFv
-.fn func_803DDA88, global
+#could also be GetResUserData__Q34nw4r3g3d7ResNodeCFv
+.fn GetResUserData__Q34nw4r3g3d7ResNodeFv, global
 /* 803DDA88 003A7048  80 63 00 00 */	lwz r3, 0(r3)
 /* 803DDA8C 003A704C  80 03 00 6C */	lwz r0, 0x6c(r3)
 /* 803DDA90 003A7050  2C 00 00 00 */	cmpwi r0, 0
@@ -233,7 +233,7 @@
 .L_803DDAA0:
 /* 803DDAA0 003A7060  38 60 00 00 */	li r3, 0
 /* 803DDAA4 003A7064  4E 80 00 20 */	blr 
-.endfn func_803DDA88
+.endfn GetResUserData__Q34nw4r3g3d7ResNodeFv
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

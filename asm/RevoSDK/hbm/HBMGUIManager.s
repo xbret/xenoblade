@@ -942,9 +942,9 @@
 
 .balign 16, 0
 .fn createLayoutScene__Q310homebutton3gui11PaneManagerFRCQ36nw4hbm3lyt6Layout, global
-/* 80320250 002E9810  3C A0 80 5D */	lis r5, lbl_805CD5A8@ha
+/* 80320250 002E9810  3C A0 80 5D */	lis r5, suIDCounter__Q310homebutton3gui11PaneManager@ha
 /* 80320254 002E9814  38 00 00 00 */	li r0, 0
-/* 80320258 002E9818  90 05 D5 A8 */	stw r0, lbl_805CD5A8@l(r5)
+/* 80320258 002E9818  90 05 D5 A8 */	stw r0, suIDCounter__Q310homebutton3gui11PaneManager@l(r5)
 /* 8032025C 002E981C  80 84 00 10 */	lwz r4, 0x10(r4)
 /* 80320260 002E9820  81 83 00 00 */	lwz r12, 0(r3)
 /* 80320264 002E9824  38 84 00 10 */	addi r4, r4, 0x10
@@ -973,16 +973,16 @@
 /* 803202B0 002E9870  4B F9 9E 8D */	bl _savegpr_21
 /* 803202B4 002E9874  3E E0 80 55 */	lis r23, __vt__homebutton_gui_Component@ha
 /* 803202B8 002E9878  3F 20 80 55 */	lis r25, __vt__homebutton_gui_PaneComponent@ha
-/* 803202BC 002E987C  3F E0 80 5D */	lis r31, lbl_805CD7C8@ha
-/* 803202C0 002E9880  3F C0 80 5D */	lis r30, lbl_805CD7D8@ha
+/* 803202BC 002E987C  3F E0 80 5D */	lis r31, typeInfo__Q36nw4hbm3lyt7Picture@ha
+/* 803202C0 002E9880  3F C0 80 5D */	lis r30, typeInfo__Q36nw4hbm3lyt6Window@ha
 /* 803202C4 002E9884  83 64 00 04 */	lwz r27, 4(r4)
 /* 803202C8 002E9888  7C 7C 1B 78 */	mr r28, r3
 /* 803202CC 002E988C  3A F7 C4 40 */	addi r23, r23, __vt__homebutton_gui_Component@l
 /* 803202D0 002E9890  3B 39 C2 88 */	addi r25, r25, __vt__homebutton_gui_PaneComponent@l
-/* 803202D4 002E9894  3B FF D7 C8 */	addi r31, r31, lbl_805CD7C8@l
-/* 803202D8 002E9898  3B DE D7 D8 */	addi r30, r30, lbl_805CD7D8@l
+/* 803202D4 002E9894  3B FF D7 C8 */	addi r31, r31, typeInfo__Q36nw4hbm3lyt7Picture@l
+/* 803202D8 002E9898  3B DE D7 D8 */	addi r30, r30, typeInfo__Q36nw4hbm3lyt6Window@l
 /* 803202DC 002E989C  3B 44 00 04 */	addi r26, r4, 4
-/* 803202E0 002E98A0  3E C0 80 5D */	lis r22, lbl_805CD5A8@ha
+/* 803202E0 002E98A0  3E C0 80 5D */	lis r22, suIDCounter__Q310homebutton3gui11PaneManager@ha
 /* 803202E4 002E98A4  3B 00 00 00 */	li r24, 0
 /* 803202E8 002E98A8  48 00 02 30 */	b .L_80320518
 .L_803202EC:
@@ -998,7 +998,7 @@
 /* 80320310 002E98D0  2C 1D 00 00 */	cmpwi r29, 0
 /* 80320314 002E98D4  7C 75 1B 78 */	mr r21, r3
 /* 80320318 002E98D8  41 82 00 3C */	beq .L_80320354
-/* 8032031C 002E98DC  80 16 D5 A8 */	lwz r0, lbl_805CD5A8@l(r22)
+/* 8032031C 002E98DC  80 16 D5 A8 */	lwz r0, suIDCounter__Q310homebutton3gui11PaneManager@l(r22)
 /* 80320320 002E98E0  7F A3 EB 78 */	mr r3, r29
 /* 80320324 002E98E4  92 FD 00 00 */	stw r23, 0(r29)
 /* 80320328 002E98E8  9B 1D 00 18 */	stb r24, 0x18(r29)
@@ -1025,7 +1025,7 @@
 /* 80320374 002E9934  2C 03 00 00 */	cmpwi r3, 0
 /* 80320378 002E9938  7C 7D 1B 78 */	mr r29, r3
 /* 8032037C 002E993C  41 82 00 34 */	beq .L_803203B0
-/* 80320380 002E9940  80 16 D5 A8 */	lwz r0, lbl_805CD5A8@l(r22)
+/* 80320380 002E9940  80 16 D5 A8 */	lwz r0, suIDCounter__Q310homebutton3gui11PaneManager@l(r22)
 /* 80320384 002E9944  92 E3 00 00 */	stw r23, 0(r3)
 /* 80320388 002E9948  9B 03 00 18 */	stb r24, 0x18(r3)
 /* 8032038C 002E994C  93 03 00 1C */	stw r24, 0x1c(r3)
@@ -1051,11 +1051,11 @@
 /* 803203D0 002E9990  7E A4 AB 78 */	mr r4, r21
 /* 803203D4 002E9994  38 7C 00 18 */	addi r3, r28, 0x18
 /* 803203D8 002E9998  48 01 82 99 */	bl List_Insert__Q26nw4hbm2utFPQ36nw4hbm2ut4ListPvPv
-/* 803203DC 002E999C  80 96 D5 A8 */	lwz r4, lbl_805CD5A8@l(r22)
+/* 803203DC 002E999C  80 96 D5 A8 */	lwz r4, suIDCounter__Q310homebutton3gui11PaneManager@l(r22)
 /* 803203E0 002E99A0  3A BB FF FC */	addi r21, r27, -4
 /* 803203E4 002E99A4  7F A3 EB 78 */	mr r3, r29
 /* 803203E8 002E99A8  38 04 00 01 */	addi r0, r4, 1
-/* 803203EC 002E99AC  90 16 D5 A8 */	stw r0, lbl_805CD5A8@l(r22)
+/* 803203EC 002E99AC  90 16 D5 A8 */	stw r0, suIDCounter__Q310homebutton3gui11PaneManager@l(r22)
 /* 803203F0 002E99B0  7E A4 AB 78 */	mr r4, r21
 /* 803203F4 002E99B4  81 9D 00 00 */	lwz r12, 0(r29)
 /* 803203F8 002E99B8  81 8C 00 60 */	lwz r12, 0x60(r12)
@@ -1163,8 +1163,8 @@
 
 .balign 16, 0
 .fn GetRuntimeTypeInfo__Q36nw4hbm3lyt4PaneCFv, global
-/* 80320550 002E9B10  3C 60 80 5D */	lis r3, lbl_805CD7C0@ha
-/* 80320554 002E9B14  38 63 D7 C0 */	addi r3, r3, lbl_805CD7C0@l
+/* 80320550 002E9B10  3C 60 80 5D */	lis r3, typeInfo__Q36nw4hbm3lyt4Pane@ha
+/* 80320554 002E9B14  38 63 D7 C0 */	addi r3, r3, typeInfo__Q36nw4hbm3lyt4Pane@l
 /* 80320558 002E9B18  4E 80 00 20 */	blr 
 .endfn GetRuntimeTypeInfo__Q36nw4hbm3lyt4PaneCFv
 
@@ -1189,7 +1189,7 @@
 /* 80320594 002E9B54  83 E4 00 04 */	lwz r31, 4(r4)
 /* 80320598 002E9B58  7C 7A 1B 78 */	mr r26, r3
 /* 8032059C 002E9B5C  3B C4 00 04 */	addi r30, r4, 4
-/* 803205A0 002E9B60  3F A0 80 5D */	lis r29, lbl_805CD5A8@ha
+/* 803205A0 002E9B60  3F A0 80 5D */	lis r29, suIDCounter__Q310homebutton3gui11PaneManager@ha
 /* 803205A4 002E9B64  48 00 00 D8 */	b .L_8032067C
 .L_803205A8:
 /* 803205A8 002E9B68  38 7A 00 18 */	addi r3, r26, 0x18
@@ -1219,9 +1219,9 @@
 /* 803205FC 002E9BBC  7F 64 DB 78 */	mr r4, r27
 /* 80320600 002E9BC0  38 7A 00 18 */	addi r3, r26, 0x18
 /* 80320604 002E9BC4  48 01 80 DD */	bl List_Remove__Q26nw4hbm2utFPQ36nw4hbm2ut4ListPv
-/* 80320608 002E9BC8  80 7D D5 A8 */	lwz r3, lbl_805CD5A8@l(r29)
+/* 80320608 002E9BC8  80 7D D5 A8 */	lwz r3, suIDCounter__Q310homebutton3gui11PaneManager@l(r29)
 /* 8032060C 002E9BCC  38 03 FF FF */	addi r0, r3, -1
-/* 80320610 002E9BD0  90 1D D5 A8 */	stw r0, lbl_805CD5A8@l(r29)
+/* 80320610 002E9BD0  90 1D D5 A8 */	stw r0, suIDCounter__Q310homebutton3gui11PaneManager@l(r29)
 /* 80320614 002E9BD4  80 7A 00 14 */	lwz r3, 0x14(r26)
 /* 80320618 002E9BD8  2C 03 00 00 */	cmpwi r3, 0
 /* 8032061C 002E9BDC  41 82 00 1C */	beq .L_80320638
@@ -1307,11 +1307,11 @@
 /* 80320728 002E9CE8  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8032072C 002E9CEC  39 61 00 20 */	addi r11, r1, 0x20
 /* 80320730 002E9CF0  4B F9 9A 21 */	bl _savegpr_26
-/* 80320734 002E9CF4  3F A0 80 5D */	lis r29, lbl_805CD788@ha
+/* 80320734 002E9CF4  3F A0 80 5D */	lis r29, typeInfo__Q36nw4hbm3lyt8Bounding@ha
 /* 80320738 002E9CF8  7C 7A 1B 78 */	mr r26, r3
 /* 8032073C 002E9CFC  7C 9B 23 78 */	mr r27, r4
 /* 80320740 002E9D00  3B 80 00 00 */	li r28, 0
-/* 80320744 002E9D04  3B BD D7 88 */	addi r29, r29, lbl_805CD788@l
+/* 80320744 002E9D04  3B BD D7 88 */	addi r29, r29, typeInfo__Q36nw4hbm3lyt8Bounding@l
 /* 80320748 002E9D08  48 00 00 84 */	b .L_803207CC
 .L_8032074C:
 /* 8032074C 002E9D0C  38 7A 00 18 */	addi r3, r26, 0x18
@@ -1790,6 +1790,8 @@ lbl_80518670:
 	.4byte 0
 	.4byte 0xFF0000FF
 	.float 0.5
+
+#@LOCAL@drawLine___Q210homebutton3guiFfffffUcR8_GXColor@cubeScale
 	.float 1.0
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
@@ -1983,6 +1985,5 @@ __RTTI__homebutton_gui_Interface:
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805CD5A8
-lbl_805CD5A8:
+suIDCounter__Q310homebutton3gui11PaneManager:
 	.skip 0x8

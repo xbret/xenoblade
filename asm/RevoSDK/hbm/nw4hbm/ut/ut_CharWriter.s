@@ -9,10 +9,10 @@
 /* 80336A98 00300058  38 C0 FF FF */	li r6, -1
 /* 80336A9C 0030005C  C0 04 8B 18 */	lfs f0, lbl_80518B18@l(r4)
 /* 80336AA0 00300060  93 E1 00 2C */	stw r31, 0x2c(r1)
-/* 80336AA4 00300064  3C A0 80 5D */	lis r5, lbl_805CD7E8@ha
+/* 80336AA4 00300064  3C A0 80 5D */	lis r5, mLoadingTexture__Q36nw4hbm2ut10CharWriter@ha
 /* 80336AA8 00300068  38 00 00 FF */	li r0, 0xff
 /* 80336AAC 0030006C  93 C1 00 28 */	stw r30, 0x28(r1)
-/* 80336AB0 00300070  38 85 D7 E8 */	addi r4, r5, lbl_805CD7E8@l
+/* 80336AB0 00300070  38 85 D7 E8 */	addi r4, r5, mLoadingTexture__Q36nw4hbm2ut10CharWriter@l
 /* 80336AB4 00300074  93 A1 00 24 */	stw r29, 0x24(r1)
 /* 80336AB8 00300078  3B A0 00 00 */	li r29, 0
 /* 80336ABC 0030007C  93 81 00 20 */	stw r28, 0x20(r1)
@@ -39,7 +39,7 @@
 /* 80336B10 003000D0  9B A3 00 43 */	stb r29, 0x43(r3)
 /* 80336B14 003000D4  D0 03 00 44 */	stfs f0, 0x44(r3)
 /* 80336B18 003000D8  93 A3 00 48 */	stw r29, 0x48(r3)
-/* 80336B1C 003000DC  90 05 D7 E8 */	stw r0, lbl_805CD7E8@l(r5)
+/* 80336B1C 003000DC  90 05 D7 E8 */	stw r0, mLoadingTexture__Q36nw4hbm2ut10CharWriter@l(r5)
 /* 80336B20 003000E0  93 A4 00 04 */	stw r29, 4(r4)
 /* 80336B24 003000E4  88 C3 00 18 */	lbz r6, 0x18(r3)
 /* 80336B28 003000E8  88 A3 00 19 */	lbz r5, 0x19(r3)
@@ -1445,8 +1445,8 @@
 /* 80337F7C 0030153C  54 EC 78 20 */	slwi r12, r7, 0xf
 /* 80337F80 00301540  81 43 00 38 */	lwz r10, 0x38(r3)
 /* 80337F84 00301544  7F A8 33 96 */	divwu r29, r8, r6
-/* 80337F88 00301548  3D 00 80 5D */	lis r8, lbl_805CD7E8@ha
-/* 80337F8C 0030154C  80 E8 D7 E8 */	lwz r7, lbl_805CD7E8@l(r8)
+/* 80337F88 00301548  3D 00 80 5D */	lis r8, mLoadingTexture__Q36nw4hbm2ut10CharWriter@ha
+/* 80337F8C 0030154C  80 E8 D7 E8 */	lwz r7, mLoadingTexture__Q36nw4hbm2ut10CharWriter@l(r8)
 /* 80337F90 00301550  FF A0 18 90 */	fmr f29, f3
 /* 80337F94 00301554  81 23 00 3C */	lwz r9, 0x3c(r3)
 /* 80337F98 00301558  FF 60 08 90 */	fmr f27, f1
@@ -1479,7 +1479,7 @@
 /* 80338004 003015C4  EF C2 00 2A */	fadds f30, f2, f0
 /* 80338008 003015C8  91 21 00 14 */	stw r9, 0x14(r1)
 /* 8033800C 003015CC  40 82 00 2C */	bne .L_80338038
-/* 80338010 003015D0  38 E8 D7 E8 */	addi r7, r8, lbl_805CD7E8@l
+/* 80338010 003015D0  38 E8 D7 E8 */	addi r7, r8, mLoadingTexture__Q36nw4hbm2ut10CharWriter@l
 /* 80338014 003015D4  80 67 00 04 */	lwz r3, 4(r7)
 /* 80338018 003015D8  7C 00 18 40 */	cmplw r0, r3
 /* 8033801C 003015DC  40 82 00 1C */	bne .L_80338038
@@ -1515,13 +1515,13 @@
 /* 8033808C 0030164C  38 61 00 18 */	addi r3, r1, 0x18
 /* 80338090 00301650  38 80 00 00 */	li r4, 0
 /* 80338094 00301654  4B FE 48 ED */	bl GXLoadTexObj
-/* 80338098 00301658  3C C0 80 5D */	lis r6, lbl_805CD7E8@ha
+/* 80338098 00301658  3C C0 80 5D */	lis r6, mLoadingTexture__Q36nw4hbm2ut10CharWriter@ha
 /* 8033809C 0030165C  80 E1 00 08 */	lwz r7, 8(r1)
-/* 803380A0 00301660  38 86 D7 E8 */	addi r4, r6, lbl_805CD7E8@l
+/* 803380A0 00301660  38 86 D7 E8 */	addi r4, r6, mLoadingTexture__Q36nw4hbm2ut10CharWriter@l
 /* 803380A4 00301664  80 A1 00 0C */	lwz r5, 0xc(r1)
 /* 803380A8 00301668  80 61 00 10 */	lwz r3, 0x10(r1)
 /* 803380AC 0030166C  80 01 00 14 */	lwz r0, 0x14(r1)
-/* 803380B0 00301670  90 E6 D7 E8 */	stw r7, lbl_805CD7E8@l(r6)
+/* 803380B0 00301670  90 E6 D7 E8 */	stw r7, mLoadingTexture__Q36nw4hbm2ut10CharWriter@l(r6)
 /* 803380B4 00301674  90 A4 00 04 */	stw r5, 4(r4)
 /* 803380B8 00301678  90 64 00 08 */	stw r3, 8(r4)
 /* 803380BC 0030167C  90 04 00 0C */	stw r0, 0xc(r4)
@@ -1800,14 +1800,18 @@ lbl_80518B28:
 .global double_80518B30
 double_80518B30:
 	.8byte 0x4330000000000000 #unsigned int to float constant
+
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
+#@GUARD@fog$5416
 .global lbl_805CD7E0
 lbl_805CD7E0:
 	.skip 0x4
+
+#fog$5416
 .global lbl_805CD7E4
 lbl_805CD7E4:
 	.skip 0x4
-.global lbl_805CD7E8
-lbl_805CD7E8:
+
+mLoadingTexture__Q36nw4hbm2ut10CharWriter:
 	.skip 0x10

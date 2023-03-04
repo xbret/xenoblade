@@ -2,6 +2,19 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+#could also be GetParent__Q34nw4r3g3d6ResMdlCFv
+.fn GetParent__Q34nw4r3g3d6ResMdlFv, global
+/* 803D95B4 003A2B74  80 63 00 00 */	lwz r3, 0(r3)
+/* 803D95B8 003A2B78  80 03 00 0C */	lwz r0, 0xc(r3)
+/* 803D95BC 003A2B7C  2C 00 00 00 */	cmpwi r0, 0
+/* 803D95C0 003A2B80  41 82 00 0C */	beq .L_803D95CC
+/* 803D95C4 003A2B84  7C 63 02 14 */	add r3, r3, r0
+/* 803D95C8 003A2B88  4E 80 00 20 */	blr
+.L_803D95CC:
+/* 803D95CC 003A2B8C  38 60 00 00 */	li r3, 0
+/* 803D95D0 003A2B90  4E 80 00 20 */	blr 
+.endfn GetParent__Q34nw4r3g3d6ResMdlFv
+
 .fn GetResByteCode__Q34nw4r3g3d6ResMdlCFPCc, global
 /* 803D95D4 003A2B94  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803D95D8 003A2B98  7C 08 02 A6 */	mflr r0

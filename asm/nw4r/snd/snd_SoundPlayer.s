@@ -46,8 +46,7 @@
 /* 804204B8 003E9A78  4E 80 00 20 */	blr
 .endfn __ct__Q34nw4r3snd11SoundPlayerFv
 
-#__ct__Q34nw4r2ut44LinkList<Q44nw4r3snd6detail10BasicSound,256>Fv
-.fn __ct__Q34nw4r2ut44LinkList_Q44nw4r3snd6detail10BasicSound_256_Fv, global
+.fn "__ct__Q34nw4r2ut44LinkList<Q44nw4r3snd6detail10BasicSound,256>Fv", global
 /* 804204BC 003E9A7C  38 00 00 00 */	li r0, 0
 /* 804204C0 003E9A80  38 83 00 04 */	addi r4, r3, 4
 /* 804204C4 003E9A84  90 03 00 04 */	stw r0, 4(r3)
@@ -56,10 +55,9 @@
 /* 804204D0 003E9A90  90 83 00 04 */	stw r4, 4(r3)
 /* 804204D4 003E9A94  90 83 00 08 */	stw r4, 8(r3)
 /* 804204D8 003E9A98  4E 80 00 20 */	blr
-.endfn __ct__Q34nw4r2ut44LinkList_Q44nw4r3snd6detail10BasicSound_256_Fv
+.endfn "__ct__Q34nw4r2ut44LinkList<Q44nw4r3snd6detail10BasicSound,256>Fv"
 
-#__dt__Q34nw4r2ut44LinkList<Q44nw4r3snd6detail10BasicSound,256>Fv
-.fn __dt__Q34nw4r2ut44LinkList_Q44nw4r3snd6detail10BasicSound_256_Fv, global
+.fn "__dt__Q34nw4r2ut44LinkList<Q44nw4r3snd6detail10BasicSound,256>Fv", global
 /* 804204DC 003E9A9C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804204E0 003E9AA0  7C 08 02 A6 */	mflr r0
 /* 804204E4 003E9AA4  2C 03 00 00 */	cmpwi r3, 0
@@ -83,7 +81,7 @@
 /* 80420528 003E9AE8  7C 08 03 A6 */	mtlr r0
 /* 8042052C 003E9AEC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80420530 003E9AF0  4E 80 00 20 */	blr 
-.endfn __dt__Q34nw4r2ut44LinkList_Q44nw4r3snd6detail10BasicSound_256_Fv
+.endfn "__dt__Q34nw4r2ut44LinkList<Q44nw4r3snd6detail10BasicSound,256>Fv"
 
 .fn __dt__Q34nw4r3snd11SoundPlayerFv, global
 /* 80420534 003E9AF4  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -365,12 +363,12 @@
 /* 804208E0 003E9EA0  7C 00 07 75 */	extsb. r0, r0
 /* 804208E4 003E9EA4  40 82 00 48 */	bne .L_8042092C
 /* 804208E8 003E9EA8  3C 60 80 64 */	lis r3, lbl_8063B4F0@ha
-/* 804208EC 003E9EAC  3C 80 80 42 */	lis r4, __ct__Q34nw4r2ut44LinkList_Q44nw4r3snd6detail10BasicSound_256_Fv@ha
-/* 804208F0 003E9EB0  3C A0 80 42 */	lis r5, __dt__Q34nw4r2ut44LinkList_Q44nw4r3snd6detail10BasicSound_256_Fv@ha
+/* 804208EC 003E9EAC  3C 80 80 42 */	lis r4, "__ct__Q34nw4r2ut44LinkList<Q44nw4r3snd6detail10BasicSound,256>Fv"@ha
+/* 804208F0 003E9EB0  3C A0 80 42 */	lis r5, "__dt__Q34nw4r2ut44LinkList<Q44nw4r3snd6detail10BasicSound,256>Fv"@ha
 /* 804208F4 003E9EB4  38 C0 00 0C */	li r6, 0xc
 /* 804208F8 003E9EB8  38 63 B4 F0 */	addi r3, r3, lbl_8063B4F0@l
-/* 804208FC 003E9EBC  38 84 04 BC */	addi r4, r4, __ct__Q34nw4r2ut44LinkList_Q44nw4r3snd6detail10BasicSound_256_Fv@l
-/* 80420900 003E9EC0  38 A5 04 DC */	addi r5, r5, __dt__Q34nw4r2ut44LinkList_Q44nw4r3snd6detail10BasicSound_256_Fv@l
+/* 804208FC 003E9EBC  38 84 04 BC */	addi r4, r4, "__ct__Q34nw4r2ut44LinkList<Q44nw4r3snd6detail10BasicSound,256>Fv"@l
+/* 80420900 003E9EC0  38 A5 04 DC */	addi r5, r5, "__dt__Q34nw4r2ut44LinkList<Q44nw4r3snd6detail10BasicSound,256>Fv"@l
 /* 80420904 003E9EC4  38 E0 00 80 */	li r7, 0x80
 /* 80420908 003E9EC8  4B E9 91 F9 */	bl __construct_array
 /* 8042090C 003E9ECC  3C 80 80 42 */	lis r4, __arraydtor$4226@ha
@@ -456,10 +454,10 @@
 
 .fn __arraydtor$4226, global
 /* 80420A20 003E9FE0  3C 60 80 64 */	lis r3, lbl_8063B4F0@ha
-/* 80420A24 003E9FE4  3C 80 80 42 */	lis r4, __dt__Q34nw4r2ut44LinkList_Q44nw4r3snd6detail10BasicSound_256_Fv@ha
+/* 80420A24 003E9FE4  3C 80 80 42 */	lis r4, "__dt__Q34nw4r2ut44LinkList<Q44nw4r3snd6detail10BasicSound,256>Fv"@ha
 /* 80420A28 003E9FE8  38 63 B4 F0 */	addi r3, r3, lbl_8063B4F0@l
 /* 80420A2C 003E9FEC  38 A0 00 0C */	li r5, 0xc
-/* 80420A30 003E9FF0  38 84 04 DC */	addi r4, r4, __dt__Q34nw4r2ut44LinkList_Q44nw4r3snd6detail10BasicSound_256_Fv@l
+/* 80420A30 003E9FF0  38 84 04 DC */	addi r4, r4, "__dt__Q34nw4r2ut44LinkList<Q44nw4r3snd6detail10BasicSound,256>Fv"@l
 /* 80420A34 003E9FF4  38 C0 00 80 */	li r6, 0x80
 /* 80420A38 003E9FF8  4B E9 91 C0 */	b __destroy_arr
 .endfn __arraydtor$4226

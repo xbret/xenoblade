@@ -2,12 +2,10 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-#TODO: Rename other symbols to later names
-
 
 .balign 16, 0
 .fn WUDIsLinkedWBC, global
-/* 80375BE0 0033F1A0  80 6D BB 78 */	lwz r3, lbl_80667CF8@sda21(r13)
+/* 80375BE0 0033F1A0  80 6D BB 78 */	lwz r3, _linkedWBC@sda21(r13)
 /* 80375BE4 0033F1A4  4E 80 00 20 */	blr 
 .endfn WUDIsLinkedWBC
 
@@ -59,8 +57,9 @@
 /* 80375C8C 0033F24C  4E 80 00 20 */	blr
 .endfn App_MEMfree
 
+#SyncFlushCallback
 .balign 16, 0
-.fn SyncFlushCallback, global
+.fn __wudSyncFlushCallback, global
 /* 80375C90 0033F250  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80375C94 0033F254  7C 08 02 A6 */	mflr r0
 /* 80375C98 0033F258  90 01 00 14 */	stw r0, 0x14(r1)
@@ -93,7 +92,7 @@
 /* 80375CFC 0033F2BC  7C 08 03 A6 */	mtlr r0
 /* 80375D00 0033F2C0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80375D04 0033F2C4  4E 80 00 20 */	blr 
-.endfn SyncFlushCallback
+.endfn __wudSyncFlushCallback
 
 .balign 16, 0
 .fn WUDiIsSyncDisabled, global
@@ -194,18 +193,19 @@
 /* 80375E64 0033F424  4E 80 00 20 */	blr 
 .endfn WUDiIsSyncDisabled
 
+#WUDiTryConnecting
 .balign 16, 0
-.fn WUDiTryConnecting, global
+.fn __wudSyncTryConnect, global
 /* 80375E70 0033F430  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80375E74 0033F434  7C 08 02 A6 */	mflr r0
 /* 80375E78 0033F438  90 01 00 34 */	stw r0, 0x34(r1)
 /* 80375E7C 0033F43C  39 61 00 30 */	addi r11, r1, 0x30
 /* 80375E80 0033F440  4B F4 42 CD */	bl _savegpr_25
 /* 80375E84 0033F444  3F E0 80 5E */	lis r31, __rvl_wudcb@ha
-/* 80375E88 0033F448  3F C0 80 56 */	lis r30, lbl_805622C8@ha
+/* 80375E88 0033F448  3F C0 80 56 */	lis r30, _wudWiiRemoteDescriptor@ha
 /* 80375E8C 0033F44C  3B FF 12 80 */	addi r31, r31, __rvl_wudcb@l
 /* 80375E90 0033F450  3B 20 00 FF */	li r25, 0xff
-/* 80375E94 0033F454  3B DE 22 C8 */	addi r30, r30, lbl_805622C8@l
+/* 80375E94 0033F454  3B DE 22 C8 */	addi r30, r30, _wudWiiRemoteDescriptor@l
 /* 80375E98 0033F458  38 A0 00 10 */	li r5, 0x10
 /* 80375E9C 0033F45C  38 7F 07 50 */	addi r3, r31, 0x750
 /* 80375EA0 0033F460  38 63 00 06 */	addi r3, r3, 6
@@ -222,7 +222,7 @@
 /* 80375ECC 0033F48C  4B F6 DA 89 */	bl BTA_HhOpen
 /* 80375ED0 0033F490  3B 20 00 06 */	li r25, 6
 .L_80375ED4:
-/* 80375ED4 0033F494  80 0D BB 78 */	lwz r0, lbl_80667CF8@sda21(r13)
+/* 80375ED4 0033F494  80 0D BB 78 */	lwz r0, _linkedWBC@sda21(r13)
 /* 80375ED8 0033F498  2C 00 00 00 */	cmpwi r0, 0
 /* 80375EDC 0033F49C  41 82 00 E8 */	beq .L_80375FC4
 /* 80375EE0 0033F4A0  38 7F 07 50 */	addi r3, r31, 0x750
@@ -296,22 +296,22 @@
 /* 80375FD4 0033F594  7C 08 03 A6 */	mtlr r0
 /* 80375FD8 0033F598  38 21 00 30 */	addi r1, r1, 0x30
 /* 80375FDC 0033F59C  4E 80 00 20 */	blr 
-.endfn WUDiTryConnecting
+.endfn __wudSyncTryConnect
 
+#WUDiGetNewStdDevInfo
 .balign 16, 0
-#not sure
-.fn WUDiGetNewStdDevInfo, global
+.fn __wudSyncVirginStandard, global
 /* 80375FE0 0033F5A0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80375FE4 0033F5A4  7C 08 02 A6 */	mflr r0
 /* 80375FE8 0033F5A8  90 01 00 34 */	stw r0, 0x34(r1)
 /* 80375FEC 0033F5AC  39 61 00 30 */	addi r11, r1, 0x30
 /* 80375FF0 0033F5B0  4B F4 41 61 */	bl _savegpr_26
-/* 80375FF4 0033F5B4  80 0D BB 78 */	lwz r0, lbl_80667CF8@sda21(r13)
+/* 80375FF4 0033F5B4  80 0D BB 78 */	lwz r0, _linkedWBC@sda21(r13)
 /* 80375FF8 0033F5B8  3F E0 80 5E */	lis r31, __rvl_wudcb@ha
 /* 80375FFC 0033F5BC  3B FF 12 80 */	addi r31, r31, __rvl_wudcb@l
-/* 80376000 0033F5C0  3F A0 80 56 */	lis r29, lbl_805622C8@ha
+/* 80376000 0033F5C0  3F A0 80 56 */	lis r29, _wudWiiRemoteDescriptor@ha
 /* 80376004 0033F5C4  2C 00 00 00 */	cmpwi r0, 0
-/* 80376008 0033F5C8  3B BD 22 C8 */	addi r29, r29, lbl_805622C8@l
+/* 80376008 0033F5C8  3B BD 22 C8 */	addi r29, r29, _wudWiiRemoteDescriptor@l
 /* 8037600C 0033F5CC  3B 5F 00 00 */	addi r26, r31, 0
 /* 80376010 0033F5D0  41 82 00 9C */	beq .L_803760AC
 /* 80376014 0033F5D4  38 7F 08 58 */	addi r3, r31, 0x858
@@ -421,7 +421,7 @@
 /* 80376188 0033F748  48 00 3E 99 */	bl WUDiRegisterDevice
 /* 8037618C 0033F74C  7F C3 F3 78 */	mr r3, r30
 /* 80376190 0033F750  48 00 46 01 */	bl WUDiMoveTopStdDevInfoPtr
-/* 80376194 0033F754  80 0D BB 78 */	lwz r0, lbl_80667CF8@sda21(r13)
+/* 80376194 0033F754  80 0D BB 78 */	lwz r0, _linkedWBC@sda21(r13)
 /* 80376198 0033F758  2C 00 00 00 */	cmpwi r0, 0
 /* 8037619C 0033F75C  41 82 01 8C */	beq .L_80376328
 /* 803761A0 0033F760  7F C3 F3 78 */	mr r3, r30
@@ -470,7 +470,7 @@
 /* 80376244 0033F804  38 A0 00 40 */	li r5, 0x40
 /* 80376248 0033F808  4B C8 DD B9 */	bl memcpy
 .L_8037624C:
-/* 8037624C 0033F80C  80 6D BB 7C */	lwz r3, lbl_80667CFC@sda21(r13)
+/* 8037624C 0033F80C  80 6D BB 7C */	lwz r3, _wudNandWbcCrc@sda21(r13)
 /* 80376250 0033F810  38 00 00 08 */	li r0, 8
 /* 80376254 0033F814  38 9F 0D 20 */	addi r4, r31, 0xd20
 /* 80376258 0033F818  54 65 84 3E */	srwi r5, r3, 0x10
@@ -540,10 +540,11 @@
 /* 8037634C 0033F90C  7C 08 03 A6 */	mtlr r0
 /* 80376350 0033F910  38 21 00 30 */	addi r1, r1, 0x30
 /* 80376354 0033F914  4E 80 00 20 */	blr 
-.endfn WUDiGetNewStdDevInfo
+.endfn __wudSyncVirginStandard
 
+#WUDiSaveDeviceToNand
 .balign 16, 0
-.fn WUDiSaveDeviceToNand, global
+.fn __wudSyncStoredDevInfoToNand, global
 /* 80376360 0033F920  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80376364 0033F924  7C 08 02 A6 */	mflr r0
 /* 80376368 0033F928  90 01 00 24 */	stw r0, 0x24(r1)
@@ -603,7 +604,7 @@
 /* 80376434 0033F9F4  38 60 00 16 */	li r3, 0x16
 /* 80376438 0033F9F8  48 00 00 44 */	b .L_8037647C
 .L_8037643C:
-/* 8037643C 0033F9FC  80 0D BB 78 */	lwz r0, lbl_80667CF8@sda21(r13)
+/* 8037643C 0033F9FC  80 0D BB 78 */	lwz r0, _linkedWBC@sda21(r13)
 /* 80376440 0033FA00  3B 80 00 19 */	li r28, 0x19
 /* 80376444 0033FA04  2C 00 00 00 */	cmpwi r0, 0
 /* 80376448 0033FA08  41 82 00 30 */	beq .L_80376478
@@ -627,7 +628,7 @@
 /* 80376488 0033FA48  7C 08 03 A6 */	mtlr r0
 /* 8037648C 0033FA4C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80376490 0033FA50  4E 80 00 20 */	blr
-.endfn WUDiSaveDeviceToNand
+.endfn __wudSyncStoredDevInfoToNand
 
 .balign 16, 0
 .fn __wudOpenWiiFitCallback, local
@@ -662,7 +663,7 @@
 .L_80376504:
 /* 80376504 0033FAC4  38 00 00 00 */	li r0, 0
 /* 80376508 0033FAC8  3C 60 80 56 */	lis r3, lbl_805625D0@ha
-/* 8037650C 0033FACC  98 0D BB 84 */	stb r0, lbl_80667D04@sda21(r13)
+/* 8037650C 0033FACC  98 0D BB 84 */	stb r0, _wudNandLocked@sda21(r13)
 /* 80376510 0033FAD0  38 63 25 D0 */	addi r3, r3, lbl_805625D0@l
 /* 80376514 0033FAD4  4C C6 31 82 */	crclr 6
 /* 80376518 0033FAD8  48 00 60 B8 */	b WUD_DEBUGPrint
@@ -703,7 +704,7 @@
 .L_8037658C:
 /* 8037658C 0033FB4C  38 00 00 00 */	li r0, 0
 /* 80376590 0033FB50  3C 60 80 56 */	lis r3, lbl_805625E0@ha
-/* 80376594 0033FB54  98 0D BB 84 */	stb r0, lbl_80667D04@sda21(r13)
+/* 80376594 0033FB54  98 0D BB 84 */	stb r0, _wudNandLocked@sda21(r13)
 /* 80376598 0033FB58  38 63 25 E0 */	addi r3, r3, lbl_805625E0@l
 /* 8037659C 0033FB5C  4C C6 31 82 */	crclr 6
 /* 803765A0 0033FB60  48 00 60 30 */	b WUD_DEBUGPrint
@@ -742,7 +743,7 @@
 .L_80376614:
 /* 80376614 0033FBD4  38 00 00 00 */	li r0, 0
 /* 80376618 0033FBD8  3C 60 80 56 */	lis r3, lbl_805625F0@ha
-/* 8037661C 0033FBDC  98 0D BB 84 */	stb r0, lbl_80667D04@sda21(r13)
+/* 8037661C 0033FBDC  98 0D BB 84 */	stb r0, _wudNandLocked@sda21(r13)
 /* 80376620 0033FBE0  38 63 25 F0 */	addi r3, r3, lbl_805625F0@l
 /* 80376624 0033FBE4  4C C6 31 82 */	crclr 6
 /* 80376628 0033FBE8  48 00 5F A8 */	b WUD_DEBUGPrint
@@ -769,14 +770,15 @@
 .L_8037666C:
 /* 8037666C 0033FC2C  38 00 00 00 */	li r0, 0
 /* 80376670 0033FC30  3C 60 80 56 */	lis r3, lbl_80562604@ha
-/* 80376674 0033FC34  98 0D BB 84 */	stb r0, lbl_80667D04@sda21(r13)
+/* 80376674 0033FC34  98 0D BB 84 */	stb r0, _wudNandLocked@sda21(r13)
 /* 80376678 0033FC38  38 63 26 04 */	addi r3, r3, lbl_80562604@l
 /* 8037667C 0033FC3C  4C C6 31 82 */	crclr 6
 /* 80376680 0033FC40  48 00 5F 50 */	b WUD_DEBUGPrint
 .endfn __wudCloseWiiFitCallback
 
+#WUDiSyncDone
 .balign 16, 0
-.fn WUDiSyncDone, global
+.fn __wudSyncDone, global
 /* 80376690 0033FC50  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80376694 0033FC54  7C 08 02 A6 */	mflr r0
 /* 80376698 0033FC58  3C 60 80 5E */	lis r3, __rvl_wudcb@ha
@@ -833,7 +835,7 @@
 .L_80376754:
 /* 80376754 0033FD14  38 7D 07 10 */	addi r3, r29, 0x710
 /* 80376758 0033FD18  4B FD CA 29 */	bl OSCancelAlarm
-/* 8037675C 0033FD1C  80 0D BB 68 */	lwz r0, lbl_80667CE8@sda21(r13)
+/* 8037675C 0033FD1C  80 0D BB 68 */	lwz r0, _wudAbortSync@sda21(r13)
 /* 80376760 0033FD20  2C 00 00 00 */	cmpwi r0, 0
 /* 80376764 0033FD24  40 82 00 30 */	bne .L_80376794
 /* 80376768 0033FD28  4B FE 22 49 */	bl OSDisableInterrupts
@@ -877,20 +879,21 @@
 /* 803767EC 0033FDAC  7C 08 03 A6 */	mtlr r0
 /* 803767F0 0033FDB0  38 21 00 30 */	addi r1, r1, 0x30
 /* 803767F4 0033FDB4  4E 80 00 20 */	blr
-.endfn WUDiSyncDone
+.endfn __wudSyncDone
 
+#SyncHandler
 .balign 16, 0
-.fn SyncHandler, local
+.fn __wudSyncHandler, local
 /* 80376800 0033FDC0  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80376804 0033FDC4  7C 08 02 A6 */	mflr r0
 /* 80376808 0033FDC8  90 01 00 64 */	stw r0, 0x64(r1)
 /* 8037680C 0033FDCC  39 61 00 60 */	addi r11, r1, 0x60
 /* 80376810 0033FDD0  4B F4 39 3D */	bl _savegpr_25
 /* 80376814 0033FDD4  3F E0 80 5E */	lis r31, __rvl_wudcb@ha
-/* 80376818 0033FDD8  3F C0 80 56 */	lis r30, lbl_805622C8@ha
+/* 80376818 0033FDD8  3F C0 80 56 */	lis r30, _wudWiiRemoteDescriptor@ha
 /* 8037681C 0033FDDC  3B FF 12 80 */	addi r31, r31, __rvl_wudcb@l
 /* 80376820 0033FDE0  3B 9F 00 00 */	addi r28, r31, 0
-/* 80376824 0033FDE4  3B DE 22 C8 */	addi r30, r30, lbl_805622C8@l
+/* 80376824 0033FDE4  3B DE 22 C8 */	addi r30, r30, _wudWiiRemoteDescriptor@l
 /* 80376828 0033FDE8  88 1C 00 0C */	lbz r0, 0xc(r28)
 /* 8037682C 0033FDEC  2C 00 00 13 */	cmpwi r0, 0x13
 /* 80376830 0033FDF0  41 82 04 D4 */	beq .L_80376D04
@@ -1041,7 +1044,7 @@
 /* 80376A24 0033FFE4  98 01 00 31 */	stb r0, 0x31(r1)
 .L_80376A28:
 /* 80376A28 0033FFE8  38 00 00 00 */	li r0, 0
-/* 80376A2C 0033FFEC  98 0D BB 97 */	stb r0, lbl_80667D17@sda21(r13)
+/* 80376A2C 0033FFEC  98 0D BB 97 */	stb r0, _wudDiscNumResps@sda21(r13)
 /* 80376A30 0033FFF0  38 7F 07 50 */	addi r3, r31, 0x750
 /* 80376A34 0033FFF4  38 80 00 00 */	li r4, 0
 /* 80376A38 0033FFF8  38 A0 01 08 */	li r5, 0x108
@@ -1055,7 +1058,7 @@
 /* 80376A58 00340018  98 1C 00 0C */	stb r0, 0xc(r28)
 /* 80376A5C 0034001C  48 00 08 70 */	b .L_803772CC
 .L_80376A60:
-/* 80376A60 00340020  88 0D BB 97 */	lbz r0, lbl_80667D17@sda21(r13)
+/* 80376A60 00340020  88 0D BB 97 */	lbz r0, _wudDiscNumResps@sda21(r13)
 /* 80376A64 00340024  3B A0 00 01 */	li r29, 1
 /* 80376A68 00340028  2C 00 00 00 */	cmpwi r0, 0
 /* 80376A6C 0034002C  41 82 00 70 */	beq .L_80376ADC
@@ -1068,7 +1071,7 @@
 /* 80376A88 00340048  40 82 00 08 */	bne .L_80376A90
 /* 80376A8C 0034004C  3B A0 00 05 */	li r29, 5
 .L_80376A90:
-/* 80376A90 00340050  80 0D BB 78 */	lwz r0, lbl_80667CF8@sda21(r13)
+/* 80376A90 00340050  80 0D BB 78 */	lwz r0, _linkedWBC@sda21(r13)
 /* 80376A94 00340054  2C 00 00 00 */	cmpwi r0, 0
 /* 80376A98 00340058  41 82 00 24 */	beq .L_80376ABC
 /* 80376A9C 0034005C  38 7F 07 50 */	addi r3, r31, 0x750
@@ -1081,7 +1084,7 @@
 /* 80376AB8 00340078  3B A0 00 05 */	li r29, 5
 .L_80376ABC:
 /* 80376ABC 0034007C  38 7F 00 00 */	addi r3, r31, 0
-/* 80376AC0 00340080  88 8D BB 96 */	lbz r4, lbl_80667D16@sda21(r13)
+/* 80376AC0 00340080  88 8D BB 96 */	lbz r4, _wudDiscRssi@sda21(r13)
 /* 80376AC4 00340084  88 03 07 0B */	lbz r0, 0x70b(r3)
 /* 80376AC8 00340088  7C 83 07 74 */	extsb r3, r4
 /* 80376ACC 0034008C  7C 00 07 74 */	extsb r0, r0
@@ -1212,7 +1215,7 @@
 /* 80376C80 00340240  98 1C 00 0C */	stb r0, 0xc(r28)
 /* 80376C84 00340244  48 00 06 48 */	b .L_803772CC
 .L_80376C88:
-/* 80376C88 00340248  4B FF F1 E9 */	bl WUDiTryConnecting
+/* 80376C88 00340248  4B FF F1 E9 */	bl __wudSyncTryConnect
 /* 80376C8C 0034024C  98 7C 00 0C */	stb r3, 0xc(r28)
 /* 80376C90 00340250  48 00 06 3C */	b .L_803772CC
 .L_80376C94:
@@ -1328,7 +1331,7 @@
 /* 80376E04 003403C4  98 BC 00 0C */	stb r5, 0xc(r28)
 /* 80376E08 003403C8  48 00 04 C4 */	b .L_803772CC
 .L_80376E0C:
-/* 80376E0C 003403CC  4B FF F1 D5 */	bl WUDiGetNewStdDevInfo
+/* 80376E0C 003403CC  4B FF F1 D5 */	bl __wudSyncVirginStandard
 /* 80376E10 003403D0  98 7C 00 0C */	stb r3, 0xc(r28)
 /* 80376E14 003403D4  48 00 04 B8 */	b .L_803772CC
 .L_80376E18:
@@ -1338,7 +1341,7 @@
 /* 80376E24 003403E4  80 63 00 00 */	lwz r3, 0(r3)
 /* 80376E28 003403E8  38 63 00 40 */	addi r3, r3, 0x40
 /* 80376E2C 003403EC  48 00 33 55 */	bl WUDiRemoveDevice
-/* 80376E30 003403F0  4B FF F1 B1 */	bl WUDiGetNewStdDevInfo
+/* 80376E30 003403F0  4B FF F1 B1 */	bl __wudSyncVirginStandard
 /* 80376E34 003403F4  98 7C 00 0C */	stb r3, 0xc(r28)
 /* 80376E38 003403F8  48 00 04 94 */	b .L_803772CC
 .L_80376E3C:
@@ -1355,7 +1358,7 @@
 /* 80376E5C 0034041C  38 00 00 07 */	li r0, 7
 /* 80376E60 00340420  48 00 01 04 */	b .L_80376F64
 .L_80376E64:
-/* 80376E64 00340424  80 0D BB 78 */	lwz r0, lbl_80667CF8@sda21(r13)
+/* 80376E64 00340424  80 0D BB 78 */	lwz r0, _linkedWBC@sda21(r13)
 /* 80376E68 00340428  2C 00 00 00 */	cmpwi r0, 0
 /* 80376E6C 0034042C  41 82 00 24 */	beq .L_80376E90
 /* 80376E70 00340430  38 7F 08 58 */	addi r3, r31, 0x858
@@ -1442,7 +1445,7 @@
 /* 80376F98 00340558  98 1C 00 0C */	stb r0, 0xc(r28)
 /* 80376F9C 0034055C  48 00 03 30 */	b .L_803772CC
 .L_80376FA0:
-/* 80376FA0 00340560  4B FF F3 C1 */	bl WUDiSaveDeviceToNand
+/* 80376FA0 00340560  4B FF F3 C1 */	bl __wudSyncStoredDevInfoToNand
 /* 80376FA4 00340564  98 7C 00 0C */	stb r3, 0xc(r28)
 /* 80376FA8 00340568  48 00 03 24 */	b .L_803772CC
 .L_80376FAC:
@@ -1450,8 +1453,8 @@
 /* 80376FB0 00340570  38 00 00 0D */	li r0, 0xd
 /* 80376FB4 00340574  98 1C 00 0C */	stb r0, 0xc(r28)
 /* 80376FB8 00340578  4B FE 1A 39 */	bl OSRestoreInterrupts
-/* 80376FBC 0034057C  3C 60 80 37 */	lis r3, SyncFlushCallback@ha
-/* 80376FC0 00340580  38 63 5C 90 */	addi r3, r3, SyncFlushCallback@l
+/* 80376FBC 0034057C  3C 60 80 37 */	lis r3, __wudSyncFlushCallback@ha
+/* 80376FC0 00340580  38 63 5C 90 */	addi r3, r3, __wudSyncFlushCallback@l
 /* 80376FC4 00340584  4B FE 99 9D */	bl SCFlushAsync
 /* 80376FC8 00340588  48 00 03 04 */	b .L_803772CC
 .L_80376FCC:
@@ -1507,7 +1510,7 @@
 /* 8037706C 0034062C  98 1C 00 0C */	stb r0, 0xc(r28)
 /* 80377070 00340630  48 00 02 5C */	b .L_803772CC
 .L_80377074:
-/* 80377074 00340634  4B FF F6 1D */	bl WUDiSyncDone
+/* 80377074 00340634  4B FF F6 1D */	bl __wudSyncDone
 /* 80377078 00340638  98 7C 00 0C */	stb r3, 0xc(r28)
 /* 8037707C 0034063C  48 00 02 50 */	b .L_803772CC
 .L_80377080:
@@ -1557,7 +1560,7 @@
 /* 80377118 003406D8  9B 5C 00 0C */	stb r26, 0xc(r28)
 /* 8037711C 003406DC  48 00 01 B0 */	b .L_803772CC
 .L_80377120:
-/* 80377120 003406E0  88 0D BB 84 */	lbz r0, lbl_80667D04@sda21(r13)
+/* 80377120 003406E0  88 0D BB 84 */	lbz r0, _wudNandLocked@sda21(r13)
 /* 80377124 003406E4  3B 3E 04 28 */	addi r25, r30, 0x428
 /* 80377128 003406E8  2C 00 00 00 */	cmpwi r0, 0
 /* 8037712C 003406EC  40 82 01 A0 */	bne .L_803772CC
@@ -1567,7 +1570,7 @@
 /* 8037713C 003406FC  48 00 54 95 */	bl WUD_DEBUGPrint
 /* 80377140 00340700  38 00 00 01 */	li r0, 1
 /* 80377144 00340704  3C C0 80 37 */	lis r6, __wudOpenWiiFitCallback@ha
-/* 80377148 00340708  98 0D BB 84 */	stb r0, lbl_80667D04@sda21(r13)
+/* 80377148 00340708  98 0D BB 84 */	stb r0, _wudNandLocked@sda21(r13)
 /* 8037714C 0034070C  7F 23 CB 78 */	mr r3, r25
 /* 80377150 00340710  38 9F 0E 00 */	addi r4, r31, 0xe00
 /* 80377154 00340714  38 C6 64 A0 */	addi r6, r6, __wudOpenWiiFitCallback@l
@@ -1576,13 +1579,13 @@
 /* 80377160 00340720  4B FD 89 81 */	bl NANDOpenAsync
 /* 80377164 00340724  48 00 01 68 */	b .L_803772CC
 .L_80377168:
-/* 80377168 00340728  88 0D BB 84 */	lbz r0, lbl_80667D04@sda21(r13)
+/* 80377168 00340728  88 0D BB 84 */	lbz r0, _wudNandLocked@sda21(r13)
 /* 8037716C 0034072C  2C 00 00 00 */	cmpwi r0, 0
 /* 80377170 00340730  40 82 01 5C */	bne .L_803772CC
 /* 80377174 00340734  38 00 00 01 */	li r0, 1
 /* 80377178 00340738  3C 80 00 05 */	lis r4, 0x0004AF18@ha
 /* 8037717C 0034073C  3C C0 80 37 */	lis r6, __wudSeekWiiFitCallback@ha
-/* 80377180 00340740  98 0D BB 84 */	stb r0, lbl_80667D04@sda21(r13)
+/* 80377180 00340740  98 0D BB 84 */	stb r0, _wudNandLocked@sda21(r13)
 /* 80377184 00340744  38 7F 0E 00 */	addi r3, r31, 0xe00
 /* 80377188 00340748  38 84 AF 18 */	addi r4, r4, 0x0004AF18@l
 /* 8037718C 0034074C  38 C6 65 20 */	addi r6, r6, __wudSeekWiiFitCallback@l
@@ -1591,7 +1594,7 @@
 /* 80377198 00340758  4B FD 7D 79 */	bl NANDSeekAsync
 /* 8037719C 0034075C  48 00 01 30 */	b .L_803772CC
 .L_803771A0:
-/* 803771A0 00340760  88 0D BB 84 */	lbz r0, lbl_80667D04@sda21(r13)
+/* 803771A0 00340760  88 0D BB 84 */	lbz r0, _wudNandLocked@sda21(r13)
 /* 803771A4 00340764  2C 00 00 00 */	cmpwi r0, 0
 /* 803771A8 00340768  40 82 01 24 */	bne .L_803772CC
 /* 803771AC 0034076C  38 7E 04 68 */	addi r3, r30, 0x468
@@ -1644,7 +1647,7 @@
 /* 80377268 00340828  48 00 53 69 */	bl WUD_DEBUGPrint
 /* 8037726C 0034082C  38 00 00 01 */	li r0, 1
 /* 80377270 00340830  3C C0 80 37 */	lis r6, __wudUpdateWiiFitCallback@ha
-/* 80377274 00340834  98 0D BB 84 */	stb r0, lbl_80667D04@sda21(r13)
+/* 80377274 00340834  98 0D BB 84 */	stb r0, _wudNandLocked@sda21(r13)
 /* 80377278 00340838  7F 84 E3 78 */	mr r4, r28
 /* 8037727C 0034083C  38 7F 0E 00 */	addi r3, r31, 0xe00
 /* 80377280 00340840  38 C6 65 B0 */	addi r6, r6, __wudUpdateWiiFitCallback@l
@@ -1653,12 +1656,12 @@
 /* 8037728C 0034084C  4B FD 7C 05 */	bl NANDWriteAsync
 /* 80377290 00340850  48 00 00 3C */	b .L_803772CC
 .L_80377294:
-/* 80377294 00340854  88 0D BB 84 */	lbz r0, lbl_80667D04@sda21(r13)
+/* 80377294 00340854  88 0D BB 84 */	lbz r0, _wudNandLocked@sda21(r13)
 /* 80377298 00340858  2C 00 00 00 */	cmpwi r0, 0
 /* 8037729C 0034085C  40 82 00 30 */	bne .L_803772CC
 /* 803772A0 00340860  38 00 00 01 */	li r0, 1
 /* 803772A4 00340864  3C 80 80 37 */	lis r4, __wudCloseWiiFitCallback@ha
-/* 803772A8 00340868  98 0D BB 84 */	stb r0, lbl_80667D04@sda21(r13)
+/* 803772A8 00340868  98 0D BB 84 */	stb r0, _wudNandLocked@sda21(r13)
 /* 803772AC 0034086C  38 7F 0E 00 */	addi r3, r31, 0xe00
 /* 803772B0 00340870  38 84 66 30 */	addi r4, r4, __wudCloseWiiFitCallback@l
 /* 803772B4 00340874  38 BF 0E 8C */	addi r5, r31, 0xe8c
@@ -1675,22 +1678,24 @@
 /* 803772D8 00340898  7C 08 03 A6 */	mtlr r0
 /* 803772DC 0034089C  38 21 00 60 */	addi r1, r1, 0x60
 /* 803772E0 003408A0  4E 80 00 20 */	blr
-.endfn SyncHandler
+.endfn __wudSyncHandler
 
+#SyncHandler0
 .balign 16, 0
-.fn SyncHandler0, local
-/* 803772F0 003408B0  3D 00 80 5E */	lis r8, lbl_805E21E0@ha
-/* 803772F4 003408B4  3C E0 80 37 */	lis r7, SyncHandler@ha
-/* 803772F8 003408B8  39 08 21 E0 */	addi r8, r8, lbl_805E21E0@l
+.fn __wudSyncHandler0, local
+/* 803772F0 003408B0  3D 00 80 5E */	lis r8, _wudHandlerStack@ha
+/* 803772F4 003408B4  3C E0 80 37 */	lis r7, __wudSyncHandler@ha
+/* 803772F8 003408B8  39 08 21 E0 */	addi r8, r8, _wudHandlerStack@l
 /* 803772FC 003408BC  38 A0 00 00 */	li r5, 0
-/* 80377300 003408C0  38 E7 68 00 */	addi r7, r7, SyncHandler@l
+/* 80377300 003408C0  38 E7 68 00 */	addi r7, r7, __wudSyncHandler@l
 /* 80377304 003408C4  38 C0 00 00 */	li r6, 0
 /* 80377308 003408C8  39 08 10 00 */	addi r8, r8, 0x1000
 /* 8037730C 003408CC  4B FD D7 84 */	b OSSwitchFiberEx
-.endfn SyncHandler0
+.endfn __wudSyncHandler0
 
+#DeleteFlushCallback
 .balign 16, 0
-.fn DeleteFlushCallback, local
+.fn __wudDeleteFlushCallback, local
 /* 80377310 003408D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80377314 003408D4  7C 08 02 A6 */	mflr r0
 /* 80377318 003408D8  3C C0 80 56 */	lis r6, lbl_805627BC@ha
@@ -1714,10 +1719,11 @@
 /* 8037735C 0034091C  7C 08 03 A6 */	mtlr r0
 /* 80377360 00340920  38 21 00 10 */	addi r1, r1, 0x10
 /* 80377364 00340924  4E 80 00 20 */	blr 
-.endfn DeleteFlushCallback
+.endfn __wudDeleteFlushCallback
 
+#WUDiTerminateDevice
 .balign 16, 0
-.fn WUDiTerminateDevice, global
+.fn __wudDeleteDisconnectAll, global
 /* 80377370 00340930  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80377374 00340934  7C 08 02 A6 */	mflr r0
 /* 80377378 00340938  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1760,10 +1766,11 @@
 /* 803773FC 003409BC  7C 08 03 A6 */	mtlr r0
 /* 80377400 003409C0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80377404 003409C4  4E 80 00 20 */	blr 
-.endfn WUDiTerminateDevice
+.endfn __wudDeleteDisconnectAll
 
+#WUDiDeleteDevice
 .balign 16, 0
-.fn WUDiDeleteDevice, global
+.fn __wudDeleteCleanupDatabase, global
 /* 80377410 003409D0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80377414 003409D4  7C 08 02 A6 */	mflr r0
 /* 80377418 003409D8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1808,7 +1815,7 @@
 /* 803774A0 00340A60  3B FF 00 60 */	addi r31, r31, 0x60
 /* 803774A4 00340A64  2C 1E 00 06 */	cmpwi r30, 6
 /* 803774A8 00340A68  41 80 FF DC */	blt .L_80377484
-/* 803774AC 00340A6C  80 0D BB 78 */	lwz r0, lbl_80667CF8@sda21(r13)
+/* 803774AC 00340A6C  80 0D BB 78 */	lwz r0, _linkedWBC@sda21(r13)
 /* 803774B0 00340A70  2C 00 00 00 */	cmpwi r0, 0
 /* 803774B4 00340A74  41 82 01 40 */	beq .L_803775F4
 /* 803774B8 00340A78  4B FE A1 19 */	bl SCGetProductGameRegion
@@ -1822,19 +1829,19 @@
 /* 803774D8 00340A98  48 00 00 08 */	b .L_803774E0
 /* 803774DC 00340A9C  4B C8 CB 25 */	bl memcpy
 .L_803774E0:
-/* 803774E0 00340AA0  3C 60 80 5E */	lis r3, lbl_805E1FA0@ha
+/* 803774E0 00340AA0  3C 60 80 5E */	lis r3, _wudNandWbcInfo@ha
 /* 803774E4 00340AA4  38 81 00 10 */	addi r4, r1, 0x10
-/* 803774E8 00340AA8  38 63 1F A0 */	addi r3, r3, lbl_805E1FA0@l
+/* 803774E8 00340AA8  38 63 1F A0 */	addi r3, r3, _wudNandWbcInfo@l
 /* 803774EC 00340AAC  38 A0 00 10 */	li r5, 0x10
 /* 803774F0 00340AB0  38 63 00 06 */	addi r3, r3, 6
 /* 803774F4 00340AB4  4B C8 CB 0D */	bl memcpy
 /* 803774F8 00340AB8  48 00 00 08 */	b .L_80377500
 /* 803774FC 00340ABC  4B C8 CB 05 */	bl memcpy
 .L_80377500:
-/* 80377500 00340AC0  80 6D BB 7C */	lwz r3, lbl_80667CFC@sda21(r13)
-/* 80377504 00340AC4  3C 80 80 5E */	lis r4, lbl_805E1FA0@ha
+/* 80377500 00340AC0  80 6D BB 7C */	lwz r3, _wudNandWbcCrc@sda21(r13)
+/* 80377504 00340AC4  3C 80 80 5E */	lis r4, _wudNandWbcInfo@ha
 /* 80377508 00340AC8  38 00 00 08 */	li r0, 8
-/* 8037750C 00340ACC  38 84 1F A0 */	addi r4, r4, lbl_805E1FA0@l
+/* 8037750C 00340ACC  38 84 1F A0 */	addi r4, r4, _wudNandWbcInfo@l
 /* 80377510 00340AD0  54 65 84 3E */	srwi r5, r3, 0x10
 /* 80377514 00340AD4  54 66 04 3E */	clrlwi r6, r3, 0x10
 /* 80377518 00340AD8  7C 09 03 A6 */	mtctr r0
@@ -1881,9 +1888,9 @@
 /* 803775B8 00340B78  7C 06 02 14 */	add r0, r6, r0
 /* 803775BC 00340B7C  54 06 04 3E */	clrlwi r6, r0, 0x10
 /* 803775C0 00340B80  42 00 FF 5C */	bdnz .L_8037751C
-/* 803775C4 00340B84  3C 60 80 5E */	lis r3, lbl_805E1FA0@ha
+/* 803775C4 00340B84  3C 60 80 5E */	lis r3, _wudNandWbcInfo@ha
 /* 803775C8 00340B88  50 A6 80 1E */	rlwimi r6, r5, 0x10, 0, 0xf
-/* 803775CC 00340B8C  38 63 1F A0 */	addi r3, r3, lbl_805E1FA0@l
+/* 803775CC 00340B8C  38 63 1F A0 */	addi r3, r3, _wudNandWbcInfo@l
 /* 803775D0 00340B90  90 C1 00 08 */	stw r6, 8(r1)
 /* 803775D4 00340B94  38 81 00 08 */	addi r4, r1, 8
 /* 803775D8 00340B98  38 A0 00 04 */	li r5, 4
@@ -1904,10 +1911,11 @@
 /* 80377608 00340BC8  7C 08 03 A6 */	mtlr r0
 /* 8037760C 00340BCC  38 21 00 30 */	addi r1, r1, 0x30
 /* 80377610 00340BD0  4E 80 00 20 */	blr
-.endfn WUDiDeleteDevice
+.endfn __wudDeleteCleanupDatabase
 
+#DeleteAllHandler
 .balign 16, 0
-.fn DeleteAllHandler, local
+.fn __wudDeleteHandler, local
 /* 80377620 00340BE0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80377624 00340BE4  7C 08 02 A6 */	mflr r0
 /* 80377628 00340BE8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1917,8 +1925,8 @@
 /* 80377638 00340BF8  3F C0 80 5E */	lis r30, __rvl_wudcb@ha
 /* 8037763C 00340BFC  3B DE 12 80 */	addi r30, r30, __rvl_wudcb@l
 /* 80377640 00340C00  93 A1 00 14 */	stw r29, 0x14(r1)
-/* 80377644 00340C04  3F A0 80 56 */	lis r29, lbl_805622C8@ha
-/* 80377648 00340C08  3B BD 22 C8 */	addi r29, r29, lbl_805622C8@l
+/* 80377644 00340C04  3F A0 80 56 */	lis r29, _wudWiiRemoteDescriptor@ha
+/* 80377648 00340C08  3B BD 22 C8 */	addi r29, r29, _wudWiiRemoteDescriptor@l
 /* 8037764C 00340C0C  93 81 00 10 */	stw r28, 0x10(r1)
 /* 80377650 00340C10  3B 9E 00 00 */	addi r28, r30, 0
 /* 80377654 00340C14  88 1C 00 0D */	lbz r0, 0xd(r28)
@@ -1959,11 +1967,11 @@
 /* 803776D0 00340C90  98 1C 00 0D */	stb r0, 0xd(r28)
 /* 803776D4 00340C94  48 00 02 7C */	b .L_80377950
 .L_803776D8:
-/* 803776D8 00340C98  4B FF FC 99 */	bl WUDiTerminateDevice
+/* 803776D8 00340C98  4B FF FC 99 */	bl __wudDeleteDisconnectAll
 /* 803776DC 00340C9C  98 7C 00 0D */	stb r3, 0xd(r28)
 /* 803776E0 00340CA0  48 00 02 70 */	b .L_80377950
 .L_803776E4:
-/* 803776E4 00340CA4  4B FF FD 2D */	bl WUDiDeleteDevice
+/* 803776E4 00340CA4  4B FF FD 2D */	bl __wudDeleteCleanupDatabase
 /* 803776E8 00340CA8  98 7C 00 0D */	stb r3, 0xd(r28)
 /* 803776EC 00340CAC  48 00 02 64 */	b .L_80377950
 .L_803776F0:
@@ -1986,9 +1994,9 @@
 /* 80377730 00340CF0  7F E0 1B 79 */	or. r0, r31, r3
 /* 80377734 00340CF4  41 82 00 1C */	beq .L_80377750
 /* 80377738 00340CF8  38 00 00 06 */	li r0, 6
-/* 8037773C 00340CFC  3C 60 80 37 */	lis r3, DeleteFlushCallback@ha
+/* 8037773C 00340CFC  3C 60 80 37 */	lis r3, __wudDeleteFlushCallback@ha
 /* 80377740 00340D00  98 1C 00 0D */	stb r0, 0xd(r28)
-/* 80377744 00340D04  38 63 73 10 */	addi r3, r3, DeleteFlushCallback@l
+/* 80377744 00340D04  38 63 73 10 */	addi r3, r3, __wudDeleteFlushCallback@l
 /* 80377748 00340D08  4B FE 92 19 */	bl SCFlushAsync
 /* 8037774C 00340D0C  48 00 02 04 */	b .L_80377950
 .L_80377750:
@@ -2020,7 +2028,7 @@
 /* 803777AC 00340D6C  98 1C 00 0D */	stb r0, 0xd(r28)
 /* 803777B0 00340D70  48 00 01 A0 */	b .L_80377950
 .L_803777B4:
-/* 803777B4 00340D74  88 0D BB 84 */	lbz r0, lbl_80667D04@sda21(r13)
+/* 803777B4 00340D74  88 0D BB 84 */	lbz r0, _wudNandLocked@sda21(r13)
 /* 803777B8 00340D78  3B FD 04 28 */	addi r31, r29, 0x428
 /* 803777BC 00340D7C  2C 00 00 00 */	cmpwi r0, 0
 /* 803777C0 00340D80  40 82 01 90 */	bne .L_80377950
@@ -2030,7 +2038,7 @@
 /* 803777D0 00340D90  48 00 4E 01 */	bl WUD_DEBUGPrint
 /* 803777D4 00340D94  38 00 00 01 */	li r0, 1
 /* 803777D8 00340D98  3C C0 80 37 */	lis r6, __wudOpenWiiFitCallback@ha
-/* 803777DC 00340D9C  98 0D BB 84 */	stb r0, lbl_80667D04@sda21(r13)
+/* 803777DC 00340D9C  98 0D BB 84 */	stb r0, _wudNandLocked@sda21(r13)
 /* 803777E0 00340DA0  7F E3 FB 78 */	mr r3, r31
 /* 803777E4 00340DA4  38 9E 0E 00 */	addi r4, r30, 0xe00
 /* 803777E8 00340DA8  38 C6 64 A0 */	addi r6, r6, __wudOpenWiiFitCallback@l
@@ -2039,13 +2047,13 @@
 /* 803777F4 00340DB4  4B FD 82 ED */	bl NANDOpenAsync
 /* 803777F8 00340DB8  48 00 01 58 */	b .L_80377950
 .L_803777FC:
-/* 803777FC 00340DBC  88 0D BB 84 */	lbz r0, lbl_80667D04@sda21(r13)
+/* 803777FC 00340DBC  88 0D BB 84 */	lbz r0, _wudNandLocked@sda21(r13)
 /* 80377800 00340DC0  2C 00 00 00 */	cmpwi r0, 0
 /* 80377804 00340DC4  40 82 01 4C */	bne .L_80377950
 /* 80377808 00340DC8  38 00 00 01 */	li r0, 1
 /* 8037780C 00340DCC  3C 80 00 05 */	lis r4, 0x0004AF18@ha
 /* 80377810 00340DD0  3C C0 80 37 */	lis r6, __wudSeekWiiFitCallback@ha
-/* 80377814 00340DD4  98 0D BB 84 */	stb r0, lbl_80667D04@sda21(r13)
+/* 80377814 00340DD4  98 0D BB 84 */	stb r0, _wudNandLocked@sda21(r13)
 /* 80377818 00340DD8  38 7E 0E 00 */	addi r3, r30, 0xe00
 /* 8037781C 00340DDC  38 84 AF 18 */	addi r4, r4, 0x0004AF18@l
 /* 80377820 00340DE0  38 C6 65 20 */	addi r6, r6, __wudSeekWiiFitCallback@l
@@ -2054,7 +2062,7 @@
 /* 8037782C 00340DEC  4B FD 76 E5 */	bl NANDSeekAsync
 /* 80377830 00340DF0  48 00 01 20 */	b .L_80377950
 .L_80377834:
-/* 80377834 00340DF4  88 0D BB 84 */	lbz r0, lbl_80667D04@sda21(r13)
+/* 80377834 00340DF4  88 0D BB 84 */	lbz r0, _wudNandLocked@sda21(r13)
 /* 80377838 00340DF8  2C 00 00 00 */	cmpwi r0, 0
 /* 8037783C 00340DFC  40 82 01 14 */	bne .L_80377950
 /* 80377840 00340E00  38 7D 04 68 */	addi r3, r29, 0x468
@@ -2107,7 +2115,7 @@
 /* 803778FC 00340EBC  48 00 4C D5 */	bl WUD_DEBUGPrint
 /* 80377900 00340EC0  38 00 00 01 */	li r0, 1
 /* 80377904 00340EC4  3C C0 80 37 */	lis r6, __wudUpdateWiiFitCallback@ha
-/* 80377908 00340EC8  98 0D BB 84 */	stb r0, lbl_80667D04@sda21(r13)
+/* 80377908 00340EC8  98 0D BB 84 */	stb r0, _wudNandLocked@sda21(r13)
 /* 8037790C 00340ECC  7F E4 FB 78 */	mr r4, r31
 /* 80377910 00340ED0  38 7E 0E 00 */	addi r3, r30, 0xe00
 /* 80377914 00340ED4  38 C6 65 B0 */	addi r6, r6, __wudUpdateWiiFitCallback@l
@@ -2116,12 +2124,12 @@
 /* 80377920 00340EE0  4B FD 75 71 */	bl NANDWriteAsync
 /* 80377924 00340EE4  48 00 00 2C */	b .L_80377950
 .L_80377928:
-/* 80377928 00340EE8  88 0D BB 84 */	lbz r0, lbl_80667D04@sda21(r13)
+/* 80377928 00340EE8  88 0D BB 84 */	lbz r0, _wudNandLocked@sda21(r13)
 /* 8037792C 00340EEC  2C 00 00 00 */	cmpwi r0, 0
 /* 80377930 00340EF0  40 82 00 20 */	bne .L_80377950
 /* 80377934 00340EF4  38 00 00 01 */	li r0, 1
 /* 80377938 00340EF8  3C 80 80 37 */	lis r4, __wudCloseWiiFitCallback@ha
-/* 8037793C 00340EFC  98 0D BB 84 */	stb r0, lbl_80667D04@sda21(r13)
+/* 8037793C 00340EFC  98 0D BB 84 */	stb r0, _wudNandLocked@sda21(r13)
 /* 80377940 00340F00  38 7E 0E 00 */	addi r3, r30, 0xe00
 /* 80377944 00340F04  38 84 66 30 */	addi r4, r4, __wudCloseWiiFitCallback@l
 /* 80377948 00340F08  38 BE 0E 8C */	addi r5, r30, 0xe8c
@@ -2135,22 +2143,24 @@
 /* 80377964 00340F24  7C 08 03 A6 */	mtlr r0
 /* 80377968 00340F28  38 21 00 20 */	addi r1, r1, 0x20
 /* 8037796C 00340F2C  4E 80 00 20 */	blr
-.endfn DeleteAllHandler
+.endfn __wudDeleteHandler
 
+#DeleteAllHandler0
 .balign 16, 0
-.fn DeleteAllHandler0, global
-/* 80377970 00340F30  3D 00 80 5E */	lis r8, lbl_805E21E0@ha
-/* 80377974 00340F34  3C E0 80 37 */	lis r7, DeleteAllHandler@ha
-/* 80377978 00340F38  39 08 21 E0 */	addi r8, r8, lbl_805E21E0@l
+.fn __wudDeleteHandler0, global
+/* 80377970 00340F30  3D 00 80 5E */	lis r8, _wudHandlerStack@ha
+/* 80377974 00340F34  3C E0 80 37 */	lis r7, __wudDeleteHandler@ha
+/* 80377978 00340F38  39 08 21 E0 */	addi r8, r8, _wudHandlerStack@l
 /* 8037797C 00340F3C  38 A0 00 00 */	li r5, 0
-/* 80377980 00340F40  38 E7 76 20 */	addi r7, r7, DeleteAllHandler@l
+/* 80377980 00340F40  38 E7 76 20 */	addi r7, r7, __wudDeleteHandler@l
 /* 80377984 00340F44  38 C0 00 00 */	li r6, 0
 /* 80377988 00340F48  39 08 10 00 */	addi r8, r8, 0x1000
 /* 8037798C 00340F4C  4B FD D1 04 */	b OSSwitchFiberEx
-.endfn DeleteAllHandler0
+.endfn __wudDeleteHandler0
 
+#WUDiClearUnregisteredDevice
 .balign 16, 0
-.fn WUDiClearUnregisteredDevice, global
+.fn __wudStackCheckDeviceInfo, global
 /* 80377990 00340F50  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80377994 00340F54  7C 08 02 A6 */	mflr r0
 /* 80377998 00340F58  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2225,16 +2235,17 @@
 /* 80377A90 00341050  7C 08 03 A6 */	mtlr r0
 /* 80377A94 00341054  38 21 00 20 */	addi r1, r1, 0x20
 /* 80377A98 00341058  4E 80 00 20 */	blr
-.endfn WUDiClearUnregisteredDevice
+.endfn __wudStackCheckDeviceInfo
 
+#EnableStackHandler
 .balign 16, 0
-.fn EnableStackHandler, local
+.fn __wudStackHandler, local
 /* 80377AA0 00341060  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80377AA4 00341064  7C 08 02 A6 */	mflr r0
 /* 80377AA8 00341068  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80377AAC 0034106C  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 80377AB0 00341070  3F E0 80 56 */	lis r31, lbl_805622C8@ha
-/* 80377AB4 00341074  3B FF 22 C8 */	addi r31, r31, lbl_805622C8@l
+/* 80377AB0 00341070  3F E0 80 56 */	lis r31, _wudWiiRemoteDescriptor@ha
+/* 80377AB4 00341074  3B FF 22 C8 */	addi r31, r31, _wudWiiRemoteDescriptor@l
 /* 80377AB8 00341078  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80377ABC 0034107C  3F C0 80 5E */	lis r30, __rvl_wudcb@ha
 /* 80377AC0 00341080  3B DE 12 80 */	addi r30, r30, __rvl_wudcb@l
@@ -2261,7 +2272,7 @@
 /* 80377B0C 003410CC  98 1E 00 0F */	stb r0, 0xf(r30)
 /* 80377B10 003410D0  48 00 00 BC */	b .L_80377BCC
 .L_80377B14:
-/* 80377B14 003410D4  4B FF FE 7D */	bl WUDiClearUnregisteredDevice
+/* 80377B14 003410D4  4B FF FE 7D */	bl __wudStackCheckDeviceInfo
 /* 80377B18 003410D8  98 7E 00 0F */	stb r3, 0xf(r30)
 /* 80377B1C 003410DC  48 00 00 B0 */	b .L_80377BCC
 .L_80377B20:
@@ -2301,7 +2312,7 @@
 /* 80377BA4 00341164  54 00 05 3E */	clrlwi r0, r0, 0x14
 /* 80377BA8 00341168  2C 00 00 A7 */	cmpwi r0, 0xa7
 /* 80377BAC 0034116C  40 82 00 0C */	bne .L_80377BB8
-/* 80377BB0 00341170  48 00 22 01 */	bl __wudStackHandler
+/* 80377BB0 00341170  48 00 22 01 */	bl __wudAppendRuntimePatch
 /* 80377BB4 00341174  48 00 00 08 */	b .L_80377BBC
 .L_80377BB8:
 /* 80377BB8 00341178  48 00 22 F9 */	bl __wudInitSub
@@ -2319,22 +2330,23 @@
 /* 80377BD8 00341198  7C 08 03 A6 */	mtlr r0
 /* 80377BDC 0034119C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80377BE0 003411A0  4E 80 00 20 */	blr
-.endfn EnableStackHandler
+.endfn __wudStackHandler
 
+#EnableStackHandler0
 .balign 16, 0
-.fn EnableStackHandler0, local
-/* 80377BF0 003411B0  3D 00 80 5E */	lis r8, lbl_805E21E0@ha
-/* 80377BF4 003411B4  3C E0 80 37 */	lis r7, EnableStackHandler@ha
-/* 80377BF8 003411B8  39 08 21 E0 */	addi r8, r8, lbl_805E21E0@l
+.fn __wudStackHandler0, local
+/* 80377BF0 003411B0  3D 00 80 5E */	lis r8, _wudHandlerStack@ha
+/* 80377BF4 003411B4  3C E0 80 37 */	lis r7, __wudStackHandler@ha
+/* 80377BF8 003411B8  39 08 21 E0 */	addi r8, r8, _wudHandlerStack@l
 /* 80377BFC 003411BC  38 A0 00 00 */	li r5, 0
-/* 80377C00 003411C0  38 E7 7A A0 */	addi r7, r7, EnableStackHandler@l
+/* 80377C00 003411C0  38 E7 7A A0 */	addi r7, r7, __wudStackHandler@l
 /* 80377C04 003411C4  38 C0 00 00 */	li r6, 0
 /* 80377C08 003411C8  39 08 10 00 */	addi r8, r8, 0x1000
 /* 80377C0C 003411CC  4B FD CE 84 */	b OSSwitchFiberEx
-.endfn EnableStackHandler0
+.endfn __wudStackHandler0
 
 .balign 16, 0
-.fn __wudInitFlushCallbac, local
+.fn __wudInitFlushCallback, local
 /* 80377C10 003411D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80377C14 003411D4  7C 08 02 A6 */	mflr r0
 /* 80377C18 003411D8  3C C0 80 56 */	lis r6, lbl_8056288C@ha
@@ -2354,20 +2366,21 @@
 /* 80377C50 00341210  7C 08 03 A6 */	mtlr r0
 /* 80377C54 00341214  38 21 00 10 */	addi r1, r1, 0x10
 /* 80377C58 00341218  4E 80 00 20 */	blr 
-.endfn __wudInitFlushCallbac
+.endfn __wudInitFlushCallback
 
+#WUDiGetRegisteredDevice
 .balign 16, 0
-.fn WUDiGetRegisteredDevice, global
+.fn __wudInitDevInfo, global
 /* 80377C60 00341220  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80377C64 00341224  7C 08 02 A6 */	mflr r0
 /* 80377C68 00341228  90 01 00 64 */	stw r0, 0x64(r1)
 /* 80377C6C 0034122C  39 61 00 60 */	addi r11, r1, 0x60
 /* 80377C70 00341230  4B F4 24 B1 */	bl _savegpr_14
 /* 80377C74 00341234  3F 20 80 5E */	lis r25, __rvl_wudcb@ha
-/* 80377C78 00341238  3F 00 80 56 */	lis r24, lbl_805622C8@ha
+/* 80377C78 00341238  3F 00 80 56 */	lis r24, _wudWiiRemoteDescriptor@ha
 /* 80377C7C 0034123C  3B 39 12 80 */	addi r25, r25, __rvl_wudcb@l
 /* 80377C80 00341240  38 80 00 00 */	li r4, 0
-/* 80377C84 00341244  3B 18 22 C8 */	addi r24, r24, lbl_805622C8@l
+/* 80377C84 00341244  3B 18 22 C8 */	addi r24, r24, _wudWiiRemoteDescriptor@l
 /* 80377C88 00341248  38 A0 04 61 */	li r5, 0x461
 /* 80377C8C 0034124C  38 79 08 B8 */	addi r3, r25, 0x8b8
 /* 80377C90 00341250  4B C8 C6 C1 */	bl memset
@@ -2524,7 +2537,7 @@
 /* 80377EC0 00341480  3A 94 00 46 */	addi r20, r20, 0x46
 /* 80377EC4 00341484  41 80 FE 38 */	blt .L_80377CFC
 .L_80377EC8:
-/* 80377EC8 00341488  80 0D BB 78 */	lwz r0, lbl_80667CF8@sda21(r13)
+/* 80377EC8 00341488  80 0D BB 78 */	lwz r0, _linkedWBC@sda21(r13)
 /* 80377ECC 0034148C  2C 00 00 00 */	cmpwi r0, 0
 /* 80377ED0 00341490  41 82 01 98 */	beq .L_80378068
 /* 80377ED4 00341494  38 79 08 B8 */	addi r3, r25, 0x8b8
@@ -2776,8 +2789,8 @@
 /* 80378264 00341824  4B FE 8F 8D */	bl SCSetBtDeviceInfoArray
 /* 80378268 00341828  38 79 1F 60 */	addi r3, r25, 0x1f60
 /* 8037826C 0034182C  4B FE 8F A5 */	bl SCSetBtCmpDevInfoArray
-/* 80378270 00341830  3C 60 80 37 */	lis r3, __wudInitFlushCallbac@ha
-/* 80378274 00341834  38 63 7C 10 */	addi r3, r3, __wudInitFlushCallbac@l
+/* 80378270 00341830  3C 60 80 37 */	lis r3, __wudInitFlushCallback@ha
+/* 80378274 00341834  38 63 7C 10 */	addi r3, r3, __wudInitFlushCallback@l
 /* 80378278 00341838  4B FE 86 E9 */	bl SCFlushAsync
 /* 8037827C 0034183C  39 61 00 60 */	addi r11, r1, 0x60
 /* 80378280 00341840  38 60 00 05 */	li r3, 5
@@ -2786,13 +2799,13 @@
 /* 8037828C 0034184C  7C 08 03 A6 */	mtlr r0
 /* 80378290 00341850  38 21 00 60 */	addi r1, r1, 0x60
 /* 80378294 00341854  4E 80 00 20 */	blr
-.endfn WUDiGetRegisteredDevice
+.endfn __wudInitDevInfo
 
 .balign 16, 0
 .fn __wudNandResultCallback, local
-/* 803782A0 00341860  80 8D BB 80 */	lwz r4, lbl_80667D00@sda21(r13)
+/* 803782A0 00341860  80 8D BB 80 */	lwz r4, _wudNandPhase@sda21(r13)
 /* 803782A4 00341864  38 00 00 00 */	li r0, 0
-/* 803782A8 00341868  98 0D BB 84 */	stb r0, lbl_80667D04@sda21(r13)
+/* 803782A8 00341868  98 0D BB 84 */	stb r0, _wudNandLocked@sda21(r13)
 /* 803782AC 0034186C  2C 04 00 01 */	cmpwi r4, 1
 /* 803782B0 00341870  41 82 00 18 */	beq .L_803782C8
 /* 803782B4 00341874  2C 04 00 02 */	cmpwi r4, 2
@@ -2806,7 +2819,7 @@
 /* 803782D0 00341890  40 82 00 08 */	bne .L_803782D8
 /* 803782D4 00341894  38 04 00 01 */	addi r0, r4, 1
 .L_803782D8:
-/* 803782D8 00341898  90 0D BB 80 */	stw r0, lbl_80667D00@sda21(r13)
+/* 803782D8 00341898  90 0D BB 80 */	stw r0, _wudNandPhase@sda21(r13)
 /* 803782DC 0034189C  4E 80 00 20 */	blr
 .L_803782E0:
 /* 803782E0 003418A0  2C 03 00 00 */	cmpwi r3, 0
@@ -2814,7 +2827,7 @@
 /* 803782E8 003418A8  40 82 00 08 */	bne .L_803782F0
 /* 803782EC 003418AC  38 04 00 01 */	addi r0, r4, 1
 .L_803782F0:
-/* 803782F0 003418B0  90 0D BB 80 */	stw r0, lbl_80667D00@sda21(r13)
+/* 803782F0 003418B0  90 0D BB 80 */	stw r0, _wudNandPhase@sda21(r13)
 /* 803782F4 003418B4  4E 80 00 20 */	blr
 .L_803782F8:
 /* 803782F8 003418B8  3C 03 FF FC */	addis r0, r3, 0xfffc
@@ -2823,21 +2836,21 @@
 /* 80378304 003418C4  40 82 00 08 */	bne .L_8037830C
 /* 80378308 003418C8  38 64 00 01 */	addi r3, r4, 1
 .L_8037830C:
-/* 8037830C 003418CC  90 6D BB 80 */	stw r3, lbl_80667D00@sda21(r13)
+/* 8037830C 003418CC  90 6D BB 80 */	stw r3, _wudNandPhase@sda21(r13)
 /* 80378310 003418D0  4E 80 00 20 */	blr
 .L_80378314:
 /* 80378314 003418D4  38 00 00 06 */	li r0, 6
-/* 80378318 003418D8  90 0D BB 80 */	stw r0, lbl_80667D00@sda21(r13)
+/* 80378318 003418D8  90 0D BB 80 */	stw r0, _wudNandPhase@sda21(r13)
 /* 8037831C 003418DC  4E 80 00 20 */	blr
 .endfn __wudNandResultCallback
 
 .balign 16, 0
 .fn __wudNandFlushCallback, global
-/* 80378320 003418E0  80 6D BB 80 */	lwz r3, lbl_80667D00@sda21(r13)
+/* 80378320 003418E0  80 6D BB 80 */	lwz r3, _wudNandPhase@sda21(r13)
 /* 80378324 003418E4  38 00 00 00 */	li r0, 0
-/* 80378328 003418E8  98 0D BB 84 */	stb r0, lbl_80667D04@sda21(r13)
+/* 80378328 003418E8  98 0D BB 84 */	stb r0, _wudNandLocked@sda21(r13)
 /* 8037832C 003418EC  38 03 00 01 */	addi r0, r3, 1
-/* 80378330 003418F0  90 0D BB 80 */	stw r0, lbl_80667D00@sda21(r13)
+/* 80378330 003418F0  90 0D BB 80 */	stw r0, _wudNandPhase@sda21(r13)
 /* 80378334 003418F4  4E 80 00 20 */	blr 
 .endfn __wudNandFlushCallback
 
@@ -2848,13 +2861,13 @@
 /* 80378348 00341908  90 01 00 44 */	stw r0, 0x44(r1)
 /* 8037834C 0034190C  39 61 00 40 */	addi r11, r1, 0x40
 /* 80378350 00341910  4B F4 1E 05 */	bl _savegpr_27
-/* 80378354 00341914  88 0D BB 84 */	lbz r0, lbl_80667D04@sda21(r13)
+/* 80378354 00341914  88 0D BB 84 */	lbz r0, _wudNandLocked@sda21(r13)
 /* 80378358 00341918  38 60 00 00 */	li r3, 0
-/* 8037835C 0034191C  3F C0 80 56 */	lis r30, lbl_805622C8@ha
+/* 8037835C 0034191C  3F C0 80 56 */	lis r30, _wudWiiRemoteDescriptor@ha
 /* 80378360 00341920  3F E0 80 5E */	lis r31, __rvl_wudcb@ha
 /* 80378364 00341924  2C 00 00 00 */	cmpwi r0, 0
 /* 80378368 00341928  90 61 00 18 */	stw r3, 0x18(r1)
-/* 8037836C 0034192C  3B DE 22 C8 */	addi r30, r30, lbl_805622C8@l
+/* 8037836C 0034192C  3B DE 22 C8 */	addi r30, r30, _wudWiiRemoteDescriptor@l
 /* 80378370 00341930  3B FF 12 80 */	addi r31, r31, __rvl_wudcb@l
 /* 80378374 00341934  90 61 00 1C */	stw r3, 0x1c(r1)
 /* 80378378 00341938  3B 7E 04 28 */	addi r27, r30, 0x428
@@ -2866,7 +2879,7 @@
 /* 80378390 00341950  38 60 00 02 */	li r3, 2
 /* 80378394 00341954  48 00 04 C4 */	b .L_80378858
 .L_80378398:
-/* 80378398 00341958  80 0D BB 70 */	lwz r0, lbl_80667CF0@sda21(r13)
+/* 80378398 00341958  80 0D BB 70 */	lwz r0, _wudNandBufPtr@sda21(r13)
 /* 8037839C 0034195C  2C 00 00 00 */	cmpwi r0, 0
 /* 803783A0 00341960  41 82 00 0C */	beq .L_803783AC
 /* 803783A4 00341964  54 00 06 FF */	clrlwi. r0, r0, 0x1b
@@ -2878,7 +2891,7 @@
 /* 803783B8 00341978  4C C6 31 82 */	crclr 6
 /* 803783BC 0034197C  48 17 60 D9 */	bl OSPanic
 .L_803783C0:
-/* 803783C0 00341980  80 0D BB 80 */	lwz r0, lbl_80667D00@sda21(r13)
+/* 803783C0 00341980  80 0D BB 80 */	lwz r0, _wudNandPhase@sda21(r13)
 /* 803783C4 00341984  2C 00 00 03 */	cmpwi r0, 3
 /* 803783C8 00341988  41 82 00 E0 */	beq .L_803784A8
 /* 803783CC 0034198C  40 80 00 1C */	bge .L_803783E8
@@ -2902,7 +2915,7 @@
 .L_8037840C:
 /* 8037840C 003419CC  38 00 00 FF */	li r0, 0xff
 .L_80378410:
-/* 80378410 003419D0  90 0D BB 80 */	stw r0, lbl_80667D00@sda21(r13)
+/* 80378410 003419D0  90 0D BB 80 */	stw r0, _wudNandPhase@sda21(r13)
 /* 80378414 003419D4  7C 64 1B 78 */	mr r4, r3
 /* 80378418 003419D8  38 7E 06 68 */	addi r3, r30, 0x668
 /* 8037841C 003419DC  4C C6 31 82 */	crclr 6
@@ -2919,10 +2932,10 @@
 /* 80378444 00341A04  38 60 00 01 */	li r3, 1
 /* 80378448 00341A08  38 00 00 00 */	li r0, 0
 /* 8037844C 00341A0C  3C C0 80 38 */	lis r6, __wudNandResultCallback@ha
-/* 80378450 00341A10  98 6D BB 84 */	stb r3, lbl_80667D04@sda21(r13)
+/* 80378450 00341A10  98 6D BB 84 */	stb r3, _wudNandLocked@sda21(r13)
 /* 80378454 00341A14  7F 63 DB 78 */	mr r3, r27
 /* 80378458 00341A18  38 9F 0E 00 */	addi r4, r31, 0xe00
-/* 8037845C 00341A1C  90 0D BB 7C */	stw r0, lbl_80667CFC@sda21(r13)
+/* 8037845C 00341A1C  90 0D BB 7C */	stw r0, _wudNandWbcCrc@sda21(r13)
 /* 80378460 00341A20  38 C6 82 A0 */	addi r6, r6, __wudNandResultCallback@l
 /* 80378464 00341A24  38 FF 0E 8C */	addi r7, r31, 0xe8c
 /* 80378468 00341A28  38 A0 00 01 */	li r5, 1
@@ -2930,12 +2943,12 @@
 /* 80378470 00341A30  48 00 03 E4 */	b .L_80378854
 .L_80378474:
 /* 80378474 00341A34  38 00 00 06 */	li r0, 6
-/* 80378478 00341A38  90 0D BB 80 */	stw r0, lbl_80667D00@sda21(r13)
+/* 80378478 00341A38  90 0D BB 80 */	stw r0, _wudNandPhase@sda21(r13)
 /* 8037847C 00341A3C  48 00 03 D8 */	b .L_80378854
 .L_80378480:
 /* 80378480 00341A40  38 00 00 01 */	li r0, 1
 /* 80378484 00341A44  3C C0 80 38 */	lis r6, __wudNandResultCallback@ha
-/* 80378488 00341A48  98 0D BB 84 */	stb r0, lbl_80667D04@sda21(r13)
+/* 80378488 00341A48  98 0D BB 84 */	stb r0, _wudNandLocked@sda21(r13)
 /* 8037848C 00341A4C  38 7F 0E 00 */	addi r3, r31, 0xe00
 /* 80378490 00341A50  38 C6 82 A0 */	addi r6, r6, __wudNandResultCallback@l
 /* 80378494 00341A54  38 FF 0E 8C */	addi r7, r31, 0xe8c
@@ -2947,8 +2960,8 @@
 /* 803784A8 00341A68  38 00 00 01 */	li r0, 1
 /* 803784AC 00341A6C  3C A0 00 05 */	lis r5, 0x0004B000@ha
 /* 803784B0 00341A70  3C C0 80 38 */	lis r6, __wudNandResultCallback@ha
-/* 803784B4 00341A74  98 0D BB 84 */	stb r0, lbl_80667D04@sda21(r13)
-/* 803784B8 00341A78  80 8D BB 70 */	lwz r4, lbl_80667CF0@sda21(r13)
+/* 803784B4 00341A74  98 0D BB 84 */	stb r0, _wudNandLocked@sda21(r13)
+/* 803784B8 00341A78  80 8D BB 70 */	lwz r4, _wudNandBufPtr@sda21(r13)
 /* 803784BC 00341A7C  38 7F 0E 00 */	addi r3, r31, 0xe00
 /* 803784C0 00341A80  38 A5 B0 00 */	addi r5, r5, 0x0004B000@l
 /* 803784C4 00341A84  38 C6 82 A0 */	addi r6, r6, __wudNandResultCallback@l
@@ -2956,13 +2969,13 @@
 /* 803784CC 00341A8C  4B FD 68 D5 */	bl NANDReadAsync
 /* 803784D0 00341A90  48 00 03 84 */	b .L_80378854
 .L_803784D4:
-/* 803784D4 00341A94  80 8D BB 70 */	lwz r4, lbl_80667CF0@sda21(r13)
+/* 803784D4 00341A94  80 8D BB 70 */	lwz r4, _wudNandBufPtr@sda21(r13)
 /* 803784D8 00341A98  38 7F 0D 20 */	addi r3, r31, 0xd20
 /* 803784DC 00341A9C  38 A0 00 80 */	li r5, 0x80
 /* 803784E0 00341AA0  3C 84 00 05 */	addis r4, r4, 5
 /* 803784E4 00341AA4  38 84 AF 18 */	addi r4, r4, -20712
 /* 803784E8 00341AA8  4B C8 BB 19 */	bl memcpy
-/* 803784EC 00341AAC  80 8D BB 70 */	lwz r4, lbl_80667CF0@sda21(r13)
+/* 803784EC 00341AAC  80 8D BB 70 */	lwz r4, _wudNandBufPtr@sda21(r13)
 /* 803784F0 00341AB0  38 61 00 10 */	addi r3, r1, 0x10
 /* 803784F4 00341AB4  38 A0 00 04 */	li r5, 4
 /* 803784F8 00341AB8  3C 84 00 05 */	addis r4, r4, 5
@@ -2974,7 +2987,7 @@
 /* 80378510 00341AD0  4C C6 31 82 */	crclr 6
 /* 80378514 00341AD4  48 00 40 BD */	bl WUD_DEBUGPrint
 /* 80378518 00341AD8  3C 60 00 01 */	lis r3, 0x000095E3@ha
-/* 8037851C 00341ADC  80 CD BB 70 */	lwz r6, lbl_80667CF0@sda21(r13)
+/* 8037851C 00341ADC  80 CD BB 70 */	lwz r6, _wudNandBufPtr@sda21(r13)
 /* 80378520 00341AE0  38 03 95 E3 */	addi r0, r3, 0x000095E3@l
 /* 80378524 00341AE4  38 A0 00 00 */	li r5, 0
 /* 80378528 00341AE8  38 80 00 00 */	li r4, 0
@@ -3002,10 +3015,10 @@
 /* 8037857C 00341B3C  7C 04 02 14 */	add r0, r4, r0
 /* 80378580 00341B40  54 04 04 3E */	clrlwi r4, r0, 0x10
 /* 80378584 00341B44  42 00 FF AC */	bdnz .L_80378530
-/* 80378588 00341B48  80 6D BB 70 */	lwz r3, lbl_80667CF0@sda21(r13)
+/* 80378588 00341B48  80 6D BB 70 */	lwz r3, _wudNandBufPtr@sda21(r13)
 /* 8037858C 00341B4C  50 A4 80 1E */	rlwimi r4, r5, 0x10, 0, 0xf
 /* 80378590 00341B50  38 00 00 08 */	li r0, 8
-/* 80378594 00341B54  90 8D BB 7C */	stw r4, lbl_80667CFC@sda21(r13)
+/* 80378594 00341B54  90 8D BB 7C */	stw r4, _wudNandWbcCrc@sda21(r13)
 /* 80378598 00341B58  3C 63 00 05 */	addis r3, r3, 5
 /* 8037859C 00341B5C  54 85 84 3E */	srwi r5, r4, 0x10
 /* 803785A0 00341B60  38 C3 AF 18 */	addi r6, r3, -20712
@@ -3064,7 +3077,7 @@
 /* 80378670 00341C30  7C 00 D8 40 */	cmplw r0, r27
 /* 80378674 00341C34  41 82 00 1C */	beq .L_80378690
 /* 80378678 00341C38  38 00 00 05 */	li r0, 5
-/* 8037867C 00341C3C  90 0D BB 80 */	stw r0, lbl_80667D00@sda21(r13)
+/* 8037867C 00341C3C  90 0D BB 80 */	stw r0, _wudNandPhase@sda21(r13)
 /* 80378680 00341C40  38 7E 06 98 */	addi r3, r30, 0x698
 /* 80378684 00341C44  4C C6 31 82 */	crclr 6
 /* 80378688 00341C48  48 00 3F 49 */	bl WUD_DEBUGPrint
@@ -3077,7 +3090,7 @@
 /* 803786A0 00341C60  2C 03 00 00 */	cmpwi r3, 0
 /* 803786A4 00341C64  40 82 00 1C */	bne .L_803786C0
 /* 803786A8 00341C68  38 00 00 05 */	li r0, 5
-/* 803786AC 00341C6C  90 0D BB 80 */	stw r0, lbl_80667D00@sda21(r13)
+/* 803786AC 00341C6C  90 0D BB 80 */	stw r0, _wudNandPhase@sda21(r13)
 /* 803786B0 00341C70  38 7E 06 B8 */	addi r3, r30, 0x6b8
 /* 803786B4 00341C74  4C C6 31 82 */	crclr 6
 /* 803786B8 00341C78  48 00 3F 19 */	bl WUD_DEBUGPrint
@@ -3097,14 +3110,14 @@
 /* 803786EC 00341CAC  2C 03 00 00 */	cmpwi r3, 0
 /* 803786F0 00341CB0  40 82 00 1C */	bne .L_8037870C
 /* 803786F4 00341CB4  38 00 00 05 */	li r0, 5
-/* 803786F8 00341CB8  90 0D BB 80 */	stw r0, lbl_80667D00@sda21(r13)
+/* 803786F8 00341CB8  90 0D BB 80 */	stw r0, _wudNandPhase@sda21(r13)
 /* 803786FC 00341CBC  38 7E 06 DC */	addi r3, r30, 0x6dc
 /* 80378700 00341CC0  4C C6 31 82 */	crclr 6
 /* 80378704 00341CC4  48 00 3E CD */	bl WUD_DEBUGPrint
 /* 80378708 00341CC8  48 00 01 4C */	b .L_80378854
 .L_8037870C:
 /* 8037870C 00341CCC  3C 80 00 05 */	lis r4, 0x0004B000@ha
-/* 80378710 00341CD0  80 6D BB 70 */	lwz r3, lbl_80667CF0@sda21(r13)
+/* 80378710 00341CD0  80 6D BB 70 */	lwz r3, _wudNandBufPtr@sda21(r13)
 /* 80378714 00341CD4  38 A4 B0 00 */	addi r5, r4, 0x0004B000@l
 /* 80378718 00341CD8  38 80 00 00 */	li r4, 0
 /* 8037871C 00341CDC  4B C8 BC 35 */	bl memset
@@ -3172,14 +3185,14 @@
 /* 80378814 00341DD4  4B FE 89 DD */	bl SCSetBtDeviceInfoArray
 /* 80378818 00341DD8  38 00 00 01 */	li r0, 1
 /* 8037881C 00341DDC  3C 60 80 38 */	lis r3, __wudNandFlushCallback@ha
-/* 80378820 00341DE0  98 0D BB 84 */	stb r0, lbl_80667D04@sda21(r13)
+/* 80378820 00341DE0  98 0D BB 84 */	stb r0, _wudNandLocked@sda21(r13)
 /* 80378824 00341DE4  38 63 83 20 */	addi r3, r3, __wudNandFlushCallback@l
 /* 80378828 00341DE8  4B FE 81 39 */	bl SCFlushAsync
 /* 8037882C 00341DEC  48 00 00 28 */	b .L_80378854
 .L_80378830:
 /* 80378830 00341DF0  38 00 00 01 */	li r0, 1
 /* 80378834 00341DF4  3C 80 80 38 */	lis r4, __wudNandResultCallback@ha
-/* 80378838 00341DF8  98 0D BB 84 */	stb r0, lbl_80667D04@sda21(r13)
+/* 80378838 00341DF8  98 0D BB 84 */	stb r0, _wudNandLocked@sda21(r13)
 /* 8037883C 00341DFC  38 7F 0E 00 */	addi r3, r31, 0xe00
 /* 80378840 00341E00  38 84 82 A0 */	addi r4, r4, __wudNandResultCallback@l
 /* 80378844 00341E04  38 BF 0E 8C */	addi r5, r31, 0xe8c
@@ -3198,8 +3211,9 @@
 /* 8037886C 00341E2C  4E 80 00 20 */	blr
 .endfn __wudGetDevInfoFromWiiFit
 
+#InitHandler
 .balign 16, 0
-.fn InitHandler, global
+.fn __wudInitHandler, global
 /* 80378870 00341E30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80378874 00341E34  7C 08 02 A6 */	mflr r0
 /* 80378878 00341E38  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3237,7 +3251,7 @@
 /* 803788F4 00341EB4  28 03 00 01 */	cmplwi r3, 1
 /* 803788F8 00341EB8  41 82 00 34 */	beq .L_8037892C
 /* 803788FC 00341EBC  48 00 01 E5 */	bl __wudClearControlBlock
-/* 80378900 00341EC0  80 0D BB 78 */	lwz r0, lbl_80667CF8@sda21(r13)
+/* 80378900 00341EC0  80 0D BB 78 */	lwz r0, _linkedWBC@sda21(r13)
 /* 80378904 00341EC4  3B C0 00 03 */	li r30, 3
 /* 80378908 00341EC8  2C 00 00 00 */	cmpwi r0, 0
 /* 8037890C 00341ECC  41 82 00 20 */	beq .L_8037892C
@@ -3245,14 +3259,14 @@
 /* 80378914 00341ED4  7C 60 07 75 */	extsb. r0, r3
 /* 80378918 00341ED8  40 82 00 14 */	bne .L_8037892C
 /* 8037891C 00341EDC  38 00 00 00 */	li r0, 0
-/* 80378920 00341EE0  98 0D BB 84 */	stb r0, lbl_80667D04@sda21(r13)
+/* 80378920 00341EE0  98 0D BB 84 */	stb r0, _wudNandLocked@sda21(r13)
 /* 80378924 00341EE4  3B C0 00 02 */	li r30, 2
-/* 80378928 00341EE8  90 0D BB 80 */	stw r0, lbl_80667D00@sda21(r13)
+/* 80378928 00341EE8  90 0D BB 80 */	stw r0, _wudNandPhase@sda21(r13)
 .L_8037892C:
 /* 8037892C 00341EEC  9B DF 00 10 */	stb r30, 0x10(r31)
 /* 80378930 00341EF0  48 00 00 3C */	b .L_8037896C
 .L_80378934:
-/* 80378934 00341EF4  4B FF F3 2D */	bl WUDiGetRegisteredDevice
+/* 80378934 00341EF4  4B FF F3 2D */	bl __wudInitDevInfo
 /* 80378938 00341EF8  48 00 00 34 */	b .L_8037896C
 .L_8037893C:
 /* 8037893C 00341EFC  38 7F 07 10 */	addi r3, r31, 0x710
@@ -3275,19 +3289,20 @@
 /* 80378978 00341F38  7C 08 03 A6 */	mtlr r0
 /* 8037897C 00341F3C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80378980 00341F40  4E 80 00 20 */	blr
-.endfn InitHandler
+.endfn __wudInitHandler
 
+#InitHandler0
 .balign 16, 0
-.fn InitHandler0, local
-/* 80378990 00341F50  3D 00 80 5E */	lis r8, lbl_805E21E0@ha
-/* 80378994 00341F54  3C E0 80 38 */	lis r7, InitHandler@ha
-/* 80378998 00341F58  39 08 21 E0 */	addi r8, r8, lbl_805E21E0@l
+.fn __wudInitHandler0, local
+/* 80378990 00341F50  3D 00 80 5E */	lis r8, _wudHandlerStack@ha
+/* 80378994 00341F54  3C E0 80 38 */	lis r7, __wudInitHandler@ha
+/* 80378998 00341F58  39 08 21 E0 */	addi r8, r8, _wudHandlerStack@l
 /* 8037899C 00341F5C  38 A0 00 00 */	li r5, 0
-/* 803789A0 00341F60  38 E7 88 70 */	addi r7, r7, InitHandler@l
+/* 803789A0 00341F60  38 E7 88 70 */	addi r7, r7, __wudInitHandler@l
 /* 803789A4 00341F64  38 C0 00 00 */	li r6, 0
 /* 803789A8 00341F68  39 08 10 00 */	addi r8, r8, 0x1000
 /* 803789AC 00341F6C  4B FD C0 E4 */	b OSSwitchFiberEx
-.endfn InitHandler0
+.endfn __wudInitHandler0
 
 .balign 16, 0
 .fn __wudShutdownFlushCallback, local
@@ -3311,9 +3326,10 @@
 /* 803789F4 00341FB4  38 21 00 10 */	addi r1, r1, 0x10
 /* 803789F8 00341FB8  4E 80 00 20 */	blr
 .endfn __wudShutdownFlushCallback
-
+ 
+#ShutdownHandler
 .balign 16, 0
-.fn ShutdownHandler, local
+.fn __wudShutdownHandler, local
 /* 80378A00 00341FC0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80378A04 00341FC4  7C 08 02 A6 */	mflr r0
 /* 80378A08 00341FC8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -3330,7 +3346,7 @@
 /* 80378A34 00341FF4  41 82 00 58 */	beq .L_80378A8C
 /* 80378A38 00341FF8  48 00 00 60 */	b .L_80378A98
 .L_80378A3C:
-/* 80378A3C 00341FFC  83 AD BB 64 */	lwz r29, lbl_80667CE4@sda21(r13)
+/* 80378A3C 00341FFC  83 AD BB 64 */	lwz r29, _wudReadNand@sda21(r13)
 /* 80378A40 00342000  4B FE 6B 91 */	bl SCCheckStatus
 /* 80378A44 00342004  28 03 00 01 */	cmplwi r3, 1
 /* 80378A48 00342008  41 82 00 50 */	beq .L_80378A98
@@ -3363,19 +3379,20 @@
 /* 80378AA8 00342068  7C 08 03 A6 */	mtlr r0
 /* 80378AAC 0034206C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80378AB0 00342070  4E 80 00 20 */	blr
-.endfn ShutdownHandler
+.endfn __wudShutdownHandler
 
+#ShutdownHandler0
 .balign 16, 0
-.fn ShutdownHandler0, local
-/* 80378AC0 00342080  3D 00 80 5E */	lis r8, lbl_805E21E0@ha
-/* 80378AC4 00342084  3C E0 80 38 */	lis r7, ShutdownHandler@ha
-/* 80378AC8 00342088  39 08 21 E0 */	addi r8, r8, lbl_805E21E0@l
+.fn __wudShutdownHandler0, local
+/* 80378AC0 00342080  3D 00 80 5E */	lis r8, _wudHandlerStack@ha
+/* 80378AC4 00342084  3C E0 80 38 */	lis r7, __wudShutdownHandler@ha
+/* 80378AC8 00342088  39 08 21 E0 */	addi r8, r8, _wudHandlerStack@l
 /* 80378ACC 0034208C  38 A0 00 00 */	li r5, 0
-/* 80378AD0 00342090  38 E7 8A 00 */	addi r7, r7, ShutdownHandler@l
+/* 80378AD0 00342090  38 E7 8A 00 */	addi r7, r7, __wudShutdownHandler@l
 /* 80378AD4 00342094  38 C0 00 00 */	li r6, 0
 /* 80378AD8 00342098  39 08 10 00 */	addi r8, r8, 0x1000
 /* 80378ADC 0034209C  4B FD BF B4 */	b OSSwitchFiberEx
-.endfn ShutdownHandler0
+.endfn __wudShutdownHandler0
 
 .balign 16, 0
 .fn __wudClearControlBlock, global
@@ -3637,7 +3654,7 @@
 /* 80378E8C 0034244C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80378E90 00342450  3F E0 80 5E */	lis r31, __rvl_wudcb@ha
 /* 80378E94 00342454  3B FF 12 80 */	addi r31, r31, __rvl_wudcb@l
-/* 80378E98 00342458  80 0D BB 60 */	lwz r0, lbl_80667CE0@sda21(r13)
+/* 80378E98 00342458  80 0D BB 60 */	lwz r0, _wudInitialized@sda21(r13)
 /* 80378E9C 0034245C  2C 00 00 00 */	cmpwi r0, 0
 /* 80378EA0 00342460  41 82 00 0C */	beq .L_80378EAC
 /* 80378EA4 00342464  38 60 00 00 */	li r3, 0
@@ -3648,11 +3665,11 @@
 /* 80378EB4 00342474  4C C6 31 82 */	crclr 6
 /* 80378EB8 00342478  48 00 37 19 */	bl WUD_DEBUGPrint
 /* 80378EBC 0034247C  4B F6 51 E5 */	bl BTA_Init
-/* 80378EC0 00342480  88 6D BB 6D */	lbz r3, lbl_80667CED@sda21(r13)
+/* 80378EC0 00342480  88 6D BB 6D */	lbz r3, __bte_trace_level@sda21(r13)
 /* 80378EC4 00342484  4B F6 5C D5 */	bl bta_sys_set_trace_level
-/* 80378EC8 00342488  88 6D BB 6D */	lbz r3, lbl_80667CED@sda21(r13)
+/* 80378EC8 00342488  88 6D BB 6D */	lbz r3, __bte_trace_level@sda21(r13)
 /* 80378ECC 0034248C  4B F7 E5 E5 */	bl L2CA_SetTraceLevel
-/* 80378ED0 00342490  88 6D BB 6D */	lbz r3, lbl_80667CED@sda21(r13)
+/* 80378ED0 00342490  88 6D BB 6D */	lbz r3, __bte_trace_level@sda21(r13)
 /* 80378ED4 00342494  4B F8 AE 2D */	bl SDP_SetTraceLevel
 /* 80378ED8 00342498  3C 60 80 56 */	lis r3, lbl_80562A50@ha
 /* 80378EDC 0034249C  38 63 2A 50 */	addi r3, r3, lbl_80562A50@l
@@ -3667,10 +3684,10 @@
 /* 80378F00 003424C0  90 7F 06 EC */	stw r3, 0x6ec(r31)
 /* 80378F04 003424C4  98 1F 00 10 */	stb r0, 0x10(r31)
 /* 80378F08 003424C8  4B FE 66 29 */	bl SCInit
-/* 80378F0C 003424CC  80 0D BB 78 */	lwz r0, lbl_80667CF8@sda21(r13)
+/* 80378F0C 003424CC  80 0D BB 78 */	lwz r0, _linkedWBC@sda21(r13)
 /* 80378F10 003424D0  2C 00 00 00 */	cmpwi r0, 0
 /* 80378F14 003424D4  41 82 00 18 */	beq .L_80378F2C
-/* 80378F18 003424D8  81 8D BB 74 */	lwz r12, lbl_80667CF4@sda21(r13)
+/* 80378F18 003424D8  81 8D BB 74 */	lwz r12, _initWBC@sda21(r13)
 /* 80378F1C 003424DC  2C 0C 00 00 */	cmpwi r12, 0
 /* 80378F20 003424E0  41 82 00 0C */	beq .L_80378F2C
 /* 80378F24 003424E4  7D 89 03 A6 */	mtctr r12
@@ -3680,11 +3697,11 @@
 /* 80378F30 003424F0  4B FD 9E F1 */	bl OSCreateAlarm
 /* 80378F34 003424F4  4B FE 3A 2D */	bl OSGetTime
 /* 80378F38 003424F8  3C A0 80 00 */	lis r5, 0x800000F8@ha
-/* 80378F3C 003424FC  3D 20 80 38 */	lis r9, InitHandler0@ha
+/* 80378F3C 003424FC  3D 20 80 38 */	lis r9, __wudInitHandler0@ha
 /* 80378F40 00342500  80 05 00 F8 */	lwz r0, 0x800000F8@l(r5)
 /* 80378F44 00342504  3C C0 10 62 */	lis r6, 0x10624DD3@ha
 /* 80378F48 00342508  7C 65 1B 78 */	mr r5, r3
-/* 80378F4C 0034250C  39 29 89 90 */	addi r9, r9, InitHandler0@l
+/* 80378F4C 0034250C  39 29 89 90 */	addi r9, r9, __wudInitHandler0@l
 /* 80378F50 00342510  38 66 4D D3 */	addi r3, r6, 0x10624DD3@l
 /* 80378F54 00342514  54 00 F0 BE */	srwi r0, r0, 2
 /* 80378F58 00342518  7C 03 00 16 */	mulhwu r0, r3, r0
@@ -3696,9 +3713,9 @@
 /* 80378F70 00342530  4B FD A1 81 */	bl OSSetPeriodicAlarm
 /* 80378F74 00342534  38 60 00 01 */	li r3, 1
 /* 80378F78 00342538  38 00 00 00 */	li r0, 0
-/* 80378F7C 0034253C  90 6D BB 60 */	stw r3, lbl_80667CE0@sda21(r13)
+/* 80378F7C 0034253C  90 6D BB 60 */	stw r3, _wudInitialized@sda21(r13)
 /* 80378F80 00342540  38 60 00 01 */	li r3, 1
-/* 80378F84 00342544  98 0D BB 94 */	stb r0, lbl_80667D14@sda21(r13)
+/* 80378F84 00342544  98 0D BB 94 */	stb r0, _scFlush@sda21(r13)
 .L_80378F88:
 /* 80378F88 00342548  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80378F8C 0034254C  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -3853,11 +3870,11 @@
 /* 803791A4 00342764  4B FD 9C 7D */	bl OSCreateAlarm
 /* 803791A8 00342768  4B FE 37 B9 */	bl OSGetTime
 /* 803791AC 0034276C  3C A0 80 00 */	lis r5, 0x800000F8@ha
-/* 803791B0 00342770  3D 20 80 38 */	lis r9, ShutdownHandler0@ha
+/* 803791B0 00342770  3D 20 80 38 */	lis r9, __wudShutdownHandler0@ha
 /* 803791B4 00342774  80 05 00 F8 */	lwz r0, 0x800000F8@l(r5)
 /* 803791B8 00342778  3C C0 10 62 */	lis r6, 0x10624DD3@ha
 /* 803791BC 0034277C  7C 65 1B 78 */	mr r5, r3
-/* 803791C0 00342780  39 29 8A C0 */	addi r9, r9, ShutdownHandler0@l
+/* 803791C0 00342780  39 29 8A C0 */	addi r9, r9, __wudShutdownHandler0@l
 /* 803791C4 00342784  38 66 4D D3 */	addi r3, r6, 0x10624DD3@l
 /* 803791C8 00342788  54 00 F0 BE */	srwi r0, r0, 2
 /* 803791CC 0034278C  7C 03 00 16 */	mulhwu r0, r3, r0
@@ -3980,8 +3997,10 @@
 /* 80379368 00342928  4E 80 00 20 */	blr 
 .endfn WUDSetSyncSimpleCallback
 
+
+#StartSyncDevice
 .balign 16, 0
-.fn StartSyncDevice, global
+.fn __wudStartSyncDevice, global
 /* 80379370 00342930  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80379374 00342934  7C 08 02 A6 */	mflr r0
 /* 80379378 00342938  90 01 00 34 */	stw r0, 0x34(r1)
@@ -4031,7 +4050,7 @@
 /* 80379420 003429E0  38 80 00 32 */	li r4, 0x32
 /* 80379424 003429E4  38 00 00 C8 */	li r0, 0xc8
 /* 80379428 003429E8  7C 7B 1B 78 */	mr r27, r3
-/* 8037942C 003429EC  9B CD BB 95 */	stb r30, lbl_80667D15@sda21(r13)
+/* 8037942C 003429EC  9B CD BB 95 */	stb r30, _wudTarget@sda21(r13)
 /* 80379430 003429F0  38 7F 07 10 */	addi r3, r31, 0x710
 /* 80379434 003429F4  98 FF 00 0C */	stb r7, 0xc(r31)
 /* 80379438 003429F8  9B BF 06 E8 */	stb r29, 0x6e8(r31)
@@ -4043,11 +4062,11 @@
 /* 80379450 00342A10  4B FD 99 D1 */	bl OSCreateAlarm
 /* 80379454 00342A14  4B FE 35 0D */	bl OSGetTime
 /* 80379458 00342A18  3C A0 80 00 */	lis r5, 0x800000F8@ha
-/* 8037945C 00342A1C  3D 20 80 37 */	lis r9, SyncHandler0@ha
+/* 8037945C 00342A1C  3D 20 80 37 */	lis r9, __wudSyncHandler0@ha
 /* 80379460 00342A20  80 05 00 F8 */	lwz r0, 0x800000F8@l(r5)
 /* 80379464 00342A24  3C C0 10 62 */	lis r6, 0x10624DD3@ha
 /* 80379468 00342A28  7C 65 1B 78 */	mr r5, r3
-/* 8037946C 00342A2C  39 29 72 F0 */	addi r9, r9, SyncHandler0@l
+/* 8037946C 00342A2C  39 29 72 F0 */	addi r9, r9, __wudSyncHandler0@l
 /* 80379470 00342A30  38 66 4D D3 */	addi r3, r6, 0x10624DD3@l
 /* 80379474 00342A34  54 00 F0 BE */	srwi r0, r0, 2
 /* 80379478 00342A38  7C 03 00 16 */	mulhwu r0, r3, r0
@@ -4068,7 +4087,7 @@
 /* 803794B0 00342A70  7C 08 03 A6 */	mtlr r0
 /* 803794B4 00342A74  38 21 00 30 */	addi r1, r1, 0x30
 /* 803794B8 00342A78  4E 80 00 20 */	blr 
-.endfn StartSyncDevice
+.endfn __wudStartSyncDevice
 
 .balign 16, 0
 .fn WUDStartFastSyncSimple, global
@@ -4076,7 +4095,7 @@
 /* 803794C4 00342A84  38 80 FF FF */	li r4, -1
 /* 803794C8 00342A88  38 A0 00 00 */	li r5, 0
 /* 803794CC 00342A8C  38 C0 00 01 */	li r6, 1
-/* 803794D0 00342A90  4B FF FE A0 */	b StartSyncDevice
+/* 803794D0 00342A90  4B FF FE A0 */	b __wudStartSyncDevice
 .endfn WUDStartFastSyncSimple
 
 .balign 16, 0
@@ -4091,7 +4110,7 @@
 /* 803794FC 00342ABC  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80379500 00342AC0  3F A0 80 5E */	lis r29, __rvl_wudcb@ha
 /* 80379504 00342AC4  3B BD 12 80 */	addi r29, r29, __rvl_wudcb@l
-/* 80379508 00342AC8  90 0D BB 68 */	stw r0, lbl_80667CE8@sda21(r13)
+/* 80379508 00342AC8  90 0D BB 68 */	stw r0, _wudAbortSync@sda21(r13)
 /* 8037950C 00342ACC  4B FD F4 A5 */	bl OSDisableInterrupts
 /* 80379510 00342AD0  88 1D 07 08 */	lbz r0, 0x708(r29)
 /* 80379514 00342AD4  7C 7F 1B 78 */	mr r31, r3
@@ -4312,7 +4331,7 @@
 .endfn WUDSetVisibility
 
 .balign 16, 0
-.fn reset_again_cb, local
+.fn __wudModuleRebootCallback, local
 /* 80379810 00342DD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80379814 00342DD4  7C 08 02 A6 */	mflr r0
 /* 80379818 00342DD8  3C 60 80 56 */	lis r3, lbl_80562B4C@ha
@@ -4325,7 +4344,7 @@
 /* 80379834 00342DF4  7C 08 03 A6 */	mtlr r0
 /* 80379838 00342DF8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8037983C 00342DFC  4E 80 00 20 */	blr
-.endfn reset_again_cb
+.endfn __wudModuleRebootCallback
 
 .balign 16, 0
 .fn __wudInstallPatchCallback, global
@@ -4333,12 +4352,12 @@
 /* 80379844 00342E04  7C 08 02 A6 */	mflr r0
 /* 80379848 00342E08  90 01 01 24 */	stw r0, 0x124(r1)
 /* 8037984C 00342E0C  93 E1 01 1C */	stw r31, 0x11c(r1)
-/* 80379850 00342E10  3F E0 80 56 */	lis r31, lbl_805622C8@ha
-/* 80379854 00342E14  3B FF 22 C8 */	addi r31, r31, lbl_805622C8@l
+/* 80379850 00342E10  3F E0 80 56 */	lis r31, _wudWiiRemoteDescriptor@ha
+/* 80379854 00342E14  3B FF 22 C8 */	addi r31, r31, _wudWiiRemoteDescriptor@l
 /* 80379858 00342E18  93 C1 01 18 */	stw r30, 0x118(r1)
 /* 8037985C 00342E1C  93 A1 01 14 */	stw r29, 0x114(r1)
-/* 80379860 00342E20  88 AD BB 85 */	lbz r5, lbl_80667D05@sda21(r13)
-/* 80379864 00342E24  88 0D BB 86 */	lbz r0, lbl_80667D06@sda21(r13)
+/* 80379860 00342E20  88 AD BB 85 */	lbz r5, _wudInstallNum@sda21(r13)
+/* 80379864 00342E24  88 0D BB 86 */	lbz r0, _wudPatchNum@sda21(r13)
 /* 80379868 00342E28  7C 00 28 40 */	cmplw r0, r5
 /* 8037986C 00342E2C  40 82 00 0C */	bne .L_80379878
 /* 80379870 00342E30  2C 03 00 00 */	cmpwi r3, 0
@@ -4350,8 +4369,8 @@
 /* 80379880 00342E40  38 7F 08 B0 */	addi r3, r31, 0x8b0
 /* 80379884 00342E44  4C C6 31 82 */	crclr 6
 /* 80379888 00342E48  48 00 2D 49 */	bl WUD_DEBUGPrint
-/* 8037988C 00342E4C  3C 60 80 38 */	lis r3, reset_again_cb@ha
-/* 80379890 00342E50  38 63 98 10 */	addi r3, r3, reset_again_cb@l
+/* 8037988C 00342E4C  3C 60 80 38 */	lis r3, __wudModuleRebootCallback@ha
+/* 80379890 00342E50  38 63 98 10 */	addi r3, r3, __wudModuleRebootCallback@l
 /* 80379894 00342E54  4B F6 D1 CD */	bl BTM_DeviceReset
 /* 80379898 00342E58  48 00 00 7C */	b .L_80379914
 .L_8037989C:
@@ -4371,10 +4390,10 @@
 /* 803798CC 00342E8C  7F A5 EB 78 */	mr r5, r29
 /* 803798D0 00342E90  38 84 00 01 */	addi r4, r4, 1
 /* 803798D4 00342E94  4B C8 A7 2D */	bl memcpy
-/* 803798D8 00342E98  88 0D BB 85 */	lbz r0, lbl_80667D05@sda21(r13)
+/* 803798D8 00342E98  88 0D BB 85 */	lbz r0, _wudInstallNum@sda21(r13)
 /* 803798DC 00342E9C  38 7F 08 C0 */	addi r3, r31, 0x8c0
 /* 803798E0 00342EA0  7C 00 F2 14 */	add r0, r0, r30
-/* 803798E4 00342EA4  98 0D BB 85 */	stb r0, lbl_80667D05@sda21(r13)
+/* 803798E4 00342EA4  98 0D BB 85 */	stb r0, _wudInstallNum@sda21(r13)
 /* 803798E8 00342EA8  4C C6 31 82 */	crclr 6
 /* 803798EC 00342EAC  48 00 2C E5 */	bl WUD_DEBUGPrint
 /* 803798F0 00342EB0  3C 60 00 01 */	lis r3, 0x0000FC4F@ha
@@ -4403,21 +4422,21 @@
 /* 80379938 00342EF8  2C 03 00 00 */	cmpwi r3, 0
 /* 8037993C 00342EFC  90 01 02 24 */	stw r0, 0x224(r1)
 /* 80379940 00342F00  93 E1 02 1C */	stw r31, 0x21c(r1)
-/* 80379944 00342F04  3F E0 80 56 */	lis r31, lbl_805622C8@ha
-/* 80379948 00342F08  3B FF 22 C8 */	addi r31, r31, lbl_805622C8@l
+/* 80379944 00342F04  3F E0 80 56 */	lis r31, _wudWiiRemoteDescriptor@ha
+/* 80379948 00342F08  3B FF 22 C8 */	addi r31, r31, _wudWiiRemoteDescriptor@l
 /* 8037994C 00342F0C  93 C1 02 18 */	stw r30, 0x218(r1)
 /* 80379950 00342F10  93 A1 02 14 */	stw r29, 0x214(r1)
 /* 80379954 00342F14  41 82 01 FC */	beq .L_80379B50
-/* 80379958 00342F18  80 8D BB 8C */	lwz r4, lbl_80667D0C@sda21(r13)
-/* 8037995C 00342F1C  80 0D BB 90 */	lwz r0, lbl_80667D10@sda21(r13)
+/* 80379958 00342F18  80 8D BB 8C */	lwz r4, _wudPatchOffset@sda21(r13)
+/* 8037995C 00342F1C  80 0D BB 90 */	lwz r0, _wudPatchSize@sda21(r13)
 /* 80379960 00342F20  7C 00 20 40 */	cmplw r0, r4
 /* 80379964 00342F24  40 82 00 84 */	bne .L_803799E8
 /* 80379968 00342F28  88 7F 01 A4 */	lbz r3, 0x1a4(r31)
 /* 8037996C 00342F2C  38 00 00 00 */	li r0, 0
-/* 80379970 00342F30  98 0D BB 85 */	stb r0, lbl_80667D05@sda21(r13)
+/* 80379970 00342F30  98 0D BB 85 */	stb r0, _wudInstallNum@sda21(r13)
 /* 80379974 00342F34  38 00 00 13 */	li r0, 0x13
 /* 80379978 00342F38  2C 03 00 13 */	cmpwi r3, 0x13
-/* 8037997C 00342F3C  98 6D BB 86 */	stb r3, lbl_80667D06@sda21(r13)
+/* 8037997C 00342F3C  98 6D BB 86 */	stb r3, _wudPatchNum@sda21(r13)
 /* 80379980 00342F40  40 80 00 08 */	bge .L_80379988
 /* 80379984 00342F44  7C 60 1B 78 */	mr r0, r3
 .L_80379988:
@@ -4429,10 +4448,10 @@
 /* 8037999C 00342F5C  38 84 00 01 */	addi r4, r4, 1
 /* 803799A0 00342F60  7F A5 EB 78 */	mr r5, r29
 /* 803799A4 00342F64  4B C8 A6 5D */	bl memcpy
-/* 803799A8 00342F68  88 0D BB 85 */	lbz r0, lbl_80667D05@sda21(r13)
+/* 803799A8 00342F68  88 0D BB 85 */	lbz r0, _wudInstallNum@sda21(r13)
 /* 803799AC 00342F6C  38 7F 08 C0 */	addi r3, r31, 0x8c0
 /* 803799B0 00342F70  7C 00 F2 14 */	add r0, r0, r30
-/* 803799B4 00342F74  98 0D BB 85 */	stb r0, lbl_80667D05@sda21(r13)
+/* 803799B4 00342F74  98 0D BB 85 */	stb r0, _wudInstallNum@sda21(r13)
 /* 803799B8 00342F78  4C C6 31 82 */	crclr 6
 /* 803799BC 00342F7C  48 00 2C 15 */	bl WUD_DEBUGPrint
 /* 803799C0 00342F80  3C 60 00 01 */	lis r3, 0x0000FC4F@ha
@@ -4452,7 +4471,7 @@
 /* 803799F4 00342FB4  40 80 00 08 */	bge .L_803799FC
 /* 803799F8 00342FB8  7C 03 03 78 */	mr r3, r0
 .L_803799FC:
-/* 803799FC 00342FBC  80 0D BB 88 */	lwz r0, lbl_80667D08@sda21(r13)
+/* 803799FC 00342FBC  80 0D BB 88 */	lwz r0, _wudPatchAddress@sda21(r13)
 /* 80379A00 00342FC0  54 7E 06 3E */	clrlwi r30, r3, 0x18
 /* 80379A04 00342FC4  2F 1E 00 00 */	cmpwi cr6, r30, 0
 /* 80379A08 00342FC8  38 A0 00 00 */	li r5, 0
@@ -4479,7 +4498,7 @@
 /* 80379A58 00343018  2C 04 00 00 */	cmpwi r4, 0
 /* 80379A5C 0034301C  41 82 00 78 */	beq .L_80379AD4
 /* 80379A60 00343020  38 06 00 07 */	addi r0, r6, 7
-/* 80379A64 00343024  80 8D BB 8C */	lwz r4, lbl_80667D0C@sda21(r13)
+/* 80379A64 00343024  80 8D BB 8C */	lwz r4, _wudPatchOffset@sda21(r13)
 /* 80379A68 00343028  38 7F 00 E8 */	addi r3, r31, 0xe8
 /* 80379A6C 0034302C  38 E1 00 08 */	addi r7, r1, 8
 /* 80379A70 00343030  54 00 E8 FE */	srwi r0, r0, 3
@@ -4509,7 +4528,7 @@
 /* 80379ACC 0034308C  38 E7 00 08 */	addi r7, r7, 8
 /* 80379AD0 00343090  42 00 FF B4 */	bdnz .L_80379A84
 .L_80379AD4:
-/* 80379AD4 00343094  80 8D BB 8C */	lwz r4, lbl_80667D0C@sda21(r13)
+/* 80379AD4 00343094  80 8D BB 8C */	lwz r4, _wudPatchOffset@sda21(r13)
 /* 80379AD8 00343098  38 C1 00 08 */	addi r6, r1, 8
 /* 80379ADC 0034309C  38 7F 00 E8 */	addi r3, r31, 0xe8
 /* 80379AE0 003430A0  7C 05 F0 50 */	subf r0, r5, r30
@@ -4526,10 +4545,10 @@
 /* 80379B08 003430C8  38 C6 00 01 */	addi r6, r6, 1
 /* 80379B0C 003430CC  42 00 FF EC */	bdnz .L_80379AF8
 .L_80379B10:
-/* 80379B10 003430D0  80 0D BB 8C */	lwz r0, lbl_80667D0C@sda21(r13)
+/* 80379B10 003430D0  80 0D BB 8C */	lwz r0, _wudPatchOffset@sda21(r13)
 /* 80379B14 003430D4  38 7F 08 D8 */	addi r3, r31, 0x8d8
 /* 80379B18 003430D8  7C 80 F2 14 */	add r4, r0, r30
-/* 80379B1C 003430DC  90 8D BB 8C */	stw r4, lbl_80667D0C@sda21(r13)
+/* 80379B1C 003430DC  90 8D BB 8C */	stw r4, _wudPatchOffset@sda21(r13)
 /* 80379B20 003430E0  4C C6 31 82 */	crclr 6
 /* 80379B24 003430E4  48 00 2A AD */	bl WUD_DEBUGPrint
 /* 80379B28 003430E8  3C 60 00 01 */	lis r3, 0x0000FC4C@ha
@@ -4546,8 +4565,8 @@
 /* 80379B50 00343110  38 7F 08 B0 */	addi r3, r31, 0x8b0
 /* 80379B54 00343114  4C C6 31 82 */	crclr 6
 /* 80379B58 00343118  48 00 2A 79 */	bl WUD_DEBUGPrint
-/* 80379B5C 0034311C  3C 60 80 38 */	lis r3, reset_again_cb@ha
-/* 80379B60 00343120  38 63 98 10 */	addi r3, r3, reset_again_cb@l
+/* 80379B5C 0034311C  3C 60 80 38 */	lis r3, __wudModuleRebootCallback@ha
+/* 80379B60 00343120  38 63 98 10 */	addi r3, r3, __wudModuleRebootCallback@l
 /* 80379B64 00343124  4B F6 CE FD */	bl BTM_DeviceReset
 .L_80379B68:
 /* 80379B68 00343128  80 01 02 24 */	lwz r0, 0x224(r1)
@@ -4565,8 +4584,8 @@
 /* 80379B94 00343154  7C 08 02 A6 */	mflr r0
 /* 80379B98 00343158  90 01 01 14 */	stw r0, 0x114(r1)
 /* 80379B9C 0034315C  93 E1 01 0C */	stw r31, 0x10c(r1)
-/* 80379BA0 00343160  3F E0 80 56 */	lis r31, lbl_805622C8@ha
-/* 80379BA4 00343164  3B FF 22 C8 */	addi r31, r31, lbl_805622C8@l
+/* 80379BA0 00343160  3F E0 80 56 */	lis r31, _wudWiiRemoteDescriptor@ha
+/* 80379BA4 00343164  3B FF 22 C8 */	addi r31, r31, _wudWiiRemoteDescriptor@l
 /* 80379BA8 00343168  93 C1 01 08 */	stw r30, 0x108(r1)
 /* 80379BAC 0034316C  7C 7E 1B 78 */	mr r30, r3
 /* 80379BB0 00343170  38 7F 08 F8 */	addi r3, r31, 0x8f8
@@ -4574,13 +4593,13 @@
 /* 80379BB8 00343178  48 00 2A 19 */	bl WUD_DEBUGPrint
 /* 80379BBC 0034317C  2C 1E 00 00 */	cmpwi r30, 0
 /* 80379BC0 00343180  41 82 01 54 */	beq .L_80379D14
-/* 80379BC4 00343184  80 6D BB 90 */	lwz r3, lbl_80667D10@sda21(r13)
+/* 80379BC4 00343184  80 6D BB 90 */	lwz r3, _wudPatchSize@sda21(r13)
 /* 80379BC8 00343188  38 00 00 FB */	li r0, 0xfb
 /* 80379BCC 0034318C  28 03 00 FB */	cmplwi r3, 0xfb
 /* 80379BD0 00343190  40 80 00 08 */	bge .L_80379BD8
 /* 80379BD4 00343194  7C 60 1B 78 */	mr r0, r3
 .L_80379BD8:
-/* 80379BD8 00343198  80 AD BB 88 */	lwz r5, lbl_80667D08@sda21(r13)
+/* 80379BD8 00343198  80 AD BB 88 */	lwz r5, _wudPatchAddress@sda21(r13)
 /* 80379BDC 0034319C  54 1E 06 3E */	clrlwi r30, r0, 0x18
 /* 80379BE0 003431A0  2F 1E 00 00 */	cmpwi cr6, r30, 0
 /* 80379BE4 003431A4  98 A1 00 08 */	stb r5, 8(r1)
@@ -4649,7 +4668,7 @@
 /* 80379CD0 00343290  38 C6 00 01 */	addi r6, r6, 1
 /* 80379CD4 00343294  42 00 FF EC */	bdnz .L_80379CC0
 .L_80379CD8:
-/* 80379CD8 00343298  93 CD BB 8C */	stw r30, lbl_80667D0C@sda21(r13)
+/* 80379CD8 00343298  93 CD BB 8C */	stw r30, _wudPatchOffset@sda21(r13)
 /* 80379CDC 0034329C  7F C4 F3 78 */	mr r4, r30
 /* 80379CE0 003432A0  38 7F 08 D8 */	addi r3, r31, 0x8d8
 /* 80379CE4 003432A4  4C C6 31 82 */	crclr 6
@@ -4668,8 +4687,8 @@
 /* 80379D14 003432D4  38 7F 08 B0 */	addi r3, r31, 0x8b0
 /* 80379D18 003432D8  4C C6 31 82 */	crclr 6
 /* 80379D1C 003432DC  48 00 28 B5 */	bl WUD_DEBUGPrint
-/* 80379D20 003432E0  3C 60 80 38 */	lis r3, reset_again_cb@ha
-/* 80379D24 003432E4  38 63 98 10 */	addi r3, r3, reset_again_cb@l
+/* 80379D20 003432E0  3C 60 80 38 */	lis r3, __wudModuleRebootCallback@ha
+/* 80379D24 003432E4  38 63 98 10 */	addi r3, r3, __wudModuleRebootCallback@l
 /* 80379D28 003432E8  4B F6 CD 39 */	bl BTM_DeviceReset
 .L_80379D2C:
 /* 80379D2C 003432EC  80 01 01 14 */	lwz r0, 0x114(r1)
@@ -4699,7 +4718,7 @@
 /* 80379D88 00343348  38 80 00 01 */	li r4, 1
 /* 80379D8C 0034334C  54 03 04 3E */	clrlwi r3, r0, 0x10
 /* 80379D90 00343350  38 C6 9B 90 */	addi r6, r6, __wudRemovePatchCallback@l
-/* 80379D94 00343354  38 AD BB 6C */	addi r5, r13, lbl_80667CEC@sda21
+/* 80379D94 00343354  38 AD BB 6C */	addi r5, r13, _wudPatchRemoveCmd@sda21
 /* 80379D98 00343358  4B F6 DC C5 */	bl BTM_VendorSpecificCommand
 /* 80379D9C 0034335C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80379DA0 00343360  7C 08 03 A6 */	mtlr r0
@@ -4708,13 +4727,13 @@
 .endfn __wudSuperPeekPokeCallback
 
 .balign 16, 0
-.fn __wudStackHandler, global
+.fn __wudAppendRuntimePatch, global
 /* 80379DB0 00343370  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80379DB4 00343374  7C 08 02 A6 */	mflr r0
 /* 80379DB8 00343378  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80379DBC 0034337C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80379DC0 00343380  3F E0 80 56 */	lis r31, lbl_805622C8@ha
-/* 80379DC4 00343384  3B FF 22 C8 */	addi r31, r31, lbl_805622C8@l
+/* 80379DC0 00343380  3F E0 80 56 */	lis r31, _wudWiiRemoteDescriptor@ha
+/* 80379DC4 00343384  3B FF 22 C8 */	addi r31, r31, _wudWiiRemoteDescriptor@l
 /* 80379DC8 00343388  38 7F 09 38 */	addi r3, r31, 0x938
 /* 80379DCC 0034338C  4C C6 31 82 */	crclr 6
 /* 80379DD0 00343390  48 00 28 01 */	bl WUD_DEBUGPrint
@@ -4740,9 +4759,9 @@
 /* 80379E20 003433E0  54 C5 40 2E */	slwi r5, r6, 8
 /* 80379E24 003433E4  54 63 40 2E */	slwi r3, r3, 8
 /* 80379E28 003433E8  7C 85 22 14 */	add r4, r5, r4
-/* 80379E2C 003433EC  90 8D BB 88 */	stw r4, lbl_80667D08@sda21(r13)
+/* 80379E2C 003433EC  90 8D BB 88 */	stw r4, _wudPatchAddress@sda21(r13)
 /* 80379E30 003433F0  7C 03 02 14 */	add r0, r3, r0
-/* 80379E34 003433F4  90 0D BB 90 */	stw r0, lbl_80667D10@sda21(r13)
+/* 80379E34 003433F4  90 0D BB 90 */	stw r0, _wudPatchSize@sda21(r13)
 /* 80379E38 003433F8  41 82 00 34 */	beq .L_80379E6C
 /* 80379E3C 003433FC  38 7F 09 54 */	addi r3, r31, 0x954
 /* 80379E40 00343400  4C C6 31 82 */	crclr 6
@@ -4766,7 +4785,7 @@
 /* 80379E84 00343444  38 80 00 01 */	li r4, 1
 /* 80379E88 00343448  54 03 04 3E */	clrlwi r3, r0, 0x10
 /* 80379E8C 0034344C  38 C6 9B 90 */	addi r6, r6, __wudRemovePatchCallback@l
-/* 80379E90 00343450  38 AD BB 6C */	addi r5, r13, lbl_80667CEC@sda21
+/* 80379E90 00343450  38 AD BB 6C */	addi r5, r13, _wudPatchRemoveCmd@sda21
 /* 80379E94 00343454  4B F6 DB C9 */	bl BTM_VendorSpecificCommand
 .L_80379E98:
 /* 80379E98 00343458  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -4774,7 +4793,7 @@
 /* 80379EA0 00343460  7C 08 03 A6 */	mtlr r0
 /* 80379EA4 00343464  38 21 00 10 */	addi r1, r1, 0x10
 /* 80379EA8 00343468  4E 80 00 20 */	blr 
-.endfn __wudStackHandler
+.endfn __wudAppendRuntimePatch
 
 .balign 16, 0
 .fn __wudInitSub, global
@@ -4854,7 +4873,7 @@
 /* 80379FC4 00343584  38 00 00 03 */	li r0, 3
 /* 80379FC8 00343588  3B E0 00 01 */	li r31, 1
 /* 80379FCC 0034358C  98 1C 07 08 */	stb r0, 0x708(r28)
-/* 80379FD0 00343590  93 ED BB 64 */	stw r31, lbl_80667CE4@sda21(r13)
+/* 80379FD0 00343590  93 ED BB 64 */	stw r31, _wudReadNand@sda21(r13)
 /* 80379FD4 00343594  4B FD EA 1D */	bl OSRestoreInterrupts
 /* 80379FD8 00343598  4B FD E9 D9 */	bl OSDisableInterrupts
 /* 80379FDC 0034359C  3C 80 80 5E */	lis r4, __rvl_wudcb@ha
@@ -4882,8 +4901,8 @@
 /* 8037A024 003435E4  7C 08 02 A6 */	mflr r0
 /* 8037A028 003435E8  90 01 00 34 */	stw r0, 0x34(r1)
 /* 8037A02C 003435EC  93 E1 00 2C */	stw r31, 0x2c(r1)
-/* 8037A030 003435F0  3F E0 80 56 */	lis r31, lbl_805622C8@ha
-/* 8037A034 003435F4  3B FF 22 C8 */	addi r31, r31, lbl_805622C8@l
+/* 8037A030 003435F0  3F E0 80 56 */	lis r31, _wudWiiRemoteDescriptor@ha
+/* 8037A034 003435F4  3B FF 22 C8 */	addi r31, r31, _wudWiiRemoteDescriptor@l
 /* 8037A038 003435F8  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 8037A03C 003435FC  3F C0 80 5E */	lis r30, __rvl_wudcb@ha
 /* 8037A040 00343600  3B DE 12 80 */	addi r30, r30, __rvl_wudcb@l
@@ -4917,7 +4936,7 @@
 /* 8037A0B0 00343670  4B F4 47 7D */	bl memcmp
 /* 8037A0B4 00343674  2C 03 00 00 */	cmpwi r3, 0
 /* 8037A0B8 00343678  40 82 00 54 */	bne .L_8037A10C
-/* 8037A0BC 0034367C  80 0D BB 78 */	lwz r0, lbl_80667CF8@sda21(r13)
+/* 8037A0BC 0034367C  80 0D BB 78 */	lwz r0, _linkedWBC@sda21(r13)
 /* 8037A0C0 00343680  2C 00 00 00 */	cmpwi r0, 0
 /* 8037A0C4 00343684  41 82 00 48 */	beq .L_8037A10C
 .L_8037A0C8:
@@ -4976,8 +4995,8 @@
 /* 8037A184 00343744  7C 08 02 A6 */	mflr r0
 /* 8037A188 00343748  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8037A18C 0034374C  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 8037A190 00343750  3F E0 80 56 */	lis r31, lbl_805622C8@ha
-/* 8037A194 00343754  3B FF 22 C8 */	addi r31, r31, lbl_805622C8@l
+/* 8037A190 00343750  3F E0 80 56 */	lis r31, _wudWiiRemoteDescriptor@ha
+/* 8037A194 00343754  3B FF 22 C8 */	addi r31, r31, _wudWiiRemoteDescriptor@l
 /* 8037A198 00343758  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8037A19C 0034375C  3F C0 80 5E */	lis r30, __rvl_wudcb@ha
 /* 8037A1A0 00343760  3B DE 12 80 */	addi r30, r30, __rvl_wudcb@l
@@ -5019,7 +5038,7 @@
 /* 8037A230 003437F0  4B F4 45 FD */	bl memcmp
 /* 8037A234 003437F4  2C 03 00 00 */	cmpwi r3, 0
 /* 8037A238 003437F8  40 82 00 34 */	bne .L_8037A26C
-/* 8037A23C 003437FC  80 0D BB 78 */	lwz r0, lbl_80667CF8@sda21(r13)
+/* 8037A23C 003437FC  80 0D BB 78 */	lwz r0, _linkedWBC@sda21(r13)
 /* 8037A240 00343800  2C 00 00 00 */	cmpwi r0, 0
 /* 8037A244 00343804  41 82 00 28 */	beq .L_8037A26C
 .L_8037A248:
@@ -5598,7 +5617,7 @@
 /* 8037AA64 00344024  4B F4 3D C9 */	bl memcmp
 /* 8037AA68 00344028  2C 03 00 00 */	cmpwi r3, 0
 /* 8037AA6C 0034402C  41 82 00 B8 */	beq .L_8037AB24
-/* 8037AA70 00344030  80 0D BB 78 */	lwz r0, lbl_80667CF8@sda21(r13)
+/* 8037AA70 00344030  80 0D BB 78 */	lwz r0, _linkedWBC@sda21(r13)
 /* 8037AA74 00344034  2C 00 00 00 */	cmpwi r0, 0
 /* 8037AA78 00344038  41 82 00 AC */	beq .L_8037AB24
 .L_8037AA7C:
@@ -5818,14 +5837,15 @@
 /* 8037AD70 00344330  4E 80 00 20 */	blr
 .endfn WUDIsBusy
 
+#CleanupCallback
 .balign 16, 0
-.fn CleanupCallback, local
+.fn __wudCleanupStackCallback, local
 /* 8037AD80 00344340  2C 03 00 00 */	cmpwi r3, 0
 /* 8037AD84 00344344  3C 60 80 5E */	lis r3, __rvl_wudcb@ha
 /* 8037AD88 00344348  38 63 12 80 */	addi r3, r3, __rvl_wudcb@l
 /* 8037AD8C 0034434C  40 82 00 14 */	bne .L_8037ADA0
 /* 8037AD90 00344350  38 00 00 00 */	li r0, 0
-/* 8037AD94 00344354  90 0D BB 60 */	stw r0, lbl_80667CE0@sda21(r13)
+/* 8037AD94 00344354  90 0D BB 60 */	stw r0, _wudInitialized@sda21(r13)
 /* 8037AD98 00344358  98 03 07 08 */	stb r0, 0x708(r3)
 /* 8037AD9C 0034435C  4E 80 00 20 */	blr
 .L_8037ADA0:
@@ -5834,7 +5854,7 @@
 /* 8037ADA8 00344368  4C C6 31 82 */	crclr 6
 /* 8037ADAC 0034436C  48 00 18 24 */	b WUD_DEBUGPrint
 /* 8037ADB0 00344370  4E 80 00 20 */	blr
-.endfn CleanupCallback
+.endfn __wudCleanupStackCallback
 
 .balign 16, 0
 .fn __wudSecurityEventStackCallback, local
@@ -5843,11 +5863,11 @@
 /* 8037ADC8 00344388  90 01 00 64 */	stw r0, 0x64(r1)
 /* 8037ADCC 0034438C  39 61 00 60 */	addi r11, r1, 0x60
 /* 8037ADD0 00344390  4B F3 F3 7D */	bl _savegpr_25
-/* 8037ADD4 00344394  3F C0 80 56 */	lis r30, lbl_805622C8@ha
+/* 8037ADD4 00344394  3F C0 80 56 */	lis r30, _wudWiiRemoteDescriptor@ha
 /* 8037ADD8 00344398  3F E0 80 5E */	lis r31, __rvl_wudcb@ha
 /* 8037ADDC 0034439C  3B FF 12 80 */	addi r31, r31, __rvl_wudcb@l
 /* 8037ADE0 003443A0  7C 79 1B 78 */	mr r25, r3
-/* 8037ADE4 003443A4  3B DE 22 C8 */	addi r30, r30, lbl_805622C8@l
+/* 8037ADE4 003443A4  3B DE 22 C8 */	addi r30, r30, _wudWiiRemoteDescriptor@l
 /* 8037ADE8 003443A8  7C 9C 23 78 */	mr r28, r4
 /* 8037ADEC 003443AC  3B BF 00 00 */	addi r29, r31, 0
 /* 8037ADF0 003443B0  38 7E 0A 7C */	addi r3, r30, 0xa7c
@@ -5888,11 +5908,11 @@
 /* 8037AE78 00344438  4B FD 7F A9 */	bl OSCreateAlarm
 /* 8037AE7C 0034443C  4B FE 1A E5 */	bl OSGetTime
 /* 8037AE80 00344440  3C A0 80 00 */	lis r5, 0x800000F8@ha
-/* 8037AE84 00344444  3D 20 80 37 */	lis r9, EnableStackHandler0@ha
+/* 8037AE84 00344444  3D 20 80 37 */	lis r9, __wudStackHandler0@ha
 /* 8037AE88 00344448  80 05 00 F8 */	lwz r0, 0x800000F8@l(r5)
 /* 8037AE8C 0034444C  3C C0 10 62 */	lis r6, 0x10624DD3@ha
 /* 8037AE90 00344450  7C 65 1B 78 */	mr r5, r3
-/* 8037AE94 00344454  39 29 7B F0 */	addi r9, r9, EnableStackHandler0@l
+/* 8037AE94 00344454  39 29 7B F0 */	addi r9, r9, __wudStackHandler0@l
 /* 8037AE98 00344458  38 66 4D D3 */	addi r3, r6, 0x10624DD3@l
 /* 8037AE9C 0034445C  54 00 F0 BE */	srwi r0, r0, 2
 /* 8037AEA0 00344460  7C 03 00 16 */	mulhwu r0, r3, r0
@@ -5909,8 +5929,8 @@
 /* 8037AEC8 00344488  38 7E 0A D0 */	addi r3, r30, 0xad0
 /* 8037AECC 0034448C  4C C6 31 82 */	crclr 6
 /* 8037AED0 00344490  48 00 17 01 */	bl WUD_DEBUGPrint
-/* 8037AED4 00344494  3C 60 80 38 */	lis r3, CleanupCallback@ha
-/* 8037AED8 00344498  38 63 AD 80 */	addi r3, r3, CleanupCallback@l
+/* 8037AED4 00344494  3C 60 80 38 */	lis r3, __wudCleanupStackCallback@ha
+/* 8037AED8 00344498  38 63 AD 80 */	addi r3, r3, __wudCleanupStackCallback@l
 /* 8037AEDC 0034449C  4B F6 32 A5 */	bl BTA_CleanUp
 /* 8037AEE0 003444A0  48 00 04 1C */	b .L_8037B2FC
 .L_8037AEE4:
@@ -6154,7 +6174,7 @@
 /* 8037B25C 0034481C  38 80 00 00 */	li r4, 0
 /* 8037B260 00344820  38 A0 00 46 */	li r5, 0x46
 /* 8037B264 00344824  4B C8 90 ED */	bl memset
-/* 8037B268 00344828  9B ED BB 94 */	stb r31, lbl_80667D14@sda21(r13)
+/* 8037B268 00344828  9B ED BB 94 */	stb r31, _scFlush@sda21(r13)
 .L_8037B26C:
 /* 8037B26C 0034482C  3B 39 00 01 */	addi r25, r25, 1
 /* 8037B270 00344830  28 19 00 04 */	cmplwi r25, 4
@@ -6215,8 +6235,8 @@
 /* 8037B330 003448F0  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 8037B334 003448F4  93 C1 00 28 */	stw r30, 0x28(r1)
 /* 8037B338 003448F8  93 A1 00 24 */	stw r29, 0x24(r1)
-/* 8037B33C 003448FC  3F A0 80 56 */	lis r29, lbl_805622C8@ha
-/* 8037B340 00344900  3B BD 22 C8 */	addi r29, r29, lbl_805622C8@l
+/* 8037B33C 003448FC  3F A0 80 56 */	lis r29, _wudWiiRemoteDescriptor@ha
+/* 8037B340 00344900  3B BD 22 C8 */	addi r29, r29, _wudWiiRemoteDescriptor@l
 /* 8037B344 00344904  93 81 00 20 */	stw r28, 0x20(r1)
 /* 8037B348 00344908  7C 9C 23 78 */	mr r28, r4
 /* 8037B34C 0034490C  41 82 00 28 */	beq .L_8037B374
@@ -6250,7 +6270,7 @@
 /* 8037B3B8 00344978  3F C0 80 5E */	lis r30, __rvl_wudcb@ha
 /* 8037B3BC 0034497C  88 1C 00 09 */	lbz r0, 9(r28)
 /* 8037B3C0 00344980  3B DE 12 80 */	addi r30, r30, __rvl_wudcb@l
-/* 8037B3C4 00344984  98 0D BB 96 */	stb r0, lbl_80667D16@sda21(r13)
+/* 8037B3C4 00344984  98 0D BB 96 */	stb r0, _wudDiscRssi@sda21(r13)
 /* 8037B3C8 00344988  88 1E 06 E7 */	lbz r0, 0x6e7(r30)
 /* 8037B3CC 0034498C  28 00 00 01 */	cmplwi r0, 1
 /* 8037B3D0 00344990  41 82 00 20 */	beq .L_8037B3F0
@@ -6277,24 +6297,24 @@
 /* 8037B414 003449D4  48 00 11 BD */	bl WUD_DEBUGPrint
 /* 8037B418 003449D8  48 00 00 F0 */	b .L_8037B508
 .L_8037B41C:
-/* 8037B41C 003449DC  3F C0 80 5E */	lis r30, lbl_805E19D0@ha
+/* 8037B41C 003449DC  3F C0 80 5E */	lis r30, _wudDiscResp@ha
 /* 8037B420 003449E0  38 A0 00 06 */	li r5, 6
-/* 8037B424 003449E4  38 7E 19 D0 */	addi r3, r30, lbl_805E19D0@l
+/* 8037B424 003449E4  38 7E 19 D0 */	addi r3, r30, _wudDiscResp@l
 /* 8037B428 003449E8  4B C8 8B D9 */	bl memcpy
-/* 8037B42C 003449EC  3B FE 19 D0 */	addi r31, r30, lbl_805E19D0@l
+/* 8037B42C 003449EC  3B FE 19 D0 */	addi r31, r30, _wudDiscResp@l
 /* 8037B430 003449F0  38 9C 00 06 */	addi r4, r28, 6
 /* 8037B434 003449F4  38 7F 00 06 */	addi r3, r31, 6
 /* 8037B438 003449F8  38 A0 00 40 */	li r5, 0x40
 /* 8037B43C 003449FC  4B C8 8B C5 */	bl memcpy
 /* 8037B440 00344A00  80 BC 01 00 */	lwz r5, 0x100(r28)
 /* 8037B444 00344A04  38 7D 0D 54 */	addi r3, r29, 0xd54
-/* 8037B448 00344A08  88 8D BB 97 */	lbz r4, lbl_80667D17@sda21(r13)
+/* 8037B448 00344A08  88 8D BB 97 */	lbz r4, _wudDiscNumResps@sda21(r13)
 /* 8037B44C 00344A0C  39 5F 00 06 */	addi r10, r31, 6
 /* 8037B450 00344A10  90 BF 01 00 */	stw r5, 0x100(r31)
 /* 8037B454 00344A14  38 04 00 01 */	addi r0, r4, 1
-/* 8037B458 00344A18  98 0D BB 97 */	stb r0, lbl_80667D17@sda21(r13)
+/* 8037B458 00344A18  98 0D BB 97 */	stb r0, _wudDiscNumResps@sda21(r13)
 /* 8037B45C 00344A1C  90 A1 00 08 */	stw r5, 8(r1)
-/* 8037B460 00344A20  88 9E 19 D0 */	lbz r4, lbl_805E19D0@l(r30)
+/* 8037B460 00344A20  88 9E 19 D0 */	lbz r4, _wudDiscResp@l(r30)
 /* 8037B464 00344A24  88 BF 00 01 */	lbz r5, 1(r31)
 /* 8037B468 00344A28  88 DF 00 02 */	lbz r6, 2(r31)
 /* 8037B46C 00344A2C  88 FF 00 03 */	lbz r7, 3(r31)
@@ -6324,9 +6344,9 @@
 /* 8037B4C4 00344A84  38 C0 00 00 */	li r6, 0
 /* 8037B4C8 00344A88  4B F6 C5 95 */	bl BTM_VendorSpecificCommand
 /* 8037B4CC 00344A8C  38 00 00 00 */	li r0, 0
-/* 8037B4D0 00344A90  3C 60 80 5E */	lis r3, lbl_805E19D0@ha
-/* 8037B4D4 00344A94  98 0D BB 97 */	stb r0, lbl_80667D17@sda21(r13)
-/* 8037B4D8 00344A98  38 63 19 D0 */	addi r3, r3, lbl_805E19D0@l
+/* 8037B4D0 00344A90  3C 60 80 5E */	lis r3, _wudDiscResp@ha
+/* 8037B4D4 00344A94  98 0D BB 97 */	stb r0, _wudDiscNumResps@sda21(r13)
+/* 8037B4D8 00344A98  38 63 19 D0 */	addi r3, r3, _wudDiscResp@l
 /* 8037B4DC 00344A9C  38 80 00 00 */	li r4, 0
 /* 8037B4E0 00344AA0  38 A0 01 08 */	li r5, 0x108
 /* 8037B4E4 00344AA4  4B C8 8E 6D */	bl memset
@@ -6356,8 +6376,8 @@
 /* 8037B534 00344AF4  7C 08 02 A6 */	mflr r0
 /* 8037B538 00344AF8  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8037B53C 00344AFC  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 8037B540 00344B00  3F E0 80 56 */	lis r31, lbl_805622C8@ha
-/* 8037B544 00344B04  3B FF 22 C8 */	addi r31, r31, lbl_805622C8@l
+/* 8037B540 00344B00  3F E0 80 56 */	lis r31, _wudWiiRemoteDescriptor@ha
+/* 8037B544 00344B04  3B FF 22 C8 */	addi r31, r31, _wudWiiRemoteDescriptor@l
 /* 8037B548 00344B08  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8037B54C 00344B0C  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8037B550 00344B10  93 81 00 10 */	stw r28, 0x10(r1)
@@ -6415,7 +6435,7 @@
 /* 8037B610 00344BD0  38 80 00 03 */	li r4, 3
 /* 8037B614 00344BD4  38 A0 00 00 */	li r5, 0
 /* 8037B618 00344BD8  38 C0 00 00 */	li r6, 0
-/* 8037B61C 00344BDC  4B FF DD 55 */	bl StartSyncDevice
+/* 8037B61C 00344BDC  4B FF DD 55 */	bl __wudStartSyncDevice
 /* 8037B620 00344BE0  48 00 01 98 */	b .L_8037B7B8
 .L_8037B624:
 /* 8037B624 00344BE4  38 7F 0E 00 */	addi r3, r31, 0xe00
@@ -6499,11 +6519,11 @@
 /* 8037B748 00344D08  4B FD 76 D9 */	bl OSCreateAlarm
 /* 8037B74C 00344D0C  4B FE 12 15 */	bl OSGetTime
 /* 8037B750 00344D10  3C A0 80 00 */	lis r5, 0x800000F8@ha
-/* 8037B754 00344D14  3D 20 80 37 */	lis r9, DeleteAllHandler0@ha
+/* 8037B754 00344D14  3D 20 80 37 */	lis r9, __wudDeleteHandler0@ha
 /* 8037B758 00344D18  80 05 00 F8 */	lwz r0, 0x800000F8@l(r5)
 /* 8037B75C 00344D1C  3C C0 10 62 */	lis r6, 0x10624DD3@ha
 /* 8037B760 00344D20  7C 65 1B 78 */	mr r5, r3
-/* 8037B764 00344D24  39 29 79 70 */	addi r9, r9, DeleteAllHandler0@l
+/* 8037B764 00344D24  39 29 79 70 */	addi r9, r9, __wudDeleteHandler0@l
 /* 8037B768 00344D28  38 66 4D D3 */	addi r3, r6, 0x10624DD3@l
 /* 8037B76C 00344D2C  54 00 F0 BE */	srwi r0, r0, 2
 /* 8037B770 00344D30  7C 03 00 16 */	mulhwu r0, r3, r0
@@ -6570,11 +6590,11 @@
 /* 8037B83C 00344DFC  39 61 00 60 */	addi r11, r1, 0x60
 /* 8037B840 00344E00  4B F3 E8 F9 */	bl _savegpr_20
 /* 8037B844 00344E04  88 03 00 00 */	lbz r0, 0(r3)
-/* 8037B848 00344E08  3F C0 80 56 */	lis r30, lbl_805622C8@ha
+/* 8037B848 00344E08  3F C0 80 56 */	lis r30, _wudWiiRemoteDescriptor@ha
 /* 8037B84C 00344E0C  3C 80 80 5E */	lis r4, __rvl_wudcb@ha
 /* 8037B850 00344E10  7C 7A 1B 78 */	mr r26, r3
 /* 8037B854 00344E14  2C 00 00 01 */	cmpwi r0, 1
-/* 8037B858 00344E18  3B DE 22 C8 */	addi r30, r30, lbl_805622C8@l
+/* 8037B858 00344E18  3B DE 22 C8 */	addi r30, r30, _wudWiiRemoteDescriptor@l
 /* 8037B85C 00344E1C  3B 84 12 80 */	addi r28, r4, __rvl_wudcb@l
 /* 8037B860 00344E20  41 82 00 20 */	beq .L_8037B880
 /* 8037B864 00344E24  2C 00 00 02 */	cmpwi r0, 2
@@ -6804,8 +6824,8 @@
 /* 8037BB94 00345154  7C 08 02 A6 */	mflr r0
 /* 8037BB98 00345158  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8037BB9C 0034515C  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 8037BBA0 00345160  3F E0 80 56 */	lis r31, lbl_805622C8@ha
-/* 8037BBA4 00345164  3B FF 22 C8 */	addi r31, r31, lbl_805622C8@l
+/* 8037BBA0 00345160  3F E0 80 56 */	lis r31, _wudWiiRemoteDescriptor@ha
+/* 8037BBA4 00345164  3B FF 22 C8 */	addi r31, r31, _wudWiiRemoteDescriptor@l
 /* 8037BBA8 00345168  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8037BBAC 0034516C  7C DE 33 78 */	mr r30, r6
 /* 8037BBB0 00345170  93 A1 00 14 */	stw r29, 0x14(r1)
@@ -6824,9 +6844,9 @@
 /* 8037BBE4 003451A4  2C 03 00 00 */	cmpwi r3, 0
 /* 8037BBE8 003451A8  7C 7E 1B 78 */	mr r30, r3
 /* 8037BBEC 003451AC  40 82 00 60 */	bne .L_8037BC4C
-/* 8037BBF0 003451B0  3F C0 80 5E */	lis r30, lbl_805E1AD8@ha
+/* 8037BBF0 003451B0  3F C0 80 5E */	lis r30, _wudDiscWork@ha
 /* 8037BBF4 003451B4  7F 84 E3 78 */	mr r4, r28
-/* 8037BBF8 003451B8  3B DE 1A D8 */	addi r30, r30, lbl_805E1AD8@l
+/* 8037BBF8 003451B8  3B DE 1A D8 */	addi r30, r30, _wudDiscWork@l
 /* 8037BBFC 003451BC  38 A0 00 06 */	li r5, 6
 /* 8037BC00 003451C0  38 7E 00 40 */	addi r3, r30, 0x40
 /* 8037BC04 003451C4  4B F4 2C 29 */	bl memcmp
@@ -6893,9 +6913,9 @@
 /* 8037BCD4 00345294  4B FD CC DD */	bl OSDisableInterrupts
 /* 8037BCD8 00345298  28 1F 00 10 */	cmplwi r31, 0x10
 /* 8037BCDC 0034529C  40 80 00 18 */	bge .L_8037BCF4
-/* 8037BCE0 003452A0  3C 80 80 5E */	lis r4, lbl_805E2040@ha
+/* 8037BCE0 003452A0  3C 80 80 5E */	lis r4, _dev_handle_to_bda@ha
 /* 8037BCE4 003452A4  57 E0 15 BA */	rlwinm r0, r31, 2, 0x16, 0x1d
-/* 8037BCE8 003452A8  38 84 20 40 */	addi r4, r4, lbl_805E2040@l
+/* 8037BCE8 003452A8  38 84 20 40 */	addi r4, r4, _dev_handle_to_bda@l
 /* 8037BCEC 003452AC  7F E4 00 2E */	lwzx r31, r4, r0
 /* 8037BCF0 003452B0  48 00 00 08 */	b .L_8037BCF8
 .L_8037BCF4:
@@ -6921,9 +6941,9 @@
 /* 8037BD38 003452F8  57 E0 06 3E */	clrlwi r0, r31, 0x18
 /* 8037BD3C 003452FC  28 00 00 0F */	cmplwi r0, 0xf
 /* 8037BD40 00345300  41 81 00 18 */	bgt .L_8037BD58
-/* 8037BD44 00345304  3C 80 80 5E */	lis r4, lbl_805E33E8@ha
+/* 8037BD44 00345304  3C 80 80 5E */	lis r4, _dev_handle_queue_size@ha
 /* 8037BD48 00345308  57 E0 0D FC */	rlwinm r0, r31, 1, 0x17, 0x1e
-/* 8037BD4C 0034530C  38 84 33 E8 */	addi r4, r4, lbl_805E33E8@l
+/* 8037BD4C 0034530C  38 84 33 E8 */	addi r4, r4, _dev_handle_queue_size@l
 /* 8037BD50 00345310  7F E4 02 2E */	lhzx r31, r4, r0
 /* 8037BD54 00345314  48 00 00 08 */	b .L_8037BD5C
 .L_8037BD58:
@@ -6949,9 +6969,9 @@
 /* 8037BD98 00345358  57 E0 06 3E */	clrlwi r0, r31, 0x18
 /* 8037BD9C 0034535C  28 00 00 0F */	cmplwi r0, 0xf
 /* 8037BDA0 00345360  41 81 00 18 */	bgt .L_8037BDB8
-/* 8037BDA4 00345364  3C 80 80 5E */	lis r4, lbl_805E3408@ha
+/* 8037BDA4 00345364  3C 80 80 5E */	lis r4, _dev_handle_notack_num@ha
 /* 8037BDA8 00345368  57 E0 0D FC */	rlwinm r0, r31, 1, 0x17, 0x1e
-/* 8037BDAC 0034536C  38 84 34 08 */	addi r4, r4, lbl_805E3408@l
+/* 8037BDAC 0034536C  38 84 34 08 */	addi r4, r4, _dev_handle_notack_num@l
 /* 8037BDB0 00345370  7F E4 02 2E */	lhzx r31, r4, r0
 /* 8037BDB4 00345374  48 00 00 08 */	b .L_8037BDBC
 .L_8037BDB8:
@@ -6987,8 +7007,8 @@
 
 .balign 16, 0
 .fn WUDiGetDiscoverDevice, global
-/* 8037BE20 003453E0  3C 60 80 5E */	lis r3, lbl_805E1AD8@ha
-/* 8037BE24 003453E4  38 63 1A D8 */	addi r3, r3, lbl_805E1AD8@l
+/* 8037BE20 003453E0  3C 60 80 5E */	lis r3, _wudDiscWork@ha
+/* 8037BE24 003453E4  38 63 1A D8 */	addi r3, r3, _wudDiscWork@l
 /* 8037BE28 003453E8  4E 80 00 20 */	blr 
 .endfn WUDiGetDiscoverDevice
 
@@ -7000,10 +7020,10 @@
 /* 8037BE3C 003453FC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8037BE40 00345400  40 82 00 2C */	bne .L_8037BE6C
 /* 8037BE44 00345404  38 03 00 0A */	addi r0, r3, 0xa
-/* 8037BE48 00345408  3C 60 80 5E */	lis r3, lbl_805E1B38@ha
+/* 8037BE48 00345408  3C 60 80 5E */	lis r3, _scArray@ha
 /* 8037BE4C 0034540C  1C 00 00 46 */	mulli r0, r0, 0x46
 /* 8037BE50 00345410  38 80 00 00 */	li r4, 0
-/* 8037BE54 00345414  38 63 1B 38 */	addi r3, r3, lbl_805E1B38@l
+/* 8037BE54 00345414  38 63 1B 38 */	addi r3, r3, _scArray@l
 /* 8037BE58 00345418  38 A0 00 46 */	li r5, 0x46
 /* 8037BE5C 0034541C  7C 63 02 14 */	add r3, r3, r0
 /* 8037BE60 00345420  38 63 00 01 */	addi r3, r3, 1
@@ -7011,16 +7031,16 @@
 /* 8037BE68 00345428  48 00 00 24 */	b .L_8037BE8C
 .L_8037BE6C:
 /* 8037BE6C 0034542C  38 03 00 0A */	addi r0, r3, 0xa
-/* 8037BE70 00345430  3C 60 80 5E */	lis r3, lbl_805E1B38@ha
+/* 8037BE70 00345430  3C 60 80 5E */	lis r3, _scArray@ha
 /* 8037BE74 00345434  1C 00 00 46 */	mulli r0, r0, 0x46
 /* 8037BE78 00345438  38 A0 00 06 */	li r5, 6
-/* 8037BE7C 0034543C  38 63 1B 38 */	addi r3, r3, lbl_805E1B38@l
+/* 8037BE7C 0034543C  38 63 1B 38 */	addi r3, r3, _scArray@l
 /* 8037BE80 00345440  7C 63 02 14 */	add r3, r3, r0
 /* 8037BE84 00345444  38 63 00 01 */	addi r3, r3, 1
 /* 8037BE88 00345448  4B C8 81 79 */	bl memcpy
 .L_8037BE8C:
 /* 8037BE8C 0034544C  38 00 00 01 */	li r0, 1
-/* 8037BE90 00345450  98 0D BB 94 */	stb r0, lbl_80667D14@sda21(r13)
+/* 8037BE90 00345450  98 0D BB 94 */	stb r0, _scFlush@sda21(r13)
 /* 8037BE94 00345454  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8037BE98 00345458  7C 08 03 A6 */	mtlr r0
 /* 8037BE9C 0034545C  38 21 00 10 */	addi r1, r1, 0x10
@@ -7038,10 +7058,10 @@
 /* 8037BEC8 00345488  48 00 00 2C */	b .L_8037BEF4
 .L_8037BECC:
 /* 8037BECC 0034548C  38 03 00 0A */	addi r0, r3, 0xa
-/* 8037BED0 00345490  3C 60 80 5E */	lis r3, lbl_805E1B38@ha
+/* 8037BED0 00345490  3C 60 80 5E */	lis r3, _scArray@ha
 /* 8037BED4 00345494  1C 00 00 46 */	mulli r0, r0, 0x46
 /* 8037BED8 00345498  38 A0 00 06 */	li r5, 6
-/* 8037BEDC 0034549C  38 63 1B 38 */	addi r3, r3, lbl_805E1B38@l
+/* 8037BEDC 0034549C  38 63 1B 38 */	addi r3, r3, _scArray@l
 /* 8037BEE0 003454A0  7C 63 02 14 */	add r3, r3, r0
 /* 8037BEE4 003454A4  38 63 00 01 */	addi r3, r3, 1
 /* 8037BEE8 003454A8  4B F4 29 45 */	bl memcmp
@@ -7059,18 +7079,18 @@
 /* 8037BF10 003454D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8037BF14 003454D4  7C 08 02 A6 */	mflr r0
 /* 8037BF18 003454D8  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8037BF1C 003454DC  88 0D BB 94 */	lbz r0, lbl_80667D14@sda21(r13)
+/* 8037BF1C 003454DC  88 0D BB 94 */	lbz r0, _scFlush@sda21(r13)
 /* 8037BF20 003454E0  2C 00 00 00 */	cmpwi r0, 0
 /* 8037BF24 003454E4  41 82 00 28 */	beq .L_8037BF4C
-/* 8037BF28 003454E8  3C 60 80 5E */	lis r3, lbl_805E1B38@ha
-/* 8037BF2C 003454EC  38 63 1B 38 */	addi r3, r3, lbl_805E1B38@l
+/* 8037BF28 003454E8  3C 60 80 5E */	lis r3, _scArray@ha
+/* 8037BF2C 003454EC  38 63 1B 38 */	addi r3, r3, _scArray@l
 /* 8037BF30 003454F0  4B FE 52 C1 */	bl SCSetBtDeviceInfoArray
 /* 8037BF34 003454F4  2C 03 00 00 */	cmpwi r3, 0
 /* 8037BF38 003454F8  41 82 00 14 */	beq .L_8037BF4C
 /* 8037BF3C 003454FC  38 60 00 00 */	li r3, 0
 /* 8037BF40 00345500  4B FE 4A 21 */	bl SCFlushAsync
 /* 8037BF44 00345504  38 00 00 00 */	li r0, 0
-/* 8037BF48 00345508  98 0D BB 94 */	stb r0, lbl_80667D14@sda21(r13)
+/* 8037BF48 00345508  98 0D BB 94 */	stb r0, _scFlush@sda21(r13)
 .L_8037BF4C:
 /* 8037BF4C 0034550C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8037BF50 00345510  7C 08 03 A6 */	mtlr r0
@@ -7080,44 +7100,43 @@
 
 .balign 16, 0
 .fn WUDiSetDevAddrForHandle, global
-/* 8037BF60 00345520  3C A0 80 5E */	lis r5, lbl_805E2040@ha
+/* 8037BF60 00345520  3C A0 80 5E */	lis r5, _dev_handle_to_bda@ha
 /* 8037BF64 00345524  54 60 15 BA */	rlwinm r0, r3, 2, 0x16, 0x1d
-/* 8037BF68 00345528  38 A5 20 40 */	addi r5, r5, lbl_805E2040@l
+/* 8037BF68 00345528  38 A5 20 40 */	addi r5, r5, _dev_handle_to_bda@l
 /* 8037BF6C 0034552C  7C 85 01 2E */	stwx r4, r5, r0
 /* 8037BF70 00345530  4E 80 00 20 */	blr 
 .endfn WUDiSetDevAddrForHandle
 
 .balign 16, 0
 .fn WUDiGetDevAddrForHandle, global
-/* 8037BF80 00345540  3C 80 80 5E */	lis r4, lbl_805E2040@ha
+/* 8037BF80 00345540  3C 80 80 5E */	lis r4, _dev_handle_to_bda@ha
 /* 8037BF84 00345544  54 60 15 BA */	rlwinm r0, r3, 2, 0x16, 0x1d
-/* 8037BF88 00345548  38 84 20 40 */	addi r4, r4, lbl_805E2040@l
+/* 8037BF88 00345548  38 84 20 40 */	addi r4, r4, _dev_handle_to_bda@l
 /* 8037BF8C 0034554C  7C 64 00 2E */	lwzx r3, r4, r0
 /* 8037BF90 00345550  4E 80 00 20 */	blr 
 .endfn WUDiGetDevAddrForHandle
 
 .balign 16, 0
 .fn WUDiSetQueueSizeForHandle, global
-/* 8037BFA0 00345560  3C A0 80 5E */	lis r5, lbl_805E33E8@ha
+/* 8037BFA0 00345560  3C A0 80 5E */	lis r5, _dev_handle_queue_size@ha
 /* 8037BFA4 00345564  54 60 0D FC */	rlwinm r0, r3, 1, 0x17, 0x1e
-/* 8037BFA8 00345568  38 A5 33 E8 */	addi r5, r5, lbl_805E33E8@l
+/* 8037BFA8 00345568  38 A5 33 E8 */	addi r5, r5, _dev_handle_queue_size@l
 /* 8037BFAC 0034556C  7C 85 03 2E */	sthx r4, r5, r0
 /* 8037BFB0 00345570  4E 80 00 20 */	blr 
 .endfn WUDiSetQueueSizeForHandle
 
 .balign 16, 0
 .fn WUDiSetNotAckNumForHandle, global
-/* 8037BFC0 00345580  3C A0 80 5E */	lis r5, lbl_805E3408@ha
+/* 8037BFC0 00345580  3C A0 80 5E */	lis r5, _dev_handle_notack_num@ha
 /* 8037BFC4 00345584  54 60 0D FC */	rlwinm r0, r3, 1, 0x17, 0x1e
-/* 8037BFC8 00345588  38 A5 34 08 */	addi r5, r5, lbl_805E3408@l
+/* 8037BFC8 00345588  38 A5 34 08 */	addi r5, r5, _dev_handle_notack_num@l
 /* 8037BFCC 0034558C  7C 85 03 2E */	sthx r4, r5, r0
 /* 8037BFD0 00345590  4E 80 00 20 */	blr 
 .endfn WUDiSetNotAckNumForHandle
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_805622C8
-lbl_805622C8:
+_wudWiiRemoteDescriptor:
 	.4byte 0x05010905
 	.4byte 0xA1018510
 	.4byte 0x150026FF
@@ -7173,9 +7192,14 @@ lbl_805622C8:
 	.4byte 0x853F9515
 	.4byte 0x09018100
 	.4byte 0xC0000000
+
+
+_wudSuperPeekPokeCmd:
 	.4byte 0x05009A0E
 	.4byte 0x00010000
 	.4byte 0
+
+_wudPatchData:
 	.4byte 0x70990800
 	.4byte 0xB4000000
 	.4byte 0x8843D107
@@ -7223,6 +7247,9 @@ lbl_805622C8:
 	.4byte 0xFF9F0000
 	.4byte 0x30FC0E00
 	.4byte 0x7FFF0000
+
+
+_wudPatchInstallCmd:
 	.4byte 0x0720BC65
 	.4byte 0x01008442
 	.4byte 0x09D28442
@@ -7246,6 +7273,9 @@ lbl_805622C8:
 	.4byte 0x742F0000
 	.4byte 0x86F018FD
 	.4byte 0x214F3B60
+
+
+_wudResetAuthCountCmd:
 	.4byte 0x30360800
 	.4byte 0
 	.4byte 0
@@ -7554,6 +7584,8 @@ jumptable_80562FA0:
 	.4byte .L_8037B18C
 	.4byte .L_8037B2E0
 	.4byte .L_8037B2F0
+
+
 	.asciz "INQUIRY RESULT: %02x:%02x:%02x:%02x:%02x:%02x   %02x%02x%02x   %d\n"
 	.balign 4
 	.asciz "INQUIRY_COMPLETED\n"
@@ -7645,91 +7677,105 @@ lbl_8066C266:
 .global __rvl_wudcb
 __rvl_wudcb:
 	.skip 0x750
-.global lbl_805E19D0
-lbl_805E19D0:
+
+_wudDiscResp:
 	.skip 0x108
-.global lbl_805E1AD8
-lbl_805E1AD8:
+
+_wudDiscWork:
 	.skip 0x60
-.global lbl_805E1B38
-lbl_805E1B38:
-	.skip 0x468
-.global lbl_805E1FA0
-lbl_805E1FA0:
+
+_scArray:
+	.skip 0x461
+
+.skip 0x7
+
+_wudNandWbcInfo:
 	.skip 0xA0
-.global lbl_805E2040
-lbl_805E2040:
-	.skip 0x1A0
-.global lbl_805E21E0
-lbl_805E21E0:
-	.skip 0x1208
-.global lbl_805E33E8
-lbl_805E33E8:
+
+_dev_handle_to_bda:
+	.skip 0x40
+
+_wudNandFileInfo:
+	.skip 0x8C
+
+_wudNandBlock:
+	.skip 0xBC
+
+.skip 0x18
+
+_wudHandlerStack:
+	.skip 0x1000
+
+_spArray:
+	.skip 0x205
+
+.skip 0x3
+
+_dev_handle_queue_size:
 	.skip 0x20
-.global lbl_805E3408
-lbl_805E3408:
+
+_dev_handle_notack_num:
 	.skip 0x20
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
 
-.global lbl_80667CE0
-lbl_80667CE0:
+_wudInitialized:
 	.skip 0x4
-.global lbl_80667CE4
-lbl_80667CE4:
+
+_wudReadNand:
 	.skip 0x4
-.global lbl_80667CE8
-lbl_80667CE8:
+
+_wudAbortSync:
 	.skip 0x4
-.global lbl_80667CEC
-lbl_80667CEC:
+
+_wudPatchRemoveCmd:
 	.skip 0x1
-.global lbl_80667CED
-lbl_80667CED:
+
+__bte_trace_level:
 	.skip 0x3
-.global lbl_80667CF0
-lbl_80667CF0:
+
+_wudNandBufPtr:
 	.skip 0x4
-.global lbl_80667CF4
-lbl_80667CF4:
+
+_initWBC:
 	.skip 0x4
-.global lbl_80667CF8
-lbl_80667CF8:
+
+_linkedWBC:
 	.skip 0x4
-.global lbl_80667CFC
-lbl_80667CFC:
+
+_wudNandWbcCrc:
 	.skip 0x4
-.global lbl_80667D00
-lbl_80667D00:
+
+_wudNandPhase:
 	.skip 0x4
-.global lbl_80667D04
-lbl_80667D04:
+
+_wudNandLocked:
 	.skip 0x1
-.global lbl_80667D05
-lbl_80667D05:
+
+_wudInstallNum:
 	.skip 0x1
-.global lbl_80667D06
-lbl_80667D06:
+
+_wudPatchNum:
 	.skip 0x2
-.global lbl_80667D08
-lbl_80667D08:
+
+_wudPatchAddress:
 	.skip 0x4
-.global lbl_80667D0C
-lbl_80667D0C:
+
+_wudPatchOffset:
 	.skip 0x4
-.global lbl_80667D10
-lbl_80667D10:
+
+_wudPatchSize:
 	.skip 0x4
-.global lbl_80667D14
-lbl_80667D14:
+
+_scFlush:
 	.skip 0x1
-.global lbl_80667D15
-lbl_80667D15:
+
+_wudTarget:
 	.skip 0x1
-.global lbl_80667D16
-lbl_80667D16:
+
+_wudDiscRssi:
 	.skip 0x1
-.global lbl_80667D17
-lbl_80667D17:
+
+_wudDiscNumResps:
 	.skip 0x1

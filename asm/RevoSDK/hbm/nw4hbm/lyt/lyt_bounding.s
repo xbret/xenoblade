@@ -104,18 +104,18 @@
 
 .balign 16, 0
 .fn GetRuntimeTypeInfo__Q36nw4hbm3lyt8BoundingCFv, global
-/* 8032C560 002F5B20  3C 60 80 5D */	lis r3, lbl_805CD788@ha
-/* 8032C564 002F5B24  38 63 D7 88 */	addi r3, r3, lbl_805CD788@l
+/* 8032C560 002F5B20  3C 60 80 5D */	lis r3, typeInfo__Q36nw4hbm3lyt8Bounding@ha
+/* 8032C564 002F5B24  38 63 D7 88 */	addi r3, r3, typeInfo__Q36nw4hbm3lyt8Bounding@l
 /* 8032C568 002F5B28  4E 80 00 20 */	blr 
 .endfn GetRuntimeTypeInfo__Q36nw4hbm3lyt8BoundingCFv
 
 .balign 16, 0
 #__sinit_\lyt_bounding_cpp
 .fn __sinit_lyt_bounding_cpp, global
-/* 8032C570 002F5B30  3C 80 80 5D */	lis r4, lbl_805CD7C0@ha
-/* 8032C574 002F5B34  3C 60 80 5D */	lis r3, lbl_805CD788@ha
-/* 8032C578 002F5B38  38 84 D7 C0 */	addi r4, r4, lbl_805CD7C0@l
-/* 8032C57C 002F5B3C  90 83 D7 88 */	stw r4, lbl_805CD788@l(r3)
+/* 8032C570 002F5B30  3C 80 80 5D */	lis r4, typeInfo__Q36nw4hbm3lyt4Pane@ha
+/* 8032C574 002F5B34  3C 60 80 5D */	lis r3, typeInfo__Q36nw4hbm3lyt8Bounding@ha
+/* 8032C578 002F5B38  38 84 D7 C0 */	addi r4, r4, typeInfo__Q36nw4hbm3lyt4Pane@l
+/* 8032C57C 002F5B3C  90 83 D7 88 */	stw r4, typeInfo__Q36nw4hbm3lyt8Bounding@l(r3)
 /* 8032C580 002F5B40  4E 80 00 20 */	blr 
 .endfn __sinit_lyt_bounding_cpp
 
@@ -199,6 +199,6 @@ lbl_8054D798:
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805CD788
-lbl_805CD788:
+.global typeInfo__Q36nw4hbm3lyt8Bounding
+typeInfo__Q36nw4hbm3lyt8Bounding:
 	.skip 0x8

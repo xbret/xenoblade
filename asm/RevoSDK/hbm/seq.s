@@ -147,9 +147,9 @@
 /* 803422C0 0030B880  90 04 00 0C */	stw r0, 0xc(r4)
 /* 803422C4 0030B884  48 00 00 70 */	b .L_80342334
 .L_803422C8:
-/* 803422C8 0030B888  3C A0 80 55 */	lis r5, lbl_80550410@ha
+/* 803422C8 0030B888  3C A0 80 55 */	lis r5, __HBMSEQMidiEventLength@ha
 /* 803422CC 0030B88C  98 01 00 08 */	stb r0, 8(r1)
-/* 803422D0 0030B890  38 A5 04 10 */	addi r5, r5, lbl_80550410@l
+/* 803422D0 0030B890  38 A5 04 10 */	addi r5, r5, __HBMSEQMidiEventLength@l
 /* 803422D4 0030B894  7C A0 2A 14 */	add r5, r0, r5
 /* 803422D8 0030B898  88 05 FF 80 */	lbz r0, -0x80(r5)
 /* 803422DC 0030B89C  28 00 00 01 */	cmplwi r0, 1
@@ -323,25 +323,25 @@
 
 .balign 16, 0
 .fn HBMSEQInit, global
-/* 80342540 0030BB00  3C A0 80 5D */	lis r5, lbl_805CE3BC@ha
-/* 80342544 0030BB04  80 05 E3 BC */	lwz r0, lbl_805CE3BC@l(r5)
+/* 80342540 0030BB00  3C A0 80 5D */	lis r5, __init@ha
+/* 80342544 0030BB04  80 05 E3 BC */	lwz r0, __init@l(r5)
 /* 80342548 0030BB08  2C 00 00 00 */	cmpwi r0, 0
 /* 8034254C 0030BB0C  4C 82 00 20 */	bnelr 
-/* 80342550 0030BB10  3C 60 80 5D */	lis r3, lbl_805CE3B8@ha
+/* 80342550 0030BB10  3C 60 80 5D */	lis r3, __HBMSEQSequenceList@ha
 /* 80342554 0030BB14  38 80 00 00 */	li r4, 0
 /* 80342558 0030BB18  38 00 00 01 */	li r0, 1
-/* 8034255C 0030BB1C  90 83 E3 B8 */	stw r4, lbl_805CE3B8@l(r3)
-/* 80342560 0030BB20  90 05 E3 BC */	stw r0, lbl_805CE3BC@l(r5)
+/* 8034255C 0030BB1C  90 83 E3 B8 */	stw r4, __HBMSEQSequenceList@l(r3)
+/* 80342560 0030BB20  90 05 E3 BC */	stw r0, __init@l(r5)
 /* 80342564 0030BB24  4E 80 00 20 */	blr 
 .endfn HBMSEQInit
 
 .balign 16, 0
 .fn HBMSEQQuit, global
-/* 80342570 0030BB30  3C 80 80 5D */	lis r4, lbl_805CE3B8@ha
-/* 80342574 0030BB34  3C 60 80 5D */	lis r3, lbl_805CE3BC@ha
+/* 80342570 0030BB30  3C 80 80 5D */	lis r4, __HBMSEQSequenceList@ha
+/* 80342574 0030BB34  3C 60 80 5D */	lis r3, __init@ha
 /* 80342578 0030BB38  38 00 00 00 */	li r0, 0
-/* 8034257C 0030BB3C  90 04 E3 B8 */	stw r0, lbl_805CE3B8@l(r4)
-/* 80342580 0030BB40  90 03 E3 BC */	stw r0, lbl_805CE3BC@l(r3)
+/* 8034257C 0030BB3C  90 04 E3 B8 */	stw r0, __HBMSEQSequenceList@l(r4)
+/* 80342580 0030BB40  90 03 E3 BC */	stw r0, __init@l(r3)
 /* 80342584 0030BB44  4E 80 00 20 */	blr 
 .endfn HBMSEQQuit
 
@@ -349,15 +349,15 @@
 .fn HBMSEQRunAudioFrame, global
 /* 80342590 0030BB50  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80342594 0030BB54  7C 08 02 A6 */	mflr r0
-/* 80342598 0030BB58  3C 60 80 5D */	lis r3, lbl_805CE3BC@ha
-/* 8034259C 0030BB5C  3C 80 80 5D */	lis r4, lbl_805CE3B8@ha
+/* 80342598 0030BB58  3C 60 80 5D */	lis r3, __init@ha
+/* 8034259C 0030BB5C  3C 80 80 5D */	lis r4, __HBMSEQSequenceList@ha
 /* 803425A0 0030BB60  90 01 00 24 */	stw r0, 0x24(r1)
 /* 803425A4 0030BB64  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 803425A8 0030BB68  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 803425AC 0030BB6C  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 803425B0 0030BB70  93 81 00 10 */	stw r28, 0x10(r1)
-/* 803425B4 0030BB74  80 03 E3 BC */	lwz r0, lbl_805CE3BC@l(r3)
-/* 803425B8 0030BB78  83 C4 E3 B8 */	lwz r30, lbl_805CE3B8@l(r4)
+/* 803425B4 0030BB74  80 03 E3 BC */	lwz r0, __init@l(r3)
+/* 803425B8 0030BB78  83 C4 E3 B8 */	lwz r30, __HBMSEQSequenceList@l(r4)
 /* 803425BC 0030BB7C  2C 00 00 00 */	cmpwi r0, 0
 /* 803425C0 0030BB80  40 82 01 30 */	bne .L_803426F0
 /* 803425C4 0030BB84  48 00 01 34 */	b .L_803426F8
@@ -482,8 +482,8 @@
 /* 80342760 0030BD20  7F C4 F3 78 */	mr r4, r30
 /* 80342764 0030BD24  4B FF FD 4D */	bl __HBMSEQReadHeader__FP15_HBMSEQSEQUENCEPUc
 /* 80342768 0030BD28  48 01 62 49 */	bl OSDisableInterrupts
-/* 8034276C 0030BD2C  3C 80 80 5D */	lis r4, lbl_805CE3B8@ha
-/* 80342770 0030BD30  80 04 E3 B8 */	lwz r0, lbl_805CE3B8@l(r4)
+/* 8034276C 0030BD2C  3C 80 80 5D */	lis r4, __HBMSEQSequenceList@ha
+/* 80342770 0030BD30  80 04 E3 B8 */	lwz r0, __HBMSEQSequenceList@l(r4)
 /* 80342774 0030BD34  2C 00 00 00 */	cmpwi r0, 0
 /* 80342778 0030BD38  41 82 00 0C */	beq .L_80342784
 /* 8034277C 0030BD3C  90 1D 00 00 */	stw r0, 0(r29)
@@ -491,8 +491,8 @@
 .L_80342784:
 /* 80342784 0030BD44  93 FD 00 00 */	stw r31, 0(r29)
 .L_80342788:
-/* 80342788 0030BD48  3C 80 80 5D */	lis r4, lbl_805CE3B8@ha
-/* 8034278C 0030BD4C  93 A4 E3 B8 */	stw r29, lbl_805CE3B8@l(r4)
+/* 80342788 0030BD48  3C 80 80 5D */	lis r4, __HBMSEQSequenceList@ha
+/* 8034278C 0030BD4C  93 A4 E3 B8 */	stw r29, __HBMSEQSequenceList@l(r4)
 /* 80342790 0030BD50  48 01 62 61 */	bl OSRestoreInterrupts
 /* 80342794 0030BD54  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 80342798 0030BD58  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -512,18 +512,18 @@
 /* 803427C0 0030BD80  4B F7 79 91 */	bl _savegpr_26
 /* 803427C4 0030BD84  7C 7A 1B 78 */	mr r26, r3
 /* 803427C8 0030BD88  48 01 61 E9 */	bl OSDisableInterrupts
-/* 803427CC 0030BD8C  3F C0 80 5D */	lis r30, lbl_805CE3B8@ha
+/* 803427CC 0030BD8C  3F C0 80 5D */	lis r30, __HBMSEQSequenceList@ha
 /* 803427D0 0030BD90  3B E0 00 00 */	li r31, 0
-/* 803427D4 0030BD94  83 9E E3 B8 */	lwz r28, lbl_805CE3B8@l(r30)
+/* 803427D4 0030BD94  83 9E E3 B8 */	lwz r28, __HBMSEQSequenceList@l(r30)
 /* 803427D8 0030BD98  7C 7B 1B 78 */	mr r27, r3
-/* 803427DC 0030BD9C  93 FE E3 B8 */	stw r31,lbl_805CE3B8@l(r30)
+/* 803427DC 0030BD9C  93 FE E3 B8 */	stw r31,__HBMSEQSequenceList@l(r30)
 /* 803427E0 0030BDA0  48 00 00 38 */	b .L_80342818
 .L_803427E4:
 /* 803427E4 0030BDA4  7C 1C D0 40 */	cmplw r28, r26
 /* 803427E8 0030BDA8  83 BC 00 00 */	lwz r29, 0(r28)
 /* 803427EC 0030BDAC  41 82 00 28 */	beq .L_80342814
 /* 803427F0 0030BDB0  48 01 61 C1 */	bl OSDisableInterrupts
-/* 803427F4 0030BDB4  80 1E E3 B8 */	lwz r0, lbl_805CE3B8@l(r30)
+/* 803427F4 0030BDB4  80 1E E3 B8 */	lwz r0, __HBMSEQSequenceList@l(r30)
 /* 803427F8 0030BDB8  2C 00 00 00 */	cmpwi r0, 0
 /* 803427FC 0030BDBC  41 82 00 0C */	beq .L_80342808
 /* 80342800 0030BDC0  90 1C 00 00 */	stw r0, 0(r28)
@@ -531,7 +531,7 @@
 .L_80342808:
 /* 80342808 0030BDC8  93 FC 00 00 */	stw r31, 0(r28)
 .L_8034280C:
-/* 8034280C 0030BDCC  93 9E E3 B8 */	stw r28, lbl_805CE3B8@l(r30)
+/* 8034280C 0030BDCC  93 9E E3 B8 */	stw r28, __HBMSEQSequenceList@l(r30)
 /* 80342810 0030BDD0  48 01 61 E1 */	bl OSRestoreInterrupts
 .L_80342814:
 /* 80342814 0030BDD4  7F BC EB 78 */	mr r28, r29
@@ -675,8 +675,8 @@ lbl_80518B90:
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
 
-.global lbl_80550410
-lbl_80550410:
+.global __HBMSEQMidiEventLength
+__HBMSEQMidiEventLength:
 	.byte 0x02,0x02
 	.byte 0x02,0x02
 	.byte 0x02,0x02
@@ -741,9 +741,8 @@ lbl_80550410:
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805CE3B8
-lbl_805CE3B8:
+__HBMSEQSequenceList:
 	.skip 0x4
-.global lbl_805CE3BC
-lbl_805CE3BC:
+
+__init:
 	.skip 0x4

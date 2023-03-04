@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-#MakeDiffuseLightObj__Q34nw4r3g3d24@unnamed@g3d_anmscn_cpp@FPQ34nw4r3g3d8LightObjPCQ34nw4r3g3d14LightAnmResult
-.fn MakeDiffuseLightObj__Q34nw4r3g3d24_unnamed_g3d_anmscn_cpp_FPQ34nw4r3g3d8LightObjPCQ34nw4r3g3d14LightAnmResult, global
+.fn "MakeDiffuseLightObj__Q34nw4r3g3d24@unnamed@g3d_anmscn_cpp@FPQ34nw4r3g3d8LightObjPCQ34nw4r3g3d14LightAnmResult", global
 /* 803E5D28 003AF2E8  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 803E5D2C 003AF2EC  7C 08 02 A6 */	mflr r0
 /* 803E5D30 003AF2F0  90 01 00 54 */	stw r0, 0x54(r1)
@@ -171,7 +170,7 @@
 /* 803E5F9C 003AF55C  7C 08 03 A6 */	mtlr r0
 /* 803E5FA0 003AF560  38 21 00 50 */	addi r1, r1, 0x50
 /* 803E5FA4 003AF564  4E 80 00 20 */	blr 
-.endfn MakeDiffuseLightObj__Q34nw4r3g3d24_unnamed_g3d_anmscn_cpp_FPQ34nw4r3g3d8LightObjPCQ34nw4r3g3d14LightAnmResult
+.endfn "MakeDiffuseLightObj__Q34nw4r3g3d24@unnamed@g3d_anmscn_cpp@FPQ34nw4r3g3d8LightObjPCQ34nw4r3g3d14LightAnmResult"
 
 
 .fn GetLightSetting__Q34nw4r3g3d6AnmScnFPQ34nw4r3g3d12LightSetting, global
@@ -998,7 +997,7 @@
 /* 803E6A24 003AFFE4  41 82 00 10 */	beq .L_803E6A34
 /* 803E6A28 003AFFE8  7F A3 EB 78 */	mr r3, r29
 /* 803E6A2C 003AFFEC  7F C4 F3 78 */	mr r4, r30
-/* 803E6A30 003AFFF0  4B FF F2 F9 */	bl MakeDiffuseLightObj__Q34nw4r3g3d24_unnamed_g3d_anmscn_cpp_FPQ34nw4r3g3d8LightObjPCQ34nw4r3g3d14LightAnmResult
+/* 803E6A30 003AFFF0  4B FF F2 F9 */	bl "MakeDiffuseLightObj__Q34nw4r3g3d24@unnamed@g3d_anmscn_cpp@FPQ34nw4r3g3d8LightObjPCQ34nw4r3g3d14LightAnmResult"
 .L_803E6A34:
 /* 803E6A34 003AFFF4  2C 1F 00 00 */	cmpwi r31, 0
 /* 803E6A38 003AFFF8  41 82 01 08 */	beq .L_803E6B40

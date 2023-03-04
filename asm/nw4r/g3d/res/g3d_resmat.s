@@ -733,7 +733,7 @@
 /* 803DC094 003A5654  4E 80 00 20 */	blr 
 .endfn GXGetBlendMode__Q34nw4r3g3d9ResMatPixCFP12_GXBlendModeP14_GXBlendFactorP14_GXBlendFactorP10_GXLogicOp
 
-.fn func_803DC098, global
+.fn GXSetBlendMode__Q34nw4r3g3d9ResMatPixF12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOp, global
 /* 803DC098 003A5658  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803DC09C 003A565C  7C 08 02 A6 */	mflr r0
 /* 803DC0A0 003A5660  90 01 00 24 */	stw r0, 0x24(r1)
@@ -780,7 +780,7 @@
 /* 803DC13C 003A56FC  7C 08 03 A6 */	mtlr r0
 /* 803DC140 003A5700  38 21 00 20 */	addi r1, r1, 0x20
 /* 803DC144 003A5704  4E 80 00 20 */	blr 
-.endfn func_803DC098
+.endfn GXSetBlendMode__Q34nw4r3g3d9ResMatPixF12_GXBlendMode14_GXBlendFactor14_GXBlendFactor10_GXLogicOp
 
 .fn GXGetTevColor__Q34nw4r3g3d14ResMatTevColorCF11_GXTevRegIDP8_GXColor, global
 /* 803DC148 003A5708  38 04 FF FF */	addi r0, r4, -1
@@ -1758,7 +1758,7 @@
 /* 803DCE94 003A6454  4E 80 00 20 */	blr 
 .endfn GetResTev__Q34nw4r3g3d6ResMatFv
 
-#GetResMatFur__Q34nw4r3g3d6ResMatFv or GetResMatFur__Q34nw4r3g3d6ResMatCFv
+#could also be GetResMatFur__Q34nw4r3g3d6ResMatCFv
 .fn GetResMatFur__Q34nw4r3g3d6ResMatFv, global
 /* 803DCE98 003A6458  80 63 00 00 */	lwz r3, 0(r3)
 /* 803DCE9C 003A645C  80 03 00 34 */	lwz r0, 0x34(r3)
@@ -1771,8 +1771,8 @@
 /* 803DCEB4 003A6474  4E 80 00 20 */	blr 
 .endfn GetResMatFur__Q34nw4r3g3d6ResMatFv
 
-#GetResUserData__Q34nw4r3g3d6ResMatCFv or GetResUserData__Q34nw4r3g3d6ResMatFv
-.fn func_803DCEB8, global
+#could also be GetResUserData__Q34nw4r3g3d6ResMatCFv
+.fn GetResUserData__Q34nw4r3g3d6ResMatFv, global
 /* 803DCEB8 003A6478  80 63 00 00 */	lwz r3, 0(r3)
 /* 803DCEBC 003A647C  80 03 00 38 */	lwz r0, 0x38(r3)
 /* 803DCEC0 003A6480  2C 00 00 00 */	cmpwi r0, 0
@@ -1782,7 +1782,7 @@
 .L_803DCED0:
 /* 803DCED0 003A6490  38 60 00 00 */	li r3, 0
 /* 803DCED4 003A6494  4E 80 00 20 */	blr 
-.endfn func_803DCEB8
+.endfn GetResUserData__Q34nw4r3g3d6ResMatFv
 
 .fn Bind__Q34nw4r3g3d14ResTexPlttInfoFQ34nw4r3g3d7ResFileQ34nw4r3g3d9ResTexObjQ34nw4r3g3d10ResTlutObj, global
 /* 803DCED8 003A6498  94 21 FF A0 */	stwu r1, -0x60(r1)

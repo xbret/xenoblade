@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-#__ct__Q44nw4r3snd6detail9WaveSoundFPQ44nw4r3snd6detail50SoundInstanceManager<Q44nw4r3snd6detail9WaveSound>ii
-.fn __ct__Q44nw4r3snd6detail9WaveSoundFPQ44nw4r3snd6detail50SoundInstanceManager_Q44nw4r3snd6detail9WaveSound_ii, global
+.fn "__ct__Q44nw4r3snd6detail9WaveSoundFPQ44nw4r3snd6detail50SoundInstanceManager<Q44nw4r3snd6detail9WaveSound>ii", global
 /* 80429BD8 003F3198  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80429BDC 003F319C  7C 08 02 A6 */	mflr r0
 /* 80429BE0 003F31A0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -30,7 +29,7 @@
 /* 80429C34 003F31F4  7C 08 03 A6 */	mtlr r0
 /* 80429C38 003F31F8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80429C3C 003F31FC  4E 80 00 20 */	blr
-.endfn __ct__Q44nw4r3snd6detail9WaveSoundFPQ44nw4r3snd6detail50SoundInstanceManager_Q44nw4r3snd6detail9WaveSound_ii
+.endfn "__ct__Q44nw4r3snd6detail9WaveSoundFPQ44nw4r3snd6detail50SoundInstanceManager<Q44nw4r3snd6detail9WaveSound>ii"
 
 .fn __dt__Q44nw4r3snd6detail9WsdPlayerFv, global
 /* 80429C40 003F3200  94 21 FF F0 */	stwu r1, -0x10(r1)

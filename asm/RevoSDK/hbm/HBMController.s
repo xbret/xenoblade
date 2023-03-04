@@ -18,9 +18,9 @@
 /* 80320DB0 002EA370  41 82 00 50 */	beq .L_80320E00
 /* 80320DB4 002EA374  48 00 00 80 */	b .L_80320E34
 .L_80320DB8:
-/* 80320DB8 002EA378  3F 80 80 5D */	lis r28, lbl_805CD738@ha
+/* 80320DB8 002EA378  3F 80 80 5D */	lis r28, sThis__Q210homebutton10Controller@ha
 /* 80320DBC 002EA37C  54 7D 10 3A */	slwi r29, r3, 2
-/* 80320DC0 002EA380  3B 9C D7 38 */	addi r28, r28, lbl_805CD738@l
+/* 80320DC0 002EA380  3B 9C D7 38 */	addi r28, r28, sThis__Q210homebutton10Controller@l
 /* 80320DC4 002EA384  7C 9C E8 2E */	lwzx r4, r28, r29
 /* 80320DC8 002EA388  88 04 00 40 */	lbz r0, 0x40(r4)
 /* 80320DCC 002EA38C  2C 00 00 00 */	cmpwi r0, 0
@@ -38,9 +38,9 @@
 /* 80320DF8 002EA3B8  48 04 C2 C9 */	bl WPADControlSpeaker
 /* 80320DFC 002EA3BC  48 00 00 38 */	b .L_80320E34
 .L_80320E00:
-/* 80320E00 002EA3C0  3F A0 80 5D */	lis r29, lbl_805CD738@ha
+/* 80320E00 002EA3C0  3F A0 80 5D */	lis r29, sThis__Q210homebutton10Controller@ha
 /* 80320E04 002EA3C4  54 7C 10 3A */	slwi r28, r3, 2
-/* 80320E08 002EA3C8  3B BD D7 38 */	addi r29, r29, lbl_805CD738@l
+/* 80320E08 002EA3C8  3B BD D7 38 */	addi r29, r29, sThis__Q210homebutton10Controller@l
 /* 80320E0C 002EA3CC  7C 9D E0 2E */	lwzx r4, r29, r28
 /* 80320E10 002EA3D0  80 84 00 28 */	lwz r4, 0x28(r4)
 /* 80320E14 002EA3D4  48 04 B5 7D */	bl WPADSetExtensionCallback
@@ -52,9 +52,9 @@
 /* 80320E2C 002EA3EC  7C 7D E0 2E */	lwzx r3, r29, r28
 /* 80320E30 002EA3F0  98 03 00 43 */	stb r0, 0x43(r3)
 .L_80320E34:
-/* 80320E34 002EA3F4  3C 60 80 5D */	lis r3, lbl_805CD738@ha
+/* 80320E34 002EA3F4  3C 60 80 5D */	lis r3, sThis__Q210homebutton10Controller@ha
 /* 80320E38 002EA3F8  57 C0 10 3A */	slwi r0, r30, 2
-/* 80320E3C 002EA3FC  38 63 D7 38 */	addi r3, r3, lbl_805CD738@l
+/* 80320E3C 002EA3FC  38 63 D7 38 */	addi r3, r3, sThis__Q210homebutton10Controller@l
 /* 80320E40 002EA400  7C 63 00 2E */	lwzx r3, r3, r0
 /* 80320E44 002EA404  81 83 00 24 */	lwz r12, 0x24(r3)
 /* 80320E48 002EA408  2C 0C 00 00 */	cmpwi r12, 0
@@ -91,9 +91,9 @@
 /* 80320EB0 002EA470  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80320EB4 002EA474  93 81 00 10 */	stw r28, 0x10(r1)
 /* 80320EB8 002EA478  40 82 00 98 */	bne .L_80320F50
-/* 80320EBC 002EA47C  3C 80 80 5D */	lis r4, lbl_805CD738@ha
+/* 80320EBC 002EA47C  3C 80 80 5D */	lis r4, sThis__Q210homebutton10Controller@ha
 /* 80320EC0 002EA480  54 60 10 3A */	slwi r0, r3, 2
-/* 80320EC4 002EA484  38 84 D7 38 */	addi r4, r4, lbl_805CD738@l
+/* 80320EC4 002EA484  38 84 D7 38 */	addi r4, r4, sThis__Q210homebutton10Controller@l
 /* 80320EC8 002EA488  7F A4 00 2E */	lwzx r29, r4, r0
 /* 80320ECC 002EA48C  83 9D 00 00 */	lwz r28, 0(r29)
 /* 80320ED0 002EA490  7F 83 E3 78 */	mr r3, r28
@@ -105,9 +105,9 @@
 /* 80320EE8 002EA4A8  38 A0 00 00 */	li r5, 0
 /* 80320EEC 002EA4AC  48 04 C1 D5 */	bl WPADControlSpeaker
 /* 80320EF0 002EA4B0  1C 1C 00 30 */	mulli r0, r28, 0x30
-/* 80320EF4 002EA4B4  3C 60 80 5D */	lis r3, lbl_805CD678@ha
+/* 80320EF4 002EA4B4  3C 60 80 5D */	lis r3, sAlarmSoundOff__Q210homebutton10Controller@ha
 /* 80320EF8 002EA4B8  7F 84 E3 78 */	mr r4, r28
-/* 80320EFC 002EA4BC  38 63 D6 78 */	addi r3, r3, lbl_805CD678@l
+/* 80320EFC 002EA4BC  38 63 D6 78 */	addi r3, r3, sAlarmSoundOff__Q210homebutton10Controller@l
 /* 80320F00 002EA4C0  7F 83 02 14 */	add r28, r3, r0
 /* 80320F04 002EA4C4  7F 83 E3 78 */	mr r3, r28
 /* 80320F08 002EA4C8  48 03 26 A9 */	bl OSSetAlarmUserData
@@ -129,9 +129,9 @@
 /* 80320F48 002EA508  38 00 00 01 */	li r0, 1
 /* 80320F4C 002EA50C  98 1D 00 41 */	stb r0, 0x41(r29)
 .L_80320F50:
-/* 80320F50 002EA510  3C 60 80 5D */	lis r3, lbl_805CD738@ha
+/* 80320F50 002EA510  3C 60 80 5D */	lis r3, sThis__Q210homebutton10Controller@ha
 /* 80320F54 002EA514  57 C0 10 3A */	slwi r0, r30, 2
-/* 80320F58 002EA518  38 63 D7 38 */	addi r3, r3, lbl_805CD738@l
+/* 80320F58 002EA518  38 63 D7 38 */	addi r3, r3, sThis__Q210homebutton10Controller@l
 /* 80320F5C 002EA51C  7C 63 00 2E */	lwzx r3, r3, r0
 /* 80320F60 002EA520  81 83 00 28 */	lwz r12, 0x28(r3)
 /* 80320F64 002EA524  2C 0C 00 00 */	cmpwi r12, 0
@@ -160,9 +160,9 @@
 /* 80320FAC 002EA56C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80320FB0 002EA570  93 C1 00 08 */	stw r30, 8(r1)
 /* 80320FB4 002EA574  48 03 26 0D */	bl OSGetAlarmUserData
-/* 80320FB8 002EA578  3C 80 80 5D */	lis r4, lbl_805CD738@ha
+/* 80320FB8 002EA578  3C 80 80 5D */	lis r4, sThis__Q210homebutton10Controller@ha
 /* 80320FBC 002EA57C  54 60 10 3A */	slwi r0, r3, 2
-/* 80320FC0 002EA580  38 84 D7 38 */	addi r4, r4, lbl_805CD738@l
+/* 80320FC0 002EA580  38 84 D7 38 */	addi r4, r4, sThis__Q210homebutton10Controller@l
 /* 80320FC4 002EA584  7F E4 00 2E */	lwzx r31, r4, r0
 /* 80320FC8 002EA588  83 DF 00 00 */	lwz r30, 0(r31)
 /* 80320FCC 002EA58C  7F C3 F3 78 */	mr r3, r30
@@ -195,8 +195,8 @@
 /* 80321028 002EA5E8  C0 06 86 80 */	lfs f0, lbl_80518680@l(r6)
 /* 8032102C 002EA5EC  38 00 00 01 */	li r0, 1
 /* 80321030 002EA5F0  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 80321034 002EA5F4  3F E0 80 5D */	lis r31, lbl_805CD5B0@ha
-/* 80321038 002EA5F8  3B FF D5 B0 */	addi r31, r31, lbl_805CD5B0@l
+/* 80321034 002EA5F4  3F E0 80 5D */	lis r31, sBatteryFlag__Q210homebutton10Controller@ha
+/* 80321038 002EA5F8  3B FF D5 B0 */	addi r31, r31, sBatteryFlag__Q210homebutton10Controller@l
 /* 8032103C 002EA5FC  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80321040 002EA600  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80321044 002EA604  7C 9D 23 78 */	mr r29, r4
@@ -248,14 +248,14 @@
 /* 803210EC 002EA6AC  7C 7E 1B 78 */	mr r30, r3
 /* 803210F0 002EA6B0  41 82 00 44 */	beq .L_80321134
 /* 803210F4 002EA6B4  80 03 00 00 */	lwz r0, 0(r3)
-/* 803210F8 002EA6B8  3C 60 80 5D */	lis r3, lbl_805CD5B8@ha
-/* 803210FC 002EA6BC  38 63 D5 B8 */	addi r3, r3, lbl_805CD5B8@l
+/* 803210F8 002EA6B8  3C 60 80 5D */	lis r3, sAlarm__Q210homebutton10Controller@ha
+/* 803210FC 002EA6BC  38 63 D5 B8 */	addi r3, r3, sAlarm__Q210homebutton10Controller@l
 /* 80321100 002EA6C0  1C 00 00 30 */	mulli r0, r0, 0x30
 /* 80321104 002EA6C4  7C 63 02 14 */	add r3, r3, r0
 /* 80321108 002EA6C8  48 03 20 79 */	bl OSCancelAlarm
 /* 8032110C 002EA6CC  80 1E 00 00 */	lwz r0, 0(r30)
-/* 80321110 002EA6D0  3C 60 80 5D */	lis r3, lbl_805CD678@ha
-/* 80321114 002EA6D4  38 63 D6 78 */	addi r3, r3, lbl_805CD678@l
+/* 80321110 002EA6D0  3C 60 80 5D */	lis r3, sAlarmSoundOff__Q210homebutton10Controller@ha
+/* 80321114 002EA6D4  38 63 D6 78 */	addi r3, r3, sAlarmSoundOff__Q210homebutton10Controller@l
 /* 80321118 002EA6D8  1C 00 00 30 */	mulli r0, r0, 0x30
 /* 8032111C 002EA6DC  7C 63 02 14 */	add r3, r3, r0
 /* 80321120 002EA6E0  48 03 20 61 */	bl OSCancelAlarm
@@ -666,9 +666,9 @@
 /* 80321698 002EAC58  38 A0 00 00 */	li r5, 0
 /* 8032169C 002EAC5C  48 04 BA 25 */	bl WPADControlSpeaker
 /* 803216A0 002EAC60  1C 1B 00 30 */	mulli r0, r27, 0x30
-/* 803216A4 002EAC64  3C 60 80 5D */	lis r3, lbl_805CD678@ha
+/* 803216A4 002EAC64  3C 60 80 5D */	lis r3, sAlarmSoundOff__Q210homebutton10Controller@ha
 /* 803216A8 002EAC68  7F 64 DB 78 */	mr r4, r27
-/* 803216AC 002EAC6C  38 63 D6 78 */	addi r3, r3, lbl_805CD678@l
+/* 803216AC 002EAC6C  38 63 D6 78 */	addi r3, r3, sAlarmSoundOff__Q210homebutton10Controller@l
 /* 803216B0 002EAC70  7F 63 02 14 */	add r27, r3, r0
 /* 803216B4 002EAC74  7F 63 DB 78 */	mr r3, r27
 /* 803216B8 002EAC78  48 03 1E F9 */	bl OSSetAlarmUserData
@@ -707,9 +707,9 @@
 /* 80321738 002EACF8  38 A0 00 00 */	li r5, 0
 /* 8032173C 002EACFC  48 04 B9 85 */	bl WPADControlSpeaker
 /* 80321740 002EAD00  1C 1B 00 30 */	mulli r0, r27, 0x30
-/* 80321744 002EAD04  3C 60 80 5D */	lis r3, lbl_805CD678@ha
+/* 80321744 002EAD04  3C 60 80 5D */	lis r3, sAlarmSoundOff__Q210homebutton10Controller@ha
 /* 80321748 002EAD08  7F 64 DB 78 */	mr r4, r27
-/* 8032174C 002EAD0C  38 63 D6 78 */	addi r3, r3, lbl_805CD678@l
+/* 8032174C 002EAD0C  38 63 D6 78 */	addi r3, r3, sAlarmSoundOff__Q210homebutton10Controller@l
 /* 80321750 002EAD10  7F 63 02 14 */	add r27, r3, r0
 /* 80321754 002EAD14  7F 63 DB 78 */	mr r3, r27
 /* 80321758 002EAD18  48 03 1E 59 */	bl OSSetAlarmUserData
@@ -845,9 +845,9 @@
 /* 80321914 002EAED4  4C 82 00 20 */	bnelr 
 /* 80321918 002EAED8  2C 03 00 04 */	cmpwi r3, 4
 /* 8032191C 002EAEDC  4C 80 00 20 */	bgelr 
-/* 80321920 002EAEE0  3C 80 80 5D */	lis r4, lbl_805CD5B0@ha
+/* 80321920 002EAEE0  3C 80 80 5D */	lis r4, sBatteryFlag__Q210homebutton10Controller@ha
 /* 80321924 002EAEE4  38 00 00 01 */	li r0, 1
-/* 80321928 002EAEE8  38 84 D5 B0 */	addi r4, r4, lbl_805CD5B0@l
+/* 80321928 002EAEE8  38 84 D5 B0 */	addi r4, r4, sBatteryFlag__Q210homebutton10Controller@l
 /* 8032192C 002EAEEC  7C 04 19 AE */	stbx r0, r4, r3
 /* 80321930 002EAEF0  4E 80 00 20 */	blr 
 .endfn ControllerCallback__Q210homebutton10ControllerFll
@@ -860,8 +860,8 @@
 /* 8032194C 002EAF0C  38 60 00 00 */	li r3, 0
 /* 80321950 002EAF10  4E 80 00 20 */	blr
 .L_80321954:
-/* 80321954 002EAF14  3C 60 80 5D */	lis r3, lbl_805CD5B0@ha
-/* 80321958 002EAF18  38 63 D5 B0 */	addi r3, r3, lbl_805CD5B0@l
+/* 80321954 002EAF14  3C 60 80 5D */	lis r3, sBatteryFlag__Q210homebutton10Controller@ha
+/* 80321958 002EAF18  38 63 D5 B0 */	addi r3, r3, sBatteryFlag__Q210homebutton10Controller@l
 /* 8032195C 002EAF1C  7C 63 00 AE */	lbzx r3, r3, r0
 /* 80321960 002EAF20  4E 80 00 20 */	blr 
 .endfn getBatteryFlag__Q210homebutton10ControllerCFv
@@ -871,9 +871,9 @@
 /* 80321970 002EAF30  80 83 00 00 */	lwz r4, 0(r3)
 /* 80321974 002EAF34  2C 04 00 04 */	cmpwi r4, 4
 /* 80321978 002EAF38  4C 80 00 20 */	bgelr 
-/* 8032197C 002EAF3C  3C 60 80 5D */	lis r3, lbl_805CD5B0@ha
+/* 8032197C 002EAF3C  3C 60 80 5D */	lis r3, sBatteryFlag__Q210homebutton10Controller@ha
 /* 80321980 002EAF40  38 00 00 00 */	li r0, 0
-/* 80321984 002EAF44  38 63 D5 B0 */	addi r3, r3, lbl_805CD5B0@l
+/* 80321984 002EAF44  38 63 D5 B0 */	addi r3, r3, sBatteryFlag__Q210homebutton10Controller@l
 /* 80321988 002EAF48  7C 03 21 AE */	stbx r0, r3, r4
 /* 8032198C 002EAF4C  4E 80 00 20 */	blr
 .endfn clrBatteryFlag__Q210homebutton10ControllerFv
@@ -888,12 +888,12 @@ lbl_80518680:
 
 .global lbl_80518684
 lbl_80518684:
-	.float -10000 #0xC61C4000
+	.float -10000
 
 
 .global lbl_80518688
 lbl_80518688:
-	.float -15000 #0xC66A6000
+	.float -15000
 
 
 .global lbl_8051868C
@@ -902,15 +902,15 @@ lbl_8051868C:
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805CD5B0
-lbl_805CD5B0:
+
+sBatteryFlag__Q210homebutton10Controller:
 	.skip 0x8
-.global lbl_805CD5B8
-lbl_805CD5B8:
+
+sAlarm__Q210homebutton10Controller:
 	.skip 0xC0
-.global lbl_805CD678
-lbl_805CD678:
+
+sAlarmSoundOff__Q210homebutton10Controller:
 	.skip 0xC0
-.global lbl_805CD738
-lbl_805CD738:
+
+sThis__Q210homebutton10Controller:
 	.skip 0x10

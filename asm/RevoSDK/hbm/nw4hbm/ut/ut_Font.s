@@ -50,3 +50,22 @@
 /* 8033852C 00301AEC  90 03 00 0C */	stw r0, 0xc(r3)
 /* 80338530 00301AF0  4E 80 00 20 */	blr 
 .endfn InitReaderFunc__Q36nw4hbm2ut4FontFQ36nw4hbm2ut12FontEncoding
+
+.section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+
+.global lbl_8054ECA0
+lbl_8054ECA0:
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte ReadNextCharUTF8__Q36nw4hbm2ut14CharStrmReaderFv
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte ReadNextCharUTF16__Q36nw4hbm2ut14CharStrmReaderFv
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte ReadNextCharSJIS__Q36nw4hbm2ut14CharStrmReaderFv
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte ReadNextCharCP1252__Q36nw4hbm2ut14CharStrmReaderFv
+

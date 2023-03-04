@@ -256,11 +256,11 @@
 /* 8040C810 003D5DD0  38 C6 00 10 */	addi r6, r6, 0x10
 /* 8040C814 003D5DD4  42 00 FF EC */	bdnz .L_8040C800
 .L_8040C818:
-/* 8040C818 003D5DD8  3C 80 80 41 */	lis r4, func_8040C90C@ha
-/* 8040C81C 003D5DDC  3C A0 80 41 */	lis r5, __dt__Q34nw4r2ut30LinkList_Q34nw4r3snd6FxBase_4_Fv@ha
-/* 8040C820 003D5DE0  38 84 C9 0C */	addi r4, r4, func_8040C90C@l
+/* 8040C818 003D5DD8  3C 80 80 41 */	lis r4, "__ct__Q34nw4r2ut30LinkList<Q34nw4r3snd6FxBase,4>Fv"@ha
+/* 8040C81C 003D5DDC  3C A0 80 41 */	lis r5, "__dt__Q34nw4r2ut30LinkList<Q34nw4r3snd6FxBase,4>Fv"@ha
+/* 8040C820 003D5DE0  38 84 C9 0C */	addi r4, r4, "__ct__Q34nw4r2ut30LinkList<Q34nw4r3snd6FxBase,4>Fv"@l
 /* 8040C824 003D5DE4  38 C0 00 0C */	li r6, 0xc
-/* 8040C828 003D5DE8  38 A5 C9 2C */	addi r5, r5, __dt__Q34nw4r2ut30LinkList_Q34nw4r3snd6FxBase_4_Fv@l
+/* 8040C828 003D5DE8  38 A5 C9 2C */	addi r5, r5, "__dt__Q34nw4r2ut30LinkList<Q34nw4r3snd6FxBase,4>Fv"@l
 /* 8040C82C 003D5DEC  38 E0 00 03 */	li r7, 3
 /* 8040C830 003D5DF0  38 63 00 B4 */	addi r3, r3, 0xb4
 /* 8040C834 003D5DF4  4B EA D2 CD */	bl __construct_array
@@ -319,7 +319,7 @@
 /* 8040C908 003D5EC8  4E 80 00 20 */	blr
 .endfn __ct__Q44nw4r3snd6detail9AxManagerFv
 
-.fn func_8040C90C, local
+.fn "__ct__Q34nw4r2ut30LinkList<Q34nw4r3snd6FxBase,4>Fv", local
 /* 8040C90C 003D5ECC  38 00 00 00 */	li r0, 0
 /* 8040C910 003D5ED0  38 83 00 04 */	addi r4, r3, 4
 /* 8040C914 003D5ED4  90 03 00 04 */	stw r0, 4(r3)
@@ -328,10 +328,9 @@
 /* 8040C920 003D5EE0  90 83 00 04 */	stw r4, 4(r3)
 /* 8040C924 003D5EE4  90 83 00 08 */	stw r4, 8(r3)
 /* 8040C928 003D5EE8  4E 80 00 20 */	blr
-.endfn func_8040C90C
+.endfn "__ct__Q34nw4r2ut30LinkList<Q34nw4r3snd6FxBase,4>Fv"
 
-#__dt__Q34nw4r2ut30LinkList<Q34nw4r3snd6FxBase,4>Fv
-.fn __dt__Q34nw4r2ut30LinkList_Q34nw4r3snd6FxBase_4_Fv, global
+.fn "__dt__Q34nw4r2ut30LinkList<Q34nw4r3snd6FxBase,4>Fv", global
 /* 8040C92C 003D5EEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8040C930 003D5EF0  7C 08 02 A6 */	mflr r0
 /* 8040C934 003D5EF4  2C 03 00 00 */	cmpwi r3, 0
@@ -355,7 +354,7 @@
 /* 8040C978 003D5F38  7C 08 03 A6 */	mtlr r0
 /* 8040C97C 003D5F3C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8040C980 003D5F40  4E 80 00 20 */	blr 
-.endfn __dt__Q34nw4r2ut30LinkList_Q34nw4r3snd6FxBase_4_Fv
+.endfn "__dt__Q34nw4r2ut30LinkList<Q34nw4r3snd6FxBase,4>Fv"
 
 .fn GetInstance__Q44nw4r3snd6detail9AxManagerFv, global
 /* 8040C984 003D5F44  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -396,9 +395,9 @@
 /* 8040CA00 003D5FC0  93 C1 00 08 */	stw r30, 8(r1)
 /* 8040CA04 003D5FC4  7C 7E 1B 78 */	mr r30, r3
 /* 8040CA08 003D5FC8  41 82 00 3C */	beq .L_8040CA44
-/* 8040CA0C 003D5FCC  3C 80 80 41 */	lis r4, __dt__Q34nw4r2ut30LinkList_Q34nw4r3snd6FxBase_4_Fv@ha
+/* 8040CA0C 003D5FCC  3C 80 80 41 */	lis r4, "__dt__Q34nw4r2ut30LinkList<Q34nw4r3snd6FxBase,4>Fv"@ha
 /* 8040CA10 003D5FD0  38 A0 00 0C */	li r5, 0xc
-/* 8040CA14 003D5FD4  38 84 C9 2C */	addi r4, r4, __dt__Q34nw4r2ut30LinkList_Q34nw4r3snd6FxBase_4_Fv@l
+/* 8040CA14 003D5FD4  38 84 C9 2C */	addi r4, r4, "__dt__Q34nw4r2ut30LinkList<Q34nw4r3snd6FxBase,4>Fv"@l
 /* 8040CA18 003D5FD8  38 C0 00 03 */	li r6, 3
 /* 8040CA1C 003D5FDC  38 63 00 B4 */	addi r3, r3, 0xb4
 /* 8040CA20 003D5FE0  4B EA D1 D9 */	bl __destroy_arr

@@ -932,8 +932,7 @@
 /* 8041A3D8 003E3998  4E 80 00 20 */	blr 
 .endfn InvalidateData__Q44nw4r3snd6detail9SeqPlayerFPCvPCv
 
-#GetPlayerTrack__Q44nw4r3snd6detail9SeqPlayerFi or GetPlayerTrack__Q44nw4r3snd6detail9SeqPlayerCFi
-.fn func_8041A3DC, global
+.fn GetPlayerTrack__Q44nw4r3snd6detail9SeqPlayerFi, global
 /* 8041A3DC 003E399C  2C 04 00 0F */	cmpwi r4, 0xf
 /* 8041A3E0 003E39A0  40 81 00 0C */	ble .L_8041A3EC
 /* 8041A3E4 003E39A4  38 60 00 00 */	li r3, 0
@@ -943,7 +942,7 @@
 /* 8041A3F0 003E39B0  7C 63 02 14 */	add r3, r3, r0
 /* 8041A3F4 003E39B4  80 63 01 20 */	lwz r3, 0x120(r3)
 /* 8041A3F8 003E39B8  4E 80 00 20 */	blr 
-.endfn func_8041A3DC
+.endfn GetPlayerTrack__Q44nw4r3snd6detail9SeqPlayerFi
 
 .fn ParseNextTick__Q44nw4r3snd6detail9SeqPlayerFb, global
 /* 8041A3FC 003E39BC  94 21 FF D0 */	stwu r1, -0x30(r1)

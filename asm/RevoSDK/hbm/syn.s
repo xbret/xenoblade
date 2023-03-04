@@ -108,11 +108,11 @@
 
 .balign 16, 0
 .fn HBMSYNQuit, global
-/* 80340B20 0030A0E0  3C 80 80 5D */	lis r4, lbl_805CDEEC@ha
-/* 80340B24 0030A0E4  3C 60 80 5D */	lis r3, lbl_805CE3B0@ha
+/* 80340B20 0030A0E0  3C 80 80 5D */	lis r4, __HBMSYNVoice@ha
+/* 80340B24 0030A0E4  3C 60 80 5D */	lis r3, __init@ha
 /* 80340B28 0030A0E8  38 00 00 00 */	li r0, 0
-/* 80340B2C 0030A0EC  90 04 DE EC */	stw r0, lbl_805CDEEC@l(r4)
-/* 80340B30 0030A0F0  90 03 E3 B0 */	stw r0, lbl_805CE3B0@l(r3)
+/* 80340B2C 0030A0EC  90 04 DE EC */	stw r0, __HBMSYNVoice@l(r4)
+/* 80340B30 0030A0F0  90 03 E3 B0 */	stw r0, __init@l(r3)
 /* 80340B34 0030A0F4  4E 80 00 20 */	blr 
 .endfn HBMSYNQuit
 
@@ -120,10 +120,10 @@
 .fn HBMSYNRunAudioFrame, global
 /* 80340B40 0030A100  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80340B44 0030A104  7C 08 02 A6 */	mflr r0
-/* 80340B48 0030A108  3C 60 80 5D */	lis r3, lbl_805CE3B0@ha
+/* 80340B48 0030A108  3C 60 80 5D */	lis r3, __init@ha
 /* 80340B4C 0030A10C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80340B50 0030A110  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80340B54 0030A114  80 03 E3 B0 */	lwz r0, lbl_805CE3B0@l(r3)
+/* 80340B54 0030A114  80 03 E3 B0 */	lwz r0, __init@l(r3)
 /* 80340B58 0030A118  2C 00 00 00 */	cmpwi r0, 0
 /* 80340B5C 0030A11C  41 82 00 3C */	beq .L_80340B98
 /* 80340B60 0030A120  3B E0 00 00 */	li r31, 0
@@ -273,9 +273,9 @@
 /* 80340D6C 0030A32C  3B 80 00 00 */	li r28, 0
 /* 80340D70 0030A330  3B A0 00 00 */	li r29, 0
 /* 80340D74 0030A334  3B E0 00 00 */	li r31, 0
-/* 80340D78 0030A338  3F C0 80 5D */	lis r30, lbl_805CDEEC@ha
+/* 80340D78 0030A338  3F C0 80 5D */	lis r30, __HBMSYNVoice@ha
 .L_80340D7C:
-/* 80340D7C 0030A33C  80 1E DE EC */	lwz r0, lbl_805CDEEC@l(r30)
+/* 80340D7C 0030A33C  80 1E DE EC */	lwz r0, __HBMSYNVoice@l(r30)
 /* 80340D80 0030A340  7F 40 EA 14 */	add r26, r0, r29
 /* 80340D84 0030A344  80 1A 00 08 */	lwz r0, 8(r26)
 /* 80340D88 0030A348  7C 00 C8 40 */	cmplw r0, r25
@@ -339,12 +339,15 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global __HBMSYNSynthList
 __HBMSYNSynthList:
 	.skip 0x4
-.global lbl_805CDEEC
-lbl_805CDEEC:
-	.skip 0x4C4
-.global lbl_805CE3B0
-lbl_805CE3B0:
+
+.global __HBMSYNVoice
+__HBMSYNVoice:
+	.skip 0x4
+
+__s_HBMSYNVoice:
+	.skip 0x4c0
+
+__init:
 	.skip 0x8

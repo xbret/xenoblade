@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-#GetModelLocalAxisY2__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math4VEC3PCQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34
-.fn GetModelLocalAxisY2__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math4VEC3PCQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34, global
+.fn "GetModelLocalAxisY2__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math4VEC3PCQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34", global
 /* 803EC3E4 003B59A4  E0 05 80 00 */	psq_l f0, 0(r5), 1, qr0
 /* 803EC3E8 003B59A8  E0 25 00 04 */	psq_l f1, 4(r5), 0, qr0
 /* 803EC3EC 003B59AC  E0 45 80 10 */	psq_l f2, 16(r5), 1, qr0
@@ -53,10 +52,10 @@
 /* 803EC498 003B5A58  10 06 02 5C */	ps_madds0 f0, f6, f9, f0
 /* 803EC49C 003B5A5C  F0 03 00 00 */	psq_st f0, 0(r3), 0, qr0
 /* 803EC4A0 003B5A60  4E 80 00 20 */	blr 
-.endfn GetModelLocalAxisY2__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math4VEC3PCQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34
+.endfn "GetModelLocalAxisY2__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math4VEC3PCQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34"
 
-#GetModelLocalAxisY3__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math4VEC3PCQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34
-.fn GetModelLocalAxisY3__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math4VEC3PCQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34, global
+
+.fn "GetModelLocalAxisY3__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math4VEC3PCQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34", global
 /* 803EC4A4 003B5A64  E0 05 80 00 */	psq_l f0, 0(r5), 1, qr0
 /* 803EC4A8 003B5A68  E0 25 00 04 */	psq_l f1, 4(r5), 0, qr0
 /* 803EC4AC 003B5A6C  E0 45 80 10 */	psq_l f2, 16(r5), 1, qr0
@@ -112,10 +111,9 @@
 /* 803EC570 003B5B30  F0 03 00 00 */	psq_st f0, 0(r3), 0, qr0
 /* 803EC574 003B5B34  F0 23 80 08 */	psq_st f1, 8(r3), 1, qr0
 /* 803EC578 003B5B38  4E 80 00 20 */	blr 
-.endfn GetModelLocalAxisY3__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math4VEC3PCQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34
+.endfn "GetModelLocalAxisY3__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math4VEC3PCQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34"
 
-#Calc_BILLBOARD_STD__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
-.fn Calc_BILLBOARD_STD__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl, global
+.fn "Calc_BILLBOARD_STD__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl", global
 /* 803EC57C 003B5B3C  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 803EC580 003B5B40  7C 08 02 A6 */	mflr r0
 /* 803EC584 003B5B44  90 01 00 64 */	stw r0, 0x64(r1)
@@ -278,10 +276,10 @@
 /* 803EC7C8 003B5D88  7C 08 03 A6 */	mtlr r0
 /* 803EC7CC 003B5D8C  38 21 00 60 */	addi r1, r1, 0x60
 /* 803EC7D0 003B5D90  4E 80 00 20 */	blr 
-.endfn Calc_BILLBOARD_STD__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
+.endfn "Calc_BILLBOARD_STD__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl"
 
-#Calc_BILLBOARD_PERSP_STD__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
-.fn Calc_BILLBOARD_PERSP_STD__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl, global
+
+.fn "Calc_BILLBOARD_PERSP_STD__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl", global
 /* 803EC7D4 003B5D94  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 803EC7D8 003B5D98  7C 08 02 A6 */	mflr r0
 /* 803EC7DC 003B5D9C  90 01 00 74 */	stw r0, 0x74(r1)
@@ -507,10 +505,9 @@
 /* 803ECB18 003B60D8  7C 08 03 A6 */	mtlr r0
 /* 803ECB1C 003B60DC  38 21 00 70 */	addi r1, r1, 0x70
 /* 803ECB20 003B60E0  4E 80 00 20 */	blr 
-.endfn Calc_BILLBOARD_PERSP_STD__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
+.endfn "Calc_BILLBOARD_PERSP_STD__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl"
 
-#Calc_BILLBOARD_ROT__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
-.fn Calc_BILLBOARD_ROT__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl, global
+.fn "Calc_BILLBOARD_ROT__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl", global
 /* 803ECB24 003B60E4  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 803ECB28 003B60E8  7C 08 02 A6 */	mflr r0
 /* 803ECB2C 003B60EC  90 01 00 64 */	stw r0, 0x64(r1)
@@ -561,7 +558,7 @@
 /* 803ECBD0 003B6190  1C 00 00 30 */	mulli r0, r0, 0x30
 /* 803ECBD4 003B6194  7C 9F EA 14 */	add r4, r31, r29
 /* 803ECBD8 003B6198  7C BF 02 14 */	add r5, r31, r0
-/* 803ECBDC 003B619C  4B FF F8 09 */	bl GetModelLocalAxisY2__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math4VEC3PCQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34
+/* 803ECBDC 003B619C  4B FF F8 09 */	bl "GetModelLocalAxisY2__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math4VEC3PCQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34"
 /* 803ECBE0 003B61A0  48 00 00 48 */	b .L_803ECC28
 .L_803ECBE4:
 /* 803ECBE4 003B61A4  1F BD 00 30 */	mulli r29, r29, 0x30
@@ -723,10 +720,9 @@
 /* 803ECE1C 003B63DC  7C 08 03 A6 */	mtlr r0
 /* 803ECE20 003B63E0  38 21 00 60 */	addi r1, r1, 0x60
 /* 803ECE24 003B63E4  4E 80 00 20 */	blr 
-.endfn Calc_BILLBOARD_ROT__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
+.endfn "Calc_BILLBOARD_ROT__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl"
 
-#Calc_BILLBOARD_PERSP_ROT__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
-.fn func_803ECE28, global
+.fn "Calc_BILLBOARD_PERSP_ROT__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl", global
 /* 803ECE28 003B63E8  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 803ECE2C 003B63EC  7C 08 02 A6 */	mflr r0
 /* 803ECE30 003B63F0  90 01 00 74 */	stw r0, 0x74(r1)
@@ -786,7 +782,7 @@
 /* 803ECEF8 003B64B8  1C 00 00 30 */	mulli r0, r0, 0x30
 /* 803ECEFC 003B64BC  7C 9E E2 14 */	add r4, r30, r28
 /* 803ECF00 003B64C0  7C BE 02 14 */	add r5, r30, r0
-/* 803ECF04 003B64C4  4B FF F5 A1 */	bl GetModelLocalAxisY3__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math4VEC3PCQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34
+/* 803ECF04 003B64C4  4B FF F5 A1 */	bl "GetModelLocalAxisY3__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math4VEC3PCQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34"
 /* 803ECF08 003B64C8  48 00 00 48 */	b .L_803ECF50
 .L_803ECF0C:
 /* 803ECF0C 003B64CC  1F 9C 00 30 */	mulli r28, r28, 0x30
@@ -999,10 +995,9 @@
 /* 803ED20C 003B67CC  7C 08 03 A6 */	mtlr r0
 /* 803ED210 003B67D0  38 21 00 70 */	addi r1, r1, 0x70
 /* 803ED214 003B67D4  4E 80 00 20 */	blr 
-.endfn func_803ECE28
+.endfn "Calc_BILLBOARD_PERSP_ROT__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl"
 
-#Calc_BILLBOARD_Y__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
-.fn Calc_BILLBOARD_Y__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl, global
+.fn "Calc_BILLBOARD_Y__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl", global
 /* 803ED218 003B67D8  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 803ED21C 003B67DC  7C 08 02 A6 */	mflr r0
 /* 803ED220 003B67E0  90 01 00 74 */	stw r0, 0x74(r1)
@@ -1198,10 +1193,9 @@
 /* 803ED4EC 003B6AAC  7C 08 03 A6 */	mtlr r0
 /* 803ED4F0 003B6AB0  38 21 00 70 */	addi r1, r1, 0x70
 /* 803ED4F4 003B6AB4  4E 80 00 20 */	blr 
-.endfn Calc_BILLBOARD_Y__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
+.endfn "Calc_BILLBOARD_Y__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl"
 
-#Calc_BILLBOARD_PERSP_Y__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
-.fn Calc_BILLBOARD_PERSP_Y__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl, global
+.fn "Calc_BILLBOARD_PERSP_Y__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl", global
 /* 803ED4F8 003B6AB8  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 803ED4FC 003B6ABC  7C 08 02 A6 */	mflr r0
 /* 803ED500 003B6AC0  90 01 00 74 */	stw r0, 0x74(r1)
@@ -1410,7 +1404,7 @@
 /* 803ED800 003B6DC0  7C 08 03 A6 */	mtlr r0
 /* 803ED804 003B6DC4  38 21 00 70 */	addi r1, r1, 0x70
 /* 803ED808 003B6DC8  4E 80 00 20 */	blr 
-.endfn Calc_BILLBOARD_PERSP_Y__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
+.endfn "Calc_BILLBOARD_PERSP_Y__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl"
 
 
 .fn CalcView__Q24nw4r3g3dFPQ34nw4r4math5MTX34PQ34nw4r4math5MTX33PCQ34nw4r4math5MTX34PCUlUlPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlPQ34nw4r4math5MTX34, global
@@ -1454,13 +1448,13 @@
 .L_803ED89C:
 /* 803ED89C 003B6E5C  48 00 0E 35 */	bl GetBillboardMtxTemporary__Q44nw4r3g3d6detail7workmemFv
 /* 803ED8A0 003B6E60  7C 78 1B 78 */	mr r24, r3
-/* 803ED8A4 003B6E64  3F E0 80 52 */	lis r31, lbl_80520FB8@ha
+/* 803ED8A4 003B6E64  3F E0 80 52 */	lis r31, "bbFunc__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@"@ha
 /* 803ED8A8 003B6E68  7E 5E 93 78 */	mr r30, r18
 /* 803ED8AC 003B6E6C  7D FD 7B 78 */	mr r29, r15
 /* 803ED8B0 003B6E70  7E 3B 8B 78 */	mr r27, r17
 /* 803ED8B4 003B6E74  7F 1A C3 78 */	mr r26, r24
 /* 803ED8B8 003B6E78  7D F9 7B 78 */	mr r25, r15
-/* 803ED8BC 003B6E7C  3B FF 0F B8 */	addi r31, r31, lbl_80520FB8@l
+/* 803ED8BC 003B6E7C  3B FF 0F B8 */	addi r31, r31, "bbFunc__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@"@l
 /* 803ED8C0 003B6E80  3A E0 00 00 */	li r23, 0
 /* 803ED8C4 003B6E84  3B 80 00 00 */	li r28, 0
 /* 803ED8C8 003B6E88  48 00 01 74 */	b .L_803EDA3C
@@ -1704,9 +1698,9 @@
 /* 803EDC28 003B71E8  38 60 00 00 */	li r3, 0
 /* 803EDC2C 003B71EC  4B F6 67 35 */	bl LCQueueWait
 /* 803EDC30 003B71F0  80 01 00 0C */	lwz r0, 0xc(r1)
-/* 803EDC34 003B71F4  3F C0 80 52 */	lis r30, lbl_80520FB8@ha
+/* 803EDC34 003B71F4  3F C0 80 52 */	lis r30, "bbFunc__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@"@ha
 /* 803EDC38 003B71F8  C3 E2 C0 B0 */	lfs f31, float_8066C430@sda21(r2)
-/* 803EDC3C 003B71FC  3B DE 0F B8 */	addi r30, r30, lbl_80520FB8@l
+/* 803EDC3C 003B71FC  3B DE 0F B8 */	addi r30, r30, "bbFunc__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@"@l
 /* 803EDC40 003B7200  90 01 00 74 */	stw r0, 0x74(r1)
 /* 803EDC44 003B7204  38 00 00 00 */	li r0, 0
 /* 803EDC48 003B7208  3A A0 00 00 */	li r21, 0
@@ -2074,9 +2068,9 @@
 /* 803EE16C 003B772C  4B F6 61 F5 */	bl LCQueueWait
 .L_803EE170:
 /* 803EE170 003B7730  80 01 00 0C */	lwz r0, 0xc(r1)
-/* 803EE174 003B7734  3F C0 80 52 */	lis r30, lbl_80520FB8@ha
+/* 803EE174 003B7734  3F C0 80 52 */	lis r30, "bbFunc__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@"@ha
 /* 803EE178 003B7738  C3 E2 C0 B0 */	lfs f31, float_8066C430@sda21(r2)
-/* 803EE17C 003B773C  3B DE 0F B8 */	addi r30, r30, lbl_80520FB8@l
+/* 803EE17C 003B773C  3B DE 0F B8 */	addi r30, r30, "bbFunc__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@"@l
 /* 803EE180 003B7740  90 01 00 7C */	stw r0, 0x7c(r1)
 /* 803EE184 003B7744  38 00 00 00 */	li r0, 0
 /* 803EE188 003B7748  3A A0 00 00 */	li r21, 0
@@ -2381,15 +2375,14 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_80520FB8
-lbl_80520FB8:
+"bbFunc__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@":
 	.4byte 0
-	.4byte Calc_BILLBOARD_STD__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
-	.4byte Calc_BILLBOARD_PERSP_STD__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
-	.4byte Calc_BILLBOARD_ROT__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
-	.4byte func_803ECE28
-	.4byte Calc_BILLBOARD_Y__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
-	.4byte Calc_BILLBOARD_PERSP_Y__Q34nw4r3g3d26_unnamed_g3d_calcview_cpp_FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl
+	.4byte "Calc_BILLBOARD_STD__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl"
+	.4byte "Calc_BILLBOARD_PERSP_STD__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl"
+	.4byte "Calc_BILLBOARD_ROT__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl"
+	.4byte "Calc_BILLBOARD_PERSP_ROT__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl"
+	.4byte "Calc_BILLBOARD_Y__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl"
+	.4byte "Calc_BILLBOARD_PERSP_Y__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl"
 	.4byte 0
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

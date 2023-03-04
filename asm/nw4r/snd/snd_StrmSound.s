@@ -2,8 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-#__ct__Q44nw4r3snd6detail9StrmSoundFPQ44nw4r3snd6detail50SoundInstanceManager<Q44nw4r3snd6detail9StrmSound>ii
-.fn __ct__Q44nw4r3snd6detail9StrmSoundFPQ44nw4r3snd6detail50SoundInstanceManager_Q44nw4r3snd6detail9StrmSound_ii, global
+.fn "__ct__Q44nw4r3snd6detail9StrmSoundFPQ44nw4r3snd6detail50SoundInstanceManager<Q44nw4r3snd6detail9StrmSound>ii", global
 /* 80424FBC 003EE57C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80424FC0 003EE580  7C 08 02 A6 */	mflr r0
 /* 80424FC4 003EE584  90 01 00 14 */	stw r0, 0x14(r1)
@@ -139,7 +138,7 @@
 /* 804251AC 003EE76C  7C 08 03 A6 */	mtlr r0
 /* 804251B0 003EE770  38 21 00 10 */	addi r1, r1, 0x10
 /* 804251B4 003EE774  4E 80 00 20 */	blr 
-.endfn __ct__Q44nw4r3snd6detail9StrmSoundFPQ44nw4r3snd6detail50SoundInstanceManager_Q44nw4r3snd6detail9StrmSound_ii
+.endfn "__ct__Q44nw4r3snd6detail9StrmSoundFPQ44nw4r3snd6detail50SoundInstanceManager<Q44nw4r3snd6detail9StrmSound>ii"
 
 .fn InitParam__Q44nw4r3snd6detail9StrmSoundFv, global
 /* 804251B8 003EE778  94 21 FF E0 */	stwu r1, -0x20(r1)

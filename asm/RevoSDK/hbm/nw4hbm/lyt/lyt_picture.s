@@ -56,9 +56,9 @@
 /* 803327EC 002FBDAC  38 9D 00 60 */	addi r4, r29, 0x60
 /* 803327F0 002FBDB0  4B FF A0 71 */	bl Copy__Q46nw4hbm3lyt6detail11TexCoordAryFPCvUc
 .L_803327F4:
-/* 803327F4 002FBDB4  3C 60 80 5D */	lis r3, lbl_805CD7B8@ha
+/* 803327F4 002FBDB4  3C 60 80 5D */	lis r3, mspAllocator__Q36nw4hbm3lyt6Layout@ha
 /* 803327F8 002FBDB8  38 80 00 5C */	li r4, 0x5c
-/* 803327FC 002FBDBC  80 63 D7 B8 */	lwz r3, lbl_805CD7B8@l(r3)
+/* 803327FC 002FBDBC  80 63 D7 B8 */	lwz r3, mspAllocator__Q36nw4hbm3lyt6Layout@l(r3)
 /* 80332800 002FBDC0  48 01 72 91 */	bl MEMAllocFromAllocator
 /* 80332804 002FBDC4  2C 03 00 00 */	cmpwi r3, 0
 /* 80332808 002FBDC8  41 82 00 2C */	beq .L_80332834
@@ -111,9 +111,9 @@
 /* 803328B4 002FBE74  81 8C 00 08 */	lwz r12, 8(r12)
 /* 803328B8 002FBE78  7D 89 03 A6 */	mtctr r12
 /* 803328BC 002FBE7C  4E 80 04 21 */	bctrl 
-/* 803328C0 002FBE80  3C 60 80 5D */	lis r3, lbl_805CD7B8@ha
+/* 803328C0 002FBE80  3C 60 80 5D */	lis r3, mspAllocator__Q36nw4hbm3lyt6Layout@ha
 /* 803328C4 002FBE84  80 9E 00 28 */	lwz r4, 0x28(r30)
-/* 803328C8 002FBE88  80 63 D7 B8 */	lwz r3, lbl_805CD7B8@l(r3)
+/* 803328C8 002FBE88  80 63 D7 B8 */	lwz r3, mspAllocator__Q36nw4hbm3lyt6Layout@l(r3)
 /* 803328CC 002FBE8C  48 01 71 D5 */	bl MEMFreeToAllocator
 /* 803328D0 002FBE90  38 00 00 00 */	li r0, 0
 /* 803328D4 002FBE94  90 1E 00 28 */	stw r0, 0x28(r30)
@@ -373,17 +373,17 @@
 
 .balign 16, 0
 .fn GetRuntimeTypeInfo__Q36nw4hbm3lyt7PictureCFv, global
-/* 80332C60 002FC220  3C 60 80 5D */	lis r3, lbl_805CD7C8@ha
-/* 80332C64 002FC224  38 63 D7 C8 */	addi r3, r3, lbl_805CD7C8@l
+/* 80332C60 002FC220  3C 60 80 5D */	lis r3, typeInfo__Q36nw4hbm3lyt7Picture@ha
+/* 80332C64 002FC224  38 63 D7 C8 */	addi r3, r3, typeInfo__Q36nw4hbm3lyt7Picture@l
 /* 80332C68 002FC228  4E 80 00 20 */	blr 
 .endfn GetRuntimeTypeInfo__Q36nw4hbm3lyt7PictureCFv
 
 .balign 16, 0
 .fn "__sinit_\lyt_picture_cpp", global
-/* 80332C70 002FC230  3C 80 80 5D */	lis r4, lbl_805CD7C0@ha
-/* 80332C74 002FC234  3C 60 80 5D */	lis r3, lbl_805CD7C8@ha
-/* 80332C78 002FC238  38 84 D7 C0 */	addi r4, r4, lbl_805CD7C0@l
-/* 80332C7C 002FC23C  90 83 D7 C8 */	stw r4, lbl_805CD7C8@l(r3)
+/* 80332C70 002FC230  3C 80 80 5D */	lis r4, typeInfo__Q36nw4hbm3lyt4Pane@ha
+/* 80332C74 002FC234  3C 60 80 5D */	lis r3, typeInfo__Q36nw4hbm3lyt7Picture@ha
+/* 80332C78 002FC238  38 84 D7 C0 */	addi r4, r4, typeInfo__Q36nw4hbm3lyt4Pane@l
+/* 80332C7C 002FC23C  90 83 D7 C8 */	stw r4, typeInfo__Q36nw4hbm3lyt7Picture@l(r3)
 /* 80332C80 002FC240  4E 80 00 20 */	blr
 .endfn "__sinit_\lyt_picture_cpp"
 
@@ -450,12 +450,6 @@ lbl_8054D9D0:
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805CD7B8
-lbl_805CD7B8:
-	.skip 0x8
-.global lbl_805CD7C0
-lbl_805CD7C0:
-	.skip 0x8
-.global lbl_805CD7C8
-lbl_805CD7C8:
+.global typeInfo__Q36nw4hbm3lyt7Picture
+typeInfo__Q36nw4hbm3lyt7Picture:
 	.skip 0x8

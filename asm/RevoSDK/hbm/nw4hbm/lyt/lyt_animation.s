@@ -247,15 +247,15 @@
 /* 8032B800 002F4DC0  90 A3 00 00 */	stw r5, 0(r3)
 /* 8032B804 002F4DC4  2C 04 00 00 */	cmpwi r4, 0
 /* 8032B808 002F4DC8  41 82 00 10 */	beq .L_8032B818
-/* 8032B80C 002F4DCC  3C 60 80 5D */	lis r3, lbl_805CD7B8@ha
-/* 8032B810 002F4DD0  80 63 D7 B8 */	lwz r3, lbl_805CD7B8@l(r3)
+/* 8032B80C 002F4DCC  3C 60 80 5D */	lis r3, mspAllocator__Q36nw4hbm3lyt6Layout@ha
+/* 8032B810 002F4DD0  80 63 D7 B8 */	lwz r3, mspAllocator__Q36nw4hbm3lyt6Layout@l(r3)
 /* 8032B814 002F4DD4  48 01 E2 8D */	bl MEMFreeToAllocator
 .L_8032B818:
 /* 8032B818 002F4DD8  80 9E 00 14 */	lwz r4, 0x14(r30)
 /* 8032B81C 002F4DDC  2C 04 00 00 */	cmpwi r4, 0
 /* 8032B820 002F4DE0  41 82 00 10 */	beq .L_8032B830
-/* 8032B824 002F4DE4  3C 60 80 5D */	lis r3, lbl_805CD7B8@ha
-/* 8032B828 002F4DE8  80 63 D7 B8 */	lwz r3, lbl_805CD7B8@l(r3)
+/* 8032B824 002F4DE4  3C 60 80 5D */	lis r3, mspAllocator__Q36nw4hbm3lyt6Layout@ha
+/* 8032B828 002F4DE8  80 63 D7 B8 */	lwz r3, mspAllocator__Q36nw4hbm3lyt6Layout@l(r3)
 /* 8032B82C 002F4DEC  48 01 E2 75 */	bl MEMFreeToAllocator
 .L_8032B830:
 /* 8032B830 002F4DF0  2C 1F 00 00 */	cmpwi r31, 0
@@ -288,9 +288,9 @@
 /* 8032B88C 002F4E4C  90 03 00 14 */	stw r0, 0x14(r3)
 /* 8032B890 002F4E50  7C B8 2B 78 */	mr r24, r5
 /* 8032B894 002F4E54  41 82 00 84 */	beq .L_8032B918
-/* 8032B898 002F4E58  3C 60 80 5D */	lis r3, lbl_805CD7B8@ha
+/* 8032B898 002F4E58  3C 60 80 5D */	lis r3, mspAllocator__Q36nw4hbm3lyt6Layout@ha
 /* 8032B89C 002F4E5C  54 C4 13 BA */	rlwinm r4, r6, 2, 0xe, 0x1d
-/* 8032B8A0 002F4E60  80 63 D7 B8 */	lwz r3, lbl_805CD7B8@l(r3)
+/* 8032B8A0 002F4E60  80 63 D7 B8 */	lwz r3, mspAllocator__Q36nw4hbm3lyt6Layout@l(r3)
 /* 8032B8A4 002F4E64  48 01 E1 ED */	bl MEMAllocFromAllocator
 /* 8032B8A8 002F4E68  2C 03 00 00 */	cmpwi r3, 0
 /* 8032B8AC 002F4E6C  90 7E 00 14 */	stw r3, 0x14(r30)
@@ -324,8 +324,8 @@
 /* 8032B914 002F4ED4  41 80 FF BC */	blt .L_8032B8D0
 .L_8032B918:
 /* 8032B918 002F4ED8  A0 1F 00 0E */	lhz r0, 0xe(r31)
-/* 8032B91C 002F4EDC  3C 60 80 5D */	lis r3, lbl_805CD7B8@ha
-/* 8032B920 002F4EE0  80 63 D7 B8 */	lwz r3, lbl_805CD7B8@l(r3)
+/* 8032B91C 002F4EDC  3C 60 80 5D */	lis r3, mspAllocator__Q36nw4hbm3lyt6Layout@ha
+/* 8032B920 002F4EE0  80 63 D7 B8 */	lwz r3, mspAllocator__Q36nw4hbm3lyt6Layout@l(r3)
 /* 8032B924 002F4EE4  54 04 20 36 */	slwi r4, r0, 4
 /* 8032B928 002F4EE8  48 01 E1 69 */	bl MEMAllocFromAllocator
 /* 8032B92C 002F4EEC  2C 03 00 00 */	cmpwi r3, 0

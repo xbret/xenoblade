@@ -495,7 +495,7 @@
 /* 8045827C 0042183C  2C 00 00 02 */	cmpwi r0, 2
 /* 80458280 00421840  40 82 08 9C */	bne .L_80458B1C
 /* 80458284 00421844  38 61 00 68 */	addi r3, r1, 0x68
-/* 80458288 00421848  4B FD 84 19 */	bl __ct__Q34nw4r2ut17TextWriterBase_w_Fv
+/* 80458288 00421848  4B FD 84 19 */	bl "__ct__Q34nw4r2ut17TextWriterBase<w>Fv"
 /* 8045828C 0042184C  38 61 00 68 */	addi r3, r1, 0x68
 /* 80458290 00421850  4B FD 6E B1 */	bl SetupGX__Q34nw4r2ut10CharWriterFv
 /* 80458294 00421854  38 61 00 68 */	addi r3, r1, 0x68
@@ -966,7 +966,7 @@
 .L_80458944:
 /* 80458944 00421F04  38 61 00 68 */	addi r3, r1, 0x68
 /* 80458948 00421F08  38 80 FF FF */	li r4, -1
-/* 8045894C 00421F0C  4B FD 7D B1 */	bl __dt__Q34nw4r2ut17TextWriterBase_w_Fv
+/* 8045894C 00421F0C  4B FD 7D B1 */	bl "__dt__Q34nw4r2ut17TextWriterBase<w>Fv"
 /* 80458950 00421F10  48 00 01 CC */	b .L_80458B1C
 .L_80458954:
 /* 80458954 00421F14  2C 1E 00 00 */	cmpwi r30, 0
@@ -1351,7 +1351,7 @@
 /* 80458EB4 00422474  7C 65 1B 78 */	mr r5, r3
 /* 80458EB8 00422478  7F C3 F3 78 */	mr r3, r30
 /* 80458EBC 0042247C  7F E4 FB 78 */	mr r4, r31
-/* 80458EC0 00422480  4B FD 7B B5 */	bl Print__Q34nw4r2ut17TextWriterBase_w_FPCwi_w_FPCwi
+/* 80458EC0 00422480  4B FD 7B B5 */	bl "Print__Q34nw4r2ut17TextWriterBase<w>FPCwi"
 /* 80458EC4 00422484  BB C1 00 08 */	lmw r30, 8(r1)
 /* 80458EC8 00422488  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80458ECC 0042248C  7C 08 03 A6 */	mtlr r0
@@ -2266,13 +2266,13 @@ lbl_80667FA8:
 	.4byte 0x00130038
 	.4byte 0x00000000
 	.4byte 0x0200000C
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv_1
 	.4byte 0x82000068
-	.4byte __dt__Q34nw4r2ut17TextWriterBase_w_Fv
+	.4byte "__dt__Q34nw4r2ut17TextWriterBase<w>Fv"
 	.4byte 0x02000008
-	.4byte func_801252D0
+	.4byte __dt__Q34nw4r2ut5ColorFv_1
 	.4byte 0x82000068
-	.4byte __dt__Q34nw4r2ut17TextWriterBase_w_Fv
+	.4byte "__dt__Q34nw4r2ut17TextWriterBase<w>Fv"
 .endobj "@etb_8001D3F8"
 
 .obj "@etb_8001D448", local
