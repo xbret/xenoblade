@@ -6,33 +6,18 @@ on:
 
 jobs:
   build:
+    name: Build
     runs-on: ubuntu-latest
-    container: devkitpro/devkitppc:latest
-    env:
-      WINEPREFIX: ${{github.workspace}}/.wine
+    container: ghcr.io/xbret/build:main
+    strategy:
+      fail-fast: false
     steps:
     - name: Checkout
       uses: actions/checkout@v3
-    - name: Checkout WiBo
-      uses: actions/checkout@v3
-      with:
-        repository: decompals/WiBo
-        path: tools/WiBo
-    - name: Install dependencies
-      run: |
-        sudo dpkg --add-architecture i386
-        sudo apt-get update
-        sudo apt-get -y install python3-pip build-essential gcc-multilib g++-multilib libc6:i386
-        pip3 install requests
-        curl -L https://cdn.discordapp.com/attachments/727918646525165659/917185027656286218/GC_WII_COMPILERS.zip \
-        | bsdtar -xvf- -C tools/mwcc_compiler
-    - name: Build WiBo
-      working-directory: tools/WiBo
-      run: |
-        cmake -B build
-        cmake --build build
+    - name: Git config
+      run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
     - name: Build
-      run: make -j$(nproc) WINE=./tools/WiBo/build/wibo MAPGENFLAG=1
+      run: make -j$(nproc) VERSION=jp
     - name: Upload progress
       if: github.ref == 'refs/heads/main'
       continue-on-error: true
@@ -42,7 +27,7 @@ jobs:
         python3 tools/upload-progress.py -b https://progress.deco.mp/ -p xenoblade -v jp \
           build/xenoblade.jp/main.dol.progress
     - name: Upload map
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: xenoblade.jp.MAP
         path: build/*/xenoblade.jp.MAP
