@@ -17,7 +17,7 @@ jobs:
     - name: Git config
       run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
     - name: Build
-      run: make -j$(nproc)
+      run: make -j$(nproc) COMPILERS=/compilers
     - name: Upload progress
       if: github.ref == 'refs/heads/main'
       continue-on-error: true
