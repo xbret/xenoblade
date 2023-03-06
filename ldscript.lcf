@@ -46,6 +46,7 @@ SECTIONS
 
 FORCEFILES 
 {
+    targsupp.o
     code_80436138.o
     CNReqtaskSave.o
 }

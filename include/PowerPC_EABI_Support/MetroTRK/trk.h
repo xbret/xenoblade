@@ -26,10 +26,12 @@ extern "C" {
 #define TRK_DISPATCH_CMD_STOP           26 /* Stop the debugger */
 
 typedef struct _TRK_Msg {
-	u8 _00[8];      // _00
-	u32 mMsgLength; // _08
-	u32 _0C;        // _0C
-	u32 mMsg;       // _10
+	u8 _00[4];      // _00
+	u32 mMsgLength; // _04
+	u32 _0C;        // _08
+	u32 mMsg;       // _0C
+	u8 unk10[2];
+	u16 unk12;
 } TRK_Msg;
 
 /**
@@ -45,11 +47,11 @@ typedef struct TRKEvent {
  * @size{0x28}
  */
 typedef struct TRKEventQueue {
-	u8 _00[4];
 	int mCurrEvtID;
 	int mNextSlotToOverwrite;
 	TRKEvent mEvents[2];
 	u32 _24; /* max of 0x100? */
+	u8 unk28[4];
 } TRKEventQueue;
 
 /**
@@ -110,6 +112,14 @@ typedef struct TRKBuffer {
 	u32 _10;
 	u8 mBuffer[0x87C]; /* _10 */
 } TRKBuffer;
+
+
+typedef struct TRKPacketSeq {
+	u16 unk0;
+	u8 unk2[6];
+} TRKPacketSeq;
+
+
 typedef enum { TRKSuccess = 0, TRKError100 = 0x100, TRKError301 = 0x301, TRKError302 = 0x302 } TRKResult;
 
 extern BOOL gTRKBigEndian;
@@ -211,6 +221,8 @@ TRKResult TRKInitializeIntDrivenUART(unknown, unknown, void*);
 void usr_put_initialize();
 void TRKTargetSetInputPendingPtr(void*);
 extern void* gTRKInputPendingPtr;
+
+int TRK_strlen(const char*);
 
 #ifdef __cplusplus
 };

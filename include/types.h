@@ -38,6 +38,9 @@ typedef unsigned int uintptr_t; // Manually added
 
 typedef void (*funcptr_t)(void);
 
+//MWCriticalSection_gc.cpp makes the compiler whine about this. why?
+//typedef unsigned short wchar_t;
+
 // Basic defines to allow newer-like C++ code to be written
 #define TRUE  1
 #define FALSE 0

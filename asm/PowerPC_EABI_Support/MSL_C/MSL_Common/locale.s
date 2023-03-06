@@ -30,7 +30,6 @@ lbl_8050D4A0:
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-#the locale data might not belong here
 .global __lconv
 __lconv:
 	.4byte lbl_8066B858
@@ -278,5 +277,6 @@ lbl_8066B860:
 
 .global lbl_8066B868
 lbl_8066B868:
-	.4byte 0x25540000
+	.asciz "%T"
+	.balign 4
 	.4byte 0
