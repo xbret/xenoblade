@@ -260,6 +260,8 @@ TRK_ISR_OFFSETS:
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8 #needed to align main_TRK.c
+
 lc_base:
 	.skip 0x4
 

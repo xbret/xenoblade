@@ -1,6 +1,5 @@
 #include "PowerPC_EABI_Support/MetroTRK/trk.h"
 
-__attribute__((used)) u8 padding[4]; //definitely fake
 static s32 TRK_mainError;
 
 int TRK_main(void)
