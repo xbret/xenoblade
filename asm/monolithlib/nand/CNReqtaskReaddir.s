@@ -115,48 +115,48 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CNReqtaskReaddir_typestr
-CNReqtaskReaddir_typestr:
+.obj CNReqtaskReaddir_typestr, global
 	.asciz "CNReqtaskReaddir"
 	.balign 4
 	.4byte 0
+.endobj CNReqtaskReaddir_typestr
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CNReqtaskReaddir
-__vt__CNReqtaskReaddir:
+.obj __vt__CNReqtaskReaddir, global
 	.4byte __RTTI__CNReqtaskReaddir
 	.4byte 0
 	.4byte func_804DB114
 	.4byte func_804DA4CC
+.endobj __vt__CNReqtaskReaddir
 
-.global CNReqtaskReaddir_hierarchy
-CNReqtaskReaddir_hierarchy:
+.obj CNReqtaskReaddir_hierarchy, global
 	.4byte __RTTI__CNReqtask
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CNReqtaskReaddir_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CNReqtaskReaddir
-__RTTI__CNReqtaskReaddir:
+.obj __RTTI__CNReqtaskReaddir, global
 	.4byte CNReqtaskReaddir_typestr
 	.4byte CNReqtaskReaddir_hierarchy
+.endobj __RTTI__CNReqtaskReaddir
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_806682C8
-lbl_806682C8:
+.obj lbl_806682C8, global
 	.skip 0x8
+.endobj lbl_806682C8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

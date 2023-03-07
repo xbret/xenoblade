@@ -5394,19 +5394,20 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80549920
-lbl_80549920:
+.balign 8
+
+.obj lbl_80549920, global
 	.asciz "<< RVL_SDK - DVD \trelease build: Feb 27 2009 10:01:59 (0x4302_145) >>"
 	.balign 4
+.endobj lbl_80549920
 
 
-.global lbl_80549968
-lbl_80549968:
+.obj lbl_80549968, global
 	.asciz "DVDChangeDisk(): FST in the new disc is too big.   "
+.endobj lbl_80549968
 
 
-.global jumptable_8054999C
-jumptable_8054999C:
+.obj jumptable_8054999C, global
 	.4byte .L_8030CBA8
 	.4byte .L_8030CB9C
 	.4byte .L_8030CB9C
@@ -5450,10 +5451,10 @@ jumptable_8054999C:
 	.4byte .L_8030CBA8
 	.4byte .L_8030CB48
 	.4byte .L_8030CB48
+.endobj jumptable_8054999C
 
 
-.global jumptable_80549A48
-jumptable_80549A48:
+.obj jumptable_80549A48, global
 	.4byte .L_8030DEF0
 	.4byte .L_8030DA84
 	.4byte .L_8030DBAC
@@ -5497,10 +5498,10 @@ jumptable_80549A48:
 	.4byte .L_8030DE1C
 	.4byte .L_8030DE48
 	.4byte .L_8030DEBC
+.endobj jumptable_80549A48
 
 
-.global jumptable_80549AF4
-jumptable_80549AF4:
+.obj jumptable_80549AF4, global
 	.4byte .L_8030DA3C
 	.4byte .L_8030DA3C
 	.4byte .L_8030D9B8
@@ -5544,16 +5545,17 @@ jumptable_80549AF4:
 	.4byte .L_8030DA3C
 	.4byte .L_8030D9B8
 	.4byte .L_8030D9B8
+.endobj jumptable_80549AF4
 
 
-ImmCommand:
+.obj ImmCommand, local
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+.endobj ImmCommand
 
 
-.global jumptable_80549BAC
-jumptable_80549BAC:
+.obj jumptable_80549BAC, global
 	.4byte .L_8030EE64
 	.4byte .L_8030EE04
 	.4byte .L_8030EE04
@@ -5597,10 +5599,10 @@ jumptable_80549BAC:
 	.4byte .L_8030EE64
 	.4byte .L_8030EDE4
 	.4byte .L_8030EDE4
+.endobj jumptable_80549BAC
 
 
-.global jumptable_80549C58
-jumptable_80549C58:
+.obj jumptable_80549C58, global
 	.4byte .L_8030ECF0
 	.4byte .L_8030ECF0
 	.4byte .L_8030ED10
@@ -5616,8 +5618,9 @@ jumptable_80549C58:
 	.4byte .L_8030EE90
 	.4byte .L_8030EF8C
 	
-.global jumptable_80549C90
-jumptable_80549C90:
+.endobj jumptable_80549C58
+
+.obj jumptable_80549C90, global
 	.4byte .L_8030F0A8
 	.4byte .L_8030F0A8
 	.4byte .L_8030F09C
@@ -5658,169 +5661,221 @@ jumptable_80549C90:
 	.4byte .L_8030F0A8
 	.4byte .L_8030F0A8
 	.4byte 0
+.endobj jumptable_80549C90
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-__DVDVersion:
+.balign 8
+
+.obj __DVDVersion, local
 	.4byte lbl_80549920
+.endobj __DVDVersion
 
-autoInvalidation:
+.obj autoInvalidation, local
 	.4byte 0x00000001
+.endobj autoInvalidation
 
 
-checkOptionalCommand:
+.obj checkOptionalCommand, local
 	.4byte defaultOptionalCommandChecker
+.endobj checkOptionalCommand
 
 
-.global lbl_8066598C
-lbl_8066598C:
+.obj lbl_8066598C, global
 	.asciz "dvd.c"
 	.balign 4
+.endobj lbl_8066598C
 
-DmaCommand:
+.obj DmaCommand, local
 	.4byte 0xFFFFFFFF
+.endobj DmaCommand
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-__DVDTicketViewBuffer:
+.obj __DVDTicketViewBuffer, local
 	.skip 0x100
+.endobj __DVDTicketViewBuffer
 
-__DVDTmdBuffer:
+.obj __DVDTmdBuffer, local
 	.skip 0x4A00
+.endobj __DVDTmdBuffer
 
-BB2:
+.obj BB2, local
 	.skip 0x20
+.endobj BB2
 
-DummyCommandBlock:
+.obj DummyCommandBlock, local
 	.skip 0x30
+.endobj DummyCommandBlock
 
-FatalAlarm:
+.obj FatalAlarm, local
 	.skip 0x30
+.endobj FatalAlarm
 
-CoverAlarm:
+.obj CoverAlarm, local
 	.skip 0x40
+.endobj CoverAlarm
 
-CurrDiskID:
+.obj CurrDiskID, local
 	.skip 0x20
+.endobj CurrDiskID
 
-__DVDGameTocBuffer:
+.obj __DVDGameTocBuffer, local
 	.skip 0x20
+.endobj __DVDGameTocBuffer
 
-__DVDPartInfoBuffer:
+.obj __DVDPartInfoBuffer, local
 	.skip 0x20
+.endobj __DVDPartInfoBuffer
 
-ResetAlarm:
+.obj ResetAlarm, local
 	.skip 0x30
+.endobj ResetAlarm
 
-.global __DVDStopMotorCommandBlock
-__DVDStopMotorCommandBlock:
+.obj __DVDStopMotorCommandBlock, global
 	.skip 0x30
+.endobj __DVDStopMotorCommandBlock
 
-.global __DVDRestartMotorCommandBlock
-__DVDRestartMotorCommandBlock:
+.obj __DVDRestartMotorCommandBlock, global
 	.skip 0x30
+.endobj __DVDRestartMotorCommandBlock
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-CommandInfoCounter:
-	.skip 0x4
+.balign 8
 
-PauseFlag:
+.obj CommandInfoCounter, local
 	.skip 0x4
+.endobj CommandInfoCounter
 
-PausingFlag:
+.obj PauseFlag, local
 	.skip 0x4
+.endobj PauseFlag
 
-FatalErrorFlag:
+.obj PausingFlag, local
 	.skip 0x4
+.endobj PausingFlag
 
-Canceling:
+.obj FatalErrorFlag, local
 	.skip 0x4
+.endobj FatalErrorFlag
 
-ResumeFromHere:
+.obj Canceling, local
 	.skip 0x4
+.endobj Canceling
 
-NumInternalRetry:
+.obj ResumeFromHere, local
 	.skip 0x4
+.endobj ResumeFromHere
 
-FirstTimeInBootrom:
+.obj NumInternalRetry, local
 	.skip 0x4
+.endobj NumInternalRetry
 
-Breaking:
+.obj FirstTimeInBootrom, local
 	.skip 0x4
+.endobj FirstTimeInBootrom
 
-WaitingForCoverOpen:
+.obj Breaking, local
 	.skip 0x4
+.endobj Breaking
 
-WaitingForCoverClose:
+.obj WaitingForCoverOpen, local
 	.skip 0x4
+.endobj WaitingForCoverOpen
 
-MotorStopped:
+.obj WaitingForCoverClose, local
 	.skip 0x4
+.endobj WaitingForCoverClose
 
-ChangedDisc:
+.obj MotorStopped, local
 	.skip 0x4
+.endobj MotorStopped
 
-PreparingCover:
+.obj ChangedDisc, local
 	.skip 0x4
+.endobj ChangedDisc
 
-.global __DVDLayoutFormat
-__DVDLayoutFormat:
+.obj PreparingCover, local
 	.skip 0x4
+.endobj PreparingCover
 
-DVDInitialized:
+.obj __DVDLayoutFormat, global
 	.skip 0x4
+.endobj __DVDLayoutFormat
 
-__BS2DVDLowIntType:
+.obj DVDInitialized, local
 	.skip 0x4
+.endobj DVDInitialized
 
-Prepared:
+.obj __BS2DVDLowIntType, local
 	.skip 0x4
+.endobj __BS2DVDLowIntType
 
-BootGameInfo:
+.obj Prepared, local
 	.skip 0x4
+.endobj Prepared
 
-PartInfo:
+.obj BootGameInfo, local
 	.skip 0x4
+.endobj BootGameInfo
 
-GameToc:
+.obj PartInfo, local
+	.skip 0x4
+.endobj PartInfo
+
+.obj GameToc, local
 	.skip 0x10
+.endobj GameToc
 
-__DVDNumTmdBytes:
+.obj __DVDNumTmdBytes, local
 	.skip 0x8
+.endobj __DVDNumTmdBytes
 
-LastResetEnd:
+.obj LastResetEnd, local
 	.skip 0x4
+.endobj LastResetEnd
 
-lbl_8066784C:
+.obj lbl_8066784C, local
 	.skip 0x4
+.endobj lbl_8066784C
 
-MotorState:
+.obj MotorState, local
 	.skip 0x4
+.endobj MotorState
 
-ResetRequired:
+.obj ResetRequired, local
 	.skip 0x4
+.endobj ResetRequired
 
-LastError:
+.obj LastError, local
 	.skip 0x4
+.endobj LastError
 
-CancelLastError:
+.obj CancelLastError, local
 	.skip 0x4
+.endobj CancelLastError
 
-CancelCallback:
+.obj CancelCallback, local
 	.skip 0x4
+.endobj CancelCallback
 
-CurrCommand:
+.obj CurrCommand, local
 	.skip 0x4
+.endobj CurrCommand
 
-bootInfo:
+.obj bootInfo, local
 	.skip 0x4
+.endobj bootInfo
 
-IDShouldBe:
+.obj IDShouldBe, local
 	.skip 0x4
+.endobj IDShouldBe
 
-executing:
+.obj executing, local
 	.skip 0x4
+.endobj executing
 
-LastState:
+.obj LastState, local
 	.skip 0x4
+.endobj LastState

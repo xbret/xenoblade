@@ -688,109 +688,113 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80537500
-lbl_80537500:
+.balign 8
+
+.obj lbl_80537500, global
 	.asciz "bus is out of bounds(%d)\n%d <= bus < %d not satisfied."
 	.balign 4
+.endobj lbl_80537500
 
 
-.global lbl_80537538
-lbl_80537538:
+.obj lbl_80537538, global
 	.asciz "AxManager.h"
 	.4byte 0
+.endobj lbl_80537538
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-.global float_8066A780
-float_8066A780:
+
+.obj float_8066A780, global
 	.float 0.02 #0x3CA3D70A
+.endobj float_8066A780
 
 
-.global float_8066A784
-float_8066A784:
+.obj float_8066A784, global
 	.float 3 #0x40400000
+.endobj float_8066A784
 
 
-.global float_8066A788
-float_8066A788:
+.obj float_8066A788, global
 	.float 0.6 #0x3F19999A
+.endobj float_8066A788
 
 
-.global float_8066A78C
-float_8066A78C:
+.obj float_8066A78C, global
 	.float 0.4 #0x3ECCCCCD
+.endobj float_8066A78C
 
 
-.global float_8066A790
-float_8066A790:
+.obj float_8066A790, global
 	.float 1.0
+.endobj float_8066A790
 
 
-.global float_8066A794
-float_8066A794:
+.obj float_8066A794, global
 	.float 0
+.endobj float_8066A794
 
 
-.global float_8066A798
-float_8066A798:
+.obj float_8066A798, global
 	.float 10.0
+.endobj float_8066A798
 
 
-.global float_8066A79C
-float_8066A79C:
+.obj float_8066A79C, global
 	.float 0.5
+.endobj float_8066A79C
 
 
-.global float_8066A7A0
-float_8066A7A0:
+.obj float_8066A7A0, global
 	.float 160 #0x43200000
+.endobj float_8066A7A0
 
 
-.global float_8066A7A4
-float_8066A7A4:
+.obj float_8066A7A4, global
 	.float 0.06 #0x3D75C28F
+.endobj float_8066A7A4
 
 
-.global float_8066A7A8
-float_8066A7A8:
+.obj float_8066A7A8, global
 	.float 4 #0x40800000
+.endobj float_8066A7A8
 
 
-.global float_8066A7AC
-float_8066A7AC:
+.obj float_8066A7AC, global
 	.float 0.2
+.endobj float_8066A7AC
 
 
-.global float_8066A7B0
-float_8066A7B0:
+.obj float_8066A7B0, global
 	.float 0.8 #0x3F4CCCCD
+.endobj float_8066A7B0
 
 
-.global float_8066A7B4
-float_8066A7B4:
+.obj float_8066A7B4, global
 	.float 0.9 #0x3F666666
+.endobj float_8066A7B4
 
 
-.global float_8066A7B8
-float_8066A7B8:
+.obj float_8066A7B8, global
 	.float 25 #0x41C80000
+.endobj float_8066A7B8
 
 
-.global float_8066A7BC
-float_8066A7BC:
+.obj float_8066A7BC, global
 	.float 250 #0x437A0000
+.endobj float_8066A7BC
 
 
-.global float_8066A7C0
-float_8066A7C0:
+.obj float_8066A7C0, global
 	.float 200 #0x43480000
+.endobj float_8066A7C0
 
 
-.global float_8066A7C4
-float_8066A7C4:
+.obj float_8066A7C4, global
 	.float 0.7 #0x3F333333
+.endobj float_8066A7C4
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

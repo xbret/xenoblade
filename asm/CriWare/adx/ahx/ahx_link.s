@@ -251,17 +251,21 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global ahx_link_strpool
-ahx_link_strpool:
+.balign 8
+
+.obj ahx_link_strpool, global
 	.asciz "E2005092203 : NULL pointer is passed."
 	.asciz "E2005092204 : Work area size is too short."
 	.asciz "E2005092202 : AHXSJD_Create function failed."
 	.asciz "E2005092205 : NULL pointer is passed."
 	.4byte 0
+.endobj ahx_link_strpool
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_805657B4
-lbl_805657B4:
+#.balign 8
+
+.obj lbl_805657B4, global
 	.4byte 0x00002080
+.endobj lbl_805657B4

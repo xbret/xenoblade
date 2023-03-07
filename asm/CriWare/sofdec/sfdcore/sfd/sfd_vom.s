@@ -168,8 +168,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global SFD_tr_vo_manu
-SFD_tr_vo_manu:
+.balign 8
+
+.obj SFD_tr_vo_manu, global
 	.4byte SFVOM_Init
 	.4byte SFVOM_Finish
 	.4byte SFVOM_ExecServer
@@ -184,3 +185,4 @@ SFD_tr_vo_manu:
 	.4byte SFVOM_GetRead
 	.4byte SFVOM_AddRead
 	.4byte SFVOM_Seek
+.endobj SFD_tr_vo_manu

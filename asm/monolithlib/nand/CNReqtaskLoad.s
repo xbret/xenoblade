@@ -129,47 +129,47 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CNReqtaskLoad_typestr
-CNReqtaskLoad_typestr:
+.obj CNReqtaskLoad_typestr, global
 	.asciz "CNReqtaskLoad"
 	.balign 4
+.endobj CNReqtaskLoad_typestr
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CNReqtaskLoad
-__vt__CNReqtaskLoad:
+.obj __vt__CNReqtaskLoad, global
 	.4byte __RTTI__CNReqtaskLoad
 	.4byte 0
 	.4byte func_804DAFB8
 	.4byte func_804DA4CC
+.endobj __vt__CNReqtaskLoad
 
-.global CNReqtaskLoad_hierarchy
-CNReqtaskLoad_hierarchy:
+.obj CNReqtaskLoad_hierarchy, global
 	.4byte __RTTI__CNReqtask
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CNReqtaskLoad_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CNReqtaskLoad
-__RTTI__CNReqtaskLoad:
+.obj __RTTI__CNReqtaskLoad, global
 	.4byte CNReqtaskLoad_typestr
 	.4byte CNReqtaskLoad_hierarchy
+.endobj __RTTI__CNReqtaskLoad
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_806682C0
-lbl_806682C0:
+.obj lbl_806682C0, global
 	.skip 0x8
+.endobj lbl_806682C0
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

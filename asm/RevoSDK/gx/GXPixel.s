@@ -542,8 +542,10 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
+
 #@LOCAL@GXSetPixelFmt__F11_GXPixelFmt9_GXZFmt16@p2f
-lbl_8054C110:
+.obj lbl_8054C110, local
 	.4byte 0
 	.4byte 0x00000001
 	.4byte 0x00000002
@@ -552,67 +554,70 @@ lbl_8054C110:
 	.4byte 0x00000004
 	.4byte 0x00000004
 	.4byte 0x00000005
+.endobj lbl_8054C110
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C050
-float_8066C050:
+.balign 8
+
+.obj float_8066C050, global
 	.float 0
+.endobj float_8066C050
 
 
-.global float_8066C054
-float_8066C054:
+.obj float_8066C054, global
 	.float 1.0
+.endobj float_8066C054
 
 
-.global float_8066C058
-float_8066C058:
+.obj float_8066C058, global
 	.float 0.5
 	.4byte 0
+.endobj float_8066C058
 
 
-.global double_8066C060
-double_8066C060:
+.obj double_8066C060, global
 	.double 1 #0x3FF0000000000000
+.endobj double_8066C060
 
 
-.global float_8066C068
-float_8066C068:
+.obj float_8066C068, global
 	.float 2 #0x40000000
 	.4byte 0
+.endobj float_8066C068
 
 
-.global double_8066C070
-double_8066C070:
+.obj double_8066C070, global
 	.double 0.5 #0x3FE0000000000000
+.endobj double_8066C070
 
 
-.global float_8066C078
-float_8066C078:
+.obj float_8066C078, global
 	.float 8388638 #0x4B00001E
 	.4byte 0
+.endobj float_8066C078
 
 
-.global double_8066C080
-double_8066C080:
+.obj double_8066C080, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066C080
 
-.global double_8066C088
-double_8066C088:
+.obj double_8066C088, global
 	.double 0
+.endobj double_8066C088
 
 
-.global float_8066C090
-float_8066C090:
+.obj float_8066C090, global
 	.float 1.73205 #0x3FDDB3D0
+.endobj float_8066C090
 
 
-.global float_8066C094
-float_8066C094:
+.obj float_8066C094, global
 	.float 256 #0x43800000
+.endobj float_8066C094
 
 
-.global double_8066C098
-double_8066C098:
+.obj double_8066C098, global
 	.4byte 0x43300000
 	.4byte 0
+.endobj double_8066C098

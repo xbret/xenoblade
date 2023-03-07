@@ -667,68 +667,68 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CLight
-__vt__CLight:
+.obj __vt__CLight, global
 	.4byte __RTTI__CLight
 	.4byte 0
 	.4byte __dt__CLight
 	.4byte 0
+.endobj __vt__CLight
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CLight
-__RTTI__CLight:
+.obj __RTTI__CLight, global
 	.4byte CLight_typestr
 	.4byte 0
+.endobj __RTTI__CLight
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066D758
-float_8066D758:
+.obj float_8066D758, global
 	.float 0
+.endobj float_8066D758
 
 
-.global float_8066D75C
-float_8066D75C:
+.obj float_8066D75C, global
 	.float 0.5
+.endobj float_8066D75C
 
 
-.global float_8066D760
-float_8066D760:
+.obj float_8066D760, global
 	.float 1.0
+.endobj float_8066D760
 
 
-.global float_8066D764
-float_8066D764:
+.obj float_8066D764, global
 	.float 10000 #0x461C4000
+.endobj float_8066D764
 
 
-.global float_8066D768
-float_8066D768:
+.obj float_8066D768, global
 	.float 1000000 #0x49742400
+.endobj float_8066D768
 
 
-.global float_8066D76C
-float_8066D76C:
+.obj float_8066D76C, global
 	.float 40.7436638 #0x4222F983
+.endobj float_8066D76C
 
 
-.global float_8066D770
-float_8066D770:
+.obj float_8066D770, global
 	.float 255 #0x437F0000
+.endobj float_8066D770
 
-.global CLight_typestr
-CLight_typestr:
+.obj CLight_typestr, global
 	.asciz "CLight"
 	.balign 4
 	.4byte 0
+.endobj CLight_typestr
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

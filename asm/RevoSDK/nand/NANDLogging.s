@@ -411,30 +411,36 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global lbl_805512B8
-lbl_805512B8:
+
+.obj lbl_805512B8, global
 	.asciz "/shared2/test2/nanderr.log"
 	.balign 4
+.endobj lbl_805512B8
 
 
-.global lbl_805512D4
-lbl_805512D4:
+.obj lbl_805512D4, global
 	.asciz "%d %04d/%02d/%02d %02d:%02d:%02d %s %s"
 	.balign 4
 	.4byte 0
+.endobj lbl_805512D4
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-s_fd:
+.balign 8
+
+.obj s_fd, local
 	.4byte 0xFFFFFF01
 	.4byte 0
+.endobj s_fd
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
-s_message:
+.obj s_message, local
 	.skip 0x100
+.endobj s_message
 
 #@LOCAL@asyncRoutine__FlPv@s_rBuf
 .skip 0x100
@@ -444,9 +450,13 @@ s_message:
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-s_callback:
-	.skip 0x4
 
-s_stage:
+.obj s_callback, local
 	.skip 0x4
+.endobj s_callback
+
+.obj s_stage, local
+	.skip 0x4
+.endobj s_stage

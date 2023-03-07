@@ -66,13 +66,15 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C310
-float_8066C310:
+.balign 8
+
+.obj float_8066C310, global
 	.float 0
 	.4byte 0
+.endobj float_8066C310
 
 
-.global double_8066C318
-double_8066C318:
+.obj double_8066C318, global
 	.4byte 0x43300000
 	.4byte 0
+.endobj double_8066C318

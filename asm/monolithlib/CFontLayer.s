@@ -135,15 +135,14 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-
-.global __vt__CFontLayer
-__vt__CFontLayer:
+.obj __vt__CFontLayer, global
 	.4byte __RTTI__CFontLayer
 	.4byte 0
 	.4byte __dt__CFontLayer
 	.4byte 0
+.endobj __vt__CFontLayer
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

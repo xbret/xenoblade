@@ -1461,9 +1461,10 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-.global lbl_80523880
-lbl_80523880:
+
+.obj lbl_80523880, global
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1474,59 +1475,64 @@ lbl_80523880:
 	.4byte ChannelCallbackFunc__Q44nw4r3snd6detail8SeqTrackFPQ44nw4r3snd6detail7ChannelQ54nw4r3snd6detail7Channel21ChannelCallbackStatusUl
 	.4byte 0
 	.4byte 0
+.endobj lbl_80523880
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056E490
-lbl_8056E490:
+.balign 8
+
+.obj lbl_8056E490, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q44nw4r3snd6detail8SeqTrackFv
 	.4byte 0
+.endobj lbl_8056E490
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C818
-float_8066C818:
+.balign 8
+
+.obj float_8066C818, global
 	.float 1.0
+.endobj float_8066C818
 
 
-.global float_8066C81C
-float_8066C81C:
+.obj float_8066C81C, global
 	.float 0
+.endobj float_8066C81C
 
 
-.global float_8066C820
-float_8066C820:
+.obj float_8066C820, global
 	.float 127 #0x42FE0000
+.endobj float_8066C820
 
 
-.global float_8066C824
-float_8066C824:
+.obj float_8066C824, global
 	.float 0.0078125 #0x3C000000
+.endobj float_8066C824
 
 
-.global float_8066C828
-float_8066C828:
+.obj float_8066C828, global
 	.float 63 #0x427C0000
+.endobj float_8066C828
 
 
-.global float_8066C82C
-float_8066C82C:
+.obj float_8066C82C, global
 	.float -1.0
+.endobj float_8066C82C
 
 
-.global float_8066C830
-float_8066C830:
+.obj float_8066C830, global
 	.float 2 #0x40000000
 	.4byte 0
+.endobj float_8066C830
 
 
-.global double_8066C838
-double_8066C838:
+.obj double_8066C838, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066C838
 
-.global double_8066C840
-double_8066C840:
+.obj double_8066C840, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066C840

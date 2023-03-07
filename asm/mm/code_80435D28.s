@@ -72,14 +72,15 @@
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 .balign 8 #needed to align MTRand.o
-.global float_8066C9E8
-float_8066C9E8:
+
+.obj float_8066C9E8, global
 	.float 0
+.endobj float_8066C9E8
 
 
-.global float_8066C9EC
-float_8066C9EC:
+.obj float_8066C9EC, global
 	.float 1.0
+.endobj float_8066C9EC
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -3603,8 +3603,10 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-__MIXVolumeTable:
+
+.obj __MIXVolumeTable, local
 	.2byte 0x0000
 	.2byte 0x0001
 	.2byte 0x0001
@@ -4572,8 +4574,9 @@ __MIXVolumeTable:
 	.2byte 0xFF64
 	.2byte 0x0000
 	.4byte 0
+.endobj __MIXVolumeTable
 
-__MIXPanTable:
+.obj __MIXPanTable, local
 	.4byte 0
 	.4byte 0
 	.4byte 0xFFFFFFFF
@@ -4702,8 +4705,9 @@ __MIXPanTable:
 	.4byte 0xFFFFFF4C
 	.4byte 0xFFFFFF2E
 	.4byte 0xFFFFFC78
+.endobj __MIXPanTable
 
-__MIX_DPL2_front:
+.obj __MIX_DPL2_front, local
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -4826,8 +4830,9 @@ __MIX_DPL2_front:
 	.2byte 0xFEBF
 	.2byte 0xFE83
 	.2byte 0xFC40
+.endobj __MIX_DPL2_front
 
-__MIX_DPL2_rear:
+.obj __MIX_DPL2_rear, local
 	.2byte 0xFFC3
 	.2byte 0xFFC3
 	.2byte 0xFFC4
@@ -4956,23 +4961,30 @@ __MIX_DPL2_rear:
 	.2byte 0xFFF4
 	.2byte 0xFFF4
 	.2byte 0xFFF5
+.endobj __MIX_DPL2_rear
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global __s_MIXChannel
-__s_MIXChannel:
+.obj __s_MIXChannel, global
 	.skip 0x2A00
+.endobj __s_MIXChannel
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-__MIXChannel:
-	.skip 0x4
+.balign 8
 
-__init:
+.obj __MIXChannel, local
 	.skip 0x4
+.endobj __MIXChannel
 
-__MIXMaxVoices:
+.obj __init, local
 	.skip 0x4
+.endobj __init
 
-__MIXSoundMode:
+.obj __MIXMaxVoices, local
 	.skip 0x4
+.endobj __MIXMaxVoices
+
+.obj __MIXSoundMode, local
+	.skip 0x4
+.endobj __MIXSoundMode

@@ -821,17 +821,18 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80549148
-lbl_80549148:
+.balign 8
+
+.obj lbl_80549148, global
 	.asciz "Service Discovery"
 	.balign 4
 	.asciz "Security Registration Server failed"
 	.asciz "Security Registration for Client failed"
 	.asciz "SDP Registration failed"
+.endobj lbl_80549148
 
 
-.global lbl_805491C0
-lbl_805491C0:
+.obj lbl_805491C0, global
 	.asciz "SDP - Rcvd L2CAP conn ind, sent config req, CID 0x%x"
 	.balign 4
 	.asciz "SDP - Rcvd conn cnf for unknown CID 0x%x"
@@ -839,73 +840,74 @@ lbl_805491C0:
 	.asciz "SDP - got conn cnf, sent cfg req, CID: 0x%x"
 	.asciz "SDP - Rcvd conn cnf with error: 0x%x  CID 0x%x"
 	.balign 4
+.endobj lbl_805491C0
 
 
-.global lbl_80549280
-lbl_80549280:
+.obj lbl_80549280, global
 	.asciz "SDP - Rcvd L2CAP cfg ind, unknown CID: 0x%x"
+.endobj lbl_80549280
 
 
-.global lbl_805492AC
-lbl_805492AC:
+.obj lbl_805492AC, global
 	.asciz "SDP - Rcvd cfg ind, sent cfg cfm, CID: 0x%x"
 	.asciz "SDP - Rcvd cfg cfm, CID: 0x%x  Result: %d"
 	.balign 4
+.endobj lbl_805492AC
 
 
-.global lbl_80549304
-lbl_80549304:
+.obj lbl_80549304, global
 	.asciz "SDP - disconnect  CID: 0x%x"
+.endobj lbl_80549304
 
 
-.global lbl_80549320
-lbl_80549320:
+.obj lbl_80549320, global
 	.asciz "SDP - Rcvd L2CAP disc, unknown CID: 0x%x"
 	.balign 4
+.endobj lbl_80549320
 
 
-.global lbl_8054934C
-lbl_8054934C:
+.obj lbl_8054934C, global
 	.asciz "SDP - Rcvd L2CAP disc, CID: 0x%x"
 	.balign 4
+.endobj lbl_8054934C
 
 
-.global lbl_80549370
-lbl_80549370:
+.obj lbl_80549370, global
 	.asciz "SDP - Ignored L2CAP data while in state: %d, CID: 0x%x"
 	.balign 4
+.endobj lbl_80549370
 
 
-.global lbl_805493A8
-lbl_805493A8:
+.obj lbl_805493A8, global
 	.asciz "SDP - Rcvd L2CAP data, unknown CID: 0x%x"
 	.balign 4
 	.asciz "SDP - no spare CCB for orig"
 	.asciz "SDP - Originate started"
 	.asciz "SDP - Originate failed"
 	.balign 4
+.endobj lbl_805493A8
 
 
-.global lbl_80549420
-lbl_80549420:
+.obj lbl_80549420, global
 	.asciz "SDP - Rcvd L2CAP disc cfm, unknown CID: 0x%x"
 	.balign 4
+.endobj lbl_80549420
 
 
-.global lbl_80549450
-lbl_80549450:
+.obj lbl_80549450, global
 	.asciz "SDP - Rcvd L2CAP disc cfm, CID: 0x%x"
 	.balign 4
+.endobj lbl_80549450
 
 
-.global lbl_80549478
-lbl_80549478:
+.obj lbl_80549478, global
 	.asciz "SDP - CCB timeout in state: %d  CID: 0x%x"
 	.balign 4
 	.4byte 0
+.endobj lbl_80549478
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global sdp_cb
-sdp_cb:
+.obj sdp_cb, global
 	.skip 0x4640
+.endobj sdp_cb

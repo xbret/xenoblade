@@ -3336,10 +3336,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_804FF358
-lbl_804FF358:
+.obj lbl_804FF358, global
 	.float 0.1
 	.float 0.9 #0x3F666666
 	.float 0.04 #0x3D23D70A
@@ -3360,41 +3359,41 @@ lbl_804FF358:
 	.float 0.9 #0x3F666666
 	.float 0.1
 	.float 0.9 #0x3F666666
+.endobj lbl_804FF358
 
-.global CScnItemModelNw4r_typestr
-CScnItemModelNw4r_typestr:
+.obj CScnItemModelNw4r_typestr, global
 	.asciz "CScnItemModelNw4r"
 	.balign 4
 	.4byte 0
+.endobj CScnItemModelNw4r_typestr
 
-.global cf_CfResPcImpl_typestr
-cf_CfResPcImpl_typestr:
+.obj cf_CfResPcImpl_typestr, global
 	.asciz "cf::CfResPcImpl"
+.endobj cf_CfResPcImpl_typestr
 
-.global CScnItemModel_typestr
-CScnItemModel_typestr:
+.obj CScnItemModel_typestr, global
 	.asciz "CScnItemModel"
 	.balign 4
+.endobj CScnItemModel_typestr
 
-.global CScnItem_typestr
-CScnItem_typestr:
+.obj CScnItem_typestr, global
 	.asciz "CScnItem"
 	.balign 4
+.endobj CScnItem_typestr
 
 
-.global lbl_804FF3EC
-lbl_804FF3EC:
+.obj lbl_804FF3EC, global
 	.asciz "%s(%x)"
 	.asciz "JUspA"
 	.balign 4
 	.4byte 0
+.endobj lbl_804FF3EC
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_80535F00
-lbl_80535F00:
+.obj lbl_80535F00, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_8018D79C
@@ -3407,19 +3406,19 @@ lbl_80535F00:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_8018EE18
+.endobj lbl_80535F00
 
-.global CScnItemModelNw4r_hierarchy
-CScnItemModelNw4r_hierarchy:
+.obj CScnItemModelNw4r_hierarchy, global
 	.4byte __RTTI__CScnItem
 	.4byte 0
 	.4byte __RTTI__CScnItemModel
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CScnItemModelNw4r_hierarchy
 
 
-.global __vt__cf_CfResPcImpl
-__vt__cf_CfResPcImpl:
+.obj __vt__cf_CfResPcImpl, global
 	.4byte __RTTI__cf_CfResPcImpl
 	.4byte 0
 	.4byte __dt__cf_CfResPcImpl
@@ -3446,22 +3445,22 @@ __vt__cf_CfResPcImpl:
 	.4byte func_8018CF90
 	.4byte func_8016CD54
 	.4byte func_800BF30C
+.endobj __vt__cf_CfResPcImpl
 
-.global cf_CfResPcImpl_hierarchy
-cf_CfResPcImpl_hierarchy:
+.obj cf_CfResPcImpl_hierarchy, global
 	.4byte __RTTI__cf_CfResImpl
 	.4byte 0
 	.4byte 0
+.endobj cf_CfResPcImpl_hierarchy
 
-.global CScnItemModel_hierarchy
-CScnItemModel_hierarchy:
+.obj CScnItemModel_hierarchy, global
 	.4byte __RTTI__CScnItem
 	.4byte 0
 	.4byte 0
+.endobj CScnItemModel_hierarchy
 
 
-.global lbl_80535FC8
-lbl_80535FC8:
+.obj lbl_80535FC8, global
 	.4byte 0x00000072
 	.4byte 0x000E0001
 	.4byte 0x000000C5
@@ -3478,91 +3477,92 @@ lbl_80535FC8:
 	.4byte 0x00170001
 	.4byte 0x00000183
 	.4byte 0x000C0002
+.endobj lbl_80535FC8
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CScnItemModelNw4r
-__RTTI__CScnItemModelNw4r:
+.obj __RTTI__CScnItemModelNw4r, global
 	.4byte CScnItemModelNw4r_typestr
 	.4byte CScnItemModelNw4r_hierarchy
+.endobj __RTTI__CScnItemModelNw4r
 
-.global __RTTI__cf_CfResPcImpl
-__RTTI__cf_CfResPcImpl:
+.obj __RTTI__cf_CfResPcImpl, global
 	.4byte cf_CfResPcImpl_typestr
 	.4byte cf_CfResPcImpl_hierarchy
+.endobj __RTTI__cf_CfResPcImpl
 
 
-.global __RTTI__CScnItemModel
-__RTTI__CScnItemModel:
+.obj __RTTI__CScnItemModel, global
 	.4byte CScnItemModel_typestr
 	.4byte CScnItemModel_hierarchy
+.endobj __RTTI__CScnItemModel
 
 
-.global __RTTI__CScnItem
-__RTTI__CScnItem:
+.obj __RTTI__CScnItem, global
 	.4byte CScnItem_typestr
 	.4byte 0
+.endobj __RTTI__CScnItem
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066A300
-float_8066A300:
+.obj float_8066A300, global
 	.float 0
+.endobj float_8066A300
 
 
-.global float_8066A304
-float_8066A304:
+.obj float_8066A304, global
 	.float 2 #0x40000000
+.endobj float_8066A304
 
 
-.global float_8066A308
-float_8066A308:
+.obj float_8066A308, global
 	.float -8 #0xC1000000
+.endobj float_8066A308
 
 
-.global float_8066A30C
-float_8066A30C:
+.obj float_8066A30C, global
 	.float 0.7 #0x3F333333
+.endobj float_8066A30C
 
 
-.global float_8066A310
-float_8066A310:
+.obj float_8066A310, global
 	.float 1.4 #0x3FB33333
+.endobj float_8066A310
 
 
-.global float_8066A314
-float_8066A314:
+.obj float_8066A314, global
 	.float -0.1 #0xBDCCCCCD
+.endobj float_8066A314
 
 
-.global float_8066A318
-float_8066A318:
+.obj float_8066A318, global
 	.float 0.3 #0x3E99999A
+.endobj float_8066A318
 
 
-.global float_8066A31C
-float_8066A31C:
+.obj float_8066A31C, global
 	.float 3 #0x40400000
+.endobj float_8066A31C
 
 
-.global float_8066A320
-float_8066A320:
+.obj float_8066A320, global
 	.float 1.0
+.endobj float_8066A320
 
 
-.global float_8066A324
-float_8066A324:
+.obj float_8066A324, global
 	.float 20 #0x41A00000
+.endobj float_8066A324
 
 
-.global float_8066A328
-float_8066A328:
+.obj float_8066A328, global
 	.float 0.5
 	.4byte 0
+.endobj float_8066A328
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

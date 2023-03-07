@@ -2580,7 +2580,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-bta_service_id_to_uuid_lkup_tbl:
+.balign 8
+
+.obj bta_service_id_to_uuid_lkup_tbl, local
 	.2byte 0x1200
 	.2byte 0x1101
 	.2byte 0x1103
@@ -2605,10 +2607,10 @@ bta_service_id_to_uuid_lkup_tbl:
 	.2byte 0x1304
 	.2byte 0x112F
 	.2byte 0x0000
+.endobj bta_service_id_to_uuid_lkup_tbl
 
 
-.global bta_service_id_to_btm_srv_id_lkup_tbl
-bta_service_id_to_btm_srv_id_lkup_tbl:
+.obj bta_service_id_to_btm_srv_id_lkup_tbl, global
 	.4byte 0
 	.4byte 0x00000001
 	.4byte 0x00000003
@@ -2633,74 +2635,80 @@ bta_service_id_to_btm_srv_id_lkup_tbl:
 	.4byte 0x00000025
 	.4byte 0x0000002C
 	.4byte 0
+.endobj bta_service_id_to_btm_srv_id_lkup_tbl
 
-bta_security:
+.obj bta_security, local
 	.4byte bta_dm_authorize_cback
 	.4byte bta_dm_pin_cback
 	.4byte bta_dm_new_link_key_cback
 	.4byte bta_dm_link_key_request_cback
 	.4byte bta_dm_authentication_complete_cback
 	.4byte 0
+.endobj bta_security
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80544008
-lbl_80544008:
+.balign 8
+
+.obj lbl_80544008, global
 	.asciz " bta_dm_disable_timer_cback  "
 	.balign 4
+.endobj lbl_80544008
 
 
-.global lbl_80544028
-lbl_80544028:
+.obj lbl_80544028, global
 	.asciz " bta_dm_search_timer_cback  "
 	.balign 4
+.endobj lbl_80544028
 
 
-.global lbl_80544048
-lbl_80544048:
+.obj lbl_80544048, global
 	.asciz " bta_dm_pin_cback() -> Failed to start Remote Name Request  "
 	.balign 4
+.endobj lbl_80544048
 
 
-.global lbl_80544088
-lbl_80544088:
+.obj lbl_80544088, global
 	.asciz " timer stopped  "
 	.balign 4
+.endobj lbl_80544088
 
 
-.global lbl_8054409C
-lbl_8054409C:
+.obj lbl_8054409C, global
 	.asciz "bta_dm_l2cap_server_compress_cback, BTA ID %d"
 	.balign 4
+.endobj lbl_8054409C
 
 
-.global lbl_805440CC
-lbl_805440CC:
+.obj lbl_805440CC, global
 	.asciz "bta_dm_compress_cback open app_id %d, BTA id %d, state %d"
 	.balign 4
+.endobj lbl_805440CC
 
 
-.global lbl_80544108
-lbl_80544108:
+.obj lbl_80544108, global
 	.asciz "bta_dm_compress_cback close app_id %d, BTA id %d, state %d"
 	.balign 4
 	.4byte 0
+.endobj lbl_80544108
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066BF48
-lbl_8066BF48:
+.balign 8
+
+.obj lbl_8066BF48, global
 	.2byte 0x0001
+.endobj lbl_8066BF48
 
 
-.global lbl_8066BF4A
-lbl_8066BF4A:
+.obj lbl_8066BF4A, global
 	.byte 0x80, 0x01
 	.4byte 0
+.endobj lbl_8066BF4A
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global bta_dm_compress_srvcs
-bta_dm_compress_srvcs:
+.obj bta_dm_compress_srvcs, global
 	.skip 0x30
+.endobj bta_dm_compress_srvcs

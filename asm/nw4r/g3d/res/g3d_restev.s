@@ -620,9 +620,10 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
+
 #r2c$7871
-.global lbl_80520DB8
-lbl_80520DB8:
+.obj lbl_80520DB8, global
 	.4byte 0x00000004
 	.4byte 0x00000005
 	.4byte 0x000000FF
@@ -631,10 +632,10 @@ lbl_80520DB8:
 	.4byte 0x00000007
 	.4byte 0x00000008
 	.4byte 0x00000006
+.endobj lbl_80520DB8
 
 #dlsize$8134
-.global lbl_80520DD8
-lbl_80520DD8:
+.obj lbl_80520DD8, global
 	.4byte 0x000000A0
 	.4byte 0x000000A0
 	.4byte 0x000000C0
@@ -651,13 +652,15 @@ lbl_80520DD8:
 	.4byte 0x000001C0
 	.4byte 0x000001E0
 	.4byte 0x000001E0
+.endobj lbl_80520DD8
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
+
 #c2r$7899
-.global lbl_8056C9A0
-lbl_8056C9A0:
+.obj lbl_8056C9A0, global
 	.4byte 0x00010001
 	.4byte 0x00010705
 	.4byte 0x06000000
@@ -666,3 +669,4 @@ lbl_8056C9A0:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056C9A0

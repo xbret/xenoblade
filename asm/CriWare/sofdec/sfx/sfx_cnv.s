@@ -1026,22 +1026,23 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_80520850
-lbl_80520850:
+.balign 8
+
+.obj lbl_80520850, global
 	.float 0.5
+.endobj lbl_80520850
 
 
-.global lbl_80520854
-lbl_80520854:
+.obj lbl_80520854, global
 	.float 1.164 #0x3F94FDF4
+.endobj lbl_80520854
 
 
-.global double_80520858
-double_80520858:
+.obj double_80520858, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_80520858
 
-.global sfx_cnv_strpool
-sfx_cnv_strpool:
+.obj sfx_cnv_strpool, global
 	.asciz "E201312: sfxcnv_IsCnvUpHalf : compo is invalid."
 	.asciz "E201311: sfxcnv_MakeTable : compo is not support."
 	.asciz "E202282: SFX_MakeTblZ16 : zclip is not set."
@@ -1053,3 +1054,4 @@ sfx_cnv_strpool:
 	.asciz "E05070807: please set pitch by mwPlyFxSetOutBufPitchHeight()."
 	.asciz "E4011801: sfxcnv_ExecCopyAlphaByCbFunc : frame format is invalid."
 	.asciz "E05070809: please set pitch by mwPlyFxSetOutBufPitchHeight()."
+.endobj sfx_cnv_strpool

@@ -90,8 +90,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global SFD_tr_in_mem
-SFD_tr_in_mem:
+.balign 8
+
+.obj SFD_tr_in_mem, global
 	.4byte SFMEM_Init
 	.4byte SFMEM_Finish
 	.4byte SFMEM_ExecServer
@@ -106,3 +107,4 @@ SFD_tr_in_mem:
 	.4byte SFMEM_GetRead
 	.4byte SFMEM_AddRead
 	.4byte SFMEM_Seek
+.endobj SFD_tr_in_mem

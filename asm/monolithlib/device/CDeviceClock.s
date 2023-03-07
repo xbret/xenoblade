@@ -459,31 +459,29 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-
-.global CDeviceClock_typestr
-CDeviceClock_typestr:
+.obj CDeviceClock_typestr, global
 	.asciz "CDeviceClock"
 	.balign 4
+.endobj CDeviceClock_typestr
 
-.global reslist_IDeviceClockFrame_typestr
-reslist_IDeviceClockFrame_typestr:
+.obj reslist_IDeviceClockFrame_typestr, global
 	.asciz "reslist<IDeviceClockFrame *>"
 	.balign 4
+.endobj reslist_IDeviceClockFrame_typestr
 
-.global _reslist_base_IDeviceClockFrame_typestr
-_reslist_base_IDeviceClockFrame_typestr:
+.obj _reslist_base_IDeviceClockFrame_typestr, global
 	.asciz "_reslist_base<IDeviceClockFrame *>"
 	.balign 4
 	.4byte 0
+.endobj _reslist_base_IDeviceClockFrame_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CDeviceClock
-__vt__CDeviceClock:
+.obj __vt__CDeviceClock, global
 	.4byte __RTTI__CDeviceClock
 	.4byte 0
 	.4byte __dt__CDeviceClock
@@ -524,9 +522,9 @@ __vt__CDeviceClock:
 	.4byte func_8044E0A8
 	.4byte func_8044E0DC
 	.4byte func_80039E30
+.endobj __vt__CDeviceClock
 
-.global CDeviceClock_hierarchy
-CDeviceClock_hierarchy:
+.obj CDeviceClock_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
@@ -534,54 +532,55 @@ CDeviceClock_hierarchy:
 	.4byte __RTTI__CDeviceBase
 	.4byte 0
 	.4byte 0
+.endobj CDeviceClock_hierarchy
 
 
-.global __vt__reslist_IDeviceClockFrame
-__vt__reslist_IDeviceClockFrame:
+.obj __vt__reslist_IDeviceClockFrame, global
 	.4byte __RTTI__reslist_IDeviceClockFrame
 	.4byte 0
 	.4byte __dt__reslist_IDeviceClockFrame
+.endobj __vt__reslist_IDeviceClockFrame
 
-.global reslist_IDeviceClockFrame_hierarchy
-reslist_IDeviceClockFrame_hierarchy:
+.obj reslist_IDeviceClockFrame_hierarchy, global
 	.4byte __RTTI___reslist_base_IDeviceClockFrame
 	.4byte 0
 	.4byte 0
+.endobj reslist_IDeviceClockFrame_hierarchy
 
 
-.global __vt___reslist_base_IDeviceClockFrame
-__vt___reslist_base_IDeviceClockFrame:
+.obj __vt___reslist_base_IDeviceClockFrame, global
 	.4byte __RTTI___reslist_base_IDeviceClockFrame
 	.4byte 0
 	.4byte __dt___reslist_base_IDeviceClockFrame
+.endobj __vt___reslist_base_IDeviceClockFrame
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CDeviceClock
-__RTTI__CDeviceClock:
+.obj __RTTI__CDeviceClock, global
 	.4byte CDeviceClock_typestr
 	.4byte CDeviceClock_hierarchy
+.endobj __RTTI__CDeviceClock
 
-.global __RTTI__reslist_IDeviceClockFrame
-__RTTI__reslist_IDeviceClockFrame:
+.obj __RTTI__reslist_IDeviceClockFrame, global
 	.4byte reslist_IDeviceClockFrame_typestr
 	.4byte reslist_IDeviceClockFrame_hierarchy
+.endobj __RTTI__reslist_IDeviceClockFrame
 
-.global __RTTI___reslist_base_IDeviceClockFrame
-__RTTI___reslist_base_IDeviceClockFrame:
+.obj __RTTI___reslist_base_IDeviceClockFrame, global
 	.4byte _reslist_base_IDeviceClockFrame_typestr
 	.4byte 0
+.endobj __RTTI___reslist_base_IDeviceClockFrame
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80667F38
-lbl_80667F38:
+.obj lbl_80667F38, global
 	.skip 0x8
+.endobj lbl_80667F38
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

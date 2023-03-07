@@ -29,49 +29,49 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+#.balign 8
 
-
-.global cf_CtrlEneAiCall_typestr
-cf_CtrlEneAiCall_typestr:
+.obj cf_CtrlEneAiCall_typestr, global
 	.asciz "cf::CtrlEneAiCall"
 	.balign 4
+.endobj cf_CtrlEneAiCall_typestr
 
-.global CColiProc_typestr
-CColiProc_typestr:
+.obj CColiProc_typestr, global
 	.asciz "CColiProc"
 	.balign 4
 	.4byte 0
+.endobj CColiProc_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+#.balign 8
 
-
-.global __vt__cf_CtrlEneAiCall
-__vt__cf_CtrlEneAiCall:
+.obj __vt__cf_CtrlEneAiCall, global
 	.4byte __RTTI__cf_CtrlEneAiCall
 	.4byte 0
 	.4byte func_8008A0C4
+.endobj __vt__cf_CtrlEneAiCall
 
-.global cf_CtrlEneAiCall_hierarchy
-cf_CtrlEneAiCall_hierarchy:
+.obj cf_CtrlEneAiCall_hierarchy, global
 	.4byte __RTTI__CColiProc
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CtrlEneAiCall_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CtrlEneAiCall
-__RTTI__cf_CtrlEneAiCall:
+.obj __RTTI__cf_CtrlEneAiCall, global
 	.4byte cf_CtrlEneAiCall_typestr
 	.4byte cf_CtrlEneAiCall_hierarchy
+.endobj __RTTI__cf_CtrlEneAiCall
 
-.global __RTTI__CColiProc
-__RTTI__CColiProc:
+.obj __RTTI__CColiProc, global
 	.4byte CColiProc_typestr
 	.4byte 0
+.endobj __RTTI__CColiProc
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

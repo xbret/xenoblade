@@ -1335,8 +1335,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global mwsfdfrm_strpool
-mwsfdfrm_strpool:
+.balign 8
+
+.obj mwsfdfrm_strpool, global
 	.asciz "E1122629 mwPlySetFrmSync: handle is invalid."
 	.asciz "E2010801 mwPlyGetFrmSync: handle is invalid."
 	.asciz "E410131 mwPlyGetFrm: handle is invalid."
@@ -1355,11 +1356,13 @@ mwsfdfrm_strpool:
 	.asciz "E7060505 SFH_Create return NULL."
 	.asciz "E409171 mwPlyGetNumRemainFrm: handle is invalid."
 	.asciz "E602201 mwPlyGetPlayingHdrInf: handle is invalid."
+.endobj mwsfdfrm_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global jumptable_805697A8
-jumptable_805697A8:
+.balign 8
+
+.obj jumptable_805697A8, global
 	.4byte .L_8039C878
 	.4byte .L_8039C860
 	.4byte .L_8039C878
@@ -1370,3 +1373,4 @@ jumptable_805697A8:
 	.4byte .L_8039C878
 	.4byte .L_8039C878
 	.4byte 0
+.endobj jumptable_805697A8

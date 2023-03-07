@@ -1176,17 +1176,20 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051F8E0
-lbl_8051F8E0:
+.balign 8
+
+.obj lbl_8051F8E0, global
 	.4byte 0
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8051F8E0
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global jumptable_8056A938
-jumptable_8056A938:
+.balign 8
+
+.obj jumptable_8056A938, global
 	.4byte .L_803ADEB4
 	.4byte .L_803AE3B4
 	.4byte .L_803AE2E4
@@ -1195,3 +1198,4 @@ jumptable_8056A938:
 	.4byte .L_803AE3B4
 	.4byte .L_803AE2E4
 	.4byte .L_803AE42C
+.endobj jumptable_8056A938

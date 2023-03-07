@@ -825,37 +825,36 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CWorkSystemPack_typestr
-CWorkSystemPack_typestr:
+.obj CWorkSystemPack_typestr, global
 	.asciz "CWorkSystemPack"
+.endobj CWorkSystemPack_typestr
 
-.global reslist_CArcItem_typestr
-reslist_CArcItem_typestr:
+.obj reslist_CArcItem_typestr, global
 	.asciz "reslist<CArcItem *>"
+.endobj reslist_CArcItem_typestr
 
-.global _reslist_base_CArcItem_typestr
-_reslist_base_CArcItem_typestr:
+.obj _reslist_base_CArcItem_typestr, global
 	.asciz "_reslist_base<CArcItem *>"
 	.balign 4
+.endobj _reslist_base_CArcItem_typestr
 
-.global reslist_CPackItem_typestr
-reslist_CPackItem_typestr:
+.obj reslist_CPackItem_typestr, global
 	.asciz "reslist<CPackItem *>"
 	.balign 4
+.endobj reslist_CPackItem_typestr
 
-.global _reslist_base_CPackItem_typestr
-_reslist_base_CPackItem_typestr:
+.obj _reslist_base_CPackItem_typestr, global
 	.asciz "_reslist_base<CPackItem *>"
 	.balign 4
+.endobj _reslist_base_CPackItem_typestr
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CWorkSystemPack
-__vt__CWorkSystemPack:
+.obj __vt__CWorkSystemPack, global
 	.4byte __RTTI__CWorkSystemPack
 	.4byte 0
 	.4byte __dt__CWorkSystemPack
@@ -896,99 +895,102 @@ __vt__CWorkSystemPack:
 	.4byte func_804DE1C4
 	.4byte __dt__804DE268
 	.4byte func_80039E30
+.endobj __vt__CWorkSystemPack
 
-.global CWorkSystemPack_hierarchy
-CWorkSystemPack_hierarchy:
+.obj CWorkSystemPack_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
 	.4byte 0
 	.4byte 0
+.endobj CWorkSystemPack_hierarchy
 
 
-.global __vt__reslist_CArcItem
-__vt__reslist_CArcItem:
+.obj __vt__reslist_CArcItem, global
 	.4byte __RTTI__reslist_CArcItem
 	.4byte 0
 	.4byte __dt__reslist_CArcItem
+.endobj __vt__reslist_CArcItem
 
-.global reslist_CArcItem_hierarchy
-reslist_CArcItem_hierarchy:
+.obj reslist_CArcItem_hierarchy, global
 	.4byte __RTTI___reslist_base_CArcItem
 	.4byte 0
 	.4byte 0
+.endobj reslist_CArcItem_hierarchy
 
 
-.global __vt___reslist_base_CArcItem
-__vt___reslist_base_CArcItem:
+.obj __vt___reslist_base_CArcItem, global
 	.4byte __RTTI___reslist_base_CArcItem
 	.4byte 0
 	.4byte __dt___reslist_base_CArcItem
+.endobj __vt___reslist_base_CArcItem
 
 
-.global __vt__reslist_CPackItem
-__vt__reslist_CPackItem:
+.obj __vt__reslist_CPackItem, global
 	.4byte __RTTI__reslist_CPackItem
 	.4byte 0
 	.4byte __dt__reslist_CPackItem
+.endobj __vt__reslist_CPackItem
 
-.global reslist_CPackItem_hierarchy
-reslist_CPackItem_hierarchy:
+.obj reslist_CPackItem_hierarchy, global
 	.4byte __RTTI___reslist_base_CPackItem
 	.4byte 0
 	.4byte 0
+.endobj reslist_CPackItem_hierarchy
 
 
-.global __vt___reslist_base_CPackItem
-__vt___reslist_base_CPackItem:
+.obj __vt___reslist_base_CPackItem, global
 	.4byte __RTTI___reslist_base_CPackItem
 	.4byte 0
 	.4byte __dt___reslist_base_CPackItem
 	.4byte 0
+.endobj __vt___reslist_base_CPackItem
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CWorkSystemPack
-__RTTI__CWorkSystemPack:
+.obj __RTTI__CWorkSystemPack, global
 	.4byte CWorkSystemPack_typestr
 	.4byte CWorkSystemPack_hierarchy
+.endobj __RTTI__CWorkSystemPack
 
-.global __RTTI__reslist_CArcItem
-__RTTI__reslist_CArcItem:
+.obj __RTTI__reslist_CArcItem, global
 	.4byte reslist_CArcItem_typestr
 	.4byte reslist_CArcItem_hierarchy
+.endobj __RTTI__reslist_CArcItem
 
-.global __RTTI___reslist_base_CArcItem
-__RTTI___reslist_base_CArcItem:
+.obj __RTTI___reslist_base_CArcItem, global
 	.4byte _reslist_base_CArcItem_typestr
 	.4byte 0
+.endobj __RTTI___reslist_base_CArcItem
 
-.global __RTTI__reslist_CPackItem
-__RTTI__reslist_CPackItem:
+.obj __RTTI__reslist_CPackItem, global
 	.4byte reslist_CPackItem_typestr
 	.4byte reslist_CPackItem_hierarchy
+.endobj __RTTI__reslist_CPackItem
 
-.global __RTTI___reslist_base_CPackItem
-__RTTI___reslist_base_CPackItem:
+.obj __RTTI___reslist_base_CPackItem, global
 	.4byte _reslist_base_CPackItem_typestr
 	.4byte 0
+.endobj __RTTI___reslist_base_CPackItem
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_806682E8, global
+	.skip 0x4
+.endobj lbl_806682E8
 
-.global lbl_806682E8
-lbl_806682E8:
+.obj lbl_806682EC, global
 	.skip 0x4
-.global lbl_806682EC
-lbl_806682EC:
-	.skip 0x4
-.global staticArcFilenameString
-staticArcFilenameString:
+.endobj lbl_806682EC
+
+.obj staticArcFilenameString, global
 	.skip 0x8
+.endobj staticArcFilenameString
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -11326,20 +11326,23 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global mpvabdec_funcs_isr
-mpvabdec_funcs_isr:
+.balign 8
+
+.obj mpvabdec_funcs_isr, global
 	.4byte mpvabdec_IntraBlock_Isr
 	.4byte mpvabdec_IntraBlockDc11_Isr
 	.4byte mpvabdec_NintraBlock_Isr
 	.4byte 0
+.endobj mpvabdec_funcs_isr
 
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global jumptable_8056A958
-jumptable_8056A958:
+
+.obj jumptable_8056A958, global
 	.4byte .L_803B1B44
 	.4byte .L_803B1A80
 	.4byte .L_803B19BC
@@ -11596,9 +11599,9 @@ jumptable_8056A958:
 	.4byte .L_803AF148
 	.4byte .L_803B1C70
 	.4byte .L_803AF148
+.endobj jumptable_8056A958
 
-.global jumptable_8056AD58
-jumptable_8056AD58:
+.obj jumptable_8056AD58, global
 	.4byte .L_803B5164
 	.4byte .L_803B50A0
 	.4byte .L_803B4FDC
@@ -11856,8 +11859,9 @@ jumptable_8056AD58:
 	.4byte .L_803B5290
 	.4byte .L_803B2768
 	
-.global jumptable_8056B158
-jumptable_8056B158:
+.endobj jumptable_8056AD58
+
+.obj jumptable_8056B158, global
 	.4byte .L_803B8B8C
 	.4byte .L_803B8AC4
 	.4byte .L_803B89FC
@@ -12114,9 +12118,10 @@ jumptable_8056B158:
 	.4byte .L_803B6008
 	.4byte .L_803B8CBC
 	.4byte .L_803B6008
+.endobj jumptable_8056B158
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_80607B68
-lbl_80607B68:
+.obj lbl_80607B68, global
 	.skip 0x10
+.endobj lbl_80607B68

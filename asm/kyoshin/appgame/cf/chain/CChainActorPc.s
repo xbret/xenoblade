@@ -856,20 +856,19 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CChainActorPc_typestr
-cf_CChainActorPc_typestr:
+.obj cf_CChainActorPc_typestr, global
 	.asciz "cf::CChainActorPc"
 	.balign 4
 	.4byte 0
+.endobj cf_CChainActorPc_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CChainActorPc
-__vt__cf_CChainActorPc:
+.obj __vt__cf_CChainActorPc, global
 	.4byte __RTTI__cf_CChainActorPc
 	.4byte 0
 	.4byte __dt__cf_CChainActorPc
@@ -900,46 +899,47 @@ __vt__cf_CChainActorPc:
 	.4byte func_802822F8
 	.4byte func_8027A324
 	.4byte func_802821E0
+.endobj __vt__cf_CChainActorPc
 
-.global cf_CChainActorPc_hierarchy
-cf_CChainActorPc_hierarchy:
+.obj cf_CChainActorPc_hierarchy, global
 	.4byte __RTTI__cf_CChainActor
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CChainActorPc_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CChainActorPc
-__RTTI__cf_CChainActorPc:
+.obj __RTTI__cf_CChainActorPc, global
 	.4byte cf_CChainActorPc_typestr
 	.4byte cf_CChainActorPc_hierarchy
+.endobj __RTTI__cf_CChainActorPc
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B390
-float_8066B390:
+.obj float_8066B390, global
 	.float 1.0
+.endobj float_8066B390
 
 
-.global float_8066B394
-float_8066B394:
+.obj float_8066B394, global
 	.float 0
+.endobj float_8066B394
 
 
-.global float_8066B398
-float_8066B398:
+.obj float_8066B398, global
 	.float 0.01 #0x3C23D70A
 	.4byte 0
+.endobj float_8066B398
 
 
-.global double_8066B3A0
-double_8066B3A0:
+.obj double_8066B3A0, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066B3A0
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

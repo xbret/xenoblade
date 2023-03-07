@@ -1426,25 +1426,24 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_IObjectInfo_typestr
-cf_IObjectInfo_typestr:
+.obj cf_IObjectInfo_typestr, global
 	.asciz "cf::IObjectInfo"
+.endobj cf_IObjectInfo_typestr
 
-.global cf_CfObjectImpl_typestr
-cf_CfObjectImpl_typestr:
+.obj cf_CfObjectImpl_typestr, global
 	.asciz "cf::CfObjectImpl"
 	.balign 4
+.endobj cf_CfObjectImpl_typestr
 
-.global IActParamEvent_typestr
-IActParamEvent_typestr:
+.obj IActParamEvent_typestr, global
 	.asciz "IActParamEvent"
 	.balign 4
+.endobj IActParamEvent_typestr
 
 
-.global CtrlEnemy_strpool
-CtrlEnemy_strpool:
+.obj CtrlEnemy_strpool, global
 	.asciz "bgmlist"
 	.asciz "file_name"
 	.asciz "e%02d_loop"
@@ -1481,39 +1480,40 @@ CtrlEnemy_strpool:
 	.asciz "rotY"
 	.2byte 0x0000
 	
-.global cf_CtrlEnemy_typestr
-cf_CtrlEnemy_typestr:
+.endobj CtrlEnemy_strpool
+
+.obj cf_CtrlEnemy_typestr, global
 	.asciz "cf::CtrlEnemy"
 	.balign 4
+.endobj cf_CtrlEnemy_typestr
 
-.global cf_CtrlAct_typestr
-cf_CtrlAct_typestr:
+.obj cf_CtrlAct_typestr, global
 	.asciz "cf::CtrlAct"
+.endobj cf_CtrlAct_typestr
 
-.global cf_CtrlBase_typestr
-cf_CtrlBase_typestr:
+.obj cf_CtrlBase_typestr, global
 	.asciz "cf::CtrlBase"
 	.balign 4
+.endobj cf_CtrlBase_typestr
 
-.global CActInput_typestr
-CActInput_typestr:
+.obj CActInput_typestr, global
 	.asciz "CActInput"
 	.balign 4
+.endobj CActInput_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global cf_CfObjectImpl_hierarchy
-cf_CfObjectImpl_hierarchy:
+.obj cf_CfObjectImpl_hierarchy, global
 	.4byte __RTTI__IActParamEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CfObjectImpl_hierarchy
 
 
-.global __vt__cf_CtrlEnemy
-__vt__cf_CtrlEnemy:
+.obj __vt__cf_CtrlEnemy, global
 	.4byte __RTTI__cf_CtrlEnemy
 	.4byte 0
 	.4byte __dt__cf_CtrlEnemy
@@ -1550,9 +1550,9 @@ __vt__cf_CtrlEnemy:
 	.4byte func_800888F0
 	.4byte func_800D34D4
 	.4byte func_800877A8
+.endobj __vt__cf_CtrlEnemy
 
-.global cf_CtrlEnemy_hierarchy
-cf_CtrlEnemy_hierarchy:
+.obj cf_CtrlEnemy_hierarchy, global
 	.4byte __RTTI__CActInput
 	.4byte 0
 	.4byte __RTTI__cf_CtrlBase
@@ -1560,107 +1560,108 @@ cf_CtrlEnemy_hierarchy:
 	.4byte __RTTI__cf_CtrlAct
 	.4byte 0
 	.4byte 0
+.endobj cf_CtrlEnemy_hierarchy
 
-.global cf_CtrlAct_hierarchy
-cf_CtrlAct_hierarchy:
+.obj cf_CtrlAct_hierarchy, global
 	.4byte __RTTI__CActInput
 	.4byte 0
 	.4byte __RTTI__cf_CtrlBase
 	.4byte 0
 	.4byte 0
+.endobj cf_CtrlAct_hierarchy
 
-.global cf_CtrlBase_hierarchy
-cf_CtrlBase_hierarchy:
+.obj cf_CtrlBase_hierarchy, global
 	.4byte __RTTI__CActInput
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CtrlBase_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_IObjectInfo
-__RTTI__cf_IObjectInfo:
+.obj __RTTI__cf_IObjectInfo, global
 	.4byte cf_IObjectInfo_typestr
 	.4byte 0
+.endobj __RTTI__cf_IObjectInfo
 
 
-.global __RTTI__cf_CfObjectImpl
-__RTTI__cf_CfObjectImpl:
+.obj __RTTI__cf_CfObjectImpl, global
 	.4byte cf_CfObjectImpl_typestr
 	.4byte cf_CfObjectImpl_hierarchy
+.endobj __RTTI__cf_CfObjectImpl
 
-.global __RTTI__IActParamEvent
-__RTTI__IActParamEvent:
+.obj __RTTI__IActParamEvent, global
 	.4byte IActParamEvent_typestr
 	.4byte 0
+.endobj __RTTI__IActParamEvent
 
-.global __RTTI__cf_CtrlEnemy
-__RTTI__cf_CtrlEnemy:
+.obj __RTTI__cf_CtrlEnemy, global
 	.4byte cf_CtrlEnemy_typestr
 	.4byte cf_CtrlEnemy_hierarchy
+.endobj __RTTI__cf_CtrlEnemy
 
-.global __RTTI__cf_CtrlAct
-__RTTI__cf_CtrlAct:
+.obj __RTTI__cf_CtrlAct, global
 	.4byte cf_CtrlAct_typestr
 	.4byte cf_CtrlAct_hierarchy
+.endobj __RTTI__cf_CtrlAct
 
 
-.global __RTTI__cf_CtrlBase
-__RTTI__cf_CtrlBase:
+.obj __RTTI__cf_CtrlBase, global
 	.4byte cf_CtrlBase_typestr
 	.4byte cf_CtrlBase_hierarchy
+.endobj __RTTI__cf_CtrlBase
 
 
-.global __RTTI__CActInput
-__RTTI__CActInput:
+.obj __RTTI__CActInput, global
 	.4byte CActInput_typestr
 	.4byte 0
+.endobj __RTTI__CActInput
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_80668DF8
-float_80668DF8:
+.obj float_80668DF8, global
 	.float 0
+.endobj float_80668DF8
 
 
-.global float_80668DFC
-float_80668DFC:
+.obj float_80668DFC, global
 	.float 10.0
+.endobj float_80668DFC
 
 
-.global float_80668E00
-float_80668E00:
+.obj float_80668E00, global
 	.float 4 #0x40800000
+.endobj float_80668E00
 
 
-.global float_80668E04
-float_80668E04:
+.obj float_80668E04, global
 	.float 1.0
+.endobj float_80668E04
 
 
-.global float_80668E08
-float_80668E08:
+.obj float_80668E08, global
 	.float 0.15 #0x3E19999A
+.endobj float_80668E08
 
 
-.global float_80668E0C
-float_80668E0C:
+.obj float_80668E0C, global
 	.float 100.0
+.endobj float_80668E0C
 
 
-.global double_80668E10
-double_80668E10:
+.obj double_80668E10, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_80668E10
 
-.global float_80668E18
-float_80668E18:
+.obj float_80668E18, global
 	.float 30 #0x41F00000
 	.4byte 0
+.endobj float_80668E18
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

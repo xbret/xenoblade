@@ -4536,88 +4536,87 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_805037B8
-lbl_805037B8:
+.obj lbl_805037B8, global
 	.4byte 0x00000010
 	.4byte 0x00100000
 	.4byte 0x00200000
+.endobj lbl_805037B8
 
-.global lbl_805037C4
-lbl_805037C4:
+.obj lbl_805037C4, global
 	.asciz "pic_btn00"
 	.balign 4
+.endobj lbl_805037C4
 
-.global lbl_805037D0
-lbl_805037D0:
+.obj lbl_805037D0, global
 	.asciz "pic_slot00"
 	.balign 4
+.endobj lbl_805037D0
 
-.global lbl_805037DC
-lbl_805037DC:
+.obj lbl_805037DC, global
 	.asciz "pic_slot01"
 	.balign 4
+.endobj lbl_805037DC
 
-.global lbl_805037E8
-lbl_805037E8:
+.obj lbl_805037E8, global
 	.asciz "pic_slot02"
 	.balign 4
+.endobj lbl_805037E8
 
-.global lbl_805037F4
-lbl_805037F4:
+.obj lbl_805037F4, global
 	.asciz "pic_btn01"
 	.balign 4
+.endobj lbl_805037F4
 
-.global lbl_80503800
-lbl_80503800:
+.obj lbl_80503800, global
 	.asciz "pic_slot03"
 	.balign 4
+.endobj lbl_80503800
 
-.global lbl_8050380C
-lbl_8050380C:
+.obj lbl_8050380C, global
 	.asciz "pic_btn02"
 	.balign 4
+.endobj lbl_8050380C
 
-.global lbl_80503818
-lbl_80503818:
+.obj lbl_80503818, global
 	.asciz "pic_slot04"
 	.balign 4
+.endobj lbl_80503818
 
-.global lbl_80503824
-lbl_80503824:
+.obj lbl_80503824, global
 	.asciz "pic_btn03"
 	.balign 4
+.endobj lbl_80503824
 
-.global lbl_80503830
-lbl_80503830:
+.obj lbl_80503830, global
 	.asciz "pic_slot05"
 	.balign 4
+.endobj lbl_80503830
 
-.global lbl_8050383C
-lbl_8050383C:
+.obj lbl_8050383C, global
 	.asciz "pic_btn04"
 	.balign 4
+.endobj lbl_8050383C
 
-.global lbl_80503848
-lbl_80503848:
+.obj lbl_80503848, global
 	.asciz "pic_slot06"
 	.balign 4
+.endobj lbl_80503848
 
-.global lbl_80503854
-lbl_80503854:
+.obj lbl_80503854, global
 	.asciz "pic_btn05"
 	.balign 4
+.endobj lbl_80503854
 
-.global lbl_80503860
-lbl_80503860:
+.obj lbl_80503860, global
 	.asciz "pic_slot07"
 	.balign 4
 	.4byte 0
+.endobj lbl_80503860
 
 
-.global lbl_80503870
-lbl_80503870:
+.obj lbl_80503870, global
 	.4byte lbl_805037C4
 	.4byte lbl_805037D0
 	.4byte lbl_805037DC
@@ -4632,15 +4631,15 @@ lbl_80503870:
 	.4byte lbl_80503848
 	.4byte lbl_80503854
 	.4byte lbl_80503860
+.endobj lbl_80503870
 
-.global CEquipChange_typestr
-CEquipChange_typestr:
+.obj CEquipChange_typestr, global
 	.asciz "CEquipChange"
 	.balign 4
+.endobj CEquipChange_typestr
 
 
-.global CEquipChange_strpool
-CEquipChange_strpool:
+.obj CEquipChange_strpool, global
 	.asciz "/menu/EquipChange.arc"
 	.asciz "/menu/tpl/CrystalIcon.arc"
 	.asciz "item_keep"
@@ -4683,14 +4682,13 @@ CEquipChange_strpool:
 	.asciz "mf02_eq00_box_in.brlan"
 	.asciz "CEquipChangeTex"
 	.balign 4
+.endobj CEquipChange_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-
-.global jumptable_80538D68
-jumptable_80538D68:
+.obj jumptable_80538D68, global
 	.4byte .L_80202190
 	.4byte .L_80202154
 	.4byte .L_8020215C
@@ -4702,10 +4700,10 @@ jumptable_80538D68:
 	.4byte .L_80202190
 	.4byte .L_80202184
 	.4byte .L_8020218C
+.endobj jumptable_80538D68
 
 
-.global jumptable_80538D94
-jumptable_80538D94:
+.obj jumptable_80538D94, global
 	.4byte .L_80202950
 	.4byte .L_8020295C
 	.4byte .L_80202968
@@ -4720,10 +4718,10 @@ jumptable_80538D94:
 	.4byte .L_802029D4
 	.4byte .L_802029E0
 	.4byte .L_802029EC
+.endobj jumptable_80538D94
 
 
-.global jumptable_80538DCC
-jumptable_80538DCC:
+.obj jumptable_80538DCC, global
 	.4byte .L_80202ADC
 	.4byte .L_80202AE8
 	.4byte .L_80202AF4
@@ -4738,10 +4736,10 @@ jumptable_80538DCC:
 	.4byte .L_80202B60
 	.4byte .L_80202B6C
 	.4byte .L_80202B78
+.endobj jumptable_80538DCC
 
 
-.global jumptable_80538E04
-jumptable_80538E04:
+.obj jumptable_80538E04, global
 	.4byte .L_80203208
 	.4byte .L_802031C8
 	.4byte .L_802031D0
@@ -4757,10 +4755,10 @@ jumptable_80538E04:
 	.4byte .L_80203208
 	.4byte .L_80203200
 	.4byte 0
+.endobj jumptable_80538E04
 
 
-.global __vt__CEquipChange
-__vt__CEquipChange:
+.obj __vt__CEquipChange, global
 	.4byte __RTTI__CEquipChange
 	.4byte 0
 	.4byte __dt__CEquipChange
@@ -4795,78 +4793,86 @@ __vt__CEquipChange:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CEquipChange
 
-.global CEquipChange_hierarchy
-CEquipChange_hierarchy:
+.obj CEquipChange_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CEquipChange_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CEquipChange
-__RTTI__CEquipChange:
+.obj __RTTI__CEquipChange, global
 	.4byte CEquipChange_typestr
 	.4byte CEquipChange_hierarchy
+.endobj __RTTI__CEquipChange
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_8066AB60
-lbl_8066AB60:
+.obj lbl_8066AB60, global
 	.4byte 0x04050607
+.endobj lbl_8066AB60
 
 
-.global lbl_8066AB64
-lbl_8066AB64:
+.obj lbl_8066AB64, global
 	.4byte 0x08000000
+.endobj lbl_8066AB64
 
 
-.global float_8066AB68
-float_8066AB68:
+.obj float_8066AB68, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066AB68
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_80579D60
-lbl_80579D60:
+.obj lbl_80579D60, global
 	.skip 0x38
+.endobj lbl_80579D60
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80666F58, global
+	.skip 0x8
+.endobj lbl_80666F58
 
-.global lbl_80666F58
-lbl_80666F58:
+.obj lbl_80666F60, global
 	.skip 0x8
-.global lbl_80666F60
-lbl_80666F60:
+.endobj lbl_80666F60
+
+.obj lbl_80666F68, global
 	.skip 0x8
-.global lbl_80666F68
-lbl_80666F68:
+.endobj lbl_80666F68
+
+.obj lbl_80666F70, global
 	.skip 0x8
-.global lbl_80666F70
-lbl_80666F70:
+.endobj lbl_80666F70
+
+.obj lbl_80666F78, global
 	.skip 0x8
-.global lbl_80666F78
-lbl_80666F78:
+.endobj lbl_80666F78
+
+.obj lbl_80666F80, global
 	.skip 0x8
-.global lbl_80666F80
-lbl_80666F80:
-	.skip 0x8
-.global lbl_80666F88
-lbl_80666F88:
+.endobj lbl_80666F80
+
+.obj lbl_80666F88, global
 	.skip 0x4
-.global lbl_80666F8C
-lbl_80666F8C:
+.endobj lbl_80666F88
+
+.obj lbl_80666F8C, global
 	.skip 0x4
+.endobj lbl_80666F8C
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

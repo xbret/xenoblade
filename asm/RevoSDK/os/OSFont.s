@@ -1322,7 +1322,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-HankakuToCode:
+.balign 8
+
+.obj HankakuToCode, local
 	.2byte 0x020C
 	.2byte 0x020D
 	.2byte 0x020E
@@ -1515,9 +1517,10 @@ HankakuToCode:
 	.2byte 0x02A7
 	.2byte 0x02A8
 	.2byte 0x02A9
+.endobj HankakuToCode
 
 
-Zenkaku2Code:
+.obj Zenkaku2Code, local
 	.4byte 0x00000001
 	.4byte 0x00020003
 	.4byte 0x00040005
@@ -2130,34 +2133,46 @@ Zenkaku2Code:
 	.4byte 0x031A031B
 	.4byte 0
 	.4byte 0
+.endobj Zenkaku2Code
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-FontEncode:
+.balign 8
+
+.obj FontEncode, local
 	.4byte 0xFFFF0000
 	.4byte 0
+.endobj FontEncode
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C1D0
-lbl_8066C1D0:
+.balign 8
+
+.obj lbl_8066C1D0, global
 	.4byte 0x2ABE003D
+.endobj lbl_8066C1D0
 
 
-.global lbl_8066C1D4
-lbl_8066C1D4:
+.obj lbl_8066C1D4, global
 	.4byte 0x003D003D
+.endobj lbl_8066C1D4
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-ParseString:
-	.skip 0x4
+.balign 8
 
-FixedPitch:
+.obj ParseString, local
 	.skip 0x4
+.endobj ParseString
 
-FontDataSjis:
+.obj FixedPitch, local
 	.skip 0x4
+.endobj FixedPitch
 
-FontDataAnsi:
+.obj FontDataSjis, local
 	.skip 0x4
+.endobj FontDataSjis
+
+.obj FontDataAnsi, local
+	.skip 0x4
+.endobj FontDataAnsi

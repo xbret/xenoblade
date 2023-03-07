@@ -225,6 +225,6 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global gki_cb
-gki_cb:
+.obj gki_cb, global
 	.skip 0x28AE0
+.endobj gki_cb

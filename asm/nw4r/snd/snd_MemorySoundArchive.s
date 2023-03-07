@@ -365,8 +365,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056E0F0
-lbl_8056E0F0:
+.balign 8
+
+.obj lbl_8056E0F0, global
 	.4byte 0
 	.4byte 0
 	.4byte GetRuntimeTypeInfo__Q34nw4r2ut10FileStreamCFv
@@ -391,10 +392,10 @@ lbl_8056E0F0:
 	.4byte CanCancel__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
 	.4byte Tell__Q44nw4r3snd18MemorySoundArchive16MemoryFileStreamCFv
 	.4byte 0
+.endobj lbl_8056E0F0
 
 
-.global lbl_8056E150
-lbl_8056E150:
+.obj lbl_8056E150, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r3snd18MemorySoundArchiveFv
@@ -403,3 +404,4 @@ lbl_8056E150:
 	.4byte detail_GetRequiredStreamBufferSize__Q34nw4r3snd18MemorySoundArchiveCFv
 	.4byte OpenStream__Q34nw4r3snd18MemorySoundArchiveCFPviUlUl
 	.4byte OpenExtStream__Q34nw4r3snd18MemorySoundArchiveCFPviPCcUlUl
+.endobj lbl_8056E150

@@ -4189,31 +4189,30 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMsgParam_10_typestr
-CMsgParam_10_typestr:
+.obj CMsgParam_10_typestr, global
 	.asciz "CMsgParam<10>"
 	.balign 4
+.endobj CMsgParam_10_typestr
 
-.global reslist_IWorkEvent_typestr
-reslist_IWorkEvent_typestr:
+.obj reslist_IWorkEvent_typestr, global
 	.asciz "reslist<IWorkEvent *>"
 	.balign 4
+.endobj reslist_IWorkEvent_typestr
 
-.global _reslist_base_IWorkEvent_typestr
-_reslist_base_IWorkEvent_typestr:
+.obj _reslist_base_IWorkEvent_typestr, global
 	.asciz "_reslist_base<IWorkEvent *>"
+.endobj _reslist_base_IWorkEvent_typestr
 
-.global CFontLayer_typestr
-CFontLayer_typestr:
+.obj CFontLayer_typestr, global
 	.asciz "CFontLayer"
 	.balign 4
+.endobj CFontLayer_typestr
 
 
 	#"ログアウトに失敗しました"
-.global lbl_80525F48
-lbl_80525F48:
+.obj lbl_80525F48, global
 	.4byte 0x838D834F
 	.4byte 0x83418345
 	.4byte 0x836782C9
@@ -4223,14 +4222,14 @@ lbl_80525F48:
 	.byte 0x00
 	.4byte 0
 	.byte 0x00, 0x00, 0x00
+.endobj lbl_80525F48
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global jumptable_8056EE38
-jumptable_8056EE38:
+.obj jumptable_8056EE38, global
 	.4byte .L_8043D1A8
 	.4byte .L_8043D4D0
 	.4byte .L_8043D710
@@ -4239,10 +4238,10 @@ jumptable_8056EE38:
 	.4byte .L_8043D774
 	.4byte .L_8043D784
 	.4byte .L_8043D790
+.endobj jumptable_8056EE38
 
 
-.global __vt__CView
-__vt__CView:
+.obj __vt__CView, global
 	.4byte __RTTI__CView
 	.4byte 0
 	.4byte __dt__CView
@@ -4295,9 +4294,9 @@ __vt__CView:
 	.4byte func_8043C9B8
 	.4byte func_8043EAD0
 	.4byte func_8043EAC8
+.endobj __vt__CView
 
-.global CView_hierarchy
-CView_hierarchy:
+.obj CView_hierarchy, global
 	.4byte __RTTI__CFontLayer
 	.4byte 0x000001C4
 	.4byte __RTTI__IWorkEvent
@@ -4305,111 +4304,113 @@ CView_hierarchy:
 	.4byte __RTTI__CWorkThread
 	.4byte 0
 	.4byte 0
+.endobj CView_hierarchy
 
 
-.global __vt__CMsgParam_10
-__vt__CMsgParam_10:
+.obj __vt__CMsgParam_10, global
 	.4byte __RTTI__CMsgParam_10
 	.4byte 0
 	.4byte __dt__CMsgParam_10
+.endobj __vt__CMsgParam_10
 
 
-.global __vt__reslist_IWorkEvent
-__vt__reslist_IWorkEvent:
+.obj __vt__reslist_IWorkEvent, global
 	.4byte __RTTI__reslist_IWorkEvent
 	.4byte 0
 	.4byte __dt__reslist_IWorkEvent
+.endobj __vt__reslist_IWorkEvent
 
-.global reslist_IWorkEvent_hierarchy
-reslist_IWorkEvent_hierarchy:
+.obj reslist_IWorkEvent_hierarchy, global
 	.4byte __RTTI___reslist_base_IWorkEvent
 	.4byte 0
 	.4byte 0
+.endobj reslist_IWorkEvent_hierarchy
 
 
-.global __vt___reslist_base_IWorkEvent
-__vt___reslist_base_IWorkEvent:
+.obj __vt___reslist_base_IWorkEvent, global
 	.4byte __RTTI___reslist_base_IWorkEvent
 	.4byte 0
 	.4byte __dt___reslist_base_IWorkEvent
 	.4byte 0
+.endobj __vt___reslist_base_IWorkEvent
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CView
-__RTTI__CView:
+.obj __RTTI__CView, global
 	.4byte CView_typestr
 	.4byte CView_hierarchy
+.endobj __RTTI__CView
 
-.global __RTTI__CMsgParam_10
-__RTTI__CMsgParam_10:
+.obj __RTTI__CMsgParam_10, global
 	.4byte CMsgParam_10_typestr
 	.4byte 0
+.endobj __RTTI__CMsgParam_10
 
-.global __RTTI__reslist_IWorkEvent
-__RTTI__reslist_IWorkEvent:
+.obj __RTTI__reslist_IWorkEvent, global
 	.4byte reslist_IWorkEvent_typestr
 	.4byte reslist_IWorkEvent_hierarchy
+.endobj __RTTI__reslist_IWorkEvent
 
-.global __RTTI___reslist_base_IWorkEvent
-__RTTI___reslist_base_IWorkEvent:
+.obj __RTTI___reslist_base_IWorkEvent, global
 	.4byte _reslist_base_IWorkEvent_typestr
 	.4byte 0
+.endobj __RTTI___reslist_base_IWorkEvent
 
-.global __RTTI__CFontLayer
-__RTTI__CFontLayer:
+.obj __RTTI__CFontLayer, global
 	.4byte CFontLayer_typestr
 	.4byte 0
+.endobj __RTTI__CFontLayer
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066CAD0
-float_8066CAD0:
+.obj float_8066CAD0, global
 	.float 1.0
+.endobj float_8066CAD0
 
 
-.global float_8066CAD4
-float_8066CAD4:
+.obj float_8066CAD4, global
 	.float 0.6 #0x3F19999A
+.endobj float_8066CAD4
 
-.global CView_typestr
-CView_typestr:
+.obj CView_typestr, global
 	.asciz "CView"
 	.balign 4
+.endobj CView_typestr
 
 
-.global float_8066CAE0
-float_8066CAE0:
+.obj float_8066CAE0, global
 	.float 0.4 #0x3ECCCCCD
+.endobj float_8066CAE0
 
 
-.global float_8066CAE4
-float_8066CAE4:
+.obj float_8066CAE4, global
 	.float 0.5
+.endobj float_8066CAE4
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_8065A0C8
-lbl_8065A0C8:
+.obj lbl_8065A0C8, global
 	.skip 0x10
-.global lbl_8065A0D8
-lbl_8065A0D8:
+.endobj lbl_8065A0C8
+
+.obj lbl_8065A0D8, global
 	.skip 0x10
+.endobj lbl_8065A0D8
 	
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80667EA8
-lbl_80667EA8:
+.obj lbl_80667EA8, global
 	.skip 0x8
+.endobj lbl_80667EA8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

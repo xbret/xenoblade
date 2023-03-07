@@ -1264,11 +1264,13 @@
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665AE0
-lbl_80665AE0:
+.balign 8
+
+.obj lbl_80665AE0, global
 	.4byte 0x2F000000
+.endobj lbl_80665AE0
 
 
-.global lbl_80665AE4
-lbl_80665AE4:
+.obj lbl_80665AE4, global
 	.4byte 0x2F257300
+.endobj lbl_80665AE4

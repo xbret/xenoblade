@@ -346,9 +346,10 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-.global SFD_tr_ao_auto_p
-SFD_tr_ao_auto_p:
+
+.obj SFD_tr_ao_auto_p, global
 	.4byte SFAOAP_Init
 	.4byte SFAOAP_Finish
 	.4byte SFAOAP_ExecServer
@@ -363,3 +364,4 @@ SFD_tr_ao_auto_p:
 	.4byte SFAOAP_GetRead
 	.4byte SFAOAP_AddRead
 	.4byte SFAOAP_Seek
+.endobj SFD_tr_ao_auto_p

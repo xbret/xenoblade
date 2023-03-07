@@ -62,15 +62,17 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_805466C0
-lbl_805466C0:
+.balign 8
+
+.obj lbl_805466C0, global
 	.asciz "hidd_proc_repage_timeout"
 	.balign 4
 	.4byte 0
+.endobj lbl_805466C0
 
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global hd_cb
-hd_cb:
+.obj hd_cb, global
 	.skip 0x148
+.endobj hd_cb

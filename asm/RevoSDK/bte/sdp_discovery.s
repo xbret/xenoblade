@@ -1332,20 +1332,21 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80548FE8
-lbl_80548FE8:
+.balign 8
+
+.obj lbl_80548FE8, global
 	.asciz "SDP - Unexp. PDU: %d in state: %d"
 	.balign 4
 	.4byte 0
+.endobj lbl_80548FE8
 
 
-.global lbl_80549010
-lbl_80549010:
+.obj lbl_80549010, global
 	.asciz "SDP - Rcvd ServiceSearchRsp, no matches"
+.endobj lbl_80549010
 
 
-.global lbl_80549038
-lbl_80549038:
+.obj lbl_80549038, global
 	.asciz "SDP - Wrong type: 0x%02x in attr_rsp"
 	.balign 4
 	.asciz "SDP - Bad len in attr_rsp %d"
@@ -1359,10 +1360,10 @@ lbl_80549038:
 	.balign 4
 	.asciz "SDP - bad len in boolean attr: %d"
 	.balign 4
+.endobj lbl_80549038
 
 
-.global jumptable_80549120
-jumptable_80549120:
+.obj jumptable_80549120, global
 	.4byte .L_80305BD0
 	.4byte .L_8030579C
 	.4byte .L_8030584C
@@ -1373,3 +1374,4 @@ jumptable_80549120:
 	.4byte .L_80305A9C
 	.4byte .L_80305B50
 	.4byte 0
+.endobj jumptable_80549120

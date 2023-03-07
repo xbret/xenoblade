@@ -3,8 +3,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global ahxsbf_synthesis_filter_table
-ahxsbf_synthesis_filter_table:
+.balign 8
+
+.obj ahxsbf_synthesis_filter_table, global
 	.4byte 0x3F3504F4
 	.4byte 0xBF3504F4
 	.4byte 0xBF3504F4
@@ -2085,8 +2086,9 @@ ahxsbf_synthesis_filter_table:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj ahxsbf_synthesis_filter_table
 
 
-.global lbl_805657B0
-lbl_805657B0:
+.obj lbl_805657B0, global
 	.4byte ahxsbf_synthesis_filter_table
+.endobj lbl_805657B0

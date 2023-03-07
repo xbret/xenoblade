@@ -3151,16 +3151,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+#.balign 8
 
-
-.global CMCGetItemBox_typestr
-CMCGetItemBox_typestr:
+.obj CMCGetItemBox_typestr, global
 	.asciz "CMCGetItemBox"
 	.balign 4
+.endobj CMCGetItemBox_typestr
 
 
-.global CMCGetItemBox_strpool
-CMCGetItemBox_strpool:
+.obj CMCGetItemBox_strpool, global
 	.asciz "%s"
 	.asciz "MNU_item"
 	.asciz "name"
@@ -3211,13 +3210,13 @@ CMCGetItemBox_strpool:
 	.asciz "MNU_item_mes_b"
 	.balign 4
 	.4byte 0
+.endobj CMCGetItemBox_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMCGetItemBox
-__vt__CMCGetItemBox:
+.obj __vt__CMCGetItemBox, global
 	.4byte __RTTI__CMCGetItemBox
 	.4byte 0
 	.4byte __dt__CMCGetItemBox
@@ -3252,70 +3251,73 @@ __vt__CMCGetItemBox:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CMCGetItemBox
 
-.global CMCGetItemBox_hierarchy
-CMCGetItemBox_hierarchy:
+.obj CMCGetItemBox_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMCGetItemBox_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMCGetItemBox
-__RTTI__CMCGetItemBox:
+.obj __RTTI__CMCGetItemBox, global
 	.4byte CMCGetItemBox_typestr
 	.4byte CMCGetItemBox_hierarchy
+.endobj __RTTI__CMCGetItemBox
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+#.balign 8
 
-
-.global float_8066B494
-float_8066B494:
+.obj float_8066B494, global
 	.float 0.25
+.endobj float_8066B494
 
 
-.global float_8066B498
-float_8066B498:
+.obj float_8066B498, global
 	.float 1.0
+.endobj float_8066B498
 
 
-.global float_8066B49C
-float_8066B49C:
+.obj float_8066B49C, global
 	.float 16 #0x41800000
+.endobj float_8066B49C
 
 
-.global float_8066B4A0
-float_8066B4A0:
+.obj float_8066B4A0, global
 	.float -58 #0xC2680000
+.endobj float_8066B4A0
 
 
-.global float_8066B4A4
-float_8066B4A4:
+.obj float_8066B4A4, global
 	.float -51 #0xC24C0000
+.endobj float_8066B4A4
 
 
-.global float_8066B4A8
-float_8066B4A8:
+.obj float_8066B4A8, global
 	.float 371 #0x43B98000
 	.4byte 0
+.endobj float_8066B4A8
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80667308, global
+	.skip 0x4
+.endobj lbl_80667308
 
-.global lbl_80667308
-lbl_80667308:
+.obj lbl_8066730C, global
 	.skip 0x4
-.global lbl_8066730C
-lbl_8066730C:
-	.skip 0x4
-.global lbl_80667310
-lbl_80667310:
+.endobj lbl_8066730C
+
+.obj lbl_80667310, global
 	.skip 0x8
+.endobj lbl_80667310
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

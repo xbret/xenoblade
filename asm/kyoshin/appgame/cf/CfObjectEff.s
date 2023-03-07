@@ -1419,20 +1419,19 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8052C028
-lbl_8052C028:
+.obj lbl_8052C028, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_800AD060
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_800AD378
+.endobj lbl_8052C028
 
 
-.global __vt__cf_CfObjectEff
-__vt__cf_CfObjectEff:
+.obj __vt__cf_CfObjectEff, global
 	.4byte __RTTI__cf_CfObjectEff
 	.4byte 0
 	.4byte func_8003DC64
@@ -1539,29 +1538,30 @@ __vt__cf_CfObjectEff:
 	.4byte func_800ACA58
 	.4byte func_800ACBCC
 	.4byte func_800AD818
+.endobj __vt__cf_CfObjectEff
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_80669220
-float_80669220:
+.obj float_80669220, global
 	.float 0
+.endobj float_80669220
 
 
-.global float_80669224
-float_80669224:
+.obj float_80669224, global
 	.float 1.0
+.endobj float_80669224
 
 
-.global float_80669228
-float_80669228:
+.obj float_80669228, global
 	.float 0.5
+.endobj float_80669228
 
 
-.global float_8066922C
-float_8066922C:
+.obj float_8066922C, global
 	.float 1000 #0x447A0000
+.endobj float_8066922C
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

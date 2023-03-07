@@ -885,55 +885,70 @@
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global wait4hci
-wait4hci:
+.balign 8
+
+.obj wait4hci, global
 	.4byte 0x00000001
+.endobj wait4hci
 
 
-__ntd_ios_file_descriptor:
+.obj __ntd_ios_file_descriptor, local
 	.4byte 0xFFFFFFFF
+.endobj __ntd_ios_file_descriptor
 
 
-.global lbl_806658D0
-lbl_806658D0:
+.obj lbl_806658D0, global
 	.4byte 0x6F683000
+.endobj lbl_806658D0
 
 
-.global lbl_806658D4
-lbl_806658D4:
+.obj lbl_806658D4, global
 	.4byte 0x6F683100
+.endobj lbl_806658D4
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-uusb_g_usb_devid_found:
+
+.obj uusb_g_usb_devid_found, local
 	.skip 0x1
+.endobj uusb_g_usb_devid_found
 
-uusb_g_trace_state_initialized:
+.obj uusb_g_trace_state_initialized, local
 	.skip 0x3
+.endobj uusb_g_trace_state_initialized
 
-__ntd_ohci:
+.obj __ntd_ohci, local
 	.skip 0x4
+.endobj __ntd_ohci
 
-__ntd_ohci_init_flag:
+.obj __ntd_ohci_init_flag, local
 	.skip 0x4
+.endobj __ntd_ohci_init_flag
 
-__ntd_pid_vid_specified:
+.obj __ntd_pid_vid_specified, local
 	.skip 0x4
+.endobj __ntd_pid_vid_specified
 
-__ntd_vid:
+.obj __ntd_vid, local
 	.skip 0x4
+.endobj __ntd_vid
 
-__ntd_pid:
+.obj __ntd_pid, local
 	.skip 0x4
+.endobj __ntd_pid
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-usb:
+.obj usb, local
 	.skip 0x60
+.endobj usb
 
-__uusb_ppc_stack1:
+.obj __uusb_ppc_stack1, local
 	.skip 0x1000
+.endobj __uusb_ppc_stack1
 
-__uusb_ppc_stack2:
+.obj __uusb_ppc_stack2, local
 	.skip 0x1000
+.endobj __uusb_ppc_stack2

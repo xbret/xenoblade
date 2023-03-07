@@ -64,16 +64,19 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051CD48
-lbl_8051CD48:
+.balign 8
+
+.obj lbl_8051CD48, global
 	.asciz "\nADXWIISDK Ver.30Jul2008Patch02 Build:Nov 13 2008 10:53:01\n"
+.endobj lbl_8051CD48
 
 
-adxwiisdk_build:
+.obj adxwiisdk_build, local
 	.4byte lbl_8051CD48
+.endobj adxwiisdk_build
 
 
-.global lbl_8051CD88
-lbl_8051CD88:
+.obj lbl_8051CD88, global
 	.asciz "MFS"
 	.asciz "GCD"
+.endobj lbl_8051CD88

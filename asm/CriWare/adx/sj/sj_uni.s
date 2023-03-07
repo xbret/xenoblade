@@ -1154,16 +1154,17 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global sjuni_uuid
-sjuni_uuid:
+.balign 8
+
+.obj sjuni_uuid, global
 	.4byte 0x2E534FA3
 	.4byte 0xAF9711D2
 	.4byte 0xA5270060
 	.4byte 0x089448BC
+.endobj sjuni_uuid
 
 
-.global sj_uni_strpool
-sj_uni_strpool:
+.obj sj_uni_strpool, global
 	.asciz "SJUNI Error"
 	.asciz " : NULL pointer is passed."
 	.asciz "E2004090261"
@@ -1190,11 +1191,13 @@ sj_uni_strpool:
 	.asciz "E2004090281"
 	.asciz "E2004090282"
 	.balign 4
+.endobj sj_uni_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global sjuni_vtbl
-sjuni_vtbl:
+.balign 8
+
+.obj sjuni_vtbl, global
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1207,12 +1210,14 @@ sjuni_vtbl:
 	.4byte SJUNI_GetNumData
 	.4byte SJUNI_IsGetChunk
 	.4byte SJUNI_EntryErrFunc
+.endobj sjuni_vtbl
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global sjuni_init_cnt
-sjuni_init_cnt:
+.obj sjuni_init_cnt, global
 	.skip 0x8
-.global sjuni_obj
-sjuni_obj:
+.endobj sjuni_init_cnt
+
+.obj sjuni_obj, global
 	.skip 0xC00
+.endobj sjuni_obj

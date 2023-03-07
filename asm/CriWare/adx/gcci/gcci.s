@@ -1051,8 +1051,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global gcci_strpool
-gcci_strpool:
+.balign 8
+
+.obj gcci_strpool, global
 	.asciz "E0092901:fname is null.(gcCiGetFileSize)"
 	.asciz "E0040201:can't open a file.(gcCiGetFileSize)"
 	.asciz "E0040202:can't close a file.(gcCiGetFileSize)"
@@ -1070,12 +1071,14 @@ gcci_strpool:
 	.asciz "E0040303:invalidate size."
 	.balign 4
 	.4byte 0
+.endobj gcci_strpool
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global gcci_vtbl
-gcci_vtbl:
+.balign 8
+
+.obj gcci_vtbl, global
 	.4byte gcCiExecServer
 	.4byte gcCiEntryErrFunc
 	.4byte gcCiGetFileSize
@@ -1102,27 +1105,34 @@ gcci_vtbl:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj gcci_vtbl
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805EA1B0
-lbl_805EA1B0:
+.obj lbl_805EA1B0, global
 	.skip 0x4
-.global lbl_805EA1B4
-lbl_805EA1B4:
+.endobj lbl_805EA1B0
+
+.obj lbl_805EA1B4, global
 	.skip 0x4
-.global lbl_805EA1B8
-lbl_805EA1B8:
+.endobj lbl_805EA1B4
+
+.obj lbl_805EA1B8, global
 	.skip 0x4
-.global lbl_805EA1BC
-lbl_805EA1BC:
+.endobj lbl_805EA1B8
+
+.obj lbl_805EA1BC, global
 	.skip 0xC
-.global gcg_ci_obj
-gcg_ci_obj:
+.endobj lbl_805EA1BC
+
+.obj gcg_ci_obj, global
 	.skip 0xFA0
-.global lbl_805EB168
-lbl_805EB168:
+.endobj gcg_ci_obj
+
+.obj lbl_805EB168, global
 	.skip 0x8
-.global lbl_805EB170
-lbl_805EB170:
+.endobj lbl_805EB168
+
+.obj lbl_805EB170, global
 	.skip 0x100
+.endobj lbl_805EB170

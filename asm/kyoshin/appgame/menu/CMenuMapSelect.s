@@ -1023,27 +1023,25 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMenuMapSelect_typestr
-CMenuMapSelect_typestr:
+.obj CMenuMapSelect_typestr, global
 	.asciz "CMenuMapSelect"
 	.balign 4
+.endobj CMenuMapSelect_typestr
 
 
-.global lbl_80506B98
-lbl_80506B98:
+.obj lbl_80506B98, global
 	.asciz "MNU_map"
 	.asciz "name"
 	.balign 4
+.endobj lbl_80506B98
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-
-.global __vt__CMenuMapSelect
-__vt__CMenuMapSelect:
+.obj __vt__CMenuMapSelect, global
 	.4byte __RTTI__CMenuMapSelect
 	.4byte 0
 	.4byte __dt__CMenuMapSelect
@@ -1058,9 +1056,9 @@ __vt__CMenuMapSelect:
 	.4byte func_802430A4
 	.4byte func_8024309C
 	.4byte func_80242144
+.endobj __vt__CMenuMapSelect
 
-.global CMenuMapSelect_hierarchy
-CMenuMapSelect_hierarchy:
+.obj CMenuMapSelect_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000058
 	.4byte __RTTI__CDoubleListNode
@@ -1075,34 +1073,35 @@ CMenuMapSelect_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuMapSelect_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuMapSelect
-__RTTI__CMenuMapSelect:
+.obj __RTTI__CMenuMapSelect, global
 	.4byte CMenuMapSelect_typestr
 	.4byte CMenuMapSelect_hierarchy
+.endobj __RTTI__CMenuMapSelect
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066AFE0
-float_8066AFE0:
+.obj float_8066AFE0, global
 	.float 0
+.endobj float_8066AFE0
 
 
-.global float_8066AFE4
-float_8066AFE4:
+.obj float_8066AFE4, global
 	.float 1.0
+.endobj float_8066AFE4
 
 
-.global float_8066AFE8
-float_8066AFE8:
+.obj float_8066AFE8, global
 	.float 10.0
 	.4byte 0
+.endobj float_8066AFE8
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

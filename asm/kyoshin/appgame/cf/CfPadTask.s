@@ -1437,24 +1437,23 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CfPadTask_typestr
-cf_CfPadTask_typestr:
+.obj cf_CfPadTask_typestr, global
 	.asciz "cf::CfPadTask"
 	.balign 4
+.endobj cf_CfPadTask_typestr
 
-.global CTTask_cf_CfPadTask_typestr
-CTTask_cf_CfPadTask_typestr:
+.obj CTTask_cf_CfPadTask_typestr, global
 	.asciz "CTTask<cf::CfPadTask>"
 	.balign 4
-	
+.endobj CTTask_cf_CfPadTask_typestr
+
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CfPadTask
-__vt__cf_CfPadTask:
+.obj __vt__cf_CfPadTask, global
 	.4byte __RTTI__cf_CfPadTask
 	.4byte 0
 	.4byte __dt__cf_CfPadTask
@@ -1476,9 +1475,9 @@ __vt__cf_CfPadTask:
 	.4byte func_801C29B0
 	.4byte func_801C2ACC
 	.4byte func_801C2AFC
+.endobj __vt__cf_CfPadTask
 
-.global cf_CfPadTask_hierarchy
-cf_CfPadTask_hierarchy:
+.obj cf_CfPadTask_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -1488,10 +1487,10 @@ cf_CfPadTask_hierarchy:
 	.4byte __RTTI__CTTask_cf_CfPadTask
 	.4byte 0
 	.4byte 0
+.endobj cf_CfPadTask_hierarchy
 
 
-.global __vt__CTTask_cf_CfPadTask
-__vt__CTTask_cf_CfPadTask:
+.obj __vt__CTTask_cf_CfPadTask, global
 	.4byte __RTTI__CTTask_cf_CfPadTask
 	.4byte 0
 	.4byte __dt__CTTask_cf_CfPadTask
@@ -1501,9 +1500,9 @@ __vt__CTTask_cf_CfPadTask:
 	.4byte func_801C2B5C
 	.4byte func_801C2BA4
 	.4byte func_80043F20
+.endobj __vt__CTTask_cf_CfPadTask
 
-.global CTTask_cf_CfPadTask_hierarchy
-CTTask_cf_CfPadTask_hierarchy:
+.obj CTTask_cf_CfPadTask_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -1511,96 +1510,106 @@ CTTask_cf_CfPadTask_hierarchy:
 	.4byte __RTTI__CProcess
 	.4byte 0
 	.4byte 0
+.endobj CTTask_cf_CfPadTask_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80664F28
-lbl_80664F28:
+.obj lbl_80664F28, global
 	.4byte 0xFFFFFFFF
 	.4byte 0
+.endobj lbl_80664F28
 
-.global __RTTI__cf_CfPadTask
-__RTTI__cf_CfPadTask:
+.obj __RTTI__cf_CfPadTask, global
 	.4byte cf_CfPadTask_typestr
 	.4byte cf_CfPadTask_hierarchy
+.endobj __RTTI__cf_CfPadTask
 
-.global __RTTI__CTTask_cf_CfPadTask
-__RTTI__CTTask_cf_CfPadTask:
+.obj __RTTI__CTTask_cf_CfPadTask, global
 	.4byte CTTask_cf_CfPadTask_typestr
 	.4byte CTTask_cf_CfPadTask_hierarchy
+.endobj __RTTI__CTTask_cf_CfPadTask
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066A768
-float_8066A768:
+.obj float_8066A768, global
 	.float 0
+.endobj float_8066A768
 
 
-.global float_8066A76C
-float_8066A76C:
+.obj float_8066A76C, global
 	.float 0.3 #0x3E99999A
+.endobj float_8066A76C
 
 
-.global float_8066A770
-float_8066A770:
+.obj float_8066A770, global
 	.float 0.5
+.endobj float_8066A770
 
 
-.global float_8066A774
-float_8066A774:
+.obj float_8066A774, global
 	.float 1.0
+.endobj float_8066A774
 
 
-.global float_8066A778
-float_8066A778:
+.obj float_8066A778, global
 	.float 0.7 #0x3F333333
 	.4byte 0
+.endobj float_8066A778
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_80579D30
-lbl_80579D30:
+.obj lbl_80579D30, global
 	.skip 0x18
+.endobj lbl_80579D30
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80666D30, global
+	.skip 0x1
+.endobj lbl_80666D30
 
-.global lbl_80666D30
-lbl_80666D30:
+.obj lbl_80666D31, global
 	.skip 0x1
-.global lbl_80666D31
-lbl_80666D31:
+.endobj lbl_80666D31
+
+.obj lbl_80666D32, global
 	.skip 0x1
-.global lbl_80666D32
-lbl_80666D32:
+.endobj lbl_80666D32
+
+.obj lbl_80666D33, global
 	.skip 0x1
-.global lbl_80666D33
-lbl_80666D33:
-	.skip 0x1
-.global lbl_80666D34
-lbl_80666D34:
+.endobj lbl_80666D33
+
+.obj lbl_80666D34, global
 	.skip 0x4
-.global lbl_80666D38
-lbl_80666D38:
+.endobj lbl_80666D34
+
+.obj lbl_80666D38, global
 	.skip 0x4
-.global lbl_80666D3C
-lbl_80666D3C:
+.endobj lbl_80666D38
+
+.obj lbl_80666D3C, global
 	.skip 0x4
-.global lbl_80666D40
-lbl_80666D40:
+.endobj lbl_80666D3C
+
+.obj lbl_80666D40, global
 	.skip 0x4
-.global float_80666D44
-float_80666D44:
+.endobj lbl_80666D40
+
+.obj float_80666D44, global
 	.skip 0x4
-.global float_80666D48
-float_80666D48:
+.endobj float_80666D44
+
+.obj float_80666D48, global
 	.skip 0x8
+.endobj float_80666D48
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

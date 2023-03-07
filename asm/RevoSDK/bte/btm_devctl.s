@@ -1860,80 +1860,84 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80545080
-lbl_80545080:
+.balign 8
+
+.obj lbl_80545080, global
 	.asciz "BTM_SetAfhChannels first: %d (%d) last: %d (%d)"
+.endobj lbl_80545080
 
 
-.global lbl_805450B0
-lbl_805450B0:
+.obj lbl_805450B0, global
 	.asciz "btm_reset_complete"
 	.balign 4
 	.asciz "Local supported ACL packet types: 0x%04x"
 	.balign 4
 	.asciz "Local supported SCO packet types: 0x%04x"
 	.balign 4
+.endobj lbl_805450B0
 
 
-.global lbl_8054511C
-lbl_8054511C:
+.obj lbl_8054511C, global
 	.asciz "BTM: BTM_VendorSpecificCommand: Opcode: 0x%04X, ParamLen: %i."
 	.balign 4
+.endobj lbl_8054511C
 
 
-.global lbl_8054515C
-lbl_8054515C:
+.obj lbl_8054515C, global
 	.asciz "BTM: Unable to send vendor specific command (controller is busy)."
 	.balign 4
+.endobj lbl_8054515C
 
 
-.global lbl_805451A0
-lbl_805451A0:
+.obj lbl_805451A0, global
 	.asciz "BTM Event: Received a vendor specific event from controller"
 	.4byte 0
+.endobj lbl_805451A0
 
 
-.global lbl_805451E0
-lbl_805451E0:
+.obj lbl_805451E0, global
 	.asciz "BTM: BTM_WritePageTimeout: Timeout: %d."
 	.asciz "BTM: BTM_WriteVoiceSettings: Settings: 0x%04x."
 	.balign 4
 	.asciz "BTM: BTM_EnableTestMode"
+.endobj lbl_805451E0
 
 
-.global lbl_80545250
-lbl_80545250:
+.obj lbl_80545250, global
 	.asciz "BTM: BTM_ReadStoredLinkKey: Read_All: %s"
 	.balign 4
+.endobj lbl_80545250
 
 
-.global lbl_8054527C
-lbl_8054527C:
+.obj lbl_8054527C, global
 	.asciz "BTM: BTM_WriteStoredLinkKey: num_keys: %d"
 	.balign 4
+.endobj lbl_8054527C
 
 
-.global lbl_805452A8
-lbl_805452A8:
+.obj lbl_805452A8, global
 	.asciz "BTM: BTM_DeleteStoredLinkKey: delete_all_flag: %s"
 	.balign 4
 	.4byte 0
+.endobj lbl_805452A8
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665928
-lbl_80665928:
+.balign 8
+
+.obj lbl_80665928, global
 	.4byte 0x001F0000
+.endobj lbl_80665928
 
 
-.global lbl_8066592C
-lbl_8066592C:
+.obj lbl_8066592C, global
 	.asciz "TRUE"
 	.balign 4
+.endobj lbl_8066592C
 
 
-.global lbl_80665934
-lbl_80665934:
+.obj lbl_80665934, global
 	.asciz "FALSE"
 	.balign 4
 	.4byte 0
+.endobj lbl_80665934

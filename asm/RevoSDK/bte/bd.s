@@ -70,6 +70,8 @@
 
 .section .sbss2, "", @nobits #0x8066DCE0 - 0x8066DCFB
 
-.global bd_addr_null
-bd_addr_null:
+.balign 8
+
+.obj bd_addr_null, global
 	.skip 0x8
+.endobj bd_addr_null

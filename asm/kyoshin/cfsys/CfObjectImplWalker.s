@@ -3031,32 +3031,31 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_804F7E78
-lbl_804F7E78:
+.obj lbl_804F7E78, global
 	.asciz "pctalk_01"
 	.balign 4
+.endobj lbl_804F7E78
 
-.global lbl_804F7E84
-lbl_804F7E84:
+.obj lbl_804F7E84, global
 	.asciz "pctalk_02"
 	.balign 4
+.endobj lbl_804F7E84
 
-.global lbl_804F7E90
-lbl_804F7E90:
+.obj lbl_804F7E90, global
 	.4byte lbl_804F7E78
 	.4byte lbl_804F7E84
 	.4byte lbl_804F7E84
+.endobj lbl_804F7E90
 
-.global cf_CfObjectImplWalker_typestr
-cf_CfObjectImplWalker_typestr:
+.obj cf_CfObjectImplWalker_typestr, global
 	.asciz "cf::CfObjectImplWalker"
 	.balign 4
+.endobj cf_CfObjectImplWalker_typestr
 
 
-.global CfObjectImplWalker_strpool
-CfObjectImplWalker_strpool:
+.obj CfObjectImplWalker_strpool, global
 	.asciz "JUhead"
 	.asciz "type"
 	.asciz "server"
@@ -3072,13 +3071,13 @@ CfObjectImplWalker_strpool:
 	.asciz "exc_talk3"
 	.asciz "present"
 	.balign 4
+.endobj CfObjectImplWalker_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CfObjectImplWalker
-__vt__cf_CfObjectImplWalker:
+.obj __vt__cf_CfObjectImplWalker, global
 	.4byte __RTTI__cf_CfObjectImplWalker
 	.4byte 0
 	.4byte __dt__cf_CfObjectImplWalker
@@ -3145,9 +3144,9 @@ __vt__cf_CfObjectImplWalker:
 	.4byte func_800C5970
 	.4byte func_800C4888
 	.4byte func_800C50F4
+.endobj __vt__cf_CfObjectImplWalker
 
-.global cf_CfObjectImplWalker_hierarchy
-cf_CfObjectImplWalker_hierarchy:
+.obj cf_CfObjectImplWalker_hierarchy, global
 	.4byte __RTTI__cf_IObjectInfo
 	.4byte 0x00000010
 	.4byte __RTTI__IActParamEvent
@@ -3160,91 +3159,91 @@ cf_CfObjectImplWalker_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CfObjectImplWalker_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-
-.global __RTTI__cf_CfObjectImplWalker
-__RTTI__cf_CfObjectImplWalker:
+.obj __RTTI__cf_CfObjectImplWalker, global
 	.4byte cf_CfObjectImplWalker_typestr
 	.4byte cf_CfObjectImplWalker_hierarchy
+.endobj __RTTI__cf_CfObjectImplWalker
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_80669448
-float_80669448:
+.obj float_80669448, global
 	.float 80 #0x42A00000
+.endobj float_80669448
 
 
-.global float_8066944C
-float_8066944C:
+.obj float_8066944C, global
 	.float 0
+.endobj float_8066944C
 
 
-.global float_80669450
-float_80669450:
+.obj float_80669450, global
 	.float 0.5
+.endobj float_80669450
 
 
-.global float_80669454
-float_80669454:
+.obj float_80669454, global
 	.float 1.0
+.endobj float_80669454
 
 
-.global float_80669458
-float_80669458:
+.obj float_80669458, global
 	.float 5 #0x40A00000
 	.4byte 0
+.endobj float_80669458
 
 
-.global double_80669460
-double_80669460:
+.obj double_80669460, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_80669460
 
-.global float_80669468
-float_80669468:
+.obj float_80669468, global
 	.float 15 #0x41700000
+.endobj float_80669468
 
 
-.global float_8066946C
-float_8066946C:
+.obj float_8066946C, global
 	.float 20 #0x41A00000
+.endobj float_8066946C
 
 
-.global double_80669470
-double_80669470:
+.obj double_80669470, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_80669470
 
-.global float_80669478
-float_80669478:
+.obj float_80669478, global
 	.float 0.8 #0x3F4CCCCD
+.endobj float_80669478
 
 
-.global float_8066947C
-float_8066947C:
+.obj float_8066947C, global
 	.float -6 #0xC0C00000
+.endobj float_8066947C
 
 
-.global float_80669480
-float_80669480:
+.obj float_80669480, global
 	.float 30 #0x41F00000
+.endobj float_80669480
 
 
-.global float_80669484
-float_80669484:
+.obj float_80669484, global
 	.float 0.6 #0x3F19999A
+.endobj float_80669484
 
 
-.global float_80669488
-float_80669488:
+.obj float_80669488, global
 	.float 0.02 #0x3CA3D70A
 	.4byte 0
+.endobj float_80669488
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

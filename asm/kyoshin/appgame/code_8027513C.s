@@ -638,47 +638,46 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_ICamControlClassic_typestr
-cf_ICamControlClassic_typestr:
+.obj cf_ICamControlClassic_typestr, global
 	.asciz "cf::ICamControlClassic"
 	.balign 4
+.endobj cf_ICamControlClassic_typestr
 
-.global cf_ICamControlGc_typestr
-cf_ICamControlGc_typestr:
+.obj cf_ICamControlGc_typestr, global
 	.asciz "cf::ICamControlGc"
 	.balign 4
+.endobj cf_ICamControlGc_typestr
 
-.global cf_ICamControlRemote_typestr
-cf_ICamControlRemote_typestr:
+.obj cf_ICamControlRemote_typestr, global
 	.asciz "cf::ICamControlRemote"
 	.balign 4
 	.4byte 0
+.endobj cf_ICamControlRemote_typestr
 
-.global cf_ICamControl_typestr
-cf_ICamControl_typestr:
+.obj cf_ICamControl_typestr, global
 	.asciz "cf::ICamControl"
+.endobj cf_ICamControl_typestr
 
-.global cf_CfObjectImplTbox_typestr
-cf_CfObjectImplTbox_typestr:
+.obj cf_CfObjectImplTbox_typestr, global
 	.asciz "cf::CfObjectImplTbox"
 	.balign 4
+.endobj cf_CfObjectImplTbox_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8053B678
-lbl_8053B678:
+.obj lbl_8053B678, global
 	.4byte lbl_806671DC
 	.4byte lbl_806671E4
 	.4byte lbl_806671EC
 	.4byte 0
+.endobj lbl_8053B678
 
 
-.global __vt__cf_ICamControlClassic
-__vt__cf_ICamControlClassic:
+.obj __vt__cf_ICamControlClassic, global
 	.4byte __RTTI__cf_ICamControlClassic
 	.4byte 0
 	.4byte func_80274EA8
@@ -691,17 +690,17 @@ __vt__cf_ICamControlClassic:
 	.4byte func_8027505C
 	.4byte func_80275090
 	.4byte func_802750C4
+.endobj __vt__cf_ICamControlClassic
 
-.global cf_ICamControlClassic_hierarchy
-cf_ICamControlClassic_hierarchy:
+.obj cf_ICamControlClassic_hierarchy, global
 	.4byte __RTTI__cf_ICamControl
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_ICamControlClassic_hierarchy
 
 
-.global __vt__cf_ICamControlGc
-__vt__cf_ICamControlGc:
+.obj __vt__cf_ICamControlGc, global
 	.4byte __RTTI__cf_ICamControlGc
 	.4byte 0
 	.4byte func_80274B28
@@ -714,19 +713,19 @@ __vt__cf_ICamControlGc:
 	.4byte func_80274E40
 	.4byte func_80274E74
 	.4byte func_80274DA4
+.endobj __vt__cf_ICamControlGc
 
-.global cf_ICamControlGc_hierarchy
-cf_ICamControlGc_hierarchy:
+.obj cf_ICamControlGc_hierarchy, global
 	.4byte __RTTI__cf_ICamControl
 	.4byte 0
 	.4byte __RTTI__cf_ICamControlRemote
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_ICamControlGc_hierarchy
 
 
-.global __vt__cf_ICamControlRemote
-__vt__cf_ICamControlRemote:
+.obj __vt__cf_ICamControlRemote, global
 	.4byte __RTTI__cf_ICamControlRemote
 	.4byte 0
 	.4byte func_80274B28
@@ -739,27 +738,27 @@ __vt__cf_ICamControlRemote:
 	.4byte func_80274D3C
 	.4byte func_80274D70
 	.4byte func_80274DA4
+.endobj __vt__cf_ICamControlRemote
 
-.global cf_ICamControlRemote_hierarchy
-cf_ICamControlRemote_hierarchy:
+.obj cf_ICamControlRemote_hierarchy, global
 	.4byte __RTTI__cf_ICamControl
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_ICamControlRemote_hierarchy
 
 
-.global lbl_8053B750
-lbl_8053B750:
+.obj lbl_8053B750, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80275454
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802756F0
+.endobj lbl_8053B750
 
 
-.global __vt__cf_CfObjectImplTbox
-__vt__cf_CfObjectImplTbox:
+.obj __vt__cf_CfObjectImplTbox, global
 	.4byte __RTTI__cf_CfObjectImplTbox
 	.4byte 0
 	.4byte __dt__cf_CfObjectImplTbox
@@ -820,9 +819,9 @@ __vt__cf_CfObjectImplTbox:
 	.4byte func_802759A8
 	.4byte func_800CEE28
 	.4byte func_8027594C
+.endobj __vt__cf_CfObjectImplTbox
 
-.global cf_CfObjectImplTbox_hierarchy
-cf_CfObjectImplTbox_hierarchy:
+.obj cf_CfObjectImplTbox_hierarchy, global
 	.4byte __RTTI__cf_IObjectInfo
 	.4byte 0x00000010
 	.4byte __RTTI__IActParamEvent
@@ -833,107 +832,113 @@ cf_CfObjectImplTbox_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CfObjectImplTbox_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_ICamControlClassic
-__RTTI__cf_ICamControlClassic:
+.obj __RTTI__cf_ICamControlClassic, global
 	.4byte cf_ICamControlClassic_typestr
 	.4byte cf_ICamControlClassic_hierarchy
+.endobj __RTTI__cf_ICamControlClassic
 
-.global __RTTI__cf_ICamControlGc
-__RTTI__cf_ICamControlGc:
+.obj __RTTI__cf_ICamControlGc, global
 	.4byte cf_ICamControlGc_typestr
 	.4byte cf_ICamControlGc_hierarchy
+.endobj __RTTI__cf_ICamControlGc
 
-.global __RTTI__cf_ICamControlRemote
-__RTTI__cf_ICamControlRemote:
+.obj __RTTI__cf_ICamControlRemote, global
 	.4byte cf_ICamControlRemote_typestr
 	.4byte cf_ICamControlRemote_hierarchy
+.endobj __RTTI__cf_ICamControlRemote
 
-.global __RTTI__cf_ICamControl
-__RTTI__cf_ICamControl:
+.obj __RTTI__cf_ICamControl, global
 	.4byte cf_ICamControl_typestr
 	.4byte 0
+.endobj __RTTI__cf_ICamControl
 
-.global __RTTI__cf_CfObjectImplTbox
-__RTTI__cf_CfObjectImplTbox:
+.obj __RTTI__cf_CfObjectImplTbox, global
 	.4byte cf_CfObjectImplTbox_typestr
 	.4byte cf_CfObjectImplTbox_hierarchy
+.endobj __RTTI__cf_CfObjectImplTbox
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B280
-float_8066B280:
+.obj float_8066B280, global
 	.float -4 #0xC0800000
+.endobj float_8066B280
 
 
-.global float_8066B284
-float_8066B284:
+.obj float_8066B284, global
 	.float 0.9 #0x3F666666
+.endobj float_8066B284
 
 
-.global float_8066B288
-float_8066B288:
+.obj float_8066B288, global
 	.float 0
+.endobj float_8066B288
 
 
-.global float_8066B28C
-float_8066B28C:
+.obj float_8066B28C, global
 	.float 0.01 #0x3C23D70A
+.endobj float_8066B28C
 
 
-.global float_8066B290
-float_8066B290:
+.obj float_8066B290, global
 	.float 1.0
+.endobj float_8066B290
 
 
-.global float_8066B294
-float_8066B294:
+.obj float_8066B294, global
 	.float 30 #0x41F00000
+.endobj float_8066B294
 
 
-.global float_8066B298
-float_8066B298:
+.obj float_8066B298, global
 	.float 0.001 #0x3A83126F
+.endobj float_8066B298
 
 
-.global float_8066B29C
-float_8066B29C:
+.obj float_8066B29C, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_8066B29C
 
 
-.global float_8066B2A0
-float_8066B2A0:
+.obj float_8066B2A0, global
 	.float 0.4 #0x3ECCCCCD
 	.4byte 0
+.endobj float_8066B2A0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_806671D8, global
+	.skip 0x4
+.endobj lbl_806671D8
 
-.global lbl_806671D8
-lbl_806671D8:
+.obj lbl_806671DC, global
 	.skip 0x4
-.global lbl_806671DC
-lbl_806671DC:
+.endobj lbl_806671DC
+
+.obj lbl_806671E0, global
 	.skip 0x4
-.global lbl_806671E0
-lbl_806671E0:
+.endobj lbl_806671E0
+
+.obj lbl_806671E4, global
 	.skip 0x4
-.global lbl_806671E4
-lbl_806671E4:
+.endobj lbl_806671E4
+
+.obj lbl_806671E8, global
 	.skip 0x4
-.global lbl_806671E8
-lbl_806671E8:
+.endobj lbl_806671E8
+
+.obj lbl_806671EC, global
 	.skip 0x4
-.global lbl_806671EC
-lbl_806671EC:
-	.skip 0x4
+.endobj lbl_806671EC
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

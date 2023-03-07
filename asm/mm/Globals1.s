@@ -2,30 +2,38 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_80659DB0
-lbl_80659DB0:
+.obj lbl_80659DB0, global
 	.skip 0xC
-.global lbl_80659DBC
-lbl_80659DBC:
+.endobj lbl_80659DB0
+
+.obj lbl_80659DBC, global
 	.skip 0xC
-.global lbl_80659DC8
-lbl_80659DC8:
+.endobj lbl_80659DBC
+
+.obj lbl_80659DC8, global
 	.skip 0xC
-.global lbl_80659DD4
-lbl_80659DD4:
+.endobj lbl_80659DC8
+
+.obj lbl_80659DD4, global
 	.skip 0xC
-.global lbl_80659DE0
-lbl_80659DE0:
+.endobj lbl_80659DD4
+
+.obj lbl_80659DE0, global
 	.skip 0x10
-.global lbl_80659DF0
-lbl_80659DF0:
+.endobj lbl_80659DE0
+
+.obj lbl_80659DF0, global
 	.skip 0x50
-.global lbl_80659E40
-lbl_80659E40:
+.endobj lbl_80659DF0
+
+.obj lbl_80659E40, global
 	.skip 0x18
-.global lbl_80659E58
-lbl_80659E58:
+.endobj lbl_80659E40
+
+.obj lbl_80659E58, global
 	.skip 0xC
-.global lbl_80659E64
-lbl_80659E64:
+.endobj lbl_80659E58
+
+.obj lbl_80659E64, global
 	.skip 0x64
+.endobj lbl_80659E64

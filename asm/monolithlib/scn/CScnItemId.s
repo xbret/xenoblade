@@ -162,20 +162,19 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CScnItemId_typestr
-CScnItemId_typestr:
+.obj CScnItemId_typestr, global
 	.asciz "CScnItemId"
 	.balign 4
 	.4byte 0
+.endobj CScnItemId_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CScnItemId
-__vt__CScnItemId:
+.obj __vt__CScnItemId, global
 	.4byte __RTTI__CScnItemId
 	.4byte 0
 	.4byte __dt__CScnItemId
@@ -184,23 +183,24 @@ __vt__CScnItemId:
 	.4byte func_80482288
 	.4byte func_80482290
 	.4byte func_80482298
+.endobj __vt__CScnItemId
 
-.global CScnItemId_hierarchy
-CScnItemId_hierarchy:
+.obj CScnItemId_hierarchy, global
 	.4byte __RTTI__CScnItem
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CScnItemId_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CScnItemId
-__RTTI__CScnItemId:
+.obj __RTTI__CScnItemId, global
 	.4byte CScnItemId_typestr
 	.4byte CScnItemId_hierarchy
+.endobj __RTTI__CScnItemId
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

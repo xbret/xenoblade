@@ -737,26 +737,25 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CLibLayout_typestr
-CLibLayout_typestr:
+.obj CLibLayout_typestr, global
 	.asciz "CLibLayout"
 	.balign 4
+.endobj CLibLayout_typestr
 
 
-.global lbl_80526AE4
-lbl_80526AE4:
+.obj lbl_80526AE4, global
 	.asciz "Layout Mem"
 	.asciz "LAYOUT"
 	.balign 4
+.endobj lbl_80526AE4
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CLibLayout
-__vt__CLibLayout:
+.obj __vt__CLibLayout, global
 	.4byte __RTTI__CLibLayout
 	.4byte 0
 	.4byte __dt__CLibLayout_1
@@ -797,32 +796,33 @@ __vt__CLibLayout:
 	.4byte func_8045F320
 	.4byte func_8045F3D4
 	.4byte func_80039E30
+.endobj __vt__CLibLayout
 
-.global CLibLayout_hierarchy
-CLibLayout_hierarchy:
+.obj CLibLayout_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CLibLayout_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CLibLayout
-__RTTI__CLibLayout:
+.obj __RTTI__CLibLayout, global
 	.4byte CLibLayout_typestr
 	.4byte CLibLayout_hierarchy
+.endobj __RTTI__CLibLayout
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80667FE8
-lbl_80667FE8:
+.obj lbl_80667FE8, global
 	.skip 0x8
+.endobj lbl_80667FE8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

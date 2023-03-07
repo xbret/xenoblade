@@ -236,26 +236,24 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-
-.global lbl_805263A0
-lbl_805263A0:
+.obj lbl_805263A0, global
 	.asciz "DeviceSystem1"
 	.balign 4
+.endobj lbl_805263A0
 
-.global lbl_805263B0
-lbl_805263B0:
+.obj lbl_805263B0, global
 	.asciz "DeviceSystem2"
 	.balign 4
+.endobj lbl_805263B0
 
-.global _unnamed_CDevice_cpp_CDeviceException_typestr
-_unnamed_CDevice_cpp_CDeviceException_typestr:
+.obj _unnamed_CDevice_cpp_CDeviceException_typestr, global
 	.asciz "@unnamed@CDevice_cpp@::CDeviceException"
+.endobj _unnamed_CDevice_cpp_CDeviceException_typestr
 
 
-.global lbl_805263E8
-lbl_805263E8:
+.obj lbl_805263E8, global
 	.asciz "CDeviceVI"
 	.asciz "CDeviceGX"
 	.asciz "CDeviceRemotePAD"
@@ -267,14 +265,14 @@ lbl_805263E8:
 	.asciz "CDeviceException"
 	.asciz "CDevice"
 	.balign 4
+.endobj lbl_805263E8
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt___unnamed_CDevice_cpp_CDeviceException
-__vt___unnamed_CDevice_cpp_CDeviceException:
+.obj __vt___unnamed_CDevice_cpp_CDeviceException, global
 	.4byte __RTTI___unnamed_CDevice_cpp_CDeviceException
 	.4byte 0
 	.4byte __dt___unnamed_CDevice_cpp_CDeviceException
@@ -315,19 +313,19 @@ __vt___unnamed_CDevice_cpp_CDeviceException:
 	.4byte func_804389F8
 	.4byte func_8044DADC
 	.4byte func_80039E30
+.endobj __vt___unnamed_CDevice_cpp_CDeviceException
 
-.global _unnamed_CDevice_cpp_CDeviceException_hierarchy
-_unnamed_CDevice_cpp_CDeviceException_hierarchy:
+.obj _unnamed_CDevice_cpp_CDeviceException_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj _unnamed_CDevice_cpp_CDeviceException_hierarchy
 
 
-.global __vt__CDevice
-__vt__CDevice:
+.obj __vt__CDevice, global
 	.4byte __RTTI__CDevice
 	.4byte 0
 	.4byte __dt__CDevice
@@ -368,49 +366,50 @@ __vt__CDevice:
 	.4byte __ct__CDeviceException
 	.4byte func_8044D8C8
 	.4byte func_80039E30
+.endobj __vt__CDevice
 
-.global CDevice_hierarchy
-CDevice_hierarchy:
+.obj CDevice_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CDevice_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80665F98
-lbl_80665F98:
+.obj lbl_80665F98, global
 	.4byte lbl_805263A0
+.endobj lbl_80665F98
 
 
-.global lbl_80665F9C
-lbl_80665F9C:
+.obj lbl_80665F9C, global
 	.4byte lbl_805263B0
+.endobj lbl_80665F9C
 
 
-.global lbl_80665FA0
-lbl_80665FA0:
+.obj lbl_80665FA0, global
 	.4byte 0xFFFFFFFF
+.endobj lbl_80665FA0
 
 
-.global lbl_80665FA4
-lbl_80665FA4:
+.obj lbl_80665FA4, global
 	.4byte 0xFFFFFFFF
+.endobj lbl_80665FA4
 
-.global __RTTI___unnamed_CDevice_cpp_CDeviceException
-__RTTI___unnamed_CDevice_cpp_CDeviceException:
+.obj __RTTI___unnamed_CDevice_cpp_CDeviceException, global
 	.4byte _unnamed_CDevice_cpp_CDeviceException_typestr
 	.4byte _unnamed_CDevice_cpp_CDeviceException_hierarchy
+.endobj __RTTI___unnamed_CDevice_cpp_CDeviceException
 
-.global __RTTI__CDevice
-__RTTI__CDevice:
+.obj __RTTI__CDevice, global
 	.4byte CDevice_typestr
 	.4byte CDevice_hierarchy
+.endobj __RTTI__CDevice
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

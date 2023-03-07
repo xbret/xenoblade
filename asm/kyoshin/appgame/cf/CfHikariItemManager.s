@@ -1059,115 +1059,119 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CfHikariItemManager_typestr
-cf_CfHikariItemManager_typestr:
+.obj cf_CfHikariItemManager_typestr, global
 	.asciz "cf::CfHikariItemManager"
+.endobj cf_CfHikariItemManager_typestr
 
 
-.global lbl_8050C9A8
-lbl_8050C9A8:
+.obj lbl_8050C9A8, global
 	.asciz "HIKARI"
 	.balign 4
+.endobj lbl_8050C9A8
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CfHikariItemManager
-__vt__cf_CfHikariItemManager:
+.obj __vt__cf_CfHikariItemManager, global
 	.4byte __RTTI__cf_CfHikariItemManager
 	.4byte 0
 	.4byte __dt__cf_CfHikariItemManager
 	.4byte func_802B2AE0
+.endobj __vt__cf_CfHikariItemManager
 
-.global cf_CfHikariItemManager_hierarchy
-cf_CfHikariItemManager_hierarchy:
+.obj cf_CfHikariItemManager_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CfHikariItemManager_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CfHikariItemManager
-__RTTI__cf_CfHikariItemManager:
+.obj __RTTI__cf_CfHikariItemManager, global
 	.4byte cf_CfHikariItemManager_typestr
 	.4byte cf_CfHikariItemManager_hierarchy
+.endobj __RTTI__cf_CfHikariItemManager
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B6C8
-float_8066B6C8:
+.obj float_8066B6C8, global
 	.float 0
+.endobj float_8066B6C8
 
 
-.global lbl_8066B6CC
-lbl_8066B6CC:
+.obj lbl_8066B6CC, global
 	.4byte 0xFFFFFFFF
+.endobj lbl_8066B6CC
 
 
-.global float_8066B6D0
-float_8066B6D0:
+.obj float_8066B6D0, global
 	.float 1.0
+.endobj float_8066B6D0
 
 
-.global float_8066B6D4
-float_8066B6D4:
+.obj float_8066B6D4, global
 	.float 0.4 #0x3ECCCCCD
+.endobj float_8066B6D4
 
 
-.global float_8066B6D8
-float_8066B6D8:
+.obj float_8066B6D8, global
 	.float -0.4 #0xBECCCCCD
+.endobj float_8066B6D8
 
 
-.global float_8066B6DC
-float_8066B6DC:
+.obj float_8066B6DC, global
 	.float 0.5
+.endobj float_8066B6DC
 
 
-.global float_8066B6E0
-float_8066B6E0:
+.obj float_8066B6E0, global
 	.float -0.5 #0xBF000000
+.endobj float_8066B6E0
 
 
-.global float_8066B6E4
-float_8066B6E4:
+.obj float_8066B6E4, global
 	.float 0.125
+.endobj float_8066B6E4
 
 
-.global float_8066B6E8
-float_8066B6E8:
+.obj float_8066B6E8, global
 	.float -0.125 #0xBE000000
+.endobj float_8066B6E8
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_806674F0
-lbl_806674F0:
+.obj lbl_806674F0, global
 	.skip 0x8
-.global lbl_806674F8
-lbl_806674F8:
+.endobj lbl_806674F0
+
+.obj lbl_806674F8, global
 	.skip 0x4
-.global lbl_806674FC
-lbl_806674FC:
+.endobj lbl_806674F8
+
+.obj lbl_806674FC, global
 	.skip 0x4
-.global lbl_80667500
-lbl_80667500:
+.endobj lbl_806674FC
+
+.obj lbl_80667500, global
 	.skip 0x4
-.global lbl_80667504
-lbl_80667504:
+.endobj lbl_80667500
+
+.obj lbl_80667504, global
 	.skip 0x4
+.endobj lbl_80667504
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

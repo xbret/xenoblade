@@ -1388,15 +1388,14 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMenuKizunaTalk_typestr
-CMenuKizunaTalk_typestr:
+.obj CMenuKizunaTalk_typestr, global
 	.asciz "CMenuKizunaTalk"
+.endobj CMenuKizunaTalk_typestr
 
 
-.global CMenuKizunaTalk_strpool
-CMenuKizunaTalk_strpool:
+.obj CMenuKizunaTalk_strpool, global
 	.asciz "common/jp/bdat_kzn.bin"
 	.asciz "/menu/KizunaTalk.arc"
 	.asciz "MNU_sysmes"
@@ -1433,13 +1432,13 @@ CMenuKizunaTalk_strpool:
 	.asciz "pic_btn00"
 	.asciz "JNL_kizunalist"
 	.balign 4
+.endobj CMenuKizunaTalk_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMenuKizunaTalk
-__vt__CMenuKizunaTalk:
+.obj __vt__CMenuKizunaTalk, global
 	.4byte __RTTI__CMenuKizunaTalk
 	.4byte 0
 	.4byte __dt__CMenuKizunaTalk
@@ -1489,9 +1488,9 @@ __vt__CMenuKizunaTalk:
 	.4byte func_801BDD94
 	.4byte func_801BCDEC
 	.4byte func_801BD7D8
+.endobj __vt__CMenuKizunaTalk
 
-.global CMenuKizunaTalk_hierarchy
-CMenuKizunaTalk_hierarchy:
+.obj CMenuKizunaTalk_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000070
 	.4byte __RTTI__IWorkEvent
@@ -1507,44 +1506,47 @@ CMenuKizunaTalk_hierarchy:
 	.4byte __RTTI__IUIWindow
 	.4byte 0
 	.4byte 0
+.endobj CMenuKizunaTalk_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuKizunaTalk
-__RTTI__CMenuKizunaTalk:
+.obj __RTTI__CMenuKizunaTalk, global
 	.4byte CMenuKizunaTalk_typestr
 	.4byte CMenuKizunaTalk_hierarchy
+.endobj __RTTI__CMenuKizunaTalk
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-
-.global float_8066A728
-float_8066A728:
+.obj float_8066A728, global
 	.float 1.0
+.endobj float_8066A728
 
 
-.global float_8066A72C
-float_8066A72C:
+.obj float_8066A72C, global
 	.float 0
+.endobj float_8066A72C
 
 
-.global double_8066A730
-double_8066A730:
+.obj double_8066A730, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066A730
+
+
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80666D10, global
+	.skip 0x4
+.endobj lbl_80666D10
 
-.global lbl_80666D10
-lbl_80666D10:
+.obj lbl_80666D14, global
 	.skip 0x4
-.global lbl_80666D14
-lbl_80666D14:
-	.skip 0x4
+.endobj lbl_80666D14
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

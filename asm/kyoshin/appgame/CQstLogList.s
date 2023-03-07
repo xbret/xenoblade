@@ -2038,15 +2038,14 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CQstLogList_typestr
-CQstLogList_typestr:
+.obj CQstLogList_typestr, global
 	.asciz "CQstLogList"
+.endobj CQstLogList_typestr
 
 
-.global CQstLogList_strpool
-CQstLogList_strpool:
+.obj CQstLogList_strpool, global
 	.asciz "qst_genre"
 	.asciz "index"
 	.asciz "%s"
@@ -2084,14 +2083,13 @@ CQstLogList_strpool:
 	.asciz "pic_soatbtn"
 	.asciz "txt_tit01"
 	.balign 4
+.endobj CQstLogList_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-
-.global jumptable_805399E0
-jumptable_805399E0:
+.obj jumptable_805399E0, global
 	.4byte .L_8022902C
 	.4byte .L_80228FC0
 	.4byte .L_80228FC0
@@ -2116,10 +2114,10 @@ jumptable_805399E0:
 	.4byte .L_80228FC0
 	.4byte .L_8022902C
 	.4byte 0
+.endobj jumptable_805399E0
 
 
-.global __vt__CQstLogList
-__vt__CQstLogList:
+.obj __vt__CQstLogList, global
 	.4byte __RTTI__CQstLogList
 	.4byte 0
 	.4byte __dt__CQstLogList
@@ -2154,83 +2152,88 @@ __vt__CQstLogList:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CQstLogList
 
-.global CQstLogList_hierarchy
-CQstLogList_hierarchy:
+.obj CQstLogList_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CQstLogList_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80665158
-lbl_80665158:
+.obj lbl_80665158, global
 	.4byte 0xFFFFFFFF
 	.4byte 0
+.endobj lbl_80665158
 
-.global __RTTI__CQstLogList
-__RTTI__CQstLogList:
+.obj __RTTI__CQstLogList, global
 	.4byte CQstLogList_typestr
 	.4byte CQstLogList_hierarchy
+.endobj __RTTI__CQstLogList
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066AE38
-float_8066AE38:
+.obj float_8066AE38, global
 	.float 214 #0x43560000
+.endobj float_8066AE38
 
 
-.global float_8066AE3C
-float_8066AE3C:
+.obj float_8066AE3C, global
 	.float 118 #0x42EC0000
+.endobj float_8066AE3C
 
 
-.global float_8066AE40
-float_8066AE40:
+.obj float_8066AE40, global
 	.float 0
+.endobj float_8066AE40
 
 
-.global float_8066AE44
-float_8066AE44:
+.obj float_8066AE44, global
 	.float 1.0
+.endobj float_8066AE44
 
 
-.global double_8066AE48
-double_8066AE48:
+.obj double_8066AE48, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066AE48
+
+
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-
-
-.global lbl_80579E68
-lbl_80579E68:
+.obj lbl_80579E68, global
 	.skip 0x458
+.endobj lbl_80579E68
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80667018, global
+	.skip 0x4
+.endobj lbl_80667018
 
-.global lbl_80667018
-lbl_80667018:
+.obj lbl_8066701C, global
 	.skip 0x4
-.global lbl_8066701C
-lbl_8066701C:
+.endobj lbl_8066701C
+
+.obj lbl_80667020, global
 	.skip 0x4
-.global lbl_80667020
-lbl_80667020:
+.endobj lbl_80667020
+
+.obj lbl_80667024, global
 	.skip 0x4
-.global lbl_80667024
-lbl_80667024:
-	.skip 0x4
-.global lbl_80667028
-lbl_80667028:
+.endobj lbl_80667024
+
+.obj lbl_80667028, global
 	.skip 0x8
+.endobj lbl_80667028
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

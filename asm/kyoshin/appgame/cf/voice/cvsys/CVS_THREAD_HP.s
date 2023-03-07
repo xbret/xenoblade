@@ -1167,39 +1167,38 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CVS_THREAD_HP_typestr
-cf_CVS_THREAD_HP_typestr:
+.obj cf_CVS_THREAD_HP_typestr, global
 	.asciz "cf::CVS_THREAD_HP"
 	.balign 4
 	.4byte 0
+.endobj cf_CVS_THREAD_HP_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8053D388
-lbl_8053D388:
+.obj lbl_8053D388, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A7464
+.endobj lbl_8053D388
 
-.global lbl_8053D394
-lbl_8053D394:
+.obj lbl_8053D394, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A7508
+.endobj lbl_8053D394
 
-.global lbl_8053D3A0
-lbl_8053D3A0:
+.obj lbl_8053D3A0, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A75CC
+.endobj lbl_8053D3A0
 
 
-.global __vt__cf_CVS_THREAD_HP
-__vt__cf_CVS_THREAD_HP:
+.obj __vt__cf_CVS_THREAD_HP, global
 	.4byte __RTTI__cf_CVS_THREAD_HP
 	.4byte 0
 	.4byte func_802A3B50
@@ -1207,42 +1206,42 @@ __vt__cf_CVS_THREAD_HP:
 	.4byte func_802A766C
 	.4byte func_802A1EA0
 	.4byte func_802A3740
+.endobj __vt__cf_CVS_THREAD_HP
 
-.global cf_CVS_THREAD_HP_hierarchy
-cf_CVS_THREAD_HP_hierarchy:
+.obj cf_CVS_THREAD_HP_hierarchy, global
 	.4byte __RTTI__cf_CVS_THREAD
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CVS_THREAD_HP_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-
-.global __RTTI__cf_CVS_THREAD_HP
-__RTTI__cf_CVS_THREAD_HP:
+.obj __RTTI__cf_CVS_THREAD_HP, global
 	.4byte cf_CVS_THREAD_HP_typestr
 	.4byte cf_CVS_THREAD_HP_hierarchy
+.endobj __RTTI__cf_CVS_THREAD_HP
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B548
-float_8066B548:
+.obj float_8066B548, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_8066B548
 
 
-.global float_8066B54C
-float_8066B54C:
+.obj float_8066B54C, global
 	.float 0.5
+.endobj float_8066B54C
 
 
-.global double_8066B550
-double_8066B550:
+.obj double_8066B550, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066B550
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

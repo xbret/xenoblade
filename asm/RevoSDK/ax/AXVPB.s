@@ -1121,7 +1121,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-__AXMixCycles:
+.balign 8
+
+.obj __AXMixCycles, local
 	.4byte 0x00000002
 	.4byte 0x00000198
 	.4byte 0x00000198
@@ -1154,9 +1156,10 @@ __AXMixCycles:
 	.4byte 0x0000083F
 	.4byte 0x0000083F
 	.4byte 0x0000083F
+.endobj __AXMixCycles
 
 
-__AXRmtMixCycles:
+.obj __AXRmtMixCycles, local
 	.4byte 0x00000004
 	.4byte 0x00000056
 	.4byte 0x00000097
@@ -1167,70 +1170,85 @@ __AXRmtMixCycles:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj __AXRmtMixCycles
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066BDB8
-float_8066BDB8:
+.balign 8
+
+.obj float_8066BDB8, global
 	.float 2 #0x40000000
+.endobj float_8066BDB8
 
 
-.global float_8066BDBC
-float_8066BDBC:
+.obj float_8066BDBC, global
 	.float 6.2831853
+.endobj float_8066BDBC
 
 
-.global float_8066BDC0
-float_8066BDC0:
+.obj float_8066BDC0, global
 	.float 32000 #0x46FA0000
+.endobj float_8066BDC0
 
 
-.global float_8066BDC4
-float_8066BDC4:
+.obj float_8066BDC4, global
 	.float 1.0
+.endobj float_8066BDC4
 
 
-.global float_8066BDC8
-float_8066BDC8:
+.obj float_8066BDC8, global
 	.float 32768 #0x47000000
 	.4byte 0
+.endobj float_8066BDC8
 
 
-.global double_8066BDD0
-double_8066BDD0:
+.obj double_8066BDD0, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066BDD0
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-__s_AXPB:
+.obj __s_AXPB, local
 	.skip 0x7800
+.endobj __s_AXPB
 
-__s_AXITD:
+.obj __s_AXITD, local
 	.skip 0x1800
+.endobj __s_AXITD
 
-__s_AXVPB:
+.obj __s_AXVPB, local
 	.skip 0x8700
+.endobj __s_AXVPB
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-__AXPB:
-	.skip 0x4
+.balign 8
 
-__AXITD:
+.obj __AXPB, local
 	.skip 0x4
+.endobj __AXPB
 
-__AXVPB:
+.obj __AXITD, local
 	.skip 0x4
+.endobj __AXITD
 
-__AXMaxVoices:
+.obj __AXVPB, local
 	.skip 0x4
+.endobj __AXVPB
 
-__AXNumVoices:
+.obj __AXMaxVoices, local
 	.skip 0x4
+.endobj __AXMaxVoices
 
-__AXRecDspCycles:
+.obj __AXNumVoices, local
 	.skip 0x4
+.endobj __AXNumVoices
 
-__AXMaxDspCycles:
+.obj __AXRecDspCycles, local
+	.skip 0x4
+.endobj __AXRecDspCycles
+
+.obj __AXMaxDspCycles, local
 	.skip 0x8
+.endobj __AXMaxDspCycles

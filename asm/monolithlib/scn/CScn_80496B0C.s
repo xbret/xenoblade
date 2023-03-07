@@ -2393,68 +2393,72 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_805721F0
-lbl_805721F0:
+.balign 8
+
+.obj lbl_805721F0, global
 	.asciz "ResAnmChr"
 	.balign 4
+.endobj lbl_805721F0
 
 
-.global lbl_805721FC
-lbl_805721FC:
+.obj lbl_805721FC, global
 	.asciz "%s::%s: Object not valid."
 	.balign 4
+.endobj lbl_805721FC
 
 
-.global lbl_80572218
-lbl_80572218:
+.obj lbl_80572218, global
 	.asciz "g3d_resanmchr_ac.h"
 	.balign 4
 	.4byte 0
+.endobj lbl_80572218
 
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80666300
-lbl_80666300:
+.obj lbl_80666300, global
 	.4byte 0x72656600
+.endobj lbl_80666300
 
 
-.global lbl_80666304
-lbl_80666304:
+.obj lbl_80666304, global
 	.4byte 0x72656600
+.endobj lbl_80666304
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066D280
-float_8066D280:
+.balign 8
+
+.obj float_8066D280, global
 	.float 0
+.endobj float_8066D280
 
 
-.global float_8066D284
-float_8066D284:
+.obj float_8066D284, global
 	.float 1.0
+.endobj float_8066D284
 
 
-.global double_8066D288
-double_8066D288:
+.obj double_8066D288, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066D288
 
-.global double_8066D290
-double_8066D290:
+.obj double_8066D290, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066D290
 
-.global float_8066D298
-float_8066D298:
+.obj float_8066D298, global
 	.float 0.5
+.endobj float_8066D298
 
 
-.global float_8066D29C
-float_8066D29C:
+.obj float_8066D29C, global
 	.float 0.0001 #0x38D1B717
+.endobj float_8066D29C
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

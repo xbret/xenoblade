@@ -205,6 +205,9 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-det_epsilon__Q34nw4r3g3d6detail:
+.balign 8
+
+.obj det_epsilon__Q34nw4r3g3d6detail, local
 	.float 1.0e-36
 	.4byte 0
+.endobj det_epsilon__Q34nw4r3g3d6detail

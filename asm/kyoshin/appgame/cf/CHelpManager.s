@@ -1123,91 +1123,90 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CHelp_EtherMakeTIPS_typestr
-cf_CHelp_EtherMakeTIPS_typestr:
+.obj cf_CHelp_EtherMakeTIPS_typestr, global
 	.asciz "cf::CHelp_EtherMakeTIPS"
+.endobj cf_CHelp_EtherMakeTIPS_typestr
 
-.global cf_CHelp_EtherMake_typestr
-cf_CHelp_EtherMake_typestr:
+.obj cf_CHelp_EtherMake_typestr, global
 	.asciz "cf::CHelp_EtherMake"
+.endobj cf_CHelp_EtherMake_typestr
 
-.global cf_CHelp_TalkTIPS_typestr
-cf_CHelp_TalkTIPS_typestr:
+.obj cf_CHelp_TalkTIPS_typestr, global
 	.asciz "cf::CHelp_TalkTIPS"
 	.balign 4
+.endobj cf_CHelp_TalkTIPS_typestr
 
-.global cf_CHelp_Talk_typestr
-cf_CHelp_Talk_typestr:
+.obj cf_CHelp_Talk_typestr, global
 	.asciz "cf::CHelp_Talk"
 	.balign 4
+.endobj cf_CHelp_Talk_typestr
 
-.global cf_CHelp_KizunaTIPS_typestr
-cf_CHelp_KizunaTIPS_typestr:
+.obj cf_CHelp_KizunaTIPS_typestr, global
 	.asciz "cf::CHelp_KizunaTIPS"
 	.balign 4
+.endobj cf_CHelp_KizunaTIPS_typestr
 
-.global cf_CHelp_Kizuna_typestr
-cf_CHelp_Kizuna_typestr:
+.obj cf_CHelp_Kizuna_typestr, global
 	.asciz "cf::CHelp_Kizuna"
 	.balign 4
+.endobj cf_CHelp_Kizuna_typestr
 
-.global cf_CHelp_EndEventTIPS_typestr
-cf_CHelp_EndEventTIPS_typestr:
+.obj cf_CHelp_EndEventTIPS_typestr, global
 	.asciz "cf::CHelp_EndEventTIPS"
 	.balign 4
+.endobj cf_CHelp_EndEventTIPS_typestr
 
-.global cf_CHelp_EndEvent_typestr
-cf_CHelp_EndEvent_typestr:
+.obj cf_CHelp_EndEvent_typestr, global
 	.asciz "cf::CHelp_EndEvent"
 	.balign 4
+.endobj cf_CHelp_EndEvent_typestr
 
-.global cf_CHelp_AlwaysTIPS_typestr
-cf_CHelp_AlwaysTIPS_typestr:
+.obj cf_CHelp_AlwaysTIPS_typestr, global
 	.asciz "cf::CHelp_AlwaysTIPS"
 	.balign 4
+.endobj cf_CHelp_AlwaysTIPS_typestr
 
-.global cf_CHelp_Always_typestr
-cf_CHelp_Always_typestr:
+.obj cf_CHelp_Always_typestr, global
 	.asciz "cf::CHelp_Always"
 	.balign 4
 	.4byte 0
+.endobj cf_CHelp_Always_typestr
 
-.global cf_CHelpSwitch_typestr
-cf_CHelpSwitch_typestr:
+.obj cf_CHelpSwitch_typestr, global
 	.asciz "cf::CHelpSwitch"
+.endobj cf_CHelpSwitch_typestr
 
-.global cf_CHelp_typestr
-cf_CHelp_typestr:
+.obj cf_CHelp_typestr, global
 	.asciz "cf::CHelp"
 	.balign 4
+.endobj cf_CHelp_typestr
 
-.global cf_CHelpManager_typestr
-cf_CHelpManager_typestr:
+.obj cf_CHelpManager_typestr, global
 	.asciz "cf::CHelpManager"
 	.balign 4
+.endobj cf_CHelpManager_typestr
 
-.global lbl_8050B540
-lbl_8050B540:
+.obj lbl_8050B540, global
 	.asciz "vs01240050"
 	.balign 4
 	.4byte 0
+.endobj lbl_8050B540
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8053C4E0
-lbl_8053C4E0:
+.obj lbl_8053C4E0, global
 	.4byte lbl_8057A408
 	.4byte lbl_8057A418
 	.4byte lbl_8057A428
 	.4byte 0
+.endobj lbl_8053C4E0
 
-.global lbl_8053C4F0
-lbl_8053C4F0:
+.obj lbl_8053C4F0, global
 	.4byte lbl_8057A438
 	.4byte lbl_8057A448
 	.4byte lbl_8057A458
@@ -1216,9 +1215,9 @@ lbl_8053C4F0:
 	.4byte lbl_8057A48C
 	.4byte lbl_8057A498
 	.4byte 0
+.endobj lbl_8053C4F0
 
-.global lbl_8053C510
-lbl_8053C510:
+.obj lbl_8053C510, global
 	.4byte lbl_8057A4A8
 	.4byte lbl_8057A4BC
 	.4byte lbl_8057A4C8
@@ -1229,84 +1228,84 @@ lbl_8053C510:
 	.4byte lbl_8057A504
 	.4byte 0
 	.4byte 0
+.endobj lbl_8053C510
 
-.global lbl_8053C538
-lbl_8053C538:
+.obj lbl_8053C538, global
 	.4byte lbl_8057A510
 	.4byte lbl_8057A520
 	.4byte lbl_8057A52C
 	.4byte 0
+.endobj lbl_8053C538
 
-.global lbl_8053C548
-lbl_8053C548:
+.obj lbl_8053C548, global
 	.4byte lbl_8057A548
 	.4byte lbl_8057A55C
 	.4byte 0
 	.4byte 0
+.endobj lbl_8053C548
 
-.global lbl_8053C558
-lbl_8053C558:
+.obj lbl_8053C558, global
 	.4byte lbl_8057A568
 	.4byte lbl_8057A578
 	.4byte lbl_8057A584
 	.4byte lbl_8057A590
 	.4byte lbl_8057A59C
 	.4byte 0
+.endobj lbl_8053C558
 
-.global lbl_8053C570
-lbl_8053C570:
+.obj lbl_8053C570, global
 	.4byte lbl_8057A5A8
 	.4byte lbl_8057A5B8
 	.4byte lbl_8057A5C4
 	.4byte lbl_8057A5D0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8053C570
 
-.global lbl_8053C588
-lbl_8053C588:
+.obj lbl_8053C588, global
 	.4byte lbl_8057A5E0
 	.4byte lbl_8057A5F0
 	.4byte lbl_8057A5FC
 	.4byte lbl_8057A610
 	.4byte lbl_8057A61C
 	.4byte 0
+.endobj lbl_8053C588
 
-.global lbl_8053C5A0
-lbl_8053C5A0:
+.obj lbl_8053C5A0, global
 	.4byte lbl_8057A670
 	.4byte lbl_8057A684
 	.4byte 0
+.endobj lbl_8053C5A0
 
-.global lbl_8053C5AC
-lbl_8053C5AC:
+.obj lbl_8053C5AC, global
 	.4byte lbl_8057A6E0
 	.4byte lbl_8057A6F0
 	.4byte 0
+.endobj lbl_8053C5AC
 
-.global lbl_8053C5B8
-lbl_8053C5B8:
+.obj lbl_8053C5B8, global
 	.4byte lbl_8057A700
 	.4byte lbl_8057A710
 	.4byte lbl_8057A71C
 	.4byte 0
+.endobj lbl_8053C5B8
 
-.global lbl_8053C5C8
-lbl_8053C5C8:
+.obj lbl_8053C5C8, global
 	.4byte lbl_8057A73C
 	.4byte lbl_8057A750
 	.4byte lbl_8057A75C
 	.4byte 0
+.endobj lbl_8053C5C8
 
-.global lbl_8053C5D8
-lbl_8053C5D8:
+.obj lbl_8053C5D8, global
 	.4byte lbl_8057A7C0
 	.4byte lbl_8057A7D4
 	.4byte 0
 	.4byte 0
+.endobj lbl_8053C5D8
 
 
-.global lbl_8053C5E8
-lbl_8053C5E8:
+.obj lbl_8053C5E8, global
 	.4byte lbl_8057A82C
 	.4byte lbl_8057A838
 	.4byte lbl_8057A844
@@ -1331,10 +1330,10 @@ lbl_8053C5E8:
 	.4byte lbl_8057A9AC
 	.4byte lbl_8057A9B8
 	.4byte 0
+.endobj lbl_8053C5E8
 
 
-.global lbl_8053C648
-lbl_8053C648:
+.obj lbl_8053C648, global
 	.4byte 0x00000003
 	.4byte lbl_8053C4E0
 	.4byte 0x00000005
@@ -1401,9 +1400,9 @@ lbl_8053C648:
 	.4byte lbl_806654C8
 	.4byte 0
 	.4byte 0
+.endobj lbl_8053C648
 
-.global __vt__cf_CHelp_EtherMakeTIPS
-__vt__cf_CHelp_EtherMakeTIPS:
+.obj __vt__cf_CHelp_EtherMakeTIPS, global
 	.4byte __RTTI__cf_CHelp_EtherMakeTIPS
 	.4byte 0
 	.4byte func_80295D88
@@ -1411,24 +1410,24 @@ __vt__cf_CHelp_EtherMakeTIPS:
 	.4byte func_802B80A4
 	.4byte func_802B80EC
 	.4byte func_80295D80
+.endobj __vt__cf_CHelp_EtherMakeTIPS
 
-.global cf_CHelp_EtherMakeTIPS_hierarchy
-cf_CHelp_EtherMakeTIPS_hierarchy:
+.obj cf_CHelp_EtherMakeTIPS_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte __RTTI__cf_CHelp_EtherMake
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelp_EtherMakeTIPS_hierarchy
 
-.global cf_CHelp_EtherMake_hierarchy
-cf_CHelp_EtherMake_hierarchy:
+.obj cf_CHelp_EtherMake_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelp_EtherMake_hierarchy
 
 
-.global __vt__cf_CHelp_TalkTIPS
-__vt__cf_CHelp_TalkTIPS:
+.obj __vt__cf_CHelp_TalkTIPS, global
 	.4byte __RTTI__cf_CHelp_TalkTIPS
 	.4byte 0
 	.4byte func_802B86BC
@@ -1438,9 +1437,9 @@ __vt__cf_CHelp_TalkTIPS:
 	.4byte func_80295D80
 	.4byte func_802B7CBC
 	.4byte func_802B7CE4
+.endobj __vt__cf_CHelp_TalkTIPS
 
-.global cf_CHelp_TalkTIPS_hierarchy
-cf_CHelp_TalkTIPS_hierarchy:
+.obj cf_CHelp_TalkTIPS_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte __RTTI__cf_CHelpSwitch
@@ -1448,18 +1447,18 @@ cf_CHelp_TalkTIPS_hierarchy:
 	.4byte __RTTI__cf_CHelp_Talk
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelp_TalkTIPS_hierarchy
 
-.global cf_CHelp_Talk_hierarchy
-cf_CHelp_Talk_hierarchy:
+.obj cf_CHelp_Talk_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte __RTTI__cf_CHelpSwitch
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelp_Talk_hierarchy
 
 
-.global __vt__cf_CHelp_KizunaTIPS
-__vt__cf_CHelp_KizunaTIPS:
+.obj __vt__cf_CHelp_KizunaTIPS, global
 	.4byte __RTTI__cf_CHelp_KizunaTIPS
 	.4byte 0
 	.4byte func_80295D88
@@ -1467,24 +1466,24 @@ __vt__cf_CHelp_KizunaTIPS:
 	.4byte func_802B818C
 	.4byte func_80295D90
 	.4byte func_80295D80
+.endobj __vt__cf_CHelp_KizunaTIPS
 
-.global cf_CHelp_KizunaTIPS_hierarchy
-cf_CHelp_KizunaTIPS_hierarchy:
+.obj cf_CHelp_KizunaTIPS_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte __RTTI__cf_CHelp_Kizuna
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelp_KizunaTIPS_hierarchy
 
-.global cf_CHelp_Kizuna_hierarchy
-cf_CHelp_Kizuna_hierarchy:
+.obj cf_CHelp_Kizuna_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelp_Kizuna_hierarchy
 
 
-.global __vt__cf_CHelp_EndEventTIPS
-__vt__cf_CHelp_EndEventTIPS:
+.obj __vt__cf_CHelp_EndEventTIPS, global
 	.4byte __RTTI__cf_CHelp_EndEventTIPS
 	.4byte 0
 	.4byte func_802B7CB0
@@ -1494,9 +1493,9 @@ __vt__cf_CHelp_EndEventTIPS:
 	.4byte func_80295D80
 	.4byte func_802B7CBC
 	.4byte func_802B7CE4
+.endobj __vt__cf_CHelp_EndEventTIPS
 
-.global cf_CHelp_EndEventTIPS_hierarchy
-cf_CHelp_EndEventTIPS_hierarchy:
+.obj cf_CHelp_EndEventTIPS_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte __RTTI__cf_CHelpSwitch
@@ -1504,18 +1503,18 @@ cf_CHelp_EndEventTIPS_hierarchy:
 	.4byte __RTTI__cf_CHelp_EndEvent
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelp_EndEventTIPS_hierarchy
 
-.global cf_CHelp_EndEvent_hierarchy
-cf_CHelp_EndEvent_hierarchy:
+.obj cf_CHelp_EndEvent_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte __RTTI__cf_CHelpSwitch
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelp_EndEvent_hierarchy
 
 
-.global __vt__cf_CHelp_AlwaysTIPS
-__vt__cf_CHelp_AlwaysTIPS:
+.obj __vt__cf_CHelp_AlwaysTIPS, global
 	.4byte __RTTI__cf_CHelp_AlwaysTIPS
 	.4byte 0
 	.4byte func_80295D88
@@ -1523,18 +1522,18 @@ __vt__cf_CHelp_AlwaysTIPS:
 	.4byte func_80295DA4
 	.4byte func_80295D90
 	.4byte func_80295D80
+.endobj __vt__cf_CHelp_AlwaysTIPS
 
-.global cf_CHelp_AlwaysTIPS_hierarchy
-cf_CHelp_AlwaysTIPS_hierarchy:
+.obj cf_CHelp_AlwaysTIPS_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte __RTTI__cf_CHelp_Always
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelp_AlwaysTIPS_hierarchy
 
 
-.global __vt__cf_CHelp_Always
-__vt__cf_CHelp_Always:
+.obj __vt__cf_CHelp_Always, global
 	.4byte __RTTI__cf_CHelp_Always
 	.4byte 0
 	.4byte func_80295D88
@@ -1542,481 +1541,572 @@ __vt__cf_CHelp_Always:
 	.4byte func_80295DA4
 	.4byte func_80295D90
 	.4byte func_80295D80
+.endobj __vt__cf_CHelp_Always
 
-.global cf_CHelp_Always_hierarchy
-cf_CHelp_Always_hierarchy:
+.obj cf_CHelp_Always_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelp_Always_hierarchy
 
-.global cf_CHelpSwitch_hierarchy
-cf_CHelpSwitch_hierarchy:
+.obj cf_CHelpSwitch_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelpSwitch_hierarchy
 
 
-.global __vt__cf_CHelpManager
-__vt__cf_CHelpManager:
+.obj __vt__cf_CHelpManager, global
 	.4byte __RTTI__cf_CHelpManager
 	.4byte 0
 	.4byte __dt__cf_CHelpManager
+.endobj __vt__cf_CHelpManager
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80665438
-lbl_80665438:
+.obj lbl_80665438, global
 	.4byte lbl_8057A538
 	.4byte 0
+.endobj lbl_80665438
 
-.global lbl_80665440
-lbl_80665440:
+.obj lbl_80665440, global
 	.4byte lbl_8057A628
 	.4byte 0
+.endobj lbl_80665440
 
-.global lbl_80665448
-lbl_80665448:
+.obj lbl_80665448, global
 	.4byte lbl_8057A63C
 	.4byte 0
+.endobj lbl_80665448
 
-.global lbl_80665450
-lbl_80665450:
+.obj lbl_80665450, global
 	.4byte lbl_8057A650
 	.4byte 0
+.endobj lbl_80665450
 
-.global lbl_80665458
-lbl_80665458:
+.obj lbl_80665458, global
 	.4byte lbl_8057A660
 	.4byte 0
+.endobj lbl_80665458
 
-.global lbl_80665460
-lbl_80665460:
+.obj lbl_80665460, global
 	.4byte lbl_8057A690
 	.4byte 0
+.endobj lbl_80665460
 
-.global lbl_80665468
-lbl_80665468:
+.obj lbl_80665468, global
 	.4byte lbl_8057A6A8
 	.4byte 0
+.endobj lbl_80665468
 
-.global lbl_80665470
-lbl_80665470:
+.obj lbl_80665470, global
 	.4byte lbl_8057A6B8
 	.4byte 0
+.endobj lbl_80665470
 
-.global lbl_80665478
-lbl_80665478:
+.obj lbl_80665478, global
 	.4byte lbl_8057A6C8
 	.4byte 0
+.endobj lbl_80665478
 
-.global lbl_80665480
-lbl_80665480:
+.obj lbl_80665480, global
 	.4byte lbl_8057A728
 	.4byte 0
+.endobj lbl_80665480
 
-.global lbl_80665488
-lbl_80665488:
+.obj lbl_80665488, global
 	.4byte lbl_8057A768
 	.4byte 0
+.endobj lbl_80665488
 
-.global lbl_80665490
-lbl_80665490:
+.obj lbl_80665490, global
 	.4byte lbl_8057A77C
 	.4byte 0
+.endobj lbl_80665490
 
-.global lbl_80665498
-lbl_80665498:
+.obj lbl_80665498, global
 	.4byte lbl_8057A788
 	.4byte 0
+.endobj lbl_80665498
 
-.global lbl_806654A0
-lbl_806654A0:
+.obj lbl_806654A0, global
 	.4byte lbl_8057A7A0
 	.4byte 0
+.endobj lbl_806654A0
 
-.global lbl_806654A8
-lbl_806654A8:
+.obj lbl_806654A8, global
 	.4byte lbl_8057A7B0
 	.4byte 0
+.endobj lbl_806654A8
 
-.global lbl_806654B0
-lbl_806654B0:
+.obj lbl_806654B0, global
 	.4byte lbl_8057A7E0
 	.4byte 0
+.endobj lbl_806654B0
 
-.global lbl_806654B8
-lbl_806654B8:
+.obj lbl_806654B8, global
 	.4byte lbl_8057A7F4
 	.4byte 0
+.endobj lbl_806654B8
 
-.global lbl_806654C0
-lbl_806654C0:
+.obj lbl_806654C0, global
 	.4byte lbl_8057A808
 	.4byte 0
+.endobj lbl_806654C0
 
-.global lbl_806654C8
-lbl_806654C8:
+.obj lbl_806654C8, global
 	.4byte lbl_8057A818
 	.4byte 0
+.endobj lbl_806654C8
 
-.global __RTTI__cf_CHelp_EtherMakeTIPS
-__RTTI__cf_CHelp_EtherMakeTIPS:
+.obj __RTTI__cf_CHelp_EtherMakeTIPS, global
 	.4byte cf_CHelp_EtherMakeTIPS_typestr
 	.4byte cf_CHelp_EtherMakeTIPS_hierarchy
+.endobj __RTTI__cf_CHelp_EtherMakeTIPS
 
-.global __RTTI__cf_CHelp_EtherMake
-__RTTI__cf_CHelp_EtherMake:
+.obj __RTTI__cf_CHelp_EtherMake, global
 	.4byte cf_CHelp_EtherMake_typestr
 	.4byte cf_CHelp_EtherMake_hierarchy
+.endobj __RTTI__cf_CHelp_EtherMake
 
-.global __RTTI__cf_CHelp_TalkTIPS
-__RTTI__cf_CHelp_TalkTIPS:
+.obj __RTTI__cf_CHelp_TalkTIPS, global
 	.4byte cf_CHelp_TalkTIPS_typestr
 	.4byte cf_CHelp_TalkTIPS_hierarchy
+.endobj __RTTI__cf_CHelp_TalkTIPS
 
-.global __RTTI__cf_CHelp_Talk
-__RTTI__cf_CHelp_Talk:
+.obj __RTTI__cf_CHelp_Talk, global
 	.4byte cf_CHelp_Talk_typestr
 	.4byte cf_CHelp_Talk_hierarchy
+.endobj __RTTI__cf_CHelp_Talk
 
-.global __RTTI__cf_CHelp_KizunaTIPS
-__RTTI__cf_CHelp_KizunaTIPS:
+.obj __RTTI__cf_CHelp_KizunaTIPS, global
 	.4byte cf_CHelp_KizunaTIPS_typestr
 	.4byte cf_CHelp_KizunaTIPS_hierarchy
+.endobj __RTTI__cf_CHelp_KizunaTIPS
 
-.global __RTTI__cf_CHelp_Kizuna
-__RTTI__cf_CHelp_Kizuna:
+.obj __RTTI__cf_CHelp_Kizuna, global
 	.4byte cf_CHelp_Kizuna_typestr
 	.4byte cf_CHelp_Kizuna_hierarchy
+.endobj __RTTI__cf_CHelp_Kizuna
 
-.global __RTTI__cf_CHelp_EndEventTIPS
-__RTTI__cf_CHelp_EndEventTIPS:
+.obj __RTTI__cf_CHelp_EndEventTIPS, global
 	.4byte cf_CHelp_EndEventTIPS_typestr
 	.4byte cf_CHelp_EndEventTIPS_hierarchy
+.endobj __RTTI__cf_CHelp_EndEventTIPS
 
-.global __RTTI__cf_CHelp_EndEvent
-__RTTI__cf_CHelp_EndEvent:
+.obj __RTTI__cf_CHelp_EndEvent, global
 	.4byte cf_CHelp_EndEvent_typestr
 	.4byte cf_CHelp_EndEvent_hierarchy
+.endobj __RTTI__cf_CHelp_EndEvent
 
-.global __RTTI__cf_CHelp_AlwaysTIPS
-__RTTI__cf_CHelp_AlwaysTIPS:
+.obj __RTTI__cf_CHelp_AlwaysTIPS, global
 	.4byte cf_CHelp_AlwaysTIPS_typestr
 	.4byte cf_CHelp_AlwaysTIPS_hierarchy
+.endobj __RTTI__cf_CHelp_AlwaysTIPS
 
-.global __RTTI__cf_CHelp_Always
-__RTTI__cf_CHelp_Always:
+.obj __RTTI__cf_CHelp_Always, global
 	.4byte cf_CHelp_Always_typestr
 	.4byte cf_CHelp_Always_hierarchy
+.endobj __RTTI__cf_CHelp_Always
 
-.global __RTTI__cf_CHelpSwitch
-__RTTI__cf_CHelpSwitch:
+.obj __RTTI__cf_CHelpSwitch, global
 	.4byte cf_CHelpSwitch_typestr
 	.4byte cf_CHelpSwitch_hierarchy
+.endobj __RTTI__cf_CHelpSwitch
 
-.global __RTTI__cf_CHelp
-__RTTI__cf_CHelp:
+.obj __RTTI__cf_CHelp, global
 	.4byte cf_CHelp_typestr
 	.4byte 0
+.endobj __RTTI__cf_CHelp
 
-.global __RTTI__cf_CHelpManager
-__RTTI__cf_CHelpManager:
+.obj __RTTI__cf_CHelpManager, global
 	.4byte cf_CHelpManager_typestr
 	.4byte 0
+.endobj __RTTI__cf_CHelpManager
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B470
-float_8066B470:
+.obj float_8066B470, global
 	.float 1.0
+.endobj float_8066B470
 
 
-.global float_8066B474
-float_8066B474:
+.obj float_8066B474, global
 	.float 300 #0x43960000
+.endobj float_8066B474
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_8057A408
-lbl_8057A408:
+.obj lbl_8057A408, global
 	.skip 0x10
-.global lbl_8057A418
-lbl_8057A418:
+.endobj lbl_8057A408
+
+.obj lbl_8057A418, global
 	.skip 0x10
-.global lbl_8057A428
-lbl_8057A428:
+.endobj lbl_8057A418
+
+.obj lbl_8057A428, global
 	.skip 0x10
-.global lbl_8057A438
-lbl_8057A438:
+.endobj lbl_8057A428
+
+.obj lbl_8057A438, global
 	.skip 0x10
-.global lbl_8057A448
-lbl_8057A448:
+.endobj lbl_8057A438
+
+.obj lbl_8057A448, global
 	.skip 0x10
-.global lbl_8057A458
-lbl_8057A458:
+.endobj lbl_8057A448
+
+.obj lbl_8057A458, global
 	.skip 0x10
-.global lbl_8057A468
-lbl_8057A468:
+.endobj lbl_8057A458
+
+.obj lbl_8057A468, global
 	.skip 0x10
-.global lbl_8057A478
-lbl_8057A478:
+.endobj lbl_8057A468
+
+.obj lbl_8057A478, global
 	.skip 0x14
-.global lbl_8057A48C
-lbl_8057A48C:
+.endobj lbl_8057A478
+
+.obj lbl_8057A48C, global
 	.skip 0xC
-.global lbl_8057A498
-lbl_8057A498:
+.endobj lbl_8057A48C
+
+.obj lbl_8057A498, global
 	.skip 0x10
-.global lbl_8057A4A8
-lbl_8057A4A8:
+.endobj lbl_8057A498
+
+.obj lbl_8057A4A8, global
 	.skip 0x14
-.global lbl_8057A4BC
-lbl_8057A4BC:
+.endobj lbl_8057A4A8
+
+.obj lbl_8057A4BC, global
 	.skip 0xC
-.global lbl_8057A4C8
-lbl_8057A4C8:
+.endobj lbl_8057A4BC
+
+.obj lbl_8057A4C8, global
 	.skip 0xC
-.global lbl_8057A4D4
-lbl_8057A4D4:
+.endobj lbl_8057A4C8
+
+.obj lbl_8057A4D4, global
 	.skip 0xC
-.global lbl_8057A4E0
-lbl_8057A4E0:
+.endobj lbl_8057A4D4
+
+.obj lbl_8057A4E0, global
 	.skip 0xC
-.global lbl_8057A4EC
-lbl_8057A4EC:
+.endobj lbl_8057A4E0
+
+.obj lbl_8057A4EC, global
 	.skip 0xC
-.global lbl_8057A4F8
-lbl_8057A4F8:
+.endobj lbl_8057A4EC
+
+.obj lbl_8057A4F8, global
 	.skip 0xC
-.global lbl_8057A504
-lbl_8057A504:
+.endobj lbl_8057A4F8
+
+.obj lbl_8057A504, global
 	.skip 0xC
-.global lbl_8057A510
-lbl_8057A510:
+.endobj lbl_8057A504
+
+.obj lbl_8057A510, global
 	.skip 0x10
-.global lbl_8057A520
-lbl_8057A520:
+.endobj lbl_8057A510
+
+.obj lbl_8057A520, global
 	.skip 0xC
-.global lbl_8057A52C
-lbl_8057A52C:
+.endobj lbl_8057A520
+
+.obj lbl_8057A52C, global
 	.skip 0xC
-.global lbl_8057A538
-lbl_8057A538:
+.endobj lbl_8057A52C
+
+.obj lbl_8057A538, global
 	.skip 0x10
-.global lbl_8057A548
-lbl_8057A548:
+.endobj lbl_8057A538
+
+.obj lbl_8057A548, global
 	.skip 0x14
-.global lbl_8057A55C
-lbl_8057A55C:
+.endobj lbl_8057A548
+
+.obj lbl_8057A55C, global
 	.skip 0xC
-.global lbl_8057A568
-lbl_8057A568:
+.endobj lbl_8057A55C
+
+.obj lbl_8057A568, global
 	.skip 0x10
-.global lbl_8057A578
-lbl_8057A578:
+.endobj lbl_8057A568
+
+.obj lbl_8057A578, global
 	.skip 0xC
-.global lbl_8057A584
-lbl_8057A584:
+.endobj lbl_8057A578
+
+.obj lbl_8057A584, global
 	.skip 0xC
-.global lbl_8057A590
-lbl_8057A590:
+.endobj lbl_8057A584
+
+.obj lbl_8057A590, global
 	.skip 0xC
-.global lbl_8057A59C
-lbl_8057A59C:
+.endobj lbl_8057A590
+
+.obj lbl_8057A59C, global
 	.skip 0xC
-.global lbl_8057A5A8
-lbl_8057A5A8:
+.endobj lbl_8057A59C
+
+.obj lbl_8057A5A8, global
 	.skip 0x10
-.global lbl_8057A5B8
-lbl_8057A5B8:
+.endobj lbl_8057A5A8
+
+.obj lbl_8057A5B8, global
 	.skip 0xC
-.global lbl_8057A5C4
-lbl_8057A5C4:
+.endobj lbl_8057A5B8
+
+.obj lbl_8057A5C4, global
 	.skip 0xC
-.global lbl_8057A5D0
-lbl_8057A5D0:
+.endobj lbl_8057A5C4
+
+.obj lbl_8057A5D0, global
 	.skip 0x10
-.global lbl_8057A5E0
-lbl_8057A5E0:
+.endobj lbl_8057A5D0
+
+.obj lbl_8057A5E0, global
 	.skip 0x10
-.global lbl_8057A5F0
-lbl_8057A5F0:
+.endobj lbl_8057A5E0
+
+.obj lbl_8057A5F0, global
 	.skip 0xC
-.global lbl_8057A5FC
-lbl_8057A5FC:
+.endobj lbl_8057A5F0
+
+.obj lbl_8057A5FC, global
 	.skip 0x14
-.global lbl_8057A610
-lbl_8057A610:
+.endobj lbl_8057A5FC
+
+.obj lbl_8057A610, global
 	.skip 0xC
-.global lbl_8057A61C
-lbl_8057A61C:
+.endobj lbl_8057A610
+
+.obj lbl_8057A61C, global
 	.skip 0xC
-.global lbl_8057A628
-lbl_8057A628:
+.endobj lbl_8057A61C
+
+.obj lbl_8057A628, global
 	.skip 0x14
-.global lbl_8057A63C
-lbl_8057A63C:
+.endobj lbl_8057A628
+
+.obj lbl_8057A63C, global
 	.skip 0x14
-.global lbl_8057A650
-lbl_8057A650:
+.endobj lbl_8057A63C
+
+.obj lbl_8057A650, global
 	.skip 0x10
-.global lbl_8057A660
-lbl_8057A660:
+.endobj lbl_8057A650
+
+.obj lbl_8057A660, global
 	.skip 0x10
-.global lbl_8057A670
-lbl_8057A670:
+.endobj lbl_8057A660
+
+.obj lbl_8057A670, global
 	.skip 0x14
-.global lbl_8057A684
-lbl_8057A684:
+.endobj lbl_8057A670
+
+.obj lbl_8057A684, global
 	.skip 0xC
-.global lbl_8057A690
-lbl_8057A690:
+.endobj lbl_8057A684
+
+.obj lbl_8057A690, global
 	.skip 0x18
-.global lbl_8057A6A8
-lbl_8057A6A8:
+.endobj lbl_8057A690
+
+.obj lbl_8057A6A8, global
 	.skip 0x10
-.global lbl_8057A6B8
-lbl_8057A6B8:
+.endobj lbl_8057A6A8
+
+.obj lbl_8057A6B8, global
 	.skip 0x10
-.global lbl_8057A6C8
-lbl_8057A6C8:
+.endobj lbl_8057A6B8
+
+.obj lbl_8057A6C8, global
 	.skip 0x18
-.global lbl_8057A6E0
-lbl_8057A6E0:
+.endobj lbl_8057A6C8
+
+.obj lbl_8057A6E0, global
 	.skip 0x10
-.global lbl_8057A6F0
-lbl_8057A6F0:
+.endobj lbl_8057A6E0
+
+.obj lbl_8057A6F0, global
 	.skip 0x10
-.global lbl_8057A700
-lbl_8057A700:
+.endobj lbl_8057A6F0
+
+.obj lbl_8057A700, global
 	.skip 0x10
-.global lbl_8057A710
-lbl_8057A710:
+.endobj lbl_8057A700
+
+.obj lbl_8057A710, global
 	.skip 0xC
-.global lbl_8057A71C
-lbl_8057A71C:
+.endobj lbl_8057A710
+
+.obj lbl_8057A71C, global
 	.skip 0xC
-.global lbl_8057A728
-lbl_8057A728:
+.endobj lbl_8057A71C
+
+.obj lbl_8057A728, global
 	.skip 0x14
-.global lbl_8057A73C
-lbl_8057A73C:
+.endobj lbl_8057A728
+
+.obj lbl_8057A73C, global
 	.skip 0x14
-.global lbl_8057A750
-lbl_8057A750:
+.endobj lbl_8057A73C
+
+.obj lbl_8057A750, global
 	.skip 0xC
-.global lbl_8057A75C
-lbl_8057A75C:
+.endobj lbl_8057A750
+
+.obj lbl_8057A75C, global
 	.skip 0xC
-.global lbl_8057A768
-lbl_8057A768:
+.endobj lbl_8057A75C
+
+.obj lbl_8057A768, global
 	.skip 0x14
-.global lbl_8057A77C
-lbl_8057A77C:
+.endobj lbl_8057A768
+
+.obj lbl_8057A77C, global
 	.skip 0xC
-.global lbl_8057A788
-lbl_8057A788:
+.endobj lbl_8057A77C
+
+.obj lbl_8057A788, global
 	.skip 0x18
-.global lbl_8057A7A0
-lbl_8057A7A0:
+.endobj lbl_8057A788
+
+.obj lbl_8057A7A0, global
 	.skip 0x10
-.global lbl_8057A7B0
-lbl_8057A7B0:
+.endobj lbl_8057A7A0
+
+.obj lbl_8057A7B0, global
 	.skip 0x10
-.global lbl_8057A7C0
-lbl_8057A7C0:
+.endobj lbl_8057A7B0
+
+.obj lbl_8057A7C0, global
 	.skip 0x14
-.global lbl_8057A7D4
-lbl_8057A7D4:
+.endobj lbl_8057A7C0
+
+.obj lbl_8057A7D4, global
 	.skip 0xC
-.global lbl_8057A7E0
-lbl_8057A7E0:
+.endobj lbl_8057A7D4
+
+.obj lbl_8057A7E0, global
 	.skip 0x14
-.global lbl_8057A7F4
-lbl_8057A7F4:
+.endobj lbl_8057A7E0
+
+.obj lbl_8057A7F4, global
 	.skip 0x14
-.global lbl_8057A808
-lbl_8057A808:
+.endobj lbl_8057A7F4
+
+.obj lbl_8057A808, global
 	.skip 0x10
-.global lbl_8057A818
-lbl_8057A818:
+.endobj lbl_8057A808
+
+.obj lbl_8057A818, global
 	.skip 0x14
-.global lbl_8057A82C
-lbl_8057A82C:
+.endobj lbl_8057A818
+
+.obj lbl_8057A82C, global
 	.skip 0xC
-.global lbl_8057A838
-lbl_8057A838:
+.endobj lbl_8057A82C
+
+.obj lbl_8057A838, global
 	.skip 0xC
-.global lbl_8057A844
-lbl_8057A844:
+.endobj lbl_8057A838
+
+.obj lbl_8057A844, global
 	.skip 0xC
-.global lbl_8057A850
-lbl_8057A850:
+.endobj lbl_8057A844
+
+.obj lbl_8057A850, global
 	.skip 0xC
-.global lbl_8057A85C
-lbl_8057A85C:
+.endobj lbl_8057A850
+
+.obj lbl_8057A85C, global
 	.skip 0xC
-.global lbl_8057A868
-lbl_8057A868:
+.endobj lbl_8057A85C
+
+.obj lbl_8057A868, global
 	.skip 0x18
-.global lbl_8057A880
-lbl_8057A880:
+.endobj lbl_8057A868
+
+.obj lbl_8057A880, global
 	.skip 0x10
-.global lbl_8057A890
-lbl_8057A890:
+.endobj lbl_8057A880
+
+.obj lbl_8057A890, global
 	.skip 0x10
-.global lbl_8057A8A0
-lbl_8057A8A0:
+.endobj lbl_8057A890
+
+.obj lbl_8057A8A0, global
 	.skip 0x1C
-.global lbl_8057A8BC
-lbl_8057A8BC:
+.endobj lbl_8057A8A0
+
+.obj lbl_8057A8BC, global
 	.skip 0x1C
-.global lbl_8057A8D8
-lbl_8057A8D8:
+.endobj lbl_8057A8BC
+
+.obj lbl_8057A8D8, global
 	.skip 0x10
-.global lbl_8057A8E8
-lbl_8057A8E8:
+.endobj lbl_8057A8D8
+
+.obj lbl_8057A8E8, global
 	.skip 0x10
-.global lbl_8057A8F8
-lbl_8057A8F8:
+.endobj lbl_8057A8E8
+
+.obj lbl_8057A8F8, global
 	.skip 0x18
-.global lbl_8057A910
-lbl_8057A910:
+.endobj lbl_8057A8F8
+
+.obj lbl_8057A910, global
 	.skip 0x14
-.global lbl_8057A924
-lbl_8057A924:
+.endobj lbl_8057A910
+
+.obj lbl_8057A924, global
 	.skip 0x14
-.global lbl_8057A938
-lbl_8057A938:
+.endobj lbl_8057A924
+
+.obj lbl_8057A938, global
 	.skip 0x10
-.global lbl_8057A948
-lbl_8057A948:
+.endobj lbl_8057A938
+
+.obj lbl_8057A948, global
 	.skip 0x10
-.global lbl_8057A958
-lbl_8057A958:
+.endobj lbl_8057A948
+
+.obj lbl_8057A958, global
 	.skip 0x18
-.global lbl_8057A970
-lbl_8057A970:
+.endobj lbl_8057A958
+
+.obj lbl_8057A970, global
 	.skip 0x18
-.global lbl_8057A988
-lbl_8057A988:
+.endobj lbl_8057A970
+
+.obj lbl_8057A988, global
 	.skip 0x18
-.global lbl_8057A9A0
-lbl_8057A9A0:
+.endobj lbl_8057A988
+
+.obj lbl_8057A9A0, global
 	.skip 0xC
-.global lbl_8057A9AC
-lbl_8057A9AC:
+.endobj lbl_8057A9A0
+
+.obj lbl_8057A9AC, global
 	.skip 0xC
-.global lbl_8057A9B8
-lbl_8057A9B8:
+.endobj lbl_8057A9AC
+
+.obj lbl_8057A9B8, global
 	.skip 0x10
+.endobj lbl_8057A9B8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -216,9 +216,10 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-.global gSinCosTbl__Q34nw4r4math6detail
-gSinCosTbl__Q34nw4r4math6detail:
+
+.obj gSinCosTbl__Q34nw4r4math6detail, global
     .float 0 #0
     .float 1.0
     .float 0.024541
@@ -1247,10 +1248,13 @@ gSinCosTbl__Q34nw4r4math6detail:
     .float 1.0
     .float 0.024541
     .float -0.00030099999
+.endobj gSinCosTbl__Q34nw4r4math6detail
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-"sArcTanTbl__Q34nw4r4math29@unnamed@math_triangular_cpp@":
+.balign 8
+
+.obj "sArcTanTbl__Q34nw4r4math29@unnamed@math_triangular_cpp@", local
     .float 0 #0
     .float 1.2728254
     .float 1.2728254
@@ -1317,41 +1321,44 @@ gSinCosTbl__Q34nw4r4math6detail:
     .float 0.64667052
     .float 32
     .float 0.62677616
+.endobj "sArcTanTbl__Q34nw4r4math29@unnamed@math_triangular_cpp@"
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C620
-float_8066C620:
+.balign 8
+
+.obj float_8066C620, global
 	.float 65536
+.endobj float_8066C620
 
 
-.global float_8066C624
-float_8066C624:
+.obj float_8066C624, global
 	.float 0
+.endobj float_8066C624
 
 
-.global float_8066C628
-float_8066C628:
+.obj float_8066C628, global
 	.float 32
+.endobj float_8066C628
 
 
-.global float_8066C62C
-float_8066C62C:
+.obj float_8066C62C, global
 	.float 64
+.endobj float_8066C62C
 
 
-.global float_8066C630
-float_8066C630:
+.obj float_8066C630, global
 	.float -64
+.endobj float_8066C630
 
 
-.global float_8066C634
-float_8066C634:
+.obj float_8066C634, global
 	.float 128
+.endobj float_8066C634
 
 
-.global float_8066C638
-float_8066C638:
+.obj float_8066C638, global
 	.4byte 0xC3000000
 	.4byte 0
+.endobj float_8066C638

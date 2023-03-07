@@ -1545,42 +1545,55 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8054B658
-lbl_8054B658:
+.balign 8
+
+.obj lbl_8054B658, global
 	.asciz "APP ERROR: Not enough IPC arena\n"
 	.balign 4
 	.4byte 0
+.endobj lbl_8054B658
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-__fsFd:
+.balign 8
+
+.obj __fsFd, local
 	.4byte 0xFFFFFFFF
 	.4byte 0
+.endobj __fsFd
 
 
-.global lbl_806659E8
-lbl_806659E8:
+.obj lbl_806659E8, global
 	.asciz "/dev/fs"
+.endobj lbl_806659E8
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-__fsInitialized:
-	.skip 0x4
 
-__devfs:
+.obj __fsInitialized, local
 	.skip 0x4
+.endobj __fsInitialized
 
-_asynCnt:
+.obj __devfs, local
 	.skip 0x4
+.endobj __devfs
+
+.obj _asynCnt, local
+	.skip 0x4
+.endobj _asynCnt
 
 #@LOCAL@ISFS_OpenLib__Fv@lo
-lbl_806678FC:
+.obj lbl_806678FC, local
 	.skip 0x4
+.endobj lbl_806678FC
 
 #@LOCAL@ISFS_OpenLib__Fv@hi@0
-lbl_80667900:
+.obj lbl_80667900, local
 	.skip 0x4
+.endobj lbl_80667900
 
-hId:
+.obj hId, local
 	.skip 0x4
+.endobj hId

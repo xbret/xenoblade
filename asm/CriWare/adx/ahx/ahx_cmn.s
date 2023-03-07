@@ -19,9 +19,10 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global ahxcmn_multiple_tbl
-ahxcmn_multiple_tbl:
+
+.obj ahxcmn_multiple_tbl, global
 	.float 2.0
 	.4byte 0x3FCB2FF5
 	.4byte 0x3FA14518
@@ -86,30 +87,31 @@ ahxcmn_multiple_tbl:
 	.4byte 0x35CB2FF5
 	.4byte 0x35A14518
 	.4byte 0x1E3CE508
+.endobj ahxcmn_multiple_tbl
 
 
-.global lbl_80569180
-lbl_80569180:
+.obj lbl_80569180, global
 	.4byte ahxdcd_atbl
+.endobj lbl_80569180
 
 
-.global lbl_80569184
-lbl_80569184:
+.obj lbl_80569184, global
 	.4byte 0x00003000
+.endobj lbl_80569184
 
 
-.global lbl_80569188
-lbl_80569188:
+.obj lbl_80569188, global
 	.4byte ahxcmn_multiple_tbl
+.endobj lbl_80569188
 
 
-.global lbl_8056918C
-lbl_8056918C:
+.obj lbl_8056918C, global
 	.4byte 0x00000100
+.endobj lbl_8056918C
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
-.global lbl_805E9B08
-lbl_805E9B08:
+.obj lbl_805E9B08, global
 	.skip 0x8
+.endobj lbl_805E9B08

@@ -184,26 +184,30 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80543FD0
-lbl_80543FD0:
+.balign 8
+
+.obj lbl_80543FD0, global
 	.asciz "BTA got event 0x%x"
 	.balign 4
+.endobj lbl_80543FD0
 
 
-.global lbl_80543FE4
-lbl_80543FE4:
+.obj lbl_80543FE4, global
 	.asciz "BTA got unregistered event id %d"
 	.balign 4
+.endobj lbl_80543FE4
 
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global bta_sys_cb
-bta_sys_cb:
+.obj bta_sys_cb, global
 	.skip 0x90
+.endobj bta_sys_cb
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global appl_trace_level
-appl_trace_level:
+.balign 8
+
+.obj appl_trace_level, global
 	.skip 0x8
+.endobj appl_trace_level

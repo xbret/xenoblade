@@ -940,24 +940,23 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_80527A00
-lbl_80527A00:
+.obj lbl_80527A00, global
 	.asciz "camset %d %v3 %v3 %f %f %f %f"
 	.balign 4
+.endobj lbl_80527A00
 
-.global CScnCameraMan_typestr
-CScnCameraMan_typestr:
+.obj CScnCameraMan_typestr, global
 	.asciz "CScnCameraMan"
 	.balign 4
+.endobj CScnCameraMan_typestr
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CScnCameraMan
-__vt__CScnCameraMan:
+.obj __vt__CScnCameraMan, global
 	.4byte __RTTI__CScnCameraMan
 	.4byte 0
 	.4byte __dt__CScnCameraMan
@@ -992,72 +991,73 @@ __vt__CScnCameraMan:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CScnCameraMan
 
-.global CScnCameraMan_hierarchy
-CScnCameraMan_hierarchy:
+.obj CScnCameraMan_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CScnCameraMan_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80666328
-lbl_80666328:
+.obj lbl_80666328, global
 	.4byte lbl_80527A00
+.endobj lbl_80666328
 
 
-.global lbl_8066632C
-lbl_8066632C:
+.obj lbl_8066632C, global
 	.4byte 0xFFFFFFFF
+.endobj lbl_8066632C
 
-.global __RTTI__CScnCameraMan
-__RTTI__CScnCameraMan:
+.obj __RTTI__CScnCameraMan, global
 	.4byte CScnCameraMan_typestr
 	.4byte CScnCameraMan_hierarchy
+.endobj __RTTI__CScnCameraMan
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066D308
-float_8066D308:
+.obj float_8066D308, global
 	.float 0.0174532887 #0x3C8EFA33
 	.4byte 0
+.endobj float_8066D308
 
 
-.global float_8066D310
-float_8066D310:
+.obj float_8066D310, global
 	.float -500 #0xC3FA0000
+.endobj float_8066D310
 
 
-.global float_8066D314
-float_8066D314:
+.obj float_8066D314, global
 	.float 1.0
+.endobj float_8066D314
 
 
-.global float_8066D318
-float_8066D318:
+.obj float_8066D318, global
 	.float 0.5
 	.4byte 0
+.endobj float_8066D318
 
 
-.global double_8066D320
-double_8066D320:
+.obj double_8066D320, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066D320
 
-.global float_8066D328
-float_8066D328:
+.obj float_8066D328, global
 	.float 0
+.endobj float_8066D328
 
 
-.global float_8066D32C
-float_8066D32C:
+.obj float_8066D32C, global
 	.float 0.947 #0x3F726E98
+.endobj float_8066D32C
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

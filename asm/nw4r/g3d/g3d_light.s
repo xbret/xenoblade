@@ -982,87 +982,89 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C500
-float_8066C500:
+.balign 8
+
+.obj float_8066C500, global
 	.float 0
+.endobj float_8066C500
 
 
-.global float_8066C504
-float_8066C504:
+.obj float_8066C504, global
 	.float 1.0
+.endobj float_8066C504
 
 
-.global float_8066C508
-float_8066C508:
+.obj float_8066C508, global
 	.float 0.5
+.endobj float_8066C508
 
 
-.global lbl_8066C50C
-lbl_8066C50C:
+.obj lbl_8066C50C, global
 	.byte 0xFF
+.endobj lbl_8066C50C
 
 
-.global lbl_8066C50D
-lbl_8066C50D:
+.obj lbl_8066C50D, global
 	.byte 0xFF
+.endobj lbl_8066C50D
 
 
-.global lbl_8066C50E
-lbl_8066C50E:
+.obj lbl_8066C50E, global
 	.byte 0xFF
+.endobj lbl_8066C50E
 
 
-.global lbl_8066C50F
-lbl_8066C50F:
+.obj lbl_8066C50F, global
 	.byte 0xFF
+.endobj lbl_8066C50F
 
 
-.global lbl_8066C510
-lbl_8066C510:
+.obj lbl_8066C510, global
 	.byte 0xFF
+.endobj lbl_8066C510
 
 
-.global lbl_8066C511
-lbl_8066C511:
+.obj lbl_8066C511, global
 	.byte 0xFF
+.endobj lbl_8066C511
 
 
-.global lbl_8066C512
-lbl_8066C512:
+.obj lbl_8066C512, global
 	.byte 0xFF
+.endobj lbl_8066C512
 
 
-.global lbl_8066C513
-lbl_8066C513:
+.obj lbl_8066C513, global
 	.byte 0xFF
+.endobj lbl_8066C513
 
 
-.global float_8066C514
-float_8066C514:
+.obj float_8066C514, global
 	.float 4000000 #0x4A742400
+.endobj float_8066C514
 
 
-.global float_8066C518
-float_8066C518:
+.obj float_8066C518, global
 	.float -1.0
+.endobj float_8066C518
 
 
-.global float_8066C51C
-float_8066C51C:
+.obj float_8066C51C, global
 	.float 90 #0x42B40000
+.endobj float_8066C51C
 
 
-.global float_8066C520
-float_8066C520:
+.obj float_8066C520, global
 	.float 10.0
+.endobj float_8066C520
 
 
-.global float_8066C524
-float_8066C524:
+.obj float_8066C524, global
 	.float 8.0
+.endobj float_8066C524
 
 
-.global float_8066C528
-float_8066C528:
+.obj float_8066C528, global
 	.4byte 0xC0E00000
 	.4byte 0
+.endobj float_8066C528

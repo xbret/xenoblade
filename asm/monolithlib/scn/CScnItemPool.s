@@ -1408,28 +1408,27 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CScnItemPool_typestr
-CScnItemPool_typestr:
+.obj CScnItemPool_typestr, global
 	.asciz "CScnItemPool"
 	.balign 4
+.endobj CScnItemPool_typestr
 
-.global reslist_CScnItem_typestr
-reslist_CScnItem_typestr:
+.obj reslist_CScnItem_typestr, global
 	.asciz "reslist<CScnItem *>"
+.endobj reslist_CScnItem_typestr
 
-.global _reslist_base_CScnItem_typestr
-_reslist_base_CScnItem_typestr:
+.obj _reslist_base_CScnItem_typestr, global
 	.asciz "_reslist_base<CScnItem *>"
 	.balign 4
+.endobj _reslist_base_CScnItem_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CScnItemPool
-__vt__CScnItemPool:
+.obj __vt__CScnItemPool, global
 	.4byte __RTTI__CScnItemPool
 	.4byte 0
 	.4byte __dt__CScnItemPool
@@ -1471,56 +1470,56 @@ __vt__CScnItemPool:
 	.4byte func_8048D014
 	.4byte func_80448A40
 	.4byte func_8048CF58
+.endobj __vt__CScnItemPool
 
-.global CScnItemPool_hierarchy
-CScnItemPool_hierarchy:
+.obj CScnItemPool_hierarchy, global
 	.4byte __RTTI__CDeviceVICb
 	.4byte 0x00000004
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
+.endobj CScnItemPool_hierarchy
 
 
-.global __vt__reslist_CScnItem
-__vt__reslist_CScnItem:
+.obj __vt__reslist_CScnItem, global
 	.4byte __RTTI__reslist_CScnItem
 	.4byte 0
 	.4byte __dt__reslist_CScnItem
+.endobj __vt__reslist_CScnItem
 
-.global reslist_CScnItem_hierarchy
-reslist_CScnItem_hierarchy:
+.obj reslist_CScnItem_hierarchy, global
 	.4byte __RTTI___reslist_base_CScnItem
 	.4byte 0
 	.4byte 0
+.endobj reslist_CScnItem_hierarchy
 
 
-.global __vt___reslist_base_CScnItem
-__vt___reslist_base_CScnItem:
+.obj __vt___reslist_base_CScnItem, global
 	.4byte __RTTI___reslist_base_CScnItem
 	.4byte 0
 	.4byte __dt___reslist_base_CScnItem
 	.4byte 0
+.endobj __vt___reslist_base_CScnItem
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-
-.global __RTTI__CScnItemPool
-__RTTI__CScnItemPool:
+.obj __RTTI__CScnItemPool, global
 	.4byte CScnItemPool_typestr
 	.4byte CScnItemPool_hierarchy
+.endobj __RTTI__CScnItemPool
 
-.global __RTTI__reslist_CScnItem
-__RTTI__reslist_CScnItem:
+.obj __RTTI__reslist_CScnItem, global
 	.4byte reslist_CScnItem_typestr
 	.4byte reslist_CScnItem_hierarchy
+.endobj __RTTI__reslist_CScnItem
 
-.global __RTTI___reslist_base_CScnItem
-__RTTI___reslist_base_CScnItem:
+.obj __RTTI___reslist_base_CScnItem, global
 	.4byte _reslist_base_CScnItem_typestr
 	.4byte 0
+.endobj __RTTI___reslist_base_CScnItem
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

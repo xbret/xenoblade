@@ -279,8 +279,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8053FD80
-lbl_8053FD80:
+.balign 8
+
+.obj lbl_8053FD80, global
 	.asciz "Devkit set to : %ld\n"
 	.asciz "MetroTRK : Sizeof Reply - %ld bytes\n"
 	.asciz "MetroTRK : Set to NDEV hardware\n"
@@ -290,18 +291,29 @@ lbl_8053FD80:
 	.asciz "%s\n"
 	.byte 0x00, 0x00, 0x00
 	.4byte 0
+.endobj lbl_8053FD80
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
+
+.balign 8
 #EndofProgramInstruction$162
-EndofProgramInstruction:
+.obj EndofProgramInstruction, local
 	.4byte 0x00454E44
 	.4byte 0
+.endobj EndofProgramInstruction
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
-gDBCommTable:
+
+.obj gDBCommTable, local
 	.skip 0x28
+.endobj gDBCommTable
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
-TRK_Use_BBA:
+
+.balign 8
+
+.obj TRK_Use_BBA, local
 	.skip 0x1
+.endobj TRK_Use_BBA
+
 .skip 0x7

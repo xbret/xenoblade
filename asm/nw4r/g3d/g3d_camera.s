@@ -1017,55 +1017,57 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C458
-float_8066C458:
+.balign 8
+
+.obj float_8066C458, global
 	.float 0
+.endobj float_8066C458
 
 
-.global float_8066C45C
-float_8066C45C:
+.obj float_8066C45C, global
 	.float 15 #0x41700000
+.endobj float_8066C45C
 
 
-.global float_8066C460
-float_8066C460:
+.obj float_8066C460, global
 	.float 1.0
+.endobj float_8066C460
 
 
-.global float_8066C464
-float_8066C464:
+.obj float_8066C464, global
 	.float 60 #0x42700000
+.endobj float_8066C464
 
 
-.global float_8066C468
-float_8066C468:
+.obj float_8066C468, global
 	.float 1.33333333 #0x3FAAAAAB
+.endobj float_8066C468
 
 
-.global float_8066C46C
-float_8066C46C:
+.obj float_8066C46C, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_8066C46C
 
 
-.global float_8066C470
-float_8066C470:
+.obj float_8066C470, global
 	.float 1000 #0x447A0000
+.endobj float_8066C470
 
 
-.global float_8066C474
-float_8066C474:
+.obj float_8066C474, global
 	.float 0.5
+.endobj float_8066C474
 
 
-.global double_8066C478
-double_8066C478:
+.obj double_8066C478, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066C478
 
-.global float_8066C480
-float_8066C480:
+.obj float_8066C480, global
 	.float -1.0
+.endobj float_8066C480
 
 
-.global float_8066C484
-float_8066C484:
+.obj float_8066C484, global
 	.4byte 0x3F360B61
+.endobj float_8066C484

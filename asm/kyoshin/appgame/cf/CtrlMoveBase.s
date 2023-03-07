@@ -1681,84 +1681,84 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CtrlMoveBase_typestr
-cf_CtrlMoveBase_typestr:
+.obj cf_CtrlMoveBase_typestr, global
 	.asciz "cf::CtrlMoveBase"
 	.balign 4
+.endobj cf_CtrlMoveBase_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CtrlMoveBase
-__vt__cf_CtrlMoveBase:
+.obj __vt__cf_CtrlMoveBase, global
 	.4byte __RTTI__cf_CtrlMoveBase
 	.4byte 0
 	.4byte func_80089628
+.endobj __vt__cf_CtrlMoveBase
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CtrlMoveBase
-__RTTI__cf_CtrlMoveBase:
+.obj __RTTI__cf_CtrlMoveBase, global
 	.4byte cf_CtrlMoveBase_typestr
 	.4byte 0
+.endobj __RTTI__cf_CtrlMoveBase
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_80668E20
-float_80668E20:
+.obj float_80668E20, global
 	.float 4 #0x40800000
+.endobj float_80668E20
 
 
-.global float_80668E24
-float_80668E24:
+.obj float_80668E24, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_80668E24
 
 
-.global float_80668E28
-float_80668E28:
+.obj float_80668E28, global
 	.float 0
+.endobj float_80668E28
 
 
-.global float_80668E2C
-float_80668E2C:
+.obj float_80668E2C, global
 	.float 1.0
+.endobj float_80668E2C
 
 
-.global float_80668E30
-float_80668E30:
+.obj float_80668E30, global
 	.float -2 #0xC0000000
+.endobj float_80668E30
 
 
-.global float_80668E34
-float_80668E34:
+.obj float_80668E34, global
 	.float 0.0245436933 #0x3CC90FDB
+.endobj float_80668E34
 
 
-.global float_80668E38
-float_80668E38:
+.obj float_80668E38, global
 	.float 40 #0x42200000
+.endobj float_80668E38
 
 
-.global float_80668E3C
-float_80668E3C:
+.obj float_80668E3C, global
 	.float 40.7436638 #0x4222F983
+.endobj float_80668E3C
 
 
-.global float_80668E40
-float_80668E40:
+.obj float_80668E40, global
 	.float -4 #0xC0800000
+.endobj float_80668E40
 
 
-.global float_80668E44
-float_80668E44:
+.obj float_80668E44, global
 	.float 0.7071 #0x3F350481
+.endobj float_80668E44
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

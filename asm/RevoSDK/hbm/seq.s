@@ -659,8 +659,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_80518B90
-lbl_80518B90:
+.balign 8
+
+.obj lbl_80518B90, global
 	.4byte 0x49742400
 	.4byte 0x47800000
 	.4byte 0x42C00000
@@ -671,12 +672,14 @@ lbl_80518B90:
 	.4byte 0x80000000
 	.4byte 0x467A0000
 	.4byte 0
+.endobj lbl_80518B90
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global __HBMSEQMidiEventLength
-__HBMSEQMidiEventLength:
+
+.obj __HBMSEQMidiEventLength, global
 	.byte 0x02,0x02
 	.byte 0x02,0x02
 	.byte 0x02,0x02
@@ -738,11 +741,14 @@ __HBMSEQMidiEventLength:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj __HBMSEQMidiEventLength
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-__HBMSEQSequenceList:
+.obj __HBMSEQSequenceList, local
 	.skip 0x4
+.endobj __HBMSEQSequenceList
 
-__init:
+.obj __init, local
 	.skip 0x4
+.endobj __init

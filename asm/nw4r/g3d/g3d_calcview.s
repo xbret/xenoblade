@@ -2375,7 +2375,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-"bbFunc__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@":
+.balign 8
+
+.obj "bbFunc__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@", local
 	.4byte 0
 	.4byte "Calc_BILLBOARD_STD__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl"
 	.4byte "Calc_BILLBOARD_PERSP_STD__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl"
@@ -2384,21 +2386,24 @@
 	.4byte "Calc_BILLBOARD_Y__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl"
 	.4byte "Calc_BILLBOARD_PERSP_Y__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@FPQ34nw4r4math5MTX34PCQ34nw4r4math5MTX34bPCQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlUl"
 	.4byte 0
+.endobj "bbFunc__Q34nw4r3g3d26@unnamed@g3d_calcview_cpp@"
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-.global float_8066C430
-float_8066C430:
+
+.obj float_8066C430, global
 	.float 0
+.endobj float_8066C430
 
 
-.global float_8066C434
-float_8066C434:
+.obj float_8066C434, global
 	.float 1e-18 #0x219392EF
+.endobj float_8066C434
 
 
-.global lbl_8066C438
-lbl_8066C438:
+.obj lbl_8066C438, global
 	.4byte 0x219392EF
 	.4byte 0
+.endobj lbl_8066C438

@@ -664,22 +664,23 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80552AF0
-lbl_80552AF0:
+.balign 8
+
+.obj lbl_80552AF0, global
 	.asciz "OSReset.c"
 	.balign 4
+.endobj lbl_80552AF0
 
 
-.global lbl_80552AFC
-lbl_80552AFC:
+.obj lbl_80552AFC, global
 	.asciz "__OSHotReset(): Falied to reset system.\n"
 	.balign 4
 	.asciz "__OSReturnToMenu(): Falied to boot system menu.\n"
 	.balign 4
+.endobj lbl_80552AFC
 
 
-.global lbl_80552B5C
-lbl_80552B5C:
+.obj lbl_80552B5C, global
 	.asciz "OSReturnToMenu(): Falied to boot system menu.\n"
 	.balign 4
 	.asciz "OSReturnToDataManager(): Falied to boot system menu.\n"
@@ -700,23 +701,28 @@ lbl_80552B5C:
 	.balign 4
 	.asciz "OSReturnToSetting(): You can't specify %d.  \n"
 	.balign 4
+.endobj lbl_80552B5C
 
-.global lbl_80552CDC
-lbl_80552CDC:
+.obj lbl_80552CDC, global
 	.asciz "OSResetSystem() is obsoleted. It doesn't work any longer.\n"
 	.balign 4
 	.asciz "OSSetBootDol() is obsoleted. It doesn't work any longer.\n"
 	.balign 4
 	.4byte 0
+.endobj lbl_80552CDC
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-bootThisDol:
-	.skip 0x4
+.balign 8
 
-.global __OSIsReturnToIdle
-__OSIsReturnToIdle:
+.obj bootThisDol, local
 	.skip 0x4
+.endobj bootThisDol
 
-ShutdownFunctionQueue:
+.obj __OSIsReturnToIdle, global
+	.skip 0x4
+.endobj __OSIsReturnToIdle
+
+.obj ShutdownFunctionQueue, local
 	.skip 0x8
+.endobj ShutdownFunctionQueue

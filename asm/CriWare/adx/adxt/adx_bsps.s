@@ -383,7 +383,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051C748
-lbl_8051C748:
+.balign 8
+
+.obj lbl_8051C748, global
 	.asciz "SPSD"
 	.balign 4
+.endobj lbl_8051C748

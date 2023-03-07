@@ -67,15 +67,18 @@
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
-.global ahxsetsjifunc
-ahxsetsjifunc:
+.obj ahxsetsjifunc, global
 	.skip 0x4
-.global ahxsetdecsmplfunc
-ahxsetdecsmplfunc:
+.endobj ahxsetsjifunc
+
+.obj ahxsetdecsmplfunc, global
 	.skip 0x4
-.global ahxtermsupplyfunc
-ahxtermsupplyfunc:
+.endobj ahxsetdecsmplfunc
+
+.obj ahxtermsupplyfunc, global
 	.skip 0x4
-.global ahxexecfunc
-ahxexecfunc:
+.endobj ahxtermsupplyfunc
+
+.obj ahxexecfunc, global
 	.skip 0x4
+.endobj ahxexecfunc

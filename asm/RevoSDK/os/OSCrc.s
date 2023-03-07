@@ -89,8 +89,10 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
+
 #@LOCAL@OSCalcCRC16__FPCvUl@crc16_table
-lbl_80518D10:
+.obj lbl_80518D10, local
 	.4byte 0x0000CC01
 	.4byte 0xD8011400
 	.4byte 0xF0013C00
@@ -99,3 +101,4 @@ lbl_80518D10:
 	.4byte 0x7800B401
 	.4byte 0x50009C01
 	.4byte 0x88014400
+.endobj lbl_80518D10

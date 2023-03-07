@@ -217,15 +217,14 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CWorkControl_typestr
-CWorkControl_typestr:
+.obj CWorkControl_typestr, global
 	.asciz "CWorkControl"
 	.balign 4
+.endobj CWorkControl_typestr
 
-.global CWorkControl_strpool
-CWorkControl_strpool:
+.obj CWorkControl_strpool, global
 	.asciz "CWorkFlowTvMode"
 	.asciz "CWorkFlowSetup"
 	.asciz "CWorkFlowShutdownAll"
@@ -235,14 +234,14 @@ CWorkControl_strpool:
 	.asciz "CWorkControl"
 	.balign 4
 	.4byte 0
+.endobj CWorkControl_strpool
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CWorkControl
-__vt__CWorkControl:
+.obj __vt__CWorkControl, global
 	.4byte __RTTI__CWorkControl
 	.4byte 0
 	.4byte __dt__CWorkControl
@@ -283,33 +282,34 @@ __vt__CWorkControl:
 	.4byte func_804438D0
 	.4byte func_80443904
 	.4byte func_80039E30
+.endobj __vt__CWorkControl
 
-.global CWorkControl_hierarchy
-CWorkControl_hierarchy:
+.obj CWorkControl_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CWorkControl_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CWorkControl
-__RTTI__CWorkControl:
+.obj __RTTI__CWorkControl, global
 	.4byte CWorkControl_typestr
 	.4byte CWorkControl_hierarchy
+.endobj __RTTI__CWorkControl
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80667EB8
-lbl_80667EB8:
+.obj lbl_80667EB8, global
 	.skip 0x8
+.endobj lbl_80667EB8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

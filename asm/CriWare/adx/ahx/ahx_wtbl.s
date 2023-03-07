@@ -2,8 +2,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global ahxsbf_synthesis_window_table
-ahxsbf_synthesis_window_table:
+.balign 8
+
+.obj ahxsbf_synthesis_window_table, global
 	.4byte 0
 	.4byte 0xB9E80004
 	.4byte 0x3B550000
@@ -548,8 +549,9 @@ ahxsbf_synthesis_window_table:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj ahxsbf_synthesis_window_table
 
 
-.global lbl_80566078
-lbl_80566078:
+.obj lbl_80566078, global
 	.4byte ahxsbf_synthesis_window_table
+.endobj lbl_80566078

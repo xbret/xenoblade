@@ -410,24 +410,23 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMenuTitle_typestr
-CMenuTitle_typestr:
+.obj CMenuTitle_typestr, global
 	.asciz "CMenuTitle"
 	.balign 4
+.endobj CMenuTitle_typestr
 
-.global CTTask_CMenuTitle_typestr
-CTTask_CMenuTitle_typestr:
+.obj CTTask_CMenuTitle_typestr, global
 	.asciz "CTTask<CMenuTitle>"
 	.balign 4
+.endobj CTTask_CMenuTitle_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMenuTitle
-__vt__CMenuTitle:
+.obj __vt__CMenuTitle, global
 	.4byte __RTTI__CMenuTitle
 	.4byte 0
 	.4byte __dt__CMenuTitle
@@ -476,9 +475,9 @@ __vt__CMenuTitle:
 	.4byte func_802B6324
 	.4byte func_802B631C
 	.4byte func_802B5D80
+.endobj __vt__CMenuTitle
 
-.global CMenuTitle_hierarchy
-CMenuTitle_hierarchy:
+.obj CMenuTitle_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000058
 	.4byte __RTTI__IWorkEvent
@@ -492,10 +491,10 @@ CMenuTitle_hierarchy:
 	.4byte __RTTI__CTTask_CMenuTitle
 	.4byte 0
 	.4byte 0
+.endobj CMenuTitle_hierarchy
 
 
-.global __vt__CTTask_CMenuTitle
-__vt__CTTask_CMenuTitle:
+.obj __vt__CTTask_CMenuTitle, global
 	.4byte __RTTI__CTTask_CMenuTitle
 	.4byte 0
 	.4byte __dt__CTTask_CMenuTitle
@@ -505,9 +504,9 @@ __vt__CTTask_CMenuTitle:
 	.4byte func_802B6284
 	.4byte func_802B62CC
 	.4byte func_80043F20
+.endobj __vt__CTTask_CMenuTitle
 
-.global CTTask_CMenuTitle_hierarchy
-CTTask_CMenuTitle_hierarchy:
+.obj CTTask_CMenuTitle_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -516,48 +515,49 @@ CTTask_CMenuTitle_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CTTask_CMenuTitle_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuTitle
-__RTTI__CMenuTitle:
+.obj __RTTI__CMenuTitle, global
 	.4byte CMenuTitle_typestr
 	.4byte CMenuTitle_hierarchy
+.endobj __RTTI__CMenuTitle
 
-.global __RTTI__CTTask_CMenuTitle
-__RTTI__CTTask_CMenuTitle:
+.obj __RTTI__CTTask_CMenuTitle, global
 	.4byte CTTask_CMenuTitle_typestr
 	.4byte CTTask_CMenuTitle_hierarchy
+.endobj __RTTI__CTTask_CMenuTitle
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B7D0
-float_8066B7D0:
+.obj float_8066B7D0, global
 	.float 10.0
+.endobj float_8066B7D0
 
 
-.global float_8066B7D4
-float_8066B7D4:
+.obj float_8066B7D4, global
 	.float 0
+.endobj float_8066B7D4
 
 
-.global float_8066B7D8
-float_8066B7D8:
+.obj float_8066B7D8, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066B7D8
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80667510
-lbl_80667510:
+.obj lbl_80667510, global
 	.skip 0x8
+.endobj lbl_80667510
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

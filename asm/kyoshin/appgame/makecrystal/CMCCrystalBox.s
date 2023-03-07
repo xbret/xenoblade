@@ -7736,22 +7736,21 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_80503F90
-lbl_80503F90:
+.obj lbl_80503F90, global
 	.4byte 0x00000044
 	.4byte 0x00000058
 	.4byte 0
+.endobj lbl_80503F90
 
-.global CMCCrystalBox_typestr
-CMCCrystalBox_typestr:
+.obj CMCCrystalBox_typestr, global
 	.asciz "CMCCrystalBox"
 	.balign 4
+.endobj CMCCrystalBox_typestr
 
 
-.global CMCCrystalBox_strpool
-CMCCrystalBox_strpool:
+.obj CMCCrystalBox_strpool, global
 	.asciz "%s"
 	.asciz "category"
 	.asciz "/menu/McCrystalBox.arc"
@@ -7843,13 +7842,13 @@ CMCCrystalBox_strpool:
 	.asciz "MNU_item_mes_a"
 	.asciz "MNU_skill"
 	.balign 4
+.endobj CMCCrystalBox_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global jumptable_805393D8
-jumptable_805393D8:
+.obj jumptable_805393D8, global
 	.4byte .L_8021438C
 	.4byte .L_80214310
 	.4byte .L_80214318
@@ -7866,10 +7865,10 @@ jumptable_805393D8:
 	.4byte .L_80214380
 	.4byte .L_80214388
 	.4byte 0
+.endobj jumptable_805393D8
 
 
-.global __vt__CMCCrystalBox
-__vt__CMCCrystalBox:
+.obj __vt__CMCCrystalBox, global
 	.4byte __RTTI__CMCCrystalBox
 	.4byte 0
 	.4byte __dt__CMCCrystalBox
@@ -7904,80 +7903,81 @@ __vt__CMCCrystalBox:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CMCCrystalBox
 
-.global CMCCrystalBox_hierarchy
-CMCCrystalBox_hierarchy:
+.obj CMCCrystalBox_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMCCrystalBox_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMCCrystalBox
-__RTTI__CMCCrystalBox:
+.obj __RTTI__CMCCrystalBox, global
 	.4byte CMCCrystalBox_typestr
 	.4byte CMCCrystalBox_hierarchy
+.endobj __RTTI__CMCCrystalBox
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066AD30
-float_8066AD30:
+.obj float_8066AD30, global
 	.float 1.0
+.endobj float_8066AD30
 
 
-.global float_8066AD34
-float_8066AD34:
+.obj float_8066AD34, global
 	.float -71 #0xC28E0000
+.endobj float_8066AD34
 
 
-.global float_8066AD38
-float_8066AD38:
+.obj float_8066AD38, global
 	.float 44 #0x42300000
+.endobj float_8066AD38
 
 
-.global float_8066AD3C
-float_8066AD3C:
+.obj float_8066AD3C, global
 	.float 16 #0x41800000
+.endobj float_8066AD3C
 
 
-.global float_8066AD40
-float_8066AD40:
+.obj float_8066AD40, global
 	.float 100.0
+.endobj float_8066AD40
 
 
-.global float_8066AD44
-float_8066AD44:
+.obj float_8066AD44, global
 	.float 0.04 #0x3D23D70A
+.endobj float_8066AD44
 
 
-.global float_8066AD48
-float_8066AD48:
+.obj float_8066AD48, global
 	.float -58 #0xC2680000
+.endobj float_8066AD48
 
 
-.global float_8066AD4C
-float_8066AD4C:
+.obj float_8066AD4C, global
 	.float -57 #0xC2640000
+.endobj float_8066AD4C
 
 
-.global float_8066AD50
-float_8066AD50:
+.obj float_8066AD50, global
 	.float 370 #0x43B90000
 	.4byte 0
+.endobj float_8066AD50
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80666FC0
-lbl_80666FC0:
+.obj lbl_80666FC0, global
 	.skip 0x8
+.endobj lbl_80666FC0
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

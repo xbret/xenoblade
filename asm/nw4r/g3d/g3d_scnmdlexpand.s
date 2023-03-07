@@ -706,18 +706,21 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-.global TYPE_NAME__Q34nw4r3g3d12ScnMdlExpand
-TYPE_NAME__Q34nw4r3g3d12ScnMdlExpand:
+
+.obj TYPE_NAME__Q34nw4r3g3d12ScnMdlExpand, global
 	.4byte 0x0000000D
 	.asciz "ScnMdlExpand"
 	.balign 4
 	.4byte 0
+.endobj TYPE_NAME__Q34nw4r3g3d12ScnMdlExpand
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global __vt__g3d_scnmdlexpand
-__vt__g3d_scnmdlexpand:
+.balign 8
+
+.obj __vt__g3d_scnmdlexpand, global
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d12ScnMdlExpandCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -734,9 +737,13 @@ __vt__g3d_scnmdlexpand:
 	.4byte Insert__Q34nw4r3g3d12ScnMdlExpandFUlPQ34nw4r3g3d6ScnObj
 	.4byte Remove__Q34nw4r3g3d12ScnMdlExpandFUl
 	.4byte Remove__Q34nw4r3g3d12ScnMdlExpandFPQ34nw4r3g3d6ScnObj
+.endobj __vt__g3d_scnmdlexpand
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-"INVALID_NODE_ID__Q34nw4r3g3d30@unnamed@g3d_scnmdlexpand_cpp@":
+.balign 8
+
+.obj "INVALID_NODE_ID__Q34nw4r3g3d30@unnamed@g3d_scnmdlexpand_cpp@", local
 	.4byte 0xFFFFFFFF
 	.4byte 0
+.endobj "INVALID_NODE_ID__Q34nw4r3g3d30@unnamed@g3d_scnmdlexpand_cpp@"

@@ -566,64 +566,71 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global lbl_8055EEB8
-lbl_8055EEB8:
+
+.obj lbl_8055EEB8, global
 	.asciz "/shared2/expired"
 	.balign 4
+.endobj lbl_8055EEB8
 
 
-.global lbl_8055EECC
-lbl_8055EECC:
+.obj lbl_8055EECC, global
 	.asciz "OSPlayTime.c"
 	.balign 4
+.endobj lbl_8055EECC
 
 
-.global lbl_8055EEDC
-lbl_8055EEDC:
+.obj lbl_8055EEDC, global
 	.asciz "PlayTime: %d seconds left\n"
 	.balign 4
+.endobj lbl_8055EEDC
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665BB0
-lbl_80665BB0:
+.balign 8
+
+.obj lbl_80665BB0, global
 	.asciz "Expired"
+.endobj lbl_80665BB0
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C1D8
-float_8066C1D8:
+.balign 8
+
+.obj float_8066C1D8, global
 	.float 0.995 #0x3F7EB852
 	.4byte 0
+.endobj float_8066C1D8
 
 
-.global double_8066C1E0
-double_8066C1E0:
+.obj double_8066C1E0, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066C1E0
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-__OSExpireAlarm:
+.obj __OSExpireAlarm, local
 	.skip 0x40
+.endobj __OSExpireAlarm
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-__OSExpireAIFade:
+.obj __OSExpireAIFade, local
 	.skip 0x4
+.endobj __OSExpireAIFade
 
-__OSExpireSetExpiredFlag:
+.obj __OSExpireSetExpiredFlag, local
 	.skip 0x4
+.endobj __OSExpireSetExpiredFlag
 
-__OSExpireCallback:
+.obj __OSExpireCallback, local
 	.skip 0x8
+.endobj __OSExpireCallback
 
-__OSExpireTime:
+.obj __OSExpireTime, local
 	.skip 0x8
-
-#might belong in another file
-.global lbl_80667B50
-lbl_80667B50:
-	.skip 0x4
+.endobj __OSExpireTime

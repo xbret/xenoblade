@@ -313,33 +313,33 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CSchedule_typestr
-CSchedule_typestr:
+.obj CSchedule_typestr, global
 	.asciz "CSchedule"
 	.balign 4
 	.4byte 0
+.endobj CSchedule_typestr
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CSchedule
-__vt__CSchedule:
+.obj __vt__CSchedule, global
 	.4byte __RTTI__CSchedule
 	.4byte 0
 	.4byte __dt__CSchedule
 	.4byte 0
+.endobj __vt__CSchedule
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CSchedule
-__RTTI__CSchedule:
+.obj __RTTI__CSchedule, global
 	.4byte CSchedule_typestr
 	.4byte 0
+.endobj __RTTI__CSchedule
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

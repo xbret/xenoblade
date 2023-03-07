@@ -500,14 +500,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-.global mwsfd_ver_str
-mwsfd_ver_str:
+
+.obj mwsfd_ver_str, global
 	.asciz "\nMWSFD/WII Ver.4.75 Build:Nov 13 2008 18:21:20\n"
 	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
+.endobj mwsfd_ver_str
 
-.global mwsfd_trentry
-mwsfd_trentry:
+.obj mwsfd_trentry, global
 	.4byte SFD_tr_in_mem
 	.4byte SFD_tr_sd_mps
 	.4byte SFD_tr_vd_mpv
@@ -523,50 +524,51 @@ mwsfd_trentry:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj mwsfd_trentry
 
 
-.global mwsfd_initsfdpara
-mwsfd_initsfdpara:
+.obj mwsfd_initsfdpara, global
 	.4byte mwsfd_trentry
 	.4byte 0x0000EA24
+.endobj mwsfd_initsfdpara
 
-mwsfd_siz_mwplyhn:
+.obj mwsfd_siz_mwplyhn, local
 	.4byte 0x00000670
+.endobj mwsfd_siz_mwplyhn
 
-.global lbl_8051E17C
-lbl_8051E17C:
+.obj lbl_8051E17C, global
 	.asciz "mwPlyInitSfdFx"
 	.balign 4
 	.asciz "mwPlyFinishSfdFx"
 	.balign 4
+.endobj lbl_8051E17C
 
-.global lbl_8051E1A0
-lbl_8051E1A0:
+.obj lbl_8051E1A0, global
 	.asciz "mwPlyCreateSofdec"
 	.balign 4
+.endobj lbl_8051E1A0
 
-.global lbl_8051E1B4
-lbl_8051E1B4:
+.obj lbl_8051E1B4, global
 	.asciz "cpara_members"
 	.balign 4
+.endobj lbl_8051E1B4
 
-.global lbl_8051E1C4
-lbl_8051E1C4:
+.obj lbl_8051E1C4, global
 	.asciz "mwply"
 	.balign 4
+.endobj lbl_8051E1C4
 
-.global lbl_8051E1CC
-lbl_8051E1CC:
+.obj lbl_8051E1CC, global
 	.asciz "mwPlyDestroy"
 	.balign 4
 	.4byte 0
+.endobj lbl_8051E1CC
 
-.global lbl_8051E1E0
-lbl_8051E1E0:
+.obj lbl_8051E1E0, global
 	.asciz "mwPlyStartFname"
+.endobj lbl_8051E1E0
 
-.global lbl_8051E1F0
-lbl_8051E1F0:
+.obj lbl_8051E1F0, global
 	.asciz "fname"
 	.balign 4
 	.asciz "mwPlyStartFnameRange"
@@ -588,111 +590,111 @@ lbl_8051E1F0:
 	.asciz "patid"
 	.balign 4
 	.asciz "fid"
+.endobj lbl_8051E1F0
 
-.global lbl_8051E274
-lbl_8051E274:
+.obj lbl_8051E274, global
 	.asciz "mwPlyStartFnameLp"
 	.balign 4
+.endobj lbl_8051E274
 
-.global lbl_8051E288
-lbl_8051E288:
+.obj lbl_8051E288, global
 	.asciz "mwPlyReleaseLp"
 	.balign 4
 	.asciz "mwPlyStartAfsLp"
 	.asciz "mwPlyStartFnameRangeLp"
 	.balign 4
+.endobj lbl_8051E288
 
-.global lbl_8051E2C0
-lbl_8051E2C0:
+.obj lbl_8051E2C0, global
 	.asciz "mwPlyEntryFname"
+.endobj lbl_8051E2C0
 
-.global lbl_8051E2D0
-lbl_8051E2D0:
+.obj lbl_8051E2D0, global
 	.asciz "mwPlyStartSeamless"
 	.balign 4
+.endobj lbl_8051E2D0
 
-.global lbl_8051E2E4
-lbl_8051E2E4:
+.obj lbl_8051E2E4, global
 	.asciz "mwPlyReleaseSeamless"
 	.balign 4
+.endobj lbl_8051E2E4
 
-.global lbl_8051E2FC
-lbl_8051E2FC:
+.obj lbl_8051E2FC, global
 	.asciz "mwPlySetSeamlessLp"
 	.balign 4
+.endobj lbl_8051E2FC
 
-.global lbl_8051E310
-lbl_8051E310:
+.obj lbl_8051E310, global
 	.asciz "flag"
 	.balign 4
+.endobj lbl_8051E310
 
-.global lbl_8051E318
-lbl_8051E318:
+.obj lbl_8051E318, global
 	.asciz "mwPlyStop"
 	.balign 4
 	.asciz "mwPlyRequestStop"
 	.balign 4
+.endobj lbl_8051E318
 
-.global lbl_8051E338
-lbl_8051E338:
+.obj lbl_8051E338, global
 	.asciz "MWSFSVM_Error"
 	.balign 4
+.endobj lbl_8051E338
 
-.global lbl_8051E348
-lbl_8051E348:
+.obj lbl_8051E348, global
 	.asciz "errstr"
 	.balign 4
+.endobj lbl_8051E348
 
-.global lbl_8051E350
-lbl_8051E350:
+.obj lbl_8051E350, global
 	.asciz "MWSFSVM_GotoIdleBorder"
 	.balign 4
+.endobj lbl_8051E350
 
-.global lbl_8051E368
-lbl_8051E368:
+.obj lbl_8051E368, global
 	.asciz "MWSFSVR_VsyncThrdProc"
 	.balign 4
+.endobj lbl_8051E368
 
-.global lbl_8051E380
-lbl_8051E380:
+.obj lbl_8051E380, global
 	.asciz "remain_work_flag"
 	.balign 4
+.endobj lbl_8051E380
 
-.global lbl_8051E394
-lbl_8051E394:
+.obj lbl_8051E394, global
 	.asciz "MWSFSVR_MainThrdProc"
 	.balign 4
+.endobj lbl_8051E394
 
-.global lbl_8051E3AC
-lbl_8051E3AC:
+.obj lbl_8051E3AC, global
 	.asciz "MWSFSVR_IdleThrdProc"
 	.balign 4
+.endobj lbl_8051E3AC
 
-.global lbl_8051E3C4
-lbl_8051E3C4:
+.obj lbl_8051E3C4, global
 	.asciz "MWSFSVR_DecodeServer"
 	.balign 4
+.endobj lbl_8051E3C4
 
-.global lbl_8051E3DC
-lbl_8051E3DC:
+.obj lbl_8051E3DC, global
 	.asciz "mwsfd_ExecSvrHndl"
 	.balign 4
+.endobj lbl_8051E3DC
 
-.global lbl_8051E3F0
-lbl_8051E3F0:
+.obj lbl_8051E3F0, global
 	.asciz "mwSfdVsync"
 	.balign 4
 	.float 0.5
 	.4byte 0x447A0000
+.endobj lbl_8051E3F0
 
 
-.global lbl_8051E404
-lbl_8051E404:
+.obj lbl_8051E404, global
 	.float 59.94 #0x426FC28F
+.endobj lbl_8051E404
 
 
-.global mwsfdlib_strpool
-mwsfdlib_strpool:
+.obj mwsfdlib_strpool, global
 	.asciz "E1122611 mwPlyInitSfdFx: iprm is NULL."
 	.asciz "E2005 mwPlyInitSfdFx: can't init GSC"
 	.asciz "ERR20010421A mwPlyInitSfdFx"
@@ -711,18 +713,22 @@ mwsfdlib_strpool:
 	.asciz "SFD ERROR(%08X): Decode picture error. For example, this library can't decode MPEG-2 video."
 	.asciz "SFD ERROR(%08X)"
 	.balign 4
+.endobj mwsfdlib_strpool
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_80602958
-lbl_80602958:
+.obj lbl_80602958, global
 	.skip 0x4
-.global lbl_8060295C
-lbl_8060295C:
+.endobj lbl_80602958
+
+.obj lbl_8060295C, global
 	.skip 0x4
-.global lbl_80602960
-lbl_80602960:
+.endobj lbl_8060295C
+
+.obj lbl_80602960, global
 	.skip 0x8
-.global mwsfd_libwork
-mwsfd_libwork:
+.endobj lbl_80602960
+
+.obj mwsfd_libwork, global
 	.skip 0x3548
+.endobj mwsfd_libwork

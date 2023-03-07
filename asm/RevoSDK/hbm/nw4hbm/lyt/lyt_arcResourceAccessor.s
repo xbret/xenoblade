@@ -269,47 +269,49 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8054D638
-lbl_8054D638:
+.balign 8
+
+.obj lbl_8054D638, global
 	.4byte 0x2E000000
+.endobj lbl_8054D638
 
 
-.global lbl_8054D63C
-lbl_8054D63C:
+.obj lbl_8054D63C, global
 	.4byte 0x2E2E0000
+.endobj lbl_8054D63C
 
 
-.global lbl_8054D640
-lbl_8054D640:
+.obj lbl_8054D640, global
 	.4byte lbl_8054D688
 	.4byte 0
 	.4byte __dt__Q36nw4hbm3lyt19ArcResourceAccessorFv
 	.4byte GetResource__Q36nw4hbm3lyt19ArcResourceAccessorFUlPCcPUl
 	.4byte GetFont__Q36nw4hbm3lyt24MultiArcResourceAccessorFPCc
+.endobj lbl_8054D640
 
-.global lbl_8054D654
-lbl_8054D654:
+.obj lbl_8054D654, global
 	.asciz "nw4hbm::lyt::ArcResourceAccessor"
 	.balign 4
+.endobj lbl_8054D654
 
-.global lbl_8054D678
-lbl_8054D678:
+.obj lbl_8054D678, global
 	.4byte lbl_8054D6B0
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8054D678
 
-.global lbl_8054D688
-lbl_8054D688:
+.obj lbl_8054D688, global
 	.4byte lbl_8054D654
 	.4byte lbl_8054D678
+.endobj lbl_8054D688
 
-.global lbl_8054D690
-lbl_8054D690:
+.obj lbl_8054D690, global
 	.asciz "nw4hbm::lyt::ResourceAccessor"
 	.balign 4
+.endobj lbl_8054D690
 
-.global lbl_8054D6B0
-lbl_8054D6B0:
+.obj lbl_8054D6B0, global
 	.4byte lbl_8054D690
 	.4byte 0
+.endobj lbl_8054D6B0

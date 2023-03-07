@@ -1507,8 +1507,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global jumptable_80547370
-jumptable_80547370:
+.balign 8
+
+.obj jumptable_80547370, global
 	.4byte .L_802F74F4
 	.4byte .L_802F74F8
 	.4byte .L_802F74FC
@@ -1518,21 +1519,21 @@ jumptable_80547370:
 	.4byte .L_802F750C
 	.4byte .L_802F7510
 	.4byte .L_802F7514
+.endobj jumptable_80547370
 
 
 	.asciz "L2CAP - st: CLOSED evt: %d"
 	.balign 4
 
 
-.global lbl_805473B0
-lbl_805473B0:
+.obj lbl_805473B0, global
 	.asciz "L2CAP - Calling Disconnect_Ind_Cb(), CID: 0x%04x  No Conf Needed"
 	.balign 4
 	.asciz "L2CAP - Calling ConnectCfm_Cb(), CID: 0x%04x  Status: %d"
 	.balign 4
+.endobj lbl_805473B0
 
-.global jumptable_80547430
-jumptable_80547430:
+.obj jumptable_80547430, global
 	.4byte .L_802F75DC
 	.4byte .L_802F760C
 	.4byte .L_802F7798
@@ -1564,14 +1565,14 @@ jumptable_80547430:
 	.4byte .L_802F7798
 	.4byte .L_802F7784
 	.4byte .L_802F7730
+.endobj jumptable_80547430
 
 
 	.asciz "L2CAP - st: ORIG_W4_SEC_COMP evt: %d"
 	.balign 4
 
 
-.global jumptable_805474D4
-jumptable_805474D4:
+.obj jumptable_805474D4, global
 	.4byte .L_802F7830
 	.4byte .L_802F7908
 	.4byte .L_802F7908
@@ -1599,22 +1600,22 @@ jumptable_805474D4:
 	.4byte .L_802F7908
 	.4byte .L_802F7908
 	.4byte .L_802F78E8
+.endobj jumptable_805474D4
 
 
-.global lbl_80547540
-lbl_80547540:
+.obj lbl_80547540, global
 	.asciz "L2CAP - st: TERM_W4_SEC_COMP evt: %d"
 	.balign 4
+.endobj lbl_80547540
 
 
-.global lbl_80547568
-lbl_80547568:
+.obj lbl_80547568, global
 	.asciz "L2CAP - Calling Connect_Ind_Cb(), CID: 0x%04x"
 	.balign 4
+.endobj lbl_80547568
 
 
-.global jumptable_80547598
-jumptable_80547598:
+.obj jumptable_80547598, global
 	.4byte .L_802F7990
 	.4byte .L_802F7A6C
 	.4byte .L_802F7A6C
@@ -1642,6 +1643,7 @@ jumptable_80547598:
 	.4byte .L_802F7A6C
 	.4byte .L_802F7A6C
 	.4byte .L_802F7A2C
+.endobj jumptable_80547598
 
 	#0x80547604
 	.asciz "L2CAP - st: W4_L2CAP_CON_RSP evt: %d"
@@ -1655,8 +1657,7 @@ jumptable_80547598:
 	.balign 4
 
 
-.global jumptable_80547700
-jumptable_80547700:
+.obj jumptable_80547700, global
 	.4byte .L_802F7B08
 	.4byte .L_802F7CB4
 	.4byte .L_802F7CB4
@@ -1685,15 +1686,15 @@ jumptable_80547700:
 	.4byte .L_802F7CB4
 	.4byte .L_802F7CAC
 	.4byte .L_802F7C54
+.endobj jumptable_80547700
 
 
-.global lbl_80547770
-lbl_80547770:
+.obj lbl_80547770, global
 	.asciz "L2CAP - st: W4_L2CA_CON_RSP evt: %d"
+.endobj lbl_80547770
 
 
-.global jumptable_80547794
-jumptable_80547794:
+.obj jumptable_80547794, global
 	.4byte .L_802F7D44
 	.4byte .L_802F7E8C
 	.4byte .L_802F7E8C
@@ -1722,6 +1723,7 @@ jumptable_80547794:
 	.4byte .L_802F7E8C
 	.4byte .L_802F7E60
 	.4byte .L_802F7E08
+.endobj jumptable_80547794
 
 
 	.asciz "L2CAP - st: CONFIG evt: %d"
@@ -1738,8 +1740,7 @@ jumptable_80547794:
 	.balign 4
 
 
-.global jumptable_80547928
-jumptable_80547928:
+.obj jumptable_80547928, global
 	.4byte .L_802F7F20
 	.4byte .L_802F8254
 	.4byte .L_802F8254
@@ -1768,14 +1769,14 @@ jumptable_80547928:
 	.4byte .L_802F8254
 	.4byte .L_802F81E4
 	.4byte .L_802F820C
+.endobj jumptable_80547928
 
 
 	.asciz "L2CAP - st: OPEN evt: %d"
 	.balign 4
 
 
-.global jumptable_805479B4
-jumptable_805479B4:
+.obj jumptable_805479B4, global
 	.4byte .L_802F82E8
 	.4byte .L_802F84B0
 	.4byte .L_802F84B0
@@ -1803,6 +1804,7 @@ jumptable_805479B4:
 	.4byte .L_802F84B0
 	.4byte .L_802F84B0
 	.4byte .L_802F8460
+.endobj jumptable_805479B4
 
 
 	.asciz "L2CAP - st: W4_L2CAP_DISC_RSP evt: %d"
@@ -1810,8 +1812,7 @@ jumptable_805479B4:
 	.asciz "L2CAP - Calling DisconnectCfm_Cb(), CID: 0x%04x"
 
 
-.global jumptable_80547A78
-jumptable_80547A78:
+.obj jumptable_80547A78, global
 	.4byte .L_802F8548
 	.4byte .L_802F8694
 	.4byte .L_802F8694
@@ -1840,16 +1841,16 @@ jumptable_80547A78:
 	.4byte .L_802F8694
 	.4byte .L_802F868C
 	.4byte .L_802F8638
+.endobj jumptable_80547A78
 
 
-.global lbl_80547AE8
-lbl_80547AE8:
+.obj lbl_80547AE8, global
 	.asciz "L2CAP - st: W4_L2CA_DISC_RSP evt: %d"
 	.balign 4
+.endobj lbl_80547AE8
 
 
-.global jumptable_80547B10
-jumptable_80547B10:
+.obj jumptable_80547B10, global
 	.4byte .L_802F8724
 	.4byte .L_802F87F0
 	.4byte .L_802F87F0
@@ -1879,7 +1880,9 @@ jumptable_80547B10:
 	.4byte .L_802F87E8
 	.4byte .L_802F876C
 	
-.global lbl_80547B80
-lbl_80547B80:
+.endobj jumptable_80547B10
+
+.obj lbl_80547B80, global
 	.asciz "L2CAP - cannot send buffer, offset: %d"
 	.balign 4
+.endobj lbl_80547B80

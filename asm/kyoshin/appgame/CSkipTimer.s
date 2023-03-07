@@ -978,20 +978,19 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CSkipTimer_typestr
-CSkipTimer_typestr:
+.obj CSkipTimer_typestr, global
 	.asciz "CSkipTimer"
 	.balign 4
+.endobj CSkipTimer_typestr
 
-.global CSkipTimer2_typestr
-CSkipTimer2_typestr:
+.obj CSkipTimer2_typestr, global
 	.asciz "CSkipTimer2"
+.endobj CSkipTimer2_typestr
 
 
-.global CSkipTimer_strpool
-CSkipTimer_strpool:
+.obj CSkipTimer_strpool, global
 	.asciz "CSkipTimer2"
 	.asciz "mf85_opt00_clock01.brlyt"
 	.asciz "mf85_opt00_clock01_in.brlan"
@@ -1017,13 +1016,13 @@ CSkipTimer_strpool:
 	.asciz "mf85_opt00_clock00_in.brlan"
 	.asciz "mf85_opt00_clock00_time_all.brlan"
 	.balign 4
+.endobj CSkipTimer_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CSkipTimer
-__vt__CSkipTimer:
+.obj __vt__CSkipTimer, global
 	.4byte __RTTI__CSkipTimer
 	.4byte 0
 	.4byte __dt__CSkipTimer
@@ -1058,74 +1057,75 @@ __vt__CSkipTimer:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CSkipTimer
 
-.global CSkipTimer_hierarchy
-CSkipTimer_hierarchy:
+.obj CSkipTimer_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
+.endobj CSkipTimer_hierarchy
 
 
-.global __vt__CSkipTimer2
-__vt__CSkipTimer2:
+.obj __vt__CSkipTimer2, global
 	.4byte __RTTI__CSkipTimer2
 	.4byte 0
 	.4byte __dt__CSkipTimer2
+.endobj __vt__CSkipTimer2
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global float_80665570
-float_80665570:
+.obj float_80665570, global
 	.float 0.2
 	.4byte 0
+.endobj float_80665570
 
-.global __RTTI__CSkipTimer
-__RTTI__CSkipTimer:
+.obj __RTTI__CSkipTimer, global
 	.4byte CSkipTimer_typestr
 	.4byte CSkipTimer_hierarchy
+.endobj __RTTI__CSkipTimer
 
-.global __RTTI__CSkipTimer2
-__RTTI__CSkipTimer2:
+.obj __RTTI__CSkipTimer2, global
 	.4byte CSkipTimer2_typestr
 	.4byte 0
+.endobj __RTTI__CSkipTimer2
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B4D8
-float_8066B4D8:
+.obj float_8066B4D8, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066B4D8
 
 
-.global double_8066B4E0
-double_8066B4E0:
+.obj double_8066B4E0, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066B4E0
 
-.global double_8066B4E8
-double_8066B4E8:
+.obj double_8066B4E8, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066B4E8
 
-.global float_8066B4F0
-float_8066B4F0:
+.obj float_8066B4F0, global
 	.float 11 #0x41300000
+.endobj float_8066B4F0
 
 
-.global float_8066B4F4
-float_8066B4F4:
+.obj float_8066B4F4, global
 	.float 60 #0x42700000
+.endobj float_8066B4F4
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global float_80667338
-float_80667338:
+.obj float_80667338, global
 	.skip 0x8
+.endobj float_80667338
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

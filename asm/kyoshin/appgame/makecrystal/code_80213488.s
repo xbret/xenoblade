@@ -323,23 +323,25 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066AD18
-float_8066AD18:
+.balign 8
+
+.obj float_8066AD18, global
 	.float 30 #0x41F00000
+.endobj float_8066AD18
 
 
-.global float_8066AD1C
-float_8066AD1C:
+.obj float_8066AD1C, global
 	.float 0
+.endobj float_8066AD1C
 
 
-.global double_8066AD20
-double_8066AD20:
+.obj double_8066AD20, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066AD20
 
-.global double_8066AD28
-double_8066AD28:
+.obj double_8066AD28, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066AD28
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

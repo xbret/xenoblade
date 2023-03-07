@@ -31067,8 +31067,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_804F8048
-lbl_804F8048:
+.balign 8
+
+.obj lbl_804F8048, global
 	.4byte 0x00000003
 	.4byte 0x00640000
 	.4byte 0x00000032
@@ -31189,10 +31190,10 @@ lbl_804F8048:
 	.4byte 0x00000048
 	.4byte 0x00000048
 	.4byte 0x00000048
+.endobj lbl_804F8048
 
 
-.global lbl_804F8228
-lbl_804F8228:
+.obj lbl_804F8228, global
 	.4byte 0
 	.4byte 0x000001AD
 	.4byte 0x000001AA
@@ -31206,17 +31207,17 @@ lbl_804F8228:
 	.4byte 0xFFECFFF6
 	.4byte 0x0000000F
 	.4byte 0x001E0000
+.endobj lbl_804F8228
 
 
-.global lbl_804F825C
-lbl_804F825C:
+.obj lbl_804F825C, global
 	.4byte 0
 	.4byte 0x000A000F
 	.4byte 0x001E0000
+.endobj lbl_804F825C
 
 
-.global lbl_804F8268
-lbl_804F8268:
+.obj lbl_804F8268, global
 	.4byte 0
 	.4byte 0
 	.4byte 0x00000100
@@ -31253,21 +31254,21 @@ lbl_804F8268:
 	.float 8.0
 	.float 4
 	.float 2 #0x40000000
+.endobj lbl_804F8268
 
-.global lbl_804F82F8
-lbl_804F82F8:
+.obj lbl_804F82F8, global
 	.4byte 0
 	.4byte 0
 	.4byte 0x00000064
+.endobj lbl_804F82F8
 
-.global lbl_804F8304
-lbl_804F8304:
+.obj lbl_804F8304, global
 	.float 8.0
 	.float 4
 	.float 2 #0x40000000
+.endobj lbl_804F8304
 
-.global lbl_804F8310
-lbl_804F8310:
+.obj lbl_804F8310, global
 	.4byte 0x00000050
 	.4byte 0x0000003C
 	.4byte 0x00000028
@@ -31296,36 +31297,36 @@ lbl_804F8310:
 	.4byte 0x00000128
 	.4byte 0x00000129
 	.4byte 0x0000012A
+.endobj lbl_804F8310
 
 
 	.asciz "cf::CfObjectEff"
 
-.global cf_CBattleManager_typestr
-cf_CBattleManager_typestr:
+.obj cf_CBattleManager_typestr, global
 	.asciz "cf::CBattleManager"
 	.balign 4
+.endobj cf_CBattleManager_typestr
 
-.global reslist_cf_IBattleEvent_typestr
-reslist_cf_IBattleEvent_typestr:
+.obj reslist_cf_IBattleEvent_typestr, global
 	.asciz "reslist<cf::IBattleEvent *>"
+.endobj reslist_cf_IBattleEvent_typestr
 
-.global _reslist_base_cf_IBattleEvent_typestr
-_reslist_base_cf_IBattleEvent_typestr:
+.obj _reslist_base_cf_IBattleEvent_typestr, global
 	.asciz "_reslist_base<cf::IBattleEvent *>"
 	.balign 4
+.endobj _reslist_base_cf_IBattleEvent_typestr
 
-.global reslist_cf_CfObjectActor_typestr
-reslist_cf_CfObjectActor_typestr:
+.obj reslist_cf_CfObjectActor_typestr, global
 	.asciz "reslist<cf::CfObjectActor *>"
 	.balign 4
+.endobj reslist_cf_CfObjectActor_typestr
 
-.global _reslist_base_cf_CfObjectActor_typestr
-_reslist_base_cf_CfObjectActor_typestr:
+.obj _reslist_base_cf_CfObjectActor_typestr, global
 	.asciz "_reslist_base<cf::CfObjectActor *>"
 	.balign 4
+.endobj _reslist_base_cf_CfObjectActor_typestr
 
-.global cf_CChainTime_typestr
-cf_CChainTime_typestr:
+.obj cf_CChainTime_typestr, global
 	.asciz "cf::CChainTime"
 	.balign 4
 	.asciz "cf::CfObjectModel"
@@ -31336,32 +31337,34 @@ cf_CChainTime_typestr:
 	.balign 4
 	.asciz "cf::CObjectState"
 	.balign 4
+.endobj cf_CChainTime_typestr
 
-.global cf_IFactoryEvent_typestr
-cf_IFactoryEvent_typestr:
+.obj cf_IFactoryEvent_typestr, global
 	.asciz "cf::IFactoryEvent"
 	.balign 4
+.endobj cf_IFactoryEvent_typestr
 
 
-.global lbl_804F8498
-lbl_804F8498:
+.obj lbl_804F8498, global
 	.asciz "Lv_up_str"
 	.asciz "Lv_up_agi"
 	.asciz "Lv_up_eth"
 	.balign 4
+.endobj lbl_804F8498
 
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8052E8E0
-lbl_8052E8E0:
+.balign 8
+
+.obj lbl_8052E8E0, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A60B0
+.endobj lbl_8052E8E0
 
-.global jumptable_8052E8EC
-jumptable_8052E8EC:
+.obj jumptable_8052E8EC, global
 	.4byte .L_800E0844
 	.4byte .L_800E07F0
 	.4byte .L_800E07F0
@@ -31372,9 +31375,9 @@ jumptable_8052E8EC:
 	.4byte .L_800E0820
 	.4byte .L_800E082C
 	.4byte .L_800E0838
+.endobj jumptable_8052E8EC
 
-.global jumptable_8052E914
-jumptable_8052E914:
+.obj jumptable_8052E914, global
 	.4byte .L_800E074C
 	.4byte .L_800E06F8
 	.4byte .L_800E06F8
@@ -31385,9 +31388,9 @@ jumptable_8052E914:
 	.4byte .L_800E0728
 	.4byte .L_800E0734
 	.4byte .L_800E0740
+.endobj jumptable_8052E914
 
-.global jumptable_8052E93C
-jumptable_8052E93C:
+.obj jumptable_8052E93C, global
 	.4byte .L_800E06AC
 	.4byte .L_800E0658
 	.4byte .L_800E0658
@@ -31398,9 +31401,9 @@ jumptable_8052E93C:
 	.4byte .L_800E0688
 	.4byte .L_800E0694
 	.4byte .L_800E06A0
+.endobj jumptable_8052E93C
 
-.global jumptable_8052E964
-jumptable_8052E964:
+.obj jumptable_8052E964, global
 	.4byte .L_800E05B4
 	.4byte .L_800E0560
 	.4byte .L_800E0560
@@ -31411,9 +31414,9 @@ jumptable_8052E964:
 	.4byte .L_800E0590
 	.4byte .L_800E059C
 	.4byte .L_800E05A8
+.endobj jumptable_8052E964
 
-.global jumptable_8052E98C
-jumptable_8052E98C:
+.obj jumptable_8052E98C, global
 	.4byte .L_800E02A8
 	.4byte .L_800E02B8
 	.4byte .L_800E02C8
@@ -31428,10 +31431,10 @@ jumptable_8052E98C:
 	.4byte .L_800E02B8
 	.4byte .L_800E02C8
 	.4byte .L_800E02D8
+.endobj jumptable_8052E98C
 
 
-.global jumptable_8052E9C4
-jumptable_8052E9C4:
+.obj jumptable_8052E9C4, global
 	.4byte .L_800DEE38
 	.4byte .L_800DED90
 	.4byte .L_800DED90
@@ -31442,10 +31445,10 @@ jumptable_8052E9C4:
 	.4byte .L_800DEDF0
 	.4byte .L_800DEE08
 	.4byte .L_800DEE20
+.endobj jumptable_8052E9C4
 
 
-.global jumptable_8052E9EC
-jumptable_8052E9EC:
+.obj jumptable_8052E9EC, global
 	.4byte .L_800DECE8
 	.4byte .L_800DEC40
 	.4byte .L_800DEC40
@@ -31456,10 +31459,10 @@ jumptable_8052E9EC:
 	.4byte .L_800DECA0
 	.4byte .L_800DECB8
 	.4byte .L_800DECD0
+.endobj jumptable_8052E9EC
 
 
-.global jumptable_8052EA14
-jumptable_8052EA14:
+.obj jumptable_8052EA14, global
 	.4byte .L_800DEBE8
 	.4byte .L_800DEB40
 	.4byte .L_800DEB40
@@ -31470,10 +31473,10 @@ jumptable_8052EA14:
 	.4byte .L_800DEBA0
 	.4byte .L_800DEBB8
 	.4byte .L_800DEBD0
+.endobj jumptable_8052EA14
 
 
-.global jumptable_8052EA3C
-jumptable_8052EA3C:
+.obj jumptable_8052EA3C, global
 	.4byte .L_800DEA98
 	.4byte .L_800DE9F0
 	.4byte .L_800DE9F0
@@ -31484,10 +31487,10 @@ jumptable_8052EA3C:
 	.4byte .L_800DEA50
 	.4byte .L_800DEA68
 	.4byte .L_800DEA80
+.endobj jumptable_8052EA3C
 
 
-.global jumptable_8052EA64
-jumptable_8052EA64:
+.obj jumptable_8052EA64, global
 	.4byte .L_800DE988
 	.4byte .L_800DE8E0
 	.4byte .L_800DE8E0
@@ -31498,10 +31501,10 @@ jumptable_8052EA64:
 	.4byte .L_800DE940
 	.4byte .L_800DE958
 	.4byte .L_800DE970
+.endobj jumptable_8052EA64
 
 
-.global jumptable_8052EA8C
-jumptable_8052EA8C:
+.obj jumptable_8052EA8C, global
 	.4byte .L_800DE838
 	.4byte .L_800DE790
 	.4byte .L_800DE790
@@ -31512,10 +31515,10 @@ jumptable_8052EA8C:
 	.4byte .L_800DE7F0
 	.4byte .L_800DE808
 	.4byte .L_800DE820
+.endobj jumptable_8052EA8C
 
 
-.global jumptable_8052EAB4
-jumptable_8052EAB4:
+.obj jumptable_8052EAB4, global
 	.4byte .L_800DDA8C
 	.4byte .L_800DD9E4
 	.4byte .L_800DD9E4
@@ -31526,10 +31529,10 @@ jumptable_8052EAB4:
 	.4byte .L_800DDA44
 	.4byte .L_800DDA5C
 	.4byte .L_800DDA74
+.endobj jumptable_8052EAB4
 
 
-.global jumptable_8052EADC
-jumptable_8052EADC:
+.obj jumptable_8052EADC, global
 	.4byte .L_800DD93C
 	.4byte .L_800DD894
 	.4byte .L_800DD894
@@ -31540,10 +31543,10 @@ jumptable_8052EADC:
 	.4byte .L_800DD8F4
 	.4byte .L_800DD90C
 	.4byte .L_800DD924
+.endobj jumptable_8052EADC
 
 
-.global jumptable_8052EB04
-jumptable_8052EB04:
+.obj jumptable_8052EB04, global
 	.4byte .L_800DD83C
 	.4byte .L_800DD794
 	.4byte .L_800DD794
@@ -31554,10 +31557,10 @@ jumptable_8052EB04:
 	.4byte .L_800DD7F4
 	.4byte .L_800DD80C
 	.4byte .L_800DD824
+.endobj jumptable_8052EB04
 
 
-.global jumptable_8052EB2C
-jumptable_8052EB2C:
+.obj jumptable_8052EB2C, global
 	.4byte .L_800DD6EC
 	.4byte .L_800DD644
 	.4byte .L_800DD644
@@ -31568,10 +31571,10 @@ jumptable_8052EB2C:
 	.4byte .L_800DD6A4
 	.4byte .L_800DD6BC
 	.4byte .L_800DD6D4
+.endobj jumptable_8052EB2C
 
 
-.global jumptable_8052EB54
-jumptable_8052EB54:
+.obj jumptable_8052EB54, global
 	.4byte .L_800DD5DC
 	.4byte .L_800DD534
 	.4byte .L_800DD534
@@ -31582,10 +31585,10 @@ jumptable_8052EB54:
 	.4byte .L_800DD594
 	.4byte .L_800DD5AC
 	.4byte .L_800DD5C4
+.endobj jumptable_8052EB54
 
 
-.global jumptable_8052EB7C
-jumptable_8052EB7C:
+.obj jumptable_8052EB7C, global
 	.4byte .L_800DD48C
 	.4byte .L_800DD3E4
 	.4byte .L_800DD3E4
@@ -31596,10 +31599,10 @@ jumptable_8052EB7C:
 	.4byte .L_800DD444
 	.4byte .L_800DD45C
 	.4byte .L_800DD474
+.endobj jumptable_8052EB7C
 
 
-.global jumptable_8052EBA4
-jumptable_8052EBA4:
+.obj jumptable_8052EBA4, global
 	.4byte .L_800E0BBC
 	.4byte .L_800E0AD8
 	.4byte .L_800E0AEC
@@ -31626,10 +31629,10 @@ jumptable_8052EBA4:
 	.4byte .L_800E0BD0
 	.4byte .L_800E0C38
 	.4byte .L_800E0BEC
+.endobj jumptable_8052EBA4
 
 
-.global jumptable_8052EC0C
-jumptable_8052EC0C:
+.obj jumptable_8052EC0C, global
 	.4byte .L_800E4EF4
 	.4byte .L_800E4EAC
 	.4byte .L_800E4EB4
@@ -31640,10 +31643,10 @@ jumptable_8052EC0C:
 	.4byte .L_800E4EDC
 	.4byte .L_800E4EE4
 	.4byte .L_800E4EEC
+.endobj jumptable_8052EC0C
 
 
-.global jumptable_8052EC34
-jumptable_8052EC34:
+.obj jumptable_8052EC34, global
 	.4byte .L_800E4DA8
 	.4byte .L_800E4D54
 	.4byte .L_800E4D54
@@ -31654,9 +31657,9 @@ jumptable_8052EC34:
 	.4byte .L_800E4D84
 	.4byte .L_800E4D90
 	.4byte .L_800E4D9C
+.endobj jumptable_8052EC34
 
-.global jumptable_8052EC5C
-jumptable_8052EC5C:
+.obj jumptable_8052EC5C, global
 	.4byte .L_800E4CAC
 	.4byte .L_800E4C58
 	.4byte .L_800E4C58
@@ -31667,9 +31670,9 @@ jumptable_8052EC5C:
 	.4byte .L_800E4C88
 	.4byte .L_800E4C94
 	.4byte .L_800E4CA0
+.endobj jumptable_8052EC5C
 
-.global jumptable_8052EC84
-jumptable_8052EC84:
+.obj jumptable_8052EC84, global
 	.4byte .L_800E4C0C
 	.4byte .L_800E4BB8
 	.4byte .L_800E4BB8
@@ -31680,9 +31683,9 @@ jumptable_8052EC84:
 	.4byte .L_800E4BE8
 	.4byte .L_800E4BF4
 	.4byte .L_800E4C00
+.endobj jumptable_8052EC84
 
-.global jumptable_8052ECAC
-jumptable_8052ECAC:
+.obj jumptable_8052ECAC, global
 	.4byte .L_800E4B14
 	.4byte .L_800E4AC0
 	.4byte .L_800E4AC0
@@ -31693,9 +31696,9 @@ jumptable_8052ECAC:
 	.4byte .L_800E4AF0
 	.4byte .L_800E4AFC
 	.4byte .L_800E4B08
+.endobj jumptable_8052ECAC
 
-.global jumptable_8052ECD4
-jumptable_8052ECD4:
+.obj jumptable_8052ECD4, global
 	.4byte .L_800E46C0
 	.4byte .L_800E46D0
 	.4byte .L_800E46E0
@@ -31711,10 +31714,10 @@ jumptable_8052ECD4:
 	.4byte .L_800E46E0
 	.4byte .L_800E46F0
 	.4byte .L_800E4700
+.endobj jumptable_8052ECD4
 
 
-.global jumptable_8052ED10
-jumptable_8052ED10:
+.obj jumptable_8052ED10, global
 	.4byte .L_800E7E8C
 	.4byte .L_800E7D9C
 	.4byte .L_800E7A40
@@ -31729,10 +31732,10 @@ jumptable_8052ED10:
 	.4byte .L_800E7AF4
 	.4byte .L_800E7BE8
 	.4byte .L_800E7BA0
+.endobj jumptable_8052ED10
 
 
-.global jumptable_8052ED48
-jumptable_8052ED48:
+.obj jumptable_8052ED48, global
 	.4byte .L_800E7748
 	.4byte .L_800E764C
 	.4byte .L_800E7660
@@ -31759,10 +31762,10 @@ jumptable_8052ED48:
 	.4byte .L_800E775C
 	.4byte .L_800E77A8
 	.4byte .L_800E7778
+.endobj jumptable_8052ED48
 
 
-.global jumptable_8052EDB0
-jumptable_8052EDB0:
+.obj jumptable_8052EDB0, global
 	.4byte .L_800E74D4
 	.4byte .L_800E748C
 	.4byte .L_800E7494
@@ -31773,10 +31776,10 @@ jumptable_8052EDB0:
 	.4byte .L_800E74BC
 	.4byte .L_800E74C4
 	.4byte .L_800E74CC
+.endobj jumptable_8052EDB0
 
 
-.global jumptable_8052EDD8
-jumptable_8052EDD8:
+.obj jumptable_8052EDD8, global
 	.4byte .L_800E7388
 	.4byte .L_800E72E0
 	.4byte .L_800E72E0
@@ -31787,9 +31790,9 @@ jumptable_8052EDD8:
 	.4byte .L_800E7340
 	.4byte .L_800E7358
 	.4byte .L_800E7370
+.endobj jumptable_8052EDD8
 
-.global jumptable_8052EE00
-jumptable_8052EE00:
+.obj jumptable_8052EE00, global
 	.4byte .L_800E7238
 	.4byte .L_800E7190
 	.4byte .L_800E7190
@@ -31800,9 +31803,9 @@ jumptable_8052EE00:
 	.4byte .L_800E71F0
 	.4byte .L_800E7208
 	.4byte .L_800E7220
+.endobj jumptable_8052EE00
 
-.global jumptable_8052EE28
-jumptable_8052EE28:
+.obj jumptable_8052EE28, global
 	.4byte .L_800E7144
 	.4byte .L_800E709C
 	.4byte .L_800E709C
@@ -31813,9 +31816,9 @@ jumptable_8052EE28:
 	.4byte .L_800E70FC
 	.4byte .L_800E7114
 	.4byte .L_800E712C
+.endobj jumptable_8052EE28
 
-.global jumptable_8052EE50
-jumptable_8052EE50:
+.obj jumptable_8052EE50, global
 	.4byte .L_800E6FF8
 	.4byte .L_800E6F50
 	.4byte .L_800E6F50
@@ -31826,9 +31829,9 @@ jumptable_8052EE50:
 	.4byte .L_800E6FB0
 	.4byte .L_800E6FC8
 	.4byte .L_800E6FE0
+.endobj jumptable_8052EE50
 
-.global jumptable_8052EE78
-jumptable_8052EE78:
+.obj jumptable_8052EE78, global
 	.4byte .L_800E6B50
 	.4byte .L_800E6B60
 	.4byte .L_800E6B70
@@ -31844,10 +31847,10 @@ jumptable_8052EE78:
 	.4byte .L_800E6B70
 	.4byte .L_800E6B80
 	.4byte .L_800E6B90
+.endobj jumptable_8052EE78
 
 
-.global jumptable_8052EEB4
-jumptable_8052EEB4:
+.obj jumptable_8052EEB4, global
 	.4byte .L_800EB074
 	.4byte .L_800EB020
 	.4byte .L_800EB020
@@ -31858,10 +31861,10 @@ jumptable_8052EEB4:
 	.4byte .L_800EB050
 	.4byte .L_800EB05C
 	.4byte .L_800EB068
+.endobj jumptable_8052EEB4
 
 
-.global jumptable_8052EEDC
-jumptable_8052EEDC:
+.obj jumptable_8052EEDC, global
 	.4byte .L_800EAF78
 	.4byte .L_800EAF24
 	.4byte .L_800EAF24
@@ -31872,10 +31875,10 @@ jumptable_8052EEDC:
 	.4byte .L_800EAF54
 	.4byte .L_800EAF60
 	.4byte .L_800EAF6C
+.endobj jumptable_8052EEDC
 
 
-.global jumptable_8052EF04
-jumptable_8052EF04:
+.obj jumptable_8052EF04, global
 	.4byte .L_800EAEE0
 	.4byte .L_800EAE8C
 	.4byte .L_800EAE8C
@@ -31886,10 +31889,10 @@ jumptable_8052EF04:
 	.4byte .L_800EAEBC
 	.4byte .L_800EAEC8
 	.4byte .L_800EAED4
+.endobj jumptable_8052EF04
 
 
-.global jumptable_8052EF2C
-jumptable_8052EF2C:
+.obj jumptable_8052EF2C, global
 	.4byte .L_800EADE4
 	.4byte .L_800EAD90
 	.4byte .L_800EAD90
@@ -31900,22 +31903,22 @@ jumptable_8052EF2C:
 	.4byte .L_800EADC0
 	.4byte .L_800EADCC
 	.4byte .L_800EADD8
+.endobj jumptable_8052EF2C
 
-.global lbl_8052EF54
-lbl_8052EF54:
+.obj lbl_8052EF54, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A5360
+.endobj lbl_8052EF54
 
-.global lbl_8052EF60
-lbl_8052EF60:
+.obj lbl_8052EF60, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A5BA8
+.endobj lbl_8052EF60
 
 
-.global jumptable_8052EF6C
-jumptable_8052EF6C:
+.obj jumptable_8052EF6C, global
 	.4byte .L_800ED6B8
 	.4byte .L_800F3518
 	.4byte .L_800ED814
@@ -32212,10 +32215,10 @@ jumptable_8052EF6C:
 	.4byte .L_800F3518
 	.4byte .L_800F3518
 	.4byte .L_800EDA28
+.endobj jumptable_8052EF6C
 
 
-.global jumptable_8052F40C
-jumptable_8052F40C:
+.obj jumptable_8052F40C, global
 	.4byte .L_800ED248
 	.4byte .L_800ED1F4
 	.4byte .L_800ED1F4
@@ -32226,10 +32229,10 @@ jumptable_8052F40C:
 	.4byte .L_800ED224
 	.4byte .L_800ED230
 	.4byte .L_800ED23C
+.endobj jumptable_8052F40C
 
 
-.global jumptable_8052F434
-jumptable_8052F434:
+.obj jumptable_8052F434, global
 	.4byte .L_800ED14C
 	.4byte .L_800ED0F8
 	.4byte .L_800ED0F8
@@ -32240,10 +32243,10 @@ jumptable_8052F434:
 	.4byte .L_800ED128
 	.4byte .L_800ED134
 	.4byte .L_800ED140
+.endobj jumptable_8052F434
 
 
-.global jumptable_8052F45C
-jumptable_8052F45C:
+.obj jumptable_8052F45C, global
 	.4byte .L_800ED0AC
 	.4byte .L_800ED058
 	.4byte .L_800ED058
@@ -32254,10 +32257,10 @@ jumptable_8052F45C:
 	.4byte .L_800ED088
 	.4byte .L_800ED094
 	.4byte .L_800ED0A0
+.endobj jumptable_8052F45C
 
 
-.global jumptable_8052F484
-jumptable_8052F484:
+.obj jumptable_8052F484, global
 	.4byte .L_800ECFB0
 	.4byte .L_800ECF5C
 	.4byte .L_800ECF5C
@@ -32269,10 +32272,10 @@ jumptable_8052F484:
 	.4byte .L_800ECF98
 	.4byte .L_800ECFA4
 	.4byte 0
+.endobj jumptable_8052F484
 
 
-.global __vt__cf_CBattleManager
-__vt__cf_CBattleManager:
+.obj __vt__cf_CBattleManager, global
 	.4byte __RTTI__cf_CBattleManager
 	.4byte 0
 	.4byte __dt__cf_CBattleManager
@@ -32289,281 +32292,286 @@ __vt__cf_CBattleManager:
 	.4byte func_800EA460
 	.4byte func_800EA470
 	.4byte func_800EA998
+.endobj __vt__cf_CBattleManager
 
-.global cf_CBattleManager_hierarchy
-cf_CBattleManager_hierarchy:
+.obj cf_CBattleManager_hierarchy, global
 	.4byte __RTTI__cf_IFactoryEvent
 	.4byte 0
 	.4byte 0
+.endobj cf_CBattleManager_hierarchy
 
 
-.global __vt__reslist_cf_IBattleEvent
-__vt__reslist_cf_IBattleEvent:
+.obj __vt__reslist_cf_IBattleEvent, global
 	.4byte __RTTI__reslist_cf_IBattleEvent
 	.4byte 0
 	.4byte __dt__reslist_cf_IBattleEvent
+.endobj __vt__reslist_cf_IBattleEvent
 
-.global reslist_cf_IBattleEvent_hierarchy
-reslist_cf_IBattleEvent_hierarchy:
+.obj reslist_cf_IBattleEvent_hierarchy, global
 	.4byte __RTTI___reslist_base_cf_IBattleEvent
 	.4byte 0
 	.4byte 0
+.endobj reslist_cf_IBattleEvent_hierarchy
 
 
-.global __vt___reslist_base_cf_IBattleEvent
-__vt___reslist_base_cf_IBattleEvent:
+.obj __vt___reslist_base_cf_IBattleEvent, global
 	.4byte __RTTI___reslist_base_cf_IBattleEvent
 	.4byte 0
 	.4byte __dt___reslist_base_cf_IBattleEvent
+.endobj __vt___reslist_base_cf_IBattleEvent
 
 
-.global __vt__reslist_cf_CfObjectActor
-__vt__reslist_cf_CfObjectActor:
+.obj __vt__reslist_cf_CfObjectActor, global
 	.4byte __RTTI__reslist_cf_CfObjectActor
 	.4byte 0
 	.4byte __dt__reslist_cf_CfObjectActor
+.endobj __vt__reslist_cf_CfObjectActor
 
-.global reslist_cf_CfObjectActor_hierarchy
-reslist_cf_CfObjectActor_hierarchy:
+.obj reslist_cf_CfObjectActor_hierarchy, global
 	.4byte __RTTI___reslist_base_cf_CfObjectActor
 	.4byte 0
 	.4byte 0
+.endobj reslist_cf_CfObjectActor_hierarchy
 
 
-.global __vt___reslist_base_cf_CfObjectActor
-__vt___reslist_base_cf_CfObjectActor:
+.obj __vt___reslist_base_cf_CfObjectActor, global
 	.4byte __RTTI___reslist_base_cf_CfObjectActor
 	.4byte 0
 	.4byte __dt___reslist_base_cf_CfObjectActor
+.endobj __vt___reslist_base_cf_CfObjectActor
 
 
-.global __vt__cf_CChainTime
-__vt__cf_CChainTime:
+.obj __vt__cf_CChainTime, global
 	.4byte __RTTI__cf_CChainTime
 	.4byte 0
 	.4byte __dt__cf_CChainTime
+.endobj __vt__cf_CChainTime
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CBattleManager
-__RTTI__cf_CBattleManager:
+.obj __RTTI__cf_CBattleManager, global
 	.4byte cf_CBattleManager_typestr
 	.4byte cf_CBattleManager_hierarchy
+.endobj __RTTI__cf_CBattleManager
 
-.global __RTTI__reslist_cf_IBattleEvent
-__RTTI__reslist_cf_IBattleEvent:
+.obj __RTTI__reslist_cf_IBattleEvent, global
 	.4byte reslist_cf_IBattleEvent_typestr
 	.4byte reslist_cf_IBattleEvent_hierarchy
+.endobj __RTTI__reslist_cf_IBattleEvent
 
-.global __RTTI___reslist_base_cf_IBattleEvent
-__RTTI___reslist_base_cf_IBattleEvent:
+.obj __RTTI___reslist_base_cf_IBattleEvent, global
 	.4byte _reslist_base_cf_IBattleEvent_typestr
 	.4byte 0
+.endobj __RTTI___reslist_base_cf_IBattleEvent
 
-.global __RTTI__reslist_cf_CfObjectActor
-__RTTI__reslist_cf_CfObjectActor:
+.obj __RTTI__reslist_cf_CfObjectActor, global
 	.4byte reslist_cf_CfObjectActor_typestr
 	.4byte reslist_cf_CfObjectActor_hierarchy
+.endobj __RTTI__reslist_cf_CfObjectActor
 
-.global __RTTI___reslist_base_cf_CfObjectActor
-__RTTI___reslist_base_cf_CfObjectActor:
+.obj __RTTI___reslist_base_cf_CfObjectActor, global
 	.4byte _reslist_base_cf_CfObjectActor_typestr
 	.4byte 0
+.endobj __RTTI___reslist_base_cf_CfObjectActor
 
-.global __RTTI__cf_CChainTime
-__RTTI__cf_CChainTime:
+.obj __RTTI__cf_CChainTime, global
 	.4byte cf_CChainTime_typestr
 	.4byte 0
+.endobj __RTTI__cf_CChainTime
 
-.global __RTTI__cf_IFactoryEvent
-__RTTI__cf_IFactoryEvent:
+.obj __RTTI__cf_IFactoryEvent, global
 	.4byte cf_IFactoryEvent_typestr
 	.4byte 0
+.endobj __RTTI__cf_IFactoryEvent
 
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_806696B4
-float_806696B4:
+#.balign 8
+
+.obj float_806696B4, global
 	.float 0.033333335 #0x3D088889
+.endobj float_806696B4
 
 
-.global float_806696B8
-float_806696B8:
+.obj float_806696B8, global
 	.float 20 #0x41A00000
+.endobj float_806696B8
 
 
-.global float_806696BC
-float_806696BC:
+.obj float_806696BC, global
 	.float 15 #0x41700000
+.endobj float_806696BC
 
 
-.global float_806696C0
-float_806696C0:
+.obj float_806696C0, global
 	.float 25 #0x41C80000
+.endobj float_806696C0
 
 
-.global float_806696C4
-float_806696C4:
+.obj float_806696C4, global
 	.float 2 #0x40000000
+.endobj float_806696C4
 
 
-.global float_806696C8
-float_806696C8:
+.obj float_806696C8, global
 	.float 100.0
 	.4byte 0
+.endobj float_806696C8
 
 
-.global double_806696D0
-double_806696D0:
+.obj double_806696D0, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_806696D0
 
-.global float_806696D8
-float_806696D8:
+.obj float_806696D8, global
 	.float 0.0245436933 #0x3CC90FDB
+.endobj float_806696D8
 
 
-.global float_806696DC
-float_806696DC:
+.obj float_806696DC, global
 	.float 95 #0x42BE0000
+.endobj float_806696DC
 
 
-.global float_806696E0
-float_806696E0:
+.obj float_806696E0, global
 	.float 50 #0x42480000
+.endobj float_806696E0
 
 
-.global float_806696E4
-float_806696E4:
+.obj float_806696E4, global
 	.float 0.25
+.endobj float_806696E4
 
 
-.global float_806696E8
-float_806696E8:
+.obj float_806696E8, global
 	.float 200 #0x43480000
+.endobj float_806696E8
 
 
-.global float_806696EC
-float_806696EC:
+.obj float_806696EC, global
 	.float 0.15 #0x3E19999A
+.endobj float_806696EC
 
 
-.global float_806696F0
-float_806696F0:
+.obj float_806696F0, global
 	.float 90 #0x42B40000
+.endobj float_806696F0
 
 
-.global float_806696F4
-float_806696F4:
+.obj float_806696F4, global
 	.float -1.0
+.endobj float_806696F4
 
 
-.global float_806696F8
-float_806696F8:
+.obj float_806696F8, global
 	.float 0.9 #0x3F666666
+.endobj float_806696F8
 
 
-.global float_806696FC
-float_806696FC:
+.obj float_806696FC, global
 	.float 10.0
+.endobj float_806696FC
 
 
-.global float_80669700
-float_80669700:
+.obj float_80669700, global
 	.float 0.75
+.endobj float_80669700
 
 
-.global float_80669704
-float_80669704:
+.obj float_80669704, global
 	.float 1.5
+.endobj float_80669704
 
 
-.global float_80669708
-float_80669708:
+.obj float_80669708, global
 	.float 1.25 #0x3FA00000
 	.4byte 0
+.endobj float_80669708
 
 
-.global double_80669710
-double_80669710:
+.obj double_80669710, global
 	.double 1 #0x3FF0000000000000
+.endobj double_80669710
 
 
-.global float_80669718
-float_80669718:
+.obj float_80669718, global
 	.float 150 #0x43160000
+.endobj float_80669718
 
 
-.global float_8066971C
-float_8066971C:
+.obj float_8066971C, global
 	.float 32 #0x42000000
+.endobj float_8066971C
 
 
-.global double_80669720
-double_80669720:
+.obj double_80669720, global
 	.double 0.5 #0x3FE0000000000000
+.endobj double_80669720
 
 
-.global double_80669728
-double_80669728:
+.obj double_80669728, global
 	.double -0.5 #0xBFE0000000000000
+.endobj double_80669728
 
 
-.global float_80669730
-float_80669730:
+.obj float_80669730, global
 	.float 3 #0x40400000
+.endobj float_80669730
 
 
-.global float_80669734
-float_80669734:
+.obj float_80669734, global
 	.float 5 #0x40A00000
+.endobj float_80669734
 
 
-.global float_80669738
-float_80669738:
+.obj float_80669738, global
 	.float 0.35 #0x3EB33333
+.endobj float_80669738
 
 
-.global float_8066973C
-float_8066973C:
+.obj float_8066973C, global
 	.float 0.0100000007 #0x3C23D70B
+.endobj float_8066973C
 
 
-.global float_80669740
-float_80669740:
+.obj float_80669740, global
 	.float 30 #0x41F00000
+.endobj float_80669740
 
 
-.global float_80669744
-float_80669744:
+.obj float_80669744, global
 	.float 75 #0x42960000
+.endobj float_80669744
 
 
-.global float_80669748
-float_80669748:
+.obj float_80669748, global
 	.float 2.5 #0x40200000
+.endobj float_80669748
 
 
-.global float_8066974C
-float_8066974C:
+.obj float_8066974C, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_8066974C
 
 
-.global float_80669750
-float_80669750:
+.obj float_80669750, global
 	.float 99 #0x42C60000
 	.4byte 0
+.endobj float_80669750
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_806667F8
-lbl_806667F8:
+.balign 8
+
+.obj lbl_806667F8, global
 	.skip 0x8
+.endobj lbl_806667F8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

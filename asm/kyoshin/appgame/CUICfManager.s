@@ -11943,16 +11943,14 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-
-.global lbl_804FB800
-lbl_804FB800:
+.obj lbl_804FB800, global
 	.asciz "/menu/common.arc"
 	.balign 4
+.endobj lbl_804FB800
 
-.global lbl_804FB814
-lbl_804FB814:
+.obj lbl_804FB814, global
 	.2byte 0x000C
     .2byte 0x000D
 	.2byte 0x000F
@@ -11980,43 +11978,43 @@ lbl_804FB814:
 	.2byte 0x0224
     .2byte 0x0225
 	.4byte 0
+.endobj lbl_804FB814
 
-.global CUICfManager_typestr
-CUICfManager_typestr:
+.obj CUICfManager_typestr, global
 	.asciz "CUICfManager"
 	.balign 4
+.endobj CUICfManager_typestr
 
-.global reslist_IUICf_typestr
-reslist_IUICf_typestr:
+.obj reslist_IUICf_typestr, global
 	.asciz "reslist<IUICf *>"
 	.balign 4
+.endobj reslist_IUICf_typestr
 
-.global _reslist_base_IUICf_typestr
-_reslist_base_IUICf_typestr:
+.obj _reslist_base_IUICf_typestr, global
 	.asciz "_reslist_base<IUICf *>"
 	.balign 4
+.endobj _reslist_base_IUICf_typestr
 
-.global CUICfManager_CTest_typestr
-CUICfManager_CTest_typestr:
+.obj CUICfManager_CTest_typestr, global
 	.asciz "CUICfManager::CTest"
+.endobj CUICfManager_CTest_typestr
 
-.global CTTask_CUICfManager_CTest_typestr
-CTTask_CUICfManager_CTest_typestr:
+.obj CTTask_CUICfManager_CTest_typestr, global
 	.asciz "CTTask<CUICfManager::CTest>"
+.endobj CTTask_CUICfManager_CTest_typestr
 
-.global CTTask_CUICfManager_typestr
-CTTask_CUICfManager_typestr:
+.obj CTTask_CUICfManager_typestr, global
 	.asciz "CTTask<CUICfManager>"
 	.balign 4
+.endobj CTTask_CUICfManager_typestr
 
-.global cf_IFlagEvent_typestr
-cf_IFlagEvent_typestr:
+.obj cf_IFlagEvent_typestr, global
 	.asciz "cf::IFlagEvent"
 	.balign 4
+.endobj cf_IFlagEvent_typestr
 
 
-.global strpool_804FB8E0
-strpool_804FB8E0:
+.obj strpool_804FB8E0, global
 	.asciz "%s"
 	.asciz "arc"
 	.asciz "battle_font01.brfna"
@@ -12026,10 +12024,10 @@ strpool_804FB8E0:
 	.asciz "JNL_playaward"
 	.asciz "exp"
 	.byte 0x00
+.endobj strpool_804FB8E0
 
 
-.global lbl_804FB940
-lbl_804FB940:
+.obj lbl_804FB940, global
 	.4byte 0
 	.4byte 0x00000001
 	.4byte 0x00000056
@@ -12060,9 +12058,9 @@ lbl_804FB940:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte 0
+.endobj lbl_804FB940
 
-.global lbl_804FB9B8
-lbl_804FB9B8:
+.obj lbl_804FB9B8, global
 	.2byte 0x0000
     .2byte 0x0001
 	.2byte 0x0056
@@ -12091,10 +12089,10 @@ lbl_804FB9B8:
     .2byte 0x03C1
 	.2byte 0x03CA
     .2byte 0x0000
+.endobj lbl_804FB9B8
 
 
-.global lbl_804FB9F0
-lbl_804FB9F0:
+.obj lbl_804FB9F0, global
 	.4byte 0xFFFFFFFF
 	.4byte 0x00000001
 	.4byte 0x00000056
@@ -12123,132 +12121,133 @@ lbl_804FB9F0:
 	.4byte 0x000003C1
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+.endobj lbl_804FB9F0
 
-.global lbl_804FBA60
-lbl_804FBA60:
+.obj lbl_804FBA60, global
 	.4byte 0x00010203
 	.4byte 0x04050607
 	.4byte 0x08090A47
 	.4byte 0x48494A4B
 	.4byte 0x51525354
 	.4byte 0xFF000000
+.endobj lbl_804FBA60
 
-.global lbl_804FBA78
-lbl_804FBA78:
+.obj lbl_804FBA78, global
 	.asciz "face_n01"
 	.balign 4
+.endobj lbl_804FBA78
 
-.global lbl_804FBA84
-lbl_804FBA84:
+.obj lbl_804FBA84, global
 	.asciz "face_m01"
 	.balign 4
+.endobj lbl_804FBA84
 
-.global lbl_804FBA90
-lbl_804FBA90:
+.obj lbl_804FBA90, global
 	.asciz "face_n02"
 	.balign 4
+.endobj lbl_804FBA90
 
-.global lbl_804FBA9C
-lbl_804FBA9C:
+.obj lbl_804FBA9C, global
 	.asciz "face_m02"
 	.balign 4
+.endobj lbl_804FBA9C
 
-.global lbl_804FBAA8
-lbl_804FBAA8:
+.obj lbl_804FBAA8, global
 	.asciz "minimaplist0101"
+.endobj lbl_804FBAA8
 
-.global lbl_804FBAB8
-lbl_804FBAB8:
+.obj lbl_804FBAB8, global
 	.asciz "minimaplist0201"
+.endobj lbl_804FBAB8
 
-.global lbl_804FBAC8
-lbl_804FBAC8:
+.obj lbl_804FBAC8, global
 	.asciz "minimaplist0301"
+.endobj lbl_804FBAC8
 
-.global lbl_804FBAD8
-lbl_804FBAD8:
+.obj lbl_804FBAD8, global
 	.asciz "minimaplist0401"
+.endobj lbl_804FBAD8
 
-.global lbl_804FBAE8
-lbl_804FBAE8:
+.obj lbl_804FBAE8, global
 	.asciz "minimaplist0402"
+.endobj lbl_804FBAE8
 
-.global lbl_804FBAF8
-lbl_804FBAF8:
+.obj lbl_804FBAF8, global
 	.asciz "minimaplist0501"
+.endobj lbl_804FBAF8
 
-.global lbl_804FBB08
-lbl_804FBB08:
+.obj lbl_804FBB08, global
 	.asciz "minimaplist0601"
+.endobj lbl_804FBB08
 
-.global lbl_804FBB18
-lbl_804FBB18:
+.obj lbl_804FBB18, global
 	.asciz "minimaplist0701"
+.endobj lbl_804FBB18
 
-.global lbl_804FBB28
-lbl_804FBB28:
+.obj lbl_804FBB28, global
 	.asciz "minimaplist0901"
+.endobj lbl_804FBB28
 
-.global lbl_804FBB38
-lbl_804FBB38:
+.obj lbl_804FBB38, global
 	.asciz "minimaplist1001"
+.endobj lbl_804FBB38
 
-.global lbl_804FBB48
-lbl_804FBB48:
+.obj lbl_804FBB48, global
 	.asciz "minimaplist1101"
+.endobj lbl_804FBB48
 
-.global lbl_804FBB58
-lbl_804FBB58:
+.obj lbl_804FBB58, global
 	.asciz "minimaplist1201"
+.endobj lbl_804FBB58
 
-.global lbl_804FBB68
-lbl_804FBB68:
+.obj lbl_804FBB68, global
 	.asciz "minimaplist1202"
+.endobj lbl_804FBB68
 
-.global lbl_804FBB78
-lbl_804FBB78:
+.obj lbl_804FBB78, global
 	.asciz "minimaplist1301"
+.endobj lbl_804FBB78
 
-.global lbl_804FBB88
-lbl_804FBB88:
+.obj lbl_804FBB88, global
 	.asciz "minimaplist1401"
+.endobj lbl_804FBB88
 
-.global lbl_804FBB98
-lbl_804FBB98:
+.obj lbl_804FBB98, global
 	.asciz "minimaplist1501"
+.endobj lbl_804FBB98
 
-.global lbl_804FBBA8
-lbl_804FBBA8:
+.obj lbl_804FBBA8, global
 	.asciz "minimaplist1601"
+.endobj lbl_804FBBA8
 
-.global lbl_804FBBB8
-lbl_804FBBB8:
+.obj lbl_804FBBB8, global
 	.asciz "minimaplist1701"
+.endobj lbl_804FBBB8
 
-.global lbl_804FBBC8
-lbl_804FBBC8:
+.obj lbl_804FBBC8, global
 	.asciz "minimaplist1901"
+.endobj lbl_804FBBC8
 
-.global lbl_804FBBD8
-lbl_804FBBD8:
+.obj lbl_804FBBD8, global
 	.asciz "minimaplist2001"
+.endobj lbl_804FBBD8
 
-.global lbl_804FBBE8
-lbl_804FBBE8:
+.obj lbl_804FBBE8, global
 	.asciz "minimaplist2101"
+.endobj lbl_804FBBE8
 
-.global lbl_804FBBF8
-lbl_804FBBF8:
+.obj lbl_804FBBF8, global
 	.asciz "minimaplist2201"
+.endobj lbl_804FBBF8
 
-.global lbl_804FBC08
-lbl_804FBC08:
+.obj lbl_804FBC08, global
 	.asciz "minimaplist2301"
+.endobj lbl_804FBC08
 
-.global lbl_804FBC18
-lbl_804FBC18:
+.obj lbl_804FBC18, global
 	.asciz "minimaplist2401"
 	.4byte 0
+.endobj lbl_804FBC18
 
 	.4byte lbl_804FBAA8
 	.4byte lbl_804FBAB8
@@ -12287,8 +12286,7 @@ lbl_804FBC18:
 	.4byte 0
 
 
-.global lbl_804FBCB0
-lbl_804FBCB0:
+.obj lbl_804FBCB0, global
 	.4byte 0
 	.4byte lbl_804FBAA8
 	.4byte lbl_804FBAB8
@@ -12299,6 +12297,7 @@ lbl_804FBCB0:
 	.4byte lbl_804FBB08
 	.4byte lbl_804FBB18
 	.4byte 0
+.endobj lbl_804FBCB0
 
 	.4byte lbl_804FBB28
 	.4byte lbl_804FBB38
@@ -12324,14 +12323,14 @@ lbl_804FBCB0:
 	.4byte 0
 	.4byte 0
 
-.global lbl_804FBD30
-lbl_804FBD30:
+.obj lbl_804FBD30, global
 	.asciz "minimaplist0801"
+.endobj lbl_804FBD30
 
-.global lbl_804FBD40
-lbl_804FBD40:
+.obj lbl_804FBD40, global
 	.asciz "minimaplist1801"
 	.4byte 0
+.endobj lbl_804FBD40
 
 	.4byte lbl_804FBAA8
 	.4byte lbl_804FBAB8
@@ -12368,8 +12367,7 @@ lbl_804FBD40:
 	.4byte 0
 
 
-.global lbl_804FBDD8
-lbl_804FBDD8:
+.obj lbl_804FBDD8, global
 	.4byte 0
 	.4byte lbl_804FBAA8
 	.4byte lbl_804FBAB8
@@ -12380,6 +12378,7 @@ lbl_804FBDD8:
 	.4byte lbl_804FBB08
 	.4byte lbl_804FBB18
 	.4byte 0
+.endobj lbl_804FBDD8
 
 	.4byte lbl_804FBB28
 	.4byte lbl_804FBB38
@@ -12407,8 +12406,7 @@ lbl_804FBDD8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_804FBE60
-lbl_804FBE60:
+.obj lbl_804FBE60, global
 	.float 1.5
 	.float 2
 	.float 1.7
@@ -12422,10 +12420,10 @@ lbl_804FBE60:
 	.float 1.5
 	.float 1.7
 	.float 1.7
+.endobj lbl_804FBE60
 
 
-.global CUICfManager_strpool
-CUICfManager_strpool:
+.obj CUICfManager_strpool, global
 	.asciz "%s"
 	.asciz "TXT"
 	.asciz "%d"
@@ -12495,26 +12493,26 @@ CUICfManager_strpool:
 	.asciz "material%d"
 	.asciz "number%d"
 	.balign 4
+.endobj CUICfManager_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_80531A58
-lbl_80531A58:
+.obj lbl_80531A58, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_8013314C
+.endobj lbl_80531A58
 
-.global lbl_80531A64
-lbl_80531A64:
+.obj lbl_80531A64, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80133178
+.endobj lbl_80531A64
 
 
-.global __vt__CUICfManager
-__vt__CUICfManager:
+.obj __vt__CUICfManager, global
 	.4byte __RTTI__CUICfManager
 	.4byte 0
 	.4byte __dt__CUICfManager
@@ -12564,9 +12562,9 @@ __vt__CUICfManager:
 	.4byte func_80135FCC
 	.4byte func_8013317C
 	.4byte func_80133324
+.endobj __vt__CUICfManager
 
-.global CUICfManager_hierarchy
-CUICfManager_hierarchy:
+.obj CUICfManager_hierarchy, global
 	.4byte __RTTI__cf_IFlagEvent
 	.4byte 0x00000058
 	.4byte __RTTI__IWorkEvent
@@ -12580,30 +12578,30 @@ CUICfManager_hierarchy:
 	.4byte __RTTI__CTTask_CUICfManager
 	.4byte 0
 	.4byte 0
+.endobj CUICfManager_hierarchy
 
 
-.global __vt__reslist_IUICf
-__vt__reslist_IUICf:
+.obj __vt__reslist_IUICf, global
 	.4byte __RTTI__reslist_IUICf
 	.4byte 0
 	.4byte __dt__reslist_IUICf
+.endobj __vt__reslist_IUICf
 
-.global reslist_IUICf_hierarchy
-reslist_IUICf_hierarchy:
+.obj reslist_IUICf_hierarchy, global
 	.4byte __RTTI___reslist_base_IUICf
 	.4byte 0
 	.4byte 0
+.endobj reslist_IUICf_hierarchy
 
 
-.global __vt___reslist_base_IUICf
-__vt___reslist_base_IUICf:
+.obj __vt___reslist_base_IUICf, global
 	.4byte __RTTI___reslist_base_IUICf
 	.4byte 0
 	.4byte __dt___reslist_base_IUICf
+.endobj __vt___reslist_base_IUICf
 
 
-.global __vt__CUICfManager_CTest
-__vt__CUICfManager_CTest:
+.obj __vt__CUICfManager_CTest, global
 	.4byte __RTTI__CUICfManager_CTest
 	.4byte 0
 	.4byte __dt__CUICfManager_CTest
@@ -12613,9 +12611,9 @@ __vt__CUICfManager_CTest:
 	.4byte func_80135E34
 	.4byte func_80135E30
 	.4byte func_80043F20
+.endobj __vt__CUICfManager_CTest
 
-.global CUICfManager_CTest_hierarchy
-CUICfManager_CTest_hierarchy:
+.obj CUICfManager_CTest_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -12625,10 +12623,10 @@ CUICfManager_CTest_hierarchy:
 	.4byte __RTTI__CTTask_CUICfManager_CTest
 	.4byte 0
 	.4byte 0
+.endobj CUICfManager_CTest_hierarchy
 
 
-.global __vt__CTTask_CUICfManager_CTest
-__vt__CTTask_CUICfManager_CTest:
+.obj __vt__CTTask_CUICfManager_CTest, global
 	.4byte __RTTI__CTTask_CUICfManager_CTest
 	.4byte 0
 	.4byte __dt__CTTask_CUICfManager_CTest
@@ -12638,9 +12636,9 @@ __vt__CTTask_CUICfManager_CTest:
 	.4byte func_80135E40
 	.4byte func_80135E88
 	.4byte func_80043F20
+.endobj __vt__CTTask_CUICfManager_CTest
 
-.global CTTask_CUICfManager_CTest_hierarchy
-CTTask_CUICfManager_CTest_hierarchy:
+.obj CTTask_CUICfManager_CTest_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -12648,10 +12646,10 @@ CTTask_CUICfManager_CTest_hierarchy:
 	.4byte __RTTI__CProcess
 	.4byte 0
 	.4byte 0
+.endobj CTTask_CUICfManager_CTest_hierarchy
 
 
-.global __vt__CTTask_CUICfManager
-__vt__CTTask_CUICfManager:
+.obj __vt__CTTask_CUICfManager, global
 	.4byte __RTTI__CTTask_CUICfManager
 	.4byte 0
 	.4byte __dt__CTTask_CUICfManager
@@ -12661,9 +12659,9 @@ __vt__CTTask_CUICfManager:
 	.4byte func_80135ED0
 	.4byte func_80135F18
 	.4byte func_80043F20
+.endobj __vt__CTTask_CUICfManager
 
-.global CTTask_CUICfManager_hierarchy
-CTTask_CUICfManager_hierarchy:
+.obj CTTask_CUICfManager_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -12672,10 +12670,10 @@ CTTask_CUICfManager_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CTTask_CUICfManager_hierarchy
 
 
-.global jumptable_80531C58
-jumptable_80531C58:
+.obj jumptable_80531C58, global
 	.4byte .L_801394B0
 	.4byte .L_8013944C
 	.4byte .L_80139454
@@ -12690,341 +12688,355 @@ jumptable_80531C58:
 	.4byte .L_8013949C
 	.4byte .L_801394A4
 	.4byte .L_801394AC
+.endobj jumptable_80531C58
 
-.global lbl_80531C90
-lbl_80531C90:
+.obj lbl_80531C90, global
 	.asciz "NW4R:Pointer must not be NULL (p)"
 	.balign 4
+.endobj lbl_80531C90
 
-.global lbl_80531CB4
-lbl_80531CB4:
+.obj lbl_80531CB4, global
 	.asciz "LinkList.h"
 	.balign 4
+.endobj lbl_80531CB4
 
 
-.global lbl_80531CC0
-lbl_80531CC0:
+.obj lbl_80531CC0, global
 	.asciz "NW4R:Failed assertion texMapIdx < mGXMemNum.texMap"
 	.balign 4
+.endobj lbl_80531CC0
 
 
-.global lbl_80531CF4
-lbl_80531CF4:
+.obj lbl_80531CF4, global
 	.asciz "material.h"
 	.balign 4
+.endobj lbl_80531CF4
 
 
-.global lbl_80531D00
-lbl_80531D00:
+.obj lbl_80531D00, global
 	.asciz "NW4R:Failed assertion idx < TevColorMax"
+.endobj lbl_80531D00
 
 
-.global lbl_80531D28
-lbl_80531D28:
+.obj lbl_80531D28, global
 	.asciz "material.h"
 	.balign 4
 	.4byte 0
+.endobj lbl_80531D28
 
 
-.global lbl_80531D38
-lbl_80531D38:
+.obj lbl_80531D38, global
 	.asciz "NW4R:Failed assertion idx < TevColorMax"
+.endobj lbl_80531D38
 
 
-.global lbl_80531D60
-lbl_80531D60:
+.obj lbl_80531D60, global
 	.asciz "material.h"
 	.balign 4
 	.4byte 0
+.endobj lbl_80531D60
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-
-
-.global lbl_80664AA0
-lbl_80664AA0:
+.obj lbl_80664AA0, global
 	.4byte lbl_804FB800
 	.4byte 0
+.endobj lbl_80664AA0
 
-.global __RTTI__CUICfManager
-__RTTI__CUICfManager:
+.obj __RTTI__CUICfManager, global
 	.4byte CUICfManager_typestr
 	.4byte CUICfManager_hierarchy
+.endobj __RTTI__CUICfManager
 
-.global __RTTI__reslist_IUICf
-__RTTI__reslist_IUICf:
+.obj __RTTI__reslist_IUICf, global
 	.4byte reslist_IUICf_typestr
 	.4byte reslist_IUICf_hierarchy
+.endobj __RTTI__reslist_IUICf
 
-.global __RTTI___reslist_base_IUICf
-__RTTI___reslist_base_IUICf:
+.obj __RTTI___reslist_base_IUICf, global
 	.4byte _reslist_base_IUICf_typestr
 	.4byte 0
+.endobj __RTTI___reslist_base_IUICf
 
-.global __RTTI__CUICfManager_CTest
-__RTTI__CUICfManager_CTest:
+.obj __RTTI__CUICfManager_CTest, global
 	.4byte CUICfManager_CTest_typestr
 	.4byte CUICfManager_CTest_hierarchy
+.endobj __RTTI__CUICfManager_CTest
 
-.global __RTTI__CTTask_CUICfManager_CTest
-__RTTI__CTTask_CUICfManager_CTest:
+.obj __RTTI__CTTask_CUICfManager_CTest, global
 	.4byte CTTask_CUICfManager_CTest_typestr
 	.4byte CTTask_CUICfManager_CTest_hierarchy
+.endobj __RTTI__CTTask_CUICfManager_CTest
 
-.global __RTTI__CTTask_CUICfManager
-__RTTI__CTTask_CUICfManager:
+.obj __RTTI__CTTask_CUICfManager, global
 	.4byte CTTask_CUICfManager_typestr
 	.4byte CTTask_CUICfManager_hierarchy
+.endobj __RTTI__CTTask_CUICfManager
 
-.global __RTTI__cf_IFlagEvent
-__RTTI__cf_IFlagEvent:
+.obj __RTTI__cf_IFlagEvent, global
 	.4byte cf_IFlagEvent_typestr
 	.4byte 0
+.endobj __RTTI__cf_IFlagEvent
 
-.global lbl_80664AE0
-lbl_80664AE0:
+.obj lbl_80664AE0, global
 	.4byte 0x25730000
+.endobj lbl_80664AE0
 
 
-.global lbl_80664AE4
-lbl_80664AE4:
+.obj lbl_80664AE4, global
 	.4byte 0x25730000
+.endobj lbl_80664AE4
 
 
-.global lbl_80664AE8
-lbl_80664AE8:
+.obj lbl_80664AE8, global
 	.4byte 0x01000000
 	.4byte 0
+.endobj lbl_80664AE8
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+#.balign 8
 
-
-
-.global float_80669B94
-float_80669B94:
+.obj float_80669B94, global
 	.float 100.0
+.endobj float_80669B94
 
 
-.global float_80669B98
-float_80669B98:
+.obj float_80669B98, global
 	.float 0
 	.4byte 0
+.endobj float_80669B98
 
 
-.global float_80669BA0
-float_80669BA0:
+.obj float_80669BA0, global
 	.float 38 #0x42180000
+.endobj float_80669BA0
 
 
-.global float_80669BA4
-float_80669BA4:
+.obj float_80669BA4, global
 	.float -1000 #0xC47A0000
+.endobj float_80669BA4
 
 
-.global float_80669BA8
-float_80669BA8:
+.obj float_80669BA8, global
 	.float 1000 #0x447A0000
+.endobj float_80669BA8
 
 
-.global float_80669BAC
-float_80669BAC:
+.obj float_80669BAC, global
 	.float 0.75
+.endobj float_80669BAC
 
 
-.global float_80669BB0
-float_80669BB0:
+.obj float_80669BB0, global
 	.float 1.0
+.endobj float_80669BB0
 
 
-.global float_80669BB4
-float_80669BB4:
+.obj float_80669BB4, global
 	.float 0
+.endobj float_80669BB4
 
 
-.global double_80669BB8
-double_80669BB8:
+.obj double_80669BB8, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_80669BB8
 
-.global float_80669BC0
-float_80669BC0:
+.obj float_80669BC0, global
 	.float 0.6 #0x3F19999A
+.endobj float_80669BC0
 
 
-.global float_80669BC4
-float_80669BC4:
+.obj float_80669BC4, global
 	.float 0.5
+.endobj float_80669BC4
 
 
-.global float_80669BC8
-float_80669BC8:
+.obj float_80669BC8, global
 	.float -1.0
+.endobj float_80669BC8
 
 
-.global float_80669BCC
-float_80669BCC:
+.obj float_80669BCC, global
 	.float 60 #0x42700000
+.endobj float_80669BCC
 
 
-.global lbl_80669BD0
-lbl_80669BD0:
+.obj lbl_80669BD0, global
 	.4byte lbl_804FBA78
+.endobj lbl_80669BD0
 
 
-.global lbl_80669BD4
-lbl_80669BD4:
+.obj lbl_80669BD4, global
 	.4byte lbl_804FBA84
+.endobj lbl_80669BD4
 
 
-.global lbl_80669BD8
-lbl_80669BD8:
+.obj lbl_80669BD8, global
 	.4byte lbl_804FBA90
+.endobj lbl_80669BD8
 
 
-.global lbl_80669BDC
-lbl_80669BDC:
+.obj lbl_80669BDC, global
 	.4byte lbl_804FBA9C
+.endobj lbl_80669BDC
 
 
-.global lbl_80669BE0
-lbl_80669BE0:
+.obj lbl_80669BE0, global
 	.4byte lbl_804FBA78
+.endobj lbl_80669BE0
 
 
-.global lbl_80669BE4
-lbl_80669BE4:
+.obj lbl_80669BE4, global
 	.4byte lbl_804FBA84
+.endobj lbl_80669BE4
 
 
-.global lbl_80669BE8
-lbl_80669BE8:
+.obj lbl_80669BE8, global
 	.4byte lbl_804FBA90
+.endobj lbl_80669BE8
 
 
-.global lbl_80669BEC
-lbl_80669BEC:
+.obj lbl_80669BEC, global
 	.4byte lbl_804FBA9C
+.endobj lbl_80669BEC
 
 
-.global lbl_80669BF0
-lbl_80669BF0:
+.obj lbl_80669BF0, global
 	.4byte lbl_804FBA78
+.endobj lbl_80669BF0
 
 
-.global lbl_80669BF4
-lbl_80669BF4:
+.obj lbl_80669BF4, global
 	.4byte lbl_804FBA84
+.endobj lbl_80669BF4
 
 
-.global lbl_80669BF8
-lbl_80669BF8:
+.obj lbl_80669BF8, global
 	.4byte lbl_804FBA90
+.endobj lbl_80669BF8
 
 
-.global lbl_80669BFC
-lbl_80669BFC:
+.obj lbl_80669BFC, global
 	.4byte lbl_804FBA9C
+.endobj lbl_80669BFC
 
 
-.global float_80669C00
-float_80669C00:
+.obj float_80669C00, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_80669C00
 
 
-.global float_80669C04
-float_80669C04:
+.obj float_80669C04, global
 	.float 1.5
+.endobj float_80669C04
 
 
-.global float_80669C08
-float_80669C08:
+.obj float_80669C08, global
 	.float 64 #0x42800000
 	.4byte 0
+.endobj float_80669C08
 
 
-.global double_80669C10
-double_80669C10:
+.obj double_80669C10, global
 	.double 2 #0x4000000000000000
+.endobj double_80669C10
 
 
-.global double_80669C18
-double_80669C18:
+.obj double_80669C18, global
 	.double 0.5 #0x3FE0000000000000
+.endobj double_80669C18
 
 
-.global double_80669C20
-double_80669C20:
+.obj double_80669C20, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_80669C20
+
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-
-
-.global lbl_80577328
-lbl_80577328:
+.obj lbl_80577328, global
 	.skip 0x80
-.global lbl_805773A8
-lbl_805773A8:
+.endobj lbl_80577328
+
+.obj lbl_805773A8, global
 	.skip 0x80
-.global lbl_80577428
-lbl_80577428:
+.endobj lbl_805773A8
+
+.obj lbl_80577428, global
 	.skip 0x20
+.endobj lbl_80577428
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80666948, global
+	.skip 0x4
+.endobj lbl_80666948
 
-.global lbl_80666948
-lbl_80666948:
+.obj CUICfManager_instance, global
 	.skip 0x4
-.global CUICfManager_instance
-CUICfManager_instance:
-	.skip 0x4
-.global lbl_80666950
-lbl_80666950:
+.endobj CUICfManager_instance
+
+.obj lbl_80666950, global
 	.skip 0x1
-.global lbl_80666951
-lbl_80666951:
+.endobj lbl_80666950
+
+.obj lbl_80666951, global
 	.skip 0x1
-.global lbl_80666952
-lbl_80666952:
+.endobj lbl_80666951
+
+.obj lbl_80666952, global
 	.skip 0x1
-.global lbl_80666953
-lbl_80666953:
+.endobj lbl_80666952
+
+.obj lbl_80666953, global
 	.skip 0x1
-.global lbl_80666954
-lbl_80666954:
+.endobj lbl_80666953
+
+.obj lbl_80666954, global
 	.skip 0x4
-.global lbl_80666958
-lbl_80666958:
+.endobj lbl_80666954
+
+.obj lbl_80666958, global
 	.skip 0x4
-.global lbl_8066695C
-lbl_8066695C:
+.endobj lbl_80666958
+
+.obj lbl_8066695C, global
 	.skip 0x4
-.global lbl_80666960
-lbl_80666960:
+.endobj lbl_8066695C
+
+.obj lbl_80666960, global
 	.skip 0x4
-.global lbl_80666964
-lbl_80666964:
+.endobj lbl_80666960
+
+.obj lbl_80666964, global
 	.skip 0x7
-.global lbl_8066696B
-lbl_8066696B:
+.endobj lbl_80666964
+
+.obj lbl_8066696B, global
 	.skip 0x1
-.global lbl_8066696C
-lbl_8066696C:
+.endobj lbl_8066696B
+
+.obj lbl_8066696C, global
 	.skip 0x6
-.global lbl_80666972
-lbl_80666972:
+.endobj lbl_8066696C
+
+.obj lbl_80666972, global
 	.skip 0x1
-.global lbl_80666973
-lbl_80666973:
+.endobj lbl_80666972
+
+.obj lbl_80666973, global
 	.skip 0x1
-.global lbl_80666974
-lbl_80666974:
+.endobj lbl_80666973
+
+.obj lbl_80666974, global
 	.skip 0x4
+.endobj lbl_80666974
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

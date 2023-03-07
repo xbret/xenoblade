@@ -5507,8 +5507,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global SFD_tr_vd_mpv
-SFD_tr_vd_mpv:
+.balign 8
+
+.obj SFD_tr_vd_mpv, global
 	.4byte SFMPV_Init
 	.4byte SFMPV_Finish
 	.4byte SFMPV_ExecServer
@@ -5523,10 +5524,10 @@ SFD_tr_vd_mpv:
 	.4byte SFMPV_GetRead
 	.4byte SFMPV_AddRead
 	.4byte SFMPV_Seek
+.endobj SFD_tr_vd_mpv
 
 
-.global sfmpv_fps_round
-sfmpv_fps_round:
+.obj sfmpv_fps_round, global
 	.4byte 0
 	.4byte 0x00000018
 	.4byte 0x00000018
@@ -5537,8 +5538,9 @@ sfmpv_fps_round:
 	.4byte 0x0000003C
 	.4byte 0x0000003C
 	.4byte 0
+.endobj sfmpv_fps_round
 
-sfmpv_conv_29_97:
+.obj sfmpv_conv_29_97, local
 	.4byte 0x0001A574
 	.4byte 0x0000463E
 	.4byte 0x00000708
@@ -5547,8 +5549,9 @@ sfmpv_conv_29_97:
 	.4byte 0x0000001E
 	.4byte 0x0000000A
 	.4byte 0x00000002
+.endobj sfmpv_conv_29_97
 
-sfmpv_conv_59_94:
+.obj sfmpv_conv_59_94, local
 	.4byte 0x00034AE8
 	.4byte 0x00008C7C
 	.4byte 0x00000E10
@@ -5557,10 +5560,10 @@ sfmpv_conv_59_94:
 	.4byte 0x0000003C
 	.4byte 0x0000000A
 	.4byte 0x00000004
+.endobj sfmpv_conv_59_94
 
 
-.global sfd_mpv_strpool
-sfd_mpv_strpool:
+.obj sfd_mpv_strpool, global
 	.asciz "before seek time"
 	.asciz "ptype"
 	.asciz "empty B"
@@ -5568,14 +5571,16 @@ sfd_mpv_strpool:
 	.asciz "late"
 	.byte 0x00
 	.4byte 0
+.endobj sfd_mpv_strpool
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global sfmpv_work
-sfmpv_work:
+.obj sfmpv_work, global
 	.skip 0x12020
-.global sfmpv_discard_wsiz
-sfmpv_discard_wsiz:
+.endobj sfmpv_work
+
+.obj sfmpv_discard_wsiz, global
 	.skip 0x4
+.endobj sfmpv_discard_wsiz
 
 .skip 0x4

@@ -302,15 +302,18 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
+
 #unconfirmed name
-cricrwstd_build:
+.obj cricrwstd_build, local
 	.asciz "\nCRI CRW:STD/WII Ver.0.83 Build:Nov 13 2008 10:53:02\n"
 	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
 	.balign 4
 	.4byte 0
+.endobj cricrwstd_build
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_80601360
-lbl_80601360:
+.obj lbl_80601360, global
 	.skip 0x20
+.endobj lbl_80601360

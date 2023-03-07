@@ -1547,45 +1547,56 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-.global lbl_805197E0
-lbl_805197E0:
+
+.obj lbl_805197E0, global
 	.asciz "E02110501 adxstmf_stat_exec: can't open "
 	.asciz "E05072801 adxstmf_stat_exec: can't open "
 	.balign 4
 	.4byte 0
+.endobj lbl_805197E0
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global adxstmf_rtim_num
-adxstmf_rtim_num:
-	.4byte 0x00000018
+.balign 8
 
-adxstmf_nrml_ofst:
+.obj adxstmf_rtim_num, global
 	.4byte 0x00000018
+.endobj adxstmf_rtim_num
 
-adxstmf_nrml_num:
+.obj adxstmf_nrml_ofst, local
+	.4byte 0x00000018
+.endobj adxstmf_nrml_ofst
+
+.obj adxstmf_nrml_num, local
 	.4byte 0x00000010
 	.4byte 0
+.endobj adxstmf_nrml_num
 
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global adxstm_init_count
-adxstm_init_count:
+.obj adxstm_init_count, global
 	.skip 0x4
-.global adxstmf_rtim_ofst
-adxstmf_rtim_ofst:
+.endobj adxstm_init_count
+
+.obj adxstmf_rtim_ofst, global
 	.skip 0x4
-.global lbl_805E7520
-lbl_805E7520:
+.endobj adxstmf_rtim_ofst
+
+.obj lbl_805E7520, global
 	.skip 0x4
-.global lbl_805E7524
-lbl_805E7524:
+.endobj lbl_805E7520
+
+.obj lbl_805E7524, global
 	.skip 0x4
-.global adxstmf_obj
-adxstmf_obj:
+.endobj lbl_805E7524
+
+.obj adxstmf_obj, global
 	.skip 0x1040
-.global lbl_805E8568
-lbl_805E8568:
+.endobj adxstmf_obj
+
+.obj lbl_805E8568, global
 	.skip 0x8
+.endobj lbl_805E8568

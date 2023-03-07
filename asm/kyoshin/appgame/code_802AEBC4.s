@@ -803,36 +803,35 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_8050C880
-lbl_8050C880:
+.obj lbl_8050C880, global
 	.asciz "gameStart"
 	.balign 4
+.endobj lbl_8050C880
 
-.global lbl_8050C88C
-lbl_8050C88C:
+.obj lbl_8050C88C, global
 	.asciz "itemVision"
 	.balign 4
+.endobj lbl_8050C88C
 
-.global lbl_8050C898
-lbl_8050C898:
+.obj lbl_8050C898, global
 	.asciz "ptChange"
 	.balign 4
+.endobj lbl_8050C898
 
 
-.global lbl_8050C8A4
-lbl_8050C8A4:
+.obj lbl_8050C8A4, global
 	.asciz "help"
 	.balign 4
 	.4byte 0
+.endobj lbl_8050C8A4
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8053DBB0
-lbl_8053DBB0:
+.obj lbl_8053DBB0, global
 	.4byte lbl_8050C880
 	.4byte func_802AEBC4
 	.4byte lbl_8050C88C
@@ -841,10 +840,10 @@ lbl_8053DBB0:
 	.4byte func_802AEC9C
 	.4byte 0
 	.4byte 0
+.endobj lbl_8053DBB0
 
 
-.global lbl_8053DBD0
-lbl_8053DBD0:
+.obj lbl_8053DBD0, global
 	.4byte 0x0000010C
 	.4byte 0x00D300C9
 	.4byte 0x00CA00CB
@@ -1205,34 +1204,35 @@ lbl_8053DBD0:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8053DBD0
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B6A8
-float_8066B6A8:
+.obj float_8066B6A8, global
 	.float 0.2
+.endobj float_8066B6A8
 
 
-.global float_8066B6AC
-float_8066B6AC:
+.obj float_8066B6AC, global
 	.float 0.5
+.endobj float_8066B6AC
 
 
-.global float_8066B6B0
-float_8066B6B0:
+.obj float_8066B6B0, global
 	.float 0.8 #0x3F4CCCCD
+.endobj float_8066B6B0
 
 
-.global float_8066B6B4
-float_8066B6B4:
+.obj float_8066B6B4, global
 	.float 0.9 #0x3F666666
+.endobj float_8066B6B4
 
 
-.global double_8066B6B8
-double_8066B6B8:
+.obj double_8066B6B8, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066B6B8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -1176,11 +1176,13 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global lbl_8054B680
-lbl_8054B680:
+
+.obj lbl_8054B680, global
 	.asciz "<< RVL_SDK - GX \trelease build: Feb 27 2009 10:04:13 (0x4302_145) >>"
 	.balign 4
+.endobj lbl_8054B680
 
 	.4byte 0
 	.4byte 0
@@ -1189,7 +1191,7 @@ lbl_8054B680:
 	.4byte 0
 	.4byte 0
 
-DefaultTexData:
+.obj DefaultTexData, local
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
@@ -1198,8 +1200,9 @@ DefaultTexData:
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+.endobj DefaultTexData
 
-GXDefaultVATList:
+.obj GXDefaultVATList, local
 	.4byte 0x00000009
 	.4byte 0x00000001
 	.4byte 0x00000004
@@ -1252,8 +1255,9 @@ GXDefaultVATList:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj GXDefaultVATList
 
-GXDefaultProjData:
+.obj GXDefaultProjData, local
 	.float 1.0
 	.float 0
 	.float 1.0
@@ -1262,9 +1266,10 @@ GXDefaultProjData:
 	.float -2.0
 	.4byte 0
 	.4byte 0
+.endobj GXDefaultProjData
 
 
-GXTexRegionAddrTable:
+.obj GXTexRegionAddrTable, local
 	.4byte 0
 	.4byte 0x00010000
 	.4byte 0x00020000
@@ -1313,101 +1318,115 @@ GXTexRegionAddrTable:
 	.4byte 0x00050000
 	.4byte 0x000A0000
 	.4byte 0x00070000
+.endobj GXTexRegionAddrTable
 
 
-GXShutdownFuncInfo:
+.obj GXShutdownFuncInfo, local
 	.4byte __GXShutdown
 	.4byte 0x0000007F
 	.4byte 0
 	.4byte 0
+.endobj GXShutdownFuncInfo
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global __GXVersion
-__GXVersion:
+.balign 8
+
+.obj __GXVersion, global
 	.4byte lbl_8054B680
 	.4byte 0
+.endobj __GXVersion
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global __GXData
-__GXData:
+.balign 8
+
+.obj __GXData, global
 	.4byte gxData
+.endobj __GXData
 
 
-.global float_8066BFA4
-float_8066BFA4:
+.obj float_8066BFA4, global
 	.float 16777216 #0x4B800000
+.endobj float_8066BFA4
 
 
-.global float_8066BFA8
-float_8066BFA8:
+.obj float_8066BFA8, global
 	.float 0
+.endobj float_8066BFA8
 
 
-.global lbl_8066BFAC
-lbl_8066BFAC:
+.obj lbl_8066BFAC, global
 	.4byte 0x404040FF
+.endobj lbl_8066BFAC
 
 
-.global lbl_8066BFB0
-lbl_8066BFB0:
+.obj lbl_8066BFB0, global
 	.4byte 0xFFFFFFFF
+.endobj lbl_8066BFB0
 
 
-.global float_8066BFB4
-float_8066BFB4:
+.obj float_8066BFB4, global
 	.float 1.0
+.endobj float_8066BFB4
 
 
-.global float_8066BFB8
-float_8066BFB8:
+.obj float_8066BFB8, global
 	.float 0.1 #0x3DCCCCCD
 	.4byte 0
+.endobj float_8066BFB8
 
 
-.global double_8066BFC0
-double_8066BFC0:
+.obj double_8066BFC0, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066BFC0
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-FifoObj:
+.obj FifoObj, local
 	.skip 0x80
+.endobj FifoObj
 
-gxData:
+.obj gxData, local
 	.skip 0x600
+.endobj gxData
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global __piReg
-__piReg:
-	.skip 0x4
+.balign 8
 
-.global __cpReg
-__cpReg:
+.obj __piReg, global
 	.skip 0x4
+.endobj __piReg
 
-.global __peReg
-__peReg:
+.obj __cpReg, global
 	.skip 0x4
+.endobj __cpReg
 
-.global __memReg
-__memReg:
+.obj __peReg, global
 	.skip 0x4
+.endobj __peReg
+
+.obj __memReg, global
+	.skip 0x4
+.endobj __memReg
 
 #@LOCAL@__GXShutdown__FiUl@peCount
-lbl_80667918:
+.obj lbl_80667918, local
 	.skip 0x8
+.endobj lbl_80667918
 
 #@LOCAL@__GXShutdown__FiUl@time@0
-lbl_80667920:
+.obj lbl_80667920, local
 	.skip 0x8
+.endobj lbl_80667920
 
 #@LOCAL@__GXShutdown__FiUl@calledOnce@1
-lbl_80667928:
+.obj lbl_80667928, local
 	.skip 0x4
+.endobj lbl_80667928
 
 #@LOCAL@GXInit__FPvUl@shutdownFuncRegistered
-lbl_8066792C:
+.obj lbl_8066792C, local
 	.skip 0x4
+.endobj lbl_8066792C

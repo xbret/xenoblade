@@ -1451,34 +1451,38 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8050D578
-lbl_8050D578:
+.balign 8
+
+.obj lbl_8050D578, global
 	.asciz "INFINITY"
 	.balign 4
 	.4byte 0
+.endobj lbl_8050D578
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066B878
-lbl_8066B878:
+.balign 8
+
+.obj lbl_8066B878, global
 	.4byte 0x4E414E28 #"NAN("
+.endobj lbl_8066B878
 
 
-.global lbl_8066B87C
-lbl_8066B87C:
+.obj lbl_8066B87C, global
 	.4byte 0
+.endobj lbl_8066B87C
 
 
-.global double_8066B880
-double_8066B880:
+.obj double_8066B880, global
 	.double 0
+.endobj double_8066B880
 
 
-.global double_8066B888
-double_8066B888:
+.obj double_8066B888, global
 	.8byte 0x0010000000000000 #min double val
+.endobj double_8066B888
 
 
-.global double_8066B890
-double_8066B890:
+.obj double_8066B890, global
 	.8byte 0x7FEFFFFFFFFFFFFF
+.endobj double_8066B890

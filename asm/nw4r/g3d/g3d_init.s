@@ -83,12 +83,17 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056D108
-lbl_8056D108:
+.balign 8
+
+.obj lbl_8056D108, global
 	.asciz "<< NW4R    - G3D \tfinal   build: Nov 20 2008 03:23:14 (0x4199_60831) >>"
+.endobj lbl_8056D108
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-"NW4R_G3D_Version___22@unnamed@g3d_init_cpp@":
+.balign 8
+
+.obj "NW4R_G3D_Version___22@unnamed@g3d_init_cpp@", local
 	.4byte lbl_8056D108
 	.4byte 0
+.endobj "NW4R_G3D_Version___22@unnamed@g3d_init_cpp@"

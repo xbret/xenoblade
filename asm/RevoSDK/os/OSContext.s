@@ -629,8 +629,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80551A70
-lbl_80551A70:
+.balign 8
+
+.obj lbl_80551A70, global
 	.asciz "------------------------- Context 0x%08x -------------------------\n"
 	.4byte 0
 	.asciz "r%-2d  = 0x%08x (%14d)  r%-2d  = 0x%08x (%14d)\n"
@@ -653,10 +654,11 @@ lbl_80551A70:
 	.asciz "\nAddress:      Back Chain    LR Save\n"
 	.balign 4
 	.asciz "0x%08x:   0x%08x    0x%08x\n"
+.endobj lbl_80551A70
 
 
-.global lbl_80551C28
-lbl_80551C28:
+.obj lbl_80551C28, global
 	.asciz "FPU-unavailable handler installed\n"
 	.balign 4
 	.4byte 0
+.endobj lbl_80551C28

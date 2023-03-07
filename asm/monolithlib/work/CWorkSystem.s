@@ -352,13 +352,14 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global CWorkSystem_typestr
-CWorkSystem_typestr:
+.balign 8
+
+.obj CWorkSystem_typestr, global
 	.asciz "CWorkSystem"
+.endobj CWorkSystem_typestr
 
 
-.global CWorkSystem_strpool
-CWorkSystem_strpool:
+.obj CWorkSystem_strpool, global
 	.asciz "exit wii power off\n"
 	.asciz "exit wii reset\n"
 	.asciz "CWorkSystemMem"
@@ -374,13 +375,13 @@ CWorkSystem_strpool:
 	.byte 0x00
 	.asciz "CWorkSystem"
 	.balign 4
+.endobj CWorkSystem_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CWorkSystem
-__vt__CWorkSystem:
+.obj __vt__CWorkSystem, global
 	.4byte __RTTI__CWorkSystem
 	.4byte 0
 	.4byte __dt__CWorkSystem
@@ -421,36 +422,38 @@ __vt__CWorkSystem:
 	.4byte func_80444628
 	.4byte func_8044476C
 	.4byte func_80039E30
+.endobj __vt__CWorkSystem
 
-.global CWorkSystem_hierarchy
-CWorkSystem_hierarchy:
+.obj CWorkSystem_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CWorkSystem_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CWorkSystem
-__RTTI__CWorkSystem:
+.obj __RTTI__CWorkSystem, global
 	.4byte CWorkSystem_typestr
 	.4byte CWorkSystem_hierarchy
+.endobj __RTTI__CWorkSystem
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80667EF8, global
+	.skip 0x4
+.endobj lbl_80667EF8
 
-.global lbl_80667EF8
-lbl_80667EF8:
+.obj lbl_80667EFC, global
 	.skip 0x4
-.global lbl_80667EFC
-lbl_80667EFC:
-	.skip 0x4
+.endobj lbl_80667EFC
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

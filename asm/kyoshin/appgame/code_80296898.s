@@ -219,9 +219,9 @@
 
 
 
-.global lbl_8057A9C8
-lbl_8057A9C8:
+.obj lbl_8057A9C8, global
 	.skip 0x40
+.endobj lbl_8057A9C8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

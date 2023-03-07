@@ -75,17 +75,17 @@
 
 
 
-.global lbl_80573C80
-lbl_80573C80:
+.obj lbl_80573C80, global
 	.skip 0x48
+.endobj lbl_80573C80
     
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+#.balign 8
 
-
-.global lbl_8066660C
-lbl_8066660C:
+.obj lbl_8066660C, global
 	.skip 0x4
+.endobj lbl_8066660C
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

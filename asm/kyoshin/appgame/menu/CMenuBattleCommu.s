@@ -1820,16 +1820,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMenuBattleCommu_typestr
-CMenuBattleCommu_typestr:
+.obj CMenuBattleCommu_typestr, global
 	.asciz "CMenuBattleCommu"
 	.balign 4
+.endobj CMenuBattleCommu_typestr
 
 
-.global CMenuBattleCommu_strpool
-CMenuBattleCommu_strpool:
+.obj CMenuBattleCommu_strpool, global
 	.asciz "MenuBattleCommu"
 	.asciz "mf71_battle95_communi.brlyt"
 	.asciz "mf71_battle95_communi_in.brlan"
@@ -1856,13 +1855,13 @@ CMenuBattleCommu_strpool:
 	.asciz "%s"
 	.asciz "%s%s"
 	.asciz "name"
+.endobj CMenuBattleCommu_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMenuBattleCommu
-__vt__CMenuBattleCommu:
+.obj __vt__CMenuBattleCommu, global
 	.4byte __RTTI__CMenuBattleCommu
 	.4byte 0
 	.4byte __dt__CMenuBattleCommu
@@ -1911,9 +1910,9 @@ __vt__CMenuBattleCommu:
 	.4byte func_801B18C8
 	.4byte func_801B18C0
 	.4byte func_801B0CDC
+.endobj __vt__CMenuBattleCommu
 
-.global CMenuBattleCommu_hierarchy
-CMenuBattleCommu_hierarchy:
+.obj CMenuBattleCommu_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x0000005C
 	.4byte __RTTI__IWorkEvent
@@ -1930,37 +1929,38 @@ CMenuBattleCommu_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuBattleCommu_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuBattleCommu
-__RTTI__CMenuBattleCommu:
+.obj __RTTI__CMenuBattleCommu, global
 	.4byte CMenuBattleCommu_typestr
 	.4byte CMenuBattleCommu_hierarchy
+.endobj __RTTI__CMenuBattleCommu
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066A6A0
-float_8066A6A0:
+.obj float_8066A6A0, global
 	.float 0
+.endobj float_8066A6A0
 
 
-.global float_8066A6A4
-float_8066A6A4:
+.obj float_8066A6A4, global
 	.float 1.0
+.endobj float_8066A6A4
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80666C80
-lbl_80666C80:
+.obj lbl_80666C80, global
 	.skip 0x8
+.endobj lbl_80666C80
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -9368,14 +9368,16 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-.global lbl_805186C8
-lbl_805186C8:
+
+.obj lbl_805186C8, global
 	.4byte 0x000000FF
 	.4byte 0
+.endobj lbl_805186C8
 
 
-scAnmTable__10homebutton:
+.obj scAnmTable__10homebutton, local
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -9400,9 +9402,10 @@ scAnmTable__10homebutton:
 	.4byte 0x00000002
 	.4byte 0x00000007
 	.4byte 0x00000001
+.endobj scAnmTable__10homebutton
 
 
-scGroupAnmTable__10homebutton:
+.obj scGroupAnmTable__10homebutton, local
 	.4byte 0
 	.4byte 0
 	.4byte 0x00000001
@@ -9551,49 +9554,58 @@ scGroupAnmTable__10homebutton:
 	.4byte 0x00000012
 	.4byte 0x00000022
 	.4byte 0x00000015
+.endobj scGroupAnmTable__10homebutton
 
-scReConnectTime__Q210homebutton10HomeButton:
+.obj scReConnectTime__Q210homebutton10HomeButton, local
 	.4byte 0x00000E10
+.endobj scReConnectTime__Q210homebutton10HomeButton
 
-scReConnectTime2__Q210homebutton10HomeButton:
+.obj scReConnectTime2__Q210homebutton10HomeButton, local
 	.4byte 0x00000DF2
+.endobj scReConnectTime2__Q210homebutton10HomeButton
 
-scPadDrawWaitTime__Q210homebutton10HomeButton:
+.obj scPadDrawWaitTime__Q210homebutton10HomeButton, local
 	.4byte 0x00000005
+.endobj scPadDrawWaitTime__Q210homebutton10HomeButton
 
-scGetPadInfoTime__Q210homebutton10HomeButton:
+.obj scGetPadInfoTime__Q210homebutton10HomeButton, local
 	.4byte 0x00000064
+.endobj scGetPadInfoTime__Q210homebutton10HomeButton
 
-scForcusSEWaitTime__Q210homebutton10HomeButton:
+.obj scForcusSEWaitTime__Q210homebutton10HomeButton, local
 	.4byte 0x00000002
+.endobj scForcusSEWaitTime__Q210homebutton10HomeButton
 
-scOnPaneVibTime__Q210homebutton10HomeButton:
+.obj scOnPaneVibTime__Q210homebutton10HomeButton, local
 	.float 3
+.endobj scOnPaneVibTime__Q210homebutton10HomeButton
 
-scOnPaneVibWaitTime__Q210homebutton10HomeButton:
+.obj scOnPaneVibWaitTime__Q210homebutton10HomeButton, local
 	.float 9
+.endobj scOnPaneVibWaitTime__Q210homebutton10HomeButton
 
-scWaitStopMotorTime__Q210homebutton10HomeButton:
+.obj scWaitStopMotorTime__Q210homebutton10HomeButton, local
 	.4byte 0x0000001E
+.endobj scWaitStopMotorTime__Q210homebutton10HomeButton
 
-scWaitDisConnectTime__Q210homebutton10HomeButton:
+.obj scWaitDisConnectTime__Q210homebutton10HomeButton, local
 	.4byte 0x000000B4
+.endobj scWaitDisConnectTime__Q210homebutton10HomeButton
 
 
 	.float 1.2 #0x3F99999A
 	.4byte 0
 
 
-.global lbl_805189AC
-lbl_805189AC:
+.obj lbl_805189AC, global
 	.float 1.0
 	.8byte 0x4330000000000000
 	.4byte 0x45610000
 	.4byte 0x455F2000
+.endobj lbl_805189AC
 
 
-.global lbl_805189C0
-lbl_805189C0:
+.obj lbl_805189C0, global
 	.4byte 0xC47A0000
 	.4byte 0xC61C4000
 	.4byte 0x41F00000
@@ -9608,10 +9620,10 @@ lbl_805189C0:
 	.4byte 0x43340000
 	.4byte 0x47000000
 	.4byte 0x414B3333
+.endobj lbl_805189C0
 
 
-.global lbl_805189F8
-lbl_805189F8:
+.obj lbl_805189F8, global
 	.4byte 0x447A0000
 	.4byte 0x40A00000
 	.4byte 0x41700000
@@ -9620,152 +9632,164 @@ lbl_805189F8:
 	.4byte 0x43E40000
 	.4byte 0xC3340000
 	.4byte 0x40400000
+.endobj lbl_805189F8
 
-scSoundHeapSize_but2__Q210homebutton10HomeButton:
+.obj scSoundHeapSize_but2__Q210homebutton10HomeButton, local
 	.4byte 0x00060000
+.endobj scSoundHeapSize_but2__Q210homebutton10HomeButton
 
-scSoundHeapSize_but3__Q210homebutton10HomeButton:
+.obj scSoundHeapSize_but3__Q210homebutton10HomeButton, local
 	.4byte 0x0006F800
+.endobj scSoundHeapSize_but3__Q210homebutton10HomeButton
 
-scSoundThreadPrio__Q210homebutton10HomeButton:
+.obj scSoundThreadPrio__Q210homebutton10HomeButton, local
 	.4byte 0x00000004
+.endobj scSoundThreadPrio__Q210homebutton10HomeButton
 
-scDvdThreadPrio__Q210homebutton10HomeButton:
+.obj scDvdThreadPrio__Q210homebutton10HomeButton, local
 	.4byte 0x00000003
+.endobj scDvdThreadPrio__Q210homebutton10HomeButton
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8054C8C8
-lbl_8054C8C8:
+.balign 8
+
+.obj lbl_8054C8C8, global
 	.asciz "P1_Def.brlyt"
 	.balign 4
+.endobj lbl_8054C8C8
 
-.global lbl_8054C8D8
-lbl_8054C8D8:
+.obj lbl_8054C8D8, global
 	.asciz "P2_Def.brlyt"
 	.balign 4
+.endobj lbl_8054C8D8
 
-.global lbl_8054C8E8
-lbl_8054C8E8:
+.obj lbl_8054C8E8, global
 	.asciz "P3_Def.brlyt"
 	.balign 4
+.endobj lbl_8054C8E8
 
-.global lbl_8054C8F8
-lbl_8054C8F8:
+.obj lbl_8054C8F8, global
 	.asciz "P4_Def.brlyt"
 	.balign 4
+.endobj lbl_8054C8F8
 
-scCursorLytName__Q210homebutton10HomeButton:
+.obj scCursorLytName__Q210homebutton10HomeButton, local
 	.4byte lbl_8054C8C8
 	.4byte lbl_8054C8D8
 	.4byte lbl_8054C8E8
 	.4byte lbl_8054C8F8
+.endobj scCursorLytName__Q210homebutton10HomeButton
 
-.global lbl_8054C918
-lbl_8054C918:
+.obj lbl_8054C918, global
 	.asciz "N_Trans"
+.endobj lbl_8054C918
 
-scCursorPaneName__Q210homebutton10HomeButton:
+.obj scCursorPaneName__Q210homebutton10HomeButton, local
 	.4byte lbl_8054C918
+.endobj scCursorPaneName__Q210homebutton10HomeButton
 
-.global lbl_8054C924
-lbl_8054C924:
+.obj lbl_8054C924, global
 	.asciz "N_Rot"
 	.balign 4
+.endobj lbl_8054C924
 
-scCursorRotPaneName__Q210homebutton10HomeButton:
+.obj scCursorRotPaneName__Q210homebutton10HomeButton, local
 	.4byte lbl_8054C924
+.endobj scCursorRotPaneName__Q210homebutton10HomeButton
 
-.global lbl_8054C930
-lbl_8054C930:
+.obj lbl_8054C930, global
 	.asciz "N_SRot"
 	.balign 4
+.endobj lbl_8054C930
 
-scCursorSRotPaneName__Q210homebutton10HomeButton:
+.obj scCursorSRotPaneName__Q210homebutton10HomeButton, local
 	.4byte lbl_8054C930
+.endobj scCursorSRotPaneName__Q210homebutton10HomeButton
 
-.global lbl_8054C93C
-lbl_8054C93C:
+.obj lbl_8054C93C, global
 	.asciz "B_btnL_00"
 	.balign 4
+.endobj lbl_8054C93C
 
-.global lbl_8054C948
-lbl_8054C948:
+.obj lbl_8054C948, global
 	.asciz "B_btnL_01"
 	.balign 4
+.endobj lbl_8054C948
 
-.global lbl_8054C954
-lbl_8054C954:
+.obj lbl_8054C954, global
 	.asciz "B_btnL_10"
 	.balign 4
+.endobj lbl_8054C954
 
 
-.global scBtnName__Q210homebutton10HomeButton
-scBtnName__Q210homebutton10HomeButton:
+.obj scBtnName__Q210homebutton10HomeButton, global
 	.4byte lbl_8054C93C
 	.4byte lbl_8054C948
 	.4byte lbl_8054C954
 	.4byte 0
+.endobj scBtnName__Q210homebutton10HomeButton
 
-.global lbl_8054C970
-lbl_8054C970:
+.obj lbl_8054C970, global
 	.asciz "T_btnL_00"
 	.balign 4
+.endobj lbl_8054C970
 
-.global lbl_8054C97C
-lbl_8054C97C:
+.obj lbl_8054C97C, global
 	.asciz "T_btnL_01"
 	.balign 4
+.endobj lbl_8054C97C
 
-.global lbl_8054C988
-lbl_8054C988:
+.obj lbl_8054C988, global
 	.asciz "T_btnL_10"
 	.balign 4
 	.4byte 0
+.endobj lbl_8054C988
 
-scTxtName__Q210homebutton10HomeButton:
+.obj scTxtName__Q210homebutton10HomeButton, local
 	.4byte lbl_8054C970
 	.4byte lbl_8054C97C
 	.4byte lbl_8054C988
 	.4byte 0
+.endobj scTxtName__Q210homebutton10HomeButton
 
-.global lbl_8054C9A8
-lbl_8054C9A8:
+.obj lbl_8054C9A8, global
 	.asciz "btnL_00_inOut"
 	.balign 4
+.endobj lbl_8054C9A8
 
-.global lbl_8054C9B8
-lbl_8054C9B8:
+.obj lbl_8054C9B8, global
 	.asciz "btnL_01_inOut"
 	.balign 4
+.endobj lbl_8054C9B8
 
-.global lbl_8054C9C8
-lbl_8054C9C8:
+.obj lbl_8054C9C8, global
 	.asciz "btnL_10_inOut"
 	.balign 4
+.endobj lbl_8054C9C8
 
-.global lbl_8054C9D8
-lbl_8054C9D8:
+.obj lbl_8054C9D8, global
 	.asciz "btnL_11_inOut"
 	.balign 4
+.endobj lbl_8054C9D8
 
-.global lbl_8054C9E8
-lbl_8054C9E8:
+.obj lbl_8054C9E8, global
 	.asciz "btnL_00_psh"
+.endobj lbl_8054C9E8
 
-.global lbl_8054C9F4
-lbl_8054C9F4:
+.obj lbl_8054C9F4, global
 	.asciz "btnL_01_psh"
+.endobj lbl_8054C9F4
 
-.global lbl_8054CA00
-lbl_8054CA00:
+.obj lbl_8054CA00, global
 	.asciz "btnL_10_psh"
+.endobj lbl_8054CA00
 
-.global lbl_8054CA0C
-lbl_8054CA0C:
+.obj lbl_8054CA0C, global
 	.asciz "btnL_11_psh"
+.endobj lbl_8054CA0C
 
-scGrName__Q210homebutton10HomeButton:
+.obj scGrName__Q210homebutton10HomeButton, local
 	.4byte lbl_8054C9A8
 	.4byte lbl_8054C9B8
 	.4byte lbl_8054C9C8
@@ -9774,98 +9798,100 @@ scGrName__Q210homebutton10HomeButton:
 	.4byte lbl_8054C9F4
 	.4byte lbl_8054CA00
 	.4byte lbl_8054CA0C
+.endobj scGrName__Q210homebutton10HomeButton
 
-.global lbl_8054CA38
-lbl_8054CA38:
+.obj lbl_8054CA38, global
 	.asciz "_cntBtn_in.brlan"
 	.balign 4
+.endobj lbl_8054CA38
 
-.global lbl_8054CA4C
-lbl_8054CA4C:
+.obj lbl_8054CA4C, global
 	.asciz "_cntBtn_psh.brlan"
 	.balign 4
+.endobj lbl_8054CA4C
 
-.global lbl_8054CA60
-lbl_8054CA60:
+.obj lbl_8054CA60, global
 	.asciz "_cntBtn_out.brlan"
 	.balign 4
+.endobj lbl_8054CA60
 
-scAnimName__Q210homebutton10HomeButton:
+.obj scAnimName__Q210homebutton10HomeButton, local
 	.4byte lbl_8054CA38
 	.4byte lbl_8054CA4C
 	.4byte lbl_8054CA60
+.endobj scAnimName__Q210homebutton10HomeButton
 
-.global lbl_8054CA80
-lbl_8054CA80:
+.obj lbl_8054CA80, global
 	.asciz "_ltrIcn_on.brlan"
 	.balign 4
+.endobj lbl_8054CA80
 
-.global lbl_8054CA94
-lbl_8054CA94:
+.obj lbl_8054CA94, global
 	.asciz "_optn_bar_psh.brlan"
+.endobj lbl_8054CA94
 
-.global lbl_8054CAA8
-lbl_8054CAA8:
+.obj lbl_8054CAA8, global
 	.asciz "_close_bar_psh.brlan"
 	.balign 4
+.endobj lbl_8054CAA8
 
-.global lbl_8054CAC0
-lbl_8054CAC0:
+.obj lbl_8054CAC0, global
 	.asciz "_hmMenu_bar_in.brlan"
 	.balign 4
+.endobj lbl_8054CAC0
 
-.global lbl_8054CAD8
-lbl_8054CAD8:
+.obj lbl_8054CAD8, global
 	.asciz "_hmMenu_bar_psh.brlan"
 	.balign 4
+.endobj lbl_8054CAD8
 
-.global lbl_8054CAF0
-lbl_8054CAF0:
+.obj lbl_8054CAF0, global
 	.asciz "_link_msg_in.brlan"
 	.balign 4
+.endobj lbl_8054CAF0
 
-.global lbl_8054CB04
-lbl_8054CB04:
+.obj lbl_8054CB04, global
 	.asciz "_link_msg_out.brlan"
+.endobj lbl_8054CB04
 
-.global lbl_8054CB18
-lbl_8054CB18:
+.obj lbl_8054CB18, global
 	.asciz "_cmn_msg_in.brlan"
 	.balign 4
+.endobj lbl_8054CB18
 
-.global lbl_8054CB2C
-lbl_8054CB2C:
+.obj lbl_8054CB2C, global
 	.asciz "_cmn_msg_out.brlan"
 	.balign 4
+.endobj lbl_8054CB2C
 
-.global lbl_8054CB40
-lbl_8054CB40:
+.obj lbl_8054CB40, global
 	.asciz "_cntrl_up.brlan"
+.endobj lbl_8054CB40
 
-.global lbl_8054CB50
-lbl_8054CB50:
+.obj lbl_8054CB50, global
 	.asciz "_cntrl_wndw_opn.brlan"
 	.balign 4
+.endobj lbl_8054CB50
 
-.global lbl_8054CB68
-lbl_8054CB68:
+.obj lbl_8054CB68, global
 	.asciz "_cntrl_dwn.brlan"
 	.balign 4
+.endobj lbl_8054CB68
 
-.global lbl_8054CB7C
-lbl_8054CB7C:
+.obj lbl_8054CB7C, global
 	.asciz "_hmMenu_bar_out.brlan"
 	.balign 4
+.endobj lbl_8054CB7C
 
-.global lbl_8054CB94
-lbl_8054CB94:
+.obj lbl_8054CB94, global
 	.asciz "_cmn_msg_rtrn.brlan"
+.endobj lbl_8054CB94
 
-.global lbl_8054CBA8
-lbl_8054CBA8:
+.obj lbl_8054CBA8, global
 	.asciz "_12btn_on.brlan"
+.endobj lbl_8054CBA8
 
-scPairGroupAnimName__Q210homebutton10HomeButton:
+.obj scPairGroupAnimName__Q210homebutton10HomeButton, local
 	.4byte lbl_8054CA80
 	.4byte lbl_8054CA94
 	.4byte lbl_8054CAA8
@@ -9881,81 +9907,82 @@ scPairGroupAnimName__Q210homebutton10HomeButton:
 	.4byte lbl_8054CB7C
 	.4byte lbl_8054CB94
 	.4byte lbl_8054CBA8
+.endobj scPairGroupAnimName__Q210homebutton10HomeButton
 
-.global lbl_8054CBF4
-lbl_8054CBF4:
+.obj lbl_8054CBF4, global
 	.asciz "ltrIcn_on"
 	.balign 4
+.endobj lbl_8054CBF4
 
-.global lbl_8054CC00
-lbl_8054CC00:
+.obj lbl_8054CC00, global
 	.asciz "optn_bar_psh"
 	.balign 4
+.endobj lbl_8054CC00
 
-.global lbl_8054CC10
-lbl_8054CC10:
+.obj lbl_8054CC10, global
 	.asciz "close_bar_psh"
 	.balign 4
+.endobj lbl_8054CC10
 
-.global lbl_8054CC20
-lbl_8054CC20:
+.obj lbl_8054CC20, global
 	.asciz "hmMenu_bar_in"
 	.balign 4
+.endobj lbl_8054CC20
 
-.global lbl_8054CC30
-lbl_8054CC30:
+.obj lbl_8054CC30, global
 	.asciz "hmMenu_bar_psh"
 	.balign 4
+.endobj lbl_8054CC30
 
-.global lbl_8054CC40
-lbl_8054CC40:
+.obj lbl_8054CC40, global
 	.asciz "link_msg_in"
+.endobj lbl_8054CC40
 
-.global lbl_8054CC4C
-lbl_8054CC4C:
+.obj lbl_8054CC4C, global
 	.asciz "link_msg_out"
 	.balign 4
+.endobj lbl_8054CC4C
 
-.global lbl_8054CC5C
-lbl_8054CC5C:
+.obj lbl_8054CC5C, global
 	.asciz "cmn_msg_in"
 	.balign 4
+.endobj lbl_8054CC5C
 
-.global lbl_8054CC68
-lbl_8054CC68:
+.obj lbl_8054CC68, global
 	.asciz "cmn_msg_out"
+.endobj lbl_8054CC68
 
-.global lbl_8054CC74
-lbl_8054CC74:
+.obj lbl_8054CC74, global
 	.asciz "cntrl_up"
 	.balign 4
+.endobj lbl_8054CC74
 
-.global lbl_8054CC80
-lbl_8054CC80:
+.obj lbl_8054CC80, global
 	.asciz "cntrl_wndw_opn"
 	.balign 4
+.endobj lbl_8054CC80
 
-.global lbl_8054CC90
-lbl_8054CC90:
+.obj lbl_8054CC90, global
 	.asciz "cntrl_dwn"
 	.balign 4
+.endobj lbl_8054CC90
 
-.global lbl_8054CC9C
-lbl_8054CC9C:
+.obj lbl_8054CC9C, global
 	.asciz "hmMenu_bar_out"
 	.balign 4
+.endobj lbl_8054CC9C
 
-.global lbl_8054CCAC
-lbl_8054CCAC:
+.obj lbl_8054CCAC, global
 	.asciz "cmn_msg_rtrn"
 	.balign 4
+.endobj lbl_8054CCAC
 
-.global lbl_8054CCBC
-lbl_8054CCBC:
+.obj lbl_8054CCBC, global
 	.asciz "12btn_on"
 	.balign 4
+.endobj lbl_8054CCBC
 
-scPairGroupName__Q210homebutton10HomeButton:
+.obj scPairGroupName__Q210homebutton10HomeButton, local
 	.4byte lbl_8054CBF4
 	.4byte lbl_8054CC00
 	.4byte lbl_8054CC10
@@ -9971,113 +9998,114 @@ scPairGroupName__Q210homebutton10HomeButton:
 	.4byte lbl_8054CC9C
 	.4byte lbl_8054CCAC
 	.4byte lbl_8054CCBC
+.endobj scPairGroupName__Q210homebutton10HomeButton
 
-.global lbl_8054CD04
-lbl_8054CD04:
+.obj lbl_8054CD04, global
 	.asciz "_hmMenu_strt.brlan"
 	.balign 4
+.endobj lbl_8054CD04
 
-.global lbl_8054CD18
-lbl_8054CD18:
+.obj lbl_8054CD18, global
 	.asciz "_hmMenu_fnsh.brlan"
 	.balign 4
+.endobj lbl_8054CD18
 
-.global lbl_8054CD2C
-lbl_8054CD2C:
+.obj lbl_8054CD2C, global
 	.asciz "_optn_bar_in.brlan"
 	.balign 4
+.endobj lbl_8054CD2C
 
-.global lbl_8054CD40
-lbl_8054CD40:
+.obj lbl_8054CD40, global
 	.asciz "_optn_bar_out.brlan"
+.endobj lbl_8054CD40
 
-.global lbl_8054CD54
-lbl_8054CD54:
+.obj lbl_8054CD54, global
 	.asciz "_optn_btn_in.brlan"
 	.balign 4
+.endobj lbl_8054CD54
 
-.global lbl_8054CD68
-lbl_8054CD68:
+.obj lbl_8054CD68, global
 	.asciz "_optn_btn_psh.brlan"
+.endobj lbl_8054CD68
 
-.global lbl_8054CD7C
-lbl_8054CD7C:
+.obj lbl_8054CD7C, global
 	.asciz "_vb_btn_wht_psh.brlan"
 	.balign 4
+.endobj lbl_8054CD7C
 
-.global lbl_8054CD94
-lbl_8054CD94:
+.obj lbl_8054CD94, global
 	.asciz "_optn_btn_out.brlan"
+.endobj lbl_8054CD94
 
-.global lbl_8054CDA8
-lbl_8054CDA8:
+.obj lbl_8054CDA8, global
 	.asciz "_vb_btn_ylw_psh.brlan"
 	.balign 4
+.endobj lbl_8054CDA8
 
-.global lbl_8054CDC0
-lbl_8054CDC0:
+.obj lbl_8054CDC0, global
 	.asciz "_sound_gry.brlan"
 	.balign 4
+.endobj lbl_8054CDC0
 
-.global lbl_8054CDD4
-lbl_8054CDD4:
+.obj lbl_8054CDD4, global
 	.asciz "_sound_ylw.brlan"
 	.balign 4
+.endobj lbl_8054CDD4
 
-.global lbl_8054CDE8
-lbl_8054CDE8:
+.obj lbl_8054CDE8, global
 	.asciz "_cmn_msg_btn_in.brlan"
 	.balign 4
+.endobj lbl_8054CDE8
 
-.global lbl_8054CE00
-lbl_8054CE00:
+.obj lbl_8054CE00, global
 	.asciz "_cmn_msg_btn_out.brlan"
 	.balign 4
+.endobj lbl_8054CE00
 
-.global lbl_8054CE18
-lbl_8054CE18:
+.obj lbl_8054CE18, global
 	.asciz "_cmn_msg_btn_psh.brlan"
 	.balign 4
+.endobj lbl_8054CE18
 
-.global lbl_8054CE30
-lbl_8054CE30:
+.obj lbl_8054CE30, global
 	.asciz "_vb_btn_ylw_ylw.brlan"
 	.balign 4
+.endobj lbl_8054CE30
 
-.global lbl_8054CE48
-lbl_8054CE48:
+.obj lbl_8054CE48, global
 	.asciz "_btry_wink.brlan"
 	.balign 4
 	.4byte 0
+.endobj lbl_8054CE48
 
-.global lbl_8054CE60
-lbl_8054CE60:
+.obj lbl_8054CE60, global
 	.asciz "_btry_gry.brlan"
+.endobj lbl_8054CE60
 
-.global lbl_8054CE70
-lbl_8054CE70:
+.obj lbl_8054CE70, global
 	.asciz "_btry_wht.brlan"
+.endobj lbl_8054CE70
 
-.global lbl_8054CE80
-lbl_8054CE80:
+.obj lbl_8054CE80, global
 	.asciz "_btry_wink_gry.brlan"
 	.balign 4
+.endobj lbl_8054CE80
 
-.global lbl_8054CE98
-lbl_8054CE98:
+.obj lbl_8054CE98, global
 	.asciz "_close_bar_in.brlan"
+.endobj lbl_8054CE98
 
-.global lbl_8054CEAC
-lbl_8054CEAC:
+.obj lbl_8054CEAC, global
 	.asciz "_close_bar_out.brlan"
 	.balign 4
 	.4byte 0
+.endobj lbl_8054CEAC
 
-.global lbl_8054CEC8
-lbl_8054CEC8:
+.obj lbl_8054CEC8, global
 	.asciz "_btry_red.brlan"
+.endobj lbl_8054CEC8
 
-scGroupAnimName__Q210homebutton10HomeButton:
+.obj scGroupAnimName__Q210homebutton10HomeButton, local
 	.4byte lbl_8054CD04
 	.4byte lbl_8054CD18
 	.4byte lbl_8054CD2C
@@ -10100,175 +10128,176 @@ scGroupAnimName__Q210homebutton10HomeButton:
 	.4byte lbl_8054CE98
 	.4byte lbl_8054CEAC
 	.4byte lbl_8054CEC8
+.endobj scGroupAnimName__Q210homebutton10HomeButton
 
-.global lbl_8054CF30
-lbl_8054CF30:
+.obj lbl_8054CF30, global
 	.asciz "hmMenu_strt"
+.endobj lbl_8054CF30
 
-.global lbl_8054CF3C
-lbl_8054CF3C:
+.obj lbl_8054CF3C, global
 	.asciz "hmMenu_fnsh"
+.endobj lbl_8054CF3C
 
-.global lbl_8054CF48
-lbl_8054CF48:
+.obj lbl_8054CF48, global
 	.asciz "hmMenuBck_strt"
 	.balign 4
+.endobj lbl_8054CF48
 
-.global lbl_8054CF58
-lbl_8054CF58:
+.obj lbl_8054CF58, global
 	.asciz "hmMenuBck_fnsh"
 	.balign 4
+.endobj lbl_8054CF58
 
-.global lbl_8054CF68
-lbl_8054CF68:
+.obj lbl_8054CF68, global
 	.asciz "optn_bar_in"
+.endobj lbl_8054CF68
 
-.global lbl_8054CF74
-lbl_8054CF74:
+.obj lbl_8054CF74, global
 	.asciz "optn_bar_out"
 	.balign 4
+.endobj lbl_8054CF74
 
-.global lbl_8054CF84
-lbl_8054CF84:
+.obj lbl_8054CF84, global
 	.asciz "optnBtn_00_inOut"
 	.balign 4
+.endobj lbl_8054CF84
 
-.global lbl_8054CF98
-lbl_8054CF98:
+.obj lbl_8054CF98, global
 	.asciz "optnBtn_01_inOut"
 	.balign 4
+.endobj lbl_8054CF98
 
-.global lbl_8054CFAC
-lbl_8054CFAC:
+.obj lbl_8054CFAC, global
 	.asciz "optnBtn_10_inOut"
 	.balign 4
+.endobj lbl_8054CFAC
 
-.global lbl_8054CFC0
-lbl_8054CFC0:
+.obj lbl_8054CFC0, global
 	.asciz "optnBtn_11_inOut"
 	.balign 4
+.endobj lbl_8054CFC0
 
-.global lbl_8054CFD4
-lbl_8054CFD4:
+.obj lbl_8054CFD4, global
 	.asciz "optnBtn_20_inOut"
 	.balign 4
+.endobj lbl_8054CFD4
 
-.global lbl_8054CFE8
-lbl_8054CFE8:
+.obj lbl_8054CFE8, global
 	.asciz "optnBtn_00_psh"
 	.balign 4
+.endobj lbl_8054CFE8
 
-.global lbl_8054CFF8
-lbl_8054CFF8:
+.obj lbl_8054CFF8, global
 	.asciz "optnBtn_01_psh"
 	.balign 4
+.endobj lbl_8054CFF8
 
-.global lbl_8054D008
-lbl_8054D008:
+.obj lbl_8054D008, global
 	.asciz "optnBtn_10_psh"
 	.balign 4
+.endobj lbl_8054D008
 
-.global lbl_8054D018
-lbl_8054D018:
+.obj lbl_8054D018, global
 	.asciz "optnBtn_11_psh"
 	.balign 4
+.endobj lbl_8054D018
 
-.global lbl_8054D028
-lbl_8054D028:
+.obj lbl_8054D028, global
 	.asciz "optnBtn_20_psh"
 	.balign 4
+.endobj lbl_8054D028
 
-.global lbl_8054D038
-lbl_8054D038:
+.obj lbl_8054D038, global
 	.asciz "optnBtn_10_cntrl"
 	.balign 4
 	.4byte 0
+.endobj lbl_8054D038
 
-.global lbl_8054D050
-lbl_8054D050:
+.obj lbl_8054D050, global
 	.asciz "msgBtn_00_inOut"
+.endobj lbl_8054D050
 
-.global lbl_8054D060
-lbl_8054D060:
+.obj lbl_8054D060, global
 	.asciz "msgBtn_01_inOut"
+.endobj lbl_8054D060
 
-.global lbl_8054D070
-lbl_8054D070:
+.obj lbl_8054D070, global
 	.asciz "msgBtn_00_psh"
 	.balign 4
+.endobj lbl_8054D070
 
-.global lbl_8054D080
-lbl_8054D080:
+.obj lbl_8054D080, global
 	.asciz "msgBtn_01_psh"
 	.balign 4
+.endobj lbl_8054D080
 
-.global lbl_8054D090
-lbl_8054D090:
+.obj lbl_8054D090, global
 	.asciz "vol_00"
 	.balign 4
+.endobj lbl_8054D090
 
-.global lbl_8054D098
-lbl_8054D098:
+.obj lbl_8054D098, global
 	.asciz "vol_01"
 	.balign 4
+.endobj lbl_8054D098
 
-.global lbl_8054D0A0
-lbl_8054D0A0:
+.obj lbl_8054D0A0, global
 	.asciz "vol_02"
 	.balign 4
+.endobj lbl_8054D0A0
 
-.global lbl_8054D0A8
-lbl_8054D0A8:
+.obj lbl_8054D0A8, global
 	.asciz "vol_03"
 	.balign 4
+.endobj lbl_8054D0A8
 
-.global lbl_8054D0B0
-lbl_8054D0B0:
+.obj lbl_8054D0B0, global
 	.asciz "vol_04"
 	.balign 4
+.endobj lbl_8054D0B0
 
-.global lbl_8054D0B8
-lbl_8054D0B8:
+.obj lbl_8054D0B8, global
 	.asciz "vol_05"
 	.balign 4
+.endobj lbl_8054D0B8
 
-.global lbl_8054D0C0
-lbl_8054D0C0:
+.obj lbl_8054D0C0, global
 	.asciz "vol_06"
 	.balign 4
+.endobj lbl_8054D0C0
 
-.global lbl_8054D0C8
-lbl_8054D0C8:
+.obj lbl_8054D0C8, global
 	.asciz "vol_07"
 	.balign 4
+.endobj lbl_8054D0C8
 
-.global lbl_8054D0D0
-lbl_8054D0D0:
+.obj lbl_8054D0D0, global
 	.asciz "vol_08"
 	.balign 4
+.endobj lbl_8054D0D0
 
-.global lbl_8054D0D8
-lbl_8054D0D8:
+.obj lbl_8054D0D8, global
 	.asciz "vol_09"
 	.balign 4
+.endobj lbl_8054D0D8
 
-.global lbl_8054D0E0
-lbl_8054D0E0:
+.obj lbl_8054D0E0, global
 	.asciz "plyr_00"
+.endobj lbl_8054D0E0
 
-.global lbl_8054D0E8
-lbl_8054D0E8:
+.obj lbl_8054D0E8, global
 	.asciz "plyr_01"
+.endobj lbl_8054D0E8
 
-.global lbl_8054D0F0
-lbl_8054D0F0:
+.obj lbl_8054D0F0, global
 	.asciz "plyr_02"
+.endobj lbl_8054D0F0
 
-.global lbl_8054D0F8
-lbl_8054D0F8:
+.obj lbl_8054D0F8, global
 	.asciz "plyr_03"
+.endobj lbl_8054D0F8
 
-scGroupName__Q210homebutton10HomeButton:
+.obj scGroupName__Q210homebutton10HomeButton, local
 	.4byte lbl_8054CF30
 	.4byte lbl_8054CF3C
 	.4byte lbl_8054CF48
@@ -10304,91 +10333,93 @@ scGroupName__Q210homebutton10HomeButton:
 	.4byte lbl_8054D0E8
 	.4byte lbl_8054D0F0
 	.4byte lbl_8054D0F8
+.endobj scGroupName__Q210homebutton10HomeButton
 
-.global lbl_8054D18C
-lbl_8054D18C:
+.obj lbl_8054D18C, global
 	.asciz "let_icn_00"
 	.balign 4
+.endobj lbl_8054D18C
 
-.global lbl_8054D198
-lbl_8054D198:
+.obj lbl_8054D198, global
 	.asciz "N_plyr_00"
 	.balign 4
+.endobj lbl_8054D198
 
-.global lbl_8054D1A4
-lbl_8054D1A4:
+.obj lbl_8054D1A4, global
 	.asciz "N_plyr_01"
 	.balign 4
+.endobj lbl_8054D1A4
 
-.global lbl_8054D1B0
-lbl_8054D1B0:
+.obj lbl_8054D1B0, global
 	.asciz "N_plyr_02"
 	.balign 4
+.endobj lbl_8054D1B0
 
-.global lbl_8054D1BC
-lbl_8054D1BC:
+.obj lbl_8054D1BC, global
 	.asciz "N_plyr_03"
 	.balign 4
+.endobj lbl_8054D1BC
 
-scFuncPaneName__Q210homebutton10HomeButton:
+.obj scFuncPaneName__Q210homebutton10HomeButton, local
 	.4byte lbl_8054D18C
 	.4byte lbl_8054D198
 	.4byte lbl_8054D1A4
 	.4byte lbl_8054D1B0
 	.4byte lbl_8054D1BC
+.endobj scFuncPaneName__Q210homebutton10HomeButton
 
-.global lbl_8054D1DC
-lbl_8054D1DC:
+.obj lbl_8054D1DC, global
 	.asciz "B_btn_00"
 	.balign 4
+.endobj lbl_8054D1DC
 
-.global lbl_8054D1E8
-lbl_8054D1E8:
+.obj lbl_8054D1E8, global
 	.asciz "B_bar_10"
 	.balign 4
+.endobj lbl_8054D1E8
 
-.global lbl_8054D1F4
-lbl_8054D1F4:
+.obj lbl_8054D1F4, global
 	.asciz "B_optnBtn_00"
 	.balign 4
+.endobj lbl_8054D1F4
 
-.global lbl_8054D204
-lbl_8054D204:
+.obj lbl_8054D204, global
 	.asciz "B_optnBtn_01"
 	.balign 4
+.endobj lbl_8054D204
 
-.global lbl_8054D214
-lbl_8054D214:
+.obj lbl_8054D214, global
 	.asciz "B_optnBtn_10"
 	.balign 4
+.endobj lbl_8054D214
 
-.global lbl_8054D224
-lbl_8054D224:
+.obj lbl_8054D224, global
 	.asciz "B_optnBtn_11"
 	.balign 4
+.endobj lbl_8054D224
 
-.global lbl_8054D234
-lbl_8054D234:
+.obj lbl_8054D234, global
 	.asciz "B_optnBtn_20"
 	.balign 4
+.endobj lbl_8054D234
 
-.global lbl_8054D244
-lbl_8054D244:
+.obj lbl_8054D244, global
 	.asciz "B_BtnA"
 	.balign 4
+.endobj lbl_8054D244
 
-.global lbl_8054D24C
-lbl_8054D24C:
+.obj lbl_8054D24C, global
 	.asciz "B_BtnB"
 	.balign 4
+.endobj lbl_8054D24C
 
-.global lbl_8054D254
-lbl_8054D254:
+.obj lbl_8054D254, global
 	.asciz "cntrl_00"
 	.balign 4
+.endobj lbl_8054D254
 
 
-scFuncTouchPaneName__Q210homebutton10HomeButton:
+.obj scFuncTouchPaneName__Q210homebutton10HomeButton, local
 	.4byte lbl_8054D1DC
 	.4byte lbl_8054D1E8
 	.4byte lbl_8054D1F4
@@ -10399,110 +10430,112 @@ scFuncTouchPaneName__Q210homebutton10HomeButton:
 	.4byte lbl_8054D244
 	.4byte lbl_8054D24C
 	.4byte lbl_8054D254
+.endobj scFuncTouchPaneName__Q210homebutton10HomeButton
 
-.global lbl_8054D288
-lbl_8054D288:
+.obj lbl_8054D288, global
 	.asciz "T_msg_00"
 	.balign 4
+.endobj lbl_8054D288
 
-.global lbl_8054D294
-lbl_8054D294:
+.obj lbl_8054D294, global
 	.asciz "T_msg_01"
 	.balign 4
+.endobj lbl_8054D294
 
-.global lbl_8054D2A0
-lbl_8054D2A0:
+.obj lbl_8054D2A0, global
 	.asciz "T_Dialog"
 	.balign 4
+.endobj lbl_8054D2A0
 
 
-scFuncTextPaneName__Q210homebutton10HomeButton:
+.obj scFuncTextPaneName__Q210homebutton10HomeButton, local
 	.4byte lbl_8054D288
 	.4byte lbl_8054D294
 	.4byte lbl_8054D2A0
+.endobj scFuncTextPaneName__Q210homebutton10HomeButton
 
-.global lbl_8054D2B8
-lbl_8054D2B8:
+.obj lbl_8054D2B8, global
 	.asciz "btryPwr_00_0"
 	.balign 4
+.endobj lbl_8054D2B8
 
-.global lbl_8054D2C8
-lbl_8054D2C8:
+.obj lbl_8054D2C8, global
 	.asciz "btryPwr_00_1"
 	.balign 4
+.endobj lbl_8054D2C8
 
-.global lbl_8054D2D8
-lbl_8054D2D8:
+.obj lbl_8054D2D8, global
 	.asciz "btryPwr_00_2"
 	.balign 4
+.endobj lbl_8054D2D8
 
-.global lbl_8054D2E8
-lbl_8054D2E8:
+.obj lbl_8054D2E8, global
 	.asciz "btryPwr_00_3"
 	.balign 4
+.endobj lbl_8054D2E8
 
-.global lbl_8054D2F8
-lbl_8054D2F8:
+.obj lbl_8054D2F8, global
 	.asciz "btryPwr_01_0"
 	.balign 4
+.endobj lbl_8054D2F8
 
-.global lbl_8054D308
-lbl_8054D308:
+.obj lbl_8054D308, global
 	.asciz "btryPwr_01_1"
 	.balign 4
+.endobj lbl_8054D308
 
-.global lbl_8054D318
-lbl_8054D318:
+.obj lbl_8054D318, global
 	.asciz "btryPwr_01_2"
 	.balign 4
+.endobj lbl_8054D318
 
-.global lbl_8054D328
-lbl_8054D328:
+.obj lbl_8054D328, global
 	.asciz "btryPwr_01_3"
 	.balign 4
+.endobj lbl_8054D328
 
-.global lbl_8054D338
-lbl_8054D338:
+.obj lbl_8054D338, global
 	.asciz "btryPwr_02_0"
 	.balign 4
+.endobj lbl_8054D338
 
-.global lbl_8054D348
-lbl_8054D348:
+.obj lbl_8054D348, global
 	.asciz "btryPwr_02_1"
 	.balign 4
+.endobj lbl_8054D348
 
-.global lbl_8054D358
-lbl_8054D358:
+.obj lbl_8054D358, global
 	.asciz "btryPwr_02_2"
 	.balign 4
+.endobj lbl_8054D358
 
-.global lbl_8054D368
-lbl_8054D368:
+.obj lbl_8054D368, global
 	.asciz "btryPwr_02_3"
 	.balign 4
+.endobj lbl_8054D368
 
-.global lbl_8054D378
-lbl_8054D378:
+.obj lbl_8054D378, global
 	.asciz "btryPwr_03_0"
 	.balign 4
+.endobj lbl_8054D378
 
-.global lbl_8054D388
-lbl_8054D388:
+.obj lbl_8054D388, global
 	.asciz "btryPwr_03_1"
 	.balign 4
+.endobj lbl_8054D388
 
-.global lbl_8054D398
-lbl_8054D398:
+.obj lbl_8054D398, global
 	.asciz "btryPwr_03_2"
 	.balign 4
+.endobj lbl_8054D398
 
-.global lbl_8054D3A8
-lbl_8054D3A8:
+.obj lbl_8054D3A8, global
 	.asciz "btryPwr_03_3"
 	.balign 4
+.endobj lbl_8054D3A8
 
 
-scBatteryPaneName__Q210homebutton10HomeButton:
+.obj scBatteryPaneName__Q210homebutton10HomeButton, local
 	.4byte lbl_8054D2B8
 	.4byte lbl_8054D2C8
 	.4byte lbl_8054D2D8
@@ -10519,6 +10552,7 @@ scBatteryPaneName__Q210homebutton10HomeButton:
 	.4byte lbl_8054D388
 	.4byte lbl_8054D398
 	.4byte lbl_8054D3A8
+.endobj scBatteryPaneName__Q210homebutton10HomeButton
 
 
 
@@ -10532,8 +10566,7 @@ scBatteryPaneName__Q210homebutton10HomeButton:
 	.asciz "back_02"
 
 
-.global jumptable_8054D428
-jumptable_8054D428:
+.obj jumptable_8054D428, global
 	.4byte .L_80324E0C
 	.4byte .L_80324FD8
 	.4byte .L_803265BC
@@ -10554,10 +10587,10 @@ jumptable_8054D428:
 	.4byte .L_80325F28
 	.4byte .L_803261A4
 	.4byte .L_803261B0
+.endobj jumptable_8054D428
 
 
-.global jumptable_8054D478
-jumptable_8054D478:
+.obj jumptable_8054D478, global
 	.4byte .L_80328514
 	.4byte .L_803285D4
 	.4byte .L_80328B88
@@ -10568,10 +10601,10 @@ jumptable_8054D478:
 	.4byte .L_80328F98
 	.4byte .L_80329068
 	.4byte .L_803285D4
+.endobj jumptable_8054D478
 
 
-.global jumptable_8054D4A0
-jumptable_8054D4A0:
+.obj jumptable_8054D4A0, global
 	.4byte .L_80329364
 	.4byte .L_803293D8
 	.4byte .L_8032990C
@@ -10582,10 +10615,10 @@ jumptable_8054D4A0:
 	.4byte .L_80329BB4
 	.4byte .L_80329C3C
 	.4byte .L_803293D8
+.endobj jumptable_8054D4A0
 
 
-.global jumptable_8054D4C8
-jumptable_8054D4C8:
+.obj jumptable_8054D4C8, global
 	.4byte .L_80329FD4
 	.4byte .L_8032A068
 	.4byte .L_8032A1C0
@@ -10596,42 +10629,42 @@ jumptable_8054D4C8:
 	.4byte .L_8032ACE0
 	.4byte .L_8032AE48
 	.4byte .L_8032A068
+.endobj jumptable_8054D4C8
 
 
-.global lbl_8054D4F0
-lbl_8054D4F0:
+.obj lbl_8054D4F0, global
 	.4byte lbl_8054D530
 	.4byte 0
 	.4byte onEvent__Q210homebutton22HomeButtonEventHandlerFUlUlPv
 	.4byte setManager__Q310homebutton3gui12EventHandlerFPQ310homebutton3gui7Manager
+.endobj lbl_8054D4F0
 
-.global lbl_8054D500
-lbl_8054D500:
+.obj lbl_8054D500, global
 	.asciz "homebutton::HomeButtonEventHandler"
 	.balign 4
+.endobj lbl_8054D500
 
-.global lbl_8054D524
-lbl_8054D524:
+.obj lbl_8054D524, global
 	.4byte lbl_8054D568
 	.4byte 0
 	.4byte 0
+.endobj lbl_8054D524
 
-.global lbl_8054D530
-lbl_8054D530:
+.obj lbl_8054D530, global
 	.4byte lbl_8054D500
 	.4byte lbl_8054D524
 	.4byte lbl_8054D568
 	.4byte 0
 	.4byte onEvent__Q310homebutton3gui12EventHandlerFUlUlPv
 	.4byte setManager__Q310homebutton3gui12EventHandlerFPQ310homebutton3gui7Manager
+.endobj lbl_8054D530
 
-.global lbl_8054D548
-lbl_8054D548:
+.obj lbl_8054D548, global
 	.asciz "homebutton::gui::EventHandler"
 	.balign 4
+.endobj lbl_8054D548
 
-.global lbl_8054D568
-lbl_8054D568:
+.obj lbl_8054D568, global
 	.4byte lbl_8054D548
 	.4byte 0
 	.4byte 0
@@ -10647,11 +10680,14 @@ lbl_8054D568:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8054D568
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-spHomeButtonObj__Q210homebutton10HomeButton:
+.obj spHomeButtonObj__Q210homebutton10HomeButton, local
 	.skip 0x8
+.endobj spHomeButtonObj__Q210homebutton10HomeButton
 
-sMutex__Q210homebutton10HomeButton:
+.obj sMutex__Q210homebutton10HomeButton, local
 	.skip 0x18
+.endobj sMutex__Q210homebutton10HomeButton

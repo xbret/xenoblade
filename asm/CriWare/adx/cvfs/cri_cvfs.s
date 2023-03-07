@@ -1462,8 +1462,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global cri_cvfs_strpool
-cri_cvfs_strpool:
+.balign 8
+
+.obj cri_cvfs_strpool, global
 	.asciz "cvFsAddDev #1:illegal device name"
 	.asciz "cvFsAddDev #2:illegal I/F func name"
 	.asciz "cvFsAddDev #3:can not add device"
@@ -1555,15 +1556,18 @@ cri_cvfs_strpool:
 	.asciz "cvFsReqClose #1:illegal file handle"
 	.asciz "cvFsIsAvailableRetry #1:illegal file handle"
 	.balign 4
+.endobj cri_cvfs_strpool
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805E9D28
-lbl_805E9D28:
+.obj lbl_805E9D28, global
 	.skip 0x4
-.global lbl_805E9D2C
-lbl_805E9D2C:
+.endobj lbl_805E9D28
+
+.obj lbl_805E9D2C, global
 	.skip 0x14C
-.global lbl_805E9E78
-lbl_805E9E78:
+.endobj lbl_805E9D2C
+
+.obj lbl_805E9E78, global
 	.skip 0x338
+.endobj lbl_805E9E78

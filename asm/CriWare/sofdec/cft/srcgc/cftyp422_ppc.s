@@ -271,8 +271,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051CDF0
-lbl_8051CDF0:
+.balign 8
+
+.obj lbl_8051CDF0, global
 	.4byte 0x3F950A85
 	.float 0.5
 	.4byte 0xBEC880BB
@@ -299,9 +300,10 @@ lbl_8051CDF0:
 	.4byte 0x43770000
 	.4byte 0x401306EB
 	.4byte 0
+.endobj lbl_8051CDF0
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_80601380
-lbl_80601380:
+.obj lbl_80601380, global
 	.skip 0x1408
+.endobj lbl_80601380

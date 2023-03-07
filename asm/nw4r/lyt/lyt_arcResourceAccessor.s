@@ -269,22 +269,26 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056D598
-lbl_8056D598:
+.balign 8
+
+.obj lbl_8056D598, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r3lyt19ArcResourceAccessorFv
 	.4byte GetResource__Q34nw4r3lyt19ArcResourceAccessorFUlPCcPUl
 	.4byte GetFont__Q34nw4r3lyt19ArcResourceAccessorFPCc
 	.4byte 0
+.endobj lbl_8056D598
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665DF8
-lbl_80665DF8:
+.balign 8
+
+.obj lbl_80665DF8, global
 	.4byte 0x2E000000
+.endobj lbl_80665DF8
 
 
-.global lbl_80665DFC
-lbl_80665DFC:
+.obj lbl_80665DFC, global
 	.4byte 0x2E2E0000
+.endobj lbl_80665DFC

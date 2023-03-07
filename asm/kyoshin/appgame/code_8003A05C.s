@@ -402,42 +402,46 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_804F5CF0
-lbl_804F5CF0:
+.balign 8
+
+.obj lbl_804F5CF0, global
 	.asciz "performanceStart"
 	.balign 4
+.endobj lbl_804F5CF0
 
-.global lbl_804F5D04
-lbl_804F5D04:
+.obj lbl_804F5D04, global
 	.asciz "performanceEnd"
 	.balign 4
+.endobj lbl_804F5D04
 
 
-.global lbl_804F5D14
-lbl_804F5D14:
+.obj lbl_804F5D14, global
 	.asciz "deb"
+.endobj lbl_804F5D14
 
 
-.global lbl_804F5D18
-lbl_804F5D18:
+.obj lbl_804F5D18, global
 	.asciz "wait"
 	.balign 4
+.endobj lbl_804F5D18
 
-.global lbl_804F5D20
-lbl_804F5D20:
+.obj lbl_804F5D20, global
 	.asciz "isExistProperty"
+.endobj lbl_804F5D20
 
-.global lbl_804F5D30
-lbl_804F5D30:
+.obj lbl_804F5D30, global
 	.asciz "isExistSelector"
+.endobj lbl_804F5D30
 
-.global lbl_804F5D40
-lbl_804F5D40:
+.obj lbl_804F5D40, global
 	.asciz "getOCName"
 	.balign 4
 	.4byte 0
+.endobj lbl_804F5D40
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
+
+#.balign 8
 
 #padding?
 .4byte 0
@@ -446,8 +450,7 @@ lbl_804F5D40:
 .4byte 0
 .4byte 0
 
-.global lbl_80528458
-lbl_80528458:
+.obj lbl_80528458, global
 	.4byte lbl_80668418
 	.4byte put
 	.4byte lbl_804F5CF0
@@ -456,17 +459,17 @@ lbl_80528458:
 	.4byte performanceEnd
 	.4byte 0
 	.4byte 0
+.endobj lbl_80528458
 
 
-.global lbl_80528478
-lbl_80528478:
+.obj lbl_80528478, global
 	.4byte lbl_80668420
 	.4byte frame
 	.4byte 0
 	.4byte 0
+.endobj lbl_80528478
 
-.global lbl_80528488
-lbl_80528488:
+.obj lbl_80528488, global
 	.4byte lbl_804F5D20
 	.4byte isExistProperty
 	.4byte 0
@@ -479,17 +482,17 @@ lbl_80528488:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_80528488
 
 
-.global lbl_805284B8
-lbl_805284B8:
+.obj lbl_805284B8, global
 	.4byte lbl_80668428
 	.4byte 0
 	.4byte 0
 	.4byte lbl_80528488
+.endobj lbl_805284B8
 
-.global lbl_805284C8
-lbl_805284C8:
+.obj lbl_805284C8, global
 	.4byte lbl_80668430
 	.4byte start
 	.4byte 0
@@ -512,75 +515,79 @@ lbl_805284C8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_805284C8
 
 
-.global lbl_80528520
-lbl_80528520:
+.obj lbl_80528520, global
 	.4byte lbl_80668460
 	.4byte thread
 	.4byte 0
 	.4byte lbl_805284C8
+.endobj lbl_80528520
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_80668418
-lbl_80668418:
+.balign 8
+
+.obj lbl_80668418, global
 	.asciz "put"
 	.4byte 0
+.endobj lbl_80668418
 
-.global lbl_80668420
-lbl_80668420:
+.obj lbl_80668420, global
 	.asciz "frame"
 	.balign 4
+.endobj lbl_80668420
 
-.global lbl_80668428
-lbl_80668428:
+.obj lbl_80668428, global
 	.asciz "builtin"
+.endobj lbl_80668428
 
-.global lbl_80668430
-lbl_80668430:
+.obj lbl_80668430, global
 	.asciz "start"
 	.balign 4
+.endobj lbl_80668430
 
-.global lbl_80668438
-lbl_80668438:
+.obj lbl_80668438, global
 	.asciz "end"
 	.4byte 0
+.endobj lbl_80668438
 
-.global lbl_80668440
-lbl_80668440:
+.obj lbl_80668440, global
 	.asciz "isAlive"
+.endobj lbl_80668440
 
-.global lbl_80668448
-lbl_80668448:
+.obj lbl_80668448, global
 	.asciz "join"
 	.balign 4
+.endobj lbl_80668448
 
-.global lbl_80668450
-lbl_80668450:
+.obj lbl_80668450, global
 	.asciz "sleep"
 	.balign 4
+.endobj lbl_80668450
 
-.global lbl_80668458
-lbl_80668458:
+.obj lbl_80668458, global
 	.asciz "wakeup"
 	.balign 4
+.endobj lbl_80668458
 
-.global lbl_80668460
-lbl_80668460:
+.obj lbl_80668460, global
 	.asciz "thread"
 	.balign 4
+.endobj lbl_80668460
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
-.global lbl_80573CC8
-lbl_80573CC8:
+.obj lbl_80573CC8, global
 	.skip 0x70
-.global lbl_80573D38
-lbl_80573D38:
+.endobj lbl_80573CC8
+
+.obj lbl_80573D38, global
 	.skip 0x98
+.endobj lbl_80573D38
 
 
 

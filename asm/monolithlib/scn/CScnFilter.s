@@ -103,30 +103,30 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CScnFilter
-__vt__CScnFilter:
+.obj __vt__CScnFilter, global
 	.4byte __RTTI__CScnFilter
 	.4byte 0
 	.4byte __dt__CScnFilter
 	.4byte func_8049C868
 	.4byte 0
 	.4byte 0
+.endobj __vt__CScnFilter
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066D350
-float_8066D350:
+.obj float_8066D350, global
 	.float 0
 	.4byte 0
+.endobj float_8066D350
 
 
-.global double_8066D358
-double_8066D358:
+.obj double_8066D358, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066D358
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

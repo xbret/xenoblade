@@ -495,26 +495,30 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global lbl_8056E6E8
-lbl_8056E6E8:
+
+.obj lbl_8056E6E8, global
 	.4byte 0
 	.4byte 0
 	.4byte "__dt__Q34nw4r2ut19TagProcessorBase<w>Fv"
 	.4byte "Process__Q34nw4r2ut19TagProcessorBase<w>FUsPQ34nw4r2ut15PrintContext<w>"
 	.4byte "CalcRect__Q34nw4r2ut19TagProcessorBase<w>FPQ34nw4r2ut4RectUsPQ34nw4r2ut15PrintContext<w>"
+.endobj lbl_8056E6E8
 
 
-.global lbl_8056E6FC
-lbl_8056E6FC:
+.obj lbl_8056E6FC, global
 	.4byte 0
 	.4byte 0
 	.4byte "__dt__Q34nw4r2ut19TagProcessorBase<c>Fv"
 	.4byte "Process__Q34nw4r2ut19TagProcessorBase<c>FUsPQ34nw4r2ut15PrintContext<c>"
 	.4byte "CalcRect__Q34nw4r2ut19TagProcessorBase<c>FPQ34nw4r2ut4RectUsPQ34nw4r2ut15PrintContext<c>"
+.endobj lbl_8056E6FC
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global double_8066C930
-double_8066C930:
+.balign 8
+
+.obj double_8066C930, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066C930

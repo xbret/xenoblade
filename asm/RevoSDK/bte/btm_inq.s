@@ -1967,65 +1967,71 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_805452E0
-lbl_805452E0:
+.balign 8
+
+.obj lbl_805452E0, global
 	.asciz "BTM_SetDiscoverability: mode %d [NonDisc-0, Lim-1, Gen-2], window 0x%04x, interval 0x%04x"
 	.balign 4
+.endobj lbl_805452E0
 
 
-.global lbl_8054533C
-lbl_8054533C:
+.obj lbl_8054533C, global
 	.asciz "BTM_SetConnectability: mode %d [NonConn-0, Conn-1], window 0x%04x, interval 0x%04x"
 	.balign 4
+.endobj lbl_8054533C
 
 
-.global lbl_80545390
-lbl_80545390:
+.obj lbl_80545390, global
 	.asciz "BTM_CancelInquiry called"
 	.balign 4
+.endobj lbl_80545390
 
 
-.global lbl_805453AC
-lbl_805453AC:
+.obj lbl_805453AC, global
 	.asciz "BTM_StartInquiry: mode: %d, dur: %d, rsps: %d, flt: %d"
 	.balign 4
+.endobj lbl_805453AC
 
 
-.global lbl_805453E4
-lbl_805453E4:
+.obj lbl_805453E4, global
 	.asciz "BTM_ReadRemoteDeviceName: bd addr [%02x%02x%02x%02x%02x%02x]"
 	.balign 4
+.endobj lbl_805453E4
 
 
-.global lbl_80545424
-lbl_80545424:
+.obj lbl_80545424, global
 	.asciz "BTM_CancelRemoteDeviceName()"
 	.balign 4
+.endobj lbl_80545424
 
 
-.global lbl_80545444
-lbl_80545444:
+.obj lbl_80545444, global
 	.asciz "BTM_InqDbRead: bd addr [%02x%02x%02x%02x%02x%02x]"
 	.balign 4
+.endobj lbl_80545444
 
 
-.global lbl_80545478
-lbl_80545478:
+.obj lbl_80545478, global
 	.asciz "BTM Warning: Set Event Filter Failed (HCI returned 0x%x)"
 	.balign 4
+.endobj lbl_80545478
 
 
-.global lbl_805454B4
-lbl_805454B4:
+.obj lbl_805454B4, global
 	.asciz "BTM Inq Compl Callback: status 0x%02x, num results %d"
 	.balign 4
 	.4byte 0
+.endobj lbl_805454B4
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-general_inq_lap:
-	.4byte 0x9E8B3300
+.balign 8
 
-limited_inq_lap:
+.obj general_inq_lap, local
+	.4byte 0x9E8B3300
+.endobj general_inq_lap
+
+.obj limited_inq_lap, local
 	.4byte 0x9E8B0000
+.endobj limited_inq_lap

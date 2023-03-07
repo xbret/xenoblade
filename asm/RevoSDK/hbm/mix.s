@@ -1856,10 +1856,11 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
+
 #The arrays after are accessed by adding their offsets from the first array
 
-.global __HBMMIXVolumeTable
-__HBMMIXVolumeTable:
+.obj __HBMMIXVolumeTable, global
 	.2byte 0x0000
 	.2byte 0x0001
 	.2byte 0x0001
@@ -2828,8 +2829,9 @@ __HBMMIXVolumeTable:
 	.2byte 0x0000
 	.2byte 0
 	.2byte 0
+.endobj __HBMMIXVolumeTable
 
-__HBMMIXPanTable:
+.obj __HBMMIXPanTable, local
 	.2byte 0
 	.2byte 0
 	.2byte 0
@@ -3086,8 +3088,9 @@ __HBMMIXPanTable:
 	.2byte 0xFF2E
 	.2byte 0xFFFF
 	.2byte 0xFC78
+.endobj __HBMMIXPanTable
 
-__HBMMIX_DPL2_front:
+.obj __HBMMIX_DPL2_front, local
 	.2byte 0
 	.2byte 0
 	.2byte 0
@@ -3216,8 +3219,9 @@ __HBMMIX_DPL2_front:
 	.2byte 0xFEBF
 	.2byte 0xFE83
 	.2byte 0xFC40
+.endobj __HBMMIX_DPL2_front
 
-__HBMMIX_DPL2_rear:
+.obj __HBMMIX_DPL2_rear, local
 	.2byte 0xFFC3
 	.2byte 0xFFC3
 	.2byte 0xFFC4
@@ -3346,23 +3350,30 @@ __HBMMIX_DPL2_rear:
 	.2byte 0xFFF4
 	.2byte 0xFFF4
 	.2byte 0xFFF5
+.endobj __HBMMIX_DPL2_rear
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-sIndex2IdTable:
+.obj sIndex2IdTable, local
 	.skip 0x10
+.endobj sIndex2IdTable
 
-sId2IndexTable:
+.obj sId2IndexTable, local
 	.skip 0x60
+.endobj sId2IndexTable
 
-__HBMMIXSoundMode:
+.obj __HBMMIXSoundMode, local
 	.skip 0x4
+.endobj __HBMMIXSoundMode
 
-__HBMMIXChannel:
+.obj __HBMMIXChannel, local
 	.skip 0x4
+.endobj __HBMMIXChannel
 
-__s_HBMMIXChannel:
+.obj __s_HBMMIXChannel, local
 	.skip 0x640
+.endobj __s_HBMMIXChannel
 
-__init:
+.obj __init, local
 	.skip 0x8
+.endobj __init

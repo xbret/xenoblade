@@ -103,7 +103,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-bta_dm_action:
+.balign 8
+
+.obj bta_dm_action, local
 	.4byte bta_dm_enable
 	.4byte bta_dm_disable
 	.4byte bta_dm_set_dev_name
@@ -117,9 +119,10 @@ bta_dm_action:
 	.4byte bta_dm_pm_timer
 	.4byte bta_dm_keep_acl
 	.4byte bta_dm_send_hci_reset
+.endobj bta_dm_action
 
 
-bta_dm_st_table:
+.obj bta_dm_st_table, local
 	.4byte 0x000D0001
 	.4byte 0x0D00020D
 	.4byte 0x00030D00
@@ -131,9 +134,10 @@ bta_dm_st_table:
 	.4byte 0x000B0D00
 	.4byte 0x0C0D0000
 	.4byte 0
+.endobj bta_dm_st_table
 
 
-bta_dm_search_action:
+.obj bta_dm_search_action, local
 	.4byte bta_dm_search_start
 	.4byte bta_dm_search_cancel
 	.4byte bta_dm_discover
@@ -152,8 +156,9 @@ bta_dm_search_action:
 	.4byte bta_dm_search_cancel_transac_cmpl
 	.4byte bta_dm_disc_rmt_name
 	.4byte bta_dm_cancel_rmt_name
+.endobj bta_dm_search_action
 
-bta_dm_search_idle_st_table:
+.obj bta_dm_search_idle_st_table, local
 	.4byte 0x0012010E
 	.4byte 0x12000212
 	.4byte 0x03121200
@@ -161,8 +166,9 @@ bta_dm_search_idle_st_table:
 	.4byte 0x12000712
 	.4byte 0x00121200
 	.4byte 0x12120000
+.endobj bta_dm_search_idle_st_table
 
-bta_dm_search_search_active_st_table:
+.obj bta_dm_search_search_active_st_table, local
 	.4byte 0x12120101
 	.4byte 0x12021212
 	.4byte 0x01031201
@@ -170,8 +176,9 @@ bta_dm_search_search_active_st_table:
 	.4byte 0x12010512
 	.4byte 0x01061200
 	.4byte 0x09120100
+.endobj bta_dm_search_search_active_st_table
 
-bta_dm_search_search_cancelling_st_table:
+.obj bta_dm_search_search_cancelling_st_table, local
 	.4byte 0x0A12020C
 	.4byte 0x0E020B12
 	.4byte 0x020D1200
@@ -179,8 +186,9 @@ bta_dm_search_search_cancelling_st_table:
 	.4byte 0x12020F0D
 	.4byte 0x000D1200
 	.4byte 0x0D120000
+.endobj bta_dm_search_search_cancelling_st_table
 
-bta_dm_search_disc_active_st_table:
+.obj bta_dm_search_disc_active_st_table, local
 	.4byte 0x1212030E
 	.4byte 0x12031212
 	.4byte 0x03121203
@@ -188,20 +196,22 @@ bta_dm_search_disc_active_st_table:
 	.4byte 0x12030512
 	.4byte 0x03121200
 	.4byte 0x08120300
+.endobj bta_dm_search_disc_active_st_table
 
 
-bta_dm_search_st_tbl:
+.obj bta_dm_search_st_tbl, local
 	.4byte bta_dm_search_idle_st_table
 	.4byte bta_dm_search_search_active_st_table
 	.4byte bta_dm_search_search_cancelling_st_table
 	.4byte bta_dm_search_disc_active_st_table
+.endobj bta_dm_search_st_tbl
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global bta_dm_search_cb
-bta_dm_search_cb:
+.obj bta_dm_search_cb, global
 	.skip 0x7C
+.endobj bta_dm_search_cb
 
-.global bta_dm_cb
-bta_dm_cb:
+.obj bta_dm_cb, global
 	.skip 0x104
+.endobj bta_dm_cb

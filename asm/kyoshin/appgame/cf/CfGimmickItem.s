@@ -707,16 +707,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CfGimmickItem_typestr
-cf_CfGimmickItem_typestr:
+.obj cf_CfGimmickItem_typestr, global
 	.asciz "cf::CfGimmickItem"
 	.balign 4
+.endobj cf_CfGimmickItem_typestr
 
 
-.global CfGimmickItem_strpool
-CfGimmickItem_strpool:
+.obj CfGimmickItem_strpool, global
 	.asciz "rectype"
 	.asciz "geItem"
 	.asciz "MSG1"
@@ -733,13 +732,13 @@ CfGimmickItem_strpool:
 	.asciz "quest_Max"
 	.asciz "quest_Min"
 	.balign 4
+.endobj CfGimmickItem_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_80539208
-lbl_80539208:
+.obj lbl_80539208, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802106F8
@@ -758,10 +757,10 @@ lbl_80539208:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80210C1C
+.endobj lbl_80539208
 
 
-.global __vt__cf_CfGimmickItem
-__vt__cf_CfGimmickItem:
+.obj __vt__cf_CfGimmickItem, global
 	.4byte __RTTI__cf_CfGimmickItem
 	.4byte 0
 	.4byte __dt__cf_CfGimmickItem
@@ -771,53 +770,53 @@ __vt__cf_CfGimmickItem:
 	.4byte func_801F4BF8
 	.4byte func_801F4C8C
 	.4byte func_80208988
+.endobj __vt__cf_CfGimmickItem
 
-.global cf_CfGimmickItem_hierarchy
-cf_CfGimmickItem_hierarchy:
+.obj cf_CfGimmickItem_hierarchy, global
 	.4byte __RTTI__cf_IObjectInfo
 	.4byte 0
 	.4byte __RTTI__cf_CfGimmick
 	.4byte 0
 	.4byte 0
+.endobj cf_CfGimmickItem_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_806650B0
-lbl_806650B0:
+.obj lbl_806650B0, global
 	.4byte lbl_8066ACF8
 	.4byte lbl_8066AD00
+.endobj lbl_806650B0
 
-.global __RTTI__cf_CfGimmickItem
-__RTTI__cf_CfGimmickItem:
+.obj __RTTI__cf_CfGimmickItem, global
 	.4byte cf_CfGimmickItem_typestr
 	.4byte cf_CfGimmickItem_hierarchy
+.endobj __RTTI__cf_CfGimmickItem
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-
-.global lbl_8066ACF8
-lbl_8066ACF8:
+.obj lbl_8066ACF8, global
 	.asciz "A_Item"
 	.balign 4
+.endobj lbl_8066ACF8
 
-.global lbl_8066AD00
-lbl_8066AD00:
+.obj lbl_8066AD00, global
 	.asciz "A_Lost"
 	.balign 4
+.endobj lbl_8066AD00
 
 
-.global float_8066AD08
-float_8066AD08:
+.obj float_8066AD08, global
 	.float 0
+.endobj float_8066AD08
 
 
-.global float_8066AD0C
-float_8066AD0C:
+.obj float_8066AD0C, global
 	.float 5 #0x40A00000
+.endobj float_8066AD0C
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

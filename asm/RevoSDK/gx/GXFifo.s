@@ -855,47 +855,61 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8054B8C0
-lbl_8054B8C0:
+.balign 8
+
+.obj lbl_8054B8C0, global
 	.asciz "CPUFifo: %08X - %08X\n"
 	.balign 4
+.endobj lbl_8054B8C0
 
 
-.global lbl_8054B8D8
-lbl_8054B8D8:
+.obj lbl_8054B8D8, global
 	.asciz "GP Fifo: %08X - %08X\n"
 	.balign 4
+.endobj lbl_8054B8D8
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-GPFifo:
+.obj GPFifo, local
 	.skip 0x24
+.endobj GPFifo
 
-CPUFifo:
+.obj CPUFifo, local
 	.skip 0x24
+.endobj CPUFifo
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-CPUFifoReady:
+.balign 8
+
+.obj CPUFifoReady, local
 	.skip 0x1
+.endobj CPUFifoReady
 
-GPFifoReady:
+.obj GPFifoReady, local
 	.skip 0x3
+.endobj GPFifoReady
 
-__GXOverflowCount:
+.obj __GXOverflowCount, local
 	.skip 0x4
+.endobj __GXOverflowCount
 
-__GXCurrentBP:
+.obj __GXCurrentBP, local
 	.skip 0x4
+.endobj __GXCurrentBP
 
-BreakPointCB:
+.obj BreakPointCB, local
 	.skip 0x4
+.endobj BreakPointCB
 
-GXOverflowSuspendInProgress:
+.obj GXOverflowSuspendInProgress, local
 	.skip 0x4
+.endobj GXOverflowSuspendInProgress
 
-__GXCurrentThread:
+.obj __GXCurrentThread, local
 	.skip 0x4
+.endobj __GXCurrentThread
 
-CPGPLinked:
+.obj CPGPLinked, local
 	.skip 0x8
+.endobj CPGPLinked

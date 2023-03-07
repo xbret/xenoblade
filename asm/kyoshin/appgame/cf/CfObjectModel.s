@@ -1582,20 +1582,19 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_804F7D70
-lbl_804F7D70:
+.obj lbl_804F7D70, global
 	.4byte 0x006D6F76
 	.4byte 0x65000000
+.endobj lbl_804F7D70
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CfObjectModel
-__vt__cf_CfObjectModel:
+.obj __vt__cf_CfObjectModel, global
 	.4byte __RTTI__cf_CfObjectModel
 	.4byte 0
 	.4byte func_8003DC64
@@ -1710,10 +1709,10 @@ __vt__cf_CfObjectModel:
 	.4byte func_800AC98C
 	.4byte func_800BA70C
 	.4byte func_800B05EC
+.endobj __vt__cf_CfObjectModel
 
 
-.global __vt__cf_CfObject
-__vt__cf_CfObject:
+.obj __vt__cf_CfObject, global
 	.4byte __RTTI__cf_CfObject
 	.4byte 0
 	.4byte func_8003DC64
@@ -1808,61 +1807,62 @@ __vt__cf_CfObject:
 	.4byte func_800AC4BC
 	.4byte func_800AC4B8
 	.4byte func_800AC4B0
+.endobj __vt__cf_CfObject
 
 
-.global lbl_8052CE28
-lbl_8052CE28:
+.obj lbl_8052CE28, global
 	.asciz "NW4R:Failed assertion IsValid()"
+.endobj lbl_8052CE28
 
 
-.global lbl_8052CE48
-lbl_8052CE48:
+.obj lbl_8052CE48, global
 	.asciz "g3d_resnode_ac.h"
 	.balign 4
 	.4byte 0
+.endobj lbl_8052CE48
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_80669330
-float_80669330:
+.obj float_80669330, global
 	.float 0
+.endobj float_80669330
 
 
-.global float_80669334
-float_80669334:
+.obj float_80669334, global
 	.float 1.0
+.endobj float_80669334
 
 
-.global float_80669338
-float_80669338:
+.obj float_80669338, global
 	.float -0.5 #0xBF000000
+.endobj float_80669338
 
 
-.global float_8066933C
-float_8066933C:
+.obj float_8066933C, global
 	.float 0.7071 #0x3F350481
+.endobj float_8066933C
 
 
-.global float_80669340
-float_80669340:
+.obj float_80669340, global
 	.float 0.19 #0x3E428F5C
+.endobj float_80669340
 
 
-.global float_80669344
-float_80669344:
+.obj float_80669344, global
 	.float -1.3900001 #0xBFB1EB86
+.endobj float_80669344
 
 
-.global float_80669348
-float_80669348:
+.obj float_80669348, global
 	.float 0.5
+.endobj float_80669348
 
 
-.global float_8066934C
-float_8066934C:
+.obj float_8066934C, global
 	.float 1000 #0x447A0000
+.endobj float_8066934C
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

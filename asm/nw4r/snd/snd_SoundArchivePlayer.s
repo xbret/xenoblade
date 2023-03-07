@@ -2944,9 +2944,10 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global lbl_8056E4C0
-lbl_8056E4C0:
+
+.obj lbl_8056E4C0, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r3snd18SoundArchivePlayerFv
@@ -2959,31 +2960,34 @@ lbl_8056E4C0:
 	.4byte _12_detail_ConvertLabelStringToSoundId__Q34nw4r3snd18SoundArchivePlayerFPCc
 	.4byte detail_ConvertLabelStringToSoundId__Q34nw4r3snd18SoundArchivePlayerFPCc
 	.4byte detail_SetupSound__Q34nw4r3snd18SoundArchivePlayerFPQ34nw4r3snd11SoundHandleUlbPCQ44nw4r3snd14SoundStartable9StartInfo
+.endobj lbl_8056E4C0
 
 
-.global lbl_8056E4F0
-lbl_8056E4F0:
+.obj lbl_8056E4F0, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q44nw4r3snd18SoundArchivePlayer11WsdCallbackFv
 	.4byte GetWaveSoundData__Q44nw4r3snd18SoundArchivePlayer11WsdCallbackCFPQ44nw4r3snd6detail13WaveSoundInfoPQ44nw4r3snd6detail17WaveSoundNoteInfoPQ44nw4r3snd6detail8WaveInfoPCviiUl
+.endobj lbl_8056E4F0
 
 
-.global lbl_8056E500
-lbl_8056E500:
+.obj lbl_8056E500, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q44nw4r3snd18SoundArchivePlayer17SeqNoteOnCallbackFv
 	.4byte NoteOn__Q44nw4r3snd18SoundArchivePlayer17SeqNoteOnCallbackFPQ44nw4r3snd6detail9SeqPlayeriRCQ44nw4r3snd6detail10NoteOnInfo
+.endobj lbl_8056E500
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C848
-float_8066C848:
+.balign 8
+
+.obj float_8066C848, global
 	.float 127 #0x42FE0000
 	.4byte 0
+.endobj float_8066C848
 
 
-.global double_8066C850
-double_8066C850:
+.obj double_8066C850, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066C850

@@ -1231,16 +1231,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CfMapEffectManager_typestr
-cf_CfMapEffectManager_typestr:
+.obj cf_CfMapEffectManager_typestr, global
 	.asciz "cf::CfMapEffectManager"
 	.balign 4
+.endobj cf_CfMapEffectManager_typestr
 
 
-.global CfMapEffectManager_strpool
-CfMapEffectManager_strpool:
+.obj CfMapEffectManager_strpool, global
 	.asciz "questID"
 	.asciz "qst_sflg"
 	.asciz "qst_eflg"
@@ -1268,86 +1267,87 @@ CfMapEffectManager_strpool:
 	.asciz "calc_frame"
 	.balign 4
 	.4byte 0
+.endobj CfMapEffectManager_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CfMapEffectManager
-__vt__cf_CfMapEffectManager:
+.obj __vt__cf_CfMapEffectManager, global
 	.4byte __RTTI__cf_CfMapEffectManager
 	.4byte 0
 	.4byte __dt__cf_CfMapEffectManager
 	.4byte func_8016FC98
+.endobj __vt__cf_CfMapEffectManager
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global float_80664CE0
-float_80664CE0:
+.obj float_80664CE0, global
 	.float 10.0
+.endobj float_80664CE0
 
 
-.global lbl_80664CE4
-lbl_80664CE4:
+.obj lbl_80664CE4, global
 	.4byte lbl_80669FC8
+.endobj lbl_80664CE4
 
-.global __RTTI__cf_CfMapEffectManager
-__RTTI__cf_CfMapEffectManager:
+.obj __RTTI__cf_CfMapEffectManager, global
 	.4byte cf_CfMapEffectManager_typestr
 	.4byte 0
+.endobj __RTTI__cf_CfMapEffectManager
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_80669FC0
-float_80669FC0:
+.obj float_80669FC0, global
 	.float 10.0
 	.4byte 0
+.endobj float_80669FC0
 
-.global lbl_80669FC8
-lbl_80669FC8:
+.obj lbl_80669FC8, global
 	.asciz "signal1"
+.endobj lbl_80669FC8
 
 
-.global float_80669FD0
-float_80669FD0:
+.obj float_80669FD0, global
 	.float 1.0
+.endobj float_80669FD0
 
 
-.global float_80669FD4
-float_80669FD4:
+.obj float_80669FD4, global
 	.float 0.0001 #0x38D1B717
+.endobj float_80669FD4
 
 
-.global float_80669FD8
-float_80669FD8:
+.obj float_80669FD8, global
 	.float 0.01 #0x3C23D70A
 	.4byte 0
+.endobj float_80669FD8
 
 
-.global double_80669FE0
-double_80669FE0:
+.obj double_80669FE0, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_80669FE0
 
-.global double_80669FE8
-double_80669FE8:
+.obj double_80669FE8, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_80669FE8
 
-.global float_80669FF0
-float_80669FF0:
+.obj float_80669FF0, global
 	.float 0
 	.4byte 0
+.endobj float_80669FF0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80666B80
-lbl_80666B80:
+.obj lbl_80666B80, global
 	.skip 0x8
+.endobj lbl_80666B80
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

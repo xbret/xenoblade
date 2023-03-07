@@ -1121,21 +1121,20 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CfTFile_typestr
-cf_CfTFile_typestr:
+.obj cf_CfTFile_typestr, global
 	.asciz "cf::CfTFile"
+.endobj cf_CfTFile_typestr
 
 
-.global lbl_804F6C1C
-lbl_804F6C1C:
+.obj lbl_804F6C1C, global
 	.asciz "script/%02d%02d.t"
 	.balign 4
+.endobj lbl_804F6C1C
 
 
-.global CfTFile_strpool
-CfTFile_strpool:
+.obj CfTFile_strpool, global
 	.asciz "morning_h"
 	.asciz "morning_m"
 	.asciz "daytime_h"
@@ -1145,13 +1144,13 @@ CfTFile_strpool:
 	.asciz "night_h"
 	.asciz "night_m"
 	.4byte 0
+.endobj CfTFile_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CfTFile
-__vt__cf_CfTFile:
+.obj __vt__cf_CfTFile, global
 	.4byte __RTTI__cf_CfTFile
 	.4byte 0
 	.4byte __dt__cf_CfTFile
@@ -1186,149 +1185,156 @@ __vt__cf_CfTFile:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__cf_CfTFile
 
-.global cf_CfTFile_hierarchy
-cf_CfTFile_hierarchy:
+.obj cf_CfTFile_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CfTFile_hierarchy
 
 
-.global lbl_8052A800
-lbl_8052A800:
+.obj lbl_8052A800, global
 	.4byte 0x0006000C
 	.4byte 0x00120000
 	.4byte 0
+.endobj lbl_8052A800
 
 
-.global lbl_8052A80C
-lbl_8052A80C:
+.obj lbl_8052A80C, global
 	.4byte 0x001E001E
 	.4byte 0x001E001E
 	.4byte 0
+.endobj lbl_8052A80C
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+#.balign 8
 
-
-.global float_80668A9C
-float_80668A9C:
+.obj float_80668A9C, global
 	.float 1.2 #0x3F99999A
+.endobj float_80668A9C
 
 
-.global float_80668AA0
-float_80668AA0:
+.obj float_80668AA0, global
 	.float 1.0
 	.4byte 0
+.endobj float_80668AA0
 
 
-.global double_80668AA8
-double_80668AA8:
+.obj double_80668AA8, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_80668AA8
 
-.global float_80668AB0
-float_80668AB0:
+.obj float_80668AB0, global
 	.float 43200 #0x4728C000
 	.4byte 0
+.endobj float_80668AB0
 
 
-.global double_80668AB8
-double_80668AB8:
+.obj double_80668AB8, global
 	.double 43200 #0x40E5180000000000
+.endobj double_80668AB8
 
 
-.global float_80668AC0
-float_80668AC0:
+.obj float_80668AC0, global
 	.float 0
+.endobj float_80668AC0
 
 
-.global float_80668AC4
-float_80668AC4:
+.obj float_80668AC4, global
 	.float 1800 #0x44E10000
+.endobj float_80668AC4
 
 
-.global double_80668AC8
-double_80668AC8:
+.obj double_80668AC8, global
 	.double 24 #0x4038000000000000
+.endobj double_80668AC8
 
 
-.global float_80668AD0
-float_80668AD0:
+.obj float_80668AD0, global
 	.float 30 #0x41F00000
 	.4byte 0
+.endobj float_80668AD0
 
 
-.global double_80668AD8
-double_80668AD8:
+.obj double_80668AD8, global
 	.double 60 #0x404E000000000000
+.endobj double_80668AD8
 
 
-.global float_80668AE0
-float_80668AE0:
+.obj float_80668AE0, global
 	.float 2 #0x40000000
 	.4byte 0
+.endobj float_80668AE0
 
 
-.global double_80668AE8
-double_80668AE8:
+.obj double_80668AE8, global
 	.double 30 #0x403E000000000000
+.endobj double_80668AE8
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CfTFile
-__RTTI__cf_CfTFile:
+.obj __RTTI__cf_CfTFile, global
 	.4byte cf_CfTFile_typestr
 	.4byte cf_CfTFile_hierarchy
+.endobj __RTTI__cf_CfTFile
 
 
-.global float_806643E8
-float_806643E8:
+.obj float_806643E8, global
 	.float 1.0
+.endobj float_806643E8
 
 
-.global lbl_806643EC
-lbl_806643EC:
+.obj lbl_806643EC, global
 	.2byte 0x0001
+.endobj lbl_806643EC
 
 
-.global lbl_806643EE
-lbl_806643EE:
+.obj lbl_806643EE, global
 	.2byte 0x0001
+.endobj lbl_806643EE
 
 
-.global lbl_806643F0
-lbl_806643F0:
+.obj lbl_806643F0, global
 	.4byte 0x00010000
 	.4byte 0
+.endobj lbl_806643F0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80666690, global
+	.skip 0x4
+.endobj lbl_80666690
 
-.global lbl_80666690
-lbl_80666690:
+.obj float_80666694, global
 	.skip 0x4
-.global float_80666694
-float_80666694:
+.endobj float_80666694
+
+.obj float_80666698, global
 	.skip 0x4
-.global float_80666698
-float_80666698:
+.endobj float_80666698
+
+.obj float_8066669C, global
 	.skip 0x4
-.global float_8066669C
-float_8066669C:
+.endobj float_8066669C
+
+.obj lbl_806666A0, global
 	.skip 0x4
-.global lbl_806666A0
-lbl_806666A0:
+.endobj lbl_806666A0
+
+.obj lbl_806666A4, global
 	.skip 0x4
-.global lbl_806666A4
-lbl_806666A4:
-	.skip 0x4
-.global lbl_806666A8
-lbl_806666A8:
+.endobj lbl_806666A4
+
+.obj lbl_806666A8, global
 	.skip 0x8
+.endobj lbl_806666A8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

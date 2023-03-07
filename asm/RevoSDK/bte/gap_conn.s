@@ -830,32 +830,36 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_805462D0
-lbl_805462D0:
+.balign 8
+
+.obj lbl_805462D0, global
 	.asciz "WARNING: GAP Conn Indication for Unexpected Bd Addr...Disconnecting"
+.endobj lbl_805462D0
 
 
-.global lbl_80546314
-lbl_80546314:
+.obj lbl_80546314, global
 	.asciz "GAP_CONN - Rcvd L2CAP conn ind, CID: 0x%x"
 	.balign 4
+.endobj lbl_80546314
 
 
-.global lbl_80546340
-lbl_80546340:
+.obj lbl_80546340, global
 	.asciz "GAP_CONN - Rcvd L2CAP disc, CID: 0x%x"
 	.balign 4
+.endobj lbl_80546340
 
 
-.global lbl_80546368
-lbl_80546368:
+.obj lbl_80546368, global
 	.asciz "GAP_CONN - Rcvd L2CAP Is Congested (%d), CID: 0x%x"
 	.balign 4
 	.4byte 0
+.endobj lbl_80546368
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665940
-lbl_80665940:
+.balign 8
+
+.obj lbl_80665940, global
 	.asciz "*******"
+.endobj lbl_80665940

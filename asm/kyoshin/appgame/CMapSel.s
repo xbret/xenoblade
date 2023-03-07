@@ -1306,10 +1306,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMapSel_strpool
-CMapSel_strpool:
+.obj CMapSel_strpool, global
 	.asciz "mapID"
 	.asciz "index"
 	.asciz "/menu/MapSel.arc"
@@ -1331,13 +1330,13 @@ CMapSel_strpool:
 	.asciz "mf03_map00_mpslct_in_info.brlan"
 	.balign 4
 	.4byte 0
+.endobj CMapSel_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global jumptable_8053A550
-jumptable_8053A550:
+.obj jumptable_8053A550, global
 	.4byte .L_80243210
 	.4byte .L_80243210
 	.4byte .L_80243210
@@ -1368,10 +1367,10 @@ jumptable_8053A550:
 	.4byte .L_80243210
 	.4byte .L_8024326C
 	.4byte 0
+.endobj jumptable_8053A550
 
 
-.global __vt__CMapSel
-__vt__CMapSel:
+.obj __vt__CMapSel, global
 	.4byte __RTTI__CMapSel
 	.4byte 0
 	.4byte __dt__CMapSel
@@ -1406,49 +1405,50 @@ __vt__CMapSel:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CMapSel
 
-.global CMapSel_hierarchy
-CMapSel_hierarchy:
+.obj CMapSel_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMapSel_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMapSel
-__RTTI__CMapSel:
+.obj __RTTI__CMapSel, global
 	.4byte CMapSel_typestr
 	.4byte CMapSel_hierarchy
+.endobj __RTTI__CMapSel
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066AFF0
-float_8066AFF0:
+.obj float_8066AFF0, global
 	.float 0
+.endobj float_8066AFF0
 
 
-.global float_8066AFF4
-float_8066AFF4:
+.obj float_8066AFF4, global
 	.float 1.0
+.endobj float_8066AFF4
 
 
-.global float_8066AFF8
-float_8066AFF8:
+.obj float_8066AFF8, global
 	.float -56 #0xC2600000
+.endobj float_8066AFF8
 
 
-.global float_8066AFFC
-float_8066AFFC:
+.obj float_8066AFFC, global
 	.float 123 #0x42F60000
+.endobj float_8066AFFC
 
-.global CMapSel_typestr
-CMapSel_typestr:
+.obj CMapSel_typestr, global
 	.asciz "CMapSel"
+.endobj CMapSel_typestr
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

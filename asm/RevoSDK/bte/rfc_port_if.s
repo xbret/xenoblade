@@ -391,6 +391,6 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global rfc_cb
-rfc_cb:
+.obj rfc_cb, global
 	.skip 0x418
+.endobj rfc_cb

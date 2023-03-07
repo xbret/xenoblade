@@ -101,131 +101,130 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CHelp_ToAttack_typestr
-cf_CHelp_ToAttack_typestr:
+.obj cf_CHelp_ToAttack_typestr, global
 	.asciz "cf::CHelp_ToAttack"
 	.balign 4
 	.4byte 0
+.endobj cf_CHelp_ToAttack_typestr
 
-.global cf_CHelp_ArtsAttack_typestr
-cf_CHelp_ArtsAttack_typestr:
+.obj cf_CHelp_ArtsAttack_typestr, global
 	.asciz "cf::CHelp_ArtsAttack"
 	.balign 4
+.endobj cf_CHelp_ArtsAttack_typestr
 
-.global cf_CHelp_ArtsSet_typestr
-cf_CHelp_ArtsSet_typestr:
+.obj cf_CHelp_ArtsSet_typestr, global
 	.asciz "cf::CHelp_ArtsSet"
 	.balign 4
 	.4byte 0
+.endobj cf_CHelp_ArtsSet_typestr
 
-.global cf_CHelp_CkKizuna_typestr
-cf_CHelp_CkKizuna_typestr:
+.obj cf_CHelp_CkKizuna_typestr, global
 	.asciz "cf::CHelp_CkKizuna"
 	.balign 4
 	.4byte 0
+.endobj cf_CHelp_CkKizuna_typestr
 
-.global cf_CHelp_CloseItemMenu_typestr
-cf_CHelp_CloseItemMenu_typestr:
+.obj cf_CHelp_CloseItemMenu_typestr, global
 	.asciz "cf::CHelp_CloseItemMenu"
+.endobj cf_CHelp_CloseItemMenu_typestr
 
-.global cf_CHelp_CloseSysMenu_typestr
-cf_CHelp_CloseSysMenu_typestr:
+.obj cf_CHelp_CloseSysMenu_typestr, global
 	.asciz "cf::CHelp_CloseSysMenu"
 	.balign 4
+.endobj cf_CHelp_CloseSysMenu_typestr
 
-.global cf_CHelp_EnemyCount_typestr
-cf_CHelp_EnemyCount_typestr:
+.obj cf_CHelp_EnemyCount_typestr, global
 	.asciz "cf::CHelp_EnemyCount"
 	.balign 4
+.endobj cf_CHelp_EnemyCount_typestr
 
-.global cf_CHelp_EnemyEnable_typestr
-cf_CHelp_EnemyEnable_typestr:
+.obj cf_CHelp_EnemyEnable_typestr, global
 	.asciz "cf::CHelp_EnemyEnable"
 	.balign 4
+.endobj cf_CHelp_EnemyEnable_typestr
 
-.global cf_CHelp_Exchange_typestr
-cf_CHelp_Exchange_typestr:
+.obj cf_CHelp_Exchange_typestr, global
 	.asciz "cf::CHelp_Exchange"
 	.balign 4
 	.4byte 0
+.endobj cf_CHelp_Exchange_typestr
 
-.global cf_CHelp_GameOver_typestr
-cf_CHelp_GameOver_typestr:
+.obj cf_CHelp_GameOver_typestr, global
 	.asciz "cf::CHelp_GameOver"
 	.balign 4
 	.4byte 0
+.endobj cf_CHelp_GameOver_typestr
 
-.global cf_CHelp_ItemCole_typestr
-cf_CHelp_ItemCole_typestr:
+.obj cf_CHelp_ItemCole_typestr, global
 	.asciz "cf::CHelp_ItemCole"
 	.balign 4
 	.4byte 0
+.endobj cf_CHelp_ItemCole_typestr
 
-.global cf_CHelp_LandMark_typestr
-cf_CHelp_LandMark_typestr:
+.obj cf_CHelp_LandMark_typestr, global
 	.asciz "cf::CHelp_LandMark"
 	.balign 4
 	.4byte 0
+.endobj cf_CHelp_LandMark_typestr
 
-.global cf_CHelp_LearnArts_typestr
-cf_CHelp_LearnArts_typestr:
+.obj cf_CHelp_LearnArts_typestr, global
 	.asciz "cf::CHelp_LearnArts"
+.endobj cf_CHelp_LearnArts_typestr
 
-.global lbl_8050CCD4
-lbl_8050CCD4:
+.obj lbl_8050CCD4, global
 	.asciz "wpn_type"
 	.balign 4
+.endobj lbl_8050CCD4
 
-.global cf_CHelp_ClosePartyMenu_typestr
-cf_CHelp_ClosePartyMenu_typestr:
+.obj cf_CHelp_ClosePartyMenu_typestr, global
 	.asciz "cf::CHelp_ClosePartyMenu"
 	.balign 4
 	.4byte 0
+.endobj cf_CHelp_ClosePartyMenu_typestr
 
-.global cf_CHelp_OpenPartyMenu_typestr
-cf_CHelp_OpenPartyMenu_typestr:
+.obj cf_CHelp_OpenPartyMenu_typestr, global
 	.asciz "cf::CHelp_OpenPartyMenu"
+.endobj cf_CHelp_OpenPartyMenu_typestr
 
-.global cf_CHelp_Pg_typestr
-cf_CHelp_Pg_typestr:
+.obj cf_CHelp_Pg_typestr, global
 	.asciz "cf::CHelp_Pg"
 	.balign 4
+.endobj cf_CHelp_Pg_typestr
 
-.global cf_CHelp_CloseQuestMenu_typestr
-cf_CHelp_CloseQuestMenu_typestr:
+.obj cf_CHelp_CloseQuestMenu_typestr, global
 	.asciz "cf::CHelp_CloseQuestMenu"
 	.balign 4
 	.4byte 0
+.endobj cf_CHelp_CloseQuestMenu_typestr
 
-.global cf_CHelp_ShopSel_typestr
-cf_CHelp_ShopSel_typestr:
+.obj cf_CHelp_ShopSel_typestr, global
 	.asciz "cf::CHelp_ShopSel"
 	.balign 4
+.endobj cf_CHelp_ShopSel_typestr
 
-.global cf_CHelp_ShopBuy_typestr
-cf_CHelp_ShopBuy_typestr:
+.obj cf_CHelp_ShopBuy_typestr, global
 	.asciz "cf::CHelp_ShopBuy"
 	.balign 4
+.endobj cf_CHelp_ShopBuy_typestr
 
-.global cf_CHelp_Sp_typestr
-cf_CHelp_Sp_typestr:
+.obj cf_CHelp_Sp_typestr, global
 	.asciz "cf::CHelp_Sp"
 	.balign 4
+.endobj cf_CHelp_Sp_typestr
 
-.global cf_CHelp_Target_typestr
-cf_CHelp_Target_typestr:
+.obj cf_CHelp_Target_typestr, global
 	.asciz "cf::CHelp_Target"
 	.balign 4
 	.4byte 0
+.endobj cf_CHelp_Target_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CHelp_ToAttack
-__vt__cf_CHelp_ToAttack:
+.obj __vt__cf_CHelp_ToAttack, global
 	.4byte __RTTI__cf_CHelp_ToAttack
 	.4byte 0
 	.4byte func_80296898
@@ -233,16 +232,16 @@ __vt__cf_CHelp_ToAttack:
 	.4byte func_802B7A90
 	.4byte func_80295D90
 	.4byte func_80295D80
+.endobj __vt__cf_CHelp_ToAttack
 
-.global cf_CHelp_ToAttack_hierarchy
-cf_CHelp_ToAttack_hierarchy:
+.obj cf_CHelp_ToAttack_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelp_ToAttack_hierarchy
 
 
-.global __vt__cf_CHelp
-__vt__cf_CHelp:
+.obj __vt__cf_CHelp, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte func_80295D88
@@ -251,9 +250,9 @@ __vt__cf_CHelp:
 	.4byte func_80295D90
 	.4byte func_80295D80
 	.4byte 0
+.endobj __vt__cf_CHelp
 
-.global __vt__cf_CHelp_ArtsAttack
-__vt__cf_CHelp_ArtsAttack:
+.obj __vt__cf_CHelp_ArtsAttack, global
 	.4byte __RTTI__cf_CHelp_ArtsAttack
 	.4byte 0
 	.4byte func_802B7CB0
@@ -263,18 +262,18 @@ __vt__cf_CHelp_ArtsAttack:
 	.4byte func_80295D80
 	.4byte func_802B7CBC
 	.4byte func_802B7CE4
+.endobj __vt__cf_CHelp_ArtsAttack
 
-.global cf_CHelp_ArtsAttack_hierarchy
-cf_CHelp_ArtsAttack_hierarchy:
+.obj cf_CHelp_ArtsAttack_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte __RTTI__cf_CHelpSwitch
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelp_ArtsAttack_hierarchy
 
 
-.global __vt__cf_CHelp_ArtsSet
-__vt__cf_CHelp_ArtsSet:
+.obj __vt__cf_CHelp_ArtsSet, global
 	.4byte __RTTI__cf_CHelp_ArtsSet
 	.4byte 0
 	.4byte func_80295D88
@@ -282,16 +281,16 @@ __vt__cf_CHelp_ArtsSet:
 	.4byte func_802B7D9C
 	.4byte func_80295D90
 	.4byte func_80295D80
+.endobj __vt__cf_CHelp_ArtsSet
 
-.global cf_CHelp_ArtsSet_hierarchy
-cf_CHelp_ArtsSet_hierarchy:
+.obj cf_CHelp_ArtsSet_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelp_ArtsSet_hierarchy
 
 
-.global __vt__cf_CHelp_CkKizuna
-__vt__cf_CHelp_CkKizuna:
+.obj __vt__cf_CHelp_CkKizuna, global
 	.4byte __RTTI__cf_CHelp_CkKizuna
 	.4byte 0
 	.4byte func_802B7CB0
@@ -301,18 +300,18 @@ __vt__cf_CHelp_CkKizuna:
 	.4byte func_80295D80
 	.4byte func_802B7CBC
 	.4byte func_802B7CE4
+.endobj __vt__cf_CHelp_CkKizuna
 
-.global cf_CHelp_CkKizuna_hierarchy
-cf_CHelp_CkKizuna_hierarchy:
+.obj cf_CHelp_CkKizuna_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte __RTTI__cf_CHelpSwitch
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelp_CkKizuna_hierarchy
 
 
-.global __vt__cf_CHelp_CloseItemMenu
-__vt__cf_CHelp_CloseItemMenu:
+.obj __vt__cf_CHelp_CloseItemMenu, global
 	.4byte __RTTI__cf_CHelp_CloseItemMenu
 	.4byte 0
 	.4byte func_802B7CB0
@@ -322,18 +321,18 @@ __vt__cf_CHelp_CloseItemMenu:
 	.4byte func_80295D80
 	.4byte func_802B7CBC
 	.4byte func_802B7CE4
+.endobj __vt__cf_CHelp_CloseItemMenu
 
-.global cf_CHelp_CloseItemMenu_hierarchy
-cf_CHelp_CloseItemMenu_hierarchy:
+.obj cf_CHelp_CloseItemMenu_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte __RTTI__cf_CHelpSwitch
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelp_CloseItemMenu_hierarchy
 
 
-.global __vt__cf_CHelp_CloseSysMenu
-__vt__cf_CHelp_CloseSysMenu:
+.obj __vt__cf_CHelp_CloseSysMenu, global
 	.4byte __RTTI__cf_CHelp_CloseSysMenu
 	.4byte 0
 	.4byte func_802B7CB0
@@ -343,18 +342,18 @@ __vt__cf_CHelp_CloseSysMenu:
 	.4byte func_80295D80
 	.4byte func_802B7CBC
 	.4byte func_802B7CE4
+.endobj __vt__cf_CHelp_CloseSysMenu
 
-.global cf_CHelp_CloseSysMenu_hierarchy
-cf_CHelp_CloseSysMenu_hierarchy:
+.obj cf_CHelp_CloseSysMenu_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte __RTTI__cf_CHelpSwitch
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelp_CloseSysMenu_hierarchy
 
 
-.global __vt__cf_CHelp_EndEvent
-__vt__cf_CHelp_EndEvent:
+.obj __vt__cf_CHelp_EndEvent, global
 	.4byte __RTTI__cf_CHelp_EndEvent
 	.4byte 0
 	.4byte func_802B7CB0
@@ -365,10 +364,10 @@ __vt__cf_CHelp_EndEvent:
 	.4byte func_802B7CBC
 	.4byte func_802B7CE4
 	.4byte 0
+.endobj __vt__cf_CHelp_EndEvent
 
 
-.global __vt__cf_CHelp_EnemyCount
-__vt__cf_CHelp_EnemyCount:
+.obj __vt__cf_CHelp_EnemyCount, global
 	.4byte __RTTI__cf_CHelp_EnemyCount
 	.4byte 0
 	.4byte func_802B7F54
@@ -376,16 +375,16 @@ __vt__cf_CHelp_EnemyCount:
 	.4byte func_802B7F60
 	.4byte func_80295D90
 	.4byte func_80295D80
+.endobj __vt__cf_CHelp_EnemyCount
 
-.global cf_CHelp_EnemyCount_hierarchy
-cf_CHelp_EnemyCount_hierarchy:
+.obj cf_CHelp_EnemyCount_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelp_EnemyCount_hierarchy
 
 
-.global __vt__cf_CHelp_EnemyEnable
-__vt__cf_CHelp_EnemyEnable:
+.obj __vt__cf_CHelp_EnemyEnable, global
 	.4byte __RTTI__cf_CHelp_EnemyEnable
 	.4byte 0
 	.4byte func_80295D88
@@ -393,16 +392,16 @@ __vt__cf_CHelp_EnemyEnable:
 	.4byte func_802B8028
 	.4byte func_80295D90
 	.4byte func_80295D80
+.endobj __vt__cf_CHelp_EnemyEnable
 
-.global cf_CHelp_EnemyEnable_hierarchy
-cf_CHelp_EnemyEnable_hierarchy:
+.obj cf_CHelp_EnemyEnable_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelp_EnemyEnable_hierarchy
 
 
-.global __vt__cf_CHelp_EtherMake
-__vt__cf_CHelp_EtherMake:
+.obj __vt__cf_CHelp_EtherMake, global
 	.4byte __RTTI__cf_CHelp_EtherMake
 	.4byte 0
 	.4byte func_80295D88
@@ -411,10 +410,10 @@ __vt__cf_CHelp_EtherMake:
 	.4byte func_802B80EC
 	.4byte func_80295D80
 	.4byte 0
+.endobj __vt__cf_CHelp_EtherMake
 
 
-.global __vt__cf_CHelp_Exchange
-__vt__cf_CHelp_Exchange:
+.obj __vt__cf_CHelp_Exchange, global
 	.4byte __RTTI__cf_CHelp_Exchange
 	.4byte 0
 	.4byte func_80295D88
@@ -422,16 +421,16 @@ __vt__cf_CHelp_Exchange:
 	.4byte func_802B80F0
 	.4byte func_80295D90
 	.4byte func_80295D80
+.endobj __vt__cf_CHelp_Exchange
 
-.global cf_CHelp_Exchange_hierarchy
-cf_CHelp_Exchange_hierarchy:
+.obj cf_CHelp_Exchange_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelp_Exchange_hierarchy
 
 
-.global __vt__cf_CHelp_GameOver
-__vt__cf_CHelp_GameOver:
+.obj __vt__cf_CHelp_GameOver, global
 	.4byte __RTTI__cf_CHelp_GameOver
 	.4byte 0
 	.4byte func_80295D88
@@ -439,16 +438,16 @@ __vt__cf_CHelp_GameOver:
 	.4byte func_802B80F4
 	.4byte func_80295D90
 	.4byte func_80295D80
+.endobj __vt__cf_CHelp_GameOver
 
-.global cf_CHelp_GameOver_hierarchy
-cf_CHelp_GameOver_hierarchy:
+.obj cf_CHelp_GameOver_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelp_GameOver_hierarchy
 
 
-.global __vt__cf_CHelp_ItemCole
-__vt__cf_CHelp_ItemCole:
+.obj __vt__cf_CHelp_ItemCole, global
 	.4byte __RTTI__cf_CHelp_ItemCole
 	.4byte 0
 	.4byte func_80295D88
@@ -456,16 +455,16 @@ __vt__cf_CHelp_ItemCole:
 	.4byte func_802B8180
 	.4byte func_80295D90
 	.4byte func_80295D80
+.endobj __vt__cf_CHelp_ItemCole
 
-.global cf_CHelp_ItemCole_hierarchy
-cf_CHelp_ItemCole_hierarchy:
+.obj cf_CHelp_ItemCole_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelp_ItemCole_hierarchy
 
 
-.global __vt__cf_CHelp_Kizuna
-__vt__cf_CHelp_Kizuna:
+.obj __vt__cf_CHelp_Kizuna, global
 	.4byte __RTTI__cf_CHelp_Kizuna
 	.4byte 0
 	.4byte func_80295D88
@@ -474,10 +473,10 @@ __vt__cf_CHelp_Kizuna:
 	.4byte func_80295D90
 	.4byte func_80295D80
 	.4byte 0
+.endobj __vt__cf_CHelp_Kizuna
 
 
-.global __vt__cf_CHelp_LandMark
-__vt__cf_CHelp_LandMark:
+.obj __vt__cf_CHelp_LandMark, global
 	.4byte __RTTI__cf_CHelp_LandMark
 	.4byte 0
 	.4byte func_802B8280
@@ -491,16 +490,16 @@ __vt__cf_CHelp_LandMark:
 	.4byte func_802B8388
 	.4byte __dt__802B8208
 	.4byte func_802B8290
+.endobj __vt__cf_CHelp_LandMark
 
-.global cf_CHelp_LandMark_hierarchy
-cf_CHelp_LandMark_hierarchy:
+.obj cf_CHelp_LandMark_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelp_LandMark_hierarchy
 
 
-.global __vt__cf_CHelp_LearnArts
-__vt__cf_CHelp_LearnArts:
+.obj __vt__cf_CHelp_LearnArts, global
 	.4byte __RTTI__cf_CHelp_LearnArts
 	.4byte 0
 	.4byte func_802B84E0
@@ -508,16 +507,16 @@ __vt__cf_CHelp_LearnArts:
 	.4byte func_802B8398
 	.4byte func_80295D90
 	.4byte func_80295D80
+.endobj __vt__cf_CHelp_LearnArts
 
-.global cf_CHelp_LearnArts_hierarchy
-cf_CHelp_LearnArts_hierarchy:
+.obj cf_CHelp_LearnArts_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelp_LearnArts_hierarchy
 
 
-.global __vt__cf_CHelp_ClosePartyMenu
-__vt__cf_CHelp_ClosePartyMenu:
+.obj __vt__cf_CHelp_ClosePartyMenu, global
 	.4byte __RTTI__cf_CHelp_ClosePartyMenu
 	.4byte 0
 	.4byte func_802B7CB0
@@ -527,18 +526,18 @@ __vt__cf_CHelp_ClosePartyMenu:
 	.4byte func_80295D80
 	.4byte func_802B7CBC
 	.4byte func_802B7CE4
+.endobj __vt__cf_CHelp_ClosePartyMenu
 
-.global cf_CHelp_ClosePartyMenu_hierarchy
-cf_CHelp_ClosePartyMenu_hierarchy:
+.obj cf_CHelp_ClosePartyMenu_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte __RTTI__cf_CHelpSwitch
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelp_ClosePartyMenu_hierarchy
 
 
-.global __vt__cf_CHelp_OpenPartyMenu
-__vt__cf_CHelp_OpenPartyMenu:
+.obj __vt__cf_CHelp_OpenPartyMenu, global
 	.4byte __RTTI__cf_CHelp_OpenPartyMenu
 	.4byte 0
 	.4byte func_80295D88
@@ -546,16 +545,16 @@ __vt__cf_CHelp_OpenPartyMenu:
 	.4byte func_802B84EC
 	.4byte func_80295D90
 	.4byte func_802B859C
+.endobj __vt__cf_CHelp_OpenPartyMenu
 
-.global cf_CHelp_OpenPartyMenu_hierarchy
-cf_CHelp_OpenPartyMenu_hierarchy:
+.obj cf_CHelp_OpenPartyMenu_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelp_OpenPartyMenu_hierarchy
 
 
-.global __vt__cf_CHelp_Pg
-__vt__cf_CHelp_Pg:
+.obj __vt__cf_CHelp_Pg, global
 	.4byte __RTTI__cf_CHelp_Pg
 	.4byte 0
 	.4byte func_80295D88
@@ -563,16 +562,16 @@ __vt__cf_CHelp_Pg:
 	.4byte func_802B85A4
 	.4byte func_80295D90
 	.4byte func_80295D80
+.endobj __vt__cf_CHelp_Pg
 
-.global cf_CHelp_Pg_hierarchy
-cf_CHelp_Pg_hierarchy:
+.obj cf_CHelp_Pg_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelp_Pg_hierarchy
 
 
-.global __vt__cf_CHelp_CloseQuestMenu
-__vt__cf_CHelp_CloseQuestMenu:
+.obj __vt__cf_CHelp_CloseQuestMenu, global
 	.4byte __RTTI__cf_CHelp_CloseQuestMenu
 	.4byte 0
 	.4byte func_802B7CB0
@@ -582,18 +581,18 @@ __vt__cf_CHelp_CloseQuestMenu:
 	.4byte func_80295D80
 	.4byte func_802B7CBC
 	.4byte func_802B7CE4
+.endobj __vt__cf_CHelp_CloseQuestMenu
 
-.global cf_CHelp_CloseQuestMenu_hierarchy
-cf_CHelp_CloseQuestMenu_hierarchy:
+.obj cf_CHelp_CloseQuestMenu_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte __RTTI__cf_CHelpSwitch
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelp_CloseQuestMenu_hierarchy
 
 
-.global __vt__cf_CHelp_ShopSel
-__vt__cf_CHelp_ShopSel:
+.obj __vt__cf_CHelp_ShopSel, global
 	.4byte __RTTI__cf_CHelp_ShopSel
 	.4byte 0
 	.4byte func_80295D88
@@ -601,16 +600,16 @@ __vt__cf_CHelp_ShopSel:
 	.4byte func_802B8650
 	.4byte func_80295D90
 	.4byte func_80295D80
+.endobj __vt__cf_CHelp_ShopSel
 
-.global cf_CHelp_ShopSel_hierarchy
-cf_CHelp_ShopSel_hierarchy:
+.obj cf_CHelp_ShopSel_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelp_ShopSel_hierarchy
 
 
-.global __vt__cf_CHelp_ShopBuy
-__vt__cf_CHelp_ShopBuy:
+.obj __vt__cf_CHelp_ShopBuy, global
 	.4byte __RTTI__cf_CHelp_ShopBuy
 	.4byte 0
 	.4byte func_80295D88
@@ -618,16 +617,16 @@ __vt__cf_CHelp_ShopBuy:
 	.4byte func_802B864C
 	.4byte func_80295D90
 	.4byte func_80295D80
+.endobj __vt__cf_CHelp_ShopBuy
 
-.global cf_CHelp_ShopBuy_hierarchy
-cf_CHelp_ShopBuy_hierarchy:
+.obj cf_CHelp_ShopBuy_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelp_ShopBuy_hierarchy
 
 
-.global __vt__cf_CHelp_Sp
-__vt__cf_CHelp_Sp:
+.obj __vt__cf_CHelp_Sp, global
 	.4byte __RTTI__cf_CHelp_Sp
 	.4byte 0
 	.4byte func_80295D88
@@ -635,16 +634,16 @@ __vt__cf_CHelp_Sp:
 	.4byte func_802B8654
 	.4byte func_80295D90
 	.4byte func_80295D80
+.endobj __vt__cf_CHelp_Sp
 
-.global cf_CHelp_Sp_hierarchy
-cf_CHelp_Sp_hierarchy:
+.obj cf_CHelp_Sp_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelp_Sp_hierarchy
 
 
-.global __vt__cf_CHelp_Talk
-__vt__cf_CHelp_Talk:
+.obj __vt__cf_CHelp_Talk, global
 	.4byte __RTTI__cf_CHelp_Talk
 	.4byte 0
 	.4byte func_802B86BC
@@ -655,10 +654,10 @@ __vt__cf_CHelp_Talk:
 	.4byte func_802B7CBC
 	.4byte func_802B7CE4
 	.4byte 0
+.endobj __vt__cf_CHelp_Talk
 
 
-.global __vt__cf_CHelp_Target
-__vt__cf_CHelp_Target:
+.obj __vt__cf_CHelp_Target, global
 	.4byte __RTTI__cf_CHelp_Target
 	.4byte 0
 	.4byte func_80295D88
@@ -666,122 +665,122 @@ __vt__cf_CHelp_Target:
 	.4byte func_802B88C8
 	.4byte func_80295D90
 	.4byte func_80295D80
+.endobj __vt__cf_CHelp_Target
 
-.global cf_CHelp_Target_hierarchy
-cf_CHelp_Target_hierarchy:
+.obj cf_CHelp_Target_hierarchy, global
 	.4byte __RTTI__cf_CHelp
 	.4byte 0
 	.4byte 0
+.endobj cf_CHelp_Target_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-
-.global __RTTI__cf_CHelp_ToAttack
-__RTTI__cf_CHelp_ToAttack:
+.obj __RTTI__cf_CHelp_ToAttack, global
 	.4byte cf_CHelp_ToAttack_typestr
 	.4byte cf_CHelp_ToAttack_hierarchy
+.endobj __RTTI__cf_CHelp_ToAttack
 
-.global __RTTI__cf_CHelp_ArtsAttack
-__RTTI__cf_CHelp_ArtsAttack:
+.obj __RTTI__cf_CHelp_ArtsAttack, global
 	.4byte cf_CHelp_ArtsAttack_typestr
 	.4byte cf_CHelp_ArtsAttack_hierarchy
+.endobj __RTTI__cf_CHelp_ArtsAttack
 
-.global __RTTI__cf_CHelp_ArtsSet
-__RTTI__cf_CHelp_ArtsSet:
+.obj __RTTI__cf_CHelp_ArtsSet, global
 	.4byte cf_CHelp_ArtsSet_typestr
 	.4byte cf_CHelp_ArtsSet_hierarchy
+.endobj __RTTI__cf_CHelp_ArtsSet
 
-.global __RTTI__cf_CHelp_CkKizuna
-__RTTI__cf_CHelp_CkKizuna:
+.obj __RTTI__cf_CHelp_CkKizuna, global
 	.4byte cf_CHelp_CkKizuna_typestr
 	.4byte cf_CHelp_CkKizuna_hierarchy
+.endobj __RTTI__cf_CHelp_CkKizuna
 
-.global __RTTI__cf_CHelp_CloseItemMenu
-__RTTI__cf_CHelp_CloseItemMenu:
+.obj __RTTI__cf_CHelp_CloseItemMenu, global
 	.4byte cf_CHelp_CloseItemMenu_typestr
 	.4byte cf_CHelp_CloseItemMenu_hierarchy
+.endobj __RTTI__cf_CHelp_CloseItemMenu
 
-.global __RTTI__cf_CHelp_CloseSysMenu
-__RTTI__cf_CHelp_CloseSysMenu:
+.obj __RTTI__cf_CHelp_CloseSysMenu, global
 	.4byte cf_CHelp_CloseSysMenu_typestr
 	.4byte cf_CHelp_CloseSysMenu_hierarchy
+.endobj __RTTI__cf_CHelp_CloseSysMenu
 
-.global __RTTI__cf_CHelp_EnemyCount
-__RTTI__cf_CHelp_EnemyCount:
+.obj __RTTI__cf_CHelp_EnemyCount, global
 	.4byte cf_CHelp_EnemyCount_typestr
 	.4byte cf_CHelp_EnemyCount_hierarchy
+.endobj __RTTI__cf_CHelp_EnemyCount
 
-.global __RTTI__cf_CHelp_EnemyEnable
-__RTTI__cf_CHelp_EnemyEnable:
+.obj __RTTI__cf_CHelp_EnemyEnable, global
 	.4byte cf_CHelp_EnemyEnable_typestr
 	.4byte cf_CHelp_EnemyEnable_hierarchy
+.endobj __RTTI__cf_CHelp_EnemyEnable
 
-.global __RTTI__cf_CHelp_Exchange
-__RTTI__cf_CHelp_Exchange:
+.obj __RTTI__cf_CHelp_Exchange, global
 	.4byte cf_CHelp_Exchange_typestr
 	.4byte cf_CHelp_Exchange_hierarchy
+.endobj __RTTI__cf_CHelp_Exchange
 
-.global __RTTI__cf_CHelp_GameOver
-__RTTI__cf_CHelp_GameOver:
+.obj __RTTI__cf_CHelp_GameOver, global
 	.4byte cf_CHelp_GameOver_typestr
 	.4byte cf_CHelp_GameOver_hierarchy
+.endobj __RTTI__cf_CHelp_GameOver
 
-.global __RTTI__cf_CHelp_ItemCole
-__RTTI__cf_CHelp_ItemCole:
+.obj __RTTI__cf_CHelp_ItemCole, global
 	.4byte cf_CHelp_ItemCole_typestr
 	.4byte cf_CHelp_ItemCole_hierarchy
+.endobj __RTTI__cf_CHelp_ItemCole
 
-.global __RTTI__cf_CHelp_LandMark
-__RTTI__cf_CHelp_LandMark:
+.obj __RTTI__cf_CHelp_LandMark, global
 	.4byte cf_CHelp_LandMark_typestr
 	.4byte cf_CHelp_LandMark_hierarchy
+.endobj __RTTI__cf_CHelp_LandMark
 
-.global __RTTI__cf_CHelp_LearnArts
-__RTTI__cf_CHelp_LearnArts:
+.obj __RTTI__cf_CHelp_LearnArts, global
 	.4byte cf_CHelp_LearnArts_typestr
 	.4byte cf_CHelp_LearnArts_hierarchy
+.endobj __RTTI__cf_CHelp_LearnArts
 
-.global __RTTI__cf_CHelp_ClosePartyMenu
-__RTTI__cf_CHelp_ClosePartyMenu:
+.obj __RTTI__cf_CHelp_ClosePartyMenu, global
 	.4byte cf_CHelp_ClosePartyMenu_typestr
 	.4byte cf_CHelp_ClosePartyMenu_hierarchy
+.endobj __RTTI__cf_CHelp_ClosePartyMenu
 
-.global __RTTI__cf_CHelp_OpenPartyMenu
-__RTTI__cf_CHelp_OpenPartyMenu:
+.obj __RTTI__cf_CHelp_OpenPartyMenu, global
 	.4byte cf_CHelp_OpenPartyMenu_typestr
 	.4byte cf_CHelp_OpenPartyMenu_hierarchy
+.endobj __RTTI__cf_CHelp_OpenPartyMenu
 
-.global __RTTI__cf_CHelp_Pg
-__RTTI__cf_CHelp_Pg:
+.obj __RTTI__cf_CHelp_Pg, global
 	.4byte cf_CHelp_Pg_typestr
 	.4byte cf_CHelp_Pg_hierarchy
+.endobj __RTTI__cf_CHelp_Pg
 
-.global __RTTI__cf_CHelp_CloseQuestMenu
-__RTTI__cf_CHelp_CloseQuestMenu:
+.obj __RTTI__cf_CHelp_CloseQuestMenu, global
 	.4byte cf_CHelp_CloseQuestMenu_typestr
 	.4byte cf_CHelp_CloseQuestMenu_hierarchy
+.endobj __RTTI__cf_CHelp_CloseQuestMenu
 
-.global __RTTI__cf_CHelp_ShopSel
-__RTTI__cf_CHelp_ShopSel:
+.obj __RTTI__cf_CHelp_ShopSel, global
 	.4byte cf_CHelp_ShopSel_typestr
 	.4byte cf_CHelp_ShopSel_hierarchy
+.endobj __RTTI__cf_CHelp_ShopSel
 
-.global __RTTI__cf_CHelp_ShopBuy
-__RTTI__cf_CHelp_ShopBuy:
+.obj __RTTI__cf_CHelp_ShopBuy, global
 	.4byte cf_CHelp_ShopBuy_typestr
 	.4byte cf_CHelp_ShopBuy_hierarchy
+.endobj __RTTI__cf_CHelp_ShopBuy
 
-.global __RTTI__cf_CHelp_Sp
-__RTTI__cf_CHelp_Sp:
+.obj __RTTI__cf_CHelp_Sp, global
 	.4byte cf_CHelp_Sp_typestr
 	.4byte cf_CHelp_Sp_hierarchy
+.endobj __RTTI__cf_CHelp_Sp
 
-.global __RTTI__cf_CHelp_Target
-__RTTI__cf_CHelp_Target:
+.obj __RTTI__cf_CHelp_Target, global
 	.4byte cf_CHelp_Target_typestr
 	.4byte cf_CHelp_Target_hierarchy
+.endobj __RTTI__cf_CHelp_Target
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -826,24 +826,23 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CScnEffectActNw4r_typestr
-CScnEffectActNw4r_typestr:
+.obj CScnEffectActNw4r_typestr, global
 	.asciz "CScnEffectActNw4r"
 	.balign 4
+.endobj CScnEffectActNw4r_typestr
 
-.global IEffectAct_typestr
-IEffectAct_typestr:
+.obj IEffectAct_typestr, global
 	.asciz "IEffectAct"
 	.balign 4
+.endobj IEffectAct_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CScnEffectActNw4r
-__vt__CScnEffectActNw4r:
+.obj __vt__CScnEffectActNw4r, global
 	.4byte __RTTI__CScnEffectActNw4r
 	.4byte 0
 	.4byte __dt__CScnEffectActNw4r
@@ -870,55 +869,56 @@ __vt__CScnEffectActNw4r:
 	.4byte func_8049C3A4
 	.4byte func_8049C3AC
 	.4byte func_8049C420
+.endobj __vt__CScnEffectActNw4r
 
-.global CScnEffectActNw4r_hierarchy
-CScnEffectActNw4r_hierarchy:
+.obj CScnEffectActNw4r_hierarchy, global
 	.4byte __RTTI__IEffectAct
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CScnEffectActNw4r_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80666338
-lbl_80666338:
+.obj lbl_80666338, global
 	.4byte lbl_8066D330
 	.4byte 0
+.endobj lbl_80666338
 
-.global __RTTI__CScnEffectActNw4r
-__RTTI__CScnEffectActNw4r:
+.obj __RTTI__CScnEffectActNw4r, global
 	.4byte CScnEffectActNw4r_typestr
 	.4byte CScnEffectActNw4r_hierarchy
+.endobj __RTTI__CScnEffectActNw4r
 
-.global __RTTI__IEffectAct
-__RTTI__IEffectAct:
+.obj __RTTI__IEffectAct, global
 	.4byte IEffectAct_typestr
 	.4byte 0
+.endobj __RTTI__IEffectAct
 
 
-.global lbl_80666350
-lbl_80666350:
+.obj lbl_80666350, global
 	.4byte 0x72656600
+.endobj lbl_80666350
 
 
-.global lbl_80666354
-lbl_80666354:
+.obj lbl_80666354, global
 	.4byte 0x72656600
+.endobj lbl_80666354
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_8066D330
-lbl_8066D330:
+.obj lbl_8066D330, global
 	.4byte 0x65700000
+.endobj lbl_8066D330
 
 
-.global float_8066D334
-float_8066D334:
+.obj float_8066D334, global
 	.float 1.0
+.endobj float_8066D334
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -1489,14 +1489,15 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80543E18
-lbl_80543E18:
+.balign 8
+
+.obj lbl_80543E18, global
 	.asciz "getbuf: Size is zero"
 	.balign 4
+.endobj lbl_80543E18
 
 
-.global lbl_80543E30
-lbl_80543E30:
+.obj lbl_80543E30, global
 	.asciz "getbuf: Size is too big"
 	.asciz "Free - Buf Corrupted"
 	.balign 4
@@ -1507,30 +1508,31 @@ lbl_80543E30:
 	.asciz "Send - Buffer corrupted"
 	.asciz "Send - buffer linked"
 	.balign 4
+.endobj lbl_80543E30
 
 
-.global lbl_80543EC8
-lbl_80543EC8:
+.obj lbl_80543EC8, global
 	.asciz "Enqueue - Buffer corrupted"
 	.balign 4
+.endobj lbl_80543EC8
 
 
-.global lbl_80543EE4
-lbl_80543EE4:
+.obj lbl_80543EE4, global
 	.asciz "Eneueue - buf already linked"
 	.balign 4
+.endobj lbl_80543EE4
 
 
-.global lbl_80543F04
-lbl_80543F04:
+.obj lbl_80543F04, global
 	.asciz "Eneueue head - buf already linked"
 	.balign 4
 	.asciz "GKI_get_buf_start:: bad addr"
 	.balign 4
+.endobj lbl_80543F04
 
 
-.global lbl_80543F48
-lbl_80543F48:
+.obj lbl_80543F48, global
 	.asciz "Deleting bad pool"
 	.balign 4
 	.4byte 0
+.endobj lbl_80543F48

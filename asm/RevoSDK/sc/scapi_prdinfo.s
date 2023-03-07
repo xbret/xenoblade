@@ -196,7 +196,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-ProductAreaAndStringTbl:
+.balign 8
+
+.obj ProductAreaAndStringTbl, local
 	.byte 0x00
 	.asciz "JPN"
 	.byte 0x01
@@ -226,8 +228,9 @@ ProductAreaAndStringTbl:
 	.byte 0xFF
 	.2byte 0
 	.4byte 0
+.endobj ProductAreaAndStringTbl
 
-ProductGameRegionAndStringTbl:
+.obj ProductGameRegionAndStringTbl, local
 	.byte 0x00
 	.asciz "JP"
 	.byte 0x01
@@ -241,16 +244,19 @@ ProductGameRegionAndStringTbl:
 	.byte 0xFF
 	.2byte 0
 	.byte 0
+.endobj ProductGameRegionAndStringTbl
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665CD0
-lbl_80665CD0:
+.balign 8
+
+.obj lbl_80665CD0, global
 	.asciz "AREA"
 	.balign 4
+.endobj lbl_80665CD0
 
 
-.global lbl_80665CD8
-lbl_80665CD8:
+.obj lbl_80665CD8, global
 	.asciz "GAME"
 	.balign 4
+.endobj lbl_80665CD8

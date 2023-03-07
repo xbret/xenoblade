@@ -5409,171 +5409,170 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_804F9D68
-lbl_804F9D68:
+.obj lbl_804F9D68, global
 	.asciz "markerlist0000"
 	.balign 4
+.endobj lbl_804F9D68
 
-.global lbl_804F9D78
-lbl_804F9D78:
+.obj lbl_804F9D78, global
 	.asciz "markerlist0101"
 	.balign 4
+.endobj lbl_804F9D78
 
-.global lbl_804F9D88
-lbl_804F9D88:
+.obj lbl_804F9D88, global
 	.asciz "markerlist0201"
 	.balign 4
+.endobj lbl_804F9D88
 
-.global lbl_804F9D98
-lbl_804F9D98:
+.obj lbl_804F9D98, global
 	.asciz "markerlist0301"
 	.balign 4
+.endobj lbl_804F9D98
 
-.global lbl_804F9DA8
-lbl_804F9DA8:
+.obj lbl_804F9DA8, global
 	.asciz "markerlist0401"
 	.balign 4
+.endobj lbl_804F9DA8
 
-.global lbl_804F9DB8
-lbl_804F9DB8:
+.obj lbl_804F9DB8, global
 	.asciz "markerlist0402"
 	.balign 4
+.endobj lbl_804F9DB8
 
-.global lbl_804F9DC8
-lbl_804F9DC8:
+.obj lbl_804F9DC8, global
 	.asciz "markerlist0501"
 	.balign 4
+.endobj lbl_804F9DC8
 
-.global lbl_804F9DD8
-lbl_804F9DD8:
+.obj lbl_804F9DD8, global
 	.asciz "markerlist0601"
 	.balign 4
+.endobj lbl_804F9DD8
 
-.global lbl_804F9DE8
-lbl_804F9DE8:
+.obj lbl_804F9DE8, global
 	.asciz "markerlist0701"
 	.balign 4
+.endobj lbl_804F9DE8
 
-.global lbl_804F9DF8
-lbl_804F9DF8:
+.obj lbl_804F9DF8, global
 	.asciz "markerlist0801"
 	.balign 4
+.endobj lbl_804F9DF8
 
-.global lbl_804F9E08
-lbl_804F9E08:
+.obj lbl_804F9E08, global
 	.asciz "markerlist0901"
 	.balign 4
+.endobj lbl_804F9E08
 
-.global lbl_804F9E18
-lbl_804F9E18:
+.obj lbl_804F9E18, global
 	.asciz "markerlist1001"
 	.balign 4
+.endobj lbl_804F9E18
 
-.global lbl_804F9E28
-lbl_804F9E28:
+.obj lbl_804F9E28, global
 	.asciz "markerlist1101"
 	.balign 4
+.endobj lbl_804F9E28
 
-.global lbl_804F9E38
-lbl_804F9E38:
+.obj lbl_804F9E38, global
 	.asciz "markerlist1201"
 	.balign 4
+.endobj lbl_804F9E38
 
-.global lbl_804F9E48
-lbl_804F9E48:
+.obj lbl_804F9E48, global
 	.asciz "markerlist1202"
 	.balign 4
+.endobj lbl_804F9E48
 
-.global lbl_804F9E58
-lbl_804F9E58:
+.obj lbl_804F9E58, global
 	.asciz "markerlist1301"
 	.balign 4
+.endobj lbl_804F9E58
 
-.global lbl_804F9E68
-lbl_804F9E68:
+.obj lbl_804F9E68, global
 	.asciz "markerlist1401"
 	.balign 4
+.endobj lbl_804F9E68
 
-.global lbl_804F9E78
-lbl_804F9E78:
+.obj lbl_804F9E78, global
 	.asciz "markerlist1501"
 	.balign 4
+.endobj lbl_804F9E78
 
-.global lbl_804F9E88
-lbl_804F9E88:
+.obj lbl_804F9E88, global
 	.asciz "markerlist1601"
 	.balign 4
+.endobj lbl_804F9E88
 
-.global lbl_804F9E98
-lbl_804F9E98:
+.obj lbl_804F9E98, global
 	.asciz "markerlist1701"
 	.balign 4
+.endobj lbl_804F9E98
 
-.global lbl_804F9EA8
-lbl_804F9EA8:
+.obj lbl_804F9EA8, global
 	.asciz "markerlist1801"
 	.balign 4
+.endobj lbl_804F9EA8
 
-.global lbl_804F9EB8
-lbl_804F9EB8:
+.obj lbl_804F9EB8, global
 	.asciz "markerlist1901"
 	.balign 4
+.endobj lbl_804F9EB8
 
-.global lbl_804F9EC8
-lbl_804F9EC8:
+.obj lbl_804F9EC8, global
 	.asciz "markerlist2001"
 	.balign 4
+.endobj lbl_804F9EC8
 
-.global lbl_804F9ED8
-lbl_804F9ED8:
+.obj lbl_804F9ED8, global
 	.asciz "markerlist2101"
 	.balign 4
+.endobj lbl_804F9ED8
 
-.global lbl_804F9EE8
-lbl_804F9EE8:
+.obj lbl_804F9EE8, global
 	.asciz "markerlist2201"
 	.balign 4
+.endobj lbl_804F9EE8
 
-.global lbl_804F9EF8
-lbl_804F9EF8:
+.obj lbl_804F9EF8, global
 	.asciz "markerlist2301"
 	.balign 4
+.endobj lbl_804F9EF8
 
-.global lbl_804F9F08
-lbl_804F9F08:
+.obj lbl_804F9F08, global
 	.asciz "markerlist2401"
 	.balign 4
+.endobj lbl_804F9F08
 
 
 
-.global lbl_804F9F18
-lbl_804F9F18:
+.obj lbl_804F9F18, global
 	.4byte 0xBE4CCCCD
 	.4byte 0x3FE7AE14
 	.4byte 0xC3822148
 	.4byte 0xBE3851EC
 	.4byte 0x3FE147AE
 	.4byte 0xC3A92666
+.endobj lbl_804F9F18
 
-.global CArrow3D_typestr
-CArrow3D_typestr:
+.obj CArrow3D_typestr, global
 	.asciz "CArrow3D"
 	.balign 4
+.endobj CArrow3D_typestr
 
-.global CTTask_CArrow3D_typestr
-CTTask_CArrow3D_typestr:
+.obj CTTask_CArrow3D_typestr, global
 	.asciz "CTTask<CArrow3D>"
 	.balign 4
+.endobj CTTask_CArrow3D_typestr
 
-.global CMenuSymbolMark_typestr
-CMenuSymbolMark_typestr:
+.obj CMenuSymbolMark_typestr, global
 	.asciz "CMenuSymbolMark"
+.endobj CMenuSymbolMark_typestr
 
 
-.global CMenuSymbolMark_strpool
-CMenuSymbolMark_strpool:
+.obj CMenuSymbolMark_strpool, global
 	.asciz "mf70_cf10_dst.brlyt"
 	.asciz "txt_km"
 	.balign 4
@@ -5599,13 +5598,13 @@ CMenuSymbolMark_strpool:
 	.asciz "posY"
 	.asciz "posZ"
 	.balign 4
+.endobj CMenuSymbolMark_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_80530478
-lbl_80530478:
+.obj lbl_80530478, global
 	.4byte lbl_804F9D68
 	.4byte lbl_804F9D78
 	.4byte lbl_804F9D88
@@ -5642,21 +5641,21 @@ lbl_80530478:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_80530478
 
 
 
-.global lbl_80530508
-lbl_80530508:
+.obj lbl_80530508, global
 	.float 1.0
 	.float 1.0
 	.float 1.0
 	.float 0.9 #0x3F666666
 	.float 0.7 #0x3F333333
 	.float 0.9 #0x3F666666
+.endobj lbl_80530508
 
 
-.global __vt__CArrow3D
-__vt__CArrow3D:
+.obj __vt__CArrow3D, global
 	.4byte __RTTI__CArrow3D
 	.4byte 0
 	.4byte __dt__CArrow3D
@@ -5671,9 +5670,9 @@ __vt__CArrow3D:
 	.4byte func_8012215C
 	.4byte func_80122154
 	.4byte func_80120F50
+.endobj __vt__CArrow3D
 
-.global CArrow3D_hierarchy
-CArrow3D_hierarchy:
+.obj CArrow3D_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000054
 	.4byte __RTTI__CDoubleListNode
@@ -5685,10 +5684,10 @@ CArrow3D_hierarchy:
 	.4byte __RTTI__CTTask_CArrow3D
 	.4byte 0
 	.4byte 0
+.endobj CArrow3D_hierarchy
 
 
-.global __vt__CTTask_CArrow3D
-__vt__CTTask_CArrow3D:
+.obj __vt__CTTask_CArrow3D, global
 	.4byte __RTTI__CTTask_CArrow3D
 	.4byte 0
 	.4byte __dt__CTTask_CArrow3D
@@ -5698,9 +5697,9 @@ __vt__CTTask_CArrow3D:
 	.4byte func_801220AC
 	.4byte func_801220F4
 	.4byte func_80043F20
+.endobj __vt__CTTask_CArrow3D
 
-.global CTTask_CArrow3D_hierarchy
-CTTask_CArrow3D_hierarchy:
+.obj CTTask_CArrow3D_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -5709,10 +5708,10 @@ CTTask_CArrow3D_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CTTask_CArrow3D_hierarchy
 
 
-.global __vt__CMenuSymbolMark
-__vt__CMenuSymbolMark:
+.obj __vt__CMenuSymbolMark, global
 	.4byte __RTTI__CMenuSymbolMark
 	.4byte 0
 	.4byte __dt__CMenuSymbolMark
@@ -5761,9 +5760,9 @@ __vt__CMenuSymbolMark:
 	.4byte func_8012214C
 	.4byte func_80122144
 	.4byte func_8011E3C0
+.endobj __vt__CMenuSymbolMark
 
-.global CMenuSymbolMark_hierarchy
-CMenuSymbolMark_hierarchy:
+.obj CMenuSymbolMark_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x0000005C
 	.4byte __RTTI__IWorkEvent
@@ -5779,223 +5778,226 @@ CMenuSymbolMark_hierarchy:
 	.4byte __RTTI__IUICf
 	.4byte 0
 	.4byte 0
+.endobj CMenuSymbolMark_hierarchy
 
 
-.global lbl_805306C4
-lbl_805306C4:
+.obj lbl_805306C4, global
 	.asciz "%s::%s: Object not valid."
 	.balign 4
+.endobj lbl_805306C4
 
 
-.global lbl_805306E0
-lbl_805306E0:
+.obj lbl_805306E0, global
 	.asciz "g3d_restex_ac.h"
+.endobj lbl_805306E0
 
 
-.global lbl_805306F0
-lbl_805306F0:
+.obj lbl_805306F0, global
 	.asciz "%s::%s: Object not valid."
 	.balign 4
+.endobj lbl_805306F0
 
 
-.global lbl_8053070C
-lbl_8053070C:
+.obj lbl_8053070C, global
 	.asciz "g3d_respltt_ac.h"
 	.balign 4
+.endobj lbl_8053070C
 
 
-.global lbl_80530720
-lbl_80530720:
+.obj lbl_80530720, global
 	.asciz "%s::%s: Object not valid."
 	.balign 4
+.endobj lbl_80530720
 
 
-.global lbl_8053073C
-lbl_8053073C:
+.obj lbl_8053073C, global
 	.asciz "g3d_respltt_ac.h"
 	.balign 4
+.endobj lbl_8053073C
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CArrow3D
-__RTTI__CArrow3D:
+.obj __RTTI__CArrow3D, global
 	.4byte CArrow3D_typestr
 	.4byte CArrow3D_hierarchy
+.endobj __RTTI__CArrow3D
 
-.global __RTTI__CTTask_CArrow3D
-__RTTI__CTTask_CArrow3D:
+.obj __RTTI__CTTask_CArrow3D, global
 	.4byte CTTask_CArrow3D_typestr
 	.4byte CTTask_CArrow3D_hierarchy
+.endobj __RTTI__CTTask_CArrow3D
 
-.global __RTTI__CMenuSymbolMark
-__RTTI__CMenuSymbolMark:
+.obj __RTTI__CMenuSymbolMark, global
 	.4byte CMenuSymbolMark_typestr
 	.4byte CMenuSymbolMark_hierarchy
+.endobj __RTTI__CMenuSymbolMark
 
 
-.global lbl_80664788
-lbl_80664788:
+.obj lbl_80664788, global
 	.asciz "ARROW"
 	.balign 4
+.endobj lbl_80664788
 
 
-.global lbl_80664790
-lbl_80664790:
+.obj lbl_80664790, global
 	.asciz "ResTex"
 	.balign 4
+.endobj lbl_80664790
 
 
-.global lbl_80664798
-lbl_80664798:
+.obj lbl_80664798, global
 	.4byte 0x72656600
 	.4byte 0
+.endobj lbl_80664798
 
 
-.global lbl_806647A0
-lbl_806647A0:
+.obj lbl_806647A0, global
 	.asciz "ResPltt"
+.endobj lbl_806647A0
 
 
-.global lbl_806647A8
-lbl_806647A8:
+.obj lbl_806647A8, global
 	.4byte 0x72656600
+.endobj lbl_806647A8
 
 
-.global lbl_806647AC
-lbl_806647AC:
+.obj lbl_806647AC, global
 	.4byte 0x72656600
+.endobj lbl_806647AC
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_80669998
-lbl_80669998:
+.obj lbl_80669998, global
 	.4byte 0x000000FF
+.endobj lbl_80669998
 
 
-.global float_8066999C
-float_8066999C:
+.obj float_8066999C, global
 	.float 0
+.endobj float_8066999C
 
 
-.global float_806699A0
-float_806699A0:
+.obj float_806699A0, global
 	.float 10.0
+.endobj float_806699A0
 
 
-.global float_806699A4
-float_806699A4:
+.obj float_806699A4, global
 	.float 20 #0x41A00000
+.endobj float_806699A4
 
 
-.global float_806699A8
-float_806699A8:
+.obj float_806699A8, global
 	.float 30 #0x41F00000
+.endobj float_806699A8
 
 
-.global float_806699AC
-float_806699AC:
+.obj float_806699AC, global
 	.float 60 #0x42700000
+.endobj float_806699AC
 
 
-.global float_806699B0
-float_806699B0:
+.obj float_806699B0, global
 	.float 1.0
+.endobj float_806699B0
 
 
-.global float_806699B4
-float_806699B4:
+.obj float_806699B4, global
 	.float 900 #0x44610000
+.endobj float_806699B4
 
 
-.global float_806699B8
-float_806699B8:
+.obj float_806699B8, global
 	.float 1.3 #0x3FA66666
+.endobj float_806699B8
 
 
-.global float_806699BC
-float_806699BC:
+.obj float_806699BC, global
 	.float 1.33333333 #0x3FAAAAAB
+.endobj float_806699BC
 
 
-.global float_806699C0
-float_806699C0:
+.obj float_806699C0, global
 	.float 180 #0x43340000
+.endobj float_806699C0
 
 
-.global float_806699C4
-float_806699C4:
+.obj float_806699C4, global
 	.float 320 #0x43A00000
+.endobj float_806699C4
 
 
-.global float_806699C8
-float_806699C8:
+.obj float_806699C8, global
 	.float 224 #0x43600000
+.endobj float_806699C8
 
 
-.global float_806699CC
-float_806699CC:
+.obj float_806699CC, global
 	.float -1.0
+.endobj float_806699CC
 
 
-.global float_806699D0
-float_806699D0:
+.obj float_806699D0, global
 	.float 32 #0x42000000
+.endobj float_806699D0
 
 
-.global float_806699D4
-float_806699D4:
+.obj float_806699D4, global
 	.float -224 #0xC3600000
+.endobj float_806699D4
 
 
-.global double_806699D8
-double_806699D8:
+.obj double_806699D8, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_806699D8
 
-.global float_806699E0
-float_806699E0:
+.obj float_806699E0, global
 	.float 0.0245436933 #0x3CC90FDB
+.endobj float_806699E0
 
 
-.global float_806699E4
-float_806699E4:
+.obj float_806699E4, global
 	.float 40.7436638 #0x4222F983
+.endobj float_806699E4
 
 
-.global float_806699E8
-float_806699E8:
+.obj float_806699E8, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_806699E8
 
 
-.global float_806699EC
-float_806699EC:
+.obj float_806699EC, global
 	.float 1000 #0x447A0000
+.endobj float_806699EC
 
 
-.global float_806699F0
-float_806699F0:
+.obj float_806699F0, global
 	.float 255 #0x437F0000
+.endobj float_806699F0
 
 
-.global float_806699F4
-float_806699F4:
+.obj float_806699F4, global
 	.float -400 #0xC3C80000
+.endobj float_806699F4
 
 
-.global float_806699F8
-float_806699F8:
+.obj float_806699F8, global
 	.float -0.5 #0xBF000000
 	.4byte 0
+.endobj float_806699F8
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_806668C0
-lbl_806668C0:
+.balign 8
+
+.obj lbl_806668C0, global
 	.skip 0x8
+.endobj lbl_806668C0
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

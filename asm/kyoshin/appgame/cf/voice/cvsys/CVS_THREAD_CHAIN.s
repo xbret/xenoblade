@@ -262,26 +262,25 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CVS_THREAD_CHAIN_typestr
-cf_CVS_THREAD_CHAIN_typestr:
+.obj cf_CVS_THREAD_CHAIN_typestr, global
 	.asciz "cf::CVS_THREAD_CHAIN"
 	.balign 4
+.endobj cf_CVS_THREAD_CHAIN_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8053D1C0
-lbl_8053D1C0:
+.obj lbl_8053D1C0, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A58F8
+.endobj lbl_8053D1C0
 
 
-.global __vt__cf_CVS_THREAD_CHAIN
-__vt__cf_CVS_THREAD_CHAIN:
+.obj __vt__cf_CVS_THREAD_CHAIN, global
 	.4byte __RTTI__cf_CVS_THREAD_CHAIN
 	.4byte 0
 	.4byte func_802A3B50
@@ -289,22 +288,23 @@ __vt__cf_CVS_THREAD_CHAIN:
 	.4byte func_802A5A0C
 	.4byte func_802A1EA0
 	.4byte func_802A598C
+.endobj __vt__cf_CVS_THREAD_CHAIN
 
-.global cf_CVS_THREAD_CHAIN_hierarchy
-cf_CVS_THREAD_CHAIN_hierarchy:
+.obj cf_CVS_THREAD_CHAIN_hierarchy, global
 	.4byte __RTTI__cf_CVS_THREAD
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CVS_THREAD_CHAIN_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CVS_THREAD_CHAIN
-__RTTI__cf_CVS_THREAD_CHAIN:
+.obj __RTTI__cf_CVS_THREAD_CHAIN, global
 	.4byte cf_CVS_THREAD_CHAIN_typestr
 	.4byte cf_CVS_THREAD_CHAIN_hierarchy
+.endobj __RTTI__cf_CVS_THREAD_CHAIN
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

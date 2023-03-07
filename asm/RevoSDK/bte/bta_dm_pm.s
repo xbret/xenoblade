@@ -735,20 +735,22 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80544148
-lbl_80544148:
+.balign 8
+
+.obj lbl_80544148, global
 	.asciz "bta_dm_act no more connected service cbs"
 	.balign 4
+.endobj lbl_80544148
 
 
-.global lbl_80544174
-lbl_80544174:
+.obj lbl_80544174, global
 	.asciz "bta_dm_act no more pm timers"
 	.balign 4
 	.4byte 0
+.endobj lbl_80544174
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global bta_dm_conn_srvcs
-bta_dm_conn_srvcs:
+.obj bta_dm_conn_srvcs, global
 	.skip 0x30
+.endobj bta_dm_conn_srvcs

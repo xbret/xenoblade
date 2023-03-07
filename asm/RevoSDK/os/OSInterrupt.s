@@ -624,7 +624,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-InterruptPrioTable:
+.balign 8
+
+.obj InterruptPrioTable, local
 	.4byte 0x00000100
 	.4byte 0x00000040
 	.4byte 0xF8000000
@@ -637,21 +639,25 @@ InterruptPrioTable:
 	.4byte 0x04000000
 	.4byte 0x00004000
 	.4byte 0xFFFFFFFF
+.endobj InterruptPrioTable
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-.global __OSLastInterruptSrr0
-__OSLastInterruptSrr0:
+
+.obj __OSLastInterruptSrr0, global
 	.skip 0x4
+.endobj __OSLastInterruptSrr0
 
-.global __OSLastInterrupt
-__OSLastInterrupt:
+.obj __OSLastInterrupt, global
 	.skip 0x4
+.endobj __OSLastInterrupt
 
-.global __OSLastInterruptTime
-__OSLastInterruptTime:
+.obj __OSLastInterruptTime, global
 	.skip 0x8
+.endobj __OSLastInterruptTime
 
-InterruptHandlerTable:
+.obj InterruptHandlerTable, local
 	.skip 0x8
+.endobj InterruptHandlerTable

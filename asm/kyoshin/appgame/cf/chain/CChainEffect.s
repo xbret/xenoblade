@@ -246,50 +246,49 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CChainEffect_typestr
-cf_CChainEffect_typestr:
+.obj cf_CChainEffect_typestr, global
 	.asciz "cf::CChainEffect"
 	.balign 4
 	.4byte 0
+.endobj cf_CChainEffect_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CChainEffect
-__vt__cf_CChainEffect:
+.obj __vt__cf_CChainEffect, global
 	.4byte __RTTI__cf_CChainEffect
 	.4byte 0
 	.4byte __dt__cf_CChainEffect
 	.4byte func_802A0AE0
+.endobj __vt__cf_CChainEffect
 
-.global cf_CChainEffect_hierarchy
-cf_CChainEffect_hierarchy:
+.obj cf_CChainEffect_hierarchy, global
 	.4byte __RTTI__cf_IObjectInfo
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CChainEffect_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CChainEffect
-__RTTI__cf_CChainEffect:
+.obj __RTTI__cf_CChainEffect, global
 	.4byte cf_CChainEffect_typestr
 	.4byte cf_CChainEffect_hierarchy
+.endobj __RTTI__cf_CChainEffect
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-
-.global float_8066B4F8
-float_8066B4F8:
+.obj float_8066B4F8, global
 	.float 0.6 #0x3F19999A
 	.4byte 0
+.endobj float_8066B4F8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

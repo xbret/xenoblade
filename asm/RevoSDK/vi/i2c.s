@@ -637,11 +637,17 @@
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-__i2c_ident_flag:
+.balign 8
+
+.obj __i2c_ident_flag, local
 	.4byte 0x00000001
 	.4byte 0
+.endobj __i2c_ident_flag
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-__i2c_ident_first:
+.balign 8
+
+.obj __i2c_ident_first, local
 	.skip 0x8
+.endobj __i2c_ident_first

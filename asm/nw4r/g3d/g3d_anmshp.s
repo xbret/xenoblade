@@ -14,8 +14,10 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global TYPE_NAME__Q34nw4r3g3d9AnmObjShp
-TYPE_NAME__Q34nw4r3g3d9AnmObjShp:
+.balign 8
+
+.obj TYPE_NAME__Q34nw4r3g3d9AnmObjShp, global
 	.4byte 0x0000000A
 	.asciz "AnmObjShp"
 	.balign 4
+.endobj TYPE_NAME__Q34nw4r3g3d9AnmObjShp

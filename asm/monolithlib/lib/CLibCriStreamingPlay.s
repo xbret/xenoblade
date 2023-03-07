@@ -2164,10 +2164,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_80526970
-lbl_80526970:
+.obj lbl_80526970, global
 	.4byte 0x00000064
 	.4byte 0
 	.4byte 0x00000046
@@ -2188,15 +2187,15 @@ lbl_80526970:
 	.4byte 0xFFFFFC40
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+.endobj lbl_80526970
 
-.global CLibCriStreamingPlay_typestr
-CLibCriStreamingPlay_typestr:
+.obj CLibCriStreamingPlay_typestr, global
 	.asciz "CLibCriStreamingPlay"
 	.balign 4
+.endobj CLibCriStreamingPlay_typestr
 
 
-.global lbl_805269D8
-lbl_805269D8:
+.obj lbl_805269D8, global
 	#"停止中"
 	.4byte 0x92E28E7E
 	.2byte 0x9286
@@ -2216,6 +2215,7 @@ lbl_805269D8:
 	.4byte 0x90B68F80
 	.4byte 0x94F59286
 	.byte 0x00
+.endobj lbl_805269D8
 
 	#"デコード＆再生中"
 	.byte 0x83,0x66,0x83
@@ -2247,10 +2247,9 @@ lbl_805269D8:
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CLibCriStreamingPlay
-__vt__CLibCriStreamingPlay:
+.obj __vt__CLibCriStreamingPlay, global
 	.4byte __RTTI__CLibCriStreamingPlay
 	.4byte 0
 	.4byte __dt__CLibCriStreamingPlay
@@ -2296,80 +2295,82 @@ __vt__CLibCriStreamingPlay:
 	.4byte func_8045D148
 	.4byte func_8045D140
 	.4byte func_8045CF30
+.endobj __vt__CLibCriStreamingPlay
 
-.global CLibCriStreamingPlay_hierarchy
-CLibCriStreamingPlay_hierarchy:
+.obj CLibCriStreamingPlay_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
 	.4byte 0
 	.4byte 0
+.endobj CLibCriStreamingPlay_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_806660C8
-lbl_806660C8:
+.obj lbl_806660C8, global
 	.4byte 0x0000BB80
+.endobj lbl_806660C8
 
 
-.global lbl_806660CC
-lbl_806660CC:
+.obj lbl_806660CC, global
 	.4byte lbl_8066CCC0
+.endobj lbl_806660CC
 
-.global __RTTI__CLibCriStreamingPlay
-__RTTI__CLibCriStreamingPlay:
+.obj __RTTI__CLibCriStreamingPlay, global
 	.4byte CLibCriStreamingPlay_typestr
 	.4byte CLibCriStreamingPlay_hierarchy
+.endobj __RTTI__CLibCriStreamingPlay
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_8066CCC0
-lbl_8066CCC0:
+.obj lbl_8066CCC0, global
 	.asciz ".ahx"
 	.balign 4
+.endobj lbl_8066CCC0
 
 
-.global float_8066CCC8
-float_8066CCC8:
+.obj float_8066CCC8, global
 	.float 1.0
+.endobj float_8066CCC8
 
 
-.global float_8066CCCC
-float_8066CCCC:
+.obj float_8066CCCC, global
 	.float 0
+.endobj float_8066CCCC
 
 
-.global float_8066CCD0
-float_8066CCD0:
+.obj float_8066CCD0, global
 	.float 100.0
 	.4byte 0
+.endobj float_8066CCD0
 
 
-.global double_8066CCD8
-double_8066CCD8:
+.obj double_8066CCD8, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066CCD8
 
-.global float_8066CCE0
-float_8066CCE0:
+.obj float_8066CCE0, global
 	.float 15 #0x41700000
 	.4byte 0
+.endobj float_8066CCE0
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80667FC0, global
+	.skip 0x4
+.endobj lbl_80667FC0
 
-.global lbl_80667FC0
-lbl_80667FC0:
+.obj lbl_80667FC4, global
 	.skip 0x4
-.global lbl_80667FC4
-lbl_80667FC4:
-	.skip 0x4
+.endobj lbl_80667FC4
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

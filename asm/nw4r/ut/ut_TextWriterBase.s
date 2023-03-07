@@ -2205,48 +2205,55 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C960
-float_8066C960:
+.balign 8
+
+.obj float_8066C960, global
 	.4byte 0x7F7FFFFF #max float val
+.endobj float_8066C960
 
 
-.global float_8066C964
-float_8066C964:
+.obj float_8066C964, global
 	.float 0
+.endobj float_8066C964
 
 
-.global double_8066C968
-double_8066C968:
+.obj double_8066C968, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066C968
 
-.global float_8066C970
-float_8066C970:
+.obj float_8066C970, global
 	.float 0.5
 	.4byte 0
+.endobj float_8066C970
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_806570C8
-lbl_806570C8:
+.obj lbl_806570C8, global
 	.skip 0xC
-.global lbl_806570D4
-lbl_806570D4:
+.endobj lbl_806570C8
+
+.obj lbl_806570D4, global
 	.skip 0xC
+.endobj lbl_806570D4
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-"mDefaultTagProcessor__Q34nw4r2ut17TextWriterBase<c>":
-	.skip 0x4
+.balign 8
 
-"mDefaultTagProcessor__Q34nw4r2ut17TextWriterBase<w>":
+.obj "mDefaultTagProcessor__Q34nw4r2ut17TextWriterBase<c>", local
 	.skip 0x4
+.endobj "mDefaultTagProcessor__Q34nw4r2ut17TextWriterBase<c>"
+
+.obj "mDefaultTagProcessor__Q34nw4r2ut17TextWriterBase<w>", local
+	.skip 0x4
+.endobj "mDefaultTagProcessor__Q34nw4r2ut17TextWriterBase<w>"
 
 #@GUARD@mDefaultTagProcessor__Q34nw4r2ut17TextWriterBase<c>
-.global lbl_80667E48
-lbl_80667E48:
+.obj lbl_80667E48, global
 	.skip 0x1
+.endobj lbl_80667E48
 
 #@GUARD@mDefaultTagProcessor__Q34nw4r2ut17TextWriterBase<w>
-.global lbl_80667E49
-lbl_80667E49:
+.obj lbl_80667E49, global
 	.skip 0x7
+.endobj lbl_80667E49

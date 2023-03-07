@@ -3248,8 +3248,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global adx_fs_strpool
-adx_fs_strpool:
+.balign 8
+
+.obj adx_fs_strpool, global
 	.asciz "E9040801:partition ID is range outside.(adxf_ChkPrmPt)"
 	.asciz "E9040802:'ptinfo' is NULL.(adxf_ChkPrmPt)"
 	.asciz "E20040917 : It is impossible to load AFS files in parallel."
@@ -3298,15 +3299,18 @@ adx_fs_strpool:
 	.asciz "E2005072901: NULL pointer is passed."
 	.balign 4
 	.4byte 0
+.endobj adx_fs_strpool
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global adxf_ldpt_buf
-adxf_ldpt_buf:
+.obj adxf_ldpt_buf, global
 	.skip 0x4
-.global adxf_ldpt_rdsct
-adxf_ldpt_rdsct:
+.endobj adxf_ldpt_buf
+
+.obj adxf_ldpt_rdsct, global
 	.skip 0x4
-.global adxf_ldpt_work
-adxf_ldpt_work:
+.endobj adxf_ldpt_rdsct
+
+.obj adxf_ldpt_work, global
 	.skip 0x2080
+.endobj adxf_ldpt_work

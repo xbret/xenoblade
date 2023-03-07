@@ -2930,8 +2930,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global SFPLY_cond_dfl
-SFPLY_cond_dfl:
+.balign 8
+
+.obj SFPLY_cond_dfl, global
 	.4byte 0x00000001
 	.4byte 0x00000001
 	.4byte 0x00000001
@@ -3033,23 +3034,25 @@ SFPLY_cond_dfl:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj SFPLY_cond_dfl
 
 
-.global lbl_80520584
-lbl_80520584:
+.obj lbl_80520584, global
 	.4byte 0
+.endobj lbl_80520584
 
 
-.global lbl_80520588
-lbl_80520588:
+.obj lbl_80520588, global
 	.asciz "%p, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %ld, %d, %p, %ld"
 	.4byte 0
+.endobj lbl_80520588
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global jumptable_8056C5F0
-jumptable_8056C5F0:
+.balign 8
+
+.obj jumptable_8056C5F0, global
 	.4byte .L_803C95C8
 	.4byte .L_803C923C
 	.4byte .L_803C9268
@@ -3058,15 +3061,18 @@ jumptable_8056C5F0:
 	.4byte .L_803C95C8
 	.4byte .L_803C95C8
 	.4byte 0
+.endobj jumptable_8056C5F0
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_8061CDD8
-lbl_8061CDD8:
+.obj lbl_8061CDD8, global
 	.skip 0x4
-.global sfply_last_hnctrl_wksiz
-sfply_last_hnctrl_wksiz:
+.endobj lbl_8061CDD8
+
+.obj sfply_last_hnctrl_wksiz, global
 	.skip 0x4
-.global lbl_8061CDE0
-lbl_8061CDE0:
+.endobj sfply_last_hnctrl_wksiz
+
+.obj lbl_8061CDE0, global
 	.skip 0x4
+.endobj lbl_8061CDE0

@@ -2922,10 +2922,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_805008D0
-lbl_805008D0:
+.obj lbl_805008D0, global
 	.byte 0x01,0x02,0x03,0x04
 	.byte 0x05,0x06,0x07,0x03
 	.byte 0x08,0x01,0x09,0x00
@@ -2939,26 +2938,26 @@ lbl_805008D0:
 	.byte 0x0E,0x1A,0x0E,0x1D
 	.byte 0x0E,0x1C,0x01,0x05
 	.byte 0x0D,0xAF,0x00,0x00
+.endobj lbl_805008D0
 
-.global cf_CSuddenCommu_typestr
-cf_CSuddenCommu_typestr:
+.obj cf_CSuddenCommu_typestr, global
 	.asciz "cf::CSuddenCommu"
 	.balign 4
 	.asciz "cf::IObjectInfo"
+.endobj cf_CSuddenCommu_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CSuddenCommu
-__vt__cf_CSuddenCommu:
+.obj __vt__cf_CSuddenCommu, global
 	.4byte __RTTI__cf_CSuddenCommu
 	.4byte 0
 	.4byte __dt__cf_CSuddenCommu
 	.4byte func_801BA250
+.endobj __vt__cf_CSuddenCommu
 
-.global cf_CSuddenCommu_hierarchy
-cf_CSuddenCommu_hierarchy:
+.obj cf_CSuddenCommu_hierarchy, global
 	.4byte __RTTI__cf_IObjectInfo
 	.4byte 0
 	.4byte 0
@@ -3009,125 +3008,126 @@ cf_CSuddenCommu_hierarchy:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801BBC38
+.endobj cf_CSuddenCommu_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80664ED8
-lbl_80664ED8:
+.obj lbl_80664ED8, global
 	.4byte 0x00000032
+.endobj lbl_80664ED8
 
 
-.global lbl_80664EDC
-lbl_80664EDC:
+.obj lbl_80664EDC, global
 	.4byte 0x00000004
+.endobj lbl_80664EDC
 
 
-.global lbl_80664EE0
-lbl_80664EE0:
+.obj lbl_80664EE0, global
 	.4byte 0x0F0A050A
 	.4byte 0x0F000000
+.endobj lbl_80664EE0
 
 
-.global lbl_80664EE8
-lbl_80664EE8:
+.obj lbl_80664EE8, global
 	.4byte 0x0003050A
 	.4byte 0
+.endobj lbl_80664EE8
 
 
-.global lbl_80664EF0
-lbl_80664EF0:
+.obj lbl_80664EF0, global
 	.4byte 0x140F050A
 	.4byte 0
+.endobj lbl_80664EF0
 
 
-.global lbl_80664EF8
-lbl_80664EF8:
+.obj lbl_80664EF8, global
 	.4byte 0x000A0F32
 	.4byte 0
+.endobj lbl_80664EF8
 
 
-.global lbl_80664F00
-lbl_80664F00:
+.obj lbl_80664F00, global
 	.4byte 0x03EB03EC
 	.4byte 0x03EE0000
+.endobj lbl_80664F00
 
-.global __RTTI__cf_CSuddenCommu
-__RTTI__cf_CSuddenCommu:
+.obj __RTTI__cf_CSuddenCommu, global
 	.4byte cf_CSuddenCommu_typestr
 	.4byte cf_CSuddenCommu_hierarchy
+.endobj __RTTI__cf_CSuddenCommu
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066A6F0
-float_8066A6F0:
+.obj float_8066A6F0, global
 	.float 450 #0x43E10000
+.endobj float_8066A6F0
 
 
-.global float_8066A6F4
-float_8066A6F4:
+.obj float_8066A6F4, global
 	.float 0.01 #0x3C23D70A
+.endobj float_8066A6F4
 
 
-.global float_8066A6F8
-float_8066A6F8:
+.obj float_8066A6F8, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066A6F8
 
 
-.global double_8066A700
-double_8066A700:
+.obj double_8066A700, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066A700
 
-.global float_8066A708
-float_8066A708:
+.obj float_8066A708, global
 	.float 0
+.endobj float_8066A708
 
 
-.global float_8066A70C
-float_8066A70C:
+.obj float_8066A70C, global
 	.float 60 #0x42700000
+.endobj float_8066A70C
 
 
-.global float_8066A710
-float_8066A710:
+.obj float_8066A710, global
 	.float 300 #0x43960000
+.endobj float_8066A710
 
 
-.global float_8066A714
-float_8066A714:
+.obj float_8066A714, global
 	.float 0.2
+.endobj float_8066A714
 
 
-.global float_8066A718
-float_8066A718:
+.obj float_8066A718, global
 	.float 5 #0x40A00000
+.endobj float_8066A718
 
 
-.global float_8066A71C
-float_8066A71C:
+.obj float_8066A71C, global
 	.float 30 #0x41F00000
+.endobj float_8066A71C
 
 
-.global float_8066A720
-float_8066A720:
+.obj float_8066A720, global
 	.float 1.2 #0x3F99999A
+.endobj float_8066A720
 
 
-.global float_8066A724
-float_8066A724:
+.obj float_8066A724, global
 	.float 90 #0x42B40000
+.endobj float_8066A724
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_80579068
-lbl_80579068:
+.obj lbl_80579068, global
 	.skip 0xA8
+.endobj lbl_80579068
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

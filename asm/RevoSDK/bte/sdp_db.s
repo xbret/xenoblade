@@ -937,17 +937,19 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80548F50
-lbl_80548F50:
+.balign 8
+
+.obj lbl_80548F50, global
 	.asciz "SDP_AddAttribute: attr_len:%d too long. truncate to (%d)"
 	.balign 4
+.endobj lbl_80548F50
 
 
-.global lbl_80548F8C
-lbl_80548F8C:
+.obj lbl_80548F8C, global
 	.asciz "SDP_AddUuidSequence - too long, add %d uuids of %d"
 	.balign 4
+.endobj lbl_80548F8C
 
-.global lbl_80548FC0
-lbl_80548FC0:
+.obj lbl_80548FC0, global
 	.asciz "Deleting attr_id 0x%04x for handle 0x%x"
+.endobj lbl_80548FC0

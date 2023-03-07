@@ -152,8 +152,10 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8055EE98
-lbl_8055EE98:
+.balign 8
+
+.obj lbl_8055EE98, global
 	.asciz "/shared2/sys/NANDBOOTINFO"
 	.balign 4
 	.4byte 0
+.endobj lbl_8055EE98

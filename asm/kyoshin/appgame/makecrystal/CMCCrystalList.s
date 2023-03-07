@@ -1572,16 +1572,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMCCrystalList_typestr
-CMCCrystalList_typestr:
+.obj CMCCrystalList_typestr, global
 	.asciz "CMCCrystalList"
 	.balign 4
+.endobj CMCCrystalList_typestr
 
 
-.global CMCCrystalList_strpool
-CMCCrystalList_strpool:
+.obj CMCCrystalList_strpool, global
 	.asciz "/menu/MCCrystalList.arc"
 	.asciz "/menu/tpl/CrystalIcon.arc"
 	.asciz "name"
@@ -1620,13 +1619,13 @@ CMCCrystalList_strpool:
 	.asciz "CItemBoxInfoTex"
 	.balign 4
 	.4byte 0
+.endobj CMCCrystalList_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global jumptable_80539710
-jumptable_80539710:
+.obj jumptable_80539710, global
 	.4byte .L_80222938
 	.4byte .L_802228FC
 	.4byte .L_80222904
@@ -1637,10 +1636,10 @@ jumptable_80539710:
 	.4byte .L_8022292C
 	.4byte .L_80222934
 	.4byte 0
+.endobj jumptable_80539710
 
 
-.global __vt__CMCCrystalList
-__vt__CMCCrystalList:
+.obj __vt__CMCCrystalList, global
 	.4byte __RTTI__CMCCrystalList
 	.4byte 0
 	.4byte __dt__CMCCrystalList
@@ -1675,41 +1674,41 @@ __vt__CMCCrystalList:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CMCCrystalList
 
-.global CMCCrystalList_hierarchy
-CMCCrystalList_hierarchy:
+.obj CMCCrystalList_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMCCrystalList_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-
-.global __RTTI__CMCCrystalList
-__RTTI__CMCCrystalList:
+.obj __RTTI__CMCCrystalList, global
 	.4byte CMCCrystalList_typestr
 	.4byte CMCCrystalList_hierarchy
+.endobj __RTTI__CMCCrystalList
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066AE00
-float_8066AE00:
+.obj float_8066AE00, global
 	.float 0
+.endobj float_8066AE00
 
 
-.global float_8066AE04
-float_8066AE04:
+.obj float_8066AE04, global
 	.float 1.0
+.endobj float_8066AE04
 
 
-.global double_8066AE08
-double_8066AE08:
+.obj double_8066AE08, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066AE08
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

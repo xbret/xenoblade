@@ -640,13 +640,19 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-ShutdownFunctionInfo:
+.balign 8
+
+.obj ShutdownFunctionInfo, local
 	.4byte OnReset
 	.4byte 0xFFFFFFFF
 	.4byte 0
 	.4byte 0
+.endobj ShutdownFunctionInfo
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-AlarmQueue:
+.balign 8
+
+.obj AlarmQueue, local
 	.skip 0x8
+.endobj AlarmQueue

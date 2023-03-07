@@ -40,7 +40,9 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global BT_BD_ANY
-BT_BD_ANY:
+.balign 8
+
+.obj BT_BD_ANY, global
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFF0000
+.endobj BT_BD_ANY

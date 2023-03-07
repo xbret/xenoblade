@@ -471,9 +471,10 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global lbl_8056D298
-lbl_8056D298:
+
+.obj lbl_8056D298, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r3lyt7PictureFv
@@ -504,16 +505,21 @@ lbl_8056D298:
 	.4byte GetMaterial__Q34nw4r3lyt4PaneCFUl
 	.4byte LoadMtx__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
 	.4byte Append__Q34nw4r3lyt7PictureFRCQ34nw4r3lyt6TexMap
+.endobj lbl_8056D298
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C560
-float_8066C560:
+.balign 8
+
+.obj float_8066C560, global
 	.float 0
 	.4byte 0
+.endobj float_8066C560
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global typeInfo__Q34nw4r3lyt7Picture
-typeInfo__Q34nw4r3lyt7Picture:
+.balign 8
+
+.obj typeInfo__Q34nw4r3lyt7Picture, global
 	.skip 0x8
+.endobj typeInfo__Q34nw4r3lyt7Picture

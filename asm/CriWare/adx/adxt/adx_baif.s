@@ -812,9 +812,11 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051A1B8
-lbl_8051A1B8:
+.balign 8
+
+.obj lbl_8051A1B8, global
 	.asciz "FORM"
 	.asciz "AIFF"
 	.2byte 0
 	.4byte 0
+.endobj lbl_8051A1B8

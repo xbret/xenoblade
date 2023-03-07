@@ -48,9 +48,10 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global adxcrs_lvl
-adxcrs_lvl:
+.obj adxcrs_lvl, global
 	.skip 0x4
-.global adxcrs_init_count
-adxcrs_init_count:
+.endobj adxcrs_lvl
+
+.obj adxcrs_init_count, global
 	.skip 0x4
+.endobj adxcrs_init_count

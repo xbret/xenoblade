@@ -201,24 +201,26 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-.global adxt_build
-adxt_build:
+
+.obj adxt_build, global
 	.asciz "\nADXT/WII Ver.10.67 Build:Nov 13 2008 10:52:50\n"
 	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
 	.4byte 0
+.endobj adxt_build
 
 
-.global adx_inis_strpool
-adx_inis_strpool:
+.obj adx_inis_strpool, global
 	.asciz "adxt_exec_tsvr"
 	.asciz "adxt_exec_fssvr"
 	.asciz "adxt_exec_main_thrd"
 	.asciz "E2006100201: ADXT_Finish function has been executed before initialization."
 	.asciz "E2005041230: ADXT handle is still active."
+.endobj adx_inis_strpool
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805E5D48
-lbl_805E5D48:
+.obj lbl_805E5D48, global
 	.skip 0xC
+.endobj lbl_805E5D48

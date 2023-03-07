@@ -1178,27 +1178,26 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_80501588
-lbl_80501588:
+.obj lbl_80501588, global
 	.asciz "nul_curs06s"
+.endobj lbl_80501588
 
-.global lbl_80501594
-lbl_80501594:
+.obj lbl_80501594, global
 	.asciz "nul_curs06l"
+.endobj lbl_80501594
 
-.global lbl_805015A0
-lbl_805015A0:
+.obj lbl_805015A0, global
 	.asciz "nul_curs07s"
+.endobj lbl_805015A0
 
-.global lbl_805015AC
-lbl_805015AC:
+.obj lbl_805015AC, global
 	.asciz "nul_curs07l"
+.endobj lbl_805015AC
 
 
-.global CCur_strpool
-CCur_strpool:
+.obj CCur_strpool, global
 	.asciz "mf00_reg00_curs08.brlyt"
 	.asciz "mf00_reg00_curs08_roop.brlan"
 	.asciz "mf00_reg00_curs08_on.brlan"
@@ -1241,37 +1240,37 @@ CCur_strpool:
 	.asciz "pic_arrow_l00"
 	.asciz "pic_arrow_r00"
 	.balign 4
+.endobj CCur_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_80537FE0
-lbl_80537FE0:
+.obj lbl_80537FE0, global
 	.4byte lbl_80501588
 	.4byte lbl_80501594
 	.4byte lbl_805015A0
 	.4byte lbl_805015AC
+.endobj lbl_80537FE0
 
 
-.global __vt__CSubCur
-__vt__CSubCur:
+.obj __vt__CSubCur, global
 	.4byte __RTTI__CSubCur
 	.4byte 0
 	.4byte func_801D2DC8
 	.4byte func_801D20DC
 	.4byte func_801D2144
 	.4byte func_801D2180
+.endobj __vt__CSubCur
 
-.global CSubCur_hierarchy
-CSubCur_hierarchy:
+.obj CSubCur_hierarchy, global
 	.4byte __RTTI__CBaseCur
 	.4byte 0
 	.4byte 0
+.endobj CSubCur_hierarchy
 
 
-.global __vt__CCur22
-__vt__CCur22:
+.obj __vt__CCur22, global
 	.4byte __RTTI__CCur22
 	.4byte 0
 	.4byte func_801D2B78
@@ -1279,16 +1278,16 @@ __vt__CCur22:
 	.4byte func_801D2144
 	.4byte func_801D2180
 	.4byte __dt__801D2B38
+.endobj __vt__CCur22
 
-.global CCur22_hierarchy
-CCur22_hierarchy:
+.obj CCur22_hierarchy, global
 	.4byte __RTTI__CBaseCur
 	.4byte 0
 	.4byte 0
+.endobj CCur22_hierarchy
 
 
-.global __vt__CCur18
-__vt__CCur18:
+.obj __vt__CCur18, global
 	.4byte __RTTI__CCur18
 	.4byte 0
 	.4byte func_801D2A78
@@ -1296,231 +1295,232 @@ __vt__CCur18:
 	.4byte func_801D2144
 	.4byte func_801D2180
 	.4byte __dt__801D2A38
+.endobj __vt__CCur18
 
-.global CCur18_hierarchy
-CCur18_hierarchy:
+.obj CCur18_hierarchy, global
 	.4byte __RTTI__CBaseCur
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CCur18_hierarchy
 
 
-.global __vt__CCur16
-__vt__CCur16:
+.obj __vt__CCur16, global
 	.4byte __RTTI__CCur16
 	.4byte 0
 	.4byte func_801D2978
 	.4byte func_801D20DC
 	.4byte func_801D2144
 	.4byte func_801D2180
+.endobj __vt__CCur16
 
-.global CCur16_hierarchy
-CCur16_hierarchy:
+.obj CCur16_hierarchy, global
 	.4byte __RTTI__CBaseCur
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CCur16_hierarchy
 
 
-.global __vt__CCur15
-__vt__CCur15:
+.obj __vt__CCur15, global
 	.4byte __RTTI__CCur15
 	.4byte 0
 	.4byte func_801D2878
 	.4byte func_801D20DC
 	.4byte func_801D2144
 	.4byte func_801D2180
+.endobj __vt__CCur15
 
-.global CCur15_hierarchy
-CCur15_hierarchy:
+.obj CCur15_hierarchy, global
 	.4byte __RTTI__CBaseCur
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CCur15_hierarchy
 
 
-.global __vt__CCur14
-__vt__CCur14:
+.obj __vt__CCur14, global
 	.4byte __RTTI__CCur14
 	.4byte 0
 	.4byte func_801D2778
 	.4byte func_801D20DC
 	.4byte func_801D2144
 	.4byte func_801D2180
+.endobj __vt__CCur14
 
-.global CCur14_hierarchy
-CCur14_hierarchy:
+.obj CCur14_hierarchy, global
 	.4byte __RTTI__CBaseCur
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CCur14_hierarchy
 
 
-.global __vt__CCur11
-__vt__CCur11:
+.obj __vt__CCur11, global
 	.4byte __RTTI__CCur11
 	.4byte 0
 	.4byte func_801D25EC
 	.4byte func_801D20DC
 	.4byte func_801D2144
 	.4byte func_801D2180
+.endobj __vt__CCur11
 
-.global CCur11_hierarchy
-CCur11_hierarchy:
+.obj CCur11_hierarchy, global
 	.4byte __RTTI__CBaseCur
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CCur11_hierarchy
 
 
-.global __vt__CCur09
-__vt__CCur09:
+.obj __vt__CCur09, global
 	.4byte __RTTI__CCur09
 	.4byte 0
 	.4byte func_801D2478
 	.4byte func_801D20DC
 	.4byte func_801D2144
 	.4byte func_801D2180
+.endobj __vt__CCur09
 
-.global CCur09_hierarchy
-CCur09_hierarchy:
+.obj CCur09_hierarchy, global
 	.4byte __RTTI__CBaseCur
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CCur09_hierarchy
 
 
-.global __vt__CCur07
-__vt__CCur07:
+.obj __vt__CCur07, global
 	.4byte __RTTI__CCur07
 	.4byte 0
 	.4byte func_801D2378
 	.4byte func_801D20DC
 	.4byte func_801D2144
 	.4byte func_801D2180
+.endobj __vt__CCur07
 
-.global CCur07_hierarchy
-CCur07_hierarchy:
+.obj CCur07_hierarchy, global
 	.4byte __RTTI__CBaseCur
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CCur07_hierarchy
 
 
-.global lbl_80538158
-lbl_80538158:
+.obj lbl_80538158, global
 	.4byte __RTTI__CBaseCur
 	.4byte 0
 	.4byte 0
 	.4byte func_801D20DC
 	.4byte func_801D2144
 	.4byte func_801D2180
+.endobj lbl_80538158
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CSubCur
-__RTTI__CSubCur:
+.obj __RTTI__CSubCur, global
 	.4byte CSubCur_typestr
 	.4byte CSubCur_hierarchy
+.endobj __RTTI__CSubCur
 
-.global __RTTI__CCur22
-__RTTI__CCur22:
+.obj __RTTI__CCur22, global
 	.4byte CCur22_typestr
 	.4byte CCur22_hierarchy
+.endobj __RTTI__CCur22
 
-.global __RTTI__CCur18
-__RTTI__CCur18:
+.obj __RTTI__CCur18, global
 	.4byte CCur18_typestr
 	.4byte CCur18_hierarchy
+.endobj __RTTI__CCur18
 
-.global __RTTI__CCur16
-__RTTI__CCur16:
+.obj __RTTI__CCur16, global
 	.4byte CCur16_typestr
 	.4byte CCur16_hierarchy
+.endobj __RTTI__CCur16
 
-.global __RTTI__CCur15
-__RTTI__CCur15:
+.obj __RTTI__CCur15, global
 	.4byte CCur15_typestr
 	.4byte CCur15_hierarchy
+.endobj __RTTI__CCur15
 
-.global __RTTI__CCur14
-__RTTI__CCur14:
+.obj __RTTI__CCur14, global
 	.4byte CCur14_typestr
 	.4byte CCur14_hierarchy
+.endobj __RTTI__CCur14
 
-.global __RTTI__CCur11
-__RTTI__CCur11:
+.obj __RTTI__CCur11, global
 	.4byte CCur11_typestr
 	.4byte CCur11_hierarchy
+.endobj __RTTI__CCur11
 
-.global __RTTI__CCur09
-__RTTI__CCur09:
+.obj __RTTI__CCur09, global
 	.4byte CCur09_typestr
 	.4byte CCur09_hierarchy
+.endobj __RTTI__CCur09
 
-.global __RTTI__CCur07
-__RTTI__CCur07:
+.obj __RTTI__CCur07, global
 	.4byte CCur07_typestr
 	.4byte CCur07_hierarchy
+.endobj __RTTI__CCur07
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066A860
-float_8066A860:
+.obj float_8066A860, global
 	.float 1.0
+.endobj float_8066A860
 
 
-.global float_8066A864
-float_8066A864:
+.obj float_8066A864, global
 	.float 0
+.endobj float_8066A864
 
-.global CSubCur_typestr
-CSubCur_typestr:
+.obj CSubCur_typestr, global
 	.asciz "CSubCur"
+.endobj CSubCur_typestr
 
-.global CCur22_typestr
-CCur22_typestr:
+.obj CCur22_typestr, global
 	.asciz "CCur22"
 	.balign 4
+.endobj CCur22_typestr
 
-.global CCur18_typestr
-CCur18_typestr:
+.obj CCur18_typestr, global
 	.asciz "CCur18"
 	.balign 4
+.endobj CCur18_typestr
 
-.global CCur16_typestr
-CCur16_typestr:
+.obj CCur16_typestr, global
 	.asciz "CCur16"
 	.balign 4
+.endobj CCur16_typestr
 
-.global CCur15_typestr
-CCur15_typestr:
+.obj CCur15_typestr, global
 	.asciz "CCur15"
 	.balign 4
+.endobj CCur15_typestr
 
-.global CCur14_typestr
-CCur14_typestr:
+.obj CCur14_typestr, global
 	.asciz "CCur14"
 	.balign 4
+.endobj CCur14_typestr
 
-.global CCur11_typestr
-CCur11_typestr:
+.obj CCur11_typestr, global
 	.asciz "CCur11"
 	.balign 4
+.endobj CCur11_typestr
 
-.global CCur09_typestr
-CCur09_typestr:
+.obj CCur09_typestr, global
 	.asciz "CCur09"
 	.balign 4
+.endobj CCur09_typestr
 
-.global CCur07_typestr
-CCur07_typestr:
+.obj CCur07_typestr, global
 	.asciz "CCur07"
 	.balign 4
+.endobj CCur07_typestr
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

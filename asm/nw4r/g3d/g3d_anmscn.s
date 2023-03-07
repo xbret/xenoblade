@@ -1634,22 +1634,27 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-TYPE_NAME__Q34nw4r3g3d6AnmScn:
+.balign 8
+
+.obj TYPE_NAME__Q34nw4r3g3d6AnmScn, local
 	.4byte 0x00000007
 	.asciz "AnmScn"
 	.balign 4
 	.4byte 0
+.endobj TYPE_NAME__Q34nw4r3g3d6AnmScn
 
 
-TYPE_NAME__Q34nw4r3g3d9AnmScnRes:
+.obj TYPE_NAME__Q34nw4r3g3d9AnmScnRes, local
 	.4byte 0x0000000A
 	.asciz "AnmScnRes"
 	.balign 4
+.endobj TYPE_NAME__Q34nw4r3g3d9AnmScnRes
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056CD70
-lbl_8056CD70:
+.balign 8
+
+.obj lbl_8056CD70, global
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d9AnmScnResCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -1686,10 +1691,10 @@ lbl_8056CD70:
 	.4byte GetLightResult__Q34nw4r3g3d9AnmScnResFPQ34nw4r3g3d14LightAnmResultUl
 	.4byte GetFogResult__Q34nw4r3g3d9AnmScnResFPQ34nw4r3g3d12FogAnmResultUl
 	.4byte GetCameraResult__Q34nw4r3g3d9AnmScnResFPQ34nw4r3g3d15CameraAnmResultUl
+.endobj lbl_8056CD70
 
 
-.global lbl_8056CE00
-lbl_8056CE00:
+.obj lbl_8056CE00, global
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d6AnmScnCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -1726,30 +1731,33 @@ lbl_8056CE00:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056CE00
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C3A0
-float_8066C3A0:
+.balign 8
+
+.obj float_8066C3A0, global
 	.float 0
+.endobj float_8066C3A0
 
 
-.global float_8066C3A4
-float_8066C3A4:
+.obj float_8066C3A4, global
 	.float -10000000000 #0xD01502F9
+.endobj float_8066C3A4
 
 
-.global float_8066C3A8
-float_8066C3A8:
+.obj float_8066C3A8, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066C3A8
 
 
-.global double_8066C3B0
-double_8066C3B0:
+.obj double_8066C3B0, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066C3B0
 
-.global float_8066C3B8
-float_8066C3B8:
+.obj float_8066C3B8, global
 	.float 0.5
 	.4byte 0
+.endobj float_8066C3B8

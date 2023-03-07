@@ -1210,8 +1210,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global jumptable_805494E8
-jumptable_805494E8:
+.balign 8
+
+.obj jumptable_805494E8, global
 	.4byte .L_803078FC
 	.4byte .L_8030789C
 	.4byte .L_803078AC
@@ -1229,21 +1230,21 @@ jumptable_805494E8:
 	.4byte .L_803078FC
 	.4byte .L_803078FC
 	.4byte .L_803078E8
+.endobj jumptable_805494E8
 
 
-.global lbl_8054952C
-lbl_8054952C:
+.obj lbl_8054952C, global
 	.asciz "SDP - sdpu_build_n_send_error  code: 0x%x  CID: 0x%x"
 	.balign 4
+.endobj lbl_8054952C
 
 
-.global lbl_80549564
-lbl_80549564:
+.obj lbl_80549564, global
 	.asciz "SDP - no buf for err msg"
 	.balign 4
+.endobj lbl_80549564
 
-.global jumptable_80549580
-jumptable_80549580:
+.obj jumptable_80549580, global
 	.4byte .L_80307C0C
 	.4byte .L_80307B9C
 	.4byte .L_80307BA4
@@ -1252,10 +1253,10 @@ jumptable_80549580:
 	.4byte .L_80307BB4
 	.4byte .L_80307BC0
 	.4byte .L_80307BDC
+.endobj jumptable_80549580
 
 
-.global jumptable_805495A0
-jumptable_805495A0:
+.obj jumptable_805495A0, global
 	.4byte .L_80307B38
 	.4byte .L_80307AC8
 	.4byte .L_80307AD0
@@ -1264,10 +1265,10 @@ jumptable_805495A0:
 	.4byte .L_80307AE0
 	.4byte .L_80307AEC
 	.4byte .L_80307B08
+.endobj jumptable_805495A0
 
 
-.global jumptable_805495C0
-jumptable_805495C0:
+.obj jumptable_805495C0, global
 	.4byte .L_80308048
 	.4byte .L_80308054
 	.4byte .L_80308060
@@ -1276,11 +1277,15 @@ jumptable_805495C0:
 	.4byte .L_80308084
 	.4byte .L_80308094
 	.4byte .L_803080B4
+.endobj jumptable_805495C0
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-sdp_base_uuid:
+.balign 8
+
+.obj sdp_base_uuid, local
 	.4byte 0
 	.4byte 0x00001000
 	.4byte 0x80000080
 	.4byte 0x5F9B34FB
+.endobj sdp_base_uuid

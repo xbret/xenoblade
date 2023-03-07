@@ -638,8 +638,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80549678
-lbl_80549678:
+.balign 8
+
+.obj lbl_80549678, global
 	.asciz "DSP is booting task: 0x%08X\n"
 	.balign 4
 	.asciz "__DSP_boot_task()  : IRAM MMEM ADDR: 0x%08X\n"
@@ -655,24 +656,32 @@ lbl_80549678:
 	.asciz "__DSP_add_task() : Added task    : 0x%08X\n"
 	.balign 4
 	.4byte 0
+.endobj lbl_80549678
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global __DSP_rude_task_pending
-__DSP_rude_task_pending:
+.balign 8
+
+.obj __DSP_rude_task_pending, global
 	.skip 0x4
-.global __DSP_rude_task
-__DSP_rude_task:
+.endobj __DSP_rude_task_pending
+
+.obj __DSP_rude_task, global
 	.skip 0x4
-.global __DSP_tmp_task
-__DSP_tmp_task:
+.endobj __DSP_rude_task
+
+.obj __DSP_tmp_task, global
 	.skip 0x4
-.global __DSP_last_task
-__DSP_last_task:
+.endobj __DSP_tmp_task
+
+.obj __DSP_last_task, global
 	.skip 0x4
-.global __DSP_first_task
-__DSP_first_task:
+.endobj __DSP_last_task
+
+.obj __DSP_first_task, global
 	.skip 0x4
-.global __DSP_curr_task
-__DSP_curr_task:
+.endobj __DSP_first_task
+
+.obj __DSP_curr_task, global
 	.skip 0x4
+.endobj __DSP_curr_task

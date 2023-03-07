@@ -1224,124 +1224,124 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMdlMaterial_typestr
-CMdlMaterial_typestr:
+.obj CMdlMaterial_typestr, global
 	.asciz "CMdlMaterial"
 	.balign 4
+.endobj CMdlMaterial_typestr
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMdlMaterial
-__vt__CMdlMaterial:
+.obj __vt__CMdlMaterial, global
 	.4byte __RTTI__CMdlMaterial
 	.4byte 0
 	.4byte __dt__CMdlMaterial
+.endobj __vt__CMdlMaterial
 
-.global lbl_8057392C
-lbl_8057392C:
+.obj lbl_8057392C, global
 	.asciz "%s::%s: Object not valid."
 	.balign 4
+.endobj lbl_8057392C
 
-.global lbl_80573948
-lbl_80573948:
+.obj lbl_80573948, global
 	.asciz "g3d_resmat_ac.h"
+.endobj lbl_80573948
 
-.global lbl_80573958
-lbl_80573958:
+.obj lbl_80573958, global
 	.asciz "NW4R:Failed assertion !((u32)p & 0x3)"
 	.balign 4
+.endobj lbl_80573958
 
-.global lbl_80573980
-lbl_80573980:
+.obj lbl_80573980, global
 	.asciz "g3d_resmat_ac.h"
+.endobj lbl_80573980
 
-.global lbl_80573990
-lbl_80573990:
+.obj lbl_80573990, global
 	.asciz "NW4R:Failed assertion !((u32)p & 0x3)"
 	.balign 4
+.endobj lbl_80573990
 
-.global lbl_805739B8
-lbl_805739B8:
+.obj lbl_805739B8, global
 	.asciz "g3d_resmat_ac.h"
+.endobj lbl_805739B8
 
-.global lbl_805739C8
-lbl_805739C8:
+.obj lbl_805739C8, global
 	.asciz "NW4R:Failed assertion IsValid()"
+.endobj lbl_805739C8
 
-.global lbl_805739E8
-lbl_805739E8:
+.obj lbl_805739E8, global
 	.asciz "g3d_resmat_ac.h"
+.endobj lbl_805739E8
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80666548
-lbl_80666548:
+.obj lbl_80666548, global
 	.4byte lbl_8066DAA0
+.endobj lbl_80666548
 
 
-.global lbl_8066654C
-lbl_8066654C:
+.obj lbl_8066654C, global
 	.4byte lbl_8066DAA8
+.endobj lbl_8066654C
 
-.global __RTTI__CMdlMaterial
-__RTTI__CMdlMaterial:
+.obj __RTTI__CMdlMaterial, global
 	.4byte CMdlMaterial_typestr
 	.4byte 0
+.endobj __RTTI__CMdlMaterial
 
 
-.global lbl_80666558
-lbl_80666558:
+.obj lbl_80666558, global
 	.4byte 0x72656600
+.endobj lbl_80666558
 
 
-.global lbl_8066655C
-lbl_8066655C:
+.obj lbl_8066655C, global
 	.4byte 0x72656600
+.endobj lbl_8066655C
 
 
-.global lbl_80666560
-lbl_80666560:
+.obj lbl_80666560, global
 	.4byte 0x72656600
+.endobj lbl_80666560
 
 
-.global lbl_80666564
-lbl_80666564:
+.obj lbl_80666564, global
 	.4byte 0x72656600
+.endobj lbl_80666564
 
 
-.global lbl_80666568
-lbl_80666568:
+.obj lbl_80666568, global
 	.4byte 0x72656600
+.endobj lbl_80666568
 
 
-.global lbl_8066656C
-lbl_8066656C:
+.obj lbl_8066656C, global
 	.4byte 0x72656600
+.endobj lbl_8066656C
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_8066DAA0
-lbl_8066DAA0:
+.obj lbl_8066DAA0, global
 	.asciz "Hide"
 	.balign 4
+.endobj lbl_8066DAA0
 
-.global lbl_8066DAA8
-lbl_8066DAA8:
+.obj lbl_8066DAA8, global
 	.4byte 0x50494400
+.endobj lbl_8066DAA8
 
 
-.global float_8066DAAC
-float_8066DAAC:
+.obj float_8066DAAC, global
 	.float 255 #0x437F0000
+.endobj float_8066DAAC
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

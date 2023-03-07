@@ -1912,9 +1912,10 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-.global skg_prim_tbl
-skg_prim_tbl:
+
+.obj skg_prim_tbl, global
 	.2byte 0x401B
 	.2byte 0x4021
 	.2byte 0x4025
@@ -2939,10 +2940,10 @@ skg_prim_tbl:
 	.2byte 0x6817
 	.2byte 0x682D
 	.2byte 0x6839
+.endobj skg_prim_tbl
 
 
-.global adx_bsc_strpool
-adx_bsc_strpool:
+.obj adx_bsc_strpool, global
 	.asciz "E04102501 adxsjd_decode_prep: "
 	.asciz "The data alignment is illegal."
 	.asciz "E1060101 ADXB_DecodeHeaderAdx: "
@@ -2950,23 +2951,30 @@ adx_bsc_strpool:
 	.asciz "E2005042701 : NULL pointer is passed."
 	.asciz "%08X"
 	.4byte 0
+.endobj adx_bsc_strpool
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global skg_init_count
-skg_init_count:
+.obj skg_init_count, global
 	.skip 0x4
-.global ahxsetextfunc
-ahxsetextfunc:
+.endobj skg_init_count
+
+.obj ahxsetextfunc, global
 	.skip 0x4
-.global pl2encodefunc
-pl2encodefunc:
+.endobj ahxsetextfunc
+
+.obj pl2encodefunc, global
 	.skip 0x4
-.global pl2resetfunc
-pl2resetfunc:
+.endobj pl2encodefunc
+
+.obj pl2resetfunc, global
 	.skip 0xC
-.global adxb_dec_err_mode
-adxb_dec_err_mode:
+.endobj pl2resetfunc
+
+.obj adxb_dec_err_mode, global
 	.skip 0x8
-adxb_obj:
+.endobj adxb_dec_err_mode
+
+.obj adxb_obj, local
 	.skip 0xFC0
+.endobj adxb_obj

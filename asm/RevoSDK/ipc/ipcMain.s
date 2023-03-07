@@ -84,17 +84,24 @@
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-Initialized:
-	.skip 0x4
+.balign 8
 
-IPCCurrentBufferLo:
+.obj Initialized, local
 	.skip 0x4
+.endobj Initialized
 
-IPCCurrentBufferHi:
+.obj IPCCurrentBufferLo, local
 	.skip 0x4
+.endobj IPCCurrentBufferLo
 
-IPCBufferLo:
+.obj IPCCurrentBufferHi, local
 	.skip 0x4
+.endobj IPCCurrentBufferHi
 
-IPCBufferHi:
+.obj IPCBufferLo, local
+	.skip 0x4
+.endobj IPCBufferLo
+
+.obj IPCBufferHi, local
 	.skip 0x8
+.endobj IPCBufferHi

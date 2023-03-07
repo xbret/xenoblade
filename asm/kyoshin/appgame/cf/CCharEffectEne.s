@@ -297,10 +297,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_804FD678
-lbl_804FD678:
+.obj lbl_804FD678, global
 	.4byte 0x00790051
 	.4byte 0x00650201
 	.4byte 0x02020203
@@ -323,16 +322,16 @@ lbl_804FD678:
 	.4byte 0
 	.4byte 0x005A0054
 	.4byte 0x00530000
+.endobj lbl_804FD678
 
-.global cf_CCharEffectEne_typestr
-cf_CCharEffectEne_typestr:
+.obj cf_CCharEffectEne_typestr, global
 	.asciz "cf::CCharEffectEne"
 	.balign 4
 	.4byte 0
+.endobj cf_CCharEffectEne_typestr
 
 
-.global lbl_804FD6E8
-lbl_804FD6E8:
+.obj lbl_804FD6E8, global
 	.4byte 0x007B0051
 	.4byte 0x00650000
 	.4byte 0
@@ -355,16 +354,16 @@ lbl_804FD6E8:
 	.4byte 0
 	.4byte 0x005A0054
 	.4byte 0x00530000
+.endobj lbl_804FD6E8
 
-.global cf_CCharEffectNpc_typestr
-cf_CCharEffectNpc_typestr:
+.obj cf_CCharEffectNpc_typestr, global
 	.asciz "cf::CCharEffectNpc"
 	.balign 4
 	.4byte 0
+.endobj cf_CCharEffectNpc_typestr
 
 
-.global lbl_804FD758
-lbl_804FD758:
+.obj lbl_804FD758, global
 	.4byte 0x00790051
 	.4byte 0x00650000
 	.4byte 0
@@ -387,16 +386,16 @@ lbl_804FD758:
 	.4byte 0
 	.4byte 0x005A0054
 	.4byte 0x00530000
+.endobj lbl_804FD758
 
-.global cf_CCharEffectObj_typestr
-cf_CCharEffectObj_typestr:
+.obj cf_CCharEffectObj_typestr, global
 	.asciz "cf::CCharEffectObj"
 	.balign 4
 	.4byte 0
+.endobj cf_CCharEffectObj_typestr
 
 
-.global lbl_804FD7C8
-lbl_804FD7C8:
+.obj lbl_804FD7C8, global
 	.4byte 0x007B0051
 	.4byte 0x00650000
 	.4byte 0
@@ -419,19 +418,19 @@ lbl_804FD7C8:
 	.4byte 0
 	.4byte 0x005A0054
 	.4byte 0x00530000
+.endobj lbl_804FD7C8
 
-.global cf_CCharEffectPc_typestr
-cf_CCharEffectPc_typestr:
+.obj cf_CCharEffectPc_typestr, global
 	.asciz "cf::CCharEffectPc"
 	.balign 4
 	.4byte 0
+.endobj cf_CCharEffectPc_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CCharEffectEne
-__vt__cf_CCharEffectEne:
+.obj __vt__cf_CCharEffectEne, global
 	.4byte __RTTI__cf_CCharEffectEne
 	.4byte 0
 	.4byte __dt__cf_CCharEffectEne
@@ -440,17 +439,17 @@ __vt__cf_CCharEffectEne:
 	.4byte func_800CEE7C
 	.4byte func_8015CD04
 	.4byte func_8015C2B0
+.endobj __vt__cf_CCharEffectEne
 
-.global cf_CCharEffectEne_hierarchy
-cf_CCharEffectEne_hierarchy:
+.obj cf_CCharEffectEne_hierarchy, global
 	.4byte __RTTI__cf_CCharEffect
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CCharEffectEne_hierarchy
 
 
-.global __vt__cf_CCharEffectNpc
-__vt__cf_CCharEffectNpc:
+.obj __vt__cf_CCharEffectNpc, global
 	.4byte __RTTI__cf_CCharEffectNpc
 	.4byte 0
 	.4byte __dt__cf_CCharEffectNpc
@@ -459,17 +458,17 @@ __vt__cf_CCharEffectNpc:
 	.4byte func_800CEE7C
 	.4byte func_8015CD9C
 	.4byte func_8015C2B0
+.endobj __vt__cf_CCharEffectNpc
 
-.global cf_CCharEffectNpc_hierarchy
-cf_CCharEffectNpc_hierarchy:
+.obj cf_CCharEffectNpc_hierarchy, global
 	.4byte __RTTI__cf_CCharEffect
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CCharEffectNpc_hierarchy
 
 
-.global __vt__cf_CCharEffectObj
-__vt__cf_CCharEffectObj:
+.obj __vt__cf_CCharEffectObj, global
 	.4byte __RTTI__cf_CCharEffectObj
 	.4byte 0
 	.4byte __dt__cf_CCharEffectObj
@@ -478,17 +477,17 @@ __vt__cf_CCharEffectObj:
 	.4byte func_800CEE7C
 	.4byte func_8015CE44
 	.4byte func_8015C2B0
+.endobj __vt__cf_CCharEffectObj
 
-.global cf_CCharEffectObj_hierarchy
-cf_CCharEffectObj_hierarchy:
+.obj cf_CCharEffectObj_hierarchy, global
 	.4byte __RTTI__cf_CCharEffect
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CCharEffectObj_hierarchy
 
 
-.global __vt__cf_CCharEffectPc
-__vt__cf_CCharEffectPc:
+.obj __vt__cf_CCharEffectPc, global
 	.4byte __RTTI__cf_CCharEffectPc
 	.4byte 0
 	.4byte __dt__cf_CCharEffectPc
@@ -497,38 +496,38 @@ __vt__cf_CCharEffectPc:
 	.4byte func_800CEE7C
 	.4byte func_8015CED0
 	.4byte func_8015CF90
+.endobj __vt__cf_CCharEffectPc
 
-.global cf_CCharEffectPc_hierarchy
-cf_CCharEffectPc_hierarchy:
+.obj cf_CCharEffectPc_hierarchy, global
 	.4byte __RTTI__cf_CCharEffect
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CCharEffectPc_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-
-.global __RTTI__cf_CCharEffectEne
-__RTTI__cf_CCharEffectEne:
+.obj __RTTI__cf_CCharEffectEne, global
 	.4byte cf_CCharEffectEne_typestr
 	.4byte cf_CCharEffectEne_hierarchy
+.endobj __RTTI__cf_CCharEffectEne
 
-.global __RTTI__cf_CCharEffectNpc
-__RTTI__cf_CCharEffectNpc:
+.obj __RTTI__cf_CCharEffectNpc, global
 	.4byte cf_CCharEffectNpc_typestr
 	.4byte cf_CCharEffectNpc_hierarchy
+.endobj __RTTI__cf_CCharEffectNpc
 
-.global __RTTI__cf_CCharEffectObj
-__RTTI__cf_CCharEffectObj:
+.obj __RTTI__cf_CCharEffectObj, global
 	.4byte cf_CCharEffectObj_typestr
 	.4byte cf_CCharEffectObj_hierarchy
+.endobj __RTTI__cf_CCharEffectObj
 
-.global __RTTI__cf_CCharEffectPc
-__RTTI__cf_CCharEffectPc:
+.obj __RTTI__cf_CCharEffectPc, global
 	.4byte cf_CCharEffectPc_typestr
 	.4byte cf_CCharEffectPc_hierarchy
+.endobj __RTTI__cf_CCharEffectPc
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

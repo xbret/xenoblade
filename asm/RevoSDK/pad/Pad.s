@@ -85,13 +85,24 @@
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-AnalogMode:
-	.4byte 0x00000300
+.balign 8
 
-Spec:
+.obj AnalogMode, local
+	.4byte 0x00000300
+.endobj AnalogMode
+
+.obj Spec, local
 	.4byte 0x00000005
+.endobj Spec
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-EnabledBits:
+.balign 8
+
+.obj __PADSpec, global
 	.skip 0x4
+.endobj __PADSpec
+
+.obj EnabledBits, local
+	.skip 0x4
+.endobj EnabledBits

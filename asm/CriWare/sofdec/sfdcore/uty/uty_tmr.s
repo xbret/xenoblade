@@ -116,19 +116,23 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_80520838
-lbl_80520838:
+.balign 8
+
+.obj lbl_80520838, global
 	.asciz "TMR_CH"
 	.balign 4
+.endobj lbl_80520838
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_8061CE28
-lbl_8061CE28:
+.obj lbl_8061CE28, global
 	.skip 0x4
-.global lbl_8061CE2C
-lbl_8061CE2C:
+.endobj lbl_8061CE28
+
+.obj lbl_8061CE2C, global
 	.skip 0x4
-.global utytmr_unit
-utytmr_unit:
+.endobj lbl_8061CE2C
+
+.obj utytmr_unit, global
 	.skip 0x8
+.endobj utytmr_unit

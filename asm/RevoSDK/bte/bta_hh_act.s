@@ -1699,38 +1699,39 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80544198
-lbl_80544198:
+.balign 8
+
+.obj lbl_80544198, global
 	.asciz "bta_hh_sdp_cback: p_cb: %d result 0x%02x,                             attr_mask 0x%02x"
 	.balign 4
+.endobj lbl_80544198
 
 
-.global lbl_805441F0
-lbl_805441F0:
+.obj lbl_805441F0, global
 	.asciz "bta_hh_start_sdp:: skip SDP for known devices"
 	.balign 4
+.endobj lbl_805441F0
 
 
-.global lbl_80544220
-lbl_80544220:
+.obj lbl_80544220, global
 	.asciz "bta_hh_start_sdp:  HID_HostGetSDPRecord failed:                 Status 0x%2X"
 	.balign 4
+.endobj lbl_80544220
 
 
-.global lbl_80544270
-lbl_80544270:
+.obj lbl_80544270, global
 	.asciz "bta_hh_sdp_cmpl:  status 0x%2X"
 	.balign 4
+.endobj lbl_80544270
 
 
-.global lbl_80544290
-lbl_80544290:
+.obj lbl_80544290, global
 	.asciz "bta_hh_sdp_cmpl:  HID_HostOpenDev failed:                     Status 0x%2X"
 	.balign 4
+.endobj lbl_80544290
 
 
-.global lbl_805442DC
-lbl_805442DC:
+.obj lbl_805442DC, global
 	.asciz "bta_hh_open_act:  Device[%d] connected"
 	.balign 4
 	.asciz "BTA_HH_GET_RPT_EVT"
@@ -1750,10 +1751,10 @@ lbl_805442DC:
 	.asciz "HANDSHAKE received for: event = %s data= %d"
 	.asciz "unknown transaction type"
 	.balign 4
+.endobj lbl_805442DC
 
 
-.global jumptable_805443F0
-jumptable_805443F0:
+.obj jumptable_805443F0, global
 	.4byte .L_802E2CF8
 	.4byte .L_802E2CF8
 	.4byte .L_802E2C8C
@@ -1764,10 +1765,10 @@ jumptable_805443F0:
 	.4byte .L_802E2C1C
 	.4byte .L_802E2B9C
 	.4byte .L_802E2C1C
+.endobj jumptable_805443F0
 
 
-.global jumptable_80544418
-jumptable_80544418:
+.obj jumptable_80544418, global
 	.4byte .L_802E2B64
 	.4byte .L_802E2B64
 	.4byte .L_802E2B5C
@@ -1778,6 +1779,7 @@ jumptable_80544418:
 	.4byte .L_802E2B44
 	.4byte .L_802E2B4C
 	.4byte .L_802E2B54
+.endobj jumptable_80544418
 
 	
 	.asciz "Ctrl DATA received w4: event[%s]"
@@ -1786,8 +1788,7 @@ jumptable_80544418:
 	.balign 4
 
 
-.global jumptable_8054449C
-jumptable_8054449C:
+.obj jumptable_8054449C, global
 	.4byte .L_802E2EBC
 	.4byte .L_802E2EBC
 	.4byte .L_802E2EB4
@@ -1798,10 +1799,10 @@ jumptable_8054449C:
 	.4byte .L_802E2E9C
 	.4byte .L_802E2EA4
 	.4byte .L_802E2EAC
+.endobj jumptable_8054449C
 
 
-.global jumptable_805444C4
-jumptable_805444C4:
+.obj jumptable_805444C4, global
 	.4byte .L_802E2DD8
 	.4byte .L_802E2DD8
 	.4byte .L_802E2DD0
@@ -1813,21 +1814,21 @@ jumptable_805444C4:
 	.4byte .L_802E2DC0
 	.4byte .L_802E2DC8
 	.4byte 0
+.endobj jumptable_805444C4
 
 
-.global lbl_805444F0
-lbl_805444F0:
+.obj lbl_805444F0, global
 	.asciz "invalid command"
+.endobj lbl_805444F0
 
 
-.global lbl_80544500
-lbl_80544500:
+.obj lbl_80544500, global
 	.asciz "HID_HostWriteDev Error %d"
 	.balign 4
+.endobj lbl_80544500
 
 
-.global lbl_8054451C
-lbl_8054451C:
+.obj lbl_8054451C, global
 	.asciz "bta_hh_write_dev_act:: cmd type = %d"
 	.balign 4
 	.asciz "HID_HDEV_EVT_OPEN"
@@ -1852,10 +1853,10 @@ lbl_8054451C:
 	.balign 4
 	.asciz "bta_hh_cback::HID_event [%s]"
 	.balign 4
+.endobj lbl_8054451C
 
 
-.global jumptable_80544648
-jumptable_80544648:
+.obj jumptable_80544648, global
 	.4byte .L_802E3674
 	.4byte .L_802E367C
 	.4byte .L_802E37E0
@@ -1865,10 +1866,10 @@ jumptable_80544648:
 	.4byte .L_802E369C
 	.4byte .L_802E368C
 	.4byte .L_802E36A8
+.endobj jumptable_80544648
 
 
-.global jumptable_8054466C
-jumptable_8054466C:
+.obj jumptable_8054466C, global
 	.4byte .L_802E35FC
 	.4byte .L_802E3604
 	.4byte .L_802E360C
@@ -1879,10 +1880,13 @@ jumptable_8054466C:
 	.4byte .L_802E3634
 	.4byte .L_802E363C
 	
+.endobj jumptable_8054466C
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665920
-lbl_80665920:
+.balign 8
+
+.obj lbl_80665920, global
 	.4byte 0
 	.4byte 0
+.endobj lbl_80665920

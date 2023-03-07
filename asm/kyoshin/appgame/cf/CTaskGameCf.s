@@ -705,90 +705,88 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-
-.global lbl_80529310
-lbl_80529310:
+.obj lbl_80529310, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80044424
+.endobj lbl_80529310
 
-.global lbl_8052931C
-lbl_8052931C:
+.obj lbl_8052931C, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80044480
+.endobj lbl_8052931C
 
-.global lbl_80529328
-lbl_80529328:
+.obj lbl_80529328, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_800444DC
+.endobj lbl_80529328
 
-.global lbl_80529334
-lbl_80529334:
+.obj lbl_80529334, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80044444
+.endobj lbl_80529334
 
-.global lbl_80529340
-lbl_80529340:
+.obj lbl_80529340, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_8004451C
+.endobj lbl_80529340
 
-.global lbl_8052934C
-lbl_8052934C:
+.obj lbl_8052934C, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_800444A0
+.endobj lbl_8052934C
 
-.global lbl_80529358
-lbl_80529358:
+.obj lbl_80529358, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_8004451C
+.endobj lbl_80529358
 
-.global lbl_80529364
-lbl_80529364:
+.obj lbl_80529364, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_800444FC
+.endobj lbl_80529364
 
-.global lbl_80529370
-lbl_80529370:
+.obj lbl_80529370, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_8004451C
+.endobj lbl_80529370
 
-.global lbl_8052937C
-lbl_8052937C:
+.obj lbl_8052937C, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_800447B4
+.endobj lbl_8052937C
 
-.global lbl_80529388
-lbl_80529388:
+.obj lbl_80529388, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_800448DC
+.endobj lbl_80529388
 
-.global lbl_80529394
-lbl_80529394:
+.obj lbl_80529394, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80044934
+.endobj lbl_80529394
 
-.global lbl_805293A0
-lbl_805293A0:
+.obj lbl_805293A0, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_8004499C
+.endobj lbl_805293A0
 
 
-.global __vt__cf_CTaskGameCf
-__vt__cf_CTaskGameCf:
+.obj __vt__cf_CTaskGameCf, global
 	.4byte __RTTI__cf_CTaskGameCf
 	.4byte 0
 	.4byte __dt__cf_CTaskGameCf
@@ -798,9 +796,9 @@ __vt__cf_CTaskGameCf:
 	.4byte func_80044A28
 	.4byte func_80044420
 	.4byte func_80043F20
+.endobj __vt__cf_CTaskGameCf
 
-.global cf_CTaskGameCf_hierarchy
-cf_CTaskGameCf_hierarchy:
+.obj cf_CTaskGameCf_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -810,10 +808,10 @@ cf_CTaskGameCf_hierarchy:
 	.4byte __RTTI__CTTask_cf_CTaskGameCf
 	.4byte 0
 	.4byte 0
+.endobj cf_CTaskGameCf_hierarchy
 
 
-.global __vt__CTTask_cf_CTaskGameCf
-__vt__CTTask_cf_CTaskGameCf:
+.obj __vt__CTTask_cf_CTaskGameCf, global
 	.4byte __RTTI__CTTask_cf_CTaskGameCf
 	.4byte 0
 	.4byte __dt__CTTask_cf_CTaskGameCf
@@ -823,9 +821,9 @@ __vt__CTTask_cf_CTaskGameCf:
 	.4byte func_80044A28
 	.4byte func_80044A70
 	.4byte func_80043F20
+.endobj __vt__CTTask_cf_CTaskGameCf
 
-.global CTTask_cf_CTaskGameCf_hierarchy
-CTTask_cf_CTaskGameCf_hierarchy:
+.obj CTTask_cf_CTaskGameCf_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -834,56 +832,57 @@ CTTask_cf_CTaskGameCf_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CTTask_cf_CTaskGameCf_hierarchy
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CTaskGameCf_typestr
-cf_CTaskGameCf_typestr:
+.obj cf_CTaskGameCf_typestr, global
 	.asciz "cf::CTaskGameCf"
+.endobj cf_CTaskGameCf_typestr
 
-.global CTTask_cf_CTaskGameCf_typestr
-CTTask_cf_CTaskGameCf_typestr:
+.obj CTTask_cf_CTaskGameCf_typestr, global
 	.asciz "CTTask<cf::CTaskGameCf>"
+.endobj CTTask_cf_CTaskGameCf_typestr
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CTaskGameCf
-__RTTI__cf_CTaskGameCf:
+.obj __RTTI__cf_CTaskGameCf, global
 	.4byte cf_CTaskGameCf_typestr
 	.4byte cf_CTaskGameCf_hierarchy
+.endobj __RTTI__cf_CTaskGameCf
 
-.global __RTTI__CTTask_cf_CTaskGameCf
-__RTTI__CTTask_cf_CTaskGameCf:
+.obj __RTTI__CTTask_cf_CTaskGameCf, global
 	.4byte CTTask_cf_CTaskGameCf_typestr
 	.4byte CTTask_cf_CTaskGameCf_hierarchy
+.endobj __RTTI__CTTask_cf_CTaskGameCf
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80666638
-lbl_80666638:
+.obj lbl_80666638, global
 	.skip 0x8
+.endobj lbl_80666638
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_80668620
-float_80668620:
+.obj float_80668620, global
 	.float 0
+.endobj float_80668620
 
 
-.global float_80668624
-float_80668624:
+.obj float_80668624, global
 	.float 1.0
+.endobj float_80668624
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

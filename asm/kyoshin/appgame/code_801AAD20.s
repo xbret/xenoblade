@@ -1202,101 +1202,104 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_804FF8A0
-lbl_804FF8A0:
-	.asciz "setFieldBgm"
+.balign 8
 
-.global lbl_804FF8AC
-lbl_804FF8AC:
+.obj lbl_804FF8A0, global
+	.asciz "setFieldBgm"
+.endobj lbl_804FF8A0
+
+.obj lbl_804FF8AC, global
 	.asciz "setTownBgm"
 	.balign 4
+.endobj lbl_804FF8AC
 
-.global lbl_804FF8B8
-lbl_804FF8B8:
+.obj lbl_804FF8B8, global
 	.asciz "stopFieldBgm"
 	.balign 4
+.endobj lbl_804FF8B8
 
-.global lbl_804FF8C8
-lbl_804FF8C8:
+.obj lbl_804FF8C8, global
 	.asciz "stopTownBgm"
+.endobj lbl_804FF8C8
 
-.global lbl_804FF8D4
-lbl_804FF8D4:
+.obj lbl_804FF8D4, global
 	.asciz "forceFieldBgm"
 	.balign 4
+.endobj lbl_804FF8D4
 
-.global lbl_804FF8E4
-lbl_804FF8E4:
+.obj lbl_804FF8E4, global
 	.asciz "setVolBgm"
 	.balign 4
+.endobj lbl_804FF8E4
 
-.global lbl_804FF8F0
-lbl_804FF8F0:
+.obj lbl_804FF8F0, global
 	.asciz "playVoice"
 	.balign 4
+.endobj lbl_804FF8F0
 
-.global lbl_804FF8FC
-lbl_804FF8FC:
+.obj lbl_804FF8FC, global
 	.asciz "stopVoice"
 	.balign 4
+.endobj lbl_804FF8FC
 
-.global lbl_804FF908
-lbl_804FF908:
+.obj lbl_804FF908, global
 	.asciz "waitVoice"
 	.balign 4
+.endobj lbl_804FF908
 
-.global lbl_804FF914
-lbl_804FF914:
+.obj lbl_804FF914, global
 	.asciz "playSeCommon"
 	.balign 4
+.endobj lbl_804FF914
 
-.global lbl_804FF924
-lbl_804FF924:
+.obj lbl_804FF924, global
 	.asciz "playSeMap"
 	.balign 4
+.endobj lbl_804FF924
 
-.global lbl_804FF930
-lbl_804FF930:
+.obj lbl_804FF930, global
 	.asciz "volSeMap"
 	.balign 4
+.endobj lbl_804FF930
 
-.global lbl_804FF93C
-lbl_804FF93C:
+.obj lbl_804FF93C, global
 	.asciz "stopSeCommon"
 	.balign 4
+.endobj lbl_804FF93C
 
-.global lbl_804FF94C
-lbl_804FF94C:
+.obj lbl_804FF94C, global
 	.asciz "stopSeMap"
 	.balign 4
+.endobj lbl_804FF94C
 
-.global lbl_804FF958
-lbl_804FF958:
+.obj lbl_804FF958, global
 	.asciz "setCamPos"
 	.balign 4
+.endobj lbl_804FF958
 
-.global lbl_804FF964
-lbl_804FF964:
+.obj lbl_804FF964, global
 	.asciz "clearCamPos"
+.endobj lbl_804FF964
 
 
-.global lbl_804FF970
-lbl_804FF970:
+.obj lbl_804FF970, global
 	.asciz "snd/ahx/ev/%s/%s.ahx"
 	.asciz "snd"
 	.byte 0x00, 0x00, 0x00
 	.4byte 0
+.endobj lbl_804FF970
 
 
-.global lbl_804FF990
-lbl_804FF990:
+.obj lbl_804FF990, global
 	.asciz "game"
 	.balign 4
+.endobj lbl_804FF990
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80536BB0
-lbl_80536BB0:
+.balign 8
+
+.obj lbl_80536BB0, global
 	.4byte lbl_8066A668
 	.4byte playBgm
 	.4byte lbl_8066A670
@@ -1335,48 +1338,51 @@ lbl_80536BB0:
 	.4byte clearCamPos
 	.4byte 0
 	.4byte 0
+.endobj lbl_80536BB0
 
 
-.global lbl_80536C48
-lbl_80536C48:
+.obj lbl_80536C48, global
 	.4byte lbl_8066A678
 	.4byte func_801ABDE4
 	.4byte 0
 	.4byte 0
+.endobj lbl_80536C48
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066A650
-float_8066A650:
+.balign 8
+
+.obj float_8066A650, global
 	.float 4096 #0x45800000
+.endobj float_8066A650
 
 
-.global float_8066A654
-float_8066A654:
+.obj float_8066A654, global
 	.float 1.0
+.endobj float_8066A654
 
 
-.global double_8066A658
-double_8066A658:
+.obj double_8066A658, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066A658
 
-.global float_8066A660
-float_8066A660:
+.obj float_8066A660, global
 	.float 0
 	.4byte 0
+.endobj float_8066A660
 
-.global lbl_8066A668
-lbl_8066A668:
+.obj lbl_8066A668, global
 	.asciz "playBgm"
+.endobj lbl_8066A668
 
-.global lbl_8066A670
-lbl_8066A670:
+.obj lbl_8066A670, global
 	.asciz "stopBgm"
+.endobj lbl_8066A670
 
-.global lbl_8066A678
-lbl_8066A678:
+.obj lbl_8066A678, global
 	.4byte 0x636D6400
 	.4byte 0
+.endobj lbl_8066A678
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

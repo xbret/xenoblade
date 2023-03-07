@@ -301,51 +301,51 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CREvtMem_typestr
-cf_CREvtMem_typestr:
+.obj cf_CREvtMem_typestr, global
 	.asciz "cf::CREvtMem"
 	.balign 4
+.endobj cf_CREvtMem_typestr
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CREvtMem
-__vt__cf_CREvtMem:
+.obj __vt__cf_CREvtMem, global
 	.4byte __RTTI__cf_CREvtMem
 	.4byte 0
 	.4byte __dt__cf_CREvtMem
 	.4byte 0
+.endobj __vt__cf_CREvtMem
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CREvtMem
-__RTTI__cf_CREvtMem:
+.obj __RTTI__cf_CREvtMem, global
 	.4byte cf_CREvtMem_typestr
 	.4byte 0
+.endobj __RTTI__cf_CREvtMem
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_80669F10
-float_80669F10:
+.obj float_80669F10, global
 	.float 0
 	.4byte 0
+.endobj float_80669F10
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80666B50
-lbl_80666B50:
+.obj lbl_80666B50, global
 	.skip 0x8
+.endobj lbl_80666B50
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

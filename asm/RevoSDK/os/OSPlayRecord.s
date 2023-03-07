@@ -516,14 +516,15 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8055ECC0
-lbl_8055ECC0:
+.balign 8
+
+.obj lbl_8055ECC0, global
 	.asciz "/title/00000001/00000002/data/play_rec.dat"
 	.balign 4
+.endobj lbl_8055ECC0
 
 
-.global jumptable_8055ECEC
-jumptable_8055ECEC:
+.obj jumptable_8055ECEC, global
 	.4byte .L_8035D7B0
 	.4byte .L_8035D7BC
 	.4byte .L_8035D838
@@ -531,51 +532,68 @@ jumptable_8055ECEC:
 	.4byte .L_8035D8A4
 	.4byte .L_8035D8B0
 	.4byte .L_8035D938
+.endobj jumptable_8055ECEC
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-PlayRecordState:
+.balign 8
+
+.obj PlayRecordState, local
 	.4byte 0x00000009
 	.4byte 0
+.endobj PlayRecordState
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-PlayRecord:
+.obj PlayRecord, local
 	.skip 0x80
+.endobj PlayRecord
 
-PlayRecordAlarm:
+.obj PlayRecordAlarm, local
 	.skip 0x30
+.endobj PlayRecordAlarm
 
-FileInfo:
+.obj FileInfo, local
 	.skip 0x8C
+.endobj FileInfo
 
-Block:
+.obj Block, local
 	.skip 0xBC
+.endobj Block
 
 .skip 0x8
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
+
 #needed to align __start.c
 .balign 8
 
-PlayRecordGet:
+.obj PlayRecordGet, local
 	.skip 0x4
+.endobj PlayRecordGet
 
-PlayRecordError:
+.obj PlayRecordError, local
 	.skip 0x4
+.endobj PlayRecordError
 
-PlayRecordTerminate:
+.obj PlayRecordTerminate, local
 	.skip 0x4
+.endobj PlayRecordTerminate
 
-PlayRecordTerminated:
+.obj PlayRecordTerminated, local
 	.skip 0x4
+.endobj PlayRecordTerminated
 
-PlayRecordRetry:
+.obj PlayRecordRetry, local
 	.skip 0x4
+.endobj PlayRecordRetry
 
-PlayRecordLastError:
+.obj PlayRecordLastError, local
 	.skip 0x4
+.endobj PlayRecordLastError
 
-PlayRecordLastCloseTime:
+.obj PlayRecordLastCloseTime, local
 	.skip 0x8
+.endobj PlayRecordLastCloseTime

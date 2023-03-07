@@ -2108,7 +2108,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-"gGetAnmResultTable__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@":
+.balign 8
+
+.obj "gGetAnmResultTable__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@", local
 	.4byte "GetAnmResult___Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf"
 	.4byte "GetAnmResult_S__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf"
 	.4byte "GetAnmResult_R__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf"
@@ -2117,50 +2119,53 @@
 	.4byte "GetAnmResult_ST__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf"
 	.4byte "GetAnmResult_RT__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf"
 	.4byte "GetAnmResult_SRT__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@FPQ34nw4r3g3d12ChrAnmResultRCQ34nw4r3g3d17ResAnmChrInfoDataPCQ34nw4r3g3d17ResAnmChrNodeDataf"
+.endobj "gGetAnmResultTable__Q34nw4r3g3d27@unnamed@g3d_resanmchr_cpp@"
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C2E0
-float_8066C2E0:
+.balign 8
+
+.obj float_8066C2E0, global
 	.float 0
+.endobj float_8066C2E0
 
 
-.global float_8066C2E4
-float_8066C2E4:
+.obj float_8066C2E4, global
 	.float 1.0
+.endobj float_8066C2E4
 
 
-.global float_8066C2E8
-float_8066C2E8:
+.obj float_8066C2E8, global
 	.float 2 #0x40000000
+.endobj float_8066C2E8
 
 
-.global float_8066C2EC
-float_8066C2EC:
+.obj float_8066C2EC, global
 	.float 3 #0x40400000
+.endobj float_8066C2EC
 
 
-.global float_8066C2F0
-float_8066C2F0:
+.obj float_8066C2F0, global
 	.float 0.711111128 #0x3F360B61
 	.4byte 0
+.endobj float_8066C2F0
 
 
-.global double_8066C2F8
-double_8066C2F8:
+.obj double_8066C2F8, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066C2F8
 
-.global float_8066C300
-float_8066C300:
+.obj float_8066C300, global
 	.float 1.40625 #0x3FB40000
+.endobj float_8066C300
 
 
-.global float_8066C304
-float_8066C304:
+.obj float_8066C304, global
 	.float 90 #0x42B40000
+.endobj float_8066C304
 
 
-.global float_8066C308
-float_8066C308:
+.obj float_8066C308, global
 	.4byte 0xC2B40000
 	.4byte 0
+.endobj float_8066C308

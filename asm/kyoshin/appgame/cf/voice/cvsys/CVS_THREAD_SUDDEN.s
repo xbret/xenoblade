@@ -150,26 +150,25 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CVS_THREAD_SUDDEN_typestr
-cf_CVS_THREAD_SUDDEN_typestr:
+.obj cf_CVS_THREAD_SUDDEN_typestr, global
 	.asciz "cf::CVS_THREAD_SUDDEN"
 	.balign 4
+.endobj cf_CVS_THREAD_SUDDEN_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8053D478
-lbl_8053D478:
+.obj lbl_8053D478, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A8CCC
+.endobj lbl_8053D478
 
 
-.global __vt__cf_CVS_THREAD_SUDDEN
-__vt__cf_CVS_THREAD_SUDDEN:
+.obj __vt__cf_CVS_THREAD_SUDDEN, global
 	.4byte __RTTI__cf_CVS_THREAD_SUDDEN
 	.4byte 0
 	.4byte func_802A3B50
@@ -177,22 +176,23 @@ __vt__cf_CVS_THREAD_SUDDEN:
 	.4byte func_802A8DE0
 	.4byte func_802A1EA0
 	.4byte func_802A8D60
+.endobj __vt__cf_CVS_THREAD_SUDDEN
 
-.global cf_CVS_THREAD_SUDDEN_hierarchy
-cf_CVS_THREAD_SUDDEN_hierarchy:
+.obj cf_CVS_THREAD_SUDDEN_hierarchy, global
 	.4byte __RTTI__cf_CVS_THREAD
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CVS_THREAD_SUDDEN_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CVS_THREAD_SUDDEN
-__RTTI__cf_CVS_THREAD_SUDDEN:
+.obj __RTTI__cf_CVS_THREAD_SUDDEN, global
 	.4byte cf_CVS_THREAD_SUDDEN_typestr
 	.4byte cf_CVS_THREAD_SUDDEN_hierarchy
+.endobj __RTTI__cf_CVS_THREAD_SUDDEN
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

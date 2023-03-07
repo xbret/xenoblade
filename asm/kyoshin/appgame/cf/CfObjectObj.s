@@ -231,24 +231,23 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CfObjectTbox_typestr
-cf_CfObjectTbox_typestr:
+.obj cf_CfObjectTbox_typestr, global
 	.asciz "cf::CfObjectTbox"
 	.balign 4
 	.4byte 0
+.endobj cf_CfObjectTbox_typestr
 
-.global cf_CfObjectObj_typestr
-cf_CfObjectObj_typestr:
+.obj cf_CfObjectObj_typestr, global
 	.asciz "cf::CfObjectObj"
+.endobj cf_CfObjectObj_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global cf_CfObjectTbox_hierarchy
-cf_CfObjectTbox_hierarchy:
+.obj cf_CfObjectTbox_hierarchy, global
 	.4byte __RTTI__cf_CObjectState
 	.4byte 0
 	.4byte __RTTI__cf_CObjectParam
@@ -262,10 +261,10 @@ cf_CfObjectTbox_hierarchy:
 	.4byte __RTTI__cf_CfObjectObj
 	.4byte 0
 	.4byte 0
+.endobj cf_CfObjectTbox_hierarchy
 
 
-.global __vt__cf_CfObjectObj
-__vt__cf_CfObjectObj:
+.obj __vt__cf_CfObjectObj, global
 	.4byte __RTTI__cf_CfObjectObj
 	.4byte 0
 	.4byte func_8003DC64
@@ -403,9 +402,9 @@ __vt__cf_CfObjectObj:
 	.4byte func_800BE5F4
 	.4byte func_800BE65C
 	.4byte func_800BE858
+.endobj __vt__cf_CfObjectObj
 
-.global cf_CfObjectObj_hierarchy
-cf_CfObjectObj_hierarchy:
+.obj cf_CfObjectObj_hierarchy, global
 	.4byte __RTTI__cf_CObjectState
 	.4byte 0
 	.4byte __RTTI__cf_CObjectParam
@@ -418,22 +417,23 @@ cf_CfObjectObj_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CfObjectObj_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CfObjectTbox
-__RTTI__cf_CfObjectTbox:
+.obj __RTTI__cf_CfObjectTbox, global
 	.4byte cf_CfObjectTbox_typestr
 	.4byte cf_CfObjectTbox_hierarchy
+.endobj __RTTI__cf_CfObjectTbox
 
 
-.global __RTTI__cf_CfObjectObj
-__RTTI__cf_CfObjectObj:
+.obj __RTTI__cf_CfObjectObj, global
 	.4byte cf_CfObjectObj_typestr
 	.4byte cf_CfObjectObj_hierarchy
+.endobj __RTTI__cf_CfObjectObj
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

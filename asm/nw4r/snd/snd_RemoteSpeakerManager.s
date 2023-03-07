@@ -189,13 +189,15 @@
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 #@LOCAL@GetInstance__Q44nw4r3snd6detail20RemoteSpeakerManagerFv@instance
-.global lbl_8063B1E8
-lbl_8063B1E8:
+.obj lbl_8063B1E8, global
 	.skip 0x2D8
+.endobj lbl_8063B1E8
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
+
 #@GUARD@GetInstance__Q44nw4r3snd6detail20RemoteSpeakerManagerFv@instance
-.global lbl_80667DD0
-lbl_80667DD0:
+.obj lbl_80667DD0, global
 	.skip 0x8
+.endobj lbl_80667DD0

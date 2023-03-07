@@ -433,123 +433,123 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CScnFogMan_typestr
-CScnFogMan_typestr:
+.obj CScnFogMan_typestr, global
 	.asciz "CScnFogMan"
 	.balign 4
 	.4byte 0
+.endobj CScnFogMan_typestr
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CScnFogMan
-__vt__CScnFogMan:
+.obj __vt__CScnFogMan, global
 	.4byte __RTTI__CScnFogMan
 	.4byte 0
 	.4byte __dt__CScnFogMan
 	.4byte 0
+.endobj __vt__CScnFogMan
 
 
-.global lbl_80572428
-lbl_80572428:
+.obj lbl_80572428, global
 	.asciz "NW4R:Failed assertion IsValid()"
+.endobj lbl_80572428
 
 
-.global lbl_80572448
-lbl_80572448:
+.obj lbl_80572448, global
 	.asciz "g3d_fog.h"
 	.balign 4
 	.4byte 0
+.endobj lbl_80572448
 
 
-.global lbl_80572458
-lbl_80572458:
+.obj lbl_80572458, global
 	.asciz "NW4R:Failed assertion IsValid()"
+.endobj lbl_80572458
 
 
-.global lbl_80572478
-lbl_80572478:
+.obj lbl_80572478, global
 	.asciz "g3d_fog.h"
 	.balign 4
 	.4byte 0
+.endobj lbl_80572478
 
 
-.global lbl_80572488
-lbl_80572488:
+.obj lbl_80572488, global
 	.asciz "NW4R:Failed assertion IsValid()"
+.endobj lbl_80572488
 
 
-.global lbl_805724A8
-lbl_805724A8:
+.obj lbl_805724A8, global
 	.asciz "g3d_fog.h"
 	.balign 4
 	.4byte 0
+.endobj lbl_805724A8
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CScnFogMan
-__RTTI__CScnFogMan:
+.obj __RTTI__CScnFogMan, global
 	.4byte CScnFogMan_typestr
 	.4byte 0
+.endobj __RTTI__CScnFogMan
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066D360
-float_8066D360:
+.obj float_8066D360, global
 	.float 0
+.endobj float_8066D360
 
 
-.global float_8066D364
-float_8066D364:
+.obj float_8066D364, global
 	.float 1.0
+.endobj float_8066D364
 
 
-.global float_8066D368
-float_8066D368:
+.obj float_8066D368, global
 	.float 1000 #0x447A0000
+.endobj float_8066D368
 
 
-.global float_8066D36C
-float_8066D36C:
+.obj float_8066D36C, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_8066D36C
 
 
-.global float_8066D370
-float_8066D370:
+.obj float_8066D370, global
 	.float 100.0
+.endobj float_8066D370
 
 
-.global float_8066D374
-float_8066D374:
+.obj float_8066D374, global
 	.float 255 #0x437F0000
+.endobj float_8066D374
 
 
-.global float_8066D378
-float_8066D378:
+.obj float_8066D378, global
 	.float 0.114477001 #0x3DEA72EB
+.endobj float_8066D378
 
 
-.global float_8066D37C
-float_8066D37C:
+.obj float_8066D37C, global
 	.float 0.298911989 #0x3E990AFE
+.endobj float_8066D37C
 
 
-.global float_8066D380
-float_8066D380:
+.obj float_8066D380, global
 	.float 0.586610973 #0x3F162C23
 	.4byte 0
+.endobj float_8066D380
 
 
-.global double_8066D388
-double_8066D388:
+.obj double_8066D388, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066D388
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -1768,24 +1768,33 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8054B610
-lbl_8054B610:
+.balign 8
+
+.obj lbl_8054B610, global
 	.asciz "<< RVL_SDK - EXI \trelease build: Feb 27 2009 10:02:03 (0x4302_145) >>"
 	.balign 4
+.endobj lbl_8054B610
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-__EXIVersion:
+.balign 8
+
+.obj __EXIVersion, local
 	.4byte lbl_8054B610
 	.4byte 0
+.endobj __EXIVersion
 
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-Ecb:
+.obj Ecb, local
 	.skip 0xC0
+.endobj Ecb
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-IDSerialPort1:
+.balign 8
+
+.obj IDSerialPort1, local
 	.skip 0x8
+.endobj IDSerialPort1

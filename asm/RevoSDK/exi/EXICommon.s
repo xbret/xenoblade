@@ -113,7 +113,9 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global __EXIFreq
-__EXIFreq:
+.balign 8
+
+.obj __EXIFreq, global
 	.4byte 0x00000004
 	.4byte 0
+.endobj __EXIFreq

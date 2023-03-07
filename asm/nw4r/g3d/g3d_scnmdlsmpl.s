@@ -2263,17 +2263,20 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global TYPE_NAME__Q34nw4r3g3d12ScnMdlSimple
-TYPE_NAME__Q34nw4r3g3d12ScnMdlSimple:
+.balign 8
+
+.obj TYPE_NAME__Q34nw4r3g3d12ScnMdlSimple, global
 	.4byte 0x0000000D
 	.asciz "ScnMdlSimple"
 	.balign 4
 	.4byte 0
+.endobj TYPE_NAME__Q34nw4r3g3d12ScnMdlSimple
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global jumptable_8056D010
-jumptable_8056D010:
+.balign 8
+
+.obj jumptable_8056D010, global
 	.4byte .L_803F8690
 	.4byte .L_803F86E8
 	.4byte .L_803F8740
@@ -2281,16 +2284,16 @@ jumptable_8056D010:
 	.4byte .L_803F87F0
 	.4byte .L_803F89F4
 	.4byte .L_803F8844
+.endobj jumptable_8056D010
 
 
-.global lbl_8056D02C
-lbl_8056D02C:
+.obj lbl_8056D02C, global
 	.asciz "NodeTree"
 	.balign 4
+.endobj lbl_8056D02C
 
 
-.global lbl_8056D038
-lbl_8056D038:
+.obj lbl_8056D038, global
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d12ScnMdlSimpleCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -2309,27 +2312,32 @@ lbl_8056D038:
 	.4byte RemoveAnmObj__Q34nw4r3g3d12ScnMdlSimpleFQ44nw4r3g3d12ScnMdlSimple10AnmObjType
 	.4byte GetAnmObj__Q34nw4r3g3d12ScnMdlSimpleFQ44nw4r3g3d12ScnMdlSimple10AnmObjType
 	.4byte GetAnmObj__Q34nw4r3g3d12ScnMdlSimpleCFQ44nw4r3g3d12ScnMdlSimple10AnmObjType
+.endobj lbl_8056D038
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665DC0
-lbl_80665DC0:
+.balign 8
+
+.obj lbl_80665DC0, global
 	.asciz "NodeMix"
+.endobj lbl_80665DC0
 
 
-.global lbl_80665DC8
-lbl_80665DC8:
+.obj lbl_80665DC8, global
 	.asciz "DrawOpa"
+.endobj lbl_80665DC8
 
 
-.global lbl_80665DD0
-lbl_80665DD0:
+.obj lbl_80665DD0, global
 	.asciz "DrawXlu"
+.endobj lbl_80665DD0
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C4E8
-float_8066C4E8:
+.balign 8
+
+.obj float_8066C4E8, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066C4E8

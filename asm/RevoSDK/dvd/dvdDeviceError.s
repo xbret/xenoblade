@@ -197,7 +197,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-__DVDDeviceErrorMessage:
+.balign 8
+
+.obj __DVDDeviceErrorMessage, local
 	.4byte lbl_8054A528
 	.4byte lbl_8054A564
 	.4byte lbl_8054A59C
@@ -206,12 +208,14 @@ __DVDDeviceErrorMessage:
 	.4byte lbl_8054A654
 	.4byte lbl_8054A690
 	.4byte 0
+.endobj __DVDDeviceErrorMessage
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
+
 #"\n\n\nエラーコード００１。\n不明なデバイスが見つかりました。"
-.global lbl_8054A528
-lbl_8054A528:
+.obj lbl_8054A528, global
 	.4byte 0x0A0A0A83
 	.4byte 0x47838981
 	.4byte 0x5B835281
@@ -227,14 +231,14 @@ lbl_8054A528:
 	.4byte 0x82DC82B5
 	.4byte 0x82BD8142
 	.4byte 0
+.endobj lbl_8054A528
 
-.global lbl_8054A564
-lbl_8054A564:
+.obj lbl_8054A564, global
 	.asciz "\n\n\nError #001,\nunauthorized device has been detected."
 	.balign 4
+.endobj lbl_8054A564
 
-.global lbl_8054A59C
-lbl_8054A59C:
+.obj lbl_8054A59C, global
 	#"\n\n\nFehler #001:\nEs wurde eine unzulässige Komponente\nentdeckt."
 	.4byte 0x0A0A0A46
 	.4byte 0x65686C65
@@ -247,9 +251,9 @@ lbl_8054A59C:
 	.4byte 0x7A756CE4
 	.asciz "ssige Komponente\nentdeckt."
 	.balign 4
+.endobj lbl_8054A59C
 
-.global lbl_8054A5DC
-lbl_8054A5DC:
+.obj lbl_8054A5DC, global
 	#.asciz "\n\n\nErreur 001:\nun dispositif non autorisé a été détecté."
 	.4byte 0x0A0A0A45
 	.4byte 0x72726575
@@ -266,42 +270,53 @@ lbl_8054A5DC:
 	.4byte 0x64E97465
 	.4byte 0x6374E92E
 	.4byte 0
+.endobj lbl_8054A5DC
 
-.global lbl_8054A618
-lbl_8054A618:
+.obj lbl_8054A618, global
 	.asciz "\n\n\nError 001:\nSe ha detectado un dispositivo no\nautorizado."
 	
-.global lbl_8054A654
-lbl_8054A654:
+.endobj lbl_8054A618
+
+.obj lbl_8054A654, global
 	.asciz "\n\n\nErrore #001:\nrilevato un dispositivo non autorizzato."
 	.balign 4
+.endobj lbl_8054A654
 
-.global lbl_8054A690
-lbl_8054A690:
+.obj lbl_8054A690, global
 	.asciz "\n\n\nFout #001:\nongeoorloofd onderdeel gevonden."
 	.balign 4
+.endobj lbl_8054A690
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-lowDone:
+.balign 8
+
+.obj lowDone, local
 	.4byte 0x00000001
 	.4byte 0
+.endobj lowDone
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066BF90
-lbl_8066BF90:
+.balign 8
+
+.obj lbl_8066BF90, global
 	.4byte 0xFFFFFF00
 	.4byte 0
+.endobj lbl_8066BF90
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-CheckBuffer:
+.obj CheckBuffer, local
 	.skip 0x20
+.endobj CheckBuffer
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-lowIntType:
+.balign 8
+
+.obj lowIntType, local
 	.skip 0x4
+.endobj lowIntType
 
 .skip 0x4

@@ -696,178 +696,177 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CVS_THREAD_BATTLE_BEGIN_typestr
-cf_CVS_THREAD_BATTLE_BEGIN_typestr:
+.obj cf_CVS_THREAD_BATTLE_BEGIN_typestr, global
 	.asciz "cf::CVS_THREAD_BATTLE_BEGIN"
+.endobj cf_CVS_THREAD_BATTLE_BEGIN_typestr
 
-.global cf_EVS_THREAD_LIB_typestr
-cf_EVS_THREAD_LIB_typestr:
+.obj cf_EVS_THREAD_LIB_typestr, global
 	.asciz "cf::EVS_THREAD_LIB"
 	.balign 4
+.endobj cf_EVS_THREAD_LIB_typestr
 
-.global cf_CVS_THREAD_LIB_typestr
-cf_CVS_THREAD_LIB_typestr:
+.obj cf_CVS_THREAD_LIB_typestr, global
 	.asciz "cf::CVS_THREAD_LIB"
 	.balign 4
 	.4byte 0
+.endobj cf_CVS_THREAD_LIB_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
+
+.obj lbl_8053E1C0, global
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0x00000002
+	.4byte 0x00000002
+	.4byte 0x00000002
+	.4byte 0x00000002
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0x00000002
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0x00000001
+	.4byte 0x00000001
+	.4byte 0x00000001
+	.4byte 0x00000001
+	.4byte 0x00000001
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0x00000001
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000002
+	.4byte 0x00000001
+	.4byte 0x00000001
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0x00000001
+	.4byte 0x00000002
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+	.4byte 0
+.endobj lbl_8053E1C0
 
 
-.global lbl_8053E1C0
-lbl_8053E1C0:
-	.4byte 0
-	.4byte 0x00000002
-	.4byte 0x00000002
-	.4byte 0
-	.4byte 0
-	.4byte 0x00000002
-	.4byte 0
-	.4byte 0x00000002
-	.4byte 0x00000002
-	.4byte 0
-	.4byte 0x00000001
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0x00000002
-	.4byte 0
-	.4byte 0
-	.4byte 0x00000002
-	.4byte 0
-	.4byte 0
-	.4byte 0x00000002
-	.4byte 0
-	.4byte 0x00000001
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0x00000002
-	.4byte 0x00000002
-	.4byte 0x00000002
-	.4byte 0x00000002
-	.4byte 0x00000002
-	.4byte 0x00000002
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0x00000002
-	.4byte 0x00000002
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0x00000002
-	.4byte 0x00000001
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0x00000001
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0x00000002
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0x00000002
-	.4byte 0
-	.4byte 0
-	.4byte 0x00000002
-	.4byte 0x00000002
-	.4byte 0x00000002
-	.4byte 0
-	.4byte 0x00000002
-	.4byte 0x00000001
-	.4byte 0x00000001
-	.4byte 0x00000001
-	.4byte 0x00000001
-	.4byte 0x00000001
-	.4byte 0x00000001
-	.4byte 0
-	.4byte 0x00000001
-	.4byte 0x00000001
-	.4byte 0x00000001
-	.4byte 0
-	.4byte 0
-	.4byte 0x00000002
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0x00000002
-	.4byte 0x00000001
-	.4byte 0x00000001
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0x00000001
-	.4byte 0x00000002
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0x00000001
-	.4byte 0x00000002
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-	.4byte 0
-
-
-.global lbl_8053E3A0
-lbl_8053E3A0:
+.obj lbl_8053E3A0, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802AFC54
+.endobj lbl_8053E3A0
 
-.global lbl_8053E3AC
-lbl_8053E3AC:
+.obj lbl_8053E3AC, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802AFCC8
+.endobj lbl_8053E3AC
 
-.global lbl_8053E3B8
-lbl_8053E3B8:
+.obj lbl_8053E3B8, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802B00EC
+.endobj lbl_8053E3B8
 
-.global lbl_8053E3C4
-lbl_8053E3C4:
+.obj lbl_8053E3C4, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802AFCC8
+.endobj lbl_8053E3C4
 
 
-.global __vt__cf_CVS_THREAD_BATTLE_BEGIN
-__vt__cf_CVS_THREAD_BATTLE_BEGIN:
+.obj __vt__cf_CVS_THREAD_BATTLE_BEGIN, global
 	.4byte __RTTI__cf_CVS_THREAD_BATTLE_BEGIN
 	.4byte 0
 	.4byte func_802A3B50
@@ -876,9 +875,9 @@ __vt__cf_CVS_THREAD_BATTLE_BEGIN:
 	.4byte func_802A1EA0
 	.4byte func_802A3740
 	.4byte 0
+.endobj __vt__cf_CVS_THREAD_BATTLE_BEGIN
 
-.global cf_CVS_THREAD_BATTLE_BEGIN_hierarchy
-cf_CVS_THREAD_BATTLE_BEGIN_hierarchy:
+.obj cf_CVS_THREAD_BATTLE_BEGIN_hierarchy, global
 	.4byte __RTTI__cf_CVS_THREAD
 	.4byte 0
 	.4byte __RTTI__cf_EVS_THREAD_LIB
@@ -887,32 +886,33 @@ cf_CVS_THREAD_BATTLE_BEGIN_hierarchy:
 	.4byte __RTTI__cf_CVS_THREAD_LIB
 	.4byte 0x00000021
 	.4byte 0
+.endobj cf_CVS_THREAD_BATTLE_BEGIN_hierarchy
 
-.global cf_EVS_THREAD_LIB_hierarchy
-cf_EVS_THREAD_LIB_hierarchy:
+.obj cf_EVS_THREAD_LIB_hierarchy, global
 	.4byte __RTTI__cf_CVS_THREAD_LIB
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_EVS_THREAD_LIB_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CVS_THREAD_BATTLE_BEGIN
-__RTTI__cf_CVS_THREAD_BATTLE_BEGIN:
+.obj __RTTI__cf_CVS_THREAD_BATTLE_BEGIN, global
 	.4byte cf_CVS_THREAD_BATTLE_BEGIN_typestr
 	.4byte cf_CVS_THREAD_BATTLE_BEGIN_hierarchy
+.endobj __RTTI__cf_CVS_THREAD_BATTLE_BEGIN
 
-.global __RTTI__cf_EVS_THREAD_LIB
-__RTTI__cf_EVS_THREAD_LIB:
+.obj __RTTI__cf_EVS_THREAD_LIB, global
 	.4byte cf_EVS_THREAD_LIB_typestr
 	.4byte cf_EVS_THREAD_LIB_hierarchy
+.endobj __RTTI__cf_EVS_THREAD_LIB
 
-.global __RTTI__cf_CVS_THREAD_LIB
-__RTTI__cf_CVS_THREAD_LIB:
+.obj __RTTI__cf_CVS_THREAD_LIB, global
 	.4byte cf_CVS_THREAD_LIB_typestr
 	.4byte 0
+.endobj __RTTI__cf_CVS_THREAD_LIB
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

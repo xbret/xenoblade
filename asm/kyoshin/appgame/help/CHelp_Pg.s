@@ -31,12 +31,11 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-
-.global double_8066B800
-double_8066B800:
+.obj double_8066B800, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066B800
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

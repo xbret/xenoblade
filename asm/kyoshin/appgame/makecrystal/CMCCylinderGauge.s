@@ -652,16 +652,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMCCylinderGauge_typestr
-CMCCylinderGauge_typestr:
+.obj CMCCylinderGauge_typestr, global
 	.asciz "CMCCylinderGauge"
 	.balign 4
+.endobj CMCCylinderGauge_typestr
 
 
-.global CMCCylinderGauge_strpool
-CMCCylinderGauge_strpool:
+.obj CMCCylinderGauge_strpool, global
 	.asciz "mf10_cry01_gage.brlyt"
 	.asciz "mf10_cry01_gage_in.brlan"
 	.asciz "mf10_cry01_gage_up.brlan"
@@ -669,60 +668,60 @@ CMCCylinderGauge_strpool:
 	.asciz "mf10_cry01_gage_out.brlan"
 	.asciz "txt_sylinder"
 	.balign 4
+.endobj CMCCylinderGauge_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-
-.global __vt__CMCCylinderGauge
-__vt__CMCCylinderGauge:
+.obj __vt__CMCCylinderGauge, global
 	.4byte __RTTI__CMCCylinderGauge
 	.4byte 0
 	.4byte __dt__CMCCylinderGauge
 	.4byte 0
+.endobj __vt__CMCCylinderGauge
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMCCylinderGauge
-__RTTI__CMCCylinderGauge:
+.obj __RTTI__CMCCylinderGauge, global
 	.4byte CMCCylinderGauge_typestr
 	.4byte 0
+.endobj __RTTI__CMCCylinderGauge
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066ADD8
-float_8066ADD8:
+.obj float_8066ADD8, global
 	.float 0
 	.4byte 0
+.endobj float_8066ADD8
 
 
-.global double_8066ADE0
-double_8066ADE0:
+.obj double_8066ADE0, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066ADE0
 
-.global float_8066ADE8
-float_8066ADE8:
+.obj float_8066ADE8, global
 	.float 30 #0x41F00000
+.endobj float_8066ADE8
 
 
-.global float_8066ADEC
-float_8066ADEC:
+.obj float_8066ADEC, global
 	.float 0.01 #0x3C23D70A
+.endobj float_8066ADEC
 
 
-.global double_8066ADF0
-double_8066ADF0:
+.obj double_8066ADF0, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066ADF0
 
-.global float_8066ADF8
-float_8066ADF8:
+.obj float_8066ADF8, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066ADF8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

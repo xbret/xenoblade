@@ -1477,8 +1477,7 @@
 
 .balign 8 #needed to align TPL.c
 
-.global lbl_8055F270
-lbl_8055F270:
+.obj lbl_8055F270, global
 	.asciz "USB ERR: "
 	.balign 4
 	.asciz "Library is already initialized. Heap Id = %d\n"
@@ -1596,28 +1595,38 @@ lbl_8055F270:
 	.balign 4
 	.asciz "Failed to open %s: %d\n"
 	.balign 4
+.endobj lbl_8055F270
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-hId:
+.balign 8
+
+.obj hId, local
 	.4byte 0xFFFFFFFF
+.endobj hId
 
-s_usb_err:
+.obj s_usb_err, local
 	.4byte 0x01000000
+.endobj s_usb_err
 
 
-.global lbl_80665CF8
-lbl_80665CF8:
+.obj lbl_80665CF8, global
 	.asciz "USB: "
 	.balign 4
+.endobj lbl_80665CF8
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-lo:
-	.skip 0x4
+.balign 8
 
-hi:
+.obj lo, local
 	.skip 0x4
+.endobj lo
 
-s_usb_log:
+.obj hi, local
+	.skip 0x4
+.endobj hi
+
+.obj s_usb_log, local
 	.skip 0x8
+.endobj s_usb_log

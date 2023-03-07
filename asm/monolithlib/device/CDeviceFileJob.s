@@ -73,19 +73,18 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CDeviceFileJob_typestr
-CDeviceFileJob_typestr:
+.obj CDeviceFileJob_typestr, global
 	.asciz "CDeviceFileJob"
 	.balign 4
+.endobj CDeviceFileJob_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CDeviceFileJob
-__vt__CDeviceFileJob:
+.obj __vt__CDeviceFileJob, global
 	.4byte __RTTI__CDeviceFileJob
 	.4byte 0
 	.4byte __dt__CDeviceFileJob
@@ -129,23 +128,24 @@ __vt__CDeviceFileJob:
 	.4byte func_80451EC0
 	.4byte func_80451EB0
 	.4byte func_80451EB8
+.endobj __vt__CDeviceFileJob
 
-.global CDeviceFileJob_hierarchy
-CDeviceFileJob_hierarchy:
+.obj CDeviceFileJob_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
 	.4byte 0
 	.4byte 0
+.endobj CDeviceFileJob_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CDeviceFileJob
-__RTTI__CDeviceFileJob:
+.obj __RTTI__CDeviceFileJob, global
 	.4byte CDeviceFileJob_typestr
 	.4byte CDeviceFileJob_hierarchy
+.endobj __RTTI__CDeviceFileJob
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

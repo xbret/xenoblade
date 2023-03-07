@@ -2012,24 +2012,23 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CException_typestr
-CException_typestr:
+.obj CException_typestr, global
 	.asciz "CException"
 	.balign 4
+.endobj CException_typestr
 
 
-.global lbl_80526894
-lbl_80526894:
+.obj lbl_80526894, global
 	.asciz "CException"
 	.asciz "&"
 	.byte 0x00, 0x00, 0x00
 	.4byte 0
+.endobj lbl_80526894
 
 
-.global lbl_805268A8
-lbl_805268A8:
+.obj lbl_805268A8, global
 	.asciz "CLibHbm"
 	.asciz "CLibG3d"
 	.asciz "CLibLayout"
@@ -2044,13 +2043,13 @@ lbl_805268A8:
 	.4byte 0xDC82B582
 	.4byte 0xBD00434C
 	.4byte 0x69620000
+.endobj lbl_805268A8
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CException
-__vt__CException:
+.obj __vt__CException, global
 	.4byte __RTTI__CException
 	.4byte 0
 	.4byte __dt__CException
@@ -2091,9 +2090,9 @@ __vt__CException:
 	.4byte func_80458ED8
 	.4byte func_80459068
 	.4byte func_80039E30
+.endobj __vt__CException
 
-.global CException_hierarchy
-CException_hierarchy:
+.obj CException_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
@@ -2102,120 +2101,125 @@ CException_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CException_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CException
-__RTTI__CException:
+.obj __RTTI__CException, global
 	.4byte CException_typestr
 	.4byte CException_hierarchy
+.endobj __RTTI__CException
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066CC40
-float_8066CC40:
+.obj float_8066CC40, global
 	.float 0
+.endobj float_8066CC40
 
 
-.global float_8066CC44
-float_8066CC44:
+.obj float_8066CC44, global
 	.float 0.8 #0x3F4CCCCD
+.endobj float_8066CC44
 
 
-.global float_8066CC48
-float_8066CC48:
+.obj float_8066CC48, global
 	.float 1.0
+.endobj float_8066CC48
 
 
-.global float_8066CC4C
-float_8066CC4C:
+.obj float_8066CC4C, global
 	.float 0.5
+.endobj float_8066CC4C
 
 
-.global float_8066CC50
-float_8066CC50:
+.obj float_8066CC50, global
 	.float 1.26582277 #0x3FA2067B
+.endobj float_8066CC50
 
 
-.global float_8066CC54
-float_8066CC54:
+.obj float_8066CC54, global
 	.float 2 #0x40000000
+.endobj float_8066CC54
 
 
-.global float_8066CC58
-float_8066CC58:
+.obj float_8066CC58, global
 	.float -16777216 #0xCB800000
+.endobj float_8066CC58
 
 
-.global float_8066CC5C
-float_8066CC5C:
+.obj float_8066CC5C, global
 	.float 1.01265824 #0x3F819EC9
+.endobj float_8066CC5C
 
 
-.global float_8066CC60
-float_8066CC60:
+.obj float_8066CC60, global
 	.float -1.0
+.endobj float_8066CC60
 
 
-.global float_8066CC64
-float_8066CC64:
+.obj float_8066CC64, global
 	.float 255 #0x437F0000
+.endobj float_8066CC64
 
 
-.global float_8066CC68
-float_8066CC68:
+.obj float_8066CC68, global
 	.float 28 #0x41E00000
 	.4byte 0
+.endobj float_8066CC68
 
 
-.global double_8066CC70
-double_8066CC70:
+.obj double_8066CC70, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066CC70
 
-.global double_8066CC78
-double_8066CC78:
+.obj double_8066CC78, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066CC78
 
-.global float_8066CC80
-float_8066CC80:
+.obj float_8066CC80, global
 	.float 0.04 #0x3D23D70A
 	.4byte 0
+.endobj float_8066CC80
 
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_8065A808
-lbl_8065A808:
+.obj lbl_8065A808, global
 	.skip 0x40
+.endobj lbl_8065A808
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80667F98, global
+	.skip 0x4
+.endobj lbl_80667F98
 
-.global lbl_80667F98
-lbl_80667F98:
+.obj lbl_80667F9C, global
 	.skip 0x4
-.global lbl_80667F9C
-lbl_80667F9C:
+.endobj lbl_80667F9C
+
+.obj lbl_80667FA0, global
 	.skip 0x4
-.global lbl_80667FA0
-lbl_80667FA0:
+.endobj lbl_80667FA0
+
+.obj lbl_80667FA4, global
 	.skip 0x4
-.global lbl_80667FA4
-lbl_80667FA4:
-	.skip 0x4
-.global lbl_80667FA8
-lbl_80667FA8:
+.endobj lbl_80667FA4
+
+.obj lbl_80667FA8, global
 	.skip 0x8
+.endobj lbl_80667FA8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

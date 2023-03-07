@@ -2451,32 +2451,31 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_80519968
-lbl_80519968:
+.obj lbl_80519968, global
 	.4byte 0x3F59999A
 	.4byte 0
+.endobj lbl_80519968
 
 
-.global lbl_80519970
-lbl_80519970:
+.obj lbl_80519970, global
 	.4byte 0x43300000
 	.4byte 0x80000000
 	.4byte 0x00000000
 	.4byte 0x447A0000
 	.4byte 0x42700000
 	.4byte 0xC2700000
+.endobj lbl_80519970
 
 
-.global lbl_80519988
-lbl_80519988:
+.obj lbl_80519988, global
 	.float 100.0
 	.float -1.0
+.endobj lbl_80519988
 
 
-.global adx_tlk_strpool
-adx_tlk_strpool:
+.obj adx_tlk_strpool, global
 	.asciz "E02080804 adxt_Create: parameter error"
 	.asciz "E03100801 adxt_Create: Too many handles."
 	.asciz "E06022201 adxt_Create: Work size is too short."
@@ -2522,39 +2521,48 @@ adx_tlk_strpool:
 	.asciz "E04041901 adxt_GetDecDtLen: parameter error"
 	.asciz "E04041902 ADXT_SetCbDec: parameter error"
 	.asciz "E02080860 adxt_SetKeyString: parameter error"
+.endobj adx_tlk_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global adxstm_seteos_sct
-adxstm_seteos_sct:
+
+.obj adxstm_seteos_sct, global
 	.4byte 0x00000019
+.endobj adxstm_seteos_sct
 
 
-.global adxt_time_adjust_sw
-adxt_time_adjust_sw:
+.obj adxt_time_adjust_sw, global
 	.4byte 0x00000001
+.endobj adxt_time_adjust_sw
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805E8570
-lbl_805E8570:
+.obj lbl_805E8570, global
 	.skip 0x20
-.global lbl_805E8590
-lbl_805E8590:
+.endobj lbl_805E8570
+
+.obj lbl_805E8590, global
 	.skip 0x8
-.global lbl_805E8598
-lbl_805E8598:
+.endobj lbl_805E8590
+
+.obj lbl_805E8598, global
 	.skip 0x4
-.global lbl_805E859C
-lbl_805E859C:
+.endobj lbl_805E8598
+
+.obj lbl_805E859C, global
 	.skip 0x4
-.global lbl_805E85A0
-lbl_805E85A0:
+.endobj lbl_805E859C
+
+.obj lbl_805E85A0, global
 	.skip 0x4
-.global lbl_805E85A4
-lbl_805E85A4:
+.endobj lbl_805E85A0
+
+.obj lbl_805E85A4, global
 	.skip 0x4
-.global lbl_805E85A8
-lbl_805E85A8:
+.endobj lbl_805E85A4
+
+.obj lbl_805E85A8, global
 	.skip 0x48
+.endobj lbl_805E85A8

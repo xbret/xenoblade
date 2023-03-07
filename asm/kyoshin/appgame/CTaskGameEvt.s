@@ -269,24 +269,23 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CTaskGameEvt_typestr
-CTaskGameEvt_typestr:
+.obj CTaskGameEvt_typestr, global
 	.asciz "CTaskGameEvt"
 	.balign 4
+.endobj CTaskGameEvt_typestr
 
-.global CTTask_CTaskGameEvt_typestr
-CTTask_CTaskGameEvt_typestr:
+.obj CTTask_CTaskGameEvt_typestr, global
 	.asciz "CTTask<CTaskGameEvt>"
 	.balign 4
+.endobj CTTask_CTaskGameEvt_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CTaskGameEvt
-__vt__CTaskGameEvt:
+.obj __vt__CTaskGameEvt, global
 	.4byte __RTTI__CTaskGameEvt
 	.4byte 0
 	.4byte __dt__CTaskGameEvt
@@ -336,9 +335,9 @@ __vt__CTaskGameEvt:
 	.4byte func_80295878
 	.4byte func_80295760
 	.4byte func_80295764
+.endobj __vt__CTaskGameEvt
 
-.global CTaskGameEvt_hierarchy
-CTaskGameEvt_hierarchy:
+.obj CTaskGameEvt_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -348,10 +347,10 @@ CTaskGameEvt_hierarchy:
 	.4byte __RTTI__CTTask_CTaskGameEvt
 	.4byte 0
 	.4byte 0
+.endobj CTaskGameEvt_hierarchy
 
 
-.global __vt__CTTask_CTaskGameEvt
-__vt__CTTask_CTaskGameEvt:
+.obj __vt__CTTask_CTaskGameEvt, global
 	.4byte __RTTI__CTTask_CTaskGameEvt
 	.4byte 0
 	.4byte __dt__CTTask_CTaskGameEvt
@@ -361,9 +360,9 @@ __vt__CTTask_CTaskGameEvt:
 	.4byte func_802957D8
 	.4byte func_80295820
 	.4byte func_80043F20
+.endobj __vt__CTTask_CTaskGameEvt
 
-.global CTTask_CTaskGameEvt_hierarchy
-CTTask_CTaskGameEvt_hierarchy:
+.obj CTTask_CTaskGameEvt_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -371,20 +370,21 @@ CTTask_CTaskGameEvt_hierarchy:
 	.4byte __RTTI__CProcess
 	.4byte 0
 	.4byte 0
+.endobj CTTask_CTaskGameEvt_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CTaskGameEvt
-__RTTI__CTaskGameEvt:
+.obj __RTTI__CTaskGameEvt, global
 	.4byte CTaskGameEvt_typestr
 	.4byte CTaskGameEvt_hierarchy
+.endobj __RTTI__CTaskGameEvt
 
-.global __RTTI__CTTask_CTaskGameEvt
-__RTTI__CTTask_CTaskGameEvt:
+.obj __RTTI__CTTask_CTaskGameEvt, global
 	.4byte CTTask_CTaskGameEvt_typestr
 	.4byte CTTask_CTaskGameEvt_hierarchy
+.endobj __RTTI__CTTask_CTaskGameEvt
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

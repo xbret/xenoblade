@@ -113,19 +113,18 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CWorkSystemMem_typestr
-CWorkSystemMem_typestr:
+.obj CWorkSystemMem_typestr, global
 	.asciz "CWorkSystemMem"
 	.balign 4
+.endobj CWorkSystemMem_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CWorkSystemMem
-__vt__CWorkSystemMem:
+.obj __vt__CWorkSystemMem, global
 	.4byte __RTTI__CWorkSystemMem
 	.4byte 0
 	.4byte __dt__CWorkSystemMem
@@ -166,33 +165,33 @@ __vt__CWorkSystemMem:
 	.4byte func_8044497C
 	.4byte func_80444980
 	.4byte func_80039E30
+.endobj __vt__CWorkSystemMem
 
-.global CWorkSystemMem_hierarchy
-CWorkSystemMem_hierarchy:
+.obj CWorkSystemMem_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CWorkSystemMem_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-
-.global __RTTI__CWorkSystemMem
-__RTTI__CWorkSystemMem:
+.obj __RTTI__CWorkSystemMem, global
 	.4byte CWorkSystemMem_typestr
 	.4byte CWorkSystemMem_hierarchy
+.endobj __RTTI__CWorkSystemMem
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80667F00
-lbl_80667F00:
+.obj lbl_80667F00, global
 	.skip 0x8
+.endobj lbl_80667F00
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

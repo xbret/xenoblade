@@ -859,45 +859,44 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CVS_THREAD_EHP_typestr
-cf_CVS_THREAD_EHP_typestr:
+.obj cf_CVS_THREAD_EHP_typestr, global
 	.asciz "cf::CVS_THREAD_EHP"
 	.balign 4
 	.4byte 0
+.endobj cf_CVS_THREAD_EHP_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8053D248
-lbl_8053D248:
+.obj lbl_8053D248, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A617C
+.endobj lbl_8053D248
 
-.global lbl_8053D254
-lbl_8053D254:
+.obj lbl_8053D254, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A6408
+.endobj lbl_8053D254
 
-.global lbl_8053D260
-lbl_8053D260:
+.obj lbl_8053D260, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A6650
+.endobj lbl_8053D260
 
-.global lbl_8053D26C
-lbl_8053D26C:
+.obj lbl_8053D26C, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A658C
+.endobj lbl_8053D26C
 
 
-.global jumptable_8053D278
-jumptable_8053D278:
+.obj jumptable_8053D278, global
 	.4byte .L_802A652C
 	.4byte .L_802A64B8
 	.4byte .L_802A64C0
@@ -909,22 +908,22 @@ jumptable_8053D278:
 	.4byte .L_802A6514
 	.4byte .L_802A651C
 	.4byte .L_802A6524
+.endobj jumptable_8053D278
 
-.global lbl_8053D2A4
-lbl_8053D2A4:
+.obj lbl_8053D2A4, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A6408
+.endobj lbl_8053D2A4
 
-.global lbl_8053D2B0
-lbl_8053D2B0:
+.obj lbl_8053D2B0, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A6718
+.endobj lbl_8053D2B0
 
 
-.global __vt__cf_CVS_THREAD_EHP
-__vt__cf_CVS_THREAD_EHP:
+.obj __vt__cf_CVS_THREAD_EHP, global
 	.4byte __RTTI__cf_CVS_THREAD_EHP
 	.4byte 0
 	.4byte func_802A3B50
@@ -932,42 +931,42 @@ __vt__cf_CVS_THREAD_EHP:
 	.4byte func_802A6818
 	.4byte func_802A1EA0
 	.4byte func_802A3740
+.endobj __vt__cf_CVS_THREAD_EHP
 
-.global cf_CVS_THREAD_EHP_hierarchy
-cf_CVS_THREAD_EHP_hierarchy:
+.obj cf_CVS_THREAD_EHP_hierarchy, global
 	.4byte __RTTI__cf_CVS_THREAD
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CVS_THREAD_EHP_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CVS_THREAD_EHP
-__RTTI__cf_CVS_THREAD_EHP:
+.obj __RTTI__cf_CVS_THREAD_EHP, global
 	.4byte cf_CVS_THREAD_EHP_typestr
 	.4byte cf_CVS_THREAD_EHP_hierarchy
+.endobj __RTTI__cf_CVS_THREAD_EHP
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-
-.global float_8066B538
-float_8066B538:
+.obj float_8066B538, global
 	.float 0
+.endobj float_8066B538
 
 
-.global float_8066B53C
-float_8066B53C:
+.obj float_8066B53C, global
 	.float 0.3 #0x3E99999A
+.endobj float_8066B53C
 
 
-.global double_8066B540
-double_8066B540:
+.obj double_8066B540, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066B540
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

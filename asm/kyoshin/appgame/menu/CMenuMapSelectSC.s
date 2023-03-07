@@ -1206,27 +1206,26 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMenuMapSelectSC_typestr
-CMenuMapSelectSC_typestr:
+.obj CMenuMapSelectSC_typestr, global
 	.asciz "CMenuMapSelectSC"
 	.balign 4
+.endobj CMenuMapSelectSC_typestr
 
 
-.global lbl_80507C34
-lbl_80507C34:
+.obj lbl_80507C34, global
 	.asciz "MNU_map"
 	.asciz "name"
 	.balign 4
 	.4byte 0
+.endobj lbl_80507C34
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global jumptable_8053A8C8
-jumptable_8053A8C8:
+.obj jumptable_8053A8C8, global
 	.4byte .L_80251398
 	.4byte .L_802513A4
 	.4byte .L_802513B0
@@ -1235,10 +1234,10 @@ jumptable_8053A8C8:
 	.4byte .L_802513E4
 	.4byte .L_802513F0
 	.4byte .L_802513FC
+.endobj jumptable_8053A8C8
 
 
-.global __vt__CMenuMapSelectSC
-__vt__CMenuMapSelectSC:
+.obj __vt__CMenuMapSelectSC, global
 	.4byte __RTTI__CMenuMapSelectSC
 	.4byte 0
 	.4byte __dt__CMenuMapSelectSC
@@ -1253,9 +1252,9 @@ __vt__CMenuMapSelectSC:
 	.4byte func_80251DF0
 	.4byte func_80251DE8
 	.4byte func_80251430
+.endobj __vt__CMenuMapSelectSC
 
-.global CMenuMapSelectSC_hierarchy
-CMenuMapSelectSC_hierarchy:
+.obj CMenuMapSelectSC_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000058
 	.4byte __RTTI__CDoubleListNode
@@ -1270,43 +1269,43 @@ CMenuMapSelectSC_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuMapSelectSC_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuMapSelectSC
-__RTTI__CMenuMapSelectSC:
+.obj __RTTI__CMenuMapSelectSC, global
 	.4byte CMenuMapSelectSC_typestr
 	.4byte CMenuMapSelectSC_hierarchy
+.endobj __RTTI__CMenuMapSelectSC
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-
-.global float_8066B070
-float_8066B070:
+.obj float_8066B070, global
 	.float 0
+.endobj float_8066B070
 
 
-.global float_8066B074
-float_8066B074:
+.obj float_8066B074, global
 	.float 1.0
+.endobj float_8066B074
 
 
-.global float_8066B078
-float_8066B078:
+.obj float_8066B078, global
 	.float 10.0
 	.4byte 0
+.endobj float_8066B078
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_806670B0
-lbl_806670B0:
+.obj lbl_806670B0, global
 	.skip 0x8
+.endobj lbl_806670B0
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

@@ -1197,8 +1197,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global svm_strpool
-svm_strpool:
+.balign 8
+
+.obj svm_strpool, global
 	.asciz "2103102:SVM:svm_unlock:lock type miss match.(type org=%d, type now=%d)"
 	.asciz "1071205:SVM_SetCbSvrId:illegal svtype"
 	.asciz "Unknown"
@@ -1211,27 +1212,34 @@ svm_strpool:
 	.asciz "1071301:SVM_ExecSvrFuncId:illegal id"
 	.asciz "1071302:SVM_ExecSvrFuncId:illegal svtype"
 	.4byte 0
+.endobj svm_strpool
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805F5D30
-lbl_805F5D30:
+.obj lbl_805F5D30, global
 	.skip 0x10
-.global lbl_805F5D40
-lbl_805F5D40:
+.endobj lbl_805F5D30
+
+.obj lbl_805F5D40, global
 	.skip 0x8
-.global lbl_805F5D48
-lbl_805F5D48:
+.endobj lbl_805F5D40
+
+.obj lbl_805F5D48, global
 	.skip 0x8
-.global lbl_805F5D50
-lbl_805F5D50:
+.endobj lbl_805F5D48
+
+.obj lbl_805F5D50, global
 	.skip 0x80
-.global lbl_805F5DD0
-lbl_805F5DD0:
+.endobj lbl_805F5D50
+
+.obj lbl_805F5DD0, global
 	.skip 0x248
-.global lbl_805F6018
-lbl_805F6018:
+.endobj lbl_805F5DD0
+
+.obj lbl_805F6018, global
 	.skip 0x98
-.global lbl_805F60B0
-lbl_805F60B0:
+.endobj lbl_805F6018
+
+.obj lbl_805F60B0, global
 	.skip 0x8
+.endobj lbl_805F60B0

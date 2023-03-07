@@ -6155,48 +6155,47 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CUIWindowManager_typestr
-CUIWindowManager_typestr:
+.obj CUIWindowManager_typestr, global
 	.asciz "CUIWindowManager"
 	.balign 4
+.endobj CUIWindowManager_typestr
 
-.global reslist_IUIWindow_typestr
-reslist_IUIWindow_typestr:
+.obj reslist_IUIWindow_typestr, global
 	.asciz "reslist<IUIWindow *>"
 	.balign 4
+.endobj reslist_IUIWindow_typestr
 
-.global _reslist_base_IUIWindow_typestr
-_reslist_base_IUIWindow_typestr:
+.obj _reslist_base_IUIWindow_typestr, global
 	.asciz "_reslist_base<IUIWindow *>"
 	.balign 4
+.endobj _reslist_base_IUIWindow_typestr
 
-.global CUIWindowManager_CTest_typestr
-CUIWindowManager_CTest_typestr:
+.obj CUIWindowManager_CTest_typestr, global
 	.asciz "CUIWindowManager::CTest"
+.endobj CUIWindowManager_CTest_typestr
 
-.global CTTask_CUIWindowManager_CTest_typestr
-CTTask_CUIWindowManager_CTest_typestr:
+.obj CTTask_CUIWindowManager_CTest_typestr, global
 	.asciz "CTTask<CUIWindowManager::CTest>"
+.endobj CTTask_CUIWindowManager_CTest_typestr
 
-.global CTTask_CUIWindowManager_typestr
-CTTask_CUIWindowManager_typestr:
+.obj CTTask_CUIWindowManager_typestr, global
 	.asciz "CTTask<CUIWindowManager>"
 	.balign 4
+.endobj CTTask_CUIWindowManager_typestr
 
 
-.global lbl_804FC1AC
-lbl_804FC1AC:
+.obj lbl_804FC1AC, global
 	.asciz "qst_genre"
 	.asciz "landmarklist"
 	.asciz "mapID"
 	.balign 4
 	.4byte 0
+.endobj lbl_804FC1AC
 
 
-.global lbl_804FC1D0
-lbl_804FC1D0:
+.obj lbl_804FC1D0, global
 	.4byte 0
 	.4byte 0x00000001
 	.4byte 0x00000056
@@ -6225,9 +6224,9 @@ lbl_804FC1D0:
 	.4byte 0x000003C1
 	.4byte 0
 	.4byte 0
+.endobj lbl_804FC1D0
 
-.global lbl_804FC240
-lbl_804FC240:
+.obj lbl_804FC240, global
 	.4byte 0x0000006F
 	.4byte 0x00000070
 	.4byte 0x00000079
@@ -6236,10 +6235,10 @@ lbl_804FC240:
 	.4byte 0x00000084
 	.4byte 0x0000008D
 	.4byte 0x0000008E
+.endobj lbl_804FC240
 
 
-.global lbl_804FC260
-lbl_804FC260:
+.obj lbl_804FC260, global
 	.4byte 0x0000006F
 	.4byte 0x00000070
 	.4byte 0x00000079
@@ -6248,10 +6247,10 @@ lbl_804FC260:
 	.4byte 0x00000084
 	.4byte 0x0000008D
 	.4byte 0x0000008E
+.endobj lbl_804FC260
 
 
-.global CUIWindowManager_strpool
-CUIWindowManager_strpool:
+.obj CUIWindowManager_strpool, global
 	.asciz "rlt_meet"
 	.asciz "itemType"
 	.asciz "qst_genre"
@@ -6322,13 +6321,13 @@ CUIWindowManager_strpool:
 	.asciz "flg_relate_B4"
 	.asciz "up_relate_B4"
 	.balign 4
+.endobj CUIWindowManager_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CUIWindowManager
-__vt__CUIWindowManager:
+.obj __vt__CUIWindowManager, global
 	.4byte __RTTI__CUIWindowManager
 	.4byte 0
 	.4byte __dt__CUIWindowManager
@@ -6343,9 +6342,9 @@ __vt__CUIWindowManager:
 	.4byte func_8013F23C
 	.4byte func_8013F234
 	.4byte func_8013CBB4
+.endobj __vt__CUIWindowManager
 
-.global CUIWindowManager_hierarchy
-CUIWindowManager_hierarchy:
+.obj CUIWindowManager_hierarchy, global
 	.4byte __RTTI__cf_IFlagEvent
 	.4byte 0x00000054
 	.4byte __RTTI__CDoubleListNode
@@ -6357,30 +6356,30 @@ CUIWindowManager_hierarchy:
 	.4byte __RTTI__CTTask_CUIWindowManager
 	.4byte 0
 	.4byte 0
+.endobj CUIWindowManager_hierarchy
 
 
-.global __vt__reslist_IUIWindow
-__vt__reslist_IUIWindow:
+.obj __vt__reslist_IUIWindow, global
 	.4byte __RTTI__reslist_IUIWindow
 	.4byte 0
 	.4byte __dt__reslist_IUIWindow
+.endobj __vt__reslist_IUIWindow
 
-.global reslist_IUIWindow_hierarchy
-reslist_IUIWindow_hierarchy:
+.obj reslist_IUIWindow_hierarchy, global
 	.4byte __RTTI___reslist_base_IUIWindow
 	.4byte 0
 	.4byte 0
+.endobj reslist_IUIWindow_hierarchy
 
 
-.global __vt___reslist_base_IUIWindow
-__vt___reslist_base_IUIWindow:
+.obj __vt___reslist_base_IUIWindow, global
 	.4byte __RTTI___reslist_base_IUIWindow
 	.4byte 0
 	.4byte __dt___reslist_base_IUIWindow
+.endobj __vt___reslist_base_IUIWindow
 
 
-.global __vt__CUIWindowManager_CTest
-__vt__CUIWindowManager_CTest:
+.obj __vt__CUIWindowManager_CTest, global
 	.4byte __RTTI__CUIWindowManager_CTest
 	.4byte 0
 	.4byte __dt__CUIWindowManager_CTest
@@ -6390,9 +6389,9 @@ __vt__CUIWindowManager_CTest:
 	.4byte func_8013F0AC
 	.4byte func_8013F0A8
 	.4byte func_80043F20
+.endobj __vt__CUIWindowManager_CTest
 
-.global CUIWindowManager_CTest_hierarchy
-CUIWindowManager_CTest_hierarchy:
+.obj CUIWindowManager_CTest_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -6402,10 +6401,10 @@ CUIWindowManager_CTest_hierarchy:
 	.4byte __RTTI__CTTask_CUIWindowManager_CTest
 	.4byte 0
 	.4byte 0
+.endobj CUIWindowManager_CTest_hierarchy
 
 
-.global __vt__CTTask_CUIWindowManager_CTest
-__vt__CTTask_CUIWindowManager_CTest:
+.obj __vt__CTTask_CUIWindowManager_CTest, global
 	.4byte __RTTI__CTTask_CUIWindowManager_CTest
 	.4byte 0
 	.4byte __dt__CTTask_CUIWindowManager_CTest
@@ -6415,9 +6414,9 @@ __vt__CTTask_CUIWindowManager_CTest:
 	.4byte func_8013F0B8
 	.4byte func_8013F100
 	.4byte func_80043F20
+.endobj __vt__CTTask_CUIWindowManager_CTest
 
-.global CTTask_CUIWindowManager_CTest_hierarchy
-CTTask_CUIWindowManager_CTest_hierarchy:
+.obj CTTask_CUIWindowManager_CTest_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -6425,10 +6424,10 @@ CTTask_CUIWindowManager_CTest_hierarchy:
 	.4byte __RTTI__CProcess
 	.4byte 0
 	.4byte 0
+.endobj CTTask_CUIWindowManager_CTest_hierarchy
 
 
-.global __vt__CTTask_CUIWindowManager
-__vt__CTTask_CUIWindowManager:
+.obj __vt__CTTask_CUIWindowManager, global
 	.4byte __RTTI__CTTask_CUIWindowManager
 	.4byte 0
 	.4byte __dt__CTTask_CUIWindowManager
@@ -6438,9 +6437,9 @@ __vt__CTTask_CUIWindowManager:
 	.4byte func_8013F148
 	.4byte func_8013F190
 	.4byte func_80043F20
+.endobj __vt__CTTask_CUIWindowManager
 
-.global CTTask_CUIWindowManager_hierarchy
-CTTask_CUIWindowManager_hierarchy:
+.obj CTTask_CUIWindowManager_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -6448,62 +6447,65 @@ CTTask_CUIWindowManager_hierarchy:
 	.4byte __RTTI__CProcess
 	.4byte 0
 	.4byte 0
+.endobj CTTask_CUIWindowManager_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CUIWindowManager
-__RTTI__CUIWindowManager:
+.obj __RTTI__CUIWindowManager, global
 	.4byte CUIWindowManager_typestr
 	.4byte CUIWindowManager_hierarchy
+.endobj __RTTI__CUIWindowManager
 
-.global __RTTI__reslist_IUIWindow
-__RTTI__reslist_IUIWindow:
+.obj __RTTI__reslist_IUIWindow, global
 	.4byte reslist_IUIWindow_typestr
 	.4byte reslist_IUIWindow_hierarchy
+.endobj __RTTI__reslist_IUIWindow
 
-.global __RTTI___reslist_base_IUIWindow
-__RTTI___reslist_base_IUIWindow:
+.obj __RTTI___reslist_base_IUIWindow, global
 	.4byte _reslist_base_IUIWindow_typestr
 	.4byte 0
+.endobj __RTTI___reslist_base_IUIWindow
 
-.global __RTTI__CUIWindowManager_CTest
-__RTTI__CUIWindowManager_CTest:
+.obj __RTTI__CUIWindowManager_CTest, global
 	.4byte CUIWindowManager_CTest_typestr
 	.4byte CUIWindowManager_CTest_hierarchy
+.endobj __RTTI__CUIWindowManager_CTest
 
-.global __RTTI__CTTask_CUIWindowManager_CTest
-__RTTI__CTTask_CUIWindowManager_CTest:
+.obj __RTTI__CTTask_CUIWindowManager_CTest, global
 	.4byte CTTask_CUIWindowManager_CTest_typestr
 	.4byte CTTask_CUIWindowManager_CTest_hierarchy
+.endobj __RTTI__CTTask_CUIWindowManager_CTest
 
-.global __RTTI__CTTask_CUIWindowManager
-__RTTI__CTTask_CUIWindowManager:
+.obj __RTTI__CTTask_CUIWindowManager, global
 	.4byte CTTask_CUIWindowManager_typestr
 	.4byte CTTask_CUIWindowManager_hierarchy
+.endobj __RTTI__CTTask_CUIWindowManager
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_80577448
-lbl_80577448:
+.obj lbl_80577448, global
 	.skip 0xC8
-.global lbl_80577510
-lbl_80577510:
+.endobj lbl_80577448
+
+.obj lbl_80577510, global
 	.skip 0x70
+.endobj lbl_80577510
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80666978, global
+	.skip 0x4
+.endobj lbl_80666978
 
-.global lbl_80666978
-lbl_80666978:
+.obj lbl_8066697C, global
 	.skip 0x4
-.global lbl_8066697C
-lbl_8066697C:
-	.skip 0x4
+.endobj lbl_8066697C
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

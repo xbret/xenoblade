@@ -1354,16 +1354,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CfGimmickJump_typestr
-cf_CfGimmickJump_typestr:
+.obj cf_CfGimmickJump_typestr, global
 	.asciz "cf::CfGimmickJump"
 	.balign 4
+.endobj cf_CfGimmickJump_typestr
 
 
-.global CfGimmickJump_strpool
-CfGimmickJump_strpool:
+.obj CfGimmickJump_strpool, global
 	.asciz "lnPosX"
 	.asciz "lnPosY"
 	.asciz "lnPosZ"
@@ -1380,13 +1379,13 @@ CfGimmickJump_strpool:
 	.asciz "exTime"
 	.balign 4
 	.4byte 0
+.endobj CfGimmickJump_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_805391A0
-lbl_805391A0:
+.obj lbl_805391A0, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_8020F8C4
@@ -1399,10 +1398,10 @@ lbl_805391A0:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_8020FD2C
+.endobj lbl_805391A0
 
 
-.global __vt__cf_CfGimmickJump
-__vt__cf_CfGimmickJump:
+.obj __vt__cf_CfGimmickJump, global
 	.4byte __RTTI__cf_CfGimmickJump
 	.4byte 0
 	.4byte __dt__cf_CfGimmickJump
@@ -1412,80 +1411,81 @@ __vt__cf_CfGimmickJump:
 	.4byte func_801F4BF8
 	.4byte func_801F4C8C
 	.4byte func_8020F38C
+.endobj __vt__cf_CfGimmickJump
 
-.global cf_CfGimmickJump_hierarchy
-cf_CfGimmickJump_hierarchy:
+.obj cf_CfGimmickJump_hierarchy, global
 	.4byte __RTTI__cf_IObjectInfo
 	.4byte 0
 	.4byte __RTTI__cf_CfGimmick
 	.4byte 0
 	.4byte 0
+.endobj cf_CfGimmickJump_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CfGimmickJump
-__RTTI__cf_CfGimmickJump:
+.obj __RTTI__cf_CfGimmickJump, global
 	.4byte cf_CfGimmickJump_typestr
 	.4byte cf_CfGimmickJump_hierarchy
+.endobj __RTTI__cf_CfGimmickJump
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066ACC0
-float_8066ACC0:
+.obj float_8066ACC0, global
 	.float 0.01 #0x3C23D70A
+.endobj float_8066ACC0
 
 
-.global float_8066ACC4
-float_8066ACC4:
+.obj float_8066ACC4, global
 	.float 0
+.endobj float_8066ACC4
 
 
-.global float_8066ACC8
-float_8066ACC8:
+.obj float_8066ACC8, global
 	.float 30 #0x41F00000
+.endobj float_8066ACC8
 
 
-.global float_8066ACCC
-float_8066ACCC:
+.obj float_8066ACCC, global
 	.float 1.0
+.endobj float_8066ACCC
 
 
-.global double_8066ACD0
-double_8066ACD0:
+.obj double_8066ACD0, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066ACD0
 
-.global double_8066ACD8
-double_8066ACD8:
+.obj double_8066ACD8, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066ACD8
 
-.global float_8066ACE0
-float_8066ACE0:
+.obj float_8066ACE0, global
 	.float 5 #0x40A00000
+.endobj float_8066ACE0
 
 
-.global float_8066ACE4
-float_8066ACE4:
+.obj float_8066ACE4, global
 	.float 0.3 #0x3E99999A
+.endobj float_8066ACE4
 
 
-.global float_8066ACE8
-float_8066ACE8:
+.obj float_8066ACE8, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_8066ACE8
 
 
-.global float_8066ACEC
-float_8066ACEC:
+.obj float_8066ACEC, global
 	.float -0.1 #0xBDCCCCCD
+.endobj float_8066ACEC
 
 
-.global float_8066ACF0
-float_8066ACF0:
+.obj float_8066ACF0, global
 	.float 150 #0x43160000
 	.4byte 0
+.endobj float_8066ACF0
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

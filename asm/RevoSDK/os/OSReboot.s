@@ -44,8 +44,12 @@
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-SaveStart:
-	.skip 0x4
+.balign 8
 
-SaveEnd:
+.obj SaveStart, local
 	.skip 0x4
+.endobj SaveStart
+
+.obj SaveEnd, local
+	.skip 0x4
+.endobj SaveEnd

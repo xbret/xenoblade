@@ -572,8 +572,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056E5D0
-lbl_8056E5D0:
+.balign 8
+
+.obj lbl_8056E5D0, global
 	.4byte 0
 	.4byte 0
 	.4byte GetRuntimeTypeInfo__Q44nw4r3snd6detail9StrmSoundCFv
@@ -588,25 +589,30 @@ lbl_8056E5D0:
 	.4byte OnUpdatePlayerPriority__Q44nw4r3snd6detail9StrmSoundFv
 	.4byte UpdateMoveValue__Q44nw4r3snd6detail9StrmSoundFv
 	.4byte UpdateParam__Q44nw4r3snd6detail9StrmSoundFv
+.endobj lbl_8056E5D0
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C888
-float_8066C888:
+.balign 8
+
+.obj float_8066C888, global
 	.float 0
+.endobj float_8066C888
 
 
-.global float_8066C88C
-float_8066C88C:
+.obj float_8066C88C, global
 	.float 1.0
+.endobj float_8066C88C
 
 
-.global double_8066C890
-double_8066C890:
+.obj double_8066C890, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066C890
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global typeInfo__Q44nw4r3snd6detail9StrmSound
-typeInfo__Q44nw4r3snd6detail9StrmSound:
+.balign 8
+
+.obj typeInfo__Q44nw4r3snd6detail9StrmSound, global
 	.skip 0x8
+.endobj typeInfo__Q44nw4r3snd6detail9StrmSound

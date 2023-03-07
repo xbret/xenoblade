@@ -4591,19 +4591,22 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global _cExtInvalidData
-_cExtInvalidData:
+.balign 8
+
+.obj _cExtInvalidData, global
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
 	.4byte 0xFF000000
+.endobj _cExtInvalidData
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global __a1_input_reports_array
-__a1_input_reports_array:
+.balign 8
+
+.obj __a1_input_reports_array, global
 	.4byte __a1_20_status_report
 	.4byte __a1_21_user_data
 	.4byte __a1_22_ack
@@ -4636,9 +4639,9 @@ __a1_input_reports_array:
 	.4byte __a1_3d_data_type
 	.4byte __a1_3e_data_type
 	.4byte __a1_3f_data_type
+.endobj __a1_input_reports_array
 
-.global lbl_80560AB0
-lbl_80560AB0:
+.obj lbl_80560AB0, global
 	.asciz "detaching extension during initialization.\n"
 	.asciz "Dpd Setting is ok.\n"
 	.asciz "Dpd Setting is broken.\n"
@@ -4692,15 +4695,15 @@ lbl_80560AB0:
 	.asciz "Keep calibration!\n"
 	.balign 4
 	.asciz "Recalibration!\n"
+.endobj lbl_80560AB0
 
 
-.global lbl_80560E68
-lbl_80560E68:
+.obj lbl_80560E68, global
 	.asciz "Received report 20\n"
+.endobj lbl_80560E68
 
 
-.global lbl_80560E7C
-lbl_80560E7C:
+.obj lbl_80560E7C, global
 	.asciz "initialize attachment\n"
 	.balign 4
 	.asciz "read error happens!\n"
@@ -4725,135 +4728,152 @@ lbl_80560E7C:
 	.asciz "invalid ack!\n"
 	.balign 4
 	.4byte 0
+.endobj lbl_80560E7C
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C200
-lbl_8066C200:
+.balign 8
+
+.obj lbl_8066C200, global
 	.4byte 0x007F0380
+.endobj lbl_8066C200
 
 
-.global lbl_8066C204
-lbl_8066C204:
+.obj lbl_8066C204, global
 	.4byte 0x0380007F
+.endobj lbl_8066C204
 
 
-.global lbl_8066C208
-lbl_8066C208:
+.obj lbl_8066C208, global
 	.4byte 0x005D005D
+.endobj lbl_8066C208
 
 
-.global lbl_8066C20C
-lbl_8066C20C:
+.obj lbl_8066C20C, global
 	.4byte 0x02A202A2
+.endobj lbl_8066C20C
 
 
-.global float_8066C210
-float_8066C210:
+.obj float_8066C210, global
 	.float 0
+.endobj float_8066C210
 
 
-.global float_8066C214
-float_8066C214:
+.obj float_8066C214, global
 	.float 0.25
+.endobj float_8066C214
 
 
-.global float_8066C218
-float_8066C218:
+.obj float_8066C218, global
 	.float 126.5 #0x42FD0000
+.endobj float_8066C218
 
 
-.global float_8066C21C
-float_8066C21C:
+.obj float_8066C21C, global
 	.float 1332.5 #0x44A69000
+.endobj float_8066C21C
 
 
-.global double_8066C220
-double_8066C220:
+.obj double_8066C220, global
 	.double 0.094934336841106415 #0x3FB84D9DE0000000
+.endobj double_8066C220
 
 
-.global float_8066C228
-float_8066C228:
+.obj float_8066C228, global
 	.float 93 #0x42BA0000
+.endobj float_8066C228
 
 
-.global float_8066C22C
-float_8066C22C:
+.obj float_8066C22C, global
 	.float 1337.4 #0x44A72CCD
+.endobj float_8066C22C
 
 
-.global double_8066C230
-double_8066C230:
+.obj double_8066C230, global
 	.double 0.069537907838821411 #0x3FB1CD3C80000000
+.endobj double_8066C230
 
 
-.global float_8066C238
-float_8066C238:
+.obj float_8066C238, global
 	.float -1.0
+.endobj float_8066C238
 
 
-.global float_8066C23C
-float_8066C23C:
+.obj float_8066C23C, global
 	.float 383.5 #0x43BFC000
+.endobj float_8066C23C
 
 
-.global float_8066C240
-float_8066C240:
+.obj float_8066C240, global
 	.float 511.5 #0x43FFC000
 	.4byte 0
+.endobj float_8066C240
 
 
-.global double_8066C248
-double_8066C248:
+.obj double_8066C248, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066C248
 
-.global float_8066C250
-float_8066C250:
+.obj float_8066C250, global
 	.float 3.141592 #0x40490FD8
 	.4byte 0
+.endobj float_8066C250
 
 
-.global double_8066C258
-double_8066C258:
+.obj double_8066C258, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066C258
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-_wpadCalibrationX:
+.obj _wpadCalibrationX, local
 	.skip 0x10
+.endobj _wpadCalibrationX
 
-_wpadCalibrationY:
+.obj _wpadCalibrationY, local
 	.skip 0x10
+.endobj _wpadCalibrationY
 
-_wpadCenterX:
+.obj _wpadCenterX, local
 	.skip 0x10
+.endobj _wpadCenterX
 
-_wpadCenterY:
+.obj _wpadCenterY, local
 	.skip 0x10
+.endobj _wpadCenterY
 
-_wpadRolag:
+.obj _wpadRolag, local
 	.skip 0x10
+.endobj _wpadRolag
 
-_wpadExtRawData:
+.obj _wpadExtRawData, local
 	.skip 0x30
+.endobj _wpadExtRawData
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-_recv_3e:
-	.skip 0x4
+.balign 8
 
-_recv_3f:
+.obj _recv_3e, local
 	.skip 0x4
+.endobj _recv_3e
 
-_wpadExtInitRetryCnt:
+.obj _recv_3f, local
 	.skip 0x4
+.endobj _recv_3f
 
-_wpadCLCompt:
+.obj _wpadExtInitRetryCnt, local
 	.skip 0x4
+.endobj _wpadExtInitRetryCnt
 
-_wpadDevMode:
+.obj _wpadCLCompt, local
 	.skip 0x4
+.endobj _wpadCLCompt
 
-_wpadDevType:
+.obj _wpadDevMode, local
 	.skip 0x4
+.endobj _wpadDevMode
+
+.obj _wpadDevType, local
+	.skip 0x4
+.endobj _wpadDevType

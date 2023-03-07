@@ -549,15 +549,14 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CtrlMoveNpc_typestr
-cf_CtrlMoveNpc_typestr:
+.obj cf_CtrlMoveNpc_typestr, global
 	.asciz "cf::CtrlMoveNpc"
+.endobj cf_CtrlMoveNpc_typestr
 
 
-.global CtrlMoveNpc_strpool
-CtrlMoveNpc_strpool:
+.obj CtrlMoveNpc_strpool, global
 	.asciz "erase"
 	.asciz "questID"
 	.asciz "qst_sflg"
@@ -568,98 +567,99 @@ CtrlMoveNpc_strpool:
 	.asciz "eflg2"
 	.asciz "model"
 	.balign 4
+.endobj CtrlMoveNpc_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_80536560
-lbl_80536560:
+.obj lbl_80536560, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_8019F93C
+.endobj lbl_80536560
 
 
-.global __vt__cf_CtrlMoveNpc
-__vt__cf_CtrlMoveNpc:
+.obj __vt__cf_CtrlMoveNpc, global
 	.4byte __RTTI__cf_CtrlMoveNpc
 	.4byte 0
 	.4byte func_80089628
+.endobj __vt__cf_CtrlMoveNpc
 
-.global cf_CtrlMoveNpc_hierarchy
-cf_CtrlMoveNpc_hierarchy:
+.obj cf_CtrlMoveNpc_hierarchy, global
 	.4byte __RTTI__cf_CtrlMoveBase
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CtrlMoveNpc_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CtrlMoveNpc
-__RTTI__cf_CtrlMoveNpc:
+.obj __RTTI__cf_CtrlMoveNpc, global
 	.4byte cf_CtrlMoveNpc_typestr
 	.4byte cf_CtrlMoveNpc_hierarchy
+.endobj __RTTI__cf_CtrlMoveNpc
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066A518
-float_8066A518:
+.obj float_8066A518, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_8066A518
 
 
-.global float_8066A51C
-float_8066A51C:
+.obj float_8066A51C, global
 	.float 0
+.endobj float_8066A51C
 
 
-.global float_8066A520
-float_8066A520:
+.obj float_8066A520, global
 	.float 0.2
+.endobj float_8066A520
 
 
-.global float_8066A524
-float_8066A524:
+.obj float_8066A524, global
 	.float 3.6 #0x40666666
+.endobj float_8066A524
 
 
-.global float_8066A528
-float_8066A528:
+.obj float_8066A528, global
 	.float 1.0
+.endobj float_8066A528
 
 
-.global float_8066A52C
-float_8066A52C:
+.obj float_8066A52C, global
 	.float 0.040000003 #0x3D23D70B
+.endobj float_8066A52C
 
 
-.global float_8066A530
-float_8066A530:
+.obj float_8066A530, global
 	.float 4 #0x40800000
+.endobj float_8066A530
 
 
-.global float_8066A534
-float_8066A534:
+.obj float_8066A534, global
 	.float 0.5
+.endobj float_8066A534
 
 
-.global float_8066A538
-float_8066A538:
+.obj float_8066A538, global
 	.float 360 #0x43B40000
 	.4byte 0
+.endobj float_8066A538
 
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_80578FD8
-lbl_80578FD8:
+.obj lbl_80578FD8, global
 	.skip 0x10
+.endobj lbl_80578FD8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

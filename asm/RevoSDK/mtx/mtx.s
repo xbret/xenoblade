@@ -825,44 +825,48 @@
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global Unit01
-Unit01:
+.balign 8
+
+.obj Unit01, global
 	.float 0
 	.float 1.0
+.endobj Unit01
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global one_c
-one_c:
+.balign 8
+
+.obj one_c, global
 	.float 1.0
+.endobj one_c
 
 
-.global zero_c
-zero_c:
+.obj zero_c, global
 	.4byte 0
+.endobj zero_c
 
 
-.global float_8066C130
-float_8066C130:
+.obj float_8066C130, global
 	.float 0.5
+.endobj float_8066C130
 
 
-.global float_8066C134
-float_8066C134:
+.obj float_8066C134, global
 	.float 3 #0x40400000
+.endobj float_8066C134
 
 
-.global float_8066C138
-float_8066C138:
+.obj float_8066C138, global
 	.float 2 #0x40000000
+.endobj float_8066C138
 
 
-.global float_8066C13C
-float_8066C13C:
+.obj float_8066C13C, global
 	.float -1.0
+.endobj float_8066C13C
 
 
-.global float_8066C140
-float_8066C140:
+.obj float_8066C140, global
 	.float 0.017453292
 	.4byte 0
+.endobj float_8066C140

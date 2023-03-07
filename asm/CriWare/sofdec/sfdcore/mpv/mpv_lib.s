@@ -791,15 +791,16 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051F778
-lbl_8051F778:
+.balign 8
+
+.obj lbl_8051F778, global
 	.asciz "\nCRI MPV/WII Ver.2.059 Build:Nov 13 2008 18:21:44\n"
 	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
 	.balign 4
+.endobj lbl_8051F778
 
 
-.global mpvlib_cond_dfl
-mpvlib_cond_dfl:
+.obj mpvlib_cond_dfl, global
 	.4byte 0
 	.4byte 0x00000001
 	.4byte 0x00000001
@@ -817,28 +818,33 @@ mpvlib_cond_dfl:
 	.4byte 0
 	.4byte 0
 	.4byte 0x5A5A5A5A
+.endobj mpvlib_cond_dfl
 
 
-.global lbl_8051F814
-lbl_8051F814:
+.obj lbl_8051F814, global
 	.asciz "2.059"
 	.balign 4
 	.4byte 0
+.endobj lbl_8051F814
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_80606040
-lbl_80606040:
+.obj lbl_80606040, global
 	.skip 0x8
-.global lbl_80606048
-lbl_80606048:
+.endobj lbl_80606040
+
+.obj lbl_80606048, global
 	.skip 0x60
-.global lbl_806060A8
-lbl_806060A8:
+.endobj lbl_80606048
+
+.obj lbl_806060A8, global
 	.skip 0x400
-.global lbl_806064A8
-lbl_806064A8:
+.endobj lbl_806060A8
+
+.obj lbl_806064A8, global
 	.skip 0x4
-.global lbl_806064AC
-lbl_806064AC:
+.endobj lbl_806064A8
+
+.obj lbl_806064AC, global
 	.skip 0xC
+.endobj lbl_806064AC

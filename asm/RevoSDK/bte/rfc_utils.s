@@ -591,39 +591,43 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80548E70
-lbl_80548E70:
+.balign 8
+
+.obj lbl_80548E70, global
 	.asciz "rfc_timer_stop"
 	.balign 4
+.endobj lbl_80548E70
 
 
-.global lbl_80548E80
-lbl_80548E80:
+.obj lbl_80548E80, global
 	.asciz "rfc_timer_start - timeout:%d"
 	.balign 4
+.endobj lbl_80548E80
 
 
-.global lbl_80548EA0
-lbl_80548EA0:
+.obj lbl_80548EA0, global
 	.asciz "rfc_port_timer_start - timeout:%d"
 	.balign 4
+.endobj lbl_80548EA0
 
 
-.global lbl_80548EC4
-lbl_80548EC4:
+.obj lbl_80548EC4, global
 	.asciz "rfc_port_timer_stop"
 	.asciz "rfc_port_closed"
+.endobj lbl_80548EC4
 
 
-.global lbl_80548EE8
-lbl_80548EE8:
+.obj lbl_80548EE8, global
 	.asciz "rfc_inc_credit:%d"
 	.balign 4
 	.4byte 0
+.endobj lbl_80548EE8
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-rfc_crctable:
+.balign 8
+
+.obj rfc_crctable, local
 	.4byte 0x0091E372
 	.4byte 0x0796E475
 	.4byte 0x0E9FED7C
@@ -688,3 +692,4 @@ rfc_crctable:
 	.4byte 0xB32250C1
 	.4byte 0xBA2B59C8
 	.4byte 0xBD2C5ECF
+.endobj rfc_crctable

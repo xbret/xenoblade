@@ -5150,19 +5150,18 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_804F7F38
-lbl_804F7F38:
+.obj lbl_804F7F38, global
 	.4byte 0x00000125
 	.4byte 0x00000126
 	.4byte 0x00000127
 	.4byte 0x00000128
 	.4byte 0x00000129
 	.4byte 0x0000012A
+.endobj lbl_804F7F38
 
-.global lbl_804F7F50
-lbl_804F7F50:
+.obj lbl_804F7F50, global
 	.4byte 0
 	.4byte 0x0000003D
 	.4byte 0x0000003D
@@ -5173,10 +5172,10 @@ lbl_804F7F50:
 	.4byte 0x00000049
 	.4byte 0x00000043
 	.4byte 0
+.endobj lbl_804F7F50
 
 
-.global CfObjectImplPc_strpool
-CfObjectImplPc_strpool:
+.obj CfObjectImplPc_strpool, global
 	.byte 0x00
 	.asciz "INPUT"
 	.asciz "ENCO"
@@ -5187,14 +5186,13 @@ CfObjectImplPc_strpool:
 	.asciz "REVIVE_END"
 	.asciz "FISHING"
 	.asciz "core"
+.endobj CfObjectImplPc_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-
-.global jumptable_8052DE60
-jumptable_8052DE60:
+.obj jumptable_8052DE60, global
 	.4byte .L_800C86D0
 	.4byte .L_800C83E0
 	.4byte .L_800C8554
@@ -5245,10 +5243,10 @@ jumptable_8052DE60:
 	.4byte .L_800C86D0
 	.4byte .L_800C86D0
 	.4byte .L_800C8554
+.endobj jumptable_8052DE60
 
 
-.global jumptable_8052DF28
-jumptable_8052DF28:
+.obj jumptable_8052DF28, global
 	.4byte .L_800CA238
 	.4byte .L_800CA250
 	.4byte .L_800CA250
@@ -5285,10 +5283,10 @@ jumptable_8052DF28:
 	.4byte .L_800CA174
 	.4byte .L_800CA174
 	.4byte 0
+.endobj jumptable_8052DF28
 
 
-.global __vt__cf_CfObjectImplPc
-__vt__cf_CfObjectImplPc:
+.obj __vt__cf_CfObjectImplPc, global
 	.4byte __RTTI__cf_CfObjectImplPc
 	.4byte 0
 	.4byte __dt__cf_CfObjectImplPc
@@ -5353,70 +5351,71 @@ __vt__cf_CfObjectImplPc:
 	.4byte func_8009C6B4
 	.4byte func_8009868C
 	.4byte func_800C5970
+.endobj __vt__cf_CfObjectImplPc
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_80669490
-float_80669490:
+.obj float_80669490, global
 	.float 1.0
+.endobj float_80669490
 
 
-.global float_80669494
-float_80669494:
+.obj float_80669494, global
 	.float 0
+.endobj float_80669494
 
 
-.global float_80669498
-float_80669498:
+.obj float_80669498, global
 	.float 0.01 #0x3C23D70A
 	.4byte 0
+.endobj float_80669498
 
 
-.global double_806694A0
-double_806694A0:
+.obj double_806694A0, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_806694A0
 
-.global double_806694A8
-double_806694A8:
+.obj double_806694A8, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_806694A8
 
-.global float_806694B0
-float_806694B0:
+.obj float_806694B0, global
 	.float 100.0
+.endobj float_806694B0
 
 
-.global float_806694B4
-float_806694B4:
+.obj float_806694B4, global
 	.float 0.15 #0x3E19999A
+.endobj float_806694B4
 
 
-.global float_806694B8
-float_806694B8:
+.obj float_806694B8, global
 	.float -1.0
+.endobj float_806694B8
 
 
-.global float_806694BC
-float_806694BC:
+.obj float_806694BC, global
 	.float 10.0
+.endobj float_806694BC
 
 
-.global float_806694C0
-float_806694C0:
+.obj float_806694C0, global
 	.float 30 #0x41F00000
+.endobj float_806694C0
 
 
-.global float_806694C4
-float_806694C4:
+.obj float_806694C4, global
 	.float 15 #0x41700000
+.endobj float_806694C4
 
 
-.global float_806694C8
-float_806694C8:
+.obj float_806694C8, global
 	.float -10 #0xC1200000
 	.4byte 0
+.endobj float_806694C8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

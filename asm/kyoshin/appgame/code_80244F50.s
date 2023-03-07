@@ -7292,150 +7292,149 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_80506CE8
-lbl_80506CE8:
+.obj lbl_80506CE8, global
 	.asciz "markerlist0000"
 	.balign 4
+.endobj lbl_80506CE8
 
-.global lbl_80506CF8
-lbl_80506CF8:
+.obj lbl_80506CF8, global
 	.asciz "markerlist0101"
 	.balign 4
+.endobj lbl_80506CF8
 
-.global lbl_80506D08
-lbl_80506D08:
+.obj lbl_80506D08, global
 	.asciz "markerlist0201"
 	.balign 4
+.endobj lbl_80506D08
 
-.global lbl_80506D18
-lbl_80506D18:
+.obj lbl_80506D18, global
 	.asciz "markerlist0301"
 	.balign 4
+.endobj lbl_80506D18
 
-.global lbl_80506D28
-lbl_80506D28:
+.obj lbl_80506D28, global
 	.asciz "markerlist0401"
 	.balign 4
+.endobj lbl_80506D28
 
-.global lbl_80506D38
-lbl_80506D38:
+.obj lbl_80506D38, global
 	.asciz "markerlist0402"
 	.balign 4
+.endobj lbl_80506D38
 
-.global lbl_80506D48
-lbl_80506D48:
+.obj lbl_80506D48, global
 	.asciz "markerlist0501"
 	.balign 4
+.endobj lbl_80506D48
 
-.global lbl_80506D58
-lbl_80506D58:
+.obj lbl_80506D58, global
 	.asciz "markerlist0601"
 	.balign 4
+.endobj lbl_80506D58
 
-.global lbl_80506D68
-lbl_80506D68:
+.obj lbl_80506D68, global
 	.asciz "markerlist0701"
 	.balign 4
+.endobj lbl_80506D68
 
-.global lbl_80506D78
-lbl_80506D78:
+.obj lbl_80506D78, global
 	.asciz "markerlist0801"
 	.balign 4
+.endobj lbl_80506D78
 
-.global lbl_80506D88
-lbl_80506D88:
+.obj lbl_80506D88, global
 	.asciz "markerlist0901"
 	.balign 4
+.endobj lbl_80506D88
 
-.global lbl_80506D98
-lbl_80506D98:
+.obj lbl_80506D98, global
 	.asciz "markerlist1001"
 	.balign 4
+.endobj lbl_80506D98
 
-.global lbl_80506DA8
-lbl_80506DA8:
+.obj lbl_80506DA8, global
 	.asciz "markerlist1101"
 	.balign 4
+.endobj lbl_80506DA8
 
-.global lbl_80506DB8
-lbl_80506DB8:
+.obj lbl_80506DB8, global
 	.asciz "markerlist1201"
 	.balign 4
+.endobj lbl_80506DB8
 
-.global lbl_80506DC8
-lbl_80506DC8:
+.obj lbl_80506DC8, global
 	.asciz "markerlist1202"
 	.balign 4
+.endobj lbl_80506DC8
 
-.global lbl_80506DD8
-lbl_80506DD8:
+.obj lbl_80506DD8, global
 	.asciz "markerlist1301"
 	.balign 4
+.endobj lbl_80506DD8
 
-.global lbl_80506DE8
-lbl_80506DE8:
+.obj lbl_80506DE8, global
 	.asciz "markerlist1401"
 	.balign 4
+.endobj lbl_80506DE8
 
-.global lbl_80506DF8
-lbl_80506DF8:
+.obj lbl_80506DF8, global
 	.asciz "markerlist1501"
 	.balign 4
+.endobj lbl_80506DF8
 
-.global lbl_80506E08
-lbl_80506E08:
+.obj lbl_80506E08, global
 	.asciz "markerlist1601"
 	.balign 4
+.endobj lbl_80506E08
 
-.global lbl_80506E18
-lbl_80506E18:
+.obj lbl_80506E18, global
 	.asciz "markerlist1701"
 	.balign 4
+.endobj lbl_80506E18
 
-.global lbl_80506E28
-lbl_80506E28:
+.obj lbl_80506E28, global
 	.asciz "markerlist1801"
 	.balign 4
+.endobj lbl_80506E28
 
-.global lbl_80506E38
-lbl_80506E38:
+.obj lbl_80506E38, global
 	.asciz "markerlist1901"
 	.balign 4
+.endobj lbl_80506E38
 
-.global lbl_80506E48
-lbl_80506E48:
+.obj lbl_80506E48, global
 	.asciz "markerlist2001"
 	.balign 4
+.endobj lbl_80506E48
 
-.global lbl_80506E58
-lbl_80506E58:
+.obj lbl_80506E58, global
 	.asciz "markerlist2101"
 	.balign 4
+.endobj lbl_80506E58
 
-.global lbl_80506E68
-lbl_80506E68:
+.obj lbl_80506E68, global
 	.asciz "markerlist2201"
 	.balign 4
+.endobj lbl_80506E68
 
-.global lbl_80506E78
-lbl_80506E78:
+.obj lbl_80506E78, global
 	.asciz "markerlist2301"
 	.balign 4
+.endobj lbl_80506E78
 
-.global lbl_80506E88
-lbl_80506E88:
+.obj lbl_80506E88, global
 	.asciz "markerlist2401"
 	.balign 4
+.endobj lbl_80506E88
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8053A6F8
-lbl_8053A6F8:
+.obj lbl_8053A6F8, global
 	.4byte lbl_80506CE8
 	.4byte lbl_80506CF8
 	.4byte lbl_80506D08
@@ -7464,67 +7463,68 @@ lbl_8053A6F8:
 	.4byte lbl_80506E68
 	.4byte lbl_80506E78
 	.4byte lbl_80506E88
+.endobj lbl_8053A6F8
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B018
-float_8066B018:
+.obj float_8066B018, global
 	.float 1.0
+.endobj float_8066B018
 
 
-.global float_8066B01C
-float_8066B01C:
+.obj float_8066B01C, global
 	.float 0
+.endobj float_8066B01C
 
 
-.global float_8066B020
-float_8066B020:
+.obj float_8066B020, global
 	.float -120 #0xC2F00000
+.endobj float_8066B020
 
 
-.global float_8066B024
-float_8066B024:
+.obj float_8066B024, global
 	.float -50 #0xC2480000
+.endobj float_8066B024
 
 
-.global double_8066B028
-double_8066B028:
+.obj double_8066B028, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066B028
 
-.global float_8066B030
-float_8066B030:
+.obj float_8066B030, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_8066B030
 
 
-.global float_8066B034
-float_8066B034:
+.obj float_8066B034, global
 	.float 1.5
+.endobj float_8066B034
 
 
-.global double_8066B038
-double_8066B038:
+.obj double_8066B038, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066B038
 
-.global float_8066B040
-float_8066B040:
+.obj float_8066B040, global
 	.float 12 #0x41400000
+.endobj float_8066B040
 
 
-.global float_8066B044
-float_8066B044:
+.obj float_8066B044, global
 	.float 0.8 #0x3F4CCCCD
+.endobj float_8066B044
 
 
-.global float_8066B048
-float_8066B048:
+.obj float_8066B048, global
 	.float 0.5
+.endobj float_8066B048
 
 
-.global float_8066B04C
-float_8066B04C:
+.obj float_8066B04C, global
 	.float 180 #0x43340000
+.endobj float_8066B04C
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

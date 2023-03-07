@@ -273,25 +273,24 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CSysWinSave_typestr
-CSysWinSave_typestr:
+.obj CSysWinSave_typestr, global
 	.asciz "CSysWinSave"
+.endobj CSysWinSave_typestr
 
 
-.global CSysWinSave_strpool
-CSysWinSave_strpool:
+.obj CSysWinSave_strpool, global
 	.asciz "CSysWinSave"
 	.asciz "MNU_sysmes"
 	.asciz "name"
+.endobj CSysWinSave_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CSysWinSave
-__vt__CSysWinSave:
+.obj __vt__CSysWinSave, global
 	.4byte __RTTI__CSysWinSave
 	.4byte 0
 	.4byte __dt__CSysWinSave
@@ -340,9 +339,9 @@ __vt__CSysWinSave:
 	.4byte func_8029481C
 	.4byte func_80294814
 	.4byte func_80294440
+.endobj __vt__CSysWinSave
 
-.global CSysWinSave_hierarchy
-CSysWinSave_hierarchy:
+.obj CSysWinSave_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000070
 	.4byte __RTTI__IWorkEvent
@@ -359,49 +358,49 @@ CSysWinSave_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CSysWinSave_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-
-.global __RTTI__CSysWinSave
-__RTTI__CSysWinSave:
+.obj __RTTI__CSysWinSave, global
 	.4byte CSysWinSave_typestr
 	.4byte CSysWinSave_hierarchy
+.endobj __RTTI__CSysWinSave
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B448
-float_8066B448:
+.obj float_8066B448, global
 	.float 0
+.endobj float_8066B448
 
 
-.global float_8066B44C
-float_8066B44C:
+.obj float_8066B44C, global
 	.float 1.0
+.endobj float_8066B44C
 
 
-.global float_8066B450
-float_8066B450:
+.obj float_8066B450, global
 	.float 2 #0x40000000
 	.4byte 0
+.endobj float_8066B450
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_806672F8
-lbl_806672F8:
+.obj lbl_806672F8, global
 	.skip 0x8
+.endobj lbl_806672F8
 
 #global variable
-.global lbl_80667300
-lbl_80667300:
+.obj lbl_80667300, global
 	.skip 0x8
+.endobj lbl_80667300
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

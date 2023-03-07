@@ -15,6 +15,8 @@
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global typeInfo__Q34nw4r2ut13DvdFileStream
-typeInfo__Q34nw4r2ut13DvdFileStream:
+.balign 8
+
+.obj typeInfo__Q34nw4r2ut13DvdFileStream, global
 	.skip 0x8
+.endobj typeInfo__Q34nw4r2ut13DvdFileStream

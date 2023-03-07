@@ -1251,44 +1251,43 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_80526680
-lbl_80526680:
+.obj lbl_80526680, global
 	.asciz "font/MenuFont.brfna"
+.endobj lbl_80526680
 
-.global lbl_80526694
-lbl_80526694:
+.obj lbl_80526694, global
 	.asciz "font/CapFont.brfna"
 	.balign 4
+.endobj lbl_80526694
 
-.global CDeviceFont_typestr
-CDeviceFont_typestr:
+.obj CDeviceFont_typestr, global
 	.asciz "CDeviceFont"
+.endobj CDeviceFont_typestr
 
-.global reslist_IDeviceFontInfo_typestr
-reslist_IDeviceFontInfo_typestr:
+.obj reslist_IDeviceFontInfo_typestr, global
 	.asciz "reslist<IDeviceFontInfo *>"
 	.balign 4
+.endobj reslist_IDeviceFontInfo_typestr
 
-.global _reslist_base_IDeviceFontInfo_typestr
-_reslist_base_IDeviceFontInfo_typestr:
+.obj _reslist_base_IDeviceFontInfo_typestr, global
 	.asciz "_reslist_base<IDeviceFontInfo *>"
 	.balign 4
+.endobj _reslist_base_IDeviceFontInfo_typestr
 
 
-.global lbl_805266F4
-lbl_805266F4:
+.obj lbl_805266F4, global
 	.asciz "CDeviceFontLayer"
 	.asciz "CDeviceFontLoader"
 	.balign 4
+.endobj lbl_805266F4
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CDeviceFont
-__vt__CDeviceFont:
+.obj __vt__CDeviceFont, global
 	.4byte __RTTI__CDeviceFont
 	.4byte 0
 	.4byte __dt__CDeviceFont
@@ -1329,9 +1328,9 @@ __vt__CDeviceFont:
 	.4byte func_804530C0
 	.4byte func_804531B8
 	.4byte func_80039E30
+.endobj __vt__CDeviceFont
 
-.global CDeviceFont_hierarchy
-CDeviceFont_hierarchy:
+.obj CDeviceFont_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
@@ -1339,72 +1338,72 @@ CDeviceFont_hierarchy:
 	.4byte __RTTI__CDeviceBase
 	.4byte 0
 	.4byte 0
+.endobj CDeviceFont_hierarchy
 
 
-.global __vt__reslist_IDeviceFontInfo
-__vt__reslist_IDeviceFontInfo:
+.obj __vt__reslist_IDeviceFontInfo, global
 	.4byte __RTTI__reslist_IDeviceFontInfo
 	.4byte 0
 	.4byte __dt__reslist_IDeviceFontInfo
+.endobj __vt__reslist_IDeviceFontInfo
 
-.global reslist_IDeviceFontInfo_hierarchy
-reslist_IDeviceFontInfo_hierarchy:
+.obj reslist_IDeviceFontInfo_hierarchy, global
 	.4byte __RTTI___reslist_base_IDeviceFontInfo
 	.4byte 0
 	.4byte 0
+.endobj reslist_IDeviceFontInfo_hierarchy
 
 
-.global __vt___reslist_base_IDeviceFontInfo
-__vt___reslist_base_IDeviceFontInfo:
+.obj __vt___reslist_base_IDeviceFontInfo, global
 	.4byte __RTTI___reslist_base_IDeviceFontInfo
 	.4byte 0
 	.4byte __dt___reslist_base_IDeviceFontInfo
+.endobj __vt___reslist_base_IDeviceFontInfo
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80666020
-lbl_80666020:
+.obj lbl_80666020, global
 	.4byte lbl_80526680
+.endobj lbl_80666020
 
 
-.global lbl_80666024
-lbl_80666024:
+.obj lbl_80666024, global
 	.4byte lbl_80526694
+.endobj lbl_80666024
 
-.global __RTTI__CDeviceFont
-__RTTI__CDeviceFont:
+.obj __RTTI__CDeviceFont, global
 	.4byte CDeviceFont_typestr
 	.4byte CDeviceFont_hierarchy
+.endobj __RTTI__CDeviceFont
 
-.global __RTTI__reslist_IDeviceFontInfo
-__RTTI__reslist_IDeviceFontInfo:
+.obj __RTTI__reslist_IDeviceFontInfo, global
 	.4byte reslist_IDeviceFontInfo_typestr
 	.4byte reslist_IDeviceFontInfo_hierarchy
+.endobj __RTTI__reslist_IDeviceFontInfo
 
-.global __RTTI___reslist_base_IDeviceFontInfo
-__RTTI___reslist_base_IDeviceFontInfo:
+.obj __RTTI___reslist_base_IDeviceFontInfo, global
 	.4byte _reslist_base_IDeviceFontInfo_typestr
 	.4byte 0
+.endobj __RTTI___reslist_base_IDeviceFontInfo
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-
-.global double_8066CBB8
-double_8066CBB8:
+.obj double_8066CBB8, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066CBB8
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80667F58
-lbl_80667F58:
+.obj lbl_80667F58, global
 	.skip 0x8
+.endobj lbl_80667F58
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

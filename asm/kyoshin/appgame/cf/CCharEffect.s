@@ -1307,10 +1307,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_804FD5D0
-lbl_804FD5D0:
+.obj lbl_804FD5D0, global
 	.4byte 0x00000001
 	.4byte 0x01010101
 	.4byte 0x01010101
@@ -1322,10 +1321,10 @@ lbl_804FD5D0:
 	.4byte 0x01010100
 	.4byte 0x00010101
 	.4byte 0x01010101
+.endobj lbl_804FD5D0
 
 
-.global lbl_804FD5FC
-lbl_804FD5FC:
+.obj lbl_804FD5FC, global
 	.4byte 0x00000002
 	.4byte 0x02020202
 	.4byte 0x02020000
@@ -1337,10 +1336,10 @@ lbl_804FD5FC:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_804FD5FC
 
 
-.global lbl_804FD628
-lbl_804FD628:
+.obj lbl_804FD628, global
 	.4byte 0x02020101
 	.4byte 0x01010101
 	.4byte 0x01010101
@@ -1353,24 +1352,24 @@ lbl_804FD628:
 	.4byte 0x01000101
 	.4byte 0x02020201
 	.4byte 0
+.endobj lbl_804FD628
 
-.global cf_CCharEffect_typestr
-cf_CCharEffect_typestr:
+.obj cf_CCharEffect_typestr, global
 	.asciz "cf::CCharEffect"
+.endobj cf_CCharEffect_typestr
 
 
-.global lbl_804FD668
-lbl_804FD668:
+.obj lbl_804FD668, global
 	.asciz "en014911"
 	.balign 4
 	.4byte 0
+.endobj lbl_804FD668
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_805334D8
-lbl_805334D8:
+.obj lbl_805334D8, global
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1415,10 +1414,10 @@ lbl_805334D8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_805334D8
 
 
-.global __vt__cf_CCharEffect
-__vt__cf_CCharEffect:
+.obj __vt__cf_CCharEffect, global
 	.4byte __RTTI__cf_CCharEffect
 	.4byte 0
 	.4byte __dt__cf_CCharEffect
@@ -1427,40 +1426,42 @@ __vt__cf_CCharEffect:
 	.4byte func_800CEE7C
 	.4byte 0
 	.4byte func_8015C2B0
+.endobj __vt__cf_CCharEffect
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CCharEffect
-__RTTI__cf_CCharEffect:
+.obj __RTTI__cf_CCharEffect, global
 	.4byte cf_CCharEffect_typestr
 	.4byte 0
+.endobj __RTTI__cf_CCharEffect
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_80669DF0
-float_80669DF0:
+.obj float_80669DF0, global
 	.float 0.25
+.endobj float_80669DF0
 
 
-.global float_80669DF4
-float_80669DF4:
+.obj float_80669DF4, global
 	.float 1.0
+.endobj float_80669DF4
 
 
-.global double_80669DF8
-double_80669DF8:
+.obj double_80669DF8, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_80669DF8
+
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80666B18
-lbl_80666B18:
+.obj lbl_80666B18, global
 	.skip 0x8
+.endobj lbl_80666B18
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -1797,25 +1797,26 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMenuItemExchange_typestr
-CMenuItemExchange_typestr:
+.obj CMenuItemExchange_typestr, global
 	.asciz "CMenuItemExchange"
 	.balign 4
+.endobj CMenuItemExchange_typestr
 
 
-.global lbl_80500B3C
-lbl_80500B3C:
+.obj lbl_80500B3C, global
 	.asciz "MNU_shop"
 	.asciz "name"
 	.4byte 0
 	.2byte 0
+.endobj lbl_80500B3C
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global jumptable_80537350
-jumptable_80537350:
+.balign 8
+
+.obj jumptable_80537350, global
 	.4byte .L_801BEC94
 	.4byte .L_801BECA0
 	.4byte .L_801BECAC
@@ -1826,10 +1827,10 @@ jumptable_80537350:
 	.4byte .L_801BECE8
 	.4byte .L_801BECF4
 	.4byte 0
+.endobj jumptable_80537350
 
 
-.global __vt__CMenuItemExchange
-__vt__CMenuItemExchange:
+.obj __vt__CMenuItemExchange, global
 	.4byte __RTTI__CMenuItemExchange
 	.4byte 0
 	.4byte __dt__CMenuItemExchange
@@ -1844,9 +1845,9 @@ __vt__CMenuItemExchange:
 	.4byte func_801BF764
 	.4byte func_801BF75C
 	.4byte func_801BED30
+.endobj __vt__CMenuItemExchange
 
-.global CMenuItemExchange_hierarchy
-CMenuItemExchange_hierarchy:
+.obj CMenuItemExchange_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x0000006C
 	.4byte __RTTI__CDoubleListNode
@@ -1861,48 +1862,49 @@ CMenuItemExchange_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuItemExchange_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuItemExchange
-__RTTI__CMenuItemExchange:
+.obj __RTTI__CMenuItemExchange, global
 	.4byte CMenuItemExchange_typestr
 	.4byte CMenuItemExchange_hierarchy
+.endobj __RTTI__CMenuItemExchange
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066A738
-float_8066A738:
+.obj float_8066A738, global
 	.float 0
+.endobj float_8066A738
 
 
-.global float_8066A73C
-float_8066A73C:
+.obj float_8066A73C, global
 	.float 1.0
+.endobj float_8066A73C
 
 
-.global float_8066A740
-float_8066A740:
+.obj float_8066A740, global
 	.float 10.0
 	.4byte 0
+.endobj float_8066A740
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-
-.global lbl_80666D18
-lbl_80666D18:
+.obj lbl_80666D18, global
 	.skip 0x4
-.global lbl_80666D1C
-lbl_80666D1C:
+.endobj lbl_80666D18
+
+.obj lbl_80666D1C, global
 	.skip 0x4
+.endobj lbl_80666D1C
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

@@ -1594,16 +1594,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMCCrystalInfo_typestr
-CMCCrystalInfo_typestr:
+.obj CMCCrystalInfo_typestr, global
 	.asciz "CMCCrystalInfo"
 	.balign 4
+.endobj CMCCrystalInfo_typestr
 
 
-.global CMCCrystalInfo_strpool
-CMCCrystalInfo_strpool:
+.obj CMCCrystalInfo_strpool, global
 	.asciz "/menu/McCrystalInfo.arc"
 	.asciz "/menu/tpl/CrystalIcon.arc"
 	.asciz "name"
@@ -1651,13 +1650,13 @@ CMCCrystalInfo_strpool:
 	.asciz "txt_listvalue01"
 	.asciz "CItemBoxInfoTex"
 	.4byte 0
+.endobj CMCCrystalInfo_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMCCrystalInfo
-__vt__CMCCrystalInfo:
+.obj __vt__CMCCrystalInfo, global
 	.4byte __RTTI__CMCCrystalInfo
 	.4byte 0
 	.4byte __dt__CMCCrystalInfo
@@ -1692,60 +1691,68 @@ __vt__CMCCrystalInfo:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CMCCrystalInfo
 
-.global CMCCrystalInfo_hierarchy
-CMCCrystalInfo_hierarchy:
+.obj CMCCrystalInfo_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMCCrystalInfo_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMCCrystalInfo
-__RTTI__CMCCrystalInfo:
+.obj __RTTI__CMCCrystalInfo, global
 	.4byte CMCCrystalInfo_typestr
 	.4byte CMCCrystalInfo_hierarchy
+.endobj __RTTI__CMCCrystalInfo
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066AD58
-float_8066AD58:
+.obj float_8066AD58, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066AD58
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80666FC8, global
+	.skip 0x8
+.endobj lbl_80666FC8
 
-.global lbl_80666FC8
-lbl_80666FC8:
+.obj lbl_80666FD0, global
 	.skip 0x8
-.global lbl_80666FD0
-lbl_80666FD0:
+.endobj lbl_80666FD0
+
+.obj lbl_80666FD8, global
 	.skip 0x8
-.global lbl_80666FD8
-lbl_80666FD8:
+.endobj lbl_80666FD8
+
+.obj lbl_80666FE0, global
 	.skip 0x8
-.global lbl_80666FE0
-lbl_80666FE0:
+.endobj lbl_80666FE0
+
+.obj lbl_80666FE8, global
 	.skip 0x8
-.global lbl_80666FE8
-lbl_80666FE8:
+.endobj lbl_80666FE8
+
+.obj lbl_80666FF0, global
 	.skip 0x8
-.global lbl_80666FF0
-lbl_80666FF0:
+.endobj lbl_80666FF0
+
+.obj lbl_80666FF8, global
 	.skip 0x8
-.global lbl_80666FF8
-lbl_80666FF8:
+.endobj lbl_80666FF8
+
+.obj lbl_80667000, global
 	.skip 0x8
-.global lbl_80667000
-lbl_80667000:
-	.skip 0x8
+.endobj lbl_80667000
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

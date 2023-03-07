@@ -113,7 +113,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-__DVDErrorMessageDefault:
+.balign 8
+
+.obj __DVDErrorMessageDefault, local
 	.4byte lbl_80549D60
 	.4byte lbl_80549DF0
 	.4byte lbl_80549EA0
@@ -121,8 +123,9 @@ __DVDErrorMessageDefault:
 	.4byte lbl_8054A008
 	.4byte lbl_8054A0A8
 	.4byte lbl_8054A154
+.endobj __DVDErrorMessageDefault
 
-__DVDErrorMessageEurope:
+.obj __DVDErrorMessageEurope, local
 	.4byte lbl_80549D60
 	.4byte lbl_8054A1E8
 	.4byte lbl_80549EA0
@@ -130,14 +133,14 @@ __DVDErrorMessageEurope:
 	.4byte lbl_8054A330
 	.4byte lbl_8054A0A8
 	.4byte lbl_8054A154
+.endobj __DVDErrorMessageEurope
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80549D60
-lbl_80549D60:
-	#"\n\n\nエラーが発生しました。\n\nイジェクトボタンを押してディスクを取り出してか\nら、本体の電源をOFFにして、本体の取扱説明書の\n指示に従ってください。"
-.global lbl_80549D60
-lbl_80549D60:
+.balign 8
+
+#"\n\n\nエラーが発生しました。\n\nイジェクトボタンを押してディスクを取り出してか\nら、本体の電源をOFFにして、本体の取扱説明書の\n指示に従ってください。"
+.obj lbl_80549D60, global
 	.4byte 0x0A0A0A83
 	.4byte 0x47838981
 	.4byte 0x5B82AA94
@@ -174,17 +177,16 @@ lbl_80549D60:
 	.4byte 0x82AD82BE
 	.4byte 0x82B382A2
 	.4byte 0x81420000
+.endobj lbl_80549D60
 
-.global lbl_80549DF0
-lbl_80549DF0:
+.obj lbl_80549DF0, global
 	.asciz "\n\n\nAn error has occurred.\nPress the Eject Button, remove the\nGame Disc, and turn off the power to the\nconsole. Please read the Wii Operations\nManual for further instructions."
 	.balign 4
+.endobj lbl_80549DF0
 
-.global lbl_80549EA0
-lbl_80549EA0:
+
 	#"\n\n\nEin Fehler ist aufgetreten.\nDrücke den Ausgabeknopf, entnimm die\nDisc und schalte die Wii-Konsole aus.\nBitte lies die Wii-Bedienungsanleitung,\num weitere Informationen zu erhalten."
-.global lbl_80549EA0
-lbl_80549EA0:
+.obj lbl_80549EA0, global
 	.4byte 0x0A0A0A45
 	.4byte 0x696E2046
 	.4byte 0x65686C65
@@ -195,12 +197,11 @@ lbl_80549EA0:
 	.4byte 0x6E2E0A44
 	.4byte 0x72FC636B
 	.asciz "e den Ausgabeknopf, entnimm die\nDisc und schalte die Wii-Konsole aus.\nBitte lies die Wii-Bedienungsanleitung,\num weitere Informationen zu erhalten."
+.endobj lbl_80549EA0
 
-.global lbl_80549F58
-lbl_80549F58:
+
 	#.asciz "\n\n\nUne erreur est survenue.\nAppuyez sur le bouton EJECT, retirez\nle disque et éteignez la console.\nVeuillez vous référer au Mode d'emploi\nde la Wii pour plus de détails."
-.global lbl_80549F58
-lbl_80549F58:
+.obj lbl_80549F58, global
 	.4byte 0x0A0A0A55
 	.4byte 0x6E652065
 	.4byte 0x72726575
@@ -245,12 +246,11 @@ lbl_80549F58:
 	.asciz "ails."
 	.balign 4
 	.4byte 0
+.endobj lbl_80549F58
 
-.global lbl_8054A008
-lbl_8054A008:
+
 	#"\n\n\nOcurrió un Error.\nOprime el Botón EJECT, saca el disco\ny apaga la consola. Consulta el manual\nde operaciones de la consola Wii para\nobtener más información."
-.global lbl_8054A008
-lbl_8054A008:
+.obj lbl_8054A008, global
 	.4byte 0x0A0A0A4F
 	.4byte 0x63757272
 	.4byte 0x69F32075
@@ -291,31 +291,29 @@ lbl_8054A008:
 	.4byte 0x6E666F72
 	.4byte 0x6D616369
 	.4byte 0xF36E2E00
+.endobj lbl_8054A008
 
-.global lbl_8054A0A8
-lbl_8054A0A8:
+
 	#"\n\n\nSi è verificato un errore.\nPremi il pulsante EJECT, estrai il disco\ne spegni la console. Per maggiori\ninformazioni, consulta il manuale di\nistruzioni della console Wii."
-.global lbl_8054A0A8
-lbl_8054A0A8:
+.obj lbl_8054A0A8, global
 	.4byte 0x0A0A0A53
 	.4byte 0x6920E820
 	.asciz "verificato un errore.\nPremi il pulsante EJECT, estrai il disco\ne spegni la console. Per maggiori\ninformazioni, consulta il manuale di\nistruzioni della console Wii."
+.endobj lbl_8054A0A8
 
-.global lbl_8054A154
-lbl_8054A154:
+.obj lbl_8054A154, global
 	.asciz "\n\n\nEr is een fout opgetreden.\nDruk op de EJECT-knop, verwijder de\ndisk en zet het Wii-systeem uit. Lees\nde Wii-handleiding voor meer informatie."
 	.balign 4
+.endobj lbl_8054A154
 
-.global lbl_8054A1E8
-lbl_8054A1E8:
+.obj lbl_8054A1E8, global
 	.asciz "\n\n\nAn error has occurred.\nPress the EJECT Button, remove the Disc,\nand turn off the power to the console.\nPlease refer to the Wii Operations Manual\nfor details."
 	.balign 4
+.endobj lbl_8054A1E8
 
-.global lbl_8054A28C
-lbl_8054A28C:
+
 	#"\n\n\nUne erreur est survenue.\nAppuyez sur le bouton EJECT, retirez\nle disque et éteignez la console.\nVeuillez vous référer au mode d'emploi\nWii pour plus de détails."
-.global lbl_8054A28C
-lbl_8054A28C:
+.obj lbl_8054A28C, global
 	.4byte 0x0A0A0A55
 	.4byte 0x6E652065
 	.4byte 0x72726575
@@ -357,13 +355,12 @@ lbl_8054A28C:
 	.4byte 0x64652064
 	.4byte 0xE9746169
 	.4byte 0x6C732E00
+.endobj lbl_8054A28C
 
-.global lbl_8054A330
-lbl_8054A330:
+
 	#"\n\n\nSe ha producido un error.\nPulsa el Botón EJECT, extrae el disco y\napaga la consola. Consulta el manual de\ninstrucciones de la consola Wii para\nobtener más información."
 	#.byte 0
-.global lbl_8054A330
-lbl_8054A330:
+.obj lbl_8054A330, global
 	.4byte 0x0A0A0A53
 	.4byte 0x65206861
 	.4byte 0x2070726F
@@ -407,10 +404,10 @@ lbl_8054A330:
 	.4byte 0x666F726D
 	.4byte 0x616369F3
 	.4byte 0x6E2E0000
+.endobj lbl_8054A330
 	
 #"\n\nエラーコード１０４。\nエラーが発生しました。\n\nイジェクトボタンを押してディスクを取り出してか\nら、本体の電源をOFFにして、本体の取扱説明書の\n指示に従ってください。"
-.global lbl_8054A3DC
-lbl_8054A3DC:
+.obj lbl_8054A3DC, global
 	.4byte 0x0A0A8347
 	.4byte 0x8389815B
 	.4byte 0x8352815B
@@ -452,26 +449,35 @@ lbl_8054A3DC:
 	.4byte 0x82AD82BE
 	.4byte 0x82B382A2
 	.4byte 0x81420000
+.endobj lbl_8054A3DC
 
-.global lbl_8054A480
-lbl_8054A480:
+.obj lbl_8054A480, global
 	.asciz "\n\nError #104,\nAn error has occurred.\nPress the EJECT Button, remove the\nGame Disc, and turn the power off.\nPlease read the Wii Operations Manual\nfor more information."
 	.balign 4
+.endobj lbl_8054A480
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-__DVDErrorMessageChinaKorea:
+.balign 8
+
+.obj __DVDErrorMessageChinaKorea, local
 	.4byte lbl_8054A3DC
 	.4byte lbl_8054A480
+.endobj __DVDErrorMessageChinaKorea
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066BF88
-lbl_8066BF88:
+.balign 8
+
+.obj lbl_8066BF88, global
 	.4byte 0xFFFFFF00
 	.4byte 0
+.endobj lbl_8066BF88
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-FatalFunc:
+.balign 8
+
+.obj FatalFunc, local
 	.skip 0x8
+.endobj FatalFunc

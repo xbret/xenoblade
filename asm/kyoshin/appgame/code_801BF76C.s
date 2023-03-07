@@ -2530,94 +2530,106 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_805373E8
-lbl_805373E8:
+.balign 8
+
+.obj lbl_805373E8, global
 	.asciz "NW4R:Pointer must not be NULL (p)"
 	.balign 4
+.endobj lbl_805373E8
 
-.global lbl_8053740C
-lbl_8053740C:
+.obj lbl_8053740C, global
 	.asciz "LinkList.h"
 	.balign 4
+.endobj lbl_8053740C
 
-.global lbl_80537418
-lbl_80537418:
+.obj lbl_80537418, global
 	.asciz "NW4R:Pointer must not be NULL (p)"
 	.balign 4
+.endobj lbl_80537418
 
-.global lbl_8053743C
-lbl_8053743C:
+.obj lbl_8053743C, global
 	.asciz "LinkList.h"
 	.balign 4
+.endobj lbl_8053743C
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-.global lbl_80664F20
-lbl_80664F20:
+
+.obj lbl_80664F20, global
 	.float 1.0
 	.4byte 0
+.endobj lbl_80664F20
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066A748
-float_8066A748:
+.balign 8
+
+.obj float_8066A748, global
 	.float 1.0
+.endobj float_8066A748
 
 
-.global float_8066A74C
-float_8066A74C:
+.obj float_8066A74C, global
 	.float 1000 #0x447A0000
+.endobj float_8066A74C
 
 
-.global double_8066A750
-double_8066A750:
+.obj double_8066A750, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066A750
 
-.global float_8066A758
-float_8066A758:
+.obj float_8066A758, global
 	.float 30 #0x41F00000
+.endobj float_8066A758
 
 
-.global float_8066A75C
-float_8066A75C:
+.obj float_8066A75C, global
 	.float 1.0
+.endobj float_8066A75C
 
 
-.global float_8066A760
-float_8066A760:
+.obj float_8066A760, global
 	.float 0
+.endobj float_8066A760
 
 
-.global float_8066A764
-float_8066A764:
+.obj float_8066A764, global
 	.float 5 #0x40A00000
+.endobj float_8066A764
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_80579110
-lbl_80579110:
+.obj lbl_80579110, global
 	.skip 0x10
-.global lbl_80579120
-lbl_80579120:
+.endobj lbl_80579110
+
+.obj lbl_80579120, global
 	.skip 0xC00
-.global lbl_80579D20
-lbl_80579D20:
+.endobj lbl_80579120
+
+.obj lbl_80579D20, global
 	.skip 0x10
+.endobj lbl_80579D20
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80666D20
-lbl_80666D20:
+.balign 8
+
+.obj lbl_80666D20, global
 	.skip 0x8
-.global lbl_80666D28
-lbl_80666D28:
+.endobj lbl_80666D20
+
+.obj lbl_80666D28, global
 	.skip 0x2
-.global lbl_80666D2A
-lbl_80666D2A:
+.endobj lbl_80666D28
+
+.obj lbl_80666D2A, global
 	.skip 0x6
+.endobj lbl_80666D2A
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

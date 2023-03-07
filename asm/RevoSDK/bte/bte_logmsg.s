@@ -125,14 +125,16 @@
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665908
-lbl_80665908:
+.balign 8
+
+.obj lbl_80665908, global
 	.asciz "%s\n"
 	.4byte 0
+.endobj lbl_80665908
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 #@LOCAL@LogMsg__FUlPCce@tmp
-.global lbl_805BDCC0
-lbl_805BDCC0:
+.obj lbl_805BDCC0, global
 	.skip 0x7E0
+.endobj lbl_805BDCC0

@@ -244,10 +244,12 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global lbl_8056D248
-lbl_8056D248:
+
+.obj lbl_8056D248, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r3lyt5GroupFv
 	.4byte 0
+.endobj lbl_8056D248

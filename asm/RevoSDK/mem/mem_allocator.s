@@ -45,7 +45,10 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
+
 #@LOCAL@MEMInitAllocatorForExpHeap__FP12MEMAllocatorP12MEMiHeapHeadi@sAllocatorFunc
-lbl_8066C120:
+.obj lbl_8066C120, local
 	.4byte AllocatorAllocForExpHeap_
 	.4byte AllocatorFreeForExpHeap_
+.endobj lbl_8066C120

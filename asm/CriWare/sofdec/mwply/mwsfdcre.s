@@ -2242,10 +2242,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global mwsfd_mps_trsetup
-mwsfd_mps_trsetup:
+.obj mwsfd_mps_trsetup, global
 	.4byte SFD_tr_in_mem
 	.4byte SFD_tr_sd_mps
 	.4byte SFD_tr_vd_mpv
@@ -2255,9 +2254,9 @@ mwsfd_mps_trsetup:
 	.4byte SFD_tr_vo_manu
 	.4byte SFD_tr_ao_auto_p
 	.4byte SFD_tr_uo
+.endobj mwsfd_mps_trsetup
 
-.global mwsfd_mpv_trsetup
-mwsfd_mpv_trsetup:
+.obj mwsfd_mpv_trsetup, global
 	.4byte SFD_tr_in_mem
 	.4byte 0
 	.4byte SFD_tr_vd_mpv
@@ -2267,9 +2266,9 @@ mwsfd_mpv_trsetup:
 	.4byte SFD_tr_vo_manu
 	.4byte 0
 	.4byte 0
+.endobj mwsfd_mpv_trsetup
 
-.global mwsfd_vonlysfd_trsetup
-mwsfd_vonlysfd_trsetup:
+.obj mwsfd_vonlysfd_trsetup, global
 	.4byte SFD_tr_in_mem
 	.4byte SFD_tr_sd_mps
 	.4byte SFD_tr_vd_mpv
@@ -2279,19 +2278,19 @@ mwsfd_vonlysfd_trsetup:
 	.4byte SFD_tr_vo_manu
 	.4byte 0
 	.4byte SFD_tr_uo
+.endobj mwsfd_vonlysfd_trsetup
 
 
-.global lbl_8051DA6C
-lbl_8051DA6C:
+.obj lbl_8051DA6C, global
 	.float 0.5
+.endobj lbl_8051DA6C
 
 
-.global double_8051DA70
-double_8051DA70:
+.obj double_8051DA70, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8051DA70
 
-.global mwsfdcre_strpool
-mwsfdcre_strpool:
+.obj mwsfdcre_strpool, global
 	.asciz "E206011 MwsfdCrePrm: illigal buffmt."
 	.asciz "E1122613 mwPlyCalcWorkCprmSfd: cprm is NULL."
 	.asciz "E7092501 mwPlyCalcWorkCprmSfd: M4V is not support."
@@ -2332,12 +2331,14 @@ mwsfdcre_strpool:
 	.asciz "E7060502 mwPlyGetHdrAudioDetail(): bsize is too small."
 	.asciz "E7060503 SFH_Create return NULL."
 	.4byte 0
+.endobj mwsfdcre_strpool
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global mwsfd_sfdmps_crepara
-mwsfd_sfdmps_crepara:
+.balign 8
+
+.obj mwsfd_sfdmps_crepara, global
 	.4byte mwsfd_mps_trsetup
 	.4byte 0
 	.4byte 0x00010000
@@ -2357,8 +2358,9 @@ mwsfd_sfdmps_crepara:
 	.4byte 0x00000003
 	.4byte 0
 	.4byte 0
+.endobj mwsfd_sfdmps_crepara
 
-mwsfd_sfdmpv_crepara:
+.obj mwsfd_sfdmpv_crepara, local
 	.4byte mwsfd_mpv_trsetup
 	.4byte 0
 	.4byte 0x00010000
@@ -2378,8 +2380,9 @@ mwsfd_sfdmpv_crepara:
 	.4byte 0x00000003
 	.4byte 0
 	.4byte 0
+.endobj mwsfd_sfdmpv_crepara
 
-mwsfd_vonlysfd_crepara:
+.obj mwsfd_vonlysfd_crepara, local
 	.4byte mwsfd_vonlysfd_trsetup
 	.4byte 0
 	.4byte 0x00010000
@@ -2399,8 +2402,9 @@ mwsfd_vonlysfd_crepara:
 	.4byte 0x00000003
 	.4byte 0
 	.4byte 0
+.endobj mwsfd_vonlysfd_crepara
 
-mwsfd_mpvpara:
+.obj mwsfd_mpvpara, local
 	.4byte 0x000000C0
 	.4byte 0x000000F0
 	.4byte 0x00000160
@@ -2410,8 +2414,9 @@ mwsfd_mpvpara:
 	.4byte 0x000001E0
 	.4byte 0x00000004
 	.4byte 0
+.endobj mwsfd_mpvpara
 
-mwsfd_adxtpara:
+.obj mwsfd_adxtpara, local
 	.4byte 0x00005DCC
 	.4byte 0x00000120
 	.4byte 0
@@ -2419,12 +2424,13 @@ mwsfd_adxtpara:
 	.4byte 0x0000BB80
 	.4byte 0x0000C1C0
 	.4byte 0
+.endobj mwsfd_adxtpara
 
-mwsfd_packsize:
+.obj mwsfd_packsize, local
 	.4byte 0x00000800
+.endobj mwsfd_packsize
 
-.global jumptable_805698F8
-jumptable_805698F8:
+.obj jumptable_805698F8, global
 	.4byte .L_8039F84C
 	.4byte .L_8039F84C
 	.4byte .L_8039F844
@@ -2437,10 +2443,10 @@ jumptable_805698F8:
 	.4byte .L_8039F84C
 	.4byte .L_8039F844
 	.4byte .L_8039F84C
+.endobj jumptable_805698F8
 
 
-.global jumptable_80569928
-jumptable_80569928:
+.obj jumptable_80569928, global
 	.4byte .L_8039F70C
 	.4byte .L_8039F70C
 	.4byte .L_8039F704
@@ -2453,11 +2459,11 @@ jumptable_80569928:
 	.4byte .L_8039F70C
 	.4byte .L_8039F704
 	.4byte .L_8039F70C
+.endobj jumptable_80569928
 
 
 
-.global lbl_80569958
-lbl_80569958:
+.obj lbl_80569958, global
 	.4byte lbl_8051E17C
 	.4byte 0
 	.4byte 0
@@ -2511,10 +2517,10 @@ lbl_80569958:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_80569958
 
 
-.global lbl_80569A2C
-lbl_80569A2C:
+.obj lbl_80569A2C, global
 	.4byte lbl_8051E1A0
 	.4byte 0
 	.4byte 0x00000001
@@ -2568,10 +2574,10 @@ lbl_80569A2C:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_80569A2C
 
 
-.global lbl_80569B00
-lbl_80569B00:
+.obj lbl_80569B00, global
 	.4byte lbl_8051E1CC
 	.4byte 0
 	.4byte 0x00000001
@@ -2625,9 +2631,10 @@ lbl_80569B00:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_80569B00
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_806028A0
-lbl_806028A0:
+.obj lbl_806028A0, global
 	.skip 0xB8
+.endobj lbl_806028A0

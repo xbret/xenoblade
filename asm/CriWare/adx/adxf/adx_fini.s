@@ -98,58 +98,61 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global adxf_build
-adxf_build:
+.balign 8
+
+.obj adxf_build, global
 	.asciz "\nADXF/WII Ver.7.71 Build:Nov 13 2008 10:52:48\n"
 	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
 	.balign 4
 	.4byte 0
+.endobj adxf_build
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global adxf_init_cnt
-adxf_init_cnt:
+.obj adxf_init_cnt, global
 	.skip 0x4
+.endobj adxf_init_cnt
 
-cri_verstr_ptr:
+.obj cri_verstr_ptr, local
 	.skip 0x4
+.endobj cri_verstr_ptr
 
-.global adxf_obj
-adxf_obj:
+.obj adxf_obj, global
 	.skip 0x340
+.endobj adxf_obj
 
-.global adxf_ptinfo
-adxf_ptinfo:
+.obj adxf_ptinfo, global
 	.skip 0x400
+.endobj adxf_ptinfo
 
-.global adxf_cmd_hstry
-adxf_cmd_hstry:
+.obj adxf_cmd_hstry, global
 	.skip 0x100
+.endobj adxf_cmd_hstry
 
-.global adxf_cmd_ncall
-adxf_cmd_ncall:
+.obj adxf_cmd_ncall, global
 	.skip 0x20
+.endobj adxf_cmd_ncall
 
-.global adxf_hstry_no
-adxf_hstry_no:
+.obj adxf_hstry_no, global
 	.skip 0x4
+.endobj adxf_hstry_no
 
-.global adxf_ocbi_fg
-adxf_ocbi_fg:
+.obj adxf_ocbi_fg, global
 	.skip 0x4
+.endobj adxf_ocbi_fg
 
-.global adxf_flno
-adxf_flno:
+.obj adxf_flno, global
 	.skip 0x4
+.endobj adxf_flno
 
-.global adxf_ldptnw_hn
-adxf_ldptnw_hn:
+.obj adxf_ldptnw_hn, global
 	.skip 0x4
+.endobj adxf_ldptnw_hn
 
-.global adxf_ldptnw_ptid
-adxf_ldptnw_ptid:
+.obj adxf_ldptnw_ptid, global
 	.skip 0x4
+.endobj adxf_ldptnw_ptid
 
-.global adxf_ldptnw_last_stat
-adxf_ldptnw_last_stat:
+.obj adxf_ldptnw_last_stat, global
 	.skip 0x4
+.endobj adxf_ldptnw_last_stat

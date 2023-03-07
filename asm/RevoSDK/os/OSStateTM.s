@@ -518,82 +518,100 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8055EBF8
-lbl_8055EBF8:
+.balign 8
+
+.obj lbl_8055EBF8, global
 	.asciz "/dev/stm/immediate"
 	.balign 4
+.endobj lbl_8055EBF8
 
 
-.global lbl_8055EC0C
-lbl_8055EC0C:
+.obj lbl_8055EC0C, global
 	.asciz "/dev/stm/eventhook"
 	.balign 4
+.endobj lbl_8055EC0C
 
 
-.global lbl_8055EC20
-lbl_8055EC20:
+.obj lbl_8055EC20, global
 	.asciz "OSStateTM.c"
+.endobj lbl_8055EC20
 
 
-.global lbl_8055EC2C
-lbl_8055EC2C:
+.obj lbl_8055EC2C, global
 	.asciz "Error: The firmware doesn't support shutdown feature.\n"
 	.balign 4
+.endobj lbl_8055EC2C
 
 
-.global lbl_8055EC64
-lbl_8055EC64:
+.obj lbl_8055EC64, global
 	.asciz "Error: The firmware doesn't support reboot feature.\n"
 	.balign 4
+.endobj lbl_8055EC64
 
 
-.global lbl_8055EC9C
-lbl_8055EC9C:
+.obj lbl_8055EC9C, global
 	.asciz "Error on STM state event handler\n"
 	.balign 4
+.endobj lbl_8055EC9C
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-StmEhInBuf:
+.obj StmEhInBuf, local
 	.skip 0x20
+.endobj StmEhInBuf
 
-StmEhOutBuf:
+.obj StmEhOutBuf, local
 	.skip 0x20
+.endobj StmEhOutBuf
 
-StmImInBuf:
+.obj StmImInBuf, local
 	.skip 0x20
+.endobj StmImInBuf
 
-StmImOutBuf:
+.obj StmImOutBuf, local
 	.skip 0x20
+.endobj StmImOutBuf
 
-StmVdInBuf:
+.obj StmVdInBuf, local
 	.skip 0x20
+.endobj StmVdInBuf
 
-StmVdOutBuf:
+.obj StmVdOutBuf, local
 	.skip 0x20
+.endobj StmVdOutBuf
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-ResetDown:
-	.skip 0x4
+.balign 8
 
-StmReady:
+.obj ResetDown, local
 	.skip 0x4
+.endobj ResetDown
 
-StmImDesc:
+.obj StmReady, local
 	.skip 0x4
+.endobj StmReady
 
-StmEhDesc:
+.obj StmImDesc, local
 	.skip 0x4
+.endobj StmImDesc
 
-StmEhRegistered:
+.obj StmEhDesc, local
 	.skip 0x4
+.endobj StmEhDesc
 
-StmVdInUse:
+.obj StmEhRegistered, local
 	.skip 0x4
+.endobj StmEhRegistered
 
-PowerCallback:
+.obj StmVdInUse, local
 	.skip 0x4
+.endobj StmVdInUse
 
-ResetCallback:
+.obj PowerCallback, local
 	.skip 0x4
+.endobj PowerCallback
+
+.obj ResetCallback, local
+	.skip 0x4
+.endobj ResetCallback

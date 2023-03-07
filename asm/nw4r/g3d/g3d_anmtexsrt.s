@@ -819,25 +819,28 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global TYPE_NAME__Q34nw4r3g3d12AnmObjTexSrt
-TYPE_NAME__Q34nw4r3g3d12AnmObjTexSrt:
+.balign 8
+
+.obj TYPE_NAME__Q34nw4r3g3d12AnmObjTexSrt, global
 	.4byte 0x0000000D
 	.asciz "AnmObjTexSrt"
 	.balign 4
 	.4byte 0
+.endobj TYPE_NAME__Q34nw4r3g3d12AnmObjTexSrt
 
 
-.global TYPE_NAME__Q34nw4r3g3d15AnmObjTexSrtRes
-TYPE_NAME__Q34nw4r3g3d15AnmObjTexSrtRes:
+.obj TYPE_NAME__Q34nw4r3g3d15AnmObjTexSrtRes, global
 	.4byte 0x00000010
 	.asciz "AnmObjTexSrtRes"
 	.4byte 0
+.endobj TYPE_NAME__Q34nw4r3g3d15AnmObjTexSrtRes
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056CB80
-lbl_8056CB80:
+.balign 8
+
+.obj lbl_8056CB80, global
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d15AnmObjTexSrtResCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -856,10 +859,10 @@ lbl_8056CB80:
 	.4byte Attach__Q34nw4r3g3d12AnmObjTexSrtFiPQ34nw4r3g3d15AnmObjTexSrtRes
 	.4byte Detach__Q34nw4r3g3d12AnmObjTexSrtFi
 	.4byte DetachAll__Q34nw4r3g3d12AnmObjTexSrtFv
+.endobj lbl_8056CB80
 
 
-.global lbl_8056CBC8
-lbl_8056CBC8:
+.obj lbl_8056CBC8, global
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d12AnmObjTexSrtCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -878,30 +881,33 @@ lbl_8056CBC8:
 	.4byte Attach__Q34nw4r3g3d12AnmObjTexSrtFiPQ34nw4r3g3d15AnmObjTexSrtRes
 	.4byte Detach__Q34nw4r3g3d12AnmObjTexSrtFi
 	.4byte DetachAll__Q34nw4r3g3d12AnmObjTexSrtFv
+.endobj lbl_8056CBC8
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C368
-float_8066C368:
+.balign 8
+
+.obj float_8066C368, global
 	.float 0
+.endobj float_8066C368
 
 
-.global float_8066C36C
-float_8066C36C:
+.obj float_8066C36C, global
 	.float 1.0
+.endobj float_8066C36C
 
 
-.global double_8066C370
-double_8066C370:
+.obj double_8066C370, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066C370
 
-.global float_8066C378
-float_8066C378:
+.obj float_8066C378, global
 	.4byte 0x219392EF
 	.4byte 0
+.endobj float_8066C378
 
 
-.global double_8066C380
-double_8066C380:
+.obj double_8066C380, global
 	.4byte 0x3FF00000
 	.4byte 0
+.endobj double_8066C380

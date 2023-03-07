@@ -2770,29 +2770,28 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_80503460
-lbl_80503460:
+.obj lbl_80503460, global
 	.asciz "/menu/PartyState.arc"
 	.balign 4
+.endobj lbl_80503460
 
 
-.global lbl_80503478
-lbl_80503478:
+.obj lbl_80503478, global
 	.4byte 0
 	.4byte 0x41880000
 	.4byte 0x42080000
 	.4byte 0x424C0000
 	.4byte 0x42880000
+.endobj lbl_80503478
 
-.global CPartyState_typestr
-CPartyState_typestr:
+.obj CPartyState_typestr, global
 	.asciz "CPartyState"
+.endobj CPartyState_typestr
 
 
-.global CPartyState_strpool
-CPartyState_strpool:
+.obj CPartyState_strpool, global
 	.asciz "nul_pc%02d"
 	.asciz "%02d"
 	.asciz "txt_pc%02dvalue700"
@@ -2826,68 +2825,68 @@ CPartyState_strpool:
 	.asciz "name"
 	.asciz "txt_pc%02dpara703"
 	.asciz "%d%s"
+.endobj CPartyState_strpool
 
-.global lbl_80503678
-lbl_80503678:
+.obj lbl_80503678, global
 	.asciz "getPcHpRate"
+.endobj lbl_80503678
 
-.global lbl_80503684
-lbl_80503684:
+.obj lbl_80503684, global
 	.asciz "getEneHp"
 	.balign 4
+.endobj lbl_80503684
 
-.global lbl_80503690
-lbl_80503690:
+.obj lbl_80503690, global
 	.asciz "getEneHpRate"
 	.balign 4
+.endobj lbl_80503690
 
-.global lbl_805036A0
-lbl_805036A0:
+.obj lbl_805036A0, global
 	.asciz "setPcBtlState"
 	.balign 4
+.endobj lbl_805036A0
 
-.global lbl_805036B0
-lbl_805036B0:
+.obj lbl_805036B0, global
 	.asciz "clearPcBtlState"
+.endobj lbl_805036B0
 
-.global lbl_805036C0
-lbl_805036C0:
+.obj lbl_805036C0, global
 	.asciz "setEneBtlState"
 	.balign 4
+.endobj lbl_805036C0
 
-.global lbl_805036D0
-lbl_805036D0:
+.obj lbl_805036D0, global
 	.asciz "clearEneBtlState"
 	.balign 4
+.endobj lbl_805036D0
 
-.global lbl_805036E4
-lbl_805036E4:
+.obj lbl_805036E4, global
 	.asciz "onPcArtsAttack"
 	.balign 4
 	.4byte 0
+.endobj lbl_805036E4
 
-.global lbl_805036F8
-lbl_805036F8:
+.obj lbl_805036F8, global
 	.asciz "onEneArtsAttack"
+.endobj lbl_805036F8
 
-.global lbl_80503708
-lbl_80503708:
+.obj lbl_80503708, global
 	.asciz "learnArts"
 	.balign 4
 	.4byte 0
+.endobj lbl_80503708
 
-.global lbl_80503718
-lbl_80503718:
+.obj lbl_80503718, global
 	.asciz "pc_arts"
 	.asciz "pc"
 	.asciz "unit"
+.endobj lbl_80503718
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CPartyState
-__vt__CPartyState:
+.obj __vt__CPartyState, global
 	.4byte __RTTI__CPartyState
 	.4byte 0
 	.4byte __dt__CPartyState
@@ -2922,17 +2921,17 @@ __vt__CPartyState:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CPartyState
 
-.global CPartyState_hierarchy
-CPartyState_hierarchy:
+.obj CPartyState_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CPartyState_hierarchy
 
 
-.global lbl_80538C18
-lbl_80538C18:
+.obj lbl_80538C18, global
 	.4byte lbl_8066AB20
 	.4byte getPcHp
 	.4byte lbl_80503678
@@ -2959,96 +2958,98 @@ lbl_80538C18:
 	.4byte learnArts
 	.4byte 0
 	.4byte 0
+.endobj lbl_80538C18
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80665020
-lbl_80665020:
+.obj lbl_80665020, global
 	.4byte lbl_80503460
 	.4byte 0
+.endobj lbl_80665020
 
-.global __RTTI__CPartyState
-__RTTI__CPartyState:
+.obj __RTTI__CPartyState, global
 	.4byte CPartyState_typestr
 	.4byte CPartyState_hierarchy
+.endobj __RTTI__CPartyState
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066AAD8
-float_8066AAD8:
+.obj float_8066AAD8, global
 	.float 1.0
+.endobj float_8066AAD8
 
 
-.global lbl_8066AADC
-lbl_8066AADC:
+.obj lbl_8066AADC, global
 	.2byte 0x0102
+.endobj lbl_8066AADC
 
 
-.global lbl_8066AADE
-lbl_8066AADE:
+.obj lbl_8066AADE, global
 	.2byte 0x0300
+.endobj lbl_8066AADE
 
 
-.global lbl_8066AAE0
-lbl_8066AAE0:
+.obj lbl_8066AAE0, global
 	.4byte 0x04050607
 	.4byte 0
+.endobj lbl_8066AAE0
 
 
-.global double_8066AAE8
-double_8066AAE8:
+.obj double_8066AAE8, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066AAE8
 
-.global float_8066AAF0
-float_8066AAF0:
+.obj float_8066AAF0, global
 	.float 0
+.endobj float_8066AAF0
 
 
-.global float_8066AAF4
-float_8066AAF4:
+.obj float_8066AAF4, global
 	.float 82 #0x42A40000
+.endobj float_8066AAF4
 
 
-.global double_8066AAF8
-double_8066AAF8:
+.obj double_8066AAF8, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066AAF8
 
-.global float_8066AB00
-float_8066AB00:
+.obj float_8066AB00, global
 	.float 0.5
+.endobj float_8066AB00
 
 
-.global float_8066AB04
-float_8066AB04:
+.obj float_8066AB04, global
 	.float 10.0
+.endobj float_8066AB04
 
 
-.global float_8066AB08
-float_8066AB08:
+.obj float_8066AB08, global
 	.float 14 #0x41600000
 	.4byte 0
+.endobj float_8066AB08
 
 
-.global float_8066AB10
-float_8066AB10:
+.obj float_8066AB10, global
 	.float 100.0
 	.4byte 0
+.endobj float_8066AB10
 
 
-.global double_8066AB18
-double_8066AB18:
+.obj double_8066AB18, global
 	.8byte 0x4330000080000000 #signed int to float constant
-.global lbl_8066AB20
-lbl_8066AB20:
-	.asciz "getPcHp"
+.endobj double_8066AB18
 
-.global lbl_8066AB28
-lbl_8066AB28:
+.obj lbl_8066AB20, global
+	.asciz "getPcHp"
+.endobj lbl_8066AB20
+
+.obj lbl_8066AB28, global
 	.asciz "synchro"
+.endobj lbl_8066AB28
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

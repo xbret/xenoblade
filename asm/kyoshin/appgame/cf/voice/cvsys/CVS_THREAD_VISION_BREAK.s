@@ -296,32 +296,31 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CVS_THREAD_VISION_BREAK_typestr
-cf_CVS_THREAD_VISION_BREAK_typestr:
+.obj cf_CVS_THREAD_VISION_BREAK_typestr, global
 	.asciz "cf::CVS_THREAD_VISION_BREAK"
 	.4byte 0
+.endobj cf_CVS_THREAD_VISION_BREAK_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8053D500
-lbl_8053D500:
+.obj lbl_8053D500, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A93FC
+.endobj lbl_8053D500
 
-.global lbl_8053D50C
-lbl_8053D50C:
+.obj lbl_8053D50C, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A955C
+.endobj lbl_8053D50C
 
 
-.global __vt__cf_CVS_THREAD_VISION_BREAK
-__vt__cf_CVS_THREAD_VISION_BREAK:
+.obj __vt__cf_CVS_THREAD_VISION_BREAK, global
 	.4byte __RTTI__cf_CVS_THREAD_VISION_BREAK
 	.4byte 0
 	.4byte func_802A3B50
@@ -329,33 +328,33 @@ __vt__cf_CVS_THREAD_VISION_BREAK:
 	.4byte func_802A95FC
 	.4byte func_802A1EA0
 	.4byte func_802A3740
+.endobj __vt__cf_CVS_THREAD_VISION_BREAK
 
-.global cf_CVS_THREAD_VISION_BREAK_hierarchy
-cf_CVS_THREAD_VISION_BREAK_hierarchy:
+.obj cf_CVS_THREAD_VISION_BREAK_hierarchy, global
 	.4byte __RTTI__cf_CVS_THREAD
 	.4byte 0
 	.4byte 0
+.endobj cf_CVS_THREAD_VISION_BREAK_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-
-.global lbl_80665638
-lbl_80665638:
+.obj lbl_80665638, global
 	.4byte 0x01920195
 	.4byte 0x01960000
+.endobj lbl_80665638
 
 
-.global lbl_80665640
-lbl_80665640:
+.obj lbl_80665640, global
 	.4byte 0x01910193
 	.4byte 0x01940000
+.endobj lbl_80665640
 
-.global __RTTI__cf_CVS_THREAD_VISION_BREAK
-__RTTI__cf_CVS_THREAD_VISION_BREAK:
+.obj __RTTI__cf_CVS_THREAD_VISION_BREAK, global
 	.4byte cf_CVS_THREAD_VISION_BREAK_typestr
 	.4byte cf_CVS_THREAD_VISION_BREAK_hierarchy
+.endobj __RTTI__cf_CVS_THREAD_VISION_BREAK
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

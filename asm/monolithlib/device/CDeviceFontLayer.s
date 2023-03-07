@@ -1593,29 +1593,28 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CDeviceFontLayer_typestr
-CDeviceFontLayer_typestr:
+.obj CDeviceFontLayer_typestr, global
 	.asciz "CDeviceFontLayer"
 	.balign 4
+.endobj CDeviceFontLayer_typestr
 
-.global reslist_const_CDeviceFontLayer_LAYER_QUE_typestr
-reslist_const_CDeviceFontLayer_LAYER_QUE_typestr:
+.obj reslist_const_CDeviceFontLayer_LAYER_QUE_typestr, global
 	.asciz "reslist<const CDeviceFontLayer::LAYER_QUE *>"
 	.balign 4
+.endobj reslist_const_CDeviceFontLayer_LAYER_QUE_typestr
 
-.global _reslist_base_const_CDeviceFontLayer_LAYER_QUE_typestr
-_reslist_base_const_CDeviceFontLayer_LAYER_QUE_typestr:
+.obj _reslist_base_const_CDeviceFontLayer_LAYER_QUE_typestr, global
 	.asciz "_reslist_base<const CDeviceFontLayer::LAYER_QUE *>"
 	.balign 4
+.endobj _reslist_base_const_CDeviceFontLayer_LAYER_QUE_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CDeviceFontLayer
-__vt__CDeviceFontLayer:
+.obj __vt__CDeviceFontLayer, global
 	.4byte __RTTI__CDeviceFontLayer
 	.4byte 0
 	.4byte __dt__CDeviceFontLayer
@@ -1656,92 +1655,95 @@ __vt__CDeviceFontLayer:
 	.4byte func_804389F8
 	.4byte func_80454DBC
 	.4byte func_80039E30
+.endobj __vt__CDeviceFontLayer
 
-.global CDeviceFontLayer_hierarchy
-CDeviceFontLayer_hierarchy:
+.obj CDeviceFontLayer_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
 	.4byte 0
 	.4byte 0
+.endobj CDeviceFontLayer_hierarchy
 
 
-.global __vt__reslist_const_CDeviceFontLayer_LAYER_QUE
-__vt__reslist_const_CDeviceFontLayer_LAYER_QUE:
+.obj __vt__reslist_const_CDeviceFontLayer_LAYER_QUE, global
 	.4byte __RTTI__reslist_const_CDeviceFontLayer_LAYER_QUE
 	.4byte 0
 	.4byte __dt__reslist_const_CDeviceFontLayer_LAYER_QUE
+.endobj __vt__reslist_const_CDeviceFontLayer_LAYER_QUE
 
-.global reslist_const_CDeviceFontLayer_LAYER_QUE_hierarchy
-reslist_const_CDeviceFontLayer_LAYER_QUE_hierarchy:
+.obj reslist_const_CDeviceFontLayer_LAYER_QUE_hierarchy, global
 	.4byte __RTTI___reslist_base_const_CDeviceFontLayer_LAYER_QUE
 	.4byte 0
 	.4byte 0
+.endobj reslist_const_CDeviceFontLayer_LAYER_QUE_hierarchy
 
 
-.global __vt___reslist_base_const_CDeviceFontLayer_LAYER_QUE
-__vt___reslist_base_const_CDeviceFontLayer_LAYER_QUE:
+.obj __vt___reslist_base_const_CDeviceFontLayer_LAYER_QUE, global
 	.4byte __RTTI___reslist_base_const_CDeviceFontLayer_LAYER_QUE
 	.4byte 0
 	.4byte __dt___reslist_base_const_CDeviceFontLayer_LAYER_QUE
+.endobj __vt___reslist_base_const_CDeviceFontLayer_LAYER_QUE
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CDeviceFontLayer
-__RTTI__CDeviceFontLayer:
+.obj __RTTI__CDeviceFontLayer, global
 	.4byte CDeviceFontLayer_typestr
 	.4byte CDeviceFontLayer_hierarchy
+.endobj __RTTI__CDeviceFontLayer
 
-.global __RTTI__reslist_const_CDeviceFontLayer_LAYER_QUE
-__RTTI__reslist_const_CDeviceFontLayer_LAYER_QUE:
+.obj __RTTI__reslist_const_CDeviceFontLayer_LAYER_QUE, global
 	.4byte reslist_const_CDeviceFontLayer_LAYER_QUE_typestr
 	.4byte reslist_const_CDeviceFontLayer_LAYER_QUE_hierarchy
+.endobj __RTTI__reslist_const_CDeviceFontLayer_LAYER_QUE
 
-.global __RTTI___reslist_base_const_CDeviceFontLayer_LAYER_QUE
-__RTTI___reslist_base_const_CDeviceFontLayer_LAYER_QUE:
+.obj __RTTI___reslist_base_const_CDeviceFontLayer_LAYER_QUE, global
 	.4byte _reslist_base_const_CDeviceFontLayer_LAYER_QUE_typestr
 	.4byte 0
+.endobj __RTTI___reslist_base_const_CDeviceFontLayer_LAYER_QUE
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066CBC8
-float_8066CBC8:
+.obj float_8066CBC8, global
 	.float 1.0
+.endobj float_8066CBC8
 
 
-.global float_8066CBCC
-float_8066CBCC:
+.obj float_8066CBCC, global
 	.float 0
+.endobj float_8066CBCC
 
 
-.global float_8066CBD0
-float_8066CBD0:
+.obj float_8066CBD0, global
 	.float -1.0
 	.4byte 0
+.endobj float_8066CBD0
 
 
-.global double_8066CBD8
-double_8066CBD8:
+.obj double_8066CBD8, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066CBD8
 
-.global double_8066CBE0
-double_8066CBE0:
+.obj double_8066CBE0, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066CBE0
+
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80667F68, global
+	.skip 0x4
+.endobj lbl_80667F68
 
-.global lbl_80667F68
-lbl_80667F68:
+.obj lbl_80667F6C, global
 	.skip 0x4
-.global lbl_80667F6C
-lbl_80667F6C:
-	.skip 0x4
+.endobj lbl_80667F6C
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

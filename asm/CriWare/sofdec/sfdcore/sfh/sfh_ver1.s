@@ -2454,16 +2454,19 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_805207F8
-lbl_805207F8:
+.balign 8
+
+.obj lbl_805207F8, global
 	.asciz "SofdecStream            "
 	.asciz "Ver."
 	.2byte 0
+.endobj lbl_805207F8
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global jumptable_8056C728
-jumptable_8056C728:
+.balign 8
+
+.obj jumptable_8056C728, global
 	.4byte .L_803D1D7C
 	.4byte .L_803D1D84
 	.4byte .L_803D1D8C
@@ -2471,10 +2474,10 @@ jumptable_8056C728:
 	.4byte .L_803D1D9C
 	.4byte .L_803D1DA4
 	.4byte .L_803D1DAC
+.endobj jumptable_8056C728
 
 
-.global jumptable_8056C744
-jumptable_8056C744:
+.obj jumptable_8056C744, global
 	.4byte .L_803D2D04
 	.4byte .L_803D2CB8
 	.4byte .L_803D2CC0
@@ -2484,3 +2487,4 @@ jumptable_8056C744:
 	.4byte .L_803D2CE0
 	.4byte .L_803D2CEC
 	.4byte .L_803D2CF8
+.endobj jumptable_8056C744

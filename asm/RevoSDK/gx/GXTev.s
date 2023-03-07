@@ -507,36 +507,42 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-TEVCOpTableST0:
+.balign 8
+
+.obj TEVCOpTableST0, local
 	.4byte 0xC008F8AF
 	.4byte 0xC008A89F
 	.4byte 0xC008AC8F
 	.4byte 0xC008FFF8
 	.4byte 0xC008FFFA
+.endobj TEVCOpTableST0
 
-TEVCOpTableST1:
+.obj TEVCOpTableST1, local
 	.4byte 0xC008F80F
 	.4byte 0xC008089F
 	.4byte 0xC0080C8F
 	.4byte 0xC008FFF8
 	.4byte 0xC008FFF0
+.endobj TEVCOpTableST1
 
-TEVAOpTableST0:
+.obj TEVAOpTableST0, local
 	.4byte 0xC108F2F0
 	.4byte 0xC108FFD0
 	.4byte 0xC108F2F0
 	.4byte 0xC108FFC0
 	.4byte 0xC108FFD0
+.endobj TEVAOpTableST0
 
-TEVAOpTableST1:
+.obj TEVAOpTableST1, local
 	.4byte 0xC108F070
 	.4byte 0xC108FF80
 	.4byte 0xC108F070
 	.4byte 0xC108FFC0
 	.4byte 0xC108FF80
+.endobj TEVAOpTableST1
 
 #@LOCAL@GXSetTevOrder__F13_GXTevStageID13_GXTexCoordID11_GXTexMapID12_GXChannelID@c2r
-lbl_8054C0E8:
+.obj lbl_8054C0E8, local
 	.4byte 0
 	.4byte 0x00000001
 	.4byte 0
@@ -547,3 +553,4 @@ lbl_8054C0E8:
 	.4byte 0x00000005
 	.4byte 0x00000006
 	.4byte 0
+.endobj lbl_8054C0E8

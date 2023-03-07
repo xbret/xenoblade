@@ -33,6 +33,6 @@
 
 
 
-.global lbl_8065A780
-lbl_8065A780:
+.obj lbl_8065A780, global
 	.skip 0x88
+.endobj lbl_8065A780

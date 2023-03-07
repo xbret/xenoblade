@@ -819,9 +819,10 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
+
 #funcTable$7095
-.global lbl_80521010
-lbl_80521010:
+.obj lbl_80521010, global
 	.4byte "MakeTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc22@unnamed@g3d_xsi_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 	.4byte "MakeTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc22@unnamed@g3d_xsi_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 	.4byte "MakeTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc22@unnamed@g3d_xsi_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
@@ -829,10 +830,10 @@ lbl_80521010:
 	.4byte "MakeTexSrtMtx_SR__Q54nw4r3g3d6detail3dcc22@unnamed@g3d_xsi_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 	.4byte "MakeTexSrtMtx_R__Q54nw4r3g3d6detail3dcc22@unnamed@g3d_xsi_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 	.4byte "MakeTexSrtMtx_S__Q54nw4r3g3d6detail3dcc21@unnamed@g3d_xsi_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
+.endobj lbl_80521010
 
 #funcTable$7097
-.global lbl_8052102C
-lbl_8052102C:
+.obj lbl_8052102C, global
 	.4byte "ProductTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc22@unnamed@g3d_xsi_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 	.4byte "ProductTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc22@unnamed@g3d_xsi_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 	.4byte "ProductTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc22@unnamed@g3d_xsi_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
@@ -840,20 +841,23 @@ lbl_8052102C:
 	.4byte "ProductTexSrtMtx_SR__Q54nw4r3g3d6detail3dcc22@unnamed@g3d_xsi_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 	.4byte "ProductTexSrtMtx_R__Q54nw4r3g3d6detail3dcc22@unnamed@g3d_xsi_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 	.4byte "ProductTexSrtMtx_S__Q54nw4r3g3d6detail3dcc22@unnamed@g3d_xsi_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
+.endobj lbl_8052102C
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C4B0
-float_8066C4B0:
+.balign 8
+
+.obj float_8066C4B0, global
 	.float 0
+.endobj float_8066C4B0
 
 
-.global float_8066C4B4
-float_8066C4B4:
+.obj float_8066C4B4, global
 	.float 1.0
+.endobj float_8066C4B4
 
 
-.global float_8066C4B8
-float_8066C4B8:
+.obj float_8066C4B8, global
 	.float 0.711111128 #0x3F360B61
 	.4byte 0
+.endobj float_8066C4B8

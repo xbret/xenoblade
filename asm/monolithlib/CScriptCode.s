@@ -644,24 +644,22 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-
-.global CScriptCode_typestr
-CScriptCode_typestr:
+.obj CScriptCode_typestr, global
 	.asciz "CScriptCode"
+.endobj CScriptCode_typestr
 
 
-.global lbl_80525E64
-lbl_80525E64:
+.obj lbl_80525E64, global
 	.asciz "CScriptCode"
+.endobj lbl_80525E64
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CScriptCode
-__vt__CScriptCode:
+.obj __vt__CScriptCode, global
 	.4byte __RTTI__CScriptCode
 	.4byte 0
 	.4byte __dt__CScriptCode
@@ -702,32 +700,33 @@ __vt__CScriptCode:
 	.4byte func_804389F8
 	.4byte func_8043A7C0
 	.4byte func_80039E30
+.endobj __vt__CScriptCode
 
-.global CScriptCode_hierarchy
-CScriptCode_hierarchy:
+.obj CScriptCode_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CScriptCode_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CScriptCode
-__RTTI__CScriptCode:
+.obj __RTTI__CScriptCode, global
 	.4byte CScriptCode_typestr
 	.4byte CScriptCode_hierarchy
+.endobj __RTTI__CScriptCode
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80667E90
-lbl_80667E90:
+.obj lbl_80667E90, global
 	.skip 0x8
+.endobj lbl_80667E90
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

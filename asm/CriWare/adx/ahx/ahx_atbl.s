@@ -4,9 +4,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global ahxdcd_atbl
-ahxdcd_atbl:
+.obj ahxdcd_atbl, global
 	.4byte 0
 	.4byte 0x00000004
 	.4byte 0
@@ -3079,3 +3079,4 @@ ahxdcd_atbl:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj ahxdcd_atbl

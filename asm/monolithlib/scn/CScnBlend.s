@@ -378,73 +378,73 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CScnBlend_typestr
-CScnBlend_typestr:
+.obj CScnBlend_typestr, global
 	.asciz "CScnBlend"
 	.balign 4
+.endobj CScnBlend_typestr
 
-.global CScnFilter_typestr
-CScnFilter_typestr:
+.obj CScnFilter_typestr, global
 	.asciz "CScnFilter"
 	.balign 4
+.endobj CScnFilter_typestr
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CScnBlend
-__vt__CScnBlend:
+.obj __vt__CScnBlend, global
 	.4byte __RTTI__CScnBlend
 	.4byte 0
 	.4byte __dt__CScnBlend
 	.4byte func_8049C868
 	.4byte func_80498DE8
+.endobj __vt__CScnBlend
 
-.global CScnBlend_hierarchy
-CScnBlend_hierarchy:
+.obj CScnBlend_hierarchy, global
 	.4byte __RTTI__CScnFilter
 	.4byte 0
 	.4byte 0
+.endobj CScnBlend_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CScnBlend
-__RTTI__CScnBlend:
+.obj __RTTI__CScnBlend, global
 	.4byte CScnBlend_typestr
 	.4byte CScnBlend_hierarchy
+.endobj __RTTI__CScnBlend
 
-.global __RTTI__CScnFilter
-__RTTI__CScnFilter:
+.obj __RTTI__CScnFilter, global
 	.4byte CScnFilter_typestr
 	.4byte 0
+.endobj __RTTI__CScnFilter
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066D2A0
-float_8066D2A0:
+.obj float_8066D2A0, global
 	.float 1.0
+.endobj float_8066D2A0
 
 
-.global float_8066D2A4
-float_8066D2A4:
+.obj float_8066D2A4, global
 	.float 0.5
+.endobj float_8066D2A4
 
 
-.global float_8066D2A8
-float_8066D2A8:
+.obj float_8066D2A8, global
 	.float 0
+.endobj float_8066D2A8
 
 
-.global float_8066D2AC
-float_8066D2AC:
+.obj float_8066D2AC, global
 	.float 255 #0x437F0000
+.endobj float_8066D2AC
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

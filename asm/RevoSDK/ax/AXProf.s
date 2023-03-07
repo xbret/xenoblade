@@ -25,14 +25,20 @@
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-__AXProfileInitialized:
-	.skip 0x4
+.balign 8
 
-__AXCurrentProfile:
+.obj __AXProfileInitialized, local
 	.skip 0x4
+.endobj __AXProfileInitialized
 
-__AXMaxProfiles:
+.obj __AXCurrentProfile, local
 	.skip 0x4
+.endobj __AXCurrentProfile
 
-__AXProfile:
+.obj __AXMaxProfiles, local
 	.skip 0x4
+.endobj __AXMaxProfiles
+
+.obj __AXProfile, local
+	.skip 0x4
+.endobj __AXProfile

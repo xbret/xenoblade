@@ -165,19 +165,18 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CfObjectImplObj_typestr
-cf_CfObjectImplObj_typestr:
+.obj cf_CfObjectImplObj_typestr, global
 	.asciz "cf::CfObjectImplObj"
 	.4byte 0
+.endobj cf_CfObjectImplObj_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CfObjectImplObj
-__vt__cf_CfObjectImplObj:
+.obj __vt__cf_CfObjectImplObj, global
 	.4byte __RTTI__cf_CfObjectImplObj
 	.4byte 0
 	.4byte __dt__cf_CfObjectImplObj
@@ -238,9 +237,9 @@ __vt__cf_CfObjectImplObj:
 	.4byte func_800CA538
 	.4byte func_800CEE28
 	.4byte func_800CFFA0
+.endobj __vt__cf_CfObjectImplObj
 
-.global cf_CfObjectImplObj_hierarchy
-cf_CfObjectImplObj_hierarchy:
+.obj cf_CfObjectImplObj_hierarchy, global
 	.4byte __RTTI__cf_IObjectInfo
 	.4byte 0x00000010
 	.4byte __RTTI__IActParamEvent
@@ -251,6 +250,7 @@ cf_CfObjectImplObj_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CfObjectImplObj_hierarchy
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

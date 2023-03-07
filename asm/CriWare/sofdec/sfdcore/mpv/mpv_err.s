@@ -115,6 +115,6 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_80605F38
-lbl_80605F38:
+.obj lbl_80605F38, global
 	.skip 0x18
+.endobj lbl_80605F38

@@ -185,21 +185,20 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CDeviceFontLoader_typestr
-CDeviceFontLoader_typestr:
+.obj CDeviceFontLoader_typestr, global
 	.asciz "CDeviceFontLoader"
 	.balign 4
 	.4byte 0
+.endobj CDeviceFontLoader_typestr
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CDeviceFontLoader
-__vt__CDeviceFontLoader:
+.obj __vt__CDeviceFontLoader, global
 	.4byte __RTTI__CDeviceFontLoader
 	.4byte 0
 	.4byte __dt__CDeviceFontLoader
@@ -240,24 +239,25 @@ __vt__CDeviceFontLoader:
 	.4byte func_80454F80
 	.4byte func_80455010
 	.4byte func_80039E30
+.endobj __vt__CDeviceFontLoader
 
-.global CDeviceFontLoader_hierarchy
-CDeviceFontLoader_hierarchy:
+.obj CDeviceFontLoader_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CDeviceFontLoader_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CDeviceFontLoader
-__RTTI__CDeviceFontLoader:
+.obj __RTTI__CDeviceFontLoader, global
 	.4byte CDeviceFontLoader_typestr
 	.4byte CDeviceFontLoader_hierarchy
+.endobj __RTTI__CDeviceFontLoader
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

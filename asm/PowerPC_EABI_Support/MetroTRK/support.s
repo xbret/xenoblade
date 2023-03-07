@@ -446,9 +446,11 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8053FEA8
-lbl_8053FEA8:
+#.balign 8
+
+.obj lbl_8053FEA8, global
 	.asciz "MetroTRK - bad reply size %ld\n"
 	.asciz "MetroTRK - failed in RequestSend\n"
 	.balign 4
 	.4byte 0
+.endobj lbl_8053FEA8

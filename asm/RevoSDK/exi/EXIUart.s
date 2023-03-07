@@ -232,14 +232,20 @@
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-Enabled:
-	.skip 0x4
+.balign 8
 
-BarnacleEnabled:
+.obj Enabled, local
 	.skip 0x4
+.endobj Enabled
 
-Dev:
+.obj BarnacleEnabled, local
 	.skip 0x4
+.endobj BarnacleEnabled
 
-Chan:
+.obj Dev, local
 	.skip 0x4
+.endobj Dev
+
+.obj Chan, local
+	.skip 0x4
+.endobj Chan

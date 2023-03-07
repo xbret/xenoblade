@@ -349,55 +349,66 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global lbl_8056C7B0
-lbl_8056C7B0:
+
+.obj lbl_8056C7B0, global
 	.asciz "-------------------------------- TRACE\n"
 	.asciz "Address:   BackChain   LR save\n"
 	.asciz "%08X:  %08X    %08X "
 	.balign 4
+.endobj lbl_8056C7B0
 
 
-.global lbl_8056C810
-lbl_8056C810:
+.obj lbl_8056C810, global
 	.asciz "%s:%d Panic:"
 	.balign 4
+.endobj lbl_8056C810
 
 
-.global lbl_8056C820
-lbl_8056C820:
+.obj lbl_8056C820, global
 	.asciz "%s:%d Warning:"
 	.balign 4
 	.4byte 0
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056C820
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-sDispWarningAuto__Q24nw4r2db:
+.balign 8
+
+.obj sDispWarningAuto__Q24nw4r2db, local
 	.4byte 0x01000000
+.endobj sDispWarningAuto__Q24nw4r2db
 
 
-.global lbl_80665D84
-lbl_80665D84:
+.obj lbl_80665D84, global
 	.4byte 0x0A000000
+.endobj lbl_80665D84
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 #@LOCAL@GetWarningAlarm___Q24nw4r2dbFv@sWarningAlarm@0
 #sWarningAlarm$6610
-sWarningAlarm:
+.obj sWarningAlarm, local
 	.skip 0x30
+.endobj sWarningAlarm
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-sWarningTime__Q24nw4r2db:
-	.skip 0x4
+.balign 8
 
-sAssertionConsole__Q24nw4r2db:
+.obj sWarningTime__Q24nw4r2db, local
 	.skip 0x4
+.endobj sWarningTime__Q24nw4r2db
+
+.obj sAssertionConsole__Q24nw4r2db, local
+	.skip 0x4
+.endobj sAssertionConsole__Q24nw4r2db
 
 #sInitializedAlarm$6609
-sInitializedAlarm:
+.obj sInitializedAlarm, local
 	.skip 0x8
+.endobj sInitializedAlarm

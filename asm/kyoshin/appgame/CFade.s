@@ -872,10 +872,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CFade_strpool
-CFade_strpool:
+.obj CFade_strpool, global
 	.asciz "/menu/Fade.arc"
 	.asciz "CFade"
 	.asciz "arc"
@@ -883,13 +882,13 @@ CFade_strpool:
 	.asciz "mf00_fade_fade_in.brlan"
 	.balign 4
 	.4byte 0
+.endobj CFade_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CFade
-__vt__CFade:
+.obj __vt__CFade, global
 	.4byte __RTTI__CFade
 	.4byte 0
 	.4byte __dt__CFade
@@ -924,36 +923,38 @@ __vt__CFade:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CFade
 
-.global CFade_hierarchy
-CFade_hierarchy:
+.obj CFade_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CFade_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CFade
-__RTTI__CFade:
+.obj __RTTI__CFade, global
 	.4byte CFade_typestr
 	.4byte CFade_hierarchy
+.endobj __RTTI__CFade
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B008
-float_8066B008:
+.obj float_8066B008, global
 	.float 1.0
 	
-.global CFade_typestr
-CFade_typestr:
+.endobj float_8066B008
+
+.obj CFade_typestr, global
 	.asciz "CFade"
 	.balign 4
 	.4byte 0
+.endobj CFade_typestr
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

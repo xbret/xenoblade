@@ -1402,16 +1402,17 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global sjrbf_uuid
-sjrbf_uuid:
+.balign 8
+
+.obj sjrbf_uuid, global
 	.4byte 0x3B9A9E81
 	.4byte 0x0DBB11D2
 	.4byte 0xA6BF4445
 	.4byte 0x53540000
+.endobj sjrbf_uuid
 
 
-.global sj_rbf_strpool
-sj_rbf_strpool:
+.obj sj_rbf_strpool, global
 	.asciz "SJRBF Error"
 	.asciz " : NULL pointer is passed."
 	.asciz "E2005120201"
@@ -1454,11 +1455,13 @@ sj_rbf_strpool:
 	.asciz "E2004090230"
 	.balign 4
 	.4byte 0
+.endobj sj_rbf_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global sjrbf_vtbl
-sjrbf_vtbl:
+.balign 8
+
+.obj sjrbf_vtbl, global
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1471,12 +1474,14 @@ sjrbf_vtbl:
 	.4byte SJRBF_GetNumData
 	.4byte SJRBF_IsGetChunk
 	.4byte SJRBF_EntryErrFunc
+.endobj sjrbf_vtbl
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global sjrbf_init_cnt
-sjrbf_init_cnt:
+.obj sjrbf_init_cnt, global
 	.skip 0x8
-.global sjrbf_obj
-sjrbf_obj:
+.endobj sjrbf_init_cnt
+
+.obj sjrbf_obj, global
 	.skip 0x4800
+.endobj sjrbf_obj

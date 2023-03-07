@@ -88,26 +88,28 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global __vt__homebutton_GroupAnmController
-__vt__homebutton_GroupAnmController:
+.balign 8
+
+.obj __vt__homebutton_GroupAnmController, global
 	.4byte __RTTI__homebutton_GroupAnmController
 	.4byte 0
 	.4byte __dt__Q210homebutton18GroupAnmControllerFv
 	.4byte calc__Q210homebutton15FrameControllerFv
+.endobj __vt__homebutton_GroupAnmController
 
-.global homebutton_GroupAnmController_typestr
-homebutton_GroupAnmController_typestr:
+.obj homebutton_GroupAnmController_typestr, global
 	.asciz "homebutton::GroupAnmController"
 	.balign 4
+.endobj homebutton_GroupAnmController_typestr
 
-.global homebutton_GroupAnmController_hierarchy
-homebutton_GroupAnmController_hierarchy:
+.obj homebutton_GroupAnmController_hierarchy, global
 	.4byte __RTTI__homebutton_FrameController
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj homebutton_GroupAnmController_hierarchy
 
-.global __RTTI__homebutton_GroupAnmController
-__RTTI__homebutton_GroupAnmController:
+.obj __RTTI__homebutton_GroupAnmController, global
 	.4byte homebutton_GroupAnmController_typestr
 	.4byte homebutton_GroupAnmController_hierarchy
+.endobj __RTTI__homebutton_GroupAnmController

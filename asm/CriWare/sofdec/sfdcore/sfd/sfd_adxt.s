@@ -1618,8 +1618,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global SFD_tr_ad_adxt
-SFD_tr_ad_adxt:
+.balign 8
+
+.obj SFD_tr_ad_adxt, global
 	.4byte SFADXT_Init
 	.4byte SFADXT_Finish
 	.4byte SFADXT_ExecServer
@@ -1635,13 +1636,15 @@ SFD_tr_ad_adxt:
 	.4byte SFADXT_AddRead
 	.4byte SFADXT_Seek
 	
-.global sfadxt_silence
-sfadxt_silence:
+.endobj SFD_tr_ad_adxt
+
+.obj sfadxt_silence, global
 	.4byte 0
 	.4byte 0
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj sfadxt_silence
 
 	.4byte 0x44D8677D
 	.float 0.01
@@ -1652,15 +1655,18 @@ sfadxt_silence:
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global sfadxt_para
-sfadxt_para:
+.obj sfadxt_para, global
 	.skip 0x1C
-.global sfadxt_adxterr
-sfadxt_adxterr:
+.endobj sfadxt_para
+
+.obj sfadxt_adxterr, global
 	.skip 0x4
-.global sfadxt_stat
-sfadxt_stat:
+.endobj sfadxt_adxterr
+
+.obj sfadxt_stat, global
 	.skip 0x4
-.global lbl_8060A2C4
-lbl_8060A2C4:
+.endobj sfadxt_stat
+
+.obj lbl_8060A2C4, global
 	.skip 0x4
+.endobj lbl_8060A2C4

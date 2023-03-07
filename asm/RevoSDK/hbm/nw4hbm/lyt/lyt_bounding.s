@@ -124,8 +124,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8054D6B8
-lbl_8054D6B8:
+.balign 8
+
+.obj lbl_8054D6B8, global
 	.4byte lbl_8054D748
 	.4byte 0
 	.4byte __dt__Q36nw4hbm3lyt8BoundingFv
@@ -151,53 +152,54 @@ lbl_8054D6B8:
 	.4byte SetAnimationEnable__Q36nw4hbm3lyt4PaneFPQ36nw4hbm3lyt13AnimTransformbb
 	.4byte GetMaterial__Q36nw4hbm3lyt4PaneCFv
 	.4byte LoadMtx__Q36nw4hbm3lyt4PaneFRCQ36nw4hbm3lyt8DrawInfo
+.endobj lbl_8054D6B8
 
-.global lbl_8054D71C
-lbl_8054D71C:
+.obj lbl_8054D71C, global
 	.asciz "nw4hbm::lyt::Bounding"
 	.balign 4
+.endobj lbl_8054D71C
 
-.global lbl_8054D734
-lbl_8054D734:
+.obj lbl_8054D734, global
 	.4byte lbl_8054D798
 	.4byte 0
 	.4byte lbl_8054D770
 	.4byte 0
 	.4byte 0
+.endobj lbl_8054D734
 
-.global lbl_8054D748
-lbl_8054D748:
+.obj lbl_8054D748, global
 	.4byte lbl_8054D71C
 	.4byte lbl_8054D734
+.endobj lbl_8054D748
 
-.global lbl_8054D750
-lbl_8054D750:
+.obj lbl_8054D750, global
 	.asciz "nw4hbm::lyt::Pane"
 	.balign 4
+.endobj lbl_8054D750
 
-.global lbl_8054D764
-lbl_8054D764:
+.obj lbl_8054D764, global
 	.4byte lbl_8054D798
 	.4byte 0
 	.4byte 0
+.endobj lbl_8054D764
 
-.global lbl_8054D770
-lbl_8054D770:
+.obj lbl_8054D770, global
 	.4byte lbl_8054D750
 	.4byte lbl_8054D764
+.endobj lbl_8054D770
 
-.global lbl_8054D778
-lbl_8054D778:
+.obj lbl_8054D778, global
 	.asciz "nw4hbm::lyt::detail::PaneBase"
 	.balign 4
+.endobj lbl_8054D778
 
-.global lbl_8054D798
-lbl_8054D798:
+.obj lbl_8054D798, global
 	.4byte lbl_8054D778
 	.4byte 0
+.endobj lbl_8054D798
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global typeInfo__Q36nw4hbm3lyt8Bounding
-typeInfo__Q36nw4hbm3lyt8Bounding:
+.obj typeInfo__Q36nw4hbm3lyt8Bounding, global
 	.skip 0x8
+.endobj typeInfo__Q36nw4hbm3lyt8Bounding

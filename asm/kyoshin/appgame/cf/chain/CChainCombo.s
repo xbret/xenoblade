@@ -522,46 +522,46 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CChainCombo_typestr
-cf_CChainCombo_typestr:
+.obj cf_CChainCombo_typestr, global
 	.asciz "cf::CChainCombo"
+.endobj cf_CChainCombo_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8053C140
-lbl_8053C140:
+.obj lbl_8053C140, global
 	.4byte 0x00000708
 	.4byte 0x000004B0
 	.4byte 0x00000258
+.endobj lbl_8053C140
 
 
-.global __vt__cf_CChainCombo
-__vt__cf_CChainCombo:
+.obj __vt__cf_CChainCombo, global
 	.4byte __RTTI__cf_CChainCombo
 	.4byte 0
 	.4byte __dt__cf_CChainCombo
+.endobj __vt__cf_CChainCombo
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CChainCombo
-__RTTI__cf_CChainCombo:
+.obj __RTTI__cf_CChainCombo, global
 	.4byte cf_CChainCombo_typestr
 	.4byte 0
+.endobj __RTTI__cf_CChainCombo
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global double_8066B440
-double_8066B440:
+.obj double_8066B440, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066B440
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

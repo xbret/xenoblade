@@ -115,8 +115,10 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051F510
-lbl_8051F510:
+.balign 8
+
+.obj lbl_8051F510, global
 	.asciz "E2053001 MWSFD_Malloc: cnt over."
 	.balign 4
 	.4byte 0
+.endobj lbl_8051F510

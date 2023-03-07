@@ -1582,16 +1582,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CTutorialList_typestr
-CTutorialList_typestr:
+.obj CTutorialList_typestr, global
 	.asciz "CTutorialList"
 	.balign 4
+.endobj CTutorialList_typestr
 
 
-.global CTutorialList_strpool
-CTutorialList_strpool:
+.obj CTutorialList_strpool, global
 	.asciz "type_cat"
 	.asciz "order"
 	.asciz "/menu/TutorialList.arc"
@@ -1619,13 +1618,13 @@ CTutorialList_strpool:
 	.asciz "pic_soatbtn"
 	.asciz "MNU_ttrl"
 	.balign 4
+.endobj CTutorialList_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CTutorialList
-__vt__CTutorialList:
+.obj __vt__CTutorialList, global
 	.4byte __RTTI__CTutorialList
 	.4byte 0
 	.4byte __dt__CTutorialList
@@ -1660,58 +1659,59 @@ __vt__CTutorialList:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CTutorialList
 
-.global CTutorialList_hierarchy
-CTutorialList_hierarchy:
+.obj CTutorialList_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CTutorialList_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CTutorialList
-__RTTI__CTutorialList:
+.obj __RTTI__CTutorialList, global
 	.4byte CTutorialList_typestr
 	.4byte CTutorialList_hierarchy
+.endobj __RTTI__CTutorialList
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-
-.global float_8066B680
-float_8066B680:
+.obj float_8066B680, global
 	.float 144 #0x43100000
+.endobj float_8066B680
 
 
-.global float_8066B684
-float_8066B684:
+.obj float_8066B684, global
 	.float 108 #0x42D80000
+.endobj float_8066B684
 
 
-.global float_8066B688
-float_8066B688:
+.obj float_8066B688, global
 	.float 0
+.endobj float_8066B688
 
 
-.global float_8066B68C
-float_8066B68C:
+.obj float_8066B68C, global
 	.float 1.0
+.endobj float_8066B68C
 
 
-.global double_8066B690
-double_8066B690:
+.obj double_8066B690, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066B690
+
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_806674D8
-lbl_806674D8:
+.obj lbl_806674D8, global
 	.skip 0x8
+.endobj lbl_806674D8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

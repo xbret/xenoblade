@@ -818,13 +818,17 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-"@unnamed@HBMAxSound_cpp@::WT_FILENAME":
+.balign 8
+
+.obj "@unnamed@HBMAxSound_cpp@::WT_FILENAME", local
 	.asciz "wt\\HomeButtonSe.wt"
 	.balign 4
+.endobj "@unnamed@HBMAxSound_cpp@::WT_FILENAME"
 
 
-"@unnamed@HBMAxSound_cpp@::PCM_FILENAME":
+.obj "@unnamed@HBMAxSound_cpp@::PCM_FILENAME", local
 	.asciz "wt\\HomeButtonSe.pcm"
+.endobj "@unnamed@HBMAxSound_cpp@::PCM_FILENAME"
 
 
 	.4byte 0
@@ -834,144 +838,146 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8054C528
-lbl_8054C528:
-	.asciz "midi\\00_home_button.mid"
+.balign 8
 
-.global lbl_8054C540
-lbl_8054C540:
+.obj lbl_8054C528, global
+	.asciz "midi\\00_home_button.mid"
+.endobj lbl_8054C528
+
+.obj lbl_8054C540, global
 	.asciz "midi\\01_return_app.mid"
 	.balign 4
+.endobj lbl_8054C540
 
-.global lbl_8054C558
-lbl_8054C558:
+.obj lbl_8054C558, global
 	.asciz "midi\\02_goto_menu.mid"
 	.balign 4
+.endobj lbl_8054C558
 
-.global lbl_8054C570
-lbl_8054C570:
+.obj lbl_8054C570, global
 	.asciz "midi\\03_reset_app.mid"
 	.balign 4
+.endobj lbl_8054C570
 
-.global lbl_8054C588
-lbl_8054C588:
+.obj lbl_8054C588, global
 	.asciz "midi\\04_focus.mid"
 	.balign 4
+.endobj lbl_8054C588
 
-.global lbl_8054C59C
-lbl_8054C59C:
+.obj lbl_8054C59C, global
 	.asciz "midi\\05_select.mid"
 	.balign 4
+.endobj lbl_8054C59C
 
-.global lbl_8054C5B0
-lbl_8054C5B0:
+.obj lbl_8054C5B0, global
 	.asciz "midi\\06_cancel.mid"
 	.balign 4
+.endobj lbl_8054C5B0
 
-.global lbl_8054C5C4
-lbl_8054C5C4:
+.obj lbl_8054C5C4, global
 	.asciz "midi\\07_open_controller.mid"
+.endobj lbl_8054C5C4
 
-.global lbl_8054C5E0
-lbl_8054C5E0:
+.obj lbl_8054C5E0, global
 	.asciz "midi\\08_close_controller.mid"
 	.balign 4
+.endobj lbl_8054C5E0
 
-.global lbl_8054C600
-lbl_8054C600:
+.obj lbl_8054C600, global
 	.asciz "midi\\09_volume_plus.mid"
+.endobj lbl_8054C600
 
-.global lbl_8054C618
-lbl_8054C618:
+.obj lbl_8054C618, global
 	.asciz "midi\\10_volume_minus.mid"
 	.balign 4
+.endobj lbl_8054C618
 
-.global lbl_8054C634
-lbl_8054C634:
+.obj lbl_8054C634, global
 	.asciz "midi\\11_volume_plus_limit.mid"
 	.balign 4
+.endobj lbl_8054C634
 
-.global lbl_8054C654
-lbl_8054C654:
+.obj lbl_8054C654, global
 	.asciz "midi\\12_volume_minus_limit.mid"
 	.balign 4
+.endobj lbl_8054C654
 
-.global lbl_8054C674
-lbl_8054C674:
+.obj lbl_8054C674, global
 	.asciz "midi\\13_nothing_done.mid"
 	.balign 4
+.endobj lbl_8054C674
 
-.global lbl_8054C690
-lbl_8054C690:
+.obj lbl_8054C690, global
 	.asciz "midi\\14_vibe_on.mid"
+.endobj lbl_8054C690
 
-.global lbl_8054C6A4
-lbl_8054C6A4:
+.obj lbl_8054C6A4, global
 	.asciz "midi\\15_vibe_off.mid"
 	.balign 4
+.endobj lbl_8054C6A4
 
-.global lbl_8054C6BC
-lbl_8054C6BC:
+.obj lbl_8054C6BC, global
 	.asciz "midi\\16_start_connect_window.mid"
 	.balign 4
+.endobj lbl_8054C6BC
 
-.global lbl_8054C6E0
-lbl_8054C6E0:
+.obj lbl_8054C6E0, global
 	.asciz "midi\\17_connected1.mid"
 	.balign 4
+.endobj lbl_8054C6E0
 
-.global lbl_8054C6F8
-lbl_8054C6F8:
+.obj lbl_8054C6F8, global
 	.asciz "midi\\18_connected2.mid"
 	.balign 4
+.endobj lbl_8054C6F8
 
-.global lbl_8054C710
-lbl_8054C710:
+.obj lbl_8054C710, global
 	.asciz "midi\\19_connected3.mid"
 	.balign 4
+.endobj lbl_8054C710
 
-.global lbl_8054C728
-lbl_8054C728:
+.obj lbl_8054C728, global
 	.asciz "midi\\20_connected4.mid"
 	.balign 4
+.endobj lbl_8054C728
 
-.global lbl_8054C740
-lbl_8054C740:
+.obj lbl_8054C740, global
 	.asciz "midi\\21_end_connect_window.mid"
 	.balign 4
+.endobj lbl_8054C740
 
-.global lbl_8054C760
-lbl_8054C760:
+.obj lbl_8054C760, global
 	.asciz "midi\\22_manual_open.mid"
+.endobj lbl_8054C760
 
-.global lbl_8054C778
-lbl_8054C778:
+.obj lbl_8054C778, global
 	.asciz "midi\\23_manual_focus.mid"
 	.balign 4
+.endobj lbl_8054C778
 
-.global lbl_8054C794
-lbl_8054C794:
+.obj lbl_8054C794, global
 	.asciz "midi\\24_manual_select.mid"
 	.balign 4
+.endobj lbl_8054C794
 
-.global lbl_8054C7B0
-lbl_8054C7B0:
+.obj lbl_8054C7B0, global
 	.asciz "midi\\25_manual_scroll.mid"
 	.balign 4
+.endobj lbl_8054C7B0
 
-.global lbl_8054C7CC
-lbl_8054C7CC:
+.obj lbl_8054C7CC, global
 	.asciz "midi\\26_manual_cancel.mid"
 	.balign 4
+.endobj lbl_8054C7CC
 
-.global lbl_8054C7E8
-lbl_8054C7E8:
+.obj lbl_8054C7E8, global
 	.asciz "midi\\27_manual_return_app.mid"
 	.balign 4
+.endobj lbl_8054C7E8
 
 
 #SOUND_FILENAME$6705
-SOUND_FILENAME:
+.obj SOUND_FILENAME, local
 	.4byte lbl_8054C528
 	.4byte lbl_8054C540
 	.4byte lbl_8054C558
@@ -1000,8 +1006,10 @@ SOUND_FILENAME:
 	.4byte lbl_8054C7B0
 	.4byte lbl_8054C7CC
 	.4byte lbl_8054C7E8
+.endobj SOUND_FILENAME
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-"sWork__24@unnamed@HBMAxSound_cpp@":
+.obj "sWork__24@unnamed@HBMAxSound_cpp@", local
 	.skip 0x8
+.endobj "sWork__24@unnamed@HBMAxSound_cpp@"

@@ -708,14 +708,20 @@
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-FinishQueue:
+.balign 8
+
+.obj FinishQueue, local
 	.skip 0x8
+.endobj FinishQueue
 
-DrawDone:
+.obj DrawDone, local
 	.skip 0x4
+.endobj DrawDone
 
-DrawDoneCB:
+.obj DrawDoneCB, local
 	.skip 0x4
+.endobj DrawDoneCB
 
-TokenCB:
+.obj TokenCB, local
 	.skip 0x8
+.endobj TokenCB

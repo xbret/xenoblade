@@ -200,14 +200,12 @@
 /* 80368D5C 0033231C  38 21 00 90 */	addi r1, r1, 0x90
 /* 80368D60 00332320  4E 80 00 20 */	blr
 .endfn WENCGetEncodeData
-.4byte 0
-.4byte 0
-.4byte 0
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_80518D88
-lbl_80518D88:
+.balign 8
+
+.obj lbl_80518D88, global
 	.4byte 0x3FECC000
 	.4byte 0
 	.4byte 0x3FECC000
@@ -224,9 +222,12 @@ lbl_80518D88:
 	.4byte 0
 	.4byte 0x40033000
 	.4byte 0
+.endobj lbl_80518D88
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global double_8066C1F0
-double_8066C1F0:
+.balign 8
+
+.obj double_8066C1F0, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066C1F0

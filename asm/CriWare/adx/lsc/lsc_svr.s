@@ -259,8 +259,10 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051BA60
-lbl_8051BA60:
+.balign 8
+
+.obj lbl_8051BA60, global
 	.asciz "E0013: '%s' is different from entry file name.(LSC_ExecServer)\n"
 	.asciz "E0007: lsc->fp=NULL\n"
 	.balign 4
+.endobj lbl_8051BA60

@@ -343,11 +343,12 @@
 .fn func_804996D8, global
 /* 804996D8 00462C98  38 63 FF B8 */	addi r3, r3, -72
 /* 804996DC 00462C9C  4B FF FB B0 */	b func_8049928C
+.endfn func_804996D8
 
 .fn func_804996E0, global
 /* 804996E0 00462CA0  38 63 FF B8 */	addi r3, r3, -72
 /* 804996E4 00462CA4  4B FF FB 40 */	b __dt__80499224
-.endfn func_804996D8
+.endfn func_804996E0
 
 .fn func_804996E8, global
 /* 804996E8 00462CA8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1838,25 +1839,24 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CScnBloom_typestr
-CScnBloom_typestr:
+.obj CScnBloom_typestr, global
 	.asciz "CScnBloom"
 	.balign 4
+.endobj CScnBloom_typestr
 
-.global CScnBloomBase_typestr
-CScnBloomBase_typestr:
+.obj CScnBloomBase_typestr, global
 	.asciz "CScnBloomBase"
 	.balign 4
 	.4byte 0
+.endobj CScnBloomBase_typestr
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CScnBloom
-__vt__CScnBloom:
+.obj __vt__CScnBloom, global
 	.4byte __RTTI__CScnBloom
 	.4byte 0
 	.4byte __RTTI__CScnBloom
@@ -1866,106 +1866,107 @@ __vt__CScnBloom:
 	.4byte func_804996D8
 	.4byte __dt__80499224
 	.4byte func_8049928C
+.endobj __vt__CScnBloom
 
-.global CScnBloom_hierarchy
-CScnBloom_hierarchy:
+.obj CScnBloom_hierarchy, global
 	.4byte __RTTI__CScnFilter
 	.4byte 0x00000048
 	.4byte __RTTI__CScnBloomBase
 	.4byte 0
 	.4byte 0
+.endobj CScnBloom_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CScnBloom
-__RTTI__CScnBloom:
+.obj __RTTI__CScnBloom, global
 	.4byte CScnBloom_typestr
 	.4byte CScnBloom_hierarchy
+.endobj __RTTI__CScnBloom
 
-.global __RTTI__CScnBloomBase
-__RTTI__CScnBloomBase:
+.obj __RTTI__CScnBloomBase, global
 	.4byte CScnBloomBase_typestr
 	.4byte 0
+.endobj __RTTI__CScnBloomBase
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066D2B0
-float_8066D2B0:
+.obj float_8066D2B0, global
 	.float 0
+.endobj float_8066D2B0
 
 
-.global float_8066D2B4
-float_8066D2B4:
+.obj float_8066D2B4, global
 	.float 1.0
+.endobj float_8066D2B4
 
 
-.global double_8066D2B8
-double_8066D2B8:
+.obj double_8066D2B8, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066D2B8
 
-.global float_8066D2C0
-float_8066D2C0:
+.obj float_8066D2C0, global
 	.float 1.0
+.endobj float_8066D2C0
 
 
-.global float_8066D2C4
-float_8066D2C4:
+.obj float_8066D2C4, global
 	.float 0.5
+.endobj float_8066D2C4
 
 
-.global float_8066D2C8
-float_8066D2C8:
+.obj float_8066D2C8, global
 	.float 1.5
+.endobj float_8066D2C8
 
 
-.global float_8066D2CC
-float_8066D2CC:
+.obj float_8066D2CC, global
 	.float 0
+.endobj float_8066D2CC
 
 
-.global double_8066D2D0
-double_8066D2D0:
+.obj double_8066D2D0, global
 	.double 0.20000000298023224 #0x3FC99999A0000000
+.endobj double_8066D2D0
 
 
-.global double_8066D2D8
-double_8066D2D8:
+.obj double_8066D2D8, global
 	.double 0.5 #0x3FE0000000000000
+.endobj double_8066D2D8
 
 
-.global double_8066D2E0
-double_8066D2E0:
+.obj double_8066D2E0, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066D2E0
 
-.global float_8066D2E8
-float_8066D2E8:
+.obj float_8066D2E8, global
 	.float 1.0
+.endobj float_8066D2E8
 
 
-.global float_8066D2EC
-float_8066D2EC:
+.obj float_8066D2EC, global
 	.float 0.5
+.endobj float_8066D2EC
 
 
-.global float_8066D2F0
-float_8066D2F0:
+.obj float_8066D2F0, global
 	.float 0
 	.4byte 0
+.endobj float_8066D2F0
 
 
-.global double_8066D2F8
-double_8066D2F8:
+.obj double_8066D2F8, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066D2F8
 
-.global float_8066D300
-float_8066D300:
+.obj float_8066D300, global
 	.float 255 #0x437F0000
 	.4byte 0
+.endobj float_8066D300
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

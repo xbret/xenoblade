@@ -353,16 +353,19 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051AB08
-lbl_8051AB08:
+.balign 8
+
+.obj lbl_8051AB08, global
 	.asciz "Error"
 	.byte 0x20, 0x00
+.endobj lbl_8051AB08
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805E99C0
-lbl_805E99C0:
+.obj lbl_805E99C0, global
 	.skip 0x108
-.global lbl_805E9AC8
-lbl_805E9AC8:
+.endobj lbl_805E99C0
+
+.obj lbl_805E9AC8, global
 	.skip 0x20
+.endobj lbl_805E9AC8

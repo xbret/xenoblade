@@ -2564,21 +2564,20 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CPcKizunagram_typestr
-CPcKizunagram_typestr:
+.obj CPcKizunagram_typestr, global
 	.asciz "CPcKizunagram"
 	.balign 4
+.endobj CPcKizunagram_typestr
 
-.global CPcKizunaCur_typestr
-CPcKizunaCur_typestr:
+.obj CPcKizunaCur_typestr, global
 	.asciz "CPcKizunaCur"
 	.balign 4
+.endobj CPcKizunaCur_typestr
 
 
-.global CPcKizunagram_strpool
-CPcKizunagram_strpool:
+.obj CPcKizunagram_strpool, global
 	.asciz "mf00_reg00_curs04.brlyt"
 	.asciz "mf00_reg00_curs04_roop.brlan"
 	.asciz "mf00_reg00_curs04_on.brlan"
@@ -2619,10 +2618,10 @@ CPcKizunagram_strpool:
 	.asciz "mf40_kiz_pcline_in.brlan"
 	.balign 4
 	.4byte 0
+.endobj CPcKizunagram_strpool
 
 
-.global lbl_805091B0
-lbl_805091B0:
+.obj lbl_805091B0, global
 	.asciz "name"
 	.byte 0x00
 	.asciz "skill"
@@ -2630,13 +2629,13 @@ lbl_805091B0:
 	.asciz "val2"
 	.asciz "time"
 	.asciz "flag"
+.endobj lbl_805091B0
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CPcKizunagram
-__vt__CPcKizunagram:
+.obj __vt__CPcKizunagram, global
 	.4byte __RTTI__CPcKizunagram
 	.4byte 0
 	.4byte __dt__CPcKizunagram
@@ -2671,108 +2670,109 @@ __vt__CPcKizunagram:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CPcKizunagram
 
-.global CPcKizunagram_hierarchy
-CPcKizunagram_hierarchy:
+.obj CPcKizunagram_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
+.endobj CPcKizunagram_hierarchy
 
 
-.global __vt__CPcKizunaCur
-__vt__CPcKizunaCur:
+.obj __vt__CPcKizunaCur, global
 	.4byte __RTTI__CPcKizunaCur
 	.4byte 0
 	.4byte __dt__CPcKizunaCur
+.endobj __vt__CPcKizunaCur
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CPcKizunagram
-__RTTI__CPcKizunagram:
+.obj __RTTI__CPcKizunagram, global
 	.4byte CPcKizunagram_typestr
 	.4byte CPcKizunagram_hierarchy
+.endobj __RTTI__CPcKizunagram
 
-.global __RTTI__CPcKizunaCur
-__RTTI__CPcKizunaCur:
+.obj __RTTI__CPcKizunaCur, global
 	.4byte CPcKizunaCur_typestr
 	.4byte 0
+.endobj __RTTI__CPcKizunaCur
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B128
-float_8066B128:
+.obj float_8066B128, global
 	.float 0.78 #0x3F47AE14
+.endobj float_8066B128
 
 
-.global float_8066B12C
-float_8066B12C:
+.obj float_8066B12C, global
 	.float 1.0
+.endobj float_8066B12C
 
 
-.global float_8066B130
-float_8066B130:
+.obj float_8066B130, global
 	.float 0
 	.4byte 0
+.endobj float_8066B130
 
 
-.global lbl_8066B138
-lbl_8066B138:
+.obj lbl_8066B138, global
 	.4byte 0x00010706
+.endobj lbl_8066B138
 
 
-.global lbl_8066B13C
-lbl_8066B13C:
+.obj lbl_8066B13C, global
 	.4byte 0x03040205
+.endobj lbl_8066B13C
 
 
-.global float_8066B140
-float_8066B140:
+.obj float_8066B140, global
 	.float 17 #0x41880000
+.endobj float_8066B140
 
 
-.global float_8066B144
-float_8066B144:
+.obj float_8066B144, global
 	.float 9 #0x41100000
+.endobj float_8066B144
 
 
-.global lbl_8066B148
-lbl_8066B148:
+.obj lbl_8066B148, global
 	.4byte 0x00010403
+.endobj lbl_8066B148
 
 
-.global lbl_8066B14C
-lbl_8066B14C:
+.obj lbl_8066B14C, global
 	.4byte 0x06070205
+.endobj lbl_8066B14C
 
 
-.global lbl_8066B150
-lbl_8066B150:
+.obj lbl_8066B150, global
 	.4byte 0x00010706
+.endobj lbl_8066B150
 
 
-.global lbl_8066B154
-lbl_8066B154:
+.obj lbl_8066B154, global
 	.4byte 0x03040205
+.endobj lbl_8066B154
 
 
-.global lbl_8066B158
-lbl_8066B158:
+.obj lbl_8066B158, global
 	.4byte 0x76616C3F
+.endobj lbl_8066B158
 
 
-.global lbl_8066B15C
-lbl_8066B15C:
+.obj lbl_8066B15C, global
 	.4byte 0
+.endobj lbl_8066B15C
 
 
-.global double_8066B160
-double_8066B160:
+.obj double_8066B160, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066B160
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

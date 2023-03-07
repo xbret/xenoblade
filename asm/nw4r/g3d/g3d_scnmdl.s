@@ -3131,18 +3131,21 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global TYPE_NAME__Q34nw4r3g3d6ScnMdl
-TYPE_NAME__Q34nw4r3g3d6ScnMdl:
+.balign 8
+
+.obj TYPE_NAME__Q34nw4r3g3d6ScnMdl, global
 	.4byte 0x00000007
 	.asciz "ScnMdl"
 	.balign 4
 	.4byte 0
+.endobj TYPE_NAME__Q34nw4r3g3d6ScnMdl
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global lbl_8056D080
-lbl_8056D080:
+
+.obj lbl_8056D080, global
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d6ScnMdlCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -3161,3 +3164,4 @@ lbl_8056D080:
 	.4byte RemoveAnmObj__Q34nw4r3g3d6ScnMdlFQ44nw4r3g3d12ScnMdlSimple10AnmObjType
 	.4byte GetAnmObj__Q34nw4r3g3d6ScnMdlFQ44nw4r3g3d12ScnMdlSimple10AnmObjType
 	.4byte GetAnmObj__Q34nw4r3g3d6ScnMdlCFQ44nw4r3g3d12ScnMdlSimple10AnmObjType
+.endobj lbl_8056D080

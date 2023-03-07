@@ -1297,11 +1297,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-
-.global lbl_80526188
-lbl_80526188:
+.obj lbl_80526188, global
 	.4byte 0x00000001
 	.4byte 0x00000001
 	.4byte 0x00000002
@@ -1330,10 +1328,10 @@ lbl_80526188:
 	.4byte 0x00000800
 	.4byte 0
 	.4byte 0
+.endobj lbl_80526188
 
 
-.global lbl_805261F8
-lbl_805261F8:
+.obj lbl_805261F8, global
 	.4byte 0x00000002
 	.4byte 0x00000001
 	.4byte 0x00008000
@@ -1366,18 +1364,18 @@ lbl_805261F8:
 	.4byte 0x10000000
 	.4byte 0
 	.4byte 0
+.endobj lbl_805261F8
 
-.global CDeviceRemotePad_typestr
-CDeviceRemotePad_typestr:
+.obj CDeviceRemotePad_typestr, global
 	.asciz "CDeviceRemotePad"
 	.balign 4
+.endobj CDeviceRemotePad_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CDeviceRemotePad
-__vt__CDeviceRemotePad:
+.obj __vt__CDeviceRemotePad, global
 	.4byte __RTTI__CDeviceRemotePad
 	.4byte 0
 	.4byte __dt__CDeviceRemotePad
@@ -1418,9 +1416,9 @@ __vt__CDeviceRemotePad:
 	.4byte func_80447A40
 	.4byte func_80447AE4
 	.4byte func_80039E30
+.endobj __vt__CDeviceRemotePad
 
-.global CDeviceRemotePad_hierarchy
-CDeviceRemotePad_hierarchy:
+.obj CDeviceRemotePad_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
@@ -1429,90 +1427,91 @@ CDeviceRemotePad_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CDeviceRemotePad_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CDeviceRemotePad
-__RTTI__CDeviceRemotePad:
+.obj __RTTI__CDeviceRemotePad, global
 	.4byte CDeviceRemotePad_typestr
 	.4byte CDeviceRemotePad_hierarchy
+.endobj __RTTI__CDeviceRemotePad
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066CB20
-float_8066CB20:
+.obj float_8066CB20, global
 	.float 0.15 #0x3E19999A
+.endobj float_8066CB20
 
 
-.global float_8066CB24
-float_8066CB24:
+.obj float_8066CB24, global
 	.float 0
+.endobj float_8066CB24
 
 
-.global float_8066CB28
-float_8066CB28:
+.obj float_8066CB28, global
 	.float 56 #0x42600000
+.endobj float_8066CB28
 
 
-.global float_8066CB2C
-float_8066CB2C:
+.obj float_8066CB2C, global
 	.float 150 #0x43160000
+.endobj float_8066CB2C
 
 
-.global float_8066CB30
-float_8066CB30:
+.obj float_8066CB30, global
 	.float 320 #0x43A00000
+.endobj float_8066CB30
 
 
-.global float_8066CB34
-float_8066CB34:
+.obj float_8066CB34, global
 	.float 210 #0x43520000
+.endobj float_8066CB34
 
 
-.global double_8066CB38
-double_8066CB38:
+.obj double_8066CB38, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066CB38
 
-.global double_8066CB40
-double_8066CB40:
+.obj double_8066CB40, global
 	.double 0.033333333333333333 #0x3FA1111111111111
+.endobj double_8066CB40
 
 
-.global float_8066CB48
-float_8066CB48:
+.obj float_8066CB48, global
 	.float 16666.666 #0x46823555
 	.4byte 0
+.endobj float_8066CB48
 
 
-.global double_8066CB50
-double_8066CB50:
+.obj double_8066CB50, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066CB50
 
-.global float_8066CB58
-float_8066CB58:
+.obj float_8066CB58, global
 	.float 0
 	.4byte 0
+.endobj float_8066CB58
 
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_8065A438
-lbl_8065A438:
+.obj lbl_8065A438, global
 	.skip 0x280
+.endobj lbl_8065A438
 	
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80667F10
-lbl_80667F10:
+.obj lbl_80667F10, global
 	.skip 0x8
+.endobj lbl_80667F10
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

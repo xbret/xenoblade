@@ -1917,27 +1917,30 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051AC98
-lbl_8051AC98:
+.balign 8
+
+.obj lbl_8051AC98, global
 	.4byte 0
 	.4byte 0
+.endobj lbl_8051AC98
 
 
-.global double_8051ACA0
-double_8051ACA0:
+.obj double_8051ACA0, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8051ACA0
 
-.global lbl_8051ACA8
-lbl_8051ACA8:
+.obj lbl_8051ACA8, global
 	.asciz "CRI-MW"
 	.balign 4
+.endobj lbl_8051ACA8
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global ahxdcd_sfreq_tbl
-ahxdcd_sfreq_tbl:
+
+.obj ahxdcd_sfreq_tbl, global
 	.4byte 0x00005622
 	.4byte 0x00005DC0
 	.4byte 0x00003E80
@@ -1946,10 +1949,10 @@ ahxdcd_sfreq_tbl:
 	.4byte 0x0000BB80
 	.4byte 0x00007D00
 	.4byte 0
+.endobj ahxdcd_sfreq_tbl
 
 
-.global ahxdc_jsb_table
-ahxdc_jsb_table:
+.obj ahxdc_jsb_table, global
 	.4byte 0x00000004
 	.4byte 0x00000008
 	.4byte 0x0000000C
@@ -1962,10 +1965,10 @@ ahxdc_jsb_table:
 	.4byte 0x00000004
 	.4byte 0x00000008
 	.4byte 0x00000010
+.endobj ahxdc_jsb_table
 
 
-.global lbl_805691E0
-lbl_805691E0:
+.obj lbl_805691E0, global
 	.4byte 0
 	.4byte 0x00000001
 	.4byte 0x00000003
@@ -1976,19 +1979,23 @@ lbl_805691E0:
 	.4byte 0x0000007F
 	.4byte 0x000000FF
 	.4byte 0
+.endobj lbl_805691E0
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 #skg_init_count
-.global skg_init_count_1
-skg_init_count_1:
+.obj skg_init_count_1, global
 	.skip 0x4
-.global lbl_805E9B14
-lbl_805E9B14:
+.endobj skg_init_count_1
+
+.obj lbl_805E9B14, global
 	.skip 0x4
-.global ahxdcd_init_cnt
-ahxdcd_init_cnt:
+.endobj lbl_805E9B14
+
+.obj ahxdcd_init_cnt, global
 	.skip 0x8
-.global lbl_805E9B20
-lbl_805E9B20:
+.endobj ahxdcd_init_cnt
+
+.obj lbl_805E9B20, global
 	.skip 0x200
+.endobj lbl_805E9B20

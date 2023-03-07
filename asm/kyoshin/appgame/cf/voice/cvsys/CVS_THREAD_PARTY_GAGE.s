@@ -405,39 +405,38 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CVS_THREAD_PARTY_GAGE_typestr
-cf_CVS_THREAD_PARTY_GAGE_typestr:
+.obj cf_CVS_THREAD_PARTY_GAGE_typestr, global
 	.asciz "cf::CVS_THREAD_PARTY_GAGE"
 	.balign 4
 	.4byte 0
+.endobj cf_CVS_THREAD_PARTY_GAGE_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8053D3D8
-lbl_8053D3D8:
+.obj lbl_8053D3D8, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A82D4
+.endobj lbl_8053D3D8
 
-.global lbl_8053D3E4
-lbl_8053D3E4:
+.obj lbl_8053D3E4, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A83CC
+.endobj lbl_8053D3E4
 
-.global lbl_8053D3F0
-lbl_8053D3F0:
+.obj lbl_8053D3F0, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A8560
+.endobj lbl_8053D3F0
 
 
-.global __vt__cf_CVS_THREAD_PARTY_GAGE
-__vt__cf_CVS_THREAD_PARTY_GAGE:
+.obj __vt__cf_CVS_THREAD_PARTY_GAGE, global
 	.4byte __RTTI__cf_CVS_THREAD_PARTY_GAGE
 	.4byte 0
 	.4byte func_802A3B50
@@ -445,27 +444,28 @@ __vt__cf_CVS_THREAD_PARTY_GAGE:
 	.4byte func_802A8620
 	.4byte func_802A1EA0
 	.4byte func_802A3740
+.endobj __vt__cf_CVS_THREAD_PARTY_GAGE
 
-.global cf_CVS_THREAD_PARTY_GAGE_hierarchy
-cf_CVS_THREAD_PARTY_GAGE_hierarchy:
+.obj cf_CVS_THREAD_PARTY_GAGE_hierarchy, global
 	.4byte __RTTI__cf_CVS_THREAD
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CVS_THREAD_PARTY_GAGE_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80665610
-lbl_80665610:
+.obj lbl_80665610, global
 	.4byte 0x00000659
 	.4byte 0x0000065A
+.endobj lbl_80665610
 
-.global __RTTI__cf_CVS_THREAD_PARTY_GAGE
-__RTTI__cf_CVS_THREAD_PARTY_GAGE:
+.obj __RTTI__cf_CVS_THREAD_PARTY_GAGE, global
 	.4byte cf_CVS_THREAD_PARTY_GAGE_typestr
 	.4byte cf_CVS_THREAD_PARTY_GAGE_hierarchy
+.endobj __RTTI__cf_CVS_THREAD_PARTY_GAGE
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

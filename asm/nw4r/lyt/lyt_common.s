@@ -820,25 +820,29 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C5F8
-float_8066C5F8:
+.balign 8
+
+.obj float_8066C5F8, global
 	.float 0
+.endobj float_8066C5F8
 
 
-.global float_8066C5FC
-float_8066C5FC:
+.obj float_8066C5FC, global
 	.float 1.0
+.endobj float_8066C5FC
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 #@LOCAL@SetSize__Q44nw4r3lyt6detail11TexCoordAryFUc@texCoords
-.global lbl_8063AD00
-lbl_8063AD00:
+.obj lbl_8063AD00, global
 	.skip 0x20
+.endobj lbl_8063AD00
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
+
 #@GUARD@SetSize__Q44nw4r3lyt6detail11TexCoordAryFUc@texCoords
-.global lbl_80667D80
-lbl_80667D80:
+.obj lbl_80667D80, global
 	.skip 0x8
+.endobj lbl_80667D80

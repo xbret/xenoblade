@@ -459,28 +459,27 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMenuBattleMode_typestr
-CMenuBattleMode_typestr:
+.obj CMenuBattleMode_typestr, global
 	.asciz "CMenuBattleMode"
+.endobj CMenuBattleMode_typestr
 
 
-.global CMenuBattleMode_strpool
-CMenuBattleMode_strpool:
+.obj CMenuBattleMode_strpool, global
 	.asciz "CMenuBattleMode"
 	.asciz "mf71_battle40_mark.brlyt"
 	.asciz "mf71_battle40_mark_in.brlan"
 	.asciz "mf71_battle40_mark_roop.brlan"
 	.balign 4
 	.4byte 0
+.endobj CMenuBattleMode_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMenuBattleMode
-__vt__CMenuBattleMode:
+.obj __vt__CMenuBattleMode, global
 	.4byte __RTTI__CMenuBattleMode
 	.4byte 0
 	.4byte __dt__CMenuBattleMode
@@ -529,9 +528,9 @@ __vt__CMenuBattleMode:
 	.4byte func_801A049C
 	.4byte func_801A0494
 	.4byte func_801A02C0
+.endobj __vt__CMenuBattleMode
 
-.global CMenuBattleMode_hierarchy
-CMenuBattleMode_hierarchy:
+.obj CMenuBattleMode_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x0000005C
 	.4byte __RTTI__IWorkEvent
@@ -548,37 +547,40 @@ CMenuBattleMode_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuBattleMode_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuBattleMode
-__RTTI__CMenuBattleMode:
+.obj __RTTI__CMenuBattleMode, global
 	.4byte CMenuBattleMode_typestr
 	.4byte CMenuBattleMode_hierarchy
+.endobj __RTTI__CMenuBattleMode
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-.global float_8066A540
-float_8066A540:
+
+.obj float_8066A540, global
 	.float 0
+.endobj float_8066A540
 
 
-.global float_8066A544
-float_8066A544:
+.obj float_8066A544, global
 	.float 1.0
+.endobj float_8066A544
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80666C08
-lbl_80666C08:
+.obj lbl_80666C08, global
 	.skip 0x8
+.endobj lbl_80666C08
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

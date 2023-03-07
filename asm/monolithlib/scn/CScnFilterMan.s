@@ -1578,113 +1578,113 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CScnFilterMan_typestr
-CScnFilterMan_typestr:
+.obj CScnFilterMan_typestr, global
 	.asciz "CScnFilterMan"
 	.balign 4
+.endobj CScnFilterMan_typestr
 
-.global reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_typestr
-reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_typestr:
+.obj reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_typestr, global
 	.asciz "reslist<_reslist_iterator<CScnFilter *, CScnFilter *&, CScnFilter **>>"
 	.balign 4
+.endobj reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_typestr
 
-.global _reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_typestr
-_reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_typestr:
+.obj _reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_typestr, global
 	.asciz "_reslist_base<_reslist_iterator<CScnFilter *, CScnFilter *&, CScnFilter **>>"
 	.balign 4
+.endobj _reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_typestr
 
-.global reslist_CScnFilter_typestr
-reslist_CScnFilter_typestr:
+.obj reslist_CScnFilter_typestr, global
 	.asciz "reslist<CScnFilter *>"
 	.balign 4
+.endobj reslist_CScnFilter_typestr
 
-.global _reslist_base_CScnFilter_typestr
-_reslist_base_CScnFilter_typestr:
+.obj _reslist_base_CScnFilter_typestr, global
 	.asciz "_reslist_base<CScnFilter *>"
 	.4byte 0
+.endobj _reslist_base_CScnFilter_typestr
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CScnFilterMan
-__vt__CScnFilterMan:
+.obj __vt__CScnFilterMan, global
 	.4byte __RTTI__CScnFilterMan
 	.4byte 0
 	.4byte __dt__CScnFilterMan
 	.4byte func_8049DD60
+.endobj __vt__CScnFilterMan
 
 
-.global __vt__reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
-__vt__reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter:
+.obj __vt__reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter, global
 	.4byte __RTTI__reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
 	.4byte 0
 	.4byte __dt__reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
+.endobj __vt__reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
 
-.global reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_hierarchy
-reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_hierarchy:
+.obj reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_hierarchy, global
 	.4byte __RTTI___reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
 	.4byte 0
 	.4byte 0
+.endobj reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_hierarchy
 
 
-.global __vt___reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
-__vt___reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter:
+.obj __vt___reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter, global
 	.4byte __RTTI___reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
 	.4byte 0
 	.4byte __dt___reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
+.endobj __vt___reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
 
 
-.global __vt__reslist_CScnFilter
-__vt__reslist_CScnFilter:
+.obj __vt__reslist_CScnFilter, global
 	.4byte __RTTI__reslist_CScnFilter
 	.4byte 0
 	.4byte __dt__reslist_CScnFilter
+.endobj __vt__reslist_CScnFilter
 
-.global reslist_CScnFilter_hierarchy
-reslist_CScnFilter_hierarchy:
+.obj reslist_CScnFilter_hierarchy, global
 	.4byte __RTTI___reslist_base_CScnFilter
 	.4byte 0
 	.4byte 0
+.endobj reslist_CScnFilter_hierarchy
 
 
-.global __vt___reslist_base_CScnFilter
-__vt___reslist_base_CScnFilter:
+.obj __vt___reslist_base_CScnFilter, global
 	.4byte __RTTI___reslist_base_CScnFilter
 	.4byte 0
 	.4byte __dt___reslist_base_CScnFilter
+.endobj __vt___reslist_base_CScnFilter
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CScnFilterMan
-__RTTI__CScnFilterMan:
+.obj __RTTI__CScnFilterMan, global
 	.4byte CScnFilterMan_typestr
 	.4byte 0
+.endobj __RTTI__CScnFilterMan
 
-.global __RTTI__reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
-__RTTI__reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter:
+.obj __RTTI__reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter, global
 	.4byte reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_typestr
 	.4byte reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_hierarchy
+.endobj __RTTI__reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
 
-.global __RTTI___reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
-__RTTI___reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter:
+.obj __RTTI___reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter, global
 	.4byte _reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_typestr
 	.4byte 0
+.endobj __RTTI___reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
 
-.global __RTTI__reslist_CScnFilter
-__RTTI__reslist_CScnFilter:
+.obj __RTTI__reslist_CScnFilter, global
 	.4byte reslist_CScnFilter_typestr
 	.4byte reslist_CScnFilter_hierarchy
+.endobj __RTTI__reslist_CScnFilter
 
-.global __RTTI___reslist_base_CScnFilter
-__RTTI___reslist_base_CScnFilter:
+.obj __RTTI___reslist_base_CScnFilter, global
 	.4byte _reslist_base_CScnFilter_typestr
 	.4byte 0
+.endobj __RTTI___reslist_base_CScnFilter
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

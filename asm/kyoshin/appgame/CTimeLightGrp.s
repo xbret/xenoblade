@@ -386,98 +386,98 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CTimeLightGrp
-__vt__CTimeLightGrp:
+.obj __vt__CTimeLightGrp, global
 	.4byte __RTTI__CTimeLightGrp
 	.4byte 0
 	.4byte __dt__CTimeLightGrp
+.endobj __vt__CTimeLightGrp
 
-.global CTimeLightGrp_hierarchy
-CTimeLightGrp_hierarchy:
+.obj CTimeLightGrp_hierarchy, global
 	.4byte __RTTI__CTimeLightObj
 	.4byte 0
 	.4byte 0
+.endobj CTimeLightGrp_hierarchy
 
 
-.global __vt__reslist_CVirtualLightObj
-__vt__reslist_CVirtualLightObj:
+.obj __vt__reslist_CVirtualLightObj, global
 	.4byte __RTTI__reslist_CVirtualLightObj
 	.4byte 0
 	.4byte __dt__reslist_CVirtualLightObj
+.endobj __vt__reslist_CVirtualLightObj
 
-.global reslist_CVirtualLightObj_hierarchy
-reslist_CVirtualLightObj_hierarchy:
+.obj reslist_CVirtualLightObj_hierarchy, global
 	.4byte __RTTI___reslist_base_CVirtualLightObj
 	.4byte 0
 	.4byte 0
+.endobj reslist_CVirtualLightObj_hierarchy
 
 
-.global __vt___reslist_base_CVirtualLightObj
-__vt___reslist_base_CVirtualLightObj:
+.obj __vt___reslist_base_CVirtualLightObj, global
 	.4byte __RTTI___reslist_base_CVirtualLightObj
 	.4byte 0
 	.4byte __dt___reslist_base_CVirtualLightObj
 	.4byte 0
+.endobj __vt___reslist_base_CVirtualLightObj
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CTimeLightGrp_typestr
-CTimeLightGrp_typestr:
+.obj CTimeLightGrp_typestr, global
 	.asciz "CTimeLightGrp"
 	.balign 4
+.endobj CTimeLightGrp_typestr
 
-.global CTimeLightObj_typestr
-CTimeLightObj_typestr:
+.obj CTimeLightObj_typestr, global
 	.asciz "CTimeLightObj"
 	.balign 4
+.endobj CTimeLightObj_typestr
 
-.global reslist_CVirtualLightObj_typestr
-reslist_CVirtualLightObj_typestr:
+.obj reslist_CVirtualLightObj_typestr, global
 	.asciz "reslist<CVirtualLightObj *>"
+.endobj reslist_CVirtualLightObj_typestr
 
-.global _reslist_base_CVirtualLightObj_typestr
-_reslist_base_CVirtualLightObj_typestr:
+.obj _reslist_base_CVirtualLightObj_typestr, global
 	.asciz "_reslist_base<CVirtualLightObj *>"
 	.balign 4
+.endobj _reslist_base_CVirtualLightObj_typestr
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CTimeLightGrp
-__RTTI__CTimeLightGrp:
+.obj __RTTI__CTimeLightGrp, global
 	.4byte CTimeLightGrp_typestr
 	.4byte CTimeLightGrp_hierarchy
+.endobj __RTTI__CTimeLightGrp
 
-.global __RTTI__CTimeLightObj
-__RTTI__CTimeLightObj:
+.obj __RTTI__CTimeLightObj, global
 	.4byte CTimeLightObj_typestr
 	.4byte 0
+.endobj __RTTI__CTimeLightObj
 
-.global __RTTI__reslist_CVirtualLightObj
-__RTTI__reslist_CVirtualLightObj:
+.obj __RTTI__reslist_CVirtualLightObj, global
 	.4byte reslist_CVirtualLightObj_typestr
 	.4byte reslist_CVirtualLightObj_hierarchy
+.endobj __RTTI__reslist_CVirtualLightObj
 
-.global __RTTI___reslist_base_CVirtualLightObj
-__RTTI___reslist_base_CVirtualLightObj:
+.obj __RTTI___reslist_base_CVirtualLightObj, global
 	.4byte _reslist_base_CVirtualLightObj_typestr
 	.4byte 0
+.endobj __RTTI___reslist_base_CVirtualLightObj
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_806688C8
-float_806688C8:
+.obj float_806688C8, global
 	.float 1.0
 	.4byte 0
+.endobj float_806688C8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

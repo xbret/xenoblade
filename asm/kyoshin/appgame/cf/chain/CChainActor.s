@@ -4591,41 +4591,40 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CChainChance_typestr
-cf_CChainChance_typestr:
+.obj cf_CChainChance_typestr, global
 	.asciz "cf::CChainChance"
 	.balign 4
 	.4byte 0
+.endobj cf_CChainChance_typestr
 
-.global cf_CChainTimer_typestr
-cf_CChainTimer_typestr:
+.obj cf_CChainTimer_typestr, global
 	.asciz "cf::CChainTimer"
+.endobj cf_CChainTimer_typestr
 
-.global cf_CChainMember_typestr
-cf_CChainMember_typestr:
+.obj cf_CChainMember_typestr, global
 	.asciz "cf::CChainMember"
 	.balign 4
 	.4byte 0
+.endobj cf_CChainMember_typestr
 
-.global cf_CChainActor_typestr
-cf_CChainActor_typestr:
+.obj cf_CChainActor_typestr, global
 	.asciz "cf::CChainActor"
+.endobj cf_CChainActor_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8053B980
-lbl_8053B980:
+.obj lbl_8053B980, global
 	.4byte 0x000007DB
 	.4byte 0x000007DC
 	.4byte 0x000007DF
+.endobj lbl_8053B980
 
 
-.global jumptable_8053B98C
-jumptable_8053B98C:
+.obj jumptable_8053B98C, global
 	.4byte .L_80276F3C
 	.4byte .L_80276EA4
 	.4byte .L_80276EB8
@@ -4637,10 +4636,10 @@ jumptable_8053B98C:
 	.4byte .L_80276F30
 	.4byte .L_80276F3C
 	.4byte .L_80276F38
+.endobj jumptable_8053B98C
 
 
-.global jumptable_8053B9B8
-jumptable_8053B9B8:
+.obj jumptable_8053B9B8, global
 	.4byte .L_80278DE8
 	.4byte .L_80277CDC
 	.4byte .L_80277EBC
@@ -4668,31 +4667,31 @@ jumptable_8053B9B8:
 	.4byte .L_80278AE4
 	.4byte .L_80278C98
 	.4byte .L_80278DC4
+.endobj jumptable_8053B9B8
 
 
-.global __vt__cf_CChainChance
-__vt__cf_CChainChance:
+.obj __vt__cf_CChainChance, global
 	.4byte __RTTI__cf_CChainChance
 	.4byte 0
 	.4byte __dt__cf_CChainChance
+.endobj __vt__cf_CChainChance
 
 
-.global __vt__cf_CChainTimer
-__vt__cf_CChainTimer:
+.obj __vt__cf_CChainTimer, global
 	.4byte __RTTI__cf_CChainTimer
 	.4byte 0
 	.4byte __dt__cf_CChainTimer
+.endobj __vt__cf_CChainTimer
 
 
-.global __vt__cf_CChainMember
-__vt__cf_CChainMember:
+.obj __vt__cf_CChainMember, global
 	.4byte __RTTI__cf_CChainMember
 	.4byte 0
 	.4byte __dt__cf_CChainMember
+.endobj __vt__cf_CChainMember
 
 
-.global __vt__cf_CChainActor
-__vt__cf_CChainActor:
+.obj __vt__cf_CChainActor, global
 	.4byte __RTTI__cf_CChainActor
 	.4byte 0
 	.4byte __dt__cf_CChainActor
@@ -4723,132 +4722,133 @@ __vt__cf_CChainActor:
 	.4byte func_80278F5C
 	.4byte func_8027A324
 	.4byte func_8027A9D0
+.endobj __vt__cf_CChainActor
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80665318
-lbl_80665318:
+.obj lbl_80665318, global
 	.4byte 0xFFFFFFFF
+.endobj lbl_80665318
 
 
-.global lbl_8066531C
-lbl_8066531C:
+.obj lbl_8066531C, global
 	.4byte 0x000007DB
+.endobj lbl_8066531C
 
 
-.global lbl_80665320
-lbl_80665320:
+.obj lbl_80665320, global
 	.4byte 0x000007DB
 	.4byte 0x000007DC
+.endobj lbl_80665320
 
 
-.global lbl_80665328
-lbl_80665328:
+.obj lbl_80665328, global
 	.4byte 0x000007DD
 	.4byte 0
+.endobj lbl_80665328
 
 
-.global lbl_80665330
-lbl_80665330:
+.obj lbl_80665330, global
 	.4byte 0x000007DD
 	.4byte 0x000007E0
+.endobj lbl_80665330
 
-.global __RTTI__cf_CChainChance
-__RTTI__cf_CChainChance:
+.obj __RTTI__cf_CChainChance, global
 	.4byte cf_CChainChance_typestr
 	.4byte 0
+.endobj __RTTI__cf_CChainChance
 
-.global __RTTI__cf_CChainTimer
-__RTTI__cf_CChainTimer:
+.obj __RTTI__cf_CChainTimer, global
 	.4byte cf_CChainTimer_typestr
 	.4byte 0
+.endobj __RTTI__cf_CChainTimer
 
-.global __RTTI__cf_CChainMember
-__RTTI__cf_CChainMember:
+.obj __RTTI__cf_CChainMember, global
 	.4byte cf_CChainMember_typestr
 	.4byte 0
+.endobj __RTTI__cf_CChainMember
 
-.global __RTTI__cf_CChainActor
-__RTTI__cf_CChainActor:
+.obj __RTTI__cf_CChainActor, global
 	.4byte cf_CChainActor_typestr
 	.4byte 0
+.endobj __RTTI__cf_CChainActor
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B2C0
-float_8066B2C0:
+.obj float_8066B2C0, global
 	.float 1.0
+.endobj float_8066B2C0
 
 
-.global float_8066B2C4
-float_8066B2C4:
+.obj float_8066B2C4, global
 	.float 0
+.endobj float_8066B2C4
 
 
-.global double_8066B2C8
-double_8066B2C8:
+.obj double_8066B2C8, global
 	.double 0.5 #0x3FE0000000000000
+.endobj double_8066B2C8
 
 
-.global double_8066B2D0
-double_8066B2D0:
+.obj double_8066B2D0, global
 	.double -0.5 #0xBFE0000000000000
+.endobj double_8066B2D0
 
 
-.global float_8066B2D8
-float_8066B2D8:
+.obj float_8066B2D8, global
 	.float 0.01 #0x3C23D70A
 	.4byte 0
+.endobj float_8066B2D8
 
 
-.global double_8066B2E0
-double_8066B2E0:
+.obj double_8066B2E0, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066B2E0
 
-.global float_8066B2E8
-float_8066B2E8:
+.obj float_8066B2E8, global
 	.float 0.6 #0x3F19999A
+.endobj float_8066B2E8
 
 
-.global float_8066B2EC
-float_8066B2EC:
+.obj float_8066B2EC, global
 	.float 1.25 #0x3FA00000
+.endobj float_8066B2EC
 
 
-.global float_8066B2F0
-float_8066B2F0:
+.obj float_8066B2F0, global
 	.float 0.3 #0x3E99999A
 	.4byte 0
+.endobj float_8066B2F0
 
 
-.global float_8066B2F8
-float_8066B2F8:
+.obj float_8066B2F8, global
 	.float 1225 #0x44992000
+.endobj float_8066B2F8
 
 
-.global float_8066B2FC
-float_8066B2FC:
+.obj float_8066B2FC, global
 	.float 1600 #0x44C80000
+.endobj float_8066B2FC
 
 
-.global float_8066B300
-float_8066B300:
+.obj float_8066B300, global
 	.float 0.0245436933 #0x3CC90FDB
+.endobj float_8066B300
 
 
-.global float_8066B304
-float_8066B304:
+.obj float_8066B304, global
 	.float 35 #0x420C0000
+.endobj float_8066B304
 
 
-.global float_8066B308
-float_8066B308:
+.obj float_8066B308, global
 	.float 0
 	.4byte 0
+.endobj float_8066B308
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

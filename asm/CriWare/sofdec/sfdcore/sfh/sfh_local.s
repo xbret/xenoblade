@@ -350,11 +350,13 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global sfd_seeki_strpool
-sfd_seeki_strpool:
+.balign 8
+
+.obj sfd_seeki_strpool, global
 	.asciz "(nbyte > 0) && (nbyte < 5)"
 	.asciz "sfh_local.c"
 	.asciz "(nbyte > 0) && (nbyte < 9)"
 	.asciz "(size > 0) && (size < 9)"
 	.balign 4
 	.4byte 0
+.endobj sfd_seeki_strpool

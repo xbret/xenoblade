@@ -881,9 +881,10 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
+
 #funcTable$7101
-.global lbl_80520FD8
-lbl_80520FD8:
+.obj lbl_80520FD8, global
 	.4byte "MakeTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc22@unnamed@g3d_maya_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 	.4byte "MakeTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc22@unnamed@g3d_maya_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 	.4byte "MakeTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc22@unnamed@g3d_maya_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
@@ -891,10 +892,10 @@ lbl_80520FD8:
 	.4byte "MakeTexSrtMtx_SR__Q54nw4r3g3d6detail3dcc22@unnamed@g3d_maya_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 	.4byte "MakeTexSrtMtx_R__Q54nw4r3g3d6detail3dcc22@unnamed@g3d_maya_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 	.4byte "MakeTexSrtMtx_S__Q54nw4r3g3d6detail3dcc22@unnamed@g3d_maya_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
+.endobj lbl_80520FD8
 
 #funcTable$7103
-.global lbl_80520FF4
-lbl_80520FF4:
+.obj lbl_80520FF4, global
 	.4byte "ProductTexSrtMtx_SRT__Q54nw4r3g3d6detail3dcc22@unnamed@g3d_maya_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 	.4byte "ProductTexSrtMtx_RT__Q54nw4r3g3d6detail3dcc22@unnamed@g3d_maya_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 	.4byte "ProductTexSrtMtx_ST__Q54nw4r3g3d6detail3dcc22@unnamed@g3d_maya_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
@@ -902,31 +903,34 @@ lbl_80520FF4:
 	.4byte "ProductTexSrtMtx_SR__Q54nw4r3g3d6detail3dcc22@unnamed@g3d_maya_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 	.4byte "ProductTexSrtMtx_R__Q54nw4r3g3d6detail3dcc22@unnamed@g3d_maya_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
 	.4byte "ProductTexSrtMtx_S__Q54nw4r3g3d6detail3dcc22@unnamed@g3d_maya_cpp@FPQ34nw4r4math5MTX34RCQ34nw4r3g3d6TexSrt"
+.endobj lbl_80520FF4
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C498
-float_8066C498:
+.balign 8
+
+.obj float_8066C498, global
 	.float 0
+.endobj float_8066C498
 
 
-.global float_8066C49C
-float_8066C49C:
+.obj float_8066C49C, global
 	.float 1.0
+.endobj float_8066C49C
 
 
-.global float_8066C4A0
-float_8066C4A0:
+.obj float_8066C4A0, global
 	.float 0.7111111 #0x3F360B61
+.endobj float_8066C4A0
 
 
-.global float_8066C4A4
-float_8066C4A4:
+.obj float_8066C4A4, global
 	.float 0.5
+.endobj float_8066C4A4
 
 
-.global float_8066C4A8
-float_8066C4A8:
+.obj float_8066C4A8, global
 	.4byte 0xBF000000
 	.4byte 0
+.endobj float_8066C4A8

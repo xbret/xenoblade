@@ -177,25 +177,23 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CfGimmickSaveOff_typestr
-cf_CfGimmickSaveOff_typestr:
+.obj cf_CfGimmickSaveOff_typestr, global
 	.asciz "cf::CfGimmickSaveOff"
 	.balign 4
+.endobj cf_CfGimmickSaveOff_typestr
 
 
-.global lbl_8050C140
-lbl_8050C140:
+.obj lbl_8050C140, global
 	.asciz "naviOff"
+.endobj lbl_8050C140
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-
-.global __vt__cf_CfGimmickSaveOff
-__vt__cf_CfGimmickSaveOff:
+.obj __vt__cf_CfGimmickSaveOff, global
 	.4byte __RTTI__cf_CfGimmickSaveOff
 	.4byte 0
 	.4byte __dt__cf_CfGimmickSaveOff
@@ -205,24 +203,24 @@ __vt__cf_CfGimmickSaveOff:
 	.4byte func_801F4BF8
 	.4byte func_801F4C8C
 	.4byte func_80208988
+.endobj __vt__cf_CfGimmickSaveOff
 
-.global cf_CfGimmickSaveOff_hierarchy
-cf_CfGimmickSaveOff_hierarchy:
+.obj cf_CfGimmickSaveOff_hierarchy, global
 	.4byte __RTTI__cf_IObjectInfo
 	.4byte 0
 	.4byte __RTTI__cf_CfGimmick
 	.4byte 0
 	.4byte 0
+.endobj cf_CfGimmickSaveOff_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-
-.global __RTTI__cf_CfGimmickSaveOff
-__RTTI__cf_CfGimmickSaveOff:
+.obj __RTTI__cf_CfGimmickSaveOff, global
 	.4byte cf_CfGimmickSaveOff_typestr
 	.4byte cf_CfGimmickSaveOff_hierarchy
+.endobj __RTTI__cf_CfGimmickSaveOff
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

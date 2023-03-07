@@ -559,24 +559,22 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-
-.global cf_CtrlPad_typestr
-cf_CtrlPad_typestr:
+.obj cf_CtrlPad_typestr, global
 	.asciz "cf::CtrlPad"
+.endobj cf_CtrlPad_typestr
 
-.global cf_CtrlRemote_typestr
-cf_CtrlRemote_typestr:
+.obj cf_CtrlRemote_typestr, global
 	.asciz "cf::CtrlRemote"
 	.balign 4
+.endobj cf_CtrlRemote_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8052B3D8
-lbl_8052B3D8:
+.obj lbl_8052B3D8, global
 	.4byte 0
 	.4byte 0
 	.4byte 0x00000010
@@ -607,10 +605,10 @@ lbl_8052B3D8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8052B3D8
 
 
-.global __vt__cf_CtrlPad
-__vt__cf_CtrlPad:
+.obj __vt__cf_CtrlPad, global
 	.4byte __RTTI__cf_CtrlPad
 	.4byte 0
 	.4byte __dt__cf_CtrlPad
@@ -659,9 +657,9 @@ __vt__cf_CtrlPad:
 	.4byte func_8009BD14
 	.4byte func_8009C1BC
 	.4byte func_80096F30
+.endobj __vt__cf_CtrlPad
 
-.global cf_CtrlPad_hierarchy
-cf_CtrlPad_hierarchy:
+.obj cf_CtrlPad_hierarchy, global
 	.4byte __RTTI__CActInput
 	.4byte 0
 	.4byte __RTTI__cf_CtrlBase
@@ -673,9 +671,9 @@ cf_CtrlPad_hierarchy:
 	.4byte __RTTI__cf_CtrlRemote
 	.4byte 0
 	.4byte 0
+.endobj cf_CtrlPad_hierarchy
 
-.global cf_CtrlRemote_hierarchy
-cf_CtrlRemote_hierarchy:
+.obj cf_CtrlRemote_hierarchy, global
 	.4byte __RTTI__CActInput
 	.4byte 0
 	.4byte __RTTI__cf_CtrlBase
@@ -685,9 +683,9 @@ cf_CtrlRemote_hierarchy:
 	.4byte __RTTI__cf_CtrlPc
 	.4byte 0
 	.4byte 0
+.endobj cf_CtrlRemote_hierarchy
 
-.global cf_CtrlPc_hierarchy
-cf_CtrlPc_hierarchy:
+.obj cf_CtrlPc_hierarchy, global
 	.4byte __RTTI__CActInput
 	.4byte 0
 	.4byte __RTTI__cf_CtrlBase
@@ -696,31 +694,32 @@ cf_CtrlPc_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CtrlPc_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CtrlPad
-__RTTI__cf_CtrlPad:
+.obj __RTTI__cf_CtrlPad, global
 	.4byte cf_CtrlPad_typestr
 	.4byte cf_CtrlPad_hierarchy
+.endobj __RTTI__cf_CtrlPad
 
-.global __RTTI__cf_CtrlRemote
-__RTTI__cf_CtrlRemote:
+.obj __RTTI__cf_CtrlRemote, global
 	.4byte cf_CtrlRemote_typestr
 	.4byte cf_CtrlRemote_hierarchy
+.endobj __RTTI__cf_CtrlRemote
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_80668FA0
-float_80668FA0:
+.obj float_80668FA0, global
 	.float 0.0245436933 #0x3CC90FDB
 	.4byte 0
 	
+.endobj float_80668FA0
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -608,24 +608,22 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-
-.global CMenuSelectShop_typestr
-CMenuSelectShop_typestr:
+.obj CMenuSelectShop_typestr, global
 	.asciz "CMenuSelectShop"
+.endobj CMenuSelectShop_typestr
 
 
-.global lbl_804FF308
-lbl_804FF308:
+.obj lbl_804FF308, global
 	.asciz "CMenuSelectShop"
+.endobj lbl_804FF308
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMenuSelectShop
-__vt__CMenuSelectShop:
+.obj __vt__CMenuSelectShop, global
 	.4byte __RTTI__CMenuSelectShop
 	.4byte 0
 	.4byte __dt__CMenuSelectShop
@@ -674,9 +672,9 @@ __vt__CMenuSelectShop:
 	.4byte func_8018A620
 	.4byte func_8018A618
 	.4byte func_8018A4E8
+.endobj __vt__CMenuSelectShop
 
-.global CMenuSelectShop_hierarchy
-CMenuSelectShop_hierarchy:
+.obj CMenuSelectShop_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000070
 	.4byte __RTTI__IWorkEvent
@@ -693,23 +691,24 @@ CMenuSelectShop_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuSelectShop_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuSelectShop
-__RTTI__CMenuSelectShop:
+.obj __RTTI__CMenuSelectShop, global
 	.4byte CMenuSelectShop_typestr
 	.4byte CMenuSelectShop_hierarchy
+.endobj __RTTI__CMenuSelectShop
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80666BD8
-lbl_80666BD8:
+.obj lbl_80666BD8, global
 	.skip 0x8
+.endobj lbl_80666BD8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

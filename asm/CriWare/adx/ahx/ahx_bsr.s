@@ -498,8 +498,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global ahxbsr_maxi_val
-ahxbsr_maxi_val:
+.balign 8
+
+.obj ahxbsr_maxi_val, global
 	.4byte 0
 	.4byte 0x00000001
 	.4byte 0x00000003
@@ -534,3 +535,4 @@ ahxbsr_maxi_val:
 	.4byte 0x7FFFFFFF
 	.4byte 0xFFFFFFFF
 	.4byte 0
+.endobj ahxbsr_maxi_val

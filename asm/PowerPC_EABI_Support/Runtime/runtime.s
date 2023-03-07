@@ -638,10 +638,13 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-__constants:
+.balign 8
+
+.obj __constants, local
 	.4byte 0
 	.4byte 0
 	.4byte 0x41F00000
 	.4byte 0
 	.4byte 0x41E00000
 	.4byte 0
+.endobj __constants

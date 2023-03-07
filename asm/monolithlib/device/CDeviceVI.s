@@ -1341,10 +1341,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_805262A8
-lbl_805262A8:
+.obj lbl_805262A8, global
 	.4byte 0x00000001
 	.4byte 0x00000002
 	.4byte 0x00000003
@@ -1375,30 +1374,30 @@ lbl_805262A8:
 	.4byte 0x0000001C
 	.4byte 0x0000001D
 	.4byte 0x0000001E
+.endobj lbl_805262A8
 
-.global CDeviceVI_typestr
-CDeviceVI_typestr:
+.obj CDeviceVI_typestr, global
 	.asciz "CDeviceVI"
 	.balign 4
+.endobj CDeviceVI_typestr
 
-.global reslist_CDeviceVICb_typestr
-reslist_CDeviceVICb_typestr:
+.obj reslist_CDeviceVICb_typestr, global
 	.asciz "reslist<CDeviceVICb *>"
 	.balign 4
+.endobj reslist_CDeviceVICb_typestr
 
-.global _reslist_base_CDeviceVICb_typestr
-_reslist_base_CDeviceVICb_typestr:
+.obj _reslist_base_CDeviceVICb_typestr, global
 	.asciz "_reslist_base<CDeviceVICb *>"
 	.balign 4
 	.4byte 0
+.endobj _reslist_base_CDeviceVICb_typestr
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8056F670
-lbl_8056F670:
+.obj lbl_8056F670, global
 	.4byte GXNtsc240Ds
 	.4byte GXNtsc480Int
 	.4byte GXNtsc480Prog
@@ -1415,10 +1414,10 @@ lbl_8056F670:
 	.4byte GXMpal480Int
 	.4byte GXMpal480Prog
 	.4byte GXMpal480ProgSoft
+.endobj lbl_8056F670
 
 
-.global __vt__CDeviceVI
-__vt__CDeviceVI:
+.obj __vt__CDeviceVI, global
 	.4byte __RTTI__CDeviceVI
 	.4byte 0
 	.4byte __dt__CDeviceVI
@@ -1464,9 +1463,9 @@ __vt__CDeviceVI:
 	.4byte func_80448F38
 	.4byte func_80448F30
 	.4byte func_80448E88
+.endobj __vt__CDeviceVI
 
-.global CDeviceVI_hierarchy
-CDeviceVI_hierarchy:
+.obj CDeviceVI_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
@@ -1474,89 +1473,91 @@ CDeviceVI_hierarchy:
 	.4byte __RTTI__CDeviceBase
 	.4byte 0
 	.4byte 0
+.endobj CDeviceVI_hierarchy
 
 
-.global __vt__reslist_CDeviceVICb
-__vt__reslist_CDeviceVICb:
+.obj __vt__reslist_CDeviceVICb, global
 	.4byte __RTTI__reslist_CDeviceVICb
 	.4byte 0
 	.4byte __dt__reslist_CDeviceVICb
+.endobj __vt__reslist_CDeviceVICb
 
-.global reslist_CDeviceVICb_hierarchy
-reslist_CDeviceVICb_hierarchy:
+.obj reslist_CDeviceVICb_hierarchy, global
 	.4byte __RTTI___reslist_base_CDeviceVICb
 	.4byte 0
 	.4byte 0
+.endobj reslist_CDeviceVICb_hierarchy
 
 
-.global __vt___reslist_base_CDeviceVICb
-__vt___reslist_base_CDeviceVICb:
+.obj __vt___reslist_base_CDeviceVICb, global
 	.4byte __RTTI___reslist_base_CDeviceVICb
 	.4byte 0
 	.4byte __dt___reslist_base_CDeviceVICb
 	.4byte 0
+.endobj __vt___reslist_base_CDeviceVICb
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CDeviceVI
-__RTTI__CDeviceVI:
+.obj __RTTI__CDeviceVI, global
 	.4byte CDeviceVI_typestr
 	.4byte CDeviceVI_hierarchy
+.endobj __RTTI__CDeviceVI
 
-.global __RTTI__reslist_CDeviceVICb
-__RTTI__reslist_CDeviceVICb:
+.obj __RTTI__reslist_CDeviceVICb, global
 	.4byte reslist_CDeviceVICb_typestr
 	.4byte reslist_CDeviceVICb_hierarchy
+.endobj __RTTI__reslist_CDeviceVICb
 
-.global __RTTI___reslist_base_CDeviceVICb
-__RTTI___reslist_base_CDeviceVICb:
+.obj __RTTI___reslist_base_CDeviceVICb, global
 	.4byte _reslist_base_CDeviceVICb_typestr
 	.4byte 0
+.endobj __RTTI___reslist_base_CDeviceVICb
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066CB60
-float_8066CB60:
+.obj float_8066CB60, global
 	.float 0.033333335 #0x3D088889
+.endobj float_8066CB60
 
 
-.global float_8066CB64
-float_8066CB64:
+.obj float_8066CB64, global
 	.float 1.33333333 #0x3FAAAAAB
+.endobj float_8066CB64
 
 
-.global float_8066CB68
-float_8066CB68:
+.obj float_8066CB68, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066CB68
 
 
-.global double_8066CB70
-double_8066CB70:
+.obj double_8066CB70, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066CB70
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_8065A6B8
-lbl_8065A6B8:
+.obj lbl_8065A6B8, global
 	.skip 0x40
+.endobj lbl_8065A6B8
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80667F28, global
+	.skip 0x4
+.endobj lbl_80667F28
 
-.global lbl_80667F28
-lbl_80667F28:
+.obj lbl_80667F2C, global
 	.skip 0x4
-.global lbl_80667F2C
-lbl_80667F2C:
-	.skip 0x4
+.endobj lbl_80667F2C
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

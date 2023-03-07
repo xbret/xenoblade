@@ -3,35 +3,38 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8050D420
-lbl_8050D420:
+.balign 8
+
+.obj lbl_8050D420, global
 	.asciz "%a %b %e %T %Y"
 	.balign 4
+.endobj lbl_8050D420
 
-.global lbl_8050D430
-lbl_8050D430:
+.obj lbl_8050D430, global
 	.asciz "%I:%M:%S %p"
+.endobj lbl_8050D430
 
-.global lbl_8050D43C
-lbl_8050D43C:
+.obj lbl_8050D43C, global
 	.asciz "%m/%d/%y"
 	.balign 4
+.endobj lbl_8050D43C
 
-.global lbl_8050D448
-lbl_8050D448:
+.obj lbl_8050D448, global
 	.asciz "Sun|Sunday|Mon|Monday|Tue|Tuesday|Wed|Wednesday|Thu|Thursday|Fri|Friday|Sat|Saturday"
 	.balign 4
+.endobj lbl_8050D448
 
-.global lbl_8050D4A0
-lbl_8050D4A0:
+.obj lbl_8050D4A0, global
 	.asciz "Jan|January|Feb|February|Mar|March|Apr|April|May|May|Jun|June|Jul|July|Aug|August|Sep|September|Oct|October|Nov|November|Dec|December"
 	.balign 4
+.endobj lbl_8050D4A0
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global __lconv
-__lconv:
+.balign 8
+
+.obj __lconv, global
 	.4byte lbl_8066B858
 	.4byte lbl_8066B85C
 	.4byte lbl_8066B85C
@@ -58,9 +61,9 @@ __lconv:
 	.byte 0x7F
 	.byte 0x7F
 	.byte 0
+.endobj __lconv
 
-.global _loc_ctyp_C
-_loc_ctyp_C:
+.obj _loc_ctyp_C, global
 	.asciz "C" #0x0
 	.2byte 0
 	.4byte 0
@@ -72,9 +75,9 @@ _loc_ctyp_C:
 	.4byte __wlower_mapC #0x1C
 	.4byte __mbtowc_noconv #0x20
 	.4byte __wctomb_noconv #0x24
+.endobj _loc_ctyp_C
 
-.global char_coll_tableC
-char_coll_tableC:
+.obj char_coll_tableC, global
 	.2byte 0x0001
     .2byte 0x0002
 	.2byte 0x0003
@@ -171,9 +174,9 @@ char_coll_tableC:
     .2byte 0x001F
 	.2byte 0x0020
     .2byte 0x0000
+.endobj char_coll_tableC
 
-.global _loc_coll_C
-_loc_coll_C:
+.obj _loc_coll_C, global
 	.4byte 0x43000000
 	.4byte 0
 	.4byte 0x00000020
@@ -181,9 +184,9 @@ _loc_coll_C:
 	.4byte 0
 	.4byte char_coll_tableC
 	.4byte 0
+.endobj _loc_coll_C
 
-.global _loc_mon_C
-_loc_mon_C:
+.obj _loc_mon_C, global
 	.asciz "C" #0x0
 	.2byte 0
 	.4byte 0
@@ -210,9 +213,9 @@ _loc_mon_C:
 	.byte 0x7F
 	.byte 0x7F
 	.byte 0x00
+.endobj _loc_mon_C
 
-.global _loc_num_C
-_loc_num_C:
+.obj _loc_num_C, global
 	.asciz "C" #0x0
 	.2byte 0
 	.4byte 0
@@ -220,9 +223,9 @@ _loc_num_C:
 	.4byte lbl_8066B85C
 	.4byte lbl_8066B85C
 	.4byte 0
+.endobj _loc_num_C
 
-.global _loc_tim_C
-_loc_tim_C:
+.obj _loc_tim_C, global
 	.asciz "C" #0x0
 	.2byte 0
 	.4byte 0
@@ -234,10 +237,10 @@ _loc_tim_C:
 	.4byte lbl_8050D448
 	.4byte lbl_8050D4A0
 	.4byte lbl_8066B85C
+.endobj _loc_tim_C
 
 
-.global _current_locale
-_current_locale:
+.obj _current_locale, global
 	.4byte 0 #0x0
 	.asciz "C" #0x4
 	.2byte 0
@@ -257,26 +260,29 @@ _current_locale:
 	.4byte _loc_mon_C #0x3C
 	.4byte _loc_num_C #0x40
 	.4byte _loc_tim_C #0x44
+.endobj _current_locale
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066B858
-lbl_8066B858:
+.balign 8
+
+.obj lbl_8066B858, global
 	.asciz "."
 	.balign 4
+.endobj lbl_8066B858
 
-.global lbl_8066B85C
-lbl_8066B85C:
+.obj lbl_8066B85C, global
 	.4byte 0
+.endobj lbl_8066B85C
 
-.global lbl_8066B860
-lbl_8066B860:
+.obj lbl_8066B860, global
 	.asciz "AM|PM"
 	.balign 4
+.endobj lbl_8066B860
 
-.global lbl_8066B868
-lbl_8066B868:
+.obj lbl_8066B868, global
 	.asciz "%T"
 	.balign 4
 	.4byte 0
+.endobj lbl_8066B868

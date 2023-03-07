@@ -488,120 +488,120 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_805280A0
-lbl_805280A0:
+.obj lbl_805280A0, global
 	.asciz "mtIris03"
 	.balign 4
+.endobj lbl_805280A0
 
 
-.global lbl_805280AC
-lbl_805280AC:
+.obj lbl_805280AC, global
 	.4byte 0
 	.float 0.25
 	.float 0.5
+.endobj lbl_805280AC
 
-.global CMdlMouth_typestr
-CMdlMouth_typestr:
+.obj CMdlMouth_typestr, global
 	.asciz "CMdlMouth"
 	.balign 4
 	.4byte 0
+.endobj CMdlMouth_typestr
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMdlMouth
-__vt__CMdlMouth:
+.obj __vt__CMdlMouth, global
 	.4byte __RTTI__CMdlMouth
 	.4byte 0
 	.4byte __dt__CMdlMouth
 	.4byte 0
+.endobj __vt__CMdlMouth
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80666570
-lbl_80666570:
+.obj lbl_80666570, global
 	.4byte lbl_8066DAB0
+.endobj lbl_80666570
 
 
-.global lbl_80666574
-lbl_80666574:
+.obj lbl_80666574, global
 	.4byte lbl_805280A0
+.endobj lbl_80666574
 
-.global __RTTI__CMdlMouth
-__RTTI__CMdlMouth:
+.obj __RTTI__CMdlMouth, global
 	.4byte CMdlMouth_typestr
 	.4byte 0
+.endobj __RTTI__CMdlMouth
 
 
-.global lbl_80666580
-lbl_80666580:
+.obj lbl_80666580, global
 	.4byte 0x72656600
+.endobj lbl_80666580
 
 
-.global lbl_80666584
-lbl_80666584:
+.obj lbl_80666584, global
 	.4byte 0x72656600
+.endobj lbl_80666584
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_8066DAB0
-lbl_8066DAB0:
+.obj lbl_8066DAB0, global
 	.asciz "JUjaw"
 	.balign 4
+.endobj lbl_8066DAB0
 
 
-.global float_8066DAB8
-float_8066DAB8:
+.obj float_8066DAB8, global
 	.float 0
+.endobj float_8066DAB8
 
 
-.global float_8066DABC
-float_8066DABC:
+.obj float_8066DABC, global
 	.float 1.0
+.endobj float_8066DABC
 
 
-.global float_8066DAC0
-float_8066DAC0:
+.obj float_8066DAC0, global
 	.float 0.2
+.endobj float_8066DAC0
 
 
-.global float_8066DAC4
-float_8066DAC4:
+.obj float_8066DAC4, global
 	.float 0.002 #0x3B03126F
+.endobj float_8066DAC4
 
 
-.global float_8066DAC8
-float_8066DAC8:
+.obj float_8066DAC8, global
 	.float 0.006 #0x3BC49BA6
 	.4byte 0
+.endobj float_8066DAC8
 
 
-.global double_8066DAD0
-double_8066DAD0:
+.obj double_8066DAD0, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066DAD0
 
-.global float_8066DAD8
-float_8066DAD8:
+.obj float_8066DAD8, global
 	.float 40.7436638 #0x4222F983
+.endobj float_8066DAD8
 
 
-.global float_8066DADC
-float_8066DADC:
+.obj float_8066DADC, global
 	.float 33 #0x42040000
+.endobj float_8066DADC
 
 
-.global float_8066DAE0
-float_8066DAE0:
+.obj float_8066DAE0, global
 	.float 4 #0x40800000
 	.4byte 0
+.endobj float_8066DAE0
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

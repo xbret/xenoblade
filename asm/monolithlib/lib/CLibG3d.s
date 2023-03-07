@@ -163,11 +163,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-
-.global __vt__CLibG3d
-__vt__CLibG3d:
+.obj __vt__CLibG3d, global
 	.4byte __RTTI__CLibG3d
 	.4byte 0
 	.4byte __dt__CLibG3d
@@ -208,42 +206,42 @@ __vt__CLibG3d:
 	.4byte func_8045D2AC
 	.4byte func_8045D300
 	.4byte func_80039E30
+.endobj __vt__CLibG3d
 
-.global CLibG3d_hierarchy
-CLibG3d_hierarchy:
+.obj CLibG3d_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CLibG3d_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CLibG3d
-__RTTI__CLibG3d:
+.obj __RTTI__CLibG3d, global
 	.4byte CLibG3d_typestr
 	.4byte CLibG3d_hierarchy
+.endobj __RTTI__CLibG3d
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-
-.global CLibG3d_typestr
-CLibG3d_typestr:
+.obj CLibG3d_typestr, global
 	.asciz "CLibG3d"
+.endobj CLibG3d_typestr
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80667FC8
-lbl_80667FC8:
+.obj lbl_80667FC8, global
 	.skip 0x8
+.endobj lbl_80667FC8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

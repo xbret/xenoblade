@@ -4185,16 +4185,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMenuKeyAssign_typestr
-CMenuKeyAssign_typestr:
+.obj CMenuKeyAssign_typestr, global
 	.asciz "CMenuKeyAssign"
 	.balign 4
+.endobj CMenuKeyAssign_typestr
 
 
-.global CMenuKeyAssign_strpool
-CMenuKeyAssign_strpool:
+.obj CMenuKeyAssign_strpool, global
 	.asciz "CMenuKeyAssign"
 	.asciz "mf70_cf40_keyassign.brlyt"
 	.asciz "fileID_1"
@@ -4212,14 +4211,14 @@ CMenuKeyAssign_strpool:
 	.asciz "txt_pos%02d_u"
 	.balign 4
 	.4byte 0
+.endobj CMenuKeyAssign_strpool
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMenuKeyAssign
-__vt__CMenuKeyAssign:
+.obj __vt__CMenuKeyAssign, global
 	.4byte __RTTI__CMenuKeyAssign
 	.4byte 0
 	.4byte __dt__CMenuKeyAssign
@@ -4268,9 +4267,9 @@ __vt__CMenuKeyAssign:
 	.4byte func_80115FC8
 	.4byte func_80115FC0
 	.4byte func_80114E88
+.endobj __vt__CMenuKeyAssign
 
-.global CMenuKeyAssign_hierarchy
-CMenuKeyAssign_hierarchy:
+.obj CMenuKeyAssign_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x0000005C
 	.4byte __RTTI__IWorkEvent
@@ -4287,35 +4286,39 @@ CMenuKeyAssign_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuKeyAssign_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuKeyAssign
-__RTTI__CMenuKeyAssign:
+.obj __RTTI__CMenuKeyAssign, global
 	.4byte CMenuKeyAssign_typestr
 	.4byte CMenuKeyAssign_hierarchy
+.endobj __RTTI__CMenuKeyAssign
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_80669940
-float_80669940:
+.balign 8
+
+.obj float_80669940, global
 	.float 0
 	.4byte 0
+.endobj float_80669940
 
 
-.global double_80669948
-double_80669948:
+.obj double_80669948, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_80669948
+
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_806668A0
-lbl_806668A0:
+.obj lbl_806668A0, global
 	.skip 0x8
+.endobj lbl_806668A0
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -1870,95 +1870,107 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-"ResNameData_Models__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@":
+
+.obj "ResNameData_Models__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@", local
 	.4byte 0x0000000E
 	.asciz "3DModels(NW4R)"
 	.balign 4
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj "ResNameData_Models__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@"
 
 
-"ResNameData_Pltts__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@":
+.obj "ResNameData_Pltts__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@", local
 	.4byte 0x0000000E
 	.asciz "Palettes(NW4R)"
 	.balign 4
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj "ResNameData_Pltts__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@"
 
 
-"ResNameData_Textures__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@":
+.obj "ResNameData_Textures__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@", local
 	.4byte 0x0000000E
 	.asciz "Textures(NW4R)"
 	.balign 4
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj "ResNameData_Textures__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@"
 
 
-"ResNameData_AnmChr__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@":
+.obj "ResNameData_AnmChr__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@", local
 	.4byte 0x0000000C
 	.asciz "AnmChr(NW4R)"
 	.balign 4
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj "ResNameData_AnmChr__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@"
 
 #unused
-"ResNameData_AnmVis__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@":
+.obj "ResNameData_AnmVis__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@", local
 	.4byte 0x0000000C
 	.asciz "AnmVis(NW4R)"
 	.balign 4
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj "ResNameData_AnmVis__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@"
 
 
-"ResNameData_AnmClr__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@":
+.obj "ResNameData_AnmClr__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@", local
 	.4byte 0x0000000C
 	.asciz "AnmClr(NW4R)"
 	.balign 4
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj "ResNameData_AnmClr__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@"
 
 
-"ResNameData_AnmTexPat__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@":
+.obj "ResNameData_AnmTexPat__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@", local
 	.4byte 0x0000000F
 	.asciz "AnmTexPat(NW4R)"
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj "ResNameData_AnmTexPat__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@"
 
 
-"ResNameData_AnmTexSrt__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@":
+.obj "ResNameData_AnmTexSrt__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@", local
 	.4byte 0x0000000F
 	.asciz "AnmTexSrt(NW4R)"
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj "ResNameData_AnmTexSrt__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@"
 
 
-"ResNameData_AnmShp__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@":
+.obj "ResNameData_AnmShp__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@", local
 	.4byte 0x0000000C
 	.asciz "AnmShp(NW4R)"
 	.balign 4
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj "ResNameData_AnmShp__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@"
 
 
-"ResNameData_AnmScn__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@":
+.obj "ResNameData_AnmScn__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@", local
 	.4byte 0x0000000C
 	.asciz "AnmScn(NW4R)"
 	.balign 4
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj "ResNameData_AnmScn__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@"
 
-"ResNameData_Ext__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@":
+.obj "ResNameData_Ext__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@", local
 	.4byte 0x00000008
 	.asciz "External"
 	.balign 4
@@ -1966,3 +1978,4 @@
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj "ResNameData_Ext__Q34nw4r3g3d25@unnamed@g3d_resfile_cpp@"

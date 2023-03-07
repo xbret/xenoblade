@@ -175,21 +175,27 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8054B5C8
-lbl_8054B5C8:
+.balign 8
+
+.obj lbl_8054B5C8, global
 	.asciz "<< RVL_SDK - ENC \trelease build: Feb 27 2009 10:05:42 (0x4302_145) >>"
 	.balign 4
+.endobj lbl_8054B5C8
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-.global __ENCVersion
-__ENCVersion:
+
+.obj __ENCVersion, global
 	.4byte lbl_8054B5C8
 	.4byte 0
+.endobj __ENCVersion
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global encRegistered
-encRegistered:
+.balign 8
+
+.obj encRegistered, global
 	.skip 0x8
+.endobj encRegistered

@@ -10,8 +10,10 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global adxm_framework
-adxm_framework:
+
+.obj adxm_framework, global
 	.4byte 0xFFFFFFFF
 	.4byte 0
+.endobj adxm_framework

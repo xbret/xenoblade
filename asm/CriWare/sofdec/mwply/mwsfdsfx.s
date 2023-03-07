@@ -1064,8 +1064,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global mwsfdsfx_strpool
-mwsfdsfx_strpool:
+.balign 8
+
+.obj mwsfdsfx_strpool, global
 	.asciz "E201184 MwsfdBufFmt value is invalid."
 	.asciz "E301272 picture_structure is invalid."
 	.asciz "E301273 chroma_format is invalid."
@@ -1098,3 +1099,4 @@ mwsfdsfx_strpool:
 	.asciz "E404011 mwPlyGetCnvBottomUp: handle is invalid."
 	.balign 4
 	.4byte 0
+.endobj mwsfdsfx_strpool

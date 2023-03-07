@@ -1525,8 +1525,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056E3D8
-lbl_8056E3D8:
+.balign 8
+
+.obj lbl_8056E3D8, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q44nw4r3snd6detail9SeqPlayerFv
@@ -1553,29 +1554,33 @@ lbl_8056E3D8:
 	.4byte OnUpdateFrameSoundThread__Q44nw4r3snd6detail9SeqPlayerFv
 	.4byte OnShutdownSoundThread__Q44nw4r3snd6detail9SeqPlayerFv
 	.4byte 0
+.endobj lbl_8056E3D8
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C800
-float_8066C800:
+.balign 8
+
+.obj float_8066C800, global
 	.float 1.0
+.endobj float_8066C800
 
 
-.global float_8066C804
-float_8066C804:
+.obj float_8066C804, global
 	.float 0
+.endobj float_8066C804
 
 
-.global double_8066C808
-double_8066C808:
+.obj double_8066C808, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066C808
 
-.global float_8066C810
-float_8066C810:
+.obj float_8066C810, global
 	.float 60000 #0x476A6000
 	.4byte 0
+.endobj float_8066C810
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-mGlobalVariable__Q44nw4r3snd6detail9SeqPlayer:
+.obj mGlobalVariable__Q44nw4r3snd6detail9SeqPlayer, local
 	.skip 0x20
+.endobj mGlobalVariable__Q44nw4r3snd6detail9SeqPlayer

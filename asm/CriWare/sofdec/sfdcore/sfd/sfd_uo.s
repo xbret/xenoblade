@@ -201,8 +201,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global SFD_tr_uo
-SFD_tr_uo:
+.balign 8
+
+.obj SFD_tr_uo, global
 	.4byte SFUO_Init
 	.4byte SFUO_Finish
 	.4byte SFUO_ExecServer
@@ -217,3 +218,4 @@ SFD_tr_uo:
 	.4byte SFUO_GetRead
 	.4byte SFUO_AddRead
 	.4byte SFUO_Seek
+.endobj SFD_tr_uo

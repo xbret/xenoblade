@@ -151,11 +151,14 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8055ED08
-lbl_8055ED08:
+.balign 8
+
+.obj lbl_8055ED08, global
 	.asciz "/title/00000001/00000002/data/state.dat"
+.endobj lbl_8055ED08
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-StateFlags:
+.obj StateFlags, local
 	.skip 0x20
+.endobj StateFlags

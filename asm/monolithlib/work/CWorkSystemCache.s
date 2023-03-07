@@ -383,28 +383,27 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CWorkSystemCache_typestr
-CWorkSystemCache_typestr:
+.obj CWorkSystemCache_typestr, global
 	.asciz "CWorkSystemCache"
 	.balign 4
+.endobj CWorkSystemCache_typestr
 
-.global reslist_CCacheItem_typestr
-reslist_CCacheItem_typestr:
+.obj reslist_CCacheItem_typestr, global
 	.asciz "reslist<CCacheItem *>"
 	.balign 4
+.endobj reslist_CCacheItem_typestr
 
-.global _reslist_base_CCacheItem_typestr
-_reslist_base_CCacheItem_typestr:
+.obj _reslist_base_CCacheItem_typestr, global
 	.asciz "_reslist_base<CCacheItem *>"
+.endobj _reslist_base_CCacheItem_typestr
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CWorkSystemCache
-__vt__CWorkSystemCache:
+.obj __vt__CWorkSystemCache, global
 	.4byte __RTTI__CWorkSystemCache
 	.4byte 0
 	.4byte __dt__CWorkSystemCache
@@ -445,59 +444,62 @@ __vt__CWorkSystemCache:
 	.4byte func_804D910C
 	.4byte __dt__804D9110
 	.4byte func_80039E30
+.endobj __vt__CWorkSystemCache
 
-.global CWorkSystemCache_hierarchy
-CWorkSystemCache_hierarchy:
+.obj CWorkSystemCache_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
 	.4byte 0
 	.4byte 0
+.endobj CWorkSystemCache_hierarchy
 
 
-.global __vt__reslist_CCacheItem
-__vt__reslist_CCacheItem:
+.obj __vt__reslist_CCacheItem, global
 	.4byte __RTTI__reslist_CCacheItem
 	.4byte 0
 	.4byte __dt__reslist_CCacheItem
+.endobj __vt__reslist_CCacheItem
 
-.global reslist_CCacheItem_hierarchy
-reslist_CCacheItem_hierarchy:
+.obj reslist_CCacheItem_hierarchy, global
 	.4byte __RTTI___reslist_base_CCacheItem
 	.4byte 0
 	.4byte 0
+.endobj reslist_CCacheItem_hierarchy
 
 
-.global __vt___reslist_base_CCacheItem
-__vt___reslist_base_CCacheItem:
+.obj __vt___reslist_base_CCacheItem, global
 	.4byte __RTTI___reslist_base_CCacheItem
 	.4byte 0
 	.4byte __dt___reslist_base_CCacheItem
+.endobj __vt___reslist_base_CCacheItem
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CWorkSystemCache
-__RTTI__CWorkSystemCache:
+.obj __RTTI__CWorkSystemCache, global
 	.4byte CWorkSystemCache_typestr
 	.4byte CWorkSystemCache_hierarchy
+.endobj __RTTI__CWorkSystemCache
 
-.global __RTTI__reslist_CCacheItem
-__RTTI__reslist_CCacheItem:
+.obj __RTTI__reslist_CCacheItem, global
 	.4byte reslist_CCacheItem_typestr
 	.4byte reslist_CCacheItem_hierarchy
+.endobj __RTTI__reslist_CCacheItem
 
-.global __RTTI___reslist_base_CCacheItem
-__RTTI___reslist_base_CCacheItem:
+.obj __RTTI___reslist_base_CCacheItem, global
 	.4byte _reslist_base_CCacheItem_typestr
 	.4byte 0
+.endobj __RTTI___reslist_base_CCacheItem
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_806682A0
-lbl_806682A0:
+.balign 8
+
+.obj lbl_806682A0, global
 	.skip 0x8
+.endobj lbl_806682A0
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

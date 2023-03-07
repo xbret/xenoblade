@@ -821,55 +821,57 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066BF00
-float_8066BF00:
+.balign 8
+
+.obj float_8066BF00, global
 	.float 32 #0x42000000
+.endobj float_8066BF00
 
 
-.global float_8066BF04
-float_8066BF04:
+.obj float_8066BF04, global
 	.float 0
+.endobj float_8066BF04
 
 
-.global double_8066BF08
-double_8066BF08:
+.obj double_8066BF08, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066BF08
 
-.global float_8066BF10
-float_8066BF10:
+.obj float_8066BF10, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_8066BF10
 
 
-.global float_8066BF14
-float_8066BF14:
+.obj float_8066BF14, global
 	.float 50 #0x42480000
+.endobj float_8066BF14
 
 
-.global float_8066BF18
-float_8066BF18:
+.obj float_8066BF18, global
 	.float 1.0
+.endobj float_8066BF18
 
 
-.global float_8066BF1C
-float_8066BF1C:
+.obj float_8066BF1C, global
 	.float 2 #0x40000000
+.endobj float_8066BF1C
 
 
-.global float_8066BF20
-float_8066BF20:
+.obj float_8066BF20, global
 	.float 65536 #0x47800000
+.endobj float_8066BF20
 
 
-.global float_8066BF24
-float_8066BF24:
+.obj float_8066BF24, global
 	.float 256 #0x43800000
+.endobj float_8066BF24
 
 
-.global float_8066BF28
-float_8066BF28:
+.obj float_8066BF28, global
 	.float 32000 #0x46FA0000
+.endobj float_8066BF28
 
 
-.global float_8066BF2C
-float_8066BF2C:
+.obj float_8066BF2C, global
 	.4byte 0x3B800000
+.endobj float_8066BF2C

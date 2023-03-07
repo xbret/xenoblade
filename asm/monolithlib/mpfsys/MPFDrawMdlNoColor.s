@@ -18,11 +18,12 @@
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80668168, global
+	.skip 0x4
+.endobj lbl_80668168
 
-.global lbl_80668168
-lbl_80668168:
+.obj lbl_8066816C, global
 	.skip 0x4
-.global lbl_8066816C
-lbl_8066816C:
-	.skip 0x4
+.endobj lbl_8066816C

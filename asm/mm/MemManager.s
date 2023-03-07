@@ -2141,10 +2141,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_80525D28
-lbl_80525D28:
+.obj lbl_80525D28, global
 	#"プログラム領域残り %x / 最大 %x\n"
 	.4byte 0x8376838D
 	.4byte 0x834F8389
@@ -2154,6 +2153,7 @@ lbl_80525D28:
 	.4byte 0x78202F20
 	.4byte 0x8DC591E5
 	.asciz " %x\n"
+.endobj lbl_80525D28
 
 	#"プログラム領域が限界を超えました"
 	.byte 0x83, 0x76, 0x83
@@ -2170,97 +2170,99 @@ lbl_80525D28:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80665E28
-lbl_80665E28:
+.obj lbl_80665E28, global
 	.4byte lbl_8066C9A8
+.endobj lbl_80665E28
 
 
-.global lbl_80665E2C
-lbl_80665E2C:
+.obj lbl_80665E2C, global
 	.4byte lbl_8066C9B0
+.endobj lbl_80665E2C
 
-.global lbl_80665E30
-lbl_80665E30:
+.obj lbl_80665E30, global
 	.4byte 0xFFFFFFFF
+.endobj lbl_80665E30
 
 
-.global lbl_80665E34
-lbl_80665E34:
+.obj lbl_80665E34, global
 	.4byte 0xFFFFFFFF
+.endobj lbl_80665E34
 
 
-.global lbl_80665E38
-lbl_80665E38:
+.obj lbl_80665E38, global
 	.byte 0x01
+.endobj lbl_80665E38
 
 
-.global lbl_80665E39
-lbl_80665E39:
+.obj lbl_80665E39, global
 	.byte 0x01
 	.byte 0x00
 	.byte 0x00
+.endobj lbl_80665E39
 
-.global arenaMemorySize
-arenaMemorySize:
+.obj arenaMemorySize, global
 	.4byte 0x00600000
+.endobj arenaMemorySize
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_8066C9A8
-lbl_8066C9A8:
+.obj lbl_8066C9A8, global
 	.asciz "Mem1"
 	.balign 4
+.endobj lbl_8066C9A8
 
-.global lbl_8066C9B0
-lbl_8066C9B0:
+.obj lbl_8066C9B0, global
 	.asciz "Mem2"
 	.balign 4
+.endobj lbl_8066C9B0
 
-.global double_8066C9B8
-double_8066C9B8:
+.obj double_8066C9B8, global
 	.double 1 #0x3FF0000000000000
+.endobj double_8066C9B8
 
-.global float_8066C9C0
-float_8066C9C0:
+.obj float_8066C9C0, global
 	.float 0
+.endobj float_8066C9C0
 
 
-.global float_8066C9C4
-float_8066C9C4:
+.obj float_8066C9C4, global
 	.float 100.0
+.endobj float_8066C9C4
 
 
-.global double_8066C9C8
-double_8066C9C8:
+.obj double_8066C9C8, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066C9C8
+
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-
-
-.global memoryAllocHeapArray
-memoryAllocHeapArray:
+.obj memoryAllocHeapArray, global
 	.skip 0x2300
+.endobj memoryAllocHeapArray
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80667E50, global
+	.skip 0x4
+.endobj lbl_80667E50
 
-.global lbl_80667E50
-lbl_80667E50:
+.obj lbl_80667E54, global
 	.skip 0x4
-.global lbl_80667E54
-lbl_80667E54:
+.endobj lbl_80667E54
+
+.obj lbl_80667E58, global
 	.skip 0x4
-.global lbl_80667E58
-lbl_80667E58:
+.endobj lbl_80667E58
+
+.obj lbl_80667E5C, global
 	.skip 0x4
-.global lbl_80667E5C
-lbl_80667E5C:
-	.skip 0x4
+.endobj lbl_80667E5C
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

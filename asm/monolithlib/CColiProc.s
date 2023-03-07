@@ -771,67 +771,65 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CColiResCall_typestr
-CColiResCall_typestr:
+.obj CColiResCall_typestr, global
 	.asciz "CColiResCall"
 	.balign 4
+.endobj CColiResCall_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-
-.global __vt__CColiProc
-__vt__CColiProc:
+.obj __vt__CColiProc, global
 	.4byte __RTTI__CColiProc
 	.4byte 0
 	.4byte func_804A822C
 	.4byte 0
+.endobj __vt__CColiProc
 
 
-.global __vt__CColiResCall
-__vt__CColiResCall:
+.obj __vt__CColiResCall, global
 	.4byte __RTTI__CColiResCall
 	.4byte 0
 	.4byte func_804B2FF0
+.endobj __vt__CColiResCall
 
-.global CColiResCall_hierarchy
-CColiResCall_hierarchy:
+.obj CColiResCall_hierarchy, global
 	.4byte __RTTI__CColiProc
 	.4byte 0
 	.4byte 0
+.endobj CColiResCall_hierarchy
 
 
-.global lbl_80572C08
-lbl_80572C08:
+.obj lbl_80572C08, global
 	.4byte 0x00040010
 	.4byte 0x000C0018
 	.4byte 0x00300008
 	.4byte 0x003C0014
 	.4byte 0x00180000
+.endobj lbl_80572C08
 
 
-.global lbl_80572C1C
-lbl_80572C1C:
+.obj lbl_80572C1C, global
 	.4byte 0x00140014
 	.4byte 0x001C001C
 	.4byte 0x00340034
 	.4byte 0x00740068
 	.4byte 0
+.endobj lbl_80572C1C
 
 
-.global lbl_80572C30
-lbl_80572C30:
+.obj lbl_80572C30, global
 	.4byte 0
 	.4byte 0x00010001
 	.4byte 0x00020002
 	.4byte 0x00030004
 	.4byte 0
+.endobj lbl_80572C30
 
-.global lbl_80572C44
-lbl_80572C44:
+.obj lbl_80572C44, global
 	.4byte func_804B30CC
 	.4byte func_804B30CC
 	.4byte func_804B30CC
@@ -841,10 +839,10 @@ lbl_80572C44:
 	.4byte func_804B30CC
 	.4byte func_804B30CC
 	.4byte func_804B33C8
+.endobj lbl_80572C44
 
 
-.global lbl_80572C68
-lbl_80572C68:
+.obj lbl_80572C68, global
 	.4byte func_804B34F4
 	.4byte func_804B3658
 	.4byte func_804B37E4
@@ -854,10 +852,10 @@ lbl_80572C68:
 	.4byte func_804B3EA8
 	.4byte func_804B4020
 	.4byte func_804B41FC
+.endobj lbl_80572C68
 
 
-.global lbl_80572C8C
-lbl_80572C8C:
+.obj lbl_80572C8C, global
 	.4byte func_804B43B4
 	.4byte func_804B43B4
 	.4byte func_804B4478
@@ -867,58 +865,63 @@ lbl_80572C8C:
 	.4byte func_804B45E4
 	.4byte func_804B46A8
 	.4byte func_804B476C
+.endobj lbl_80572C8C
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-
-.global __RTTI__CColiResCall
-__RTTI__CColiResCall:
+.obj __RTTI__CColiResCall, global
 	.4byte CColiResCall_typestr
 	.4byte CColiResCall_hierarchy
+.endobj __RTTI__CColiResCall
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066D658
-float_8066D658:
+.obj float_8066D658, global
 	.float 0
 	.4byte 0
+.endobj float_8066D658
 
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_8065F9A8
-lbl_8065F9A8:
+.obj lbl_8065F9A8, global
 	.skip 0x50
+.endobj lbl_8065F9A8
 	
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80668218, global
+	.skip 0x4
+.endobj lbl_80668218
 
-.global lbl_80668218
-lbl_80668218:
+.obj lbl_8066821C, global
 	.skip 0x4
-.global lbl_8066821C
-lbl_8066821C:
+.endobj lbl_8066821C
+
+.obj lbl_80668220, global
 	.skip 0x4
-.global lbl_80668220
-lbl_80668220:
+.endobj lbl_80668220
+
+.obj lbl_80668224, global
 	.skip 0x4
-.global lbl_80668224
-lbl_80668224:
-	.skip 0x4
-.global lbl_80668228
-lbl_80668228:
+.endobj lbl_80668224
+
+.obj lbl_80668228, global
 	.skip 0x8
-.global lbl_80668230
-lbl_80668230:
+.endobj lbl_80668228
+
+.obj lbl_80668230, global
 	.skip 0x8
+.endobj lbl_80668230
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

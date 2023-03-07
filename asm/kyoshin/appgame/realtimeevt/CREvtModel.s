@@ -866,31 +866,30 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CScnMaruShadowNw4r_typestr
-CScnMaruShadowNw4r_typestr:
+.obj CScnMaruShadowNw4r_typestr, global
 	.asciz "CScnMaruShadowNw4r"
 	.balign 4
+.endobj CScnMaruShadowNw4r_typestr
 
-.global IScnPolyShadow_typestr
-IScnPolyShadow_typestr:
+.obj IScnPolyShadow_typestr, global
 	.asciz "IScnPolyShadow"
 	.balign 4
+.endobj IScnPolyShadow_typestr
 
-.global cf_CREvtModel_typestr
-cf_CREvtModel_typestr:
+.obj cf_CREvtModel_typestr, global
 	.asciz "cf::CREvtModel"
 	.balign 4
+.endobj cf_CREvtModel_typestr
 
-.global cf_CREvtObj_typestr
-cf_CREvtObj_typestr:
+.obj cf_CREvtObj_typestr, global
 	.asciz "cf::CREvtObj"
 	.balign 4
+.endobj cf_CREvtObj_typestr
 
 
-.global CREvtModel_strpool
-CREvtModel_strpool:
+.obj CREvtModel_strpool, global
 	.asciz "Monochrome"
 	.asciz "MonoRGB"
 	.asciz "noDynamics"
@@ -901,13 +900,13 @@ CREvtModel_strpool:
 	.asciz "HidePT"
 	.asciz "core"
 	.balign 4
+.endobj CREvtModel_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+#.balign 8
 
-
-.global __vt__cf_CREvtModel
-__vt__cf_CREvtModel:
+.obj __vt__cf_CREvtModel, global
 	.4byte __RTTI__cf_CREvtModel
 	.4byte 0
 	.4byte func_80172668
@@ -925,71 +924,72 @@ __vt__cf_CREvtModel:
 	.4byte func_80172CC0
 	.4byte func_801726DC
 	.4byte func_80172768
+.endobj __vt__cf_CREvtModel
 
-.global cf_CREvtModel_hierarchy
-cf_CREvtModel_hierarchy:
+.obj cf_CREvtModel_hierarchy, global
 	.4byte __RTTI__cf_CREvtObj
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CREvtModel_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CScnMaruShadowNw4r
-__RTTI__CScnMaruShadowNw4r:
+.obj __RTTI__CScnMaruShadowNw4r, global
 	.4byte CScnMaruShadowNw4r_typestr
 	.4byte CScnMaruShadowNw4r_hierarchy
+.endobj __RTTI__CScnMaruShadowNw4r
 
 
-.global __RTTI__IScnPolyShadow
-__RTTI__IScnPolyShadow:
+.obj __RTTI__IScnPolyShadow, global
 	.4byte IScnPolyShadow_typestr
 	.4byte 0
+.endobj __RTTI__IScnPolyShadow
 
-.global __RTTI__cf_CREvtModel
-__RTTI__cf_CREvtModel:
+.obj __RTTI__cf_CREvtModel, global
 	.4byte cf_CREvtModel_typestr
 	.4byte cf_CREvtModel_hierarchy
+.endobj __RTTI__cf_CREvtModel
 
-.global __RTTI__cf_CREvtObj
-__RTTI__cf_CREvtObj:
+.obj __RTTI__cf_CREvtObj, global
 	.4byte cf_CREvtObj_typestr
 	.4byte 0
+.endobj __RTTI__cf_CREvtObj
 
 
-.global lbl_80664D10
-lbl_80664D10:
+.obj lbl_80664D10, global
 	.4byte 0x72656600
+.endobj lbl_80664D10
 
 
-.global lbl_80664D14
-lbl_80664D14:
+.obj lbl_80664D14, global
 	.4byte 0x72656600
+.endobj lbl_80664D14
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066A030
-float_8066A030:
+.obj float_8066A030, global
 	.float 0
+.endobj float_8066A030
 
 
-.global float_8066A034
-float_8066A034:
+.obj float_8066A034, global
 	.float 0.9 #0x3F666666
+.endobj float_8066A034
 
 
-.global float_8066A038
-float_8066A038:
+.obj float_8066A038, global
 	.float 0.35 #0x3EB33333
+.endobj float_8066A038
 
 
-.global float_8066A03C
-float_8066A03C:
+.obj float_8066A03C, global
 	.float 255 #0x437F0000
+.endobj float_8066A03C
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

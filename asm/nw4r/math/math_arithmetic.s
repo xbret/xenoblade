@@ -92,8 +92,10 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-"sExpTbl__Q34nw4r4math29@unnamed@math_arithmetic_cpp@":
+
+.obj "sExpTbl__Q34nw4r4math29@unnamed@math_arithmetic_cpp@", local
     .float 0.5
     .float 0.022136891
     .float 0.52213687
@@ -160,9 +162,10 @@
     .float 0.084793441
     .float 2
     .float 0.088547565
+.endobj "sExpTbl__Q34nw4r4math29@unnamed@math_arithmetic_cpp@"
 
 
-"sLogTbl__Q34nw4r4math29@unnamed@math_arithmetic_cpp@":
+.obj "sLogTbl__Q34nw4r4math29@unnamed@math_arithmetic_cpp@", local
     .4byte 0
     .float 0.0038986399
     .float 0.0038986399
@@ -677,40 +680,43 @@
     .float 0.0019550349
     .float 0.69314718
     .float 0.00195122
+.endobj "sLogTbl__Q34nw4r4math29@unnamed@math_arithmetic_cpp@"
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C600
-float_8066C600:
+.balign 8
+
+.obj float_8066C600, global
 	.float 1.44269502
+.endobj float_8066C600
 
 
-.global float_8066C604
-float_8066C604:
+.obj float_8066C604, global
 	.float 0.693147182
+.endobj float_8066C604
 
 
-.global float_8066C608
-float_8066C608:
+.obj float_8066C608, global
 	.float 23.0831203
+.endobj float_8066C608
 
 
-.global float_8066C60C
-float_8066C60C:
+.obj float_8066C60C, global
 	.float 256
+.endobj float_8066C60C
 
 
-.global float_8066C610
-float_8066C610:
+.obj float_8066C610, global
 	.float 1.0
+.endobj float_8066C610
 
 
-.global float_8066C614
-float_8066C614:
+.obj float_8066C614, global
 	.float 0.5
+.endobj float_8066C614
 
 
-.global float_8066C618
-float_8066C618:
+.obj float_8066C618, global
 	.float 3
 	.4byte 0
+.endobj float_8066C618

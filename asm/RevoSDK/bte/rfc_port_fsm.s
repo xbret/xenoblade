@@ -1303,26 +1303,27 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80548A70
-lbl_80548A70:
+.balign 8
+
+.obj lbl_80548A70, global
 	.asciz "NULL port event %d"
 	.balign 4
+.endobj lbl_80548A70
 
 
-.global lbl_80548A84
-lbl_80548A84:
+.obj lbl_80548A84, global
 	.asciz "Port error state %d event %d"
 	.balign 4
+.endobj lbl_80548A84
 
 
-.global lbl_80548AA4
-lbl_80548AA4:
+.obj lbl_80548AA4, global
 	.asciz "Port state closed Event ignored %d"
 	.balign 4
+.endobj lbl_80548AA4
 
 
-.global jumptable_80548AC8
-jumptable_80548AC8:
+.obj jumptable_80548AC8, global
 	.4byte .L_802FFADC
 	.4byte .L_802FFB14
 	.4byte .L_802FFB18
@@ -1338,16 +1339,16 @@ jumptable_80548AC8:
 	.4byte .L_802FFB88
 	.4byte .L_802FFACC
 	.4byte .L_802FFAD0
+.endobj jumptable_80548AC8
 
 
-.global lbl_80548B04
-lbl_80548B04:
+.obj lbl_80548B04, global
 	.asciz "Port state sabme_wait_ua Event ignored %d"
 	.balign 4
+.endobj lbl_80548B04
 
 
-.global jumptable_80548B30
-jumptable_80548B30:
+.obj jumptable_80548B30, global
 	.4byte .L_802FFCE4
 	.4byte .L_802FFC74
 	.4byte .L_802FFC98
@@ -1363,6 +1364,7 @@ jumptable_80548B30:
 	.4byte .L_802FFC38
 	.4byte .L_802FFC60
 	.4byte .L_802FFC68
+.endobj jumptable_80548B30
 
 
 	.asciz "Port error state Term Wait Sec event Data"
@@ -1370,8 +1372,7 @@ jumptable_80548B30:
 	.asciz "Port state term_wait_sec_check Event ignored %d"
 
 
-.global jumptable_80548BC8
-jumptable_80548BC8:
+.obj jumptable_80548BC8, global
 	.4byte .L_802FFE64
 	.4byte .L_802FFEE4
 	.4byte .L_802FFEE4
@@ -1388,6 +1389,7 @@ jumptable_80548BC8:
 	.4byte .L_802FFE20
 	.4byte .L_802FFE38
 	.4byte .L_802FFDAC
+.endobj jumptable_80548BC8
 
 
 	.asciz "Port error state Orig Wait Sec event Data"
@@ -1396,8 +1398,7 @@ jumptable_80548BC8:
 	.asciz "Port state orig_wait_sec_check Event ignored %d"
 
 
-.global jumptable_80548C68
-jumptable_80548C68:
+.obj jumptable_80548C68, global
 	.4byte .L_802FFFB8
 	.4byte .L_80300034
 	.4byte .L_80300034
@@ -1414,16 +1415,16 @@ jumptable_80548C68:
 	.4byte .L_80300034
 	.4byte .L_802FFFFC
 	.4byte .L_802FFF68
+.endobj jumptable_80548C68
 
 
-.global lbl_80548CA8
-lbl_80548CA8:
+.obj lbl_80548CA8, global
 	.asciz "Port state opened Event ignored %d"
 	.balign 4
+.endobj lbl_80548CA8
 
 
-.global jumptable_80548CCC
-jumptable_80548CCC:
+.obj jumptable_80548CCC, global
 	.4byte .L_80300188
 	.4byte .L_80300184
 	.4byte .L_80300198
@@ -1439,16 +1440,16 @@ jumptable_80548CCC:
 	.4byte .L_803000E0
 	.4byte .L_80300108
 	.4byte .L_80300110
+.endobj jumptable_80548CCC
 
 
-.global lbl_80548D08
-lbl_80548D08:
+.obj lbl_80548D08, global
 	.asciz "Port state disc_wait_ua Event ignored %d"
 	.balign 4
+.endobj lbl_80548D08
 
 
-.global jumptable_80548D34
-jumptable_80548D34:
+.obj jumptable_80548D34, global
 	.4byte .L_803002F0
 	.4byte .L_803002D8
 	.4byte .L_803002E4
@@ -1464,9 +1465,10 @@ jumptable_80548D34:
 	.4byte .L_8030033C
 	.4byte .L_803002C4
 	.4byte .L_803002CC
+.endobj jumptable_80548D34
 
 
-.global lbl_80548D70
-lbl_80548D70:
+.obj lbl_80548D70, global
 	.asciz "***** MX PN while disconnecting *****"
 	.balign 4
+.endobj lbl_80548D70

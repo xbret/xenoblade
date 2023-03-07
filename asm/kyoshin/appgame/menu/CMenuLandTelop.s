@@ -1527,16 +1527,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMenuLandTelop_typestr
-CMenuLandTelop_typestr:
+.obj CMenuLandTelop_typestr, global
 	.asciz "CMenuLandTelop"
 	.balign 4
+.endobj CMenuLandTelop_typestr
 
 
-.global CMenuLandTelop_strpool
-CMenuLandTelop_strpool:
+.obj CMenuLandTelop_strpool, global
 	.asciz "landmarklist"
 	.asciz "getEXP"
 	.asciz "category"
@@ -1568,13 +1567,13 @@ CMenuLandTelop_strpool:
 	.asciz "txt_landmark"
 	.asciz "txt_area"
 	.balign 4
+.endobj CMenuLandTelop_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMenuLandTelop
-__vt__CMenuLandTelop:
+.obj __vt__CMenuLandTelop, global
 	.4byte __RTTI__CMenuLandTelop
 	.4byte 0
 	.4byte __dt__CMenuLandTelop
@@ -1623,9 +1622,9 @@ __vt__CMenuLandTelop:
 	.4byte func_80145AA0
 	.4byte func_80145A98
 	.4byte func_80144E2C
+.endobj __vt__CMenuLandTelop
 
-.global CMenuLandTelop_hierarchy
-CMenuLandTelop_hierarchy:
+.obj CMenuLandTelop_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000070
 	.4byte __RTTI__IWorkEvent
@@ -1642,73 +1641,74 @@ CMenuLandTelop_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuLandTelop_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuLandTelop
-__RTTI__CMenuLandTelop:
+.obj __RTTI__CMenuLandTelop, global
 	.4byte CMenuLandTelop_typestr
 	.4byte CMenuLandTelop_hierarchy
+.endobj __RTTI__CMenuLandTelop
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_80669C88
-float_80669C88:
+.obj float_80669C88, global
 	.float 0
+.endobj float_80669C88
 
 
-.global float_80669C8C
-float_80669C8C:
+.obj float_80669C8C, global
 	.float 1.0
+.endobj float_80669C8C
 
 
-.global float_80669C90
-float_80669C90:
+.obj float_80669C90, global
 	.float 3 #0x40400000
 	.4byte 0
+.endobj float_80669C90
 
 
-.global double_80669C98
-double_80669C98:
+.obj double_80669C98, global
 	.double 0.5 #0x3FE0000000000000
+.endobj double_80669C98
 
 
-.global double_80669CA0
-double_80669CA0:
+.obj double_80669CA0, global
 	.double -0.5 #0xBFE0000000000000
+.endobj double_80669CA0
 
 
-.global float_80669CA8
-float_80669CA8:
+.obj float_80669CA8, global
 	.float 0.01 #0x3C23D70A
+.endobj float_80669CA8
 
 
-.global float_80669CAC
-float_80669CAC:
+.obj float_80669CAC, global
 	.float 0.5
+.endobj float_80669CAC
 
 
-.global float_80669CB0
-float_80669CB0:
+.obj float_80669CB0, global
 	.float 90 #0x42B40000
 	.4byte 0
+.endobj float_80669CB0
 
 
-.global double_80669CB8
-double_80669CB8:
+.obj double_80669CB8, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_80669CB8
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80666A90
-lbl_80666A90:
+.obj lbl_80666A90, global
 	.skip 0x8
+.endobj lbl_80666A90
 	
 .section extab, "a" # 0x800066E0 - 0x80021020
 

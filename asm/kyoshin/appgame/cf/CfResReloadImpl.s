@@ -2315,16 +2315,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CfResReloadImpl_typestr
-cf_CfResReloadImpl_typestr:
+.obj cf_CfResReloadImpl_typestr, global
 	.asciz "cf::CfResReloadImpl"
 	.4byte 0
+.endobj cf_CfResReloadImpl_typestr
 
 
-.global CfResReloadImpl_strpool
-CfResReloadImpl_strpool:
+.obj CfResReloadImpl_strpool, global
 	.asciz "NONE"
 	.asciz "wb_size_X"
 	.asciz "wb_size_Y"
@@ -2350,13 +2349,13 @@ CfResReloadImpl_strpool:
 	.asciz "wind_WA"
 	.asciz "wind_WB"
 	.4byte 0
+.endobj CfResReloadImpl_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_80534790
-lbl_80534790:
+.obj lbl_80534790, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_8016D3F8
@@ -2369,10 +2368,10 @@ lbl_80534790:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_8016DE68
+.endobj lbl_80534790
 
 
-.global __vt__cf_CfResReloadImpl
-__vt__cf_CfResReloadImpl:
+.obj __vt__cf_CfResReloadImpl, global
 	.4byte __RTTI__cf_CfResReloadImpl
 	.4byte 0
 	.4byte __dt__cf_CfResReloadImpl
@@ -2399,150 +2398,157 @@ __vt__cf_CfResReloadImpl:
 	.4byte func_8016D1D8
 	.4byte func_8016DECC
 	.4byte func_8016CF24
+.endobj __vt__cf_CfResReloadImpl
 
-.global cf_CfResReloadImpl_hierarchy
-cf_CfResReloadImpl_hierarchy:
+.obj cf_CfResReloadImpl_hierarchy, global
 	.4byte __RTTI__cf_CfResImpl
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CfResReloadImpl_hierarchy
 
 
-.global lbl_80534838
-lbl_80534838:
+.obj lbl_80534838, global
 	.4byte lbl_80669F98
 	.4byte lbl_80669F9C
 	.4byte lbl_80669FA4
 	.4byte lbl_80669FAC
 	.4byte lbl_80669FB4
 	.4byte 0
+.endobj lbl_80534838
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CfResReloadImpl
-__RTTI__cf_CfResReloadImpl:
+.obj __RTTI__cf_CfResReloadImpl, global
 	.4byte cf_CfResReloadImpl_typestr
 	.4byte cf_CfResReloadImpl_hierarchy
+.endobj __RTTI__cf_CfResReloadImpl
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-	.global float_80669F58
-float_80669F58:
+	.obj float_80669F58, global
 	.float 0
+.endobj float_80669F58
 
-
-.global float_80669F5C
-float_80669F5C:
+.obj float_80669F5C, global
 	.float 1.0
+.endobj float_80669F5C
 
 
-.global float_80669F60
-float_80669F60:
+.obj float_80669F60, global
 	.float 2 #0x40000000
+.endobj float_80669F60
 
 
-.global float_80669F64
-float_80669F64:
+.obj float_80669F64, global
 	.float 0.999 #0x3F7FBE77
+.endobj float_80669F64
 
 
-.global float_80669F68
-float_80669F68:
+.obj float_80669F68, global
 	.float 20 #0x41A00000
 	.4byte 0
+.endobj float_80669F68
 
 
-.global float_80669F70
-float_80669F70:
+.obj float_80669F70, global
 	.float 120 #0x42F00000
+.endobj float_80669F70
 
 
-.global float_80669F74
-float_80669F74:
+.obj float_80669F74, global
 	.float 1.0
+.endobj float_80669F74
 
 
-.global float_80669F78
-float_80669F78:
+.obj float_80669F78, global
 	.float 0.7 #0x3F333333
+.endobj float_80669F78
 
 
-.global float_80669F7C
-float_80669F7C:
+.obj float_80669F7C, global
 	.float 2 #0x40000000
+.endobj float_80669F7C
 
 
-.global double_80669F80
-double_80669F80:
+.obj double_80669F80, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_80669F80
 
-.global float_80669F88
-float_80669F88:
+.obj float_80669F88, global
 	.float 0
+.endobj float_80669F88
 
 
-.global float_80669F8C
-float_80669F8C:
+.obj float_80669F8C, global
 	.float 10.0
+.endobj float_80669F8C
 
 
-.global double_80669F90
-double_80669F90:
+.obj double_80669F90, global
 	.8byte 0x4330000080000000 #signed int to float constant
-.global lbl_80669F98
-lbl_80669F98:
-	.4byte 0
+.endobj double_80669F90
 
-.global lbl_80669F9C
-lbl_80669F9C:
+.obj lbl_80669F98, global
+	.4byte 0
+.endobj lbl_80669F98
+
+.obj lbl_80669F9C, global
 	.asciz "wind_M"
 	.balign 4
+.endobj lbl_80669F9C
 
-.global lbl_80669FA4
-lbl_80669FA4:
+.obj lbl_80669FA4, global
 	.asciz "wind_D"
 	.balign 4
+.endobj lbl_80669FA4
 
-.global lbl_80669FAC
-lbl_80669FAC:
+.obj lbl_80669FAC, global
 	.asciz "wind_E"
 	.balign 4
+.endobj lbl_80669FAC
 
-.global lbl_80669FB4
-lbl_80669FB4:
+.obj lbl_80669FB4, global
 	.asciz "wind_N"
 	.balign 4
 	.4byte 0
+.endobj lbl_80669FB4
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80666B68, global
+	.skip 0x2
+.endobj lbl_80666B68
 
-.global lbl_80666B68
-lbl_80666B68:
+.obj lbl_80666B6A, global
 	.skip 0x2
-.global lbl_80666B6A
-lbl_80666B6A:
+.endobj lbl_80666B6A
+
+.obj lbl_80666B6C, global
 	.skip 0x2
-.global lbl_80666B6C
-lbl_80666B6C:
+.endobj lbl_80666B6C
+
+.obj lbl_80666B6E, global
 	.skip 0x2
-.global lbl_80666B6E
-lbl_80666B6E:
-	.skip 0x2
-.global lbl_80666B70
-lbl_80666B70:
+.endobj lbl_80666B6E
+
+.obj lbl_80666B70, global
 	.skip 0x4
-.global float_80666B74
-float_80666B74:
+.endobj lbl_80666B70
+
+.obj float_80666B74, global
 	.skip 0x4
-.global lbl_80666B78
-lbl_80666B78:
+.endobj float_80666B74
+
+.obj lbl_80666B78, global
 	.skip 0x8
+.endobj lbl_80666B78
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

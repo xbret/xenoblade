@@ -10425,10 +10425,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+#.balign 8
 
-
-.global lbl_8052AA14
-lbl_8052AA14:
+.obj lbl_8052AA14, global
 	.4byte lbl_80668C60
 	.4byte lbl_80668C64
 	.4byte lbl_80668C6C
@@ -10436,10 +10435,10 @@ lbl_8052AA14:
 	.4byte lbl_80668C7C
 	.4byte lbl_80668C84
 	.4byte lbl_80668C8C
+.endobj lbl_8052AA14
 
 
-.global __vt__cf_CfCamFollow
-__vt__cf_CfCamFollow:
+.obj __vt__cf_CfCamFollow, global
 	.4byte __RTTI__cf_CfCamFollow
 	.4byte 0
 	.4byte __dt__cf_CfCamFollow
@@ -10474,10 +10473,10 @@ __vt__cf_CfCamFollow:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj __vt__cf_CfCamFollow
 
 
-.global __vt__cf_CfCam
-__vt__cf_CfCam:
+.obj __vt__cf_CfCam, global
 	.4byte __RTTI__cf_CfCam
 	.4byte 0
 	.4byte __dt__cf_CfCam
@@ -10516,542 +10515,562 @@ __vt__cf_CfCam:
 	.asciz "arithmetic.h"
 	.balign 4
 	.4byte 0
+.endobj __vt__cf_CfCam
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global float_80664448
-float_80664448:
+.obj float_80664448, global
 	.float 40 #0x42200000
+.endobj float_80664448
 
 
-.global float_8066444C
-float_8066444C:
+.obj float_8066444C, global
 	.float 0.5
+.endobj float_8066444C
 
 
-.global float_80664450
-float_80664450:
+.obj float_80664450, global
 	.float 0.5
+.endobj float_80664450
 
 
-.global lbl_80664454
-lbl_80664454:
+.obj lbl_80664454, global
 	.float 1.0
+.endobj lbl_80664454
 
 
-.global float_80664458
-float_80664458:
+.obj float_80664458, global
 	.float 8.0
+.endobj float_80664458
 
 
-.global float_8066445C
-float_8066445C:
+.obj float_8066445C, global
 	.float 2 #0x40000000
+.endobj float_8066445C
 
 
-.global lbl_80664460
-lbl_80664460:
+.obj lbl_80664460, global
 	.4byte 0x41A00000
+.endobj lbl_80664460
 
 
-.global float_80664464
-float_80664464:
+.obj float_80664464, global
 	.float 20 #0x41A00000
+.endobj float_80664464
 
 
-.global lbl_80664468
-lbl_80664468:
+.obj lbl_80664468, global
 	.float 0.25
+.endobj lbl_80664468
 
 
-.global float_8066446C
-float_8066446C:
+.obj float_8066446C, global
 	.float 0.07 #0x3D8F5C29
+.endobj float_8066446C
 
 
-.global float_80664470
-float_80664470:
+.obj float_80664470, global
 	.float 24 #0x41C00000
+.endobj float_80664470
 
 
-.global lbl_80664474
-lbl_80664474:
+.obj lbl_80664474, global
 	.4byte 0x00000004
+.endobj lbl_80664474
 
 
-.global float_80664478
-float_80664478:
+.obj float_80664478, global
 	.float 0.3 #0x3E99999A
+.endobj float_80664478
 
 
-.global float_8066447C
-float_8066447C:
+.obj float_8066447C, global
 	.float 0.25
+.endobj float_8066447C
 
 
-.global float_80664480
-float_80664480:
+.obj float_80664480, global
 	.float 0.5
+.endobj float_80664480
 
 
-.global float_80664484
-float_80664484:
+.obj float_80664484, global
 	.float 12 #0x41400000
+.endobj float_80664484
 
 
-.global float_80664488
-float_80664488:
+.obj float_80664488, global
 	.float 18 #0x41900000
+.endobj float_80664488
 
 
-.global float_8066448C
-float_8066448C:
+.obj float_8066448C, global
 	.float 30 #0x41F00000
+.endobj float_8066448C
 
 
-.global float_80664490
-float_80664490:
+.obj float_80664490, global
 	.float 20 #0x41A00000
+.endobj float_80664490
 
 
-.global float_80664494
-float_80664494:
+.obj float_80664494, global
 	.float 30 #0x41F00000
+.endobj float_80664494
 
 
-.global float_80664498
-float_80664498:
+.obj float_80664498, global
 	.float 45 #0x42340000
+.endobj float_80664498
 
 
-.global lbl_8066449C
-lbl_8066449C:
+.obj lbl_8066449C, global
 	.4byte 0x00000001
+.endobj lbl_8066449C
 
 
-.global float_806644A0
-float_806644A0:
+.obj float_806644A0, global
 	.float 0.13 #0x3E051EB8
+.endobj float_806644A0
 
 
-.global float_806644A4
-float_806644A4:
+.obj float_806644A4, global
 	.float 30 #0x41F00000
+.endobj float_806644A4
 
 
-.global lbl_806644A8
-lbl_806644A8:
+.obj lbl_806644A8, global
 	.4byte 0x01000000
+.endobj lbl_806644A8
 
 
-.global float_806644AC
-float_806644AC:
+.obj float_806644AC, global
 	.float 0.4 #0x3ECCCCCD
+.endobj float_806644AC
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_80668B78
-float_80668B78:
+.obj float_80668B78, global
 	.float 0.4 #0x3ECCCCCD
+.endobj float_80668B78
 
 
-.global float_80668B7C
-float_80668B7C:
+.obj float_80668B7C, global
 	.float 0.07 #0x3D8F5C29
+.endobj float_80668B7C
 
 
-.global float_80668B80
-float_80668B80:
+.obj float_80668B80, global
 	.float 0.3 #0x3E99999A
+.endobj float_80668B80
 
 
-.global float_80668B84
-float_80668B84:
+.obj float_80668B84, global
 	.float 7.5 #0x40F00000
+.endobj float_80668B84
 
 
-.global float_80668B88
-float_80668B88:
+.obj float_80668B88, global
 	.float 40 #0x42200000
+.endobj float_80668B88
 
 
-.global float_80668B8C
-float_80668B8C:
+.obj float_80668B8C, global
 	.float 0.5
+.endobj float_80668B8C
 
 
-.global float_80668B90
-float_80668B90:
+.obj float_80668B90, global
 	.float 2 #0x40000000
+.endobj float_80668B90
 
 
-.global float_80668B94
-float_80668B94:
+.obj float_80668B94, global
 	.float 24 #0x41C00000
+.endobj float_80668B94
 
 
-.global float_80668B98
-float_80668B98:
+.obj float_80668B98, global
 	.float 45 #0x42340000
+.endobj float_80668B98
 
 
-.global float_80668B9C
-float_80668B9C:
+.obj float_80668B9C, global
 	.float 0.13 #0x3E051EB8
+.endobj float_80668B9C
 
 
-.global float_80668BA0
-float_80668BA0:
+.obj float_80668BA0, global
 	.float 0.8 #0x3F4CCCCD
+.endobj float_80668BA0
 
 
-.global float_80668BA4
-float_80668BA4:
+.obj float_80668BA4, global
 	.float 0.52 #0x3F051EB8
+.endobj float_80668BA4
 
 
-.global float_80668BA8
-float_80668BA8:
+.obj float_80668BA8, global
 	.float 6 #0x40C00000
+.endobj float_80668BA8
 
 
-.global float_80668BAC
-float_80668BAC:
+.obj float_80668BAC, global
 	.float 90 #0x42B40000
+.endobj float_80668BAC
 
 
-.global float_80668BB0
-float_80668BB0:
+.obj float_80668BB0, global
 	.float 4 #0x40800000
+.endobj float_80668BB0
 
 
-.global float_80668BB4
-float_80668BB4:
+.obj float_80668BB4, global
 	.float 0.0245436933 #0x3CC90FDB
+.endobj float_80668BB4
 
 
-.global float_80668BB8
-float_80668BB8:
+.obj float_80668BB8, global
 	.float 10.0
+.endobj float_80668BB8
 
 
-.global float_80668BBC
-float_80668BBC:
+.obj float_80668BBC, global
 	.float 5 #0x40A00000
+.endobj float_80668BBC
 
 
-.global float_80668BC0
-float_80668BC0:
+.obj float_80668BC0, global
 	.float -0.6 #0xBF19999A
+.endobj float_80668BC0
 
 
-.global float_80668BC4
-float_80668BC4:
+.obj float_80668BC4, global
 	.float 0.0001 #0x38D1B717
+.endobj float_80668BC4
 
 
-.global float_80668BC8
-float_80668BC8:
+.obj float_80668BC8, global
 	.float -0.17 #0xBE2E147B
+.endobj float_80668BC8
 
 
-.global float_80668BCC
-float_80668BCC:
+.obj float_80668BCC, global
 	.float 0.001 #0x3A83126F
+.endobj float_80668BCC
 
 
-.global float_80668BD0
-float_80668BD0:
+.obj float_80668BD0, global
 	.float 0.95 #0x3F733333
+.endobj float_80668BD0
 
 
-.global float_80668BD4
-float_80668BD4:
+.obj float_80668BD4, global
 	.float 0.2
+.endobj float_80668BD4
 
 
-.global float_80668BD8
-float_80668BD8:
+.obj float_80668BD8, global
 	.float 0.6 #0x3F19999A
+.endobj float_80668BD8
 
 
-.global float_80668BDC
-float_80668BDC:
+.obj float_80668BDC, global
 	.float 0.7 #0x3F333333
+.endobj float_80668BDC
 
 
-.global float_80668BE0
-float_80668BE0:
+.obj float_80668BE0, global
 	.float -1.0
+.endobj float_80668BE0
 
 
-.global float_80668BE4
-float_80668BE4:
+.obj float_80668BE4, global
 	.float 65 #0x42820000
+.endobj float_80668BE4
 
 
-.global float_80668BE8
-float_80668BE8:
+.obj float_80668BE8, global
 	.float 1.3 #0x3FA66666
+.endobj float_80668BE8
 
 
-.global float_80668BEC
-float_80668BEC:
+.obj float_80668BEC, global
 	.float 0.15 #0x3E19999A
+.endobj float_80668BEC
 
 
-.global float_80668BF0
-float_80668BF0:
+.obj float_80668BF0, global
 	.float 0.007 #0x3BE56042
+.endobj float_80668BF0
 
 
-.global float_80668BF4
-float_80668BF4:
+.obj float_80668BF4, global
 	.float 0.05 #0x3D4CCCCD
+.endobj float_80668BF4
 
 
-.global float_80668BF8
-float_80668BF8:
+.obj float_80668BF8, global
 	.float 9 #0x41100000
+.endobj float_80668BF8
 
 
-.global float_80668BFC
-float_80668BFC:
+.obj float_80668BFC, global
 	.float 0.00001 #0x3727C5AC
+.endobj float_80668BFC
 
 
-.global float_80668C00
-float_80668C00:
+.obj float_80668C00, global
 	.float 16 #0x41800000
 	.4byte 0
+.endobj float_80668C00
 
 
-.global double_80668C08
-double_80668C08:
+.obj double_80668C08, global
 	.double 0
+.endobj double_80668C08
 
 
-.global float_80668C10
-float_80668C10:
+.obj float_80668C10, global
 	.float 0.0625 #0x3D800000
+.endobj float_80668C10
 
 
-.global float_80668C14
-float_80668C14:
+.obj float_80668C14, global
 	.float 0.9 #0x3F666666
+.endobj float_80668C14
 
 
-.global float_80668C18
-float_80668C18:
+.obj float_80668C18, global
 	.float 15 #0x41700000
+.endobj float_80668C18
 
 
-.global float_80668C1C
-float_80668C1C:
+.obj float_80668C1C, global
 	.float 0.09 #0x3DB851EC
+.endobj float_80668C1C
 
 
-.global float_80668C20
-float_80668C20:
+.obj float_80668C20, global
 	.float 0.06 #0x3D75C28F
+.endobj float_80668C20
 
 
-.global float_80668C24
-float_80668C24:
+.obj float_80668C24, global
 	.float 1.1 #0x3F8CCCCD
+.endobj float_80668C24
 
 
-.global float_80668C28
-float_80668C28:
+.obj float_80668C28, global
 	.float -5 #0xC0A00000
+.endobj float_80668C28
 
 
-.global float_80668C2C
-float_80668C2C:
+.obj float_80668C2C, global
 	.float 0.96 #0x3F75C28F
+.endobj float_80668C2C
 
 
-.global float_80668C30
-float_80668C30:
+.obj float_80668C30, global
 	.float 1.8 #0x3FE66666
+.endobj float_80668C30
 
 
-.global float_80668C34
-float_80668C34:
+.obj float_80668C34, global
 	.float 7 #0x40E00000
+.endobj float_80668C34
 
 
-.global float_80668C38
-float_80668C38:
+.obj float_80668C38, global
 	.float 3 #0x40400000
+.endobj float_80668C38
 
 
-.global float_80668C3C
-float_80668C3C:
+.obj float_80668C3C, global
 	.float 35 #0x420C0000
+.endobj float_80668C3C
 
 
-.global float_80668C40
-float_80668C40:
+.obj float_80668C40, global
 	.float -0.3 #0xBE99999A
+.endobj float_80668C40
 
 
-.global float_80668C44
-float_80668C44:
+.obj float_80668C44, global
 	.float 0.005 #0x3BA3D70A
+.endobj float_80668C44
 
 
-.global float_80668C48
-float_80668C48:
+.obj float_80668C48, global
 	.float 1.2 #0x3F99999A
+.endobj float_80668C48
 
 
-.global float_80668C4C
-float_80668C4C:
+.obj float_80668C4C, global
 	.float -2 #0xC0000000
+.endobj float_80668C4C
 
 
-.global float_80668C50
-float_80668C50:
+.obj float_80668C50, global
 	.float 0.02 #0x3CA3D70A
+.endobj float_80668C50
 
 
-.global float_80668C54
-float_80668C54:
+.obj float_80668C54, global
 	.float -0.9 #0xBF666666
+.endobj float_80668C54
 
 
-.global float_80668C58
-float_80668C58:
+.obj float_80668C58, global
 	.float -0.999 #0xBF7FBE77
+.endobj float_80668C58
 
 
-.global float_80668C5C
-float_80668C5C:
+.obj float_80668C5C, global
 	.float 0.999 #0x3F7FBE77
+.endobj float_80668C5C
 
-.global lbl_80668C60
-lbl_80668C60:
+.obj lbl_80668C60, global
 	.4byte 0
 	
-.global lbl_80668C64
-lbl_80668C64:
+.endobj lbl_80668C60
+
+.obj lbl_80668C64, global
 	.asciz "JUhead"
 	.balign 4
+.endobj lbl_80668C64
 
-.global lbl_80668C6C
-lbl_80668C6C:
+.obj lbl_80668C6C, global
 	.asciz "JUhd_L"
 	.balign 4
+.endobj lbl_80668C6C
 
-.global lbl_80668C74
-lbl_80668C74:
+.obj lbl_80668C74, global
 	.asciz "JUhd_R"
 	.balign 4
+.endobj lbl_80668C74
 
-.global lbl_80668C7C
-lbl_80668C7C:
+.obj lbl_80668C7C, global
 	.asciz "JLhip"
 	.balign 4
+.endobj lbl_80668C7C
 
-.global lbl_80668C84
-lbl_80668C84:
+.obj lbl_80668C84, global
 	.asciz "JLft_L"
 	.balign 4
+.endobj lbl_80668C84
 
-.global lbl_80668C8C
-lbl_80668C8C:
+.obj lbl_80668C8C, global
 	.asciz "JLft_R"
 	.balign 4
+.endobj lbl_80668C8C
 
 
-.global float_80668C94
-float_80668C94:
+.obj float_80668C94, global
 	.float -4.5 #0xC0900000
+.endobj float_80668C94
 
 
-.global float_80668C98
-float_80668C98:
+.obj float_80668C98, global
 	.float 70 #0x428C0000
+.endobj float_80668C98
 
 
-.global float_80668C9C
-float_80668C9C:
+.obj float_80668C9C, global
 	.float -80 #0xC2A00000
+.endobj float_80668C9C
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_80574218
-lbl_80574218:
+.obj lbl_80574218, global
 	.skip 0xC
-.global lbl_80574224
-lbl_80574224:
+.endobj lbl_80574218
+
+.obj lbl_80574224, global
 	.skip 0xC
-.global lbl_80574230
-lbl_80574230:
+.endobj lbl_80574224
+
+.obj lbl_80574230, global
 	.skip 0xC
-.global lbl_8057423C
-lbl_8057423C:
+.endobj lbl_80574230
+
+.obj lbl_8057423C, global
 	.skip 0xC
-.global lbl_80574248
-lbl_80574248:
+.endobj lbl_8057423C
+
+.obj lbl_80574248, global
 	.skip 0xC
-.global lbl_80574254
-lbl_80574254:
+.endobj lbl_80574248
+
+.obj lbl_80574254, global
 	.skip 0x18
-.global lbl_8057426C
-lbl_8057426C:
+.endobj lbl_80574254
+
+.obj lbl_8057426C, global
 	.skip 0xC
-.global lbl_80574278
-lbl_80574278:
+.endobj lbl_8057426C
+
+.obj lbl_80574278, global
 	.skip 0xC
-.global lbl_80574284
-lbl_80574284:
+.endobj lbl_80574278
+
+.obj lbl_80574284, global
 	.skip 0x204
+.endobj lbl_80574284
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj float_806666C8, global
+	.skip 0x4
+.endobj float_806666C8
 
-.global float_806666C8
-float_806666C8:
+.obj float_806666CC, global
 	.skip 0x4
-.global float_806666CC
-float_806666CC:
+.endobj float_806666CC
+
+.obj float_806666D0, global
 	.skip 0x4
-.global float_806666D0
-float_806666D0:
+.endobj float_806666D0
+
+.obj float_806666D4, global
 	.skip 0x4
-.global float_806666D4
-float_806666D4:
+.endobj float_806666D4
+
+.obj float_806666D8, global
 	.skip 0x4
-.global float_806666D8
-float_806666D8:
+.endobj float_806666D8
+
+.obj lbl_806666DC, global
 	.skip 0x4
-.global lbl_806666DC
-lbl_806666DC:
-	.skip 0x4
-.global lbl_806666E0
-lbl_806666E0:
+.endobj lbl_806666DC
+
+.obj lbl_806666E0, global
 	.skip 0x1
-.global lbl_806666E1
-lbl_806666E1:
+.endobj lbl_806666E0
+
+.obj lbl_806666E1, global
 	.skip 0x3
-.global float_806666E4
-float_806666E4:
+.endobj lbl_806666E1
+
+.obj float_806666E4, global
 	.skip 0x4
-.global lbl_806666E8
-lbl_806666E8:
+.endobj float_806666E4
+
+.obj lbl_806666E8, global
 	.skip 0x4
-.global lbl_806666EC
-lbl_806666EC:
+.endobj lbl_806666E8
+
+.obj lbl_806666EC, global
 	.skip 0x4
+.endobj lbl_806666EC
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

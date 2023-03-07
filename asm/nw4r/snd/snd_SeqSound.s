@@ -576,8 +576,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056E440
-lbl_8056E440:
+.balign 8
+
+.obj lbl_8056E440, global
 	.4byte 0
 	.4byte 0
 	.4byte GetRuntimeTypeInfo__Q44nw4r3snd6detail8SeqSoundCFv
@@ -592,19 +593,22 @@ lbl_8056E440:
 	.4byte OnUpdatePlayerPriority__Q44nw4r3snd6detail8SeqSoundFv
 	.4byte UpdateMoveValue__Q44nw4r3snd6detail10BasicSoundFv
 	.4byte UpdateParam__Q44nw4r3snd6detail10BasicSoundFv
+.endobj lbl_8056E440
 
 
-.global lbl_8056E478
-lbl_8056E478:
+.obj lbl_8056E478, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q54nw4r3snd6detail8SeqSound11SeqLoadTaskFv
 	.4byte Execute__Q54nw4r3snd6detail8SeqSound11SeqLoadTaskFv
 	.4byte Cancel__Q54nw4r3snd6detail8SeqSound11SeqLoadTaskFv
 	.4byte OnCancel__Q54nw4r3snd6detail8SeqSound11SeqLoadTaskFv
+.endobj lbl_8056E478
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global typeInfo__Q44nw4r3snd6detail8SeqSound
-typeInfo__Q44nw4r3snd6detail8SeqSound:
+.balign 8
+
+.obj typeInfo__Q44nw4r3snd6detail8SeqSound, global
 	.skip 0x8
+.endobj typeInfo__Q44nw4r3snd6detail8SeqSound

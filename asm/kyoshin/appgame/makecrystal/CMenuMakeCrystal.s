@@ -1691,20 +1691,19 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMenuMakeCrystal_typestr
-CMenuMakeCrystal_typestr:
+.obj CMenuMakeCrystal_typestr, global
 	.asciz "CMenuMakeCrystal"
 	.balign 4
 	.4byte 0
+.endobj CMenuMakeCrystal_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMenuMakeCrystal
-__vt__CMenuMakeCrystal:
+.obj __vt__CMenuMakeCrystal, global
 	.4byte __RTTI__CMenuMakeCrystal
 	.4byte 0
 	.4byte __dt__CMenuMakeCrystal
@@ -1719,9 +1718,9 @@ __vt__CMenuMakeCrystal:
 	.4byte func_802124FC
 	.4byte func_802124F4
 	.4byte func_80212380
+.endobj __vt__CMenuMakeCrystal
 
-.global CMenuMakeCrystal_hierarchy
-CMenuMakeCrystal_hierarchy:
+.obj CMenuMakeCrystal_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000058
 	.4byte __RTTI__CDoubleListNode
@@ -1736,23 +1735,24 @@ CMenuMakeCrystal_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuMakeCrystal_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-
-.global __RTTI__CMenuMakeCrystal
-__RTTI__CMenuMakeCrystal:
+.obj __RTTI__CMenuMakeCrystal, global
 	.4byte CMenuMakeCrystal_typestr
 	.4byte CMenuMakeCrystal_hierarchy
+.endobj __RTTI__CMenuMakeCrystal
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-instance:
+.obj instance, local
 	.skip 0x8
+.endobj instance
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

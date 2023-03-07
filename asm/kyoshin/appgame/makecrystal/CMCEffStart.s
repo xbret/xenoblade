@@ -2805,62 +2805,63 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-.global CMCEffCylinder_typestr
-CMCEffCylinder_typestr:
+
+.obj CMCEffCylinder_typestr, global
 	.asciz "CMCEffCylinder"
 	.balign 4
+.endobj CMCEffCylinder_typestr
 
-.global CMCEffDivide_typestr
-CMCEffDivide_typestr:
+.obj CMCEffDivide_typestr, global
 	.asciz "CMCEffDivide"
 	.balign 4
+.endobj CMCEffDivide_typestr
 
-.global CMCEffUpRank_typestr
-CMCEffUpRank_typestr:
+.obj CMCEffUpRank_typestr, global
 	.asciz "CMCEffUpRank"
 	.balign 4
+.endobj CMCEffUpRank_typestr
 
-.global CMCEffCrystal_typestr
-CMCEffCrystal_typestr:
+.obj CMCEffCrystal_typestr, global
 	.asciz "CMCEffCrystal"
 	.balign 4
+.endobj CMCEffCrystal_typestr
 
-.global CMCEffFailure_typestr
-CMCEffFailure_typestr:
+.obj CMCEffFailure_typestr, global
 	.asciz "CMCEffFailure"
 	.balign 4
+.endobj CMCEffFailure_typestr
 
-.global CMCEffSuccess_typestr
-CMCEffSuccess_typestr:
+.obj CMCEffSuccess_typestr, global
 	.asciz "CMCEffSuccess"
 	.balign 4
+.endobj CMCEffSuccess_typestr
 
-.global CMCEffUpPrm_typestr
-CMCEffUpPrm_typestr:
+.obj CMCEffUpPrm_typestr, global
 	.asciz "CMCEffUpPrm"
+.endobj CMCEffUpPrm_typestr
 
-.global CMCEffUpGreen_typestr
-CMCEffUpGreen_typestr:
+.obj CMCEffUpGreen_typestr, global
 	.asciz "CMCEffUpGreen"
 	.balign 4
+.endobj CMCEffUpGreen_typestr
 
-.global CMCEffUpBlue_typestr
-CMCEffUpBlue_typestr:
+.obj CMCEffUpBlue_typestr, global
 	.asciz "CMCEffUpBlue"
 	.balign 4
+.endobj CMCEffUpBlue_typestr
 
-.global CMCEffUpRed_typestr
-CMCEffUpRed_typestr:
+.obj CMCEffUpRed_typestr, global
 	.asciz "CMCEffUpRed"
+.endobj CMCEffUpRed_typestr
 
-.global CMCEffStart_typestr
-CMCEffStart_typestr:
+.obj CMCEffStart_typestr, global
 	.asciz "CMCEffStart"
+.endobj CMCEffStart_typestr
 
 
-.global CMCEffCrystal_strpool
-CMCEffCrystal_strpool:
+.obj CMCEffCrystal_strpool, global
 	.asciz "mf10_cry06_start.brlyt"
 	.asciz "mf10_cry06_start_in.brlan"
 	.asciz "mf10_cry02_prt00.brlyt"
@@ -2913,222 +2914,223 @@ CMCEffCrystal_strpool:
 	.asciz "txt_num"
 	.balign 4
 	.4byte 0
+.endobj CMCEffCrystal_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMCEffCylinder
-__vt__CMCEffCylinder:
+.obj __vt__CMCEffCylinder, global
 	.4byte __RTTI__CMCEffCylinder
 	.4byte 0
 	.4byte __dt__CMCEffCylinder
 	.4byte func_80225D78
+.endobj __vt__CMCEffCylinder
 
 
-.global __vt__CMCEffDivide
-__vt__CMCEffDivide:
+.obj __vt__CMCEffDivide, global
 	.4byte __RTTI__CMCEffDivide
 	.4byte 0
 	.4byte __dt__CMCEffDivide
 	.4byte func_80225C48
 	.4byte func_80225CD8
+.endobj __vt__CMCEffDivide
 
-.global CMCEffDivide_hierarchy
-CMCEffDivide_hierarchy:
+.obj CMCEffDivide_hierarchy, global
 	.4byte __RTTI__CMCEffStart
 	.4byte 0
 	.4byte 0
+.endobj CMCEffDivide_hierarchy
 
 
-.global __vt__CMCEffUpRank
-__vt__CMCEffUpRank:
+.obj __vt__CMCEffUpRank, global
 	.4byte __RTTI__CMCEffUpRank
 	.4byte 0
 	.4byte __dt__CMCEffUpRank
 	.4byte func_80225B14
 	.4byte func_80225BA4
+.endobj __vt__CMCEffUpRank
 
-.global CMCEffUpRank_hierarchy
-CMCEffUpRank_hierarchy:
+.obj CMCEffUpRank_hierarchy, global
 	.4byte __RTTI__CMCEffStart
 	.4byte 0
 	.4byte 0
+.endobj CMCEffUpRank_hierarchy
 
 
-.global __vt__CMCEffCrystal
-__vt__CMCEffCrystal:
+.obj __vt__CMCEffCrystal, global
 	.4byte __RTTI__CMCEffCrystal
 	.4byte 0
 	.4byte __dt__CMCEffCrystal
 	.4byte func_80224CE4
+.endobj __vt__CMCEffCrystal
 
 
-.global __vt__CMCEffFailure
-__vt__CMCEffFailure:
+.obj __vt__CMCEffFailure, global
 	.4byte __RTTI__CMCEffFailure
 	.4byte 0
 	.4byte __dt__CMCEffFailure
 	.4byte func_80224BBC
 	.4byte func_80223F24
+.endobj __vt__CMCEffFailure
 
-.global CMCEffFailure_hierarchy
-CMCEffFailure_hierarchy:
+.obj CMCEffFailure_hierarchy, global
 	.4byte __RTTI__CMCEffStart
 	.4byte 0
 	.4byte 0
+.endobj CMCEffFailure_hierarchy
 
 
-.global __vt__CMCEffSuccess
-__vt__CMCEffSuccess:
+.obj __vt__CMCEffSuccess, global
 	.4byte __RTTI__CMCEffSuccess
 	.4byte 0
 	.4byte __dt__CMCEffSuccess
 	.4byte func_80224760
+.endobj __vt__CMCEffSuccess
 
 
-.global __vt__CMCEffUpPrm
-__vt__CMCEffUpPrm:
+.obj __vt__CMCEffUpPrm, global
 	.4byte __RTTI__CMCEffUpPrm
 	.4byte 0
 	.4byte __dt__CMCEffUpPrm
+.endobj __vt__CMCEffUpPrm
 
 
-.global __vt__CMCEffUpGreen
-__vt__CMCEffUpGreen:
+.obj __vt__CMCEffUpGreen, global
 	.4byte __RTTI__CMCEffUpGreen
 	.4byte 0
 	.4byte __dt__CMCEffUpGreen
 	.4byte func_80224274
 	.4byte func_80224304
+.endobj __vt__CMCEffUpGreen
 
-.global CMCEffUpGreen_hierarchy
-CMCEffUpGreen_hierarchy:
+.obj CMCEffUpGreen_hierarchy, global
 	.4byte __RTTI__CMCEffStart
 	.4byte 0
 	.4byte 0
+.endobj CMCEffUpGreen_hierarchy
 
 
-.global __vt__CMCEffUpBlue
-__vt__CMCEffUpBlue:
+.obj __vt__CMCEffUpBlue, global
 	.4byte __RTTI__CMCEffUpBlue
 	.4byte 0
 	.4byte __dt__CMCEffUpBlue
 	.4byte func_80224140
 	.4byte func_802241D0
+.endobj __vt__CMCEffUpBlue
 
-.global CMCEffUpBlue_hierarchy
-CMCEffUpBlue_hierarchy:
+.obj CMCEffUpBlue_hierarchy, global
 	.4byte __RTTI__CMCEffStart
 	.4byte 0
 	.4byte 0
+.endobj CMCEffUpBlue_hierarchy
 
 
-.global __vt__CMCEffUpRed
-__vt__CMCEffUpRed:
+.obj __vt__CMCEffUpRed, global
 	.4byte __RTTI__CMCEffUpRed
 	.4byte 0
 	.4byte __dt__CMCEffUpRed
 	.4byte func_8022400C
 	.4byte func_8022409C
+.endobj __vt__CMCEffUpRed
 
-.global CMCEffUpRed_hierarchy
-CMCEffUpRed_hierarchy:
+.obj CMCEffUpRed_hierarchy, global
 	.4byte __RTTI__CMCEffStart
 	.4byte 0
 	.4byte 0
+.endobj CMCEffUpRed_hierarchy
 
 
-.global __vt__CMCEffStart
-__vt__CMCEffStart:
+.obj __vt__CMCEffStart, global
 	.4byte __RTTI__CMCEffStart
 	.4byte 0
 	.4byte __dt__CMCEffStart
 	.4byte func_80223DB0
 	.4byte func_80223F24
+.endobj __vt__CMCEffStart
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMCEffCylinder
-__RTTI__CMCEffCylinder:
+.obj __RTTI__CMCEffCylinder, global
 	.4byte CMCEffCylinder_typestr
 	.4byte 0
+.endobj __RTTI__CMCEffCylinder
 
-.global __RTTI__CMCEffDivide
-__RTTI__CMCEffDivide:
+.obj __RTTI__CMCEffDivide, global
 	.4byte CMCEffDivide_typestr
 	.4byte CMCEffDivide_hierarchy
+.endobj __RTTI__CMCEffDivide
 
-.global __RTTI__CMCEffUpRank
-__RTTI__CMCEffUpRank:
+.obj __RTTI__CMCEffUpRank, global
 	.4byte CMCEffUpRank_typestr
 	.4byte CMCEffUpRank_hierarchy
+.endobj __RTTI__CMCEffUpRank
 
-.global __RTTI__CMCEffCrystal
-__RTTI__CMCEffCrystal:
+.obj __RTTI__CMCEffCrystal, global
 	.4byte CMCEffCrystal_typestr
 	.4byte 0
+.endobj __RTTI__CMCEffCrystal
 
-.global __RTTI__CMCEffFailure
-__RTTI__CMCEffFailure:
+.obj __RTTI__CMCEffFailure, global
 	.4byte CMCEffFailure_typestr
 	.4byte CMCEffFailure_hierarchy
+.endobj __RTTI__CMCEffFailure
 
-.global __RTTI__CMCEffSuccess
-__RTTI__CMCEffSuccess:
+.obj __RTTI__CMCEffSuccess, global
 	.4byte CMCEffSuccess_typestr
 	.4byte 0
+.endobj __RTTI__CMCEffSuccess
 
-.global __RTTI__CMCEffUpPrm
-__RTTI__CMCEffUpPrm:
+.obj __RTTI__CMCEffUpPrm, global
 	.4byte CMCEffUpPrm_typestr
 	.4byte 0
+.endobj __RTTI__CMCEffUpPrm
 
-.global __RTTI__CMCEffUpGreen
-__RTTI__CMCEffUpGreen:
+.obj __RTTI__CMCEffUpGreen, global
 	.4byte CMCEffUpGreen_typestr
 	.4byte CMCEffUpGreen_hierarchy
+.endobj __RTTI__CMCEffUpGreen
 
-.global __RTTI__CMCEffUpBlue
-__RTTI__CMCEffUpBlue:
+.obj __RTTI__CMCEffUpBlue, global
 	.4byte CMCEffUpBlue_typestr
 	.4byte CMCEffUpBlue_hierarchy
+.endobj __RTTI__CMCEffUpBlue
 
-.global __RTTI__CMCEffUpRed
-__RTTI__CMCEffUpRed:
+.obj __RTTI__CMCEffUpRed, global
 	.4byte CMCEffUpRed_typestr
 	.4byte CMCEffUpRed_hierarchy
+.endobj __RTTI__CMCEffUpRed
 
-.global __RTTI__CMCEffStart
-__RTTI__CMCEffStart:
+.obj __RTTI__CMCEffStart, global
 	.4byte CMCEffStart_typestr
 	.4byte 0
+.endobj __RTTI__CMCEffStart
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066AE10
-float_8066AE10:
+.obj float_8066AE10, global
 	.float 0
+.endobj float_8066AE10
 
 
-.global float_8066AE14
-float_8066AE14:
+.obj float_8066AE14, global
 	.float 1.0
+.endobj float_8066AE14
 
 
-.global double_8066AE18
-double_8066AE18:
+.obj double_8066AE18, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066AE18
 
-.global float_8066AE20
-float_8066AE20:
+.obj float_8066AE20, global
 	.float 5 #0x40A00000
 	.4byte 0
+.endobj float_8066AE20
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

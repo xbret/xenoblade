@@ -1957,50 +1957,50 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066D6A0
-float_8066D6A0:
+.obj float_8066D6A0, global
 	.float 0.5
+.endobj float_8066D6A0
 
 
-.global float_8066D6A4
-float_8066D6A4:
+.obj float_8066D6A4, global
 	.float 1000000 #0x49742400
+.endobj float_8066D6A4
 
 
-.global float_8066D6A8
-float_8066D6A8:
+.obj float_8066D6A8, global
 	.float -1000000 #0xC9742400
+.endobj float_8066D6A8
 
 
-.global float_8066D6AC
-float_8066D6AC:
+.obj float_8066D6AC, global
 	.float 0
+.endobj float_8066D6AC
 
 
-.global float_8066D6B0
-float_8066D6B0:
+.obj float_8066D6B0, global
 	.float 0.000001 #0x358637BD
+.endobj float_8066D6B0
 
 
-.global float_8066D6B4
-float_8066D6B4:
+.obj float_8066D6B4, global
 	.float -100000 #0xC7C35000
+.endobj float_8066D6B4
 
 
-.global float_8066D6B8
-float_8066D6B8:
+.obj float_8066D6B8, global
 	.float 100000 #0x47C35000
 	.4byte 0
+.endobj float_8066D6B8
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global float_80668238
-float_80668238:
+.obj float_80668238, global
 	.skip 0x8
+.endobj float_80668238
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -598,18 +598,16 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-
-.global CMenuPause_typestr
-CMenuPause_typestr:
+.obj CMenuPause_typestr, global
 	.asciz "CMenuPause"
 	.balign 4
 	.4byte 0
+.endobj CMenuPause_typestr
 
 
-.global CMenuPause_strpool
-CMenuPause_strpool:
+.obj CMenuPause_strpool, global
 	.asciz "CMenuPause"
 	.asciz "mf70_cf60_syswin13.brlyt"
 	.asciz "mf70_cf60_syswin13_in.brlan"
@@ -624,13 +622,13 @@ CMenuPause_strpool:
 	.asciz "pic_btn00"
 	.asciz "txt_sysmes01"
 	.asciz "pic_btn01"
+.endobj CMenuPause_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMenuPause
-__vt__CMenuPause:
+.obj __vt__CMenuPause, global
 	.4byte __RTTI__CMenuPause
 	.4byte 0
 	.4byte __dt__CMenuPause
@@ -679,9 +677,9 @@ __vt__CMenuPause:
 	.4byte func_80252638
 	.4byte func_80252630
 	.4byte func_80252374
+.endobj __vt__CMenuPause
 
-.global CMenuPause_hierarchy
-CMenuPause_hierarchy:
+.obj CMenuPause_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x0000005C
 	.4byte __RTTI__IWorkEvent
@@ -698,38 +696,41 @@ CMenuPause_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuPause_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuPause
-__RTTI__CMenuPause:
+.obj __RTTI__CMenuPause, global
 	.4byte CMenuPause_typestr
 	.4byte CMenuPause_hierarchy
+.endobj __RTTI__CMenuPause
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-.global double_8066B080
-double_8066B080:
+
+.obj double_8066B080, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066B080
 
-.global float_8066B088
-float_8066B088:
+.obj float_8066B088, global
 	.float 1.0
+.endobj float_8066B088
 
-.global float_8066B08C
-float_8066B08C:
+.obj float_8066B08C, global
 	.float 0.6 #0x3F19999A
+.endobj float_8066B08C
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_806670B8
-lbl_806670B8:
+.obj lbl_806670B8, global
 	.skip 0x8
+.endobj lbl_806670B8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

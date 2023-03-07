@@ -4532,313 +4532,367 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80550490
-lbl_80550490:
+.balign 8
+
+.obj lbl_80550490, global
 	.asciz "<< RVL_SDK - KPAD \trelease build: Jun 22 2009 18:32:13 (0x4302_145) >>"
 	.balign 4
+.endobj lbl_80550490
 
 
 #table$3758
 #@LOCAL@KPADiSamplingCallback__Fl@table
-.global lbl_805504D8
-lbl_805504D8:
+.obj lbl_805504D8, global
 	.4byte 0x00010302
 	.4byte 0x00040105
 	.4byte 0x00070108
 	.4byte 0x000B010B
 	.4byte 0x000C000C
 	.4byte 0x000A000A
+.endobj lbl_805504D8
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-__KPADVersion:
+.balign 8
+
+.obj __KPADVersion, local
 	.4byte lbl_80550490
+.endobj __KPADVersion
 
 
-idist_org:
+.obj idist_org, local
 	.float 1.0
+.endobj idist_org
 
 
-iaccXY_nrm_hori:
+.obj iaccXY_nrm_hori, local
 	.8byte 0x00000000BF800000
+.endobj iaccXY_nrm_hori
 
 
-isec_nrm_hori:
+.obj isec_nrm_hori, local
 	.8byte 0x3F80000000000000
+.endobj isec_nrm_hori
 
 
-kp_obj_interval:
+.obj kp_obj_interval, local
 	.float 0.2
+.endobj kp_obj_interval
 
 
-kp_acc_horizon_pw:
+.obj kp_acc_horizon_pw, local
 	.float 0.05
+.endobj kp_acc_horizon_pw
 
 
-kp_ah_circle_radius:
+.obj kp_ah_circle_radius, local
 	.float 0.07
+.endobj kp_ah_circle_radius
 
 
-kp_ah_circle_pw:
+.obj kp_ah_circle_pw, local
 	.float 0.06
+.endobj kp_ah_circle_pw
 
 
-kp_ah_circle_ct:
+.obj kp_ah_circle_ct, local
 	.4byte 0x00640000
+.endobj kp_ah_circle_ct
 
 
-kp_err_outside_frame:
+.obj kp_err_outside_frame, local
 	.float 0.05
+.endobj kp_err_outside_frame
 
 
-kp_err_dist_max:
+.obj kp_err_dist_max, local
 	.float 3
+.endobj kp_err_dist_max
 
 
-kp_err_dist_speed:
+.obj kp_err_dist_speed, local
 	.float 0.04
+.endobj kp_err_dist_speed
 
 
-kp_err_first_inpr:
+.obj kp_err_first_inpr, local
 	.float 0.9
+.endobj kp_err_first_inpr
 
 
-kp_err_next_inpr:
+.obj kp_err_next_inpr, local
 	.float 0.9
+.endobj kp_err_next_inpr
 
 
-kp_err_acc_inpr:
+.obj kp_err_acc_inpr, local
 	.float 0.9
+.endobj kp_err_acc_inpr
 
 
-kp_err_up_inpr:
+.obj kp_err_up_inpr, local
 	.float 0.7
+.endobj kp_err_up_inpr
 
 
-kp_err_near_pos:
+.obj kp_err_near_pos, local
 	.float 0.1
+.endobj kp_err_near_pos
 
 
-kp_fs_fstick_min:
+.obj kp_fs_fstick_min, local
 	.4byte 0x0000000F
+.endobj kp_fs_fstick_min
 
 
-kp_fs_fstick_max:
+.obj kp_fs_fstick_max, local
 	.4byte 0x00000047
+.endobj kp_fs_fstick_max
 
 
-kp_cl_stick_min:
+.obj kp_cl_stick_min, local
 	.4byte 0x0000003C
+.endobj kp_cl_stick_min
 
 
-kp_cl_stick_max:
+.obj kp_cl_stick_max, local
 	.4byte 0x00000134
+.endobj kp_cl_stick_max
 
 
-kp_cl_trigger_min:
+.obj kp_cl_trigger_min, local
 	.4byte 0x0000001E
+.endobj kp_cl_trigger_min
 
 
-kp_cl_trigger_max:
+.obj kp_cl_trigger_max, local
 	.4byte 0x000000B4
+.endobj kp_cl_trigger_max
 
 
-kp_rm_acc_max:
+.obj kp_rm_acc_max, local
 	.float 3.4
+.endobj kp_rm_acc_max
 
 
-kp_fs_acc_max:
+.obj kp_fs_acc_max, local
 	.float 2.1
+.endobj kp_fs_acc_max
 
 
-kp_ex_trigger_max:
+.obj kp_ex_trigger_max, local
 	.4byte 0x00000100
+.endobj kp_ex_trigger_max
 
 
-kp_ex_analog_max:
+.obj kp_ex_analog_max, local
 	.4byte 0x00000400
+.endobj kp_ex_analog_max
 
 
-kp_wbc_wait_count:
+.obj kp_wbc_wait_count, local
 	.4byte 0x32000000
+.endobj kp_wbc_wait_count
 
-kp_wbc_ave_count:
+.obj kp_wbc_ave_count, local
 	.float 400
+.endobj kp_wbc_ave_count
 
-kp_fs_revise_deg:
+.obj kp_fs_revise_deg, local
 	.float 24
+.endobj kp_fs_revise_deg
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C0B0
-float_8066C0B0:
+.balign 8
+
+.obj float_8066C0B0, global
 	.float 0
+.endobj float_8066C0B0
 
 
-.global float_8066C0B4
-float_8066C0B4:
+.obj float_8066C0B4, global
 	.float 0.5
+.endobj float_8066C0B4
 
 
-.global float_8066C0B8
-float_8066C0B8:
+.obj float_8066C0B8, global
 	.float -1.0
+.endobj float_8066C0B8
 
 
-.global float_8066C0BC
-float_8066C0BC:
+.obj float_8066C0BC, global
 	.float 1.0
+.endobj float_8066C0BC
 
 
-.global float_8066C0C0
-float_8066C0C0:
+.obj float_8066C0C0, global
 	.float -0.75 #0xBF400000
+.endobj float_8066C0C0
 
 
-.global float_8066C0C4
-float_8066C0C4:
+.obj float_8066C0C4, global
 	.float 0.75
+.endobj float_8066C0C4
 
 
-.global float_8066C0C8
-float_8066C0C8:
+.obj float_8066C0C8, global
 	.float 2 #0x40000000
 	.4byte 0
+.endobj float_8066C0C8
 
 
-.global double_8066C0D0
-double_8066C0D0:
+.obj double_8066C0D0, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066C0D0
 
-.global float_8066C0D8
-float_8066C0D8:
+.obj float_8066C0D8, global
 	.float 0.001953125 #0x3B000000
+.endobj float_8066C0D8
 
 
-.global float_8066C0DC
-float_8066C0DC:
+.obj float_8066C0DC, global
 	.float 0.999023438 #0x3F7FC000
+.endobj float_8066C0DC
 
 
-.global float_8066C0E0
-float_8066C0E0:
+.obj float_8066C0E0, global
 	.float 0.749023438 #0x3F3FC000
 	.4byte 0
+.endobj float_8066C0E0
 
 
-.global double_8066C0E8
-double_8066C0E8:
+.obj double_8066C0E8, global
 	.double 0
+.endobj double_8066C0E8
 
 
-.global double_8066C0F0
-double_8066C0F0:
+.obj double_8066C0F0, global
 	.double -0.5 #0xBFE0000000000000
+.endobj double_8066C0F0
 
 
-.global double_8066C0F8
-double_8066C0F8:
+.obj double_8066C0F8, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066C0F8
 
-.global float_8066C100
-float_8066C100:
+.obj float_8066C100, global
 	.float 0.383863986 #0x3EC489D2
+.endobj float_8066C100
 
 
-.global float_8066C104
-float_8066C104:
+.obj float_8066C104, global
 	.float 0.0174532924 #0x3C8EFA35
+.endobj float_8066C104
 
 
-.global lbl_8066C108
-lbl_8066C108:
+.obj lbl_8066C108, global
 	.4byte 0x00010001
+.endobj lbl_8066C108
 
 
-.global lbl_8066C10C
-lbl_8066C10C:
+.obj lbl_8066C10C, global
 	.4byte 0x00010000
+.endobj lbl_8066C10C
 
 
-.global float_8066C110
-float_8066C110:
+.obj float_8066C110, global
 	.float 0.01 #0x3C23D70A
+.endobj float_8066C110
 
 
-.global float_8066C114
-float_8066C114:
+.obj float_8066C114, global
 	.float 0.005 #0x3BA3D70A
+.endobj float_8066C114
 
 
-.global float_8066C118
-float_8066C118:
+.obj float_8066C118, global
 	.float 0.2
+.endobj float_8066C118
 
 
-.global float_8066C11C
-float_8066C11C:
+.obj float_8066C11C, global
 	.float -0.2 #0xBE4CCCCD
+.endobj float_8066C11C
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-inside_kpads:
+.obj inside_kpads, local
 	.skip 0x15E0
+.endobj inside_kpads
 
-kp_fs_rot:
+.obj kp_fs_rot, local
 	.skip 0x30
+.endobj kp_fs_rot
 
-kp_wbc_ave_sample:
+.obj kp_wbc_ave_sample, local
 	.skip 0x20
+.endobj kp_wbc_ave_sample
 
-kp_wbc_weight_ave:
+.obj kp_wbc_weight_ave, local
 	.skip 0x20
+.endobj kp_wbc_weight_ave
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global icenter_org
-icenter_org:
-	.skip 0x8
+.balign 8
 
-.global lbl_806679A0
-lbl_806679A0:
-	.skip 0x4
-.global lbl_806679A4
-lbl_806679A4:
-	.skip 0x4
-.global lbl_806679A8
-lbl_806679A8:
-	.skip 0x4
-.global kp_initialized
-kp_initialized:
-	.skip 0x4
-
-Vec2_0:
+.obj icenter_org, global
 	.skip 0x8
+.endobj icenter_org
 
-.global double_806679B8
-double_806679B8:
+.obj lbl_806679A0, global
+	.skip 0x4
+.endobj lbl_806679A0
+
+.obj lbl_806679A4, global
+	.skip 0x4
+.endobj lbl_806679A4
+
+.obj lbl_806679A8, global
+	.skip 0x4
+.endobj lbl_806679A8
+
+.obj kp_initialized, global
+	.skip 0x4
+.endobj kp_initialized
+
+.obj Vec2_0, local
 	.skip 0x8
-.global kp_wbc_ave_sample_count
-kp_wbc_ave_sample_count:
+.endobj Vec2_0
+
+.obj double_806679B8, global
+	.skip 0x8
+.endobj double_806679B8
+
+.obj kp_wbc_ave_sample_count, global
 	.skip 0x2
-.global kp_wbc_zero_point_done
-kp_wbc_zero_point_done:
+.endobj kp_wbc_ave_sample_count
+
+.obj kp_wbc_zero_point_done, global
 	.skip 0x1
-.global kp_wbc_tgc_weight_issued
-kp_wbc_tgc_weight_issued:
+.endobj kp_wbc_zero_point_done
+
+.obj kp_wbc_tgc_weight_issued, global
 	.skip 0x1
-.global kp_wbc_setup
-kp_wbc_setup:
+.endobj kp_wbc_tgc_weight_issued
+
+.obj kp_wbc_setup, global
 	.skip 0x1
-.global kp_wbc_enabled
-kp_wbc_enabled:
+.endobj kp_wbc_setup
+
+.obj kp_wbc_enabled, global
 	.skip 0x1
-.global kp_wbc_issued
-kp_wbc_issued:
+.endobj kp_wbc_enabled
+
+.obj kp_wbc_issued, global
 	.skip 0x2
-.global kp_dist_vv1
-kp_dist_vv1:
+.endobj kp_wbc_issued
+
+.obj kp_dist_vv1, global
 	.skip 0x4
-.global kp_err_dist_min
-kp_err_dist_min:
+.endobj kp_dist_vv1
+
+.obj kp_err_dist_min, global
 	.skip 0x4
+.endobj kp_err_dist_min

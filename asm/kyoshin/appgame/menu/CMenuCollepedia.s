@@ -825,26 +825,25 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMenuCollepedia_typestr
-CMenuCollepedia_typestr:
+.obj CMenuCollepedia_typestr, global
 	.asciz "CMenuCollepedia"
+.endobj CMenuCollepedia_typestr
 
 
-.global lbl_80507D18
-lbl_80507D18:
+.obj lbl_80507D18, global
 	.asciz "MNU_collect"
 	.asciz "name"
 	.balign 4
 	.4byte 0
+.endobj lbl_80507D18
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMenuCollepedia
-__vt__CMenuCollepedia:
+.obj __vt__CMenuCollepedia, global
 	.4byte __RTTI__CMenuCollepedia
 	.4byte 0
 	.4byte __dt__CMenuCollepedia
@@ -859,9 +858,9 @@ __vt__CMenuCollepedia:
 	.4byte func_80253190
 	.4byte func_80253188
 	.4byte func_80252BBC
+.endobj __vt__CMenuCollepedia
 
-.global CMenuCollepedia_hierarchy
-CMenuCollepedia_hierarchy:
+.obj CMenuCollepedia_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000058
 	.4byte __RTTI__CDoubleListNode
@@ -876,53 +875,53 @@ CMenuCollepedia_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuCollepedia_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuCollepedia
-__RTTI__CMenuCollepedia:
+.obj __RTTI__CMenuCollepedia, global
 	.4byte CMenuCollepedia_typestr
 	.4byte CMenuCollepedia_hierarchy
+.endobj __RTTI__CMenuCollepedia
 
-.global __RTTI__CCollepedia
-__RTTI__CCollepedia:
+.obj __RTTI__CCollepedia, global
 	.4byte CCollepedia_typestr
 	.4byte CCollepedia_hierarchy
+.endobj __RTTI__CCollepedia
 
-.global __RTTI__CCLPCur
-__RTTI__CCLPCur:
+.obj __RTTI__CCLPCur, global
 	.4byte CCLPCur_typestr
 	.4byte 0
+.endobj __RTTI__CCLPCur
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-
-.global float_8066B090
-float_8066B090:
+.obj float_8066B090, global
 	.float 0
+.endobj float_8066B090
 
 
-.global float_8066B094
-float_8066B094:
+.obj float_8066B094, global
 	.float 1.0
+.endobj float_8066B094
 
 
-.global float_8066B098
-float_8066B098:
+.obj float_8066B098, global
 	.float 10.0
 	.4byte 0
+.endobj float_8066B098
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_806670C0
-lbl_806670C0:
+.obj lbl_806670C0, global
 	.skip 0x8
+.endobj lbl_806670C0
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

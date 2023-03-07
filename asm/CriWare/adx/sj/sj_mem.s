@@ -1035,16 +1035,17 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global sjmem_uuid
-sjmem_uuid:
+.balign 8
+
+.obj sjmem_uuid, global
 	.4byte 0xDD9EEE41
 	.4byte 0x167911D2
 	.4byte 0x936C0060
 	.4byte 0x089448BC
+.endobj sjmem_uuid
 
 
-.global sj_mem_strpool
-sj_mem_strpool:
+.obj sj_mem_strpool, global
 	.asciz "SJMEM Error"
 	.asciz " : NULL pointer is passed."
 	.asciz "E2004090237"
@@ -1071,11 +1072,13 @@ sj_mem_strpool:
 	.asciz "E2004090251"
 	.asciz "E2004090252"
 	.balign 4
+.endobj sj_mem_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global sjmem_vtbl
-sjmem_vtbl:
+.balign 8
+
+.obj sjmem_vtbl, global
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1088,12 +1091,14 @@ sjmem_vtbl:
 	.4byte SJMEM_GetNumData
 	.4byte SJMEM_IsGetChunk
 	.4byte SJMEM_EntryErrFunc
+.endobj sjmem_vtbl
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global sjmem_init_cnt
-sjmem_init_cnt:
+.obj sjmem_init_cnt, global
 	.skip 0x8
-.global sjmem_obj
-sjmem_obj:
+.endobj sjmem_init_cnt
+
+.obj sjmem_obj, global
 	.skip 0x480
+.endobj sjmem_obj

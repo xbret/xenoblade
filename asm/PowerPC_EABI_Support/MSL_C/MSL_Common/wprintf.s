@@ -2517,8 +2517,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global jumptable_8053FA30
-jumptable_8053FA30:
+.balign 8
+
+.obj jumptable_8053FA30, global
 	.4byte .L_802C50F0
 	.4byte .L_802C5250
 	.4byte .L_802C5250
@@ -2575,9 +2576,9 @@ jumptable_8053FA30:
 	.4byte .L_802C5250
 	.4byte .L_802C5250
 	.4byte .L_802C5060
+.endobj jumptable_8053FA30
 
-.global jumptable_8053FB10
-jumptable_8053FB10:
+.obj jumptable_8053FB10, global
 	.4byte .L_802C6C28 #%
 	.4byte .L_802C6C38
 	.4byte .L_802C6C38
@@ -2662,9 +2663,9 @@ jumptable_8053FB10:
 	.4byte .L_802C6C38
 	.4byte .L_802C6C38
 	.4byte .L_802C6718 #x
+.endobj jumptable_8053FB10
 
-.global lbl_8053FC60
-lbl_8053FC60:
+.obj lbl_8053FC60, global
 	.2byte 0x002D,0x0030,0x0058,0x0030,0x0000 #-0X0
 	.2byte 0x002D,0x0030,0x0078,0x0030,0x0000 #-0x0
 	.2byte 0x0030,0x0058,0x0030,0x0000 #0X0
@@ -2678,16 +2679,21 @@ lbl_8053FC60:
 	.2byte 0x004E,0x0041,0x004E,0x0000 #NAN
 	.2byte 0x006E,0x0061,0x006E,0x0000 #nan
 	.4byte 0
+.endobj lbl_8053FC60
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8050DB88
-lbl_8050DB88:
+.balign 8
+
+.obj lbl_8050DB88, global
 	.4byte 0
 	.4byte 0
+.endobj lbl_8050DB88
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global double_8066B898
-double_8066B898:
+.balign 8
+
+.obj double_8066B898, global
 	.8byte 0
+.endobj double_8066B898

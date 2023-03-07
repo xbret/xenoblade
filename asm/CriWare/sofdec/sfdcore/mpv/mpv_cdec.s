@@ -440,22 +440,27 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global mpvcdec_funcs_int1
-mpvcdec_funcs_int1:
+.balign 8
+
+.obj mpvcdec_funcs_int1, global
 	.4byte mpvcdec_IntraBlocksInt1
 	.4byte mpvcdec_NintraBlocksInt1
+.endobj mpvcdec_funcs_int1
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_80605F10
-lbl_80605F10:
+.obj lbl_80605F10, global
 	.skip 0xC
-.global lbl_80605F1C
-lbl_80605F1C:
+.endobj lbl_80605F10
+
+.obj lbl_80605F1C, global
 	.skip 0xC
-.global mpvcdec_ixa
-mpvcdec_ixa:
+.endobj lbl_80605F1C
+
+.obj mpvcdec_ixa, global
 	.skip 0x4
-.global lbl_80605F2C
-lbl_80605F2C:
+.endobj mpvcdec_ixa
+
+.obj lbl_80605F2C, global
 	.skip 0xC
+.endobj lbl_80605F2C

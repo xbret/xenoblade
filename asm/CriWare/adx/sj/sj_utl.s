@@ -173,8 +173,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global sj_val_to_hexstr_tbl
-sj_val_to_hexstr_tbl:
+.balign 8
+
+.obj sj_val_to_hexstr_tbl, global
 	.4byte 0 #0
 	.4byte 0
 	.4byte 0
@@ -287,3 +288,4 @@ sj_val_to_hexstr_tbl:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj sj_val_to_hexstr_tbl

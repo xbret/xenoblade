@@ -560,15 +560,14 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CSelShopWin_typestr
-CSelShopWin_typestr:
+.obj CSelShopWin_typestr, global
 	.asciz "CSelShopWin"
+.endobj CSelShopWin_typestr
 
 
-.global CSelShopWin_strpool
-CSelShopWin_strpool:
+.obj CSelShopWin_strpool, global
 	.asciz "/menu/ShopSubWin.arc"
 	.asciz "txt_%02d"
 	.asciz "nul_proportion"
@@ -593,13 +592,13 @@ CSelShopWin_strpool:
 	.asciz "pic_btn01"
 	.balign 4
 	.4byte 0
+.endobj CSelShopWin_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CSelShopWin
-__vt__CSelShopWin:
+.obj __vt__CSelShopWin, global
 	.4byte __RTTI__CSelShopWin
 	.4byte 0
 	.4byte __dt__CSelShopWin
@@ -634,36 +633,37 @@ __vt__CSelShopWin:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CSelShopWin
 
-.global CSelShopWin_hierarchy
-CSelShopWin_hierarchy:
+.obj CSelShopWin_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CSelShopWin_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CSelShopWin
-__RTTI__CSelShopWin:
+.obj __RTTI__CSelShopWin, global
 	.4byte CSelShopWin_typestr
 	.4byte CSelShopWin_hierarchy
+.endobj __RTTI__CSelShopWin
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066AEC0
-float_8066AEC0:
+.obj float_8066AEC0, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066AEC0
 
 
-.global double_8066AEC8
-double_8066AEC8:
+.obj double_8066AEC8, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066AEC8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

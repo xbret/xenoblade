@@ -211,35 +211,45 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056E510
-lbl_8056E510:
+.balign 8
+
+.obj lbl_8056E510, global
 	.asciz "<< NW4R    - SND \tfinal   build: Nov 20 2008 03:40:00 (0x4199_60831) >>"
+.endobj lbl_8056E510
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global NW4R_SND_Version_
-NW4R_SND_Version_:
+.balign 8
+
+.obj NW4R_SND_Version_, global
 	.4byte lbl_8056E510
 	.4byte 0
+.endobj NW4R_SND_Version_
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_8063BB00
-lbl_8063BB00:
+.obj lbl_8063BB00, global
 	.skip 0x10
+.endobj lbl_8063BB00
 
-sTaskThread__Q34nw4r3snd11SoundSystem:
+.obj sTaskThread__Q34nw4r3snd11SoundSystem, local
 	.skip 0x330
+.endobj sTaskThread__Q34nw4r3snd11SoundSystem
 
 #@LOCAL@InitSoundSystem__Q34nw4r3snd11SoundSystemFll@defaultSoundSystemWork
-lbl_8063BE40:
+.obj lbl_8063BE40, local
 	.skip 0x16E00
+.endobj lbl_8063BE40
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-"sInitialized__Q34nw4r3snd29@unnamed@snd_SoundSystem_cpp@":
-	.skip 0x4
 
-sMaxVoices__Q34nw4r3snd11SoundSystem:
+.obj "sInitialized__Q34nw4r3snd29@unnamed@snd_SoundSystem_cpp@", local
 	.skip 0x4
+.endobj "sInitialized__Q34nw4r3snd29@unnamed@snd_SoundSystem_cpp@"
+
+.obj sMaxVoices__Q34nw4r3snd11SoundSystem, local
+	.skip 0x4
+.endobj sMaxVoices__Q34nw4r3snd11SoundSystem

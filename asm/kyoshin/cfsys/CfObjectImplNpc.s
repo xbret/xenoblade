@@ -199,11 +199,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-
-.global lbl_804F7FD0
-lbl_804F7FD0:
+.obj lbl_804F7FD0, global
 	.float 0.4 #0x3ECCCCCD
 	.float 0.4 #0x3ECCCCCD
 	.float 0.4 #0x3ECCCCCD
@@ -214,24 +212,24 @@ lbl_804F7FD0:
 	.float 0.4 #0x3ECCCCCD
 	.float 0.4 #0x3ECCCCCD
 	.float 0.1
+.endobj lbl_804F7FD0
 
-.global cf_CfObjectImplNpc_typestr
-cf_CfObjectImplNpc_typestr:
+.obj cf_CfObjectImplNpc_typestr, global
 	.asciz "cf::CfObjectImplNpc"
+.endobj cf_CfObjectImplNpc_typestr
 
 
-.global lbl_804F800C
-lbl_804F800C:
+.obj lbl_804F800C, global
 	.asciz "core"
 	.balign 4
 	.4byte 0
+.endobj lbl_804F800C
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8052E1D0
-lbl_8052E1D0:
+.obj lbl_8052E1D0, global
 	.4byte lbl_806694D0
 	.4byte lbl_806694D8
 	.4byte lbl_806694E0
@@ -242,10 +240,10 @@ lbl_8052E1D0:
 	.4byte lbl_80669508
 	.4byte lbl_80669510
 	.4byte lbl_80669518
+.endobj lbl_8052E1D0
 
 
-.global __vt__cf_CfObjectImplNpc
-__vt__cf_CfObjectImplNpc:
+.obj __vt__cf_CfObjectImplNpc, global
 	.4byte __RTTI__cf_CfObjectImplNpc
 	.4byte 0
 	.4byte __dt__cf_CfObjectImplNpc
@@ -306,9 +304,9 @@ __vt__cf_CfObjectImplNpc:
 	.4byte func_800CA924
 	.4byte func_800CEE28
 	.4byte func_800CFFA0
+.endobj __vt__cf_CfObjectImplNpc
 
-.global cf_CfObjectImplNpc_hierarchy
-cf_CfObjectImplNpc_hierarchy:
+.obj cf_CfObjectImplNpc_hierarchy, global
 	.4byte __RTTI__cf_IObjectInfo
 	.4byte 0x00000010
 	.4byte __RTTI__IActParamEvent
@@ -319,65 +317,66 @@ cf_CfObjectImplNpc_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CfObjectImplNpc_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CfObjectImplObj
-__RTTI__cf_CfObjectImplObj:
+.obj __RTTI__cf_CfObjectImplObj, global
 	.4byte cf_CfObjectImplObj_typestr
 	.4byte cf_CfObjectImplObj_hierarchy
+.endobj __RTTI__cf_CfObjectImplObj
 
-.global __RTTI__cf_CfObjectImplNpc
-__RTTI__cf_CfObjectImplNpc:
+.obj __RTTI__cf_CfObjectImplNpc, global
 	.4byte cf_CfObjectImplNpc_typestr
 	.4byte cf_CfObjectImplNpc_hierarchy
+.endobj __RTTI__cf_CfObjectImplNpc
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_806694D0
-lbl_806694D0:
+.obj lbl_806694D0, global
 	.asciz "np02030"
+.endobj lbl_806694D0
 
-.global lbl_806694D8
-lbl_806694D8:
+.obj lbl_806694D8, global
 	.asciz "np63010"
+.endobj lbl_806694D8
 
-.global lbl_806694E0
-lbl_806694E0:
+.obj lbl_806694E0, global
 	.asciz "np66010"
+.endobj lbl_806694E0
 
-.global lbl_806694E8
-lbl_806694E8:
+.obj lbl_806694E8, global
 	.asciz "np67010"
+.endobj lbl_806694E8
 
-.global lbl_806694F0
-lbl_806694F0:
+.obj lbl_806694F0, global
 	.asciz "np71010"
+.endobj lbl_806694F0
 
-.global lbl_806694F8
-lbl_806694F8:
+.obj lbl_806694F8, global
 	.asciz "np73010"
+.endobj lbl_806694F8
 
-.global lbl_80669500
-lbl_80669500:
+.obj lbl_80669500, global
 	.asciz "np76010"
+.endobj lbl_80669500
 
-.global lbl_80669508
-lbl_80669508:
+.obj lbl_80669508, global
 	.asciz "np77010"
+.endobj lbl_80669508
 
-.global lbl_80669510
-lbl_80669510:
+.obj lbl_80669510, global
 	.asciz "np81010"
+.endobj lbl_80669510
 
-.global lbl_80669518
-lbl_80669518:
+.obj lbl_80669518, global
 	.asciz "np45080"
+.endobj lbl_80669518
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

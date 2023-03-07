@@ -85,9 +85,11 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_80520778
-lbl_80520778:
+.balign 8
+
+.obj lbl_80520778, global
 	.asciz "before seeki"
 	.asciz "after seeki"
 	.balign 4
 	.4byte 0
+.endobj lbl_80520778

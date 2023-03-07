@@ -11390,8 +11390,7 @@
 
 .balign 8
 
-.global lbl_805091F8
-lbl_805091F8:
+.obj lbl_805091F8, global
 	.2byte 0x0000
     .2byte 0x0501
 	.2byte 0x0204
@@ -11424,46 +11423,46 @@ lbl_805091F8:
     .2byte 0x0002
 	.2byte 0x0305
     .2byte 0x0400
+.endobj lbl_805091F8
 
-.global lbl_80509238
-lbl_80509238:
+.obj lbl_80509238, global
 	.asciz "nul_curs00"
 	.balign 4
+.endobj lbl_80509238
 
-.global lbl_80509244
-lbl_80509244:
+.obj lbl_80509244, global
 	.asciz "nul_curs01"
 	.balign 4
+.endobj lbl_80509244
 
-.global lbl_80509250
-lbl_80509250:
+.obj lbl_80509250, global
 	.4byte 0x00000010
 	.4byte 0x00100000
 	.4byte 0x00200000
+.endobj lbl_80509250
 
-.global UI_CPassiveSkill_typestr
-UI_CPassiveSkill_typestr:
+.obj UI_CPassiveSkill_typestr, global
 	.asciz "UI::CPassiveSkill"
 	.balign 4
+.endobj UI_CPassiveSkill_typestr
 
-.global UI_CPassiveSkillLine_typestr
-UI_CPassiveSkillLine_typestr:
+.obj UI_CPassiveSkillLine_typestr, global
 	.asciz "UI::CPassiveSkillLine"
 	.balign 4
+.endobj UI_CPassiveSkillLine_typestr
 
-.global UI_CPassiveSkillInfo_typestr
-UI_CPassiveSkillInfo_typestr:
+.obj UI_CPassiveSkillInfo_typestr, global
 	.asciz "UI::CPassiveSkillInfo"
 	.balign 4
+.endobj UI_CPassiveSkillInfo_typestr
 
-.global UI_CPassiveSkillCur_typestr
-UI_CPassiveSkillCur_typestr:
+.obj UI_CPassiveSkillCur_typestr, global
 	.asciz "UI::CPassiveSkillCur"
 	.balign 4
+.endobj UI_CPassiveSkillCur_typestr
 
 
-.global CPassiveSkill_strpool
-CPassiveSkill_strpool:
+.obj CPassiveSkill_strpool, global
 	.asciz "mf00_reg00_curs05.brlyt"
 	.asciz "mf00_reg00_curs05_roop.brlan"
 	.asciz "mf00_reg00_curs05_on.brlan"
@@ -11634,6 +11633,7 @@ CPassiveSkill_strpool:
 	.asciz "BTL_PSSlist"
 	.balign 4
 	.4byte 0
+.endobj CPassiveSkill_strpool
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
@@ -11641,8 +11641,7 @@ CPassiveSkill_strpool:
 .balign 8
 
 
-.global jumptable_8053B0D8
-jumptable_8053B0D8:
+.obj jumptable_8053B0D8, global
 	.4byte .L_80267418
 	.4byte .L_802673A4
 	.4byte .L_802673AC
@@ -11661,10 +11660,10 @@ jumptable_8053B0D8:
 	.4byte .L_80267418
 	.4byte .L_80267414
 	.4byte 0
+.endobj jumptable_8053B0D8
 
 
-.global __vt__UI_CPassiveSkill
-__vt__UI_CPassiveSkill:
+.obj __vt__UI_CPassiveSkill, global
 	.4byte __RTTI__UI_CPassiveSkill
 	.4byte 0
 	.4byte __dt__UI_CPassiveSkill
@@ -11699,33 +11698,34 @@ __vt__UI_CPassiveSkill:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__UI_CPassiveSkill
 
-.global UI_CPassiveSkill_hierarchy
-UI_CPassiveSkill_hierarchy:
+.obj UI_CPassiveSkill_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
+.endobj UI_CPassiveSkill_hierarchy
 
 
-.global __vt__UI_CPassiveSkillLine
-__vt__UI_CPassiveSkillLine:
+.obj __vt__UI_CPassiveSkillLine, global
 	.4byte __RTTI__UI_CPassiveSkillLine
 	.4byte 0
 	.4byte __dt__UI_CPassiveSkillLine
+.endobj __vt__UI_CPassiveSkillLine
 
 
-.global __vt__UI_CPassiveSkillInfo
-__vt__UI_CPassiveSkillInfo:
+.obj __vt__UI_CPassiveSkillInfo, global
 	.4byte __RTTI__UI_CPassiveSkillInfo
 	.4byte 0
 	.4byte __dt__UI_CPassiveSkillInfo
+.endobj __vt__UI_CPassiveSkillInfo
 
 
-.global __vt__UI_CPassiveSkillCur
-__vt__UI_CPassiveSkillCur:
+.obj __vt__UI_CPassiveSkillCur, global
 	.4byte __RTTI__UI_CPassiveSkillCur
 	.4byte 0
 	.4byte __dt__UI_CPassiveSkillCur
+.endobj __vt__UI_CPassiveSkillCur
 
 
 
@@ -11733,112 +11733,117 @@ __vt__UI_CPassiveSkillCur:
 
 .balign 8
 
-.global __RTTI__UI_CPassiveSkill
-__RTTI__UI_CPassiveSkill:
+.obj __RTTI__UI_CPassiveSkill, global
 	.4byte UI_CPassiveSkill_typestr
 	.4byte UI_CPassiveSkill_hierarchy
+.endobj __RTTI__UI_CPassiveSkill
 
-.global __RTTI__UI_CPassiveSkillLine
-__RTTI__UI_CPassiveSkillLine:
+.obj __RTTI__UI_CPassiveSkillLine, global
 	.4byte UI_CPassiveSkillLine_typestr
 	.4byte 0
+.endobj __RTTI__UI_CPassiveSkillLine
 
-.global __RTTI__UI_CPassiveSkillInfo
-__RTTI__UI_CPassiveSkillInfo:
+.obj __RTTI__UI_CPassiveSkillInfo, global
 	.4byte UI_CPassiveSkillInfo_typestr
 	.4byte 0
+.endobj __RTTI__UI_CPassiveSkillInfo
 
-.global __RTTI__UI_CPassiveSkillCur
-__RTTI__UI_CPassiveSkillCur:
+.obj __RTTI__UI_CPassiveSkillCur, global
 	.4byte UI_CPassiveSkillCur_typestr
 	.4byte 0
+.endobj __RTTI__UI_CPassiveSkillCur
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 .balign 8
 
-.global float_8066B1B0
-float_8066B1B0:
+.obj float_8066B1B0, global
 	.float 1.0
+.endobj float_8066B1B0
 
 
-.global float_8066B1B4
-float_8066B1B4:
+.obj float_8066B1B4, global
 	.float 0
+.endobj float_8066B1B4
 
 
-.global lbl_8066B1B8
-lbl_8066B1B8:
+.obj lbl_8066B1B8, global
 	.4byte lbl_80509238
+.endobj lbl_8066B1B8
 
 
-.global lbl_8066B1BC
-lbl_8066B1BC:
+.obj lbl_8066B1BC, global
 	.4byte lbl_80509244
+.endobj lbl_8066B1BC
 
 
-.global double_8066B1C0
-double_8066B1C0:
+.obj double_8066B1C0, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066B1C0
 
-.global float_8066B1C8
-float_8066B1C8:
+.obj float_8066B1C8, global
 	.float 4 #0x40800000
 	.4byte 0
+.endobj float_8066B1C8
 
 
-.global double_8066B1D0
-double_8066B1D0:
+.obj double_8066B1D0, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066B1D0
 
-.global float_8066B1D8
-float_8066B1D8:
+.obj float_8066B1D8, global
 	.float 43 #0x422C0000
+.endobj float_8066B1D8
 
 
-.global lbl_8066B1DC
-lbl_8066B1DC:
+.obj lbl_8066B1DC, global
 	.4byte 0x04050607
+.endobj lbl_8066B1DC
 
 
-.global lbl_8066B1E0
-lbl_8066B1E0:
+.obj lbl_8066B1E0, global
 	.4byte 0x08000000
+.endobj lbl_8066B1E0
 
 
-.global float_8066B1E4
-float_8066B1E4:
+.obj float_8066B1E4, global
 	.float 255 #0x437F0000
+.endobj float_8066B1E4
 
 
-.global float_8066B1E8
-float_8066B1E8:
+.obj float_8066B1E8, global
 	.float 160 #0x43200000
 	.4byte 0
+.endobj float_8066B1E8
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
 .balign 8
 
-.global lbl_80667170
-lbl_80667170:
+.obj lbl_80667170, global
 	.skip 0x4
-.global lbl_80667174
-lbl_80667174:
+.endobj lbl_80667170
+
+.obj lbl_80667174, global
 	.skip 0x4
-.global lbl_80667178
-lbl_80667178:
+.endobj lbl_80667174
+
+.obj lbl_80667178, global
 	.skip 0x4
-.global lbl_8066717C
-lbl_8066717C:
+.endobj lbl_80667178
+
+.obj lbl_8066717C, global
 	.skip 0x4
-.global lbl_80667180
-lbl_80667180:
+.endobj lbl_8066717C
+
+.obj lbl_80667180, global
 	.skip 0x4
-.global lbl_80667184
-lbl_80667184:
+.endobj lbl_80667180
+
+.obj lbl_80667184, global
 	.skip 0x4
+.endobj lbl_80667184
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

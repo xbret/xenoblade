@@ -225,19 +225,18 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CScnItemAnim_typestr
-CScnItemAnim_typestr:
+.obj CScnItemAnim_typestr, global
 	.asciz "CScnItemAnim"
 	.balign 4
+.endobj CScnItemAnim_typestr
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CScnItemAnim
-__vt__CScnItemAnim:
+.obj __vt__CScnItemAnim, global
 	.4byte __RTTI__CScnItemAnim
 	.4byte 0
 	.4byte __dt__CScnItemAnim
@@ -246,28 +245,29 @@ __vt__CScnItemAnim:
 	.4byte func_80482288
 	.4byte func_8049E8B4
 	.4byte func_8049E8BC
+.endobj __vt__CScnItemAnim
 
-.global CScnItemAnim_hierarchy
-CScnItemAnim_hierarchy:
+.obj CScnItemAnim_hierarchy, global
 	.4byte __RTTI__CScnItem
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CScnItemAnim_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CScnItemAnim
-__RTTI__CScnItemAnim:
+.obj __RTTI__CScnItemAnim, global
 	.4byte CScnItemAnim_typestr
 	.4byte CScnItemAnim_hierarchy
+.endobj __RTTI__CScnItemAnim
 
 
-.global lbl_806663A8
-lbl_806663A8:
+.obj lbl_806663A8, global
 	.4byte 0x72656600
 	.4byte 0
+.endobj lbl_806663A8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

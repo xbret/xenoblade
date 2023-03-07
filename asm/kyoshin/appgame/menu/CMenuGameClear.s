@@ -337,16 +337,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMenuGameClear_typestr
-CMenuGameClear_typestr:
+.obj CMenuGameClear_typestr, global
 	.asciz "CMenuGameClear"
 	.balign 4
+.endobj CMenuGameClear_typestr
 
 
-.global CMenuGameClear_strpool
-CMenuGameClear_strpool:
+.obj CMenuGameClear_strpool, global
 	.asciz "JNL_playaward"
 	.asciz "clear_flg"
 	.asciz "pc_arts"
@@ -357,13 +356,13 @@ CMenuGameClear_strpool:
 	.4byte 0
 	.byte 0x00
 	
+.endobj CMenuGameClear_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMenuGameClear
-__vt__CMenuGameClear:
+.obj __vt__CMenuGameClear, global
 	.4byte __RTTI__CMenuGameClear
 	.4byte 0
 	.4byte __dt__CMenuGameClear
@@ -378,9 +377,9 @@ __vt__CMenuGameClear:
 	.4byte func_802B2624
 	.4byte func_802B261C
 	.4byte func_802B2104
+.endobj __vt__CMenuGameClear
 
-.global CMenuGameClear_hierarchy
-CMenuGameClear_hierarchy:
+.obj CMenuGameClear_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000058
 	.4byte __RTTI__CDoubleListNode
@@ -395,23 +394,24 @@ CMenuGameClear_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuGameClear_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuGameClear
-__RTTI__CMenuGameClear:
+.obj __RTTI__CMenuGameClear, global
 	.4byte CMenuGameClear_typestr
 	.4byte CMenuGameClear_hierarchy
+.endobj __RTTI__CMenuGameClear
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_806674E8
-lbl_806674E8:
+.obj lbl_806674E8, global
 	.skip 0x8
+.endobj lbl_806674E8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

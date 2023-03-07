@@ -1560,56 +1560,66 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80551F30
-lbl_80551F30:
+.balign 8
+
+.obj lbl_80551F30, global
 	.asciz "\nOSExec(): Failed to exec %d in %d\n"
+.endobj lbl_80551F30
 
 
-.global lbl_80551F54
-lbl_80551F54:
+.obj lbl_80551F54, global
 	.asciz "\nOSExec(): The specified game doesn't exist in the disc\n"
 	.balign 4
+.endobj lbl_80551F54
 
 
-.global lbl_80551F90
-lbl_80551F90:
+.obj lbl_80551F90, global
 	.asciz "2004/02/01"
 	.balign 4
 	.4byte 0
+.endobj lbl_80551F90
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665B70
-lbl_80665B70:
+.balign 8
+
+.obj lbl_80665B70, global
 	.asciz "%016llx"
+.endobj lbl_80665B70
 
 
-.global lbl_80665B78
-lbl_80665B78:
+.obj lbl_80665B78, global
 	.4byte 0x25640000
 	.4byte 0
+.endobj lbl_80665B78
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-id:
+.obj id, local
 	.skip 0x20
+.endobj id
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global __OSNextPartitionType
-__OSNextPartitionType:
+.balign 8
+
+.obj __OSNextPartitionType, global
 	.skip 0x4
+.endobj __OSNextPartitionType
 
 #@LOCAL@GetApploaderPosition__Fv@apploaderPosition
-lbl_80667A6C:
+.obj lbl_80667A6C, local
 	.skip 0x4
+.endobj lbl_80667A6C
 
-DVDLowIntType:
+.obj DVDLowIntType, local
 	.skip 0x4
+.endobj DVDLowIntType
 
-.global __OSInReboot
-__OSInReboot:
+.obj __OSInReboot, global
 	.skip 0x4
+.endobj __OSInReboot
 
-Prepared:
+.obj Prepared, local
 	.skip 0x8
+.endobj Prepared

@@ -7607,32 +7607,33 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_804FD838
-lbl_804FD838:
+.balign 8
+
+.obj lbl_804FD838, global
 	.asciz "/menu/Col6Sys.arc"
 	.balign 4
+.endobj lbl_804FD838
 
-.global CCol6Invite_typestr
-CCol6Invite_typestr:
+.obj CCol6Invite_typestr, global
 	.asciz "CCol6Invite"
+.endobj CCol6Invite_typestr
 
-.global CCol6System_typestr
-CCol6System_typestr:
+.obj CCol6System_typestr, global
 	.asciz "CCol6System"
+.endobj CCol6System_typestr
 
-.global CCol6Hint_typestr
-CCol6Hint_typestr:
+.obj CCol6Hint_typestr, global
 	.asciz "CCol6Hint"
 	.balign 4
+.endobj CCol6Hint_typestr
 
-.global CCol6CheckBat_typestr
-CCol6CheckBat_typestr:
+.obj CCol6CheckBat_typestr, global
 	.asciz "CCol6CheckBat"
 	.balign 4
+.endobj CCol6CheckBat_typestr
 
 
-.global CCol6System_strpool
-CCol6System_strpool:
+.obj CCol6System_strpool, global
 	.asciz "MNU_col6"
 	.asciz "name"
 	.asciz "txt_%02d"
@@ -7737,12 +7738,14 @@ CCol6System_strpool:
 	.asciz "%s<n>%s<n>%s +%d<n>%s +%d"
 	.balign 4
 	.4byte 0
+.endobj CCol6System_strpool
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global jumptable_80533668
-jumptable_80533668:
+.balign 8
+
+.obj jumptable_80533668, global
 	.4byte .L_8015EF80
 	.4byte .L_8015EF94
 	.4byte .L_8015F024
@@ -7784,10 +7787,10 @@ jumptable_80533668:
 	.4byte .L_8015FE64
 	.4byte .L_8015FFB0
 	.4byte .L_80160048
+.endobj jumptable_80533668
 
 
-.global __vt__CCol6Invite
-__vt__CCol6Invite:
+.obj __vt__CCol6Invite, global
 	.4byte __RTTI__CCol6Invite
 	.4byte 0
 	.4byte __dt__CCol6Invite
@@ -7831,9 +7834,9 @@ __vt__CCol6Invite:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CCol6Invite
 
-.global CCol6Invite_hierarchy
-CCol6Invite_hierarchy:
+.obj CCol6Invite_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0x0000006C
 	.4byte __RTTI__CDoubleListNode
@@ -7847,10 +7850,10 @@ CCol6Invite_hierarchy:
 	.4byte __RTTI__IUIWindow
 	.4byte 0
 	.4byte 0
+.endobj CCol6Invite_hierarchy
 
 
-.global __vt__CCol6System
-__vt__CCol6System:
+.obj __vt__CCol6System, global
 	.4byte __RTTI__CCol6System
 	.4byte 0
 	.4byte __dt__CCol6System
@@ -7900,9 +7903,9 @@ __vt__CCol6System:
 	.4byte func_80164108
 	.4byte func_80160214
 	.4byte func_80160118
+.endobj __vt__CCol6System
 
-.global CCol6System_hierarchy
-CCol6System_hierarchy:
+.obj CCol6System_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000070
 	.4byte __RTTI__IWorkEvent
@@ -7918,10 +7921,10 @@ CCol6System_hierarchy:
 	.4byte __RTTI__IUIWindow
 	.4byte 0
 	.4byte 0
+.endobj CCol6System_hierarchy
 
 
-.global __vt__CCol6Hint
-__vt__CCol6Hint:
+.obj __vt__CCol6Hint, global
 	.4byte __RTTI__CCol6Hint
 	.4byte 0
 	.4byte __dt__CCol6Hint
@@ -7971,9 +7974,9 @@ __vt__CCol6Hint:
 	.4byte func_801640E8
 	.4byte func_8015DC04
 	.4byte func_8015DB08
+.endobj __vt__CCol6Hint
 
-.global CCol6Hint_hierarchy
-CCol6Hint_hierarchy:
+.obj CCol6Hint_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000070
 	.4byte __RTTI__IWorkEvent
@@ -7989,10 +7992,10 @@ CCol6Hint_hierarchy:
 	.4byte __RTTI__IUIWindow
 	.4byte 0
 	.4byte 0
+.endobj CCol6Hint_hierarchy
 
 
-.global __vt__CCol6CheckBat
-__vt__CCol6CheckBat:
+.obj __vt__CCol6CheckBat, global
 	.4byte __RTTI__CCol6CheckBat
 	.4byte 0
 	.4byte __dt__CCol6CheckBat
@@ -8036,9 +8039,9 @@ __vt__CCol6CheckBat:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CCol6CheckBat
 
-.global CCol6CheckBat_hierarchy
-CCol6CheckBat_hierarchy:
+.obj CCol6CheckBat_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0x0000006C
 	.4byte __RTTI__CDoubleListNode
@@ -8053,148 +8056,158 @@ CCol6CheckBat_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CCol6CheckBat_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80664C50
-lbl_80664C50:
+.balign 8
+
+.obj lbl_80664C50, global
 	.4byte lbl_804FD838
+.endobj lbl_80664C50
 
 
-.global lbl_80664C54
-lbl_80664C54:
+.obj lbl_80664C54, global
 	.4byte 0xFFFFFFFF
+.endobj lbl_80664C54
 
-.global __RTTI__CCol6Invite
-__RTTI__CCol6Invite:
+.obj __RTTI__CCol6Invite, global
 	.4byte CCol6Invite_typestr
 	.4byte CCol6Invite_hierarchy
+.endobj __RTTI__CCol6Invite
 
-.global __RTTI__CCol6System
-__RTTI__CCol6System:
+.obj __RTTI__CCol6System, global
 	.4byte CCol6System_typestr
 	.4byte CCol6System_hierarchy
+.endobj __RTTI__CCol6System
 
-.global __RTTI__CCol6Hint
-__RTTI__CCol6Hint:
+.obj __RTTI__CCol6Hint, global
 	.4byte CCol6Hint_typestr
 	.4byte CCol6Hint_hierarchy
+.endobj __RTTI__CCol6Hint
 
-.global __RTTI__CCol6CheckBat
-__RTTI__CCol6CheckBat:
+.obj __RTTI__CCol6CheckBat, global
 	.4byte CCol6CheckBat_typestr
 	.4byte CCol6CheckBat_hierarchy
+.endobj __RTTI__CCol6CheckBat
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-.global lbl_80669E00
-lbl_80669E00:
+
+.obj lbl_80669E00, global
 	.4byte 0x0F23374B
+.endobj lbl_80669E00
 
 
-.global lbl_80669E04
-lbl_80669E04:
+.obj lbl_80669E04, global
 	.4byte 0x5F000000
+.endobj lbl_80669E04
 
 
-.global lbl_80669E08
-lbl_80669E08:
+.obj lbl_80669E08, global
 	.4byte 0x0F23374B
+.endobj lbl_80669E08
 
 
-.global lbl_80669E0C
-lbl_80669E0C:
+.obj lbl_80669E0C, global
 	.4byte 0x5F000000
+.endobj lbl_80669E0C
 
 
-.global lbl_80669E10
-lbl_80669E10:
+.obj lbl_80669E10, global
 	.4byte 0xFDFAF7F4
+.endobj lbl_80669E10
 
 
-.global lbl_80669E14
-lbl_80669E14:
+.obj lbl_80669E14, global
 	.4byte 0xF1000000
+.endobj lbl_80669E14
 
 
-.global float_80669E18
-float_80669E18:
+.obj float_80669E18, global
 	.float 1.0
+.endobj float_80669E18
 
 
-.global float_80669E1C
-float_80669E1C:
+.obj float_80669E1C, global
 	.float -118 #0xC2EC0000
+.endobj float_80669E1C
 
 
-.global float_80669E20
-float_80669E20:
+.obj float_80669E20, global
 	.float 108 #0x42D80000
+.endobj float_80669E20
 
 
-.global float_80669E24
-float_80669E24:
+.obj float_80669E24, global
 	.float 0
+.endobj float_80669E24
 
 
-.global lbl_80669E28
-lbl_80669E28:
+.obj lbl_80669E28, global
 	.4byte 0x090F151B
+.endobj lbl_80669E28
 
 
-.global lbl_80669E2C
-lbl_80669E2C:
+.obj lbl_80669E2C, global
 	.2byte 0x2127
+.endobj lbl_80669E2C
 
 
-.global lbl_80669E2E
-lbl_80669E2E:
+.obj lbl_80669E2E, global
 	.2byte 0x2D00
+.endobj lbl_80669E2E
 
 
-.global lbl_80669E30
-lbl_80669E30:
+.obj lbl_80669E30, global
 	.4byte 0x010A1016
+.endobj lbl_80669E30
 
 
-.global lbl_80669E34
-lbl_80669E34:
+.obj lbl_80669E34, global
 	.2byte 0x1C22
+.endobj lbl_80669E34
 
 
-.global lbl_80669E36
-lbl_80669E36:
+.obj lbl_80669E36, global
 	.2byte 0x2800
+.endobj lbl_80669E36
 
 
-.global float_80669E38
-float_80669E38:
+.obj float_80669E38, global
 	.float -1.0
 	.4byte 0
+.endobj float_80669E38
 
 
-.global double_80669E40
-double_80669E40:
+.obj double_80669E40, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_80669E40
 
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80666B20
-lbl_80666B20:
+.balign 8
+
+.obj lbl_80666B20, global
 	.skip 0x4
-.global lbl_80666B24
-lbl_80666B24:
+.endobj lbl_80666B20
+
+.obj lbl_80666B24, global
 	.skip 0x4
-.global lbl_80666B28
-lbl_80666B28:
+.endobj lbl_80666B24
+
+.obj lbl_80666B28, global
 	.skip 0x4
-.global lbl_80666B2C
-lbl_80666B2C:
+.endobj lbl_80666B28
+
+.obj lbl_80666B2C, global
 	.skip 0x4
+.endobj lbl_80666B2C
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

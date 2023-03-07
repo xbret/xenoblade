@@ -4545,12 +4545,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-
-
-.global __vt__CScnItemModel
-__vt__CScnItemModel:
+.obj __vt__CScnItemModel, global
 	.4byte __RTTI__CScnItemModel
 	.4byte 0
 	.4byte __dt__CScnItemModel
@@ -4607,25 +4604,26 @@ __vt__CScnItemModel:
 	.4byte func_804857DC
 	.4byte func_804857F0
 	.4byte 0
+.endobj __vt__CScnItemModel
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066D080
-float_8066D080:
+.obj float_8066D080, global
 	.float 0
+.endobj float_8066D080
 
 
-.global float_8066D084
-float_8066D084:
+.obj float_8066D084, global
 	.float 1.0
+.endobj float_8066D084
 
 
-.global float_8066D088
-float_8066D088:
+.obj float_8066D088, global
 	.float -1.0
 	.4byte 0
+.endobj float_8066D088
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

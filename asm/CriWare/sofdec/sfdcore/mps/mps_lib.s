@@ -433,19 +433,24 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global MPSLIB_version_str
-MPSLIB_version_str:
+.balign 8
+
+.obj MPSLIB_version_str, global
 	.asciz "\nCRI MPS/WII Ver.2.064 Build:Nov 13 2008 18:21:29\n"
 	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
 	.balign 4
+.endobj MPSLIB_version_str
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-cri_verstr_ptr:
+.obj cri_verstr_ptr, local
 	.skip 0x4
-.global MPSLIB_libwork
-MPSLIB_libwork:
+.endobj cri_verstr_ptr
+
+.obj MPSLIB_libwork, global
 	.skip 0x4
-.global mpslib_hn_last
-mpslib_hn_last:
+.endobj MPSLIB_libwork
+
+.obj mpslib_hn_last, global
 	.skip 0x8
+.endobj mpslib_hn_last

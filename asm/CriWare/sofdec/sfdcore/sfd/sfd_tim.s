@@ -2115,10 +2115,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global SFTIM_prate
-SFTIM_prate:
+.obj SFTIM_prate, global
 	.4byte 0x00000001
 	.4byte 0x00005DA8
 	.4byte 0x00005DC0
@@ -2129,10 +2128,10 @@ SFTIM_prate:
 	.4byte 0x0000EA24
 	.4byte 0x0000EA60
 	.4byte 0
+.endobj SFTIM_prate
 
 
-.global sftim_tc2time
-sftim_tc2time:
+.obj sftim_tc2time, global
 	.4byte 0
 	.4byte 0
 	.4byte sftim_Tc2Time23N
@@ -2151,10 +2150,10 @@ sftim_tc2time:
 	.4byte sftim_Tc2Time59D
 	.4byte sftim_Tc2TimeN
 	.4byte sftim_Tc2TimeN
+.endobj sftim_tc2time
 
 #unreferenced?
-.global lbl_80520648
-lbl_80520648:
+.obj lbl_80520648, global
 	.float 0.4 #0x3ECCCCCD
 	.float 0.5
 	.float 1.0
@@ -2167,21 +2166,26 @@ lbl_80520648:
 	.4byte 0x40600000
 	.4byte 0x43300000
 	.4byte 0x80000000
+.endobj lbl_80520648
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_8061CDE4
-lbl_8061CDE4:
+.obj lbl_8061CDE4, global
 	.skip 0x4
-.global lbl_8061CDE8
-lbl_8061CDE8:
+.endobj lbl_8061CDE4
+
+.obj lbl_8061CDE8, global
 	.skip 0x8
-.global lbl_8061CDF0
-lbl_8061CDF0:
+.endobj lbl_8061CDE8
+
+.obj lbl_8061CDF0, global
 	.skip 0x4
-.global lbl_8061CDF4
-lbl_8061CDF4:
+.endobj lbl_8061CDF0
+
+.obj lbl_8061CDF4, global
 	.skip 0x4
-.global lbl_8061CDF8
-lbl_8061CDF8:
+.endobj lbl_8061CDF4
+
+.obj lbl_8061CDF8, global
 	.skip 0x8
+.endobj lbl_8061CDF8

@@ -1044,25 +1044,24 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMenuPlayAward_typestr
-CMenuPlayAward_typestr:
+.obj CMenuPlayAward_typestr, global
 	.asciz "CMenuPlayAward"
 	.balign 4
+.endobj CMenuPlayAward_typestr
 
 
-.global lbl_80509E30
-lbl_80509E30:
+.obj lbl_80509E30, global
 	.asciz "MNU_update"
 	.asciz "info"
+.endobj lbl_80509E30
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMenuPlayAward
-__vt__CMenuPlayAward:
+.obj __vt__CMenuPlayAward, global
 	.4byte __RTTI__CMenuPlayAward
 	.4byte 0
 	.4byte __dt__CMenuPlayAward
@@ -1077,9 +1076,9 @@ __vt__CMenuPlayAward:
 	.4byte func_8027064C
 	.4byte func_80270644
 	.4byte func_80270264
+.endobj __vt__CMenuPlayAward
 
-.global CMenuPlayAward_hierarchy
-CMenuPlayAward_hierarchy:
+.obj CMenuPlayAward_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000058
 	.4byte __RTTI__CDoubleListNode
@@ -1094,60 +1093,63 @@ CMenuPlayAward_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuPlayAward_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuPlayAward
-__RTTI__CMenuPlayAward:
+.obj __RTTI__CMenuPlayAward, global
 	.4byte CMenuPlayAward_typestr
 	.4byte CMenuPlayAward_hierarchy
+.endobj __RTTI__CMenuPlayAward
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-
-.global float_8066B240
-float_8066B240:
+.obj float_8066B240, global
 	.float 0
+.endobj float_8066B240
 
 
-.global float_8066B244
-float_8066B244:
+.obj float_8066B244, global
 	.float 1.0
+.endobj float_8066B244
 
 
-.global float_8066B248
-float_8066B248:
+.obj float_8066B248, global
 	.float 10.0
 	.4byte 0
+.endobj float_8066B248
 
 
-.global float_8066B250
-float_8066B250:
+.obj float_8066B250, global
 	.float 0
+.endobj float_8066B250
 
 
-.global float_8066B254
-float_8066B254:
+.obj float_8066B254, global
 	.float 100.0
+.endobj float_8066B254
 
 
-.global double_8066B258
-double_8066B258:
+.obj double_8066B258, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066B258
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667190
-lbl_80667190:
+.balign 8
+
+.obj lbl_80667190, global
 	.skip 0x8
-.global lbl_80667198
-lbl_80667198:
+.endobj lbl_80667190
+
+.obj lbl_80667198, global
 	.skip 0x8
+.endobj lbl_80667198
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

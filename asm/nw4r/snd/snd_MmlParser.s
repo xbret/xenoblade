@@ -1310,15 +1310,16 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global lbl_8056E170
-lbl_8056E170:
+
+.obj lbl_8056E170, global
 	.asciz "#%08x[%d]: printvar %sVAR_%d(%d) = %d\n"
 	.balign 4
+.endobj lbl_8056E170
 
 
-.global jumptable_8056E198
-jumptable_8056E198:
+.obj jumptable_8056E198, global
 	.4byte .L_80417D48
 	.4byte .L_804185BC
 	.4byte .L_804185BC
@@ -1445,56 +1446,64 @@ jumptable_8056E198:
 	.4byte .L_80418280
 	.4byte .L_804181F8
 	.4byte 0
+.endobj jumptable_8056E198
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-.global lbl_80665E08
-lbl_80665E08:
+
+.obj lbl_80665E08, global
 	.4byte 0x54000000
+.endobj lbl_80665E08
 
 
-.global lbl_80665E0C
-lbl_80665E0C:
+.obj lbl_80665E0C, global
 	.4byte 0x47000000
+.endobj lbl_80665E0C
 
 
-.global lbl_80665E10
-lbl_80665E10:
+.obj lbl_80665E10, global
 	.4byte 0
 	.4byte 0
+.endobj lbl_80665E10
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C7E0
-float_8066C7E0:
+.balign 8
+
+.obj float_8066C7E0, global
 	.float 0.0078125 #0x3C000000
+.endobj float_8066C7E0
 
 
-.global float_8066C7E4
-float_8066C7E4:
+.obj float_8066C7E4, global
 	.float 0.390625 #0x3EC80000
+.endobj float_8066C7E4
 
 
-.global float_8066C7E8
-float_8066C7E8:
+.obj float_8066C7E8, global
 	.float 0.015625 #0x3C800000
+.endobj float_8066C7E8
 
 
-.global float_8066C7EC
-float_8066C7EC:
+.obj float_8066C7EC, global
 	.float 127 #0x42FE0000
+.endobj float_8066C7EC
 
 
-.global double_8066C7F0
-double_8066C7F0:
+.obj double_8066C7F0, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066C7F0
 
-.global double_8066C7F8
-double_8066C7F8:
+.obj double_8066C7F8, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066C7F8
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-mPrintVarEnabledFlag__Q44nw4r3snd6detail9MmlParser:
+.balign 8
+
+.obj mPrintVarEnabledFlag__Q44nw4r3snd6detail9MmlParser, local
 	.skip 0x8
+.endobj mPrintVarEnabledFlag__Q44nw4r3snd6detail9MmlParser

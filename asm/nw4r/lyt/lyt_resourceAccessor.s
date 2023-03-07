@@ -36,11 +36,13 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056D580
-lbl_8056D580:
+.balign 8
+
+.obj lbl_8056D580, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r3lyt16ResourceAccessorFv
 	.4byte 0
 	.4byte GetFont__Q34nw4r3lyt16ResourceAccessorFPCc
 	.4byte 0
+.endobj lbl_8056D580

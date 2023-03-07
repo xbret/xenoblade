@@ -431,131 +431,130 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CfResObjImpl_typestr
-cf_CfResObjImpl_typestr:
+.obj cf_CfResObjImpl_typestr, global
 	.asciz "cf::CfResObjImpl"
 	.balign 4
+.endobj cf_CfResObjImpl_typestr
 
-.global cf_CfResImpl_typestr
-cf_CfResImpl_typestr:
+.obj cf_CfResImpl_typestr, global
 	.asciz "cf::CfResImpl"
 	.balign 4
 	.4byte 0
+.endobj cf_CfResImpl_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_805344C0
-lbl_805344C0:
+.obj lbl_805344C0, global
 	.asciz "ResUserData"
+.endobj lbl_805344C0
 
 
-.global lbl_805344CC
-lbl_805344CC:
+.obj lbl_805344CC, global
 	.asciz "%s::%s: Object not valid."
 	.balign 4
+.endobj lbl_805344CC
 
 
-.global lbl_805344E8
-lbl_805344E8:
+.obj lbl_805344E8, global
 	.asciz "g3d_resuser_ac.h"
 	.balign 4
+.endobj lbl_805344E8
 
 
-.global lbl_805344FC
-lbl_805344FC:
+.obj lbl_805344FC, global
 	.asciz "NW4R:Failed assertion !((u32)p & 0x3)"
 	.balign 4
+.endobj lbl_805344FC
 
 
-.global lbl_80534524
-lbl_80534524:
+.obj lbl_80534524, global
 	.asciz "g3d_resuser_ac.h"
 	.balign 4
+.endobj lbl_80534524
 
 
-.global lbl_80534538
-lbl_80534538:
+.obj lbl_80534538, global
 	.asciz "ResUserDataItem"
+.endobj lbl_80534538
 
 
-.global lbl_80534548
-lbl_80534548:
+.obj lbl_80534548, global
 	.asciz "%s::%s: Object not valid."
 	.balign 4
+.endobj lbl_80534548
 
 
-.global lbl_80534564
-lbl_80534564:
+.obj lbl_80534564, global
 	.asciz "g3d_resuser_ac.h"
 	.balign 4
+.endobj lbl_80534564
 
 
-.global lbl_80534578
-lbl_80534578:
+.obj lbl_80534578, global
 	.asciz "%s::%s: Object not valid."
 	.balign 4
+.endobj lbl_80534578
 
 
-.global lbl_80534594
-lbl_80534594:
+.obj lbl_80534594, global
 	.asciz "g3d_resuser_ac.h"
 	.balign 4
+.endobj lbl_80534594
 
 
-.global lbl_805345A8
-lbl_805345A8:
+.obj lbl_805345A8, global
 	.asciz "NW4R:Failed assertion GetValueType() == ResUserDataItemData::S32"
 	.balign 4
+.endobj lbl_805345A8
 
 
-.global lbl_805345EC
-lbl_805345EC:
+.obj lbl_805345EC, global
 	.asciz "g3d_resuser_ac.h"
 	.balign 4
+.endobj lbl_805345EC
 
 
-.global lbl_80534600
-lbl_80534600:
+.obj lbl_80534600, global
 	.asciz "NW4R:Failed assertion GetValueType() == ResUserDataItemData::F32"
 	.balign 4
+.endobj lbl_80534600
 
 
-.global lbl_80534644
-lbl_80534644:
+.obj lbl_80534644, global
 	.asciz "g3d_resuser_ac.h"
 	.balign 4
+.endobj lbl_80534644
 
 
-.global lbl_80534658
-lbl_80534658:
+.obj lbl_80534658, global
 	.asciz "NW4R:Failed assertion GetValueType() == ResUserDataItemData::STRING"
+.endobj lbl_80534658
 
 
-.global lbl_8053469C
-lbl_8053469C:
+.obj lbl_8053469C, global
 	.asciz "g3d_resuser_ac.h"
 	.balign 4
+.endobj lbl_8053469C
 
 
-.global lbl_805346B0
-lbl_805346B0:
+.obj lbl_805346B0, global
 	.asciz "NW4R:Failed assertion !((u32)p & 0x3)"
 	.balign 4
+.endobj lbl_805346B0
 
 
-.global lbl_805346D8
-lbl_805346D8:
+.obj lbl_805346D8, global
 	.asciz "g3d_resdict_ac.h"
 	.balign 4
 	.4byte 0
+.endobj lbl_805346D8
 
 
-.global lbl_805346F0
-lbl_805346F0:
+.obj lbl_805346F0, global
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -566,10 +565,10 @@ lbl_805346F0:
 	.4byte 0xFFFFFFFF
 	.4byte func_8016CCDC
 	.4byte 0
+.endobj lbl_805346F0
 
 
-.global __vt__cf_CfResObjImpl
-__vt__cf_CfResObjImpl:
+.obj __vt__cf_CfResObjImpl, global
 	.4byte __RTTI__cf_CfResObjImpl
 	.4byte 0
 	.4byte __dt__cf_CfResObjImpl
@@ -596,44 +595,45 @@ __vt__cf_CfResObjImpl:
 	.4byte func_8016C950
 	.4byte func_8016CD54
 	.4byte func_800BF30C
+.endobj __vt__cf_CfResObjImpl
 
-.global cf_CfResObjImpl_hierarchy
-cf_CfResObjImpl_hierarchy:
+.obj cf_CfResObjImpl_hierarchy, global
 	.4byte __RTTI__cf_CfResImpl
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CfResObjImpl_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CfResObjImpl
-__RTTI__cf_CfResObjImpl:
+.obj __RTTI__cf_CfResObjImpl, global
 	.4byte cf_CfResObjImpl_typestr
 	.4byte cf_CfResObjImpl_hierarchy
+.endobj __RTTI__cf_CfResObjImpl
 
-.global __RTTI__cf_CfResImpl
-__RTTI__cf_CfResImpl:
+.obj __RTTI__cf_CfResImpl, global
 	.4byte cf_CfResImpl_typestr
 	.4byte 0
+.endobj __RTTI__cf_CfResImpl
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_80669F50
-float_80669F50:
+.obj float_80669F50, global
 	.float 0
 	.4byte 0
+.endobj float_80669F50
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80666B60
-lbl_80666B60:
+.obj lbl_80666B60, global
 	.skip 0x8
+.endobj lbl_80666B60
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -296,28 +296,32 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global sfx_ver_str
-sfx_ver_str:
+.balign 8
+
+.obj sfx_ver_str, global
 	.asciz "\nCRI SFX/WII Ver.2.48 Build:Nov 13 2008 18:22:09\n"
 	.balign 4
+.endobj sfx_ver_str
 
 
-.global sfx_lib_strpool
-sfx_lib_strpool:
+.obj sfx_lib_strpool, global
 	.asciz "E201194: sfx_InitHn: work size is short."
 	.asciz "E201281: SfxZHn: can't create."
 	.asciz "E202011: SfxAHn: can't create."
 	.balign 4
 	.4byte 0
+.endobj sfx_lib_strpool
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_8061CE38
-lbl_8061CE38:
+.obj lbl_8061CE38, global
 	.skip 0x4
-.global lbl_8061CE3C
-lbl_8061CE3C:
+.endobj lbl_8061CE38
+
+.obj lbl_8061CE3C, global
 	.skip 0xC
-.global sfx_libwork
-sfx_libwork:
+.endobj lbl_8061CE3C
+
+.obj sfx_libwork, global
 	.skip 0x528
+.endobj sfx_libwork

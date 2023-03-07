@@ -1307,8 +1307,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_80518BC8
-lbl_80518BC8:
+.balign 8
+
+.obj lbl_80518BC8, global
 	.4byte 0
 	.4byte 0
 	.4byte 0xFFFFFF9A
@@ -1391,11 +1392,13 @@ lbl_80518BC8:
 	.4byte 0xFFFFFFFE
 	.4byte 0xFFFFFFE9
 	.4byte 0xFFFFFFC0
+.endobj lbl_80518BC8
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80551080
-lbl_80551080:
+.balign 8
+
+.obj lbl_80551080, global
 	.asciz "<< RVL_SDK - NAND \trelease build: Feb 27 2009 10:05:16 (0x4302_145) >>"
 	.balign 4
 	.4byte 0
@@ -1404,10 +1407,11 @@ lbl_80551080:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_80551080
 
 
 
-s_currentDir:
+.obj s_currentDir, local
 	.4byte 0x2F000000
 	.4byte 0
 	.4byte 0
@@ -1424,22 +1428,23 @@ s_currentDir:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj s_currentDir
 
-s_shutdownFuncInfo:
+.obj s_shutdownFuncInfo, local
 	.4byte nandOnShutdown
 	.4byte 0x000000FF
 	.4byte 0
 	.4byte 0
+.endobj s_shutdownFuncInfo
 
 
-.global lbl_80551130
-lbl_80551130:
+.obj lbl_80551130, global
 	.asciz "/shared2"
 	.balign 4
+.endobj lbl_80551130
 
 
-.global lbl_8055113C
-lbl_8055113C:
+.obj lbl_8055113C, global
 	.asciz "/shared2/"
 	.balign 4
 	.asciz "ISFS error code: %d"
@@ -1449,60 +1454,67 @@ lbl_8055113C:
 	.balign 4
 	.asciz "Failed to set home directory.\n"
 	.balign 4
+.endobj lbl_8055113C
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665AE8
-lbl_80665AE8:
+.balign 8
+
+.obj lbl_80665AE8, global
 	.4byte lbl_80551080
+.endobj lbl_80665AE8
 
 
-.global lbl_80665AEC
-lbl_80665AEC:
+.obj lbl_80665AEC, global
 	.4byte 0x2F000000
+.endobj lbl_80665AEC
 
 
-.global lbl_80665AF0
-lbl_80665AF0:
+.obj lbl_80665AF0, global
 	.4byte 0
+.endobj lbl_80665AF0
 
 
-.global lbl_80665AF4
-lbl_80665AF4:
+.obj lbl_80665AF4, global
 	.4byte 0x2E000000
+.endobj lbl_80665AF4
 
 
-.global lbl_80665AF8
-lbl_80665AF8:
+.obj lbl_80665AF8, global
 	.4byte 0x2E2E0000
+.endobj lbl_80665AF8
 
 
-.global lbl_80665AFC
-lbl_80665AFC:
+.obj lbl_80665AFC, global
 	.4byte 0x2F257300
+.endobj lbl_80665AFC
 
 
-.global lbl_80665B00
-lbl_80665B00:
+.obj lbl_80665B00, global
 	.asciz "%s/%s"
 	.balign 4
+.endobj lbl_80665B00
 
 
-.global lbl_80665B08
-lbl_80665B08:
+.obj lbl_80665B08, global
 	.4byte 0
+.endobj lbl_80665B08
 
 
-.global lbl_80665B0C
-lbl_80665B0C:
+.obj lbl_80665B0C, global
 	.4byte 0x00200000
+.endobj lbl_80665B0C
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-s_homeDir:
+.obj s_homeDir, local
 	.skip 0x40
+.endobj s_homeDir
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-s_libState:
+.balign 8
+
+.obj s_libState, local
 	.skip 0x8
+.endobj s_libState

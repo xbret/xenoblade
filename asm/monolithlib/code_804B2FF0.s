@@ -3021,30 +3021,29 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CTaskColiManager_typestr
-CTaskColiManager_typestr:
+.obj CTaskColiManager_typestr, global
 	.asciz "CTaskColiManager"
 	.balign 4
+.endobj CTaskColiManager_typestr
 
-.global CTTask_CTaskColiManager_typestr
-CTTask_CTaskColiManager_typestr:
+.obj CTTask_CTaskColiManager_typestr, global
 	.asciz "CTTask<CTaskColiManager>"
 	.balign 4
+.endobj CTTask_CTaskColiManager_typestr
 
-.global CColiManCall_typestr
-CColiManCall_typestr:
+.obj CColiManCall_typestr, global
 	.asciz "CColiManCall"
 	.balign 4
+.endobj CColiManCall_typestr
 
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CTaskColiManager
-__vt__CTaskColiManager:
+.obj __vt__CTaskColiManager, global
 	.4byte __RTTI__CTaskColiManager
 	.4byte 0
 	.4byte __dt__CTaskColiManager
@@ -3054,9 +3053,9 @@ __vt__CTaskColiManager:
 	.4byte func_804B4D58
 	.4byte func_804B4E0C
 	.4byte func_80043F20
+.endobj __vt__CTaskColiManager
 
-.global CTaskColiManager_hierarchy
-CTaskColiManager_hierarchy:
+.obj CTaskColiManager_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -3066,10 +3065,10 @@ CTaskColiManager_hierarchy:
 	.4byte __RTTI__CTTask_CTaskColiManager
 	.4byte 0
 	.4byte 0
+.endobj CTaskColiManager_hierarchy
 
 
-.global __vt__CTTask_CTaskColiManager
-__vt__CTTask_CTaskColiManager:
+.obj __vt__CTTask_CTaskColiManager, global
 	.4byte __RTTI__CTTask_CTaskColiManager
 	.4byte 0
 	.4byte __dt__CTTask_CTaskColiManager
@@ -3079,9 +3078,9 @@ __vt__CTTask_CTaskColiManager:
 	.4byte func_804B58FC
 	.4byte func_804B5944
 	.4byte func_80043F20
+.endobj __vt__CTTask_CTaskColiManager
 
-.global CTTask_CTaskColiManager_hierarchy
-CTTask_CTaskColiManager_hierarchy:
+.obj CTTask_CTaskColiManager_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -3089,86 +3088,88 @@ CTTask_CTaskColiManager_hierarchy:
 	.4byte __RTTI__CProcess
 	.4byte 0
 	.4byte 0
+.endobj CTTask_CTaskColiManager_hierarchy
 
 
-.global __vt__CColiManCall
-__vt__CColiManCall:
+.obj __vt__CColiManCall, global
 	.4byte __RTTI__CColiManCall
 	.4byte 0
 	.4byte func_804B59C8
 	
-.global CColiManCall_hierarchy
-CColiManCall_hierarchy:
+.endobj __vt__CColiManCall
+
+.obj CColiManCall_hierarchy, global
 	.4byte __RTTI__CColiProc
 	.4byte 0
 	.4byte 0
+.endobj CColiManCall_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_806663C8
-lbl_806663C8:
+.obj lbl_806663C8, global
 	.4byte 0x72656600
 	.4byte 0
+.endobj lbl_806663C8
 
-.global __RTTI__CTaskColiManager
-__RTTI__CTaskColiManager:
+.obj __RTTI__CTaskColiManager, global
 	.4byte CTaskColiManager_typestr
 	.4byte CTaskColiManager_hierarchy
+.endobj __RTTI__CTaskColiManager
 
-.global __RTTI__CTTask_CTaskColiManager
-__RTTI__CTTask_CTaskColiManager:
+.obj __RTTI__CTTask_CTaskColiManager, global
 	.4byte CTTask_CTaskColiManager_typestr
 	.4byte CTTask_CTaskColiManager_hierarchy
+.endobj __RTTI__CTTask_CTaskColiManager
 
-.global __RTTI__CColiManCall
-__RTTI__CColiManCall:
+.obj __RTTI__CColiManCall, global
 	.4byte CColiManCall_typestr
 	.4byte CColiManCall_hierarchy
+.endobj __RTTI__CColiManCall
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066D660
-float_8066D660:
+.obj float_8066D660, global
 	.float 0
+.endobj float_8066D660
 
 
-.global float_8066D664
-float_8066D664:
+.obj float_8066D664, global
 	.float 1.0
+.endobj float_8066D664
 
 
-.global float_8066D668
-float_8066D668:
+.obj float_8066D668, global
 	.float 0.5
 	.4byte 0
+.endobj float_8066D668
 
 
-.global float_8066D670
-float_8066D670:
+.obj float_8066D670, global
 	.float 0
+.endobj float_8066D670
 
 
-.global float_8066D674
-float_8066D674:
+.obj float_8066D674, global
 	.float 1.0
+.endobj float_8066D674
 
 
-.global float_8066D678
-float_8066D678:
+.obj float_8066D678, global
 	.float 1000000 #0x49742400
 	.4byte 0
+.endobj float_8066D678
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_8065F9F8
-lbl_8065F9F8:
+.obj lbl_8065F9F8, global
 	.skip 0x68
+.endobj lbl_8065F9F8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

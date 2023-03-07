@@ -3244,9 +3244,10 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global jumptable_8056E608
-jumptable_8056E608:
+
+.obj jumptable_8056E608, global
 	.4byte .L_80428170
 	.4byte .L_80428178
 	.4byte .L_80428188
@@ -3256,79 +3257,82 @@ jumptable_8056E608:
 	.4byte .L_804281CC
 	.4byte .L_804281D8
 	.4byte .L_804281EC
+.endobj jumptable_8056E608
 
 
-.global lbl_8056E62C
-lbl_8056E62C:
+.obj lbl_8056E62C, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q44nw4r3snd6detail5VoiceFv
 	.4byte InvalidateData__Q44nw4r3snd6detail5VoiceFPCvPCv
 	.4byte InvalidateWaveData__Q44nw4r3snd6detail5VoiceFPCvPCv
+.endobj lbl_8056E62C
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C898
-float_8066C898:
+.balign 8
+
+.obj float_8066C898, global
 	.float 1.0
+.endobj float_8066C898
 
 
-.global float_8066C89C
-float_8066C89C:
+.obj float_8066C89C, global
 	.float 0
+.endobj float_8066C89C
 
 
-.global float_8066C8A0
-float_8066C8A0:
+.obj float_8066C8A0, global
 	.float -0.12 #0xBDF5C28F
+.endobj float_8066C8A0
 
 
-.global float_8066C8A4
-float_8066C8A4:
+.obj float_8066C8A4, global
 	.float 0.88 #0x3F6147AE
+.endobj float_8066C8A4
 
 
-.global float_8066C8A8
-float_8066C8A8:
+.obj float_8066C8A8, global
 	.float 0.5
+.endobj float_8066C8A8
 
 
-.global float_8066C8AC
-float_8066C8AC:
+.obj float_8066C8AC, global
 	.float 1.12 #0x3F8F5C29
+.endobj float_8066C8AC
 
 
-.global float_8066C8B0
-float_8066C8B0:
+.obj float_8066C8B0, global
 	.float 0.85 #0x3F59999A
+.endobj float_8066C8B0
 
 
-.global float_8066C8B4
-float_8066C8B4:
+.obj float_8066C8B4, global
 	.float 0.149999976 #0x3E199998
+.endobj float_8066C8B4
 
 
-.global float_8066C8B8
-float_8066C8B8:
+.obj float_8066C8B8, global
 	.float 2 #0x40000000
+.endobj float_8066C8B8
 
 
-.global float_8066C8BC
-float_8066C8BC:
+.obj float_8066C8BC, global
 	.float 0.350000024 #0x3EB33334
+.endobj float_8066C8BC
 
 
-.global float_8066C8C0
-float_8066C8C0:
+.obj float_8066C8C0, global
 	.float -1.0
+.endobj float_8066C8C0
 
 
-.global float_8066C8C4
-float_8066C8C4:
+.obj float_8066C8C4, global
 	.float -3 #0xC0400000
+.endobj float_8066C8C4
 
 
-.global float_8066C8C8
-float_8066C8C8:
+.obj float_8066C8C8, global
 	.4byte 0x47000000
 	.4byte 0
+.endobj float_8066C8C8

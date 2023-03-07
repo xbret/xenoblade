@@ -4561,39 +4561,38 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CUIBattleManager_typestr
-CUIBattleManager_typestr:
+.obj CUIBattleManager_typestr, global
 	.asciz "CUIBattleManager"
 	.balign 4
+.endobj CUIBattleManager_typestr
 
-.global reslist_IUIBattle_typestr
-reslist_IUIBattle_typestr:
+.obj reslist_IUIBattle_typestr, global
 	.asciz "reslist<IUIBattle *>"
 	.balign 4
+.endobj reslist_IUIBattle_typestr
 
-.global _reslist_base_IUIBattle_typestr
-_reslist_base_IUIBattle_typestr:
+.obj _reslist_base_IUIBattle_typestr, global
 	.asciz "_reslist_base<IUIBattle *>"
 	.balign 4
+.endobj _reslist_base_IUIBattle_typestr
 
-.global CUIBattleManager_CTest_typestr
-CUIBattleManager_CTest_typestr:
+.obj CUIBattleManager_CTest_typestr, global
 	.asciz "CUIBattleManager::CTest"
+.endobj CUIBattleManager_CTest_typestr
 
-.global CTTask_CUIBattleManager_CTest_typestr
-CTTask_CUIBattleManager_CTest_typestr:
+.obj CTTask_CUIBattleManager_CTest_typestr, global
 	.asciz "CTTask<CUIBattleManager::CTest>"
+.endobj CTTask_CUIBattleManager_CTest_typestr
 
-.global CTTask_CUIBattleManager_typestr
-CTTask_CUIBattleManager_typestr:
+.obj CTTask_CUIBattleManager_typestr, global
 	.asciz "CTTask<CUIBattleManager>"
 	.balign 4
+.endobj CTTask_CUIBattleManager_typestr
 
 
-.global CUIBattleManager_strpool
-CUIBattleManager_strpool:
+.obj CUIBattleManager_strpool, global
 	.asciz "ARTS_FACE"
 	.asciz "menu/tpl/arts_elem.arc"
 	.asciz "menu/tpl/arts_sys.arc"
@@ -4605,26 +4604,26 @@ CUIBattleManager_strpool:
 	.asciz "icon_type"
 	.balign 4
 	.4byte 0
+.endobj CUIBattleManager_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_80531878
-lbl_80531878:
+.obj lbl_80531878, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_8012F29C
+.endobj lbl_80531878
 
-.global lbl_80531884
-lbl_80531884:
+.obj lbl_80531884, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_8012F2BC
+.endobj lbl_80531884
 
 
-.global __vt__CUIBattleManager
-__vt__CUIBattleManager:
+.obj __vt__CUIBattleManager, global
 	.4byte __RTTI__CUIBattleManager
 	.4byte 0
 	.4byte __dt__CUIBattleManager
@@ -4669,9 +4668,9 @@ __vt__CUIBattleManager:
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
 	.4byte func_8012F2C0
+.endobj __vt__CUIBattleManager
 
-.global CUIBattleManager_hierarchy
-CUIBattleManager_hierarchy:
+.obj CUIBattleManager_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0x00000054
 	.4byte __RTTI__CDoubleListNode
@@ -4683,30 +4682,30 @@ CUIBattleManager_hierarchy:
 	.4byte __RTTI__CTTask_CUIBattleManager
 	.4byte 0
 	.4byte 0
+.endobj CUIBattleManager_hierarchy
 
 
-.global __vt__reslist_IUIBattle
-__vt__reslist_IUIBattle:
+.obj __vt__reslist_IUIBattle, global
 	.4byte __RTTI__reslist_IUIBattle
 	.4byte 0
 	.4byte __dt__reslist_IUIBattle
+.endobj __vt__reslist_IUIBattle
 
-.global reslist_IUIBattle_hierarchy
-reslist_IUIBattle_hierarchy:
+.obj reslist_IUIBattle_hierarchy, global
 	.4byte __RTTI___reslist_base_IUIBattle
 	.4byte 0
 	.4byte 0
+.endobj reslist_IUIBattle_hierarchy
 
 
-.global __vt___reslist_base_IUIBattle
-__vt___reslist_base_IUIBattle:
+.obj __vt___reslist_base_IUIBattle, global
 	.4byte __RTTI___reslist_base_IUIBattle
 	.4byte 0
 	.4byte __dt___reslist_base_IUIBattle
+.endobj __vt___reslist_base_IUIBattle
 
 
-.global __vt__CUIBattleManager_CTest
-__vt__CUIBattleManager_CTest:
+.obj __vt__CUIBattleManager_CTest, global
 	.4byte __RTTI__CUIBattleManager_CTest
 	.4byte 0
 	.4byte __dt__CUIBattleManager_CTest
@@ -4716,9 +4715,9 @@ __vt__CUIBattleManager_CTest:
 	.4byte func_8012FDDC
 	.4byte func_8012FDD8
 	.4byte func_80043F20
+.endobj __vt__CUIBattleManager_CTest
 
-.global CUIBattleManager_CTest_hierarchy
-CUIBattleManager_CTest_hierarchy:
+.obj CUIBattleManager_CTest_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -4728,10 +4727,10 @@ CUIBattleManager_CTest_hierarchy:
 	.4byte __RTTI__CTTask_CUIBattleManager_CTest
 	.4byte 0
 	.4byte 0
+.endobj CUIBattleManager_CTest_hierarchy
 
 
-.global __vt__CTTask_CUIBattleManager_CTest
-__vt__CTTask_CUIBattleManager_CTest:
+.obj __vt__CTTask_CUIBattleManager_CTest, global
 	.4byte __RTTI__CTTask_CUIBattleManager_CTest
 	.4byte 0
 	.4byte __dt__CTTask_CUIBattleManager_CTest
@@ -4741,9 +4740,9 @@ __vt__CTTask_CUIBattleManager_CTest:
 	.4byte func_8012FDE8
 	.4byte func_8012FE30
 	.4byte func_80043F20
+.endobj __vt__CTTask_CUIBattleManager_CTest
 
-.global CTTask_CUIBattleManager_CTest_hierarchy
-CTTask_CUIBattleManager_CTest_hierarchy:
+.obj CTTask_CUIBattleManager_CTest_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -4751,10 +4750,10 @@ CTTask_CUIBattleManager_CTest_hierarchy:
 	.4byte __RTTI__CProcess
 	.4byte 0
 	.4byte 0
+.endobj CTTask_CUIBattleManager_CTest_hierarchy
 
 
-.global __vt__CTTask_CUIBattleManager
-__vt__CTTask_CUIBattleManager:
+.obj __vt__CTTask_CUIBattleManager, global
 	.4byte __RTTI__CTTask_CUIBattleManager
 	.4byte 0
 	.4byte __dt__CTTask_CUIBattleManager
@@ -4764,9 +4763,9 @@ __vt__CTTask_CUIBattleManager:
 	.4byte func_8012FE78
 	.4byte func_8012FEC0
 	.4byte func_80043F20
+.endobj __vt__CTTask_CUIBattleManager
 
-.global CTTask_CUIBattleManager_hierarchy
-CTTask_CUIBattleManager_hierarchy:
+.obj CTTask_CUIBattleManager_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -4774,59 +4773,61 @@ CTTask_CUIBattleManager_hierarchy:
 	.4byte __RTTI__CProcess
 	.4byte 0
 	.4byte 0
+.endobj CTTask_CUIBattleManager_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CUIBattleManager
-__RTTI__CUIBattleManager:
+.obj __RTTI__CUIBattleManager, global
 	.4byte CUIBattleManager_typestr
 	.4byte CUIBattleManager_hierarchy
+.endobj __RTTI__CUIBattleManager
 
-.global __RTTI__reslist_IUIBattle
-__RTTI__reslist_IUIBattle:
+.obj __RTTI__reslist_IUIBattle, global
 	.4byte reslist_IUIBattle_typestr
 	.4byte reslist_IUIBattle_hierarchy
+.endobj __RTTI__reslist_IUIBattle
 
-.global __RTTI___reslist_base_IUIBattle
-__RTTI___reslist_base_IUIBattle:
+.obj __RTTI___reslist_base_IUIBattle, global
 	.4byte _reslist_base_IUIBattle_typestr
 	.4byte 0
+.endobj __RTTI___reslist_base_IUIBattle
 
-.global __RTTI__CUIBattleManager_CTest
-__RTTI__CUIBattleManager_CTest:
+.obj __RTTI__CUIBattleManager_CTest, global
 	.4byte CUIBattleManager_CTest_typestr
 	.4byte CUIBattleManager_CTest_hierarchy
+.endobj __RTTI__CUIBattleManager_CTest
 
-.global __RTTI__CTTask_CUIBattleManager_CTest
-__RTTI__CTTask_CUIBattleManager_CTest:
+.obj __RTTI__CTTask_CUIBattleManager_CTest, global
 	.4byte CTTask_CUIBattleManager_CTest_typestr
 	.4byte CTTask_CUIBattleManager_CTest_hierarchy
+.endobj __RTTI__CTTask_CUIBattleManager_CTest
 
-.global __RTTI__CTTask_CUIBattleManager
-__RTTI__CTTask_CUIBattleManager:
+.obj __RTTI__CTTask_CUIBattleManager, global
 	.4byte CTTask_CUIBattleManager_typestr
 	.4byte CTTask_CUIBattleManager_hierarchy
+.endobj __RTTI__CTTask_CUIBattleManager
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_80669B90
-float_80669B90:
+.obj float_80669B90, global
 	.float 1.0
+.endobj float_80669B90
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80666940, global
+	.skip 0x4
+.endobj lbl_80666940
 
-.global lbl_80666940
-lbl_80666940:
+.obj lbl_80666944, global
 	.skip 0x4
-.global lbl_80666944
-lbl_80666944:
-	.skip 0x4
+.endobj lbl_80666944
 	
 .section extab, "a" # 0x800066E0 - 0x80021020
 

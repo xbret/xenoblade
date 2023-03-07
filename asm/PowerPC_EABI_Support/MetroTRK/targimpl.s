@@ -1748,24 +1748,27 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-gTRKExceptionStatus:
+.balign 8
+
+.obj gTRKExceptionStatus, local
 	.4byte 0
 	.4byte 0
 	.4byte 0
 	.4byte 0x01000000
+.endobj gTRKExceptionStatus
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
 .balign 8 #needed to align nubinit.c
 
-gTRKMemMap:
+.obj gTRKMemMap, local
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte 0x00000001
 	.4byte 0x00000001
+.endobj gTRKMemMap
 
-.global lbl_8050DEB8
-lbl_8050DEB8:
+.obj lbl_8050DEB8, global
 	.4byte 0x60000000
 	.4byte 0x60000000
 	.4byte 0x60000000
@@ -1776,9 +1779,9 @@ lbl_8050DEB8:
 	.4byte 0x60000000
 	.4byte 0x60000000
 	.4byte 0x60000000
+.endobj lbl_8050DEB8
 
-.global lbl_8050DEE0
-lbl_8050DEE0:
+.obj lbl_8050DEE0, global
 	.4byte 0x60000000
 	.4byte 0x60000000
 	.4byte 0x60000000
@@ -1789,9 +1792,9 @@ lbl_8050DEE0:
 	.4byte 0x60000000
 	.4byte 0x60000000
 	.4byte 0x60000000
+.endobj lbl_8050DEE0
 
-.global lbl_8050DF08
-lbl_8050DF08:
+.obj lbl_8050DF08, global
 	.4byte 0x60000000
 	.4byte 0x60000000
 	.4byte 0x60000000
@@ -1802,35 +1805,38 @@ lbl_8050DF08:
 	.4byte 0x60000000
 	.4byte 0x60000000
 	.4byte 0x60000000
+.endobj lbl_8050DF08
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global gTRKRestoreFlags
-gTRKRestoreFlags:
+.obj gTRKRestoreFlags, global
 	.skip 0x10
+.endobj gTRKRestoreFlags
 
-.global gTRKStepStatus
-gTRKStepStatus:
+.obj gTRKStepStatus, global
 	.skip 0x18
+.endobj gTRKStepStatus
 
-.global gTRKSaveState
-gTRKSaveState:
+.obj gTRKSaveState, global
 	.skip 0x98
+.endobj gTRKSaveState
 
-.global TRKvalue128_temp
-TRKvalue128_temp:
+.obj TRKvalue128_temp, global
 	.skip 0x10
+.endobj TRKvalue128_temp
 
-.global gTRKState
-gTRKState:
+.obj gTRKState, global
 	.skip 0xA8
+.endobj gTRKState
 
-.global gTRKCPUState
-gTRKCPUState:
+.obj gTRKCPUState, global
 	.skip 0x430
+.endobj gTRKCPUState
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global TRK_saved_exceptionID
-TRK_saved_exceptionID:
+.balign 8
+
+.obj TRK_saved_exceptionID, global
 	.skip 0x8
+.endobj TRK_saved_exceptionID

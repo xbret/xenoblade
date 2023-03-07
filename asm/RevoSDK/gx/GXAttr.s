@@ -853,8 +853,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global jumptable_8054B8F0
-jumptable_8054B8F0:
+.balign 8
+
+.obj jumptable_8054B8F0, global
 	.4byte .L_80319250
 	.4byte .L_80319264
 	.4byte .L_80319278
@@ -881,10 +882,10 @@ jumptable_8054B8F0:
 	.4byte .L_80319444
 	.4byte .L_80319444
 	.4byte .L_8031934C
+.endobj jumptable_8054B8F0
 
 
-.global jumptable_8054B958
-jumptable_8054B958:
+.obj jumptable_8054B958, global
 	.4byte .L_803196F0
 	.4byte .L_80319708
 	.4byte .L_80319744
@@ -902,9 +903,9 @@ jumptable_8054B958:
 	.4byte .L_80319830
 	.4byte .L_80319830
 	.4byte .L_80319708
+.endobj jumptable_8054B958
 
-.global jumptable_8054B99C
-jumptable_8054B99C:
+.obj jumptable_8054B99C, global
 	.4byte .L_803198A8
 	.4byte .L_803198C0
 	.4byte .L_803198FC
@@ -922,10 +923,10 @@ jumptable_8054B99C:
 	.4byte .L_803199E8
 	.4byte .L_803199E8
 	.4byte .L_803198C0
+.endobj jumptable_8054B99C
 
 
-.global jumptable_8054B9E0
-jumptable_8054B9E0:
+.obj jumptable_8054B9E0, global
 	.4byte .L_80319B2C
 	.4byte .L_80319B38
 	.4byte .L_80319B44
@@ -948,18 +949,24 @@ jumptable_8054B9E0:
 	.4byte .L_80319B5C
 	.4byte .L_80319B64
 	.4byte 0
+.endobj jumptable_8054B9E0
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
+
 #@LOCAL@__GXCalculateVLim__Fv@tbl1
-lbl_806659F8:
+.obj lbl_806659F8, local
 	.4byte 0x00040102
+.endobj lbl_806659F8
 
 #@LOCAL@__GXCalculateVLim__Fv@tbl2@0
-lbl_806659FC:
+.obj lbl_806659FC, local
 	.4byte 0x00080102
+.endobj lbl_806659FC
 
 #@LOCAL@__GXCalculateVLim__Fv@tbl3@1
-lbl_80665A00:
+.obj lbl_80665A00, local
 	.4byte 0x000C0102
 	.4byte 0
+.endobj lbl_80665A00

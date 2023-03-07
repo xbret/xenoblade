@@ -1413,28 +1413,27 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CGXCache_typestr
-CGXCache_typestr:
+.obj CGXCache_typestr, global
 	.asciz "CGXCache"
 	.balign 4
+.endobj CGXCache_typestr
 
-.global CMsgParam_32_typestr
-CMsgParam_32_typestr:
+.obj CMsgParam_32_typestr, global
 	.asciz "CMsgParam<32>"
 	.balign 4
+.endobj CMsgParam_32_typestr
 
-.global IStateCache_typestr
-IStateCache_typestr:
+.obj IStateCache_typestr, global
 	.asciz "IStateCache"
+.endobj IStateCache_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global jumptable_8056F7D0
-jumptable_8056F7D0:
+.obj jumptable_8056F7D0, global
 	.4byte .L_80449DB4
 	.4byte .L_80449DCC
 	.4byte .L_80449DE4
@@ -1449,170 +1448,171 @@ jumptable_8056F7D0:
 	.4byte .L_8044A2C4
 	.4byte .L_8044A3A0
 	.4byte .L_80449F0C
+.endobj jumptable_8056F7D0
 
 
-.global __vt__CGXCache
-__vt__CGXCache:
+.obj __vt__CGXCache, global
 	.4byte __RTTI__CGXCache
 	.4byte 0
 	.4byte __dt__CGXCache
 	.4byte func_80449D68
+.endobj __vt__CGXCache
 
-.global CGXCache_hierarchy
-CGXCache_hierarchy:
+.obj CGXCache_hierarchy, global
 	.4byte __RTTI__IStateCache
 	.4byte 0
 	.4byte 0
+.endobj CGXCache_hierarchy
 
 
-.global __vt__CMsgParam_32
-__vt__CMsgParam_32:
+.obj __vt__CMsgParam_32, global
 	.4byte __RTTI__CMsgParam_32
 	.4byte 0
 	.4byte __dt__CMsgParam_32
+.endobj __vt__CMsgParam_32
 
 
-.global __vt__IStateCache
-__vt__IStateCache:
+.obj __vt__IStateCache, global
 	.4byte __RTTI__IStateCache
 	.4byte 0
 	.4byte __dt__IStateCache
 	.4byte 0
+.endobj __vt__IStateCache
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80665F48
-lbl_80665F48:
+.obj lbl_80665F48, global
 	.4byte 0x00000001
+.endobj lbl_80665F48
 
 
-.global lbl_80665F4C
-lbl_80665F4C:
+.obj lbl_80665F4C, global
 	.4byte 0x00FFFFFF
+.endobj lbl_80665F4C
 
 
-.global lbl_80665F50
-lbl_80665F50:
+.obj lbl_80665F50, global
 	.4byte 0x00000001
+.endobj lbl_80665F50
 
 
-.global lbl_80665F54
-lbl_80665F54:
+.obj lbl_80665F54, global
 	.4byte 0x00000001
+.endobj lbl_80665F54
 
 
-.global lbl_80665F58
-lbl_80665F58:
+.obj lbl_80665F58, global
 	.4byte 0x00000001
+.endobj lbl_80665F58
 
 
-.global lbl_80665F5C
-lbl_80665F5C:
+.obj lbl_80665F5C, global
 	.4byte 0x00000001
+.endobj lbl_80665F5C
 
 
-.global lbl_80665F60
-lbl_80665F60:
+.obj lbl_80665F60, global
 	.4byte 0x00000001
+.endobj lbl_80665F60
 
 
-.global lbl_80665F64
-lbl_80665F64:
+.obj lbl_80665F64, global
 	.4byte 0
+.endobj lbl_80665F64
 
 
-.global lbl_80665F68
-lbl_80665F68:
+.obj lbl_80665F68, global
 	.4byte 0
+.endobj lbl_80665F68
 
-.global lbl_80665F6C
-lbl_80665F6C:
+.obj lbl_80665F6C, global
 	.4byte 0
+.endobj lbl_80665F6C
 
 
-.global lbl_80665F70
-lbl_80665F70:
+.obj lbl_80665F70, global
 	.4byte 0x00000001
+.endobj lbl_80665F70
 
 
-.global lbl_80665F74
-lbl_80665F74:
+.obj lbl_80665F74, global
 	.4byte 0x00000002
+.endobj lbl_80665F74
 
 
-.global lbl_80665F78
-lbl_80665F78:
+.obj lbl_80665F78, global
 	.4byte 0x00000003
 	.4byte 0
+.endobj lbl_80665F78
 
-.global __RTTI__CGXCache
-__RTTI__CGXCache:
+.obj __RTTI__CGXCache, global
 	.4byte CGXCache_typestr
 	.4byte CGXCache_hierarchy
+.endobj __RTTI__CGXCache
 
 
-.global __RTTI__CMsgParam_32
-__RTTI__CMsgParam_32:
+.obj __RTTI__CMsgParam_32, global
 	.4byte CMsgParam_32_typestr
 	.4byte 0
+.endobj __RTTI__CMsgParam_32
 
-.global __RTTI__IStateCache
-__RTTI__IStateCache:
+.obj __RTTI__IStateCache, global
 	.4byte IStateCache_typestr
 	.4byte 0
+.endobj __RTTI__IStateCache
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066CB78
-float_8066CB78:
+.obj float_8066CB78, global
 	.float 0
+.endobj float_8066CB78
 
 
-.global float_8066CB7C
-float_8066CB7C:
+.obj float_8066CB7C, global
 	.float 255 #0x437F0000
+.endobj float_8066CB7C
 
 
-.global float_8066CB80
-float_8066CB80:
+.obj float_8066CB80, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066CB80
 
 
-.global double_8066CB88
-double_8066CB88:
+.obj double_8066CB88, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066CB88
 
-.global double_8066CB90
-double_8066CB90:
+.obj double_8066CB90, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066CB90
 
-.global float_8066CB98
-float_8066CB98:
+.obj float_8066CB98, global
 	.float 0.947 #0x3F726E98
+.endobj float_8066CB98
 
 
-.global float_8066CB9C
-float_8066CB9C:
+.obj float_8066CB9C, global
 	.float 2 #0x40000000
+.endobj float_8066CB9C
 
 
-.global float_8066CBA0
-float_8066CBA0:
+.obj float_8066CBA0, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_8066CBA0
 
 
-.global float_8066CBA4
-float_8066CBA4:
+.obj float_8066CBA4, global
 	.float 1000 #0x447A0000
+.endobj float_8066CBA4
 
-.global CDevice_typestr
-CDevice_typestr:
+.obj CDevice_typestr, global
 	.asciz "CDevice"
+.endobj CDevice_typestr
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

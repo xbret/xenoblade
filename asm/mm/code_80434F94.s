@@ -304,13 +304,13 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_80525D70
-lbl_80525D70:
+.obj lbl_80525D70, global
 	.asciz "."
 	.4byte 0
 	.2byte 0
+.endobj lbl_80525D70
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

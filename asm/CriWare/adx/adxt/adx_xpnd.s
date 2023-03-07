@@ -316,9 +316,10 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global adxpd_obj
-adxpd_obj:
+.obj adxpd_obj, global
 	.skip 0x3C0
-.global adxpd_internal_error
-adxpd_internal_error:
+.endobj adxpd_obj
+
+.obj adxpd_internal_error, global
 	.skip 0x8
+.endobj adxpd_internal_error

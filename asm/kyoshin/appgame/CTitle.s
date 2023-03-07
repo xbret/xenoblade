@@ -1836,21 +1836,20 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CTitleMenu_typestr
-CTitleMenu_typestr:
+.obj CTitleMenu_typestr, global
 	.asciz "CTitleMenu"
 	.balign 4
+.endobj CTitleMenu_typestr
 
-.global CTitleLogo_typestr
-CTitleLogo_typestr:
+.obj CTitleLogo_typestr, global
 	.asciz "CTitleLogo"
 	.balign 4
+.endobj CTitleLogo_typestr
 
 
-.global CTitle_strpool
-CTitle_strpool:
+.obj CTitle_strpool, global
 	.asciz "mf99_title00.brlyt"
 	.asciz "mf99_title00_in.brlan"
 	.asciz "mf99_title00_roop.brlan"
@@ -1869,13 +1868,13 @@ CTitle_strpool:
 	.asciz "CTitle"
 	.asciz "arc"
 	.2byte 0
+.endobj CTitle_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8053E908
-lbl_8053E908:
+.obj lbl_8053E908, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802B6660
@@ -1888,10 +1887,10 @@ lbl_8053E908:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802B66C4
+.endobj lbl_8053E908
 
 
-.global lbl_8053E938
-lbl_8053E938:
+.obj lbl_8053E938, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802B6DF4
@@ -1913,10 +1912,10 @@ lbl_8053E938:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802B6F04
+.endobj lbl_8053E938
 
 
-.global lbl_8053E98C
-lbl_8053E98C:
+.obj lbl_8053E98C, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802B7838
@@ -1938,10 +1937,10 @@ lbl_8053E98C:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802B7924
+.endobj lbl_8053E98C
 
 
-.global __vt__CTitle
-__vt__CTitle:
+.obj __vt__CTitle, global
 	.4byte __RTTI__CTitle
 	.4byte 0
 	.4byte __dt__CTitle
@@ -1976,77 +1975,80 @@ __vt__CTitle:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CTitle
 
-.global CTitle_hierarchy
-CTitle_hierarchy:
+.obj CTitle_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
+.endobj CTitle_hierarchy
 
 
-.global __vt__CTitleMenu
-__vt__CTitleMenu:
+.obj __vt__CTitleMenu, global
 	.4byte __RTTI__CTitleMenu
 	.4byte 0
 	.4byte __dt__CTitleMenu
+.endobj __vt__CTitleMenu
 
 
-.global __vt__CTitleLogo
-__vt__CTitleLogo:
+.obj __vt__CTitleLogo, global
 	.4byte __RTTI__CTitleLogo
 	.4byte 0
 	.4byte __dt__CTitleLogo
 	.4byte 0
+.endobj __vt__CTitleLogo
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CTitle
-__RTTI__CTitle:
+.obj __RTTI__CTitle, global
 	.4byte CTitle_typestr
 	.4byte CTitle_hierarchy
+.endobj __RTTI__CTitle
 
-.global __RTTI__CTitleMenu
-__RTTI__CTitleMenu:
+.obj __RTTI__CTitleMenu, global
 	.4byte CTitleMenu_typestr
 	.4byte 0
+.endobj __RTTI__CTitleMenu
 
-.global __RTTI__CTitleLogo
-__RTTI__CTitleLogo:
+.obj __RTTI__CTitleLogo, global
 	.4byte CTitleLogo_typestr
 	.4byte 0
+.endobj __RTTI__CTitleLogo
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066B7E0
-float_8066B7E0:
+.balign 8
+
+.obj float_8066B7E0, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066B7E0
 
 
-.global double_8066B7E8
-double_8066B7E8:
+.obj double_8066B7E8, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066B7E8
 
-.global float_8066B7F0
-float_8066B7F0:
+.obj float_8066B7F0, global
 	.float 0
+.endobj float_8066B7F0
 
-.global CTitle_typestr
-CTitle_typestr:
+.obj CTitle_typestr, global
 	.asciz "CTitle"
 	.balign 4
 	.4byte 0
+.endobj CTitle_typestr
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80667518
-lbl_80667518:
+.obj lbl_80667518, global
 	.skip 0x8
+.endobj lbl_80667518
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

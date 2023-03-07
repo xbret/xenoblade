@@ -139,16 +139,22 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-IpcFdArray:
+.obj IpcFdArray, local
 	.skip 0x80
+.endobj IpcFdArray
 
-IpcReqPtrArray:
+.obj IpcReqPtrArray, local
 	.skip 0x80
+.endobj IpcReqPtrArray
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-IpcNumPendingReqs:
-	.skip 0x4
+.balign 8
 
-IpcNumUnIssuedReqs:
+.obj IpcNumPendingReqs, local
 	.skip 0x4
+.endobj IpcNumPendingReqs
+
+.obj IpcNumUnIssuedReqs, local
+	.skip 0x4
+.endobj IpcNumUnIssuedReqs

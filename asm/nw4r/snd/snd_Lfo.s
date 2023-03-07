@@ -151,9 +151,10 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
+
 #@LOCAL@GetSinIdx__Q44nw4r3snd6detail3LfoFi@sinTable
-.global lbl_80523858
-lbl_80523858:
+.obj lbl_80523858, global
 	.4byte 0x00060C13
 	.4byte 0x191F252B
 	.4byte 0x31363C41
@@ -164,46 +165,49 @@ lbl_80523858:
 	.4byte 0x7D7E7E7F
 	.4byte 0x7F000000
 	.4byte 0
+.endobj lbl_80523858
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C7B0
-float_8066C7B0:
+.balign 8
+
+.obj float_8066C7B0, global
 	.float 0
+.endobj float_8066C7B0
 
 
-.global float_8066C7B4
-float_8066C7B4:
+.obj float_8066C7B4, global
 	.float 6.25 #0x40C80000
+.endobj float_8066C7B4
 
 
-.global float_8066C7B8
-float_8066C7B8:
+.obj float_8066C7B8, global
 	.float 1000 #0x447A0000
 	.4byte 0
+.endobj float_8066C7B8
 
 
-.global double_8066C7C0
-double_8066C7C0:
+.obj double_8066C7C0, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066C7C0
 
-.global float_8066C7C8
-float_8066C7C8:
+.obj float_8066C7C8, global
 	.float 4 #0x40800000
+.endobj float_8066C7C8
 
 
-.global float_8066C7CC
-float_8066C7CC:
+.obj float_8066C7CC, global
 	.float 32 #0x42000000
+.endobj float_8066C7CC
 
 
-.global float_8066C7D0
-float_8066C7D0:
+.obj float_8066C7D0, global
 	.float 127 #0x42FE0000
 	.4byte 0
+.endobj float_8066C7D0
 
 
-.global double_8066C7D8
-double_8066C7D8:
+.obj double_8066C7D8, global
 	.4byte 0x43300000
 	.4byte 0
+.endobj double_8066C7D8

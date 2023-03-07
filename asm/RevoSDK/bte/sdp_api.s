@@ -1041,7 +1041,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80548F00
-lbl_80548F00:
+.balign 8
+
+.obj lbl_80548F00, global
 	.asciz "SDP_InitDiscoveryDb Illegal param: p_db 0x%x, len %d, num_uuid %d, num_attr %d"
 	.balign 4
+.endobj lbl_80548F00

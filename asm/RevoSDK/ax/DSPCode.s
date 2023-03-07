@@ -2,8 +2,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global axDspSlave
-axDspSlave:
+.balign 8
+
+.obj axDspSlave, global
 	.2byte 0x0000,0x0000
 	.2byte 0x029F,0x0F3A
 	.2byte 0x029F,0x0F46
@@ -2052,3 +2053,4 @@ axDspSlave:
 	.2byte 0x0000,0x0000
 	.2byte 0x0000,0x0000
 	.2byte 0x0000,0x0000
+.endobj axDspSlave

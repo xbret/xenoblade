@@ -1399,15 +1399,14 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CKizunaTalkList_typestr
-CKizunaTalkList_typestr:
+.obj CKizunaTalkList_typestr, global
 	.asciz "CKizunaTalkList"
+.endobj CKizunaTalkList_typestr
 
 
-.global CMenuKizunaTalkList_strpool
-CMenuKizunaTalkList_strpool:
+.obj CMenuKizunaTalkList_strpool, global
 	.asciz "MNU_update"
 	.asciz "info"
 	.asciz "flag"
@@ -1445,13 +1444,13 @@ CMenuKizunaTalkList_strpool:
 	.asciz "mf31_kiztalk00_info_in.brlan"
 	.asciz "JNL_kizunalist"
 	.balign 4
+.endobj CMenuKizunaTalkList_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CKizunaTalkList
-__vt__CKizunaTalkList:
+.obj __vt__CKizunaTalkList, global
 	.4byte __RTTI__CKizunaTalkList
 	.4byte 0
 	.4byte __dt__CKizunaTalkList
@@ -1486,66 +1485,71 @@ __vt__CKizunaTalkList:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CKizunaTalkList
 
-.global CKizunaTalkList_hierarchy
-CKizunaTalkList_hierarchy:
+.obj CKizunaTalkList_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CKizunaTalkList_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CKizunaTalkList
-__RTTI__CKizunaTalkList:
+.obj __RTTI__CKizunaTalkList, global
 	.4byte CKizunaTalkList_typestr
 	.4byte CKizunaTalkList_hierarchy
+.endobj __RTTI__CKizunaTalkList
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B270
-float_8066B270:
+.obj float_8066B270, global
 	.float 238 #0x436E0000
+.endobj float_8066B270
 
 
-.global float_8066B274
-float_8066B274:
+.obj float_8066B274, global
 	.float 118 #0x42EC0000
+.endobj float_8066B274
 
 
-.global float_8066B278
-float_8066B278:
+.obj float_8066B278, global
 	.float 0
+.endobj float_8066B278
 
 
-.global float_8066B27C
-float_8066B27C:
+.obj float_8066B27C, global
 	.float 1.0
+.endobj float_8066B27C
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_806671A8, global
+	.skip 0x8
+.endobj lbl_806671A8
 
-.global lbl_806671A8
-lbl_806671A8:
+.obj lbl_806671B0, global
 	.skip 0x8
-.global lbl_806671B0
-lbl_806671B0:
+.endobj lbl_806671B0
+
+.obj lbl_806671B8, global
 	.skip 0x8
-.global lbl_806671B8
-lbl_806671B8:
+.endobj lbl_806671B8
+
+.obj lbl_806671C0, global
 	.skip 0x8
-.global lbl_806671C0
-lbl_806671C0:
+.endobj lbl_806671C0
+
+.obj lbl_806671C8, global
 	.skip 0x8
-.global lbl_806671C8
-lbl_806671C8:
-	.skip 0x8
+.endobj lbl_806671C8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

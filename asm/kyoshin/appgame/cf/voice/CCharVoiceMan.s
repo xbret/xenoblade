@@ -2943,27 +2943,26 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CCharVoiceMan_typestr
-cf_CCharVoiceMan_typestr:
+.obj cf_CCharVoiceMan_typestr, global
 	.asciz "cf::CCharVoiceMan"
 	.balign 4
 	.4byte 0
+.endobj cf_CCharVoiceMan_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8053D050
-lbl_8053D050:
+.obj lbl_8053D050, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A13B8
+.endobj lbl_8053D050
 
 
-.global __vt__cf_CCharVoiceMan
-__vt__cf_CCharVoiceMan:
+.obj __vt__cf_CCharVoiceMan, global
 	.4byte __RTTI__cf_CCharVoiceMan
 	.4byte 0
 	.4byte __dt__cf_CCharVoiceMan
@@ -2971,72 +2970,74 @@ __vt__cf_CCharVoiceMan:
 	.4byte func_802A3804
 	.4byte func_800B1378
 	.4byte func_800B1814
+.endobj __vt__cf_CCharVoiceMan
 
-.global cf_CCharVoiceMan_hierarchy
-cf_CCharVoiceMan_hierarchy:
+.obj cf_CCharVoiceMan_hierarchy, global
 	.4byte __RTTI__cf_IFactoryEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CCharVoiceMan_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CCharVoiceMan
-__RTTI__cf_CCharVoiceMan:
+.obj __RTTI__cf_CCharVoiceMan, global
 	.4byte cf_CCharVoiceMan_typestr
 	.4byte cf_CCharVoiceMan_hierarchy
+.endobj __RTTI__cf_CCharVoiceMan
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B510
-float_8066B510:
+.obj float_8066B510, global
 	.float 0
+.endobj float_8066B510
 
 
-.global float_8066B514
-float_8066B514:
+.obj float_8066B514, global
 	.float 150 #0x43160000
+.endobj float_8066B514
 
 
-.global float_8066B518
-float_8066B518:
+.obj float_8066B518, global
 	.float 0.5
+.endobj float_8066B518
 
 
-.global float_8066B51C
-float_8066B51C:
+.obj float_8066B51C, global
 	.float 1800 #0x44E10000
+.endobj float_8066B51C
 
 
-.global float_8066B520
-float_8066B520:
+.obj float_8066B520, global
 	.float 3 #0x40400000
+.endobj float_8066B520
 
 
-.global float_8066B524
-float_8066B524:
+.obj float_8066B524, global
 	.float 1.0
+.endobj float_8066B524
 
 
-.global float_8066B528
-float_8066B528:
+.obj float_8066B528, global
 	.float 30 #0x41F00000
 	.4byte 0
+.endobj float_8066B528
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80667340, global
+	.skip 0x4
+.endobj lbl_80667340
 
-.global lbl_80667340
-lbl_80667340:
+.obj lbl_80667344, global
 	.skip 0x4
-.global lbl_80667344
-lbl_80667344:
-	.skip 0x4
+.endobj lbl_80667344
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

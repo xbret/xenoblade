@@ -4694,47 +4694,45 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-
-.global lbl_804F93B0
-lbl_804F93B0:
+.obj lbl_804F93B0, global
 	.asciz "mf71_btl00_pnmk00.tpl"
 	.balign 4
+.endobj lbl_804F93B0
 
-.global lbl_804F93C8
-lbl_804F93C8:
+.obj lbl_804F93C8, global
 	.asciz "mf71_btl00_pnmk01.tpl"
 	.balign 4
+.endobj lbl_804F93C8
 
-.global lbl_804F93E0
-lbl_804F93E0:
+.obj lbl_804F93E0, global
 	.asciz "mf71_btl00_pnmk02.tpl"
 	.balign 4
+.endobj lbl_804F93E0
 
-.global lbl_804F93F8
-lbl_804F93F8:
+.obj lbl_804F93F8, global
 	.asciz "mf71_btl00_pnmk03.tpl"
 	.balign 4
+.endobj lbl_804F93F8
 
-.global lbl_804F9410
-lbl_804F9410:
+.obj lbl_804F9410, global
 	.4byte lbl_804F93B0
 	.4byte lbl_804F93C8
 	.4byte lbl_804F93E0
 	.4byte lbl_804F93F8
+.endobj lbl_804F9410
 
-.global CMenuEnemyState_typestr
-CMenuEnemyState_typestr:
+.obj CMenuEnemyState_typestr, global
 	.asciz "CMenuEnemyState"
+.endobj CMenuEnemyState_typestr
 
-.global CPcSelectCursor_typestr
-CPcSelectCursor_typestr:
+.obj CPcSelectCursor_typestr, global
 	.asciz "CPcSelectCursor"
+.endobj CPcSelectCursor_typestr
 
 
-.global CMenuEnemyState_strpool
-CMenuEnemyState_strpool:
+.obj CMenuEnemyState_strpool, global
 	.asciz "CPcSelectCursor"
 	.asciz "mf80_info00_target_pc.brlyt"
 	.asciz "mf80_info00_target_pc_in.brlan"
@@ -4786,13 +4784,13 @@ CMenuEnemyState_strpool:
 	.asciz "icon"
 	.4byte 0
 	.2byte 0
+.endobj CMenuEnemyState_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMenuEnemyState
-__vt__CMenuEnemyState:
+.obj __vt__CMenuEnemyState, global
 	.4byte __RTTI__CMenuEnemyState
 	.4byte 0
 	.4byte __dt__CMenuEnemyState
@@ -4841,9 +4839,9 @@ __vt__CMenuEnemyState:
 	.4byte func_801135D8
 	.4byte func_801135D0
 	.4byte func_80110764
+.endobj __vt__CMenuEnemyState
 
-.global CMenuEnemyState_hierarchy
-CMenuEnemyState_hierarchy:
+.obj CMenuEnemyState_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x0000005C
 	.4byte __RTTI__IWorkEvent
@@ -4859,213 +4857,225 @@ CMenuEnemyState_hierarchy:
 	.4byte __RTTI__IUICf
 	.4byte 0
 	.4byte 0
+.endobj CMenuEnemyState_hierarchy
 
 
-.global __vt__CPcSelectCursor
-__vt__CPcSelectCursor:
+.obj __vt__CPcSelectCursor, global
 	.4byte __RTTI__CPcSelectCursor
 	.4byte 0
 	.4byte __dt__CPcSelectCursor
+.endobj __vt__CPcSelectCursor
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuEnemyState
-__RTTI__CMenuEnemyState:
+.obj __RTTI__CMenuEnemyState, global
 	.4byte CMenuEnemyState_typestr
 	.4byte CMenuEnemyState_hierarchy
+.endobj __RTTI__CMenuEnemyState
 
-.global __RTTI__CPcSelectCursor
-__RTTI__CPcSelectCursor:
+.obj __RTTI__CPcSelectCursor, global
 	.4byte CPcSelectCursor_typestr
 	.4byte 0
+.endobj __RTTI__CPcSelectCursor
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_806698B0
-float_806698B0:
+.obj float_806698B0, global
 	.float 1.0
+.endobj float_806698B0
 
 
-.global float_806698B4
-float_806698B4:
+.obj float_806698B4, global
 	.float 0
+.endobj float_806698B4
 
 
-.global float_806698B8
-float_806698B8:
+.obj float_806698B8, global
 	.float 320 #0x43A00000
+.endobj float_806698B8
 
 
-.global float_806698BC
-float_806698BC:
+.obj float_806698BC, global
 	.float 224 #0x43600000
+.endobj float_806698BC
 
 
-.global float_806698C0
-float_806698C0:
+.obj float_806698C0, global
 	.float -1.0
+.endobj float_806698C0
 
 
-.global float_806698C4
-float_806698C4:
+.obj float_806698C4, global
 	.float 160 #0x43200000
+.endobj float_806698C4
 
 
-.global float_806698C8
-float_806698C8:
+.obj float_806698C8, global
 	.float 16 #0x41800000
+.endobj float_806698C8
 
 
-.global float_806698CC
-float_806698CC:
+.obj float_806698CC, global
 	.float 0.5
+.endobj float_806698CC
 
 
-.global float_806698D0
-float_806698D0:
+.obj float_806698D0, global
 	.float 45 #0x42340000
+.endobj float_806698D0
 
 
-.global float_806698D4
-float_806698D4:
+.obj float_806698D4, global
 	.float 0.05 #0x3D4CCCCD
+.endobj float_806698D4
 
 
-.global float_806698D8
-float_806698D8:
+.obj float_806698D8, global
 	.float 40.7436638 #0x4222F983
+.endobj float_806698D8
 
 
-.global float_806698DC
-float_806698DC:
+.obj float_806698DC, global
 	.float 10000 #0x461C4000
+.endobj float_806698DC
 
 
-.global float_806698E0
-float_806698E0:
+.obj float_806698E0, global
 	.float 1.33333333 #0x3FAAAAAB
+.endobj float_806698E0
 
 
-.global float_806698E4
-float_806698E4:
+.obj float_806698E4, global
 	.float 180 #0x43340000
+.endobj float_806698E4
 
 
-.global float_806698E8
-float_806698E8:
+.obj float_806698E8, global
 	.float 118 #0x42EC0000
+.endobj float_806698E8
 
 
-.global float_806698EC
-float_806698EC:
+.obj float_806698EC, global
 	.float 48 #0x42400000
+.endobj float_806698EC
 
 
-.global float_806698F0
-float_806698F0:
+.obj float_806698F0, global
 	.float 36 #0x42100000
+.endobj float_806698F0
 
 
-.global float_806698F4
-float_806698F4:
+.obj float_806698F4, global
 	.float 2 #0x40000000
+.endobj float_806698F4
 
 
-.global double_806698F8
-double_806698F8:
+.obj double_806698F8, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_806698F8
 
-.global float_80669900
-float_80669900:
+.obj float_80669900, global
 	.float 60 #0x42700000
+.endobj float_80669900
 
 
-.global lbl_80669904
-lbl_80669904:
+.obj lbl_80669904, global
 	.4byte 0x0F091012
+.endobj lbl_80669904
 
 
-.global float_80669908
-float_80669908:
+.obj float_80669908, global
 	.float 94 #0x42BC0000
+.endobj float_80669908
 
 
-.global float_8066990C
-float_8066990C:
+.obj float_8066990C, global
 	.float 96 #0x42C00000
+.endobj float_8066990C
 
 
-.global float_80669910
-float_80669910:
+.obj float_80669910, global
 	.float 0.7 #0x3F333333
+.endobj float_80669910
 
 
-.global float_80669914
-float_80669914:
+.obj float_80669914, global
 	.float 46 #0x42380000
+.endobj float_80669914
 
 
-.global float_80669918
-float_80669918:
+.obj float_80669918, global
 	.float 37 #0x42140000
+.endobj float_80669918
 
 
-.global float_8066991C
-float_8066991C:
+.obj float_8066991C, global
 	.float 31 #0x41F80000
+.endobj float_8066991C
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_80577258
-lbl_80577258:
+.obj lbl_80577258, global
 	.skip 0x10
+.endobj lbl_80577258
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80666848, global
+	.skip 0x8
+.endobj lbl_80666848
 
-.global lbl_80666848
-lbl_80666848:
-	.skip 0x8
-.global lbl_80666850
-lbl_80666850:
+.obj lbl_80666850, global
 	.skip 0x4
-.global lbl_80666854
-lbl_80666854:
+.endobj lbl_80666850
+
+.obj lbl_80666854, global
 	.skip 0x4
-.global lbl_80666858
-lbl_80666858:
+.endobj lbl_80666854
+
+.obj lbl_80666858, global
 	.skip 0x4
-.global lbl_8066685C
-lbl_8066685C:
+.endobj lbl_80666858
+
+.obj lbl_8066685C, global
 	.skip 0x4
-.global lbl_80666860
-lbl_80666860:
+.endobj lbl_8066685C
+
+.obj lbl_80666860, global
 	.skip 0x8
-.global lbl_80666868
-lbl_80666868:
+.endobj lbl_80666860
+
+.obj lbl_80666868, global
 	.skip 0x8
-.global lbl_80666870
-lbl_80666870:
+.endobj lbl_80666868
+
+.obj lbl_80666870, global
 	.skip 0x8
-.global lbl_80666878
-lbl_80666878:
+.endobj lbl_80666870
+
+.obj lbl_80666878, global
 	.skip 0x8
-.global lbl_80666880
-lbl_80666880:
+.endobj lbl_80666878
+
+.obj lbl_80666880, global
 	.skip 0x8
-.global lbl_80666888
-lbl_80666888:
+.endobj lbl_80666880
+
+.obj lbl_80666888, global
 	.skip 0x8
-.global lbl_80666890
-lbl_80666890:
+.endobj lbl_80666888
+
+.obj lbl_80666890, global
 	.skip 0x8
+.endobj lbl_80666890
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

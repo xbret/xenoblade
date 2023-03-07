@@ -293,7 +293,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-YearDays:
+.balign 8
+
+.obj YearDays, local
 	.4byte 0
 	.4byte 0x0000001F
 	.4byte 0x0000003B
@@ -306,9 +308,10 @@ YearDays:
 	.4byte 0x00000111
 	.4byte 0x00000130
 	.4byte 0x0000014E
+.endobj YearDays
 
 
-LeapYearDays:
+.obj LeapYearDays, local
 	.4byte 0
 	.4byte 0x0000001F
 	.4byte 0x0000003C
@@ -321,3 +324,4 @@ LeapYearDays:
 	.4byte 0x00000112
 	.4byte 0x00000131
 	.4byte 0x0000014F
+.endobj LeapYearDays

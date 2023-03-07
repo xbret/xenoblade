@@ -2263,10 +2263,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global cf_CfObjectEff_hierarchy
-cf_CfObjectEff_hierarchy:
+.obj cf_CfObjectEff_hierarchy, global
 	.4byte __RTTI__cf_CObjectState
 	.4byte 0
 	.4byte __RTTI__cf_CObjectParam
@@ -2274,10 +2273,10 @@ cf_CfObjectEff_hierarchy:
 	.4byte __RTTI__cf_CfObject
 	.4byte 0
 	.4byte 0
+.endobj cf_CfObjectEff_hierarchy
 
 
-.global __vt__CTaskGameEff
-__vt__CTaskGameEff:
+.obj __vt__CTaskGameEff, global
 	.4byte __RTTI__CTaskGameEff
 	.4byte 0
 	.4byte __dt__CTaskGameEff
@@ -2297,9 +2296,9 @@ __vt__CTaskGameEff:
 	.4byte func_80045550
 	.4byte func_80045038
 	.4byte func_80045044
+.endobj __vt__CTaskGameEff
 
-.global CTaskGameEff_hierarchy
-CTaskGameEff_hierarchy:
+.obj CTaskGameEff_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -2309,44 +2308,44 @@ CTaskGameEff_hierarchy:
 	.4byte __RTTI__CTTask_CTaskGameEff
 	.4byte 0
 	.4byte 0
+.endobj CTaskGameEff_hierarchy
 
 
-.global __vt__reslist_CScn
-__vt__reslist_CScn:
+.obj __vt__reslist_CScn, global
 	.4byte __RTTI__reslist_CScn
 	.4byte 0
 	.4byte __dt__reslist_CScn
+.endobj __vt__reslist_CScn
 
-.global reslist_CScn_hierarchy
-reslist_CScn_hierarchy:
+.obj reslist_CScn_hierarchy, global
 	.4byte __RTTI___reslist_base_CScn
 	.4byte 0
 	.4byte 0
+.endobj reslist_CScn_hierarchy
 
 
-.global __vt___reslist_base_CScn
-__vt___reslist_base_CScn:
+.obj __vt___reslist_base_CScn, global
 	.4byte __RTTI___reslist_base_CScn
 	.4byte 0
 	.4byte __dt___reslist_base_CScn
+.endobj __vt___reslist_base_CScn
 
 
-.global __vt__CTaskGameEff_CEffRenderHighPrio
-__vt__CTaskGameEff_CEffRenderHighPrio:
+.obj __vt__CTaskGameEff_CEffRenderHighPrio, global
 	.4byte __RTTI__CTaskGameEff_CEffRenderHighPrio
 	.4byte 0
 	.4byte __dt__CTaskGameEff_CEffRenderHighPrio
 	.4byte func_80045284
+.endobj __vt__CTaskGameEff_CEffRenderHighPrio
 
-.global CTaskGameEff_CEffRenderHighPrio_hierarchy
-CTaskGameEff_CEffRenderHighPrio_hierarchy:
+.obj CTaskGameEff_CEffRenderHighPrio_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0
 	.4byte 0
+.endobj CTaskGameEff_CEffRenderHighPrio_hierarchy
 
 
-.global __vt__CTTask_CTaskGameEff
-__vt__CTTask_CTaskGameEff:
+.obj __vt__CTTask_CTaskGameEff, global
 	.4byte __RTTI__CTTask_CTaskGameEff
 	.4byte 0
 	.4byte __dt__CTTask_CTaskGameEff
@@ -2356,9 +2355,9 @@ __vt__CTTask_CTaskGameEff:
 	.4byte func_800454B0
 	.4byte func_800454F8
 	.4byte func_80043F20
+.endobj __vt__CTTask_CTaskGameEff
 
-.global CTTask_CTaskGameEff_hierarchy
-CTTask_CTaskGameEff_hierarchy:
+.obj CTTask_CTaskGameEff_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -2367,9 +2366,9 @@ CTTask_CTaskGameEff_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CTTask_CTaskGameEff_hierarchy
 
-.global lbl_80529548
-lbl_80529548:
+.obj lbl_80529548, global
 	.4byte lbl_80668630
 	.4byte func_8004559C
 	.4byte func_80045694
@@ -2386,9 +2385,9 @@ lbl_80529548:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_80529548
 
-.global lbl_80529588
-lbl_80529588:
+.obj lbl_80529588, global
 	.4byte lbl_804F6260
 	.4byte getTimeIdxMin
 	.4byte 0
@@ -2399,18 +2398,18 @@ lbl_80529588:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_80529588
 
 
-.global lbl_805295B0
-lbl_805295B0:
+.obj lbl_805295B0, global
 	.4byte lbl_80668648
 	.4byte func_80045560
 	.4byte lbl_80529548
 	.4byte lbl_80529588
+.endobj lbl_805295B0
 
 
-.global lbl_805295C0
-lbl_805295C0:
+.obj lbl_805295C0, global
 	.4byte lbl_80668660
 	.4byte winTalk
 	.4byte lbl_80668668
@@ -2483,9 +2482,9 @@ lbl_805295C0:
 	.4byte isSETalkVoiceWait
 	.4byte 0
 	.4byte 0
+.endobj lbl_805295C0
 
-.global cf_CfObjectPc_hierarchy
-cf_CfObjectPc_hierarchy:
+.obj cf_CfObjectPc_hierarchy, global
 	.4byte __RTTI__cf_CObjectState
 	.4byte 0x00003E9C
 	.4byte __RTTI__cf_CObjectParam
@@ -2510,206 +2509,206 @@ cf_CfObjectPc_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CfObjectPc_hierarchy
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CfObjectEff_typestr
-cf_CfObjectEff_typestr:
+.obj cf_CfObjectEff_typestr, global
 	.asciz "cf::CfObjectEff"
+.endobj cf_CfObjectEff_typestr
 
-.global CTaskGameEff_typestr
-CTaskGameEff_typestr:
+.obj CTaskGameEff_typestr, global
 	.asciz "CTaskGameEff"
 	.balign 4
+.endobj CTaskGameEff_typestr
 
-.global reslist_CScn_typestr
-reslist_CScn_typestr:
+.obj reslist_CScn_typestr, global
 	.asciz "reslist<CScn *>"
+.endobj reslist_CScn_typestr
 
-.global _reslist_base_CScn_typestr
-_reslist_base_CScn_typestr:
+.obj _reslist_base_CScn_typestr, global
 	.asciz "_reslist_base<CScn *>"
 	.balign 4
+.endobj _reslist_base_CScn_typestr
 
-.global CTaskGameEff_CEffRenderHighPrio_typestr
-CTaskGameEff_CEffRenderHighPrio_typestr:
+.obj CTaskGameEff_CEffRenderHighPrio_typestr, global
 	.asciz "CTaskGameEff::CEffRenderHighPrio"
 	.balign 4
+.endobj CTaskGameEff_CEffRenderHighPrio_typestr
 
-.global CTTask_CTaskGameEff_typestr
-CTTask_CTaskGameEff_typestr:
+.obj CTTask_CTaskGameEff_typestr, global
 	.asciz "CTTask<CTaskGameEff>"
 	.balign 4
 	.4byte 0
+.endobj CTTask_CTaskGameEff_typestr
 
-.global lbl_804F6260
-lbl_804F6260:
+.obj lbl_804F6260, global
 	.asciz "getTimeIdxMin"
 	.balign 4
+.endobj lbl_804F6260
 
-.global lbl_804F6270
-lbl_804F6270:
+.obj lbl_804F6270, global
 	.asciz "getTimeIdxMax"
 	.balign 4
+.endobj lbl_804F6270
 
-.global lbl_804F6280
-lbl_804F6280:
+.obj lbl_804F6280, global
 	.4byte 0x00000010
 	.4byte 0x00100000
 	.4byte 0x00200000
+.endobj lbl_804F6280
 
-.global lbl_804F628C
-lbl_804F628C:
+.obj lbl_804F628C, global
 	.asciz "winTalkWait"
+.endobj lbl_804F628C
 
-.global lbl_804F6298
-lbl_804F6298:
+.obj lbl_804F6298, global
 	.asciz "winTalkNoName"
 	.balign 4
+.endobj lbl_804F6298
 
-.global lbl_804F62A8
-lbl_804F62A8:
+.obj lbl_804F62A8, global
 	.asciz "fadeWait"
 	.balign 4
+.endobj lbl_804F62A8
 
-.global lbl_804F62B4
-lbl_804F62B4:
+.obj lbl_804F62B4, global
 	.asciz "createCol6Sys"
 	.balign 4
+.endobj lbl_804F62B4
 
-.global lbl_804F62C4
-lbl_804F62C4:
+.obj lbl_804F62C4, global
 	.asciz "createCol6Hint"
 	.balign 4
+.endobj lbl_804F62C4
 
-.global lbl_804F62D4
-lbl_804F62D4:
+.obj lbl_804F62D4, global
 	.asciz "createCol6Invite"
 	.balign 4
+.endobj lbl_804F62D4
 
-.global lbl_804F62E8
-lbl_804F62E8:
+.obj lbl_804F62E8, global
 	.asciz "createCol6Init"
 	.balign 4
+.endobj lbl_804F62E8
 
-.global lbl_804F62F8
-lbl_804F62F8:
+.obj lbl_804F62F8, global
 	.asciz "checkCol6Bat"
 	.balign 4
+.endobj lbl_804F62F8
 
-.global lbl_804F6308
-lbl_804F6308:
+.obj lbl_804F6308, global
 	.asciz "simpleEventStart"
 	.balign 4
+.endobj lbl_804F6308
 
-.global lbl_804F631C
-lbl_804F631C:
+.obj lbl_804F631C, global
 	.asciz "simpleEventEnd"
 	.balign 4
+.endobj lbl_804F631C
 
-.global lbl_804F632C
-lbl_804F632C:
+.obj lbl_804F632C, global
 	.asciz "setTrust"
 	.balign 4
+.endobj lbl_804F632C
 
-.global lbl_804F6338
-lbl_804F6338:
+.obj lbl_804F6338, global
 	.asciz "setItemMulti"
 	.balign 4
+.endobj lbl_804F6338
 
-.global lbl_804F6348
-lbl_804F6348:
+.obj lbl_804F6348, global
 	.asciz "setKizunaTalk"
 	.balign 4
+.endobj lbl_804F6348
 
-.global lbl_804F6358
-lbl_804F6358:
+.obj lbl_804F6358, global
 	.asciz "winSysSelect"
 	.balign 4
+.endobj lbl_804F6358
 
-.global lbl_804F6368
-lbl_804F6368:
+.obj lbl_804F6368, global
 	.asciz "getSelectNum"
 	.balign 4
+.endobj lbl_804F6368
 
-.global lbl_804F6378
-lbl_804F6378:
+.obj lbl_804F6378, global
 	.asciz "mesGetArts"
 	.balign 4
+.endobj lbl_804F6378
 
-.global lbl_804F6384
-lbl_804F6384:
+.obj lbl_804F6384, global
 	.asciz "mesAddPT"
 	.balign 4
+.endobj lbl_804F6384
 
-.global lbl_804F6390
-lbl_804F6390:
+.obj lbl_804F6390, global
 	.asciz "mesSubPT"
 	.balign 4
+.endobj lbl_804F6390
 
-.global lbl_804F639C
-lbl_804F639C:
+.obj lbl_804F639C, global
 	.asciz "mesVisionON"
+.endobj lbl_804F639C
 
-.global lbl_804F63A8
-lbl_804F63A8:
+.obj lbl_804F63A8, global
 	.asciz "mesVisionOFF"
 	.balign 4
+.endobj lbl_804F63A8
 
-.global lbl_804F63B8
-lbl_804F63B8:
+.obj lbl_804F63B8, global
 	.asciz "mesMonadoON"
+.endobj lbl_804F63B8
 
-.global lbl_804F63C4
-lbl_804F63C4:
+.obj lbl_804F63C4, global
 	.asciz "mesMonadoOFF"
 	.balign 4
+.endobj lbl_804F63C4
 
-.global lbl_804F63D4
-lbl_804F63D4:
+.obj lbl_804F63D4, global
 	.asciz "ptChangeNotice"
 	.balign 4
 	.4byte 0
+.endobj lbl_804F63D4
 
-.global lbl_804F63E8
-lbl_804F63E8:
+.obj lbl_804F63E8, global
 	.asciz "kizunaTalkStart"
+.endobj lbl_804F63E8
 
-.global lbl_804F63F8
-lbl_804F63F8:
+.obj lbl_804F63F8, global
 	.asciz "kizunaTalkEnd"
 	.balign 4
+.endobj lbl_804F63F8
 
-.global lbl_804F6408
-lbl_804F6408:
+.obj lbl_804F6408, global
 	.asciz "isPrioReq"
 	.balign 4
+.endobj lbl_804F6408
 
-.global lbl_804F6414
-lbl_804F6414:
+.obj lbl_804F6414, global
 	.asciz "gameClear"
 	.balign 4
+.endobj lbl_804F6414
 
-.global lbl_804F6420
-lbl_804F6420:
+.obj lbl_804F6420, global
 	.asciz "setLastTalkNpc"
 	.balign 4
+.endobj lbl_804F6420
 
-.global lbl_804F6430
-lbl_804F6430:
+.obj lbl_804F6430, global
 	.asciz "isSETalkVoiceWait"
 	.balign 4
+.endobj lbl_804F6430
 
-.global cf_CfObjectPc_typestr
-cf_CfObjectPc_typestr:
+.obj cf_CfObjectPc_typestr, global
 	.asciz "cf::CfObjectPc"
 	.balign 4
+.endobj cf_CfObjectPc_typestr
 
 
-.global CTaskGameEff_strpool
-CTaskGameEff_strpool:
+.obj CTaskGameEff_strpool, global
 	.asciz "name"
 	.asciz "pc_arts"
 	.asciz "MNU_sysmes"
@@ -2717,123 +2716,126 @@ CTaskGameEff_strpool:
 	.asciz "rlt_meet"
 	.asciz "ui"
 	.byte 0x00
+.endobj CTaskGameEff_strpool
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CfObjectEff
-__RTTI__cf_CfObjectEff:
+.obj __RTTI__cf_CfObjectEff, global
 	.4byte cf_CfObjectEff_typestr
 	.4byte cf_CfObjectEff_hierarchy
+.endobj __RTTI__cf_CfObjectEff
 
-.global __RTTI__CTaskGameEff
-__RTTI__CTaskGameEff:
+.obj __RTTI__CTaskGameEff, global
 	.4byte CTaskGameEff_typestr
 	.4byte CTaskGameEff_hierarchy
+.endobj __RTTI__CTaskGameEff
 
-.global __RTTI__reslist_CScn
-__RTTI__reslist_CScn:
+.obj __RTTI__reslist_CScn, global
 	.4byte reslist_CScn_typestr
 	.4byte reslist_CScn_hierarchy
+.endobj __RTTI__reslist_CScn
 
-.global __RTTI___reslist_base_CScn
-__RTTI___reslist_base_CScn:
+.obj __RTTI___reslist_base_CScn, global
 	.4byte _reslist_base_CScn_typestr
 	.4byte 0
+.endobj __RTTI___reslist_base_CScn
 
-.global __RTTI__CTaskGameEff_CEffRenderHighPrio
-__RTTI__CTaskGameEff_CEffRenderHighPrio:
+.obj __RTTI__CTaskGameEff_CEffRenderHighPrio, global
 	.4byte CTaskGameEff_CEffRenderHighPrio_typestr
 	.4byte CTaskGameEff_CEffRenderHighPrio_hierarchy
+.endobj __RTTI__CTaskGameEff_CEffRenderHighPrio
 
-.global __RTTI__CTTask_CTaskGameEff
-__RTTI__CTTask_CTaskGameEff:
+.obj __RTTI__CTTask_CTaskGameEff, global
 	.4byte CTTask_CTaskGameEff_typestr
 	.4byte CTTask_CTaskGameEff_hierarchy
+.endobj __RTTI__CTTask_CTaskGameEff
 
 
-.global __RTTI__cf_CfObjectPc
-__RTTI__cf_CfObjectPc:
+.obj __RTTI__cf_CfObjectPc, global
 	.4byte cf_CfObjectPc_typestr
 	.4byte cf_CfObjectPc_hierarchy
+.endobj __RTTI__cf_CfObjectPc
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80666640
-lbl_80666640:
+.balign 8
+
+.obj lbl_80666640, global
 	.skip 0x8
+.endobj lbl_80666640
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_80668628
-float_80668628:
+.obj float_80668628, global
 	.float 1.0
+.endobj float_80668628
 
-.global float_8066862C
-float_8066862C:
+.obj float_8066862C, global
 	.float 0
+.endobj float_8066862C
 
-.global lbl_80668630
-lbl_80668630:
+.obj lbl_80668630, global
 	.asciz "hour"
 	.balign 4
+.endobj lbl_80668630
 
-.global lbl_80668638
-lbl_80668638:
+.obj lbl_80668638, global
 	.asciz "min"
 	.4byte 0
+.endobj lbl_80668638
 
-.global lbl_80668640
-lbl_80668640:
+.obj lbl_80668640, global
 	.asciz "timeIdx"
+.endobj lbl_80668640
 
-.global lbl_80668648
-lbl_80668648:
+.obj lbl_80668648, global
 	.asciz "cfp"
 	.4byte 0
+.endobj lbl_80668648
 
 
-.global float_80668650
-float_80668650:
+.obj float_80668650, global
 	.float -1.0
 	.4byte 0
+.endobj float_80668650
 
 
-.global double_80668658
-double_80668658:
+.obj double_80668658, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_80668658
 
-.global lbl_80668660
-lbl_80668660:
+.obj lbl_80668660, global
 	.asciz "winTalk"
+.endobj lbl_80668660
 
-.global lbl_80668668
-lbl_80668668:
+.obj lbl_80668668, global
 	.asciz "pcTalk"
 	.balign 4
+.endobj lbl_80668668
 
-.global lbl_80668670
-lbl_80668670:
+.obj lbl_80668670, global
 	.asciz "fadeIn"
 	.balign 4
+.endobj lbl_80668670
 
-.global lbl_80668678
-lbl_80668678:
+.obj lbl_80668678, global
 	.asciz "fadeOut"
+.endobj lbl_80668678
 
-.global lbl_80668680
-lbl_80668680:
+.obj lbl_80668680, global
 	.asciz "winSys"
 	.balign 4
+.endobj lbl_80668680
 
-.global lbl_80668688
-lbl_80668688:
+.obj lbl_80668688, global
 	.asciz "save"
 	.balign 4
+.endobj lbl_80668688
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

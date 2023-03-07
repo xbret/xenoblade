@@ -339,15 +339,18 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-__HBMSYNSynthList:
+.obj __HBMSYNSynthList, local
 	.skip 0x4
+.endobj __HBMSYNSynthList
 
-.global __HBMSYNVoice
-__HBMSYNVoice:
+.obj __HBMSYNVoice, global
 	.skip 0x4
+.endobj __HBMSYNVoice
 
-__s_HBMSYNVoice:
+.obj __s_HBMSYNVoice, local
 	.skip 0x4c0
+.endobj __s_HBMSYNVoice
 
-__init:
+.obj __init, local
 	.skip 0x8
+.endobj __init

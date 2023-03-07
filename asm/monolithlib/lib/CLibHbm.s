@@ -1326,10 +1326,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CLibHbm_strpool
-CLibHbm_strpool:
+.obj CLibHbm_strpool, global
 	.asciz "hbm.arc"
 	.asciz "hbm/homeBtn.arc"
 	.asciz "hbm/SpeakerSe.arc"
@@ -1338,13 +1337,13 @@ CLibHbm_strpool:
 	.asciz "hbm/config.txt"
 	.balign 4
 	.4byte 0
+.endobj CLibHbm_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CLibHbm
-__vt__CLibHbm:
+.obj __vt__CLibHbm, global
 	.4byte __RTTI__CLibHbm
 	.4byte 0
 	.4byte __dt__CLibHbm
@@ -1385,123 +1384,131 @@ __vt__CLibHbm:
 	.4byte func_8045DE04
 	.4byte func_8045DE64
 	.4byte func_80039E30
+.endobj __vt__CLibHbm
 
-.global CLibHbm_hierarchy
-CLibHbm_hierarchy:
+.obj CLibHbm_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CLibHbm_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_806660E0
-lbl_806660E0:
+.obj lbl_806660E0, global
 	.4byte 0xFFFFFFFF
 	.4byte 0
+.endobj lbl_806660E0
 
-.global __RTTI__CLibHbm
-__RTTI__CLibHbm:
+.obj __RTTI__CLibHbm, global
 	.4byte CLibHbm_typestr
 	.4byte CLibHbm_hierarchy
+.endobj __RTTI__CLibHbm
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066CCF0
-float_8066CCF0:
+.obj float_8066CCF0, global
 	.float 0
+.endobj float_8066CCF0
 
 
-.global float_8066CCF4
-float_8066CCF4:
+.obj float_8066CCF4, global
 	.float 1.36842108 #0x3FAF286C
+.endobj float_8066CCF4
 
 
-.global float_8066CCF8
-float_8066CCF8:
+.obj float_8066CCF8, global
 	.float 1.0
+.endobj float_8066CCF8
 
 
-.global float_8066CCFC
-float_8066CCFC:
+.obj float_8066CCFC, global
 	.float 1.2 #0x3F99999A
+.endobj float_8066CCFC
 
 
-.global double_8066CD00
-double_8066CD00:
+.obj double_8066CD00, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066CD00
 
-.global float_8066CD08
-float_8066CD08:
+.obj float_8066CD08, global
 	.float 0.25
+.endobj float_8066CD08
 
 
-.global float_8066CD0C
-float_8066CD0C:
+.obj float_8066CD0C, global
 	.float 1.25 #0x3FA00000
+.endobj float_8066CD0C
 
 
-.global float_8066CD10
-float_8066CD10:
+.obj float_8066CD10, global
 	.float 4 #0x40800000
+.endobj float_8066CD10
 
 
-.global float_8066CD14
-float_8066CD14:
+.obj float_8066CD14, global
 	.float 686 #0x442B8000
+.endobj float_8066CD14
 
 
-.global float_8066CD18
-float_8066CD18:
+.obj float_8066CD18, global
 	.float 640 #0x44200000
 	.4byte 0
+.endobj float_8066CD18
 
 
-.global double_8066CD20
-double_8066CD20:
+.obj double_8066CD20, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066CD20
 
-.global CLibHbm_typestr
-CLibHbm_typestr:
+.obj CLibHbm_typestr, global
 	.asciz "CLibHbm"
+.endobj CLibHbm_typestr
 
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_8065A848
-lbl_8065A848:
+.obj lbl_8065A848, global
 	.skip 0x20
+.endobj lbl_8065A848
 	
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-.global lbl_80667FD0
-lbl_80667FD0:
+
+.obj lbl_80667FD0, global
 	.skip 0x4
-.global lbl_80667FD4
-lbl_80667FD4:
+.endobj lbl_80667FD0
+
+.obj lbl_80667FD4, global
 	.skip 0x4
-.global lbl_80667FD8
-lbl_80667FD8:
+.endobj lbl_80667FD4
+
+.obj lbl_80667FD8, global
 	.skip 0x4
-.global lbl_80667FDC
-lbl_80667FDC:
+.endobj lbl_80667FD8
+
+.obj lbl_80667FDC, global
 	.skip 0x1
-.global lbl_80667FDD
-lbl_80667FDD:
+.endobj lbl_80667FDC
+
+.obj lbl_80667FDD, global
 	.skip 0x3
-.global lbl_80667FE0
-lbl_80667FE0:
+.endobj lbl_80667FDD
+
+.obj lbl_80667FE0, global
 	.skip 0x8
+.endobj lbl_80667FE0
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

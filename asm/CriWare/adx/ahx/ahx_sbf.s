@@ -234,27 +234,33 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051ABD0
-lbl_8051ABD0:
+.balign 8
+
+.obj lbl_8051ABD0, global
 	.asciz "O"
 	.4byte 0
 	.2byte 0
+.endobj lbl_8051ABD0
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
-.global lbl_805E9AE8
-lbl_805E9AE8:
+.obj lbl_805E9AE8, global
 	.skip 0x4
-.global lbl_805E9AEC
-lbl_805E9AEC:
+.endobj lbl_805E9AE8
+
+.obj lbl_805E9AEC, global
 	.skip 0x4
-.global lbl_805E9AF0
-lbl_805E9AF0:
+.endobj lbl_805E9AEC
+
+.obj lbl_805E9AF0, global
 	.skip 0x8
-.global lbl_805E9AF8
-lbl_805E9AF8:
+.endobj lbl_805E9AF0
+
+.obj lbl_805E9AF8, global
 	.skip 0x4
-.global lbl_805E9AFC
-lbl_805E9AFC:
+.endobj lbl_805E9AF8
+
+.obj lbl_805E9AFC, global
 	.skip 0x4
+.endobj lbl_805E9AFC

@@ -252,50 +252,49 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_804FD1A8
-lbl_804FD1A8:
+.obj lbl_804FD1A8, global
 	.float 6.5
 	.float 8.0
 	.float 10.0
 	.float 12.5
 	.float 15
 	.4byte 0
+.endobj lbl_804FD1A8
 
 
-.global lbl_804FD1C0
-lbl_804FD1C0:
+.obj lbl_804FD1C0, global
 	.float 3
 	.float 4
 	.float 5.5
 	.float 7
 	.float 8.5
 	.float 10.0
+.endobj lbl_804FD1C0
 
 
-.global lbl_804FD1D8
-lbl_804FD1D8:
+.obj lbl_804FD1D8, global
 	.float 1.0
 	.float 1.2 #0x3F99999A
 	.float 1.5
 	.float 1.8 #0x3FE66666
 	.float 2.1
 	.float 2.4
+.endobj lbl_804FD1D8
 
 
-.global lbl_804FD1F0
-lbl_804FD1F0:
+.obj lbl_804FD1F0, global
 	.4byte 0
 	.4byte 0
 	.float 3
 	.float 5
 	.float 10.0
 	.float 15
+.endobj lbl_804FD1F0
 
 
-.global lbl_804FD208
-lbl_804FD208:
+.obj lbl_804FD208, global
 	.4byte 0
 	.4byte 0
 	.4byte 0x00000100
@@ -320,98 +319,99 @@ lbl_804FD208:
 	.4byte 0
 	.4byte 0x00000020
 	.4byte 0x00000100
+.endobj lbl_804FD208
 
 
-.global cf_CAttackSet_typestr
-cf_CAttackSet_typestr:
+.obj cf_CAttackSet_typestr, global
 	.asciz "cf::CAttackSet"
 	.balign 4
+.endobj cf_CAttackSet_typestr
 
-.global cf__sAttackSet_typestr
-cf__sAttackSet_typestr:
+.obj cf__sAttackSet_typestr, global
 	.asciz "cf::_sAttackSet"
+.endobj cf__sAttackSet_typestr
 
-.global cf_CArtsSet_typestr
-cf_CArtsSet_typestr:
+.obj cf_CArtsSet_typestr, global
 	.asciz "cf::CArtsSet"
 	.balign 4
+.endobj cf_CArtsSet_typestr
 
-.global cf__sArtsSet_typestr
-cf__sArtsSet_typestr:
+.obj cf__sArtsSet_typestr, global
 	.asciz "cf::_sArtsSet"
 	.balign 4
+.endobj cf__sArtsSet_typestr
 
-.global cf_CArtsParam_typestr
-cf_CArtsParam_typestr:
+.obj cf_CArtsParam_typestr, global
 	.asciz "cf::CArtsParam"
 	.balign 4
+.endobj cf_CArtsParam_typestr
 
-.global cf_CAttackParam_typestr
-cf_CAttackParam_typestr:
+.obj cf_CAttackParam_typestr, global
 	.asciz "cf::CAttackParam"
 	.balign 4
 	.4byte 0
+.endobj cf_CAttackParam_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CAttackSet
-__vt__cf_CAttackSet:
+.obj __vt__cf_CAttackSet, global
 	.4byte __RTTI__cf_CAttackSet
 	.4byte 0
 	.4byte func_80153E88
+.endobj __vt__cf_CAttackSet
 
-.global cf_CAttackSet_hierarchy
-cf_CAttackSet_hierarchy:
+.obj cf_CAttackSet_hierarchy, global
 	.4byte __RTTI__cf__sAttackSet
 	.4byte 0
 	.4byte 0
+.endobj cf_CAttackSet_hierarchy
 
 
-.global __vt__cf_CArtsSet
-__vt__cf_CArtsSet:
+.obj __vt__cf_CArtsSet, global
 	.4byte __RTTI__cf_CArtsSet
 	.4byte 0
 	.4byte func_80153CFC
+.endobj __vt__cf_CArtsSet
 
-.global cf_CArtsSet_hierarchy
-cf_CArtsSet_hierarchy:
+.obj cf_CArtsSet_hierarchy, global
 	.4byte __RTTI__cf__sArtsSet
 	.4byte 0
 	.4byte 0
+.endobj cf_CArtsSet_hierarchy
 
 
-.global __vt__cf__sArtsSet
-__vt__cf__sArtsSet:
+.obj __vt__cf__sArtsSet, global
 	.4byte __RTTI__cf__sArtsSet
 	.4byte 0
 	.4byte func_80153C30
 	.4byte 0
+.endobj __vt__cf__sArtsSet
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CAttackSet
-__RTTI__cf_CAttackSet:
+.obj __RTTI__cf_CAttackSet, global
 	.4byte cf_CAttackSet_typestr
 	.4byte cf_CAttackSet_hierarchy
+.endobj __RTTI__cf_CAttackSet
 
-.global __RTTI__cf__sAttackSet
-__RTTI__cf__sAttackSet:
+.obj __RTTI__cf__sAttackSet, global
 	.4byte cf__sAttackSet_typestr
 	.4byte 0
+.endobj __RTTI__cf__sAttackSet
 
-.global __RTTI__cf_CArtsSet
-__RTTI__cf_CArtsSet:
+.obj __RTTI__cf_CArtsSet, global
 	.4byte cf_CArtsSet_typestr
 	.4byte cf_CArtsSet_hierarchy
+.endobj __RTTI__cf_CArtsSet
 
-.global __RTTI__cf__sArtsSet
-__RTTI__cf__sArtsSet:
+.obj __RTTI__cf__sArtsSet, global
 	.4byte cf__sArtsSet_typestr
 	.4byte 0
+.endobj __RTTI__cf__sArtsSet
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

@@ -917,25 +917,25 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066DA88
-float_8066DA88:
+.obj float_8066DA88, global
 	.float 1.0
+.endobj float_8066DA88
 
 
-.global float_8066DA8C
-float_8066DA8C:
+.obj float_8066DA8C, global
 	.float 0
+.endobj float_8066DA8C
 
 
-.global double_8066DA90
-double_8066DA90:
+.obj double_8066DA90, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066DA90
 
-.global double_8066DA98
-double_8066DA98:
+.obj double_8066DA98, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066DA98
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

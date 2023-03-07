@@ -377,5 +377,6 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-__heaps:
+.obj __heaps, local
 	.skip 0x80
+.endobj __heaps

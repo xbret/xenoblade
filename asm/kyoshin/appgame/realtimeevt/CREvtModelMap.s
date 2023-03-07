@@ -1201,41 +1201,40 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CREvtModelMap_typestr
-cf_CREvtModelMap_typestr:
+.obj cf_CREvtModelMap_typestr, global
 	.asciz "cf::CREvtModelMap"
 	.balign 4
+.endobj cf_CREvtModelMap_typestr
 
 
-.global CREvtModelMap_strpool
-CREvtModelMap_strpool:
+.obj CREvtModelMap_strpool, global
 	.asciz ".lod"
 	.asciz "/obj/"
 	.asciz ".map"
 	.asciz ".lgt"
 	.balign 4
 	.4byte 0
+.endobj CREvtModelMap_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_805354F0
-lbl_805354F0:
+.obj lbl_805354F0, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80180EBC
+.endobj lbl_805354F0
 
-.global lbl_805354FC
-lbl_805354FC:
+.obj lbl_805354FC, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80180E60
+.endobj lbl_805354FC
 
-.global lbl_80535508
-lbl_80535508:
+.obj lbl_80535508, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80180EBC
@@ -1248,22 +1247,22 @@ lbl_80535508:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_8018152C
+.endobj lbl_80535508
 
-.global lbl_80535538
-lbl_80535538:
+.obj lbl_80535538, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_8018152C
+.endobj lbl_80535538
 
-.global lbl_80535544
-lbl_80535544:
+.obj lbl_80535544, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_8018152C
+.endobj lbl_80535544
 
 
-.global __vt__cf_CREvtModelMap
-__vt__cf_CREvtModelMap:
+.obj __vt__cf_CREvtModelMap, global
 	.4byte __RTTI__cf_CREvtModelMap
 	.4byte 0
 	.4byte func_80180B00
@@ -1316,9 +1315,9 @@ __vt__cf_CREvtModelMap:
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
 	.4byte func_80181988
+.endobj __vt__cf_CREvtModelMap
 
-.global cf_CREvtModelMap_hierarchy
-cf_CREvtModelMap_hierarchy:
+.obj cf_CREvtModelMap_hierarchy, global
 	.4byte __RTTI__cf_CREvtObj
 	.4byte 0
 	.4byte __RTTI__cf_CREvtModel
@@ -1361,39 +1360,43 @@ cf_CREvtModelMap_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CREvtModelMap_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CREvtModelMap
-__RTTI__cf_CREvtModelMap:
+.obj __RTTI__cf_CREvtModelMap, global
 	.4byte cf_CREvtModelMap_typestr
 	.4byte cf_CREvtModelMap_hierarchy
+.endobj __RTTI__cf_CREvtModelMap
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066A180
-float_8066A180:
+.obj float_8066A180, global
 	.float 0
 	.4byte 0
+.endobj float_8066A180
 
 
-.global double_8066A188
-double_8066A188:
+.obj double_8066A188, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066A188
+
+
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80666BA0, global
+	.skip 0x4
+.endobj lbl_80666BA0
 
-.global lbl_80666BA0
-lbl_80666BA0:
+.obj lbl_80666BA4, global
 	.skip 0x4
-.global lbl_80666BA4
-lbl_80666BA4:
-	.skip 0x4
+.endobj lbl_80666BA4
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

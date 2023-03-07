@@ -921,23 +921,32 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_805454F0
-lbl_805454F0:
+.balign 8
+
+.obj lbl_805454F0, global
 	.asciz "btm mode change AFTER unsniffing; hci hdl 0x%x, types 0x%02x"
 	.balign 4
+.endobj lbl_805454F0
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-btm_pm_md_comp_matrix:
+.balign 8
+
+.obj btm_pm_md_comp_matrix, local
 	.4byte 0x03020201
 	.4byte 0x03010102
 	.4byte 0x03000000
 	.4byte 0
+.endobj btm_pm_md_comp_matrix
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-btm_pm_mode_off:
-	.4byte 0x00000100
+.balign 8
 
-btm_pm_mode_msk:
+.obj btm_pm_mode_off, local
+	.4byte 0x00000100
+.endobj btm_pm_mode_off
+
+.obj btm_pm_mode_msk, local
 	.4byte 0x40800100
+.endobj btm_pm_mode_msk

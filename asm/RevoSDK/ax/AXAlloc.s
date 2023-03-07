@@ -414,15 +414,20 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-__AXStackHead:
+.obj __AXStackHead, local
 	.skip 0x80
+.endobj __AXStackHead
 
-__AXStackTail:
+.obj __AXStackTail, local
 	.skip 0x98
+.endobj __AXStackTail
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-__AXCallbackStack:
+.balign 8
+
+.obj __AXCallbackStack, local
 	.skip 0x4
+.endobj __AXCallbackStack
 
 .skip 0x4

@@ -3750,20 +3750,19 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_8050A5C8
-lbl_8050A5C8:
+.obj lbl_8050A5C8, global
 	.4byte 0x00000002
 	.4byte 0x00000004
 	.4byte 0x00000005
 	.4byte 0x00000006
 	.4byte 0x00000007
 	.4byte 0x00000008
+.endobj lbl_8050A5C8
 
 
-.global lbl_8050A5E0
-lbl_8050A5E0:
+.obj lbl_8050A5E0, global
 	.4byte 0
 	.float 1.0
 	.float 1.2 #0x3F99999A
@@ -3771,13 +3770,13 @@ lbl_8050A5E0:
 	.float 1.8 #0x3FE66666
 	.float 2 #0x40000000
 	.float 2.5 #0x40200000
+.endobj lbl_8050A5E0
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global jumptable_8053BD20
-jumptable_8053BD20:
+.obj jumptable_8053BD20, global
 	.4byte .L_8028383C
 	.4byte .L_80283848
 	.4byte .L_80283868
@@ -3790,10 +3789,10 @@ jumptable_8053BD20:
 	.4byte .L_80283A68
 	.4byte .L_80283AB8
 	.4byte .L_80283B08
+.endobj jumptable_8053BD20
 
 
-.global jumptable_8053BD50
-jumptable_8053BD50:
+.obj jumptable_8053BD50, global
 	.4byte .L_80283B10
 	.4byte .L_80283608
 	.4byte .L_80283648
@@ -3804,35 +3803,36 @@ jumptable_8053BD50:
 	.4byte .L_80283790
 	.4byte .L_802837D0
 	.4byte .L_80283810
+.endobj jumptable_8053BD50
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B3A8
-float_8066B3A8:
+.obj float_8066B3A8, global
 	.float 30 #0x41F00000
+.endobj float_8066B3A8
 
-.global float_8066B3AC
-float_8066B3AC:
+.obj float_8066B3AC, global
 	.float 0
+.endobj float_8066B3AC
 
-.global float_8066B3B0
-float_8066B3B0:
+.obj float_8066B3B0, global
 	.float 0.2
 	.4byte 0
+.endobj float_8066B3B0
 
-.global double_8066B3B8
-double_8066B3B8:
+.obj double_8066B3B8, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066B3B8
 
-.global double_8066B3C0
-double_8066B3C0:
+.obj double_8066B3C0, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066B3C0
 
-.global float_8066B3C8
-float_8066B3C8:
+.obj float_8066B3C8, global
 	.float 200 #0x43480000
+.endobj float_8066B3C8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

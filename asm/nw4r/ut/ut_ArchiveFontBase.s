@@ -1094,9 +1094,10 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global lbl_8056E868
-lbl_8056E868:
+
+.obj lbl_8056E868, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q44nw4r2ut6detail15ArchiveFontBaseFv
@@ -1121,3 +1122,4 @@ lbl_8056E868:
 	.4byte HasGlyph__Q44nw4r2ut6detail15ArchiveFontBaseCFUs
 	.4byte GetEncoding__Q44nw4r2ut6detail11ResFontBaseCFv
 	.4byte 0
+.endobj lbl_8056E868

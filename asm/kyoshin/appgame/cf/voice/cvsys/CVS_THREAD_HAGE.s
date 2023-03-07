@@ -286,38 +286,37 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CVS_THREAD_HAGE_typestr
-cf_CVS_THREAD_HAGE_typestr:
+.obj cf_CVS_THREAD_HAGE_typestr, global
 	.asciz "cf::CVS_THREAD_HAGE"
 	.4byte 0
+.endobj cf_CVS_THREAD_HAGE_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8053D338
-lbl_8053D338:
+.obj lbl_8053D338, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A6F8C
+.endobj lbl_8053D338
 
-.global lbl_8053D344
-lbl_8053D344:
+.obj lbl_8053D344, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A70C8
+.endobj lbl_8053D344
 
-.global lbl_8053D350
-lbl_8053D350:
+.obj lbl_8053D350, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A718C
+.endobj lbl_8053D350
 
 
-.global __vt__cf_CVS_THREAD_HAGE
-__vt__cf_CVS_THREAD_HAGE:
+.obj __vt__cf_CVS_THREAD_HAGE, global
 	.4byte __RTTI__cf_CVS_THREAD_HAGE
 	.4byte 0
 	.4byte func_802A3B50
@@ -325,22 +324,23 @@ __vt__cf_CVS_THREAD_HAGE:
 	.4byte func_802A724C
 	.4byte func_802A1EA0
 	.4byte func_802A3740
+.endobj __vt__cf_CVS_THREAD_HAGE
 
-.global cf_CVS_THREAD_HAGE_hierarchy
-cf_CVS_THREAD_HAGE_hierarchy:
+.obj cf_CVS_THREAD_HAGE_hierarchy, global
 	.4byte __RTTI__cf_CVS_THREAD
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CVS_THREAD_HAGE_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CVS_THREAD_HAGE
-__RTTI__cf_CVS_THREAD_HAGE:
+.obj __RTTI__cf_CVS_THREAD_HAGE, global
 	.4byte cf_CVS_THREAD_HAGE_typestr
 	.4byte cf_CVS_THREAD_HAGE_hierarchy
+.endobj __RTTI__cf_CVS_THREAD_HAGE
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

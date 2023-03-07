@@ -4092,108 +4092,109 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CViewFrame_typestr
-CViewFrame_typestr:
+.obj CViewFrame_typestr, global
 	.asciz "CViewFrame"
 	.balign 4
 	.4byte 0
+.endobj CViewFrame_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CViewFrame
-__vt__CViewFrame:
+.obj __vt__CViewFrame, global
 	.4byte __RTTI__CViewFrame
 	.4byte 0
 	.4byte __dt__CViewFrame
 	.4byte 0
+.endobj __vt__CViewFrame
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CViewFrame
-__RTTI__CViewFrame:
+.obj __RTTI__CViewFrame, global
 	.4byte CViewFrame_typestr
 	.4byte 0
+.endobj __RTTI__CViewFrame
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066CAE8
-float_8066CAE8:
+.obj float_8066CAE8, global
 	.float 0
+.endobj float_8066CAE8
 
 
-.global float_8066CAEC
-float_8066CAEC:
+.obj float_8066CAEC, global
 	.float 0.5
+.endobj float_8066CAEC
 
 
-.global float_8066CAF0
-float_8066CAF0:
+.obj float_8066CAF0, global
 	.float 1.0
+.endobj float_8066CAF0
 
 
-.global float_8066CAF4
-float_8066CAF4:
+.obj float_8066CAF4, global
 	.float 0.8 #0x3F4CCCCD
+.endobj float_8066CAF4
 
 
-.global float_8066CAF8
-float_8066CAF8:
+.obj float_8066CAF8, global
 	.float 0.4 #0x3ECCCCCD
+.endobj float_8066CAF8
 
 
-.global float_8066CAFC
-float_8066CAFC:
+.obj float_8066CAFC, global
 	.float 0.6 #0x3F19999A
+.endobj float_8066CAFC
 
 
-.global double_8066CB00
-double_8066CB00:
+.obj double_8066CB00, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066CB00
 
-.global float_8066CB08
-float_8066CB08:
+.obj float_8066CB08, global
 	.float 0.114477001 #0x3DEA72EB
+.endobj float_8066CB08
 
 
-.global float_8066CB0C
-float_8066CB0C:
+.obj float_8066CB0C, global
 	.float 0.298911989 #0x3E990AFE
+.endobj float_8066CB0C
 
 
-.global float_8066CB10
-float_8066CB10:
+.obj float_8066CB10, global
 	.float 0.586610973 #0x3F162C23
+.endobj float_8066CB10
 
 
-.global float_8066CB14
-float_8066CB14:
+.obj float_8066CB14, global
 	.float 0.7 #0x3F333333
+.endobj float_8066CB14
 
 
-.global float_8066CB18
-float_8066CB18:
+.obj float_8066CB18, global
 	.float 1.2 #0x3F99999A
 	.4byte 0
+.endobj float_8066CB18
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80667EB0, global
+	.skip 0x4
+.endobj lbl_80667EB0
 
-.global lbl_80667EB0
-lbl_80667EB0:
+.obj lbl_80667EB4, global
 	.skip 0x4
-.global lbl_80667EB4
-lbl_80667EB4:
-	.skip 0x4
+.endobj lbl_80667EB4
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

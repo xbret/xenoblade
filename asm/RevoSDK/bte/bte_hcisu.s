@@ -70,10 +70,12 @@
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global p_hcisu_if
-p_hcisu_if:
-	.skip 0x4
+.balign 8
 
-.global p_hcisu_cfg
-p_hcisu_cfg:
+.obj p_hcisu_if, global
 	.skip 0x4
+.endobj p_hcisu_if
+
+.obj p_hcisu_cfg, global
+	.skip 0x4
+.endobj p_hcisu_cfg

@@ -179,30 +179,34 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-.global lbl_80518B78
-lbl_80518B78:
+
+.obj lbl_80518B78, global
 	.float 1.0
+.endobj lbl_80518B78
 
 
-.global lbl_80518B7C
-lbl_80518B7C:
+.obj lbl_80518B7C, global
 	.float 32000 #0x46FA0000
+.endobj lbl_80518B7C
 
 
-.global double_80518B80
-double_80518B80:
+.obj double_80518B80, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_80518B80
 
-.global lbl_80518B88
-lbl_80518B88:
+.obj lbl_80518B88, global
 	.4byte 0x47800000
 	.4byte 0
+.endobj lbl_80518B88
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
+
 #the tables after are accessed by adding their offset from the first table
-__HBMSYNCentsTable:
+.obj __HBMSYNCentsTable, local
 	.float 1.0
 	.float 1.000578 #0x3F8012F1
 	.float 1.001156 #0x3F8025E1
@@ -303,8 +307,9 @@ __HBMSYNCentsTable:
 	.float 1.057629 #0x3F876063
 	.float 1.0582401 #0x3F877469
 	.float 1.058851 #0x3F87886E
+.endobj __HBMSYNCentsTable
 
-__HBMSYNOctavesTableUp:
+.obj __HBMSYNOctavesTableUp, local
 	.float 1.0
 	.float 2 #0x40000000
 	.float 4 #0x40800000
@@ -317,8 +322,9 @@ __HBMSYNOctavesTableUp:
 	.float 512 #0x44000000
 	.float 1024 #0x44800000
 	.float 2048 #0x45000000
+.endobj __HBMSYNOctavesTableUp
 
-__HBMSYNSemitonesTableUp:
+.obj __HBMSYNSemitonesTableUp, local
 	.float 1.0
 	.float 1.059463 #0x3F879C7C
 	.float 1.122462 #0x3F8FACD6
@@ -331,8 +337,9 @@ __HBMSYNSemitonesTableUp:
 	.float 1.681793 #0x3FD744FE
 	.float 1.7817971 #0x3FE411ED
 	.float 1.887749 #0x3FF1A1C2
+.endobj __HBMSYNSemitonesTableUp
 
-__HBMSYNSemitonesTableDown:
+.obj __HBMSYNSemitonesTableDown, local
 	.float 1.0
 	.float 0.943874 #0x3F71A1BA
 	.float 0.890899 #0x3F6411F5
@@ -461,3 +468,4 @@ __HBMSYNSemitonesTableDown:
 	.float 0.00073199999 #0x3A3FE3B0
 	.float 0.00069100002 #0x3A35243A
 	.float 0.00065200002 #0x3A2AEAFB
+.endobj __HBMSYNSemitonesTableDown

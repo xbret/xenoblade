@@ -666,21 +666,20 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CDeviceGX_typestr
-CDeviceGX_typestr:
+.obj CDeviceGX_typestr, global
 	.asciz "CDeviceGX"
 	.balign 4
 	.4byte 0
+.endobj CDeviceGX_typestr
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CDeviceGX
-__vt__CDeviceGX:
+.obj __vt__CDeviceGX, global
 	.4byte __RTTI__CDeviceGX
 	.4byte 0
 	.4byte __dt__CDeviceGX
@@ -729,9 +728,9 @@ __vt__CDeviceGX:
 	.4byte func_804559B4
 	.4byte func_80455498
 	.4byte func_80455544
+.endobj __vt__CDeviceGX
 
-.global CDeviceGX_hierarchy
-CDeviceGX_hierarchy:
+.obj CDeviceGX_hierarchy, global
 	.4byte __RTTI__CDeviceVICb
 	.4byte 0x000001C8
 	.4byte __RTTI__IWorkEvent
@@ -742,73 +741,77 @@ CDeviceGX_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CDeviceGX_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80666078
-lbl_80666078:
+.obj lbl_80666078, global
 	.4byte 0x00200000
+.endobj lbl_80666078
 
 
-.global lbl_8066607C
-lbl_8066607C:
+.obj lbl_8066607C, global
 	.4byte lbl_8066CBE8
+.endobj lbl_8066607C
 
-.global __RTTI__CDeviceGX
-__RTTI__CDeviceGX:
+.obj __RTTI__CDeviceGX, global
 	.4byte CDeviceGX_typestr
 	.4byte CDeviceGX_hierarchy
+.endobj __RTTI__CDeviceGX
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_8066CBE8
-lbl_8066CBE8:
+.obj lbl_8066CBE8, global
 	.asciz "GPCost"
 	.balign 4
+.endobj lbl_8066CBE8
 
 
-.global float_8066CBF0
-float_8066CBF0:
+.obj float_8066CBF0, global
 	.float 0
+.endobj float_8066CBF0
 
 
-.global float_8066CBF4
-float_8066CBF4:
+.obj float_8066CBF4, global
 	.float 1.0
+.endobj float_8066CBF4
 
 
-.global float_8066CBF8
-float_8066CBF8:
+.obj float_8066CBF8, global
 	.float 2 #0x40000000
 	.4byte 0
+.endobj float_8066CBF8
 
 
-.global double_8066CC00
-double_8066CC00:
+.obj double_8066CC00, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066CC00
 
-.global double_8066CC08
-double_8066CC08:
+.obj double_8066CC08, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066CC08
+
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80667F70, global
+	.skip 0x4
+.endobj lbl_80667F70
 
-.global lbl_80667F70
-lbl_80667F70:
+.obj lbl_80667F74, global
 	.skip 0x4
-.global lbl_80667F74
-lbl_80667F74:
+.endobj lbl_80667F74
+
+.obj lbl_80667F78, global
 	.skip 0x4
-.global lbl_80667F78
-lbl_80667F78:
-	.skip 0x4
+.endobj lbl_80667F78
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

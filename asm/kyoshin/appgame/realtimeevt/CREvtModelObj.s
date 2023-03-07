@@ -2078,16 +2078,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CREvtModelObj_typestr
-cf_CREvtModelObj_typestr:
+.obj cf_CREvtModelObj_typestr, global
 	.asciz "cf::CREvtModelObj"
 	.balign 4
+.endobj cf_CREvtModelObj_typestr
 
 
-.global CREvtModelObj_strpool
-CREvtModelObj_strpool:
+.obj CREvtModelObj_strpool, global
 	.asciz "eff/rec/ev/evwpn01.rec"
 	.asciz "/chr/en/"
 	.asciz "/chr/np/"
@@ -2096,67 +2095,67 @@ CREvtModelObj_strpool:
 	.asciz ".kp"
 	.asciz ".chr"
 	.balign 4
+.endobj CREvtModelObj_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_805356C8
-lbl_805356C8:
+.obj lbl_805356C8, global
 	.4byte lbl_8066A190
 	.4byte lbl_8066A194
 	.4byte lbl_8066A198
 	.4byte 0
+.endobj lbl_805356C8
 
 
-.global lbl_805356D8
-lbl_805356D8:
+.obj lbl_805356D8, global
 	.4byte lbl_8066A19C
 	.4byte lbl_8066A1A4
 	.4byte lbl_8066A1AC
 	.4byte lbl_8066A1B4
 	.4byte lbl_8066A1BC
+.endobj lbl_805356D8
 
-.global lbl_805356EC
-lbl_805356EC:
+.obj lbl_805356EC, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80182084
+.endobj lbl_805356EC
 
-.global lbl_805356F8
-lbl_805356F8:
+.obj lbl_805356F8, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80183268
+.endobj lbl_805356F8
 
-.global lbl_80535704
-lbl_80535704:
+.obj lbl_80535704, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80182084
+.endobj lbl_80535704
 
-.global lbl_80535710
-lbl_80535710:
+.obj lbl_80535710, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80182178
+.endobj lbl_80535710
 
 
-.global lbl_8053571C
-lbl_8053571C:
+.obj lbl_8053571C, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80182084
+.endobj lbl_8053571C
 
 
-.global lbl_80535728
-lbl_80535728:
+.obj lbl_80535728, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80183268
+.endobj lbl_80535728
 
-.global lbl_80535734
-lbl_80535734:
+.obj lbl_80535734, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80182B2C
@@ -2166,24 +2165,24 @@ lbl_80535734:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80183268
+.endobj lbl_80535734
 
 
-.global lbl_80535758
-lbl_80535758:
+.obj lbl_80535758, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80182178
+.endobj lbl_80535758
 
 
-.global lbl_80535764
-lbl_80535764:
+.obj lbl_80535764, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80182B2C
+.endobj lbl_80535764
 
 
-.global __vt__cf_CREvtModelObj
-__vt__cf_CREvtModelObj:
+.obj __vt__cf_CREvtModelObj, global
 	.4byte __RTTI__cf_CREvtModelObj
 	.4byte 0
 	.4byte func_80181B74
@@ -2241,9 +2240,9 @@ __vt__cf_CREvtModelObj:
 	.4byte func_80183714
 	.4byte func_801835D4
 	.4byte func_801836CC
+.endobj __vt__cf_CREvtModelObj
 
-.global cf_CREvtModelObj_hierarchy
-cf_CREvtModelObj_hierarchy:
+.obj cf_CREvtModelObj_hierarchy, global
 	.4byte __RTTI__cf_CREvtObj
 	.4byte 0
 	.4byte __RTTI__cf_CREvtModel
@@ -2291,6 +2290,7 @@ cf_CREvtModelObj_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CREvtModelObj_hierarchy
 
 
 	.asciz "NW4R:Failed assertion !((u32)p & 0x1f)"
@@ -2302,86 +2302,89 @@ cf_CREvtModelObj_hierarchy:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CREvtModelObj
-__RTTI__cf_CREvtModelObj:
+.obj __RTTI__cf_CREvtModelObj, global
 	.4byte cf_CREvtModelObj_typestr
 	.4byte cf_CREvtModelObj_hierarchy
+.endobj __RTTI__cf_CREvtModelObj
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_8066A190
-lbl_8066A190:
+.obj lbl_8066A190, global
 	.4byte 0x656E0000
+.endobj lbl_8066A190
 
-.global lbl_8066A194
-lbl_8066A194:
+.obj lbl_8066A194, global
 	.4byte 0x6E700000
+.endobj lbl_8066A194
 
-.global lbl_8066A198
-lbl_8066A198:
+.obj lbl_8066A198, global
 	.4byte 0x6F6A0000
+.endobj lbl_8066A198
 
-.global lbl_8066A19C
-lbl_8066A19C:
+.obj lbl_8066A19C, global
 	.asciz "wp42"
 	.balign 4
+.endobj lbl_8066A19C
 
-.global lbl_8066A1A4
-lbl_8066A1A4:
+.obj lbl_8066A1A4, global
 	.asciz "wp82"
 	.balign 4
+.endobj lbl_8066A1A4
 
-.global lbl_8066A1AC
-lbl_8066A1AC:
+.obj lbl_8066A1AC, global
 	.asciz "wp83"
 	.balign 4
+.endobj lbl_8066A1AC
 
-.global lbl_8066A1B4
-lbl_8066A1B4:
+.obj lbl_8066A1B4, global
 	.asciz "wp84"
 	.balign 4
+.endobj lbl_8066A1B4
 
-.global lbl_8066A1BC
-lbl_8066A1BC:
+.obj lbl_8066A1BC, global
 	.asciz "np62"
 	.balign 4
+.endobj lbl_8066A1BC
 
 
-.global float_8066A1C4
-float_8066A1C4:
+.obj float_8066A1C4, global
 	.float 40 #0x42200000
+.endobj float_8066A1C4
 
 
-.global float_8066A1C8
-float_8066A1C8:
+.obj float_8066A1C8, global
 	.float 1.0
+.endobj float_8066A1C8
 
 
-.global float_8066A1CC
-float_8066A1CC:
+.obj float_8066A1CC, global
 	.float 0
+.endobj float_8066A1CC
 
 
-.global double_8066A1D0
-double_8066A1D0:
+.obj double_8066A1D0, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066A1D0
+
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80666BA8, global
+	.skip 0x4
+.endobj lbl_80666BA8
 
-.global lbl_80666BA8
-lbl_80666BA8:
+.obj lbl_80666BAC, global
 	.skip 0x4
-.global lbl_80666BAC
-lbl_80666BAC:
-	.skip 0x4
-.global lbl_80666BB0
-lbl_80666BB0:
+.endobj lbl_80666BAC
+
+.obj lbl_80666BB0, global
 	.skip 0x8
+.endobj lbl_80666BB0
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

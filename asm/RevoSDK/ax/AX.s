@@ -60,25 +60,28 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.4byte 0 #needed to fix alignment for arc.c ("arc.c" string)
+.balign 16 #needed to fix alignment for arc.c ("arc.c" string)
 
-.global lbl_80540070
-lbl_80540070:
+.obj lbl_80540070, global
 	.asciz "<< RVL_SDK - AX \trelease build: Feb 27 2009 10:01:36 (0x4302_145) >>"
 	.balign 4
+.endobj lbl_80540070
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
-.2byte 0 #needed to fix alignment for arc.c
 
-.global __AXVersion
-__AXVersion:
+.balign 4 #needed to fix alignment for arc.c
+
+.obj __AXVersion, global
 	.4byte lbl_80540070
 	.4byte 0
+.endobj __AXVersion
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
+
 .balign 8 #needed to align ai.c
 
-__init:
+.obj __init, local
 	.skip 0x4
+.endobj __init
 
 .skip 0x4

@@ -569,19 +569,21 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051ABD8
-lbl_8051ABD8:
+.balign 8
+
+.obj lbl_8051ABD8, global
 	.asciz "\nAHX/WII Ver.1.89 Build:Nov 13 2008 10:52:54\n"
 	.balign 4
+.endobj lbl_8051ABD8
 
 
-.global ahxsjd_build
-ahxsjd_build:
+.obj ahxsjd_build, global
 	.4byte lbl_8051ABD8
 	.4byte 0
+.endobj ahxsjd_build
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805E9B00
-lbl_805E9B00:
+.obj lbl_805E9B00, global
 	.skip 0x8
+.endobj lbl_805E9B00

@@ -66,10 +66,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CLib
-__vt__CLib:
+.obj __vt__CLib, global
 	.4byte __RTTI__CLib
 	.4byte 0
 	.4byte __dt__CLib
@@ -110,35 +109,36 @@ __vt__CLib:
 	.4byte func_80459580
 	.4byte func_804596F4
 	.4byte func_80039E30
+.endobj __vt__CLib
 
-.global CLib_hierarchy
-CLib_hierarchy:
+.obj CLib_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CLib_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CLib
-__RTTI__CLib:
+.obj __RTTI__CLib, global
 	.4byte CLib_typestr
 	.4byte CLib_hierarchy
+.endobj __RTTI__CLib
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global CLib_typestr
-CLib_typestr:
+.obj CLib_typestr, global
 	.asciz "CLib"
 	.balign 4
+.endobj CLib_typestr
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

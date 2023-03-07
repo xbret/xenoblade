@@ -1133,8 +1133,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80547E18
-lbl_80547E18:
+.balign 8
+
+.obj lbl_80547E18, global
 	.asciz "L2CAP - expected pkt start, got: %d"
 	.asciz "L2CAP - holding ACL for unknown handle:%d ls:%d cid:%d opcode:%d cur count:%d"
 	.balign 4
@@ -1163,9 +1164,9 @@ lbl_80547E18:
 	.balign 4
 	.asciz "L2CAP - bad cmd code: %d"
 	.balign 4
+.endobj lbl_80547E18
 
-.global jumptable_805480BC
-jumptable_805480BC:
+.obj jumptable_805480BC, global
 	.4byte .L_802FA998
 	.4byte .L_802FA048
 	.4byte .L_802FA11C
@@ -1178,21 +1179,22 @@ jumptable_805480BC:
 	.4byte .L_802FA954
 	.4byte .L_802FA974
 	.4byte .L_802F9FC8
+.endobj jumptable_805480BC
 
 
-.global lbl_805480EC
-lbl_805480EC:
+.obj lbl_805480EC, global
 	.asciz "L2CAP HOLD CONTINUE"
+.endobj lbl_805480EC
 
 
-.global lbl_80548100
-lbl_80548100:
+.obj lbl_80548100, global
 	.asciz "L2CAP HOLD TIMEOUT"
 	.balign 4
 	.4byte 0
+.endobj lbl_80548100
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global l2cb
-l2cb:
+.obj l2cb, global
 	.skip 0x7E8
+.endobj l2cb

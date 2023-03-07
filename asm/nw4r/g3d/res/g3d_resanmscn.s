@@ -785,34 +785,39 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-"ResNameData_LightSet__Q34nw4r3g3d27@unnamed@g3d_resanmscn_cpp@":
+
+.obj "ResNameData_LightSet__Q34nw4r3g3d27@unnamed@g3d_resanmscn_cpp@", local
 	.4byte 0x0000000E
 	.asciz "LightSet(NW4R)"
 	.balign 4
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj "ResNameData_LightSet__Q34nw4r3g3d27@unnamed@g3d_resanmscn_cpp@"
 
 
-"ResNameData_AmbLights__Q34nw4r3g3d27@unnamed@g3d_resanmscn_cpp@":
+.obj "ResNameData_AmbLights__Q34nw4r3g3d27@unnamed@g3d_resanmscn_cpp@", local
 	.4byte 0x0000000F
 	.asciz "AmbLights(NW4R)"
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj "ResNameData_AmbLights__Q34nw4r3g3d27@unnamed@g3d_resanmscn_cpp@"
 
 
-"ResNameData_Lights__Q34nw4r3g3d27@unnamed@g3d_resanmscn_cpp@":
+.obj "ResNameData_Lights__Q34nw4r3g3d27@unnamed@g3d_resanmscn_cpp@", local
 	.4byte 0x0000000C
 	.asciz "Lights(NW4R)"
 	.balign 4
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj "ResNameData_Lights__Q34nw4r3g3d27@unnamed@g3d_resanmscn_cpp@"
 
 
-"ResNameData_Fogs__Q34nw4r3g3d27@unnamed@g3d_resanmscn_cpp@":
+.obj "ResNameData_Fogs__Q34nw4r3g3d27@unnamed@g3d_resanmscn_cpp@", local
 	.4byte 0x0000000A
 	.asciz "Fogs(NW4R)"
 	.balign 4
@@ -820,12 +825,14 @@
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj "ResNameData_Fogs__Q34nw4r3g3d27@unnamed@g3d_resanmscn_cpp@"
 
 
-"ResNameData_Cameras__Q34nw4r3g3d27@unnamed@g3d_resanmscn_cpp@":
+.obj "ResNameData_Cameras__Q34nw4r3g3d27@unnamed@g3d_resanmscn_cpp@", local
 	.4byte 0x0000000D
 	.asciz "Cameras(NW4R)"
 	.balign 4
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj "ResNameData_Cameras__Q34nw4r3g3d27@unnamed@g3d_resanmscn_cpp@"

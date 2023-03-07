@@ -650,41 +650,40 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_8050B550
-lbl_8050B550:
+.obj lbl_8050B550, global
 	.asciz "percent_E"
 	.balign 4
+.endobj lbl_8050B550
 
-.global lbl_8050B55C
-lbl_8050B55C:
+.obj lbl_8050B55C, global
 	.asciz "percent_D"
 	.balign 4
+.endobj lbl_8050B55C
 
-.global lbl_8050B568
-lbl_8050B568:
+.obj lbl_8050B568, global
 	.asciz "percent_C"
 	.balign 4
+.endobj lbl_8050B568
 
-.global lbl_8050B574
-lbl_8050B574:
+.obj lbl_8050B574, global
 	.asciz "percent_B"
 	.balign 4
+.endobj lbl_8050B574
 
-.global lbl_8050B580
-lbl_8050B580:
+.obj lbl_8050B580, global
 	.asciz "percent_A"
 	.balign 4
+.endobj lbl_8050B580
 
-.global lbl_8050B58C
-lbl_8050B58C:
+.obj lbl_8050B58C, global
 	.asciz "percent_S"
 	.balign 4
+.endobj lbl_8050B58C
 
 
-.global lbl_8050B598
-lbl_8050B598:
+.obj lbl_8050B598, global
 	.4byte lbl_8066B490
 	.4byte lbl_8050B550
 	.4byte lbl_8050B55C
@@ -692,32 +691,34 @@ lbl_8050B598:
 	.4byte lbl_8050B574
 	.4byte lbl_8050B580
 	.4byte lbl_8050B58C
+.endobj lbl_8050B598
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B478
-float_8066B478:
+.obj float_8066B478, global
 	.float 30 #0x41F00000
+.endobj float_8066B478
 
 
-.global float_8066B47C
-float_8066B47C:
+.obj float_8066B47C, global
 	.float 0
+.endobj float_8066B47C
 
 
-.global double_8066B480
-double_8066B480:
+.obj double_8066B480, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066B480
 
-.global double_8066B488
-double_8066B488:
+.obj double_8066B488, global
 	.8byte 0x4330000080000000 #signed int to float constant
-.global lbl_8066B490
-lbl_8066B490:
+.endobj double_8066B488
+
+.obj lbl_8066B490, global
 	.4byte 0
+.endobj lbl_8066B490
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

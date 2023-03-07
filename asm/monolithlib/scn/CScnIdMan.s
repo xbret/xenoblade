@@ -118,33 +118,33 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CScnIdMan_typestr
-CScnIdMan_typestr:
+.obj CScnIdMan_typestr, global
 	.asciz "CScnIdMan"
 	.balign 4
 	.4byte 0
+.endobj CScnIdMan_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CScnIdMan
-__vt__CScnIdMan:
+.obj __vt__CScnIdMan, global
 	.4byte __RTTI__CScnIdMan
 	.4byte 0
 	.4byte __dt__CScnIdMan
 	.4byte func_8049E570
+.endobj __vt__CScnIdMan
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CScnIdMan
-__RTTI__CScnIdMan:
+.obj __RTTI__CScnIdMan, global
 	.4byte CScnIdMan_typestr
 	.4byte 0
+.endobj __RTTI__CScnIdMan
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

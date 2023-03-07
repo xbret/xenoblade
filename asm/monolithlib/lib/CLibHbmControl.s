@@ -718,25 +718,26 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CLibHbmControl_typestr
-CLibHbmControl_typestr:
+.obj CLibHbmControl_typestr, global
 	.asciz "CLibHbmControl"
 	.balign 4
+.endobj CLibHbmControl_typestr
 
 
-.global CLibHbmControl_strpool
-CLibHbmControl_strpool:
+.obj CLibHbmControl_strpool, global
 	.asciz "exit wii menu\n"
 	.asciz "exit wii reset\n"
 	.asciz "CLibHbmControl"
 	.balign 4
+.endobj CLibHbmControl_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global jumptable_80570AA8
-jumptable_80570AA8:
+.balign 8
+
+.obj jumptable_80570AA8, global
 	.4byte .L_8045E7C4
 	.4byte .L_8045E778
 	.4byte .L_8045E780
@@ -749,9 +750,9 @@ jumptable_80570AA8:
 	.4byte .L_8045E7B0
 	.4byte .L_8045E7BC
 	.4byte 0
+.endobj jumptable_80570AA8
 
-.global __vt__CLibHbmControl
-__vt__CLibHbmControl:
+.obj __vt__CLibHbmControl, global
 	.4byte __RTTI__CLibHbmControl
 	.4byte 0
 	.4byte __dt__CLibHbmControl
@@ -792,9 +793,9 @@ __vt__CLibHbmControl:
 	.4byte func_8045ED8C
 	.4byte func_8045EF30
 	.4byte func_80039E30
+.endobj __vt__CLibHbmControl
 
-.global CLibHbmControl_hierarchy
-CLibHbmControl_hierarchy:
+.obj CLibHbmControl_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
@@ -803,92 +804,95 @@ CLibHbmControl_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CLibHbmControl_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CLibHbmControl
-__RTTI__CLibHbmControl:
+.obj __RTTI__CLibHbmControl, global
 	.4byte CLibHbmControl_typestr
 	.4byte CLibHbmControl_hierarchy
+.endobj __RTTI__CLibHbmControl
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066CD30
-float_8066CD30:
+.balign 8
+
+.obj float_8066CD30, global
 	.float 0.03515625 #0x3D100000
+.endobj float_8066CD30
 
 
-.global float_8066CD34
-float_8066CD34:
+.obj float_8066CD34, global
 	.float 0.7071 #0x3F350481
+.endobj float_8066CD34
 
 
-.global float_8066CD38
-float_8066CD38:
+.obj float_8066CD38, global
 	.float 0
+.endobj float_8066CD38
 
 
-.global float_8066CD3C
-float_8066CD3C:
+.obj float_8066CD3C, global
 	.float 1.0
+.endobj float_8066CD3C
 
 
-.global float_8066CD40
-float_8066CD40:
+.obj float_8066CD40, global
 	.float -1.0
+.endobj float_8066CD40
 
 
-.global float_8066CD44
-float_8066CD44:
+.obj float_8066CD44, global
 	.float 0.0625 #0x3D800000
+.endobj float_8066CD44
 
 
-.global float_8066CD48
-float_8066CD48:
+.obj float_8066CD48, global
 	.float 0.6 #0x3F19999A
+.endobj float_8066CD48
 
 
-.global float_8066CD4C
-float_8066CD4C:
+.obj float_8066CD4C, global
 	.float 670 #0x44278000
+.endobj float_8066CD4C
 
 
-.global float_8066CD50
-float_8066CD50:
+.obj float_8066CD50, global
 	.float 456 #0x43E40000
+.endobj float_8066CD50
 
 
-.global float_8066CD54
-float_8066CD54:
+.obj float_8066CD54, global
 	.float 228 #0x43640000
+.endobj float_8066CD54
 
 
-.global float_8066CD58
-float_8066CD58:
+.obj float_8066CD58, global
 	.float 304 #0x43980000
+.endobj float_8066CD58
 
 
-.global float_8066CD5C
-float_8066CD5C:
+.obj float_8066CD5C, global
 	.float 500 #0x43FA0000
+.endobj float_8066CD5C
 
 
-.global float_8066CD60
-float_8066CD60:
+.obj float_8066CD60, global
 	.float 686 #0x442B8000
+.endobj float_8066CD60
 
 
-.global float_8066CD64
-float_8066CD64:
+.obj float_8066CD64, global
 	.float 416 #0x43D00000
+.endobj float_8066CD64
 
 
-.global double_8066CD68
-double_8066CD68:
+.obj double_8066CD68, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066CD68
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

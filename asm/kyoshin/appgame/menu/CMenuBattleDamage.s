@@ -2357,16 +2357,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMenuBattleDamage_typestr
-CMenuBattleDamage_typestr:
+.obj CMenuBattleDamage_typestr, global
 	.asciz "CMenuBattleDamage"
 	.balign 4
+.endobj CMenuBattleDamage_typestr
 
 
-.global CMenuBattleDamage_strpool
-CMenuBattleDamage_strpool:
+.obj CMenuBattleDamage_strpool, global
 	.asciz "CMenuBattleDamage"
 	.asciz "mf71_battle15_damege.brlyt"
 	.asciz "mf71_battle15_damege_dot.brlan"
@@ -2396,6 +2395,7 @@ CMenuBattleDamage_strpool:
 	.asciz "txt_dot"
 	.asciz "txt_spike"
 	.asciz "pic_efct"
+.endobj CMenuBattleDamage_strpool
 
 	#ダブルアタック
 	.4byte 0x835F8375
@@ -2430,10 +2430,9 @@ CMenuBattleDamage_strpool:
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+#.balign 8
 
-
-.global IUIBattle_hierarchy
-IUIBattle_hierarchy:
+.obj IUIBattle_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -2443,10 +2442,10 @@ IUIBattle_hierarchy:
 	.4byte __RTTI__CTTask_IUIBattle
 	.4byte 0
 	.4byte 0
+.endobj IUIBattle_hierarchy
 
 
-.global __vt__CTTask_IUIBattle
-__vt__CTTask_IUIBattle:
+.obj __vt__CTTask_IUIBattle, global
 	.4byte __RTTI__CTTask_IUIBattle
 	.4byte 0
 	.4byte __dt__CTTask_IUIBattle
@@ -2456,9 +2455,9 @@ __vt__CTTask_IUIBattle:
 	.4byte func_80108BA0
 	.4byte func_80108BE8
 	.4byte func_80043F20
+.endobj __vt__CTTask_IUIBattle
 
-.global CTTask_IUIBattle_hierarchy
-CTTask_IUIBattle_hierarchy:
+.obj CTTask_IUIBattle_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -2466,10 +2465,10 @@ CTTask_IUIBattle_hierarchy:
 	.4byte __RTTI__CProcess
 	.4byte 0
 	.4byte 0
+.endobj CTTask_IUIBattle_hierarchy
 
 
-.global jumptable_8052F9D0
-jumptable_8052F9D0:
+.obj jumptable_8052F9D0, global
 	.4byte .L_80109D0C
 	.4byte .L_80109D30
 	.4byte .L_80109D54
@@ -2482,10 +2481,10 @@ jumptable_8052F9D0:
 	.4byte .L_80109EA4
 	.4byte .L_80109ED4
 	.4byte 0
+.endobj jumptable_8052F9D0
 
 
-.global __vt__CMenuBattleDamage
-__vt__CMenuBattleDamage:
+.obj __vt__CMenuBattleDamage, global
 	.4byte __RTTI__CMenuBattleDamage
 	.4byte 0
 	.4byte __dt__CMenuBattleDamage
@@ -2534,9 +2533,9 @@ __vt__CMenuBattleDamage:
 	.4byte func_8010A68C
 	.4byte func_8010A684
 	.4byte func_80109444
+.endobj __vt__CMenuBattleDamage
 
-.global CMenuBattleDamage_hierarchy
-CMenuBattleDamage_hierarchy:
+.obj CMenuBattleDamage_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x0000005C
 	.4byte __RTTI__IWorkEvent
@@ -2553,66 +2552,69 @@ CMenuBattleDamage_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuBattleDamage_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuBattleDamage
-__RTTI__CMenuBattleDamage:
+.obj __RTTI__CMenuBattleDamage, global
 	.4byte CMenuBattleDamage_typestr
 	.4byte CMenuBattleDamage_hierarchy
+.endobj __RTTI__CMenuBattleDamage
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_80669830
-float_80669830:
+.obj float_80669830, global
 	.float 0
+.endobj float_80669830
 
 
-.global float_80669834
-float_80669834:
+.obj float_80669834, global
 	.float 1.0
+.endobj float_80669834
 
 
-.global float_80669838
-float_80669838:
+.obj float_80669838, global
 	.float 320 #0x43A00000
+.endobj float_80669838
 
 
-.global float_8066983C
-float_8066983C:
+.obj float_8066983C, global
 	.float 224 #0x43600000
+.endobj float_8066983C
 
 
-.global float_80669840
-float_80669840:
+.obj float_80669840, global
 	.float -1.0
+.endobj float_80669840
 
 
-.global float_80669844
-float_80669844:
+.obj float_80669844, global
 	.float 25 #0x41C80000
+.endobj float_80669844
 
 
-.global float_80669848
-float_80669848:
+.obj float_80669848, global
 	.float 0.5
 	.4byte 0
+.endobj float_80669848
 
 
-.global double_80669850
-double_80669850:
+.obj double_80669850, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_80669850
+
+
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80666820
-lbl_80666820:
+.obj lbl_80666820, global
 	.skip 0x8
+.endobj lbl_80666820
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

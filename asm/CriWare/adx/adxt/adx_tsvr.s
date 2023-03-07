@@ -1119,25 +1119,30 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global adx_tsvr_strpool
-adx_tsvr_strpool:
+.balign 8
+
+.obj adx_tsvr_strpool, global
 	.asciz "E8101201 adxt_trap_entry: not enough data"
 	.asciz "E9081001 adxt_stat_decinfo: can't play this number of channels"
 	.asciz "E02080842 adxt_ExecHndl: parameter error"
 	.balign 4
 	.4byte 0
+.endobj adx_tsvr_strpool
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global adxt_enddecinfo_cbfn
-adxt_enddecinfo_cbfn:
+.obj adxt_enddecinfo_cbfn, global
 	.skip 0x4
-.global adxt_dbg_nch
-adxt_dbg_nch:
+.endobj adxt_enddecinfo_cbfn
+
+.obj adxt_dbg_nch, global
 	.skip 0x4
-.global adxt_dbg_ndt
-adxt_dbg_ndt:
+.endobj adxt_dbg_nch
+
+.obj adxt_dbg_ndt, global
 	.skip 0x4
-.global adxt_dbg_rna_ndata
-adxt_dbg_rna_ndata:
+.endobj adxt_dbg_ndt
+
+.obj adxt_dbg_rna_ndata, global
 	.skip 0x4
+.endobj adxt_dbg_rna_ndata

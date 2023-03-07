@@ -364,8 +364,10 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-NoteTable__Q44nw4r3snd6detail4Util:
+
+.obj NoteTable__Q44nw4r3snd6detail4Util, local
     .float 1.0
     .float 1.0594631
     .float 1.122462
@@ -378,9 +380,10 @@ NoteTable__Q44nw4r3snd6detail4Util:
     .float 1.6817929
     .float 1.7817974
     .float 1.8877486
+.endobj NoteTable__Q44nw4r3snd6detail4Util
 
 
-PitchTable__Q44nw4r3snd6detail4Util:
+.obj PitchTable__Q44nw4r3snd6detail4Util, local
     .float 1.0
     .float 1.0002257
     .float 1.0004513
@@ -637,9 +640,10 @@ PitchTable__Q44nw4r3snd6detail4Util:
     .float 1.0587462
     .float 1.0589851
     .float 1.0592241
+.endobj PitchTable__Q44nw4r3snd6detail4Util
 
 
-Decibel2RatioTable__Q44nw4r3snd6detail4Util:
+.obj Decibel2RatioTable__Q44nw4r3snd6detail4Util, local
     .float 0
     .float 3.0549199E-05
     .float 3.0903E-05
@@ -1605,8 +1609,9 @@ Decibel2RatioTable__Q44nw4r3snd6detail4Util:
     .float 1.9498446
     .float 1.9724227
     .float 1.9952623
+.endobj Decibel2RatioTable__Q44nw4r3snd6detail4Util
 
-Pan2RatioTableSqrt__Q44nw4r3snd6detail4Util:
+.obj Pan2RatioTableSqrt__Q44nw4r3snd6detail4Util, local
     .float 1.0
     .float 0.99804497
     .float 0.99608612
@@ -1864,9 +1869,10 @@ Pan2RatioTableSqrt__Q44nw4r3snd6detail4Util:
     .float 0.088388346
     .float 0.0625
     .float 0
+.endobj Pan2RatioTableSqrt__Q44nw4r3snd6detail4Util
 
 
-Pan2RatioTableSinCos__Q44nw4r3snd6detail4Util:
+.obj Pan2RatioTableSinCos__Q44nw4r3snd6detail4Util, local
     .float 1.0
     .float 0.99998116
     .float 0.99992472
@@ -2124,8 +2130,9 @@ Pan2RatioTableSinCos__Q44nw4r3snd6detail4Util:
     .float 0.012271538
     .float 0.0061358851
     .float 0 #0
+.endobj Pan2RatioTableSinCos__Q44nw4r3snd6detail4Util
 
-Pan2RatioTableLinear__Q44nw4r3snd6detail4Util:
+.obj Pan2RatioTableLinear__Q44nw4r3snd6detail4Util, local
     .float 1.0
     .float 0.99609375
     .float 0.9921875
@@ -2383,9 +2390,10 @@ Pan2RatioTableLinear__Q44nw4r3snd6detail4Util:
     .float 0.0078125
     .float 0.00390625
     .float 0 #0
+.endobj Pan2RatioTableLinear__Q44nw4r3snd6detail4Util
 
 
-RemoteFilterCoefTable__Q44nw4r3snd6detail4Util:
+.obj RemoteFilterCoefTable__Q44nw4r3snd6detail4Util, local
 	.4byte 0x387C70F7
 	.4byte 0x387C8144
 	.4byte 0xC13E3549
@@ -2706,9 +2714,10 @@ RemoteFilterCoefTable__Q44nw4r3snd6detail4Util:
 	.4byte 0xC0F00001
 	.4byte 0x00010001
 	.4byte 0x7F18C0E6
+.endobj RemoteFilterCoefTable__Q44nw4r3snd6detail4Util
 
 
-CalcLpfFreqTable__Q44nw4r3snd6detail4Util:
+.obj CalcLpfFreqTable__Q44nw4r3snd6detail4Util, local
 	.2byte 0x0050
     .2byte 0x0064
 	.2byte 0x0080
@@ -2733,82 +2742,90 @@ CalcLpfFreqTable__Q44nw4r3snd6detail4Util:
     .2byte 0x2800
 	.2byte 0x3200
     .2byte 0x3E80
+.endobj CalcLpfFreqTable__Q44nw4r3snd6detail4Util
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-PanTableTable__Q44nw4r3snd6detail4Util:
+
+.obj PanTableTable__Q44nw4r3snd6detail4Util, local
 	.4byte Pan2RatioTableSqrt__Q44nw4r3snd6detail4Util
 	.4byte Pan2RatioTableSinCos__Q44nw4r3snd6detail4Util
 	.4byte Pan2RatioTableLinear__Q44nw4r3snd6detail4Util
 	.4byte 0
+.endobj PanTableTable__Q44nw4r3snd6detail4Util
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
+
 #@LOCAL@CalcRandom__Q44nw4r3snd6detail4UtilFv@u
-.global lbl_80665E20
-lbl_80665E20:
+.obj lbl_80665E20, global
 	.4byte 0x12345678
 	.4byte 0
+.endobj lbl_80665E20
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C8D0
-float_8066C8D0:
+.balign 8
+
+.obj float_8066C8D0, global
 	.float 1.0
+.endobj float_8066C8D0
 
 
-.global float_8066C8D4
-float_8066C8D4:
+.obj float_8066C8D4, global
 	.float 2 #0x40000000
+.endobj float_8066C8D4
 
 
-.global float_8066C8D8
-float_8066C8D8:
+.obj float_8066C8D8, global
 	.float 0.5
+.endobj float_8066C8D8
 
 
-.global float_8066C8DC
-float_8066C8DC:
+.obj float_8066C8DC, global
 	.float 6 #0x40C00000
+.endobj float_8066C8DC
 
 
-.global float_8066C8E0
-float_8066C8E0:
+.obj float_8066C8E0, global
 	.float -90.4 #0xC2B4CCCD
+.endobj float_8066C8E0
 
 
-.global float_8066C8E4
-float_8066C8E4:
+.obj float_8066C8E4, global
 	.float 10.0
+.endobj float_8066C8E4
 
 
-.global float_8066C8E8
-float_8066C8E8:
+.obj float_8066C8E8, global
 	.float -1.0
+.endobj float_8066C8E8
 
 
-.global float_8066C8EC
-float_8066C8EC:
+.obj float_8066C8EC, global
 	.float 256 #0x43800000
+.endobj float_8066C8EC
 
 
-.global float_8066C8F0
-float_8066C8F0:
+.obj float_8066C8F0, global
 	.float 0
+.endobj float_8066C8F0
 
 
-.global float_8066C8F4
-float_8066C8F4:
+.obj float_8066C8F4, global
 	.float 0.13561438 #0x3E0ADE7F
+.endobj float_8066C8F4
 
 
-.global float_8066C8F8
-float_8066C8F8:
+.obj float_8066C8F8, global
 	.float 0.9 #0x3F666666
+.endobj float_8066C8F8
 
 
-.global float_8066C8FC
-float_8066C8FC:
+.obj float_8066C8FC, global
 	.float 0.033333335 #0x3D088889
+.endobj float_8066C8FC

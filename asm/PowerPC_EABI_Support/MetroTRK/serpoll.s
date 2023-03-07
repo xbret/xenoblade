@@ -110,8 +110,8 @@
 
 .balign 8 #needed to align nubinit.c
 
-.global gTRKInputPendingPtr
-gTRKInputPendingPtr:
+.obj gTRKInputPendingPtr, global
 	.skip 0x4
+.endobj gTRKInputPendingPtr
 
 .skip 0x4

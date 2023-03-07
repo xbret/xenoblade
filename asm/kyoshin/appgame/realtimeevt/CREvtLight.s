@@ -281,19 +281,18 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CREvtLight_typestr
-cf_CREvtLight_typestr:
+.obj cf_CREvtLight_typestr, global
 	.asciz "cf::CREvtLight"
 	.balign 4
+.endobj cf_CREvtLight_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CREvtLight
-__vt__cf_CREvtLight:
+.obj __vt__cf_CREvtLight, global
 	.4byte __RTTI__cf_CREvtLight
 	.4byte 0
 	.4byte func_801C3604
@@ -304,43 +303,42 @@ __vt__cf_CREvtLight:
 	.4byte func_801809A8
 	.4byte func_801696C4
 	.4byte func_801C37C4
+.endobj __vt__cf_CREvtLight
 
-.global cf_CREvtLight_hierarchy
-cf_CREvtLight_hierarchy:
+.obj cf_CREvtLight_hierarchy, global
 	.4byte __RTTI__cf_CREvtObj
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CREvtLight_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CREvtLight
-__RTTI__cf_CREvtLight:
+.obj __RTTI__cf_CREvtLight, global
 	.4byte cf_CREvtLight_typestr
 	.4byte cf_CREvtLight_hierarchy
+.endobj __RTTI__cf_CREvtLight
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-
-
-.global float_8066A7C8
-float_8066A7C8:
+.obj float_8066A7C8, global
 	.float 0.0245436933 #0x3CC90FDB
+.endobj float_8066A7C8
 
 
-.global float_8066A7CC
-float_8066A7CC:
+.obj float_8066A7CC, global
 	.float 60 #0x42700000
+.endobj float_8066A7CC
 
 
-.global float_8066A7D0
-float_8066A7D0:
+.obj float_8066A7D0, global
 	.float 2 #0x40000000
 	.4byte 0
+.endobj float_8066A7D0
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

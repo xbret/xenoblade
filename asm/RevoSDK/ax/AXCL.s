@@ -754,42 +754,54 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global __AXCommandList
-__AXCommandList:
+.obj __AXCommandList, global
 	.skip 0x100
+.endobj __AXCommandList
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-__AXAuxCVolume:
+.balign 8
+
+.obj __AXAuxCVolume, local
 	.skip 0x2
+.endobj __AXAuxCVolume
 
-__AXAuxBVolume:
+.obj __AXAuxBVolume, local
 	.skip 0x2
+.endobj __AXAuxBVolume
 
-__AXAuxAVolume:
+.obj __AXAuxAVolume, local
 	.skip 0x2
+.endobj __AXAuxAVolume
 
-__AXMasterVolume:
+.obj __AXMasterVolume, local
 	.skip 0x2
+.endobj __AXMasterVolume
 
-__AXCompressorReleaseFrames:
+.obj __AXCompressorReleaseFrames, local
 	.skip 0x4
+.endobj __AXCompressorReleaseFrames
 
-__AXCompressorTable:
+.obj __AXCompressorTable, local
 	.skip 0x4
+.endobj __AXCompressorTable
 
-__AXCompressor:
+.obj __AXCompressor, local
 	.skip 0x4
+.endobj __AXCompressor
 
-__AXCommandListCycles:
+.obj __AXCommandListCycles, local
 	.skip 0x4
+.endobj __AXCommandListCycles
 
-.global __AXClMode
-__AXClMode:
+.obj __AXClMode, global
 	.skip 0x4
+.endobj __AXClMode
 
-__AXClWrite:
+.obj __AXClWrite, local
 	.skip 0x4
+.endobj __AXClWrite
 
-__AXCommandListPosition:
+.obj __AXCommandListPosition, local
 	.skip 0x8
+.endobj __AXCommandListPosition

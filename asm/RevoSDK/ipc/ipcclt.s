@@ -1828,34 +1828,47 @@
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-__mailboxAck:
-	.4byte 0x00000001
+.balign 8
 
-hid:
+.obj __mailboxAck, local
+	.4byte 0x00000001
+.endobj __mailboxAck
+
+.obj hid, local
 	.4byte 0xFFFFFFFF
+.endobj hid
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-__responses:
+.obj __responses, local
 	.skip 0x50
+.endobj __responses
 
-__timeout_alarm:
+.obj __timeout_alarm, local
 	.skip 0x30
+.endobj __timeout_alarm
 
-__rpcBuf:
+.obj __rpcBuf, local
 	.skip 0x40
+.endobj __rpcBuf
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-__relnchFl:
-	.skip 0x4
+.balign 8
 
-__relnchRpc:
+.obj __relnchFl, local
 	.skip 0x4
+.endobj __relnchFl
 
-__relnchRpcSave:
+.obj __relnchRpc, local
 	.skip 0x4
+.endobj __relnchRpc
+
+.obj __relnchRpcSave, local
+	.skip 0x4
+.endobj __relnchRpcSave
 
 #@LOCAL@IPCCltInit__Fv@initialized
-lbl_8066798C:
+.obj lbl_8066798C, local
 	.skip 0x4
+.endobj lbl_8066798C

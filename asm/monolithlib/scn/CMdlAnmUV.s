@@ -650,83 +650,83 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMdlAnmUV_typestr
-CMdlAnmUV_typestr:
+.obj CMdlAnmUV_typestr, global
 	.asciz "CMdlAnmUV"
 	.balign 4
+.endobj CMdlAnmUV_typestr
 
 
-.global lbl_805280D4
-lbl_805280D4:
+.obj lbl_805280D4, global
 	.asciz "%s%d%d"
 	.balign 4
 	.4byte 0
+.endobj lbl_805280D4
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMdlAnmUV
-__vt__CMdlAnmUV:
+.obj __vt__CMdlAnmUV, global
 	.4byte __RTTI__CMdlAnmUV
 	.4byte 0
 	.4byte __dt__CMdlAnmUV
 	.4byte 0
+.endobj __vt__CMdlAnmUV
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80666588
-lbl_80666588:
+.obj lbl_80666588, global
 	.4byte lbl_8066DAE8
+.endobj lbl_80666588
 
 
-.global lbl_8066658C
-lbl_8066658C:
+.obj lbl_8066658C, global
 	.4byte lbl_8066DAF0
+.endobj lbl_8066658C
 
-.global __RTTI__CMdlAnmUV
-__RTTI__CMdlAnmUV:
+.obj __RTTI__CMdlAnmUV, global
 	.4byte CMdlAnmUV_typestr
 	.4byte 0
+.endobj __RTTI__CMdlAnmUV
 
 
-.global lbl_80666598
-lbl_80666598:
+.obj lbl_80666598, global
 	.4byte 0x72656600
+.endobj lbl_80666598
 
 
-.global lbl_8066659C
-lbl_8066659C:
+.obj lbl_8066659C, global
 	.4byte 0x72656600
+.endobj lbl_8066659C
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_8066DAE8
-lbl_8066DAE8:
+.obj lbl_8066DAE8, global
 	.asciz "JUview"
 	.balign 4
+.endobj lbl_8066DAE8
 
-.global lbl_8066DAF0
-lbl_8066DAF0:
+.obj lbl_8066DAF0, global
 	.asciz "mtIris"
 	.balign 4
+.endobj lbl_8066DAF0
 
 
-.global float_8066DAF8
-float_8066DAF8:
+.obj float_8066DAF8, global
 	.float 1.0
+.endobj float_8066DAF8
 
 
-.global float_8066DAFC
-float_8066DAFC:
+.obj float_8066DAFC, global
 	.float 0
+.endobj float_8066DAFC
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

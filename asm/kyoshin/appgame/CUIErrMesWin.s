@@ -1575,30 +1575,29 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CUIErrMesWin_typestr
-CUIErrMesWin_typestr:
+.obj CUIErrMesWin_typestr, global
 	.asciz "CUIErrMesWin"
 	.balign 4
+.endobj CUIErrMesWin_typestr
 
-.global CTTask_CUIErrMesWin_typestr
-CTTask_CUIErrMesWin_typestr:
+.obj CTTask_CUIErrMesWin_typestr, global
 	.asciz "CTTask<CUIErrMesWin>"
 	.balign 4
+.endobj CTTask_CUIErrMesWin_typestr
 
 
-.global lbl_8050CA08
-lbl_8050CA08:
+.obj lbl_8050CA08, global
 	.asciz "MNU_sysmes"
 	.asciz "name"
+.endobj lbl_8050CA08
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8053E5C8
-lbl_8053E5C8:
+.obj lbl_8053E5C8, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802B4EF4
@@ -1621,10 +1620,10 @@ lbl_8053E5C8:
 	.4byte 0xFFFFFFFF
 	.4byte func_802B5094
 	.4byte 0
+.endobj lbl_8053E5C8
 
 
-.global __vt__CUIErrMesWin
-__vt__CUIErrMesWin:
+.obj __vt__CUIErrMesWin, global
 	.4byte __RTTI__CUIErrMesWin
 	.4byte 0
 	.4byte __dt__CUIErrMesWin
@@ -1673,9 +1672,9 @@ __vt__CUIErrMesWin:
 	.4byte func_802B5140
 	.4byte func_802B5138
 	.4byte func_802B4D94
+.endobj __vt__CUIErrMesWin
 
-.global CUIErrMesWin_hierarchy
-CUIErrMesWin_hierarchy:
+.obj CUIErrMesWin_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000058
 	.4byte __RTTI__IWorkEvent
@@ -1689,10 +1688,10 @@ CUIErrMesWin_hierarchy:
 	.4byte __RTTI__CTTask_CUIErrMesWin
 	.4byte 0
 	.4byte 0
+.endobj CUIErrMesWin_hierarchy
 
 
-.global __vt__CTTask_CUIErrMesWin
-__vt__CTTask_CUIErrMesWin:
+.obj __vt__CTTask_CUIErrMesWin, global
 	.4byte __RTTI__CTTask_CUIErrMesWin
 	.4byte 0
 	.4byte __dt__CTTask_CUIErrMesWin
@@ -1702,9 +1701,9 @@ __vt__CTTask_CUIErrMesWin:
 	.4byte func_802B50A0
 	.4byte func_802B50E8
 	.4byte func_80043F20
+.endobj __vt__CTTask_CUIErrMesWin
 
-.global CTTask_CUIErrMesWin_hierarchy
-CTTask_CUIErrMesWin_hierarchy:
+.obj CTTask_CUIErrMesWin_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -1713,10 +1712,10 @@ CTTask_CUIErrMesWin_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CTTask_CUIErrMesWin_hierarchy
 
 
-.global lbl_8053E758
-lbl_8053E758:
+.obj lbl_8053E758, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802B5F0C
@@ -1747,57 +1746,58 @@ lbl_8053E758:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802B6280
+.endobj lbl_8053E758
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CUIErrMesWin
-__RTTI__CUIErrMesWin:
+.obj __RTTI__CUIErrMesWin, global
 	.4byte CUIErrMesWin_typestr
 	.4byte CUIErrMesWin_hierarchy
+.endobj __RTTI__CUIErrMesWin
 
-.global __RTTI__CTTask_CUIErrMesWin
-__RTTI__CTTask_CUIErrMesWin:
+.obj __RTTI__CTTask_CUIErrMesWin, global
 	.4byte CTTask_CUIErrMesWin_typestr
 	.4byte CTTask_CUIErrMesWin_hierarchy
+.endobj __RTTI__CTTask_CUIErrMesWin
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B7B8
-float_8066B7B8:
+.obj float_8066B7B8, global
 	.float 1.75 #0x3FE00000
+.endobj float_8066B7B8
 
 
-.global float_8066B7BC
-float_8066B7BC:
+.obj float_8066B7BC, global
 	.float 0.75
+.endobj float_8066B7BC
 
 
-.global float_8066B7C0
-float_8066B7C0:
+.obj float_8066B7C0, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_8066B7C0
 
 
-.global float_8066B7C4
-float_8066B7C4:
+.obj float_8066B7C4, global
 	.float 1.0
+.endobj float_8066B7C4
 
 
-.global float_8066B7C8
-float_8066B7C8:
+.obj float_8066B7C8, global
 	.float 0
 	.4byte 0
+.endobj float_8066B7C8
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80667508
-lbl_80667508:
+.obj lbl_80667508, global
 	.skip 0x8
+.endobj lbl_80667508
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

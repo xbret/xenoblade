@@ -495,18 +495,20 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_80652C40
-lbl_80652C40:
+.obj lbl_80652C40, global
 	.skip 0x10
+.endobj lbl_80652C40
 
 #@LOCAL@GetInstance__Q44nw4r3snd6detail11SoundThreadFv@instance
-.global lbl_80652C50
-lbl_80652C50:
+.obj lbl_80652C50, global
 	.skip 0x3B0
+.endobj lbl_80652C50
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
+
 #@GUARD@GetInstance__Q44nw4r3snd6detail11SoundThreadFv@instance
-.global lbl_80667DF0
-lbl_80667DF0:
+.obj lbl_80667DF0, global
 	.skip 0x8
+.endobj lbl_80667DF0

@@ -4232,210 +4232,209 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_804F97F0
-lbl_804F97F0:
+.obj lbl_804F97F0, global
 	.asciz "txt_land"
 	.balign 4
+.endobj lbl_804F97F0
 
-.global lbl_804F97FC
-lbl_804F97FC:
+.obj lbl_804F97FC, global
 	.asciz "txt_map_jump"
 	.balign 4
+.endobj lbl_804F97FC
 
-.global lbl_804F980C
-lbl_804F980C:
+.obj lbl_804F980C, global
 	.asciz "txt_crystal"
+.endobj lbl_804F980C
 
-.global lbl_804F9818
-lbl_804F9818:
+.obj lbl_804F9818, global
 	.asciz "txt_commu"
 	.balign 4
+.endobj lbl_804F9818
 
-.global lbl_804F9824
-lbl_804F9824:
+.obj lbl_804F9824, global
 	.asciz "txt_shop"
 	.balign 4
+.endobj lbl_804F9824
 
-.global lbl_804F9830
-lbl_804F9830:
+.obj lbl_804F9830, global
 	.asciz "txt_qst1"
 	.balign 4
+.endobj lbl_804F9830
 
-.global lbl_804F983C
-lbl_804F983C:
+.obj lbl_804F983C, global
 	.asciz "txt_qst2"
 	.balign 4
+.endobj lbl_804F983C
 
-.global lbl_804F9848
-lbl_804F9848:
+.obj lbl_804F9848, global
 	.asciz "txt_navi"
 	.balign 4
+.endobj lbl_804F9848
 
-.global lbl_804F9854
-lbl_804F9854:
+.obj lbl_804F9854, global
 	.asciz "txt_qst3"
 	.balign 4
+.endobj lbl_804F9854
 
-.global lbl_804F9860
-lbl_804F9860:
+.obj lbl_804F9860, global
 	.asciz "txt_scene"
 	.balign 4
+.endobj lbl_804F9860
 
-.global lbl_804F986C
-lbl_804F986C:
+.obj lbl_804F986C, global
 	.asciz "markerlist0000"
 	.balign 4
+.endobj lbl_804F986C
 
-.global lbl_804F987C
-lbl_804F987C:
+.obj lbl_804F987C, global
 	.asciz "markerlist0101"
 	.balign 4
+.endobj lbl_804F987C
 
-.global lbl_804F988C
-lbl_804F988C:
+.obj lbl_804F988C, global
 	.asciz "markerlist0201"
 	.balign 4
+.endobj lbl_804F988C
 
-.global lbl_804F989C
-lbl_804F989C:
+.obj lbl_804F989C, global
 	.asciz "markerlist0301"
 	.balign 4
+.endobj lbl_804F989C
 
-.global lbl_804F98AC
-lbl_804F98AC:
+.obj lbl_804F98AC, global
 	.asciz "markerlist0401"
 	.balign 4
+.endobj lbl_804F98AC
 
-.global lbl_804F98BC
-lbl_804F98BC:
+.obj lbl_804F98BC, global
 	.asciz "markerlist0402"
 	.balign 4
+.endobj lbl_804F98BC
 
-.global lbl_804F98CC
-lbl_804F98CC:
+.obj lbl_804F98CC, global
 	.asciz "markerlist0501"
 	.balign 4
+.endobj lbl_804F98CC
 
-.global lbl_804F98DC
-lbl_804F98DC:
+.obj lbl_804F98DC, global
 	.asciz "markerlist0601"
 	.balign 4
+.endobj lbl_804F98DC
 
-.global lbl_804F98EC
-lbl_804F98EC:
+.obj lbl_804F98EC, global
 	.asciz "markerlist0701"
 	.balign 4
+.endobj lbl_804F98EC
 
-.global lbl_804F98FC
-lbl_804F98FC:
+.obj lbl_804F98FC, global
 	.asciz "markerlist0801"
 	.balign 4
+.endobj lbl_804F98FC
 
-.global lbl_804F990C
-lbl_804F990C:
+.obj lbl_804F990C, global
 	.asciz "markerlist0901"
 	.balign 4
+.endobj lbl_804F990C
 
-.global lbl_804F991C
-lbl_804F991C:
+.obj lbl_804F991C, global
 	.asciz "markerlist1001"
 	.balign 4
+.endobj lbl_804F991C
 
-.global lbl_804F992C
-lbl_804F992C:
+.obj lbl_804F992C, global
 	.asciz "markerlist1101"
 	.balign 4
+.endobj lbl_804F992C
 
-.global lbl_804F993C
-lbl_804F993C:
+.obj lbl_804F993C, global
 	.asciz "markerlist1201"
 	.balign 4
+.endobj lbl_804F993C
 
-.global lbl_804F994C
-lbl_804F994C:
+.obj lbl_804F994C, global
 	.asciz "markerlist1202"
 	.balign 4
+.endobj lbl_804F994C
 
-.global lbl_804F995C
-lbl_804F995C:
+.obj lbl_804F995C, global
 	.asciz "markerlist1301"
 	.balign 4
+.endobj lbl_804F995C
 
-.global lbl_804F996C
-lbl_804F996C:
+.obj lbl_804F996C, global
 	.asciz "markerlist1401"
 	.balign 4
+.endobj lbl_804F996C
 
-.global lbl_804F997C
-lbl_804F997C:
+.obj lbl_804F997C, global
 	.asciz "markerlist1501"
 	.balign 4
+.endobj lbl_804F997C
 
-.global lbl_804F998C
-lbl_804F998C:
+.obj lbl_804F998C, global
 	.asciz "markerlist1601"
 	.balign 4
+.endobj lbl_804F998C
 
-.global lbl_804F999C
-lbl_804F999C:
+.obj lbl_804F999C, global
 	.asciz "markerlist1701"
 	.balign 4
+.endobj lbl_804F999C
 
-.global lbl_804F99AC
-lbl_804F99AC:
+.obj lbl_804F99AC, global
 	.asciz "markerlist1801"
 	.balign 4
+.endobj lbl_804F99AC
 
-.global lbl_804F99BC
-lbl_804F99BC:
+.obj lbl_804F99BC, global
 	.asciz "markerlist1901"
 	.balign 4
+.endobj lbl_804F99BC
 
-.global lbl_804F99CC
-lbl_804F99CC:
+.obj lbl_804F99CC, global
 	.asciz "markerlist2001"
 	.balign 4
+.endobj lbl_804F99CC
 
-.global lbl_804F99DC
-lbl_804F99DC:
+.obj lbl_804F99DC, global
 	.asciz "markerlist2101"
 	.balign 4
+.endobj lbl_804F99DC
 
-.global lbl_804F99EC
-lbl_804F99EC:
+.obj lbl_804F99EC, global
 	.asciz "markerlist2201"
 	.balign 4
+.endobj lbl_804F99EC
 
-.global lbl_804F99FC
-lbl_804F99FC:
+.obj lbl_804F99FC, global
 	.asciz "markerlist2301"
 	.balign 4
+.endobj lbl_804F99FC
 
-.global lbl_804F9A0C
-lbl_804F9A0C:
+.obj lbl_804F9A0C, global
 	.asciz "markerlist2401"
 	.balign 4
+.endobj lbl_804F9A0C
 
-.global CMenuMiniMap2_typestr
-CMenuMiniMap2_typestr:
+.obj CMenuMiniMap2_typestr, global
 	.asciz "CMenuMiniMap2"
 	.balign 4
+.endobj CMenuMiniMap2_typestr
 
-.global CMiniMap_typestr
-CMiniMap_typestr:
+.obj CMiniMap_typestr, global
 	.asciz "CMiniMap"
 	.balign 4
+.endobj CMiniMap_typestr
 
-.global CMMClock_typestr
-CMMClock_typestr:
+.obj CMMClock_typestr, global
 	.asciz "CMMClock"
 	.balign 4
+.endobj CMMClock_typestr
 
 
-.global CMinimap_strpool
-CMinimap_strpool:
+.obj CMinimap_strpool, global
 	.asciz "landmarklist"
 	.asciz "txt_land"
 	.asciz "mapID"
@@ -4502,13 +4501,13 @@ CMinimap_strpool:
 	.asciz "pic_map_jump%d"
 	.asciz "txt_map_jump"
 	.balign 4
+.endobj CMinimap_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8052FF10
-lbl_8052FF10:
+.obj lbl_8052FF10, global
 	.2byte 0x0000
 	.2byte 0x0065
 	.2byte 0x00C9
@@ -4541,10 +4540,10 @@ lbl_8052FF10:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8052FF10
 
 
-.global lbl_8052FF58
-lbl_8052FF58:
+.obj lbl_8052FF58, global
 	.4byte lbl_80669950
 	.4byte lbl_804F97F0
 	.4byte lbl_804F97FC
@@ -4557,10 +4556,10 @@ lbl_8052FF58:
 	.4byte lbl_804F9854
 	.4byte lbl_804F9860
 	.4byte 0
+.endobj lbl_8052FF58
 
 
-.global lbl_8052FF88
-lbl_8052FF88:
+.obj lbl_8052FF88, global
 	.4byte lbl_80669950
 	.4byte lbl_804F97FC
 	.4byte lbl_804F980C
@@ -4573,10 +4572,10 @@ lbl_8052FF88:
 	.4byte lbl_804F9860
 	.4byte 0
 	.4byte 0
+.endobj lbl_8052FF88
 
 
-.global lbl_8052FFB8
-lbl_8052FFB8:
+.obj lbl_8052FFB8, global
 	.4byte lbl_804F986C
 	.4byte lbl_804F987C
 	.4byte lbl_804F988C
@@ -4605,10 +4604,10 @@ lbl_8052FFB8:
 	.4byte lbl_804F99EC
 	.4byte lbl_804F99FC
 	.4byte lbl_804F9A0C
+.endobj lbl_8052FFB8
 
 
-.global __vt__CMenuMiniMap2
-__vt__CMenuMiniMap2:
+.obj __vt__CMenuMiniMap2, global
 	.4byte __RTTI__CMenuMiniMap2
 	.4byte 0
 	.4byte __dt__CMenuMiniMap2
@@ -4657,9 +4656,9 @@ __vt__CMenuMiniMap2:
 	.4byte func_8011C444
 	.4byte func_8011C43C
 	.4byte func_8011C0C0
+.endobj __vt__CMenuMiniMap2
 
-.global CMenuMiniMap2_hierarchy
-CMenuMiniMap2_hierarchy:
+.obj CMenuMiniMap2_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x0000005C
 	.4byte __RTTI__IWorkEvent
@@ -4676,10 +4675,10 @@ CMenuMiniMap2_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuMiniMap2_hierarchy
 
 
-.global __vt__CMiniMap
-__vt__CMiniMap:
+.obj __vt__CMiniMap, global
 	.4byte __RTTI__CMiniMap
 	.4byte 0
 	.4byte __dt__CMiniMap
@@ -4714,17 +4713,17 @@ __vt__CMiniMap:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CMiniMap
 
-.global CMiniMap_hierarchy
-CMiniMap_hierarchy:
+.obj CMiniMap_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMiniMap_hierarchy
 
 
-.global __vt__CMMTex
-__vt__CMMTex:
+.obj __vt__CMMTex, global
 	.4byte __RTTI__CMMTex
 	.4byte 0
 	.4byte __dt__CMMTex
@@ -4759,115 +4758,119 @@ __vt__CMMTex:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CMMTex
 
-.global CMMTex_hierarchy
-CMMTex_hierarchy:
+.obj CMMTex_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMMTex_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global float_80664740
-float_80664740:
+.obj float_80664740, global
 	.float 0.2
 	.4byte 0
+.endobj float_80664740
 
-.global __RTTI__CMenuMiniMap2
-__RTTI__CMenuMiniMap2:
+.obj __RTTI__CMenuMiniMap2, global
 	.4byte CMenuMiniMap2_typestr
 	.4byte CMenuMiniMap2_hierarchy
+.endobj __RTTI__CMenuMiniMap2
 
-.global __RTTI__CMiniMap
-__RTTI__CMiniMap:
+.obj __RTTI__CMiniMap, global
 	.4byte CMiniMap_typestr
 	.4byte CMiniMap_hierarchy
+.endobj __RTTI__CMiniMap
 
-.global __RTTI__CMMTex
-__RTTI__CMMTex:
+.obj __RTTI__CMMTex, global
 	.4byte CMMTex_typestr
 	.4byte CMMTex_hierarchy
+.endobj __RTTI__CMMTex
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_80669950
-lbl_80669950:
+.obj lbl_80669950, global
 	.asciz "txt_obj"
+.endobj lbl_80669950
 
 
-.global float_80669958
-float_80669958:
+.obj float_80669958, global
 	.float 0
+.endobj float_80669958
 
 
-.global float_8066995C
-float_8066995C:
+.obj float_8066995C, global
 	.float 45 #0x42340000
+.endobj float_8066995C
 
 
-.global double_80669960
-double_80669960:
+.obj double_80669960, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_80669960
 
-.global float_80669968
-float_80669968:
+.obj float_80669968, global
 	.float 60 #0x42700000
+.endobj float_80669968
 
 
-.global float_8066996C
-float_8066996C:
+.obj float_8066996C, global
 	.float 1.0
+.endobj float_8066996C
 
 
-.global double_80669970
-double_80669970:
+.obj double_80669970, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_80669970
 
-.global float_80669978
-float_80669978:
+.obj float_80669978, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_80669978
 
 
-.global float_8066997C
-float_8066997C:
+.obj float_8066997C, global
 	.float 0.5
+.endobj float_8066997C
 
 
-.global float_80669980
-float_80669980:
+.obj float_80669980, global
 	.float 36 #0x42100000
+.endobj float_80669980
 
 
-.global float_80669984
-float_80669984:
+.obj float_80669984, global
 	.float 180 #0x43340000
+.endobj float_80669984
 
 
-.global float_80669988
-float_80669988:
+.obj float_80669988, global
 	.float -1.0
+.endobj float_80669988
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_806668A8, global
+	.skip 0x4
+.endobj lbl_806668A8
 
-.global lbl_806668A8
-lbl_806668A8:
+.obj float_806668AC, global
 	.skip 0x4
-.global float_806668AC
-float_806668AC:
+.endobj float_806668AC
+
+.obj lbl_806668B0, global
 	.skip 0x4
-.global lbl_806668B0
-lbl_806668B0:
+.endobj lbl_806668B0
+
+.obj lbl_806668B4, global
 	.skip 0x4
-.global lbl_806668B4
-lbl_806668B4:
-	.skip 0x4
+.endobj lbl_806668B4
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

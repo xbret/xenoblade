@@ -1448,77 +1448,80 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CfObjectSelectorObj_typestr
-cf_CfObjectSelectorObj_typestr:
+.obj cf_CfObjectSelectorObj_typestr, global
 	.asciz "cf::CfObjectSelectorObj"
+.endobj cf_CfObjectSelectorObj_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CfObjectSelectorObj
-__vt__cf_CfObjectSelectorObj:
+.obj __vt__cf_CfObjectSelectorObj, global
 	.4byte __RTTI__cf_CfObjectSelectorObj
 	.4byte 0
 	.4byte __dt__cf_CfObjectSelectorObj
 	.4byte 0
+.endobj __vt__cf_CfObjectSelectorObj
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global float_806646A8
-float_806646A8:
+.obj float_806646A8, global
 	.float 2.7 #0x402CCCCD
 	.4byte 0
+.endobj float_806646A8
 
-.global __RTTI__cf_CfObjectSelectorObj
-__RTTI__cf_CfObjectSelectorObj:
+.obj __RTTI__cf_CfObjectSelectorObj, global
 	.4byte cf_CfObjectSelectorObj_typestr
 	.4byte 0
+.endobj __RTTI__cf_CfObjectSelectorObj
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_806697C0
-float_806697C0:
+.balign 8
+
+.obj float_806697C0, global
 	.float 0
+.endobj float_806697C0
 
 
-.global float_806697C4
-float_806697C4:
+.obj float_806697C4, global
 	.float 0.0245436933 #0x3CC90FDB
+.endobj float_806697C4
 
 
-.global float_806697C8
-float_806697C8:
+.obj float_806697C8, global
 	.float 0.5
+.endobj float_806697C8
 
-.global float_806697CC
-float_806697CC:
+.obj float_806697CC, global
 	.float 0.01 #0x3C23D70A
+.endobj float_806697CC
 
 
-.global float_806697D0
-float_806697D0:
+.obj float_806697D0, global
 	.float 14 #0x41600000
+.endobj float_806697D0
 
 
-.global float_806697D4
-float_806697D4:
+.obj float_806697D4, global
 	.float 18 #0x41900000
+.endobj float_806697D4
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj float_80666808, global
+	.skip 0x4
+.endobj float_80666808
 
-.global float_80666808
-float_80666808:
+.obj lbl_8066680C, global
 	.skip 0x4
-.global lbl_8066680C
-lbl_8066680C:
-	.skip 0x4
+.endobj lbl_8066680C
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

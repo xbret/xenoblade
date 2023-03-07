@@ -205,8 +205,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_805495F8
-lbl_805495F8:
+.balign 8
+
+.obj lbl_805495F8, global
 	.asciz "<< RVL_SDK - DSP \trelease build: Feb 27 2009 10:01:57 (0x4302_145) >>"
 	.balign 4
 	.asciz "DSPInit(): Build Date: %s %s\n"
@@ -214,16 +215,23 @@ lbl_805495F8:
 	.asciz "Feb 27 2009"
 	.asciz "10:01:57"
 	.balign 4
+.endobj lbl_805495F8
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-__DSPVersion:
+.balign 8
+
+.obj __DSPVersion, local
 	.4byte lbl_805495F8
 	.4byte 0
+.endobj __DSPVersion
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-__DSP_init_flag:
+.balign 8
+
+.obj __DSP_init_flag, local
 	.skip 0x4
+.endobj __DSP_init_flag
 
 .skip 0x4

@@ -4218,9 +4218,10 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
+
 #envMtx$12460
-.global lbl_80520F78
-lbl_80520F78:
+.obj lbl_80520F78, global
 	.float 0.5
 	.4byte 0
 	.4byte 0
@@ -4233,132 +4234,162 @@ lbl_80520F78:
 	.4byte 0
 	.4byte 0
 	.float 1.0
+.endobj lbl_80520F78
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056CEB0
-lbl_8056CEB0:
+.balign 8
+
+.obj lbl_8056CEB0, global
 	.4byte 0
 	.4byte 0
 	.4byte __cl__Q44nw4r3g3d8G3DState11IndMtxOpStdFPQ44nw4r3g3d8G3DState13IndTexMtxInfo
 	.4byte __dt__Q44nw4r3g3d8G3DState11IndMtxOpStdFv
 	.4byte Reset__Q44nw4r3g3d8G3DState11IndMtxOpStdFv
 	.4byte SetNrmMapMtx__Q44nw4r3g3d8G3DState11IndMtxOpStdF14_GXIndTexMtxIDPCQ34nw4r4math4VEC3PCQ34nw4r4math5MTX34Q44nw4r3g3d14ResMatMiscData14IndirectMethod
+.endobj lbl_8056CEB0
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665D98
-lbl_80665D98:
-	.4byte 0xFFFFFFFF
+.balign 8
 
-"pG3DStateIndMtxOp__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@":
+.obj lbl_80665D98, global
+	.4byte 0xFFFFFFFF
+.endobj lbl_80665D98
+
+.obj "pG3DStateIndMtxOp__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@", local
 	.4byte "IndMtxOpDefault__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@"
+.endobj "pG3DStateIndMtxOp__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@"
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-cm2hw__Q34nw4r3g3d4fifo:
+
+.obj cm2hw__Q34nw4r3g3d4fifo, local
 	.4byte 0x00020103
+.endobj cm2hw__Q34nw4r3g3d4fifo
 
 
-.global float_8066C3EC
-float_8066C3EC:
+.obj float_8066C3EC, global
 	.float 0
+.endobj float_8066C3EC
 
 
-.global float_8066C3F0
-float_8066C3F0:
+.obj float_8066C3F0, global
 	.float -1.0
+.endobj float_8066C3F0
 
 
-.global float_8066C3F4
-float_8066C3F4:
+.obj float_8066C3F4, global
 	.float 0.000001 #0x358637BD
+.endobj float_8066C3F4
 
 
-.global float_8066C3F8
-float_8066C3F8:
+.obj float_8066C3F8, global
 	.float 1.0
+.endobj float_8066C3F8
 
 
-.global float_8066C3FC
-float_8066C3FC:
+.obj float_8066C3FC, global
 	.float 0.5
+.endobj float_8066C3FC
 
 
 #unit$13678
-.global float_8066C400
-float_8066C400:
+.obj float_8066C400, global
 	.float 0.00392156886 #0x3B808081
 	.4byte 0
+.endobj float_8066C400
 
 
-.global double_8066C408
-double_8066C408:
+.obj double_8066C408, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066C408
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
-"sGenMode2__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@":
+.obj "sGenMode2__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@", local
 	.skip 0xC
+.endobj "sGenMode2__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@"
 
-"sTexCoordScale__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@":
+.obj "sTexCoordScale__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@", local
 	.skip 0x74
+.endobj "sTexCoordScale__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@"
 
-"sTex__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@":
+.obj "sTex__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@", local
 	.skip 0x120
+.endobj "sTex__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@"
 
-"sTlut__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@":
+.obj "sTlut__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@", local
 	.skip 0x70
+.endobj "sTlut__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@"
 
-"sPreTexMtxState__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@":
+.obj "sPreTexMtxState__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@", local
 	.skip 0x20
+.endobj "sPreTexMtxState__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@"
 
-"sPosNrmArrayState__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@":
+.obj "sPosNrmArrayState__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@", local
 	.skip 0x10
+.endobj "sPosNrmArrayState__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@"
 
-"sScnDependentTexMtxFuncTable__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@":
+.obj "sScnDependentTexMtxFuncTable__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@", local
 	.skip 0x800
+.endobj "sScnDependentTexMtxFuncTable__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@"
 
-"sFogState__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@":
+.obj "sFogState__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@", local
 	.skip 0x614
+.endobj "sFogState__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@"
 
-"sLightState__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@":
+.obj "sLightState__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@", local
 	.skip 0x2A2C
+.endobj "sLightState__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@"
 
-"sCameraMtxState__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@":
+.obj "sCameraMtxState__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@", local
 	.skip 0x1A34
+.endobj "sCameraMtxState__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@"
 
-"sRenderMode__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@":
+.obj "sRenderMode__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@", local
 	.skip 0x4C
+.endobj "sRenderMode__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@"
 
-"IndMtxOpDefault__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@":
+.obj "IndMtxOpDefault__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@", local
 	.skip 0x98
+.endobj "IndMtxOpDefault__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@"
 
 #@LOCAL@GetViewNrmMtxPtr__Q54nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@19PosNrmMtxArrayStateCFUl@m
-lbl_80622CD8:
+.obj lbl_80622CD8, local
 	.skip 0x28
+.endobj lbl_80622CD8
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-"sSyncGX__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@":
-	.skip 0x4
 
-"sCurrMtx__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@":
+.obj "sSyncGX__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@", local
 	.skip 0x4
+.endobj "sSyncGX__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@"
 
-"sPostTexMtx__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@":
+.obj "sCurrMtx__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@", local
 	.skip 0x4
+.endobj "sCurrMtx__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@"
 
-"sTev__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@":
+.obj "sPostTexMtx__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@", local
 	.skip 0x4
+.endobj "sPostTexMtx__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@"
+
+.obj "sTev__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@", local
+	.skip 0x4
+.endobj "sTev__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@"
 
 #@GUARD@GetViewNrmMtxPtr__Q54nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@19PosNrmMtxArrayStateCFUl@m
-lbl_80667D38:
+.obj lbl_80667D38, local
 	.skip 0x8
+.endobj lbl_80667D38
 
-"sMisc__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@":
+.obj "sMisc__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@", local
 	.skip 0x8
+.endobj "sMisc__Q44nw4r3g3d8G3DState23@unnamed@g3d_state_cpp@"

@@ -228,16 +228,19 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global TYPE_NAME__Q34nw4r3g3d7ScnProc
-TYPE_NAME__Q34nw4r3g3d7ScnProc:
+.balign 8
+
+.obj TYPE_NAME__Q34nw4r3g3d7ScnProc, global
 	.4byte 0x00000008
 	.asciz "ScnProc"
 	.4byte 0
+.endobj TYPE_NAME__Q34nw4r3g3d7ScnProc
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056D150
-lbl_8056D150:
+.balign 8
+
+.obj lbl_8056D150, global
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d7ScnProcCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -252,10 +255,13 @@ lbl_8056D150:
 	.4byte GetValueForSortXlu__Q34nw4r3g3d6ScnObjCFv
 	.4byte CalcWorldMtx__Q34nw4r3g3d7ScnLeafFPCQ34nw4r4math5MTX34PUl
 	.4byte 0
+.endobj lbl_8056D150
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C4F0
-float_8066C4F0:
+.balign 8
+
+.obj float_8066C4F0, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066C4F0

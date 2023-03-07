@@ -38,9 +38,10 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805F60B8
-lbl_805F60B8:
+.obj lbl_805F60B8, global
 	.skip 0x4
-.global lbl_805F60BC
-lbl_805F60BC:
+.endobj lbl_805F60B8
+
+.obj lbl_805F60BC, global
 	.skip 0x104
+.endobj lbl_805F60BC

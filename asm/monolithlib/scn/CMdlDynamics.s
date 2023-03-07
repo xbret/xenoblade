@@ -5456,16 +5456,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMdlDynamics_typestr
-CMdlDynamics_typestr:
+.obj CMdlDynamics_typestr, global
 	.asciz "CMdlDynamics"
 	.balign 4
+.endobj CMdlDynamics_typestr
 
 
-.global CMdlDynamics_strpool
-CMdlDynamics_strpool:
+.obj CMdlDynamics_strpool, global
 	.asciz "Dwet"
 	.asciz "Ddmp"
 	.asciz "Dsta"
@@ -5476,156 +5475,156 @@ CMdlDynamics_strpool:
 	.asciz "Dlink"
 	.asciz "Dllen"
 	.byte 0x00
+.endobj CMdlDynamics_strpool
 
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-
-.global lbl_80573A38
-lbl_80573A38:
+.obj lbl_80573A38, global
 	.4byte lbl_8066DB60
 	.4byte lbl_8066DB68
 	.4byte lbl_8066DB70
+.endobj lbl_80573A38
 
 
-.global __vt__CMdlDynamics
-__vt__CMdlDynamics:
+.obj __vt__CMdlDynamics, global
 	.4byte __RTTI__CMdlDynamics
 	.4byte 0
 	.4byte __dt__CMdlDynamics
+.endobj __vt__CMdlDynamics
 
 
-.global lbl_80573A50
-lbl_80573A50:
+.obj lbl_80573A50, global
 	.asciz "NW4R:Pointer must not be NULL (mpData)"
 	.balign 4
+.endobj lbl_80573A50
 
 
-.global lbl_80573A78
-lbl_80573A78:
+.obj lbl_80573A78, global
 	.asciz "g3d_rescommon_ac.h"
 	.balign 4
 	.4byte 0
+.endobj lbl_80573A78
 
 
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMdlDynamics
-__RTTI__CMdlDynamics:
+.obj __RTTI__CMdlDynamics, global
 	.4byte CMdlDynamics_typestr
 	.4byte 0
+.endobj __RTTI__CMdlDynamics
 
 
-.global lbl_806665D0
-lbl_806665D0:
+.obj lbl_806665D0, global
 	.4byte 0x72656600
+.endobj lbl_806665D0
 
 
-.global lbl_806665D4
-lbl_806665D4:
+.obj lbl_806665D4, global
 	.4byte 0x72656600
+.endobj lbl_806665D4
 
 
-.global lbl_806665D8
-lbl_806665D8:
+.obj lbl_806665D8, global
 	.4byte 0x72656600
+.endobj lbl_806665D8
 
 
-.global lbl_806665DC
-lbl_806665DC:
+.obj lbl_806665DC, global
 	.4byte 0x72656600
+.endobj lbl_806665DC
 
 
-.global lbl_806665E0
-lbl_806665E0:
+.obj lbl_806665E0, global
 	.4byte 0x72656600
 	.4byte 0
+.endobj lbl_806665E0
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_8066DB60
-lbl_8066DB60:
+.obj lbl_8066DB60, global
 	.asciz "DCbal"
 	.balign 4
+.endobj lbl_8066DB60
 
-.global lbl_8066DB68
-lbl_8066DB68:
+.obj lbl_8066DB68, global
 	.asciz "DCpla"
 	.balign 4
+.endobj lbl_8066DB68
 
-.global lbl_8066DB70
-lbl_8066DB70:
+.obj lbl_8066DB70, global
 	.asciz "DCcyl"
 	.balign 4
+.endobj lbl_8066DB70
 
 
-.global float_8066DB78
-float_8066DB78:
+.obj float_8066DB78, global
 	.float 0
+.endobj float_8066DB78
 
 
-.global float_8066DB7C
-float_8066DB7C:
+.obj float_8066DB7C, global
 	.float 1.0
+.endobj float_8066DB7C
 
 
-.global float_8066DB80
-float_8066DB80:
+.obj float_8066DB80, global
 	.float 0.36 #0x3EB851EC
+.endobj float_8066DB80
 
 
-.global float_8066DB84
-float_8066DB84:
+.obj float_8066DB84, global
 	.float 0.6 #0x3F19999A
+.endobj float_8066DB84
 
 
-.global float_8066DB88
-float_8066DB88:
+.obj float_8066DB88, global
 	.float 0.4 #0x3ECCCCCD
+.endobj float_8066DB88
 
 
-.global float_8066DB8C
-float_8066DB8C:
+.obj float_8066DB8C, global
 	.float 0.5
+.endobj float_8066DB8C
 
 
-.global float_8066DB90
-float_8066DB90:
+.obj float_8066DB90, global
 	.float -1.0
+.endobj float_8066DB90
 
 
-.global float_8066DB94
-float_8066DB94:
+.obj float_8066DB94, global
 	.float 0.0245436933 #0x3CC90FDB
+.endobj float_8066DB94
 
 
-.global float_8066DB98
-float_8066DB98:
+.obj float_8066DB98, global
 	.float 40.7436638 #0x4222F983
+.endobj float_8066DB98
 
 
-.global float_8066DB9C
-float_8066DB9C:
+.obj float_8066DB9C, global
 	.float 0.7 #0x3F333333
+.endobj float_8066DB9C
 
 
-.global float_8066DBA0
-float_8066DBA0:
+.obj float_8066DBA0, global
 	.float 0.9 #0x3F666666
+.endobj float_8066DBA0
 
 
-.global float_8066DBA4
-float_8066DBA4:
+.obj float_8066DBA4, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_8066DBA4
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

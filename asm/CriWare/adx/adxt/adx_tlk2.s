@@ -151,9 +151,10 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-.global adx_tlk2_strpool
-adx_tlk2_strpool:
+
+.obj adx_tlk2_strpool, global
 	.asciz "E02080811 adxt_StartAfs: parameter error"
 	.asciz "E8101202 adxt_StartAfs: can't open "
 	.asciz "E02080807 adxt_StartFnameRange: parameter error"
@@ -163,3 +164,4 @@ adx_tlk2_strpool:
 	.asciz "E8101207: can't create sj (adxt_StartMemIdx)"
 	.balign 4
 	.4byte 0
+.endobj adx_tlk2_strpool

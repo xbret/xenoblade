@@ -564,19 +564,19 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+#.balign 8
 
-.global CPackItem_typestr
-CPackItem_typestr:
+.obj CPackItem_typestr, global
 	.asciz "CPackItem"
 	.balign 4
+.endobj CPackItem_typestr
 
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CPackItem
-__vt__CPackItem:
+.obj __vt__CPackItem, global
 	.4byte __RTTI__CPackItem
 	.4byte 0
 	.4byte __dt__CPackItem
@@ -611,16 +611,17 @@ __vt__CPackItem:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CPackItem
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CPackItem
-__RTTI__CPackItem:
+.obj __RTTI__CPackItem, global
 	.4byte CPackItem_typestr
 	.4byte 0
+.endobj __RTTI__CPackItem
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -115,21 +115,19 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-
-.global CWorkFlowSetup_typestr
-CWorkFlowSetup_typestr:
+.obj CWorkFlowSetup_typestr, global
 	.asciz "CWorkFlowSetup"
 	.balign 4
+.endobj CWorkFlowSetup_typestr
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CWorkFlowSetup
-__vt__CWorkFlowSetup:
+.obj __vt__CWorkFlowSetup, global
 	.4byte __RTTI__CWorkFlowSetup
 	.4byte 0
 	.4byte __dt__CWorkFlowSetup
@@ -170,44 +168,49 @@ __vt__CWorkFlowSetup:
 	.4byte func_80443A78
 	.4byte func_80443AC8
 	.4byte func_80039E30
+.endobj __vt__CWorkFlowSetup
 
-.global CWorkFlowSetup_hierarchy
-CWorkFlowSetup_hierarchy:
+.obj CWorkFlowSetup_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CWorkFlowSetup_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CWorkFlowSetup
-__RTTI__CWorkFlowSetup:
+.obj __RTTI__CWorkFlowSetup, global
 	.4byte CWorkFlowSetup_typestr
 	.4byte CWorkFlowSetup_hierarchy
+.endobj __RTTI__CWorkFlowSetup
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80667EC0, global
+	.skip 0x8
+.endobj lbl_80667EC0
 
-.global lbl_80667EC0
-lbl_80667EC0:
+.obj lbl_80667EC8, global
 	.skip 0x8
-.global lbl_80667EC8
-lbl_80667EC8:
+.endobj lbl_80667EC8
+
+.obj lbl_80667ED0, global
 	.skip 0x8
-.global lbl_80667ED0
-lbl_80667ED0:
+.endobj lbl_80667ED0
+
+.obj lbl_80667ED8, global
 	.skip 0x8
-.global lbl_80667ED8
-lbl_80667ED8:
+.endobj lbl_80667ED8
+
+.obj lbl_80667EE0, global
 	.skip 0x8
-.global lbl_80667EE0
-lbl_80667EE0:
-	.skip 0x8
+.endobj lbl_80667EE0
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

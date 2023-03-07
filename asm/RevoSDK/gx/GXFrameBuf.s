@@ -847,8 +847,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global GXNtsc240Ds
-GXNtsc240Ds:
+.balign 8
+
+.obj GXNtsc240Ds, global
 	.4byte 0x00000001
 	.4byte 0x028000F0
 	.4byte 0x00F00028
@@ -864,9 +865,9 @@ GXNtsc240Ds:
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0
+.endobj GXNtsc240Ds
 
-.global GXNtsc480IntDf
-GXNtsc480IntDf:
+.obj GXNtsc480IntDf, global
 	.4byte 0
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -882,10 +883,10 @@ GXNtsc480IntDf:
 	.4byte 0x06060808
 	.4byte 0x0A0C0A08
 	.4byte 0x08000000
+.endobj GXNtsc480IntDf
 
 
-.global GXNtsc480Int
-GXNtsc480Int:
+.obj GXNtsc480Int, global
 	.4byte 0
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -901,9 +902,9 @@ GXNtsc480Int:
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0
+.endobj GXNtsc480Int
 
-.global GXNtsc480Prog
-GXNtsc480Prog:
+.obj GXNtsc480Prog, global
 	.4byte 0x00000002
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -919,9 +920,9 @@ GXNtsc480Prog:
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0
+.endobj GXNtsc480Prog
 
-.global GXNtsc480ProgSoft
-GXNtsc480ProgSoft:
+.obj GXNtsc480ProgSoft, global
 	.4byte 0x00000002
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -937,9 +938,9 @@ GXNtsc480ProgSoft:
 	.4byte 0x06060808
 	.4byte 0x0A0C0A08
 	.4byte 0x08000000
+.endobj GXNtsc480ProgSoft
 
-.global GXMpal240Ds
-GXMpal240Ds:
+.obj GXMpal240Ds, global
 	.4byte 0x00000009
 	.4byte 0x028000F0
 	.4byte 0x00F00028
@@ -955,10 +956,10 @@ GXMpal240Ds:
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0
+.endobj GXMpal240Ds
 
 
-.global GXMpal480IntDf
-GXMpal480IntDf:
+.obj GXMpal480IntDf, global
 	.4byte 0x00000008
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -974,9 +975,9 @@ GXMpal480IntDf:
 	.4byte 0x06060808
 	.4byte 0x0A0C0A08
 	.4byte 0x08000000
+.endobj GXMpal480IntDf
 
-.global GXMpal480Int
-GXMpal480Int:
+.obj GXMpal480Int, global
 	.4byte 0x00000008
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -992,9 +993,9 @@ GXMpal480Int:
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0
+.endobj GXMpal480Int
 
-.global GXMpal480Prog
-GXMpal480Prog:
+.obj GXMpal480Prog, global
 	.4byte 0x0000000A
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -1010,9 +1011,9 @@ GXMpal480Prog:
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0
+.endobj GXMpal480Prog
 
-.global GXMpal480ProgSoft
-GXMpal480ProgSoft:
+.obj GXMpal480ProgSoft, global
 	.4byte 0x0000000A
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -1028,9 +1029,9 @@ GXMpal480ProgSoft:
 	.4byte 0x06060808
 	.4byte 0x0A0C0A08
 	.4byte 0x08000000
+.endobj GXMpal480ProgSoft
 
-.global GXPal264Ds
-GXPal264Ds:
+.obj GXPal264Ds, global
 	.4byte 0x00000005
 	.4byte 0x02800108
 	.4byte 0x01080028
@@ -1046,10 +1047,10 @@ GXPal264Ds:
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0
+.endobj GXPal264Ds
 
 
-.global GXPal528IntDf
-GXPal528IntDf:
+.obj GXPal528IntDf, global
 	.4byte 0x00000004
 	.4byte 0x02800210
 	.4byte 0x02100028
@@ -1065,9 +1066,9 @@ GXPal528IntDf:
 	.4byte 0x06060808
 	.4byte 0x0A0C0A08
 	.4byte 0x08000000
+.endobj GXPal528IntDf
 
-.global GXPal528Int
-GXPal528Int:
+.obj GXPal528Int, global
 	.4byte 0x00000004
 	.4byte 0x02800210
 	.4byte 0x02100028
@@ -1083,9 +1084,9 @@ GXPal528Int:
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0
+.endobj GXPal528Int
 
-.global GXEurgb60Hz240Ds
-GXEurgb60Hz240Ds:
+.obj GXEurgb60Hz240Ds, global
 	.4byte 0x00000015
 	.4byte 0x028000F0
 	.4byte 0x00F00028
@@ -1101,10 +1102,10 @@ GXEurgb60Hz240Ds:
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0
+.endobj GXEurgb60Hz240Ds
 
 
-.global GXEurgb60Hz480IntDf
-GXEurgb60Hz480IntDf:
+.obj GXEurgb60Hz480IntDf, global
 	.4byte 0x00000014
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -1120,9 +1121,9 @@ GXEurgb60Hz480IntDf:
 	.4byte 0x06060808
 	.4byte 0x0A0C0A08
 	.4byte 0x08000000
+.endobj GXEurgb60Hz480IntDf
 
-.global GXEurgb60Hz480Int
-GXEurgb60Hz480Int:
+.obj GXEurgb60Hz480Int, global
 	.4byte 0x00000014
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -1138,9 +1139,9 @@ GXEurgb60Hz480Int:
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0
+.endobj GXEurgb60Hz480Int
 
-.global GXEurgb60Hz480Prog
-GXEurgb60Hz480Prog:
+.obj GXEurgb60Hz480Prog, global
 	.4byte 0x00000016
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -1156,9 +1157,9 @@ GXEurgb60Hz480Prog:
 	.4byte 0x06060000
 	.4byte 0x15161500
 	.4byte 0
+.endobj GXEurgb60Hz480Prog
 
-.global GXEurgb60Hz480ProgSoft
-GXEurgb60Hz480ProgSoft:
+.obj GXEurgb60Hz480ProgSoft, global
 	.4byte 0x00000016
 	.4byte 0x028001E0
 	.4byte 0x01E00028
@@ -1174,17 +1175,20 @@ GXEurgb60Hz480ProgSoft:
 	.4byte 0x06060808
 	.4byte 0x0A0C0A08
 	.4byte 0x08000000
+.endobj GXEurgb60Hz480ProgSoft
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066BFC8
-float_8066BFC8:
+.balign 8
+
+.obj float_8066BFC8, global
 	.float 256 #0x43800000
 	.4byte 0
+.endobj float_8066BFC8
 
 
-.global double_8066BFD0
-double_8066BFD0:
+.obj double_8066BFD0, global
 	.4byte 0x43300000
 	.4byte 0
+.endobj double_8066BFD0

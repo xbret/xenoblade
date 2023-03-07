@@ -482,20 +482,19 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CChainActorEne_typestr
-cf_CChainActorEne_typestr:
+.obj cf_CChainActorEne_typestr, global
 	.asciz "cf::CChainActorEne"
 	.balign 4
 	.4byte 0
+.endobj cf_CChainActorEne_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CChainActorEne
-__vt__cf_CChainActorEne:
+.obj __vt__cf_CChainActorEne, global
 	.4byte __RTTI__cf_CChainActorEne
 	.4byte 0
 	.4byte __dt__cf_CChainActorEne
@@ -526,22 +525,23 @@ __vt__cf_CChainActorEne:
 	.4byte func_80278F5C
 	.4byte func_8027A324
 	.4byte func_8027A9D0
+.endobj __vt__cf_CChainActorEne
 
-.global cf_CChainActorEne_hierarchy
-cf_CChainActorEne_hierarchy:
+.obj cf_CChainActorEne_hierarchy, global
 	.4byte __RTTI__cf_CChainActor
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CChainActorEne_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CChainActorEne
-__RTTI__cf_CChainActorEne:
+.obj __RTTI__cf_CChainActorEne, global
 	.4byte cf_CChainActorEne_typestr
 	.4byte cf_CChainActorEne_hierarchy
+.endobj __RTTI__cf_CChainActorEne
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

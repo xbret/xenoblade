@@ -94,8 +94,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global __HBMSYNVolumeAttenuation
-__HBMSYNVolumeAttenuation:
+.balign 8
+
+.obj __HBMSYNVolumeAttenuation, global
 	.4byte 0xFC400000
 	.4byte 0xFCB67A80
 	.4byte 0xFD2EE3F9
@@ -224,10 +225,10 @@ __HBMSYNVolumeAttenuation:
 	.4byte 0xFFFD3E16
 	.4byte 0xFFFEA072
 	.4byte 0
+.endobj __HBMSYNVolumeAttenuation
 
 
-.global __HBMSYNAttackAttnTable
-__HBMSYNAttackAttnTable:
+.obj __HBMSYNAttackAttnTable, global
 	.4byte 0xFC400000
 	.4byte 0xFE70DF7B
 	.4byte 0xFEAD1437
@@ -328,3 +329,4 @@ __HBMSYNAttackAttnTable:
 	.4byte 0xFFFE3A31
 	.4byte 0xFFFF1E41
 	.4byte 0
+.endobj __HBMSYNAttackAttnTable

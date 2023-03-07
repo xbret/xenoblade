@@ -276,19 +276,18 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CDeviceFileJobReadDvd_typestr
-CDeviceFileJobReadDvd_typestr:
+.obj CDeviceFileJobReadDvd_typestr, global
 	.asciz "CDeviceFileJobReadDvd"
 	.balign 4
+.endobj CDeviceFileJobReadDvd_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CDeviceFileJobReadDvd
-__vt__CDeviceFileJobReadDvd:
+.obj __vt__CDeviceFileJobReadDvd, global
 	.4byte __RTTI__CDeviceFileJobReadDvd
 	.4byte 0
 	.4byte __dt__CDeviceFileJobReadDvd
@@ -332,9 +331,9 @@ __vt__CDeviceFileJobReadDvd:
 	.4byte func_80451EC0
 	.4byte func_80451FC0
 	.4byte func_80452054
+.endobj __vt__CDeviceFileJobReadDvd
 
-.global CDeviceFileJobReadDvd_hierarchy
-CDeviceFileJobReadDvd_hierarchy:
+.obj CDeviceFileJobReadDvd_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
@@ -342,16 +341,17 @@ CDeviceFileJobReadDvd_hierarchy:
 	.4byte __RTTI__CDeviceFileJob
 	.4byte 0
 	.4byte 0
+.endobj CDeviceFileJobReadDvd_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CDeviceFileJobReadDvd
-__RTTI__CDeviceFileJobReadDvd:
+.obj __RTTI__CDeviceFileJobReadDvd, global
 	.4byte CDeviceFileJobReadDvd_typestr
 	.4byte CDeviceFileJobReadDvd_hierarchy
+.endobj __RTTI__CDeviceFileJobReadDvd
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

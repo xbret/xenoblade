@@ -1591,8 +1591,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80548D98
-lbl_80548D98:
+.balign 8
+
+.obj lbl_80548D98, global
 	.asciz "Bad Length1: %d"
 	.asciz "Bad Length2 %d %d"
 	.balign 4
@@ -1616,16 +1617,19 @@ lbl_80548D98:
 	.balign 4
 	.asciz "Bad RPN frame"
 	.balign 4
+.endobj lbl_80548D98
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665958
-lbl_80665958:
+.balign 8
+
+.obj lbl_80665958, global
 	.asciz "Bad UA"
 	.balign 4
+.endobj lbl_80665958
 
 
-.global lbl_80665960
-lbl_80665960:
+.obj lbl_80665960, global
 	.asciz "Bad DM"
 	.balign 4
+.endobj lbl_80665960

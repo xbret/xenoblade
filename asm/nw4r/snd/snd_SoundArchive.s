@@ -305,8 +305,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056E4A0
-lbl_8056E4A0:
+.balign 8
+
+.obj lbl_8056E4A0, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r3snd12SoundArchiveFv
@@ -315,3 +316,4 @@ lbl_8056E4A0:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056E4A0

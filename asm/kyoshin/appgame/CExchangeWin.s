@@ -513,16 +513,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CExchangeWin_typestr
-CExchangeWin_typestr:
+.obj CExchangeWin_typestr, global
 	.asciz "CExchangeWin"
 	.balign 4
+.endobj CExchangeWin_typestr
 
 
-.global CExchangeWin_strpool
-CExchangeWin_strpool:
+.obj CExchangeWin_strpool, global
 	.asciz "/menu/ExchangeWin.arc"
 	.asciz "txt_slct%02d"
 	.asciz "nul_proportion"
@@ -544,13 +543,13 @@ CExchangeWin_strpool:
 	.asciz "fileID_1"
 	.asciz "pic_btn00"
 	.balign 4
+.endobj CExchangeWin_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CExchangeWin
-__vt__CExchangeWin:
+.obj __vt__CExchangeWin, global
 	.4byte __RTTI__CExchangeWin
 	.4byte 0
 	.4byte __dt__CExchangeWin
@@ -585,36 +584,37 @@ __vt__CExchangeWin:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CExchangeWin
 
-.global CExchangeWin_hierarchy
-CExchangeWin_hierarchy:
+.obj CExchangeWin_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CExchangeWin_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CExchangeWin
-__RTTI__CExchangeWin:
+.obj __RTTI__CExchangeWin, global
 	.4byte CExchangeWin_typestr
 	.4byte CExchangeWin_hierarchy
+.endobj __RTTI__CExchangeWin
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066AED0
-float_8066AED0:
+.obj float_8066AED0, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066AED0
 
 
-.global double_8066AED8
-double_8066AED8:
+.obj double_8066AED8, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066AED8
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

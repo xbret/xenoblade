@@ -390,22 +390,21 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_805268F8
-lbl_805268F8:
+.obj lbl_805268F8, global
 	.asciz ".ahx"
 	.asciz "CLibCriMoviePlay"
 	.asciz "CLibCriStreamingPlay"
 	.balign 4
 	.4byte 0
+.endobj lbl_805268F8
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CLibCri
-__vt__CLibCri:
+.obj __vt__CLibCri, global
 	.4byte __RTTI__CLibCri
 	.4byte 0
 	.4byte __dt__CLibCri
@@ -458,9 +457,9 @@ __vt__CLibCri:
 	.4byte func_80459C88
 	.4byte func_80459AD8
 	.4byte func_80459C74
+.endobj __vt__CLibCri
 
-.global CLibCri_hierarchy
-CLibCri_hierarchy:
+.obj CLibCri_hierarchy, global
 	.4byte __RTTI__CDeviceVICb
 	.4byte 0x000001C4
 	.4byte __RTTI__IWorkEvent
@@ -469,36 +468,38 @@ CLibCri_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CLibCri_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CLibCri
-__RTTI__CLibCri:
+.obj __RTTI__CLibCri, global
 	.4byte CLibCri_typestr
 	.4byte CLibCri_hierarchy
+.endobj __RTTI__CLibCri
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global CLibCri_typestr
-CLibCri_typestr:
+.obj CLibCri_typestr, global
 	.asciz "CLibCri"
+.endobj CLibCri_typestr
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80667FB0, global
+	.skip 0x4
+.endobj lbl_80667FB0
 
-.global lbl_80667FB0
-lbl_80667FB0:
+.obj lbl_80667FB4, global
 	.skip 0x4
-.global lbl_80667FB4
-lbl_80667FB4:
-	.skip 0x4
+.endobj lbl_80667FB4
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

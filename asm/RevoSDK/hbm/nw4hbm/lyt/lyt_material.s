@@ -3444,42 +3444,48 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-DefaultBlackColor:
+
+.obj DefaultBlackColor, local
 	.8byte 0
+.endobj DefaultBlackColor
 
-DefaultWhiteColor:
+.obj DefaultWhiteColor, local
 	.4byte 0x00FF00FF
 	.4byte 0x00FF00FF
+.endobj DefaultWhiteColor
 
 
 	.float 0.5
 
 
-.global lbl_80518A7C
-lbl_80518A7C:
+.obj lbl_80518A7C, global
 	.float 0.7111111 #0x3F360B61
+.endobj lbl_80518A7C
 
 
-.global lbl_80518A80
-lbl_80518A80:
+.obj lbl_80518A80, global
 	.4byte 0
+.endobj lbl_80518A80
 
 
-.global lbl_80518A84
-lbl_80518A84:
+.obj lbl_80518A84, global
 	.float 1.0
 	.4byte 0x40000000
 	.4byte 0
+.endobj lbl_80518A84
 
 
-.global double_80518A90
-double_80518A90:
+.obj double_80518A90, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_80518A90
+
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8054D848
-lbl_8054D848:
+.balign 8
+
+.obj lbl_8054D848, global
 	.4byte 0x0000001F
 	.4byte 0x0000001B
 	.4byte 0x00000017
@@ -3488,10 +3494,10 @@ lbl_8054D848:
 	.4byte 0x0000001A
 	.4byte 0x00000016
 	.4byte 0x00000012
+.endobj lbl_8054D848
 
 
-.global lbl_8054D868
-lbl_8054D868:
+.obj lbl_8054D868, global
 	.4byte 0x0000001F
 	.4byte 0x0000001B
 	.4byte 0x00000017
@@ -3500,10 +3506,10 @@ lbl_8054D868:
 	.4byte 0x0000001A
 	.4byte 0x00000016
 	.4byte 0x00000012
+.endobj lbl_8054D868
 
 
-.global lbl_8054D888
-lbl_8054D888:
+.obj lbl_8054D888, global
 	.4byte lbl_8054D8C8
 	.4byte 0
 	.4byte __dt__Q36nw4hbm3lyt8MaterialFv
@@ -3514,13 +3520,14 @@ lbl_8054D888:
 	.4byte Animate__Q36nw4hbm3lyt8MaterialFv
 	.4byte FindAnimationLink__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransform
 	.4byte SetAnimationEnable__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransformb
+.endobj lbl_8054D888
 
-.global lbl_8054D8B0
-lbl_8054D8B0:
+.obj lbl_8054D8B0, global
 	.asciz "nw4hbm::lyt::Material"
 	.balign 4
+.endobj lbl_8054D8B0
 
-.global lbl_8054D8C8
-lbl_8054D8C8:
+.obj lbl_8054D8C8, global
 	.4byte lbl_8054D8B0
 	.4byte 0
+.endobj lbl_8054D8C8

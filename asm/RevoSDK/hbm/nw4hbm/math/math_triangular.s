@@ -203,14 +203,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-.global lbl_80518AF0
-lbl_80518AF0:
+
+.obj lbl_80518AF0, global
 	.float 65536 #0x47800000
+.endobj lbl_80518AF0
 
 
-.global lbl_80518AF4
-lbl_80518AF4:
+.obj lbl_80518AF4, global
 	.4byte 0
 	.float 1.0
 	.4byte 0x42000000
@@ -220,11 +221,14 @@ lbl_80518AF4:
 	.4byte 0x43000000
 	.4byte 0xC3000000
 	.4byte 0
+.endobj lbl_80518AF4
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-"sSinCosTbl__Q36nw4hbm4math29@unnamed@math_triangular_cpp@":
+
+.obj "sSinCosTbl__Q36nw4hbm4math29@unnamed@math_triangular_cpp@", local
     .float 0
     .float 1.0
     .float 0.024541
@@ -1253,9 +1257,10 @@ lbl_80518AF4:
     .float 1.0
     .float 0.024541
     .float -0.00030099999
+.endobj "sSinCosTbl__Q36nw4hbm4math29@unnamed@math_triangular_cpp@"
 
 
-"sArcTanTbl__Q36nw4hbm4math29@unnamed@math_triangular_cpp@":
+.obj "sArcTanTbl__Q36nw4hbm4math29@unnamed@math_triangular_cpp@", local
     .float 0 #0
     .float 1.2728254
     .float 1.2728254
@@ -1322,3 +1327,4 @@ lbl_80518AF4:
     .float 0.64667052
     .float 32
     .float 0.62677616
+.endobj "sArcTanTbl__Q36nw4hbm4math29@unnamed@math_triangular_cpp@"

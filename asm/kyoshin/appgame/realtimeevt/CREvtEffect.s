@@ -824,26 +824,25 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CREvtEffect_typestr
-cf_CREvtEffect_typestr:
+.obj cf_CREvtEffect_typestr, global
 	.asciz "cf::CREvtEffect"
+.endobj cf_CREvtEffect_typestr
 
 
-.global CREvtEffect_strpool
-CREvtEffect_strpool:
+.obj CREvtEffect_strpool, global
 	.asciz "EFF"
 	.asciz "Monochrome"
 	.asciz "MonoRGB"
 	.balign 4
+.endobj CREvtEffect_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CREvtEffect
-__vt__cf_CREvtEffect:
+.obj __vt__cf_CREvtEffect, global
 	.4byte __RTTI__cf_CREvtEffect
 	.4byte 0
 	.4byte func_80184C3C
@@ -859,99 +858,100 @@ __vt__cf_CREvtEffect:
 	.4byte func_80185688
 	.4byte func_80185680
 	.4byte func_801855C4
+.endobj __vt__cf_CREvtEffect
 
-.global cf_CREvtEffect_hierarchy
-cf_CREvtEffect_hierarchy:
+.obj cf_CREvtEffect_hierarchy, global
 	.4byte __RTTI__cf_CREvtObj
 	.4byte 0
 	.4byte 0
+.endobj cf_CREvtEffect_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80664D68
-lbl_80664D68:
+.obj lbl_80664D68, global
 	.4byte lbl_8066A1E8
+.endobj lbl_80664D68
 
 
-.global lbl_80664D6C
-lbl_80664D6C:
+.obj lbl_80664D6C, global
 	.4byte lbl_8066A1F0
+.endobj lbl_80664D6C
 
 
-.global lbl_80664D70
-lbl_80664D70:
+.obj lbl_80664D70, global
 	.4byte lbl_8066A1F8
 	.4byte 0
+.endobj lbl_80664D70
 
-.global __RTTI__cf_CREvtEffect
-__RTTI__cf_CREvtEffect:
+.obj __RTTI__cf_CREvtEffect, global
 	.4byte cf_CREvtEffect_typestr
 	.4byte cf_CREvtEffect_hierarchy
+.endobj __RTTI__cf_CREvtEffect
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_8066A1E8
-lbl_8066A1E8:
+.obj lbl_8066A1E8, global
 	.asciz "effTgt"
 	.balign 4
+.endobj lbl_8066A1E8
 
-.global lbl_8066A1F0
-lbl_8066A1F0:
+.obj lbl_8066A1F0, global
 	.asciz "effAtr"
 	.balign 4
+.endobj lbl_8066A1F0
 
-.global lbl_8066A1F8
-lbl_8066A1F8:
+.obj lbl_8066A1F8, global
 	.4byte 0x65666600
+.endobj lbl_8066A1F8
 
 
-.global float_8066A1FC
-float_8066A1FC:
+.obj float_8066A1FC, global
 	.float 0
+.endobj float_8066A1FC
 
 
-.global float_8066A200
-float_8066A200:
+.obj float_8066A200, global
 	.float 1.0
+.endobj float_8066A200
 
 
-.global float_8066A204
-float_8066A204:
+.obj float_8066A204, global
 	.float 0.9 #0x3F666666
+.endobj float_8066A204
 
 
-.global float_8066A208
-float_8066A208:
+.obj float_8066A208, global
 	.float 0.95 #0x3F733333
+.endobj float_8066A208
 
 
-.global float_8066A20C
-float_8066A20C:
+.obj float_8066A20C, global
 	.float 0.001 #0x3A83126F
+.endobj float_8066A20C
 
 
-.global double_8066A210
-double_8066A210:
+.obj double_8066A210, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066A210
 
-.global float_8066A218
-float_8066A218:
+.obj float_8066A218, global
 	.float 0.5
+.endobj float_8066A218
 
 
-.global float_8066A21C
-float_8066A21C:
+.obj float_8066A21C, global
 	.float 180 #0x43340000
+.endobj float_8066A21C
 
 
-.global float_8066A220
-float_8066A220:
+.obj float_8066A220, global
 	.float 0.1 #0x3DCCCCCD
 	.4byte 0
+.endobj float_8066A220
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

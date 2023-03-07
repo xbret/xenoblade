@@ -1248,40 +1248,40 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CInfoCf_typestr
-cf_CInfoCf_typestr:
+.obj cf_CInfoCf_typestr, global
 	.asciz "cf::CInfoCf"
 	.4byte 0
+.endobj cf_CInfoCf_typestr
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CInfoCf
-__vt__cf_CInfoCf:
+.obj __vt__cf_CInfoCf, global
 	.4byte __RTTI__cf_CInfoCf
 	.4byte 0
 	.4byte __dt__cf_CInfoCf
 	.4byte 0
+.endobj __vt__cf_CInfoCf
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CInfoCf
-__RTTI__cf_CInfoCf:
+.obj __RTTI__cf_CInfoCf, global
 	.4byte cf_CInfoCf_typestr
 	.4byte 0
+.endobj __RTTI__cf_CInfoCf
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80666B40
-lbl_80666B40:
+.obj lbl_80666B40, global
 	.skip 0x8
+.endobj lbl_80666B40
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

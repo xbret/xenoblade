@@ -1449,10 +1449,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_804FEFD0
-lbl_804FEFD0:
+.obj lbl_804FEFD0, global
 	.4byte 0
 	.4byte 0x00000002
 	.4byte 0x00000003
@@ -1465,77 +1464,77 @@ lbl_804FEFD0:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_804FEFD0
 
-.global cf_CREvtModelPc_typestr
-cf_CREvtModelPc_typestr:
+.obj cf_CREvtModelPc_typestr, global
 	.asciz "cf::CREvtModelPc"
 	.balign 4
 	.4byte 0
+.endobj cf_CREvtModelPc_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_80535950
-lbl_80535950:
+.obj lbl_80535950, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80183C1C
+.endobj lbl_80535950
 
-.global lbl_8053595C
-lbl_8053595C:
+.obj lbl_8053595C, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801846C4
+.endobj lbl_8053595C
 
 
-.global lbl_80535968
-lbl_80535968:
+.obj lbl_80535968, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80183C90
+.endobj lbl_80535968
 
 
-.global lbl_80535974
-lbl_80535974:
+.obj lbl_80535974, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801845F0
+.endobj lbl_80535974
 
-.global lbl_80535980
-lbl_80535980:
+.obj lbl_80535980, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801846C4
+.endobj lbl_80535980
 
-.global lbl_8053598C
-lbl_8053598C:
+.obj lbl_8053598C, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80183C1C
+.endobj lbl_8053598C
 
-.global lbl_80535998
-lbl_80535998:
+.obj lbl_80535998, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80183C90
+.endobj lbl_80535998
 
-.global lbl_805359A4
-lbl_805359A4:
+.obj lbl_805359A4, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801845F0
+.endobj lbl_805359A4
 
-.global lbl_805359B0
-lbl_805359B0:
+.obj lbl_805359B0, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801846C4
 	.4byte 0
+.endobj lbl_805359B0
 
 
-.global __vt__cf_CREvtModelPc
-__vt__cf_CREvtModelPc:
+.obj __vt__cf_CREvtModelPc, global
 	.4byte __RTTI__cf_CREvtModelPc
 	.4byte 0
 	.4byte func_8018385C
@@ -1588,38 +1587,39 @@ __vt__cf_CREvtModelPc:
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
 	.4byte func_80184A24
+.endobj __vt__cf_CREvtModelPc
 
-.global cf_CREvtModelPc_hierarchy
-cf_CREvtModelPc_hierarchy:
+.obj cf_CREvtModelPc_hierarchy, global
 	.4byte __RTTI__cf_CREvtObj
 	.4byte 0
 	.4byte __RTTI__cf_CREvtModel
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CREvtModelPc_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CREvtModelPc
-__RTTI__cf_CREvtModelPc:
+.obj __RTTI__cf_CREvtModelPc, global
 	.4byte cf_CREvtModelPc_typestr
 	.4byte cf_CREvtModelPc_hierarchy
+.endobj __RTTI__cf_CREvtModelPc
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066A1D8
-float_8066A1D8:
+.obj float_8066A1D8, global
 	.float 0
 	.4byte 0
+.endobj float_8066A1D8
 
 
-.global double_8066A1E0
-double_8066A1E0:
+.obj double_8066A1E0, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066A1E0
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

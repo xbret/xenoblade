@@ -740,18 +740,20 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_8063B168
-lbl_8063B168:
+.obj lbl_8063B168, global
 	.skip 0xC
+.endobj lbl_8063B168
 
 #@LOCAL@GetInstance__Q44nw4r3snd6detail14AxVoiceManagerFv@instance
-.global lbl_8063B174
-lbl_8063B174:
+.obj lbl_8063B174, global
 	.skip 0x2C
+.endobj lbl_8063B174
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
+
 #@GUARD@GetInstance__Q44nw4r3snd6detail14AxVoiceManagerFv@instance
-.global lbl_80667DA0
-lbl_80667DA0:
+.obj lbl_80667DA0, global
 	.skip 0x8
+.endobj lbl_80667DA0

@@ -3115,25 +3115,25 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global double_806697D8
-double_806697D8:
+.obj double_806697D8, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_806697D8
 
-.global float_806697E0
-float_806697E0:
+.obj float_806697E0, global
 	.float 1.0
+.endobj float_806697E0
 
 
-.global float_806697E4
-float_806697E4:
+.obj float_806697E4, global
 	.float 0
+.endobj float_806697E4
 
-.global IUICf_typestr
-IUICf_typestr:
+.obj IUICf_typestr, global
 	.asciz "IUICf"
 	.balign 4
+.endobj IUICf_typestr
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

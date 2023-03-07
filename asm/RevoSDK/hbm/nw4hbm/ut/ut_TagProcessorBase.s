@@ -764,47 +764,51 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-.global double_80518B38
-double_80518B38:
+
+.obj double_80518B38, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_80518B38
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global __vt__8054EE70
-__vt__8054EE70:
+
+.obj __vt__8054EE70, global
 	.4byte lbl_8054EEB0
 	.4byte 0
 	.4byte "__dt__Q36nw4hbm2ut19TagProcessorBase<w>Fv"
 	.4byte "Process__Q36nw4hbm2ut19TagProcessorBase<w>FUsPQ36nw4hbm2ut15PrintContext<w>"
 	.4byte "CalcRect__Q36nw4hbm2ut19TagProcessorBase<w>FPQ36nw4hbm2ut4RectUsPQ36nw4hbm2ut15PrintContext<w>"
+.endobj __vt__8054EE70
 
-.global lbl_8054EE84
-lbl_8054EE84:
+.obj lbl_8054EE84, global
 	.asciz "nw4hbm::ut::TagProcessorBase<wchar_t>"
 	.balign 4
 	.4byte 0
+.endobj lbl_8054EE84
 
-.global lbl_8054EEB0
-lbl_8054EEB0:
+.obj lbl_8054EEB0, global
 	.4byte lbl_8054EE84
 	.4byte 0
+.endobj lbl_8054EEB0
 
-.global lbl_8054EEB8
-lbl_8054EEB8:
+.obj lbl_8054EEB8, global
 	.4byte lbl_8054EEF0
 	.4byte 0
 	.4byte "__dt__Q36nw4hbm2ut19TagProcessorBase<c>Fv"
 	.4byte "Process__Q36nw4hbm2ut19TagProcessorBase<c>FUsPQ36nw4hbm2ut15PrintContext<c>"
 	.4byte "CalcRect__Q36nw4hbm2ut19TagProcessorBase<c>FPQ36nw4hbm2ut4RectUsPQ36nw4hbm2ut15PrintContext<c>"
+.endobj lbl_8054EEB8
 
-.global lbl_8054EECC
-lbl_8054EECC:
+.obj lbl_8054EECC, global
 	.asciz "nw4hbm::ut::TagProcessorBase<char>"
 	.balign 4
+.endobj lbl_8054EECC
 
-.global lbl_8054EEF0
-lbl_8054EEF0:
+.obj lbl_8054EEF0, global
 	.4byte lbl_8054EECC
 	.4byte 0
+.endobj lbl_8054EEF0

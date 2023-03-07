@@ -116,10 +116,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CfObjectTbox
-__vt__cf_CfObjectTbox:
+.obj __vt__cf_CfObjectTbox, global
 	.4byte __RTTI__cf_CfObjectTbox
 	.4byte 0
 	.4byte func_8003DC64
@@ -258,6 +257,7 @@ __vt__cf_CfObjectTbox:
 	.4byte func_800BE65C
 	.4byte func_800BE858
 	.4byte 0
+.endobj __vt__cf_CfObjectTbox
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

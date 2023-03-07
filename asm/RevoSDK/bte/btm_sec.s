@@ -3426,18 +3426,19 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80545830
-lbl_80545830:
+.balign 8
+
+.obj lbl_80545830, global
 	.asciz "BTM_Sec: application registered"
 	.asciz "BTM_SetSecurityMode: mode:%d"
 	.balign 4
 	.asciz "BTM_SetSecurityMode: Authen Enable -> FALSE"
 	.asciz "BTM_SetSecurityMode: Authen Enable -> TRUE"
 	.balign 4
+.endobj lbl_80545830
 
 
-.global lbl_805458C8
-lbl_805458C8:
+.obj lbl_805458C8, global
 	.asciz "BTM_SetPinType: pin type %d [variable-0, fixed-1], code %s, length %d"
 	.balign 4
 	.asciz "BTM_SEC_REG[%d]: id %d, is_orig %d, psm 0x%04x, proto_id %d, chan_id %d"
@@ -3446,15 +3447,15 @@ lbl_805458C8:
 	.asciz "BTM_SEC_REG: Out of Service Records (%d)"
 	.balign 4
 	.4byte 0
+.endobj lbl_805458C8
 
 
-.global lbl_805459D0
-lbl_805459D0:
+.obj lbl_805459D0, global
 	.asciz "Security Manager: Attempting Authorization of Unknown Device Address [%02x%02x%02x%02x%02x%02x]"
+.endobj lbl_805459D0
 
 
-.global lbl_80545A30
-lbl_80545A30:
+.obj lbl_80545A30, global
 	.asciz "Security Manager: authorized status:%d State:%d"
 	.asciz "BTM_SecBond BDA: %02x:%02x:%02x:%02x:%02x:%02x"
 	.balign 4
@@ -3467,10 +3468,10 @@ lbl_80545A30:
 	.balign 4
 	.asciz "BTM_SecBond: no buffer"
 	.balign 4
+.endobj lbl_80545A30
 
 
-.global lbl_80545B2C
-lbl_80545B2C:
+.obj lbl_80545B2C, global
 	.asciz "btm_restore_mode: Authen Enable -> %d"
 	.balign 4
 	.asciz "Security Manager: BTM_SetEncryption not connected"
@@ -3489,67 +3490,67 @@ lbl_80545B2C:
 	.asciz "Security Manager: l2cap_access_req PSM:%d Handle:%d State:%d Flags:0x%x Required:0x%x"
 	.balign 4
 	.asciz "Security Manager: trusted:0x%04x%04x Flags:0x%x"
+.endobj lbl_80545B2C
 
 
-.global lbl_80545D88
-lbl_80545D88:
+.obj lbl_80545D88, global
 	.asciz "Security Manager: MX service not found PSM:%d Proto:%d SCN:%d"
 	.balign 4
+.endobj lbl_80545D88
 
 
-.global lbl_80545DC8
-lbl_80545DC8:
+.obj lbl_80545DC8, global
 	.asciz "Security Manager: connect request from not paired device"
 	.balign 4
+.endobj lbl_80545DC8
 
 
-.global lbl_80545E04
-lbl_80545E04:
+.obj lbl_80545E04, global
 	.asciz "Security Manager: rmt_name_complete status:%d State:%d"
 	.balign 4
+.endobj lbl_80545E04
 
 
-.global lbl_80545E3C
-lbl_80545E3C:
+.obj lbl_80545E3C, global
 	.asciz "Security Manager: auth_complete status:%d State:%d"
 	.balign 4
+.endobj lbl_80545E3C
 
 
-.global lbl_80545E70
-lbl_80545E70:
+.obj lbl_80545E70, global
 	.asciz "Security Manager: mkey comp status:%d State:%d"
 	.balign 4
+.endobj lbl_80545E70
 
 
-.global lbl_80545EA0
-lbl_80545EA0:
+.obj lbl_80545EA0, global
 	.asciz "Security Manager: encrypt_change status:%d State:%d"
+.endobj lbl_80545EA0
 
 
-.global lbl_80545ED4
-lbl_80545ED4:
+.obj lbl_80545ED4, global
 	.asciz "Security Manager: btm_sec_connected handle:%d status:%d enc_mode:%d"
+.endobj lbl_80545ED4
 
 
-.global lbl_80545F18
-lbl_80545F18:
+.obj lbl_80545F18, global
 	.asciz "btm_sec_link_key_notification()  BDA: %02x:%02x:%02x:%02x:%02x:%02x"
+.endobj lbl_80545F18
 
 
-.global lbl_80545F5C
-lbl_80545F5C:
+.obj lbl_80545F5C, global
 	.asciz "                                TYPE: %d"
 	.balign 4
+.endobj lbl_80545F5C
 
 
-.global lbl_80545F88
-lbl_80545F88:
+.obj lbl_80545F88, global
 	.asciz "btm_sec_link_key_request()  BDA: %02x:%02x:%02x:%02x:%02x:%02x"
 	.balign 4
+.endobj lbl_80545F88
 
 
-.global lbl_80545FC8
-lbl_80545FC8:
+.obj lbl_80545FC8, global
 	.asciz "btm_sec_pin_code_request_timeout()"
 	.balign 4
 	.asciz "btm_sec_pin_code_request()  BDA: %02x:%02x:%02x:%02x:%02x:%02x"
@@ -3576,42 +3577,45 @@ lbl_80545FC8:
 	.balign 4
 	.asciz "Security Manager: access granted"
 	.balign 4
+.endobj lbl_80545FC8
 
 
-.global lbl_80546224
-lbl_80546224:
+.obj lbl_80546224, global
 	.asciz "btm_sec_collision_timeout()"
+.endobj lbl_80546224
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066BF78
-lbl_8066BF78:
+.balign 8
+
+.obj lbl_8066BF78, global
 	.byte 0xFF
+.endobj lbl_8066BF78
 
 
-.global lbl_8066BF79
-lbl_8066BF79:
+.obj lbl_8066BF79, global
 	.byte 0xFF
+.endobj lbl_8066BF79
 
 
-.global lbl_8066BF7A
-lbl_8066BF7A:
+.obj lbl_8066BF7A, global
 	.byte 0xFF
+.endobj lbl_8066BF7A
 
 
-.global lbl_8066BF7B
-lbl_8066BF7B:
+.obj lbl_8066BF7B, global
 	.byte 0xFF
+.endobj lbl_8066BF7B
 
 
-.global lbl_8066BF7C
-lbl_8066BF7C:
+.obj lbl_8066BF7C, global
 	.byte 0xFF
+.endobj lbl_8066BF7C
 
 
-.global lbl_8066BF7D
-lbl_8066BF7D:
+.obj lbl_8066BF7D, global
 	.byte 0xFF
 	.byte 0x00
 	.byte 0x00
+.endobj lbl_8066BF7D

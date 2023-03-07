@@ -1785,74 +1785,73 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_804FF040
-lbl_804FF040:
+.obj lbl_804FF040, global
 	.asciz "time"
 	.balign 4
+.endobj lbl_804FF040
 
-.global lbl_804FF048
-lbl_804FF048:
+.obj lbl_804FF048, global
 	.asciz "startObserve"
 	.balign 4
+.endobj lbl_804FF048
 
-.global lbl_804FF058
-lbl_804FF058:
+.obj lbl_804FF058, global
 	.asciz "endObserve"
 	.balign 4
+.endobj lbl_804FF058
 
-.global lbl_804FF064
-lbl_804FF064:
+.obj lbl_804FF064, global
 	.asciz "defeatingCount"
 	.balign 4
+.endobj lbl_804FF064
 
-.global lbl_804FF074
-lbl_804FF074:
+.obj lbl_804FF074, global
 	.asciz "attackEne"
 	.balign 4
+.endobj lbl_804FF074
 
-.global lbl_804FF080
-lbl_804FF080:
+.obj lbl_804FF080, global
 	.asciz "selectTgt"
 	.balign 4
+.endobj lbl_804FF080
 
-.global lbl_804FF08C
-lbl_804FF08C:
+.obj lbl_804FF08C, global
 	.asciz "voiceEvent"
 	.balign 4
+.endobj lbl_804FF08C
 
-.global lbl_804FF098
-lbl_804FF098:
+.obj lbl_804FF098, global
 	.asciz "isVoiceEvent"
 	.balign 4
+.endobj lbl_804FF098
 
-.global lbl_804FF0A8
-lbl_804FF0A8:
+.obj lbl_804FF0A8, global
 	.asciz "unlockMonadoArts"
 	.balign 4
+.endobj lbl_804FF0A8
 
-.global lbl_804FF0BC
-lbl_804FF0BC:
+.obj lbl_804FF0BC, global
 	.asciz "setTensionLv"
 	.balign 4
+.endobj lbl_804FF0BC
 
-.global lbl_804FF0CC
-lbl_804FF0CC:
+.obj lbl_804FF0CC, global
 	.asciz "breakVision"
+.endobj lbl_804FF0CC
 
 
-.global lbl_804FF0D8
-lbl_804FF0D8:
+.obj lbl_804FF0D8, global
 	.asciz "ene_arts"
 	.asciz "name"
 	.asciz "btl"
 	.2byte 0
 	.4byte 0
+.endobj lbl_804FF0D8
 
 
-.global CREvtObj_strpool
-CREvtObj_strpool:
+.obj CREvtObj_strpool, global
 	.asciz "model"
 	.asciz "motion"
 	.asciz "posX"
@@ -1882,13 +1881,13 @@ CREvtObj_strpool:
 	.asciz "pos_sflg2"
 	.asciz "pos_eflg2"
 	.balign 4
+.endobj CREvtObj_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CREvtObj
-__vt__cf_CREvtObj:
+.obj __vt__cf_CREvtObj, global
 	.4byte __RTTI__cf_CREvtObj
 	.4byte 0
 	.4byte func_801856C0
@@ -1899,20 +1898,20 @@ __vt__cf_CREvtObj:
 	.4byte func_801809A8
 	.4byte func_801696C4
 	.4byte func_80185700
+.endobj __vt__cf_CREvtObj
 
 
-.global lbl_80535B18
-lbl_80535B18:
+.obj lbl_80535B18, global
 	.4byte lbl_8066A228
 	.4byte func_80185760
 	.4byte lbl_8066A230
 	.4byte func_801857A8
 	.4byte 0
 	.4byte 0
+.endobj lbl_80535B18
 
 
-.global lbl_80535B30
-lbl_80535B30:
+.obj lbl_80535B30, global
 	.4byte lbl_804FF048
 	.4byte startObserve
 	.4byte lbl_804FF058
@@ -1951,111 +1950,115 @@ lbl_80535B30:
 	.4byte test
 	.4byte 0
 	.4byte 0
+.endobj lbl_80535B30
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_8066A228
-lbl_8066A228:
+.obj lbl_8066A228, global
 	.asciz "range"
 	.balign 4
+.endobj lbl_8066A228
 
-.global lbl_8066A230
-lbl_8066A230:
+.obj lbl_8066A230, global
 	.asciz "hour"
 	.balign 4
+.endobj lbl_8066A230
 
 
-.global double_8066A238
-double_8066A238:
+.obj double_8066A238, global
 	.8byte 0x4330000080000000 #signed int to float constant
-.global lbl_8066A240
-lbl_8066A240:
+.endobj double_8066A238
+
+.obj lbl_8066A240, global
 	.asciz "isEnd"
 	.balign 4
+.endobj lbl_8066A240
 
-.global lbl_8066A248
-lbl_8066A248:
+.obj lbl_8066A248, global
 	.asciz "end"
+.endobj lbl_8066A248
 
-.global lbl_8066A24C
-lbl_8066A24C:
+.obj lbl_8066A24C, global
 	.asciz "attack"
 	.balign 4
+.endobj lbl_8066A24C
 
-.global lbl_8066A254
-lbl_8066A254:
+.obj lbl_8066A254, global
 	.asciz "vision"
 	.balign 4
+.endobj lbl_8066A254
 
-.global lbl_8066A25C
-lbl_8066A25C:
+.obj lbl_8066A25C, global
 	.asciz "setTP"
 	.balign 4
+.endobj lbl_8066A25C
 
-.global lbl_8066A264
-lbl_8066A264:
+.obj lbl_8066A264, global
 	.asciz "setPTG"
 	.balign 4
+.endobj lbl_8066A264
 
-.global lbl_8066A26C
-lbl_8066A26C:
+.obj lbl_8066A26C, global
 	.asciz "getPTG"
 	.balign 4
+.endobj lbl_8066A26C
 
-.global lbl_8066A274
-lbl_8066A274:
+.obj lbl_8066A274, global
 	.asciz "test"
 	.balign 4
 	.4byte 0
+.endobj lbl_8066A274
 
 
-.global float_8066A280
-float_8066A280:
+.obj float_8066A280, global
 	.float 0.0001 #0x38D1B717
+.endobj float_8066A280
 
 
-.global float_8066A284
-float_8066A284:
+.obj float_8066A284, global
 	.float 0.01 #0x3C23D70A
+.endobj float_8066A284
 
 
-.global float_8066A288
-float_8066A288:
+.obj float_8066A288, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_8066A288
 
 
-.global float_8066A28C
-float_8066A28C:
+.obj float_8066A28C, global
 	.float 1000 #0x447A0000
+.endobj float_8066A28C
 
 
-.global double_8066A290
-double_8066A290:
+.obj double_8066A290, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066A290
 
-.global double_8066A298
-double_8066A298:
+.obj double_8066A298, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066A298
+
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_80577888
-lbl_80577888:
+.obj lbl_80577888, global
 	.skip 0x1708
+.endobj lbl_80577888
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80666BB8, global
+	.skip 0x8
+.endobj lbl_80666BB8
 
-.global lbl_80666BB8
-lbl_80666BB8:
+.obj lbl_80666BC0, global
 	.skip 0x8
-.global lbl_80666BC0
-lbl_80666BC0:
-	.skip 0x8
+.endobj lbl_80666BC0
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

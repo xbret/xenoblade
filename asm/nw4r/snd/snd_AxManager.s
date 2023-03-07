@@ -1908,64 +1908,77 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C678
-float_8066C678:
+.balign 8
+
+.obj float_8066C678, global
 	.float 0
+.endobj float_8066C678
 
 
-.global float_8066C67C
-float_8066C67C:
+.obj float_8066C67C, global
 	.float 1.0
+.endobj float_8066C67C
 
 
-.global double_8066C680
-double_8066C680:
+.obj double_8066C680, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066C680
 
-.global float_8066C688
-float_8066C688:
+.obj float_8066C688, global
 	.float 32768 #0x47000000
+.endobj float_8066C688
 
 
-.global float_8066C68C
-float_8066C68C:
+.obj float_8066C68C, global
 	.float 32000 #0x46FA0000
+.endobj float_8066C68C
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
-sZeroBuffer__Q44nw4r3snd6detail9AxManager:
+.obj sZeroBuffer__Q44nw4r3snd6detail9AxManager, local
 	.skip 0x100
+.endobj sZeroBuffer__Q44nw4r3snd6detail9AxManager
 
-.global sBiquadFilterCallbackTable__Q44nw4r3snd6detail9AxManager
-sBiquadFilterCallbackTable__Q44nw4r3snd6detail9AxManager:
+.obj sBiquadFilterCallbackTable__Q44nw4r3snd6detail9AxManager, global
 	.skip 0x23C
+.endobj sBiquadFilterCallbackTable__Q44nw4r3snd6detail9AxManager
 
-lbl_8063B05C:
+.obj lbl_8063B05C, local
 	.skip 0xC
+.endobj lbl_8063B05C
 
 #@LOCAL@GetInstance__Q44nw4r3snd6detail9AxManagerFv@instance
-lbl_8063B068:
+.obj lbl_8063B068, local
 	.skip 0x100
+.endobj lbl_8063B068
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-sBiquadFilterLpf__Q44nw4r3snd6detail9AxManager:
-	.skip 0x4
 
-sBiquadFilterHpf__Q44nw4r3snd6detail9AxManager:
+.obj sBiquadFilterLpf__Q44nw4r3snd6detail9AxManager, local
 	.skip 0x4
+.endobj sBiquadFilterLpf__Q44nw4r3snd6detail9AxManager
 
-sBiquadFilterBpf512__Q44nw4r3snd6detail9AxManager:
+.obj sBiquadFilterHpf__Q44nw4r3snd6detail9AxManager, local
 	.skip 0x4
+.endobj sBiquadFilterHpf__Q44nw4r3snd6detail9AxManager
 
-sBiquadFilterBpf1024__Q44nw4r3snd6detail9AxManager:
+.obj sBiquadFilterBpf512__Q44nw4r3snd6detail9AxManager, local
 	.skip 0x4
+.endobj sBiquadFilterBpf512__Q44nw4r3snd6detail9AxManager
 
-sBiquadFilterBpf2048__Q44nw4r3snd6detail9AxManager:
+.obj sBiquadFilterBpf1024__Q44nw4r3snd6detail9AxManager, local
 	.skip 0x4
+.endobj sBiquadFilterBpf1024__Q44nw4r3snd6detail9AxManager
+
+.obj sBiquadFilterBpf2048__Q44nw4r3snd6detail9AxManager, local
+	.skip 0x4
+.endobj sBiquadFilterBpf2048__Q44nw4r3snd6detail9AxManager
 
 #@GUARD@GetInstance__Q44nw4r3snd6detail9AxManagerFv@instance
-lbl_80667D9C:
+.obj lbl_80667D9C, local
 	.skip 0x4
+.endobj lbl_80667D9C

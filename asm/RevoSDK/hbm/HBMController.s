@@ -881,36 +881,42 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_80518680
-lbl_80518680:
+.balign 8
+
+.obj lbl_80518680, global
 	.float 1.0
+.endobj lbl_80518680
 
 
-.global lbl_80518684
-lbl_80518684:
+.obj lbl_80518684, global
 	.float -10000
+.endobj lbl_80518684
 
 
-.global lbl_80518688
-lbl_80518688:
+.obj lbl_80518688, global
 	.float -15000
+.endobj lbl_80518688
 
 
-.global lbl_8051868C
-lbl_8051868C:
+.obj lbl_8051868C, global
 	.float 10.0
+.endobj lbl_8051868C
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
-sBatteryFlag__Q210homebutton10Controller:
+.obj sBatteryFlag__Q210homebutton10Controller, local
 	.skip 0x8
+.endobj sBatteryFlag__Q210homebutton10Controller
 
-sAlarm__Q210homebutton10Controller:
+.obj sAlarm__Q210homebutton10Controller, local
 	.skip 0xC0
+.endobj sAlarm__Q210homebutton10Controller
 
-sAlarmSoundOff__Q210homebutton10Controller:
+.obj sAlarmSoundOff__Q210homebutton10Controller, local
 	.skip 0xC0
+.endobj sAlarmSoundOff__Q210homebutton10Controller
 
-sThis__Q210homebutton10Controller:
+.obj sThis__Q210homebutton10Controller, local
 	.skip 0x10
+.endobj sThis__Q210homebutton10Controller

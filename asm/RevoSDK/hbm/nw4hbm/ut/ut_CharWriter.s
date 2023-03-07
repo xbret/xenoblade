@@ -1776,42 +1776,45 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-.global lbl_80518B18
-lbl_80518B18:
+
+.obj lbl_80518B18, global
 	.4byte 0
+.endobj lbl_80518B18
 
 
-.global lbl_80518B1C
-lbl_80518B1C:
+.obj lbl_80518B1C, global
 	.float 1.0
+.endobj lbl_80518B1C
 
 
-.global double_80518B20
-double_80518B20:
+.obj double_80518B20, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_80518B20
 
-.global lbl_80518B28
-lbl_80518B28:
+.obj lbl_80518B28, global
 	.float 0.5
 	.4byte 0
+.endobj lbl_80518B28
 
 
-.global double_80518B30
-double_80518B30:
+.obj double_80518B30, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_80518B30
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 #@GUARD@fog$5416
-.global lbl_805CD7E0
-lbl_805CD7E0:
+.obj lbl_805CD7E0, global
 	.skip 0x4
+.endobj lbl_805CD7E0
 
 #fog$5416
-.global lbl_805CD7E4
-lbl_805CD7E4:
+.obj lbl_805CD7E4, global
 	.skip 0x4
+.endobj lbl_805CD7E4
 
-mLoadingTexture__Q36nw4hbm2ut10CharWriter:
+.obj mLoadingTexture__Q36nw4hbm2ut10CharWriter, local
 	.skip 0x10
+.endobj mLoadingTexture__Q36nw4hbm2ut10CharWriter

@@ -1224,16 +1224,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMenuGetItem_typestr
-CMenuGetItem_typestr:
+.obj CMenuGetItem_typestr, global
 	.asciz "CMenuGetItem"
 	.balign 4
+.endobj CMenuGetItem_typestr
 
 
-.global CMenuGetItem_strpool
-CMenuGetItem_strpool:
+.obj CMenuGetItem_strpool, global
 	.asciz "CMenuGetItem"
 	.asciz "mf70_cf50_sideinfo.brlyt"
 	.asciz "mf70_cf50_sideinfo_in.brlan"
@@ -1247,13 +1246,13 @@ CMenuGetItem_strpool:
 	.asciz "exp"
 	.asciz "txt_item"
 	.asciz "%s"
+.endobj CMenuGetItem_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMenuGetItem
-__vt__CMenuGetItem:
+.obj __vt__CMenuGetItem, global
 	.4byte __RTTI__CMenuGetItem
 	.4byte 0
 	.4byte __dt__CMenuGetItem
@@ -1302,9 +1301,9 @@ __vt__CMenuGetItem:
 	.4byte func_8014A864
 	.4byte func_8014A85C
 	.4byte func_80149FB8
+.endobj __vt__CMenuGetItem
 
-.global CMenuGetItem_hierarchy
-CMenuGetItem_hierarchy:
+.obj CMenuGetItem_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x0000005C
 	.4byte __RTTI__IWorkEvent
@@ -1321,42 +1320,43 @@ CMenuGetItem_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuGetItem_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuGetItem
-__RTTI__CMenuGetItem:
+.obj __RTTI__CMenuGetItem, global
 	.4byte CMenuGetItem_typestr
 	.4byte CMenuGetItem_hierarchy
+.endobj __RTTI__CMenuGetItem
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_80669CD8
-float_80669CD8:
+.obj float_80669CD8, global
 	.float 0
+.endobj float_80669CD8
 
 
-.global float_80669CDC
-float_80669CDC:
+.obj float_80669CDC, global
 	.float 1.0
+.endobj float_80669CDC
 
 
-.global float_80669CE0
-float_80669CE0:
+.obj float_80669CE0, global
 	.float 90 #0x42B40000
 	.4byte 0
+.endobj float_80669CE0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80666A98
-lbl_80666A98:
+.obj lbl_80666A98, global
 	.skip 0x8
+.endobj lbl_80666A98
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

@@ -722,37 +722,46 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80549D30
-lbl_80549D30:
+.balign 8
+
+.obj lbl_80549D30, global
 	.asciz "/shared2/test2/dvderror.dat"
+.endobj lbl_80549D30
 
 
-.global lbl_80549D4C
-lbl_80549D4C:
+.obj lbl_80549D4C, global
 	.asciz "/shared2/test2"
 	.balign 4
 	.4byte 0
+.endobj lbl_80549D4C
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-NandInfo:
+.obj NandInfo, local
 	.skip 0x8C
+.endobj NandInfo
 
-NandCb:
+.obj NandCb, local
 	.skip 0xD4
+.endobj NandCb
 
-.global __ErrorInfo
-__ErrorInfo:
+.obj __ErrorInfo, global
 	.skip 0x100
+.endobj __ErrorInfo
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-ExistFlag:
+
+.obj ExistFlag, local
 	.skip 0x4
+.endobj ExistFlag
 
-NextOffset:
+.obj NextOffset, local
 	.skip 0x4
+.endobj NextOffset
 
-Callback:
+.obj Callback, local
 	.skip 0x8
+.endobj Callback

@@ -10307,22 +10307,21 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_804FD198
-lbl_804FD198:
+.obj lbl_804FD198, global
 	.byte 0x00
 	.asciz "arm_type"
 	.balign 4
 	.4byte 0
+.endobj lbl_804FD198
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global jumptable_80532310
-jumptable_80532310:
+.obj jumptable_80532310, global
 	.4byte .L_8014D654
 	.4byte .L_8014D0EC
 	.4byte .L_8014D0EC
@@ -10403,10 +10402,10 @@ jumptable_80532310:
 	.4byte .L_8014D654
 	.4byte .L_8014D598
 	.4byte .L_8014D598
+.endobj jumptable_80532310
 
 
-.global jumptable_80532450
-jumptable_80532450:
+.obj jumptable_80532450, global
 	.4byte .L_801505E4
 	.4byte .L_8014E260
 	.4byte .L_8014EBE8
@@ -10498,9 +10497,9 @@ jumptable_80532450:
 	.4byte .L_8014F188
 	.4byte .L_8014F56C
 	.4byte .L_8014F56C
+.endobj jumptable_80532450
 
-.global jumptable_805325BC
-jumptable_805325BC:
+.obj jumptable_805325BC, global
 	.4byte .L_80151D54
 	.4byte .L_80151D54
 	.4byte .L_80151D54
@@ -10562,10 +10561,10 @@ jumptable_805325BC:
 	.4byte .L_80151E90
 	.4byte .L_801521C8
 	.4byte .L_801521E4
+.endobj jumptable_805325BC
 
 
-.global jumptable_805326B0
-jumptable_805326B0:
+.obj jumptable_805326B0, global
 	.4byte .L_80151C9C
 	.4byte .L_80150F70
 	.4byte .L_80151054
@@ -10745,10 +10744,10 @@ jumptable_805326B0:
 	.4byte .L_8015184C
 	.4byte .L_80151864
 	.4byte .L_80151864
+.endobj jumptable_805326B0
 
 
-.global jumptable_8053297C
-jumptable_8053297C:
+.obj jumptable_8053297C, global
 	.4byte .L_80150F1C
 	.4byte .L_80150C3C
 	.4byte .L_80150F1C
@@ -10784,10 +10783,10 @@ jumptable_8053297C:
 	.4byte .L_80150F1C
 	.4byte .L_80150F1C
 	.4byte .L_80150EDC
+.endobj jumptable_8053297C
 
 
-.global jumptable_80532A08
-jumptable_80532A08:
+.obj jumptable_80532A08, global
 	.4byte .L_80153760
 	.4byte .L_80152A78
 	.4byte .L_80152B50
@@ -10967,10 +10966,10 @@ jumptable_80532A08:
 	.4byte .L_80153324
 	.4byte .L_8015333C
 	.4byte .L_8015333C
+.endobj jumptable_80532A08
 
 
-.global jumptable_80532CD4
-jumptable_80532CD4:
+.obj jumptable_80532CD4, global
 	.4byte .L_80152900
 	.4byte .L_801524AC
 	.4byte .L_801525AC
@@ -11008,76 +11007,77 @@ jumptable_80532CD4:
 	.4byte .L_801528C0
 	.4byte .L_8015245C
 	.4byte .L_80152470
+.endobj jumptable_80532CD4
 
 
-.global __vt__cf_CAIAction
-__vt__cf_CAIAction:
+.obj __vt__cf_CAIAction, global
 	.4byte __RTTI__cf_CAIAction
 	.4byte 0
 	.4byte func_8014AA18
 	.4byte func_8014AB28
+.endobj __vt__cf_CAIAction
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_80669CE8
-float_80669CE8:
+.obj float_80669CE8, global
 	.float 0
+.endobj float_80669CE8
 
 
-.global float_80669CEC
-float_80669CEC:
+.obj float_80669CEC, global
 	.float -15 #0xC1700000
+.endobj float_80669CEC
 
 
-.global float_80669CF0
-float_80669CF0:
+.obj float_80669CF0, global
 	.float -3 #0xC0400000
+.endobj float_80669CF0
 
 
-.global float_80669CF4
-float_80669CF4:
+.obj float_80669CF4, global
 	.float 10.0
+.endobj float_80669CF4
 
 
-.global double_80669CF8
-double_80669CF8:
+.obj double_80669CF8, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_80669CF8
 
-.global double_80669D00
-double_80669D00:
+.obj double_80669D00, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_80669D00
 
-.global float_80669D08
-float_80669D08:
+.obj float_80669D08, global
 	.float -10 #0xC1200000
+.endobj float_80669D08
 
 
-.global float_80669D0C
-float_80669D0C:
+.obj float_80669D0C, global
 	.float 0.0245436933 #0x3CC90FDB
+.endobj float_80669D0C
 
 
-.global float_80669D10
-float_80669D10:
+.obj float_80669D10, global
 	.float 0.5
+.endobj float_80669D10
 
 
-.global float_80669D14
-float_80669D14:
+.obj float_80669D14, global
 	.float 1.0
+.endobj float_80669D14
 
 
-.global float_80669D18
-float_80669D18:
+.obj float_80669D18, global
 	.float -1.0
+.endobj float_80669D18
 
 
-.global float_80669D1C
-float_80669D1C:
+.obj float_80669D1C, global
 	.float 0.2
+.endobj float_80669D1C
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

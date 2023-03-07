@@ -638,32 +638,38 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051CCE0
-lbl_8051CCE0:
+.balign 8
+
+.obj lbl_8051CCE0, global
 	.asciz "\nADXWII Ver.1.04 Build:Nov 13 2008 10:53:01\n"
 	.balign 4
+.endobj lbl_8051CCE0
 
 
-adxwii_build:
+.obj adxwii_build, local
 	.4byte lbl_8051CCE0
+.endobj adxwii_build
 
 
-.global lbl_8051CD14
-lbl_8051CD14:
+.obj lbl_8051CD14, global
 	.asciz "1060102: Internal Error: adxm_goto_mwidle_border"
 	.balign 4
+.endobj lbl_8051CD14
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_805F7010
-lbl_805F7010:
+.obj lbl_805F7010, global
 	.skip 0x8028
-.global adxm_main_thread
-adxm_main_thread:
+.endobj lbl_805F7010
+
+.obj adxm_main_thread, global
 	.skip 0x4
-.global lbl_805FF03C
-lbl_805FF03C:
+.endobj adxm_main_thread
+
+.obj lbl_805FF03C, global
 	.skip 0x2320
-.global adxm_wii_framework
-adxm_wii_framework:
+.endobj lbl_805FF03C
+
+.obj adxm_wii_framework, global
 	.skip 0x4
+.endobj adxm_wii_framework

@@ -1014,25 +1014,28 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global TYPE_NAME__Q34nw4r3g3d12AnmObjMatClr
-TYPE_NAME__Q34nw4r3g3d12AnmObjMatClr:
+.balign 8
+
+.obj TYPE_NAME__Q34nw4r3g3d12AnmObjMatClr, global
 	.4byte 0x0000000D
 	.asciz "AnmObjMatClr"
 	.balign 4
 	.4byte 0
+.endobj TYPE_NAME__Q34nw4r3g3d12AnmObjMatClr
 
 
-.global TYPE_NAME__Q34nw4r3g3d15AnmObjMatClrRes
-TYPE_NAME__Q34nw4r3g3d15AnmObjMatClrRes:
+.obj TYPE_NAME__Q34nw4r3g3d15AnmObjMatClrRes, global
 	.4byte 0x00000010
 	.asciz "AnmObjMatClrRes"
 	.4byte 0
+.endobj TYPE_NAME__Q34nw4r3g3d15AnmObjMatClrRes
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global lbl_8056CA60
-lbl_8056CA60:
+
+.obj lbl_8056CA60, global
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d15AnmObjMatClrResCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -1051,10 +1054,10 @@ lbl_8056CA60:
 	.4byte Attach__Q34nw4r3g3d12AnmObjMatClrFiPQ34nw4r3g3d15AnmObjMatClrRes
 	.4byte Detach__Q34nw4r3g3d12AnmObjMatClrFi
 	.4byte DetachAll__Q34nw4r3g3d12AnmObjMatClrFv
+.endobj lbl_8056CA60
 
 
-.global lbl_8056CAA8
-lbl_8056CAA8:
+.obj lbl_8056CAA8, global
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d12AnmObjMatClrCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -1073,30 +1076,35 @@ lbl_8056CAA8:
 	.4byte Attach__Q34nw4r3g3d12AnmObjMatClrFiPQ34nw4r3g3d15AnmObjMatClrRes
 	.4byte Detach__Q34nw4r3g3d12AnmObjMatClrFi
 	.4byte DetachAll__Q34nw4r3g3d12AnmObjMatClrFv
+.endobj lbl_8056CAA8
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
+
 #@LOCAL@GetAnmPlayPolicy__Q24nw4r3g3dFQ34nw4r3g3d9AnmPolicy@policyTable
-.global lbl_80665D88
-lbl_80665D88:
+.obj lbl_80665D88, global
 	.4byte PlayPolicy_Onetime__Q24nw4r3g3dFfff
 	.4byte PlayPolicy_Loop__Q24nw4r3g3dFfff
+.endobj lbl_80665D88
 
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C348
-float_8066C348:
+.balign 8
+
+.obj float_8066C348, global
 	.float 0
+.endobj float_8066C348
 
 
-.global float_8066C34C
-float_8066C34C:
+.obj float_8066C34C, global
 	.float 1.0
+.endobj float_8066C34C
 
 
-.global double_8066C350
-double_8066C350:
+.obj double_8066C350, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066C350

@@ -2148,21 +2148,20 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global TChildListHeader_CProcess_typestr
-TChildListHeader_CProcess_typestr:
+.obj TChildListHeader_CProcess_typestr, global
 	.asciz "TChildListHeader<CProcess>"
 	.balign 4
 	.4byte 0
+.endobj TChildListHeader_CProcess_typestr
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CProcess
-__vt__CProcess:
+.obj __vt__CProcess, global
 	.4byte __RTTI__CProcess
 	.4byte 0
 	.4byte __dt__CProcess
@@ -2172,46 +2171,49 @@ __vt__CProcess:
 	.4byte 0
 	.4byte 0
 	.4byte func_80043F20
+.endobj __vt__CProcess
 
 
-.global __vt__TChildListHeader_CProcess
-__vt__TChildListHeader_CProcess:
+.obj __vt__TChildListHeader_CProcess, global
 	.4byte __RTTI__TChildListHeader_CProcess
 	.4byte 0
 	.4byte __dt__TChildListHeader_CProcess
+.endobj __vt__TChildListHeader_CProcess
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__TChildListHeader_CProcess
-__RTTI__TChildListHeader_CProcess:
+.obj __RTTI__TChildListHeader_CProcess, global
 	.4byte TChildListHeader_CProcess_typestr
 	.4byte 0
+.endobj __RTTI__TChildListHeader_CProcess
 
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_8065A3F8
-lbl_8065A3F8:
+.obj lbl_8065A3F8, global
 	.skip 0xC
-.global lbl_8065A404
-lbl_8065A404:
+.endobj lbl_8065A3F8
+
+.obj lbl_8065A404, global
 	.skip 0x20
-.global lbl_8065A424
-lbl_8065A424:
+.endobj lbl_8065A404
+
+.obj lbl_8065A424, global
 	.skip 0x14
+.endobj lbl_8065A424
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80667F08
-lbl_80667F08:
+.obj lbl_80667F08, global
 	.skip 0x8
+.endobj lbl_80667F08
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -370,39 +370,38 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CVS_THREAD_TENSION_UP_typestr
-cf_CVS_THREAD_TENSION_UP_typestr:
+.obj cf_CVS_THREAD_TENSION_UP_typestr, global
 	.asciz "cf::CVS_THREAD_TENSION_UP"
 	.balign 4
 	.4byte 0
+.endobj cf_CVS_THREAD_TENSION_UP_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8053D4B0
-lbl_8053D4B0:
+.obj lbl_8053D4B0, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A8EEC
+.endobj lbl_8053D4B0
 
-.global lbl_8053D4BC
-lbl_8053D4BC:
+.obj lbl_8053D4BC, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A9030
+.endobj lbl_8053D4BC
 
-.global lbl_8053D4C8
-lbl_8053D4C8:
+.obj lbl_8053D4C8, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A9230
+.endobj lbl_8053D4C8
 
 
-.global __vt__cf_CVS_THREAD_TENSION_UP
-__vt__cf_CVS_THREAD_TENSION_UP:
+.obj __vt__cf_CVS_THREAD_TENSION_UP, global
 	.4byte __RTTI__cf_CVS_THREAD_TENSION_UP
 	.4byte 0
 	.4byte func_802A3B50
@@ -410,22 +409,23 @@ __vt__cf_CVS_THREAD_TENSION_UP:
 	.4byte func_802A92D0
 	.4byte func_802A1EA0
 	.4byte func_802A3740
+.endobj __vt__cf_CVS_THREAD_TENSION_UP
 
-.global cf_CVS_THREAD_TENSION_UP_hierarchy
-cf_CVS_THREAD_TENSION_UP_hierarchy:
+.obj cf_CVS_THREAD_TENSION_UP_hierarchy, global
 	.4byte __RTTI__cf_CVS_THREAD
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CVS_THREAD_TENSION_UP_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CVS_THREAD_TENSION_UP
-__RTTI__cf_CVS_THREAD_TENSION_UP:
+.obj __RTTI__cf_CVS_THREAD_TENSION_UP, global
 	.4byte cf_CVS_THREAD_TENSION_UP_typestr
 	.4byte cf_CVS_THREAD_TENSION_UP_hierarchy
+.endobj __RTTI__cf_CVS_THREAD_TENSION_UP
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

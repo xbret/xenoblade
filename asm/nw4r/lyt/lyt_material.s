@@ -3357,9 +3357,10 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
+
 #@LOCAL@SetupGX__Q34nw4r3lyt8MaterialFbUc@kColSels
-.global lbl_8056D4D8
-lbl_8056D4D8:
+.obj lbl_8056D4D8, global
 	.4byte 0x0000001F
 	.4byte 0x0000001B
 	.4byte 0x00000017
@@ -3368,10 +3369,10 @@ lbl_8056D4D8:
 	.4byte 0x0000001A
 	.4byte 0x00000016
 	.4byte 0x00000012
+.endobj lbl_8056D4D8
 
 #@LOCAL@SetupGX__Q34nw4r3lyt8MaterialFbUc@kAlpSels@0
-.global lbl_8056D4F8
-lbl_8056D4F8:
+.obj lbl_8056D4F8, global
 	.4byte 0x0000001F
 	.4byte 0x0000001B
 	.4byte 0x00000017
@@ -3380,9 +3381,9 @@ lbl_8056D4F8:
 	.4byte 0x0000001A
 	.4byte 0x00000016
 	.4byte 0x00000012
+.endobj lbl_8056D4F8
 
-.global lbl_8056D518
-lbl_8056D518:
+.obj lbl_8056D518, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r3lyt8MaterialFv
@@ -3395,41 +3396,47 @@ lbl_8056D518:
 	.4byte FindAnimationLink__Q34nw4r3lyt8MaterialFRCQ34nw4r3lyt12AnimResource
 	.4byte SetAnimationEnable__Q34nw4r3lyt8MaterialFPQ34nw4r3lyt13AnimTransformb
 	.4byte SetAnimationEnable__Q34nw4r3lyt8MaterialFRCQ34nw4r3lyt12AnimResourceb
+.endobj lbl_8056D518
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C598
-float_8066C598:
+.balign 8
+
+.obj float_8066C598, global
 	.float 0.5
+.endobj float_8066C598
 
 
-.global float_8066C59C
-float_8066C59C:
+.obj float_8066C59C, global
 	.float 0.7111111 #0x3F360B61
+.endobj float_8066C59C
 
 
-.global float_8066C5A0
-float_8066C5A0:
+.obj float_8066C5A0, global
 	.float 0
+.endobj float_8066C5A0
 
 
-.global float_8066C5A4
-float_8066C5A4:
+.obj float_8066C5A4, global
 	.float 1.0
+.endobj float_8066C5A4
 
 
-.global float_8066C5A8
-float_8066C5A8:
+.obj float_8066C5A8, global
 	.float 2 #0x40000000
 	.4byte 0
+.endobj float_8066C5A8
 
 
-.global double_8066C5B0
-double_8066C5B0:
+.obj double_8066C5B0, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066C5B0
 
 .section .sbss2, "", @nobits #0x8066DCE0 - 0x8066DCFB
 
-DefaultBlackColor:
+.balign 8
+
+.obj DefaultBlackColor, local
 	.skip 0x8
+.endobj DefaultBlackColor

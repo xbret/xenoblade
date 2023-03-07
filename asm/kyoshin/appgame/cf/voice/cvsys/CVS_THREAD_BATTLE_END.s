@@ -429,46 +429,45 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CVS_THREAD_BATTLE_END_typestr
-cf_CVS_THREAD_BATTLE_END_typestr:
+.obj cf_CVS_THREAD_BATTLE_END_typestr, global
 	.asciz "cf::CVS_THREAD_BATTLE_END"
 	.balign 4
 	.4byte 0
+.endobj cf_CVS_THREAD_BATTLE_END_typestr
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8053D0E8
-lbl_8053D0E8:
+.obj lbl_8053D0E8, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A497C
+.endobj lbl_8053D0E8
 
-.global lbl_8053D0F4
-lbl_8053D0F4:
+.obj lbl_8053D0F4, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A4A78
+.endobj lbl_8053D0F4
 
-.global lbl_8053D100
-lbl_8053D100:
+.obj lbl_8053D100, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A4D04
+.endobj lbl_8053D100
 
-.global lbl_8053D10C
-lbl_8053D10C:
+.obj lbl_8053D10C, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A4A78
+.endobj lbl_8053D10C
 
 
-.global lbl_8053D118
-lbl_8053D118:
+.obj lbl_8053D118, global
 	.4byte 0x00000B55
 	.4byte 0x00000B56
 	.4byte 0x00000B61
@@ -477,18 +476,18 @@ lbl_8053D118:
 	.4byte 0x00000B59
 	.4byte 0x00000B5A
 	.4byte 0
+.endobj lbl_8053D118
 
 
-.global lbl_8053D138
-lbl_8053D138:
+.obj lbl_8053D138, global
 	.4byte 0x00000B5B
 	.4byte 0x00000B5C
 	.4byte 0x00000B5F
 	.4byte 0x00000B60
+.endobj lbl_8053D138
 
 
-.global __vt__cf_CVS_THREAD_BATTLE_END
-__vt__cf_CVS_THREAD_BATTLE_END:
+.obj __vt__cf_CVS_THREAD_BATTLE_END, global
 	.4byte __RTTI__cf_CVS_THREAD_BATTLE_END
 	.4byte 0
 	.4byte func_802A3B50
@@ -496,32 +495,33 @@ __vt__cf_CVS_THREAD_BATTLE_END:
 	.4byte func_802A4E40
 	.4byte func_802A1EA0
 	.4byte func_802A3740
+.endobj __vt__cf_CVS_THREAD_BATTLE_END
 
-.global cf_CVS_THREAD_BATTLE_END_hierarchy
-cf_CVS_THREAD_BATTLE_END_hierarchy:
+.obj cf_CVS_THREAD_BATTLE_END_hierarchy, global
 	.4byte __RTTI__cf_CVS_THREAD
 	.4byte 0
 	.4byte 0
+.endobj cf_CVS_THREAD_BATTLE_END_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_806655C0
-lbl_806655C0:
+.obj lbl_806655C0, global
 	.4byte 0x00000B57
 	.4byte 0x00000B58
+.endobj lbl_806655C0
 
 
-.global lbl_806655C8
-lbl_806655C8:
+.obj lbl_806655C8, global
 	.4byte 0x00000B5D
 	.4byte 0x00000B5E
+.endobj lbl_806655C8
 
-.global __RTTI__cf_CVS_THREAD_BATTLE_END
-__RTTI__cf_CVS_THREAD_BATTLE_END:
+.obj __RTTI__cf_CVS_THREAD_BATTLE_END, global
 	.4byte cf_CVS_THREAD_BATTLE_END_typestr
 	.4byte cf_CVS_THREAD_BATTLE_END_hierarchy
+.endobj __RTTI__cf_CVS_THREAD_BATTLE_END
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

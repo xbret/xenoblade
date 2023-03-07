@@ -137,6 +137,6 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global sfxa_work
-sfxa_work:
+.obj sfxa_work, global
 	.skip 0x128
+.endobj sfxa_work

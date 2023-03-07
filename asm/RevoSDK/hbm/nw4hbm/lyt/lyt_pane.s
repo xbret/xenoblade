@@ -1166,9 +1166,10 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-.global lbl_80518A98
-lbl_80518A98:
+
+.obj lbl_80518A98, global
 	.4byte 0
 	.float 1.0
 	.4byte 0x3C8EFA35
@@ -1176,17 +1177,19 @@ lbl_80518A98:
 	.4byte 0x3B808081
 	.4byte 0x43300000
 	.4byte 0
+.endobj lbl_80518A98
 
 
-.global lbl_80518AB0
-lbl_80518AB0:
+.obj lbl_80518AB0, global
 	.float 0.5
 	.4byte 0x3B808081
+.endobj lbl_80518AB0
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8054D8D0
-lbl_8054D8D0:
+.balign 8
+
+.obj lbl_8054D8D0, global
 	.4byte lbl_8054D770
 	.4byte 0
 	.4byte __dt__Q36nw4hbm3lyt4PaneFv
@@ -1213,9 +1216,10 @@ lbl_8054D8D0:
 	.4byte GetMaterial__Q36nw4hbm3lyt4PaneCFv
 	.4byte LoadMtx__Q36nw4hbm3lyt4PaneFRCQ36nw4hbm3lyt8DrawInfo
 	.4byte 0
+.endobj lbl_8054D8D0
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global typeInfo__Q36nw4hbm3lyt4Pane
-typeInfo__Q36nw4hbm3lyt4Pane:
+.obj typeInfo__Q36nw4hbm3lyt4Pane, global
 	.skip 0x8
+.endobj typeInfo__Q36nw4hbm3lyt4Pane

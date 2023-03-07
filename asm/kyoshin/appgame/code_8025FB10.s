@@ -3913,170 +3913,183 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8053AE70
-lbl_8053AE70:
+.balign 8
+
+.obj lbl_8053AE70, global
 	.asciz "NW4R:Pointer Error\nstr(=%p) is not valid pointer."
 	.balign 4
+.endobj lbl_8053AE70
 
 
-.global lbl_8053AEA4
-lbl_8053AEA4:
+.obj lbl_8053AEA4, global
 	.asciz "TextWriterBase.h"
 	.balign 4
+.endobj lbl_8053AEA4
 
 
-.global lbl_8053AEB8
-lbl_8053AEB8:
+.obj lbl_8053AEB8, global
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
+.endobj lbl_8053AEB8
 
 
-.global lbl_8053AEEC
-lbl_8053AEEC:
+.obj lbl_8053AEEC, global
 	.asciz "TextWriterBase.h"
 	.balign 4
+.endobj lbl_8053AEEC
 
 
-.global lbl_8053AF00
-lbl_8053AF00:
+.obj lbl_8053AF00, global
 	.asciz "NW4R:Pointer Error\ntagProcessor(=%p) is not valid pointer."
 	.balign 4
+.endobj lbl_8053AF00
 
 
-.global lbl_8053AF3C
-lbl_8053AF3C:
+.obj lbl_8053AF3C, global
 	.asciz "TextWriterBase.h"
 	.balign 4
+.endobj lbl_8053AF3C
 
 
-.global lbl_8053AF50
-lbl_8053AF50:
+.obj lbl_8053AF50, global
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
+.endobj lbl_8053AF50
 
 
-.global lbl_8053AF84
-lbl_8053AF84:
+.obj lbl_8053AF84, global
 	.asciz "TextWriterBase.h"
 	.balign 4
+.endobj lbl_8053AF84
 
 
-.global lbl_8053AF98
-lbl_8053AF98:
+.obj lbl_8053AF98, global
 	.asciz "NW4R:Pointer Error\n& font(=%p) is not valid pointer."
 	.balign 4
+.endobj lbl_8053AF98
 
 
-.global lbl_8053AFD0
-lbl_8053AFD0:
+.obj lbl_8053AFD0, global
 	.asciz "CharWriter.h"
 	.balign 4
+.endobj lbl_8053AFD0
 
 
-.global lbl_8053AFE0
-lbl_8053AFE0:
+.obj lbl_8053AFE0, global
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
+.endobj lbl_8053AFE0
 
 
-.global lbl_8053B014
-lbl_8053B014:
+.obj lbl_8053B014, global
 	.asciz "CharWriter.h"
 	.balign 4
+.endobj lbl_8053B014
 
 
-.global lbl_8053B024
-lbl_8053B024:
+.obj lbl_8053B024, global
 	.asciz "NW4R:Pointer Error\nthis(=%p) is not valid pointer."
 	.balign 4
+.endobj lbl_8053B024
 
 
-.global lbl_8053B058
-lbl_8053B058:
+.obj lbl_8053B058, global
 	.asciz "CharWriter.h"
 	.balign 4
+.endobj lbl_8053B058
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-.global lbl_80665278
-lbl_80665278:
+
+.obj lbl_80665278, global
 	.4byte 0xFFFFFFFF
 	.4byte 0
+.endobj lbl_80665278
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066B168
-float_8066B168:
+.balign 8
+
+.obj float_8066B168, global
 	.float 0
 	.4byte 0
+.endobj float_8066B168
 
 
-.global float_8066B170
-float_8066B170:
+.obj float_8066B170, global
 	.float 38 #0x42180000
 	.4byte 0
+.endobj float_8066B170
 
 
-.global double_8066B178
-double_8066B178:
+.obj double_8066B178, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066B178
 
-.global float_8066B180
-float_8066B180:
+.obj float_8066B180, global
 	.float 0
+.endobj float_8066B180
 
 
-.global float_8066B184
-float_8066B184:
+.obj float_8066B184, global
 	.float -16777216 #0xCB800000
+.endobj float_8066B184
 
 
-.global float_8066B188
-float_8066B188:
+.obj float_8066B188, global
 	.float 1.0
+.endobj float_8066B188
 
 
-.global float_8066B18C
-float_8066B18C:
+.obj float_8066B18C, global
 	.float 1.26582277 #0x3FA2067B
+.endobj float_8066B18C
 
 
-.global float_8066B190
-float_8066B190:
+.obj float_8066B190, global
 	.float 3 #0x40400000
+.endobj float_8066B190
 
 
-.global float_8066B194
-float_8066B194:
+.obj float_8066B194, global
 	.float -1.0
+.endobj float_8066B194
 
 
-.global double_8066B198
-double_8066B198:
+.obj double_8066B198, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066B198
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80667150
-lbl_80667150:
+.balign 8
+
+.obj lbl_80667150, global
 	.skip 0x4
-.global lbl_80667154
-lbl_80667154:
+.endobj lbl_80667150
+
+.obj lbl_80667154, global
 	.skip 0x4
-.global lbl_80667158
-lbl_80667158:
+.endobj lbl_80667154
+
+.obj lbl_80667158, global
 	.skip 0x4
-.global lbl_8066715C
-lbl_8066715C:
+.endobj lbl_80667158
+
+.obj lbl_8066715C, global
 	.skip 0x4
-.global lbl_80667160
-lbl_80667160:
+.endobj lbl_8066715C
+
+.obj lbl_80667160, global
 	.skip 0x4
-.global lbl_80667164
-lbl_80667164:
+.endobj lbl_80667160
+
+.obj lbl_80667164, global
 	.skip 0x4
+.endobj lbl_80667164
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

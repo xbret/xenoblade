@@ -1605,26 +1605,25 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CDeviceFileCri_typestr
-CDeviceFileCri_typestr:
+.obj CDeviceFileCri_typestr, global
 	.asciz "CDeviceFileCri"
 	.balign 4
+.endobj CDeviceFileCri_typestr
 
 
-.global lbl_805265B8
-lbl_805265B8:
+.obj lbl_805265B8, global
 	.asciz "/"
 	.4byte 0
 	.2byte 0
+.endobj lbl_805265B8
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global jumptable_8056FB70
-jumptable_8056FB70:
+.obj jumptable_8056FB70, global
 	.4byte .L_80450638
 	.4byte .L_80450780
 	.4byte .L_80450790
@@ -1634,10 +1633,10 @@ jumptable_8056FB70:
 	.4byte .L_80450908
 	.4byte .L_804508AC
 	.4byte .L_80450914
+.endobj jumptable_8056FB70
 
 
-.global __vt__CDeviceFileCri
-__vt__CDeviceFileCri:
+.obj __vt__CDeviceFileCri, global
 	.4byte __RTTI__CDeviceFileCri
 	.4byte 0
 	.4byte __dt__CDeviceFileCri
@@ -1683,63 +1682,64 @@ __vt__CDeviceFileCri:
 	.4byte func_80450B4C
 	.4byte func_80450B44
 	.4byte func_80450AB8
+.endobj __vt__CDeviceFileCri
 
-.global CDeviceFileCri_hierarchy
-CDeviceFileCri_hierarchy:
+.obj CDeviceFileCri_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
 	.4byte 0
 	.4byte 0
+.endobj CDeviceFileCri_hierarchy
 
 
-.global lbl_8056FC5C
-lbl_8056FC5C:
+.obj lbl_8056FC5C, global
 	.4byte 0x00460041
 	.4byte 0x00540041
 	.4byte 0x004C0000
+.endobj lbl_8056FC5C
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80665FF0
-lbl_80665FF0:
+.obj lbl_80665FF0, global
 	.4byte lbl_8066CBB0
+.endobj lbl_80665FF0
 
 
-.global lbl_80665FF4
-lbl_80665FF4:
+.obj lbl_80665FF4, global
 	.4byte lbl_8066CBB0
+.endobj lbl_80665FF4
 
 
-.global lbl_80665FF8
-lbl_80665FF8:
+.obj lbl_80665FF8, global
 	.4byte lbl_8066CBB0
 	.4byte 0
+.endobj lbl_80665FF8
 
-.global __RTTI__CDeviceFileCri
-__RTTI__CDeviceFileCri:
+.obj __RTTI__CDeviceFileCri, global
 	.4byte CDeviceFileCri_typestr
 	.4byte CDeviceFileCri_hierarchy
+.endobj __RTTI__CDeviceFileCri
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_8066CBB0
-lbl_8066CBB0:
+.obj lbl_8066CBB0, global
 	.4byte 0
 	.4byte 0
+.endobj lbl_8066CBB0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80667F48
-lbl_80667F48:
+.obj lbl_80667F48, global
 	.skip 0x8
+.endobj lbl_80667F48
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

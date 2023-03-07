@@ -1434,23 +1434,25 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_80518AC0
-lbl_80518AC0:
+.balign 8
+
+.obj lbl_80518AC0, global
 	.4byte 0
 	.4byte 0
+.endobj lbl_80518AC0
 
 
-.global lbl_80518AC8
-lbl_80518AC8:
+.obj lbl_80518AC8, global
 	.8byte 0x4330000080000000
 	.4byte 0x3F000000
 	.4byte 0x3F800000
+.endobj lbl_80518AC8
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+#.balign 8
 
-.global __vt__8054D9F4
-__vt__8054D9F4:
+.obj __vt__8054D9F4, global
 	.4byte lbl_8054DA98
 	.4byte 0
 	.4byte __dt__Q36nw4hbm3lyt7TextBoxFv
@@ -1480,28 +1482,29 @@ __vt__8054D9F4:
 	.4byte FreeStringBuffer__Q36nw4hbm3lyt7TextBoxFv
 	.4byte SetString__Q36nw4hbm3lyt7TextBoxFPCwUs
 	.4byte SetString__Q36nw4hbm3lyt7TextBoxFPCwUsUs
+.endobj __vt__8054D9F4
 
-.global lbl_8054DA68
-lbl_8054DA68:
+.obj lbl_8054DA68, global
 	.asciz "nw4hbm::lyt::TextBox"
 	.balign 4
+.endobj lbl_8054DA68
 
-.global lbl_8054DA80
-lbl_8054DA80:
+.obj lbl_8054DA80, global
 	.4byte lbl_8054D798
 	.4byte 0
 	.4byte lbl_8054D770
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8054DA80
 
-.global lbl_8054DA98
-lbl_8054DA98:
+.obj lbl_8054DA98, global
 	.4byte lbl_8054DA68
 	.4byte lbl_8054DA80
+.endobj lbl_8054DA98
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global typeInfo__Q36nw4hbm3lyt7TextBox
-typeInfo__Q36nw4hbm3lyt7TextBox:
+.obj typeInfo__Q36nw4hbm3lyt7TextBox, global
 	.skip 0x8
+.endobj typeInfo__Q36nw4hbm3lyt7TextBox

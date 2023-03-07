@@ -283,8 +283,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056E650
-lbl_8056E650:
+.balign 8
+
+.obj lbl_8056E650, global
 	.4byte 0
 	.4byte 0
 	.4byte GetRuntimeTypeInfo__Q44nw4r3snd6detail9WaveSoundCFv
@@ -299,9 +300,12 @@ lbl_8056E650:
 	.4byte OnUpdatePlayerPriority__Q44nw4r3snd6detail9WaveSoundFv
 	.4byte UpdateMoveValue__Q44nw4r3snd6detail10BasicSoundFv
 	.4byte UpdateParam__Q44nw4r3snd6detail10BasicSoundFv
+.endobj lbl_8056E650
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global typeInfo__Q44nw4r3snd6detail9WaveSound
-typeInfo__Q44nw4r3snd6detail9WaveSound:
+.balign 8
+
+.obj typeInfo__Q44nw4r3snd6detail9WaveSound, global
 	.skip 0x8
+.endobj typeInfo__Q44nw4r3snd6detail9WaveSound

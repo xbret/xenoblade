@@ -1552,21 +1552,25 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global adx_sjd_strpool
-adx_sjd_strpool:
+.balign 8
+
+.obj adx_sjd_strpool, global
 	.asciz "E03010901 ADXB_DecodeHeader: "
 	.asciz "Can not decode this file format."
 	.asciz "E07021901 adxsjd_decexec_start: "
 	.asciz "8 or 4bit WAV file can't playback continuously."
+.endobj adx_sjd_strpool
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global adxsjd_init_cnt
-adxsjd_init_cnt:
+.obj adxsjd_init_cnt, global
 	.skip 0x14
-.global pl2setsfreqfunc
-pl2setsfreqfunc:
+.endobj adxsjd_init_cnt
+
+.obj pl2setsfreqfunc, global
 	.skip 0x4
-.global adxsjd_obj
-adxsjd_obj:
+.endobj pl2setsfreqfunc
+
+.obj adxsjd_obj, global
 	.skip 0xB40
+.endobj adxsjd_obj

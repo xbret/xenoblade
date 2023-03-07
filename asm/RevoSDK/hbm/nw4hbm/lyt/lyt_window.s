@@ -2475,26 +2475,29 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-.global lbl_80518AD8
-lbl_80518AD8:
+
+.obj lbl_80518AD8, global
 	.4byte 0
 	.4byte 0
+.endobj lbl_80518AD8
 
 
-.global double_80518AE0
-double_80518AE0:
+.obj double_80518AE0, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_80518AE0
 
-.global double_80518AE8
-double_80518AE8:
+.obj double_80518AE8, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_80518AE8
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
+
 #@LOCAL@GetTexutreFlipInfo__24@unnamed@lyt_window_cpp@FUc@flipInfos
-.global lbl_8054DAA0
-lbl_8054DAA0:
+.obj lbl_8054DAA0, global
 	.4byte 0x00000100
 	.4byte 0x00010101
 	.4byte 0x00010100
@@ -2510,10 +2513,10 @@ lbl_8054DAA0:
 	.4byte 0x00010100
 	.4byte 0x01010000
 	.4byte 0x00010100
+.endobj lbl_8054DAA0
 
 
-.global __vt__Q36nw4hbm3lyt6Window
-__vt__Q36nw4hbm3lyt6Window:
+.obj __vt__Q36nw4hbm3lyt6Window, global
 	.4byte lbl_8054DB80
 	.4byte 0
 	.4byte __dt__Q36nw4hbm3lyt6WindowFv
@@ -2545,26 +2548,27 @@ __vt__Q36nw4hbm3lyt6Window:
 	.4byte DrawFrame__Q36nw4hbm3lyt6WindowFRCQ36nw4hbm4math4VEC2RCQ46nw4hbm3lyt6Window5FrameRCQ36nw4hbm3lyt15WindowFrameSizeUc
 	.4byte DrawFrame4__Q36nw4hbm3lyt6WindowFRCQ36nw4hbm4math4VEC2PCQ46nw4hbm3lyt6Window5FrameRCQ36nw4hbm3lyt15WindowFrameSizeUc
 	.4byte DrawFrame8__Q36nw4hbm3lyt6WindowFRCQ36nw4hbm4math4VEC2PCQ46nw4hbm3lyt6Window5FrameRCQ36nw4hbm3lyt15WindowFrameSizeUc
+.endobj __vt__Q36nw4hbm3lyt6Window
 
-.global lbl_8054DB58
-lbl_8054DB58:
+.obj lbl_8054DB58, global
 	.asciz "nw4hbm::lyt::Window"
+.endobj lbl_8054DB58
 
-.global lbl_8054DB6C
-lbl_8054DB6C:
+.obj lbl_8054DB6C, global
 	.4byte lbl_8054D798
 	.4byte 0
 	.4byte lbl_8054D770
 	.4byte 0
 	.4byte 0
+.endobj lbl_8054DB6C
 
-.global lbl_8054DB80
-lbl_8054DB80:
+.obj lbl_8054DB80, global
 	.4byte lbl_8054DB58
 	.4byte lbl_8054DB6C
+.endobj lbl_8054DB80
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global typeInfo__Q36nw4hbm3lyt6Window
-typeInfo__Q36nw4hbm3lyt6Window:
+.obj typeInfo__Q36nw4hbm3lyt6Window, global
 	.skip 0x8
+.endobj typeInfo__Q36nw4hbm3lyt6Window

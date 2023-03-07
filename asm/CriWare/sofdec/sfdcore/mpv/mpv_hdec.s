@@ -1747,24 +1747,26 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-.global dec_mbs_func
-dec_mbs_func:
+
+.obj dec_mbs_func, global
 	.4byte 0
 	.4byte MPVDEC_DecIpicMb
 	.4byte MPVDEC_DecPpicMb
 	.4byte MPVDEC_DecBpicMb
 	.4byte 0
 	.4byte 0
+.endobj dec_mbs_func
 
 
-.global lbl_8051F768
-lbl_8051F768:
+.obj lbl_8051F768, global
 	.asciz "IDCPREC"
 	.asciz "STCCODE"
+.endobj lbl_8051F768
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_80605F50
-lbl_80605F50:
+.obj lbl_80605F50, global
 	.skip 0xF0
+.endobj lbl_80605F50

@@ -828,23 +828,24 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global _unnamed_CGame_cpp_CGameRestart_typestr
-_unnamed_CGame_cpp_CGameRestart_typestr:
+.balign 8
+
+.obj _unnamed_CGame_cpp_CGameRestart_typestr, global
 	.asciz "@unnamed@CGame_cpp@::CGameRestart"
 	.balign 4
+.endobj _unnamed_CGame_cpp_CGameRestart_typestr
 
-.global CWorkThread_typestr
-CWorkThread_typestr:
+.obj CWorkThread_typestr, global
 	.asciz "CWorkThread"
+.endobj CWorkThread_typestr
 
-.global IWorkEvent_typestr
-IWorkEvent_typestr:
+.obj IWorkEvent_typestr, global
 	.asciz "IWorkEvent"
 	.balign 4
+.endobj IWorkEvent_typestr
 
 
-.global CGame_strpool
-CGame_strpool:
+.obj CGame_strpool, global
 	.asciz "CGameRestart"
 	.byte 0x00
 	.asciz "43"
@@ -852,15 +853,15 @@ CGame_strpool:
 	.asciz "4_3mode.brlyt"
 	.asciz "CGame"
 	.balign 4
+.endobj CGame_strpool
 
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt___unnamed_CGame_cpp_CGameRestart
-__vt___unnamed_CGame_cpp_CGameRestart:
+.obj __vt___unnamed_CGame_cpp_CGameRestart, global
 	.4byte __RTTI___unnamed_CGame_cpp_CGameRestart
 	.4byte 0
 	.4byte __dt___unnamed_CGame_cpp_CGameRestart
@@ -901,10 +902,10 @@ __vt___unnamed_CGame_cpp_CGameRestart:
 	.4byte func_804396A0
 	.4byte func_804396A4
 	.4byte func_80039E30
+.endobj __vt___unnamed_CGame_cpp_CGameRestart
 
 
-.global _unnamed_CGame_cpp_CGameRestart_hierarchy
-_unnamed_CGame_cpp_CGameRestart_hierarchy:
+.obj _unnamed_CGame_cpp_CGameRestart_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
@@ -913,10 +914,10 @@ _unnamed_CGame_cpp_CGameRestart_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj _unnamed_CGame_cpp_CGameRestart_hierarchy
 
 
-.global __vt__CGame
-__vt__CGame:
+.obj __vt__CGame, global
 	.4byte __RTTI__CGame
 	.4byte 0
 	.4byte __dt__CGame
@@ -957,9 +958,9 @@ __vt__CGame:
 	.4byte func_800396C8
 	.4byte func_80039890
 	.4byte func_80039B38
+.endobj __vt__CGame
 
-.global CGame_hierarchy
-CGame_hierarchy:
+.obj CGame_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
@@ -967,100 +968,109 @@ CGame_hierarchy:
 	.4byte __RTTI__CProc
 	.4byte 0
 	.4byte 0
+.endobj CGame_hierarchy
 
-.global CProc_hierarchy
-CProc_hierarchy:
+.obj CProc_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
 	.4byte 0
 	.4byte 0
+.endobj CProc_hierarchy
 
-.global CWorkThread_hierarchy
-CWorkThread_hierarchy:
+.obj CWorkThread_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CWorkThread_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-.global lbl_80664180
-lbl_80664180:
+
+.obj lbl_80664180, global
 	.4byte lbl_80668380
 	.4byte 0
+.endobj lbl_80664180
 
-.global __RTTI___unnamed_CGame_cpp_CGameRestart
-__RTTI___unnamed_CGame_cpp_CGameRestart:
+.obj __RTTI___unnamed_CGame_cpp_CGameRestart, global
 	.4byte _unnamed_CGame_cpp_CGameRestart_typestr
 	.4byte _unnamed_CGame_cpp_CGameRestart_hierarchy
+.endobj __RTTI___unnamed_CGame_cpp_CGameRestart
 
-.global __RTTI__CGame
-__RTTI__CGame:
+.obj __RTTI__CGame, global
 	.4byte CGame_typestr
 	.4byte CGame_hierarchy
+.endobj __RTTI__CGame
 
-.global __RTTI__CProc
-__RTTI__CProc:
+.obj __RTTI__CProc, global
 	.4byte CProc_typestr
 	.4byte CProc_hierarchy
+.endobj __RTTI__CProc
 
-.global __RTTI__CWorkThread
-__RTTI__CWorkThread:
+.obj __RTTI__CWorkThread, global
 	.4byte CWorkThread_typestr
 	.4byte CWorkThread_hierarchy
+.endobj __RTTI__CWorkThread
 
-.global __RTTI__IWorkEvent
-__RTTI__IWorkEvent:
+.obj __RTTI__IWorkEvent, global
 	.4byte IWorkEvent_typestr
 	.4byte 0
+.endobj __RTTI__IWorkEvent
 
-.global __RTTI__cf_CfObjectActor
-__RTTI__cf_CfObjectActor:
+.obj __RTTI__cf_CfObjectActor, global
 	.4byte cf_CfObjectActor_typestr
 	.4byte cf_CfObjectActor_hierarchy
+.endobj __RTTI__cf_CfObjectActor
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-.global lbl_80668380
-lbl_80668380:
+
+.obj lbl_80668380, global
 	.4byte 0x8B90905F
 	.4byte 0
+.endobj lbl_80668380
 
 
-.global float_80668388
-float_80668388:
+.obj float_80668388, global
 	.float 1.0
+.endobj float_80668388
 
 
-.global float_8066838C
-float_8066838C:
+.obj float_8066838C, global
 	.float 0
+.endobj float_8066838C
 
-.global CGame_typestr
-CGame_typestr:
+.obj CGame_typestr, global
 	.asciz "CGame"
 	.balign 4
+.endobj CGame_typestr
 
-.global CProc_typestr
-CProc_typestr:
+.obj CProc_typestr, global
 	.asciz "CProc"
 	.balign 4
+.endobj CProc_typestr
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-.global lbl_80666600
-lbl_80666600:
+
+.obj lbl_80666600, global
 	.skip 0x4
-.global lbl_80666604
-lbl_80666604:
+.endobj lbl_80666600
+
+.obj lbl_80666604, global
 	.skip 0x4
-.global lbl_80666608
-lbl_80666608:
+.endobj lbl_80666604
+
+.obj lbl_80666608, global
 	.skip 0x4
+.endobj lbl_80666608
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

@@ -1191,9 +1191,10 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global lbl_8056E688
-lbl_8056E688:
+
+.obj lbl_8056E688, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q44nw4r3snd6detail9WsdPlayerFv
@@ -1218,41 +1219,44 @@ lbl_8056E688:
 	.4byte InvalidateWaveData__Q44nw4r3snd6detail9WsdPlayerFPCvPCv
 	.4byte OnUpdateFrameSoundThread__Q44nw4r3snd6detail9WsdPlayerFv
 	.4byte OnShutdownSoundThread__Q44nw4r3snd6detail9WsdPlayerFv
+.endobj lbl_8056E688
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-.global float_8066C908
-float_8066C908:
+
+.obj float_8066C908, global
 	.float 1.0
+.endobj float_8066C908
 
 
-.global float_8066C90C
-float_8066C90C:
+.obj float_8066C90C, global
 	.float 0
+.endobj float_8066C90C
 
 
-.global float_8066C910
-float_8066C910:
+.obj float_8066C910, global
 	.float 63 #0x427C0000
+.endobj float_8066C910
 
 
-.global float_8066C914
-float_8066C914:
+.obj float_8066C914, global
 	.float 0.015625 #0x3C800000
+.endobj float_8066C914
 
 
-.global float_8066C918
-float_8066C918:
+.obj float_8066C918, global
 	.float 127 #0x42FE0000
 	.4byte 0
+.endobj float_8066C918
 
 
-.global double_8066C920
-double_8066C920:
+.obj double_8066C920, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066C920
 
-.global double_8066C928
-double_8066C928:
+.obj double_8066C928, global
 	.4byte 0x43300000
 	.4byte 0
+.endobj double_8066C928

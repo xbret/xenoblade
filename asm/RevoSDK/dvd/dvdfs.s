@@ -835,60 +835,71 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_805497B8
-lbl_805497B8:
+.balign 8
+
+.obj lbl_805497B8, global
 	.asciz "DVDConvertEntrynumToPath(possibly DVDOpen or DVDChangeDir or DVDOpenDir): specified directory or file (%s) doesn't match standard 8.3 format. This is a temporary restriction and will be removed soon\n"
+.endobj lbl_805497B8
 
 
-.global lbl_80549880
-lbl_80549880:
+.obj lbl_80549880, global
 	.asciz "Warning: DVDOpen(): file '%s' was not found under %s.\n"
 	.balign 4
+.endobj lbl_80549880
 
 
-.global lbl_805498B8
-lbl_805498B8:
+.obj lbl_805498B8, global
 	.asciz "DVDReadAsync(): specified area is out of the file  "
+.endobj lbl_805498B8
 
 
-.global lbl_805498EC
-lbl_805498EC:
+.obj lbl_805498EC, global
 	.asciz "DVDRead(): specified area is out of the file  "
 	.balign 4
 	.4byte 0
+.endobj lbl_805498EC
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-.global __DVDLongFileNameFlag
-__DVDLongFileNameFlag:
+
+.obj __DVDLongFileNameFlag, global
 	.4byte 0x00000001
 	.4byte 0
+.endobj __DVDLongFileNameFlag
 
 
-.global lbl_80665978
-lbl_80665978:
+.obj lbl_80665978, global
 	.asciz "dvdfs.c"
+.endobj lbl_80665978
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-currentDirectory:
+.balign 8
+
+.obj currentDirectory, local
 	.skip 0x8
+.endobj currentDirectory
 
-.global __DVDThreadQueue
-__DVDThreadQueue:
+.obj __DVDThreadQueue, global
 	.skip 0x8
+.endobj __DVDThreadQueue
 
-MaxEntryNum:
+.obj MaxEntryNum, local
 	.skip 0x4
+.endobj MaxEntryNum
 
-FstStringStart:
+.obj FstStringStart, local
 	.skip 0x4
+.endobj FstStringStart
 
-FstStart:
+.obj FstStart, local
 	.skip 0x4
+.endobj FstStart
 
-BootInfo:
+.obj BootInfo, local
 	.skip 0x4
+.endobj BootInfo
 
 .skip 0x18

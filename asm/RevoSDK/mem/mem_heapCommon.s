@@ -338,13 +338,18 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-sRootList:
+.obj sRootList, local
 	.skip 0x10
+.endobj sRootList
 
-sRootMutex:
+.obj sRootMutex, local
 	.skip 0x18
+.endobj sRootMutex
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-sRootListInitialized:
+.balign 8
+
+.obj sRootListInitialized, local
 	.skip 0x8
+.endobj sRootListInitialized

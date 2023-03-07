@@ -1679,20 +1679,20 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CLibCriMoviePlay_typestr
-CLibCriMoviePlay_typestr:
+.obj CLibCriMoviePlay_typestr, global
 	.asciz "CLibCriMoviePlay"
 	.balign 4
+.endobj CLibCriMoviePlay_typestr
 
 
-.global lbl_8052693C
-lbl_8052693C:
+.obj lbl_8052693C, global
 	#"停止中"
 	.4byte 0x92E28E7E
 	.2byte 0x9286
 	.byte 0x00
+.endobj lbl_8052693C
 
 	#"再生準備中"
 	.byte 0x8D
@@ -1721,10 +1721,9 @@ lbl_8052693C:
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CLibCriMoviePlay
-__vt__CLibCriMoviePlay:
+.obj __vt__CLibCriMoviePlay, global
 	.4byte __RTTI__CLibCriMoviePlay
 	.4byte 0
 	.4byte __dt__CLibCriMoviePlay
@@ -1773,9 +1772,9 @@ __vt__CLibCriMoviePlay:
 	.4byte func_80448A40
 	.4byte func_8045AE84
 	.4byte func_8045B1DC
+.endobj __vt__CLibCriMoviePlay
 
-.global CLibCriMoviePlay_hierarchy
-CLibCriMoviePlay_hierarchy:
+.obj CLibCriMoviePlay_hierarchy, global
 	.4byte __RTTI__CDeviceVICb
 	.4byte 0x000001C4
 	.4byte __RTTI__IWorkEvent
@@ -1784,72 +1783,73 @@ CLibCriMoviePlay_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CLibCriMoviePlay_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CLibCriMoviePlay
-__RTTI__CLibCriMoviePlay:
+.obj __RTTI__CLibCriMoviePlay, global
 	.4byte CLibCriMoviePlay_typestr
 	.4byte CLibCriMoviePlay_hierarchy
+.endobj __RTTI__CLibCriMoviePlay
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_8066CC98
-lbl_8066CC98:
+.obj lbl_8066CC98, global
 	.4byte 0xFF910000
+.endobj lbl_8066CC98
 
 
-.global lbl_8066CC9C
-lbl_8066CC9C:
+.obj lbl_8066CC9C, global
 	.4byte 0xFF760044
+.endobj lbl_8066CC9C
 
 
-.global lbl_8066CCA0
-lbl_8066CCA0:
+.obj lbl_8066CCA0, global
 	.4byte 0x6600FF32
+.endobj lbl_8066CCA0
 
 
-.global lbl_8066CCA4
-lbl_8066CCA4:
+.obj lbl_8066CCA4, global
 	.4byte 0x94009494
+.endobj lbl_8066CCA4
 
 
-.global lbl_8066CCA8
-lbl_8066CCA8:
+.obj lbl_8066CCA8, global
 	.4byte 0xCB0005CF
+.endobj lbl_8066CCA8
 
 
-.global lbl_8066CCAC
-lbl_8066CCAC:
+.obj lbl_8066CCAC, global
 	.4byte 0x00FF0000
+.endobj lbl_8066CCAC
 
 
-.global float_8066CCB0
-float_8066CCB0:
+.obj float_8066CCB0, global
 	.float 0
+.endobj float_8066CCB0
 
 
-.global float_8066CCB4
-float_8066CCB4:
+.obj float_8066CCB4, global
 	.float 1.0
+.endobj float_8066CCB4
 
 
-.global float_8066CCB8
-float_8066CCB8:
+.obj float_8066CCB8, global
 	.float 59.9399986 #0x426FC28F
 	.4byte 0
+.endobj float_8066CCB8
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80667FB8
-lbl_80667FB8:
+.obj lbl_80667FB8, global
 	.skip 0x8
+.endobj lbl_80667FB8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

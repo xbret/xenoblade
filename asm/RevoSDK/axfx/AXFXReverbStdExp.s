@@ -947,8 +947,10 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-__EarlySizeTable:
+
+.obj __EarlySizeTable, local
 	.4byte 0x000000A3
 	.4byte 0x0000013D
 	.4byte 0x000001DF
@@ -957,9 +959,10 @@ __EarlySizeTable:
 	.4byte 0x000003C7
 	.4byte 0x00000463
 	.4byte 0x00000503
+.endobj __EarlySizeTable
 
 
-__FilterSizeTable:
+.obj __FilterSizeTable, local
 	.4byte 0x000006FD
 	.4byte 0x000007CF
 	.4byte 0x000001B1
@@ -988,61 +991,64 @@ __FilterSizeTable:
 	.4byte 0x00000935
 	.4byte 0x0000023B
 	.4byte 0x000000B3
+.endobj __FilterSizeTable
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066BE50
-float_8066BE50:
+.balign 8
+
+.obj float_8066BE50, global
 	.float 32000 #0x46FA0000
+.endobj float_8066BE50
 
 
-.global float_8066BE54
-float_8066BE54:
+.obj float_8066BE54, global
 	.float 0
+.endobj float_8066BE54
 
 
-.global float_8066BE58
-float_8066BE58:
+.obj float_8066BE58, global
 	.float 1.0
+.endobj float_8066BE58
 
 
-.global float_8066BE5C
-float_8066BE5C:
+.obj float_8066BE5C, global
 	.float 0.6 #0x3F19999A
+.endobj float_8066BE5C
 
 
-.global double_8066BE60
-double_8066BE60:
+.obj double_8066BE60, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066BE60
 
-.global float_8066BE68
-float_8066BE68:
+.obj float_8066BE68, global
 	.float -0.33 #0xBEA8F5C3
+.endobj float_8066BE68
 
 
-.global float_8066BE6C
-float_8066BE6C:
+.obj float_8066BE6C, global
 	.float 0.33 #0x3EA8F5C3
+.endobj float_8066BE6C
 
 
-.global float_8066BE70
-float_8066BE70:
+.obj float_8066BE70, global
 	.float -3 #0xC0400000
 	.4byte 0
+.endobj float_8066BE70
 
 
-.global double_8066BE78
-double_8066BE78:
+.obj double_8066BE78, global
 	.double 10 #0x4024000000000000
+.endobj double_8066BE78
 
 
-.global float_8066BE80
-float_8066BE80:
+.obj float_8066BE80, global
 	.float 0.95 #0x3F733333
 	.4byte 0
+.endobj float_8066BE80
 
 
-.global double_8066BE88
-double_8066BE88:
+.obj double_8066BE88, global
 	.4byte 0x43300000
 	.4byte 0
+.endobj double_8066BE88

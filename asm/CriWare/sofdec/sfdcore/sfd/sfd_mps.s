@@ -2342,8 +2342,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global SFD_tr_sd_mps
-SFD_tr_sd_mps:
+.balign 8
+
+.obj SFD_tr_sd_mps, global
 	.4byte SFMPS_Init
 	.4byte SFMPS_Finish
 	.4byte SFMPS_ExecServer
@@ -2358,20 +2359,22 @@ SFD_tr_sd_mps:
 	.4byte SFMPS_GetRead
 	.4byte SFMPS_AddRead
 	.4byte SFMPS_Seek
+.endobj SFD_tr_sd_mps
 
 
-.global sfmps_CopyPketFn
-sfmps_CopyPketFn:
+.obj sfmps_CopyPketFn, global
 	.4byte sfmps_CopyAudio
 	.4byte sfmps_CopyVideo
 	.4byte sfmps_CopyPrvate
 	.4byte sfmps_CopyPadding
+.endobj sfmps_CopyPketFn
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global sfmps_libwork
-sfmps_libwork:
+.obj sfmps_libwork, global
 	.skip 0x810
-.global copy_sj_error
-copy_sj_error:
+.endobj sfmps_libwork
+
+.obj copy_sj_error, global
 	.skip 0x8
+.endobj copy_sj_error

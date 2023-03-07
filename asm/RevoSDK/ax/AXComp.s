@@ -2,8 +2,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global __AXCompressorDefaultTable
-__AXCompressorDefaultTable:
+.balign 8
+
+.obj __AXCompressorDefaultTable, global
 	.2byte 0x7F63
 	.2byte 0x7EC7
 	.2byte 0x7E2B
@@ -2020,3 +2021,4 @@ __AXCompressorDefaultTable:
 	.2byte 0x547C
 	.2byte 0x5487
 	.2byte 0x5491
+.endobj __AXCompressorDefaultTable

@@ -282,13 +282,18 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80544690
-lbl_80544690:
+.balign 8
+
+.obj lbl_80544690, global
 	.asciz "No resource to send HID host Connect request."
 	.balign 4
+.endobj lbl_80544690
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-bta_hh_reg:
+.balign 8
+
+.obj bta_hh_reg, local
 	.4byte bta_hh_hdl_event
 	.4byte BTA_HhDisable
+.endobj bta_hh_reg

@@ -515,8 +515,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051AAD8
-lbl_8051AAD8:
+.balign 8
+
+.obj lbl_8051AAD8, global
 	.float 6.2831853
 	.4byte 0
 	.8byte 0x4000000000000000
@@ -527,3 +528,4 @@ lbl_8051AAD8:
 	.8byte 0x4330000080000000
 	.asciz "(c)CRI"
 	.balign 4
+.endobj lbl_8051AAD8

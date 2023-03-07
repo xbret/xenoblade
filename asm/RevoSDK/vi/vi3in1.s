@@ -1589,8 +1589,10 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-gammaSet:
+
+.obj gammaSet, local
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1855,9 +1857,10 @@ gammaSet:
 	.4byte 0x8A40A740
 	.4byte 0xC040D680
 	.4byte 0xEB000000
+.endobj gammaSet
 
 
-VINtscACPType1:
+.obj VINtscACPType1, local
 	.4byte 0x36000000
 	.4byte 0
 	.4byte 0x1B1B2407
@@ -1865,8 +1868,9 @@ VINtscACPType1:
 	.4byte 0x0F600000
 	.4byte 0
 	.4byte 0
+.endobj VINtscACPType1
 
-VINtscACPType2:
+.obj VINtscACPType2, local
 	.4byte 0x3E1D1125
 	.4byte 0x11010700
 	.4byte 0x1B1B2407
@@ -1874,8 +1878,9 @@ VINtscACPType2:
 	.4byte 0x0F60010A
 	.4byte 0x00050403
 	.4byte 0xFF000000
+.endobj VINtscACPType2
 
-VINtscACPType3:
+.obj VINtscACPType3, local
 	.4byte 0x3E171521
 	.4byte 0x15050502
 	.4byte 0x1B1B2407
@@ -1883,8 +1888,9 @@ VINtscACPType3:
 	.4byte 0x0F60010A
 	.4byte 0x00050403
 	.4byte 0xFF000000
+.endobj VINtscACPType3
 
-VIPalACPType1:
+.obj VIPalACPType1, local
 	.4byte 0x361A222A
 	.4byte 0x22050200
 	.4byte 0x1C3D1403
@@ -1892,8 +1898,9 @@ VIPalACPType1:
 	.4byte 0x7E600008
 	.4byte 0x00040701
 	.4byte 0x55010000
+.endobj VIPalACPType1
 
-VIPalACPType2:
+.obj VIPalACPType2, local
 	.4byte 0x361A222A
 	.4byte 0x22050200
 	.4byte 0x1C3D1403
@@ -1901,8 +1908,9 @@ VIPalACPType2:
 	.4byte 0x7E600008
 	.4byte 0x00040701
 	.4byte 0x55010000
+.endobj VIPalACPType2
 
-VIPalACPType3:
+.obj VIPalACPType3, local
 	.4byte 0x361A222A
 	.4byte 0x22050200
 	.4byte 0x1C3D1403
@@ -1910,8 +1918,9 @@ VIPalACPType3:
 	.4byte 0x7E600008
 	.4byte 0x00040701
 	.4byte 0x55010000
+.endobj VIPalACPType3
 
-VIEurgb60ACPType1:
+.obj VIEurgb60ACPType1, local
 	.4byte 0x36000000
 	.4byte 0
 	.4byte 0x1B1B2407
@@ -1919,8 +1928,9 @@ VIEurgb60ACPType1:
 	.4byte 0x1E600000
 	.4byte 0
 	.4byte 0x00010000
+.endobj VIEurgb60ACPType1
 
-VIEurgb60ACPType2:
+.obj VIEurgb60ACPType2, local
 	.4byte 0x361D1125
 	.4byte 0x11010700
 	.4byte 0x1B1B2407
@@ -1928,8 +1938,9 @@ VIEurgb60ACPType2:
 	.4byte 0x1E60010A
 	.4byte 0x00050403
 	.4byte 0xFF010000
+.endobj VIEurgb60ACPType2
 
-VIEurgb60ACPType3:
+.obj VIEurgb60ACPType3, local
 	.4byte 0x36171521
 	.4byte 0x15050502
 	.4byte 0x1B1B2407
@@ -1937,8 +1948,9 @@ VIEurgb60ACPType3:
 	.4byte 0x1E60010A
 	.4byte 0x00050403
 	.4byte 0xFF010000
+.endobj VIEurgb60ACPType3
 
-VIMpalACPType1:
+.obj VIMpalACPType1, local
 	.4byte 0x36000000
 	.4byte 0
 	.4byte 0x1B1B2407
@@ -1946,9 +1958,10 @@ VIMpalACPType1:
 	.4byte 0x0F600000
 	.4byte 0
 	.4byte 0
+.endobj VIMpalACPType1
 
 
-VIMpalACPType2:
+.obj VIMpalACPType2, local
 	.4byte 0x361D1125
 	.4byte 0x11010700
 	.4byte 0x1B1B2407
@@ -1956,9 +1969,10 @@ VIMpalACPType2:
 	.4byte 0x0F60010A
 	.4byte 0x00050403
 	.4byte 0xFF000000
+.endobj VIMpalACPType2
 
 
-VIMpalACPType3:
+.obj VIMpalACPType3, local
 	.4byte 0x36171521
 	.4byte 0x15050502
 	.4byte 0x1B1B2407
@@ -1966,8 +1980,9 @@ VIMpalACPType3:
 	.4byte 0x0F60010A
 	.4byte 0x00050403
 	.4byte 0xFF000000
+.endobj VIMpalACPType3
 
-VIProgressiveACPType:
+.obj VIProgressiveACPType, local
 	.4byte 0x01000000
 	.4byte 0
 	.4byte 0
@@ -1975,6 +1990,7 @@ VIProgressiveACPType:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj VIProgressiveACPType
 
 
 
@@ -1985,69 +2001,92 @@ VIProgressiveACPType:
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-__tvType:
+
+.obj __tvType, local
 	.4byte 0x000000FF
+.endobj __tvType
 
 
-__wd0:
+.obj __wd0, local
 	.byte 0xFF
+.endobj __wd0
 
-__wd1:
+.obj __wd1, local
 	.byte 0xFF
+.endobj __wd1
 
-__wd2:
+.obj __wd2, local
 	.byte 0xFF
+.endobj __wd2
 
-__gp1:
+.obj __gp1, local
 	.byte 0xFF
+.endobj __gp1
 
-__gp2:
+.obj __gp2, local
 	.byte 0xFF
+.endobj __gp2
 
-__gp3:
+.obj __gp3, local
 	.byte 0xFF
+.endobj __gp3
 
-__gp4:
+.obj __gp4, local
 	.byte 0xFF
+.endobj __gp4
 
-__cc1:
+.obj __cc1, local
 	.byte 0xFF
+.endobj __cc1
 
-__cc2:
+.obj __cc2, local
 	.byte 0xFF
+.endobj __cc2
 
-__cc3:
+.obj __cc3, local
 	.byte 0xFF
+.endobj __cc3
 
-__cc4:
+.obj __cc4, local
 	.byte 0xFF
+.endobj __cc4
 
-__filter:
+.obj __filter, local
 	.byte 0xFF
+.endobj __filter
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-VIZeroACPType:
+.obj VIZeroACPType, local
 	.skip 0x30
+.endobj VIZeroACPType
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global Vdac_Flag_Changed
-Vdac_Flag_Changed:
-	.skip 0x4
+.balign 8
 
-__current_3in1_video_mode:
+.obj Vdac_Flag_Changed, global
 	.skip 0x4
+.endobj Vdac_Flag_Changed
 
-__level:
+.obj __current_3in1_video_mode, local
 	.skip 0x4
+.endobj __current_3in1_video_mode
 
-__gamma:
+.obj __level, local
 	.skip 0x4
+.endobj __level
 
-__type:
+.obj __gamma, local
 	.skip 0x4
+.endobj __gamma
 
-Vdac_Flag_Region:
+.obj __type, local
 	.skip 0x4
+.endobj __type
+
+.obj Vdac_Flag_Region, local
+	.skip 0x4
+.endobj Vdac_Flag_Region

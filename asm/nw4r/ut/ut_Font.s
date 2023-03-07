@@ -54,8 +54,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056E710
-lbl_8056E710:
+.balign 8
+
+.obj lbl_8056E710, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte ReadNextCharUTF8__Q34nw4r2ut14CharStrmReaderFv
@@ -68,3 +69,4 @@ lbl_8056E710:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte ReadNextCharCP1252__Q34nw4r2ut14CharStrmReaderFv
+.endobj lbl_8056E710

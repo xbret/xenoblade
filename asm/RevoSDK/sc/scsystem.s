@@ -1824,60 +1824,67 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-ConfDirName:
+
+.obj ConfDirName, local
 	.asciz "/shared2/sys"
 	.balign 4
+.endobj ConfDirName
 
 
-ConfFileName:
+.obj ConfFileName, local
 	.asciz "/shared2/sys/SYSCONF"
 	.balign 4
+.endobj ConfFileName
 
-ProductInfoFileName:
+.obj ProductInfoFileName, local
 	.asciz "/title/00000001/00000002/data/setting.txt"
 	.balign 4
 	.4byte 0
+.endobj ProductInfoFileName
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8055EEF8
-lbl_8055EEF8:
+.balign 8
+
+.obj lbl_8055EEF8, global
 	.asciz "<< RVL_SDK - SC \trelease build: Feb 27 2009 10:05:17 (0x4302_145) >>"
 	.balign 4
+.endobj lbl_8055EEF8
 
-.global lbl_8055EF40
-lbl_8055EF40:
+.obj lbl_8055EF40, global
 	.asciz "IPL.EULA"
 	.balign 4
+.endobj lbl_8055EF40
 
-.global lbl_8055EF4C
-lbl_8055EF4C:
+.obj lbl_8055EF4C, global
 	.asciz "IPL.SADR"
 	.balign 4
+.endobj lbl_8055EF4C
 
-.global lbl_8055EF58
-lbl_8055EF58:
+.obj lbl_8055EF58, global
 	.asciz "NET.CTPC"
 	.balign 4
+.endobj lbl_8055EF58
 
-.global lbl_8055EF64
-lbl_8055EF64:
+.obj lbl_8055EF64, global
 	.asciz "NET.PROF"
 	.balign 4
+.endobj lbl_8055EF64
 
-.global lbl_8055EF70
-lbl_8055EF70:
+.obj lbl_8055EF70, global
 	.asciz "NET.WCPC"
 	.balign 4
+.endobj lbl_8055EF70
 
-.global lbl_8055EF7C
-lbl_8055EF7C:
+.obj lbl_8055EF7C, global
 	.asciz "NET.WCFG"
 	.balign 4
+.endobj lbl_8055EF7C
 
 
-NameAndIDTbl:
+.obj NameAndIDTbl, local
 	.4byte lbl_80665BC4
 	.4byte 0
 	.4byte lbl_80665BCC
@@ -1952,10 +1959,10 @@ NameAndIDTbl:
 	.4byte 0x00000023
 	.4byte lbl_80665CB8
 	.4byte 0x00000024
+.endobj NameAndIDTbl
 
 
-.global jumptable_8055F0B0
-jumptable_8055F0B0:
+.obj jumptable_8055F0B0, global
 	.4byte .L_80360BC0
 	.4byte .L_80360C04
 	.4byte .L_80360C44
@@ -1966,190 +1973,207 @@ jumptable_8055F0B0:
 	.4byte .L_80360D68
 	.4byte .L_80360DA4
 	.4byte .L_80360DAC
+.endobj jumptable_8055F0B0
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-__SCVersion:
-	.4byte lbl_8055EEF8
+.balign 8
 
-.global lbl_80665BC4
-lbl_80665BC4:
+.obj __SCVersion, local
+	.4byte lbl_8055EEF8
+.endobj __SCVersion
+
+.obj lbl_80665BC4, global
 	.asciz "IPL.CB"
 	.balign 4
+.endobj lbl_80665BC4
 
-.global lbl_80665BCC
-lbl_80665BCC:
+.obj lbl_80665BCC, global
 	.asciz "IPL.AR"
 	.balign 4
 	.4byte 0
+.endobj lbl_80665BCC
 
-.global lbl_80665BD8
-lbl_80665BD8:
+.obj lbl_80665BD8, global
 	.asciz "IPL.ARN"
+.endobj lbl_80665BD8
 
-.global lbl_80665BE0
-lbl_80665BE0:
+.obj lbl_80665BE0, global
 	.asciz "IPL.CD"
 	.balign 4
+.endobj lbl_80665BE0
 
-.global lbl_80665BE8
-lbl_80665BE8:
+.obj lbl_80665BE8, global
 	.asciz "IPL.CD2"
+.endobj lbl_80665BE8
 
-.global lbl_80665BF0
-lbl_80665BF0:
+.obj lbl_80665BF0, global
 	.asciz "IPL.DH"
 	.balign 4
+.endobj lbl_80665BF0
 
-.global lbl_80665BF8
-lbl_80665BF8:
+.obj lbl_80665BF8, global
 	.asciz "IPL.E60"
+.endobj lbl_80665BF8
 
-.global lbl_80665C00
-lbl_80665C00:
+.obj lbl_80665C00, global
 	.asciz "IPL.FRC"
+.endobj lbl_80665C00
 
-.global lbl_80665C08
-lbl_80665C08:
+.obj lbl_80665C08, global
 	.asciz "IPL.IDL"
+.endobj lbl_80665C08
 
-.global lbl_80665C10
-lbl_80665C10:
+.obj lbl_80665C10, global
 	.asciz "IPL.INC"
+.endobj lbl_80665C10
 
-.global lbl_80665C18
-lbl_80665C18:
+.obj lbl_80665C18, global
 	.asciz "IPL.LNG"
+.endobj lbl_80665C18
 
-.global lbl_80665C20
-lbl_80665C20:
+.obj lbl_80665C20, global
 	.asciz "IPL.NIK"
+.endobj lbl_80665C20
 
-.global lbl_80665C28
-lbl_80665C28:
+.obj lbl_80665C28, global
 	.asciz "IPL.PC"
 	.balign 4
+.endobj lbl_80665C28
 
-.global lbl_80665C30
-lbl_80665C30:
+.obj lbl_80665C30, global
 	.asciz "IPL.PGS"
+.endobj lbl_80665C30
 
-.global lbl_80665C38
-lbl_80665C38:
+.obj lbl_80665C38, global
 	.asciz "IPL.SSV"
+.endobj lbl_80665C38
 
-.global lbl_80665C40
-lbl_80665C40:
+.obj lbl_80665C40, global
 	.asciz "IPL.SND"
+.endobj lbl_80665C40
 
-.global lbl_80665C48
-lbl_80665C48:
+.obj lbl_80665C48, global
 	.asciz "IPL.UPT"
+.endobj lbl_80665C48
 
-.global lbl_80665C50
-lbl_80665C50:
+.obj lbl_80665C50, global
 	.asciz "NET.CNF"
+.endobj lbl_80665C50
 
-.global lbl_80665C58
-lbl_80665C58:
+.obj lbl_80665C58, global
 	.asciz "DEV.BTM"
+.endobj lbl_80665C58
 
-.global lbl_80665C60
-lbl_80665C60:
+.obj lbl_80665C60, global
 	.asciz "DEV.VIM"
+.endobj lbl_80665C60
 
-.global lbl_80665C68
-lbl_80665C68:
+.obj lbl_80665C68, global
 	.asciz "DEV.CTC"
+.endobj lbl_80665C68
 
-.global lbl_80665C70
-lbl_80665C70:
+.obj lbl_80665C70, global
 	.asciz "DEV.DSM"
+.endobj lbl_80665C70
 
-.global lbl_80665C78
-lbl_80665C78:
+.obj lbl_80665C78, global
 	.asciz "BT.DINF"
+.endobj lbl_80665C78
 
-.global lbl_80665C80
-lbl_80665C80:
+.obj lbl_80665C80, global
 	.asciz "BT.CDIF"
+.endobj lbl_80665C80
 
-.global lbl_80665C88
-lbl_80665C88:
+.obj lbl_80665C88, global
 	.asciz "BT.SENS"
+.endobj lbl_80665C88
 
-.global lbl_80665C90
-lbl_80665C90:
+.obj lbl_80665C90, global
 	.asciz "BT.SPKV"
+.endobj lbl_80665C90
 
-.global lbl_80665C98
-lbl_80665C98:
+.obj lbl_80665C98, global
 	.asciz "BT.MOT"
 	.balign 4
+.endobj lbl_80665C98
 
-.global lbl_80665CA0
-lbl_80665CA0:
+.obj lbl_80665CA0, global
 	.asciz "BT.BAR"
 	.balign 4
+.endobj lbl_80665CA0
 
-.global lbl_80665CA8
-lbl_80665CA8:
+.obj lbl_80665CA8, global
 	.asciz "DVD.CNF"
+.endobj lbl_80665CA8
 
-.global lbl_80665CB0
-lbl_80665CB0:
+.obj lbl_80665CB0, global
 	.asciz "WWW.RST"
+.endobj lbl_80665CB0
 
-.global lbl_80665CB8
-lbl_80665CB8:
+.obj lbl_80665CB8, global
 	.asciz "IPL.TID"
+.endobj lbl_80665CB8
 
 
-.global lbl_80665CC0
-lbl_80665CC0:
+.obj lbl_80665CC0, global
 	.asciz "SCv0"
 	.balign 4
+.endobj lbl_80665CC0
 
 
-.global lbl_80665CC8
-lbl_80665CC8:
+.obj lbl_80665CC8, global
 	.asciz "SCed"
 	.balign 4
+.endobj lbl_80665CC8
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-Control:
+.obj Control, local
 	.skip 0x1A0
+.endobj Control
 
-ConfBuf:
+.obj ConfBuf, local
 	.skip 0x4000
+.endobj ConfBuf
 
-ConfBufForFlush:
+.obj ConfBufForFlush, local
 	.skip 0x4000
+.endobj ConfBufForFlush
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-BgJobStatus:
+
+.obj BgJobStatus, local
 	.skip 0x4
+.endobj BgJobStatus
 
-ItemRestSize:
+.obj ItemRestSize, local
 	.skip 0x4
+.endobj ItemRestSize
 
-ItemNumTotal:
+.obj ItemNumTotal, local
 	.skip 0x4
+.endobj ItemNumTotal
 
-ItemIDMaxPlus1:
+.obj ItemIDMaxPlus1, local
 	.skip 0x4
+.endobj ItemIDMaxPlus1
 
-ItemIDOffsetTblOffset:
+.obj ItemIDOffsetTblOffset, local
 	.skip 0x4
+.endobj ItemIDOffsetTblOffset
 
-IsDevKit:
+.obj IsDevKit, local
 	.skip 0x1
+.endobj IsDevKit
 
-DirtyFlag:
+.obj DirtyFlag, local
 	.skip 0x1
+.endobj DirtyFlag
 
-Initialized:
+.obj Initialized, local
 	.skip 0x2
+.endobj Initialized

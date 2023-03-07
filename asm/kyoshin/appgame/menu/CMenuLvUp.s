@@ -1291,17 +1291,16 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMenuLvUp_typestr
-CMenuLvUp_typestr:
+.obj CMenuLvUp_typestr, global
 	.asciz "CMenuLvUp"
 	.balign 4
 	.4byte 0
+.endobj CMenuLvUp_typestr
 
 
-.global CMenuLvUp_strpool
-CMenuLvUp_strpool:
+.obj CMenuLvUp_strpool, global
 	.asciz "CMenuLvUp"
 	.asciz "mf71_battle18_lv.brlyt"
 	.asciz "mf71_battle18_lv_in.brlan"
@@ -1313,13 +1312,13 @@ CMenuLvUp_strpool:
 	.asciz "pic_ps01"
 	.asciz "pic_at00"
 	.asciz "pic_at01"
+.endobj CMenuLvUp_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMenuLvUp
-__vt__CMenuLvUp:
+.obj __vt__CMenuLvUp, global
 	.4byte __RTTI__CMenuLvUp
 	.4byte 0
 	.4byte __dt__CMenuLvUp
@@ -1368,9 +1367,9 @@ __vt__CMenuLvUp:
 	.4byte func_80276C28
 	.4byte func_80276C20
 	.4byte func_80275E7C
+.endobj __vt__CMenuLvUp
 
-.global CMenuLvUp_hierarchy
-CMenuLvUp_hierarchy:
+.obj CMenuLvUp_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x0000005C
 	.4byte __RTTI__IWorkEvent
@@ -1387,53 +1386,54 @@ CMenuLvUp_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuLvUp_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuLvUp
-__RTTI__CMenuLvUp:
+.obj __RTTI__CMenuLvUp, global
 	.4byte CMenuLvUp_typestr
 	.4byte CMenuLvUp_hierarchy
+.endobj __RTTI__CMenuLvUp
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B2A8
-float_8066B2A8:
+.obj float_8066B2A8, global
 	.float 0
+.endobj float_8066B2A8
 
 
-.global float_8066B2AC
-float_8066B2AC:
+.obj float_8066B2AC, global
 	.float 1.0
+.endobj float_8066B2AC
 
 
-.global float_8066B2B0
-float_8066B2B0:
+.obj float_8066B2B0, global
 	.float 320 #0x43A00000
+.endobj float_8066B2B0
 
 
-.global float_8066B2B4
-float_8066B2B4:
+.obj float_8066B2B4, global
 	.float 224 #0x43600000
+.endobj float_8066B2B4
 
 
-.global float_8066B2B8
-float_8066B2B8:
+.obj float_8066B2B8, global
 	.float -1.0
 	.4byte 0
+.endobj float_8066B2B8
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_806671F0
-lbl_806671F0:
+.obj lbl_806671F0, global
 	.skip 0x8
+.endobj lbl_806671F0
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

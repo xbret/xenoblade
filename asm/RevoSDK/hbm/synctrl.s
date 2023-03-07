@@ -330,8 +330,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global __HBMSYNn128
-__HBMSYNn128:
+.balign 8
+
+.obj __HBMSYNn128, global
 	.float 0.0
 	.float 0.007813
 	.float 0.015625
@@ -460,3 +461,4 @@ __HBMSYNn128:
 	.float 0.976563
 	.float 0.984375
 	.float 0.992188
+.endobj __HBMSYNn128

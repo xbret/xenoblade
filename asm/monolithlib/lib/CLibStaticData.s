@@ -586,24 +586,23 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CLibStaticData_typestr
-CLibStaticData_typestr:
+.obj CLibStaticData_typestr, global
 	.asciz "CLibStaticData"
 	.balign 4
+.endobj CLibStaticData_typestr
 
-.global CLibStaticData_CItem_typestr
-CLibStaticData_CItem_typestr:
+.obj CLibStaticData_CItem_typestr, global
 	.asciz "CLibStaticData::CItem"
 	.balign 4
+.endobj CLibStaticData_CItem_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CLibStaticData
-__vt__CLibStaticData:
+.obj __vt__CLibStaticData, global
 	.4byte __RTTI__CLibStaticData
 	.4byte 0
 	.4byte __dt__CLibStaticData
@@ -644,19 +643,19 @@ __vt__CLibStaticData:
 	.4byte func_8045FC84
 	.4byte func_8045FDB8
 	.4byte func_80039E30
+.endobj __vt__CLibStaticData
 
-.global CLibStaticData_hierarchy
-CLibStaticData_hierarchy:
+.obj CLibStaticData_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CLibStaticData_hierarchy
 
 
-.global __vt__CLibStaticData_CItem
-__vt__CLibStaticData_CItem:
+.obj __vt__CLibStaticData_CItem, global
 	.4byte __RTTI__CLibStaticData_CItem
 	.4byte 0
 	.4byte __dt__CLibStaticData_CItem
@@ -691,32 +690,34 @@ __vt__CLibStaticData_CItem:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CLibStaticData_CItem
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CLibStaticData
-__RTTI__CLibStaticData:
+.obj __RTTI__CLibStaticData, global
 	.4byte CLibStaticData_typestr
 	.4byte CLibStaticData_hierarchy
+.endobj __RTTI__CLibStaticData
 
-.global __RTTI__CLibStaticData_CItem
-__RTTI__CLibStaticData_CItem:
+.obj __RTTI__CLibStaticData_CItem, global
 	.4byte CLibStaticData_CItem_typestr
 	.4byte 0
+.endobj __RTTI__CLibStaticData_CItem
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80667FF0, global
+	.skip 0x4
+.endobj lbl_80667FF0
 
-.global lbl_80667FF0
-lbl_80667FF0:
+.obj lbl_80667FF4, global
 	.skip 0x4
-.global lbl_80667FF4
-lbl_80667FF4:
-	.skip 0x4
+.endobj lbl_80667FF4
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

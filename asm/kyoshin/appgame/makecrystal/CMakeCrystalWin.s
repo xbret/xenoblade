@@ -1128,29 +1128,28 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMakeCrystalWin_typestr
-CMakeCrystalWin_typestr:
+.obj CMakeCrystalWin_typestr, global
 	.asciz "CMakeCrystalWin"
+.endobj CMakeCrystalWin_typestr
 
 
-.global CMakeCrystalWin_strpool
-CMakeCrystalWin_strpool:
+.obj CMakeCrystalWin_strpool, global
 	.asciz "CMakeCrystalWin"
 	.asciz "CMakeCrystalScn"
 	.asciz "MNU_crystal"
 	.asciz "info"
 	.balign 4
 	.4byte 0
+.endobj CMakeCrystalWin_strpool
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global jumptable_805392F8
-jumptable_805392F8:
+.obj jumptable_805392F8, global
 	.4byte .L_80212AA0
 	.4byte .L_80212AA8
 	.4byte .L_80212AB0
@@ -1163,10 +1162,10 @@ jumptable_805392F8:
 	.4byte .L_80212AE8
 	.4byte .L_80212AF0
 	.4byte .L_80212AF8
+.endobj jumptable_805392F8
 
 
-.global __vt__CMakeCrystalWin
-__vt__CMakeCrystalWin:
+.obj __vt__CMakeCrystalWin, global
 	.4byte __RTTI__CMakeCrystalWin
 	.4byte 0
 	.4byte __dt__CMakeCrystalWin
@@ -1206,37 +1205,37 @@ __vt__CMakeCrystalWin:
 	.4byte func_80213480
 	.4byte func_80213478
 	.4byte func_802133C8
+.endobj __vt__CMakeCrystalWin
 
-.global CMakeCrystalWin_hierarchy
-CMakeCrystalWin_hierarchy:
+.obj CMakeCrystalWin_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000004
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
+.endobj CMakeCrystalWin_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMakeCrystalWin
-__RTTI__CMakeCrystalWin:
+.obj __RTTI__CMakeCrystalWin, global
 	.4byte CMakeCrystalWin_typestr
 	.4byte CMakeCrystalWin_hierarchy
+.endobj __RTTI__CMakeCrystalWin
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-
-.global float_8066AD10
-float_8066AD10:
+.obj float_8066AD10, global
 	.float 0
+.endobj float_8066AD10
 
 
-.global float_8066AD14
-float_8066AD14:
+.obj float_8066AD14, global
 	.float 20 #0x41A00000
+.endobj float_8066AD14
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

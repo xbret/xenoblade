@@ -4408,76 +4408,74 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-
-.global lbl_805031F8
-lbl_805031F8:
+.obj lbl_805031F8, global
 	.asciz "r1_quest_FLG"
 	.balign 4
+.endobj lbl_805031F8
 
-.global lbl_80503208
-lbl_80503208:
+.obj lbl_80503208, global
 	.asciz "r1_quest_STFLG"
 	.balign 4
+.endobj lbl_80503208
 
-.global lbl_80503218
-lbl_80503218:
+.obj lbl_80503218, global
 	.asciz "r1_S_FLG_MIN"
 	.balign 4
+.endobj lbl_80503218
 
-.global lbl_80503228
-lbl_80503228:
+.obj lbl_80503228, global
 	.asciz "r1_S_FLG_MAX"
 	.balign 4
+.endobj lbl_80503228
 
-.global lbl_80503238
-lbl_80503238:
+.obj lbl_80503238, global
 	.asciz "r1_gimID"
 	.balign 4
+.endobj lbl_80503238
 
-.global lbl_80503244
-lbl_80503244:
+.obj lbl_80503244, global
 	.asciz "r1_named_FLG"
 	.balign 4
+.endobj lbl_80503244
 
-.global lbl_80503254
-lbl_80503254:
+.obj lbl_80503254, global
 	.asciz "r1_item_lost"
 	.balign 4
+.endobj lbl_80503254
 
-.global lbl_80503264
-lbl_80503264:
+.obj lbl_80503264, global
 	.asciz "s1pcwait"
 	.balign 4
+.endobj lbl_80503264
 
-.global lbl_80503270
-lbl_80503270:
+.obj lbl_80503270, global
 	.asciz "s1LODtype"
 	.balign 4
+.endobj lbl_80503270
 
-.global lbl_8050327C
-lbl_8050327C:
+.obj lbl_8050327C, global
 	.asciz "s1LODsub"
 	.balign 4
+.endobj lbl_8050327C
 
-.global lbl_80503288
-lbl_80503288:
+.obj lbl_80503288, global
 	.asciz "s1LODSTOP"
 	.balign 4
+.endobj lbl_80503288
 
-.global cf_CfGimmickObject_typestr
-cf_CfGimmickObject_typestr:
+.obj cf_CfGimmickObject_typestr, global
 	.asciz "cf::CfGimmickObject"
+.endobj cf_CfGimmickObject_typestr
 
-.global cf_CfGimmick_typestr
-cf_CfGimmick_typestr:
+.obj cf_CfGimmick_typestr, global
 	.asciz "cf::CfGimmick"
 	.balign 4
+.endobj cf_CfGimmick_typestr
 
 
-.global CfGimmickObject_strpool
-CfGimmickObject_strpool:
+.obj CfGimmickObject_strpool, global
 	.asciz "rectype"
 	.asciz "ct"
 	.asciz "visible"
@@ -4507,13 +4505,13 @@ CfGimmickObject_strpool:
 	.asciz "s2lockPC"
 	.balign 4
 	.4byte 0
+.endobj CfGimmickObject_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_80538628
-lbl_80538628:
+.obj lbl_80538628, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801F7978
@@ -4532,10 +4530,10 @@ lbl_80538628:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801F856C
+.endobj lbl_80538628
 
 
-.global lbl_80538670
-lbl_80538670:
+.obj lbl_80538670, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801F85C4
@@ -4554,10 +4552,10 @@ lbl_80538670:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801F8BB8
+.endobj lbl_80538670
 
 
-.global lbl_805386B8
-lbl_805386B8:
+.obj lbl_805386B8, global
 	.4byte lbl_805031F8
 	.4byte lbl_80503208
 	.4byte lbl_80503218
@@ -4566,10 +4564,10 @@ lbl_805386B8:
 	.4byte lbl_80503244
 	.4byte lbl_8066AA28
 	.4byte lbl_80503254
+.endobj lbl_805386B8
 
 
-.global lbl_805386D8
-lbl_805386D8:
+.obj lbl_805386D8, global
 	.4byte lbl_80503264
 	.4byte lbl_8066AA30
 	.4byte lbl_8066AA38
@@ -4580,10 +4578,10 @@ lbl_805386D8:
 	.4byte lbl_8066AA50
 	.4byte lbl_8066AA58
 	.4byte lbl_80503288
+.endobj lbl_805386D8
 
 
-.global jumptable_80538700
-jumptable_80538700:
+.obj jumptable_80538700, global
 	.4byte .L_801F728C
 	.4byte .L_801F6EAC
 	.4byte .L_801F6F34
@@ -4594,10 +4592,10 @@ jumptable_80538700:
 	.4byte .L_801F7248
 	.4byte .L_801F7254
 	.4byte .L_801F6EAC
+.endobj jumptable_80538700
 
 
-.global __vt__cf_CfGimmickObject
-__vt__cf_CfGimmickObject:
+.obj __vt__cf_CfGimmickObject, global
 	.4byte __RTTI__cf_CfGimmickObject
 	.4byte 0
 	.4byte __dt__cf_CfGimmickObject
@@ -4607,114 +4605,115 @@ __vt__cf_CfGimmickObject:
 	.4byte func_801F5C08
 	.4byte func_801F5C18
 	.4byte func_801F7930
+.endobj __vt__cf_CfGimmickObject
 
-.global cf_CfGimmickObject_hierarchy
-cf_CfGimmickObject_hierarchy:
+.obj cf_CfGimmickObject_hierarchy, global
 	.4byte __RTTI__cf_IObjectInfo
 	.4byte 0
 	.4byte __RTTI__cf_CfGimmick
 	.4byte 0
 	.4byte 0
+.endobj cf_CfGimmickObject_hierarchy
 
-.global cf_CfGimmick_hierarchy
-cf_CfGimmick_hierarchy:
+.obj cf_CfGimmick_hierarchy, global
 	.4byte __RTTI__cf_IObjectInfo
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CfGimmick_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CfGimmickObject
-__RTTI__cf_CfGimmickObject:
+.obj __RTTI__cf_CfGimmickObject, global
 	.4byte cf_CfGimmickObject_typestr
 	.4byte cf_CfGimmickObject_hierarchy
+.endobj __RTTI__cf_CfGimmickObject
 
-.global __RTTI__cf_CfGimmick
-__RTTI__cf_CfGimmick:
+.obj __RTTI__cf_CfGimmick, global
 	.4byte cf_CfGimmick_typestr
 	.4byte cf_CfGimmick_hierarchy
+.endobj __RTTI__cf_CfGimmick
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_8066AA28
-lbl_8066AA28:
+.obj lbl_8066AA28, global
 	.asciz "r1_item"
+.endobj lbl_8066AA28
 
-.global lbl_8066AA30
-lbl_8066AA30:
+.obj lbl_8066AA30, global
 	.asciz "s1camID"
+.endobj lbl_8066AA30
 
-.global lbl_8066AA38
-lbl_8066AA38:
+.obj lbl_8066AA38, global
 	.asciz "s1ACT"
 	.balign 4
+.endobj lbl_8066AA38
 
-.global lbl_8066AA40
-lbl_8066AA40:
+.obj lbl_8066AA40, global
 	.asciz "s1EF"
 	.balign 4
+.endobj lbl_8066AA40
 
-.global lbl_8066AA48
-lbl_8066AA48:
+.obj lbl_8066AA48, global
 	.asciz "s1EFATR"
+.endobj lbl_8066AA48
 
-.global lbl_8066AA50
-lbl_8066AA50:
+.obj lbl_8066AA50, global
 	.asciz "s1SE"
 	.balign 4
+.endobj lbl_8066AA50
 
-.global lbl_8066AA58
-lbl_8066AA58:
+.obj lbl_8066AA58, global
 	.asciz "s1SEATR"
+.endobj lbl_8066AA58
 
 
-.global float_8066AA60
-float_8066AA60:
+.obj float_8066AA60, global
 	.float 0
+.endobj float_8066AA60
 
 
-.global float_8066AA64
-float_8066AA64:
+.obj float_8066AA64, global
 	.float 1.0
+.endobj float_8066AA64
 
 
-.global double_8066AA68
-double_8066AA68:
+.obj double_8066AA68, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066AA68
 
-.global float_8066AA70
-float_8066AA70:
+.obj float_8066AA70, global
 	.float 20 #0x41A00000
+.endobj float_8066AA70
 
 
-.global float_8066AA74
-float_8066AA74:
+.obj float_8066AA74, global
 	.float 120 #0x42F00000
+.endobj float_8066AA74
 
 
-.global float_8066AA78
-float_8066AA78:
+.obj float_8066AA78, global
 	.float 30 #0x41F00000
+.endobj float_8066AA78
 
 
-.global float_8066AA7C
-float_8066AA7C:
+.obj float_8066AA7C, global
 	.float 240 #0x43700000
+.endobj float_8066AA7C
 
 
-.global double_8066AA80
-double_8066AA80:
+.obj double_8066AA80, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066AA80
 
-.global float_8066AA88
-float_8066AA88:
+.obj float_8066AA88, global
 	.float 5 #0x40A00000
 	.4byte 0
+.endobj float_8066AA88
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -89,48 +89,48 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CNReqtaskCheck_typestr
-CNReqtaskCheck_typestr:
+.obj CNReqtaskCheck_typestr, global
 	.asciz "CNReqtaskCheck"
 	.balign 4
-	
+.endobj CNReqtaskCheck_typestr
+
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CNReqtaskCheck
-__vt__CNReqtaskCheck:
+.obj __vt__CNReqtaskCheck, global
 	.4byte __RTTI__CNReqtaskCheck
 	.4byte 0
 	.4byte func_804DB364
 	.4byte func_804DA4CC
+.endobj __vt__CNReqtaskCheck
 
-.global CNReqtaskCheck_hierarchy
-CNReqtaskCheck_hierarchy:
+.obj CNReqtaskCheck_hierarchy, global
 	.4byte __RTTI__CNReqtask
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CNReqtaskCheck_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CNReqtaskCheck
-__RTTI__CNReqtaskCheck:
+.obj __RTTI__CNReqtaskCheck, global
 	.4byte CNReqtaskCheck_typestr
 	.4byte CNReqtaskCheck_hierarchy
+.endobj __RTTI__CNReqtaskCheck
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_806682D8
-lbl_806682D8:
+.obj lbl_806682D8, global
 	.skip 0x8
+.endobj lbl_806682D8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

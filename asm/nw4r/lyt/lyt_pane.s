@@ -1232,8 +1232,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056D1D0
-lbl_8056D1D0:
+.balign 8
+
+.obj lbl_8056D1D0, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r3lyt4PaneFv
@@ -1264,41 +1265,46 @@ lbl_8056D1D0:
 	.4byte GetMaterial__Q34nw4r3lyt4PaneCFUl
 	.4byte LoadMtx__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
 	.4byte 0
+.endobj lbl_8056D1D0
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-.global float_8066C538
-float_8066C538:
+
+.obj float_8066C538, global
 	.float 0
+.endobj float_8066C538
 
 
-.global float_8066C53C
-float_8066C53C:
+.obj float_8066C53C, global
 	.float 1.0
+.endobj float_8066C53C
 
 
-.global float_8066C540
-float_8066C540:
+.obj float_8066C540, global
 	.float 0.0174532924 #0x3C8EFA35
+.endobj float_8066C540
 
 
-.global float_8066C544
-float_8066C544:
+.obj float_8066C544, global
 	.float 0.00392156886 #0x3B808081
+.endobj float_8066C544
 
 
-.global double_8066C548
-double_8066C548:
+.obj double_8066C548, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066C548
 
-.global float_8066C550
-float_8066C550:
+.obj float_8066C550, global
 	.float 0.5
 	.4byte 0
+.endobj float_8066C550
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global typeInfo__Q34nw4r3lyt4Pane
-typeInfo__Q34nw4r3lyt4Pane:
+.balign 8
+
+.obj typeInfo__Q34nw4r3lyt4Pane, global
 	.skip 0x8
+.endobj typeInfo__Q34nw4r3lyt4Pane

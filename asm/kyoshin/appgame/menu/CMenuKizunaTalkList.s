@@ -1378,25 +1378,24 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMenuKizunaTalkList_typestr
-CMenuKizunaTalkList_typestr:
+.obj CMenuKizunaTalkList_typestr, global
 	.asciz "CMenuKizunaTalkList"
 	.4byte 0
+.endobj CMenuKizunaTalkList_typestr
 
 
-.global lbl_80509FF8
-lbl_80509FF8:
+.obj lbl_80509FF8, global
 	.asciz "MNU_update"
 	.asciz "info"
+.endobj lbl_80509FF8
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMenuKizunaTalkList
-__vt__CMenuKizunaTalkList:
+.obj __vt__CMenuKizunaTalkList, global
 	.4byte __RTTI__CMenuKizunaTalkList
 	.4byte 0
 	.4byte __dt__CMenuKizunaTalkList
@@ -1411,9 +1410,9 @@ __vt__CMenuKizunaTalkList:
 	.4byte func_802726EC
 	.4byte func_802726E4
 	.4byte func_80272370
+.endobj __vt__CMenuKizunaTalkList
 
-.global CMenuKizunaTalkList_hierarchy
-CMenuKizunaTalkList_hierarchy:
+.obj CMenuKizunaTalkList_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000058
 	.4byte __RTTI__CDoubleListNode
@@ -1428,24 +1427,25 @@ CMenuKizunaTalkList_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuKizunaTalkList_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuKizunaTalkList
-__RTTI__CMenuKizunaTalkList:
+.obj __RTTI__CMenuKizunaTalkList, global
 	.4byte CMenuKizunaTalkList_typestr
 	.4byte CMenuKizunaTalkList_hierarchy
+.endobj __RTTI__CMenuKizunaTalkList
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_806671A0
-lbl_806671A0:
+.obj lbl_806671A0, global
 	.skip 0x8
+.endobj lbl_806671A0
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

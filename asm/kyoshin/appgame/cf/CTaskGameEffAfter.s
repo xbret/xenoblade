@@ -5252,10 +5252,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CTaskGameEffAfter
-__vt__CTaskGameEffAfter:
+.obj __vt__CTaskGameEffAfter, global
 	.4byte __RTTI__CTaskGameEffAfter
 	.4byte 0
 	.4byte __dt__CTaskGameEffAfter
@@ -5265,9 +5264,9 @@ __vt__CTaskGameEffAfter:
 	.4byte func_80061650
 	.4byte func_800615F0
 	.4byte func_80043F20
+.endobj __vt__CTaskGameEffAfter
 
-.global CTaskGameEffAfter_hierarchy
-CTaskGameEffAfter_hierarchy:
+.obj CTaskGameEffAfter_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -5277,10 +5276,10 @@ CTaskGameEffAfter_hierarchy:
 	.4byte __RTTI__CTTask_CTaskGameEffAfter
 	.4byte 0
 	.4byte 0
+.endobj CTaskGameEffAfter_hierarchy
 
 
-.global __vt__CTTask_CTaskGameEffAfter
-__vt__CTTask_CTaskGameEffAfter:
+.obj __vt__CTTask_CTaskGameEffAfter, global
 	.4byte __RTTI__CTTask_CTaskGameEffAfter
 	.4byte 0
 	.4byte __dt__CTTask_CTaskGameEffAfter
@@ -5290,9 +5289,9 @@ __vt__CTTask_CTaskGameEffAfter:
 	.4byte func_80061650
 	.4byte func_80061698
 	.4byte func_80043F20
+.endobj __vt__CTTask_CTaskGameEffAfter
 
-.global CTTask_CTaskGameEffAfter_hierarchy
-CTTask_CTaskGameEffAfter_hierarchy:
+.obj CTTask_CTaskGameEffAfter_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -5300,20 +5299,20 @@ CTTask_CTaskGameEffAfter_hierarchy:
 	.4byte __RTTI__CProcess
 	.4byte 0
 	.4byte 0
+.endobj CTTask_CTaskGameEffAfter_hierarchy
 
 
-.global lbl_80529EC0
-lbl_80529EC0:
+.obj lbl_80529EC0, global
 	.4byte lbl_80668A68
 	.4byte get
 	.4byte lbl_80668A6C
 	.4byte enable
 	.4byte 0
 	.4byte 0
+.endobj lbl_80529EC0
 
 
-.global jumptable_80529ED8
-jumptable_80529ED8:
+.obj jumptable_80529ED8, global
 	.4byte .L_800642E8
 	.4byte .L_800642E8
 	.4byte .L_80064348
@@ -5334,10 +5333,10 @@ jumptable_80529ED8:
 	.4byte .L_80064348
 	.4byte .L_80064324
 	.4byte .L_80064324
+.endobj jumptable_80529ED8
 
 
-.global jumptable_80529F28
-jumptable_80529F28:
+.obj jumptable_80529F28, global
 	.4byte .L_80064258
 	.4byte .L_80064244
 	.4byte .L_80064274
@@ -5358,10 +5357,10 @@ jumptable_80529F28:
 	.4byte .L_80064274
 	.4byte .L_80064244
 	.4byte .L_80064258
+.endobj jumptable_80529F28
 
 
-.global jumptable_80529F78
-jumptable_80529F78:
+.obj jumptable_80529F78, global
 	.4byte .L_80064570
 	.4byte .L_80064570
 	.4byte .L_8006449C
@@ -5385,90 +5384,93 @@ jumptable_80529F78:
 	.4byte .L_80064570
 	.4byte .L_8006452C
 	.4byte .L_80064544
+.endobj jumptable_80529F78
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CTaskGameEffAfter_typestr
-CTaskGameEffAfter_typestr:
+.obj CTaskGameEffAfter_typestr, global
 	.asciz "CTaskGameEffAfter"
 	.balign 4
+.endobj CTaskGameEffAfter_typestr
 
-.global CTTask_CTaskGameEffAfter_typestr
-CTTask_CTaskGameEffAfter_typestr:
+.obj CTTask_CTaskGameEffAfter_typestr, global
 	.asciz "CTTask<CTaskGameEffAfter>"
 	.balign 4
+.endobj CTTask_CTaskGameEffAfter_typestr
 
 
-.global lbl_804F6A18
-lbl_804F6A18:
+.obj lbl_804F6A18, global
 	.asciz "pad"
 	.4byte 0
+.endobj lbl_804F6A18
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CTaskGameEffAfter
-__RTTI__CTaskGameEffAfter:
+.obj __RTTI__CTaskGameEffAfter, global
 	.4byte CTaskGameEffAfter_typestr
 	.4byte CTaskGameEffAfter_hierarchy
+.endobj __RTTI__CTaskGameEffAfter
 
-.global __RTTI__CTTask_CTaskGameEffAfter
-__RTTI__CTTask_CTaskGameEffAfter:
+.obj __RTTI__CTTask_CTaskGameEffAfter, global
 	.4byte CTTask_CTaskGameEffAfter_typestr
 	.4byte CTTask_CTaskGameEffAfter_hierarchy
+.endobj __RTTI__CTTask_CTaskGameEffAfter
 
 
-.global lbl_80664320
-lbl_80664320:
+.obj lbl_80664320, global
 	.4byte lbl_80668A78
+.endobj lbl_80664320
 
 
-.global lbl_80664324
-lbl_80664324:
+.obj lbl_80664324, global
 	.4byte lbl_80668A7C
+.endobj lbl_80664324
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_80668A68
-lbl_80668A68:
+.obj lbl_80668A68, global
 	.asciz "get"
+.endobj lbl_80668A68
 
-.global lbl_80668A6C
-lbl_80668A6C:
+.obj lbl_80668A6C, global
 	.asciz "enable"
 	.balign 4
 	.4byte 0
+.endobj lbl_80668A6C
 
-.global lbl_80668A78
-lbl_80668A78:
+.obj lbl_80668A78, global
 	.asciz "KYP"
+.endobj lbl_80668A78
 
-.global lbl_80668A7C
-lbl_80668A7C:
+.obj lbl_80668A7C, global
 	.asciz "DAP1"
 	.balign 4
 	.4byte 0
+.endobj lbl_80668A7C
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80666678, global
+	.skip 0x4
+.endobj lbl_80666678
 
-.global lbl_80666678
-lbl_80666678:
+.obj lbl_8066667C, global
 	.skip 0x4
-.global lbl_8066667C
-lbl_8066667C:
-	.skip 0x4
-.global lbl_80666680
-lbl_80666680:
+.endobj lbl_8066667C
+
+.obj lbl_80666680, global
 	.skip 0x8
+.endobj lbl_80666680
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -11,7 +11,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-__SinTableFixedPoint:
+.balign 8
+
+.obj __SinTableFixedPoint, local
 	.4byte 0
 	.4byte 0x00064855
 	.4byte 0x000C8FB3
@@ -140,3 +142,4 @@ __SinTableFixedPoint:
 	.4byte 0x0012D51E
 	.4byte 0x000C8FAF
 	.4byte 0x00064855
+.endobj __SinTableFixedPoint

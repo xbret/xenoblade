@@ -68,12 +68,14 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global sjcrs_lvl
-sjcrs_lvl:
+.obj sjcrs_lvl, global
 	.skip 0x4
-.global sjcrs_msk
-sjcrs_msk:
+.endobj sjcrs_lvl
+
+.obj sjcrs_msk, global
 	.skip 0x4
-.global sj_init_count
-sj_init_count:
+.endobj sjcrs_msk
+
+.obj sj_init_count, global
 	.skip 0x8
+.endobj sj_init_count

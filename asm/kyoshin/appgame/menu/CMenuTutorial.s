@@ -625,28 +625,27 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMenuTutorial_typestr
-CMenuTutorial_typestr:
+.obj CMenuTutorial_typestr, global
 	.asciz "CMenuTutorial"
 	.balign 4
+.endobj CMenuTutorial_typestr
 
 
-.global CMenuTutorial_strpool
-CMenuTutorial_strpool:
+.obj CMenuTutorial_strpool, global
 	.asciz "MNU_main"
 	.asciz "name"
 	.asciz "MNU_ttrl"
 	.asciz "title"
 	.balign 4
+.endobj CMenuTutorial_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMenuTutorial
-__vt__CMenuTutorial:
+.obj __vt__CMenuTutorial, global
 	.4byte __RTTI__CMenuTutorial
 	.4byte 0
 	.4byte __dt__CMenuTutorial
@@ -661,9 +660,9 @@ __vt__CMenuTutorial:
 	.4byte func_8029A92C
 	.4byte func_8029A924
 	.4byte func_8029A544
+.endobj __vt__CMenuTutorial
 
-.global CMenuTutorial_hierarchy
-CMenuTutorial_hierarchy:
+.obj CMenuTutorial_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000058
 	.4byte __RTTI__CDoubleListNode
@@ -678,24 +677,25 @@ CMenuTutorial_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuTutorial_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuTutorial
-__RTTI__CMenuTutorial:
+.obj __RTTI__CMenuTutorial, global
 	.4byte CMenuTutorial_typestr
 	.4byte CMenuTutorial_hierarchy
+.endobj __RTTI__CMenuTutorial
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80667318
-lbl_80667318:
+.obj lbl_80667318, global
 	.skip 0x8
+.endobj lbl_80667318
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

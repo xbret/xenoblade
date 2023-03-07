@@ -243,19 +243,18 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMenuPTState_typestr
-CMenuPTState_typestr:
+.obj CMenuPTState_typestr, global
 	.asciz "CMenuPTState"
 	.balign 4
+.endobj CMenuPTState_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMenuPTState
-__vt__CMenuPTState:
+.obj __vt__CMenuPTState, global
 	.4byte __RTTI__CMenuPTState
 	.4byte 0
 	.4byte __dt__CMenuPTState
@@ -270,9 +269,9 @@ __vt__CMenuPTState:
 	.4byte func_80192BEC
 	.4byte func_80192BE4
 	.4byte func_80192A2C
+.endobj __vt__CMenuPTState
 
-.global CMenuPTState_hierarchy
-CMenuPTState_hierarchy:
+.obj CMenuPTState_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000058
 	.4byte __RTTI__CDoubleListNode
@@ -287,38 +286,39 @@ CMenuPTState_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuPTState_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuPTState
-__RTTI__CMenuPTState:
+.obj __RTTI__CMenuPTState, global
 	.4byte CMenuPTState_typestr
 	.4byte CMenuPTState_hierarchy
+.endobj __RTTI__CMenuPTState
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066A358
-float_8066A358:
+.obj float_8066A358, global
 	.float 0
+.endobj float_8066A358
 
 
-.global float_8066A35C
-float_8066A35C:
+.obj float_8066A35C, global
 	.float 1.0
+.endobj float_8066A35C
 
 
-.global double_8066A360
-double_8066A360:
+.obj double_8066A360, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066A360
 
-.global float_8066A368
-float_8066A368:
+.obj float_8066A368, global
 	.float 0.033333335 #0x3D088889
 	.4byte 0
+.endobj float_8066A368
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

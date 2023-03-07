@@ -413,141 +413,143 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CERandomizerSimple_typestr
-CERandomizerSimple_typestr:
+.obj CERandomizerSimple_typestr, global
 	.asciz "CERandomizerSimple"
 	.balign 4
+.endobj CERandomizerSimple_typestr
 
-.global IRandomizer_typestr
-IRandomizer_typestr:
+.obj IRandomizer_typestr, global
 	.asciz "IRandomizer"
+.endobj IRandomizer_typestr
 
-.global CERandomizer_typestr
-CERandomizer_typestr:
+.obj CERandomizer_typestr, global
 	.asciz "CERandomizer"
 	.balign 4
+.endobj CERandomizer_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__18CERandomizerSimple
-__vt__18CERandomizerSimple:
+.obj __vt__18CERandomizerSimple, global
 	.4byte __RTTI__CERandomizerSimple
 	.4byte 0
 	.4byte rand__18CERandomizerSimpleFv
 	.4byte randF__18CERandomizerSimpleFv
 	.4byte randFHalf__18CERandomizerSimpleFv
 	.4byte randSign__18CERandomizerSimpleFv
+.endobj __vt__18CERandomizerSimple
 
-.global CERandomizerSimple_hierarchy
-CERandomizerSimple_hierarchy:
+.obj CERandomizerSimple_hierarchy, global
 	.4byte __RTTI__IRandomizer
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CERandomizerSimple_hierarchy
 
 
-.global __vt__CERandomizer
-__vt__CERandomizer:
+.obj __vt__CERandomizer, global
 	.4byte __RTTI__CERandomizer
 	.4byte 0
 	.4byte rand__12CERandomizerFv
 	.4byte randF__12CERandomizerFv
 	.4byte randFHalf__12CERandomizerFv
 	.4byte randSign__12CERandomizerFv
+.endobj __vt__CERandomizer
 
-.global CERandomizer_hierarchy
-CERandomizer_hierarchy:
+.obj CERandomizer_hierarchy, global
 	.4byte __RTTI__IRandomizer
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CERandomizer_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CERandomizerSimple
-__RTTI__CERandomizerSimple:
+.obj __RTTI__CERandomizerSimple, global
 	.4byte CERandomizerSimple_typestr
 	.4byte CERandomizerSimple_hierarchy
+.endobj __RTTI__CERandomizerSimple
 
-.global __RTTI__IRandomizer
-__RTTI__IRandomizer:
+.obj __RTTI__IRandomizer, global
 	.4byte IRandomizer_typestr
 	.4byte 0
+.endobj __RTTI__IRandomizer
 
-.global __RTTI__CERandomizer
-__RTTI__CERandomizer:
+.obj __RTTI__CERandomizer, global
 	.4byte CERandomizer_typestr
 	.4byte CERandomizer_hierarchy
+.endobj __RTTI__CERandomizer
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066D9D8
-float_8066D9D8:
+.obj float_8066D9D8, global
 	.float 0
+.endobj float_8066D9D8
 
 
 #2147483648
-.global float_8066D9DC
-float_8066D9DC:
+.obj float_8066D9DC, global
 	.float 2147483648 #0x4F000000
+.endobj float_8066D9DC
 
 
 #0.5
-.global float_8066D9E0
-float_8066D9E0:
+.obj float_8066D9E0, global
 	.float 0.5 #0x3f000000
 	.4byte 0
+.endobj float_8066D9E0
 
 
 #int to float constant
-.global double_8066D9E8
-double_8066D9E8:
+.obj double_8066D9E8, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066D9E8
 
-.global float_8066D9F0
-float_8066D9F0:
+.obj float_8066D9F0, global
 	.float 1.0
+.endobj float_8066D9F0
 
 
-.global float_8066D9F4
-float_8066D9F4:
+.obj float_8066D9F4, global
 	.float -1.0
+.endobj float_8066D9F4
 
 
-.global float_8066D9F8
-float_8066D9F8:
+.obj float_8066D9F8, global
 	.float 10006 #0x461C5800
 	.4byte 0
+.endobj float_8066D9F8
 
 
-.global double_8066DA00
-double_8066DA00:
+.obj double_8066DA00, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066DA00
+
+
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global ceRandomizerSimple
-ceRandomizerSimple:
+.obj ceRandomizerSimple, global
 	.skip 0x10
+.endobj ceRandomizerSimple
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global ceRandomizer
-ceRandomizer:
+.obj ceRandomizer, global
 	.skip 0x8
+.endobj ceRandomizer
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

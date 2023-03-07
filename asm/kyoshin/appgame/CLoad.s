@@ -542,10 +542,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CLoad_strpool
-CLoad_strpool:
+.obj CLoad_strpool, global
 	.asciz "/menu/Load.arc"
 	.asciz "CLoad"
 	.asciz "arc"
@@ -556,21 +555,21 @@ CLoad_strpool:
 	.asciz "mf00_load01_roop.brlan"
 	.asciz "mf00_load00_roop.brlan"
 	.balign 4
+.endobj CLoad_strpool
 
 	#Xenoblade
 	#"ゼノブレイド"
-.global lbl_8050C370
-lbl_8050C370:
+.obj lbl_8050C370, global
 	.4byte 0x835B836D
 	.4byte 0x8375838C
 	.4byte 0x83438368
 	.byte 0
 	.byte 0x00,0x00,0x00
+.endobj lbl_8050C370
 
 #The Bionis and Mechonis's Monados cut the future open
 #"巨神と機神　モナドが未来を斬り開く"
-.global lbl_8050C380
-lbl_8050C380:
+.obj lbl_8050C380, global
 	.4byte 0x8B90905F
 	.4byte 0x82C68B40
 	.4byte 0x905F8140
@@ -582,54 +581,54 @@ lbl_8050C380:
 	.2byte 0x82AD
 	.byte 0x00
 	.byte 0x00
+.endobj lbl_8050C380
 
-.global lbl_8050C3A4
-lbl_8050C3A4:
+.obj lbl_8050C3A4, global
 	.asciz "bannerTexture.tpl"
 	.balign 4
+.endobj lbl_8050C3A4
 
-.global lbl_8050C3B8
-lbl_8050C3B8:
+.obj lbl_8050C3B8, global
 	.asciz "iconTexture[0].tpl"
 	.balign 4
+.endobj lbl_8050C3B8
 
-.global lbl_8050C3CC
-lbl_8050C3CC:
+.obj lbl_8050C3CC, global
 	.asciz "iconTexture[1].tpl"
 	.balign 4
+.endobj lbl_8050C3CC
 
-.global lbl_8050C3E0
-lbl_8050C3E0:
+.obj lbl_8050C3E0, global
 	.asciz "iconTexture[2].tpl"
 	.balign 4
+.endobj lbl_8050C3E0
 
-.global lbl_8050C3F4
-lbl_8050C3F4:
+.obj lbl_8050C3F4, global
 	.asciz "iconTexture[3].tpl"
 	.balign 4
+.endobj lbl_8050C3F4
 
-.global lbl_8050C408
-lbl_8050C408:
+.obj lbl_8050C408, global
 	.asciz "iconTexture[4].tpl"
 	.balign 4
+.endobj lbl_8050C408
 
-.global lbl_8050C41C
-lbl_8050C41C:
+.obj lbl_8050C41C, global
 	.asciz "iconTexture[5].tpl"
 	.balign 4
+.endobj lbl_8050C41C
 
-.global lbl_8050C430
-lbl_8050C430:
+.obj lbl_8050C430, global
 	.asciz "iconTexture[6].tpl"
 	.balign 4
+.endobj lbl_8050C430
 
-.global lbl_8050C444
-lbl_8050C444:
+.obj lbl_8050C444, global
 	.asciz "iconTexture[7].tpl"
 	.balign 4
+.endobj lbl_8050C444
 
-.global lbl_8050C458
-lbl_8050C458:
+.obj lbl_8050C458, global
 	.2byte 0x30BC
 	.2byte 0x30CE
 	.2byte 0x30D6
@@ -653,9 +652,9 @@ lbl_8050C458:
 	.2byte 0x3044
 	.2byte 0x3002
 	.4byte 0
+.endobj lbl_8050C458
 
-.global lbl_8050C488
-lbl_8050C488:
+.obj lbl_8050C488, global
 	.2byte 0x30C7
 	.2byte 0x30A3
 	.2byte 0x30B9
@@ -696,9 +695,9 @@ lbl_8050C488:
 	.2byte 0x3044
 	.2byte 0x3002
 	.2byte 0x0000
+.endobj lbl_8050C488
 
-.global lbl_8050C4D8
-lbl_8050C4D8:
+.obj lbl_8050C4D8, global
 	.2byte 0x30C7
 	.2byte 0x30A3
 	.2byte 0x30B9
@@ -713,9 +712,9 @@ lbl_8050C4D8:
 	.2byte 0x3059
 	.2byte 0x3002
 	.2byte 0x0000
+.endobj lbl_8050C4D8
 
-.global lbl_8050C4F4
-lbl_8050C4F4:
+.obj lbl_8050C4F4, global
 	.2byte 0x0057
 	.2byte 0x0069
 	.2byte 0x0069
@@ -734,9 +733,9 @@ lbl_8050C4F4:
 	.2byte 0x305F
 	.2byte 0x3002
 	.2byte 0x0000
+.endobj lbl_8050C4F4
 
-.global lbl_8050C518
-lbl_8050C518:
+.obj lbl_8050C518, global
 	.2byte 0x0057
 	.2byte 0x0069
 	.2byte 0x0069
@@ -846,9 +845,9 @@ lbl_8050C518:
 	.2byte 0x3044
 	.2byte 0x3002
 	.4byte 0
+.endobj lbl_8050C518
 
-.global lbl_8050C5F4
-lbl_8050C5F4:
+.obj lbl_8050C5F4, global
 	.2byte 0x0057
 	.2byte 0x0069
 	.2byte 0x0069
@@ -952,9 +951,9 @@ lbl_8050C5F4:
 	.2byte 0x3044
 	.2byte 0x3002
 	.4byte 0
+.endobj lbl_8050C5F4
 
-.global lbl_8050C6C4
-lbl_8050C6C4:
+.obj lbl_8050C6C4, global
 	.2byte 0x0057
 	.2byte 0x0069
 	.2byte 0x0069
@@ -1013,9 +1012,9 @@ lbl_8050C6C4:
 	.2byte 0x3044
 	.2byte 0x3002
 	.2byte 0x0000
+.endobj lbl_8050C6C4
 
-.global lbl_8050C738
-lbl_8050C738:
+.obj lbl_8050C738, global
 	.2byte 0x0057
 	.2byte 0x0069
 	.2byte 0x0069
@@ -1060,9 +1059,9 @@ lbl_8050C738:
 	.2byte 0x3044
 	.2byte 0x3002
 	.2byte 0x0000
+.endobj lbl_8050C738
 
-.global lbl_8050C790
-lbl_8050C790:
+.obj lbl_8050C790, global
 	.2byte 0x0057
 	.2byte 0x0069
 	.2byte 0x0069
@@ -1121,9 +1120,9 @@ lbl_8050C790:
 	.2byte 0x3002
 	.4byte 0
 	.4byte 0
+.endobj lbl_8050C790
 
-.global lbl_8050C808
-lbl_8050C808:
+.obj lbl_8050C808, global
 	.2byte 0x0057
 	.2byte 0x0069
 	.2byte 0x0069
@@ -1184,13 +1183,13 @@ lbl_8050C808:
 	.2byte 0x3044
 	.2byte 0x3002
 	.2byte 0x0000
+.endobj lbl_8050C808
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CLoad
-__vt__CLoad:
+.obj __vt__CLoad, global
 	.4byte __RTTI__CLoad
 	.4byte 0
 	.4byte __dt__CLoad
@@ -1225,17 +1224,17 @@ __vt__CLoad:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CLoad
 
-.global CLoad_hierarchy
-CLoad_hierarchy:
+.obj CLoad_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CLoad_hierarchy
 
 
-.global lbl_8053DB68
-lbl_8053DB68:
+.obj lbl_8053DB68, global
 	.4byte lbl_8050C3B8
 	.4byte lbl_8050C3CC
 	.4byte lbl_8050C3E0
@@ -1245,10 +1244,10 @@ lbl_8053DB68:
 	.4byte lbl_8050C430
 	.4byte lbl_8050C444
 	.4byte 0
+.endobj lbl_8053DB68
 
 
-.global lbl_8053DB8C
-lbl_8053DB8C:
+.obj lbl_8053DB8C, global
 	.4byte 0x00000002
 	.4byte 0x00000002
 	.4byte 0x00000002
@@ -1258,112 +1257,112 @@ lbl_8053DB8C:
 	.4byte 0x00000002
 	.4byte 0x00000002
 	.4byte 0
+.endobj lbl_8053DB8C
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-
-.global __RTTI__CLoad
-__RTTI__CLoad:
+.obj __RTTI__CLoad, global
 	.4byte CLoad_typestr
 	.4byte CLoad_hierarchy
+.endobj __RTTI__CLoad
 
 
-.global lbl_806656F8
-lbl_806656F8:
+.obj lbl_806656F8, global
 	.4byte lbl_8050C370
+.endobj lbl_806656F8
 
 
-.global lbl_806656FC
-lbl_806656FC:
+.obj lbl_806656FC, global
 	.4byte lbl_8050C380
+.endobj lbl_806656FC
 
 
-.global lbl_80665700
-lbl_80665700:
+.obj lbl_80665700, global
 	.4byte lbl_8050C3A4
 	.4byte 0
+.endobj lbl_80665700
 
 
-.global lbl_80665708
-lbl_80665708:
+.obj lbl_80665708, global
 	.4byte lbl_8050C458
+.endobj lbl_80665708
 
 
-.global lbl_8066570C
-lbl_8066570C:
+.obj lbl_8066570C, global
 	.4byte lbl_8050C488
+.endobj lbl_8066570C
 
 
-.global lbl_80665710
-lbl_80665710:
+.obj lbl_80665710, global
 	.4byte lbl_8050C4D8
+.endobj lbl_80665710
 
 
-.global lbl_80665714
-lbl_80665714:
+.obj lbl_80665714, global
 	.4byte lbl_8050C4F4
+.endobj lbl_80665714
 
 
-.global lbl_80665718
-lbl_80665718:
+.obj lbl_80665718, global
 	.4byte lbl_8050C518
+.endobj lbl_80665718
 
 
-.global lbl_8066571C
-lbl_8066571C:
+.obj lbl_8066571C, global
 	.4byte lbl_8050C5F4
+.endobj lbl_8066571C
 
 
-.global lbl_80665720
-lbl_80665720:
+.obj lbl_80665720, global
 	.4byte lbl_8050C6C4
+.endobj lbl_80665720
 
 
-.global lbl_80665724
-lbl_80665724:
+.obj lbl_80665724, global
 	.4byte lbl_8050C738
+.endobj lbl_80665724
 
 
-.global lbl_80665728
-lbl_80665728:
+.obj lbl_80665728, global
 	.4byte lbl_8050C790
+.endobj lbl_80665728
 
 
-.global lbl_8066572C
-lbl_8066572C:
+.obj lbl_8066572C, global
 	.4byte lbl_8050C808
+.endobj lbl_8066572C
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-
-.global float_8066B698
-float_8066B698:
+.obj float_8066B698, global
 	.float 1.0
+.endobj float_8066B698
 
 
-.global float_8066B69C
-float_8066B69C:
+.obj float_8066B69C, global
 	.float 0
+.endobj float_8066B69C
 
-.global CLoad_typestr
-CLoad_typestr:
+.obj CLoad_typestr, global
 	.asciz "CLoad"
 	.balign 4
+.endobj CLoad_typestr
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_8057AA48
-lbl_8057AA48:
+.obj lbl_8057AA48, global
 	.skip 0x10
-.global lbl_8057AA58
-lbl_8057AA58:
+.endobj lbl_8057AA48
+
+.obj lbl_8057AA58, global
 	.skip 0x328
+.endobj lbl_8057AA58
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

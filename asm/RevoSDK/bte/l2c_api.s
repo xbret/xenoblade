@@ -877,8 +877,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80546BE0
-lbl_80546BE0:
+.balign 8
+
+.obj lbl_80546BE0, global
 	.asciz "L2CAP - L2CA_Register() called for PSM: 0x%04x"
 	.balign 4
 	.asciz "L2CAP - no cb registering PSM: 0x%04x"
@@ -887,16 +888,16 @@ lbl_80546BE0:
 	.balign 4
 	.asciz "L2CAP - no RCB available, PSM: 0x%04x"
 	.balign 4
+.endobj lbl_80546BE0
 
 
-.global lbl_80546C88
-lbl_80546C88:
+.obj lbl_80546C88, global
 	.asciz "L2CAP - L2CA_Deregister() called for PSM: 0x%04x"
 	.balign 4
+.endobj lbl_80546C88
 
 
-.global lbl_80546CBC
-lbl_80546CBC:
+.obj lbl_80546CBC, global
 	.asciz "L2CAP - PSM: 0x%04x not found for deregistration"
 	.balign 4
 	.asciz "L2CA_ConnectReq()  PSM: 0x%04x"
@@ -924,52 +925,52 @@ lbl_80546CBC:
 	.balign 4
 	.asciz "L2CAP - bad id in L2CA_conn_rsp. Exp: %d  Got: %d"
 	.balign 4
+.endobj lbl_80546CBC
 
 
-.global lbl_80546F38
-lbl_80546F38:
+.obj lbl_80546F38, global
 	.asciz "L2CA_ConfigReq()  CID: 0x%04x"
 	.balign 4
+.endobj lbl_80546F38
 
 
-.global lbl_80546F58
-lbl_80546F58:
+.obj lbl_80546F58, global
 	.asciz "L2CAP - no CCB for L2CA_cfg_req, CID: %d"
 	.balign 4
+.endobj lbl_80546F58
 
 
-.global lbl_80546F84
-lbl_80546F84:
+.obj lbl_80546F84, global
 	.asciz "L2CA_ConfigRsp()  CID: 0x%04x  Result: %d"
 	.balign 4
+.endobj lbl_80546F84
 
 
-.global lbl_80546FB0
-lbl_80546FB0:
+.obj lbl_80546FB0, global
 	.asciz "L2CAP - no CCB for L2CA_cfg_rsp, CID: %d"
 	.balign 4
+.endobj lbl_80546FB0
 
 
-.global lbl_80546FDC
-lbl_80546FDC:
+.obj lbl_80546FDC, global
 	.asciz "L2CA_DisconnectReq()  CID: 0x%04x"
 	.balign 4
+.endobj lbl_80546FDC
 
 
-.global lbl_80547000
-lbl_80547000:
+.obj lbl_80547000, global
 	.asciz "L2CAP - no CCB for L2CA_disc_req, CID: %d"
 	.balign 4
+.endobj lbl_80547000
 
 
-.global lbl_8054702C
-lbl_8054702C:
+.obj lbl_8054702C, global
 	.asciz "L2CA_DisconnectRsp()  CID: 0x%04x"
 	.balign 4
+.endobj lbl_8054702C
 
 
-.global lbl_80547050
-lbl_80547050:
+.obj lbl_80547050, global
 	.asciz "L2CAP - no CCB for L2CA_disc_rsp, CID: %d"
 	.balign 4
 	.asciz "L2CA_DataWrite()  CID: 0x%04x  Len: %d"
@@ -984,10 +985,10 @@ lbl_80547050:
 	.balign 4
 	.4byte 0
 	.asciz "L2CAP - L2CA_ping rejected - link disconnecting"
+.endobj lbl_80547050
 
 
-.global lbl_805471B0
-lbl_805471B0:
+.obj lbl_805471B0, global
 	.asciz "L2CAP - no CCB for L2CA_SetIdleTimeout, CID: %d"
 	.asciz "L2CA_SetAclPriority()  bdaddr: %02x%02x%02x%02x%02x%02x"
 	.asciz "L2CAP - no LCB for L2CA_SetAclPriority"
@@ -1002,3 +1003,4 @@ lbl_805471B0:
 	.asciz "L2CA_GetNumQueuedBufs()  CID: 0x%04x  returning %d"
 	.balign 4
 	.4byte 0
+.endobj lbl_805471B0

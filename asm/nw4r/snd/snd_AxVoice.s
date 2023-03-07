@@ -3333,41 +3333,43 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C690
-float_8066C690:
+.balign 8
+
+.obj float_8066C690, global
 	.float 32000 #0x46FA0000
+.endobj float_8066C690
 
 
-.global float_8066C694
-float_8066C694:
+.obj float_8066C694, global
 	.float 1.33333333 #0x3FAAAAAB
+.endobj float_8066C694
 
 
-.global float_8066C698
-float_8066C698:
+.obj float_8066C698, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066C698
 
 
-.global double_8066C6A0
-double_8066C6A0:
+.obj double_8066C6A0, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066C6A0
 
-.global float_8066C6A8
-float_8066C6A8:
+.obj float_8066C6A8, global
 	.float 65535 #0x477FFF00
+.endobj float_8066C6A8
 
 
-.global float_8066C6AC
-float_8066C6AC:
+.obj float_8066C6AC, global
 	.float 0
+.endobj float_8066C6AC
 
 
-.global float_8066C6B0
-float_8066C6B0:
+.obj float_8066C6B0, global
 	.float 65536 #0x47800000
+.endobj float_8066C6B0
 
 
-.global float_8066C6B4
-float_8066C6B4:
+.obj float_8066C6B4, global
 	.4byte 0x46FFFE00
+.endobj float_8066C6B4

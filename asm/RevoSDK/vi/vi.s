@@ -3028,14 +3028,16 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global lbl_8055FAA0
-lbl_8055FAA0:
+
+.obj lbl_8055FAA0, global
 	.asciz "<< RVL_SDK - VI \trelease build: Feb 27 2009 10:04:46 (0x4302_145) >>"
 	.balign 4
+.endobj lbl_8055FAA0
 
 
-timing:
+.obj timing, local
 	.2byte 0x0600
 	.2byte 0x00F0
 	.2byte 0x0018
@@ -3246,10 +3248,11 @@ timing:
 	.2byte 0x7A00
 	.2byte 0x019C
 	.2byte 0x0000
+.endobj timing
 
 #The arrays after are accessed by adding their offsets to the first array's address
 
-taps:
+.obj taps, local
 	.2byte 0x01F0
 	.2byte 0x01DC
 	.2byte 0x01AE
@@ -3276,9 +3279,10 @@ taps:
 	.2byte 0x0008
 	.2byte 0x0001
 	.2byte 0x0000
+.endobj taps
 
 
-GXPal528Prog:
+.obj GXPal528Prog, local
 	.2byte 0x0000
 	.2byte 0x0006
 	.2byte 0x0280
@@ -3309,8 +3313,9 @@ GXPal528Prog:
 	.2byte 0x1500
 	.2byte 0x0000
 	.2byte 0x0000
+.endobj GXPal528Prog
 
-GXPal528ProgSoft:
+.obj GXPal528ProgSoft, local
 	.2byte 0x0000
 	.2byte 0x0006
 	.2byte 0x0280
@@ -3341,8 +3346,9 @@ GXPal528ProgSoft:
 	.2byte 0x0A08
 	.2byte 0x0800
 	.2byte 0x0000
+.endobj GXPal528ProgSoft
 
-GXPal524ProgAa:
+.obj GXPal524ProgAa, local
 	.2byte 0x0000
 	.2byte 0x0006
 	.2byte 0x0280
@@ -3375,17 +3381,18 @@ GXPal524ProgAa:
 	.2byte 0x0000
 	.2byte 0x0000
 	.2byte 0x0000
+.endobj GXPal524ProgAa
 
 
-ShutdownFunctionInfo:
+.obj ShutdownFunctionInfo, local
 	.4byte OnShutdown
 	.4byte 0x0000007F
 	.4byte 0
 	.4byte 0
+.endobj ShutdownFunctionInfo
 
 
-.global jumptable_8055FD88
-jumptable_8055FD88:
+.obj jumptable_8055FD88, global
 	.4byte .L_80364420
 	.4byte .L_80364428
 	.4byte .L_80364430
@@ -3395,10 +3402,10 @@ jumptable_8055FD88:
 	.4byte .L_80364420
 	.4byte .L_80364420
 	.4byte .L_80364420
+.endobj jumptable_8055FD88
 
 
-.global jumptable_8055FDAC
-jumptable_8055FDAC:
+.obj jumptable_8055FDAC, global
 	.4byte .L_803649A0
 	.4byte .L_803649AC
 	.4byte .L_80364A18
@@ -3434,10 +3441,10 @@ jumptable_8055FDAC:
 	.4byte .L_80364A90
 	.4byte .L_80364A90
 	.4byte .L_80364A88
+.endobj jumptable_8055FDAC
 
 
-.global jumptable_8055FE38
-jumptable_8055FE38:
+.obj jumptable_8055FE38, global
 	.4byte .L_80365134
 	.4byte .L_8036513C
 	.4byte .L_80365144
@@ -3447,6 +3454,7 @@ jumptable_8055FE38:
 	.4byte .L_80365134
 	.4byte .L_80365134
 	.4byte .L_80365134
+.endobj jumptable_8055FE38
 
 	.asciz "***************************************\n"
 	.balign 4
@@ -3464,8 +3472,7 @@ jumptable_8055FE38:
 	.balign 4
 
 
-.global jumptable_8055FFB0
-jumptable_8055FFB0:
+.obj jumptable_8055FFB0, global
 	.4byte .L_80366538
 	.4byte .L_80366540
 	.4byte .L_80366544
@@ -3475,10 +3482,10 @@ jumptable_8055FFB0:
 	.4byte .L_80366538
 	.4byte .L_80366538
 	.4byte .L_80366538
+.endobj jumptable_8055FFB0
 
 
-.global jumptable_8055FFD4
-jumptable_8055FFD4:
+.obj jumptable_8055FFD4, global
 	.4byte .L_80366914
 	.4byte .L_8036691C
 	.4byte .L_80366920
@@ -3488,179 +3495,233 @@ jumptable_8055FFD4:
 	.4byte .L_80366914
 	.4byte .L_80366914
 	.4byte .L_80366914
+.endobj jumptable_8055FFD4
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-__VIVersion:
+
+.obj __VIVersion, local
 	.4byte lbl_8055FAA0
+.endobj __VIVersion
 
 
 #@LOCAL@OnShutdown__FiUl@first
-lbl_80665D04:
+.obj lbl_80665D04, local
 	.4byte 0x00000001
+.endobj lbl_80665D04
 
 
 #@LOCAL@__VIRetraceHandler__FsP9OSContext@old_dtvStatus
-lbl_80665D08:
+.obj lbl_80665D08, local
 	.4byte 0x000003E7
+.endobj lbl_80665D08
 
 
 #@LOCAL@__VIRetraceHandler__FsP9OSContext@old_tvtype@0
-lbl_80665D0C:
+.obj lbl_80665D0C, local
 	.4byte 0x000003E7
+.endobj lbl_80665D0C
 
 
 #@LOCAL@__VIRetraceHandler__FsP9OSContext@__VIDimmingFlag_Enable_old@1
-lbl_80665D10:
+.obj lbl_80665D10, local
 	.4byte 0x00000001
+.endobj lbl_80665D10
 
 
 #@LOCAL@__VIRetraceHandler__FsP9OSContext@__VIDVDStopFlag_Enable_old@2
-lbl_80665D14:
+.obj lbl_80665D14, local
 	.4byte 0x00000001
+.endobj lbl_80665D14
 
 
-.global lbl_80665D18
-lbl_80665D18:
+.obj lbl_80665D18, global
 	.asciz "vi.c"
 	.balign 4
+.endobj lbl_80665D18
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
-shdwRegs:
+.obj shdwRegs, local
 	.skip 0x78
+.endobj shdwRegs
 
-regs:
+.obj regs, local
 	.skip 0x78
+.endobj regs
 
-HorVer:
+.obj HorVer, local
 	.skip 0x58
+.endobj HorVer
 
-lbl_805DDA48:
+.obj lbl_805DDA48, local
 	.skip 0x28
+.endobj lbl_805DDA48
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-IsInitialized:
+
+.obj IsInitialized, local
 	.skip 0x4
+.endobj IsInitialized
 
-vsync_timing_err_cnt:
+.obj vsync_timing_err_cnt, local
 	.skip 0x4
+.endobj vsync_timing_err_cnt
 
-vsync_timing_test_flag:
+.obj vsync_timing_test_flag, local
 	.skip 0x4
+.endobj vsync_timing_test_flag
 
-__VIDimming_All_Clear:
+.obj __VIDimming_All_Clear, local
 	.skip 0x4
+.endobj __VIDimming_All_Clear
 
-THD_TIME_TO_DIMMING:
+.obj THD_TIME_TO_DIMMING, local
 	.skip 0x4
+.endobj THD_TIME_TO_DIMMING
 
-NEW_TIME_TO_DIMMING:
+.obj NEW_TIME_TO_DIMMING, local
 	.skip 0x4
+.endobj NEW_TIME_TO_DIMMING
 
-THD_TIME_TO_DVD_STOP:
+.obj THD_TIME_TO_DVD_STOP, local
 	.skip 0x4
+.endobj THD_TIME_TO_DVD_STOP
 
-_gIdleCount_dimming:
+.obj _gIdleCount_dimming, local
 	.skip 0x4
+.endobj _gIdleCount_dimming
 
-_gIdleCount_dvd:
+.obj _gIdleCount_dvd, local
 	.skip 0x4
+.endobj _gIdleCount_dvd
 
-__VIDimmingState:
+.obj __VIDimmingState, local
 	.skip 0x4
+.endobj __VIDimmingState
 
-PositionCallback:
+.obj PositionCallback, local
 	.skip 0x4
+.endobj PositionCallback
 
-displayOffsetH:
+.obj displayOffsetH, local
 	.skip 0x2
+.endobj displayOffsetH
 
-displayOffsetV:
+.obj displayOffsetV, local
 	.skip 0x2
+.endobj displayOffsetV
 
-changeMode:
+.obj changeMode, local
 	.skip 0x8
+.endobj changeMode
 
-changed:
+.obj changed, local
 	.skip 0x8
+.endobj changed
 
-shdwChangeMode:
+.obj shdwChangeMode, local
 	.skip 0x8
+.endobj shdwChangeMode
 
-shdwChanged:
+.obj shdwChanged, local
 	.skip 0x8
+.endobj shdwChanged
 
-FBSet:
+.obj FBSet, local
 	.skip 0x4
+.endobj FBSet
 
-timingExtra:
+.obj timingExtra, local
 	.skip 0x4
+.endobj timingExtra
 
 #@LOCAL@OnShutdown__FiUl@count@0
-lbl_80667BF0:
+.obj lbl_80667BF0, local
 	.skip 0x4
+.endobj lbl_80667BF0
 
 #@LOCAL@__VIRetraceHandler__FsP9OSContext@DimmingON_Pending@3
-lbl_80667BF4:
+.obj lbl_80667BF4, local
 	.skip 0x4
+.endobj lbl_80667BF4
 
 #@LOCAL@__VIRetraceHandler__FsP9OSContext@DimmingOFF_Pending@4
-lbl_80667BF8:
+.obj lbl_80667BF8, local
 	.skip 0x4
+.endobj lbl_80667BF8
 
 #@LOCAL@PrintDebugPalCaution__Fv@message
-lbl_80667BFC:
+.obj lbl_80667BFC, local
 	.skip 0x4
+.endobj lbl_80667BFC
 
-CurrBufAddr:
+.obj CurrBufAddr, local
 	.skip 0x4
+.endobj CurrBufAddr
 
-NextBufAddr:
+.obj NextBufAddr, local
 	.skip 0x4
+.endobj NextBufAddr
 
-CurrTvMode:
+.obj CurrTvMode, local
 	.skip 0x4
+.endobj CurrTvMode
 
-CurrTiming:
+.obj CurrTiming, local
 	.skip 0x4
+.endobj CurrTiming
 
-encoderType:
+.obj encoderType, local
 	.skip 0x4
+.endobj encoderType
 
-PostCB:
+.obj PostCB, local
 	.skip 0x4
+.endobj PostCB
 
-PreCB:
+.obj PreCB, local
 	.skip 0x8
+.endobj PreCB
 
-retraceQueue:
+.obj retraceQueue, local
 	.skip 0x8
+.endobj retraceQueue
 
-__VIDimmingFlag_SI_IDLE:
+.obj __VIDimmingFlag_SI_IDLE, local
 	.skip 0x4
+.endobj __VIDimmingFlag_SI_IDLE
 
-__VIDimmingFlag_RF_IDLE:
+.obj __VIDimmingFlag_RF_IDLE, local
 	.skip 0x4
+.endobj __VIDimmingFlag_RF_IDLE
 
-g_current_time_to_dim:
+.obj g_current_time_to_dim, local
 	.skip 0x4
+.endobj g_current_time_to_dim
 
-__VIDVDStopFlag_Enable:
+.obj __VIDVDStopFlag_Enable, local
 	.skip 0x4
+.endobj __VIDVDStopFlag_Enable
 
-__VIDimmingFlag_Enable:
+.obj __VIDimmingFlag_Enable, local
 	.skip 0x4
+.endobj __VIDimmingFlag_Enable
 
-flushFlag3in1:
+.obj flushFlag3in1, local
 	.skip 0x4
+.endobj flushFlag3in1
 
-flushFlag:
+.obj flushFlag, local
 	.skip 0x4
+.endobj flushFlag
 
-retraceCount:
+.obj retraceCount, local
 	.skip 0x4
+.endobj retraceCount

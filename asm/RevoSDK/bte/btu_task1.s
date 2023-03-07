@@ -334,24 +334,31 @@
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-btu_count:
+
+.obj btu_count, local
 	.4byte 0x01000000
+.endobj btu_count
 
-execute_btu:
+.obj execute_btu, local
 	.4byte 0x00000001
+.endobj execute_btu
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global btu_cb
-btu_cb:
+.obj btu_cb, global
 	.skip 0x88
+.endobj btu_cb
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global _btu_g_count
-_btu_g_count:
+.balign 8
+
+.obj _btu_g_count, global
 	.skip 0x4
-.global _btu_last_timer_tick
-_btu_last_timer_tick:
+.endobj _btu_g_count
+
+.obj _btu_last_timer_tick, global
 	.skip 0x4
+.endobj _btu_last_timer_tick

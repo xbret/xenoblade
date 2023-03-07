@@ -2,74 +2,60 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-#TODO: Rename other symbols to later names
-
-#.balign 16, 0
+.balign 16, 0
 .fn __wpadNoAlloc, global
 /* 80368D70 00332330  38 60 00 00 */	li r3, 0
 /* 80368D74 00332334  4E 80 00 20 */	blr
 .endfn __wpadNoAlloc
-.4byte 0
-.4byte 0
 
-#.balign 16, 0
+
+.balign 16, 0
 .fn __wpadNoFree, global
 /* 80368D80 00332340  38 60 00 00 */	li r3, 0
 /* 80368D84 00332344  4E 80 00 20 */	blr
 .endfn __wpadNoFree
-.4byte 0
-.4byte 0
 
 
-#.balign 16, 0
+.balign 16, 0
 .fn WPADIsEnabledVSM, global
 /* 80368D90 00332350  80 6D BB 10 */	lwz r3, _enabledVSM@sda21(r13)
 /* 80368D94 00332354  4E 80 00 20 */	blr
 .endfn WPADIsEnabledVSM
-.4byte 0
-.4byte 0
 
-#.balign 16, 0
+
+.balign 16, 0
 .fn WPADIsEnabledTRN, global
 /* 80368DA0 00332360  80 6D BB 14 */	lwz r3, _enabledTRN@sda21(r13)
 /* 80368DA4 00332364  4E 80 00 20 */	blr
 .endfn WPADIsEnabledTRN
-.4byte 0
-.4byte 0
 
-#.balign 16, 0
+
+.balign 16, 0
 .fn WPADIsEnabledGTR, global
 /* 80368DB0 00332370  80 6D BB 18 */	lwz r3, _enabledGTR@sda21(r13)
 /* 80368DB4 00332374  4E 80 00 20 */	blr
 .endfn WPADIsEnabledGTR
-.4byte 0
-.4byte 0
 
-#.balign 16, 0
+.balign 16, 0
 .fn WPADIsEnabledDRM, global
 /* 80368DC0 00332380  80 6D BB 1C */	lwz r3, _enabledDRM@sda21(r13)
 /* 80368DC4 00332384  4E 80 00 20 */	blr
 .endfn WPADIsEnabledDRM
-.4byte 0
-.4byte 0
 
-#.balign 16, 0
+
+.balign 16, 0
 .fn WBCSetupCalibration, global
 /* 80368DD0 00332390  38 60 00 00 */	li r3, 0
 /* 80368DD4 00332394  4E 80 00 20 */	blr
 .endfn WBCSetupCalibration
-.4byte 0
-.4byte 0
 
-#.balign 16, 0
+.balign 16, 0
 .fn WBCGetCalibrationStatus, global
 /* 80368DE0 003323A0  38 60 00 00 */	li r3, 0
 /* 80368DE4 003323A4  4E 80 00 20 */	blr
 .endfn WBCGetCalibrationStatus
-.4byte 0
-.4byte 0
 
-#.balign 16, 0
+.balign 16, 0
 .fn WBCGetBatteryLevel, global
 /* 80368DF0 003323B0  38 60 00 00 */	li r3, 0
 /* 80368DF4 003323B4  4E 80 00 20 */	blr 
@@ -8455,9 +8441,10 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
+
 #@LOCAL@WPADControlDpd__FlUlPFll_v@cfg1
-.global lbl_80518DC8
-lbl_80518DC8:
+.obj lbl_80518DC8, global
 	.4byte 0x02000071
 	.4byte 0x01006400
 	.4byte 0xFE020000
@@ -8470,63 +8457,66 @@ lbl_80518DC8:
 	.4byte 0x07000071
 	.4byte 0x01007200
 	.4byte 0x20000000
+.endobj lbl_80518DC8
 
 #@LOCAL@WPADControlDpd__FlUlPFll_v@cfg2@0
-.global lbl_80518DF8
-lbl_80518DF8:
+.obj lbl_80518DF8, global
 	.4byte 0xFD05B304
 	.4byte 0x63033503
 	.4byte 0x1F030000
 	.4byte 0
+.endobj lbl_80518DF8
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global lbl_80560608
-lbl_80560608:
+
+.obj lbl_80560608, global
 	.asciz "<< RVL_SDK - WPAD \trelease build: Jun 22 2009 18:33:21 (0x4302_145) >>"
 	.balign 4
+.endobj lbl_80560608
 
 
-.global lbl_80560650
-lbl_80560650:
+.obj lbl_80560650, global
 	.asciz "WBCReadDummy\n"
 	.balign 4
+.endobj lbl_80560650
 
 
-.global lbl_80560660
-lbl_80560660:
+.obj lbl_80560660, global
 	.asciz "WBCSetZEROPointDummy\n"
 	.balign 4
+.endobj lbl_80560660
 
 
-.global lbl_80560678
-lbl_80560678:
+.obj lbl_80560678, global
 	.asciz "WBCGetTGCWeightDummy\n"
 	.balign 4
+.endobj lbl_80560678
 
 
-.global lbl_80560690
-lbl_80560690:
+.obj lbl_80560690, global
 	.asciz "Wait for %d ms until start reconnect!\n"
 	.balign 4
+.endobj lbl_80560690
 
 
-ShutdownFunctionInfo:
+.obj ShutdownFunctionInfo, local
 	.4byte OnShutdown
 	.4byte 0x0000007F
 	.4byte 0
 	.4byte 0
+.endobj ShutdownFunctionInfo
 
 
-.global lbl_805606C8
-lbl_805606C8:
+.obj lbl_805606C8, global
 	.asciz "handle = %d, repid = %02x\n"
 	.balign 4
+.endobj lbl_805606C8
 
 
-.global jumptable_805606E4
-jumptable_805606E4:
+.obj jumptable_805606E4, global
 	.4byte .L_803696E0
 	.4byte .L_803696E0
 	.4byte .L_803696E0
@@ -8540,6 +8530,7 @@ jumptable_805606E4:
 	.4byte .L_80369BA8
 	.4byte .L_80369BA8
 	.4byte .L_80369858
+.endobj jumptable_805606E4
 
 
 	.asciz "Reconnect Start!!\n"
@@ -8549,25 +8540,24 @@ jumptable_805606E4:
 	.asciz "WiFi uses channel = %d\n"
 
 
-.global lbl_80560770
-lbl_80560770:
+.obj lbl_80560770, global
 	.asciz "WPADInit()\n"
+.endobj lbl_80560770
 
 
-.global lbl_8056077C
-lbl_8056077C:
+.obj lbl_8056077C, global
 	.asciz " ==>this error means that the firmware is for NDEV %s\n"
 	.balign 4
+.endobj lbl_8056077C
 
 
-.global lbl_805607B4
-lbl_805607B4:
+.obj lbl_805607B4, global
 	.asciz "2.1 or later"
 	.balign 4
+.endobj lbl_805607B4
 
 
-.global lbl_805607C4
-lbl_805607C4:
+.obj lbl_805607C4, global
 	.asciz "Nintendo RVL-WBC"
 	.balign 4
 	.asciz "connection is %s\n"
@@ -8578,32 +8568,32 @@ lbl_805607C4:
 	.asciz "WARNING: disconnection for device handle not assigned to channel.\n"
 	.balign 4
 	.4byte 0
+.endobj lbl_805607C4
 
 
-.global lbl_80560860
-lbl_80560860:
+.obj lbl_80560860, global
 	.asciz "HID Parser reports: %d\n"
+.endobj lbl_80560860
 
 
-.global lbl_80560878
-lbl_80560878:
+.obj lbl_80560878, global
 	.asciz "WARNING: Overwritten the callback needed by KPAD.\n"
 	.balign 4
+.endobj lbl_80560878
 
 
-.global lbl_805608AC
-lbl_805608AC:
+.obj lbl_805608AC, global
 	.asciz "         Please call KPADSetSamplingCallback instead of WPADSetSamplingCallback.\n"
 	.balign 4
+.endobj lbl_805608AC
 
 
-.global lbl_80560900
-lbl_80560900:
+.obj lbl_80560900, global
 	.asciz "         Please call KPADSetConnectCallback instead of WPADSetConnectCallback.\n"
+.endobj lbl_80560900
 
 
-.global jumptable_80560950
-jumptable_80560950:
+.obj jumptable_80560950, global
 	.4byte .L_8036CBE4
 	.4byte .L_8036CBE4
 	.4byte .L_8036CBE4
@@ -8617,10 +8607,10 @@ jumptable_80560950:
 	.4byte .L_8036CC04
 	.4byte .L_8036CC04
 	.4byte .L_8036CBEC
+.endobj jumptable_80560950
 
 
-.global jumptable_80560984
-jumptable_80560984:
+.obj jumptable_80560984, global
 	.4byte .L_8036CCD0
 	.4byte .L_8036CCD0
 	.4byte .L_8036CCD0
@@ -8634,10 +8624,10 @@ jumptable_80560984:
 	.4byte .L_8036CCF0
 	.4byte .L_8036CCF0
 	.4byte .L_8036CCD8
+.endobj jumptable_80560984
 
 
-.global jumptable_805609B8
-jumptable_805609B8:
+.obj jumptable_805609B8, global
 	.4byte .L_8036CFA4
 	.4byte .L_8036CFA4
 	.4byte .L_8036CFA4
@@ -8651,10 +8641,10 @@ jumptable_805609B8:
 	.4byte .L_8036CFC4
 	.4byte .L_8036CFC4
 	.4byte .L_8036CFAC
+.endobj jumptable_805609B8
 
 
-.global jumptable_805609EC
-jumptable_805609EC:
+.obj jumptable_805609EC, global
 	.4byte .L_8036FF58
 	.4byte .L_8036FF64
 	.4byte .L_8036FF70
@@ -8672,182 +8662,225 @@ jumptable_805609EC:
 	.4byte .L_8037000C
 	.4byte .L_8036FFE8
 	.4byte 0
+.endobj jumptable_805609EC
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-__WPADVersion:
+.balign 8
+
+.obj __WPADVersion, local
 	.4byte lbl_80560608
+.endobj __WPADVersion
 
 
-_wpadOnReconnect:
+.obj _wpadOnReconnect, local
 	.4byte 0xFFFFFFFF
+.endobj _wpadOnReconnect
 
 
-_wpad_diff_count_threshold:
+.obj _wpad_diff_count_threshold, local
 	.4byte 0x00060004
 	.4byte 0x00060000
+.endobj _wpad_diff_count_threshold
 
 
-_wpad_hyst_count_threshold:
+.obj _wpad_hyst_count_threshold, local
 	.4byte 0x001E001E
 	.4byte 0x001E0000
+.endobj _wpad_hyst_count_threshold
 
 
-.global lbl_80665D50
-lbl_80665D50:
+.obj lbl_80665D50, global
 	.4byte 0x322E3000
+.endobj lbl_80665D50
 
 
-.global lbl_80665D54
-lbl_80665D54:
+.obj lbl_80665D54, global
 	.asciz "opened"
 	.balign 4
+.endobj lbl_80665D54
 
 
-.global lbl_80665D5C
-lbl_80665D5C:
+.obj lbl_80665D5C, global
 	.asciz "closed"
 	.balign 4
 	.4byte 0
+.endobj lbl_80665D5C
 
 
-.global lbl_80665D68
-lbl_80665D68:
+.obj lbl_80665D68, global
 	.asciz " %s\n"
 	.balign 4
+.endobj lbl_80665D68
 
 
-.global lbl_80665D70
-lbl_80665D70:
+.obj lbl_80665D70, global
 	.asciz "RFNJ"
 	.balign 4
+.endobj lbl_80665D70
 
 
-.global lbl_80665D78
-lbl_80665D78:
+.obj lbl_80665D78, global
 	.asciz "WUD.c"
 	.balign 4
+.endobj lbl_80665D78
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C1F8
-lbl_8066C1F8:
+.balign 8
+
+.obj lbl_8066C1F8, global
 	.4byte 0x0000D007
+.endobj lbl_8066C1F8
 
 
-.global lbl_8066C1FC
-lbl_8066C1FC:
+.obj lbl_8066C1FC, global
 	.2byte 0x400C
+.endobj lbl_8066C1FC
 
 
-.global lbl_8066C1FE
-lbl_8066C1FE:
+.obj lbl_8066C1FE, global
 	.2byte 0x0E00
+.endobj lbl_8066C1FE
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
-_wpadManageAlarm:
+.obj _wpadManageAlarm, local
 	.skip 0x30
+.endobj _wpadManageAlarm
 
-.global __rvl_p_wpadcb
-__rvl_p_wpadcb:
+.obj __rvl_p_wpadcb, global
 	.skip 0x10
+.endobj __rvl_p_wpadcb
 
-_wpadHandle2PortTable:
+.obj _wpadHandle2PortTable, local
 	.skip 0x1000
+.endobj _wpadHandle2PortTable
 
-__rvl_wpadcb:
+.obj __rvl_wpadcb, local
 	.skip 0x2700
+.endobj __rvl_wpadcb
 
 .skip 0x20
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-_wpadRegisterShutdownFunc:
+
+.obj _wpadRegisterShutdownFunc, local
 	.skip 0x2
+.endobj _wpadRegisterShutdownFunc
 
-_wpadSenseCnt:
+.obj _wpadSenseCnt, local
 	.skip 0x2
+.endobj _wpadSenseCnt
 
-_wpadCheckCnt:
+.obj _wpadCheckCnt, local
 	.skip 0x2
+.endobj _wpadCheckCnt
 
-_wpadAfhCnt:
+.obj _wpadAfhCnt, local
 	.skip 0x2
+.endobj _wpadAfhCnt
 
-_wpadExtCnt:
+.obj _wpadExtCnt, local
 	.skip 0x4
+.endobj _wpadExtCnt
 
-_wpadRumbleCnt:
+.obj _wpadRumbleCnt, local
 	.skip 0x4
+.endobj _wpadRumbleCnt
 
-_wpadStartup:
+.obj _wpadStartup, local
 	.skip 0x4
+.endobj _wpadStartup
 
-_wpadReconnectWait:
+.obj _wpadReconnectWait, local
 	.skip 0x4
+.endobj _wpadReconnectWait
 
-_wpadVSMInit:
+.obj _wpadVSMInit, local
 	.skip 0x4
+.endobj _wpadVSMInit
 
-_wpadTRNInit:
+.obj _wpadTRNInit, local
 	.skip 0x4
+.endobj _wpadTRNInit
 
-_wpadGTRInit:
+.obj _wpadGTRInit, local
 	.skip 0x4
+.endobj _wpadGTRInit
 
-_wpadDRMInit:
+.obj _wpadDRMInit, local
 	.skip 0x4
+.endobj _wpadDRMInit
 
-_enabledVSM:
+.obj _enabledVSM, local
 	.skip 0x4
+.endobj _enabledVSM
 
-_enabledTRN:
+.obj _enabledTRN, local
 	.skip 0x4
+.endobj _enabledTRN
 
-_enabledGTR:
+.obj _enabledGTR, local
 	.skip 0x4
+.endobj _enabledGTR
 
-_enabledDRM:
+.obj _enabledDRM, local
 	.skip 0x4
+.endobj _enabledDRM
 
-_wpadUsedCallback:
+.obj _wpadUsedCallback, local
 	.skip 0x4
+.endobj _wpadUsedCallback
 
-_wpadInitialized:
+.obj _wpadInitialized, local
 	.skip 0x4
+.endobj _wpadInitialized
 
-_wpadIsUsedChannel:
+.obj _wpadIsUsedChannel, local
 	.skip 0x4
+.endobj _wpadIsUsedChannel
 
-_wpadAfhChannel:
+.obj _wpadAfhChannel, local
 	.skip 0x1
+.endobj _wpadAfhChannel
 
-_wpadShutdownFlag:
+.obj _wpadShutdownFlag, local
 	.skip 0x1
+.endobj _wpadShutdownFlag
 
-_wpadSCSetting:
+.obj _wpadSCSetting, local
 	.skip 0x1
+.endobj _wpadSCSetting
 
-_wpadSpeakerVol:
+.obj _wpadSpeakerVol, local
 	.skip 0x1
+.endobj _wpadSpeakerVol
 
-_wpadRumbleFlag:
+.obj _wpadRumbleFlag, local
 	.skip 0x4
+.endobj _wpadRumbleFlag
 
-_wpadSensorBarPos:
+.obj _wpadSensorBarPos, local
 	.skip 0x1
+.endobj _wpadSensorBarPos
 
-_wpadDpdSense:
+.obj _wpadDpdSense, local
 	.skip 0x1
+.endobj _wpadDpdSense
 
-_wpadSleepTime:
+.obj _wpadSleepTime, local
 	.skip 0x2
+.endobj _wpadSleepTime
 
-_wpadGameCode:
+.obj _wpadGameCode, local
 	.skip 0x4
+.endobj _wpadGameCode
 
-_wpadGameType:
+.obj _wpadGameType, local
 	.skip 0x4
+.endobj _wpadGameType

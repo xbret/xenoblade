@@ -1916,16 +1916,19 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global TYPE_NAME__Q34nw4r3g3d7ScnRoot
-TYPE_NAME__Q34nw4r3g3d7ScnRoot:
+.balign 8
+
+.obj TYPE_NAME__Q34nw4r3g3d7ScnRoot, global
 	.4byte 0x00000008
 	.asciz "ScnRoot"
 	.4byte 0
+.endobj TYPE_NAME__Q34nw4r3g3d7ScnRoot
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056CFA0
-lbl_8056CFA0:
+.balign 8
+
+.obj lbl_8056CFA0, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r3g3d12ScnObjGatherFv
@@ -1938,10 +1941,10 @@ lbl_8056CFA0:
 	.4byte DrawXlu__Q34nw4r3g3d12ScnObjGatherFPQ34nw4r3g3d14ResMdlDrawMode
 	.4byte CheckScnObj__Q34nw4r3g3d12ScnObjGatherFPQ34nw4r3g3d6ScnObj
 	.4byte 0
+.endobj lbl_8056CFA0
 
 
-.global lbl_8056CFD0
-lbl_8056CFD0:
+.obj lbl_8056CFD0, global
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d7ScnRootCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -1958,32 +1961,37 @@ lbl_8056CFD0:
 	.4byte Insert__Q34nw4r3g3d8ScnGroupFUlPQ34nw4r3g3d6ScnObj
 	.4byte Remove__Q34nw4r3g3d8ScnGroupFUl
 	.4byte Remove__Q34nw4r3g3d8ScnGroupFPQ34nw4r3g3d6ScnObj
+.endobj lbl_8056CFD0
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665DB0
-lbl_80665DB0:
+.balign 8
+
+.obj lbl_80665DB0, global
 	.4byte 0x00000020
+.endobj lbl_80665DB0
 
 
-.global lbl_80665DB4
-lbl_80665DB4:
+.obj lbl_80665DB4, global
 	.4byte 0x00000020
+.endobj lbl_80665DB4
 
 #@LOCAL@sort<PPQ34nw4r3g3d6ScnObj,PFPCQ34nw4r3g3d6ScnObjPCQ34nw4r3g3d6ScnObj_b>__3stdFPPQ34nw4r3g3d6ScnObjPPQ34nw4r3g3d6ScnObjPFPCQ34nw4r3g3d6ScnObjPCQ34nw4r3g3d6ScnObj_b_v@shuffle@0
-.global lbl_80665DB8
-lbl_80665DB8:
+.obj lbl_80665DB8, global
 	.4byte 0xFFFFFFFC
+.endobj lbl_80665DB8
 
 #@LOCAL@sort<PPQ34nw4r3g3d6ScnObj,RPFPCQ34nw4r3g3d6ScnObjPCQ34nw4r3g3d6ScnObj_b>__3stdFPPQ34nw4r3g3d6ScnObjPPQ34nw4r3g3d6ScnObjRPFPCQ34nw4r3g3d6ScnObjPCQ34nw4r3g3d6ScnObj_b_v@shuffle@0
-.global lbl_80665DBC
-lbl_80665DBC:
+.obj lbl_80665DBC, global
 	.4byte 0xFFFFFFFC
+.endobj lbl_80665DBC
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C4E0
-float_8066C4E0:
+.balign 8
+
+.obj float_8066C4E0, global
 	.float 0.5
 	.4byte 0
+.endobj float_8066C4E0

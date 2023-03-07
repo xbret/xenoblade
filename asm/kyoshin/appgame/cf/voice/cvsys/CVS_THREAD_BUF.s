@@ -706,39 +706,38 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CVS_THREAD_BUF_typestr
-cf_CVS_THREAD_BUF_typestr:
+.obj cf_CVS_THREAD_BUF_typestr, global
 	.asciz "cf::CVS_THREAD_BUF"
 	.balign 4
 	.4byte 0
+.endobj cf_CVS_THREAD_BUF_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8053D170
-lbl_8053D170:
+.obj lbl_8053D170, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A4FA4
+.endobj lbl_8053D170
 
-.global lbl_8053D17C
-lbl_8053D17C:
+.obj lbl_8053D17C, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A5060
+.endobj lbl_8053D17C
 
-.global lbl_8053D188
-lbl_8053D188:
+.obj lbl_8053D188, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A4FA4
+.endobj lbl_8053D188
 
 
-.global __vt__cf_CVS_THREAD_BUF
-__vt__cf_CVS_THREAD_BUF:
+.obj __vt__cf_CVS_THREAD_BUF, global
 	.4byte __RTTI__cf_CVS_THREAD_BUF
 	.4byte 0
 	.4byte func_802A3B50
@@ -746,23 +745,23 @@ __vt__cf_CVS_THREAD_BUF:
 	.4byte func_802A5828
 	.4byte func_802A1EA0
 	.4byte func_802A3740
+.endobj __vt__cf_CVS_THREAD_BUF
 
-.global cf_CVS_THREAD_BUF_hierarchy
-cf_CVS_THREAD_BUF_hierarchy:
+.obj cf_CVS_THREAD_BUF_hierarchy, global
 	.4byte __RTTI__cf_CVS_THREAD
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CVS_THREAD_BUF_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-
-.global __RTTI__cf_CVS_THREAD_BUF
-__RTTI__cf_CVS_THREAD_BUF:
+.obj __RTTI__cf_CVS_THREAD_BUF, global
 	.4byte cf_CVS_THREAD_BUF_typestr
 	.4byte cf_CVS_THREAD_BUF_hierarchy
+.endobj __RTTI__cf_CVS_THREAD_BUF
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

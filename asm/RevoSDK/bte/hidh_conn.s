@@ -2312,19 +2312,20 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_805467F8
-lbl_805467F8:
+.balign 8
+
+.obj lbl_805467F8, global
 	.asciz "HID Control Registration failed"
+.endobj lbl_805467F8
 
 
-.global lbl_80546818
-lbl_80546818:
+.obj lbl_80546818, global
 	.asciz "HID Interrupt Registration failed"
 	.balign 4
+.endobj lbl_80546818
 
 
-.global lbl_8054683C
-lbl_8054683C:
+.obj lbl_8054683C, global
 	.asciz "HID - disconnect"
 	.balign 4
 	.asciz "HID - Rcvd L2CAP conn ind, PSM: 0x%04x  CID 0x%x"
@@ -2336,10 +2337,10 @@ lbl_8054683C:
 	.balign 4
 	.asciz "HID - Rcvd L2CAP conn ind, sent config req, PSM: 0x%04x  CID 0x%x"
 	.balign 4
+.endobj lbl_8054683C
 
 
-.global lbl_8054695C
-lbl_8054695C:
+.obj lbl_8054695C, global
 	.asciz "HID - Originate failed"
 	.balign 4
 	.4byte 0
@@ -2349,64 +2350,67 @@ lbl_8054695C:
 	.balign 4
 	.asciz "HID - got CTRL conn cnf, sent cfg req, CID: 0x%x"
 	.balign 4
+.endobj lbl_8054695C
 
 
-.global lbl_80546A14
-lbl_80546A14:
+.obj lbl_80546A14, global
 	.asciz "HID - Rcvd L2CAP cfg ind, unknown CID: 0x%x"
+.endobj lbl_80546A14
 
 
-.global lbl_80546A40
-lbl_80546A40:
+.obj lbl_80546A40, global
 	.asciz "HID - Rcvd cfg ind, sent cfg cfm, CID: 0x%x"
 	.asciz "HID - Rcvd cfg cfm, CID: 0x%x  Result: %d"
 	.balign 4
+.endobj lbl_80546A40
 
 
-.global lbl_80546A98
-lbl_80546A98:
+.obj lbl_80546A98, global
 	.asciz "HID - Rcvd L2CAP disc, unknown CID: 0x%x"
 	.balign 4
+.endobj lbl_80546A98
 
 
-.global lbl_80546AC4
-lbl_80546AC4:
+.obj lbl_80546AC4, global
 	.asciz "HID - Rcvd L2CAP disc, CID: 0x%x"
 	.balign 4
+.endobj lbl_80546AC4
 
 
-.global lbl_80546AE8
-lbl_80546AE8:
+.obj lbl_80546AE8, global
 	.asciz "HID - Rcvd L2CAP disc cfm, unknown CID: 0x%x"
 	.balign 4
+.endobj lbl_80546AE8
 
 
-.global lbl_80546B18
-lbl_80546B18:
+.obj lbl_80546B18, global
 	.asciz "HID - Rcvd L2CAP disc cfm, CID: 0x%x"
 	.balign 4
+.endobj lbl_80546B18
 
 
-.global lbl_80546B40
-lbl_80546B40:
+.obj lbl_80546B40, global
 	.asciz "HID - Rcvd L2CAP congestion status, unknown CID: 0x%x"
 	.balign 4
+.endobj lbl_80546B40
 
 
-.global lbl_80546B78
-lbl_80546B78:
+.obj lbl_80546B78, global
 	.asciz "HID - Rcvd L2CAP congestion status, CID: 0x%x  Cong: %d"
+.endobj lbl_80546B78
 
 
-.global lbl_80546BB0
-lbl_80546BB0:
+.obj lbl_80546BB0, global
 	.asciz "HID - Rcvd L2CAP data, unknown CID: 0x%x"
 	.balign 4
 	.4byte 0
+.endobj lbl_80546BB0
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-hst_reg_info:
+.balign 8
+
+.obj hst_reg_info, local
 	.4byte hidh_l2cif_connect_ind
 	.4byte hidh_l2cif_connect_cfm
 	.4byte 0
@@ -2417,3 +2421,4 @@ hst_reg_info:
 	.4byte 0
 	.4byte hidh_l2cif_data_ind
 	.4byte hidh_l2cif_cong_ind
+.endobj hst_reg_info

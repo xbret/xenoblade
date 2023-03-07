@@ -5706,83 +5706,83 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CActParamData
-__vt__CActParamData:
+.obj __vt__CActParamData, global
 	.4byte __RTTI__CActParamData
 	.4byte 0
 	.4byte __dt__CActParamData
 	.4byte 0
+.endobj __vt__CActParamData
 
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_80573DE8
-lbl_80573DE8:
+.obj lbl_80573DE8, global
 	.skip 0x198
-.global lbl_80573F80
-lbl_80573F80:
+.endobj lbl_80573DE8
+
+.obj lbl_80573F80, global
 	.skip 0xA8
+.endobj lbl_80573F80
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CActParamData
-__RTTI__CActParamData:
+.obj __RTTI__CActParamData, global
 	.4byte CActParamData_typestr
 	.4byte 0
+.endobj __RTTI__CActParamData
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-
-.global lbl_80666650
-lbl_80666650:
+.obj lbl_80666650, global
 	.skip 0x8
+.endobj lbl_80666650
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_80668808
-float_80668808:
+.obj float_80668808, global
 	.float 8.0
+.endobj float_80668808
 
 
-.global float_8066880C
-float_8066880C:
+.obj float_8066880C, global
 	.float -1.0
+.endobj float_8066880C
 
 
-.global float_80668810
-float_80668810:
+.obj float_80668810, global
 	.float 0
+.endobj float_80668810
 
 
-.global float_80668814
-float_80668814:
+.obj float_80668814, global
 	.float 22 #0x41B00000
+.endobj float_80668814
 
 
-.global float_80668818
-float_80668818:
+.obj float_80668818, global
 	.float 1.0
 	.4byte 0
+.endobj float_80668818
 
 
-.global double_80668820
-double_80668820:
+.obj double_80668820, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_80668820
 
-.global double_80668828
-double_80668828:
+.obj double_80668828, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_80668828
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

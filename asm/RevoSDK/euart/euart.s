@@ -262,14 +262,20 @@
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-__EUARTInitialized:
-	.skip 0x4
+.balign 8
 
-__EUARTLastErrorCode:
+.obj __EUARTInitialized, local
 	.skip 0x4
+.endobj __EUARTInitialized
 
-__EUARTSendStop:
+.obj __EUARTLastErrorCode, local
 	.skip 0x4
+.endobj __EUARTLastErrorCode
 
-Enabled:
+.obj __EUARTSendStop, local
 	.skip 0x4
+.endobj __EUARTSendStop
+
+.obj Enabled, local
+	.skip 0x4
+.endobj Enabled

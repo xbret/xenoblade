@@ -2408,15 +2408,14 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CTalkWindow_typestr
-CTalkWindow_typestr:
+.obj CTalkWindow_typestr, global
 	.asciz "CTalkWindow"
+.endobj CTalkWindow_typestr
 
 
-.global CTalkWindow_strpool
-CTalkWindow_strpool:
+.obj CTalkWindow_strpool, global
 	.asciz "CTalkWindow"
 	.asciz "mf70_cf00_twin00.brlyt"
 	.asciz "mf70_cf00_twin00_in.brlan"
@@ -2446,21 +2445,21 @@ CTalkWindow_strpool:
 	.asciz "mf70_cf00_twin_line_t.tpl"
 	.asciz "ep100"
 	.balign 4
+.endobj CTalkWindow_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_80531740
-lbl_80531740:
+.obj lbl_80531740, global
 	.4byte lbl_80669B30
 	.4byte lbl_80669B38
 	.4byte lbl_80669B30
 	.4byte lbl_80669B30
+.endobj lbl_80531740
 
 
-.global jumptable_80531750
-jumptable_80531750:
+.obj jumptable_80531750, global
 	.4byte .L_8012BF50
 	.4byte .L_8012BE94
 	.4byte .L_8012BEB8
@@ -2471,10 +2470,10 @@ jumptable_80531750:
 	.4byte .L_8012BF40
 	.4byte .L_8012BF50
 	.4byte 0
+.endobj jumptable_80531750
 
 
-.global __vt__CTalkWindow
-__vt__CTalkWindow:
+.obj __vt__CTalkWindow, global
 	.4byte __RTTI__CTalkWindow
 	.4byte 0
 	.4byte __dt__CTalkWindow
@@ -2523,9 +2522,9 @@ __vt__CTalkWindow:
 	.4byte func_8012DF88
 	.4byte func_8012DF80
 	.4byte func_8012CBD4
+.endobj __vt__CTalkWindow
 
-.global CTalkWindow_hierarchy
-CTalkWindow_hierarchy:
+.obj CTalkWindow_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000070
 	.4byte __RTTI__IWorkEvent
@@ -2542,148 +2541,150 @@ CTalkWindow_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CTalkWindow_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CTalkWindow
-__RTTI__CTalkWindow:
+.obj __RTTI__CTalkWindow, global
 	.4byte CTalkWindow_typestr
 	.4byte CTalkWindow_hierarchy
+.endobj __RTTI__CTalkWindow
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_80669B30
-lbl_80669B30:
+.obj lbl_80669B30, global
 	.asciz "win_n"
 	.balign 4
+.endobj lbl_80669B30
 
-.global lbl_80669B38
-lbl_80669B38:
+.obj lbl_80669B38, global
 	.asciz "win_a"
 	.balign 4
+.endobj lbl_80669B38
 
 
-.global float_80669B40
-float_80669B40:
+.obj float_80669B40, global
 	.float 38 #0x42180000
+.endobj float_80669B40
 
 
-.global float_80669B44
-float_80669B44:
+.obj float_80669B44, global
 	.float -1.0
+.endobj float_80669B44
 
 
-.global float_80669B48
-float_80669B48:
+.obj float_80669B48, global
 	.float 0
+.endobj float_80669B48
 
 
-.global float_80669B4C
-float_80669B4C:
+.obj float_80669B4C, global
 	.float 1.0
+.endobj float_80669B4C
 
 
-.global float_80669B50
-float_80669B50:
+.obj float_80669B50, global
 	.float 320 #0x43A00000
+.endobj float_80669B50
 
 
-.global float_80669B54
-float_80669B54:
+.obj float_80669B54, global
 	.float 224 #0x43600000
+.endobj float_80669B54
 
 
-.global float_80669B58
-float_80669B58:
+.obj float_80669B58, global
 	.float 0.5
+.endobj float_80669B58
 
 
-.global float_80669B5C
-float_80669B5C:
+.obj float_80669B5C, global
 	.float 20 #0x41A00000
+.endobj float_80669B5C
 
 
-.global float_80669B60
-float_80669B60:
+.obj float_80669B60, global
 	.float -320 #0xC3A00000
+.endobj float_80669B60
 
 
-.global float_80669B64
-float_80669B64:
+.obj float_80669B64, global
 	.float -224 #0xC3600000
+.endobj float_80669B64
 
 
-.global float_80669B68
-float_80669B68:
+.obj float_80669B68, global
 	.float 50 #0x42480000
+.endobj float_80669B68
 
 
-.global float_80669B6C
-float_80669B6C:
+.obj float_80669B6C, global
 	.float -200 #0xC3480000
+.endobj float_80669B6C
 
 
-.global float_80669B70
-float_80669B70:
+.obj float_80669B70, global
 	.float 200 #0x43480000
+.endobj float_80669B70
 
 
-.global float_80669B74
-float_80669B74:
+.obj float_80669B74, global
 	.float 0.8 #0x3F4CCCCD
+.endobj float_80669B74
 
 
-.global float_80669B78
-float_80669B78:
+.obj float_80669B78, global
 	.float 3 #0x40400000
+.endobj float_80669B78
 
 
-.global float_80669B7C
-float_80669B7C:
+.obj float_80669B7C, global
 	.float 39 #0x421C0000
+.endobj float_80669B7C
 
 
-.global float_80669B80
-float_80669B80:
+.obj float_80669B80, global
 	.float 18 #0x41900000
+.endobj float_80669B80
 
 
-.global float_80669B84
-float_80669B84:
+.obj float_80669B84, global
 	.float 36 #0x42100000
+.endobj float_80669B84
 
 
-.global float_80669B88
-float_80669B88:
+.obj float_80669B88, global
 	.float 240 #0x43700000
+.endobj float_80669B88
 
 
-.global float_80669B8C
-float_80669B8C:
+.obj float_80669B8C, global
 	.float -240 #0xC3700000
+.endobj float_80669B8C
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_80577268
-lbl_80577268:
+.obj lbl_80577268, global
 	.skip 0xC0
+.endobj lbl_80577268
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80666938, global
+	.skip 0x4
+.endobj lbl_80666938
 
-.global lbl_80666938
-lbl_80666938:
+.obj lbl_8066693C, global
 	.skip 0x4
-.global lbl_8066693C
-lbl_8066693C:
-	.skip 0x4
+.endobj lbl_8066693C
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

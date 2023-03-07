@@ -995,7 +995,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-__EarlySizeTable:
+.balign 8
+
+.obj __EarlySizeTable, local
 	.4byte 0x0000009D
 	.4byte 0x000001DF
 	.4byte 0x0000033D
@@ -1020,8 +1022,9 @@ __EarlySizeTable:
 	.4byte 0x000004FF
 	.4byte 0x000009AD
 	.4byte 0x00000F31
+.endobj __EarlySizeTable
 
-__EarlyCoefTable:
+.obj __EarlyCoefTable, local
 	.float 0.4 #0x3ECCCCCD
 	.float -1.0
 	.float 0.3 #0x3E99999A
@@ -1046,9 +1049,10 @@ __EarlyCoefTable:
 	.float -1.0
 	.float 0.7 #0x3F333333
 	.float 0.3 #0x3E99999A
+.endobj __EarlyCoefTable
 
 
-__FilterSizeTable:
+.obj __FilterSizeTable, local
 	.4byte 0x000006FD
 	.4byte 0x000007CF
 	.4byte 0x0000091D
@@ -1105,57 +1109,60 @@ __FilterSizeTable:
 	.4byte 0x0000002F
 	.4byte 0x00000049
 	.4byte 0x00000043
+.endobj __FilterSizeTable
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066BDE0
-float_8066BDE0:
+.balign 8
+
+.obj float_8066BDE0, global
 	.float 32000 #0x46FA0000
+.endobj float_8066BDE0
 
 
-.global float_8066BDE4
-float_8066BDE4:
+.obj float_8066BDE4, global
 	.float 0
+.endobj float_8066BDE4
 
 
-.global float_8066BDE8
-float_8066BDE8:
+.obj float_8066BDE8, global
 	.float 1.0
+.endobj float_8066BDE8
 
 
-.global float_8066BDEC
-float_8066BDEC:
+.obj float_8066BDEC, global
 	.float 0.6 #0x3F19999A
+.endobj float_8066BDEC
 
 
-.global float_8066BDF0
-float_8066BDF0:
+.obj float_8066BDF0, global
 	.float 0.5
 	.4byte 0
+.endobj float_8066BDF0
 
-.global double_8066BDF8
-double_8066BDF8:
+.obj double_8066BDF8, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066BDF8
 
-.global float_8066BE00
-float_8066BE00:
+.obj float_8066BE00, global
 	.float -3 #0xC0400000
 	.4byte 0
+.endobj float_8066BE00
 
 
-.global double_8066BE08
-double_8066BE08:
+.obj double_8066BE08, global
 	.double 10 #0x4024000000000000
+.endobj double_8066BE08
 
 
-.global float_8066BE10
-float_8066BE10:
+.obj float_8066BE10, global
 	.float 0.95 #0x3F733333
 	.4byte 0
+.endobj float_8066BE10
 
 
-.global double_8066BE18
-double_8066BE18:
+.obj double_8066BE18, global
 	.4byte 0x43300000
 	.4byte 0
+.endobj double_8066BE18

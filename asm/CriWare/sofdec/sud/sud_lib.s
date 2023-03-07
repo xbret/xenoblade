@@ -128,14 +128,16 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-sud_ver_str:
+
+.obj sud_ver_str, local
 	.asciz "\nCRI SUD/WII Ver.0.05 Build:Nov 13 2008 18:22:10\n"
 	.balign 4
+.endobj sud_ver_str
 
 
-.global sud_lib_strpool
-sud_lib_strpool:
+.obj sud_lib_strpool, global
 	.asciz "<SUDPS_>"
 	.asciz "<%06X>"
 	.asciz "02"
@@ -147,11 +149,14 @@ sud_lib_strpool:
 	.asciz "A"
 	.asciz "<"
 	.balign 4
+.endobj sud_lib_strpool
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-sud_init_cnt:
+.obj sud_init_cnt, local
 	.skip 0x4
+.endobj sud_init_cnt
 
-sud_dummy:
+.obj sud_dummy, local
 	.skip 0x4
+.endobj sud_dummy

@@ -160,8 +160,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051F608
-lbl_8051F608:
+.balign 8
+
+.obj lbl_8051F608, global
 	.4byte 0x04030101
 	.4byte 0x01010101
 	.4byte 0x01010101
@@ -226,3 +227,4 @@ lbl_8051F608:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8051F608

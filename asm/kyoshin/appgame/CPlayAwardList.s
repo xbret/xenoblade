@@ -1334,16 +1334,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CPlayAwardList_typestr
-CPlayAwardList_typestr:
+.obj CPlayAwardList_typestr, global
 	.asciz "CPlayAwardList"
 	.balign 4
+.endobj CPlayAwardList_typestr
 
 
-.global CMenuPlayAward_strpool
-CMenuPlayAward_strpool:
+.obj CMenuPlayAward_strpool, global
 	.asciz "JNL_playaward"
 	.asciz "order"
 	.asciz "MNU_update"
@@ -1379,13 +1378,13 @@ CMenuPlayAward_strpool:
 	.asciz "MNU_playaward"
 	.balign 4
 	.4byte 0
+.endobj CMenuPlayAward_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CPlayAwardList
-__vt__CPlayAwardList:
+.obj __vt__CPlayAwardList, global
 	.4byte __RTTI__CPlayAwardList
 	.4byte 0
 	.4byte __dt__CPlayAwardList
@@ -1420,41 +1419,42 @@ __vt__CPlayAwardList:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CPlayAwardList
 
-.global CPlayAwardList_hierarchy
-CPlayAwardList_hierarchy:
+.obj CPlayAwardList_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CPlayAwardList_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CPlayAwardList
-__RTTI__CPlayAwardList:
+.obj __RTTI__CPlayAwardList, global
 	.4byte CPlayAwardList_typestr
 	.4byte CPlayAwardList_hierarchy
+.endobj __RTTI__CPlayAwardList
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B260
-float_8066B260:
+.obj float_8066B260, global
 	.float 252 #0x437C0000
+.endobj float_8066B260
 
 
-.global float_8066B264
-float_8066B264:
+.obj float_8066B264, global
 	.float 88 #0x42B00000
+.endobj float_8066B264
 
 
-.global float_8066B268
-float_8066B268:
+.obj float_8066B268, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066B268
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

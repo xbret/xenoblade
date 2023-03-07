@@ -863,58 +863,56 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-
-.global lbl_804F77E8
-lbl_804F77E8:
+.obj lbl_804F77E8, global
 	.asciz "eff/rec/er/"
+.endobj lbl_804F77E8
 
-.global lbl_804F77F4
-lbl_804F77F4:
+.obj lbl_804F77F4, global
 	.asciz "eff/rec/ep/"
+.endobj lbl_804F77F4
 
-.global lbl_804F7800
-lbl_804F7800:
+.obj lbl_804F7800, global
 	.asciz "eff/rec/en/"
+.endobj lbl_804F7800
 
-.global lbl_804F780C
-lbl_804F780C:
+.obj lbl_804F780C, global
 	.asciz "eff/rec/el/"
+.endobj lbl_804F780C
 
-.global lbl_804F7818
-lbl_804F7818:
+.obj lbl_804F7818, global
 	.asciz "snd/se/pc/"
 	.balign 4
+.endobj lbl_804F7818
 
-.global lbl_804F7824
-lbl_804F7824:
+.obj lbl_804F7824, global
 	.asciz "snd/bgm/fl/"
+.endobj lbl_804F7824
 
-.global lbl_804F7830
-lbl_804F7830:
+.obj lbl_804F7830, global
 	.asciz "snd/bgm/ve/"
+.endobj lbl_804F7830
 
-.global lbl_804F783C
-lbl_804F783C:
+.obj lbl_804F783C, global
 	.asciz "snd/bgm/bt/"
+.endobj lbl_804F783C
 
-.global lbl_804F7848
-lbl_804F7848:
+.obj lbl_804F7848, global
 	.asciz "snd/bgm/dn/"
+.endobj lbl_804F7848
 
-.global lbl_804F7854
-lbl_804F7854:
+.obj lbl_804F7854, global
 	.asciz "snd/bgm/tw/"
+.endobj lbl_804F7854
 
-.global lbl_804F7860
-lbl_804F7860:
+.obj lbl_804F7860, global
 	.asciz "script/vs/"
 	.balign 4
+.endobj lbl_804F7860
 
 
-.global code_800AA008_strpool
-code_800AA008_strpool:
+.obj code_800AA008_strpool, global
 	.asciz "%02d%02d%02d"
 	.asciz "%03d"
 	.asciz "%02d"
@@ -924,14 +922,14 @@ code_800AA008_strpool:
 	.asciz "%02d%02d"
 	.balign 4
 	.4byte 0
+.endobj code_800AA008_strpool
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8052BB80
-lbl_8052BB80:
+.obj lbl_8052BB80, global
 	.4byte 0
 	.4byte lbl_806690B0
 	.4byte lbl_806690B0
@@ -1056,10 +1054,10 @@ lbl_8052BB80:
 	.4byte lbl_806691D0
 	.4byte lbl_806690B0
 	.4byte lbl_806690F0
+.endobj lbl_8052BB80
 
 
-.global jumptable_8052BD70
-jumptable_8052BD70:
+.obj jumptable_8052BD70, global
 	.4byte .L_800AA074
 	.4byte .L_800AA0AC
 	.4byte .L_800AA05C
@@ -1069,10 +1067,10 @@ jumptable_8052BD70:
 	.4byte .L_800AA0EC
 	.4byte .L_800AA140
 	.4byte .L_800AA090
+.endobj jumptable_8052BD70
 
 
-.global jumptable_8052BD94
-jumptable_8052BD94:
+.obj jumptable_8052BD94, global
 	.4byte .L_800AA8BC
 	.4byte .L_800AA914
 	.4byte .L_800AAA00
@@ -1082,232 +1080,245 @@ jumptable_8052BD94:
 	.4byte .L_800AA9A0
 	.4byte .L_800AAAF0
 	.4byte .L_800AA8E8
+.endobj jumptable_8052BD94
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_806690B0
-lbl_806690B0:
+.obj lbl_806690B0, global
 	.4byte 0
+.endobj lbl_806690B0
 
-.global lbl_806690B4
-lbl_806690B4:
+.obj lbl_806690B4, global
 	.4byte 0x6D610000
+.endobj lbl_806690B4
 
-.global lbl_806690B8
-lbl_806690B8:
+.obj lbl_806690B8, global
 	.asciz "map/"
 	.balign 4
+.endobj lbl_806690B8
 
-.global lbl_806690C0
-lbl_806690C0:
+.obj lbl_806690C0, global
 	.asciz ".dap"
 	.balign 4
+.endobj lbl_806690C0
 
-.global lbl_806690C8
-lbl_806690C8:
+.obj lbl_806690C8, global
 	.asciz "pc"
 	.4byte 0
 	.byte 0x00
-.global lbl_806690D0
-lbl_806690D0:
-	.asciz "chr/pc/"
+.endobj lbl_806690C8
 
-.global lbl_806690D8
-lbl_806690D8:
+.obj lbl_806690D0, global
+	.asciz "chr/pc/"
+.endobj lbl_806690D0
+
+.obj lbl_806690D8, global
 	.asciz ".chr"
 	.balign 4
+.endobj lbl_806690D8
 
-.global lbl_806690E0
-lbl_806690E0:
+.obj lbl_806690E0, global
 	.asciz "np"
 	.4byte 0
 	.byte 0x00
-.global lbl_806690E8
-lbl_806690E8:
+.endobj lbl_806690E0
+
+.obj lbl_806690E8, global
 	.asciz "chr/np/"
+.endobj lbl_806690E8
 
-.global lbl_806690F0
-lbl_806690F0:
+.obj lbl_806690F0, global
 	.asciz ".kp"
+.endobj lbl_806690F0
 
-.global lbl_806690F4
-lbl_806690F4:
+.obj lbl_806690F4, global
 	.asciz "en"
 	.byte 0x00
-.global lbl_806690F8
-lbl_806690F8:
-	.asciz "chr/en/"
+.endobj lbl_806690F4
 
-.global lbl_80669100
-lbl_80669100:
+.obj lbl_806690F8, global
+	.asciz "chr/en/"
+.endobj lbl_806690F8
+
+.obj lbl_80669100, global
 	.asciz "wp"
 	.4byte 0
 	.byte 0x00
-.global lbl_80669108
-lbl_80669108:
-	.asciz "chr/wp/"
+.endobj lbl_80669100
 
-.global lbl_80669110
-lbl_80669110:
+.obj lbl_80669108, global
+	.asciz "chr/wp/"
+.endobj lbl_80669108
+
+.obj lbl_80669110, global
 	.asciz "oj"
 	.4byte 0
 	.byte 0x00
-.global lbl_80669118
-lbl_80669118:
-	.asciz "chr/oj/"
+.endobj lbl_80669110
 
-.global lbl_80669120
-lbl_80669120:
+.obj lbl_80669118, global
+	.asciz "chr/oj/"
+.endobj lbl_80669118
+
+.obj lbl_80669120, global
 	.asciz "mp"
 	.byte 0x00
-.global lbl_80669124
-lbl_80669124:
+.endobj lbl_80669120
+
+.obj lbl_80669124, global
 	.asciz ".mca"
 	.balign 4
+.endobj lbl_80669124
 
-.global lbl_8066912C
-lbl_8066912C:
+.obj lbl_8066912C, global
 	.asciz "mn"
 	.byte 0x00
-.global lbl_80669130
-lbl_80669130:
+.endobj lbl_8066912C
+
+.obj lbl_80669130, global
 	.asciz "me"
 	.byte 0x00
-.global lbl_80669134
-lbl_80669134:
+.endobj lbl_80669130
+
+.obj lbl_80669134, global
 	.asciz "mo"
 	.byte 0x00
-.global lbl_80669138
-lbl_80669138:
-	.asciz "chr/mo/"
+.endobj lbl_80669134
 
-.global lbl_80669140
-lbl_80669140:
+.obj lbl_80669138, global
+	.asciz "chr/mo/"
+.endobj lbl_80669138
+
+.obj lbl_80669140, global
 	.asciz "mw"
 	.byte 0x00
-.global lbl_80669144
-lbl_80669144:
+.endobj lbl_80669140
+
+.obj lbl_80669144, global
 	.asciz "em"
 	.byte 0x00
-.global lbl_80669148
-lbl_80669148:
-	.asciz "eff/em/"
+.endobj lbl_80669144
 
-.global lbl_80669150
-lbl_80669150:
+.obj lbl_80669148, global
+	.asciz "eff/em/"
+.endobj lbl_80669148
+
+.obj lbl_80669150, global
 	.asciz ".rec"
 	.balign 4
+.endobj lbl_80669150
 
-.global lbl_80669158
-lbl_80669158:
+.obj lbl_80669158, global
 	.asciz "eg"
 	.4byte 0
 	.byte 0x00
-.global lbl_80669160
-lbl_80669160:
+.endobj lbl_80669158
+
+.obj lbl_80669160, global
 	.asciz "eff/eg/"
+.endobj lbl_80669160
 
-.global lbl_80669168
-lbl_80669168:
+.obj lbl_80669168, global
 	.4byte 0x65720000
+.endobj lbl_80669168
 
-.global lbl_8066916C
-lbl_8066916C:
+.obj lbl_8066916C, global
 	.4byte 0x65700000
+.endobj lbl_8066916C
 
-.global lbl_80669170
-lbl_80669170:
+.obj lbl_80669170, global
 	.4byte 0x65650000
+.endobj lbl_80669170
 
-.global lbl_80669174
-lbl_80669174:
+.obj lbl_80669174, global
 	.4byte 0x656C0000
+.endobj lbl_80669174
 
-.global lbl_80669178
-lbl_80669178:
+.obj lbl_80669178, global
 	.4byte 0x73730000
 	.4byte 0
+.endobj lbl_80669178
 
-.global lbl_80669180
-lbl_80669180:
+.obj lbl_80669180, global
 	.asciz "snd/se/"
+.endobj lbl_80669180
 
-.global lbl_80669188
-lbl_80669188:
+.obj lbl_80669188, global
 	.4byte 0x2E736500
+.endobj lbl_80669188
 
-.global lbl_8066918C
-lbl_8066918C:
+.obj lbl_8066918C, global
 	.4byte 0x736D0000
+.endobj lbl_8066918C
 
-.global lbl_80669190
-lbl_80669190:
+.obj lbl_80669190, global
 	.4byte 0x73700000
+.endobj lbl_80669190
 
-.global lbl_80669194
-lbl_80669194:
+.obj lbl_80669194, global
 	.4byte 0x73650000
+.endobj lbl_80669194
 
-.global lbl_80669198
-lbl_80669198:
+.obj lbl_80669198, global
 	.4byte 0x736E0000
+.endobj lbl_80669198
 
-.global lbl_8066919C
-lbl_8066919C:
+.obj lbl_8066919C, global
 	.4byte 0x666C0000
+.endobj lbl_8066919C
 
-.global lbl_806691A0
-lbl_806691A0:
+.obj lbl_806691A0, global
 	.asciz ".bgm"
 	.balign 4
+.endobj lbl_806691A0
 
-.global lbl_806691A8
-lbl_806691A8:
+.obj lbl_806691A8, global
 	.4byte 0x76650000
+.endobj lbl_806691A8
 
-.global lbl_806691AC
-lbl_806691AC:
+.obj lbl_806691AC, global
 	.4byte 0x62740000
+.endobj lbl_806691AC
 
-.global lbl_806691B0
-lbl_806691B0:
+.obj lbl_806691B0, global
 	.4byte 0x646E0000
+.endobj lbl_806691B0
 
-.global lbl_806691B4
-lbl_806691B4:
+.obj lbl_806691B4, global
 	.4byte 0x74770000
+.endobj lbl_806691B4
 
-.global lbl_806691B8
-lbl_806691B8:
+.obj lbl_806691B8, global
 	.4byte 0x76730000
+.endobj lbl_806691B8
 
-.global lbl_806691BC
-lbl_806691BC:
+.obj lbl_806691BC, global
 	.4byte 0x2E740000
+.endobj lbl_806691BC
 
-.global lbl_806691C0
-lbl_806691C0:
+.obj lbl_806691C0, global
 	.4byte 0x6D640000
 	.4byte 0
+.endobj lbl_806691C0
 
-.global lbl_806691C8
-lbl_806691C8:
+.obj lbl_806691C8, global
 	.asciz "map/md/"
+.endobj lbl_806691C8
 
-.global lbl_806691D0
-lbl_806691D0:
+.obj lbl_806691D0, global
 	.4byte 0x63630000
 	.4byte 0
+.endobj lbl_806691D0
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_80576478
-lbl_80576478:
+.obj lbl_80576478, global
 	.skip 0x48
+.endobj lbl_80576478
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

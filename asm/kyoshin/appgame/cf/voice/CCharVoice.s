@@ -624,69 +624,69 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_8050BCC0
-lbl_8050BCC0:
+.obj lbl_8050BCC0, global
 	.asciz "snd/ahx/pc01/pc01_01_01.ahx"
+.endobj lbl_8050BCC0
 
-.global cf_CCharVoice_typestr
-cf_CCharVoice_typestr:
+.obj cf_CCharVoice_typestr, global
 	.asciz "cf::CCharVoice"
 	.balign 4
+.endobj cf_CCharVoice_typestr
 
 
-.global lbl_8050BCEC
-lbl_8050BCEC:
+.obj lbl_8050BCEC, global
 	.4byte 0
+.endobj lbl_8050BCEC
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CCharVoice
-__vt__cf_CCharVoice:
+.obj __vt__cf_CCharVoice, global
 	.4byte __RTTI__cf_CCharVoice
 	.4byte 0
 	.4byte __dt__cf_CCharVoice
 	.4byte 0
+.endobj __vt__cf_CCharVoice
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80665590
-lbl_80665590:
+.obj lbl_80665590, global
 	.4byte lbl_8050BCC0
 	.4byte 0
+.endobj lbl_80665590
 
-.global __RTTI__cf_CCharVoice
-__RTTI__cf_CCharVoice:
+.obj __RTTI__cf_CCharVoice, global
 	.4byte cf_CCharVoice_typestr
 	.4byte 0
+.endobj __RTTI__cf_CCharVoice
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B500
-float_8066B500:
+.obj float_8066B500, global
 	.float 10.0
+.endobj float_8066B500
 
 
-.global float_8066B504
-float_8066B504:
+.obj float_8066B504, global
 	.float 40 #0x42200000
+.endobj float_8066B504
 
 
-.global float_8066B508
-float_8066B508:
+.obj float_8066B508, global
 	.float 0.5
+.endobj float_8066B508
 
 
-.global float_8066B50C
-float_8066B50C:
+.obj float_8066B50C, global
 	.float 0
+.endobj float_8066B50C
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -1249,16 +1249,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMenuZeal_typestr
-CMenuZeal_typestr:
+.obj CMenuZeal_typestr, global
 	.asciz "CMenuZeal"
 	.balign 4
+.endobj CMenuZeal_typestr
 
 
-.global CMenuZeal_strpool
-CMenuZeal_strpool:
+.obj CMenuZeal_strpool, global
 	.asciz "CMenuZeal"
 	.asciz "mf71_battle90_chance_gage.brlyt"
 	.asciz "mf71_battle90_chance_gage_in.brlan"
@@ -1282,13 +1281,13 @@ CMenuZeal_strpool:
 	.asciz "pic_pointer_def"
 	.balign 4
 	.4byte 0
+.endobj CMenuZeal_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMenuZeal
-__vt__CMenuZeal:
+.obj __vt__CMenuZeal, global
 	.4byte __RTTI__CMenuZeal
 	.4byte 0
 	.4byte __dt__CMenuZeal
@@ -1337,9 +1336,9 @@ __vt__CMenuZeal:
 	.4byte func_8017FF70
 	.4byte func_8017FF68
 	.4byte func_8017FBB4
+.endobj __vt__CMenuZeal
 
-.global CMenuZeal_hierarchy
-CMenuZeal_hierarchy:
+.obj CMenuZeal_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x0000005C
 	.4byte __RTTI__IWorkEvent
@@ -1356,73 +1355,73 @@ CMenuZeal_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuZeal_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-
-.global __RTTI__CMenuZeal
-__RTTI__CMenuZeal:
+.obj __RTTI__CMenuZeal, global
 	.4byte CMenuZeal_typestr
 	.4byte CMenuZeal_hierarchy
+.endobj __RTTI__CMenuZeal
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066A130
-float_8066A130:
+.obj float_8066A130, global
 	.float 100.0
+.endobj float_8066A130
 
 
-.global float_8066A134
-float_8066A134:
+.obj float_8066A134, global
 	.float 0
+.endobj float_8066A134
 
 
-.global float_8066A138
-float_8066A138:
+.obj float_8066A138, global
 	.float 5 #0x40A00000
+.endobj float_8066A138
 
 
-.global float_8066A13C
-float_8066A13C:
+.obj float_8066A13C, global
 	.float 50 #0x42480000
+.endobj float_8066A13C
 
 
-.global float_8066A140
-float_8066A140:
+.obj float_8066A140, global
 	.float 45 #0x42340000
+.endobj float_8066A140
 
 
-.global float_8066A144
-float_8066A144:
+.obj float_8066A144, global
 	.float 1.0
+.endobj float_8066A144
 
 
-.global float_8066A148
-float_8066A148:
+.obj float_8066A148, global
 	.float 6 #0x40C00000
+.endobj float_8066A148
 
 
-.global float_8066A14C
-float_8066A14C:
+.obj float_8066A14C, global
 	.float 1.5
+.endobj float_8066A14C
 
 
-.global float_8066A150
-float_8066A150:
+.obj float_8066A150, global
 	.float 34 #0x42080000
 	.4byte 0
+.endobj float_8066A150
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80666B90
-lbl_80666B90:
+.obj lbl_80666B90, global
 	.skip 0x8
+.endobj lbl_80666B90
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

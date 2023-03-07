@@ -246,27 +246,26 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMenuItem_typestr
-CMenuItem_typestr:
+.obj CMenuItem_typestr, global
 	.asciz "CMenuItem"
 	.balign 4
+.endobj CMenuItem_typestr
 
 
-.global lbl_804FE86C
-lbl_804FE86C:
+.obj lbl_804FE86C, global
 	.asciz "MNU_item"
 	.asciz "name"
 	.4byte 0
 	.2byte 0
+.endobj lbl_804FE86C
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMenuItem
-__vt__CMenuItem:
+.obj __vt__CMenuItem, global
 	.4byte __RTTI__CMenuItem
 	.4byte 0
 	.4byte __dt__CMenuItem
@@ -281,9 +280,9 @@ __vt__CMenuItem:
 	.4byte func_80167C38
 	.4byte func_80167C30
 	.4byte func_8016784C
+.endobj __vt__CMenuItem
 
-.global CMenuItem_hierarchy
-CMenuItem_hierarchy:
+.obj CMenuItem_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000058
 	.4byte __RTTI__CDoubleListNode
@@ -298,23 +297,24 @@ CMenuItem_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuItem_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuItem
-__RTTI__CMenuItem:
+.obj __RTTI__CMenuItem, global
 	.4byte CMenuItem_typestr
 	.4byte CMenuItem_hierarchy
+.endobj __RTTI__CMenuItem
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80666B48
-lbl_80666B48:
+.obj lbl_80666B48, global
 	.skip 0x8
+.endobj lbl_80666B48
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

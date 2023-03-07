@@ -202,18 +202,22 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_80602790
-lbl_80602790:
+.obj lbl_80602790, global
 	.skip 0x4
-.global lbl_80602794
-lbl_80602794:
+.endobj lbl_80602790
+
+.obj lbl_80602794, global
 	.skip 0x4
-.global lbl_80602798
-lbl_80602798:
+.endobj lbl_80602794
+
+.obj lbl_80602798, global
 	.skip 0x4
-.global lbl_8060279C
-lbl_8060279C:
+.endobj lbl_80602798
+
+.obj lbl_8060279C, global
 	.skip 0x4
-.global lbl_806027A0
-lbl_806027A0:
+.endobj lbl_8060279C
+
+.obj lbl_806027A0, global
 	.skip 0x100
+.endobj lbl_806027A0

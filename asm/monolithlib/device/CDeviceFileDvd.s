@@ -1421,16 +1421,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CDeviceFileDvd_typestr
-CDeviceFileDvd_typestr:
+.obj CDeviceFileDvd_typestr, global
 	.asciz "CDeviceFileDvd"
 	.balign 4
+.endobj CDeviceFileDvd_typestr
 
 
-.global lbl_805265D0
-lbl_805265D0:
+.obj lbl_805265D0, global
 	#An error has occured.
 	#"エラーが発生しました。"
 	.4byte 0x83478389
@@ -1440,6 +1439,7 @@ lbl_805265D0:
 	.4byte 0x82B582BD
 	.2byte 0x8142
 	.byte 0x00
+.endobj lbl_805265D0
 
 	#Please insert the Bionis disc.
 	#"巨神のディスクをセットしてください。"
@@ -1484,10 +1484,9 @@ lbl_805265D0:
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CDeviceFileDvd
-__vt__CDeviceFileDvd:
+.obj __vt__CDeviceFileDvd, global
 	.4byte __RTTI__CDeviceFileDvd
 	.4byte 0
 	.4byte __dt__CDeviceFileDvd
@@ -1528,32 +1527,33 @@ __vt__CDeviceFileDvd:
 	.4byte func_80451638
 	.4byte func_8045166C
 	.4byte func_804516CC
+.endobj __vt__CDeviceFileDvd
 
-.global CDeviceFileDvd_hierarchy
-CDeviceFileDvd_hierarchy:
+.obj CDeviceFileDvd_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CDeviceFileDvd_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CDeviceFileDvd
-__RTTI__CDeviceFileDvd:
+.obj __RTTI__CDeviceFileDvd, global
 	.4byte CDeviceFileDvd_typestr
 	.4byte CDeviceFileDvd_hierarchy
+.endobj __RTTI__CDeviceFileDvd
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80667F50
-lbl_80667F50:
+.obj lbl_80667F50, global
 	.skip 0x8
+.endobj lbl_80667F50
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

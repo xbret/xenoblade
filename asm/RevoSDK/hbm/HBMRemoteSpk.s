@@ -661,24 +661,27 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global __vt__homebutton_RemoteSpk
-__vt__homebutton_RemoteSpk:
+.balign 8
+
+.obj __vt__homebutton_RemoteSpk, global
 	.4byte __RTTI__homebutton_RemoteSpk
 	.4byte 0
 	.4byte __dt__Q210homebutton9RemoteSpkFv
+.endobj __vt__homebutton_RemoteSpk
 
-.global homebutton_RemoteSpk_typestr
-homebutton_RemoteSpk_typestr:
+.obj homebutton_RemoteSpk_typestr, global
 	.asciz "homebutton::RemoteSpk"
 	.balign 4
 	.4byte 0
+.endobj homebutton_RemoteSpk_typestr
 
-.global __RTTI__homebutton_RemoteSpk
-__RTTI__homebutton_RemoteSpk:
+.obj __RTTI__homebutton_RemoteSpk, global
 	.4byte homebutton_RemoteSpk_typestr
 	.4byte 0
+.endobj __RTTI__homebutton_RemoteSpk
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-spInstance__Q210homebutton9RemoteSpk:
+.obj spInstance__Q210homebutton9RemoteSpk, local
 	.skip 0x8
+.endobj spInstance__Q210homebutton9RemoteSpk

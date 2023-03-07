@@ -1866,8 +1866,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global jumptable_805704D0
-jumptable_805704D0:
+.balign 8
+
+.obj jumptable_805704D0, global
 	.4byte .L_8045676C
 	.4byte .L_8045670C
 	.4byte .L_80456714
@@ -1879,10 +1880,10 @@ jumptable_805704D0:
 	.4byte .L_80456768
 	.4byte .L_80456720
 	.4byte .L_8045672C
+.endobj jumptable_805704D0
 
 
-.global jumptable_805704FC
-jumptable_805704FC:
+.obj jumptable_805704FC, global
 	.4byte .L_804566EC
 	.4byte .L_80456628
 	.4byte .L_8045663C
@@ -1894,33 +1895,36 @@ jumptable_805704FC:
 	.4byte .L_804566DC
 	.4byte .L_80456650
 	.4byte .L_80456664
+.endobj jumptable_805704FC
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066CC28
-float_8066CC28:
+.balign 8
+
+.obj float_8066CC28, global
 	.float 1.0
+.endobj float_8066CC28
 
 
-.global float_8066CC2C
-float_8066CC2C:
+.obj float_8066CC2C, global
 	.float 0
+.endobj float_8066CC2C
 
 
-.global float_8066CC30
-float_8066CC30:
+.obj float_8066CC30, global
 	.float 255 #0x437F0000
+.endobj float_8066CC30
 
 
-.global float_8066CC34
-float_8066CC34:
+.obj float_8066CC34, global
 	.float 40.7436638 #0x4222F983
+.endobj float_8066CC34
 
 
-.global double_8066CC38
-double_8066CC38:
+.obj double_8066CC38, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066CC38
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

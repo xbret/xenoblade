@@ -4214,61 +4214,61 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_80527E08
-lbl_80527E08:
+.obj lbl_80527E08, global
 	.asciz "CEffectHeap"
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_80527E08
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066D850
-float_8066D850:
+.obj float_8066D850, global
 	.float 0
+.endobj float_8066D850
 
 
-.global float_8066D854
-float_8066D854:
+.obj float_8066D854, global
 	.float 1.0
+.endobj float_8066D854
 
 
-.global float_8066D858
-float_8066D858:
+.obj float_8066D858, global
 	.float 100.0
 	.4byte 0
+.endobj float_8066D858
 
 
-.global double_8066D860
-double_8066D860:
+.obj double_8066D860, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066D860
 
-.global double_8066D868
-double_8066D868:
+.obj double_8066D868, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066D868
 
-.global float_8066D870
-float_8066D870:
+.obj float_8066D870, global
 	.float 2 #0x40000000
+.endobj float_8066D870
 
 
-.global float_8066D874
-float_8066D874:
+.obj float_8066D874, global
 	.float 0.5
+.endobj float_8066D874
 
 
-.global double_8066D878
-double_8066D878:
+.obj double_8066D878, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066D878
 
-.global lbl_8066D880
-lbl_8066D880:
+.obj lbl_8066D880, global
 	.4byte 0x606060FF
 	.4byte 0
+.endobj lbl_8066D880
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

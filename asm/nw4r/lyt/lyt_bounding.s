@@ -69,9 +69,10 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global lbl_8056D460
-lbl_8056D460:
+
+.obj lbl_8056D460, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r3lyt8BoundingFv
@@ -102,8 +103,12 @@ lbl_8056D460:
 	.4byte GetMaterial__Q34nw4r3lyt4PaneCFUl
 	.4byte LoadMtx__Q34nw4r3lyt4PaneFRCQ34nw4r3lyt8DrawInfo
 	.4byte 0
+.endobj lbl_8056D460
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-typeInfo__Q34nw4r3lyt8Bounding:
+.balign 8
+
+.obj typeInfo__Q34nw4r3lyt8Bounding, local
 	.skip 0x8
+.endobj typeInfo__Q34nw4r3lyt8Bounding

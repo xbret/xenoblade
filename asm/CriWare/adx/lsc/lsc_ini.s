@@ -84,19 +84,21 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051BA28
-lbl_8051BA28:
+.balign 8
+
+.obj lbl_8051BA28, global
 	.asciz "\nLSC/WII Ver.2.30 Build:Nov 13 2008 10:52:58\n"
 	.balign 4
+.endobj lbl_8051BA28
 
 
-.global lsc_build
-lsc_build:
+.obj lsc_build, global
 	.4byte lbl_8051BA28
 	.4byte 0
+.endobj lsc_build
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lsc_init_cnt
-lsc_init_cnt:
+.obj lsc_init_cnt, global
 	.skip 0x8
+.endobj lsc_init_cnt

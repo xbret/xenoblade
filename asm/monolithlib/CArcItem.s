@@ -197,28 +197,28 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CArcItem_typestr
-CArcItem_typestr:
+.obj CArcItem_typestr, global
 	.asciz "CArcItem"
 	.balign 4
+.endobj CArcItem_typestr
 
 
-.global lbl_80528014
-lbl_80528014:
+.obj lbl_80528014, global
 	.asciz "adx"
 	.asciz "ahx"
 	.asciz ".pkb"
 	.balign 4
 	.4byte 0
+.endobj lbl_80528014
+
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CArcItem
-__vt__CArcItem:
+.obj __vt__CArcItem, global
 	.4byte __RTTI__CArcItem
 	.4byte 0
 	.4byte __dt__CArcItem
@@ -253,15 +253,16 @@ __vt__CArcItem:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CArcItem
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CArcItem
-__RTTI__CArcItem:
+.obj __RTTI__CArcItem, global
 	.4byte CArcItem_typestr
 	.4byte 0
+.endobj __RTTI__CArcItem
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

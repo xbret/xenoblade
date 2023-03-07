@@ -97,19 +97,22 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global TYPE_NAME__Q34nw4r3g3d6G3dObj
-TYPE_NAME__Q34nw4r3g3d6G3dObj:
+.balign 8
+
+.obj TYPE_NAME__Q34nw4r3g3d6G3dObj, global
 	.4byte 0x00000007
 	.asciz "G3dObj"
 	.balign 4
 	.4byte 0
+.endobj TYPE_NAME__Q34nw4r3g3d6G3dObj
 
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056CE90
-lbl_8056CE90:
+.balign 8
+
+.obj lbl_8056CE90, global
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d6G3dObjCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -118,3 +121,4 @@ lbl_8056CE90:
 	.4byte GetTypeObj__Q34nw4r3g3d6G3dObjCFv
 	.4byte GetTypeName__Q34nw4r3g3d6G3dObjCFv
 	.4byte 0
+.endobj lbl_8056CE90

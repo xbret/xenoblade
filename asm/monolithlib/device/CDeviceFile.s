@@ -1546,25 +1546,24 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CDeviceFile_typestr
-CDeviceFile_typestr:
+.obj CDeviceFile_typestr, global
 	.asciz "CDeviceFile"
+.endobj CDeviceFile_typestr
 
-.global reslist_CFileHandle_typestr
-reslist_CFileHandle_typestr:
+.obj reslist_CFileHandle_typestr, global
 	.asciz "reslist<CFileHandle *>"
 	.balign 4
+.endobj reslist_CFileHandle_typestr
 
-.global _reslist_base_CFileHandle_typestr
-_reslist_base_CFileHandle_typestr:
+.obj _reslist_base_CFileHandle_typestr, global
 	.asciz "_reslist_base<CFileHandle *>"
 	.balign 4
+.endobj _reslist_base_CFileHandle_typestr
 
 
-.global CDeviceFile_strpool
-CDeviceFile_strpool:
+.obj CDeviceFile_strpool, global
 	.asciz "USBKEY" #0x0
 	.asciz "CDeviceFileJobReadDvd" #0x7
 	.asciz "/" #0x1d
@@ -1575,13 +1574,13 @@ CDeviceFile_strpool:
 	.asciz "CDeviceFileDvd"
 	.asciz "CDeviceFileCri"
 	.balign 4
+.endobj CDeviceFile_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CDeviceFile
-__vt__CDeviceFile:
+.obj __vt__CDeviceFile, global
 	.4byte __RTTI__CDeviceFile
 	.4byte 0
 	.4byte __dt__CDeviceFile
@@ -1622,9 +1621,9 @@ __vt__CDeviceFile:
 	.4byte func_8044F424
 	.4byte func_8044F4E8
 	.4byte func_80039E30
+.endobj __vt__CDeviceFile
 
-.global CDeviceFile_hierarchy
-CDeviceFile_hierarchy:
+.obj CDeviceFile_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
@@ -1632,60 +1631,61 @@ CDeviceFile_hierarchy:
 	.4byte __RTTI__CDeviceBase
 	.4byte 0
 	.4byte 0
+.endobj CDeviceFile_hierarchy
 
 
-.global __vt__reslist_CFileHandle
-__vt__reslist_CFileHandle:
+.obj __vt__reslist_CFileHandle, global
 	.4byte __RTTI__reslist_CFileHandle
 	.4byte 0
 	.4byte __dt__reslist_CFileHandle
+.endobj __vt__reslist_CFileHandle
 
-.global reslist_CFileHandle_hierarchy
-reslist_CFileHandle_hierarchy:
+.obj reslist_CFileHandle_hierarchy, global
 	.4byte __RTTI___reslist_base_CFileHandle
 	.4byte 0
 	.4byte 0
+.endobj reslist_CFileHandle_hierarchy
 
 
-.global __vt___reslist_base_CFileHandle
-__vt___reslist_base_CFileHandle:
+.obj __vt___reslist_base_CFileHandle, global
 	.4byte __RTTI___reslist_base_CFileHandle
 	.4byte 0
 	.4byte __dt___reslist_base_CFileHandle
+.endobj __vt___reslist_base_CFileHandle
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80665FD0
-lbl_80665FD0:
+.obj lbl_80665FD0, global
 	.byte 0x01
 	.byte 0x00,0x00,0x00
 	.4byte 0
+.endobj lbl_80665FD0
 
-.global __RTTI__CDeviceFile
-__RTTI__CDeviceFile:
+.obj __RTTI__CDeviceFile, global
 	.4byte CDeviceFile_typestr
 	.4byte CDeviceFile_hierarchy
+.endobj __RTTI__CDeviceFile
 
-.global __RTTI__reslist_CFileHandle
-__RTTI__reslist_CFileHandle:
+.obj __RTTI__reslist_CFileHandle, global
 	.4byte reslist_CFileHandle_typestr
 	.4byte reslist_CFileHandle_hierarchy
+.endobj __RTTI__reslist_CFileHandle
 
-.global __RTTI___reslist_base_CFileHandle
-__RTTI___reslist_base_CFileHandle:
+.obj __RTTI___reslist_base_CFileHandle, global
 	.4byte _reslist_base_CFileHandle_typestr
 	.4byte 0
+.endobj __RTTI___reslist_base_CFileHandle
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80667F40
-lbl_80667F40:
+.obj lbl_80667F40, global
 	.skip 0x8
+.endobj lbl_80667F40
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

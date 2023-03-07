@@ -1271,34 +1271,33 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global ScheduleList_typestr
-ScheduleList_typestr:
+.obj ScheduleList_typestr, global
 	.asciz "ScheduleList"
 	.balign 4
+.endobj ScheduleList_typestr
 
-.global reslist_CSchedule_typestr
-reslist_CSchedule_typestr:
+.obj reslist_CSchedule_typestr, global
 	.asciz "reslist<CSchedule *>"
 	.balign 4
+.endobj reslist_CSchedule_typestr
 
-.global _reslist_base_CSchedule_typestr
-_reslist_base_CSchedule_typestr:
+.obj _reslist_base_CSchedule_typestr, global
 	.asciz "_reslist_base<CSchedule *>"
 	.balign 4
+.endobj _reslist_base_CSchedule_typestr
 
-.global IScheduleContainer_typestr
-IScheduleContainer_typestr:
+.obj IScheduleContainer_typestr, global
 	.asciz "IScheduleContainer"
 	.balign 4
+.endobj IScheduleContainer_typestr
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__ScheduleList
-__vt__ScheduleList:
+.obj __vt__ScheduleList, global
 	.4byte __RTTI__ScheduleList
 	.4byte 0
 	.4byte __dt__ScheduleList
@@ -1311,69 +1310,70 @@ __vt__ScheduleList:
 	.4byte func_804E4AD4
 	.4byte func_804E4B24
 	.4byte func_804E4B48
+.endobj __vt__ScheduleList
 
-.global ScheduleList_hierarchy
-ScheduleList_hierarchy:
+.obj ScheduleList_hierarchy, global
 	.4byte __RTTI__IScheduleContainer
 	.4byte 0
 	.4byte 0
+.endobj ScheduleList_hierarchy
 
 
-.global __vt__reslist_CSchedule
-__vt__reslist_CSchedule:
+.obj __vt__reslist_CSchedule, global
 	.4byte __RTTI__reslist_CSchedule
 	.4byte 0
 	.4byte __dt__reslist_CSchedule
+.endobj __vt__reslist_CSchedule
 
-.global reslist_CSchedule_hierarchy
-reslist_CSchedule_hierarchy:
+.obj reslist_CSchedule_hierarchy, global
 	.4byte __RTTI___reslist_base_CSchedule
 	.4byte 0
 	.4byte 0
+.endobj reslist_CSchedule_hierarchy
 
 
-.global __vt___reslist_base_CSchedule
-__vt___reslist_base_CSchedule:
+.obj __vt___reslist_base_CSchedule, global
 	.4byte __RTTI___reslist_base_CSchedule
 	.4byte 0
 	.4byte __dt___reslist_base_CSchedule
+.endobj __vt___reslist_base_CSchedule
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-
-.global __RTTI__ScheduleList
-__RTTI__ScheduleList:
+.obj __RTTI__ScheduleList, global
 	.4byte ScheduleList_typestr
 	.4byte ScheduleList_hierarchy
+.endobj __RTTI__ScheduleList
 
-.global __RTTI__reslist_CSchedule
-__RTTI__reslist_CSchedule:
+.obj __RTTI__reslist_CSchedule, global
 	.4byte reslist_CSchedule_typestr
 	.4byte reslist_CSchedule_hierarchy
+.endobj __RTTI__reslist_CSchedule
 
-.global __RTTI___reslist_base_CSchedule
-__RTTI___reslist_base_CSchedule:
+.obj __RTTI___reslist_base_CSchedule, global
 	.4byte _reslist_base_CSchedule_typestr
 	.4byte 0
+.endobj __RTTI___reslist_base_CSchedule
 
-.global __RTTI__IScheduleContainer
-__RTTI__IScheduleContainer:
+.obj __RTTI__IScheduleContainer, global
 	.4byte IScheduleContainer_typestr
 	.4byte 0
+.endobj __RTTI__IScheduleContainer
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80668328, global
+	.skip 0x4
+.endobj lbl_80668328
 
-.global lbl_80668328
-lbl_80668328:
+.obj lbl_8066832C, global
 	.skip 0x4
-.global lbl_8066832C
-lbl_8066832C:
-	.skip 0x4
+.endobj lbl_8066832C
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

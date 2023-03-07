@@ -103,11 +103,13 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056E3B0
-lbl_8056E3B0:
+.balign 8
+
+.obj lbl_8056E3B0, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFv
 	.4byte AllocTrack__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPQ44nw4r3snd6detail9SeqPlayer
 	.4byte FreeTrack__Q44nw4r3snd6detail20MmlSeqTrackAllocatorFPQ44nw4r3snd6detail8SeqTrack
 	.4byte GetAllocatableTrackCount__Q44nw4r3snd6detail20MmlSeqTrackAllocatorCFv
+.endobj lbl_8056E3B0

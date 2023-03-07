@@ -2898,149 +2898,149 @@
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global float_80666138
-float_80666138:
+.obj float_80666138, global
 	.float 0.005 #0x3BA3D70A
+.endobj float_80666138
 
 
-.global float_8066613C
-float_8066613C:
+.obj float_8066613C, global
 	.float 0.005 #0x3BA3D70A
+.endobj float_8066613C
 
 
-.global float_80666140
-float_80666140:
+.obj float_80666140, global
 	.float 0.005 #0x3BA3D70A
 	.4byte 0
+.endobj float_80666140
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066CE18
-float_8066CE18:
+.obj float_8066CE18, global
 	.float 0
+.endobj float_8066CE18
 
 
-.global float_8066CE1C
-float_8066CE1C:
+.obj float_8066CE1C, global
 	.float 1.0
+.endobj float_8066CE1C
 
 
-.global float_8066CE20
-float_8066CE20:
+.obj float_8066CE20, global
 	.float 0.01 #0x3C23D70A
+.endobj float_8066CE20
 
 
-.global float_8066CE24
-float_8066CE24:
+.obj float_8066CE24, global
 	.float 0.5
+.endobj float_8066CE24
 
 
-.global float_8066CE28
-float_8066CE28:
+.obj float_8066CE28, global
 	.float 0.3 #0x3E99999A
+.endobj float_8066CE28
 
 
-.global float_8066CE2C
-float_8066CE2C:
+.obj float_8066CE2C, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_8066CE2C
 
 
-.global float_8066CE30
-float_8066CE30:
+.obj float_8066CE30, global
 	.float 0.6 #0x3F19999A
+.endobj float_8066CE30
 
 
-.global float_8066CE34
-float_8066CE34:
+.obj float_8066CE34, global
 	.float 10.0
+.endobj float_8066CE34
 
 
-.global double_8066CE38
-double_8066CE38:
+.obj double_8066CE38, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066CE38
 
-.global float_8066CE40
-float_8066CE40:
+.obj float_8066CE40, global
 	.float 1.5
+.endobj float_8066CE40
 
 
-.global float_8066CE44
-float_8066CE44:
+.obj float_8066CE44, global
 	.float 1000 #0x447A0000
+.endobj float_8066CE44
 
 
-.global float_8066CE48
-float_8066CE48:
+.obj float_8066CE48, global
 	.float 20 #0x41A00000
+.endobj float_8066CE48
 
 
-.global float_8066CE4C
-float_8066CE4C:
+.obj float_8066CE4C, global
 	.float 0.4 #0x3ECCCCCD
+.endobj float_8066CE4C
 
 
-.global float_8066CE50
-float_8066CE50:
+.obj float_8066CE50, global
 	.float 0.11 #0x3DE147AE
+.endobj float_8066CE50
 
 
-.global float_8066CE54
-float_8066CE54:
+.obj float_8066CE54, global
 	.float 0.002 #0x3B03126F
+.endobj float_8066CE54
 
 
-.global float_8066CE58
-float_8066CE58:
+.obj float_8066CE58, global
 	.float 0.033333335 #0x3D088889
+.endobj float_8066CE58
 
 
-.global float_8066CE5C
-float_8066CE5C:
+.obj float_8066CE5C, global
 	.float 0.0001 #0x38D1B717
+.endobj float_8066CE5C
 
 
-.global float_8066CE60
-float_8066CE60:
+.obj float_8066CE60, global
 	.float 0.02 #0x3CA3D70A
+.endobj float_8066CE60
 
 
-.global float_8066CE64
-float_8066CE64:
+.obj float_8066CE64, global
 	.float 0.03 #0x3CF5C28F
+.endobj float_8066CE64
 
 
-.global float_8066CE68
-float_8066CE68:
+.obj float_8066CE68, global
 	.float 10000 #0x461C4000
+.endobj float_8066CE68
 
 
-.global float_8066CE6C
-float_8066CE6C:
+.obj float_8066CE6C, global
 	.float 0.13 #0x3E051EB8
+.endobj float_8066CE6C
 
 
-.global float_8066CE70
-float_8066CE70:
+.obj float_8066CE70, global
 	.float -0.3 #0xBE99999A
+.endobj float_8066CE70
 
 
-.global float_8066CE74
-float_8066CE74:
+.obj float_8066CE74, global
 	.float -0.9999 #0xBF7FF972
+.endobj float_8066CE74
 
 
-.global float_8066CE78
-float_8066CE78:
+.obj float_8066CE78, global
 	.float 2 #0x40000000
+.endobj float_8066CE78
 
 
-.global float_8066CE7C
-float_8066CE7C:
+.obj float_8066CE7C, global
 	.float -1.0
+.endobj float_8066CE7C
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -83,15 +83,21 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_805495E0
-lbl_805495E0:
+.balign 8
+
+.obj lbl_805495E0, global
 	.asciz "DBExceptionDestination\n"
+.endobj lbl_805495E0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-__DBInterface:
-	.skip 0x4
 
-DBVerbose:
+.obj __DBInterface, local
 	.skip 0x4
+.endobj __DBInterface
+
+.obj DBVerbose, local
+	.skip 0x4
+.endobj DBVerbose

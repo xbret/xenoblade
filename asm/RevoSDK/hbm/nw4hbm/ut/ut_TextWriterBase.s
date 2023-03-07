@@ -5808,59 +5808,68 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_80518B40
-lbl_80518B40:
+.obj lbl_80518B40, global
 	.4byte 0
 	.4byte 0
+.endobj lbl_80518B40
 
 
-.global double_80518B48
-double_80518B48:
+.obj double_80518B48, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_80518B48
 
-.global lbl_80518B50
-lbl_80518B50:
+.obj lbl_80518B50, global
 	.float 0.5
 	.4byte 0
+.endobj lbl_80518B50
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<c>"
-"mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<c>":
-	.4byte 0x00000100
+.balign 8
 
-
-.global lbl_8054EEFC
-lbl_8054EEFC:
+.obj "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<c>", global
 	.4byte 0x00000100
+.endobj "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<c>"
+
+.obj lbl_8054EEFC, global
+	.4byte 0x00000100
+.endobj lbl_8054EEFC
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
-lbl_805CD7F8:
+.obj lbl_805CD7F8, local
 	.skip 0xC
+.endobj lbl_805CD7F8
 
-lbl_805CD804:
+.obj lbl_805CD804, local
 	.skip 0xC
+.endobj lbl_805CD804
 
-"mFormatBuffer__Q36nw4hbm2ut17TextWriterBase<c>":
+.obj "mFormatBuffer__Q36nw4hbm2ut17TextWriterBase<c>", local
 	.skip 0x4
+.endobj "mFormatBuffer__Q36nw4hbm2ut17TextWriterBase<c>"
 
-"mDefaultTagProcessor__Q36nw4hbm2ut17TextWriterBase<c>":
+.obj "mDefaultTagProcessor__Q36nw4hbm2ut17TextWriterBase<c>", local
 	.skip 0x4
+.endobj "mDefaultTagProcessor__Q36nw4hbm2ut17TextWriterBase<c>"
 
-"mFormatBuffer__Q36nw4hbm2ut17TextWriterBase<w>":
+.obj "mFormatBuffer__Q36nw4hbm2ut17TextWriterBase<w>", local
 	.skip 0x4
+.endobj "mFormatBuffer__Q36nw4hbm2ut17TextWriterBase<w>"
 
-"mDefaultTagProcessor__Q36nw4hbm2ut17TextWriterBase<w>":
+.obj "mDefaultTagProcessor__Q36nw4hbm2ut17TextWriterBase<w>", local
 	.skip 0x4
+.endobj "mDefaultTagProcessor__Q36nw4hbm2ut17TextWriterBase<w>"
 
 #@GUARD@mDefaultTagProcessor__Q36nw4hbm2ut17TextWriterBase<c>
-lbl_805CD820:
+.obj lbl_805CD820, local
 	.skip 0x1
+.endobj lbl_805CD820
 
 #@GUARD@mDefaultTagProcessor__Q36nw4hbm2ut17TextWriterBase<w>
-lbl_805CD821:
+.obj lbl_805CD821, local
 	.skip 0x7
+.endobj lbl_805CD821

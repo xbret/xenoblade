@@ -1351,10 +1351,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_80525E70
-lbl_80525E70:
+.obj lbl_80525E70, global
 	.4byte 0x00000004
 	.4byte 0x00000002
 	.4byte 0x00000002
@@ -1367,14 +1366,14 @@ lbl_80525E70:
 	.4byte 0x00000005
 	.4byte 0x00000002
 	.4byte 0
+.endobj lbl_80525E70
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8056ED48
-lbl_8056ED48:
+.obj lbl_8056ED48, global
 	.4byte lbl_8066CA88
 	.4byte lbl_8066CA90
 	.4byte lbl_8066CA94
@@ -1387,9 +1386,9 @@ lbl_8056ED48:
 	.4byte lbl_8066CAB0
 	.4byte lbl_8066CAB8
 	.4byte 0
+.endobj lbl_8056ED48
 
-.global jumptable_8056ED78
-jumptable_8056ED78:
+.obj jumptable_8056ED78, global
 	.4byte .L_8043B534
 	.4byte .L_8043AD38
 	.4byte .L_8043ADB4
@@ -1401,83 +1400,85 @@ jumptable_8056ED78:
 	.4byte .L_8043B1FC
 	.4byte .L_8043B368
 	.4byte .L_8043B494
+.endobj jumptable_8056ED78
 
 
-.global __vt__CToken
-__vt__CToken:
+.obj __vt__CToken, global
 	.4byte __RTTI__CToken
 	.4byte 0
 	.4byte __dt__CToken
+.endobj __vt__CToken
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CToken
-__RTTI__CToken:
+.obj __RTTI__CToken, global
 	.4byte CToken_typestr
 	.4byte 0
+.endobj __RTTI__CToken
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_8066CA88
-lbl_8066CA88:
+.obj lbl_8066CA88, global
 	.asciz "????"
 	.balign 4
+.endobj lbl_8066CA88
 
-.global lbl_8066CA90
-lbl_8066CA90:
+.obj lbl_8066CA90, global
 	.4byte 0x25660000
+.endobj lbl_8066CA90
 
-.global lbl_8066CA94
-lbl_8066CA94:
+.obj lbl_8066CA94, global
 	.4byte 0x25640000
+.endobj lbl_8066CA94
 
-.global lbl_8066CA98
-lbl_8066CA98:
+.obj lbl_8066CA98, global
 	.4byte 0x25780000
+.endobj lbl_8066CA98
 
-.global lbl_8066CA9C
-lbl_8066CA9C:
+.obj lbl_8066CA9C, global
 	.4byte 0x25763300
+.endobj lbl_8066CA9C
 
-.global lbl_8066CAA0
-lbl_8066CAA0:
+.obj lbl_8066CAA0, global
 	.4byte 0x25766100
+.endobj lbl_8066CAA0
 
-.global lbl_8066CAA4
-lbl_8066CAA4:
+.obj lbl_8066CAA4, global
 	.4byte 0x25763400
+.endobj lbl_8066CAA4
 
-.global lbl_8066CAA8
-lbl_8066CAA8:
+.obj lbl_8066CAA8, global
 	.4byte 0x25693300
+.endobj lbl_8066CAA8
 
-.global lbl_8066CAAC
-lbl_8066CAAC:
+.obj lbl_8066CAAC, global
 	.4byte 0x25693400
+.endobj lbl_8066CAAC
 
-.global lbl_8066CAB0
-lbl_8066CAB0:
+.obj lbl_8066CAB0, global
 	.asciz "%rect"
 	.balign 4
+.endobj lbl_8066CAB0
 
-.global lbl_8066CAB8
-lbl_8066CAB8:
+.obj lbl_8066CAB8, global
 	.4byte 0x25730000
 	.4byte 0
+.endobj lbl_8066CAB8
 
 
-.global double_8066CAC0
-double_8066CAC0:
+.obj double_8066CAC0, global
 	.8byte 0x4330000080000000 #signed int to float constant
-.global CToken_typestr
-CToken_typestr:
+.endobj double_8066CAC0
+
+.obj CToken_typestr, global
 	.asciz "CToken"
 	.balign 4
+.endobj CToken_typestr
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -410,24 +410,23 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CSysWinSelect_typestr
-CSysWinSelect_typestr:
+.obj CSysWinSelect_typestr, global
 	.asciz "CSysWinSelect"
 	.balign 4
+.endobj CSysWinSelect_typestr
 
-.global CSystemWindow_typestr
-CSystemWindow_typestr:
+.obj CSystemWindow_typestr, global
 	.asciz "CSystemWindow"
 	.balign 4
+.endobj CSystemWindow_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CSysWinSelect
-__vt__CSysWinSelect:
+.obj __vt__CSysWinSelect, global
 	.4byte __RTTI__CSysWinSelect
 	.4byte 0
 	.4byte __dt__CSysWinSelect
@@ -476,9 +475,9 @@ __vt__CSysWinSelect:
 	.4byte func_801252C8
 	.4byte func_801252C0
 	.4byte func_80124FD8
+.endobj __vt__CSysWinSelect
 
-.global CSysWinSelect_hierarchy
-CSysWinSelect_hierarchy:
+.obj CSysWinSelect_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000070
 	.4byte __RTTI__IWorkEvent
@@ -495,10 +494,10 @@ CSysWinSelect_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CSysWinSelect_hierarchy
 
 
-.global __vt__CSystemWindow
-__vt__CSystemWindow:
+.obj __vt__CSystemWindow, global
 	.4byte __RTTI__CSystemWindow
 	.4byte 0
 	.4byte __dt__CSystemWindow
@@ -547,9 +546,9 @@ __vt__CSystemWindow:
 	.4byte func_801252B0
 	.4byte func_801252A8
 	.4byte func_80124A60
+.endobj __vt__CSystemWindow
 
-.global CSystemWindow_hierarchy
-CSystemWindow_hierarchy:
+.obj CSystemWindow_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000070
 	.4byte __RTTI__IWorkEvent
@@ -566,31 +565,33 @@ CSystemWindow_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CSystemWindow_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CSysWinSelect
-__RTTI__CSysWinSelect:
+.obj __RTTI__CSysWinSelect, global
 	.4byte CSysWinSelect_typestr
 	.4byte CSysWinSelect_hierarchy
+.endobj __RTTI__CSysWinSelect
 
-.global __RTTI__CSystemWindow
-__RTTI__CSystemWindow:
+.obj __RTTI__CSystemWindow, global
 	.4byte CSystemWindow_typestr
 	.4byte CSystemWindow_hierarchy
+.endobj __RTTI__CSystemWindow
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_806668D0, global
+	.skip 0x4
+.endobj lbl_806668D0
 
-.global lbl_806668D0
-lbl_806668D0:
+.obj lbl_806668D4, global
 	.skip 0x4
-.global lbl_806668D4
-lbl_806668D4:
-	.skip 0x4
+.endobj lbl_806668D4
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

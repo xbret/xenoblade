@@ -678,8 +678,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80548678
-lbl_80548678:
+.balign 8
+
+.obj lbl_80548678, global
 	.asciz "rfc_find_lcid_mcb LCID:0x%x"
 	.asciz "rfc_find_lcid_mcb LCID reused LCID:0x%x current:0x%x"
 	.balign 4
@@ -696,3 +697,4 @@ lbl_80548678:
 	.asciz "RFCOMM_CongestionStatusInd LCID:0x%x"
 	.balign 4
 	.4byte 0
+.endobj lbl_80548678

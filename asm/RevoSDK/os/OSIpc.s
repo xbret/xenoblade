@@ -26,11 +26,17 @@
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-IpcBufferLo:
+.balign 8
+
+.obj IpcBufferLo, local
 	.4byte 0xFFFFFFFF
 	.4byte 0
+.endobj IpcBufferLo
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-IpcBufferHi:
+.balign 8
+
+.obj IpcBufferHi, local
 	.skip 0x8
+.endobj IpcBufferHi

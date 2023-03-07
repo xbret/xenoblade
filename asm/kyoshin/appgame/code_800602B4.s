@@ -1278,13 +1278,10 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-
-
-
+.balign 8
 
 #seems like it should be in a camera related file
-.global lbl_80529D90
-lbl_80529D90:
+.obj lbl_80529D90, global
 	.4byte lbl_80668A08
 	.4byte select
 	.4byte lbl_80668A10
@@ -1327,134 +1324,136 @@ lbl_80529D90:
 	.4byte stopShake
 	.4byte 0
 	.4byte 0
+.endobj lbl_80529D90
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_804F6980
-lbl_804F6980:
+.obj lbl_804F6980, global
 	.asciz "setLookat"
 	.balign 4
+.endobj lbl_804F6980
 
-.global lbl_804F698C
-lbl_804F698C:
+.obj lbl_804F698C, global
 	.asciz "setTarget"
 	.balign 4
+.endobj lbl_804F698C
 
-.global lbl_804F6998
-lbl_804F6998:
+.obj lbl_804F6998, global
 	.asciz "setPosOfs"
 	.balign 4
+.endobj lbl_804F6998
 
-.global lbl_804F69A4
-lbl_804F69A4:
+.obj lbl_804F69A4, global
 	.asciz "setLookatOfs"
 	.balign 4
+.endobj lbl_804F69A4
 
-.global lbl_804F69B4
-lbl_804F69B4:
+.obj lbl_804F69B4, global
 	.asciz "keyBegin"
 	.balign 4
+.endobj lbl_804F69B4
 
-.global lbl_804F69C0
-lbl_804F69C0:
+.obj lbl_804F69C0, global
 	.asciz "isKeyMove"
 	.balign 4
+.endobj lbl_804F69C0
 
-.global lbl_804F69CC
-lbl_804F69CC:
+.obj lbl_804F69CC, global
 	.asciz "waitKeyMove"
+.endobj lbl_804F69CC
 
-.global lbl_804F69D8
-lbl_804F69D8:
+.obj lbl_804F69D8, global
 	.asciz "stopShake"
 	.balign 4
+.endobj lbl_804F69D8
 
 
-.global lbl_804F69E4
-lbl_804F69E4:
+.obj lbl_804F69E4, global
 	.asciz "cam"
+.endobj lbl_804F69E4
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_806689F0
-float_806689F0:
+.obj float_806689F0, global
 	.float 4096 #0x45800000
 	.4byte 0
+.endobj float_806689F0
 
 
-.global double_806689F8
-double_806689F8:
+.obj double_806689F8, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_806689F8
 
-.global float_80668A00
-float_80668A00:
+.obj float_80668A00, global
 	.float 0
+.endobj float_80668A00
 
 
-.global float_80668A04
-float_80668A04:
+.obj float_80668A04, global
 	.float 1.0
     
-.global lbl_80668A08
-lbl_80668A08:
+.endobj float_80668A04
+
+.obj lbl_80668A08, global
 	.asciz "select"
 	.balign 4
+.endobj lbl_80668A08
 
-.global lbl_80668A10
-lbl_80668A10:
+.obj lbl_80668A10, global
 	.asciz "restore"
+.endobj lbl_80668A10
 
-.global lbl_80668A18
-lbl_80668A18:
+.obj lbl_80668A18, global
 	.asciz "setPos"
 	.balign 4
+.endobj lbl_80668A18
 
-.global lbl_80668A20
-lbl_80668A20:
+.obj lbl_80668A20, global
 	.asciz "setDir"
 	.balign 4
+.endobj lbl_80668A20
 
-.global lbl_80668A28
-lbl_80668A28:
+.obj lbl_80668A28, global
 	.asciz "setRotX"
+.endobj lbl_80668A28
 
-.global lbl_80668A30
-lbl_80668A30:
+.obj lbl_80668A30, global
 	.asciz "setRotY"
+.endobj lbl_80668A30
 
-.global lbl_80668A38
-lbl_80668A38:
+.obj lbl_80668A38, global
 	.asciz "setFov"
 	.balign 4
+.endobj lbl_80668A38
 
-.global lbl_80668A40
-lbl_80668A40:
+.obj lbl_80668A40, global
 	.asciz "getPos"
 	.balign 4
+.endobj lbl_80668A40
 
-.global lbl_80668A48
-lbl_80668A48:
+.obj lbl_80668A48, global
 	.asciz "getRot"
 	.balign 4
+.endobj lbl_80668A48
 
-.global lbl_80668A50
-lbl_80668A50:
+.obj lbl_80668A50, global
 	.asciz "keyEnd"
 	.balign 4
+.endobj lbl_80668A50
 
-.global lbl_80668A58
-lbl_80668A58:
+.obj lbl_80668A58, global
 	.asciz "keyAdd"
 	.balign 4
+.endobj lbl_80668A58
 
-.global lbl_80668A60
-lbl_80668A60:
+.obj lbl_80668A60, global
 	.asciz "shake"
 	.balign 4
+.endobj lbl_80668A60
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -158,28 +158,30 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-.global float_8066C2B0
-float_8066C2B0:
+
+.obj float_8066C2B0, global
 	.float 1.0
+.endobj float_8066C2B0
 
 
-.global float_8066C2B4
-float_8066C2B4:
+.obj float_8066C2B4, global
 	.float 2 #0x40000000
+.endobj float_8066C2B4
 
 
-.global float_8066C2B8
-float_8066C2B8:
+.obj float_8066C2B8, global
 	.float 3 #0x40400000
+.endobj float_8066C2B8
 
 
-.global float_8066C2BC
-float_8066C2BC:
+.obj float_8066C2BC, global
 	.float 0
+.endobj float_8066C2BC
 
 
-.global float_8066C2C0
-float_8066C2C0:
+.obj float_8066C2C0, global
 	.float 32768 #0x47000000
 	.4byte 0
+.endobj float_8066C2C0

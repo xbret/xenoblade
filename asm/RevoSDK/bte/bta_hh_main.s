@@ -419,7 +419,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-bta_hh_action:
+.balign 8
+
+.obj bta_hh_action, local
 	.4byte bta_hh_api_disc_act
 	.4byte bta_hh_open_act
 	.4byte bta_hh_close_act
@@ -432,42 +434,48 @@ bta_hh_action:
 	.4byte bta_hh_get_dscp_act
 	.4byte bta_hh_maint_dev_act
 	.4byte bta_hh_open_cmpl_act
+.endobj bta_hh_action
 
-bta_hh_st_idle:
+.obj bta_hh_st_idle, local
 	.4byte 0x06020C01
 	.4byte 0x01020201
 	.4byte 0x0C010C01
 	.4byte 0x0C010C01
 	.4byte 0x0C010C01
 	.4byte 0x0A010C01
+.endobj bta_hh_st_idle
 
-bta_hh_st_w4_conn:
+.obj bta_hh_st_w4_conn, local
 	.4byte 0x0C020C01
 	.4byte 0x01020201
 	.4byte 0x0C020C02
 	.4byte 0x0C020702
 	.4byte 0x0C020C02
 	.4byte 0x0A010B03
+.endobj bta_hh_st_w4_conn
 
-bta_hh_st_connected:
+.obj bta_hh_st_connected, local
 	.4byte 0x0C030003
 	.4byte 0x01030201
 	.4byte 0x03030403
 	.4byte 0x05030C03
 	.4byte 0x08030903
 	.4byte 0x0A030C03
+.endobj bta_hh_st_connected
 
-bta_hh_st_tbl:
+.obj bta_hh_st_tbl, local
 	.4byte bta_hh_st_idle
 	.4byte bta_hh_st_w4_conn
 	.4byte bta_hh_st_connected
 	.4byte 0
+.endobj bta_hh_st_tbl
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_805446C0
-lbl_805446C0:
+.balign 8
+
+.obj lbl_805446C0, global
 	.asciz "wrong device handle: [%d]"
 	.balign 4
 	.asciz "BTA_HH_NULL_ST"
@@ -484,10 +492,10 @@ lbl_805446C0:
 	.balign 4
 	.asciz "HH State Change: [%s] -> [%s] after Event [%s]"
 	.balign 4
+.endobj lbl_805446C0
 
 
-.global lbl_8054479C
-lbl_8054479C:
+.obj lbl_8054479C, global
 	.asciz "bta_hh_hdl_event:: handle = %d dev_cb[%d] "
 	.balign 4
 	.asciz "BTA_HH_API_DISABLE_EVT"
@@ -518,10 +526,10 @@ lbl_8054479C:
 	.asciz "BTA_HH_API_GET_ACL_Q_EVT"
 	.balign 4
 	.asciz "unknown HID Host event code"
+.endobj lbl_8054479C
 
 
-.global jumptable_80544960
-jumptable_80544960:
+.obj jumptable_80544960, global
 	.4byte .L_802E40DC
 	.4byte .L_802E40E4
 	.4byte .L_802E40EC
@@ -538,10 +546,11 @@ jumptable_80544960:
 	.4byte .L_802E40CC
 	.4byte .L_802E4144
 	.4byte .L_802E4124
+.endobj jumptable_80544960
 
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global bta_hh_cb
-bta_hh_cb:
+.obj bta_hh_cb, global
 	.skip 0x230
+.endobj bta_hh_cb

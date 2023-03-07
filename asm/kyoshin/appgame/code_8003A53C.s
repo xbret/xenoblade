@@ -6687,190 +6687,190 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_804F5D50
-lbl_804F5D50:
+.obj lbl_804F5D50, global
 	.asciz "getArrayVal"
+.endobj lbl_804F5D50
 
-.global lbl_804F5D5C
-lbl_804F5D5C:
+.obj lbl_804F5D5C, global
 	.asciz "getArrayCount"
 	.balign 4
+.endobj lbl_804F5D5C
 
-.global lbl_804F5D6C
-lbl_804F5D6C:
+.obj lbl_804F5D6C, global
 	.asciz "getIdCount"
 	.balign 4
+.endobj lbl_804F5D6C
 
-.global lbl_804F5D78
-lbl_804F5D78:
+.obj lbl_804F5D78, global
 	.asciz "getIdTop"
 	.balign 4
 	.4byte 0
 	
-.global lbl_804F5D88
-lbl_804F5D88:
+.endobj lbl_804F5D78
+
+.obj lbl_804F5D88, global
 	.4byte 0
 	.4byte 0x00000002
 	.4byte 0x00000003
 	.4byte 0x00000001
 	.4byte 0x00000004
 	.4byte 0x00000005
+.endobj lbl_804F5D88
 
-.global lbl_804F5DA0
-lbl_804F5DA0:
+.obj lbl_804F5DA0, global
 	.asciz "setGround"
 	.balign 4
+.endobj lbl_804F5DA0
 
-.global lbl_804F5DAC
-lbl_804F5DAC:
+.obj lbl_804F5DAC, global
 	.asciz "forceDispOff"
 	.balign 4
+.endobj lbl_804F5DAC
 
-.global lbl_804F5DBC
-lbl_804F5DBC:
+.obj lbl_804F5DBC, global
 	.asciz "dispWeapon"
 	.balign 4
+.endobj lbl_804F5DBC
 
-.global lbl_804F5DC8
-lbl_804F5DC8:
+.obj lbl_804F5DC8, global
 	.asciz "moveMode"
 	.balign 4
+.endobj lbl_804F5DC8
 
-.global lbl_804F5DD4
-lbl_804F5DD4:
+.obj lbl_804F5DD4, global
 	.asciz "getMoveMode"
+.endobj lbl_804F5DD4
 
-.global lbl_804F5DE0
-lbl_804F5DE0:
+.obj lbl_804F5DE0, global
 	.asciz "isSetDir"
 	.balign 4
+.endobj lbl_804F5DE0
 
-.global lbl_804F5DEC
-lbl_804F5DEC:
+.obj lbl_804F5DEC, global
 	.asciz "setModeChange"
 	.balign 4
+.endobj lbl_804F5DEC
 
-.global lbl_804F5DFC
-lbl_804F5DFC:
+.obj lbl_804F5DFC, global
 	.asciz "walkIdleTime"
 	.balign 4
+.endobj lbl_804F5DFC
 
-.global lbl_804F5E0C
-lbl_804F5E0C:
+.obj lbl_804F5E0C, global
 	.asciz "initWalk"
 	.balign 4
+.endobj lbl_804F5E0C
 
-.global lbl_804F5E18
-lbl_804F5E18:
+.obj lbl_804F5E18, global
 	.asciz "movePoint"
 	.balign 4
+.endobj lbl_804F5E18
 
-.global lbl_804F5E24
-lbl_804F5E24:
+.obj lbl_804F5E24, global
 	.asciz "isMoveEnd"
 	.balign 4
+.endobj lbl_804F5E24
 
-.global lbl_804F5E30
-lbl_804F5E30:
+.obj lbl_804F5E30, global
 	.asciz "waitMoveEnd"
+.endobj lbl_804F5E30
 
-.global lbl_804F5E3C
-lbl_804F5E3C:
+.obj lbl_804F5E3C, global
 	.asciz "loopMotion"
 	.balign 4
+.endobj lbl_804F5E3C
 
-.global lbl_804F5E48
-lbl_804F5E48:
+.obj lbl_804F5E48, global
 	.asciz "corpMotion"
 	.balign 4
+.endobj lbl_804F5E48
 
-.global lbl_804F5E54
-lbl_804F5E54:
+.obj lbl_804F5E54, global
 	.asciz "holdTalk"
 	.balign 4
+.endobj lbl_804F5E54
 
-.global lbl_804F5E60
-lbl_804F5E60:
+.obj lbl_804F5E60, global
 	.asciz "winAutoTalk"
 	.4byte 0
+.endobj lbl_804F5E60
 
-.global lbl_804F5E70
-lbl_804F5E70:
+.obj lbl_804F5E70, global
 	.asciz "onEventAutoTalk"
+.endobj lbl_804F5E70
 
-.global lbl_804F5E80
-lbl_804F5E80:
+.obj lbl_804F5E80, global
 	.asciz "winTalkSelect"
 	.balign 4
+.endobj lbl_804F5E80
 
-.global lbl_804F5E90
-lbl_804F5E90:
+.obj lbl_804F5E90, global
 	.asciz "winTalkToSimpleEve"
 	.balign 4
+.endobj lbl_804F5E90
 
-.global lbl_804F5EA4
-lbl_804F5EA4:
+.obj lbl_804F5EA4, global
 	.asciz "setActSpd"
 	.balign 4
+.endobj lbl_804F5EA4
 
-.global lbl_804F5EB0
-lbl_804F5EB0:
+.obj lbl_804F5EB0, global
 	.asciz "setPcNpcWeapon"
 	.balign 4
+.endobj lbl_804F5EB0
 
-.global lbl_804F5EC0
-lbl_804F5EC0:
+.obj lbl_804F5EC0, global
 	.asciz "setPcNpcWeapon2"
+.endobj lbl_804F5EC0
 
-.global lbl_804F5ED0
-lbl_804F5ED0:
+.obj lbl_804F5ED0, global
 	.asciz "getTargetOC"
+.endobj lbl_804F5ED0
 
-.global lbl_804F5EDC
-lbl_804F5EDC:
+.obj lbl_804F5EDC, global
 	.asciz "getTargetID"
+.endobj lbl_804F5EDC
 
-.global lbl_804F5EE8
-lbl_804F5EE8:
+.obj lbl_804F5EE8, global
 	.asciz "setBtlState"
+.endobj lbl_804F5EE8
 
-.global lbl_804F5EF4
-lbl_804F5EF4:
+.obj lbl_804F5EF4, global
 	.asciz "clearBtlState"
 	.balign 4
+.endobj lbl_804F5EF4
 
-.global lbl_804F5F04
-lbl_804F5F04:
+.obj lbl_804F5F04, global
 	.asciz "setGravity"
 	.balign 4
+.endobj lbl_804F5F04
 
-.global lbl_804F5F10
-lbl_804F5F10:
+.obj lbl_804F5F10, global
 	.asciz "setDyRstOff"
+.endobj lbl_804F5F10
 
-.global lbl_804F5F1C
-lbl_804F5F1C:
+.obj lbl_804F5F1C, global
 	.asciz "dispShadow"
 	.balign 4
+.endobj lbl_804F5F1C
 
-.global lbl_804F5F28
-lbl_804F5F28:
+.obj lbl_804F5F28, global
 	.asciz "setWeaponCas"
 	.balign 4
+.endobj lbl_804F5F28
 
-.global lbl_804F5F38
-lbl_804F5F38:
+.obj lbl_804F5F38, global
 	.asciz "insideNormal"
 	.balign 4
+.endobj lbl_804F5F38
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_80528530
-lbl_80528530:
+.obj lbl_80528530, global
 	.4byte lbl_80668468
 	.4byte func_8003A588
 	.4byte func_8003A5F8
@@ -6883,9 +6883,9 @@ lbl_80528530:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_80528530
 
-.global lbl_80528560
-lbl_80528560:
+.obj lbl_80528560, global
 	.4byte lbl_80668470
 	.4byte func_8003A714
 	.4byte 0
@@ -6904,17 +6904,17 @@ lbl_80528560:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_80528560
 
 
-.global lbl_805285A8
-lbl_805285A8:
+.obj lbl_805285A8, global
 	.4byte lbl_80668498
 	.4byte func_8003A53C
 	.4byte lbl_80528530
 	.4byte lbl_80528560
+.endobj lbl_805285A8
 
-.global lbl_805285B8
-lbl_805285B8:
+.obj lbl_805285B8, global
 	.4byte lbl_806684A0
 	.4byte func_8003A800
 	.4byte func_8003A8A8
@@ -6931,9 +6931,9 @@ lbl_805285B8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_805285B8
 
-.global lbl_805285F8
-lbl_805285F8:
+.obj lbl_805285F8, global
 	.4byte lbl_80668470
 	.4byte func_8003A950
 	.4byte 0
@@ -6952,17 +6952,17 @@ lbl_805285F8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_805285F8
 
 
-.global lbl_80528640
-lbl_80528640:
+.obj lbl_80528640, global
 	.4byte lbl_806684B0
 	.4byte func_8003A7B4
 	.4byte lbl_805285B8
 	.4byte lbl_805285F8
+.endobj lbl_80528640
 
-.global lbl_80528650
-lbl_80528650:
+.obj lbl_80528650, global
 	.4byte lbl_806684B8
 	.4byte func_8003B96C
 	.4byte 0
@@ -6981,22 +6981,23 @@ lbl_80528650:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_80528650
 
 
-.global lbl_80528698
-lbl_80528698:
+.obj lbl_80528698, global
 	.4byte lbl_806684C0
 	.4byte func_8003B8EC
 	.4byte 0
 	.4byte lbl_80528650
+.endobj lbl_80528698
 
 
-.global lbl_805286A8
-lbl_805286A8:
+.obj lbl_805286A8, global
 	.4byte lbl_806684DC
 	.4byte func_8003C044
 	.4byte func_8003C480
 	.4byte 0
+.endobj lbl_805286A8
 
 	.4byte lbl_806684E0
 	.4byte func_8003C0D0
@@ -7037,8 +7038,7 @@ lbl_805286A8:
 	.4byte 0
 	.4byte 0
 
-.global lbl_80528738
-lbl_80528738:
+.obj lbl_80528738, global
 	.4byte lbl_80668508
 	.4byte func_8003C844
 	.4byte 0
@@ -7187,9 +7187,9 @@ lbl_80528738:
 	.4byte func_8003BD7C
 	.4byte lbl_805286A8
 	.4byte lbl_80528738
+.endobj lbl_80528738
 
-.global lbl_80528988
-lbl_80528988:
+.obj lbl_80528988, global
 	.4byte lbl_806684DC
 	.4byte func_8003C044
 	.4byte func_8003C480
@@ -7206,9 +7206,9 @@ lbl_80528988:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_80528988
 
-.global lbl_805289C8
-lbl_805289C8:
+.obj lbl_805289C8, global
 	.4byte lbl_80668508
 	.4byte func_8003C844
 	.4byte 0
@@ -7243,9 +7243,9 @@ lbl_805289C8:
 	.4byte func_8003EEE0
 	.4byte lbl_80528988
 	.4byte lbl_805289C8
+.endobj lbl_805289C8
 
-.global lbl_80528A50
-lbl_80528A50:
+.obj lbl_80528A50, global
 	.4byte lbl_806684DC
 	.4byte func_8003C044
 	.4byte func_8003C480
@@ -7266,9 +7266,9 @@ lbl_80528A50:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_80528A50
 
-.global lbl_80528AA0
-lbl_80528AA0:
+.obj lbl_80528AA0, global
 	.4byte lbl_80668508
 	.4byte func_8003C844
 	.4byte 0
@@ -7309,9 +7309,9 @@ lbl_80528AA0:
 	.4byte func_8003F210
 	.4byte lbl_80528A50
 	.4byte lbl_80528AA0
+.endobj lbl_80528AA0
 
-.global lbl_80528B40
-lbl_80528B40:
+.obj lbl_80528B40, global
 	.4byte lbl_806684DC
 	.4byte func_8003C044
 	.4byte func_8003C480
@@ -7332,9 +7332,9 @@ lbl_80528B40:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_80528B40
 
-.global lbl_80528B90
-lbl_80528B90:
+.obj lbl_80528B90, global
 	.4byte lbl_80668508
 	.4byte func_8003C844
 	.4byte 0
@@ -7369,9 +7369,9 @@ lbl_80528B90:
 	.4byte func_8003F498
 	.4byte lbl_80528B40
 	.4byte lbl_80528B90
+.endobj lbl_80528B90
 
-.global lbl_80528C18
-lbl_80528C18:
+.obj lbl_80528C18, global
 	.4byte lbl_806684DC
 	.4byte func_8003C044
 	.4byte func_8003C480
@@ -7392,9 +7392,9 @@ lbl_80528C18:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_80528C18
 
-.global lbl_80528C68
-lbl_80528C68:
+.obj lbl_80528C68, global
 	.4byte lbl_80668508
 	.4byte func_8003C844
 	.4byte 0
@@ -7429,9 +7429,9 @@ lbl_80528C68:
 	.4byte func_8003FA1C
 	.4byte lbl_80528C18
 	.4byte lbl_80528C68
+.endobj lbl_80528C68
 
-.global cf_CfObjectActor_hierarchy
-cf_CfObjectActor_hierarchy:
+.obj cf_CfObjectActor_hierarchy, global
 	.4byte __RTTI__cf_CObjectState
 	.4byte 0x00003E9C
 	.4byte __RTTI__cf_CObjectParam
@@ -7453,294 +7453,304 @@ cf_CfObjectActor_hierarchy:
 	.4byte __RTTI__cf_CActorParam
 	.4byte 0
 	.4byte 0
+.endobj cf_CfObjectActor_hierarchy
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_80668468
-lbl_80668468:
+.obj lbl_80668468, global
 	.asciz "atr"
+.endobj lbl_80668468
 
-.global lbl_8066846C
-lbl_8066846C:
+.obj lbl_8066846C, global
 	.asciz "no"
 	.byte 0x00
-.global lbl_80668470
-lbl_80668470:
+.endobj lbl_8066846C
+
+.obj lbl_80668470, global
 	.asciz "send"
 	.balign 4
+.endobj lbl_80668470
 
-.global lbl_80668478
-lbl_80668478:
+.obj lbl_80668478, global
 	.asciz "receive"
+.endobj lbl_80668478
 
-.global lbl_80668480
-lbl_80668480:
+.obj lbl_80668480, global
 	.asciz "init"
 	.balign 4
+.endobj lbl_80668480
 
-.global lbl_80668488
-lbl_80668488:
+.obj lbl_80668488, global
 	.asciz "isFull"
 	.balign 4
+.endobj lbl_80668488
 
-.global lbl_80668490
-lbl_80668490:
+.obj lbl_80668490, global
 	.asciz "isEmpty"
+.endobj lbl_80668490
 
-.global lbl_80668498
-lbl_80668498:
+.obj lbl_80668498, global
 	.asciz "msgYuka"
+.endobj lbl_80668498
 
-.global lbl_806684A0
-lbl_806684A0:
+.obj lbl_806684A0, global
 	.asciz "id"
 	.byte 0x00
-.global lbl_806684A4
-lbl_806684A4:
+.endobj lbl_806684A0
+
+.obj lbl_806684A4, global
 	.asciz "talk"
 	.balign 4
+.endobj lbl_806684A4
 
-.global lbl_806684AC
-lbl_806684AC:
+.obj lbl_806684AC, global
 	.asciz "dir"
+.endobj lbl_806684AC
 
-.global lbl_806684B0
-lbl_806684B0:
+.obj lbl_806684B0, global
 	.asciz "msgNpc"
 	.balign 4
+.endobj lbl_806684B0
 
-.global lbl_806684B8
-lbl_806684B8:
+.obj lbl_806684B8, global
 	.asciz "getVal"
 	.balign 4
+.endobj lbl_806684B8
 
-.global lbl_806684C0
-lbl_806684C0:
+.obj lbl_806684C0, global
 	.asciz "bdat"
 	.balign 4
+.endobj lbl_806684C0
 
 
-.global float_806684C8
-float_806684C8:
+.obj float_806684C8, global
 	.float 4096.0 #.4byte 0x45800000
 	.4byte 0
+.endobj float_806684C8
 
 
-.global double_806684D0
-double_806684D0:
+.obj double_806684D0, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_806684D0
 
-.global float_806684D8
-float_806684D8:
+.obj float_806684D8, global
 	.asciz "Dz"
 	.byte 0x00
-.global lbl_806684DC
-lbl_806684DC:
+.endobj float_806684D8
+
+.obj lbl_806684DC, global
 	.asciz "x"
 	.2byte 0
-.global lbl_806684E0
-lbl_806684E0:
+.endobj lbl_806684DC
+
+.obj lbl_806684E0, global
 	.asciz "y"
 	.2byte 0
-.global lbl_806684E4
-lbl_806684E4:
+.endobj lbl_806684E0
+
+.obj lbl_806684E4, global
 	.asciz "z"
 	.2byte 0
-.global lbl_806684E8
-lbl_806684E8:
-	.asciz "dir"
+.endobj lbl_806684E4
 
-.global lbl_806684EC
-lbl_806684EC:
+.obj lbl_806684E8, global
+	.asciz "dir"
+.endobj lbl_806684E8
+
+.obj lbl_806684EC, global
 	.asciz "name"
 	.balign 4
+.endobj lbl_806684EC
 
-.global lbl_806684F4
-lbl_806684F4:
+.obj lbl_806684F4, global
 	.asciz "bdid"
 	.balign 4
+.endobj lbl_806684F4
 
-.global lbl_806684FC
-lbl_806684FC:
+.obj lbl_806684FC, global
 	.asciz "ID"
 	.byte 0x00
-.global lbl_80668500
-lbl_80668500:
+.endobj lbl_806684FC
+
+.obj lbl_80668500, global
 	.asciz "HP"
 	.4byte 0
 	.byte 0x00
-.global lbl_80668508
-lbl_80668508:
-	.asciz "isValid"
+.endobj lbl_80668500
 
-.global lbl_80668510
-lbl_80668510:
+.obj lbl_80668508, global
+	.asciz "isValid"
+.endobj lbl_80668508
+
+.obj lbl_80668510, global
 	.asciz "dispOn"
 	.balign 4
+.endobj lbl_80668510
 
-.global lbl_80668518
-lbl_80668518:
+.obj lbl_80668518, global
 	.asciz "dispOff"
+.endobj lbl_80668518
 
-.global lbl_80668520
-lbl_80668520:
+.obj lbl_80668520, global
 	.asciz "walkR"
 	.balign 4
+.endobj lbl_80668520
 
-.global lbl_80668528
-lbl_80668528:
+.obj lbl_80668528, global
 	.asciz "moveTo"
 	.balign 4
+.endobj lbl_80668528
 
-.global lbl_80668530
-lbl_80668530:
+.obj lbl_80668530, global
 	.asciz "isTalk"
 	.balign 4
+.endobj lbl_80668530
 
-.global lbl_80668538
-lbl_80668538:
+.obj lbl_80668538, global
 	.asciz "winTalk"
+.endobj lbl_80668538
 
-.global lbl_80668540
-lbl_80668540:
+.obj lbl_80668540, global
 	.asciz "onEvent"
+.endobj lbl_80668540
 
-.global lbl_80668548
-lbl_80668548:
+.obj lbl_80668548, global
 	.asciz "setAct"
 	.balign 4
+.endobj lbl_80668548
 
-.global lbl_80668550
-lbl_80668550:
+.obj lbl_80668550, global
 	.asciz "lookAt"
 	.balign 4
+.endobj lbl_80668550
 
-.global lbl_80668558
-lbl_80668558:
+.obj lbl_80668558, global
 	.asciz "turn"
 	.balign 4
+.endobj lbl_80668558
 
-.global lbl_80668560
-lbl_80668560:
+.obj lbl_80668560, global
 	.asciz "isPC"
 	.balign 4
+.endobj lbl_80668560
 
-.global lbl_80668568
-lbl_80668568:
+.obj lbl_80668568, global
 	.asciz "isNPC"
 	.balign 4
+.endobj lbl_80668568
 
-.global lbl_80668570
-lbl_80668570:
+.obj lbl_80668570, global
 	.asciz "isENE"
 	.balign 4
+.endobj lbl_80668570
 
-.global lbl_80668578
-lbl_80668578:
+.obj lbl_80668578, global
 	.asciz "isPT"
 	.balign 4
+.endobj lbl_80668578
 
-.global lbl_80668580
-lbl_80668580:
+.obj lbl_80668580, global
 	.asciz "invin"
 	.balign 4
+.endobj lbl_80668580
 
-.global lbl_80668588
-lbl_80668588:
+.obj lbl_80668588, global
 	.asciz "setColi"
+.endobj lbl_80668588
 
-.global lbl_80668590
-lbl_80668590:
+.obj lbl_80668590, global
 	.asciz "setEye"
 	.balign 4
+.endobj lbl_80668590
 
-.global lbl_80668598
-lbl_80668598:
+.obj lbl_80668598, global
 	.asciz "unit"
 	.balign 4
+.endobj lbl_80668598
 
-.global lbl_806685A0
-lbl_806685A0:
+.obj lbl_806685A0, global
 	.asciz "setRot"
 	.balign 4
+.endobj lbl_806685A0
 
-.global lbl_806685A8
-lbl_806685A8:
+.obj lbl_806685A8, global
 	.asciz "gravity"
+.endobj lbl_806685A8
 
-.global lbl_806685B0
-lbl_806685B0:
+.obj lbl_806685B0, global
 	.asciz "obj"
+.endobj lbl_806685B0
 
-.global lbl_806685B4
-lbl_806685B4:
+.obj lbl_806685B4, global
 	.asciz "point"
 	.balign 4
+.endobj lbl_806685B4
 
-.global lbl_806685BC
-lbl_806685BC:
+.obj lbl_806685BC, global
 	.asciz "signal"
 	.balign 4
+.endobj lbl_806685BC
 
-.global lbl_806685C4
-lbl_806685C4:
+.obj lbl_806685C4, global
 	.asciz "setCas"
 	.balign 4
+.endobj lbl_806685C4
 
-.global lbl_806685CC
-lbl_806685CC:
+.obj lbl_806685CC, global
 	.asciz "setTgt"
 	.balign 4
+.endobj lbl_806685CC
 
-.global lbl_806685D4
-lbl_806685D4:
+.obj lbl_806685D4, global
 	.asciz "effect"
 	.balign 4
+.endobj lbl_806685D4
 
 
-.global float_806685DC
-float_806685DC:
+.obj float_806685DC, global
 	.float 0
+.endobj float_806685DC
 
-.global lbl_806685E0
-lbl_806685E0:
+.obj lbl_806685E0, global
 	.asciz "setSize"
+.endobj lbl_806685E0
 
-.global lbl_806685E8
-lbl_806685E8:
+.obj lbl_806685E8, global
 	.asciz "setBox"
 	.balign 4
+.endobj lbl_806685E8
 
-.global lbl_806685F0
-lbl_806685F0:
+.obj lbl_806685F0, global
 	.asciz "inside"
 	.balign 4
+.endobj lbl_806685F0
 
-.global lbl_806685F8
-lbl_806685F8:
+.obj lbl_806685F8, global
 	.asciz "attr"
 	.balign 4
+.endobj lbl_806685F8
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_80573DD0
-lbl_80573DD0:
+.obj lbl_80573DD0, global
 	.skip 0x18
+.endobj lbl_80573DD0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80666610, global
+	.skip 0x4
+.endobj lbl_80666610
 
-.global lbl_80666610
-lbl_80666610:
+.obj lbl_80666614, global
 	.skip 0x4
-.global lbl_80666614
-lbl_80666614:
-	.skip 0x4
+.endobj lbl_80666614
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

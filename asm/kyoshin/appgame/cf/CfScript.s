@@ -1003,20 +1003,19 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8052A5A0
-lbl_8052A5A0:
+.obj lbl_8052A5A0, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_800691B8
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_8006922C
+.endobj lbl_8052A5A0
 
 
-.global __vt__cf_CfScript
-__vt__cf_CfScript:
+.obj __vt__cf_CfScript, global
 	.4byte __RTTI__cf_CfScript
 	.4byte 0
 	.4byte __dt__cf_CfScript
@@ -1051,30 +1050,30 @@ __vt__cf_CfScript:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__cf_CfScript
 
-.global cf_CfScript_hierarchy
-cf_CfScript_hierarchy:
+.obj cf_CfScript_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CfScript_hierarchy
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_804F6B98
-lbl_804F6B98:
+.obj lbl_804F6B98, global
 	.asciz "/script/jp/"
+.endobj lbl_804F6B98
 
-.global cf_CfScript_typestr
-cf_CfScript_typestr:
+.obj cf_CfScript_typestr, global
 	.asciz "cf::CfScript"
 	.balign 4
+.endobj cf_CfScript_typestr
 
 
-.global CfScript_strpool
-CfScript_strpool:
+.obj CfScript_strpool, global
 	.asciz "%02d%02df"
 	.asciz "eventView"
 	.asciz "abcd_00"
@@ -1083,38 +1082,40 @@ CfScript_strpool:
 	.asciz "am.sb"
 	.asciz "pm.sb"
 	.balign 4
+.endobj CfScript_strpool
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_806643B8
-lbl_806643B8:
+.obj lbl_806643B8, global
 	.4byte lbl_804F6B98
 	.4byte 0
+.endobj lbl_806643B8
 
-.global __RTTI__cf_CfScript
-__RTTI__cf_CfScript:
+.obj __RTTI__cf_CfScript, global
 	.4byte cf_CfScript_typestr
 	.4byte cf_CfScript_hierarchy
+.endobj __RTTI__cf_CfScript
 
 
-.global lbl_806643C8
-lbl_806643C8:
+.obj lbl_806643C8, global
 	.4byte 0x2E000000
 	.4byte 0
+.endobj lbl_806643C8
 
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_805740C8
-lbl_805740C8:
+.obj lbl_805740C8, global
 	.skip 0x48
-.global lbl_80574110
-lbl_80574110:
+.endobj lbl_805740C8
+
+.obj lbl_80574110, global
 	.skip 0x108
+.endobj lbl_80574110
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -57,20 +57,24 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056D548
-lbl_8056D548:
+.balign 8
+
+.obj lbl_8056D548, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r3lyt8DrawInfoFv
 	.4byte 0
+.endobj lbl_8056D548
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C5D0
-float_8066C5D0:
+.balign 8
+
+.obj float_8066C5D0, global
 	.float 0
+.endobj float_8066C5D0
 
 
-.global float_8066C5D4
-float_8066C5D4:
+.obj float_8066C5D4, global
 	.float 1.0
+.endobj float_8066C5D4

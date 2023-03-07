@@ -1213,16 +1213,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CSimpleEveTalkWin_typestr
-CSimpleEveTalkWin_typestr:
+.obj CSimpleEveTalkWin_typestr, global
 	.asciz "CSimpleEveTalkWin"
 	.balign 4
+.endobj CSimpleEveTalkWin_typestr
 
 
-.global CSimpleEveTalkWin_strpool
-CSimpleEveTalkWin_strpool:
+.obj CSimpleEveTalkWin_strpool, global
 	.asciz "CSimpleEveTalkWin"
 	.asciz "mf70_cf01_esywin00.brlyt"
 	.asciz "mf70_cf01_esywin00_in.brlan"
@@ -1239,13 +1238,13 @@ CSimpleEveTalkWin_strpool:
 	.byte 0x00
 	.asciz "txt_mes"
 	.balign 4
+.endobj CSimpleEveTalkWin_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CSimpleEveTalkWin
-__vt__CSimpleEveTalkWin:
+.obj __vt__CSimpleEveTalkWin, global
 	.4byte __RTTI__CSimpleEveTalkWin
 	.4byte 0
 	.4byte __dt__CSimpleEveTalkWin
@@ -1294,9 +1293,9 @@ __vt__CSimpleEveTalkWin:
 	.4byte func_801A29C4
 	.4byte func_801A29BC
 	.4byte func_801A2048
+.endobj __vt__CSimpleEveTalkWin
 
-.global CSimpleEveTalkWin_hierarchy
-CSimpleEveTalkWin_hierarchy:
+.obj CSimpleEveTalkWin_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000070
 	.4byte __RTTI__IWorkEvent
@@ -1313,55 +1312,57 @@ CSimpleEveTalkWin_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CSimpleEveTalkWin_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CSimpleEveTalkWin
-__RTTI__CSimpleEveTalkWin:
+.obj __RTTI__CSimpleEveTalkWin, global
 	.4byte CSimpleEveTalkWin_typestr
 	.4byte CSimpleEveTalkWin_hierarchy
+.endobj __RTTI__CSimpleEveTalkWin
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066A560
-float_8066A560:
+.obj float_8066A560, global
 	.float 38 #0x42180000
+.endobj float_8066A560
 
 
-.global float_8066A564
-float_8066A564:
+.obj float_8066A564, global
 	.float -1.0
+.endobj float_8066A564
 
 
-.global float_8066A568
-float_8066A568:
+.obj float_8066A568, global
 	.float 0
+.endobj float_8066A568
 
 
-.global float_8066A56C
-float_8066A56C:
+.obj float_8066A56C, global
 	.float 193 #0x43410000
+.endobj float_8066A56C
 
 
-.global float_8066A570
-float_8066A570:
+.obj float_8066A570, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066A570
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80666C10, global
+	.skip 0x4
+.endobj lbl_80666C10
 
-.global lbl_80666C10
-lbl_80666C10:
+.obj lbl_80666C14, global
 	.skip 0x4
-.global lbl_80666C14
-lbl_80666C14:
-	.skip 0x4
+.endobj lbl_80666C14
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

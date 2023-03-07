@@ -1067,32 +1067,36 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-.global lbl_8051AA78
-lbl_8051AA78:
+
+.obj lbl_8051AA78, global
 	.asciz "fmt "
 	.balign 4
+.endobj lbl_8051AA78
 
-.global lbl_8051AA80
-lbl_8051AA80:
+.obj lbl_8051AA80, global
 	.asciz "data"
 	.balign 4
+.endobj lbl_8051AA80
 
 
-.global lbl_8051AA88
-lbl_8051AA88:
+.obj lbl_8051AA88, global
 	.asciz "RIFF"
 	.asciz "WAVE"
 	.2byte 0
 	.4byte 0
+.endobj lbl_8051AA88
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80563728
-lbl_80563728:
+.balign 8
+
+.obj lbl_80563728, global
 	.4byte lbl_8051AA78
+.endobj lbl_80563728
 
 
-.global lbl_8056372C
-lbl_8056372C:
+.obj lbl_8056372C, global
 	.4byte lbl_8051AA80
+.endobj lbl_8056372C

@@ -1159,25 +1159,24 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CfGimmickLock_typestr
-cf_CfGimmickLock_typestr:
+.obj cf_CfGimmickLock_typestr, global
 	.asciz "cf::CfGimmickLock"
 	.balign 4
+.endobj cf_CfGimmickLock_typestr
 
 
-.global lbl_80503E0C
-lbl_80503E0C:
+.obj lbl_80503E0C, global
 	.asciz "rockTYPE"
 	.balign 4
+.endobj lbl_80503E0C
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CfGimmickLock
-__vt__cf_CfGimmickLock:
+.obj __vt__cf_CfGimmickLock, global
 	.4byte __RTTI__cf_CfGimmickLock
 	.4byte 0
 	.4byte __dt__cf_CfGimmickLock
@@ -1187,68 +1186,68 @@ __vt__cf_CfGimmickLock:
 	.4byte func_801F4BF8
 	.4byte func_801F4C8C
 	.4byte func_8020CB28
+.endobj __vt__cf_CfGimmickLock
 
-.global cf_CfGimmickLock_hierarchy
-cf_CfGimmickLock_hierarchy:
+.obj cf_CfGimmickLock_hierarchy, global
 	.4byte __RTTI__cf_IObjectInfo
 	.4byte 0
 	.4byte __RTTI__cf_CfGimmick
 	.4byte 0
 	.4byte 0
+.endobj cf_CfGimmickLock_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80665090
-lbl_80665090:
+.obj lbl_80665090, global
 	.4byte lbl_8066AC68
 	.4byte 0
+.endobj lbl_80665090
 
-.global __RTTI__cf_CfGimmickLock
-__RTTI__cf_CfGimmickLock:
+.obj __RTTI__cf_CfGimmickLock, global
 	.4byte cf_CfGimmickLock_typestr
 	.4byte cf_CfGimmickLock_hierarchy
+.endobj __RTTI__cf_CfGimmickLock
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-
-.global lbl_8066AC68
-lbl_8066AC68:
+.obj lbl_8066AC68, global
 	.asciz "popID1"
 	.balign 4
+.endobj lbl_8066AC68
 
 
-.global float_8066AC70
-float_8066AC70:
+.obj float_8066AC70, global
 	.float 2 #0x40000000
+.endobj float_8066AC70
 
 
-.global float_8066AC74
-float_8066AC74:
+.obj float_8066AC74, global
 	.float 0.01 #0x3C23D70A
+.endobj float_8066AC74
 
 
-.global float_8066AC78
-float_8066AC78:
+.obj float_8066AC78, global
 	.float 0.5
+.endobj float_8066AC78
 
 
-.global float_8066AC7C
-float_8066AC7C:
+.obj float_8066AC7C, global
 	.float 0.05 #0x3D4CCCCD
+.endobj float_8066AC7C
 
 
-.global float_8066AC80
-float_8066AC80:
+.obj float_8066AC80, global
 	.float 1.0
+.endobj float_8066AC80
 
 
-.global float_8066AC84
-float_8066AC84:
+.obj float_8066AC84, global
 	.float 30 #0x41F00000
+.endobj float_8066AC84
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

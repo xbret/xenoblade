@@ -6329,33 +6329,32 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CKizunagram_typestr
-CKizunagram_typestr:
+.obj CKizunagram_typestr, global
 	.asciz "CKizunagram"
+.endobj CKizunagram_typestr
 
-.global CKizunaInfo_typestr
-CKizunaInfo_typestr:
+.obj CKizunaInfo_typestr, global
 	.asciz "CKizunaInfo"
+.endobj CKizunaInfo_typestr
 
-.global CKizunaLine_typestr
-CKizunaLine_typestr:
+.obj CKizunaLine_typestr, global
 	.asciz "CKizunaLine"
+.endobj CKizunaLine_typestr
 
-.global CKizunaCur_typestr
-CKizunaCur_typestr:
+.obj CKizunaCur_typestr, global
 	.asciz "CKizunaCur"
 	.balign 4
+.endobj CKizunaCur_typestr
 
-.global CKizunaRadar_typestr
-CKizunaRadar_typestr:
+.obj CKizunaRadar_typestr, global
 	.asciz "CKizunaRadar"
 	.balign 4
+.endobj CKizunaRadar_typestr
 
 
-.global CKizunagram_strpool
-CKizunagram_strpool:
+.obj CKizunagram_strpool, global
 	.asciz "mf40_kiz_rdr.brlyt"
 	.asciz "win_rdr01"
 	.asciz "win_rdr00"
@@ -6547,14 +6546,14 @@ CKizunagram_strpool:
 	.asciz "arc"
 	.asciz "CKizunagram_tex"
 	.balign 4
+.endobj CKizunagram_strpool
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global jumptable_8053ACD8
-jumptable_8053ACD8:
+.obj jumptable_8053ACD8, global
 	.4byte .L_8025BD94
 	.4byte .L_8025BDAC
 	.4byte .L_8025BDC4
@@ -6567,10 +6566,10 @@ jumptable_8053ACD8:
 	.4byte .L_8025BE6C
 	.4byte .L_8025BE84
 	.4byte 0
+.endobj jumptable_8053ACD8
 
 
-.global __vt__CKizunagram
-__vt__CKizunagram:
+.obj __vt__CKizunagram, global
 	.4byte __RTTI__CKizunagram
 	.4byte 0
 	.4byte __dt__CKizunagram
@@ -6605,216 +6604,232 @@ __vt__CKizunagram:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CKizunagram
 
-.global CKizunagram_hierarchy
-CKizunagram_hierarchy:
+.obj CKizunagram_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
+.endobj CKizunagram_hierarchy
 
 
-.global __vt__CKizunaInfo
-__vt__CKizunaInfo:
+.obj __vt__CKizunaInfo, global
 	.4byte __RTTI__CKizunaInfo
 	.4byte 0
 	.4byte __dt__CKizunaInfo
+.endobj __vt__CKizunaInfo
 
 
-.global __vt__CKizunaLine
-__vt__CKizunaLine:
+.obj __vt__CKizunaLine, global
 	.4byte __RTTI__CKizunaLine
 	.4byte 0
 	.4byte __dt__CKizunaLine
+.endobj __vt__CKizunaLine
 
 
-.global __vt__CKizunaCur
-__vt__CKizunaCur:
+.obj __vt__CKizunaCur, global
 	.4byte __RTTI__CKizunaCur
 	.4byte 0
 	.4byte __dt__CKizunaCur
+.endobj __vt__CKizunaCur
 
 
-.global __vt__CKizunaRadar
-__vt__CKizunaRadar:
+.obj __vt__CKizunaRadar, global
 	.4byte __RTTI__CKizunaRadar
 	.4byte 0
 	.4byte __dt__CKizunaRadar
 	.4byte 0
+.endobj __vt__CKizunaRadar
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CKizunagram
-__RTTI__CKizunagram:
+.obj __RTTI__CKizunagram, global
 	.4byte CKizunagram_typestr
 	.4byte CKizunagram_hierarchy
+.endobj __RTTI__CKizunagram
 
-.global __RTTI__CKizunaInfo
-__RTTI__CKizunaInfo:
+.obj __RTTI__CKizunaInfo, global
 	.4byte CKizunaInfo_typestr
 	.4byte 0
+.endobj __RTTI__CKizunaInfo
 
-.global __RTTI__CKizunaLine
-__RTTI__CKizunaLine:
+.obj __RTTI__CKizunaLine, global
 	.4byte CKizunaLine_typestr
 	.4byte 0
+.endobj __RTTI__CKizunaLine
 
-.global __RTTI__CKizunaCur
-__RTTI__CKizunaCur:
+.obj __RTTI__CKizunaCur, global
 	.4byte CKizunaCur_typestr
 	.4byte 0
+.endobj __RTTI__CKizunaCur
 
-.global __RTTI__CKizunaRadar
-__RTTI__CKizunaRadar:
+.obj __RTTI__CKizunaRadar, global
 	.4byte CKizunaRadar_typestr
 	.4byte 0
+.endobj __RTTI__CKizunaRadar
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B0D8
-float_8066B0D8:
+.obj float_8066B0D8, global
 	.float 0
+.endobj float_8066B0D8
 
 
-.global float_8066B0DC
-float_8066B0DC:
+.obj float_8066B0DC, global
 	.float 2 #0x40000000
+.endobj float_8066B0DC
 
 
-.global float_8066B0E0
-float_8066B0E0:
+.obj float_8066B0E0, global
 	.float -1.0
+.endobj float_8066B0E0
 
 
-.global float_8066B0E4
-float_8066B0E4:
+.obj float_8066B0E4, global
 	.float 1.0
+.endobj float_8066B0E4
 
 
-.global lbl_8066B0E8
-lbl_8066B0E8:
+.obj lbl_8066B0E8, global
 	.4byte lbl_80508150
+.endobj lbl_8066B0E8
 
 
-.global lbl_8066B0EC
-lbl_8066B0EC:
+.obj lbl_8066B0EC, global
 	.4byte lbl_8050815C
+.endobj lbl_8066B0EC
 
 
-.global double_8066B0F0
-double_8066B0F0:
+.obj double_8066B0F0, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066B0F0
 
-.global float_8066B0F8
-float_8066B0F8:
+.obj float_8066B0F8, global
 	.float 5 #0x40A00000
+.endobj float_8066B0F8
 
 
-.global float_8066B0FC
-float_8066B0FC:
+.obj float_8066B0FC, global
 	.float 0.5
+.endobj float_8066B0FC
 
 
-.global float_8066B100
-float_8066B100:
+.obj float_8066B100, global
 	.float 28 #0x41E00000
+.endobj float_8066B100
 
 
-.global float_8066B104
-float_8066B104:
+.obj float_8066B104, global
 	.float 4 #0x40800000
+.endobj float_8066B104
 
 
-.global float_8066B108
-float_8066B108:
+.obj float_8066B108, global
 	.float 96 #0x42C00000
+.endobj float_8066B108
 
 
-.global float_8066B10C
-float_8066B10C:
+.obj float_8066B10C, global
 	.float 255 #0x437F0000
+.endobj float_8066B10C
 
 
-.global float_8066B110
-float_8066B110:
+.obj float_8066B110, global
 	.float 17 #0x41880000
+.endobj float_8066B110
 
 
-.global float_8066B114
-float_8066B114:
+.obj float_8066B114, global
 	.float 9 #0x41100000
+.endobj float_8066B114
 
 
-.global float_8066B118
-float_8066B118:
+.obj float_8066B118, global
 	.float -20 #0xC1A00000
+.endobj float_8066B118
 
 
-.global float_8066B11C
-float_8066B11C:
+.obj float_8066B11C, global
 	.float 20 #0x41A00000
+.endobj float_8066B11C
 
 
-.global float_8066B120
-float_8066B120:
+.obj float_8066B120, global
 	.float 3 #0x40400000
 	.4byte 0
+.endobj float_8066B120
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_806670D8, global
+	.skip 0x8
+.endobj lbl_806670D8
 
-.global lbl_806670D8
-lbl_806670D8:
+.obj lbl_806670E0, global
 	.skip 0x8
-.global lbl_806670E0
-lbl_806670E0:
+.endobj lbl_806670E0
+
+.obj lbl_806670E8, global
 	.skip 0x8
-.global lbl_806670E8
-lbl_806670E8:
+.endobj lbl_806670E8
+
+.obj lbl_806670F0, global
 	.skip 0x8
-.global lbl_806670F0
-lbl_806670F0:
+.endobj lbl_806670F0
+
+.obj lbl_806670F8, global
 	.skip 0x8
-.global lbl_806670F8
-lbl_806670F8:
+.endobj lbl_806670F8
+
+.obj lbl_80667100, global
 	.skip 0x8
-.global lbl_80667100
-lbl_80667100:
+.endobj lbl_80667100
+
+.obj lbl_80667108, global
 	.skip 0x8
-.global lbl_80667108
-lbl_80667108:
+.endobj lbl_80667108
+
+.obj lbl_80667110, global
 	.skip 0x8
-.global lbl_80667110
-lbl_80667110:
+.endobj lbl_80667110
+
+.obj lbl_80667118, global
 	.skip 0x8
-.global lbl_80667118
-lbl_80667118:
+.endobj lbl_80667118
+
+.obj lbl_80667120, global
 	.skip 0x8
-.global lbl_80667120
-lbl_80667120:
+.endobj lbl_80667120
+
+.obj lbl_80667128, global
 	.skip 0x8
-.global lbl_80667128
-lbl_80667128:
+.endobj lbl_80667128
+
+.obj lbl_80667130, global
 	.skip 0x8
-.global lbl_80667130
-lbl_80667130:
+.endobj lbl_80667130
+
+.obj lbl_80667138, global
 	.skip 0x8
-.global lbl_80667138
-lbl_80667138:
+.endobj lbl_80667138
+
+.obj lbl_80667140, global
 	.skip 0x8
-.global lbl_80667140
-lbl_80667140:
-	.skip 0x8
-.global lbl_80667148
-lbl_80667148:
+.endobj lbl_80667140
+
+.obj lbl_80667148, global
 	.skip 0x2
-.global lbl_8066714A
-lbl_8066714A:
+.endobj lbl_80667148
+
+.obj lbl_8066714A, global
 	.skip 0x6
+.endobj lbl_8066714A
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

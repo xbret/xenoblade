@@ -1101,39 +1101,44 @@
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-epsilon__Q34nw4r4math6detail:
+.balign 8
+
+.obj epsilon__Q34nw4r4math6detail, local
 	.float 0.0001
 	.4byte 0
+.endobj epsilon__Q34nw4r4math6detail
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C658
-float_8066C658:
+.balign 8
+
+.obj float_8066C658, global
 	.float 0.5
+.endobj float_8066C658
 
 
-.global float_8066C65C
-float_8066C65C:
+.obj float_8066C65C, global
 	.float 0
+.endobj float_8066C65C
 
 
-.global float_8066C660
-float_8066C660:
+.obj float_8066C660, global
 	.float 0.0245436933
+.endobj float_8066C660
 
 
-.global float_8066C664
-float_8066C664:
+.obj float_8066C664, global
 	.float 0.7111111
+.endobj float_8066C664
 
 
-.global float_8066C668
-float_8066C668:
+.obj float_8066C668, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066C668
 
 
-.global double_8066C670
-double_8066C670:
+.obj double_8066C670, global
 	.4byte 0
 	.4byte 0
+.endobj double_8066C670

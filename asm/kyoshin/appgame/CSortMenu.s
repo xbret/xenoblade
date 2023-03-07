@@ -958,42 +958,41 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_805019C0
-lbl_805019C0:
+.obj lbl_805019C0, global
 	.asciz "txt_menu01_01"
 	.balign 4
+.endobj lbl_805019C0
 
-.global lbl_805019D0
-lbl_805019D0:
+.obj lbl_805019D0, global
 	.asciz "txt_menu01_02"
 	.balign 4
+.endobj lbl_805019D0
 
-.global lbl_805019E0
-lbl_805019E0:
+.obj lbl_805019E0, global
 	.asciz "txt_menu01_03"
 	.balign 4
+.endobj lbl_805019E0
 
-.global lbl_805019F0
-lbl_805019F0:
+.obj lbl_805019F0, global
 	.asciz "txt_menu01_04"
 	.balign 4
+.endobj lbl_805019F0
 
-.global lbl_80501A00
-lbl_80501A00:
+.obj lbl_80501A00, global
 	.asciz "txt_menu01_05"
 	.balign 4
+.endobj lbl_80501A00
 
-.global CSortMenu_typestr
-CSortMenu_typestr:
+.obj CSortMenu_typestr, global
 	.asciz "CSortMenu"
 	.balign 4
 	.4byte 0
+.endobj CSortMenu_typestr
 
 
-.global CSortMenu_strpool
-CSortMenu_strpool:
+.obj CSortMenu_strpool, global
 	.asciz "/menu/SortMenu.arc"
 	.asciz "nul_scr"
 	.asciz "nul_proportion"
@@ -1005,24 +1004,24 @@ CSortMenu_strpool:
 	.asciz "mf00_reg00_sort.brlyt"
 	.asciz "mf00_reg00_sort_in.brlan"
 	.asciz "mf00_reg00_sort_info_in.brlan"
+.endobj CSortMenu_strpool
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_80538170
-lbl_80538170:
+.obj lbl_80538170, global
 	.4byte lbl_805019C0
 	.4byte lbl_805019D0
 	.4byte lbl_805019E0
 	.4byte lbl_805019F0
 	.4byte lbl_80501A00
 	.4byte 0
+.endobj lbl_80538170
 
 
-.global __vt__CSortMenu
-__vt__CSortMenu:
+.obj __vt__CSortMenu, global
 	.4byte __RTTI__CSortMenu
 	.4byte 0
 	.4byte __dt__CSortMenu
@@ -1057,41 +1056,42 @@ __vt__CSortMenu:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CSortMenu
 
-.global CSortMenu_hierarchy
-CSortMenu_hierarchy:
+.obj CSortMenu_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CSortMenu_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CSortMenu
-__RTTI__CSortMenu:
+.obj __RTTI__CSortMenu, global
 	.4byte CSortMenu_typestr
 	.4byte CSortMenu_hierarchy
+.endobj __RTTI__CSortMenu
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066A8B0
-float_8066A8B0:
+.obj float_8066A8B0, global
 	.float 21.6 #0x41ACCCCD
 	.4byte 0
+.endobj float_8066A8B0
 
 
-.global double_8066A8B8
-double_8066A8B8:
+.obj double_8066A8B8, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066A8B8
 
-.global float_8066A8C0
-float_8066A8C0:
+.obj float_8066A8C0, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066A8C0
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

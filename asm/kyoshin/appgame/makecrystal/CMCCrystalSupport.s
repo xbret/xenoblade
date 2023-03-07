@@ -804,29 +804,28 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMCCrystalSupport_typestr
-CMCCrystalSupport_typestr:
+.obj CMCCrystalSupport_typestr, global
 	.asciz "CMCCrystalSupport"
 	.balign 4
+.endobj CMCCrystalSupport_typestr
 
 
-.global CMCCrystalSupport_strpool
-CMCCrystalSupport_strpool:
+.obj CMCCrystalSupport_strpool, global
 	.asciz "mf10_cry02_sup.brlyt"
 	.asciz "mf10_cry02_sup_in.brlan"
 	.asciz "icon_type3"
 	.asciz "pic_pcface01"
 	.balign 4
 	.4byte 0
+.endobj CMCCrystalSupport_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMCCrystalSupport
-__vt__CMCCrystalSupport:
+.obj __vt__CMCCrystalSupport, global
 	.4byte __RTTI__CMCCrystalSupport
 	.4byte 0
 	.4byte __dt__CMCCrystalSupport
@@ -861,35 +860,36 @@ __vt__CMCCrystalSupport:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CMCCrystalSupport
 
-.global CMCCrystalSupport_hierarchy
-CMCCrystalSupport_hierarchy:
+.obj CMCCrystalSupport_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMCCrystalSupport_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMCCrystalSupport
-__RTTI__CMCCrystalSupport:
+.obj __RTTI__CMCCrystalSupport, global
 	.4byte CMCCrystalSupport_typestr
 	.4byte CMCCrystalSupport_hierarchy
+.endobj __RTTI__CMCCrystalSupport
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066AEF0
-float_8066AEF0:
+.obj float_8066AEF0, global
 	.float 0
+.endobj float_8066AEF0
 
 
-.global float_8066AEF4
-float_8066AEF4:
+.obj float_8066AEF4, global
 	.float 1.0
+.endobj float_8066AEF4
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

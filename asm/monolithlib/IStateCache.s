@@ -3569,23 +3569,25 @@
 
 #also used by CDevice
 
-.global lbl_8065A6F8
-lbl_8065A6F8:
+.obj lbl_8065A6F8, global
 	.skip 0x44
-.global lbl_8065A73C
-lbl_8065A73C:
+.endobj lbl_8065A6F8
+
+.obj lbl_8065A73C, global
 	.skip 0x44
+.endobj lbl_8065A73C
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80667F30, global
+	.skip 0x4
+.endobj lbl_80667F30
 
-.global lbl_80667F30
-lbl_80667F30:
+.obj lbl_80667F34, global
 	.skip 0x4
-.global lbl_80667F34
-lbl_80667F34:
-	.skip 0x4
+.endobj lbl_80667F34
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

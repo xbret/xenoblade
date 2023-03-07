@@ -60,32 +60,34 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_80518A58
-lbl_80518A58:
+.obj lbl_80518A58, global
 	.4byte 0
+.endobj lbl_80518A58
 
 
-.global lbl_80518A5C
-lbl_80518A5C:
+.obj lbl_80518A5C, global
 	.float 1.0
+.endobj lbl_80518A5C
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8054D7A0
-lbl_8054D7A0:
+.balign 8
+
+.obj lbl_8054D7A0, global
 	.4byte lbl_8054D7C8
 	.4byte 0
 	.4byte __dt__Q36nw4hbm3lyt8DrawInfoFv
+.endobj lbl_8054D7A0
 
-.global lbl_8054D7AC
-lbl_8054D7AC:
+.obj lbl_8054D7AC, global
 	.asciz "nw4hbm::lyt::DrawInfo"
 	.balign 4
 	.4byte 0
+.endobj lbl_8054D7AC
 
-.global lbl_8054D7C8
-lbl_8054D7C8:
+.obj lbl_8054D7C8, global
 	.4byte lbl_8054D7AC
 	.4byte 0
+.endobj lbl_8054D7C8

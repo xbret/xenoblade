@@ -201,17 +201,19 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C488
-float_8066C488:
+.balign 8
+
+.obj float_8066C488, global
 	.float 0.7111111 #0x3F360B61
+.endobj float_8066C488
 
 
-.global float_8066C48C
-float_8066C48C:
+.obj float_8066C48C, global
 	.float 0
+.endobj float_8066C48C
 
 
-.global float_8066C490
-float_8066C490:
+.obj float_8066C490, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066C490

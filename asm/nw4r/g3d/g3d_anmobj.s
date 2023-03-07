@@ -65,23 +65,29 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global TYPE_NAME__Q34nw4r3g3d6AnmObj
-TYPE_NAME__Q34nw4r3g3d6AnmObj:
+.balign 8
+
+.obj TYPE_NAME__Q34nw4r3g3d6AnmObj, global
 	.4byte 0x00000007
 	.asciz "AnmObj"
 	.balign 4
 	.4byte 0
+.endobj TYPE_NAME__Q34nw4r3g3d6AnmObj
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global smBaseUpdateRate__Q34nw4r3g3d9FrameCtrl
-smBaseUpdateRate__Q34nw4r3g3d9FrameCtrl:
+.balign 8
+
+.obj smBaseUpdateRate__Q34nw4r3g3d9FrameCtrl, global
 	.float 1.0
 	.4byte 0
+.endobj smBaseUpdateRate__Q34nw4r3g3d9FrameCtrl
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C3C0
-float_8066C3C0:
+.balign 8
+
+.obj float_8066C3C0, global
 	.float 0
 	.4byte 0
+.endobj float_8066C3C0

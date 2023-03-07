@@ -1884,8 +1884,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global code_801A929C_strpool
-code_801A929C_strpool:
+.balign 8
+
+.obj code_801A929C_strpool, global
 	.asciz "PosX_L%d"
 	.asciz "PosY_L%d"
 	.asciz "PosZ_L%d"
@@ -1913,72 +1914,79 @@ code_801A929C_strpool:
 	.asciz "pos_eflg2"
 	.balign 4
 	.4byte 0
+.endobj code_801A929C_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80536B98
-lbl_80536B98:
-	.4byte 0
-	.4byte 0xFFFFFFFF
-	.4byte func_801A9338
+.balign 8
 
-.global lbl_80536BA4
-lbl_80536BA4:
+.obj lbl_80536B98, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A9338
+.endobj lbl_80536B98
+
+.obj lbl_80536BA4, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_801A9338
+.endobj lbl_80536BA4
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066A620
-float_8066A620:
+.balign 8
+
+.obj float_8066A620, global
 	.float 1.0
+.endobj float_8066A620
 
 
-.global float_8066A624
-float_8066A624:
+.obj float_8066A624, global
 	.float 0
+.endobj float_8066A624
 
 
-.global float_8066A628
-float_8066A628:
+.obj float_8066A628, global
 	.float 0.5
+.endobj float_8066A628
 
 
-.global float_8066A62C
-float_8066A62C:
+.obj float_8066A62C, global
 	.float 0.0245436933 #0x3CC90FDB
+.endobj float_8066A62C
 
 
-.global float_8066A630
-float_8066A630:
+.obj float_8066A630, global
 	.float 40.7436638 #0x4222F983
+.endobj float_8066A630
 
 
-.global float_8066A634
-float_8066A634:
+.obj float_8066A634, global
 	.float 10000000 #0x4B189680
+.endobj float_8066A634
 
 
-.global float_8066A638
-float_8066A638:
+.obj float_8066A638, global
 	.float 0.01 #0x3C23D70A
 	.4byte 0
+.endobj float_8066A638
 
 
-.global double_8066A640
-double_8066A640:
+.obj double_8066A640, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066A640
 
-.global double_8066A648
-double_8066A648:
+.obj double_8066A648, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066A648
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80666C20
-lbl_80666C20:
+.balign 8
+
+.obj lbl_80666C20, global
 	.skip 0x8
+.endobj lbl_80666C20
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

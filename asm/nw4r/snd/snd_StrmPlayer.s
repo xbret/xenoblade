@@ -3099,10 +3099,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8056E558
-lbl_8056E558:
+.obj lbl_8056E558, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q44nw4r3snd6detail10StrmPlayerFv
@@ -3121,69 +3120,76 @@ lbl_8056E558:
 	.4byte OnUpdateFrameSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
 	.4byte OnUpdateVoiceSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
 	.4byte OnShutdownSoundThread__Q44nw4r3snd6detail10StrmPlayerFv
+.endobj lbl_8056E558
 
 
-.global lbl_8056E5A0
-lbl_8056E5A0:
+.obj lbl_8056E5A0, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv
 	.4byte Execute__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv
 	.4byte Cancel__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv
 	.4byte OnCancel__Q54nw4r3snd6detail10StrmPlayer16StrmDataLoadTaskFv
+.endobj lbl_8056E5A0
 
 
-.global lbl_8056E5B8
-lbl_8056E5B8:
+.obj lbl_8056E5B8, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv
 	.4byte Execute__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv
 	.4byte Cancel__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv
 	.4byte OnCancel__Q54nw4r3snd6detail10StrmPlayer18StrmHeaderLoadTaskFv
+.endobj lbl_8056E5B8
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C860
-float_8066C860:
+.balign 8
+
+.obj float_8066C860, global
 	.float 0
 	.4byte 0
+.endobj float_8066C860
 
 
-.global double_8066C868
-double_8066C868:
+.obj double_8066C868, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066C868
 
-.global double_8066C870
-double_8066C870:
+.obj double_8066C870, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066C870
 
-.global float_8066C878
-float_8066C878:
+.obj float_8066C878, global
 	.float 1.0
+.endobj float_8066C878
 
 
-.global float_8066C87C
-float_8066C87C:
+.obj float_8066C87C, global
 	.float 127 #0x42FE0000
+.endobj float_8066C87C
 
 
-.global float_8066C880
-float_8066C880:
+.obj float_8066C880, global
 	.float 63 #0x427C0000
 	.4byte 0
+.endobj float_8066C880
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
-sLoadBuffer__Q44nw4r3snd6detail10StrmPlayer:
+.obj sLoadBuffer__Q44nw4r3snd6detail10StrmPlayer, local
 	.skip 0x4000
+.endobj sLoadBuffer__Q44nw4r3snd6detail10StrmPlayer
 
-sLoadBufferMutex__Q44nw4r3snd6detail10StrmPlayer:
+.obj sLoadBufferMutex__Q44nw4r3snd6detail10StrmPlayer, local
 	.skip 0x18
+.endobj sLoadBufferMutex__Q44nw4r3snd6detail10StrmPlayer
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global sStaticInitFlag__Q44nw4r3snd6detail10StrmPlayer
-sStaticInitFlag__Q44nw4r3snd6detail10StrmPlayer:
+.balign 8
+
+.obj sStaticInitFlag__Q44nw4r3snd6detail10StrmPlayer, global
 	.skip 0x8
+.endobj sStaticInitFlag__Q44nw4r3snd6detail10StrmPlayer

@@ -1205,19 +1205,18 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CfObjectImplEne_typestr
-cf_CfObjectImplEne_typestr:
+.obj cf_CfObjectImplEne_typestr, global
 	.asciz "cf::CfObjectImplEne"
 	.4byte 0
+.endobj cf_CfObjectImplEne_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CfObjectImplEne
-__vt__cf_CfObjectImplEne:
+.obj __vt__cf_CfObjectImplEne, global
 	.4byte __RTTI__cf_CfObjectImplEne
 	.4byte 0
 	.4byte __dt__cf_CfObjectImplEne
@@ -1284,9 +1283,9 @@ __vt__cf_CfObjectImplEne:
 	.4byte func_800D10CC
 	.4byte func_800D0B04
 	.4byte func_800D1020
+.endobj __vt__cf_CfObjectImplEne
 
-.global cf_CfObjectImplEne_hierarchy
-cf_CfObjectImplEne_hierarchy:
+.obj cf_CfObjectImplEne_hierarchy, global
 	.4byte __RTTI__cf_IObjectInfo
 	.4byte 0x00000010
 	.4byte __RTTI__IActParamEvent
@@ -1297,60 +1296,61 @@ cf_CfObjectImplEne_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CfObjectImplEne_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80664640
-lbl_80664640:
+.obj lbl_80664640, global
 	.4byte lbl_806695A0
 	.4byte 0
+.endobj lbl_80664640
 
-.global __RTTI__cf_CfObjectImplEne
-__RTTI__cf_CfObjectImplEne:
+.obj __RTTI__cf_CfObjectImplEne, global
 	.4byte cf_CfObjectImplEne_typestr
 	.4byte cf_CfObjectImplEne_hierarchy
+.endobj __RTTI__cf_CfObjectImplEne
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_806695A0
-lbl_806695A0:
+.obj lbl_806695A0, global
 	.asciz "en0153"
 	.balign 4
+.endobj lbl_806695A0
 
 
-.global float_806695A8
-float_806695A8:
+.obj float_806695A8, global
 	.float 0.02 #0x3CA3D70A
+.endobj float_806695A8
 
 
-.global float_806695AC
-float_806695AC:
+.obj float_806695AC, global
 	.float 0
+.endobj float_806695AC
 
 
-.global float_806695B0
-float_806695B0:
+.obj float_806695B0, global
 	.float 20 #0x41A00000
+.endobj float_806695B0
 
 
-.global float_806695B4
-float_806695B4:
+.obj float_806695B4, global
 	.float 1.0
+.endobj float_806695B4
 
 
-.global float_806695B8
-float_806695B8:
+.obj float_806695B8, global
 	.float 0.52 #0x3F051EB8
+.endobj float_806695B8
 
 
-.global float_806695BC
-float_806695BC:
+.obj float_806695BC, global
 	.float 0.0245436933 #0x3CC90FDB
+.endobj float_806695BC
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

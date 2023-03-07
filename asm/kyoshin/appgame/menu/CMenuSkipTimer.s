@@ -636,27 +636,25 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-
-.global CMenuSkipTimer_typestr
-CMenuSkipTimer_typestr:
+.obj CMenuSkipTimer_typestr, global
 	.asciz "CMenuSkipTimer"
 	.balign 4
+.endobj CMenuSkipTimer_typestr
 
 
-.global lbl_8050BB30
-lbl_8050BB30:
+.obj lbl_8050BB30, global
 	.asciz "MNU_main"
 	.asciz "name"
 	.2byte 0
+.endobj lbl_8050BB30
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMenuSkipTimer
-__vt__CMenuSkipTimer:
+.obj __vt__CMenuSkipTimer, global
 	.4byte __RTTI__CMenuSkipTimer
 	.4byte 0
 	.4byte __dt__CMenuSkipTimer
@@ -671,9 +669,9 @@ __vt__CMenuSkipTimer:
 	.4byte func_8029F0A0
 	.4byte func_8029F098
 	.4byte func_8029ED40
+.endobj __vt__CMenuSkipTimer
 
-.global CMenuSkipTimer_hierarchy
-CMenuSkipTimer_hierarchy:
+.obj CMenuSkipTimer_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000058
 	.4byte __RTTI__CDoubleListNode
@@ -688,25 +686,25 @@ CMenuSkipTimer_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuSkipTimer_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-
-.global __RTTI__CMenuSkipTimer
-__RTTI__CMenuSkipTimer:
+.obj __RTTI__CMenuSkipTimer, global
 	.4byte CMenuSkipTimer_typestr
 	.4byte CMenuSkipTimer_hierarchy
+.endobj __RTTI__CMenuSkipTimer
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80667330
-lbl_80667330:
+.obj lbl_80667330, global
 	.skip 0x8
+.endobj lbl_80667330
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

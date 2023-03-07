@@ -984,8 +984,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_805466E0
-lbl_805466E0:
+.balign 8
+
+.obj lbl_805466E0, global
 	.asciz "HID_ERR_NOT_REGISTERED"
 	.balign 4
 	.asciz "HID_ERR_INVALID_PARAM"
@@ -1004,9 +1005,10 @@ lbl_805466E0:
 	.asciz "Security Registration 6 failed"
 	.balign 4
 	.4byte 0
+.endobj lbl_805466E0
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global hh_cb
-hh_cb:
+.obj hh_cb, global
 	.skip 0x408
+.endobj hh_cb

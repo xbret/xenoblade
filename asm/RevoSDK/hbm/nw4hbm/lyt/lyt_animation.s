@@ -855,34 +855,37 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-.global lbl_80518A28
-lbl_80518A28:
+
+.obj lbl_80518A28, global
 	.float -0.001 #0xBA83126F
+.endobj lbl_80518A28
 
 
-.global lbl_80518A2C
-lbl_80518A2C:
+.obj lbl_80518A2C, global
 	.4byte 0x3A83126F
 	.float 1.0
 	.float 2 #0x40000000
 	.4byte 0x40400000
 	.4byte 0xC0000000
+.endobj lbl_80518A2C
 
 
-.global lbl_80518A40
-lbl_80518A40:
+.obj lbl_80518A40, global
 	.4byte 0
+.endobj lbl_80518A40
 
 
-.global lbl_80518A44
-lbl_80518A44:
+.obj lbl_80518A44, global
 	.float 0.5
+.endobj lbl_80518A44
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8054D5B8
-lbl_8054D5B8:
+.balign 8
+
+.obj lbl_8054D5B8, global
 	.4byte lbl_8054D608
 	.4byte 0
 	.4byte __dt__Q36nw4hbm3lyt18AnimTransformBasicFv
@@ -891,30 +894,31 @@ lbl_8054D5B8:
 	.4byte Bind__Q36nw4hbm3lyt18AnimTransformBasicFPQ36nw4hbm3lyt8Material
 	.4byte Animate__Q36nw4hbm3lyt18AnimTransformBasicFUlPQ36nw4hbm3lyt4Pane
 	.4byte Animate__Q36nw4hbm3lyt18AnimTransformBasicFUlPQ36nw4hbm3lyt8Material
+.endobj lbl_8054D5B8
 
-.global lbl_8054D5D8
-lbl_8054D5D8:
+.obj lbl_8054D5D8, global
 	.asciz "nw4hbm::lyt::AnimTransformBasic"
+.endobj lbl_8054D5D8
 
-.global lbl_8054D5F8
-lbl_8054D5F8:
+.obj lbl_8054D5F8, global
 	.4byte lbl_8054D630
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8054D5F8
 
-.global lbl_8054D608
-lbl_8054D608:
+.obj lbl_8054D608, global
 	.4byte lbl_8054D5D8
 	.4byte lbl_8054D5F8
+.endobj lbl_8054D608
 
-.global lbl_8054D610
-lbl_8054D610:
+.obj lbl_8054D610, global
 	.asciz "nw4hbm::lyt::AnimTransform"
 	.balign 4
 	.4byte 0
+.endobj lbl_8054D610
 
-.global lbl_8054D630
-lbl_8054D630:
+.obj lbl_8054D630, global
 	.4byte lbl_8054D610
 	.4byte 0
+.endobj lbl_8054D630

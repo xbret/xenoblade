@@ -570,37 +570,36 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global _unnamed_CDesktop_cpp_CDesktopException_typestr
-_unnamed_CDesktop_cpp_CDesktopException_typestr:
+.obj _unnamed_CDesktop_cpp_CDesktopException_typestr, global
 	.asciz "@unnamed@CDesktop_cpp@::CDesktopException"
 	.balign 4
+.endobj _unnamed_CDesktop_cpp_CDesktopException_typestr
 
-.global _unnamed_CDesktop_cpp_CDesktopBackGround_typestr
-_unnamed_CDesktop_cpp_CDesktopBackGround_typestr:
+.obj _unnamed_CDesktop_cpp_CDesktopBackGround_typestr, global
 	.asciz "@unnamed@CDesktop_cpp@::CDesktopBackGround"
 	.balign 4
+.endobj _unnamed_CDesktop_cpp_CDesktopBackGround_typestr
 
-.global CDesktop_typestr
-CDesktop_typestr:
+.obj CDesktop_typestr, global
 	.asciz "CDesktop"
 	.balign 4
+.endobj CDesktop_typestr
 
 
-.global lbl_8052685C
-lbl_8052685C:
+.obj lbl_8052685C, global
 	.asciz "CDesktopBackGround"
 	.asciz "CDesktopException"
 	.balign 4
 	.4byte 0
+.endobj lbl_8052685C
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt___unnamed_CDesktop_cpp_CDesktopException
-__vt___unnamed_CDesktop_cpp_CDesktopException:
+.obj __vt___unnamed_CDesktop_cpp_CDesktopException, global
 	.4byte __RTTI___unnamed_CDesktop_cpp_CDesktopException
 	.4byte 0
 	.4byte __dt___unnamed_CDesktop_cpp_CDesktopException
@@ -641,9 +640,9 @@ __vt___unnamed_CDesktop_cpp_CDesktopException:
 	.4byte func_804396A0
 	.4byte func_804560AC
 	.4byte func_80039E30
+.endobj __vt___unnamed_CDesktop_cpp_CDesktopException
 
-.global _unnamed_CDesktop_cpp_CDesktopException_hierarchy
-_unnamed_CDesktop_cpp_CDesktopException_hierarchy:
+.obj _unnamed_CDesktop_cpp_CDesktopException_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
@@ -652,10 +651,10 @@ _unnamed_CDesktop_cpp_CDesktopException_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj _unnamed_CDesktop_cpp_CDesktopException_hierarchy
 
 
-.global __vt___unnamed_CDesktop_cpp_CDesktopBackGround
-__vt___unnamed_CDesktop_cpp_CDesktopBackGround:
+.obj __vt___unnamed_CDesktop_cpp_CDesktopBackGround, global
 	.4byte __RTTI___unnamed_CDesktop_cpp_CDesktopBackGround
 	.4byte 0
 	.4byte __dt___unnamed_CDesktop_cpp_CDesktopBackGround
@@ -696,9 +695,9 @@ __vt___unnamed_CDesktop_cpp_CDesktopBackGround:
 	.4byte func_804396A0
 	.4byte func_804560F0
 	.4byte func_80039E30
+.endobj __vt___unnamed_CDesktop_cpp_CDesktopBackGround
 
-.global _unnamed_CDesktop_cpp_CDesktopBackGround_hierarchy
-_unnamed_CDesktop_cpp_CDesktopBackGround_hierarchy:
+.obj _unnamed_CDesktop_cpp_CDesktopBackGround_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
@@ -707,10 +706,10 @@ _unnamed_CDesktop_cpp_CDesktopBackGround_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj _unnamed_CDesktop_cpp_CDesktopBackGround_hierarchy
 
 
-.global __vt__CDesktop
-__vt__CDesktop:
+.obj __vt__CDesktop, global
 	.4byte __RTTI__CDesktop
 	.4byte 0
 	.4byte __dt__CDesktop
@@ -751,9 +750,9 @@ __vt__CDesktop:
 	.4byte func_80455B38
 	.4byte func_80455DF4
 	.4byte func_80039E30
+.endobj __vt__CDesktop
 
-.global CDesktop_hierarchy
-CDesktop_hierarchy:
+.obj CDesktop_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
@@ -762,80 +761,86 @@ CDesktop_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CDesktop_hierarchy
 
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80666088
-lbl_80666088:
+.obj lbl_80666088, global
 	.4byte lbl_8066CC10
 	.4byte 0
+.endobj lbl_80666088
 
-.global __RTTI___unnamed_CDesktop_cpp_CDesktopException
-__RTTI___unnamed_CDesktop_cpp_CDesktopException:
+.obj __RTTI___unnamed_CDesktop_cpp_CDesktopException, global
 	.4byte _unnamed_CDesktop_cpp_CDesktopException_typestr
 	.4byte _unnamed_CDesktop_cpp_CDesktopException_hierarchy
+.endobj __RTTI___unnamed_CDesktop_cpp_CDesktopException
 
-.global __RTTI___unnamed_CDesktop_cpp_CDesktopBackGround
-__RTTI___unnamed_CDesktop_cpp_CDesktopBackGround:
+.obj __RTTI___unnamed_CDesktop_cpp_CDesktopBackGround, global
 	.4byte _unnamed_CDesktop_cpp_CDesktopBackGround_typestr
 	.4byte _unnamed_CDesktop_cpp_CDesktopBackGround_hierarchy
+.endobj __RTTI___unnamed_CDesktop_cpp_CDesktopBackGround
 
-.global __RTTI__CDesktop
-__RTTI__CDesktop:
+.obj __RTTI__CDesktop, global
 	.4byte CDesktop_typestr
 	.4byte CDesktop_hierarchy
+.endobj __RTTI__CDesktop
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_8066CC10
-lbl_8066CC10:
+.obj lbl_8066CC10, global
 	.asciz "Desktop"
+.endobj lbl_8066CC10
 
 
-.global float_8066CC18
-float_8066CC18:
+.obj float_8066CC18, global
 	.float 0.5
+.endobj float_8066CC18
 
 
-.global float_8066CC1C
-float_8066CC1C:
+.obj float_8066CC1C, global
 	.float 1.0
+.endobj float_8066CC1C
 
 
-.global float_8066CC20
-float_8066CC20:
+.obj float_8066CC20, global
 	.float 0
 	.4byte 0
+.endobj float_8066CC20
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+#.balign 8
 
+.obj lbl_80667F7C, global
+	.skip 0x4
+.endobj lbl_80667F7C
 
-.global lbl_80667F7C
-lbl_80667F7C:
+.obj CDesktop_startFunctionStruct, global
 	.skip 0x4
-.global CDesktop_startFunctionStruct
-CDesktop_startFunctionStruct:
+.endobj CDesktop_startFunctionStruct
+
+.obj lbl_80667F84, global
 	.skip 0x4
-.global lbl_80667F84
-lbl_80667F84:
+.endobj lbl_80667F84
+
+.obj lbl_80667F88, global
 	.skip 0x4
-.global lbl_80667F88
-lbl_80667F88:
+.endobj lbl_80667F88
+
+.obj lbl_80667F8C, global
 	.skip 0x4
-.global lbl_80667F8C
-lbl_80667F8C:
-	.skip 0x4
-.global lbl_80667F90
-lbl_80667F90:
+.endobj lbl_80667F8C
+
+.obj lbl_80667F90, global
 	.skip 0x8
+.endobj lbl_80667F90
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

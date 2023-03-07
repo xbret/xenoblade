@@ -789,8 +789,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lsc_strpool
-lsc_strpool:
+.balign 8
+
+.obj lsc_strpool, global
 	.asciz "E2005012801: Invalid parameter=sj (LSC_Create)\n"
 	.asciz "E2005012802: Not enough instance (LSC_Create)\n"
 	.asciz "E2005012807: Invalid parameter lsc=NULL\n"
@@ -815,12 +816,14 @@ lsc_strpool:
 	.asciz "E2005012822: Invalid parameter lsc=NULL\n"
 	.balign 4
 	.4byte 0
+.endobj lsc_strpool
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lsc_obj
-lsc_obj:
+.obj lsc_obj, global
 	.skip 0x4700
-.global lbl_805EFA80
-lbl_805EFA80:
+.endobj lsc_obj
+
+.obj lbl_805EFA80, global
 	.skip 0x10
+.endobj lbl_805EFA80

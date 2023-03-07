@@ -142,9 +142,13 @@
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-mCurrentFx__Q44nw4r3snd6detail8AxfxImpl:
-	.skip 0x4
 
-mAllocatedSize__Q44nw4r3snd6detail8AxfxImpl:
+.obj mCurrentFx__Q44nw4r3snd6detail8AxfxImpl, local
 	.skip 0x4
+.endobj mCurrentFx__Q44nw4r3snd6detail8AxfxImpl
+
+.obj mAllocatedSize__Q44nw4r3snd6detail8AxfxImpl, local
+	.skip 0x4
+.endobj mAllocatedSize__Q44nw4r3snd6detail8AxfxImpl

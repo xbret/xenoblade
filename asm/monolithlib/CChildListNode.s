@@ -46,41 +46,41 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global TChildListHeader_CChildListNode_typestr
-TChildListHeader_CChildListNode_typestr:
+.obj TChildListHeader_CChildListNode_typestr, global
 	.asciz "TChildListHeader<CChildListNode>"
 	.balign 4
 	.4byte 0
+.endobj TChildListHeader_CChildListNode_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CChildListNode
-__vt__CChildListNode:
+.obj __vt__CChildListNode, global
 	.4byte __RTTI__CChildListNode
 	.4byte 0
 	.4byte __dt__CChildListNode
 	.4byte CChildListNode_Reset
+.endobj __vt__CChildListNode
 
 
-.global __vt__TChildListHeader_CChildListNode
-__vt__TChildListHeader_CChildListNode:
+.obj __vt__TChildListHeader_CChildListNode, global
 	.4byte __RTTI__TChildListHeader_CChildListNode
 	.4byte 0
 	.4byte __dt__TChildListHeader_CChildListNode
 	.4byte 0
+.endobj __vt__TChildListHeader_CChildListNode
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__TChildListHeader_CChildListNode
-__RTTI__TChildListHeader_CChildListNode:
+.obj __RTTI__TChildListHeader_CChildListNode, global
 	.4byte TChildListHeader_CChildListNode_typestr
 	.4byte 0
+.endobj __RTTI__TChildListHeader_CChildListNode
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

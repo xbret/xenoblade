@@ -752,25 +752,31 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056CEC8
-lbl_8056CEC8:
+.balign 8
+
+.obj lbl_8056CEC8, global
 	.asciz "NodeTree"
 	.balign 4
 	.4byte 0
+.endobj lbl_8056CEC8
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665DA0
-lbl_80665DA0:
+.balign 8
+
+.obj lbl_80665DA0, global
 	.asciz "NodeMix"
+.endobj lbl_80665DA0
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C440
-float_8066C440:
+.balign 8
+
+.obj float_8066C440, global
 	.float 1.0
+.endobj float_8066C440
 
 
-.global float_8066C444
-float_8066C444:
+.obj float_8066C444, global
 	.4byte 0
+.endobj float_8066C444

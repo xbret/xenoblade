@@ -959,10 +959,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_80500218
-lbl_80500218:
+.obj lbl_80500218, global
 	.2byte 0x0064
 	.2byte 0x0065
 	.2byte 0x0066
@@ -970,29 +969,29 @@ lbl_80500218:
 	.2byte 0x006D
 	.2byte 0x006E
 	.4byte 0
+.endobj lbl_80500218
 
-.global cf_CPcEffect07_typestr
-cf_CPcEffect07_typestr:
+.obj cf_CPcEffect07_typestr, global
 	.asciz "cf::CPcEffect07"
+.endobj cf_CPcEffect07_typestr
 
-.global cf_IPcEffect_typestr
-cf_IPcEffect_typestr:
+.obj cf_IPcEffect_typestr, global
 	.asciz "cf::IPcEffect"
 	.balign 4
+.endobj cf_IPcEffect_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_80536EF0
-lbl_80536EF0:
+.obj lbl_80536EF0, global
 	.4byte 0x000000C8
 	.4byte 0x000000C9
 	.4byte 0x000000CA
+.endobj lbl_80536EF0
 
 
-.global __vt__cf_CPcEffect07
-__vt__cf_CPcEffect07:
+.obj __vt__cf_CPcEffect07, global
 	.4byte __RTTI__cf_CPcEffect07
 	.4byte 0
 	.4byte __dt__cf_CPcEffect07
@@ -1006,62 +1005,65 @@ __vt__cf_CPcEffect07:
 	.4byte func_801B20C8
 	.4byte func_801B21E0
 	.4byte func_801B2318
+.endobj __vt__cf_CPcEffect07
 
-.global cf_CPcEffect07_hierarchy
-cf_CPcEffect07_hierarchy:
+.obj cf_CPcEffect07_hierarchy, global
 	.4byte __RTTI__cf_IPcEffect
 	.4byte 0x00000004
 	.4byte 0
 	.4byte 0
+.endobj cf_CPcEffect07_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CPcEffect07
-__RTTI__cf_CPcEffect07:
+.obj __RTTI__cf_CPcEffect07, global
 	.4byte cf_CPcEffect07_typestr
 	.4byte cf_CPcEffect07_hierarchy
+.endobj __RTTI__cf_CPcEffect07
 
-.global __RTTI__cf_IPcEffect
-__RTTI__cf_IPcEffect:
+.obj __RTTI__cf_IPcEffect, global
 	.4byte cf_IPcEffect_typestr
 	.4byte 0
+.endobj __RTTI__cf_IPcEffect
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066A6A8
-float_8066A6A8:
+.obj float_8066A6A8, global
 	.float 0
+.endobj float_8066A6A8
 
 
-.global float_8066A6AC
-float_8066A6AC:
+.obj float_8066A6AC, global
 	.float 52 #0x42500000
+.endobj float_8066A6AC
 
 
-.global float_8066A6B0
-float_8066A6B0:
+.obj float_8066A6B0, global
 	.float 2 #0x40000000
+.endobj float_8066A6B0
 
 
-.global float_8066A6B4
-float_8066A6B4:
+.obj float_8066A6B4, global
 	.float 1.0
+.endobj float_8066A6B4
 
 
-.global double_8066A6B8
-double_8066A6B8:
+.obj double_8066A6B8, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066A6B8
+
+
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80666C88
-lbl_80666C88:
+.obj lbl_80666C88, global
 	.skip 0x8
+.endobj lbl_80666C88
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

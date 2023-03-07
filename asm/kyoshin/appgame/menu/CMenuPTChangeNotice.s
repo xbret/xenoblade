@@ -881,20 +881,19 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_8050B228
-lbl_8050B228:
+.obj lbl_8050B228, global
 	.asciz "/menu/PtChangeNotice.arc"
 	.balign 4
+.endobj lbl_8050B228
 
-.global CMenuPTChangeNotice_typestr
-CMenuPTChangeNotice_typestr:
+.obj CMenuPTChangeNotice_typestr, global
 	.asciz "CMenuPTChangeNotice"
+.endobj CMenuPTChangeNotice_typestr
 
 
-.global CMenuPTChangeNotice_strpool
-CMenuPTChangeNotice_strpool:
+.obj CMenuPTChangeNotice_strpool, global
 	.asciz "CMenuPTChangeNotice"
 	.asciz "arc"
 	.asciz "mf70_cf60_syswin15.brlyt"
@@ -920,13 +919,13 @@ CMenuPTChangeNotice_strpool:
 	.asciz "pic_gs%02d_fc"
 	.asciz "rlt_texture"
 	.balign 4
+.endobj CMenuPTChangeNotice_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMenuPTChangeNotice
-__vt__CMenuPTChangeNotice:
+.obj __vt__CMenuPTChangeNotice, global
 	.4byte __RTTI__CMenuPTChangeNotice
 	.4byte 0
 	.4byte __dt__CMenuPTChangeNotice
@@ -976,9 +975,9 @@ __vt__CMenuPTChangeNotice:
 	.4byte func_80293D80
 	.4byte func_80293AF0
 	.4byte func_8029348C
+.endobj __vt__CMenuPTChangeNotice
 
-.global CMenuPTChangeNotice_hierarchy
-CMenuPTChangeNotice_hierarchy:
+.obj CMenuPTChangeNotice_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000070
 	.4byte __RTTI__IWorkEvent
@@ -994,51 +993,52 @@ CMenuPTChangeNotice_hierarchy:
 	.4byte __RTTI__IUIWindow
 	.4byte 0
 	.4byte 0
+.endobj CMenuPTChangeNotice_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_806653F0
-lbl_806653F0:
+.obj lbl_806653F0, global
 	.4byte lbl_8050B228
 	.4byte 0
+.endobj lbl_806653F0
 
-.global __RTTI__CMenuPTChangeNotice
-__RTTI__CMenuPTChangeNotice:
+.obj __RTTI__CMenuPTChangeNotice, global
 	.4byte CMenuPTChangeNotice_typestr
 	.4byte CMenuPTChangeNotice_hierarchy
+.endobj __RTTI__CMenuPTChangeNotice
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B428
-float_8066B428:
+.obj float_8066B428, global
 	.float 4 #0x40800000
+.endobj float_8066B428
 
 
-.global float_8066B42C
-float_8066B42C:
+.obj float_8066B42C, global
 	.float 0
+.endobj float_8066B42C
 
 
-.global double_8066B430
-double_8066B430:
+.obj double_8066B430, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066B430
 
-.global float_8066B438
-float_8066B438:
+.obj float_8066B438, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066B438
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_806672F0
-lbl_806672F0:
+.obj lbl_806672F0, global
 	.skip 0x8
+.endobj lbl_806672F0
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

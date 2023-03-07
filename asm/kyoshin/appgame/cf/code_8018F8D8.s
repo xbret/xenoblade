@@ -3465,8 +3465,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80536008
-lbl_80536008:
+.balign 8
+
+.obj lbl_80536008, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_8018EFCC
@@ -3585,61 +3586,66 @@ lbl_80536008:
 	.4byte 0xFFFFFFFF
 	.4byte func_8018F164
 	.4byte 0
+.endobj lbl_80536008
 
-.global lbl_805361E0
-lbl_805361E0:
+.obj lbl_805361E0, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A64F8
 	.4byte 0
+.endobj lbl_805361E0
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066A330
-float_8066A330:
+.balign 8
+
+.obj float_8066A330, global
 	.float 0
+.endobj float_8066A330
 
 
-.global float_8066A334
-float_8066A334:
+.obj float_8066A334, global
 	.float 0.01 #0x3C23D70A
+.endobj float_8066A334
 
 
-.global float_8066A338
-float_8066A338:
+.obj float_8066A338, global
 	.float 0.00392156886 #0x3B808081
 	.4byte 0
+.endobj float_8066A338
 
 
-.global double_8066A340
-double_8066A340:
+.obj double_8066A340, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066A340
 
-.global float_8066A348
-float_8066A348:
+.obj float_8066A348, global
 	.float 10.0
+.endobj float_8066A348
 
 
-.global float_8066A34C
-float_8066A34C:
+.obj float_8066A34C, global
 	.float 1.0
+.endobj float_8066A34C
 
 
-.global float_8066A350
-float_8066A350:
+.obj float_8066A350, global
 	.float 2.5 #0x40200000
+.endobj float_8066A350
 
 
-.global float_8066A354
-float_8066A354:
+.obj float_8066A354, global
 	.float 100.0
+.endobj float_8066A354
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_80666BF0
-lbl_80666BF0:
+.balign 8
+
+.obj lbl_80666BF0, global
 	.skip 0x8
+.endobj lbl_80666BF0
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

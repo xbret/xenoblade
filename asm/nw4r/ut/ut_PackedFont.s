@@ -1421,10 +1421,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global jumptable_8056E8C8
-jumptable_8056E8C8:
+.obj jumptable_8056E8C8, global
 	.4byte .L_8042DE1C
 	.4byte .L_8042DE30
 	.4byte .L_8042DE44
@@ -1438,9 +1437,9 @@ jumptable_8056E8C8:
 	.4byte .L_8042DEAC
 	.4byte .L_8042DF38
 	.4byte .L_8042DEC0
+.endobj jumptable_8056E8C8
 
-.global lbl_8056E8FC
-lbl_8056E8FC:
+.obj lbl_8056E8FC, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r2ut10PackedFontFv
@@ -1464,9 +1463,12 @@ lbl_8056E8FC:
 	.4byte GetGlyph__Q34nw4r2ut10PackedFontCFPQ34nw4r2ut5GlyphUs
 	.4byte HasGlyph__Q44nw4r2ut6detail15ArchiveFontBaseCFUs
 	.4byte GetEncoding__Q44nw4r2ut6detail11ResFontBaseCFv
+.endobj lbl_8056E8FC
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global double_8066C938
-double_8066C938:
+.balign 8
+
+.obj double_8066C938, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066C938

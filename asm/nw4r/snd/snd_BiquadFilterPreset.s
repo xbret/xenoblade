@@ -212,8 +212,10 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-coefTable__Q44nw4r3snd6detail15BiquadFilterLpf:
+
+.obj coefTable__Q44nw4r3snd6detail15BiquadFilterLpf, local
 	.4byte 0x3AB37566
 	.4byte 0x3AB383B8
 	.4byte 0xC391371B
@@ -494,10 +496,10 @@ coefTable__Q44nw4r3snd6detail15BiquadFilterLpf:
 	.4byte 0xC25A0004
 	.4byte 0x00070004
 	.4byte 0x7DB0C241
+.endobj coefTable__Q44nw4r3snd6detail15BiquadFilterLpf
 
 
-.global coefTable__Q44nw4r3snd6detail15BiquadFilterHpf
-coefTable__Q44nw4r3snd6detail15BiquadFilterHpf:
+.obj coefTable__Q44nw4r3snd6detail15BiquadFilterHpf, global
 	.4byte 0x3BB58895
 	.4byte 0x3BB57E7B
 	.4byte 0xC17F3BAD
@@ -741,10 +743,10 @@ coefTable__Q44nw4r3snd6detail15BiquadFilterHpf:
 	.4byte 0x167BD30A
 	.4byte 0x167B0DC1
 	.4byte 0xEE800000
+.endobj coefTable__Q44nw4r3snd6detail15BiquadFilterHpf
 
 
-.global coefTable__Q44nw4r3snd6detail18BiquadFilterBpf512
-coefTable__Q44nw4r3snd6detail18BiquadFilterBpf512:
+.obj coefTable__Q44nw4r3snd6detail18BiquadFilterBpf512, global
 	.4byte 0x2EFA0000
 	.4byte 0xD10621D7
 	.4byte 0x1DF42E8F
@@ -1050,10 +1052,10 @@ coefTable__Q44nw4r3snd6detail18BiquadFilterBpf512:
 	.4byte 0xC5430244
 	.4byte 0x0000FDBC
 	.4byte 0x7ADFC488
+.endobj coefTable__Q44nw4r3snd6detail18BiquadFilterBpf512
 
 
-.global coefTable__Q44nw4r3snd6detail19BiquadFilterBpf1024
-coefTable__Q44nw4r3snd6detail19BiquadFilterBpf1024:
+.obj coefTable__Q44nw4r3snd6detail19BiquadFilterBpf1024, global
 	.4byte 0x2F040000
 	.4byte 0xD0FC21DE
 	.4byte 0x1E082E99
@@ -1287,9 +1289,10 @@ coefTable__Q44nw4r3snd6detail19BiquadFilterBpf1024:
 	.4byte 0x038A0000
 	.4byte 0xFC7676C8
 	.4byte 0xC7140000
+.endobj coefTable__Q44nw4r3snd6detail19BiquadFilterBpf1024
 
 
-coefTable__Q44nw4r3snd6detail19BiquadFilterBpf2048:
+.obj coefTable__Q44nw4r3snd6detail19BiquadFilterBpf2048, local
 	.4byte 0x3F420000
 	.4byte 0xC0BE0136
 	.4byte 0x3E833E8A
@@ -1523,59 +1526,64 @@ coefTable__Q44nw4r3snd6detail19BiquadFilterBpf2048:
 	.4byte 0x06B60000
 	.4byte 0xF94A6A89
 	.4byte 0xCD6C0000
+.endobj coefTable__Q44nw4r3snd6detail19BiquadFilterBpf2048
 
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global __vt__Q44nw4r3snd6detail19BiquadFilterBpf2048
-__vt__Q44nw4r3snd6detail19BiquadFilterBpf2048:
+.balign 8
+
+.obj __vt__Q44nw4r3snd6detail19BiquadFilterBpf2048, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q44nw4r3snd6detail19BiquadFilterBpf2048Fv
 	.4byte GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf2048CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
+.endobj __vt__Q44nw4r3snd6detail19BiquadFilterBpf2048
 
 
-.global __vt__Q44nw4r3snd6detail19BiquadFilterBpf1024
-__vt__Q44nw4r3snd6detail19BiquadFilterBpf1024:
+.obj __vt__Q44nw4r3snd6detail19BiquadFilterBpf1024, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q44nw4r3snd6detail19BiquadFilterBpf1024Fv
 	.4byte GetCoef__Q44nw4r3snd6detail19BiquadFilterBpf1024CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
+.endobj __vt__Q44nw4r3snd6detail19BiquadFilterBpf1024
 
 
-.global __vt__Q44nw4r3snd6detail18BiquadFilterBpf512
-__vt__Q44nw4r3snd6detail18BiquadFilterBpf512:
+.obj __vt__Q44nw4r3snd6detail18BiquadFilterBpf512, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q44nw4r3snd6detail18BiquadFilterBpf512Fv
 	.4byte GetCoef__Q44nw4r3snd6detail18BiquadFilterBpf512CFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
+.endobj __vt__Q44nw4r3snd6detail18BiquadFilterBpf512
 
 
-.global __vt__Q44nw4r3snd6detail15BiquadFilterHpf
-__vt__Q44nw4r3snd6detail15BiquadFilterHpf:
+.obj __vt__Q44nw4r3snd6detail15BiquadFilterHpf, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q44nw4r3snd6detail15BiquadFilterHpfFv
 	.4byte GetCoef__Q44nw4r3snd6detail15BiquadFilterHpfCFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
+.endobj __vt__Q44nw4r3snd6detail15BiquadFilterHpf
 
 
-.global __vt__Q44nw4r3snd6detail15BiquadFilterLpf
-__vt__Q44nw4r3snd6detail15BiquadFilterLpf:
+.obj __vt__Q44nw4r3snd6detail15BiquadFilterLpf, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q44nw4r3snd6detail15BiquadFilterLpfFv
 	.4byte GetCoef__Q44nw4r3snd6detail15BiquadFilterLpfCFifPQ44nw4r3snd20BiquadFilterCallback10BiquadCoef
+.endobj __vt__Q44nw4r3snd6detail15BiquadFilterLpf
 
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global double_8066C6F8
-double_8066C6F8:
-	.8byte 0x4330000080000000 #signed int to float constant
+.balign 8
 
-.global float_8066C700
-float_8066C700:
+.obj double_8066C6F8, global
+	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066C6F8
+
+.obj float_8066C700, global
 	.float 2 #0x40000000
 	.4byte 0
+.endobj float_8066C700

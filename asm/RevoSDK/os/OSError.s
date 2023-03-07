@@ -431,8 +431,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80551C50
-lbl_80551C50:
+.balign 8
+
+.obj lbl_80551C50, global
 	.asciz " in \"%s\" on line %d.\n"
 	.balign 4
 	.asciz "\nAddress:      Back Chain    LR Save\n"
@@ -459,20 +460,23 @@ lbl_80551C50:
 	.asciz "\nLast interrupt (%d): SRR0 = 0x%08x  TB = 0x%016llx\n"
 	.balign 4
 	.4byte 0
+.endobj lbl_80551C50
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global __OSFpscrEnableBits
-__OSFpscrEnableBits:
+.balign 8
+
+.obj __OSFpscrEnableBits, global
 	.4byte 0x000000F8
+.endobj __OSFpscrEnableBits
 
 
-.global lbl_80665B6C
-lbl_80665B6C:
+.obj lbl_80665B6C, global
 	.4byte 0x0A000000
+.endobj lbl_80665B6C
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global __OSErrorTable
-__OSErrorTable:
+.obj __OSErrorTable, global
 	.skip 0x50
+.endobj __OSErrorTable

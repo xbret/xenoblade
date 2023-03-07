@@ -540,14 +540,20 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-ShutdownFunctionInfo:
+.balign 8
+
+.obj ShutdownFunctionInfo, local
 	.4byte OnShutdown
 	.4byte 0x0000007F
 	.4byte 0
 	.4byte 0
+.endobj ShutdownFunctionInfo
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
+
 #@LOCAL@__OSInitMemoryProtection__Fv@initialized
-lbl_80667AA8:
+.obj lbl_80667AA8, local
 	.skip 0x8
+.endobj lbl_80667AA8

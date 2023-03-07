@@ -862,63 +862,62 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-
-.global float_8066C978
-float_8066C978:
+.obj float_8066C978, global
 	.float 0.5
+.endobj float_8066C978
 
 
-.global float_8066C97C
-float_8066C97C:
+.obj float_8066C97C, global
 	.float 40.7436638 #0x4222F983
+.endobj float_8066C97C
 
 
-.global float_8066C980
-float_8066C980:
+.obj float_8066C980, global
 	.float 1.0
+.endobj float_8066C980
 
 
-.global float_8066C984
-float_8066C984:
+.obj float_8066C984, global
 	.float -1.0
+.endobj float_8066C984
 
 
-.global float_8066C988
-float_8066C988:
+.obj float_8066C988, global
 	.float 0.0245436933 #0x3CC90FDB
+.endobj float_8066C988
 
 
-.global float_8066C98C
-float_8066C98C:
+.obj float_8066C98C, global
 	.float 0
+.endobj float_8066C98C
 
 
-.global float_8066C990
-float_8066C990:
+.obj float_8066C990, global
 	.float 40.7436638 #0x4222F983
+.endobj float_8066C990
 
 
-.global float_8066C994
-float_8066C994:
+.obj float_8066C994, global
 	.float -1.0
+.endobj float_8066C994
 
 
-.global float_8066C998
-float_8066C998:
+.obj float_8066C998, global
 	.float 1.0
+.endobj float_8066C998
 
 
-.global float_8066C99C
-float_8066C99C:
+.obj float_8066C99C, global
 	.float 0.0245436933 #0x3CC90FDB
+.endobj float_8066C99C
 
 
-.global float_8066C9A0
-float_8066C9A0:
+.obj float_8066C9A0, global
 	.float 0
 	.4byte 0
+.endobj float_8066C9A0
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

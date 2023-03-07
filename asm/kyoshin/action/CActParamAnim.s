@@ -10068,10 +10068,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CActParamAnim
-__vt__CActParamAnim:
+.obj __vt__CActParamAnim, global
 	.4byte __RTTI__CActParamAnim
 	.4byte 0
 	.4byte __dt__CActParamAnim
@@ -10133,355 +10132,356 @@ __vt__CActParamAnim:
 	.4byte func_80053164
 	.4byte func_8004FFBC
 	.4byte 0
+.endobj __vt__CActParamAnim
 
-.global CActParamAnim_hierarchy
-CActParamAnim_hierarchy:
+.obj CActParamAnim_hierarchy, global
 	.4byte __RTTI__IActParamShift
 	.4byte 0
 	.4byte 0
+.endobj CActParamAnim_hierarchy
 
 
-.global lbl_80529AF8
-lbl_80529AF8:
+.obj lbl_80529AF8, global
 	.asciz "AcosRad: Input is out of the domain."
 	.balign 4
+.endobj lbl_80529AF8
 
 
-.global lbl_80529B20
-lbl_80529B20:
+.obj lbl_80529B20, global
 	.asciz "triangular.h"
 	.balign 4
+.endobj lbl_80529B20
 
 
-.global lbl_80529B30
-lbl_80529B30:
+.obj lbl_80529B30, global
 	.asciz "FSqrt: Input is out of the domain."
 	.balign 4
+.endobj lbl_80529B30
 
 
-.global lbl_80529B54
-lbl_80529B54:
+.obj lbl_80529B54, global
 	.asciz "arithmetic.h"
 	.balign 4
 	.4byte 0
+.endobj lbl_80529B54
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CActParamAnim_typestr
-CActParamAnim_typestr:
+.obj CActParamAnim_typestr, global
 	.asciz "CActParamAnim"
 	.balign 4
+.endobj CActParamAnim_typestr
 
-.global IActParamShift_typestr
-IActParamShift_typestr:
+.obj IActParamShift_typestr, global
 	.asciz "IActParamShift"
 	.balign 4
+.endobj IActParamShift_typestr
 
-.global CActParamData_typestr
-CActParamData_typestr:
+.obj CActParamData_typestr, global
 	.asciz "CActParamData"
 	.balign 4
+.endobj CActParamData_typestr
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CActParamAnim
-__RTTI__CActParamAnim:
+.obj __RTTI__CActParamAnim, global
 	.4byte CActParamAnim_typestr
 	.4byte CActParamAnim_hierarchy
+.endobj __RTTI__CActParamAnim
 
-.global __RTTI__IActParamShift
-__RTTI__IActParamShift:
+.obj __RTTI__IActParamShift, global
 	.4byte IActParamShift_typestr
 	.4byte 0
+.endobj __RTTI__IActParamShift
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global float_80666648
-float_80666648:
+.obj float_80666648, global
 	.skip 0x8
+.endobj float_80666648
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_80668728
-float_80668728:
+.obj float_80668728, global
 	.float 9.8 #0x411CCCCD
+.endobj float_80668728
 
 
-.global float_8066872C
-float_8066872C:
+.obj float_8066872C, global
 	.float 1.0
+.endobj float_8066872C
 
 
-.global float_80668730
-float_80668730:
+.obj float_80668730, global
 	.float 0
+.endobj float_80668730
 
 
-.global float_80668734
-float_80668734:
+.obj float_80668734, global
 	.float 35 #0x420C0000
+.endobj float_80668734
 
 
-.global float_80668738
-float_80668738:
+.obj float_80668738, global
 	.float 14 #0x41600000
+.endobj float_80668738
 
 
-.global float_8066873C
-float_8066873C:
+.obj float_8066873C, global
 	.float 6.5
+.endobj float_8066873C
 
 
-.global float_80668740
-float_80668740:
+.obj float_80668740, global
 	.float 4 #0x40800000
+.endobj float_80668740
 
 
-.global float_80668744
-float_80668744:
+.obj float_80668744, global
 	.float 2 #0x40000000
+.endobj float_80668744
 
 
-.global float_80668748
-float_80668748:
+.obj float_80668748, global
 	.float 0.7 #0x3F333333
+.endobj float_80668748
 
 
-.global float_8066874C
-float_8066874C:
+.obj float_8066874C, global
 	.float 17 #0x41880000
+.endobj float_8066874C
 
 
-.global float_80668750
-float_80668750:
+.obj float_80668750, global
 	.float 30 #0x41F00000
+.endobj float_80668750
 
 
-.global float_80668754
-float_80668754:
+.obj float_80668754, global
 	.float 20 #0x41A00000
+.endobj float_80668754
 
 
-.global float_80668758
-float_80668758:
+.obj float_80668758, global
 	.float 1000 #0x447A0000
+.endobj float_80668758
 
 
-.global float_8066875C
-float_8066875C:
+.obj float_8066875C, global
 	.float 3600 #0x45610000
+.endobj float_8066875C
 
 
-.global float_80668760
-float_80668760:
+.obj float_80668760, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_80668760
 
 
-.global float_80668764
-float_80668764:
+.obj float_80668764, global
 	.float 0.0245436933 #0x3CC90FDB
+.endobj float_80668764
 
 
-.global float_80668768
-float_80668768:
+.obj float_80668768, global
 	.float 180 #0x43340000
+.endobj float_80668768
 
 
-.global float_8066876C
-float_8066876C:
+.obj float_8066876C, global
 	.float 40.7436638 #0x4222F983
+.endobj float_8066876C
 
 
-.global float_80668770
-float_80668770:
+.obj float_80668770, global
 	.float 0.450000018 #0x3EE66667
+.endobj float_80668770
 
 
-.global float_80668774
-float_80668774:
+.obj float_80668774, global
 	.float 5 #0x40A00000
+.endobj float_80668774
 
 
-.global double_80668778
-double_80668778:
+.obj double_80668778, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_80668778
 
-.global float_80668780
-float_80668780:
+.obj float_80668780, global
 	.float 10.0
+.endobj float_80668780
 
 
-.global float_80668784
-float_80668784:
+.obj float_80668784, global
 	.float 0.4 #0x3ECCCCCD
+.endobj float_80668784
 
 
-.global float_80668788
-float_80668788:
+.obj float_80668788, global
 	.float 1.2 #0x3F99999A
+.endobj float_80668788
 
 
-.global float_8066878C
-float_8066878C:
+.obj float_8066878C, global
 	.float -3 #0xC0400000
+.endobj float_8066878C
 
 
-.global float_80668790
-float_80668790:
+.obj float_80668790, global
 	.float 0.5
+.endobj float_80668790
 
 
-.global float_80668794
-float_80668794:
+.obj float_80668794, global
 	.float 0.002 #0x3B03126F
+.endobj float_80668794
 
 
-.global float_80668798
-float_80668798:
+.obj float_80668798, global
 	.float -0.01 #0xBC23D70A
+.endobj float_80668798
 
 
-.global float_8066879C
-float_8066879C:
+.obj float_8066879C, global
 	.float 1.1 #0x3F8CCCCD
+.endobj float_8066879C
 
 
-.global float_806687A0
-float_806687A0:
+.obj float_806687A0, global
 	.float 45 #0x42340000
+.endobj float_806687A0
 
 
-.global float_806687A4
-float_806687A4:
+.obj float_806687A4, global
 	.float 0.3 #0x3E99999A
+.endobj float_806687A4
 
 
-.global float_806687A8
-float_806687A8:
+.obj float_806687A8, global
 	.float -0.25 #0xBE800000
+.endobj float_806687A8
 
 
-.global float_806687AC
-float_806687AC:
+.obj float_806687AC, global
 	.float 0.25
+.endobj float_806687AC
 
 
-.global float_806687B0
-float_806687B0:
+.obj float_806687B0, global
 	.float 3 #0x40400000
+.endobj float_806687B0
 
 
-.global float_806687B4
-float_806687B4:
+.obj float_806687B4, global
 	.float -4 #0xC0800000
+.endobj float_806687B4
 
 
-.global float_806687B8
-float_806687B8:
+.obj float_806687B8, global
 	.float 0.9 #0x3F666666
+.endobj float_806687B8
 
 
-.global float_806687BC
-float_806687BC:
+.obj float_806687BC, global
 	.float -1.2 #0xBF99999A
+.endobj float_806687BC
 
 
-.global float_806687C0
-float_806687C0:
+.obj float_806687C0, global
 	.float -1.0
+.endobj float_806687C0
 
 
-.global float_806687C4
-float_806687C4:
+.obj float_806687C4, global
 	.float 16 #0x41800000
+.endobj float_806687C4
 
 
-.global float_806687C8
-float_806687C8:
+.obj float_806687C8, global
 	.float -0.1 #0xBDCCCCCD
+.endobj float_806687C8
 
 
-.global float_806687CC
-float_806687CC:
+.obj float_806687CC, global
 	.float -2 #0xC0000000
+.endobj float_806687CC
 
 
-.global float_806687D0
-float_806687D0:
+.obj float_806687D0, global
 	.float 0.95 #0x3F733333
+.endobj float_806687D0
 
 
-.global float_806687D4
-float_806687D4:
+.obj float_806687D4, global
 	.float -16 #0xC1800000
+.endobj float_806687D4
 
 
-.global float_806687D8
-float_806687D8:
+.obj float_806687D8, global
 	.float -20 #0xC1A00000
+.endobj float_806687D8
 
 
-.global float_806687DC
-float_806687DC:
+.obj float_806687DC, global
 	.float -90 #0xC2B40000
+.endobj float_806687DC
 
 
-.global float_806687E0
-float_806687E0:
+.obj float_806687E0, global
 	.float 90 #0x42B40000
+.endobj float_806687E0
 
 
-.global float_806687E4
-float_806687E4:
+.obj float_806687E4, global
 	.float 0.2
+.endobj float_806687E4
 
 
-.global float_806687E8
-float_806687E8:
+.obj float_806687E8, global
 	.float -0.9999 #0xBF7FF972
+.endobj float_806687E8
 
 
-.global float_806687EC
-float_806687EC:
+.obj float_806687EC, global
 	.float 120 #0x42F00000
+.endobj float_806687EC
 
 
-.global float_806687F0
-float_806687F0:
+.obj float_806687F0, global
 	.float -120 #0xC2F00000
+.endobj float_806687F0
 
 
-.global float_806687F4
-float_806687F4:
+.obj float_806687F4, global
 	.float 13.8888893 #0x415E38E4
+.endobj float_806687F4
 
 
-.global float_806687F8
-float_806687F8:
+.obj float_806687F8, global
 	.float 1.4 #0x3FB33333
+.endobj float_806687F8
 
 
-.global float_806687FC
-float_806687FC:
+.obj float_806687FC, global
 	.float 0.7071 #0x3F350481
+.endobj float_806687FC
 
 
-.global float_80668800
-float_80668800:
+.obj float_80668800, global
 	.float 1.11111111 #0x3F8E38E4
 	.4byte 0
+.endobj float_80668800
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

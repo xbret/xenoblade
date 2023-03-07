@@ -826,32 +826,30 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global reslist_unsigned_long_typestr
-reslist_unsigned_long_typestr:
+.obj reslist_unsigned_long_typestr, global
 	.asciz "reslist<unsigned long>"
 	.balign 4
+.endobj reslist_unsigned_long_typestr
 
-.global _reslist_base_unsigned_long_typestr
-_reslist_base_unsigned_long_typestr:
+.obj _reslist_base_unsigned_long_typestr, global
 	.asciz "_reslist_base<unsigned long>"
 	.balign 4
+.endobj _reslist_base_unsigned_long_typestr
 
 
-.global lbl_80525E18
-lbl_80525E18:
+.obj lbl_80525E18, global
 	.asciz "(View)"
 	.balign 4
+.endobj lbl_80525E18
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-
-.global __vt__CProc
-__vt__CProc:
+.obj __vt__CProc, global
 	.4byte __RTTI__CProc
 	.4byte 0
 	.4byte __dt__CProc
@@ -892,56 +890,57 @@ __vt__CProc:
 	.4byte func_804396A0
 	.4byte func_804396A4
 	.4byte func_80039E30
+.endobj __vt__CProc
 
 
-.global __vt__reslist_unsigned_long
-__vt__reslist_unsigned_long:
+.obj __vt__reslist_unsigned_long, global
 	.4byte __RTTI__reslist_unsigned_long
 	.4byte 0
 	.4byte __dt__reslist_unsigned_long
+.endobj __vt__reslist_unsigned_long
 
-.global reslist_unsigned_long_hierarchy
-reslist_unsigned_long_hierarchy:
+.obj reslist_unsigned_long_hierarchy, global
 	.4byte __RTTI___reslist_base_unsigned_long
 	.4byte 0
 	.4byte 0
+.endobj reslist_unsigned_long_hierarchy
 
 
-.global __vt___reslist_base_unsigned_long
-__vt___reslist_base_unsigned_long:
+.obj __vt___reslist_base_unsigned_long, global
 	.4byte __RTTI___reslist_base_unsigned_long
 	.4byte 0
 	.4byte __dt___reslist_base_unsigned_long
 	.4byte 0
+.endobj __vt___reslist_base_unsigned_long
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__reslist_unsigned_long
-__RTTI__reslist_unsigned_long:
+.obj __RTTI__reslist_unsigned_long, global
 	.4byte reslist_unsigned_long_typestr
 	.4byte reslist_unsigned_long_hierarchy
+.endobj __RTTI__reslist_unsigned_long
 
-.global __RTTI___reslist_base_unsigned_long
-__RTTI___reslist_base_unsigned_long:
+.obj __RTTI___reslist_base_unsigned_long, global
 	.4byte _reslist_base_unsigned_long_typestr
 	.4byte 0
+.endobj __RTTI___reslist_base_unsigned_long
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066CA78
-float_8066CA78:
+.obj float_8066CA78, global
 	.float 0.6 #0x3F19999A
 	.4byte 0
+.endobj float_8066CA78
 
 
-.global double_8066CA80
-double_8066CA80:
+.obj double_8066CA80, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066CA80
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -1671,16 +1671,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CfGimmickElv_typestr
-cf_CfGimmickElv_typestr:
+.obj cf_CfGimmickElv_typestr, global
 	.asciz "cf::CfGimmickElv"
 	.balign 4
+.endobj cf_CfGimmickElv_typestr
 
 
-.global CfGimmickElv_strpool
-CfGimmickElv_strpool:
+.obj CfGimmickElv_strpool, global
 	.asciz "mapObj"
 	.asciz "LIFTLOD"
 	.asciz "shtALOD"
@@ -1695,13 +1694,13 @@ CfGimmickElv_strpool:
 	.asciz "LODSTOP"
 	.balign 4
 	.4byte 0
+.endobj CfGimmickElv_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_80539020
-lbl_80539020:
+.obj lbl_80539020, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_8020B474
@@ -1726,10 +1725,10 @@ lbl_80539020:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_8020C274
+.endobj lbl_80539020
 
 
-.global __vt__cf_CfGimmickElv
-__vt__cf_CfGimmickElv:
+.obj __vt__cf_CfGimmickElv, global
 	.4byte __RTTI__cf_CfGimmickElv
 	.4byte 0
 	.4byte __dt__cf_CfGimmickElv
@@ -1739,69 +1738,70 @@ __vt__cf_CfGimmickElv:
 	.4byte func_801F4BF8
 	.4byte func_801F4C8C
 	.4byte func_8020B2E4
+.endobj __vt__cf_CfGimmickElv
 
-.global cf_CfGimmickElv_hierarchy
-cf_CfGimmickElv_hierarchy:
+.obj cf_CfGimmickElv_hierarchy, global
 	.4byte __RTTI__cf_IObjectInfo
 	.4byte 0
 	.4byte __RTTI__cf_CfGimmick
 	.4byte 0
 	.4byte 0
+.endobj cf_CfGimmickElv_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CfGimmickElv
-__RTTI__cf_CfGimmickElv:
+.obj __RTTI__cf_CfGimmickElv, global
 	.4byte cf_CfGimmickElv_typestr
 	.4byte cf_CfGimmickElv_hierarchy
+.endobj __RTTI__cf_CfGimmickElv
 
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066AC40
-float_8066AC40:
+.obj float_8066AC40, global
 	.float 0
+.endobj float_8066AC40
 
 
-.global float_8066AC44
-float_8066AC44:
+.obj float_8066AC44, global
 	.float 1.0
+.endobj float_8066AC44
 
 
-.global double_8066AC48
-double_8066AC48:
+.obj double_8066AC48, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066AC48
 
-.global float_8066AC50
-float_8066AC50:
+.obj float_8066AC50, global
 	.float 5 #0x40A00000
+.endobj float_8066AC50
 
 
-.global float_8066AC54
-float_8066AC54:
+.obj float_8066AC54, global
 	.float 30 #0x41F00000
+.endobj float_8066AC54
 
 
-.global float_8066AC58
-float_8066AC58:
+.obj float_8066AC58, global
 	.float 4 #0x40800000
+.endobj float_8066AC58
 
 
-.global float_8066AC5C
-float_8066AC5C:
+.obj float_8066AC5C, global
 	.float 200 #0x43480000
+.endobj float_8066AC5C
 
 
-.global float_8066AC60
-float_8066AC60:
+.obj float_8066AC60, global
 	.float 900 #0x44610000
 	.4byte 0
+.endobj float_8066AC60
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

@@ -1198,29 +1198,28 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMenuTutorialList_typestr
-CMenuTutorialList_typestr:
+.obj CMenuTutorialList_typestr, global
 	.asciz "CMenuTutorialList"
 	.balign 4
+.endobj CMenuTutorialList_typestr
 
 
-.global CMenuTutorialList_strpool
-CMenuTutorialList_strpool:
+.obj CMenuTutorialList_strpool, global
 	.asciz "MNU_main"
 	.asciz "name"
 	.asciz "MNU_ttrl"
 	.asciz "title"
 	.balign 4
 	.4byte 0
+.endobj CMenuTutorialList_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global jumptable_8053D9A8
-jumptable_8053D9A8:
+.obj jumptable_8053D9A8, global
 	.4byte .L_802AC354
 	.4byte .L_802AC360
 	.4byte .L_802AC36C
@@ -1229,10 +1228,10 @@ jumptable_8053D9A8:
 	.4byte .L_802AC390
 	.4byte .L_802AC39C
 	.4byte .L_802AC3A8
+.endobj jumptable_8053D9A8
 
 
-.global __vt__CMenuTutorialList
-__vt__CMenuTutorialList:
+.obj __vt__CMenuTutorialList, global
 	.4byte __RTTI__CMenuTutorialList
 	.4byte 0
 	.4byte __dt__CMenuTutorialList
@@ -1247,9 +1246,9 @@ __vt__CMenuTutorialList:
 	.4byte func_802ACBD4
 	.4byte func_802ACBCC
 	.4byte func_802AC3E4
+.endobj __vt__CMenuTutorialList
 
-.global CMenuTutorialList_hierarchy
-CMenuTutorialList_hierarchy:
+.obj CMenuTutorialList_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000058
 	.4byte __RTTI__CDoubleListNode
@@ -1264,42 +1263,43 @@ CMenuTutorialList_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuTutorialList_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuTutorialList
-__RTTI__CMenuTutorialList:
+.obj __RTTI__CMenuTutorialList, global
 	.4byte CMenuTutorialList_typestr
 	.4byte CMenuTutorialList_hierarchy
+.endobj __RTTI__CMenuTutorialList
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B670
-float_8066B670:
+.obj float_8066B670, global
 	.float 0
+.endobj float_8066B670
 
 
-.global float_8066B674
-float_8066B674:
+.obj float_8066B674, global
 	.float 1.0
+.endobj float_8066B674
 
 
-.global float_8066B678
-float_8066B678:
+.obj float_8066B678, global
 	.float 10.0
 	.4byte 0
+.endobj float_8066B678
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_806674D0
-lbl_806674D0:
+.obj lbl_806674D0, global
 	.skip 0x8
+.endobj lbl_806674D0
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

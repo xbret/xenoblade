@@ -7468,150 +7468,148 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-
-.global lbl_804FD2D0
-lbl_804FD2D0:
+.obj lbl_804FD2D0, global
 	.asciz "qst_name"
 	.balign 4
+.endobj lbl_804FD2D0
 
-.global lbl_804FD2DC
-lbl_804FD2DC:
+.obj lbl_804FD2DC, global
 	.asciz "percent_E"
 	.balign 4
+.endobj lbl_804FD2DC
 
-.global lbl_804FD2E8
-lbl_804FD2E8:
+.obj lbl_804FD2E8, global
 	.asciz "percent_D"
 	.balign 4
+.endobj lbl_804FD2E8
 
-.global lbl_804FD2F4
-lbl_804FD2F4:
+.obj lbl_804FD2F4, global
 	.asciz "percent_C"
 	.balign 4
+.endobj lbl_804FD2F4
 
-.global lbl_804FD300
-lbl_804FD300:
+.obj lbl_804FD300, global
 	.asciz "percent_B"
 	.balign 4
+.endobj lbl_804FD300
 
-.global lbl_804FD30C
-lbl_804FD30C:
+.obj lbl_804FD30C, global
 	.asciz "percent_A"
 	.balign 4
+.endobj lbl_804FD30C
 
-.global lbl_804FD318
-lbl_804FD318:
+.obj lbl_804FD318, global
 	.asciz "percent_S"
 	.balign 4
+.endobj lbl_804FD318
 
-.global lbl_804FD324
-lbl_804FD324:
+.obj lbl_804FD324, global
 	.asciz "jwl_skill1"
 	.balign 4
+.endobj lbl_804FD324
 
-.global lbl_804FD330
-lbl_804FD330:
+.obj lbl_804FD330, global
 	.asciz "crystal1"
 	.balign 4
+.endobj lbl_804FD330
 
-.global lbl_804FD33C
-lbl_804FD33C:
+.obj lbl_804FD33C, global
 	.asciz "crystal1Per"
+.endobj lbl_804FD33C
 
-.global lbl_804FD348
-lbl_804FD348:
+.obj lbl_804FD348, global
 	.asciz "wpn1_slot"
 	.balign 4
+.endobj lbl_804FD348
 
-.global lbl_804FD354
-lbl_804FD354:
+.obj lbl_804FD354, global
 	.asciz "uni_wpn1"
 	.balign 4
+.endobj lbl_804FD354
 
-.global lbl_804FD360
-lbl_804FD360:
+.obj lbl_804FD360, global
 	.asciz "uni_wpn1Per"
+.endobj lbl_804FD360
 
-.global lbl_804FD36C
-lbl_804FD36C:
+.obj lbl_804FD36C, global
 	.asciz "equip1Per"
 	.balign 4
+.endobj lbl_804FD36C
 
-.global lbl_804FD378
-lbl_804FD378:
+.obj lbl_804FD378, global
 	.asciz "equip1_slot"
+.endobj lbl_804FD378
 
-.global lbl_804FD384
-lbl_804FD384:
+.obj lbl_804FD384, global
 	.asciz "uni_equip1"
 	.balign 4
+.endobj lbl_804FD384
 
-.global lbl_804FD390
-lbl_804FD390:
+.obj lbl_804FD390, global
 	.asciz "uni_equip1Per"
 	.balign 4
+.endobj lbl_804FD390
 
-.global lbl_804FD3A0
-lbl_804FD3A0:
+.obj lbl_804FD3A0, global
 	.asciz "arts1Per"
 	.balign 4
+.endobj lbl_804FD3A0
 
-.global lbl_804FD3AC
-lbl_804FD3AC:
+.obj lbl_804FD3AC, global
 	.asciz "materia1"
 	.balign 4
+.endobj lbl_804FD3AC
 
-.global materia1PerString
-materia1PerString:
+.obj materia1PerString, global
 	.asciz "materia1Per"
+.endobj materia1PerString
 
-.global cf_ItemPurifyKessyouImpl_typestr
-cf_ItemPurifyKessyouImpl_typestr:
+.obj cf_ItemPurifyKessyouImpl_typestr, global
 	.asciz "cf::ItemPurifyKessyouImpl"
 	.balign 4
+.endobj cf_ItemPurifyKessyouImpl_typestr
 
-.global cf_ItemKessyouImpl_typestr
-cf_ItemKessyouImpl_typestr:
+.obj cf_ItemKessyouImpl_typestr, global
 	.asciz "cf::ItemKessyouImpl"
+.endobj cf_ItemKessyouImpl_typestr
 
-.global cf_ItemPurifyCrystalImpl_typestr
-cf_ItemPurifyCrystalImpl_typestr:
+.obj cf_ItemPurifyCrystalImpl_typestr, global
 	.asciz "cf::ItemPurifyCrystalImpl"
 	.balign 4
+.endobj cf_ItemPurifyCrystalImpl_typestr
 
-.global cf_ItemDropCrystalImpl_typestr
-cf_ItemDropCrystalImpl_typestr:
+.obj cf_ItemDropCrystalImpl_typestr, global
 	.asciz "cf::ItemDropCrystalImpl"
+.endobj cf_ItemDropCrystalImpl_typestr
 
-.global cf_ItemCrystalImpl_typestr
-cf_ItemCrystalImpl_typestr:
+.obj cf_ItemCrystalImpl_typestr, global
 	.asciz "cf::ItemCrystalImpl"
+.endobj cf_ItemCrystalImpl_typestr
 
-.global cf_ItemEquipImpl_typestr
-cf_ItemEquipImpl_typestr:
+.obj cf_ItemEquipImpl_typestr, global
 	.asciz "cf::ItemEquipImpl"
 	.balign 4
+.endobj cf_ItemEquipImpl_typestr
 
-.global cf_ItemConsImpl_typestr
-cf_ItemConsImpl_typestr:
+.obj cf_ItemConsImpl_typestr, global
 	.asciz "cf::ItemConsImpl"
 	.balign 4
+.endobj cf_ItemConsImpl_typestr
 
-.global cf_ItemDummyImpl_typestr
-cf_ItemDummyImpl_typestr:
+.obj cf_ItemDummyImpl_typestr, global
 	.asciz "cf::ItemDummyImpl"
 	.balign 4
+.endobj cf_ItemDummyImpl_typestr
 
-.global cf_ItemImpl_typestr
-cf_ItemImpl_typestr:
+.obj cf_ItemImpl_typestr, global
 	.asciz "cf::ItemImpl"
 	.balign 4
+.endobj cf_ItemImpl_typestr
 
 
-.global CItem_strpool
-CItem_strpool:
+.obj CItem_strpool, global
 	.asciz "drop_nml"
 	.asciz "drop_rar"
 	.asciz "drop_spr"
@@ -7652,13 +7650,13 @@ CItem_strpool:
 	.asciz "uni_equip_per"
 	.asciz "gimID"
 	.asciz "itm%dID"
+.endobj CItem_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_80532DF8
-lbl_80532DF8:
+.obj lbl_80532DF8, global
 	.4byte lbl_80669D68
 	.4byte lbl_80669D70
 	.4byte lbl_80669D78
@@ -7666,10 +7664,10 @@ lbl_80532DF8:
 	.4byte lbl_80669D88
 	.4byte lbl_80669D90
 	.4byte lbl_80669D98
+.endobj lbl_80532DF8
 
 
-.global lbl_80532E14
-lbl_80532E14:
+.obj lbl_80532E14, global
 	.4byte lbl_80669D68
 	.4byte lbl_80669DA0
 	.4byte lbl_80669DA8
@@ -7677,10 +7675,10 @@ lbl_80532E14:
 	.4byte lbl_80669DB8
 	.4byte lbl_80669DC0
 	.4byte lbl_80669DC8
+.endobj lbl_80532E14
 
 
-.global lbl_80532E30
-lbl_80532E30:
+.obj lbl_80532E30, global
 	.4byte lbl_80669D68
 	.4byte lbl_804FD2DC
 	.4byte lbl_804FD2E8
@@ -7688,10 +7686,10 @@ lbl_80532E30:
 	.4byte lbl_804FD300
 	.4byte lbl_804FD30C
 	.4byte lbl_804FD318
+.endobj lbl_80532E30
 
 
-.global lbl_80532E4C
-lbl_80532E4C:
+.obj lbl_80532E4C, global
 	.4byte lbl_80666AB0
 	.4byte lbl_80666AB8
 	.4byte lbl_80666AC0
@@ -7707,17 +7705,17 @@ lbl_80532E4C:
 	.4byte lbl_80666AB8
 	.4byte lbl_80666AB8
 	.4byte lbl_80666AD0
+.endobj lbl_80532E4C
 
 
-.global lbl_80532E88
-lbl_80532E88:
+.obj lbl_80532E88, global
 	.4byte 0x00030005
 	.4byte 0x00060007
 	.4byte 0x0008000B
+.endobj lbl_80532E88
 
 
-.global jumptable_80532E94
-jumptable_80532E94:
+.obj jumptable_80532E94, global
 	.4byte .L_80157BF0
 	.4byte .L_80157BF0
 	.4byte .L_80157AB4
@@ -7732,10 +7730,10 @@ jumptable_80532E94:
 	.4byte .L_80157B5C
 	.4byte .L_80157BC0
 	.4byte .L_80157BD8
+.endobj jumptable_80532E94
 
 
-.global jumptable_80532ECC
-jumptable_80532ECC:
+.obj jumptable_80532ECC, global
 	.4byte .L_80157CAC
 	.4byte .L_80157CAC
 	.4byte .L_80157CAC
@@ -7750,10 +7748,10 @@ jumptable_80532ECC:
 	.4byte .L_80157CAC
 	.4byte .L_80157CAC
 	.4byte .L_80157CAC
+.endobj jumptable_80532ECC
 
 
-.global jumptable_80532F04
-jumptable_80532F04:
+.obj jumptable_80532F04, global
 	.4byte .L_80157FC8
 	.4byte .L_80157FC8
 	.4byte .L_80157F8C
@@ -7769,10 +7767,10 @@ jumptable_80532F04:
 	.4byte .L_80157FBC
 	.4byte .L_80157FC4
 	.4byte 0
+.endobj jumptable_80532F04
 
 
-.global __vt__cf_ItemPurifyKessyouImpl
-__vt__cf_ItemPurifyKessyouImpl:
+.obj __vt__cf_ItemPurifyKessyouImpl, global
 	.4byte __RTTI__cf_ItemPurifyKessyouImpl
 	.4byte 0
 	.4byte func_8015B4BC
@@ -7813,19 +7811,19 @@ __vt__cf_ItemPurifyKessyouImpl:
 	.4byte func_8015B420
 	.4byte func_8015B414
 	.4byte func_8015B404
+.endobj __vt__cf_ItemPurifyKessyouImpl
 
-.global cf_ItemPurifyKessyouImpl_hierarchy
-cf_ItemPurifyKessyouImpl_hierarchy:
+.obj cf_ItemPurifyKessyouImpl_hierarchy, global
 	.4byte __RTTI__cf_ItemImpl
 	.4byte 0
 	.4byte __RTTI__cf_ItemKessyouImpl
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_ItemPurifyKessyouImpl_hierarchy
 
 
-.global __vt__cf_ItemKessyouImpl
-__vt__cf_ItemKessyouImpl:
+.obj __vt__cf_ItemKessyouImpl, global
 	.4byte __RTTI__cf_ItemKessyouImpl
 	.4byte 0
 	.4byte func_8015B4BC
@@ -7866,17 +7864,17 @@ __vt__cf_ItemKessyouImpl:
 	.4byte func_8015B420
 	.4byte func_8015B414
 	.4byte func_8015B404
+.endobj __vt__cf_ItemKessyouImpl
 
-.global cf_ItemKessyouImpl_hierarchy
-cf_ItemKessyouImpl_hierarchy:
+.obj cf_ItemKessyouImpl_hierarchy, global
 	.4byte __RTTI__cf_ItemImpl
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_ItemKessyouImpl_hierarchy
 
 
-.global __vt__cf_ItemPurifyCrystalImpl
-__vt__cf_ItemPurifyCrystalImpl:
+.obj __vt__cf_ItemPurifyCrystalImpl, global
 	.4byte __RTTI__cf_ItemPurifyCrystalImpl
 	.4byte 0
 	.4byte func_80155CB4
@@ -7917,19 +7915,19 @@ __vt__cf_ItemPurifyCrystalImpl:
 	.4byte func_801586D0
 	.4byte func_8015B53C
 	.4byte func_8015B538
+.endobj __vt__cf_ItemPurifyCrystalImpl
 
-.global cf_ItemPurifyCrystalImpl_hierarchy
-cf_ItemPurifyCrystalImpl_hierarchy:
+.obj cf_ItemPurifyCrystalImpl_hierarchy, global
 	.4byte __RTTI__cf_ItemImpl
 	.4byte 0
 	.4byte __RTTI__cf_ItemCrystalImpl
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_ItemPurifyCrystalImpl_hierarchy
 
 
-.global __vt__cf_ItemDropCrystalImpl
-__vt__cf_ItemDropCrystalImpl:
+.obj __vt__cf_ItemDropCrystalImpl, global
 	.4byte __RTTI__cf_ItemDropCrystalImpl
 	.4byte 0
 	.4byte func_80155CB4
@@ -7970,19 +7968,19 @@ __vt__cf_ItemDropCrystalImpl:
 	.4byte func_801586D0
 	.4byte func_8015B53C
 	.4byte func_8015B538
+.endobj __vt__cf_ItemDropCrystalImpl
 
-.global cf_ItemDropCrystalImpl_hierarchy
-cf_ItemDropCrystalImpl_hierarchy:
+.obj cf_ItemDropCrystalImpl_hierarchy, global
 	.4byte __RTTI__cf_ItemImpl
 	.4byte 0
 	.4byte __RTTI__cf_ItemCrystalImpl
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_ItemDropCrystalImpl_hierarchy
 
 
-.global __vt__cf_ItemCrystalImpl
-__vt__cf_ItemCrystalImpl:
+.obj __vt__cf_ItemCrystalImpl, global
 	.4byte __RTTI__cf_ItemCrystalImpl
 	.4byte 0
 	.4byte func_80155CB4
@@ -8023,17 +8021,17 @@ __vt__cf_ItemCrystalImpl:
 	.4byte func_801586D0
 	.4byte func_8015B53C
 	.4byte func_8015B538
+.endobj __vt__cf_ItemCrystalImpl
 
-.global cf_ItemCrystalImpl_hierarchy
-cf_ItemCrystalImpl_hierarchy:
+.obj cf_ItemCrystalImpl_hierarchy, global
 	.4byte __RTTI__cf_ItemImpl
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_ItemCrystalImpl_hierarchy
 
 
-.global __vt__cf_ItemEquipImpl
-__vt__cf_ItemEquipImpl:
+.obj __vt__cf_ItemEquipImpl, global
 	.4byte __RTTI__cf_ItemEquipImpl
 	.4byte 0
 	.4byte func_80155CB4
@@ -8074,17 +8072,17 @@ __vt__cf_ItemEquipImpl:
 	.4byte func_801586D0
 	.4byte func_8015B53C
 	.4byte func_8015B538
+.endobj __vt__cf_ItemEquipImpl
 
-.global cf_ItemEquipImpl_hierarchy
-cf_ItemEquipImpl_hierarchy:
+.obj cf_ItemEquipImpl_hierarchy, global
 	.4byte __RTTI__cf_ItemImpl
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_ItemEquipImpl_hierarchy
 
 
-.global __vt__cf_ItemConsImpl
-__vt__cf_ItemConsImpl:
+.obj __vt__cf_ItemConsImpl, global
 	.4byte __RTTI__cf_ItemConsImpl
 	.4byte 0
 	.4byte func_80155CB4
@@ -8125,17 +8123,17 @@ __vt__cf_ItemConsImpl:
 	.4byte func_801586D0
 	.4byte func_8015B53C
 	.4byte func_8015B538
+.endobj __vt__cf_ItemConsImpl
 
-.global cf_ItemConsImpl_hierarchy
-cf_ItemConsImpl_hierarchy:
+.obj cf_ItemConsImpl_hierarchy, global
 	.4byte __RTTI__cf_ItemImpl
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_ItemConsImpl_hierarchy
 
 
-.global __vt__cf_ItemDummyImpl
-__vt__cf_ItemDummyImpl:
+.obj __vt__cf_ItemDummyImpl, global
 	.4byte __RTTI__cf_ItemDummyImpl
 	.4byte 0
 	.4byte func_80155CB4
@@ -8176,370 +8174,404 @@ __vt__cf_ItemDummyImpl:
 	.4byte func_801586D0
 	.4byte func_8015B53C
 	.4byte func_8015B538
+.endobj __vt__cf_ItemDummyImpl
 
-.global cf_ItemDummyImpl_hierarchy
-cf_ItemDummyImpl_hierarchy:
+.obj cf_ItemDummyImpl_hierarchy, global
 	.4byte __RTTI__cf_ItemImpl
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_ItemDummyImpl_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80664B80
-lbl_80664B80:
+.obj lbl_80664B80, global
 	.4byte lbl_80669D60
+.endobj lbl_80664B80
 
 
-.global lbl_80664B84
-lbl_80664B84:
+.obj lbl_80664B84, global
 	.4byte lbl_804FD2D0
+.endobj lbl_80664B84
 
 
-.global lbl_80664B88
-lbl_80664B88:
+.obj lbl_80664B88, global
 	.4byte 0x141E2028
 	.4byte 0x505A5C63
+.endobj lbl_80664B88
 
 
-.global lbl_80664B90
-lbl_80664B90:
+.obj lbl_80664B90, global
 	.4byte lbl_804FD324
+.endobj lbl_80664B90
 
 
-.global lbl_80664B94
-lbl_80664B94:
+.obj lbl_80664B94, global
 	.4byte 0xFFFFFFFC
+.endobj lbl_80664B94
 
 
-.global lbl_80664B98
-lbl_80664B98:
+.obj lbl_80664B98, global
 	.4byte 0xFFFFFFFC
+.endobj lbl_80664B98
 
 
-.global lbl_80664B9C
-lbl_80664B9C:
+.obj lbl_80664B9C, global
 	.4byte lbl_804FD330
+.endobj lbl_80664B9C
 
 
-.global lbl_80664BA0
-lbl_80664BA0:
+.obj lbl_80664BA0, global
 	.4byte lbl_804FD33C
+.endobj lbl_80664BA0
 
 
-.global lbl_80664BA4
-lbl_80664BA4:
+.obj lbl_80664BA4, global
 	.4byte lbl_80669DD0
+.endobj lbl_80664BA4
 
 
-.global lbl_80664BA8
-lbl_80664BA8:
+.obj lbl_80664BA8, global
 	.4byte lbl_80669DD8
+.endobj lbl_80664BA8
 
 
-.global lbl_80664BAC
-lbl_80664BAC:
+.obj lbl_80664BAC, global
 	.4byte lbl_804FD348
+.endobj lbl_80664BAC
 
 
-.global lbl_80664BB0
-lbl_80664BB0:
+.obj lbl_80664BB0, global
 	.4byte lbl_804FD354
+.endobj lbl_80664BB0
 
 
-.global lbl_80664BB4
-lbl_80664BB4:
+.obj lbl_80664BB4, global
 	.4byte lbl_804FD360
+.endobj lbl_80664BB4
 
 
-.global lbl_80664BB8
-lbl_80664BB8:
+.obj lbl_80664BB8, global
 	.4byte lbl_80669DE0
+.endobj lbl_80664BB8
 
 
-.global lbl_80664BBC
-lbl_80664BBC:
+.obj lbl_80664BBC, global
 	.4byte lbl_804FD36C
+.endobj lbl_80664BBC
 
 
-.global lbl_80664BC0
-lbl_80664BC0:
+.obj lbl_80664BC0, global
 	.4byte lbl_804FD378
+.endobj lbl_80664BC0
 
 
-.global lbl_80664BC4
-lbl_80664BC4:
+.obj lbl_80664BC4, global
 	.4byte lbl_804FD384
+.endobj lbl_80664BC4
 
 
-.global lbl_80664BC8
-lbl_80664BC8:
+.obj lbl_80664BC8, global
 	.4byte lbl_804FD390
+.endobj lbl_80664BC8
 
 
-.global lbl_80664BCC
-lbl_80664BCC:
+.obj lbl_80664BCC, global
 	.4byte lbl_80669DE8
+.endobj lbl_80664BCC
 
 
-.global lbl_80664BD0
-lbl_80664BD0:
+.obj lbl_80664BD0, global
 	.4byte lbl_804FD3A0
+.endobj lbl_80664BD0
 
 
-.global lbl_80664BD4
-lbl_80664BD4:
+.obj lbl_80664BD4, global
 	.4byte lbl_804FD3AC
+.endobj lbl_80664BD4
 
 
-.global lbl_80664BD8
-lbl_80664BD8:
+.obj lbl_80664BD8, global
 	.4byte materia1PerString
 	.4byte 0
+.endobj lbl_80664BD8
 
 
-.global __RTTI__cf_ItemPurifyKessyouImpl
-__RTTI__cf_ItemPurifyKessyouImpl:
+.obj __RTTI__cf_ItemPurifyKessyouImpl, global
 	.4byte cf_ItemPurifyKessyouImpl_typestr
 	.4byte cf_ItemPurifyKessyouImpl_hierarchy
+.endobj __RTTI__cf_ItemPurifyKessyouImpl
 
-.global __RTTI__cf_ItemKessyouImpl
-__RTTI__cf_ItemKessyouImpl:
+.obj __RTTI__cf_ItemKessyouImpl, global
 	.4byte cf_ItemKessyouImpl_typestr
 	.4byte cf_ItemKessyouImpl_hierarchy
+.endobj __RTTI__cf_ItemKessyouImpl
 
-.global __RTTI__cf_ItemPurifyCrystalImpl
-__RTTI__cf_ItemPurifyCrystalImpl:
+.obj __RTTI__cf_ItemPurifyCrystalImpl, global
 	.4byte cf_ItemPurifyCrystalImpl_typestr
 	.4byte cf_ItemPurifyCrystalImpl_hierarchy
+.endobj __RTTI__cf_ItemPurifyCrystalImpl
 
-.global __RTTI__cf_ItemDropCrystalImpl
-__RTTI__cf_ItemDropCrystalImpl:
+.obj __RTTI__cf_ItemDropCrystalImpl, global
 	.4byte cf_ItemDropCrystalImpl_typestr
 	.4byte cf_ItemDropCrystalImpl_hierarchy
+.endobj __RTTI__cf_ItemDropCrystalImpl
 
-.global __RTTI__cf_ItemCrystalImpl
-__RTTI__cf_ItemCrystalImpl:
+.obj __RTTI__cf_ItemCrystalImpl, global
 	.4byte cf_ItemCrystalImpl_typestr
 	.4byte cf_ItemCrystalImpl_hierarchy
+.endobj __RTTI__cf_ItemCrystalImpl
 
-.global __RTTI__cf_ItemEquipImpl
-__RTTI__cf_ItemEquipImpl:
+.obj __RTTI__cf_ItemEquipImpl, global
 	.4byte cf_ItemEquipImpl_typestr
 	.4byte cf_ItemEquipImpl_hierarchy
+.endobj __RTTI__cf_ItemEquipImpl
 
-.global __RTTI__cf_ItemConsImpl
-__RTTI__cf_ItemConsImpl:
+.obj __RTTI__cf_ItemConsImpl, global
 	.4byte cf_ItemConsImpl_typestr
 	.4byte cf_ItemConsImpl_hierarchy
+.endobj __RTTI__cf_ItemConsImpl
 
-.global __RTTI__cf_ItemDummyImpl
-__RTTI__cf_ItemDummyImpl:
+.obj __RTTI__cf_ItemDummyImpl, global
 	.4byte cf_ItemDummyImpl_typestr
 	.4byte cf_ItemDummyImpl_hierarchy
+.endobj __RTTI__cf_ItemDummyImpl
 
-.global __RTTI__cf_ItemImpl
-__RTTI__cf_ItemImpl:
+.obj __RTTI__cf_ItemImpl, global
 	.4byte cf_ItemImpl_typestr
 	.4byte 0
+.endobj __RTTI__cf_ItemImpl
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_80669D60
-lbl_80669D60:
+.obj lbl_80669D60, global
 	.asciz "name"
 	.balign 4
+.endobj lbl_80669D60
 
-.global lbl_80669D68
-lbl_80669D68:
+.obj lbl_80669D68, global
 	.4byte 0
 	.4byte 0
+.endobj lbl_80669D68
 
-.global lbl_80669D70
-lbl_80669D70:
+.obj lbl_80669D70, global
 	.asciz "lower_E"
+.endobj lbl_80669D70
 
-.global lbl_80669D78
-lbl_80669D78:
+.obj lbl_80669D78, global
 	.asciz "lower_D"
+.endobj lbl_80669D78
 
-.global lbl_80669D80
-lbl_80669D80:
+.obj lbl_80669D80, global
 	.asciz "lower_C"
+.endobj lbl_80669D80
 
-.global lbl_80669D88
-lbl_80669D88:
+.obj lbl_80669D88, global
 	.asciz "lower_B"
+.endobj lbl_80669D88
 
-.global lbl_80669D90
-lbl_80669D90:
+.obj lbl_80669D90, global
 	.asciz "lower_A"
+.endobj lbl_80669D90
 
-.global lbl_80669D98
-lbl_80669D98:
+.obj lbl_80669D98, global
 	.asciz "lower_S"
+.endobj lbl_80669D98
 
-.global lbl_80669DA0
-lbl_80669DA0:
+.obj lbl_80669DA0, global
 	.asciz "upper_E"
+.endobj lbl_80669DA0
 
-.global lbl_80669DA8
-lbl_80669DA8:
+.obj lbl_80669DA8, global
 	.asciz "upper_D"
+.endobj lbl_80669DA8
 
-.global lbl_80669DB0
-lbl_80669DB0:
+.obj lbl_80669DB0, global
 	.asciz "upper_C"
+.endobj lbl_80669DB0
 
-.global lbl_80669DB8
-lbl_80669DB8:
+.obj lbl_80669DB8, global
 	.asciz "upper_B"
+.endobj lbl_80669DB8
 
-.global lbl_80669DC0
-lbl_80669DC0:
+.obj lbl_80669DC0, global
 	.asciz "upper_A"
+.endobj lbl_80669DC0
 
-.global lbl_80669DC8
-lbl_80669DC8:
+.obj lbl_80669DC8, global
 	.asciz "upper_S"
+.endobj lbl_80669DC8
 
-.global lbl_80669DD0
-lbl_80669DD0:
+.obj lbl_80669DD0, global
 	.asciz "wpn1"
 	.balign 4
+.endobj lbl_80669DD0
 
-.global lbl_80669DD8
-lbl_80669DD8:
+.obj lbl_80669DD8, global
 	.asciz "wpn1Per"
+.endobj lbl_80669DD8
 
-.global lbl_80669DE0
-lbl_80669DE0:
+.obj lbl_80669DE0, global
 	.asciz "equip1"
 	.balign 4
+.endobj lbl_80669DE0
 
-.global lbl_80669DE8
-lbl_80669DE8:
+.obj lbl_80669DE8, global
 	.asciz "arts1"
 	.balign 4
+.endobj lbl_80669DE8
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_80577610
-lbl_80577610:
+.obj lbl_80577610, global
 	.skip 0xD4
-.global lbl_805776E4
-lbl_805776E4:
+.endobj lbl_80577610
+
+.obj lbl_805776E4, global
 	.skip 0xD4
-.global lbl_805777B8
-lbl_805777B8:
+.endobj lbl_805776E4
+
+.obj lbl_805777B8, global
 	.skip 0x44
-.global lbl_805777FC
-lbl_805777FC:
+.endobj lbl_805777B8
+
+.obj lbl_805777FC, global
 	.skip 0x44
-.global lbl_80577840
-lbl_80577840:
+.endobj lbl_805777FC
+
+.obj lbl_80577840, global
 	.skip 0x48
+.endobj lbl_80577840
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80666AA8, global
+	.skip 0x4
+.endobj lbl_80666AA8
 
-.global lbl_80666AA8
-lbl_80666AA8:
+.obj lbl_80666AAC, global
 	.skip 0x4
-.global lbl_80666AAC
-lbl_80666AAC:
+.endobj lbl_80666AAC
+
+.obj lbl_80666AB0, global
 	.skip 0x4
-.global lbl_80666AB0
-lbl_80666AB0:
+.endobj lbl_80666AB0
+
+.obj lbl_80666AB4, global
 	.skip 0x4
-.global lbl_80666AB4
-lbl_80666AB4:
+.endobj lbl_80666AB4
+
+.obj lbl_80666AB8, global
 	.skip 0x4
-.global lbl_80666AB8
-lbl_80666AB8:
+.endobj lbl_80666AB8
+
+.obj lbl_80666ABC, global
 	.skip 0x4
-.global lbl_80666ABC
-lbl_80666ABC:
+.endobj lbl_80666ABC
+
+.obj lbl_80666AC0, global
 	.skip 0x4
-.global lbl_80666AC0
-lbl_80666AC0:
+.endobj lbl_80666AC0
+
+.obj lbl_80666AC4, global
 	.skip 0x4
-.global lbl_80666AC4
-lbl_80666AC4:
+.endobj lbl_80666AC4
+
+.obj lbl_80666AC8, global
 	.skip 0x4
-.global lbl_80666AC8
-lbl_80666AC8:
+.endobj lbl_80666AC8
+
+.obj lbl_80666ACC, global
 	.skip 0x4
-.global lbl_80666ACC
-lbl_80666ACC:
+.endobj lbl_80666ACC
+
+.obj lbl_80666AD0, global
 	.skip 0x4
-.global lbl_80666AD0
-lbl_80666AD0:
+.endobj lbl_80666AD0
+
+.obj lbl_80666AD4, global
 	.skip 0x4
-.global lbl_80666AD4
-lbl_80666AD4:
+.endobj lbl_80666AD4
+
+.obj lbl_80666AD8, global
 	.skip 0x4
-.global lbl_80666AD8
-lbl_80666AD8:
+.endobj lbl_80666AD8
+
+.obj lbl_80666ADC, global
 	.skip 0x4
-.global lbl_80666ADC
-lbl_80666ADC:
+.endobj lbl_80666ADC
+
+.obj lbl_80666AE0, global
 	.skip 0x4
-.global lbl_80666AE0
-lbl_80666AE0:
+.endobj lbl_80666AE0
+
+.obj lbl_80666AE4, global
 	.skip 0x4
-.global lbl_80666AE4
-lbl_80666AE4:
+.endobj lbl_80666AE4
+
+.obj lbl_80666AE8, global
 	.skip 0x4
-.global lbl_80666AE8
-lbl_80666AE8:
-	.skip 0x4
-.global lbl_80666AEC
-lbl_80666AEC:
+.endobj lbl_80666AE8
+
+.obj lbl_80666AEC, global
 	.skip 0x1
-.global lbl_80666AED
-lbl_80666AED:
+.endobj lbl_80666AEC
+
+.obj lbl_80666AED, global
 	.skip 0x1
-.global lbl_80666AEE
-lbl_80666AEE:
+.endobj lbl_80666AED
+
+.obj lbl_80666AEE, global
 	.skip 0x2
-.global lbl_80666AF0
-lbl_80666AF0:
+.endobj lbl_80666AEE
+
+.obj lbl_80666AF0, global
 	.skip 0x4
-.global lbl_80666AF4
-lbl_80666AF4:
+.endobj lbl_80666AF0
+
+.obj lbl_80666AF4, global
 	.skip 0x4
-.global lbl_80666AF8
-lbl_80666AF8:
+.endobj lbl_80666AF4
+
+.obj lbl_80666AF8, global
 	.skip 0x4
-.global lbl_80666AFC
-lbl_80666AFC:
+.endobj lbl_80666AF8
+
+.obj lbl_80666AFC, global
 	.skip 0x4
-.global lbl_80666B00
-lbl_80666B00:
+.endobj lbl_80666AFC
+
+.obj lbl_80666B00, global
 	.skip 0x4
-.global lbl_80666B04
-lbl_80666B04:
+.endobj lbl_80666B00
+
+.obj lbl_80666B04, global
 	.skip 0x4
-.global lbl_80666B08
-lbl_80666B08:
+.endobj lbl_80666B04
+
+.obj lbl_80666B08, global
 	.skip 0x4
-.global lbl_80666B0C
-lbl_80666B0C:
+.endobj lbl_80666B08
+
+.obj lbl_80666B0C, global
 	.skip 0x4
-.global lbl_80666B10
-lbl_80666B10:
+.endobj lbl_80666B0C
+
+.obj lbl_80666B10, global
 	.skip 0x4
-.global lbl_80666B14
-lbl_80666B14:
+.endobj lbl_80666B10
+
+.obj lbl_80666B14, global
 	.skip 0x4
+.endobj lbl_80666B14
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

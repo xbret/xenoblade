@@ -1254,18 +1254,19 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_80520B30
-lbl_80520B30:
+.balign 8
+
+.obj lbl_80520B30, global
 	.4byte 0
+.endobj lbl_80520B30
 
 
-.global lbl_80520B34
-lbl_80520B34:
+.obj lbl_80520B34, global
 	.float 1.164 #0x3F94FDF4
+.endobj lbl_80520B34
 
 
-.global double_80520B38
-double_80520B38:
+.obj double_80520B38, global
 	.4byte 0x43300000
 	.4byte 0x80000000
 	.4byte 0x3FF00000
@@ -1279,10 +1280,10 @@ double_80520B38:
 	.4byte 0x416FFFFF
 	.4byte 0xE0000000
 	.4byte 0xC1600000
+.endobj double_80520B38
 
 
-.global sfx_zmv_strpool
-sfx_zmv_strpool:
+.obj sfx_zmv_strpool, global
 	.asciz "ZMHDR"
 	.asciz "SFXINFE"
 	.asciz "ZMVFRM"
@@ -1301,9 +1302,10 @@ sfx_zmv_strpool:
 	.asciz "E05070813: please set pitch by mwPlyFxSetOutBufPitchHeight()."
 	.balign 4
 	.4byte 0
+.endobj sfx_zmv_strpool
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global sfxz_work
-sfxz_work:
+.obj sfxz_work, global
 	.skip 0x270
+.endobj sfxz_work

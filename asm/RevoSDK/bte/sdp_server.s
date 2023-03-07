@@ -925,12 +925,14 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_805494A8
-lbl_805494A8:
+.balign 8
+
+.obj lbl_805494A8, global
 	.asciz "SDP - server got unknown PDU: 0x%x"
 	.balign 4
+.endobj lbl_805494A8
 
 
-.global lbl_805494CC
-lbl_805494CC:
+.obj lbl_805494CC, global
 	.asciz "SDP - no buf for search rsp"
+.endobj lbl_805494CC

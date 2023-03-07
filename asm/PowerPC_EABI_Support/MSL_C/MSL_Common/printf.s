@@ -2719,8 +2719,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global jumptable_8053F590
-jumptable_8053F590:
+.balign 8
+
+.obj jumptable_8053F590, global
 	.4byte .L_802BF070
 	.4byte .L_802BF1C0
 	.4byte .L_802BF1C0
@@ -2777,9 +2778,9 @@ jumptable_8053F590:
 	.4byte .L_802BF1C0
 	.4byte .L_802BF1C0
 	.4byte .L_802BEFE0
+.endobj jumptable_8053F590
 
-.global jumptable_8053F670
-jumptable_8053F670:
+.obj jumptable_8053F670, global
 	.4byte .L_802C0A1C #%
 	.4byte .L_802C0A2C
 	.4byte .L_802C0A2C
@@ -2864,19 +2865,22 @@ jumptable_8053F670:
 	.4byte .L_802C0A2C
 	.4byte .L_802C0A2C
 	.4byte .L_802C05E4 #x
+.endobj jumptable_8053F670
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
-#needed to align MWRTTI.s
+
 .balign 8
-.global lbl_80665878
-lbl_80665878:
+#needed to align MWRTTI.s
+.obj lbl_80665878, global
 	.4byte 0
 	.4byte 0
+.endobj lbl_80665878
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8050D528
-lbl_8050D528:
+.balign 8
+
+.obj lbl_8050D528, global
 	.asciz "-INF"
 	.asciz "-inf"
 	.asciz "INF"
@@ -2886,9 +2890,12 @@ lbl_8050D528:
 	.asciz "NAN"
 	.asciz "nan"
 	.4byte 0
+.endobj lbl_8050D528
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global double_8066B870
-double_8066B870:
+.balign 8
+
+.obj double_8066B870, global
 	.8byte 0
+.endobj double_8066B870

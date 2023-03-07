@@ -2110,138 +2110,144 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CScnTexWorkMan_typestr
-CScnTexWorkMan_typestr:
+.obj CScnTexWorkMan_typestr, global
 	.asciz "CScnTexWorkMan"
 	.balign 4
+.endobj CScnTexWorkMan_typestr
 
 
-.global lbl_80527948
-lbl_80527948:
+.obj lbl_80527948, global
 	.asciz "CScnTexWorkMan"
 	.balign 4
+.endobj lbl_80527948
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CScnTexWorkMan
-__vt__CScnTexWorkMan:
+.obj __vt__CScnTexWorkMan, global
 	.4byte __RTTI__CScnTexWorkMan
 	.4byte 0
 	.4byte __dt__CScnTexWorkMan
 	.4byte func_80166630
 	.4byte func_80490310
 	.4byte func_80448A40
+.endobj __vt__CScnTexWorkMan
 
-.global CScnTexWorkMan_hierarchy
-CScnTexWorkMan_hierarchy:
+.obj CScnTexWorkMan_hierarchy, global
 	.4byte __RTTI__CDeviceVICb
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CScnTexWorkMan_hierarchy
 
 
-.global lbl_80572040
-lbl_80572040:
+.obj lbl_80572040, global
 	.asciz "NW4R:Failed assertion !((u32)p & 0x3)"
 	.balign 4
+.endobj lbl_80572040
 
 
-.global lbl_80572068
-lbl_80572068:
+.obj lbl_80572068, global
 	.asciz "g3d_resnode_ac.h"
 	.balign 4
+.endobj lbl_80572068
 
 
-.global lbl_8057207C
-lbl_8057207C:
+.obj lbl_8057207C, global
 	.asciz "%s::%s: Object not valid."
 	.balign 4
+.endobj lbl_8057207C
 
 
-.global lbl_80572098
-lbl_80572098:
+.obj lbl_80572098, global
 	.asciz "g3d_resnode_ac.h"
 	.balign 4
 	.4byte 0
+.endobj lbl_80572098
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_806662C8
-lbl_806662C8:
+.obj lbl_806662C8, global
 	.4byte 0xFFFFFFFF
+.endobj lbl_806662C8
 
 
-.global lbl_806662CC
-lbl_806662CC:
+.obj lbl_806662CC, global
 	.4byte 0xFFFFFFFF
+.endobj lbl_806662CC
 
-.global __RTTI__CScnTexWorkMan
-__RTTI__CScnTexWorkMan:
+.obj __RTTI__CScnTexWorkMan, global
 	.4byte CScnTexWorkMan_typestr
 	.4byte CScnTexWorkMan_hierarchy
+.endobj __RTTI__CScnTexWorkMan
 
 
-.global lbl_806662D8
-lbl_806662D8:
+.obj lbl_806662D8, global
 	.4byte 0x72656600
+.endobj lbl_806662D8
 
 
-.global lbl_806662DC
-lbl_806662DC:
+.obj lbl_806662DC, global
 	.4byte 0x72656600
+.endobj lbl_806662DC
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066D1C0
-float_8066D1C0:
+.obj float_8066D1C0, global
 	.float 0
+.endobj float_8066D1C0
 
 
-.global float_8066D1C4
-float_8066D1C4:
+.obj float_8066D1C4, global
 	.float 1000000 #0x49742400
+.endobj float_8066D1C4
 
 
-.global float_8066D1C8
-float_8066D1C8:
+.obj float_8066D1C8, global
 	.float -1000000 #0xC9742400
 	.4byte 0
+.endobj float_8066D1C8
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_806681C0, global
+	.skip 0x4
+.endobj lbl_806681C0
 
-.global lbl_806681C0
-lbl_806681C0:
+.obj lbl_806681C4, global
 	.skip 0x4
-.global lbl_806681C4
-lbl_806681C4:
+.endobj lbl_806681C4
+
+.obj lbl_806681C8, global
 	.skip 0x4
-.global lbl_806681C8
-lbl_806681C8:
+.endobj lbl_806681C8
+
+.obj lbl_806681CC, global
 	.skip 0x4
-.global lbl_806681CC
-lbl_806681CC:
+.endobj lbl_806681CC
+
+.obj lbl_806681D0, global
 	.skip 0x4
-.global lbl_806681D0
-lbl_806681D0:
+.endobj lbl_806681D0
+
+.obj lbl_806681D4, global
 	.skip 0x4
-.global lbl_806681D4
-lbl_806681D4:
-	.skip 0x4
-.global lbl_806681D8
-lbl_806681D8:
+.endobj lbl_806681D4
+
+.obj lbl_806681D8, global
 	.skip 0x8
+.endobj lbl_806681D8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

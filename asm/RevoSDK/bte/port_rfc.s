@@ -1451,140 +1451,142 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80548200
-lbl_80548200:
+.balign 8
+
+.obj lbl_80548200, global
 	.asciz "port_open_continue"
 	.balign 4
 	.asciz "port_open_continue no mx channel"
 	.balign 4
+.endobj lbl_80548200
 
 
-.global lbl_80548238
-lbl_80548238:
+.obj lbl_80548238, global
 	.asciz "PORT_StartCnf result:%d"
+.endobj lbl_80548238
 
 
-.global lbl_80548250
-lbl_80548250:
+.obj lbl_80548250, global
 	.asciz "PORT_StartCnf failed result:%d"
 	.balign 4
+.endobj lbl_80548250
 
 
-.global lbl_80548270
-lbl_80548270:
+.obj lbl_80548270, global
 	.asciz "PORT_StartInd"
 	.balign 4
+.endobj lbl_80548270
 
 
-.global lbl_80548280
-lbl_80548280:
+.obj lbl_80548280, global
 	.asciz "PORT_ParNegInd dlci:%d mtu:%d"
 	.balign 4
+.endobj lbl_80548280
 
 
-.global lbl_805482A0
-lbl_805482A0:
+.obj lbl_805482A0, global
 	.asciz "PORT_ParNegInd: port not found"
 	.balign 4
+.endobj lbl_805482A0
 
 
-.global lbl_805482C0
-lbl_805482C0:
+.obj lbl_805482C0, global
 	.asciz "PORT_ParNegCnf dlci:%d mtu:%d cl: %d k: %d"
 	.balign 4
+.endobj lbl_805482C0
 
 
-.global lbl_805482EC
-lbl_805482EC:
+.obj lbl_805482EC, global
 	.asciz "PORT_DlcEstablishInd dlci:%d mtu:%d"
+.endobj lbl_805482EC
 
 
-.global lbl_80548310
-lbl_80548310:
+.obj lbl_80548310, global
 	.asciz "PORT_DlcEstablishCnf dlci:%d mtu:%d result:%d"
 	.balign 4
+.endobj lbl_80548310
 
 
-.global lbl_80548340
-lbl_80548340:
+.obj lbl_80548340, global
 	.asciz "PORT_PortNegInd"
 	.asciz "PORT_PortNegCnf"
 	.asciz "PORT_PortNegCnf no port"
 	.asciz "PORT_PortNegCnf Control Already sent"
 	.balign 4
+.endobj lbl_80548340
 
 
-.global lbl_805483A0
-lbl_805483A0:
+.obj lbl_805483A0, global
 	.asciz "PORT_ControlInd"
+.endobj lbl_805483A0
 
 
-.global lbl_805483B0
-lbl_805483B0:
+.obj lbl_805483B0, global
 	.asciz "PORT_ControlInd DTR_DSR : %d, RTS_CTS : %d, RI : %d, DCD : %d"
 	.balign 4
+.endobj lbl_805483B0
 
 
-.global lbl_805483F0
-lbl_805483F0:
+.obj lbl_805483F0, global
 	.asciz "PORT_ControlCnf"
+.endobj lbl_805483F0
 
 
-.global lbl_80548400
-lbl_80548400:
+.obj lbl_80548400, global
 	.asciz "PORT_LineStatusInd"
 	.balign 4
+.endobj lbl_80548400
 
 
-.global lbl_80548414
-lbl_80548414:
+.obj lbl_80548414, global
 	.asciz "PORT_DlcReleaseInd"
 	.balign 4
+.endobj lbl_80548414
 
 
-.global lbl_80548428
-lbl_80548428:
+.obj lbl_80548428, global
 	.asciz "PORT_CloseInd"
 	.balign 4
+.endobj lbl_80548428
 
 
-.global lbl_80548438
-lbl_80548438:
+.obj lbl_80548438, global
 	.asciz "Port_TimeOutCloseMux"
 	.balign 4
+.endobj lbl_80548438
 
 
-.global lbl_80548450
-lbl_80548450:
+.obj lbl_80548450, global
 	.asciz "PORT_DataInd with data length %d"
 	.balign 4
+.endobj lbl_80548450
 
 
-.global lbl_80548474
-lbl_80548474:
+.obj lbl_80548474, global
 	.asciz "PORT_DataInd. Buffer over run. Dropping the buffer"
 	.balign 4
+.endobj lbl_80548474
 
 
-.global lbl_805484A8
-lbl_805484A8:
+.obj lbl_805484A8, global
 	.asciz "PORT_FlowInd fc:%d"
 	.balign 4
+.endobj lbl_805484A8
 
-.global lbl_805484BC
-lbl_805484BC:
+.obj lbl_805484BC, global
 	.asciz "Sending RFCOMM_DataReq"
 	.balign 4
+.endobj lbl_805484BC
 
 
-.global lbl_805484D4
-lbl_805484D4:
+.obj lbl_805484D4, global
 	.asciz "port_rfc_closed in OPENING state ignored"
 	.balign 4
+.endobj lbl_805484D4
 
 
-.global lbl_80548500
-lbl_80548500:
+.obj lbl_80548500, global
 	.asciz "port_rfc_closed state:%d sending events:%x"
 	.balign 4
 	.4byte 0
+.endobj lbl_80548500

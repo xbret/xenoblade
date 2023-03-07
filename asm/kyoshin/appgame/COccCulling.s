@@ -1381,74 +1381,74 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global COccCulling_typestr
-COccCulling_typestr:
+.obj COccCulling_typestr, global
 	.asciz "COccCulling"
+.endobj COccCulling_typestr
 
 
-.global lbl_804FF61C
-lbl_804FF61C:
+.obj lbl_804FF61C, global
 	.asciz "OCC_CULL"
 	.balign 4
+.endobj lbl_804FF61C
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__COccCulling
-__vt__COccCulling:
+.obj __vt__COccCulling, global
 	.4byte __RTTI__COccCulling
 	.4byte 0
 	.4byte __dt__COccCulling
 	.4byte 0
+.endobj __vt__COccCulling
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__COccCulling
-__RTTI__COccCulling:
+.obj __RTTI__COccCulling, global
 	.4byte COccCulling_typestr
 	.4byte 0
+.endobj __RTTI__COccCulling
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066A548
-float_8066A548:
+.obj float_8066A548, global
 	.float 1.0
+.endobj float_8066A548
 
 
-.global float_8066A54C
-float_8066A54C:
+.obj float_8066A54C, global
 	.float 0
+.endobj float_8066A54C
 
 
-.global float_8066A550
-float_8066A550:
+.obj float_8066A550, global
 	.float 40.7436638 #0x4222F983
+.endobj float_8066A550
 
 
-.global float_8066A554
-float_8066A554:
+.obj float_8066A554, global
 	.float -0.5 #0xBF000000
+.endobj float_8066A554
 
 
-.global float_8066A558
-float_8066A558:
+.obj float_8066A558, global
 	.float 0.5
 	.4byte 0
+.endobj float_8066A558
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_80578FE8
-lbl_80578FE8:
+.obj lbl_80578FE8, global
 	.skip 0x30
+.endobj lbl_80578FE8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

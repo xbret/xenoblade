@@ -14,8 +14,10 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
+
 #TODO: convert to floats
-__SrcTab12khz:
+.obj __SrcTab12khz, local
 	.4byte 0x3DC7B000
 	.4byte 0x3F4D5E00
 	.4byte 0x3DD01000
@@ -528,3 +530,4 @@ __SrcTab12khz:
 	.4byte 0x3DD01000
 	.4byte 0x3F4D5E00
 	.4byte 0x3DC7B000
+.endobj __SrcTab12khz

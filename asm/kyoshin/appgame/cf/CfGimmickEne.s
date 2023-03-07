@@ -1278,16 +1278,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CfGimmickEne_typestr
-cf_CfGimmickEne_typestr:
+.obj cf_CfGimmickEne_typestr, global
 	.asciz "cf::CfGimmickEne"
 	.balign 4
+.endobj cf_CfGimmickEne_typestr
 
 
-.global CfGimmickEne_strpool
-CfGimmickEne_strpool:
+.obj CfGimmickEne_strpool, global
 	.asciz "eneID"
 	.asciz "artID"
 	.asciz "state"
@@ -1302,13 +1301,13 @@ CfGimmickEne_strpool:
 	.asciz "endF"
 	.4byte 0
 	.byte 0x00
+.endobj CfGimmickEne_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8053B1D8
-lbl_8053B1D8:
+.obj lbl_8053B1D8, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_8026EA20
@@ -1327,18 +1326,18 @@ lbl_8053B1D8:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_8026F31C
+.endobj lbl_8053B1D8
 
 
-.global lbl_8053B220
-lbl_8053B220:
+.obj lbl_8053B220, global
 	.4byte lbl_8066B1F0
 	.4byte lbl_8066B1F8
 	.4byte lbl_8066B200
 	.4byte lbl_8066B208
+.endobj lbl_8053B220
 
 
-.global __vt__cf_CfGimmickEne
-__vt__cf_CfGimmickEne:
+.obj __vt__cf_CfGimmickEne, global
 	.4byte __RTTI__cf_CfGimmickEne
 	.4byte 0
 	.4byte __dt__cf_CfGimmickEne
@@ -1348,99 +1347,100 @@ __vt__cf_CfGimmickEne:
 	.4byte func_801F4BF8
 	.4byte func_801F4C8C
 	.4byte func_8026E5BC
+.endobj __vt__cf_CfGimmickEne
 
-.global cf_CfGimmickEne_hierarchy
-cf_CfGimmickEne_hierarchy:
+.obj cf_CfGimmickEne_hierarchy, global
 	.4byte __RTTI__cf_IObjectInfo
 	.4byte 0
 	.4byte __RTTI__cf_CfGimmick
 	.4byte 0
 	.4byte 0
+.endobj cf_CfGimmickEne_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_806652A8
-lbl_806652A8:
+.obj lbl_806652A8, global
 	.4byte lbl_8066B20C
 	.4byte 0
+.endobj lbl_806652A8
 
-.global __RTTI__cf_CfGimmickEne
-__RTTI__cf_CfGimmickEne:
+.obj __RTTI__cf_CfGimmickEne, global
 	.4byte cf_CfGimmickEne_typestr
 	.4byte cf_CfGimmickEne_hierarchy
+.endobj __RTTI__cf_CfGimmickEne
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_8066B1F0
-lbl_8066B1F0:
+.obj lbl_8066B1F0, global
 	.asciz "aLOD1"
 	.balign 4
+.endobj lbl_8066B1F0
 
-.global lbl_8066B1F8
-lbl_8066B1F8:
+.obj lbl_8066B1F8, global
 	.asciz "aType"
 	.balign 4
+.endobj lbl_8066B1F8
 
-.global lbl_8066B200
-lbl_8066B200:
+.obj lbl_8066B200, global
 	.asciz "aSpd"
 	.balign 4
+.endobj lbl_8066B200
 
-.global lbl_8066B208
-lbl_8066B208:
+.obj lbl_8066B208, global
 	.4byte 0x61434C00
+.endobj lbl_8066B208
 
-.global lbl_8066B20C
-lbl_8066B20C:
+.obj lbl_8066B20C, global
 	.4byte 0x636C3100
+.endobj lbl_8066B20C
 
 
-.global float_8066B210
-float_8066B210:
+.obj float_8066B210, global
 	.float 1.0
+.endobj float_8066B210
 
 
-.global float_8066B214
-float_8066B214:
+.obj float_8066B214, global
 	.float 0
+.endobj float_8066B214
 
 
-.global lbl_8066B218
-lbl_8066B218:
+.obj lbl_8066B218, global
 	.4byte 0xFFFFFFFF
+.endobj lbl_8066B218
 
 
-.global float_8066B21C
-float_8066B21C:
+.obj float_8066B21C, global
 	.float -100 #0xC2C80000
+.endobj float_8066B21C
 
 
-.global float_8066B220
-float_8066B220:
+.obj float_8066B220, global
 	.float 100.0
+.endobj float_8066B220
 
 
-.global float_8066B224
-float_8066B224:
+.obj float_8066B224, global
 	.float 0.01 #0x3C23D70A
+.endobj float_8066B224
 
 
-.global double_8066B228
-double_8066B228:
+.obj double_8066B228, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066B228
 
-.global float_8066B230
-float_8066B230:
+.obj float_8066B230, global
 	.float 255 #0x437F0000
+.endobj float_8066B230
 
 
-.global float_8066B234
-float_8066B234:
+.obj float_8066B234, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_8066B234
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

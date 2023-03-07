@@ -274,17 +274,18 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_805449A0
-lbl_805449A0:
+.balign 8
+
+.obj lbl_805449A0, global
 	.asciz "found kdev_cb[%d] hid_handle = %d "
 	.balign 4
 	.asciz "in_use ? [%d] kdev[%d].hid_handle = %d state = [%d]"
 	.asciz "bta_hh_find_cb:: index = %d while max = %d"
 	.balign 4
+.endobj lbl_805449A0
 
 
-.global lbl_80544A24
-lbl_80544A24:
+.obj lbl_80544A24, global
 	.asciz "subclass = 0x%2x"
 	.balign 4
 	.asciz "bta_hh_parse_keybd_rpt:  (report=%p, report_len=%d) called"
@@ -309,3 +310,4 @@ lbl_80544A24:
 	.asciz "*********************************************************"
 	.balign 4
 	.4byte 0
+.endobj lbl_80544A24

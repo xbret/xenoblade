@@ -1050,35 +1050,34 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CVS_THREAD_typestr
-cf_CVS_THREAD_typestr:
+.obj cf_CVS_THREAD_typestr, global
 	.asciz "cf::CVS_THREAD"
 	.balign 4
+.endobj cf_CVS_THREAD_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8053D088
-lbl_8053D088:
+.obj lbl_8053D088, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A13B8
+.endobj lbl_8053D088
 
-.global lbl_8053D094
-lbl_8053D094:
+.obj lbl_8053D094, global
 	.4byte 0
+.endobj lbl_8053D094
 
-.global lbl_8053D098
-lbl_8053D098:
+.obj lbl_8053D098, global
 	.4byte 0xFFFFFFFF
 	.4byte func_802A13B8
+.endobj lbl_8053D098
 
 
-.global __vt__cf_CVS_THREAD
-__vt__cf_CVS_THREAD:
+.obj __vt__cf_CVS_THREAD, global
 	.4byte __RTTI__cf_CVS_THREAD
 	.4byte 0
 	.4byte func_802A3B50
@@ -1087,10 +1086,10 @@ __vt__cf_CVS_THREAD:
 	.4byte func_802A1EA0
 	.4byte func_802A3740
 	.4byte 0
+.endobj __vt__cf_CVS_THREAD
 
 
-.global jumptable_8053D0C0
-jumptable_8053D0C0:
+.obj jumptable_8053D0C0, global
 	.4byte .L_802A4654
 	.4byte .L_802A4668
 	.4byte .L_802A467C
@@ -1101,39 +1100,40 @@ jumptable_8053D0C0:
 	.4byte .L_802A46E0
 	.4byte .L_802A46F4
 	.4byte 0
+.endobj jumptable_8053D0C0
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global float_806655A8
-float_806655A8:
+.obj float_806655A8, global
 	.float 1.0
+.endobj float_806655A8
 
 
-.global float_806655AC
-float_806655AC:
+.obj float_806655AC, global
 	.float 30 #0x41F00000
+.endobj float_806655AC
 
 
-.global float_806655B0
-float_806655B0:
+.obj float_806655B0, global
 	.float 1000 #0x447A0000
 	.4byte 0
+.endobj float_806655B0
 
-.global __RTTI__cf_CVS_THREAD
-__RTTI__cf_CVS_THREAD:
+.obj __RTTI__cf_CVS_THREAD, global
 	.4byte cf_CVS_THREAD_typestr
 	.4byte 0
+.endobj __RTTI__cf_CVS_THREAD
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B530
-float_8066B530:
+.obj float_8066B530, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066B530
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

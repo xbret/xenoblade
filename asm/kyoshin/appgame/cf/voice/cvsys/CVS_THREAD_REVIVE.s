@@ -392,38 +392,37 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CVS_THREAD_REVIVE_typestr
-cf_CVS_THREAD_REVIVE_typestr:
+.obj cf_CVS_THREAD_REVIVE_typestr, global
 	.asciz "cf::CVS_THREAD_REVIVE"
 	.balign 4
+.endobj cf_CVS_THREAD_REVIVE_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8053D428
-lbl_8053D428:
+.obj lbl_8053D428, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A87D4
+.endobj lbl_8053D428
 
-.global lbl_8053D434
-lbl_8053D434:
+.obj lbl_8053D434, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A8904
+.endobj lbl_8053D434
 
-.global lbl_8053D440
-lbl_8053D440:
+.obj lbl_8053D440, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A8A00
+.endobj lbl_8053D440
 
 
-.global __vt__cf_CVS_THREAD_REVIVE
-__vt__cf_CVS_THREAD_REVIVE:
+.obj __vt__cf_CVS_THREAD_REVIVE, global
 	.4byte __RTTI__cf_CVS_THREAD_REVIVE
 	.4byte 0
 	.4byte func_802A3B50
@@ -431,22 +430,23 @@ __vt__cf_CVS_THREAD_REVIVE:
 	.4byte func_802A8AC0
 	.4byte func_802A1EA0
 	.4byte func_802A3740
+.endobj __vt__cf_CVS_THREAD_REVIVE
 
-.global cf_CVS_THREAD_REVIVE_hierarchy
-cf_CVS_THREAD_REVIVE_hierarchy:
+.obj cf_CVS_THREAD_REVIVE_hierarchy, global
 	.4byte __RTTI__cf_CVS_THREAD
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CVS_THREAD_REVIVE_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CVS_THREAD_REVIVE
-__RTTI__cf_CVS_THREAD_REVIVE:
+.obj __RTTI__cf_CVS_THREAD_REVIVE, global
 	.4byte cf_CVS_THREAD_REVIVE_typestr
 	.4byte cf_CVS_THREAD_REVIVE_hierarchy
+.endobj __RTTI__cf_CVS_THREAD_REVIVE
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

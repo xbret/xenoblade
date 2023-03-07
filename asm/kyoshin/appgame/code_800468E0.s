@@ -5061,364 +5061,367 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_804F6480
-lbl_804F6480:
+.balign 8
+
+.obj lbl_804F6480, global
 	.asciz "getAwardFlagF16"
+.endobj lbl_804F6480
 
-.global lbl_804F6490
-lbl_804F6490:
+.obj lbl_804F6490, global
 	.asciz "addAwardFlagF16"
+.endobj lbl_804F6490
 
-.global lbl_804F64A0
-lbl_804F64A0:
+.obj lbl_804F64A0, global
 	.asciz "setAwardFlagF1"
 	.balign 4
+.endobj lbl_804F64A0
 
-.global lbl_804F64B0
-lbl_804F64B0:
+.obj lbl_804F64B0, global
 	.asciz "realtimeEventStart"
 	.balign 4
+.endobj lbl_804F64B0
 
-.global lbl_804F64C4
-lbl_804F64C4:
+.obj lbl_804F64C4, global
 	.asciz "realtimeEventPlay"
 	.balign 4
+.endobj lbl_804F64C4
 
-.global lbl_804F64D8
-lbl_804F64D8:
+.obj lbl_804F64D8, global
 	.asciz "realtimeEventEnd"
 	.balign 4
+.endobj lbl_804F64D8
 
-.global lbl_804F64EC
-lbl_804F64EC:
+.obj lbl_804F64EC, global
 	.asciz "waitRealtimeEvent"
 	.balign 4
+.endobj lbl_804F64EC
 
-.global lbl_804F6500
-lbl_804F6500:
+.obj lbl_804F6500, global
 	.asciz "checkEvent"
 	.balign 4
+.endobj lbl_804F6500
 
-.global lbl_804F650C
-lbl_804F650C:
+.obj lbl_804F650C, global
 	.asciz "clearEventSkip"
 	.balign 4
+.endobj lbl_804F650C
 
-.global lbl_804F651C
-lbl_804F651C:
+.obj lbl_804F651C, global
 	.asciz "isTalkEvent"
+.endobj lbl_804F651C
 
-.global lbl_804F6528
-lbl_804F6528:
+.obj lbl_804F6528, global
 	.asciz "isVisionEvent"
 	.balign 4
+.endobj lbl_804F6528
 
-.global lbl_804F6538
-lbl_804F6538:
+.obj lbl_804F6538, global
 	.asciz "onTalkEnd"
 	.balign 4
+.endobj lbl_804F6538
 
-.global lbl_804F6544
-lbl_804F6544:
+.obj lbl_804F6544, global
 	.asciz "fadeWait"
 	.balign 4
+.endobj lbl_804F6544
 
 
-.global lbl_804F6550
-lbl_804F6550:
+.obj lbl_804F6550, global
 	.asciz "eve"
 	.4byte 0
+.endobj lbl_804F6550
 
-.global lbl_804F6558
-lbl_804F6558:
+.obj lbl_804F6558, global
 	.asciz "setMapJumpArea"
 	.balign 4
+.endobj lbl_804F6558
 
-.global lbl_804F6568
-lbl_804F6568:
+.obj lbl_804F6568, global
 	.asciz "setMapJumpAreaBox"
 	.balign 4
+.endobj lbl_804F6568
 
-.global lbl_804F657C
-lbl_804F657C:
+.obj lbl_804F657C, global
 	.asciz "setWarpArea"
+.endobj lbl_804F657C
 
-.global lbl_804F6588
-lbl_804F6588:
+.obj lbl_804F6588, global
 	.asciz "setMapPreloadArea"
 	.balign 4
+.endobj lbl_804F6588
 
-.global lbl_804F659C
-lbl_804F659C:
+.obj lbl_804F659C, global
 	.asciz "setMapPreloadArea2"
 	.balign 4
+.endobj lbl_804F659C
 
-.global lbl_804F65B0
-lbl_804F65B0:
+.obj lbl_804F65B0, global
 	.asciz "setEventArea"
 	.balign 4
+.endobj lbl_804F65B0
 
-.global lbl_804F65C0
-lbl_804F65C0:
+.obj lbl_804F65C0, global
 	.asciz "delEventArea"
 	.balign 4
+.endobj lbl_804F65C0
 
-.global lbl_804F65D0
-lbl_804F65D0:
+.obj lbl_804F65D0, global
 	.asciz "setTownArea"
+.endobj lbl_804F65D0
 
-.global lbl_804F65DC
-lbl_804F65DC:
+.obj lbl_804F65DC, global
 	.asciz "setPopSheet"
+.endobj lbl_804F65DC
 
-.global lbl_804F65E8
-lbl_804F65E8:
+.obj lbl_804F65E8, global
 	.asciz "addPopID"
 	.balign 4
+.endobj lbl_804F65E8
 
-.global lbl_804F65F4
-lbl_804F65F4:
+.obj lbl_804F65F4, global
 	.asciz "setTimeSpeed"
 	.balign 4
+.endobj lbl_804F65F4
 
-.global lbl_804F6604
-lbl_804F6604:
+.obj lbl_804F6604, global
 	.asciz "changeWalker"
 	.balign 4
+.endobj lbl_804F6604
 
-.global lbl_804F6614
-lbl_804F6614:
+.obj lbl_804F6614, global
 	.asciz "eventStart"
 	.balign 4
+.endobj lbl_804F6614
 
-.global lbl_804F6620
-lbl_804F6620:
+.obj lbl_804F6620, global
 	.asciz "eventEnd"
 	.balign 4
+.endobj lbl_804F6620
 
-.global lbl_804F662C
-lbl_804F662C:
+.obj lbl_804F662C, global
 	.asciz "battleEventStart"
 	.balign 4
+.endobj lbl_804F662C
 
-.global lbl_804F6640
-lbl_804F6640:
+.obj lbl_804F6640, global
 	.asciz "setMapDispID"
 	.balign 4
+.endobj lbl_804F6640
 
-.global lbl_804F6650
-lbl_804F6650:
+.obj lbl_804F6650, global
 	.asciz "loadCfEvent"
+.endobj lbl_804F6650
 
-.global lbl_804F665C
-lbl_804F665C:
+.obj lbl_804F665C, global
 	.asciz "totalItem"
 	.balign 4
+.endobj lbl_804F665C
 
-.global lbl_804F6668
-lbl_804F6668:
+.obj lbl_804F6668, global
 	.asciz "equipItem"
 	.balign 4
+.endobj lbl_804F6668
 
-.global lbl_804F6674
-lbl_804F6674:
+.obj lbl_804F6674, global
 	.asciz "equipWeapon"
+.endobj lbl_804F6674
 
-.global lbl_804F6680
-lbl_804F6680:
+.obj lbl_804F6680, global
 	.asciz "getWeaponSlot"
 	.balign 4
+.endobj lbl_804F6680
 
-.global lbl_804F6690
-lbl_804F6690:
+.obj lbl_804F6690, global
 	.asciz "setWeaponSlot"
 	.balign 4
+.endobj lbl_804F6690
 
-.global lbl_804F66A0
-lbl_804F66A0:
+.obj lbl_804F66A0, global
 	.asciz "waitEventRes"
 	.balign 4
+.endobj lbl_804F66A0
 
-.global lbl_804F66B0
-lbl_804F66B0:
+.obj lbl_804F66B0, global
 	.asciz "waitCfEvent"
+.endobj lbl_804F66B0
 
-.global lbl_804F66BC
-lbl_804F66BC:
+.obj lbl_804F66BC, global
 	.asciz "isMainParty"
+.endobj lbl_804F66BC
 
-.global lbl_804F66C8
-lbl_804F66C8:
+.obj lbl_804F66C8, global
 	.asciz "isResvParty"
+.endobj lbl_804F66C8
 
-.global lbl_804F66D4
-lbl_804F66D4:
+.obj lbl_804F66D4, global
 	.asciz "addParty"
 	.balign 4
+.endobj lbl_804F66D4
 
-.global lbl_804F66E0
-lbl_804F66E0:
+.obj lbl_804F66E0, global
 	.asciz "delParty"
 	.balign 4
+.endobj lbl_804F66E0
 
-.global lbl_804F66EC
-lbl_804F66EC:
+.obj lbl_804F66EC, global
 	.asciz "makeParty"
 	.balign 4
+.endobj lbl_804F66EC
 
-.global lbl_804F66F8
-lbl_804F66F8:
+.obj lbl_804F66F8, global
 	.asciz "makeGuestParty"
 	.balign 4
+.endobj lbl_804F66F8
 
-.global lbl_804F6708
-lbl_804F6708:
+.obj lbl_804F6708, global
 	.asciz "applyPcPrm"
 	.balign 4
+.endobj lbl_804F6708
 
-.global lbl_804F6714
-lbl_804F6714:
+.obj lbl_804F6714, global
 	.asciz "setDispOffArea"
 	.balign 4
+.endobj lbl_804F6714
 
-.global lbl_804F6724
-lbl_804F6724:
+.obj lbl_804F6724, global
 	.asciz "setWeather"
 	.balign 4
+.endobj lbl_804F6724
 
-.global lbl_804F6730
-lbl_804F6730:
+.obj lbl_804F6730, global
 	.asciz "setWeatherArea"
 	.balign 4
+.endobj lbl_804F6730
 
-.global lbl_804F6740
-lbl_804F6740:
+.obj lbl_804F6740, global
 	.asciz "setGimmick"
 	.balign 4
+.endobj lbl_804F6740
 
-.global lbl_804F674C
-lbl_804F674C:
+.obj lbl_804F674C, global
 	.asciz "setElvGim"
 	.balign 4
+.endobj lbl_804F674C
 
-.global lbl_804F6758
-lbl_804F6758:
+.obj lbl_804F6758, global
 	.asciz "setActMapObj"
 	.balign 4
+.endobj lbl_804F6758
 
-.global lbl_804F6768
-lbl_804F6768:
+.obj lbl_804F6768, global
 	.asciz "getMapID"
 	.balign 4
+.endobj lbl_804F6768
 
-.global lbl_804F6774
-lbl_804F6774:
+.obj lbl_804F6774, global
 	.asciz "clearGimmickJump"
 	.balign 4
+.endobj lbl_804F6774
 
-.global lbl_804F6788
-lbl_804F6788:
+.obj lbl_804F6788, global
 	.asciz "partyMember"
 	.4byte 0
+.endobj lbl_804F6788
 
-.global lbl_804F6798
-lbl_804F6798:
+.obj lbl_804F6798, global
 	.asciz "clearPartyGauge"
+.endobj lbl_804F6798
 
-.global lbl_804F67A8
-lbl_804F67A8:
+.obj lbl_804F67A8, global
 	.asciz "partyWarp"
 	.balign 4
+.endobj lbl_804F67A8
 
-.global lbl_804F67B4
-lbl_804F67B4:
+.obj lbl_804F67B4, global
 	.asciz "setMoney"
 	.balign 4
+.endobj lbl_804F67B4
 
-.global lbl_804F67C0
-lbl_804F67C0:
+.obj lbl_804F67C0, global
 	.asciz "addMoney"
 	.balign 4
+.endobj lbl_804F67C0
 
-.global lbl_804F67CC
-lbl_804F67CC:
+.obj lbl_804F67CC, global
 	.asciz "isTimeSkip"
 	.balign 4
+.endobj lbl_804F67CC
 
-.global lbl_804F67D8
-lbl_804F67D8:
+.obj lbl_804F67D8, global
 	.asciz "delHoldBox"
 	.balign 4
+.endobj lbl_804F67D8
 
-.global lbl_804F67E4
-lbl_804F67E4:
+.obj lbl_804F67E4, global
 	.asciz "getWeaponID"
+.endobj lbl_804F67E4
 
-.global lbl_804F67F0
-lbl_804F67F0:
+.obj lbl_804F67F0, global
 	.asciz "clearTbox"
 	.balign 4
 	.4byte 0
+.endobj lbl_804F67F0
 
-.global lbl_804F6800
-lbl_804F6800:
+.obj lbl_804F6800, global
 	.asciz "setScheduleType"
+.endobj lbl_804F6800
 
-.global lbl_804F6810
-lbl_804F6810:
+.obj lbl_804F6810, global
 	.asciz "returnTitle"
+.endobj lbl_804F6810
 
-.global lbl_804F681C
-lbl_804F681C:
+.obj lbl_804F681C, global
 	.asciz "dispLoading"
+.endobj lbl_804F681C
 
-.global lbl_804F6828
-lbl_804F6828:
+.obj lbl_804F6828, global
 	.asciz "addItemLimit"
 	.balign 4
+.endobj lbl_804F6828
 
-.global lbl_804F6838
-lbl_804F6838:
+.obj lbl_804F6838, global
 	.asciz "clearItemLimit"
 	.balign 4
+.endobj lbl_804F6838
 
-.global lbl_804F6848
-lbl_804F6848:
+.obj lbl_804F6848, global
 	.asciz "clearEquipGem"
 	.balign 4
+.endobj lbl_804F6848
 
-.global lbl_804F6858
-lbl_804F6858:
+.obj lbl_804F6858, global
 	.asciz "setPcCtrl"
 	.balign 4
+.endobj lbl_804F6858
 
-.global lbl_804F6864
-lbl_804F6864:
+.obj lbl_804F6864, global
 	.asciz "setFieldVision"
 	.balign 4
+.endobj lbl_804F6864
 
-.global lbl_804F6874
-lbl_804F6874:
+.obj lbl_804F6874, global
 	.asciz "saveNamedCount"
 	.balign 4
+.endobj lbl_804F6874
 
 
-.global lbl_804F6884
-lbl_804F6884:
+.obj lbl_804F6884, global
 	.4byte 0x616D0070
 	.4byte 0x6D006366
 	.4byte 0x73000000
+.endobj lbl_804F6884
 
 
-.global lbl_804F6890
-lbl_804F6890:
+.obj lbl_804F6890, global
 	.asciz "math"
 	.balign 4
+.endobj lbl_804F6890
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80529740
-lbl_80529740:
+.balign 8
+
+.obj lbl_80529740, global
 	.4byte lbl_80668698
 	.4byte getFlag
 	.4byte lbl_806686A0
@@ -5459,10 +5462,10 @@ lbl_80529740:
 	.4byte fadeWait
 	.4byte 0
 	.4byte 0
+.endobj lbl_80529740
 
 
-.global lbl_805297E0
-lbl_805297E0:
+.obj lbl_805297E0, global
 	.4byte lbl_806686E8
 	.4byte mapJump
 	.4byte lbl_804F6558
@@ -5593,118 +5596,121 @@ lbl_805297E0:
 	.4byte saveNamedCount
 	.4byte 0
 	.4byte 0
+.endobj lbl_805297E0
 
 
-.global lbl_805299E8
-lbl_805299E8:
+.obj lbl_805299E8, global
 	.4byte lbl_80668720
 	.4byte random
 	.4byte 0
 	.4byte 0
+.endobj lbl_805299E8
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_80668690
-float_80668690:
+.balign 8
+
+.obj float_80668690, global
 	.float 0
+.endobj float_80668690
 
 
-.global float_80668694
-float_80668694:
+.obj float_80668694, global
 	.float 1.0
+.endobj float_80668694
 
-.global lbl_80668698
-lbl_80668698:
+.obj lbl_80668698, global
 	.asciz "getFlag"
+.endobj lbl_80668698
 
-.global lbl_806686A0
-lbl_806686A0:
+.obj lbl_806686A0, global
 	.asciz "setFlag"
+.endobj lbl_806686A0
 
-.global lbl_806686A8
-lbl_806686A8:
+.obj lbl_806686A8, global
 	.asciz "isEvent"
+.endobj lbl_806686A8
 
-.global lbl_806686B0
-lbl_806686B0:
+.obj lbl_806686B0, global
 	.asciz "onTalk"
 	.balign 4
+.endobj lbl_806686B0
 
-.global lbl_806686B8
-lbl_806686B8:
+.obj lbl_806686B8, global
 	.asciz "fadeIn"
 	.balign 4
+.endobj lbl_806686B8
 
-.global lbl_806686C0
-lbl_806686C0:
+.obj lbl_806686C0, global
 	.asciz "fadeOut"
+.endobj lbl_806686C0
 
 
-.global float_806686C8
-float_806686C8:
+.obj float_806686C8, global
 	.float 4096 #0x45800000
+.endobj float_806686C8
 
 
-.global float_806686CC
-float_806686CC:
+.obj float_806686CC, global
 	.float 360 #0x43B40000
+.endobj float_806686CC
 
 
-.global float_806686D0
-float_806686D0:
+.obj float_806686D0, global
 	.float 0.5
+.endobj float_806686D0
 
 
-.global float_806686D4
-float_806686D4:
+.obj float_806686D4, global
 	.float 4 #0x40800000
+.endobj float_806686D4
 
 
-.global double_806686D8
-double_806686D8:
+.obj double_806686D8, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_806686D8
 
-.global float_806686E0
-float_806686E0:
+.obj float_806686E0, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_806686E0
 
 
-.global float_806686E4
-float_806686E4:
+.obj float_806686E4, global
 	.float 0
+.endobj float_806686E4
 
-.global lbl_806686E8
-lbl_806686E8:
+.obj lbl_806686E8, global
 	.asciz "mapJump"
+.endobj lbl_806686E8
 
-.global lbl_806686F0
-lbl_806686F0:
+.obj lbl_806686F0, global
 	.asciz "delAttr"
+.endobj lbl_806686F0
 
-.global lbl_806686F8
-lbl_806686F8:
+.obj lbl_806686F8, global
 	.asciz "setMono"
+.endobj lbl_806686F8
 
-.global lbl_80668700
-lbl_80668700:
+.obj lbl_80668700, global
 	.asciz "addItem"
+.endobj lbl_80668700
 
-.global lbl_80668708
-lbl_80668708:
+.obj lbl_80668708, global
 	.asciz "delItem"
+.endobj lbl_80668708
 
-.global lbl_80668710
-lbl_80668710:
+.obj lbl_80668710, global
 	.asciz "setFade"
+.endobj lbl_80668710
 
-.global lbl_80668718
-lbl_80668718:
+.obj lbl_80668718, global
 	.asciz "waitPop"
+.endobj lbl_80668718
 
-.global lbl_80668720
-lbl_80668720:
+.obj lbl_80668720, global
 	.asciz "random"
 	.balign 4
+.endobj lbl_80668720
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

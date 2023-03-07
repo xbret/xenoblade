@@ -225,9 +225,10 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global __vt__8054ECD0
-__vt__8054ECD0:
+
+.obj __vt__8054ECD0, global
 	.4byte lbl_8054ED50
 	.4byte 0
 	.4byte __dt__Q36nw4hbm2ut7ResFontFv
@@ -250,48 +251,49 @@ __vt__8054ECD0:
 	.4byte GetCharWidths__Q46nw4hbm2ut6detail11ResFontBaseCFUs
 	.4byte GetGlyph__Q46nw4hbm2ut6detail11ResFontBaseCFPQ36nw4hbm2ut5GlyphUs
 	.4byte GetEncoding__Q46nw4hbm2ut6detail11ResFontBaseCFv
+.endobj __vt__8054ECD0
 
 #dol offset: 0x54ae28
-.global lbl_8054ED28
-lbl_8054ED28:
+.obj lbl_8054ED28, global
 	.asciz "nw4hbm::ut::ResFont"
+.endobj lbl_8054ED28
 
-.global lbl_8054ED3C
-lbl_8054ED3C:
+.obj lbl_8054ED3C, global
 	.4byte lbl_8054EDA8
 	.4byte 0
 	.4byte lbl_8054ED88
 	.4byte 0
 	.4byte 0
+.endobj lbl_8054ED3C
 
-.global lbl_8054ED50
-lbl_8054ED50:
+.obj lbl_8054ED50, global
 	.4byte lbl_8054ED28
 	.4byte lbl_8054ED3C
+.endobj lbl_8054ED50
 
-.global lbl_8054ED58
-lbl_8054ED58:
+.obj lbl_8054ED58, global
 	.asciz "nw4hbm::ut::detail::ResFontBase"
+.endobj lbl_8054ED58
 
-.global lbl_8054ED78
-lbl_8054ED78:
+.obj lbl_8054ED78, global
 	.4byte lbl_8054EDA8
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8054ED78
 
-.global lbl_8054ED88
-lbl_8054ED88:
+.obj lbl_8054ED88, global
 	.4byte lbl_8054ED58
 	.4byte lbl_8054ED78
+.endobj lbl_8054ED88
 
-.global lbl_8054ED90
-lbl_8054ED90:
+.obj lbl_8054ED90, global
 	.asciz "nw4hbm::ut::Font"
 	.balign 4
 	.4byte 0
+.endobj lbl_8054ED90
 
-.global lbl_8054EDA8
-lbl_8054EDA8:
+.obj lbl_8054EDA8, global
 	.4byte lbl_8054ED90
 	.4byte 0
+.endobj lbl_8054EDA8

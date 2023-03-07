@@ -170,20 +170,19 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CDeviceFontInfoRom_typestr
-CDeviceFontInfoRom_typestr:
+.obj CDeviceFontInfoRom_typestr, global
 	.asciz "CDeviceFontInfoRom"
 	.balign 4
 	.4byte 0
+.endobj CDeviceFontInfoRom_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CDeviceFontInfoRom
-__vt__CDeviceFontInfoRom:
+.obj __vt__CDeviceFontInfoRom, global
 	.4byte __RTTI__CDeviceFontInfoRom
 	.4byte 0
 	.4byte __dt__CDeviceFontInfoRom
@@ -199,31 +198,32 @@ __vt__CDeviceFontInfoRom:
 	.4byte func_804537A8
 	.4byte func_804537C0
 	.4byte func_804537D4
+.endobj __vt__CDeviceFontInfoRom
 
 
-.global CDeviceFontInfoRom_hierarchy
-CDeviceFontInfoRom_hierarchy:
+.obj CDeviceFontInfoRom_hierarchy, global
 	.4byte __RTTI__IDeviceFontInfo
 	.4byte 0
 	.4byte 0
+.endobj CDeviceFontInfoRom_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CDeviceFontInfoRom
-__RTTI__CDeviceFontInfoRom:
+.obj __RTTI__CDeviceFontInfoRom, global
 	.4byte CDeviceFontInfoRom_typestr
 	.4byte CDeviceFontInfoRom_hierarchy
+.endobj __RTTI__CDeviceFontInfoRom
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80667F60
-lbl_80667F60:
+.obj lbl_80667F60, global
 	.skip 0x8
+.endobj lbl_80667F60
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

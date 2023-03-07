@@ -3039,22 +3039,21 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_805033D0
-lbl_805033D0:
+.obj lbl_805033D0, global
 	.4byte 0x00000010
 	.4byte 0x00100000
 	.4byte 0x00200000
+.endobj lbl_805033D0
 
-.global CPartyStateWin_typestr
-CPartyStateWin_typestr:
+.obj CPartyStateWin_typestr, global
 	.asciz "CPartyStateWin"
 	.balign 4
+.endobj CPartyStateWin_typestr
 
 
-.global CPartyStateWin_strpool
-CPartyStateWin_strpool:
+.obj CPartyStateWin_strpool, global
 	.asciz "CPartyStateWin"
 	.asciz "CPartyStateScn"
 	.asciz "MNU_party"
@@ -3062,13 +3061,13 @@ CPartyStateWin_strpool:
 	.asciz "MNU_item"
 	.balign 4
 	.4byte 0
+.endobj CPartyStateWin_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global jumptable_80538A40
-jumptable_80538A40:
+.obj jumptable_80538A40, global
 	.4byte .L_801FA370
 	.4byte .L_801FA378
 	.4byte .L_801FA380
@@ -3090,10 +3089,10 @@ jumptable_80538A40:
 	.4byte .L_801FA450
 	.4byte .L_801FA458
 	.4byte .L_801FA460
+.endobj jumptable_80538A40
 
 
-.global __vt__CPartyStateWin
-__vt__CPartyStateWin:
+.obj __vt__CPartyStateWin, global
 	.4byte __RTTI__CPartyStateWin
 	.4byte 0
 	.4byte __dt__CPartyStateWin
@@ -3133,49 +3132,48 @@ __vt__CPartyStateWin:
 	.4byte func_801FBDC0
 	.4byte func_801FBDB8
 	.4byte func_801FBCFC
+.endobj __vt__CPartyStateWin
 
-.global CPartyStateWin_hierarchy
-CPartyStateWin_hierarchy:
+.obj CPartyStateWin_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000004
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CPartyStateWin_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CPartyStateWin
-__RTTI__CPartyStateWin:
+.obj __RTTI__CPartyStateWin, global
 	.4byte CPartyStateWin_typestr
 	.4byte CPartyStateWin_hierarchy
+.endobj __RTTI__CPartyStateWin
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-
-
-.global float_8066AA98
-float_8066AA98:
+.obj float_8066AA98, global
 	.float 0
+.endobj float_8066AA98
 
 
-.global float_8066AA9C
-float_8066AA9C:
+.obj float_8066AA9C, global
 	.float 1.0
+.endobj float_8066AA9C
 
 
-.global float_8066AAA0
-float_8066AAA0:
+.obj float_8066AAA0, global
 	.float 10.0
+.endobj float_8066AAA0
 
 
-.global lbl_8066AAA4
-lbl_8066AAA4:
+.obj lbl_8066AAA4, global
 	.4byte 0x10121113
+.endobj lbl_8066AAA4
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

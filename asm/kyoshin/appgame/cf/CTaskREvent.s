@@ -2789,10 +2789,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_804FDD20
-lbl_804FDD20:
+.obj lbl_804FDD20, global
 	.4byte 0x00003E80
 	.4byte 0
 	.4byte 0x00004A38
@@ -2803,18 +2802,18 @@ lbl_804FDD20:
 	.4byte 0x00000168
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+.endobj lbl_804FDD20
 
-.global lbl_804FDD48
-lbl_804FDD48:
+.obj lbl_804FDD48, global
 	.4byte 0x00003E80
 	.4byte 0
 	.4byte 0x00004268
 	.4byte 0x00000168
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+.endobj lbl_804FDD48
 
-.global lbl_804FDD60
-lbl_804FDD60:
+.obj lbl_804FDD60, global
 	.4byte 0x00003E80
 	.4byte 0
 	.4byte 0x00004A38
@@ -2825,9 +2824,9 @@ lbl_804FDD60:
 	.4byte 0x0000012C
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+.endobj lbl_804FDD60
 
-.global lbl_804FDD88
-lbl_804FDD88:
+.obj lbl_804FDD88, global
 	.4byte 0x00004268
 	.4byte 0
 	.4byte 0x00004A38
@@ -2838,9 +2837,9 @@ lbl_804FDD88:
 	.4byte 0x0000012C
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+.endobj lbl_804FDD88
 
-.global lbl_804FDDB0
-lbl_804FDDB0:
+.obj lbl_804FDDB0, global
 	.4byte 0x00004268
 	.4byte 0
 	.4byte 0x00004A38
@@ -2851,9 +2850,9 @@ lbl_804FDDB0:
 	.4byte 0x0000012C
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+.endobj lbl_804FDDB0
 
-.global lbl_804FDDD8
-lbl_804FDDD8:
+.obj lbl_804FDDD8, global
 	.4byte 0x00003A98
 	.4byte 0
 	.4byte 0x00004A38
@@ -2864,9 +2863,9 @@ lbl_804FDDD8:
 	.4byte 0x000000F0
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+.endobj lbl_804FDDD8
 
-.global lbl_804FDE00
-lbl_804FDE00:
+.obj lbl_804FDE00, global
 	.4byte 0x00004E20
 	.4byte 0
 	.4byte 0x00005208
@@ -2877,9 +2876,9 @@ lbl_804FDE00:
 	.4byte 0x000000F0
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+.endobj lbl_804FDE00
 
-.global lbl_804FDE28
-lbl_804FDE28:
+.obj lbl_804FDE28, global
 	.4byte 0x00003E80
 	.4byte 0
 	.4byte 0x00004268
@@ -2890,27 +2889,27 @@ lbl_804FDE28:
 	.4byte 0x0000012C
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+.endobj lbl_804FDE28
 
-.global lbl_804FDE50
-lbl_804FDE50:
+.obj lbl_804FDE50, global
 	.4byte 0x00005208
 	.4byte 0
 	.4byte 0x000055F0
 	.4byte 0x0000003C
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+.endobj lbl_804FDE50
 
-.global lbl_804FDE68
-lbl_804FDE68:
+.obj lbl_804FDE68, global
 	.4byte 0x00005208
 	.4byte 0
 	.4byte 0x000055F0
 	.4byte 0x0000003C
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+.endobj lbl_804FDE68
 
-.global lbl_804FDE80
-lbl_804FDE80:
+.obj lbl_804FDE80, global
 	.4byte 0x00003E80
 	.4byte 0
 	.4byte 0x00004A38
@@ -2921,18 +2920,18 @@ lbl_804FDE80:
 	.4byte 0x00000168
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+.endobj lbl_804FDE80
 
-.global lbl_804FDEA8
-lbl_804FDEA8:
+.obj lbl_804FDEA8, global
 	.4byte 0x00003E80
 	.4byte 0
 	.4byte 0x00004268
 	.4byte 0x00000168
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+.endobj lbl_804FDEA8
 
-.global lbl_804FDEC0
-lbl_804FDEC0:
+.obj lbl_804FDEC0, global
 	.4byte 0x00003E80
 	.4byte 0
 	.4byte 0x00004A38
@@ -2943,9 +2942,9 @@ lbl_804FDEC0:
 	.4byte 0x00000168
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+.endobj lbl_804FDEC0
 
-.global lbl_804FDEE8
-lbl_804FDEE8:
+.obj lbl_804FDEE8, global
 	.4byte 0x00004650
 	.4byte 0
 	.4byte 0x00004844
@@ -2958,9 +2957,9 @@ lbl_804FDEE8:
 	.4byte 0x0000014A
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+.endobj lbl_804FDEE8
 
-.global lbl_804FDF18
-lbl_804FDF18:
+.obj lbl_804FDF18, global
 	.4byte 0x00003E80
 	.4byte 0
 	.4byte 0x00004A38
@@ -2971,9 +2970,9 @@ lbl_804FDF18:
 	.4byte 0x00000168
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+.endobj lbl_804FDF18
 
-.global lbl_804FDF40
-lbl_804FDF40:
+.obj lbl_804FDF40, global
 	.4byte 0x00003E80
 	.4byte 0
 	.4byte 0x00004A38
@@ -2984,898 +2983,898 @@ lbl_804FDF40:
 	.4byte 0x00000168
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+.endobj lbl_804FDF40
 
-.global lbl_804FDF68
-lbl_804FDF68:
+.obj lbl_804FDF68, global
 	.4byte 0x00003E80
 	.4byte 0
 	.4byte 0x00004268
 	.4byte 0x00000168
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+.endobj lbl_804FDF68
 
-.global lbl_804FDF80
-lbl_804FDF80:
+.obj lbl_804FDF80, global
 	.4byte 0x0000157C
 	.4byte 0
 	.4byte 0x0000733C
 	.4byte 0x00001964
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
+.endobj lbl_804FDF80
 
-.global lbl_804FDF98
-lbl_804FDF98:
+.obj lbl_804FDF98, global
 	.asciz "01000000"
 	.balign 4
+.endobj lbl_804FDF98
 
-.global lbl_804FDFA4
-lbl_804FDFA4:
+.obj lbl_804FDFA4, global
 	.asciz "01040100"
 	.balign 4
+.endobj lbl_804FDFA4
 
-.global lbl_804FDFB0
-lbl_804FDFB0:
+.obj lbl_804FDFB0, global
 	.asciz "01050100"
 	.balign 4
+.endobj lbl_804FDFB0
 
-.global lbl_804FDFBC
-lbl_804FDFBC:
+.obj lbl_804FDFBC, global
 	.asciz "01090010"
 	.balign 4
+.endobj lbl_804FDFBC
 
-.global lbl_804FDFC8
-lbl_804FDFC8:
+.obj lbl_804FDFC8, global
 	.asciz "01110100"
 	.balign 4
+.endobj lbl_804FDFC8
 
-.global lbl_804FDFD4
-lbl_804FDFD4:
+.obj lbl_804FDFD4, global
 	.asciz "01140100"
 	.balign 4
+.endobj lbl_804FDFD4
 
-.global lbl_804FDFE0
-lbl_804FDFE0:
+.obj lbl_804FDFE0, global
 	.asciz "01170100"
 	.balign 4
+.endobj lbl_804FDFE0
 
-.global lbl_804FDFEC
-lbl_804FDFEC:
+.obj lbl_804FDFEC, global
 	.asciz "01180100"
 	.balign 4
+.endobj lbl_804FDFEC
 
-.global lbl_804FDFF8
-lbl_804FDFF8:
+.obj lbl_804FDFF8, global
 	.asciz "01230100"
 	.balign 4
+.endobj lbl_804FDFF8
 
-.global lbl_804FE004
-lbl_804FE004:
+.obj lbl_804FE004, global
 	.asciz "01240050"
 	.balign 4
+.endobj lbl_804FE004
 
-.global lbl_804FE010
-lbl_804FE010:
+.obj lbl_804FE010, global
 	.asciz "01270100"
 	.balign 4
+.endobj lbl_804FE010
 
-.global lbl_804FE01C
-lbl_804FE01C:
+.obj lbl_804FE01C, global
 	.asciz "01290100"
 	.balign 4
+.endobj lbl_804FE01C
 
-.global lbl_804FE028
-lbl_804FE028:
+.obj lbl_804FE028, global
 	.asciz "02010100"
 	.balign 4
+.endobj lbl_804FE028
 
-.global lbl_804FE034
-lbl_804FE034:
+.obj lbl_804FE034, global
 	.asciz "02100100"
 	.balign 4
+.endobj lbl_804FE034
 
-.global lbl_804FE040
-lbl_804FE040:
+.obj lbl_804FE040, global
 	.asciz "02140100"
 	.balign 4
+.endobj lbl_804FE040
 
-.global lbl_804FE04C
-lbl_804FE04C:
+.obj lbl_804FE04C, global
 	.asciz "02160100"
 	.balign 4
+.endobj lbl_804FE04C
 
-.global lbl_804FE058
-lbl_804FE058:
+.obj lbl_804FE058, global
 	.asciz "02180100"
 	.balign 4
+.endobj lbl_804FE058
 
-.global lbl_804FE064
-lbl_804FE064:
+.obj lbl_804FE064, global
 	.asciz "02190100"
 	.balign 4
+.endobj lbl_804FE064
 
-.global lbl_804FE070
-lbl_804FE070:
+.obj lbl_804FE070, global
 	.asciz "02200100"
 	.balign 4
+.endobj lbl_804FE070
 
-.global lbl_804FE07C
-lbl_804FE07C:
+.obj lbl_804FE07C, global
 	.asciz "02220100"
 	.balign 4
+.endobj lbl_804FE07C
 
-.global lbl_804FE088
-lbl_804FE088:
+.obj lbl_804FE088, global
 	.asciz "02240100"
 	.balign 4
+.endobj lbl_804FE088
 
-.global lbl_804FE094
-lbl_804FE094:
+.obj lbl_804FE094, global
 	.asciz "02250100"
 	.balign 4
+.endobj lbl_804FE094
 
-.global lbl_804FE0A0
-lbl_804FE0A0:
+.obj lbl_804FE0A0, global
 	.asciz "02290150"
 	.balign 4
+.endobj lbl_804FE0A0
 
-.global lbl_804FE0AC
-lbl_804FE0AC:
+.obj lbl_804FE0AC, global
 	.asciz "02300100"
 	.balign 4
+.endobj lbl_804FE0AC
 
-.global lbl_804FE0B8
-lbl_804FE0B8:
+.obj lbl_804FE0B8, global
 	.asciz "03010100"
 	.balign 4
+.endobj lbl_804FE0B8
 
-.global lbl_804FE0C4
-lbl_804FE0C4:
+.obj lbl_804FE0C4, global
 	.asciz "03060150"
 	.balign 4
+.endobj lbl_804FE0C4
 
-.global lbl_804FE0D0
-lbl_804FE0D0:
+.obj lbl_804FE0D0, global
 	.asciz "03070150"
 	.balign 4
+.endobj lbl_804FE0D0
 
-.global lbl_804FE0DC
-lbl_804FE0DC:
+.obj lbl_804FE0DC, global
 	.asciz "03100100"
 	.balign 4
+.endobj lbl_804FE0DC
 
-.global lbl_804FE0E8
-lbl_804FE0E8:
+.obj lbl_804FE0E8, global
 	.asciz "03120100"
 	.balign 4
+.endobj lbl_804FE0E8
 
-.global lbl_804FE0F4
-lbl_804FE0F4:
+.obj lbl_804FE0F4, global
 	.asciz "04010070"
 	.balign 4
+.endobj lbl_804FE0F4
 
-.global lbl_804FE100
-lbl_804FE100:
+.obj lbl_804FE100, global
 	.asciz "04040010"
 	.balign 4
+.endobj lbl_804FE100
 
-.global lbl_804FE10C
-lbl_804FE10C:
+.obj lbl_804FE10C, global
 	.asciz "04060100"
 	.balign 4
+.endobj lbl_804FE10C
 
-.global lbl_804FE118
-lbl_804FE118:
+.obj lbl_804FE118, global
 	.asciz "04110120"
 	.balign 4
+.endobj lbl_804FE118
 
-.global lbl_804FE124
-lbl_804FE124:
+.obj lbl_804FE124, global
 	.asciz "04130100"
 	.balign 4
+.endobj lbl_804FE124
 
-.global lbl_804FE130
-lbl_804FE130:
+.obj lbl_804FE130, global
 	.asciz "04140100"
 	.balign 4
+.endobj lbl_804FE130
 
-.global lbl_804FE13C
-lbl_804FE13C:
+.obj lbl_804FE13C, global
 	.asciz "04150100"
 	.balign 4
+.endobj lbl_804FE13C
 
-.global lbl_804FE148
-lbl_804FE148:
+.obj lbl_804FE148, global
 	.asciz "05010100"
 	.balign 4
+.endobj lbl_804FE148
 
-.global lbl_804FE154
-lbl_804FE154:
+.obj lbl_804FE154, global
 	.asciz "05030050"
 	.balign 4
+.endobj lbl_804FE154
 
-.global lbl_804FE160
-lbl_804FE160:
+.obj lbl_804FE160, global
 	.asciz "05060100"
 	.balign 4
+.endobj lbl_804FE160
 
-.global lbl_804FE16C
-lbl_804FE16C:
+.obj lbl_804FE16C, global
 	.asciz "05110100"
 	.balign 4
+.endobj lbl_804FE16C
 
-.global lbl_804FE178
-lbl_804FE178:
+.obj lbl_804FE178, global
 	.asciz "05130100"
 	.balign 4
+.endobj lbl_804FE178
 
-.global lbl_804FE184
-lbl_804FE184:
+.obj lbl_804FE184, global
 	.asciz "05150100"
 	.balign 4
+.endobj lbl_804FE184
 
-.global lbl_804FE190
-lbl_804FE190:
+.obj lbl_804FE190, global
 	.asciz "05170100"
 	.balign 4
+.endobj lbl_804FE190
 
-.global lbl_804FE19C
-lbl_804FE19C:
+.obj lbl_804FE19C, global
 	.asciz "05200100"
 	.balign 4
+.endobj lbl_804FE19C
 
-.global lbl_804FE1A8
-lbl_804FE1A8:
+.obj lbl_804FE1A8, global
 	.asciz "05210100"
 	.balign 4
+.endobj lbl_804FE1A8
 
-.global lbl_804FE1B4
-lbl_804FE1B4:
+.obj lbl_804FE1B4, global
 	.asciz "06030100"
 	.balign 4
+.endobj lbl_804FE1B4
 
-.global lbl_804FE1C0
-lbl_804FE1C0:
+.obj lbl_804FE1C0, global
 	.asciz "06050050"
 	.balign 4
+.endobj lbl_804FE1C0
 
-.global lbl_804FE1CC
-lbl_804FE1CC:
+.obj lbl_804FE1CC, global
 	.asciz "06060100"
 	.balign 4
+.endobj lbl_804FE1CC
 
-.global lbl_804FE1D8
-lbl_804FE1D8:
+.obj lbl_804FE1D8, global
 	.asciz "06090100"
 	.balign 4
+.endobj lbl_804FE1D8
 
-.global lbl_804FE1E4
-lbl_804FE1E4:
+.obj lbl_804FE1E4, global
 	.asciz "07010100"
 	.balign 4
+.endobj lbl_804FE1E4
 
-.global lbl_804FE1F0
-lbl_804FE1F0:
+.obj lbl_804FE1F0, global
 	.asciz "07020100"
 	.balign 4
+.endobj lbl_804FE1F0
 
-.global lbl_804FE1FC
-lbl_804FE1FC:
+.obj lbl_804FE1FC, global
 	.asciz "07030150"
 	.balign 4
+.endobj lbl_804FE1FC
 
-.global lbl_804FE208
-lbl_804FE208:
+.obj lbl_804FE208, global
 	.asciz "07040100"
 	.balign 4
+.endobj lbl_804FE208
 
-.global lbl_804FE214
-lbl_804FE214:
+.obj lbl_804FE214, global
 	.asciz "07050100"
 	.balign 4
+.endobj lbl_804FE214
 
-.global lbl_804FE220
-lbl_804FE220:
+.obj lbl_804FE220, global
 	.asciz "07060100"
 	.balign 4
+.endobj lbl_804FE220
 
-.global lbl_804FE22C
-lbl_804FE22C:
+.obj lbl_804FE22C, global
 	.asciz "07070100"
 	.balign 4
+.endobj lbl_804FE22C
 
-.global lbl_804FE238
-lbl_804FE238:
+.obj lbl_804FE238, global
 	.asciz "07090100"
 	.balign 4
+.endobj lbl_804FE238
 
-.global lbl_804FE244
-lbl_804FE244:
+.obj lbl_804FE244, global
 	.asciz "07110100"
 	.balign 4
+.endobj lbl_804FE244
 
-.global lbl_804FE250
-lbl_804FE250:
+.obj lbl_804FE250, global
 	.asciz "07150150"
 	.balign 4
+.endobj lbl_804FE250
 
-.global lbl_804FE25C
-lbl_804FE25C:
+.obj lbl_804FE25C, global
 	.asciz "07160100"
 	.balign 4
+.endobj lbl_804FE25C
 
-.global lbl_804FE268
-lbl_804FE268:
+.obj lbl_804FE268, global
 	.asciz "07170100"
 	.balign 4
+.endobj lbl_804FE268
 
-.global lbl_804FE274
-lbl_804FE274:
+.obj lbl_804FE274, global
 	.asciz "07210100"
 	.balign 4
+.endobj lbl_804FE274
 
-.global lbl_804FE280
-lbl_804FE280:
+.obj lbl_804FE280, global
 	.asciz "08010050"
 	.balign 4
+.endobj lbl_804FE280
 
-.global lbl_804FE28C
-lbl_804FE28C:
+.obj lbl_804FE28C, global
 	.asciz "08040100"
 	.balign 4
+.endobj lbl_804FE28C
 
-.global lbl_804FE298
-lbl_804FE298:
+.obj lbl_804FE298, global
 	.asciz "08060050"
 	.balign 4
+.endobj lbl_804FE298
 
-.global lbl_804FE2A4
-lbl_804FE2A4:
+.obj lbl_804FE2A4, global
 	.asciz "08130100"
 	.balign 4
+.endobj lbl_804FE2A4
 
-.global lbl_804FE2B0
-lbl_804FE2B0:
+.obj lbl_804FE2B0, global
 	.asciz "08190150"
 	.balign 4
+.endobj lbl_804FE2B0
 
-.global lbl_804FE2BC
-lbl_804FE2BC:
+.obj lbl_804FE2BC, global
 	.asciz "08200150"
 	.balign 4
+.endobj lbl_804FE2BC
 
-.global lbl_804FE2C8
-lbl_804FE2C8:
+.obj lbl_804FE2C8, global
 	.asciz "08220100"
 	.balign 4
+.endobj lbl_804FE2C8
 
-.global lbl_804FE2D4
-lbl_804FE2D4:
+.obj lbl_804FE2D4, global
 	.asciz "08230100"
 	.balign 4
+.endobj lbl_804FE2D4
 
-.global lbl_804FE2E0
-lbl_804FE2E0:
+.obj lbl_804FE2E0, global
 	.asciz "08250100"
 	.balign 4
+.endobj lbl_804FE2E0
 
-.global lbl_804FE2EC
-lbl_804FE2EC:
+.obj lbl_804FE2EC, global
 	.asciz "09010100"
 	.balign 4
+.endobj lbl_804FE2EC
 
-.global lbl_804FE2F8
-lbl_804FE2F8:
+.obj lbl_804FE2F8, global
 	.asciz "09040100"
 	.balign 4
+.endobj lbl_804FE2F8
 
-.global lbl_804FE304
-lbl_804FE304:
+.obj lbl_804FE304, global
 	.asciz "09060100"
 	.balign 4
+.endobj lbl_804FE304
 
-.global lbl_804FE310
-lbl_804FE310:
+.obj lbl_804FE310, global
 	.asciz "09070150"
 	.balign 4
+.endobj lbl_804FE310
 
-.global lbl_804FE31C
-lbl_804FE31C:
+.obj lbl_804FE31C, global
 	.asciz "09080100"
 	.balign 4
+.endobj lbl_804FE31C
 
-.global lbl_804FE328
-lbl_804FE328:
+.obj lbl_804FE328, global
 	.asciz "09120100"
 	.balign 4
+.endobj lbl_804FE328
 
-.global lbl_804FE334
-lbl_804FE334:
+.obj lbl_804FE334, global
 	.asciz "09150100"
 	.balign 4
+.endobj lbl_804FE334
 
-.global lbl_804FE340
-lbl_804FE340:
+.obj lbl_804FE340, global
 	.asciz "09170150"
 	.balign 4
+.endobj lbl_804FE340
 
-.global lbl_804FE34C
-lbl_804FE34C:
+.obj lbl_804FE34C, global
 	.asciz "09190100"
 	.balign 4
+.endobj lbl_804FE34C
 
-.global lbl_804FE358
-lbl_804FE358:
+.obj lbl_804FE358, global
 	.asciz "09220100"
 	.balign 4
+.endobj lbl_804FE358
 
-.global lbl_804FE364
-lbl_804FE364:
+.obj lbl_804FE364, global
 	.asciz "09230150"
 	.balign 4
+.endobj lbl_804FE364
 
-.global lbl_804FE370
-lbl_804FE370:
+.obj lbl_804FE370, global
 	.asciz "09240100"
 	.balign 4
+.endobj lbl_804FE370
 
-.global lbl_804FE37C
-lbl_804FE37C:
+.obj lbl_804FE37C, global
 	.asciz "09260100"
 	.balign 4
+.endobj lbl_804FE37C
 
-.global lbl_804FE388
-lbl_804FE388:
+.obj lbl_804FE388, global
 	.asciz "09280100"
 	.balign 4
+.endobj lbl_804FE388
 
-.global lbl_804FE394
-lbl_804FE394:
+.obj lbl_804FE394, global
 	.asciz "09300100"
 	.balign 4
+.endobj lbl_804FE394
 
-.global lbl_804FE3A0
-lbl_804FE3A0:
+.obj lbl_804FE3A0, global
 	.asciz "10030100"
 	.balign 4
+.endobj lbl_804FE3A0
 
-.global lbl_804FE3AC
-lbl_804FE3AC:
+.obj lbl_804FE3AC, global
 	.asciz "10090100"
 	.balign 4
+.endobj lbl_804FE3AC
 
-.global lbl_804FE3B8
-lbl_804FE3B8:
+.obj lbl_804FE3B8, global
 	.asciz "10100100"
 	.balign 4
+.endobj lbl_804FE3B8
 
-.global lbl_804FE3C4
-lbl_804FE3C4:
+.obj lbl_804FE3C4, global
 	.asciz "10120110"
 	.balign 4
+.endobj lbl_804FE3C4
 
-.global lbl_804FE3D0
-lbl_804FE3D0:
+.obj lbl_804FE3D0, global
 	.asciz "10150100"
 	.balign 4
+.endobj lbl_804FE3D0
 
-.global lbl_804FE3DC
-lbl_804FE3DC:
+.obj lbl_804FE3DC, global
 	.asciz "10160100"
 	.balign 4
+.endobj lbl_804FE3DC
 
-.global lbl_804FE3E8
-lbl_804FE3E8:
+.obj lbl_804FE3E8, global
 	.asciz "11010100"
 	.balign 4
+.endobj lbl_804FE3E8
 
-.global lbl_804FE3F4
-lbl_804FE3F4:
+.obj lbl_804FE3F4, global
 	.asciz "11020100"
 	.balign 4
+.endobj lbl_804FE3F4
 
-.global lbl_804FE400
-lbl_804FE400:
+.obj lbl_804FE400, global
 	.asciz "11080100"
 	.balign 4
+.endobj lbl_804FE400
 
-.global lbl_804FE40C
-lbl_804FE40C:
+.obj lbl_804FE40C, global
 	.asciz "11100100"
 	.balign 4
+.endobj lbl_804FE40C
 
-.global lbl_804FE418
-lbl_804FE418:
+.obj lbl_804FE418, global
 	.asciz "11120150"
 	.balign 4
+.endobj lbl_804FE418
 
-.global lbl_804FE424
-lbl_804FE424:
+.obj lbl_804FE424, global
 	.asciz "11130100"
 	.balign 4
+.endobj lbl_804FE424
 
-.global lbl_804FE430
-lbl_804FE430:
+.obj lbl_804FE430, global
 	.asciz "11160100"
 	.balign 4
+.endobj lbl_804FE430
 
-.global lbl_804FE43C
-lbl_804FE43C:
+.obj lbl_804FE43C, global
 	.asciz "11170100"
 	.balign 4
+.endobj lbl_804FE43C
 
-.global lbl_804FE448
-lbl_804FE448:
+.obj lbl_804FE448, global
 	.asciz "12010100"
 	.balign 4
+.endobj lbl_804FE448
 
-.global lbl_804FE454
-lbl_804FE454:
+.obj lbl_804FE454, global
 	.asciz "12020100"
 	.balign 4
+.endobj lbl_804FE454
 
-.global lbl_804FE460
-lbl_804FE460:
+.obj lbl_804FE460, global
 	.asciz "12030100"
 	.balign 4
+.endobj lbl_804FE460
 
-.global lbl_804FE46C
-lbl_804FE46C:
+.obj lbl_804FE46C, global
 	.asciz "12040100"
 	.balign 4
+.endobj lbl_804FE46C
 
-.global lbl_804FE478
-lbl_804FE478:
+.obj lbl_804FE478, global
 	.asciz "12060100"
 	.balign 4
+.endobj lbl_804FE478
 
-.global lbl_804FE484
-lbl_804FE484:
+.obj lbl_804FE484, global
 	.asciz "12070150"
 	.balign 4
+.endobj lbl_804FE484
 
-.global lbl_804FE490
-lbl_804FE490:
+.obj lbl_804FE490, global
 	.asciz "12090100"
 	.balign 4
+.endobj lbl_804FE490
 
-.global lbl_804FE49C
-lbl_804FE49C:
+.obj lbl_804FE49C, global
 	.asciz "12140100"
 	.balign 4
+.endobj lbl_804FE49C
 
-.global lbl_804FE4A8
-lbl_804FE4A8:
+.obj lbl_804FE4A8, global
 	.asciz "12210100"
 	.balign 4
+.endobj lbl_804FE4A8
 
-.global lbl_804FE4B4
-lbl_804FE4B4:
+.obj lbl_804FE4B4, global
 	.asciz "12220060"
 	.balign 4
+.endobj lbl_804FE4B4
 
-.global lbl_804FE4C0
-lbl_804FE4C0:
+.obj lbl_804FE4C0, global
 	.asciz "13050100"
 	.balign 4
+.endobj lbl_804FE4C0
 
-.global lbl_804FE4CC
-lbl_804FE4CC:
+.obj lbl_804FE4CC, global
 	.asciz "13080100"
 	.balign 4
+.endobj lbl_804FE4CC
 
-.global lbl_804FE4D8
-lbl_804FE4D8:
+.obj lbl_804FE4D8, global
 	.asciz "13100100"
 	.balign 4
+.endobj lbl_804FE4D8
 
-.global lbl_804FE4E4
-lbl_804FE4E4:
+.obj lbl_804FE4E4, global
 	.asciz "13110150"
 	.balign 4
+.endobj lbl_804FE4E4
 
-.global lbl_804FE4F0
-lbl_804FE4F0:
+.obj lbl_804FE4F0, global
 	.asciz "13130050"
 	.balign 4
+.endobj lbl_804FE4F0
 
-.global lbl_804FE4FC
-lbl_804FE4FC:
+.obj lbl_804FE4FC, global
 	.asciz "13130100"
 	.balign 4
+.endobj lbl_804FE4FC
 
-.global lbl_804FE508
-lbl_804FE508:
+.obj lbl_804FE508, global
 	.asciz "13140100"
 	.balign 4
+.endobj lbl_804FE508
 
-.global lbl_804FE514
-lbl_804FE514:
+.obj lbl_804FE514, global
 	.asciz "13150100"
 	.balign 4
+.endobj lbl_804FE514
 
-.global lbl_804FE520
-lbl_804FE520:
+.obj lbl_804FE520, global
 	.asciz "13160100"
 	.balign 4
+.endobj lbl_804FE520
 
-.global lbl_804FE52C
-lbl_804FE52C:
+.obj lbl_804FE52C, global
 	.asciz "14010100"
 	.balign 4
+.endobj lbl_804FE52C
 
-.global lbl_804FE538
-lbl_804FE538:
+.obj lbl_804FE538, global
 	.asciz "14020100"
 	.balign 4
+.endobj lbl_804FE538
 
-.global lbl_804FE544
-lbl_804FE544:
+.obj lbl_804FE544, global
 	.asciz "14030100"
 	.balign 4
+.endobj lbl_804FE544
 
-.global lbl_804FE550
-lbl_804FE550:
+.obj lbl_804FE550, global
 	.asciz "14040100"
 	.balign 4
+.endobj lbl_804FE550
 
-.global lbl_804FE55C
-lbl_804FE55C:
+.obj lbl_804FE55C, global
 	.asciz "14050160"
 	.balign 4
+.endobj lbl_804FE55C
 
-.global lbl_804FE568
-lbl_804FE568:
+.obj lbl_804FE568, global
 	.asciz "14060100"
 	.balign 4
+.endobj lbl_804FE568
 
-.global lbl_804FE574
-lbl_804FE574:
+.obj lbl_804FE574, global
 	.asciz "14070050"
 	.balign 4
+.endobj lbl_804FE574
 
-.global lbl_804FE580
-lbl_804FE580:
+.obj lbl_804FE580, global
 	.asciz "14080100"
 	.balign 4
+.endobj lbl_804FE580
 
-.global lbl_804FE58C
-lbl_804FE58C:
+.obj lbl_804FE58C, global
 	.asciz "14100160"
 	.balign 4
+.endobj lbl_804FE58C
 
-.global lbl_804FE598
-lbl_804FE598:
+.obj lbl_804FE598, global
 	.asciz "14120100"
 	.balign 4
+.endobj lbl_804FE598
 
-.global lbl_804FE5A4
-lbl_804FE5A4:
+.obj lbl_804FE5A4, global
 	.asciz "14130100"
 	.balign 4
+.endobj lbl_804FE5A4
 
-.global lbl_804FE5B0
-lbl_804FE5B0:
+.obj lbl_804FE5B0, global
 	.asciz "14140100"
 	.balign 4
+.endobj lbl_804FE5B0
 
-.global lbl_804FE5BC
-lbl_804FE5BC:
+.obj lbl_804FE5BC, global
 	.asciz "14150150"
 	.balign 4
+.endobj lbl_804FE5BC
 
-.global lbl_804FE5C8
-lbl_804FE5C8:
+.obj lbl_804FE5C8, global
 	.asciz "14160100"
 	.balign 4
+.endobj lbl_804FE5C8
 
-.global lbl_804FE5D4
-lbl_804FE5D4:
+.obj lbl_804FE5D4, global
 	.asciz "14170100"
 	.balign 4
+.endobj lbl_804FE5D4
 
-.global lbl_804FE5E0
-lbl_804FE5E0:
+.obj lbl_804FE5E0, global
 	.asciz "15010100"
 	.balign 4
+.endobj lbl_804FE5E0
 
-.global lbl_804FE5EC
-lbl_804FE5EC:
+.obj lbl_804FE5EC, global
 	.asciz "15070100"
 	.balign 4
+.endobj lbl_804FE5EC
 
-.global lbl_804FE5F8
-lbl_804FE5F8:
+.obj lbl_804FE5F8, global
 	.asciz "15080100"
 	.balign 4
+.endobj lbl_804FE5F8
 
-.global lbl_804FE604
-lbl_804FE604:
+.obj lbl_804FE604, global
 	.asciz "15090100"
 	.balign 4
+.endobj lbl_804FE604
 
-.global lbl_804FE610
-lbl_804FE610:
+.obj lbl_804FE610, global
 	.asciz "15090160"
 	.balign 4
+.endobj lbl_804FE610
 
-.global lbl_804FE61C
-lbl_804FE61C:
+.obj lbl_804FE61C, global
 	.asciz "15100100"
 	.balign 4
+.endobj lbl_804FE61C
 
-.global lbl_804FE628
-lbl_804FE628:
+.obj lbl_804FE628, global
 	.asciz "15110100"
 	.balign 4
+.endobj lbl_804FE628
 
-.global lbl_804FE634
-lbl_804FE634:
+.obj lbl_804FE634, global
 	.asciz "15120150"
 	.balign 4
+.endobj lbl_804FE634
 
-.global lbl_804FE640
-lbl_804FE640:
+.obj lbl_804FE640, global
 	.asciz "15140100"
 	.balign 4
+.endobj lbl_804FE640
 
-.global lbl_804FE64C
-lbl_804FE64C:
+.obj lbl_804FE64C, global
 	.asciz "15150100"
 	.balign 4
+.endobj lbl_804FE64C
 
-.global lbl_804FE658
-lbl_804FE658:
+.obj lbl_804FE658, global
 	.asciz "16010100"
 	.balign 4
+.endobj lbl_804FE658
 
-.global lbl_804FE664
-lbl_804FE664:
+.obj lbl_804FE664, global
 	.asciz "16030100"
 	.balign 4
+.endobj lbl_804FE664
 
-.global lbl_804FE670
-lbl_804FE670:
+.obj lbl_804FE670, global
 	.asciz "16040100"
 	.balign 4
+.endobj lbl_804FE670
 
-.global lbl_804FE67C
-lbl_804FE67C:
+.obj lbl_804FE67C, global
 	.asciz "16060100"
 	.balign 4
+.endobj lbl_804FE67C
 
-.global lbl_804FE688
-lbl_804FE688:
+.obj lbl_804FE688, global
 	.asciz "16070100"
 	.balign 4
+.endobj lbl_804FE688
 
-.global lbl_804FE694
-lbl_804FE694:
+.obj lbl_804FE694, global
 	.asciz "16080100"
 	.balign 4
+.endobj lbl_804FE694
 
-.global lbl_804FE6A0
-lbl_804FE6A0:
+.obj lbl_804FE6A0, global
 	.asciz "16090100"
 	.balign 4
+.endobj lbl_804FE6A0
 
-.global lbl_804FE6AC
-lbl_804FE6AC:
+.obj lbl_804FE6AC, global
 	.asciz "16110100"
 	.balign 4
+.endobj lbl_804FE6AC
 
-.global lbl_804FE6B8
-lbl_804FE6B8:
+.obj lbl_804FE6B8, global
 	.asciz "17010100"
 	.balign 4
+.endobj lbl_804FE6B8
 
-.global lbl_804FE6C4
-lbl_804FE6C4:
+.obj lbl_804FE6C4, global
 	.asciz "17030100"
 	.balign 4
+.endobj lbl_804FE6C4
 
-.global lbl_804FE6D0
-lbl_804FE6D0:
+.obj lbl_804FE6D0, global
 	.asciz "17030160"
 	.balign 4
+.endobj lbl_804FE6D0
 
-.global lbl_804FE6DC
-lbl_804FE6DC:
+.obj lbl_804FE6DC, global
 	.asciz "17040100"
 	.balign 4
+.endobj lbl_804FE6DC
 
-.global lbl_804FE6E8
-lbl_804FE6E8:
+.obj lbl_804FE6E8, global
 	.asciz "17050100"
 	.balign 4
+.endobj lbl_804FE6E8
 
-.global lbl_804FE6F4
-lbl_804FE6F4:
+.obj lbl_804FE6F4, global
 	.asciz "17060100"
 	.balign 4
+.endobj lbl_804FE6F4
 
-.global lbl_804FE700
-lbl_804FE700:
+.obj lbl_804FE700, global
 	.asciz "17070100"
 	.balign 4
+.endobj lbl_804FE700
 
-.global lbl_804FE70C
-lbl_804FE70C:
+.obj lbl_804FE70C, global
 	.asciz "17080100"
 	.balign 4
+.endobj lbl_804FE70C
 
-.global lbl_804FE718
-lbl_804FE718:
+.obj lbl_804FE718, global
 	.asciz "17100010"
 	.balign 4
+.endobj lbl_804FE718
 
-.global lbl_804FE724
-lbl_804FE724:
+.obj lbl_804FE724, global
 	.asciz "17100050"
 	.balign 4
+.endobj lbl_804FE724
 
-.global lbl_804FE730
-lbl_804FE730:
+.obj lbl_804FE730, global
 	.asciz "17100100"
 	.balign 4
+.endobj lbl_804FE730
 
-.global lbl_804FE73C
-lbl_804FE73C:
+.obj lbl_804FE73C, global
 	.asciz "17110100"
 	.balign 4
+.endobj lbl_804FE73C
 
-.global lbl_804FE748
-lbl_804FE748:
+.obj lbl_804FE748, global
 	.asciz "17130150"
 	.balign 4
+.endobj lbl_804FE748
 
-.global lbl_804FE754
-lbl_804FE754:
+.obj lbl_804FE754, global
 	.asciz "17140100"
 	.balign 4
+.endobj lbl_804FE754
 
-.global lbl_804FE760
-lbl_804FE760:
+.obj lbl_804FE760, global
 	.asciz "17150100"
 	.balign 4
+.endobj lbl_804FE760
 
-.global lbl_804FE76C
-lbl_804FE76C:
+.obj lbl_804FE76C, global
 	.asciz "17160100"
 	.balign 4
+.endobj lbl_804FE76C
 
-.global lbl_804FE778
-lbl_804FE778:
+.obj lbl_804FE778, global
 	.asciz "17170050"
 	.balign 4
+.endobj lbl_804FE778
 
-.global lbl_804FE784
-lbl_804FE784:
+.obj lbl_804FE784, global
 	.asciz "17190100"
 	.balign 4
+.endobj lbl_804FE784
 
-.global lbl_804FE790
-lbl_804FE790:
+.obj lbl_804FE790, global
 	.asciz "17200100"
 	.balign 4
+.endobj lbl_804FE790
 
-.global lbl_804FE79C
-lbl_804FE79C:
+.obj lbl_804FE79C, global
 	.asciz "17210100"
 	.balign 4
+.endobj lbl_804FE79C
 
-.global lbl_804FE7A8
-lbl_804FE7A8:
+.obj lbl_804FE7A8, global
 	.asciz "17220100"
 	.balign 4
+.endobj lbl_804FE7A8
 
-.global lbl_804FE7B4
-lbl_804FE7B4:
+.obj lbl_804FE7B4, global
 	.asciz "17240100"
 	.balign 4
+.endobj lbl_804FE7B4
 
 
-.global lbl_804FE7C0
-lbl_804FE7C0:
+.obj lbl_804FE7C0, global
 	.2byte 0x0004
 	.2byte 0x000A
 	.2byte 0x000E
@@ -3908,23 +3907,23 @@ lbl_804FE7C0:
 	.2byte 0x0152
 	.2byte 0x0152
 	.2byte 0x0152
+.endobj lbl_804FE7C0
 
-.global lbl_804FE800
-lbl_804FE800:
+.obj lbl_804FE800, global
 	.asciz "/ev/realtime/"
 	.balign 4
+.endobj lbl_804FE800
 
-.global cf_CTaskREvent_typestr
-cf_CTaskREvent_typestr:
+.obj cf_CTaskREvent_typestr, global
 	.asciz "cf::CTaskREvent"
+.endobj cf_CTaskREvent_typestr
 
-.global CTTask_cf_CTaskREvent_typestr
-CTTask_cf_CTaskREvent_typestr:
+.obj CTTask_cf_CTaskREvent_typestr, global
 	.asciz "CTTask<cf::CTaskREvent>"
+.endobj CTTask_cf_CTaskREvent_typestr
 
 
-.global CTaskREvent_strpool
-CTaskREvent_strpool:
+.obj CTaskREvent_strpool, global
 	.asciz "vs"
 	.asciz "vs00"
 	.asciz ".rev"
@@ -3932,13 +3931,13 @@ CTaskREvent_strpool:
 	.asciz "abcd"
 	.4byte 0
 	.byte 0x00
+.endobj CTaskREvent_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_80533AD0
-lbl_80533AD0:
+.obj lbl_80533AD0, global
 	.4byte lbl_804FDF80
 	.4byte lbl_804FDD20
 	.4byte lbl_804FDF80
@@ -4015,10 +4014,10 @@ lbl_80533AD0:
 	.4byte lbl_80669ED8
 	.4byte lbl_80669E48
 	.4byte lbl_80669EE0
+.endobj lbl_80533AD0
 
 
-.global lbl_80533C00
-lbl_80533C00:
+.obj lbl_80533C00, global
 	.4byte 0x00010203
 	.4byte 0x04050607
 	.4byte 0x08090A0B
@@ -4029,10 +4028,10 @@ lbl_80533C00:
 	.4byte 0x1C1D1E1F
 	.4byte 0x20212223
 	.4byte 0x24250000
+.endobj lbl_80533C00
 
 
-.global lbl_80533C28
-lbl_80533C28:
+.obj lbl_80533C28, global
 	.4byte lbl_804FDF98
 	.4byte lbl_804FDFA4
 	.4byte lbl_804FDFB0
@@ -4207,10 +4206,10 @@ lbl_80533C28:
 	.4byte lbl_804FE79C
 	.4byte lbl_804FE7A8
 	.4byte lbl_804FE7B4
+.endobj lbl_80533C28
 
 
-.global lbl_80533EE0
-lbl_80533EE0:
+.obj lbl_80533EE0, global
 	.4byte lbl_804FDFA4
 	.4byte lbl_804FDFC8
 	.4byte lbl_804FDFE0
@@ -4243,10 +4242,10 @@ lbl_80533EE0:
 	.4byte lbl_804FE5C8
 	.4byte lbl_804FE5C8
 	.4byte lbl_804FE5C8
+.endobj lbl_80533EE0
 
 
-.global __vt__cf_CTaskREvent
-__vt__cf_CTaskREvent:
+.obj __vt__cf_CTaskREvent, global
 	.4byte __RTTI__cf_CTaskREvent
 	.4byte 0
 	.4byte __dt__cf_CTaskREvent
@@ -4308,9 +4307,9 @@ __vt__cf_CTaskREvent:
 	.4byte func_801644D8
 	.4byte func_80166250
 	.4byte func_801662E8
+.endobj __vt__cf_CTaskREvent
 
-.global cf_CTaskREvent_hierarchy
-cf_CTaskREvent_hierarchy:
+.obj cf_CTaskREvent_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -4320,10 +4319,10 @@ cf_CTaskREvent_hierarchy:
 	.4byte __RTTI__CTTask_cf_CTaskREvent
 	.4byte 0
 	.4byte 0
+.endobj cf_CTaskREvent_hierarchy
 
 
-.global __vt__CTTask_cf_CTaskREvent
-__vt__CTTask_cf_CTaskREvent:
+.obj __vt__CTTask_cf_CTaskREvent, global
 	.4byte __RTTI__CTTask_cf_CTaskREvent
 	.4byte 0
 	.4byte __dt__CTTask_cf_CTaskREvent
@@ -4333,9 +4332,9 @@ __vt__CTTask_cf_CTaskREvent:
 	.4byte func_80166634
 	.4byte func_8016667C
 	.4byte func_80043F20
+.endobj __vt__CTTask_cf_CTaskREvent
 
-.global CTTask_cf_CTaskREvent_hierarchy
-CTTask_cf_CTaskREvent_hierarchy:
+.obj CTTask_cf_CTaskREvent_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -4393,190 +4392,192 @@ CTTask_cf_CTaskREvent_hierarchy:
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte 0
+.endobj CTTask_cf_CTaskREvent_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80664C78
-lbl_80664C78:
+.obj lbl_80664C78, global
 	.4byte lbl_804FE800
+.endobj lbl_80664C78
 
 
-.global lbl_80664C7C
-lbl_80664C7C:
+.obj lbl_80664C7C, global
 	.4byte 0x00000064
+.endobj lbl_80664C7C
 
-.global __RTTI__cf_CTaskREvent
-__RTTI__cf_CTaskREvent:
+.obj __RTTI__cf_CTaskREvent, global
 	.4byte cf_CTaskREvent_typestr
 	.4byte cf_CTaskREvent_hierarchy
+.endobj __RTTI__cf_CTaskREvent
 
-.global __RTTI__CTTask_cf_CTaskREvent
-__RTTI__CTTask_cf_CTaskREvent:
+.obj __RTTI__CTTask_cf_CTaskREvent, global
 	.4byte CTTask_cf_CTaskREvent_typestr
 	.4byte CTTask_cf_CTaskREvent_hierarchy
+.endobj __RTTI__CTTask_cf_CTaskREvent
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-
-.global lbl_80669E48
-lbl_80669E48:
+.obj lbl_80669E48, global
 	.asciz "title0"
 	.balign 4
+.endobj lbl_80669E48
 
-.global lbl_80669E50
-lbl_80669E50:
+.obj lbl_80669E50, global
 	.asciz "ma0101"
 	.balign 4
+.endobj lbl_80669E50
 
-.global lbl_80669E58
-lbl_80669E58:
+.obj lbl_80669E58, global
 	.asciz "ma0201"
 	.balign 4
+.endobj lbl_80669E58
 
-.global lbl_80669E60
-lbl_80669E60:
+.obj lbl_80669E60, global
 	.asciz "ma0301"
 	.balign 4
+.endobj lbl_80669E60
 
-.global lbl_80669E68
-lbl_80669E68:
+.obj lbl_80669E68, global
 	.asciz "ma0401"
 	.balign 4
+.endobj lbl_80669E68
 
-.global lbl_80669E70
-lbl_80669E70:
+.obj lbl_80669E70, global
 	.asciz "ma0402"
 	.balign 4
+.endobj lbl_80669E70
 
-.global lbl_80669E78
-lbl_80669E78:
+.obj lbl_80669E78, global
 	.asciz "ma0501"
 	.balign 4
+.endobj lbl_80669E78
 
-.global lbl_80669E80
-lbl_80669E80:
+.obj lbl_80669E80, global
 	.asciz "ma0601"
 	.balign 4
+.endobj lbl_80669E80
 
-.global lbl_80669E88
-lbl_80669E88:
+.obj lbl_80669E88, global
 	.asciz "ma0701"
 	.balign 4
+.endobj lbl_80669E88
 
-.global lbl_80669E90
-lbl_80669E90:
+.obj lbl_80669E90, global
 	.asciz "ma1001"
 	.balign 4
+.endobj lbl_80669E90
 
-.global lbl_80669E98
-lbl_80669E98:
+.obj lbl_80669E98, global
 	.asciz "ma1101"
 	.balign 4
+.endobj lbl_80669E98
 
-.global lbl_80669EA0
-lbl_80669EA0:
+.obj lbl_80669EA0, global
 	.asciz "ma1201"
 	.balign 4
+.endobj lbl_80669EA0
 
-.global lbl_80669EA8
-lbl_80669EA8:
+.obj lbl_80669EA8, global
 	.asciz "ma1301"
 	.balign 4
+.endobj lbl_80669EA8
 
-.global lbl_80669EB0
-lbl_80669EB0:
+.obj lbl_80669EB0, global
 	.asciz "ma1401"
 	.balign 4
+.endobj lbl_80669EB0
 
-.global lbl_80669EB8
-lbl_80669EB8:
+.obj lbl_80669EB8, global
 	.asciz "ma1501"
 	.balign 4
+.endobj lbl_80669EB8
 
-.global lbl_80669EC0
-lbl_80669EC0:
+.obj lbl_80669EC0, global
 	.asciz "ma1601"
 	.balign 4
+.endobj lbl_80669EC0
 
-.global lbl_80669EC8
-lbl_80669EC8:
+.obj lbl_80669EC8, global
 	.asciz "ma1701"
 	.balign 4
+.endobj lbl_80669EC8
 
-.global lbl_80669ED0
-lbl_80669ED0:
+.obj lbl_80669ED0, global
 	.asciz "ma1901"
 	.balign 4
+.endobj lbl_80669ED0
 
-.global lbl_80669ED8
-lbl_80669ED8:
+.obj lbl_80669ED8, global
 	.asciz "ma2001"
 	.balign 4
+.endobj lbl_80669ED8
 
-.global lbl_80669EE0
-lbl_80669EE0:
+.obj lbl_80669EE0, global
 	.asciz "demo01"
 	.balign 4
+.endobj lbl_80669EE0
 
 
-.global float_80669EE8
-float_80669EE8:
+.obj float_80669EE8, global
 	.float 0
+.endobj float_80669EE8
 
 
-.global float_80669EEC
-float_80669EEC:
+.obj float_80669EEC, global
 	.float 0.01 #0x3C23D70A
+.endobj float_80669EEC
 
 
-.global double_80669EF0
-double_80669EF0:
+.obj double_80669EF0, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_80669EF0
 
-.global float_80669EF8
-float_80669EF8:
+.obj float_80669EF8, global
 	.float 0.06 #0x3D75C28F
+.endobj float_80669EF8
 
 
-.global float_80669EFC
-float_80669EFC:
+.obj float_80669EFC, global
 	.float 60 #0x42700000
+.endobj float_80669EFC
 
 
-.global float_80669F00
-float_80669F00:
+.obj float_80669F00, global
 	.float 0.99 #0x3F7D70A4
+.endobj float_80669F00
 
 
-.global float_80669F04
-float_80669F04:
+.obj float_80669F04, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_80669F04
 
 
-.global float_80669F08
-float_80669F08:
+.obj float_80669F08, global
 	.float 85000 #0x47A60400
 	.4byte 0
+.endobj float_80669F08
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80666B30, global
+	.skip 0x4
+.endobj lbl_80666B30
 
-.global lbl_80666B30
-lbl_80666B30:
+.obj lbl_80666B34, global
 	.skip 0x4
-.global lbl_80666B34
-lbl_80666B34:
-	.skip 0x4
-.global lbl_80666B38
-lbl_80666B38:
+.endobj lbl_80666B34
+
+.obj lbl_80666B38, global
 	.skip 0x8
+.endobj lbl_80666B38
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -1650,35 +1650,46 @@
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665B90
-lbl_80665B90:
+.balign 8
+
+.obj lbl_80665B90, global
 	.4byte DefaultSwitchThreadCallback
 	.4byte 0
+.endobj lbl_80665B90
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-DefaultThread:
+.obj DefaultThread, local
 	.skip 0x318
+.endobj DefaultThread
 
-RunQueue:
+.obj RunQueue, local
 	.skip 0x100
+.endobj RunQueue
 
-IdleContext:
+.obj IdleContext, local
 	.skip 0x2C8
+.endobj IdleContext
 
-IdleThread:
+.obj IdleThread, local
 	.skip 0x318
+.endobj IdleThread
 
 .skip 0x10
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-Reschedule:
+
+.obj Reschedule, local
 	.skip 0x4
+.endobj Reschedule
 
-RunQueueHint:
+.obj RunQueueHint, local
 	.skip 0x4
+.endobj RunQueueHint
 
-RunQueueBits:
+.obj RunQueueBits, local
 	.skip 0x8
+.endobj RunQueueBits

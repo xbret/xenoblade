@@ -6699,25 +6699,24 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global nw4r_g3d_IScnObjCallback_typestr
-nw4r_g3d_IScnObjCallback_typestr:
+.obj nw4r_g3d_IScnObjCallback_typestr, global
 	.asciz "nw4r::g3d::IScnObjCallback"
 	.balign 4
+.endobj nw4r_g3d_IScnObjCallback_typestr
 
-.global nw4r_g3d_ICalcWorldCallback_typestr
-nw4r_g3d_ICalcWorldCallback_typestr:
+.obj nw4r_g3d_ICalcWorldCallback_typestr, global
 	.asciz "nw4r::g3d::ICalcWorldCallback"
 	.balign 4
 	.4byte 0
+.endobj nw4r_g3d_ICalcWorldCallback_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_80571698
-lbl_80571698:
+.obj lbl_80571698, global
 	.float 0.7
 	.float 0.5
 	.float 0.5
@@ -6730,9 +6729,9 @@ lbl_80571698:
 	.float 0.3
 	.float 0.7
 	.float 0.7
+.endobj lbl_80571698
 
-.global __vt__CScnItemModelNw4r
-__vt__CScnItemModelNw4r:
+.obj __vt__CScnItemModelNw4r, global
 	.4byte __RTTI__CScnItemModelNw4r
 	.4byte 0
 	.4byte __dt__CScnItemModelNw4r
@@ -6831,109 +6830,109 @@ __vt__CScnItemModelNw4r:
 	.4byte ExecCallbackA__Q34nw4r3g3d18ICalcWorldCallbackFPQ34nw4r3g3d12ChrAnmResultQ34nw4r3g3d6ResMdlPQ34nw4r3g3d16FuncObjCalcWorld
 	.4byte ExecCallbackB__Q34nw4r3g3d18ICalcWorldCallbackFPQ34nw4r3g3d13WorldMtxManipQ34nw4r3g3d6ResMdlPQ34nw4r3g3d16FuncObjCalcWorld
 	.4byte ExecCallbackC__Q34nw4r3g3d18ICalcWorldCallbackFPQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlPQ34nw4r3g3d16FuncObjCalcWorld
+.endobj __vt__CScnItemModelNw4r
 
 #These strings are also used later in the Mdl files. Maybe they used some flag that does pooling across files?
 
-.global lbl_80571850
-lbl_80571850:
+.obj lbl_80571850, global
 	.asciz "NW4R:Pointer Error\nfunc(=%p) is not valid pointer."
 	.balign 4
+.endobj lbl_80571850
 
 
-.global lbl_80571884
-lbl_80571884:
+.obj lbl_80571884, global
 	.asciz "g3d_anmobj.h"
 	.balign 4
+.endobj lbl_80571884
 
 
-.global lbl_80571894
-lbl_80571894:
+.obj lbl_80571894, global
 	.asciz "%s::%s: Object not valid."
 	.balign 4
+.endobj lbl_80571894
 
 
-.global lbl_805718B0
-lbl_805718B0:
+.obj lbl_805718B0, global
 	.asciz "g3d_resmat_ac.h"
+.endobj lbl_805718B0
 
 
-.global lbl_805718C0
-lbl_805718C0:
+.obj lbl_805718C0, global
 	.asciz "NW4R:Failed assertion !((u32)p & 0x1f)"
 	.balign 4
+.endobj lbl_805718C0
 
 
-.global lbl_805718E8
-lbl_805718E8:
+.obj lbl_805718E8, global
 	.asciz "g3d_resmat_ac.h"
+.endobj lbl_805718E8
 
 
-.global lbl_805718F8
-lbl_805718F8:
+.obj lbl_805718F8, global
 	.asciz "%s::%s: Object not valid."
 	.balign 4
 	.4byte 0
+.endobj lbl_805718F8
 
 
-.global lbl_80571918
-lbl_80571918:
+.obj lbl_80571918, global
 	.asciz "g3d_restev_ac.h"
+.endobj lbl_80571918
 
 
-.global lbl_80571928
-lbl_80571928:
+.obj lbl_80571928, global
 	.asciz "%s::%s: Object not valid."
 	.balign 4
 	.4byte 0
+.endobj lbl_80571928
 
 
-.global lbl_80571948
-lbl_80571948:
+.obj lbl_80571948, global
 	.asciz "g3d_resmdl_ac.h"
+.endobj lbl_80571948
 
 
-.global lbl_80571958
-lbl_80571958:
+.obj lbl_80571958, global
 	.asciz "%s::%s: Object not valid."
 	.balign 4
 	.4byte 0
+.endobj lbl_80571958
 
 
-.global lbl_80571978
-lbl_80571978:
+.obj lbl_80571978, global
 	.asciz "g3d_resmdl_ac.h"
+.endobj lbl_80571978
 
 
-.global lbl_80571988
-lbl_80571988:
+.obj lbl_80571988, global
 	.asciz "NW4R:Failed assertion !((u32)p & 0x3)"
 	.balign 4
+.endobj lbl_80571988
 
 
-.global lbl_805719B0
-lbl_805719B0:
+.obj lbl_805719B0, global
 	.asciz "g3d_resmdl_ac.h"
+.endobj lbl_805719B0
 
 
-.global lbl_805719C0
-lbl_805719C0:
+.obj lbl_805719C0, global
 	.asciz "%s::%s: Object not valid."
 	.balign 4
+.endobj lbl_805719C0
 
 
-.global lbl_805719DC
-lbl_805719DC:
+.obj lbl_805719DC, global
 	.asciz "g3d_resnode_ac.h"
 	.balign 4
+.endobj lbl_805719DC
 
 
-.global lbl_805719F0
-lbl_805719F0:
+.obj lbl_805719F0, global
 	.asciz "NW4R:Failed assertion IsValid()"
+.endobj lbl_805719F0
 
 
-.global lbl_80571A10
-lbl_80571A10:
+.obj lbl_80571A10, global
 	.asciz "g3d_resnode_ac.h"
 	.balign 4
 	.4byte 0
@@ -6968,29 +6967,29 @@ lbl_80571A10:
 	.asciz "g3d_resfile_ac.h"
 	.balign 4
 	.4byte 0
+.endobj lbl_80571A10
 
 
-.global lbl_80571BE0
-lbl_80571BE0:
+.obj lbl_80571BE0, global
 	.asciz "idx is out of bounds(%d)\n%d <= idx <= %d not satisfied."
+.endobj lbl_80571BE0
 
 
-.global lbl_80571C18
-lbl_80571C18:
+.obj lbl_80571C18, global
 	.asciz "g3d_resdict_ac.h"
 	.balign 4
 	.asciz "NW4R:Failed assertion !((u32)p & 0x3)"
 	.balign 4
 	.asciz "g3d_resdict_ac.h"
 	.balign 4
+.endobj lbl_80571C18
 
-.global lbl_80571C68
-lbl_80571C68:
+.obj lbl_80571C68, global
 	.asciz "%s::%s: Object not valid."
 	.balign 4
+.endobj lbl_80571C68
 
-.global lbl_80571C84
-lbl_80571C84:
+.obj lbl_80571C84, global
 	.asciz "g3d_resdict_ac.h"
 	.balign 4
 	.asciz "FSqrt: Input is out of the domain."
@@ -6998,213 +6997,214 @@ lbl_80571C84:
 	.asciz "arithmetic.h"
 	.balign 4
 	.4byte 0
+.endobj lbl_80571C84
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_806661F0
-lbl_806661F0:
+.obj lbl_806661F0, global
 	.4byte lbl_8066D090
+.endobj lbl_806661F0
 
 
-.global lbl_806661F4
-lbl_806661F4:
+.obj lbl_806661F4, global
 	.4byte lbl_8066D098
+.endobj lbl_806661F4
 
-.global __RTTI__nw4r_g3d_IScnObjCallback
-__RTTI__nw4r_g3d_IScnObjCallback:
+.obj __RTTI__nw4r_g3d_IScnObjCallback, global
 	.4byte nw4r_g3d_IScnObjCallback_typestr
 	.4byte 0
+.endobj __RTTI__nw4r_g3d_IScnObjCallback
 
-.global __RTTI__nw4r_g3d_ICalcWorldCallback
-__RTTI__nw4r_g3d_ICalcWorldCallback:
+.obj __RTTI__nw4r_g3d_ICalcWorldCallback, global
 	.4byte nw4r_g3d_ICalcWorldCallback_typestr
 	.4byte 0
+.endobj __RTTI__nw4r_g3d_ICalcWorldCallback
 
 
-.global lbl_80666208
-lbl_80666208:
+.obj lbl_80666208, global
 	.asciz "ResMat"
 	.balign 4
+.endobj lbl_80666208
 
 
-.global lbl_80666210
-lbl_80666210:
+.obj lbl_80666210, global
 	.4byte 0x72656600
+.endobj lbl_80666210
 
 
-.global lbl_80666214
-lbl_80666214:
+.obj lbl_80666214, global
 	.asciz "ResTev"
 	.balign 4
+.endobj lbl_80666214
 
 
-.global lbl_8066621C
-lbl_8066621C:
+.obj lbl_8066621C, global
 	.4byte 0x72656600
+.endobj lbl_8066621C
 
 
-.global lbl_80666220
-lbl_80666220:
+.obj lbl_80666220, global
 	.asciz "ResMdl"
 	.balign 4
+.endobj lbl_80666220
 
 
-.global lbl_80666228
-lbl_80666228:
+.obj lbl_80666228, global
 	.4byte 0x72656600
+.endobj lbl_80666228
 
 
-.global lbl_8066622C
-lbl_8066622C:
+.obj lbl_8066622C, global
 	.4byte 0x72656600
+.endobj lbl_8066622C
 
 
-.global lbl_80666230
-lbl_80666230:
+.obj lbl_80666230, global
 	.asciz "ResNode"
+.endobj lbl_80666230
 
 
-.global lbl_80666238
-lbl_80666238:
+.obj lbl_80666238, global
 	.4byte 0x72656600
+.endobj lbl_80666238
 
 
-.global lbl_8066623C
-lbl_8066623C:
+.obj lbl_8066623C, global
 	.4byte 0x72656600
+.endobj lbl_8066623C
 
 
-.global lbl_80666240
-lbl_80666240:
+.obj lbl_80666240, global
 	.4byte 0x72656600
+.endobj lbl_80666240
 
 
-.global lbl_80666244
-lbl_80666244:
+.obj lbl_80666244, global
 	.4byte 0x72656600
+.endobj lbl_80666244
 
 
-.global lbl_80666248
-lbl_80666248:
+.obj lbl_80666248, global
 	.asciz "ResDic"
 	.balign 4
+.endobj lbl_80666248
 
 
-.global lbl_80666250
-lbl_80666250:
+.obj lbl_80666250, global
 	.4byte 0x72656600
 	.4byte 0
+.endobj lbl_80666250
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_8066D090
-lbl_8066D090:
+.obj lbl_8066D090, global
 	.asciz "bloom"
 	.balign 4
+.endobj lbl_8066D090
 
-.global lbl_8066D098
-lbl_8066D098:
+.obj lbl_8066D098, global
 	.asciz "move"
 	.balign 4
+.endobj lbl_8066D098
 
 
-.global float_8066D0A0
-float_8066D0A0:
+.obj float_8066D0A0, global
 	.float 0
+.endobj float_8066D0A0
 
 
-.global float_8066D0A4
-float_8066D0A4:
+.obj float_8066D0A4, global
 	.float 255 #0x437F0000
+.endobj float_8066D0A4
 
 
-.global float_8066D0A8
-float_8066D0A8:
+.obj float_8066D0A8, global
 	.float 30 #0x41F00000
 	.4byte 0
+.endobj float_8066D0A8
 
 
-.global double_8066D0B0
-double_8066D0B0:
+.obj double_8066D0B0, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066D0B0
 
-.global float_8066D0B8
-float_8066D0B8:
+.obj float_8066D0B8, global
 	.float 100.0
+.endobj float_8066D0B8
 
 
-.global float_8066D0BC
-float_8066D0BC:
+.obj float_8066D0BC, global
 	.float 1.0
+.endobj float_8066D0BC
 
 
-.global float_8066D0C0
-float_8066D0C0:
+.obj float_8066D0C0, global
 	.float 0.001 #0x3A83126F
+.endobj float_8066D0C0
 
 
-.global float_8066D0C4
-float_8066D0C4:
+.obj float_8066D0C4, global
 	.float 0.5
+.endobj float_8066D0C4
 
 
-.global float_8066D0C8
-float_8066D0C8:
+.obj float_8066D0C8, global
 	.float 0.09 #0x3DB851EC
+.endobj float_8066D0C8
 
 
-.global float_8066D0CC
-float_8066D0CC:
+.obj float_8066D0CC, global
 	.float 0.3 #0x3E99999A
+.endobj float_8066D0CC
 
 
-.global float_8066D0D0
-float_8066D0D0:
+.obj float_8066D0D0, global
 	.float -1.0
+.endobj float_8066D0D0
 
 
-.global float_8066D0D4
-float_8066D0D4:
+.obj float_8066D0D4, global
 	.float 0.01 #0x3C23D70A
+.endobj float_8066D0D4
 
 
-.global float_8066D0D8
-float_8066D0D8:
+.obj float_8066D0D8, global
 	.float -0.02 #0xBCA3D70A
+.endobj float_8066D0D8
 
 
-.global float_8066D0DC
-float_8066D0DC:
+.obj float_8066D0DC, global
 	.float 0.0100000007 #0x3C23D70B
+.endobj float_8066D0DC
 
 
-.global float_8066D0E0
-float_8066D0E0:
+.obj float_8066D0E0, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_8066D0E0
 
 
-.global float_8066D0E4
-float_8066D0E4:
+.obj float_8066D0E4, global
 	.float -0.9999 #0xBF7FF972
+.endobj float_8066D0E4
 
 
-.global float_8066D0E8
-float_8066D0E8:
+.obj float_8066D0E8, global
 	.float 2 #0x40000000
 	.4byte 0
+.endobj float_8066D0E8
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_806681B0
-lbl_806681B0:
+.obj lbl_806681B0, global
 	.skip 0x8
+.endobj lbl_806681B0
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

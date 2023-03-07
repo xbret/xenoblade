@@ -831,10 +831,10 @@
 /* 803523F8 0031B9B8  38 65 00 0C */	addi r3, r5, 0xc
 /* 803523FC 0031B9BC  90 6D B8 B4 */	stw r3, BI2DebugFlag@sda21(r13)
 /* 80352400 0031B9C0  80 05 00 24 */	lwz r0, 0x24(r5)
-/* 80352404 0031B9C4  90 0D B9 D0 */	stw r0, lbl_80667B50@sda21(r13)
+/* 80352404 0031B9C4  90 0D B9 D0 */	stw r0, __PADSpec@sda21(r13)
 /* 80352408 0031B9C8  80 05 00 0C */	lwz r0, 0xc(r5)
 /* 8035240C 0031B9CC  98 04 30 E8 */	stb r0, 0x30e8(r4)
-/* 80352410 0031B9D0  80 0D B9 D0 */	lwz r0, lbl_80667B50@sda21(r13)
+/* 80352410 0031B9D0  80 0D B9 D0 */	lwz r0, __PADSpec@sda21(r13)
 /* 80352414 0031B9D4  98 04 30 E9 */	stb r0, 0x30e9(r4)
 /* 80352418 0031B9D8  48 00 00 28 */	b .L_80352440
 .L_8035241C:
@@ -846,7 +846,7 @@
 /* 80352430 0031B9F0  90 6D B8 B0 */	stw r3, BI2DebugFlagHolder@sda21(r13)
 /* 80352434 0031B9F4  90 0D B8 B4 */	stw r0, BI2DebugFlag@sda21(r13)
 /* 80352438 0031B9F8  88 04 30 E9 */	lbz r0, 0x30e9(r4)
-/* 8035243C 0031B9FC  90 0D B9 D0 */	stw r0, lbl_80667B50@sda21(r13)
+/* 8035243C 0031B9FC  90 0D B9 D0 */	stw r0, __PADSpec@sda21(r13)
 .L_80352440:
 /* 80352440 0031BA00  38 00 00 01 */	li r0, 1
 /* 80352444 0031BA04  90 0D 97 F0 */	stw r0, __DVDLongFileNameFlag@sda21(r13)
@@ -1340,8 +1340,6 @@
 /* 80352B40 0031C100  4E 80 00 20 */	blr
 .endfn __OSDBIntegrator
 
-#These extra labels shouldn't exist, but are needed because of alignment shenanigans
-
 __OSDBINTSTART:
 .balign 16, 0
 .fn __OSDBJump, global
@@ -1544,8 +1542,9 @@ __OSDBINTEND:
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80551300
-lbl_80551300:
+.balign 8
+
+.obj lbl_80551300, global
 	.asciz "<< RVL_SDK - OS \trelease build: Feb 27 2009 10:04:29 (0x4302_145) >>"
 	.balign 4
 	.asciz "\nRevolution OS\n"
@@ -1620,107 +1619,125 @@ lbl_80551300:
 	.asciz "Exceptions initialized...\n"
 	.balign 4
 	.4byte 0
+.endobj lbl_80551300
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-__OSVersion:
+.balign 8
+
+.obj __OSVersion, local
 	.4byte lbl_80551300
+.endobj __OSVersion
 
 
-.global lbl_80665B2C
-lbl_80665B2C:
+.obj lbl_80665B2C, global
 	.asciz "RVA 1\n"
 	.balign 4
+.endobj lbl_80665B2C
 
 
-.global lbl_80665B34
-lbl_80665B34:
+.obj lbl_80665B34, global
 	.asciz "%08x\n"
 	.balign 4
+.endobj lbl_80665B34
 
 
-.global lbl_80665B3C
-lbl_80665B3C:
+.obj lbl_80665B3C, global
 	.asciz "%s\n"
+.endobj lbl_80665B3C
 
 
-.global lbl_80665B40
-lbl_80665B40:
+.obj lbl_80665B40, global
 	.asciz "OS.c"
 	.balign 4
+.endobj lbl_80665B40
 
-.global lbl_80665B48
-lbl_80665B48:
+.obj lbl_80665B48, global
 	.asciz "HAEA"
 	.balign 4
+.endobj lbl_80665B48
 
 
-AppGameNameForSysMenu:
+.obj AppGameNameForSysMenu, local
 	.4byte lbl_80665B48
 	.4byte 0
+.endobj AppGameNameForSysMenu
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C188
-lbl_8066C188:
+.balign 8
+
+.obj lbl_8066C188, global
 	.4byte 0x0000FF00
+.endobj lbl_8066C188
 
 
-.global lbl_8066C18C
-lbl_8066C18C:
+.obj lbl_8066C18C, global
 	.4byte 0xFFFFFF00
+.endobj lbl_8066C18C
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global __OSRebootParams
-__OSRebootParams:
+.obj __OSRebootParams, global
 	.skip 0x20
+.endobj __OSRebootParams
 
-.global DriveInfo
-DriveInfo:
+.obj DriveInfo, global
 	.skip 0x20
+.endobj DriveInfo
 
-DriveBlock:
+.obj DriveBlock, local
 	.skip 0x30
+.endobj DriveBlock
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global __OSInIPL
-__OSInIPL:
+.balign 8
+
+.obj __OSInIPL, global
 	.skip 0x4
+.endobj __OSInIPL
 
-.global __OSInNandBoot
-__OSInNandBoot:
+.obj __OSInNandBoot, global
 	.skip 0x4
+.endobj __OSInNandBoot
 
-.global __OSIsGcam
-__OSIsGcam:
+.obj __OSIsGcam, global
 	.skip 0x4
+.endobj __OSIsGcam
 
-AreWeInitialized:
+.obj AreWeInitialized, local
 	.skip 0x4
+.endobj AreWeInitialized
 
-OSExceptionTable:
+.obj OSExceptionTable, local
 	.skip 0x8
+.endobj OSExceptionTable
 
-ZeroPS:
+.obj ZeroPS, local
 	.skip 0x8
+.endobj ZeroPS
 
-ZeroF:
+.obj ZeroF, local
 	.skip 0x8
+.endobj ZeroF
 
-GameNameBuffer:
+.obj GameNameBuffer, local
 	.skip 0x8
+.endobj GameNameBuffer
 
-BI2DebugFlagHolder:
+.obj BI2DebugFlagHolder, local
 	.skip 0x4
+.endobj BI2DebugFlagHolder
 
-BI2DebugFlag:
+.obj BI2DebugFlag, local
 	.skip 0x4
+.endobj BI2DebugFlag
 
-BootInfo:
+.obj BootInfo, local
 	.skip 0x8
+.endobj BootInfo
 
-.global __OSStartTime
-__OSStartTime:
+.obj __OSStartTime, global
 	.skip 0x8
+.endobj __OSStartTime

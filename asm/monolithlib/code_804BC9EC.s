@@ -1070,11 +1070,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-
-.global jumptable_80573138
-jumptable_80573138:
+.obj jumptable_80573138, global
 	.4byte .L_804BCBE0
 	.4byte .L_804BCA9C
 	.4byte .L_804BCB28
@@ -1095,51 +1093,52 @@ jumptable_80573138:
 	.4byte .L_804BCB9C
 	.4byte .L_804BCBB4
 	.4byte .L_804BCBC8
+.endobj jumptable_80573138
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global float_806663F0
-float_806663F0:
+.obj float_806663F0, global
 	.float 50 #0x42480000
+.endobj float_806663F0
 
 
-.global float_806663F4
-float_806663F4:
+.obj float_806663F4, global
 	.float 20 #0x41A00000
+.endobj float_806663F4
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066D6C0
-float_8066D6C0:
+.obj float_8066D6C0, global
 	.float 0.33333333 #0x3EAAAAAB
+.endobj float_8066D6C0
 
 
-.global float_8066D6C4
-float_8066D6C4:
+.obj float_8066D6C4, global
 	.float 0
+.endobj float_8066D6C4
 
 
-.global float_8066D6C8
-float_8066D6C8:
+.obj float_8066D6C8, global
 	.float 255 #0x437F0000
 	.4byte 0
+.endobj float_8066D6C8
 
 #used in game code/monolithlib
-.global mlib_invsqrt2
-mlib_invsqrt2:
+.obj mlib_invsqrt2, global
 	.float 0.707099974155
+.endobj mlib_invsqrt2
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80668240
-lbl_80668240:
+.obj lbl_80668240, global
 	.skip 0x8
+.endobj lbl_80668240
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

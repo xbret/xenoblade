@@ -212,68 +212,74 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global __vt__std_bad_cast
-__vt__std_bad_cast:
+.balign 8
+
+.obj __vt__std_bad_cast, global
 	.4byte __RTTI__std_bad_cast
 	.4byte 0
 	.4byte __dt__Q23std8bad_castFv
 	.4byte what__Q23std8bad_castCFv
+.endobj __vt__std_bad_cast
 
-.global std_bad_cast_hierarchy
-std_bad_cast_hierarchy:
+.obj std_bad_cast_hierarchy, global
 	.4byte __RTTI__std_exception
 	.4byte 0
 	.4byte 0
+.endobj std_bad_cast_hierarchy
 
 
-.global lbl_8053F05C
-lbl_8053F05C:
+.obj lbl_8053F05C, global
 	.asciz "bad_cast"
 	.balign 4
+.endobj lbl_8053F05C
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global __RTTI__std_exception
-__RTTI__std_exception:
+.balign 8
+
+.obj __RTTI__std_exception, global
 	.4byte std_exception_typestr
 	.4byte 0
+.endobj __RTTI__std_exception
 
-.global thandler__3std
-thandler__3std:
+.obj thandler__3std, global
 	.4byte dthandler__3stdFv
 	.4byte 0
+.endobj thandler__3std
 
-.global __RTTI__std_bad_cast
-__RTTI__std_bad_cast:
+.obj __RTTI__std_bad_cast, global
 	.4byte std_bad_cast_typestr
 	.4byte std_bad_cast_hierarchy
+.endobj __RTTI__std_bad_cast
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global std_exception_typestr
-std_exception_typestr:
+.balign 8
+
+.obj std_exception_typestr, global
 	.asciz "std::exception"
 	.balign 4
+.endobj std_exception_typestr
 
 
-.global lbl_8050CE10
-lbl_8050CE10:
+.obj lbl_8050CE10, global
 	.4byte 0
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8050CE10
 
-.global std_bad_cast_typestr
-std_bad_cast_typestr:
+.obj std_bad_cast_typestr, global
 	.asciz "std::bad_cast"
 	.balign 4
+.endobj std_bad_cast_typestr
 
 
-.global lbl_8050CE30
-lbl_8050CE30:
+.obj lbl_8050CE30, global
 	.asciz "???"
 	.asciz "!std::exception!!std::bad_typeid!!"
 	.asciz "!std::exception!!std::bad_cast!!"
+.endobj lbl_8050CE30
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -1425,61 +1425,60 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-
-.global __vt__CVirtualLightObj
-__vt__CVirtualLightObj:
+.obj __vt__CVirtualLightObj, global
 	.4byte __RTTI__CVirtualLightObj
 	.4byte 0
 	.4byte __dt__CVirtualLightObj
 	.4byte func_804947EC
 	.4byte func_8049488C
 	.4byte 0
+.endobj __vt__CVirtualLightObj
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066D248
-float_8066D248:
+.obj float_8066D248, global
 	.float 1.0
+.endobj float_8066D248
 
 
-.global float_8066D24C
-float_8066D24C:
+.obj float_8066D24C, global
 	.float 0
+.endobj float_8066D24C
 
 
-.global float_8066D250
-float_8066D250:
+.obj float_8066D250, global
 	.float 255 #0x437F0000
 	.4byte 0
+.endobj float_8066D250
 
 
-.global float_8066D258
-float_8066D258:
+.obj float_8066D258, global
 	.float 1.0
+.endobj float_8066D258
 
 
-.global float_8066D25C
-float_8066D25C:
+.obj float_8066D25C, global
 	.float 255 #0x437F0000
+.endobj float_8066D25C
 
 
-.global double_8066D260
-double_8066D260:
+.obj double_8066D260, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066D260
 
-.global float_8066D268
-float_8066D268:
+.obj float_8066D268, global
 	.float 0
+.endobj float_8066D268
 
 
-.global float_8066D26C
-float_8066D26C:
+.obj float_8066D26C, global
 	.float 0.5
+.endobj float_8066D26C
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

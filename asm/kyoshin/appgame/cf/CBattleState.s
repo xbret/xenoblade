@@ -4554,22 +4554,21 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_804FD0D8
-lbl_804FD0D8:
+.obj lbl_804FD0D8, global
 	.asciz "name_dbg"
 	.asciz "name"
 	.byte 0x00
 	.asciz "elem"
 	.4byte 0
+.endobj lbl_804FD0D8
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CBattleState
-__vt__cf_CBattleState:
+.obj __vt__cf_CBattleState, global
 	.4byte __RTTI__cf_CBattleState
 	.4byte 0
 	.4byte func_80147784
@@ -4606,43 +4605,44 @@ __vt__cf_CBattleState:
 	.4byte func_80149600
 	.4byte func_80149610
 	.4byte 0
+.endobj __vt__cf_CBattleState
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80664B40
-lbl_80664B40:
+.obj lbl_80664B40, global
 	.4byte 0
 	.4byte 0
+.endobj lbl_80664B40
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_80669CC0
-float_80669CC0:
+.obj float_80669CC0, global
 	.float 1.0
+.endobj float_80669CC0
 
 
-.global float_80669CC4
-float_80669CC4:
+.obj float_80669CC4, global
 	.float 0.5
+.endobj float_80669CC4
 
 
-.global double_80669CC8
-double_80669CC8:
+.obj double_80669CC8, global
 	.double 1.5 #0x3FF8000000000000
+.endobj double_80669CC8
 
 
-.global float_80669CD0
-float_80669CD0:
+.obj float_80669CD0, global
 	.float 0
+.endobj float_80669CD0
 
 
-.global float_80669CD4
-float_80669CD4:
+.obj float_80669CD4, global
 	.float 0.9 #0x3F666666
+.endobj float_80669CD4
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

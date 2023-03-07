@@ -130,19 +130,23 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_80518668
-lbl_80518668:
+.balign 8
+
+.obj lbl_80518668, global
 	.float 1.0
 	.4byte 0
+.endobj lbl_80518668
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global homebutton_FrameController_typestr
-homebutton_FrameController_typestr:
+.balign 8
+
+.obj homebutton_FrameController_typestr, global
 	.asciz "homebutton::FrameController"
 	.4byte 0
+.endobj homebutton_FrameController_typestr
 
-.global __RTTI__homebutton_FrameController
-__RTTI__homebutton_FrameController:
+.obj __RTTI__homebutton_FrameController, global
 	.4byte homebutton_FrameController_typestr
 	.4byte 0
+.endobj __RTTI__homebutton_FrameController

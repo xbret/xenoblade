@@ -220,8 +220,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051F900
-lbl_8051F900:
+.balign 8
+
+.obj lbl_8051F900, global
 	.4byte 0x3FD6A09E
 	.4byte 0x667F3BCD
 	.4byte 0x3FE00000
@@ -230,17 +231,19 @@ lbl_8051F900:
 	.4byte 0x54442D18
 	.4byte 0x43300000
 	.4byte 0x80000000
+.endobj lbl_8051F900
 
 
-.global double_8051F920
-double_8051F920:
+.obj double_8051F920, global
 	.double 0
+.endobj double_8051F920
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_80607B78
-lbl_80607B78:
+.obj lbl_80607B78, global
 	.skip 0x8
-.global lbl_80607B80
-lbl_80607B80:
+.endobj lbl_80607B78
+
+.obj lbl_80607B80, global
 	.skip 0x400
+.endobj lbl_80607B80

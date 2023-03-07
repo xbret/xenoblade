@@ -387,30 +387,32 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_80669758
-float_80669758:
+.balign 8
+
+.obj float_80669758, global
 	.float 0
 	.4byte 0
+.endobj float_80669758
 
 
-.global double_80669760
-double_80669760:
+.obj double_80669760, global
 	.double 0.5 #0x3FE0000000000000
+.endobj double_80669760
 
 
-.global double_80669768
-double_80669768:
+.obj double_80669768, global
 	.double -0.5 #0xBFE0000000000000
+.endobj double_80669768
 
 
-.global double_80669770
-double_80669770:
+.obj double_80669770, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_80669770
 
-.global float_80669778
-float_80669778:
+.obj float_80669778, global
 	.float 1.0
 	.4byte 0
+.endobj float_80669778
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

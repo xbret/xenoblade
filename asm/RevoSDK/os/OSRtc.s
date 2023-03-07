@@ -759,5 +759,6 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-Scb:
+.obj Scb, local
 	.skip 0x58
+.endobj Scb

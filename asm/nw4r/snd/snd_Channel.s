@@ -1296,58 +1296,62 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C708
-float_8066C708:
+.balign 8
+
+.obj float_8066C708, global
 	.float 0
+.endobj float_8066C708
 
 
-.global float_8066C70C
-float_8066C70C:
+.obj float_8066C70C, global
 	.float 1.0
+.endobj float_8066C70C
 
 
-.global float_8066C710
-float_8066C710:
+.obj float_8066C710, global
 	.float 255 #0x437F0000
+.endobj float_8066C710
 
 
-.global float_8066C714
-float_8066C714:
+.obj float_8066C714, global
 	.float 6 #0x40C00000
+.endobj float_8066C714
 
 
-.global float_8066C718
-float_8066C718:
+.obj float_8066C718, global
 	.float 256 #0x43800000
 	.4byte 0
+.endobj float_8066C718
 
 
-.global double_8066C720
-double_8066C720:
+.obj double_8066C720, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066C720
 
-.global double_8066C728
-double_8066C728:
+.obj double_8066C728, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066C728
 
-.global float_8066C730
-float_8066C730:
+.obj float_8066C730, global
 	.float -90.4 #0xC2B4CCCD
+.endobj float_8066C730
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_8063B1A0
-lbl_8063B1A0:
+.obj lbl_8063B1A0, global
 	.skip 0x10
+.endobj lbl_8063B1A0
 
 #@LOCAL@GetInstance__Q44nw4r3snd6detail14ChannelManagerFv@instance
-.global lbl_8063B1B0
-lbl_8063B1B0:
+.obj lbl_8063B1B0, global
 	.skip 0x20
+.endobj lbl_8063B1B0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
+
 #@GUARD@GetInstance__Q44nw4r3snd6detail14ChannelManagerFv@instance
-.global lbl_80667DB8
-lbl_80667DB8:
+.obj lbl_80667DB8, global
 	.skip 0x8
+.endobj lbl_80667DB8

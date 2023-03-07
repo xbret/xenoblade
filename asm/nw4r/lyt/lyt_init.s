@@ -28,12 +28,17 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056D188
-lbl_8056D188:
+.balign 8
+
+.obj lbl_8056D188, global
 	.asciz "<< NW4R    - LYT \tfinal   build: Aug 21 2008 05:21:58 (0x4199_60831) >>"
+.endobj lbl_8056D188
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-"NW4R_LYT_Version___22@unnamed@lyt_init_cpp@":
+.balign 8
+
+.obj "NW4R_LYT_Version___22@unnamed@lyt_init_cpp@", local
 	.4byte lbl_8056D188
 	.4byte 0
+.endobj "NW4R_LYT_Version___22@unnamed@lyt_init_cpp@"

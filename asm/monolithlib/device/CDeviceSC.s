@@ -205,22 +205,20 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-
-.global CDeviceSC_typestr
-CDeviceSC_typestr:
+.obj CDeviceSC_typestr, global
 	.asciz "CDeviceSC"
 	.balign 4
 	.4byte 0
+.endobj CDeviceSC_typestr
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CDeviceSC
-__vt__CDeviceSC:
+.obj __vt__CDeviceSC, global
 	.4byte __RTTI__CDeviceSC
 	.4byte 0
 	.4byte __dt__CDeviceSC
@@ -261,9 +259,9 @@ __vt__CDeviceSC:
 	.4byte func_80447D08
 	.4byte func_80447D80
 	.4byte func_80039E30
+.endobj __vt__CDeviceSC
 
-.global CDeviceSC_hierarchy
-CDeviceSC_hierarchy:
+.obj CDeviceSC_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
@@ -272,23 +270,24 @@ CDeviceSC_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CDeviceSC_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CDeviceSC
-__RTTI__CDeviceSC:
+.obj __RTTI__CDeviceSC, global
 	.4byte CDeviceSC_typestr
 	.4byte CDeviceSC_hierarchy
+.endobj __RTTI__CDeviceSC
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80667F20
-lbl_80667F20:
+.obj lbl_80667F20, global
 	.skip 0x8
+.endobj lbl_80667F20
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

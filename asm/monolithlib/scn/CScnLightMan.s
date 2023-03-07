@@ -128,33 +128,33 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CScnLightMan_typestr
-CScnLightMan_typestr:
+.obj CScnLightMan_typestr, global
 	.asciz "CScnLightMan"
 	.balign 4
+.endobj CScnLightMan_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CScnLightMan
-__vt__CScnLightMan:
+.obj __vt__CScnLightMan, global
 	.4byte __RTTI__CScnLightMan
 	.4byte 0
 	.4byte __dt__CScnLightMan
 	.4byte 0
+.endobj __vt__CScnLightMan
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CScnLightMan
-__RTTI__CScnLightMan:
+.obj __RTTI__CScnLightMan, global
 	.4byte CScnLightMan_typestr
 	.4byte 0
+.endobj __RTTI__CScnLightMan
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

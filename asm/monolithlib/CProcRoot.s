@@ -429,27 +429,26 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CProcRoot_typestr
-CProcRoot_typestr:
+.obj CProcRoot_typestr, global
 	.asciz "CProcRoot"
 	.balign 4
+.endobj CProcRoot_typestr
 
 
-.global lbl_80525E2C
-lbl_80525E2C:
+.obj lbl_80525E2C, global
 	.asciz "CDesktop"
 	.asciz "CProcRoot"
 	.balign 4
+.endobj lbl_80525E2C
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CProcRoot
-__vt__CProcRoot:
+.obj __vt__CProcRoot, global
 	.4byte __RTTI__CProcRoot
 	.4byte 0
 	.4byte __dt__CProcRoot
@@ -490,45 +489,46 @@ __vt__CProcRoot:
 	.4byte func_804397B4
 	.4byte func_80439858
 	.4byte func_80039E30
+.endobj __vt__CProcRoot
 
-.global CProcRoot_hierarchy
-CProcRoot_hierarchy:
+.obj CProcRoot_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CProcRoot_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-
-.global __RTTI__CProcRoot
-__RTTI__CProcRoot:
+.obj __RTTI__CProcRoot, global
 	.4byte CProcRoot_typestr
 	.4byte CProcRoot_hierarchy
+.endobj __RTTI__CProcRoot
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_8065A088
-lbl_8065A088:
+.obj lbl_8065A088, global
 	.skip 0x40
+.endobj lbl_8065A088
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80667E80, global
+	.skip 0x8
+.endobj lbl_80667E80
 
-.global lbl_80667E80
-lbl_80667E80:
+.obj lbl_80667E88, global
 	.skip 0x8
-.global lbl_80667E88
-lbl_80667E88:
-	.skip 0x8
+.endobj lbl_80667E88
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -388,13 +388,15 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global __s_MIXRmtChannel
-__s_MIXRmtChannel:
+.obj __s_MIXRmtChannel, global
 	.skip 0x1988
+.endobj __s_MIXRmtChannel
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global __MIXRmtChannel
-__MIXRmtChannel:
+.balign 8
+
+.obj __MIXRmtChannel, global
 	.skip 0x8
+.endobj __MIXRmtChannel

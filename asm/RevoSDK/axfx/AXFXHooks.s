@@ -34,11 +34,13 @@
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global __AXFXAlloc
-__AXFXAlloc:
+.balign 8
+
+.obj __AXFXAlloc, global
 	.4byte __AXFXAllocFunction
+.endobj __AXFXAlloc
 
 
-.global __AXFXFree
-__AXFXFree:
+.obj __AXFXFree, global
 	.4byte __AXFXFreeFunction
+.endobj __AXFXFree

@@ -2109,37 +2109,37 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066DA08
-float_8066DA08:
+.obj float_8066DA08, global
 	.float 57.2957802 #0x42652EE1
 	.4byte 0
+.endobj float_8066DA08
 
 
-.global double_8066DA10
-double_8066DA10:
+.obj double_8066DA10, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066DA10
 
-.global float_8066DA18
-float_8066DA18:
+.obj float_8066DA18, global
 	.float 1.0
+.endobj float_8066DA18
 
 
-.global float_8066DA1C
-float_8066DA1C:
+.obj float_8066DA1C, global
 	.float 0
+.endobj float_8066DA1C
 
 
-.global float_8066DA20
-float_8066DA20:
+.obj float_8066DA20, global
 	.float 0.0174532924 #0x3C8EFA35
 	.4byte 0
+.endobj float_8066DA20
 
 
-.global double_8066DA28
-double_8066DA28:
+.obj double_8066DA28, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066DA28
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

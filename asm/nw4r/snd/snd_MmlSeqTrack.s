@@ -57,19 +57,19 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8056E390
-lbl_8056E390:
+.obj lbl_8056E390, global
 	.4byte 0
 	.4byte 0
 	.4byte CommandProc__Q44nw4r3snd6detail9MmlParserCFPQ44nw4r3snd6detail11MmlSeqTrackUlll
 	.4byte NoteOnCommandProc__Q44nw4r3snd6detail9MmlParserCFPQ44nw4r3snd6detail11MmlSeqTrackiilb
+.endobj lbl_8056E390
 
 
-.global lbl_8056E3A0
-lbl_8056E3A0:
+.obj lbl_8056E3A0, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q44nw4r3snd6detail11MmlSeqTrackFv
 	.4byte Parse__Q44nw4r3snd6detail11MmlSeqTrackFb
+.endobj lbl_8056E3A0

@@ -2773,15 +2773,16 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8054A6C0
-lbl_8054A6C0:
+.balign 8
+
+.obj lbl_8054A6C0, global
 	.asciz "(doTransactionCallback) Error - context mangled!\n"
 	.balign 4
 	.asciz "(doCoverCallback) Error - context mangled!\n"
+.endobj lbl_8054A6C0
 
 
-.global lbl_8054A720
-lbl_8054A720:
+.obj lbl_8054A720, global
 	.asciz "(DVDLowFinish) Error: IOS_Close failed\n"
 	.asciz "IPCCltInit returned error: %d\n"
 	.balign 4
@@ -2909,80 +2910,106 @@ lbl_8054A720:
 	.balign 4
 	.asciz "@@@ (DVDLowEnableDvdVideo) IOS_IoctlAsync returned error: %d\n"
 	.balign 4
+.endobj lbl_8054A720
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-DiFD:
+.balign 8
+
+.obj DiFD, local
 	.4byte 0xFFFFFFFF
 	.4byte 0
+.endobj DiFD
 
 
-.global lbl_806659B0
-lbl_806659B0:
+.obj lbl_806659B0, global
 	.asciz "/dev/di"
+.endobj lbl_806659B0
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
-dvdContexts:
+.obj dvdContexts, local
 	.skip 0x80
+.endobj dvdContexts
 
-diRegValCache:
+.obj diRegValCache, local
 	.skip 0x20
+.endobj diRegValCache
 
-registerBuf:
+.obj registerBuf, local
 	.skip 0x20
+.endobj registerBuf
 
-ioVec:
+.obj ioVec, local
 	.skip 0x60
+.endobj ioVec
 
-lastTicketError:
+.obj lastTicketError, local
 	.skip 0x20
+.endobj lastTicketError
 
-coverStatus:
+.obj coverStatus, local
 	.skip 0x20
+.endobj coverStatus
 
-coverRegister:
+.obj coverRegister, local
 	.skip 0x20
+.endobj coverRegister
 
-statusRegister:
+.obj statusRegister, local
 	.skip 0x20
+.endobj statusRegister
 
-controlRegister:
+.obj controlRegister, local
 	.skip 0x20
+.endobj controlRegister
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-requestInProgress:
+
+.obj requestInProgress, local
 	.skip 0x1
+.endobj requestInProgress
 
-callbackInProgress:
+.obj callbackInProgress, local
 	.skip 0x3
+.endobj callbackInProgress
 
-freeCommandBuf:
+.obj freeCommandBuf, local
 	.skip 0x4
+.endobj freeCommandBuf
 
-freeDvdContext:
+.obj freeDvdContext, local
 	.skip 0x4
+.endobj freeDvdContext
 
-dvdContextsInited:
+.obj dvdContextsInited, local
 	.skip 0x1
+.endobj dvdContextsInited
 
-DVDLowInitCalled:
+.obj DVDLowInitCalled, local
 	.skip 0x3
+.endobj DVDLowInitCalled
 
-spinUpValue:
+.obj spinUpValue, local
 	.skip 0x4
+.endobj spinUpValue
 
-readLength:
+.obj readLength, local
 	.skip 0x4
+.endobj readLength
 
-pathBuf:
+.obj pathBuf, local
 	.skip 0x4
+.endobj pathBuf
 
-diCommand:
+.obj diCommand, local
 	.skip 0x4
+.endobj diCommand
 
-breakRequested:
+.obj breakRequested, local
 	.skip 0x8
+.endobj breakRequested

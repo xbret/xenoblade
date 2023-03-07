@@ -1219,9 +1219,10 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global lbl_8056D258
-lbl_8056D258:
+
+.obj lbl_8056D258, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r3lyt6LayoutFv
@@ -1238,20 +1239,25 @@ lbl_8056D258:
 	.4byte Draw__Q34nw4r3lyt6LayoutFRCQ34nw4r3lyt8DrawInfo
 	.4byte Animate__Q34nw4r3lyt6LayoutFUl
 	.4byte "SetTagProcessor__Q34nw4r3lyt6LayoutFPQ34nw4r2ut19TagProcessorBase<w>"
+.endobj lbl_8056D258
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C558
-float_8066C558:
+.balign 8
+
+.obj float_8066C558, global
 	.float 0
+.endobj float_8066C558
 
 
-.global float_8066C55C
-float_8066C55C:
+.obj float_8066C55C, global
 	.float 0.5
+.endobj float_8066C55C
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global mspAllocator__Q34nw4r3lyt6Layout
-mspAllocator__Q34nw4r3lyt6Layout:
+.balign 8
+
+.obj mspAllocator__Q34nw4r3lyt6Layout, global
 	.skip 0x8
+.endobj mspAllocator__Q34nw4r3lyt6Layout

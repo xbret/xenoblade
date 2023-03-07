@@ -52,20 +52,23 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066CA58
-float_8066CA58:
+.balign 8
+
+.obj float_8066CA58, global
 	.float 0
+.endobj float_8066CA58
 
 
-.global float_8066CA5C
-float_8066CA5C:
+.obj float_8066CA5C, global
 	.float 1.0
+.endobj float_8066CA5C
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_80659FE8
-lbl_80659FE8:
+.obj lbl_80659FE8, global
 	.skip 0x40
-.global lbl_8065A028
-lbl_8065A028:
+.endobj lbl_80659FE8
+
+.obj lbl_8065A028, global
 	.skip 0x40
+.endobj lbl_8065A028

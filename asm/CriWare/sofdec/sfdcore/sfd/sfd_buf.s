@@ -1191,12 +1191,14 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global sfbuf_sjrbf_uuid
-sfbuf_sjrbf_uuid:
+.obj sfbuf_sjrbf_uuid, global
 	.skip 0x4
-.global sfbuf_sjmem_uuid
-sfbuf_sjmem_uuid:
+.endobj sfbuf_sjrbf_uuid
+
+.obj sfbuf_sjmem_uuid, global
 	.skip 0x4
-.global lbl_8060A2D0
-lbl_8060A2D0:
+.endobj sfbuf_sjmem_uuid
+
+.obj lbl_8060A2D0, global
 	.skip 0x8
+.endobj lbl_8060A2D0

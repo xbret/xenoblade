@@ -283,24 +283,23 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CDeviceFontInfoExt_typestr
-CDeviceFontInfoExt_typestr:
+.obj CDeviceFontInfoExt_typestr, global
 	.asciz "CDeviceFontInfoExt"
 	.balign 4
 	.4byte 0
+.endobj CDeviceFontInfoExt_typestr
 
-.global IDeviceFontInfo_typestr
-IDeviceFontInfo_typestr:
+.obj IDeviceFontInfo_typestr, global
 	.asciz "IDeviceFontInfo"
+.endobj IDeviceFontInfo_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CDeviceFontInfoExt
-__vt__CDeviceFontInfoExt:
+.obj __vt__CDeviceFontInfoExt, global
 	.4byte __RTTI__CDeviceFontInfoExt
 	.4byte 0
 	.4byte __dt__CDeviceFontInfoExt
@@ -316,46 +315,47 @@ __vt__CDeviceFontInfoExt:
 	.4byte func_804535DC
 	.4byte func_804535F4
 	.4byte func_80453608
+.endobj __vt__CDeviceFontInfoExt
 
-.global CDeviceFontInfoExt_hierarchy
-CDeviceFontInfoExt_hierarchy:
+.obj CDeviceFontInfoExt_hierarchy, global
 	.4byte __RTTI__IDeviceFontInfo
 	.4byte 0
 	.4byte 0
+.endobj CDeviceFontInfoExt_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CDeviceFontInfoExt
-__RTTI__CDeviceFontInfoExt:
+.obj __RTTI__CDeviceFontInfoExt, global
 	.4byte CDeviceFontInfoExt_typestr
 	.4byte CDeviceFontInfoExt_hierarchy
+.endobj __RTTI__CDeviceFontInfoExt
 
-.global __RTTI__IDeviceFontInfo
-__RTTI__IDeviceFontInfo:
+.obj __RTTI__IDeviceFontInfo, global
 	.4byte IDeviceFontInfo_typestr
 	.4byte 0
+.endobj __RTTI__IDeviceFontInfo
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066CBC0
-float_8066CBC0:
+.obj float_8066CBC0, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066CBC0
 
 
 .section .sbss2, "", @nobits #0x8066DCE0 - 0x8066DCFB
 
-
+.balign 8
 
 #used in CUICfManager
-.global lbl_8066DCF8
-lbl_8066DCF8:
+.obj lbl_8066DCF8, global
 	.skip 0x4
+.endobj lbl_8066DCF8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

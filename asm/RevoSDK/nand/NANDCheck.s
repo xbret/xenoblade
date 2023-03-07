@@ -211,43 +211,44 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global lbl_805511D0
-lbl_805511D0:
+
+.obj lbl_805511D0, global
 	.asciz "/title/00010000"
+.endobj lbl_805511D0
 
-.global lbl_805511E0
-lbl_805511E0:
+.obj lbl_805511E0, global
 	.asciz "/title/00010001"
+.endobj lbl_805511E0
 
-.global lbl_805511F0
-lbl_805511F0:
+.obj lbl_805511F0, global
 	.asciz "/title/00010003"
+.endobj lbl_805511F0
 
-.global lbl_80551200
-lbl_80551200:
+.obj lbl_80551200, global
 	.asciz "/title/00010004"
+.endobj lbl_80551200
 
-.global lbl_80551210
-lbl_80551210:
+.obj lbl_80551210, global
 	.asciz "/title/00010005"
+.endobj lbl_80551210
 
-.global lbl_80551220
-lbl_80551220:
+.obj lbl_80551220, global
 	.asciz "/title/00010006"
+.endobj lbl_80551220
 
-.global lbl_80551230
-lbl_80551230:
+.obj lbl_80551230, global
 	.asciz "/title/00010007"
+.endobj lbl_80551230
 
-.global lbl_80551240
-lbl_80551240:
+.obj lbl_80551240, global
 	.asciz "/shared2/title"
 	.balign 4
+.endobj lbl_80551240
 
 
-.global lbl_80551250
-lbl_80551250:
+.obj lbl_80551250, global
 	.4byte lbl_80665B10
 	.4byte lbl_80665B18
 	.4byte lbl_805511D0
@@ -259,26 +260,29 @@ lbl_80551250:
 	.4byte lbl_80551230
 	.4byte lbl_80551240
 	.4byte 0
+.endobj lbl_80551250
 
 
-.global lbl_8055127C
-lbl_8055127C:
+.obj lbl_8055127C, global
 	.asciz "nandUserAreaCallback"
 	.balign 4
+.endobj lbl_8055127C
 
 
-.global lbl_80551294
-lbl_80551294:
+.obj lbl_80551294, global
 	.asciz "Illegal status is detected at %s()"
 	.balign 4
+.endobj lbl_80551294
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665B10
-lbl_80665B10:
+.balign 8
+
+.obj lbl_80665B10, global
 	.asciz "/meta"
 	.balign 4
+.endobj lbl_80665B10
 
-.global lbl_80665B18
-lbl_80665B18:
+.obj lbl_80665B18, global
 	.asciz "/ticket"
+.endobj lbl_80665B18

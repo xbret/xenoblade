@@ -1132,16 +1132,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMenuPTGauge_typestr
-CMenuPTGauge_typestr:
+.obj CMenuPTGauge_typestr, global
 	.asciz "CMenuPTGauge"
 	.balign 4
+.endobj CMenuPTGauge_typestr
 
 
-.global CMenuPTGauge_strpool
-CMenuPTGauge_strpool:
+.obj CMenuPTGauge_strpool, global
 	.asciz "CMenuPTGauge"
 	.asciz "mf71_battle70_party00.brlyt"
 	.asciz "mf71_battle70_party00_in.brlan"
@@ -1152,13 +1151,13 @@ CMenuPTGauge_strpool:
 	.asciz "pic_gage00"
 	.balign 4
 	.4byte 0
+.endobj CMenuPTGauge_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_80535BC8
-lbl_80535BC8:
+.obj lbl_80535BC8, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80187778
@@ -1169,10 +1168,10 @@ lbl_80535BC8:
 	.4byte 0xFFFFFFFF
 	.4byte func_80187958
 	.4byte 0
+.endobj lbl_80535BC8
 
 
-.global lbl_80535BF0
-lbl_80535BF0:
+.obj lbl_80535BF0, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80187A88
@@ -1185,10 +1184,10 @@ lbl_80535BF0:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_80187E28
+.endobj lbl_80535BF0
 
 
-.global __vt__CMenuPTGauge
-__vt__CMenuPTGauge:
+.obj __vt__CMenuPTGauge, global
 	.4byte __RTTI__CMenuPTGauge
 	.4byte 0
 	.4byte __dt__CMenuPTGauge
@@ -1237,9 +1236,9 @@ __vt__CMenuPTGauge:
 	.4byte func_80187F0C
 	.4byte func_80187F04
 	.4byte func_801875E8
+.endobj __vt__CMenuPTGauge
 
-.global CMenuPTGauge_hierarchy
-CMenuPTGauge_hierarchy:
+.obj CMenuPTGauge_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x0000005C
 	.4byte __RTTI__IWorkEvent
@@ -1256,67 +1255,68 @@ CMenuPTGauge_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuPTGauge_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuPTGauge
-__RTTI__CMenuPTGauge:
+.obj __RTTI__CMenuPTGauge, global
 	.4byte CMenuPTGauge_typestr
 	.4byte CMenuPTGauge_hierarchy
+.endobj __RTTI__CMenuPTGauge
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066A2A0
-float_8066A2A0:
+.obj float_8066A2A0, global
 	.float 0
+.endobj float_8066A2A0
 
 
-.global float_8066A2A4
-float_8066A2A4:
+.obj float_8066A2A4, global
 	.float 300 #0x43960000
+.endobj float_8066A2A4
 
 
-.global float_8066A2A8
-float_8066A2A8:
+.obj float_8066A2A8, global
 	.float 128 #0x43000000
+.endobj float_8066A2A8
 
 
-.global float_8066A2AC
-float_8066A2AC:
+.obj float_8066A2AC, global
 	.float 1.0
+.endobj float_8066A2AC
 
 
-.global double_8066A2B0
-double_8066A2B0:
+.obj double_8066A2B0, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066A2B0
 
-.global float_8066A2B8
-float_8066A2B8:
+.obj float_8066A2B8, global
 	.float 30 #0x41F00000
+.endobj float_8066A2B8
 
 
-.global float_8066A2BC
-float_8066A2BC:
+.obj float_8066A2BC, global
 	.float 100.0
+.endobj float_8066A2BC
 
 
-.global float_8066A2C0
-float_8066A2C0:
+.obj float_8066A2C0, global
 	.float 200 #0x43480000
 	.4byte 0
+.endobj float_8066A2C0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80666BC8
-lbl_80666BC8:
+.obj lbl_80666BC8, global
 	.skip 0x8
+.endobj lbl_80666BC8
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

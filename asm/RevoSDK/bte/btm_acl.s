@@ -2160,20 +2160,21 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80544C60
-lbl_80544C60:
+.balign 8
+
+.obj lbl_80544C60, global
 	.asciz "Duplicate btm_acl_created: RemBdAddr: %02x%02x%02x%02x%02x%02x"
 	.balign 4
+.endobj lbl_80544C60
 
 
-.global lbl_80544CA0
-lbl_80544CA0:
+.obj lbl_80544CA0, global
 	.asciz "SetPacketType Mask -> 0x%04x"
 	.balign 4
+.endobj lbl_80544CA0
 
 
-.global lbl_80544CC0
-lbl_80544CC0:
+.obj lbl_80544CC0, global
 	.asciz "Role change request declined since the previous request for this device is not completed "
 	.balign 4
 	.asciz "BTM_SetLinkPolicy switch not supported (settings: 0x%04x)"
@@ -2184,48 +2185,48 @@ lbl_80544CC0:
 	.4byte 0
 	.asciz "BTM_SetLinkPolicy park not supported (settings: 0x%04x)"
 	.asciz "BTM_ReadLinkPolicy: RemBdAddr: %02x%02x%02x%02x%02x%02x"
+.endobj lbl_80544CC0
 
 
-.global lbl_80544E40
-lbl_80544E40:
+.obj lbl_80544E40, global
 	.asciz "BTM_ReadClockOffset: RemBdAddr: %02x%02x%02x%02x%02x%02x"
 	.balign 4
+.endobj lbl_80544E40
 
 
-.global lbl_80544E7C
-lbl_80544E7C:
+.obj lbl_80544E7C, global
 	.asciz "Role Switch Event: new_role 0x%02x, HCI Status 0x%02x"
 	.balign 4
 	.asciz "BTM_SetQoS: BdAddr: %02x%02x%02x%02x%02x%02x"
 	.balign 4
+.endobj lbl_80544E7C
 
 
-.global lbl_80544EE4
-lbl_80544EE4:
+.obj lbl_80544EE4, global
 	.asciz "BTM: p_flow->delay_variation: 0x%02x"
 	.balign 4
+.endobj lbl_80544EE4
 
 
-.global lbl_80544F0C
-lbl_80544F0C:
+.obj lbl_80544F0C, global
 	.asciz "BTM_ReadRSSI: RemBdAddr: %02x%02x%02x%02x%02x%02x"
 	.balign 4
+.endobj lbl_80544F0C
 
 
-.global lbl_80544F40
-lbl_80544F40:
+.obj lbl_80544F40, global
 	.asciz "BTM_ReadLinkQuality: RemBdAddr: %02x%02x%02x%02x%02x%02x"
 	.balign 4
+.endobj lbl_80544F40
 
 
-.global lbl_80544F7C
-lbl_80544F7C:
+.obj lbl_80544F7C, global
 	.asciz "BTM RSSI Complete: rssi %d, hci status 0x%02x"
 	.balign 4
+.endobj lbl_80544F7C
 
 
-.global lbl_80544FAC
-lbl_80544FAC:
+.obj lbl_80544FAC, global
 	.asciz "BTM Link Quality Complete: Link Quality %d, hci status 0x%02x"
 	.balign 4
 	.asciz "btm BEFORE SCO setting to 1 slot; hci hdl 0x%x"
@@ -2234,3 +2235,4 @@ lbl_80544FAC:
 	.balign 4
 	.asciz "btm last SCO removed; hci hdl 0x%x, types 0x%02x"
 	.balign 4
+.endobj lbl_80544FAC

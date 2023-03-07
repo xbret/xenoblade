@@ -186,24 +186,23 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CfTaskMain_typestr
-cf_CfTaskMain_typestr:
+.obj cf_CfTaskMain_typestr, global
 	.asciz "cf::CfTaskMain"
 	.balign 4
+.endobj cf_CfTaskMain_typestr
 
-.global CTTask_cf_CfTaskMain_typestr
-CTTask_cf_CfTaskMain_typestr:
+.obj CTTask_cf_CfTaskMain_typestr, global
 	.asciz "CTTask<cf::CfTaskMain>"
 	.balign 4
+.endobj CTTask_cf_CfTaskMain_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CfTaskMain
-__vt__cf_CfTaskMain:
+.obj __vt__cf_CfTaskMain, global
 	.4byte __RTTI__cf_CfTaskMain
 	.4byte 0
 	.4byte __dt__cf_CfTaskMain
@@ -247,9 +246,9 @@ __vt__cf_CfTaskMain:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__cf_CfTaskMain
 
-.global cf_CfTaskMain_hierarchy
-cf_CfTaskMain_hierarchy:
+.obj cf_CfTaskMain_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0x00000054
 	.4byte __RTTI__CDoubleListNode
@@ -261,10 +260,10 @@ cf_CfTaskMain_hierarchy:
 	.4byte __RTTI__CTTask_cf_CfTaskMain
 	.4byte 0
 	.4byte 0
+.endobj cf_CfTaskMain_hierarchy
 
 
-.global __vt__CTTask_cf_CfTaskMain
-__vt__CTTask_cf_CfTaskMain:
+.obj __vt__CTTask_cf_CfTaskMain, global
 	.4byte __RTTI__CTTask_cf_CfTaskMain
 	.4byte 0
 	.4byte __dt__CTTask_cf_CfTaskMain
@@ -274,9 +273,9 @@ __vt__CTTask_cf_CfTaskMain:
 	.4byte func_800698B4
 	.4byte func_800698FC
 	.4byte func_80043F20
+.endobj __vt__CTTask_cf_CfTaskMain
 
-.global CTTask_cf_CfTaskMain_hierarchy
-CTTask_cf_CfTaskMain_hierarchy:
+.obj CTTask_cf_CfTaskMain_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -284,21 +283,22 @@ CTTask_cf_CfTaskMain_hierarchy:
 	.4byte __RTTI__CProcess
 	.4byte 0
 	.4byte 0
+.endobj CTTask_cf_CfTaskMain_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CfTaskMain
-__RTTI__cf_CfTaskMain:
+.obj __RTTI__cf_CfTaskMain, global
 	.4byte cf_CfTaskMain_typestr
 	.4byte cf_CfTaskMain_hierarchy
+.endobj __RTTI__cf_CfTaskMain
 
-.global __RTTI__CTTask_cf_CfTaskMain
-__RTTI__CTTask_cf_CfTaskMain:
+.obj __RTTI__CTTask_cf_CfTaskMain, global
 	.4byte CTTask_cf_CfTaskMain_typestr
 	.4byte CTTask_cf_CfTaskMain_hierarchy
+.endobj __RTTI__CTTask_cf_CfTaskMain
 
 
 

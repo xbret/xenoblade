@@ -617,11 +617,14 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8053FF18
-lbl_8053FF18:
+.balign 8
+
+.obj lbl_8053FF18, global
 	.asciz "MetroTRK - ERROR : No buffer available\n"
+.endobj lbl_8053FF18
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-gTRKMsgBufs:
+.obj gTRKMsgBufs, local
 	.skip 0x19A8
+.endobj gTRKMsgBufs

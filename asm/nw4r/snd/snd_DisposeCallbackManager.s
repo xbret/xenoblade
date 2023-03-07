@@ -261,18 +261,20 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_8063B1D0
-lbl_8063B1D0:
+.obj lbl_8063B1D0, global
 	.skip 0xC
+.endobj lbl_8063B1D0
 
 #@LOCAL@GetInstance__Q44nw4r3snd6detail22DisposeCallbackManagerFv@instance
-.global lbl_8063B1DC
-lbl_8063B1DC:
+.obj lbl_8063B1DC, global
 	.skip 0xC
+.endobj lbl_8063B1DC
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
+
 #@GUARD@GetInstance__Q44nw4r3snd6detail22DisposeCallbackManagerFv@instance
-.global lbl_80667DC0
-lbl_80667DC0:
+.obj lbl_80667DC0, global
 	.skip 0x8
+.endobj lbl_80667DC0

@@ -45,40 +45,40 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CVirtualLightAmb_typestr
-CVirtualLightAmb_typestr:
+.obj CVirtualLightAmb_typestr, global
 	.asciz "CVirtualLightAmb"
 	.balign 4
+.endobj CVirtualLightAmb_typestr
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CVirtualLightAmb
-__vt__CVirtualLightAmb:
+.obj __vt__CVirtualLightAmb, global
 	.4byte __RTTI__CVirtualLightAmb
 	.4byte 0
 	.4byte __dt__CVirtualLightAmb
 	.4byte func_804947EC
 	.4byte func_8049488C
+.endobj __vt__CVirtualLightAmb
 
-.global CVirtualLightAmb_hierarchy
-CVirtualLightAmb_hierarchy:
+.obj CVirtualLightAmb_hierarchy, global
 	.4byte __RTTI__CVirtualLightObj
 	.4byte 0
 	.4byte 0
+.endobj CVirtualLightAmb_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CVirtualLightAmb
-__RTTI__CVirtualLightAmb:
+.obj __RTTI__CVirtualLightAmb, global
 	.4byte CVirtualLightAmb_typestr
 	.4byte CVirtualLightAmb_hierarchy
+.endobj __RTTI__CVirtualLightAmb
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

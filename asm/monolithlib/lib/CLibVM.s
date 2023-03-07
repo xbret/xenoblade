@@ -2908,16 +2908,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_80526B20
-lbl_80526B20:
+.obj lbl_80526B20, global
 	.asciz "invalid distance too far back"
 	.asciz "invalid distance code"
 	.asciz "invalid literal/length code"
+.endobj lbl_80526B20
 
-.global lbl_80526B70
-lbl_80526B70:
+.obj lbl_80526B70, global
 	.4byte 0x60070000
 	.4byte 0x00080050
 	.4byte 0x00080010
@@ -3430,8 +3429,9 @@ lbl_80526B70:
 	.4byte 0x0008008F
 	.4byte 0x0008004F
 	.4byte 0x000900FF
-.global lbl_80527370
-lbl_80527370:
+.endobj lbl_80526B70
+
+.obj lbl_80527370, global
 	.4byte 0x10050001
 	.4byte 0x17050101
 	.4byte 0x13050011
@@ -3464,10 +3464,10 @@ lbl_80527370:
 	.4byte 0x1A050C01
 	.4byte 0x160500C1
 	.4byte 0x40050000
+.endobj lbl_80527370
 
 
-.global lbl_805273F0
-lbl_805273F0:
+.obj lbl_805273F0, global
 	.4byte 0x00100011
 	.4byte 0x00120000
 	.4byte 0x00080007
@@ -3478,10 +3478,10 @@ lbl_805273F0:
 	.4byte 0x000D0002
 	.4byte 0x000E0001
 	.4byte 0x000F0000
+.endobj lbl_805273F0
 
 
-.global CLibVM_strpool
-CLibVM_strpool:
+.obj CLibVM_strpool, global
 	.asciz "1.2.3"
 	.asciz "incorrect header check"
 	.asciz "unknown compression method"
@@ -3499,10 +3499,10 @@ CLibVM_strpool:
 	.asciz "incorrect data check"
 	.balign 4
 	.4byte 0
+.endobj CLibVM_strpool
 
 
-.global lbl_80527588
-lbl_80527588:
+.obj lbl_80527588, global
 	.2byte 0x0003
 	.2byte 0x0004
 	.2byte 0x0005
@@ -3534,10 +3534,10 @@ lbl_80527588:
 	.2byte 0x0102
 	.2byte 0x0000
 	.4byte 0
+.endobj lbl_80527588
 
 
-.global lbl_805275C8
-lbl_805275C8:
+.obj lbl_805275C8, global
 	.2byte 0x0010
 	.2byte 0x0010
 	.2byte 0x0010
@@ -3570,10 +3570,10 @@ lbl_805275C8:
 	.2byte 0x00C9
 	.2byte 0x00C4
 	.2byte 0x0000
+.endobj lbl_805275C8
 
 
-.global lbl_80527608
-lbl_80527608:
+.obj lbl_80527608, global
 	.2byte 0x0001
 	.2byte 0x0002
 	.2byte 0x0003
@@ -3605,10 +3605,10 @@ lbl_80527608:
 	.2byte 0x4001
 	.2byte 0x6001
 	.4byte 0
+.endobj lbl_80527608
 
 
-.global lbl_80527648
-lbl_80527648:
+.obj lbl_80527648, global
 	.2byte 0x0010
 	.2byte 0x0010
 	.2byte 0x0010
@@ -3641,13 +3641,13 @@ lbl_80527648:
 	.2byte 0x001D
 	.2byte 0x0040
 	.2byte 0x0040
+.endobj lbl_80527648
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CLibVM
-__vt__CLibVM:
+.obj __vt__CLibVM, global
 	.4byte __RTTI__CLibVM
 	.4byte 0
 	.4byte __dt__CLibVM
@@ -3688,19 +3688,19 @@ __vt__CLibVM:
 	.4byte func_80460248
 	.4byte func_804602A0
 	.4byte func_80039E30
+.endobj __vt__CLibVM
 
-.global CLibVM_hierarchy
-CLibVM_hierarchy:
+.obj CLibVM_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CLibVM_hierarchy
 
 
-.global jumptable_80570E48
-jumptable_80570E48:
+.obj jumptable_80570E48, global
 	.4byte .L_80461054
 	.4byte .L_80461E8C
 	.4byte .L_80461E8C
@@ -3731,38 +3731,41 @@ jumptable_80570E48:
 	.4byte .L_80461E7C
 	.4byte .L_80461E84
 	.4byte 0
+.endobj jumptable_80570E48
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CLibVM
-__RTTI__CLibVM:
+.obj __RTTI__CLibVM, global
 	.4byte CLibVM_typestr
 	.4byte CLibVM_hierarchy
+.endobj __RTTI__CLibVM
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global CLibVM_typestr
-CLibVM_typestr:
+.obj CLibVM_typestr, global
 	.asciz "CLibVM"
 	.balign 4
+.endobj CLibVM_typestr
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80667FF8, global
+	.skip 0x4
+.endobj lbl_80667FF8
 
-.global lbl_80667FF8
-lbl_80667FF8:
+.obj lbl_80667FFC, global
 	.skip 0x4
-.global lbl_80667FFC
-lbl_80667FFC:
-	.skip 0x4
-.global lbl_80668000
-lbl_80668000:
+.endobj lbl_80667FFC
+
+.obj lbl_80668000, global
 	.skip 0x8
+.endobj lbl_80668000
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

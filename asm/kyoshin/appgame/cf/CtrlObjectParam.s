@@ -1722,10 +1722,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CObjectParam
-__vt__cf_CObjectParam:
+.obj __vt__cf_CObjectParam, global
 	.4byte __RTTI__cf_CObjectParam
 	.4byte 0
 	.4byte func_8003DC64
@@ -1747,10 +1746,10 @@ __vt__cf_CObjectParam:
 	.4byte func_80080640
 	.4byte func_8003E664
 	.4byte func_8003DC74
+.endobj __vt__cf_CObjectParam
 
 
-.global __vt__cf_CObjectState
-__vt__cf_CObjectState:
+.obj __vt__cf_CObjectState, global
 	.4byte __RTTI__cf_CObjectState
 	.4byte 0
 	.4byte func_8003DC64
@@ -1766,38 +1765,39 @@ __vt__cf_CObjectState:
 	.4byte func_8003D7B0
 	.4byte func_800A3494
 	.4byte func_800A3488
+.endobj __vt__cf_CObjectState
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_80668FF8
-float_80668FF8:
+.obj float_80668FF8, global
 	.float 0.01 #0x3C23D70A
+.endobj float_80668FF8
 
 
-.global float_80668FFC
-float_80668FFC:
+.obj float_80668FFC, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_80668FFC
 
 
-.global double_80669000
-double_80669000:
+.obj double_80669000, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_80669000
 
-.global float_80669008
-float_80669008:
+.obj float_80669008, global
 	.float 1.4 #0x3FB33333
+.endobj float_80669008
 
 
-.global float_8066900C
-float_8066900C:
+.obj float_8066900C, global
 	.float 1.5
+.endobj float_8066900C
 
 
-.global double_80669010
-double_80669010:
+.obj double_80669010, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_80669010
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

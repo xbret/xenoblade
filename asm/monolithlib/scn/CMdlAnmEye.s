@@ -384,87 +384,87 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_805280E0
-lbl_805280E0:
+.obj lbl_805280E0, global
 	.4byte 0
 	.4byte 0x3EAC0831
 	.4byte 0x3F2C0831
+.endobj lbl_805280E0
 
 
-.global lbl_805280EC
-lbl_805280EC:
+.obj lbl_805280EC, global
 	.4byte 0
 	.4byte 0xBE000000
 	.4byte 0xBE800000
+.endobj lbl_805280EC
 
-.global CMdlAnmEye_typestr
-CMdlAnmEye_typestr:
+.obj CMdlAnmEye_typestr, global
 	.asciz "CMdlAnmEye"
 	.balign 4
 	.4byte 0
+.endobj CMdlAnmEye_typestr
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMdlAnmEye
-__vt__CMdlAnmEye:
+.obj __vt__CMdlAnmEye, global
 	.4byte __RTTI__CMdlAnmEye
 	.4byte 0
 	.4byte __dt__CMdlAnmEye
 	.4byte 0
+.endobj __vt__CMdlAnmEye
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_806665A0
-lbl_806665A0:
+.obj lbl_806665A0, global
 	.4byte lbl_8066DB00
 	.4byte 0
+.endobj lbl_806665A0
 
-.global __RTTI__CMdlAnmEye
-__RTTI__CMdlAnmEye:
+.obj __RTTI__CMdlAnmEye, global
 	.4byte CMdlAnmEye_typestr
 	.4byte 0
+.endobj __RTTI__CMdlAnmEye
 
 
-.global lbl_806665B0
-lbl_806665B0:
+.obj lbl_806665B0, global
 	.4byte 0x72656600
 	.4byte 0
+.endobj lbl_806665B0
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_8066DB00
-lbl_8066DB00:
+.obj lbl_8066DB00, global
 	.asciz "mtEye"
 	.balign 4
+.endobj lbl_8066DB00
 
 
-.global float_8066DB08
-float_8066DB08:
+.obj float_8066DB08, global
 	.float 0
+.endobj float_8066DB08
 
 
-.global float_8066DB0C
-float_8066DB0C:
+.obj float_8066DB0C, global
 	.float 1.0
+.endobj float_8066DB0C
 
 
-.global float_8066DB10
-float_8066DB10:
+.obj float_8066DB10, global
 	.float 10.0
+.endobj float_8066DB10
 
 
-.global float_8066DB14
-float_8066DB14:
+.obj float_8066DB14, global
 	.float 0.2
+.endobj float_8066DB14
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

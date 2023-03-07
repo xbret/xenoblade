@@ -53,60 +53,61 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+#.balign 8
 
 
-.global CVirtualLightObj_typestr
-CVirtualLightObj_typestr:
+.obj CVirtualLightObj_typestr, global
 	.asciz "CVirtualLightObj"
 	.balign 4
+.endobj CVirtualLightObj_typestr
 
-.global CVirtualLightDir_typestr
-CVirtualLightDir_typestr:
+.obj CVirtualLightDir_typestr, global
 	.asciz "CVirtualLightDir"
 	.balign 4
 	.4byte 0
+.endobj CVirtualLightDir_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CVirtualLightDir
-__vt__CVirtualLightDir:
+.obj __vt__CVirtualLightDir, global
 	.4byte __RTTI__CVirtualLightDir
 	.4byte 0
 	.4byte __dt__CVirtualLightDir
 	.4byte func_804947EC
 	.4byte func_8049488C
+.endobj __vt__CVirtualLightDir
 
-.global CVirtualLightDir_hierarchy
-CVirtualLightDir_hierarchy:
+.obj CVirtualLightDir_hierarchy, global
 	.4byte __RTTI__CVirtualLightObj
 	.4byte 0
 	.4byte 0
+.endobj CVirtualLightDir_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CVirtualLightObj
-__RTTI__CVirtualLightObj:
+.obj __RTTI__CVirtualLightObj, global
 	.4byte CVirtualLightObj_typestr
 	.4byte 0
+.endobj __RTTI__CVirtualLightObj
 
-.global __RTTI__CVirtualLightDir
-__RTTI__CVirtualLightDir:
+.obj __RTTI__CVirtualLightDir, global
 	.4byte CVirtualLightDir_typestr
 	.4byte CVirtualLightDir_hierarchy
+.endobj __RTTI__CVirtualLightDir
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066D240
-float_8066D240:
+.obj float_8066D240, global
 	.float 0
 	.4byte 0
+.endobj float_8066D240
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -1970,30 +1970,29 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+#.balign 8
 
-
-.global cf_CtrlPc_typestr
-cf_CtrlPc_typestr:
+.obj cf_CtrlPc_typestr, global
 	.asciz "cf::CtrlPc"
 	.balign 4
+.endobj cf_CtrlPc_typestr
 
-.global cf_CfObjectImplPc_typestr
-cf_CfObjectImplPc_typestr:
+.obj cf_CfObjectImplPc_typestr, global
 	.asciz "cf::CfObjectImplPc"
 	.balign 4
+.endobj cf_CfObjectImplPc_typestr
 
-.global cf_CfObjectImplMove_typestr
-cf_CfObjectImplMove_typestr:
+.obj cf_CfObjectImplMove_typestr, global
 	.asciz "cf::CfObjectImplMove"
 	.balign 4
 	.4byte 0
+.endobj cf_CfObjectImplMove_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CtrlPc
-__vt__cf_CtrlPc:
+.obj __vt__cf_CtrlPc, global
 	.4byte __RTTI__cf_CtrlPc
 	.4byte 0
 	.4byte __dt__cf_CtrlPc
@@ -2035,9 +2034,9 @@ __vt__cf_CtrlPc:
 	.4byte func_80097DFC
 	.4byte func_80098AF0
 	.4byte func_80098B64
+.endobj __vt__cf_CtrlPc
 
-.global cf_CfObjectImplPc_hierarchy
-cf_CfObjectImplPc_hierarchy:
+.obj cf_CfObjectImplPc_hierarchy, global
 	.4byte __RTTI__cf_IObjectInfo
 	.4byte 0x00000010
 	.4byte __RTTI__IActParamEvent
@@ -2047,9 +2046,9 @@ cf_CfObjectImplPc_hierarchy:
 	.4byte __RTTI__cf_CfObjectImplMove
 	.4byte 0
 	.4byte 0
+.endobj cf_CfObjectImplPc_hierarchy
 
-.global cf_CfObjectImplMove_hierarchy
-cf_CfObjectImplMove_hierarchy:
+.obj cf_CfObjectImplMove_hierarchy, global
 	.4byte __RTTI__cf_IObjectInfo
 	.4byte 0x00000010
 	.4byte __RTTI__IActParamEvent
@@ -2058,10 +2057,10 @@ cf_CfObjectImplMove_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CfObjectImplMove_hierarchy
 
 
-.global lbl_8052B668
-lbl_8052B668:
+.obj lbl_8052B668, global
 	.4byte 0
 	.4byte 0x00000020
 	.4byte 0x00000020
@@ -2092,10 +2091,10 @@ lbl_8052B668:
 	.4byte 0x00000008
 	.4byte 0x0000000F
 	.4byte 0
+.endobj lbl_8052B668
 
 
-.global lbl_8052B6E0
-lbl_8052B6E0:
+.obj lbl_8052B6E0, global
 	.4byte 0
 	.4byte 0x00000020
 	.4byte 0x00000020
@@ -2126,47 +2125,48 @@ lbl_8052B6E0:
 	.4byte 0x00000008
 	.4byte 0
 	.4byte 0x001E0000
+.endobj lbl_8052B6E0
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CtrlPc
-__RTTI__cf_CtrlPc:
+.obj __RTTI__cf_CtrlPc, global
 	.4byte cf_CtrlPc_typestr
 	.4byte cf_CtrlPc_hierarchy
+.endobj __RTTI__cf_CtrlPc
 
 
-.global __RTTI__cf_CfObjectImplPc
-__RTTI__cf_CfObjectImplPc:
+.obj __RTTI__cf_CfObjectImplPc, global
 	.4byte cf_CfObjectImplPc_typestr
 	.4byte cf_CfObjectImplPc_hierarchy
+.endobj __RTTI__cf_CfObjectImplPc
 
-.global __RTTI__cf_CfObjectImplMove
-__RTTI__cf_CfObjectImplMove:
+.obj __RTTI__cf_CfObjectImplMove, global
 	.4byte cf_CfObjectImplMove_typestr
 	.4byte cf_CfObjectImplMove_hierarchy
+.endobj __RTTI__cf_CfObjectImplMove
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_80668FA8
-float_80668FA8:
+.obj float_80668FA8, global
 	.float 0
+.endobj float_80668FA8
 
 
-.global float_80668FAC
-float_80668FAC:
+.obj float_80668FAC, global
 	.float 10.0
+.endobj float_80668FAC
 
 
-.global float_80668FB0
-float_80668FB0:
+.obj float_80668FB0, global
 	.float 30 #0x41F00000
 	.4byte 0
+.endobj float_80668FB0
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

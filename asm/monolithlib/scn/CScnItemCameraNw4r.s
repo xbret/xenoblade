@@ -172,25 +172,24 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CScnItemCameraNw4r_typestr
-CScnItemCameraNw4r_typestr:
+.obj CScnItemCameraNw4r_typestr, global
 	.asciz "CScnItemCameraNw4r"
 	.balign 4
+.endobj CScnItemCameraNw4r_typestr
 
-.global CScnItemCamera_typestr
-CScnItemCamera_typestr:
+.obj CScnItemCamera_typestr, global
 	.asciz "CScnItemCamera"
 	.balign 4
 	.4byte 0
+.endobj CScnItemCamera_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CScnItemCameraNw4r
-__vt__CScnItemCameraNw4r:
+.obj __vt__CScnItemCameraNw4r, global
 	.4byte __RTTI__CScnItemCameraNw4r
 	.4byte 0
 	.4byte __dt__CScnItemCameraNw4r
@@ -201,35 +200,36 @@ __vt__CScnItemCameraNw4r:
 	.4byte func_80482040
 	.4byte func_80482038
 	.4byte func_80481F00
+.endobj __vt__CScnItemCameraNw4r
 
-.global CScnItemCameraNw4r_hierarchy
-CScnItemCameraNw4r_hierarchy:
+.obj CScnItemCameraNw4r_hierarchy, global
 	.4byte __RTTI__CScnItem
 	.4byte 0
 	.4byte __RTTI__CScnItemCamera
 	.4byte 0
 	.4byte 0
+.endobj CScnItemCameraNw4r_hierarchy
 
-.global CScnItemCamera_hierarchy
-CScnItemCamera_hierarchy:
+.obj CScnItemCamera_hierarchy, global
 	.4byte __RTTI__CScnItem
 	.4byte 0
 	.4byte 0
+.endobj CScnItemCamera_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CScnItemCameraNw4r
-__RTTI__CScnItemCameraNw4r:
+.obj __RTTI__CScnItemCameraNw4r, global
 	.4byte CScnItemCameraNw4r_typestr
 	.4byte CScnItemCameraNw4r_hierarchy
+.endobj __RTTI__CScnItemCameraNw4r
 
-.global __RTTI__CScnItemCamera
-__RTTI__CScnItemCamera:
+.obj __RTTI__CScnItemCamera, global
 	.4byte CScnItemCamera_typestr
 	.4byte CScnItemCamera_hierarchy
+.endobj __RTTI__CScnItemCamera
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

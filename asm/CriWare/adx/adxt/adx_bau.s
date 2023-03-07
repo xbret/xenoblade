@@ -1130,18 +1130,21 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051C750
-lbl_8051C750:
+.balign 8
+
+.obj lbl_8051C750, global
 	.asciz ".snd"
 	.asciz ".sd"
 	.4byte 0
 	.byte 0x00, 0x00, 0x00
+.endobj lbl_8051C750
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global ulaw_exp_table
-ulaw_exp_table:
+.balign 8
+
+.obj ulaw_exp_table, global
 	.2byte 0x8284
 	.2byte 0x8684
 	.2byte 0x8A84
@@ -1398,3 +1401,4 @@ ulaw_exp_table:
 	.2byte 0x0010
 	.2byte 0x0008
 	.2byte 0x0000
+.endobj ulaw_exp_table

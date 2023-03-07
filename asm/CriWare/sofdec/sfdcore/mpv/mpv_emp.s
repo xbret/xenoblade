@@ -497,10 +497,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global mpvemp_mbai
-mpvemp_mbai:
+.obj mpvemp_mbai, global
 	.2byte 0x0000
 	.2byte 0x0101
 	.2byte 0x0303
@@ -537,3 +536,4 @@ mpvemp_mbai:
 	.2byte 0x180B
 	.2byte 0x0F0B
 	.2byte 0x080B
+.endobj mpvemp_mbai

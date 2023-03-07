@@ -959,19 +959,22 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_80518A60
-lbl_80518A60:
+.balign 8
+
+.obj lbl_80518A60, global
 	.4byte 0
+.endobj lbl_80518A60
 
 
-.global lbl_80518A64
-lbl_80518A64:
+.obj lbl_80518A64, global
 	.float 0.5
+.endobj lbl_80518A64
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8054D7F8
-lbl_8054D7F8:
+.balign 8
+
+.obj lbl_8054D7F8, global
 	.4byte lbl_8054D840
 	.4byte 0
 	.4byte __dt__Q36nw4hbm3lyt6LayoutFv
@@ -985,18 +988,19 @@ lbl_8054D7F8:
 	.4byte Draw__Q36nw4hbm3lyt6LayoutFRCQ36nw4hbm3lyt8DrawInfo
 	.4byte Animate__Q36nw4hbm3lyt6LayoutFUl
 	.4byte "SetTagProcessor__Q36nw4hbm3lyt6LayoutFPQ36nw4hbm2ut19TagProcessorBase<w>"
+.endobj lbl_8054D7F8
 
-.global lbl_8054D82C
-lbl_8054D82C:
+.obj lbl_8054D82C, global
 	.asciz "nw4hbm::lyt::Layout"
+.endobj lbl_8054D82C
 
-.global lbl_8054D840
-lbl_8054D840:
+.obj lbl_8054D840, global
 	.4byte lbl_8054D82C
 	.4byte 0
+.endobj lbl_8054D840
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global mspAllocator__Q36nw4hbm3lyt6Layout
-mspAllocator__Q36nw4hbm3lyt6Layout:
+.obj mspAllocator__Q36nw4hbm3lyt6Layout, global
 	.skip 0x8
+.endobj mspAllocator__Q36nw4hbm3lyt6Layout

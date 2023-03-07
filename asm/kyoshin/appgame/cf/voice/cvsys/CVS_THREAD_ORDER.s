@@ -581,51 +581,50 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CVS_THREAD_ORDER_typestr
-cf_CVS_THREAD_ORDER_typestr:
+.obj cf_CVS_THREAD_ORDER_typestr, global
 	.asciz "cf::CVS_THREAD_ORDER"
 	.balign 4
+.endobj cf_CVS_THREAD_ORDER_typestr
 
 
-.global lbl_8050CDB0
-lbl_8050CDB0:
+.obj lbl_8050CDB0, global
 	.asciz "voice"
 	.balign 4
+.endobj lbl_8050CDB0
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8053EF00
-lbl_8053EF00:
+.obj lbl_8053EF00, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802B8B0C
+.endobj lbl_8053EF00
 
 
-.global lbl_8053EF0C
-lbl_8053EF0C:
+.obj lbl_8053EF0C, global
 	.4byte 0x000009C5
 	.4byte 0x000009C6
 	.4byte 0xFFFFFFFF
+.endobj lbl_8053EF0C
 
-.global lbl_8053EF18
-lbl_8053EF18:
+.obj lbl_8053EF18, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802B8C00
+.endobj lbl_8053EF18
 
-.global lbl_8053EF24
-lbl_8053EF24:
+.obj lbl_8053EF24, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802B8CFC
+.endobj lbl_8053EF24
 
 
-.global __vt__cf_CVS_THREAD_ORDER
-__vt__cf_CVS_THREAD_ORDER:
+.obj __vt__cf_CVS_THREAD_ORDER, global
 	.4byte __RTTI__cf_CVS_THREAD_ORDER
 	.4byte 0
 	.4byte func_802A3B50
@@ -633,16 +632,16 @@ __vt__cf_CVS_THREAD_ORDER:
 	.4byte func_802B8D44
 	.4byte func_802A1EA0
 	.4byte func_802A3740
+.endobj __vt__cf_CVS_THREAD_ORDER
 
-.global cf_CVS_THREAD_ORDER_hierarchy
-cf_CVS_THREAD_ORDER_hierarchy:
+.obj cf_CVS_THREAD_ORDER_hierarchy, global
 	.4byte __RTTI__cf_CVS_THREAD
 	.4byte 0
 	.4byte 0
+.endobj cf_CVS_THREAD_ORDER_hierarchy
 
 
-.global lbl_8053EF58
-lbl_8053EF58:
+.obj lbl_8053EF58, global
 	.4byte 0x0000001E
 	.4byte 0x00010FA1
 	.4byte 0x0000001F
@@ -659,52 +658,52 @@ lbl_8053EF58:
 	.4byte 0x00010FA7
 	.4byte 0
 	.4byte 0
+.endobj lbl_8053EF58
 
 
-.global lbl_8053EF98
-lbl_8053EF98:
+.obj lbl_8053EF98, global
 	.4byte lbl_8066B810
 	.4byte play
 	.4byte 0
 	.4byte 0
+.endobj lbl_8053EF98
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CVS_THREAD_ORDER
-__RTTI__cf_CVS_THREAD_ORDER:
+.obj __RTTI__cf_CVS_THREAD_ORDER, global
 	.4byte cf_CVS_THREAD_ORDER_typestr
 	.4byte cf_CVS_THREAD_ORDER_hierarchy
+.endobj __RTTI__cf_CVS_THREAD_ORDER
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-
-.global float_8066B808
-float_8066B808:
+.obj float_8066B808, global
 	.float 1.0
+.endobj float_8066B808
 
 
-.global float_8066B80C
-float_8066B80C:
+.obj float_8066B80C, global
 	.float 30 #0x41F00000
+.endobj float_8066B80C
 
-.global lbl_8066B810
-lbl_8066B810:
+.obj lbl_8066B810, global
 	.asciz "play"
 	.balign 4
+.endobj lbl_8066B810
 
 
-.global float_8066B818
-float_8066B818:
+.obj float_8066B818, global
 	.float 1.0
+.endobj float_8066B818
 
 
-.global float_8066B81C
-float_8066B81C:
+.obj float_8066B81C, global
 	.float 0.5
+.endobj float_8066B81C
 
 
 

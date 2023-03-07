@@ -571,75 +571,76 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-.global lbl_805030F0
-lbl_805030F0:
+
+.obj lbl_805030F0, global
 	.asciz "nul_scr00"
 	.balign 4
+.endobj lbl_805030F0
 
-.global lbl_805030FC
-lbl_805030FC:
+.obj lbl_805030FC, global
 	.asciz "nul_scr01"
 	.balign 4
+.endobj lbl_805030FC
 
-.global lbl_80503108
-lbl_80503108:
+.obj lbl_80503108, global
 	.asciz "nul_scr02"
 	.balign 4
+.endobj lbl_80503108
 
-.global lbl_80503114
-lbl_80503114:
+.obj lbl_80503114, global
 	.asciz "nul_scr03"
 	.balign 4
+.endobj lbl_80503114
 
-.global lbl_80503120
-lbl_80503120:
+.obj lbl_80503120, global
 	.asciz "nul_scr04"
 	.balign 4
+.endobj lbl_80503120
 
-.global lbl_8050312C
-lbl_8050312C:
+.obj lbl_8050312C, global
 	.asciz "nul_scr05"
 	.balign 4
+.endobj lbl_8050312C
 
-.global lbl_80503138
-lbl_80503138:
+.obj lbl_80503138, global
 	.asciz "pic_scr00_bar"
 	.balign 4
+.endobj lbl_80503138
 
-.global lbl_80503148
-lbl_80503148:
+.obj lbl_80503148, global
 	.asciz "pic_scr01_bar"
 	.balign 4
+.endobj lbl_80503148
 
-.global lbl_80503158
-lbl_80503158:
+.obj lbl_80503158, global
 	.asciz "pic_scr02_bar"
 	.balign 4
+.endobj lbl_80503158
 
-.global lbl_80503168
-lbl_80503168:
+.obj lbl_80503168, global
 	.asciz "pic_scr03_bar"
 	.balign 4
+.endobj lbl_80503168
 
-.global lbl_80503178
-lbl_80503178:
+.obj lbl_80503178, global
 	.asciz "pic_scr04_bar"
 	.balign 4
+.endobj lbl_80503178
 
-.global lbl_80503188
-lbl_80503188:
+.obj lbl_80503188, global
 	.asciz "pic_scr05_bar"
 	.balign 4
+.endobj lbl_80503188
 
-.global CScrollBar_typestr
-CScrollBar_typestr:
+.obj CScrollBar_typestr, global
 	.asciz "CScrollBar"
 	.balign 4
+.endobj CScrollBar_typestr
 
 
-.global CScrollBar_strpool
-CScrollBar_strpool:
+.obj CScrollBar_strpool, global
 	.asciz "/menu/ScrollBar.arc"
 	.asciz "CScrollBar"
 	.asciz "arc"
@@ -647,31 +648,33 @@ CScrollBar_strpool:
 	.asciz "mf00_scr00_info_in.brlan"
 	.balign 4
 	.4byte 0
+.endobj CScrollBar_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80538560
-lbl_80538560:
+.balign 8
+
+.obj lbl_80538560, global
 	.4byte lbl_805030F0
 	.4byte lbl_805030FC
 	.4byte lbl_80503108
 	.4byte lbl_80503114
 	.4byte lbl_80503120
 	.4byte lbl_8050312C
+.endobj lbl_80538560
 
 
-.global lbl_80538578
-lbl_80538578:
+.obj lbl_80538578, global
 	.4byte lbl_80503138
 	.4byte lbl_80503148
 	.4byte lbl_80503158
 	.4byte lbl_80503168
 	.4byte lbl_80503178
 	.4byte lbl_80503188
+.endobj lbl_80538578
 
 
-.global __vt__CScrollBar
-__vt__CScrollBar:
+.obj __vt__CScrollBar, global
 	.4byte __RTTI__CScrollBar
 	.4byte 0
 	.4byte __dt__CScrollBar
@@ -706,53 +709,54 @@ __vt__CScrollBar:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CScrollBar
 
-.global CScrollBar_hierarchy
-CScrollBar_hierarchy:
+.obj CScrollBar_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CScrollBar_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CScrollBar
-__RTTI__CScrollBar:
+.obj __RTTI__CScrollBar, global
 	.4byte CScrollBar_typestr
 	.4byte CScrollBar_hierarchy
+.endobj __RTTI__CScrollBar
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066A9F8
-float_8066A9F8:
+.obj float_8066A9F8, global
 	.float 0
+.endobj float_8066A9F8
 
 
-.global float_8066A9FC
-float_8066A9FC:
+.obj float_8066A9FC, global
 	.float 4 #0x40800000
+.endobj float_8066A9FC
 
 
-.global double_8066AA00
-double_8066AA00:
+.obj double_8066AA00, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066AA00
 
-.global double_8066AA08
-double_8066AA08:
+.obj double_8066AA08, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066AA08
 
-.global float_8066AA10
-float_8066AA10:
+.obj float_8066AA10, global
 	.float 1.0
+.endobj float_8066AA10
 
 
-.global float_8066AA14
-float_8066AA14:
+.obj float_8066AA14, global
 	.float 5 #0x40A00000
+.endobj float_8066AA14
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

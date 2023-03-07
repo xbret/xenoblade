@@ -1021,21 +1021,22 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global mwsfdsvr_strpool
-mwsfdsvr_strpool:
+.obj mwsfdsvr_strpool, global
 	.asciz "E211141 MWSTM_ReqStart: can't start '%s'"
 	.asciz "E1071901 mwPlyExecSvrHndl: NULL handle."
 	.asciz "E2011101 MWSFSVR_IsSvrBdrHndl: handle is invalid."
 	.asciz "E211142 mwPlyIsDecoderWaiting: can't use on multi thread."
 	.balign 4
+.endobj mwsfdsvr_strpool
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056A41C
-lbl_8056A41C:
+#.balign 8
+
+.obj lbl_8056A41C, global
 	.4byte lbl_8051E368
 	.4byte 0
 	.4byte 0
@@ -1089,10 +1090,10 @@ lbl_8056A41C:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056A41C
 
 
-.global lbl_8056A4F0
-lbl_8056A4F0:
+.obj lbl_8056A4F0, global
 	.4byte lbl_8051E394
 	.4byte 0
 	.4byte 0
@@ -1146,10 +1147,10 @@ lbl_8056A4F0:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056A4F0
 
 
-.global lbl_8056A5C4
-lbl_8056A5C4:
+.obj lbl_8056A5C4, global
 	.4byte lbl_8051E3AC
 	.4byte 0
 	.4byte 0
@@ -1203,10 +1204,10 @@ lbl_8056A5C4:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056A5C4
 
 
-.global lbl_8056A698
-lbl_8056A698:
+.obj lbl_8056A698, global
 	.4byte lbl_8051E3C4
 	.4byte 0
 	.4byte 0
@@ -1260,10 +1261,10 @@ lbl_8056A698:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056A698
 
 
-.global lbl_8056A76C
-lbl_8056A76C:
+.obj lbl_8056A76C, global
 	.4byte lbl_8051E3DC
 	.4byte 0
 	.4byte 0x00000001
@@ -1317,10 +1318,10 @@ lbl_8056A76C:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056A76C
 
 
-.global lbl_8056A840
-lbl_8056A840:
+.obj lbl_8056A840, global
 	.4byte lbl_8051E3F0
 	.4byte 0
 	.4byte 0
@@ -1375,15 +1376,18 @@ lbl_8056A840:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056A840
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_80605EB0
-lbl_80605EB0:
+.obj lbl_80605EB0, global
 	.skip 0x4
-.global lbl_80605EB4
-lbl_80605EB4:
+.endobj lbl_80605EB0
+
+.obj lbl_80605EB4, global
 	.skip 0x4
-.global lbl_80605EB8
-lbl_80605EB8:
+.endobj lbl_80605EB4
+
+.obj lbl_80605EB8, global
 	.skip 0x8
+.endobj lbl_80605EB8

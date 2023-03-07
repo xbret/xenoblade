@@ -3520,10 +3520,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+#.balign 8
 
-
-.global __vt__cf_CfResTask
-__vt__cf_CfResTask:
+.obj __vt__cf_CfResTask, global
 	.4byte __RTTI__cf_CfResTask
 	.4byte 0
 	.4byte __dt__cf_CfResTask
@@ -3533,9 +3532,9 @@ __vt__cf_CfResTask:
 	.4byte func_800659C0
 	.4byte func_80065B50
 	.4byte func_80043F20
+.endobj __vt__cf_CfResTask
 
-.global cf_CfResTask_hierarchy
-cf_CfResTask_hierarchy:
+.obj cf_CfResTask_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -3545,10 +3544,10 @@ cf_CfResTask_hierarchy:
 	.4byte __RTTI__CTTask_cf_CfResTask
 	.4byte 0
 	.4byte 0
+.endobj cf_CfResTask_hierarchy
 
 
-.global __vt__CTTask_cf_CfResTask
-__vt__CTTask_cf_CfResTask:
+.obj __vt__CTTask_cf_CfResTask, global
 	.4byte __RTTI__CTTask_cf_CfResTask
 	.4byte 0
 	.4byte __dt__CTTask_cf_CfResTask
@@ -3558,9 +3557,9 @@ __vt__CTTask_cf_CfResTask:
 	.4byte func_80065B54
 	.4byte func_80065B9C
 	.4byte func_80043F20
+.endobj __vt__CTTask_cf_CfResTask
 
-.global CTTask_cf_CfResTask_hierarchy
-CTTask_cf_CfResTask_hierarchy:
+.obj CTTask_cf_CfResTask_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -3569,10 +3568,10 @@ CTTask_cf_CfResTask_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CTTask_cf_CfResTask_hierarchy
 
 
-.global __vt__cf_CfRes
-__vt__cf_CfRes:
+.obj __vt__cf_CfRes, global
 	.4byte __RTTI__cf_CfRes
 	.4byte 0
 	.4byte __dt__cf_CfRes
@@ -3607,17 +3606,17 @@ __vt__cf_CfRes:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__cf_CfRes
 
-.global cf_CfRes_hierarchy
-cf_CfRes_hierarchy:
+.obj cf_CfRes_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CfRes_hierarchy
 
 
-.global jumptable_8052A0F8
-jumptable_8052A0F8:
+.obj jumptable_8052A0F8, global
 	.4byte .L_800660A4
 	.4byte .L_80065FF8
 	.4byte .L_80066018
@@ -3629,10 +3628,10 @@ jumptable_8052A0F8:
 	.4byte .L_800660B8
 	.4byte .L_800660E0
 	.4byte .L_800660F4
+.endobj jumptable_8052A0F8
 
 
-.global jumptable_8052A124
-jumptable_8052A124:
+.obj jumptable_8052A124, global
 	.4byte .L_8006620C
 	.4byte .L_800661E8
 	.4byte .L_800661E8
@@ -3644,29 +3643,29 @@ jumptable_8052A124:
 	.4byte .L_80066200
 	.4byte .L_80066224
 	.4byte .L_80066230
+.endobj jumptable_8052A124
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CfResTask_typestr
-cf_CfResTask_typestr:
+.obj cf_CfResTask_typestr, global
 	.asciz "cf::CfResTask"
 	.balign 4
+.endobj cf_CfResTask_typestr
 
-.global CTTask_cf_CfResTask_typestr
-CTTask_cf_CfResTask_typestr:
+.obj CTTask_cf_CfResTask_typestr, global
 	.asciz "CTTask<cf::CfResTask>"
 	.balign 4
+.endobj CTTask_cf_CfResTask_typestr
 
-.global cf_CfRes_typestr
-cf_CfRes_typestr:
+.obj cf_CfRes_typestr, global
 	.asciz "cf::CfRes"
 	.balign 4
+.endobj cf_CfRes_typestr
 
 #referenced in CTaskGameEffAfter.s, may not belong here
-.global strpool_804F6A54
-strpool_804F6A54:
+.obj strpool_804F6A54, global
 	.asciz "map"
 	.asciz "mpf"
 	.asciz "id"
@@ -3677,31 +3676,32 @@ strpool_804F6A54:
 	.asciz ".id"
 	.asciz ".lod"
 	.byte 0x00
+.endobj strpool_804F6A54
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CfResTask
-__RTTI__cf_CfResTask:
+.obj __RTTI__cf_CfResTask, global
 	.4byte cf_CfResTask_typestr
 	.4byte cf_CfResTask_hierarchy
+.endobj __RTTI__cf_CfResTask
 
-.global __RTTI__CTTask_cf_CfResTask
-__RTTI__CTTask_cf_CfResTask:
+.obj __RTTI__CTTask_cf_CfResTask, global
 	.4byte CTTask_cf_CfResTask_typestr
 	.4byte CTTask_cf_CfResTask_hierarchy
+.endobj __RTTI__CTTask_cf_CfResTask
 
-.global __RTTI__cf_CfRes
-__RTTI__cf_CfRes:
+.obj __RTTI__cf_CfRes, global
 	.4byte cf_CfRes_typestr
 	.4byte cf_CfRes_hierarchy
+.endobj __RTTI__cf_CfRes
 
 #referenced in CfTaskGameEffAfter
-.global lbl_80664340
-lbl_80664340:
+.obj lbl_80664340, global
 	.4byte 0x2E000000
 	.4byte 0
+.endobj lbl_80664340
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -843,87 +843,93 @@
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665B80
-lbl_80665B80:
+.balign 8
+
+.obj lbl_80665B80, global
 	.asciz "%s\n"
 	.4byte 0
+.endobj lbl_80665B80
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C190
-float_8066C190:
+.balign 8
+
+.obj float_8066C190, global
 	.float 0.5
+.endobj float_8066C190
 
 
-.global float_8066C194
-float_8066C194:
+.obj float_8066C194, global
 	.float 16 #0x41800000
+.endobj float_8066C194
 
 
-.global float_8066C198
-float_8066C198:
+.obj float_8066C198, global
 	.float 0.098 #0x3DC8B439
+.endobj float_8066C198
 
 
-.global float_8066C19C
-float_8066C19C:
+.obj float_8066C19C, global
 	.float 0.257 #0x3E839581
+.endobj float_8066C19C
 
 
-.global float_8066C1A0
-float_8066C1A0:
+.obj float_8066C1A0, global
 	.float 0.504 #0x3F010625
+.endobj float_8066C1A0
 
 
-.global float_8066C1A4
-float_8066C1A4:
+.obj float_8066C1A4, global
 	.float 128 #0x43000000
+.endobj float_8066C1A4
 
 
-.global float_8066C1A8
-float_8066C1A8:
+.obj float_8066C1A8, global
 	.float 0.439 #0x3EE0C49C
+.endobj float_8066C1A8
 
 
-.global float_8066C1AC
-float_8066C1AC:
+.obj float_8066C1AC, global
 	.float -0.148 #0xBE178D50
+.endobj float_8066C1AC
 
 
-.global float_8066C1B0
-float_8066C1B0:
+.obj float_8066C1B0, global
 	.float 0.291 #0x3E94FDF4
+.endobj float_8066C1B0
 
 
-.global float_8066C1B4
-float_8066C1B4:
+.obj float_8066C1B4, global
 	.float 0.368 #0x3EBC6A7F
+.endobj float_8066C1B4
 
 
-.global float_8066C1B8
-float_8066C1B8:
+.obj float_8066C1B8, global
 	.float 0.071 #0x3D916873
+.endobj float_8066C1B8
 
 
-.global float_8066C1BC
-float_8066C1BC:
+.obj float_8066C1BC, global
 	.float 235 #0x436B0000
+.endobj float_8066C1BC
 
 
-.global float_8066C1C0
-float_8066C1C0:
+.obj float_8066C1C0, global
 	.float 240 #0x43700000
 	.4byte 0
+.endobj float_8066C1C0
 
 
-.global double_8066C1C8
-double_8066C1C8:
+.obj double_8066C1C8, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066C1C8
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-FatalContext:
+.obj FatalContext, local
 	.skip 0x2C8
+.endobj FatalContext
 
-FatalParam:
+.obj FatalParam, local
 	.skip 0x18
+.endobj FatalParam

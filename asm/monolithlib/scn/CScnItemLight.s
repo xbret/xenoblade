@@ -131,19 +131,18 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CScnItemLight_typestr
-CScnItemLight_typestr:
+.obj CScnItemLight_typestr, global
 	.asciz "CScnItemLight"
 	.balign 4
+.endobj CScnItemLight_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CScnItemLight
-__vt__CScnItemLight:
+.obj __vt__CScnItemLight, global
 	.4byte __RTTI__CScnItemLight
 	.4byte 0
 	.4byte __dt__CScnItemLight
@@ -152,22 +151,23 @@ __vt__CScnItemLight:
 	.4byte func_80482288
 	.4byte func_804823A0
 	.4byte func_80482040
+.endobj __vt__CScnItemLight
 
-.global CScnItemLight_hierarchy
-CScnItemLight_hierarchy:
+.obj CScnItemLight_hierarchy, global
 	.4byte __RTTI__CScnItem
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CScnItemLight_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CScnItemLight
-__RTTI__CScnItemLight:
+.obj __RTTI__CScnItemLight, global
 	.4byte CScnItemLight_typestr
 	.4byte CScnItemLight_hierarchy
+.endobj __RTTI__CScnItemLight
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

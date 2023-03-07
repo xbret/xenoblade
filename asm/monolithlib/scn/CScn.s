@@ -1174,20 +1174,19 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_805279B8
-lbl_805279B8:
+.obj lbl_805279B8, global
 	.asciz "%s(%s)"
 	.asciz "CScn"
 	.4byte 0
+.endobj lbl_805279B8
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CScn
-__vt__CScn:
+.obj __vt__CScn, global
 	.4byte __RTTI__CScn
 	.4byte 0
 	.4byte __dt__CScn
@@ -1233,10 +1232,10 @@ __vt__CScn:
 	.4byte IWorkEvent_80039D40
 	.4byte func_80496970
 	.4byte func_8049695C
+.endobj __vt__CScn
 
 
-.global __vt__CTTask_CScn
-__vt__CTTask_CScn:
+.obj __vt__CTTask_CScn, global
 	.4byte __RTTI__CTTask_CScn
 	.4byte 0
 	.4byte __dt__CTTask_CScn
@@ -1246,31 +1245,34 @@ __vt__CTTask_CScn:
 	.4byte func_80496A74
 	.4byte func_80496ABC
 	.4byte func_80043F20
+.endobj __vt__CTTask_CScn
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066D270
-float_8066D270:
+.obj float_8066D270, global
 	.float 10.0
+.endobj float_8066D270
 
 
-.global float_8066D274
-float_8066D274:
+.obj float_8066D274, global
 	.float 0
+.endobj float_8066D274
 
 
-.global float_8066D278
-float_8066D278:
+.obj float_8066D278, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066D278
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global lbl_806681E0
-lbl_806681E0:
+.balign 8
+
+.obj lbl_806681E0, global
 	.skip 0x8
+.endobj lbl_806681E0
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

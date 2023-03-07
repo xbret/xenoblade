@@ -276,57 +276,57 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CScnFadeMan_typestr
-CScnFadeMan_typestr:
+.obj CScnFadeMan_typestr, global
 	.asciz "CScnFadeMan"
 	.4byte 0
+.endobj CScnFadeMan_typestr
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CScnFadeMan
-__vt__CScnFadeMan:
+.obj __vt__CScnFadeMan, global
 	.4byte __RTTI__CScnFadeMan
 	.4byte 0
 	.4byte __dt__CScnFadeMan
 	.4byte func_8049C678
+.endobj __vt__CScnFadeMan
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CScnFadeMan
-__RTTI__CScnFadeMan:
+.obj __RTTI__CScnFadeMan, global
 	.4byte CScnFadeMan_typestr
 	.4byte 0
+.endobj __RTTI__CScnFadeMan
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066D338
-float_8066D338:
+.obj float_8066D338, global
 	.float 0
+.endobj float_8066D338
 
 
-.global float_8066D33C
-float_8066D33C:
+.obj float_8066D33C, global
 	.float 0.00390625 #0x3B800000
+.endobj float_8066D33C
 
 
-.global float_8066D340
-float_8066D340:
+.obj float_8066D340, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066D340
 
 
-.global double_8066D348
-double_8066D348:
+.obj double_8066D348, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066D348
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

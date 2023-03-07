@@ -7621,10 +7621,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_804F88F0
-lbl_804F88F0:
+.obj lbl_804F88F0, global
 	.4byte 0xFF2AFF5C
 	.4byte 0xFF8EFFC0
 	.4byte 0x00000040
@@ -7644,50 +7643,50 @@ lbl_804F88F0:
 	.float 0.8 #0x3F4CCCCD
 	.float 0.8 #0x3F4CCCCD
 	.float 0.8 #0x3F4CCCCD
+.endobj lbl_804F88F0
 
 
-.global lbl_804F893C
-lbl_804F893C:
+.obj lbl_804F893C, global
 	.4byte 0x00010002
 	.4byte 0x00030004
 	.4byte 0x00010000
+.endobj lbl_804F893C
 
-.global lbl_804F8948
-lbl_804F8948:
+.obj lbl_804F8948, global
 	.4byte 0x00000010
 	.4byte 0x00100000
 	.4byte 0x00200000
 	.4byte 0
+.endobj lbl_804F8948
 
-.global lbl_804F8958
-lbl_804F8958:
+.obj lbl_804F8958, global
 	.4byte 0x008C008D
 	.4byte 0x008E008F
 	.4byte 0x008C008C
 	.4byte 0x008C008C
+.endobj lbl_804F8958
 
-.global lbl_804F8968
-lbl_804F8968:
+.obj lbl_804F8968, global
 	.4byte 0x00880089
 	.4byte 0x008A008B
 	.4byte 0x007D007D
 	.4byte 0x007D007D
+.endobj lbl_804F8968
 
-.global CMenuArtsSelect_typestr
-CMenuArtsSelect_typestr:
+.obj CMenuArtsSelect_typestr, global
 	.asciz "CMenuArtsSelect"
 	.asciz "IScnRender"
 	.balign 4
 	.4byte 0
 	.asciz "cf::IObjectInfo"
+.endobj CMenuArtsSelect_typestr
 
-.global IUIBattle_typestr
-IUIBattle_typestr:
+.obj IUIBattle_typestr, global
 	.asciz "IUIBattle"
 	.balign 4
+.endobj IUIBattle_typestr
 
-.global CTTask_IUIBattle_typestr
-CTTask_IUIBattle_typestr:
+.obj CTTask_IUIBattle_typestr, global
 	.asciz "CTTask<IUIBattle>"
 	.balign 4
 	.asciz "IWorkEvent"
@@ -7697,10 +7696,10 @@ CTTask_IUIBattle_typestr:
 	.asciz "CChildListNode"
 	.balign 4
 	.asciz "CDoubleListNode"
+.endobj CTTask_IUIBattle_typestr
 
 
-.global CMenuArtsSelect_strpool
-CMenuArtsSelect_strpool:
+.obj CMenuArtsSelect_strpool, global
 	.asciz "CMenuArtsSelect"
 	.asciz "mf15_arts20_base.brlyt"
 	.asciz "mf15_arts20_base_in.brlan"
@@ -7746,13 +7745,13 @@ CMenuArtsSelect_strpool:
 	.asciz "pic_messwin02"
 	.asciz "pic_messwin03"
 	.asciz "pic_messwin04"
+.endobj CMenuArtsSelect_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global jumptable_8052F780
-jumptable_8052F780:
+.obj jumptable_8052F780, global
 	.4byte .L_80103498
 	.4byte .L_801034CC
 	.4byte .L_80103568
@@ -7762,10 +7761,10 @@ jumptable_8052F780:
 	.4byte .L_8010364C
 	.4byte .L_80103658
 	.4byte .L_801036BC
+.endobj jumptable_8052F780
 
 
-.global jumptable_8052F7A4
-jumptable_8052F7A4:
+.obj jumptable_8052F7A4, global
 	.4byte .L_8010743C
 	.4byte .L_80107444
 	.4byte .L_8010744C
@@ -7775,10 +7774,10 @@ jumptable_8052F7A4:
 	.4byte .L_8010746C
 	.4byte .L_80107474
 	.4byte .L_8010747C
+.endobj jumptable_8052F7A4
 
 
-.global jumptable_8052F7C8
-jumptable_8052F7C8:
+.obj jumptable_8052F7C8, global
 	.4byte .L_80107488
 	.4byte .L_80107344
 	.4byte .L_80107368
@@ -7792,10 +7791,10 @@ jumptable_8052F7C8:
 	.4byte .L_80107488
 	.4byte .L_80107488
 	.4byte .L_80107378
+.endobj jumptable_8052F7C8
 
 
-.global jumptable_8052F7FC
-jumptable_8052F7FC:
+.obj jumptable_8052F7FC, global
 	.4byte .L_80107738
 	.4byte .L_80107740
 	.4byte .L_80107748
@@ -7805,10 +7804,10 @@ jumptable_8052F7FC:
 	.4byte .L_80107768
 	.4byte .L_80107770
 	.4byte .L_80107778
+.endobj jumptable_8052F7FC
 
 
-.global jumptable_8052F820
-jumptable_8052F820:
+.obj jumptable_8052F820, global
 	.4byte .L_80107784
 	.4byte .L_80107640
 	.4byte .L_80107664
@@ -7822,10 +7821,10 @@ jumptable_8052F820:
 	.4byte .L_80107784
 	.4byte .L_80107784
 	.4byte .L_80107674
+.endobj jumptable_8052F820
 
 
-.global __vt__CMenuArtsSelect
-__vt__CMenuArtsSelect:
+.obj __vt__CMenuArtsSelect, global
 	.4byte __RTTI__CMenuArtsSelect
 	.4byte 0
 	.4byte __dt__CMenuArtsSelect
@@ -7879,9 +7878,9 @@ __vt__CMenuArtsSelect:
 	.4byte func_80108C48
 	.4byte func_80103E34
 	.4byte func_801041F4
+.endobj __vt__CMenuArtsSelect
 
-.global CMenuArtsSelect_hierarchy
-CMenuArtsSelect_hierarchy:
+.obj CMenuArtsSelect_hierarchy, global
 	.4byte __RTTI__cf_IObjectInfo
 	.4byte 0x00000060
 	.4byte __RTTI__IScnRender
@@ -7899,114 +7898,115 @@ CMenuArtsSelect_hierarchy:
 	.4byte __RTTI__IUIBattle
 	.4byte 0
 	.4byte 0
+.endobj CMenuArtsSelect_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-
-.global __RTTI__CMenuArtsSelect
-__RTTI__CMenuArtsSelect:
+.obj __RTTI__CMenuArtsSelect, global
 	.4byte CMenuArtsSelect_typestr
 	.4byte CMenuArtsSelect_hierarchy
+.endobj __RTTI__CMenuArtsSelect
 
-.global __RTTI__IUIBattle
-__RTTI__IUIBattle:
+.obj __RTTI__IUIBattle, global
 	.4byte IUIBattle_typestr
 	.4byte IUIBattle_hierarchy
+.endobj __RTTI__IUIBattle
 
-.global __RTTI__CTTask_IUIBattle
-__RTTI__CTTask_IUIBattle:
+.obj __RTTI__CTTask_IUIBattle, global
 	.4byte CTTask_IUIBattle_typestr
 	.4byte CTTask_IUIBattle_hierarchy
+.endobj __RTTI__CTTask_IUIBattle
 
 
-.global lbl_80664700
-lbl_80664700:
+.obj lbl_80664700, global
 	.4byte 0
 	.4byte 0
+.endobj lbl_80664700
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_806697F0
-float_806697F0:
+.obj float_806697F0, global
 	.float 0
+.endobj float_806697F0
 
 
-.global float_806697F4
-float_806697F4:
+.obj float_806697F4, global
 	.float 1.0
+.endobj float_806697F4
 
 
-.global double_806697F8
-double_806697F8:
+.obj double_806697F8, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_806697F8
 
-.global double_80669800
-double_80669800:
+.obj double_80669800, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_80669800
 
-.global float_80669808
-float_80669808:
+.obj float_80669808, global
 	.float -80 #0xC2A00000
+.endobj float_80669808
 
 
-.global float_8066980C
-float_8066980C:
+.obj float_8066980C, global
 	.float -1.0
+.endobj float_8066980C
 
 
-.global lbl_80669810
-lbl_80669810:
+.obj lbl_80669810, global
 	.4byte 0x00000106
+.endobj lbl_80669810
 
 
-.global lbl_80669814
-lbl_80669814:
+.obj lbl_80669814, global
 	.4byte 0x05000000
+.endobj lbl_80669814
 
 
-.global float_80669818
-float_80669818:
+.obj float_80669818, global
 	.float 100.0
+.endobj float_80669818
 
 
-.global lbl_8066981C
-lbl_8066981C:
+.obj lbl_8066981C, global
 	.4byte 0x00000106
+.endobj lbl_8066981C
 
 
-.global lbl_80669820
-lbl_80669820:
+.obj lbl_80669820, global
 	.4byte 0x05000000
+.endobj lbl_80669820
 
 
-.global float_80669824
-float_80669824:
+.obj float_80669824, global
 	.float 10.0
+.endobj float_80669824
 
 
-.global float_80669828
-float_80669828:
+.obj float_80669828, global
 	.float 900 #0x44610000
+.endobj float_80669828
 
 
-.global float_8066982C
-float_8066982C:
+.obj float_8066982C, global
 	.float 625 #0x441C4000
+.endobj float_8066982C
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80666818, global
+	.skip 0x4
+.endobj lbl_80666818
 
-.global lbl_80666818
-lbl_80666818:
+.obj lbl_8066681C, global
 	.skip 0x4
-.global lbl_8066681C
-lbl_8066681C:
-	.skip 0x4
+.endobj lbl_8066681C
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

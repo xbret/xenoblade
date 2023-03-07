@@ -35,5 +35,6 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-"sTemp__Q54nw4r3g3d6detail7workmem25@unnamed@g3d_workmem_cpp@":
+.obj "sTemp__Q54nw4r3g3d6detail7workmem25@unnamed@g3d_workmem_cpp@", local
 	.skip 0x18000
+.endobj "sTemp__Q54nw4r3g3d6detail7workmem25@unnamed@g3d_workmem_cpp@"

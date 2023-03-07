@@ -59,9 +59,10 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
+
 #unconfirmed name
-.global pfn_ahxsbf_mult_float_win
-pfn_ahxsbf_mult_float_win:
+.obj pfn_ahxsbf_mult_float_win, global
 	.4byte ahxsbf_mult_float_win0
 	.4byte ahxsbf_mult_float_win1
 	.4byte ahxsbf_mult_float_win2
@@ -78,3 +79,4 @@ pfn_ahxsbf_mult_float_win:
 	.4byte ahxsbf_mult_float_win13
 	.4byte ahxsbf_mult_float_win14
 	.4byte ahxsbf_mult_float_win15
+.endobj pfn_ahxsbf_mult_float_win

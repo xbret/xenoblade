@@ -393,15 +393,18 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_80518AB8
-lbl_80518AB8:
+.balign 8
+
+.obj lbl_80518AB8, global
 	.4byte 0
 	.4byte 0
+.endobj lbl_80518AB8
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global __vt__8054D938
-__vt__8054D938:
+.balign 8
+
+.obj __vt__8054D938, global
 	.4byte lbl_8054D9D0
 	.4byte 0
 	.4byte __dt__Q36nw4hbm3lyt7PictureFv
@@ -429,27 +432,28 @@ __vt__8054D938:
 	.4byte LoadMtx__Q36nw4hbm3lyt4PaneFRCQ36nw4hbm3lyt8DrawInfo
 	.4byte Append__Q36nw4hbm3lyt7PictureFP10TPLPalette
 	.4byte Append__Q36nw4hbm3lyt7PictureFRC9_GXTexObj
+.endobj __vt__8054D938
 
-.global lbl_8054D9A4
-lbl_8054D9A4:
+.obj lbl_8054D9A4, global
 	.asciz "nw4hbm::lyt::Picture"
 	.balign 4
+.endobj lbl_8054D9A4
 
-.global lbl_8054D9BC
-lbl_8054D9BC:
+.obj lbl_8054D9BC, global
 	.4byte lbl_8054D798
 	.4byte 0
 	.4byte lbl_8054D770
 	.4byte 0
 	.4byte 0
+.endobj lbl_8054D9BC
 
-.global lbl_8054D9D0
-lbl_8054D9D0:
+.obj lbl_8054D9D0, global
 	.4byte lbl_8054D9A4
 	.4byte lbl_8054D9BC
+.endobj lbl_8054D9D0
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global typeInfo__Q36nw4hbm3lyt7Picture
-typeInfo__Q36nw4hbm3lyt7Picture:
+.obj typeInfo__Q36nw4hbm3lyt7Picture, global
 	.skip 0x8
+.endobj typeInfo__Q36nw4hbm3lyt7Picture

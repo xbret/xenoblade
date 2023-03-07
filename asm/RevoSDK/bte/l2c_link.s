@@ -1292,38 +1292,39 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80547BA8
-lbl_80547BA8:
+.balign 8
+
+.obj lbl_80547BA8, global
 	.asciz "L2CAP failed to allocate LCB"
 	.balign 4
+.endobj lbl_80547BA8
 
 
-.global lbl_80547BC8
-lbl_80547BC8:
+.obj lbl_80547BC8, global
 	.asciz "L2CAP got conn_req while connected"
 	.balign 4
 	.4byte 0
+.endobj lbl_80547BC8
 
 
-.global lbl_80547BF0
-lbl_80547BF0:
+.obj lbl_80547BF0, global
 	.asciz "L2CAP got conn_comp for unknown BD_ADDR"
+.endobj lbl_80547BF0
 
 
-.global lbl_80547C18
-lbl_80547C18:
+.obj lbl_80547C18, global
 	.asciz "L2CAP got conn_comp in bad state: %d  status: 0x%d"
 	.balign 4
+.endobj lbl_80547C18
 
 
-.global lbl_80547C4C
-lbl_80547C4C:
+.obj lbl_80547C4C, global
 	.asciz "L2CAP got sec_comp for unknown BD_ADDR"
 	.balign 4
+.endobj lbl_80547C4C
 
 
-.global lbl_80547C74
-lbl_80547C74:
+.obj lbl_80547C74, global
 	.asciz "L2CAP - ping timeout"
 	.balign 4
 	.asciz "L2CAP - Congested(), CID: 0x%04x, Congested"
@@ -1333,26 +1334,27 @@ lbl_80547C74:
 	.balign 4
 	.4byte 0
 	.asciz "L2CAP - Calling CongestionStatus_Cb(), CID: 0x%04x, Uncongested"
+.endobj lbl_80547C74
 
-.global lbl_80547D58
-lbl_80547D58:
+.obj lbl_80547D58, global
 	.asciz "LCB %d Priority:%d XmitWindow:%d Congestion Start:%d End:%d Discard:%d"
 	.balign 4
+.endobj lbl_80547D58
 
 
-.global lbl_80547DA0
-lbl_80547DA0:
+.obj lbl_80547DA0, global
 	.asciz "L2CAP - dropping incomplete pkt"
+.endobj lbl_80547DA0
 
 
-.global lbl_80547DC0
-lbl_80547DC0:
+.obj lbl_80547DC0, global
 	.asciz "L2CAP - dropping too long pkt"
 	.balign 4
+.endobj lbl_80547DC0
 
 
-.global lbl_80547DE0
-lbl_80547DE0:
+.obj lbl_80547DE0, global
 	.asciz "L2CAP - rcvd segment complete, unknown handle: %d"
 	.balign 4
 	.4byte 0
+.endobj lbl_80547DE0

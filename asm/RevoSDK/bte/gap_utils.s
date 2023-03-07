@@ -490,17 +490,18 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_805463A0
-lbl_805463A0:
+.balign 8
+
+.obj lbl_805463A0, global
 	.asciz "   GAP Inquiry Complete Event (Status 0x%04x, Result(s) %d)"
 	.asciz "   GAP Discovery Complete Event(SDP Result: 0x%04x)"
 	.asciz "   GAP Discovery Successfully Completed"
 	.asciz "   GAP Remote Name Complete Event (status 0x%04x)"
 	.balign 4
+.endobj lbl_805463A0
 
 
-.global jumptable_8054646C
-jumptable_8054646C:
+.obj jumptable_8054646C, global
 	.4byte .L_802F09CC
 	.4byte .L_802F09D4
 	.4byte .L_802F09DC
@@ -510,6 +511,7 @@ jumptable_8054646C:
 	.4byte .L_802F09EC
 	.4byte .L_802F09F4
 	.4byte .L_802F09FC
+.endobj jumptable_8054646C
 
 
 	.asciz "GAP Inquiry Results Callback (bdaddr [%02x%02x%02x%02x%02x%02x])"
@@ -518,19 +520,18 @@ jumptable_8054646C:
 	.balign 4
 
 
-.global lbl_80546518
-lbl_80546518:
+.obj lbl_80546518, global
 	.asciz "   GAP: FindAddrByName Rem Name Cmpl Evt (Status 0x%04x, Name [%s])"
+.endobj lbl_80546518
 
 
-.global lbl_8054655C
-lbl_8054655C:
+.obj lbl_8054655C, global
 	.asciz "   GAP: FindAddrByName Rem Name Cmpl Evt (Status 0x%04x)"
 	.balign 4
+.endobj lbl_8054655C
 
 
-.global jumptable_80546598
-jumptable_80546598:
+.obj jumptable_80546598, global
 	.4byte .L_802F0C24
 	.4byte .L_802F0C2C
 	.4byte .L_802F0C34
@@ -540,10 +541,10 @@ jumptable_80546598:
 	.4byte .L_802F0C44
 	.4byte .L_802F0C4C
 	.4byte .L_802F0C54
+.endobj jumptable_80546598
 
 
-.global jumptable_805465BC
-jumptable_805465BC:
+.obj jumptable_805465BC, global
 	.4byte .L_802F0B8C
 	.4byte .L_802F0B94
 	.4byte .L_802F0B9C
@@ -553,16 +554,16 @@ jumptable_805465BC:
 	.4byte .L_802F0BAC
 	.4byte .L_802F0BB4
 	.4byte .L_802F0BBC
+.endobj jumptable_805465BC
 
 
-.global lbl_805465E0
-lbl_805465E0:
+.obj lbl_805465E0, global
 	.asciz "   GAP: FindAddrByName Inq Cmpl Evt (Status 0x%04x, Result(s) %d)"
 	.balign 4
+.endobj lbl_805465E0
 
 
-.global jumptable_80546624
-jumptable_80546624:
+.obj jumptable_80546624, global
 	.4byte .L_802F0DD8
 	.4byte .L_802F0DE0
 	.4byte .L_802F0DE8
@@ -572,10 +573,10 @@ jumptable_80546624:
 	.4byte .L_802F0DF8
 	.4byte .L_802F0E00
 	.4byte .L_802F0E08
+.endobj jumptable_80546624
 
 
-.global jumptable_80546648
-jumptable_80546648:
+.obj jumptable_80546648, global
 	.4byte .L_802F0D68
 	.4byte .L_802F0D70
 	.4byte .L_802F0D78
@@ -585,10 +586,10 @@ jumptable_80546648:
 	.4byte .L_802F0D88
 	.4byte .L_802F0D90
 	.4byte .L_802F0D98
+.endobj jumptable_80546648
 
 
-.global jumptable_8054666C
-jumptable_8054666C:
+.obj jumptable_8054666C, global
 	.4byte .L_802F0E7C
 	.4byte .L_802F0E84
 	.4byte .L_802F0E8C
@@ -598,10 +599,11 @@ jumptable_8054666C:
 	.4byte .L_802F0E9C
 	.4byte .L_802F0EA4
 	.4byte .L_802F0EAC
+.endobj jumptable_8054666C
 
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global gap_cb
-gap_cb:
+.obj gap_cb, global
 	.skip 0x3B0
+.endobj gap_cb

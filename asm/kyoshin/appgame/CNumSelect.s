@@ -2149,17 +2149,16 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CNumSelect_typestr
-CNumSelect_typestr:
+.obj CNumSelect_typestr, global
 	.asciz "CNumSelect"
 	.balign 4
 	.4byte 0
+.endobj CNumSelect_typestr
 
 
-.global CNumSelect_strpool
-CNumSelect_strpool:
+.obj CNumSelect_strpool, global
 	.asciz "/menu/ShopSubWin.arc"
 	.asciz "txt_name"
 	.asciz "txt_value"
@@ -2190,10 +2189,10 @@ CNumSelect_strpool:
 	.asciz "fileID_1"
 	.asciz "pic_btn00"
 	.asciz "pic_btn01"
+.endobj CNumSelect_strpool
 
 
-.global lbl_80502528
-lbl_80502528:
+.obj lbl_80502528, global
 	.4byte 0
 	.4byte 0
 	.4byte lbl_8066A958
@@ -2208,134 +2207,134 @@ lbl_80502528:
 	.4byte 0
 	.4byte 0
 	.4byte lbl_8066A980
+.endobj lbl_80502528
 
-.global lbl_80502560
-lbl_80502560:
+.obj lbl_80502560, global
 	.asciz "exchangelist0000"
 	.balign 4
+.endobj lbl_80502560
 
-.global lbl_80502574
-lbl_80502574:
+.obj lbl_80502574, global
 	.asciz "exchangelist0101"
 	.balign 4
+.endobj lbl_80502574
 
-.global lbl_80502588
-lbl_80502588:
+.obj lbl_80502588, global
 	.asciz "exchangelist0201"
 	.balign 4
+.endobj lbl_80502588
 
-.global lbl_8050259C
-lbl_8050259C:
+.obj lbl_8050259C, global
 	.asciz "exchangelist0301"
 	.balign 4
+.endobj lbl_8050259C
 
-.global lbl_805025B0
-lbl_805025B0:
+.obj lbl_805025B0, global
 	.asciz "exchangelist0401"
 	.balign 4
+.endobj lbl_805025B0
 
-.global lbl_805025C4
-lbl_805025C4:
+.obj lbl_805025C4, global
 	.asciz "exchangelist0402"
 	.balign 4
+.endobj lbl_805025C4
 
-.global lbl_805025D8
-lbl_805025D8:
+.obj lbl_805025D8, global
 	.asciz "exchangelist0501"
 	.balign 4
+.endobj lbl_805025D8
 
-.global lbl_805025EC
-lbl_805025EC:
+.obj lbl_805025EC, global
 	.asciz "exchangelist0601"
 	.balign 4
+.endobj lbl_805025EC
 
-.global lbl_80502600
-lbl_80502600:
+.obj lbl_80502600, global
 	.asciz "exchangelist0701"
 	.balign 4
+.endobj lbl_80502600
 
-.global lbl_80502614
-lbl_80502614:
+.obj lbl_80502614, global
 	.asciz "exchangelist0801"
 	.balign 4
+.endobj lbl_80502614
 
-.global lbl_80502628
-lbl_80502628:
+.obj lbl_80502628, global
 	.asciz "exchangelist0901"
 	.balign 4
+.endobj lbl_80502628
 
-.global lbl_8050263C
-lbl_8050263C:
+.obj lbl_8050263C, global
 	.asciz "exchangelist1001"
 	.balign 4
+.endobj lbl_8050263C
 
-.global lbl_80502650
-lbl_80502650:
+.obj lbl_80502650, global
 	.asciz "exchangelist1101"
 	.balign 4
+.endobj lbl_80502650
 
-.global lbl_80502664
-lbl_80502664:
+.obj lbl_80502664, global
 	.asciz "exchangelist1201"
 	.balign 4
+.endobj lbl_80502664
 
-.global lbl_80502678
-lbl_80502678:
+.obj lbl_80502678, global
 	.asciz "exchangelist1202"
 	.balign 4
+.endobj lbl_80502678
 
-.global lbl_8050268C
-lbl_8050268C:
+.obj lbl_8050268C, global
 	.asciz "exchangelist1301"
 	.balign 4
+.endobj lbl_8050268C
 
-.global lbl_805026A0
-lbl_805026A0:
+.obj lbl_805026A0, global
 	.asciz "exchangelist1401"
 	.balign 4
+.endobj lbl_805026A0
 
-.global lbl_805026B4
-lbl_805026B4:
+.obj lbl_805026B4, global
 	.asciz "exchangelist1501"
 	.balign 4
+.endobj lbl_805026B4
 
-.global lbl_805026C8
-lbl_805026C8:
+.obj lbl_805026C8, global
 	.asciz "exchangelist1601"
 	.balign 4
+.endobj lbl_805026C8
 
-.global lbl_805026DC
-lbl_805026DC:
+.obj lbl_805026DC, global
 	.asciz "exchangelist1701"
 	.balign 4
+.endobj lbl_805026DC
 
-.global lbl_805026F0
-lbl_805026F0:
+.obj lbl_805026F0, global
 	.asciz "exchangelist1801"
 	.balign 4
+.endobj lbl_805026F0
 
-.global lbl_80502704
-lbl_80502704:
+.obj lbl_80502704, global
 	.asciz "exchangelist1901"
 	.balign 4
+.endobj lbl_80502704
 
-.global lbl_80502718
-lbl_80502718:
+.obj lbl_80502718, global
 	.asciz "exchangelist2001"
 	.balign 4
+.endobj lbl_80502718
 
-.global lbl_8050272C
-lbl_8050272C:
+.obj lbl_8050272C, global
 	.asciz "exchangelist2101"
 	.balign 4
+.endobj lbl_8050272C
 
-.global lbl_80502740
-lbl_80502740:
+.obj lbl_80502740, global
 	.asciz "exchangelist2201"
 	.balign 4
+.endobj lbl_80502740
 
-.global lbl_80502754
-lbl_80502754:
+.obj lbl_80502754, global
 	.asciz "exchangelist2301"
 	.balign 4
 	.4byte lbl_80502560
@@ -2365,34 +2364,34 @@ lbl_80502754:
 	.4byte lbl_8050272C
 	.4byte lbl_80502740
 	.4byte lbl_80502754
+.endobj lbl_80502754
 
-.global lbl_805027D4
-lbl_805027D4:
+.obj lbl_805027D4, global
 	.asciz "kessyou1"
 	.balign 4
+.endobj lbl_805027D4
 
-.global lbl_805027E0
-lbl_805027E0:
+.obj lbl_805027E0, global
 	.asciz "kessyou2"
 	.balign 4
+.endobj lbl_805027E0
 
-.global lbl_805027EC
-lbl_805027EC:
+.obj lbl_805027EC, global
 	.asciz "collect1"
 	.balign 4
+.endobj lbl_805027EC
 
-.global lbl_805027F8
-lbl_805027F8:
+.obj lbl_805027F8, global
 	.asciz "collect2"
 	.balign 4
+.endobj lbl_805027F8
 
-.global lbl_80502804
-lbl_80502804:
+.obj lbl_80502804, global
 	.asciz "materia1"
 	.balign 4
+.endobj lbl_80502804
 
-.global lbl_80502810
-lbl_80502810:
+.obj lbl_80502810, global
 	.asciz "materia2"
 	.balign 4
 	.4byte 0
@@ -2424,40 +2423,40 @@ lbl_80502810:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_80502810
 
-.global lbl_80502890
-lbl_80502890:
+.obj lbl_80502890, global
 	.asciz "percent_E"
 	.balign 4
+.endobj lbl_80502890
 
-.global lbl_8050289C
-lbl_8050289C:
+.obj lbl_8050289C, global
 	.asciz "percent_D"
 	.balign 4
+.endobj lbl_8050289C
 
-.global lbl_805028A8
-lbl_805028A8:
+.obj lbl_805028A8, global
 	.asciz "percent_C"
 	.balign 4
+.endobj lbl_805028A8
 
-.global lbl_805028B4
-lbl_805028B4:
+.obj lbl_805028B4, global
 	.asciz "percent_B"
 	.balign 4
+.endobj lbl_805028B4
 
-.global lbl_805028C0
-lbl_805028C0:
+.obj lbl_805028C0, global
 	.asciz "percent_A"
 	.balign 4
+.endobj lbl_805028C0
 
-.global lbl_805028CC
-lbl_805028CC:
+.obj lbl_805028CC, global
 	.asciz "percent_S"
 	.balign 4
+.endobj lbl_805028CC
 
 
-.global lbl_805028D8
-lbl_805028D8:
+.obj lbl_805028D8, global
 	.4byte lbl_8066A9D0
 	.4byte lbl_80502890
 	.4byte lbl_8050289C
@@ -2465,10 +2464,10 @@ lbl_805028D8:
 	.4byte lbl_805028B4
 	.4byte lbl_805028C0
 	.4byte lbl_805028CC
+.endobj lbl_805028D8
 
 
-.global lbl_805028F4
-lbl_805028F4:
+.obj lbl_805028F4, global
 	.4byte 0
 	.float 1.0
 	.float 1.2 #0x3F99999A
@@ -2476,13 +2475,13 @@ lbl_805028F4:
 	.float 1.8 #0x3FE66666
 	.float 2 #0x40000000
 	.float 2.5 #0x40200000
+.endobj lbl_805028F4
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CNumSelect
-__vt__CNumSelect:
+.obj __vt__CNumSelect, global
 	.4byte __RTTI__CNumSelect
 	.4byte 0
 	.4byte __dt__CNumSelect
@@ -2517,103 +2516,104 @@ __vt__CNumSelect:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CNumSelect
 
-.global CNumSelect_hierarchy
-CNumSelect_hierarchy:
+.obj CNumSelect_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CNumSelect_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CNumSelect
-__RTTI__CNumSelect:
+.obj __RTTI__CNumSelect, global
 	.4byte CNumSelect_typestr
 	.4byte CNumSelect_hierarchy
+.endobj __RTTI__CNumSelect
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-
-.global float_8066A948
-float_8066A948:
+.obj float_8066A948, global
 	.float 1.0
+.endobj float_8066A948
 
 
-.global float_8066A94C
-float_8066A94C:
+.obj float_8066A94C, global
 	.float 0
+.endobj float_8066A94C
 
 
-.global double_8066A950
-double_8066A950:
+.obj double_8066A950, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
-.global lbl_8066A958
-lbl_8066A958:
-	.asciz "wpn"
+.endobj double_8066A950
 
-.global lbl_8066A95C
-lbl_8066A95C:
+.obj lbl_8066A958, global
+	.asciz "wpn"
+.endobj lbl_8066A958
+
+.obj lbl_8066A95C, global
 	.asciz "head"
 	.balign 4
+.endobj lbl_8066A95C
 
-.global lbl_8066A964
-lbl_8066A964:
+.obj lbl_8066A964, global
 	.asciz "body"
 	.balign 4
+.endobj lbl_8066A964
 
-.global lbl_8066A96C
-lbl_8066A96C:
+.obj lbl_8066A96C, global
 	.asciz "arm"
+.endobj lbl_8066A96C
 
-.global lbl_8066A970
-lbl_8066A970:
+.obj lbl_8066A970, global
 	.asciz "waist"
 	.balign 4
+.endobj lbl_8066A970
 
-.global lbl_8066A978
-lbl_8066A978:
+.obj lbl_8066A978, global
 	.asciz "legg"
 	.balign 4
+.endobj lbl_8066A978
 
-.global lbl_8066A980
-lbl_8066A980:
+.obj lbl_8066A980, global
 	.asciz "arts"
 	.balign 4
+.endobj lbl_8066A980
 
-.global lbl_8066A988
-lbl_8066A988:
+.obj lbl_8066A988, global
 	.asciz "wpn1"
 	.balign 4
+.endobj lbl_8066A988
 
-.global lbl_8066A990
-lbl_8066A990:
+.obj lbl_8066A990, global
 	.asciz "head1"
 	.balign 4
+.endobj lbl_8066A990
 
-.global lbl_8066A998
-lbl_8066A998:
+.obj lbl_8066A998, global
 	.asciz "body1"
 	.balign 4
+.endobj lbl_8066A998
 
-.global lbl_8066A9A0
-lbl_8066A9A0:
+.obj lbl_8066A9A0, global
 	.asciz "arm1"
 	.balign 4
+.endobj lbl_8066A9A0
 
-.global lbl_8066A9A8
-lbl_8066A9A8:
+.obj lbl_8066A9A8, global
 	.asciz "waist1"
 	.balign 4
+.endobj lbl_8066A9A8
 
-.global lbl_8066A9B0
-lbl_8066A9B0:
+.obj lbl_8066A9B0, global
 	.asciz "legg1"
 	.balign 4
+.endobj lbl_8066A9B0
 	
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -30,6 +30,6 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global btm_cb
-btm_cb:
+.obj btm_cb, global
 	.skip 0x27C8
+.endobj btm_cb

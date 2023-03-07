@@ -632,7 +632,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-enc_tbl_jp_mbtowc:
+.balign 8
+
+.obj enc_tbl_jp_mbtowc, local
 	.2byte 0x3000
 	.2byte 0x3001
 	.2byte 0x3002
@@ -10033,8 +10035,9 @@ enc_tbl_jp_mbtowc:
 	.2byte 0
 	.2byte 0
 	.2byte 0
+.endobj enc_tbl_jp_mbtowc
 
-enc_tbl_jp_wctomb:
+.obj enc_tbl_jp_wctomb, local
 	.4byte 0x2281CD25
 	.4byte 0x849F3081
 	.4byte 0x404E88EA
@@ -15601,9 +15604,10 @@ enc_tbl_jp_wctomb:
 	.4byte 0x8BBF998F
 	.4byte 0x78000000
 	.4byte 0
+.endobj enc_tbl_jp_wctomb
 
 
-enc_offset_jp:
+.obj enc_offset_jp, local
 	.2byte 0x001B
 	.2byte 0x0039
 	.2byte 0x0056
@@ -15860,10 +15864,13 @@ enc_offset_jp:
 	.2byte 0x1CC6
 	.2byte 0x1CE3
 	.2byte 0x1CFB
+.endobj enc_offset_jp
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global enc_tbl_jp_loaded
-enc_tbl_jp_loaded:
+.balign 8
+
+.obj enc_tbl_jp_loaded, global
 	.4byte 0x00000001
 	.4byte 0
+.endobj enc_tbl_jp_loaded

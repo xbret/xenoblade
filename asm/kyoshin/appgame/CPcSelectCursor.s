@@ -501,22 +501,22 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+#.balign 8
 
-
-.global __vt__CPcSelectCursor01
-__vt__CPcSelectCursor01:
+.obj __vt__CPcSelectCursor01, global
 	.4byte __RTTI__CPcSelectCursor01
 	.4byte 0
 	.4byte __dt__CPcSelectCursor01
+.endobj __vt__CPcSelectCursor01
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CPcSelectCursor01
-__RTTI__CPcSelectCursor01:
+.obj __RTTI__CPcSelectCursor01, global
 	.4byte CPcSelectCursor01_typestr
 	.4byte 0
+.endobj __RTTI__CPcSelectCursor01
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

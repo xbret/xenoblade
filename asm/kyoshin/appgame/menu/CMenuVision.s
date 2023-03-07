@@ -4398,90 +4398,89 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_804FF998
-lbl_804FF998:
+.obj lbl_804FF998, global
 	.asciz "nul_enemmy"
 	.balign 4
+.endobj lbl_804FF998
 
-.global lbl_804FF9A4
-lbl_804FF9A4:
+.obj lbl_804FF9A4, global
 	.asciz "nul_action"
 	.balign 4
+.endobj lbl_804FF9A4
 
-.global lbl_804FF9B0
-lbl_804FF9B0:
+.obj lbl_804FF9B0, global
 	.asciz "nul_target"
 	.balign 4
+.endobj lbl_804FF9B0
 
-.global lbl_804FF9BC
-lbl_804FF9BC:
+.obj lbl_804FF9BC, global
 	.asciz "nul_damage"
 	.balign 4
+.endobj lbl_804FF9BC
 
-.global lbl_804FF9C8
-lbl_804FF9C8:
+.obj lbl_804FF9C8, global
 	.asciz "nul_timegage"
 	.balign 4
+.endobj lbl_804FF9C8
 
-.global lbl_804FF9D8
-lbl_804FF9D8:
+.obj lbl_804FF9D8, global
 	.asciz "nul_time"
 	.balign 4
 	.4byte 0
+.endobj lbl_804FF9D8
 
-.global lbl_804FF9E8
-lbl_804FF9E8:
+.obj lbl_804FF9E8, global
 	.4byte lbl_804FF998
 	.4byte lbl_804FF9A4
 	.4byte lbl_804FF9B0
 	.4byte lbl_804FF9BC
 	.4byte lbl_804FF9C8
 	.4byte lbl_804FF9D8
+.endobj lbl_804FF9E8
 
-.global lbl_804FFA00
-lbl_804FFA00:
+.obj lbl_804FFA00, global
 	.asciz "mf71_btl00_pnmk00.tpl"
 	.balign 4
+.endobj lbl_804FFA00
 
-.global lbl_804FFA18
-lbl_804FFA18:
+.obj lbl_804FFA18, global
 	.asciz "mf71_btl00_pnmk01.tpl"
 	.balign 4
+.endobj lbl_804FFA18
 
-.global lbl_804FFA30
-lbl_804FFA30:
+.obj lbl_804FFA30, global
 	.asciz "mf71_btl00_pnmk02.tpl"
 	.balign 4
+.endobj lbl_804FFA30
 
-.global lbl_804FFA48
-lbl_804FFA48:
+.obj lbl_804FFA48, global
 	.asciz "mf71_btl00_pnmk03.tpl"
 	.balign 4
+.endobj lbl_804FFA48
 
-.global lbl_804FFA60
-lbl_804FFA60:
+.obj lbl_804FFA60, global
 	.4byte lbl_804FFA00
 	.4byte lbl_804FFA18
 	.4byte lbl_804FFA30
 	.4byte lbl_804FFA48
+.endobj lbl_804FFA60
 
-.global lbl_804FFA70
-lbl_804FFA70:
+.obj lbl_804FFA70, global
 	.4byte lbl_804FFA00
 	.4byte lbl_804FFA18
 	.4byte lbl_804FFA30
 	.4byte lbl_804FFA48
+.endobj lbl_804FFA70
 
-.global CMenuVision_typestr
-CMenuVision_typestr:
+.obj CMenuVision_typestr, global
 	.asciz "CMenuVision"
 	.4byte 0
+.endobj CMenuVision_typestr
 
 
-.global CMenuVision_strpool
-CMenuVision_strpool:
+.obj CMenuVision_strpool, global
 	.asciz "MenuVision"
 	.asciz "mf71_battle81_future_base.brlyt"
 	.asciz "mf71_battle81_future_base_in.brlan"
@@ -4554,13 +4553,13 @@ CMenuVision_strpool:
 	.asciz "MNU_battle"
 	.asciz "name"
 	.asciz "icon"
+.endobj CMenuVision_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global jumptable_80536C58
-jumptable_80536C58:
+.obj jumptable_80536C58, global
 	.4byte .L_801AEB44
 	.4byte .L_801AE90C
 	.4byte .L_801AE940
@@ -4573,10 +4572,10 @@ jumptable_80536C58:
 	.4byte .L_801AEAAC
 	.4byte .L_801AEAE0
 	.4byte .L_801AEB14
+.endobj jumptable_80536C58
 
 
-.global jumptable_80536C88
-jumptable_80536C88:
+.obj jumptable_80536C88, global
 	.4byte .L_801AEB44
 	.4byte .L_801AE298
 	.4byte .L_801AE3A8
@@ -4590,10 +4589,10 @@ jumptable_80536C88:
 	.4byte .L_801AE374
 	.4byte .L_801AE61C
 	.4byte .L_801AE264
+.endobj jumptable_80536C88
 
 
-.global jumptable_80536CBC
-jumptable_80536CBC:
+.obj jumptable_80536CBC, global
 	.4byte .L_801ADC64
 	.4byte .L_801AD628
 	.4byte .L_801AD738
@@ -4607,10 +4606,10 @@ jumptable_80536CBC:
 	.4byte .L_801AD704
 	.4byte .L_801AD9AC
 	.4byte .L_801AD5F4
+.endobj jumptable_80536CBC
 
 
-.global __vt__CMenuVision
-__vt__CMenuVision:
+.obj __vt__CMenuVision, global
 	.4byte __RTTI__CMenuVision
 	.4byte 0
 	.4byte __dt__CMenuVision
@@ -4659,9 +4658,9 @@ __vt__CMenuVision:
 	.4byte func_801AFE14
 	.4byte func_801AFE0C
 	.4byte func_801ACB54
+.endobj __vt__CMenuVision
 
-.global CMenuVision_hierarchy
-CMenuVision_hierarchy:
+.obj CMenuVision_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x0000005C
 	.4byte __RTTI__IWorkEvent
@@ -4678,179 +4677,192 @@ CMenuVision_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuVision_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80664E78
-lbl_80664E78:
+.obj lbl_80664E78, global
 	.4byte 0x3C738AFF
+.endobj lbl_80664E78
 
 
-.global lbl_80664E7C
-lbl_80664E7C:
+.obj lbl_80664E7C, global
 	.4byte 0xF0F0FAFF
+.endobj lbl_80664E7C
 
 
-.global lbl_80664E80
-lbl_80664E80:
+.obj lbl_80664E80, global
 	.4byte 0xF0F0FAFF
+.endobj lbl_80664E80
 
 
-.global lbl_80664E84
-lbl_80664E84:
+.obj lbl_80664E84, global
 	.4byte 0x4014D2FF
+.endobj lbl_80664E84
 
 
-.global lbl_80664E88
-lbl_80664E88:
+.obj lbl_80664E88, global
 	.4byte 0xD42D1DFF
+.endobj lbl_80664E88
 
 
-.global lbl_80664E8C
-lbl_80664E8C:
+.obj lbl_80664E8C, global
 	.4byte 0x0F0F0FFF
+.endobj lbl_80664E8C
 
 
-.global lbl_80664E90
-lbl_80664E90:
+.obj lbl_80664E90, global
 	.4byte 0xFFFFFFFF
+.endobj lbl_80664E90
 
 
-.global lbl_80664E94
-lbl_80664E94:
+.obj lbl_80664E94, global
 	.4byte 0xFFFFFFFF
+.endobj lbl_80664E94
 
 
-.global lbl_80664E98
-lbl_80664E98:
+.obj lbl_80664E98, global
 	.4byte 0xFFFFFFFF
+.endobj lbl_80664E98
 
 
-.global lbl_80664E9C
-lbl_80664E9C:
+.obj lbl_80664E9C, global
 	.4byte 0xFFFFFFFF
+.endobj lbl_80664E9C
 
 
-.global lbl_80664EA0
-lbl_80664EA0:
+.obj lbl_80664EA0, global
 	.4byte 0x785AFFFF
+.endobj lbl_80664EA0
 
 
-.global lbl_80664EA4
-lbl_80664EA4:
+.obj lbl_80664EA4, global
 	.4byte 0xFFAC98FF
+.endobj lbl_80664EA4
 
 
-.global lbl_80664EA8
-lbl_80664EA8:
+.obj lbl_80664EA8, global
 	.4byte 0x79E56DFF
+.endobj lbl_80664EA8
 
 
-.global lbl_80664EAC
-lbl_80664EAC:
+.obj lbl_80664EAC, global
 	.4byte 0x808080FF
+.endobj lbl_80664EAC
 
-.global __RTTI__CMenuVision
-__RTTI__CMenuVision:
+.obj __RTTI__CMenuVision, global
 	.4byte CMenuVision_typestr
 	.4byte CMenuVision_hierarchy
+.endobj __RTTI__CMenuVision
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066A680
-float_8066A680:
+.obj float_8066A680, global
 	.float 0
+.endobj float_8066A680
 
 
-.global float_8066A684
-float_8066A684:
+.obj float_8066A684, global
 	.float 1.0
+.endobj float_8066A684
 
 
-.global float_8066A688
-float_8066A688:
+.obj float_8066A688, global
 	.float 298 #0x43950000
+.endobj float_8066A688
 
 
-.global float_8066A68C
-float_8066A68C:
+.obj float_8066A68C, global
 	.float 8.0
+.endobj float_8066A68C
 
 
-.global lbl_8066A690
-lbl_8066A690:
+.obj lbl_8066A690, global
 	.4byte 0x0F091012
+.endobj lbl_8066A690
 
 
-.global float_8066A694
-float_8066A694:
+.obj float_8066A694, global
 	.float 0.62999999 #0x3F2147AE
+.endobj float_8066A694
 
 
-.global float_8066A698
-float_8066A698:
+.obj float_8066A698, global
 	.float -1.0
+.endobj float_8066A698
 
 
-.global float_8066A69C
-float_8066A69C:
+.obj float_8066A69C, global
 	.float 3 #0x40400000
+.endobj float_8066A69C
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_80579050
-lbl_80579050:
+.obj lbl_80579050, global
 	.skip 0x18
+.endobj lbl_80579050
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80666C28, global
+	.skip 0x4
+.endobj lbl_80666C28
 
-.global lbl_80666C28
-lbl_80666C28:
+.obj lbl_80666C2C, global
 	.skip 0x4
-.global lbl_80666C2C
-lbl_80666C2C:
+.endobj lbl_80666C2C
+
+.obj lbl_80666C30, global
 	.skip 0x4
-.global lbl_80666C30
-lbl_80666C30:
+.endobj lbl_80666C30
+
+.obj lbl_80666C34, global
 	.skip 0x4
-.global lbl_80666C34
-lbl_80666C34:
-	.skip 0x4
-.global lbl_80666C38
-lbl_80666C38:
+.endobj lbl_80666C34
+
+.obj lbl_80666C38, global
 	.skip 0x8
-.global lbl_80666C40
-lbl_80666C40:
+.endobj lbl_80666C38
+
+.obj lbl_80666C40, global
 	.skip 0x8
-.global lbl_80666C48
-lbl_80666C48:
+.endobj lbl_80666C40
+
+.obj lbl_80666C48, global
 	.skip 0x8
-.global lbl_80666C50
-lbl_80666C50:
+.endobj lbl_80666C48
+
+.obj lbl_80666C50, global
 	.skip 0x8
-.global lbl_80666C58
-lbl_80666C58:
+.endobj lbl_80666C50
+
+.obj lbl_80666C58, global
 	.skip 0x8
-.global lbl_80666C60
-lbl_80666C60:
+.endobj lbl_80666C58
+
+.obj lbl_80666C60, global
 	.skip 0x8
-.global lbl_80666C68
-lbl_80666C68:
+.endobj lbl_80666C60
+
+.obj lbl_80666C68, global
 	.skip 0x8
-.global lbl_80666C70
-lbl_80666C70:
+.endobj lbl_80666C68
+
+.obj lbl_80666C70, global
 	.skip 0x8
-.global lbl_80666C78
-lbl_80666C78:
+.endobj lbl_80666C70
+
+.obj lbl_80666C78, global
 	.skip 0x8
+.endobj lbl_80666C78
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

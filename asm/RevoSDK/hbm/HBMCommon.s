@@ -250,22 +250,26 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8054C878
-lbl_8054C878:
+.balign 8
+
+.obj lbl_8054C878, global
 	.asciz "<< RVL_SDK - HBM \trelease build: Mar  3 2009 14:00:03 (0x4201_142) >>"
 	.balign 4
+.endobj lbl_8054C878
 
 
-__HBMVersion:
+.obj __HBMVersion, local
 	.4byte lbl_8054C878
+.endobj __HBMVersion
 
 
-.global spAllocator
-spAllocator:
+.obj spAllocator, global
 	.4byte sAllocator
+.endobj spAllocator
 
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-sAllocator:
+.obj sAllocator, local
 	.skip 0x10
+.endobj sAllocator

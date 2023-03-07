@@ -1368,15 +1368,14 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CPresentWin_typestr
-CPresentWin_typestr:
+.obj CPresentWin_typestr, global
 	.asciz "CPresentWin"
+.endobj CPresentWin_typestr
 
 
-.global CPresentWin_strpool
-CPresentWin_strpool:
+.obj CPresentWin_strpool, global
 	.asciz "mf70_cf60_syswin07.brlyt"
 	.asciz "mf70_cf60_syswin07_in.brlan"
 	.asciz "mf70_cf60_syswin07_ef.brlan"
@@ -1412,13 +1411,13 @@ CPresentWin_strpool:
 	.asciz "name"
 	.asciz "icon_type2"
 	.balign 4
+.endobj CPresentWin_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CPresentWin
-__vt__CPresentWin:
+.obj __vt__CPresentWin, global
 	.4byte __RTTI__CPresentWin
 	.4byte 0
 	.4byte __dt__CPresentWin
@@ -1453,39 +1452,40 @@ __vt__CPresentWin:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CPresentWin
 
-.global CPresentWin_hierarchy
-CPresentWin_hierarchy:
+.obj CPresentWin_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CPresentWin_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CPresentWin
-__RTTI__CPresentWin:
+.obj __RTTI__CPresentWin, global
 	.4byte CPresentWin_typestr
 	.4byte CPresentWin_hierarchy
+.endobj __RTTI__CPresentWin
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global double_8066AEE0
-double_8066AEE0:
+.obj double_8066AEE0, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066AEE0
 
-.global float_8066AEE8
-float_8066AEE8:
+.obj float_8066AEE8, global
 	.float 0
+.endobj float_8066AEE8
 
 
-.global float_8066AEEC
-float_8066AEEC:
+.obj float_8066AEEC, global
 	.float 1.0
+.endobj float_8066AEEC
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

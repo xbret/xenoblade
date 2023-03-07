@@ -1073,23 +1073,27 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-.global lbl_805206E8
-lbl_805206E8:
+
+.obj lbl_805206E8, global
 	.asciz "%p, %ld, %ld, 0x%08lX%08lX, %ld, %ld, %ld, %ld,   %ld, %ld,   %ld, %ld, %ld, %ld,   %ld, %ld,   %ld, %ld, %ld, %ld, %ld,   %ld, %ld,   %ld \n"
 	.balign 4
+.endobj lbl_805206E8
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global lbl_8056C610
-lbl_8056C610:
+
+.obj lbl_8056C610, global
 	.asciz "tst, help_time_sec, help_time_msec, help_time_64, help_time, mt_max, master_time, out_time,  mt_ot, mtmax_ot,  diff_l_max, diff_l_min, diff_a_max, tst->diff_a_min, pastat, adjmode, resethist, excesserr, adj_limit, adj_front, adj_rear,  movave_1st, movave_2nd,  adxt_stat \n\n"
 	.balign 4
 	.4byte 0
+.endobj lbl_8056C610
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_8061CE08
-lbl_8061CE08:
+.obj lbl_8061CE08, global
 	.skip 0x18
+.endobj lbl_8061CE08

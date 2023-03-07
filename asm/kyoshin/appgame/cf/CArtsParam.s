@@ -1667,125 +1667,124 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CArtsParam
-__vt__cf_CArtsParam:
+.obj __vt__cf_CArtsParam, global
 	.4byte __RTTI__cf_CArtsParam
 	.4byte 0
 	.4byte func_80155580
 	.4byte func_801555C8
 	.4byte func_801555B4
 	.4byte func_800D29E4
+.endobj __vt__cf_CArtsParam
 
-.global cf_CArtsParam_hierarchy
-cf_CArtsParam_hierarchy:
+.obj cf_CArtsParam_hierarchy, global
 	.4byte __RTTI__cf_CAttackParam
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CArtsParam_hierarchy
 
-.global __vt__cf_CAttackParam
-__vt__cf_CAttackParam:
+.obj __vt__cf_CAttackParam, global
 	.4byte __RTTI__cf_CAttackParam
 	.4byte 0
 	.4byte func_80153F54
 	.4byte func_800989FC
 	.4byte func_800989F4
 	.4byte func_800D29E4
+.endobj __vt__cf_CAttackParam
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CArtsParam
-__RTTI__cf_CArtsParam:
+.obj __RTTI__cf_CArtsParam, global
 	.4byte cf_CArtsParam_typestr
 	.4byte cf_CArtsParam_hierarchy
+.endobj __RTTI__cf_CArtsParam
 
-.global __RTTI__cf_CAttackParam
-__RTTI__cf_CAttackParam:
+.obj __RTTI__cf_CAttackParam, global
 	.4byte cf_CAttackParam_typestr
 	.4byte 0
+.endobj __RTTI__cf_CAttackParam
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_80669D20
-float_80669D20:
+.obj float_80669D20, global
 	.float 0
+.endobj float_80669D20
 
 
-.global float_80669D24
-float_80669D24:
+.obj float_80669D24, global
 	.float 9.8 #0x411CCCCD
+.endobj float_80669D24
 
 
-.global float_80669D28
-float_80669D28:
+.obj float_80669D28, global
 	.float 32 #0x42000000
+.endobj float_80669D28
 
 
-.global float_80669D2C
-float_80669D2C:
+.obj float_80669D2C, global
 	.float 0.5
+.endobj float_80669D2C
 
 
-.global float_80669D30
-float_80669D30:
+.obj float_80669D30, global
 	.float 15 #0x41700000
+.endobj float_80669D30
 
 
-.global float_80669D34
-float_80669D34:
+.obj float_80669D34, global
 	.float 25 #0x41C80000
+.endobj float_80669D34
 
 
-.global float_80669D38
-float_80669D38:
+.obj float_80669D38, global
 	.float 2 #0x40000000
+.endobj float_80669D38
 
 
-.global float_80669D3C
-float_80669D3C:
+.obj float_80669D3C, global
 	.float 100.0
+.endobj float_80669D3C
 
 
-.global float_80669D40
-float_80669D40:
+.obj float_80669D40, global
 	.float 1.0
+.endobj float_80669D40
 
 
-.global float_80669D44
-float_80669D44:
+.obj float_80669D44, global
 	.float 0.0245436933 #0x3CC90FDB
+.endobj float_80669D44
 
 
-.global float_80669D48
-float_80669D48:
+.obj float_80669D48, global
 	.float 10.0
+.endobj float_80669D48
 
 
-.global float_80669D4C
-float_80669D4C:
+.obj float_80669D4C, global
 	.float 0.2
+.endobj float_80669D4C
 
 
-.global double_80669D50
-double_80669D50:
+.obj double_80669D50, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_80669D50
 
-.global double_80669D58
-double_80669D58:
+.obj double_80669D58, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_80669D58
+
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-
-
-.global lbl_80577580
-lbl_80577580:
+.obj lbl_80577580, global
 	.skip 0x90
+.endobj lbl_80577580
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

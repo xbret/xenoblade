@@ -4034,10 +4034,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_80507D30
-lbl_80507D30:
+.obj lbl_80507D30, global
 	.4byte 0
 	.2byte 0x0001
 	.2byte 0x0008
@@ -4066,14 +4065,14 @@ lbl_80507D30:
 	.2byte 0x0078
 	.2byte 0x0000
 	.4byte 0
+.endobj lbl_80507D30
 
-.global CCollepedia_typestr
-CCollepedia_typestr:
+.obj CCollepedia_typestr, global
 	.asciz "CCollepedia"
+.endobj CCollepedia_typestr
 
 
-.global CCollepedia_strpool
-CCollepedia_strpool:
+.obj CCollepedia_strpool, global
 	.asciz "mf00_reg00_curs09.brlyt"
 	.asciz "mf00_reg00_curs09_roop.brlan"
 	.asciz "pic_pgarw_r"
@@ -4144,41 +4143,43 @@ CCollepedia_strpool:
 	.asciz "MNU_col"
 	.balign 4
 	.4byte 0
+.endobj CCollepedia_strpool
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global jumptable_8053AAC8
-jumptable_8053AAC8:
-	.4byte .L_80253BD0
-	.4byte .L_80253BD0
-	.4byte .L_80253BD0
-	.4byte .L_80253BD0
-	.4byte .L_80253BD0
-	.4byte .L_80253BD0
-	.4byte .L_80253BD0
-	.4byte .L_80253BD0
-	.4byte .L_80253BD0
-	.4byte .L_80253BD0
-	.4byte .L_80253C48
-	.4byte .L_80253BD0
-	.4byte .L_80253BD0
-	.4byte .L_80253BD0
-	.4byte .L_80253C48
-	.4byte .L_80253BD0
-	.4byte .L_80253BD0
-	.4byte .L_80253BD0
-	.4byte .L_80253BD0
-	.4byte .L_80253BD0
-	.4byte .L_80253C48
-	.4byte .L_80253BD0
-	.4byte .L_80253C48
-	.4byte .L_80253BD0
-	.4byte .L_80253BD0
-	.4byte .L_80253BD0
+.balign 8
 
-.global jumptable_8053AB30
-jumptable_8053AB30:
+.obj jumptable_8053AAC8, global
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253C48
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253C48
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253C48
+	.4byte .L_80253BD0
+	.4byte .L_80253C48
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+	.4byte .L_80253BD0
+.endobj jumptable_8053AAC8
+
+.obj jumptable_8053AB30, global
 	.4byte .L_80254B10
 	.4byte .L_80254A6C
 	.4byte .L_80254A74
@@ -4196,10 +4197,10 @@ jumptable_8053AB30:
 	.4byte .L_80254B10
 	.4byte .L_80254AF4
 	.4byte .L_80254AFC
+.endobj jumptable_8053AB30
 
 
-.global jumptable_8053AB74
-jumptable_8053AB74:
+.obj jumptable_8053AB74, global
 	.4byte .L_8025551C
 	.4byte .L_802554C0
 	.4byte .L_802554CC
@@ -4209,10 +4210,10 @@ jumptable_8053AB74:
 	.4byte .L_802554FC
 	.4byte .L_80255508
 	.4byte .L_80255514
+.endobj jumptable_8053AB74
 
 
-.global __vt__CCollepedia
-__vt__CCollepedia:
+.obj __vt__CCollepedia, global
 	.4byte __RTTI__CCollepedia
 	.4byte 0
 	.4byte __dt__CCollepedia
@@ -4247,82 +4248,86 @@ __vt__CCollepedia:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CCollepedia
 
-.global CCollepedia_hierarchy
-CCollepedia_hierarchy:
+.obj CCollepedia_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
+.endobj CCollepedia_hierarchy
 
 
-.global __vt__CCLPCur
-__vt__CCLPCur:
+.obj __vt__CCLPCur, global
 	.4byte __RTTI__CCLPCur
 	.4byte 0
 	.4byte func_80253204
+.endobj __vt__CCLPCur
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B0A0
-float_8066B0A0:
+.obj float_8066B0A0, global
 	.float 334 #0x43A70000
+.endobj float_8066B0A0
 
 
-.global float_8066B0A4
-float_8066B0A4:
+.obj float_8066B0A4, global
 	.float 4 #0x40800000
+.endobj float_8066B0A4
 
 
-.global float_8066B0A8
-float_8066B0A8:
+.obj float_8066B0A8, global
 	.float 0
+.endobj float_8066B0A8
 
 
-.global float_8066B0AC
-float_8066B0AC:
+.obj float_8066B0AC, global
 	.float -324 #0xC3A20000
+.endobj float_8066B0AC
 
 
-.global float_8066B0B0
-float_8066B0B0:
+.obj float_8066B0B0, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066B0B0
 
 
-.global double_8066B0B8
-double_8066B0B8:
+.obj double_8066B0B8, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066B0B8
 
-.global float_8066B0C0
-float_8066B0C0:
+.obj float_8066B0C0, global
 	.float 16 #0x41800000
+.endobj float_8066B0C0
 
 
-.global float_8066B0C4
-float_8066B0C4:
+.obj float_8066B0C4, global
 	.float 100.0
+.endobj float_8066B0C4
 
 
-.global double_8066B0C8
-double_8066B0C8:
+.obj double_8066B0C8, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066B0C8
 
-.global CCLPCur_typestr
-CCLPCur_typestr:
+.obj CCLPCur_typestr, global
 	.asciz "CCLPCur"
+.endobj CCLPCur_typestr
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-.global lbl_806670C8
-lbl_806670C8:
+
+.obj lbl_806670C8, global
 	.skip 0x4
-.global lbl_806670CC
-lbl_806670CC:
+.endobj lbl_806670C8
+
+.obj lbl_806670CC, global
 	.skip 0x4
+.endobj lbl_806670CC
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -448,11 +448,14 @@
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-__esFd:
+.balign 8
+
+.obj __esFd, local
 	.4byte 0xFFFFFFFF
 	.4byte 0
+.endobj __esFd
 
 
-.global lbl_806659D0
-lbl_806659D0:
+.obj lbl_806659D0, global
 	.asciz "/dev/es"
+.endobj lbl_806659D0

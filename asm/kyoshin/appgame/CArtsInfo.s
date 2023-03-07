@@ -7002,16 +7002,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CArtsInfo_typestr
-CArtsInfo_typestr:
+.obj CArtsInfo_typestr, global
 	.asciz "CArtsInfo"
 	.balign 4
+.endobj CArtsInfo_typestr
 
 
-.global CArtsInfo_stringpool
-CArtsInfo_stringpool:
+.obj CArtsInfo_stringpool, global
 	.asciz "/menu/ArtsInfo.arc"
 	.asciz "common/jp/bdat_arts.bin"
 	.asciz "MNU_battle"
@@ -7111,13 +7110,13 @@ CArtsInfo_stringpool:
 	.asciz "MNU_arts_tag"
 	.balign 4
 	.4byte 0
+.endobj CArtsInfo_stringpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global jumptable_8053A158
-jumptable_8053A158:
+.obj jumptable_8053A158, global
 	.4byte .L_8023590C
 	.4byte .L_802358C0
 	.4byte .L_802358C8
@@ -7131,10 +7130,10 @@ jumptable_8053A158:
 	.4byte .L_802358F8
 	.4byte .L_80235900
 	.4byte .L_80235908
+.endobj jumptable_8053A158
 
 
-.global jumptable_8053A18C
-jumptable_8053A18C:
+.obj jumptable_8053A18C, global
 	.4byte .L_802379F8
 	.4byte .L_80237664
 	.4byte .L_80237678
@@ -7180,10 +7179,10 @@ jumptable_8053A18C:
 	.4byte .L_802379A8
 	.4byte .L_802379C8
 	.4byte .L_802379E8
+.endobj jumptable_8053A18C
 
 
-.global __vt__CArtsInfo
-__vt__CArtsInfo:
+.obj __vt__CArtsInfo, global
 	.4byte __RTTI__CArtsInfo
 	.4byte 0
 	.4byte __dt__CArtsInfo
@@ -7218,118 +7217,122 @@ __vt__CArtsInfo:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CArtsInfo
 
 
-.global CArtsInfo_hierarchy
-CArtsInfo_hierarchy:
+.obj CArtsInfo_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CArtsInfo_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CArtsInfo
-__RTTI__CArtsInfo:
+.obj __RTTI__CArtsInfo, global
 	.4byte CArtsInfo_typestr
 	.4byte CArtsInfo_hierarchy
+.endobj __RTTI__CArtsInfo
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066AF40
-float_8066AF40:
+.obj float_8066AF40, global
 	.float 0
+.endobj float_8066AF40
 
 
-.global float_8066AF44
-float_8066AF44:
+.obj float_8066AF44, global
 	.float 1.0
+.endobj float_8066AF44
 
 
-.global float_8066AF48
-float_8066AF48:
+.obj float_8066AF48, global
 	.float 1.4 #0x3FB33333
+.endobj float_8066AF48
 
 
-.global float_8066AF4C
-float_8066AF4C:
+.obj float_8066AF4C, global
 	.float 0.01 #0x3C23D70A
+.endobj float_8066AF4C
 
 
-.global double_8066AF50
-double_8066AF50:
+.obj double_8066AF50, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066AF50
 
-.global float_8066AF58
-float_8066AF58:
+.obj float_8066AF58, global
 	.float 1.5
+.endobj float_8066AF58
 
 
-.global float_8066AF5C
-float_8066AF5C:
+.obj float_8066AF5C, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_8066AF5C
 
 
-.global double_8066AF60
-double_8066AF60:
+.obj double_8066AF60, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066AF60
 
-.global float_8066AF68
-float_8066AF68:
+.obj float_8066AF68, global
 	.float 20 #0x41A00000
+.endobj float_8066AF68
 
 
-.global float_8066AF6C
-float_8066AF6C:
+.obj float_8066AF6C, global
 	.float 10.0
+.endobj float_8066AF6C
 
 
-.global float_8066AF70
-float_8066AF70:
+.obj float_8066AF70, global
 	.float 30 #0x41F00000
+.endobj float_8066AF70
 
 
-.global float_8066AF74
-float_8066AF74:
+.obj float_8066AF74, global
 	.float 0.5
+.endobj float_8066AF74
 
 
-.global double_8066AF78
-double_8066AF78:
+.obj double_8066AF78, global
 	.double 5 #0x4014000000000000
+.endobj double_8066AF78
 
 
-.global double_8066AF80
-double_8066AF80:
+.obj double_8066AF80, global
 	.double 1.25 #0x3FF4000000000000
+.endobj double_8066AF80
 
 
-.global float_8066AF88
-float_8066AF88:
+.obj float_8066AF88, global
 	.float 476 #0x43EE0000
 	.4byte 0
+.endobj float_8066AF88
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80667038, global
+	.skip 0x8
+.endobj lbl_80667038
 
-.global lbl_80667038
-lbl_80667038:
+.obj lbl_80667040, global
 	.skip 0x8
-.global lbl_80667040
-lbl_80667040:
+.endobj lbl_80667040
+
+.obj lbl_80667048, global
 	.skip 0x8
-.global lbl_80667048
-lbl_80667048:
+.endobj lbl_80667048
+
+.obj lbl_80667050, global
 	.skip 0x8
-.global lbl_80667050
-lbl_80667050:
-	.skip 0x8
+.endobj lbl_80667050
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

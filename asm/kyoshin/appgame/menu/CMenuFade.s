@@ -622,29 +622,28 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMenuFade_typestr
-CMenuFade_typestr:
+.obj CMenuFade_typestr, global
 	.asciz "CMenuFade"
 	.balign 4
 	.4byte 0
+.endobj CMenuFade_typestr
 
 
-.global CMenuFade_strpool
-CMenuFade_strpool:
+.obj CMenuFade_strpool, global
 	.asciz "CMenuFade"
 	.asciz "fadeout.brlyt"
 	.asciz "fadeout.brlan"
 	.asciz "win_black"
+.endobj CMenuFade_strpool
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMenuFade
-__vt__CMenuFade:
+.obj __vt__CMenuFade, global
 	.4byte __RTTI__CMenuFade
 	.4byte 0
 	.4byte __dt__CMenuFade
@@ -693,9 +692,9 @@ __vt__CMenuFade:
 	.4byte func_80113E48
 	.4byte func_80113E40
 	.4byte func_80113BFC
+.endobj __vt__CMenuFade
 
-.global CMenuFade_hierarchy
-CMenuFade_hierarchy:
+.obj CMenuFade_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x0000005C
 	.4byte __RTTI__IWorkEvent
@@ -712,52 +711,53 @@ CMenuFade_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuFade_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuFade
-__RTTI__CMenuFade:
+.obj __RTTI__CMenuFade, global
 	.4byte CMenuFade_typestr
 	.4byte CMenuFade_hierarchy
+.endobj __RTTI__CMenuFade
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_80669920
-float_80669920:
+.obj float_80669920, global
 	.float 0
+.endobj float_80669920
 
 
-.global float_80669924
-float_80669924:
+.obj float_80669924, global
 	.float 1.0
+.endobj float_80669924
 
 
-.global float_80669928
-float_80669928:
+.obj float_80669928, global
 	.float 25 #0x41C80000
 	.4byte 0
+.endobj float_80669928
 
 
-.global double_80669930
-double_80669930:
+.obj double_80669930, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_80669930
 
-.global double_80669938
-double_80669938:
+.obj double_80669938, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_80669938
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80666898
-lbl_80666898:
+.obj lbl_80666898, global
 	.skip 0x8
+.endobj lbl_80666898
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

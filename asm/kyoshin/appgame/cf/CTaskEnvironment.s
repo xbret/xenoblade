@@ -1769,13 +1769,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-
-
-
-.global __vt__CTaskEnvironment
-__vt__CTaskEnvironment:
+.obj __vt__CTaskEnvironment, global
 	.4byte __RTTI__CTaskEnvironment
 	.4byte 0
 	.4byte __dt__CTaskEnvironment
@@ -1785,9 +1781,9 @@ __vt__CTaskEnvironment:
 	.4byte func_80058CE8
 	.4byte func_800599DC
 	.4byte func_80043F20
+.endobj __vt__CTaskEnvironment
 
-.global CTaskEnvironment_hierarchy
-CTaskEnvironment_hierarchy:
+.obj CTaskEnvironment_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -1797,10 +1793,10 @@ CTaskEnvironment_hierarchy:
 	.4byte __RTTI__CTTask_CTaskEnvironment
 	.4byte 0
 	.4byte 0
+.endobj CTaskEnvironment_hierarchy
 
 
-.global __vt__CTTask_CTaskEnvironment
-__vt__CTTask_CTaskEnvironment:
+.obj __vt__CTTask_CTaskEnvironment, global
 	.4byte __RTTI__CTTask_CTaskEnvironment
 	.4byte 0
 	.4byte __dt__CTTask_CTaskEnvironment
@@ -1810,9 +1806,9 @@ __vt__CTTask_CTaskEnvironment:
 	.4byte func_80059CD0
 	.4byte func_80059D18
 	.4byte func_80043F20
+.endobj __vt__CTTask_CTaskEnvironment
 
-.global CTTask_CTaskEnvironment_hierarchy
-CTTask_CTaskEnvironment_hierarchy:
+.obj CTTask_CTaskEnvironment_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -1820,237 +1816,239 @@ CTTask_CTaskEnvironment_hierarchy:
 	.4byte __RTTI__CProcess
 	.4byte 0
 	.4byte 0
+.endobj CTTask_CTaskEnvironment_hierarchy
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CTaskEnvironment_typestr
-CTaskEnvironment_typestr:
+.obj CTaskEnvironment_typestr, global
 	.asciz "CTaskEnvironment"
 	.balign 4
+.endobj CTaskEnvironment_typestr
 
-.global CTTask_CTaskEnvironment_typestr
-CTTask_CTaskEnvironment_typestr:
+.obj CTTask_CTaskEnvironment_typestr, global
 	.asciz "CTTask<CTaskEnvironment>"
 	.balign 4
+.endobj CTTask_CTaskEnvironment_typestr
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_80574028
-lbl_80574028:
+.obj lbl_80574028, global
 	.skip 0x30
-.global lbl_80574058
-lbl_80574058:
+.endobj lbl_80574028
+
+.obj lbl_80574058, global
 	.skip 0x60
-.global lbl_805740B8
-lbl_805740B8:
+.endobj lbl_80574058
+
+.obj lbl_805740B8, global
 	.skip 0x10
+.endobj lbl_805740B8
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CTaskEnvironment
-__RTTI__CTaskEnvironment:
+.obj __RTTI__CTaskEnvironment, global
 	.4byte CTaskEnvironment_typestr
 	.4byte CTaskEnvironment_hierarchy
+.endobj __RTTI__CTaskEnvironment
 
-.global __RTTI__CTTask_CTaskEnvironment
-__RTTI__CTTask_CTaskEnvironment:
+.obj __RTTI__CTTask_CTaskEnvironment, global
 	.4byte CTTask_CTaskEnvironment_typestr
 	.4byte CTTask_CTaskEnvironment_hierarchy
+.endobj __RTTI__CTTask_CTaskEnvironment
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80666658
-lbl_80666658:
+.obj lbl_80666658, global
 	.skip 0x8
+.endobj lbl_80666658
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-
-.global float_80668830
-float_80668830:
+.obj float_80668830, global
 	.float 0
+.endobj float_80668830
 
 
-.global float_80668834
-float_80668834:
+.obj float_80668834, global
 	.float 23.399999 #0x41BB3333
+.endobj float_80668834
 
 
-.global float_80668838
-float_80668838:
+.obj float_80668838, global
 	.float 30 #0x41F00000
+.endobj float_80668838
 
 
-.global float_8066883C
-float_8066883C:
+.obj float_8066883C, global
 	.float 1.0
+.endobj float_8066883C
 
 
-.global float_80668840
-float_80668840:
+.obj float_80668840, global
 	.float 60 #0x42700000
+.endobj float_80668840
 
 
-.global float_80668844
-float_80668844:
+.obj float_80668844, global
 	.float 24 #0x41C00000
+.endobj float_80668844
 
 
-.global double_80668848
-double_80668848:
+.obj double_80668848, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_80668848
 
-.global float_80668850
-float_80668850:
+.obj float_80668850, global
 	.float 0.5
+.endobj float_80668850
 
 
-.global float_80668854
-float_80668854:
+.obj float_80668854, global
 	.float -3 #0xC0400000
+.endobj float_80668854
 
 
-.global float_80668858
-float_80668858:
+.obj float_80668858, global
 	.float 5 #0x40A00000
+.endobj float_80668858
 
 
-.global float_8066885C
-float_8066885C:
+.obj float_8066885C, global
 	.float 2 #0x40000000
+.endobj float_8066885C
 
 
-.global float_80668860
-float_80668860:
+.obj float_80668860, global
 	.float 12 #0x41400000
+.endobj float_80668860
 
 
-.global float_80668864
-float_80668864:
+.obj float_80668864, global
 	.float 360 #0x43B40000
+.endobj float_80668864
 
 
-.global float_80668868
-float_80668868:
+.obj float_80668868, global
 	.float 90 #0x42B40000
+.endobj float_80668868
 
 
-.global float_8066886C
-float_8066886C:
+.obj float_8066886C, global
 	.float -1.0
+.endobj float_8066886C
 
 
-.global float_80668870
-float_80668870:
+.obj float_80668870, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_80668870
 
 
-.global float_80668874
-float_80668874:
+.obj float_80668874, global
 	.float 20000 #0x469C4000
+.endobj float_80668874
 
 
-.global float_80668878
-float_80668878:
+.obj float_80668878, global
 	.float 10000 #0x461C4000
+.endobj float_80668878
 
 
-.global float_8066887C
-float_8066887C:
+.obj float_8066887C, global
 	.float 40.7436638 #0x4222F983
+.endobj float_8066887C
 
 
-.global double_80668880
-double_80668880:
+.obj double_80668880, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_80668880
 
-.global float_80668888
-float_80668888:
+.obj float_80668888, global
 	.float 0.996078432 #0x3F7EFEFF
+.endobj float_80668888
 
 
-.global float_8066888C
-float_8066888C:
+.obj float_8066888C, global
 	.float 0.760784328 #0x3F42C2C3
+.endobj float_8066888C
 
 
-.global float_80668890
-float_80668890:
+.obj float_80668890, global
 	.float 0.572549045 #0x3F129293
+.endobj float_80668890
 
 
-.global float_80668894
-float_80668894:
+.obj float_80668894, global
 	.float 0.8 #0x3F4CCCCD
+.endobj float_80668894
 
 
-.global float_80668898
-float_80668898:
+.obj float_80668898, global
 	.float 0.68235296 #0x3F2EAEAF
+.endobj float_80668898
 
 
-.global float_8066889C
-float_8066889C:
+.obj float_8066889C, global
 	.float 0.588235319 #0x3F169697
+.endobj float_8066889C
 
 
-.global float_806688A0
-float_806688A0:
+.obj float_806688A0, global
 	.float 0.345098048 #0x3EB0B0B1
+.endobj float_806688A0
 
 
-.global float_806688A4
-float_806688A4:
+.obj float_806688A4, global
 	.float 0.407843143 #0x3ED0D0D1
+.endobj float_806688A4
 
 
-.global float_806688A8
-float_806688A8:
+.obj float_806688A8, global
 	.float 0.596078455 #0x3F189899
+.endobj float_806688A8
 
 
-.global float_806688AC
-float_806688AC:
+.obj float_806688AC, global
 	.float 0.6 #0x3F19999A
+.endobj float_806688AC
 
 
-.global float_806688B0
-float_806688B0:
+.obj float_806688B0, global
 	.float 0.356862754 #0x3EB6B6B7
+.endobj float_806688B0
 
 
-.global float_806688B4
-float_806688B4:
+.obj float_806688B4, global
 	.float 0.0980392173 #0x3DC8C8C9
+.endobj float_806688B4
 
 
-.global float_806688B8
-float_806688B8:
+.obj float_806688B8, global
 	.float 0.101960786 #0x3DD0D0D1
+.endobj float_806688B8
 
 
-.global float_806688BC
-float_806688BC:
+.obj float_806688BC, global
 	.float 0.149019614 #0x3E189899
+.endobj float_806688BC
 
 
-.global float_806688C0
-float_806688C0:
+.obj float_806688C0, global
 	.float 0.501960814 #0x3F008081
 	.4byte 0
+.endobj float_806688C0
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -666,16 +666,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMenuBattleEnd_typestr
-CMenuBattleEnd_typestr:
+.obj CMenuBattleEnd_typestr, global
 	.asciz "CMenuBattleEnd"
 	.balign 4
+.endobj CMenuBattleEnd_typestr
 
 
-.global CMenuBattleEnd_strpool
-CMenuBattleEnd_strpool:
+.obj CMenuBattleEnd_strpool, global
 	.asciz "CMenuBattleEnd"
 	.asciz "mf70_cf53_sideinfo.brlyt"
 	.asciz "mf70_cf53_sideinfo_battle.brlan"
@@ -684,13 +683,13 @@ CMenuBattleEnd_strpool:
 	.asciz "txt_num_b01"
 	.asciz "txt_num_r00"
 	.asciz "txt_num_r01"
+.endobj CMenuBattleEnd_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMenuBattleEnd
-__vt__CMenuBattleEnd:
+.obj __vt__CMenuBattleEnd, global
 	.4byte __RTTI__CMenuBattleEnd
 	.4byte 0
 	.4byte __dt__CMenuBattleEnd
@@ -739,9 +738,9 @@ __vt__CMenuBattleEnd:
 	.4byte func_8026FCA0
 	.4byte func_8026FC98
 	.4byte func_8026F81C
+.endobj __vt__CMenuBattleEnd
 
-.global CMenuBattleEnd_hierarchy
-CMenuBattleEnd_hierarchy:
+.obj CMenuBattleEnd_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000070
 	.4byte __RTTI__IWorkEvent
@@ -758,37 +757,37 @@ CMenuBattleEnd_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuBattleEnd_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuBattleEnd
-__RTTI__CMenuBattleEnd:
+.obj __RTTI__CMenuBattleEnd, global
 	.4byte CMenuBattleEnd_typestr
 	.4byte CMenuBattleEnd_hierarchy
+.endobj __RTTI__CMenuBattleEnd
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-
-.global float_8066B238
-float_8066B238:
+.obj float_8066B238, global
 	.float 1.0
+.endobj float_8066B238
 
 
-.global float_8066B23C
-float_8066B23C:
+.obj float_8066B23C, global
 	.float 0
+.endobj float_8066B23C
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80667188
-lbl_80667188:
+.obj lbl_80667188, global
 	.skip 0x8
+.endobj lbl_80667188
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

@@ -2213,48 +2213,52 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80548118
-lbl_80548118:
+.balign 8
+
+.obj lbl_80548118, global
 	.asciz "L2CAP - no buffer cmd_rej"
 	.balign 4
+.endobj lbl_80548118
 
 
-.global lbl_80548134
-lbl_80548134:
+.obj lbl_80548134, global
 	.asciz "L2CAP - no buffer for conn_req"
 	.balign 4
+.endobj lbl_80548134
 
 
-.global lbl_80548154
-lbl_80548154:
+.obj lbl_80548154, global
 	.asciz "L2CAP - no buffer for cfg_rej"
 	.balign 4
+.endobj lbl_80548154
 
 
-.global lbl_80548174
-lbl_80548174:
+.obj lbl_80548174, global
 	.asciz "L2CAP - no buffer for echo_req"
 	.balign 4
+.endobj lbl_80548174
 
-.global lbl_80548194
-lbl_80548194:
+.obj lbl_80548194, global
 	.asciz "l2cu_create_conn - btm_is_sco_active_by_bdaddr() is_sco_active = %s"
+.endobj lbl_80548194
 
 
-.global lbl_805481D8
-lbl_805481D8:
+.obj lbl_805481D8, global
 	.asciz "L2CAP - no buffer for l2cu_create_conn"
 	.balign 4
+.endobj lbl_805481D8
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_80665948
-lbl_80665948:
+.balign 8
+
+.obj lbl_80665948, global
 	.asciz "TRUE"
 	.balign 4
+.endobj lbl_80665948
 
 
-.global lbl_80665950
-lbl_80665950:
+.obj lbl_80665950, global
 	.asciz "FALSE"
 	.balign 4
+.endobj lbl_80665950

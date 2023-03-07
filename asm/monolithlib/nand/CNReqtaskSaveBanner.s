@@ -310,29 +310,28 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_80528190
-lbl_80528190:
+.obj lbl_80528190, global
 	.asciz "banner.bin"
 	.balign 4
+.endobj lbl_80528190
 
-.global CNReqtaskSaveBanner_typestr
-CNReqtaskSaveBanner_typestr:
+.obj CNReqtaskSaveBanner_typestr, global
 	.asciz "CNReqtaskSaveBanner"
+.endobj CNReqtaskSaveBanner_typestr
 
 
-.global lbl_805281B0
-lbl_805281B0:
+.obj lbl_805281B0, global
 	.asciz "%s%s"
 	.balign 4
+.endobj lbl_805281B0
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global jumptable_80573B70
-jumptable_80573B70:
+.obj jumptable_80573B70, global
 	.4byte .L_804F4E90
 	.4byte .L_804F4EC4
 	.4byte .L_804F4EEC
@@ -345,68 +344,70 @@ jumptable_80573B70:
 	.4byte .L_804F5004
 	.4byte .L_804F5024
 	.4byte .L_804F5060
+.endobj jumptable_80573B70
 
 
-.global __vt__CNReqtaskSaveBanner
-__vt__CNReqtaskSaveBanner:
+.obj __vt__CNReqtaskSaveBanner, global
 	.4byte __RTTI__CNReqtaskSaveBanner
 	.4byte 0
 	.4byte func_804F4D90
 	.4byte func_804F5080
+.endobj __vt__CNReqtaskSaveBanner
 
-.global CNReqtaskSaveBanner_hierarchy
-CNReqtaskSaveBanner_hierarchy:
+.obj CNReqtaskSaveBanner_hierarchy, global
 	.4byte __RTTI__CNReqtask
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CNReqtaskSaveBanner_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_806665E8
-lbl_806665E8:
+.obj lbl_806665E8, global
 	.4byte lbl_8066DCD0
+.endobj lbl_806665E8
 
 
-.global lbl_806665EC
-lbl_806665EC:
+.obj lbl_806665EC, global
 	.4byte lbl_80528190
+.endobj lbl_806665EC
 
-.global __RTTI__CNReqtaskSaveBanner
-__RTTI__CNReqtaskSaveBanner:
+.obj __RTTI__CNReqtaskSaveBanner, global
 	.4byte CNReqtaskSaveBanner_typestr
 	.4byte CNReqtaskSaveBanner_hierarchy
+.endobj __RTTI__CNReqtaskSaveBanner
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_8066DCD0
-lbl_8066DCD0:
+.obj lbl_8066DCD0, global
 	.asciz "/tmp/"
 	.balign 4
+.endobj lbl_8066DCD0
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_80664158
-lbl_80664158:
+.obj lbl_80664158, global
 	.skip 0x24
+.endobj lbl_80664158
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80668368, global
+	.skip 0x4
+.endobj lbl_80668368
 
-.global lbl_80668368
-lbl_80668368:
+.obj lbl_8066836C, global
 	.skip 0x4
-.global lbl_8066836C
-lbl_8066836C:
-	.skip 0x4
+.endobj lbl_8066836C
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

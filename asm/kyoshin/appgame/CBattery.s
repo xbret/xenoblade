@@ -290,29 +290,28 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CBattery_typestr
-CBattery_typestr:
+.obj CBattery_typestr, global
 	.asciz "CBattery"
 	.balign 4
 	.4byte 0
+.endobj CBattery_typestr
 
 
-.global CBattery_strpool
-CBattery_strpool:
+.obj CBattery_strpool, global
 	.asciz "/menu/Battery.arc" #0x0
 	.asciz "pic_%02d" #0x12
 	.asciz "CBattery" #0x1b
 	.asciz "arc" #0x24
 	.asciz "mf00_btry.brlyt" #0x28
+.endobj CBattery_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CBattery
-__vt__CBattery:
+.obj __vt__CBattery, global
 	.4byte __RTTI__CBattery
 	.4byte 0
 	.4byte __dt__CBattery
@@ -347,22 +346,23 @@ __vt__CBattery:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CBattery
 
-.global CBattery_hierarchy
-CBattery_hierarchy:
+.obj CBattery_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CBattery_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CBattery
-__RTTI__CBattery:
+.obj __RTTI__CBattery, global
 	.4byte CBattery_typestr
 	.4byte CBattery_hierarchy
+.endobj __RTTI__CBattery
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

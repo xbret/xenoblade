@@ -2651,16 +2651,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CArtsList_typestr
-CArtsList_typestr:
+.obj CArtsList_typestr, global
 	.asciz "CArtsList"
 	.balign 4
+.endobj CArtsList_typestr
 
 
-.global CMenuArtsSet_strpool
-CMenuArtsSet_strpool:
+.obj CMenuArtsSet_strpool, global
 	.asciz "mf00_reg00_curs01.brlyt"
 	.asciz "mf00_reg00_curs01_roop.brlan"
 	.asciz "mf00_reg00_curs01_on.brlan"
@@ -2730,13 +2729,13 @@ CMenuArtsSet_strpool:
 	.asciz "txt_pt13"
 	.balign 4
 	.4byte 0
+.endobj CMenuArtsSet_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CArtsList
-__vt__CArtsList:
+.obj __vt__CArtsList, global
 	.4byte __RTTI__CArtsList
 	.4byte 0
 	.4byte __dt__CArtsList
@@ -2771,22 +2770,23 @@ __vt__CArtsList:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CArtsList
 
-.global CArtsList_hierarchy
-CArtsList_hierarchy:
+.obj CArtsList_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CArtsList_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CArtsList
-__RTTI__CArtsList:
+.obj __RTTI__CArtsList, global
 	.4byte CArtsList_typestr
 	.4byte CArtsList_hierarchy
+.endobj __RTTI__CArtsList
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

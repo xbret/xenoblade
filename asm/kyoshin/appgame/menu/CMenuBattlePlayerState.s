@@ -4151,30 +4151,29 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_804F8F28
-lbl_804F8F28:
+.obj lbl_804F8F28, global
 	.4byte 0
 	.4byte 0x41880000
 	.4byte 0x42080000
 	.4byte 0x424C0000
 	.4byte 0x42880000
+.endobj lbl_804F8F28
 
 
-.global CMenuBattlePlayerState_typestr
-CMenuBattlePlayerState_typestr:
+.obj CMenuBattlePlayerState_typestr, global
 	.asciz "CMenuBattlePlayerState"
 	.balign 4
+.endobj CMenuBattlePlayerState_typestr
 
-.global CPcSelectCursor01_typestr
-CPcSelectCursor01_typestr:
+.obj CPcSelectCursor01_typestr, global
 	.asciz "CPcSelectCursor01"
 	.balign 4
+.endobj CPcSelectCursor01_typestr
 
 
-.global CMenuBattlePlayerState_strpool
-CMenuBattlePlayerState_strpool:
+.obj CMenuBattlePlayerState_strpool, global
 	.asciz "CPcSelectCursor01"
 	.asciz "mf80_info00_target01_pc.brlyt"
 	.asciz "mf80_info00_target01_pc_in.brlan"
@@ -4226,13 +4225,13 @@ CMenuBattlePlayerState_strpool:
 	.asciz "nul_icon_l"
 	.asciz "nul_icon_h"
 	.balign 4
+.endobj CMenuBattlePlayerState_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMenuBattlePlayerState
-__vt__CMenuBattlePlayerState:
+.obj __vt__CMenuBattlePlayerState, global
 	.4byte __RTTI__CMenuBattlePlayerState
 	.4byte 0
 	.4byte __dt__CMenuBattlePlayerState
@@ -4281,9 +4280,9 @@ __vt__CMenuBattlePlayerState:
 	.4byte func_8010EA5C
 	.4byte func_8010EA54
 	.4byte func_8010CC18
+.endobj __vt__CMenuBattlePlayerState
 
-.global CMenuBattlePlayerState_hierarchy
-CMenuBattlePlayerState_hierarchy:
+.obj CMenuBattlePlayerState_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x0000005C
 	.4byte __RTTI__IWorkEvent
@@ -4299,126 +4298,130 @@ CMenuBattlePlayerState_hierarchy:
 	.4byte __RTTI__IUIBattle
 	.4byte 0
 	.4byte 0
+.endobj CMenuBattlePlayerState_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuBattlePlayerState
-__RTTI__CMenuBattlePlayerState:
+.obj __RTTI__CMenuBattlePlayerState, global
 	.4byte CMenuBattlePlayerState_typestr
 	.4byte CMenuBattlePlayerState_hierarchy
+.endobj __RTTI__CMenuBattlePlayerState
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_80669858
-float_80669858:
+.obj float_80669858, global
 	.float 1.0
+.endobj float_80669858
 
 
-.global float_8066985C
-float_8066985C:
+.obj float_8066985C, global
 	.float 0
+.endobj float_8066985C
 
 
-.global float_80669860
-float_80669860:
+.obj float_80669860, global
 	.float 110 #0x42DC0000
+.endobj float_80669860
 
 
-.global float_80669864
-float_80669864:
+.obj float_80669864, global
 	.float 86 #0x42AC0000
+.endobj float_80669864
 
 
-.global float_80669868
-float_80669868:
+.obj float_80669868, global
 	.float -178 #0xC3320000
 	.4byte 0
+.endobj float_80669868
 
 
-.global double_80669870
-double_80669870:
+.obj double_80669870, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_80669870
 
-.global float_80669878
-float_80669878:
+.obj float_80669878, global
 	.float -1.0
 	.4byte 0
+.endobj float_80669878
 
 
-.global double_80669880
-double_80669880:
+.obj double_80669880, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_80669880
 
-.global float_80669888
-float_80669888:
+.obj float_80669888, global
 	.float 100.0
+.endobj float_80669888
 
 
-.global float_8066988C
-float_8066988C:
+.obj float_8066988C, global
 	.float 360 #0x43B40000
+.endobj float_8066988C
 
 
-.global float_80669890
-float_80669890:
+.obj float_80669890, global
 	.float 82 #0x42A40000
+.endobj float_80669890
 
 
-.global float_80669894
-float_80669894:
+.obj float_80669894, global
 	.float 0.5
+.endobj float_80669894
 
 
-.global float_80669898
-float_80669898:
+.obj float_80669898, global
 	.float 10.0
+.endobj float_80669898
 
 
-.global float_8066989C
-float_8066989C:
+.obj float_8066989C, global
 	.float 14 #0x41600000
+.endobj float_8066989C
 
 
-.global float_806698A0
-float_806698A0:
+.obj float_806698A0, global
 	.float 0.2
+.endobj float_806698A0
 
 
-.global float_806698A4
-float_806698A4:
+.obj float_806698A4, global
 	.float 60 #0x42700000
+.endobj float_806698A4
 
 
-.global float_806698A8
-float_806698A8:
+.obj float_806698A8, global
 	.float 50 #0x42480000
+.endobj float_806698A8
 
 
-.global float_806698AC
-float_806698AC:
+.obj float_806698AC, global
 	.float 15 #0x41700000
+.endobj float_806698AC
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80666828, global
+	.skip 0x8
+.endobj lbl_80666828
 
-.global lbl_80666828
-lbl_80666828:
+.obj lbl_80666830, global
 	.skip 0x8
-.global lbl_80666830
-lbl_80666830:
+.endobj lbl_80666830
+
+.obj lbl_80666838, global
 	.skip 0x8
-.global lbl_80666838
-lbl_80666838:
+.endobj lbl_80666838
+
+.obj lbl_80666840, global
 	.skip 0x8
-.global lbl_80666840
-lbl_80666840:
-	.skip 0x8
+.endobj lbl_80666840
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -1074,27 +1074,26 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMenuShopBuy_typestr
-CMenuShopBuy_typestr:
+.obj CMenuShopBuy_typestr, global
 	.asciz "CMenuShopBuy"
 	.balign 4
+.endobj CMenuShopBuy_typestr
 
 
-.global lbl_804FF348
-lbl_804FF348:
+.obj lbl_804FF348, global
 	.asciz "MNU_shop"
 	.asciz "name"
 	.2byte 0
+.endobj lbl_804FF348
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMenuShopBuy
-__vt__CMenuShopBuy:
+.obj __vt__CMenuShopBuy, global
 	.4byte __RTTI__CMenuShopBuy
 	.4byte 0
 	.4byte __dt__CMenuShopBuy
@@ -1109,9 +1108,9 @@ __vt__CMenuShopBuy:
 	.4byte func_8018C5F4
 	.4byte func_8018C5EC
 	.4byte func_8018C060
+.endobj __vt__CMenuShopBuy
 
-.global CMenuShopBuy_hierarchy
-CMenuShopBuy_hierarchy:
+.obj CMenuShopBuy_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000058
 	.4byte __RTTI__CDoubleListNode
@@ -1126,43 +1125,44 @@ CMenuShopBuy_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuShopBuy_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuShopBuy
-__RTTI__CMenuShopBuy:
+.obj __RTTI__CMenuShopBuy, global
 	.4byte CMenuShopBuy_typestr
 	.4byte CMenuShopBuy_hierarchy
+.endobj __RTTI__CMenuShopBuy
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066A2E0
-float_8066A2E0:
+.obj float_8066A2E0, global
 	.float 0
+.endobj float_8066A2E0
 
 
-.global float_8066A2E4
-float_8066A2E4:
+.obj float_8066A2E4, global
 	.float 1.0
+.endobj float_8066A2E4
 
 
-.global float_8066A2E8
-float_8066A2E8:
+.obj float_8066A2E8, global
 	.float 10.0
 	.4byte 0
+.endobj float_8066A2E8
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80666BE8
-lbl_80666BE8:
+.obj lbl_80666BE8, global
 	.skip 0x8
+.endobj lbl_80666BE8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

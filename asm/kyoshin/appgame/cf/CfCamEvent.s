@@ -837,41 +837,40 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CfCamEvent_typestr
-cf_CfCamEvent_typestr:
+.obj cf_CfCamEvent_typestr, global
 	.asciz "cf::CfCamEvent"
 	.balign 4
+.endobj cf_CfCamEvent_typestr
 
-.global cf_CfCamTargetIntf_typestr
-cf_CfCamTargetIntf_typestr:
+.obj cf_CfCamTargetIntf_typestr, global
 	.asciz "cf::CfCamTargetIntf"
+.endobj cf_CfCamTargetIntf_typestr
 
-.global cf_CfCamLookatIntf_typestr
-cf_CfCamLookatIntf_typestr:
+.obj cf_CfCamLookatIntf_typestr, global
 	.asciz "cf::CfCamLookatIntf"
+.endobj cf_CfCamLookatIntf_typestr
 
-.global cf_CfCamDirectionIntf_typestr
-cf_CfCamDirectionIntf_typestr:
+.obj cf_CfCamDirectionIntf_typestr, global
 	.asciz "cf::CfCamDirectionIntf"
 	.balign 4
+.endobj cf_CfCamDirectionIntf_typestr
 
-.global cf_CfCamIntf_typestr
-cf_CfCamIntf_typestr:
+.obj cf_CfCamIntf_typestr, global
 	.asciz "cf::CfCamIntf"
 	.balign 4
+.endobj cf_CfCamIntf_typestr
 
-.global cf_CfCamFollow_typestr
-cf_CfCamFollow_typestr:
+.obj cf_CfCamFollow_typestr, global
 	.asciz "cf::CfCamFollow"
+.endobj cf_CfCamFollow_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CfCamEvent
-__vt__cf_CfCamEvent:
+.obj __vt__cf_CfCamEvent, global
 	.4byte __RTTI__cf_CfCamEvent
 	.4byte 0
 	.4byte __dt__cf_CfCamEvent
@@ -902,167 +901,173 @@ __vt__cf_CfCamEvent:
 	.4byte func_8006AC60
 	.4byte func_80074A3C
 	.4byte func_80074AA4
+.endobj __vt__cf_CfCamEvent
 
-.global cf_CfCamEvent_hierarchy
-cf_CfCamEvent_hierarchy:
+.obj cf_CfCamEvent_hierarchy, global
 	.4byte __RTTI__cf_CfCam
 	.4byte 0
 	.4byte __RTTI__cf_CfCamFollow
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CfCamEvent_hierarchy
 
-.global __vt__cf_CfCamTargetIntf
-__vt__cf_CfCamTargetIntf:
+.obj __vt__cf_CfCamTargetIntf, global
 	.4byte __RTTI__cf_CfCamTargetIntf
 	.4byte 0
 	.4byte CfCamTargetIntf_update
 	.4byte CfCamTargetIntf_setPos
 	.4byte CfCamTargetIntf_setDir
 	.4byte CfCamTargetIntf_setLookat
+.endobj __vt__cf_CfCamTargetIntf
 
-.global cf_CfCamTargetIntf_hierarchy
-cf_CfCamTargetIntf_hierarchy:
+.obj cf_CfCamTargetIntf_hierarchy, global
 	.4byte __RTTI__cf_CfCamIntf
 	.4byte 0
 	.4byte __RTTI__cf_CfCamLookatIntf
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CfCamTargetIntf_hierarchy
 
 
-.global __vt__cf_CfCamLookatIntf
-__vt__cf_CfCamLookatIntf:
+.obj __vt__cf_CfCamLookatIntf, global
 	.4byte __RTTI__cf_CfCamLookatIntf
 	.4byte 0
 	.4byte CamLookatIntf_update
 	.4byte CamLookatIntf_setPos
 	.4byte CamLookatIntf_setDir
 	.4byte CamLookatIntf_setLookat
+.endobj __vt__cf_CfCamLookatIntf
 
-.global cf_CfCamLookatIntf_hierarchy
-cf_CfCamLookatIntf_hierarchy:
+.obj cf_CfCamLookatIntf_hierarchy, global
 	.4byte __RTTI__cf_CfCamIntf
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CfCamLookatIntf_hierarchy
 
 
-.global __vt__cf_CfCamDirectionIntf
-__vt__cf_CfCamDirectionIntf:
+.obj __vt__cf_CfCamDirectionIntf, global
 	.4byte __RTTI__cf_CfCamDirectionIntf
 	.4byte 0
 	.4byte CfCamDirectionIntf_update
 	.4byte CfCamDirectionIntf_setPos
 	.4byte CfCamDirectionIntf_setDir
 	.4byte CfCamDirectionIntf_setLookat
+.endobj __vt__cf_CfCamDirectionIntf
 
-.global cf_CfCamDirectionIntf_hierarchy
-cf_CfCamDirectionIntf_hierarchy:
+.obj cf_CfCamDirectionIntf_hierarchy, global
 	.4byte __RTTI__cf_CfCamIntf
 	.4byte 0
 	.4byte 0
+.endobj cf_CfCamDirectionIntf_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CfCamEvent
-__RTTI__cf_CfCamEvent:
+.obj __RTTI__cf_CfCamEvent, global
 	.4byte cf_CfCamEvent_typestr
 	.4byte cf_CfCamEvent_hierarchy
+.endobj __RTTI__cf_CfCamEvent
 
-.global __RTTI__cf_CfCamTargetIntf
-__RTTI__cf_CfCamTargetIntf:
+.obj __RTTI__cf_CfCamTargetIntf, global
 	.4byte cf_CfCamTargetIntf_typestr
 	.4byte cf_CfCamTargetIntf_hierarchy
+.endobj __RTTI__cf_CfCamTargetIntf
 
-.global __RTTI__cf_CfCamLookatIntf
-__RTTI__cf_CfCamLookatIntf:
+.obj __RTTI__cf_CfCamLookatIntf, global
 	.4byte cf_CfCamLookatIntf_typestr
 	.4byte cf_CfCamLookatIntf_hierarchy
+.endobj __RTTI__cf_CfCamLookatIntf
 
-.global __RTTI__cf_CfCamDirectionIntf
-__RTTI__cf_CfCamDirectionIntf:
+.obj __RTTI__cf_CfCamDirectionIntf, global
 	.4byte cf_CfCamDirectionIntf_typestr
 	.4byte cf_CfCamDirectionIntf_hierarchy
+.endobj __RTTI__cf_CfCamDirectionIntf
 
-.global __RTTI__cf_CfCamIntf
-__RTTI__cf_CfCamIntf:
+.obj __RTTI__cf_CfCamIntf, global
 	.4byte cf_CfCamIntf_typestr
 	.4byte 0
+.endobj __RTTI__cf_CfCamIntf
 
 
-.global __RTTI__cf_CfCamFollow
-__RTTI__cf_CfCamFollow:
+.obj __RTTI__cf_CfCamFollow, global
 	.4byte cf_CfCamFollow_typestr
 	.4byte cf_CfCamFollow_hierarchy
+.endobj __RTTI__cf_CfCamFollow
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_80668AF0
-float_80668AF0:
+.obj float_80668AF0, global
 	.float 0
+.endobj float_80668AF0
 
 
-.global float_80668AF4
-float_80668AF4:
+.obj float_80668AF4, global
 	.float 2 #0x40000000
+.endobj float_80668AF4
 
 
-.global float_80668AF8
-float_80668AF8:
+.obj float_80668AF8, global
 	.float 3 #0x40400000
+.endobj float_80668AF8
 
 
-.global float_80668AFC
-float_80668AFC:
+.obj float_80668AFC, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_80668AFC
 
 
-.global float_80668B00
-float_80668B00:
+.obj float_80668B00, global
 	.float 0.5
+.endobj float_80668B00
 
 
-.global float_80668B04
-float_80668B04:
+.obj float_80668B04, global
 	.float -1.0
+.endobj float_80668B04
 
 
-.global float_80668B08
-float_80668B08:
+.obj float_80668B08, global
 	.float 1.0
+.endobj float_80668B08
 
 
-.global float_80668B0C
-float_80668B0C:
+.obj float_80668B0C, global
 	.float 5 #0x40A00000
+.endobj float_80668B0C
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_806666B0, global
+	.skip 0x4
+.endobj lbl_806666B0
 
-.global lbl_806666B0
-lbl_806666B0:
+.obj lbl_806666B4, global
 	.skip 0x4
-.global lbl_806666B4
-lbl_806666B4:
+.endobj lbl_806666B4
+
+.obj lbl_806666B8, global
 	.skip 0x4
-.global lbl_806666B8
-lbl_806666B8:
+.endobj lbl_806666B8
+
+.obj lbl_806666BC, global
 	.skip 0x4
-.global lbl_806666BC
-lbl_806666BC:
+.endobj lbl_806666BC
+
+.obj lbl_806666C0, global
 	.skip 0x4
-.global lbl_806666C0
-lbl_806666C0:
+.endobj lbl_806666C0
+
+.obj lbl_806666C4, global
 	.skip 0x4
-.global lbl_806666C4
-lbl_806666C4:
-	.skip 0x4
+.endobj lbl_806666C4
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

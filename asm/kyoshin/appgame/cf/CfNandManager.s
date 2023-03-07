@@ -5139,39 +5139,38 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CfNandManager_typestr
-cf_CfNandManager_typestr:
+.obj cf_CfNandManager_typestr, global
 	.asciz "cf::CfNandManager"
 	.balign 4
+.endobj cf_CfNandManager_typestr
 
-.global CTTask_cf_CfNandManager_typestr
-CTTask_cf_CfNandManager_typestr:
+.obj CTTask_cf_CfNandManager_typestr, global
 	.asciz "CTTask<cf::CfNandManager>"
 	.balign 4
+.endobj CTTask_cf_CfNandManager_typestr
 
 
-.global CfNandManager_strpool
-CfNandManager_strpool:
+.obj CfNandManager_strpool, global
 	.asciz "%s%02d"
 	.asciz "banner.bin"
 	.asciz "name"
 	.byte 0x00
+.endobj CfNandManager_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8053A2D8
-lbl_8053A2D8:
+.obj lbl_8053A2D8, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_8023F288
+.endobj lbl_8053A2D8
 
 
-.global jumptable_8053A2E4
-jumptable_8053A2E4:
+.obj jumptable_8053A2E4, global
 	.4byte .L_8023EB74
 	.4byte .L_8023EB34
 	.4byte .L_8023EB34
@@ -5208,10 +5207,10 @@ jumptable_8053A2E4:
 	.4byte .L_8023EB60
 	.4byte .L_8023EB60
 	.4byte .L_8023EB34
+.endobj jumptable_8053A2E4
 
 
-.global __vt__cf_CfNandManager
-__vt__cf_CfNandManager:
+.obj __vt__cf_CfNandManager, global
 	.4byte __RTTI__cf_CfNandManager
 	.4byte 0
 	.4byte __dt__cf_CfNandManager
@@ -5261,9 +5260,9 @@ __vt__cf_CfNandManager:
 	.4byte func_80240604
 	.4byte __dt__8023E4D4
 	.4byte func_8024047C
+.endobj __vt__cf_CfNandManager
 
-.global cf_CfNandManager_hierarchy
-cf_CfNandManager_hierarchy:
+.obj cf_CfNandManager_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000058
 	.4byte __RTTI__IWorkEvent
@@ -5277,10 +5276,10 @@ cf_CfNandManager_hierarchy:
 	.4byte __RTTI__CTTask_cf_CfNandManager
 	.4byte 0
 	.4byte 0
+.endobj cf_CfNandManager_hierarchy
 
 
-.global __vt__CTTask_cf_CfNandManager
-__vt__CTTask_cf_CfNandManager:
+.obj __vt__CTTask_cf_CfNandManager, global
 	.4byte __RTTI__CTTask_cf_CfNandManager
 	.4byte 0
 	.4byte __dt__CTTask_cf_CfNandManager
@@ -5290,9 +5289,9 @@ __vt__CTTask_cf_CfNandManager:
 	.4byte func_80240560
 	.4byte func_802405A8
 	.4byte func_80043F20
+.endobj __vt__CTTask_cf_CfNandManager
 
-.global CTTask_cf_CfNandManager_hierarchy
-CTTask_cf_CfNandManager_hierarchy:
+.obj CTTask_cf_CfNandManager_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -5301,104 +5300,115 @@ CTTask_cf_CfNandManager_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CTTask_cf_CfNandManager_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_806651B8
-lbl_806651B8:
+.obj lbl_806651B8, global
 	.4byte lbl_8066AF90
 	.4byte 0
+.endobj lbl_806651B8
 
-.global __RTTI__cf_CfNandManager
-__RTTI__cf_CfNandManager:
+.obj __RTTI__cf_CfNandManager, global
 	.4byte cf_CfNandManager_typestr
 	.4byte cf_CfNandManager_hierarchy
+.endobj __RTTI__cf_CfNandManager
 
-.global __RTTI__CTTask_cf_CfNandManager
-__RTTI__CTTask_cf_CfNandManager:
+.obj __RTTI__CTTask_cf_CfNandManager, global
 	.4byte CTTask_cf_CfNandManager_typestr
 	.4byte CTTask_cf_CfNandManager_hierarchy
+.endobj __RTTI__CTTask_cf_CfNandManager
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_8066AF90
-lbl_8066AF90:
+.obj lbl_8066AF90, global
 	.asciz "monado"
 	.balign 4
+.endobj lbl_8066AF90
 
 
-.global float_8066AF98
-float_8066AF98:
+.obj float_8066AF98, global
 	.float 0
 	.4byte 0
+.endobj float_8066AF98
 
 
-.global double_8066AFA0
-double_8066AFA0:
+.obj double_8066AFA0, global
 	.double 0.5 #0x3FE0000000000000
+.endobj double_8066AFA0
 
 
-.global double_8066AFA8
-double_8066AFA8:
+.obj double_8066AFA8, global
 	.double -0.5 #0xBFE0000000000000
+.endobj double_8066AFA8
 
 
-.global double_8066AFB0
-double_8066AFB0:
+.obj double_8066AFB0, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066AFB0
 
-.global double_8066AFB8
-double_8066AFB8:
+.obj double_8066AFB8, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066AFB8
+
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
-
-.global lbl_8057A2C0
-lbl_8057A2C0:
+.obj lbl_8057A2C0, global
 	.skip 0x100
-.global lbl_8057A3C0
-lbl_8057A3C0:
+.endobj lbl_8057A2C0
+
+.obj lbl_8057A3C0, global
 	.skip 0x38
+.endobj lbl_8057A3C0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80667058, global
+	.skip 0x4
+.endobj lbl_80667058
 
-.global lbl_80667058
-lbl_80667058:
-	.skip 0x4
-.global lbl_8066705C
-lbl_8066705C:
+.obj lbl_8066705C, global
 	.skip 0x1
-.global lbl_8066705D
-lbl_8066705D:
+.endobj lbl_8066705C
+
+.obj lbl_8066705D, global
 	.skip 0x1
-.global lbl_8066705E
-lbl_8066705E:
+.endobj lbl_8066705D
+
+.obj lbl_8066705E, global
 	.skip 0x2
-.global lbl_80667060
-lbl_80667060:
+.endobj lbl_8066705E
+
+.obj lbl_80667060, global
 	.skip 0x2
-.global lbl_80667062
-lbl_80667062:
+.endobj lbl_80667060
+
+.obj lbl_80667062, global
 	.skip 0x2
-.global lbl_80667064
-lbl_80667064:
+.endobj lbl_80667062
+
+.obj lbl_80667064, global
 	.skip 0x4
-.global lbl_80667068
-lbl_80667068:
+.endobj lbl_80667064
+
+.obj lbl_80667068, global
 	.skip 0x4
-.global lbl_8066706C
-lbl_8066706C:
+.endobj lbl_80667068
+
+.obj lbl_8066706C, global
 	.skip 0x4
-.global lbl_80667070
-lbl_80667070:
+.endobj lbl_8066706C
+
+.obj lbl_80667070, global
 	.skip 0x8
+.endobj lbl_80667070
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

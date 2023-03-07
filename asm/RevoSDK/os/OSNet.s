@@ -431,9 +431,10 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global lbl_8055ED30
-lbl_8055ED30:
+
+.obj lbl_8055ED30, global
 	.asciz "Failed to register network shutdown function. %d\n"
 	.balign 4
 	.asciz "Failed to suspend the WiiConnect24 scheduler. %d\n"
@@ -442,10 +443,10 @@ lbl_8055ED30:
 	.balign 4
 	.asciz "NWC24iPrepareShutdown"
 	.balign 4
+.endobj lbl_8055ED30
 
 
-.global lbl_8055EDF0
-lbl_8055EDF0:
+.obj lbl_8055EDF0, global
 	.asciz "/dev/net/kd/request"
 	.asciz "NWC24SuspendScheduler"
 	.balign 4
@@ -453,64 +454,79 @@ lbl_8055EDF0:
 	.balign 4
 	.asciz "NWC24iRequestShutdown"
 	.balign 4
+.endobj lbl_8055EDF0
 
 
-.global lbl_8055EE4C
-lbl_8055EE4C:
+.obj lbl_8055EE4C, global
 	.asciz "NWC24Shutdown_: Give up!\n"
 	.balign 4
 	.asciz "NWC24iSetRtcCounter_"
 	.balign 4
+.endobj lbl_8055EE4C
 
 
-.global lbl_8055EE80
-lbl_8055EE80:
+.obj lbl_8055EE80, global
 	.asciz "/dev/net/kd/time"
 	.balign 4
 	.4byte 0
+.endobj lbl_8055EE80
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global nwc24ShtFd
-nwc24ShtFd:
+.balign 8
+
+.obj nwc24ShtFd, global
 	.4byte 0xFFFFFFFF
 	.4byte 0
+.endobj nwc24ShtFd
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-ShutdownFuncInfo:
+.obj ShutdownFuncInfo, local
 	.skip 0x20
+.endobj ShutdownFuncInfo
 
 #@LOCAL@NWC24SuspendScheduler__Fv@susResult
-lbl_805D5460:
+.obj lbl_805D5460, local
 	.skip 0x20
+.endobj lbl_805D5460
 
 #@LOCAL@NWC24iRequestShutdown__FUlPl@shtBuffer
-lbl_805D5480:
+.obj lbl_805D5480, local
 	.skip 0x20
+.endobj lbl_805D5480
 
 #@LOCAL@NWC24iRequestShutdown__FUlPl@shtResult@0
-lbl_805D54A0:
+.obj lbl_805D54A0, local
 	.skip 0x20
+.endobj lbl_805D54A0
 
-nwc24TimeCommonBuffer:
+.obj nwc24TimeCommonBuffer, local
 	.skip 0x20
+.endobj nwc24TimeCommonBuffer
 
-nwc24TimeCommonResult:
+.obj nwc24TimeCommonResult, local
 	.skip 0x20
+.endobj nwc24TimeCommonResult
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-nwc24ShtRetryRest:
-	.skip 0x4
+.balign 8
 
-NWC24iIsRequestPending:
+.obj nwc24ShtRetryRest, local
 	.skip 0x4
+.endobj nwc24ShtRetryRest
+
+.obj NWC24iIsRequestPending, local
+	.skip 0x4
+.endobj NWC24iIsRequestPending
 
 #@LOCAL@NWC24Shutdown___FiUl@shuttingdown
-lbl_80667B30:
+.obj lbl_80667B30, local
 	.skip 0x4
+.endobj lbl_80667B30
 
 #@LOCAL@NWC24Shutdown___FiUl@result@0
-lbl_80667B34:
+.obj lbl_80667B34, local
 	.skip 0x4
+.endobj lbl_80667B34

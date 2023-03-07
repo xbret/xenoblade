@@ -910,10 +910,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMMClock
-__vt__CMMClock:
+.obj __vt__CMMClock, global
 	.4byte __RTTI__CMMClock
 	.4byte 0
 	.4byte __dt__CMMClock
@@ -948,84 +947,85 @@ __vt__CMMClock:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CMMClock
 
-.global CMMClock_hierarchy
-CMMClock_hierarchy:
+.obj CMMClock_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
+.endobj CMMClock_hierarchy
 
 
-.global lbl_805302EC
-lbl_805302EC:
+.obj lbl_805302EC, global
 	.asciz "NW4R:Pointer must not be NULL (p)"
 	.balign 4
+.endobj lbl_805302EC
 
 
-.global lbl_80530310
-lbl_80530310:
+.obj lbl_80530310, global
 	.asciz "LinkList.h"
 	.balign 4
+.endobj lbl_80530310
 
 
-.global lbl_8053031C
-lbl_8053031C:
+.obj lbl_8053031C, global
 	.asciz "NW4R:Failed assertion texMapIdx < mGXMemNum.texMap"
 	.balign 4
+.endobj lbl_8053031C
 
 
-.global lbl_80530350
-lbl_80530350:
+.obj lbl_80530350, global
 	.asciz "material.h"
 	.balign 4
+.endobj lbl_80530350
 
 
-.global lbl_8053035C
-lbl_8053035C:
+.obj lbl_8053035C, global
 	.asciz "NW4R:Failed assertion texSRTIdx < mGXMemNum.texSRT"
 	.balign 4
+.endobj lbl_8053035C
 
 
-.global lbl_80530390
-lbl_80530390:
+.obj lbl_80530390, global
 	.asciz "material.h"
 	.balign 4
+.endobj lbl_80530390
 
 
-.global lbl_8053039C
-lbl_8053039C:
+.obj lbl_8053039C, global
 	.asciz "NW4R:Failed assertion texSRTIdx < mGXMemNum.texSRT"
 	.balign 4
+.endobj lbl_8053039C
 
 
-.global lbl_805303D0
-lbl_805303D0:
+.obj lbl_805303D0, global
 	.asciz "material.h"
 	.balign 4
 	.4byte 0
+.endobj lbl_805303D0
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMMClock
-__RTTI__CMMClock:
+.obj __RTTI__CMMClock, global
 	.4byte CMMClock_typestr
 	.4byte CMMClock_hierarchy
+.endobj __RTTI__CMMClock
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+#.balign 8
 
-
-.global CMMTex_typestr
-CMMTex_typestr:
+.obj CMMTex_typestr, global
 	.asciz "CMMTex"
 	.balign 4
+.endobj CMMTex_typestr
 
 
-.global float_80669994
-float_80669994:
+.obj float_80669994, global
 	.float 11 #0x41300000
+.endobj float_80669994
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

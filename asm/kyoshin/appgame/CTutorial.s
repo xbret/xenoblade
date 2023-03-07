@@ -862,16 +862,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CTutorial_typestr
-CTutorial_typestr:
+.obj CTutorial_typestr, global
 	.asciz "CTutorial"
 	.balign 4
+.endobj CTutorial_typestr
 
 
-.global CTutorial_strpool
-CTutorial_strpool:
+.obj CTutorial_strpool, global
 	.asciz "/menu/Tutorial.arc"
 	.asciz "/common/jp/bdat_ttrl.bin"
 	.asciz "/menu/tpl/c_ttrl_%03d.arc"
@@ -891,13 +890,13 @@ CTutorial_strpool:
 	.asciz "CTutorialTex"
 	.balign 4
 	.4byte 0
+.endobj CTutorial_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CTutorial
-__vt__CTutorial:
+.obj __vt__CTutorial, global
 	.4byte __RTTI__CTutorial
 	.4byte 0
 	.4byte __dt__CTutorial
@@ -932,40 +931,40 @@ __vt__CTutorial:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CTutorial
 
-.global CTutorial_hierarchy
-CTutorial_hierarchy:
+.obj CTutorial_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CTutorial_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CTutorial
-__RTTI__CTutorial:
+.obj __RTTI__CTutorial, global
 	.4byte CTutorial_typestr
 	.4byte CTutorial_hierarchy
+.endobj __RTTI__CTutorial
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-
-.global float_8066B4B0
-float_8066B4B0:
+.obj float_8066B4B0, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066B4B0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80667320
-lbl_80667320:
+.obj lbl_80667320, global
 	.skip 0x8
+.endobj lbl_80667320
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

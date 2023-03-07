@@ -150,5 +150,6 @@
 
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
-"sLCImpl__Q34nw4r2ut28@unnamed@ut_LockedCache_cpp@":
+.obj "sLCImpl__Q34nw4r2ut28@unnamed@ut_LockedCache_cpp@", local
 	.skip 0x20
+.endobj "sLCImpl__Q34nw4r2ut28@unnamed@ut_LockedCache_cpp@"

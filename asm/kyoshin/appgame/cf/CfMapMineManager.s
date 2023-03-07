@@ -2586,21 +2586,20 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global reslist_cf_CfMapMineManager_MinePoint_typestr
-reslist_cf_CfMapMineManager_MinePoint_typestr:
+.obj reslist_cf_CfMapMineManager_MinePoint_typestr, global
 	.asciz "reslist<cf::CfMapMineManager::MinePoint>"
 	.balign 4
+.endobj reslist_cf_CfMapMineManager_MinePoint_typestr
 
-.global _reslist_base_cf_CfMapMineManager_MinePoint_typestr
-_reslist_base_cf_CfMapMineManager_MinePoint_typestr:
+.obj _reslist_base_cf_CfMapMineManager_MinePoint_typestr, global
 	.asciz "_reslist_base<cf::CfMapMineManager::MinePoint>"
 	.balign 4
+.endobj _reslist_base_cf_CfMapMineManager_MinePoint_typestr
 
 
-.global CfMapMineManager_strpool
-CfMapMineManager_strpool:
+.obj CfMapMineManager_strpool, global
 	.asciz "cnt_min"
 	.asciz "cnt_max"
 	.asciz "posX"
@@ -2618,156 +2617,159 @@ CfMapMineManager_strpool:
 	.asciz "reset_time"
 	.asciz "MNU_sysmes"
 	.balign 4
+.endobj CfMapMineManager_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_80538ED8
-lbl_80538ED8:
+.obj lbl_80538ED8, global
 	.asciz "skill1_per"
 	.balign 4
+.endobj lbl_80538ED8
 
 
-.global __vt__reslist_cf_CfMapMineManager_MinePoint
-__vt__reslist_cf_CfMapMineManager_MinePoint:
+.obj __vt__reslist_cf_CfMapMineManager_MinePoint, global
 	.4byte __RTTI__reslist_cf_CfMapMineManager_MinePoint
 	.4byte 0
 	.4byte __dt__reslist_cf_CfMapMineManager_MinePoint
+.endobj __vt__reslist_cf_CfMapMineManager_MinePoint
 
-.global reslist_cf_CfMapMineManager_MinePoint_hierarchy
-reslist_cf_CfMapMineManager_MinePoint_hierarchy:
+.obj reslist_cf_CfMapMineManager_MinePoint_hierarchy, global
 	.4byte __RTTI___reslist_base_cf_CfMapMineManager_MinePoint
 	.4byte 0
 	.4byte 0
+.endobj reslist_cf_CfMapMineManager_MinePoint_hierarchy
 
 
-.global __vt___reslist_base_cf_CfMapMineManager_MinePoint
-__vt___reslist_base_cf_CfMapMineManager_MinePoint:
+.obj __vt___reslist_base_cf_CfMapMineManager_MinePoint, global
 	.4byte __RTTI___reslist_base_cf_CfMapMineManager_MinePoint
 	.4byte 0
 	.4byte __dt___reslist_base_cf_CfMapMineManager_MinePoint
+.endobj __vt___reslist_base_cf_CfMapMineManager_MinePoint
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80665048
-lbl_80665048:
+.obj lbl_80665048, global
 	.4byte 0x282D343C
 	.4byte 0x505A5C63
+.endobj lbl_80665048
 
 
-.global lbl_80665050
-lbl_80665050:
+.obj lbl_80665050, global
 	.asciz "skill1"
 	.balign 4
+.endobj lbl_80665050
 
 
-.global lbl_80665058
-lbl_80665058:
+.obj lbl_80665058, global
 	.4byte 0x0000000A
 	.4byte 0x0000000A
+.endobj lbl_80665058
 
-.global __RTTI__reslist_cf_CfMapMineManager_MinePoint
-__RTTI__reslist_cf_CfMapMineManager_MinePoint:
+.obj __RTTI__reslist_cf_CfMapMineManager_MinePoint, global
 	.4byte reslist_cf_CfMapMineManager_MinePoint_typestr
 	.4byte reslist_cf_CfMapMineManager_MinePoint_hierarchy
+.endobj __RTTI__reslist_cf_CfMapMineManager_MinePoint
 
-.global __RTTI___reslist_base_cf_CfMapMineManager_MinePoint
-__RTTI___reslist_base_cf_CfMapMineManager_MinePoint:
+.obj __RTTI___reslist_base_cf_CfMapMineManager_MinePoint, global
 	.4byte _reslist_base_cf_CfMapMineManager_MinePoint_typestr
 	.4byte 0
+.endobj __RTTI___reslist_base_cf_CfMapMineManager_MinePoint
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066AB70
-float_8066AB70:
+.obj float_8066AB70, global
 	.float 0
+.endobj float_8066AB70
 
 
-.global float_8066AB74
-float_8066AB74:
+.obj float_8066AB74, global
 	.float 0.0001 #0x38D1B717
+.endobj float_8066AB74
 
 
-.global double_8066AB78
-double_8066AB78:
+.obj double_8066AB78, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066AB78
 
-.global double_8066AB80
-double_8066AB80:
+.obj double_8066AB80, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066AB80
 
-.global float_8066AB88
-float_8066AB88:
+.obj float_8066AB88, global
 	.float 50 #0x42480000
+.endobj float_8066AB88
 
 
-.global float_8066AB8C
-float_8066AB8C:
+.obj float_8066AB8C, global
 	.float 40000 #0x471C4000
+.endobj float_8066AB8C
 
 
-.global float_8066AB90
-float_8066AB90:
+.obj float_8066AB90, global
 	.float 2.5 #0x40200000
+.endobj float_8066AB90
 
 
-.global float_8066AB94
-float_8066AB94:
+.obj float_8066AB94, global
 	.float 6.25 #0x40C80000
+.endobj float_8066AB94
 
 
-.global double_8066AB98
-double_8066AB98:
+.obj double_8066AB98, global
 	.double 0
+.endobj double_8066AB98
 
 
-.global float_8066ABA0
-float_8066ABA0:
+.obj float_8066ABA0, global
 	.float 25 #0x41C80000
+.endobj float_8066ABA0
 
 
-.global float_8066ABA4
-float_8066ABA4:
+.obj float_8066ABA4, global
 	.float 0.6 #0x3F19999A
+.endobj float_8066ABA4
 
 
-.global float_8066ABA8
-float_8066ABA8:
+.obj float_8066ABA8, global
 	.float 1.0
+.endobj float_8066ABA8
 
 
-.global float_8066ABAC
-float_8066ABAC:
+.obj float_8066ABAC, global
 	.float 60 #0x42700000
+.endobj float_8066ABAC
 
 
-.global float_8066ABB0
-float_8066ABB0:
+.obj float_8066ABB0, global
 	.float 30 #0x41F00000
+.endobj float_8066ABB0
 
 
-.global float_8066ABB4
-float_8066ABB4:
+.obj float_8066ABB4, global
 	.float 22 #0x41B00000
+.endobj float_8066ABB4
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80666F90, global
+	.skip 0x4
+.endobj lbl_80666F90
 
-.global lbl_80666F90
-lbl_80666F90:
+.obj lbl_80666F94, global
 	.skip 0x4
-.global lbl_80666F94
-lbl_80666F94:
-	.skip 0x4
-.global lbl_80666F98
-lbl_80666F98:
+.endobj lbl_80666F94
+
+.obj lbl_80666F98, global
 	.skip 0x8
+.endobj lbl_80666F98
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

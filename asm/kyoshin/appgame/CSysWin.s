@@ -1168,10 +1168,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CSysWin_strpool
-CSysWin_strpool:
+.obj CSysWin_strpool, global
 	.asciz "/menu/SysWin.arc"
 	.asciz "win_main"
 	.asciz "txt_sysmes01"
@@ -1204,13 +1203,13 @@ CSysWin_strpool:
 	.asciz "mf70_cf60_syswin00.brlyt"
 	.asciz "mf70_cf60_syswin00_in.brlan"
 	.balign 4
+.endobj CSysWin_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CSysWin
-__vt__CSysWin:
+.obj __vt__CSysWin, global
 	.4byte __RTTI__CSysWin
 	.4byte 0
 	.4byte __dt__CSysWin
@@ -1246,134 +1245,135 @@ __vt__CSysWin:
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
 	.4byte func_8022B6F4
+.endobj __vt__CSysWin
 
-.global CSysWin_hierarchy
-CSysWin_hierarchy:
+.obj CSysWin_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
+.endobj CSysWin_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CSysWin
-__RTTI__CSysWin:
+.obj __RTTI__CSysWin, global
 	.4byte CSysWin_typestr
 	.4byte CSysWin_hierarchy
+.endobj __RTTI__CSysWin
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066AE58
-float_8066AE58:
+.obj float_8066AE58, global
 	.float 170 #0x432A0000
+.endobj float_8066AE58
 
 
-.global float_8066AE5C
-float_8066AE5C:
+.obj float_8066AE5C, global
 	.float 0
+.endobj float_8066AE5C
 
 
-.global float_8066AE60
-float_8066AE60:
+.obj float_8066AE60, global
 	.float -23 #0xC1B80000
+.endobj float_8066AE60
 
 
-.global float_8066AE64
-float_8066AE64:
+.obj float_8066AE64, global
 	.float 150 #0x43160000
+.endobj float_8066AE64
 
 
-.global float_8066AE68
-float_8066AE68:
+.obj float_8066AE68, global
 	.float -14 #0xC1600000
+.endobj float_8066AE68
 
 
-.global float_8066AE6C
-float_8066AE6C:
+.obj float_8066AE6C, global
 	.float 130 #0x43020000
+.endobj float_8066AE6C
 
 
-.global float_8066AE70
-float_8066AE70:
+.obj float_8066AE70, global
 	.float -5 #0xC0A00000
+.endobj float_8066AE70
 
 
-.global float_8066AE74
-float_8066AE74:
+.obj float_8066AE74, global
 	.float 110 #0x42DC0000
+.endobj float_8066AE74
 
 
-.global float_8066AE78
-float_8066AE78:
+.obj float_8066AE78, global
 	.float 4 #0x40800000
+.endobj float_8066AE78
 
 
-.global float_8066AE7C
-float_8066AE7C:
+.obj float_8066AE7C, global
 	.float 90 #0x42B40000
+.endobj float_8066AE7C
 
 
-.global float_8066AE80
-float_8066AE80:
+.obj float_8066AE80, global
 	.float 13 #0x41500000
+.endobj float_8066AE80
 
 
-.global float_8066AE84
-float_8066AE84:
+.obj float_8066AE84, global
 	.float 22 #0x41B00000
+.endobj float_8066AE84
 
 
-.global float_8066AE88
-float_8066AE88:
+.obj float_8066AE88, global
 	.float -82 #0xC2A40000
+.endobj float_8066AE88
 
 
-.global float_8066AE8C
-float_8066AE8C:
+.obj float_8066AE8C, global
 	.float -70 #0xC28C0000
+.endobj float_8066AE8C
 
 
-.global float_8066AE90
-float_8066AE90:
+.obj float_8066AE90, global
 	.float -58 #0xC2680000
+.endobj float_8066AE90
 
 
-.global float_8066AE94
-float_8066AE94:
+.obj float_8066AE94, global
 	.float -46 #0xC2380000
+.endobj float_8066AE94
 
 
-.global float_8066AE98
-float_8066AE98:
+.obj float_8066AE98, global
 	.float 70 #0x428C0000
+.endobj float_8066AE98
 
 
-.global lbl_8066AE9C
-lbl_8066AE9C:
+.obj lbl_8066AE9C, global
 	.4byte 0x2B2C2D30
+.endobj lbl_8066AE9C
 
 
-.global lbl_8066AEA0
-lbl_8066AEA0:
+.obj lbl_8066AEA0, global
 	.4byte 0x31000000
 	.4byte 0
+.endobj lbl_8066AEA0
 
 
-.global double_8066AEA8
-double_8066AEA8:
+.obj double_8066AEA8, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066AEA8
 
-.global float_8066AEB0
-float_8066AEB0:
+.obj float_8066AEB0, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066AEB0
 
-.global CSysWin_typestr
-CSysWin_typestr:
+.obj CSysWin_typestr, global
 	.asciz "CSysWin"
+.endobj CSysWin_typestr
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

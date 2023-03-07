@@ -313,40 +313,44 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_80518BB8
-lbl_80518BB8:
+.balign 8
+
+.obj lbl_80518BB8, global
 	.4byte 0x00000001
 	.4byte 0x00000002
 	.4byte 0
 	.4byte 0
+.endobj lbl_80518BB8
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C170
-float_8066C170:
+.balign 8
+
+.obj float_8066C170, global
 	.float 0.00001 #0x3727C5AC
+.endobj float_8066C170
 
 
-.global float_8066C174
-float_8066C174:
+.obj float_8066C174, global
 	.float 1.0
+.endobj float_8066C174
 
 
-.global float_8066C178
-float_8066C178:
+.obj float_8066C178, global
 	.float 0
+.endobj float_8066C178
 
 
-.global float_8066C17C
-float_8066C17C:
+.obj float_8066C17C, global
 	.float 0.5
+.endobj float_8066C17C
 
 
-.global float_8066C180
-float_8066C180:
+.obj float_8066C180, global
 	.float 3 #0x40400000
+.endobj float_8066C180
 
 
-.global float_8066C184
-float_8066C184:
+.obj float_8066C184, global
 	.4byte 0x3F7FFF58
+.endobj float_8066C184

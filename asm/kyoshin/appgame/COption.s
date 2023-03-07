@@ -2768,10 +2768,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global COption_strpool
-COption_strpool:
+.obj COption_strpool, global
 	.asciz "mf00_reg00_curs19.brlyt"
 	.asciz "mf00_reg00_curs19_roop.brlan"
 	.asciz "mf00_reg00_curs19_on.brlan"
@@ -2796,13 +2795,13 @@ COption_strpool:
 	.asciz "mf85_opt00_opt00_info_in.brlan"
 	.balign 4
 	.4byte 0
+.endobj COption_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8053CAF0
-lbl_8053CAF0:
+.obj lbl_8053CAF0, global
 	.4byte 0x0089003C
 	.4byte 0
 	.4byte 0
@@ -2883,10 +2882,10 @@ lbl_8053CAF0:
 	.4byte 0x00650066
 	.4byte 0
 	.4byte 0
+.endobj lbl_8053CAF0
 
 
-.global lbl_8053CC30
-lbl_8053CC30:
+.obj lbl_8053CC30, global
 	.4byte 0x10020202
 	.4byte 0x02020202
 	.4byte 0x02050505
@@ -2897,10 +2896,10 @@ lbl_8053CC30:
 	.4byte 0
 	.4byte 0x00000001
 	.4byte 0x00010000
+.endobj lbl_8053CC30
 
 
-.global jumptable_8053CC58
-jumptable_8053CC58:
+.obj jumptable_8053CC58, global
 	.4byte .L_8029C574
 	.4byte .L_8029C538
 	.4byte .L_8029C540
@@ -2912,10 +2911,10 @@ jumptable_8053CC58:
 	.4byte .L_8029C568
 	.4byte .L_8029C574
 	.4byte .L_8029C570
+.endobj jumptable_8053CC58
 
 
-.global jumptable_8053CC84
-jumptable_8053CC84:
+.obj jumptable_8053CC84, global
 	.4byte .L_8029D654
 	.4byte .L_8029D6B4
 	.4byte .L_8029D6C4
@@ -2936,10 +2935,10 @@ jumptable_8053CC84:
 	.4byte .L_8029D7B0
 	.4byte .L_8029D7C0
 	.4byte .L_8029D7D0
+.endobj jumptable_8053CC84
 
 
-.global jumptable_8053CCD4
-jumptable_8053CCD4:
+.obj jumptable_8053CCD4, global
 	.4byte .L_8029D830
 	.4byte .L_8029D840
 	.4byte .L_8029D850
@@ -2960,10 +2959,10 @@ jumptable_8053CCD4:
 	.4byte .L_8029D93C
 	.4byte .L_8029D94C
 	.4byte .L_8029D95C
+.endobj jumptable_8053CCD4
 
 
-.global jumptable_8053CD24
-jumptable_8053CD24:
+.obj jumptable_8053CD24, global
 	.4byte .L_8029D9E0
 	.4byte .L_8029DA0C
 	.4byte .L_8029DA38
@@ -2984,10 +2983,10 @@ jumptable_8053CD24:
 	.4byte .L_8029DCC8
 	.4byte .L_8029DCF4
 	.4byte .L_8029DD20
+.endobj jumptable_8053CD24
 
 
-.global jumptable_8053CD74
-jumptable_8053CD74:
+.obj jumptable_8053CD74, global
 	.4byte .L_8029DDBC
 	.4byte .L_8029DDE4
 	.4byte .L_8029DE10
@@ -3009,10 +3008,10 @@ jumptable_8053CD74:
 	.4byte .L_8029E0CC
 	.4byte .L_8029E0F8
 	.4byte 0
+.endobj jumptable_8053CD74
 
 
-.global __vt__COption
-__vt__COption:
+.obj __vt__COption, global
 	.4byte __RTTI__COption
 	.4byte 0
 	.4byte __dt__COption
@@ -3047,26 +3046,26 @@ __vt__COption:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__COption
 
-.global COption_hierarchy
-COption_hierarchy:
+.obj COption_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj COption_hierarchy
 
 
-.global __vt__CCur19
-__vt__CCur19:
+.obj __vt__CCur19, global
 	.4byte __RTTI__CCur19
 	.4byte 0
 	.4byte func_8029BF68
 	.4byte func_801D20DC
 	.4byte func_801D2144
 	.4byte func_8029C14C
+.endobj __vt__CCur19
 
-.global CCur19_hierarchy
-CCur19_hierarchy:
+.obj CCur19_hierarchy, global
 	.4byte __RTTI__CBaseCur
 	.4byte 0
 	.4byte 0
@@ -3105,60 +3104,61 @@ CCur19_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CCur19_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__COption
-__RTTI__COption:
+.obj __RTTI__COption, global
 	.4byte COption_typestr
 	.4byte COption_hierarchy
+.endobj __RTTI__COption
 
-.global __RTTI__CCur19
-__RTTI__CCur19:
+.obj __RTTI__CCur19, global
 	.4byte CCur19_typestr
 	.4byte CCur19_hierarchy
+.endobj __RTTI__CCur19
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B4B8
-float_8066B4B8:
+.obj float_8066B4B8, global
 	.float 1.0
+.endobj float_8066B4B8
 
 
-.global float_8066B4BC
-float_8066B4BC:
+.obj float_8066B4BC, global
 	.float 176 #0x43300000
+.endobj float_8066B4BC
 
 
-.global float_8066B4C0
-float_8066B4C0:
+.obj float_8066B4C0, global
 	.float 150 #0x43160000
+.endobj float_8066B4C0
 
 
-.global float_8066B4C4
-float_8066B4C4:
+.obj float_8066B4C4, global
 	.float 0
+.endobj float_8066B4C4
 
-.global COption_typestr
-COption_typestr:
+.obj COption_typestr, global
 	.asciz "COption"
+.endobj COption_typestr
 
-.global CCur19_typestr
-CCur19_typestr:
+.obj CCur19_typestr, global
 	.asciz "CCur19"
 	.balign 4
+.endobj CCur19_typestr
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_8057AA08
-lbl_8057AA08:
+.obj lbl_8057AA08, global
 	.skip 0x40
+.endobj lbl_8057AA08
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

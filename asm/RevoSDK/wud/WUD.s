@@ -7136,7 +7136,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-_wudWiiRemoteDescriptor:
+.balign 8
+
+.obj _wudWiiRemoteDescriptor, local
 	.4byte 0x05010905
 	.4byte 0xA1018510
 	.4byte 0x150026FF
@@ -7192,14 +7194,16 @@ _wudWiiRemoteDescriptor:
 	.4byte 0x853F9515
 	.4byte 0x09018100
 	.4byte 0xC0000000
+.endobj _wudWiiRemoteDescriptor
 
 
-_wudSuperPeekPokeCmd:
+.obj _wudSuperPeekPokeCmd, local
 	.4byte 0x05009A0E
 	.4byte 0x00010000
 	.4byte 0
+.endobj _wudSuperPeekPokeCmd
 
-_wudPatchData:
+.obj _wudPatchData, local
 	.4byte 0x70990800
 	.4byte 0xB4000000
 	.4byte 0x8843D107
@@ -7247,9 +7251,10 @@ _wudPatchData:
 	.4byte 0xFF9F0000
 	.4byte 0x30FC0E00
 	.4byte 0x7FFF0000
+.endobj _wudPatchData
 
 
-_wudPatchInstallCmd:
+.obj _wudPatchInstallCmd, local
 	.4byte 0x0720BC65
 	.4byte 0x01008442
 	.4byte 0x09D28442
@@ -7273,9 +7278,10 @@ _wudPatchInstallCmd:
 	.4byte 0x742F0000
 	.4byte 0x86F018FD
 	.4byte 0x214F3B60
+.endobj _wudPatchInstallCmd
 
 
-_wudResetAuthCountCmd:
+.obj _wudResetAuthCountCmd, local
 	.4byte 0x30360800
 	.4byte 0
 	.4byte 0
@@ -7283,33 +7289,33 @@ _wudResetAuthCountCmd:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj _wudResetAuthCountCmd
 
 
-.global lbl_805624E4
-lbl_805624E4:
+.obj lbl_805624E4, global
 	.asciz "App_MEMalloc\n"
 	.balign 4
+.endobj lbl_805624E4
 
 
-.global lbl_805624F4
-lbl_805624F4:
+.obj lbl_805624F4, global
 	.asciz "App_MEMfree\n"
 	.balign 4
+.endobj lbl_805624F4
 
 
-.global lbl_80562504
-lbl_80562504:
+.obj lbl_80562504, global
 	.asciz "__wudSyncFlushCallback() : %d, Sync: %d\n"
 	.balign 4
+.endobj lbl_80562504
 
-.global lbl_80562530
-lbl_80562530:
+.obj lbl_80562530, global
 	.asciz "Nintendo RVL-CNT"
 	.balign 4
+.endobj lbl_80562530
 
 
-.global lbl_80562544
-lbl_80562544:
+.obj lbl_80562544, global
 	.asciz "Nintendo RVL-WBC"
 	.balign 4
 	.asciz "Found the registered WBC in database\n"
@@ -7318,39 +7324,39 @@ lbl_80562544:
 	.balign 4
 	.asciz "new entry index is %d\n"
 	.balign 4
+.endobj lbl_80562544
 
 
-.global lbl_805625AC
-lbl_805625AC:
+.obj lbl_805625AC, global
 	.asciz "%d devices is stored into SC.\n"
 	.balign 4
 	.4byte 0
+.endobj lbl_805625AC
 
 
-.global lbl_805625D0
-lbl_805625D0:
+.obj lbl_805625D0, global
 	.asciz "NANDOpen. [%d]\n"
+.endobj lbl_805625D0
 
 
-.global lbl_805625E0
-lbl_805625E0:
+.obj lbl_805625E0, global
 	.asciz "NANDSeek. [%d]\n"
+.endobj lbl_805625E0
 
 
-.global lbl_805625F0
-lbl_805625F0:
+.obj lbl_805625F0, global
 	.asciz "NANDWrite. [%d]\n"
 	.balign 4
+.endobj lbl_805625F0
 
 
-.global lbl_80562604
-lbl_80562604:
+.obj lbl_80562604, global
 	.asciz "NANDClose. [%d]\n"
 	.balign 4
+.endobj lbl_80562604
 
 
-.global lbl_80562618
-lbl_80562618:
+.obj lbl_80562618, global
 	.asciz "Pairing Done\n"
 	.balign 4
 	.asciz "write stored link key\n"
@@ -7373,10 +7379,10 @@ lbl_80562618:
 	.balign 4
 	.asciz "WARNING: Illigal status\n"
 	.balign 4
+.endobj lbl_80562618
 
 
-.global lbl_805627BC
-lbl_805627BC:
+.obj lbl_805627BC, global
 	.asciz "__wudDeleteFlushCallback() : %d, Delete: %d\n"
 	.balign 4
 	.asciz "hci_version   : %02x\n"
@@ -7391,10 +7397,10 @@ lbl_805627BC:
 	.balign 4
 	.asciz " ==> 2045 firmware ver.002.003.014.%d\n"
 	.balign 4
+.endobj lbl_805627BC
 
 
-.global lbl_8056288C
-lbl_8056288C:
+.obj lbl_8056288C, global
 	.asciz "__wudInitFlushCallback() : %d, Init: %d\n"
 	.balign 4
 	.asciz "name : %s\n"
@@ -7414,39 +7420,39 @@ lbl_8056288C:
 	.balign 4
 	.asciz "WBC from WiiFit\n"
 	.balign 4
+.endobj lbl_8056288C
 
 
-.global lbl_805629E8
-lbl_805629E8:
+.obj lbl_805629E8, global
 	.asciz "__wudShutdownFlushCallback() : %d, Shutdown: %d\n"
 	.balign 4
 	.4byte 0
+.endobj lbl_805629E8
 
 
-.global lbl_80562A20
-lbl_80562A20:
+.obj lbl_80562A20, global
 	.asciz "__wudClearControlBlock\n"
+.endobj lbl_80562A20
 
 
-.global lbl_80562A38
-lbl_80562A38:
+.obj lbl_80562A38, global
 	.asciz "BTA_Init() is started\n"
 	.balign 4
+.endobj lbl_80562A38
 
 
-.global lbl_80562A50
-lbl_80562A50:
+.obj lbl_80562A50, global
 	.asciz "BTA_Init() is done\n"
+.endobj lbl_80562A50
 
 
-.global lbl_80562A64
-lbl_80562A64:
+.obj lbl_80562A64, global
 	.asciz "WUDShutdown()\n"
 	.balign 4
+.endobj lbl_80562A64
 
 
-.global lbl_80562A74
-lbl_80562A74:
+.obj lbl_80562A74, global
 	.asciz "WUDSetSyncDeviceCallback\n"
 	.balign 4
 	.asciz "WUDSetClearDeviceCallback\n"
@@ -7455,33 +7461,33 @@ lbl_80562A74:
 	.asciz "WUDStartSyncSpDevice()\n"
 	.asciz "WUDStartClearDevice()\n"
 	.balign 4
+.endobj lbl_80562A74
 
 
-.global lbl_80562AE0
-lbl_80562AE0:
+.obj lbl_80562AE0, global
 	.asciz "WUDSetDisableChannel()\n"
+.endobj lbl_80562AE0
 
 
-.global lbl_80562AF8
-lbl_80562AF8:
+.obj lbl_80562AF8, global
 	.asciz "BTM_SetAfhChannels() : %d\n"
 	.balign 4
+.endobj lbl_80562AF8
 
 
-.global lbl_80562B14
-lbl_80562B14:
+.obj lbl_80562B14, global
 	.asciz "WUDSetHidRecvCallback()\n"
 	.balign 4
+.endobj lbl_80562B14
 
 
-.global lbl_80562B30
-lbl_80562B30:
+.obj lbl_80562B30, global
 	.asciz "WUDSetHidConnCallback()\n"
 	.balign 4
+.endobj lbl_80562B30
 
 
-.global lbl_80562B4C
-lbl_80562B4C:
+.obj lbl_80562B4C, global
 	.asciz "Initialize the BCM2045 firmware complete.\n"
 	.balign 4
 	.asciz "Reset again!\n"
@@ -7492,25 +7498,25 @@ lbl_80562B4C:
 	.balign 4
 	.asciz "RemovePatch Callback\n"
 	.balign 4
+.endobj lbl_80562B4C
 
 
-.global lbl_80562BD8
-lbl_80562BD8:
+.obj lbl_80562BD8, global
 	.asciz "SuperPeekPoke Callback\n"
+.endobj lbl_80562BD8
 
 
-.global lbl_80562BF0
-lbl_80562BF0:
+.obj lbl_80562BF0, global
 	.asciz "RemovePatch\n"
 	.balign 4
 	.asciz "__wudAppendRuntimePatch()\n"
 	.balign 4
 	.asciz "SuperPeekPoke\n"
 	.balign 4
+.endobj lbl_80562BF0
 
 
-.global lbl_80562C2C
-lbl_80562C2C:
+.obj lbl_80562C2C, global
 	.asciz "start __wudInitSub()\n"
 	.balign 4
 	.asciz "BTA_DmAddDevice(): %d\n"
@@ -7529,10 +7535,10 @@ lbl_80562C2C:
 	.balign 4
 	.asciz "BTA_DmRemoveDevice(): %d\n"
 	.balign 4
+.endobj lbl_80562C2C
 
 
-.global lbl_80562D24
-lbl_80562D24:
+.obj lbl_80562D24, global
 	.asciz "WARNING: USB_CLOSE_FAILURE!\n"
 	.balign 4
 	.asciz "__wudCleanupStackCallback: "
@@ -7571,10 +7577,10 @@ lbl_80562D24:
 	.balign 4
 	.asciz "BTA_DM_BUSY_LEVEL_EVT\n"
 	.balign 4
+.endobj lbl_80562D24
 
 
-.global jumptable_80562FA0
-jumptable_80562FA0:
+.obj jumptable_80562FA0, global
 	.4byte .L_8037AE1C
 	.4byte .L_8037AEC8
 	.4byte .L_8037AEE4
@@ -7584,6 +7590,7 @@ jumptable_80562FA0:
 	.4byte .L_8037B18C
 	.4byte .L_8037B2E0
 	.4byte .L_8037B2F0
+.endobj jumptable_80562FA0
 
 
 	.asciz "INQUIRY RESULT: %02x:%02x:%02x:%02x:%02x:%02x   %02x%02x%02x   %d\n"
@@ -7601,14 +7608,13 @@ jumptable_80562FA0:
 	.asciz "MODULE FATAL ERROR\n"
 
 
-.global lbl_805630F4
-lbl_805630F4:
+.obj lbl_805630F4, global
 	.asciz "__wudDeviceStatusEventStackCallback\n"
 	.balign 4
+.endobj lbl_805630F4
 
 
-.global lbl_8056311C
-lbl_8056311C:
+.obj lbl_8056311C, global
 	.asciz "---- WARNING: USB FATAL ERROR! ----\n"
 	.balign 4
 	.asciz "BTM_CB_EVT_RETURN_LINK_KEYS\n"
@@ -7655,127 +7661,163 @@ lbl_8056311C:
 	.balign 4
 	.asciz "Not Found WBC\n"
 	.balign 4
+.endobj lbl_8056311C
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global lbl_8066C260
-lbl_8066C260:
+.balign 8
+
+.obj lbl_8066C260, global
 	.4byte 0x57696900
+.endobj lbl_8066C260
 
 
-.global lbl_8066C264
-lbl_8066C264:
+.obj lbl_8066C264, global
 	.2byte 0x0004
+.endobj lbl_8066C264
 
 
-.global lbl_8066C266
-lbl_8066C266:
+.obj lbl_8066C266, global
 	.2byte 0x4800
+.endobj lbl_8066C266
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global __rvl_wudcb
-__rvl_wudcb:
+.obj __rvl_wudcb, global
 	.skip 0x750
+.endobj __rvl_wudcb
 
-_wudDiscResp:
+.obj _wudDiscResp, local
 	.skip 0x108
+.endobj _wudDiscResp
 
-_wudDiscWork:
+.obj _wudDiscWork, local
 	.skip 0x60
+.endobj _wudDiscWork
 
-_scArray:
+.obj _scArray, local
 	.skip 0x461
+.endobj _scArray
 
 .skip 0x7
 
-_wudNandWbcInfo:
+.obj _wudNandWbcInfo, local
 	.skip 0xA0
+.endobj _wudNandWbcInfo
 
-_dev_handle_to_bda:
+.obj _dev_handle_to_bda, local
 	.skip 0x40
+.endobj _dev_handle_to_bda
 
-_wudNandFileInfo:
+.obj _wudNandFileInfo, local
 	.skip 0x8C
+.endobj _wudNandFileInfo
 
-_wudNandBlock:
+.obj _wudNandBlock, local
 	.skip 0xBC
+.endobj _wudNandBlock
 
 .skip 0x18
 
-_wudHandlerStack:
+.obj _wudHandlerStack, local
 	.skip 0x1000
+.endobj _wudHandlerStack
 
-_spArray:
+.obj _spArray, local
 	.skip 0x205
+.endobj _spArray
 
 .skip 0x3
 
-_dev_handle_queue_size:
+.obj _dev_handle_queue_size, local
 	.skip 0x20
+.endobj _dev_handle_queue_size
 
-_dev_handle_notack_num:
+.obj _dev_handle_notack_num, local
 	.skip 0x20
+.endobj _dev_handle_notack_num
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-_wudInitialized:
+
+.obj _wudInitialized, local
 	.skip 0x4
+.endobj _wudInitialized
 
-_wudReadNand:
+.obj _wudReadNand, local
 	.skip 0x4
+.endobj _wudReadNand
 
-_wudAbortSync:
+.obj _wudAbortSync, local
 	.skip 0x4
+.endobj _wudAbortSync
 
-_wudPatchRemoveCmd:
+.obj _wudPatchRemoveCmd, local
 	.skip 0x1
+.endobj _wudPatchRemoveCmd
 
-__bte_trace_level:
+.obj __bte_trace_level, local
 	.skip 0x3
+.endobj __bte_trace_level
 
-_wudNandBufPtr:
+.obj _wudNandBufPtr, local
 	.skip 0x4
+.endobj _wudNandBufPtr
 
-_initWBC:
+.obj _initWBC, local
 	.skip 0x4
+.endobj _initWBC
 
-_linkedWBC:
+.obj _linkedWBC, local
 	.skip 0x4
+.endobj _linkedWBC
 
-_wudNandWbcCrc:
+.obj _wudNandWbcCrc, local
 	.skip 0x4
+.endobj _wudNandWbcCrc
 
-_wudNandPhase:
+.obj _wudNandPhase, local
 	.skip 0x4
+.endobj _wudNandPhase
 
-_wudNandLocked:
+.obj _wudNandLocked, local
 	.skip 0x1
+.endobj _wudNandLocked
 
-_wudInstallNum:
+.obj _wudInstallNum, local
 	.skip 0x1
+.endobj _wudInstallNum
 
-_wudPatchNum:
+.obj _wudPatchNum, local
 	.skip 0x2
+.endobj _wudPatchNum
 
-_wudPatchAddress:
+.obj _wudPatchAddress, local
 	.skip 0x4
+.endobj _wudPatchAddress
 
-_wudPatchOffset:
+.obj _wudPatchOffset, local
 	.skip 0x4
+.endobj _wudPatchOffset
 
-_wudPatchSize:
+.obj _wudPatchSize, local
 	.skip 0x4
+.endobj _wudPatchSize
 
-_scFlush:
+.obj _scFlush, local
 	.skip 0x1
+.endobj _scFlush
 
-_wudTarget:
+.obj _wudTarget, local
 	.skip 0x1
+.endobj _wudTarget
 
-_wudDiscRssi:
+.obj _wudDiscRssi, local
 	.skip 0x1
+.endobj _wudDiscRssi
 
-_wudDiscNumResps:
+.obj _wudDiscNumResps, local
 	.skip 0x1
+.endobj _wudDiscNumResps

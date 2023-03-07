@@ -506,16 +506,17 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8054EDB0
-lbl_8054EDB0:
+.balign 8
+
+.obj lbl_8054EDB0, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte ReadNextCharCP1252__Q36nw4hbm2ut14CharStrmReaderFv
 	.4byte 0
+.endobj lbl_8054EDB0
 
 
-.global lbl_8054EDC0
-lbl_8054EDC0:
+.obj lbl_8054EDC0, global
 	.4byte lbl_8054ED88
 	.4byte 0
 	.4byte __dt__Q46nw4hbm2ut6detail11ResFontBaseFv
@@ -538,10 +539,10 @@ lbl_8054EDC0:
 	.4byte GetCharWidths__Q46nw4hbm2ut6detail11ResFontBaseCFUs
 	.4byte GetGlyph__Q46nw4hbm2ut6detail11ResFontBaseCFPQ36nw4hbm2ut5GlyphUs
 	.4byte GetEncoding__Q46nw4hbm2ut6detail11ResFontBaseCFv
+.endobj lbl_8054EDC0
 
 
-.global __vt__8054EE18
-__vt__8054EE18:
+.obj __vt__8054EE18, global
 	.4byte lbl_8054EDA8
 	.4byte 0
 	.4byte __dt__Q36nw4hbm2ut4FontFv
@@ -564,3 +565,4 @@ __vt__8054EE18:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj __vt__8054EE18

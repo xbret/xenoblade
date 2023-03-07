@@ -264,9 +264,10 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-.global mpvbdec_bitmsk
-mpvbdec_bitmsk:
+
+.obj mpvbdec_bitmsk, global
 	.2byte 0xFFFF
 	.2byte 0x7FFF
 	.2byte 0x3FFF
@@ -283,8 +284,9 @@ mpvbdec_bitmsk:
 	.2byte 0x0007
 	.2byte 0x0003
 	.2byte 0x0001
+.endobj mpvbdec_bitmsk
 
-zigzag2seq:
+.obj zigzag2seq, local
 	.2byte 0x0001
 	.2byte 0x0810
 	.2byte 0x0902
@@ -317,8 +319,9 @@ zigzag2seq:
 	.2byte 0x3D36
 	.2byte 0x2F37
 	.2byte 0x3E3F
+.endobj zigzag2seq
 
-org_iqm:
+.obj org_iqm, local
 	.2byte 0x0810
 	.2byte 0x1316
 	.2byte 0x1A1B
@@ -351,8 +354,9 @@ org_iqm:
 	.2byte 0x2326
 	.2byte 0x2E38
 	.2byte 0x4553
+.endobj org_iqm
 
-group_tbl:
+.obj group_tbl, local
 	.2byte 0x0504
 	.2byte 0x0303
 	.2byte 0x0202
@@ -365,9 +369,10 @@ group_tbl:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj group_tbl
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_80605ED0
-lbl_80605ED0:
+.obj lbl_80605ED0, global
 	.skip 0x40
+.endobj lbl_80605ED0

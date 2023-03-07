@@ -217,36 +217,35 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_805278C0
-lbl_805278C0:
+.obj lbl_805278C0, global
 	.asciz "CScnMem"
+.endobj lbl_805278C0
 
-.global CScnNw4r_typestr
-CScnNw4r_typestr:
+.obj CScnNw4r_typestr, global
 	.asciz "CScnNw4r"
 	.balign 4
+.endobj CScnNw4r_typestr
 
-.global CTTask_CScn_typestr
-CTTask_CScn_typestr:
+.obj CTTask_CScn_typestr, global
 	.asciz "CTTask<CScn>"
 	.balign 4
 	.4byte 0
+.endobj CTTask_CScn_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CScnMem
-__vt__CScnMem:
+.obj __vt__CScnMem, global
 	.4byte __RTTI__CScnMem
 	.4byte 0
 	.4byte __dt__CScnMem
 	.4byte 0
+.endobj __vt__CScnMem
 
-.global __vt__CScnNw4r
-__vt__CScnNw4r:
+.obj __vt__CScnNw4r, global
 	.4byte __RTTI__CScnNw4r
 	.4byte 0
 	.4byte __dt__CScnNw4r
@@ -292,9 +291,9 @@ __vt__CScnNw4r:
 	.4byte IWorkEvent_80039D40
 	.4byte func_80496970
 	.4byte func_8049695C
+.endobj __vt__CScnNw4r
 
-.global CScnNw4r_hierarchy
-CScnNw4r_hierarchy:
+.obj CScnNw4r_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0x00000054
 	.4byte __RTTI__CDoubleListNode
@@ -308,9 +307,9 @@ CScnNw4r_hierarchy:
 	.4byte __RTTI__CScn
 	.4byte 0
 	.4byte 0
+.endobj CScnNw4r_hierarchy
 
-.global CScn_hierarchy
-CScn_hierarchy:
+.obj CScn_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0x00000054
 	.4byte __RTTI__CDoubleListNode
@@ -322,9 +321,9 @@ CScn_hierarchy:
 	.4byte __RTTI__CTTask_CScn
 	.4byte 0
 	.4byte 0
+.endobj CScn_hierarchy
 
-.global CTTask_CScn_hierarchy
-CTTask_CScn_hierarchy:
+.obj CTTask_CScn_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -332,56 +331,57 @@ CTTask_CScn_hierarchy:
 	.4byte __RTTI__CProcess
 	.4byte 0
 	.4byte 0
+.endobj CTTask_CScn_hierarchy
 
 
-.global lbl_80571F40
-lbl_80571F40:
+.obj lbl_80571F40, global
 	.asciz "NW4R:Failed assertion idx < mNumScnObj"
 	.balign 4
+.endobj lbl_80571F40
 
 
-.global lbl_80571F68
-lbl_80571F68:
+.obj lbl_80571F68, global
 	.asciz "g3d_scnobj.h"
 	.balign 4
+.endobj lbl_80571F68
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CScnMem
-__RTTI__CScnMem:
+.obj __RTTI__CScnMem, global
 	.4byte CScnMem_typestr
 	.4byte 0
+.endobj __RTTI__CScnMem
 
-.global __RTTI__CScnNw4r
-__RTTI__CScnNw4r:
+.obj __RTTI__CScnNw4r, global
 	.4byte CScnNw4r_typestr
 	.4byte CScnNw4r_hierarchy
+.endobj __RTTI__CScnNw4r
 
-.global __RTTI__CScn
-__RTTI__CScn:
+.obj __RTTI__CScn, global
 	.4byte CScn_typestr
 	.4byte CScn_hierarchy
+.endobj __RTTI__CScn
 
-.global __RTTI__CTTask_CScn
-__RTTI__CTTask_CScn:
+.obj __RTTI__CTTask_CScn, global
 	.4byte CTTask_CScn_typestr
 	.4byte CTTask_CScn_hierarchy
+.endobj __RTTI__CTTask_CScn
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global CScnMem_typestr
-CScnMem_typestr:
+.obj CScnMem_typestr, global
 	.asciz "CScnMem"
+.endobj CScnMem_typestr
 
-.global CScn_typestr
-CScn_typestr:
+.obj CScn_typestr, global
 	.asciz "CScn"
 	.balign 4
+.endobj CScn_typestr
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

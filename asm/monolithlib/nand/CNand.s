@@ -334,65 +334,63 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-
-.global CNReqtask_typestr
-CNReqtask_typestr:
+.obj CNReqtask_typestr, global
 	.asciz "CNReqtask"
 	.balign 4
+.endobj CNReqtask_typestr
 
 
-.global lbl_80527EDC
-lbl_80527EDC:
+.obj lbl_80527EDC, global
 	.asciz "%s/%s"
 	.balign 4
 	.4byte 0
+.endobj lbl_80527EDC
 
-.global CNRequest_typestr
-CNRequest_typestr:
+.obj CNRequest_typestr, global
 	.asciz "CNRequest"
 	.balign 4
 	.4byte 0
+.endobj CNRequest_typestr
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CNand
-__vt__CNand:
+.obj __vt__CNand, global
 	.4byte __RTTI__CNand
 	.4byte 0
 	.4byte __dt__CNand
 	.4byte 0
+.endobj __vt__CNand
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CNand
-__RTTI__CNand:
+.obj __RTTI__CNand, global
 	.4byte CNand_typestr
 	.4byte 0
+.endobj __RTTI__CNand
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-
-.global CNand_typestr
-CNand_typestr:
+.obj CNand_typestr, global
 	.asciz "CNand"
 	.balign 4
+.endobj CNand_typestr
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_806625C0
-lbl_806625C0:
+.obj lbl_806625C0, global
 	.skip 0x130
+.endobj lbl_806625C0
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

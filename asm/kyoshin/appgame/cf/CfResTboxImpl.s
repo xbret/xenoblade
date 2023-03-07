@@ -341,20 +341,19 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CfResTboxImpl_typestr
-cf_CfResTboxImpl_typestr:
+.obj cf_CfResTboxImpl_typestr, global
 	.asciz "cf::CfResTboxImpl"
 	.balign 4
 	.4byte 0
+.endobj cf_CfResTboxImpl_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_80538998
-lbl_80538998:
+.obj lbl_80538998, global
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -365,10 +364,10 @@ lbl_80538998:
 	.4byte 0xFFFFFFFF
 	.4byte func_801F91B0
 	.4byte 0
+.endobj lbl_80538998
 
 
-.global __vt__cf_CfResTboxImpl
-__vt__cf_CfResTboxImpl:
+.obj __vt__cf_CfResTboxImpl, global
 	.4byte __RTTI__cf_CfResTboxImpl
 	.4byte 0
 	.4byte __dt__cf_CfResTboxImpl
@@ -395,45 +394,46 @@ __vt__cf_CfResTboxImpl:
 	.4byte func_801F8E78
 	.4byte func_8016CD54
 	.4byte func_800BF30C
+.endobj __vt__cf_CfResTboxImpl
 
-.global cf_CfResTboxImpl_hierarchy
-cf_CfResTboxImpl_hierarchy:
+.obj cf_CfResTboxImpl_hierarchy, global
 	.4byte __RTTI__cf_CfResImpl
 	.4byte 0
 	.4byte __RTTI__cf_CfResObjImpl
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CfResTboxImpl_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CfResTboxImpl
-__RTTI__cf_CfResTboxImpl:
+.obj __RTTI__cf_CfResTboxImpl, global
 	.4byte cf_CfResTboxImpl_typestr
 	.4byte cf_CfResTboxImpl_hierarchy
+.endobj __RTTI__cf_CfResTboxImpl
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066AA90
-float_8066AA90:
+.obj float_8066AA90, global
 	.float 1.0
+.endobj float_8066AA90
 
 
-.global float_8066AA94
-float_8066AA94:
+.obj float_8066AA94, global
 	.float 20 #0x41A00000
+.endobj float_8066AA94
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80666F50
-lbl_80666F50:
+.obj lbl_80666F50, global
 	.skip 0x8
+.endobj lbl_80666F50
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -736,19 +736,18 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global double_8051E7B0
-double_8051E7B0:
+.obj double_8051E7B0, global
 	.double 0.8 #0x3FE999999999999A
+.endobj double_8051E7B0
 
 
-.global double_8051E7B8
-double_8051E7B8:
+.obj double_8051E7B8, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8051E7B8
 
-.global mwsfdply_strpool
-mwsfdply_strpool:
+.obj mwsfdply_strpool, global
 	.asciz "E20010703F mwPlySfdStandby"
 	.asciz "E20010703G mwPlySfdStart"
 	.asciz "E10821A : Invalid value of SFD_GetPaStat : %d"
@@ -786,13 +785,14 @@ mwsfdply_strpool:
 	.asciz "E7021901 mwPlyStartIpicture: seekipic_tbl indicates that data is not only I picture."
 	.balign 4
 	.4byte 0
+.endobj mwsfdply_strpool
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+#.balign 8
 
-.global lbl_80569BD4
-lbl_80569BD4:
+.obj lbl_80569BD4, global
 	.4byte lbl_8051E1E0
 	.4byte 0
 	.4byte 0x00000002
@@ -846,10 +846,10 @@ lbl_80569BD4:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_80569BD4
 
 
-.global lbl_80569CA8
-lbl_80569CA8:
+.obj lbl_80569CA8, global
 	.4byte lbl_8051E274
 	.4byte 0
 	.4byte 0x00000002
@@ -903,10 +903,10 @@ lbl_80569CA8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_80569CA8
 
 
-.global lbl_80569D7C
-lbl_80569D7C:
+.obj lbl_80569D7C, global
 	.4byte lbl_8051E288
 	.4byte 0
 	.4byte 0x00000001
@@ -960,10 +960,10 @@ lbl_80569D7C:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_80569D7C
 
 
-.global lbl_80569E50
-lbl_80569E50:
+.obj lbl_80569E50, global
 	.4byte lbl_8051E2C0
 	.4byte 0
 	.4byte 0x00000002
@@ -1017,10 +1017,10 @@ lbl_80569E50:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_80569E50
 
 
-.global lbl_80569F24
-lbl_80569F24:
+.obj lbl_80569F24, global
 	.4byte lbl_8051E2D0
 	.4byte 0
 	.4byte 0x00000001
@@ -1074,10 +1074,10 @@ lbl_80569F24:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_80569F24
 
 
-.global lbl_80569FF8
-lbl_80569FF8:
+.obj lbl_80569FF8, global
 	.4byte lbl_8051E2E4
 	.4byte 0
 	.4byte 0x00000001
@@ -1131,10 +1131,10 @@ lbl_80569FF8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_80569FF8
 
 
-.global lbl_8056A0CC
-lbl_8056A0CC:
+.obj lbl_8056A0CC, global
 	.4byte lbl_8051E2FC
 	.4byte 0
 	.4byte 0x00000002
@@ -1188,10 +1188,10 @@ lbl_8056A0CC:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056A0CC
 
 
-.global lbl_8056A1A0
-lbl_8056A1A0:
+.obj lbl_8056A1A0, global
 	.4byte lbl_8051E318
 	.4byte 0
 	.4byte 0x00000001
@@ -1245,10 +1245,10 @@ lbl_8056A1A0:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056A1A0
 
 
-.global lbl_8056A274
-lbl_8056A274:
+.obj lbl_8056A274, global
 	.4byte lbl_8051E338
 	.4byte 0
 	.4byte 0x00000001
@@ -1302,10 +1302,10 @@ lbl_8056A274:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056A274
 
 
-.global lbl_8056A348
-lbl_8056A348:
+.obj lbl_8056A348, global
 	.4byte lbl_8051E350
 	.4byte 0
 	.4byte 0
@@ -1359,3 +1359,4 @@ lbl_8056A348:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056A348

@@ -59,12 +59,14 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80546690
-lbl_80546690:
+.balign 8
+
+.obj lbl_80546690, global
 	.asciz "HID - Originate started"
+.endobj lbl_80546690
 
 
-.global lbl_805466A8
-lbl_805466A8:
+.obj lbl_805466A8, global
 	.asciz "HID - Originate failed"
 	.balign 4
+.endobj lbl_805466A8

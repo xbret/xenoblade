@@ -1323,25 +1323,27 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80546240
-lbl_80546240:
+.balign 8
+
+.obj lbl_80546240, global
 	.asciz "Ctlr H/w error event"
 	.balign 4
+.endobj lbl_80546240
 
 
-.global lbl_80546258
-lbl_80546258:
+.obj lbl_80546258, global
 	.asciz "Event mismatch opcode=%X cmd opcode=%X"
 	.balign 4
+.endobj lbl_80546258
 
 
-.global lbl_80546280
-lbl_80546280:
+.obj lbl_80546280, global
 	.asciz "Cmd timeout; no cmd in queue"
 	.balign 4
+.endobj lbl_80546280
 
 
-.global lbl_805462A0
-lbl_805462A0:
+.obj lbl_805462A0, global
 	.asciz "BTU HCI command timeout - cmd opcode = 0x%02x"
 	.balign 4
+.endobj lbl_805462A0

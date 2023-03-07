@@ -249,21 +249,29 @@
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global __OSCurrHeap
-__OSCurrHeap:
+.balign 8
+
+.obj __OSCurrHeap, global
 	.4byte 0xFFFFFFFF
 	.4byte 0
+.endobj __OSCurrHeap
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-ArenaEnd:
-	.skip 0x4
+.balign 8
 
-ArenaStart:
+.obj ArenaEnd, local
 	.skip 0x4
+.endobj ArenaEnd
 
-NumHeaps:
+.obj ArenaStart, local
 	.skip 0x4
+.endobj ArenaStart
 
-HeapArray:
+.obj NumHeaps, local
 	.skip 0x4
+.endobj NumHeaps
+
+.obj HeapArray, local
+	.skip 0x4
+.endobj HeapArray

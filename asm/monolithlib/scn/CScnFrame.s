@@ -71,53 +71,53 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CScnFrame_typestr
-CScnFrame_typestr:
+.obj CScnFrame_typestr, global
 	.asciz "CScnFrame"
 	.balign 4
 	.4byte 0
+.endobj CScnFrame_typestr
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CScnFrame
-__vt__CScnFrame:
+.obj __vt__CScnFrame, global
 	.4byte __RTTI__CScnFrame
 	.4byte 0
 	.4byte __dt__CScnFrame
 	.4byte 0
+.endobj __vt__CScnFrame
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CScnFrame
-__RTTI__CScnFrame:
+.obj __RTTI__CScnFrame, global
 	.4byte CScnFrame_typestr
 	.4byte 0
+.endobj __RTTI__CScnFrame
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066D390
-float_8066D390:
+.obj float_8066D390, global
 	.float 1.0
+.endobj float_8066D390
 
 
-.global float_8066D394
-float_8066D394:
+.obj float_8066D394, global
 	.float 0.5
+.endobj float_8066D394
 
 
-.global double_8066D398
-double_8066D398:
+.obj double_8066D398, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066D398
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

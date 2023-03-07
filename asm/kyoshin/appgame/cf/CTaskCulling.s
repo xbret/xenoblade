@@ -576,30 +576,29 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CTaskCulling_typestr
-cf_CTaskCulling_typestr:
+.obj cf_CTaskCulling_typestr, global
 	.asciz "cf::CTaskCulling"
 	.balign 4
+.endobj cf_CTaskCulling_typestr
 
-.global CTTask_cf_CTaskCulling_typestr
-CTTask_cf_CTaskCulling_typestr:
+.obj CTTask_cf_CTaskCulling_typestr, global
 	.asciz "CTTask<cf::CTaskCulling>"
 	.balign 4
+.endobj CTTask_cf_CTaskCulling_typestr
 
 
-.global lbl_804FF780
-lbl_804FF780:
+.obj lbl_804FF780, global
 	.4byte 0x2F006F63
 	.4byte 0x63000000
+.endobj lbl_804FF780
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CTaskCulling
-__vt__cf_CTaskCulling:
+.obj __vt__cf_CTaskCulling, global
 	.4byte __RTTI__cf_CTaskCulling
 	.4byte 0
 	.4byte __dt__cf_CTaskCulling
@@ -657,9 +656,9 @@ __vt__cf_CTaskCulling:
 	.4byte func_801A2C40
 	.4byte func_801A2C74
 	.4byte func_801A2F2C
+.endobj __vt__cf_CTaskCulling
 
-.global cf_CTaskCulling_hierarchy
-cf_CTaskCulling_hierarchy:
+.obj cf_CTaskCulling_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -669,10 +668,10 @@ cf_CTaskCulling_hierarchy:
 	.4byte __RTTI__CTTask_cf_CTaskCulling
 	.4byte 0
 	.4byte 0
+.endobj cf_CTaskCulling_hierarchy
 
 
-.global __vt__CTTask_cf_CTaskCulling
-__vt__CTTask_cf_CTaskCulling:
+.obj __vt__CTTask_cf_CTaskCulling, global
 	.4byte __RTTI__CTTask_cf_CTaskCulling
 	.4byte 0
 	.4byte __dt__CTTask_cf_CTaskCulling
@@ -682,9 +681,9 @@ __vt__CTTask_cf_CTaskCulling:
 	.4byte func_801A2FA8
 	.4byte func_801A2FF0
 	.4byte func_80043F20
+.endobj __vt__CTTask_cf_CTaskCulling
 
-.global CTTask_cf_CTaskCulling_hierarchy
-CTTask_cf_CTaskCulling_hierarchy:
+.obj CTTask_cf_CTaskCulling_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -692,69 +691,70 @@ CTTask_cf_CTaskCulling_hierarchy:
 	.4byte __RTTI__CProcess
 	.4byte 0
 	.4byte 0
+.endobj CTTask_cf_CTaskCulling_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CTaskCulling
-__RTTI__cf_CTaskCulling:
+.obj __RTTI__cf_CTaskCulling, global
 	.4byte cf_CTaskCulling_typestr
 	.4byte cf_CTaskCulling_hierarchy
+.endobj __RTTI__cf_CTaskCulling
 
-.global __RTTI__CTTask_cf_CTaskCulling
-__RTTI__CTTask_cf_CTaskCulling:
+.obj __RTTI__CTTask_cf_CTaskCulling, global
 	.4byte CTTask_cf_CTaskCulling_typestr
 	.4byte CTTask_cf_CTaskCulling_hierarchy
+.endobj __RTTI__CTTask_cf_CTaskCulling
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066A578
-float_8066A578:
+.obj float_8066A578, global
 	.float 5 #0x40A00000
+.endobj float_8066A578
 
 
-.global float_8066A57C
-float_8066A57C:
+.obj float_8066A57C, global
 	.float 30 #0x41F00000
+.endobj float_8066A57C
 
 
-.global float_8066A580
-float_8066A580:
+.obj float_8066A580, global
 	.float 50 #0x42480000
+.endobj float_8066A580
 
 
-.global float_8066A584
-float_8066A584:
+.obj float_8066A584, global
 	.float 0
+.endobj float_8066A584
 
 
-.global float_8066A588
-float_8066A588:
+.obj float_8066A588, global
 	.float 1.0
+.endobj float_8066A588
 
 
-.global float_8066A58C
-float_8066A58C:
+.obj float_8066A58C, global
 	.float 0.2
+.endobj float_8066A58C
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_80579018
-lbl_80579018:
+.obj lbl_80579018, global
 	.skip 0x38
+.endobj lbl_80579018
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80666C18
-lbl_80666C18:
+.obj lbl_80666C18, global
 	.skip 0x8
+.endobj lbl_80666C18
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

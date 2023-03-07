@@ -1119,8 +1119,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global jumptable_8053FF40
-jumptable_8053FF40:
+.balign 8
+
+.obj jumptable_8053FF40, global
 	.4byte .L_802CE000
 	.4byte .L_802CE020
 	.4byte .L_802CDFF8
@@ -1128,10 +1129,10 @@ jumptable_8053FF40:
 	.4byte .L_802CE008
 	.4byte .L_802CE010
 	.4byte .L_802CE018
+.endobj jumptable_8053FF40
 
 
-.global jumptable_8053FF5C
-jumptable_8053FF5C:
+.obj jumptable_8053FF5C, global
 	.4byte .L_802CE210
 	.4byte .L_802CE230
 	.4byte .L_802CE208
@@ -1139,18 +1140,23 @@ jumptable_8053FF5C:
 	.4byte .L_802CE218
 	.4byte .L_802CE220
 	.4byte .L_802CE228
+.endobj jumptable_8053FF5C
 
 
-.global lbl_8053FF78
-lbl_8053FF78:
+.obj lbl_8053FF78, global
 	.asciz "\nMetroTRK Option : SerialIO - "
 	.asciz "Enable\n"
 	.asciz "Disable\n"
+.endobj lbl_8053FF78
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-g_CurrentSequence:
-	.skip 0x4
+.balign 8
 
-IsTRKConnected:
+.obj g_CurrentSequence, local
 	.skip 0x4
+.endobj g_CurrentSequence
+
+.obj IsTRKConnected, local
+	.skip 0x4
+.endobj IsTRKConnected

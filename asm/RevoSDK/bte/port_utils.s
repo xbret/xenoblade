@@ -436,8 +436,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80548530
-lbl_80548530:
+.balign 8
+
+.obj lbl_80548530, global
 	.asciz "port_select_mtu bad packet size"
 	.asciz "port_select_mtu selected %d based on connection speed"
 	.balign 4
@@ -446,15 +447,16 @@ lbl_80548530:
 	.asciz "port_select_mtu application selected %d"
 	.asciz "port_select_mtu credit_rx_max %d, credit_rx_low %d, rx_buf_critical %d"
 	.balign 4
+.endobj lbl_80548530
 
 
-.global lbl_80548630
-lbl_80548630:
+.obj lbl_80548630, global
 	.asciz "rfc_port_closed DONE"
 	.balign 4
+.endobj lbl_80548630
 
 
-.global lbl_80548648
-lbl_80548648:
+.obj lbl_80548648, global
 	.asciz "PORT_DataInd Data reached HW. Sending FC set."
 	.balign 4
+.endobj lbl_80548648

@@ -439,20 +439,19 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CScnRoot_typestr
-CScnRoot_typestr:
+.obj CScnRoot_typestr, global
 	.asciz "CScnRoot"
 	.balign 4
 	.4byte 0
+.endobj CScnRoot_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CScnRoot
-__vt__CScnRoot:
+.obj __vt__CScnRoot, global
 	.4byte __RTTI__CScnRoot
 	.4byte 0
 	.4byte __dt__CScnRoot
@@ -467,44 +466,45 @@ __vt__CScnRoot:
 	.4byte func_8048EDD8
 	.4byte func_8048EDD0
 	.4byte 0
+.endobj __vt__CScnRoot
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CScnRoot
-__RTTI__CScnRoot:
+.obj __RTTI__CScnRoot, global
 	.4byte CScnRoot_typestr
 	.4byte 0
+.endobj __RTTI__CScnRoot
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066D1A8
-float_8066D1A8:
+.obj float_8066D1A8, global
 	.float 20 #0x41A00000
+.endobj float_8066D1A8
 
 
-.global float_8066D1AC
-float_8066D1AC:
+.obj float_8066D1AC, global
 	.float 0.01 #0x3C23D70A
+.endobj float_8066D1AC
 
 
-.global float_8066D1B0
-float_8066D1B0:
+.obj float_8066D1B0, global
 	.float 0.08 #0x3DA3D70A
+.endobj float_8066D1B0
 
 
-.global float_8066D1B4
-float_8066D1B4:
+.obj float_8066D1B4, global
 	.float 0
+.endobj float_8066D1B4
 
 
-.global double_8066D1B8
-double_8066D1B8:
+.obj double_8066D1B8, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066D1B8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

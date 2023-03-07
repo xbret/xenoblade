@@ -514,10 +514,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global mwsfdset_strpool
-mwsfdset_strpool:
+.obj mwsfdset_strpool, global
 	.asciz "E1122617 mwPlySetAudioSw: handle is invalid."
 	.asciz "E6042001 mwPlySetVideoSw: handle is invalid."
 	.asciz "E1122640 mwPlyGetSfdHn: handle is invalid."
@@ -557,3 +556,4 @@ mwsfdset_strpool:
 	.asciz "E211051 mwPlySetFloatSpeed: handle is invalid."
 	.asciz "E5060801 mwPlySetUpdateTimeAuto: handle is invalid."
 	.balign 4
+.endobj mwsfdset_strpool

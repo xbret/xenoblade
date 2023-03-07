@@ -301,286 +301,287 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global SFLIB_version_str
-SFLIB_version_str:
+.obj SFLIB_version_str, global
 	.asciz "\nCRI SFD/WII Ver.2.080 Build:Nov 13 2008 18:21:32\n"
 	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
 	.balign 4
+.endobj SFLIB_version_str
 
-.global lbl_8051FFD8
-lbl_8051FFD8:
+.obj lbl_8051FFD8, global
 	.asciz "SFD_Init"
 	.balign 4
+.endobj lbl_8051FFD8
 
-.global lbl_8051FFE4
-lbl_8051FFE4:
+.obj lbl_8051FFE4, global
 	.asciz "vsync_mhz"
 	.balign 4
+.endobj lbl_8051FFE4
 
-.global lbl_8051FFF0
-lbl_8051FFF0:
+.obj lbl_8051FFF0, global
 	.asciz "sfd_errcode"
+.endobj lbl_8051FFF0
 
-.global lbl_8051FFFC
-lbl_8051FFFC:
+.obj lbl_8051FFFC, global
 	.asciz "SFD_Create"
 	.balign 4
+.endobj lbl_8051FFFC
 
-.global lbl_80520008
-lbl_80520008:
+.obj lbl_80520008, global
 	.asciz "cpara_members"
 	.balign 4
+.endobj lbl_80520008
 
-.global lbl_80520018
-lbl_80520018:
+.obj lbl_80520018, global
 	.asciz "sfdhn"
 	.balign 4
+.endobj lbl_80520018
 
-.global lbl_80520020
-lbl_80520020:
+.obj lbl_80520020, global
 	.asciz "SFD_Destroy"
+.endobj lbl_80520020
 
-.global lbl_8052002C
-lbl_8052002C:
+.obj lbl_8052002C, global
 	.asciz "SFD_Start"
 	.balign 4
+.endobj lbl_8052002C
 
-.global lbl_80520038
-lbl_80520038:
+.obj lbl_80520038, global
 	.asciz "SFD_Stop"
 	.balign 4
 	.4byte 0
+.endobj lbl_80520038
 
-.global lbl_80520048
-lbl_80520048:
+.obj lbl_80520048, global
 	.asciz "SFD_RequestStop"
+.endobj lbl_80520048
 
-.global lbl_80520058
-lbl_80520058:
+.obj lbl_80520058, global
 	.asciz "SFD_TermSupply"
 	.balign 4
+.endobj lbl_80520058
 
-.global lbl_80520068
-lbl_80520068:
+.obj lbl_80520068, global
 	.asciz "SFD_GetFrm"
 	.balign 4
+.endobj lbl_80520068
 
-.global lbl_80520074
-lbl_80520074:
+.obj lbl_80520074, global
 	.asciz "frminf"
 	.balign 4
+.endobj lbl_80520074
 
-.global lbl_8052007C
-lbl_8052007C:
+.obj lbl_8052007C, global
 	.asciz "time"
 	.balign 4
+.endobj lbl_8052007C
 
-.global lbl_80520084
-lbl_80520084:
+.obj lbl_80520084, global
 	.asciz "ptype"
 	.balign 4
+.endobj lbl_80520084
 
-.global lbl_8052008C
-lbl_8052008C:
+.obj lbl_8052008C, global
 	.asciz "SFD_RelFrm"
 	.balign 4
+.endobj lbl_8052008C
 
-.global lbl_80520098
-lbl_80520098:
+.obj lbl_80520098, global
 	.asciz "SFD_ExecOne"
+.endobj lbl_80520098
 
-.global lbl_805200A4
-lbl_805200A4:
+.obj lbl_805200A4, global
 	.asciz "SFLIB_SetErr"
 	.balign 4
+.endobj lbl_805200A4
 
-.global lbl_805200B4
-lbl_805200B4:
+.obj lbl_805200B4, global
 	.asciz "SFMPS_ExecServer"
 	.balign 4
+.endobj lbl_805200B4
 
-.global lbl_805200C8
-lbl_805200C8:
+.obj lbl_805200C8, global
 	.asciz "supplied"
 	.balign 4
+.endobj lbl_805200C8
 
-.global lbl_805200D4
-lbl_805200D4:
+.obj lbl_805200D4, global
 	.asciz "consumed"
 	.balign 4
+.endobj lbl_805200D4
 
-.global lbl_805200E0
-lbl_805200E0:
+.obj lbl_805200E0, global
 	.asciz "discarded"
 	.balign 4
+.endobj lbl_805200E0
 
-.global lbl_805200EC
-lbl_805200EC:
+.obj lbl_805200EC, global
 	.asciz "SFMPV_ExecServer"
 	.balign 4
+.endobj lbl_805200EC
 
-.global lbl_80520100
-lbl_80520100:
+.obj lbl_80520100, global
 	.asciz "SFADXT_ExecServer"
 	.balign 4
+.endobj lbl_80520100
 
-.global lbl_80520114
-lbl_80520114:
+.obj lbl_80520114, global
 	.asciz "sfmpv_DecodePicAtr"
 	.balign 4
+.endobj lbl_80520114
 
-.global lbl_80520128
-lbl_80520128:
+.obj lbl_80520128, global
 	.asciz "mpvhn"
 	.balign 4
+.endobj lbl_80520128
 
-.global lbl_80520130
-lbl_80520130:
+.obj lbl_80520130, global
 	.asciz "flowcnt"
+.endobj lbl_80520130
 
-.global lbl_80520138
-lbl_80520138:
+.obj lbl_80520138, global
 	.asciz "rsiz"
 	.balign 4
+.endobj lbl_80520138
 
-.global lbl_80520140
-lbl_80520140:
+.obj lbl_80520140, global
 	.asciz "mpverr"
 	.balign 4
+.endobj lbl_80520140
 
-.global lbl_80520148
-lbl_80520148:
+.obj lbl_80520148, global
 	.asciz "sfderr"
 	.balign 4
+.endobj lbl_80520148
 
-.global lbl_80520150
-lbl_80520150:
+.obj lbl_80520150, global
 	.asciz "sfmpv_DecodeFrm"
+.endobj lbl_80520150
 
-.global lbl_80520160
-lbl_80520160:
+.obj lbl_80520160, global
 	.asciz "goporder"
 	.balign 4
+.endobj lbl_80520160
 
-.global lbl_8052016C
-lbl_8052016C:
+.obj lbl_8052016C, global
 	.asciz "disp_order_in_gop"
 	.balign 4
+.endobj lbl_8052016C
 
-.global lbl_80520180
-lbl_80520180:
+.obj lbl_80520180, global
 	.asciz "errcnt"
 	.balign 4
+.endobj lbl_80520180
 
-.global lbl_80520188
-lbl_80520188:
+.obj lbl_80520188, global
 	.asciz "rcvcnt"
 	.balign 4
+.endobj lbl_80520188
 
-.global lbl_80520190
-lbl_80520190:
+.obj lbl_80520190, global
 	.asciz "num_slices"
 	.balign 4
+.endobj lbl_80520190
 
-.global lbl_8052019C
-lbl_8052019C:
+.obj lbl_8052019C, global
 	.asciz "sfmpv_DecodePicAtr_ret"
 	.balign 4
+.endobj lbl_8052019C
 
-.global lbl_805201B4
-lbl_805201B4:
+.obj lbl_805201B4, global
 	.asciz "dec_ttu.time"
 	.balign 4
+.endobj lbl_805201B4
 
-.global lbl_805201C4
-lbl_805201C4:
+.obj lbl_805201C4, global
 	.asciz "sfply_AdjustPrepEnd"
+.endobj lbl_805201C4
 
-.global lbl_805201D8
-lbl_805201D8:
+.obj lbl_805201D8, global
 	.asciz "vplay"
 	.balign 4
+.endobj lbl_805201D8
 
-.global lbl_805201E0
-lbl_805201E0:
+.obj lbl_805201E0, global
 	.asciz "aplay"
 	.balign 4
+.endobj lbl_805201E0
 
-.global lbl_805201E8
-lbl_805201E8:
+.obj lbl_805201E8, global
 	.asciz "sync_mode"
 	.balign 4
+.endobj lbl_805201E8
 
-.global lbl_805201F4
-lbl_805201F4:
+.obj lbl_805201F4, global
 	.asciz "etrg"
 	.balign 4
+.endobj lbl_805201F4
 
-.global lbl_805201FC
-lbl_805201FC:
+.obj lbl_805201FC, global
 	.asciz "sfd_isSkip"
 	.balign 4
+.endobj lbl_805201FC
 
-.global lbl_80520208
-lbl_80520208:
+.obj lbl_80520208, global
 	.asciz "reason"
 	.balign 4
+.endobj lbl_80520208
 
-.global lbl_80520210
-lbl_80520210:
+.obj lbl_80520210, global
 	.asciz "sfd_waitSupply"
 	.balign 4
+.endobj lbl_80520210
 
-.global lbl_80520220
-lbl_80520220:
+.obj lbl_80520220, global
 	.asciz "sfd_waitRelFrm"
 	.balign 4
+.endobj lbl_80520220
 
-.global lbl_80520230
-lbl_80520230:
+.obj lbl_80520230, global
 	.asciz "sfmpv_ConcatSub"
+.endobj lbl_80520230
 
-.global lbl_80520240
-lbl_80520240:
+.obj lbl_80520240, global
 	.asciz "concat_cnt"
 	.balign 4
+.endobj lbl_80520240
 
-.global lbl_8052024C
-lbl_8052024C:
+.obj lbl_8052024C, global
 	.asciz "add_time"
 	.balign 4
+.endobj lbl_8052024C
 
-.global lbl_80520258
-lbl_80520258:
+.obj lbl_80520258, global
 	.asciz "concat_time"
+.endobj lbl_80520258
 
-.global lbl_80520264
-lbl_80520264:
+.obj lbl_80520264, global
 	.asciz "concat_framecount"
 	.balign 4
+.endobj lbl_80520264
 
-.global lbl_80520278
-lbl_80520278:
+.obj lbl_80520278, global
 	.asciz "sftim_UpdateTime"
 	.balign 4
+.endobj lbl_80520278
 
-.global lbl_8052028C
-lbl_8052028C:
+.obj lbl_8052028C, global
 	.asciz "vtime"
 	.balign 4
+.endobj lbl_8052028C
 
-.global lbl_80520294
-lbl_80520294:
+.obj lbl_80520294, global
 	.asciz "vtunit"
 	.balign 4
 	.4byte 0
+.endobj lbl_80520294
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056B5B8
-lbl_8056B5B8:
+.balign 8
+
+.obj lbl_8056B5B8, global
 	.4byte lbl_8051FFD8
 	.4byte 0
 	.4byte 0x00000001
@@ -634,10 +635,10 @@ lbl_8056B5B8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056B5B8
 
 
-.global lbl_8056B68C
-lbl_8056B68C:
+.obj lbl_8056B68C, global
 	.4byte lbl_8051FFFC
 	.4byte 0
 	.4byte 0x00000001
@@ -691,10 +692,10 @@ lbl_8056B68C:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056B68C
 
 
-.global lbl_8056B760
-lbl_8056B760:
+.obj lbl_8056B760, global
 	.4byte lbl_80520020
 	.4byte 0
 	.4byte 0x00000001
@@ -748,10 +749,10 @@ lbl_8056B760:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056B760
 
 
-.global lbl_8056B834
-lbl_8056B834:
+.obj lbl_8056B834, global
 	.4byte lbl_8052002C
 	.4byte 0
 	.4byte 0x00000001
@@ -805,10 +806,10 @@ lbl_8056B834:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056B834
 
 
-.global lbl_8056B908
-lbl_8056B908:
+.obj lbl_8056B908, global
 	.4byte lbl_80520038
 	.4byte 0
 	.4byte 0x00000001
@@ -862,10 +863,10 @@ lbl_8056B908:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056B908
 
 
-.global lbl_8056B9DC
-lbl_8056B9DC:
+.obj lbl_8056B9DC, global
 	.4byte lbl_80520048
 	.4byte 0
 	.4byte 0x00000001
@@ -919,10 +920,10 @@ lbl_8056B9DC:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056B9DC
 
 
-.global lbl_8056BAB0
-lbl_8056BAB0:
+.obj lbl_8056BAB0, global
 	.4byte lbl_80520058
 	.4byte 0
 	.4byte 0x00000001
@@ -976,10 +977,10 @@ lbl_8056BAB0:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056BAB0
 
 
-.global lbl_8056BB84
-lbl_8056BB84:
+.obj lbl_8056BB84, global
 	.4byte lbl_80520068
 	.4byte 0
 	.4byte 0x00000001
@@ -1033,10 +1034,10 @@ lbl_8056BB84:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056BB84
 
 
-.global lbl_8056BC58
-lbl_8056BC58:
+.obj lbl_8056BC58, global
 	.4byte lbl_8052008C
 	.4byte 0
 	.4byte 0x00000002
@@ -1090,10 +1091,10 @@ lbl_8056BC58:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056BC58
 
 
-.global lbl_8056BD2C
-lbl_8056BD2C:
+.obj lbl_8056BD2C, global
 	.4byte lbl_80520098
 	.4byte 0
 	.4byte 0x00000001
@@ -1147,10 +1148,10 @@ lbl_8056BD2C:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056BD2C
 
 
-.global lbl_8056BE00
-lbl_8056BE00:
+.obj lbl_8056BE00, global
 	.4byte lbl_805200A4
 	.4byte 0
 	.4byte 0x00000002
@@ -1204,10 +1205,10 @@ lbl_8056BE00:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056BE00
 
 
-.global lbl_8056BED4
-lbl_8056BED4:
+.obj lbl_8056BED4, global
 	.4byte lbl_805200B4
 	.4byte 0
 	.4byte 0x00000001
@@ -1261,10 +1262,10 @@ lbl_8056BED4:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056BED4
 
 
-.global lbl_8056BFA8
-lbl_8056BFA8:
+.obj lbl_8056BFA8, global
 	.4byte lbl_805200EC
 	.4byte 0
 	.4byte 0x00000001
@@ -1318,10 +1319,10 @@ lbl_8056BFA8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056BFA8
 
 
-.global lbl_8056C07C
-lbl_8056C07C:
+.obj lbl_8056C07C, global
 	.4byte lbl_80520100
 	.4byte 0
 	.4byte 0x00000001
@@ -1375,10 +1376,10 @@ lbl_8056C07C:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056C07C
 
 
-.global lbl_8056C150
-lbl_8056C150:
+.obj lbl_8056C150, global
 	.4byte lbl_80520114
 	.4byte 0
 	.4byte 0x00000002
@@ -1432,10 +1433,10 @@ lbl_8056C150:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056C150
 
 
-.global lbl_8056C224
-lbl_8056C224:
+.obj lbl_8056C224, global
 	.4byte lbl_80520150
 	.4byte 0
 	.4byte 0x00000004
@@ -1489,10 +1490,10 @@ lbl_8056C224:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056C224
 
 
-.global lbl_8056C2F8
-lbl_8056C2F8:
+.obj lbl_8056C2F8, global
 	.4byte lbl_8052019C
 	.4byte 0
 	.4byte 0x00000004
@@ -1520,10 +1521,10 @@ lbl_8056C2F8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056C2F8
 
 
-.global lbl_8056C364
-lbl_8056C364:
+.obj lbl_8056C364, global
 	.4byte lbl_805201C4
 	.4byte 0
 	.4byte 0x00000005
@@ -1551,10 +1552,10 @@ lbl_8056C364:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056C364
 
 
-.global lbl_8056C3D0
-lbl_8056C3D0:
+.obj lbl_8056C3D0, global
 	.4byte lbl_805201FC
 	.4byte 0
 	.4byte 0x00000002
@@ -1582,10 +1583,10 @@ lbl_8056C3D0:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056C3D0
 
 
-.global lbl_8056C43C
-lbl_8056C43C:
+.obj lbl_8056C43C, global
 	.4byte lbl_80520210
 	.4byte 0
 	.4byte 0x00000001
@@ -1613,10 +1614,10 @@ lbl_8056C43C:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056C43C
 
 
-.global lbl_8056C4A8
-lbl_8056C4A8:
+.obj lbl_8056C4A8, global
 	.4byte lbl_80520220
 	.4byte 0
 	.4byte 0x00000001
@@ -1644,10 +1645,10 @@ lbl_8056C4A8:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056C4A8
 
 
-.global lbl_8056C514
-lbl_8056C514:
+.obj lbl_8056C514, global
 	.4byte lbl_80520230
 	.4byte 0
 	.4byte 0x00000005
@@ -1675,10 +1676,10 @@ lbl_8056C514:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056C514
 
 
-.global lbl_8056C580
-lbl_8056C580:
+.obj lbl_8056C580, global
 	.4byte lbl_80520278
 	.4byte 0
 	.4byte 0x00000003
@@ -1707,15 +1708,18 @@ lbl_8056C580:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056C580
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_8060A2D8
-lbl_8060A2D8:
+.obj lbl_8060A2D8, global
 	.skip 0xC
-.global SFLIB_libwork
-SFLIB_libwork:
+.endobj lbl_8060A2D8
+
+.obj SFLIB_libwork, global
 	.skip 0x22C
-.global lbl_8060A510
-lbl_8060A510:
+.endobj SFLIB_libwork
+
+.obj lbl_8060A510, global
 	.skip 0x8
+.endobj lbl_8060A510

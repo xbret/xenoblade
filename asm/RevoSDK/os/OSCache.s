@@ -506,8 +506,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80551838
-lbl_80551838:
+.balign 8
+
+.obj lbl_80551838, global
 	.asciz ">>> L2 INVALIDATE : SHOULD NEVER HAPPEN\n"
 	.balign 4
 	.4byte 0
@@ -536,3 +537,4 @@ lbl_80551838:
 	.asciz "Locked cache machine check handler installed\n"
 	.balign 4
 	.4byte 0
+.endobj lbl_80551838

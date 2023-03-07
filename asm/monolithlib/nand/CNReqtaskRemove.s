@@ -96,46 +96,46 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CNReqtaskRemove_typestr
-CNReqtaskRemove_typestr:
+.obj CNReqtaskRemove_typestr, global
 	.asciz "CNReqtaskRemove"
+.endobj CNReqtaskRemove_typestr
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CNReqtaskRemove
-__vt__CNReqtaskRemove:
+.obj __vt__CNReqtaskRemove, global
 	.4byte __RTTI__CNReqtaskRemove
 	.4byte 0
 	.4byte func_804DB278
 	.4byte func_804DA4CC
+.endobj __vt__CNReqtaskRemove
 
-.global CNReqtaskRemove_hierarchy
-CNReqtaskRemove_hierarchy:
+.obj CNReqtaskRemove_hierarchy, global
 	.4byte __RTTI__CNReqtask
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CNReqtaskRemove_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CNReqtaskRemove
-__RTTI__CNReqtaskRemove:
+.obj __RTTI__CNReqtaskRemove, global
 	.4byte CNReqtaskRemove_typestr
 	.4byte CNReqtaskRemove_hierarchy
+.endobj __RTTI__CNReqtaskRemove
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_806682D0
-lbl_806682D0:
+.obj lbl_806682D0, global
 	.skip 0x8
+.endobj lbl_806682D0
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

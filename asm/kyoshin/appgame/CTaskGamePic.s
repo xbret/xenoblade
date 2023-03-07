@@ -636,24 +636,23 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CTaskGamePic_typestr
-CTaskGamePic_typestr:
+.obj CTaskGamePic_typestr, global
 	.asciz "CTaskGamePic"
 	.balign 4
+.endobj CTaskGamePic_typestr
 
-.global CTTask_CTaskGamePic_typestr
-CTTask_CTaskGamePic_typestr:
+.obj CTTask_CTaskGamePic_typestr, global
 	.asciz "CTTask<CTaskGamePic>"
 	.balign 4
+.endobj CTTask_CTaskGamePic_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CTaskGamePic
-__vt__CTaskGamePic:
+.obj __vt__CTaskGamePic, global
 	.4byte __RTTI__CTaskGamePic
 	.4byte 0
 	.4byte __dt__CTaskGamePic
@@ -703,9 +702,9 @@ __vt__CTaskGamePic:
 	.4byte func_80295554
 	.4byte func_802950F4
 	.4byte func_8029539C
+.endobj __vt__CTaskGamePic
 
-.global CTaskGamePic_hierarchy
-CTaskGamePic_hierarchy:
+.obj CTaskGamePic_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -715,10 +714,10 @@ CTaskGamePic_hierarchy:
 	.4byte __RTTI__CTTask_CTaskGamePic
 	.4byte 0
 	.4byte 0
+.endobj CTaskGamePic_hierarchy
 
 
-.global __vt__CTTask_CTaskGamePic
-__vt__CTTask_CTaskGamePic:
+.obj __vt__CTTask_CTaskGamePic, global
 	.4byte __RTTI__CTTask_CTaskGamePic
 	.4byte 0
 	.4byte __dt__CTTask_CTaskGamePic
@@ -728,9 +727,9 @@ __vt__CTTask_CTaskGamePic:
 	.4byte func_802954B4
 	.4byte func_802954FC
 	.4byte func_80043F20
+.endobj __vt__CTTask_CTaskGamePic
 
-.global CTTask_CTaskGamePic_hierarchy
-CTTask_CTaskGamePic_hierarchy:
+.obj CTTask_CTaskGamePic_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -738,46 +737,47 @@ CTTask_CTaskGamePic_hierarchy:
 	.4byte __RTTI__CProcess
 	.4byte 0
 	.4byte 0
+.endobj CTTask_CTaskGamePic_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CTaskGamePic
-__RTTI__CTaskGamePic:
+.obj __RTTI__CTaskGamePic, global
 	.4byte CTaskGamePic_typestr
 	.4byte CTaskGamePic_hierarchy
+.endobj __RTTI__CTaskGamePic
 
-.global __RTTI__CTTask_CTaskGamePic
-__RTTI__CTTask_CTaskGamePic:
+.obj __RTTI__CTTask_CTaskGamePic, global
 	.4byte CTTask_CTaskGamePic_typestr
 	.4byte CTTask_CTaskGamePic_hierarchy
+.endobj __RTTI__CTTask_CTaskGamePic
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B458
-float_8066B458:
+.obj float_8066B458, global
 	.float 0
+.endobj float_8066B458
 
 
-.global float_8066B45C
-float_8066B45C:
+.obj float_8066B45C, global
 	.float 0.00390625 #0x3B800000
+.endobj float_8066B45C
 
 
-.global float_8066B460
-float_8066B460:
+.obj float_8066B460, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066B460
 
 
-.global double_8066B468
-double_8066B468:
+.obj double_8066B468, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066B468
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

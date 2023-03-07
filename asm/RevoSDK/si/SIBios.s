@@ -1149,77 +1149,99 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8055F138
-lbl_8055F138:
+.balign 8
+
+.obj lbl_8055F138, global
 	.asciz "<< RVL_SDK - SI \trelease build: Feb 27 2009 10:04:44 (0x4302_145) >>"
 	.balign 4
+.endobj lbl_8055F138
 
-Si:
+.obj Si, local
 	.4byte 0xFFFFFFFF
 	.4byte 0
 	.4byte 0
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj Si
 
-Type:
+.obj Type, local
 	.4byte 0x00000008
 	.4byte 0x00000008
 	.4byte 0x00000008
 	.4byte 0x00000008
+.endobj Type
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-__SIVersion:
+.balign 8
+
+.obj __SIVersion, local
 	.4byte lbl_8055F138
 	.4byte 0
+.endobj __SIVersion
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
-Packet:
+.obj Packet, local
 	.skip 0x80
+.endobj Packet
 
-XferTime:
+.obj XferTime, local
 	.skip 0x20
+.endobj XferTime
 
-TypeTime:
+.obj TypeTime, local
 	.skip 0x20
+.endobj TypeTime
 
-Alarm:
+.obj Alarm, local
 	.skip 0xC0
+.endobj Alarm
 
-InputBuffer:
+.obj InputBuffer, local
 	.skip 0x20
+.endobj InputBuffer
 
-InputBufferValid:
+.obj InputBufferValid, local
 	.skip 0x10
+.endobj InputBufferValid
 
-InputBufferVcount:
+.obj InputBufferVcount, local
 	.skip 0x10
+.endobj InputBufferVcount
 
-RDSTHandler:
+.obj RDSTHandler, local
 	.skip 0x10
+.endobj RDSTHandler
 
 #@LOCAL@GetTypeCallback__FlUlP9OSContext@cmdFixDevice
 	.skip 0x10
 
-TypeCallback:
+.obj TypeCallback, local
 	.skip 0x40
+.endobj TypeCallback
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
+
 #@LOCAL@SIInterruptHandler__FsP9OSContext@cmdTypeAndStatus
-lbl_80667B70:
+.obj lbl_80667B70, local
 	.skip 0x4
+.endobj lbl_80667B70
 
 #@LOCAL@SIInit__Fv@Initialized
-lbl_80667B74:
+.obj lbl_80667B74, local
 	.skip 0x4
+.endobj lbl_80667B74
 
 #@LOCAL@SIGetType__Fl@cmdTypeAndStatus
-lbl_80667B78:
+.obj lbl_80667B78, local
 	.skip 0x4
+.endobj lbl_80667B78
 
-__PADFixBits:
+.obj __PADFixBits, local
 	.skip 0x4
+.endobj __PADFixBits

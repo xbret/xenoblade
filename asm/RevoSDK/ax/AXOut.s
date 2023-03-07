@@ -629,78 +629,100 @@
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-.global lbl_806658B8
-lbl_806658B8:
+.balign 8
+
+.obj lbl_806658B8, global
 	.2byte 0x0010
+.endobj lbl_806658B8
 
 
-.global lbl_806658BA
-lbl_806658BA:
+.obj lbl_806658BA, global
 	.2byte 0x0037
+.endobj lbl_806658BA
 
 
-.global lbl_806658BC
-lbl_806658BC:
+.obj lbl_806658BC, global
 	.4byte 0x20000000
+.endobj lbl_806658BC
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-__AXLocalProfile:
+.obj __AXLocalProfile, local
 	.skip 0x40
+.endobj __AXLocalProfile
 
-__AXRmtOutBuffer:
+.obj __AXRmtOutBuffer, local
 	.skip 0x5A0
+.endobj __AXRmtOutBuffer
 
-__AXOutSBuffer:
+.obj __AXOutSBuffer, local
 	.skip 0x300
+.endobj __AXOutSBuffer
 
-__AXOutBuffer:
+.obj __AXOutBuffer, local
 	.skip 0x480
+.endobj __AXOutBuffer
 
-__AXDSPTask:
+.obj __AXDSPTask, local
 	.skip 0x60
+.endobj __AXDSPTask
 
-__AXDramImage:
+.obj __AXDramImage, local
 	.skip 0x40
+.endobj __AXDramImage
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global __AXExceedCallback
-__AXExceedCallback:
+.balign 8
+
+.obj __AXExceedCallback, global
 	.skip 0x4
-.global __AXRmtCpuPtr
-__AXRmtCpuPtr:
+.endobj __AXExceedCallback
+
+.obj __AXRmtCpuPtr, global
 	.skip 0x4
-.global __AXRmtDspPtr
-__AXRmtDspPtr:
+.endobj __AXRmtCpuPtr
+
+.obj __AXRmtDspPtr, global
 	.skip 0x4
-.global __AXRmtBuffLen
-__AXRmtBuffLen:
+.endobj __AXRmtDspPtr
+
+.obj __AXRmtBuffLen, global
 	.skip 0x4
-.global __AXOutputBufferMode
-__AXOutputBufferMode:
+.endobj __AXRmtBuffLen
+
+.obj __AXOutputBufferMode, global
 	.skip 0x8
-.global __AXOutThreadQueue
-__AXOutThreadQueue:
+.endobj __AXOutputBufferMode
+
+.obj __AXOutThreadQueue, global
 	.skip 0x8
-.global __AXDebugSteppingMode
-__AXDebugSteppingMode:
+.endobj __AXOutThreadQueue
+
+.obj __AXDebugSteppingMode, global
 	.skip 0x4
-.global __AXDSPDoneFlag
-__AXDSPDoneFlag:
+.endobj __AXDebugSteppingMode
+
+.obj __AXDSPDoneFlag, global
 	.skip 0x4
-.global __AXDSPInitFlag
-__AXDSPInitFlag:
+.endobj __AXDSPDoneFlag
+
+.obj __AXDSPInitFlag, global
 	.skip 0x4
-.global __AXUserFrameCallback
-__AXUserFrameCallback:
+.endobj __AXDSPInitFlag
+
+.obj __AXUserFrameCallback, global
 	.skip 0x4
-.global __AXOutDspReady
-__AXOutDspReady:
+.endobj __AXUserFrameCallback
+
+.obj __AXOutDspReady, global
 	.skip 0x4
-.global __AXAiDmaFrame
-__AXAiDmaFrame:
+.endobj __AXOutDspReady
+
+.obj __AXAiDmaFrame, global
 	.skip 0x4
-.global __AXOutFrame
-__AXOutFrame:
+.endobj __AXAiDmaFrame
+
+.obj __AXOutFrame, global
 	.skip 0x8
+.endobj __AXOutFrame

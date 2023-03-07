@@ -942,19 +942,20 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051BE50
-lbl_8051BE50:
+.balign 8
+
+.obj lbl_8051BE50, global
 	.asciz "\nMFCI/WII Ver.1.23 Build:Nov 13 2008 10:52:58\n"
 	.balign 4
+.endobj lbl_8051BE50
 
 
-.global mfci_build
-mfci_build:
+.obj mfci_build, global
 	.4byte lbl_8051BE50
+.endobj mfci_build
 
 
-.global mfci_strpool
-mfci_strpool:
+.obj mfci_strpool, global
 	.asciz "E01100308:length of '%s' is over %d bytes.(mfci_get_adr_size)"
 	.asciz "E01100301:fname is null.(mfCiOpen)"
 	.asciz "E01100302:rw is illigal.(mfCiOpen)"
@@ -971,12 +972,14 @@ mfci_strpool:
 	.asciz "E1041002:rw is illigal.(mfCiOpenEntry)"
 	.asciz "E1041002:not enough handle resource.(mfCiOpenEntry)"
 	.balign 4
+.endobj mfci_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global mfci_vtbl
-mfci_vtbl:
+
+.obj mfci_vtbl, global
 	.4byte func_803928A4
 	.4byte mfCiEntryErrFunc
 	.4byte func_803928BC
@@ -1003,12 +1006,14 @@ mfci_vtbl:
 	.4byte 0
 	.4byte mfCiOptFn1
 	.4byte 0
+.endobj mfci_vtbl
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global mfci_err_func
-mfci_err_func:
+.obj mfci_err_func, global
 	.skip 0x4
-.global mfci_err_obj
-mfci_err_obj:
+.endobj mfci_err_func
+
+.obj mfci_err_obj, global
 	.skip 0x9F4
+.endobj mfci_err_obj

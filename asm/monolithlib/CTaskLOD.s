@@ -1106,24 +1106,23 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CTaskLOD_typestr
-CTaskLOD_typestr:
+.obj CTaskLOD_typestr, global
 	.asciz "CTaskLOD"
 	.balign 4
+.endobj CTaskLOD_typestr
 
-.global CTTask_CTaskLOD_typestr
-CTTask_CTaskLOD_typestr:
+.obj CTTask_CTaskLOD_typestr, global
 	.asciz "CTTask<CTaskLOD>"
 	.balign 4
+.endobj CTTask_CTaskLOD_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CTaskLOD
-__vt__CTaskLOD:
+.obj __vt__CTaskLOD, global
 	.4byte __RTTI__CTaskLOD
 	.4byte 0
 	.4byte __dt__CTaskLOD
@@ -1133,9 +1132,9 @@ __vt__CTaskLOD:
 	.4byte func_804628FC
 	.4byte func_80463078
 	.4byte func_80043F20
+.endobj __vt__CTaskLOD
 
-.global CTaskLOD_hierarchy
-CTaskLOD_hierarchy:
+.obj CTaskLOD_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -1145,10 +1144,10 @@ CTaskLOD_hierarchy:
 	.4byte __RTTI__CTTask_CTaskLOD
 	.4byte 0
 	.4byte 0
+.endobj CTaskLOD_hierarchy
 
 
-.global __vt__CTTask_CTaskLOD
-__vt__CTTask_CTaskLOD:
+.obj __vt__CTTask_CTaskLOD, global
 	.4byte __RTTI__CTTask_CTaskLOD
 	.4byte 0
 	.4byte __dt__CTTask_CTaskLOD
@@ -1158,9 +1157,9 @@ __vt__CTTask_CTaskLOD:
 	.4byte func_80463030
 	.4byte func_80463078
 	.4byte func_80043F20
+.endobj __vt__CTTask_CTaskLOD
 
-.global CTTask_CTaskLOD_hierarchy
-CTTask_CTaskLOD_hierarchy:
+.obj CTTask_CTaskLOD_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -1168,120 +1167,131 @@ CTTask_CTaskLOD_hierarchy:
 	.4byte __RTTI__CProcess
 	.4byte 0
 	.4byte 0
+.endobj CTTask_CTaskLOD_hierarchy
 
 
-.global lbl_80570F48
-lbl_80570F48:
+.obj lbl_80570F48, global
 	.4byte func_8046374C
 	.4byte func_8046375C
 	.4byte func_8046376C
 	.4byte 0
+.endobj lbl_80570F48
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CTaskLOD
-__RTTI__CTaskLOD:
+.obj __RTTI__CTaskLOD, global
 	.4byte CTaskLOD_typestr
 	.4byte CTaskLOD_hierarchy
+.endobj __RTTI__CTaskLOD
 
-.global __RTTI__CTTask_CTaskLOD
-__RTTI__CTTask_CTaskLOD:
+.obj __RTTI__CTTask_CTaskLOD, global
 	.4byte CTTask_CTaskLOD_typestr
 	.4byte CTTask_CTaskLOD_hierarchy
+.endobj __RTTI__CTTask_CTaskLOD
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066CD78
-float_8066CD78:
+.obj float_8066CD78, global
 	.float 1.0
+.endobj float_8066CD78
 
 
-.global float_8066CD7C
-float_8066CD7C:
+.obj float_8066CD7C, global
 	.float 0
+.endobj float_8066CD7C
 
 
-.global float_8066CD80
-float_8066CD80:
+.obj float_8066CD80, global
 	.float 1.0
+.endobj float_8066CD80
 
 
-.global float_8066CD84
-float_8066CD84:
+.obj float_8066CD84, global
 	.float 0
+.endobj float_8066CD84
 
 
-.global double_8066CD88
-double_8066CD88:
+.obj double_8066CD88, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066CD88
 
-.global double_8066CD90
-double_8066CD90:
+.obj double_8066CD90, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066CD90
 
-.global float_8066CD98
-float_8066CD98:
+.obj float_8066CD98, global
 	.float 2 #0x40000000
+.endobj float_8066CD98
 
 
-.global float_8066CD9C
-float_8066CD9C:
+.obj float_8066CD9C, global
 	.float 3 #0x40400000
+.endobj float_8066CD9C
 
 
-.global float_8066CDA0
-float_8066CDA0:
+.obj float_8066CDA0, global
 	.float -2 #0xC0000000
+.endobj float_8066CDA0
 
 
-.global float_8066CDA4
-float_8066CDA4:
+.obj float_8066CDA4, global
 	.float 0.5
+.endobj float_8066CDA4
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80668008, global
+	.skip 0x8
+.endobj lbl_80668008
 
-.global lbl_80668008
-lbl_80668008:
+.obj lbl_80668010, global
+	.skip 0x4
+.endobj lbl_80668010
+
+.obj lbl_80668014, global
+	.skip 0x4
+.endobj lbl_80668014
+
+.obj lbl_80668018, global
+	.skip 0x4
+.endobj lbl_80668018
+
+.obj lbl_8066801C, global
+	.skip 0x4
+.endobj lbl_8066801C
+
+.obj lbl_80668020, global
+	.skip 0x4
+.endobj lbl_80668020
+
+.obj lbl_80668024, global
+	.skip 0x4
+.endobj lbl_80668024
+
+.obj lbl_80668028, global
+	.skip 0x4
+.endobj lbl_80668028
+
+.obj float_8066802C, global
+	.skip 0x4
+.endobj float_8066802C
+
+.obj lbl_80668030, global
 	.skip 0x8
-.global lbl_80668010
-lbl_80668010:
-	.skip 0x4
-.global lbl_80668014
-lbl_80668014:
-	.skip 0x4
-.global lbl_80668018
-lbl_80668018:
-	.skip 0x4
-.global lbl_8066801C
-lbl_8066801C:
-	.skip 0x4
-.global lbl_80668020
-lbl_80668020:
-	.skip 0x4
-.global lbl_80668024
-lbl_80668024:
-	.skip 0x4
-.global lbl_80668028
-lbl_80668028:
-	.skip 0x4
-.global float_8066802C
-float_8066802C:
-	.skip 0x4
-.global lbl_80668030
-lbl_80668030:
+.endobj lbl_80668030
+
+.obj lbl_80668038, global
 	.skip 0x8
-.global lbl_80668038
-lbl_80668038:
-	.skip 0x8
+.endobj lbl_80668038
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

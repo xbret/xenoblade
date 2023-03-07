@@ -60,34 +60,34 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CDeviceVICb_typestr
-CDeviceVICb_typestr:
+.obj CDeviceVICb_typestr, global
 	.asciz "CDeviceVICb"
 	.4byte 0
+.endobj CDeviceVICb_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CDeviceVICb
-__vt__CDeviceVICb:
+.obj __vt__CDeviceVICb, global
 	.4byte __RTTI__CDeviceVICb
 	.4byte 0
 	.4byte __dt__CDeviceVICb
 	.4byte func_80166630
 	.4byte func_8016662C
 	.4byte func_80448A40
+.endobj __vt__CDeviceVICb
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CDeviceVICb
-__RTTI__CDeviceVICb:
+.obj __RTTI__CDeviceVICb, global
 	.4byte CDeviceVICb_typestr
 	.4byte 0
+.endobj __RTTI__CDeviceVICb
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

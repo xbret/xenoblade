@@ -93,18 +93,26 @@
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-__OSArenaLo:
+
+.obj __OSArenaLo, local
 	.4byte 0xFFFFFFFF
+.endobj __OSArenaLo
 
 
-s_mem2ArenaLo:
+.obj s_mem2ArenaLo, local
 	.4byte 0xFFFFFFFF
+.endobj s_mem2ArenaLo
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-__OSArenaHi:
-	.skip 0x4
+.balign 8
 
-s_mem2ArenaHi:
+.obj __OSArenaHi, local
 	.skip 0x4
+.endobj __OSArenaHi
+
+.obj s_mem2ArenaHi, local
+	.skip 0x4
+.endobj s_mem2ArenaHi

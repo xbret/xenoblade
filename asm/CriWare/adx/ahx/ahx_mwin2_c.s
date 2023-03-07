@@ -1445,9 +1445,11 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051ABC0
-lbl_8051ABC0:
+.balign 8
+
+.obj lbl_8051ABC0, global
 	.4byte 0
 	.4byte 0x4F000000
 	.4byte 0xCF000000
 	.4byte 0
+.endobj lbl_8051ABC0

@@ -1092,8 +1092,10 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-base:
+
+.obj base, local
 	.4byte 0xA877A6E0
 	.4byte 0xF7435A35
 	.4byte 0x85E27297
@@ -1106,8 +1108,9 @@ base:
 	.4byte 0x307E900E
 	.4byte 0x850A0000
 	.4byte 0
+.endobj base
 
-tb:
+.obj tb, local
 	.4byte 0x70510386
 	.4byte 0x400D4FEB
 	.4byte 0x3ECCD187
@@ -1684,9 +1687,10 @@ tb:
 	.4byte 0x4E011DB6
 	.4byte 0xFD37484D
 	.4byte 0x39CBE032
+.endobj tb
 
 
-base3:
+.obj base3, local
 	.4byte 0x5429284E
 	.4byte 0x0FFCA46C
 	.4byte 0x8750493C
@@ -1699,8 +1703,9 @@ base3:
 	.4byte 0x255B8BB0
 	.4byte 0xDAAF0000
 	.4byte 0
+.endobj base3
 
-tb3:
+.obj tb3, local
 	.4byte 0xA4383369
 	.4byte 0xD4F56AA8
 	.4byte 0xD7EC74A6
@@ -2277,9 +2282,9 @@ tb3:
 	.4byte 0xCC6CCAEB
 	.4byte 0x7F6807AE
 	.4byte 0x5E5708E7
+.endobj tb3
 
-.global lbl_80562200
-lbl_80562200:
+.obj lbl_80562200, global
 	.asciz "ans : %d %d %d %d %d %d\n"
 	.balign 4
 	.asciz "rand: %d %d %d %d %d %d %d %d %d %d\n"
@@ -2292,17 +2297,24 @@ lbl_80562200:
 	.balign 4
 	.asciz "sb  : %d %d %d %d %d %d %d %d\n"
 	.balign 4
+.endobj lbl_80562200
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-NUM_C:
-	.skip 0x1
+.balign 8
 
-NUM_B:
+.obj NUM_C, local
 	.skip 0x1
+.endobj NUM_C
 
-NUM_A:
+.obj NUM_B, local
 	.skip 0x1
+.endobj NUM_B
 
-SEED:
+.obj NUM_A, local
+	.skip 0x1
+.endobj NUM_A
+
+.obj SEED, local
 	.skip 0x5
+.endobj SEED

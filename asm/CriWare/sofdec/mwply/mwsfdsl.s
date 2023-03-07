@@ -908,8 +908,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global mwsfdsl_strpool
-mwsfdsl_strpool:
+.balign 8
+
+.obj mwsfdsl_strpool, global
 	.asciz "E1122633 mwPlyEntryFname: handle is invalid."
 	.asciz "E10915B mwPlyEntryFname: fname is NULL."
 	.asciz "E204021: mwPlyEntryFname: Can't entry file'%s'"
@@ -930,3 +931,4 @@ mwsfdsl_strpool:
 	.asciz "%08x.%08x"
 	.asciz "E05080801 framerate of movie is invalid."
 	.4byte 0
+.endobj mwsfdsl_strpool

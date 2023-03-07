@@ -1080,26 +1080,25 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMenuQuestLog_typestr
-CMenuQuestLog_typestr:
+.obj CMenuQuestLog_typestr, global
 	.asciz "CMenuQuestLog"
 	.balign 4
+.endobj CMenuQuestLog_typestr
 
 
-.global lbl_804F9D58
-lbl_804F9D58:
+.obj lbl_804F9D58, global
 	.asciz "MNU_quest"
 	.asciz "name"
 	.byte 0x00
+.endobj lbl_804F9D58
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global jumptable_805303E0
-jumptable_805303E0:
+.obj jumptable_805303E0, global
 	.4byte .L_8011CB88
 	.4byte .L_8011CB94
 	.4byte .L_8011CBA0
@@ -1110,10 +1109,10 @@ jumptable_805303E0:
 	.4byte .L_8011CBDC
 	.4byte .L_8011CBE8
 	.4byte .L_8011CBF4
+.endobj jumptable_805303E0
 
 
-.global __vt__CMenuQuestLog
-__vt__CMenuQuestLog:
+.obj __vt__CMenuQuestLog, global
 	.4byte __RTTI__CMenuQuestLog
 	.4byte 0
 	.4byte __dt__CMenuQuestLog
@@ -1128,9 +1127,9 @@ __vt__CMenuQuestLog:
 	.4byte func_8011D2F0
 	.4byte func_8011D2E8
 	.4byte func_8011CC30
+.endobj __vt__CMenuQuestLog
 
-.global CMenuQuestLog_hierarchy
-CMenuQuestLog_hierarchy:
+.obj CMenuQuestLog_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000058
 	.4byte __RTTI__CDoubleListNode
@@ -1145,23 +1144,24 @@ CMenuQuestLog_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuQuestLog_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuQuestLog
-__RTTI__CMenuQuestLog:
+.obj __RTTI__CMenuQuestLog, global
 	.4byte CMenuQuestLog_typestr
 	.4byte CMenuQuestLog_hierarchy
+.endobj __RTTI__CMenuQuestLog
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_806668B8
-lbl_806668B8:
+.obj lbl_806668B8, global
 	.skip 0x8
+.endobj lbl_806668B8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

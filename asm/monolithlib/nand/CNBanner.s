@@ -555,24 +555,22 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-
-.global CNBanner_typestr
-CNBanner_typestr:
+.obj CNBanner_typestr, global
 	.asciz "CNBanner"
 	.balign 4
+.endobj CNBanner_typestr
 
-.global lbl_805281C4
-lbl_805281C4:
+.obj lbl_805281C4, global
 	.4byte 0
+.endobj lbl_805281C4
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CNBanner
-__vt__CNBanner:
+.obj __vt__CNBanner, global
 	.4byte __RTTI__CNBanner
 	.4byte 0
 	.4byte __dt__CNBanner
@@ -607,22 +605,22 @@ __vt__CNBanner:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CNBanner
 
-.global CNBanner_hierarchy
-CNBanner_hierarchy:
+.obj CNBanner_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
+.endobj CNBanner_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-
-.global __RTTI__CNBanner
-__RTTI__CNBanner:
+.obj __RTTI__CNBanner, global
 	.4byte CNBanner_typestr
 	.4byte CNBanner_hierarchy
+.endobj __RTTI__CNBanner
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

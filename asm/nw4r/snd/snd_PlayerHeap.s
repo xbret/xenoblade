@@ -160,9 +160,11 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056E3C8
-lbl_8056E3C8:
+.balign 8
+
+.obj lbl_8056E3C8, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q44nw4r3snd6detail10PlayerHeapFv
 	.4byte Alloc__Q44nw4r3snd6detail10PlayerHeapFUl
+.endobj lbl_8056E3C8

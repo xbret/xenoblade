@@ -192,8 +192,10 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-UcsAnsiTable:
+
+.obj UcsAnsiTable, local
 	.4byte 0x20AC0000
 	.4byte 0x201A0192
 	.4byte 0x201E2026
@@ -210,8 +212,9 @@ UcsAnsiTable:
 	.4byte 0x0161203A
 	.4byte 0x01530000
 	.4byte 0x017E0178
+.endobj UcsAnsiTable
 
-Ucs00:
+.obj Ucs00, local
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -340,8 +343,9 @@ Ucs00:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj Ucs00
 
-Ucs03:
+.obj Ucs03, local
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -470,8 +474,9 @@ Ucs03:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj Ucs03
 
-Ucs04:
+.obj Ucs04, local
 	.4byte 0x00008446
 	.4byte 0
 	.4byte 0
@@ -600,10 +605,11 @@ Ucs04:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj Ucs04
 
 
 
-Ucs20:
+.obj Ucs20, local
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -732,9 +738,10 @@ Ucs20:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj Ucs20
 
 
-Ucs21:
+.obj Ucs21, local
 	.4byte 0
 	.4byte 0x0000818E
 	.4byte 0
@@ -863,9 +870,10 @@ Ucs21:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj Ucs21
 
 
-Ucs22:
+.obj Ucs22, local
 	.4byte 0x81CD0000
 	.4byte 0x81DD81CE
 	.4byte 0
@@ -994,9 +1002,10 @@ Ucs22:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj Ucs22
 
 
-Ucs23:
+.obj Ucs23, local
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1125,9 +1134,10 @@ Ucs23:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj Ucs23
 
 
-Ucs25:
+.obj Ucs25, local
 	.4byte 0x849F84AA
 	.4byte 0x84A084AB
 	.4byte 0
@@ -1256,9 +1266,10 @@ Ucs25:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj Ucs25
 
 
-Ucs26:
+.obj Ucs26, local
 	.4byte 0
 	.4byte 0
 	.4byte 0x0000819A
@@ -1387,9 +1398,10 @@ Ucs26:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj Ucs26
 
 
-Ucs30:
+.obj Ucs30, local
 	.4byte 0x81408141
 	.4byte 0x81428156
 	.4byte 0x00008158
@@ -1518,9 +1530,10 @@ Ucs30:
 	.4byte 0x00008145
 	.4byte 0x815B8152
 	.4byte 0x81530000
+.endobj Ucs30
 
 
-Ucs4E:
+.obj Ucs4E, local
 	.4byte 0x88EA929A
 	.4byte 0x00008EB5
 	.4byte 0
@@ -1649,9 +1662,10 @@ Ucs4E:
 	.4byte 0x00009443
 	.4byte 0
 	.4byte 0
+.endobj Ucs4E
 
 
-Ucs4F:
+.obj Ucs4F, local
 	.4byte 0x00008AE9
 	.4byte 0
 	.4byte 0
@@ -1780,9 +1794,10 @@ Ucs4F:
 	.4byte 0x89B40000
 	.4byte 0
 	.4byte 0x98EA0000
+.endobj Ucs4F
 
 
-Ucs50:
+.obj Ucs50, local
 	.4byte 0
 	.4byte 0
 	.4byte 0x000098E4
@@ -1911,9 +1926,10 @@ Ucs50:
 	.4byte 0x000095C6
 	.4byte 0
 	.4byte 0
+.endobj Ucs50
 
 
-Ucs51:
+.obj Ucs51, local
 	.4byte 0x8B56994D
 	.4byte 0x994E0000
 	.4byte 0x89AD0000
@@ -2042,9 +2058,10 @@ Ucs51:
 	.4byte 0x8F6F0000
 	.4byte 0x0000949F
 	.4byte 0x99820000
+.endobj Ucs51
 
 
-Ucs52:
+.obj Ucs52, local
 	.4byte 0x93810000
 	.4byte 0x0000906E
 	.4byte 0x99830000
@@ -2173,9 +2190,10 @@ Ucs52:
 	.4byte 0x8ED90000
 	.4byte 0
 	.4byte 0x8CF996DC
+.endobj Ucs52
 
 
-Ucs53:
+.obj Ucs53, local
 	.4byte 0x000096E6
 	.4byte 0x93F50000
 	.4byte 0x000095EF
@@ -2304,9 +2322,10 @@ Ucs53:
 	.4byte 0x99DB0000
 	.4byte 0
 	.4byte 0
+.endobj Ucs53
 
 
-Ucs54:
+.obj Ucs54, local
 	.4byte 0x000099DC
 	.4byte 0x00008B68
 	.4byte 0x8A650000
@@ -2435,9 +2454,10 @@ Ucs54:
 	.4byte 0x9A4D0000
 	.4byte 0x00009A4A
 	.4byte 0
+.endobj Ucs54
 
 
-Ucs55:
+.obj Ucs55, local
 	.4byte 0
 	.4byte 0
 	.4byte 0x89530000
@@ -2566,9 +2586,10 @@ Ucs55:
 	.4byte 0
 	.4byte 0x00009A75
 	.4byte 0x9A740000
+.endobj Ucs55
 
 
-Ucs56:
+.obj Ucs56, local
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -2697,9 +2718,10 @@ Ucs56:
 	.4byte 0x8CC50000
 	.4byte 0x00008D91
 	.4byte 0x00009A9C
+.endobj Ucs56
 
 
-Ucs57:
+.obj Ucs57, local
 	.4byte 0x9A9B0000
 	.4byte 0x000095DE
 	.4byte 0x9A9D0000
@@ -2828,9 +2850,10 @@ Ucs57:
 	.4byte 0x8AEE0000
 	.4byte 0x8DE90000
 	.4byte 0
+.endobj Ucs57
 
 
-Ucs58:
+.obj Ucs58, local
 	.4byte 0x96780000
 	.4byte 0x93B00000
 	.4byte 0x00008C98
@@ -2959,9 +2982,10 @@ Ucs58:
 	.4byte 0x9AE29AE4
 	.4byte 0x9AE59AE6
 	.4byte 0
+.endobj Ucs58
 
 
-Ucs59:
+.obj Ucs59, local
 	.4byte 0
 	.4byte 0x9AE70000
 	.4byte 0
@@ -3090,9 +3114,10 @@ Ucs59:
 	.4byte 0x000088F7
 	.4byte 0
 	.4byte 0x00008E70
+.endobj Ucs59
 
 
-Ucs5A:
+.obj Ucs5A, local
 	.4byte 0x000088D0
 	.4byte 0x000088A1
 	.4byte 0
@@ -3221,9 +3246,10 @@ Ucs5A:
 	.4byte 0x9B659B66
 	.4byte 0
 	.4byte 0
+.endobj Ucs5A
 
 
-Ucs5B:
+.obj Ucs5B, local
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -3352,9 +3378,10 @@ Ucs5B:
 	.4byte 0x8E9B0000
 	.4byte 0
 	.4byte 0x91CE8EF5
+.endobj Ucs5B
 
 
-Ucs5C:
+.obj Ucs5C, local
 	.4byte 0x00009595
 	.4byte 0x90EA0000
 	.4byte 0x8ECB9B91
@@ -3483,9 +3510,10 @@ Ucs5C:
 	.4byte 0x9BB68F73
 	.4byte 0x00009BB5
 	.4byte 0
+.endobj Ucs5C
 
 
-Ucs5D:
+.obj Ucs5D, local
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -3614,9 +3642,10 @@ Ucs5D:
 	.4byte 0x00008AAA
 	.4byte 0x00009246
 	.4byte 0x8BD00000
+.endobj Ucs5D
 
 
-Ucs5E:
+.obj Ucs5E, local
 	.4byte 0
 	.4byte 0x8E73957A
 	.4byte 0
@@ -3745,9 +3774,10 @@ Ucs5E:
 	.4byte 0x8C9A89F4
 	.4byte 0x94550000
 	.4byte 0x9C4F93F9
+.endobj Ucs5E
 
 
-Ucs5F:
+.obj Ucs5F, local
 	.4byte 0x000095D9
 	.4byte 0x00009C50
 	.4byte 0x984D0000
@@ -3876,9 +3906,10 @@ Ucs5F:
 	.4byte 0x00009C76
 	.4byte 0x00008D9A
 	.4byte 0x00009C7C
+.endobj Ucs5F
 
 
-Ucs60:
+.obj Ucs60, local
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -4007,9 +4038,10 @@ Ucs60:
 	.4byte 0x9CB79CBA
 	.4byte 0
 	.4byte 0
+.endobj Ucs60
 
 
-Ucs61:
+.obj Ucs61, local
 	.4byte 0x9CB58F44
 	.4byte 0x00009CB8
 	.4byte 0
@@ -4138,9 +4170,10 @@ Ucs61:
 	.4byte 0x9CF00000
 	.4byte 0x9CF49CF3
 	.4byte 0x9CF59CF2
+.endobj Ucs61
 
 
-Ucs62:
+.obj Ucs62, local
 	.4byte 0x9CF60000
 	.4byte 0
 	.4byte 0
@@ -4269,9 +4302,10 @@ Ucs62:
 	.4byte 0
 	.4byte 0
 	.4byte 0x8F459D5C
+.endobj Ucs62
 
 
-Ucs63:
+.obj Ucs63, local
 	.4byte 0x00008E9D
 	.4byte 0x9D6B0000
 	.4byte 0
@@ -4400,9 +4434,10 @@ Ucs63:
 	.4byte 0x97680000
 	.4byte 0
 	.4byte 0
+.endobj Ucs63
 
 
-Ucs64:
+.obj Ucs64, local
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -4531,9 +4566,10 @@ Ucs64:
 	.4byte 0x9DB20000
 	.4byte 0x00009DB4
 	.4byte 0x8FEF0000
+.endobj Ucs64
 
 
-Ucs65:
+.obj Ucs65, local
 	.4byte 0x9DB30000
 	.4byte 0
 	.4byte 0x00009DB7
@@ -4662,9 +4698,10 @@ Ucs65:
 	.4byte 0x89A09DDF
 	.4byte 0
 	.4byte 0
+.endobj Ucs65
 
 
-Ucs66:
+.obj Ucs66, local
 	.4byte 0
 	.4byte 0x8D569DDE
 	.4byte 0
@@ -4793,9 +4830,10 @@ Ucs66:
 	.4byte 0
 	.4byte 0x99D6915D
 	.4byte 0x915C91D6
+.endobj Ucs66
 
 
-Ucs67:
+.obj Ucs67, local
 	.4byte 0x8DC50000
 	.4byte 0x000098F0
 	.4byte 0
@@ -4924,9 +4962,10 @@ Ucs67:
 	.4byte 0x00008DB8
 	.4byte 0
 	.4byte 0x968F8A60
+.endobj Ucs67
 
 
-Ucs68:
+.obj Ucs68, local
 	.4byte 0
 	.4byte 0x92CC93C8
 	.4byte 0x89680000
@@ -5055,9 +5094,10 @@ Ucs68:
 	.4byte 0x8ABB0000
 	.4byte 0
 	.4byte 0
+.endobj Ucs68
 
 
-Ucs69:
+.obj Ucs69, local
 	.4byte 0x986F9E96
 	.4byte 0
 	.4byte 0x9EA488D6
@@ -5186,9 +5226,10 @@ Ucs69:
 	.4byte 0x000092CE
 	.4byte 0x00009185
 	.4byte 0x00009EDB
+.endobj Ucs69
 
 
-Ucs6A:
+.obj Ucs6A, local
 	.4byte 0
 	.4byte 0x9ED90000
 	.4byte 0x00009EE0
@@ -5317,9 +5358,10 @@ Ucs6A:
 	.4byte 0x9F519F4E
 	.4byte 0
 	.4byte 0
+.endobj Ucs6A
 
 
-Ucs6B:
+.obj Ucs6B, local
 	.4byte 0
 	.4byte 0
 	.4byte 0x97939F4F
@@ -5448,9 +5490,10 @@ Ucs6B:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj Ucs6B
 
 
-Ucs6C:
+.obj Ucs6C, local
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -5579,9 +5622,10 @@ Ucs6C:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj Ucs6C
 
 
-Ucs6D:
+.obj Ucs6D, local
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -5710,9 +5754,10 @@ Ucs6D:
 	.4byte 0x9FC79359
 	.4byte 0
 	.4byte 0
+.endobj Ucs6D
 
 
-Ucs6E:
+.obj Ucs6E, local
 	.4byte 0
 	.4byte 0
 	.4byte 0x000090B4
@@ -5841,9 +5886,10 @@ Ucs6E:
 	.4byte 0
 	.4byte 0
 	.4byte 0x9FF69FDE
+.endobj Ucs6E
 
 
-Ucs6F:
+.obj Ucs6F, local
 	.4byte 0x00008B99
 	.4byte 0x95590000
 	.4byte 0
@@ -5972,9 +6018,10 @@ Ucs6F:
 	.4byte 0xE0640000
 	.4byte 0
 	.4byte 0xE0680000
+.endobj Ucs6F
 
 
-Ucs70:
+.obj Ucs70, local
 	.4byte 0x0000E066
 	.4byte 0
 	.4byte 0
@@ -6103,9 +6150,10 @@ Ucs70:
 	.4byte 0
 	.4byte 0x0000E082
 	.4byte 0
+.endobj Ucs70
 
 
-Ucs71:
+.obj Ucs71, local
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -6234,9 +6282,10 @@ Ucs71:
 	.4byte 0x0000E08E
 	.4byte 0xE09E0000
 	.4byte 0x0000E0A0
+.endobj Ucs71
 
 
-Ucs72:
+.obj Ucs72, local
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -6365,9 +6414,10 @@ Ucs72:
 	.4byte 0
 	.4byte 0x98549482
 	.4byte 0
+.endobj Ucs72
 
 
-Ucs73:
+.obj Ucs73, local
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -6496,9 +6546,10 @@ Ucs73:
 	.4byte 0
 	.4byte 0
 	.4byte 0x8CBB0000
+.endobj Ucs73
 
 
-Ucs74:
+.obj Ucs74, local
 	.4byte 0
 	.4byte 0x00008B85
 	.4byte 0x0000E0E4
@@ -6627,9 +6678,10 @@ Ucs74:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj Ucs74
 
 
-Ucs75:
+.obj Ucs75, local
 	.4byte 0
 	.4byte 0x0000E14B
 	.4byte 0xE14AE14C
@@ -6758,9 +6810,10 @@ Ucs75:
 	.4byte 0xE1830000
 	.4byte 0xE1800000
 	.4byte 0xE17DE17E
+.endobj Ucs75
 
 
-Ucs76:
+.obj Ucs76, local
 	.4byte 0x0000E181
 	.4byte 0
 	.4byte 0
@@ -6889,9 +6942,10 @@ Ucs76:
 	.4byte 0x0000E1BB
 	.4byte 0
 	.4byte 0x8F820000
+.endobj Ucs76
 
 
-Ucs77:
+.obj Ucs77, local
 	.4byte 0x00008FC8
 	.4byte 0
 	.4byte 0xE1BE0000
@@ -7020,9 +7074,10 @@ Ucs77:
 	.4byte 0
 	.4byte 0xE1E30000
 	.4byte 0
+.endobj Ucs77
 
 
-Ucs78:
+.obj Ucs78, local
 	.4byte 0
 	.4byte 0x8DBB0000
 	.4byte 0
@@ -7151,9 +7206,10 @@ Ucs78:
 	.4byte 0
 	.4byte 0x0000E242
 	.4byte 0
+.endobj Ucs78
 
 
-Ucs79:
+.obj Ucs79, local
 	.4byte 0x00008FCA
 	.4byte 0
 	.4byte 0
@@ -7282,9 +7338,10 @@ Ucs79:
 	.4byte 0x000088DA
 	.4byte 0
 	.4byte 0
+.endobj Ucs79
 
 
-Ucs7A:
+.obj Ucs7A, local
 	.4byte 0x8B480000
 	.4byte 0
 	.4byte 0
@@ -7413,9 +7470,10 @@ Ucs7A:
 	.4byte 0x8EB10000
 	.4byte 0
 	.4byte 0x00008AC6
+.endobj Ucs7A
 
 
-Ucs7B:
+.obj Ucs7B, local
 	.4byte 0
 	.4byte 0xE2930000
 	.4byte 0xE2A00000
@@ -7544,9 +7602,10 @@ Ucs7B:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj Ucs7B
 
 
-Ucs7C:
+.obj Ucs7C, local
 	.4byte 0xE2C50000
 	.4byte 0
 	.4byte 0
@@ -7675,9 +7734,10 @@ Ucs7C:
 	.4byte 0xE2FB8C6E
 	.4byte 0
 	.4byte 0x8B8A0000
+.endobj Ucs7C
 
 
-Ucs7D:
+.obj Ucs7D, local
 	.4byte 0x8B490000
 	.4byte 0xE3400000
 	.4byte 0x96F18D67
@@ -7806,9 +7866,10 @@ Ucs7D:
 	.4byte 0x0000E36B
 	.4byte 0
 	.4byte 0
+.endobj Ucs7D
 
 
-Ucs7E:
+.obj Ucs7E, local
 	.4byte 0x0000898F
 	.4byte 0
 	.4byte 0x93EAE36E
@@ -7937,9 +7998,10 @@ Ucs7E:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj Ucs7E
 
 
-Ucs7F:
+.obj Ucs7F, local
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -8068,9 +8130,10 @@ Ucs7F:
 	.4byte 0x0000967C
 	.4byte 0x97830000
 	.4byte 0
+.endobj Ucs7F
 
 
-Ucs80:
+.obj Ucs80, local
 	.4byte 0x97739856
 	.4byte 0x00008D6C
 	.4byte 0xE3CC8ED2
@@ -8199,9 +8262,10 @@ Ucs80:
 	.4byte 0
 	.4byte 0xE445945C
 	.4byte 0
+.endobj Ucs80
 
 
-Ucs81:
+.obj Ucs81, local
 	.4byte 0
 	.4byte 0x8E890000
 	.4byte 0x00008BBA
@@ -8330,9 +8394,10 @@ Ucs81:
 	.4byte 0xE469E46A
 	.4byte 0x89500000
 	.4byte 0xE46B0000
+.endobj Ucs81
 
 
-Ucs82:
+.obj Ucs82, local
 	.4byte 0x0000E46C
 	.4byte 0xE46D0000
 	.4byte 0x0000E46E
@@ -8461,9 +8526,10 @@ Ucs82:
 	.4byte 0xE495E498
 	.4byte 0
 	.4byte 0
+.endobj Ucs82
 
 
-Ucs83:
+.obj Ucs83, local
 	.4byte 0
 	.4byte 0x96CEE497
 	.4byte 0x89D68A9D
@@ -8592,9 +8658,10 @@ Ucs83:
 	.4byte 0x0000E4D0
 	.4byte 0x0000E4C1
 	.4byte 0
+.endobj Ucs83
 
 
-Ucs84:
+.obj Ucs84, local
 	.4byte 0
 	.4byte 0x0000E4C2
 	.4byte 0x93B80000
@@ -8723,9 +8790,10 @@ Ucs84:
 	.4byte 0
 	.4byte 0xE4F80000
 	.4byte 0x0000E4F0
+.endobj Ucs84
 
 
-Ucs85:
+.obj Ucs85, local
 	.4byte 0x8EC10000
 	.4byte 0
 	.4byte 0
@@ -8854,9 +8922,10 @@ Ucs85:
 	.4byte 0xE5619194
 	.4byte 0
 	.4byte 0xE5600000
+.endobj Ucs85
 
 
-Ucs86:
+.obj Ucs86, local
 	.4byte 0
 	.4byte 0xE5410000
 	.4byte 0
@@ -8985,9 +9054,10 @@ Ucs86:
 	.4byte 0x0000E588
 	.4byte 0
 	.4byte 0x89E90000
+.endobj Ucs86
 
 
-Ucs87:
+.obj Ucs87, local
 	.4byte 0xE5860000
 	.4byte 0x9649E587
 	.4byte 0
@@ -9116,9 +9186,10 @@ Ucs87:
 	.4byte 0x00008B61
 	.4byte 0
 	.4byte 0xE5B70000
+.endobj Ucs87
 
 
-Ucs88:
+.obj Ucs88, local
 	.4byte 0
 	.4byte 0
 	.4byte 0x0000E5A2
@@ -9247,9 +9318,10 @@ Ucs88:
 	.4byte 0
 	.4byte 0xE5E790BB
 	.4byte 0x909E0000
+.endobj Ucs88
 
 
-Ucs89:
+.obj Ucs89, local
 	.4byte 0
 	.4byte 0xE5E60000
 	.4byte 0xE5EB0000
@@ -9378,9 +9450,10 @@ Ucs89:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj Ucs89
 
 
-Ucs8A:
+.obj Ucs8A, local
 	.4byte 0x8CBE0000
 	.4byte 0x92F9E65D
 	.4byte 0
@@ -9509,9 +9582,10 @@ Ucs8A:
 	.4byte 0x8CBF0000
 	.4byte 0
 	.4byte 0x91F80000
+.endobj Ucs8A
 
 
-Ucs8B:
+.obj Ucs8B, local
 	.4byte 0x96648979
 	.4byte 0x88E00000
 	.4byte 0x93A30000
@@ -9640,9 +9714,10 @@ Ucs8B:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj Ucs8B
 
 
-Ucs8C:
+.obj Ucs8C, local
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -9771,9 +9846,10 @@ Ucs8C:
 	.4byte 0xE6CFE6D0
 	.4byte 0x8D77E6CE
 	.4byte 0
+.endobj Ucs8C
 
 
-Ucs8D:
+.obj Ucs8D, local
 	.4byte 0
 	.4byte 0
 	.4byte 0xE6D1E6D2
@@ -9902,9 +9978,10 @@ Ucs8D:
 	.4byte 0
 	.4byte 0xE6F00000
 	.4byte 0x0000E6F3
+.endobj Ucs8D
 
 
-Ucs8E:
+.obj Ucs8E, local
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -10033,9 +10110,10 @@ Ucs8E:
 	.4byte 0x0000E765
 	.4byte 0xE7648C79
 	.4byte 0xE7670000
+.endobj Ucs8E
 
 
-Ucs8F:
+.obj Ucs8F, local
 	.4byte 0
 	.4byte 0x00008A72
 	.4byte 0x0000E769
@@ -10164,9 +10242,10 @@ Ucs8F:
 	.4byte 0xE7920000
 	.4byte 0x000092C7
 	.4byte 0
+.endobj Ucs8F
 
 
-Ucs90:
+.obj Ucs90, local
 	.4byte 0x91DE9197
 	.4byte 0x000093A6
 	.4byte 0x0000E790
@@ -10295,9 +10374,10 @@ Ucs90:
 	.4byte 0
 	.4byte 0x00009373
 	.4byte 0
+.endobj Ucs90
 
 
-Ucs91:
+.obj Ucs91, local
 	.4byte 0
 	.4byte 0xE7BD0000
 	.4byte 0
@@ -10426,9 +10506,10 @@ Ucs91:
 	.4byte 0
 	.4byte 0xE7DD0000
 	.4byte 0x0000E7E1
+.endobj Ucs91
 
 
-Ucs92:
+.obj Ucs92, local
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -10557,9 +10638,10 @@ Ucs92:
 	.4byte 0xE7FA0000
 	.4byte 0x8D7C0000
 	.4byte 0
+.endobj Ucs92
 
 
-Ucs93:
+.obj Ucs93, local
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -10688,9 +10770,10 @@ Ucs93:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj Ucs93
 
 
-Ucs94:
+.obj Ucs94, local
 	.4byte 0
 	.4byte 0x0000E85E
 	.4byte 0
@@ -10819,9 +10902,10 @@ Ucs94:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj Ucs94
 
 
-Ucs95:
+.obj Ucs95, local
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -10950,9 +11034,10 @@ Ucs95:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj Ucs95
 
 
-Ucs96:
+.obj Ucs96, local
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -11081,9 +11166,10 @@ Ucs96:
 	.4byte 0x00009364
 	.4byte 0
 	.4byte 0
+.endobj Ucs96
 
 
-Ucs97:
+.obj Ucs97, local
 	.4byte 0x8EF90000
 	.4byte 0
 	.4byte 0xE8BA0000
@@ -11212,9 +11298,10 @@ Ucs97:
 	.4byte 0x00008943
 	.4byte 0
 	.4byte 0x00008BBF
+.endobj Ucs97
 
 
-Ucs98:
+.obj Ucs98, local
 	.4byte 0x000095C5
 	.4byte 0x92B88DA0
 	.4byte 0x00008D80
@@ -11343,9 +11430,10 @@ Ucs98:
 	.4byte 0
 	.4byte 0x8E94964F
 	.4byte 0x8FFC0000
+.endobj Ucs98
 
 
-Ucs99:
+.obj Ucs99, local
 	.4byte 0
 	.4byte 0x0000E94C
 	.4byte 0x000096DD
@@ -11474,9 +11562,10 @@ Ucs99:
 	.4byte 0x0000E972
 	.4byte 0
 	.4byte 0x00008F78
+.endobj Ucs99
 
 
-Ucs9A:
+.obj Ucs9A, local
 	.4byte 0x0000E974
 	.4byte 0
 	.4byte 0x0000E976
@@ -11605,9 +11694,10 @@ Ucs9A:
 	.4byte 0x0000E99F
 	.4byte 0
 	.4byte 0
+.endobj Ucs9A
 
 
-Ucs9B:
+.obj Ucs9B, local
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -11736,9 +11826,10 @@ Ucs9B:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj Ucs9B
 
 
-Ucs9C:
+.obj Ucs9C, local
 	.4byte 0
 	.4byte 0
 	.4byte 0xE9D80000
@@ -11867,9 +11958,10 @@ Ucs9C:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj Ucs9C
 
 
-Ucs9D:
+.obj Ucs9D, local
 	.4byte 0
 	.4byte 0x0000E9EE
 	.4byte 0
@@ -11998,9 +12090,10 @@ Ucs9D:
 	.4byte 0x8DEB0000
 	.4byte 0x0000EA5E
 	.4byte 0
+.endobj Ucs9D
 
 
-Ucs9E:
+.obj Ucs9E, local
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -12129,9 +12222,10 @@ Ucs9E:
 	.4byte 0x0000EA84
 	.4byte 0xEA85EA86
 	.4byte 0
+.endobj Ucs9E
 
 
-Ucs9F:
+.obj Ucs9F, local
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -12260,9 +12354,10 @@ Ucs9F:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj Ucs9F
 
 
-UcsFF:
+.obj UcsFF, local
 	.4byte 0x00008149
 	.4byte 0x00008194
 	.4byte 0x81908193
@@ -12391,9 +12486,10 @@ UcsFF:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj UcsFF
 
 
-UcsSjisTable:
+.obj UcsSjisTable, local
 	.4byte Ucs00
 	.4byte 0
 	.4byte 0
@@ -12650,3 +12746,4 @@ UcsSjisTable:
 	.4byte 0
 	.4byte 0
 	.4byte UcsFF
+.endobj UcsSjisTable

@@ -501,8 +501,10 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-AdxQtbl:
+
+.obj AdxQtbl, local
 	.4byte 0
 	.4byte 0x00000001
 	.4byte 0x00000002
@@ -519,3 +521,4 @@ AdxQtbl:
 	.4byte 0xFFFFFFFD
 	.4byte 0xFFFFFFFE
 	.4byte 0xFFFFFFFF
+.endobj AdxQtbl

@@ -937,15 +937,14 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CTitleAHelp_typestr
-CTitleAHelp_typestr:
+.obj CTitleAHelp_typestr, global
 	.asciz "CTitleAHelp"
+.endobj CTitleAHelp_typestr
 
 
-.global CTitleAHelp_strpool
-CTitleAHelp_strpool:
+.obj CTitleAHelp_strpool, global
 	.asciz "/menu/TitleAHelp.arc"
 	.asciz "txt_tit"
 	.asciz "pic_btn%02d"
@@ -964,13 +963,13 @@ CTitleAHelp_strpool:
 	.asciz "mf00_hlp_tit_change.brlan"
 	.balign 4
 	.4byte 0
+.endobj CTitleAHelp_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_80537618
-lbl_80537618:
+.obj lbl_80537618, global
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1395,10 +1394,10 @@ lbl_80537618:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_80537618
 
 
-.global __vt__CTitleAHelp
-__vt__CTitleAHelp:
+.obj __vt__CTitleAHelp, global
 	.4byte __RTTI__CTitleAHelp
 	.4byte 0
 	.4byte __dt__CTitleAHelp
@@ -1433,53 +1432,56 @@ __vt__CTitleAHelp:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CTitleAHelp
 
-.global CTitleAHelp_hierarchy
-CTitleAHelp_hierarchy:
+.obj CTitleAHelp_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CTitleAHelp_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CTitleAHelp
-__RTTI__CTitleAHelp:
+.obj __RTTI__CTitleAHelp, global
 	.4byte CTitleAHelp_typestr
 	.4byte CTitleAHelp_hierarchy
+.endobj __RTTI__CTitleAHelp
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-
-.global double_8066A7E0
-double_8066A7E0:
+.obj double_8066A7E0, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066A7E0
 
-.global float_8066A7E8
-float_8066A7E8:
+.obj float_8066A7E8, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066A7E8
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80666D58, global
+	.skip 0x8
+.endobj lbl_80666D58
 
-.global lbl_80666D58
-lbl_80666D58:
+.obj lbl_80666D60, global
 	.skip 0x8
-.global lbl_80666D60
-lbl_80666D60:
+.endobj lbl_80666D60
+
+.obj lbl_80666D68, global
 	.skip 0x8
-.global lbl_80666D68
-lbl_80666D68:
+.endobj lbl_80666D68
+
+.obj lbl_80666D70, global
 	.skip 0x8
-.global lbl_80666D70
-lbl_80666D70:
-	.skip 0x8
+.endobj lbl_80666D70
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

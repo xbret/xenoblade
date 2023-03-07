@@ -145,9 +145,11 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-.global lbl_80520840
-lbl_80520840:
+
+.obj lbl_80520840, global
 	.asciz "SFXZ"
 	.asciz "SFXINFE"
 	.balign 4
+.endobj lbl_80520840

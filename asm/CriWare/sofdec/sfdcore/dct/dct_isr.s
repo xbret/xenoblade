@@ -1767,9 +1767,10 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-.global sfsd_short_cut
-sfsd_short_cut:
+
+.obj sfsd_short_cut, global
 	.4byte 0x800100FF
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
@@ -2026,8 +2027,9 @@ sfsd_short_cut:
 	.4byte 0x07070707
 	.4byte 0x0707FFFF
 	.4byte 0xFFFFFFFF
+.endobj sfsd_short_cut
 
-idct_column_func:
+.obj idct_column_func, local
 	.4byte IdctColumn_0000_1
 	.4byte IdctColumn_0000_0
 	.4byte IdctColumn_0001_1
@@ -2060,11 +2062,13 @@ idct_column_func:
 	.4byte IdctColumn_1111_0
 	.4byte IdctColumn_1111_1
 	.4byte IdctColumn_1111_0
+.endobj idct_column_func
 
-col_sw_off_msk:
+.obj col_sw_off_msk, local
 	.8byte 0x7FF7BFFBDFFDEFFE
+.endobj col_sw_off_msk
 
-scale8_f:
+.obj scale8_f, local
 	.4byte 0x3FD6A09E
 	.4byte 0x667F3BCD
 	.4byte 0x3FDF6297
@@ -2081,16 +2085,20 @@ scale8_f:
 	.4byte 0xA6AEA963
 	.4byte 0x3FB8F8B8
 	.4byte 0x3C69A60B
+.endobj scale8_f
 
-dctisr_pre_idct_bits:
+.obj dctisr_pre_idct_bits, local
 	.4byte 0x0000000B
+.endobj dctisr_pre_idct_bits
 
-dctisr_upscale_bit_i:
+.obj dctisr_upscale_bit_i, local
 	.4byte 0x00000010
+.endobj dctisr_upscale_bit_i
 
-dctisr_line_descale_bit:
+.obj dctisr_line_descale_bit, local
 	.4byte 0x00000010
 	.4byte 0
+.endobj dctisr_line_descale_bit
 
 	.8byte 0x3FE0000000000000
 	.8byte 0x4100000000000000
@@ -2101,9 +2109,10 @@ dctisr_line_descale_bit:
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global jumptable_8056B558
-jumptable_8056B558:
+
+.obj jumptable_8056B558, global
 	.4byte .L_803BA770
 	.4byte .L_803BA7B4
 	.4byte .L_803BA7EC
@@ -2121,8 +2130,9 @@ jumptable_8056B558:
 	.4byte .L_803BAA08
 	.4byte .L_803BAA40
 	
-.global jumptable_8056B598
-jumptable_8056B598:
+.endobj jumptable_8056B558
+
+.obj jumptable_8056B598, global
 	.4byte .L_803BA51C
 	.4byte .L_803BA550
 	.4byte .L_803BA580
@@ -2131,15 +2141,18 @@ jumptable_8056B598:
 	.4byte .L_803BA648
 	.4byte .L_803BA69C
 	.4byte .L_803BA6F8
+.endobj jumptable_8056B598
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_80607F80
-lbl_80607F80:
+.obj lbl_80607F80, global
 	.skip 0x208
-.global sfsd_scale_tbl
-sfsd_scale_tbl:
+.endobj lbl_80607F80
+
+.obj sfsd_scale_tbl, global
 	.skip 0x100
-.global lbl_80608288
-lbl_80608288:
+.endobj sfsd_scale_tbl
+
+.obj lbl_80608288, global
 	.skip 0x2000
+.endobj lbl_80608288

@@ -442,9 +442,10 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global lbl_80563470
-lbl_80563470:
+
+.obj lbl_80563470, global
 	.asciz "BTA_HH_ENABLE_EVT\n"
 	.balign 4
 	.asciz "BTA_HH_DISABLE_EVT\n"
@@ -480,10 +481,10 @@ lbl_80563470:
 	.balign 4
 	.asciz "BTA_HH_VS_UNPLUG_EVT\n"
 	.balign 4
+.endobj lbl_80563470
 
 
-.global jumptable_80563688
-jumptable_80563688:
+.obj jumptable_80563688, global
 	.4byte .L_8037C030
 	.4byte .L_8037C04C
 	.4byte .L_8037C05C
@@ -500,21 +501,22 @@ jumptable_80563688:
 	.4byte .L_8037C534
 	.4byte .L_8037C540
 	.4byte .L_8037C44C
+.endobj jumptable_80563688
 
 
-.global lbl_805636C8
-lbl_805636C8:
+.obj lbl_805636C8, global
 	.asciz "Invalid app_id [%d]\n"
 	.balign 4
+.endobj lbl_805636C8
 
 
-.global lbl_805636E0
-lbl_805636E0:
+.obj lbl_805636E0, global
 	.asciz "bta_hh_co_open()\n"
 	.balign 4
+.endobj lbl_805636E0
 
 
-.global lbl_805636F4
-lbl_805636F4:
+.obj lbl_805636F4, global
 	.asciz "bta_hh_co_close()\n"
 	.balign 4
+.endobj lbl_805636F4

@@ -1531,8 +1531,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global jumptable_8053F068
-jumptable_8053F068:
+.balign 8
+
+.obj jumptable_8053F068, global
 	.4byte .L_802BAC08
 	.4byte .L_802BAC08
 	.4byte .L_802BAB60
@@ -1550,9 +1551,9 @@ jumptable_8053F068:
 	.4byte .L_802BAC08
 	.4byte .L_802BABF0
 	.4byte .L_802BABD8
+.endobj jumptable_8053F068
 
-.global jumptable_8053F0AC
-jumptable_8053F0AC:
+.obj jumptable_8053F0AC, global
 	.4byte .L_802BB688
 	.4byte .L_802BB240
 	.4byte .L_802BB254
@@ -1570,11 +1571,13 @@ jumptable_8053F0AC:
 	.4byte .L_802BB688
 	.4byte .L_802BB668
 	.4byte .L_802BB608
+.endobj jumptable_8053F0AC
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-fragmentinfo:
+.obj fragmentinfo, local
 	.skip 0x180
+.endobj fragmentinfo
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

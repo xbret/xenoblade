@@ -789,24 +789,27 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global TYPE_NAME__Q34nw4r3g3d12AnmObjTexPat
-TYPE_NAME__Q34nw4r3g3d12AnmObjTexPat:
+.balign 8
+
+.obj TYPE_NAME__Q34nw4r3g3d12AnmObjTexPat, global
 	.4byte 0x0000000D
 	.asciz "AnmObjTexPat"
 	.balign 4
 	.4byte 0
+.endobj TYPE_NAME__Q34nw4r3g3d12AnmObjTexPat
 
 
-.global TYPE_NAME__Q34nw4r3g3d15AnmObjTexPatRes
-TYPE_NAME__Q34nw4r3g3d15AnmObjTexPatRes:
+.obj TYPE_NAME__Q34nw4r3g3d15AnmObjTexPatRes, global
 	.4byte 0x00000010
 	.asciz "AnmObjTexPatRes"
 	.4byte 0
+.endobj TYPE_NAME__Q34nw4r3g3d15AnmObjTexPatRes
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056CAF0
-lbl_8056CAF0:
+.balign 8
+
+.obj lbl_8056CAF0, global
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d15AnmObjTexPatResCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -825,10 +828,10 @@ lbl_8056CAF0:
 	.4byte Attach__Q34nw4r3g3d12AnmObjTexPatFiPQ34nw4r3g3d15AnmObjTexPatRes
 	.4byte Detach__Q34nw4r3g3d12AnmObjTexPatFi
 	.4byte DetachAll__Q34nw4r3g3d12AnmObjTexPatFv
+.endobj lbl_8056CAF0
 
 
-.global lbl_8056CB38
-lbl_8056CB38:
+.obj lbl_8056CB38, global
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d12AnmObjTexPatCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -847,19 +850,22 @@ lbl_8056CB38:
 	.4byte Attach__Q34nw4r3g3d12AnmObjTexPatFiPQ34nw4r3g3d15AnmObjTexPatRes
 	.4byte Detach__Q34nw4r3g3d12AnmObjTexPatFi
 	.4byte DetachAll__Q34nw4r3g3d12AnmObjTexPatFv
+.endobj lbl_8056CB38
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C358
-float_8066C358:
+.balign 8
+
+.obj float_8066C358, global
 	.float 0
+.endobj float_8066C358
 
 
-.global float_8066C35C
-float_8066C35C:
+.obj float_8066C35C, global
 	.float 1.0
+.endobj float_8066C35C
 
 
-.global double_8066C360
-double_8066C360:
+.obj double_8066C360, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066C360

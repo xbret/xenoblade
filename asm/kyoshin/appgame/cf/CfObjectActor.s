@@ -2697,17 +2697,16 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_80534860
-lbl_80534860:
+.obj lbl_80534860, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A4194
+.endobj lbl_80534860
 
 
-.global __vt__cf_CfObjectActor
-__vt__cf_CfObjectActor:
+.obj __vt__cf_CfObjectActor, global
 	.4byte __RTTI__cf_CfObjectActor
 	.4byte 0
 	.4byte func_800AFB04
@@ -3081,65 +3080,66 @@ __vt__cf_CfObjectActor:
 	.4byte func_801725C0
 	.4byte func_800B062C
 	.4byte func_800B0620
+.endobj __vt__cf_CfObjectActor
 
-.global CScnMaruShadowNw4r_hierarchy
-CScnMaruShadowNw4r_hierarchy:
+.obj CScnMaruShadowNw4r_hierarchy, global
 	.4byte __RTTI__IScnPolyShadow
 	.4byte 0
 	.4byte 0
+.endobj CScnMaruShadowNw4r_hierarchy
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_80669FF8
-float_80669FF8:
+.obj float_80669FF8, global
 	.float 0
+.endobj float_80669FF8
 
 
-.global float_80669FFC
-float_80669FFC:
+.obj float_80669FFC, global
 	.float 0.5
+.endobj float_80669FFC
 
 
-.global float_8066A000
-float_8066A000:
+.obj float_8066A000, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066A000
 
 
-.global double_8066A008
-double_8066A008:
+.obj double_8066A008, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066A008
 
-.global double_8066A010
-double_8066A010:
+.obj double_8066A010, global
 	.double 0.5 #0x3FE0000000000000
+.endobj double_8066A010
 
 
-.global double_8066A018
-double_8066A018:
+.obj double_8066A018, global
 	.double -0.5 #0xBFE0000000000000
+.endobj double_8066A018
 
 
-.global float_8066A020
-float_8066A020:
+.obj float_8066A020, global
 	.float 100.0
+.endobj float_8066A020
 
 
-.global float_8066A024
-float_8066A024:
+.obj float_8066A024, global
 	.float 0.01 #0x3C23D70A
+.endobj float_8066A024
 
 
-.global float_8066A028
-float_8066A028:
+.obj float_8066A028, global
 	.float 50 #0x42480000
+.endobj float_8066A028
 
 
-.global float_8066A02C
-float_8066A02C:
+.obj float_8066A02C, global
 	.float -1.0
+.endobj float_8066A02C
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

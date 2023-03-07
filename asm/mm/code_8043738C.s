@@ -165,40 +165,42 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_80525D78
-lbl_80525D78:
+.obj lbl_80525D78, global
 	.asciz "WorkThreadSystem"
 	.balign 4
+.endobj lbl_80525D78
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80665E40
-lbl_80665E40:
+.obj lbl_80665E40, global
 	.4byte lbl_80525D78
+.endobj lbl_80665E40
 
 
-.global lbl_80665E44
-lbl_80665E44:
+.obj lbl_80665E44, global
 	.4byte 0xFFFFFFFF
+.endobj lbl_80665E44
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80667E70, global
+	.skip 0x4
+.endobj lbl_80667E70
 
-.global lbl_80667E70
-lbl_80667E70:
+.obj lbl_80667E74, global
 	.skip 0x4
-.global lbl_80667E74
-lbl_80667E74:
-	.skip 0x4
-.global lbl_80667E78
-lbl_80667E78:
+.endobj lbl_80667E74
+
+.obj lbl_80667E78, global
 	.skip 0x8
+.endobj lbl_80667E78
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

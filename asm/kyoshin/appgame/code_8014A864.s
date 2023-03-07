@@ -50,11 +50,11 @@
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80666AA0
-lbl_80666AA0:
+.obj lbl_80666AA0, global
 	.skip 0x8
+.endobj lbl_80666AA0
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

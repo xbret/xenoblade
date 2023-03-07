@@ -1818,30 +1818,33 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global TYPE_NAME__Q34nw4r3g3d6ScnObj
-TYPE_NAME__Q34nw4r3g3d6ScnObj:
+.balign 8
+
+.obj TYPE_NAME__Q34nw4r3g3d6ScnObj, global
 	.4byte 0x00000007
 	.asciz "ScnObj"
 	.balign 4
 	.4byte 0
+.endobj TYPE_NAME__Q34nw4r3g3d6ScnObj
 
-.global TYPE_NAME__Q34nw4r3g3d7ScnLeaf
-TYPE_NAME__Q34nw4r3g3d7ScnLeaf:
+.obj TYPE_NAME__Q34nw4r3g3d7ScnLeaf, global
 	.4byte 0x00000008
 	.asciz "ScnLeaf"
 	.4byte 0
+.endobj TYPE_NAME__Q34nw4r3g3d7ScnLeaf
 
 
-.global TYPE_NAME__Q34nw4r3g3d8ScnGroup
-TYPE_NAME__Q34nw4r3g3d8ScnGroup:
+.obj TYPE_NAME__Q34nw4r3g3d8ScnGroup, global
 	.4byte 0x00000009
 	.asciz "ScnGroup"
 	.balign 4
+.endobj TYPE_NAME__Q34nw4r3g3d8ScnGroup
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global jumptable_8056CED8
-jumptable_8056CED8:
+.balign 8
+
+.obj jumptable_8056CED8, global
 	.4byte .L_803F4800
 	.4byte .L_803F4698
 	.4byte .L_803F46C0
@@ -1852,10 +1855,10 @@ jumptable_8056CED8:
 	.4byte .L_803F4788
 	.4byte .L_803F47B0
 	.4byte .L_803F47D8
+.endobj jumptable_8056CED8
 
 
-.global jumptable_8056CF00
-jumptable_8056CF00:
+.obj jumptable_8056CF00, global
 	.4byte .L_803F48D0
 	.4byte .L_803F4840
 	.4byte .L_803F4850
@@ -1866,10 +1869,10 @@ jumptable_8056CF00:
 	.4byte .L_803F48A0
 	.4byte .L_803F48B0
 	.4byte .L_803F48C0
+.endobj jumptable_8056CF00
 
 
-.global lbl_8056CF28
-lbl_8056CF28:
+.obj lbl_8056CF28, global
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d8ScnGroupCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -1886,10 +1889,10 @@ lbl_8056CF28:
 	.4byte Insert__Q34nw4r3g3d8ScnGroupFUlPQ34nw4r3g3d6ScnObj
 	.4byte Remove__Q34nw4r3g3d8ScnGroupFUl
 	.4byte Remove__Q34nw4r3g3d8ScnGroupFPQ34nw4r3g3d6ScnObj
+.endobj lbl_8056CF28
 
 
-.global lbl_8056CF68
-lbl_8056CF68:
+.obj lbl_8056CF68, global
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d6ScnObjCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -1904,22 +1907,27 @@ lbl_8056CF68:
 	.4byte GetValueForSortXlu__Q34nw4r3g3d6ScnObjCFv
 	.4byte CalcWorldMtx__Q34nw4r3g3d6ScnObjFPCQ34nw4r4math5MTX34PUl
 	.4byte 0
+.endobj lbl_8056CF68
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-.global float_8066C4D8
-float_8066C4D8:
+
+.obj float_8066C4D8, global
 	.float 0
+.endobj float_8066C4D8
 
 
-.global float_8066C4DC
-float_8066C4DC:
+.obj float_8066C4DC, global
 	.float 1.0
+.endobj float_8066C4DC
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global gpCullingFrustum__Q24nw4r3g3d
-gpCullingFrustum__Q24nw4r3g3d:
+.balign 8
+
+.obj gpCullingFrustum__Q24nw4r3g3d, global
 	.skip 0x8
+.endobj gpCullingFrustum__Q24nw4r3g3d

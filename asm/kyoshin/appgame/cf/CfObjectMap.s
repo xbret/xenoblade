@@ -11928,35 +11928,33 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-
-.global reslist_cf_IFactoryEvent_typestr
-reslist_cf_IFactoryEvent_typestr:
+.obj reslist_cf_IFactoryEvent_typestr, global
 	.asciz "reslist<cf::IFactoryEvent *>"
 	.balign 4
+.endobj reslist_cf_IFactoryEvent_typestr
 
-.global _reslist_base_cf_IFactoryEvent_typestr
-_reslist_base_cf_IFactoryEvent_typestr:
+.obj _reslist_base_cf_IFactoryEvent_typestr, global
 	.asciz "_reslist_base<cf::IFactoryEvent *>"
 	.balign 4
+.endobj _reslist_base_cf_IFactoryEvent_typestr
 
-.global reslist_cf_TboxInfo_typestr
-reslist_cf_TboxInfo_typestr:
+.obj reslist_cf_TboxInfo_typestr, global
 	.asciz "reslist<cf::TboxInfo>"
 	.balign 4
+.endobj reslist_cf_TboxInfo_typestr
 
-.global _reslist_base_cf_TboxInfo_typestr
-_reslist_base_cf_TboxInfo_typestr:
+.obj _reslist_base_cf_TboxInfo_typestr, global
 	.asciz "_reslist_base<cf::TboxInfo>"
+.endobj _reslist_base_cf_TboxInfo_typestr
 
-.global reslist_cf_CfObject_typestr
-reslist_cf_CfObject_typestr:
+.obj reslist_cf_CfObject_typestr, global
 	.asciz "reslist<cf::CfObject *>"
+.endobj reslist_cf_CfObject_typestr
 
 
-.global CfObjectMap_strpool
-CfObjectMap_strpool:
+.obj CfObjectMap_strpool, global
 	.asciz "ene_disp_r"
 	.asciz "ene_release_h"
 	.asciz "ene_release_r"
@@ -11965,25 +11963,25 @@ CfObjectMap_strpool:
 	.byte 0x00
 	.asciz "ene_type"
 	.asciz "POP_TIME"
+.endobj CfObjectMap_strpool
 
-.global cf_CfObjectMap_typestr
-cf_CfObjectMap_typestr:
+.obj cf_CfObjectMap_typestr, global
 	.asciz "cf::CfObjectMap"
+.endobj cf_CfObjectMap_typestr
 
 
-.global lbl_804F7D60
-lbl_804F7D60:
+.obj lbl_804F7D60, global
 	.asciz ".lod"
 	.asciz "mapATR"
 	.4byte 0
+.endobj lbl_804F7D60
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global jumptable_8052C828
-jumptable_8052C828:
+.obj jumptable_8052C828, global
 	.4byte .L_800B982C
 	.4byte .L_800B982C
 	.4byte .L_800B97EC
@@ -12002,63 +12000,63 @@ jumptable_8052C828:
 	.4byte .L_800B9824
 	.4byte .L_800B9824
 	.4byte .L_800B9824
+.endobj jumptable_8052C828
 
 
-.global __vt__reslist_cf_IFactoryEvent
-__vt__reslist_cf_IFactoryEvent:
+.obj __vt__reslist_cf_IFactoryEvent, global
 	.4byte __RTTI__reslist_cf_IFactoryEvent
 	.4byte 0
 	.4byte __dt__reslist_cf_IFactoryEvent
+.endobj __vt__reslist_cf_IFactoryEvent
 
-.global reslist_cf_IFactoryEvent_hierarchy
-reslist_cf_IFactoryEvent_hierarchy:
+.obj reslist_cf_IFactoryEvent_hierarchy, global
 	.4byte __RTTI___reslist_base_cf_IFactoryEvent
 	.4byte 0
 	.4byte 0
+.endobj reslist_cf_IFactoryEvent_hierarchy
 
 
-.global __vt___reslist_base_cf_IFactoryEvent
-__vt___reslist_base_cf_IFactoryEvent:
+.obj __vt___reslist_base_cf_IFactoryEvent, global
 	.4byte __RTTI___reslist_base_cf_IFactoryEvent
 	.4byte 0
 	.4byte __dt___reslist_base_cf_IFactoryEvent
+.endobj __vt___reslist_base_cf_IFactoryEvent
 
 
-.global __vt__reslist_cf_TboxInfo
-__vt__reslist_cf_TboxInfo:
+.obj __vt__reslist_cf_TboxInfo, global
 	.4byte __RTTI__reslist_cf_TboxInfo
 	.4byte 0
 	.4byte __dt__reslist_cf_TboxInfo
+.endobj __vt__reslist_cf_TboxInfo
 
-.global reslist_cf_TboxInfo_hierarchy
-reslist_cf_TboxInfo_hierarchy:
+.obj reslist_cf_TboxInfo_hierarchy, global
 	.4byte __RTTI___reslist_base_cf_TboxInfo
 	.4byte 0
 	.4byte 0
+.endobj reslist_cf_TboxInfo_hierarchy
 
 
-.global __vt___reslist_base_cf_TboxInfo
-__vt___reslist_base_cf_TboxInfo:
+.obj __vt___reslist_base_cf_TboxInfo, global
 	.4byte __RTTI___reslist_base_cf_TboxInfo
 	.4byte 0
 	.4byte __dt___reslist_base_cf_TboxInfo
+.endobj __vt___reslist_base_cf_TboxInfo
 
 
-.global __vt__reslist_cf_CfObject
-__vt__reslist_cf_CfObject:
+.obj __vt__reslist_cf_CfObject, global
 	.4byte __RTTI__reslist_cf_CfObject
 	.4byte 0
 	.4byte __dt__reslist_cf_CfObject
+.endobj __vt__reslist_cf_CfObject
 
-.global reslist_cf_CfObject_hierarchy
-reslist_cf_CfObject_hierarchy:
+.obj reslist_cf_CfObject_hierarchy, global
 	.4byte __RTTI___reslist_base_cf_CfObject
 	.4byte 0
 	.4byte 0
+.endobj reslist_cf_CfObject_hierarchy
 
 
-.global lbl_8052C8D0
-lbl_8052C8D0:
+.obj lbl_8052C8D0, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_800B9C70
@@ -12069,10 +12067,10 @@ lbl_8052C8D0:
 	.4byte 0xFFFFFFFF
 	.4byte func_800BA440
 	.4byte 0
+.endobj lbl_8052C8D0
 
 
-.global __vt__cf_CfObjectMap
-__vt__cf_CfObjectMap:
+.obj __vt__cf_CfObjectMap, global
 	.4byte __RTTI__cf_CfObjectMap
 	.4byte 0
 	.4byte func_8003DC64
@@ -12187,9 +12185,9 @@ __vt__cf_CfObjectMap:
 	.4byte func_800AC98C
 	.4byte func_800BA70C
 	.4byte func_800B05EC
+.endobj __vt__cf_CfObjectMap
 
-.global cf_CfObjectMap_hierarchy
-cf_CfObjectMap_hierarchy:
+.obj cf_CfObjectMap_hierarchy, global
 	.4byte __RTTI__cf_CObjectState
 	.4byte 0
 	.4byte __RTTI__cf_CObjectParam
@@ -12200,282 +12198,296 @@ cf_CfObjectMap_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CfObjectMap_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-.global float_806645C0
-float_806645C0:
+
+.obj float_806645C0, global
 	.float 90 #0x42B40000
+.endobj float_806645C0
 
 
-.global float_806645C4
-float_806645C4:
+.obj float_806645C4, global
 	.float 50 #0x42480000
+.endobj float_806645C4
 
 
-.global float_806645C8
-float_806645C8:
+.obj float_806645C8, global
 	.float 30 #0x41F00000
+.endobj float_806645C8
 
 
-.global float_806645CC
-float_806645CC:
+.obj float_806645CC, global
 	.float 10.0
+.endobj float_806645CC
 
-.global lbl_806645D0
-lbl_806645D0:
+.obj lbl_806645D0, global
 	.4byte 0xFFFFFFFC
+.endobj lbl_806645D0
 
 
-.global lbl_806645D4
-lbl_806645D4:
+.obj lbl_806645D4, global
 	.4byte 0xFFFFFFFC
+.endobj lbl_806645D4
 
-.global __RTTI__reslist_cf_IFactoryEvent
-__RTTI__reslist_cf_IFactoryEvent:
+.obj __RTTI__reslist_cf_IFactoryEvent, global
 	.4byte reslist_cf_IFactoryEvent_typestr
 	.4byte reslist_cf_IFactoryEvent_hierarchy
+.endobj __RTTI__reslist_cf_IFactoryEvent
 
-.global __RTTI___reslist_base_cf_IFactoryEvent
-__RTTI___reslist_base_cf_IFactoryEvent:
+.obj __RTTI___reslist_base_cf_IFactoryEvent, global
 	.4byte _reslist_base_cf_IFactoryEvent_typestr
 	.4byte 0
+.endobj __RTTI___reslist_base_cf_IFactoryEvent
 
-.global __RTTI__reslist_cf_TboxInfo
-__RTTI__reslist_cf_TboxInfo:
+.obj __RTTI__reslist_cf_TboxInfo, global
 	.4byte reslist_cf_TboxInfo_typestr
 	.4byte reslist_cf_TboxInfo_hierarchy
+.endobj __RTTI__reslist_cf_TboxInfo
 
-.global __RTTI___reslist_base_cf_TboxInfo
-__RTTI___reslist_base_cf_TboxInfo:
+.obj __RTTI___reslist_base_cf_TboxInfo, global
 	.4byte _reslist_base_cf_TboxInfo_typestr
 	.4byte 0
+.endobj __RTTI___reslist_base_cf_TboxInfo
 
-.global __RTTI__reslist_cf_CfObject
-__RTTI__reslist_cf_CfObject:
+.obj __RTTI__reslist_cf_CfObject, global
 	.4byte reslist_cf_CfObject_typestr
 	.4byte reslist_cf_CfObject_hierarchy
+.endobj __RTTI__reslist_cf_CfObject
 
-.global __RTTI__cf_CfObjectMap
-__RTTI__cf_CfObjectMap:
+.obj __RTTI__cf_CfObjectMap, global
 	.4byte cf_CfObjectMap_typestr
 	.4byte cf_CfObjectMap_hierarchy
+.endobj __RTTI__cf_CfObjectMap
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global double_80669298
-double_80669298:
+.balign 8
+
+.obj double_80669298, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_80669298
 
-.global float_806692A0
-float_806692A0:
+.obj float_806692A0, global
 	.float 0
+.endobj float_806692A0
 
 
-.global float_806692A4
-float_806692A4:
+.obj float_806692A4, global
 	.float 1.0
+.endobj float_806692A4
 
 
-.global float_806692A8
-float_806692A8:
+.obj float_806692A8, global
 	.float 360 #0x43B40000
+.endobj float_806692A8
 
 
-.global float_806692AC
-float_806692AC:
+.obj float_806692AC, global
 	.float 3 #0x40400000
+.endobj float_806692AC
 
 
-.global float_806692B0
-float_806692B0:
+.obj float_806692B0, global
 	.float 0.75
+.endobj float_806692B0
 
 
-.global float_806692B4
-float_806692B4:
+.obj float_806692B4, global
 	.float 0.5
+.endobj float_806692B4
 
 
-.global float_806692B8
-float_806692B8:
+.obj float_806692B8, global
 	.float 0.4 #0x3ECCCCCD
+.endobj float_806692B8
 
 
-.global float_806692BC
-float_806692BC:
+.obj float_806692BC, global
 	.float 10.0
+.endobj float_806692BC
 
 
-.global float_806692C0
-float_806692C0:
+.obj float_806692C0, global
 	.float 30 #0x41F00000
+.endobj float_806692C0
 
 
-.global float_806692C4
-float_806692C4:
+.obj float_806692C4, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_806692C4
 
 
-.global float_806692C8
-float_806692C8:
+.obj float_806692C8, global
 	.float 4 #0x40800000
+.endobj float_806692C8
 
 
-.global float_806692CC
-float_806692CC:
+.obj float_806692CC, global
 	.float 0.6 #0x3F19999A
+.endobj float_806692CC
 
 
-.global float_806692D0
-float_806692D0:
+.obj float_806692D0, global
 	.float 20 #0x41A00000
+.endobj float_806692D0
 
 
-.global float_806692D4
-float_806692D4:
+.obj float_806692D4, global
 	.float 2 #0x40000000
+.endobj float_806692D4
 
 
-.global float_806692D8
-float_806692D8:
+.obj float_806692D8, global
 	.float 1.5
+.endobj float_806692D8
 
 
-.global float_806692DC
-float_806692DC:
+.obj float_806692DC, global
 	.float 10000000 #0x4B189680
+.endobj float_806692DC
 
 
-.global float_806692E0
-float_806692E0:
+.obj float_806692E0, global
 	.float 75 #0x42960000
 	.4byte 0
+.endobj float_806692E0
 
 
-.global double_806692E8
-double_806692E8:
+.obj double_806692E8, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_806692E8
 
-.global float_806692F0
-float_806692F0:
+.obj float_806692F0, global
 	.float 180 #0x43340000
+.endobj float_806692F0
 
 
-.global float_806692F4
-float_806692F4:
+.obj float_806692F4, global
 	.float 5640.01 #0x45B04014
+.endobj float_806692F4
 
 
-.global float_806692F8
-float_806692F8:
+.obj float_806692F8, global
 	.float 15 #0x41700000
 	.4byte 0
+.endobj float_806692F8
 
 
-.global float_80669300
-float_80669300:
+.obj float_80669300, global
 	.float 0
+.endobj float_80669300
 
 
-.global float_80669304
-float_80669304:
+.obj float_80669304, global
 	.float 1.0
+.endobj float_80669304
 
 
-.global float_80669308
-float_80669308:
+.obj float_80669308, global
 	.float 0.5
+.endobj float_80669308
 
 
-.global float_8066930C
-float_8066930C:
+.obj float_8066930C, global
 	.float -1.0
+.endobj float_8066930C
 
 
-.global float_80669310
-float_80669310:
+.obj float_80669310, global
 	.float 0.15 #0x3E19999A
+.endobj float_80669310
 
 
-.global float_80669314
-float_80669314:
+.obj float_80669314, global
 	.float 46 #0x42380000
+.endobj float_80669314
 
 
-.global float_80669318
-float_80669318:
+.obj float_80669318, global
 	.float 0.05 #0x3D4CCCCD
+.endobj float_80669318
 
 
-.global float_8066931C
-float_8066931C:
+.obj float_8066931C, global
 	.float 60 #0x42700000
+.endobj float_8066931C
 
 
-.global float_80669320
-float_80669320:
+.obj float_80669320, global
 	.float 0.085 #0x3DAE147B
+.endobj float_80669320
 
 
-.global float_80669324
-float_80669324:
+.obj float_80669324, global
 	.float 0.111 #0x3DE353F8
+.endobj float_80669324
 
 
-.global float_80669328
-float_80669328:
+.obj float_80669328, global
 	.float 0.19 #0x3E428F5C
+.endobj float_80669328
 
 
-.global float_8066932C
-float_8066932C:
+.obj float_8066932C, global
 	.float 10000 #0x461C4000
+.endobj float_8066932C
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_805764C0
-lbl_805764C0:
+.obj lbl_805764C0, global
 	.skip 0xC
-.global lbl_805764CC
-lbl_805764CC:
+.endobj lbl_805764C0
+
+.obj lbl_805764CC, global
 	.skip 0xD14
+.endobj lbl_805764CC
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj float_806667C8, global
+	.skip 0x4
+.endobj float_806667C8
 
-.global float_806667C8
-float_806667C8:
+.obj lbl_806667CC, global
 	.skip 0x4
-.global lbl_806667CC
-lbl_806667CC:
+.endobj lbl_806667CC
+
+.obj float_806667D0, global
 	.skip 0x4
-.global float_806667D0
-float_806667D0:
+.endobj float_806667D0
+
+.obj lbl_806667D4, global
 	.skip 0x4
-.global lbl_806667D4
-lbl_806667D4:
+.endobj lbl_806667D4
+
+.obj float_806667D8, global
 	.skip 0x4
-.global float_806667D8
-float_806667D8:
+.endobj float_806667D8
+
+.obj float_806667DC, global
 	.skip 0x4
-.global float_806667DC
-float_806667DC:
+.endobj float_806667DC
+
+.obj lbl_806667E0, global
 	.skip 0x4
-.global lbl_806667E0
-lbl_806667E0:
+.endobj lbl_806667E0
+
+.obj lbl_806667E4, global
 	.skip 0x4
-.global lbl_806667E4
-lbl_806667E4:
-	.skip 0x4
-.global lbl_806667E8
-lbl_806667E8:
+.endobj lbl_806667E4
+
+.obj lbl_806667E8, global
 	.skip 0x8
+.endobj lbl_806667E8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

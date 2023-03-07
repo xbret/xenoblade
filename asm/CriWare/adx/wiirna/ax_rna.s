@@ -1890,18 +1890,19 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8051C760
-lbl_8051C760:
+.balign 8
+
+.obj lbl_8051C760, global
 	.asciz "\nAXRNA Ver.1.15 Build:Nov 13 2008 10:53:00\n"
+.endobj lbl_8051C760
 
 
-.global lbl_8051C78C
-lbl_8051C78C:
+.obj lbl_8051C78C, global
 	.4byte lbl_8051C760
+.endobj lbl_8051C78C
 
 
-.global ax_rna_strpool
-ax_rna_strpool:
+.obj ax_rna_strpool, global
 	.asciz "E1070301:Invalid parameter(maxnch<=0).\n"
 	.asciz "E1070302:Invalid parameter(sj=null).\n"
 	.asciz "E1070303:Invalid parameter(sj[]=null).\n"
@@ -1935,18 +1936,20 @@ ax_rna_strpool:
 	.asciz "E8043002:Invalid parameter(wpadno<0 or wpadno>3).\n"
 	.balign 4
 	.4byte 0
+.endobj ax_rna_strpool
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global axrna_def_src_type
-axrna_def_src_type:
+
+.obj axrna_def_src_type, global
 	.4byte 0x00000001
+.endobj axrna_def_src_type
 
 
-.global axrna_pan_tbl
-axrna_pan_tbl:
+.obj axrna_pan_tbl, global
 	.4byte 0
 	.4byte 0x00000004
 	.4byte 0x00000008
@@ -1978,21 +1981,26 @@ axrna_pan_tbl:
 	.4byte 0x00000077
 	.4byte 0x0000007B
 	.4byte 0x0000007F
+.endobj axrna_pan_tbl
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global axrna_init_cnt
-axrna_init_cnt:
+.obj axrna_init_cnt, global
 	.skip 0x4
-.global axrna_def_adjsfreq_fg
-axrna_def_adjsfreq_fg:
+.endobj axrna_init_cnt
+
+.obj axrna_def_adjsfreq_fg, global
 	.skip 0x4
-.global axrna_obj
-axrna_obj:
+.endobj axrna_def_adjsfreq_fg
+
+.obj axrna_obj, global
 	.skip 0xE40
-.global lbl_805F7008
-lbl_805F7008:
+.endobj axrna_obj
+
+.obj lbl_805F7008, global
 	.skip 0x4
-.global lbl_805F700C
-lbl_805F700C:
+.endobj lbl_805F7008
+
+.obj lbl_805F700C, global
 	.skip 0x4
+.endobj lbl_805F700C

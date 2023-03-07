@@ -225,16 +225,16 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B330
-float_8066B330:
+.obj float_8066B330, global
 	.float 1.0
+.endobj float_8066B330
 
 
-.global float_8066B334
-float_8066B334:
+.obj float_8066B334, global
 	.float 0
+.endobj float_8066B334
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

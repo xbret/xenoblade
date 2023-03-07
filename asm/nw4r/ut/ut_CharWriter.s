@@ -1563,53 +1563,63 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C940
-float_8066C940:
+.balign 8
+
+.obj float_8066C940, global
 	.float 0
+.endobj float_8066C940
 
 
-.global float_8066C944
-float_8066C944:
+.obj float_8066C944, global
 	.float 1.0
+.endobj float_8066C944
 
 
-.global double_8066C948
-double_8066C948:
+.obj double_8066C948, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066C948
 
-.global float_8066C950
-float_8066C950:
+.obj float_8066C950, global
 	.float 0.5
 	.4byte 0
+.endobj float_8066C950
 
 
-.global double_8066C958
-double_8066C958:
+.obj double_8066C958, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066C958
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_806570A8
-lbl_806570A8:
+.obj lbl_806570A8, global
 	.skip 0x10
+.endobj lbl_806570A8
 
-mLoadingTexture__Q34nw4r2ut10CharWriter:
+.obj mLoadingTexture__Q34nw4r2ut10CharWriter, local
 	.skip 0x10
+.endobj mLoadingTexture__Q34nw4r2ut10CharWriter
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
+
 #@GUARD@SetupGXCommon__27@unnamed@ut_CharWriter_cpp@Fv@fog
-lbl_80667E38:
+.obj lbl_80667E38, local
 	.skip 0x4
+.endobj lbl_80667E38
 
-lbl_80667E3C:
+.obj lbl_80667E3C, local
 	.skip 0x1
+.endobj lbl_80667E3C
 
-lbl_80667E3D:
+.obj lbl_80667E3D, local
 	.skip 0x1
+.endobj lbl_80667E3D
 
-lbl_80667E3E:
+.obj lbl_80667E3E, local
 	.skip 0x1
+.endobj lbl_80667E3E
 
-lbl_80667E3F:
+.obj lbl_80667E3F, local
 	.skip 0x1
+.endobj lbl_80667E3F

@@ -240,7 +240,7 @@
 
 .balign 16 #needed to align switch jump table for dispatch.c
 
-TRK_ISR_OFFSETS:
+.obj TRK_ISR_OFFSETS, local
 	.4byte 0x00000100
 	.4byte 0x00000200
 	.4byte 0x00000300
@@ -257,12 +257,14 @@ TRK_ISR_OFFSETS:
 	.4byte 0x00001400
 	.4byte 0x00001700
 	.4byte 0
+.endobj TRK_ISR_OFFSETS
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
 .balign 8 #needed to align main_TRK.c
 
-lc_base:
+.obj lc_base, local
 	.skip 0x4
+.endobj lc_base
 
 .skip 0x4

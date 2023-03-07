@@ -249,38 +249,37 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CVS_THREAD_DOWN_typestr
-cf_CVS_THREAD_DOWN_typestr:
+.obj cf_CVS_THREAD_DOWN_typestr, global
 	.asciz "cf::CVS_THREAD_DOWN"
 	.4byte 0
+.endobj cf_CVS_THREAD_DOWN_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8053D1F8
-lbl_8053D1F8:
+.obj lbl_8053D1F8, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A5C90
+.endobj lbl_8053D1F8
 
-.global lbl_8053D204
-lbl_8053D204:
+.obj lbl_8053D204, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A5D4C
+.endobj lbl_8053D204
 
-.global lbl_8053D210
-lbl_8053D210:
+.obj lbl_8053D210, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A5E0C
+.endobj lbl_8053D210
 
 
-.global __vt__cf_CVS_THREAD_DOWN
-__vt__cf_CVS_THREAD_DOWN:
+.obj __vt__cf_CVS_THREAD_DOWN, global
 	.4byte __RTTI__cf_CVS_THREAD_DOWN
 	.4byte 0
 	.4byte func_802A3B50
@@ -288,22 +287,23 @@ __vt__cf_CVS_THREAD_DOWN:
 	.4byte func_802A5ECC
 	.4byte func_802A1EA0
 	.4byte func_802A3740
+.endobj __vt__cf_CVS_THREAD_DOWN
 
-.global cf_CVS_THREAD_DOWN_hierarchy
-cf_CVS_THREAD_DOWN_hierarchy:
+.obj cf_CVS_THREAD_DOWN_hierarchy, global
 	.4byte __RTTI__cf_CVS_THREAD
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CVS_THREAD_DOWN_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CVS_THREAD_DOWN
-__RTTI__cf_CVS_THREAD_DOWN:
+.obj __RTTI__cf_CVS_THREAD_DOWN, global
 	.4byte cf_CVS_THREAD_DOWN_typestr
 	.4byte cf_CVS_THREAD_DOWN_hierarchy
+.endobj __RTTI__cf_CVS_THREAD_DOWN
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

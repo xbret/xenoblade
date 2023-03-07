@@ -2551,10 +2551,11 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
+
 
 #flipInfos$8494
-.global lbl_8056D398
-lbl_8056D398:
+.obj lbl_8056D398, global
 	.4byte 0x00000100
 	.4byte 0x00010101
 	.4byte 0x00010100
@@ -2570,10 +2571,10 @@ lbl_8056D398:
 	.4byte 0x00010100
 	.4byte 0x01010000
 	.4byte 0x00010100
+.endobj lbl_8056D398
 
 
-.global lbl_8056D3D4
-lbl_8056D3D4:
+.obj lbl_8056D3D4, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r3lyt6WindowFv
@@ -2609,25 +2610,30 @@ lbl_8056D3D4:
 	.4byte DrawFrame__Q34nw4r3lyt6WindowFRCQ34nw4r4math4VEC2RCQ44nw4r3lyt6Window5FrameRCQ34nw4r3lyt15WindowFrameSizeUc
 	.4byte DrawFrame4__Q34nw4r3lyt6WindowFRCQ34nw4r4math4VEC2PCQ44nw4r3lyt6Window5FrameRCQ34nw4r3lyt15WindowFrameSizeUc
 	.4byte DrawFrame8__Q34nw4r3lyt6WindowFRCQ34nw4r4math4VEC2PCQ44nw4r3lyt6Window5FrameRCQ34nw4r3lyt15WindowFrameSizeUc
+.endobj lbl_8056D3D4
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C580
-float_8066C580:
+.balign 8
+
+.obj float_8066C580, global
 	.float 0
 	.4byte 0
+.endobj float_8066C580
 
 
-.global double_8066C588
-double_8066C588:
+.obj double_8066C588, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066C588
 
-.global double_8066C590
-double_8066C590:
+.obj double_8066C590, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066C590
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global typeInfo__Q34nw4r3lyt6Window
-typeInfo__Q34nw4r3lyt6Window:
+.balign 8
+
+.obj typeInfo__Q34nw4r3lyt6Window, global
 	.skip 0x8
+.endobj typeInfo__Q34nw4r3lyt6Window

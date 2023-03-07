@@ -651,89 +651,96 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CNRequest
-__vt__CNRequest:
+.obj __vt__CNRequest, global
 	.4byte __RTTI__CNRequest
 	.4byte 0
 	.4byte __dt__CNRequest
 	.4byte 0
+.endobj __vt__CNRequest
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80666480
-lbl_80666480:
+.obj lbl_80666480, global
 	.4byte lbl_8066D9C8
+.endobj lbl_80666480
 
 
-.global lbl_80666484
-lbl_80666484:
+.obj lbl_80666484, global
 	.4byte lbl_8066D9C8
+.endobj lbl_80666484
 
 
-.global lbl_80666488
-lbl_80666488:
+.obj lbl_80666488, global
 	.4byte lbl_8066D9C8
 	.4byte 0
+.endobj lbl_80666488
 
-.global __RTTI__CNReqtask
-__RTTI__CNReqtask:
+.obj __RTTI__CNReqtask, global
 	.4byte CNReqtask_typestr
 	.4byte 0
+.endobj __RTTI__CNReqtask
 
-.global __RTTI__CNRequest
-__RTTI__CNRequest:
+.obj __RTTI__CNRequest, global
 	.4byte CNRequest_typestr
 	.4byte 0
+.endobj __RTTI__CNRequest
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_8066D9C8
-lbl_8066D9C8:
+.obj lbl_8066D9C8, global
 	.4byte 0
 	.4byte 0
+.endobj lbl_8066D9C8
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_806626F0
-lbl_806626F0:
+.obj lbl_806626F0, global
 	.skip 0xBC
-.global lbl_806627AC
-lbl_806627AC:
+.endobj lbl_806626F0
+
+.obj lbl_806627AC, global
 	.skip 0x8C
-.global lbl_80662838
-lbl_80662838:
+.endobj lbl_806627AC
+
+.obj lbl_80662838, global
 	.skip 0x44
-.global lbl_8066287C
-lbl_8066287C:
+.endobj lbl_80662838
+
+.obj lbl_8066287C, global
 	.skip 0x44
-.global lbl_806628C0
-lbl_806628C0:
+.endobj lbl_8066287C
+
+.obj lbl_806628C0, global
 	.skip 0x48
+.endobj lbl_806628C0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_806682A8, global
+	.skip 0x4
+.endobj lbl_806682A8
 
-.global lbl_806682A8
-lbl_806682A8:
+.obj lbl_806682AC, global
 	.skip 0x4
-.global lbl_806682AC
-lbl_806682AC:
-	.skip 0x4
-.global lbl_806682B0
-lbl_806682B0:
+.endobj lbl_806682AC
+
+.obj lbl_806682B0, global
 	.skip 0x8
-.global lbl_806682B8
-lbl_806682B8:
+.endobj lbl_806682B0
+
+.obj lbl_806682B8, global
 	.skip 0x4
+.endobj lbl_806682B8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

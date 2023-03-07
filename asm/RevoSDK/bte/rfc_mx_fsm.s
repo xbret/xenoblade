@@ -904,8 +904,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global jumptable_805487B8
-jumptable_805487B8:
+.balign 8
+
+.obj jumptable_805487B8, global
 	.4byte .L_802FEDA8
 	.4byte .L_802FEDAC
 	.4byte .L_802FEDB0
@@ -913,6 +914,7 @@ jumptable_805487B8:
 	.4byte .L_802FEDB8
 	.4byte .L_802FEDBC
 	.4byte .L_802FEDC0
+.endobj jumptable_805487B8
 
 
 	.asciz "rfc_mx_sm_state_idle - evt:%d"
@@ -923,14 +925,13 @@ jumptable_805487B8:
 	.balign 4
 
 
-.global lbl_80548828
-lbl_80548828:
+.obj lbl_80548828, global
 	.asciz "RFCOMM MX ignored - evt:%d in state:%d"
 	.balign 4
+.endobj lbl_80548828
 
 
-.global jumptable_80548850
-jumptable_80548850:
+.obj jumptable_80548850, global
 	.4byte .L_802FEF90
 	.4byte .L_802FEF64
 	.4byte .L_802FEF64
@@ -944,6 +945,7 @@ jumptable_80548850:
 	.4byte .L_802FEEB0
 	.4byte .L_802FEE84
 	.4byte .L_802FEE84
+.endobj jumptable_80548850
 
 
 	.asciz "rfc_mx_sm_state_wait_conn_cnf - evt:%d"
@@ -952,8 +954,7 @@ jumptable_80548850:
 	.balign 4
 
 
-.global jumptable_805488D0
-jumptable_805488D0:
+.obj jumptable_805488D0, global
 	.4byte .L_802FF214
 	.4byte .L_802FF274
 	.4byte .L_802FF274
@@ -963,14 +964,14 @@ jumptable_805488D0:
 	.4byte .L_802FF240
 	.4byte .L_802FF274
 	.4byte .L_802FF260
+.endobj jumptable_805488D0
 
 
 	.asciz "rfc_mx_sm_sabme_wait_ua - evt:%d"
 	.balign 4
 
 
-.global jumptable_80548918
-jumptable_80548918:
+.obj jumptable_80548918, global
 	.4byte .L_802FF3E8
 	.4byte .L_802FF398
 	.4byte .L_802FF3C0
@@ -986,21 +987,21 @@ jumptable_80548918:
 	.4byte .L_802FF364
 	.4byte .L_802FF3E8
 	.4byte .L_802FF384
+.endobj jumptable_80548918
 
 
-.global lbl_80548954
-lbl_80548954:
+.obj lbl_80548954, global
 	.asciz "rfc_mx_sm_state_wait_sabme - evt:%d"
+.endobj lbl_80548954
 
 
-.global lbl_80548978
-lbl_80548978:
+.obj lbl_80548978, global
 	.asciz "rfc_mx_sm_state_connected - evt:%d"
 	.balign 4
+.endobj lbl_80548978
 
 
-.global jumptable_8054899C
-jumptable_8054899C:
+.obj jumptable_8054899C, global
 	.4byte .L_802FF5F8
 	.4byte .L_802FF624
 	.4byte .L_802FF5C0
@@ -1013,16 +1014,16 @@ jumptable_8054899C:
 	.4byte .L_802FF624
 	.4byte .L_802FF624
 	.4byte .L_802FF5E4
+.endobj jumptable_8054899C
 
 
-.global lbl_805489CC
-lbl_805489CC:
+.obj lbl_805489CC, global
 	.asciz "rfc_mx_sm_state_disc_wait_ua - evt:%d"
 	.balign 4
+.endobj lbl_805489CC
 
 
-.global jumptable_805489F4
-jumptable_805489F4:
+.obj jumptable_805489F4, global
 	.4byte .L_802FF798
 	.4byte .L_802FF6DC
 	.4byte .L_802FF6DC
@@ -1038,15 +1039,16 @@ jumptable_805489F4:
 	.4byte .L_802FF798
 	.4byte .L_802FF798
 	.4byte .L_802FF780
+.endobj jumptable_805489F4
 
 
-.global lbl_80548A30
-lbl_80548A30:
+.obj lbl_80548A30, global
 	.asciz "rfc_mx_conf_cnf p_cfg:%08x res:%d "
 	.balign 4
+.endobj lbl_80548A30
 
 
-.global lbl_80548A54
-lbl_80548A54:
+.obj lbl_80548A54, global
 	.asciz "rfc_mx_conf_ind p_cfg:%0x"
 	.balign 4
+.endobj lbl_80548A54

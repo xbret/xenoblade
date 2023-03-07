@@ -299,67 +299,90 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-__AXStudio:
+.obj __AXStudio, local
 	.skip 0x80
+.endobj __AXStudio
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-__AXSpbAux3:
-	.skip 0x4
+.balign 8
 
-__AXSpbAux2:
+.obj __AXSpbAux3, local
 	.skip 0x4
+.endobj __AXSpbAux3
 
-__AXSpbAux1:
+.obj __AXSpbAux2, local
 	.skip 0x4
+.endobj __AXSpbAux2
 
-__AXSpbAux0:
+.obj __AXSpbAux1, local
 	.skip 0x4
+.endobj __AXSpbAux1
 
-__AXSpbMain3:
+.obj __AXSpbAux0, local
 	.skip 0x4
+.endobj __AXSpbAux0
 
-__AXSpbMain2:
+.obj __AXSpbMain3, local
 	.skip 0x4
+.endobj __AXSpbMain3
 
-__AXSpbMain1:
+.obj __AXSpbMain2, local
 	.skip 0x4
+.endobj __AXSpbMain2
 
-__AXSpbMain0:
+.obj __AXSpbMain1, local
 	.skip 0x4
+.endobj __AXSpbMain1
 
-__AXSpbACS:
+.obj __AXSpbMain0, local
 	.skip 0x4
+.endobj __AXSpbMain0
 
-__AXSpbACR:
+.obj __AXSpbACS, local
 	.skip 0x4
+.endobj __AXSpbACS
 
-__AXSpbACL:
+.obj __AXSpbACR, local
 	.skip 0x4
+.endobj __AXSpbACR
 
-__AXSpbABS:
+.obj __AXSpbACL, local
 	.skip 0x4
+.endobj __AXSpbACL
 
-__AXSpbABR:
+.obj __AXSpbABS, local
 	.skip 0x4
+.endobj __AXSpbABS
 
-__AXSpbABL:
+.obj __AXSpbABR, local
 	.skip 0x4
+.endobj __AXSpbABR
 
-__AXSpbAAS:
+.obj __AXSpbABL, local
 	.skip 0x4
+.endobj __AXSpbABL
 
-__AXSpbAAR:
+.obj __AXSpbAAS, local
 	.skip 0x4
+.endobj __AXSpbAAS
 
-__AXSpbAAL:
+.obj __AXSpbAAR, local
 	.skip 0x4
+.endobj __AXSpbAAR
 
-__AXSpbAS:
+.obj __AXSpbAAL, local
 	.skip 0x4
+.endobj __AXSpbAAL
 
-__AXSpbAR:
+.obj __AXSpbAS, local
 	.skip 0x4
+.endobj __AXSpbAS
 
-__AXSpbAL:
+.obj __AXSpbAR, local
 	.skip 0x4
+.endobj __AXSpbAR
+
+.obj __AXSpbAL, local
+	.skip 0x4
+.endobj __AXSpbAL

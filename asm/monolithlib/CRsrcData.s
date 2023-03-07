@@ -318,26 +318,25 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CRsrcData_typestr
-CRsrcData_typestr:
+.obj CRsrcData_typestr, global
 	.asciz "CRsrcData"
 	.balign 4
+.endobj CRsrcData_typestr
 
 
-.global lbl_80525E4C
-lbl_80525E4C:
+.obj lbl_80525E4C, global
 	.asciz "CRsrcData"
 	.balign 4
+.endobj lbl_80525E4C
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CRsrcData
-__vt__CRsrcData:
+.obj __vt__CRsrcData, global
 	.4byte __RTTI__CRsrcData
 	.4byte 0
 	.4byte __dt__CRsrcData
@@ -378,24 +377,25 @@ __vt__CRsrcData:
 	.4byte func_8043A02C
 	.4byte func_8043A07C
 	.4byte func_80039E30
+.endobj __vt__CRsrcData
 
-.global CRsrcData_hierarchy
-CRsrcData_hierarchy:
+.obj CRsrcData_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CRsrcData_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CRsrcData
-__RTTI__CRsrcData:
+.obj __RTTI__CRsrcData, global
 	.4byte CRsrcData_typestr
 	.4byte CRsrcData_hierarchy
+.endobj __RTTI__CRsrcData
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

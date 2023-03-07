@@ -2636,158 +2636,158 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CChainActorList_typestr
-cf_CChainActorList_typestr:
+.obj cf_CChainActorList_typestr, global
 	.asciz "cf::CChainActorList"
+.endobj cf_CChainActorList_typestr
 
-.global reslist_cf_CChainActor_typestr
-reslist_cf_CChainActor_typestr:
+.obj reslist_cf_CChainActor_typestr, global
 	.asciz "reslist<cf::CChainActor *>"
 	.balign 4
+.endobj reslist_cf_CChainActor_typestr
 
-.global _reslist_base_cf_CChainActor_typestr
-_reslist_base_cf_CChainActor_typestr:
+.obj _reslist_base_cf_CChainActor_typestr, global
 	.asciz "_reslist_base<cf::CChainActor *>"
 	.balign 4
+.endobj _reslist_base_cf_CChainActor_typestr
 
-.global cf_CChainTemp_typestr
-cf_CChainTemp_typestr:
+.obj cf_CChainTemp_typestr, global
 	.asciz "cf::CChainTemp"
 	.balign 4
 	.4byte 0
+.endobj cf_CChainTemp_typestr
 
 
-.global lbl_8050A450
-lbl_8050A450:
+.obj lbl_8050A450, global
 	.4byte 0x0000000F
 	.4byte 0x00140019
 	.4byte 0x001E0000
 	.4byte 0
+.endobj lbl_8050A450
 
 
-.global lbl_8050A460
-lbl_8050A460:
+.obj lbl_8050A460, global
 	.float 1.0
 	.float 1.2
 	.float 1.4
 	.float 1.6
+.endobj lbl_8050A460
 
-.global cf_Flusher_cf_CfObjectActor_typestr
-cf_Flusher_cf_CfObjectActor_typestr:
+.obj cf_Flusher_cf_CfObjectActor_typestr, global
 	.asciz "cf::Flusher<cf::CfObjectActor>"
 	.balign 4
+.endobj cf_Flusher_cf_CfObjectActor_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CChainActorList
-__vt__cf_CChainActorList:
+.obj __vt__cf_CChainActorList, global
 	.4byte __RTTI__cf_CChainActorList
 	.4byte 0
 	.4byte __dt__cf_CChainActorList
+.endobj __vt__cf_CChainActorList
 
 
-.global __vt__reslist_cf_CChainActor
-__vt__reslist_cf_CChainActor:
+.obj __vt__reslist_cf_CChainActor, global
 	.4byte __RTTI__reslist_cf_CChainActor
 	.4byte 0
 	.4byte __dt__reslist_cf_CChainActor
+.endobj __vt__reslist_cf_CChainActor
 
-.global reslist_cf_CChainActor_hierarchy
-reslist_cf_CChainActor_hierarchy:
+.obj reslist_cf_CChainActor_hierarchy, global
 	.4byte __RTTI___reslist_base_cf_CChainActor
 	.4byte 0
 	.4byte 0
+.endobj reslist_cf_CChainActor_hierarchy
 
 
-.global __vt___reslist_base_cf_CChainActor
-__vt___reslist_base_cf_CChainActor:
+.obj __vt___reslist_base_cf_CChainActor, global
 	.4byte __RTTI___reslist_base_cf_CChainActor
 	.4byte 0
 	.4byte __dt___reslist_base_cf_CChainActor
+.endobj __vt___reslist_base_cf_CChainActor
 
 
-.global __vt__cf_CChainTemp
-__vt__cf_CChainTemp:
+.obj __vt__cf_CChainTemp, global
 	.4byte __RTTI__cf_CChainTemp
 	.4byte 0
 	.4byte __dt__cf_CChainTemp
 	.4byte 0
+.endobj __vt__cf_CChainTemp
 
 
-.global __vt__cf_Flusher_cf_CfObjectActor
-__vt__cf_Flusher_cf_CfObjectActor:
+.obj __vt__cf_Flusher_cf_CfObjectActor, global
 	.4byte __RTTI__cf_Flusher_cf_CfObjectActor
 	.4byte 0
 	.4byte __dt__cf_Flusher_cf_CfObjectActor
 	.4byte 0
+.endobj __vt__cf_Flusher_cf_CfObjectActor
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CChainActorList
-__RTTI__cf_CChainActorList:
+.obj __RTTI__cf_CChainActorList, global
 	.4byte cf_CChainActorList_typestr
 	.4byte 0
+.endobj __RTTI__cf_CChainActorList
 
-.global __RTTI__reslist_cf_CChainActor
-__RTTI__reslist_cf_CChainActor:
+.obj __RTTI__reslist_cf_CChainActor, global
 	.4byte reslist_cf_CChainActor_typestr
 	.4byte reslist_cf_CChainActor_hierarchy
+.endobj __RTTI__reslist_cf_CChainActor
 
-.global __RTTI___reslist_base_cf_CChainActor
-__RTTI___reslist_base_cf_CChainActor:
+.obj __RTTI___reslist_base_cf_CChainActor, global
 	.4byte _reslist_base_cf_CChainActor_typestr
 	.4byte 0
+.endobj __RTTI___reslist_base_cf_CChainActor
 
-.global __RTTI__cf_CChainTemp
-__RTTI__cf_CChainTemp:
+.obj __RTTI__cf_CChainTemp, global
 	.4byte cf_CChainTemp_typestr
 	.4byte 0
+.endobj __RTTI__cf_CChainTemp
 
 
-.global lbl_80665378
-lbl_80665378:
+.obj lbl_80665378, global
 	.4byte 0x00000001
 	.4byte 0
+.endobj lbl_80665378
 
-.global __RTTI__cf_Flusher_cf_CfObjectActor
-__RTTI__cf_Flusher_cf_CfObjectActor:
+.obj __RTTI__cf_Flusher_cf_CfObjectActor, global
 	.4byte cf_Flusher_cf_CfObjectActor_typestr
 	.4byte 0
+.endobj __RTTI__cf_Flusher_cf_CfObjectActor
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B310
-float_8066B310:
+.obj float_8066B310, global
 	.float 30 #0x41F00000
+.endobj float_8066B310
 
 
-.global float_8066B314
-float_8066B314:
+.obj float_8066B314, global
 	.float 5000 #0x459C4000
+.endobj float_8066B314
 
 
-.global float_8066B318
-float_8066B318:
+.obj float_8066B318, global
 	.float 20 #0x41A00000
 	.4byte 0
+.endobj float_8066B318
 
 
-.global double_8066B320
-double_8066B320:
+.obj double_8066B320, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066B320
 
-.global float_8066B328
-float_8066B328:
+.obj float_8066B328, global
 	.float 0
 	.4byte 0
+.endobj float_8066B328
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

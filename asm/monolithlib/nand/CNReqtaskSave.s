@@ -182,77 +182,77 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CNReqtaskSave_typestr
-CNReqtaskSave_typestr:
+.obj CNReqtaskSave_typestr, global
 	.asciz "CNReqtaskSave"
 	.balign 4
+.endobj CNReqtaskSave_typestr
 
 
-.global lbl_80527F08
-lbl_80527F08:
+.obj lbl_80527F08, global
 	.asciz "%s%s"
 	.balign 4
+.endobj lbl_80527F08
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CNReqtaskSave
-__vt__CNReqtaskSave:
+.obj __vt__CNReqtaskSave, global
 	.4byte __RTTI__CNReqtaskSave
 	.4byte 0
 	.4byte func_804DAD38
 	.4byte func_804DA4CC
+.endobj __vt__CNReqtaskSave
 
-.global CNReqtaskSave_hierarchy
-CNReqtaskSave_hierarchy:
+.obj CNReqtaskSave_hierarchy, global
 	.4byte __RTTI__CNReqtask
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CNReqtaskSave_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_806664A0
-lbl_806664A0:
+.obj lbl_806664A0, global
 	.4byte lbl_8066D9D0
 	.4byte 0
+.endobj lbl_806664A0
 
-.global __RTTI__CNReqtaskSave
-__RTTI__CNReqtaskSave:
+.obj __RTTI__CNReqtaskSave, global
 	.4byte CNReqtaskSave_typestr
 	.4byte CNReqtaskSave_hierarchy
+.endobj __RTTI__CNReqtaskSave
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global lbl_8066D9D0
-lbl_8066D9D0:
+.obj lbl_8066D9D0, global
 	.asciz "/tmp/"
 	.balign 4
+.endobj lbl_8066D9D0
 
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_80662908
-lbl_80662908:
+.obj lbl_80662908, global
 	.skip 0x28
+.endobj lbl_80662908
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+#.balign 8
 
-
-.global lbl_806682BC
-lbl_806682BC:
+.obj lbl_806682BC, global
 	.skip 0x4
+.endobj lbl_806682BC
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

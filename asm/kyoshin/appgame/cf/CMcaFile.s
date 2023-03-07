@@ -108,46 +108,46 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMcaFile
-__vt__CMcaFile:
+.obj __vt__CMcaFile, global
 	.4byte __RTTI__CMcaFile
 	.4byte 0
 	.4byte __dt__CMcaFile
+.endobj __vt__CMcaFile
 
 
 #These are referenced by Scn classes (should be in a separate base class file?)
-.global lbl_80529B84
-lbl_80529B84:
+.obj lbl_80529B84, global
 	.asciz "NW4R:Failed assertion !((u32)p & 0x1f)"
 	.balign 4
+.endobj lbl_80529B84
 
 
-.global lbl_80529BAC
-lbl_80529BAC:
+.obj lbl_80529BAC, global
 	.asciz "g3d_resfile_ac.h"
 	.balign 4
+.endobj lbl_80529BAC
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMcaFile_typestr
-CMcaFile_typestr:
+.obj CMcaFile_typestr, global
 	.asciz "CMcaFile"
 	.balign 4
 	.4byte 0
+.endobj CMcaFile_typestr
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMcaFile
-__RTTI__CMcaFile:
+.obj __RTTI__CMcaFile, global
 	.4byte CMcaFile_typestr
 	.4byte 0
+.endobj __RTTI__CMcaFile
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

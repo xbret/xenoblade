@@ -1753,146 +1753,148 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global reslist_CETrail_POINT_typestr
-reslist_CETrail_POINT_typestr:
+.obj reslist_CETrail_POINT_typestr, global
 	.asciz "reslist<CETrail::POINT>"
+.endobj reslist_CETrail_POINT_typestr
 
-.global _reslist_base_CETrail_POINT_typestr
-_reslist_base_CETrail_POINT_typestr:
+.obj _reslist_base_CETrail_POINT_typestr, global
 	.asciz "_reslist_base<CETrail::POINT>"
 	.balign 4
+.endobj _reslist_base_CETrail_POINT_typestr
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CETrail
-__vt__CETrail:
+.obj __vt__CETrail, global
 	.4byte __RTTI__CETrail
 	.4byte 0
 	.4byte __dt__CETrail
+.endobj __vt__CETrail
 
 
-.global __vt__reslist_CETrail_POINT
-__vt__reslist_CETrail_POINT:
+.obj __vt__reslist_CETrail_POINT, global
 	.4byte __RTTI__reslist_CETrail_POINT
 	.4byte 0
 	.4byte __dt__reslist_CETrail_POINT
+.endobj __vt__reslist_CETrail_POINT
 
-.global reslist_CETrail_POINT_hierarchy
-reslist_CETrail_POINT_hierarchy:
+.obj reslist_CETrail_POINT_hierarchy, global
 	.4byte __RTTI___reslist_base_CETrail_POINT
 	.4byte 0
 	.4byte 0
+.endobj reslist_CETrail_POINT_hierarchy
 
 
-.global __vt___reslist_base_CETrail_POINT
-__vt___reslist_base_CETrail_POINT:
+.obj __vt___reslist_base_CETrail_POINT, global
 	.4byte __RTTI___reslist_base_CETrail_POINT
 	.4byte 0
 	.4byte __dt___reslist_base_CETrail_POINT
+.endobj __vt___reslist_base_CETrail_POINT
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-
 .balign 8
-.global __RTTI__CETrail
-__RTTI__CETrail:
+
+.obj __RTTI__CETrail, global
 	.4byte CETrail_typestr
 	.4byte 0
+.endobj __RTTI__CETrail
 
-.global __RTTI__reslist_CETrail_POINT
-__RTTI__reslist_CETrail_POINT:
+.obj __RTTI__reslist_CETrail_POINT, global
 	.4byte reslist_CETrail_POINT_typestr
 	.4byte reslist_CETrail_POINT_hierarchy
+.endobj __RTTI__reslist_CETrail_POINT
 
-.global __RTTI___reslist_base_CETrail_POINT
-__RTTI___reslist_base_CETrail_POINT:
+.obj __RTTI___reslist_base_CETrail_POINT, global
 	.4byte _reslist_base_CETrail_POINT_typestr
 	.4byte 0
+.endobj __RTTI___reslist_base_CETrail_POINT
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066D920
-float_8066D920:
+.obj float_8066D920, global
 	.float 0.5
 	.4byte 0
+.endobj float_8066D920
 
 
-.global double_8066D928
-double_8066D928:
+.obj double_8066D928, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066D928
 
-.global float_8066D930
-float_8066D930:
+.obj float_8066D930, global
 	.float -1.0
 	.4byte 0
+.endobj float_8066D930
 
-.global CETrail_typestr
-CETrail_typestr:
+.obj CETrail_typestr, global
 	.asciz "CETrail"
+.endobj CETrail_typestr
 
 
-.global float_8066D940
-float_8066D940:
+.obj float_8066D940, global
 	.float 0
+.endobj float_8066D940
 
 
-.global float_8066D944
-float_8066D944:
+.obj float_8066D944, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_8066D944
 
 
-.global float_8066D948
-float_8066D948:
+.obj float_8066D948, global
 	.float 0.99 #0x3F7D70A4
+.endobj float_8066D948
 
 
-.global float_8066D94C
-float_8066D94C:
+.obj float_8066D94C, global
 	.float 1.0
+.endobj float_8066D94C
 
 
-.global float_8066D950
-float_8066D950:
+.obj float_8066D950, global
 	.float 3 #0x40400000
+.endobj float_8066D950
 
 
-.global float_8066D954
-float_8066D954:
+.obj float_8066D954, global
 	.float 99999 #0x47C34F80
+.endobj float_8066D954
 
 
-.global double_8066D958
-double_8066D958:
+.obj double_8066D958, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066D958
 
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_80662560
-lbl_80662560:
+.obj lbl_80662560, global
 	.skip 0x30
-.global lbl_80662590
-lbl_80662590:
+.endobj lbl_80662560
+
+.obj lbl_80662590, global
 	.skip 0x30
+.endobj lbl_80662590
 	
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_80668290, global
+	.skip 0x4
+.endobj lbl_80668290
 
-.global lbl_80668290
-lbl_80668290:
+.obj lbl_80668294, global
 	.skip 0x4
-.global lbl_80668294
-lbl_80668294:
-	.skip 0x4
+.endobj lbl_80668294
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -487,41 +487,50 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global hcisu_h2
-hcisu_h2:
+.balign 8
+
+.obj hcisu_h2, global
 	.4byte hcisu_h2_init
 	.4byte hcisu_h2_open
 	.4byte hcisu_h2_close
 	.4byte hcisu_h2_send
 	.4byte hcisu_h2_handle_event
 	.4byte 0
+.endobj hcisu_h2
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_80543F60
-lbl_80543F60:
+.balign 8
+
+.obj lbl_80543F60, global
 	.asciz "HCIS: Unable to allocate buffer for incoming HCI message."
 	.balign 4
+.endobj lbl_80543F60
 
 
-.global lbl_80543F9C
-lbl_80543F9C:
+.obj lbl_80543F9C, global
 	.asciz "HCIS: Invalid length for incoming HCI message."
 	.balign 4
 	.4byte 0
+.endobj lbl_80543F9C
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-hcisu_preamble_table:
+.balign 8
+
+.obj hcisu_preamble_table, local
 	.4byte 0x03040302
 	.4byte 0
+.endobj hcisu_preamble_table
 
 
-hcisu_msg_evt_table:
+.obj hcisu_msg_evt_table, local
 	.8byte 0x1300110012001000
+.endobj hcisu_msg_evt_table
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-hcisu_h2_cb:
+.obj hcisu_h2_cb, local
 	.skip 0x40
+.endobj hcisu_h2_cb

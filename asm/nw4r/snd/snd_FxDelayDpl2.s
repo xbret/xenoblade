@@ -456,8 +456,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056E0A0
-lbl_8056E0A0:
+.balign 8
+
+.obj lbl_8056E0A0, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r3snd11FxDelayDpl2Fv
@@ -468,34 +469,37 @@ lbl_8056E0A0:
 	.4byte AssignWorkBuffer__Q34nw4r3snd11FxDelayDpl2FPvUl
 	.4byte ReleaseWorkBuffer__Q34nw4r3snd11FxDelayDpl2Fv
 	.4byte 0
+.endobj lbl_8056E0A0
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C780
-float_8066C780:
+.balign 8
+
+.obj float_8066C780, global
 	.float 160 #0x43200000
+.endobj float_8066C780
 
 
-.global float_8066C784
-float_8066C784:
+.obj float_8066C784, global
 	.float 0.4 #0x3ECCCCCD
+.endobj float_8066C784
 
 
-.global float_8066C788
-float_8066C788:
+.obj float_8066C788, global
 	.float 1.0
+.endobj float_8066C788
 
 
-.global float_8066C78C
-float_8066C78C:
+.obj float_8066C78C, global
 	.float 0.04 #0x3D23D70A
+.endobj float_8066C78C
 
 
-.global float_8066C790
-float_8066C790:
+.obj float_8066C790, global
 	.float 0.99 #0x3F7D70A4
+.endobj float_8066C790
 
 
-.global float_8066C794
-float_8066C794:
+.obj float_8066C794, global
 	.4byte 0
+.endobj float_8066C794

@@ -145,27 +145,25 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CViewRoot_typestr
-CViewRoot_typestr:
+.obj CViewRoot_typestr, global
 	.asciz "CViewRoot"
 	.balign 4
+.endobj CViewRoot_typestr
 
 
-.global lbl_80525F84
-lbl_80525F84:
+.obj lbl_80525F84, global
 	.asciz "CViewRoot"
 	.balign 4
+.endobj lbl_80525F84
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-
-.global __vt__CViewRoot
-__vt__CViewRoot:
+.obj __vt__CViewRoot, global
 	.4byte __RTTI__CViewRoot
 	.4byte 0
 	.4byte __dt__CViewRoot
@@ -206,24 +204,25 @@ __vt__CViewRoot:
 	.4byte func_80443214
 	.4byte func_80443388
 	.4byte func_80039E30
+.endobj __vt__CViewRoot
 
-.global CViewRoot_hierarchy
-CViewRoot_hierarchy:
+.obj CViewRoot_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CViewRoot_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CViewRoot
-__RTTI__CViewRoot:
+.obj __RTTI__CViewRoot, global
 	.4byte CViewRoot_typestr
 	.4byte CViewRoot_hierarchy
+.endobj __RTTI__CViewRoot
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

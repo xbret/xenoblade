@@ -707,15 +707,14 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CItemBoxGridSubMenu_typestr
-CItemBoxGridSubMenu_typestr:
+.obj CItemBoxGridSubMenu_typestr, global
 	.asciz "CItemBoxGridSubMenu"
+.endobj CItemBoxGridSubMenu_typestr
 
 
-.global CItemBoxGridSubMenu_strpool
-CItemBoxGridSubMenu_strpool:
+.obj CItemBoxGridSubMenu_strpool, global
 	.asciz "mf70_cf60_syswin07.brlyt"
 	.asciz "mf70_cf60_syswin07_in.brlan"
 	.asciz "txt_point"
@@ -737,13 +736,13 @@ CItemBoxGridSubMenu_strpool:
 	.asciz "nul_close01"
 	.balign 4
 	.4byte 0
+.endobj CItemBoxGridSubMenu_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CItemBoxGridSubMenu
-__vt__CItemBoxGridSubMenu:
+.obj __vt__CItemBoxGridSubMenu, global
 	.4byte __RTTI__CItemBoxGridSubMenu
 	.4byte 0
 	.4byte __dt__CItemBoxGridSubMenu
@@ -778,69 +777,70 @@ __vt__CItemBoxGridSubMenu:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CItemBoxGridSubMenu
 
-.global CItemBoxGridSubMenu_hierarchy
-CItemBoxGridSubMenu_hierarchy:
+.obj CItemBoxGridSubMenu_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CItemBoxGridSubMenu_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CItemBoxGridSubMenu
-__RTTI__CItemBoxGridSubMenu:
+.obj __RTTI__CItemBoxGridSubMenu, global
 	.4byte CItemBoxGridSubMenu_typestr
 	.4byte CItemBoxGridSubMenu_hierarchy
+.endobj __RTTI__CItemBoxGridSubMenu
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global double_8066ABB8
-double_8066ABB8:
+.obj double_8066ABB8, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066ABB8
 
-.global float_8066ABC0
-float_8066ABC0:
+.obj float_8066ABC0, global
 	.float 80 #0x42A00000
+.endobj float_8066ABC0
 
 
-.global float_8066ABC4
-float_8066ABC4:
+.obj float_8066ABC4, global
 	.float 0
+.endobj float_8066ABC4
 
 
-.global float_8066ABC8
-float_8066ABC8:
+.obj float_8066ABC8, global
 	.float 3 #0x40400000
+.endobj float_8066ABC8
 
 
-.global float_8066ABCC
-float_8066ABCC:
+.obj float_8066ABCC, global
 	.float 100.0
+.endobj float_8066ABCC
 
 
-.global float_8066ABD0
-float_8066ABD0:
+.obj float_8066ABD0, global
 	.float -17 #0xC1880000
+.endobj float_8066ABD0
 
 
-.global float_8066ABD4
-float_8066ABD4:
+.obj float_8066ABD4, global
 	.float 120 #0x42F00000
+.endobj float_8066ABD4
 
 
-.global float_8066ABD8
-float_8066ABD8:
+.obj float_8066ABD8, global
 	.float -37 #0xC2140000
+.endobj float_8066ABD8
 
 
-.global float_8066ABDC
-float_8066ABDC:
+.obj float_8066ABDC, global
 	.float 1.0
+.endobj float_8066ABDC
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

@@ -474,27 +474,26 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CSysWinBuff_typestr
-CSysWinBuff_typestr:
+.obj CSysWinBuff_typestr, global
 	.asciz "CSysWinBuff"
+.endobj CSysWinBuff_typestr
 
 
-.global CSysWinBuff_strpool
-CSysWinBuff_strpool:
+.obj CSysWinBuff_strpool, global
 	.asciz "/common/jp/bdat_mes.bin"
 	.asciz "help"
 	.asciz "MNU_buff"
 	.balign 4
 	.4byte 0
+.endobj CSysWinBuff_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CSysWinBuff
-__vt__CSysWinBuff:
+.obj __vt__CSysWinBuff, global
 	.4byte __RTTI__CSysWinBuff
 	.4byte 0
 	.4byte __dt__CSysWinBuff
@@ -544,9 +543,9 @@ __vt__CSysWinBuff:
 	.4byte func_80274B10
 	.4byte func_802748B0
 	.4byte func_80274A84
+.endobj __vt__CSysWinBuff
 
-.global CSysWinBuff_hierarchy
-CSysWinBuff_hierarchy:
+.obj CSysWinBuff_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000070
 	.4byte __RTTI__IWorkEvent
@@ -562,27 +561,29 @@ CSysWinBuff_hierarchy:
 	.4byte __RTTI__IUIWindow
 	.4byte 0
 	.4byte 0
+.endobj CSysWinBuff_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CSysWinBuff
-__RTTI__CSysWinBuff:
+.obj __RTTI__CSysWinBuff, global
 	.4byte CSysWinBuff_typestr
 	.4byte CSysWinBuff_hierarchy
+.endobj __RTTI__CSysWinBuff
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_806671D0, global
+	.skip 0x4
+.endobj lbl_806671D0
 
-.global lbl_806671D0
-lbl_806671D0:
+.obj lbl_806671D4, global
 	.skip 0x4
-.global lbl_806671D4
-lbl_806671D4:
-	.skip 0x4
+.endobj lbl_806671D4
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

@@ -1548,8 +1548,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_8050D550
-lbl_8050D550:
+.balign 8
+
+.obj lbl_8050D550, global
 	.4byte 0
 	.4byte 0x7FFFFFFF
 	.4byte 0
@@ -1560,11 +1561,13 @@ lbl_8050D550:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj lbl_8050D550
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global jumptable_8053F7C0
-jumptable_8053F7C0:
+.balign 8
+
+.obj jumptable_8053F7C0, global
 	.4byte .L_802C141C
 	.4byte .L_802C1754
 	.4byte .L_802C1754
@@ -1621,10 +1624,10 @@ jumptable_8053F7C0:
 	.4byte .L_802C1754
 	.4byte .L_802C1754
 	.4byte .L_802C1404
+.endobj jumptable_8053F7C0
 
 
-.global jumptable_8053F8A0
-jumptable_8053F8A0:
+.obj jumptable_8053F8A0, global
 	.4byte .L_802C1D2C
 	.4byte .L_802C1D34
 	.4byte .L_802C1D3C
@@ -1633,10 +1636,10 @@ jumptable_8053F8A0:
 	.4byte .L_802C1D60
 	.4byte .L_802C1D68
 	.4byte .L_802C1D70
+.endobj jumptable_8053F8A0
 
 
-.global jumptable_8053F8C0
-jumptable_8053F8C0:
+.obj jumptable_8053F8C0, global
 	.4byte .L_802C1B94
 	.4byte .L_802C1B9C
 	.4byte .L_802C1BA4
@@ -1645,10 +1648,10 @@ jumptable_8053F8C0:
 	.4byte .L_802C1BC8
 	.4byte .L_802C1BD0
 	.4byte .L_802C1BD8
+.endobj jumptable_8053F8C0
 
 
-.global jumptable_8053F8E0
-jumptable_8053F8E0:
+.obj jumptable_8053F8E0, global
 	.4byte .L_802C1FE8
 	.4byte .L_802C240C
 	.4byte .L_802C240C
@@ -1733,3 +1736,4 @@ jumptable_8053F8E0:
 	.4byte .L_802C240C
 	.4byte .L_802C240C
 	.4byte .L_802C1C0C
+.endobj jumptable_8053F8E0

@@ -284,8 +284,10 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-DecibelSquareTable__Q44nw4r3snd6detail12EnvGenerator:
+
+.obj DecibelSquareTable__Q44nw4r3snd6detail12EnvGenerator, local
 	.2byte 0xFD2D
 	.2byte 0xFD2E
 	.2byte 0xFD2F
@@ -414,11 +416,11 @@ DecibelSquareTable__Q44nw4r3snd6detail12EnvGenerator:
 	.2byte 0xFFFD
 	.2byte 0xFFFF
 	.2byte 0x0000
+.endobj DecibelSquareTable__Q44nw4r3snd6detail12EnvGenerator
 
 
 #@LOCAL@SetAttack__Q44nw4r3snd6detail12EnvGeneratorFi@attackTable
-.global lbl_80523658
-lbl_80523658:
+.obj lbl_80523658, global
 	.4byte 0x3F7FCCB8
 	.4byte 0x3F7F9947
 	.4byte 0x3F7F65AD
@@ -547,49 +549,52 @@ lbl_80523658:
 	.4byte 0x3EE90841
 	.4byte 0x3EA8E5A3
 	.4byte 0
+.endobj lbl_80523658
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C734
-float_8066C734:
+#.balign 8
+
+.obj float_8066C734, global
 	.float 65535 #0x477FFF00
+.endobj float_8066C734
 
 
-.global float_8066C738
-float_8066C738:
+.obj float_8066C738, global
 	.float 10.0
+.endobj float_8066C738
 
 
-.global float_8066C73C
-float_8066C73C:
+.obj float_8066C73C, global
 	.float 0
+.endobj float_8066C73C
 
 
-.global float_8066C740
-float_8066C740:
+.obj float_8066C740, global
 	.float -0.03125 #0xBD000000
 	.4byte 0
+.endobj float_8066C740
 
 
-.global double_8066C748
-double_8066C748:
+.obj double_8066C748, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066C748
 
-.global float_8066C750
-float_8066C750:
+.obj float_8066C750, global
 	.float 24 #0x41C00000
+.endobj float_8066C750
 
 
-.global float_8066C754
-float_8066C754:
+.obj float_8066C754, global
 	.float 0.0078125 #0x3C000000
+.endobj float_8066C754
 
 
-.global float_8066C758
-float_8066C758:
+.obj float_8066C758, global
 	.float 5 #0x40A00000
+.endobj float_8066C758
 
 
-.global float_8066C75C
-float_8066C75C:
+.obj float_8066C75C, global
 	.4byte 0x42700000
+.endobj float_8066C75C

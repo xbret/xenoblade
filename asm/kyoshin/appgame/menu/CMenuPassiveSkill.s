@@ -964,26 +964,25 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMenuPassiveSkill_typestr
-CMenuPassiveSkill_typestr:
+.obj CMenuPassiveSkill_typestr, global
 	.asciz "CMenuPassiveSkill"
 	.balign 4
+.endobj CMenuPassiveSkill_typestr
 
 
-.global lbl_805091E4
-lbl_805091E4:
+.obj lbl_805091E4, global
 	.asciz "MNU_passive"
 	.asciz "name"
 	.balign 4
+.endobj lbl_805091E4
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMenuPassiveSkill
-__vt__CMenuPassiveSkill:
+.obj __vt__CMenuPassiveSkill, global
 	.4byte __RTTI__CMenuPassiveSkill
 	.4byte 0
 	.4byte __dt__CMenuPassiveSkill
@@ -998,9 +997,9 @@ __vt__CMenuPassiveSkill:
 	.4byte func_80263EB4
 	.4byte func_80263EAC
 	.4byte func_8026382C
+.endobj __vt__CMenuPassiveSkill
 
-.global CMenuPassiveSkill_hierarchy
-CMenuPassiveSkill_hierarchy:
+.obj CMenuPassiveSkill_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000058
 	.4byte __RTTI__CDoubleListNode
@@ -1015,43 +1014,43 @@ CMenuPassiveSkill_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuPassiveSkill_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuPassiveSkill
-__RTTI__CMenuPassiveSkill:
+.obj __RTTI__CMenuPassiveSkill, global
 	.4byte CMenuPassiveSkill_typestr
 	.4byte CMenuPassiveSkill_hierarchy
+.endobj __RTTI__CMenuPassiveSkill
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-
-.global float_8066B1A0
-float_8066B1A0:
+.obj float_8066B1A0, global
 	.float 0
+.endobj float_8066B1A0
 
 
-.global float_8066B1A4
-float_8066B1A4:
+.obj float_8066B1A4, global
 	.float 1.0
+.endobj float_8066B1A4
 
 
-.global float_8066B1A8
-float_8066B1A8:
+.obj float_8066B1A8, global
 	.float 10.0
 	.4byte 0
+.endobj float_8066B1A8
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80667168
-lbl_80667168:
+.obj lbl_80667168, global
 	.skip 0x8
+.endobj lbl_80667168
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

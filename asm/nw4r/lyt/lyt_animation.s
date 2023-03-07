@@ -1603,8 +1603,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8056D558
-lbl_8056D558:
+.balign 8
+
+.obj lbl_8056D558, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q34nw4r3lyt18AnimTransformBasicFv
@@ -1615,44 +1616,47 @@ lbl_8056D558:
 	.4byte Animate__Q34nw4r3lyt18AnimTransformBasicFUlPQ34nw4r3lyt4Pane
 	.4byte Animate__Q34nw4r3lyt18AnimTransformBasicFUlPQ34nw4r3lyt8Material
 	.4byte 0
+.endobj lbl_8056D558
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C5D8
-float_8066C5D8:
+.balign 8
+
+.obj float_8066C5D8, global
 	.float -0.001 #0xBA83126F
+.endobj float_8066C5D8
 
 
-.global float_8066C5DC
-float_8066C5DC:
+.obj float_8066C5DC, global
 	.float 0.001 #0x3A83126F
+.endobj float_8066C5DC
 
 
-.global float_8066C5E0
-float_8066C5E0:
+.obj float_8066C5E0, global
 	.float 1.0
+.endobj float_8066C5E0
 
 
-.global float_8066C5E4
-float_8066C5E4:
+.obj float_8066C5E4, global
 	.float 2 #0x40000000
+.endobj float_8066C5E4
 
 
-.global float_8066C5E8
-float_8066C5E8:
+.obj float_8066C5E8, global
 	.float 3 #0x40400000
+.endobj float_8066C5E8
 
 
-.global float_8066C5EC
-float_8066C5EC:
+.obj float_8066C5EC, global
 	.float -2 #0xC0000000
+.endobj float_8066C5EC
 
 
-.global float_8066C5F0
-float_8066C5F0:
+.obj float_8066C5F0, global
 	.float 0
+.endobj float_8066C5F0
 
 
-.global float_8066C5F4
-float_8066C5F4:
+.obj float_8066C5F4, global
 	.float 0.5
+.endobj float_8066C5F4

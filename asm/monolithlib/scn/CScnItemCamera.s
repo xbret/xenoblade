@@ -1351,20 +1351,19 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_80527B80
-lbl_80527B80:
+.obj lbl_80527B80, global
 	.asciz "Camera%d"
 	.balign 4
 	.4byte 0
+.endobj lbl_80527B80
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CScnItemCamera
-__vt__CScnItemCamera:
+.obj __vt__CScnItemCamera, global
 	.4byte __RTTI__CScnItemCamera
 	.4byte 0
 	.4byte __dt__CScnItemCamera
@@ -1375,100 +1374,102 @@ __vt__CScnItemCamera:
 	.4byte func_80482040
 	.4byte 0
 	.4byte func_8049EBF0
+.endobj __vt__CScnItemCamera
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066D3A0
-float_8066D3A0:
+.obj float_8066D3A0, global
 	.float 0
+.endobj float_8066D3A0
 
 
-.global float_8066D3A4
-float_8066D3A4:
+.obj float_8066D3A4, global
 	.float 30 #0x41F00000
+.endobj float_8066D3A4
 
 
-.global float_8066D3A8
-float_8066D3A8:
+.obj float_8066D3A8, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_8066D3A8
 
 
-.global float_8066D3AC
-float_8066D3AC:
+.obj float_8066D3AC, global
 	.float 85000 #0x47A60400
+.endobj float_8066D3AC
 
 
-.global float_8066D3B0
-float_8066D3B0:
+.obj float_8066D3B0, global
 	.float 4 #0x40800000
+.endobj float_8066D3B0
 
 
-.global float_8066D3B4
-float_8066D3B4:
+.obj float_8066D3B4, global
 	.float 0.947 #0x3F726E98
+.endobj float_8066D3B4
 
 
-.global double_8066D3B8
-double_8066D3B8:
+.obj double_8066D3B8, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066D3B8
 
-.global float_8066D3C0
-float_8066D3C0:
+.obj float_8066D3C0, global
 	.float 0.5
+.endobj float_8066D3C0
 
 
-.global float_8066D3C4
-float_8066D3C4:
+.obj float_8066D3C4, global
 	.float 0.0245436933 #0x3CC90FDB
+.endobj float_8066D3C4
 
 
-.global float_8066D3C8
-float_8066D3C8:
+.obj float_8066D3C8, global
 	.float 40.7436638 #0x4222F983
+.endobj float_8066D3C8
 
 
-.global float_8066D3CC
-float_8066D3CC:
+.obj float_8066D3CC, global
 	.float 1.0
+.endobj float_8066D3CC
 
 
-.global float_8066D3D0
-float_8066D3D0:
+.obj float_8066D3D0, global
 	.float 2 #0x40000000
+.endobj float_8066D3D0
 
 
-.global float_8066D3D4
-float_8066D3D4:
+.obj float_8066D3D4, global
 	.float -2 #0xC0000000
+.endobj float_8066D3D4
 
 
-.global float_8066D3D8
-float_8066D3D8:
+.obj float_8066D3D8, global
 	.float -1.0
 	.4byte 0
+.endobj float_8066D3D8
 
 
-.global double_8066D3E0
-double_8066D3E0:
+.obj double_8066D3E0, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066D3E0
 
-.global float_8066D3E8
-float_8066D3E8:
+.obj float_8066D3E8, global
 	.float 20.0
 	.4byte 0
+.endobj float_8066D3E8
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_8065AF10
-lbl_8065AF10:
+.obj lbl_8065AF10, global
 	.skip 0xC
-.global lbl_8065AF1C
-lbl_8065AF1C:
+.endobj lbl_8065AF10
+
+.obj lbl_8065AF1C, global
 	.skip 0x1C
+.endobj lbl_8065AF1C
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

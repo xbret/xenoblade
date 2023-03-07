@@ -3383,17 +3383,16 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CSysWinScenarioLog_typestr
-CSysWinScenarioLog_typestr:
+.obj CSysWinScenarioLog_typestr, global
 	.asciz "CSysWinScenarioLog"
 	.balign 4
 	.4byte 0
+.endobj CSysWinScenarioLog_typestr
 
 
-.global CSysWinScenarioLog_strpool
-CSysWinScenarioLog_strpool:
+.obj CSysWinScenarioLog_strpool, global
 	.asciz "/menu/ScenarioLog.arc"
 	.asciz "/common/jp/bdat_slog.bin"
 	.asciz "flag"
@@ -3412,13 +3411,13 @@ CSysWinScenarioLog_strpool:
 	.asciz "mf70_cf60_syswin14.brlyt"
 	.asciz "mf70_cf60_syswin14_in.brlan"
 	.asciz "MNU_scenario"
+.endobj CSysWinScenarioLog_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CSysWinScenarioLog
-__vt__CSysWinScenarioLog:
+.obj __vt__CSysWinScenarioLog, global
 	.4byte __RTTI__CSysWinScenarioLog
 	.4byte 0
 	.4byte __dt__CSysWinScenarioLog
@@ -3468,9 +3467,9 @@ __vt__CSysWinScenarioLog:
 	.4byte func_8027EE78
 	.4byte func_8027E93C
 	.4byte func_8027EC80
+.endobj __vt__CSysWinScenarioLog
 
-.global CSysWinScenarioLog_hierarchy
-CSysWinScenarioLog_hierarchy:
+.obj CSysWinScenarioLog_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000070
 	.4byte __RTTI__IWorkEvent
@@ -3486,66 +3485,73 @@ CSysWinScenarioLog_hierarchy:
 	.4byte __RTTI__IUIWindow
 	.4byte 0
 	.4byte 0
+.endobj CSysWinScenarioLog_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CSysWinScenarioLog
-__RTTI__CSysWinScenarioLog:
+.obj __RTTI__CSysWinScenarioLog, global
 	.4byte CSysWinScenarioLog_typestr
 	.4byte CSysWinScenarioLog_hierarchy
+.endobj __RTTI__CSysWinScenarioLog
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B378
-float_8066B378:
+.obj float_8066B378, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066B378
 
 
-.global double_8066B380
-double_8066B380:
+.obj double_8066B380, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066B380
 
-.global float_8066B388
-float_8066B388:
+.obj float_8066B388, global
 	.float 0
+.endobj float_8066B388
 
 
-.global float_8066B38C
-float_8066B38C:
+.obj float_8066B38C, global
 	.float 0.15 #0x3E19999A
+.endobj float_8066B38C
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj lbl_806671F8, global
+	.skip 0x4
+.endobj lbl_806671F8
 
-.global lbl_806671F8
-lbl_806671F8:
+.obj lbl_806671FC, global
 	.skip 0x4
-.global lbl_806671FC
-lbl_806671FC:
-	.skip 0x4
-.global lbl_80667200
-lbl_80667200:
+.endobj lbl_806671FC
+
+.obj lbl_80667200, global
 	.skip 0x1
-.global lbl_80667201
-lbl_80667201:
+.endobj lbl_80667200
+
+.obj lbl_80667201, global
 	.skip 0x1
-.global lbl_80667202
-lbl_80667202:
+.endobj lbl_80667201
+
+.obj lbl_80667202, global
 	.skip 0x2
-.global lbl_80667204
-lbl_80667204:
+.endobj lbl_80667202
+
+.obj lbl_80667204, global
 	.skip 0x4
-.global lbl_80667208
-lbl_80667208:
+.endobj lbl_80667204
+
+.obj lbl_80667208, global
 	.skip 0x8
+.endobj lbl_80667208
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -2063,26 +2063,25 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMenuGCItem_typestr
-CMenuGCItem_typestr:
+.obj CMenuGCItem_typestr, global
 	.asciz "CMenuGCItem"
+.endobj CMenuGCItem_typestr
 
 
-.global lbl_8050C924
-lbl_8050C924:
+.obj lbl_8050C924, global
 	.asciz "MNU_item"
 	.asciz "name"
 	.4byte 0
 	.2byte 0
+.endobj lbl_8050C924
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMenuGCItem
-__vt__CMenuGCItem:
+.obj __vt__CMenuGCItem, global
 	.4byte __RTTI__CMenuGCItem
 	.4byte 0
 	.4byte __dt__CMenuGCItem
@@ -2097,9 +2096,9 @@ __vt__CMenuGCItem:
 	.4byte func_802B0F10
 	.4byte func_802B0F08
 	.4byte func_802B0B4C
+.endobj __vt__CMenuGCItem
 
-.global CMenuGCItem_hierarchy
-CMenuGCItem_hierarchy:
+.obj CMenuGCItem_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000058
 	.4byte __RTTI__CDoubleListNode
@@ -2114,10 +2113,10 @@ CMenuGCItem_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuGCItem_hierarchy
 
 
-.global jumptable_8053E490
-jumptable_8053E490:
+.obj jumptable_8053E490, global
 	.4byte .L_802B14A4
 	.4byte .L_802B154C
 	.4byte .L_802B1558
@@ -2160,33 +2159,34 @@ jumptable_8053E490:
 	.4byte .L_802B200C
 	.4byte .L_802B2034
 	.4byte 0
+.endobj jumptable_8053E490
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuGCItem
-__RTTI__CMenuGCItem:
+.obj __RTTI__CMenuGCItem, global
 	.4byte CMenuGCItem_typestr
 	.4byte CMenuGCItem_hierarchy
+.endobj __RTTI__CMenuGCItem
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-
+.balign 8
 
 #fix later
-.global lbl_8066B6C0
-lbl_8066B6C0:
+.obj lbl_8066B6C0, global
 	.asciz "%&'("
 	.balign 4
+.endobj lbl_8066B6C0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_806674E0
-lbl_806674E0:
+.obj lbl_806674E0, global
 	.skip 0x8
+.endobj lbl_806674E0
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

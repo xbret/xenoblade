@@ -602,8 +602,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global jumptable_8054C130
-jumptable_8054C130:
+.balign 8
+
+.obj jumptable_8054C130, global
 	.4byte .L_8031EFB0
 	.4byte .L_8031EFCC
 	.4byte .L_8031EFE8
@@ -626,10 +627,10 @@ jumptable_8054C130:
 	.4byte .L_8031F264
 	.4byte .L_8031F274
 	.4byte .L_8031F03C
+.endobj jumptable_8054C130
 
 
-.global jumptable_8054C188
-jumptable_8054C188:
+.obj jumptable_8054C188, global
 	.4byte .L_8031EB8C
 	.4byte .L_8031EBAC
 	.4byte .L_8031EBCC
@@ -666,3 +667,4 @@ jumptable_8054C188:
 	.4byte .L_8031EF74
 	.4byte .L_8031ECCC
 	.4byte 0
+.endobj jumptable_8054C188

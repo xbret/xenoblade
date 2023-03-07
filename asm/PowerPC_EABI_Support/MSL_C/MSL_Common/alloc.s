@@ -375,28 +375,28 @@
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-#needed to align global_destructor_chain.c
-#TODO: get rid of this in favor for padding in the C file
-.4byte 0
+.balign 8 #needed to align global_destructor_chain.c
 
-.global lbl_80667528
-lbl_80667528:
+.obj lbl_80667528, global
 	.skip 0x8
+.endobj lbl_80667528
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
 #Needed to align GCN_mem_alloc.s
 .balign 4
 
-fix_pool_sizes:
+.obj fix_pool_sizes, local
 	.4byte 0x00000004
 	.4byte 0x0000000C
 	.4byte 0x00000014
 	.4byte 0x00000024
 	.4byte 0x00000034
 	.4byte 0x00000044
+.endobj fix_pool_sizes
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_8057B010
-lbl_8057B010:
+.obj lbl_8057B010, global
 	.skip 0x38
+.endobj lbl_8057B010

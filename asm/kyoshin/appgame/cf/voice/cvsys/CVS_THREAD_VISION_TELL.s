@@ -356,40 +356,38 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-
-.global cf_CVS_THREAD_VISION_TELL_typestr
-cf_CVS_THREAD_VISION_TELL_typestr:
+.obj cf_CVS_THREAD_VISION_TELL_typestr, global
 	.asciz "cf::CVS_THREAD_VISION_TELL"
 	.balign 4
 	.4byte 0
+.endobj cf_CVS_THREAD_VISION_TELL_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8053D540
-lbl_8053D540:
+.obj lbl_8053D540, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A97A0
+.endobj lbl_8053D540
 
-.global lbl_8053D54C
-lbl_8053D54C:
+.obj lbl_8053D54C, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A9924
+.endobj lbl_8053D54C
 
-.global lbl_8053D558
-lbl_8053D558:
+.obj lbl_8053D558, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_802A9AC4
+.endobj lbl_8053D558
 
 
-.global __vt__cf_CVS_THREAD_VISION_TELL
-__vt__cf_CVS_THREAD_VISION_TELL:
+.obj __vt__cf_CVS_THREAD_VISION_TELL, global
 	.4byte __RTTI__cf_CVS_THREAD_VISION_TELL
 	.4byte 0
 	.4byte func_802A3B50
@@ -397,33 +395,34 @@ __vt__cf_CVS_THREAD_VISION_TELL:
 	.4byte func_802A9B84
 	.4byte func_802A1EA0
 	.4byte func_802A3740
+.endobj __vt__cf_CVS_THREAD_VISION_TELL
 
-.global cf_CVS_THREAD_VISION_TELL_hierarchy
-cf_CVS_THREAD_VISION_TELL_hierarchy:
+.obj cf_CVS_THREAD_VISION_TELL_hierarchy, global
 	.4byte __RTTI__cf_CVS_THREAD
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CVS_THREAD_VISION_TELL_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_80665650
-lbl_80665650:
+.obj lbl_80665650, global
 	.4byte 0x012E0131
 	.4byte 0x01320133
+.endobj lbl_80665650
 
 
-.global lbl_80665658
-lbl_80665658:
+.obj lbl_80665658, global
 	.4byte 0x01310132
 	.4byte 0x01330000
+.endobj lbl_80665658
 
-.global __RTTI__cf_CVS_THREAD_VISION_TELL
-__RTTI__cf_CVS_THREAD_VISION_TELL:
+.obj __RTTI__cf_CVS_THREAD_VISION_TELL, global
 	.4byte cf_CVS_THREAD_VISION_TELL_typestr
 	.4byte cf_CVS_THREAD_VISION_TELL_hierarchy
+.endobj __RTTI__cf_CVS_THREAD_VISION_TELL
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

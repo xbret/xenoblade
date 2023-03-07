@@ -241,18 +241,20 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_8054D7D0
-lbl_8054D7D0:
+.balign 8
+
+.obj lbl_8054D7D0, global
 	.4byte lbl_8054D7F0
 	.4byte 0
 	.4byte __dt__Q36nw4hbm3lyt5GroupFv
+.endobj lbl_8054D7D0
 
-.global lbl_8054D7DC
-lbl_8054D7DC:
+.obj lbl_8054D7DC, global
 	.asciz "nw4hbm::lyt::Group"
 	.balign 4
+.endobj lbl_8054D7DC
 
-.global lbl_8054D7F0
-lbl_8054D7F0:
+.obj lbl_8054D7F0, global
 	.4byte lbl_8054D7DC
 	.4byte 0
+.endobj lbl_8054D7F0

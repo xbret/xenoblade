@@ -634,67 +634,90 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-__AXBufferAuxA:
+.obj __AXBufferAuxA, local
 	.skip 0x1200
+.endobj __AXBufferAuxA
 
-__AXBufferAuxB:
+.obj __AXBufferAuxB, local
 	.skip 0x1200
+.endobj __AXBufferAuxB
 
-__AXBufferAuxC:
+.obj __AXBufferAuxC, local
 	.skip 0xD80
+.endobj __AXBufferAuxC
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-__AXAuxCpuReadWritePosition:
-	.skip 0x4
+.balign 8
 
-__AXAuxDspReadPosition:
+.obj __AXAuxCpuReadWritePosition, local
 	.skip 0x4
+.endobj __AXAuxCpuReadWritePosition
 
-__AXAuxDspWritePosition:
+.obj __AXAuxDspReadPosition, local
 	.skip 0x4
+.endobj __AXAuxDspReadPosition
 
-__AXAuxCDspRead:
+.obj __AXAuxDspWritePosition, local
 	.skip 0x4
+.endobj __AXAuxDspWritePosition
 
-__AXAuxCDspWrite:
+.obj __AXAuxCDspRead, local
 	.skip 0x4
+.endobj __AXAuxCDspRead
 
-__AXAuxBDspRead:
+.obj __AXAuxCDspWrite, local
 	.skip 0x4
+.endobj __AXAuxCDspWrite
 
-__AXAuxBDspWrite:
+.obj __AXAuxBDspRead, local
 	.skip 0x4
+.endobj __AXAuxBDspRead
 
-__AXAuxADspRead:
+.obj __AXAuxBDspWrite, local
 	.skip 0x4
+.endobj __AXAuxBDspWrite
 
-__AXAuxADspWrite:
+.obj __AXAuxADspRead, local
 	.skip 0x4
+.endobj __AXAuxADspRead
 
-__AXContextAuxC:
+.obj __AXAuxADspWrite, local
 	.skip 0x4
+.endobj __AXAuxADspWrite
 
-__AXContextAuxB:
+.obj __AXContextAuxC, local
 	.skip 0x4
+.endobj __AXContextAuxC
 
-__AXContextAuxA:
+.obj __AXContextAuxB, local
 	.skip 0x4
+.endobj __AXContextAuxB
 
-__AXCallbackAuxC:
+.obj __AXContextAuxA, local
 	.skip 0x4
+.endobj __AXContextAuxA
 
-__AXCallbackAuxB:
+.obj __AXCallbackAuxC, local
 	.skip 0x4
+.endobj __AXCallbackAuxC
 
-__AXCallbackAuxA:
+.obj __AXCallbackAuxB, local
 	.skip 0x4
+.endobj __AXCallbackAuxB
 
-__clearAuxC:
+.obj __AXCallbackAuxA, local
 	.skip 0x4
+.endobj __AXCallbackAuxA
 
-__clearAuxB:
+.obj __clearAuxC, local
 	.skip 0x4
+.endobj __clearAuxC
 
-__clearAuxA:
+.obj __clearAuxB, local
 	.skip 0x4
+.endobj __clearAuxB
+
+.obj __clearAuxA, local
+	.skip 0x4
+.endobj __clearAuxA

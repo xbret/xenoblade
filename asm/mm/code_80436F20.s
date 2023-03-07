@@ -314,39 +314,40 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066CA60
-float_8066CA60:
+.obj float_8066CA60, global
 	.float 0
 	.4byte 0
+.endobj float_8066CA60
 
 
-.global float_8066CA68
-float_8066CA68:
+.obj float_8066CA68, global
 	.float 40.7436638 #0x4222F983
+.endobj float_8066CA68
 
 
-.global float_8066CA6C
-float_8066CA6C:
+.obj float_8066CA6C, global
 	.float 0
+.endobj float_8066CA6C
 
 
-.global float_8066CA70
-float_8066CA70:
+.obj float_8066CA70, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066CA70
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_8065A068
-lbl_8065A068:
+.obj lbl_8065A068, global
 	.skip 0x10
-.global lbl_8065A078
-lbl_8065A078:
+.endobj lbl_8065A068
+
+.obj lbl_8065A078, global
 	.skip 0x10
+.endobj lbl_8065A078
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

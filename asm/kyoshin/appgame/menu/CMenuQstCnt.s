@@ -1514,16 +1514,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMenuQstCnt_typestr
-CMenuQstCnt_typestr:
+.obj CMenuQstCnt_typestr, global
 	.asciz "CMenuQstCnt"
 	.4byte 0
+.endobj CMenuQstCnt_typestr
 
 
-.global CMenuQstCnt_strpool
-CMenuQstCnt_strpool:
+.obj CMenuQstCnt_strpool, global
 	.asciz "CMenuQstCnt"
 	.asciz "mf70_cf60_qst_cunt.brlyt"
 	.asciz "mf70_cf60_qst_cunt_in.brlan"
@@ -1537,13 +1536,13 @@ CMenuQstCnt_strpool:
 	.asciz "name"
 	.asciz "txt_num"
 	.asciz "title"
+.endobj CMenuQstCnt_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CMenuQstCnt
-__vt__CMenuQstCnt:
+.obj __vt__CMenuQstCnt, global
 	.4byte __RTTI__CMenuQstCnt
 	.4byte 0
 	.4byte __dt__CMenuQstCnt
@@ -1592,9 +1591,9 @@ __vt__CMenuQstCnt:
 	.4byte func_80226FA4
 	.4byte func_80226F9C
 	.4byte func_802268C8
+.endobj __vt__CMenuQstCnt
 
-.global CMenuQstCnt_hierarchy
-CMenuQstCnt_hierarchy:
+.obj CMenuQstCnt_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000070
 	.4byte __RTTI__IWorkEvent
@@ -1611,42 +1610,43 @@ CMenuQstCnt_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuQstCnt_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuQstCnt
-__RTTI__CMenuQstCnt:
+.obj __RTTI__CMenuQstCnt, global
 	.4byte CMenuQstCnt_typestr
 	.4byte CMenuQstCnt_hierarchy
+.endobj __RTTI__CMenuQstCnt
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066AE28
-float_8066AE28:
+.obj float_8066AE28, global
 	.float 0
+.endobj float_8066AE28
 
 
-.global float_8066AE2C
-float_8066AE2C:
+.obj float_8066AE2C, global
 	.float 1.0
+.endobj float_8066AE2C
 
 
-.global float_8066AE30
-float_8066AE30:
+.obj float_8066AE30, global
 	.float 90 #0x42B40000
 	.4byte 0
+.endobj float_8066AE30
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80667010
-lbl_80667010:
+.obj lbl_80667010, global
 	.skip 0x8
+.endobj lbl_80667010
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

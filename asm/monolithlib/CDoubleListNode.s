@@ -121,11 +121,11 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CDoubleListNode
-__vt__CDoubleListNode:
+.obj __vt__CDoubleListNode, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __dt__15CDoubleListNodeFv
 	.4byte CDoubleListNode_Reset
+.endobj __vt__CDoubleListNode

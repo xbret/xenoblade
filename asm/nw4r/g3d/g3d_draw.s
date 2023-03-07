@@ -2150,29 +2150,33 @@
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
+
 #@LOCAL@sort<PQ54nw4r3g3d6detail7workmem4MdlZ,PFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b>__3stdFPQ54nw4r3g3d6detail7workmem4MdlZPQ54nw4r3g3d6detail7workmem4MdlZPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b_v@shuffle@0
-.global lbl_80665DA8
-lbl_80665DA8:
+.obj lbl_80665DA8, global
 	.4byte 0xFFFFFFFC
+.endobj lbl_80665DA8
 
 #@LOCAL@sort<PQ54nw4r3g3d6detail7workmem4MdlZ,RPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b>__3stdFPQ54nw4r3g3d6detail7workmem4MdlZPQ54nw4r3g3d6detail7workmem4MdlZRPFRCQ54nw4r3g3d6detail7workmem4MdlZRCQ54nw4r3g3d6detail7workmem4MdlZ_b_v@shuffle@0
-.global lbl_80665DAC
-lbl_80665DAC:
+.obj lbl_80665DAC, global
 	.4byte 0xFFFFFFFC
+.endobj lbl_80665DAC
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C448
-float_8066C448:
+.balign 8
+
+.obj float_8066C448, global
 	.float 0
+.endobj float_8066C448
 
 
-.global float_8066C44C
-float_8066C44C:
+.obj float_8066C44C, global
 	.float -2 #0xC0000000
+.endobj float_8066C44C
 
 
-.global float_8066C450
-float_8066C450:
+.obj float_8066C450, global
 	.float 1.0
 	.4byte 0
+.endobj float_8066C450

@@ -1022,30 +1022,30 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_80518A48
-lbl_80518A48:
+.obj lbl_80518A48, global
 	.4byte 0
+.endobj lbl_80518A48
 
 
-.global lbl_80518A4C
-lbl_80518A4C:
+.obj lbl_80518A4C, global
 	.float 1.0
+.endobj lbl_80518A4C
 
 
-.global double_80518A50
-double_80518A50:
+.obj double_80518A50, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_80518A50
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 #@GUARD@texCoords$7412
-.global lbl_805CD790
-lbl_805CD790:
+.obj lbl_805CD790, global
 	.skip 0x8
+.endobj lbl_805CD790
 
 #texCoords$7412
-.global lbl_805CD798
-lbl_805CD798:
+.obj lbl_805CD798, global
 	.skip 0x20
+.endobj lbl_805CD798

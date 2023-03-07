@@ -72,8 +72,10 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-XYNTSC:
+
+.obj XYNTSC, local
 	.4byte 0x00F60200
 	.4byte 0x000E1300
 	.4byte 0x001E0900
@@ -86,8 +88,9 @@ XYNTSC:
 	.4byte 0x00830200
 	.4byte 0x00830200
 	.4byte 0x00830200
+.endobj XYNTSC
 
-XYPAL:
+.obj XYPAL, local
 	.4byte 0x01280200
 	.4byte 0x000F1500
 	.4byte 0x001D0B00
@@ -100,6 +103,7 @@ XYPAL:
 	.4byte 0x00680300
 	.4byte 0x00680300
 	.4byte 0x009C0200
+.endobj XYPAL
 
 
 	.asciz "SISetSamplingRate: unknown TV format. Use default."
@@ -108,5 +112,8 @@ XYPAL:
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-SamplingRate:
+.balign 8
+
+.obj SamplingRate, local
 	.skip 0x8
+.endobj SamplingRate

@@ -2342,42 +2342,45 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-.global lbl_80520ED8
-lbl_80520ED8:
+
+.obj lbl_80520ED8, global
 	.4byte 0x0000000A
 	.asciz "AnmObjChr"
 	.balign 4
+.endobj lbl_80520ED8
 
 
-.global lbl_80520EE8
-lbl_80520EE8:
+.obj lbl_80520EE8, global
 	.4byte 0x0000000E
 	.asciz "AnmObjChrNode"
 	.balign 4
+.endobj lbl_80520EE8
 
 
-.global lbl_80520EFC
-lbl_80520EFC:
+.obj lbl_80520EFC, global
 	.4byte 0x0000000F
 	.asciz "AnmObjChrBlend"
 	.balign 4
+.endobj lbl_80520EFC
 
 
-.global lbl_80520F10
-lbl_80520F10:
+.obj lbl_80520F10, global
 	.4byte 0x0000000D
 	.asciz "AnmObjChrRes"
 	.balign 4
 	.4byte 0
+.endobj lbl_80520F10
 
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global lbl_8056CC10
-lbl_8056CC10:
+
+.obj lbl_8056CC10, global
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d12AnmObjChrResCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -2400,10 +2403,10 @@ lbl_8056CC10:
 	.4byte GetWeight__Q34nw4r3g3d9AnmObjChrCFi
 	.4byte Bind__Q34nw4r3g3d15AnmObjTexSrtResFQ34nw4r3g3d6ResMdlUlQ44nw4r3g3d9AnmObjChr10BindOption
 	.4byte Release__Q34nw4r3g3d12AnmObjChrResFQ34nw4r3g3d6ResMdlUlQ44nw4r3g3d9AnmObjChr10BindOption
+.endobj lbl_8056CC10
 
 
-.global lbl_8056CC68
-lbl_8056CC68:
+.obj lbl_8056CC68, global
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d14AnmObjChrBlendCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -2426,10 +2429,10 @@ lbl_8056CC68:
 	.4byte GetWeight__Q34nw4r3g3d14AnmObjChrBlendCFi
 	.4byte Bind__Q34nw4r3g3d13AnmObjChrNodeFQ34nw4r3g3d6ResMdlUlQ44nw4r3g3d9AnmObjChr10BindOption
 	.4byte Release__Q34nw4r3g3d13AnmObjChrNodeFQ34nw4r3g3d6ResMdlUlQ44nw4r3g3d9AnmObjChr10BindOption
+.endobj lbl_8056CC68
 
 
-.global lbl_8056CCC0
-lbl_8056CCC0:
+.obj lbl_8056CCC0, global
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d13AnmObjChrNodeCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -2452,10 +2455,10 @@ lbl_8056CCC0:
 	.4byte GetWeight__Q34nw4r3g3d9AnmObjChrCFi
 	.4byte Bind__Q34nw4r3g3d13AnmObjChrNodeFQ34nw4r3g3d6ResMdlUlQ44nw4r3g3d9AnmObjChr10BindOption
 	.4byte Release__Q34nw4r3g3d13AnmObjChrNodeFQ34nw4r3g3d6ResMdlUlQ44nw4r3g3d9AnmObjChr10BindOption
+.endobj lbl_8056CCC0
 
 
-.global lbl_8056CD18
-lbl_8056CD18:
+.obj lbl_8056CD18, global
 	.4byte 0
 	.4byte 0
 	.4byte IsDerivedFrom__Q34nw4r3g3d9AnmObjChrCFQ44nw4r3g3d6G3dObj7TypeObj
@@ -2478,25 +2481,28 @@ lbl_8056CD18:
 	.4byte GetWeight__Q34nw4r3g3d9AnmObjChrCFi
 	.4byte 0
 	.4byte 0
+.endobj lbl_8056CD18
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C388
-float_8066C388:
+.balign 8
+
+.obj float_8066C388, global
 	.float 0
+.endobj float_8066C388
 
 
-.global float_8066C38C
-float_8066C38C:
+.obj float_8066C38C, global
 	.float 1.0
+.endobj float_8066C38C
 
 
-.global float_8066C390
-float_8066C390:
+.obj float_8066C390, global
 	.4byte 0x7FC00000
 	.4byte 0
+.endobj float_8066C390
 
 
-.global double_8066C398
-double_8066C398:
+.obj double_8066C398, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066C398

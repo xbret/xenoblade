@@ -1645,9 +1645,10 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-.global __vt__Q44nw4r3snd6detail10BasicSound
-__vt__Q44nw4r3snd6detail10BasicSound:
+
+.obj __vt__Q44nw4r3snd6detail10BasicSound, global
 	.4byte 0
 	.4byte 0
 	.4byte GetRuntimeTypeInfo__Q44nw4r3snd6detail10BasicSoundCFv
@@ -1662,27 +1663,32 @@ __vt__Q44nw4r3snd6detail10BasicSound:
 	.4byte OnUpdatePlayerPriority__Q44nw4r3snd6detail10BasicSoundFv
 	.4byte UpdateMoveValue__Q44nw4r3snd6detail10BasicSoundFv
 	.4byte UpdateParam__Q44nw4r3snd6detail10BasicSoundFv
+.endobj __vt__Q44nw4r3snd6detail10BasicSound
 
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C6E8
-float_8066C6E8:
+.balign 8
+
+.obj float_8066C6E8, global
 	.float 1.0
+.endobj float_8066C6E8
 
 
-.global float_8066C6EC
-float_8066C6EC:
+.obj float_8066C6EC, global
 	.float 0
+.endobj float_8066C6EC
 
 
-.global double_8066C6F0
-double_8066C6F0:
+.obj double_8066C6F0, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066C6F0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global typeInfo__Q44nw4r3snd6detail10BasicSound
-typeInfo__Q44nw4r3snd6detail10BasicSound:
+.balign 8
+
+.obj typeInfo__Q44nw4r3snd6detail10BasicSound, global
 	.skip 0x8
+.endobj typeInfo__Q44nw4r3snd6detail10BasicSound

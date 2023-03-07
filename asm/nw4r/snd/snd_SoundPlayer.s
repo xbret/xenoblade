@@ -871,30 +871,34 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-.global float_8066C858
-float_8066C858:
+
+.obj float_8066C858, global
 	.float 1.0
+.endobj float_8066C858
 
 
-.global float_8066C85C
-float_8066C85C:
+.obj float_8066C85C, global
 	.float 0
+.endobj float_8066C85C
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_8063B4E0
-lbl_8063B4E0:
+.obj lbl_8063B4E0, global
 	.skip 0x10
+.endobj lbl_8063B4E0
 
 #@LOCAL@detail_SortPriorityList__Q34nw4r3snd11SoundPlayerFv@tmplist@0
-.global lbl_8063B4F0
-lbl_8063B4F0:
+.obj lbl_8063B4F0, global
 	.skip 0x610
+.endobj lbl_8063B4F0
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
+
 #@GUARD@detail_SortPriorityList__Q34nw4r3snd11SoundPlayerFv@tmplist@0
-.global lbl_80667DE0
-lbl_80667DE0:
+.obj lbl_80667DE0, global
 	.skip 0x8
+.endobj lbl_80667DE0

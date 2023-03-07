@@ -304,8 +304,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global __vt__Q44nw4r3snd6detail11BasicPlayer
-__vt__Q44nw4r3snd6detail11BasicPlayer:
+.balign 8
+
+.obj __vt__Q44nw4r3snd6detail11BasicPlayer, global
 	.4byte 0
 	.4byte 0
 	.4byte __dt__Q44nw4r3snd6detail11BasicPlayerFv
@@ -316,14 +317,17 @@ __vt__Q44nw4r3snd6detail11BasicPlayer:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj __vt__Q44nw4r3snd6detail11BasicPlayer
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-.global float_8066C6E0
-float_8066C6E0:
+.balign 8
+
+.obj float_8066C6E0, global
 	.float 1.0
+.endobj float_8066C6E0
 
 
-.global float_8066C6E4
-float_8066C6E4:
+.obj float_8066C6E4, global
 	.4byte 0
+.endobj float_8066C6E4

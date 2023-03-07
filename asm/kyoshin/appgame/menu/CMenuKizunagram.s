@@ -1222,35 +1222,34 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CMenuKizunagram_typestr
-CMenuKizunagram_typestr:
+.obj CMenuKizunagram_typestr, global
 	.asciz "CMenuKizunagram"
+.endobj CMenuKizunagram_typestr
 
 
-.global lbl_80508140
-lbl_80508140:
+.obj lbl_80508140, global
 	.asciz "MNU_relate"
 	.asciz "name"
+.endobj lbl_80508140
 
-.global lbl_80508150
-lbl_80508150:
+.obj lbl_80508150, global
 	.asciz "nul_curs02"
 	.balign 4
+.endobj lbl_80508150
 
-.global lbl_8050815C
-lbl_8050815C:
+.obj lbl_8050815C, global
 	.asciz "nul_curs03"
 	.balign 4
+.endobj lbl_8050815C
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global jumptable_8053AC38
-jumptable_8053AC38:
+.obj jumptable_8053AC38, global
 	.4byte .L_802570FC
 	.4byte .L_80257108
 	.4byte .L_80257114
@@ -1263,10 +1262,10 @@ jumptable_8053AC38:
 	.4byte .L_8025715C
 	.4byte .L_80257168
 	.4byte 0
+.endobj jumptable_8053AC38
 
 
-.global __vt__CMenuKizunagram
-__vt__CMenuKizunagram:
+.obj __vt__CMenuKizunagram, global
 	.4byte __RTTI__CMenuKizunagram
 	.4byte 0
 	.4byte __dt__CMenuKizunagram
@@ -1281,9 +1280,9 @@ __vt__CMenuKizunagram:
 	.4byte func_80257A84
 	.4byte func_80257A7C
 	.4byte func_802571B8
+.endobj __vt__CMenuKizunagram
 
-.global CMenuKizunagram_hierarchy
-CMenuKizunagram_hierarchy:
+.obj CMenuKizunagram_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x00000058
 	.4byte __RTTI__CDoubleListNode
@@ -1298,22 +1297,24 @@ CMenuKizunagram_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMenuKizunagram_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMenuKizunagram
-__RTTI__CMenuKizunagram:
+.obj __RTTI__CMenuKizunagram, global
 	.4byte CMenuKizunagram_typestr
 	.4byte CMenuKizunagram_hierarchy
+.endobj __RTTI__CMenuKizunagram
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-instance:
+.obj instance, local
 	.skip 0x8
+.endobj instance
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

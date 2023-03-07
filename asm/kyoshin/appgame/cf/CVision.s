@@ -6826,8 +6826,9 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
-.global lbl_804FF788
-lbl_804FF788:
+.balign 8
+
+.obj lbl_804FF788, global
 	.4byte 0x000000A1
 	.4byte 0x000000A2
 	.4byte 0x000000A3
@@ -6836,65 +6837,67 @@ lbl_804FF788:
 	.4byte 0x000000B8
 	.4byte 0x000000BD
 	.4byte 0x000000BD
+.endobj lbl_804FF788
 
-.global lbl_804FF7A8
-lbl_804FF7A8:
+.obj lbl_804FF7A8, global
 	.float 0.03 #0x3CF5C28F
 	.float 0.06 #0x3D75C28F
 	.4byte 0x3DB851EC
 	.4byte 0x3DF5C28F
 	.4byte 0x3E19999A
+.endobj lbl_804FF7A8
 
-.global cf_CVision_typestr
-cf_CVision_typestr:
+.obj cf_CVision_typestr, global
 	.asciz "cf::CVision"
+.endobj cf_CVision_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-.global lbl_805368E0
-lbl_805368E0:
+.balign 8
+
+.obj lbl_805368E0, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A64F8
+.endobj lbl_805368E0
 
-.global lbl_805368EC
-lbl_805368EC:
+.obj lbl_805368EC, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A4CF8
+.endobj lbl_805368EC
 
-.global lbl_805368F8
-lbl_805368F8:
+.obj lbl_805368F8, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A47D0
+.endobj lbl_805368F8
 
-.global lbl_80536904
-lbl_80536904:
+.obj lbl_80536904, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A4BC8
+.endobj lbl_80536904
 
-.global lbl_80536910
-lbl_80536910:
+.obj lbl_80536910, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A4CF8
+.endobj lbl_80536910
 
-.global lbl_8053691C
-lbl_8053691C:
+.obj lbl_8053691C, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A506C
+.endobj lbl_8053691C
 
-.global lbl_80536928
-lbl_80536928:
+.obj lbl_80536928, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A5260
+.endobj lbl_80536928
 
-.global lbl_80536934
-lbl_80536934:
+.obj lbl_80536934, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A5360
@@ -6913,63 +6916,63 @@ lbl_80536934:
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A6540
+.endobj lbl_80536934
 
-.global lbl_8053697C
-lbl_8053697C:
+.obj lbl_8053697C, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A5E58
+.endobj lbl_8053697C
 
-.global lbl_80536988
-lbl_80536988:
+.obj lbl_80536988, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A60B0
+.endobj lbl_80536988
 
-.global lbl_80536994
-lbl_80536994:
+.obj lbl_80536994, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A6340
+.endobj lbl_80536994
 
-.global lbl_805369A0
-lbl_805369A0:
+.obj lbl_805369A0, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A64F8
+.endobj lbl_805369A0
 
-.global lbl_805369AC
-lbl_805369AC:
+.obj lbl_805369AC, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A64F8
+.endobj lbl_805369AC
 
-.global lbl_805369B8
-lbl_805369B8:
+.obj lbl_805369B8, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A6540
+.endobj lbl_805369B8
 
-.global lbl_805369C4
-lbl_805369C4:
+.obj lbl_805369C4, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A64F8
+.endobj lbl_805369C4
 
-.global lbl_805369D0
-lbl_805369D0:
+.obj lbl_805369D0, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A6540
+.endobj lbl_805369D0
 
-.global lbl_805369DC
-lbl_805369DC:
+.obj lbl_805369DC, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A4578
+.endobj lbl_805369DC
 
-.global lbl_805369E8
-lbl_805369E8:
+.obj lbl_805369E8, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A4194
@@ -7010,10 +7013,10 @@ lbl_805369E8:
 	.4byte __RTTI__cf_CActorParam
 	.4byte 0
 	.4byte 0
+.endobj lbl_805369E8
 
 
-.global __vt__cf_CVision
-__vt__cf_CVision:
+.obj __vt__cf_CVision, global
 	.4byte __RTTI__cf_CVision
 	.4byte 0
 	.4byte __dt__cf_CVision
@@ -7028,9 +7031,9 @@ __vt__cf_CVision:
 	.4byte func_801A808C
 	.4byte func_801A80FC
 	.4byte func_801A8138
+.endobj __vt__cf_CVision
 
-.global cf_CVision_hierarchy
-cf_CVision_hierarchy:
+.obj cf_CVision_hierarchy, global
 	.4byte __RTTI__cf_IObjectInfo
 	.4byte 0
 	.4byte 0
@@ -7085,174 +7088,175 @@ cf_CVision_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CVision_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CVision
-__RTTI__cf_CVision:
+.obj __RTTI__cf_CVision, global
 	.4byte cf_CVision_typestr
 	.4byte cf_CVision_hierarchy
+.endobj __RTTI__cf_CVision
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066A590
-float_8066A590:
+.obj float_8066A590, global
 	.float -2 #0xC0000000
+.endobj float_8066A590
 
 
-.global float_8066A594
-float_8066A594:
+.obj float_8066A594, global
 	.float 0
+.endobj float_8066A594
 
 
-.global float_8066A598
-float_8066A598:
+.obj float_8066A598, global
 	.float -1.0
+.endobj float_8066A598
 
 
-.global float_8066A59C
-float_8066A59C:
+.obj float_8066A59C, global
 	.float 0.033333335 #0x3D088889
+.endobj float_8066A59C
 
 
-.global float_8066A5A0
-float_8066A5A0:
+.obj float_8066A5A0, global
 	.float 0.6 #0x3F19999A
+.endobj float_8066A5A0
 
 
-.global float_8066A5A4
-float_8066A5A4:
+.obj float_8066A5A4, global
 	.float 0.5
+.endobj float_8066A5A4
 
 
-.global float_8066A5A8
-float_8066A5A8:
+.obj float_8066A5A8, global
 	.float 0.83333337 #0x3F555556
+.endobj float_8066A5A8
 
 
-.global float_8066A5AC
-float_8066A5AC:
+.obj float_8066A5AC, global
 	.float 0.01 #0x3C23D70A
+.endobj float_8066A5AC
 
 
-.global float_8066A5B0
-float_8066A5B0:
+.obj float_8066A5B0, global
 	.float 1.0
+.endobj float_8066A5B0
 
 
-.global float_8066A5B4
-float_8066A5B4:
+.obj float_8066A5B4, global
 	.float 2 #0x40000000
+.endobj float_8066A5B4
 
 
-.global float_8066A5B8
-float_8066A5B8:
+.obj float_8066A5B8, global
 	.float 0.9 #0x3F666666
+.endobj float_8066A5B8
 
 
-.global float_8066A5BC
-float_8066A5BC:
+.obj float_8066A5BC, global
 	.float 3 #0x40400000
+.endobj float_8066A5BC
 
 
-.global float_8066A5C0
-float_8066A5C0:
+.obj float_8066A5C0, global
 	.float 4 #0x40800000
+.endobj float_8066A5C0
 
 
-.global float_8066A5C4
-float_8066A5C4:
+.obj float_8066A5C4, global
 	.float 0.33333333 #0x3EAAAAAB
+.endobj float_8066A5C4
 
 
-.global float_8066A5C8
-float_8066A5C8:
+.obj float_8066A5C8, global
 	.float 0.16666667 #0x3E2AAAAB
+.endobj float_8066A5C8
 
 
-.global float_8066A5CC
-float_8066A5CC:
+.obj float_8066A5CC, global
 	.float 1.33333333 #0x3FAAAAAB
+.endobj float_8066A5CC
 
 
-.global float_8066A5D0
-float_8066A5D0:
+.obj float_8066A5D0, global
 	.float 10.0
 	.4byte 0
+.endobj float_8066A5D0
 
 
-.global double_8066A5D8
-double_8066A5D8:
+.obj double_8066A5D8, global
 	.double 0.5 #0x3FE0000000000000
+.endobj double_8066A5D8
 
 
-.global double_8066A5E0
-double_8066A5E0:
+.obj double_8066A5E0, global
 	.double -0.5 #0xBFE0000000000000
+.endobj double_8066A5E0
 
 
-.global double_8066A5E8
-double_8066A5E8:
+.obj double_8066A5E8, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_8066A5E8
 
-.global float_8066A5F0
-float_8066A5F0:
+.obj float_8066A5F0, global
 	.float 0.25
+.endobj float_8066A5F0
 
 
-.global float_8066A5F4
-float_8066A5F4:
+.obj float_8066A5F4, global
 	.float 0.415 #0x3ED47AE1
+.endobj float_8066A5F4
 
 
-.global float_8066A5F8
-float_8066A5F8:
+.obj float_8066A5F8, global
 	.float 8.0
+.endobj float_8066A5F8
 
 
-.global float_8066A5FC
-float_8066A5FC:
+.obj float_8066A5FC, global
 	.float 12 #0x41400000
+.endobj float_8066A5FC
 
 
-.global float_8066A600
-float_8066A600:
+.obj float_8066A600, global
 	.float 300 #0x43960000
+.endobj float_8066A600
 
 
-.global float_8066A604
-float_8066A604:
+.obj float_8066A604, global
 	.float 0.66666666 #0x3F2AAAAB
+.endobj float_8066A604
 
 
-.global float_8066A608
-float_8066A608:
+.obj float_8066A608, global
 	.float 2.5 #0x40200000
+.endobj float_8066A608
 
 
-.global float_8066A60C
-float_8066A60C:
+.obj float_8066A60C, global
 	.float 0.15 #0x3E19999A
+.endobj float_8066A60C
 
 
-.global float_8066A610
-float_8066A610:
+.obj float_8066A610, global
 	.float 2500 #0x451C4000
+.endobj float_8066A610
 
 
-.global float_8066A614
-float_8066A614:
+.obj float_8066A614, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_8066A614
 
 
-.global double_8066A618
-double_8066A618:
+.obj double_8066A618, global
 	.8byte 0x4330000000000000 #unsigned int to float constant
+.endobj double_8066A618
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

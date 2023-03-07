@@ -1019,28 +1019,27 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CScnRootNw4r_typestr
-CScnRootNw4r_typestr:
+.obj CScnRootNw4r_typestr, global
 	.asciz "CScnRootNw4r"
 	.balign 4
+.endobj CScnRootNw4r_typestr
 
 
-.global CScnRootNw4r_strpool
-CScnRootNw4r_strpool:
+.obj CScnRootNw4r_strpool, global
 	.asciz "NW4R Mem"
 	.asciz "NW4R Mem(P)"
 	.asciz "NW4R Mem(S)"
 	.asciz "NW4R Mem(A)"
 	.balign 4
+.endobj CScnRootNw4r_strpool
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__CScnRootNw4r
-__vt__CScnRootNw4r:
+.obj __vt__CScnRootNw4r, global
 	.4byte __RTTI__CScnRootNw4r
 	.4byte 0
 	.4byte __dt__CScnRootNw4r
@@ -1064,21 +1063,22 @@ __vt__CScnRootNw4r:
 	.4byte func_803F7C30
 	.4byte func_803F7C34
 	.4byte func_8048FED8
+.endobj __vt__CScnRootNw4r
 
-.global CScnRootNw4r_hierarchy
-CScnRootNw4r_hierarchy:
+.obj CScnRootNw4r_hierarchy, global
 	.4byte __RTTI__CScnRoot
 	.4byte 0
 	.4byte 0
+.endobj CScnRootNw4r_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CScnRootNw4r
-__RTTI__CScnRootNw4r:
+.obj __RTTI__CScnRootNw4r, global
 	.4byte CScnRootNw4r_typestr
 	.4byte CScnRootNw4r_hierarchy
+.endobj __RTTI__CScnRootNw4r
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -4668,16 +4668,15 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global CSaveLoad_typestr
-CSaveLoad_typestr:
+.obj CSaveLoad_typestr, global
 	.asciz "CSaveLoad"
 	.balign 4
+.endobj CSaveLoad_typestr
 
 
-.global CSaveLoad_strpool
-CSaveLoad_strpool:
+.obj CSaveLoad_strpool, global
 	.asciz "mf00_reg00_curs13.brlyt"
 	.asciz "mf00_reg00_curs13_roop.brlan"
 	.asciz "mf00_reg00_curs13_on.brlan"
@@ -4746,23 +4745,23 @@ CSaveLoad_strpool:
 	.asciz "pic_sh43_02"
 	.asciz "pic_sh43_03"
 	.balign 4
+.endobj CSaveLoad_strpool
 
-.global cf_CfAward_typestr
-cf_CfAward_typestr:
+.obj cf_CfAward_typestr, global
 	.asciz "cf::CfAward"
+.endobj cf_CfAward_typestr
 
-.global cf_CAwardBase_typestr
-cf_CAwardBase_typestr:
+.obj cf_CAwardBase_typestr, global
 	.asciz "cf::CAwardBase"
 	.balign 4
 	.4byte 0
+.endobj cf_CAwardBase_typestr
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global jumptable_8053BF38
-jumptable_8053BF38:
+.obj jumptable_8053BF38, global
 	.4byte .L_8028F378
 	.4byte .L_8028F310
 	.4byte .L_8028F318
@@ -4777,10 +4776,10 @@ jumptable_8053BF38:
 	.4byte .L_8028F36C
 	.4byte .L_8028F374
 	.4byte 0
+.endobj jumptable_8053BF38
 
 
-.global __vt__CSaveLoad
-__vt__CSaveLoad:
+.obj __vt__CSaveLoad, global
 	.4byte __RTTI__CSaveLoad
 	.4byte 0
 	.4byte __dt__CSaveLoad
@@ -4815,23 +4814,23 @@ __vt__CSaveLoad:
 	.4byte IWorkEvent_80039D4C
 	.4byte IWorkEvent_80039D44
 	.4byte IWorkEvent_80039D40
+.endobj __vt__CSaveLoad
 
-.global CSaveLoad_hierarchy
-CSaveLoad_hierarchy:
+.obj CSaveLoad_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte 0
+.endobj CSaveLoad_hierarchy
 
 
-.global __vt__CSLCur
-__vt__CSLCur:
+.obj __vt__CSLCur, global
 	.4byte __RTTI__CSLCur
 	.4byte 0
 	.4byte func_8028EA74
+.endobj __vt__CSLCur
 
 
-.global __vt__cf_CfAward
-__vt__cf_CfAward:
+.obj __vt__cf_CfAward, global
 	.4byte __RTTI__cf_CfAward
 	.4byte 0
 	.4byte __RTTI__cf_CfAward
@@ -4840,99 +4839,101 @@ __vt__cf_CfAward:
 	.4byte func_80291B18
 	.4byte __dt__80291844
 	.4byte func_80291B18
+.endobj __vt__cf_CfAward
 
-.global cf_CfAward_hierarchy
-cf_CfAward_hierarchy:
+.obj cf_CfAward_hierarchy, global
 	.4byte __RTTI__cf_CAwardBase
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CfAward_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global lbl_806653C0
-lbl_806653C0:
+.obj lbl_806653C0, global
 	.4byte 0x00000003
+.endobj lbl_806653C0
 
 
-.global lbl_806653C4
-lbl_806653C4:
+.obj lbl_806653C4, global
 	.4byte 0xFFFFFFFF
+.endobj lbl_806653C4
 
 
-.global lbl_806653C8
-lbl_806653C8:
+.obj lbl_806653C8, global
 	.4byte 0xFFFFFFFF
 	.4byte 0
+.endobj lbl_806653C8
 
-.global __RTTI__CSaveLoad
-__RTTI__CSaveLoad:
+.obj __RTTI__CSaveLoad, global
 	.4byte CSaveLoad_typestr
 	.4byte CSaveLoad_hierarchy
+.endobj __RTTI__CSaveLoad
 
-.global __RTTI__CSLCur
-__RTTI__CSLCur:
+.obj __RTTI__CSLCur, global
 	.4byte CSLCur_typestr
 	.4byte 0
+.endobj __RTTI__CSLCur
 
-.global __RTTI__cf_CfAward
-__RTTI__cf_CfAward:
+.obj __RTTI__cf_CfAward, global
 	.4byte cf_CfAward_typestr
 	.4byte cf_CfAward_hierarchy
+.endobj __RTTI__cf_CfAward
 
-.global __RTTI__cf_CAwardBase
-__RTTI__cf_CAwardBase:
+.obj __RTTI__cf_CAwardBase, global
 	.4byte cf_CAwardBase_typestr
 	.4byte 0
+.endobj __RTTI__cf_CAwardBase
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_8066B410
-float_8066B410:
+.obj float_8066B410, global
 	.float 1.0
+.endobj float_8066B410
 
 
-.global float_8066B414
-float_8066B414:
+.obj float_8066B414, global
 	.float 0
+.endobj float_8066B414
 
 
-.global float_8066B418
-float_8066B418:
+.obj float_8066B418, global
 	.float 210 #0x43520000
+.endobj float_8066B418
 
 
-.global float_8066B41C
-float_8066B41C:
+.obj float_8066B41C, global
 	.float 118 #0x42EC0000
+.endobj float_8066B41C
 
-.global CSLCur_typestr
-CSLCur_typestr:
+.obj CSLCur_typestr, global
 	.asciz "CSLCur"
 	.balign 4
+.endobj CSLCur_typestr
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_8057A3F8
-lbl_8057A3F8:
+.obj lbl_8057A3F8, global
 	.skip 0x10
+.endobj lbl_8057A3F8
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+#.balign 8
 
-
-.global lbl_806672E4
-lbl_806672E4:
+.obj lbl_806672E4, global
 	.skip 0x4
-.global lbl_806672E8
-lbl_806672E8:
+.endobj lbl_806672E4
+
+.obj lbl_806672E8, global
 	.skip 0x8
+.endobj lbl_806672E8
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

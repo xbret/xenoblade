@@ -1676,38 +1676,37 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+#.balign 8
 
-
-.global CMsgParam_8_typestr
-CMsgParam_8_typestr:
+.obj CMsgParam_8_typestr, global
 	.asciz "CMsgParam<8>"
 	.balign 4
+.endobj CMsgParam_8_typestr
 
-.global reslist_CWorkThread_typestr
-reslist_CWorkThread_typestr:
+.obj reslist_CWorkThread_typestr, global
 	.asciz "reslist<CWorkThread *>"
 	.balign 4
+.endobj reslist_CWorkThread_typestr
 
-.global _reslist_base_CWorkThread_typestr
-_reslist_base_CWorkThread_typestr:
+.obj _reslist_base_CWorkThread_typestr, global
 	.asciz "_reslist_base<CWorkThread *>"
 	.balign 4
 	.4byte 0
+.endobj _reslist_base_CWorkThread_typestr
 
 
-.global lbl_80525DD8
-lbl_80525DD8:
+.obj lbl_80525DD8, global
 	.asciz " "
 	.4byte 0
 	.2byte 0
+.endobj lbl_80525DD8
 
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global jumptable_8056E958
-jumptable_8056E958:
+.obj jumptable_8056E958, global
 	.4byte .L_80438764
 	.4byte .L_80438634
 	.4byte .L_80438644
@@ -1720,9 +1719,9 @@ jumptable_8056E958:
 	.4byte .L_80438758
 	.4byte .L_80438708
 	.4byte .L_80438730
+.endobj jumptable_8056E958
 
-.global __vt__CWorkThread
-__vt__CWorkThread:
+.obj __vt__CWorkThread, global
 	.4byte __RTTI__CWorkThread
 	.4byte 0
 	.4byte __dt__CWorkThread
@@ -1763,52 +1762,53 @@ __vt__CWorkThread:
 	.4byte func_804389F8
 	.4byte func_80438A24
 	.4byte func_80039E30
+.endobj __vt__CWorkThread
 
-.global __vt__CMsgParam_8
-__vt__CMsgParam_8:
+.obj __vt__CMsgParam_8, global
 	.4byte __RTTI__CMsgParam_8
 	.4byte 0
 	.4byte __dt__CMsgParam_8
+.endobj __vt__CMsgParam_8
 
 
-.global __vt__reslist_CWorkThread
-__vt__reslist_CWorkThread:
+.obj __vt__reslist_CWorkThread, global
 	.4byte __RTTI__reslist_CWorkThread
 	.4byte 0
 	.4byte __dt__reslist_CWorkThread
+.endobj __vt__reslist_CWorkThread
 
-.global reslist_CWorkThread_hierarchy
-reslist_CWorkThread_hierarchy:
+.obj reslist_CWorkThread_hierarchy, global
 	.4byte __RTTI___reslist_base_CWorkThread
 	.4byte 0
 	.4byte 0
+.endobj reslist_CWorkThread_hierarchy
 
 
-.global __vt___reslist_base_CWorkThread
-__vt___reslist_base_CWorkThread:
+.obj __vt___reslist_base_CWorkThread, global
 	.4byte __RTTI___reslist_base_CWorkThread
 	.4byte 0
 	.4byte __dt___reslist_base_CWorkThread
+.endobj __vt___reslist_base_CWorkThread
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__CMsgParam_8
-__RTTI__CMsgParam_8:
+.obj __RTTI__CMsgParam_8, global
 	.4byte CMsgParam_8_typestr
 	.4byte 0
+.endobj __RTTI__CMsgParam_8
 
-.global __RTTI__reslist_CWorkThread
-__RTTI__reslist_CWorkThread:
+.obj __RTTI__reslist_CWorkThread, global
 	.4byte reslist_CWorkThread_typestr
 	.4byte reslist_CWorkThread_hierarchy
+.endobj __RTTI__reslist_CWorkThread
 
-.global __RTTI___reslist_base_CWorkThread
-__RTTI___reslist_base_CWorkThread:
+.obj __RTTI___reslist_base_CWorkThread, global
 	.4byte _reslist_base_CWorkThread_typestr
 	.4byte 0
+.endobj __RTTI___reslist_base_CWorkThread
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

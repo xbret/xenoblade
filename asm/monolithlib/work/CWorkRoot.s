@@ -719,28 +719,27 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global _unnamed_CWorkRoot_cpp_CWorkRootThread_typestr
-_unnamed_CWorkRoot_cpp_CWorkRootThread_typestr:
+.obj _unnamed_CWorkRoot_cpp_CWorkRootThread_typestr, global
 	.asciz "@unnamed@CWorkRoot_cpp@::CWorkRootThread"
 	.balign 4
+.endobj _unnamed_CWorkRoot_cpp_CWorkRootThread_typestr
 
 
-.global CWorkRoot_strpool
-CWorkRoot_strpool:
+.obj CWorkRoot_strpool, global
 	.asciz "CWorkRoot"
 	.asciz "exit wii menu\n"
 	.asciz "exit wii reset\n"
 	.asciz "exit wii power off\n"
 	.asciz "exit prog end\n"
+.endobj CWorkRoot_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt___unnamed_CWorkRoot_cpp_CWorkRootThread
-__vt___unnamed_CWorkRoot_cpp_CWorkRootThread:
+.obj __vt___unnamed_CWorkRoot_cpp_CWorkRootThread, global
 	.4byte __RTTI___unnamed_CWorkRoot_cpp_CWorkRootThread
 	.4byte 0
 	.4byte __dt___unnamed_CWorkRoot_cpp_CWorkRootThread
@@ -781,49 +780,53 @@ __vt___unnamed_CWorkRoot_cpp_CWorkRootThread:
 	.4byte func_804389F8
 	.4byte func_8044438C
 	.4byte func_80039E30
+.endobj __vt___unnamed_CWorkRoot_cpp_CWorkRootThread
 
-.global _unnamed_CWorkRoot_cpp_CWorkRootThread_hierarchy
-_unnamed_CWorkRoot_cpp_CWorkRootThread_hierarchy:
+.obj _unnamed_CWorkRoot_cpp_CWorkRootThread_hierarchy, global
 	.4byte __RTTI__IWorkEvent
 	.4byte 0
 	.4byte __RTTI__CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj _unnamed_CWorkRoot_cpp_CWorkRootThread_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI___unnamed_CWorkRoot_cpp_CWorkRootThread
-__RTTI___unnamed_CWorkRoot_cpp_CWorkRootThread:
+.obj __RTTI___unnamed_CWorkRoot_cpp_CWorkRootThread, global
 	.4byte _unnamed_CWorkRoot_cpp_CWorkRootThread_typestr
 	.4byte _unnamed_CWorkRoot_cpp_CWorkRootThread_hierarchy
+.endobj __RTTI___unnamed_CWorkRoot_cpp_CWorkRootThread
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
 
-.global lbl_8065A0E8
-lbl_8065A0E8:
+.obj lbl_8065A0E8, global
 	.skip 0x10
-.global lbl_8065A0F8
-lbl_8065A0F8:
+.endobj lbl_8065A0E8
+
+.obj lbl_8065A0F8, global
 	.skip 0x300
+.endobj lbl_8065A0F8
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
+.obj cDesktopPointer, global
+	.skip 0x4
+.endobj cDesktopPointer
 
-.global cDesktopPointer
-cDesktopPointer:
+.obj lbl_80667EEC, global
 	.skip 0x4
-.global lbl_80667EEC
-lbl_80667EEC:
-	.skip 0x4
-.global lbl_80667EF0
-lbl_80667EF0:
+.endobj lbl_80667EEC
+
+.obj lbl_80667EF0, global
 	.skip 0x8
+.endobj lbl_80667EF0
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

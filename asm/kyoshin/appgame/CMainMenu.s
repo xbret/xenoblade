@@ -539,94 +539,93 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global lbl_804F8568
-lbl_804F8568:
+.obj lbl_804F8568, global
 	.asciz "/menu/MainMenu.arc"
 	.balign 4
+.endobj lbl_804F8568
 
 
-.global lbl_804F857C
-lbl_804F857C:
+.obj lbl_804F857C, global
 	.4byte 0xFF40FF80
 	.4byte 0xFFC00000
 	.4byte 0x00400080
 	.4byte 0x00C00000
+.endobj lbl_804F857C
 
-.global lbl_804F858C
-lbl_804F858C:
+.obj lbl_804F858C, global
 	.asciz "pic_icon02_01"
 	.balign 4
+.endobj lbl_804F858C
 
-.global lbl_804F859C
-lbl_804F859C:
+.obj lbl_804F859C, global
 	.asciz "pic_icon02_02"
 	.balign 4
+.endobj lbl_804F859C
 
-.global lbl_804F85AC
-lbl_804F85AC:
+.obj lbl_804F85AC, global
 	.asciz "pic_icon02_03"
 	.balign 4
+.endobj lbl_804F85AC
 
-.global lbl_804F85BC
-lbl_804F85BC:
+.obj lbl_804F85BC, global
 	.asciz "pic_icon03_01"
 	.balign 4
+.endobj lbl_804F85BC
 
-.global lbl_804F85CC
-lbl_804F85CC:
+.obj lbl_804F85CC, global
 	.asciz "pic_icon03_02"
 	.balign 4
+.endobj lbl_804F85CC
 
-.global lbl_804F85DC
-lbl_804F85DC:
+.obj lbl_804F85DC, global
 	.asciz "pic_icon05_01"
 	.balign 4
+.endobj lbl_804F85DC
 
-.global lbl_804F85EC
-lbl_804F85EC:
+.obj lbl_804F85EC, global
 	.asciz "pic_icon05_02"
 	.balign 4
+.endobj lbl_804F85EC
 
-.global lbl_804F85FC
-lbl_804F85FC:
+.obj lbl_804F85FC, global
 	.asciz "pic_icon05_03"
 	.balign 4
+.endobj lbl_804F85FC
 
-.global lbl_804F860C
-lbl_804F860C:
+.obj lbl_804F860C, global
 	.asciz "pic_icon05_04"
 	.balign 4
+.endobj lbl_804F860C
 
-.global lbl_804F861C
-lbl_804F861C:
+.obj lbl_804F861C, global
 	.asciz "pic_icon06_01"
 	.balign 4
+.endobj lbl_804F861C
 
-.global lbl_804F862C
-lbl_804F862C:
+.obj lbl_804F862C, global
 	.asciz "pic_icon06_02"
 	.balign 4
+.endobj lbl_804F862C
 
-.global lbl_804F863C
-lbl_804F863C:
+.obj lbl_804F863C, global
 	.asciz "pic_icon07_01"
 	.balign 4
+.endobj lbl_804F863C
 
-.global lbl_804F864C
-lbl_804F864C:
+.obj lbl_804F864C, global
 	.asciz "pic_icon07_02"
 	.balign 4
+.endobj lbl_804F864C
 
-.global lbl_804F865C
-lbl_804F865C:
+.obj lbl_804F865C, global
 	.asciz "pic_icon07_03"
 	.balign 4
 	.4byte 0
+.endobj lbl_804F865C
 
-.global lbl_804F8670
-lbl_804F8670:
+.obj lbl_804F8670, global
 	.4byte lbl_804F858C
 	.4byte lbl_804F859C
 	.4byte lbl_804F85AC
@@ -641,30 +640,30 @@ lbl_804F8670:
 	.4byte lbl_804F863C
 	.4byte lbl_804F864C
 	.4byte lbl_804F865C
+.endobj lbl_804F8670
 
-.global CMainMenu_typestr
-CMainMenu_typestr:
+.obj CMainMenu_typestr, global
 	.asciz "CMainMenu"
 	.balign 4
+.endobj CMainMenu_typestr
 
-.global CMainCur_typestr
-CMainCur_typestr:
+.obj CMainCur_typestr, global
 	.asciz "CMainCur"
 	.balign 4
+.endobj CMainCur_typestr
 
-.global CBaseCur_typestr
-CBaseCur_typestr:
+.obj CBaseCur_typestr, global
 	.asciz "CBaseCur"
 	.balign 4
+.endobj CBaseCur_typestr
 
-.global CTTask_IUICf_typestr
-CTTask_IUICf_typestr:
+.obj CTTask_IUICf_typestr, global
 	.asciz "CTTask<IUICf>"
 	.balign 4
+.endobj CTTask_IUICf_typestr
 
 
-.global CMainMenu_strpool
-CMainMenu_strpool:
+.obj CMainMenu_strpool, global
 	.asciz "mf01_main21_cursor.brlyt"
 	.asciz "mf01_main21_cursor_roop.brlan"
 	.asciz "mf01_main21_cursor_on.brlan"
@@ -700,26 +699,26 @@ CMainMenu_strpool:
 	.asciz "pic_base07_03"
 	.asciz "pic_icon%02d"
 	.balign 4
+.endobj CMainMenu_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global lbl_8052F5B8
-lbl_8052F5B8:
+.obj lbl_8052F5B8, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_800FEF20
+.endobj lbl_8052F5B8
 
-.global lbl_8052F5C4
-lbl_8052F5C4:
+.obj lbl_8052F5C4, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_800FEF4C
+.endobj lbl_8052F5C4
 
 
-.global jumptable_8052F5D0
-jumptable_8052F5D0:
+.obj jumptable_8052F5D0, global
 	.4byte .L_800FF088
 	.4byte .L_800FF09C
 	.4byte .L_800FF160
@@ -729,10 +728,10 @@ jumptable_8052F5D0:
 	.4byte .L_800FF1EC
 	.4byte .L_800FF1F8
 	.4byte .L_800FF2B0
+.endobj jumptable_8052F5D0
 
 
-.global __vt__CMainMenu
-__vt__CMainMenu:
+.obj __vt__CMainMenu, global
 	.4byte __RTTI__CMainMenu
 	.4byte 0
 	.4byte __dt__CMainMenu
@@ -782,9 +781,9 @@ __vt__CMainMenu:
 	.4byte func_80102010
 	.4byte func_800FF604
 	.4byte func_800FF300
+.endobj __vt__CMainMenu
 
-.global CMainMenu_hierarchy
-CMainMenu_hierarchy:
+.obj CMainMenu_hierarchy, global
 	.4byte __RTTI__IScnRender
 	.4byte 0x0000005C
 	.4byte __RTTI__IWorkEvent
@@ -801,24 +800,24 @@ CMainMenu_hierarchy:
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj CMainMenu_hierarchy
 
-.global __vt__CMainCur
-__vt__CMainCur:
+.obj __vt__CMainCur, global
 	.4byte __RTTI__CMainCur
 	.4byte 0
 	.4byte func_800FEA88
 	.4byte func_801D20DC
 	.4byte func_800FEB14
 	.4byte func_801D2180
+.endobj __vt__CMainCur
 
-.global CMainCur_hierarchy
-CMainCur_hierarchy:
+.obj CMainCur_hierarchy, global
 	.4byte __RTTI__CBaseCur
 	.4byte 0
 	.4byte 0
+.endobj CMainCur_hierarchy
 
-.global IUICf_hierarchy
-IUICf_hierarchy:
+.obj IUICf_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -828,10 +827,10 @@ IUICf_hierarchy:
 	.4byte __RTTI__CTTask_IUICf
 	.4byte 0
 	.4byte 0
+.endobj IUICf_hierarchy
 
 
-.global __vt__CTTask_IUICf
-__vt__CTTask_IUICf:
+.obj __vt__CTTask_IUICf, global
 	.4byte __RTTI__CTTask_IUICf
 	.4byte 0
 	.4byte __dt__CTTask_IUICf
@@ -841,9 +840,9 @@ __vt__CTTask_IUICf:
 	.4byte func_80101F70
 	.4byte func_80101FB8
 	.4byte func_80043F20
+.endobj __vt__CTTask_IUICf
 
-.global CTTask_IUICf_hierarchy
-CTTask_IUICf_hierarchy:
+.obj CTTask_IUICf_hierarchy, global
 	.4byte __RTTI__CDoubleListNode
 	.4byte 0
 	.4byte __RTTI__CChildListNode
@@ -851,49 +850,49 @@ CTTask_IUICf_hierarchy:
 	.4byte __RTTI__CProcess
 	.4byte 0
 	.4byte 0
+.endobj CTTask_IUICf_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-
-.global lbl_806646B8
-lbl_806646B8:
+.obj lbl_806646B8, global
 	.4byte lbl_804F8568
 	.4byte 0
+.endobj lbl_806646B8
 
-.global __RTTI__CMainMenu
-__RTTI__CMainMenu:
+.obj __RTTI__CMainMenu, global
 	.4byte CMainMenu_typestr
 	.4byte CMainMenu_hierarchy
+.endobj __RTTI__CMainMenu
 
-.global __RTTI__CMainCur
-__RTTI__CMainCur:
+.obj __RTTI__CMainCur, global
 	.4byte CMainCur_typestr
 	.4byte CMainCur_hierarchy
+.endobj __RTTI__CMainCur
 
-.global __RTTI__CBaseCur
-__RTTI__CBaseCur:
+.obj __RTTI__CBaseCur, global
 	.4byte CBaseCur_typestr
 	.4byte 0
+.endobj __RTTI__CBaseCur
 
-.global __RTTI__IUICf
-__RTTI__IUICf:
+.obj __RTTI__IUICf, global
 	.4byte IUICf_typestr
 	.4byte IUICf_hierarchy
+.endobj __RTTI__IUICf
 
-.global __RTTI__CTTask_IUICf
-__RTTI__CTTask_IUICf:
+.obj __RTTI__CTTask_IUICf, global
 	.4byte CTTask_IUICf_typestr
 	.4byte CTTask_IUICf_hierarchy
+.endobj __RTTI__CTTask_IUICf
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80666810
-lbl_80666810:
+.obj lbl_80666810, global
 	.skip 0x8
+.endobj lbl_80666810
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

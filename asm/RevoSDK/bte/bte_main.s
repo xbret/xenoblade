@@ -111,24 +111,32 @@
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
-bte_hcisu_h2_cfg:
+.balign 8
+
+.obj bte_hcisu_h2_cfg, local
 	.4byte 0x0A5C2101
 	.4byte 0
+.endobj bte_hcisu_h2_cfg
 
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-__BTUInterruptHandlerStack:
+.obj __BTUInterruptHandlerStack, local
 	.skip 0x1000
+.endobj __BTUInterruptHandlerStack
 
-_bte_alarm:
+.obj _bte_alarm, local
 	.skip 0x30
+.endobj _bte_alarm
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-.global bte_target_mode
-bte_target_mode:
-	.skip 0x4
+.balign 8
 
-_bte_app_info:
+.obj bte_target_mode, global
 	.skip 0x4
+.endobj bte_target_mode
+
+.obj _bte_app_info, local
+	.skip 0x4
+.endobj _bte_app_info

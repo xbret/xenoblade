@@ -10119,53 +10119,52 @@
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
+.balign 8
 
-
-.global cf_CfObjEnumList_typestr
-cf_CfObjEnumList_typestr:
+.obj cf_CfObjEnumList_typestr, global
 	.asciz "cf::CfObjEnumList"
 	.balign 4
+.endobj cf_CfObjEnumList_typestr
 
-.global cf_CfObjEnumList_OBJ_LIST_typestr
-cf_CfObjEnumList_OBJ_LIST_typestr:
+.obj cf_CfObjEnumList_OBJ_LIST_typestr, global
 	.asciz "cf::CfObjEnumList::OBJ_LIST"
+.endobj cf_CfObjEnumList_OBJ_LIST_typestr
 
-.global QSort_cf_CfObjEnumList_sObjInfo_float_typestr
-QSort_cf_CfObjEnumList_sObjInfo_float_typestr:
+.obj QSort_cf_CfObjEnumList_sObjInfo_float_typestr, global
 	.asciz "QSort<cf::CfObjEnumList::sObjInfo *, float>"
+.endobj QSort_cf_CfObjEnumList_sObjInfo_float_typestr
 
-.global fixvector_cf_CfObjEnumList_sObjInfo_384_typestr
-fixvector_cf_CfObjEnumList_sObjInfo_384_typestr:
+.obj fixvector_cf_CfObjEnumList_sObjInfo_384_typestr, global
 	.asciz "fixvector<cf::CfObjEnumList::sObjInfo *, 384>"
 	.balign 4
+.endobj fixvector_cf_CfObjEnumList_sObjInfo_384_typestr
 
-.global lbl_804F8544
-lbl_804F8544:
+.obj lbl_804F8544, global
 	.asciz "move"
 	.balign 4
 	.4byte 0
+.endobj lbl_804F8544
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
+.balign 8
 
-
-.global __vt__cf_CfObjEnumList
-__vt__cf_CfObjEnumList:
+.obj __vt__cf_CfObjEnumList, global
 	.4byte __RTTI__cf_CfObjEnumList
 	.4byte 0
 	.4byte __dt__cf_CfObjEnumList
+.endobj __vt__cf_CfObjEnumList
 
-.global cf_CfObjEnumList_hierarchy
-cf_CfObjEnumList_hierarchy:
+.obj cf_CfObjEnumList_hierarchy, global
 	.4byte __RTTI___reslist_base_cf_CfObject
 	.4byte 0
 	.4byte __RTTI__reslist_cf_CfObject
 	.4byte 0
 	.4byte 0
+.endobj cf_CfObjEnumList_hierarchy
 
 
-.global lbl_8052F570
-lbl_8052F570:
+.obj lbl_8052F570, global
 	.4byte __RTTI__cf_CfObjEnumList_OBJ_LIST
 	.4byte 0
 	.4byte __RTTI__cf_CfObjEnumList_OBJ_LIST
@@ -10174,113 +10173,114 @@ lbl_8052F570:
 	.4byte func_800FD6A0
 	.4byte func_800FD68C
 	.4byte func_800F4798
+.endobj lbl_8052F570
 
-.global cf_CfObjEnumList_OBJ_LIST_hierarchy
-cf_CfObjEnumList_OBJ_LIST_hierarchy:
+.obj cf_CfObjEnumList_OBJ_LIST_hierarchy, global
 	.4byte __RTTI__QSort_cf_CfObjEnumList_sObjInfo_float
 	.4byte 0x00000604
 	.4byte __RTTI__fixvector_cf_CfObjEnumList_sObjInfo_384
 	.4byte 0
 	.4byte 0
 	.4byte 0
+.endobj cf_CfObjEnumList_OBJ_LIST_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
+.balign 8
 
-
-.global __RTTI__cf_CfObjEnumList
-__RTTI__cf_CfObjEnumList:
+.obj __RTTI__cf_CfObjEnumList, global
 	.4byte cf_CfObjEnumList_typestr
 	.4byte cf_CfObjEnumList_hierarchy
+.endobj __RTTI__cf_CfObjEnumList
 
-.global __RTTI__cf_CfObjEnumList_OBJ_LIST
-__RTTI__cf_CfObjEnumList_OBJ_LIST:
+.obj __RTTI__cf_CfObjEnumList_OBJ_LIST, global
 	.4byte cf_CfObjEnumList_OBJ_LIST_typestr
 	.4byte cf_CfObjEnumList_OBJ_LIST_hierarchy
+.endobj __RTTI__cf_CfObjEnumList_OBJ_LIST
 
-.global __RTTI__QSort_cf_CfObjEnumList_sObjInfo_float
-__RTTI__QSort_cf_CfObjEnumList_sObjInfo_float:
+.obj __RTTI__QSort_cf_CfObjEnumList_sObjInfo_float, global
 	.4byte QSort_cf_CfObjEnumList_sObjInfo_float_typestr
 	.4byte 0
+.endobj __RTTI__QSort_cf_CfObjEnumList_sObjInfo_float
 
-.global __RTTI__fixvector_cf_CfObjEnumList_sObjInfo_384
-__RTTI__fixvector_cf_CfObjEnumList_sObjInfo_384:
+.obj __RTTI__fixvector_cf_CfObjEnumList_sObjInfo_384, global
 	.4byte fixvector_cf_CfObjEnumList_sObjInfo_384_typestr
 	.4byte 0
+.endobj __RTTI__fixvector_cf_CfObjEnumList_sObjInfo_384
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
+.balign 8
 
-
-.global float_80669780
-float_80669780:
+.obj float_80669780, global
 	.float 0
+.endobj float_80669780
 
 
-.global float_80669784
-float_80669784:
+.obj float_80669784, global
 	.float 1.0
+.endobj float_80669784
 
 
-.global double_80669788
-double_80669788:
+.obj double_80669788, global
 	.8byte 0x4330000080000000 #signed int to float constant
+.endobj double_80669788
 
-.global float_80669790
-float_80669790:
+.obj float_80669790, global
 	.float 0.2
+.endobj float_80669790
 
 
-.global float_80669794
-float_80669794:
+.obj float_80669794, global
 	.float 0.1 #0x3DCCCCCD
+.endobj float_80669794
 
 
-.global float_80669798
-float_80669798:
+.obj float_80669798, global
 	.float 0.0245436933 #0x3CC90FDB
+.endobj float_80669798
 
 
-.global float_8066979C
-float_8066979C:
+.obj float_8066979C, global
 	.float 0.5
+.endobj float_8066979C
 
 
-.global float_806697A0
-float_806697A0:
+.obj float_806697A0, global
 	.float 40.7436638 #0x4222F983
 	.4byte 0
+.endobj float_806697A0
 
 
-.global double_806697A8
-double_806697A8:
+.obj double_806697A8, global
 	.double 0
+.endobj double_806697A8
 
 
-.global double_806697B0
-double_806697B0:
+.obj double_806697B0, global
 	.double 1 #0x3FF0000000000000
+.endobj double_806697B0
 
 
-.global float_806697B8
-float_806697B8:
+.obj float_806697B8, global
 	.float -1.0
 	.4byte 0
+.endobj float_806697B8
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.global lbl_80577228
-lbl_80577228:
+.obj lbl_80577228, global
 	.skip 0x30
+.endobj lbl_80577228
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
+.balign 8
 
-
-.global lbl_80666800
-lbl_80666800:
+.obj lbl_80666800, global
 	.skip 0x8
+.endobj lbl_80666800
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 
