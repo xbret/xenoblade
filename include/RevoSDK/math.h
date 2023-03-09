@@ -27,13 +27,25 @@ extern "C" {
 
 #define LONG_TAU 6.2831854820251465
 
-double cos(double);
-float cosf(float);
-double sin(double);
-double tan(double);
-float tanf(float);
-double atan(double);
-double atan2(double, double);
+inline float cosf(float x){
+    return (float)cos(x);
+}
+
+inline float sinf(float x){
+    return (float)sin(x);
+}
+
+inline float tanf(float x){
+    return (float)tan(x);
+}
+
+inline float acosf(float x){
+    return (float)acos(x);
+}
+
+inline float sqrtf(float x){
+    return (float)sqrt(x);
+}
 
 #ifdef __cplusplus
 };

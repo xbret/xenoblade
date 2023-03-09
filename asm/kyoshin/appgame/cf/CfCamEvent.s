@@ -175,6 +175,7 @@
 /* 8006AA80 00034040  4E 80 00 20 */	blr 
 .endfn func_8006AA34
 
+#calls setLookat
 .fn func_8006AA84, global
 /* 8006AA84 00034044  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8006AA88 00034048  7C 08 02 A6 */	mflr r0
@@ -344,6 +345,7 @@
 /* 8006ACBC 0003427C  4E 80 00 20 */	blr 
 .endfn func_8006ACB8
 
+#same as FUN_0024cb8c in xc3d?
 .fn func_8006ACC0, global
 /* 8006ACC0 00034280  94 21 FF 00 */	stwu r1, -0x100(r1)
 /* 8006ACC4 00034284  7C 08 02 A6 */	mflr r0
@@ -713,11 +715,11 @@
 .L_8006B230:
 /* 8006B230 000347F0  2C 00 00 00 */	cmpwi r0, 0
 /* 8006B234 000347F4  40 82 00 20 */	bne .L_8006B254
-/* 8006B238 000347F8  3C 60 80 53 */	lis r3, lbl_80529B20@ha
-/* 8006B23C 000347FC  3C A0 80 53 */	lis r5, lbl_80529AF8@ha
-/* 8006B240 00034800  38 63 9B 20 */	addi r3, r3, lbl_80529B20@l
+/* 8006B238 000347F8  3C 60 80 53 */	lis r3, triangularhString@ha
+/* 8006B23C 000347FC  3C A0 80 53 */	lis r5, acosRadErrorString@ha
+/* 8006B240 00034800  38 63 9B 20 */	addi r3, r3, triangularhString@l
 /* 8006B244 00034804  38 80 00 EF */	li r4, 0xef
-/* 8006B248 00034808  38 A5 9A F8 */	addi r5, r5, lbl_80529AF8@l
+/* 8006B248 00034808  38 A5 9A F8 */	addi r5, r5, acosRadErrorString@l
 /* 8006B24C 0003480C  4C C6 31 82 */	crclr 6
 /* 8006B250 00034810  48 36 C3 C9 */	bl Warning__Q24nw4r2dbFPCciPCce
 .L_8006B254:

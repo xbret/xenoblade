@@ -553,7 +553,7 @@ static inline int unkInline1(decimal* d, s16 digits){
 }
 
 //https://decomp.me/scratch/LEWxt dumb regswap issues
-#ifdef NONMATCHING
+#ifdef NON_MATCHING
 void __num2dec(const decform* form, double val, decimal* d) {
     s16 digits = form->digits;
     int i;

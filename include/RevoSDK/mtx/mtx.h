@@ -1,5 +1,5 @@
-#ifndef _DOLPHIN_MTX_H
-#define _DOLPHIN_MTX_H
+#ifndef _REVOSDK_MTX_H
+#define _REVOSDK_MTX_H
 
 #include "types.h"
 
@@ -7,7 +7,7 @@
 extern "C" {
 #endif // ifdef __cplusplus
 
-#include "RevoSDK/vec.h"
+#include "RevoSDK/mtx/vec.h"
 
 // sizeof = 48 or 0x30
 typedef float Mtx[3][4];
@@ -29,13 +29,14 @@ void PSMTXTransApply(const Mtx, Mtx, float, float, float);
 void PSMTXScale(Mtx, float, float, float);
 void PSMTXScaleApply(const Mtx, Mtx, float, float, float);
 void PSMTXQuat(Mtx, const PSQuaternion*);
-void PSMTXMultVec(Mtx, Vec*, Vec*);
-void PSMTXMultVecSR(Mtx, Vec, Vec);
+void PSMTXMultVec(const Mtx, const Vec*, Vec*);
+void PSMTXMultVecSR(const Mtx, const Vec*, Vec*);
 /* TODO: Determine what these params are. */
 void PSMTXMultVecArraySR(Mtx, float*, float*, float*);
 void PSMTX44Copy(Mtx44, Mtx44);
 
-void C_MTXPerspective(float, float, float, float, Mtx);
+void C_MTXFrustum(Mtx44, float, float, float, float, float, float);
+void C_MTXPerspective(Mtx44, float, float, float, float);
 void C_MTXOrtho(Mtx44, float, float, float, float, float, float);
 
 #ifdef __cplusplus

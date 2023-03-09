@@ -1,829 +1,627 @@
-#include "types.h"
-#include "stl/fdlibm.h"
-#include "RevoSDK/mtx/mtx.h"
+#include "RevoSDK/math.h"
+#include "RevoSDK/MTX.h"
 
 static float Unit01[] = { 0.0f, 1.0f };
-static float one_c = 0.0f;
-static float zero_c = 0.0f;
 
 
-void PSMTXIdentity(register Mtx m)
-{
-	asm{
-   	lfs fp0, zero_c //@sda21(r2)
-	lfs fp1, one_c //@sda21(r2)
-	psq_st fp0, 8(r3), 0, 0
-	ps_merge10 fp2, fp1, fp0
-	ps_merge01 fp1, fp0, fp1
-	psq_st fp0, 24(r3), 0, 0
-	psq_st fp0, 32(r3), 0, 0
-	psq_st fp1, 16(r3), 0, 0
-	psq_st fp2, 0(r3), 0, 0
-	psq_st fp2, 40(r3), 0, 0
-	}
+void PSMTXIdentity(register Mtx m) {
+  // sdata2 ordering
+  (void)1.0f;
+  (void)0.0f;
+
+  register float tmp0 = 0.0F;
+  register float tmp1 = 1.0F;
+  register float tmp2;
+  register float tmp3;
+  asm
+  {
+    psq_st tmp0, 8(m), 0, 0;
+    ps_merge01 tmp2, tmp0, tmp1;
+    psq_st tmp0, 24(m), 0, 0;
+    ps_merge10 tmp3, tmp1, tmp0;
+    psq_st tmp0, 32(m), 0, 0;
+    psq_st tmp2, 16(m), 0, 0;
+    psq_st tmp3, 0(m), 0, 0;
+    psq_st tmp3, 40(m), 0, 0;
+  }
 }
 
-/*
- * --INFO--
- * Address:	........
- * Size:	00006C
- */
-void C_MTXCopy(void)
-{
-	// UNUSED FUNCTION
+asm void PSMTXCopy(const register Mtx in, register Mtx out) {
+  nofralloc;
+  psq_l fp0, 0(in), 0, 0;
+  psq_st fp0, 0(out), 0, 0;
+  psq_l fp1, 8(in), 0, 0;
+  psq_st fp1, 8(out), 0, 0;
+  psq_l fp2, 16(in), 0, 0;
+  psq_st fp2, 16(out), 0, 0;
+  psq_l fp3, 24(in), 0, 0;
+  psq_st fp3, 24(out), 0, 0;
+  psq_l fp4, 32(in), 0, 0;
+  psq_st fp4, 32(out), 0, 0;
+  psq_l fp5, 40(in), 0, 0;
+  psq_st fp5, 40(out), 0, 0;
+  blr;
 }
 
-/*
- * --INFO--
- * Address:	800EA2CC
- * Size:	000034
- */
-asm void PSMTXCopy
-(
-    const register Mtx src,
-    register Mtx dst
-)
-{
-    nofralloc
-
-    psq_l       fp0, 0(src),   0, 0
-    psq_st      fp0, 0(dst),   0, 0
-    psq_l       fp1, 8(src),   0, 0
-    psq_st      fp1, 8(dst),   0, 0
-    psq_l       fp2, 16(src),  0, 0
-    psq_st      fp2, 16(dst),  0, 0
-    psq_l       fp3, 24(src),  0, 0
-    psq_st      fp3, 24(dst),  0, 0
-    psq_l       fp4, 32(src),  0, 0
-    psq_st      fp4, 32(dst),  0, 0
-    psq_l       fp5, 40(src),  0, 0
-    psq_st      fp5, 40(dst),  0, 0
-
-    blr
+asm void PSMTXConcat(const register Mtx mA, const register Mtx mB,
+                     register Mtx mAB) {
+  nofralloc;
+  stwu r1, -64(r1);
+  psq_l fp0, 0(mA), 0, 0;
+  stfd fp14, 8(r1);
+  psq_l fp6, 0(mB), 0, 0;
+  addis r6, 0, Unit01 @ha;
+  psq_l fp7, 8(mB), 0, 0;
+  stfd fp15, 16(r1);
+  addi r6, r6, Unit01 @l;
+  stfd fp31, 40(r1);
+  psq_l fp8, 16(mB), 0, 0;
+  ps_muls0 fp12, fp6, fp0;
+  psq_l fp2, 16(mA), 0, 0;
+  ps_muls0 fp13, fp7, fp0;
+  psq_l fp31, 0(r6), 0, 0;
+  ps_muls0 fp14, fp6, fp2;
+  psq_l fp9, 24(mB), 0, 0;
+  ps_muls0 fp15, fp7, fp2;
+  psq_l fp1, 8(mA), 0, 0;
+  ps_madds1 fp12, fp8, fp0, fp12;
+  psq_l fp3, 24(mA), 0, 0;
+  ps_madds1 fp14, fp8, fp2, fp14;
+  psq_l fp10, 32(mB), 0, 0;
+  ps_madds1 fp13, fp9, fp0, fp13;
+  psq_l fp11, 40(mB), 0, 0;
+  ps_madds1 fp15, fp9, fp2, fp15;
+  psq_l fp4, 32(mA), 0, 0;
+  psq_l fp5, 40(mA), 0, 0;
+  ps_madds0 fp12, fp10, fp1, fp12;
+  ps_madds0 fp13, fp11, fp1, fp13;
+  ps_madds0 fp14, fp10, fp3, fp14;
+  ps_madds0 fp15, fp11, fp3, fp15;
+  psq_st fp12, 0(mAB), 0, 0;
+  ps_muls0 fp2, fp6, fp4;
+  ps_madds1 fp13, fp31, fp1, fp13;
+  ps_muls0 fp0, fp7, fp4;
+  psq_st fp14, 16(mAB), 0, 0;
+  ps_madds1 fp15, fp31, fp3, fp15;
+  psq_st fp13, 8(mAB), 0, 0;
+  ps_madds1 fp2, fp8, fp4, fp2;
+  ps_madds1 fp0, fp9, fp4, fp0;
+  ps_madds0 fp2, fp10, fp5, fp2;
+  lfd fp14, 8(r1);
+  psq_st fp15, 24(mAB), 0, 0;
+  ps_madds0 fp0, fp11, fp5, fp0;
+  psq_st fp2, 32(mAB), 0, 0;
+  ps_madds1 fp0, fp31, fp5, fp0;
+  lfd fp15, 16(r1);
+  psq_st fp0, 40(mAB), 0, 0;
+  lfd fp31, 40(r1);
+  addi r1, r1, 64;
+  blr;
 }
 
-/*
- * --INFO--
- * Address:	........
- * Size:	0002A8
- */
-void C_MTXConcat(void)
-{
-	// UNUSED FUNCTION
+void PSMTXConcatArray(const register Mtx mtx1, const register Mtx* mtx2,
+                      register Mtx* mtx3, register u32 vv4) {
+  register float va0, va1, va2, va3, va4, va5;
+  register float vb0, vb1, vb2, vb3, vb4, vb5;
+  register float vd0, vd1, vd2, vd3, vd4, vd5;
+  register float u01;
+  register float* u01Ptr = Unit01;
+
+  asm {
+    psq_l va0, 0(mtx1), 0, 0;
+    psq_l va1, 8(mtx1), 0, 0;
+    psq_l va2, 16(mtx1), 0, 0;
+    psq_l va3, 24(mtx1), 0, 0;
+    subi vv4, vv4, 1;
+    psq_l va4, 32(mtx1), 0, 0;
+    psq_l va5, 40(mtx1), 0, 0;
+    mtctr vv4;
+    psq_l u01, 0(u01Ptr), 0, 0;
+    psq_l vb0, 0(mtx2), 0, 0;
+    psq_l vb2, 16(mtx2), 0, 0;
+    ps_muls0 vd0, vb0, va0;
+    ps_muls0 vd2, vb0, va2;
+    ps_muls0 vd4, vb0, va4;
+    psq_l vb4, 32(mtx2), 0, 0;
+    ps_madds1 vd0, vb2, va0, vd0;
+    ps_madds1 vd2, vb2, va2, vd2;
+    ps_madds1 vd4, vb2, va4, vd4;
+    psq_l vb1, 8(mtx2), 0, 0;
+    ps_madds0 vd0, vb4, va1, vd0;
+    ps_madds0 vd2, vb4, va3, vd2;
+    ps_madds0 vd4, vb4, va5, vd4;
+    psq_l vb3, 24(mtx2), 0, 0;
+    psq_st vd0, 0(mtx3), 0, 0;
+    ps_muls0 vd1, vb1, va0;
+    ps_muls0 vd3, vb1, va2;
+    ps_muls0 vd5, vb1, va4;
+    psq_l vb5, 40(mtx2), 0, 0;
+    psq_st vd2, 16(mtx3), 0, 0;
+    ps_madds1 vd1, vb3, va0, vd1;
+    ps_madds1 vd3, vb3, va2, vd3;
+    ps_madds1 vd5, vb3, va4, vd5;
+_loop:
+    addi mtx2, mtx2, sizeof(Mtx);
+    ps_madds0 vd1, vb5, va1, vd1;
+    ps_madds0 vd3, vb5, va3, vd3;
+    ps_madds0 vd5, vb5, va5, vd5;
+    psq_l vb0, 0(mtx2), 0, 0;
+    psq_st vd4, 32(mtx3), 0, 0;
+    ps_madd vd1, u01, va1, vd1;
+    ps_madd vd3, u01, va3, vd3;
+    ps_madd vd5, u01, va5, vd5;
+    psq_l vb2, 16(mtx2), 0, 0;
+    psq_st vd1, 8(mtx3), 0, 0;
+    ps_muls0 vd0, vb0, va0;
+    ps_muls0 vd2, vb0, va2;
+    ps_muls0 vd4, vb0, va4;
+    psq_l vb4, 32(mtx2), 0, 0;
+    psq_st vd3, 24(mtx3), 0, 0;
+    ps_madds1 vd0, vb2, va0, vd0;
+    ps_madds1 vd2, vb2, va2, vd2;
+    ps_madds1 vd4, vb2, va4, vd4;
+    psq_l vb1, 8(mtx2), 0, 0;
+    psq_st vd5, 40(mtx3), 0, 0;
+    addi mtx3, mtx3, sizeof(Mtx);
+    ps_madds0 vd0, vb4, va1, vd0;
+    ps_madds0 vd2, vb4, va3, vd2;
+    ps_madds0 vd4, vb4, va5, vd4;
+    psq_l vb3, 24(mtx2), 0, 0;
+    psq_st vd0, 0(mtx3), 0, 0;
+    ps_muls0 vd1, vb1, va0;
+    ps_muls0 vd3, vb1, va2;
+    ps_muls0 vd5, vb1, va4;
+    psq_l vb5, 40(mtx2), 0, 0;
+    psq_st vd2, 16(mtx3), 0, 0;
+    ps_madds1 vd1, vb3, va0, vd1;
+    ps_madds1 vd3, vb3, va2, vd3;
+    ps_madds1 vd5, vb3, va4, vd5;
+    bdnz _loop;
+    psq_st vd4, 32(mtx3), 0, 0;
+    ps_madds0 vd1, vb5, va1, vd1;
+    ps_madds0 vd3, vb5, va3, vd3;
+    ps_madds0 vd5, vb5, va5, vd5;
+    ps_madd vd1, u01, va1, vd1;
+    ps_madd vd3, u01, va3, vd3;
+    ps_madd vd5, u01, va5, vd5;
+    psq_st vd1, 8(mtx3), 0, 0;
+    psq_st vd3, 24(mtx3), 0, 0;
+    psq_st vd5, 40(mtx3), 0, 0;
+  }
 }
 
-/*
- * --INFO--
- * Address:	800EA300
- * Size:	0000CC
- */
-asm void PSMTXConcat
-(
-    const register Mtx mA,    // mA
-    const register Mtx mB,    // mB
-          register Mtx mAB    // mAB
-)
-{
-    nofralloc
-	stwu r1, -0x40(r1)
-	psq_l fp0, 0(mA), 0, 0
-	stfd fp14, 8(r1)
-	psq_l fp6, 0(mB), 0, 0
-	lis r6, Unit01@ha
-	psq_l fp7, 8(mB), 0, 0
-	stfd fp15, 0x10(r1)
-	addi r6, r6, Unit01@l
-	stfd fp31, 0x28(r1)
-	psq_l fp8, 16(mB), 0, 0
-	ps_muls0 fp12, fp6, fp0
-	psq_l fp2, 16(mA), 0, 0
-	ps_muls0 fp13, fp7, fp0
-	psq_l fp31, 0(r6), 0, 0
-	ps_muls0 fp14, fp6, fp2
-	psq_l fp9, 24(mB), 0, 0
-	ps_muls0 fp15, fp7, fp2
-	psq_l fp1, 8(mA), 0, 0
-	ps_madds1 fp12, fp8, fp0, fp12
-	psq_l fp3, 24(mA), 0, 0
-	ps_madds1 fp14, fp8, fp2, fp14
-	psq_l fp10, 32(mB), 0, 0
-	ps_madds1 fp13, fp9, fp0, fp13
-	psq_l fp11, 40(mB), 0, 0
-	ps_madds1 fp15, fp9, fp2, fp15
-	psq_l fp4, 32(mA), 0, 0
-	psq_l fp5, 40(mA), 0, 0
-	ps_madds0 fp12, fp10, fp1, fp12
-	ps_madds0 fp13, fp11, fp1, fp13
-	ps_madds0 fp14, fp10, fp3, fp14
-	ps_madds0 fp15, fp11, fp3, fp15
-	psq_st fp12, 0(mAB), 0, 0
-	ps_muls0 fp2, fp6, fp4
-	ps_madds1 fp13, fp31, fp1, fp13
-	ps_muls0 fp0, fp7, fp4
-	psq_st fp14, 16(mAB), 0, 0
-	ps_madds1 fp15, fp31, fp3, fp15
-	psq_st fp13, 8(mAB), 0, 0
-	ps_madds1 fp2, fp8, fp4, fp2
-	ps_madds1 fp0, fp9, fp4, fp0
-	ps_madds0 fp2, fp10, fp5, fp2
-	lfd fp14, 8(r1)
-	psq_st fp15, 24(mAB), 0, 0
-	ps_madds0 fp0, fp11, fp5, fp0
-	psq_st fp2, 32(mAB), 0, 0
-	ps_madds1 fp0, fp31, fp5, fp0
-	lfd fp15, 0x10(r1)
-	psq_st fp0, 40(mAB), 0, 0
-	lfd fp31, 0x28(r1)
-	addi r1, r1, 0x40
-	blr 
-}
-
-/*
- * --INFO--
- * Address:	........
- * Size:	000158
- */
-asm void PSMTXConcatArray(void)
-{
-	nofralloc
-	stwu r1, -0x50(r1)
-	stfd fp31, 0x40(r1)
-	psq_st fp31, 72(r1), 0, 0
-	stfd fp30, 0x30(r1)
-	psq_st fp30, 56(r1), 0, 0
-	stfd fp29, 0x20(r1)
-	psq_st fp29, 40(r1), 0, 0
-	stfd fp28, 0x10(r1)
-	psq_st fp28, 24(r1), 0, 0
-	addi r0, r6, -1
-	psq_l fp0, 0(r3), 0, 0
-	psq_l fp1, 8(r3), 0, 0
-	addi r6, r13, Unit01 //@sda21
-	psq_l fp2, 16(r3), 0, 0
-	psq_l fp3, 24(r3), 0, 0
-	psq_l fp4, 32(r3), 0, 0
-	psq_l fp5, 40(r3), 0, 0
-	mtctr r0
-	psq_l fp6, 0(r4), 0, 0
-	psq_l fp7, 8(r4), 0, 0
-	ps_muls0 fp11, fp6, fp0
-	psq_l fp8, 16(r4), 0, 0
-	ps_muls0 fp13, fp6, fp2
-	psq_l fp9, 32(r4), 0, 0
-	ps_muls0 fp30, fp6, fp4
-	psq_l fp6, 24(r4), 0, 0
-	ps_madds1 fp11, fp8, fp0, fp11
-	psq_l fp28, 0(r6), 0, 0
-	ps_madds1 fp13, fp8, fp2, fp13
-	psq_l fp10, 40(r4), 0, 0
-	ps_madds1 fp30, fp8, fp4, fp30
-	ps_muls0 fp12, fp7, fp0
-	ps_muls0 fp31, fp7, fp2
-	ps_muls0 fp29, fp7, fp4
-	ps_madds0 fp11, fp9, fp1, fp11
-	ps_madds0 fp13, fp9, fp3, fp13
-	ps_madds0 fp30, fp9, fp5, fp30
-	psq_st fp11, 0(r5), 0, 0
-	ps_madds1 fp12, fp6, fp0, fp12
-	ps_madds1 fp31, fp6, fp2, fp31
-	psq_st fp13, 16(r5), 0, 0
-	ps_madds1 fp29, fp6, fp4, fp29
-lbl_8034D3C8:
-	ps_madds0 fp12, fp10, fp1, fp12
-	psq_l fp6, 48(r4), 0, 0
-	ps_madds0 fp31, fp10, fp3, fp31
-	psq_st fp30, 32(r5), 0, 0
-	ps_madds0 fp29, fp10, fp5, fp29
-	psq_l fp8, 64(r4), 0, 0
-	ps_madd fp12, fp28, fp1, fp12
-	psq_l fp9, 80(r4), 0, 0
-	ps_muls0 fp11, fp6, fp0
-	psq_l fp7, 56(r4), 0, 0
-	psq_st fp12, 8(r5), 0, 0
-	ps_madd fp31, fp28, fp3, fp31
-	ps_muls0 fp13, fp6, fp2
-	psq_st fp31, 24(r5), 0, 0
-	ps_muls0 fp30, fp6, fp4
-	psq_l fp6, 72(r4), 0, 0
-	ps_madds1 fp11, fp8, fp0, fp11
-	psq_l fp10, 88(r4), 0, 0
-	ps_madd fp29, fp28, fp5, fp29
-	addi r4, r4, 0x30
-	ps_madds1 fp13, fp8, fp2, fp13
-	psq_st fp29, 40(r5), 0, 0
-	ps_madds1 fp30, fp8, fp4, fp30
-	ps_madds0 fp11, fp9, fp1, fp11
-	ps_muls0 fp12, fp7, fp0
-	ps_muls0 fp31, fp7, fp2
-	psq_st fp11, 48(r5), 0, 0
-	ps_muls0 fp29, fp7, fp4
-	ps_madds0 fp13, fp9, fp3, fp13
-	ps_madds0 fp30, fp9, fp5, fp30
-	psq_st fp13, 64(r5), 0, 0
-	ps_madds1 fp12, fp6, fp0, fp12
-	ps_madds1 fp31, fp6, fp2, fp31
-	addi r5, r5, 0x30
-	ps_madds1 fp29, fp6, fp4, fp29
-	bdnz lbl_8034D3C8
-	ps_madds0 fp12, fp10, fp1, fp12
-	psq_st fp30, 32(r5), 0, 0
-	ps_madds0 fp31, fp10, fp3, fp31
-	ps_madds0 fp29, fp10, fp5, fp29
-	ps_madd fp12, fp28, fp1, fp12
-	ps_madd fp31, fp28, fp3, fp31
-	psq_st fp12, 8(r5), 0, 0
-	ps_madd fp29, fp28, fp5, fp29
-	psq_st fp31, 24(r5), 0, 0
-	psq_st fp29, 40(r5), 0, 0
-	psq_l fp31, 72(r1), 0, 0
-	lfd fp31, 0x40(r1)
-	psq_l fp30, 56(r1), 0, 0
-	lfd fp30, 0x30(r1)
-	psq_l fp29, 40(r1), 0, 0
-	lfd fp29, 0x20(r1)
-	psq_l fp28, 24(r1), 0, 0
-	lfd fp28, 0x10(r1)
-	addi r1, r1, 0x50
-}
-
-/*
- * --INFO--
- * Address:	........
- * Size:	00009C
- */
-void C_MTXTranspose(void)
-{
-	// UNUSED FUNCTION
-}
-
-/*
- * --INFO--
- * Address:	800EA3CC
- * Size:	000050
- */
-#pragma scheduling off
 void PSMTXTranspose ( const register Mtx src, register Mtx xPose )
 {
-	asm{
-        psq_l fp1, 0(src), 0, 0
-		psq_l fp2, 16(src), 0, 0
-		lfs fp0, zero_c //@sda21(r2)
-		ps_merge00 fp4, fp1, fp2
-		psq_l fp3, 8(src), 1, 0
-		ps_merge11 fp5, fp1, fp2
-		psq_l fp2, 24(src), 1, 0
-		psq_l fp1, 32(src), 0, 0
-		ps_merge00 fp2, fp3, fp2
-		psq_st fp4, 0(xPose), 0, 0
-		ps_merge00 fp4, fp1, fp0
-		lfs fp3, 0x28(src)
-		psq_st fp5, 16(xPose), 0, 0
-		ps_merge10 fp5, fp1, fp0
-		stfs fp0, 0x2c(xPose)
-		psq_st fp2, 32(xPose), 0, 0
-		psq_st fp4, 8(xPose), 0, 0
-		psq_st fp5, 24(xPose), 0, 0
-		stfs fp3, 0x28(xPose)
-	}
-}
-/*
- * --INFO--
- * Address:	........
- * Size:	0002AC
- */
-void C_MTXInverse(void)
-{
-	// UNUSED FUNCTION
+    register f32 c_zero = 0.0f;
+    register f32 row0a, row1a, row0b, row1b;
+    register f32 trns0, trns1, trns2;
+
+    asm
+    {
+        psq_l       row0a, 0(src),  0, 0
+        stfs        c_zero, 44(xPose)
+        psq_l       row1a, 16(src), 0, 0
+        ps_merge00  trns0, row0a, row1a
+        psq_l       row0b, 8(src),  1, 0
+        ps_merge11  trns1, row0a, row1a
+        psq_l       row1b, 24(src), 1, 0
+        psq_st      trns0, 0(xPose),  0, 0
+        psq_l       row0a, 32(src), 0, 0
+        ps_merge00  trns2, row0b, row1b
+        psq_st      trns1, 16(xPose), 0, 0
+        ps_merge00  trns0, row0a, c_zero
+        psq_st      trns2, 32(xPose), 0, 0
+        ps_merge10  trns1, row0a, c_zero
+        psq_st      trns0, 8(xPose),  0, 0
+        lfs         row0b, 40(src)
+        psq_st      trns1, 24(xPose), 0, 0
+        stfs        row0b, 40(xPose)
+    }
 }
 
-/*
- * --INFO--
- * Address:	800EA41C
- * Size:	0000fp8
- */
-asm u32 PSMTXInverse ( const register Mtx src, register Mtx inv )
-{
-    nofralloc
-    psq_l fp0, 0(src), 1, 0
-	psq_l fp1, 4(src), 0, 0
-	psq_l fp2, 16(src), 1, 0
-	ps_merge10 fp6, fp1, fp0
-	psq_l fp3, 20(src), 0, 0
-	psq_l fp4, 32(src), 1, 0
-	ps_merge10 fp7, fp3, fp2
-	psq_l fp5, 36(src), 0, 0
-	ps_mul fp11, fp3, fp6
-	ps_merge10 fp8, fp5, fp4
-	ps_mul fp13, fp5, fp7
-	ps_msub fp11, fp1, fp7, fp11
-	ps_mul fp12, fp1, fp8
-	ps_msub fp13, fp3, fp8, fp13
-	ps_mul fp10, fp3, fp4
-	ps_msub fp12, fp5, fp6, fp12
-	ps_mul fp7, fp0, fp13
-	ps_mul fp9, fp0, fp5
-	ps_mul fp8, fp1, fp2
-	ps_madd fp7, fp2, fp12, fp7
-	ps_sub fp6, fp6, fp6
-	ps_msub fp10, fp2, fp5, fp10
-	ps_madd fp7, fp4, fp11, fp7
-	ps_msub fp9, fp1, fp4, fp9
-	ps_msub fp8, fp0, fp3, fp8
-	ps_cmpo0 cr0, fp7, fp6
-	bne lbl_8034D574
-	li r3, 0
-	blr
-lbl_8034D574:
-	fres fp0, fp7
-	ps_add fp6, fp0, fp0
-	ps_mul fp5, fp7, fp0
-	ps_nmsub fp0, fp0, fp5, fp6
-	lfs fp1, 0xc(src)
-	ps_muls0 fp13, fp13, fp0
-	lfs fp2, 0x1c(src)
-	ps_muls0 fp12, fp12, fp0
-	lfs fp3, 0x2c(src)
-	ps_muls0 fp11, fp11, fp0
-	ps_merge00 fp5, fp13, fp12
-	ps_merge11 fp4, fp13, fp12
-	ps_mul fp6, fp13, fp1
-	psq_st fp5, 0(inv), 0, 0
-	psq_st fp4, 16(inv), 0, 0
-	ps_muls0 fp10, fp10, fp0
-	ps_muls0 fp9, fp9, fp0
-	ps_madd fp6, fp12, fp2, fp6
-	psq_st fp10, 32(inv), 1, 0
-	ps_muls0 fp8, fp8, fp0
-	ps_nmadd fp6, fp11, fp3, fp6
-	psq_st fp9, 36(inv), 1, 0
-	ps_mul fp7, fp10, fp1
-	ps_merge00 fp5, fp11, fp6
-	psq_st fp8, 40(inv), 1, 0
-	ps_madd fp7, fp9, fp2, fp7
-	ps_merge11 fp4, fp11, fp6
-	psq_st fp5, 8(inv), 0, 0
-	ps_nmadd fp7, fp8, fp3, fp7
-	psq_st fp4, 24(inv), 0, 0
-	psq_st fp7, 44(inv), 1, 0
-	li r3, 1
-	blr 
+asm u32 PSMTXInverse(const register Mtx src, register Mtx inv) {
+  nofralloc;
+  psq_l fp0, 0(src), 1, 0;
+  psq_l fp1, 4(src), 0, 0;
+  psq_l fp2, 16(src), 1, 0;
+  ps_merge10 fp6, fp1, fp0;
+  psq_l fp3, 20(src), 0, 0;
+  psq_l fp4, 32(src), 1, 0;
+  ps_merge10 fp7, fp3, fp2;
+  psq_l fp5, 36(src), 0, 0;
+  ps_mul fp11, fp3, fp6;
+  ps_merge10 fp8, fp5, fp4;
+  ps_mul fp13, fp5, fp7;
+  ps_msub fp11, fp1, fp7, fp11;
+  ps_mul fp12, fp1, fp8;
+  ps_msub fp13, fp3, fp8, fp13;
+  ps_mul fp10, fp3, fp4;
+  ps_msub fp12, fp5, fp6, fp12;
+  ps_mul fp7, fp0, fp13;
+  ps_mul fp9, fp0, fp5;
+  ps_mul fp8, fp1, fp2;
+  ps_madd fp7, fp2, fp12, fp7;
+  ps_sub fp6, fp6, fp6;
+  ps_msub fp10, fp2, fp5, fp10;
+  ps_madd fp7, fp4, fp11, fp7;
+  ps_msub fp9, fp1, fp4, fp9;
+  ps_msub fp8, fp0, fp3, fp8;
+  ps_cmpo0 cr0, fp7, fp6;
+  bne loc0;
+  addi r3, 0, 0;
+  blr;
+loc0:
+  fres fp0, fp7;
+  ps_add fp6, fp0, fp0;
+  ps_mul fp5, fp7, fp0;
+  ps_nmsub fp0, fp0, fp5, fp6;
+  lfs fp1, 12(src);
+  ps_muls0 fp13, fp13, fp0;
+  lfs fp2, 28(src);
+  ps_muls0 fp12, fp12, fp0;
+  lfs fp3, 44(src);
+  ps_muls0 fp11, fp11, fp0;
+  ps_merge00 fp5, fp13, fp12;
+  ps_merge11 fp4, fp13, fp12;
+  ps_mul fp6, fp13, fp1;
+  psq_st fp5, 0(inv), 0, 0;
+  psq_st fp4, 16(inv), 0, 0;
+  ps_muls0 fp10, fp10, fp0;
+  ps_muls0 fp9, fp9, f0
+  ps_madd fp6, fp12, fp2, fp6;
+  psq_st fp10, 32(inv), 1, 0;
+  ps_muls0 fp8, fp8, f0
+  ps_nmadd fp6, fp11, fp3, fp6;
+  psq_st fp9, 36(inv), 1, 0;
+  ps_mul fp7, fp10, fp1;
+  ps_merge00 fp5, fp11, fp6;
+  psq_st fp8, 40(inv), 1, 0;
+  ps_madd fp7, fp9, fp2, fp7
+  ps_merge11 fp4, fp11, fp6;
+  psq_st fp5, 8(inv), 0, 0;
+  ps_nmadd fp7, fp8, fp3, fp7;
+  psq_st fp4, 24(inv), 0, 0;
+  psq_st fp7, 44(inv), 1, 0;
+  addi r3, 0, 1;
+  blr;
 }
 
-
-void PSMTXRotRad ( Mtx m, char axis, float rad )
-{
-    float sinA, cosA;
-
-    sinA = sinf(rad);
-    cosA = cosf(rad);
-
-    PSMTXRotTrig( m, axis, sinA, cosA );
+void PSMTXRotRad(Mtx m, char axis, float rad) {
+  float sinA, cosA;
+  sinA = sinf(rad);
+  cosA = cosf(rad);
+  PSMTXRotTrig(m, axis, sinA, cosA);
 }
 
-/*
- * --INFO--
- * Address:	........
- * Size:	000104
- */
-void C_MTXRotTrig(void)
-{
-	// UNUSED FUNCTION
+void PSMTXRotTrig(register Mtx m, register char arg2, register float arg3,
+                  register float arg4) {
+  register float vv1, vv2, vv3;
+  register float vv4, vv5, vv6, vv7;
+
+  asm {
+    frsp arg3, arg3;
+    frsp arg4, arg4;
+  }
+
+  vv1 = 0.0F;
+  vv2 = 1.0F;
+
+  asm {
+    ori arg2, arg2, 0x20;
+    ps_neg vv3, arg3;
+    cmplwi arg2, 'x';
+    beq loc0;
+    cmplwi arg2, 'y';
+    beq loc1;
+    cmplwi arg2, 'z';
+    beq loc2;
+    b loc3;
+loc0:
+    psq_st vv2, 0(m), 1, 0;
+    psq_st vv1, 4(m), 0, 0;
+    ps_merge00 vv4, arg3, arg4;
+    psq_st vv1, 12(m), 0, 0;
+    ps_merge00 vv5, arg4, vv3;
+    psq_st vv1, 28(m), 0, 0;
+    psq_st vv1, 44(m), 1, 0;
+    psq_st vv4, 36(m), 0, 0;
+    psq_st vv5, 20(m), 0, 0;
+    b loc3;
+loc1:
+    ps_merge00 vv4, arg4, vv1;
+    ps_merge00 vv5, vv1, vv2;
+    psq_st vv1, 24(m), 0, 0;
+    psq_st vv4, 0(m), 0, 0;
+    ps_merge00 vv6, vv3, vv1;
+    ps_merge00 vv7, arg3, vv1;
+    psq_st vv4, 40(m), 0, 0;
+    psq_st vv5, 16(m), 0, 0;
+    psq_st vv7, 8(m), 0, 0;
+    psq_st vv6, 32(m), 0, 0;
+    b loc3;
+loc2:
+    psq_st vv1, 8(m), 0, 0;
+    ps_merge00 vv4, arg3, arg4;
+    ps_merge00 vv6, arg4, vv3;
+    psq_st vv1, 24(m), 0, 0;
+    psq_st vv1, 32(m), 0, 0;
+    ps_merge00 vv5, vv2, vv1;
+    psq_st vv4, 16(m), 0, 0;
+    psq_st vv6, 0(m), 0, 0;
+    psq_st vv5, 40(m), 0, 0;
+loc3:
+  }
 }
 
-/*
- * --INFO--
- * Address:	800EA584
- * Size:	0000B0
- */
-asm void PSMTXRotTrig (
-    register Mtx    m,
-    register char   axis,
-    register float    sinA,
-    register float    cosA )
-{
-		frsp fp5, fp1
-		ori r0, r4, 0x20
-		frsp fp4, fp2
-		cmplwi r0, 0x78
-		lfs fp0, zero_c //@sda21(r2)
-		ps_neg fp2, fp5
-		lfs fp1, one_c //@sda21(r2)
-		beq lbl_8034D6B4
-		cmplwi r0, 0x79
-		beq lbl_8034D6DC
-		cmplwi r0, 0x7a
-		beq lbl_8034D708
-		blr
-    _case_x:
-        ps_merge00 fp3, fp5, fp4
-		psq_st fp1, 0(r3), 1, 0
-		ps_merge00 fp1, fp4, fp2
-		psq_st fp0, 4(r3), 0, 0
-		psq_st fp0, 12(r3), 0, 0
-		psq_st fp0, 28(r3), 0, 0
-		psq_st fp0, 44(r3), 1, 0
-		psq_st fp3, 36(r3), 0, 0
-		psq_st fp1, 20(r3), 0, 0
-		blr
-
-    _case_y:
-        ps_merge00 fp3, fp4, fp0
-		psq_st fp0, 24(r3), 0, 0
-		ps_merge00 fp1, fp0, fp1
-		ps_merge00 fp2, fp2, fp0
-		psq_st fp3, 0(r3), 0, 0
-		ps_merge00 fp0, fp5, fp0
-		psq_st fp3, 40(r3), 0, 0
-		psq_st fp1, 16(r3), 0, 0
-		psq_st fp0, 8(r3), 0, 0
-		psq_st fp2, 32(r3), 0, 0
-		blr
-
-    _case_z:
-        ps_merge00 fp3, fp5, fp4
-        psq_st fp0, 8(r3), 0, 0
-        ps_merge00 fp2, fp4, fp2
-        ps_merge00 fp1, fp1, fp0
-        psq_st fp0, 24(r3), 0, 0
-        psq_st fp0, 32(r3), 0, 0
-        psq_st fp3, 16(r3), 0, 0
-        psq_st fp2, 0(r3), 0, 0
-        psq_st fp1, 40(r3), 0, 0
-
-    _end:
+void __PSMTXRotAxisRadInternal(register Mtx m, const register Vec* arg2,
+                               register float arg3, register float arg4) {
+  register float vv1, vv2;
+  register float tmp0, tmp1, tmp2, tmp3, tmp4;
+  register float tmp5, tmp6, tmp7, tmp8, tmp9;
+  tmp9 = 0.5F;
+  tmp8 = 3.0F;
+  asm
+  {
+    frsp arg4, arg4;
+    psq_l tmp0, 0(arg2), 0, 0;
+    frsp arg3, arg3;
+    lfs tmp1, 8(arg2);
+    ps_mul tmp2, tmp0, tmp0;
+    fadds tmp7, tmp9, tmp9;
+    ps_madd tmp3, tmp1, tmp1, tmp2;
+    fsubs vv2, tmp9, tmp9;
+    ps_sum0 tmp4, tmp3, tmp1, tmp2;
+    fsubs vv1, tmp7, arg4;
+    frsqrte tmp5, tmp4;
+    fmuls tmp2, tmp5, tmp5;
+    fmuls tmp3, tmp5, tmp9;
+    fnmsubs tmp2, tmp2, tmp4, tmp8;
+    fmuls tmp5, tmp2, tmp3;
+    ps_merge00  arg4, arg4, arg4;
+    ps_muls0 tmp0, tmp0, tmp5;
+    ps_muls0 tmp1, tmp1, tmp5;
+    ps_muls0 tmp4, tmp0, vv1;
+    ps_muls0 tmp9, tmp0, arg3;
+    ps_muls0 tmp5, tmp1, vv1;
+    ps_muls1 tmp3, tmp4, tmp0;
+    ps_muls0 tmp2, tmp4, tmp0;
+    ps_muls0 tmp4, tmp4, tmp1;
+    fnmsubs tmp6, tmp1, arg3, tmp3;
+    fmadds tmp7, tmp1, arg3, tmp3;
+    ps_neg tmp0, tmp9;
+    ps_sum0 tmp8, tmp4, vv2, tmp9;
+    ps_sum0 tmp2, tmp2, tmp6, arg4;
+    ps_sum1 tmp3, arg4, tmp7, tmp3;
+    ps_sum0 tmp6, tmp0, vv2, tmp4;
+    psq_st tmp8, 8(m), 0, 0;
+    ps_sum0 tmp0, tmp4, tmp4, tmp0;
+    psq_st tmp2, 0(m), 0, 0;
+    ps_muls0 tmp5, tmp5, tmp1;
+    psq_st tmp3, 16(m), 0, 0;
+    ps_sum1 tmp4, tmp9, tmp0, tmp4;
+    psq_st tmp6, 24(m), 0, 0;
+    ps_sum0 tmp5, tmp5, vv2, arg4;
+    psq_st tmp4, 32(m), 0, 0;
+    psq_st tmp5, 40(m), 0, 0;
+  }
 }
 
-/*
- * --INFO--
- * Address:	800EA634
- * Size:	0000B0
- */
-static void __PSMTXRotAxisRadInternal(
-    register Mtx    r3,
-    const register Vec *r4,
-    register float    sT,
-    register float    cT )
-{
-	asm{
-   psq_l fp3, 0(r4), 0, 0
-	frsp fp11, cT
-	lfs fp10, float_8066C130 //@sda21(r2)
-	frsp fp12, sT
-	ps_mul fp4, fp3, fp3
-	lfs fp2, 8(r4)
-	fadds fp8, fp10, fp10
-	lfs fp9, float_8066C134 //@sda21(r2)
-	fsubs fp1, fp10, fp10
-	ps_madd fp5, fp2, fp2, fp4
-	fsubs fp0, fp8, fp11
-	ps_merge00 fp11, fp11, fp11
-	ps_sum0 fp6, fp5, fp2, fp4
-	frsqrte fp7, fp6
-	fmuls fp4, fp7, fp7
-	fmuls fp5, fp7, fp10
-	fnmsubs fp4, fp4, fp6, fp9
-	fmuls fp7, fp4, fp5
-	ps_muls0 fp3, fp3, fp7
-	ps_muls0 fp2, fp2, fp7
-	ps_muls0 fp6, fp3, fp0
-	ps_muls0 fp7, fp2, fp0
-	ps_muls0 fp10, fp3, fp12
-	ps_muls1 fp5, fp6, fp3
-	ps_muls0 fp4, fp6, fp3
-	ps_muls0 fp6, fp6, fp2
-	fnmsubs fp0, fp2, fp12, fp5
-	ps_neg fp3, fp10
-	fmadds fp8, fp2, fp12, fp5
-	ps_sum0 fp4, fp4, fp0, fp11
-	ps_sum0 fp0, fp3, fp1, fp6
-	ps_muls0 fp7, fp7, fp2
-	psq_st fp4, 0(r3), 0, 0
-	ps_sum0 fp9, fp6, fp1, fp10
-	ps_sum0 fp3, fp6, fp6, fp3
-	psq_st fp0, 24(r3), 0, 0
-	ps_sum1 fp5, fp11, fp8, fp5
-	ps_sum0 fp7, fp7, fp1, fp11
-	psq_st fp9, 8(r3), 0, 0
-	ps_sum1 fp6, fp10, fp3, fp6
-	psq_st fp5, 16(r3), 0, 0
-	psq_st fp6, 32(r3), 0, 0
-	psq_st fp7, 40(r3), 0, 0
-	}
-}
-// clang-format on
-/*
- * --INFO--
- * Address:	800EA6E4
- * Size:	000070
- */
-void PSMTXRotAxisRad(Mtx m, const Vec* axis, float rad)
-{
-	float sinT, cosT;
-
-	sinT = sinf(rad);
-	cosT = cosf(rad);
-
-	__PSMTXRotAxisRadInternal(m, axis, sinT, cosT);
-}
-// clang-format off
-/*
- * --INFO--
- * Address:	........
- * Size:	00003C
- */
-void C_MTXTrans(void)
-{
-	// UNUSED FUNCTION
+void PSMTXRotAxisRad(Mtx m, const Vec* arg2, float arg3) {
+  float arg2sin = sinf(arg3);
+  float arg2cos = cosf(arg3);
+  __PSMTXRotAxisRadInternal(m, arg2, arg2sin, arg2cos);
 }
 
-/*
- * --INFO--
- * Address:	800EA754
- * Size:	000034
- */
-asm void PSMTXTrans(
-    register Mtx m,
-    register float xT,
-    register float yT,
-    register float zT
-)
-{
-    lfs fp0, zero_c@sda21(r2)
-	lfs fp4, one_c@sda21(r2)
-	stfs fp1, 0xc(r3)
-	stfs fp2, 0x1c(r3)
-	psq_st fp0, 4(r3), 0, 0
-	psq_st fp0, 32(r3), 0, 0
-	stfs fp0, 0x10(r3)
-	stfs fp4, 0x14(r3)
-	stfs fp0, 0x18(r3)
-	stfs fp4, 0x28(r3)
-	stfs fp3, 0x2c(r3)
-	stfs fp4, 0(r3)
+void PSMTXTrans(register Mtx m, register float _x, register float _y,
+                register float _z) {
+  register float vv0 = 0.0f;
+  register float vv1 = 1.0f;
+  asm
+  {
+    stfs _x, 12(m);
+    stfs _y, 28(m);
+    psq_st vv0, 4(m), 0, 0;
+    psq_st vv0, 32(m), 0, 0;
+    stfs vv0, 16(m);
+    stfs vv1, 20(m);
+    stfs vv0, 24(m);
+    stfs vv1, 40(m);
+    stfs _z, 44(m);
+    stfs vv1, 0(m);
+  }
 }
 
-
-asm void PSMTXTransApply(
-    const register Mtx r3,
-    register Mtx r4,
-    register float fp1,
-    register float fp2,
-    register float fp3 )
-{
-    nofralloc
-    psq_l fp4, 0(r3), 0, 0
-	frsp fp1, fp1
-	psq_l fp5, 8(r3), 0, 0
-	frsp fp2, fp2
-	psq_l fp7, 24(r3), 0, 0
-	frsp fp3, fp3
-	psq_l fp8, 40(r3), 0, 0
-	psq_st fp4, 0(r4), 0, 0
-	ps_sum1 fp5, fp1, fp5, fp5
-	psq_l fp6, 16(r3), 0, 0
-	psq_st fp5, 8(r4), 0, 0
-	ps_sum1 fp7, fp2, fp7, fp7
-	psq_l fp9, 32(r3), 0, 0
-	psq_st fp6, 16(r4), 0, 0
-	ps_sum1 fp8, fp3, fp8, fp8
-	psq_st fp7, 24(r4), 0, 0
-	psq_st fp9, 32(r4), 0, 0
-	psq_st fp8, 40(r4), 0, 0
-	blr 
+asm void PSMTXTransApply(const register Mtx in, register Mtx out,
+                         register float _x, register float _y, register float _z) {
+  nofralloc;
+  psq_l fp4, 0(in), 0, 0;
+  frsp _x, _x;
+  psq_l fp5, 8(in), 0, 0;
+  frsp _y, _y;
+  psq_l fp7, 24(in), 0, 0;
+  frsp _z, _z;
+  psq_l fp8, 40(in), 0, 0;
+  psq_st fp4, 0(out), 0, 0;
+  ps_sum1 fp5, _x, fp5, fp5;
+  psq_l fp6, 16(in), 0, 0;
+  psq_st fp5, 8(out), 0, 0;
+  ps_sum1 fp7, _y, fp7, fp7;
+  psq_l fp9, 32(in), 0, 0;
+  psq_st fp6, 16(out), 0, 0;
+  ps_sum1 fp8, _z, fp8, fp8;
+  psq_st fp7, 24(out), 0, 0;
+  psq_st fp9, 32(out), 0, 0;
+  psq_st fp8, 40(out), 0, 0;
+  blr;
 }
 
-
-asm void PSMTXScale(
-    register Mtx m,
-    register float xS,
-    register float yS,
-    register float zS
-)
-{
-    lfs fp0, zero_c //@sda21(r2)
-	stfs fp1, 0(r3)
-	psq_st fp0, 4(r3), 0, 0
-	psq_st fp0, 12(r3), 0, 0
-	stfs fp2, 0x14(r3)
-	psq_st fp0, 24(r3), 0, 0
-	psq_st fp0, 32(r3), 0, 0
-	stfs fp3, 0x28(r3)
-	stfs fp0, 0x2c(r3)
+void PSMTXScale(register Mtx m, register float _x, register float _y,
+                register float _z) {
+  register float vv0 = 0.0F;
+  asm
+  {
+    stfs _x, 0(m);
+    psq_st vv0, 4(m), 0, 0;
+    psq_st vv0, 12(m), 0, 0;
+    stfs _y, 20(m);
+    psq_st vv0, 24(m), 0, 0;
+    psq_st vv0, 32(m), 0, 0;
+    stfs _z, 40(m);
+    stfs vv0, 44(m);
+  }
 }
 
-asm void PSMTXScaleApply (
-    const register Mtx src,
-    register Mtx dst,
-    register float xS,
-    register float yS,
-    register float zS )
-{
-    nofralloc;
-    frsp fp1, fp1
-	psq_l fp4, 0(r3), 0, 0
-	frsp fp2, fp2
-	psq_l fp5, 8(r3), 0, 0
-	frsp fp3, fp3
-	ps_muls0 fp4, fp4, fp1
-	psq_l fp6, 16(r3), 0, 0
-	ps_muls0 fp5, fp5, fp1
-	psq_l fp7, 24(r3), 0, 0
-	ps_muls0 fp6, fp6, fp2
-	psq_l fp8, 32(r3), 0, 0
-	psq_st fp4, 0(r4), 0, 0
-	ps_muls0 fp7, fp7, fp2
-	psq_l fp2, 40(r3), 0, 0
-	psq_st fp5, 8(r4), 0, 0
-	ps_muls0 fp8, fp8, fp3
-	psq_st fp6, 16(r4), 0, 0
-	ps_muls0 fp2, fp2, fp3
-	psq_st fp7, 24(r4), 0, 0
-	psq_st fp8, 32(r4), 0, 0
-	psq_st fp2, 40(r4), 0, 0
-	blr 
+asm void PSMTXScaleApply(const register Mtx in, register Mtx out,
+                         register float _x, register float _y, register float _z) {
+  nofralloc;
+  frsp _x, _x;
+  psq_l fp4, 0(in), 0, 0;
+  frsp _y, _y;
+  psq_l fp5, 8(in), 0, 0;
+  frsp _z, _z;
+  ps_muls0 fp4, fp4, _x;
+  psq_l fp6, 16(in), 0, 0;
+  ps_muls0 fp5, fp5, _x;
+  psq_l fp7, 24(in), 0, 0;
+  ps_muls0 fp6, fp6, _y;
+  psq_l fp8, 32(in), 0, 0;
+  psq_st fp4, 0(out), 0, 0;
+  ps_muls0 fp7, fp7, _y;
+  psq_l fp2, 40(in), 0, 0;
+  psq_st fp5, 8(out), 0, 0;
+  ps_muls0 fp8, fp8, _z;
+  psq_st fp6, 16(out), 0, 0;
+  ps_muls0 fp2, fp2, _z;
+  psq_st fp7, 24(out), 0, 0;
+  psq_st fp8, 32(out), 0, 0;
+  psq_st fp2, 40(out), 0, 0;
+  blr;
 }
 
-
-asm void PSMTXQuat ( register Mtx m, const register PSQuaternion *q )
-{
-	psq_l fp4, 0(r4), 0, 0
-	psq_l fp5, 8(r4), 0, 0
-	ps_mul fp6, fp4, fp4
-	lfs fp1, one_c //@sda21(r2)
-	ps_merge10 fp9, fp4, fp4
-	fsubs fp0, fp1, fp1
-	ps_madd fp8, fp5, fp5, fp6
-	ps_muls1 fp10, fp5, fp5
-	psq_st fp0, 12(r3), 1, 0
-	fadds fp2, fp1, fp1
-	ps_sum0 fp3, fp8, fp8, fp8
-	psq_st fp0, 44(r3), 1, 0
-	ps_mul fp7, fp5, fp5
-	ps_madd fp12, fp4, fp9, fp10
-	fres fp13, fp3
-	ps_nmsub fp3, fp3, fp13, fp2
-	ps_muls1 fp11, fp9, fp5
-	ps_msub fp10, fp4, fp9, fp10
-	ps_mul fp3, fp13, fp3
-	ps_madds0 fp9, fp4, fp5, fp11
-	ps_sum1 fp8, fp7, fp8, fp6
-	fmuls fp3, fp3, fp2
-	ps_nmsub fp11, fp11, fp2, fp9
-	ps_sum0 fp6, fp6, fp6, fp6
-	ps_mul fp9, fp9, fp3
-	ps_mul fp11, fp11, fp3
-	ps_nmsub fp8, fp8, fp3, fp1
-	psq_st fp9, 8(r3), 1, 0
-	ps_mul fp12, fp12, fp3
-	ps_mul fp10, fp10, fp3
-	ps_merge10 fp7, fp11, fp0
-	ps_merge00 fp5, fp12, fp8
-	ps_merge10 fp4, fp8, fp10
-	psq_st fp7, 24(r3), 0, 0
-	ps_merge01 fp13, fp11, fp9
-	ps_nmsub fp6, fp6, fp3, fp1
-	psq_st fp5, 16(r3), 0, 0
-	psq_st fp6, 40(r3), 1, 0
-	psq_st fp4, 0(r3), 0, 0
-	psq_st fp13, 32(r3), 0, 0
+void PSMTXQuat(register Mtx m, const register PSQuaternion* quat) {
+  register float vv0, vv1, vv2, vv3;
+  register float tmp0, tmp1, tmp2, tmp3, tmp4;
+  register float tmp5, tmp6, tmp7, tmp8, tmp9;
+  vv1 = 1.0f;
+  asm
+  {
+    psq_l tmp0, 0(quat), 0, 0;
+    psq_l tmp1, 8(quat), 0, 0;
+    fsubs vv0, vv1, vv1;
+    fadds vv2, vv1, vv1;
+    ps_mul tmp2, tmp0, tmp0;
+    ps_merge10 tmp5, tmp0, tmp0;
+    ps_madd tmp4, tmp1, tmp1, tmp2;
+    ps_mul tmp3, tmp1, tmp1;
+    ps_sum0 vv3, tmp4, tmp4, tmp4;
+    ps_muls1 tmp7, tmp5, tmp1;
+    fres tmp9, vv3;
+    ps_sum1 tmp4, tmp3, tmp4, tmp2;
+    ps_nmsub vv3, vv3, tmp9, vv2;
+    ps_muls1 tmp6, tmp1, tmp1;
+    ps_mul vv3, tmp9, vv3;
+    ps_sum0 tmp2, tmp2, tmp2, tmp2;
+    fmuls vv3, vv3, vv2;
+    ps_madd tmp8, tmp0, tmp5, tmp6;
+    ps_msub tmp6, tmp0, tmp5, tmp6;
+    psq_st vv0, 12(m), 1, 0;
+    ps_nmsub tmp2, tmp2, vv3, vv1;
+    ps_nmsub tmp4, tmp4, vv3, vv1;
+    psq_st vv0, 44(m), 1, 0;
+    ps_mul tmp8, tmp8, vv3;
+    ps_mul tmp6, tmp6, vv3;
+    psq_st tmp2, 40(m), 1, 0;
+    ps_madds0 tmp5, tmp0, tmp1, tmp7;
+    ps_merge00 tmp1, tmp8, tmp4;
+    ps_nmsub tmp7, tmp7, vv2, tmp5;
+    ps_merge10 tmp0, tmp4, tmp6;
+    psq_st tmp1, 16(m), 0, 0;
+    ps_mul tmp5, tmp5, vv3;
+    ps_mul tmp7, tmp7, vv3;
+    psq_st tmp0,  0(m), 0, 0;
+    psq_st tmp5,  8(m), 1, 0;
+    ps_merge10 tmp3, tmp7, vv0;
+    ps_merge01 tmp9, tmp7, tmp5;
+    psq_st tmp3, 24(m), 0, 0;
+    psq_st tmp9, 32(m), 0, 0;
+  }
 }
 
-void C_MTXLookAt(Mtx m, const Vec* camPos, const Vec* camUp, const Vec* target)
-{
-
-	Vec vLook, vRight, vUp;
-
-	vLook.x = camPos->x - target->x;
-	vLook.y = camPos->y - target->y;
-	vLook.z = camPos->z - target->z;
-	PSVECNormalize(&vLook, &vLook);
-
-	PSVECCrossProduct(camUp, &vLook, &vRight);
-	PSVECNormalize(&vRight, &vRight);
-
-	PSVECCrossProduct(&vLook, &vRight, &vUp);
-
-	m[0][0] = vRight.x;
-	m[0][1] = vRight.y;
-	m[0][2] = vRight.z;
-	m[0][3] = -(camPos->x * vRight.x + camPos->y * vRight.y + camPos->z * vRight.z);
-
-	m[1][0] = vUp.x;
-	m[1][1] = vUp.y;
-	m[1][2] = vUp.z;
-	m[1][3] = -(camPos->x * vUp.x + camPos->y * vUp.y + camPos->z * vUp.z);
-
-	m[2][0] = vLook.x;
-	m[2][1] = vLook.y;
-	m[2][2] = vLook.z;
-	m[2][3] = -(camPos->x * vLook.x + camPos->y * vLook.y + camPos->z * vLook.z);
+void C_MTXLookAt(Mtx m, const Vec* _pos, const Vec* _up, const Vec* _dest) {
+  Vec vv0, vv1, vv2;
+  vv0.x = _pos->x - _dest->x;
+  vv0.y = _pos->y - _dest->y;
+  vv0.z = _pos->z - _dest->z;
+  PSVECNormalize(&vv0, &vv0);
+  PSVECCrossProduct(_up, &vv0, &vv1);
+  PSVECNormalize(&vv1, &vv1);
+  PSVECCrossProduct(&vv0, &vv1, &vv2);
+  m[0][0] = vv1.x;
+  m[0][1] = vv1.y;
+  m[0][2] = vv1.z;
+  m[0][3] = -(_pos->x * vv1.x + _pos->y * vv1.y + _pos->z * vv1.z);
+  m[1][0] = vv2.x;
+  m[1][1] = vv2.y;
+  m[1][2] = vv2.z;
+  m[1][3] = -(_pos->x * vv2.x + _pos->y * vv2.y + _pos->z * vv2.z);
+  m[2][0] = vv0.x;
+  m[2][1] = vv0.y;
+  m[2][2] = vv0.z;
+  m[2][3] = -(_pos->x * vv0.x + _pos->y * vv0.y + _pos->z * vv0.z);
 }
 
-/*
- * --INFO--
- * Address:	........
- * Size:	000094
- */
-asm void C_MTXLightFrustum(void)
-{
-	nofralloc
-	stwu r1, -0x20(r1)
-	stfd fp31, 0x10(r1)
-	psq_st fp31, 24(r1), 0, 0
-	fsubs fp0, fp4, fp3
-	lfs fp10, zero_c //@sda21(r2)
-	lfs fp12, one_c //@sda21(r2)
-	fsubs fp9, fp1, fp2
-	lfs fp11, float_8066C138 //@sda21(r2)
-	fadds fp3, fp4, fp3
-	fdivs fp13, fp12, fp0
-	lfs fp0, float_8066C13C //@sda21(r2)
-	stfs fp0, 0x28(r3)
-	lfs fp31, 0x28(r1)
-	stfs fp10, 4(r3)
-	stfs fp10, 0xc(r3)
-	fmuls fp4, fp11, fp5
-	stfs fp10, 0x10(r3)
-	fadds fp0, fp1, fp2
-	fmuls fp1, fp13, fp3
-	stfs fp10, 0x1c(r3)
-	fdivs fp5, fp12, fp9
-	stfs fp10, 0x20(r3)
-	stfs fp10, 0x24(r3)
-	stfs fp10, 0x2c(r3)
-	fmuls fp2, fp6, fp1
-	fmuls fp0, fp5, fp0
-	fmuls fp3, fp4, fp13
-	fmuls fp1, fp4, fp5
-	fmuls fp0, fp7, fp0
-	fmuls fp3, fp6, fp3
-	fsubs fp2, fp2, fp8
-	fmuls fp1, fp7, fp1
-	stfs fp3, 0(r3)
-	fsubs fp0, fp0, fp31
-	stfs fp2, 8(r3)
-	stfs fp1, 0x14(r3)
-	stfs fp0, 0x18(r3)
-	psq_l fp31, 24(r1), 0, 0
-	lfd fp31, 0x10(r1)
-	addi r1, r1, 0x20
-	blr 
+void C_MTXLightFrustum(Mtx m, float arg1, float arg2, float arg3, float arg4,
+                       float arg5, float arg6, float arg7, float arg8,
+                       float arg9) {
+  float tmp = 1.0f / (arg4 - arg3);
+  m[0][0] = ((2 * arg5) * tmp) * arg6;
+  m[0][1] = 0.0f;
+  m[0][2] = (((arg4 + arg3) * tmp) * arg6) - arg8;
+  m[0][3] = 0.0f;
+  tmp = 1.0f / (arg1 - arg2);
+  m[1][0] = 0.0f;
+  m[1][1] = ((2 * arg5) * tmp) * arg7;
+  m[1][2] = (((arg1 + arg2) * tmp) * arg7) - arg9;
+  m[1][3] = 0.0f;
+  m[2][0] = 0.0f;
+  m[2][1] = 0.0f;
+  m[2][2] = -1.0f;
+  m[2][3] = 0.0f;
 }
 
-/*
- * --INFO--
- * Address:	800EAA84
- * Size:	0000CC
- */
-void C_MTXLightPerspective(Mtx m, float fovY, float aspect, float scaleS, float scaleT, float transS, float transT)
-{
-	float angle;
-	float cot;
-
-	angle = fovY * 0.5f;
-	angle = MTXDegToRad(angle);
-
-	cot = 1.0f / tanf(angle);
-
-	m[0][0] = (cot / aspect) * scaleS;
-	m[0][1] = 0.0f;
-	m[0][2] = -transS;
-	m[0][3] = 0.0f;
-
-	m[1][0] = 0.0f;
-	m[1][1] = cot * scaleT;
-	m[1][2] = -transT;
-	m[1][3] = 0.0f;
-
-	m[2][0] = 0.0f;
-	m[2][1] = 0.0f;
-	m[2][2] = -1.0f;
-	m[2][3] = 0.0f;
+void C_MTXLightPerspective(Mtx m, float arg1, float arg2, float arg3, float arg4,
+                           float arg5, float arg6) {
+  float angle = arg1 * 0.5f * 0.01745329252f;
+  float cot = 1.0f / tanf(angle);
+  m[0][0] = (cot / arg2) * arg3;
+  m[0][1] = 0.0f;
+  m[0][2] = -arg5;
+  m[0][3] = 0.0f;
+  m[1][0] = 0.0f;
+  m[1][1] = cot * arg4;
+  m[1][2] = -arg6;
+  m[1][3] = 0.0f;
+  m[2][0] = 0.0f;
+  m[2][1] = 0.0f;
+  m[2][2] = -1.0f;
+  m[2][3] = 0.0f;
 }
 
-/*
- * --INFO--
- * Address:	800EAB50
- * Size:	000088
- */
-void C_MTXLightOrtho(Mtx m, float t, float b, float l, float r, float scaleS, float scaleT, float transS, float transT)
-{
-	float tmp;
-
-	tmp     = 1.0f / (r - l);
-	m[0][0] = (2.0f * tmp * scaleS);
-	m[0][1] = 0.0f;
-	m[0][2] = 0.0f;
-	m[0][3] = ((-(r + l) * tmp) * scaleS) + transS;
-
-	tmp     = 1.0f / (t - b);
-	m[1][0] = 0.0f;
-	m[1][1] = (2.0f * tmp) * scaleT;
-	m[1][2] = 0.0f;
-	m[1][3] = ((-(t + b) * tmp) * scaleT) + transT;
-
-	m[2][0] = 0.0f;
-	m[2][1] = 0.0f;
-	m[2][2] = 0.0f;
-	m[2][3] = 1.0f;
+void C_MTXLightOrtho(Mtx m, float arg2, float arg3, float arg4, float arg5, float arg6,
+                     float arg7, float arg8, float arg9) {
+  float tmp;
+  tmp = 1.0f / (arg5 - arg4);
+  m[0][0] = (2.0f * tmp * arg6);
+  m[0][1] = 0.0f;
+  m[0][2] = 0.0f;
+  m[0][3] = ((-(arg5 + arg4) * tmp) * arg6) + arg8;
+  tmp = 1.0f / (arg2 - arg3);
+  m[1][0] = 0.0f;
+  m[1][1] = (2.0f * tmp) * arg7;
+  m[1][2] = 0.0f;
+  m[1][3] = ((-(arg2 + arg3) * tmp) * arg7) + arg9;
+  m[2][0] = 0.0f;
+  m[2][1] = 0.0f;
+  m[2][2] = 0.0f;
+  m[2][3] = 1.0f;
 }

@@ -460,6 +460,7 @@
 /* 8045F57C 00428B3C  4E 80 00 20 */	blr 
 .endfn __ct__8045F564
 
+#FUN_002fe7a8 in xc3d
 .fn __dt__8045F580, global
 /* 8045F580 00428B40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045F584 00428B44  7C 08 02 A6 */	mflr r0

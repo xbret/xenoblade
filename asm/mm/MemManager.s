@@ -1743,6 +1743,7 @@
 /* 80434A48 003FE008  4E 80 00 20 */	blr 
 .endfn func_804348C0
 
+#FUN_002ffbf4 in xc3d
 .fn func_80434A4C, global
 /* 80434A4C 003FE00C  98 6D 9C B9 */	stb r3, lbl_80665E39@sda21(r13)
 /* 80434A50 003FE010  4E 80 00 20 */	blr 

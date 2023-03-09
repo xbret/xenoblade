@@ -4358,10 +4358,10 @@
 /* 8004EAF4 000180B4  4C 41 13 82 */	cror 2, 1, 2
 /* 8004EAF8 000180B8  41 82 00 20 */	beq .L_8004EB18
 /* 8004EAFC 000180BC  3C 60 80 53 */	lis r3, lbl_80529B54@ha
-/* 8004EB00 000180C0  3C A0 80 53 */	lis r5, lbl_80529B30@ha
+/* 8004EB00 000180C0  3C A0 80 53 */	lis r5, frsqrtErrorString@ha
 /* 8004EB04 000180C4  38 63 9B 54 */	addi r3, r3, lbl_80529B54@l
 /* 8004EB08 000180C8  38 80 02 73 */	li r4, 0x273
-/* 8004EB0C 000180CC  38 A5 9B 30 */	addi r5, r5, lbl_80529B30@l
+/* 8004EB0C 000180CC  38 A5 9B 30 */	addi r5, r5, frsqrtErrorString@l
 /* 8004EB10 000180D0  4C C6 31 82 */	crclr 6
 /* 8004EB14 000180D4  48 38 8B 05 */	bl Warning__Q24nw4r2dbFPCciPCce
 .L_8004EB18:
@@ -4478,10 +4478,10 @@
 /* 8004EC98 00018258  4C 41 13 82 */	cror 2, 1, 2
 /* 8004EC9C 0001825C  41 82 00 20 */	beq .L_8004ECBC
 /* 8004ECA0 00018260  3C 60 80 53 */	lis r3, lbl_80529B54@ha
-/* 8004ECA4 00018264  3C A0 80 53 */	lis r5, lbl_80529B30@ha
+/* 8004ECA4 00018264  3C A0 80 53 */	lis r5, frsqrtErrorString@ha
 /* 8004ECA8 00018268  38 63 9B 54 */	addi r3, r3, lbl_80529B54@l
 /* 8004ECAC 0001826C  38 80 02 73 */	li r4, 0x273
-/* 8004ECB0 00018270  38 A5 9B 30 */	addi r5, r5, lbl_80529B30@l
+/* 8004ECB0 00018270  38 A5 9B 30 */	addi r5, r5, frsqrtErrorString@l
 /* 8004ECB4 00018274  4C C6 31 82 */	crclr 6
 /* 8004ECB8 00018278  48 38 89 61 */	bl Warning__Q24nw4r2dbFPCciPCce
 .L_8004ECBC:
@@ -4772,10 +4772,10 @@
 /* 8004F0D0 00018690  4C 41 13 82 */	cror 2, 1, 2
 /* 8004F0D4 00018694  41 82 00 20 */	beq .L_8004F0F4
 /* 8004F0D8 00018698  3C 60 80 53 */	lis r3, lbl_80529B54@ha
-/* 8004F0DC 0001869C  3C A0 80 53 */	lis r5, lbl_80529B30@ha
+/* 8004F0DC 0001869C  3C A0 80 53 */	lis r5, frsqrtErrorString@ha
 /* 8004F0E0 000186A0  38 63 9B 54 */	addi r3, r3, lbl_80529B54@l
 /* 8004F0E4 000186A4  38 80 02 73 */	li r4, 0x273
-/* 8004F0E8 000186A8  38 A5 9B 30 */	addi r5, r5, lbl_80529B30@l
+/* 8004F0E8 000186A8  38 A5 9B 30 */	addi r5, r5, frsqrtErrorString@l
 /* 8004F0EC 000186AC  4C C6 31 82 */	crclr 6
 /* 8004F0F0 000186B0  48 38 85 29 */	bl Warning__Q24nw4r2dbFPCciPCce
 .L_8004F0F4:
@@ -5986,10 +5986,10 @@
 /* 800501D0 00019790  4C 41 13 82 */	cror 2, 1, 2
 /* 800501D4 00019794  41 82 00 20 */	beq .L_800501F4
 /* 800501D8 00019798  3C 60 80 53 */	lis r3, lbl_80529B54@ha
-/* 800501DC 0001979C  3C A0 80 53 */	lis r5, lbl_80529B30@ha
+/* 800501DC 0001979C  3C A0 80 53 */	lis r5, frsqrtErrorString@ha
 /* 800501E0 000197A0  38 63 9B 54 */	addi r3, r3, lbl_80529B54@l
 /* 800501E4 000197A4  38 80 02 73 */	li r4, 0x273
-/* 800501E8 000197A8  38 A5 9B 30 */	addi r5, r5, lbl_80529B30@l
+/* 800501E8 000197A8  38 A5 9B 30 */	addi r5, r5, frsqrtErrorString@l
 /* 800501EC 000197AC  4C C6 31 82 */	crclr 6
 /* 800501F0 000197B0  48 38 74 29 */	bl Warning__Q24nw4r2dbFPCciPCce
 .L_800501F4:
@@ -6128,10 +6128,10 @@
 /* 800503DC 0001999C  4C 41 13 82 */	cror 2, 1, 2
 /* 800503E0 000199A0  41 82 00 20 */	beq .L_80050400
 /* 800503E4 000199A4  3C 60 80 53 */	lis r3, lbl_80529B54@ha
-/* 800503E8 000199A8  3C A0 80 53 */	lis r5, lbl_80529B30@ha
+/* 800503E8 000199A8  3C A0 80 53 */	lis r5, frsqrtErrorString@ha
 /* 800503EC 000199AC  38 63 9B 54 */	addi r3, r3, lbl_80529B54@l
 /* 800503F0 000199B0  38 80 02 73 */	li r4, 0x273
-/* 800503F4 000199B4  38 A5 9B 30 */	addi r5, r5, lbl_80529B30@l
+/* 800503F4 000199B4  38 A5 9B 30 */	addi r5, r5, frsqrtErrorString@l
 /* 800503F8 000199B8  4C C6 31 82 */	crclr 6
 /* 800503FC 000199BC  48 38 72 1D */	bl Warning__Q24nw4r2dbFPCciPCce
 .L_80050400:
@@ -8634,10 +8634,10 @@
 /* 8005260C 0001BBCC  4C 41 13 82 */	cror 2, 1, 2
 /* 80052610 0001BBD0  41 82 00 20 */	beq .L_80052630
 /* 80052614 0001BBD4  3C 60 80 53 */	lis r3, lbl_80529B54@ha
-/* 80052618 0001BBD8  3C A0 80 53 */	lis r5, lbl_80529B30@ha
+/* 80052618 0001BBD8  3C A0 80 53 */	lis r5, frsqrtErrorString@ha
 /* 8005261C 0001BBDC  38 63 9B 54 */	addi r3, r3, lbl_80529B54@l
 /* 80052620 0001BBE0  38 80 02 73 */	li r4, 0x273
-/* 80052624 0001BBE4  38 A5 9B 30 */	addi r5, r5, lbl_80529B30@l
+/* 80052624 0001BBE4  38 A5 9B 30 */	addi r5, r5, frsqrtErrorString@l
 /* 80052628 0001BBE8  4C C6 31 82 */	crclr 6
 /* 8005262C 0001BBEC  48 38 4F ED */	bl Warning__Q24nw4r2dbFPCciPCce
 .L_80052630:
@@ -9204,10 +9204,10 @@
 /* 80052E2C 0001C3EC  4C 41 13 82 */	cror 2, 1, 2
 /* 80052E30 0001C3F0  41 82 00 20 */	beq .L_80052E50
 /* 80052E34 0001C3F4  3C 60 80 53 */	lis r3, lbl_80529B54@ha
-/* 80052E38 0001C3F8  3C A0 80 53 */	lis r5, lbl_80529B30@ha
+/* 80052E38 0001C3F8  3C A0 80 53 */	lis r5, frsqrtErrorString@ha
 /* 80052E3C 0001C3FC  38 63 9B 54 */	addi r3, r3, lbl_80529B54@l
 /* 80052E40 0001C400  38 80 02 73 */	li r4, 0x273
-/* 80052E44 0001C404  38 A5 9B 30 */	addi r5, r5, lbl_80529B30@l
+/* 80052E44 0001C404  38 A5 9B 30 */	addi r5, r5, frsqrtErrorString@l
 /* 80052E48 0001C408  4C C6 31 82 */	crclr 6
 /* 80052E4C 0001C40C  48 38 47 CD */	bl Warning__Q24nw4r2dbFPCciPCce
 .L_80052E50:
@@ -9239,10 +9239,10 @@
 /* 80052EA8 0001C468  4C 41 13 82 */	cror 2, 1, 2
 /* 80052EAC 0001C46C  41 82 00 20 */	beq .L_80052ECC
 /* 80052EB0 0001C470  3C 60 80 53 */	lis r3, lbl_80529B54@ha
-/* 80052EB4 0001C474  3C A0 80 53 */	lis r5, lbl_80529B30@ha
+/* 80052EB4 0001C474  3C A0 80 53 */	lis r5, frsqrtErrorString@ha
 /* 80052EB8 0001C478  38 63 9B 54 */	addi r3, r3, lbl_80529B54@l
 /* 80052EBC 0001C47C  38 80 02 73 */	li r4, 0x273
-/* 80052EC0 0001C480  38 A5 9B 30 */	addi r5, r5, lbl_80529B30@l
+/* 80052EC0 0001C480  38 A5 9B 30 */	addi r5, r5, frsqrtErrorString@l
 /* 80052EC4 0001C484  4C C6 31 82 */	crclr 6
 /* 80052EC8 0001C488  48 38 47 51 */	bl Warning__Q24nw4r2dbFPCciPCce
 .L_80052ECC:
@@ -9486,10 +9486,10 @@
 /* 8005322C 0001C7EC  4C 41 13 82 */	cror 2, 1, 2
 /* 80053230 0001C7F0  41 82 00 20 */	beq .L_80053250
 /* 80053234 0001C7F4  3C 60 80 53 */	lis r3, lbl_80529B54@ha
-/* 80053238 0001C7F8  3C A0 80 53 */	lis r5, lbl_80529B30@ha
+/* 80053238 0001C7F8  3C A0 80 53 */	lis r5, frsqrtErrorString@ha
 /* 8005323C 0001C7FC  38 63 9B 54 */	addi r3, r3, lbl_80529B54@l
 /* 80053240 0001C800  38 80 02 73 */	li r4, 0x273
-/* 80053244 0001C804  38 A5 9B 30 */	addi r5, r5, lbl_80529B30@l
+/* 80053244 0001C804  38 A5 9B 30 */	addi r5, r5, frsqrtErrorString@l
 /* 80053248 0001C808  4C C6 31 82 */	crclr 6
 /* 8005324C 0001C80C  48 38 43 CD */	bl Warning__Q24nw4r2dbFPCciPCce
 .L_80053250:
@@ -9747,11 +9747,11 @@
 .L_800535F4:
 /* 800535F4 0001CBB4  2C 00 00 00 */	cmpwi r0, 0
 /* 800535F8 0001CBB8  40 82 00 20 */	bne .L_80053618
-/* 800535FC 0001CBBC  3C 60 80 53 */	lis r3, lbl_80529B20@ha
-/* 80053600 0001CBC0  3C A0 80 53 */	lis r5, lbl_80529AF8@ha
-/* 80053604 0001CBC4  38 63 9B 20 */	addi r3, r3, lbl_80529B20@l
+/* 800535FC 0001CBBC  3C 60 80 53 */	lis r3, triangularhString@ha
+/* 80053600 0001CBC0  3C A0 80 53 */	lis r5, acosRadErrorString@ha
+/* 80053604 0001CBC4  38 63 9B 20 */	addi r3, r3, triangularhString@l
 /* 80053608 0001CBC8  38 80 00 EF */	li r4, 0xef
-/* 8005360C 0001CBCC  38 A5 9A F8 */	addi r5, r5, lbl_80529AF8@l
+/* 8005360C 0001CBCC  38 A5 9A F8 */	addi r5, r5, acosRadErrorString@l
 /* 80053610 0001CBD0  4C C6 31 82 */	crclr 6
 /* 80053614 0001CBD4  48 38 40 05 */	bl Warning__Q24nw4r2dbFPCciPCce
 .L_80053618:
@@ -9842,10 +9842,10 @@
 /* 80053754 0001CD14  4C 41 13 82 */	cror 2, 1, 2
 /* 80053758 0001CD18  41 82 00 20 */	beq .L_80053778
 /* 8005375C 0001CD1C  3C 60 80 53 */	lis r3, lbl_80529B54@ha
-/* 80053760 0001CD20  3C A0 80 53 */	lis r5, lbl_80529B30@ha
+/* 80053760 0001CD20  3C A0 80 53 */	lis r5, frsqrtErrorString@ha
 /* 80053764 0001CD24  38 63 9B 54 */	addi r3, r3, lbl_80529B54@l
 /* 80053768 0001CD28  38 80 02 73 */	li r4, 0x273
-/* 8005376C 0001CD2C  38 A5 9B 30 */	addi r5, r5, lbl_80529B30@l
+/* 8005376C 0001CD2C  38 A5 9B 30 */	addi r5, r5, frsqrtErrorString@l
 /* 80053770 0001CD30  4C C6 31 82 */	crclr 6
 /* 80053774 0001CD34  48 38 3E A5 */	bl Warning__Q24nw4r2dbFPCciPCce
 .L_80053778:
@@ -9914,10 +9914,10 @@
 /* 80053860 0001CE20  4C 41 13 82 */	cror 2, 1, 2
 /* 80053864 0001CE24  41 82 00 20 */	beq .L_80053884
 /* 80053868 0001CE28  3C 60 80 53 */	lis r3, lbl_80529B54@ha
-/* 8005386C 0001CE2C  3C A0 80 53 */	lis r5, lbl_80529B30@ha
+/* 8005386C 0001CE2C  3C A0 80 53 */	lis r5, frsqrtErrorString@ha
 /* 80053870 0001CE30  38 63 9B 54 */	addi r3, r3, lbl_80529B54@l
 /* 80053874 0001CE34  38 80 02 73 */	li r4, 0x273
-/* 80053878 0001CE38  38 A5 9B 30 */	addi r5, r5, lbl_80529B30@l
+/* 80053878 0001CE38  38 A5 9B 30 */	addi r5, r5, frsqrtErrorString@l
 /* 8005387C 0001CE3C  4C C6 31 82 */	crclr 6
 /* 80053880 0001CE40  48 38 3D 99 */	bl Warning__Q24nw4r2dbFPCciPCce
 .L_80053884:
@@ -10141,22 +10141,22 @@
 .endobj CActParamAnim_hierarchy
 
 
-.obj lbl_80529AF8, global
+.obj acosRadErrorString, global
 	.asciz "AcosRad: Input is out of the domain."
 	.balign 4
-.endobj lbl_80529AF8
+.endobj acosRadErrorString
 
 
-.obj lbl_80529B20, global
+.obj triangularhString, global
 	.asciz "triangular.h"
 	.balign 4
-.endobj lbl_80529B20
+.endobj triangularhString
 
 
-.obj lbl_80529B30, global
+.obj frsqrtErrorString, global
 	.asciz "FSqrt: Input is out of the domain."
 	.balign 4
-.endobj lbl_80529B30
+.endobj frsqrtErrorString
 
 
 .obj lbl_80529B54, global

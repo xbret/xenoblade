@@ -3339,6 +3339,7 @@
 /* 80160114 001296D4  4E 80 00 20 */	blr
 .endfn func_8015EF08
 
+#FUN_004581b0 in xc3d
 .fn func_80160118, global
 /* 80160118 001296D8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8016011C 001296DC  7C 08 02 A6 */	mflr r0

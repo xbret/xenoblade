@@ -239,9 +239,6 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/chain/CChainActorEne.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/chain/CChainActorPc.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CEquipItemBox.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/CEIBCur.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/CEIBPageCur.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/CEquipItemBox_1.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuSave.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CSLCur.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CSaveLoad.o\

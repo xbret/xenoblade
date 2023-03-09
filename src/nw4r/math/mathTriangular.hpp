@@ -9,29 +9,29 @@ namespace math {
 
 namespace detail {
 struct SinCosSample {
-  f32 sin_val;
-  f32 cos_val;
-  f32 sin_delta;
-  f32 cos_delta;
+  float sin_val;
+  float cos_val;
+  float sin_delta;
+  float cos_delta;
 };
 
 extern const SinCosSample gSinCosTbl[256 + 1];
 } // namespace detail
 
 // PAL 0x80085110
-f32 SinFIdx(f32 fidx);
+float SinFIdx(float fidx);
 
 // PAL 0x80085180
-f32 CosFIdx(f32 fidx);
+float CosFIdx(float fidx);
 
 // PAL 0x800851e0
-void SinCosFIdx(MWREG f32*, MWREG f32*, MWREG f32);
+void SinCosFIdx(MWREG float*, MWREG float*, MWREG float);
 
 // PAL 0x80085250
-f32 AtanFIdx(f32);
+float AtanFIdx(float);
 
 // PAL: 0x800853c0
-f32 Atan2FIdx(f32, f32);
+float Atan2FIdx(float, float);
 
 } // namespace math
 } // namespace nw4r

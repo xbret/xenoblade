@@ -1,9 +1,9 @@
 MTX_FILES:=\
-	$(BUILD_DIR)/asm/RevoSDK/mtx/mtx.o\
-	$(BUILD_DIR)/asm/RevoSDK/mtx/mtxvec.o\
-	$(BUILD_DIR)/asm/RevoSDK/mtx/mtx44.o\
-	$(BUILD_DIR)/asm/RevoSDK/mtx/vec.o\
-	$(BUILD_DIR)/asm/RevoSDK/mtx/quat.o\
+	$(BUILD_DIR)/src/RevoSDK/mtx/mtx.o\
+	$(BUILD_DIR)/src/RevoSDK/mtx/mtxvec.o\
+	$(BUILD_DIR)/src/RevoSDK/mtx/mtx44.o\
+	$(BUILD_DIR)/src/RevoSDK/mtx/vec.o\
+	$(BUILD_DIR)/src/RevoSDK/mtx/quat.o\
 
 DEPENDS += $(MTX_FILES:.o=.d)
 

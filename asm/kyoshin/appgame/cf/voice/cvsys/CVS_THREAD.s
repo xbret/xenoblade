@@ -730,6 +730,7 @@
 /* 802A442C 0026D9EC  4E 80 00 20 */	blr 
 .endfn func_802A4120
 
+#FUN_003695d0 in xc3d?
 .fn func_802A4430, global
 /* 802A4430 0026D9F0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802A4434 0026D9F4  7C 08 02 A6 */	mflr r0

@@ -1,5 +1,5 @@
 DB_FILES:=\
-	$(BUILD_DIR)/asm/RevoSDK/db/db.o\
+	$(BUILD_DIR)/src/RevoSDK/db/db.o\
 
 
 DEPENDS += $(DB_FILES:.o=.d)
