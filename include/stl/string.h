@@ -4,7 +4,6 @@
 #include "types.h"
 
 #include "stl/mem.h"
-#include "PowerPC_EABI_Support/Runtime/__mem.h"
 #include "stl/extras.h"
 #ifdef __cplusplus
 extern "C" {

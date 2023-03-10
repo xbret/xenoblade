@@ -747,7 +747,7 @@
 /* 8034F174 00318734  7F C9 F3 78 */	mr r9, r30
 /* 8034F178 00318738  38 61 00 18 */	addi r3, r1, 0x18
 /* 8034F17C 0031873C  39 08 0A C0 */	addi r8, r8, nandCallback@l
-/* 8034F180 00318740  4B FC 6F F1 */	bl ISFS_CreateDir
+/* 8034F180 00318740  4B FC 6F F1 */	bl ISFS_CreateDirAsync
 .L_8034F184:
 /* 8034F184 00318744  48 00 10 9D */	bl nandConvertErrorCode
 .L_8034F188:

@@ -1,5 +1,5 @@
 FS_FILES:=\
-	$(BUILD_DIR)/asm/RevoSDK/fs/fs.o\
+	$(BUILD_DIR)/src/RevoSDK/fs/fs.o\
 
 DEPENDS += $(FS_FILES:.o=.d)
 

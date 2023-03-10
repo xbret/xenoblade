@@ -126,6 +126,7 @@ typedef struct FSCommandBlock {
 } FSCommandBlock;
 
 static s32 __fsFd = -1;
+static BOOL __fsInitialized = FALSE;
 static char* __devfs = NULL;
 static u32 _asynCnt = 0;
 static s32 hId;
@@ -139,22 +140,22 @@ static IPCResult _FSGetFileStatsCb(IPCResult, FSCommandBlock*);
 // Not part of MSL, but implemented in IPC.
 size_t strnlen(const char*, size_t);
 
+
 IPCResult ISFS_OpenLib(void) {
-    static BOOL firstFl = TRUE;
     static void* lo;
     static void* hi;
 
     IPCResult ret = IPC_RESULT_OK;
     u8* base;
 
-    if (firstFl) {
+    if (!__fsInitialized) {
         lo = IPCGetBufferLo();
         hi = IPCGetBufferHi();
     }
 
     __devfs = (char*)ROUND_UP_PTR(lo, 32);
 
-    if (firstFl && __devfs + FS_MAX_PATH > hi) {
+    if (!__fsInitialized && __devfs + FS_MAX_PATH > hi) {
         OSReport("APP ERROR: Not enough IPC arena\n");
         ret = IPC_RESULT_ALLOC_FAILED;
         goto end;
@@ -170,15 +171,15 @@ IPCResult ISFS_OpenLib(void) {
 
     base = (u8*)__devfs;
 
-    if (firstFl && base + FS_MAX_PATH + FS_HEAP_SIZE > hi) {
+    if (!__fsInitialized && base + FS_MAX_PATH + FS_HEAP_SIZE > hi) {
         OSReport("APP ERROR: Not enough IPC arena\n");
         ret = IPC_RESULT_ALLOC_FAILED;
         goto end;
     }
 
-    if (firstFl) {
+    if (!__fsInitialized) {
         IPCSetBufferLo(base + FS_MAX_PATH + FS_HEAP_SIZE);
-        firstFl = FALSE;
+        __fsInitialized = TRUE;
     }
 
     hId = iosCreateHeap(base, FS_MAX_PATH + FS_HEAP_SIZE);
@@ -190,11 +191,11 @@ end:
     return ret;
 }
 
-static s32 _isfsFuncCb(s32 result, void* arg) {
+s32 _isfsFuncCb(s32 result, void* arg) {
     FSCommandBlock* block = (FSCommandBlock*)arg;
 
     if (result >= IPC_RESULT_OK) {
-        switch (block->callbackState) {
+        switch ((u32)(block->callbackState)) {
         case CB_STATE_GET_STATS:
             _FSGetStatsCb(result, block);
             break;
@@ -206,6 +207,9 @@ static s32 _isfsFuncCb(s32 result, void* arg) {
             break;
         case CB_STATE_GET_USAGE:
             _FSGetUsageCb(result, block);
+            break;
+        case CB_STATE_GET_FILE_STATS:
+            _FSGetFileStatsCb(result, block);
             break;
         }
     }
@@ -227,6 +231,7 @@ static IPCResult _FSGetStatsCb(IPCResult result, FSCommandBlock* block) {
     return IPC_RESULT_OK;
 }
 
+/*
 IPCResult ISFS_CreateDir(const char* path, u32 attr, u32 ownerPerm,
                          u32 groupPerm, u32 otherPerm) {
     FSCommandBlock* block;
@@ -264,6 +269,7 @@ end:
 
     return ret;
 }
+*/
 
 IPCResult ISFS_CreateDirAsync(const char* path, u32 attr, u32 ownerPerm,
                               u32 groupPerm, u32 otherPerm,
@@ -669,15 +675,17 @@ IPCResult ISFS_RenameAsync(const char* from, const char* to,
                           sizeof(FSRenameIoctl), 0, 0, _isfsFuncCb, block);
 }
 
+
 IPCResult ISFS_GetUsageAsync(const char* path, s32* blockCountOut,
-                        s32* fileCountOut) {
+                        s32* fileCountOut, FSAsyncCallback callback, void* callbackArg) {
     IPCResult ret;
     u32* blockCountWork;
     u32* fileCountWork;
-    char* pathWork;
     IPCIOVector* vectors;
     FSCommandBlock* block;
+    char* pathWork;
     size_t len;
+
 
     block = NULL;
 
@@ -690,9 +698,15 @@ IPCResult ISFS_GetUsageAsync(const char* path, s32* blockCountOut,
 
     block = (FSCommandBlock*)iosAllocAligned(hId, sizeof(FSCommandBlock), 32);
     if (block == NULL) {
-        ret = IPC_RESULT_ALLOC_FAILED;
+        ret = IPC_RESULT_BUSY;
         goto end;
     }
+
+    block->callback = callback;
+    block->callbackArg = callbackArg;
+    block->callbackState = CB_STATE_GET_USAGE;
+    block->getUsageCtx.blockCountOut = (u32*)blockCountOut;
+    block->getUsageCtx.fileCountOut = (u32*)fileCountOut;
 
     // Directory path
     vectors = (IPCIOVector*)block->ioctlWork;
@@ -713,16 +727,10 @@ IPCResult ISFS_GetUsageAsync(const char* path, s32* blockCountOut,
     vectors[2].base = fileCountWork;
     vectors[2].length = sizeof(u32);
 
-    ret = IOS_Ioctlv(__fsFd, IPC_IOCTLV_GET_USAGE, 1, 2, vectors);
-    if (ret == IPC_RESULT_OK) {
-        *blockCountOut = *blockCountWork;
-        *fileCountOut = *fileCountWork;
-    }
+    ret = IOS_IoctlvAsync(__fsFd, IPC_IOCTLV_GET_USAGE, 1, 2, vectors, _isfsFuncCb, block);
+
 
 end:
-    if (block != NULL) {
-        FS_DELETE(block);
-    }
 
     return ret;
 }
@@ -867,7 +875,7 @@ IPCResult ISFS_OpenAsync(const char* path, IPCOpenMode mode,
     return IOS_OpenAsync((const char*)block->ioctlWork, mode, _isfsFuncCb,
                          block);
 }
-
+/*
 IPCResult ISFS_GetFileStats(s32 fd, FSFileStats* statsOut) {
     if (statsOut == NULL || (u32)statsOut % 32 != 0) {
         return IPC_RESULT_INVALID;
@@ -875,32 +883,41 @@ IPCResult ISFS_GetFileStats(s32 fd, FSFileStats* statsOut) {
 
     return IOS_Ioctl(fd, IPC_IOCTL_GET_FILE_STATS, NULL, 0, statsOut,
                      sizeof(FSFileStats));
+}*/
+
+static IPCResult _FSGetFileStatsCb(IPCResult result, FSCommandBlock* block){
+    if(result == IPC_RESULT_OK){
+        memcpy(block->getFileStatsCtx.statsOut, block->ioctlWork, sizeof(FSFileStats));
+    }
+
+    return IPC_RESULT_OK;
 }
 
 IPCResult ISFS_GetFileStatsAsync(s32 fd, FSFileStats* statsOut,
                                  FSAsyncCallback callback, void* callbackArg) {
     FSCommandBlock* block;
 
-    if (statsOut == NULL || (u32)statsOut % 32 != 0) {
+    if (statsOut == 0 || (u32)statsOut % 32 != 0) {
         return IPC_RESULT_INVALID;
     }
 
     block = (FSCommandBlock*)iosAllocAligned(hId, sizeof(FSCommandBlock), 32);
-    if (block == NULL) {
+    if (block == 0) {
         return IPC_RESULT_BUSY;
     }
 
     block->callback = callback;
     block->callbackArg = callbackArg;
-    block->callbackState = CB_STATE_NONE;
+    block->callbackState = CB_STATE_GET_FILE_STATS;
+    block->getFileStatsCtx.statsOut = statsOut;
 
-    return IOS_IoctlAsync(fd, IPC_IOCTL_GET_FILE_STATS, NULL, 0, statsOut,
+    return IOS_IoctlAsync(fd, IPC_IOCTL_GET_FILE_STATS, NULL, 0, block,
                           sizeof(FSFileStats), _isfsFuncCb, block);
 }
-
+/*
 IPCResult ISFS_Seek(s32 fd, s32 offset, IPCSeekMode mode) {
     return IOS_Seek(fd, offset, mode);
-}
+}*/
 
 IPCResult ISFS_SeekAsync(s32 fd, s32 offset, IPCSeekMode mode,
                          FSAsyncCallback callback, void* callbackArg) {
