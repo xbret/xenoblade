@@ -1,8 +1,5 @@
 #include "monolithlib/vm/yvm.h"
 
-/* Based on XCDE/DDOC, it seems like this code was likely written in C.
-However, it has extab data, which may or may not generate for C code. (needs testing) */
-
 SBOpcode sbScriptOpcodes[96] = {
     {"NOP", 0, 0},
 	{"CONST_0", 0, 1},

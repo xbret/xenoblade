@@ -2,9 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-#CMainMenu?
 .fn func_800D7A04, global
 /* 800D7A04 000A0FC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800D7A08 000A0FC8  7C 08 02 A6 */	mflr r0

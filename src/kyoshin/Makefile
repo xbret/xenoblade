@@ -3,20 +3,32 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/IWorkEvent.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CGameRestart.o\
 	$(BUILD_DIR)/src/kyoshin/appgame/main.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/code_8003A05C.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/code_8003A53C.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/plugin_deb.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/plugin_wait.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/oc_builtin.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/oc_thread.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/oc_msg.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/oc_bdat.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/oc_unit.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTaskGame.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CTaskGameCf.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTaskGameEff.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/code_800468E0.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/oc_cfp.o\
+	$(BUILD_DIR)/src/kyoshin/appgame/plugin/plugin_main.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/plugin_ui.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/plugin_eve.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/plugin_cfs.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/plugin_math.o\
 	$(BUILD_DIR)/asm/kyoshin/action/CActParamAnim.o\
 	$(BUILD_DIR)/asm/kyoshin/action/CActParamData.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CMcaFile.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CTaskEnvironment.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTimeLightGrp.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CActParamAnimGame.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/code_800602B4.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/plugin_cam.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CTaskGameEffAfter.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/plugin_pad.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80061870.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfResTask.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfRes.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/IResInfo.o\
@@ -119,6 +131,7 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/realtimeevt/CREvtModelPc.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/realtimeevt/CREvtEffect.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/realtimeevt/CREvtObj.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/plugin_smth.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuPTGauge.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/code_80187F14.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuSelectShop.o\
@@ -137,7 +150,8 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CTaskCulling.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CVision.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/code_801A929C.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/code_801AAD20.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/plugin_snd.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/plugin_game.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuVision.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuBattleCommu.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CPcEffect07.o\
@@ -165,6 +179,7 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CPartyStateWin.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CModelDisp.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CPartyState.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/plugin_unit.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/parts/CModelDispEquip.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CEquipChange.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfMapMineManager.o\
@@ -271,7 +286,7 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTutorialList.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CLoad.o\
 	$(BUILD_DIR)/src/kyoshin/appgame/code_802AEB74.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/code_802AEBC4.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/plugin_help.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_MAIN.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_BATTLE_BEGIN.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuGCItem.o\
@@ -306,7 +321,7 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/help/CHelp_Sp.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/help/CHelp_Talk.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/help/CHelp_Target.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/cvsys/CVS_THREAD_ORDER.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/plugin_voice.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CBattery.o\
 
 $(GAME_FILES): CFLAGS += -ipa file -inline deferred -str pool,readonly,reuse -RTTI on -enc SJIS

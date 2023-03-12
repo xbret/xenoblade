@@ -5641,12 +5641,10 @@
 	.float 0
 .endobj float_8066860C
 
-#fix later
 .obj float_80668610, global
-	.asciz "?fff"
-	.balign 4
+	.float 0.9
+	.4byte 0
 .endobj float_80668610
-
 
 .obj double_80668618, global
 	.8byte 0x4330000080000000 #signed int to float constant

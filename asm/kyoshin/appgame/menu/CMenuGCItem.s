@@ -850,7 +850,6 @@
 
 .balign 8
 
-#fix later
 .obj lbl_8066B6C0, global
 	.byte 0x25, 0x26, 0x27, 0x28, 0x00
 .endobj lbl_8066B6C0

@@ -2,6 +2,7 @@
 
 #include "types.h"
 #include "kyoshin/appgame/code_802AEB74.hpp"
+#include "kyoshin/appgame/plugin/plugin_main.h"
 #include "monolithlib/code_80450B14.hpp"
 #include "monolithlib/Unknown1.hpp"
 #include "monolithlib/vm/yvm.h"
@@ -36,8 +37,6 @@ extern void func_804DAA98(u32**);
 extern void func_804DAAA0(u32**);
 extern void SavePkhFilenamesArrayPtr(const char* const[]);
 extern void SaveStaticArcFilenameStringPtr(const char* const*);
-extern void vmInitCallback1();
-extern void vmInitCallback();
 extern void func_8003AA50();
 extern void func_8003AA78(u32, s32);
 extern void func_8003AA8C(u32);
@@ -45,7 +44,6 @@ extern void func_8014A86C(int);
 extern void func_8014A8F8();
 extern void func_8045D480(int);
 extern void func_8045D4FC();
-extern void pluginRegist();
 
 
 void func_80039EFC(int);
@@ -54,7 +52,7 @@ void func_80039F5C(int);
 void func_80039F60();
 void func_80039F64(int);
 void func_80039F68();
-void vmInitCallback1();
+void vmInitPluginRegistCallback();
 void vmInitCallback();
 void main(int argc, char* argv[]);
 
