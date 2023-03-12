@@ -100,7 +100,7 @@ MONOLITHLIB_FILES:=\
 	$(BUILD_DIR)/asm/monolithlib/scn/CScnIdMan.o\
 	$(BUILD_DIR)/asm/monolithlib/scn/CScnItemAnim.o\
 	$(BUILD_DIR)/asm/monolithlib/scn/CScnItemCamera.o\
-	$(BUILD_DIR)/asm/monolithlib/vm/vm.o\
+	$(BUILD_DIR)/asm/monolithlib/yvm/yvm.o\
 	$(BUILD_DIR)/asm/monolithlib/code_804A6C60.o\
 	$(BUILD_DIR)/asm/monolithlib/CColiProc.o\
 	$(BUILD_DIR)/asm/monolithlib/code_804B2FF0.o\
