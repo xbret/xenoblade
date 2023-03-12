@@ -671,28 +671,28 @@
 /* 80495144 0045E704  38 C0 00 20 */	li r6, 0x20
 /* 80495148 0045E708  39 00 00 04 */	li r8, 4
 /* 8049514C 0045E70C  4B F6 87 01 */	bl __ct__Q34nw4r3g3d12LightSettingFPQ34nw4r3g3d8LightObjPQ34nw4r3g3d11AmbLightObjUlPQ34nw4r3g3d12LightSetDataUl
-/* 80495150 0045E710  3F C0 80 4C */	lis r30, func_804C0280@ha
+/* 80495150 0045E710  3F C0 80 4C */	lis r30, __ct__CLight@ha
 /* 80495154 0045E714  3F E0 80 49 */	lis r31, __dt__CLight@ha
 /* 80495158 0045E718  38 7C 09 40 */	addi r3, r28, 0x940
 /* 8049515C 0045E71C  38 C0 00 40 */	li r6, 0x40
-/* 80495160 0045E720  38 9E 02 80 */	addi r4, r30, func_804C0280@l
+/* 80495160 0045E720  38 9E 02 80 */	addi r4, r30, __ct__CLight@l
 /* 80495164 0045E724  38 BF 20 34 */	addi r5, r31, __dt__CLight@l
 /* 80495168 0045E728  38 E0 00 08 */	li r7, 8
 /* 8049516C 0045E72C  4B E2 49 95 */	bl __construct_array
 /* 80495170 0045E730  38 7C 0B 40 */	addi r3, r28, 0xb40
-/* 80495174 0045E734  38 9E 02 80 */	addi r4, r30, func_804C0280@l
+/* 80495174 0045E734  38 9E 02 80 */	addi r4, r30, __ct__CLight@l
 /* 80495178 0045E738  38 BF 20 34 */	addi r5, r31, __dt__CLight@l
 /* 8049517C 0045E73C  38 C0 00 40 */	li r6, 0x40
 /* 80495180 0045E740  38 E0 00 08 */	li r7, 8
 /* 80495184 0045E744  4B E2 49 7D */	bl __construct_array
 /* 80495188 0045E748  38 7C 0D 40 */	addi r3, r28, 0xd40
-/* 8049518C 0045E74C  38 9E 02 80 */	addi r4, r30, func_804C0280@l
+/* 8049518C 0045E74C  38 9E 02 80 */	addi r4, r30, __ct__CLight@l
 /* 80495190 0045E750  38 BF 20 34 */	addi r5, r31, __dt__CLight@l
 /* 80495194 0045E754  38 C0 00 40 */	li r6, 0x40
 /* 80495198 0045E758  38 E0 00 08 */	li r7, 8
 /* 8049519C 0045E75C  4B E2 49 65 */	bl __construct_array
 /* 804951A0 0045E760  38 7C 0F 40 */	addi r3, r28, 0xf40
-/* 804951A4 0045E764  38 9E 02 80 */	addi r4, r30, func_804C0280@l
+/* 804951A4 0045E764  38 9E 02 80 */	addi r4, r30, __ct__CLight@l
 /* 804951A8 0045E768  38 BF 20 34 */	addi r5, r31, __dt__CLight@l
 /* 804951AC 0045E76C  38 C0 00 40 */	li r6, 0x40
 /* 804951B0 0045E770  38 E0 00 08 */	li r7, 8

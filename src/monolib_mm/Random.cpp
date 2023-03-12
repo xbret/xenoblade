@@ -1,5 +1,5 @@
-#include "mm/Random.hpp"
-#include "mm/MTRand.hpp"
+#include "monolib_mm/Random.hpp"
+#include "monolib_mm/MTRand.hpp"
 
 //Part of monolithlib? (namespace according to XCDE)
 namespace ml{

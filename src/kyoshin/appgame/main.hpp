@@ -45,7 +45,7 @@ extern void func_8014A86C(int);
 extern void func_8014A8F8();
 extern void func_8045D480(int);
 extern void func_8045D4FC();
-extern void func_80045814();
+extern void pluginRegist();
 
 
 void func_80039EFC(int);

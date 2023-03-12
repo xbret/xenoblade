@@ -1546,7 +1546,7 @@
 /* 80228CD4 001F2294  4B F0 DD 48 */	b func_80136A1C
 .endfn func_80228C98
 
-.fn func_80228CD8, global
+.fn CQstLogList_OnInit, global
 /* 80228CD8 001F2298  94 21 FE 90 */	stwu r1, -0x170(r1)
 /* 80228CDC 001F229C  7C 08 02 A6 */	mflr r0
 /* 80228CE0 001F22A0  90 01 01 74 */	stw r0, 0x174(r1)
@@ -1991,7 +1991,7 @@
 /* 8022936C 001F292C  7C 08 03 A6 */	mtlr r0
 /* 80229370 001F2930  38 21 01 70 */	addi r1, r1, 0x170
 /* 80229374 001F2934  4E 80 00 20 */	blr
-.endfn func_80228CD8
+.endfn CQstLogList_OnInit
 
 .fn sinit_80229378, local
 /* 80229378 001F2938  3C 60 80 58 */	lis r3, lbl_80579E68@ha
@@ -2121,37 +2121,37 @@
 	.4byte __RTTI__CQstLogList
 	.4byte 0
 	.4byte __dt__CQstLogList
-	.4byte IWorkEvent_80039E28
-	.4byte func_80228CD8
-	.4byte IWorkEvent_80039E18
-	.4byte IWorkEvent_80039E10
-	.4byte IWorkEvent_80039E0C
-	.4byte IWorkEvent_80039E04
-	.4byte IWorkEvent_80039DFC
-	.4byte IWorkEvent_80039DF4
-	.4byte IWorkEvent_80039DEC
-	.4byte IWorkEvent_80039DE4
-	.4byte IWorkEvent_80039DDC
-	.4byte IWorkEvent_80039DD4
-	.4byte IWorkEvent_80039DCC
-	.4byte IWorkEvent_80039DC4
-	.4byte IWorkEvent_80039DBC
-	.4byte IWorkEvent_80039DB4
-	.4byte IWorkEvent_80039DAC
-	.4byte IWorkEvent_80039DA4
-	.4byte IWorkEvent_80039D9C
-	.4byte IWorkEvent_80039D94
-	.4byte IWorkEvent_80039D8C
-	.4byte IWorkEvent_80039D84
-	.4byte IWorkEvent_80039D7C
-	.4byte IWorkEvent_80039D74
-	.4byte IWorkEvent_80039D6C
-	.4byte IWorkEvent_80039D64
-	.4byte IWorkEvent_80039D5C
-	.4byte IWorkEvent_80039D54
-	.4byte IWorkEvent_80039D4C
-	.4byte IWorkEvent_80039D44
-	.4byte IWorkEvent_80039D40
+	.4byte IWorkEvent_WorkEvent1
+	.4byte CQstLogList_OnInit
+	.4byte IWorkEvent_WorkEvent3
+	.4byte IWorkEvent_WorkEvent4
+	.4byte IWorkEvent_WorkEvent5
+	.4byte IWorkEvent_WorkEvent6
+	.4byte IWorkEvent_WorkEvent7
+	.4byte IWorkEvent_WorkEvent8
+	.4byte IWorkEvent_WorkEvent9
+	.4byte IWorkEvent_WorkEvent10
+	.4byte IWorkEvent_WorkEvent11
+	.4byte IWorkEvent_WorkEvent12
+	.4byte IWorkEvent_WorkEvent13
+	.4byte IWorkEvent_WorkEvent14
+	.4byte IWorkEvent_WorkEvent15
+	.4byte IWorkEvent_WorkEvent16
+	.4byte IWorkEvent_WorkEvent17
+	.4byte IWorkEvent_WorkEvent18
+	.4byte IWorkEvent_WorkEvent19
+	.4byte IWorkEvent_WorkEvent20
+	.4byte IWorkEvent_WorkEvent21
+	.4byte IWorkEvent_WorkEvent22
+	.4byte IWorkEvent_WorkEvent23
+	.4byte IWorkEvent_WorkEvent24
+	.4byte IWorkEvent_WorkEvent25
+	.4byte IWorkEvent_WorkEvent26
+	.4byte IWorkEvent_WorkEvent27
+	.4byte IWorkEvent_WorkEvent28
+	.4byte IWorkEvent_WorkEvent29
+	.4byte IWorkEvent_WorkEvent30
+	.4byte IWorkEvent_WorkEvent31
 .endobj __vt__CQstLogList
 
 .obj CQstLogList_hierarchy, global
@@ -2680,7 +2680,7 @@
 
 .obj "@eti_8002E3C4", local
 .hidden "@eti_8002E3C4"
-	.4byte func_80228CD8
+	.4byte CQstLogList_OnInit
 	.4byte 0x000006A0
 	.4byte "@etb_800154EC"
 .endobj "@eti_8002E3C4"

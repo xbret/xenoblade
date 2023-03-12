@@ -1546,7 +1546,7 @@
 /* 8045B24C 0042480C  4E 80 00 20 */	blr 
 .endfn func_8045B1E0
 
-.fn func_8045B250, global
+.fn CLibCriMoviePlay_WorkEvent5, global
 /* 8045B250 00424810  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045B254 00424814  7C 08 02 A6 */	mflr r0
 /* 8045B258 00424818  2C 04 00 00 */	cmpwi r4, 0
@@ -1602,7 +1602,7 @@
 /* 8045B304 004248C4  7C 08 03 A6 */	mtlr r0
 /* 8045B308 004248C8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045B30C 004248CC  4E 80 00 20 */	blr
-.endfn func_8045B250
+.endfn CLibCriMoviePlay_WorkEvent5
 
 .fn func_8045B310, global
 /* 8045B310 004248D0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1727,37 +1727,37 @@
 	.4byte __RTTI__CLibCriMoviePlay
 	.4byte 0
 	.4byte __dt__CLibCriMoviePlay
-	.4byte IWorkEvent_80039E28
-	.4byte IWorkEvent_80039E20
-	.4byte IWorkEvent_80039E18
-	.4byte IWorkEvent_80039E10
-	.4byte func_8045B250
-	.4byte IWorkEvent_80039E04
-	.4byte IWorkEvent_80039DFC
-	.4byte IWorkEvent_80039DF4
-	.4byte IWorkEvent_80039DEC
-	.4byte IWorkEvent_80039DE4
-	.4byte IWorkEvent_80039DDC
-	.4byte IWorkEvent_80039DD4
-	.4byte IWorkEvent_80039DCC
-	.4byte IWorkEvent_80039DC4
-	.4byte IWorkEvent_80039DBC
-	.4byte IWorkEvent_80039DB4
-	.4byte IWorkEvent_80039DAC
-	.4byte IWorkEvent_80039DA4
-	.4byte IWorkEvent_80039D9C
-	.4byte IWorkEvent_80039D94
-	.4byte IWorkEvent_80039D8C
-	.4byte IWorkEvent_80039D84
-	.4byte IWorkEvent_80039D7C
-	.4byte IWorkEvent_80039D74
-	.4byte IWorkEvent_80039D6C
-	.4byte IWorkEvent_80039D64
-	.4byte IWorkEvent_80039D5C
-	.4byte IWorkEvent_80039D54
-	.4byte IWorkEvent_80039D4C
-	.4byte IWorkEvent_80039D44
-	.4byte IWorkEvent_80039D40
+	.4byte IWorkEvent_WorkEvent1
+	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_WorkEvent3
+	.4byte IWorkEvent_WorkEvent4
+	.4byte CLibCriMoviePlay_WorkEvent5
+	.4byte IWorkEvent_WorkEvent6
+	.4byte IWorkEvent_WorkEvent7
+	.4byte IWorkEvent_WorkEvent8
+	.4byte IWorkEvent_WorkEvent9
+	.4byte IWorkEvent_WorkEvent10
+	.4byte IWorkEvent_WorkEvent11
+	.4byte IWorkEvent_WorkEvent12
+	.4byte IWorkEvent_WorkEvent13
+	.4byte IWorkEvent_WorkEvent14
+	.4byte IWorkEvent_WorkEvent15
+	.4byte IWorkEvent_WorkEvent16
+	.4byte IWorkEvent_WorkEvent17
+	.4byte IWorkEvent_WorkEvent18
+	.4byte IWorkEvent_WorkEvent19
+	.4byte IWorkEvent_WorkEvent20
+	.4byte IWorkEvent_WorkEvent21
+	.4byte IWorkEvent_WorkEvent22
+	.4byte IWorkEvent_WorkEvent23
+	.4byte IWorkEvent_WorkEvent24
+	.4byte IWorkEvent_WorkEvent25
+	.4byte IWorkEvent_WorkEvent26
+	.4byte IWorkEvent_WorkEvent27
+	.4byte IWorkEvent_WorkEvent28
+	.4byte IWorkEvent_WorkEvent29
+	.4byte IWorkEvent_WorkEvent30
+	.4byte IWorkEvent_WorkEvent31
 	.4byte func_8045AB3C
 	.4byte func_80039E3C
 	.4byte func_80039E38
@@ -2056,7 +2056,7 @@
 
 .obj "@eti_800351EC", local
 .hidden "@eti_800351EC"
-	.4byte func_8045B250
+	.4byte CLibCriMoviePlay_WorkEvent5
 	.4byte 0x000000C0
 	.4byte "@etb_8001D604"
 .endobj "@eti_800351EC"

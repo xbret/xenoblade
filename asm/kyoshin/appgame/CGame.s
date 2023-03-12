@@ -734,7 +734,7 @@
 /* 80039C04 000031C4  4E 80 00 20 */	blr 
 .endfn func_80039B38
 
-.fn func_80039C08, global
+.fn CGame_WorkEvent5, global
 /* 80039C08 000031C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039C0C 000031CC  7C 08 02 A6 */	mflr r0
 /* 80039C10 000031D0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -805,7 +805,7 @@
 /* 80039CFC 000032BC  7C 08 03 A6 */	mtlr r0
 /* 80039D00 000032C0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80039D04 000032C4  4E 80 00 20 */	blr
-.endfn func_80039C08
+.endfn CGame_WorkEvent5
 
 .fn func_80039D08, global
 /* 80039D08 000032C8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -865,37 +865,37 @@
 	.4byte __RTTI___unnamed_CGame_cpp_CGameRestart
 	.4byte 0
 	.4byte __dt___unnamed_CGame_cpp_CGameRestart
-	.4byte IWorkEvent_80039E28
-	.4byte IWorkEvent_80039E20
-	.4byte IWorkEvent_80039E18
-	.4byte IWorkEvent_80039E10
-	.4byte IWorkEvent_80039E0C
-	.4byte IWorkEvent_80039E04
-	.4byte IWorkEvent_80039DFC
-	.4byte IWorkEvent_80039DF4
-	.4byte IWorkEvent_80039DEC
-	.4byte IWorkEvent_80039DE4
-	.4byte IWorkEvent_80039DDC
-	.4byte IWorkEvent_80039DD4
-	.4byte IWorkEvent_80039DCC
-	.4byte IWorkEvent_80039DC4
-	.4byte IWorkEvent_80039DBC
-	.4byte IWorkEvent_80039DB4
-	.4byte IWorkEvent_80039DAC
-	.4byte IWorkEvent_80039DA4
-	.4byte IWorkEvent_80039D9C
-	.4byte IWorkEvent_80039D94
-	.4byte IWorkEvent_80039D8C
-	.4byte IWorkEvent_80039D84
-	.4byte IWorkEvent_80039D7C
-	.4byte IWorkEvent_80039D74
-	.4byte IWorkEvent_80039D6C
-	.4byte IWorkEvent_80039D64
-	.4byte IWorkEvent_80039D5C
-	.4byte IWorkEvent_80039D54
-	.4byte IWorkEvent_80039D4C
-	.4byte IWorkEvent_80039D44
-	.4byte IWorkEvent_80039D40
+	.4byte IWorkEvent_WorkEvent1
+	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_WorkEvent3
+	.4byte IWorkEvent_WorkEvent4
+	.4byte IWorkEvent_WorkEvent5
+	.4byte IWorkEvent_WorkEvent6
+	.4byte IWorkEvent_WorkEvent7
+	.4byte IWorkEvent_WorkEvent8
+	.4byte IWorkEvent_WorkEvent9
+	.4byte IWorkEvent_WorkEvent10
+	.4byte IWorkEvent_WorkEvent11
+	.4byte IWorkEvent_WorkEvent12
+	.4byte IWorkEvent_WorkEvent13
+	.4byte IWorkEvent_WorkEvent14
+	.4byte IWorkEvent_WorkEvent15
+	.4byte IWorkEvent_WorkEvent16
+	.4byte IWorkEvent_WorkEvent17
+	.4byte IWorkEvent_WorkEvent18
+	.4byte IWorkEvent_WorkEvent19
+	.4byte IWorkEvent_WorkEvent20
+	.4byte IWorkEvent_WorkEvent21
+	.4byte IWorkEvent_WorkEvent22
+	.4byte IWorkEvent_WorkEvent23
+	.4byte IWorkEvent_WorkEvent24
+	.4byte IWorkEvent_WorkEvent25
+	.4byte IWorkEvent_WorkEvent26
+	.4byte IWorkEvent_WorkEvent27
+	.4byte IWorkEvent_WorkEvent28
+	.4byte IWorkEvent_WorkEvent29
+	.4byte IWorkEvent_WorkEvent30
+	.4byte IWorkEvent_WorkEvent31
 	.4byte func_80039E40
 	.4byte func_80039E3C
 	.4byte func_80039E38
@@ -921,37 +921,37 @@
 	.4byte __RTTI__CGame
 	.4byte 0
 	.4byte __dt__CGame
-	.4byte IWorkEvent_80039E28
-	.4byte IWorkEvent_80039E20
-	.4byte IWorkEvent_80039E18
-	.4byte IWorkEvent_80039E10
-	.4byte func_80039C08
-	.4byte IWorkEvent_80039E04
-	.4byte IWorkEvent_80039DFC
-	.4byte IWorkEvent_80039DF4
-	.4byte IWorkEvent_80039DEC
-	.4byte IWorkEvent_80039DE4
-	.4byte IWorkEvent_80039DDC
-	.4byte IWorkEvent_80039DD4
-	.4byte IWorkEvent_80039DCC
-	.4byte IWorkEvent_80039DC4
-	.4byte IWorkEvent_80039DBC
-	.4byte IWorkEvent_80039DB4
-	.4byte IWorkEvent_80039DAC
-	.4byte IWorkEvent_80039DA4
-	.4byte IWorkEvent_80039D9C
-	.4byte IWorkEvent_80039D94
-	.4byte IWorkEvent_80039D8C
-	.4byte IWorkEvent_80039D84
-	.4byte IWorkEvent_80039D7C
-	.4byte IWorkEvent_80039D74
-	.4byte IWorkEvent_80039D6C
-	.4byte IWorkEvent_80039D64
-	.4byte IWorkEvent_80039D5C
-	.4byte IWorkEvent_80039D54
-	.4byte IWorkEvent_80039D4C
-	.4byte IWorkEvent_80039D44
-	.4byte IWorkEvent_80039D40
+	.4byte IWorkEvent_WorkEvent1
+	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_WorkEvent3
+	.4byte IWorkEvent_WorkEvent4
+	.4byte CGame_WorkEvent5
+	.4byte IWorkEvent_WorkEvent6
+	.4byte IWorkEvent_WorkEvent7
+	.4byte IWorkEvent_WorkEvent8
+	.4byte IWorkEvent_WorkEvent9
+	.4byte IWorkEvent_WorkEvent10
+	.4byte IWorkEvent_WorkEvent11
+	.4byte IWorkEvent_WorkEvent12
+	.4byte IWorkEvent_WorkEvent13
+	.4byte IWorkEvent_WorkEvent14
+	.4byte IWorkEvent_WorkEvent15
+	.4byte IWorkEvent_WorkEvent16
+	.4byte IWorkEvent_WorkEvent17
+	.4byte IWorkEvent_WorkEvent18
+	.4byte IWorkEvent_WorkEvent19
+	.4byte IWorkEvent_WorkEvent20
+	.4byte IWorkEvent_WorkEvent21
+	.4byte IWorkEvent_WorkEvent22
+	.4byte IWorkEvent_WorkEvent23
+	.4byte IWorkEvent_WorkEvent24
+	.4byte IWorkEvent_WorkEvent25
+	.4byte IWorkEvent_WorkEvent26
+	.4byte IWorkEvent_WorkEvent27
+	.4byte IWorkEvent_WorkEvent28
+	.4byte IWorkEvent_WorkEvent29
+	.4byte IWorkEvent_WorkEvent30
+	.4byte IWorkEvent_WorkEvent31
 	.4byte func_8003944C
 	.4byte func_80039550
 	.4byte func_80039E38
@@ -1029,7 +1029,7 @@
 
 .balign 8
 
-
+#"巨神"
 .obj lbl_80668380, global
 	.4byte 0x8B90905F
 	.4byte 0
@@ -1309,7 +1309,7 @@
 
 .obj "@eti_800210D4", local
 .hidden "@eti_800210D4"
-	.4byte func_80039C08
+	.4byte CGame_WorkEvent5
 	.4byte 0x00000100
 	.4byte "@etb_800067A4"
 .endobj "@eti_800210D4"

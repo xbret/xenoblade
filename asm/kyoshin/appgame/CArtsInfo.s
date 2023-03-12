@@ -6435,7 +6435,7 @@
 /* 8023B464 00204A24  4E 80 00 20 */	blr 
 .endfn func_8023B430
 
-.fn func_8023B468, global
+.fn CArtsInfo_OnInit, global
 /* 8023B468 00204A28  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8023B46C 00204A2C  7C 08 02 A6 */	mflr r0
 /* 8023B470 00204A30  90 01 00 74 */	stw r0, 0x74(r1)
@@ -6964,7 +6964,7 @@
 /* 8023BC80 00205240  7C 08 03 A6 */	mtlr r0
 /* 8023BC84 00205244  38 21 00 70 */	addi r1, r1, 0x70
 /* 8023BC88 00205248  4E 80 00 20 */	blr
-.endfn func_8023B468
+.endfn CArtsInfo_OnInit
 
 .fn sinit_8023BC8C, local
 /* 8023BC8C 0020524C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -7186,37 +7186,37 @@
 	.4byte __RTTI__CArtsInfo
 	.4byte 0
 	.4byte __dt__CArtsInfo
-	.4byte IWorkEvent_80039E28
-	.4byte func_8023B468
-	.4byte IWorkEvent_80039E18
-	.4byte IWorkEvent_80039E10
-	.4byte IWorkEvent_80039E0C
-	.4byte IWorkEvent_80039E04
-	.4byte IWorkEvent_80039DFC
-	.4byte IWorkEvent_80039DF4
-	.4byte IWorkEvent_80039DEC
-	.4byte IWorkEvent_80039DE4
-	.4byte IWorkEvent_80039DDC
-	.4byte IWorkEvent_80039DD4
-	.4byte IWorkEvent_80039DCC
-	.4byte IWorkEvent_80039DC4
-	.4byte IWorkEvent_80039DBC
-	.4byte IWorkEvent_80039DB4
-	.4byte IWorkEvent_80039DAC
-	.4byte IWorkEvent_80039DA4
-	.4byte IWorkEvent_80039D9C
-	.4byte IWorkEvent_80039D94
-	.4byte IWorkEvent_80039D8C
-	.4byte IWorkEvent_80039D84
-	.4byte IWorkEvent_80039D7C
-	.4byte IWorkEvent_80039D74
-	.4byte IWorkEvent_80039D6C
-	.4byte IWorkEvent_80039D64
-	.4byte IWorkEvent_80039D5C
-	.4byte IWorkEvent_80039D54
-	.4byte IWorkEvent_80039D4C
-	.4byte IWorkEvent_80039D44
-	.4byte IWorkEvent_80039D40
+	.4byte IWorkEvent_WorkEvent1
+	.4byte CArtsInfo_OnInit
+	.4byte IWorkEvent_WorkEvent3
+	.4byte IWorkEvent_WorkEvent4
+	.4byte IWorkEvent_WorkEvent5
+	.4byte IWorkEvent_WorkEvent6
+	.4byte IWorkEvent_WorkEvent7
+	.4byte IWorkEvent_WorkEvent8
+	.4byte IWorkEvent_WorkEvent9
+	.4byte IWorkEvent_WorkEvent10
+	.4byte IWorkEvent_WorkEvent11
+	.4byte IWorkEvent_WorkEvent12
+	.4byte IWorkEvent_WorkEvent13
+	.4byte IWorkEvent_WorkEvent14
+	.4byte IWorkEvent_WorkEvent15
+	.4byte IWorkEvent_WorkEvent16
+	.4byte IWorkEvent_WorkEvent17
+	.4byte IWorkEvent_WorkEvent18
+	.4byte IWorkEvent_WorkEvent19
+	.4byte IWorkEvent_WorkEvent20
+	.4byte IWorkEvent_WorkEvent21
+	.4byte IWorkEvent_WorkEvent22
+	.4byte IWorkEvent_WorkEvent23
+	.4byte IWorkEvent_WorkEvent24
+	.4byte IWorkEvent_WorkEvent25
+	.4byte IWorkEvent_WorkEvent26
+	.4byte IWorkEvent_WorkEvent27
+	.4byte IWorkEvent_WorkEvent28
+	.4byte IWorkEvent_WorkEvent29
+	.4byte IWorkEvent_WorkEvent30
+	.4byte IWorkEvent_WorkEvent31
 .endobj __vt__CArtsInfo
 
 
@@ -8376,7 +8376,7 @@
 
 .obj "@eti_8002EF40", local
 .hidden "@eti_8002EF40"
-	.4byte func_8023B468
+	.4byte CArtsInfo_OnInit
 	.4byte 0x00000824
 	.4byte "@etb_80015FC4"
 .endobj "@eti_8002EF40"

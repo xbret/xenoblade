@@ -394,7 +394,7 @@
 /* 80455F0C 0041F4CC  4E 80 00 20 */	blr 
 .endfn func_80455E60
 
-.fn func_80455F10, global
+.fn CDesktop_OnInit, global
 /* 80455F10 0041F4D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80455F14 0041F4D4  7C 08 02 A6 */	mflr r0
 /* 80455F18 0041F4D8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -420,9 +420,9 @@
 /* 80455F60 0041F520  7C 08 03 A6 */	mtlr r0
 /* 80455F64 0041F524  38 21 00 10 */	addi r1, r1, 0x10
 /* 80455F68 0041F528  4E 80 00 20 */	blr 
-.endfn func_80455F10
+.endfn CDesktop_OnInit
 
-.fn func_80455F6C, global
+.fn CDesktop_WorkEvent3, global
 /* 80455F6C 0041F52C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80455F70 0041F530  7C 08 02 A6 */	mflr r0
 /* 80455F74 0041F534  90 01 00 14 */	stw r0, 0x14(r1)
@@ -448,7 +448,7 @@
 /* 80455FBC 0041F57C  7C 08 03 A6 */	mtlr r0
 /* 80455FC0 0041F580  38 21 00 10 */	addi r1, r1, 0x10
 /* 80455FC4 0041F584  4E 80 00 20 */	blr 
-.endfn func_80455F6C
+.endfn CDesktop_WorkEvent3
 
 .fn CDesktop_SaveStartFunctionCallback, global
 /* 80455FC8 0041F588  90 6D BE 00 */	stw r3, CDesktop_startFunctionStruct@sda21(r13)
@@ -603,37 +603,37 @@
 	.4byte __RTTI___unnamed_CDesktop_cpp_CDesktopException
 	.4byte 0
 	.4byte __dt___unnamed_CDesktop_cpp_CDesktopException
-	.4byte IWorkEvent_80039E28
-	.4byte IWorkEvent_80039E20
-	.4byte IWorkEvent_80039E18
-	.4byte IWorkEvent_80039E10
-	.4byte IWorkEvent_80039E0C
-	.4byte IWorkEvent_80039E04
-	.4byte IWorkEvent_80039DFC
-	.4byte IWorkEvent_80039DF4
-	.4byte IWorkEvent_80039DEC
-	.4byte IWorkEvent_80039DE4
-	.4byte IWorkEvent_80039DDC
-	.4byte IWorkEvent_80039DD4
-	.4byte IWorkEvent_80039DCC
-	.4byte IWorkEvent_80039DC4
-	.4byte IWorkEvent_80039DBC
-	.4byte IWorkEvent_80039DB4
-	.4byte IWorkEvent_80039DAC
-	.4byte IWorkEvent_80039DA4
-	.4byte IWorkEvent_80039D9C
-	.4byte IWorkEvent_80039D94
-	.4byte IWorkEvent_80039D8C
-	.4byte IWorkEvent_80039D84
-	.4byte IWorkEvent_80039D7C
-	.4byte IWorkEvent_80039D74
-	.4byte IWorkEvent_80039D6C
-	.4byte IWorkEvent_80039D64
-	.4byte IWorkEvent_80039D5C
-	.4byte IWorkEvent_80039D54
-	.4byte IWorkEvent_80039D4C
-	.4byte IWorkEvent_80039D44
-	.4byte IWorkEvent_80039D40
+	.4byte IWorkEvent_WorkEvent1
+	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_WorkEvent3
+	.4byte IWorkEvent_WorkEvent4
+	.4byte IWorkEvent_WorkEvent5
+	.4byte IWorkEvent_WorkEvent6
+	.4byte IWorkEvent_WorkEvent7
+	.4byte IWorkEvent_WorkEvent8
+	.4byte IWorkEvent_WorkEvent9
+	.4byte IWorkEvent_WorkEvent10
+	.4byte IWorkEvent_WorkEvent11
+	.4byte IWorkEvent_WorkEvent12
+	.4byte IWorkEvent_WorkEvent13
+	.4byte IWorkEvent_WorkEvent14
+	.4byte IWorkEvent_WorkEvent15
+	.4byte IWorkEvent_WorkEvent16
+	.4byte IWorkEvent_WorkEvent17
+	.4byte IWorkEvent_WorkEvent18
+	.4byte IWorkEvent_WorkEvent19
+	.4byte IWorkEvent_WorkEvent20
+	.4byte IWorkEvent_WorkEvent21
+	.4byte IWorkEvent_WorkEvent22
+	.4byte IWorkEvent_WorkEvent23
+	.4byte IWorkEvent_WorkEvent24
+	.4byte IWorkEvent_WorkEvent25
+	.4byte IWorkEvent_WorkEvent26
+	.4byte IWorkEvent_WorkEvent27
+	.4byte IWorkEvent_WorkEvent28
+	.4byte IWorkEvent_WorkEvent29
+	.4byte IWorkEvent_WorkEvent30
+	.4byte IWorkEvent_WorkEvent31
 	.4byte func_80438A50
 	.4byte func_80039E3C
 	.4byte func_80039E38
@@ -658,37 +658,37 @@
 	.4byte __RTTI___unnamed_CDesktop_cpp_CDesktopBackGround
 	.4byte 0
 	.4byte __dt___unnamed_CDesktop_cpp_CDesktopBackGround
-	.4byte IWorkEvent_80039E28
-	.4byte IWorkEvent_80039E20
-	.4byte IWorkEvent_80039E18
-	.4byte IWorkEvent_80039E10
-	.4byte IWorkEvent_80039E0C
-	.4byte IWorkEvent_80039E04
-	.4byte IWorkEvent_80039DFC
-	.4byte IWorkEvent_80039DF4
-	.4byte IWorkEvent_80039DEC
-	.4byte IWorkEvent_80039DE4
-	.4byte IWorkEvent_80039DDC
-	.4byte IWorkEvent_80039DD4
-	.4byte IWorkEvent_80039DCC
-	.4byte IWorkEvent_80039DC4
-	.4byte IWorkEvent_80039DBC
-	.4byte IWorkEvent_80039DB4
-	.4byte IWorkEvent_80039DAC
-	.4byte IWorkEvent_80039DA4
-	.4byte IWorkEvent_80039D9C
-	.4byte IWorkEvent_80039D94
-	.4byte IWorkEvent_80039D8C
-	.4byte IWorkEvent_80039D84
-	.4byte IWorkEvent_80039D7C
-	.4byte IWorkEvent_80039D74
-	.4byte IWorkEvent_80039D6C
-	.4byte IWorkEvent_80039D64
-	.4byte IWorkEvent_80039D5C
-	.4byte IWorkEvent_80039D54
-	.4byte IWorkEvent_80039D4C
-	.4byte IWorkEvent_80039D44
-	.4byte IWorkEvent_80039D40
+	.4byte IWorkEvent_WorkEvent1
+	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_WorkEvent3
+	.4byte IWorkEvent_WorkEvent4
+	.4byte IWorkEvent_WorkEvent5
+	.4byte IWorkEvent_WorkEvent6
+	.4byte IWorkEvent_WorkEvent7
+	.4byte IWorkEvent_WorkEvent8
+	.4byte IWorkEvent_WorkEvent9
+	.4byte IWorkEvent_WorkEvent10
+	.4byte IWorkEvent_WorkEvent11
+	.4byte IWorkEvent_WorkEvent12
+	.4byte IWorkEvent_WorkEvent13
+	.4byte IWorkEvent_WorkEvent14
+	.4byte IWorkEvent_WorkEvent15
+	.4byte IWorkEvent_WorkEvent16
+	.4byte IWorkEvent_WorkEvent17
+	.4byte IWorkEvent_WorkEvent18
+	.4byte IWorkEvent_WorkEvent19
+	.4byte IWorkEvent_WorkEvent20
+	.4byte IWorkEvent_WorkEvent21
+	.4byte IWorkEvent_WorkEvent22
+	.4byte IWorkEvent_WorkEvent23
+	.4byte IWorkEvent_WorkEvent24
+	.4byte IWorkEvent_WorkEvent25
+	.4byte IWorkEvent_WorkEvent26
+	.4byte IWorkEvent_WorkEvent27
+	.4byte IWorkEvent_WorkEvent28
+	.4byte IWorkEvent_WorkEvent29
+	.4byte IWorkEvent_WorkEvent30
+	.4byte IWorkEvent_WorkEvent31
 	.4byte func_80438A50
 	.4byte func_80039E3C
 	.4byte func_80039E38
@@ -713,37 +713,37 @@
 	.4byte __RTTI__CDesktop
 	.4byte 0
 	.4byte __dt__CDesktop
-	.4byte IWorkEvent_80039E28
-	.4byte func_80455F10
-	.4byte func_80455F6C
-	.4byte IWorkEvent_80039E10
-	.4byte IWorkEvent_80039E0C
-	.4byte IWorkEvent_80039E04
-	.4byte IWorkEvent_80039DFC
-	.4byte IWorkEvent_80039DF4
-	.4byte IWorkEvent_80039DEC
-	.4byte IWorkEvent_80039DE4
-	.4byte IWorkEvent_80039DDC
-	.4byte IWorkEvent_80039DD4
-	.4byte IWorkEvent_80039DCC
-	.4byte IWorkEvent_80039DC4
-	.4byte IWorkEvent_80039DBC
-	.4byte IWorkEvent_80039DB4
-	.4byte IWorkEvent_80039DAC
-	.4byte IWorkEvent_80039DA4
-	.4byte IWorkEvent_80039D9C
-	.4byte IWorkEvent_80039D94
-	.4byte IWorkEvent_80039D8C
-	.4byte IWorkEvent_80039D84
-	.4byte IWorkEvent_80039D7C
-	.4byte IWorkEvent_80039D74
-	.4byte IWorkEvent_80039D6C
-	.4byte IWorkEvent_80039D64
-	.4byte IWorkEvent_80039D5C
-	.4byte IWorkEvent_80039D54
-	.4byte IWorkEvent_80039D4C
-	.4byte IWorkEvent_80039D44
-	.4byte IWorkEvent_80039D40
+	.4byte IWorkEvent_WorkEvent1
+	.4byte CDesktop_OnInit
+	.4byte CDesktop_WorkEvent3
+	.4byte IWorkEvent_WorkEvent4
+	.4byte IWorkEvent_WorkEvent5
+	.4byte IWorkEvent_WorkEvent6
+	.4byte IWorkEvent_WorkEvent7
+	.4byte IWorkEvent_WorkEvent8
+	.4byte IWorkEvent_WorkEvent9
+	.4byte IWorkEvent_WorkEvent10
+	.4byte IWorkEvent_WorkEvent11
+	.4byte IWorkEvent_WorkEvent12
+	.4byte IWorkEvent_WorkEvent13
+	.4byte IWorkEvent_WorkEvent14
+	.4byte IWorkEvent_WorkEvent15
+	.4byte IWorkEvent_WorkEvent16
+	.4byte IWorkEvent_WorkEvent17
+	.4byte IWorkEvent_WorkEvent18
+	.4byte IWorkEvent_WorkEvent19
+	.4byte IWorkEvent_WorkEvent20
+	.4byte IWorkEvent_WorkEvent21
+	.4byte IWorkEvent_WorkEvent22
+	.4byte IWorkEvent_WorkEvent23
+	.4byte IWorkEvent_WorkEvent24
+	.4byte IWorkEvent_WorkEvent25
+	.4byte IWorkEvent_WorkEvent26
+	.4byte IWorkEvent_WorkEvent27
+	.4byte IWorkEvent_WorkEvent28
+	.4byte IWorkEvent_WorkEvent29
+	.4byte IWorkEvent_WorkEvent30
+	.4byte IWorkEvent_WorkEvent31
 	.4byte func_80455AD8
 	.4byte func_80455AF8
 	.4byte func_80455B34
@@ -984,14 +984,14 @@
 
 .obj "@eti_80034F70", local
 .hidden "@eti_80034F70"
-	.4byte func_80455F10
+	.4byte CDesktop_OnInit
 	.4byte 0x0000005C
 	.4byte "@etb_8001D330"
 .endobj "@eti_80034F70"
 
 .obj "@eti_80034F7C", local
 .hidden "@eti_80034F7C"
-	.4byte func_80455F6C
+	.4byte CDesktop_WorkEvent3
 	.4byte 0x0000005C
 	.4byte "@etb_8001D338"
 .endobj "@eti_80034F7C"

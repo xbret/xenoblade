@@ -6277,7 +6277,7 @@
 /* 80221548 001EAB08  4E 80 00 20 */	blr 
 .endfn func_802211CC
 
-.fn func_8022154C, global
+.fn CModelDispMakeCrystal_OnInit, global
 /* 8022154C 001EAB0C  94 21 FD D0 */	stwu r1, -0x230(r1)
 /* 80221550 001EAB10  7C 08 02 A6 */	mflr r0
 /* 80221554 001EAB14  90 01 02 34 */	stw r0, 0x234(r1)
@@ -6688,7 +6688,7 @@
 /* 80221B84 001EB144  7C 08 03 A6 */	mtlr r0
 /* 80221B88 001EB148  38 21 02 30 */	addi r1, r1, 0x230
 /* 80221B8C 001EB14C  4E 80 00 20 */	blr 
-.endfn func_8022154C
+.endfn CModelDispMakeCrystal_OnInit
 
 .fn func_80221B90, global
 /* 80221B90 001EB150  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -7041,37 +7041,37 @@
 	.4byte __RTTI__CModelDispMakeCrystal
 	.4byte 0
 	.4byte __dt__CModelDispMakeCrystal
-	.4byte IWorkEvent_80039E28
-	.4byte func_8022154C
-	.4byte IWorkEvent_80039E18
-	.4byte IWorkEvent_80039E10
-	.4byte IWorkEvent_80039E0C
-	.4byte IWorkEvent_80039E04
-	.4byte IWorkEvent_80039DFC
-	.4byte IWorkEvent_80039DF4
-	.4byte IWorkEvent_80039DEC
-	.4byte IWorkEvent_80039DE4
-	.4byte IWorkEvent_80039DDC
-	.4byte IWorkEvent_80039DD4
-	.4byte IWorkEvent_80039DCC
-	.4byte IWorkEvent_80039DC4
-	.4byte IWorkEvent_80039DBC
-	.4byte IWorkEvent_80039DB4
-	.4byte IWorkEvent_80039DAC
-	.4byte IWorkEvent_80039DA4
-	.4byte IWorkEvent_80039D9C
-	.4byte IWorkEvent_80039D94
-	.4byte IWorkEvent_80039D8C
-	.4byte IWorkEvent_80039D84
-	.4byte IWorkEvent_80039D7C
-	.4byte IWorkEvent_80039D74
-	.4byte IWorkEvent_80039D6C
-	.4byte IWorkEvent_80039D64
-	.4byte IWorkEvent_80039D5C
-	.4byte IWorkEvent_80039D54
-	.4byte IWorkEvent_80039D4C
-	.4byte IWorkEvent_80039D44
-	.4byte IWorkEvent_80039D40
+	.4byte IWorkEvent_WorkEvent1
+	.4byte CModelDispMakeCrystal_OnInit
+	.4byte IWorkEvent_WorkEvent3
+	.4byte IWorkEvent_WorkEvent4
+	.4byte IWorkEvent_WorkEvent5
+	.4byte IWorkEvent_WorkEvent6
+	.4byte IWorkEvent_WorkEvent7
+	.4byte IWorkEvent_WorkEvent8
+	.4byte IWorkEvent_WorkEvent9
+	.4byte IWorkEvent_WorkEvent10
+	.4byte IWorkEvent_WorkEvent11
+	.4byte IWorkEvent_WorkEvent12
+	.4byte IWorkEvent_WorkEvent13
+	.4byte IWorkEvent_WorkEvent14
+	.4byte IWorkEvent_WorkEvent15
+	.4byte IWorkEvent_WorkEvent16
+	.4byte IWorkEvent_WorkEvent17
+	.4byte IWorkEvent_WorkEvent18
+	.4byte IWorkEvent_WorkEvent19
+	.4byte IWorkEvent_WorkEvent20
+	.4byte IWorkEvent_WorkEvent21
+	.4byte IWorkEvent_WorkEvent22
+	.4byte IWorkEvent_WorkEvent23
+	.4byte IWorkEvent_WorkEvent24
+	.4byte IWorkEvent_WorkEvent25
+	.4byte IWorkEvent_WorkEvent26
+	.4byte IWorkEvent_WorkEvent27
+	.4byte IWorkEvent_WorkEvent28
+	.4byte IWorkEvent_WorkEvent29
+	.4byte IWorkEvent_WorkEvent30
+	.4byte IWorkEvent_WorkEvent31
 	.4byte __RTTI__CModelDispMakeCrystal
 	.4byte 0xFFFFFFFC
 	.4byte func_80221E54
@@ -8961,7 +8961,7 @@
 
 .obj "@eti_8002DBD8", local
 .hidden "@eti_8002DBD8"
-	.4byte func_8022154C
+	.4byte CModelDispMakeCrystal_OnInit
 	.4byte 0x00000644
 	.4byte "@etb_80014DB0"
 .endobj "@eti_8002DBD8"

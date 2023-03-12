@@ -6,14 +6,14 @@
 /* 804BF59C 00488B5C  4E 80 00 20 */	blr 
 .endfn func_804BF59C
 
-.fn func_804BF5A0, global
+.fn __ct__804BF5A0, global
 /* 804BF5A0 00488B60  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804BF5A4 00488B64  7C 08 02 A6 */	mflr r0
-/* 804BF5A8 00488B68  3C 80 80 4C */	lis r4, func_804C0280@ha
+/* 804BF5A8 00488B68  3C 80 80 4C */	lis r4, __ct__CLight@ha
 /* 804BF5AC 00488B6C  3C A0 80 49 */	lis r5, __dt__CLight@ha
 /* 804BF5B0 00488B70  90 01 00 24 */	stw r0, 0x24(r1)
 /* 804BF5B4 00488B74  38 C0 00 40 */	li r6, 0x40
-/* 804BF5B8 00488B78  38 84 02 80 */	addi r4, r4, func_804C0280@l
+/* 804BF5B8 00488B78  38 84 02 80 */	addi r4, r4, __ct__CLight@l
 /* 804BF5BC 00488B7C  38 A5 20 34 */	addi r5, r5, __dt__CLight@l
 /* 804BF5C0 00488B80  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 804BF5C4 00488B84  38 E0 00 08 */	li r7, 8
@@ -93,7 +93,7 @@
 /* 804BF6E8 00488CA8  7C 08 03 A6 */	mtlr r0
 /* 804BF6EC 00488CAC  38 21 00 20 */	addi r1, r1, 0x20
 /* 804BF6F0 00488CB0  4E 80 00 20 */	blr 
-.endfn func_804BF5A0
+.endfn __ct__804BF5A0
 
 .fn __dt__804BF6F4, global
 /* 804BF6F4 00488CB4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1058,7 +1058,7 @@
 
 .obj "@eti_80037D0C", local
 .hidden "@eti_80037D0C"
-	.4byte func_804BF5A0
+	.4byte __ct__804BF5A0
 	.4byte 0x00000154
 	.4byte "@etb_8001FF94"
 .endobj "@eti_80037D0C"

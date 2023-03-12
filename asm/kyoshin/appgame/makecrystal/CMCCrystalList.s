@@ -1371,7 +1371,7 @@
 /* 80223A4C 001ED00C  4E 80 00 20 */	blr 
 .endfn func_80223988
 
-.fn func_80223A50, global
+.fn CMCCrystalList_OnInit, global
 /* 80223A50 001ED010  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80223A54 001ED014  7C 08 02 A6 */	mflr r0
 /* 80223A58 001ED018  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1567,7 +1567,7 @@
 /* 80223D34 001ED2F4  7C 08 03 A6 */	mtlr r0
 /* 80223D38 001ED2F8  38 21 00 40 */	addi r1, r1, 0x40
 /* 80223D3C 001ED2FC  4E 80 00 20 */	blr 
-.endfn func_80223A50
+.endfn CMCCrystalList_OnInit
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -1643,37 +1643,37 @@
 	.4byte __RTTI__CMCCrystalList
 	.4byte 0
 	.4byte __dt__CMCCrystalList
-	.4byte IWorkEvent_80039E28
-	.4byte func_80223A50
-	.4byte IWorkEvent_80039E18
-	.4byte IWorkEvent_80039E10
-	.4byte IWorkEvent_80039E0C
-	.4byte IWorkEvent_80039E04
-	.4byte IWorkEvent_80039DFC
-	.4byte IWorkEvent_80039DF4
-	.4byte IWorkEvent_80039DEC
-	.4byte IWorkEvent_80039DE4
-	.4byte IWorkEvent_80039DDC
-	.4byte IWorkEvent_80039DD4
-	.4byte IWorkEvent_80039DCC
-	.4byte IWorkEvent_80039DC4
-	.4byte IWorkEvent_80039DBC
-	.4byte IWorkEvent_80039DB4
-	.4byte IWorkEvent_80039DAC
-	.4byte IWorkEvent_80039DA4
-	.4byte IWorkEvent_80039D9C
-	.4byte IWorkEvent_80039D94
-	.4byte IWorkEvent_80039D8C
-	.4byte IWorkEvent_80039D84
-	.4byte IWorkEvent_80039D7C
-	.4byte IWorkEvent_80039D74
-	.4byte IWorkEvent_80039D6C
-	.4byte IWorkEvent_80039D64
-	.4byte IWorkEvent_80039D5C
-	.4byte IWorkEvent_80039D54
-	.4byte IWorkEvent_80039D4C
-	.4byte IWorkEvent_80039D44
-	.4byte IWorkEvent_80039D40
+	.4byte IWorkEvent_WorkEvent1
+	.4byte CMCCrystalList_OnInit
+	.4byte IWorkEvent_WorkEvent3
+	.4byte IWorkEvent_WorkEvent4
+	.4byte IWorkEvent_WorkEvent5
+	.4byte IWorkEvent_WorkEvent6
+	.4byte IWorkEvent_WorkEvent7
+	.4byte IWorkEvent_WorkEvent8
+	.4byte IWorkEvent_WorkEvent9
+	.4byte IWorkEvent_WorkEvent10
+	.4byte IWorkEvent_WorkEvent11
+	.4byte IWorkEvent_WorkEvent12
+	.4byte IWorkEvent_WorkEvent13
+	.4byte IWorkEvent_WorkEvent14
+	.4byte IWorkEvent_WorkEvent15
+	.4byte IWorkEvent_WorkEvent16
+	.4byte IWorkEvent_WorkEvent17
+	.4byte IWorkEvent_WorkEvent18
+	.4byte IWorkEvent_WorkEvent19
+	.4byte IWorkEvent_WorkEvent20
+	.4byte IWorkEvent_WorkEvent21
+	.4byte IWorkEvent_WorkEvent22
+	.4byte IWorkEvent_WorkEvent23
+	.4byte IWorkEvent_WorkEvent24
+	.4byte IWorkEvent_WorkEvent25
+	.4byte IWorkEvent_WorkEvent26
+	.4byte IWorkEvent_WorkEvent27
+	.4byte IWorkEvent_WorkEvent28
+	.4byte IWorkEvent_WorkEvent29
+	.4byte IWorkEvent_WorkEvent30
+	.4byte IWorkEvent_WorkEvent31
 .endobj __vt__CMCCrystalList
 
 .obj CMCCrystalList_hierarchy, global
@@ -2074,7 +2074,7 @@
 
 .obj "@eti_8002DDF4", local
 .hidden "@eti_8002DDF4"
-	.4byte func_80223A50
+	.4byte CMCCrystalList_OnInit
 	.4byte 0x000002F0
 	.4byte "@etb_80014F64"
 .endobj "@eti_8002DDF4"

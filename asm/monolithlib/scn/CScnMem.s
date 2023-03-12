@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8048EAA8, global
+.fn __ct__CScnMem, global
 /* 8048EAA8 00458068  3C A0 80 57 */	lis r5, __vt__CScnMem@ha
 /* 8048EAAC 0045806C  38 80 00 00 */	li r4, 0
 /* 8048EAB0 00458070  38 A5 1E 00 */	addi r5, r5, __vt__CScnMem@l
@@ -12,7 +12,7 @@
 /* 8048EAC0 00458080  90 03 00 08 */	stw r0, 8(r3)
 /* 8048EAC4 00458084  90 83 00 0C */	stw r4, 0xc(r3)
 /* 8048EAC8 00458088  4E 80 00 20 */	blr 
-.endfn func_8048EAA8
+.endfn __ct__CScnMem
 
 .fn __dt__CScnMem, global
 /* 8048EACC 0045808C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -64,7 +64,7 @@
 /* 8048EB74 00458134  4E 80 00 20 */	blr 
 .endfn func_8048EB30
 
-.fn func_8048EB78, global
+.fn __ct__CScnNw4r, global
 /* 8048EB78 00458138  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8048EB7C 0045813C  7C 08 02 A6 */	mflr r0
 /* 8048EB80 00458140  90 01 00 14 */	stw r0, 0x14(r1)
@@ -82,7 +82,7 @@
 /* 8048EBB0 00458170  7C 08 03 A6 */	mtlr r0
 /* 8048EBB4 00458174  38 21 00 10 */	addi r1, r1, 0x10
 /* 8048EBB8 00458178  4E 80 00 20 */	blr
-.endfn func_8048EB78
+.endfn __ct__CScnNw4r
 
 .fn __dt__CScnNw4r, global
 /* 8048EBBC 0045817C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -200,15 +200,15 @@
 /* 8048ED08 004582C8  48 00 11 24 */	b func_8048FE2C
 .endfn func_8048ED04
 
-.fn func_8048ED0C, global
+.fn CScn_WorkEvent4, global
 /* 8048ED0C 004582CC  38 63 FF AC */	addi r3, r3, -84
 /* 8048ED10 004582D0  48 00 7C 60 */	b func_80496970
-.endfn func_8048ED0C
+.endfn CScn_WorkEvent4
 
-.fn func_8048ED14, global
+.fn CScn_WorkEvent3, global
 /* 8048ED14 004582D4  38 63 FF AC */	addi r3, r3, -84
 /* 8048ED18 004582D8  48 00 7C 44 */	b func_8049695C
-.endfn func_8048ED14
+.endfn CScn_WorkEvent3
 
 .fn func_8048ED1C, global
 /* 8048ED1C 004582DC  38 63 FF AC */	addi r3, r3, -84
@@ -258,37 +258,37 @@
 	.4byte __RTTI__CScnNw4r
 	.4byte 0xFFFFFFAC
 	.4byte func_8048ED1C
-	.4byte IWorkEvent_80039E28
-	.4byte IWorkEvent_80039E20
-	.4byte func_8048ED14
-	.4byte func_8048ED0C
-	.4byte IWorkEvent_80039E0C
-	.4byte IWorkEvent_80039E04
-	.4byte IWorkEvent_80039DFC
-	.4byte IWorkEvent_80039DF4
-	.4byte IWorkEvent_80039DEC
-	.4byte IWorkEvent_80039DE4
-	.4byte IWorkEvent_80039DDC
-	.4byte IWorkEvent_80039DD4
-	.4byte IWorkEvent_80039DCC
-	.4byte IWorkEvent_80039DC4
-	.4byte IWorkEvent_80039DBC
-	.4byte IWorkEvent_80039DB4
-	.4byte IWorkEvent_80039DAC
-	.4byte IWorkEvent_80039DA4
-	.4byte IWorkEvent_80039D9C
-	.4byte IWorkEvent_80039D94
-	.4byte IWorkEvent_80039D8C
-	.4byte IWorkEvent_80039D84
-	.4byte IWorkEvent_80039D7C
-	.4byte IWorkEvent_80039D74
-	.4byte IWorkEvent_80039D6C
-	.4byte IWorkEvent_80039D64
-	.4byte IWorkEvent_80039D5C
-	.4byte IWorkEvent_80039D54
-	.4byte IWorkEvent_80039D4C
-	.4byte IWorkEvent_80039D44
-	.4byte IWorkEvent_80039D40
+	.4byte IWorkEvent_WorkEvent1
+	.4byte IWorkEvent_OnInit
+	.4byte CScn_WorkEvent3
+	.4byte CScn_WorkEvent4
+	.4byte IWorkEvent_WorkEvent5
+	.4byte IWorkEvent_WorkEvent6
+	.4byte IWorkEvent_WorkEvent7
+	.4byte IWorkEvent_WorkEvent8
+	.4byte IWorkEvent_WorkEvent9
+	.4byte IWorkEvent_WorkEvent10
+	.4byte IWorkEvent_WorkEvent11
+	.4byte IWorkEvent_WorkEvent12
+	.4byte IWorkEvent_WorkEvent13
+	.4byte IWorkEvent_WorkEvent14
+	.4byte IWorkEvent_WorkEvent15
+	.4byte IWorkEvent_WorkEvent16
+	.4byte IWorkEvent_WorkEvent17
+	.4byte IWorkEvent_WorkEvent18
+	.4byte IWorkEvent_WorkEvent19
+	.4byte IWorkEvent_WorkEvent20
+	.4byte IWorkEvent_WorkEvent21
+	.4byte IWorkEvent_WorkEvent22
+	.4byte IWorkEvent_WorkEvent23
+	.4byte IWorkEvent_WorkEvent24
+	.4byte IWorkEvent_WorkEvent25
+	.4byte IWorkEvent_WorkEvent26
+	.4byte IWorkEvent_WorkEvent27
+	.4byte IWorkEvent_WorkEvent28
+	.4byte IWorkEvent_WorkEvent29
+	.4byte IWorkEvent_WorkEvent30
+	.4byte IWorkEvent_WorkEvent31
 	.4byte func_80496970
 	.4byte func_8049695C
 .endobj __vt__CScnNw4r
@@ -437,7 +437,7 @@
 
 .obj "@eti_800367DC", local
 .hidden "@eti_800367DC"
-	.4byte func_8048EB78
+	.4byte __ct__CScnNw4r
 	.4byte 0x00000044
 	.4byte "@etb_8001EBD8"
 .endobj "@eti_800367DC"

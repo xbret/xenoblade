@@ -20,9 +20,9 @@
 /* 80350FD4 0031A594  38 60 FF 80 */	li r3, -128
 /* 80350FD8 0031A598  48 00 00 5C */	b .L_80351034
 .L_80350FDC:
-/* 80350FDC 0031A59C  3C 60 80 55 */	lis r3, lbl_80551250@ha
+/* 80350FDC 0031A59C  3C 60 80 55 */	lis r3, USER_DIR_LIST@ha
 /* 80350FE0 0031A5A0  38 80 00 00 */	li r4, 0
-/* 80350FE4 0031A5A4  38 63 12 50 */	addi r3, r3, lbl_80551250@l
+/* 80350FE4 0031A5A4  38 63 12 50 */	addi r3, r3, USER_DIR_LIST@l
 /* 80350FE8 0031A5A8  38 00 00 14 */	li r0, 0x14
 /* 80350FEC 0031A5AC  93 DF 00 04 */	stw r30, 4(r31)
 /* 80350FF0 0031A5B0  93 7F 00 90 */	stw r27, 0x90(r31)
@@ -248,7 +248,7 @@
 .endobj lbl_80551240
 
 
-.obj lbl_80551250, global
+.obj USER_DIR_LIST, local
 	.4byte lbl_80665B10
 	.4byte lbl_80665B18
 	.4byte lbl_805511D0
@@ -260,7 +260,7 @@
 	.4byte lbl_80551230
 	.4byte lbl_80551240
 	.4byte 0
-.endobj lbl_80551250
+.endobj USER_DIR_LIST
 
 
 .obj lbl_8055127C, global

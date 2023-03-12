@@ -1,4 +1,4 @@
-#include "mm/MTRand.hpp"
+#include "monolib_mm/MTRand.hpp"
 
 //Namespace according to XCDE
 namespace mm{

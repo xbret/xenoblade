@@ -636,7 +636,7 @@
 /* 8030FFDC 002D959C  38 C6 FE F0 */	addi r6, r6, cbForNandCreateDir@l
 /* 8030FFE0 002D95A0  38 E7 CA 6C */	addi r7, r7, NandCb@l
 /* 8030FFE4 002D95A4  38 A0 00 00 */	li r5, 0
-/* 8030FFE8 002D95A8  48 03 F0 B9 */	bl nandCreateDir
+/* 8030FFE8 002D95A8  48 03 F0 B9 */	bl NANDPrivateCreateDirAsync
 /* 8030FFEC 002D95AC  2C 03 00 00 */	cmpwi r3, 0
 /* 8030FFF0 002D95B0  41 82 00 20 */	beq .L_80310010
 /* 8030FFF4 002D95B4  81 8D B7 00 */	lwz r12, Callback@sda21(r13)

@@ -688,7 +688,7 @@
 .endfn NANDReadDirAsync
 
 .balign 16, 0
-.fn nandCreateDir, global
+.fn NANDPrivateCreateDirAsync, global
 /* 8034F0A0 00318660  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8034F0A4 00318664  7C 08 02 A6 */	mflr r0
 /* 8034F0A8 00318668  90 01 00 74 */	stw r0, 0x74(r1)
@@ -757,7 +757,7 @@
 /* 8034F194 00318754  7C 08 03 A6 */	mtlr r0
 /* 8034F198 00318758  38 21 00 70 */	addi r1, r1, 0x70
 /* 8034F19C 0031875C  4E 80 00 20 */	blr 
-.endfn nandCreateDir
+.endfn NANDPrivateCreateDirAsync
 
 .balign 16, 0
 .fn nandMove, global

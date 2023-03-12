@@ -224,7 +224,7 @@
 /* 802B94CC 00282A8C  4E 80 00 20 */	blr 
 .endfn func_802B94B0
 
-.fn func_802B94D0, global
+.fn CBattery_OnInit, global
 /* 802B94D0 00282A90  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802B94D4 00282A94  7C 08 02 A6 */	mflr r0
 /* 802B94D8 00282A98  90 01 00 24 */	stw r0, 0x24(r1)
@@ -286,7 +286,7 @@
 /* 802B95AC 00282B6C  7C 08 03 A6 */	mtlr r0
 /* 802B95B0 00282B70  38 21 00 20 */	addi r1, r1, 0x20
 /* 802B95B4 00282B74  4E 80 00 20 */	blr
-.endfn func_802B94D0
+.endfn CBattery_OnInit
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -315,37 +315,37 @@
 	.4byte __RTTI__CBattery
 	.4byte 0
 	.4byte __dt__CBattery
-	.4byte IWorkEvent_80039E28
-	.4byte func_802B94D0
-	.4byte IWorkEvent_80039E18
-	.4byte IWorkEvent_80039E10
-	.4byte IWorkEvent_80039E0C
-	.4byte IWorkEvent_80039E04
-	.4byte IWorkEvent_80039DFC
-	.4byte IWorkEvent_80039DF4
-	.4byte IWorkEvent_80039DEC
-	.4byte IWorkEvent_80039DE4
-	.4byte IWorkEvent_80039DDC
-	.4byte IWorkEvent_80039DD4
-	.4byte IWorkEvent_80039DCC
-	.4byte IWorkEvent_80039DC4
-	.4byte IWorkEvent_80039DBC
-	.4byte IWorkEvent_80039DB4
-	.4byte IWorkEvent_80039DAC
-	.4byte IWorkEvent_80039DA4
-	.4byte IWorkEvent_80039D9C
-	.4byte IWorkEvent_80039D94
-	.4byte IWorkEvent_80039D8C
-	.4byte IWorkEvent_80039D84
-	.4byte IWorkEvent_80039D7C
-	.4byte IWorkEvent_80039D74
-	.4byte IWorkEvent_80039D6C
-	.4byte IWorkEvent_80039D64
-	.4byte IWorkEvent_80039D5C
-	.4byte IWorkEvent_80039D54
-	.4byte IWorkEvent_80039D4C
-	.4byte IWorkEvent_80039D44
-	.4byte IWorkEvent_80039D40
+	.4byte IWorkEvent_WorkEvent1
+	.4byte CBattery_OnInit
+	.4byte IWorkEvent_WorkEvent3
+	.4byte IWorkEvent_WorkEvent4
+	.4byte IWorkEvent_WorkEvent5
+	.4byte IWorkEvent_WorkEvent6
+	.4byte IWorkEvent_WorkEvent7
+	.4byte IWorkEvent_WorkEvent8
+	.4byte IWorkEvent_WorkEvent9
+	.4byte IWorkEvent_WorkEvent10
+	.4byte IWorkEvent_WorkEvent11
+	.4byte IWorkEvent_WorkEvent12
+	.4byte IWorkEvent_WorkEvent13
+	.4byte IWorkEvent_WorkEvent14
+	.4byte IWorkEvent_WorkEvent15
+	.4byte IWorkEvent_WorkEvent16
+	.4byte IWorkEvent_WorkEvent17
+	.4byte IWorkEvent_WorkEvent18
+	.4byte IWorkEvent_WorkEvent19
+	.4byte IWorkEvent_WorkEvent20
+	.4byte IWorkEvent_WorkEvent21
+	.4byte IWorkEvent_WorkEvent22
+	.4byte IWorkEvent_WorkEvent23
+	.4byte IWorkEvent_WorkEvent24
+	.4byte IWorkEvent_WorkEvent25
+	.4byte IWorkEvent_WorkEvent26
+	.4byte IWorkEvent_WorkEvent27
+	.4byte IWorkEvent_WorkEvent28
+	.4byte IWorkEvent_WorkEvent29
+	.4byte IWorkEvent_WorkEvent30
+	.4byte IWorkEvent_WorkEvent31
 .endobj __vt__CBattery
 
 .obj CBattery_hierarchy, global
@@ -454,7 +454,7 @@
 
 .obj "@eti_80033A70", local
 .hidden "@eti_80033A70"
-	.4byte func_802B94D0
+	.4byte CBattery_OnInit
 	.4byte 0x000000E8
 	.4byte "@etb_8001BED0"
 .endobj "@eti_80033A70"

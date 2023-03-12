@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_804C0280, global
+.fn __ct__CLight, global
 /* 804C0280 00489840  C0 62 D3 D8 */	lfs f3, float_8066D758@sda21(r2)
 /* 804C0284 00489844  38 80 00 00 */	li r4, 0
 /* 804C0288 00489848  C0 42 D3 DC */	lfs f2, float_8066D75C@sda21(r2)
@@ -28,7 +28,7 @@
 /* 804C02D8 00489898  D0 03 00 3C */	stfs f0, 0x3c(r3)
 /* 804C02DC 0048989C  90 03 00 30 */	stw r0, 0x30(r3)
 /* 804C02E0 004898A0  4E 80 00 20 */	blr 
-.endfn func_804C0280
+.endfn __ct__CLight
 
 .fn func_804C02E4, global
 /* 804C02E4 004898A4  94 21 FF E0 */	stwu r1, -0x20(r1)

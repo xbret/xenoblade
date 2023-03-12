@@ -25,37 +25,37 @@ struct UnkStruct{
 class CPackItem : IWorkEvent{
 public:
     virtual ~CPackItem();
-    virtual u32 IWorkEvent_80039E28();
-    virtual void func_804DE990();//IWorkEvent_80039E20
-    virtual u32 IWorkEvent_80039E18();
-    virtual u32 IWorkEvent_80039E10();
-    virtual void IWorkEvent_80039E0C();
-    virtual u32 IWorkEvent_80039E04();
-    virtual u32 IWorkEvent_80039DFC();
-    virtual u32 IWorkEvent_80039DF4();
-    virtual u32 IWorkEvent_80039DEC();
-    virtual u32 IWorkEvent_80039DE4();
-    virtual u32 IWorkEvent_80039DDC();
-    virtual u32 IWorkEvent_80039DD4();
-    virtual u32 IWorkEvent_80039DCC();
-    virtual u32 IWorkEvent_80039DC4();
-    virtual u32 IWorkEvent_80039DBC();
-    virtual u32 IWorkEvent_80039DB4();
-    virtual u32 IWorkEvent_80039DAC();
-    virtual u32 IWorkEvent_80039DA4();
-    virtual u32 IWorkEvent_80039D9C();
-    virtual u32 IWorkEvent_80039D94();
-    virtual u32 IWorkEvent_80039D8C();
-    virtual u32 IWorkEvent_80039D84();
-    virtual u32 IWorkEvent_80039D7C();
-    virtual u32 IWorkEvent_80039D74();
-    virtual u32 IWorkEvent_80039D6C();
-    virtual u32 IWorkEvent_80039D64();
-    virtual u32 IWorkEvent_80039D5C();
-    virtual u32 IWorkEvent_80039D54();
-    virtual u32 IWorkEvent_80039D4C();
-    virtual u32 IWorkEvent_80039D44();
-    virtual void IWorkEvent_80039D40();
+    virtual BOOL IWorkEvent_WorkEvent1();
+    virtual BOOL OnInit(UnkStruct*);//IWorkEvent::OnInit
+    virtual BOOL IWorkEvent_WorkEvent3();
+    virtual BOOL IWorkEvent_WorkEvent4();
+    virtual void IWorkEvent_WorkEvent5();
+    virtual BOOL IWorkEvent_WorkEvent6();
+    virtual BOOL IWorkEvent_WorkEvent7();
+    virtual BOOL IWorkEvent_WorkEvent8();
+    virtual BOOL IWorkEvent_WorkEvent9();
+    virtual BOOL IWorkEvent_WorkEvent10();
+    virtual BOOL IWorkEvent_WorkEvent11();
+    virtual BOOL IWorkEvent_WorkEvent12();
+    virtual BOOL IWorkEvent_WorkEvent13();
+    virtual BOOL IWorkEvent_WorkEvent14();
+    virtual BOOL IWorkEvent_WorkEvent15();
+    virtual BOOL IWorkEvent_WorkEvent16();
+    virtual BOOL IWorkEvent_WorkEvent17();
+    virtual BOOL IWorkEvent_WorkEvent18();
+    virtual BOOL IWorkEvent_WorkEvent19();
+    virtual BOOL IWorkEvent_WorkEvent20();
+    virtual BOOL IWorkEvent_WorkEvent21();
+    virtual BOOL IWorkEvent_WorkEvent22();
+    virtual BOOL IWorkEvent_WorkEvent23();
+    virtual BOOL IWorkEvent_WorkEvent24();
+    virtual BOOL IWorkEvent_WorkEvent25();
+    virtual BOOL IWorkEvent_WorkEvent26();
+    virtual BOOL IWorkEvent_WorkEvent27();
+    virtual BOOL IWorkEvent_WorkEvent28();
+    virtual BOOL IWorkEvent_WorkEvent29();
+    virtual BOOL IWorkEvent_WorkEvent30();
+    virtual void IWorkEvent_WorkEvent31();
 
     u8 unk4[0x4C-0x4];
     void* unk4C;
@@ -73,7 +73,6 @@ public:
     u8 unk7A;
 
     bool func_804DE920();
-    bool func_804DE990(UnkStruct*);
     bool CalculatePackFileHash(const char*);
     void func_804DE948();
 };

@@ -66,7 +66,7 @@ void func_80039F68(){
 
 void vmInitCallback1(){
     vmInit();
-    func_80045814();
+    pluginRegist();
 }
 
 void vmInitCallback(){

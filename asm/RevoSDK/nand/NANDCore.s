@@ -822,7 +822,7 @@
 .endfn nandChangeDir
 
 .balign 16, 0
-.fn NANDChangeDir, global
+.fn NANDChangeDirAsync, global
 /* 80350910 00319ED0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80350914 00319ED4  7C 08 02 A6 */	mflr r0
 /* 80350918 00319ED8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -843,7 +843,7 @@
 /* 8035094C 00319F0C  7C 08 03 A6 */	mtlr r0
 /* 80350950 00319F10  38 21 00 10 */	addi r1, r1, 0x10
 /* 80350954 00319F14  4E 80 00 20 */	blr 
-.endfn NANDChangeDir
+.endfn NANDChangeDirAsync
 
 .balign 16, 0
 .fn nandChangeDirCallback, global

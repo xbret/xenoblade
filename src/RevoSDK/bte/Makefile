@@ -11,8 +11,8 @@ BTE_FILES:=\
 	$(BUILD_DIR)/asm/RevoSDK/bte/main/bte_init.o\
 	$(BUILD_DIR)/asm/RevoSDK/bte/main/bte_logmsg.o\
 	$(BUILD_DIR)/asm/RevoSDK/bte/main/bte_main.o\
-	$(BUILD_DIR)/asm/RevoSDK/bte/btu_task1.o\
-	$(BUILD_DIR)/asm/RevoSDK/bte/bd.o\
+	$(BUILD_DIR)/asm/RevoSDK/bte/main/btu_task1.o\
+	$(BUILD_DIR)/asm/RevoSDK/bte/bta/sys/bd.o\
 	$(BUILD_DIR)/asm/RevoSDK/bte/bta/sys/bta_sys_conn.o\
 	$(BUILD_DIR)/asm/RevoSDK/bte/bta/sys/bta_sys_main.o\
 	$(BUILD_DIR)/asm/RevoSDK/bte/bta/sys/ptim.o\
@@ -36,17 +36,17 @@ BTE_FILES:=\
 	$(BUILD_DIR)/asm/RevoSDK/bte/stack/btm/btm_sec.o\
 	$(BUILD_DIR)/asm/RevoSDK/bte/stack/btu/btu_hcif.o\
 	$(BUILD_DIR)/asm/RevoSDK/bte/stack/btu/btu_init.o\
-	$(BUILD_DIR)/asm/RevoSDK/bte/stack/ext/wbt_ext.o\
+	$(BUILD_DIR)/asm/RevoSDK/bte/stack/wbt/wbt_ext.o\
 	$(BUILD_DIR)/asm/RevoSDK/bte/stack/gap/gap_api.o\
 	$(BUILD_DIR)/asm/RevoSDK/bte/stack/gap/gap_conn.o\
 	$(BUILD_DIR)/asm/RevoSDK/bte/stack/gap/gap_utils.o\
 	$(BUILD_DIR)/asm/RevoSDK/bte/stack/hcic/hcicmds.o\
-	$(BUILD_DIR)/asm/RevoSDK/bte/stack/hidd/hidd_api.o\
-	$(BUILD_DIR)/asm/RevoSDK/bte/stack/hidd/hidd_conn.o\
-	$(BUILD_DIR)/asm/RevoSDK/bte/stack/hidd/hidd_mgmt.o\
-	$(BUILD_DIR)/asm/RevoSDK/bte/stack/hidd/hidd_pm.o\
-	$(BUILD_DIR)/asm/RevoSDK/bte/stack/hidh/hidh_api.o\
-	$(BUILD_DIR)/asm/RevoSDK/bte/stack/hidh/hidh_conn.o\
+	$(BUILD_DIR)/asm/RevoSDK/bte/stack/hid/hidd_api.o\
+	$(BUILD_DIR)/asm/RevoSDK/bte/stack/hid/hidd_conn.o\
+	$(BUILD_DIR)/asm/RevoSDK/bte/stack/hid/hidd_mgmt.o\
+	$(BUILD_DIR)/asm/RevoSDK/bte/stack/hid/hidd_pm.o\
+	$(BUILD_DIR)/asm/RevoSDK/bte/stack/hid/hidh_api.o\
+	$(BUILD_DIR)/asm/RevoSDK/bte/stack/hid/hidh_conn.o\
 	$(BUILD_DIR)/asm/RevoSDK/bte/stack/l2cap/l2c_api.o\
 	$(BUILD_DIR)/asm/RevoSDK/bte/stack/l2cap/l2c_csm.o\
 	$(BUILD_DIR)/asm/RevoSDK/bte/stack/l2cap/l2c_link.o\

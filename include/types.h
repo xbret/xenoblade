@@ -1,9 +1,7 @@
 #ifndef _TYPES_H
 #define _TYPES_H
 
-
 #include "macros.h"
-
 
 typedef int BOOL;
 
@@ -42,9 +40,10 @@ typedef void (*funcptr_t)(void);
 //typedef unsigned short wchar_t;
 
 // Basic defines to allow newer-like C++ code to be written
-#define TRUE  1
+#define TRUE 1
 #define FALSE 0
-#define NULL  ((void*)0)
+//#define NULL ((void*)0)
+#define NULL 0
 #define nullptr 0
 
 // For functions that return 0 on a success and -1 on failure

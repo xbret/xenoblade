@@ -28,7 +28,6 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfCamLookatIntf.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfCamTargetIntf.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfCam.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfCamFollow.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/code_80074F4C.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/code_8007C0F8.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CtrlEnemy.o\
@@ -40,7 +39,6 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CtrlPc.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CtrlRemote.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CtrlObjectParam.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/code_8009ED08.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/code_800A3B24.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/code_800AA008.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfCollCircleImpl.o\
@@ -71,16 +69,13 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfObjectEnumList.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfObjectSelectorObj.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CMainMenu.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/CMainCur.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuArtsSelect.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuBattleDamage.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuBattlePlayerState.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/CPcSelectCursor.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuEnemyState.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuFade.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuKeyAssign.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CMiniMap.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/CMMClock.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuQuestLog.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuSymbolMark.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CQuestWindow.o\
@@ -161,7 +156,6 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CSortMenu.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CItemBoxInfo.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CNumSelect.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/CIBLTabCur.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CItemBoxLine.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CScrollBar.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/code_801F3BE0.o\
@@ -199,14 +193,12 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CPresentWin.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCCrystalSupport.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuArtsSet.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/CArtsList.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CArtsInfo.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfNandManager.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/code_802405F4.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuMapSelect.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CMapSel.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CFade.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/code_80244F50.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CFloorMap.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuMapSelectSC.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuPause.o\
@@ -214,7 +206,6 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CCollepedia.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuKizunagram.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CKizunagram.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/CPcKizunaCur.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CPcKizunagram.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/code_8025FB10.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuPassiveSkill.o\
@@ -222,7 +213,6 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfGimmickEne.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuBattleEnd.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuPlayAward.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/CPlayAwardList.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuKizunaTalkList.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CKizunaTalkList.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CSysWinBuff.o\
@@ -240,7 +230,6 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/chain/CChainActorPc.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CEquipItemBox.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuSave.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/CSLCur.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CSaveLoad.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuPTChangeNotice.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/chain/CChainCombo.o\
@@ -250,15 +239,12 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTaskGameEvt.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelpManager.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/code_80296898.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/code_80296B44.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCGetItemBox.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuTutorial.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTutorial.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuOption.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/CCur19.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/COption.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuSkipTimer.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/CSkipTimer2.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CSkipTimer.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/chain/CChainEffect.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/voice/CCharVoice.o\

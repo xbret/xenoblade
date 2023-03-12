@@ -617,7 +617,7 @@
 /* 804963C8 0045F988  4B F9 E6 95 */	bl mm_malloc
 /* 804963CC 0045F98C  2C 03 00 00 */	cmpwi r3, 0
 /* 804963D0 0045F990  41 82 00 08 */	beq .L_804963D8
-/* 804963D4 0045F994  4B FF 86 D5 */	bl func_8048EAA8
+/* 804963D4 0045F994  4B FF 86 D5 */	bl __ct__CScnMem
 .L_804963D8:
 /* 804963D8 0045F998  90 7C 00 88 */	stw r3, 0x88(r28)
 /* 804963DC 0045F99C  7F 84 E3 78 */	mr r4, r28
@@ -1101,7 +1101,7 @@
 /* 80496A20 0045FFE0  2C 03 00 00 */	cmpwi r3, 0
 /* 80496A24 0045FFE4  7C 7F 1B 78 */	mr r31, r3
 /* 80496A28 0045FFE8  41 82 00 0C */	beq .L_80496A34
-/* 80496A2C 0045FFEC  4B FF 81 4D */	bl func_8048EB78
+/* 80496A2C 0045FFEC  4B FF 81 4D */	bl __ct__CScnNw4r
 /* 80496A30 0045FFF0  7C 7F 1B 78 */	mr r31, r3
 .L_80496A34:
 /* 80496A34 0045FFF4  7F E3 FB 78 */	mr r3, r31
@@ -1199,37 +1199,37 @@
 	.4byte __RTTI__CScn
 	.4byte 0xFFFFFFAC
 	.4byte func_80496B04
-	.4byte IWorkEvent_80039E28
-	.4byte IWorkEvent_80039E20
-	.4byte func_8048ED14
-	.4byte func_8048ED0C
-	.4byte IWorkEvent_80039E0C
-	.4byte IWorkEvent_80039E04
-	.4byte IWorkEvent_80039DFC
-	.4byte IWorkEvent_80039DF4
-	.4byte IWorkEvent_80039DEC
-	.4byte IWorkEvent_80039DE4
-	.4byte IWorkEvent_80039DDC
-	.4byte IWorkEvent_80039DD4
-	.4byte IWorkEvent_80039DCC
-	.4byte IWorkEvent_80039DC4
-	.4byte IWorkEvent_80039DBC
-	.4byte IWorkEvent_80039DB4
-	.4byte IWorkEvent_80039DAC
-	.4byte IWorkEvent_80039DA4
-	.4byte IWorkEvent_80039D9C
-	.4byte IWorkEvent_80039D94
-	.4byte IWorkEvent_80039D8C
-	.4byte IWorkEvent_80039D84
-	.4byte IWorkEvent_80039D7C
-	.4byte IWorkEvent_80039D74
-	.4byte IWorkEvent_80039D6C
-	.4byte IWorkEvent_80039D64
-	.4byte IWorkEvent_80039D5C
-	.4byte IWorkEvent_80039D54
-	.4byte IWorkEvent_80039D4C
-	.4byte IWorkEvent_80039D44
-	.4byte IWorkEvent_80039D40
+	.4byte IWorkEvent_WorkEvent1
+	.4byte IWorkEvent_OnInit
+	.4byte CScn_WorkEvent3
+	.4byte CScn_WorkEvent4
+	.4byte IWorkEvent_WorkEvent5
+	.4byte IWorkEvent_WorkEvent6
+	.4byte IWorkEvent_WorkEvent7
+	.4byte IWorkEvent_WorkEvent8
+	.4byte IWorkEvent_WorkEvent9
+	.4byte IWorkEvent_WorkEvent10
+	.4byte IWorkEvent_WorkEvent11
+	.4byte IWorkEvent_WorkEvent12
+	.4byte IWorkEvent_WorkEvent13
+	.4byte IWorkEvent_WorkEvent14
+	.4byte IWorkEvent_WorkEvent15
+	.4byte IWorkEvent_WorkEvent16
+	.4byte IWorkEvent_WorkEvent17
+	.4byte IWorkEvent_WorkEvent18
+	.4byte IWorkEvent_WorkEvent19
+	.4byte IWorkEvent_WorkEvent20
+	.4byte IWorkEvent_WorkEvent21
+	.4byte IWorkEvent_WorkEvent22
+	.4byte IWorkEvent_WorkEvent23
+	.4byte IWorkEvent_WorkEvent24
+	.4byte IWorkEvent_WorkEvent25
+	.4byte IWorkEvent_WorkEvent26
+	.4byte IWorkEvent_WorkEvent27
+	.4byte IWorkEvent_WorkEvent28
+	.4byte IWorkEvent_WorkEvent29
+	.4byte IWorkEvent_WorkEvent30
+	.4byte IWorkEvent_WorkEvent31
 	.4byte func_80496970
 	.4byte func_8049695C
 .endobj __vt__CScn

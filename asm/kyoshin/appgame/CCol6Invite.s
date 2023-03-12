@@ -83,10 +83,10 @@
 /* 801640D4 0012D694  4B FF 90 00 */	b __dt__CCol6CheckBat
 .endfn func_801640D0
 
-.fn func_801640D8, global
+.fn CCol6Hint_OnInit, global
 /* 801640D8 0012D698  38 63 FF 94 */	addi r3, r3, -108
 /* 801640DC 0012D69C  4B FF 9A 2C */	b func_8015DB08
-.endfn func_801640D8
+.endfn CCol6Hint_OnInit
 
 .fn func_801640E0, global
 /* 801640E0 0012D6A0  38 63 FF 94 */	addi r3, r3, -108
@@ -103,10 +103,10 @@
 /* 801640F4 0012D6B4  4B FF 94 A0 */	b __dt__CCol6Hint
 .endfn func_801640F0
 
-.fn func_801640F8, global
+.fn CCol6System_OnInit, global
 /* 801640F8 0012D6B8  38 63 FF 94 */	addi r3, r3, -108
 /* 801640FC 0012D6BC  4B FF C0 1C */	b func_80160118
-.endfn func_801640F8
+.endfn CCol6System_OnInit
 
 .fn func_80164100, global
 /* 80164100 0012D6C0  38 63 FF 94 */	addi r3, r3, -108

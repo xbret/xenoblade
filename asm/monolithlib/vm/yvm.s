@@ -1,6 +1,6 @@
 .include "macros.inc"
 
-#yvm2.c in xcde?
+#yvm2.c in xcde
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
@@ -161,7 +161,7 @@
 /* 8049FECC 0046948C  7C 00 16 70 */	srawi r0, r0, 2
 /* 8049FED0 00469490  7C 00 01 94 */	addze r0, r0
 /* 8049FED4 00469494  54 04 10 3A */	slwi r4, r0, 2
-/* 8049FED8 00469498  48 00 17 59 */	bl func_804A1630
+/* 8049FED8 00469498  48 00 17 59 */	bl encodeScramble
 /* 8049FEDC 0046949C  80 DC 00 18 */	lwz r6, 0x18(r28)
 /* 8049FEE0 004694A0  80 1C 00 1C */	lwz r0, 0x1c(r28)
 /* 8049FEE4 004694A4  80 86 00 04 */	lwz r4, 4(r6)
@@ -174,7 +174,7 @@
 /* 8049FF00 004694C0  7C 00 16 70 */	srawi r0, r0, 2
 /* 8049FF04 004694C4  7C 00 01 94 */	addze r0, r0
 /* 8049FF08 004694C8  54 04 10 3A */	slwi r4, r0, 2
-/* 8049FF0C 004694CC  48 00 17 25 */	bl func_804A1630
+/* 8049FF0C 004694CC  48 00 17 25 */	bl encodeScramble
 .L_8049FF10:
 /* 8049FF10 004694D0  80 7C 00 20 */	lwz r3, 0x20(r28)
 /* 8049FF14 004694D4  3B A0 00 00 */	li r29, 0
@@ -353,7 +353,7 @@
 /* 804A0164 00469724  7C 04 00 2E */	lwzx r0, r4, r0
 .L_804A0168:
 /* 804A0168 00469728  7C 84 02 14 */	add r4, r4, r0
-/* 804A016C 0046972C  48 00 18 6D */	bl func_804A19D8
+/* 804A016C 0046972C  48 00 18 6D */	bl vmFuncFarSearch
 /* 804A0170 00469730  3C 03 00 01 */	addis r0, r3, 1
 /* 804A0174 00469734  28 00 FF FF */	cmplwi r0, 0xffff
 /* 804A0178 00469738  40 82 00 0C */	bne .L_804A0184
@@ -817,7 +817,7 @@
 .fn func_804A076C, global
 /* 804A076C 00469D2C  80 83 00 08 */	lwz r4, 8(r3)
 /* 804A0770 00469D30  80 84 00 04 */	lwz r4, 4(r4)
-/* 804A0774 00469D34  48 00 13 58 */	b func_804A1ACC
+/* 804A0774 00469D34  48 00 13 58 */	b vmThreadCreate
 .endfn func_804A076C
 
 .fn func_804A0778, global
@@ -1114,7 +1114,7 @@
 /* 804A0B8C 0046A14C  4E 80 00 20 */	blr 
 .endfn func_804A0778
 
-.fn func_804A0B90, global
+.fn vmPluginRegist, global
 /* 804A0B90 0046A150  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804A0B94 0046A154  7C 08 02 A6 */	mflr r0
 /* 804A0B98 0046A158  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1180,9 +1180,9 @@
 /* 804A0C6C 0046A22C  7C 08 03 A6 */	mtlr r0
 /* 804A0C70 0046A230  38 21 00 20 */	addi r1, r1, 0x20
 /* 804A0C74 0046A234  4E 80 00 20 */	blr 
-.endfn func_804A0B90
+.endfn vmPluginRegist
 
-.fn func_804A0C78, global
+.fn vmArgPtrGet, global
 /* 804A0C78 0046A238  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804A0C7C 0046A23C  7C 08 02 A6 */	mflr r0
 /* 804A0C80 0046A240  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1215,9 +1215,9 @@
 /* 804A0CE4 0046A2A4  7C 08 03 A6 */	mtlr r0
 /* 804A0CE8 0046A2A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 804A0CEC 0046A2AC  4E 80 00 20 */	blr 
-.endfn func_804A0C78
+.endfn vmArgPtrGet
 
-.fn func_804A0CF0, global
+.fn vmArgOmitChk, global
 /* 804A0CF0 0046A2B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804A0CF4 0046A2B4  7C 08 02 A6 */	mflr r0
 /* 804A0CF8 0046A2B8  2C 04 00 00 */	cmpwi r4, 0
@@ -1257,9 +1257,9 @@
 /* 804A0D74 0046A334  7C 08 03 A6 */	mtlr r0
 /* 804A0D78 0046A338  38 21 00 20 */	addi r1, r1, 0x20
 /* 804A0D7C 0046A33C  4E 80 00 20 */	blr 
-.endfn func_804A0CF0
+.endfn vmArgOmitChk
 
-.fn func_804A0D80, global
+.fn vmArgBoolGet, global
 /* 804A0D80 0046A340  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804A0D84 0046A344  7C 08 02 A6 */	mflr r0
 /* 804A0D88 0046A348  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1280,9 +1280,9 @@
 /* 804A0DC0 0046A380  7C 08 03 A6 */	mtlr r0
 /* 804A0DC4 0046A384  38 21 00 10 */	addi r1, r1, 0x10
 /* 804A0DC8 0046A388  4E 80 00 20 */	blr 
-.endfn func_804A0D80
+.endfn vmArgBoolGet
 
-.fn func_804A0DCC, global
+.fn vmArgIntGet, global
 /* 804A0DCC 0046A38C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804A0DD0 0046A390  7C 08 02 A6 */	mflr r0
 /* 804A0DD4 0046A394  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1306,9 +1306,9 @@
 /* 804A0E10 0046A3D0  7C 08 03 A6 */	mtlr r0
 /* 804A0E14 0046A3D4  38 21 00 10 */	addi r1, r1, 0x10
 /* 804A0E18 0046A3D8  4E 80 00 20 */	blr 
-.endfn func_804A0DCC
+.endfn vmArgIntGet
 
-.fn func_804A0E1C, global
+.fn vmArgFixedGet, global
 /* 804A0E1C 0046A3DC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804A0E20 0046A3E0  7C 08 02 A6 */	mflr r0
 /* 804A0E24 0046A3E4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1332,9 +1332,9 @@
 /* 804A0E60 0046A420  7C 08 03 A6 */	mtlr r0
 /* 804A0E64 0046A424  38 21 00 10 */	addi r1, r1, 0x10
 /* 804A0E68 0046A428  4E 80 00 20 */	blr 
-.endfn func_804A0E1C
+.endfn vmArgFixedGet
 
-.fn func_804A0E6C, global
+.fn vmArgStringGet, global
 /* 804A0E6C 0046A42C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804A0E70 0046A430  7C 08 02 A6 */	mflr r0
 /* 804A0E74 0046A434  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1351,9 +1351,9 @@
 /* 804A0E9C 0046A45C  7C 08 03 A6 */	mtlr r0
 /* 804A0EA0 0046A460  38 21 00 10 */	addi r1, r1, 0x10
 /* 804A0EA4 0046A464  4E 80 00 20 */	blr 
-.endfn func_804A0E6C
+.endfn vmArgStringGet
 
-.fn func_804A0EA8, global
+.fn vmArgFunctionGet, global
 /* 804A0EA8 0046A468  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804A0EAC 0046A46C  7C 08 02 A6 */	mflr r0
 /* 804A0EB0 0046A470  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1373,9 +1373,9 @@
 /* 804A0EE4 0046A4A4  7C 08 03 A6 */	mtlr r0
 /* 804A0EE8 0046A4A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 804A0EEC 0046A4AC  4E 80 00 20 */	blr 
-.endfn func_804A0EA8
+.endfn vmArgFunctionGet
 
-.fn func_804A0EF0, global
+.fn vmArgArrayGet, global
 /* 804A0EF0 0046A4B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804A0EF4 0046A4B4  7C 08 02 A6 */	mflr r0
 /* 804A0EF8 0046A4B8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1392,7 +1392,7 @@
 /* 804A0F20 0046A4E0  7C 08 03 A6 */	mtlr r0
 /* 804A0F24 0046A4E4  38 21 00 10 */	addi r1, r1, 0x10
 /* 804A0F28 0046A4E8  4E 80 00 20 */	blr 
-.endfn func_804A0EF0
+.endfn vmArgArrayGet
 
 .fn func_804A0F2C, global
 /* 804A0F2C 0046A4EC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1411,7 +1411,7 @@
 /* 804A0F5C 0046A51C  4E 80 00 20 */	blr 
 .endfn func_804A0F2C
 
-.fn func_804A0F60, global
+.fn vmArgOCGet, global
 /* 804A0F60 0046A520  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804A0F64 0046A524  7C 08 02 A6 */	mflr r0
 /* 804A0F68 0046A528  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1428,9 +1428,9 @@
 /* 804A0F90 0046A550  7C 08 03 A6 */	mtlr r0
 /* 804A0F94 0046A554  38 21 00 10 */	addi r1, r1, 0x10
 /* 804A0F98 0046A558  4E 80 00 20 */	blr 
-.endfn func_804A0F60
+.endfn vmArgOCGet
 
-.fn func_804A0F9C, global
+.fn vmRetValSet, global
 /* 804A0F9C 0046A55C  80 A3 00 04 */	lwz r5, 4(r3)
 /* 804A0FA0 0046A560  80 C3 00 3C */	lwz r6, 0x3c(r3)
 /* 804A0FA4 0046A564  38 05 00 01 */	addi r0, r5, 1
@@ -1446,30 +1446,30 @@
 /* 804A0FCC 0046A58C  A0 04 00 06 */	lhz r0, 6(r4)
 /* 804A0FD0 0046A590  B0 03 00 06 */	sth r0, 6(r3)
 /* 804A0FD4 0046A594  4E 80 00 20 */	blr 
-.endfn func_804A0F9C
+.endfn vmRetValSet
 
-.fn func_804A0FD8, global
+.fn vmWaitModeSet, global
 /* 804A0FD8 0046A598  38 00 00 01 */	li r0, 1
 /* 804A0FDC 0046A59C  90 03 00 4C */	stw r0, 0x4c(r3)
 /* 804A0FE0 0046A5A0  4E 80 00 20 */	blr 
-.endfn func_804A0FD8
+.endfn vmWaitModeSet
 
-.fn func_804A0FE4, global
+.fn vmWkIdxGet, global
 /* 804A0FE4 0046A5A4  80 63 00 50 */	lwz r3, 0x50(r3)
 /* 804A0FE8 0046A5A8  4E 80 00 20 */	blr 
-.endfn func_804A0FE4
+.endfn vmWkIdxGet
 
-.fn func_804A0FEC, global
+.fn vmWkIdxSet, global
 /* 804A0FEC 0046A5AC  90 83 00 50 */	stw r4, 0x50(r3)
 /* 804A0FF0 0046A5B0  4E 80 00 20 */	blr 
-.endfn func_804A0FEC
+.endfn vmWkIdxSet
 
-.fn func_804A0FF4, global
+.fn vmWkGet, global
 /* 804A0FF4 0046A5B4  54 80 10 3A */	slwi r0, r4, 2
 /* 804A0FF8 0046A5B8  7C 63 02 14 */	add r3, r3, r0
 /* 804A0FFC 0046A5BC  38 63 00 54 */	addi r3, r3, 0x54
 /* 804A1000 0046A5C0  4E 80 00 20 */	blr 
-.endfn func_804A0FF4
+.endfn vmWkGet
 
 .fn func_804A1004, global
 /* 804A1004 0046A5C4  80 03 00 00 */	lwz r0, 0(r3)
@@ -1479,7 +1479,7 @@
 /* 804A1014 0046A5D4  48 00 06 90 */	b func_804A16A4
 .endfn func_804A1004
 
-.fn func_804A1018, global
+.fn vmBuiltinOCRegist, global
 /* 804A1018 0046A5D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804A101C 0046A5DC  7C 08 02 A6 */	mflr r0
 /* 804A1020 0046A5E0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1508,9 +1508,9 @@
 /* 804A1070 0046A630  7C 08 03 A6 */	mtlr r0
 /* 804A1074 0046A634  38 21 00 10 */	addi r1, r1, 0x10
 /* 804A1078 0046A638  4E 80 00 20 */	blr 
-.endfn func_804A1018
+.endfn vmBuiltinOCRegist
 
-.fn func_804A107C, global
+.fn vmOCRegist, global
 /* 804A107C 0046A63C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804A1080 0046A640  7C 08 02 A6 */	mflr r0
 /* 804A1084 0046A644  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1602,7 +1602,7 @@
 /* 804A11A8 0046A768  7C 08 03 A6 */	mtlr r0
 /* 804A11AC 0046A76C  38 21 00 20 */	addi r1, r1, 0x20
 /* 804A11B0 0046A770  4E 80 00 20 */	blr 
-.endfn func_804A107C
+.endfn vmOCRegist
 
 .fn func_804A11B4, global
 /* 804A11B4 0046A774  80 03 00 04 */	lwz r0, 4(r3)
@@ -1623,14 +1623,14 @@
 /* 804A11F0 0046A7B0  48 00 04 B4 */	b func_804A16A4
 .endfn func_804A11B4
 
-.fn func_804A11F4, global
+.fn vmOCPropertyGet, global
 /* 804A11F4 0046A7B4  80 83 00 04 */	lwz r4, 4(r3)
 /* 804A11F8 0046A7B8  80 63 00 3C */	lwz r3, 0x3c(r3)
 /* 804A11FC 0046A7BC  38 04 FF FF */	addi r0, r4, -1
 /* 804A1200 0046A7C0  54 00 18 38 */	slwi r0, r0, 3
 /* 804A1204 0046A7C4  7C 63 02 14 */	add r3, r3, r0
 /* 804A1208 0046A7C8  4E 80 00 20 */	blr 
-.endfn func_804A11F4
+.endfn vmOCPropertyGet
 
 .fn func_804A120C, global
 /* 804A120C 0046A7CC  3C 80 80 66 */	lis r4, vmMemory@ha
@@ -1713,7 +1713,7 @@
 /* 804A1310 0046A8D0  7C BF 2B 78 */	mr r31, r5
 /* 804A1314 0046A8D4  54 84 04 3E */	clrlwi r4, r4, 0x10
 /* 804A1318 0046A8D8  7C 63 00 2E */	lwzx r3, r3, r0
-/* 804A131C 0046A8DC  48 00 07 B1 */	bl func_804A1ACC
+/* 804A131C 0046A8DC  48 00 07 B1 */	bl vmThreadCreate
 /* 804A1320 0046A8E0  2C 03 00 00 */	cmpwi r3, 0
 /* 804A1324 0046A8E4  41 82 00 20 */	beq .L_804A1344
 /* 804A1328 0046A8E8  80 03 00 48 */	lwz r0, 0x48(r3)
@@ -1733,7 +1733,7 @@
 /* 804A1358 0046A918  4E 80 00 20 */	blr 
 .endfn func_804A12F0
 
-.fn func_804A135C, global
+.fn vmThreadStart, global
 /* 804A135C 0046A91C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804A1360 0046A920  7C 08 02 A6 */	mflr r0
 /* 804A1364 0046A924  3C C0 80 66 */	lis r6, vmMemory@ha
@@ -1802,9 +1802,9 @@
 /* 804A1454 0046AA14  7C 08 03 A6 */	mtlr r0
 /* 804A1458 0046AA18  38 21 00 20 */	addi r1, r1, 0x20
 /* 804A145C 0046AA1C  4E 80 00 20 */	blr 
-.endfn func_804A135C
+.endfn vmThreadStart
 
-.fn func_804A1460, global
+.fn vmThreadEnd, global
 /* 804A1460 0046AA20  3C A0 80 66 */	lis r5, vmMemory@ha
 /* 804A1464 0046AA24  38 00 00 10 */	li r0, 0x10
 /* 804A1468 0046AA28  38 A5 AF 38 */	addi r5, r5, vmMemory@l
@@ -1838,9 +1838,9 @@
 .L_804A14CC:
 /* 804A14CC 0046AA8C  38 60 00 00 */	li r3, 0
 /* 804A14D0 0046AA90  4E 80 00 20 */	blr 
-.endfn func_804A1460
+.endfn vmThreadEnd
 
-.fn func_804A14D4, global
+.fn vmThreadIsAlive, global
 /* 804A14D4 0046AA94  3C A0 80 66 */	lis r5, vmMemory@ha
 /* 804A14D8 0046AA98  38 00 00 10 */	li r0, 0x10
 /* 804A14DC 0046AA9C  38 A5 AF 38 */	addi r5, r5, vmMemory@l
@@ -1872,9 +1872,9 @@
 .L_804A1538:
 /* 804A1538 0046AAF8  38 60 00 00 */	li r3, 0
 /* 804A153C 0046AAFC  4E 80 00 20 */	blr 
-.endfn func_804A14D4
+.endfn vmThreadIsAlive
 
-.fn func_804A1540, global
+.fn vmThreadSleep, global
 /* 804A1540 0046AB00  3C A0 80 66 */	lis r5, vmMemory@ha
 /* 804A1544 0046AB04  38 00 00 10 */	li r0, 0x10
 /* 804A1548 0046AB08  38 A5 AF 38 */	addi r5, r5, vmMemory@l
@@ -1909,9 +1909,9 @@
 .L_804A15B0:
 /* 804A15B0 0046AB70  38 60 00 00 */	li r3, 0
 /* 804A15B4 0046AB74  4E 80 00 20 */	blr 
-.endfn func_804A1540
+.endfn vmThreadSleep
 
-.fn func_804A15B8, global
+.fn vmThreadWakeup, global
 /* 804A15B8 0046AB78  3C A0 80 66 */	lis r5, vmMemory@ha
 /* 804A15BC 0046AB7C  38 00 00 10 */	li r0, 0x10
 /* 804A15C0 0046AB80  38 A5 AF 38 */	addi r5, r5, vmMemory@l
@@ -1946,10 +1946,10 @@
 .L_804A1628:
 /* 804A1628 0046ABE8  38 60 00 00 */	li r3, 0
 /* 804A162C 0046ABEC  4E 80 00 20 */	blr 
-.endfn func_804A15B8
+.endfn vmThreadWakeup
 
 #Descrambles a scrambled section by rotating each set of 4 bytes by 2 to the right as a 32 bit value.
-.fn func_804A1630, global
+.fn encodeScramble, global
 /* 804A1630 0046ABF0  38 04 00 03 */	addi r0, r4, 3
 /* 804A1634 0046ABF4  54 00 F0 BE */	srwi r0, r0, 2
 /* 804A1638 0046ABF8  7C 09 03 A6 */	mtctr r0
@@ -1980,7 +1980,7 @@
 /* 804A1698 0046AC58  38 63 00 04 */	addi r3, r3, 4
 /* 804A169C 0046AC5C  42 00 FF A8 */	bdnz .L_804A1644
 /* 804A16A0 0046AC60  4E 80 00 20 */	blr 
-.endfn func_804A1630
+.endfn encodeScramble
 
 .fn func_804A16A4, global
 /* 804A16A4 0046AC64  80 C3 00 10 */	lwz r6, 0x10(r3)
@@ -2125,7 +2125,7 @@
 /* 804A189C 0046AE5C  4E 80 00 20 */	blr 
 .endfn func_804A1820
 
-.fn func_804A18A0, global
+.fn vmPropertySearch, global
 /* 804A18A0 0046AE60  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804A18A4 0046AE64  7C 08 02 A6 */	mflr r0
 /* 804A18A8 0046AE68  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2170,9 +2170,9 @@
 /* 804A1930 0046AEF0  7C 08 03 A6 */	mtlr r0
 /* 804A1934 0046AEF4  38 21 00 20 */	addi r1, r1, 0x20
 /* 804A1938 0046AEF8  4E 80 00 20 */	blr 
-.endfn func_804A18A0
+.endfn vmPropertySearch
 
-.fn func_804A193C, global
+.fn vmSelectorSearch, global
 /* 804A193C 0046AEFC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804A1940 0046AF00  7C 08 02 A6 */	mflr r0
 /* 804A1944 0046AF04  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2217,9 +2217,9 @@
 /* 804A19CC 0046AF8C  7C 08 03 A6 */	mtlr r0
 /* 804A19D0 0046AF90  38 21 00 20 */	addi r1, r1, 0x20
 /* 804A19D4 0046AF94  4E 80 00 20 */	blr 
-.endfn func_804A193C
+.endfn vmSelectorSearch
 
-.fn func_804A19D8, global
+.fn vmFuncFarSearch, global
 /* 804A19D8 0046AF98  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804A19DC 0046AF9C  7C 08 02 A6 */	mflr r0
 /* 804A19E0 0046AFA0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2289,9 +2289,9 @@
 /* 804A1AC0 0046B080  7C 08 03 A6 */	mtlr r0
 /* 804A1AC4 0046B084  38 21 00 20 */	addi r1, r1, 0x20
 /* 804A1AC8 0046B088  4E 80 00 20 */	blr 
-.endfn func_804A19D8
+.endfn vmFuncFarSearch
 
-.fn func_804A1ACC, global
+.fn vmThreadCreate, global
 /* 804A1ACC 0046B08C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804A1AD0 0046B090  7C 08 02 A6 */	mflr r0
 /* 804A1AD4 0046B094  3C A0 80 66 */	lis r5, vmMemory@ha
@@ -2436,7 +2436,7 @@
 /* 804A1CC4 0046B284  7C 08 03 A6 */	mtlr r0
 /* 804A1CC8 0046B288  38 21 00 10 */	addi r1, r1, 0x10
 /* 804A1CCC 0046B28C  4E 80 00 20 */	blr 
-.endfn func_804A1ACC
+.endfn vmThreadCreate
 
 .fn func_804A1CD0, global
 /* 804A1CD0 0046B290  3C A0 80 57 */	lis r5, sbScriptOpcodes@ha
@@ -9270,63 +9270,63 @@
 
 .obj "@eti_80037298", local
 .hidden "@eti_80037298"
-	.4byte func_804A0B90
+	.4byte vmPluginRegist
 	.4byte 0x000000E8
 	.4byte "@etb_8001F860"
 .endobj "@eti_80037298"
 
 .obj "@eti_800372A4", local
 .hidden "@eti_800372A4"
-	.4byte func_804A0C78
+	.4byte vmArgPtrGet
 	.4byte 0x00000078
 	.4byte "@etb_8001F868"
 .endobj "@eti_800372A4"
 
 .obj "@eti_800372B0", local
 .hidden "@eti_800372B0"
-	.4byte func_804A0CF0
+	.4byte vmArgOmitChk
 	.4byte 0x00000090
 	.4byte "@etb_8001F870"
 .endobj "@eti_800372B0"
 
 .obj "@eti_800372BC", local
 .hidden "@eti_800372BC"
-	.4byte func_804A0D80
+	.4byte vmArgBoolGet
 	.4byte 0x0000004C
 	.4byte "@etb_8001F878"
 .endobj "@eti_800372BC"
 
 .obj "@eti_800372C8", local
 .hidden "@eti_800372C8"
-	.4byte func_804A0DCC
+	.4byte vmArgIntGet
 	.4byte 0x00000050
 	.4byte "@etb_8001F880"
 .endobj "@eti_800372C8"
 
 .obj "@eti_800372D4", local
 .hidden "@eti_800372D4"
-	.4byte func_804A0E1C
+	.4byte vmArgFixedGet
 	.4byte 0x00000050
 	.4byte "@etb_8001F888"
 .endobj "@eti_800372D4"
 
 .obj "@eti_800372E0", local
 .hidden "@eti_800372E0"
-	.4byte func_804A0E6C
+	.4byte vmArgStringGet
 	.4byte 0x0000003C
 	.4byte "@etb_8001F890"
 .endobj "@eti_800372E0"
 
 .obj "@eti_800372EC", local
 .hidden "@eti_800372EC"
-	.4byte func_804A0EA8
+	.4byte vmArgFunctionGet
 	.4byte 0x00000048
 	.4byte "@etb_8001F898"
 .endobj "@eti_800372EC"
 
 .obj "@eti_800372F8", local
 .hidden "@eti_800372F8"
-	.4byte func_804A0EF0
+	.4byte vmArgArrayGet
 	.4byte 0x0000003C
 	.4byte "@etb_8001F8A0"
 .endobj "@eti_800372F8"
@@ -9340,21 +9340,21 @@
 
 .obj "@eti_80037310", local
 .hidden "@eti_80037310"
-	.4byte func_804A0F60
+	.4byte vmArgOCGet
 	.4byte 0x0000003C
 	.4byte "@etb_8001F8B0"
 .endobj "@eti_80037310"
 
 .obj "@eti_8003731C", local
 .hidden "@eti_8003731C"
-	.4byte func_804A1018
+	.4byte vmBuiltinOCRegist
 	.4byte 0x00000064
 	.4byte "@etb_8001F8B8"
 .endobj "@eti_8003731C"
 
 .obj "@eti_80037328", local
 .hidden "@eti_80037328"
-	.4byte func_804A107C
+	.4byte vmOCRegist
 	.4byte 0x00000138
 	.4byte "@etb_8001F8C0"
 .endobj "@eti_80037328"
@@ -9368,7 +9368,7 @@
 
 .obj "@eti_80037340", local
 .hidden "@eti_80037340"
-	.4byte func_804A135C
+	.4byte vmThreadStart
 	.4byte 0x00000104
 	.4byte "@etb_8001F8D0"
 .endobj "@eti_80037340"
@@ -9382,28 +9382,28 @@
 
 .obj "@eti_80037358", local
 .hidden "@eti_80037358"
-	.4byte func_804A18A0
+	.4byte vmPropertySearch
 	.4byte 0x0000009C
 	.4byte "@etb_8001F8E0"
 .endobj "@eti_80037358"
 
 .obj "@eti_80037364", local
 .hidden "@eti_80037364"
-	.4byte func_804A193C
+	.4byte vmSelectorSearch
 	.4byte 0x0000009C
 	.4byte "@etb_8001F8E8"
 .endobj "@eti_80037364"
 
 .obj "@eti_80037370", local
 .hidden "@eti_80037370"
-	.4byte func_804A19D8
+	.4byte vmFuncFarSearch
 	.4byte 0x000000F4
 	.4byte "@etb_8001F8F0"
 .endobj "@eti_80037370"
 
 .obj "@eti_8003737C", local
 .hidden "@eti_8003737C"
-	.4byte func_804A1ACC
+	.4byte vmThreadCreate
 	.4byte 0x00000204
 	.4byte "@etb_8001F8F8"
 .endobj "@eti_8003737C"
