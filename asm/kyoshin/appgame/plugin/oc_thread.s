@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.fn thread, global
+.fn thread, local
 /* 8003A310 000038D0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8003A314 000038D4  7C 08 02 A6 */	mflr r0
 /* 8003A318 000038D8  38 80 00 01 */	li r4, 1
@@ -72,7 +72,7 @@
 .endfn end
 
 
-.fn isAlive, global
+.fn isAlive, local
 /* 8003A3F0 000039B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8003A3F4 000039B4  7C 08 02 A6 */	mflr r0
 /* 8003A3F8 000039B8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -96,7 +96,7 @@
 .endfn isAlive
 
 
-.fn join, global
+.fn join, local
 /* 8003A440 00003A00  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8003A444 00003A04  7C 08 02 A6 */	mflr r0
 /* 8003A448 00003A08  90 01 00 14 */	stw r0, 0x14(r1)
@@ -118,7 +118,7 @@
 .endfn join
 
 
-.fn sleep, global
+.fn sleep, local
 /* 8003A484 00003A44  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8003A488 00003A48  7C 08 02 A6 */	mflr r0
 /* 8003A48C 00003A4C  7C 83 23 78 */	mr r3, r4
@@ -132,7 +132,7 @@
 .endfn sleep
 
 
-.fn wakeup, global
+.fn wakeup, local
 /* 8003A4AC 00003A6C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8003A4B0 00003A70  7C 08 02 A6 */	mflr r0
 /* 8003A4B4 00003A74  7C 83 23 78 */	mr r3, r4
@@ -163,7 +163,7 @@
 /* 8003A4F4 00003AB4  4E 80 00 20 */	blr
 .endfn func_8003A4EC
 
-.fn sinit_8003A4F8, local
+.fn sinit_8003A4F8, global
 /* 8003A4F8 00003AB8  3C C0 80 57 */	lis r6, lbl_80573CC8@ha
 /* 8003A4FC 00003ABC  3C 80 80 57 */	lis r4, lbl_80573D38@ha
 /* 8003A500 00003AC0  38 A6 3C C8 */	addi r5, r6, lbl_80573CC8@l

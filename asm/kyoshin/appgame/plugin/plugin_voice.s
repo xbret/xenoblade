@@ -61,7 +61,7 @@
 /* 802B8B08 002820C8  4E 80 00 20 */	blr 
 .endfn func_802B8A3C
 
-.fn func_802B8B0C, global
+.fn func_802B8B0C, local
 /* 802B8B0C 002820CC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802B8B10 002820D0  7C 08 02 A6 */	mflr r0
 /* 802B8B14 002820D4  3C A0 80 54 */	lis r5, lbl_8053EF18@ha
@@ -128,7 +128,7 @@
 /* 802B8BFC 002821BC  4E 80 00 20 */	blr 
 .endfn func_802B8B0C
 
-.fn func_802B8C00, global
+.fn func_802B8C00, local
 /* 802B8C00 002821C0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802B8C04 002821C4  7C 08 02 A6 */	mflr r0
 /* 802B8C08 002821C8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -200,7 +200,7 @@
 /* 802B8CF8 002822B8  4E 80 00 20 */	blr 
 .endfn func_802B8C00
 
-.fn func_802B8CFC, global
+.fn func_802B8CFC, local
 /* 802B8CFC 002822BC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802B8D00 002822C0  7C 08 02 A6 */	mflr r0
 /* 802B8D04 002822C4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -222,7 +222,7 @@
 /* 802B8D40 00282300  4E 80 00 20 */	blr 
 .endfn func_802B8CFC
 
-.fn func_802B8D44, global
+.fn func_802B8D44, local
 /* 802B8D44 00282304  38 60 00 78 */	li r3, 0x78
 /* 802B8D48 00282308  4E 80 00 20 */	blr 
 .endfn func_802B8D44
@@ -396,7 +396,7 @@
 /* 802B8F6C 0028252C  4E 80 00 20 */	blr 
 .endfn func_802B8D4C
 
-.fn play, global
+.fn play, local
 /* 802B8F70 00282530  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802B8F74 00282534  7C 08 02 A6 */	mflr r0
 /* 802B8F78 00282538  90 01 00 24 */	stw r0, 0x24(r1)

@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn winTalk, global
+.fn winTalk, local
 /* 80045884 0000EE44  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80045888 0000EE48  7C 08 02 A6 */	mflr r0
 /* 8004588C 0000EE4C  38 80 00 01 */	li r4, 1
@@ -34,7 +34,7 @@
 /* 800458F4 0000EEB4  4E 80 00 20 */	blr 
 .endfn winTalk
 
-.fn pcTalk, global
+.fn pcTalk, local
 /* 800458F8 0000EEB8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800458FC 0000EEBC  7C 08 02 A6 */	mflr r0
 /* 80045900 0000EEC0  38 80 00 01 */	li r4, 1
@@ -66,7 +66,7 @@
 /* 80045968 0000EF28  4E 80 00 20 */	blr 
 .endfn pcTalk
 
-.fn winTalkWait, global
+.fn winTalkWait, local
 /* 8004596C 0000EF2C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80045970 0000EF30  7C 08 02 A6 */	mflr r0
 /* 80045974 0000EF34  90 01 00 14 */	stw r0, 0x14(r1)
@@ -117,7 +117,7 @@
 /* 80045A10 0000EFD0  4E 80 00 20 */	blr 
 .endfn func_800459FC
 
-.fn winTalkNoName, global
+.fn winTalkNoName, local
 /* 80045A14 0000EFD4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80045A18 0000EFD8  7C 08 02 A6 */	mflr r0
 /* 80045A1C 0000EFDC  38 80 00 01 */	li r4, 1
@@ -136,7 +136,7 @@
 /* 80045A50 0000F010  4E 80 00 20 */	blr 
 .endfn winTalkNoName
 
-.fn fadeIn_1, global
+.fn fadeIn_1, local
 /* 80045A54 0000F014  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80045A58 0000F018  7C 08 02 A6 */	mflr r0
 /* 80045A5C 0000F01C  38 80 00 01 */	li r4, 1
@@ -185,7 +185,7 @@
 /* 80045B00 0000F0C0  4E 80 00 20 */	blr 
 .endfn fadeIn_1
 
-.fn fadeOut_1, global
+.fn fadeOut_1, local
 /* 80045B04 0000F0C4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80045B08 0000F0C8  7C 08 02 A6 */	mflr r0
 /* 80045B0C 0000F0CC  38 80 00 01 */	li r4, 1
@@ -234,7 +234,7 @@
 /* 80045BB0 0000F170  4E 80 00 20 */	blr 
 .endfn fadeOut_1
 
-.fn fadeWait_1, global
+.fn fadeWait_1, local
 /* 80045BB4 0000F174  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80045BB8 0000F178  7C 08 02 A6 */	mflr r0
 /* 80045BBC 0000F17C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -257,7 +257,7 @@
 /* 80045BFC 0000F1BC  4E 80 00 20 */	blr 
 .endfn fadeWait_1
 
-.fn createCol6Sys, global
+.fn createCol6Sys, local
 /* 80045C00 0000F1C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80045C04 0000F1C4  7C 08 02 A6 */	mflr r0
 /* 80045C08 0000F1C8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -269,7 +269,7 @@
 /* 80045C20 0000F1E0  4E 80 00 20 */	blr 
 .endfn createCol6Sys
 
-.fn createCol6Hint, global
+.fn createCol6Hint, local
 /* 80045C24 0000F1E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80045C28 0000F1E8  7C 08 02 A6 */	mflr r0
 /* 80045C2C 0000F1EC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -281,7 +281,7 @@
 /* 80045C44 0000F204  4E 80 00 20 */	blr 
 .endfn createCol6Hint
 
-.fn createCol6Invite, global
+.fn createCol6Invite, local
 /* 80045C48 0000F208  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80045C4C 0000F20C  7C 08 02 A6 */	mflr r0
 /* 80045C50 0000F210  38 80 00 01 */	li r4, 1
@@ -323,7 +323,7 @@
 /* 80045CE0 0000F2A0  4E 80 00 20 */	blr 
 .endfn createCol6Invite
 
-.fn createCol6Init, global
+.fn createCol6Init, local
 /* 80045CE4 0000F2A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80045CE8 0000F2A8  7C 08 02 A6 */	mflr r0
 /* 80045CEC 0000F2AC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -335,7 +335,7 @@
 /* 80045D04 0000F2C4  4E 80 00 20 */	blr 
 .endfn createCol6Init
 
-.fn checkCol6Bat, global
+.fn checkCol6Bat, local
 /* 80045D08 0000F2C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80045D0C 0000F2CC  7C 08 02 A6 */	mflr r0
 /* 80045D10 0000F2D0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -347,7 +347,7 @@
 /* 80045D28 0000F2E8  4E 80 00 20 */	blr 
 .endfn checkCol6Bat
 
-.fn simpleEventStart, global
+.fn simpleEventStart, local
 /* 80045D2C 0000F2EC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80045D30 0000F2F0  7C 08 02 A6 */	mflr r0
 /* 80045D34 0000F2F4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -359,7 +359,7 @@
 /* 80045D4C 0000F30C  4E 80 00 20 */	blr 
 .endfn simpleEventStart
 
-.fn simpleEventEnd, global
+.fn simpleEventEnd, local
 /* 80045D50 0000F310  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80045D54 0000F314  7C 08 02 A6 */	mflr r0
 /* 80045D58 0000F318  90 01 00 14 */	stw r0, 0x14(r1)
@@ -371,7 +371,7 @@
 /* 80045D70 0000F330  4E 80 00 20 */	blr 
 .endfn simpleEventEnd
 
-.fn setTrust, global
+.fn setTrust, local
 /* 80045D74 0000F334  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80045D78 0000F338  7C 08 02 A6 */	mflr r0
 /* 80045D7C 0000F33C  38 80 00 01 */	li r4, 1
@@ -552,7 +552,7 @@
 /* 80045FF8 0000F5B8  4E 80 00 20 */	blr 
 .endfn setTrust
 
-.fn setItemMulti, global
+.fn setItemMulti, local
 /* 80045FFC 0000F5BC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80046000 0000F5C0  7C 08 02 A6 */	mflr r0
 /* 80046004 0000F5C4  38 80 00 01 */	li r4, 1
@@ -667,7 +667,7 @@
 /* 80046190 0000F750  4E 80 00 20 */	blr 
 .endfn setItemMulti
 
-.fn setKizunaTalk, global
+.fn setKizunaTalk, local
 /* 80046194 0000F754  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80046198 0000F758  7C 08 02 A6 */	mflr r0
 /* 8004619C 0000F75C  38 80 00 01 */	li r4, 1
@@ -684,7 +684,7 @@
 /* 800461C8 0000F788  4E 80 00 20 */	blr 
 .endfn setKizunaTalk
 
-.fn winSys, global
+.fn winSys, local
 /* 800461CC 0000F78C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800461D0 0000F790  7C 08 02 A6 */	mflr r0
 /* 800461D4 0000F794  38 80 00 01 */	li r4, 1
@@ -703,7 +703,7 @@
 /* 80046208 0000F7C8  4E 80 00 20 */	blr 
 .endfn winSys
 
-.fn winSysSelect, global
+.fn winSysSelect, local
 /* 8004620C 0000F7CC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80046210 0000F7D0  7C 08 02 A6 */	mflr r0
 /* 80046214 0000F7D4  38 80 00 01 */	li r4, 1
@@ -744,7 +744,7 @@
 /* 800462A0 0000F860  4E 80 00 20 */	blr 
 .endfn winSysSelect
 
-.fn getSelectNum, global
+.fn getSelectNum, local
 /* 800462A4 0000F864  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800462A8 0000F868  7C 08 02 A6 */	mflr r0
 /* 800462AC 0000F86C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -765,7 +765,7 @@
 /* 800462E8 0000F8A8  4E 80 00 20 */	blr 
 .endfn getSelectNum
 
-.fn mesGetArts, global
+.fn mesGetArts, local
 /* 800462EC 0000F8AC  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 800462F0 0000F8B0  7C 08 02 A6 */	mflr r0
 /* 800462F4 0000F8B4  38 80 00 01 */	li r4, 1
@@ -815,7 +815,7 @@
 /* 800463A4 0000F964  38 61 00 08 */	addi r3, r1, 8
 /* 800463A8 0000F968  38 9F 00 18 */	addi r4, r31, 0x18
 /* 800463AC 0000F96C  4C C6 31 82 */	crclr 6
-/* 800463B0 0000F970  48 00 04 69 */	bl CTaskGameEff_vsnprintf
+/* 800463B0 0000F970  48 00 04 69 */	bl monolith_vsnprintf
 /* 800463B4 0000F974  7F 64 DB 78 */	mr r4, r27
 /* 800463B8 0000F978  38 61 00 08 */	addi r3, r1, 8
 /* 800463BC 0000F97C  38 A0 00 00 */	li r5, 0
@@ -829,7 +829,7 @@
 /* 800463DC 0000F99C  4E 80 00 20 */	blr 
 .endfn mesGetArts
 
-.fn mesAddPT, global
+.fn mesAddPT, local
 /* 800463E0 0000F9A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800463E4 0000F9A4  7C 08 02 A6 */	mflr r0
 /* 800463E8 0000F9A8  38 80 00 01 */	li r4, 1
@@ -862,7 +862,7 @@
 /* 80046454 0000FA14  4E 80 00 20 */	blr 
 .endfn mesAddPT
 
-.fn mesSubPT, global
+.fn mesSubPT, local
 /* 80046458 0000FA18  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8004645C 0000FA1C  7C 08 02 A6 */	mflr r0
 /* 80046460 0000FA20  38 80 00 01 */	li r4, 1
@@ -895,7 +895,7 @@
 /* 800464CC 0000FA8C  4E 80 00 20 */	blr 
 .endfn mesSubPT
 
-.fn mesVisionON, global
+.fn mesVisionON, local
 /* 800464D0 0000FA90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800464D4 0000FA94  7C 08 02 A6 */	mflr r0
 /* 800464D8 0000FA98  3C 80 80 4F */	lis r4, CTaskGameEff_strpool@ha
@@ -914,7 +914,7 @@
 /* 8004650C 0000FACC  4E 80 00 20 */	blr 
 .endfn mesVisionON
 
-.fn mesVisionOFF, global
+.fn mesVisionOFF, local
 /* 80046510 0000FAD0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80046514 0000FAD4  7C 08 02 A6 */	mflr r0
 /* 80046518 0000FAD8  3C 80 80 4F */	lis r4, CTaskGameEff_strpool@ha
@@ -933,7 +933,7 @@
 /* 8004654C 0000FB0C  4E 80 00 20 */	blr 
 .endfn mesVisionOFF
 
-.fn mesMonadoON, global
+.fn mesMonadoON, local
 /* 80046550 0000FB10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80046554 0000FB14  7C 08 02 A6 */	mflr r0
 /* 80046558 0000FB18  3C 80 80 4F */	lis r4, CTaskGameEff_strpool@ha
@@ -952,7 +952,7 @@
 /* 8004658C 0000FB4C  4E 80 00 20 */	blr 
 .endfn mesMonadoON
 
-.fn mesMonadoOFF, global
+.fn mesMonadoOFF, local
 /* 80046590 0000FB50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80046594 0000FB54  7C 08 02 A6 */	mflr r0
 /* 80046598 0000FB58  3C 80 80 4F */	lis r4, CTaskGameEff_strpool@ha
@@ -971,7 +971,7 @@
 /* 800465CC 0000FB8C  4E 80 00 20 */	blr 
 .endfn mesMonadoOFF
 
-.fn ptChangeNotice, global
+.fn ptChangeNotice, local
 /* 800465D0 0000FB90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800465D4 0000FB94  7C 08 02 A6 */	mflr r0
 /* 800465D8 0000FB98  38 60 FF FF */	li r3, -1
@@ -987,7 +987,7 @@
 /* 80046600 0000FBC0  4E 80 00 20 */	blr 
 .endfn ptChangeNotice
 
-.fn save, global
+.fn save, local
 /* 80046604 0000FBC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80046608 0000FBC8  7C 08 02 A6 */	mflr r0
 /* 8004660C 0000FBCC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1003,7 +1003,7 @@
 /* 80046630 0000FBF0  4E 80 00 20 */	blr 
 .endfn save
 
-.fn kizunaTalkStart, global
+.fn kizunaTalkStart, local
 /* 80046634 0000FBF4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80046638 0000FBF8  7C 08 02 A6 */	mflr r0
 /* 8004663C 0000FBFC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1019,7 +1019,7 @@
 /* 80046664 0000FC24  4E 80 00 20 */	blr 
 .endfn kizunaTalkStart
 
-.fn kizunaTalkEnd, global
+.fn kizunaTalkEnd, local
 /* 80046668 0000FC28  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8004666C 0000FC2C  7C 08 02 A6 */	mflr r0
 /* 80046670 0000FC30  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1034,7 +1034,7 @@
 /* 80046694 0000FC54  4E 80 00 20 */	blr 
 .endfn kizunaTalkEnd
 
-.fn isPrioReq, global
+.fn isPrioReq, local
 /* 80046698 0000FC58  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8004669C 0000FC5C  7C 08 02 A6 */	mflr r0
 /* 800466A0 0000FC60  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1056,7 +1056,7 @@
 /* 800466E0 0000FCA0  4E 80 00 20 */	blr 
 .endfn isPrioReq
 
-.fn gameClear, global
+.fn gameClear, local
 /* 800466E4 0000FCA4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800466E8 0000FCA8  7C 08 02 A6 */	mflr r0
 /* 800466EC 0000FCAC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1068,7 +1068,7 @@
 /* 80046704 0000FCC4  4E 80 00 20 */	blr 
 .endfn gameClear
 
-.fn setLastTalkNpc, global
+.fn setLastTalkNpc, local
 /* 80046708 0000FCC8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8004670C 0000FCCC  7C 08 02 A6 */	mflr r0
 /* 80046710 0000FCD0  38 80 00 01 */	li r4, 1
@@ -1120,7 +1120,7 @@
 /* 800467B0 0000FD70  4E 80 00 20 */	blr 
 .endfn setLastTalkNpc
 
-.fn isSETalkVoiceWait, global
+.fn isSETalkVoiceWait, local
 /* 800467B4 0000FD74  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800467B8 0000FD78  7C 08 02 A6 */	mflr r0
 /* 800467BC 0000FD7C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1156,7 +1156,7 @@
 #r3: dest address?
 #r4: string
 #r5-: args
-.fn CTaskGameEff_vsnprintf, global
+.fn monolith_vsnprintf, global
 /* 80046818 0000FDD8  94 21 FE 70 */	stwu r1, -0x190(r1)
 /* 8004681C 0000FDDC  7C 08 02 A6 */	mflr r0
 /* 80046820 0000FDE0  90 01 01 94 */	stw r0, 0x194(r1)
@@ -1208,7 +1208,7 @@
 /* 800468D4 0000FE94  7C 08 03 A6 */	mtlr r0
 /* 800468D8 0000FE98  38 21 01 90 */	addi r1, r1, 0x190
 /* 800468DC 0000FE9C  4E 80 00 20 */	blr 
-.endfn CTaskGameEff_vsnprintf
+.endfn monolith_vsnprintf
 
 
 
@@ -2015,7 +2015,7 @@
 
 .obj "@eti_80021DE8", local
 .hidden "@eti_80021DE8"
-	.4byte CTaskGameEff_vsnprintf
+	.4byte monolith_vsnprintf
 	.4byte 0x000000C8
 	.4byte "@etb_80007108"
 .endobj "@eti_80021DE8"

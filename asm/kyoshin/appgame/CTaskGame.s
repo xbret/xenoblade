@@ -4720,56 +4720,76 @@
 .endfn func_80044160
 
 
+
+.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
+
+.balign 8
+
+
+.obj CTaskGame_typestr, global
+	.asciz "CTaskGame"
+	.balign 4
+.endobj CTaskGame_typestr
+
+.obj CTTask_CTaskGame_typestr, global
+	.asciz "CTTask<CTaskGame>"
+	.balign 4
+.endobj CTTask_CTaskGame_typestr
+
+.obj IErrMesWinSel_typestr, global
+	.asciz "IErrMesWinSel"
+	.balign 4
+.endobj IErrMesWinSel_typestr
+
+.obj ITitleMenu_typestr, global
+	.asciz "ITitleMenu"
+	.balign 4
+.endobj ITitleMenu_typestr
+
+.obj IGameException_typestr, global
+	.asciz "IGameException"
+	.balign 4
+.endobj IGameException_typestr
+
+.obj IScnRender_typestr, global
+	.asciz "IScnRender"
+	.balign 4
+.endobj IScnRender_typestr
+
+.obj CProcess_typestr, global
+	.asciz "CProcess"
+	.balign 4
+.endobj CProcess_typestr
+
+.obj CChildListNode_typestr, global
+	.asciz "CChildListNode"
+	.balign 4
+	.4byte 0
+.endobj CChildListNode_typestr
+
+.obj CDoubleListNode_typestr, global
+	.asciz "CDoubleListNode"
+.endobj CDoubleListNode_typestr
+
+
+.obj lbl_804F6158, global
+	.asciz "abcd"
+	.asciz "/menu/tpl/strap_a.tpl"
+	.asciz "/menu/tpl/strap_b.tpl"
+	.byte 0x00
+	.asciz "snd/adx/e02_loop.adx"
+	.asciz "_"
+	.asciz "0"
+	.asciz "%d"
+	.asciz "acbd"
+	.4byte 0
+	.byte 0x00
+.endobj lbl_804F6158
+
+
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
 #.balign 8
-
-.obj cf_CActorParam_hierarchy, global
-	.4byte __RTTI__cf_CDebugState
-	.4byte 0x000015DC
-	.4byte __RTTI__cf_CBattleState
-	.4byte 0x00000008
-	.4byte __RTTI__cf_CActorState
-	.4byte 0
-	.4byte 0
-.endobj cf_CActorParam_hierarchy
-
-.obj cf_CfObjectMove_hierarchy, global
-	.4byte __RTTI__cf_CObjectState
-	.4byte 0
-	.4byte __RTTI__cf_CObjectParam
-	.4byte 0
-	.4byte __RTTI__cf_CfObject
-	.4byte 0
-	.4byte __RTTI__cf_CfObjectModel
-	.4byte 0
-	.4byte 0
-.endobj cf_CfObjectMove_hierarchy
-
-.obj cf_CfObjectModel_hierarchy, global
-	.4byte __RTTI__cf_CObjectState
-	.4byte 0
-	.4byte __RTTI__cf_CObjectParam
-	.4byte 0
-	.4byte __RTTI__cf_CfObject
-	.4byte 0
-	.4byte 0
-.endobj cf_CfObjectModel_hierarchy
-
-.obj cf_CfObject_hierarchy, global
-	.4byte __RTTI__cf_CObjectState
-	.4byte 0
-	.4byte __RTTI__cf_CObjectParam
-	.4byte 0
-	.4byte 0
-.endobj cf_CfObject_hierarchy
-
-.obj cf_CObjectParam_hierarchy, global
-	.4byte __RTTI__cf_CObjectState
-	.4byte 0
-	.4byte 0
-.endobj cf_CObjectParam_hierarchy
-
 
 .obj lbl_80528DC0, global
 	.4byte 0
@@ -5316,215 +5336,9 @@
 .endobj CChildListNode_hierarchy
 
 
-
-.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
-
-.balign 8
-
-.obj cf_CfObjectActor_typestr, global
-	.asciz "cf::CfObjectActor"
-	.balign 4
-	.4byte 0
-.endobj cf_CfObjectActor_typestr
-
-.obj cf_CActorParam_typestr, global
-	.asciz "cf::CActorParam"
-.endobj cf_CActorParam_typestr
-
-.obj cf_CDebugState_typestr, global
-	.asciz "cf::CDebugState"
-.endobj cf_CDebugState_typestr
-
-.obj cf_CActorState_typestr, global
-	.asciz "cf::CActorState"
-.endobj cf_CActorState_typestr
-
-.obj cf_CBattleState_typestr, global
-	.asciz "cf::CBattleState"
-	.balign 4
-.endobj cf_CBattleState_typestr
-
-.obj cf_CfObjectMove_typestr, global
-	.asciz "cf::CfObjectMove"
-	.balign 4
-.endobj cf_CfObjectMove_typestr
-
-.obj cf_CAIAction_typestr, global
-	.asciz "cf::CAIAction"
-	.balign 4
-.endobj cf_CAIAction_typestr
-
-.obj cf_CfObjectModel_typestr, global
-	.asciz "cf::CfObjectModel"
-	.balign 4
-.endobj cf_CfObjectModel_typestr
-
-.obj cf_CfObject_typestr, global
-	.asciz "cf::CfObject"
-	.balign 4
-.endobj cf_CfObject_typestr
-
-.obj cf_CObjectParam_typestr, global
-	.asciz "cf::CObjectParam"
-	.balign 4
-.endobj cf_CObjectParam_typestr
-
-.obj cf_CObjectState_typestr, global
-	.asciz "cf::CObjectState"
-	.balign 4
-.endobj cf_CObjectState_typestr
-
-
-.obj CTaskGame_strpool, global
-	.asciz "FLD_npclist"
-	.asciz "npc"
-	.asciz "remove"
-	.asciz "BTL_enelist"
-	.asciz "ene"
-	.asciz "BTL_pclist"
-	.asciz "pc"
-	.asciz "player"
-	.asciz "JUhead"
-	.asciz "JUheadA"
-	.asciz "move"
-	.asciz "obj"
-	.asciz "point"
-	.asciz "effect"
-	.asciz "attr"
-	.asciz "unit"
-	.asciz "FLD_pointlist"
-	.asciz "pointDirect"
-	.asciz "map"
-	.asciz "em"
-	.asciz "common"
-	.asciz "er"
-	.2byte 0
-	.4byte 0
-.endobj CTaskGame_strpool
-
-.obj _reslist_base_cf_CfObject_typestr, global
-	.asciz "_reslist_base<cf::CfObject *>"
-	.balign 4
-.endobj _reslist_base_cf_CfObject_typestr
-
-.obj CTaskGame_typestr, global
-	.asciz "CTaskGame"
-	.balign 4
-.endobj CTaskGame_typestr
-
-.obj CTTask_CTaskGame_typestr, global
-	.asciz "CTTask<CTaskGame>"
-	.balign 4
-.endobj CTTask_CTaskGame_typestr
-
-.obj IErrMesWinSel_typestr, global
-	.asciz "IErrMesWinSel"
-	.balign 4
-.endobj IErrMesWinSel_typestr
-
-.obj ITitleMenu_typestr, global
-	.asciz "ITitleMenu"
-	.balign 4
-.endobj ITitleMenu_typestr
-
-.obj IGameException_typestr, global
-	.asciz "IGameException"
-	.balign 4
-.endobj IGameException_typestr
-
-.obj IScnRender_typestr, global
-	.asciz "IScnRender"
-	.balign 4
-.endobj IScnRender_typestr
-
-.obj CProcess_typestr, global
-	.asciz "CProcess"
-	.balign 4
-.endobj CProcess_typestr
-
-.obj CChildListNode_typestr, global
-	.asciz "CChildListNode"
-	.balign 4
-	.4byte 0
-.endobj CChildListNode_typestr
-
-.obj CDoubleListNode_typestr, global
-	.asciz "CDoubleListNode"
-.endobj CDoubleListNode_typestr
-
-
-.obj lbl_804F6158, global
-	.asciz "abcd"
-	.asciz "/menu/tpl/strap_a.tpl"
-	.asciz "/menu/tpl/strap_b.tpl"
-	.byte 0x00
-	.asciz "snd/adx/e02_loop.adx"
-	.asciz "_"
-	.asciz "0"
-	.asciz "%d"
-	.asciz "acbd"
-	.4byte 0
-	.byte 0x00
-.endobj lbl_804F6158
-
-
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
-
-.obj __RTTI__cf_CActorParam, global
-	.4byte cf_CActorParam_typestr
-	.4byte cf_CActorParam_hierarchy
-.endobj __RTTI__cf_CActorParam
-
-.obj __RTTI__cf_CDebugState, global
-	.4byte cf_CDebugState_typestr
-	.4byte 0
-.endobj __RTTI__cf_CDebugState
-
-.obj __RTTI__cf_CActorState, global
-	.4byte cf_CActorState_typestr
-	.4byte 0
-.endobj __RTTI__cf_CActorState
-
-.obj __RTTI__cf_CBattleState, global
-	.4byte cf_CBattleState_typestr
-	.4byte 0
-.endobj __RTTI__cf_CBattleState
-
-
-.obj __RTTI__cf_CfObjectMove, global
-	.4byte cf_CfObjectMove_typestr
-	.4byte cf_CfObjectMove_hierarchy
-.endobj __RTTI__cf_CfObjectMove
-
-.obj __RTTI__cf_CAIAction, global
-	.4byte cf_CAIAction_typestr
-	.4byte 0
-.endobj __RTTI__cf_CAIAction
-
-
-.obj __RTTI__cf_CfObjectModel, global
-	.4byte cf_CfObjectModel_typestr
-	.4byte cf_CfObjectModel_hierarchy
-.endobj __RTTI__cf_CfObjectModel
-
-
-.obj __RTTI__cf_CfObject, global
-	.4byte cf_CfObject_typestr
-	.4byte cf_CfObject_hierarchy
-.endobj __RTTI__cf_CfObject
-
-.obj __RTTI__cf_CObjectParam, global
-	.4byte cf_CObjectParam_typestr
-	.4byte cf_CObjectParam_hierarchy
-.endobj __RTTI__cf_CObjectParam
-
-.obj __RTTI__cf_CObjectState, global
-	.4byte cf_CObjectState_typestr
-	.4byte 0
-.endobj __RTTI__cf_CObjectState
-
 
 .obj lbl_80664208, global
 	.4byte lbl_80668600

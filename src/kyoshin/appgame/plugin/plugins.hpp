@@ -1,5 +1,6 @@
 #pragma once
 
+extern "C"{
 void pluginGameRegist();
 void pluginDebRegist();
 void pluginBtlRegist();
@@ -21,3 +22,4 @@ void ocThreadRegist();
 void ocMsgRegist();
 void ocUnitRegist();
 void ocCfpRegist();
+}

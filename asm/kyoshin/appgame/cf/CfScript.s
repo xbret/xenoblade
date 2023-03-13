@@ -389,7 +389,7 @@
 /* 80068EBC 0003247C  7C 06 03 78 */	mr r6, r0
 /* 80068EC0 00032480  38 84 6B B4 */	addi r4, r4, CfScript_strpool@l
 /* 80068EC4 00032484  4C C6 31 82 */	crclr 6
-/* 80068EC8 00032488  4B FD D9 50 */	b CTaskGameEff_vsnprintf
+/* 80068EC8 00032488  4B FD D9 50 */	b monolith_vsnprintf
 .endfn func_80068E9C
 
 .fn func_80068ECC, global
@@ -783,7 +783,7 @@
 /* 80069420 000329E0  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80069424 000329E4  7C 7D 1B 78 */	mr r29, r3
 /* 80069428 000329E8  48 43 68 85 */	bl vmInit
-/* 8006942C 000329EC  4B FD C3 E9 */	bl pluginRegist
+/* 8006942C 000329EC  4B FD C3 E9 */	bl pluginRegist__Fv
 /* 80069430 000329F0  3B C0 00 00 */	li r30, 0
 /* 80069434 000329F4  3B E0 00 00 */	li r31, 0
 .L_80069438:

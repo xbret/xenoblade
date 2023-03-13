@@ -218,7 +218,7 @@
 /* 801417F4 0010ADB4  98 01 00 08 */	stb r0, 8(r1)
 /* 801417F8 0010ADB8  90 01 00 48 */	stw r0, 0x48(r1)
 /* 801417FC 0010ADBC  4C C6 31 82 */	crclr 6
-/* 80141800 0010ADC0  4B F0 50 19 */	bl CTaskGameEff_vsnprintf
+/* 80141800 0010ADC0  4B F0 50 19 */	bl monolith_vsnprintf
 /* 80141804 0010ADC4  38 61 00 08 */	addi r3, r1, 8
 /* 80141808 0010ADC8  4B EF 92 9D */	bl func_8003AAA4
 /* 8014180C 0010ADCC  90 6D A8 14 */	stw r3, lbl_80666994@sda21(r13)
@@ -227,7 +227,7 @@
 /* 80141818 0010ADD8  38 61 00 08 */	addi r3, r1, 8
 /* 8014181C 0010ADDC  38 9F 01 D7 */	addi r4, r31, 0x1d7
 /* 80141820 0010ADE0  4C C6 31 82 */	crclr 6
-/* 80141824 0010ADE4  4B F0 4F F5 */	bl CTaskGameEff_vsnprintf
+/* 80141824 0010ADE4  4B F0 4F F5 */	bl monolith_vsnprintf
 /* 80141828 0010ADE8  38 61 00 08 */	addi r3, r1, 8
 /* 8014182C 0010ADEC  4B EF 92 79 */	bl func_8003AAA4
 /* 80141830 0010ADF0  90 6D A8 1C */	stw r3, lbl_8066699C@sda21(r13)
@@ -236,7 +236,7 @@
 /* 8014183C 0010ADFC  38 61 00 08 */	addi r3, r1, 8
 /* 80141840 0010AE00  38 9F 01 EA */	addi r4, r31, 0x1ea
 /* 80141844 0010AE04  4C C6 31 82 */	crclr 6
-/* 80141848 0010AE08  4B F0 4F D1 */	bl CTaskGameEff_vsnprintf
+/* 80141848 0010AE08  4B F0 4F D1 */	bl monolith_vsnprintf
 /* 8014184C 0010AE0C  38 61 00 08 */	addi r3, r1, 8
 /* 80141850 0010AE10  4B EF 92 55 */	bl func_8003AAA4
 /* 80141854 0010AE14  90 6D A8 20 */	stw r3, lbl_806669A0@sda21(r13)
@@ -245,7 +245,7 @@
 /* 80141860 0010AE20  38 61 00 08 */	addi r3, r1, 8
 /* 80141864 0010AE24  38 9F 01 FD */	addi r4, r31, 0x1fd
 /* 80141868 0010AE28  4C C6 31 82 */	crclr 6
-/* 8014186C 0010AE2C  4B F0 4F AD */	bl CTaskGameEff_vsnprintf
+/* 8014186C 0010AE2C  4B F0 4F AD */	bl monolith_vsnprintf
 /* 80141870 0010AE30  38 61 00 08 */	addi r3, r1, 8
 /* 80141874 0010AE34  4B EF 92 31 */	bl func_8003AAA4
 /* 80141878 0010AE38  90 6D A8 24 */	stw r3, lbl_806669A4@sda21(r13)
@@ -254,7 +254,7 @@
 /* 80141884 0010AE44  38 61 00 08 */	addi r3, r1, 8
 /* 80141888 0010AE48  38 9F 02 10 */	addi r4, r31, 0x210
 /* 8014188C 0010AE4C  4C C6 31 82 */	crclr 6
-/* 80141890 0010AE50  4B F0 4F 89 */	bl CTaskGameEff_vsnprintf
+/* 80141890 0010AE50  4B F0 4F 89 */	bl monolith_vsnprintf
 /* 80141894 0010AE54  38 61 00 08 */	addi r3, r1, 8
 /* 80141898 0010AE58  4B EF 92 0D */	bl func_8003AAA4
 /* 8014189C 0010AE5C  90 6D A8 28 */	stw r3, lbl_806669A8@sda21(r13)
@@ -263,7 +263,7 @@
 /* 801418A8 0010AE68  38 61 00 08 */	addi r3, r1, 8
 /* 801418AC 0010AE6C  38 9F 02 22 */	addi r4, r31, 0x222
 /* 801418B0 0010AE70  4C C6 31 82 */	crclr 6
-/* 801418B4 0010AE74  4B F0 4F 65 */	bl CTaskGameEff_vsnprintf
+/* 801418B4 0010AE74  4B F0 4F 65 */	bl monolith_vsnprintf
 /* 801418B8 0010AE78  38 61 00 08 */	addi r3, r1, 8
 /* 801418BC 0010AE7C  4B EF 91 E9 */	bl func_8003AAA4
 /* 801418C0 0010AE80  90 6D A8 2C */	stw r3, lbl_806669AC@sda21(r13)
@@ -272,7 +272,7 @@
 /* 801418CC 0010AE8C  38 61 00 08 */	addi r3, r1, 8
 /* 801418D0 0010AE90  38 9F 02 39 */	addi r4, r31, 0x239
 /* 801418D4 0010AE94  4C C6 31 82 */	crclr 6
-/* 801418D8 0010AE98  4B F0 4F 41 */	bl CTaskGameEff_vsnprintf
+/* 801418D8 0010AE98  4B F0 4F 41 */	bl monolith_vsnprintf
 /* 801418DC 0010AE9C  38 61 00 08 */	addi r3, r1, 8
 /* 801418E0 0010AEA0  4B EF 91 C5 */	bl func_8003AAA4
 /* 801418E4 0010AEA4  90 6D A8 30 */	stw r3, lbl_806669B0@sda21(r13)
@@ -281,7 +281,7 @@
 /* 801418F0 0010AEB0  38 61 00 08 */	addi r3, r1, 8
 /* 801418F4 0010AEB4  38 9F 02 4B */	addi r4, r31, 0x24b
 /* 801418F8 0010AEB8  4C C6 31 82 */	crclr 6
-/* 801418FC 0010AEBC  4B F0 4F 1D */	bl CTaskGameEff_vsnprintf
+/* 801418FC 0010AEBC  4B F0 4F 1D */	bl monolith_vsnprintf
 /* 80141900 0010AEC0  38 61 00 08 */	addi r3, r1, 8
 /* 80141904 0010AEC4  4B EF 91 A1 */	bl func_8003AAA4
 /* 80141908 0010AEC8  90 6D A8 34 */	stw r3, lbl_806669B4@sda21(r13)
@@ -290,7 +290,7 @@
 /* 80141914 0010AED4  38 61 00 08 */	addi r3, r1, 8
 /* 80141918 0010AED8  38 9F 02 5E */	addi r4, r31, 0x25e
 /* 8014191C 0010AEDC  4C C6 31 82 */	crclr 6
-/* 80141920 0010AEE0  4B F0 4E F9 */	bl CTaskGameEff_vsnprintf
+/* 80141920 0010AEE0  4B F0 4E F9 */	bl monolith_vsnprintf
 /* 80141924 0010AEE4  38 61 00 08 */	addi r3, r1, 8
 /* 80141928 0010AEE8  4B EF 91 7D */	bl func_8003AAA4
 /* 8014192C 0010AEEC  90 6D A8 38 */	stw r3, lbl_806669B8@sda21(r13)
@@ -299,7 +299,7 @@
 /* 80141938 0010AEF8  38 61 00 08 */	addi r3, r1, 8
 /* 8014193C 0010AEFC  38 9F 02 6F */	addi r4, r31, 0x26f
 /* 80141940 0010AF00  4C C6 31 82 */	crclr 6
-/* 80141944 0010AF04  4B F0 4E D5 */	bl CTaskGameEff_vsnprintf
+/* 80141944 0010AF04  4B F0 4E D5 */	bl monolith_vsnprintf
 /* 80141948 0010AF08  38 61 00 08 */	addi r3, r1, 8
 /* 8014194C 0010AF0C  4B EF 91 59 */	bl func_8003AAA4
 /* 80141950 0010AF10  90 6D A8 3C */	stw r3, lbl_806669BC@sda21(r13)
@@ -308,7 +308,7 @@
 /* 8014195C 0010AF1C  38 61 00 08 */	addi r3, r1, 8
 /* 80141960 0010AF20  38 9F 02 83 */	addi r4, r31, 0x283
 /* 80141964 0010AF24  4C C6 31 82 */	crclr 6
-/* 80141968 0010AF28  4B F0 4E B1 */	bl CTaskGameEff_vsnprintf
+/* 80141968 0010AF28  4B F0 4E B1 */	bl monolith_vsnprintf
 /* 8014196C 0010AF2C  38 61 00 08 */	addi r3, r1, 8
 /* 80141970 0010AF30  4B EF 91 35 */	bl func_8003AAA4
 /* 80141974 0010AF34  90 6D A8 98 */	stw r3, lbl_80666A18@sda21(r13)
@@ -317,7 +317,7 @@
 /* 80141980 0010AF40  38 61 00 08 */	addi r3, r1, 8
 /* 80141984 0010AF44  38 9F 02 93 */	addi r4, r31, 0x293
 /* 80141988 0010AF48  4C C6 31 82 */	crclr 6
-/* 8014198C 0010AF4C  4B F0 4E 8D */	bl CTaskGameEff_vsnprintf
+/* 8014198C 0010AF4C  4B F0 4E 8D */	bl monolith_vsnprintf
 /* 80141990 0010AF50  38 61 00 08 */	addi r3, r1, 8
 /* 80141994 0010AF54  4B EF 91 11 */	bl func_8003AAA4
 /* 80141998 0010AF58  90 6D A8 9C */	stw r3, lbl_80666A1C@sda21(r13)
@@ -326,7 +326,7 @@
 /* 801419A4 0010AF64  38 61 00 08 */	addi r3, r1, 8
 /* 801419A8 0010AF68  38 9F 02 A5 */	addi r4, r31, 0x2a5
 /* 801419AC 0010AF6C  4C C6 31 82 */	crclr 6
-/* 801419B0 0010AF70  4B F0 4E 69 */	bl CTaskGameEff_vsnprintf
+/* 801419B0 0010AF70  4B F0 4E 69 */	bl monolith_vsnprintf
 /* 801419B4 0010AF74  38 61 00 08 */	addi r3, r1, 8
 /* 801419B8 0010AF78  4B EF 90 ED */	bl func_8003AAA4
 /* 801419BC 0010AF7C  90 6D A8 A0 */	stw r3, lbl_80666A20@sda21(r13)
@@ -335,7 +335,7 @@
 /* 801419C8 0010AF88  38 61 00 08 */	addi r3, r1, 8
 /* 801419CC 0010AF8C  38 9F 02 B3 */	addi r4, r31, 0x2b3
 /* 801419D0 0010AF90  4C C6 31 82 */	crclr 6
-/* 801419D4 0010AF94  4B F0 4E 45 */	bl CTaskGameEff_vsnprintf
+/* 801419D4 0010AF94  4B F0 4E 45 */	bl monolith_vsnprintf
 /* 801419D8 0010AF98  38 61 00 08 */	addi r3, r1, 8
 /* 801419DC 0010AF9C  4B EF 90 C9 */	bl func_8003AAA4
 /* 801419E0 0010AFA0  90 6D A8 A4 */	stw r3, lbl_80666A24@sda21(r13)
@@ -344,7 +344,7 @@
 /* 801419EC 0010AFAC  38 61 00 08 */	addi r3, r1, 8
 /* 801419F0 0010AFB0  38 9F 02 C2 */	addi r4, r31, 0x2c2
 /* 801419F4 0010AFB4  4C C6 31 82 */	crclr 6
-/* 801419F8 0010AFB8  4B F0 4E 21 */	bl CTaskGameEff_vsnprintf
+/* 801419F8 0010AFB8  4B F0 4E 21 */	bl monolith_vsnprintf
 /* 801419FC 0010AFBC  38 61 00 08 */	addi r3, r1, 8
 /* 80141A00 0010AFC0  4B EF 90 A5 */	bl func_8003AAA4
 /* 80141A04 0010AFC4  90 6D A8 A8 */	stw r3, lbl_80666A28@sda21(r13)
@@ -353,7 +353,7 @@
 /* 80141A10 0010AFD0  38 61 00 08 */	addi r3, r1, 8
 /* 80141A14 0010AFD4  38 9F 02 D1 */	addi r4, r31, 0x2d1
 /* 80141A18 0010AFD8  4C C6 31 82 */	crclr 6
-/* 80141A1C 0010AFDC  4B F0 4D FD */	bl CTaskGameEff_vsnprintf
+/* 80141A1C 0010AFDC  4B F0 4D FD */	bl monolith_vsnprintf
 /* 80141A20 0010AFE0  38 61 00 08 */	addi r3, r1, 8
 /* 80141A24 0010AFE4  4B EF 90 81 */	bl func_8003AAA4
 /* 80141A28 0010AFE8  90 6D A8 AC */	stw r3, lbl_80666A2C@sda21(r13)
@@ -362,7 +362,7 @@
 /* 80141A34 0010AFF4  38 61 00 08 */	addi r3, r1, 8
 /* 80141A38 0010AFF8  38 9F 02 E0 */	addi r4, r31, 0x2e0
 /* 80141A3C 0010AFFC  4C C6 31 82 */	crclr 6
-/* 80141A40 0010B000  4B F0 4D D9 */	bl CTaskGameEff_vsnprintf
+/* 80141A40 0010B000  4B F0 4D D9 */	bl monolith_vsnprintf
 /* 80141A44 0010B004  38 61 00 08 */	addi r3, r1, 8
 /* 80141A48 0010B008  4B EF 90 5D */	bl func_8003AAA4
 /* 80141A4C 0010B00C  90 6D A8 B0 */	stw r3, lbl_80666A30@sda21(r13)
@@ -371,7 +371,7 @@
 /* 80141A58 0010B018  38 61 00 08 */	addi r3, r1, 8
 /* 80141A5C 0010B01C  38 9F 02 F1 */	addi r4, r31, 0x2f1
 /* 80141A60 0010B020  4C C6 31 82 */	crclr 6
-/* 80141A64 0010B024  4B F0 4D B5 */	bl CTaskGameEff_vsnprintf
+/* 80141A64 0010B024  4B F0 4D B5 */	bl monolith_vsnprintf
 /* 80141A68 0010B028  38 61 00 08 */	addi r3, r1, 8
 /* 80141A6C 0010B02C  4B EF 90 39 */	bl func_8003AAA4
 /* 80141A70 0010B030  90 6D A8 B4 */	stw r3, lbl_80666A34@sda21(r13)
@@ -380,7 +380,7 @@
 /* 80141A7C 0010B03C  38 61 00 08 */	addi r3, r1, 8
 /* 80141A80 0010B040  38 9F 03 00 */	addi r4, r31, 0x300
 /* 80141A84 0010B044  4C C6 31 82 */	crclr 6
-/* 80141A88 0010B048  4B F0 4D 91 */	bl CTaskGameEff_vsnprintf
+/* 80141A88 0010B048  4B F0 4D 91 */	bl monolith_vsnprintf
 /* 80141A8C 0010B04C  38 61 00 08 */	addi r3, r1, 8
 /* 80141A90 0010B050  4B EF 90 15 */	bl func_8003AAA4
 /* 80141A94 0010B054  90 6D A8 B8 */	stw r3, lbl_80666A38@sda21(r13)
@@ -389,7 +389,7 @@
 /* 80141AA0 0010B060  38 61 00 08 */	addi r3, r1, 8
 /* 80141AA4 0010B064  38 9F 03 10 */	addi r4, r31, 0x310
 /* 80141AA8 0010B068  4C C6 31 82 */	crclr 6
-/* 80141AAC 0010B06C  4B F0 4D 6D */	bl CTaskGameEff_vsnprintf
+/* 80141AAC 0010B06C  4B F0 4D 6D */	bl monolith_vsnprintf
 /* 80141AB0 0010B070  38 61 00 08 */	addi r3, r1, 8
 /* 80141AB4 0010B074  4B EF 8F F1 */	bl func_8003AAA4
 /* 80141AB8 0010B078  90 6D A8 BC */	stw r3, lbl_80666A3C@sda21(r13)
@@ -398,7 +398,7 @@
 /* 80141AC4 0010B084  38 61 00 08 */	addi r3, r1, 8
 /* 80141AC8 0010B088  38 9F 03 25 */	addi r4, r31, 0x325
 /* 80141ACC 0010B08C  4C C6 31 82 */	crclr 6
-/* 80141AD0 0010B090  4B F0 4D 49 */	bl CTaskGameEff_vsnprintf
+/* 80141AD0 0010B090  4B F0 4D 49 */	bl monolith_vsnprintf
 /* 80141AD4 0010B094  38 61 00 08 */	addi r3, r1, 8
 /* 80141AD8 0010B098  4B EF 8F CD */	bl func_8003AAA4
 /* 80141ADC 0010B09C  90 6D A8 C0 */	stw r3, lbl_80666A40@sda21(r13)
@@ -407,7 +407,7 @@
 /* 80141AE8 0010B0A8  38 61 00 08 */	addi r3, r1, 8
 /* 80141AEC 0010B0AC  38 9F 03 3A */	addi r4, r31, 0x33a
 /* 80141AF0 0010B0B0  4C C6 31 82 */	crclr 6
-/* 80141AF4 0010B0B4  4B F0 4D 25 */	bl CTaskGameEff_vsnprintf
+/* 80141AF4 0010B0B4  4B F0 4D 25 */	bl monolith_vsnprintf
 /* 80141AF8 0010B0B8  38 61 00 08 */	addi r3, r1, 8
 /* 80141AFC 0010B0BC  4B EF 8F A9 */	bl func_8003AAA4
 /* 80141B00 0010B0C0  90 6D A8 C4 */	stw r3, lbl_80666A44@sda21(r13)

@@ -2,7 +2,7 @@
 
 #include "types.h"
 #include "kyoshin/appgame/code_802AEB74.hpp"
-#include "kyoshin/appgame/plugin/plugin_main.h"
+#include "kyoshin/appgame/plugin/plugin_main.hpp"
 #include "monolithlib/code_80450B14.hpp"
 #include "monolithlib/Unknown1.hpp"
 #include "monolithlib/vm/yvm.h"
@@ -44,7 +44,7 @@ extern void func_8014A86C(int);
 extern void func_8014A8F8();
 extern void func_8045D480(int);
 extern void func_8045D4FC();
-
+}
 
 void func_80039EFC(int);
 void func_80039F34();
@@ -55,5 +55,3 @@ void func_80039F68();
 void vmInitPluginRegistCallback();
 void vmInitCallback();
 void main(int argc, char* argv[]);
-
-}

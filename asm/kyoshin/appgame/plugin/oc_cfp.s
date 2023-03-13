@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_80045560, global
+.fn func_80045560, local
 /* 80045560 0000EB20  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80045564 0000EB24  7C 08 02 A6 */	mflr r0
 /* 80045568 0000EB28  38 80 00 09 */	li r4, 9
@@ -20,7 +20,7 @@
 /* 80045598 0000EB58  4E 80 00 20 */	blr 
 .endfn func_80045560
 
-.fn func_8004559C, global
+.fn func_8004559C, local
 /* 8004559C 0000EB5C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800455A0 0000EB60  7C 08 02 A6 */	mflr r0
 /* 800455A4 0000EB64  90 01 00 24 */	stw r0, 0x24(r1)
@@ -42,7 +42,7 @@
 /* 800455E4 0000EBA4  4E 80 00 20 */	blr 
 .endfn func_8004559C
 
-.fn func_800455E8, global
+.fn func_800455E8, local
 /* 800455E8 0000EBA8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800455EC 0000EBAC  7C 08 02 A6 */	mflr r0
 /* 800455F0 0000EBB0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -64,7 +64,7 @@
 /* 80045630 0000EBF0  4E 80 00 20 */	blr 
 .endfn func_800455E8
 
-.fn func_80045634, global
+.fn func_80045634, local
 /* 80045634 0000EBF4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80045638 0000EBF8  7C 08 02 A6 */	mflr r0
 /* 8004563C 0000EBFC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -91,7 +91,7 @@
 /* 80045690 0000EC50  4E 80 00 20 */	blr 
 .endfn func_80045634
 
-.fn func_80045694, global
+.fn func_80045694, local
 /* 80045694 0000EC54  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80045698 0000EC58  7C 08 02 A6 */	mflr r0
 /* 8004569C 0000EC5C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -106,7 +106,7 @@
 /* 800456C0 0000EC80  4E 80 00 20 */	blr 
 .endfn func_80045694
 
-.fn func_800456C4, global
+.fn func_800456C4, local
 /* 800456C4 0000EC84  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800456C8 0000EC88  7C 08 02 A6 */	mflr r0
 /* 800456CC 0000EC8C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -123,7 +123,7 @@
 
 #SB script plugin functions
 
-.fn getTimeIdxMin, global
+.fn getTimeIdxMin, local
 /* 800456F4 0000ECB4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800456F8 0000ECB8  7C 08 02 A6 */	mflr r0
 /* 800456FC 0000ECBC  38 80 00 01 */	li r4, 1
@@ -162,7 +162,7 @@
 /* 80045778 0000ED38  4E 80 00 20 */	blr 
 .endfn getTimeIdxMin
 
-.fn getTimeIdxMax, global
+.fn getTimeIdxMax, local
 /* 8004577C 0000ED3C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80045780 0000ED40  7C 08 02 A6 */	mflr r0
 /* 80045784 0000ED44  38 80 00 01 */	li r4, 1

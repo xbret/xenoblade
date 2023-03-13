@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn playBgm, global
+.fn playBgm, local
 /* 801AAD20 001742E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801AAD24 001742E4  7C 08 02 A6 */	mflr r0
 /* 801AAD28 001742E8  38 80 00 01 */	li r4, 1
@@ -63,7 +63,7 @@
 /* 801AADFC 001743BC  4E 80 00 20 */	blr 
 .endfn playBgm
 
-.fn stopBgm, global
+.fn stopBgm, local
 /* 801AAE00 001743C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801AAE04 001743C4  7C 08 02 A6 */	mflr r0
 /* 801AAE08 001743C8  38 80 00 01 */	li r4, 1
@@ -112,7 +112,7 @@
 /* 801AAEAC 0017446C  4E 80 00 20 */	blr 
 .endfn stopBgm
 
-.fn setFieldBgm, global
+.fn setFieldBgm, local
 /* 801AAEB0 00174470  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801AAEB4 00174474  7C 08 02 A6 */	mflr r0
 /* 801AAEB8 00174478  90 01 00 34 */	stw r0, 0x34(r1)
@@ -221,7 +221,7 @@
 /* 801AB034 001745F4  4E 80 00 20 */	blr 
 .endfn setFieldBgm
 
-.fn setTownBgm, global
+.fn setTownBgm, local
 /* 801AB038 001745F8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801AB03C 001745FC  7C 08 02 A6 */	mflr r0
 /* 801AB040 00174600  90 01 00 34 */	stw r0, 0x34(r1)
@@ -330,7 +330,7 @@
 /* 801AB1BC 0017477C  4E 80 00 20 */	blr 
 .endfn setTownBgm
 
-.fn stopFieldBgm, global
+.fn stopFieldBgm, local
 /* 801AB1C0 00174780  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801AB1C4 00174784  7C 08 02 A6 */	mflr r0
 /* 801AB1C8 00174788  38 80 00 01 */	li r4, 1
@@ -389,7 +389,7 @@
 /* 801AB294 00174854  4E 80 00 20 */	blr 
 .endfn stopFieldBgm
 
-.fn stopTownBgm, global
+.fn stopTownBgm, local
 /* 801AB298 00174858  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801AB29C 0017485C  7C 08 02 A6 */	mflr r0
 /* 801AB2A0 00174860  38 80 00 01 */	li r4, 1
@@ -448,7 +448,7 @@
 /* 801AB36C 0017492C  4E 80 00 20 */	blr 
 .endfn stopTownBgm
 
-.fn forceFieldBgm, global
+.fn forceFieldBgm, local
 /* 801AB370 00174930  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801AB374 00174934  7C 08 02 A6 */	mflr r0
 /* 801AB378 00174938  38 60 00 00 */	li r3, 0
@@ -461,7 +461,7 @@
 /* 801AB394 00174954  4E 80 00 20 */	blr 
 .endfn forceFieldBgm
 
-.fn setVolBgm, global
+.fn setVolBgm, local
 /* 801AB398 00174958  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801AB39C 0017495C  7C 08 02 A6 */	mflr r0
 /* 801AB3A0 00174960  38 80 00 01 */	li r4, 1
@@ -525,7 +525,7 @@
 /* 801AB480 00174A40  4E 80 00 20 */	blr 
 .endfn setVolBgm
 
-.fn playVoice, global
+.fn playVoice, local
 /* 801AB484 00174A44  94 21 FE E0 */	stwu r1, -0x120(r1)
 /* 801AB488 00174A48  7C 08 02 A6 */	mflr r0
 /* 801AB48C 00174A4C  38 80 00 01 */	li r4, 1
@@ -572,7 +572,7 @@
 /* 801AB528 00174AE8  4E 80 00 20 */	blr 
 .endfn playVoice
 
-.fn stopVoice, global
+.fn stopVoice, local
 /* 801AB52C 00174AEC  94 21 FE E0 */	stwu r1, -0x120(r1)
 /* 801AB530 00174AF0  7C 08 02 A6 */	mflr r0
 /* 801AB534 00174AF4  38 80 00 01 */	li r4, 1
@@ -635,7 +635,7 @@
 /* 801AB600 00174BC0  4E 80 00 20 */	blr 
 .endfn stopVoice
 
-.fn waitVoice, global
+.fn waitVoice, local
 /* 801AB604 00174BC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801AB608 00174BC8  7C 08 02 A6 */	mflr r0
 /* 801AB60C 00174BCC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -656,7 +656,7 @@
 /* 801AB644 00174C04  4E 80 00 20 */	blr 
 .endfn waitVoice
 
-.fn playSeCommon, global
+.fn playSeCommon, local
 /* 801AB648 00174C08  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801AB64C 00174C0C  7C 08 02 A6 */	mflr r0
 /* 801AB650 00174C10  38 80 00 01 */	li r4, 1
@@ -764,7 +764,7 @@
 /* 801AB7D4 00174D94  4E 80 00 20 */	blr 
 .endfn playSeCommon
 
-.fn playSeMap, global
+.fn playSeMap, local
 /* 801AB7D8 00174D98  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801AB7DC 00174D9C  7C 08 02 A6 */	mflr r0
 /* 801AB7E0 00174DA0  38 80 00 01 */	li r4, 1
@@ -872,7 +872,7 @@
 /* 801AB964 00174F24  4E 80 00 20 */	blr 
 .endfn playSeMap
 
-.fn volSeMap, global
+.fn volSeMap, local
 /* 801AB968 00174F28  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801AB96C 00174F2C  7C 08 02 A6 */	mflr r0
 /* 801AB970 00174F30  38 80 00 01 */	li r4, 1
@@ -953,7 +953,7 @@
 /* 801ABA8C 0017504C  4E 80 00 20 */	blr 
 .endfn volSeMap
 
-.fn stopSeCommon, global
+.fn stopSeCommon, local
 /* 801ABA90 00175050  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801ABA94 00175054  7C 08 02 A6 */	mflr r0
 /* 801ABA98 00175058  38 80 00 01 */	li r4, 1
@@ -996,7 +996,7 @@
 /* 801ABB2C 001750EC  4E 80 00 20 */	blr 
 .endfn stopSeCommon
 
-.fn stopSeMap, global
+.fn stopSeMap, local
 /* 801ABB30 001750F0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801ABB34 001750F4  7C 08 02 A6 */	mflr r0
 /* 801ABB38 001750F8  38 80 00 01 */	li r4, 1
@@ -1039,7 +1039,7 @@
 /* 801ABBCC 0017518C  4E 80 00 20 */	blr 
 .endfn stopSeMap
 
-.fn seCamPos, global
+.fn seCamPos, local
 /* 801ABBD0 00175190  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 801ABBD4 00175194  7C 08 02 A6 */	mflr r0
 /* 801ABBD8 00175198  90 01 00 54 */	stw r0, 0x54(r1)
@@ -1163,7 +1163,7 @@
 /* 801ABD9C 0017535C  4E 80 00 20 */	blr 
 .endfn seCamPos
 
-.fn clearCamPos, global
+.fn clearCamPos, local
 /* 801ABDA0 00175360  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801ABDA4 00175364  7C 08 02 A6 */	mflr r0
 /* 801ABDA8 00175368  90 01 00 14 */	stw r0, 0x14(r1)

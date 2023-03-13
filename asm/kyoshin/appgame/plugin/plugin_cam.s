@@ -2,7 +2,9 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn select, global
+#why are there several virtual funcs from CfCam here? wtf?
+
+.fn select, local
 /* 800602B8 00029878  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800602BC 0002987C  7C 08 02 A6 */	mflr r0
 /* 800602C0 00029880  38 80 00 01 */	li r4, 1
@@ -19,7 +21,7 @@
 /* 800602EC 000298AC  4E 80 00 20 */	blr 
 .endfn select
 
-.fn restore, global
+.fn restore, local
 /* 800602F0 000298B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800602F4 000298B4  7C 08 02 A6 */	mflr r0
 /* 800602F8 000298B8  38 80 00 01 */	li r4, 1
@@ -78,7 +80,7 @@
 /* 800603BC 0002997C  4E 80 00 20 */	blr 
 .endfn restore
 
-.fn setPos, global
+.fn setPos, local
 /* 800603C0 00029980  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 800603C4 00029984  7C 08 02 A6 */	mflr r0
 /* 800603C8 00029988  38 80 00 01 */	li r4, 1
@@ -146,7 +148,7 @@
 /* 800604C0 00029A80  4E 80 00 20 */	blr 
 .endfn setPos
 
-.fn setLookat, global
+.fn setLookat, local
 /* 800604C4 00029A84  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 800604C8 00029A88  7C 08 02 A6 */	mflr r0
 /* 800604CC 00029A8C  38 80 00 01 */	li r4, 1
@@ -220,7 +222,7 @@
 /* 800605D0 00029B90  4E 80 00 20 */	blr 
 .endfn func_800605D0
 
-.fn setDir, global
+.fn setDir, local
 /* 800605D4 00029B94  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 800605D8 00029B98  7C 08 02 A6 */	mflr r0
 /* 800605DC 00029B9C  38 80 00 01 */	li r4, 1
@@ -281,7 +283,7 @@
 /* 800606AC 00029C6C  4E 80 00 20 */	blr 
 .endfn func_800606AC
 
-.fn setRotX, global
+.fn setRotX, local
 /* 800606B0 00029C70  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800606B4 00029C74  7C 08 02 A6 */	mflr r0
 /* 800606B8 00029C78  90 01 00 24 */	stw r0, 0x24(r1)
@@ -322,7 +324,7 @@
 /* 80060738 00029CF8  4E 80 00 20 */	blr 
 .endfn func_80060738
 
-.fn setRotY, global
+.fn setRotY, local
 /* 8006073C 00029CFC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80060740 00029D00  7C 08 02 A6 */	mflr r0
 /* 80060744 00029D04  90 01 00 24 */	stw r0, 0x24(r1)
@@ -363,7 +365,7 @@
 /* 800607C4 00029D84  4E 80 00 20 */	blr 
 .endfn func_800607C4
 
-.fn setFov, global
+.fn setFov, local
 /* 800607C8 00029D88  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800607CC 00029D8C  7C 08 02 A6 */	mflr r0
 /* 800607D0 00029D90  38 80 00 01 */	li r4, 1
@@ -396,7 +398,7 @@
 /* 8006083C 00029DFC  4E 80 00 20 */	blr 
 .endfn setFov
 
-.fn setTarget, global
+.fn setTarget, local
 /* 80060840 00029E00  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80060844 00029E04  7C 08 02 A6 */	mflr r0
 /* 80060848 00029E08  38 80 00 01 */	li r4, 1
@@ -422,7 +424,7 @@
 /* 80060898 00029E58  4E 80 00 20 */	blr 
 .endfn setTarget
 
-.fn setPosOfs, global
+.fn setPosOfs, local
 /* 8006089C 00029E5C  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 800608A0 00029E60  7C 08 02 A6 */	mflr r0
 /* 800608A4 00029E64  90 01 00 54 */	stw r0, 0x54(r1)
@@ -522,7 +524,7 @@
 /* 80060A08 00029FC8  4E 80 00 20 */	blr 
 .endfn func_80060A08
 
-.fn setLookatOfs, global
+.fn setLookatOfs, local
 /* 80060A0C 00029FCC  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80060A10 00029FD0  7C 08 02 A6 */	mflr r0
 /* 80060A14 00029FD4  90 01 00 54 */	stw r0, 0x54(r1)
@@ -625,7 +627,7 @@
 /* 80060B84 0002A144  4E 80 00 20 */	blr 
 .endfn func_80060B84
 
-.fn getPos, global
+.fn getPos, local
 /* 80060B88 0002A148  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80060B8C 0002A14C  7C 08 02 A6 */	mflr r0
 /* 80060B90 0002A150  38 80 00 01 */	li r4, 1
@@ -690,7 +692,7 @@
 /* 80060C70 0002A230  4E 80 00 20 */	blr 
 .endfn getPos
 
-.fn getRot, global
+.fn getRot, local
 /* 80060C74 0002A234  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80060C78 0002A238  7C 08 02 A6 */	mflr r0
 /* 80060C7C 0002A23C  38 80 00 01 */	li r4, 1
@@ -761,7 +763,7 @@
 /* 80060D74 0002A334  4E 80 00 20 */	blr 
 .endfn getRot
 
-.fn keyBegin, global
+.fn keyBegin, local
 /* 80060D78 0002A338  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80060D7C 0002A33C  7C 08 02 A6 */	mflr r0
 /* 80060D80 0002A340  38 80 00 01 */	li r4, 1
@@ -854,7 +856,7 @@
 /* 80060EC0 0002A480  4E 80 00 20 */	blr 
 .endfn keyBegin
 
-.fn keyEnd, global
+.fn keyEnd, local
 /* 80060EC4 0002A484  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80060EC8 0002A488  7C 08 02 A6 */	mflr r0
 /* 80060ECC 0002A48C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -866,7 +868,7 @@
 /* 80060EE4 0002A4A4  4E 80 00 20 */	blr 
 .endfn keyEnd
 
-.fn keyAdd, global
+.fn keyAdd, local
 /* 80060EE8 0002A4A8  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80060EEC 0002A4AC  7C 08 02 A6 */	mflr r0
 /* 80060EF0 0002A4B0  90 01 00 64 */	stw r0, 0x64(r1)
@@ -1016,7 +1018,7 @@
 /* 80061120 0002A6E0  4E 80 00 20 */	blr 
 .endfn keyAdd
 
-.fn isKeyMove, global
+.fn isKeyMove, local
 /* 80061124 0002A6E4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80061128 0002A6E8  7C 08 02 A6 */	mflr r0
 /* 8006112C 0002A6EC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1038,7 +1040,7 @@
 /* 8006116C 0002A72C  4E 80 00 20 */	blr 
 .endfn isKeyMove
 
-.fn waitKeyMove, global
+.fn waitKeyMove, local
 /* 80061170 0002A730  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80061174 0002A734  7C 08 02 A6 */	mflr r0
 /* 80061178 0002A738  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1058,7 +1060,7 @@
 /* 800611AC 0002A76C  4E 80 00 20 */	blr 
 .endfn waitKeyMove
 
-.fn shake, global
+.fn shake, local
 /* 800611B0 0002A770  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 800611B4 0002A774  7C 08 02 A6 */	mflr r0
 /* 800611B8 0002A778  90 01 00 A4 */	stw r0, 0xa4(r1)
@@ -1255,7 +1257,7 @@
 /* 800614B4 0002AA74  4E 80 00 20 */	blr 
 .endfn shake
 
-.fn stopShake, global
+.fn stopShake, local
 /* 800614B8 0002AA78  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800614BC 0002AA7C  7C 08 02 A6 */	mflr r0
 /* 800614C0 0002AA80  38 60 00 00 */	li r3, 0
@@ -1280,7 +1282,6 @@
 
 .balign 8
 
-#seems like it should be in a camera related file
 .obj lbl_80529D90, global
 	.4byte lbl_80668A08
 	.4byte select

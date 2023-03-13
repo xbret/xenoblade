@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn getPcHp, global
+.fn getPcHp, local
 /* 801FE8F4 001C7EB4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801FE8F8 001C7EB8  7C 08 02 A6 */	mflr r0
 /* 801FE8FC 001C7EBC  38 80 00 01 */	li r4, 1
@@ -46,7 +46,7 @@
 /* 801FE98C 001C7F4C  4E 80 00 20 */	blr 
 .endfn getPcHp
 
-.fn getPcHpRate, global
+.fn getPcHpRate, local
 /* 801FE990 001C7F50  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801FE994 001C7F54  7C 08 02 A6 */	mflr r0
 /* 801FE998 001C7F58  38 80 00 01 */	li r4, 1
@@ -106,7 +106,7 @@
 /* 801FEA68 001C8028  4E 80 00 20 */	blr 
 .endfn getPcHpRate
 
-.fn getEneHp, global
+.fn getEneHp, local
 /* 801FEA6C 001C802C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801FEA70 001C8030  7C 08 02 A6 */	mflr r0
 /* 801FEA74 001C8034  38 80 00 01 */	li r4, 1
@@ -150,7 +150,7 @@
 /* 801FEB04 001C80C4  4E 80 00 20 */	blr 
 .endfn getEneHp
 
-.fn getEneHpRate, global
+.fn getEneHpRate, local
 /* 801FEB08 001C80C8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801FEB0C 001C80CC  7C 08 02 A6 */	mflr r0
 /* 801FEB10 001C80D0  38 80 00 01 */	li r4, 1
@@ -210,7 +210,7 @@
 /* 801FEBE0 001C81A0  4E 80 00 20 */	blr 
 .endfn getEneHpRate
 
-.fn setPcBtlState, global
+.fn setPcBtlState, local
 /* 801FEBE4 001C81A4  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 801FEBE8 001C81A8  7C 08 02 A6 */	mflr r0
 /* 801FEBEC 001C81AC  90 01 00 74 */	stw r0, 0x74(r1)
@@ -351,7 +351,7 @@
 /* 801FEDE0 001C83A0  4E 80 00 20 */	blr 
 .endfn setPcBtlState
 
-.fn clearPcBtlState, global
+.fn clearPcBtlState, local
 /* 801FEDE4 001C83A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801FEDE8 001C83A8  7C 08 02 A6 */	mflr r0
 /* 801FEDEC 001C83AC  38 80 00 01 */	li r4, 1
@@ -390,7 +390,7 @@
 /* 801FEE6C 001C842C  4E 80 00 20 */	blr 
 .endfn clearPcBtlState
 
-.fn setEneBtlState, global
+.fn setEneBtlState, local
 /* 801FEE70 001C8430  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 801FEE74 001C8434  7C 08 02 A6 */	mflr r0
 /* 801FEE78 001C8438  90 01 00 74 */	stw r0, 0x74(r1)
@@ -526,7 +526,7 @@
 /* 801FF05C 001C861C  4E 80 00 20 */	blr 
 .endfn setEneBtlState
 
-.fn clearEneBtlState, global
+.fn clearEneBtlState, local
 /* 801FF060 001C8620  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801FF064 001C8624  7C 08 02 A6 */	mflr r0
 /* 801FF068 001C8628  38 80 00 01 */	li r4, 1
@@ -565,7 +565,7 @@
 /* 801FF0E8 001C86A8  4E 80 00 20 */	blr 
 .endfn clearEneBtlState
 
-.fn onPcArtsAttack, global
+.fn onPcArtsAttack, local
 /* 801FF0EC 001C86AC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801FF0F0 001C86B0  7C 08 02 A6 */	mflr r0
 /* 801FF0F4 001C86B4  38 80 00 01 */	li r4, 1
@@ -658,7 +658,7 @@
 /* 801FF248 001C8808  4E 80 00 20 */	blr 
 .endfn onPcArtsAttack
 
-.fn onEneArtsAttack, global
+.fn onEneArtsAttack, local
 /* 801FF24C 001C880C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801FF250 001C8810  7C 08 02 A6 */	mflr r0
 /* 801FF254 001C8814  38 80 00 01 */	li r4, 1
@@ -791,7 +791,7 @@
 /* 801FF438 001C89F8  4E 80 00 20 */	blr 
 .endfn onEneArtsAttack
 
-.fn synchro, global
+.fn synchro, local
 /* 801FF43C 001C89FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801FF440 001C8A00  7C 08 02 A6 */	mflr r0
 /* 801FF444 001C8A04  38 80 00 01 */	li r4, 1
@@ -832,7 +832,7 @@
 /* 801FF4CC 001C8A8C  4E 80 00 20 */	blr 
 .endfn synchro
 
-.fn learnArts, global
+.fn learnArts, local
 /* 801FF4D0 001C8A90  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801FF4D4 001C8A94  7C 08 02 A6 */	mflr r0
 /* 801FF4D8 001C8A98  38 80 00 01 */	li r4, 1

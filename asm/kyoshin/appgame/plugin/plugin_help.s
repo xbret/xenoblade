@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_802AEBC4, global
+.fn func_802AEBC4, local
 /* 802AEBC4 00278184  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802AEBC8 00278188  7C 08 02 A6 */	mflr r0
 /* 802AEBCC 0027818C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -34,7 +34,7 @@
 /* 802AEC2C 002781EC  4E 80 00 20 */	blr 
 .endfn func_802AEBC4
 
-.fn func_802AEC30, global
+.fn func_802AEC30, local
 /* 802AEC30 002781F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802AEC34 002781F4  7C 08 02 A6 */	mflr r0
 /* 802AEC38 002781F8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -66,7 +66,7 @@
 /* 802AEC98 00278258  4E 80 00 20 */	blr 
 .endfn func_802AEC30
 
-.fn func_802AEC9C, global
+.fn func_802AEC9C, local
 /* 802AEC9C 0027825C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802AECA0 00278260  7C 08 02 A6 */	mflr r0
 /* 802AECA4 00278264  90 01 00 14 */	stw r0, 0x14(r1)

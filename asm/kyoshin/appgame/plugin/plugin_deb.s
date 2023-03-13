@@ -2,12 +2,12 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn put, global
+.fn put, local
 /* 8003A05C 0000361C  38 60 00 00 */	li r3, 0
 /* 8003A060 00003620  4E 80 00 20 */	blr 
 .endfn put
 
-.fn performanceStart, global
+.fn performanceStart, local
 /* 8003A064 00003624  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8003A068 00003628  7C 08 02 A6 */	mflr r0
 /* 8003A06C 0000362C  38 80 00 01 */	li r4, 1
@@ -23,7 +23,7 @@
 /* 8003A094 00003654  4E 80 00 20 */	blr 
 .endfn performanceStart
 
-.fn performanceEnd, global
+.fn performanceEnd, local
 /* 8003A098 00003658  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8003A09C 0000365C  7C 08 02 A6 */	mflr r0
 /* 8003A0A0 00003660  38 80 00 01 */	li r4, 1

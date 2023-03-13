@@ -160,7 +160,7 @@
 /* 80069B6C 0003312C  38 61 00 08 */	addi r3, r1, 8
 /* 80069B70 00033130  38 84 6C 1C */	addi r4, r4, lbl_804F6C1C@l
 /* 80069B74 00033134  4C C6 31 82 */	crclr 6
-/* 80069B78 00033138  4B FD CC A1 */	bl CTaskGameEff_vsnprintf
+/* 80069B78 00033138  4B FD CC A1 */	bl monolith_vsnprintf
 .L_80069B7C:
 /* 80069B7C 0003313C  38 61 00 08 */	addi r3, r1, 8
 /* 80069B80 00033140  48 3E 53 C5 */	bl func_8044EF44

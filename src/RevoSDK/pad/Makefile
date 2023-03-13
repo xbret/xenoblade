@@ -1,5 +1,5 @@
 PAD_FILES:=\
-	$(BUILD_DIR)/asm/RevoSDK/pad/Pad.o\
+	$(BUILD_DIR)/src/RevoSDK/pad/Pad.o\
 
 
 DEPENDS += $(PAD_FILES:.o=.d)

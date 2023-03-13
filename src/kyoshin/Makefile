@@ -131,7 +131,9 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/realtimeevt/CREvtModelPc.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/realtimeevt/CREvtEffect.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/realtimeevt/CREvtObj.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/plugin_smth.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/plugin_time.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/plugin_btl.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/code_801862C0.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuPTGauge.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/code_80187F14.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuSelectShop.o\

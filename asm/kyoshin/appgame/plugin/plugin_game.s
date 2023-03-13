@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_801ABDE4, global
+.fn func_801ABDE4, local
 /* 801ABDE4 001753A4  38 60 00 00 */	li r3, 0
 /* 801ABDE8 001753A8  4E 80 00 20 */	blr 
 .endfn func_801ABDE4

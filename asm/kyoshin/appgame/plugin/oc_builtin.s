@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn isExistProperty, global
+.fn isExistProperty, local
 /* 8003A1AC 0000376C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8003A1B0 00003770  7C 08 02 A6 */	mflr r0
 /* 8003A1B4 00003774  38 80 00 01 */	li r4, 1
@@ -37,7 +37,7 @@
 .endfn isExistProperty
 
 
-.fn isExistSelector, global
+.fn isExistSelector, local
 /* 8003A228 000037E8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8003A22C 000037EC  7C 08 02 A6 */	mflr r0
 /* 8003A230 000037F0  38 80 00 01 */	li r4, 1
@@ -72,7 +72,7 @@
 .endfn isExistSelector
 
 
-.fn getOCName, global
+.fn getOCName, local
 /* 8003A2A4 00003864  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8003A2A8 00003868  7C 08 02 A6 */	mflr r0
 /* 8003A2AC 0000386C  90 01 00 24 */	stw r0, 0x24(r1)

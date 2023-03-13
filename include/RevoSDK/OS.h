@@ -28,6 +28,7 @@ extern "C" {
 //#include "RevoSDK/os/OSPlayRecord.h"
 //#include "RevoSDK/os/OSReset.h"
 //#include "RevoSDK/os/OSRtc.h"
+#include "RevoSDK/os/OSSerial.h"
 //#include "RevoSDK/os/OSStateFlags.h"
 //#include "RevoSDK/os/OSStateTM.h"
 //#include "RevoSDK/os/OSSync.h"
