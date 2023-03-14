@@ -14,6 +14,8 @@ namespace mm {
     extern const float epsilon;
     extern const float rad2deg;
     extern const float deg2rad;
+    extern const float huge;
+    extern const float hugeminus;
 }
 
 #endif

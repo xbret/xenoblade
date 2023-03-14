@@ -25,15 +25,3 @@
 .obj lbl_80659DF0, global
 	.skip 0x50
 .endobj lbl_80659DF0
-
-.obj lbl_80659E40, global
-	.skip 0x18
-.endobj lbl_80659E40
-
-.obj lbl_80659E58, global
-	.skip 0xC
-.endobj lbl_80659E58
-
-.obj lbl_80659E64, global
-	.skip 0x64
-.endobj lbl_80659E64

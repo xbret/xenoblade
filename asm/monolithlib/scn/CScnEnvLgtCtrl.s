@@ -2162,7 +2162,7 @@
 /* 804C29C4 0048BF84  38 C6 32 00 */	addi r6, r6, __vt__CScnEnvLgtCtrl@l
 /* 804C29C8 0048BF88  38 00 FF FF */	li r0, -1
 /* 804C29CC 0048BF8C  90 C3 00 00 */	stw r6, 0(r3)
-/* 804C29D0 0048BF90  3D 00 80 66 */	lis r8, lbl_80659E58@ha
+/* 804C29D0 0048BF90  3D 00 80 66 */	lis r8, black__Q22mm4Col3@ha
 /* 804C29D4 0048BF94  7C 76 1B 78 */	mr r22, r3
 /* 804C29D8 0048BF98  38 C4 00 1C */	addi r6, r4, 0x1c
 /* 804C29DC 0048BF9C  91 23 00 04 */	stw r9, 4(r3)
@@ -2186,7 +2186,7 @@
 /* 804C2A24 0048BFE4  D0 23 00 C8 */	stfs f1, 0xc8(r3)
 /* 804C2A28 0048BFE8  D0 03 00 CC */	stfs f0, 0xcc(r3)
 /* 804C2A2C 0048BFEC  B0 03 00 BC */	sth r0, 0xbc(r3)
-/* 804C2A30 0048BFF0  84 E8 9E 58 */	lwzu r7, lbl_80659E58@l(r8)
+/* 804C2A30 0048BFF0  84 E8 9E 58 */	lwzu r7, black__Q22mm4Col3@l(r8)
 /* 804C2A34 0048BFF4  80 08 00 04 */	lwz r0, 4(r8)
 /* 804C2A38 0048BFF8  90 03 00 94 */	stw r0, 0x94(r3)
 /* 804C2A3C 0048BFFC  90 E3 00 90 */	stw r7, 0x90(r3)

@@ -111,11 +111,6 @@ protected:
 
 MTRand* getInstanceMTRand();
 
-MTRand* getInstanceMTRand(){
-    static MTRand instance;
-    return &instance;
-}
-
 bool func_80435C9C(s16*, s16*);
 
 }

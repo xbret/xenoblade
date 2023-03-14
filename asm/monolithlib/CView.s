@@ -4157,8 +4157,8 @@
 
 
 .fn sinit_8043FB70, local
-/* 8043FB70 00409130  3C C0 80 66 */	lis r6, lbl_80659EC8@ha
-/* 8043FB74 00409134  84 A6 9E C8 */	lwzu r5, lbl_80659EC8@l(r6)
+/* 8043FB70 00409130  3C C0 80 66 */	lis r6, white__Q22mm4Col4@ha
+/* 8043FB74 00409134  84 A6 9E C8 */	lwzu r5, white__Q22mm4Col4@l(r6)
 /* 8043FB78 00409138  3D 20 80 66 */	lis r9, lbl_8065A0C8@ha
 /* 8043FB7C 0040913C  3C E0 80 66 */	lis r7, lbl_8065A0D8@ha
 /* 8043FB80 00409140  C0 62 C7 60 */	lfs f3, float_8066CAE0@sda21(r2)

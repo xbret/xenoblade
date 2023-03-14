@@ -7,8 +7,10 @@ MM_FILES:=\
 	$(BUILD_DIR)/asm/monolib_mm/code_80435D28.o\
 	$(BUILD_DIR)/asm/monolib_mm/code_80435DF8.o\
 	$(BUILD_DIR)/src/monolib_mm/MathConstants.o\
-	$(BUILD_DIR)/asm/monolib_mm/Random.o\
-	$(BUILD_DIR)/asm/monolib_mm/code_80436138.o\
+	$(BUILD_DIR)/src/monolib_mm/Random.o\
+	$(BUILD_DIR)/src/monolib_mm/FloatValid.o\
+	$(BUILD_DIR)/src/monolib_mm/Col3.o\
+	$(BUILD_DIR)/src/monolib_mm/Col4.o\
 	$(BUILD_DIR)/asm/monolib_mm/code_80436260.o\
 	$(BUILD_DIR)/asm/monolib_mm/code_80436E84.o\
 	$(BUILD_DIR)/asm/monolib_mm/code_80436F20.o\

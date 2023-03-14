@@ -3,17 +3,25 @@
 
 //Part of monolithlib? (namespace according to XCDE)
 namespace ml{
+    using namespace mm::mtl;
 
-    u32 mtRand(){
-        return mm::mtl::getInstanceMTRand()->rand();
+    //func_80435EA4
+    void mtInit(u32 seed){
+        getInstanceMTRand()->mtInit(seed);
+    }
+
+    int mtRand(){
+        return getInstanceMTRand()->rand();
     }
 
 
     //Random range (max only)
     //Max is exclusive
     int mtRand(int max){
+        MTRand* mtRand = getInstanceMTRand();
+
         if(max != 0){
-    	    int randVal = mm::mtl::getInstanceMTRand()->rand();
+    	    int randVal = mtRand->rand();
     	    return randVal % max;
         }else{
     	    return 0;
@@ -23,14 +31,18 @@ namespace ml{
     //Random range (min and max)
     //Min is inclusive, max is exclusive
     int mtRand(int min, int max){
+        MTRand* mtRand = getInstanceMTRand();
         int range = max - min;
+        int result = 0;
 
         if(range != 0){
-    	    int randVal = mm::mtl::getInstanceMTRand()->rand();
-    	    return (randVal % range) + min;
+    	    int randVal = mtRand->rand();
+    	    result = (randVal % range);
         }else{
-    	    return min;
+    	    result = 0;
         }
+
+        return min + result; //wtf? why not just add it before?
     }
 
 }

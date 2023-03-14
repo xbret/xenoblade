@@ -4,6 +4,11 @@
 namespace mm{
 namespace mtl{
 
+    MTRand* getInstanceMTRand(){
+        static MTRand instance;
+        return &instance;
+    }
+
     //FUN_003e4740
     //FUN_002c29e4
     //FUN_0027229c

@@ -7,8 +7,6 @@
 extern "C" {
 #endif
 
-typedef unsigned short wchar_t;
-
 typedef struct lconv {
 	char* decimal_point;
 	char* thousands_sep;

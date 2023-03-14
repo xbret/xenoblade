@@ -1,3 +1,5 @@
+#pragma once
+
 namespace mm{
     struct Vec3f{
         float x;
