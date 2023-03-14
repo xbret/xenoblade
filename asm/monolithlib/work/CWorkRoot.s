@@ -9,7 +9,7 @@
 /* 80443B14 0040D0D4  38 00 00 00 */	li r0, 0
 /* 80443B18 0040D0D8  BF C1 00 08 */	stmw r30, 8(r1)
 /* 80443B1C 0040D0DC  90 0D BD 6C */	stw r0, lbl_80667EEC@sda21(r13)
-/* 80443B20 0040D0E0  4B FF 23 51 */	bl func_80435E70
+/* 80443B20 0040D0E0  4B FF 23 51 */	bl OSInitFastCast
 /* 80443B24 0040D0E4  4B F2 11 7D */	bl VIInit
 /* 80443B28 0040D0E8  3F E0 80 52 */	lis r31, CWorkRoot_strpool@ha
 /* 80443B2C 0040D0EC  3B FF 60 5C */	addi r31, r31, CWorkRoot_strpool@l

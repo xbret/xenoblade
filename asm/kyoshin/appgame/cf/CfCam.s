@@ -601,8 +601,8 @@
 .endfn func_8006BEC0
 
 .fn func_8006BEC4, global
-/* 8006BEC4 00035484  3C A0 80 66 */	lis r5, lbl_80659DB0@ha
-/* 8006BEC8 00035488  84 85 9D B0 */	lwzu r4, lbl_80659DB0@l(r5)
+/* 8006BEC4 00035484  3C A0 80 66 */	lis r5, zero__Q22mm4Vec3@ha
+/* 8006BEC8 00035488  84 85 9D B0 */	lwzu r4, zero__Q22mm4Vec3@l(r5)
 /* 8006BECC 0003548C  80 05 00 04 */	lwz r0, 4(r5)
 /* 8006BED0 00035490  90 03 00 04 */	stw r0, 4(r3)
 /* 8006BED4 00035494  90 83 00 00 */	stw r4, 0(r3)

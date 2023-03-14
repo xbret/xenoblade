@@ -1,4 +1,5 @@
 MONOLITHLIB_FILES:=\
+	$(BUILD_DIR)/asm/monolithlib/code_8043738C.o\
 	$(BUILD_DIR)/asm/monolithlib/work/CWorkThread.o\
 	$(BUILD_DIR)/asm/monolithlib/CProc.o\
 	$(BUILD_DIR)/asm/monolithlib/CProcRoot.o\

@@ -11,16 +11,16 @@
 /* 804D6C74 004A0234  3D 60 80 57 */	lis r11, __vt__CETrail@ha
 /* 804D6C78 004A0238  3D 80 80 57 */	lis r12, __vt___reslist_base_CETrail_POINT@ha
 /* 804D6C7C 004A023C  39 6B 34 88 */	addi r11, r11, __vt__CETrail@l
-/* 804D6C80 004A0240  3F 00 80 66 */	lis r24, lbl_80659DB0@ha
+/* 804D6C80 004A0240  3F 00 80 66 */	lis r24, zero__Q22mm4Vec3@ha
 /* 804D6C84 004A0244  39 8C 34 AC */	addi r12, r12, __vt___reslist_base_CETrail_POINT@l
 /* 804D6C88 004A0248  91 63 01 84 */	stw r11, 0x184(r3)
-/* 804D6C8C 004A024C  3A F8 9D B0 */	addi r23, r24, lbl_80659DB0@l
+/* 804D6C8C 004A024C  3A F8 9D B0 */	addi r23, r24, zero__Q22mm4Vec3@l
 /* 804D6C90 004A0250  3D 60 80 57 */	lis r11, __vt__reslist_CETrail_POINT@ha
 /* 804D6C94 004A0254  91 83 00 00 */	stw r12, 0(r3)
 /* 804D6C98 004A0258  7D 5F 53 78 */	mr r31, r10
 /* 804D6C9C 004A025C  C0 02 D5 84 */	lfs f0, float_8066D904@sda21(r2)
 /* 804D6CA0 004A0260  7C 99 23 78 */	mr r25, r4
-/* 804D6CA4 004A0264  C0 78 9D B0 */	lfs f3, lbl_80659DB0@l(r24)
+/* 804D6CA4 004A0264  C0 78 9D B0 */	lfs f3, zero__Q22mm4Vec3@l(r24)
 /* 804D6CA8 004A0268  7C BA 2B 78 */	mr r26, r5
 /* 804D6CAC 004A026C  C0 57 00 04 */	lfs f2, 4(r23)
 /* 804D6CB0 004A0270  7C DB 33 78 */	mr r27, r6
@@ -280,10 +280,10 @@
 /* 804D7038 004A05F8  38 00 00 02 */	li r0, 2
 .L_804D703C:
 /* 804D703C 004A05FC  90 18 01 60 */	stw r0, 0x160(r24)
-/* 804D7040 004A0600  3C A0 80 66 */	lis r5, lbl_80659DF0@ha
+/* 804D7040 004A0600  3C A0 80 66 */	lis r5, zero__Q22mm4Vec4@ha
 /* 804D7044 004A0604  39 61 00 50 */	addi r11, r1, 0x50
 /* 804D7048 004A0608  7F 03 C3 78 */	mr r3, r24
-/* 804D704C 004A060C  84 85 9D F0 */	lwzu r4, lbl_80659DF0@l(r5)
+/* 804D704C 004A060C  84 85 9D F0 */	lwzu r4, zero__Q22mm4Vec4@l(r5)
 /* 804D7050 004A0610  80 05 00 04 */	lwz r0, 4(r5)
 /* 804D7054 004A0614  90 18 01 78 */	stw r0, 0x178(r24)
 /* 804D7058 004A0618  90 98 01 74 */	stw r4, 0x174(r24)
@@ -307,11 +307,11 @@
 .endfn __dt__804D6C60
 
 .fn func_804D70A0, global
-/* 804D70A0 004A0660  3C A0 80 66 */	lis r5, lbl_80659DB0@ha
+/* 804D70A0 004A0660  3C A0 80 66 */	lis r5, zero__Q22mm4Vec3@ha
 /* 804D70A4 004A0664  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 804D70A8 004A0668  38 85 9D B0 */	addi r4, r5, lbl_80659DB0@l
+/* 804D70A8 004A0668  38 85 9D B0 */	addi r4, r5, zero__Q22mm4Vec3@l
 /* 804D70AC 004A066C  C0 02 D5 84 */	lfs f0, float_8066D904@sda21(r2)
-/* 804D70B0 004A0670  C0 65 9D B0 */	lfs f3, lbl_80659DB0@l(r5)
+/* 804D70B0 004A0670  C0 65 9D B0 */	lfs f3, zero__Q22mm4Vec3@l(r5)
 /* 804D70B4 004A0674  C0 44 00 04 */	lfs f2, 4(r4)
 /* 804D70B8 004A0678  C0 24 00 08 */	lfs f1, 8(r4)
 /* 804D70BC 004A067C  D0 61 00 08 */	stfs f3, 8(r1)

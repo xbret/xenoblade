@@ -47,7 +47,5 @@ SECTIONS
 FORCEFILES 
 {
     targsupp.o
-    Color.o
-    code_80436138.o
     CNReqtaskSave.o
 }
