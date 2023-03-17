@@ -1,20 +1,22 @@
-# Xenoblade
-WIP Decompilation of Xenoblade (JP)
+Xenoblade[![Build Status]][actions] ![Code Progress] ![Data Progress]
+========
 
----
+[Build Status]: https://github.com/xbret/xenoblade/actions/workflows/build.yml/badge.svg
+[actions]: https://github.com/xbret/xenoblade/actions/workflows/build.yml
+[Code Progress]: https://img.shields.io/endpoint?label=Code&url=https%3A%2F%2Fprogress.deco.mp%2Fdata%2Fxenoblade%2Fjp%2Fdol%2F%3Fmode%3Dshield%26measure%3Dcode
+[Data Progress]: https://img.shields.io/endpoint?label=Data&url=https%3A%2F%2Fprogress.deco.mp%2Fdata%2Fxenoblade%2Fjp%2Fdol%2F%3Fmode%3Dshield%26measure%3Ddata
 
-### Important
+Decompilation of Xenoblade (JP)
 
-**The DOL this repository builds can be shifted!**
 
-*This means you are now able to* ***add*** */* ***remove*** <br>
-*code for* ***modding*** */* ***research*** *as you see fit.*
-
-<br>
 
 It builds the following DOL:
 
 xenoblade.jp.dol: `sha1: a564033aee46988743d8f5e6fdc50a8c65791160`
+
+> **Note**  
+> The ROM this repository builds can be shifted. You are able to add
+> and remove code as you see fit, for modding or research purposes.
 
 ## Building
 
@@ -31,5 +33,3 @@ xenoblade.jp.dol: `sha1: a564033aee46988743d8f5e6fdc50a8c65791160`
 2. Run `make -j` in a command prompt or terminal.
 	- -j Allows make to use multiple threads, speeding up the process.
 
-* OPTIONAL:
-	- To generate a linker map (takes a considerable amount of time), run `make MAPGENFLAG=1 -j`
