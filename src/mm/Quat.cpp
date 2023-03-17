@@ -1,4 +1,4 @@
-#include "monolib_mm/Quat.hpp"
+#include "mm/Quat.hpp"
 
 namespace mm{
     Quat Quat::zero = Quat(0,0,0,0);

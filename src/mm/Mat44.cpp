@@ -1,4 +1,4 @@
-#include "monolib_mm/Matrix.hpp"
+#include "mm/Matrix.hpp"
 
 namespace mm{
 	//TODO: see if it's possible to have these use arrays instead

@@ -937,7 +937,7 @@
 /* 80352578 0031BB38  48 00 14 99 */	bl OSSetMEM2ArenaHi
 .L_8035257C:
 /* 8035257C 0031BB3C  48 00 AA 85 */	bl __OSInitIPCBuffer
-/* 80352580 0031BB40  48 00 03 21 */	bl OSExceptiOnInit
+/* 80352580 0031BB40  48 00 03 21 */	bl OSExceptionInit
 /* 80352584 0031BB44  48 00 8D 4D */	bl __OSInitSystemCall
 /* 80352588 0031BB48  48 00 08 39 */	bl __OSInitAlarm
 /* 8035258C 0031BB4C  48 00 6B F5 */	bl __OSModuleInit
@@ -1155,7 +1155,7 @@
 .endfn OSInit
 
 .balign 16, 0
-.fn OSExceptiOnInit, global
+.fn OSExceptionInit, global
 /* 803528A0 0031BE60  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803528A4 0031BE64  7C 08 02 A6 */	mflr r0
 /* 803528A8 0031BE68  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1325,7 +1325,7 @@
 /* 80352B14 0031C0D4  7C 08 03 A6 */	mtlr r0
 /* 80352B18 0031C0D8  38 21 00 40 */	addi r1, r1, 0x40
 /* 80352B1C 0031C0DC  4E 80 00 20 */	blr
-.endfn OSExceptiOnInit
+.endfn OSExceptionInit
 
 .balign 16, 0
 .fn __OSDBIntegrator, global

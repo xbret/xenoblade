@@ -332,11 +332,11 @@
 
 .fn func_804EE558, global
 /* 804EE558 004B7B18  90 A3 00 00 */	stw r5, 0(r3)
-/* 804EE55C 004B7B1C  3D 00 80 66 */	lis r8, lbl_80659FB8@ha
+/* 804EE55C 004B7B1C  3D 00 80 66 */	lis r8, identity__Q22mm5Mat34@ha
 /* 804EE560 004B7B20  2C 05 00 1A */	cmpwi r5, 0x1a
 /* 804EE564 004B7B24  90 83 00 04 */	stw r4, 4(r3)
 /* 804EE568 004B7B28  98 E3 00 08 */	stb r7, 8(r3)
-/* 804EE56C 004B7B2C  84 E8 9F B8 */	lwzu r7, lbl_80659FB8@l(r8)
+/* 804EE56C 004B7B2C  84 E8 9F B8 */	lwzu r7, identity__Q22mm5Mat34@l(r8)
 /* 804EE570 004B7B30  80 08 00 04 */	lwz r0, 4(r8)
 /* 804EE574 004B7B34  90 03 00 1C */	stw r0, 0x1c(r3)
 /* 804EE578 004B7B38  90 E3 00 18 */	stw r7, 0x18(r3)
@@ -408,11 +408,11 @@
 .fn func_804EE658, global
 /* 804EE658 004B7C18  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804EE65C 004B7C1C  7C 08 02 A6 */	mflr r0
-/* 804EE660 004B7C20  3C E0 80 66 */	lis r7, lbl_80659FB8@ha
+/* 804EE660 004B7C20  3C E0 80 66 */	lis r7, identity__Q22mm5Mat34@ha
 /* 804EE664 004B7C24  90 01 00 24 */	stw r0, 0x24(r1)
 /* 804EE668 004B7C28  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 804EE66C 004B7C2C  7C 7F 1B 78 */	mr r31, r3
-/* 804EE670 004B7C30  84 A7 9F B8 */	lwzu r5, lbl_80659FB8@l(r7)
+/* 804EE670 004B7C30  84 A7 9F B8 */	lwzu r5, identity__Q22mm5Mat34@l(r7)
 /* 804EE674 004B7C34  C0 03 00 24 */	lfs f0, 0x24(r3)
 /* 804EE678 004B7C38  80 07 00 04 */	lwz r0, 4(r7)
 /* 804EE67C 004B7C3C  90 03 00 1C */	stw r0, 0x1c(r3)

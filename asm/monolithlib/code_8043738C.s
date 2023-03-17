@@ -10,13 +10,13 @@
 /* 8043739C 0040095C  3C 80 00 07 */	lis r4, 0x0006FFE0@ha
 /* 804373A0 00400960  80 AD 9C C0 */	lwz r5, lbl_80665E40@sda21(r13)
 /* 804373A4 00400964  38 84 FF E0 */	addi r4, r4, 0x0006FFE0@l
-/* 804373A8 00400968  4B FF CC 99 */	bl func_80434040
+/* 804373A8 00400968  4B FF CC 99 */	bl heap_createRegion
 /* 804373AC 0040096C  38 00 00 01 */	li r0, 1
 /* 804373B0 00400970  90 6D 9C C4 */	stw r3, lbl_80665E44@sda21(r13)
 /* 804373B4 00400974  7C 64 1B 78 */	mr r4, r3
 /* 804373B8 00400978  38 60 01 00 */	li r3, 0x100
 /* 804373BC 0040097C  90 0D BC F0 */	stw r0, lbl_80667E70@sda21(r13)
-/* 804373C0 00400980  4B FF D6 C1 */	bl mm_malloc_1
+/* 804373C0 00400980  4B FF D6 C1 */	bl heap_allocate_1
 /* 804373C4 00400984  90 6D BC F4 */	stw r3, lbl_80667E74@sda21(r13)
 /* 804373C8 00400988  38 80 20 00 */	li r4, 0x2000
 /* 804373CC 0040098C  80 6D 9C C4 */	lwz r3, lbl_80665E44@sda21(r13)
@@ -157,10 +157,10 @@
 /* 804375B0 00400B70  4E 80 00 20 */	blr 
 .endfn __dt__80437550
 
-.fn func_804375B4, global
+.fn getMemBlockIndex, global
 /* 804375B4 00400B74  80 6D 9C C4 */	lwz r3, lbl_80665E44@sda21(r13)
 /* 804375B8 00400B78  4E 80 00 20 */	blr 
-.endfn func_804375B4
+.endfn getMemBlockIndex
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0

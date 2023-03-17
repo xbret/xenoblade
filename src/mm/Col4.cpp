@@ -1,4 +1,4 @@
-#include "monolib_mm/Color.hpp"
+#include "mm/Color.hpp"
 
 namespace mm{
     Col4 Col4::white = Col4(1,1,1,1);

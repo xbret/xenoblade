@@ -17,7 +17,7 @@ NW4R :=\
 	$(BUILD_DIR)/src/nw4r/nw4r.a\
 
 MM :=\
-	$(BUILD_DIR)/src/monolib_mm/monolib_mm.a\
+	$(BUILD_DIR)/src/mm/mm.a\
 
 MONOLITHLIB :=\
 	$(BUILD_DIR)/src/monolithlib/monolithlib.a\

@@ -839,13 +839,13 @@
 
 
 .fn sinit_80436E08, local
-/* 80436E08 004003C8  3C C0 80 66 */	lis r6, lbl_80659F88@ha
-/* 80436E0C 004003CC  3C 80 80 66 */	lis r4, lbl_80659FB8@ha
+/* 80436E08 004003C8  3C C0 80 66 */	lis r6, zero__Q22mm5Mat34@ha
+/* 80436E0C 004003CC  3C 80 80 66 */	lis r4, identity__Q22mm5Mat34@ha
 /* 80436E10 004003D0  C0 22 C6 C0 */	lfs f1, float_8066CA40@sda21(r2)
-/* 80436E14 004003D4  38 A6 9F 88 */	addi r5, r6, lbl_80659F88@l
-/* 80436E18 004003D8  38 64 9F B8 */	addi r3, r4, lbl_80659FB8@l
+/* 80436E14 004003D4  38 A6 9F 88 */	addi r5, r6, zero__Q22mm5Mat34@l
+/* 80436E18 004003D8  38 64 9F B8 */	addi r3, r4, identity__Q22mm5Mat34@l
 /* 80436E1C 004003DC  C0 02 C6 C8 */	lfs f0, float_8066CA48@sda21(r2)
-/* 80436E20 004003E0  D0 26 9F 88 */	stfs f1, lbl_80659F88@l(r6)
+/* 80436E20 004003E0  D0 26 9F 88 */	stfs f1, zero__Q22mm5Mat34@l(r6)
 /* 80436E24 004003E4  D0 25 00 04 */	stfs f1, 4(r5)
 /* 80436E28 004003E8  D0 25 00 08 */	stfs f1, 8(r5)
 /* 80436E2C 004003EC  D0 25 00 0C */	stfs f1, 0xc(r5)
@@ -857,7 +857,7 @@
 /* 80436E44 00400404  D0 25 00 24 */	stfs f1, 0x24(r5)
 /* 80436E48 00400408  D0 25 00 28 */	stfs f1, 0x28(r5)
 /* 80436E4C 0040040C  D0 25 00 2C */	stfs f1, 0x2c(r5)
-/* 80436E50 00400410  D0 04 9F B8 */	stfs f0, lbl_80659FB8@l(r4)
+/* 80436E50 00400410  D0 04 9F B8 */	stfs f0, identity__Q22mm5Mat34@l(r4)
 /* 80436E54 00400414  D0 23 00 04 */	stfs f1, 4(r3)
 /* 80436E58 00400418  D0 23 00 08 */	stfs f1, 8(r3)
 /* 80436E5C 0040041C  D0 23 00 0C */	stfs f1, 0xc(r3)
@@ -909,13 +909,13 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj lbl_80659F88, global
+.obj zero__Q22mm5Mat34, global
 	.skip 0x30
-.endobj lbl_80659F88
+.endobj zero__Q22mm5Mat34
 
-.obj lbl_80659FB8, global
+.obj identity__Q22mm5Mat34, global
 	.skip 0x30
-.endobj lbl_80659FB8
+.endobj identity__Q22mm5Mat34
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

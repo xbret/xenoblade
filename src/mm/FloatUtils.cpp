@@ -1,8 +1,8 @@
-#include "monolib_mm/FloatValid.hpp"
+#include "mm/FloatUtils.hpp"
 
 namespace mm{
 
-bool func_80435FA4(float f) {
+bool isInvalidFloat(float f) {
 	bool result = false;
 	u32 val = FLOAT_TO_HEX(f);
 	

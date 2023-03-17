@@ -2,6 +2,8 @@
 
 namespace mm{
     struct Vec3{
+        Vec3(){}
+        
         Vec3(float x, float y, float z){
             this->x = x;
             this->y = y;
@@ -17,6 +19,8 @@ namespace mm{
         static Vec3 unitY;
         static Vec3 unitZ;
         static Vec3 unit;
+
+        bool isInvalid() const;
     };
 
     struct Vec3i{

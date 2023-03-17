@@ -1,4 +1,4 @@
-HeapListEntry* func_804339B8(HeapListEntry** memoryAllocHeapArray_ptr, HeapListEntry* arg1) {
+HeapListEntry* func_804339B8(HeapListEntry** memRegionArray_ptr, HeapListEntry* arg1) {
     HeapListEntry* var_r4 = arg1;
     HeapListEntry* temp_r31 = var_r4->unk8;
     
@@ -8,7 +8,7 @@ HeapListEntry* func_804339B8(HeapListEntry** memoryAllocHeapArray_ptr, HeapListE
     }
     
     var_r4->unk8 = (HeapListEntry*)0xA7FB94C7; //why this number? weird
-    HeapListEntry* var_r5 = memoryAllocHeapArray_ptr[0];
+    HeapListEntry* var_r5 = memRegionArray_ptr[0];
 
     while(var_r5 != NULL){
         if (var_r4 < var_r5) {
@@ -20,8 +20,8 @@ HeapListEntry* func_804339B8(HeapListEntry** memoryAllocHeapArray_ptr, HeapListE
             var_r5->prev = var_r4;
             var_r4->next = var_r5;
         
-            if (var_r5 == memoryAllocHeapArray_ptr[0]) {
-                memoryAllocHeapArray_ptr[0] = var_r4;
+            if (var_r5 == memRegionArray_ptr[0]) {
+                memRegionArray_ptr[0] = var_r4;
             }
             
             return var_r4;
@@ -32,16 +32,16 @@ HeapListEntry* func_804339B8(HeapListEntry** memoryAllocHeapArray_ptr, HeapListE
 
 
     if (var_r5 == NULL) {
-        if (memoryAllocHeapArray_ptr[0] == NULL) {
-            memoryAllocHeapArray_ptr[0] = var_r4;
-            memoryAllocHeapArray_ptr[1] = var_r4;
+        if (memRegionArray_ptr[0] == NULL) {
+            memRegionArray_ptr[0] = var_r4;
+            memRegionArray_ptr[1] = var_r4;
             var_r4->prev = (HeapListEntry*)NULL;
             var_r4->next = (HeapListEntry*)NULL;
         } else {
-            memoryAllocHeapArray_ptr[1]->next = var_r4;
-            var_r4->prev = memoryAllocHeapArray_ptr[1];
+            memRegionArray_ptr[1]->next = var_r4;
+            var_r4->prev = memRegionArray_ptr[1];
             var_r4->next = (HeapListEntry*)NULL;
-            memoryAllocHeapArray_ptr[1] = var_r4;
+            memRegionArray_ptr[1] = var_r4;
         }
     }
     return var_r4;

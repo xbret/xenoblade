@@ -1,4 +1,4 @@
-#include "monolib_mm/PtrSingleton.hpp"
+#include "mm/PtrSingleton.hpp"
 
 template <typename T>
 static T* PtrSingleton::GetInstance(){

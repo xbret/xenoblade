@@ -2,7 +2,7 @@
 
 #include "types.h"
 #include "stl/math.h"
-#include "monolib_mm/MathConstants.hpp"
+#include "mm/MathConstants.hpp"
 
 #define FLOAT_LARGE 1e14f
 #define FLOAT_SMALL -1e14f
@@ -11,4 +11,6 @@
 #define FLOAT_NAN 0xFFFFFFFF
 #define FLOAT_TO_HEX(f) (*(u32*)&f)
 
-bool func_80435FA4(float f);
+namespace mm{
+    bool isInvalidFloat(float f);
+}

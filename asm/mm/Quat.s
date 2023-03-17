@@ -289,17 +289,17 @@
 
 
 .fn sinit_80437350, local
-/* 80437350 00400910  3C C0 80 66 */	lis r6, lbl_8065A068@ha
-/* 80437354 00400914  3C 80 80 66 */	lis r4, lbl_8065A078@ha
+/* 80437350 00400910  3C C0 80 66 */	lis r6, zero__Q22mm4Quat@ha
+/* 80437354 00400914  3C 80 80 66 */	lis r4, identity__Q22mm4Quat@ha
 /* 80437358 00400918  C0 22 C6 EC */	lfs f1, float_8066CA6C@sda21(r2)
-/* 8043735C 0040091C  38 A6 A0 68 */	addi r5, r6, lbl_8065A068@l
-/* 80437360 00400920  38 64 A0 78 */	addi r3, r4, lbl_8065A078@l
+/* 8043735C 0040091C  38 A6 A0 68 */	addi r5, r6, zero__Q22mm4Quat@l
+/* 80437360 00400920  38 64 A0 78 */	addi r3, r4, identity__Q22mm4Quat@l
 /* 80437364 00400924  C0 02 C6 F0 */	lfs f0, float_8066CA70@sda21(r2)
-/* 80437368 00400928  D0 26 A0 68 */	stfs f1, lbl_8065A068@l(r6)
+/* 80437368 00400928  D0 26 A0 68 */	stfs f1, zero__Q22mm4Quat@l(r6)
 /* 8043736C 0040092C  D0 25 00 04 */	stfs f1, 4(r5)
 /* 80437370 00400930  D0 25 00 08 */	stfs f1, 8(r5)
 /* 80437374 00400934  D0 25 00 0C */	stfs f1, 0xc(r5)
-/* 80437378 00400938  D0 24 A0 78 */	stfs f1, lbl_8065A078@l(r4)
+/* 80437378 00400938  D0 24 A0 78 */	stfs f1, identity__Q22mm4Quat@l(r4)
 /* 8043737C 0040093C  D0 23 00 04 */	stfs f1, 4(r3)
 /* 80437380 00400940  D0 23 00 08 */	stfs f1, 8(r3)
 /* 80437384 00400944  D0 03 00 0C */	stfs f0, 0xc(r3)
@@ -341,13 +341,13 @@
 
 
 
-.obj lbl_8065A068, global
+.obj zero__Q22mm4Quat, global
 	.skip 0x10
-.endobj lbl_8065A068
+.endobj zero__Q22mm4Quat
 
-.obj lbl_8065A078, global
+.obj identity__Q22mm4Quat, global
 	.skip 0x10
-.endobj lbl_8065A078
+.endobj identity__Q22mm4Quat
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

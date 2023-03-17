@@ -14,7 +14,7 @@ extern "C" {
 #include "RevoSDK/os/OSContext.h"
 #include "RevoSDK/os/OSError.h"
 #include "RevoSDK/os/OSExec.h"
-//#include "RevoSDK/os/OSFastCast.h"
+#include "RevoSDK/os/OSFastCast.h"
 //#include "RevoSDK/os/OSFatal.h"
 //#include "RevoSDK/os/OSFont.h"
 #include "RevoSDK/os/OSGlobals.h"

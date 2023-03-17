@@ -17,12 +17,12 @@
 .fn func_804D928C, global
 /* 804D928C 004A284C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804D9290 004A2850  7C 08 02 A6 */	mflr r0
-/* 804D9294 004A2854  3C C0 80 66 */	lis r6, lbl_80659FB8@ha
+/* 804D9294 004A2854  3C C0 80 66 */	lis r6, identity__Q22mm5Mat34@ha
 /* 804D9298 004A2858  C0 22 D6 14 */	lfs f1, float_8066D994@sda21(r2)
 /* 804D929C 004A285C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804D92A0 004A2860  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804D92A4 004A2864  7C 7F 1B 78 */	mr r31, r3
-/* 804D92A8 004A2868  84 A6 9F B8 */	lwzu r5, lbl_80659FB8@l(r6)
+/* 804D92A8 004A2868  84 A6 9F B8 */	lwzu r5, identity__Q22mm5Mat34@l(r6)
 /* 804D92AC 004A286C  80 06 00 04 */	lwz r0, 4(r6)
 /* 804D92B0 004A2870  90 03 00 04 */	stw r0, 4(r3)
 /* 804D92B4 004A2874  90 A3 00 00 */	stw r5, 0(r3)
