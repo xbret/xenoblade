@@ -17,10 +17,10 @@
 /* 80163FE4 0012D5A4  38 60 00 00 */	li r3, 0
 /* 80163FE8 0012D5A8  48 00 00 D4 */	b .L_801640BC
 .L_80163FEC:
-/* 80163FEC 0012D5AC  48 2D 35 C9 */	bl getMemBlockIndex
+/* 80163FEC 0012D5AC  48 2D 35 C9 */	bl getMemRegionIndex
 /* 80163FF0 0012D5B0  7C 64 1B 78 */	mr r4, r3
 /* 80163FF4 0012D5B4  38 60 00 78 */	li r3, 0x78
-/* 80163FF8 0012D5B8  48 2D 0A 65 */	bl heap_allocate
+/* 80163FF8 0012D5B8  48 2D 0A 65 */	bl heap_malloc
 /* 80163FFC 0012D5BC  2C 03 00 00 */	cmpwi r3, 0
 /* 80164000 0012D5C0  7C 7F 1B 78 */	mr r31, r3
 /* 80164004 0012D5C4  41 82 00 A0 */	beq .L_801640A4
@@ -83,10 +83,10 @@
 /* 801640D4 0012D694  4B FF 90 00 */	b __dt__CCol6CheckBat
 .endfn func_801640D0
 
-.fn CCol6Hint_OnInit, global
+.fn CCol6Hint_OnFileEvent, global
 /* 801640D8 0012D698  38 63 FF 94 */	addi r3, r3, -108
 /* 801640DC 0012D69C  4B FF 9A 2C */	b func_8015DB08
-.endfn CCol6Hint_OnInit
+.endfn CCol6Hint_OnFileEvent
 
 .fn func_801640E0, global
 /* 801640E0 0012D6A0  38 63 FF 94 */	addi r3, r3, -108
@@ -103,10 +103,10 @@
 /* 801640F4 0012D6B4  4B FF 94 A0 */	b __dt__CCol6Hint
 .endfn func_801640F0
 
-.fn CCol6System_OnInit, global
+.fn CCol6System_OnFileEvent, global
 /* 801640F8 0012D6B8  38 63 FF 94 */	addi r3, r3, -108
 /* 801640FC 0012D6BC  4B FF C0 1C */	b func_80160118
-.endfn CCol6System_OnInit
+.endfn CCol6System_OnFileEvent
 
 .fn func_80164100, global
 /* 80164100 0012D6C0  38 63 FF 94 */	addi r3, r3, -108

@@ -20,6 +20,61 @@ s32 lbl_80667E50;
 
 
 
+/*Attempts to add a new memory region entry into the array, looking for the first unused slot. If
+successful, it returns the corresponding index.*/
+static inline int addMemRegion(HeapEntry* head, u32 size, const char* name){
+    //Find the first unused entry to use for the new region
+    for(int i = 0; i < 0x50; i++){
+        MemRegion* entry = getMemRegion(i);
+       //Check if this slot is empty
+        if (entry->startAddress == 0) {
+            i = (lbl_80667E50++ << 8) | i;
+            entry->regionIndex = i;
+            entry->startAddress = (u32)head;
+            entry->endAddress = (u32)head + size;
+            entry->unk8 = nullptr;
+            entry->unkC = nullptr;
+
+            //Initialize the head entry of the heap
+            head->init(size,i);
+            
+            entry->head = head;
+            entry->tail = head;
+            entry->unk18 = 0;
+            entry->size = size;
+            entry->freeBytes = size;
+            entry->unk6C = 0;
+            entry->nameLength = strlen(name);
+            strcpy(entry->name, name); //Copy the name to the struct variable
+            return i;
+        }
+    }
+    
+    return -1; //No available slot was found, return -1
+}
+
+static inline HeapEntry* findLargestEntry(u32 memRegionIndex){
+    HeapEntry* regionHead = getMemRegion(memRegionIndex)->head;      
+        
+        if (regionHead == nullptr) {
+            return nullptr;
+        } else {
+            HeapEntry* temp = regionHead;
+            
+            while(temp != nullptr) {
+                if (regionHead->size < temp->size) {
+                    regionHead = temp;
+                }
+                temp = temp->next;
+            }
+        }
+    return regionHead;
+}
+
+static inline HeapEntry* createRegionHeadHeapEntry(u32 memRegionIndex, u32 size){
+    return (HeapEntry *)allocate(getMemRegion(memRegionIndex),0,size,0x10);
+}
+
 static inline HeapEntry* unkInline1(MemRegion* memRegion, HeapEntry* entry){
      HeapEntry* prevEntry = entry->prev;
             
@@ -41,6 +96,11 @@ static inline HeapEntry* unkInline1(MemRegion* memRegion, HeapEntry* entry){
     }
 
     return entry->next;
+}
+
+void SetArenaMemorySize(u32 val, bool b){
+    arenaMemorySize = val;
+    lbl_80667E58 = b;
 }
 
 
@@ -143,6 +203,24 @@ HeapEntry* func_80433AA8(MemRegion* memRegion, HeapEntry* entry) {
     }
     
     return entry;
+}
+
+
+int createRegion(u32 memRegionIndex, u32 size, const char* name) {
+    u32 newSize = size + sizeof(HeapEntry);
+    
+    
+    if (size == 0) {
+        HeapEntry* temp;
+        HeapEntry* pLargestEntry = findLargestEntry(memRegionIndex);
+      
+        if (pLargestEntry == nullptr) newSize = 0;
+        else newSize = pLargestEntry->size - sizeof(HeapEntry);
+    }
+
+    int regionIndex = addMemRegion(createRegionHeadHeapEntry(memRegionIndex,newSize), newSize, name);
+    lbl_80667E54 = false;
+    return regionIndex;
 }
 
 

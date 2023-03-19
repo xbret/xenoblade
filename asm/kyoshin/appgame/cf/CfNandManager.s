@@ -4687,10 +4687,10 @@
 /* 8023FFFC 002095BC  38 60 00 00 */	li r3, 0
 /* 80240000 002095C0  48 00 00 40 */	b .L_80240040
 .L_80240004:
-/* 80240004 002095C4  48 1F 75 B1 */	bl getMemBlockIndex
+/* 80240004 002095C4  48 1F 75 B1 */	bl getMemRegionIndex
 /* 80240008 002095C8  7C 64 1B 78 */	mr r4, r3
 /* 8024000C 002095CC  38 60 01 94 */	li r3, 0x194
-/* 80240010 002095D0  48 1F 4A 4D */	bl heap_allocate
+/* 80240010 002095D0  48 1F 4A 4D */	bl heap_malloc
 /* 80240014 002095D4  2C 03 00 00 */	cmpwi r3, 0
 /* 80240018 002095D8  7C 7F 1B 78 */	mr r31, r3
 /* 8024001C 002095DC  41 82 00 10 */	beq .L_8024002C
@@ -5111,10 +5111,10 @@
 .endfn sinit_802405F0
 
 
-.fn CfNandManager_OnInit, global
+.fn CfNandManager_OnFileEvent, global
 /* 802405F4 00209BB4  38 63 FF AC */	addi r3, r3, -84
 /* 802405F8 00209BB8  4B FF DE DC */	b __dt__8023E4D4
-.endfn CfNandManager_OnInit
+.endfn CfNandManager_OnFileEvent
 
 .fn func_802405FC, global
 /* 802405FC 00209BBC  38 63 FF AC */	addi r3, r3, -84
@@ -5224,7 +5224,7 @@
 	.4byte 0xFFFFFFAC
 	.4byte func_802405FC
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CfNandManager_OnInit
+	.4byte CfNandManager_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5

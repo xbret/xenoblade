@@ -1664,7 +1664,7 @@
 /* 802B7958 00280F18  4E 80 00 20 */	blr 
 .endfn func_802B7948
 
-.fn CTitle_OnInit, global
+.fn CTitle_OnFileEvent, global
 /* 802B795C 00280F1C  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802B7960 00280F20  7C 08 02 A6 */	mflr r0
 /* 802B7964 00280F24  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1744,7 +1744,7 @@
 /* 802B7A84 00281044  7C 08 03 A6 */	mtlr r0
 /* 802B7A88 00281048  38 21 00 40 */	addi r1, r1, 0x40
 /* 802B7A8C 0028104C  4E 80 00 20 */	blr 
-.endfn CTitle_OnInit
+.endfn CTitle_OnFileEvent
 
 .fn func_802B7A90, global
 /* 802B7A90 00281050  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1945,7 +1945,7 @@
 	.4byte 0
 	.4byte __dt__CTitle
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CTitle_OnInit
+	.4byte CTitle_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -2690,7 +2690,7 @@
 
 .obj "@eti_8003389C", local
 .hidden "@eti_8003389C"
-	.4byte CTitle_OnInit
+	.4byte CTitle_OnFileEvent
 	.4byte 0x00000134
 	.4byte "@etb_8001BD28"
 .endobj "@eti_8003389C"

@@ -1025,7 +1025,7 @@
 .endobj __EarlySizeTable
 
 .obj __EarlyCoefTable, local
-	.float 0.4 #0x3ECCCCCD
+	.float 0.4
 	.float -1.0
 	.float 0.3 #0x3E99999A
 	.float 0.5

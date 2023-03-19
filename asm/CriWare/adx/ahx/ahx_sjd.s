@@ -545,27 +545,39 @@
 /* 8038CED8 00356498  4E 80 00 20 */	blr 
 .endfn AHXSJD_GetDecNumSmpl
 
-.fn func_8038CEDC, global
+.fn AHXSJD_EntryFltFunc, global
 /* 8038CEDC 0035649C  90 83 00 54 */	stw r4, 0x54(r3)
 /* 8038CEE0 003564A0  90 A3 00 58 */	stw r5, 0x58(r3)
 /* 8038CEE4 003564A4  4E 80 00 20 */	blr
-.endfn func_8038CEDC
+.endfn AHXSJD_EntryFltFunc
 
-.fn func_8038CEE8, global
+.fn AHXSJD_SetExtPrm, global
 /* 8038CEE8 003564A8  80 63 00 00 */	lwz r3, 0(r3)
 /* 8038CEEC 003564AC  48 00 19 18 */	b AHXDCD_SetExtPrm
-.endfn func_8038CEE8
+.endfn AHXSJD_SetExtPrm
 
-.fn func_8038CEF0, global
+.fn AHXSJD_SetDecSmpl, global
 /* 8038CEF0 003564B0  90 83 00 34 */	stw r4, 0x34(r3)
 /* 8038CEF4 003564B4  4E 80 00 20 */	blr
-.endfn func_8038CEF0
+.endfn AHXSJD_SetDecSmpl
 
-.fn func_8038CEF8, global
+.fn AHXSJD_TermSupply, global
 /* 8038CEF8 003564B8  38 00 00 01 */	li r0, 1
 /* 8038CEFC 003564BC  90 03 00 0C */	stw r0, 0xc(r3)
 /* 8038CF00 003564C0  4E 80 00 20 */	blr 
-.endfn func_8038CEF8
+.endfn AHXSJD_TermSupply
+
+.fn AHXSJD_SetLnkSw, global
+/* 8038CF04 003564C4  2C 04 00 00 */	cmpwi r4, 0
+/* 8038CF08 003564C8  40 82 00 10 */	bne .L_8038CF18
+/* 8038CF0C 003564CC  38 00 00 00 */	li r0, 0
+/* 8038CF10 003564D0  90 03 00 38 */	stw r0, 0x38(r3)
+/* 8038CF14 003564D4  4E 80 00 20 */	blr
+.L_8038CF18:
+/* 8038CF18 003564D8  38 00 00 01 */	li r0, 1
+/* 8038CF1C 003564DC  90 03 00 38 */	stw r0, 0x38(r3)
+/* 8038CF20 003564E0  4E 80 00 20 */	blr 
+.endfn AHXSJD_SetLnkSw
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

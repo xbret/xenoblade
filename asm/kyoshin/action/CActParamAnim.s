@@ -10324,7 +10324,7 @@
 
 
 .obj float_80668784, global
-	.float 0.4 #0x3ECCCCCD
+	.float 0.4
 .endobj float_80668784
 
 

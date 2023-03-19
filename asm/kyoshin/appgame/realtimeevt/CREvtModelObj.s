@@ -2055,10 +2055,10 @@
 /* 80183700 0014CCC0  4E 80 00 20 */	blr 
 .endfn func_801836E4
 
-.fn CREvtModelObj_OnInit, global
+.fn CREvtModelObj_OnFileEvent, global
 /* 80183704 0014CCC4  38 63 FF C8 */	addi r3, r3, -56
 /* 80183708 0014CCC8  4B FF FE CC */	b func_801835D4
-.endfn CREvtModelObj_OnInit
+.endfn CREvtModelObj_OnFileEvent
 
 .fn func_8018370C, global
 /* 8018370C 0014CCCC  38 63 FF C8 */	addi r3, r3, -56
@@ -2204,7 +2204,7 @@
 	.4byte 0xFFFFFFC8
 	.4byte func_8018370C
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CREvtModelObj_OnInit
+	.4byte CREvtModelObj_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5

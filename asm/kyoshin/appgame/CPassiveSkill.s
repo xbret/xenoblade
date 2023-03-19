@@ -11193,7 +11193,7 @@
 /* 8026DE88 00237448  4E 80 00 20 */	blr 
 .endfn func_8026DD84
 
-.fn CPassiveSkill_OnInit, global
+.fn CPassiveSkill_OnFileEvent, global
 /* 8026DE8C 0023744C  94 21 FE 50 */	stwu r1, -0x1b0(r1)
 /* 8026DE90 00237450  7C 08 02 A6 */	mflr r0
 /* 8026DE94 00237454  90 01 01 B4 */	stw r0, 0x1b4(r1)
@@ -11384,7 +11384,7 @@
 /* 8026E164 00237724  7C 08 03 A6 */	mtlr r0
 /* 8026E168 00237728  38 21 01 B0 */	addi r1, r1, 0x1b0
 /* 8026E16C 0023772C  4E 80 00 20 */	blr 
-.endfn CPassiveSkill_OnInit
+.endfn CPassiveSkill_OnFileEvent
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -11668,7 +11668,7 @@
 	.4byte 0
 	.4byte __dt__UI_CPassiveSkill
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CPassiveSkill_OnInit
+	.4byte CPassiveSkill_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -13247,7 +13247,7 @@
 
 .obj "@eti_800305B4", local
 .hidden "@eti_800305B4"
-	.4byte CPassiveSkill_OnInit
+	.4byte CPassiveSkill_OnFileEvent
 	.4byte 0x000002E4
 	.4byte "@etb_80017CF4"
 .endobj "@eti_800305B4"

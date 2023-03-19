@@ -1,5 +1,4 @@
-#ifndef _MM_MATHCONSTANTS_HPP
-#define _MM_MATHCONSTANTS_HPP
+#pragma once
 
 #include "types.h"
 
@@ -17,5 +16,3 @@ namespace mm {
     extern const float huge;
     extern const float hugeminus;
 }
-
-#endif

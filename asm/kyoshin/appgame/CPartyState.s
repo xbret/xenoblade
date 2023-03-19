@@ -1612,7 +1612,7 @@
 /* 801FE4A8 001C7A68  4E 80 00 20 */	blr 
 .endfn func_801FE39C
 
-.fn CPartyState_OnInit, global
+.fn CPartyState_OnFileEvent, global
 /* 801FE4AC 001C7A6C  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 801FE4B0 001C7A70  7C 08 02 A6 */	mflr r0
 /* 801FE4B4 001C7A74  90 01 00 A4 */	stw r0, 0xa4(r1)
@@ -1892,7 +1892,7 @@
 /* 801FE8E8 001C7EA8  7C 08 03 A6 */	mtlr r0
 /* 801FE8EC 001C7EAC  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 801FE8F0 001C7EB0  4E 80 00 20 */	blr 
-.endfn CPartyState_OnInit
+.endfn CPartyState_OnFileEvent
 
 
 
@@ -1964,7 +1964,7 @@
 	.4byte 0
 	.4byte __dt__CPartyState
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CPartyState_OnInit
+	.4byte CPartyState_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -2436,7 +2436,7 @@
 
 .obj "@eti_8002C954", local
 .hidden "@eti_8002C954"
-	.4byte CPartyState_OnInit
+	.4byte CPartyState_OnFileEvent
 	.4byte 0x00000448
 	.4byte "@etb_800128E8"
 .endobj "@eti_8002C954"

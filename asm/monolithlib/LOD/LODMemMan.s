@@ -5691,7 +5691,7 @@
 /* 80471E98 0043B458  4E 80 00 20 */	blr 
 .endfn func_80471CDC
 
-.fn LODMemMan_OnInit, global
+.fn LODMemMan_OnFileEvent, global
 /* 80471E9C 0043B45C  80 A3 00 30 */	lwz r5, 0x30(r3)
 /* 80471EA0 0043B460  80 04 00 04 */	lwz r0, 4(r4)
 /* 80471EA4 0043B464  7C 05 00 40 */	cmplw r5, r0
@@ -5704,7 +5704,7 @@
 .L_80471EC0:
 /* 80471EC0 0043B480  38 60 00 01 */	li r3, 1
 /* 80471EC4 0043B484  4E 80 00 20 */	blr 
-.endfn LODMemMan_OnInit
+.endfn LODMemMan_OnFileEvent
 
 .fn func_80471EC8, global
 /* 80471EC8 0043B488  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -9144,7 +9144,7 @@
 	.4byte 0
 	.4byte __dt__LOD_LODMemMan
 	.4byte IWorkEvent_WorkEvent1
-	.4byte LODMemMan_OnInit
+	.4byte LODMemMan_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -9453,7 +9453,7 @@
 
 
 .obj float_8066CF38, global
-	.float 0.4 #0x3ECCCCCD
+	.float 0.4
 .endobj float_8066CF38
 
 

@@ -1189,10 +1189,10 @@
 /* 80181A48 0014B008  4E 80 00 20 */	blr 
 .endfn func_80181988
 
-.fn CREvtModelMap_OnInit, global
+.fn CREvtModelMap_OnFileEvent, global
 /* 80181A4C 0014B00C  38 63 FF C8 */	addi r3, r3, -56
 /* 80181A50 0014B010  4B FF FF 38 */	b func_80181988
-.endfn CREvtModelMap_OnInit
+.endfn CREvtModelMap_OnFileEvent
 
 .fn func_80181A54, global
 /* 80181A54 0014B014  38 63 FF C8 */	addi r3, r3, -56
@@ -1284,7 +1284,7 @@
 	.4byte 0xFFFFFFC8
 	.4byte func_80181A54
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CREvtModelMap_OnInit
+	.4byte CREvtModelMap_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5

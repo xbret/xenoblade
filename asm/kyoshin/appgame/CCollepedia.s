@@ -3743,7 +3743,7 @@
 /* 80256508 0021FAC8  4E 80 00 20 */	blr 
 .endfn func_8025641C
 
-.fn CCollepedia_OnInit, global
+.fn CCollepedia_OnFileEvent, global
 /* 8025650C 0021FACC  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 80256510 0021FAD0  7C 08 02 A6 */	mflr r0
 /* 80256514 0021FAD4  90 01 00 84 */	stw r0, 0x84(r1)
@@ -3775,7 +3775,7 @@
 /* 8025657C 0021FB3C  48 20 8B 45 */	bl func_8045F0C0
 /* 80256580 0021FB40  7C 64 1B 78 */	mr r4, r3
 /* 80256584 0021FB44  38 60 08 58 */	li r3, 0x858
-/* 80256588 0021FB48  48 1D E4 D5 */	bl heap_allocate
+/* 80256588 0021FB48  48 1D E4 D5 */	bl heap_malloc
 /* 8025658C 0021FB4C  2C 03 00 00 */	cmpwi r3, 0
 /* 80256590 0021FB50  41 82 00 08 */	beq .L_80256598
 /* 80256594 0021FB54  4B EC FA F1 */	bl func_80126084
@@ -4029,7 +4029,7 @@
 /* 8025695C 0021FF1C  7C 08 03 A6 */	mtlr r0
 /* 80256960 0021FF20  38 21 00 80 */	addi r1, r1, 0x80
 /* 80256964 0021FF24  4E 80 00 20 */	blr 
-.endfn CCollepedia_OnInit
+.endfn CCollepedia_OnFileEvent
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -4218,7 +4218,7 @@
 	.4byte 0
 	.4byte __dt__CCollepedia
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CCollepedia_OnInit
+	.4byte CCollepedia_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -5188,7 +5188,7 @@
 
 .obj "@eti_8002FA38", local
 .hidden "@eti_8002FA38"
-	.4byte CCollepedia_OnInit
+	.4byte CCollepedia_OnFileEvent
 	.4byte 0x0000045C
 	.4byte "@etb_80017108"
 .endobj "@eti_8002FA38"

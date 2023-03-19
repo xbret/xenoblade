@@ -445,7 +445,7 @@
 /* 804DE98C 004A7F4C  4E 80 00 20 */	blr 
 .endfn func_804DE948
 
-.fn CPackItem_OnInit, global
+.fn CPackItem_OnFileEvent, global
 /* 804DE990 004A7F50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DE994 004A7F54  7C 08 02 A6 */	mflr r0
 /* 804DE998 004A7F58  90 01 00 14 */	stw r0, 0x14(r1)
@@ -480,7 +480,7 @@
 /* 804DE9FC 004A7FBC  7C 08 03 A6 */	mtlr r0
 /* 804DEA00 004A7FC0  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DEA04 004A7FC4  4E 80 00 20 */	blr 
-.endfn CPackItem_OnInit
+.endfn CPackItem_OnFileEvent
 
 #Calculates a 64 bit hash of the given filename, used for finding the file
 #in the pkb file using the hash table in the pkh file.
@@ -581,7 +581,7 @@
 	.4byte 0
 	.4byte __dt__CPackItem
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CPackItem_OnInit
+	.4byte CPackItem_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -702,7 +702,7 @@
 
 .obj "@eti_80038978", local
 .hidden "@eti_80038978"
-	.4byte CPackItem_OnInit
+	.4byte CPackItem_OnFileEvent
 	.4byte 0x00000078
 	.4byte "@etb_80020928"
 .endobj "@eti_80038978"

@@ -4224,7 +4224,7 @@
 /* 802055E4 001CEBA4  4E 80 00 20 */	blr 
 .endfn func_802052A8
 
-.fn CEquipChange_OnInit, global
+.fn CEquipChange_OnFileEvent, global
 /* 802055E8 001CEBA8  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 802055EC 001CEBAC  7C 08 02 A6 */	mflr r0
 /* 802055F0 001CEBB0  90 01 00 84 */	stw r0, 0x84(r1)
@@ -4485,7 +4485,7 @@
 /* 802059DC 001CEF9C  7C 08 03 A6 */	mtlr r0
 /* 802059E0 001CEFA0  38 21 00 80 */	addi r1, r1, 0x80
 /* 802059E4 001CEFA4  4E 80 00 20 */	blr
-.endfn CEquipChange_OnInit
+.endfn CEquipChange_OnFileEvent
 
 .fn sinit_802059E8, local
 /* 802059E8 001CEFA8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -4763,7 +4763,7 @@
 	.4byte 0
 	.4byte __dt__CEquipChange
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CEquipChange_OnInit
+	.4byte CEquipChange_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -5517,7 +5517,7 @@
 
 .obj "@eti_8002CD2C", local
 .hidden "@eti_8002CD2C"
-	.4byte CEquipChange_OnInit
+	.4byte CEquipChange_OnFileEvent
 	.4byte 0x00000400
 	.4byte "@etb_80012DE0"
 .endobj "@eti_8002CD2C"

@@ -65,7 +65,7 @@
 /* 80491F60 0045B520  48 00 02 09 */	bl func_80492168
 /* 80491F64 0045B524  80 9C 00 08 */	lwz r4, 8(r28)
 /* 80491F68 0045B528  38 60 20 10 */	li r3, 0x2010
-/* 80491F6C 0045B52C  4B FA 2B 15 */	bl heap_allocate_1
+/* 80491F6C 0045B52C  4B FA 2B 15 */	bl heap_malloc_1
 /* 80491F70 0045B530  3C 80 80 4C */	lis r4, __ct__CLight@ha
 /* 80491F74 0045B534  3C A0 80 49 */	lis r5, __dt__CLight@ha
 /* 80491F78 0045B538  38 84 02 80 */	addi r4, r4, __ct__CLight@l
@@ -76,7 +76,7 @@
 /* 80491F8C 0045B54C  90 7C 00 C0 */	stw r3, 0xc0(r28)
 /* 80491F90 0045B550  38 60 22 10 */	li r3, 0x2210
 /* 80491F94 0045B554  80 9C 00 08 */	lwz r4, 8(r28)
-/* 80491F98 0045B558  4B FA 2A E9 */	bl heap_allocate_1
+/* 80491F98 0045B558  4B FA 2A E9 */	bl heap_malloc_1
 /* 80491F9C 0045B55C  3C 80 80 3F */	lis r4, __ct__Q34nw4r3g3d8LightObjFv@ha
 /* 80491FA0 0045B560  3C A0 80 3F */	lis r5, __dt__Q34nw4r3g3d8LightObjFv@ha
 /* 80491FA4 0045B564  38 84 85 B8 */	addi r4, r4, __ct__Q34nw4r3g3d8LightObjFv@l
@@ -232,7 +232,7 @@
 /* 80492180 0045B740  93 C1 00 08 */	stw r30, 8(r1)
 /* 80492184 0045B744  7C 7E 1B 78 */	mr r30, r3
 /* 80492188 0045B748  1C 65 00 0C */	mulli r3, r5, 0xc
-/* 8049218C 0045B74C  4B FA 28 F5 */	bl heap_allocate_1
+/* 8049218C 0045B74C  4B FA 28 F5 */	bl heap_malloc_1
 /* 80492190 0045B750  2C 9F 00 00 */	cmpwi cr1, r31, 0
 /* 80492194 0045B754  90 7E 00 14 */	stw r3, 0x14(r30)
 /* 80492198 0045B758  38 60 00 00 */	li r3, 0
@@ -1332,7 +1332,7 @@
 /* 804930DC 0045C69C  7C 9E 23 78 */	mr r30, r4
 /* 804930E0 0045C6A0  80 83 00 08 */	lwz r4, 8(r3)
 /* 804930E4 0045C6A4  38 60 00 34 */	li r3, 0x34
-/* 804930E8 0045C6A8  4B FA 19 75 */	bl heap_allocate
+/* 804930E8 0045C6A8  4B FA 19 75 */	bl heap_malloc
 /* 804930EC 0045C6AC  2C 03 00 00 */	cmpwi r3, 0
 /* 804930F0 0045C6B0  41 82 00 08 */	beq .L_804930F8
 /* 804930F4 0045C6B4  48 00 15 85 */	bl func_80494678
@@ -1509,7 +1509,7 @@
 /* 80493330 0045C8F0  7C 9E 23 78 */	mr r30, r4
 /* 80493334 0045C8F4  80 83 00 08 */	lwz r4, 8(r3)
 /* 80493338 0045C8F8  38 60 00 3C */	li r3, 0x3c
-/* 8049333C 0045C8FC  4B FA 17 21 */	bl heap_allocate
+/* 8049333C 0045C8FC  4B FA 17 21 */	bl heap_malloc
 /* 80493340 0045C900  2C 03 00 00 */	cmpwi r3, 0
 /* 80493344 0045C904  41 82 00 08 */	beq .L_8049334C
 /* 80493348 0045C908  48 00 13 B5 */	bl func_804946FC
@@ -2787,7 +2787,7 @@
 
 
 .obj float_8066D1E8, global
-	.float 0.4 #0x3ECCCCCD
+	.float 0.4
 .endobj float_8066D1E8
 
 

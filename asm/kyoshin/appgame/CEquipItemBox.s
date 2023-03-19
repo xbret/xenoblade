@@ -12203,7 +12203,7 @@
 /* 8028D19C 0025675C  4E 80 00 20 */	blr 
 .endfn func_8028D0EC
 
-.fn CEquipItemBox_OnInit, global
+.fn CEquipItemBox_OnFileEvent, global
 /* 8028D1A0 00256760  94 21 FF 20 */	stwu r1, -0xe0(r1)
 /* 8028D1A4 00256764  7C 08 02 A6 */	mflr r0
 /* 8028D1A8 00256768  90 01 00 E4 */	stw r0, 0xe4(r1)
@@ -12792,7 +12792,7 @@
 /* 8028DAA4 00257064  7C 08 03 A6 */	mtlr r0
 /* 8028DAA8 00257068  38 21 00 E0 */	addi r1, r1, 0xe0
 /* 8028DAAC 0025706C  4E 80 00 20 */	blr
-.endfn CEquipItemBox_OnInit
+.endfn CEquipItemBox_OnFileEvent
 
 .fn sinit_8028DAB0, local
 /* 8028DAB0 00257070  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -13237,7 +13237,7 @@
 	.4byte 0
 	.4byte __dt__CEquipItemBox
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CEquipItemBox_OnInit
+	.4byte CEquipItemBox_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -15046,7 +15046,7 @@
 
 .obj "@eti_80031838", local
 .hidden "@eti_80031838"
-	.4byte CEquipItemBox_OnInit
+	.4byte CEquipItemBox_OnFileEvent
 	.4byte 0x00000910
 	.4byte "@etb_800192C8"
 .endobj "@eti_80031838"

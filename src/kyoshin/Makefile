@@ -1,7 +1,5 @@
 GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CGame.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/IWorkEvent.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/CGameRestart.o\
 	$(BUILD_DIR)/src/kyoshin/appgame/main.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/plugin_deb.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/plugin_wait.o\

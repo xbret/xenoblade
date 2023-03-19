@@ -747,7 +747,7 @@
 	.4byte 0
 	.4byte __dt__CItemBoxGridSubMenu
 	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5

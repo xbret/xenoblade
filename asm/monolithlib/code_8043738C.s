@@ -16,7 +16,7 @@
 /* 804373B4 00400974  7C 64 1B 78 */	mr r4, r3
 /* 804373B8 00400978  38 60 01 00 */	li r3, 0x100
 /* 804373BC 0040097C  90 0D BC F0 */	stw r0, lbl_80667E70@sda21(r13)
-/* 804373C0 00400980  4B FF D6 C1 */	bl heap_allocate_1
+/* 804373C0 00400980  4B FF D6 C1 */	bl heap_malloc_1
 /* 804373C4 00400984  90 6D BC F4 */	stw r3, lbl_80667E74@sda21(r13)
 /* 804373C8 00400988  38 80 20 00 */	li r4, 0x2000
 /* 804373CC 0040098C  80 6D 9C C4 */	lwz r3, lbl_80665E44@sda21(r13)
@@ -157,10 +157,10 @@
 /* 804375B0 00400B70  4E 80 00 20 */	blr 
 .endfn __dt__80437550
 
-.fn getMemBlockIndex, global
+.fn getMemRegionIndex, global
 /* 804375B4 00400B74  80 6D 9C C4 */	lwz r3, lbl_80665E44@sda21(r13)
 /* 804375B8 00400B78  4E 80 00 20 */	blr 
-.endfn getMemBlockIndex
+.endfn getMemRegionIndex
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0

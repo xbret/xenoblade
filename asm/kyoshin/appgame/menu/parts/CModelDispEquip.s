@@ -1734,7 +1734,7 @@
 /* 80200DDC 001CA39C  4E 80 00 20 */	blr 
 .endfn func_80200CE8
 
-.fn CModelDispEquip_OnInit, global
+.fn CModelDispEquip_OnFileEvent, global
 /* 80200DE0 001CA3A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80200DE4 001CA3A4  7C 08 02 A6 */	mflr r0
 /* 80200DE8 001CA3A8  38 E0 00 00 */	li r7, 0
@@ -1785,7 +1785,7 @@
 /* 80200E88 001CA448  7C 08 03 A6 */	mtlr r0
 /* 80200E8C 001CA44C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80200E90 001CA450  4E 80 00 20 */	blr 
-.endfn CModelDispEquip_OnInit
+.endfn CModelDispEquip_OnFileEvent
 
 .fn func_80200E94, global
 /* 80200E94 001CA454  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -2740,7 +2740,7 @@
 	.4byte 0
 	.4byte __dt__CModelDispEquip
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CModelDispEquip_OnInit
+	.4byte CModelDispEquip_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -3199,7 +3199,7 @@
 
 .obj "@eti_8002CA80", local
 .hidden "@eti_8002CA80"
-	.4byte CModelDispEquip_OnInit
+	.4byte CModelDispEquip_OnFileEvent
 	.4byte 0x000000B4
 	.4byte "@etb_80012A2C"
 .endobj "@eti_8002CA80"

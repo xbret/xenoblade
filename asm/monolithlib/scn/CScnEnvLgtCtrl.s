@@ -38,7 +38,7 @@
 /* 804C0C64 0048A224  4B FD 53 B5 */	bl func_80496018
 /* 804C0C68 0048A228  7C 64 1B 78 */	mr r4, r3
 /* 804C0C6C 0048A22C  38 60 00 60 */	li r3, 0x60
-/* 804C0C70 0048A230  4B F7 3E 11 */	bl heap_allocate_1
+/* 804C0C70 0048A230  4B F7 3E 11 */	bl heap_malloc_1
 /* 804C0C74 0048A234  90 7E 00 1C */	stw r3, 0x1c(r30)
 /* 804C0C78 0048A238  38 00 00 08 */	li r0, 8
 /* 804C0C7C 0048A23C  93 E3 00 00 */	stw r31, 0(r3)
@@ -358,7 +358,7 @@
 /* 804C10C0 0048A680  4B FD 4F 59 */	bl func_80496018
 /* 804C10C4 0048A684  7C 64 1B 78 */	mr r4, r3
 /* 804C10C8 0048A688  38 60 00 6C */	li r3, 0x6c
-/* 804C10CC 0048A68C  4B F7 39 91 */	bl heap_allocate
+/* 804C10CC 0048A68C  4B F7 39 91 */	bl heap_malloc
 /* 804C10D0 0048A690  2C 03 00 00 */	cmpwi r3, 0
 /* 804C10D4 0048A694  41 82 00 08 */	beq .L_804C10DC
 /* 804C10D8 0048A698  4B FD 7B 95 */	bl func_80498C6C
@@ -368,7 +368,7 @@
 /* 804C10E4 0048A6A4  4B FD 4F 35 */	bl func_80496018
 /* 804C10E8 0048A6A8  7C 64 1B 78 */	mr r4, r3
 /* 804C10EC 0048A6AC  38 60 00 84 */	li r3, 0x84
-/* 804C10F0 0048A6B0  4B F7 39 6D */	bl heap_allocate
+/* 804C10F0 0048A6B0  4B F7 39 6D */	bl heap_malloc
 /* 804C10F4 0048A6B4  2C 03 00 00 */	cmpwi r3, 0
 /* 804C10F8 0048A6B8  41 82 00 08 */	beq .L_804C1100
 /* 804C10FC 0048A6BC  4B FD 80 DD */	bl __ct__CScnBloom
@@ -6756,7 +6756,7 @@
 /* 804C6A98 00490058  40 82 00 28 */	bne .L_804C6AC0
 /* 804C6A9C 0049005C  7C 64 1B 78 */	mr r4, r3
 /* 804C6AA0 00490060  38 60 01 68 */	li r3, 0x168
-/* 804C6AA4 00490064  4B F6 DF B9 */	bl heap_allocate
+/* 804C6AA4 00490064  4B F6 DF B9 */	bl heap_malloc
 /* 804C6AA8 00490068  2C 03 00 00 */	cmpwi r3, 0
 /* 804C6AAC 0049006C  41 82 00 18 */	beq .L_804C6AC4
 /* 804C6AB0 00490070  7F C4 F3 78 */	mr r4, r30
@@ -9113,7 +9113,7 @@
 .balign 8
 
 .obj float_8066D780, global
-	.float 0.4 #0x3ECCCCCD
+	.float 0.4
 .endobj float_8066D780
 
 
@@ -9198,7 +9198,7 @@
 
 
 .obj float_8066D7D4, global
-	.float 0.4 #0x3ECCCCCD
+	.float 0.4
 .endobj float_8066D7D4
 
 

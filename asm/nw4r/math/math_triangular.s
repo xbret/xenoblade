@@ -220,7 +220,7 @@
 
 
 .obj gSinCosTbl__Q34nw4r4math6detail, global
-    .float 0 #0
+    .float 0
     .float 1.0
     .float 0.024541
     .float -0.00030099999
@@ -1255,7 +1255,7 @@
 .balign 8
 
 .obj "sArcTanTbl__Q34nw4r4math29@unnamed@math_triangular_cpp@", local
-    .float 0 #0
+    .float 0
     .float 1.2728254
     .float 1.2728254
     .float 1.2703458

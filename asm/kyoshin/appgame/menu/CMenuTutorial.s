@@ -110,7 +110,7 @@
 /* 8029A240 00263800  4E 80 00 20 */	blr 
 .endfn __dt__CMenuTutorial
 
-.fn func_8029A244, global
+.fn CMenuTutorial_Init, global
 /* 8029A244 00263804  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 8029A248 00263808  7C 08 02 A6 */	mflr r0
 /* 8029A24C 0026380C  3C 80 80 51 */	lis r4, CMenuTutorial_strpool@ha
@@ -156,7 +156,7 @@
 /* 8029A2EC 002638AC  98 1F 00 EB */	stb r0, 0xeb(r31)
 /* 8029A2F0 002638B0  4B F2 9C 61 */	bl __dt__CTitleAHelp
 /* 8029A2F4 002638B4  38 7F 00 B4 */	addi r3, r31, 0xb4
-/* 8029A2F8 002638B8  4B F2 9C AD */	bl func_801C3FA4
+/* 8029A2F8 002638B8  4B F2 9C AD */	bl CTitleAHelp_load
 /* 8029A2FC 002638BC  88 9F 00 ED */	lbz r4, 0xed(r31)
 /* 8029A300 002638C0  38 61 00 40 */	addi r3, r1, 0x40
 /* 8029A304 002638C4  38 A0 00 01 */	li r5, 1
@@ -222,7 +222,7 @@
 /* 8029A3F0 002639B0  7C 08 03 A6 */	mtlr r0
 /* 8029A3F4 002639B4  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 8029A3F8 002639B8  4E 80 00 20 */	blr 
-.endfn func_8029A244
+.endfn CMenuTutorial_Init
 
 .fn func_8029A3FC, global
 /* 8029A3FC 002639BC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -379,10 +379,10 @@
 /* 8029A604 00263BC4  38 60 00 00 */	li r3, 0
 /* 8029A608 00263BC8  48 00 00 3C */	b .L_8029A644
 .L_8029A60C:
-/* 8029A60C 00263BCC  48 19 CF A9 */	bl getMemBlockIndex
+/* 8029A60C 00263BCC  48 19 CF A9 */	bl getMemRegionIndex
 /* 8029A610 00263BD0  7C 64 1B 78 */	mr r4, r3
 /* 8029A614 00263BD4  38 60 00 F4 */	li r3, 0xf4
-/* 8029A618 00263BD8  48 19 A4 45 */	bl heap_allocate
+/* 8029A618 00263BD8  48 19 A4 45 */	bl heap_malloc
 /* 8029A61C 00263BDC  2C 03 00 00 */	cmpwi r3, 0
 /* 8029A620 00263BE0  41 82 00 10 */	beq .L_8029A630
 /* 8029A624 00263BE4  7F C4 F3 78 */	mr r4, r30
@@ -650,7 +650,7 @@
 	.4byte 0
 	.4byte __dt__CMenuTutorial
 	.4byte CChildListNode_Reset
-	.4byte func_8029A244
+	.4byte CMenuTutorial_Init
 	.4byte func_8029A3FC
 	.4byte func_8029A498
 	.4byte func_80101FB8
@@ -825,7 +825,7 @@
 
 .obj "@eti_8003209C", local
 .hidden "@eti_8003209C"
-	.4byte func_8029A244
+	.4byte CMenuTutorial_Init
 	.4byte 0x000001B8
 	.4byte "@etb_8001A0B8"
 .endobj "@eti_8003209C"

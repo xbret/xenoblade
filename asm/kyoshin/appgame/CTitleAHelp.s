@@ -62,7 +62,7 @@
 /* 801C3FA0 0018D560  4E 80 00 20 */	blr 
 .endfn __dt__CTitleAHelp
 
-.fn func_801C3FA4, global
+.fn CTitleAHelp_load, global
 /* 801C3FA4 0018D564  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801C3FA8 0018D568  7C 08 02 A6 */	mflr r0
 /* 801C3FAC 0018D56C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -82,7 +82,7 @@
 /* 801C3FE4 0018D5A4  7C 08 03 A6 */	mtlr r0
 /* 801C3FE8 0018D5A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 801C3FEC 0018D5AC  4E 80 00 20 */	blr 
-.endfn func_801C3FA4
+.endfn CTitleAHelp_load
 
 .fn func_801C3FF0, global
 /* 801C3FF0 0018D5B0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -771,7 +771,7 @@
 /* 801C4928 0018DEE8  4E 80 00 20 */	blr 
 .endfn func_801C48E0
 
-.fn CTitleAHelp_OnInit, global
+.fn CTitleAHelp_OnFileEvent, global
 /* 801C492C 0018DEEC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801C4930 0018DEF0  7C 08 02 A6 */	mflr r0
 /* 801C4934 0018DEF4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -884,7 +884,7 @@
 /* 801C4AD8 0018E098  7C 08 03 A6 */	mtlr r0
 /* 801C4ADC 0018E09C  38 21 00 20 */	addi r1, r1, 0x20
 /* 801C4AE0 0018E0A0  4E 80 00 20 */	blr
-.endfn CTitleAHelp_OnInit
+.endfn CTitleAHelp_OnFileEvent
 
 .fn sinit_801C4AE4, local
 /* 801C4AE4 0018E0A4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1402,7 +1402,7 @@
 	.4byte 0
 	.4byte __dt__CTitleAHelp
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CTitleAHelp_OnInit
+	.4byte CTitleAHelp_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -1600,7 +1600,7 @@
 
 .obj "@eti_8002B1F0", local
 .hidden "@eti_8002B1F0"
-	.4byte func_801C3FA4
+	.4byte CTitleAHelp_load
 	.4byte 0x0000004C
 	.4byte "@etb_80010930"
 .endobj "@eti_8002B1F0"
@@ -1670,7 +1670,7 @@
 
 .obj "@eti_8002B268", local
 .hidden "@eti_8002B268"
-	.4byte CTitleAHelp_OnInit
+	.4byte CTitleAHelp_OnFileEvent
 	.4byte 0x000001B8
 	.4byte "@etb_80010980"
 .endobj "@eti_8002B268"

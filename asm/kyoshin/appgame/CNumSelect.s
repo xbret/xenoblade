@@ -682,7 +682,7 @@
 /* 801EB704 001B4CC4  4E 80 00 20 */	blr 
 .endfn func_801EB644
 
-.fn CNumSelect_OnInit, global
+.fn CNumSelect_OnFileEvent, global
 /* 801EB708 001B4CC8  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 801EB70C 001B4CCC  7C 08 02 A6 */	mflr r0
 /* 801EB710 001B4CD0  90 01 00 44 */	stw r0, 0x44(r1)
@@ -933,7 +933,7 @@
 /* 801EBAC8 001B5088  7C 08 03 A6 */	mtlr r0
 /* 801EBACC 001B508C  38 21 00 40 */	addi r1, r1, 0x40
 /* 801EBAD0 001B5090  4E 80 00 20 */	blr 
-.endfn CNumSelect_OnInit
+.endfn CNumSelect_OnFileEvent
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -990,7 +990,7 @@
 	.4byte 0
 	.4byte __dt__CNumSelect
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CNumSelect_OnInit
+	.4byte CNumSelect_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -1277,7 +1277,7 @@
 
 .obj "@eti_8002BFC4", local
 .hidden "@eti_8002BFC4"
-	.4byte CNumSelect_OnInit
+	.4byte CNumSelect_OnFileEvent
 	.4byte 0x000003CC
 	.4byte "@etb_80011B64"
 .endobj "@eti_8002BFC4"

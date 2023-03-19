@@ -7128,7 +7128,7 @@
 .endobj double_8066A4A8
 
 .obj float_8066A4B0, global
-	.float 0.4 #0x3ECCCCCD
+	.float 0.4
 .endobj float_8066A4B0
 
 

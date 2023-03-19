@@ -78,7 +78,7 @@
 /* 8043C3E4 004059A4  48 00 38 7D */	bl func_8043FC60
 /* 8043C3E8 004059A8  80 9E 00 54 */	lwz r4, 0x54(r30)
 /* 8043C3EC 004059AC  38 60 00 C0 */	li r3, 0xc0
-/* 8043C3F0 004059B0  4B FF 86 91 */	bl heap_allocate_1
+/* 8043C3F0 004059B0  4B FF 86 91 */	bl heap_malloc_1
 /* 8043C3F4 004059B4  90 7E 02 4C */	stw r3, 0x24c(r30)
 /* 8043C3F8 004059B8  3B A0 00 10 */	li r29, 0x10
 /* 8043C3FC 004059BC  93 E3 00 00 */	stw r31, 0(r3)
@@ -115,7 +115,7 @@
 /* 8043C478 00405A38  93 E4 00 B4 */	stw r31, 0xb4(r4)
 /* 8043C47C 00405A3C  93 BE 02 50 */	stw r29, 0x250(r30)
 /* 8043C480 00405A40  80 9E 00 54 */	lwz r4, 0x54(r30)
-/* 8043C484 00405A44  4B FF 85 FD */	bl heap_allocate_1
+/* 8043C484 00405A44  4B FF 85 FD */	bl heap_malloc_1
 /* 8043C488 00405A48  90 7E 02 6C */	stw r3, 0x26c(r30)
 /* 8043C48C 00405A4C  3C C0 80 66 */	lis r6, lbl_8065A0D8@ha
 /* 8043C490 00405A50  C0 22 C7 54 */	lfs f1, float_8066CAD4@sda21(r2)
@@ -4246,7 +4246,7 @@
 	.4byte 0
 	.4byte __dt__CView
 	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -4277,11 +4277,11 @@
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
 	.4byte func_8043EAE0
-	.4byte func_80039E3C
-	.4byte func_80039E38
+	.4byte CWorkThread_Event1
+	.4byte CWorkThread_Event2
 	.4byte func_8043F8E0
 	.4byte func_8043F9E4
-	.4byte func_80039E30
+	.4byte CWorkThread_Event3
 	.4byte __RTTI__CView
 	.4byte 0xFFFFFE3C
 	.4byte func_8043FBC4
@@ -4384,7 +4384,7 @@
 
 
 .obj float_8066CAE0, global
-	.float 0.4 #0x3ECCCCCD
+	.float 0.4
 .endobj float_8066CAE0
 
 

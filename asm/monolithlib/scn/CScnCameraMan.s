@@ -961,7 +961,7 @@
 	.4byte 0
 	.4byte __dt__CScnCameraMan
 	.4byte func_8049B410
-	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_OnFileEvent
 	.4byte CScnCameraMan_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5

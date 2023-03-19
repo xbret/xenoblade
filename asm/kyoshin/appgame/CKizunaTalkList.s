@@ -1946,7 +1946,7 @@
 /* 80274264 0023D824  4E 80 00 20 */	blr 
 .endfn func_802741B0
 
-.fn CKizunaTalkList_OnInit, global
+.fn CKizunaTalkList_OnFileEvent, global
 /* 80274268 0023D828  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8027426C 0023D82C  7C 08 02 A6 */	mflr r0
 /* 80274270 0023D830  90 01 00 44 */	stw r0, 0x44(r1)
@@ -2074,7 +2074,7 @@
 /* 8027444C 0023DA0C  7C 08 03 A6 */	mtlr r0
 /* 80274450 0023DA10  38 21 00 40 */	addi r1, r1, 0x40
 /* 80274454 0023DA14  4E 80 00 20 */	blr
-.endfn CKizunaTalkList_OnInit
+.endfn CKizunaTalkList_OnFileEvent
 
 .fn sinit_80274458, local
 /* 80274458 0023DA18  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2174,7 +2174,7 @@
 	.4byte 0
 	.4byte __dt__CKizunaTalkList
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CKizunaTalkList_OnInit
+	.4byte CKizunaTalkList_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -2697,7 +2697,7 @@
 
 .obj "@eti_80030A70", local
 .hidden "@eti_80030A70"
-	.4byte CKizunaTalkList_OnInit
+	.4byte CKizunaTalkList_OnFileEvent
 	.4byte 0x000001F0
 	.4byte "@etb_800183EC"
 .endobj "@eti_80030A70"

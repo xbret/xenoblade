@@ -1068,7 +1068,7 @@
 /* 8022C540 001F5B00  4E 80 00 20 */	blr 
 .endfn func_8022C348
 
-.fn CSysWin_OnInit, global
+.fn CSysWin_OnFileEvent, global
 /* 8022C544 001F5B04  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8022C548 001F5B08  7C 08 02 A6 */	mflr r0
 /* 8022C54C 001F5B0C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1099,7 +1099,7 @@
 /* 8022C5B0 001F5B70  48 23 2B 11 */	bl func_8045F0C0
 /* 8022C5B4 001F5B74  7C 64 1B 78 */	mr r4, r3
 /* 8022C5B8 001F5B78  38 60 08 58 */	li r3, 0x858
-/* 8022C5BC 001F5B7C  48 20 84 A1 */	bl heap_allocate
+/* 8022C5BC 001F5B7C  48 20 84 A1 */	bl heap_malloc
 /* 8022C5C0 001F5B80  2C 03 00 00 */	cmpwi r3, 0
 /* 8022C5C4 001F5B84  41 82 00 08 */	beq .L_8022C5CC
 /* 8022C5C8 001F5B88  4B EF 9A BD */	bl func_80126084
@@ -1164,7 +1164,7 @@
 /* 8022C6A8 001F5C68  7C 08 03 A6 */	mtlr r0
 /* 8022C6AC 001F5C6C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8022C6B0 001F5C70  4E 80 00 20 */	blr 
-.endfn CSysWin_OnInit
+.endfn CSysWin_OnFileEvent
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -1214,7 +1214,7 @@
 	.4byte 0
 	.4byte __dt__CSysWin
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CSysWin_OnInit
+	.4byte CSysWin_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -1582,7 +1582,7 @@
 
 .obj "@eti_8002E58C", local
 .hidden "@eti_8002E58C"
-	.4byte CSysWin_OnInit
+	.4byte CSysWin_OnFileEvent
 	.4byte 0x00000170
 	.4byte "@etb_80015664"
 .endobj "@eti_8002E58C"

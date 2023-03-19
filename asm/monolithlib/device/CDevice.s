@@ -13,10 +13,10 @@
 /* 8044D83C 00416DFC  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8044D840 00416E00  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8044D844 00416E04  7C 7D 1B 78 */	mr r29, r3
-/* 8044D848 00416E08  4B FE 9D 6D */	bl getMemBlockIndex
+/* 8044D848 00416E08  4B FE 9D 6D */	bl getMemRegionIndex
 /* 8044D84C 00416E0C  7C 64 1B 78 */	mr r4, r3
 /* 8044D850 00416E10  38 60 01 C8 */	li r3, 0x1c8
-/* 8044D854 00416E14  4B FE 72 09 */	bl heap_allocate
+/* 8044D854 00416E14  4B FE 72 09 */	bl heap_malloc
 /* 8044D858 00416E18  2C 03 00 00 */	cmpwi r3, 0
 /* 8044D85C 00416E1C  7C 7E 1B 78 */	mr r30, r3
 /* 8044D860 00416E20  41 82 00 24 */	beq .L_8044D884
@@ -89,10 +89,10 @@
 /* 8044D948 00416F08  7C 7E 1B 78 */	mr r30, r3
 /* 8044D94C 00416F0C  38 84 63 E8 */	addi r4, r4, lbl_805263E8@l
 /* 8044D950 00416F10  3B E4 00 6D */	addi r31, r4, 0x6d
-/* 8044D954 00416F14  4B FE 9C 61 */	bl getMemBlockIndex
+/* 8044D954 00416F14  4B FE 9C 61 */	bl getMemRegionIndex
 /* 8044D958 00416F18  7C 64 1B 78 */	mr r4, r3
 /* 8044D95C 00416F1C  38 60 01 C8 */	li r3, 0x1c8
-/* 8044D960 00416F20  4B FE 70 FD */	bl heap_allocate
+/* 8044D960 00416F20  4B FE 70 FD */	bl heap_malloc
 /* 8044D964 00416F24  2C 03 00 00 */	cmpwi r3, 0
 /* 8044D968 00416F28  7C 7D 1B 78 */	mr r29, r3
 /* 8044D96C 00416F2C  41 82 00 2C */	beq .L_8044D998
@@ -277,7 +277,7 @@
 	.4byte 0
 	.4byte __dt___unnamed_CDevice_cpp_CDeviceException
 	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -308,11 +308,11 @@
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
 	.4byte func_80438A50
-	.4byte func_80039E3C
-	.4byte func_80039E38
+	.4byte CWorkThread_Event1
+	.4byte CWorkThread_Event2
 	.4byte func_804389F8
 	.4byte func_8044DADC
-	.4byte func_80039E30
+	.4byte CWorkThread_Event3
 .endobj __vt___unnamed_CDevice_cpp_CDeviceException
 
 .obj _unnamed_CDevice_cpp_CDeviceException_hierarchy, global
@@ -330,7 +330,7 @@
 	.4byte 0
 	.4byte __dt__CDevice
 	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -361,11 +361,11 @@
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
 	.4byte func_80438A50
-	.4byte func_80039E3C
-	.4byte func_80039E38
+	.4byte CWorkThread_Event1
+	.4byte CWorkThread_Event2
 	.4byte __ct__CDeviceException
 	.4byte func_8044D8C8
-	.4byte func_80039E30
+	.4byte CWorkThread_Event3
 .endobj __vt__CDevice
 
 .obj CDevice_hierarchy, global

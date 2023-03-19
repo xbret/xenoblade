@@ -23,16 +23,16 @@ ADX_FILES :=\
 	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_dcd5.o\
 	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_dcd.o\
 	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_errs.o\
-	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_ftbl.o\
+	$(BUILD_DIR)/src/CriWare/adx/ahx/ahx_ftbl.o\
 	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_link.o\
 	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_mflt_c.o\
 	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_mwin2_c.o\
 	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_sbf2.o\
 	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_sbf.o\
 	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_sjd.o\
-	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_wtbl.o\
+	$(BUILD_DIR)/src/CriWare/adx/ahx/ahx_wtbl.o\
 	$(BUILD_DIR)/asm/CriWare/adx/ahx/adx_hdr.o\
-	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_atbl.o\
+	$(BUILD_DIR)/src/CriWare/adx/ahx/ahx_atbl.o\
 	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_bsr.o\
 	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_cmn.o\
 	$(BUILD_DIR)/asm/CriWare/adx/ahx/ahx_dcd.o\

@@ -64,7 +64,7 @@
 /* 804376A4 00400C64  40 81 01 00 */	ble .L_804377A4
 /* 804376A8 00400C68  1C 7F 00 0C */	mulli r3, r31, 0xc
 /* 804376AC 00400C6C  80 9D 00 54 */	lwz r4, 0x54(r29)
-/* 804376B0 00400C70  4B FF D3 D1 */	bl heap_allocate_1
+/* 804376B0 00400C70  4B FF D3 D1 */	bl heap_malloc_1
 /* 804376B4 00400C74  2C 9F 00 00 */	cmpwi cr1, r31, 0
 /* 804376B8 00400C78  90 7D 00 70 */	stw r3, 0x70(r29)
 /* 804376BC 00400C7C  38 A0 00 00 */	li r5, 0
@@ -498,7 +498,7 @@
 /* 80437C90 00401250  38 00 00 00 */	li r0, 0
 /* 80437C94 00401254  90 1E 00 74 */	stw r0, 0x74(r30)
 /* 80437C98 00401258  80 9E 00 54 */	lwz r4, 0x54(r30)
-/* 80437C9C 0040125C  4B FF CD E5 */	bl heap_allocate_1
+/* 80437C9C 0040125C  4B FF CD E5 */	bl heap_malloc_1
 /* 80437CA0 00401260  2C 9F 00 00 */	cmpwi cr1, r31, 0
 /* 80437CA4 00401264  90 7E 00 70 */	stw r3, 0x70(r30)
 /* 80437CA8 00401268  38 A0 00 00 */	li r5, 0
@@ -1726,7 +1726,7 @@
 	.4byte 0
 	.4byte __dt__CWorkThread
 	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -1757,11 +1757,11 @@
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
 	.4byte func_80438A50
-	.4byte func_80039E3C
-	.4byte func_80039E38
+	.4byte CWorkThread_Event1
+	.4byte CWorkThread_Event2
 	.4byte func_804389F8
 	.4byte func_80438A24
-	.4byte func_80039E30
+	.4byte CWorkThread_Event3
 .endobj __vt__CWorkThread
 
 .obj __vt__CMsgParam_8, global

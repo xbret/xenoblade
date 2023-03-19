@@ -253,7 +253,7 @@
 /* 80244608 0020DBC8  4E 80 00 20 */	blr 
 .endfn func_802445F0
 
-.fn CFade_OnInit, global
+.fn CFade_OnFileEvent, global
 /* 8024460C 0020DBCC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80244610 0020DBD0  7C 08 02 A6 */	mflr r0
 /* 80244614 0020DBD4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -326,7 +326,7 @@
 /* 80244718 0020DCD8  7C 08 03 A6 */	mtlr r0
 /* 8024471C 0020DCDC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80244720 0020DCE0  4E 80 00 20 */	blr 
-.endfn CFade_OnInit
+.endfn CFade_OnFileEvent
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -352,7 +352,7 @@
 	.4byte 0
 	.4byte __dt__CFade
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CFade_OnInit
+	.4byte CFade_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -531,7 +531,7 @@
 
 .obj "@eti_8002F2F4", local
 .hidden "@eti_8002F2F4"
-	.4byte CFade_OnInit
+	.4byte CFade_OnFileEvent
 	.4byte 0x00000118
 	.4byte "@etb_800164C0"
 .endobj "@eti_8002F2F4"

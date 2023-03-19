@@ -27,7 +27,7 @@ void CPackItem::func_804DE948() {
     }
 }
 
-BOOL CPackItem::OnInit(UnkStruct* r4) {
+BOOL CPackItem::OnFileEvent(UnkStruct* r4) {
     UnkStruct* r5 = (UnkStruct*)(this->unk4C);
     if(r4->unk4 == r5){
         if(r4->unk0 == 1){

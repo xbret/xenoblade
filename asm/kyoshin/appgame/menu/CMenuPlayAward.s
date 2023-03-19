@@ -161,7 +161,7 @@
 /* 8026FEF8 002394B8  98 1F 00 B7 */	stb r0, 0xb7(r31)
 /* 8026FEFC 002394BC  4B F5 40 55 */	bl __dt__CTitleAHelp
 /* 8026FF00 002394C0  38 7F 00 80 */	addi r3, r31, 0x80
-/* 8026FF04 002394C4  4B F5 40 A1 */	bl func_801C3FA4
+/* 8026FF04 002394C4  4B F5 40 A1 */	bl CTitleAHelp_load
 /* 8026FF08 002394C8  38 61 00 60 */	addi r3, r1, 0x60
 /* 8026FF0C 002394CC  38 80 00 00 */	li r4, 0
 /* 8026FF10 002394D0  48 00 0C 05 */	bl func_80270B14
@@ -458,10 +458,10 @@
 /* 8027032C 002398EC  38 60 00 00 */	li r3, 0
 /* 80270330 002398F0  48 00 00 38 */	b .L_80270368
 .L_80270334:
-/* 80270334 002398F4  48 1C 72 81 */	bl getMemBlockIndex
+/* 80270334 002398F4  48 1C 72 81 */	bl getMemRegionIndex
 /* 80270338 002398F8  7C 64 1B 78 */	mr r4, r3
 /* 8027033C 002398FC  38 60 11 64 */	li r3, 0x1164
-/* 80270340 00239900  48 1C 47 1D */	bl heap_allocate
+/* 80270340 00239900  48 1C 47 1D */	bl heap_malloc
 /* 80270344 00239904  2C 03 00 00 */	cmpwi r3, 0
 /* 80270348 00239908  41 82 00 0C */	beq .L_80270354
 /* 8027034C 0023990C  7F E4 FB 78 */	mr r4, r31
@@ -2179,7 +2179,7 @@
 /* 80271AE0 0023B0A0  4E 80 00 20 */	blr 
 .endfn func_802719F8
 
-.fn CPlayAwardList_OnInit, global
+.fn CPlayAwardList_OnFileEvent, global
 /* 80271AE4 0023B0A4  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80271AE8 0023B0A8  7C 08 02 A6 */	mflr r0
 /* 80271AEC 0023B0AC  90 01 00 64 */	stw r0, 0x64(r1)
@@ -2210,7 +2210,7 @@
 /* 80271B50 0023B110  48 1E D5 71 */	bl func_8045F0C0
 /* 80271B54 0023B114  7C 64 1B 78 */	mr r4, r3
 /* 80271B58 0023B118  38 60 08 58 */	li r3, 0x858
-/* 80271B5C 0023B11C  48 1C 2F 01 */	bl heap_allocate
+/* 80271B5C 0023B11C  48 1C 2F 01 */	bl heap_malloc
 /* 80271B60 0023B120  2C 03 00 00 */	cmpwi r3, 0
 /* 80271B64 0023B124  41 82 00 08 */	beq .L_80271B6C
 /* 80271B68 0023B128  4B EB 45 1D */	bl func_80126084
@@ -2373,7 +2373,7 @@
 /* 80271DC8 0023B388  7C 08 03 A6 */	mtlr r0
 /* 80271DCC 0023B38C  38 21 00 60 */	addi r1, r1, 0x60
 /* 80271DD0 0023B390  4E 80 00 20 */	blr 
-.endfn CPlayAwardList_OnInit
+.endfn CPlayAwardList_OnFileEvent
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -2480,7 +2480,7 @@
 	.4byte 0
 	.4byte __dt__CPlayAwardList
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CPlayAwardList_OnInit
+	.4byte CPlayAwardList_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -3223,7 +3223,7 @@
 
 .obj "@eti_8003089C", local
 .hidden "@eti_8003089C"
-	.4byte CPlayAwardList_OnInit
+	.4byte CPlayAwardList_OnFileEvent
 	.4byte 0x000002F0
 	.4byte "@etb_8001811C"
 .endobj "@eti_8003089C"

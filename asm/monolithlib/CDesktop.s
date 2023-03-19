@@ -229,10 +229,10 @@
 /* 80455CD0 0041F290  3F C0 80 52 */	lis r30, lbl_8052685C@ha
 /* 80455CD4 0041F294  7C 7D 1B 78 */	mr r29, r3
 /* 80455CD8 0041F298  3B DE 68 5C */	addi r30, r30, lbl_8052685C@l
-/* 80455CDC 0041F29C  4B FE 18 D9 */	bl getMemBlockIndex
+/* 80455CDC 0041F29C  4B FE 18 D9 */	bl getMemRegionIndex
 /* 80455CE0 0041F2A0  7C 64 1B 78 */	mr r4, r3
 /* 80455CE4 0041F2A4  38 60 01 F0 */	li r3, 0x1f0
-/* 80455CE8 0041F2A8  4B FD ED 75 */	bl heap_allocate
+/* 80455CE8 0041F2A8  4B FD ED 75 */	bl heap_malloc
 /* 80455CEC 0041F2AC  2C 03 00 00 */	cmpwi r3, 0
 /* 80455CF0 0041F2B0  7C 7C 1B 78 */	mr r28, r3
 /* 80455CF4 0041F2B4  41 82 00 24 */	beq .L_80455D18
@@ -257,10 +257,10 @@
 /* 80455D3C 0041F2FC  7C 7D 1B 78 */	mr r29, r3
 /* 80455D40 0041F300  38 84 68 5C */	addi r4, r4, lbl_8052685C@l
 /* 80455D44 0041F304  3B 84 00 13 */	addi r28, r4, 0x13
-/* 80455D48 0041F308  4B FE 18 6D */	bl getMemBlockIndex
+/* 80455D48 0041F308  4B FE 18 6D */	bl getMemRegionIndex
 /* 80455D4C 0041F30C  7C 64 1B 78 */	mr r4, r3
 /* 80455D50 0041F310  38 60 01 F0 */	li r3, 0x1f0
-/* 80455D54 0041F314  4B FD ED 09 */	bl heap_allocate
+/* 80455D54 0041F314  4B FD ED 09 */	bl heap_malloc
 /* 80455D58 0041F318  2C 03 00 00 */	cmpwi r3, 0
 /* 80455D5C 0041F31C  7C 7E 1B 78 */	mr r30, r3
 /* 80455D60 0041F320  41 82 00 24 */	beq .L_80455D84
@@ -394,7 +394,7 @@
 /* 80455F0C 0041F4CC  4E 80 00 20 */	blr 
 .endfn func_80455E60
 
-.fn CDesktop_OnInit, global
+.fn CDesktop_OnFileEvent, global
 /* 80455F10 0041F4D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80455F14 0041F4D4  7C 08 02 A6 */	mflr r0
 /* 80455F18 0041F4D8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -420,7 +420,7 @@
 /* 80455F60 0041F520  7C 08 03 A6 */	mtlr r0
 /* 80455F64 0041F524  38 21 00 10 */	addi r1, r1, 0x10
 /* 80455F68 0041F528  4E 80 00 20 */	blr 
-.endfn CDesktop_OnInit
+.endfn CDesktop_OnFileEvent
 
 .fn CDesktop_WorkEvent3, global
 /* 80455F6C 0041F52C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -604,7 +604,7 @@
 	.4byte 0
 	.4byte __dt___unnamed_CDesktop_cpp_CDesktopException
 	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -635,11 +635,11 @@
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
 	.4byte func_80438A50
-	.4byte func_80039E3C
-	.4byte func_80039E38
+	.4byte CWorkThread_Event1
+	.4byte CWorkThread_Event2
 	.4byte func_804396A0
 	.4byte func_804560AC
-	.4byte func_80039E30
+	.4byte CWorkThread_Event3
 .endobj __vt___unnamed_CDesktop_cpp_CDesktopException
 
 .obj _unnamed_CDesktop_cpp_CDesktopException_hierarchy, global
@@ -659,7 +659,7 @@
 	.4byte 0
 	.4byte __dt___unnamed_CDesktop_cpp_CDesktopBackGround
 	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -690,11 +690,11 @@
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
 	.4byte func_80438A50
-	.4byte func_80039E3C
-	.4byte func_80039E38
+	.4byte CWorkThread_Event1
+	.4byte CWorkThread_Event2
 	.4byte func_804396A0
 	.4byte func_804560F0
-	.4byte func_80039E30
+	.4byte CWorkThread_Event3
 .endobj __vt___unnamed_CDesktop_cpp_CDesktopBackGround
 
 .obj _unnamed_CDesktop_cpp_CDesktopBackGround_hierarchy, global
@@ -714,7 +714,7 @@
 	.4byte 0
 	.4byte __dt__CDesktop
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CDesktop_OnInit
+	.4byte CDesktop_OnFileEvent
 	.4byte CDesktop_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -749,7 +749,7 @@
 	.4byte func_80455B34
 	.4byte func_80455B38
 	.4byte func_80455DF4
-	.4byte func_80039E30
+	.4byte CWorkThread_Event3
 .endobj __vt__CDesktop
 
 .obj CDesktop_hierarchy, global
@@ -984,7 +984,7 @@
 
 .obj "@eti_80034F70", local
 .hidden "@eti_80034F70"
-	.4byte CDesktop_OnInit
+	.4byte CDesktop_OnFileEvent
 	.4byte 0x0000005C
 	.4byte "@etb_8001D330"
 .endobj "@eti_80034F70"

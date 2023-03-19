@@ -88,7 +88,7 @@
 /* 80447F14 004114D4  60 00 00 10 */	ori r0, r0, 0x10
 /* 80447F18 004114D8  90 04 01 CC */	stw r0, 0x1cc(r4)
 /* 80447F1C 004114DC  80 9F 00 54 */	lwz r4, 0x54(r31)
-/* 80447F20 004114E0  4B FE CB 61 */	bl heap_allocate_1
+/* 80447F20 004114E0  4B FE CB 61 */	bl heap_malloc_1
 /* 80447F24 004114E4  90 7F 01 E4 */	stw r3, 0x1e4(r31)
 /* 80447F28 004114E8  38 A0 00 00 */	li r5, 0
 /* 80447F2C 004114EC  2C 1F 00 00 */	cmpwi r31, 0
@@ -1422,7 +1422,7 @@
 	.4byte 0
 	.4byte __dt__CDeviceVI
 	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -1453,11 +1453,11 @@
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
 	.4byte func_8044880C
-	.4byte func_80039E3C
-	.4byte func_80039E38
+	.4byte CWorkThread_Event1
+	.4byte CWorkThread_Event2
 	.4byte func_80448D18
 	.4byte func_80448DF4
-	.4byte func_80039E30
+	.4byte CWorkThread_Event3
 	.4byte __RTTI__CDeviceVI
 	.4byte 0xFFFFFE38
 	.4byte func_80448F38

@@ -341,10 +341,10 @@
 /* 801BCEE4 001864A4  38 60 00 00 */	li r3, 0
 /* 801BCEE8 001864A8  48 00 00 3C */	b .L_801BCF24
 .L_801BCEEC:
-/* 801BCEEC 001864AC  48 27 A6 C9 */	bl getMemBlockIndex
+/* 801BCEEC 001864AC  48 27 A6 C9 */	bl getMemRegionIndex
 /* 801BCEF0 001864B0  7C 64 1B 78 */	mr r4, r3
 /* 801BCEF4 001864B4  38 60 00 FC */	li r3, 0xfc
-/* 801BCEF8 001864B8  48 27 7B 65 */	bl heap_allocate
+/* 801BCEF8 001864B8  48 27 7B 65 */	bl heap_malloc
 /* 801BCEFC 001864BC  2C 03 00 00 */	cmpwi r3, 0
 /* 801BCF00 001864C0  41 82 00 10 */	beq .L_801BCF10
 /* 801BCF04 001864C4  7F C4 F3 78 */	mr r4, r30
@@ -1366,10 +1366,10 @@
 /* 801BDD80 00187340  4E 80 00 20 */	blr 
 .endfn func_801BD7D8
 
-.fn CMenuKizunaTalk_OnInit, global
+.fn CMenuKizunaTalk_OnFileEvent, global
 /* 801BDD84 00187344  38 63 FF 94 */	addi r3, r3, -108
 /* 801BDD88 00187348  4B FF FA 50 */	b func_801BD7D8
-.endfn CMenuKizunaTalk_OnInit
+.endfn CMenuKizunaTalk_OnFileEvent
 
 .fn func_801BDD8C, global
 /* 801BDD8C 0018734C  38 63 FF 94 */	addi r3, r3, -108
@@ -1452,7 +1452,7 @@
 	.4byte 0xFFFFFF94
 	.4byte func_801BDD8C
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CMenuKizunaTalk_OnInit
+	.4byte CMenuKizunaTalk_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5

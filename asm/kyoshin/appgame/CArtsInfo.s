@@ -6435,7 +6435,7 @@
 /* 8023B464 00204A24  4E 80 00 20 */	blr 
 .endfn func_8023B430
 
-.fn CArtsInfo_OnInit, global
+.fn CArtsInfo_OnFileEvent, global
 /* 8023B468 00204A28  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8023B46C 00204A2C  7C 08 02 A6 */	mflr r0
 /* 8023B470 00204A30  90 01 00 74 */	stw r0, 0x74(r1)
@@ -6964,7 +6964,7 @@
 /* 8023BC80 00205240  7C 08 03 A6 */	mtlr r0
 /* 8023BC84 00205244  38 21 00 70 */	addi r1, r1, 0x70
 /* 8023BC88 00205248  4E 80 00 20 */	blr
-.endfn CArtsInfo_OnInit
+.endfn CArtsInfo_OnFileEvent
 
 .fn sinit_8023BC8C, local
 /* 8023BC8C 0020524C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -7187,7 +7187,7 @@
 	.4byte 0
 	.4byte __dt__CArtsInfo
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CArtsInfo_OnInit
+	.4byte CArtsInfo_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -8376,7 +8376,7 @@
 
 .obj "@eti_8002EF40", local
 .hidden "@eti_8002EF40"
-	.4byte CArtsInfo_OnInit
+	.4byte CArtsInfo_OnFileEvent
 	.4byte 0x00000824
 	.4byte "@etb_80015FC4"
 .endobj "@eti_8002EF40"

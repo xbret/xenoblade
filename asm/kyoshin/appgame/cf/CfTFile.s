@@ -345,7 +345,7 @@
 /* 80069DD0 00033390  4E 80 00 20 */	blr 
 .endfn func_80069C78
 
-.fn CfTFile_OnInit, global
+.fn CfTFile_OnFileEvent, global
 /* 80069DD4 00033394  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80069DD8 00033398  7C 08 02 A6 */	mflr r0
 /* 80069DDC 0003339C  38 C0 00 00 */	li r6, 0
@@ -383,7 +383,7 @@
 /* 80069E54 00033414  7C 08 03 A6 */	mtlr r0
 /* 80069E58 00033418  38 21 00 10 */	addi r1, r1, 0x10
 /* 80069E5C 0003341C  4E 80 00 20 */	blr 
-.endfn CfTFile_OnInit
+.endfn CfTFile_OnFileEvent
 
 .fn __dt__cf_CfTFile, global
 /* 80069E60 00033420  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1155,7 +1155,7 @@
 	.4byte 0
 	.4byte __dt__cf_CfTFile
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CfTFile_OnInit
+	.4byte CfTFile_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -1507,7 +1507,7 @@
 
 .obj "@eti_80023240", local
 .hidden "@eti_80023240"
-	.4byte CfTFile_OnInit
+	.4byte CfTFile_OnFileEvent
 	.4byte 0x0000008C
 	.4byte "@etb_80007F8C"
 .endobj "@eti_80023240"

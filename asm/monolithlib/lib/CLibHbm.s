@@ -864,7 +864,7 @@
 /* 8045DEBC 0042747C  4E 80 00 20 */	blr 
 .endfn func_8045DE64
 
-.fn CLibHbm_OnInit, global
+.fn CLibHbm_OnFileEvent, global
 /* 8045DEC0 00427480  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8045DEC4 00427484  7C 08 02 A6 */	mflr r0
 /* 8045DEC8 00427488  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1006,7 +1006,7 @@
 /* 8045E0C0 00427680  7C 08 03 A6 */	mtlr r0
 /* 8045E0C4 00427684  38 21 00 40 */	addi r1, r1, 0x40
 /* 8045E0C8 00427688  4E 80 00 20 */	blr
-.endfn CLibHbm_OnInit
+.endfn CLibHbm_OnFileEvent
 
 .fn func_8045E0CC, global
 /* 8045E0CC 0042768C  94 21 FE F0 */	stwu r1, -0x110(r1)
@@ -1348,7 +1348,7 @@
 	.4byte 0
 	.4byte __dt__CLibHbm
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CLibHbm_OnInit
+	.4byte CLibHbm_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -1379,11 +1379,11 @@
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
 	.4byte func_8045D83C
-	.4byte func_80039E3C
-	.4byte func_80039E38
+	.4byte CWorkThread_Event1
+	.4byte CWorkThread_Event2
 	.4byte func_8045DE04
 	.4byte func_8045DE64
-	.4byte func_80039E30
+	.4byte CWorkThread_Event3
 .endobj __vt__CLibHbm
 
 .obj CLibHbm_hierarchy, global
@@ -1698,7 +1698,7 @@
 
 .obj "@eti_80035378", local
 .hidden "@eti_80035378"
-	.4byte CLibHbm_OnInit
+	.4byte CLibHbm_OnFileEvent
 	.4byte 0x0000020C
 	.4byte "@etb_8001D760"
 .endobj "@eti_80035378"

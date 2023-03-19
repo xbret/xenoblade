@@ -175,10 +175,10 @@
 /* 80444650 0040DC10  3C 60 80 52 */	lis r3, CWorkSystem_strpool@ha
 /* 80444654 0040DC14  38 63 60 B4 */	addi r3, r3, CWorkSystem_strpool@l
 /* 80444658 0040DC18  3B E3 00 24 */	addi r31, r3, 0x24
-/* 8044465C 0040DC1C  4B FF 2F 59 */	bl getMemBlockIndex
+/* 8044465C 0040DC1C  4B FF 2F 59 */	bl getMemRegionIndex
 /* 80444660 0040DC20  7C 64 1B 78 */	mr r4, r3
 /* 80444664 0040DC24  38 60 01 C8 */	li r3, 0x1c8
-/* 80444668 0040DC28  4B FF 03 F5 */	bl heap_allocate
+/* 80444668 0040DC28  4B FF 03 F5 */	bl heap_malloc
 /* 8044466C 0040DC2C  2C 03 00 00 */	cmpwi r3, 0
 /* 80444670 0040DC30  41 82 00 10 */	beq .L_80444680
 /* 80444674 0040DC34  7F E4 FB 78 */	mr r4, r31
@@ -193,10 +193,10 @@
 /* 80444694 0040DC54  90 7E 01 C4 */	stw r3, 0x1c4(r30)
 /* 80444698 0040DC58  38 84 60 B4 */	addi r4, r4, CWorkSystem_strpool@l
 /* 8044469C 0040DC5C  3B E4 00 33 */	addi r31, r4, 0x33
-/* 804446A0 0040DC60  4B FF 2F 15 */	bl getMemBlockIndex
+/* 804446A0 0040DC60  4B FF 2F 15 */	bl getMemRegionIndex
 /* 804446A4 0040DC64  7C 64 1B 78 */	mr r4, r3
 /* 804446A8 0040DC68  38 60 01 E8 */	li r3, 0x1e8
-/* 804446AC 0040DC6C  4B FF 03 B1 */	bl heap_allocate
+/* 804446AC 0040DC6C  4B FF 03 B1 */	bl heap_malloc
 /* 804446B0 0040DC70  2C 03 00 00 */	cmpwi r3, 0
 /* 804446B4 0040DC74  41 82 00 10 */	beq .L_804446C4
 /* 804446B8 0040DC78  7F E4 FB 78 */	mr r4, r31
@@ -209,10 +209,10 @@
 /* 804446D0 0040DC90  3C 60 80 52 */	lis r3, CWorkSystem_strpool@ha
 /* 804446D4 0040DC94  38 63 60 B4 */	addi r3, r3, CWorkSystem_strpool@l
 /* 804446D8 0040DC98  3B E3 00 44 */	addi r31, r3, 0x44
-/* 804446DC 0040DC9C  4B FF 2E D9 */	bl getMemBlockIndex
+/* 804446DC 0040DC9C  4B FF 2E D9 */	bl getMemRegionIndex
 /* 804446E0 0040DCA0  7C 64 1B 78 */	mr r4, r3
 /* 804446E4 0040DCA4  38 60 02 08 */	li r3, 0x208
-/* 804446E8 0040DCA8  4B FF 03 75 */	bl heap_allocate
+/* 804446E8 0040DCA8  4B FF 03 75 */	bl heap_malloc
 /* 804446EC 0040DCAC  2C 03 00 00 */	cmpwi r3, 0
 /* 804446F0 0040DCB0  41 82 00 10 */	beq .L_80444700
 /* 804446F4 0040DCB4  7F E4 FB 78 */	mr r4, r31
@@ -301,10 +301,10 @@
 /* 80444814 0040DDD4  7C 7E 1B 78 */	mr r30, r3
 /* 80444818 0040DDD8  38 84 60 B4 */	addi r4, r4, CWorkSystem_strpool@l
 /* 8044481C 0040DDDC  3B E4 00 6D */	addi r31, r4, 0x6d
-/* 80444820 0040DDE0  4B FF 2D 95 */	bl getMemBlockIndex
+/* 80444820 0040DDE0  4B FF 2D 95 */	bl getMemRegionIndex
 /* 80444824 0040DDE4  7C 64 1B 78 */	mr r4, r3
 /* 80444828 0040DDE8  38 60 01 D0 */	li r3, 0x1d0
-/* 8044482C 0040DDEC  4B FF 02 31 */	bl heap_allocate
+/* 8044482C 0040DDEC  4B FF 02 31 */	bl heap_malloc
 /* 80444830 0040DDF0  2C 03 00 00 */	cmpwi r3, 0
 /* 80444834 0040DDF4  7C 7D 1B 78 */	mr r29, r3
 /* 80444838 0040DDF8  41 82 00 14 */	beq .L_8044484C
@@ -386,7 +386,7 @@
 	.4byte 0
 	.4byte __dt__CWorkSystem
 	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -417,11 +417,11 @@
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
 	.4byte func_80444534
-	.4byte func_80039E3C
-	.4byte func_80039E38
+	.4byte CWorkThread_Event1
+	.4byte CWorkThread_Event2
 	.4byte func_80444628
 	.4byte func_8044476C
-	.4byte func_80039E30
+	.4byte CWorkThread_Event3
 .endobj __vt__CWorkSystem
 
 .obj CWorkSystem_hierarchy, global

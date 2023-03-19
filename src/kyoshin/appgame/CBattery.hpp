@@ -10,7 +10,7 @@ public:
     //vtable
     virtual ~CBattery(); //0x8
     virtual BOOL IWorkEvent_WorkEvent1();
-    virtual BOOL OnInit(); //overrides IWorkEvent::OnInit
+    virtual BOOL OnFileEvent(); //overrides IWorkEvent::OnFileEvent
     virtual BOOL IWorkEvent_WorkEvent3();
     virtual BOOL IWorkEvent_WorkEvent4();
     virtual void IWorkEvent_WorkEvent5();

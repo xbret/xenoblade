@@ -292,10 +292,10 @@
 /* 8045FCF8 004292B8  41 82 00 50 */	beq .L_8045FD48
 /* 8045FCFC 004292BC  48 00 00 40 */	b .L_8045FD3C
 .L_8045FD00:
-/* 8045FD00 004292C0  4B FD 78 B5 */	bl getMemBlockIndex
+/* 8045FD00 004292C0  4B FD 78 B5 */	bl getMemRegionIndex
 /* 8045FD04 004292C4  7C 64 1B 78 */	mr r4, r3
 /* 8045FD08 004292C8  38 60 00 18 */	li r3, 0x18
-/* 8045FD0C 004292CC  4B FD 4D 51 */	bl heap_allocate
+/* 8045FD0C 004292CC  4B FD 4D 51 */	bl heap_malloc
 /* 8045FD10 004292D0  2C 03 00 00 */	cmpwi r3, 0
 /* 8045FD14 004292D4  41 82 00 0C */	beq .L_8045FD20
 /* 8045FD18 004292D8  7F C4 F3 78 */	mr r4, r30
@@ -545,7 +545,7 @@
 /* 8046005C 0042961C  4E 80 00 20 */	blr 
 .endfn __dt__CLibStaticData_CItem
 
-.fn CLibStaticData_OnInit, global
+.fn CLibStaticData_OnFileEvent, global
 /* 80460060 00429620  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80460064 00429624  7C 08 02 A6 */	mflr r0
 /* 80460068 00429628  90 01 00 14 */	stw r0, 0x14(r1)
@@ -581,7 +581,7 @@
 /* 804600D4 00429694  7C 08 03 A6 */	mtlr r0
 /* 804600D8 00429698  38 21 00 10 */	addi r1, r1, 0x10
 /* 804600DC 0042969C  4E 80 00 20 */	blr 
-.endfn CLibStaticData_OnInit
+.endfn CLibStaticData_OnFileEvent
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -607,7 +607,7 @@
 	.4byte 0
 	.4byte __dt__CLibStaticData
 	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -638,11 +638,11 @@
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
 	.4byte func_80438A50
-	.4byte func_80039E3C
-	.4byte func_80039E38
+	.4byte CWorkThread_Event1
+	.4byte CWorkThread_Event2
 	.4byte func_8045FC84
 	.4byte func_8045FDB8
-	.4byte func_80039E30
+	.4byte CWorkThread_Event3
 .endobj __vt__CLibStaticData
 
 .obj CLibStaticData_hierarchy, global
@@ -660,7 +660,7 @@
 	.4byte 0
 	.4byte __dt__CLibStaticData_CItem
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CLibStaticData_OnInit
+	.4byte CLibStaticData_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -862,7 +862,7 @@
 
 .obj "@eti_800354F8", local
 .hidden "@eti_800354F8"
-	.4byte CLibStaticData_OnInit
+	.4byte CLibStaticData_OnFileEvent
 	.4byte 0x00000080
 	.4byte "@etb_8001D938"
 .endobj "@eti_800354F8"

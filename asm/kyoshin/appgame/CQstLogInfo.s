@@ -2197,7 +2197,7 @@
 /* 8022B358 001F4918  4E 80 00 20 */	blr 
 .endfn func_8022AFF8
 
-.fn CQstLogInfo_OnInit, global
+.fn CQstLogInfo_OnFileEvent, global
 /* 8022B35C 001F491C  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8022B360 001F4920  7C 08 02 A6 */	mflr r0
 /* 8022B364 001F4924  90 01 00 44 */	stw r0, 0x44(r1)
@@ -2228,7 +2228,7 @@
 /* 8022B3C8 001F4988  48 23 3C F9 */	bl func_8045F0C0
 /* 8022B3CC 001F498C  7C 64 1B 78 */	mr r4, r3
 /* 8022B3D0 001F4990  38 60 08 58 */	li r3, 0x858
-/* 8022B3D4 001F4994  48 20 96 89 */	bl heap_allocate
+/* 8022B3D4 001F4994  48 20 96 89 */	bl heap_malloc
 /* 8022B3D8 001F4998  2C 03 00 00 */	cmpwi r3, 0
 /* 8022B3DC 001F499C  41 82 00 08 */	beq .L_8022B3E4
 /* 8022B3E0 001F49A0  4B EF AC A5 */	bl func_80126084
@@ -2379,7 +2379,7 @@
 /* 8022B60C 001F4BCC  7C 08 03 A6 */	mtlr r0
 /* 8022B610 001F4BD0  38 21 00 40 */	addi r1, r1, 0x40
 /* 8022B614 001F4BD4  4E 80 00 20 */	blr 
-.endfn CQstLogInfo_OnInit
+.endfn CQstLogInfo_OnFileEvent
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -2857,7 +2857,7 @@
 	.4byte 0
 	.4byte __dt__CQstLogInfo
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CQstLogInfo_OnInit
+	.4byte CQstLogInfo_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -3212,7 +3212,7 @@
 
 .obj "@eti_8002E4D8", local
 .hidden "@eti_8002E4D8"
-	.4byte CQstLogInfo_OnInit
+	.4byte CQstLogInfo_OnFileEvent
 	.4byte 0x000002BC
 	.4byte "@etb_800155C8"
 .endobj "@eti_8002E4D8"

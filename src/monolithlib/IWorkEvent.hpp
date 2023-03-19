@@ -7,7 +7,7 @@ class IWorkEvent {
 public:
     virtual ~IWorkEvent();
     virtual BOOL IWorkEvent_WorkEvent1();
-    virtual BOOL OnInit();
+    virtual BOOL OnFileEvent();
     virtual BOOL IWorkEvent_WorkEvent3();
     virtual BOOL IWorkEvent_WorkEvent4();
     virtual void IWorkEvent_WorkEvent5();

@@ -479,7 +479,7 @@
 /* 804F57E4 004BEDA4  4E 80 00 20 */	blr 
 .endfn __dt__804F5738
 
-.fn CNBanner_OnInit, global
+.fn CNBanner_OnFileEvent, global
 /* 804F57E8 004BEDA8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804F57EC 004BEDAC  7C 08 02 A6 */	mflr r0
 /* 804F57F0 004BEDB0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -550,7 +550,7 @@
 /* 804F58E0 004BEEA0  7C 08 03 A6 */	mtlr r0
 /* 804F58E4 004BEEA4  38 21 00 20 */	addi r1, r1, 0x20
 /* 804F58E8 004BEEA8  4E 80 00 20 */	blr 
-.endfn CNBanner_OnInit
+.endfn CNBanner_OnFileEvent
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -575,7 +575,7 @@
 	.4byte 0
 	.4byte __dt__CNBanner
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CNBanner_OnInit
+	.4byte CNBanner_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -707,7 +707,7 @@
 
 .obj "@eti_800391F4", local
 .hidden "@eti_800391F4"
-	.4byte CNBanner_OnInit
+	.4byte CNBanner_OnFileEvent
 	.4byte 0x00000104
 	.4byte "@etb_80021010"
 .endobj "@eti_800391F4"

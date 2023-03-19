@@ -62,7 +62,7 @@
 /* 802B92AC 0028286C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802B92B0 00282870  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802B92B4 00282874  7C 7F 1B 78 */	mr r31, r3
-/* 802B92B8 00282878  48 17 E2 FD */	bl getMemBlockIndex
+/* 802B92B8 00282878  48 17 E2 FD */	bl getMemRegionIndex
 /* 802B92BC 0028287C  3C 80 80 51 */	lis r4, CBattery_strpool@ha
 /* 802B92C0 00282880  7F E5 FB 78 */	mr r5, r31
 /* 802B92C4 00282884  38 84 CD C8 */	addi r4, r4, CBattery_strpool@l
@@ -224,7 +224,7 @@
 /* 802B94CC 00282A8C  4E 80 00 20 */	blr 
 .endfn func_802B94B0
 
-.fn CBattery_OnInit, global
+.fn CBattery_OnFileEvent, global
 /* 802B94D0 00282A90  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802B94D4 00282A94  7C 08 02 A6 */	mflr r0
 /* 802B94D8 00282A98  90 01 00 24 */	stw r0, 0x24(r1)
@@ -241,7 +241,7 @@
 /* 802B9504 00282AC4  38 60 00 01 */	li r3, 1
 /* 802B9508 00282AC8  48 00 00 9C */	b .L_802B95A4
 .L_802B950C:
-/* 802B950C 00282ACC  48 17 E0 A9 */	bl getMemBlockIndex
+/* 802B950C 00282ACC  48 17 E0 A9 */	bl getMemRegionIndex
 /* 802B9510 00282AD0  3F C0 80 51 */	lis r30, CBattery_strpool@ha
 /* 802B9514 00282AD4  7C 64 1B 78 */	mr r4, r3
 /* 802B9518 00282AD8  3B DE CD C8 */	addi r30, r30, CBattery_strpool@l
@@ -286,7 +286,7 @@
 /* 802B95AC 00282B6C  7C 08 03 A6 */	mtlr r0
 /* 802B95B0 00282B70  38 21 00 20 */	addi r1, r1, 0x20
 /* 802B95B4 00282B74  4E 80 00 20 */	blr
-.endfn CBattery_OnInit
+.endfn CBattery_OnFileEvent
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -316,7 +316,7 @@
 	.4byte 0
 	.4byte __dt__CBattery
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CBattery_OnInit
+	.4byte CBattery_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -454,7 +454,7 @@
 
 .obj "@eti_80033A70", local
 .hidden "@eti_80033A70"
-	.4byte CBattery_OnInit
+	.4byte CBattery_OnFileEvent
 	.4byte 0x000000E8
 	.4byte "@etb_8001BED0"
 .endobj "@eti_80033A70"

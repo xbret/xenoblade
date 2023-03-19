@@ -2196,10 +2196,10 @@
 /* 8010CDF4 000D63B4  38 60 00 00 */	li r3, 0
 /* 8010CDF8 000D63B8  48 00 00 38 */	b .L_8010CE30
 .L_8010CDFC:
-/* 8010CDFC 000D63BC  48 32 A7 B9 */	bl getMemBlockIndex
+/* 8010CDFC 000D63BC  48 32 A7 B9 */	bl getMemRegionIndex
 /* 8010CE00 000D63C0  7C 64 1B 78 */	mr r4, r3
 /* 8010CE04 000D63C4  38 60 07 FC */	li r3, 0x7fc
-/* 8010CE08 000D63C8  48 32 7C 55 */	bl heap_allocate
+/* 8010CE08 000D63C8  48 32 7C 55 */	bl heap_malloc
 /* 8010CE0C 000D63CC  2C 03 00 00 */	cmpwi r3, 0
 /* 8010CE10 000D63D0  41 82 00 0C */	beq .L_8010CE1C
 /* 8010CE14 000D63D4  7F E4 FB 78 */	mr r4, r31
@@ -4245,7 +4245,7 @@
 	.4byte 0xFFFFFFA8
 	.4byte func_8010EA4C
 	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5

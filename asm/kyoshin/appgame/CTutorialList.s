@@ -1499,7 +1499,7 @@
 /* 802AE078 00277638  4E 80 00 20 */	blr 
 .endfn func_802AE004
 
-.fn CTutorialList_OnInit, global
+.fn CTutorialList_OnFileEvent, global
 /* 802AE07C 0027763C  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 802AE080 00277640  7C 08 02 A6 */	mflr r0
 /* 802AE084 00277644  90 01 00 54 */	stw r0, 0x54(r1)
@@ -1701,7 +1701,7 @@
 /* 802AE380 00277940  7C 08 03 A6 */	mtlr r0
 /* 802AE384 00277944  38 21 00 50 */	addi r1, r1, 0x50
 /* 802AE388 00277948  4E 80 00 20 */	blr 
-.endfn CTutorialList_OnInit
+.endfn CTutorialList_OnFileEvent
 
 .fn func_802AE38C, global
 /* 802AE38C 0027794C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1805,7 +1805,7 @@
 	.4byte 0
 	.4byte __dt__CTutorialList
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CTutorialList_OnInit
+	.4byte CTutorialList_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -2372,7 +2372,7 @@
 
 .obj "@eti_80033164", local
 .hidden "@eti_80033164"
-	.4byte CTutorialList_OnInit
+	.4byte CTutorialList_OnFileEvent
 	.4byte 0x00000310
 	.4byte "@etb_8001B4B8"
 .endobj "@eti_80033164"

@@ -173,7 +173,7 @@
 /* 801F9558 001C2B18  38 80 FF FF */	li r4, -1
 /* 801F955C 001C2B1C  4B FC A9 F5 */	bl __dt__CTitleAHelp
 /* 801F9560 001C2B20  38 7D 00 18 */	addi r3, r29, 0x18
-/* 801F9564 001C2B24  4B FC AA 41 */	bl func_801C3FA4
+/* 801F9564 001C2B24  4B FC AA 41 */	bl CTitleAHelp_load
 /* 801F9568 001C2B28  80 9D 00 10 */	lwz r4, 0x10(r29)
 /* 801F956C 001C2B2C  38 61 3C 38 */	addi r3, r1, 0x3c38
 /* 801F9570 001C2B30  48 00 28 59 */	bl __ct__CModelDisp
@@ -3097,7 +3097,7 @@
 	.4byte 0
 	.4byte __dt__CPartyStateWin
 	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5

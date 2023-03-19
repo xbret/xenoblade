@@ -7138,7 +7138,7 @@
 /* 80219D20 001E32E0  4E 80 00 20 */	blr 
 .endfn func_80219D10
 
-.fn CMCCrystalBox_OnInit, global
+.fn CMCCrystalBox_OnFileEvent, global
 /* 80219D24 001E32E4  94 21 FE E0 */	stwu r1, -0x120(r1)
 /* 80219D28 001E32E8  7C 08 02 A6 */	mflr r0
 /* 80219D2C 001E32EC  90 01 01 24 */	stw r0, 0x124(r1)
@@ -7731,7 +7731,7 @@
 /* 8021A628 001E3BE8  7C 08 03 A6 */	mtlr r0
 /* 8021A62C 001E3BEC  38 21 01 20 */	addi r1, r1, 0x120
 /* 8021A630 001E3BF0  4E 80 00 20 */	blr 
-.endfn CMCCrystalBox_OnInit
+.endfn CMCCrystalBox_OnFileEvent
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -7873,7 +7873,7 @@
 	.4byte 0
 	.4byte __dt__CMCCrystalBox
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CMCCrystalBox_OnInit
+	.4byte CMCCrystalBox_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -9316,7 +9316,7 @@
 
 .obj "@eti_8002D794", local
 .hidden "@eti_8002D794"
-	.4byte CMCCrystalBox_OnInit
+	.4byte CMCCrystalBox_OnFileEvent
 	.4byte 0x00000910
 	.4byte "@etb_80013DE4"
 .endobj "@eti_8002D794"

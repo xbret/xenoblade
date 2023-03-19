@@ -1261,7 +1261,7 @@
 
 
 .obj "sArcTanTbl__Q36nw4hbm4math29@unnamed@math_triangular_cpp@", local
-    .float 0 #0
+    .float 0
     .float 1.2728254
     .float 1.2728254
     .float 1.2703458

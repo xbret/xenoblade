@@ -1170,7 +1170,7 @@
 /* 802440DC 0020D69C  4E 80 00 20 */	blr 
 .endfn func_80244020
 
-.fn CMapSel_OnInit, global
+.fn CMapSel_OnFileEvent, global
 /* 802440E0 0020D6A0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802440E4 0020D6A4  7C 08 02 A6 */	mflr r0
 /* 802440E8 0020D6A8  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1302,7 +1302,7 @@
 /* 802442D4 0020D894  7C 08 03 A6 */	mtlr r0
 /* 802442D8 0020D898  38 21 00 40 */	addi r1, r1, 0x40
 /* 802442DC 0020D89C  4E 80 00 20 */	blr 
-.endfn CMapSel_OnInit
+.endfn CMapSel_OnFileEvent
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -1375,7 +1375,7 @@
 	.4byte 0
 	.4byte __dt__CMapSel
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CMapSel_OnInit
+	.4byte CMapSel_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -1802,7 +1802,7 @@
 
 .obj "@eti_8002F294", local
 .hidden "@eti_8002F294"
-	.4byte CMapSel_OnInit
+	.4byte CMapSel_OnFileEvent
 	.4byte 0x00000200
 	.4byte "@etb_8001645C"
 .endobj "@eti_8002F294"

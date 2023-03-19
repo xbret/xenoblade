@@ -86,7 +86,7 @@
 /* 8012E0D0 000F7690  48 36 7F 35 */	bl func_80496004
 /* 8012E0D4 000F7694  7C 64 1B 78 */	mr r4, r3
 /* 8012E0D8 000F7698  38 60 00 60 */	li r3, 0x60
-/* 8012E0DC 000F769C  48 30 69 A5 */	bl heap_allocate_1
+/* 8012E0DC 000F769C  48 30 69 A5 */	bl heap_malloc_1
 /* 8012E0E0 000F76A0  90 7D 00 70 */	stw r3, 0x70(r29)
 /* 8012E0E4 000F76A4  38 00 00 08 */	li r0, 8
 /* 8012E0E8 000F76A8  3C 80 80 53 */	lis r4, lbl_80531878@ha
@@ -332,10 +332,10 @@
 /* 8012E434 000F79F4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8012E438 000F79F8  93 C1 00 08 */	stw r30, 8(r1)
 /* 8012E43C 000F79FC  7C 7E 1B 78 */	mr r30, r3
-/* 8012E440 000F7A00  48 30 91 75 */	bl getMemBlockIndex
+/* 8012E440 000F7A00  48 30 91 75 */	bl getMemRegionIndex
 /* 8012E444 000F7A04  7C 64 1B 78 */	mr r4, r3
 /* 8012E448 000F7A08  38 60 00 54 */	li r3, 0x54
-/* 8012E44C 000F7A0C  48 30 66 11 */	bl heap_allocate
+/* 8012E44C 000F7A0C  48 30 66 11 */	bl heap_malloc
 /* 8012E450 000F7A10  2C 03 00 00 */	cmpwi r3, 0
 /* 8012E454 000F7A14  7C 7F 1B 78 */	mr r31, r3
 /* 8012E458 000F7A18  41 82 00 58 */	beq .L_8012E4B0
@@ -1580,10 +1580,10 @@
 /* 8012F59C 000F8B5C  48 30 4E 05 */	bl func_804343A0
 /* 8012F5A0 000F8B60  7C 7F 1B 78 */	mr r31, r3
 .L_8012F5A4:
-/* 8012F5A4 000F8B64  48 30 80 11 */	bl getMemBlockIndex
+/* 8012F5A4 000F8B64  48 30 80 11 */	bl getMemRegionIndex
 /* 8012F5A8 000F8B68  7C 64 1B 78 */	mr r4, r3
 /* 8012F5AC 000F8B6C  38 60 00 F0 */	li r3, 0xf0
-/* 8012F5B0 000F8B70  48 30 54 AD */	bl heap_allocate
+/* 8012F5B0 000F8B70  48 30 54 AD */	bl heap_malloc
 /* 8012F5B4 000F8B74  2C 03 00 00 */	cmpwi r3, 0
 /* 8012F5B8 000F8B78  41 82 00 10 */	beq .L_8012F5C8
 /* 8012F5BC 000F8B7C  7F C4 F3 78 */	mr r4, r30
@@ -2324,10 +2324,10 @@
 /* 8012FF60 000F9520  4E 80 00 20 */	blr 
 .endfn __dt__CUIBattleManager_CTest
 
-.fn CUIBattleManager_OnInit, global
+.fn CUIBattleManager_OnFileEvent, global
 /* 8012FF64 000F9524  38 63 FF AC */	addi r3, r3, -84
 /* 8012FF68 000F9528  4B FF F3 58 */	b func_8012F2C0
-.endfn CUIBattleManager_OnInit
+.endfn CUIBattleManager_OnFileEvent
 
 .fn func_8012FF6C, global
 /* 8012FF6C 000F952C  38 63 FF AC */	addi r3, r3, -84
@@ -4637,7 +4637,7 @@
 	.4byte 0xFFFFFFAC
 	.4byte func_8012FF6C
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CUIBattleManager_OnInit
+	.4byte CUIBattleManager_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5

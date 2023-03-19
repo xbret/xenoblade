@@ -731,10 +731,10 @@
 /* 80293BC0 0025D180  38 60 00 00 */	li r3, 0
 /* 80293BC4 0025D184  48 00 00 38 */	b .L_80293BFC
 .L_80293BC8:
-/* 80293BC8 0025D188  48 1A 39 ED */	bl getMemBlockIndex
+/* 80293BC8 0025D188  48 1A 39 ED */	bl getMemRegionIndex
 /* 80293BCC 0025D18C  7C 64 1B 78 */	mr r4, r3
 /* 80293BD0 0025D190  38 60 00 9C */	li r3, 0x9c
-/* 80293BD4 0025D194  48 1A 0E 89 */	bl heap_allocate
+/* 80293BD4 0025D194  48 1A 0E 89 */	bl heap_malloc
 /* 80293BD8 0025D198  2C 03 00 00 */	cmpwi r3, 0
 /* 80293BDC 0025D19C  41 82 00 0C */	beq .L_80293BE8
 /* 80293BE0 0025D1A0  7F E4 FB 78 */	mr r4, r31
@@ -859,10 +859,10 @@
 /* 80293D6C 0025D32C  4E 80 00 20 */	blr 
 .endfn func_80293D2C
 
-.fn CMenuPTChangeNotice_OnInit, global
+.fn CMenuPTChangeNotice_OnFileEvent, global
 /* 80293D70 0025D330  38 63 FF 94 */	addi r3, r3, -108
 /* 80293D74 0025D334  4B FF F7 18 */	b func_8029348C
-.endfn CMenuPTChangeNotice_OnInit
+.endfn CMenuPTChangeNotice_OnFileEvent
 
 .fn func_80293D78, global
 /* 80293D78 0025D338  38 63 FF 94 */	addi r3, r3, -108
@@ -939,7 +939,7 @@
 	.4byte 0xFFFFFF94
 	.4byte func_80293D78
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CMenuPTChangeNotice_OnInit
+	.4byte CMenuPTChangeNotice_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5

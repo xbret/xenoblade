@@ -36,7 +36,7 @@
 /* 80438CA8 00402268  90 DF 01 E4 */	stw r6, 0x1e4(r31)
 /* 80438CAC 0040226C  90 BF 01 E8 */	stw r5, 0x1e8(r31)
 /* 80438CB0 00402270  90 1F 00 50 */	stw r0, 0x50(r31)
-/* 80438CB4 00402274  4B FF BD CD */	bl heap_allocate_1
+/* 80438CB4 00402274  4B FF BD CD */	bl heap_malloc_1
 /* 80438CB8 00402278  90 7F 01 D8 */	stw r3, 0x1d8(r31)
 /* 80438CBC 0040227C  38 00 00 10 */	li r0, 0x10
 /* 80438CC0 00402280  93 C3 00 00 */	stw r30, 0(r3)
@@ -539,10 +539,10 @@
 /* 80439354 00402914  80 1F 00 A8 */	lwz r0, 0xa8(r31)
 /* 80439358 00402918  7C 00 EA 14 */	add r0, r0, r29
 /* 8043935C 0040291C  90 1F 00 A8 */	stw r0, 0xa8(r31)
-/* 80439360 00402920  4B FF E2 55 */	bl getMemBlockIndex
+/* 80439360 00402920  4B FF E2 55 */	bl getMemRegionIndex
 /* 80439364 00402924  7C 64 1B 78 */	mr r4, r3
 /* 80439368 00402928  38 60 04 70 */	li r3, 0x470
-/* 8043936C 0040292C  4B FF B6 F1 */	bl heap_allocate
+/* 8043936C 0040292C  4B FF B6 F1 */	bl heap_malloc
 /* 80439370 00402930  2C 03 00 00 */	cmpwi r3, 0
 /* 80439374 00402934  7C 7D 1B 78 */	mr r29, r3
 /* 80439378 00402938  41 82 00 14 */	beq .L_8043938C
@@ -854,7 +854,7 @@
 	.4byte 0
 	.4byte __dt__CProc
 	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -885,11 +885,11 @@
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
 	.4byte func_80438A50
-	.4byte func_80039E3C
-	.4byte func_80039E38
+	.4byte CWorkThread_Event1
+	.4byte CWorkThread_Event2
 	.4byte func_804396A0
 	.4byte func_804396A4
-	.4byte func_80039E30
+	.4byte CWorkThread_Event3
 .endobj __vt__CProc
 
 

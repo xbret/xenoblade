@@ -2854,7 +2854,7 @@
 /* 8029E5F8 00267BB8  4E 80 00 20 */	blr 
 .endfn func_8029E3F8
 
-.fn COption_OnInit, global
+.fn COption_OnFileEvent, global
 /* 8029E5FC 00267BBC  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8029E600 00267BC0  7C 08 02 A6 */	mflr r0
 /* 8029E604 00267BC4  90 01 00 74 */	stw r0, 0x74(r1)
@@ -2976,7 +2976,7 @@
 /* 8029E7CC 00267D8C  7C 08 03 A6 */	mtlr r0
 /* 8029E7D0 00267D90  38 21 00 70 */	addi r1, r1, 0x70
 /* 8029E7D4 00267D94  4E 80 00 20 */	blr
-.endfn COption_OnInit
+.endfn COption_OnFileEvent
 
 .fn sinit_8029E7D8, local
 /* 8029E7D8 00267D98  3C 60 80 58 */	lis r3, lbl_8057AA08@ha
@@ -3240,7 +3240,7 @@
 	.4byte 0
 	.4byte __dt__COption
 	.4byte IWorkEvent_WorkEvent1
-	.4byte COption_OnInit
+	.4byte COption_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -3998,7 +3998,7 @@
 
 .obj "@eti_80032420", local
 .hidden "@eti_80032420"
-	.4byte COption_OnInit
+	.4byte COption_OnFileEvent
 	.4byte 0x000001DC
 	.4byte "@etb_8001A594"
 .endobj "@eti_80032420"

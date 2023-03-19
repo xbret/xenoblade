@@ -109,7 +109,7 @@
 /* 80132038 000FB5F8  48 36 3F CD */	bl func_80496004
 /* 8013203C 000FB5FC  7C 64 1B 78 */	mr r4, r3
 /* 80132040 000FB600  38 60 00 90 */	li r3, 0x90
-/* 80132044 000FB604  48 30 2A 3D */	bl heap_allocate_1
+/* 80132044 000FB604  48 30 2A 3D */	bl heap_malloc_1
 /* 80132048 000FB608  90 7D 01 38 */	stw r3, 0x138(r29)
 /* 8013204C 000FB60C  38 00 00 0C */	li r0, 0xc
 /* 80132050 000FB610  3C A0 80 53 */	lis r5, lbl_80531A58@ha
@@ -396,10 +396,10 @@
 /* 8013242C 000FB9EC  90 77 01 14 */	stw r3, 0x114(r23)
 /* 80132430 000FB9F0  38 80 00 03 */	li r4, 3
 /* 80132434 000FB9F4  48 31 CD 21 */	bl func_8044F154
-/* 80132438 000FB9F8  48 30 51 7D */	bl getMemBlockIndex
+/* 80132438 000FB9F8  48 30 51 7D */	bl getMemRegionIndex
 /* 8013243C 000FB9FC  7C 64 1B 78 */	mr r4, r3
 /* 80132440 000FBA00  38 60 00 54 */	li r3, 0x54
-/* 80132444 000FBA04  48 30 26 19 */	bl heap_allocate
+/* 80132444 000FBA04  48 30 26 19 */	bl heap_malloc
 /* 80132448 000FBA08  2C 03 00 00 */	cmpwi r3, 0
 /* 8013244C 000FBA0C  7C 76 1B 78 */	mr r22, r3
 /* 80132450 000FBA10  41 82 00 58 */	beq .L_801324A8
@@ -1723,10 +1723,10 @@
 /* 80133714 000FCCD4  48 30 0C 8D */	bl func_804343A0
 /* 80133718 000FCCD8  7C 7F 1B 78 */	mr r31, r3
 .L_8013371C:
-/* 8013371C 000FCCDC  48 30 3E 99 */	bl getMemBlockIndex
+/* 8013371C 000FCCDC  48 30 3E 99 */	bl getMemRegionIndex
 /* 80133720 000FCCE0  7C 64 1B 78 */	mr r4, r3
 /* 80133724 000FCCE4  38 60 0C 94 */	li r3, 0xc94
-/* 80133728 000FCCE8  48 30 13 35 */	bl heap_allocate
+/* 80133728 000FCCE8  48 30 13 35 */	bl heap_malloc
 /* 8013372C 000FCCEC  2C 03 00 00 */	cmpwi r3, 0
 /* 80133730 000FCCF0  41 82 00 10 */	beq .L_80133740
 /* 80133734 000FCCF4  7F C4 F3 78 */	mr r4, r30
@@ -4836,10 +4836,10 @@
 /* 80135FB8 000FF578  4E 80 00 20 */	blr 
 .endfn __dt__CUICfManager_CTest
 
-.fn CUICfManager_OnInit, global
+.fn CUICfManager_OnFileEvent, global
 /* 80135FBC 000FF57C  38 63 FF AC */	addi r3, r3, -84
 /* 80135FC0 000FF580  4B FF D1 BC */	b func_8013317C
-.endfn CUICfManager_OnInit
+.endfn CUICfManager_OnFileEvent
 
 .fn func_80135FC4, global
 /* 80135FC4 000FF584  38 63 FF AC */	addi r3, r3, -84
@@ -6040,7 +6040,7 @@
 /* 80136FE0 001005A0  48 32 80 E1 */	bl func_8045F0C0
 /* 80136FE4 001005A4  7C 64 1B 78 */	mr r4, r3
 /* 80136FE8 001005A8  38 60 00 10 */	li r3, 0x10
-/* 80136FEC 001005AC  48 2F DA 71 */	bl heap_allocate
+/* 80136FEC 001005AC  48 2F DA 71 */	bl heap_malloc
 /* 80136FF0 001005B0  2C 03 00 00 */	cmpwi r3, 0
 /* 80136FF4 001005B4  7C 7F 1B 78 */	mr r31, r3
 /* 80136FF8 001005B8  41 82 00 0C */	beq .L_80137004
@@ -12526,7 +12526,7 @@
 	.4byte 0xFFFFFFAC
 	.4byte func_80135FC4
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CUICfManager_OnInit
+	.4byte CUICfManager_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5

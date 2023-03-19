@@ -152,7 +152,7 @@
 /* 804DED14 004A82D4  4E 80 00 20 */	blr 
 .endfn func_804DEC6C
 
-.fn CArcItem_OnInit, global
+.fn CArcItem_OnFileEvent, global
 /* 804DED18 004A82D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DED1C 004A82DC  7C 08 02 A6 */	mflr r0
 /* 804DED20 004A82E0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -193,7 +193,7 @@
 /* 804DED9C 004A835C  7C 08 03 A6 */	mtlr r0
 /* 804DEDA0 004A8360  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DEDA4 004A8364  4E 80 00 20 */	blr 
-.endfn CArcItem_OnInit
+.endfn CArcItem_OnFileEvent
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -223,7 +223,7 @@
 	.4byte 0
 	.4byte __dt__CArcItem
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CArcItem_OnInit
+	.4byte CArcItem_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -329,7 +329,7 @@
 
 .obj "@eti_800389B4", local
 .hidden "@eti_800389B4"
-	.4byte CArcItem_OnInit
+	.4byte CArcItem_OnFileEvent
 	.4byte 0x00000090
 	.4byte "@etb_80020978"
 .endobj "@eti_800389B4"

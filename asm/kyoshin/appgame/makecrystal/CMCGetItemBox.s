@@ -3432,7 +3432,7 @@
 /* 80299B34 002630F4  4E 80 00 20 */	blr 
 .endfn func_802999B0
 
-.fn CMCGetItemBox_OnInit, global
+.fn CMCGetItemBox_OnFileEvent, global
 /* 80299B38 002630F8  94 21 FF 30 */	stwu r1, -0xd0(r1)
 /* 80299B3C 002630FC  7C 08 02 A6 */	mflr r0
 /* 80299B40 00263100  90 01 00 D4 */	stw r0, 0xd4(r1)
@@ -3464,7 +3464,7 @@
 /* 80299BA8 00263168  48 1C 55 19 */	bl func_8045F0C0
 /* 80299BAC 0026316C  7C 64 1B 78 */	mr r4, r3
 /* 80299BB0 00263170  38 60 08 58 */	li r3, 0x858
-/* 80299BB4 00263174  48 19 AE A9 */	bl heap_allocate
+/* 80299BB4 00263174  48 19 AE A9 */	bl heap_malloc
 /* 80299BB8 00263178  2C 03 00 00 */	cmpwi r3, 0
 /* 80299BBC 0026317C  41 82 00 08 */	beq .L_80299BC4
 /* 80299BC0 00263180  4B E8 C4 C5 */	bl func_80126084
@@ -3795,7 +3795,7 @@
 /* 8029A0AC 0026366C  7C 08 03 A6 */	mtlr r0
 /* 8029A0B0 00263670  38 21 00 D0 */	addi r1, r1, 0xd0
 /* 8029A0B4 00263674  4E 80 00 20 */	blr 
-.endfn CMCGetItemBox_OnInit
+.endfn CMCGetItemBox_OnFileEvent
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -3912,7 +3912,7 @@
 	.4byte 0
 	.4byte __dt__CMCGetItemBox
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CMCGetItemBox_OnInit
+	.4byte CMCGetItemBox_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -4712,7 +4712,7 @@
 
 .obj "@eti_80032078", local
 .hidden "@eti_80032078"
-	.4byte CMCGetItemBox_OnInit
+	.4byte CMCGetItemBox_OnFileEvent
 	.4byte 0x00000580
 	.4byte "@etb_80019FF8"
 .endobj "@eti_80032078"

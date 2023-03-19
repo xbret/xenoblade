@@ -13522,7 +13522,7 @@
 /* 801E025C 001A981C  4E 80 00 20 */	blr 
 .endfn func_801DFFB8
 
-.fn CItemBoxInfo_OnInit, global
+.fn CItemBoxInfo_OnFileEvent, global
 /* 801E0260 001A9820  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 801E0264 001A9824  7C 08 02 A6 */	mflr r0
 /* 801E0268 001A9828  90 01 00 A4 */	stw r0, 0xa4(r1)
@@ -14507,7 +14507,7 @@
 /* 801E1190 001AA750  7C 08 03 A6 */	mtlr r0
 /* 801E1194 001AA754  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 801E1198 001AA758  4E 80 00 20 */	blr 
-.endfn CItemBoxInfo_OnInit
+.endfn CItemBoxInfo_OnFileEvent
 
 
 .fn __ct__CItemBoxInfo2, global
@@ -23952,7 +23952,7 @@
 /* 801E9B90 001B3150  4E 80 00 20 */	blr 
 .endfn func_801E98E4
 
-.fn CItemBoxInfo2_OnInit, global
+.fn CItemBoxInfo2_OnFileEvent, global
 /* 801E9B94 001B3154  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 801E9B98 001B3158  7C 08 02 A6 */	mflr r0
 /* 801E9B9C 001B315C  90 01 00 A4 */	stw r0, 0xa4(r1)
@@ -24998,7 +24998,7 @@
 /* 801EABB8 001B4178  7C 08 03 A6 */	mtlr r0
 /* 801EABBC 001B417C  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 801EABC0 001B4180  4E 80 00 20 */	blr
-.endfn CItemBoxInfo2_OnInit
+.endfn CItemBoxInfo2_OnFileEvent
 
 .fn sinit_801EABC4, local
 /* 801EABC4 001B4184  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -25424,7 +25424,7 @@
 	.4byte 0
 	.4byte __dt__CItemBoxInfo2
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CItemBoxInfo2_OnInit
+	.4byte CItemBoxInfo2_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -25469,7 +25469,7 @@
 	.4byte 0
 	.4byte __dt__CItemBoxInfo
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CItemBoxInfo_OnInit
+	.4byte CItemBoxInfo_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -26765,7 +26765,7 @@
 
 .obj "@eti_8002BD00", local
 .hidden "@eti_8002BD00"
-	.4byte CItemBoxInfo_OnInit
+	.4byte CItemBoxInfo_OnFileEvent
 	.4byte 0x00000F3C
 	.4byte "@etb_800118DC"
 .endobj "@eti_8002BD00"
@@ -27060,7 +27060,7 @@
 
 .obj "@eti_8002BEF8", local
 .hidden "@eti_8002BEF8"
-	.4byte CItemBoxInfo2_OnInit
+	.4byte CItemBoxInfo2_OnFileEvent
 	.4byte 0x00001030
 	.4byte "@etb_80011AA8"
 .endobj "@eti_8002BEF8"

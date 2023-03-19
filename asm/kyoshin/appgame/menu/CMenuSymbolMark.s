@@ -541,10 +541,10 @@
 /* 8011DB10 000E70D0  48 37 83 A5 */	bl func_80495EB4
 /* 8011DB14 000E70D4  38 7F 00 64 */	addi r3, r31, 0x64
 /* 8011DB18 000E70D8  48 34 1C F9 */	bl func_8045F810
-/* 8011DB1C 000E70DC  48 31 9A 99 */	bl getMemBlockIndex
+/* 8011DB1C 000E70DC  48 31 9A 99 */	bl getMemRegionIndex
 /* 8011DB20 000E70E0  7C 64 1B 78 */	mr r4, r3
 /* 8011DB24 000E70E4  38 60 00 7C */	li r3, 0x7c
-/* 8011DB28 000E70E8  48 31 6F 35 */	bl heap_allocate
+/* 8011DB28 000E70E8  48 31 6F 35 */	bl heap_malloc
 /* 8011DB2C 000E70EC  2C 03 00 00 */	cmpwi r3, 0
 /* 8011DB30 000E70F0  7C 7D 1B 78 */	mr r29, r3
 /* 8011DB34 000E70F4  41 82 00 6C */	beq .L_8011DBA0
@@ -1229,10 +1229,10 @@
 /* 8011E4EC 000E7AAC  38 60 00 00 */	li r3, 0
 /* 8011E4F0 000E7AB0  48 00 00 38 */	b .L_8011E528
 .L_8011E4F4:
-/* 8011E4F4 000E7AB4  48 31 90 C1 */	bl getMemBlockIndex
+/* 8011E4F4 000E7AB4  48 31 90 C1 */	bl getMemRegionIndex
 /* 8011E4F8 000E7AB8  7C 64 1B 78 */	mr r4, r3
 /* 8011E4FC 000E7ABC  38 60 08 B4 */	li r3, 0x8b4
-/* 8011E500 000E7AC0  48 31 65 5D */	bl heap_allocate
+/* 8011E500 000E7AC0  48 31 65 5D */	bl heap_malloc
 /* 8011E504 000E7AC4  2C 03 00 00 */	cmpwi r3, 0
 /* 8011E508 000E7AC8  41 82 00 0C */	beq .L_8011E514
 /* 8011E50C 000E7ACC  7F E4 FB 78 */	mr r4, r31
@@ -5725,7 +5725,7 @@
 	.4byte 0xFFFFFFA8
 	.4byte func_8012213C
 	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5

@@ -18,10 +18,10 @@
 /* 8022F438 001F89F8  38 60 00 00 */	li r3, 0
 /* 8022F43C 001F89FC  48 00 00 D4 */	b .L_8022F510
 .L_8022F440:
-/* 8022F440 001F8A00  48 20 81 75 */	bl getMemBlockIndex
+/* 8022F440 001F8A00  48 20 81 75 */	bl getMemRegionIndex
 /* 8022F444 001F8A04  7C 64 1B 78 */	mr r4, r3
 /* 8022F448 001F8A08  38 60 03 68 */	li r3, 0x368
-/* 8022F44C 001F8A0C  48 20 56 11 */	bl heap_allocate
+/* 8022F44C 001F8A0C  48 20 56 11 */	bl heap_malloc
 /* 8022F450 001F8A10  2C 03 00 00 */	cmpwi r3, 0
 /* 8022F454 001F8A14  7C 7E 1B 78 */	mr r30, r3
 /* 8022F458 001F8A18  41 82 00 A0 */	beq .L_8022F4F8
@@ -6786,7 +6786,7 @@
 /* 802352A4 001FE864  4E 80 00 20 */	blr 
 .endfn func_80235124
 
-.fn CArtsList_OnInit, global
+.fn CArtsList_OnFileEvent, global
 /* 802352A8 001FE868  94 21 FE 60 */	stwu r1, -0x1a0(r1)
 /* 802352AC 001FE86C  7C 08 02 A6 */	mflr r0
 /* 802352B0 001FE870  90 01 01 A4 */	stw r0, 0x1a4(r1)
@@ -7071,7 +7071,7 @@
 /* 802356FC 001FECBC  7C 08 03 A6 */	mtlr r0
 /* 80235700 001FECC0  38 21 01 A0 */	addi r1, r1, 0x1a0
 /* 80235704 001FECC4  4E 80 00 20 */	blr 
-.endfn CArtsList_OnInit
+.endfn CArtsList_OnFileEvent
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -7441,7 +7441,7 @@
 	.4byte 0
 	.4byte __dt__CArtsList
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CArtsList_OnInit
+	.4byte CArtsList_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -8803,7 +8803,7 @@
 
 .obj "@eti_8002EB98", local
 .hidden "@eti_8002EB98"
-	.4byte CArtsList_OnInit
+	.4byte CArtsList_OnFileEvent
 	.4byte 0x00000460
 	.4byte "@etb_80015D08"
 .endobj "@eti_8002EB98"

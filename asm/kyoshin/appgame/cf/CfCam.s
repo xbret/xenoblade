@@ -10676,7 +10676,7 @@
 /* 80074D08 0003E2C8  4B FE D2 E1 */	bl func_80061FE8
 /* 80074D0C 0003E2CC  7C 64 1B 78 */	mr r4, r3
 /* 80074D10 0003E2D0  38 60 02 5C */	li r3, 0x25c
-/* 80074D14 0003E2D4  48 3B FD 49 */	bl heap_allocate
+/* 80074D14 0003E2D4  48 3B FD 49 */	bl heap_malloc
 /* 80074D18 0003E2D8  2C 03 00 00 */	cmpwi r3, 0
 /* 80074D1C 0003E2DC  41 82 00 10 */	beq .L_80074D2C
 /* 80074D20 0003E2E0  7F C4 F3 78 */	mr r4, r30
@@ -11241,7 +11241,7 @@
 
 
 .obj float_806644AC, global
-	.float 0.4 #0x3ECCCCCD
+	.float 0.4
 .endobj float_806644AC
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
@@ -11355,7 +11355,7 @@
 
 
 .obj float_80668B78, global
-	.float 0.4 #0x3ECCCCCD
+	.float 0.4
 .endobj float_80668B78
 
 

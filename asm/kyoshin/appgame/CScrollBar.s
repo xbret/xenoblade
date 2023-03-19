@@ -430,7 +430,7 @@
 /* 801F39CC 001BCF8C  4E 80 00 20 */	blr 
 .endfn func_801F39B4
 
-.fn CScrollBar_OnInit, global
+.fn CScrollBar_OnFileEvent, global
 /* 801F39D0 001BCF90  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 801F39D4 001BCF94  7C 08 02 A6 */	mflr r0
 /* 801F39D8 001BCF98  90 01 00 44 */	stw r0, 0x44(r1)
@@ -566,7 +566,7 @@
 /* 801F3BD4 001BD194  7C 08 03 A6 */	mtlr r0
 /* 801F3BD8 001BD198  38 21 00 40 */	addi r1, r1, 0x40
 /* 801F3BDC 001BD19C  4E 80 00 20 */	blr 
-.endfn CScrollBar_OnInit
+.endfn CScrollBar_OnFileEvent
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -679,7 +679,7 @@
 	.4byte 0
 	.4byte __dt__CScrollBar
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CScrollBar_OnInit
+	.4byte CScrollBar_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -901,7 +901,7 @@
 
 .obj "@eti_8002C348", local
 .hidden "@eti_8002C348"
-	.4byte CScrollBar_OnInit
+	.4byte CScrollBar_OnFileEvent
 	.4byte 0x00000210
 	.4byte "@etb_80012250"
 .endobj "@eti_8002C348"

@@ -901,10 +901,10 @@
 /* 800FF6E4 000C8CA4  38 60 00 00 */	li r3, 0
 /* 800FF6E8 000C8CA8  48 00 00 38 */	b .L_800FF720
 .L_800FF6EC:
-/* 800FF6EC 000C8CAC  48 33 7E C9 */	bl getMemBlockIndex
+/* 800FF6EC 000C8CAC  48 33 7E C9 */	bl getMemRegionIndex
 /* 800FF6F0 000C8CB0  7C 64 1B 78 */	mr r4, r3
 /* 800FF6F4 000C8CB4  38 60 00 E4 */	li r3, 0xe4
-/* 800FF6F8 000C8CB8  48 33 53 65 */	bl heap_allocate
+/* 800FF6F8 000C8CB8  48 33 53 65 */	bl heap_malloc
 /* 800FF6FC 000C8CBC  2C 03 00 00 */	cmpwi r3, 0
 /* 800FF700 000C8CC0  41 82 00 0C */	beq .L_800FF70C
 /* 800FF704 000C8CC4  7F E4 FB 78 */	mr r4, r31
@@ -3727,10 +3727,10 @@
 /* 80101FFC 000CB5BC  4E 80 00 20 */	blr 
 .endfn func_80101FB8
 
-.fn CMainMenu_OnInit, global
+.fn CMainMenu_OnFileEvent, global
 /* 80102000 000CB5C0  38 63 FF A8 */	addi r3, r3, -88
 /* 80102004 000CB5C4  4B FF D2 FC */	b func_800FF300
-.endfn CMainMenu_OnInit
+.endfn CMainMenu_OnFileEvent
 
 .fn func_80102008, global
 /* 80102008 000CB5C8  38 63 FF A8 */	addi r3, r3, -88
@@ -3956,7 +3956,7 @@
 	.4byte 0xFFFFFFA8
 	.4byte func_80102008
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CMainMenu_OnInit
+	.4byte CMainMenu_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5

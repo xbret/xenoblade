@@ -2,36 +2,6 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-#not sure if the first few functions at the start/end belong here
-
-.fn func_8038CF04, global
-/* 8038CF04 003564C4  2C 04 00 00 */	cmpwi r4, 0
-/* 8038CF08 003564C8  40 82 00 10 */	bne .L_8038CF18
-/* 8038CF0C 003564CC  38 00 00 00 */	li r0, 0
-/* 8038CF10 003564D0  90 03 00 38 */	stw r0, 0x38(r3)
-/* 8038CF14 003564D4  4E 80 00 20 */	blr
-.L_8038CF18:
-/* 8038CF18 003564D8  38 00 00 01 */	li r0, 1
-/* 8038CF1C 003564DC  90 03 00 38 */	stw r0, 0x38(r3)
-/* 8038CF20 003564E0  4E 80 00 20 */	blr 
-.endfn func_8038CF04
-
-.fn AHXTBL_GetWtblInfo, global
-/* 8038CF24 003564E4  2C 03 00 00 */	cmpwi r3, 0
-/* 8038CF28 003564E8  41 82 00 10 */	beq .L_8038CF38
-/* 8038CF2C 003564EC  3C A0 80 56 */	lis r5, lbl_80566078@ha
-/* 8038CF30 003564F0  80 05 60 78 */	lwz r0, lbl_80566078@l(r5)
-/* 8038CF34 003564F4  90 03 00 00 */	stw r0, 0(r3)
-.L_8038CF38:
-/* 8038CF38 003564F8  2C 04 00 00 */	cmpwi r4, 0
-/* 8038CF3C 003564FC  4D 82 00 20 */	beqlr 
-/* 8038CF40 00356500  3C 60 80 56 */	lis r3, lbl_8056607C@ha
-/* 8038CF44 00356504  80 03 60 7C */	lwz r0, lbl_8056607C@l(r3)
-/* 8038CF48 00356508  90 04 00 00 */	stw r0, 0(r4)
-/* 8038CF4C 0035650C  4E 80 00 20 */	blr 
-.endfn AHXTBL_GetWtblInfo
-
 .fn adxhdr_get_base_info, global
 /* 8038CF50 00356510  88 03 00 00 */	lbz r0, 0(r3)
 /* 8038CF54 00356514  98 04 00 00 */	stb r0, 0(r4)
@@ -274,42 +244,3 @@
 /* 8038D2A0 00356860  38 21 00 20 */	addi r1, r1, 0x20
 /* 8038D2A4 00356864  4E 80 00 20 */	blr 
 .endfn ADX_DecodeHeader
-
-.fn AHXTBL_GetAtblInfo, global
-/* 8038D2A8 00356868  2C 03 00 00 */	cmpwi r3, 0
-/* 8038D2AC 0035686C  41 82 00 10 */	beq .L_8038D2BC
-/* 8038D2B0 00356870  3C A0 80 57 */	lis r5, lbl_80569180@ha
-/* 8038D2B4 00356874  80 05 91 80 */	lwz r0, lbl_80569180@l(r5)
-/* 8038D2B8 00356878  90 03 00 00 */	stw r0, 0(r3)
-.L_8038D2BC:
-/* 8038D2BC 0035687C  2C 04 00 00 */	cmpwi r4, 0
-/* 8038D2C0 00356880  4D 82 00 20 */	beqlr 
-/* 8038D2C4 00356884  3C 60 80 57 */	lis r3, lbl_80569184@ha
-/* 8038D2C8 00356888  80 03 91 84 */	lwz r0, lbl_80569184@l(r3)
-/* 8038D2CC 0035688C  90 04 00 00 */	stw r0, 0(r4)
-/* 8038D2D0 00356890  4E 80 00 20 */	blr 
-.endfn AHXTBL_GetAtblInfo
-
-.fn AHXTBL_GetMtblInfo, global
-/* 8038D2D4 00356894  2C 03 00 00 */	cmpwi r3, 0
-/* 8038D2D8 00356898  41 82 00 10 */	beq .L_8038D2E8
-/* 8038D2DC 0035689C  3C A0 80 57 */	lis r5, lbl_80569188@ha
-/* 8038D2E0 003568A0  80 05 91 88 */	lwz r0, lbl_80569188@l(r5)
-/* 8038D2E4 003568A4  90 03 00 00 */	stw r0, 0(r3)
-.L_8038D2E8:
-/* 8038D2E8 003568A8  2C 04 00 00 */	cmpwi r4, 0
-/* 8038D2EC 003568AC  4D 82 00 20 */	beqlr 
-/* 8038D2F0 003568B0  3C 60 80 57 */	lis r3, lbl_8056918C@ha
-/* 8038D2F4 003568B4  80 03 91 8C */	lwz r0, lbl_8056918C@l(r3)
-/* 8038D2F8 003568B8  90 04 00 00 */	stw r0, 0(r4)
-/* 8038D2FC 003568BC  4E 80 00 20 */	blr 
-.endfn AHXTBL_GetMtblInfo
-
-
-.section .data, "wa"  # 0x805281E0 - 0x80573C60
-
-#.balign 8
-
-.obj lbl_8056607C, global
-	.4byte 0x00000880
-.endobj lbl_8056607C

@@ -34,7 +34,7 @@
 /* 8045230C 0041B8CC  93 FE 01 EC */	stw r31, 0x1ec(r30)
 /* 80452310 0041B8D0  93 CD BD D8 */	stw r30, lbl_80667F58@sda21(r13)
 /* 80452314 0041B8D4  80 9E 00 54 */	lwz r4, 0x54(r30)
-/* 80452318 0041B8D8  4B FE 27 69 */	bl heap_allocate_1
+/* 80452318 0041B8D8  4B FE 27 69 */	bl heap_malloc_1
 /* 8045231C 0041B8DC  90 7E 01 DC */	stw r3, 0x1dc(r30)
 /* 80452320 0041B8E0  38 00 00 08 */	li r0, 8
 /* 80452324 0041B8E4  93 E3 00 00 */	stw r31, 0(r3)
@@ -264,10 +264,10 @@
 .L_80452624:
 /* 80452624 0041BBE4  3F E0 80 52 */	lis r31, lbl_805266F4@ha
 /* 80452628 0041BBE8  3B FF 66 F4 */	addi r31, r31, lbl_805266F4@l
-/* 8045262C 0041BBEC  4B FE 4F 89 */	bl getMemBlockIndex
+/* 8045262C 0041BBEC  4B FE 4F 89 */	bl getMemRegionIndex
 /* 80452630 0041BBF0  7C 64 1B 78 */	mr r4, r3
 /* 80452634 0041BBF4  38 60 02 F8 */	li r3, 0x2f8
-/* 80452638 0041BBF8  4B FE 24 25 */	bl heap_allocate
+/* 80452638 0041BBF8  4B FE 24 25 */	bl heap_malloc
 /* 8045263C 0041BBFC  2C 03 00 00 */	cmpwi r3, 0
 /* 80452640 0041BC00  7C 7E 1B 78 */	mr r30, r3
 /* 80452644 0041BC04  41 82 00 14 */	beq .L_80452658
@@ -984,10 +984,10 @@
 /* 80452F3C 0041C4FC  3C 60 80 52 */	lis r3, lbl_805266F4@ha
 /* 80452F40 0041C500  38 63 66 F4 */	addi r3, r3, lbl_805266F4@l
 /* 80452F44 0041C504  3B C3 00 11 */	addi r30, r3, 0x11
-/* 80452F48 0041C508  4B FE 46 6D */	bl getMemBlockIndex
+/* 80452F48 0041C508  4B FE 46 6D */	bl getMemRegionIndex
 /* 80452F4C 0041C50C  7C 64 1B 78 */	mr r4, r3
 /* 80452F50 0041C510  38 60 02 10 */	li r3, 0x210
-/* 80452F54 0041C514  4B FE 1B 09 */	bl heap_allocate
+/* 80452F54 0041C514  4B FE 1B 09 */	bl heap_malloc
 /* 80452F58 0041C518  2C 03 00 00 */	cmpwi r3, 0
 /* 80452F5C 0041C51C  7C 7D 1B 78 */	mr r29, r3
 /* 80452F60 0041C520  41 82 00 14 */	beq .L_80452F74
@@ -1007,10 +1007,10 @@
 /* 80452F94 0041C554  3C 60 80 52 */	lis r3, lbl_805266F4@ha
 /* 80452F98 0041C558  38 63 66 F4 */	addi r3, r3, lbl_805266F4@l
 /* 80452F9C 0041C55C  3B C3 00 11 */	addi r30, r3, 0x11
-/* 80452FA0 0041C560  4B FE 46 15 */	bl getMemBlockIndex
+/* 80452FA0 0041C560  4B FE 46 15 */	bl getMemRegionIndex
 /* 80452FA4 0041C564  7C 64 1B 78 */	mr r4, r3
 /* 80452FA8 0041C568  38 60 02 10 */	li r3, 0x210
-/* 80452FAC 0041C56C  4B FE 1A B1 */	bl heap_allocate
+/* 80452FAC 0041C56C  4B FE 1A B1 */	bl heap_malloc
 /* 80452FB0 0041C570  2C 03 00 00 */	cmpwi r3, 0
 /* 80452FB4 0041C574  7C 7D 1B 78 */	mr r29, r3
 /* 80452FB8 0041C578  41 82 00 14 */	beq .L_80452FCC
@@ -1143,7 +1143,7 @@
 /* 80453168 0041C728  4B FE 12 31 */	bl func_80434398
 /* 8045316C 0041C72C  7C 64 1B 78 */	mr r4, r3
 /* 80453170 0041C730  38 60 00 04 */	li r3, 4
-/* 80453174 0041C734  4B FE 18 E9 */	bl heap_allocate
+/* 80453174 0041C734  4B FE 18 E9 */	bl heap_malloc
 /* 80453178 0041C738  2C 03 00 00 */	cmpwi r3, 0
 /* 8045317C 0041C73C  41 82 00 08 */	beq .L_80453184
 /* 80453180 0041C740  4B FF 5E 5D */	bl func_80448FDC
@@ -1292,7 +1292,7 @@
 	.4byte 0
 	.4byte __dt__CDeviceFont
 	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -1323,11 +1323,11 @@
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
 	.4byte func_80452E44
-	.4byte func_80039E3C
-	.4byte func_80039E38
+	.4byte CWorkThread_Event1
+	.4byte CWorkThread_Event2
 	.4byte func_804530C0
 	.4byte func_804531B8
-	.4byte func_80039E30
+	.4byte CWorkThread_Event3
 .endobj __vt__CDeviceFont
 
 .obj CDeviceFont_hierarchy, global

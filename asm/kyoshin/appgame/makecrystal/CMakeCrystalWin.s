@@ -236,7 +236,7 @@
 /* 80212878 001DBE38  98 1F 00 4F */	stb r0, 0x4f(r31)
 /* 8021287C 001DBE3C  4B FB 16 D5 */	bl __dt__CTitleAHelp
 /* 80212880 001DBE40  38 7F 00 18 */	addi r3, r31, 0x18
-/* 80212884 001DBE44  4B FB 17 21 */	bl func_801C3FA4
+/* 80212884 001DBE44  4B FB 17 21 */	bl CTitleAHelp_load
 /* 80212888 001DBE48  38 61 2E 98 */	addi r3, r1, 0x2e98
 /* 8021288C 001DBE4C  38 80 00 00 */	li r4, 0
 /* 80212890 001DBE50  48 00 13 61 */	bl func_80213BF0
@@ -1170,7 +1170,7 @@
 	.4byte 0
 	.4byte __dt__CMakeCrystalWin
 	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5

@@ -2924,7 +2924,7 @@
 /* 802912D0 0025A890  4E 80 00 20 */	blr 
 .endfn func_80291204
 
-.fn CSaveLoad_OnInit, global
+.fn CSaveLoad_OnFileEvent, global
 /* 802912D4 0025A894  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 802912D8 0025A898  7C 08 02 A6 */	mflr r0
 /* 802912DC 0025A89C  90 01 00 84 */	stw r0, 0x84(r1)
@@ -3275,7 +3275,7 @@
 /* 80291830 0025ADF0  7C 08 03 A6 */	mtlr r0
 /* 80291834 0025ADF4  38 21 00 80 */	addi r1, r1, 0x80
 /* 80291838 0025ADF8  4E 80 00 20 */	blr 
-.endfn CSaveLoad_OnInit
+.endfn CSaveLoad_OnFileEvent
 
 .fn func_8029183C, global
 /* 8029183C 0025ADFC  80 6D 92 48 */	lwz r3, lbl_806653C8@sda21(r13)
@@ -5233,7 +5233,7 @@
 	.4byte 0
 	.4byte __dt__CSaveLoad
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CSaveLoad_OnInit
+	.4byte CSaveLoad_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -6210,7 +6210,7 @@
 
 .obj "@eti_80031B2C", local
 .hidden "@eti_80031B2C"
-	.4byte CSaveLoad_OnInit
+	.4byte CSaveLoad_OnFileEvent
 	.4byte 0x00000568
 	.4byte "@etb_80019778"
 .endobj "@eti_80031B2C"

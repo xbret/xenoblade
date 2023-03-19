@@ -121,13 +121,3 @@ u32 IWorkEvent::IWorkEvent_80039E20(){
 u32 IWorkEvent::IWorkEvent_WorkEvent1(){
     return 0;
 }
-
-u32 IWorkEvent::func_80039E30(){
-    return 1;
-}
-
-void IWorkEvent::func_80039E38(){
-}
-
-void IWorkEvent::func_80039E3C(){
-}

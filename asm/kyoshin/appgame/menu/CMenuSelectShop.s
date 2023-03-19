@@ -563,10 +563,10 @@
 /* 8018A5B4 00153B74  38 60 00 00 */	li r3, 0
 /* 8018A5B8 00153B78  48 00 00 3C */	b .L_8018A5F4
 .L_8018A5BC:
-/* 8018A5BC 00153B7C  48 2A CF F9 */	bl getMemBlockIndex
+/* 8018A5BC 00153B7C  48 2A CF F9 */	bl getMemRegionIndex
 /* 8018A5C0 00153B80  7C 64 1B 78 */	mr r4, r3
 /* 8018A5C4 00153B84  38 60 00 D4 */	li r3, 0xd4
-/* 8018A5C8 00153B88  48 2A A4 95 */	bl heap_allocate
+/* 8018A5C8 00153B88  48 2A A4 95 */	bl heap_malloc
 /* 8018A5CC 00153B8C  2C 03 00 00 */	cmpwi r3, 0
 /* 8018A5D0 00153B90  41 82 00 10 */	beq .L_8018A5E0
 /* 8018A5D4 00153B94  7F C4 F3 78 */	mr r4, r30
@@ -637,7 +637,7 @@
 	.4byte 0xFFFFFF94
 	.4byte func_8018A610
 	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5

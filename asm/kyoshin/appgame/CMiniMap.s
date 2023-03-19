@@ -1531,7 +1531,7 @@
 /* 80117598 000E0B58  4E 80 00 20 */	blr 
 .endfn __dt__CMMClock
 
-.fn CMMClock_OnInit, global
+.fn CMMClock_OnFileEvent, global
 /* 8011759C 000E0B5C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801175A0 000E0B60  7C 08 02 A6 */	mflr r0
 /* 801175A4 000E0B64  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1620,7 +1620,7 @@
 /* 801176E8 000E0CA8  7C 08 03 A6 */	mtlr r0
 /* 801176EC 000E0CAC  38 21 00 20 */	addi r1, r1, 0x20
 /* 801176F0 000E0CB0  4E 80 00 20 */	blr 
-.endfn CMMClock_OnInit
+.endfn CMMClock_OnFileEvent
 
 .fn __dt__CMMTex, global
 /* 801176F4 000E0CB4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1831,7 +1831,7 @@
 /* 801179D8 000E0F98  4E 80 00 20 */	blr 
 .endfn func_80117734
 
-.fn CMMTex_OnInit, global
+.fn CMMTex_OnFileEvent, global
 /* 801179DC 000E0F9C  80 C3 00 04 */	lwz r6, 4(r3)
 /* 801179E0 000E0FA0  80 04 00 04 */	lwz r0, 4(r4)
 /* 801179E4 000E0FA4  7C 06 00 40 */	cmplw r6, r0
@@ -1848,7 +1848,7 @@
 .L_80117A10:
 /* 80117A10 000E0FD0  38 60 00 00 */	li r3, 0
 /* 80117A14 000E0FD4  4E 80 00 20 */	blr 
-.endfn CMMTex_OnInit
+.endfn CMMTex_OnFileEvent
 
 .fn func_80117A18, global
 /* 80117A18 000E0FD8  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -2548,7 +2548,7 @@
 /* 80118424 000E19E4  4E 80 00 20 */	blr 
 .endfn func_80118058
 
-.fn CMiniMap_OnInit, global
+.fn CMiniMap_OnFileEvent, global
 /* 80118428 000E19E8  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 8011842C 000E19EC  7C 08 02 A6 */	mflr r0
 /* 80118430 000E19F0  90 01 00 A4 */	stw r0, 0xa4(r1)
@@ -2828,7 +2828,7 @@
 /* 80118848 000E1E08  7C 08 03 A6 */	mtlr r0
 /* 8011884C 000E1E0C  38 21 00 A0 */	addi r1, r1, 0xa0
 /* 80118850 000E1E10  4E 80 00 20 */	blr 
-.endfn CMiniMap_OnInit
+.endfn CMiniMap_OnFileEvent
 
 .fn func_80118854, global
 /* 80118854 000E1E14  94 21 FB C0 */	stwu r1, -0x440(r1)
@@ -6796,10 +6796,10 @@
 /* 8011C1DC 000E579C  38 60 00 00 */	li r3, 0
 /* 8011C1E0 000E57A0  48 00 00 F4 */	b .L_8011C2D4
 .L_8011C1E4:
-/* 8011C1E4 000E57A4  48 31 B3 D1 */	bl getMemBlockIndex
+/* 8011C1E4 000E57A4  48 31 B3 D1 */	bl getMemRegionIndex
 /* 8011C1E8 000E57A8  7C 64 1B 78 */	mr r4, r3
 /* 8011C1EC 000E57AC  38 60 08 D8 */	li r3, 0x8d8
-/* 8011C1F0 000E57B0  48 31 88 6D */	bl heap_allocate
+/* 8011C1F0 000E57B0  48 31 88 6D */	bl heap_malloc
 /* 8011C1F4 000E57B4  2C 03 00 00 */	cmpwi r3, 0
 /* 8011C1F8 000E57B8  7C 7C 1B 78 */	mr r28, r3
 /* 8011C1FC 000E57BC  41 82 00 C0 */	beq .L_8011C2BC
@@ -7376,7 +7376,7 @@
 	.4byte 0xFFFFFFA8
 	.4byte func_8011C434
 	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -7438,7 +7438,7 @@
 	.4byte 0
 	.4byte __dt__CMiniMap
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CMiniMap_OnInit
+	.4byte CMiniMap_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -7483,7 +7483,7 @@
 	.4byte 0
 	.4byte __dt__CMMTex
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CMMTex_OnInit
+	.4byte CMMTex_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -7528,7 +7528,7 @@
 	.4byte 0
 	.4byte __dt__CMMClock
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CMMClock_OnInit
+	.4byte CMMClock_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -8069,7 +8069,7 @@
 
 .obj "@eti_80026C90", local
 .hidden "@eti_80026C90"
-	.4byte CMMClock_OnInit
+	.4byte CMMClock_OnFileEvent
 	.4byte 0x00000158
 	.4byte "@etb_8000B680"
 .endobj "@eti_80026C90"
@@ -8118,7 +8118,7 @@
 
 .obj "@eti_80026CE4", local
 .hidden "@eti_80026CE4"
-	.4byte CMiniMap_OnInit
+	.4byte CMiniMap_OnFileEvent
 	.4byte 0x0000042C
 	.4byte "@etb_8000B744"
 .endobj "@eti_80026CE4"

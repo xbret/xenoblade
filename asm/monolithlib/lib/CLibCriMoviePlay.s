@@ -1728,7 +1728,7 @@
 	.4byte 0
 	.4byte __dt__CLibCriMoviePlay
 	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte CLibCriMoviePlay_WorkEvent5
@@ -1759,11 +1759,11 @@
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
 	.4byte func_8045AB3C
-	.4byte func_80039E3C
-	.4byte func_80039E38
+	.4byte CWorkThread_Event1
+	.4byte CWorkThread_Event2
 	.4byte func_8045AD04
 	.4byte func_8045AD5C
-	.4byte func_80039E30
+	.4byte CWorkThread_Event3
 	.4byte __RTTI__CLibCriMoviePlay
 	.4byte 0xFFFFFE3C
 	.4byte func_8045B3E4

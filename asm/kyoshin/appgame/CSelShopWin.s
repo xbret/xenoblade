@@ -298,7 +298,7 @@
 /* 8022CA84 001F6044  4E 80 00 20 */	blr 
 .endfn func_8022CA6C
 
-.fn CSelShopWin_OnInit, global
+.fn CSelShopWin_OnFileEvent, global
 /* 8022CA88 001F6048  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8022CA8C 001F604C  7C 08 02 A6 */	mflr r0
 /* 8022CA90 001F6050  90 01 00 44 */	stw r0, 0x44(r1)
@@ -555,7 +555,7 @@
 /* 8022CE64 001F6424  7C 08 03 A6 */	mtlr r0
 /* 8022CE68 001F6428  38 21 00 40 */	addi r1, r1, 0x40
 /* 8022CE6C 001F642C  4E 80 00 20 */	blr 
-.endfn CSelShopWin_OnInit
+.endfn CSelShopWin_OnFileEvent
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -603,7 +603,7 @@
 	.4byte 0
 	.4byte __dt__CSelShopWin
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CSelShopWin_OnInit
+	.4byte CSelShopWin_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -794,7 +794,7 @@
 
 .obj "@eti_8002E5F8", local
 .hidden "@eti_8002E5F8"
-	.4byte CSelShopWin_OnInit
+	.4byte CSelShopWin_OnFileEvent
 	.4byte 0x000003E8
 	.4byte "@etb_800156D0"
 .endobj "@eti_8002E5F8"

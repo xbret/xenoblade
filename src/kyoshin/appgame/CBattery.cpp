@@ -1,6 +1,6 @@
 #include "kyoshin/appgame/CBattery.hpp"
 
 
-BOOL CBattery::OnInit(){
+BOOL CBattery::OnFileEvent(){
 
 }

@@ -321,7 +321,7 @@
 /* 8022D290 001F6850  4E 80 00 20 */	blr 
 .endfn func_8022D244
 
-.fn CExchangeWin_OnInit, global
+.fn CExchangeWin_OnFileEvent, global
 /* 8022D294 001F6854  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8022D298 001F6858  7C 08 02 A6 */	mflr r0
 /* 8022D29C 001F685C  90 01 00 44 */	stw r0, 0x44(r1)
@@ -509,7 +509,7 @@
 /* 8022D560 001F6B20  7C 08 03 A6 */	mtlr r0
 /* 8022D564 001F6B24  38 21 00 40 */	addi r1, r1, 0x40
 /* 8022D568 001F6B28  4E 80 00 20 */	blr 
-.endfn CExchangeWin_OnInit
+.endfn CExchangeWin_OnFileEvent
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -554,7 +554,7 @@
 	.4byte 0
 	.4byte __dt__CExchangeWin
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CExchangeWin_OnInit
+	.4byte CExchangeWin_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -759,7 +759,7 @@
 
 .obj "@eti_8002E670", local
 .hidden "@eti_8002E670"
-	.4byte CExchangeWin_OnInit
+	.4byte CExchangeWin_OnFileEvent
 	.4byte 0x000002D8
 	.4byte "@etb_80015744"
 .endobj "@eti_8002E670"

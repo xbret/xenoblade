@@ -852,7 +852,7 @@
 /* 801D3AEC 0019D0AC  4E 80 00 20 */	blr 
 .endfn func_801D3A3C
 
-.fn CSortMenu_OnInit, global
+.fn CSortMenu_OnFileEvent, global
 /* 801D3AF0 0019D0B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801D3AF4 0019D0B4  7C 08 02 A6 */	mflr r0
 /* 801D3AF8 0019D0B8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -953,7 +953,7 @@
 /* 801D3C68 0019D228  7C 08 03 A6 */	mtlr r0
 /* 801D3C6C 0019D22C  38 21 00 20 */	addi r1, r1, 0x20
 /* 801D3C70 0019D230  4E 80 00 20 */	blr 
-.endfn CSortMenu_OnInit
+.endfn CSortMenu_OnFileEvent
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -1026,7 +1026,7 @@
 	.4byte 0
 	.4byte __dt__CSortMenu
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CSortMenu_OnInit
+	.4byte CSortMenu_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -1337,7 +1337,7 @@
 
 .obj "@eti_8002BAB4", local
 .hidden "@eti_8002BAB4"
-	.4byte CSortMenu_OnInit
+	.4byte CSortMenu_OnFileEvent
 	.4byte 0x00000184
 	.4byte "@etb_800116E8"
 .endobj "@eti_8002BAB4"

@@ -259,7 +259,7 @@
 	.4byte 0xFFFFFFAC
 	.4byte func_8048ED1C
 	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_OnFileEvent
 	.4byte CScn_WorkEvent3
 	.4byte CScn_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5

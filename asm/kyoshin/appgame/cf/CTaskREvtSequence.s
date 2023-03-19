@@ -3456,10 +3456,10 @@
 /* 8016AEE8 001344A8  7C 9E 23 78 */	mr r30, r4
 /* 8016AEEC 001344AC  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8016AEF0 001344B0  7C 7D 1B 78 */	mr r29, r3
-/* 8016AEF4 001344B4  48 2C C6 C1 */	bl getMemBlockIndex
+/* 8016AEF4 001344B4  48 2C C6 C1 */	bl getMemRegionIndex
 /* 8016AEF8 001344B8  7C 64 1B 78 */	mr r4, r3
 /* 8016AEFC 001344BC  38 60 0A F8 */	li r3, 0xaf8
-/* 8016AF00 001344C0  48 2C 9B 5D */	bl heap_allocate
+/* 8016AF00 001344C0  48 2C 9B 5D */	bl heap_malloc
 /* 8016AF04 001344C4  2C 03 00 00 */	cmpwi r3, 0
 /* 8016AF08 001344C8  7C 7F 1B 78 */	mr r31, r3
 /* 8016AF0C 001344CC  41 82 00 10 */	beq .L_8016AF1C
@@ -5293,10 +5293,10 @@
 /* 8016C7CC 00135D8C  4E 80 00 20 */	blr 
 .endfn func_8016C788
 
-.fn CTaskREvtSequence_OnInit, global
+.fn CTaskREvtSequence_OnFileEvent, global
 /* 8016C7D0 00135D90  38 63 FF AC */	addi r3, r3, -84
 /* 8016C7D4 00135D94  4B FF E3 D4 */	b func_8016ABA8
-.endfn CTaskREvtSequence_OnInit
+.endfn CTaskREvtSequence_OnFileEvent
 
 .fn func_8016C7D8, global
 /* 8016C7D8 00135D98  38 63 FF AC */	addi r3, r3, -84
@@ -5455,7 +5455,7 @@
 	.4byte 0xFFFFFFAC
 	.4byte func_8016C7D8
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CTaskREvtSequence_OnInit
+	.4byte CTaskREvtSequence_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5

@@ -361,7 +361,7 @@
 /* 802AE8F8 00277EB8  4E 80 00 20 */	blr 
 .endfn func_802AE8E0
 
-.fn CLoad_OnInit, global
+.fn CLoad_OnFileEvent, global
 /* 802AE8FC 00277EBC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802AE900 00277EC0  7C 08 02 A6 */	mflr r0
 /* 802AE904 00277EC4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -466,7 +466,7 @@
 /* 802AEA7C 0027803C  7C 08 03 A6 */	mtlr r0
 /* 802AEA80 00278040  38 21 00 20 */	addi r1, r1, 0x20
 /* 802AEA84 00278044  4E 80 00 20 */	blr
-.endfn CLoad_OnInit
+.endfn CLoad_OnFileEvent
 
 .fn sinit_802AEA88, local
 /* 802AEA88 00278048  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1194,7 +1194,7 @@
 	.4byte 0
 	.4byte __dt__CLoad
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CLoad_OnInit
+	.4byte CLoad_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -1523,7 +1523,7 @@
 
 .obj "@eti_800331E8", local
 .hidden "@eti_800331E8"
-	.4byte CLoad_OnInit
+	.4byte CLoad_OnFileEvent
 	.4byte 0x0000018C
 	.4byte "@etb_8001B534"
 .endobj "@eti_800331E8"

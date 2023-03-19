@@ -1546,7 +1546,7 @@
 /* 80228CD4 001F2294  4B F0 DD 48 */	b func_80136A1C
 .endfn func_80228C98
 
-.fn CQstLogList_OnInit, global
+.fn CQstLogList_OnFileEvent, global
 /* 80228CD8 001F2298  94 21 FE 90 */	stwu r1, -0x170(r1)
 /* 80228CDC 001F229C  7C 08 02 A6 */	mflr r0
 /* 80228CE0 001F22A0  90 01 01 74 */	stw r0, 0x174(r1)
@@ -1991,7 +1991,7 @@
 /* 8022936C 001F292C  7C 08 03 A6 */	mtlr r0
 /* 80229370 001F2930  38 21 01 70 */	addi r1, r1, 0x170
 /* 80229374 001F2934  4E 80 00 20 */	blr
-.endfn CQstLogList_OnInit
+.endfn CQstLogList_OnFileEvent
 
 .fn sinit_80229378, local
 /* 80229378 001F2938  3C 60 80 58 */	lis r3, lbl_80579E68@ha
@@ -2122,7 +2122,7 @@
 	.4byte 0
 	.4byte __dt__CQstLogList
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CQstLogList_OnInit
+	.4byte CQstLogList_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -2680,7 +2680,7 @@
 
 .obj "@eti_8002E3C4", local
 .hidden "@eti_8002E3C4"
-	.4byte CQstLogList_OnInit
+	.4byte CQstLogList_OnFileEvent
 	.4byte 0x000006A0
 	.4byte "@etb_800154EC"
 .endobj "@eti_8002E3C4"

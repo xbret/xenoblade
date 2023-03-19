@@ -30,10 +30,10 @@
 /* 804D8DF0 004A23B0  90 7E 01 C4 */	stw r3, 0x1c4(r30)
 /* 804D8DF4 004A23B4  93 CD C1 20 */	stw r30, lbl_806682A0@sda21(r13)
 /* 804D8DF8 004A23B8  90 1E 00 50 */	stw r0, 0x50(r30)
-/* 804D8DFC 004A23BC  4B F5 E7 B9 */	bl getMemBlockIndex
+/* 804D8DFC 004A23BC  4B F5 E7 B9 */	bl getMemRegionIndex
 /* 804D8E00 004A23C0  7C 64 1B 78 */	mr r4, r3
 /* 804D8E04 004A23C4  38 60 01 80 */	li r3, 0x180
-/* 804D8E08 004A23C8  4B F5 BC 79 */	bl heap_allocate_1
+/* 804D8E08 004A23C8  4B F5 BC 79 */	bl heap_malloc_1
 /* 804D8E0C 004A23CC  38 00 00 20 */	li r0, 0x20
 /* 804D8E10 004A23D0  7F E4 FB 78 */	mr r4, r31
 /* 804D8E14 004A23D4  90 7E 01 D8 */	stw r3, 0x1d8(r30)
@@ -408,7 +408,7 @@
 	.4byte 0
 	.4byte __dt__CWorkSystemCache
 	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -439,11 +439,11 @@
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
 	.4byte func_804D9064
-	.4byte func_80039E3C
-	.4byte func_80039E38
+	.4byte CWorkThread_Event1
+	.4byte CWorkThread_Event2
 	.4byte func_804D910C
 	.4byte __dt__804D9110
-	.4byte func_80039E30
+	.4byte CWorkThread_Event3
 .endobj __vt__CWorkSystemCache
 
 .obj CWorkSystemCache_hierarchy, global

@@ -149,7 +149,7 @@
 /* 80455070 0041E630  4E 80 00 20 */	blr 
 .endfn func_80455010
 
-.fn CDeviceFontLoader_OnInit, global
+.fn CDeviceFontLoader_OnFileEvent, global
 /* 80455074 0041E634  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80455078 0041E638  7C 08 02 A6 */	mflr r0
 /* 8045507C 0041E63C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -180,7 +180,7 @@
 /* 804550D8 0041E698  7C 08 03 A6 */	mtlr r0
 /* 804550DC 0041E69C  38 21 00 10 */	addi r1, r1, 0x10
 /* 804550E0 0041E6A0  4E 80 00 20 */	blr 
-.endfn CDeviceFontLoader_OnInit
+.endfn CDeviceFontLoader_OnFileEvent
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -203,7 +203,7 @@
 	.4byte 0
 	.4byte __dt__CDeviceFontLoader
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CDeviceFontLoader_OnInit
+	.4byte CDeviceFontLoader_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -234,11 +234,11 @@
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
 	.4byte func_80438A50
-	.4byte func_80039E3C
-	.4byte func_80039E38
+	.4byte CWorkThread_Event1
+	.4byte CWorkThread_Event2
 	.4byte func_80454F80
 	.4byte func_80455010
-	.4byte func_80039E30
+	.4byte CWorkThread_Event3
 .endobj __vt__CDeviceFontLoader
 
 .obj CDeviceFontLoader_hierarchy, global
@@ -340,7 +340,7 @@
 
 .obj "@eti_80034EB0", local
 .hidden "@eti_80034EB0"
-	.4byte CDeviceFontLoader_OnInit
+	.4byte CDeviceFontLoader_OnFileEvent
 	.4byte 0x00000070
 	.4byte "@etb_8001D21C"
 .endobj "@eti_80034EB0"

@@ -539,10 +539,10 @@
 /* 8045ECE4 004282A4  7C 7E 1B 78 */	mr r30, r3
 /* 8045ECE8 004282A8  38 84 6A A8 */	addi r4, r4, CLibHbmControl_strpool@l
 /* 8045ECEC 004282AC  3B E4 00 1F */	addi r31, r4, 0x1f
-/* 8045ECF0 004282B0  4B FD 88 C5 */	bl getMemBlockIndex
+/* 8045ECF0 004282B0  4B FD 88 C5 */	bl getMemRegionIndex
 /* 8045ECF4 004282B4  7C 64 1B 78 */	mr r4, r3
 /* 8045ECF8 004282B8  38 60 02 38 */	li r3, 0x238
-/* 8045ECFC 004282BC  4B FD 5D 61 */	bl heap_allocate
+/* 8045ECFC 004282BC  4B FD 5D 61 */	bl heap_malloc
 /* 8045ED00 004282C0  2C 03 00 00 */	cmpwi r3, 0
 /* 8045ED04 004282C4  7C 7D 1B 78 */	mr r29, r3
 /* 8045ED08 004282C8  41 82 00 48 */	beq .L_8045ED50
@@ -757,7 +757,7 @@
 	.4byte 0
 	.4byte __dt__CLibHbmControl
 	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -789,10 +789,10 @@
 	.4byte IWorkEvent_WorkEvent31
 	.4byte func_8045E558
 	.4byte func_8045E9E8
-	.4byte func_80039E38
+	.4byte CWorkThread_Event2
 	.4byte func_8045ED8C
 	.4byte func_8045EF30
-	.4byte func_80039E30
+	.4byte CWorkThread_Event3
 .endobj __vt__CLibHbmControl
 
 .obj CLibHbmControl_hierarchy, global

@@ -335,7 +335,7 @@
 /* 8022ED10 001F82D0  98 1F 00 B7 */	stb r0, 0xb7(r31)
 /* 8022ED14 001F82D4  4B F9 52 3D */	bl __dt__CTitleAHelp
 /* 8022ED18 001F82D8  38 7F 00 80 */	addi r3, r31, 0x80
-/* 8022ED1C 001F82DC  4B F9 52 89 */	bl func_801C3FA4
+/* 8022ED1C 001F82DC  4B F9 52 89 */	bl CTitleAHelp_load
 /* 8022ED20 001F82E0  38 61 00 60 */	addi r3, r1, 0x60
 /* 8022ED24 001F82E4  48 00 44 91 */	bl __ct__CArtsList
 /* 8022ED28 001F82E8  80 01 00 64 */	lwz r0, 0x64(r1)
@@ -830,7 +830,7 @@
 	.4byte 0
 	.4byte __dt__CMCCrystalSupport
 	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5

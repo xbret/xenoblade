@@ -543,10 +543,10 @@
 /* 80295454 0025EA14  BF A1 00 14 */	stmw r29, 0x14(r1)
 /* 80295458 0025EA18  7C 7D 1B 78 */	mr r29, r3
 /* 8029545C 0025EA1C  7C 9E 23 78 */	mr r30, r4
-/* 80295460 0025EA20  48 1A 21 55 */	bl getMemBlockIndex
+/* 80295460 0025EA20  48 1A 21 55 */	bl getMemRegionIndex
 /* 80295464 0025EA24  7C 64 1B 78 */	mr r4, r3
 /* 80295468 0025EA28  38 60 00 C8 */	li r3, 0xc8
-/* 8029546C 0025EA2C  48 19 F5 F1 */	bl heap_allocate
+/* 8029546C 0025EA2C  48 19 F5 F1 */	bl heap_malloc
 /* 80295470 0025EA30  2C 03 00 00 */	cmpwi r3, 0
 /* 80295474 0025EA34  7C 7F 1B 78 */	mr r31, r3
 /* 80295478 0025EA38  41 82 00 10 */	beq .L_80295488
@@ -614,10 +614,10 @@
 /* 80295540 0025EB00  4E 80 00 20 */	blr 
 .endfn func_802954FC
 
-.fn CTaskGamePic_OnInit, global
+.fn CTaskGamePic_OnFileEvent, global
 /* 80295544 0025EB04  38 63 FF AC */	addi r3, r3, -84
 /* 80295548 0025EB08  4B FF FE 54 */	b func_8029539C
-.endfn CTaskGamePic_OnInit
+.endfn CTaskGamePic_OnFileEvent
 
 .fn func_8029554C, global
 /* 8029554C 0025EB0C  38 63 FF AC */	addi r3, r3, -84
@@ -666,7 +666,7 @@
 	.4byte 0xFFFFFFAC
 	.4byte func_8029554C
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CTaskGamePic_OnInit
+	.4byte CTaskGamePic_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5

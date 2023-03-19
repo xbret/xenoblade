@@ -26,7 +26,7 @@ class CPackItem : IWorkEvent{
 public:
     virtual ~CPackItem();
     virtual BOOL IWorkEvent_WorkEvent1();
-    virtual BOOL OnInit(UnkStruct*);//IWorkEvent::OnInit
+    virtual BOOL OnFileEvent(UnkStruct*);//IWorkEvent::OnFileEvent
     virtual BOOL IWorkEvent_WorkEvent3();
     virtual BOOL IWorkEvent_WorkEvent4();
     virtual void IWorkEvent_WorkEvent5();

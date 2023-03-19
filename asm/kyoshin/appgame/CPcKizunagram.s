@@ -1605,7 +1605,7 @@
 /* 8025EA64 00228024  4E 80 00 20 */	blr 
 .endfn func_8025E9E4
 
-.fn CPcKizunagram_OnInit, global
+.fn CPcKizunagram_OnFileEvent, global
 /* 8025EA68 00228028  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8025EA6C 0022802C  7C 08 02 A6 */	mflr r0
 /* 8025EA70 00228030  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1713,7 +1713,7 @@
 /* 8025EC00 002281C0  7C 08 03 A6 */	mtlr r0
 /* 8025EC04 002281C4  38 21 00 40 */	addi r1, r1, 0x40
 /* 8025EC08 002281C8  4E 80 00 20 */	blr 
-.endfn CPcKizunagram_OnInit
+.endfn CPcKizunagram_OnFileEvent
 
 .fn func_8025EC0C, global
 /* 8025EC0C 002281CC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2875,7 +2875,7 @@
 	.4byte 0
 	.4byte __dt__CPcKizunagram
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CPcKizunagram_OnInit
+	.4byte CPcKizunagram_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -3434,7 +3434,7 @@
 
 .obj "@eti_8002FF24", local
 .hidden "@eti_8002FF24"
-	.4byte CPcKizunagram_OnInit
+	.4byte CPcKizunagram_OnFileEvent
 	.4byte 0x000001A4
 	.4byte "@etb_800176D8"
 .endobj "@eti_8002FF24"

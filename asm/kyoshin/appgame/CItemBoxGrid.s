@@ -14213,7 +14213,7 @@
 /* 801D13EC 0019A9AC  4E 80 00 20 */	blr 
 .endfn func_801D12D4
 
-.fn CItemBoxGrid_OnInit, global
+.fn CItemBoxGrid_OnFileEvent, global
 /* 801D13F0 0019A9B0  94 21 FE C0 */	stwu r1, -0x140(r1)
 /* 801D13F4 0019A9B4  7C 08 02 A6 */	mflr r0
 /* 801D13F8 0019A9B8  90 01 01 44 */	stw r0, 0x144(r1)
@@ -14246,7 +14246,7 @@
 /* 801D1464 0019AA24  48 28 DC 5D */	bl func_8045F0C0
 /* 801D1468 0019AA28  7C 64 1B 78 */	mr r4, r3
 /* 801D146C 0019AA2C  38 60 08 58 */	li r3, 0x858
-/* 801D1470 0019AA30  48 26 35 ED */	bl heap_allocate
+/* 801D1470 0019AA30  48 26 35 ED */	bl heap_malloc
 /* 801D1474 0019AA34  2C 03 00 00 */	cmpwi r3, 0
 /* 801D1478 0019AA38  41 82 00 08 */	beq .L_801D1480
 /* 801D147C 0019AA3C  4B F5 4C 09 */	bl func_80126084
@@ -14880,7 +14880,7 @@
 /* 801D1E00 0019B3C0  7C 08 03 A6 */	mtlr r0
 /* 801D1E04 0019B3C4  38 21 01 40 */	addi r1, r1, 0x140
 /* 801D1E08 0019B3C8  4E 80 00 20 */	blr 
-.endfn CItemBoxGrid_OnInit
+.endfn CItemBoxGrid_OnFileEvent
 
 .fn func_801D1E0C, global
 /* 801D1E0C 0019B3CC  A8 E4 00 00 */	lha r7, 0(r4)
@@ -15388,7 +15388,7 @@
 	.4byte 0
 	.4byte __dt__CItemBoxGrid
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CItemBoxGrid_OnInit
+	.4byte CItemBoxGrid_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -17711,7 +17711,7 @@
 
 .obj "@eti_8002B7FC", local
 .hidden "@eti_8002B7FC"
-	.4byte CItemBoxGrid_OnInit
+	.4byte CItemBoxGrid_OnFileEvent
 	.4byte 0x00000A1C
 	.4byte "@etb_800114BC"
 .endobj "@eti_8002B7FC"

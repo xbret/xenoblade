@@ -13,10 +13,10 @@
 /* 80443B24 0040D0E4  4B F2 11 7D */	bl VIInit
 /* 80443B28 0040D0E8  3F E0 80 52 */	lis r31, CWorkRoot_strpool@ha
 /* 80443B2C 0040D0EC  3B FF 60 5C */	addi r31, r31, CWorkRoot_strpool@l
-/* 80443B30 0040D0F0  4B FF 3A 85 */	bl getMemBlockIndex
+/* 80443B30 0040D0F0  4B FF 3A 85 */	bl getMemRegionIndex
 /* 80443B34 0040D0F4  7C 64 1B 78 */	mr r4, r3
 /* 80443B38 0040D0F8  38 60 02 08 */	li r3, 0x208
-/* 80443B3C 0040D0FC  4B FF 0F 21 */	bl heap_allocate
+/* 80443B3C 0040D0FC  4B FF 0F 21 */	bl heap_malloc
 /* 80443B40 0040D100  2C 03 00 00 */	cmpwi r3, 0
 /* 80443B44 0040D104  7C 7E 1B 78 */	mr r30, r3
 /* 80443B48 0040D108  41 82 00 50 */	beq .L_80443B98
@@ -95,7 +95,7 @@
 /* 80443C3C 0040D1FC  7C 7E 1B 78 */	mr r30, r3
 /* 80443C40 0040D200  1C 65 00 0C */	mulli r3, r5, 0xc
 /* 80443C44 0040D204  7C BF 2B 78 */	mr r31, r5
-/* 80443C48 0040D208  4B FF 0E 39 */	bl heap_allocate_1
+/* 80443C48 0040D208  4B FF 0E 39 */	bl heap_malloc_1
 /* 80443C4C 0040D20C  90 7E 00 14 */	stw r3, 0x14(r30)
 /* 80443C50 0040D210  38 00 00 00 */	li r0, 0
 /* 80443C54 0040D214  38 60 00 00 */	li r3, 0
@@ -744,7 +744,7 @@
 	.4byte 0
 	.4byte __dt___unnamed_CWorkRoot_cpp_CWorkRootThread
 	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -775,11 +775,11 @@
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
 	.4byte func_80438A50
-	.4byte func_80039E3C
-	.4byte func_80039E38
+	.4byte CWorkThread_Event1
+	.4byte CWorkThread_Event2
 	.4byte func_804389F8
 	.4byte func_8044438C
-	.4byte func_80039E30
+	.4byte CWorkThread_Event3
 .endobj __vt___unnamed_CWorkRoot_cpp_CWorkRootThread
 
 .obj _unnamed_CWorkRoot_cpp_CWorkRootThread_hierarchy, global

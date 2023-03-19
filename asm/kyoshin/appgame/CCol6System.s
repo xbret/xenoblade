@@ -123,10 +123,10 @@
 /* 8015D22C 001267EC  38 60 00 00 */	li r3, 0
 /* 8015D230 001267F0  48 00 00 C8 */	b .L_8015D2F8
 .L_8015D234:
-/* 8015D234 001267F4  48 2D A3 81 */	bl getMemBlockIndex
+/* 8015D234 001267F4  48 2D A3 81 */	bl getMemRegionIndex
 /* 8015D238 001267F8  7C 64 1B 78 */	mr r4, r3
 /* 8015D23C 001267FC  38 60 00 74 */	li r3, 0x74
-/* 8015D240 00126800  48 2D 78 1D */	bl heap_allocate
+/* 8015D240 00126800  48 2D 78 1D */	bl heap_malloc
 /* 8015D244 00126804  2C 03 00 00 */	cmpwi r3, 0
 /* 8015D248 00126808  7C 7F 1B 78 */	mr r31, r3
 /* 8015D24C 0012680C  41 82 00 94 */	beq .L_8015D2E0
@@ -875,10 +875,10 @@
 /* 8015DCF8 001272B8  38 60 00 00 */	li r3, 0
 /* 8015DCFC 001272BC  48 00 00 38 */	b .L_8015DD34
 .L_8015DD00:
-/* 8015DD00 001272C0  48 2D 98 B5 */	bl getMemBlockIndex
+/* 8015DD00 001272C0  48 2D 98 B5 */	bl getMemRegionIndex
 /* 8015DD04 001272C4  7C 64 1B 78 */	mr r4, r3
 /* 8015DD08 001272C8  38 60 01 7C */	li r3, 0x17c
-/* 8015DD0C 001272CC  48 2D 6D 51 */	bl heap_allocate
+/* 8015DD0C 001272CC  48 2D 6D 51 */	bl heap_malloc
 /* 8015DD10 001272D0  2C 03 00 00 */	cmpwi r3, 0
 /* 8015DD14 001272D4  41 82 00 0C */	beq .L_8015DD20
 /* 8015DD18 001272D8  7F E4 FB 78 */	mr r4, r31
@@ -3485,10 +3485,10 @@
 /* 8016031C 001298DC  38 60 00 00 */	li r3, 0
 /* 80160320 001298E0  48 00 00 38 */	b .L_80160358
 .L_80160324:
-/* 80160324 001298E4  48 2D 72 91 */	bl getMemBlockIndex
+/* 80160324 001298E4  48 2D 72 91 */	bl getMemRegionIndex
 /* 80160328 001298E8  7C 64 1B 78 */	mr r4, r3
 /* 8016032C 001298EC  38 60 02 40 */	li r3, 0x240
-/* 80160330 001298F0  48 2D 47 2D */	bl heap_allocate
+/* 80160330 001298F0  48 2D 47 2D */	bl heap_malloc
 /* 80160334 001298F4  2C 03 00 00 */	cmpwi r3, 0
 /* 80160338 001298F8  41 82 00 0C */	beq .L_80160344
 /* 8016033C 001298FC  7F E4 FB 78 */	mr r4, r31
@@ -7805,7 +7805,7 @@
 	.4byte 0xFFFFFF94
 	.4byte func_80164118
 	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -7868,7 +7868,7 @@
 	.4byte 0xFFFFFF94
 	.4byte func_80164100
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CCol6System_OnInit
+	.4byte CCol6System_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -7939,7 +7939,7 @@
 	.4byte 0xFFFFFF94
 	.4byte func_801640E0
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CCol6Hint_OnInit
+	.4byte CCol6Hint_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -8010,7 +8010,7 @@
 	.4byte 0xFFFFFF94
 	.4byte func_801640D0
 	.4byte IWorkEvent_WorkEvent1
-	.4byte IWorkEvent_OnInit
+	.4byte IWorkEvent_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5

@@ -2154,7 +2154,7 @@
 
 #unreferenced?
 .obj lbl_80520648, global
-	.float 0.4 #0x3ECCCCCD
+	.float 0.4
 	.float 0.5
 	.float 1.0
 	.float 0.75

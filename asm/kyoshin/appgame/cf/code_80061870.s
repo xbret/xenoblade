@@ -3916,7 +3916,7 @@
 /* 80064A1C 0002DFDC  4E 80 00 20 */	blr 
 .endfn func_80064A08
 
-.fn CfRes_OnInit, global
+.fn CfRes_OnFileEvent, global
 /* 80064A20 0002DFE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80064A24 0002DFE4  7C 08 02 A6 */	mflr r0
 /* 80064A28 0002DFE8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3936,7 +3936,7 @@
 /* 80064A60 0002E020  7C 08 03 A6 */	mtlr r0
 /* 80064A64 0002E024  38 21 00 10 */	addi r1, r1, 0x10
 /* 80064A68 0002E028  4E 80 00 20 */	blr 
-.endfn CfRes_OnInit
+.endfn CfRes_OnFileEvent
 
 .fn func_80064A6C, global
 /* 80064A6C 0002E02C  80 63 00 04 */	lwz r3, 4(r3)
@@ -6046,7 +6046,7 @@
 
 .obj "@eti_80022D84", local
 .hidden "@eti_80022D84"
-	.4byte CfRes_OnInit
+	.4byte CfRes_OnFileEvent
 	.4byte 0x0000004C
 	.4byte "@etb_80007BCC"
 .endobj "@eti_80022D84"

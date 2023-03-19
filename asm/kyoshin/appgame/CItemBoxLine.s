@@ -7718,7 +7718,7 @@
 /* 801F2998 001BBF58  4E 80 00 20 */	blr 
 .endfn func_801F2880
 
-.fn CItemBoxLine_OnInit, global
+.fn CItemBoxLine_OnFileEvent, global
 /* 801F299C 001BBF5C  94 21 FF 20 */	stwu r1, -0xe0(r1)
 /* 801F29A0 001BBF60  7C 08 02 A6 */	mflr r0
 /* 801F29A4 001BBF64  90 01 00 E4 */	stw r0, 0xe4(r1)
@@ -7750,7 +7750,7 @@
 /* 801F2A0C 001BBFCC  48 26 C6 B5 */	bl func_8045F0C0
 /* 801F2A10 001BBFD0  7C 64 1B 78 */	mr r4, r3
 /* 801F2A14 001BBFD4  38 60 08 58 */	li r3, 0x858
-/* 801F2A18 001BBFD8  48 24 20 45 */	bl heap_allocate
+/* 801F2A18 001BBFD8  48 24 20 45 */	bl heap_malloc
 /* 801F2A1C 001BBFDC  2C 03 00 00 */	cmpwi r3, 0
 /* 801F2A20 001BBFE0  41 82 00 08 */	beq .L_801F2A28
 /* 801F2A24 001BBFE4  4B F3 36 61 */	bl func_80126084
@@ -8326,7 +8326,7 @@
 /* 801F32E0 001BC8A0  7C 08 03 A6 */	mtlr r0
 /* 801F32E4 001BC8A4  38 21 00 E0 */	addi r1, r1, 0xe0
 /* 801F32E8 001BC8A8  4E 80 00 20 */	blr
-.endfn CItemBoxLine_OnInit
+.endfn CItemBoxLine_OnFileEvent
 
 .fn sinit_801F32EC, local
 /* 801F32EC 001BC8AC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -8934,7 +8934,7 @@
 	.4byte 0
 	.4byte __dt__CItemBoxLine
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CItemBoxLine_OnInit
+	.4byte CItemBoxLine_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -10328,7 +10328,7 @@
 
 .obj "@eti_8002C2C4", local
 .hidden "@eti_8002C2C4"
-	.4byte CItemBoxLine_OnInit
+	.4byte CItemBoxLine_OnFileEvent
 	.4byte 0x00000950
 	.4byte "@etb_800121C4"
 .endobj "@eti_8002C2C4"

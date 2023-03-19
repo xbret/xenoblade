@@ -485,7 +485,7 @@
 /* 801227F8 000EBDB8  48 33 C8 C9 */	bl func_8045F0C0
 /* 801227FC 000EBDBC  7C 64 1B 78 */	mr r4, r3
 /* 80122800 000EBDC0  38 60 08 58 */	li r3, 0x858
-/* 80122804 000EBDC4  48 31 22 59 */	bl heap_allocate
+/* 80122804 000EBDC4  48 31 22 59 */	bl heap_malloc
 /* 80122808 000EBDC8  2C 03 00 00 */	cmpwi r3, 0
 /* 8012280C 000EBDCC  41 82 00 08 */	beq .L_80122814
 /* 80122810 000EBDD0  48 00 38 75 */	bl func_80126084
@@ -715,10 +715,10 @@
 /* 80122B58 000EC118  38 60 00 00 */	li r3, 0
 /* 80122B5C 000EC11C  48 00 00 40 */	b .L_80122B9C
 .L_80122B60:
-/* 80122B60 000EC120  48 31 4A 55 */	bl getMemBlockIndex
+/* 80122B60 000EC120  48 31 4A 55 */	bl getMemRegionIndex
 /* 80122B64 000EC124  7C 64 1B 78 */	mr r4, r3
 /* 80122B68 000EC128  38 60 00 EC */	li r3, 0xec
-/* 80122B6C 000EC12C  48 31 1E F1 */	bl heap_allocate
+/* 80122B6C 000EC12C  48 31 1E F1 */	bl heap_malloc
 /* 80122B70 000EC130  2C 03 00 00 */	cmpwi r3, 0
 /* 80122B74 000EC134  41 82 00 14 */	beq .L_80122B88
 /* 80122B78 000EC138  7F A4 EB 78 */	mr r4, r29
@@ -2553,10 +2553,10 @@
 /* 801245C8 000EDB88  4E 80 00 20 */	blr 
 .endfn func_80124584
 
-.fn CQuestWindow_OnInit, global
+.fn CQuestWindow_OnFileEvent, global
 /* 801245CC 000EDB8C  38 63 FF 94 */	addi r3, r3, -108
 /* 801245D0 000EDB90  4B FF E1 BC */	b func_8012278C
-.endfn CQuestWindow_OnInit
+.endfn CQuestWindow_OnFileEvent
 
 .fn func_801245D4, global
 /* 801245D4 000EDB94  38 63 FF 94 */	addi r3, r3, -108
@@ -3074,7 +3074,7 @@
 	.4byte 0xFFFFFF94
 	.4byte func_801245D4
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CQuestWindow_OnInit
+	.4byte CQuestWindow_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5

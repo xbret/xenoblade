@@ -1594,7 +1594,7 @@
 /* 802A0668 00269C28  4E 80 00 20 */	blr 
 .endfn func_802A05E4
 
-.fn CSkipTimer_OnInit, global
+.fn CSkipTimer_OnFileEvent, global
 /* 802A066C 00269C2C  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 802A0670 00269C30  7C 08 02 A6 */	mflr r0
 /* 802A0674 00269C34  90 01 00 54 */	stw r0, 0x54(r1)
@@ -1688,7 +1688,7 @@
 /* 802A07CC 00269D8C  7C 08 03 A6 */	mtlr r0
 /* 802A07D0 00269D90  38 21 00 50 */	addi r1, r1, 0x50
 /* 802A07D4 00269D94  4E 80 00 20 */	blr
-.endfn CSkipTimer_OnInit
+.endfn CSkipTimer_OnFileEvent
 
 .fn sinit_802A07D8, local
 /* 802A07D8 00269D98  C0 42 B1 74 */	lfs f2, float_8066B4F4@sda21(r2)
@@ -1757,7 +1757,7 @@
 	.4byte 0
 	.4byte __dt__CSkipTimer
 	.4byte IWorkEvent_WorkEvent1
-	.4byte CSkipTimer_OnInit
+	.4byte CSkipTimer_OnFileEvent
 	.4byte IWorkEvent_WorkEvent3
 	.4byte IWorkEvent_WorkEvent4
 	.4byte IWorkEvent_WorkEvent5
@@ -2340,7 +2340,7 @@
 
 .obj "@eti_8003263C", local
 .hidden "@eti_8003263C"
-	.4byte CSkipTimer_OnInit
+	.4byte CSkipTimer_OnFileEvent
 	.4byte 0x0000016C
 	.4byte "@etb_8001A850"
 .endobj "@eti_8003263C"
