@@ -1,3 +1,4 @@
+#include "mm/Math.hpp"
 #include "mm/MTRand.hpp"
 
 //Namespace according to XCDE

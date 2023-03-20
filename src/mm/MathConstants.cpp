@@ -1,4 +1,4 @@
-#include "mm/MathConstants.hpp"
+#include "mm/Math.hpp"
 #include "stl/math.h"
 
 //General math constants

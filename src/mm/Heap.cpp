@@ -4,7 +4,8 @@
 /*Compiled with the ec++ flag? without it the compiler requires throw()
 to be added for the operators, which messes them up*/
 
-//based on xcde
+//mtl in xcde
+namespace mm{
 namespace mtl{
 namespace heap{
 
@@ -325,5 +326,6 @@ void operator delete[](void* p) {
     deallocate(p);
 }
 
+}
 }
 }

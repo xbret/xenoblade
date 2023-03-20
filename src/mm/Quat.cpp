@@ -1,4 +1,4 @@
-#include "mm/Quat.hpp"
+#include "mm/Math.hpp"
 
 namespace mm{
     Quat Quat::zero = Quat(0,0,0,0);

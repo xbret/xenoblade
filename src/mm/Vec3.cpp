@@ -1,4 +1,4 @@
-#include "mm/Vector.hpp"
+#include "mm/Math.hpp"
 #include "mm/FloatUtils.hpp"
 
 namespace mm{

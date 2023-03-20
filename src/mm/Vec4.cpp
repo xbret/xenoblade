@@ -1,4 +1,4 @@
-#include "mm/Vector.hpp"
+#include "mm/Math.hpp"
 
 namespace mm{
     Vec4 Vec4::zero  = Vec4(0,0,0,0);

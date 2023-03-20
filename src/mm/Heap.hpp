@@ -2,7 +2,7 @@
 
 #include "types.h"
 
-
+namespace mm{
 namespace mtl{
 namespace heap{
 
@@ -93,6 +93,7 @@ static inline MemRegion* getMemRegion(u32 index){
 
 }
 }
+}
 
 void operator delete(void*);
 void operator delete[](void*);
@@ -122,5 +123,5 @@ Not sure what the second param is
 The second parameter is often the result from getMemRegionIndex. They might've used some
 type of macro for those cases? */
 inline void* operator new(size_t size, int memBlockIndex){
-    return mtl::malloc(size,memBlockIndex);
+    return mm::mtl::malloc(size,memBlockIndex);
 }
