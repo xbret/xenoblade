@@ -1,4 +1,4 @@
-#include "mm/Color.hpp"
+#include "mm/Math.hpp"
 
 namespace mm{
     Col3 Col3::white = Col3(1,1,1);
