@@ -1,8 +1,6 @@
 #pragma once
 
 #include "types.h"
-#include "stl/math.h"
-#include "mm/MathConstants.hpp"
 
 #define FLOAT_LARGE 1e14f
 #define FLOAT_SMALL -1e14f
