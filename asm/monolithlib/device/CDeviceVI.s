@@ -781,7 +781,7 @@
 /* 80448808 00411DC8  4E 80 00 20 */	blr 
 .endfn func_804486E4
 
-.fn func_8044880C, global
+.fn CDeviceVI_wkUpdate, global
 /* 8044880C 00411DCC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80448810 00411DD0  7C 08 02 A6 */	mflr r0
 /* 80448814 00411DD4  3C 80 80 52 */	lis r4, lbl_805262A8@ha
@@ -811,7 +811,7 @@
 /* 8044886C 00411E2C  7C 08 03 A6 */	mtlr r0
 /* 80448870 00411E30  38 21 00 10 */	addi r1, r1, 0x10
 /* 80448874 00411E34  4E 80 00 20 */	blr 
-.endfn func_8044880C
+.endfn CDeviceVI_wkUpdate
 
 .fn func_80448878, global
 /* 80448878 00411E38  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1171,7 +1171,7 @@
 /* 80448D14 004122D4  4E 80 00 20 */	blr 
 .endfn func_80448D10
 
-.fn func_80448D18, global
+.fn CDeviceVI_WorkThreadEvent4, global
 /* 80448D18 004122D8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80448D1C 004122DC  7C 08 02 A6 */	mflr r0
 /* 80448D20 004122E0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1224,7 +1224,7 @@
 /* 80448DC8 00412388  38 60 00 00 */	li r3, 0
 /* 80448DCC 0041238C  4B F1 F7 05 */	bl VISetTrapFilter
 /* 80448DD0 00412390  7F E3 FB 78 */	mr r3, r31
-/* 80448DD4 00412394  4B FE FC 25 */	bl func_804389F8
+/* 80448DD4 00412394  4B FE FC 25 */	bl CWorkThread_WorkThreadEvent4
 /* 80448DD8 00412398  48 00 00 08 */	b .L_80448DE0
 .L_80448DDC:
 /* 80448DDC 0041239C  38 60 00 00 */	li r3, 0
@@ -1234,9 +1234,9 @@
 /* 80448DE8 004123A8  7C 08 03 A6 */	mtlr r0
 /* 80448DEC 004123AC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80448DF0 004123B0  4E 80 00 20 */	blr 
-.endfn func_80448D18
+.endfn CDeviceVI_WorkThreadEvent4
 
-.fn func_80448DF4, global
+.fn CDeviceVI_WorkThreadEvent5, global
 /* 80448DF4 004123B4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80448DF8 004123B8  7C 08 02 A6 */	mflr r0
 /* 80448DFC 004123BC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1262,7 +1262,7 @@
 /* 80448E4C 0041240C  2C 03 00 00 */	cmpwi r3, 0
 /* 80448E50 00412410  40 82 00 10 */	bne .L_80448E60
 /* 80448E54 00412414  7F E3 FB 78 */	mr r3, r31
-/* 80448E58 00412418  4B FE FB CD */	bl func_80438A24
+/* 80448E58 00412418  4B FE FB CD */	bl CWorkThread_WorkThreadEvent5
 /* 80448E5C 0041241C  48 00 00 08 */	b .L_80448E64
 .L_80448E60:
 /* 80448E60 00412420  38 60 00 00 */	li r3, 0
@@ -1272,7 +1272,7 @@
 /* 80448E6C 0041242C  7C 08 03 A6 */	mtlr r0
 /* 80448E70 00412430  38 21 00 10 */	addi r1, r1, 0x10
 /* 80448E74 00412434  4E 80 00 20 */	blr 
-.endfn func_80448DF4
+.endfn CDeviceVI_WorkThreadEvent5
 
 .fn func_80448E78, global
 /* 80448E78 00412438  98 6D BD AC */	stb r3, lbl_80667F2C@sda21(r13)
@@ -1452,12 +1452,12 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte func_8044880C
-	.4byte CWorkThread_Event1
-	.4byte CWorkThread_Event2
-	.4byte func_80448D18
-	.4byte func_80448DF4
-	.4byte CWorkThread_Event3
+	.4byte CDeviceVI_wkUpdate
+	.4byte CWorkThread_WorkThreadEvent2
+	.4byte CWorkThread_WorkThreadEvent3
+	.4byte CDeviceVI_WorkThreadEvent4
+	.4byte CDeviceVI_WorkThreadEvent5
+	.4byte CWorkThread_WorkThreadEvent6
 	.4byte __RTTI__CDeviceVI
 	.4byte 0xFFFFFE38
 	.4byte func_80448F38
@@ -1765,7 +1765,7 @@
 
 .obj "@eti_80034718", local
 .hidden "@eti_80034718"
-	.4byte func_8044880C
+	.4byte CDeviceVI_wkUpdate
 	.4byte 0x0000006C
 	.4byte "@etb_8001CB38"
 .endobj "@eti_80034718"
@@ -1793,14 +1793,14 @@
 
 .obj "@eti_80034748", local
 .hidden "@eti_80034748"
-	.4byte func_80448D18
+	.4byte CDeviceVI_WorkThreadEvent4
 	.4byte 0x000000DC
 	.4byte "@etb_8001CB58"
 .endobj "@eti_80034748"
 
 .obj "@eti_80034754", local
 .hidden "@eti_80034754"
-	.4byte func_80448DF4
+	.4byte CDeviceVI_WorkThreadEvent5
 	.4byte 0x00000084
 	.4byte "@etb_8001CB60"
 .endobj "@eti_80034754"

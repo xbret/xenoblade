@@ -13,15 +13,15 @@ void* OSGetMEM1ArenaLo(void);
 void* OSGetMEM2ArenaLo(void);
 void* OSGetArenaLo(void);
 
-void OSSetMEM1ArenaHi(void*);
-void OSSetMEM2ArenaHi(void*);
-void OSSetArenaHi(void*);
+void OSSetMEM1ArenaHi(void* hi);
+void OSSetMEM2ArenaHi(void* hi);
+void OSSetArenaHi(void* hi);
 
-void OSSetMEM1ArenaLo(void*);
-void OSSetMEM2ArenaLo(void*);
-void OSSetArenaLo(void*);
+void OSSetMEM1ArenaLo(void* lo);
+void OSSetMEM2ArenaLo(void* lo);
+void OSSetArenaLo(void* lo);
 
-void* OSAllocFromMEM1ArenaLo(size_t, u32);
+void* OSAllocFromMEM1ArenaLo(size_t size, u32 align);
 
 #ifdef __cplusplus
 }

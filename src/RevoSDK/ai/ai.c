@@ -129,8 +129,7 @@ void AIInit(void* stack) {
     }
 }
 
-void __AIDHandler(int intr, OSContext* ctx) {
-#pragma unused(intr)
+void __AIDHandler(s32 intr, OSContext* ctx) {
 
     OSContext tempCtx;
 

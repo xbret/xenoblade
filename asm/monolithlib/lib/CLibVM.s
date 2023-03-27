@@ -115,7 +115,7 @@
 /* 80460244 00429804  4E 80 00 20 */	blr 
 .endfn CLibVM_SetCallbacks
 
-.fn func_80460248, global
+.fn CLibVM_WorkThreadEvent4, global
 /* 80460248 00429808  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8046024C 0042980C  7C 08 02 A6 */	mflr r0
 /* 80460250 00429810  90 01 00 14 */	stw r0, 0x14(r1)
@@ -131,7 +131,7 @@
 /* 80460278 00429838  4E 80 04 21 */	bctrl 
 .L_8046027C:
 /* 8046027C 0042983C  7F E3 FB 78 */	mr r3, r31
-/* 80460280 00429840  4B FD 87 79 */	bl func_804389F8
+/* 80460280 00429840  4B FD 87 79 */	bl CWorkThread_WorkThreadEvent4
 /* 80460284 00429844  48 00 00 08 */	b .L_8046028C
 .L_80460288:
 /* 80460288 00429848  38 60 00 00 */	li r3, 0
@@ -141,9 +141,9 @@
 /* 80460294 00429854  7C 08 03 A6 */	mtlr r0
 /* 80460298 00429858  38 21 00 10 */	addi r1, r1, 0x10
 /* 8046029C 0042985C  4E 80 00 20 */	blr 
-.endfn func_80460248
+.endfn CLibVM_WorkThreadEvent4
 
-.fn func_804602A0, global
+.fn CLibVM_WorkThreadEvent5, global
 /* 804602A0 00429860  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804602A4 00429864  7C 08 02 A6 */	mflr r0
 /* 804602A8 00429868  90 01 00 14 */	stw r0, 0x14(r1)
@@ -163,7 +163,7 @@
 /* 804602E0 004298A0  4E 80 04 21 */	bctrl 
 .L_804602E4:
 /* 804602E4 004298A4  7F E3 FB 78 */	mr r3, r31
-/* 804602E8 004298A8  4B FD 87 3D */	bl func_80438A24
+/* 804602E8 004298A8  4B FD 87 3D */	bl CWorkThread_WorkThreadEvent5
 /* 804602EC 004298AC  48 00 00 08 */	b .L_804602F4
 .L_804602F0:
 /* 804602F0 004298B0  38 60 00 00 */	li r3, 0
@@ -173,7 +173,7 @@
 /* 804602FC 004298BC  7C 08 03 A6 */	mtlr r0
 /* 80460300 004298C0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80460304 004298C4  4E 80 00 20 */	blr 
-.endfn func_804602A0
+.endfn CLibVM_WorkThreadEvent5
 
 .fn func_80460308, global
 /* 80460308 004298C8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -3682,12 +3682,12 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte func_80438A50
-	.4byte CWorkThread_Event1
-	.4byte CWorkThread_Event2
-	.4byte func_80460248
-	.4byte func_804602A0
-	.4byte CWorkThread_Event3
+	.4byte CWorkThread_wkUpdate
+	.4byte CWorkThread_WorkThreadEvent2
+	.4byte CWorkThread_WorkThreadEvent3
+	.4byte CLibVM_WorkThreadEvent4
+	.4byte CLibVM_WorkThreadEvent5
+	.4byte CWorkThread_WorkThreadEvent6
 .endobj __vt__CLibVM
 
 .obj CLibVM_hierarchy, global
@@ -3880,14 +3880,14 @@
 
 .obj "@eti_8003551C", local
 .hidden "@eti_8003551C"
-	.4byte func_80460248
+	.4byte CLibVM_WorkThreadEvent4
 	.4byte 0x00000058
 	.4byte "@etb_8001D950"
 .endobj "@eti_8003551C"
 
 .obj "@eti_80035528", local
 .hidden "@eti_80035528"
-	.4byte func_804602A0
+	.4byte CLibVM_WorkThreadEvent5
 	.4byte 0x00000068
 	.4byte "@etb_8001D958"
 .endobj "@eti_80035528"

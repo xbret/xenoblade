@@ -20,6 +20,10 @@ extern volatile union {
     float f;
 } WGPIPE : 0xcc008000;
 
+#define GX_FIFO_ACCESS_BP 0x61
+#define GX_FIFO_ACCESS_CP 0x08
+#define GX_FIFO_ACCESS_XF 0x10
+
 #ifdef __cplusplus
 }
 #endif

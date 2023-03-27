@@ -1589,11 +1589,14 @@
 
 
 .obj lbl_80665B78, global
-	.4byte 0x25640000
+	.asciz "%d"
+	.byte 0
 	.4byte 0
 .endobj lbl_80665B78
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.balign 16
 
 .obj id, local
 	.skip 0x20

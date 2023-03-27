@@ -26,7 +26,7 @@ u32 AIGetDMAStartAddr(void);
 u32 AIGetDMALength(void);
 BOOL AICheckInit(void);
 void AIInit(void* stack);
-void __AIDHandler(int intr, struct OSContext* ctx); //s16?
+void __AIDHandler(s32 intr, struct OSContext* ctx);
 
 #ifdef __cplusplus
 }

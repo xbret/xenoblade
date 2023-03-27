@@ -10,46 +10,52 @@ void TPLBind(TPLPalette* pal) {
     OSAssert(pal->version == TPL_VERSION,
              "invalid version number for texture palette");
 
-    pal->imageTable = (TPLDescriptor*)(pal->imageTableOfs + (u32)pal);
+    pal->descriptors = (TPLDescriptor*)((char*)pal->descriptors + (u32)pal);
 
     for (i = 0; i < pal->numImages; i++) {
-        if (pal->imageTable[i].imageHeader != NULL) {
-            pal->imageTable[i].imageHeader =
-                (TPLImageHeader*)((char*)pal + pal->imageTable[i].imageOfs);
+        if (pal->descriptors[i].texHeader != NULL) {
+            // Convert header offset into pointer
+            pal->descriptors[i].texHeader =
+                (TPLHeader*)((char*)pal + (u32)pal->descriptors[i].texHeader);
 
-            if (!pal->imageTable[i].imageHeader->unpacked) {
-                pal->imageTable[i].imageHeader->data =
-                    (char*)pal + pal->imageTable[i].imageHeader->offset;
-                pal->imageTable[i].imageHeader->unpacked = TRUE;
+            if (!pal->descriptors[i].texHeader->unpacked) {
+                // Convert data offset into pointer
+                pal->descriptors[i].texHeader->data =
+                    (char*)pal + (u32)pal->descriptors[i].texHeader->data;
+
+                pal->descriptors[i].texHeader->unpacked = TRUE;
             }
         }
 
-        if (pal->imageTable[i].palHeader != NULL) {
-            pal->imageTable[i].palHeader =
-                (TPLPaletteHeader*)((char*)pal + pal->imageTable[i].palOfs);
+        if (pal->descriptors[i].clutHeader != NULL) {
+            // Convert header offset into pointer
+            pal->descriptors[i].clutHeader =
+                (TPLClutHeader*)((char*)pal +
+                                 (u32)pal->descriptors[i].clutHeader);
 
-            if (!pal->imageTable[i].palHeader->unpacked) {
-                pal->imageTable[i].palHeader->data =
-                    (char*)pal + pal->imageTable[i].palHeader->offset;
-                pal->imageTable[i].palHeader->unpacked = TRUE;
+            if (!pal->descriptors[i].clutHeader->unpacked) {
+                // Convert data offset into pointer
+                pal->descriptors[i].clutHeader->data =
+                    (char*)pal + (u32)pal->descriptors[i].clutHeader->data;
+
+                pal->descriptors[i].clutHeader->unpacked = TRUE;
             }
         }
     }
 }
 
 TPLDescriptor* TPLGet(TPLPalette* pal, u32 id) {
-    return &pal->imageTable[id % pal->numImages];
+    return &pal->descriptors[id % pal->numImages];
 }
-
 
 void TPLGetGXTexObjFromPalette(TPLPalette* pal, GXTexObj* to, u32 id) {
   TPLDescriptor* desc = TPLGet(pal, id);
-  int mipMap = desc->imageHeader->minLod == desc->imageHeader->maxLod ? 0 : 1;
-  GXInitTexObj(to, desc->imageHeader->data, desc->imageHeader->width,
-               desc->imageHeader->height, desc->imageHeader->format,
-               desc->imageHeader->wrapS, desc->imageHeader->wrapT, mipMap);
-  GXInitTexObjLOD(to, desc->imageHeader->minFilt,
-                  desc->imageHeader->magFilt, desc->imageHeader->minLod,
-                  desc->imageHeader->maxLod, desc->imageHeader->lodBias, 0,
-                  desc->imageHeader->edgeLodEnable, 0);
+  int mipMap = desc->texHeader->minLod == desc->texHeader->maxLod ? 0 : 1;
+  GXInitTexObj(to, desc->texHeader->data, desc->texHeader->width,
+               desc->texHeader->height, desc->texHeader->format,
+               desc->texHeader->wrapS, desc->texHeader->wrapT, mipMap);
+  GXInitTexObjLOD(to, desc->texHeader->minFilt,
+                  desc->texHeader->magFilt, desc->texHeader->minLod,
+                  desc->texHeader->maxLod, desc->texHeader->lodBias, 0,
+                  desc->texHeader->edgeLodEnable, 0);
 }

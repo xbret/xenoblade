@@ -255,7 +255,7 @@
 .endfn func_8045FBB8
 
 #called from func_804385D0
-.fn func_8045FC84, global
+.fn CLibStaticData_WorkThreadEvent4, global
 /* 8045FC84 00429244  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045FC88 00429248  7C 08 02 A6 */	mflr r0
 /* 8045FC8C 0042924C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -265,7 +265,7 @@
 /* 8045FC9C 0042925C  80 03 00 7C */	lwz r0, 0x7c(r3)
 /* 8045FCA0 00429260  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 8045FCA4 00429264  41 82 00 0C */	beq .L_8045FCB0
-/* 8045FCA8 00429268  4B FD 8D 51 */	bl func_804389F8
+/* 8045FCA8 00429268  4B FD 8D 51 */	bl CWorkThread_WorkThreadEvent4
 /* 8045FCAC 0042926C  48 00 00 F4 */	b .L_8045FDA0
 .L_8045FCB0:
 /* 8045FCB0 00429270  48 07 E3 DD */	bl func_804DE08C
@@ -292,7 +292,7 @@
 /* 8045FCF8 004292B8  41 82 00 50 */	beq .L_8045FD48
 /* 8045FCFC 004292BC  48 00 00 40 */	b .L_8045FD3C
 .L_8045FD00:
-/* 8045FD00 004292C0  4B FD 78 B5 */	bl getMemRegionIndex
+/* 8045FD00 004292C0  4B FD 78 B5 */	bl getHeapIndex
 /* 8045FD04 004292C4  7C 64 1B 78 */	mr r4, r3
 /* 8045FD08 004292C8  38 60 00 18 */	li r3, 0x18
 /* 8045FD0C 004292CC  4B FD 4D 51 */	bl heap_malloc
@@ -339,7 +339,7 @@
 /* 8045FD94 00429354  90 1F 01 C4 */	stw r0, 0x1c4(r31)
 .L_8045FD98:
 /* 8045FD98 00429358  7F E3 FB 78 */	mr r3, r31
-/* 8045FD9C 0042935C  4B FD 8C 5D */	bl func_804389F8
+/* 8045FD9C 0042935C  4B FD 8C 5D */	bl CWorkThread_WorkThreadEvent4
 .L_8045FDA0:
 /* 8045FDA0 00429360  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8045FDA4 00429364  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -347,9 +347,9 @@
 /* 8045FDAC 0042936C  7C 08 03 A6 */	mtlr r0
 /* 8045FDB0 00429370  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045FDB4 00429374  4E 80 00 20 */	blr 
-.endfn func_8045FC84
+.endfn CLibStaticData_WorkThreadEvent4
 
-.fn func_8045FDB8, global
+.fn CLibStaticData_WorkThreadEvent5, global
 /* 8045FDB8 00429378  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8045FDBC 0042937C  7C 08 02 A6 */	mflr r0
 /* 8045FDC0 00429380  90 01 00 24 */	stw r0, 0x24(r1)
@@ -405,7 +405,7 @@
 /* 8045FE74 00429434  7F A3 EB 78 */	mr r3, r29
 /* 8045FE78 00429438  90 9D 01 D0 */	stw r4, 0x1d0(r29)
 /* 8045FE7C 0042943C  90 1D 01 D4 */	stw r0, 0x1d4(r29)
-/* 8045FE80 00429440  4B FD 8B A5 */	bl func_80438A24
+/* 8045FE80 00429440  4B FD 8B A5 */	bl CWorkThread_WorkThreadEvent5
 /* 8045FE84 00429444  48 00 00 08 */	b .L_8045FE8C
 .L_8045FE88:
 /* 8045FE88 00429448  38 60 00 00 */	li r3, 0
@@ -417,7 +417,7 @@
 /* 8045FE9C 0042945C  7C 08 03 A6 */	mtlr r0
 /* 8045FEA0 00429460  38 21 00 20 */	addi r1, r1, 0x20
 /* 8045FEA4 00429464  4E 80 00 20 */	blr 
-.endfn func_8045FDB8
+.endfn CLibStaticData_WorkThreadEvent5
 
 #r4: StaticArcFile struct
 .fn __ct__CLibStaticData_CItem, global
@@ -637,12 +637,12 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte func_80438A50
-	.4byte CWorkThread_Event1
-	.4byte CWorkThread_Event2
-	.4byte func_8045FC84
-	.4byte func_8045FDB8
-	.4byte CWorkThread_Event3
+	.4byte CWorkThread_wkUpdate
+	.4byte CWorkThread_WorkThreadEvent2
+	.4byte CWorkThread_WorkThreadEvent3
+	.4byte CLibStaticData_WorkThreadEvent4
+	.4byte CLibStaticData_WorkThreadEvent5
+	.4byte CWorkThread_WorkThreadEvent6
 .endobj __vt__CLibStaticData
 
 .obj CLibStaticData_hierarchy, global
@@ -834,14 +834,14 @@
 
 .obj "@eti_800354C8", local
 .hidden "@eti_800354C8"
-	.4byte func_8045FC84
+	.4byte CLibStaticData_WorkThreadEvent4
 	.4byte 0x00000134
 	.4byte "@etb_8001D8F0"
 .endobj "@eti_800354C8"
 
 .obj "@eti_800354D4", local
 .hidden "@eti_800354D4"
-	.4byte func_8045FDB8
+	.4byte CLibStaticData_WorkThreadEvent5
 	.4byte 0x000000F0
 	.4byte "@etb_8001D8F8"
 .endobj "@eti_800354D4"

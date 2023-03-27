@@ -45,7 +45,7 @@
 /* 8027AADC 0024409C  90 84 00 00 */	stw r4, 0(r4)
 /* 8027AAE0 002440A0  90 84 00 04 */	stw r4, 4(r4)
 /* 8027AAE4 002440A4  90 7E 1D 88 */	stw r3, 0x1d88(r30)
-/* 8027AAE8 002440A8  48 1B CA CD */	bl getMemRegionIndex
+/* 8027AAE8 002440A8  48 1B CA CD */	bl getHeapIndex
 /* 8027AAEC 002440AC  7C 64 1B 78 */	mr r4, r3
 /* 8027AAF0 002440B0  38 60 02 C4 */	li r3, 0x2c4
 /* 8027AAF4 002440B4  48 1B 9F 8D */	bl heap_malloc_1

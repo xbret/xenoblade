@@ -6,21 +6,19 @@
 extern "C" {
 #endif
 
+
 /**
  * Documentation from:
  * https://github.com/soopercool101/BrawlCrate/blob/master/BrawlLib/SSBB/Types/TPL.cs
  * https://wiki.tockdom.com/wiki/TPL_(File_Format)
+ * DWARF debugging info
  */
 
-typedef struct TPLImageHeader {
-    u16 height;      // at 0x0
-    u16 width;       // at 0x2
-    GXTexFmt format; // at 0x4
-    union {
-        // Offset before unpacking
-        u32 offset;
-        void* data;
-    };                   // at 0x8
+typedef struct TPLHeader {
+    u16 height;          // at 0x0
+    u16 width;           // at 0x2
+    u32 format;          // at 0x4
+    char* data;          // at 0x8
     GXTexWrapMode wrapS; // at 0xC
     GXTexWrapMode wrapT; // at 0x10
     GXTexFilter minFilt; // at 0x14
@@ -30,45 +28,29 @@ typedef struct TPLImageHeader {
     u8 minLod;           // at 0x21
     u8 maxLod;           // at 0x22
     u8 unpacked;         // at 0x23
-} TPLImageHeader;
+} TPLHeader;
 
-typedef struct TPLPaletteHeader {
-    u16 numEntries; // at 0x0
-    u8 unpacked;    // at 0x1
-    char UNK_0x2;
+typedef struct TPLClutHeader {
+    u16 numEntries;   // at 0x0
+    u8 unpacked;      // at 0x1
+    u8 padding;       // at 0x2
     GXTlutFmt format; // at 0x4
-    union {
-        // Offset before unpacking
-        u32 offset;
-        void* data;
-    }; // at 0x8
-} TPLPaletteHeader;
+    char* data;       // at 0x8
+} TPLClutHeader;
 
 typedef struct TPLDescriptor {
-    union {
-        // Offset before unpacking
-        u32 imageOfs;
-        TPLImageHeader* imageHeader;
-    }; // at 0x0
-    union {
-        // Offset before unpacking
-        u32 palOfs;
-        TPLPaletteHeader* palHeader;
-    }; // at 0x4
+    TPLHeader* texHeader;      // at 0x0
+    TPLClutHeader* clutHeader; // at 0x4
 } TPLDescriptor;
 
 typedef struct TPLPalette {
-    u32 version;   // at 0x0
-    u32 numImages; // at 0x4
-    union {
-        // Offset before unpacking
-        u32 imageTableOfs;
-        TPLDescriptor* imageTable;
-    }; // at 0x8
+    u32 version;                // at 0x0
+    u32 numImages;              // at 0x4
+    TPLDescriptor* descriptors; // at 0x8
 } TPLPalette;
 
-void TPLBind(TPLPalette*);
-TPLDescriptor* TPLGet(TPLPalette*, u32);
+void TPLBind(TPLPalette* pal);
+TPLDescriptor* TPLGet(TPLPalette* pal, u32 id);
 void TPLGetGXTexObjFromPalette(TPLPalette*, GXTexObj*, u32);
 
 #ifdef __cplusplus

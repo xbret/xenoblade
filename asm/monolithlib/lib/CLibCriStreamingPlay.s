@@ -804,7 +804,7 @@
 /* 8045BEC8 00425488  4E 80 00 20 */	blr 
 .endfn func_8045BE48
 
-.fn func_8045BECC, global
+.fn CLibCriStreamingPlay_wkUpdate, global
 /* 8045BECC 0042548C  94 21 FF 30 */	stwu r1, -0xd0(r1)
 /* 8045BED0 00425490  7C 08 02 A6 */	mflr r0
 /* 8045BED4 00425494  90 01 00 D4 */	stw r0, 0xd4(r1)
@@ -1159,13 +1159,13 @@
 /* 8045C3D8 00425998  7C 08 03 A6 */	mtlr r0
 /* 8045C3DC 0042599C  38 21 00 D0 */	addi r1, r1, 0xd0
 /* 8045C3E0 004259A0  4E 80 00 20 */	blr 
-.endfn func_8045BECC
+.endfn CLibCriStreamingPlay_wkUpdate
 
-.fn func_8045C3E4, global
-/* 8045C3E4 004259A4  4B FD C6 14 */	b func_804389F8
-.endfn func_8045C3E4
+.fn CLibCriStreamingPlay_WorkThreadEvent4, global
+/* 8045C3E4 004259A4  4B FD C6 14 */	b CWorkThread_WorkThreadEvent4
+.endfn CLibCriStreamingPlay_WorkThreadEvent4
 
-.fn func_8045C3E8, global
+.fn CLibCriStreamingPlay_WorkThreadEvent5, global
 /* 8045C3E8 004259A8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8045C3EC 004259AC  7C 08 02 A6 */	mflr r0
 /* 8045C3F0 004259B0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1209,7 +1209,7 @@
 /* 8045C474 00425A34  28 1D 00 05 */	cmplwi r29, 5
 /* 8045C478 00425A38  41 80 FF A8 */	blt .L_8045C420
 /* 8045C47C 00425A3C  7F 63 DB 78 */	mr r3, r27
-/* 8045C480 00425A40  4B FD C5 A5 */	bl func_80438A24
+/* 8045C480 00425A40  4B FD C5 A5 */	bl CWorkThread_WorkThreadEvent5
 /* 8045C484 00425A44  48 00 00 08 */	b .L_8045C48C
 .L_8045C488:
 /* 8045C488 00425A48  38 60 00 00 */	li r3, 0
@@ -1219,7 +1219,7 @@
 /* 8045C494 00425A54  7C 08 03 A6 */	mtlr r0
 /* 8045C498 00425A58  38 21 00 20 */	addi r1, r1, 0x20
 /* 8045C49C 00425A5C  4E 80 00 20 */	blr 
-.endfn func_8045C3E8
+.endfn CLibCriStreamingPlay_WorkThreadEvent5
 
 .fn CLibCriStreamingPlay_WorkEvent5, global
 /* 8045C4A0 00425A60  94 21 FF 90 */	stwu r1, -0x70(r1)
@@ -2284,12 +2284,12 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte func_8045BECC
-	.4byte CWorkThread_Event1
-	.4byte CWorkThread_Event2
-	.4byte func_8045C3E4
-	.4byte func_8045C3E8
-	.4byte CWorkThread_Event3
+	.4byte CLibCriStreamingPlay_wkUpdate
+	.4byte CWorkThread_WorkThreadEvent2
+	.4byte CWorkThread_WorkThreadEvent3
+	.4byte CLibCriStreamingPlay_WorkThreadEvent4
+	.4byte CLibCriStreamingPlay_WorkThreadEvent5
+	.4byte CWorkThread_WorkThreadEvent6
 	.4byte __RTTI__CLibCriStreamingPlay
 	.4byte 0xFFFFFE3C
 	.4byte func_8045D148
@@ -2535,14 +2535,14 @@
 
 .obj "@eti_8003524C", local
 .hidden "@eti_8003524C"
-	.4byte func_8045BECC
+	.4byte CLibCriStreamingPlay_wkUpdate
 	.4byte 0x00000518
 	.4byte "@etb_8001D698"
 .endobj "@eti_8003524C"
 
 .obj "@eti_80035258", local
 .hidden "@eti_80035258"
-	.4byte func_8045C3E8
+	.4byte CLibCriStreamingPlay_WorkThreadEvent5
 	.4byte 0x000000B8
 	.4byte "@etb_8001D6A0"
 .endobj "@eti_80035258"

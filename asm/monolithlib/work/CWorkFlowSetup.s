@@ -55,7 +55,7 @@
 /* 80443A74 0040D034  4E 80 00 20 */	blr 
 .endfn func_80443A70
 
-.fn func_80443A78, global
+.fn CWorkFlowSetup_WorkThreadEvent4, global
 /* 80443A78 0040D038  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80443A7C 0040D03C  7C 08 02 A6 */	mflr r0
 /* 80443A80 0040D040  90 01 00 14 */	stw r0, 0x14(r1)
@@ -68,7 +68,7 @@
 /* 80443A9C 0040D05C  38 80 00 00 */	li r4, 0
 /* 80443AA0 0040D060  4B FF 44 51 */	bl func_80437EF0
 /* 80443AA4 0040D064  7F E3 FB 78 */	mr r3, r31
-/* 80443AA8 0040D068  4B FF 4F 51 */	bl func_804389F8
+/* 80443AA8 0040D068  4B FF 4F 51 */	bl CWorkThread_WorkThreadEvent4
 /* 80443AAC 0040D06C  48 00 00 08 */	b .L_80443AB4
 .L_80443AB0:
 /* 80443AB0 0040D070  38 60 00 00 */	li r3, 0
@@ -78,9 +78,9 @@
 /* 80443ABC 0040D07C  7C 08 03 A6 */	mtlr r0
 /* 80443AC0 0040D080  38 21 00 10 */	addi r1, r1, 0x10
 /* 80443AC4 0040D084  4E 80 00 20 */	blr 
-.endfn func_80443A78
+.endfn CWorkFlowSetup_WorkThreadEvent4
 
-.fn func_80443AC8, global
+.fn CWorkFlowSetup_WorkThreadEvent5, global
 /* 80443AC8 0040D088  80 83 00 60 */	lwz r4, 0x60(r3)
 /* 80443ACC 0040D08C  80 04 00 00 */	lwz r0, 0(r4)
 /* 80443AD0 0040D090  7C 00 20 40 */	cmplw r0, r4
@@ -88,9 +88,9 @@
 /* 80443AD8 0040D098  38 60 00 00 */	li r3, 0
 /* 80443ADC 0040D09C  4E 80 00 20 */	blr
 .L_80443AE0:
-/* 80443AE0 0040D0A0  4B FF 4F 44 */	b func_80438A24
+/* 80443AE0 0040D0A0  4B FF 4F 44 */	b CWorkThread_WorkThreadEvent5
 /* 80443AE4 0040D0A4  4E 80 00 20 */	blr 
-.endfn func_80443AC8
+.endfn CWorkFlowSetup_WorkThreadEvent5
 
 .fn func_80443AE8, global
 /* 80443AE8 0040D0A8  80 6D BD 48 */	lwz r3, lbl_80667EC8@sda21(r13)
@@ -162,12 +162,12 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte func_80438A50
-	.4byte CWorkThread_Event1
-	.4byte CWorkThread_Event2
-	.4byte func_80443A78
-	.4byte func_80443AC8
-	.4byte CWorkThread_Event3
+	.4byte CWorkThread_wkUpdate
+	.4byte CWorkThread_WorkThreadEvent2
+	.4byte CWorkThread_WorkThreadEvent3
+	.4byte CWorkFlowSetup_WorkThreadEvent4
+	.4byte CWorkFlowSetup_WorkThreadEvent5
+	.4byte CWorkThread_WorkThreadEvent6
 .endobj __vt__CWorkFlowSetup
 
 .obj CWorkFlowSetup_hierarchy, global
@@ -254,7 +254,7 @@
 
 .obj "@eti_80034370", local
 .hidden "@eti_80034370"
-	.4byte func_80443A78
+	.4byte CWorkFlowSetup_WorkThreadEvent4
 	.4byte 0x00000050
 	.4byte "@etb_8001C76C"
 .endobj "@eti_80034370"

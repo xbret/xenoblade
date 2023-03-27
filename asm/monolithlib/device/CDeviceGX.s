@@ -495,7 +495,7 @@
 /* 804557A4 0041ED64  4E 80 00 20 */	blr 
 .endfn func_804557A0
 
-.fn func_804557A8, global
+.fn CDeviceGX_WorkThreadEvent4, global
 /* 804557A8 0041ED68  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804557AC 0041ED6C  7C 08 02 A6 */	mflr r0
 /* 804557B0 0041ED70  90 01 00 14 */	stw r0, 0x14(r1)
@@ -556,7 +556,7 @@
 /* 80455880 0041EE40  4B EC 4C C1 */	bl GXSetDrawSyncCallback
 .L_80455884:
 /* 80455884 0041EE44  7F E3 FB 78 */	mr r3, r31
-/* 80455888 0041EE48  4B FE 31 71 */	bl func_804389F8
+/* 80455888 0041EE48  4B FE 31 71 */	bl CWorkThread_WorkThreadEvent4
 /* 8045588C 0041EE4C  48 00 00 08 */	b .L_80455894
 .L_80455890:
 /* 80455890 0041EE50  38 60 00 00 */	li r3, 0
@@ -566,9 +566,9 @@
 /* 8045589C 0041EE5C  7C 08 03 A6 */	mtlr r0
 /* 804558A0 0041EE60  38 21 00 10 */	addi r1, r1, 0x10
 /* 804558A4 0041EE64  4E 80 00 20 */	blr 
-.endfn func_804557A8
+.endfn CDeviceGX_WorkThreadEvent4
 
-.fn func_804558A8, global
+.fn CDeviceGX_WorkThreadEvent5, global
 /* 804558A8 0041EE68  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804558AC 0041EE6C  7C 08 02 A6 */	mflr r0
 /* 804558B0 0041EE70  90 01 00 14 */	stw r0, 0x14(r1)
@@ -595,7 +595,7 @@
 /* 80455900 0041EEC0  2C 03 00 00 */	cmpwi r3, 0
 /* 80455904 0041EEC4  40 82 00 10 */	bne .L_80455914
 /* 80455908 0041EEC8  7F E3 FB 78 */	mr r3, r31
-/* 8045590C 0041EECC  4B FE 31 19 */	bl func_80438A24
+/* 8045590C 0041EECC  4B FE 31 19 */	bl CWorkThread_WorkThreadEvent5
 /* 80455910 0041EED0  48 00 00 08 */	b .L_80455918
 .L_80455914:
 /* 80455914 0041EED4  38 60 00 00 */	li r3, 0
@@ -605,7 +605,7 @@
 /* 80455920 0041EEE0  7C 08 03 A6 */	mtlr r0
 /* 80455924 0041EEE4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80455928 0041EEE8  4E 80 00 20 */	blr
-.endfn func_804558A8
+.endfn CDeviceGX_WorkThreadEvent5
 
 .fn func_8045592C, global
 /* 8045592C 0041EEEC  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -714,12 +714,12 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte func_80438A50
-	.4byte CWorkThread_Event1
-	.4byte CWorkThread_Event2
-	.4byte func_804557A8
-	.4byte func_804558A8
-	.4byte CWorkThread_Event3
+	.4byte CWorkThread_wkUpdate
+	.4byte CWorkThread_WorkThreadEvent2
+	.4byte CWorkThread_WorkThreadEvent3
+	.4byte CDeviceGX_WorkThreadEvent4
+	.4byte CDeviceGX_WorkThreadEvent5
+	.4byte CWorkThread_WorkThreadEvent6
 	.4byte __RTTI__CDeviceGX
 	.4byte 0xFFFFFE38
 	.4byte func_804559C4
@@ -938,14 +938,14 @@
 
 .obj "@eti_80034EF8", local
 .hidden "@eti_80034EF8"
-	.4byte func_804557A8
+	.4byte CDeviceGX_WorkThreadEvent4
 	.4byte 0x00000100
 	.4byte "@etb_8001D2CC"
 .endobj "@eti_80034EF8"
 
 .obj "@eti_80034F04", local
 .hidden "@eti_80034F04"
-	.4byte func_804558A8
+	.4byte CDeviceGX_WorkThreadEvent5
 	.4byte 0x00000084
 	.4byte "@etb_8001D2D4"
 .endobj "@eti_80034F04"

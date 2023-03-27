@@ -1410,12 +1410,12 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte func_80447A34
-	.4byte CWorkThread_Event1
-	.4byte CWorkThread_Event2
-	.4byte func_80447A40
-	.4byte func_80447AE4
-	.4byte CWorkThread_Event3
+	.4byte CDeviceRemotePad_wkUpdate
+	.4byte CWorkThread_WorkThreadEvent2
+	.4byte CWorkThread_WorkThreadEvent3
+	.4byte CDeviceRemotePad_WorkThreadEvent4
+	.4byte CDeviceRemotePad_WorkThreadEvent5
+	.4byte CWorkThread_WorkThreadEvent6
 .endobj __vt__CDeviceRemotePad
 
 .obj CDeviceRemotePad_hierarchy, global

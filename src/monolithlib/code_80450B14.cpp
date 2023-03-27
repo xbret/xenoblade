@@ -1,17 +1,17 @@
 #include "monolithlib/code_80450B14.hpp"
 
-extern u32** lbl_80665FF0;
-extern u32** lbl_80665FF4;
-extern u32** lbl_80665FF8;
+extern u16** lbl_80665FF0;
+extern u16** lbl_80665FF4;
+extern u16** lbl_80665FF8;
 
-void func_80450B14(u32** dataPtr){
-    lbl_80665FF0 = dataPtr;
+void func_80450B14(u16** pData){
+    lbl_80665FF0 = pData;
 }
 
-void func_80450B1C(u32** dataPtr){
-    lbl_80665FF4 = dataPtr;
+void func_80450B1C(u16** pData){
+    lbl_80665FF4 = pData;
 }
 
-void func_80450B24(u32** dataPtr){
-    lbl_80665FF8 = dataPtr;
+void func_80450B24(u16** pData){
+    lbl_80665FF8 = pData;
 }

@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn __ct__CDeviceException, global
+.fn CDevice_WorkThreadEvent4, global
 /* 8044D820 00416DE0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8044D824 00416DE4  7C 08 02 A6 */	mflr r0
 /* 8044D828 00416DE8  3C 80 80 52 */	lis r4, lbl_805263E8@ha
@@ -13,7 +13,7 @@
 /* 8044D83C 00416DFC  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8044D840 00416E00  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8044D844 00416E04  7C 7D 1B 78 */	mr r29, r3
-/* 8044D848 00416E08  4B FE 9D 6D */	bl getMemRegionIndex
+/* 8044D848 00416E08  4B FE 9D 6D */	bl getHeapIndex
 /* 8044D84C 00416E0C  7C 64 1B 78 */	mr r4, r3
 /* 8044D850 00416E10  38 60 01 C8 */	li r3, 0x1c8
 /* 8044D854 00416E14  4B FE 72 09 */	bl heap_malloc
@@ -38,7 +38,7 @@
 /* 8044D89C 00416E5C  38 80 00 09 */	li r4, 9
 /* 8044D8A0 00416E60  4B FE A6 51 */	bl func_80437EF0
 /* 8044D8A4 00416E64  7F A3 EB 78 */	mr r3, r29
-/* 8044D8A8 00416E68  4B FE B1 51 */	bl func_804389F8
+/* 8044D8A8 00416E68  4B FE B1 51 */	bl CWorkThread_WorkThreadEvent4
 /* 8044D8AC 00416E6C  80 01 00 24 */	lwz r0, 0x24(r1)
 /* 8044D8B0 00416E70  83 E1 00 1C */	lwz r31, 0x1c(r1)
 /* 8044D8B4 00416E74  83 C1 00 18 */	lwz r30, 0x18(r1)
@@ -46,9 +46,9 @@
 /* 8044D8BC 00416E7C  7C 08 03 A6 */	mtlr r0
 /* 8044D8C0 00416E80  38 21 00 20 */	addi r1, r1, 0x20
 /* 8044D8C4 00416E84  4E 80 00 20 */	blr 
-.endfn __ct__CDeviceException
+.endfn CDevice_WorkThreadEvent4
 
-.fn func_8044D8C8, global
+.fn CDevice_WorkThreadEvent5, global
 /* 8044D8C8 00416E88  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044D8CC 00416E8C  7C 08 02 A6 */	mflr r0
 /* 8044D8D0 00416E90  90 01 00 14 */	stw r0, 0x14(r1)
@@ -65,7 +65,7 @@
 /* 8044D8FC 00416EBC  2C 03 00 00 */	cmpwi r3, 0
 /* 8044D900 00416EC0  40 82 00 10 */	bne .L_8044D910
 /* 8044D904 00416EC4  7F E3 FB 78 */	mr r3, r31
-/* 8044D908 00416EC8  4B FE B1 1D */	bl func_80438A24
+/* 8044D908 00416EC8  4B FE B1 1D */	bl CWorkThread_WorkThreadEvent5
 /* 8044D90C 00416ECC  48 00 00 08 */	b .L_8044D914
 .L_8044D910:
 /* 8044D910 00416ED0  38 60 00 00 */	li r3, 0
@@ -75,7 +75,7 @@
 /* 8044D91C 00416EDC  7C 08 03 A6 */	mtlr r0
 /* 8044D920 00416EE0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8044D924 00416EE4  4E 80 00 20 */	blr 
-.endfn func_8044D8C8
+.endfn CDevice_WorkThreadEvent5
 
 .fn __ct__CDevice, global
 /* 8044D928 00416EE8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -89,7 +89,7 @@
 /* 8044D948 00416F08  7C 7E 1B 78 */	mr r30, r3
 /* 8044D94C 00416F0C  38 84 63 E8 */	addi r4, r4, lbl_805263E8@l
 /* 8044D950 00416F10  3B E4 00 6D */	addi r31, r4, 0x6d
-/* 8044D954 00416F14  4B FE 9C 61 */	bl getMemRegionIndex
+/* 8044D954 00416F14  4B FE 9C 61 */	bl getHeapIndex
 /* 8044D958 00416F18  7C 64 1B 78 */	mr r4, r3
 /* 8044D95C 00416F1C  38 60 01 C8 */	li r3, 0x1c8
 /* 8044D960 00416F20  4B FE 70 FD */	bl heap_malloc
@@ -202,7 +202,7 @@
 /* 8044DAD8 00417098  4E 80 00 20 */	blr 
 .endfn __dt___unnamed_CDevice_cpp_CDeviceException
 
-.fn func_8044DADC, global
+.fn CDeviceException_WorkThreadEvent5, global
 /* 8044DADC 0041709C  80 83 00 60 */	lwz r4, 0x60(r3)
 /* 8044DAE0 004170A0  80 04 00 00 */	lwz r0, 0(r4)
 /* 8044DAE4 004170A4  7C 00 20 40 */	cmplw r0, r4
@@ -210,9 +210,9 @@
 /* 8044DAEC 004170AC  38 60 00 00 */	li r3, 0
 /* 8044DAF0 004170B0  4E 80 00 20 */	blr
 .L_8044DAF4:
-/* 8044DAF4 004170B4  4B FE AF 30 */	b func_80438A24
+/* 8044DAF4 004170B4  4B FE AF 30 */	b CWorkThread_WorkThreadEvent5
 /* 8044DAF8 004170B8  4E 80 00 20 */	blr
-.endfn func_8044DADC
+.endfn CDeviceException_WorkThreadEvent5
 
 
 .fn sinit_8044DAFC, local
@@ -307,12 +307,12 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte func_80438A50
-	.4byte CWorkThread_Event1
-	.4byte CWorkThread_Event2
-	.4byte func_804389F8
-	.4byte func_8044DADC
-	.4byte CWorkThread_Event3
+	.4byte CWorkThread_wkUpdate
+	.4byte CWorkThread_WorkThreadEvent2
+	.4byte CWorkThread_WorkThreadEvent3
+	.4byte CWorkThread_WorkThreadEvent4
+	.4byte CDeviceException_WorkThreadEvent5
+	.4byte CWorkThread_WorkThreadEvent6
 .endobj __vt___unnamed_CDevice_cpp_CDeviceException
 
 .obj _unnamed_CDevice_cpp_CDeviceException_hierarchy, global
@@ -360,12 +360,12 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte func_80438A50
-	.4byte CWorkThread_Event1
-	.4byte CWorkThread_Event2
-	.4byte __ct__CDeviceException
-	.4byte func_8044D8C8
-	.4byte CWorkThread_Event3
+	.4byte CWorkThread_wkUpdate
+	.4byte CWorkThread_WorkThreadEvent2
+	.4byte CWorkThread_WorkThreadEvent3
+	.4byte CDevice_WorkThreadEvent4
+	.4byte CDevice_WorkThreadEvent5
+	.4byte CWorkThread_WorkThreadEvent6
 .endobj __vt__CDevice
 
 .obj CDevice_hierarchy, global
@@ -457,14 +457,14 @@
 
 .obj "@eti_80034958", local
 .hidden "@eti_80034958"
-	.4byte __ct__CDeviceException
+	.4byte CDevice_WorkThreadEvent4
 	.4byte 0x000000A8
 	.4byte "@etb_8001CCD8"
 .endobj "@eti_80034958"
 
 .obj "@eti_80034964", local
 .hidden "@eti_80034964"
-	.4byte func_8044D8C8
+	.4byte CDevice_WorkThreadEvent5
 	.4byte 0x00000060
 	.4byte "@etb_8001CCE0"
 .endobj "@eti_80034964"

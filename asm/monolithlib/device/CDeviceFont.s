@@ -264,7 +264,7 @@
 .L_80452624:
 /* 80452624 0041BBE4  3F E0 80 52 */	lis r31, lbl_805266F4@ha
 /* 80452628 0041BBE8  3B FF 66 F4 */	addi r31, r31, lbl_805266F4@l
-/* 8045262C 0041BBEC  4B FE 4F 89 */	bl getMemRegionIndex
+/* 8045262C 0041BBEC  4B FE 4F 89 */	bl getHeapIndex
 /* 80452630 0041BBF0  7C 64 1B 78 */	mr r4, r3
 /* 80452634 0041BBF4  38 60 02 F8 */	li r3, 0x2f8
 /* 80452638 0041BBF8  4B FE 24 25 */	bl heap_malloc
@@ -909,7 +909,7 @@
 /* 80452E40 0041C400  4E 80 00 20 */	blr 
 .endfn func_80452D80
 
-.fn func_80452E44, global
+.fn CDeviceFont_wkUpdate, global
 /* 80452E44 0041C404  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80452E48 0041C408  7C 08 02 A6 */	mflr r0
 /* 80452E4C 0041C40C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -984,7 +984,7 @@
 /* 80452F3C 0041C4FC  3C 60 80 52 */	lis r3, lbl_805266F4@ha
 /* 80452F40 0041C500  38 63 66 F4 */	addi r3, r3, lbl_805266F4@l
 /* 80452F44 0041C504  3B C3 00 11 */	addi r30, r3, 0x11
-/* 80452F48 0041C508  4B FE 46 6D */	bl getMemRegionIndex
+/* 80452F48 0041C508  4B FE 46 6D */	bl getHeapIndex
 /* 80452F4C 0041C50C  7C 64 1B 78 */	mr r4, r3
 /* 80452F50 0041C510  38 60 02 10 */	li r3, 0x210
 /* 80452F54 0041C514  4B FE 1B 09 */	bl heap_malloc
@@ -1007,7 +1007,7 @@
 /* 80452F94 0041C554  3C 60 80 52 */	lis r3, lbl_805266F4@ha
 /* 80452F98 0041C558  38 63 66 F4 */	addi r3, r3, lbl_805266F4@l
 /* 80452F9C 0041C55C  3B C3 00 11 */	addi r30, r3, 0x11
-/* 80452FA0 0041C560  4B FE 46 15 */	bl getMemRegionIndex
+/* 80452FA0 0041C560  4B FE 46 15 */	bl getHeapIndex
 /* 80452FA4 0041C564  7C 64 1B 78 */	mr r4, r3
 /* 80452FA8 0041C568  38 60 02 10 */	li r3, 0x210
 /* 80452FAC 0041C56C  4B FE 1A B1 */	bl heap_malloc
@@ -1070,7 +1070,7 @@
 /* 80453074 0041C634  7C 08 03 A6 */	mtlr r0
 /* 80453078 0041C638  38 21 00 20 */	addi r1, r1, 0x20
 /* 8045307C 0041C63C  4E 80 00 20 */	blr 
-.endfn func_80452E44
+.endfn CDeviceFont_wkUpdate
 
 .fn __dt__80453080, global
 /* 80453080 0041C640  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1092,7 +1092,7 @@
 /* 804530BC 0041C67C  4E 80 00 20 */	blr 
 .endfn __dt__80453080
 
-.fn func_804530C0, global
+.fn CDeviceFont_WorkThreadEvent4, global
 /* 804530C0 0041C680  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 804530C4 0041C684  7C 08 02 A6 */	mflr r0
 /* 804530C8 0041C688  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1150,7 +1150,7 @@
 .L_80453184:
 /* 80453184 0041C744  90 7E 01 E8 */	stw r3, 0x1e8(r30)
 /* 80453188 0041C748  7F C3 F3 78 */	mr r3, r30
-/* 8045318C 0041C74C  4B FE 58 6D */	bl func_804389F8
+/* 8045318C 0041C74C  4B FE 58 6D */	bl CWorkThread_WorkThreadEvent4
 /* 80453190 0041C750  48 00 00 08 */	b .L_80453198
 .L_80453194:
 /* 80453194 0041C754  38 60 00 00 */	li r3, 0
@@ -1163,9 +1163,9 @@
 /* 804531AC 0041C76C  7D 41 53 78 */	mr r1, r10
 /* 804531B0 0041C770  7C 08 03 A6 */	mtlr r0
 /* 804531B4 0041C774  4E 80 00 20 */	blr 
-.endfn func_804530C0
+.endfn CDeviceFont_WorkThreadEvent4
 
-.fn func_804531B8, global
+.fn CDeviceFont_WorkThreadEvent5, global
 /* 804531B8 0041C778  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804531BC 0041C77C  7C 08 02 A6 */	mflr r0
 /* 804531C0 0041C780  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1235,7 +1235,7 @@
 /* 804532A0 0041C860  7F A3 EB 78 */	mr r3, r29
 /* 804532A4 0041C864  80 9D 01 CC */	lwz r4, 0x1cc(r29)
 /* 804532A8 0041C868  90 84 00 04 */	stw r4, 4(r4)
-/* 804532AC 0041C86C  4B FE 57 79 */	bl func_80438A24
+/* 804532AC 0041C86C  4B FE 57 79 */	bl CWorkThread_WorkThreadEvent5
 /* 804532B0 0041C870  48 00 00 08 */	b .L_804532B8
 .L_804532B4:
 /* 804532B4 0041C874  38 60 00 00 */	li r3, 0
@@ -1247,7 +1247,7 @@
 /* 804532C8 0041C888  7C 08 03 A6 */	mtlr r0
 /* 804532CC 0041C88C  38 21 00 20 */	addi r1, r1, 0x20
 /* 804532D0 0041C890  4E 80 00 20 */	blr 
-.endfn func_804531B8
+.endfn CDeviceFont_WorkThreadEvent5
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -1322,12 +1322,12 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte func_80452E44
-	.4byte CWorkThread_Event1
-	.4byte CWorkThread_Event2
-	.4byte func_804530C0
-	.4byte func_804531B8
-	.4byte CWorkThread_Event3
+	.4byte CDeviceFont_wkUpdate
+	.4byte CWorkThread_WorkThreadEvent2
+	.4byte CWorkThread_WorkThreadEvent3
+	.4byte CDeviceFont_WorkThreadEvent4
+	.4byte CDeviceFont_WorkThreadEvent5
+	.4byte CWorkThread_WorkThreadEvent6
 .endobj __vt__CDeviceFont
 
 .obj CDeviceFont_hierarchy, global
@@ -1556,7 +1556,7 @@
 
 .obj "@eti_80034D3C", local
 .hidden "@eti_80034D3C"
-	.4byte func_80452E44
+	.4byte CDeviceFont_wkUpdate
 	.4byte 0x0000023C
 	.4byte "@etb_8001D060"
 .endobj "@eti_80034D3C"
@@ -1570,14 +1570,14 @@
 
 .obj "@eti_80034D54", local
 .hidden "@eti_80034D54"
-	.4byte func_804530C0
+	.4byte CDeviceFont_WorkThreadEvent4
 	.4byte 0x000000F8
 	.4byte "@etb_8001D070"
 .endobj "@eti_80034D54"
 
 .obj "@eti_80034D60", local
 .hidden "@eti_80034D60"
-	.4byte func_804531B8
+	.4byte CDeviceFont_WorkThreadEvent5
 	.4byte 0x0000011C
 	.4byte "@etb_8001D078"
 .endobj "@eti_80034D60"

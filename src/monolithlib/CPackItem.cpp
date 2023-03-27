@@ -11,35 +11,35 @@ void CPackItem::func_804DE948() {
     u16* r5; //likely fake
     PackHeader* packHeader;
 
-    packHeader = this->packHeader;
+    packHeader = mPackHeader;
     
     if(packHeader != NULL)
     {
-        u64* fileHashTable = packHeader->fileHashTable;
-        this->fileHashTablePtr = fileHashTable;
-        r5 = (u16*)fileHashTable + packHeader->files * 4;
-        this->unk5C = r5;
-        r5 += packHeader->files;
+        u64* fileHashTable = mPackHeader->mFileHashTable;
+        mFileHashTable = fileHashTable;
+        r5 = (u16*)fileHashTable + packHeader->mFiles * 4;
+        unk5C = r5;
+        r5 += packHeader->mFiles;
         
-        if(packHeader->pkhFilesize > (u32)r5 - (u32)packHeader){
-            this->unk60 = r5;
+        if(packHeader->mPkhFilesize > (u32)r5 - (u32)packHeader){
+            unk60 = r5;
         }
     }
 }
 
 BOOL CPackItem::OnFileEvent(UnkStruct* r4) {
-    UnkStruct* r5 = (UnkStruct*)(this->unk4C);
+    UnkStruct* r5 = (UnkStruct*)(unk4C);
     if(r4->unk4 == r5){
         if(r4->unk0 == 1){
             void* r4 = r5->unk4;
             r5->unk4 = NULL;
-            this->packHeader = (PackHeader*)r4;
+            mPackHeader = (PackHeader*)r4;
             func_804DE948();
         }else{
-            this->unk78 = 1;
+            unk78 = 1;
         }
 
-        this->unk4C = NULL;
+        unk4C = NULL;
         return true;
     }
 
@@ -52,11 +52,11 @@ find where the file is located in the pkb archive using the hash table
 in the pkh file. */
 //func_804DEA08
 bool CPackItem::CalculatePackFileHash(const char* filename) {
-    if (this->packHeader == NULL) {
+    if (mPackHeader == NULL) {
         return false;
     }
-    this->hashLowerHalf = 0;
-    this->hashUpperHalf = 0;
+    mHashLowerHalf = 0;
+    mHashUpperHalf = 0;
     
     int length = strlen(filename); //r3
 
@@ -65,11 +65,11 @@ bool CPackItem::CalculatePackFileHash(const char* filename) {
         return false;
     }
 
-    u32 hashValTableLength = this->packHeader->hashValTableLength;
+    u32 hashValTableLength = mPackHeader->mHashValTableLength;
     
     for(u32 i = 0; i < hashValTableLength; i++){
-        u32 byteIndex = this->packHeader->hashValTable[i] / 8;
-        u32 bitIndex = this->packHeader->hashValTable[i] % 8;
+        u32 byteIndex = mPackHeader->mHashValTable[i] / 8;
+        u32 bitIndex = mPackHeader->mHashValTable[i] % 8;
         u8 mask = 1 << bitIndex;
         if (length - 1 >= byteIndex) {
             bool bit = (u8)filename[length - 1 - byteIndex] & mask;

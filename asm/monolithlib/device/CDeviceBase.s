@@ -109,13 +109,13 @@
 /* 80447A30 00410FF0  4B FF ED 3C */	b func_8044676C
 .endfn func_80447A30
 
-.fn func_80447A34, global
+.fn CDeviceRemotePad_wkUpdate, global
 /* 80447A34 00410FF4  81 83 01 C8 */	lwz r12, 0x1c8(r3)
 /* 80447A38 00410FF8  7D 89 03 A6 */	mtctr r12
 /* 80447A3C 00410FFC  4E 80 04 20 */	bctr 
-.endfn func_80447A34
+.endfn CDeviceRemotePad_wkUpdate
 
-.fn func_80447A40, global
+.fn CDeviceRemotePad_WorkThreadEvent4, global
 /* 80447A40 00411000  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80447A44 00411004  7C 08 02 A6 */	mflr r0
 /* 80447A48 00411008  90 01 00 24 */	stw r0, 0x24(r1)
@@ -147,7 +147,7 @@
 /* 80447AAC 0041106C  3B DE 00 04 */	addi r30, r30, 4
 /* 80447AB0 00411070  41 80 FF D4 */	blt .L_80447A84
 /* 80447AB4 00411074  7F 83 E3 78 */	mr r3, r28
-/* 80447AB8 00411078  4B FF 0F 41 */	bl func_804389F8
+/* 80447AB8 00411078  4B FF 0F 41 */	bl CWorkThread_WorkThreadEvent4
 /* 80447ABC 0041107C  48 00 00 08 */	b .L_80447AC4
 .L_80447AC0:
 /* 80447AC0 00411080  38 60 00 00 */	li r3, 0
@@ -160,9 +160,9 @@
 /* 80447AD8 00411098  7C 08 03 A6 */	mtlr r0
 /* 80447ADC 0041109C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80447AE0 004110A0  4E 80 00 20 */	blr 
-.endfn func_80447A40
+.endfn CDeviceRemotePad_WorkThreadEvent4
 
-.fn func_80447AE4, global
+.fn CDeviceRemotePad_WorkThreadEvent5, global
 /* 80447AE4 004110A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80447AE8 004110A8  7C 08 02 A6 */	mflr r0
 /* 80447AEC 004110AC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -182,7 +182,7 @@
 /* 80447B24 004110E4  38 00 00 00 */	li r0, 0
 /* 80447B28 004110E8  90 1F 01 C8 */	stw r0, 0x1c8(r31)
 /* 80447B2C 004110EC  7F E3 FB 78 */	mr r3, r31
-/* 80447B30 004110F0  4B FF 0E F5 */	bl func_80438A24
+/* 80447B30 004110F0  4B FF 0E F5 */	bl CWorkThread_WorkThreadEvent5
 /* 80447B34 004110F4  48 00 00 08 */	b .L_80447B3C
 .L_80447B38:
 /* 80447B38 004110F8  38 60 00 00 */	li r3, 0
@@ -192,7 +192,7 @@
 /* 80447B44 00411104  7C 08 03 A6 */	mtlr r0
 /* 80447B48 00411108  38 21 00 10 */	addi r1, r1, 0x10
 /* 80447B4C 0041110C  4E 80 00 20 */	blr 
-.endfn func_80447AE4
+.endfn CDeviceRemotePad_WorkThreadEvent5
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -241,12 +241,12 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte func_80438A50
-	.4byte CWorkThread_Event1
-	.4byte CWorkThread_Event2
-	.4byte func_804389F8
-	.4byte func_80438A24
-	.4byte CWorkThread_Event3
+	.4byte CWorkThread_wkUpdate
+	.4byte CWorkThread_WorkThreadEvent2
+	.4byte CWorkThread_WorkThreadEvent3
+	.4byte CWorkThread_WorkThreadEvent4
+	.4byte CWorkThread_WorkThreadEvent5
+	.4byte CWorkThread_WorkThreadEvent6
 .endobj __vt__CDeviceBase
 
 .obj CDeviceBase_hierarchy, global
@@ -324,14 +324,14 @@
 
 .obj "@eti_80034658", local
 .hidden "@eti_80034658"
-	.4byte func_80447A40
+	.4byte CDeviceRemotePad_WorkThreadEvent4
 	.4byte 0x000000A4
 	.4byte "@etb_8001CA2C"
 .endobj "@eti_80034658"
 
 .obj "@eti_80034664", local
 .hidden "@eti_80034664"
-	.4byte func_80447AE4
+	.4byte CDeviceRemotePad_WorkThreadEvent5
 	.4byte 0x0000006C
 	.4byte "@etb_8001CA34"
 .endobj "@eti_80034664"

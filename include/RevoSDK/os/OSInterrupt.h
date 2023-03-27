@@ -48,7 +48,7 @@ typedef enum {
     OS_INTR_MAX
 } OSInterruptType;
 
-typedef void (*OSInterruptHandler)(int, struct OSContext*); //s16?
+typedef void (*OSInterruptHandler)(s32 intr, struct OSContext* ctx);
 
 extern u32 __OSLastInterruptSrr0;
 extern s16 __OSLastInterrupt;
@@ -56,16 +56,17 @@ extern s64 __OSLastInterruptTime;
 
 BOOL OSDisableInterrupts(void);
 BOOL OSEnableInterrupts(void);
-BOOL OSRestoreInterrupts(BOOL);
+BOOL OSRestoreInterrupts(BOOL status);
 
-OSInterruptHandler __OSSetInterruptHandler(OSInterruptType, OSInterruptHandler);
-OSInterruptHandler __OSGetInterruptHandler(OSInterruptType);
+OSInterruptHandler __OSSetInterruptHandler(OSInterruptType type,
+                                           OSInterruptHandler handler);
+OSInterruptHandler __OSGetInterruptHandler(OSInterruptType type);
 
 void __OSInterruptInit(void);
 
-u32 __OSMaskInterrupts(u32);
-u32 __OSUnmaskInterrupts(u32);
-void __OSDispatchInterrupt(u8, struct OSContext*);
+u32 __OSMaskInterrupts(u32 userMask);
+u32 __OSUnmaskInterrupts(u32 userMask);
+void __OSDispatchInterrupt(u8 intr, struct OSContext* ctx);
 
 void __RAS_OSDisableInterrupts_begin(void);
 void __RAS_OSDisableInterrupts_end(void);

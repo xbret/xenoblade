@@ -539,7 +539,7 @@
 /* 80439354 00402914  80 1F 00 A8 */	lwz r0, 0xa8(r31)
 /* 80439358 00402918  7C 00 EA 14 */	add r0, r0, r29
 /* 8043935C 0040291C  90 1F 00 A8 */	stw r0, 0xa8(r31)
-/* 80439360 00402920  4B FF E2 55 */	bl getMemRegionIndex
+/* 80439360 00402920  4B FF E2 55 */	bl getHeapIndex
 /* 80439364 00402924  7C 64 1B 78 */	mr r4, r3
 /* 80439368 00402928  38 60 04 70 */	li r3, 0x470
 /* 8043936C 0040292C  4B FF B6 F1 */	bl heap_malloc
@@ -771,11 +771,11 @@
 /* 8043969C 00402C5C  4E 80 00 20 */	blr 
 .endfn func_804392F4
 
-.fn func_804396A0, global
-/* 804396A0 00402C60  4B FF F3 58 */	b func_804389F8
-.endfn func_804396A0
+.fn CProc_WorkThreadEvent4, global
+/* 804396A0 00402C60  4B FF F3 58 */	b CWorkThread_WorkThreadEvent4
+.endfn CProc_WorkThreadEvent4
 
-.fn func_804396A4, global
+.fn CProc_WorkThreadEvent5, global
 /* 804396A4 00402C64  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804396A8 00402C68  7C 08 02 A6 */	mflr r0
 /* 804396AC 00402C6C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -815,14 +815,14 @@
 /* 80439724 00402CE4  90 84 00 04 */	stw r4, 4(r4)
 /* 80439728 00402CE8  48 00 8B 99 */	bl func_804422C0
 /* 8043972C 00402CEC  7F C3 F3 78 */	mr r3, r30
-/* 80439730 00402CF0  4B FF F2 F5 */	bl func_80438A24
+/* 80439730 00402CF0  4B FF F2 F5 */	bl CWorkThread_WorkThreadEvent5
 /* 80439734 00402CF4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80439738 00402CF8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8043973C 00402CFC  83 C1 00 08 */	lwz r30, 8(r1)
 /* 80439740 00402D00  7C 08 03 A6 */	mtlr r0
 /* 80439744 00402D04  38 21 00 10 */	addi r1, r1, 0x10
 /* 80439748 00402D08  4E 80 00 20 */	blr 
-.endfn func_804396A4
+.endfn CProc_WorkThreadEvent5
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -884,12 +884,12 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte func_80438A50
-	.4byte CWorkThread_Event1
-	.4byte CWorkThread_Event2
-	.4byte func_804396A0
-	.4byte func_804396A4
-	.4byte CWorkThread_Event3
+	.4byte CWorkThread_wkUpdate
+	.4byte CWorkThread_WorkThreadEvent2
+	.4byte CWorkThread_WorkThreadEvent3
+	.4byte CProc_WorkThreadEvent4
+	.4byte CProc_WorkThreadEvent5
+	.4byte CWorkThread_WorkThreadEvent6
 .endobj __vt__CProc
 
 
@@ -1075,7 +1075,7 @@
 
 .obj "@eti_80033E78", local
 .hidden "@eti_80033E78"
-	.4byte func_804396A4
+	.4byte CProc_WorkThreadEvent5
 	.4byte 0x000000A8
 	.4byte "@etb_8001C228"
 .endobj "@eti_80033E78"

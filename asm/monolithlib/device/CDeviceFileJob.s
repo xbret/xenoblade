@@ -119,12 +119,12 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte func_80438A50
-	.4byte CWorkThread_Event1
-	.4byte CWorkThread_Event2
-	.4byte func_804389F8
-	.4byte func_80438A24
-	.4byte CWorkThread_Event3
+	.4byte CWorkThread_wkUpdate
+	.4byte CWorkThread_WorkThreadEvent2
+	.4byte CWorkThread_WorkThreadEvent3
+	.4byte CWorkThread_WorkThreadEvent4
+	.4byte CWorkThread_WorkThreadEvent5
+	.4byte CWorkThread_WorkThreadEvent6
 	.4byte func_80451EC0
 	.4byte func_80451EB0
 	.4byte func_80451EB8

@@ -2933,7 +2933,7 @@
 /* 8043EADC 0040809C  48 00 30 DC */	b func_80441BB8
 .endfn func_8043EAD8
 
-.fn func_8043EAE0, global
+.fn CView_wkUpdate, global
 /* 8043EAE0 004080A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8043EAE4 004080A4  7C 08 02 A6 */	mflr r0
 /* 8043EAE8 004080A8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -3025,7 +3025,7 @@
 /* 8043EC20 004081E0  7C 08 03 A6 */	mtlr r0
 /* 8043EC24 004081E4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8043EC28 004081E8  4E 80 00 20 */	blr 
-.endfn func_8043EAE0
+.endfn CView_wkUpdate
 
 .fn func_8043EC2C, global
 /* 8043EC2C 004081EC  94 21 FE 80 */	stwu r1, -0x180(r1)
@@ -3958,7 +3958,7 @@
 /* 8043F8DC 00408E9C  4E 80 00 20 */	blr 
 .endfn func_8043EC2C
 
-.fn func_8043F8E0, global
+.fn CView_WorkThreadEvent4, global
 /* 8043F8E0 00408EA0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8043F8E4 00408EA4  7C 08 02 A6 */	mflr r0
 /* 8043F8E8 00408EA8  90 01 00 44 */	stw r0, 0x44(r1)
@@ -4014,7 +4014,7 @@
 /* 8043F9B0 00408F70  90 1F 03 FC */	stw r0, 0x3fc(r31)
 .L_8043F9B4:
 /* 8043F9B4 00408F74  7F E3 FB 78 */	mr r3, r31
-/* 8043F9B8 00408F78  4B FF 90 41 */	bl func_804389F8
+/* 8043F9B8 00408F78  4B FF 90 41 */	bl CWorkThread_WorkThreadEvent4
 /* 8043F9BC 00408F7C  48 00 00 08 */	b .L_8043F9C4
 .L_8043F9C0:
 /* 8043F9C0 00408F80  38 60 00 00 */	li r3, 0
@@ -4027,9 +4027,9 @@
 /* 8043F9D8 00408F98  7C 08 03 A6 */	mtlr r0
 /* 8043F9DC 00408F9C  38 21 00 40 */	addi r1, r1, 0x40
 /* 8043F9E0 00408FA0  4E 80 00 20 */	blr 
-.endfn func_8043F8E0
+.endfn CView_WorkThreadEvent4
 
-.fn func_8043F9E4, global
+.fn CView_WorkThreadEvent5, global
 /* 8043F9E4 00408FA4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8043F9E8 00408FA8  7C 08 02 A6 */	mflr r0
 /* 8043F9EC 00408FAC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4123,7 +4123,7 @@
 /* 8043FB24 004090E4  7F E3 FB 78 */	mr r3, r31
 /* 8043FB28 004090E8  48 00 29 C5 */	bl func_804424EC
 /* 8043FB2C 004090EC  7F E3 FB 78 */	mr r3, r31
-/* 8043FB30 004090F0  4B FF 8E F5 */	bl func_80438A24
+/* 8043FB30 004090F0  4B FF 8E F5 */	bl CWorkThread_WorkThreadEvent5
 /* 8043FB34 004090F4  48 00 00 08 */	b .L_8043FB3C
 .L_8043FB38:
 /* 8043FB38 004090F8  38 60 00 00 */	li r3, 0
@@ -4133,7 +4133,7 @@
 /* 8043FB44 00409104  7C 08 03 A6 */	mtlr r0
 /* 8043FB48 00409108  38 21 00 10 */	addi r1, r1, 0x10
 /* 8043FB4C 0040910C  4E 80 00 20 */	blr 
-.endfn func_8043F9E4
+.endfn CView_WorkThreadEvent5
 
 .fn func_8043FB50, global
 /* 8043FB50 00409110  80 6D BD 28 */	lwz r3, lbl_80667EA8@sda21(r13)
@@ -4276,12 +4276,12 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte func_8043EAE0
-	.4byte CWorkThread_Event1
-	.4byte CWorkThread_Event2
-	.4byte func_8043F8E0
-	.4byte func_8043F9E4
-	.4byte CWorkThread_Event3
+	.4byte CView_wkUpdate
+	.4byte CWorkThread_WorkThreadEvent2
+	.4byte CWorkThread_WorkThreadEvent3
+	.4byte CView_WorkThreadEvent4
+	.4byte CView_WorkThreadEvent5
+	.4byte CWorkThread_WorkThreadEvent6
 	.4byte __RTTI__CView
 	.4byte 0xFFFFFE3C
 	.4byte func_8043FBC4
@@ -4893,7 +4893,7 @@
 
 .obj "@eti_800341C0", local
 .hidden "@eti_800341C0"
-	.4byte func_8043EAE0
+	.4byte CView_wkUpdate
 	.4byte 0x0000014C
 	.4byte "@etb_8001C5B0"
 .endobj "@eti_800341C0"
@@ -4907,14 +4907,14 @@
 
 .obj "@eti_800341D8", local
 .hidden "@eti_800341D8"
-	.4byte func_8043F8E0
+	.4byte CView_WorkThreadEvent4
 	.4byte 0x00000104
 	.4byte "@etb_8001C5D0"
 .endobj "@eti_800341D8"
 
 .obj "@eti_800341E4", local
 .hidden "@eti_800341E4"
-	.4byte func_8043F9E4
+	.4byte CView_WorkThreadEvent5
 	.4byte 0x0000016C
 	.4byte "@etb_8001C5D8"
 .endobj "@eti_800341E4"

@@ -61,7 +61,7 @@ typedef struct OSIOSRev {
     u16 buildYear; // at 0x6
 } OSIOSRev;
 
-typedef void (*OSExceptionHandler)(u8, OSContext*);
+typedef void (*OSExceptionHandler)(u8 type, OSContext* ctx);
 
 extern BOOL __OSInIPL;
 extern BOOL __OSInNandBoot;
@@ -71,27 +71,17 @@ extern OSExecParams __OSRebootParams;
 
 void __OSFPRInit(void);
 u32 __OSGetHollywoodRev(void);
-void __OSGetIOSRev(OSIOSRev*);
+void __OSGetIOSRev(OSIOSRev* rev);
 u32 OSGetConsoleType(void);
 void OSInit(void);
-OSExceptionHandler __OSSetExceptionHandler(u8, OSExceptionHandler);
-OSExceptionHandler __OSGetExceptionHandler(u8);
-void OSDefaultExceptionHandler(u8, OSContext*);
+OSExceptionHandler __OSSetExceptionHandler(u8 type, OSExceptionHandler handler);
+OSExceptionHandler __OSGetExceptionHandler(u8 type);
+void OSDefaultExceptionHandler(u8 type, OSContext* ctx);
 void __OSPSInit(void);
 u32 __OSGetDIConfig(void);
-void OSRegisterVersion(const char*);
+void OSRegisterVersion(const char* ver);
 const char* OSGetAppGamename(void);
 u8 OSGetAppType(void);
-
-void __OSDBINTSTART(void);
-void __OSDBINTEND(void);
-void __OSDBJUMPSTART(void);
-void __OSDBJUMPDEST(void);
-void __OSDBJUMPEND(void);
-void __OSEVStart(void);
-void __DBVECTOR(void);
-void __OSEVSetNumber(void);
-void __OSEVEnd(void);
 
 #ifdef __cplusplus
 }

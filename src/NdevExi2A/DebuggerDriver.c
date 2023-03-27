@@ -11,6 +11,7 @@ static u8 __DBEXIInputFlag;
 static OSInterruptHandler __DBDbgCallback;
 static OSInterruptHandler __DBMtrCallback;
 
+
 static u8 __DBReadUSB_CSR(void);
 static void __DBWaitForSendMail(void);
 
@@ -22,7 +23,7 @@ void __DBMtrHandler(u32 type, OSContext* ctx) {
 }
 
 void __DBIntrHandler(u32 type, OSContext* ctx) {
-    OS_PI_INTSR = 0x1000;
+    PI_HW_REGS[PI_INTSR] = PI_INTSR_DEBUG;
     if (__DBDbgCallback != NULL)
         __DBDbgCallback(type, ctx);
 }
@@ -46,11 +47,11 @@ static u8 __DBReadUSB_CSR(void) {
     return val;
 }
 
-void DBInitComm(u8** flagOut, OSInterruptHandler mtrCb) {
+void DBInitComm(u8** flagOut, OSInterruptHandler handler) {
     const BOOL enabled = OSDisableInterrupts();
 
     *flagOut = &__DBEXIInputFlag;
-    __DBMtrCallback = mtrCb;
+    __DBMtrCallback = handler;
     __DBEXIInit();
 
     OSRestoreInterrupts(enabled);
@@ -59,11 +60,12 @@ void DBInitComm(u8** flagOut, OSInterruptHandler mtrCb) {
 #if NON_MATCHING
 //https://decomp.me/scratch/YjmTr
 void DBInitInterrupts(void) {
-    __OSMaskInterrupts(0x18000);
-    __OSMaskInterrupts(0x40);
+    __OSMaskInterrupts(OS_INTR_MASK(OS_INTR_EXI_2_EXI) |
+                       OS_INTR_MASK(OS_INTR_EXI_2_TC));
+    __OSMaskInterrupts(OS_INTR_MASK(OS_INTR_PI_DEBUG));
     __DBDbgCallback = __DBMtrHandler;
     __OSSetInterruptHandler(OS_INTR_PI_DEBUG, __DBIntrHandler);
-    __OSUnmaskInterrupts(0x40);
+    __OSUnmaskInterrupts(OS_INTR_MASK(OS_INTR_PI_DEBUG));
 }
 #else 
 asm void DBInitInterrupts(void){
@@ -103,10 +105,10 @@ u32 DBQueryData(void) {
     return __DBRecvDataSize;
 }
 
-BOOL DBRead(void* dest, u32 size) {
+BOOL DBRead(void* dst, u32 size) {
     const BOOL enabled = OSDisableInterrupts();
 
-    __DBRead(ODEMUGetPc2NngcOffset(__DBRecvMail) + 0x1000, dest,
+    __DBRead(ODEMUGetPc2NngcOffset(__DBRecvMail) + 0x1000, dst,
              ROUND_UP(size, 4));
     __DBRecvDataSize = 0;
     __DBEXIInputFlag = FALSE;

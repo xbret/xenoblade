@@ -3,7 +3,6 @@
 #define _MSL_COMMON_ANSI_FILES_H
 #include "types.h"
 
-typedef unsigned short wchar_t;
 typedef unsigned long __file_handle;
 typedef unsigned long fpos_t;
 typedef struct _IO_FILE _IO_FILE, *P_IO_FILE;

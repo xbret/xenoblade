@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8044DB24, global
+.fn __ct__CDeviceClock, global
 /* 8044DB24 004170E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044DB28 004170E8  7C 08 02 A6 */	mflr r0
 /* 8044DB2C 004170EC  38 C0 00 00 */	li r6, 0
@@ -93,7 +93,7 @@
 /* 8044DC80 00417240  7C 08 03 A6 */	mtlr r0
 /* 8044DC84 00417244  38 21 00 10 */	addi r1, r1, 0x10
 /* 8044DC88 00417248  4E 80 00 20 */	blr 
-.endfn func_8044DB24
+.endfn __ct__CDeviceClock
 
 .fn __dt___reslist_base_IDeviceClockFrame, global
 /* 8044DC8C 0041724C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -391,7 +391,7 @@
 /* 8044E068 00417628  4E 80 00 20 */	blr 
 .endfn func_8044DFF4
 
-.fn func_8044E06C, global
+.fn CDeviceClock_wkUpdate, global
 /* 8044E06C 0041762C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044E070 00417630  7C 08 02 A6 */	mflr r0
 /* 8044E074 00417634  90 01 00 14 */	stw r0, 0x14(r1)
@@ -407,9 +407,9 @@
 /* 8044E09C 0041765C  7C 08 03 A6 */	mtlr r0
 /* 8044E0A0 00417660  38 21 00 10 */	addi r1, r1, 0x10
 /* 8044E0A4 00417664  4E 80 00 20 */	blr 
-.endfn func_8044E06C
+.endfn CDeviceClock_wkUpdate
 
-.fn func_8044E0A8, global
+.fn CDeviceClock_WorkThreadEvent4, global
 /* 8044E0A8 00417668  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044E0AC 0041766C  7C 08 02 A6 */	mflr r0
 /* 8044E0B0 00417670  90 01 00 14 */	stw r0, 0x14(r1)
@@ -417,15 +417,15 @@
 /* 8044E0B8 00417678  7C 7F 1B 78 */	mr r31, r3
 /* 8044E0BC 0041767C  4B FF 94 DD */	bl func_80447598
 /* 8044E0C0 00417680  7F E3 FB 78 */	mr r3, r31
-/* 8044E0C4 00417684  4B FE A9 35 */	bl func_804389F8
+/* 8044E0C4 00417684  4B FE A9 35 */	bl CWorkThread_WorkThreadEvent4
 /* 8044E0C8 00417688  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8044E0CC 0041768C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8044E0D0 00417690  7C 08 03 A6 */	mtlr r0
 /* 8044E0D4 00417694  38 21 00 10 */	addi r1, r1, 0x10
 /* 8044E0D8 00417698  4E 80 00 20 */	blr 
-.endfn func_8044E0A8
+.endfn CDeviceClock_WorkThreadEvent4
 
-.fn func_8044E0DC, global
+.fn CDeviceClock_WorkThreadEvent5, global
 /* 8044E0DC 0041769C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8044E0E0 004176A0  7C 08 02 A6 */	mflr r0
 /* 8044E0E4 004176A4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -445,7 +445,7 @@
 /* 8044E11C 004176DC  2C 03 00 00 */	cmpwi r3, 0
 /* 8044E120 004176E0  40 82 00 10 */	bne .L_8044E130
 /* 8044E124 004176E4  7F E3 FB 78 */	mr r3, r31
-/* 8044E128 004176E8  4B FE A8 FD */	bl func_80438A24
+/* 8044E128 004176E8  4B FE A8 FD */	bl CWorkThread_WorkThreadEvent5
 /* 8044E12C 004176EC  48 00 00 08 */	b .L_8044E134
 .L_8044E130:
 /* 8044E130 004176F0  38 60 00 00 */	li r3, 0
@@ -455,7 +455,7 @@
 /* 8044E13C 004176FC  7C 08 03 A6 */	mtlr r0
 /* 8044E140 00417700  38 21 00 10 */	addi r1, r1, 0x10
 /* 8044E144 00417704  4E 80 00 20 */	blr 
-.endfn func_8044E0DC
+.endfn CDeviceClock_WorkThreadEvent5
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -516,12 +516,12 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte func_8044E06C
-	.4byte CWorkThread_Event1
-	.4byte CWorkThread_Event2
-	.4byte func_8044E0A8
-	.4byte func_8044E0DC
-	.4byte CWorkThread_Event3
+	.4byte CDeviceClock_wkUpdate
+	.4byte CWorkThread_WorkThreadEvent2
+	.4byte CWorkThread_WorkThreadEvent3
+	.4byte CDeviceClock_WorkThreadEvent4
+	.4byte CDeviceClock_WorkThreadEvent5
+	.4byte CWorkThread_WorkThreadEvent6
 .endobj __vt__CDeviceClock
 
 .obj CDeviceClock_hierarchy, global
@@ -659,7 +659,7 @@
 
 .obj "@eti_800349A0", local
 .hidden "@eti_800349A0"
-	.4byte func_8044DB24
+	.4byte __ct__CDeviceClock
 	.4byte 0x00000168
 	.4byte "@etb_8001CD08"
 .endobj "@eti_800349A0"
@@ -701,21 +701,21 @@
 
 .obj "@eti_800349E8", local
 .hidden "@eti_800349E8"
-	.4byte func_8044E06C
+	.4byte CDeviceClock_wkUpdate
 	.4byte 0x0000003C
 	.4byte "@etb_8001CD6C"
 .endobj "@eti_800349E8"
 
 .obj "@eti_800349F4", local
 .hidden "@eti_800349F4"
-	.4byte func_8044E0A8
+	.4byte CDeviceClock_WorkThreadEvent4
 	.4byte 0x00000034
 	.4byte "@etb_8001CD74"
 .endobj "@eti_800349F4"
 
 .obj "@eti_80034A00", local
 .hidden "@eti_80034A00"
-	.4byte func_8044E0DC
+	.4byte CDeviceClock_WorkThreadEvent5
 	.4byte 0x0000006C
 	.4byte "@etb_8001CD7C"
 .endobj "@eti_80034A00"

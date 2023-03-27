@@ -31,10 +31,10 @@
 /* 80433364 003FC924  A0 C4 00 10 */	lhz r6, 0x10(r4)
 /* 80433368 003FC928  38 03 FF DE */	addi r0, r3, 0x07FFFFDE@l
 /* 8043336C 003FC92C  80 E4 00 0C */	lwz r7, 0xc(r4)
-/* 80433370 003FC930  3C A0 80 65 */	lis r5, memRegionArray@ha
+/* 80433370 003FC930  3C A0 80 65 */	lis r5, heapArray@ha
 /* 80433374 003FC934  54 C3 06 3E */	clrlwi r3, r6, 0x18
 /* 80433378 003FC938  1C C3 00 70 */	mulli r6, r3, 0x70
-/* 8043337C 003FC93C  38 A5 70 E0 */	addi r5, r5, memRegionArray@l
+/* 8043337C 003FC93C  38 A5 70 E0 */	addi r5, r5, heapArray@l
 /* 80433380 003FC940  38 67 FF DF */	addi r3, r7, -33
 /* 80433384 003FC944  7C 03 00 40 */	cmplw r3, r0
 /* 80433388 003FC948  7F E5 32 14 */	add r31, r5, r6
@@ -168,11 +168,11 @@
 /* 80433554 003FCB14  80 FD FF EC */	lwz r7, -0x14(r29)
 /* 80433558 003FCB18  38 03 FF DE */	addi r0, r3, 0x07FFFFDE@l
 /* 8043355C 003FCB1C  54 C3 06 3E */	clrlwi r3, r6, 0x18
-/* 80433560 003FCB20  3C A0 80 65 */	lis r5, memRegionArray@ha
+/* 80433560 003FCB20  3C A0 80 65 */	lis r5, heapArray@ha
 /* 80433564 003FCB24  1C C3 00 70 */	mulli r6, r3, 0x70
 /* 80433568 003FCB28  38 9D FF E0 */	addi r4, r29, -32
 /* 8043356C 003FCB2C  38 67 FF DF */	addi r3, r7, -33
-/* 80433570 003FCB30  38 A5 70 E0 */	addi r5, r5, memRegionArray@l
+/* 80433570 003FCB30  38 A5 70 E0 */	addi r5, r5, heapArray@l
 /* 80433574 003FCB34  7C 03 00 40 */	cmplw r3, r0
 /* 80433578 003FCB38  7F E5 32 14 */	add r31, r5, r6
 /* 8043357C 003FCB3C  40 81 00 10 */	ble .L_8043358C
@@ -758,8 +758,8 @@
 /* 80433D40 003FD300  48 00 00 5C */	b .L_80433D9C
 .L_80433D44:
 /* 80433D44 003FD304  1C 05 00 70 */	mulli r0, r5, 0x70
-/* 80433D48 003FD308  3C 60 80 65 */	lis r3, memRegionArray@ha
-/* 80433D4C 003FD30C  38 63 70 E0 */	addi r3, r3, memRegionArray@l
+/* 80433D48 003FD308  3C 60 80 65 */	lis r3, heapArray@ha
+/* 80433D4C 003FD30C  38 63 70 E0 */	addi r3, r3, heapArray@l
 /* 80433D50 003FD310  7C 83 02 15 */	add. r4, r3, r0
 /* 80433D54 003FD314  41 82 00 44 */	beq .L_80433D98
 /* 80433D58 003FD318  38 60 00 00 */	li r3, 0
@@ -815,9 +815,9 @@
 /* 80433E10 003FD3D0  48 00 00 BC */	b .L_80433ECC
 .L_80433E14:
 /* 80433E14 003FD3D4  54 E0 06 3E */	clrlwi r0, r7, 0x18
-/* 80433E18 003FD3D8  3C 60 80 65 */	lis r3, memRegionArray@ha
+/* 80433E18 003FD3D8  3C 60 80 65 */	lis r3, heapArray@ha
 /* 80433E1C 003FD3DC  1C 00 00 70 */	mulli r0, r0, 0x70
-/* 80433E20 003FD3E0  38 63 70 E0 */	addi r3, r3, memRegionArray@l
+/* 80433E20 003FD3E0  38 63 70 E0 */	addi r3, r3, heapArray@l
 /* 80433E24 003FD3E4  7F 23 02 14 */	add r25, r3, r0
 /* 80433E28 003FD3E8  80 19 00 10 */	lwz r0, 0x10(r25)
 /* 80433E2C 003FD3EC  2C 00 00 00 */	cmpwi r0, 0
@@ -877,9 +877,9 @@
 /* 80433EF8 003FD4B8  48 00 00 BC */	b .L_80433FB4
 .L_80433EFC:
 /* 80433EFC 003FD4BC  54 E0 06 3E */	clrlwi r0, r7, 0x18
-/* 80433F00 003FD4C0  3C 80 80 65 */	lis r4, memRegionArray@ha
+/* 80433F00 003FD4C0  3C 80 80 65 */	lis r4, heapArray@ha
 /* 80433F04 003FD4C4  1C 00 00 70 */	mulli r0, r0, 0x70
-/* 80433F08 003FD4C8  38 84 70 E0 */	addi r4, r4, memRegionArray@l
+/* 80433F08 003FD4C8  38 84 70 E0 */	addi r4, r4, heapArray@l
 /* 80433F0C 003FD4CC  7F 24 02 14 */	add r25, r4, r0
 /* 80433F10 003FD4D0  80 19 00 10 */	lwz r0, 0x10(r25)
 /* 80433F14 003FD4D4  2C 00 00 00 */	cmpwi r0, 0
@@ -943,8 +943,8 @@
 /* 80433FE4 003FD5A4  7C 08 02 A6 */	mflr r0
 /* 80433FE8 003FD5A8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80433FEC 003FD5AC  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 80433FF0 003FD5B0  3F E0 80 65 */	lis r31, memRegionArray@ha
-/* 80433FF4 003FD5B4  3B FF 70 E0 */	addi r31, r31, memRegionArray@l
+/* 80433FF0 003FD5B0  3F E0 80 65 */	lis r31, heapArray@ha
+/* 80433FF4 003FD5B4  3B FF 70 E0 */	addi r31, r31, heapArray@l
 /* 80433FF8 003FD5B8  93 C1 00 08 */	stw r30, 8(r1)
 /* 80433FFC 003FD5BC  3B C0 00 4F */	li r30, 0x4f
 .L_80434000:
@@ -977,9 +977,9 @@
 /* 80434058 003FD618  3B E4 00 20 */	addi r31, r4, 0x20
 /* 8043405C 003FD61C  40 82 00 68 */	bne .L_804340C4
 /* 80434060 003FD620  54 60 06 3E */	clrlwi r0, r3, 0x18
-/* 80434064 003FD624  3C 80 80 65 */	lis r4, memRegionArray@ha
+/* 80434064 003FD624  3C 80 80 65 */	lis r4, heapArray@ha
 /* 80434068 003FD628  1C 00 00 70 */	mulli r0, r0, 0x70
-/* 8043406C 003FD62C  38 84 70 E0 */	addi r4, r4, memRegionArray@l
+/* 8043406C 003FD62C  38 84 70 E0 */	addi r4, r4, heapArray@l
 /* 80434070 003FD630  7C C4 00 2E */	lwzx r6, r4, r0
 /* 80434074 003FD634  2C 06 00 00 */	cmpwi r6, 0
 /* 80434078 003FD638  40 82 00 0C */	bne .L_80434084
@@ -1009,10 +1009,10 @@
 /* 804340C0 003FD680  3B E4 FF E0 */	addi r31, r4, -32
 .L_804340C4:
 /* 804340C4 003FD684  54 60 06 3E */	clrlwi r0, r3, 0x18
-/* 804340C8 003FD688  3C 60 80 65 */	lis r3, memRegionArray@ha
+/* 804340C8 003FD688  3C 60 80 65 */	lis r3, heapArray@ha
 /* 804340CC 003FD68C  1C 00 00 70 */	mulli r0, r0, 0x70
 /* 804340D0 003FD690  7F E5 FB 78 */	mr r5, r31
-/* 804340D4 003FD694  3B A3 70 E0 */	addi r29, r3, memRegionArray@l
+/* 804340D4 003FD694  3B A3 70 E0 */	addi r29, r3, heapArray@l
 /* 804340D8 003FD698  38 80 00 00 */	li r4, 0
 /* 804340DC 003FD69C  7C 7D 02 14 */	add r3, r29, r0
 /* 804340E0 003FD6A0  38 C0 00 10 */	li r6, 0x10
@@ -1090,9 +1090,9 @@
 /* 804341E8 003FD7A8  3B E4 00 20 */	addi r31, r4, 0x20
 /* 804341EC 003FD7AC  40 82 00 68 */	bne .L_80434254
 /* 804341F0 003FD7B0  54 60 06 3E */	clrlwi r0, r3, 0x18
-/* 804341F4 003FD7B4  3C 80 80 65 */	lis r4, memRegionArray@ha
+/* 804341F4 003FD7B4  3C 80 80 65 */	lis r4, heapArray@ha
 /* 804341F8 003FD7B8  1C 00 00 70 */	mulli r0, r0, 0x70
-/* 804341FC 003FD7BC  38 84 70 E0 */	addi r4, r4, memRegionArray@l
+/* 804341FC 003FD7BC  38 84 70 E0 */	addi r4, r4, heapArray@l
 /* 80434200 003FD7C0  7C C4 00 2E */	lwzx r6, r4, r0
 /* 80434204 003FD7C4  2C 06 00 00 */	cmpwi r6, 0
 /* 80434208 003FD7C8  40 82 00 0C */	bne .L_80434214
@@ -1122,10 +1122,10 @@
 /* 80434250 003FD810  3B E4 FF E0 */	addi r31, r4, -32
 .L_80434254:
 /* 80434254 003FD814  54 60 06 3E */	clrlwi r0, r3, 0x18
-/* 80434258 003FD818  3C 60 80 65 */	lis r3, memRegionArray@ha
+/* 80434258 003FD818  3C 60 80 65 */	lis r3, heapArray@ha
 /* 8043425C 003FD81C  1C 00 00 70 */	mulli r0, r0, 0x70
 /* 80434260 003FD820  38 80 00 00 */	li r4, 0
-/* 80434264 003FD824  38 63 70 E0 */	addi r3, r3, memRegionArray@l
+/* 80434264 003FD824  38 63 70 E0 */	addi r3, r3, heapArray@l
 /* 80434268 003FD828  90 81 00 08 */	stw r4, 8(r1)
 /* 8043426C 003FD82C  7F E4 FB 78 */	mr r4, r31
 /* 80434270 003FD830  7F 63 02 14 */	add r27, r3, r0
@@ -1145,9 +1145,9 @@
 /* 804342A4 003FD864  4B FF F8 F5 */	bl heap_allocate
 /* 804342A8 003FD868  7C 7C 1B 78 */	mr r28, r3
 .L_804342AC:
-/* 804342AC 003FD86C  3C 60 80 65 */	lis r3, memRegionArray@ha
+/* 804342AC 003FD86C  3C 60 80 65 */	lis r3, heapArray@ha
 /* 804342B0 003FD870  38 00 00 50 */	li r0, 0x50
-/* 804342B4 003FD874  38 63 70 E0 */	addi r3, r3, memRegionArray@l
+/* 804342B4 003FD874  38 63 70 E0 */	addi r3, r3, heapArray@l
 /* 804342B8 003FD878  38 E0 00 00 */	li r7, 0
 /* 804342BC 003FD87C  7C 09 03 A6 */	mtctr r0
 .L_804342C0:
@@ -1235,8 +1235,8 @@
 /* 804343CC 003FD98C  48 00 00 24 */	b .L_804343F0
 .L_804343D0:
 /* 804343D0 003FD990  1C 04 00 70 */	mulli r0, r4, 0x70
-/* 804343D4 003FD994  3C 60 80 65 */	lis r3, memRegionArray@ha
-/* 804343D8 003FD998  38 63 70 E0 */	addi r3, r3, memRegionArray@l
+/* 804343D4 003FD994  3C 60 80 65 */	lis r3, heapArray@ha
+/* 804343D8 003FD998  38 63 70 E0 */	addi r3, r3, heapArray@l
 /* 804343DC 003FD99C  7C 63 02 14 */	add r3, r3, r0
 /* 804343E0 003FD9A0  80 63 00 10 */	lwz r3, 0x10(r3)
 /* 804343E4 003FD9A4  7C 03 00 D0 */	neg r0, r3
@@ -1249,9 +1249,9 @@
 /* 804343FC 003FD9BC  48 00 00 20 */	b .L_8043441C
 .L_80434400:
 /* 80434400 003FD9C0  1C 04 00 70 */	mulli r0, r4, 0x70
-/* 80434404 003FD9C4  3C 60 80 65 */	lis r3, memRegionArray@ha
+/* 80434404 003FD9C4  3C 60 80 65 */	lis r3, heapArray@ha
 /* 80434408 003FD9C8  38 80 FF FF */	li r4, -1
-/* 8043440C 003FD9CC  38 63 70 E0 */	addi r3, r3, memRegionArray@l
+/* 8043440C 003FD9CC  38 63 70 E0 */	addi r3, r3, heapArray@l
 /* 80434410 003FD9D0  7C 63 02 14 */	add r3, r3, r0
 /* 80434414 003FD9D4  4B FF EE ED */	bl func_80433300
 /* 80434418 003FD9D8  38 60 00 01 */	li r3, 1
@@ -1264,10 +1264,10 @@
 
 .fn func_8043442C, global
 /* 8043442C 003FD9EC  54 60 06 3E */	clrlwi r0, r3, 0x18
-/* 80434430 003FD9F0  3C 60 80 65 */	lis r3, memRegionArray@ha
+/* 80434430 003FD9F0  3C 60 80 65 */	lis r3, heapArray@ha
 /* 80434434 003FD9F4  1C 00 00 70 */	mulli r0, r0, 0x70
 /* 80434438 003FD9F8  7C A6 2B 78 */	mr r6, r5
-/* 8043443C 003FD9FC  38 63 70 E0 */	addi r3, r3, memRegionArray@l
+/* 8043443C 003FD9FC  38 63 70 E0 */	addi r3, r3, heapArray@l
 /* 80434440 003FDA00  7C 85 23 78 */	mr r5, r4
 /* 80434444 003FDA04  38 80 00 00 */	li r4, 0
 /* 80434448 003FDA08  7C 63 02 14 */	add r3, r3, r0
@@ -1280,10 +1280,10 @@
 /* 80434458 003FDA18  38 C0 00 00 */	li r6, 0
 /* 8043445C 003FDA1C  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80434460 003FDA20  54 60 06 3E */	clrlwi r0, r3, 0x18
-/* 80434464 003FDA24  3C 60 80 65 */	lis r3, memRegionArray@ha
+/* 80434464 003FDA24  3C 60 80 65 */	lis r3, heapArray@ha
 /* 80434468 003FDA28  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8043446C 003FDA2C  1C 00 00 70 */	mulli r0, r0, 0x70
-/* 80434470 003FDA30  38 63 70 E0 */	addi r3, r3, memRegionArray@l
+/* 80434470 003FDA30  38 63 70 E0 */	addi r3, r3, heapArray@l
 /* 80434474 003FDA34  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80434478 003FDA38  7C BE 2B 78 */	mr r30, r5
 /* 8043447C 003FDA3C  7F E3 02 14 */	add r31, r3, r0
@@ -1335,10 +1335,10 @@
 /* 80434518 003FDAD8  A0 C4 00 10 */	lhz r6, 0x10(r4)
 /* 8043451C 003FDADC  38 03 FF DE */	addi r0, r3, 0x07FFFFDE@l
 /* 80434520 003FDAE0  80 E4 00 0C */	lwz r7, 0xc(r4)
-/* 80434524 003FDAE4  3C A0 80 65 */	lis r5, memRegionArray@ha
+/* 80434524 003FDAE4  3C A0 80 65 */	lis r5, heapArray@ha
 /* 80434528 003FDAE8  54 C3 06 3E */	clrlwi r3, r6, 0x18
 /* 8043452C 003FDAEC  1C C3 00 70 */	mulli r6, r3, 0x70
-/* 80434530 003FDAF0  38 A5 70 E0 */	addi r5, r5, memRegionArray@l
+/* 80434530 003FDAF0  38 A5 70 E0 */	addi r5, r5, heapArray@l
 /* 80434534 003FDAF4  38 67 FF DF */	addi r3, r7, -33
 /* 80434538 003FDAF8  7C 03 00 40 */	cmplw r3, r0
 /* 8043453C 003FDAFC  7F E5 32 14 */	add r31, r5, r6
@@ -1446,9 +1446,9 @@
 
 .fn func_804346A0, global
 /* 804346A0 003FDC60  54 60 06 3E */	clrlwi r0, r3, 0x18
-/* 804346A4 003FDC64  3C 60 80 65 */	lis r3, memRegionArray@ha
+/* 804346A4 003FDC64  3C 60 80 65 */	lis r3, heapArray@ha
 /* 804346A8 003FDC68  1C 00 00 70 */	mulli r0, r0, 0x70
-/* 804346AC 003FDC6C  38 63 70 E0 */	addi r3, r3, memRegionArray@l
+/* 804346AC 003FDC6C  38 63 70 E0 */	addi r3, r3, heapArray@l
 /* 804346B0 003FDC70  7C 63 02 14 */	add r3, r3, r0
 /* 804346B4 003FDC74  80 63 00 1C */	lwz r3, 0x1c(r3)
 /* 804346B8 003FDC78  4E 80 00 20 */	blr 
@@ -1456,9 +1456,9 @@
 
 .fn func_804346BC, global
 /* 804346BC 003FDC7C  54 60 06 3E */	clrlwi r0, r3, 0x18
-/* 804346C0 003FDC80  3C 60 80 65 */	lis r3, memRegionArray@ha
+/* 804346C0 003FDC80  3C 60 80 65 */	lis r3, heapArray@ha
 /* 804346C4 003FDC84  1C 00 00 70 */	mulli r0, r0, 0x70
-/* 804346C8 003FDC88  38 63 70 E0 */	addi r3, r3, memRegionArray@l
+/* 804346C8 003FDC88  38 63 70 E0 */	addi r3, r3, heapArray@l
 /* 804346CC 003FDC8C  7C 63 02 14 */	add r3, r3, r0
 /* 804346D0 003FDC90  80 83 00 08 */	lwz r4, 8(r3)
 /* 804346D4 003FDC94  2C 04 00 00 */	cmpwi r4, 0
@@ -1515,9 +1515,9 @@
 
 .fn func_80434770, global
 /* 80434770 003FDD30  54 60 06 3E */	clrlwi r0, r3, 0x18
-/* 80434774 003FDD34  3C 60 80 65 */	lis r3, memRegionArray@ha
+/* 80434774 003FDD34  3C 60 80 65 */	lis r3, heapArray@ha
 /* 80434778 003FDD38  1C 00 00 70 */	mulli r0, r0, 0x70
-/* 8043477C 003FDD3C  38 63 70 E0 */	addi r3, r3, memRegionArray@l
+/* 8043477C 003FDD3C  38 63 70 E0 */	addi r3, r3, heapArray@l
 /* 80434780 003FDD40  7C A3 00 2E */	lwzx r5, r3, r0
 /* 80434784 003FDD44  2C 05 00 00 */	cmpwi r5, 0
 /* 80434788 003FDD48  40 82 00 0C */	bne .L_80434794
@@ -1550,9 +1550,9 @@
 
 .fn func_804347D8, global
 /* 804347D8 003FDD98  54 60 06 3E */	clrlwi r0, r3, 0x18
-/* 804347DC 003FDD9C  3C 60 80 65 */	lis r3, memRegionArray@ha
+/* 804347DC 003FDD9C  3C 60 80 65 */	lis r3, heapArray@ha
 /* 804347E0 003FDDA0  1C 00 00 70 */	mulli r0, r0, 0x70
-/* 804347E4 003FDDA4  38 63 70 E0 */	addi r3, r3, memRegionArray@l
+/* 804347E4 003FDDA4  38 63 70 E0 */	addi r3, r3, heapArray@l
 /* 804347E8 003FDDA8  7C A3 00 2E */	lwzx r5, r3, r0
 /* 804347EC 003FDDAC  2C 05 00 00 */	cmpwi r5, 0
 /* 804347F0 003FDDB0  40 82 00 0C */	bne .L_804347FC
@@ -1579,10 +1579,10 @@
 
 .fn func_80434830, global
 /* 80434830 003FDDF0  54 60 06 3E */	clrlwi r0, r3, 0x18
-/* 80434834 003FDDF4  3C 60 80 65 */	lis r3, memRegionArray@ha
+/* 80434834 003FDDF4  3C 60 80 65 */	lis r3, heapArray@ha
 /* 80434838 003FDDF8  1C 00 00 70 */	mulli r0, r0, 0x70
 /* 8043483C 003FDDFC  94 21 FF E0 */	stwu r1, -0x20(r1)
-/* 80434840 003FDE00  38 63 70 E0 */	addi r3, r3, memRegionArray@l
+/* 80434840 003FDE00  38 63 70 E0 */	addi r3, r3, heapArray@l
 /* 80434844 003FDE04  7C 63 02 14 */	add r3, r3, r0
 /* 80434848 003FDE08  80 03 00 08 */	lwz r0, 8(r3)
 /* 8043484C 003FDE0C  2C 00 00 00 */	cmpwi r0, 0
@@ -1613,9 +1613,9 @@
 
 .fn func_804348A4, global
 /* 804348A4 003FDE64  54 60 06 3E */	clrlwi r0, r3, 0x18
-/* 804348A8 003FDE68  3C 60 80 65 */	lis r3, memRegionArray@ha
+/* 804348A8 003FDE68  3C 60 80 65 */	lis r3, heapArray@ha
 /* 804348AC 003FDE6C  1C 00 00 70 */	mulli r0, r0, 0x70
-/* 804348B0 003FDE70  38 63 70 E0 */	addi r3, r3, memRegionArray@l
+/* 804348B0 003FDE70  38 63 70 E0 */	addi r3, r3, heapArray@l
 /* 804348B4 003FDE74  7C 63 02 14 */	add r3, r3, r0
 /* 804348B8 003FDE78  98 83 00 6C */	stb r4, 0x6c(r3)
 /* 804348BC 003FDE7C  4E 80 00 20 */	blr 
@@ -1757,10 +1757,10 @@
 
 .fn heap_malloc, global
 /* 80434A5C 003FE01C  54 80 06 3E */	clrlwi r0, r4, 0x18
-/* 80434A60 003FE020  3C C0 80 65 */	lis r6, memRegionArray@ha
+/* 80434A60 003FE020  3C C0 80 65 */	lis r6, heapArray@ha
 /* 80434A64 003FE024  1C 00 00 70 */	mulli r0, r0, 0x70
 /* 80434A68 003FE028  7C 65 1B 78 */	mr r5, r3
-/* 80434A6C 003FE02C  38 C6 70 E0 */	addi r6, r6, memRegionArray@l
+/* 80434A6C 003FE02C  38 C6 70 E0 */	addi r6, r6, heapArray@l
 /* 80434A70 003FE030  38 80 00 00 */	li r4, 0
 /* 80434A74 003FE034  7C 66 02 14 */	add r3, r6, r0
 /* 80434A78 003FE038  38 C0 00 04 */	li r6, 4
@@ -1769,10 +1769,10 @@
 
 .fn heap_malloc_1, global
 /* 80434A80 003FE040  54 80 06 3E */	clrlwi r0, r4, 0x18
-/* 80434A84 003FE044  3C C0 80 65 */	lis r6, memRegionArray@ha
+/* 80434A84 003FE044  3C C0 80 65 */	lis r6, heapArray@ha
 /* 80434A88 003FE048  1C 00 00 70 */	mulli r0, r0, 0x70
 /* 80434A8C 003FE04C  7C 65 1B 78 */	mr r5, r3
-/* 80434A90 003FE050  38 C6 70 E0 */	addi r6, r6, memRegionArray@l
+/* 80434A90 003FE050  38 C6 70 E0 */	addi r6, r6, heapArray@l
 /* 80434A94 003FE054  38 80 00 00 */	li r4, 0
 /* 80434A98 003FE058  7C 66 02 14 */	add r3, r6, r0
 /* 80434A9C 003FE05C  38 C0 00 04 */	li r6, 4
@@ -1791,10 +1791,10 @@
 /* 80434AC4 003FE084  7C 7D 1B 78 */	mr r29, r3
 /* 80434AC8 003FE088  40 80 00 60 */	bge .L_80434B28
 /* 80434ACC 003FE08C  54 80 06 3E */	clrlwi r0, r4, 0x18
-/* 80434AD0 003FE090  3C 60 80 65 */	lis r3, memRegionArray@ha
+/* 80434AD0 003FE090  3C 60 80 65 */	lis r3, heapArray@ha
 /* 80434AD4 003FE094  1C 00 00 70 */	mulli r0, r0, 0x70
 /* 80434AD8 003FE098  7F E5 00 D0 */	neg r31, r5
-/* 80434ADC 003FE09C  38 63 70 E0 */	addi r3, r3, memRegionArray@l
+/* 80434ADC 003FE09C  38 63 70 E0 */	addi r3, r3, heapArray@l
 /* 80434AE0 003FE0A0  38 80 00 00 */	li r4, 0
 /* 80434AE4 003FE0A4  90 81 00 08 */	stw r4, 8(r1)
 /* 80434AE8 003FE0A8  7F C3 02 14 */	add r30, r3, r0
@@ -1816,10 +1816,10 @@
 /* 80434B24 003FE0E4  48 00 00 24 */	b .L_80434B48
 .L_80434B28:
 /* 80434B28 003FE0E8  54 80 06 3E */	clrlwi r0, r4, 0x18
-/* 80434B2C 003FE0EC  3C 60 80 65 */	lis r3, memRegionArray@ha
+/* 80434B2C 003FE0EC  3C 60 80 65 */	lis r3, heapArray@ha
 /* 80434B30 003FE0F0  1C 00 00 70 */	mulli r0, r0, 0x70
 /* 80434B34 003FE0F4  7F A5 EB 78 */	mr r5, r29
-/* 80434B38 003FE0F8  38 63 70 E0 */	addi r3, r3, memRegionArray@l
+/* 80434B38 003FE0F8  38 63 70 E0 */	addi r3, r3, heapArray@l
 /* 80434B3C 003FE0FC  38 80 00 00 */	li r4, 0
 /* 80434B40 003FE100  7C 63 02 14 */	add r3, r3, r0
 /* 80434B44 003FE104  4B FF F0 55 */	bl heap_allocate
@@ -1845,10 +1845,10 @@
 /* 80434B84 003FE144  7C 7D 1B 78 */	mr r29, r3
 /* 80434B88 003FE148  40 80 00 60 */	bge .L_80434BE8
 /* 80434B8C 003FE14C  54 80 06 3E */	clrlwi r0, r4, 0x18
-/* 80434B90 003FE150  3C 60 80 65 */	lis r3, memRegionArray@ha
+/* 80434B90 003FE150  3C 60 80 65 */	lis r3, heapArray@ha
 /* 80434B94 003FE154  1C 00 00 70 */	mulli r0, r0, 0x70
 /* 80434B98 003FE158  7F E5 00 D0 */	neg r31, r5
-/* 80434B9C 003FE15C  38 63 70 E0 */	addi r3, r3, memRegionArray@l
+/* 80434B9C 003FE15C  38 63 70 E0 */	addi r3, r3, heapArray@l
 /* 80434BA0 003FE160  38 80 00 00 */	li r4, 0
 /* 80434BA4 003FE164  90 81 00 08 */	stw r4, 8(r1)
 /* 80434BA8 003FE168  7F C3 02 14 */	add r30, r3, r0
@@ -1870,10 +1870,10 @@
 /* 80434BE4 003FE1A4  48 00 00 24 */	b .L_80434C08
 .L_80434BE8:
 /* 80434BE8 003FE1A8  54 80 06 3E */	clrlwi r0, r4, 0x18
-/* 80434BEC 003FE1AC  3C 60 80 65 */	lis r3, memRegionArray@ha
+/* 80434BEC 003FE1AC  3C 60 80 65 */	lis r3, heapArray@ha
 /* 80434BF0 003FE1B0  1C 00 00 70 */	mulli r0, r0, 0x70
 /* 80434BF4 003FE1B4  7F A5 EB 78 */	mr r5, r29
-/* 80434BF8 003FE1B8  38 63 70 E0 */	addi r3, r3, memRegionArray@l
+/* 80434BF8 003FE1B8  38 63 70 E0 */	addi r3, r3, heapArray@l
 /* 80434BFC 003FE1BC  38 80 00 00 */	li r4, 0
 /* 80434C00 003FE1C0  7C 63 02 14 */	add r3, r3, r0
 /* 80434C04 003FE1C4  4B FF EF 95 */	bl heap_allocate
@@ -1908,10 +1908,10 @@
 /* 80434C5C 003FE21C  A0 C4 00 10 */	lhz r6, 0x10(r4)
 /* 80434C60 003FE220  38 03 FF DE */	addi r0, r3, 0x07FFFFDE@l
 /* 80434C64 003FE224  80 E4 00 0C */	lwz r7, 0xc(r4)
-/* 80434C68 003FE228  3C A0 80 65 */	lis r5, memRegionArray@ha
+/* 80434C68 003FE228  3C A0 80 65 */	lis r5, heapArray@ha
 /* 80434C6C 003FE22C  54 C3 06 3E */	clrlwi r3, r6, 0x18
 /* 80434C70 003FE230  1C C3 00 70 */	mulli r6, r3, 0x70
-/* 80434C74 003FE234  38 A5 70 E0 */	addi r5, r5, memRegionArray@l
+/* 80434C74 003FE234  38 A5 70 E0 */	addi r5, r5, heapArray@l
 /* 80434C78 003FE238  38 67 FF DF */	addi r3, r7, -33
 /* 80434C7C 003FE23C  7C 03 00 40 */	cmplw r3, r0
 /* 80434C80 003FE240  7F E5 32 14 */	add r31, r5, r6
@@ -2031,10 +2031,10 @@
 /* 80434E10 003FE3D0  A0 C4 00 10 */	lhz r6, 0x10(r4)
 /* 80434E14 003FE3D4  38 03 FF DE */	addi r0, r3, 0x07FFFFDE@l
 /* 80434E18 003FE3D8  80 E4 00 0C */	lwz r7, 0xc(r4)
-/* 80434E1C 003FE3DC  3C A0 80 65 */	lis r5, memRegionArray@ha
+/* 80434E1C 003FE3DC  3C A0 80 65 */	lis r5, heapArray@ha
 /* 80434E20 003FE3E0  54 C3 06 3E */	clrlwi r3, r6, 0x18
 /* 80434E24 003FE3E4  1C C3 00 70 */	mulli r6, r3, 0x70
-/* 80434E28 003FE3E8  38 A5 70 E0 */	addi r5, r5, memRegionArray@l
+/* 80434E28 003FE3E8  38 A5 70 E0 */	addi r5, r5, heapArray@l
 /* 80434E2C 003FE3EC  38 67 FF DF */	addi r3, r7, -33
 /* 80434E30 003FE3F0  7C 03 00 40 */	cmplw r3, r0
 /* 80434E34 003FE3F4  7F E5 32 14 */	add r31, r5, r6
@@ -2241,9 +2241,9 @@
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 #806570e0
-.obj memRegionArray, global
+.obj heapArray, global
 	.skip 0x2300
-.endobj memRegionArray
+.endobj heapArray
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

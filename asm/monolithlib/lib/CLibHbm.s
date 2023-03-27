@@ -384,7 +384,7 @@
 /* 8045D838 00426DF8  4E 80 00 20 */	blr 
 .endfn func_8045D794
 
-.fn func_8045D83C, global
+.fn CLibHbm_wkUpdate, global
 /* 8045D83C 00426DFC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045D840 00426E00  7C 08 02 A6 */	mflr r0
 /* 8045D844 00426E04  90 01 00 14 */	stw r0, 0x14(r1)
@@ -621,7 +621,7 @@
 /* 8045DB74 00427134  7C 08 03 A6 */	mtlr r0
 /* 8045DB78 00427138  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045DB7C 0042713C  4E 80 00 20 */	blr 
-.endfn func_8045D83C
+.endfn CLibHbm_wkUpdate
 
 .fn func_8045DB80, global
 /* 8045DB80 00427140  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -806,7 +806,7 @@
 .endfn func_8045DE00
 
 
-.fn func_8045DE04, global
+.fn CLibHbm_WorkThreadEvent4, global
 /* 8045DE04 004273C4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045DE08 004273C8  7C 08 02 A6 */	mflr r0
 /* 8045DE0C 004273CC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -824,7 +824,7 @@
 /* 8045DE3C 004273FC  48 00 00 14 */	b .L_8045DE50
 .L_8045DE40:
 /* 8045DE40 00427400  7F E3 FB 78 */	mr r3, r31
-/* 8045DE44 00427404  4B FD AB B5 */	bl func_804389F8
+/* 8045DE44 00427404  4B FD AB B5 */	bl CWorkThread_WorkThreadEvent4
 /* 8045DE48 00427408  48 00 00 08 */	b .L_8045DE50
 .L_8045DE4C:
 /* 8045DE4C 0042740C  38 60 00 00 */	li r3, 0
@@ -834,9 +834,9 @@
 /* 8045DE58 00427418  7C 08 03 A6 */	mtlr r0
 /* 8045DE5C 0042741C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045DE60 00427420  4E 80 00 20 */	blr 
-.endfn func_8045DE04
+.endfn CLibHbm_WorkThreadEvent4
 
-.fn func_8045DE64, global
+.fn CLibHbm_WorkThreadEvent5, global
 /* 8045DE64 00427424  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045DE68 00427428  7C 08 02 A6 */	mflr r0
 /* 8045DE6C 0042742C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -852,7 +852,7 @@
 /* 8045DE94 00427454  7F E3 FB 78 */	mr r3, r31
 /* 8045DE98 00427458  4B FF F7 39 */	bl func_8045D5D0
 /* 8045DE9C 0042745C  7F E3 FB 78 */	mr r3, r31
-/* 8045DEA0 00427460  4B FD AB 85 */	bl func_80438A24
+/* 8045DEA0 00427460  4B FD AB 85 */	bl CWorkThread_WorkThreadEvent5
 /* 8045DEA4 00427464  48 00 00 08 */	b .L_8045DEAC
 .L_8045DEA8:
 /* 8045DEA8 00427468  38 60 00 00 */	li r3, 0
@@ -862,7 +862,7 @@
 /* 8045DEB4 00427474  7C 08 03 A6 */	mtlr r0
 /* 8045DEB8 00427478  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045DEBC 0042747C  4E 80 00 20 */	blr 
-.endfn func_8045DE64
+.endfn CLibHbm_WorkThreadEvent5
 
 .fn CLibHbm_OnFileEvent, global
 /* 8045DEC0 00427480  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -1378,12 +1378,12 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte func_8045D83C
-	.4byte CWorkThread_Event1
-	.4byte CWorkThread_Event2
-	.4byte func_8045DE04
-	.4byte func_8045DE64
-	.4byte CWorkThread_Event3
+	.4byte CLibHbm_wkUpdate
+	.4byte CWorkThread_WorkThreadEvent2
+	.4byte CWorkThread_WorkThreadEvent3
+	.4byte CLibHbm_WorkThreadEvent4
+	.4byte CLibHbm_WorkThreadEvent5
+	.4byte CWorkThread_WorkThreadEvent6
 .endobj __vt__CLibHbm
 
 .obj CLibHbm_hierarchy, global
@@ -1656,7 +1656,7 @@
 
 .obj "@eti_80035330", local
 .hidden "@eti_80035330"
-	.4byte func_8045D83C
+	.4byte CLibHbm_wkUpdate
 	.4byte 0x00000344
 	.4byte "@etb_8001D730"
 .endobj "@eti_80035330"
@@ -1684,14 +1684,14 @@
 
 .obj "@eti_80035360", local
 .hidden "@eti_80035360"
-	.4byte func_8045DE04
+	.4byte CLibHbm_WorkThreadEvent4
 	.4byte 0x00000060
 	.4byte "@etb_8001D750"
 .endobj "@eti_80035360"
 
 .obj "@eti_8003536C", local
 .hidden "@eti_8003536C"
-	.4byte func_8045DE64
+	.4byte CLibHbm_WorkThreadEvent5
 	.4byte 0x0000005C
 	.4byte "@etb_8001D758"
 .endobj "@eti_8003536C"

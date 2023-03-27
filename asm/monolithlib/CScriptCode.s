@@ -511,7 +511,7 @@
 /* 8043A7BC 00403D7C  4E 80 00 20 */	blr 
 .endfn func_8043A70C
 
-.fn func_8043A7C0, global
+.fn CScriptCode_WorkThreadEvent5, global
 /* 8043A7C0 00403D80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8043A7C4 00403D84  7C 08 02 A6 */	mflr r0
 /* 8043A7C8 00403D88  90 01 00 14 */	stw r0, 0x14(r1)
@@ -528,7 +528,7 @@
 /* 8043A7F4 00403DB4  2C 03 00 00 */	cmpwi r3, 0
 /* 8043A7F8 00403DB8  40 82 00 10 */	bne .L_8043A808
 /* 8043A7FC 00403DBC  7F E3 FB 78 */	mr r3, r31
-/* 8043A800 00403DC0  4B FF E2 25 */	bl func_80438A24
+/* 8043A800 00403DC0  4B FF E2 25 */	bl CWorkThread_WorkThreadEvent5
 /* 8043A804 00403DC4  48 00 00 08 */	b .L_8043A80C
 .L_8043A808:
 /* 8043A808 00403DC8  38 60 00 00 */	li r3, 0
@@ -538,7 +538,7 @@
 /* 8043A814 00403DD4  7C 08 03 A6 */	mtlr r0
 /* 8043A818 00403DD8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8043A81C 00403DDC  4E 80 00 20 */	blr 
-.endfn func_8043A7C0
+.endfn CScriptCode_WorkThreadEvent5
 
 .fn func_8043A820, global
 /* 8043A820 00403DE0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -550,7 +550,7 @@
 /* 8043A838 00403DF8  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8043A83C 00403DFC  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8043A840 00403E00  7C 7D 1B 78 */	mr r29, r3
-/* 8043A844 00403E04  4B FF CD 71 */	bl getMemRegionIndex
+/* 8043A844 00403E04  4B FF CD 71 */	bl getHeapIndex
 /* 8043A848 00403E08  7C 64 1B 78 */	mr r4, r3
 /* 8043A84C 00403E0C  38 60 17 40 */	li r3, 0x1740
 /* 8043A850 00403E10  4B FF A2 0D */	bl heap_malloc
@@ -694,12 +694,12 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte func_80438A50
-	.4byte CWorkThread_Event1
-	.4byte CWorkThread_Event2
-	.4byte func_804389F8
-	.4byte func_8043A7C0
-	.4byte CWorkThread_Event3
+	.4byte CWorkThread_wkUpdate
+	.4byte CWorkThread_WorkThreadEvent2
+	.4byte CWorkThread_WorkThreadEvent3
+	.4byte CWorkThread_WorkThreadEvent4
+	.4byte CScriptCode_WorkThreadEvent5
+	.4byte CWorkThread_WorkThreadEvent6
 .endobj __vt__CScriptCode
 
 .obj CScriptCode_hierarchy, global
@@ -830,7 +830,7 @@
 
 .obj "@eti_80033F8C", local
 .hidden "@eti_80033F8C"
-	.4byte func_8043A7C0
+	.4byte CScriptCode_WorkThreadEvent5
 	.4byte 0x00000060
 	.4byte "@etb_8001C308"
 .endobj "@eti_80033F8C"

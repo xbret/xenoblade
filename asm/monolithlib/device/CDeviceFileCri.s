@@ -1210,7 +1210,7 @@
 /* 804505EC 00419BAC  4E 80 00 20 */	blr 
 .endfn func_8045042C
 
-.fn func_804505F0, global
+.fn CDeviceFileCri_wkUpdate, global
 /* 804505F0 00419BB0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804505F4 00419BB4  7C 08 02 A6 */	mflr r0
 /* 804505F8 00419BB8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1493,13 +1493,13 @@
 /* 804509A8 00419F68  7C 08 03 A6 */	mtlr r0
 /* 804509AC 00419F6C  38 21 00 10 */	addi r1, r1, 0x10
 /* 804509B0 00419F70  4E 80 00 20 */	blr 
-.endfn func_804505F0
+.endfn CDeviceFileCri_wkUpdate
 
-.fn func_804509B4, global
-/* 804509B4 00419F74  4B FE 80 44 */	b func_804389F8
-.endfn func_804509B4
+.fn CDeviceFileCri_WorkThreadEvent4, global
+/* 804509B4 00419F74  4B FE 80 44 */	b CWorkThread_WorkThreadEvent4
+.endfn CDeviceFileCri_WorkThreadEvent4
 
-.fn func_804509B8, global
+.fn CDeviceFileCri_WorkThreadEvent5, global
 /* 804509B8 00419F78  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804509BC 00419F7C  7C 08 02 A6 */	mflr r0
 /* 804509C0 00419F80  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1516,7 +1516,7 @@
 /* 804509EC 00419FAC  2C 03 00 00 */	cmpwi r3, 0
 /* 804509F0 00419FB0  40 82 00 10 */	bne .L_80450A00
 /* 804509F4 00419FB4  7F E3 FB 78 */	mr r3, r31
-/* 804509F8 00419FB8  4B FE 80 2D */	bl func_80438A24
+/* 804509F8 00419FB8  4B FE 80 2D */	bl CWorkThread_WorkThreadEvent5
 /* 804509FC 00419FBC  48 00 00 08 */	b .L_80450A04
 .L_80450A00:
 /* 80450A00 00419FC0  38 60 00 00 */	li r3, 0
@@ -1526,9 +1526,9 @@
 /* 80450A0C 00419FCC  7C 08 03 A6 */	mtlr r0
 /* 80450A10 00419FD0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80450A14 00419FD4  4E 80 00 20 */	blr 
-.endfn func_804509B8
+.endfn CDeviceFileCri_WorkThreadEvent5
 
-.fn func_80450A18, global
+.fn CDeviceFileCri_WorkThreadEvent6, global
 /* 80450A18 00419FD8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80450A1C 00419FDC  7C 08 02 A6 */	mflr r0
 /* 80450A20 00419FE0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1573,7 +1573,7 @@
 /* 80450AAC 0041A06C  7C 08 03 A6 */	mtlr r0
 /* 80450AB0 0041A070  38 21 00 10 */	addi r1, r1, 0x10
 /* 80450AB4 0041A074  4E 80 00 20 */	blr
-.endfn func_80450A18
+.endfn CDeviceFileCri_WorkThreadEvent6
 
 .fn func_80450AB8, global
 /* 80450AB8 0041A078  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1671,12 +1671,12 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte func_804505F0
-	.4byte CWorkThread_Event1
-	.4byte CWorkThread_Event2
-	.4byte func_804509B4
-	.4byte func_804509B8
-	.4byte func_80450A18
+	.4byte CDeviceFileCri_wkUpdate
+	.4byte CWorkThread_WorkThreadEvent2
+	.4byte CWorkThread_WorkThreadEvent3
+	.4byte CDeviceFileCri_WorkThreadEvent4
+	.4byte CDeviceFileCri_WorkThreadEvent5
+	.4byte CDeviceFileCri_WorkThreadEvent6
 	.4byte __RTTI__CDeviceFileCri
 	.4byte 0xFFFFFE3C
 	.4byte func_80450B4C
@@ -1965,21 +1965,21 @@
 
 .obj "@eti_80034B68", local
 .hidden "@eti_80034B68"
-	.4byte func_804505F0
+	.4byte CDeviceFileCri_wkUpdate
 	.4byte 0x000003C4
 	.4byte "@etb_8001CEF4"
 .endobj "@eti_80034B68"
 
 .obj "@eti_80034B74", local
 .hidden "@eti_80034B74"
-	.4byte func_804509B8
+	.4byte CDeviceFileCri_WorkThreadEvent5
 	.4byte 0x00000060
 	.4byte "@etb_8001CEFC"
 .endobj "@eti_80034B74"
 
 .obj "@eti_80034B80", local
 .hidden "@eti_80034B80"
-	.4byte func_80450A18
+	.4byte CDeviceFileCri_WorkThreadEvent6
 	.4byte 0x000000A0
 	.4byte "@etb_8001CF04"
 .endobj "@eti_80034B80"

@@ -13,7 +13,7 @@
 /* 80443B24 0040D0E4  4B F2 11 7D */	bl VIInit
 /* 80443B28 0040D0E8  3F E0 80 52 */	lis r31, CWorkRoot_strpool@ha
 /* 80443B2C 0040D0EC  3B FF 60 5C */	addi r31, r31, CWorkRoot_strpool@l
-/* 80443B30 0040D0F0  4B FF 3A 85 */	bl getMemRegionIndex
+/* 80443B30 0040D0F0  4B FF 3A 85 */	bl getHeapIndex
 /* 80443B34 0040D0F4  7C 64 1B 78 */	mr r4, r3
 /* 80443B38 0040D0F8  38 60 02 08 */	li r3, 0x208
 /* 80443B3C 0040D0FC  4B FF 0F 21 */	bl heap_malloc
@@ -666,7 +666,7 @@
 /* 80444388 0040D948  4E 80 00 20 */	blr 
 .endfn func_80444384
 
-.fn func_8044438C, global
+.fn CWorkRootThread_WorkThreadEvent5, global
 /* 8044438C 0040D94C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80444390 0040D950  7C 08 02 A6 */	mflr r0
 /* 80444394 0040D954  90 01 00 14 */	stw r0, 0x14(r1)
@@ -679,14 +679,14 @@
 /* 804443B0 0040D970  48 00 00 0C */	b .L_804443BC
 .L_804443B4:
 /* 804443B4 0040D974  7F E3 FB 78 */	mr r3, r31
-/* 804443B8 0040D978  4B FF 46 6D */	bl func_80438A24
+/* 804443B8 0040D978  4B FF 46 6D */	bl CWorkThread_WorkThreadEvent5
 .L_804443BC:
 /* 804443BC 0040D97C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 804443C0 0040D980  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 804443C4 0040D984  7C 08 03 A6 */	mtlr r0
 /* 804443C8 0040D988  38 21 00 10 */	addi r1, r1, 0x10
 /* 804443CC 0040D98C  4E 80 00 20 */	blr
-.endfn func_8044438C
+.endfn CWorkRootThread_WorkThreadEvent5
 
 
 .fn sinit_804443D0, local
@@ -774,12 +774,12 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte func_80438A50
-	.4byte CWorkThread_Event1
-	.4byte CWorkThread_Event2
-	.4byte func_804389F8
-	.4byte func_8044438C
-	.4byte CWorkThread_Event3
+	.4byte CWorkThread_wkUpdate
+	.4byte CWorkThread_WorkThreadEvent2
+	.4byte CWorkThread_WorkThreadEvent3
+	.4byte CWorkThread_WorkThreadEvent4
+	.4byte CWorkRootThread_WorkThreadEvent5
+	.4byte CWorkThread_WorkThreadEvent6
 .endobj __vt___unnamed_CWorkRoot_cpp_CWorkRootThread
 
 .obj _unnamed_CWorkRoot_cpp_CWorkRootThread_hierarchy, global
@@ -1038,7 +1038,7 @@
 
 .obj "@eti_80034418", local
 .hidden "@eti_80034418"
-	.4byte func_8044438C
+	.4byte CWorkRootThread_WorkThreadEvent5
 	.4byte 0x00000044
 	.4byte "@etb_8001C828"
 .endobj "@eti_80034418"

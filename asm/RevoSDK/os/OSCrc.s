@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.fn NETCalcCRC16, global
+.fn OSCalcCRC16, global
 /* 8035F000 003285C0  2C 04 00 00 */	cmpwi r4, 0
 /* 8035F004 003285C4  3C E0 80 52 */	lis r7, lbl_80518D10@ha
 /* 8035F008 003285C8  39 00 00 00 */	li r8, 0
@@ -85,7 +85,7 @@
 .L_8035F12C:
 /* 8035F12C 003286EC  55 03 04 3E */	clrlwi r3, r8, 0x10
 /* 8035F130 003286F0  4E 80 00 20 */	blr 
-.endfn NETCalcCRC16
+.endfn OSCalcCRC16
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -93,12 +93,20 @@
 
 #@LOCAL@OSCalcCRC16__FPCvUl@crc16_table
 .obj lbl_80518D10, local
-	.4byte 0x0000CC01
-	.4byte 0xD8011400
-	.4byte 0xF0013C00
-	.4byte 0x2800E401
-	.4byte 0xA0016C00
-	.4byte 0x7800B401
-	.4byte 0x50009C01
-	.4byte 0x88014400
+	.2byte 0x0000
+	.2byte 0xCC01
+	.2byte 0xD801
+	.2byte 0x1400
+	.2byte 0xF001
+	.2byte 0x3C00
+	.2byte 0x2800
+	.2byte 0xE401
+	.2byte 0xA001
+	.2byte 0x6C00
+	.2byte 0x7800
+	.2byte 0xB401
+	.2byte 0x5000
+	.2byte 0x9C01
+	.2byte 0x8801
+	.2byte 0x4400
 .endobj lbl_80518D10

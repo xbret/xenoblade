@@ -142,7 +142,7 @@
 /* 80447D04 004112C4  4E 80 00 20 */	blr 
 .endfn func_80447C60
 
-.fn func_80447D08, global
+.fn CDeviceSC_WorkThreadEvent4, global
 /* 80447D08 004112C8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80447D0C 004112CC  7C 08 02 A6 */	mflr r0
 /* 80447D10 004112D0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -165,7 +165,7 @@
 /* 80447D54 00411314  4B F1 93 ED */	bl SCGetSoundMode
 /* 80447D58 00411318  98 7F 01 CC */	stb r3, 0x1cc(r31)
 /* 80447D5C 0041131C  7F E3 FB 78 */	mr r3, r31
-/* 80447D60 00411320  4B FF 0C 99 */	bl func_804389F8
+/* 80447D60 00411320  4B FF 0C 99 */	bl CWorkThread_WorkThreadEvent4
 /* 80447D64 00411324  48 00 00 08 */	b .L_80447D6C
 .L_80447D68:
 /* 80447D68 00411328  38 60 00 00 */	li r3, 0
@@ -175,9 +175,9 @@
 /* 80447D74 00411334  7C 08 03 A6 */	mtlr r0
 /* 80447D78 00411338  38 21 00 10 */	addi r1, r1, 0x10
 /* 80447D7C 0041133C  4E 80 00 20 */	blr 
-.endfn func_80447D08
+.endfn CDeviceSC_WorkThreadEvent4
 
-.fn func_80447D80, global
+.fn CDeviceSC_WorkThreadEvent5, global
 /* 80447D80 00411340  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80447D84 00411344  7C 08 02 A6 */	mflr r0
 /* 80447D88 00411348  90 01 00 14 */	stw r0, 0x14(r1)
@@ -191,7 +191,7 @@
 /* 80447DA8 00411368  2C 03 00 00 */	cmpwi r3, 0
 /* 80447DAC 0041136C  40 82 00 10 */	bne .L_80447DBC
 /* 80447DB0 00411370  7F E3 FB 78 */	mr r3, r31
-/* 80447DB4 00411374  4B FF 0C 71 */	bl func_80438A24
+/* 80447DB4 00411374  4B FF 0C 71 */	bl CWorkThread_WorkThreadEvent5
 /* 80447DB8 00411378  48 00 00 08 */	b .L_80447DC0
 .L_80447DBC:
 /* 80447DBC 0041137C  38 60 00 00 */	li r3, 0
@@ -201,7 +201,7 @@
 /* 80447DC8 00411388  7C 08 03 A6 */	mtlr r0
 /* 80447DCC 0041138C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80447DD0 00411390  4E 80 00 20 */	blr 
-.endfn func_80447D80
+.endfn CDeviceSC_WorkThreadEvent5
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -253,12 +253,12 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte func_80438A50
-	.4byte CWorkThread_Event1
-	.4byte CWorkThread_Event2
-	.4byte func_80447D08
-	.4byte func_80447D80
-	.4byte CWorkThread_Event3
+	.4byte CWorkThread_wkUpdate
+	.4byte CWorkThread_WorkThreadEvent2
+	.4byte CWorkThread_WorkThreadEvent3
+	.4byte CDeviceSC_WorkThreadEvent4
+	.4byte CDeviceSC_WorkThreadEvent5
+	.4byte CWorkThread_WorkThreadEvent6
 .endobj __vt__CDeviceSC
 
 .obj CDeviceSC_hierarchy, global
@@ -342,14 +342,14 @@
 
 .obj "@eti_80034688", local
 .hidden "@eti_80034688"
-	.4byte func_80447D08
+	.4byte CDeviceSC_WorkThreadEvent4
 	.4byte 0x00000078
 	.4byte "@etb_8001CA60"
 .endobj "@eti_80034688"
 
 .obj "@eti_80034694", local
 .hidden "@eti_80034694"
-	.4byte func_80447D80
+	.4byte CDeviceSC_WorkThreadEvent5
 	.4byte 0x00000054
 	.4byte "@etb_8001CA68"
 .endobj "@eti_80034694"

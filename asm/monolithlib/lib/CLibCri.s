@@ -234,9 +234,9 @@
 /* 80459AD0 00423090  48 00 17 10 */	b func_8045B1E0
 .endfn func_80459AD0
 
-.fn func_80459AD4, global
+.fn CLibCri_wkUpdate, global
 /* 80459AD4 00423094  4E 80 00 20 */	blr
-.endfn func_80459AD4
+.endfn CLibCri_wkUpdate
 
 .fn func_80459AD8, global
 /* 80459AD8 00423098  4B F4 0F 44 */	b ADXM_ExecMain
@@ -247,7 +247,7 @@
 /* 80459AE0 004230A0  4E 80 00 20 */	blr 
 .endfn func_80459ADC
 
-.fn func_80459AE4, global
+.fn CLibCri_WorkThreadEvent4, global
 /* 80459AE4 004230A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80459AE8 004230A8  7C 08 02 A6 */	mflr r0
 /* 80459AEC 004230AC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -278,7 +278,7 @@
 /* 80459B50 00423110  3C 60 80 52 */	lis r3, lbl_805268F8@ha
 /* 80459B54 00423114  38 63 68 F8 */	addi r3, r3, lbl_805268F8@l
 /* 80459B58 00423118  3B E3 00 05 */	addi r31, r3, 5
-/* 80459B5C 0042311C  4B FD DA 59 */	bl getMemRegionIndex
+/* 80459B5C 0042311C  4B FD DA 59 */	bl getHeapIndex
 /* 80459B60 00423120  7C 64 1B 78 */	mr r4, r3
 /* 80459B64 00423124  38 60 06 28 */	li r3, 0x628
 /* 80459B68 00423128  4B FD AE F5 */	bl heap_malloc
@@ -294,7 +294,7 @@
 /* 80459B8C 0042314C  3C 60 80 52 */	lis r3, lbl_805268F8@ha
 /* 80459B90 00423150  38 63 68 F8 */	addi r3, r3, lbl_805268F8@l
 /* 80459B94 00423154  3B E3 00 16 */	addi r31, r3, 0x16
-/* 80459B98 00423158  4B FD DA 1D */	bl getMemRegionIndex
+/* 80459B98 00423158  4B FD DA 1D */	bl getHeapIndex
 /* 80459B9C 0042315C  7C 64 1B 78 */	mr r4, r3
 /* 80459BA0 00423160  38 60 04 B8 */	li r3, 0x4b8
 /* 80459BA4 00423164  4B FD AE B9 */	bl heap_malloc
@@ -308,7 +308,7 @@
 /* 80459BC0 00423180  38 A0 00 00 */	li r5, 0
 /* 80459BC4 00423184  4B FD F0 15 */	bl func_80438BD8
 /* 80459BC8 00423188  7F C3 F3 78 */	mr r3, r30
-/* 80459BCC 0042318C  4B FD EE 2D */	bl func_804389F8
+/* 80459BCC 0042318C  4B FD EE 2D */	bl CWorkThread_WorkThreadEvent4
 /* 80459BD0 00423190  48 00 00 08 */	b .L_80459BD8
 .L_80459BD4:
 /* 80459BD4 00423194  38 60 00 00 */	li r3, 0
@@ -319,9 +319,9 @@
 /* 80459BE4 004231A4  7C 08 03 A6 */	mtlr r0
 /* 80459BE8 004231A8  38 21 00 10 */	addi r1, r1, 0x10
 /* 80459BEC 004231AC  4E 80 00 20 */	blr 
-.endfn func_80459AE4
+.endfn CLibCri_WorkThreadEvent4
 
-.fn func_80459BF0, global
+.fn CLibCri_WorkThreadEvent5, global
 /* 80459BF0 004231B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80459BF4 004231B4  7C 08 02 A6 */	mflr r0
 /* 80459BF8 004231B8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -347,7 +347,7 @@
 /* 80459C44 00423204  4B EF 01 CD */	bl MIXQuit
 /* 80459C48 00423208  4B E7 84 69 */	bl AXQuit
 /* 80459C4C 0042320C  7F E3 FB 78 */	mr r3, r31
-/* 80459C50 00423210  4B FD ED D5 */	bl func_80438A24
+/* 80459C50 00423210  4B FD ED D5 */	bl CWorkThread_WorkThreadEvent5
 /* 80459C54 00423214  48 00 00 08 */	b .L_80459C5C
 .L_80459C58:
 /* 80459C58 00423218  38 60 00 00 */	li r3, 0
@@ -357,7 +357,7 @@
 /* 80459C64 00423224  7C 08 03 A6 */	mtlr r0
 /* 80459C68 00423228  38 21 00 10 */	addi r1, r1, 0x10
 /* 80459C6C 0042322C  4E 80 00 20 */	blr
-.endfn func_80459BF0
+.endfn CLibCri_WorkThreadEvent5
 
 .fn func_80459C70, global
 /* 80459C70 00423230  4E 80 00 20 */	blr
@@ -439,12 +439,12 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte func_80459AD4
-	.4byte CWorkThread_Event1
-	.4byte CWorkThread_Event2
-	.4byte func_80459AE4
-	.4byte func_80459BF0
-	.4byte CWorkThread_Event3
+	.4byte CLibCri_wkUpdate
+	.4byte CWorkThread_WorkThreadEvent2
+	.4byte CWorkThread_WorkThreadEvent3
+	.4byte CLibCri_WorkThreadEvent4
+	.4byte CLibCri_WorkThreadEvent5
+	.4byte CWorkThread_WorkThreadEvent6
 	.4byte __RTTI__CLibCri
 	.4byte 0xFFFFFE3C
 	.4byte func_80459C80
@@ -599,14 +599,14 @@
 
 .obj "@eti_80035138", local
 .hidden "@eti_80035138"
-	.4byte func_80459AE4
+	.4byte CLibCri_WorkThreadEvent4
 	.4byte 0x0000010C
 	.4byte "@etb_8001D554"
 .endobj "@eti_80035138"
 
 .obj "@eti_80035144", local
 .hidden "@eti_80035144"
-	.4byte func_80459BF0
+	.4byte CLibCri_WorkThreadEvent5
 	.4byte 0x00000080
 	.4byte "@etb_8001D55C"
 .endobj "@eti_80035144"

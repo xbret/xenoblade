@@ -1,7 +1,7 @@
 
 #ifndef RVL_SDK_OS_TIME_H
 #define RVL_SDK_OS_TIME_H
-#include "RevoSDK/os/OSGlobals.h"
+#include "RevoSDK/os/OSHardware.h"
 #include "types.h"
 #ifdef __cplusplus
 extern "C" {

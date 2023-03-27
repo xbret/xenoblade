@@ -115,7 +115,7 @@
 /* 80039398 00002958  3F E0 80 4F */	lis r31, CGame_strpool@ha
 /* 8003939C 0000295C  7C 7E 1B 78 */	mr r30, r3
 /* 800393A0 00002960  3B FF 5B 5C */	addi r31, r31, CGame_strpool@l
-/* 800393A4 00002964  48 3F E2 11 */	bl getMemRegionIndex
+/* 800393A4 00002964  48 3F E2 11 */	bl getHeapIndex
 /* 800393A8 00002968  7C 64 1B 78 */	mr r4, r3
 /* 800393AC 0000296C  38 60 01 F0 */	li r3, 0x1f0
 /* 800393B0 00002970  48 3F B6 AD */	bl heap_malloc
@@ -164,7 +164,7 @@
 /* 80039448 00002A08  4E 80 00 20 */	blr 
 .endfn func_80039438
 
-.fn func_8003944C, global
+.fn CGame_wkUpdate, global
 /* 8003944C 00002A0C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039450 00002A10  7C 08 02 A6 */	mflr r0
 /* 80039454 00002A14  90 01 00 14 */	stw r0, 0x14(r1)
@@ -236,9 +236,9 @@
 /* 80039544 00002B04  7C 08 03 A6 */	mtlr r0
 /* 80039548 00002B08  38 21 00 10 */	addi r1, r1, 0x10
 /* 8003954C 00002B0C  4E 80 00 20 */	blr 
-.endfn func_8003944C
+.endfn CGame_wkUpdate
 
-.fn func_80039550, global
+.fn CGame_WorkThreadEvent2, global
 /* 80039550 00002B10  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80039554 00002B14  7C 08 02 A6 */	mflr r0
 /* 80039558 00002B18  90 01 00 64 */	stw r0, 0x64(r1)
@@ -282,7 +282,7 @@
 /* 800395E8 00002BA8  7C 08 03 A6 */	mtlr r0
 /* 800395EC 00002BAC  38 21 00 60 */	addi r1, r1, 0x60
 /* 800395F0 00002BB0  4E 80 00 20 */	blr 
-.endfn func_80039550
+.endfn CGame_WorkThreadEvent2
 
 .fn func_800395F4, global
 /* 800395F4 00002BB4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -345,7 +345,7 @@
 /* 800396C4 00002C84  4E 80 00 20 */	blr 
 .endfn func_80039694
 
-.fn func_800396C8, global
+.fn CGame_WorkThreadEvent4, global
 /* 800396C8 00002C88  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 800396CC 00002C8C  7C 08 02 A6 */	mflr r0
 /* 800396D0 00002C90  90 01 00 34 */	stw r0, 0x34(r1)
@@ -458,7 +458,7 @@
 /* 8003986C 00002E2C  48 0F D6 19 */	bl func_80136E84
 .L_80039870:
 /* 80039870 00002E30  7F A3 EB 78 */	mr r3, r29
-/* 80039874 00002E34  48 3F FE 2D */	bl func_804396A0
+/* 80039874 00002E34  48 3F FE 2D */	bl CProc_WorkThreadEvent4
 .L_80039878:
 /* 80039878 00002E38  39 61 00 30 */	addi r11, r1, 0x30
 /* 8003987C 00002E3C  48 28 09 2D */	bl _restgpr_29
@@ -466,9 +466,9 @@
 /* 80039884 00002E44  7C 08 03 A6 */	mtlr r0
 /* 80039888 00002E48  38 21 00 30 */	addi r1, r1, 0x30
 /* 8003988C 00002E4C  4E 80 00 20 */	blr 
-.endfn func_800396C8
+.endfn CGame_WorkThreadEvent4
 
-.fn func_80039890, global
+.fn CGame_WorkThreadEvent5, global
 /* 80039890 00002E50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039894 00002E54  7C 08 02 A6 */	mflr r0
 /* 80039898 00002E58  90 01 00 14 */	stw r0, 0x14(r1)
@@ -527,7 +527,7 @@
 /* 80039954 00002F14  90 0D A4 84 */	stw r0, lbl_80666604@sda21(r13)
 .L_80039958:
 /* 80039958 00002F18  7F E3 FB 78 */	mr r3, r31
-/* 8003995C 00002F1C  48 3F FD 49 */	bl func_804396A4
+/* 8003995C 00002F1C  48 3F FD 49 */	bl CProc_WorkThreadEvent5
 /* 80039960 00002F20  48 00 00 08 */	b .L_80039968
 .L_80039964:
 /* 80039964 00002F24  38 60 00 00 */	li r3, 0
@@ -537,7 +537,7 @@
 /* 80039970 00002F30  7C 08 03 A6 */	mtlr r0
 /* 80039974 00002F34  38 21 00 10 */	addi r1, r1, 0x10
 /* 80039978 00002F38  4E 80 00 20 */	blr 
-.endfn func_80039890
+.endfn CGame_WorkThreadEvent5
 
 #part of lyt_arcResourceAccessor
 .fn __dt__Q34nw4r3lyt19ArcResourceAccessorFv, global
@@ -612,7 +612,7 @@
 /* 80039A64 00003024  7C 7E 1B 78 */	mr r30, r3
 /* 80039A68 00003028  38 84 5B 5C */	addi r4, r4, CGame_strpool@l
 /* 80039A6C 0000302C  3B E4 00 23 */	addi r31, r4, 0x23
-/* 80039A70 00003030  48 3F DB 45 */	bl getMemRegionIndex
+/* 80039A70 00003030  48 3F DB 45 */	bl getHeapIndex
 /* 80039A74 00003034  7C 64 1B 78 */	mr r4, r3
 /* 80039A78 00003038  38 60 02 30 */	li r3, 0x230
 /* 80039A7C 0000303C  48 3F AF E1 */	bl heap_malloc
@@ -670,7 +670,7 @@
 /* 80039B34 000030F4  4E 80 00 20 */	blr 
 .endfn func_80039AC4
 
-.fn func_80039B38, global
+.fn CGame_WorkThreadEvent6, global
 /* 80039B38 000030F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039B3C 000030FC  7C 08 02 A6 */	mflr r0
 /* 80039B40 00003100  90 01 00 14 */	stw r0, 0x14(r1)
@@ -732,7 +732,7 @@
 /* 80039BFC 000031BC  7C 08 03 A6 */	mtlr r0
 /* 80039C00 000031C0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80039C04 000031C4  4E 80 00 20 */	blr 
-.endfn func_80039B38
+.endfn CGame_WorkThreadEvent6
 
 .fn CGame_WorkEvent5, global
 /* 80039C08 000031C8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -980,22 +980,22 @@
 /* 80039E2C 000033EC  4E 80 00 20 */	blr 
 .endfn IWorkEvent_WorkEvent1
 
-.fn CWorkThread_Event3, global
+.fn CWorkThread_WorkThreadEvent6, global
 /* 80039E30 000033F0  38 60 00 01 */	li r3, 1
 /* 80039E34 000033F4  4E 80 00 20 */	blr 
-.endfn CWorkThread_Event3
+.endfn CWorkThread_WorkThreadEvent6
 
-.fn CWorkThread_Event2, global
+.fn CWorkThread_WorkThreadEvent3, global
 /* 80039E38 000033F8  4E 80 00 20 */	blr 
-.endfn CWorkThread_Event2
+.endfn CWorkThread_WorkThreadEvent3
 
-.fn CWorkThread_Event1, global
+.fn CWorkThread_WorkThreadEvent2, global
 /* 80039E3C 000033FC  4E 80 00 20 */	blr 
-.endfn CWorkThread_Event1
+.endfn CWorkThread_WorkThreadEvent2
 
 #CGameRestart
 
-.fn func_80039E40, global
+.fn CGameRestart_wkUpdate, global
 /* 80039E40 00003400  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039E44 00003404  7C 08 02 A6 */	mflr r0
 /* 80039E48 00003408  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1017,7 +1017,7 @@
 /* 80039E84 00003444  7C 08 03 A6 */	mtlr r0
 /* 80039E88 00003448  38 21 00 10 */	addi r1, r1, 0x10
 /* 80039E8C 0000344C  4E 80 00 20 */	blr 
-.endfn func_80039E40
+.endfn CGameRestart_wkUpdate
 
 .fn __dt___unnamed_CGame_cpp_CGameRestart, global
 /* 80039E90 00003450  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1132,12 +1132,12 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte func_80039E40
-	.4byte CWorkThread_Event1
-	.4byte CWorkThread_Event2
-	.4byte func_804396A0
-	.4byte func_804396A4
-	.4byte CWorkThread_Event3
+	.4byte CGameRestart_wkUpdate
+	.4byte CWorkThread_WorkThreadEvent2
+	.4byte CWorkThread_WorkThreadEvent3
+	.4byte CProc_WorkThreadEvent4
+	.4byte CProc_WorkThreadEvent5
+	.4byte CWorkThread_WorkThreadEvent6
 .endobj __vt___unnamed_CGame_cpp_CGameRestart
 
 
@@ -1188,12 +1188,12 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte func_8003944C
-	.4byte func_80039550
-	.4byte CWorkThread_Event2
-	.4byte func_800396C8
-	.4byte func_80039890
-	.4byte func_80039B38
+	.4byte CGame_wkUpdate
+	.4byte CGame_WorkThreadEvent2
+	.4byte CWorkThread_WorkThreadEvent3
+	.4byte CGame_WorkThreadEvent4
+	.4byte CGame_WorkThreadEvent5
+	.4byte CGame_WorkThreadEvent6
 .endobj __vt__CGame
 
 .obj CGame_hierarchy, global
@@ -1489,14 +1489,14 @@
 
 .obj "@eti_80021050", local
 .hidden "@eti_80021050"
-	.4byte func_8003944C
+	.4byte CGame_wkUpdate
 	.4byte 0x00000104
 	.4byte "@etb_80006728"
 .endobj "@eti_80021050"
 
 .obj "@eti_8002105C", local
 .hidden "@eti_8002105C"
-	.4byte func_80039550
+	.4byte CGame_WorkThreadEvent2
 	.4byte 0x000000A4
 	.4byte "@etb_80006730"
 .endobj "@eti_8002105C"
@@ -1517,14 +1517,14 @@
 
 .obj "@eti_80021080", local
 .hidden "@eti_80021080"
-	.4byte func_800396C8
+	.4byte CGame_WorkThreadEvent4
 	.4byte 0x000001C8
 	.4byte "@etb_80006758"
 .endobj "@eti_80021080"
 
 .obj "@eti_8002108C", local
 .hidden "@eti_8002108C"
-	.4byte func_80039890
+	.4byte CGame_WorkThreadEvent5
 	.4byte 0x000000EC
 	.4byte "@etb_80006760"
 .endobj "@eti_8002108C"
@@ -1559,7 +1559,7 @@
 
 .obj "@eti_800210C8", local
 .hidden "@eti_800210C8"
-	.4byte func_80039B38
+	.4byte CGame_WorkThreadEvent6
 	.4byte 0x000000D0
 	.4byte "@etb_8000679C"
 .endobj "@eti_800210C8"
@@ -1580,7 +1580,7 @@
 
 .obj "@eti_800210EC", local
 .hidden "@eti_800210EC"
-	.4byte func_80039E40
+	.4byte CGameRestart_wkUpdate
 	.4byte 0x00000050
 	.4byte "@etb_800067B4"
 .endobj "@eti_800210EC"

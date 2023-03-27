@@ -1495,7 +1495,7 @@
 /* 804389F4 00401FB4  4E 80 00 20 */	blr 
 .endfn func_804385D0
 
-.fn func_804389F8, global
+.fn CWorkThread_WorkThreadEvent4, global
 /* 804389F8 00401FB8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804389FC 00401FBC  7C 08 02 A6 */	mflr r0
 /* 80438A00 00401FC0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1507,9 +1507,9 @@
 /* 80438A18 00401FD8  7C 08 03 A6 */	mtlr r0
 /* 80438A1C 00401FDC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80438A20 00401FE0  4E 80 00 20 */	blr 
-.endfn func_804389F8
+.endfn CWorkThread_WorkThreadEvent4
 
-.fn func_80438A24, global
+.fn CWorkThread_WorkThreadEvent5, global
 /* 80438A24 00401FE4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80438A28 00401FE8  7C 08 02 A6 */	mflr r0
 /* 80438A2C 00401FEC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1521,11 +1521,11 @@
 /* 80438A44 00402004  7C 08 03 A6 */	mtlr r0
 /* 80438A48 00402008  38 21 00 10 */	addi r1, r1, 0x10
 /* 80438A4C 0040200C  4E 80 00 20 */	blr 
-.endfn func_80438A24
+.endfn CWorkThread_WorkThreadEvent5
 
-.fn func_80438A50, global
+.fn CWorkThread_wkUpdate, global
 /* 80438A50 00402010  4E 80 00 20 */	blr 
-.endfn func_80438A50
+.endfn CWorkThread_wkUpdate
 
 .fn func_80438A54, global
 /* 80438A54 00402014  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1756,12 +1756,12 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte func_80438A50
-	.4byte CWorkThread_Event1
-	.4byte CWorkThread_Event2
-	.4byte func_804389F8
-	.4byte func_80438A24
-	.4byte CWorkThread_Event3
+	.4byte CWorkThread_wkUpdate
+	.4byte CWorkThread_WorkThreadEvent2
+	.4byte CWorkThread_WorkThreadEvent3
+	.4byte CWorkThread_WorkThreadEvent4
+	.4byte CWorkThread_WorkThreadEvent5
+	.4byte CWorkThread_WorkThreadEvent6
 .endobj __vt__CWorkThread
 
 .obj __vt__CMsgParam_8, global
@@ -2017,14 +2017,14 @@
 
 .obj "@eti_80033DDC", local
 .hidden "@eti_80033DDC"
-	.4byte func_804389F8
+	.4byte CWorkThread_WorkThreadEvent4
 	.4byte 0x0000002C
 	.4byte "@etb_8001C18C"
 .endobj "@eti_80033DDC"
 
 .obj "@eti_80033DE8", local
 .hidden "@eti_80033DE8"
-	.4byte func_80438A24
+	.4byte CWorkThread_WorkThreadEvent5
 	.4byte 0x0000002C
 	.4byte "@etb_8001C194"
 .endobj "@eti_80033DE8"

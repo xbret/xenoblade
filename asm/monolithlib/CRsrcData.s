@@ -185,7 +185,7 @@
 /* 80439F24 004034E4  7C FC 3B 78 */	mr r28, r7
 /* 80439F28 004034E8  7D 1D 43 78 */	mr r29, r8
 /* 80439F2C 004034EC  3B FF 5E 4C */	addi r31, r31, lbl_80525E4C@l
-/* 80439F30 004034F0  4B FF D6 85 */	bl getMemRegionIndex
+/* 80439F30 004034F0  4B FF D6 85 */	bl getHeapIndex
 /* 80439F34 004034F4  7C 64 1B 78 */	mr r4, r3
 /* 80439F38 004034F8  38 60 04 E8 */	li r3, 0x4e8
 /* 80439F3C 004034FC  4B FF AB 21 */	bl heap_malloc
@@ -245,7 +245,7 @@
 /* 80439FFC 004035BC  4E 80 00 20 */	blr 
 .endfn func_80439F9C
 
-.fn func_8043A000, global
+.fn CRsrcData_wkUpdate, global
 /* 8043A000 004035C0  A8 83 04 E2 */	lha r4, 0x4e2(r3)
 /* 8043A004 004035C4  2C 04 00 00 */	cmpwi r4, 0
 /* 8043A008 004035C8  4D 82 00 20 */	beqlr 
@@ -257,9 +257,9 @@
 /* 8043A020 004035E0  54 04 EF FE */	rlwinm r4, r0, 0x1d, 0x1f, 0x1f
 /* 8043A024 004035E4  4B FF FD 8C */	b func_80439DB0
 /* 8043A028 004035E8  4E 80 00 20 */	blr 
-.endfn func_8043A000
+.endfn CRsrcData_wkUpdate
 
-.fn func_8043A02C, global
+.fn CRsrcData_WorkThreadEvent4, global
 /* 8043A02C 004035EC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8043A030 004035F0  7C 08 02 A6 */	mflr r0
 /* 8043A034 004035F4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -272,7 +272,7 @@
 /* 8043A050 00403610  54 00 07 BD */	rlwinm. r0, r0, 0, 0x1e, 0x1e
 /* 8043A054 00403614  41 82 00 10 */	beq .L_8043A064
 /* 8043A058 00403618  7F E3 FB 78 */	mr r3, r31
-/* 8043A05C 0040361C  4B FF E9 9D */	bl func_804389F8
+/* 8043A05C 0040361C  4B FF E9 9D */	bl CWorkThread_WorkThreadEvent4
 /* 8043A060 00403620  48 00 00 08 */	b .L_8043A068
 .L_8043A064:
 /* 8043A064 00403624  38 60 00 00 */	li r3, 0
@@ -282,9 +282,9 @@
 /* 8043A070 00403630  7C 08 03 A6 */	mtlr r0
 /* 8043A074 00403634  38 21 00 10 */	addi r1, r1, 0x10
 /* 8043A078 00403638  4E 80 00 20 */	blr 
-.endfn func_8043A02C
+.endfn CRsrcData_WorkThreadEvent4
 
-.fn func_8043A07C, global
+.fn CRsrcData_WorkThreadEvent5, global
 /* 8043A07C 0040363C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8043A080 00403640  7C 08 02 A6 */	mflr r0
 /* 8043A084 00403644  90 01 00 14 */	stw r0, 0x14(r1)
@@ -304,7 +304,7 @@
 /* 8043A0B8 00403678  41 82 00 10 */	beq .L_8043A0C8
 .L_8043A0BC:
 /* 8043A0BC 0040367C  7F E3 FB 78 */	mr r3, r31
-/* 8043A0C0 00403680  4B FF E9 65 */	bl func_80438A24
+/* 8043A0C0 00403680  4B FF E9 65 */	bl CWorkThread_WorkThreadEvent5
 /* 8043A0C4 00403684  48 00 00 08 */	b .L_8043A0CC
 .L_8043A0C8:
 /* 8043A0C8 00403688  38 60 00 00 */	li r3, 0
@@ -314,7 +314,7 @@
 /* 8043A0D4 00403694  7C 08 03 A6 */	mtlr r0
 /* 8043A0D8 00403698  38 21 00 10 */	addi r1, r1, 0x10
 /* 8043A0DC 0040369C  4E 80 00 20 */	blr 
-.endfn func_8043A07C
+.endfn CRsrcData_WorkThreadEvent5
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -371,12 +371,12 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte func_8043A000
-	.4byte CWorkThread_Event1
-	.4byte CWorkThread_Event2
-	.4byte func_8043A02C
-	.4byte func_8043A07C
-	.4byte CWorkThread_Event3
+	.4byte CRsrcData_wkUpdate
+	.4byte CWorkThread_WorkThreadEvent2
+	.4byte CWorkThread_WorkThreadEvent3
+	.4byte CRsrcData_WorkThreadEvent4
+	.4byte CRsrcData_WorkThreadEvent5
+	.4byte CWorkThread_WorkThreadEvent6
 .endobj __vt__CRsrcData
 
 .obj CRsrcData_hierarchy, global
@@ -502,14 +502,14 @@
 
 .obj "@eti_80033F38", local
 .hidden "@eti_80033F38"
-	.4byte func_8043A02C
+	.4byte CRsrcData_WorkThreadEvent4
 	.4byte 0x00000050
 	.4byte "@etb_8001C2BC"
 .endobj "@eti_80033F38"
 
 .obj "@eti_80033F44", local
 .hidden "@eti_80033F44"
-	.4byte func_8043A07C
+	.4byte CRsrcData_WorkThreadEvent5
 	.4byte 0x00000064
 	.4byte "@etb_8001C2C4"
 .endobj "@eti_80033F44"

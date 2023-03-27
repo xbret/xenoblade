@@ -279,11 +279,11 @@
 /* 8045F318 004288D8  4B EE A7 88 */	b MEMFreeToAllocator
 .endfn func_8045F30C
 
-.fn func_8045F31C, global
+.fn CLibLayout_wkUpdate, global
 /* 8045F31C 004288DC  4E 80 00 20 */	blr 
-.endfn func_8045F31C
+.endfn CLibLayout_wkUpdate
 
-.fn func_8045F320, global
+.fn CLibLayout_WorkThreadEvent4, global
 /* 8045F320 004288E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045F324 004288E4  7C 08 02 A6 */	mflr r0
 /* 8045F328 004288E8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -321,7 +321,7 @@
 /* 8045F3A8 00428968  90 7F 02 34 */	stw r3, 0x234(r31)
 /* 8045F3AC 0042896C  7F E3 FB 78 */	mr r3, r31
 /* 8045F3B0 00428970  90 0D BB D8 */	stw r0, mspAllocator__Q34nw4r3lyt6Layout@sda21(r13)
-/* 8045F3B4 00428974  4B FD 96 45 */	bl func_804389F8
+/* 8045F3B4 00428974  4B FD 96 45 */	bl CWorkThread_WorkThreadEvent4
 /* 8045F3B8 00428978  48 00 00 08 */	b .L_8045F3C0
 .L_8045F3BC:
 /* 8045F3BC 0042897C  38 60 00 00 */	li r3, 0
@@ -331,9 +331,9 @@
 /* 8045F3C8 00428988  7C 08 03 A6 */	mtlr r0
 /* 8045F3CC 0042898C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045F3D0 00428990  4E 80 00 20 */	blr 
-.endfn func_8045F320
+.endfn CLibLayout_WorkThreadEvent4
 
-.fn func_8045F3D4, global
+.fn CLibLayout_WorkThreadEvent5, global
 /* 8045F3D4 00428994  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045F3D8 00428998  7C 08 02 A6 */	mflr r0
 /* 8045F3DC 0042899C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -351,7 +351,7 @@
 /* 8045F40C 004289CC  38 00 FF FF */	li r0, -1
 /* 8045F410 004289D0  90 1F 01 DC */	stw r0, 0x1dc(r31)
 /* 8045F414 004289D4  7F E3 FB 78 */	mr r3, r31
-/* 8045F418 004289D8  4B FD 96 0D */	bl func_80438A24
+/* 8045F418 004289D8  4B FD 96 0D */	bl CWorkThread_WorkThreadEvent5
 /* 8045F41C 004289DC  48 00 00 08 */	b .L_8045F424
 .L_8045F420:
 /* 8045F420 004289E0  38 60 00 00 */	li r3, 0
@@ -361,7 +361,7 @@
 /* 8045F42C 004289EC  7C 08 03 A6 */	mtlr r0
 /* 8045F430 004289F0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045F434 004289F4  4E 80 00 20 */	blr
-.endfn func_8045F3D4
+.endfn CLibLayout_WorkThreadEvent5
 
 .fn func_8045F438, global
 /* 8045F438 004289F8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -791,12 +791,12 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte func_8045F31C
-	.4byte CWorkThread_Event1
-	.4byte CWorkThread_Event2
-	.4byte func_8045F320
-	.4byte func_8045F3D4
-	.4byte CWorkThread_Event3
+	.4byte CLibLayout_wkUpdate
+	.4byte CWorkThread_WorkThreadEvent2
+	.4byte CWorkThread_WorkThreadEvent3
+	.4byte CLibLayout_WorkThreadEvent4
+	.4byte CLibLayout_WorkThreadEvent5
+	.4byte CWorkThread_WorkThreadEvent6
 .endobj __vt__CLibLayout
 
 .obj CLibLayout_hierarchy, global
@@ -1003,14 +1003,14 @@
 
 .obj "@eti_8003542C", local
 .hidden "@eti_8003542C"
-	.4byte func_8045F320
+	.4byte CLibLayout_WorkThreadEvent4
 	.4byte 0x000000B4
 	.4byte "@etb_8001D854"
 .endobj "@eti_8003542C"
 
 .obj "@eti_80035438", local
 .hidden "@eti_80035438"
-	.4byte func_8045F3D4
+	.4byte CLibLayout_WorkThreadEvent5
 	.4byte 0x00000064
 	.4byte "@etb_8001D85C"
 .endobj "@eti_80035438"

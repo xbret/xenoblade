@@ -8,7 +8,7 @@
 /* 800614FC 0002AABC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80061500 0002AAC0  BF C1 00 08 */	stmw r30, 8(r1)
 /* 80061504 0002AAC4  7C 7E 1B 78 */	mr r30, r3
-/* 80061508 0002AAC8  48 3D 60 AD */	bl getMemRegionIndex
+/* 80061508 0002AAC8  48 3D 60 AD */	bl getHeapIndex
 /* 8006150C 0002AACC  7C 64 1B 78 */	mr r4, r3
 /* 80061510 0002AAD0  38 60 00 54 */	li r3, 0x54
 /* 80061514 0002AAD4  48 3D 35 49 */	bl heap_malloc

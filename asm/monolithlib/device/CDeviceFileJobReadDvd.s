@@ -135,7 +135,7 @@
 /* 804520C8 0041B688  4E 80 00 20 */	blr 
 .endfn func_80452054
 
-.fn func_804520CC, global
+.fn CDeviceFileJobReadDvd_wkUpdate, global
 /* 804520CC 0041B68C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804520D0 0041B690  7C 08 02 A6 */	mflr r0
 /* 804520D4 0041B694  90 01 00 24 */	stw r0, 0x24(r1)
@@ -191,9 +191,9 @@
 /* 80452190 0041B750  7C 08 03 A6 */	mtlr r0
 /* 80452194 0041B754  38 21 00 20 */	addi r1, r1, 0x20
 /* 80452198 0041B758  4E 80 00 20 */	blr 
-.endfn func_804520CC
+.endfn CDeviceFileJobReadDvd_wkUpdate
 
-.fn func_8045219C, global
+.fn CDeviceFileJobReadDvd_WorkThreadEvent4, global
 /* 8045219C 0041B75C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804521A0 0041B760  7C 08 02 A6 */	mflr r0
 /* 804521A4 0041B764  90 01 00 14 */	stw r0, 0x14(r1)
@@ -202,7 +202,7 @@
 /* 804521B0 0041B770  80 03 00 7C */	lwz r0, 0x7c(r3)
 /* 804521B4 0041B774  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 804521B8 0041B778  41 82 00 0C */	beq .L_804521C4
-/* 804521BC 0041B77C  4B FE 68 3D */	bl func_804389F8
+/* 804521BC 0041B77C  4B FE 68 3D */	bl CWorkThread_WorkThreadEvent4
 /* 804521C0 0041B780  48 00 00 3C */	b .L_804521FC
 .L_804521C4:
 /* 804521C4 0041B784  4B FE 63 B5 */	bl func_80438578
@@ -217,7 +217,7 @@
 /* 804521E8 0041B7A8  4B FF CE 49 */	bl func_8044F030
 .L_804521EC:
 /* 804521EC 0041B7AC  7F E3 FB 78 */	mr r3, r31
-/* 804521F0 0041B7B0  4B FE 68 09 */	bl func_804389F8
+/* 804521F0 0041B7B0  4B FE 68 09 */	bl CWorkThread_WorkThreadEvent4
 /* 804521F4 0041B7B4  48 00 00 08 */	b .L_804521FC
 .L_804521F8:
 /* 804521F8 0041B7B8  38 60 00 00 */	li r3, 0
@@ -227,9 +227,9 @@
 /* 80452204 0041B7C4  7C 08 03 A6 */	mtlr r0
 /* 80452208 0041B7C8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045220C 0041B7CC  4E 80 00 20 */	blr 
-.endfn func_8045219C
+.endfn CDeviceFileJobReadDvd_WorkThreadEvent4
 
-.fn func_80452210, global
+.fn CDeviceFileJobReadDvd_WorkThreadEvent5, global
 /* 80452210 0041B7D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80452214 0041B7D4  7C 08 02 A6 */	mflr r0
 /* 80452218 0041B7D8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -243,13 +243,13 @@
 /* 80452238 0041B7F8  38 60 00 00 */	li r3, 0
 /* 8045223C 0041B7FC  48 00 00 08 */	b .L_80452244
 .L_80452240:
-/* 80452240 0041B800  4B FE 67 E5 */	bl func_80438A24
+/* 80452240 0041B800  4B FE 67 E5 */	bl CWorkThread_WorkThreadEvent5
 .L_80452244:
 /* 80452244 0041B804  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80452248 0041B808  7C 08 03 A6 */	mtlr r0
 /* 8045224C 0041B80C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80452250 0041B810  4E 80 00 20 */	blr 
-.endfn func_80452210
+.endfn CDeviceFileJobReadDvd_WorkThreadEvent5
 
 .fn func_80452254, global
 /* 80452254 0041B814  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -322,12 +322,12 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte func_804520CC
-	.4byte CWorkThread_Event1
-	.4byte CWorkThread_Event2
-	.4byte func_8045219C
-	.4byte func_80452210
-	.4byte CWorkThread_Event3
+	.4byte CDeviceFileJobReadDvd_wkUpdate
+	.4byte CWorkThread_WorkThreadEvent2
+	.4byte CWorkThread_WorkThreadEvent3
+	.4byte CDeviceFileJobReadDvd_WorkThreadEvent4
+	.4byte CDeviceFileJobReadDvd_WorkThreadEvent5
+	.4byte CWorkThread_WorkThreadEvent6
 	.4byte func_80451EC0
 	.4byte func_80451FC0
 	.4byte func_80452054
@@ -439,21 +439,21 @@
 
 .obj "@eti_80034CAC", local
 .hidden "@eti_80034CAC"
-	.4byte func_804520CC
+	.4byte CDeviceFileJobReadDvd_wkUpdate
 	.4byte 0x000000D0
 	.4byte "@etb_8001CFCC"
 .endobj "@eti_80034CAC"
 
 .obj "@eti_80034CB8", local
 .hidden "@eti_80034CB8"
-	.4byte func_8045219C
+	.4byte CDeviceFileJobReadDvd_WorkThreadEvent4
 	.4byte 0x00000074
 	.4byte "@etb_8001CFD4"
 .endobj "@eti_80034CB8"
 
 .obj "@eti_80034CC4", local
 .hidden "@eti_80034CC4"
-	.4byte func_80452210
+	.4byte CDeviceFileJobReadDvd_WorkThreadEvent5
 	.4byte 0x00000044
 	.4byte "@etb_8001CFDC"
 .endobj "@eti_80034CC4"

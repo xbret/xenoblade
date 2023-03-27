@@ -7,14 +7,14 @@
 struct PackHeader{
         u32 unk0;
         u32 unk4;
-        u32 fileHashTableOffset; //0x8
-        u32 pkhFilesize; //0xC
-        u32 files; //0x10
+        u32 mFileHashTableOffset; //0x8
+        u32 mPkhFilesize; //0xC
+        u32 mFiles; //0x10
         u8 unk14[0x20];
-        u32 hashValTableLength; //0x34
-        u8 hashValTable[0x40]; //0x38
+        u32 mHashValTableLength; //0x34
+        u8 mHashValTable[0x40]; //0x38
         //might be a struct?
-        u64 fileHashTable[]; //0x78
+        u64 mFileHashTable[]; //0x78
 };
 
 struct UnkStruct{
@@ -59,14 +59,14 @@ public:
 
     u8 unk4[0x4C-0x4];
     void* unk4C;
-    PackHeader* packHeader; //0x50
+    PackHeader* mPackHeader; //0x50
     u32 unk54;
-    u64* fileHashTablePtr; //0x58
+    u64* mFileHashTable; //0x58
     u16* unk5C; //0x5C
     u16* unk60; //0x60
     u8 unk64[8];
-    u32 hashLowerHalf; //0x6c
-    u32 hashUpperHalf; //0x70
+    u32 mHashLowerHalf; //0x6c
+    u32 mHashUpperHalf; //0x70
     int unk74;
     u8 unk78;
     u8 unk79;

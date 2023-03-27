@@ -6,40 +6,40 @@ extern "C" {
 #endif
 
 u32 PPCMfmsr(void);
-void PPCMtmsr(u32);
+void PPCMtmsr(u32 val);
 
 u32 PPCMfhid0(void);
-void PPCMthid0(u32);
+void PPCMthid0(u32 val);
 
 u32 PPCMfl2cr(void);
-void PPCMtl2cr(u32);
+void PPCMtl2cr(u32 val);
 
-void PPCMtdec(u32);
+void PPCMtdec(u32 val);
 
 void PPCSync(void);
 void PPCHalt(void);
 
-void PPCMtmmcr0(u32);
-void PPCMtmmcr1(u32);
+void PPCMtmmcr0(u32 val);
+void PPCMtmmcr1(u32 val);
 
-void PPCMtpmc1(u32);
-void PPCMtpmc2(u32);
-void PPCMtpmc3(u32);
-void PPCMtpmc4(u32);
+void PPCMtpmc1(u32 val);
+void PPCMtpmc2(u32 val);
+void PPCMtpmc3(u32 val);
+void PPCMtpmc4(u32 val);
 
 u32 PPCMffpscr(void);
-void PPCMtfpscr(u32);
+void PPCMtfpscr(u32 val);
 
 u32 PPCMfhid2(void);
-void PPCMthid2(u32);
+void PPCMthid2(u32 val);
 
 u32 PPCMfwpar(void);
-void PPCMtwpar(u32);
+void PPCMtwpar(u32 val);
 
 void PPCDisableSpeculation(void);
 void PPCSetFpNonIEEEMode(void);
 
-void PPCMthid4(u32);
+void PPCMthid4(u32 val);
 
 #ifdef __cplusplus
 }

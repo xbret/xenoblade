@@ -1513,16 +1513,16 @@
 /* 80454DA0 0041E360  4E 80 00 20 */	blr 
 .endfn func_80454B70
 
-.fn func_80454DA4, global
+.fn CDeviceFontLayer_wkUpdate, global
 /* 80454DA4 0041E364  88 03 02 F0 */	lbz r0, 0x2f0(r3)
 /* 80454DA8 0041E368  2C 00 00 00 */	cmpwi r0, 0
 /* 80454DAC 0041E36C  4D 82 00 20 */	beqlr 
 /* 80454DB0 0041E370  38 80 00 00 */	li r4, 0
 /* 80454DB4 0041E374  4B FE 31 3C */	b func_80437EF0
 /* 80454DB8 0041E378  4E 80 00 20 */	blr 
-.endfn func_80454DA4
+.endfn CDeviceFontLayer_wkUpdate
 
-.fn func_80454DBC, global
+.fn CDeviceFontLayer_WorkThreadEvent5, global
 /* 80454DBC 0041E37C  80 83 00 60 */	lwz r4, 0x60(r3)
 /* 80454DC0 0041E380  80 04 00 00 */	lwz r0, 0(r4)
 /* 80454DC4 0041E384  7C 00 20 40 */	cmplw r0, r4
@@ -1530,11 +1530,11 @@
 /* 80454DCC 0041E38C  88 03 02 F0 */	lbz r0, 0x2f0(r3)
 /* 80454DD0 0041E390  2C 00 00 00 */	cmpwi r0, 0
 /* 80454DD4 0041E394  41 82 00 08 */	beq .L_80454DDC
-/* 80454DD8 0041E398  4B FE 3C 4C */	b func_80438A24
+/* 80454DD8 0041E398  4B FE 3C 4C */	b CWorkThread_WorkThreadEvent5
 .L_80454DDC:
 /* 80454DDC 0041E39C  38 60 00 00 */	li r3, 0
 /* 80454DE0 0041E3A0  4E 80 00 20 */	blr 
-.endfn func_80454DBC
+.endfn CDeviceFontLayer_WorkThreadEvent5
 
 .fn func_80454DE4, global
 /* 80454DE4 0041E3A4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1649,12 +1649,12 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte func_80454DA4
-	.4byte CWorkThread_Event1
-	.4byte CWorkThread_Event2
-	.4byte func_804389F8
-	.4byte func_80454DBC
-	.4byte CWorkThread_Event3
+	.4byte CDeviceFontLayer_wkUpdate
+	.4byte CWorkThread_WorkThreadEvent2
+	.4byte CWorkThread_WorkThreadEvent3
+	.4byte CWorkThread_WorkThreadEvent4
+	.4byte CDeviceFontLayer_WorkThreadEvent5
+	.4byte CWorkThread_WorkThreadEvent6
 .endobj __vt__CDeviceFontLayer
 
 .obj CDeviceFontLayer_hierarchy, global

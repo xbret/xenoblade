@@ -1,5 +1,5 @@
-#include "RevoSDK/base/PPCArch.h"
-#include "RevoSDK/os/OSError.h"
+#include "RevoSDK/BASE.h"
+#include "RevoSDK/OS.h"
 
 asm u32 PPCMfmsr(void) {
     // clang-format off

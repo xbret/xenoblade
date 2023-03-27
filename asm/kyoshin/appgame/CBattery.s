@@ -62,7 +62,7 @@
 /* 802B92AC 0028286C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802B92B0 00282870  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802B92B4 00282874  7C 7F 1B 78 */	mr r31, r3
-/* 802B92B8 00282878  48 17 E2 FD */	bl getMemRegionIndex
+/* 802B92B8 00282878  48 17 E2 FD */	bl getHeapIndex
 /* 802B92BC 0028287C  3C 80 80 51 */	lis r4, CBattery_strpool@ha
 /* 802B92C0 00282880  7F E5 FB 78 */	mr r5, r31
 /* 802B92C4 00282884  38 84 CD C8 */	addi r4, r4, CBattery_strpool@l
@@ -241,7 +241,7 @@
 /* 802B9504 00282AC4  38 60 00 01 */	li r3, 1
 /* 802B9508 00282AC8  48 00 00 9C */	b .L_802B95A4
 .L_802B950C:
-/* 802B950C 00282ACC  48 17 E0 A9 */	bl getMemRegionIndex
+/* 802B950C 00282ACC  48 17 E0 A9 */	bl getHeapIndex
 /* 802B9510 00282AD0  3F C0 80 51 */	lis r30, CBattery_strpool@ha
 /* 802B9514 00282AD4  7C 64 1B 78 */	mr r4, r3
 /* 802B9518 00282AD8  3B DE CD C8 */	addi r30, r30, CBattery_strpool@l

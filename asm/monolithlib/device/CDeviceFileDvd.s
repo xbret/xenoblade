@@ -659,7 +659,7 @@
 /* 8045141C 0041A9DC  4E 80 00 20 */	blr 
 .endfn func_804510BC
 
-.fn func_80451420, global
+.fn CDeviceFileDvd_wkUpdate, global
 /* 80451420 0041A9E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80451424 0041A9E4  7C 08 02 A6 */	mflr r0
 /* 80451428 0041A9E8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -812,9 +812,9 @@
 /* 8045162C 0041ABEC  7C 08 03 A6 */	mtlr r0
 /* 80451630 0041ABF0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80451634 0041ABF4  4E 80 00 20 */	blr 
-.endfn func_80451420
+.endfn CDeviceFileDvd_wkUpdate
 
-.fn func_80451638, global
+.fn CDeviceFileDvd_WorkThreadEvent4, global
 /* 80451638 0041ABF8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045163C 0041ABFC  7C 08 02 A6 */	mflr r0
 /* 80451640 0041AC00  90 01 00 14 */	stw r0, 0x14(r1)
@@ -822,15 +822,15 @@
 /* 80451648 0041AC08  7C 7F 1B 78 */	mr r31, r3
 /* 8045164C 0041AC0C  4B EB 93 25 */	bl DVDInit
 /* 80451650 0041AC10  7F E3 FB 78 */	mr r3, r31
-/* 80451654 0041AC14  4B FE 73 A5 */	bl func_804389F8
+/* 80451654 0041AC14  4B FE 73 A5 */	bl CWorkThread_WorkThreadEvent4
 /* 80451658 0041AC18  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8045165C 0041AC1C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80451660 0041AC20  7C 08 03 A6 */	mtlr r0
 /* 80451664 0041AC24  38 21 00 10 */	addi r1, r1, 0x10
 /* 80451668 0041AC28  4E 80 00 20 */	blr 
-.endfn func_80451638
+.endfn CDeviceFileDvd_WorkThreadEvent4
 
-.fn func_8045166C, global
+.fn CDeviceFileDvd_WorkThreadEvent5, global
 /* 8045166C 0041AC2C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80451670 0041AC30  7C 08 02 A6 */	mflr r0
 /* 80451674 0041AC34  90 01 00 14 */	stw r0, 0x14(r1)
@@ -847,7 +847,7 @@
 /* 804516A0 0041AC60  2C 03 00 00 */	cmpwi r3, 0
 /* 804516A4 0041AC64  40 82 00 10 */	bne .L_804516B4
 /* 804516A8 0041AC68  7F E3 FB 78 */	mr r3, r31
-/* 804516AC 0041AC6C  4B FE 73 79 */	bl func_80438A24
+/* 804516AC 0041AC6C  4B FE 73 79 */	bl CWorkThread_WorkThreadEvent5
 /* 804516B0 0041AC70  48 00 00 08 */	b .L_804516B8
 .L_804516B4:
 /* 804516B4 0041AC74  38 60 00 00 */	li r3, 0
@@ -857,9 +857,9 @@
 /* 804516C0 0041AC80  7C 08 03 A6 */	mtlr r0
 /* 804516C4 0041AC84  38 21 00 10 */	addi r1, r1, 0x10
 /* 804516C8 0041AC88  4E 80 00 20 */	blr 
-.endfn func_8045166C
+.endfn CDeviceFileDvd_WorkThreadEvent5
 
-.fn func_804516CC, global
+.fn CDeviceFileDvd_WorkThreadEvent6, global
 /* 804516CC 0041AC8C  80 03 01 C4 */	lwz r0, 0x1c4(r3)
 /* 804516D0 0041AC90  2C 00 00 03 */	cmpwi r0, 3
 /* 804516D4 0041AC94  40 82 00 44 */	bne .L_80451718
@@ -884,7 +884,7 @@
 .L_80451718:
 /* 80451718 0041ACD8  38 60 00 01 */	li r3, 1
 /* 8045171C 0041ACDC  4E 80 00 20 */	blr 
-.endfn func_804516CC
+.endfn CDeviceFileDvd_WorkThreadEvent6
 
 .fn __ct__80451720, global
 /* 80451720 0041ACE0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1521,12 +1521,12 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte func_80451420
-	.4byte CWorkThread_Event1
-	.4byte CWorkThread_Event2
-	.4byte func_80451638
-	.4byte func_8045166C
-	.4byte func_804516CC
+	.4byte CDeviceFileDvd_wkUpdate
+	.4byte CWorkThread_WorkThreadEvent2
+	.4byte CWorkThread_WorkThreadEvent3
+	.4byte CDeviceFileDvd_WorkThreadEvent4
+	.4byte CDeviceFileDvd_WorkThreadEvent5
+	.4byte CDeviceFileDvd_WorkThreadEvent6
 .endobj __vt__CDeviceFileDvd
 
 .obj CDeviceFileDvd_hierarchy, global
@@ -1723,21 +1723,21 @@
 
 .obj "@eti_80034BF8", local
 .hidden "@eti_80034BF8"
-	.4byte func_80451420
+	.4byte CDeviceFileDvd_wkUpdate
 	.4byte 0x00000218
 	.4byte "@etb_8001CF54"
 .endobj "@eti_80034BF8"
 
 .obj "@eti_80034C04", local
 .hidden "@eti_80034C04"
-	.4byte func_80451638
+	.4byte CDeviceFileDvd_WorkThreadEvent4
 	.4byte 0x00000034
 	.4byte "@etb_8001CF5C"
 .endobj "@eti_80034C04"
 
 .obj "@eti_80034C10", local
 .hidden "@eti_80034C10"
-	.4byte func_8045166C
+	.4byte CDeviceFileDvd_WorkThreadEvent5
 	.4byte 0x00000060
 	.4byte "@etb_8001CF64"
 .endobj "@eti_80034C10"

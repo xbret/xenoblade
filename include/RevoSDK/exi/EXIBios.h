@@ -6,16 +6,15 @@
 extern "C" {
 #endif
 
-typedef struct EXIUnkStruct0 {
-    u32 WORD_0x0;
-    u32 WORD_0x4;
-    u32 WORD_0x8;
-    u32 WORD_0xC;
-    u32 WORD_0x10;
-} EXIUnkStruct0;
 
-// Length is at least channel count
-volatile EXIUnkStruct0 EXI_CD006800[EXI_MAX_CHAN] : 0xCD006800;
+typedef enum {
+    EXI_FREQ_1MHZ,
+    EXI_FREQ_2MHZ,
+    EXI_FREQ_4MHZ,
+    EXI_FREQ_8MHZ,
+    EXI_FREQ_16MHZ,
+    EXI_FREQ_32HZ,
+} EXIFreq;
 
 typedef struct EXIItem {
     u32 dev;              // at 0x0
@@ -36,22 +35,24 @@ typedef struct EXIData {
     EXIItem items[3]; // at 0x28
 } EXIData;
 
-BOOL EXIImm(EXIChannel, void*, s32, u32, EXICallback);
-BOOL EXIImmEx(EXIChannel, void*, s32, u32);
-BOOL EXIDma(EXIChannel, void*, s32, u32, EXICallback);
-BOOL EXISync(EXIChannel);
-void EXIClearInterrupts(EXIChannel, BOOL, BOOL, BOOL);
-EXICallback EXISetExiCallback(EXIChannel, EXICallback);
+BOOL EXIImm(EXIChannel chan, void* buf, s32 len, u32 type,
+            EXICallback callback);
+BOOL EXIImmEx(EXIChannel chan, void* buf, s32 len, u32 type);
+BOOL EXIDma(EXIChannel chan, void* buf, s32 len, u32 type,
+            EXICallback callback);
+BOOL EXISync(EXIChannel chan);
+void EXIClearInterrupts(EXIChannel chan, BOOL exi, BOOL tc, BOOL ext);
+EXICallback EXISetExiCallback(EXIChannel chan, EXICallback callback);
 void EXIProbeReset(void);
-BOOL EXIProbe(EXIChannel);
-BOOL EXIAttach(EXIChannel, EXICallback);
-BOOL EXIDetach(EXIChannel);
-BOOL EXISelect(EXIChannel, u32, u32);
-BOOL EXIDeselect(EXIChannel);
+BOOL EXIProbe(EXIChannel chan);
+BOOL EXIAttach(EXIChannel chan, EXICallback callback);
+BOOL EXIDetach(EXIChannel chan);
+BOOL EXISelect(EXIChannel chan, u32 dev, u32 freq);
+BOOL EXIDeselect(EXIChannel chan);
 void EXIInit(void);
-BOOL EXILock(EXIChannel, u32, EXICallback);
-BOOL EXIUnlock(EXIChannel);
-s32 EXIGetID(EXIChannel, u32, u32*);
+BOOL EXILock(EXIChannel chan, u32 dev, EXICallback callback);
+BOOL EXIUnlock(EXIChannel chan);
+s32 EXIGetID(EXIChannel chan, u32 dev, u32* out);
 
 #ifdef __cplusplus
 }

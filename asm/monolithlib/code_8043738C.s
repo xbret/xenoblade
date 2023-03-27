@@ -157,10 +157,10 @@
 /* 804375B0 00400B70  4E 80 00 20 */	blr 
 .endfn __dt__80437550
 
-.fn getMemRegionIndex, global
+.fn getHeapIndex, global
 /* 804375B4 00400B74  80 6D 9C C4 */	lwz r3, lbl_80665E44@sda21(r13)
 /* 804375B8 00400B78  4E 80 00 20 */	blr 
-.endfn getMemRegionIndex
+.endfn getHeapIndex
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
