@@ -2231,7 +2231,7 @@
 /* 8022B3D4 001F4994  48 20 96 89 */	bl heap_malloc
 /* 8022B3D8 001F4998  2C 03 00 00 */	cmpwi r3, 0
 /* 8022B3DC 001F499C  41 82 00 08 */	beq .L_8022B3E4
-/* 8022B3E0 001F49A0  4B EF AC A5 */	bl func_80126084
+/* 8022B3E0 001F49A0  4B EF AC A5 */	bl __ct__CTagProcessor
 .L_8022B3E4:
 /* 8022B3E4 001F49A4  90 7F 00 2C */	stw r3, 0x2c(r31)
 /* 8022B3E8 001F49A8  48 23 3D CD */	bl CLibLayout_getArcResourceAccessorInstance

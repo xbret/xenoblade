@@ -1296,7 +1296,7 @@
 
 #CItemBoxLine
 
-.fn func_801ECC94, global
+.fn __ct__CItemBoxLine, global
 /* 801ECC94 001B6254  94 21 FB E0 */	stwu r1, -0x420(r1)
 /* 801ECC98 001B6258  7C 08 02 A6 */	mflr r0
 /* 801ECC9C 001B625C  90 01 04 24 */	stw r0, 0x424(r1)
@@ -1673,7 +1673,7 @@
 /* 801ED24C 001B680C  7C 08 03 A6 */	mtlr r0
 /* 801ED250 001B6810  38 21 04 20 */	addi r1, r1, 0x420
 /* 801ED254 001B6814  4E 80 00 20 */	blr 
-.endfn func_801ECC94
+.endfn __ct__CItemBoxLine
 
 .fn __dt__CItemBoxLine, global
 /* 801ED258 001B6818  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -7753,7 +7753,7 @@
 /* 801F2A18 001BBFD8  48 24 20 45 */	bl heap_malloc
 /* 801F2A1C 001BBFDC  2C 03 00 00 */	cmpwi r3, 0
 /* 801F2A20 001BBFE0  41 82 00 08 */	beq .L_801F2A28
-/* 801F2A24 001BBFE4  4B F3 36 61 */	bl func_80126084
+/* 801F2A24 001BBFE4  4B F3 36 61 */	bl __ct__CTagProcessor
 .L_801F2A28:
 /* 801F2A28 001BBFE8  90 7F 00 54 */	stw r3, 0x54(r31)
 /* 801F2A2C 001BBFEC  48 26 C7 89 */	bl CLibLayout_getArcResourceAccessorInstance
@@ -9971,7 +9971,7 @@
 
 .obj "@eti_8002C060", local
 .hidden "@eti_8002C060"
-	.4byte func_801ECC94
+	.4byte __ct__CItemBoxLine
 	.4byte 0x000005C4
 	.4byte "@etb_80011BDC"
 .endobj "@eti_8002C060"

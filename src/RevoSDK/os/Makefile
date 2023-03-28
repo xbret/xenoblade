@@ -21,15 +21,15 @@ OS_FILES:=\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSThread.o\
 	$(BUILD_DIR)/src/RevoSDK/os/OSTime.o\
 	$(BUILD_DIR)/src/RevoSDK/os/OSUtf.o\
-	$(BUILD_DIR)/asm/RevoSDK/os/OSIpc.o\
-	$(BUILD_DIR)/asm/RevoSDK/os/OSStateTM.o\
+	$(BUILD_DIR)/src/RevoSDK/os/OSIpc.o\
+	$(BUILD_DIR)/src/RevoSDK/os/OSStateTM.o\
 	$(BUILD_DIR)/src/RevoSDK/os/__start.o\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSPlayRecord.o\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSStateFlags.o\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSNet.o\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSNandbootInfo.o\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSPlayTime.o\
-	$(BUILD_DIR)/asm/RevoSDK/os/OSCrc.o\
+	$(BUILD_DIR)/src/RevoSDK/os/OSCrc.o\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSLaunch.o\
 	$(BUILD_DIR)/src/RevoSDK/os/__ppc_eabi_init.o\
 

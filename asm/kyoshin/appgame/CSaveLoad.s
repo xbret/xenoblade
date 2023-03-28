@@ -3282,7 +3282,7 @@
 /* 80291840 0025AE00  4E 80 00 20 */	blr
 .endfn func_8029183C
 
-.fn __dt__80291844, global
+.fn __dt__CfAward, global
 /* 80291844 0025AE04  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80291848 0025AE08  7C 08 02 A6 */	mflr r0
 /* 8029184C 0025AE0C  2C 03 00 00 */	cmpwi r3, 0
@@ -3310,7 +3310,7 @@
 /* 802918A0 0025AE60  7C 08 03 A6 */	mtlr r0
 /* 802918A4 0025AE64  38 21 00 10 */	addi r1, r1, 0x10
 /* 802918A8 0025AE68  4E 80 00 20 */	blr 
-.endfn __dt__80291844
+.endfn __dt__CfAward
 
 .fn func_802918AC, global
 /* 802918AC 0025AE6C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -5096,9 +5096,9 @@
 /* 80293108 0025C6C8  38 6D B1 68 */	addi r3, r13, lbl_806672E8@sda21
 /* 8029310C 0025C6CC  90 0D B1 68 */	stw r0, lbl_806672E8@sda21(r13)
 /* 80293110 0025C6D0  4B E0 A3 05 */	bl func_8009D414
-/* 80293114 0025C6D4  3C 80 80 29 */	lis r4, __dt__80291844@ha
+/* 80293114 0025C6D4  3C 80 80 29 */	lis r4, __dt__CfAward@ha
 /* 80293118 0025C6D8  3C A0 80 58 */	lis r5, lbl_8057A3F8@ha
-/* 8029311C 0025C6DC  38 84 18 44 */	addi r4, r4, __dt__80291844@l
+/* 8029311C 0025C6DC  38 84 18 44 */	addi r4, r4, __dt__CfAward@l
 /* 80293120 0025C6E0  38 6D B1 68 */	addi r3, r13, lbl_806672E8@sda21
 /* 80293124 0025C6E4  38 A5 A3 F8 */	addi r5, r5, lbl_8057A3F8@l
 /* 80293128 0025C6E8  48 02 65 75 */	bl __register_global_object
@@ -5284,9 +5284,9 @@
 	.4byte 0
 	.4byte __RTTI__cf_CfAward
 	.4byte 0
-	.4byte __dt__80291844
+	.4byte __dt__CfAward
 	.4byte func_80291B18
-	.4byte __dt__80291844
+	.4byte __dt__CfAward
 	.4byte func_80291B18
 .endobj __vt__cf_CfAward
 
@@ -6217,7 +6217,7 @@
 
 .obj "@eti_80031B38", local
 .hidden "@eti_80031B38"
-	.4byte __dt__80291844
+	.4byte __dt__CfAward
 	.4byte 0x00000068
 	.4byte "@etb_80019790"
 .endobj "@eti_80031B38"

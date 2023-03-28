@@ -2213,7 +2213,7 @@
 /* 80271B5C 0023B11C  48 1C 2F 01 */	bl heap_malloc
 /* 80271B60 0023B120  2C 03 00 00 */	cmpwi r3, 0
 /* 80271B64 0023B124  41 82 00 08 */	beq .L_80271B6C
-/* 80271B68 0023B128  4B EB 45 1D */	bl func_80126084
+/* 80271B68 0023B128  4B EB 45 1D */	bl __ct__CTagProcessor
 .L_80271B6C:
 /* 80271B6C 0023B12C  90 7F 00 2C */	stw r3, 0x2c(r31)
 /* 80271B70 0023B130  48 1E D6 45 */	bl CLibLayout_getArcResourceAccessorInstance

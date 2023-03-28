@@ -1102,7 +1102,7 @@
 /* 8022C5BC 001F5B7C  48 20 84 A1 */	bl heap_malloc
 /* 8022C5C0 001F5B80  2C 03 00 00 */	cmpwi r3, 0
 /* 8022C5C4 001F5B84  41 82 00 08 */	beq .L_8022C5CC
-/* 8022C5C8 001F5B88  4B EF 9A BD */	bl func_80126084
+/* 8022C5C8 001F5B88  4B EF 9A BD */	bl __ct__CTagProcessor
 .L_8022C5CC:
 /* 8022C5CC 001F5B8C  90 7D 00 18 */	stw r3, 0x18(r29)
 /* 8022C5D0 001F5B90  48 23 2B E5 */	bl CLibLayout_getArcResourceAccessorInstance

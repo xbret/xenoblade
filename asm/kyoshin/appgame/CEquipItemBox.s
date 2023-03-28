@@ -4071,7 +4071,7 @@
 .endfn func_80285C84
 
 
-.fn func_80285D7C, global
+.fn __ct__CEquipItemBox, global
 /* 80285D7C 0024F33C  94 21 DA 50 */	stwu r1, -0x25b0(r1)
 /* 80285D80 0024F340  7C 08 02 A6 */	mflr r0
 /* 80285D84 0024F344  90 01 25 B4 */	stw r0, 0x25b4(r1)
@@ -4304,7 +4304,7 @@
 /* 80286100 0024F6C0  7C 08 03 A6 */	mtlr r0
 /* 80286104 0024F6C4  38 21 25 B0 */	addi r1, r1, 0x25b0
 /* 80286108 0024F6C8  4E 80 00 20 */	blr 
-.endfn func_80285D7C
+.endfn __ct__CEquipItemBox
 
 .fn __dt__CEquipItemBox, global
 /* 8028610C 0024F6CC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -14647,7 +14647,7 @@
 
 .obj "@eti_8003158C", local
 .hidden "@eti_8003158C"
-	.4byte func_80285D7C
+	.4byte __ct__CEquipItemBox
 	.4byte 0x00000390
 	.4byte "@etb_80018E80"
 .endobj "@eti_8003158C"

@@ -597,7 +597,7 @@
 /* 8027ED04 002482C4  48 1B 5D 59 */	bl heap_malloc
 /* 8027ED08 002482C8  2C 03 00 00 */	cmpwi r3, 0
 /* 8027ED0C 002482CC  41 82 00 08 */	beq .L_8027ED14
-/* 8027ED10 002482D0  4B EA 73 75 */	bl func_80126084
+/* 8027ED10 002482D0  4B EA 73 75 */	bl __ct__CTagProcessor
 .L_8027ED14:
 /* 8027ED14 002482D4  90 7D 00 94 */	stw r3, 0x94(r29)
 /* 8027ED18 002482D8  48 1E 04 9D */	bl CLibLayout_getArcResourceAccessorInstance

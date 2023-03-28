@@ -534,7 +534,7 @@
 .endfn __dt__8012596C
 
 
-.fn func_801259AC, global
+.fn __ct__CTagProcessorBase, global
 /* 801259AC 000EEF6C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801259B0 000EEF70  7C 08 02 A6 */	mflr r0
 /* 801259B4 000EEF74  90 01 00 24 */	stw r0, 0x24(r1)
@@ -567,7 +567,7 @@
 /* 80125A20 000EEFE0  7C 08 03 A6 */	mtlr r0
 /* 80125A24 000EEFE4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80125A28 000EEFE8  4E 80 00 20 */	blr 
-.endfn func_801259AC
+.endfn __ct__CTagProcessorBase
 
 .fn func_80125A2C, global
 /* 80125A2C 000EEFEC  89 24 00 00 */	lbz r9, 0(r4)
@@ -1044,13 +1044,13 @@
 /* 80126080 000EF640  4E 80 00 20 */	blr 
 .endfn func_80125D00
 
-.fn func_80126084, global
+.fn __ct__CTagProcessor, global
 /* 80126084 000EF644  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80126088 000EF648  7C 08 02 A6 */	mflr r0
 /* 8012608C 000EF64C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80126090 000EF650  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80126094 000EF654  7C 7F 1B 78 */	mr r31, r3
-/* 80126098 000EF658  4B FF F9 15 */	bl func_801259AC
+/* 80126098 000EF658  4B FF F9 15 */	bl __ct__CTagProcessorBase
 /* 8012609C 000EF65C  C0 02 97 38 */	lfs f0, float_80669AB8@sda21(r2)
 /* 801260A0 000EF660  3C 60 80 53 */	lis r3, __vt__CTagProcessor@ha
 /* 801260A4 000EF664  38 E0 00 00 */	li r7, 0
@@ -1079,7 +1079,7 @@
 /* 80126100 000EF6C0  7C 08 03 A6 */	mtlr r0
 /* 80126104 000EF6C4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80126108 000EF6C8  4E 80 00 20 */	blr 
-.endfn func_80126084
+.endfn __ct__CTagProcessor
 
 .fn __dt__CTagProcessor, global
 /* 8012610C 000EF6CC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -3212,7 +3212,7 @@
 /* 80127F08 000F14C8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80127F0C 000F14CC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80127F10 000F14D0  7C 7F 1B 78 */	mr r31, r3
-/* 80127F14 000F14D4  4B FF DA 99 */	bl func_801259AC
+/* 80127F14 000F14D4  4B FF DA 99 */	bl __ct__CTagProcessorBase
 /* 80127F18 000F14D8  C0 02 97 38 */	lfs f0, float_80669AB8@sda21(r2)
 /* 80127F1C 000F14DC  3C 80 80 53 */	lis r4, __vt__CTagProcessorSE@ha
 /* 80127F20 000F14E0  38 00 00 00 */	li r0, 0
@@ -11033,7 +11033,7 @@
 
 .obj "@eti_8002723C", local
 .hidden "@eti_8002723C"
-	.4byte func_801259AC
+	.4byte __ct__CTagProcessorBase
 	.4byte 0x00000080
 	.4byte "@etb_8000BFF8"
 .endobj "@eti_8002723C"
@@ -11061,7 +11061,7 @@
 
 .obj "@eti_8002726C", local
 .hidden "@eti_8002726C"
-	.4byte func_80126084
+	.4byte __ct__CTagProcessor
 	.4byte 0x00000088
 	.4byte "@etb_8000C02C"
 .endobj "@eti_8002726C"
