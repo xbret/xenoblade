@@ -11,7 +11,7 @@ extern "C" {
 //#include "RevoSDK/gx/GXFifo.h"
 #include "RevoSDK/gx/GXFrameBuf.h"
 //#include "RevoSDK/gx/GXGeometry.h"
-//#include "RevoSDK/gx/GXInit.h"
+#include "RevoSDK/gx/GXInit.h"
 //#include "RevoSDK/gx/GXLight.h"
 //#include "RevoSDK/gx/GXMisc.h"
 //#include "RevoSDK/gx/GXPixel.h"

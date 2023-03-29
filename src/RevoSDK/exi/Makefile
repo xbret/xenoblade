@@ -1,7 +1,7 @@
 EXI_FILES:=\
 	$(BUILD_DIR)/asm/RevoSDK/exi/EXIBios.o\
 	$(BUILD_DIR)/asm/RevoSDK/exi/EXIUart.o\
-	$(BUILD_DIR)/asm/RevoSDK/exi/EXICommon.o\
+	$(BUILD_DIR)/src/RevoSDK/exi/EXICommon.o\
 
 DEPENDS += $(EXI_FILES:.o=.d)
 

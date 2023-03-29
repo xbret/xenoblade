@@ -10,7 +10,7 @@ GX_FILES:=\
 	$(BUILD_DIR)/asm/RevoSDK/gx/GXBump.o\
 	$(BUILD_DIR)/asm/RevoSDK/gx/GXTev.o\
 	$(BUILD_DIR)/asm/RevoSDK/gx/GXPixel.o\
-	$(BUILD_DIR)/asm/RevoSDK/gx/GXDisplayList.o\
+	$(BUILD_DIR)/src/RevoSDK/gx/GXDisplayList.o\
 	$(BUILD_DIR)/asm/RevoSDK/gx/GXTransform.o\
 	$(BUILD_DIR)/asm/RevoSDK/gx/GXPerf.o\
 
