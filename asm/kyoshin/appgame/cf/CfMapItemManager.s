@@ -2409,12 +2409,12 @@
 
 
 .obj float_8066A044, global
-	.float 0.01 #0x3C23D70A
+	.float 0.01
 .endobj float_8066A044
 
 
 .obj float_8066A048, global
-	.float 45 #0x42340000
+	.float 45
 .endobj float_8066A048
 
 
@@ -2429,7 +2429,7 @@
 
 
 .obj float_8066A054, global
-	.float 30 #0x41F00000
+	.float 30
 .endobj float_8066A054
 
 
@@ -2444,7 +2444,7 @@
 .endobj double_8066A060
 
 .obj float_8066A068, global
-	.float 60 #0x42700000
+	.float 60
 	.4byte 0
 .endobj float_8066A068
 
@@ -2454,7 +2454,7 @@
 .endobj double_8066A070
 
 .obj float_8066A078, global
-	.float 3600 #0x45610000
+	.float 3600
 .endobj float_8066A078
 
 
@@ -2464,17 +2464,17 @@
 
 
 .obj float_8066A080, global
-	.float 40000 #0x471C4000
+	.float 40000
 .endobj float_8066A080
 
 
 .obj float_8066A084, global
-	.float 50 #0x42480000
+	.float 50
 .endobj float_8066A084
 
 
 .obj float_8066A088, global
-	.float 22500 #0x46AFC800
+	.float 22500
 .endobj float_8066A088
 
 
@@ -2484,17 +2484,17 @@
 
 
 .obj float_8066A090, global
-	.float 2.25 #0x40100000
+	.float 2.25
 .endobj float_8066A090
 
 
 .obj float_8066A094, global
-	.float 0.6 #0x3F19999A
+	.float 0.6
 .endobj float_8066A094
 
 
 .obj float_8066A098, global
-	.float 6 #0x40C00000
+	.float 6
 	.4byte 0
 .endobj float_8066A098
 

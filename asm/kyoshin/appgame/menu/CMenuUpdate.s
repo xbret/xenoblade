@@ -2409,7 +2409,7 @@
 	.4byte func_80142964
 	.4byte func_801429E4
 	.4byte func_80124584
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuUpdate
 	.4byte 0xFFFFFF94
 	.4byte func_80144590
@@ -2514,7 +2514,7 @@
 .endobj double_80669C78
 
 .obj float_80669C80, global
-	.float 4 #0x40800000
+	.float 4
 .endobj float_80669C80
 
 

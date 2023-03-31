@@ -276,9 +276,9 @@
 
 .obj lbl_804FD1D8, global
 	.float 1.0
-	.float 1.2 #0x3F99999A
+	.float 1.2
 	.float 1.5
-	.float 1.8 #0x3FE66666
+	.float 1.8
 	.float 2.1
 	.float 2.4
 .endobj lbl_804FD1D8

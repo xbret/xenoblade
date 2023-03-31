@@ -1297,32 +1297,32 @@
 
 
 .obj lbl_80666558, global
-	.4byte 0x72656600
+	.asciz "ref"
 .endobj lbl_80666558
 
 
 .obj lbl_8066655C, global
-	.4byte 0x72656600
+	.asciz "ref"
 .endobj lbl_8066655C
 
 
 .obj lbl_80666560, global
-	.4byte 0x72656600
+	.asciz "ref"
 .endobj lbl_80666560
 
 
 .obj lbl_80666564, global
-	.4byte 0x72656600
+	.asciz "ref"
 .endobj lbl_80666564
 
 
 .obj lbl_80666568, global
-	.4byte 0x72656600
+	.asciz "ref"
 .endobj lbl_80666568
 
 
 .obj lbl_8066656C, global
-	.4byte 0x72656600
+	.asciz "ref"
 .endobj lbl_8066656C
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
@@ -1335,12 +1335,12 @@
 .endobj lbl_8066DAA0
 
 .obj lbl_8066DAA8, global
-	.4byte 0x50494400
+	.asciz "PID"
 .endobj lbl_8066DAA8
 
 
 .obj float_8066DAAC, global
-	.float 255 #0x437F0000
+	.float 255
 .endobj float_8066DAAC
 
 .section extab, "a" # 0x800066E0 - 0x80021020

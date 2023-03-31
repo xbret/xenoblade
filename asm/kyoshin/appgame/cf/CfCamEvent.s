@@ -1010,17 +1010,17 @@
 
 
 .obj float_80668AF4, global
-	.float 2 #0x40000000
+	.float 2
 .endobj float_80668AF4
 
 
 .obj float_80668AF8, global
-	.float 3 #0x40400000
+	.float 3
 .endobj float_80668AF8
 
 
 .obj float_80668AFC, global
-	.float 0.1 #0x3DCCCCCD
+	.float 0.1
 .endobj float_80668AFC
 
 
@@ -1040,7 +1040,7 @@
 
 
 .obj float_80668B0C, global
-	.float 5 #0x40A00000
+	.float 5
 .endobj float_80668B0C
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

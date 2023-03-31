@@ -705,12 +705,12 @@
 .endobj double_8066ADE0
 
 .obj float_8066ADE8, global
-	.float 30 #0x41F00000
+	.float 30
 .endobj float_8066ADE8
 
 
 .obj float_8066ADEC, global
-	.float 0.01 #0x3C23D70A
+	.float 0.01
 .endobj float_8066ADEC
 
 

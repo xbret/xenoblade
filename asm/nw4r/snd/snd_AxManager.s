@@ -1925,12 +1925,12 @@
 .endobj double_8066C680
 
 .obj float_8066C688, global
-	.float 32768 #0x47000000
+	.float 32768
 .endobj float_8066C688
 
 
 .obj float_8066C68C, global
-	.float 32000 #0x46FA0000
+	.float 32000
 .endobj float_8066C68C
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

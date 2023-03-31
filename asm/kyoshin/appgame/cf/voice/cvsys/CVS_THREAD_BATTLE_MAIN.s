@@ -1484,12 +1484,12 @@
 
 
 .obj float_8066B6B0, global
-	.float 0.8 #0x3F4CCCCD
+	.float 0.8
 .endobj float_8066B6B0
 
 
 .obj float_8066B6B4, global
-	.float 0.9 #0x3F666666
+	.float 0.9
 .endobj float_8066B6B4
 
 

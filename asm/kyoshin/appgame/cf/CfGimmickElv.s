@@ -1779,27 +1779,27 @@
 .endobj double_8066AC48
 
 .obj float_8066AC50, global
-	.float 5 #0x40A00000
+	.float 5
 .endobj float_8066AC50
 
 
 .obj float_8066AC54, global
-	.float 30 #0x41F00000
+	.float 30
 .endobj float_8066AC54
 
 
 .obj float_8066AC58, global
-	.float 4 #0x40800000
+	.float 4
 .endobj float_8066AC58
 
 
 .obj float_8066AC5C, global
-	.float 200 #0x43480000
+	.float 200
 .endobj float_8066AC5C
 
 
 .obj float_8066AC60, global
-	.float 900 #0x44610000
+	.float 900
 	.4byte 0
 .endobj float_8066AC60
 

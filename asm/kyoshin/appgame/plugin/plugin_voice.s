@@ -687,7 +687,7 @@
 
 
 .obj float_8066B80C, global
-	.float 30 #0x41F00000
+	.float 30
 .endobj float_8066B80C
 
 .obj lbl_8066B810, global

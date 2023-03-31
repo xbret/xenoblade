@@ -804,7 +804,7 @@
 .endobj double_8066ABB8
 
 .obj float_8066ABC0, global
-	.float 80 #0x42A00000
+	.float 80
 .endobj float_8066ABC0
 
 
@@ -814,7 +814,7 @@
 
 
 .obj float_8066ABC8, global
-	.float 3 #0x40400000
+	.float 3
 .endobj float_8066ABC8
 
 
@@ -824,17 +824,17 @@
 
 
 .obj float_8066ABD0, global
-	.float -17 #0xC1880000
+	.float -17
 .endobj float_8066ABD0
 
 
 .obj float_8066ABD4, global
-	.float 120 #0x42F00000
+	.float 120
 .endobj float_8066ABD4
 
 
 .obj float_8066ABD8, global
-	.float -37 #0xC2140000
+	.float -37
 .endobj float_8066ABD8
 
 

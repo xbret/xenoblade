@@ -1843,12 +1843,12 @@
 
 
 .obj float_8066D944, global
-	.float 0.1 #0x3DCCCCCD
+	.float 0.1
 .endobj float_8066D944
 
 
 .obj float_8066D948, global
-	.float 0.99 #0x3F7D70A4
+	.float 0.99
 .endobj float_8066D948
 
 
@@ -1858,12 +1858,12 @@
 
 
 .obj float_8066D950, global
-	.float 3 #0x40400000
+	.float 3
 .endobj float_8066D950
 
 
 .obj float_8066D954, global
-	.float 99999 #0x47C34F80
+	.float 99999
 .endobj float_8066D954
 
 

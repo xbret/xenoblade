@@ -1833,25 +1833,25 @@
 	.4byte func_8014AB28
 	.4byte __RTTI__cf_CfObjectPc
 	.4byte 0xFFFFC164
-	.4byte func_8003DC64
-	.4byte func_8003CB58
-	.4byte func_8003DD34
-	.4byte func_800A34A8
-	.4byte func_8009489C
-	.4byte func_800A349C
-	.4byte func_80086B4C
-	.4byte func_8003CB20
-	.4byte func_8003D98C
-	.4byte func_8003D8C0
-	.4byte func_8003D7B0
-	.4byte func_800A3494
-	.4byte func_800A3488
-	.4byte func_8003C7F8
+	.4byte CObjectState_func_8003DC64
+	.4byte CObjectState_func_8003CB58
+	.4byte CObjectState_func_8003DD34
+	.4byte CObjectState_func_800A34A8
+	.4byte CObjectState_func_8009489C
+	.4byte CObjectState_func_800A349C
+	.4byte CObjectState_func_80086B4C
+	.4byte CObjectState_func_8003CB20
+	.4byte CObjectState_func_8003D98C
+	.4byte CObjectState_func_8003D8C0
+	.4byte CObjectState_func_8003D7B0
+	.4byte CObjectState_func_800A3494
+	.4byte CObjectState_func_800A3488
+	.4byte CObjectParam_func_8003C7F8
 	.4byte func_800B067C
-	.4byte func_800A34B4
+	.4byte CObjectParam_func_800A34B4
 	.4byte func_800C11F0
-	.4byte func_8003E664
-	.4byte func_8003DC74
+	.4byte CObjectParam_func_8003E664
+	.4byte CObjectParam_func_8003DC74
 	.4byte func_800C1220
 	.4byte func_800C1200
 	.4byte func_800C11F8
@@ -1862,7 +1862,7 @@
 	.4byte func_800BABBC
 	.4byte func_800BE984
 	.4byte func_800BE998
-	.4byte func_800AC5E4
+	.4byte CfObject_func_800AC5E4
 	.4byte func_800BE9E4
 	.4byte func_800BE088
 	.4byte func_800B068C
@@ -1872,7 +1872,7 @@
 	.4byte func_8008F9CC
 	.4byte func_800BDB6C
 	.4byte func_800BB0E8
-	.4byte func_800AC5A8
+	.4byte CfObject_func_800AC5A8
 	.4byte func_800BDBC0
 	.4byte func_800BDE8C
 	.4byte func_800BB168
@@ -1892,10 +1892,10 @@
 	.4byte func_800BECF8
 	.4byte func_800BEE34
 	.4byte func_800BEF20
-	.4byte func_800AC570
+	.4byte CfObject_func_800AC570
 	.4byte func_800BF014
 	.4byte func_800BF100
-	.4byte func_800AC558
+	.4byte CfObject_func_800AC558
 	.4byte func_800BF1F4
 	.4byte func_800BD774
 	.4byte func_800BD860
@@ -2003,17 +2003,17 @@
 .balign 8
 
 .obj float_806693D0, global
-	.float 32.2 #0x4200CCCD
+	.float 32.2
 .endobj float_806693D0
 
 
 .obj float_806693D4, global
-	.float 0.6 #0x3F19999A
+	.float 0.6
 .endobj float_806693D4
 
 
 .obj float_806693D8, global
-	.float 1.8 #0x3FE66666
+	.float 1.8
 .endobj float_806693D8
 
 
@@ -2023,7 +2023,7 @@
 
 
 .obj float_806693E0, global
-	.float 32.2 #0x4200CCCD
+	.float 32.2
 .endobj float_806693E0
 
 
@@ -2033,7 +2033,7 @@
 
 
 .obj float_806693E8, global
-	.float 16.1 #0x4180CCCD
+	.float 16.1
 .endobj float_806693E8
 
 
@@ -2053,7 +2053,7 @@
 .endobj double_806693F8
 
 .obj float_80669400, global
-	.float 0.01 #0x3C23D70A
+	.float 0.01
 	.4byte 0
 .endobj float_80669400
 

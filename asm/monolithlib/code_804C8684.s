@@ -76,17 +76,17 @@
 
 
 .obj float_8066D840, global
-	.float 0.8 #0x3F4CCCCD
+	.float 0.8
 .endobj float_8066D840
 
 
 .obj float_8066D844, global
-	.float 5 #0x40A00000
+	.float 5
 .endobj float_8066D844
 
 
 .obj float_8066D848, global
-	.float 395 #0x43C58000
+	.float 395
 	.4byte 0
 .endobj float_8066D848
 

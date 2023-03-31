@@ -1100,12 +1100,12 @@
 .balign 8
 
 .obj float_806663F0, global
-	.float 50 #0x42480000
+	.float 50
 .endobj float_806663F0
 
 
 .obj float_806663F4, global
-	.float 20 #0x41A00000
+	.float 20
 .endobj float_806663F4
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
@@ -1123,7 +1123,7 @@
 
 
 .obj float_8066D6C8, global
-	.float 255 #0x437F0000
+	.float 255
 	.4byte 0
 .endobj float_8066D6C8
 

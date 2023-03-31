@@ -1230,7 +1230,7 @@
 /* 80094898 0005DE58  4E 80 00 20 */	blr 
 .endfn func_80093F28
 
-.fn func_8009489C, global
+.fn CObjectState_func_8009489C, global
 /* 8009489C 0005DE5C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800948A0 0005DE60  7C 08 02 A6 */	mflr r0
 /* 800948A4 0005DE64  28 04 00 3F */	cmplwi r4, 0x3f
@@ -1255,7 +1255,7 @@
 /* 800948EC 0005DEAC  7C 08 03 A6 */	mtlr r0
 /* 800948F0 0005DEB0  38 21 00 10 */	addi r1, r1, 0x10
 /* 800948F4 0005DEB4  4E 80 00 20 */	blr
-.endfn func_8009489C
+.endfn CObjectState_func_8009489C
 
 .fn func_800948F8, global
 /* 800948F8 0005DEB8  7C 04 28 50 */	subf r0, r4, r5
@@ -3768,7 +3768,7 @@
 
 
 .obj float_80668F28, global
-	.float 4 #0x40800000
+	.float 4
 .endobj float_80668F28
 
 
@@ -3778,7 +3778,7 @@
 
 
 .obj float_80668F30, global
-	.float 0.1 #0x3DCCCCCD
+	.float 0.1
 .endobj float_80668F30
 
 
@@ -3788,22 +3788,22 @@
 
 
 .obj float_80668F38, global
-	.float 3.6 #0x40666666
+	.float 3.6
 .endobj float_80668F38
 
 
 .obj float_80668F3C, global
-	.float 0.8 #0x3F4CCCCD
+	.float 0.8
 .endobj float_80668F3C
 
 
 .obj float_80668F40, global
-	.float 0.01 #0x3C23D70A
+	.float 0.01
 .endobj float_80668F40
 
 
 .obj float_80668F44, global
-	.float 180 #0x43340000
+	.float 180
 .endobj float_80668F44
 
 
@@ -3812,37 +3812,37 @@
 .endobj double_80668F48
 
 .obj float_80668F50, global
-	.float 1000 #0x447A0000
+	.float 1000
 .endobj float_80668F50
 
 
 .obj float_80668F54, global
-	.float 3600 #0x45610000
+	.float 3600
 .endobj float_80668F54
 
 
 .obj float_80668F58, global
-	.float 50 #0x42480000
+	.float 50
 .endobj float_80668F58
 
 
 .obj float_80668F5C, global
-	.float 9 #0x41100000
+	.float 9
 .endobj float_80668F5C
 
 
 .obj float_80668F60, global
-	.float 5.9 #0x40BCCCCD
+	.float 5.9
 .endobj float_80668F60
 
 
 .obj float_80668F64, global
-	.float -0.21 #0xBE570A3D
+	.float -0.21
 .endobj float_80668F64
 
 
 .obj float_80668F68, global
-	.float 2 #0x40000000
+	.float 2
 .endobj float_80668F68
 
 
@@ -3861,27 +3861,27 @@
 
 
 .obj float_80668F7C, global
-	.float 0.0625 #0x3D800000
+	.float 0.0625
 .endobj float_80668F7C
 
 
 .obj float_80668F80, global
-	.float 0.0121 #0x3C463F14
+	.float 0.0121
 .endobj float_80668F80
 
 
 .obj float_80668F84, global
-	.float 0.3 #0x3E99999A
+	.float 0.3
 .endobj float_80668F84
 
 
 .obj float_80668F88, global
-	.float 5 #0x40A00000
+	.float 5
 .endobj float_80668F88
 
 
 .obj float_80668F8C, global
-	.float 0.09 #0x3DB851EC
+	.float 0.09
 .endobj float_80668F8C
 
 
@@ -3901,7 +3901,7 @@
 
 
 .obj float_80668F9C, global
-	.float 360 #0x43B40000
+	.float 360
 .endobj float_80668F9C
 
 .section extab, "a" # 0x800066E0 - 0x80021020
@@ -4097,7 +4097,7 @@
 
 .obj "@eti_80024380", local
 .hidden "@eti_80024380"
-	.4byte func_8009489C
+	.4byte CObjectState_func_8009489C
 	.4byte 0x0000005C
 	.4byte "@etb_80008D14"
 .endobj "@eti_80024380"

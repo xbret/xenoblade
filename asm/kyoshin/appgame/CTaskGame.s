@@ -4518,13 +4518,13 @@
 /* 80043F1C 0000D4DC  4E 80 00 20 */	blr 
 .endfn func_80043F18
 
-.fn func_80043F20, global
+.fn CProcess_func_80043F20, global
 /* 80043F20 0000D4E0  4E 80 00 20 */	blr 
-.endfn func_80043F20
+.endfn CProcess_func_80043F20
 
-.fn func_80043F24, global
+.fn IScnRender_func_80043F20, global
 /* 80043F24 0000D4E4  4E 80 00 20 */	blr 
-.endfn func_80043F24
+.endfn IScnRender_func_80043F20
 
 .fn func_80043F28, global
 /* 80043F28 0000D4E8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -5159,7 +5159,7 @@
 	.4byte func_800407DC
 	.4byte func_80043F28
 	.4byte func_80040A38
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CTaskGame
 	.4byte 0xFFFFFFAC
 	.4byte func_80044120
@@ -5239,7 +5239,7 @@
 	.4byte 0
 	.4byte func_80043F28
 	.4byte func_80043F70
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTTask_CTaskGame
 
 .obj CTTask_CTaskGame_hierarchy, global
@@ -5280,7 +5280,7 @@
 	.4byte __RTTI__IScnRender
 	.4byte 0
 	.4byte __dt__IScnRender
-	.4byte func_80043F24
+	.4byte IScnRender_func_80043F20
 .endobj __vt__IScnRender
 
 

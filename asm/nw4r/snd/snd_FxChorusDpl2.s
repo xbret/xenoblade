@@ -469,17 +469,17 @@
 
 
 .obj float_8066C770, global
-	.float 50 #0x42480000
+	.float 50
 .endobj float_8066C770
 
 
 .obj float_8066C774, global
-	.float 0.1 #0x3DCCCCCD
+	.float 0.1
 .endobj float_8066C774
 
 
 .obj float_8066C778, global
-	.float 2 #0x40000000
+	.float 2
 .endobj float_8066C778
 
 

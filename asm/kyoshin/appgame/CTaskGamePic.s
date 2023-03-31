@@ -661,7 +661,7 @@
 	.4byte func_80294F44
 	.4byte func_80294FB8
 	.4byte func_802954B0
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CTaskGamePic
 	.4byte 0xFFFFFFAC
 	.4byte func_8029554C
@@ -726,7 +726,7 @@
 	.4byte 0
 	.4byte func_802954B4
 	.4byte func_802954FC
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTTask_CTaskGamePic
 
 .obj CTTask_CTaskGamePic_hierarchy, global

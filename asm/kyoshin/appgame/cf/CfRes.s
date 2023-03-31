@@ -3531,7 +3531,7 @@
 	.4byte func_80065978
 	.4byte func_800659C0
 	.4byte func_80065B50
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__cf_CfResTask
 
 .obj cf_CfResTask_hierarchy, global
@@ -3556,7 +3556,7 @@
 	.4byte 0
 	.4byte func_80065B54
 	.4byte func_80065B9C
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTTask_cf_CfResTask
 
 .obj CTTask_cf_CfResTask_hierarchy, global

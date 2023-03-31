@@ -237,7 +237,7 @@
 /* 80075294 0003E854  4E 80 00 20 */	blr 
 .endfn func_80074F4C
 
-.fn func_80075298, global
+.fn __ct__80075298, global
 /* 80075298 0003E858  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8007529C 0003E85C  7C 08 02 A6 */	mflr r0
 /* 800752A0 0003E860  38 C3 01 F4 */	addi r6, r3, 0x1f4
@@ -335,7 +335,7 @@
 /* 80075400 0003E9C0  7C 08 03 A6 */	mtlr r0
 /* 80075404 0003E9C4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80075408 0003E9C8  4E 80 00 20 */	blr 
-.endfn func_80075298
+.endfn __ct__80075298
 
 .fn __dt__8007540C, global
 /* 8007540C 0003E9CC  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -7971,7 +7971,7 @@
 	.4byte 0
 	.float 3
 	.float 0.2
-	.float 0.8 #0x3F4CCCCD
+	.float 0.8
 	.float 0.5
 	.float 0.5
 	.float 1.0
@@ -7995,12 +7995,12 @@
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.float 2 #0x40000000
+	.float 2
 	.4byte 0
 	.float 3
-	.float 0.3 #0x3E99999A
-	.float 0.3 #0x3E99999A
-	.float 2 #0x40000000
+	.float 0.3
+	.float 0.3
+	.float 2
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -8008,12 +8008,12 @@
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.float 2 #0x40000000
+	.float 2
 	.4byte 0
 	.float 3
-	.float 0.3 #0x3E99999A
-	.float 0.3 #0x3E99999A
-	.float 2 #0x40000000
+	.float 0.3
+	.float 0.3
+	.float 2
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -8025,7 +8025,7 @@
 	.4byte 0
 	.float 4
 	.float 1.0
-	.float 0.07 #0x3D8F5C29
+	.float 0.07
 .endobj lbl_8052AB98
 
 
@@ -8070,7 +8070,7 @@
 
 
 .obj float_80668CB4, global
-	.float 0.001 #0x3A83126F
+	.float 0.001
 .endobj float_80668CB4
 
 
@@ -8085,7 +8085,7 @@
 .endobj double_80668CC0
 
 .obj float_80668CC8, global
-	.float 40 #0x42200000
+	.float 40
 .endobj float_80668CC8
 
 
@@ -8100,12 +8100,12 @@
 
 
 .obj float_80668CD4, global
-	.float 0.8 #0x3F4CCCCD
+	.float 0.8
 .endobj float_80668CD4
 
 
 .obj float_80668CD8, global
-	.float 0.3 #0x3E99999A
+	.float 0.3
 .endobj float_80668CD8
 
 
@@ -8115,17 +8115,17 @@
 
 
 .obj float_80668CE0, global
-	.float 0.01 #0x3C23D70A
+	.float 0.01
 .endobj float_80668CE0
 
 
 .obj float_80668CE4, global
-	.float 4 #0x40800000
+	.float 4
 .endobj float_80668CE4
 
 
 .obj float_80668CE8, global
-	.float 30 #0x41F00000
+	.float 30
 .endobj float_80668CE8
 
 
@@ -8140,7 +8140,7 @@
 
 
 .obj float_80668CF4, global
-	.float 5 #0x40A00000
+	.float 5
 .endobj float_80668CF4
 
 
@@ -8150,42 +8150,42 @@
 
 
 .obj float_80668CFC, global
-	.float 0.02 #0x3CA3D70A
+	.float 0.02
 .endobj float_80668CFC
 
 
 .obj float_80668D00, global
-	.float 0.03 #0x3CF5C28F
+	.float 0.03
 .endobj float_80668D00
 
 
 .obj float_80668D04, global
-	.float 0.05 #0x3D4CCCCD
+	.float 0.05
 .endobj float_80668D04
 
 
 .obj float_80668D08, global
-	.float 0.1 #0x3DCCCCCD
+	.float 0.1
 .endobj float_80668D08
 
 
 .obj float_80668D0C, global
-	.float 0.08 #0x3DA3D70A
+	.float 0.08
 .endobj float_80668D0C
 
 
 .obj float_80668D10, global
-	.float 0.13 #0x3E051EB8
+	.float 0.13
 .endobj float_80668D10
 
 
 .obj float_80668D14, global
-	.float 0.45 #0x3EE66666
+	.float 0.45
 .endobj float_80668D14
 
 
 .obj float_80668D18, global
-	.float 0.6 #0x3F19999A
+	.float 0.6
 	.4byte 0
 .endobj float_80668D18
 
@@ -8354,7 +8354,7 @@
 
 .obj "@eti_800237E0", local
 .hidden "@eti_800237E0"
-	.4byte func_80075298
+	.4byte __ct__80075298
 	.4byte 0x00000174
 	.4byte "@etb_80008374"
 .endobj "@eti_800237E0"

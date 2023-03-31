@@ -960,7 +960,7 @@
 
 
 .obj float_8066B53C, global
-	.float 0.3 #0x3E99999A
+	.float 0.3
 .endobj float_8066B53C
 
 

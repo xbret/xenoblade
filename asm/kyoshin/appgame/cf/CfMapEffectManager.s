@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8016ED50, global
+.fn __ct__cf_CfMapEffectManager, global
 /* 8016ED50 00138310  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8016ED54 00138314  7C 08 02 A6 */	mflr r0
 /* 8016ED58 00138318  3C 80 80 53 */	lis r4, __vt__cf_CfMapEffectManager@ha
@@ -45,7 +45,7 @@
 /* 8016EDEC 001383AC  7C 08 03 A6 */	mtlr r0
 /* 8016EDF0 001383B0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8016EDF4 001383B4  4E 80 00 20 */	blr 
-.endfn func_8016ED50
+.endfn __ct__cf_CfMapEffectManager
 
 .fn __dt__cf_CfMapEffectManager, global
 /* 8016EDF8 001383B8  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1318,12 +1318,12 @@
 
 
 .obj float_80669FD4, global
-	.float 0.0001 #0x38D1B717
+	.float 0.0001
 .endobj float_80669FD4
 
 
 .obj float_80669FD8, global
-	.float 0.01 #0x3C23D70A
+	.float 0.01
 	.4byte 0
 .endobj float_80669FD8
 
@@ -1430,7 +1430,7 @@
 
 .obj "@eti_80029180", local
 .hidden "@eti_80029180"
-	.4byte func_8016ED50
+	.4byte __ct__cf_CfMapEffectManager
 	.4byte 0x000000A8
 	.4byte "@etb_8000E150"
 .endobj "@eti_80029180"

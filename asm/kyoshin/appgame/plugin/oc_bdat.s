@@ -1397,6 +1397,13 @@
 .endobj lbl_806684C0
 
 
+.section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.obj lbl_80573DD0, global
+	.skip 0x18
+.endobj lbl_80573DD0
+
+
 .section extab, "a" # 0x800066E0 - 0x80021020
 
 .balign 4

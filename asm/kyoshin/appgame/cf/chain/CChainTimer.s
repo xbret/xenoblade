@@ -1429,12 +1429,12 @@
 .balign 8
 
 .obj float_8066B338, global
-	.float 3.14 #0x4048F5C3
+	.float 3.14
 .endobj float_8066B338
 
 
 .obj float_8066B33C, global
-	.float 35 #0x420C0000
+	.float 35
 .endobj float_8066B33C
 
 
@@ -1465,17 +1465,17 @@
 
 
 .obj float_8066B368, global
-	.float 0.01 #0x3C23D70A
+	.float 0.01
 .endobj float_8066B368
 
 
 .obj float_8066B36C, global
-	.float 99999 #0x47C34F80
+	.float 99999
 .endobj float_8066B36C
 
 
 .obj float_8066B370, global
-	.float 2500 #0x451C4000
+	.float 2500
 	.4byte 0
 .endobj float_8066B370
 

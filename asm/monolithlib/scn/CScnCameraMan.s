@@ -1031,7 +1031,7 @@
 
 
 .obj float_8066D310, global
-	.float -500 #0xC3FA0000
+	.float -500
 .endobj float_8066D310
 
 
@@ -1056,7 +1056,7 @@
 
 
 .obj float_8066D32C, global
-	.float 0.947 #0x3F726E98
+	.float 0.947
 .endobj float_8066D32C
 
 .section extab, "a" # 0x800066E0 - 0x80021020

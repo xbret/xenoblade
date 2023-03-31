@@ -498,13 +498,13 @@
 
 #2147483648
 .obj float_8066D9DC, global
-	.float 2147483648 #0x4F000000
+	.float 2147483648
 .endobj float_8066D9DC
 
 
 #0.5
 .obj float_8066D9E0, global
-	.float 0.5 #0x3f000000
+	.float 0.5
 	.4byte 0
 .endobj float_8066D9E0
 
@@ -525,7 +525,7 @@
 
 
 .obj float_8066D9F8, global
-	.float 10006 #0x461C5800
+	.float 10006
 	.4byte 0
 .endobj float_8066D9F8
 

@@ -512,12 +512,12 @@
 
 
 .obj float_8066D368, global
-	.float 1000 #0x447A0000
+	.float 1000
 .endobj float_8066D368
 
 
 .obj float_8066D36C, global
-	.float 0.1 #0x3DCCCCCD
+	.float 0.1
 .endobj float_8066D36C
 
 
@@ -527,7 +527,7 @@
 
 
 .obj float_8066D374, global
-	.float 255 #0x437F0000
+	.float 255
 .endobj float_8066D374
 
 

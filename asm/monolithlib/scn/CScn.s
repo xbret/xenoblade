@@ -1195,7 +1195,7 @@
 	.4byte func_80496584
 	.4byte func_804967B0
 	.4byte func_8049683C
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CScn
 	.4byte 0xFFFFFFAC
 	.4byte func_80496B04
@@ -1244,7 +1244,7 @@
 	.4byte 0
 	.4byte func_80496A74
 	.4byte func_80496ABC
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTTask_CScn
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

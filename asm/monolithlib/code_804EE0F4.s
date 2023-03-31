@@ -2448,7 +2448,7 @@
 
 
 .obj float_8066DBC8, global
-	.float 255 #0x437F0000
+	.float 255
 	.4byte 0
 .endobj float_8066DBC8
 
@@ -2462,7 +2462,7 @@
 .endobj double_8066DBD8
 
 .obj float_8066DBE0, global
-	.float 45 #0x42340000
+	.float 45
 	.4byte 0
 .endobj float_8066DBE0
 

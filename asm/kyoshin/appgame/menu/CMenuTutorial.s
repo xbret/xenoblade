@@ -654,7 +654,7 @@
 	.4byte func_8029A3FC
 	.4byte func_8029A498
 	.4byte func_80101FB8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuTutorial
 	.4byte 0xFFFFFFA8
 	.4byte func_8029A92C

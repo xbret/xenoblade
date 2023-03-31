@@ -1230,7 +1230,7 @@
 .balign 8
 
 .obj float_8066B548, global
-	.float 0.1 #0x3DCCCCCD
+	.float 0.1
 .endobj float_8066B548
 
 

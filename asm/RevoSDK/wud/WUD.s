@@ -7668,7 +7668,7 @@
 .balign 8
 
 .obj lbl_8066C260, global
-	.4byte 0x57696900
+	.asciz "Wii"
 .endobj lbl_8066C260
 
 

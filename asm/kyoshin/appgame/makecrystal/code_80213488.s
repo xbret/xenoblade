@@ -326,7 +326,7 @@
 .balign 8
 
 .obj float_8066AD18, global
-	.float 30 #0x41F00000
+	.float 30
 .endobj float_8066AD18
 
 

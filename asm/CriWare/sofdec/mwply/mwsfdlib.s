@@ -690,7 +690,7 @@
 
 
 .obj lbl_8051E404, global
-	.float 59.94 #0x426FC28F
+	.float 59.94
 .endobj lbl_8051E404
 
 

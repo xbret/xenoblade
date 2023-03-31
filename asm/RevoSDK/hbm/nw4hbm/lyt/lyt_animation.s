@@ -859,14 +859,14 @@
 
 
 .obj lbl_80518A28, global
-	.float -0.001 #0xBA83126F
+	.float -0.001
 .endobj lbl_80518A28
 
 
 .obj lbl_80518A2C, global
 	.4byte 0x3A83126F
 	.float 1.0
-	.float 2 #0x40000000
+	.float 2
 	.4byte 0x40400000
 	.4byte 0xC0000000
 .endobj lbl_80518A2C

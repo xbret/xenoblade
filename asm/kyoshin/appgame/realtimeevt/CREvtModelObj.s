@@ -2352,7 +2352,7 @@
 
 
 .obj float_8066A1C4, global
-	.float 40 #0x42200000
+	.float 40
 .endobj float_8066A1C4
 
 

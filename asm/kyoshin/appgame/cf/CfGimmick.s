@@ -2678,17 +2678,17 @@
 
 
 .obj float_8066AC1C, global
-	.float 30 #0x41F00000
+	.float 30
 .endobj float_8066AC1C
 
 
 .obj float_8066AC20, global
-	.float 30000 #0x46EA6000
+	.float 30000
 .endobj float_8066AC20
 
 
 .obj float_8066AC24, global
-	.float 0.01 #0x3C23D70A
+	.float 0.01
 .endobj float_8066AC24
 
 

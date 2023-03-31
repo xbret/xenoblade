@@ -5385,7 +5385,7 @@
 
 
 .obj float_8066D044, global
-	.float 0.01 #0x3C23D70A
+	.float 0.01
 .endobj float_8066D044
 
 
@@ -5399,7 +5399,7 @@
 
 
 .obj float_8066D054, global
-	.float 100000 #0x47C35000
+	.float 100000
 .endobj float_8066D054
 
 
@@ -5424,7 +5424,7 @@
 
 
 .obj float_8066D070, global
-	.float 2 #0x40000000
+	.float 2
 .endobj float_8066D070
 
 
@@ -5434,12 +5434,12 @@
 
 
 .obj float_8066D078, global
-	.float -100000 #0xC7C35000
+	.float -100000
 .endobj float_8066D078
 
 
 .obj float_8066D07C, global
-	.float 0.45 #0x3EE66666
+	.float 0.45
 .endobj float_8066D07C
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

@@ -1253,7 +1253,7 @@
 	.4byte func_801A1DF8
 	.4byte func_801A1EBC
 	.4byte func_80124584
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CSimpleEveTalkWin
 	.4byte 0xFFFFFF94
 	.4byte func_801A29B4
@@ -1328,7 +1328,7 @@
 .balign 8
 
 .obj float_8066A560, global
-	.float 38 #0x42180000
+	.float 38
 .endobj float_8066A560
 
 
@@ -1343,7 +1343,7 @@
 
 
 .obj float_8066A56C, global
-	.float 193 #0x43410000
+	.float 193
 .endobj float_8066A56C
 
 

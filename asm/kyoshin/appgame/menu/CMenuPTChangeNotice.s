@@ -934,7 +934,7 @@
 	.4byte func_8029330C
 	.4byte func_802933CC
 	.4byte func_80124584
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuPTChangeNotice
 	.4byte 0xFFFFFF94
 	.4byte func_80293D78
@@ -1014,7 +1014,7 @@
 .balign 8
 
 .obj float_8066B428, global
-	.float 4 #0x40800000
+	.float 4
 .endobj float_8066B428
 
 

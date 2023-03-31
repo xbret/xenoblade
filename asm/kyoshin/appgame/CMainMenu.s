@@ -3951,7 +3951,7 @@
 	.4byte func_800FEE5C
 	.4byte func_80101F70
 	.4byte func_80101FB8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMainMenu
 	.4byte 0xFFFFFFA8
 	.4byte func_80102008
@@ -4050,7 +4050,7 @@
 	.4byte 0
 	.4byte func_80101F70
 	.4byte func_80101FB8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTTask_IUICf
 
 .obj CTTask_IUICf_hierarchy, global

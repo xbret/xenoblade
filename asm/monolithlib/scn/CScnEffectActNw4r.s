@@ -899,12 +899,12 @@
 
 
 .obj lbl_80666350, global
-	.4byte 0x72656600
+	.asciz "ref"
 .endobj lbl_80666350
 
 
 .obj lbl_80666354, global
-	.4byte 0x72656600
+	.asciz "ref"
 .endobj lbl_80666354
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

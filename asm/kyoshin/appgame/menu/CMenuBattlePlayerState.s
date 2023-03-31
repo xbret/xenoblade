@@ -4240,7 +4240,7 @@
 	.4byte func_8010C180
 	.4byte func_8010C330
 	.4byte func_80108BE8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuBattlePlayerState
 	.4byte 0xFFFFFFA8
 	.4byte func_8010EA4C
@@ -4325,17 +4325,17 @@
 
 
 .obj float_80669860, global
-	.float 110 #0x42DC0000
+	.float 110
 .endobj float_80669860
 
 
 .obj float_80669864, global
-	.float 86 #0x42AC0000
+	.float 86
 .endobj float_80669864
 
 
 .obj float_80669868, global
-	.float -178 #0xC3320000
+	.float -178
 	.4byte 0
 .endobj float_80669868
 
@@ -4360,12 +4360,12 @@
 
 
 .obj float_8066988C, global
-	.float 360 #0x43B40000
+	.float 360
 .endobj float_8066988C
 
 
 .obj float_80669890, global
-	.float 82 #0x42A40000
+	.float 82
 .endobj float_80669890
 
 
@@ -4380,7 +4380,7 @@
 
 
 .obj float_8066989C, global
-	.float 14 #0x41600000
+	.float 14
 .endobj float_8066989C
 
 
@@ -4390,17 +4390,17 @@
 
 
 .obj float_806698A4, global
-	.float 60 #0x42700000
+	.float 60
 .endobj float_806698A4
 
 
 .obj float_806698A8, global
-	.float 50 #0x42480000
+	.float 50
 .endobj float_806698A8
 
 
 .obj float_806698AC, global
-	.float 15 #0x41700000
+	.float 15
 .endobj float_806698AC
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

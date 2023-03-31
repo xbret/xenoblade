@@ -2932,28 +2932,28 @@
 	.4byte func_8014AB28
 	.4byte __RTTI__cf_CfObjectActor
 	.4byte 0xFFFFC164
-	.4byte func_8003DC64
-	.4byte func_8003CB58
-	.4byte func_8003DD34
-	.4byte func_800A34A8
-	.4byte func_8009489C
-	.4byte func_800A349C
-	.4byte func_80086B4C
-	.4byte func_8003CB20
-	.4byte func_8003D98C
-	.4byte func_8003D8C0
-	.4byte func_8003D7B0
-	.4byte func_800A3494
-	.4byte func_800A3488
-	.4byte func_8003C7F8
+	.4byte CObjectState_func_8003DC64
+	.4byte CObjectState_func_8003CB58
+	.4byte CObjectState_func_8003DD34
+	.4byte CObjectState_func_800A34A8
+	.4byte CObjectState_func_8009489C
+	.4byte CObjectState_func_800A349C
+	.4byte CObjectState_func_80086B4C
+	.4byte CObjectState_func_8003CB20
+	.4byte CObjectState_func_8003D98C
+	.4byte CObjectState_func_8003D8C0
+	.4byte CObjectState_func_8003D7B0
+	.4byte CObjectState_func_800A3494
+	.4byte CObjectState_func_800A3488
+	.4byte CObjectParam_func_8003C7F8
 	.4byte func_800B067C
-	.4byte func_800A34B4
-	.4byte func_80080640
-	.4byte func_8003E664
-	.4byte func_8003DC74
+	.4byte CObjectParam_func_800A34B4
+	.4byte CObjectParam_func_80080640
+	.4byte CObjectParam_func_8003E664
+	.4byte CObjectParam_func_8003DC74
 	.4byte func_801725DC
 	.4byte func_800BA900
-	.4byte func_800AC75C
+	.4byte CfObject_func_800AC75C
 	.4byte func_800BBE0C
 	.4byte func_800BC758
 	.4byte func_800BC040
@@ -2961,7 +2961,7 @@
 	.4byte func_800BABBC
 	.4byte func_800BE984
 	.4byte func_800BE998
-	.4byte func_800AC5E4
+	.4byte CfObject_func_800AC5E4
 	.4byte func_800BE9E4
 	.4byte func_800BE088
 	.4byte func_800B068C
@@ -2971,7 +2971,7 @@
 	.4byte func_8008F9CC
 	.4byte func_800BDB6C
 	.4byte func_800BB0E8
-	.4byte func_800AC5A8
+	.4byte CfObject_func_800AC5A8
 	.4byte func_800BDBC0
 	.4byte func_800BDE8C
 	.4byte func_800BB168
@@ -2991,10 +2991,10 @@
 	.4byte func_800BECF8
 	.4byte func_800BEE34
 	.4byte func_800BEF20
-	.4byte func_800AC570
+	.4byte CfObject_func_800AC570
 	.4byte func_800BF014
 	.4byte func_800BF100
-	.4byte func_800AC558
+	.4byte CfObject_func_800AC558
 	.4byte func_800BF1F4
 	.4byte func_800BD774
 	.4byte func_800BD860
@@ -3128,12 +3128,12 @@
 
 
 .obj float_8066A024, global
-	.float 0.01 #0x3C23D70A
+	.float 0.01
 .endobj float_8066A024
 
 
 .obj float_8066A028, global
-	.float 50 #0x42480000
+	.float 50
 .endobj float_8066A028
 
 

@@ -1375,7 +1375,7 @@
 .balign 8
 
 .obj float_806646A8, global
-	.float 2.7 #0x402CCCCD
+	.float 2.7
 	.4byte 0
 .endobj float_806646A8
 
@@ -1403,17 +1403,17 @@
 .endobj float_806697C8
 
 .obj float_806697CC, global
-	.float 0.01 #0x3C23D70A
+	.float 0.01
 .endobj float_806697CC
 
 
 .obj float_806697D0, global
-	.float 14 #0x41600000
+	.float 14
 .endobj float_806697D0
 
 
 .obj float_806697D4, global
-	.float 18 #0x41900000
+	.float 18
 .endobj float_806697D4
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

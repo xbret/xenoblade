@@ -3128,7 +3128,7 @@
 .endobj double_8066AE18
 
 .obj float_8066AE20, global
-	.float 5 #0x40A00000
+	.float 5
 	.4byte 0
 .endobj float_8066AE20
 

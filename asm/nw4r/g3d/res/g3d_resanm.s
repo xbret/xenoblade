@@ -167,12 +167,12 @@
 
 
 .obj float_8066C2B4, global
-	.float 2 #0x40000000
+	.float 2
 .endobj float_8066C2B4
 
 
 .obj float_8066C2B8, global
-	.float 3 #0x40400000
+	.float 3
 .endobj float_8066C2B8
 
 
@@ -182,6 +182,6 @@
 
 
 .obj float_8066C2C0, global
-	.float 32768 #0x47000000
+	.float 32768
 	.4byte 0
 .endobj float_8066C2C0

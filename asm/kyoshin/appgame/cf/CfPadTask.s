@@ -1462,7 +1462,7 @@
 	.4byte func_801C1AA4
 	.4byte func_801C1F68
 	.4byte func_801C2BA4
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__cf_CfPadTask
 	.4byte 0xFFFFFFAC
 	.4byte func_801C2BF4
@@ -1499,7 +1499,7 @@
 	.4byte 0
 	.4byte func_801C2B5C
 	.4byte func_801C2BA4
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTTask_cf_CfPadTask
 
 .obj CTTask_cf_CfPadTask_hierarchy, global
@@ -1542,7 +1542,7 @@
 
 
 .obj float_8066A76C, global
-	.float 0.3 #0x3E99999A
+	.float 0.3
 .endobj float_8066A76C
 
 
@@ -1557,7 +1557,7 @@
 
 
 .obj float_8066A778, global
-	.float 0.7 #0x3F333333
+	.float 0.7
 	.4byte 0
 .endobj float_8066A778
 

@@ -3340,25 +3340,25 @@
 
 .obj lbl_804FF358, global
 	.float 0.1
-	.float 0.9 #0x3F666666
-	.float 0.04 #0x3D23D70A
-	.float 0.9 #0x3F666666
-	.float 0.19 #0x3E428F5C
-	.float 0.9 #0x3F666666
-	.float 0.07 #0x3D8F5C29
-	.float 0.9 #0x3F666666
+	.float 0.9
+	.float 0.04
+	.float 0.9
+	.float 0.19
+	.float 0.9
+	.float 0.07
+	.float 0.9
 	.float 0.1
-	.float 0.9 #0x3F666666
-	.float 0.19 #0x3E428F5C
-	.float 0.9 #0x3F666666
+	.float 0.9
+	.float 0.19
+	.float 0.9
 	.float 0.1
-	.float 0.9 #0x3F666666
-	.float 0.19 #0x3E428F5C
-	.float 0.9 #0x3F666666
+	.float 0.9
+	.float 0.19
+	.float 0.9
 	.float 0.1
-	.float 0.9 #0x3F666666
+	.float 0.9
 	.float 0.1
-	.float 0.9 #0x3F666666
+	.float 0.9
 .endobj lbl_804FF358
 
 .obj CScnItemModelNw4r_typestr, global
@@ -3515,37 +3515,37 @@
 
 
 .obj float_8066A304, global
-	.float 2 #0x40000000
+	.float 2
 .endobj float_8066A304
 
 
 .obj float_8066A308, global
-	.float -8 #0xC1000000
+	.float -8
 .endobj float_8066A308
 
 
 .obj float_8066A30C, global
-	.float 0.7 #0x3F333333
+	.float 0.7
 .endobj float_8066A30C
 
 
 .obj float_8066A310, global
-	.float 1.4 #0x3FB33333
+	.float 1.4
 .endobj float_8066A310
 
 
 .obj float_8066A314, global
-	.float -0.1 #0xBDCCCCCD
+	.float -0.1
 .endobj float_8066A314
 
 
 .obj float_8066A318, global
-	.float 0.3 #0x3E99999A
+	.float 0.3
 .endobj float_8066A318
 
 
 .obj float_8066A31C, global
-	.float 3 #0x40400000
+	.float 3
 .endobj float_8066A31C
 
 
@@ -3555,7 +3555,7 @@
 
 
 .obj float_8066A324, global
-	.float 20 #0x41A00000
+	.float 20
 .endobj float_8066A324
 
 

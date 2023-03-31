@@ -1452,7 +1452,7 @@
 
 
 .obj float_8066D250, global
-	.float 255 #0x437F0000
+	.float 255
 	.4byte 0
 .endobj float_8066D250
 
@@ -1463,7 +1463,7 @@
 
 
 .obj float_8066D25C, global
-	.float 255 #0x437F0000
+	.float 255
 .endobj float_8066D25C
 
 

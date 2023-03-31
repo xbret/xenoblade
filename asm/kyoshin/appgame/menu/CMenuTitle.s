@@ -435,7 +435,7 @@
 	.4byte func_802B5CE0
 	.4byte func_802B5D34
 	.4byte func_802B62CC
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuTitle
 	.4byte 0xFFFFFFAC
 	.4byte func_802B6314
@@ -503,7 +503,7 @@
 	.4byte 0
 	.4byte func_802B6284
 	.4byte func_802B62CC
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTTask_CMenuTitle
 
 .obj CTTask_CMenuTitle_hierarchy, global

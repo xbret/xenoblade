@@ -540,12 +540,12 @@
 
 
 .obj lbl_80666580, global
-	.4byte 0x72656600
+	.asciz "ref"
 .endobj lbl_80666580
 
 
 .obj lbl_80666584, global
-	.4byte 0x72656600
+	.asciz "ref"
 .endobj lbl_80666584
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
@@ -574,12 +574,12 @@
 
 
 .obj float_8066DAC4, global
-	.float 0.002 #0x3B03126F
+	.float 0.002
 .endobj float_8066DAC4
 
 
 .obj float_8066DAC8, global
-	.float 0.006 #0x3BC49BA6
+	.float 0.006
 	.4byte 0
 .endobj float_8066DAC8
 
@@ -594,12 +594,12 @@
 
 
 .obj float_8066DADC, global
-	.float 33 #0x42040000
+	.float 33
 .endobj float_8066DADC
 
 
 .obj float_8066DAE0, global
-	.float 4 #0x40800000
+	.float 4
 	.4byte 0
 .endobj float_8066DAE0
 

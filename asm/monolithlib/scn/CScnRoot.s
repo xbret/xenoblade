@@ -483,17 +483,17 @@
 .balign 8
 
 .obj float_8066D1A8, global
-	.float 20 #0x41A00000
+	.float 20
 .endobj float_8066D1A8
 
 
 .obj float_8066D1AC, global
-	.float 0.01 #0x3C23D70A
+	.float 0.01
 .endobj float_8066D1AC
 
 
 .obj float_8066D1B0, global
-	.float 0.08 #0x3DA3D70A
+	.float 0.08
 .endobj float_8066D1B0
 
 

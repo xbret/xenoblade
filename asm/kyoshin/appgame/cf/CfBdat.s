@@ -1509,9 +1509,10 @@
 .balign 8
 
 .obj lbl_80664B20, global
-	.4byte 0x70633100
-	.4byte 0
+	.asciz "pc1"
 .endobj lbl_80664B20
+
+.balign 8
 
 .obj __RTTI__cf_CfBdat, global
 	.4byte cf_CfBdat_typestr

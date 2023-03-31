@@ -5766,7 +5766,7 @@
 
 
 .obj float_80668814, global
-	.float 22 #0x41B00000
+	.float 22
 .endobj float_80668814
 
 

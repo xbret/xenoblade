@@ -1267,10 +1267,11 @@
 .balign 8
 
 .obj lbl_80665AE0, global
-	.4byte 0x2F000000
+	.asciz "/"
 .endobj lbl_80665AE0
 
+.balign 4
 
 .obj lbl_80665AE4, global
-	.4byte 0x2F257300
+	.asciz "/%s"
 .endobj lbl_80665AE4

@@ -477,7 +477,7 @@
     .float 0.00030099999
     .float -0.024541
     .float 1.0
-    .float 0 #0
+    .float 0
     .float -0.00030099999
     .float -0.024541
     .float 0.999699
@@ -732,7 +732,7 @@
     .float -0.999699
     .float -0.024541
     .float -0.00030099999
-    .float 0 #0
+    .float 0
     .float -1.0
     .float -0.024541
     .float 0.00030099999

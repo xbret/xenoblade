@@ -644,12 +644,12 @@
 
 
 .obj float_80668A8C, global
-	.float 3 #0x40400000
+	.float 3
 .endobj float_80668A8C
 
 
 .obj float_80668A90, global
-	.float 120 #0x42F00000
+	.float 120
 .endobj float_80668A90
 
 
@@ -658,7 +658,7 @@
 .endobj float_80668A94
 
 .obj float_80668A98, global
-	.float 30 #0x41F00000
+	.float 30
 .endobj float_80668A98
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

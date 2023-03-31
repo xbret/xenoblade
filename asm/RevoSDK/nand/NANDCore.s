@@ -1476,17 +1476,21 @@
 
 
 .obj lbl_80665AF4, global
-	.4byte 0x2E000000
+	.asciz "."
 .endobj lbl_80665AF4
+
+.balign 4
 
 
 .obj lbl_80665AF8, global
-	.4byte 0x2E2E0000
+	.asciz ".."
 .endobj lbl_80665AF8
+
+.balign 4
 
 
 .obj lbl_80665AFC, global
-	.4byte 0x2F257300
+	.asciz "/%s"
 .endobj lbl_80665AFC
 
 

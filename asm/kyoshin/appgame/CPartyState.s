@@ -2053,7 +2053,7 @@
 
 
 .obj float_8066AAF4, global
-	.float 82 #0x42A40000
+	.float 82
 .endobj float_8066AAF4
 
 
@@ -2072,7 +2072,7 @@
 
 
 .obj float_8066AB08, global
-	.float 14 #0x41600000
+	.float 14
 	.4byte 0
 .endobj float_8066AB08
 

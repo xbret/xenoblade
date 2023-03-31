@@ -1198,30 +1198,30 @@
 /* 800AC4AC 00075A6C  4E 80 00 20 */	blr 
 .endfn func_800AC4A8
 
-.fn func_800AC4B0, global
+.fn CfObject_func_800AC4B0, global
 /* 800AC4B0 00075A70  C0 22 8E 5C */	lfs f1, float_806691DC@sda21(r2)
 /* 800AC4B4 00075A74  4E 80 00 20 */	blr 
-.endfn func_800AC4B0
+.endfn CfObject_func_800AC4B0
 
-.fn func_800AC4B8, global
+.fn CfObject_func_800AC4B8, global
 /* 800AC4B8 00075A78  4E 80 00 20 */	blr 
-.endfn func_800AC4B8
+.endfn CfObject_func_800AC4B8
 
-.fn func_800AC4BC, global
+.fn CfObject_func_800AC4BC, global
 /* 800AC4BC 00075A7C  C0 22 8E 58 */	lfs f1, float_806691D8@sda21(r2)
 /* 800AC4C0 00075A80  4E 80 00 20 */	blr 
-.endfn func_800AC4BC
+.endfn CfObject_func_800AC4BC
 
-.fn func_800AC4C4, global
+.fn CfObject_func_800AC4C4, global
 /* 800AC4C4 00075A84  4E 80 00 20 */	blr 
-.endfn func_800AC4C4
+.endfn CfObject_func_800AC4C4
 
-.fn func_800AC4C8, global
+.fn CfObject_func_800AC4C8, global
 /* 800AC4C8 00075A88  38 60 00 00 */	li r3, 0
 /* 800AC4CC 00075A8C  4E 80 00 20 */	blr 
-.endfn func_800AC4C8
+.endfn CfObject_func_800AC4C8
 
-.fn func_800AC4D0, global
+.fn CfObject_func_800AC4D0, global
 /* 800AC4D0 00075A90  2C 04 00 00 */	cmpwi r4, 0
 /* 800AC4D4 00075A94  41 82 00 14 */	beq .L_800AC4E8
 /* 800AC4D8 00075A98  80 03 00 68 */	lwz r0, 0x68(r3)
@@ -1233,9 +1233,9 @@
 /* 800AC4EC 00075AAC  54 00 02 90 */	rlwinm r0, r0, 0, 0xa, 8
 /* 800AC4F0 00075AB0  90 03 00 68 */	stw r0, 0x68(r3)
 /* 800AC4F4 00075AB4  4E 80 00 20 */	blr 
-.endfn func_800AC4D0
+.endfn CfObject_func_800AC4D0
 
-.fn func_800AC4F8, global
+.fn CfObject_func_800AC4F8, global
 /* 800AC4F8 00075AB8  2C 04 00 00 */	cmpwi r4, 0
 /* 800AC4FC 00075ABC  41 82 00 14 */	beq .L_800AC510
 /* 800AC500 00075AC0  80 03 00 68 */	lwz r0, 0x68(r3)
@@ -1247,154 +1247,154 @@
 /* 800AC514 00075AD4  54 00 01 CA */	rlwinm r0, r0, 0, 7, 5
 /* 800AC518 00075AD8  90 03 00 68 */	stw r0, 0x68(r3)
 /* 800AC51C 00075ADC  4E 80 00 20 */	blr 
-.endfn func_800AC4F8
+.endfn CfObject_func_800AC4F8
 
-.fn func_800AC520, global
+.fn CfObject_func_800AC520, global
 /* 800AC520 00075AE0  38 60 00 00 */	li r3, 0
 /* 800AC524 00075AE4  4E 80 00 20 */	blr 
-.endfn func_800AC520
+.endfn CfObject_func_800AC520
 
-.fn func_800AC528, global
+.fn CfObject_func_800AC528, global
 /* 800AC528 00075AE8  4E 80 00 20 */	blr 
-.endfn func_800AC528
+.endfn CfObject_func_800AC528
 
-.fn func_800AC52C, global
+.fn CfObject_func_800AC52C, global
 /* 800AC52C 00075AEC  C0 22 8E 58 */	lfs f1, float_806691D8@sda21(r2)
 /* 800AC530 00075AF0  4E 80 00 20 */	blr 
-.endfn func_800AC52C
+.endfn CfObject_func_800AC52C
 
-.fn func_800AC534, global
+.fn CfObject_func_800AC534, global
 /* 800AC534 00075AF4  4E 80 00 20 */	blr 
-.endfn func_800AC534
+.endfn CfObject_func_800AC534
 
-.fn func_800AC538, global
+.fn CfObject_func_800AC538, global
 /* 800AC538 00075AF8  4E 80 00 20 */	blr 
-.endfn func_800AC538
+.endfn CfObject_func_800AC538
 
-.fn func_800AC53C, global
+.fn CfObject_func_800AC53C, global
 /* 800AC53C 00075AFC  38 60 FF FF */	li r3, -1
 /* 800AC540 00075B00  4E 80 00 20 */	blr 
-.endfn func_800AC53C
+.endfn CfObject_func_800AC53C
 
-.fn func_800AC544, global
+.fn CfObject_func_800AC544, global
 /* 800AC544 00075B04  4E 80 00 20 */	blr 
-.endfn func_800AC544
+.endfn CfObject_func_800AC544
 
-.fn func_800AC548, global
+.fn CfObject_func_800AC548, global
 /* 800AC548 00075B08  38 60 00 00 */	li r3, 0
 /* 800AC54C 00075B0C  4E 80 00 20 */	blr 
-.endfn func_800AC548
+.endfn CfObject_func_800AC548
 
-.fn func_800AC550, global
+.fn CfObject_func_800AC550, global
 /* 800AC550 00075B10  38 60 00 00 */	li r3, 0
 /* 800AC554 00075B14  4E 80 00 20 */	blr 
-.endfn func_800AC550
+.endfn CfObject_func_800AC550
 
-.fn func_800AC558, global
+.fn CfObject_func_800AC558, global
 /* 800AC558 00075B18  38 60 00 00 */	li r3, 0
 /* 800AC55C 00075B1C  4E 80 00 20 */	blr 
-.endfn func_800AC558
+.endfn CfObject_func_800AC558
 
-.fn func_800AC560, global
+.fn CfObject_func_800AC560, global
 /* 800AC560 00075B20  38 60 00 00 */	li r3, 0
 /* 800AC564 00075B24  4E 80 00 20 */	blr 
-.endfn func_800AC560
+.endfn CfObject_func_800AC560
 
-.fn func_800AC568, global
+.fn CfObject_func_800AC568, global
 /* 800AC568 00075B28  38 60 00 00 */	li r3, 0
 /* 800AC56C 00075B2C  4E 80 00 20 */	blr 
-.endfn func_800AC568
+.endfn CfObject_func_800AC568
 
-.fn func_800AC570, global
+.fn CfObject_func_800AC570, global
 /* 800AC570 00075B30  38 60 00 00 */	li r3, 0
 /* 800AC574 00075B34  4E 80 00 20 */	blr 
-.endfn func_800AC570
+.endfn CfObject_func_800AC570
 
-.fn func_800AC578, global
+.fn CfObject_func_800AC578, global
 /* 800AC578 00075B38  38 60 00 00 */	li r3, 0
 /* 800AC57C 00075B3C  4E 80 00 20 */	blr 
-.endfn func_800AC578
+.endfn CfObject_func_800AC578
 
-.fn func_800AC580, global
+.fn CfObject_func_800AC580, global
 /* 800AC580 00075B40  38 60 00 00 */	li r3, 0
 /* 800AC584 00075B44  4E 80 00 20 */	blr 
-.endfn func_800AC580
+.endfn CfObject_func_800AC580
 
-.fn func_800AC588, global
+.fn CfObject_func_800AC588, global
 /* 800AC588 00075B48  C0 23 00 60 */	lfs f1, 0x60(r3)
 /* 800AC58C 00075B4C  4E 80 00 20 */	blr 
-.endfn func_800AC588
+.endfn CfObject_func_800AC588
 
-.fn func_800AC590, global
+.fn CfObject_func_800AC590, global
 /* 800AC590 00075B50  D0 23 00 60 */	stfs f1, 0x60(r3)
 /* 800AC594 00075B54  4E 80 00 20 */	blr 
-.endfn func_800AC590
+.endfn CfObject_func_800AC590
 
-.fn func_800AC598, global
+.fn CfObject_func_800AC598, global
 /* 800AC598 00075B58  38 63 00 48 */	addi r3, r3, 0x48
 /* 800AC59C 00075B5C  4E 80 00 20 */	blr 
-.endfn func_800AC598
+.endfn CfObject_func_800AC598
 
-.fn func_800AC5A0, global
+.fn CfObject_func_800AC5A0, global
 /* 800AC5A0 00075B60  38 63 00 3C */	addi r3, r3, 0x3c
 /* 800AC5A4 00075B64  4E 80 00 20 */	blr 
-.endfn func_800AC5A0
+.endfn CfObject_func_800AC5A0
 
-.fn func_800AC5A8, global
+.fn CfObject_func_800AC5A8, global
 /* 800AC5A8 00075B68  D0 23 00 3C */	stfs f1, 0x3c(r3)
 /* 800AC5AC 00075B6C  D0 63 00 44 */	stfs f3, 0x44(r3)
 /* 800AC5B0 00075B70  D0 43 00 40 */	stfs f2, 0x40(r3)
 /* 800AC5B4 00075B74  4E 80 00 20 */	blr 
-.endfn func_800AC5A8
+.endfn CfObject_func_800AC5A8
 
-.fn func_800AC5B8, global
+.fn CfObject_func_800AC5B8, global
 /* 800AC5B8 00075B78  38 60 00 01 */	li r3, 1
 /* 800AC5BC 00075B7C  4E 80 00 20 */	blr 
-.endfn func_800AC5B8
+.endfn CfObject_func_800AC5B8
 
-.fn func_800AC5C0, global
+.fn CfObject_func_800AC5C0, global
 /* 800AC5C0 00075B80  C0 22 8E 58 */	lfs f1, float_806691D8@sda21(r2)
 /* 800AC5C4 00075B84  4E 80 00 20 */	blr 
-.endfn func_800AC5C0
+.endfn CfObject_func_800AC5C0
 
-.fn func_800AC5C8, global
+.fn CfObject_func_800AC5C8, global
 /* 800AC5C8 00075B88  4E 80 00 20 */	blr 
-.endfn func_800AC5C8
+.endfn CfObject_func_800AC5C8
 
-.fn func_800AC5CC, global
+.fn CfObject_func_800AC5CC, global
 /* 800AC5CC 00075B8C  C0 22 8E 58 */	lfs f1, float_806691D8@sda21(r2)
 /* 800AC5D0 00075B90  4E 80 00 20 */	blr 
-.endfn func_800AC5CC
+.endfn CfObject_func_800AC5CC
 
-.fn func_800AC5D4, global
+.fn CfObject_func_800AC5D4, global
 /* 800AC5D4 00075B94  4E 80 00 20 */	blr 
-.endfn func_800AC5D4
+.endfn CfObject_func_800AC5D4
 
-.fn func_800AC5D8, global
+.fn CfObject_func_800AC5D8, global
 /* 800AC5D8 00075B98  38 60 00 01 */	li r3, 1
 /* 800AC5DC 00075B9C  4E 80 00 20 */	blr 
-.endfn func_800AC5D8
+.endfn CfObject_func_800AC5D8
 
-.fn func_800AC5E0, global
+.fn CfObject_func_800AC5E0, global
 /* 800AC5E0 00075BA0  4E 80 00 20 */	blr 
-.endfn func_800AC5E0
+.endfn CfObject_func_800AC5E0
 
-.fn func_800AC5E4, global
+.fn CfObject_func_800AC5E4, global
 /* 800AC5E4 00075BA4  80 03 00 6C */	lwz r0, 0x6c(r3)
 /* 800AC5E8 00075BA8  54 03 07 FE */	clrlwi r3, r0, 0x1f
 /* 800AC5EC 00075BAC  4E 80 00 20 */	blr 
-.endfn func_800AC5E4
+.endfn CfObject_func_800AC5E4
 
-.fn func_800AC5F0, global
+.fn CfObject_func_800AC5F0, global
 /* 800AC5F0 00075BB0  81 83 00 00 */	lwz r12, 0(r3)
 /* 800AC5F4 00075BB4  81 8C 00 74 */	lwz r12, 0x74(r12)
 /* 800AC5F8 00075BB8  7D 89 03 A6 */	mtctr r12
 /* 800AC5FC 00075BBC  4E 80 04 20 */	bctr 
-.endfn func_800AC5F0
+.endfn CfObject_func_800AC5F0
 
-.fn func_800AC600, global
+.fn CfObject_func_800AC600, global
 /* 800AC600 00075BC0  4E 80 00 20 */	blr 
-.endfn func_800AC600
+.endfn CfObject_func_800AC600
 
 .fn func_800AC604, global
 /* 800AC604 00075BC4  80 03 00 68 */	lwz r0, 0x68(r3)
@@ -1482,98 +1482,98 @@
 .obj __vt__cf_CfObjectColl, global
 	.4byte __RTTI__cf_CfObjectColl
 	.4byte 0
-	.4byte func_8003DC64
-	.4byte func_8003CB58
-	.4byte func_8003DD34
-	.4byte func_800A34A8
-	.4byte func_8009489C
-	.4byte func_800A349C
-	.4byte func_80086B4C
-	.4byte func_8003CB20
-	.4byte func_8003D98C
-	.4byte func_8003D8C0
-	.4byte func_8003D7B0
-	.4byte func_800A3494
-	.4byte func_800A3488
-	.4byte func_8003C7F8
-	.4byte func_8003C2EC
-	.4byte func_800A34B4
+	.4byte CObjectState_func_8003DC64
+	.4byte CObjectState_func_8003CB58
+	.4byte CObjectState_func_8003DD34
+	.4byte CObjectState_func_800A34A8
+	.4byte CObjectState_func_8009489C
+	.4byte CObjectState_func_800A349C
+	.4byte CObjectState_func_80086B4C
+	.4byte CObjectState_func_8003CB20
+	.4byte CObjectState_func_8003D98C
+	.4byte CObjectState_func_8003D8C0
+	.4byte CObjectState_func_8003D7B0
+	.4byte CObjectState_func_800A3494
+	.4byte CObjectState_func_800A3488
+	.4byte CObjectParam_func_8003C7F8
+	.4byte CObjectParam_func_8003C2EC
+	.4byte CObjectParam_func_800A34B4
 	.4byte func_800C136C
-	.4byte func_8003E664
-	.4byte func_8003DC74
+	.4byte CObjectParam_func_8003E664
+	.4byte CObjectParam_func_8003DC74
 	.4byte __dt__800AB424
 	.4byte func_800AB3EC
 	.4byte func_800AB498
 	.4byte func_800C14CC
-	.4byte func_800AC600
+	.4byte CfObject_func_800AC600
 	.4byte func_800C1444
 	.4byte func_800AB57C
 	.4byte func_800C1658
-	.4byte func_8006CB04
-	.4byte func_800AC5F0
-	.4byte func_800AC5E4
-	.4byte func_800AC5E0
-	.4byte func_800AC5D8
-	.4byte func_800AC5D4
-	.4byte func_800AC5CC
-	.4byte func_800AC5C8
-	.4byte func_800AC5C0
-	.4byte func_800AC5B8
+	.4byte CfObject_func_8006CB04
+	.4byte CfObject_func_800AC5F0
+	.4byte CfObject_func_800AC5E4
+	.4byte CfObject_func_800AC5E0
+	.4byte CfObject_func_800AC5D8
+	.4byte CfObject_func_800AC5D4
+	.4byte CfObject_func_800AC5CC
+	.4byte CfObject_func_800AC5C8
+	.4byte CfObject_func_800AC5C0
+	.4byte CfObject_func_800AC5B8
 	.4byte func_80047814
 	.4byte func_800C171C
-	.4byte func_800AC5A8
+	.4byte CfObject_func_800AC5A8
 	.4byte func_800AB798
-	.4byte func_8003C0C8
-	.4byte func_800AC5A0
-	.4byte func_800BAF50
+	.4byte CfObject_func_8003C0C8
+	.4byte CfObject_func_800AC5A0
+	.4byte CfObject_func_800BAF50
 	.4byte func_800AB7A8
-	.4byte func_8003F15C
-	.4byte func_800AC598
-	.4byte func_8003C784
-	.4byte func_8003C774
-	.4byte func_80049994
-	.4byte func_80080244
-	.4byte func_80080234
-	.4byte func_8003C250
-	.4byte func_800AC590
-	.4byte func_800AC588
-	.4byte func_800AC580
-	.4byte func_800AC578
-	.4byte func_800AC560
-	.4byte func_800AC568
-	.4byte func_800AC570
-	.4byte func_800AC548
-	.4byte func_800AC550
-	.4byte func_800AC558
-	.4byte func_800AC544
-	.4byte func_8008738C
-	.4byte func_8007DA78
-	.4byte func_800733A8
-	.4byte func_8003CD68
-	.4byte func_8003CDD8
-	.4byte func_800AC53C
-	.4byte func_80074228
-	.4byte func_8008735C
-	.4byte func_8006C668
-	.4byte func_80074204
-	.4byte func_800873A4
-	.4byte func_800AC538
-	.4byte func_800873C0
-	.4byte func_800AC534
-	.4byte func_800AC52C
-	.4byte func_800AC528
-	.4byte func_800AC520
-	.4byte func_800BAC74
-	.4byte func_8003F1E8
-	.4byte func_800AC4F8
+	.4byte CfObject_func_8003F15C
+	.4byte CfObject_func_800AC598
+	.4byte CfObject_func_8003C784
+	.4byte CfObject_func_8003C774
+	.4byte CfObject_func_80049994
+	.4byte CfObject_func_80080244
+	.4byte CfObject_func_80080234
+	.4byte CfObject_func_8003C250
+	.4byte CfObject_func_800AC590
+	.4byte CfObject_func_800AC588
+	.4byte CfObject_func_800AC580
+	.4byte CfObject_func_800AC578
+	.4byte CfObject_func_800AC560
+	.4byte CfObject_func_800AC568
+	.4byte CfObject_func_800AC570
+	.4byte CfObject_func_800AC548
+	.4byte CfObject_func_800AC550
+	.4byte CfObject_func_800AC558
+	.4byte CfObject_func_800AC544
+	.4byte CfObject_func_8008738C
+	.4byte CfObject_func_8007DA78
+	.4byte CfObject_func_800733A8
+	.4byte CfObject_func_8003CD68
+	.4byte CfObject_func_8003CDD8
+	.4byte CfObject_func_800AC53C
+	.4byte CfObject_func_80074228
+	.4byte CfObject_func_8008735C
+	.4byte CfObject_func_8006C668
+	.4byte CfObject_func_80074204
+	.4byte CfObject_func_800873A4
+	.4byte CfObject_func_800AC538
+	.4byte CfObject_func_800873C0
+	.4byte CfObject_func_800AC534
+	.4byte CfObject_func_800AC52C
+	.4byte CfObject_func_800AC528
+	.4byte CfObject_func_800AC520
+	.4byte CfObject_func_800BAC74
+	.4byte CfObject_func_8003F1E8
+	.4byte CfObject_func_800AC4F8
 	.4byte func_800C16F4
-	.4byte func_800AC4D0
+	.4byte CfObject_func_800AC4D0
 	.4byte func_800AC604
-	.4byte func_800AC4C8
-	.4byte func_800AC4C4
-	.4byte func_800AC4BC
-	.4byte func_800AC4B8
-	.4byte func_800AC4B0
+	.4byte CfObject_func_800AC4C8
+	.4byte CfObject_func_800AC4C4
+	.4byte CfObject_func_800AC4BC
+	.4byte CfObject_func_800AC4B8
+	.4byte CfObject_func_800AC4B0
 .endobj __vt__cf_CfObjectColl
 
 .obj cf_CfObjectColl_hierarchy, global
@@ -1735,7 +1735,7 @@
 
 
 .obj float_806691E0, global
-	.float 0.3 #0x3E99999A
+	.float 0.3
 	.4byte 0
 .endobj float_806691E0
 
@@ -1750,7 +1750,7 @@
 
 
 .obj float_806691F4, global
-	.float 0.1 #0x3DCCCCCD
+	.float 0.1
 .endobj float_806691F4
 
 
@@ -1760,12 +1760,12 @@
 
 
 .obj float_806691FC, global
-	.float 0.15 #0x3E19999A
+	.float 0.15
 .endobj float_806691FC
 
 
 .obj float_80669200, global
-	.float 0.7 #0x3F333333
+	.float 0.7
 .endobj float_80669200
 
 
@@ -1775,7 +1775,7 @@
 
 
 .obj float_80669208, global
-	.float 0.01 #0x3C23D70A
+	.float 0.01
 .endobj float_80669208
 
 
@@ -1790,12 +1790,12 @@
 
 
 .obj float_80669214, global
-	.float 30 #0x41F00000
+	.float 30
 .endobj float_80669214
 
 
 .obj float_80669218, global
-	.float 3 #0x40400000
+	.float 3
 	.4byte 0
 .endobj float_80669218
 

@@ -1027,28 +1027,28 @@
 .obj __EarlyCoefTable, local
 	.float 0.4
 	.float -1.0
-	.float 0.3 #0x3E99999A
+	.float 0.3
 	.float 0.5
 	.float -0.95
-	.float 0.3 #0x3E99999A
-	.float 0.6 #0x3F19999A
+	.float 0.3
+	.float 0.6
 	.float -0.9
-	.float 0.3 #0x3E99999A
+	.float 0.3
 	.float 0.75
 	.float -0.85
-	.float 0.3 #0x3E99999A
+	.float 0.3
 	.float -0.9
-	.float 0.8 #0x3F4CCCCD
-	.float 0.3 #0x3E99999A
+	.float 0.8
+	.float 0.3
 	.float -1.0
-	.float 0.7 #0x3F333333
-	.float 0.3 #0x3E99999A
+	.float 0.7
+	.float 0.3
 	.float -1.0
-	.float 0.7 #0x3F333333
-	.float 0.3 #0x3E99999A
+	.float 0.7
+	.float 0.3
 	.float -1.0
-	.float 0.7 #0x3F333333
-	.float 0.3 #0x3E99999A
+	.float 0.7
+	.float 0.3
 .endobj __EarlyCoefTable
 
 
@@ -1117,7 +1117,7 @@
 .balign 8
 
 .obj float_8066BDE0, global
-	.float 32000 #0x46FA0000
+	.float 32000
 .endobj float_8066BDE0
 
 
@@ -1132,7 +1132,7 @@
 
 
 .obj float_8066BDEC, global
-	.float 0.6 #0x3F19999A
+	.float 0.6
 .endobj float_8066BDEC
 
 
@@ -1146,7 +1146,7 @@
 .endobj double_8066BDF8
 
 .obj float_8066BE00, global
-	.float -3 #0xC0400000
+	.float -3
 	.4byte 0
 .endobj float_8066BE00
 
@@ -1157,7 +1157,7 @@
 
 
 .obj float_8066BE10, global
-	.float 0.95 #0x3F733333
+	.float 0.95
 	.4byte 0
 .endobj float_8066BE10
 

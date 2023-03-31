@@ -4018,16 +4018,16 @@
 
 
 .obj lbl_80533C00, global
-	.4byte 0x00010203
-	.4byte 0x04050607
-	.4byte 0x08090A0B
-	.4byte 0x0C0D0E0F
-	.4byte 0x10111213
-	.4byte 0x14151617
-	.4byte 0x18191A1B
-	.4byte 0x1C1D1E1F
-	.4byte 0x20212223
-	.4byte 0x24250000
+	.byte 0x00,0x01,0x02,0x03
+	.byte 0x04,0x05,0x06,0x07
+	.byte 0x08,0x09,0x0A,0x0B
+	.byte 0x0C,0x0D,0x0E,0x0F
+	.byte 0x10,0x11,0x12,0x13
+	.byte 0x14,0x15,0x16,0x17
+	.byte 0x18,0x19,0x1A,0x1B
+	.byte 0x1C,0x1D,0x1E,0x1F
+	.byte 0x20,0x21,0x22,0x23
+	.byte 0x24,0x25,0x00,0x00
 .endobj lbl_80533C00
 
 
@@ -4254,7 +4254,7 @@
 	.4byte func_8016503C
 	.4byte func_80165188
 	.4byte func_80165DB8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__cf_CTaskREvent
 	.4byte 0xFFFFFFAC
 	.4byte func_801666CC
@@ -4331,7 +4331,7 @@
 	.4byte 0
 	.4byte func_80166634
 	.4byte func_8016667C
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTTask_cf_CTaskREvent
 
 .obj CTTask_cf_CTaskREvent_hierarchy, global
@@ -4530,7 +4530,7 @@
 
 
 .obj float_80669EEC, global
-	.float 0.01 #0x3C23D70A
+	.float 0.01
 .endobj float_80669EEC
 
 
@@ -4539,27 +4539,27 @@
 .endobj double_80669EF0
 
 .obj float_80669EF8, global
-	.float 0.06 #0x3D75C28F
+	.float 0.06
 .endobj float_80669EF8
 
 
 .obj float_80669EFC, global
-	.float 60 #0x42700000
+	.float 60
 .endobj float_80669EFC
 
 
 .obj float_80669F00, global
-	.float 0.99 #0x3F7D70A4
+	.float 0.99
 .endobj float_80669F00
 
 
 .obj float_80669F04, global
-	.float 0.1 #0x3DCCCCCD
+	.float 0.1
 .endobj float_80669F04
 
 
 .obj float_80669F08, global
-	.float 85000 #0x47A60400
+	.float 85000
 	.4byte 0
 .endobj float_80669F08
 

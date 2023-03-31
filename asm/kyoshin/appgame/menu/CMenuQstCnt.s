@@ -1551,7 +1551,7 @@
 	.4byte func_80226700
 	.4byte func_80226780
 	.4byte func_80124584
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuQstCnt
 	.4byte 0xFFFFFF94
 	.4byte func_80226F94
@@ -1636,7 +1636,7 @@
 
 
 .obj float_8066AE30, global
-	.float 90 #0x42B40000
+	.float 90
 	.4byte 0
 .endobj float_8066AE30
 

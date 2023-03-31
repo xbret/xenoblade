@@ -973,7 +973,7 @@
 
 
 .obj float_8066C420, global
-	.float 255 #0x437F0000
+	.float 255
 	.4byte 0
 .endobj float_8066C420
 

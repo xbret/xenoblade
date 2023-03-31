@@ -1425,51 +1425,59 @@
 
 .obj lbl_8066CA88, global
 	.asciz "????"
-	.balign 4
 .endobj lbl_8066CA88
 
+.balign 4
+
 .obj lbl_8066CA90, global
-	.4byte 0x25660000
+	.asciz "%f"
 .endobj lbl_8066CA90
 
+.balign 4
+
 .obj lbl_8066CA94, global
-	.4byte 0x25640000
+	.asciz "%d"
 .endobj lbl_8066CA94
 
+.balign 4
+
 .obj lbl_8066CA98, global
-	.4byte 0x25780000
+	.asciz "%x"
 .endobj lbl_8066CA98
 
+.balign 4
+
 .obj lbl_8066CA9C, global
-	.4byte 0x25763300
+	.asciz "%v3"
 .endobj lbl_8066CA9C
 
 .obj lbl_8066CAA0, global
-	.4byte 0x25766100
+	.asciz "%va"
 .endobj lbl_8066CAA0
 
 .obj lbl_8066CAA4, global
-	.4byte 0x25763400
+	.asciz "%v4"
 .endobj lbl_8066CAA4
 
 .obj lbl_8066CAA8, global
-	.4byte 0x25693300
+	.asciz "%i3"
 .endobj lbl_8066CAA8
 
 .obj lbl_8066CAAC, global
-	.4byte 0x25693400
+	.asciz "%i4"
 .endobj lbl_8066CAAC
 
 .obj lbl_8066CAB0, global
 	.asciz "%rect"
-	.balign 4
 .endobj lbl_8066CAB0
 
+.balign 4
+
 .obj lbl_8066CAB8, global
-	.4byte 0x25730000
-	.4byte 0
+	.asciz "%s"
 .endobj lbl_8066CAB8
 
+.balign 8
 
 .obj double_8066CAC0, global
 	.8byte 0x4330000080000000 #signed int to float constant
@@ -1477,7 +1485,6 @@
 
 .obj CToken_typestr, global
 	.asciz "CToken"
-	.balign 4
 .endobj CToken_typestr
 
 .section extab, "a" # 0x800066E0 - 0x80021020

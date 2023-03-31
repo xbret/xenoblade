@@ -7371,7 +7371,7 @@
 	.4byte func_8011BB18
 	.4byte func_8011BBCC
 	.4byte func_80101FB8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuMiniMap2
 	.4byte 0xFFFFFFA8
 	.4byte func_8011C434
@@ -7660,7 +7660,7 @@
 
 
 .obj float_8066995C, global
-	.float 45 #0x42340000
+	.float 45
 .endobj float_8066995C
 
 
@@ -7669,7 +7669,7 @@
 .endobj double_80669960
 
 .obj float_80669968, global
-	.float 60 #0x42700000
+	.float 60
 .endobj float_80669968
 
 
@@ -7683,7 +7683,7 @@
 .endobj double_80669970
 
 .obj float_80669978, global
-	.float 0.1 #0x3DCCCCCD
+	.float 0.1
 .endobj float_80669978
 
 
@@ -7693,12 +7693,12 @@
 
 
 .obj float_80669980, global
-	.float 36 #0x42100000
+	.float 36
 .endobj float_80669980
 
 
 .obj float_80669984, global
-	.float 180 #0x43340000
+	.float 180
 .endobj float_80669984
 
 
@@ -7714,7 +7714,7 @@
 
 
 .obj float_80669994, global
-	.float 11 #0x41300000
+	.float 11
 .endobj float_80669994
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

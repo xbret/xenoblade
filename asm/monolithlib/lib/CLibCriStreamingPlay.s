@@ -2355,7 +2355,7 @@
 .endobj double_8066CCD8
 
 .obj float_8066CCE0, global
-	.float 15 #0x41700000
+	.float 15
 	.4byte 0
 .endobj float_8066CCE0
 

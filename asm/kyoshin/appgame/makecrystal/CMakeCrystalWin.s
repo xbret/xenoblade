@@ -1234,7 +1234,7 @@
 
 
 .obj float_8066AD14, global
-	.float 20 #0x41A00000
+	.float 20
 .endobj float_8066AD14
 
 

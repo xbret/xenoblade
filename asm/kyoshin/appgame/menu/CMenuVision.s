@@ -4618,7 +4618,7 @@
 	.4byte func_801AC6C8
 	.4byte func_801AC77C
 	.4byte func_80108BE8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuVision
 	.4byte 0xFFFFFFA8
 	.4byte func_801AFE04
@@ -4772,7 +4772,7 @@
 
 
 .obj float_8066A688, global
-	.float 298 #0x43950000
+	.float 298
 .endobj float_8066A688
 
 
@@ -4797,7 +4797,7 @@
 
 
 .obj float_8066A69C, global
-	.float 3 #0x40400000
+	.float 3
 .endobj float_8066A69C
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

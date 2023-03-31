@@ -1066,7 +1066,7 @@
 	.4byte func_802AC21C
 	.4byte func_802AC2A0
 	.4byte func_80101FB8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuTutorialList
 	.4byte 0xFFFFFFA8
 	.4byte func_802ACBD4

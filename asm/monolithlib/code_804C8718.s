@@ -4252,7 +4252,7 @@
 .endobj double_8066D868
 
 .obj float_8066D870, global
-	.float 2 #0x40000000
+	.float 2
 .endobj float_8066D870
 
 

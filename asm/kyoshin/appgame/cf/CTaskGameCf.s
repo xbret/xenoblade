@@ -795,7 +795,7 @@
 	.4byte func_800443E4
 	.4byte func_80044A28
 	.4byte func_80044420
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__cf_CTaskGameCf
 
 .obj cf_CTaskGameCf_hierarchy, global
@@ -820,7 +820,7 @@
 	.4byte 0
 	.4byte func_80044A28
 	.4byte func_80044A70
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTTask_cf_CTaskGameCf
 
 .obj CTTask_cf_CTaskGameCf_hierarchy, global

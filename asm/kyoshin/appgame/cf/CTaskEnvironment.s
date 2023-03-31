@@ -1780,7 +1780,7 @@
 	.4byte func_80058C58
 	.4byte func_80058CE8
 	.4byte func_800599DC
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTaskEnvironment
 
 .obj CTaskEnvironment_hierarchy, global
@@ -1805,7 +1805,7 @@
 	.4byte 0
 	.4byte func_80059CD0
 	.4byte func_80059D18
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTTask_CTaskEnvironment
 
 .obj CTTask_CTaskEnvironment_hierarchy, global
@@ -1888,7 +1888,7 @@
 
 
 .obj float_80668838, global
-	.float 30 #0x41F00000
+	.float 30
 .endobj float_80668838
 
 
@@ -1898,12 +1898,12 @@
 
 
 .obj float_80668840, global
-	.float 60 #0x42700000
+	.float 60
 .endobj float_80668840
 
 
 .obj float_80668844, global
-	.float 24 #0x41C00000
+	.float 24
 .endobj float_80668844
 
 
@@ -1917,32 +1917,32 @@
 
 
 .obj float_80668854, global
-	.float -3 #0xC0400000
+	.float -3
 .endobj float_80668854
 
 
 .obj float_80668858, global
-	.float 5 #0x40A00000
+	.float 5
 .endobj float_80668858
 
 
 .obj float_8066885C, global
-	.float 2 #0x40000000
+	.float 2
 .endobj float_8066885C
 
 
 .obj float_80668860, global
-	.float 12 #0x41400000
+	.float 12
 .endobj float_80668860
 
 
 .obj float_80668864, global
-	.float 360 #0x43B40000
+	.float 360
 .endobj float_80668864
 
 
 .obj float_80668868, global
-	.float 90 #0x42B40000
+	.float 90
 .endobj float_80668868
 
 
@@ -1952,17 +1952,17 @@
 
 
 .obj float_80668870, global
-	.float 0.1 #0x3DCCCCCD
+	.float 0.1
 .endobj float_80668870
 
 
 .obj float_80668874, global
-	.float 20000 #0x469C4000
+	.float 20000
 .endobj float_80668874
 
 
 .obj float_80668878, global
-	.float 10000 #0x461C4000
+	.float 10000
 .endobj float_80668878
 
 
@@ -1991,7 +1991,7 @@
 
 
 .obj float_80668894, global
-	.float 0.8 #0x3F4CCCCD
+	.float 0.8
 .endobj float_80668894
 
 
@@ -2021,7 +2021,7 @@
 
 
 .obj float_806688AC, global
-	.float 0.6 #0x3F19999A
+	.float 0.6
 .endobj float_806688AC
 
 

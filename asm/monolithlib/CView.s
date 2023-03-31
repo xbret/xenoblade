@@ -4374,7 +4374,7 @@
 
 
 .obj float_8066CAD4, global
-	.float 0.6 #0x3F19999A
+	.float 0.6
 .endobj float_8066CAD4
 
 .obj CView_typestr, global

@@ -4632,7 +4632,7 @@
 	.4byte __dt__8012E534
 	.4byte func_8012E79C
 	.4byte func_8012FEC0
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CUIBattleManager
 	.4byte 0xFFFFFFAC
 	.4byte func_8012FF6C
@@ -4714,7 +4714,7 @@
 	.4byte func_8012FDE0
 	.4byte func_8012FDDC
 	.4byte func_8012FDD8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CUIBattleManager_CTest
 
 .obj CUIBattleManager_CTest_hierarchy, global
@@ -4739,7 +4739,7 @@
 	.4byte 0
 	.4byte func_8012FDE8
 	.4byte func_8012FE30
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTTask_CUIBattleManager_CTest
 
 .obj CTTask_CUIBattleManager_CTest_hierarchy, global
@@ -4762,7 +4762,7 @@
 	.4byte 0
 	.4byte func_8012FE78
 	.4byte func_8012FEC0
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTTask_CUIBattleManager
 
 .obj CTTask_CUIBattleManager_hierarchy, global

@@ -2172,7 +2172,7 @@
 
 
 .obj float_8066C44C, global
-	.float -2 #0xC0000000
+	.float -2
 .endobj float_8066C44C
 
 

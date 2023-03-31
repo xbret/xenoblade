@@ -1102,7 +1102,7 @@
 	.4byte func_8018BF40
 	.4byte func_8018BFAC
 	.4byte func_80101FB8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuShopBuy
 	.4byte 0xFFFFFFA8
 	.4byte func_8018C5F4

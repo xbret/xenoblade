@@ -4509,17 +4509,17 @@
 .balign 8
 
 .obj lbl_80666128, global
-	.4byte 0x72656600
+	.asciz "ref"
 .endobj lbl_80666128
 
 
 .obj lbl_8066612C, global
-	.4byte 0x72656600
+	.asciz "ref"
 .endobj lbl_8066612C
 
 
 .obj lbl_80666130, global
-	.4byte 0x72656600
+	.asciz "ref"
 	.4byte 0
 .endobj lbl_80666130
 
@@ -4545,7 +4545,7 @@
 
 
 .obj float_8066CDDC, global
-	.float 10000 #0x461C4000
+	.float 10000
 .endobj float_8066CDDC
 
 
@@ -4579,7 +4579,7 @@
 
 
 .obj float_8066CE04, global
-	.float -0.5 #0xBF000000
+	.float -0.5
 .endobj float_8066CE04
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

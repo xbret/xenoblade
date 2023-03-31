@@ -1131,7 +1131,7 @@
 	.4byte func_804628A4
 	.4byte func_804628FC
 	.4byte func_80463078
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTaskLOD
 
 .obj CTaskLOD_hierarchy, global
@@ -1156,7 +1156,7 @@
 	.4byte 0
 	.4byte func_80463030
 	.4byte func_80463078
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTTask_CTaskLOD
 
 .obj CTTask_CTaskLOD_hierarchy, global
@@ -1226,17 +1226,17 @@
 .endobj double_8066CD90
 
 .obj float_8066CD98, global
-	.float 2 #0x40000000
+	.float 2
 .endobj float_8066CD98
 
 
 .obj float_8066CD9C, global
-	.float 3 #0x40400000
+	.float 3
 .endobj float_8066CD9C
 
 
 .obj float_8066CDA0, global
-	.float -2 #0xC0000000
+	.float -2
 .endobj float_8066CDA0
 
 

@@ -424,7 +424,7 @@
 
 
 .obj float_8066AA94, global
-	.float 20 #0x41A00000
+	.float 20
 .endobj float_8066AA94
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

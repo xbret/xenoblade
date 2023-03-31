@@ -5219,7 +5219,7 @@
 	.4byte __dt__8023C108
 	.4byte func_8023C154
 	.4byte func_802405A8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__cf_CfNandManager
 	.4byte 0xFFFFFFAC
 	.4byte func_802405FC
@@ -5288,7 +5288,7 @@
 	.4byte 0
 	.4byte func_80240560
 	.4byte func_802405A8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTTask_cf_CfNandManager
 
 .obj CTTask_cf_CfNandManager_hierarchy, global

@@ -637,7 +637,7 @@
 	.4byte func_802521FC
 	.4byte func_8025228C
 	.4byte func_80101FB8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuPause
 	.4byte 0xFFFFFFA8
 	.4byte func_80252628
@@ -721,7 +721,7 @@
 .endobj float_8066B088
 
 .obj float_8066B08C, global
-	.float 0.6 #0x3F19999A
+	.float 0.6
 .endobj float_8066B08C
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

@@ -1573,7 +1573,7 @@
 
 
 .obj float_8066CB7C, global
-	.float 255 #0x437F0000
+	.float 255
 .endobj float_8066CB7C
 
 
@@ -1592,22 +1592,22 @@
 .endobj double_8066CB90
 
 .obj float_8066CB98, global
-	.float 0.947 #0x3F726E98
+	.float 0.947
 .endobj float_8066CB98
 
 
 .obj float_8066CB9C, global
-	.float 2 #0x40000000
+	.float 2
 .endobj float_8066CB9C
 
 
 .obj float_8066CBA0, global
-	.float 0.1 #0x3DCCCCCD
+	.float 0.1
 .endobj float_8066CBA0
 
 
 .obj float_8066CBA4, global
-	.float 1000 #0x447A0000
+	.float 1000
 .endobj float_8066CBA4
 
 .obj CDevice_typestr, global

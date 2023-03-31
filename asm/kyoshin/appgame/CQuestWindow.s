@@ -3069,7 +3069,7 @@
 	.4byte func_80122524
 	.4byte func_8012453C
 	.4byte func_80124584
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CQuestWindow
 	.4byte 0xFFFFFF94
 	.4byte func_801245D4
@@ -3140,7 +3140,7 @@
 	.4byte 0
 	.4byte func_8012453C
 	.4byte func_80124584
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__IUIWindow
 
 .obj IUIWindow_hierarchy, global
@@ -3165,7 +3165,7 @@
 	.4byte 0
 	.4byte func_8012453C
 	.4byte func_80124584
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTTask_IUIWindow
 
 .obj CTTask_IUIWindow_hierarchy, global
@@ -3208,7 +3208,7 @@
 .balign 8
 
 .obj float_80669A00, global
-	.float 2 #0x40000000
+	.float 2
 .endobj float_80669A00
 
 
@@ -3233,7 +3233,7 @@
 
 
 .obj float_80669A14, global
-	.float 0.01 #0x3C23D70A
+	.float 0.01
 .endobj float_80669A14
 
 

@@ -272,7 +272,7 @@
 	.4byte 0
 	.4byte func_800698B4
 	.4byte func_800698FC
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTTask_cf_CfTaskMain
 
 .obj CTTask_cf_CfTaskMain_hierarchy, global

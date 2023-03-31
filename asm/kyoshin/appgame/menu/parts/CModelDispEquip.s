@@ -2828,7 +2828,7 @@
 
 
 .obj float_8066AB38, global
-	.float 5 #0x40A00000
+	.float 5
 .endobj float_8066AB38
 
 
@@ -2838,17 +2838,17 @@
 
 
 .obj float_8066AB40, global
-	.float 0.1 #0x3DCCCCCD
+	.float 0.1
 .endobj float_8066AB40
 
 
 .obj float_8066AB44, global
-	.float 4 #0x40800000
+	.float 4
 .endobj float_8066AB44
 
 
 .obj float_8066AB48, global
-	.float 3.5 #0x40600000
+	.float 3.5
 .endobj float_8066AB48
 
 
@@ -2858,12 +2858,12 @@
 
 
 .obj float_8066AB50, global
-	.float -1.5 #0xBFC00000
+	.float -1.5
 .endobj float_8066AB50
 
 
 .obj float_8066AB54, global
-	.float 2 #0x40000000
+	.float 2
 .endobj float_8066AB54
 
 

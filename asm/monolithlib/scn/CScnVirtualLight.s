@@ -2757,7 +2757,7 @@
 .balign 8
 
 .obj float_8066D1D0, global
-	.float 5 #0x40A00000
+	.float 5
 .endobj float_8066D1D0
 
 
@@ -2772,12 +2772,12 @@
 
 
 .obj float_8066D1DC, global
-	.float -4 #0xC0800000
+	.float -4
 .endobj float_8066D1DC
 
 
 .obj float_8066D1E0, global
-	.float 4 #0x40800000
+	.float 4
 .endobj float_8066D1E0
 
 
@@ -2802,7 +2802,7 @@
 
 
 .obj float_8066D1F4, global
-	.float -3 #0xC0400000
+	.float -3
 .endobj float_8066D1F4
 
 
@@ -2862,7 +2862,7 @@
 
 
 .obj float_8066D224, global
-	.float 0.1 #0x3DCCCCCD
+	.float 0.1
 .endobj float_8066D224
 
 
@@ -2872,7 +2872,7 @@
 
 
 .obj float_8066D22C, global
-	.float -0.8954 #0xBF6538EF
+	.float -0.8954
 .endobj float_8066D22C
 
 
@@ -2882,12 +2882,12 @@
 
 
 .obj float_8066D234, global
-	.float 0.9 #0x3F666666
+	.float 0.9
 .endobj float_8066D234
 
 
 .obj float_8066D238, global
-	.float 0.04 #0x3D23D70A
+	.float 0.04
 	.4byte 0
 .endobj float_8066D238
 

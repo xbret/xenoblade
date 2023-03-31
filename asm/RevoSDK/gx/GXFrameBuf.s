@@ -1183,7 +1183,7 @@
 .balign 8
 
 .obj float_8066BFC8, global
-	.float 256 #0x43800000
+	.float 256
 	.4byte 0
 .endobj float_8066BFC8
 

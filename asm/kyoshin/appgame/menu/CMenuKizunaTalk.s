@@ -1447,7 +1447,7 @@
 	.4byte func_801BCC20
 	.4byte func_801BCCE4
 	.4byte func_80124584
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuKizunaTalk
 	.4byte 0xFFFFFF94
 	.4byte func_801BDD8C

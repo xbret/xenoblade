@@ -3063,12 +3063,12 @@
 .balign 8
 
 .obj float_8066A6F0, global
-	.float 450 #0x43E10000
+	.float 450
 .endobj float_8066A6F0
 
 
 .obj float_8066A6F4, global
-	.float 0.01 #0x3C23D70A
+	.float 0.01
 .endobj float_8066A6F4
 
 
@@ -3088,12 +3088,12 @@
 
 
 .obj float_8066A70C, global
-	.float 60 #0x42700000
+	.float 60
 .endobj float_8066A70C
 
 
 .obj float_8066A710, global
-	.float 300 #0x43960000
+	.float 300
 .endobj float_8066A710
 
 
@@ -3103,22 +3103,22 @@
 
 
 .obj float_8066A718, global
-	.float 5 #0x40A00000
+	.float 5
 .endobj float_8066A718
 
 
 .obj float_8066A71C, global
-	.float 30 #0x41F00000
+	.float 30
 .endobj float_8066A71C
 
 
 .obj float_8066A720, global
-	.float 1.2 #0x3F99999A
+	.float 1.2
 .endobj float_8066A720
 
 
 .obj float_8066A724, global
-	.float 90 #0x42B40000
+	.float 90
 .endobj float_8066A724
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

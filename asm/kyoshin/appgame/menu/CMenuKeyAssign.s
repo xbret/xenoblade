@@ -2381,7 +2381,7 @@
 	.4byte func_80113FA8
 	.4byte func_80114028
 	.4byte func_80114E84
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuKeyAssign
 	.4byte 0xFFFFFFA8
 	.4byte func_80115FB8

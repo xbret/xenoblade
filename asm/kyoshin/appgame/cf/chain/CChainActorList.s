@@ -2765,17 +2765,17 @@
 .balign 8
 
 .obj float_8066B310, global
-	.float 30 #0x41F00000
+	.float 30
 .endobj float_8066B310
 
 
 .obj float_8066B314, global
-	.float 5000 #0x459C4000
+	.float 5000
 .endobj float_8066B314
 
 
 .obj float_8066B318, global
-	.float 20 #0x41A00000
+	.float 20
 	.4byte 0
 .endobj float_8066B318
 

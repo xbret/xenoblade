@@ -2482,7 +2482,7 @@
 	.4byte func_8012C7F8
 	.4byte func_8012C8A8
 	.4byte func_8012CBD0
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CTalkWindow
 	.4byte 0xFFFFFF94
 	.4byte func_8012DF78
@@ -2568,7 +2568,7 @@
 
 
 .obj float_80669B40, global
-	.float 38 #0x42180000
+	.float 38
 .endobj float_80669B40
 
 
@@ -2588,12 +2588,12 @@
 
 
 .obj float_80669B50, global
-	.float 320 #0x43A00000
+	.float 320
 .endobj float_80669B50
 
 
 .obj float_80669B54, global
-	.float 224 #0x43600000
+	.float 224
 .endobj float_80669B54
 
 
@@ -2603,67 +2603,67 @@
 
 
 .obj float_80669B5C, global
-	.float 20 #0x41A00000
+	.float 20
 .endobj float_80669B5C
 
 
 .obj float_80669B60, global
-	.float -320 #0xC3A00000
+	.float -320
 .endobj float_80669B60
 
 
 .obj float_80669B64, global
-	.float -224 #0xC3600000
+	.float -224
 .endobj float_80669B64
 
 
 .obj float_80669B68, global
-	.float 50 #0x42480000
+	.float 50
 .endobj float_80669B68
 
 
 .obj float_80669B6C, global
-	.float -200 #0xC3480000
+	.float -200
 .endobj float_80669B6C
 
 
 .obj float_80669B70, global
-	.float 200 #0x43480000
+	.float 200
 .endobj float_80669B70
 
 
 .obj float_80669B74, global
-	.float 0.8 #0x3F4CCCCD
+	.float 0.8
 .endobj float_80669B74
 
 
 .obj float_80669B78, global
-	.float 3 #0x40400000
+	.float 3
 .endobj float_80669B78
 
 
 .obj float_80669B7C, global
-	.float 39 #0x421C0000
+	.float 39
 .endobj float_80669B7C
 
 
 .obj float_80669B80, global
-	.float 18 #0x41900000
+	.float 18
 .endobj float_80669B80
 
 
 .obj float_80669B84, global
-	.float 36 #0x42100000
+	.float 36
 .endobj float_80669B84
 
 
 .obj float_80669B88, global
-	.float 240 #0x43700000
+	.float 240
 .endobj float_80669B88
 
 
 .obj float_80669B8C, global
-	.float -240 #0xC3700000
+	.float -240
 .endobj float_80669B8C
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

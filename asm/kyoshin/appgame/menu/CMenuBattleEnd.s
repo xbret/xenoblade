@@ -698,7 +698,7 @@
 	.4byte func_8026F71C
 	.4byte func_8026F79C
 	.4byte func_80124584
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuBattleEnd
 	.4byte 0xFFFFFF94
 	.4byte func_8026FC90

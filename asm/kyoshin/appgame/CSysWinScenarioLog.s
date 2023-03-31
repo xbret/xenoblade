@@ -3426,7 +3426,7 @@
 	.4byte func_8027E6DC
 	.4byte func_8027E7D0
 	.4byte func_80124584
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CSysWinScenarioLog
 	.4byte 0xFFFFFF94
 	.4byte func_8027EE70
@@ -3517,7 +3517,7 @@
 
 
 .obj float_8066B38C, global
-	.float 0.15 #0x3E19999A
+	.float 0.15
 .endobj float_8066B38C
 
 

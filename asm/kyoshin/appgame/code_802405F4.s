@@ -1963,7 +1963,7 @@
 
 
 .obj float_8066AFC4, global
-	.float 30 #0x41F00000
+	.float 30
 .endobj float_8066AFC4
 
 
@@ -1988,7 +1988,7 @@
 
 
 .obj float_8066AFD8, global
-	.float 2 #0x40000000
+	.float 2
 .endobj float_8066AFD8
 
 

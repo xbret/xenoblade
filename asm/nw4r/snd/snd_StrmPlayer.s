@@ -3166,12 +3166,12 @@
 
 
 .obj float_8066C87C, global
-	.float 127 #0x42FE0000
+	.float 127
 .endobj float_8066C87C
 
 
 .obj float_8066C880, global
-	.float 63 #0x427C0000
+	.float 63
 	.4byte 0
 .endobj float_8066C880
 

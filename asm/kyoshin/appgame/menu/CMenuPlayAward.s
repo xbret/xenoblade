@@ -2449,7 +2449,7 @@
 	.4byte func_802700E8
 	.4byte func_80270154
 	.4byte func_80101FB8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuPlayAward
 	.4byte 0xFFFFFFA8
 	.4byte func_8027064C
@@ -2570,12 +2570,12 @@
 
 
 .obj float_8066B260, global
-	.float 252 #0x437C0000
+	.float 252
 .endobj float_8066B260
 
 
 .obj float_8066B264, global
-	.float 88 #0x42B00000
+	.float 88
 .endobj float_8066B264
 
 

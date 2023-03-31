@@ -3606,7 +3606,7 @@
 
 
 .obj float_8066A334, global
-	.float 0.01 #0x3C23D70A
+	.float 0.01
 .endobj float_8066A334
 
 
@@ -3631,7 +3631,7 @@
 
 
 .obj float_8066A350, global
-	.float 2.5 #0x40200000
+	.float 2.5
 .endobj float_8066A350
 
 

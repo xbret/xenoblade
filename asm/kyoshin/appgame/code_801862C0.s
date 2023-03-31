@@ -206,7 +206,7 @@
 /* 80186574 0014FB34  4E 80 00 20 */	blr 
 .endfn func_801864DC
 
-.fn func_80186578, global
+.fn __ct__80186578, global
 /* 80186578 0014FB38  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8018657C 0014FB3C  7C 08 02 A6 */	mflr r0
 /* 80186580 0014FB40  38 80 00 00 */	li r4, 0
@@ -226,7 +226,7 @@
 /* 801865B8 0014FB78  7C 08 03 A6 */	mtlr r0
 /* 801865BC 0014FB7C  38 21 00 10 */	addi r1, r1, 0x10
 /* 801865C0 0014FB80  4E 80 00 20 */	blr 
-.endfn func_80186578
+.endfn __ct__80186578
 
 .fn __dt__801865C4, global
 /* 801865C4 0014FB84  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -331,13 +331,13 @@
 /* 8018671C 0014FCDC  90 01 00 80 */	stw r0, 0x80(r1)
 /* 80186720 0014FCE0  4B EB 43 15 */	bl func_8003AA34
 /* 80186724 0014FCE4  83 ED A8 20 */	lwz r31, lbl_806669A0@sda21(r13)
-/* 80186728 0014FCE8  3F 60 80 50 */	lis r27, CREvtObj_strpool@ha
+/* 80186728 0014FCE8  3F 60 80 50 */	lis r27, code_801862C0_strpool@ha
 /* 8018672C 0014FCEC  7F A5 EB 78 */	mr r5, r29
 /* 80186730 0014FCF0  7F E3 FB 78 */	mr r3, r31
-/* 80186734 0014FCF4  38 9B F0 F0 */	addi r4, r27, CREvtObj_strpool@l
+/* 80186734 0014FCF4  38 9B F0 F0 */	addi r4, r27, code_801862C0_strpool@l
 /* 80186738 0014FCF8  4B EB 44 11 */	bl func_8003AB48
 /* 8018673C 0014FCFC  90 61 00 28 */	stw r3, 0x28(r1)
-/* 80186740 0014FD00  3B 7B F0 F0 */	addi r27, r27, CREvtObj_strpool@l
+/* 80186740 0014FD00  3B 7B F0 F0 */	addi r27, r27, code_801862C0_strpool@l
 /* 80186744 0014FD04  7F E3 FB 78 */	mr r3, r31
 /* 80186748 0014FD08  7F A5 EB 78 */	mr r5, r29
 /* 8018674C 0014FD0C  38 9B 00 06 */	addi r4, r27, 6
@@ -517,9 +517,9 @@
 /* 801869FC 0014FFBC  81 8C 01 54 */	lwz r12, 0x154(r12)
 /* 80186A00 0014FFC0  7D 89 03 A6 */	mtctr r12
 /* 80186A04 0014FFC4  4E 80 04 21 */	bctrl 
-/* 80186A08 0014FFC8  3C 80 80 50 */	lis r4, CREvtObj_strpool@ha
+/* 80186A08 0014FFC8  3C 80 80 50 */	lis r4, code_801862C0_strpool@ha
 /* 80186A0C 0014FFCC  7F E3 FB 78 */	mr r3, r31
-/* 80186A10 0014FFD0  38 84 F0 F0 */	addi r4, r4, CREvtObj_strpool@l
+/* 80186A10 0014FFD0  38 84 F0 F0 */	addi r4, r4, code_801862C0_strpool@l
 /* 80186A14 0014FFD4  7F A5 EB 78 */	mr r5, r29
 /* 80186A18 0014FFD8  38 84 00 40 */	addi r4, r4, 0x40
 /* 80186A1C 0014FFDC  4B EB 41 2D */	bl func_8003AB48
@@ -754,11 +754,11 @@
 /* 80186D40 00150300  7C 78 1B 78 */	mr r24, r3
 /* 80186D44 00150304  7E C3 B3 78 */	mr r3, r22
 /* 80186D48 00150308  4B EB 44 A5 */	bl func_8003B1EC
-/* 80186D4C 0015030C  3F A0 80 50 */	lis r29, CREvtObj_strpool@ha
+/* 80186D4C 0015030C  3F A0 80 50 */	lis r29, code_801862C0_strpool@ha
 /* 80186D50 00150310  57 04 10 3A */	slwi r4, r24, 2
 /* 80186D54 00150314  57 00 08 3C */	slwi r0, r24, 1
 /* 80186D58 00150318  7F 38 1A 14 */	add r25, r24, r3
-/* 80186D5C 0015031C  3B BD F0 F0 */	addi r29, r29, CREvtObj_strpool@l
+/* 80186D5C 0015031C  3B BD F0 F0 */	addi r29, r29, code_801862C0_strpool@l
 /* 80186D60 00150320  7F 97 22 14 */	add r28, r23, r4
 /* 80186D64 00150324  7F 77 02 14 */	add r27, r23, r0
 /* 80186D68 00150328  3B E0 00 00 */	li r31, 0
@@ -878,7 +878,7 @@
 
 .balign 8
 
-.obj CREvtObj_strpool, global
+.obj code_801862C0_strpool, global
 	.asciz "model"
 	.asciz "motion"
 	.asciz "posX"
@@ -908,7 +908,7 @@
 	.asciz "pos_sflg2"
 	.asciz "pos_eflg2"
 	.balign 4
-.endobj CREvtObj_strpool
+.endobj code_801862C0_strpool
 
 
 
@@ -917,22 +917,22 @@
 .balign 8
 
 .obj float_8066A280, global
-	.float 0.0001 #0x38D1B717
+	.float 0.0001
 .endobj float_8066A280
 
 
 .obj float_8066A284, global
-	.float 0.01 #0x3C23D70A
+	.float 0.01
 .endobj float_8066A284
 
 
 .obj float_8066A288, global
-	.float 0.1 #0x3DCCCCCD
+	.float 0.1
 .endobj float_8066A288
 
 
 .obj float_8066A28C, global
-	.float 1000 #0x447A0000
+	.float 1000
 .endobj float_8066A28C
 
 
@@ -1035,7 +1035,7 @@
 
 .obj "@eti_800299C0", local
 .hidden "@eti_800299C0"
-	.4byte func_80186578
+	.4byte __ct__80186578
 	.4byte 0x0000004C
 	.4byte "@etb_8000EA6C"
 .endobj "@eti_800299C0"

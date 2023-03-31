@@ -1121,7 +1121,7 @@
 	.4byte func_8011CA4C
 	.4byte func_8011CAD4
 	.4byte func_80101FB8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuQuestLog
 	.4byte 0xFFFFFFA8
 	.4byte func_8011D2F0

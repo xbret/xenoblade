@@ -7031,7 +7031,7 @@
 
 
 .obj lbl_80666210, global
-	.4byte 0x72656600
+	.asciz "ref"
 .endobj lbl_80666210
 
 
@@ -7042,7 +7042,7 @@
 
 
 .obj lbl_8066621C, global
-	.4byte 0x72656600
+	.asciz "ref"
 .endobj lbl_8066621C
 
 
@@ -7053,12 +7053,12 @@
 
 
 .obj lbl_80666228, global
-	.4byte 0x72656600
+	.asciz "ref"
 .endobj lbl_80666228
 
 
 .obj lbl_8066622C, global
-	.4byte 0x72656600
+	.asciz "ref"
 .endobj lbl_8066622C
 
 
@@ -7068,22 +7068,22 @@
 
 
 .obj lbl_80666238, global
-	.4byte 0x72656600
+	.asciz "ref"
 .endobj lbl_80666238
 
 
 .obj lbl_8066623C, global
-	.4byte 0x72656600
+	.asciz "ref"
 .endobj lbl_8066623C
 
 
 .obj lbl_80666240, global
-	.4byte 0x72656600
+	.asciz "ref"
 .endobj lbl_80666240
 
 
 .obj lbl_80666244, global
-	.4byte 0x72656600
+	.asciz "ref"
 .endobj lbl_80666244
 
 
@@ -7094,7 +7094,7 @@
 
 
 .obj lbl_80666250, global
-	.4byte 0x72656600
+	.asciz "ref"
 	.4byte 0
 .endobj lbl_80666250
 
@@ -7119,12 +7119,12 @@
 
 
 .obj float_8066D0A4, global
-	.float 255 #0x437F0000
+	.float 255
 .endobj float_8066D0A4
 
 
 .obj float_8066D0A8, global
-	.float 30 #0x41F00000
+	.float 30
 	.4byte 0
 .endobj float_8066D0A8
 
@@ -7144,7 +7144,7 @@
 
 
 .obj float_8066D0C0, global
-	.float 0.001 #0x3A83126F
+	.float 0.001
 .endobj float_8066D0C0
 
 
@@ -7154,12 +7154,12 @@
 
 
 .obj float_8066D0C8, global
-	.float 0.09 #0x3DB851EC
+	.float 0.09
 .endobj float_8066D0C8
 
 
 .obj float_8066D0CC, global
-	.float 0.3 #0x3E99999A
+	.float 0.3
 .endobj float_8066D0CC
 
 
@@ -7169,12 +7169,12 @@
 
 
 .obj float_8066D0D4, global
-	.float 0.01 #0x3C23D70A
+	.float 0.01
 .endobj float_8066D0D4
 
 
 .obj float_8066D0D8, global
-	.float -0.02 #0xBCA3D70A
+	.float -0.02
 .endobj float_8066D0D8
 
 
@@ -7184,17 +7184,17 @@
 
 
 .obj float_8066D0E0, global
-	.float 0.1 #0x3DCCCCCD
+	.float 0.1
 .endobj float_8066D0E0
 
 
 .obj float_8066D0E4, global
-	.float -0.9999 #0xBF7FF972
+	.float -0.9999
 .endobj float_8066D0E4
 
 
 .obj float_8066D0E8, global
-	.float 2 #0x40000000
+	.float 2
 	.4byte 0
 .endobj float_8066D0E8
 

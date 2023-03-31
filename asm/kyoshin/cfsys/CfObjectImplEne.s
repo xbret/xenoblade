@@ -1324,7 +1324,7 @@
 
 
 .obj float_806695A8, global
-	.float 0.02 #0x3CA3D70A
+	.float 0.02
 .endobj float_806695A8
 
 
@@ -1334,7 +1334,7 @@
 
 
 .obj float_806695B0, global
-	.float 20 #0x41A00000
+	.float 20
 .endobj float_806695B0
 
 
@@ -1344,7 +1344,7 @@
 
 
 .obj float_806695B8, global
-	.float 0.52 #0x3F051EB8
+	.float 0.52
 .endobj float_806695B8
 
 

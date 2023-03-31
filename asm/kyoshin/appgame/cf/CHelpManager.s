@@ -1849,7 +1849,7 @@
 
 
 .obj float_8066B474, global
-	.float 300 #0x43960000
+	.float 300
 .endobj float_8066B474
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

@@ -1296,7 +1296,7 @@
 	.4byte func_8017F358
 	.4byte func_8017F43C
 	.4byte func_80101FB8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuZeal
 	.4byte 0xFFFFFFA8
 	.4byte func_8017FF60
@@ -1381,17 +1381,17 @@
 
 
 .obj float_8066A138, global
-	.float 5 #0x40A00000
+	.float 5
 .endobj float_8066A138
 
 
 .obj float_8066A13C, global
-	.float 50 #0x42480000
+	.float 50
 .endobj float_8066A13C
 
 
 .obj float_8066A140, global
-	.float 45 #0x42340000
+	.float 45
 .endobj float_8066A140
 
 
@@ -1401,7 +1401,7 @@
 
 
 .obj float_8066A148, global
-	.float 6 #0x40C00000
+	.float 6
 .endobj float_8066A148
 
 
@@ -1411,7 +1411,7 @@
 
 
 .obj float_8066A150, global
-	.float 34 #0x42080000
+	.float 34
 	.4byte 0
 .endobj float_8066A150
 

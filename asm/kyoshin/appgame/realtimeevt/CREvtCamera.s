@@ -821,22 +821,22 @@
 .endobj lbl_8066A158
 
 .obj lbl_8066A160, global
-	.4byte 0x63616D00
+	.asciz "cam"
 .endobj lbl_8066A160
 
 
 .obj float_8066A164, global
-	.float 30 #0x41F00000
+	.float 30
 .endobj float_8066A164
 
 
 .obj float_8066A168, global
-	.float 0.1 #0x3DCCCCCD
+	.float 0.1
 .endobj float_8066A168
 
 
 .obj float_8066A16C, global
-	.float 85000 #0x47A60400
+	.float 85000
 .endobj float_8066A16C
 
 

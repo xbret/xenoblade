@@ -5351,12 +5351,12 @@
 
 
 .obj float_8066B418, global
-	.float 210 #0x43520000
+	.float 210
 .endobj float_8066B418
 
 
 .obj float_8066B41C, global
-	.float 118 #0x42EC0000
+	.float 118
 .endobj float_8066B41C
 
 .obj CSLCur_typestr, global

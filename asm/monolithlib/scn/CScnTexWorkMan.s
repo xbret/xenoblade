@@ -2189,12 +2189,12 @@
 
 
 .obj lbl_806662D8, global
-	.4byte 0x72656600
+	.asciz "ref"
 .endobj lbl_806662D8
 
 
 .obj lbl_806662DC, global
-	.4byte 0x72656600
+	.asciz "ref"
 .endobj lbl_806662DC
 
 
@@ -2208,12 +2208,12 @@
 
 
 .obj float_8066D1C4, global
-	.float 1000000 #0x49742400
+	.float 1000000
 .endobj float_8066D1C4
 
 
 .obj float_8066D1C8, global
-	.float -1000000 #0xC9742400
+	.float -1000000
 	.4byte 0
 .endobj float_8066D1C8
 

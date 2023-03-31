@@ -3336,7 +3336,7 @@
 .balign 8
 
 .obj float_8066C690, global
-	.float 32000 #0x46FA0000
+	.float 32000
 .endobj float_8066C690
 
 
@@ -3356,7 +3356,7 @@
 .endobj double_8066C6A0
 
 .obj float_8066C6A8, global
-	.float 65535 #0x477FFF00
+	.float 65535
 .endobj float_8066C6A8
 
 
@@ -3366,7 +3366,7 @@
 
 
 .obj float_8066C6B0, global
-	.float 65536 #0x47800000
+	.float 65536
 .endobj float_8066C6B0
 
 

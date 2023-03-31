@@ -1886,7 +1886,7 @@
 	.4byte func_802A9EBC
 	.4byte func_802A9F3C
 	.4byte func_80124584
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuBattleChain
 	.4byte 0xFFFFFF94
 	.4byte func_802AB3B8

@@ -38,7 +38,7 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfCamLookatIntf.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfCamTargetIntf.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfCam.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/code_80074F4C.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfCamEvent_1.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/code_8007C0F8.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CtrlEnemy.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CtrlMoveBase.o\
@@ -101,7 +101,6 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuLandTelop.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CBattleState.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuGetItem.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/code_8014A864.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CAIAction.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CArtsSet.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CArtsParam.o\
@@ -159,7 +158,7 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CSuddenCommu.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuKizunaTalk.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuItemExchange.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/code_801BF76C.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfSoundMan.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfPadTask.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_801C2C14.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/realtimeevt/CREvtLight.o\

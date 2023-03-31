@@ -1743,7 +1743,7 @@
 
 
 .obj float_8066C3A4, global
-	.float -10000000000 #0xD01502F9
+	.float -10000000000
 .endobj float_8066C3A4
 
 

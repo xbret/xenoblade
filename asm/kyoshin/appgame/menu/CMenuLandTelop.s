@@ -1582,7 +1582,7 @@
 	.4byte func_80144860
 	.4byte func_801448E0
 	.4byte func_80124584
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuLandTelop
 	.4byte 0xFFFFFF94
 	.4byte func_80145A90
@@ -1667,7 +1667,7 @@
 
 
 .obj float_80669C90, global
-	.float 3 #0x40400000
+	.float 3
 	.4byte 0
 .endobj float_80669C90
 
@@ -1683,7 +1683,7 @@
 
 
 .obj float_80669CA8, global
-	.float 0.01 #0x3C23D70A
+	.float 0.01
 .endobj float_80669CA8
 
 
@@ -1693,7 +1693,7 @@
 
 
 .obj float_80669CB0, global
-	.float 90 #0x42B40000
+	.float 90
 	.4byte 0
 .endobj float_80669CB0
 

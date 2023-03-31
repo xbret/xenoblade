@@ -502,7 +502,7 @@
 	.4byte func_80274684
 	.4byte func_80274704
 	.4byte func_80124584
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CSysWinBuff
 	.4byte 0xFFFFFF94
 	.4byte func_80274B08

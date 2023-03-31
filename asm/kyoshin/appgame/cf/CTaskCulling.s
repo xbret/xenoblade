@@ -607,7 +607,7 @@
 	.4byte func_801A2EA0
 	.4byte func_801A2F24
 	.4byte func_801A2F28
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__cf_CTaskCulling
 	.4byte 0xFFFFFFAC
 	.4byte func_801A30A0
@@ -680,7 +680,7 @@
 	.4byte 0
 	.4byte func_801A2FA8
 	.4byte func_801A2FF0
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTTask_cf_CTaskCulling
 
 .obj CTTask_cf_CTaskCulling_hierarchy, global
@@ -712,17 +712,17 @@
 .balign 8
 
 .obj float_8066A578, global
-	.float 5 #0x40A00000
+	.float 5
 .endobj float_8066A578
 
 
 .obj float_8066A57C, global
-	.float 30 #0x41F00000
+	.float 30
 .endobj float_8066A57C
 
 
 .obj float_8066A580, global
-	.float 50 #0x42480000
+	.float 50
 .endobj float_8066A580
 
 

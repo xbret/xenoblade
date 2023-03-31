@@ -905,7 +905,7 @@
 .endobj lbl_8066A1F0
 
 .obj lbl_8066A1F8, global
-	.4byte 0x65666600
+	.asciz "eff"
 .endobj lbl_8066A1F8
 
 
@@ -920,17 +920,17 @@
 
 
 .obj float_8066A204, global
-	.float 0.9 #0x3F666666
+	.float 0.9
 .endobj float_8066A204
 
 
 .obj float_8066A208, global
-	.float 0.95 #0x3F733333
+	.float 0.95
 .endobj float_8066A208
 
 
 .obj float_8066A20C, global
-	.float 0.001 #0x3A83126F
+	.float 0.001
 .endobj float_8066A20C
 
 
@@ -944,12 +944,12 @@
 
 
 .obj float_8066A21C, global
-	.float 180 #0x43340000
+	.float 180
 .endobj float_8066A21C
 
 
 .obj float_8066A220, global
-	.float 0.1 #0x3DCCCCCD
+	.float 0.1
 	.4byte 0
 .endobj float_8066A220
 

@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8006994C, global
+.fn __ct__cf_CfTFile, global
 /* 8006994C 00032F0C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80069950 00032F10  7C 08 02 A6 */	mflr r0
 /* 80069954 00032F14  3C 80 80 53 */	lis r4, __vt__cf_CfTFile@ha
@@ -28,7 +28,7 @@
 /* 800699A4 00032F64  7C 08 03 A6 */	mtlr r0
 /* 800699A8 00032F68  38 21 00 10 */	addi r1, r1, 0x10
 /* 800699AC 00032F6C  4E 80 00 20 */	blr 
-.endfn func_8006994C
+.endfn __ct__cf_CfTFile
 
 .fn func_800699B0, global
 /* 800699B0 00032F70  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1213,7 +1213,7 @@
 #.balign 8
 
 .obj float_80668A9C, global
-	.float 1.2 #0x3F99999A
+	.float 1.2
 .endobj float_80668A9C
 
 
@@ -1228,7 +1228,7 @@
 .endobj double_80668AA8
 
 .obj float_80668AB0, global
-	.float 43200 #0x4728C000
+	.float 43200
 	.4byte 0
 .endobj float_80668AB0
 
@@ -1244,7 +1244,7 @@
 
 
 .obj float_80668AC4, global
-	.float 1800 #0x44E10000
+	.float 1800
 .endobj float_80668AC4
 
 
@@ -1254,7 +1254,7 @@
 
 
 .obj float_80668AD0, global
-	.float 30 #0x41F00000
+	.float 30
 	.4byte 0
 .endobj float_80668AD0
 
@@ -1265,7 +1265,7 @@
 
 
 .obj float_80668AE0, global
-	.float 2 #0x40000000
+	.float 2
 	.4byte 0
 .endobj float_80668AE0
 
@@ -1472,7 +1472,7 @@
 
 .obj "@eti_80023204", local
 .hidden "@eti_80023204"
-	.4byte func_8006994C
+	.4byte __ct__cf_CfTFile
 	.4byte 0x00000064
 	.4byte "@etb_80007F64"
 .endobj "@eti_80023204"

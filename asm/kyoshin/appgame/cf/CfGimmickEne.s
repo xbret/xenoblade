@@ -1391,11 +1391,11 @@
 .endobj lbl_8066B200
 
 .obj lbl_8066B208, global
-	.4byte 0x61434C00
+	.asciz "aCL"
 .endobj lbl_8066B208
 
 .obj lbl_8066B20C, global
-	.4byte 0x636C3100
+	.asciz "cl1"
 .endobj lbl_8066B20C
 
 
@@ -1415,7 +1415,7 @@
 
 
 .obj float_8066B21C, global
-	.float -100 #0xC2C80000
+	.float -100
 .endobj float_8066B21C
 
 
@@ -1425,7 +1425,7 @@
 
 
 .obj float_8066B224, global
-	.float 0.01 #0x3C23D70A
+	.float 0.01
 .endobj float_8066B224
 
 
@@ -1434,12 +1434,12 @@
 .endobj double_8066B228
 
 .obj float_8066B230, global
-	.float 255 #0x437F0000
+	.float 255
 .endobj float_8066B230
 
 
 .obj float_8066B234, global
-	.float 0.1 #0x3DCCCCCD
+	.float 0.1
 .endobj float_8066B234
 
 .section extab, "a" # 0x800066E0 - 0x80021020

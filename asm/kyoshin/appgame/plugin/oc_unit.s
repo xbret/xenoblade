@@ -347,10 +347,10 @@
 /* 8003C0C4 00005684  4E 80 00 20 */	blr 
 .endfn func_8003C044
 
-.fn func_8003C0C8, global
+.fn CfObject_func_8003C0C8, global
 /* 8003C0C8 00005688  38 63 00 3C */	addi r3, r3, 0x3c
 /* 8003C0CC 0000568C  4E 80 00 20 */	blr 
-.endfn func_8003C0C8
+.endfn CfObject_func_8003C0C8
 
 .fn func_8003C0D0, local
 /* 8003C0D0 00005690  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -457,12 +457,12 @@
 /* 8003C24C 0000580C  4E 80 00 20 */	blr 
 .endfn func_8003C1D8
 
-.fn func_8003C250, global
+.fn CfObject_func_8003C250, global
 /* 8003C250 00005810  C0 23 00 4C */	lfs f1, 0x4c(r3)
 /* 8003C254 00005814  C0 02 C6 8C */	lfs f0, rad2deg__2mm@sda21(r2)
 /* 8003C258 00005818  EC 21 00 32 */	fmuls f1, f1, f0
 /* 8003C25C 0000581C  4E 80 00 20 */	blr 
-.endfn func_8003C250
+.endfn CfObject_func_8003C250
 
 .fn func_8003C260, local
 /* 8003C260 00005820  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -502,10 +502,10 @@
 /* 8003C2E8 000058A8  4E 80 00 20 */	blr 
 .endfn func_8003C260
 
-.fn func_8003C2EC, global
+.fn CObjectParam_func_8003C2EC, global
 /* 8003C2EC 000058AC  38 63 00 10 */	addi r3, r3, 0x10
 /* 8003C2F0 000058B0  4E 80 00 20 */	blr 
-.endfn func_8003C2EC
+.endfn CObjectParam_func_8003C2EC
 
 .fn func_8003C2F4, local
 /* 8003C2F4 000058B4  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -674,7 +674,7 @@
 /* 8003C540 00005B00  4E 80 00 20 */	blr 
 .endfn func_8003C480
 
-.fn func_8003C544, global
+.fn CfObject_func_8003C544, global
 /* 8003C544 00005B04  80 C4 00 00 */	lwz r6, 0(r4)
 /* 8003C548 00005B08  80 A4 00 04 */	lwz r5, 4(r4)
 /* 8003C54C 00005B0C  80 04 00 08 */	lwz r0, 8(r4)
@@ -682,7 +682,7 @@
 /* 8003C554 00005B14  90 A3 00 40 */	stw r5, 0x40(r3)
 /* 8003C558 00005B18  90 03 00 44 */	stw r0, 0x44(r3)
 /* 8003C55C 00005B1C  4E 80 00 20 */	blr 
-.endfn func_8003C544
+.endfn CfObject_func_8003C544
 
 .fn func_8003C560, local
 /* 8003C560 00005B20  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -826,17 +826,17 @@
 /* 8003C770 00005D30  4E 80 00 20 */	blr 
 .endfn func_8003C6E8
 
-.fn func_8003C774, global
+.fn CfObject_func_8003C774, global
 /* 8003C774 00005D34  81 83 00 00 */	lwz r12, 0(r3)
 /* 8003C778 00005D38  81 8C 00 C4 */	lwz r12, 0xc4(r12)
 /* 8003C77C 00005D3C  7D 89 03 A6 */	mtctr r12
 /* 8003C780 00005D40  4E 80 04 20 */	bctr 
-.endfn func_8003C774
+.endfn CfObject_func_8003C774
 
-.fn func_8003C784, global
+.fn CfObject_func_8003C784, global
 /* 8003C784 00005D44  D0 23 00 4C */	stfs f1, 0x4c(r3)
 /* 8003C788 00005D48  4E 80 00 20 */	blr 
-.endfn func_8003C784
+.endfn CfObject_func_8003C784
 
 .fn func_8003C78C, local
 /* 8003C78C 00005D4C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -868,7 +868,7 @@
 /* 8003C7F4 00005DB4  4E 80 00 20 */	blr 
 .endfn func_8003C78C
 
-.fn func_8003C7F8, global
+.fn CObjectParam_func_8003C7F8, global
 /* 8003C7F8 00005DB8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8003C7FC 00005DBC  7C 08 02 A6 */	mflr r0
 /* 8003C800 00005DC0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -888,7 +888,7 @@
 /* 8003C838 00005DF8  7C 08 03 A6 */	mtlr r0
 /* 8003C83C 00005DFC  38 21 00 10 */	addi r1, r1, 0x10
 /* 8003C840 00005E00  4E 80 00 20 */	blr 
-.endfn func_8003C7F8
+.endfn CObjectParam_func_8003C7F8
 
 .fn isValid, local
 /* 8003C844 00005E04  38 60 00 00 */	li r3, 0
@@ -950,7 +950,7 @@
 /* 8003C910 00005ED0  4E 80 00 20 */	blr 
 .endfn func_8003C84C
 
-.fn func_8003C914, global
+.fn CfObject_func_8003C914, global
 /* 8003C914 00005ED4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8003C918 00005ED8  7C 08 02 A6 */	mflr r0
 /* 8003C91C 00005EDC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -968,9 +968,9 @@
 /* 8003C94C 00005F0C  7C 08 03 A6 */	mtlr r0
 /* 8003C950 00005F10  38 21 00 10 */	addi r1, r1, 0x10
 /* 8003C954 00005F14  4E 80 00 20 */	blr 
-.endfn func_8003C914
+.endfn CfObject_func_8003C914
 
-.fn func_8003C958, global
+.fn CfObject_func_8003C958, global
 /* 8003C958 00005F18  80 C4 00 00 */	lwz r6, 0(r4)
 /* 8003C95C 00005F1C  80 A4 00 04 */	lwz r5, 4(r4)
 /* 8003C960 00005F20  80 04 00 08 */	lwz r0, 8(r4)
@@ -978,7 +978,7 @@
 /* 8003C968 00005F28  90 A3 00 40 */	stw r5, 0x40(r3)
 /* 8003C96C 00005F2C  90 03 00 44 */	stw r0, 0x44(r3)
 /* 8003C970 00005F30  4E 80 00 20 */	blr 
-.endfn func_8003C958
+.endfn CfObject_func_8003C958
 
 .fn dispOn, local
 /* 8003C974 00005F34  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1104,7 +1104,7 @@
 /* 8003CB1C 000060DC  4E 80 00 20 */	blr 
 .endfn dispOff
 
-.fn func_8003CB20, global
+.fn CObjectState_func_8003CB20, global
 /* 8003CB20 000060E0  28 04 00 3F */	cmplwi r4, 0x3f
 /* 8003CB24 000060E4  40 80 00 1C */	bge .L_8003CB40
 /* 8003CB28 000060E8  80 03 00 08 */	lwz r0, 8(r3)
@@ -1120,16 +1120,16 @@
 /* 8003CB4C 0000610C  7C 00 1B 78 */	or r0, r0, r3
 /* 8003CB50 00006110  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 8003CB54 00006114  4E 80 00 20 */	blr 
-.endfn func_8003CB20
+.endfn CObjectState_func_8003CB20
 
-.fn func_8003CB58, global
+.fn CObjectState_func_8003CB58, global
 /* 8003CB58 00006118  80 03 00 04 */	lwz r0, 4(r3)
 /* 8003CB5C 0000611C  7C 03 20 38 */	and r3, r0, r4
 /* 8003CB60 00006120  7C 03 00 D0 */	neg r0, r3
 /* 8003CB64 00006124  7C 00 1B 78 */	or r0, r0, r3
 /* 8003CB68 00006128  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 8003CB6C 0000612C  4E 80 00 20 */	blr 
-.endfn func_8003CB58
+.endfn CObjectState_func_8003CB58
 
 .fn func_8003CB70, local
 /* 8003CB70 00006130  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1273,9 +1273,9 @@
 /* 8003CD64 00006324  4E 80 00 20 */	blr 
 .endfn func_8003CC9C
 
-.fn func_8003CD68, global
+.fn CfObject_func_8003CD68, global
 /* 8003CD68 00006328  4E 80 00 20 */	blr 
-.endfn func_8003CD68
+.endfn CfObject_func_8003CD68
 
 .fn func_8003CD6C, local
 /* 8003CD6C 0000632C  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1307,10 +1307,10 @@
 /* 8003CDD4 00006394  4E 80 00 20 */	blr 
 .endfn func_8003CD6C
 
-.fn func_8003CDD8, global
+.fn CfObject_func_8003CDD8, global
 /* 8003CDD8 00006398  38 60 FF FF */	li r3, -1
 /* 8003CDDC 0000639C  4E 80 00 20 */	blr 
-.endfn func_8003CDD8
+.endfn CfObject_func_8003CDD8
 
 .fn func_8003CDE0, local
 /* 8003CDE0 000063A0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1994,10 +1994,10 @@
 /* 8003D7AC 00006D6C  4E 80 00 20 */	blr 
 .endfn isTalk
 
-.fn func_8003D7B0, global
+.fn CObjectState_func_8003D7B0, global
 /* 8003D7B0 00006D70  38 63 00 08 */	addi r3, r3, 8
 /* 8003D7B4 00006D74  4E 80 00 20 */	blr 
-.endfn func_8003D7B0
+.endfn CObjectState_func_8003D7B0
 
 .fn onEvent, local
 /* 8003D7B8 00006D78  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -2075,7 +2075,7 @@
 /* 8003D8BC 00006E7C  4E 80 00 20 */	blr 
 .endfn onEvent
 
-.fn func_8003D8C0, global
+.fn CObjectState_func_8003D8C0, global
 /* 8003D8C0 00006E80  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8003D8C4 00006E84  7C 08 02 A6 */	mflr r0
 /* 8003D8C8 00006E88  2C 05 00 00 */	cmpwi r5, 0
@@ -2129,9 +2129,9 @@
 /* 8003D980 00006F40  7C 08 03 A6 */	mtlr r0
 /* 8003D984 00006F44  38 21 00 20 */	addi r1, r1, 0x20
 /* 8003D988 00006F48  4E 80 00 20 */	blr 
-.endfn func_8003D8C0
+.endfn CObjectState_func_8003D8C0
 
-.fn func_8003D98C, global
+.fn CObjectState_func_8003D98C, global
 /* 8003D98C 00006F4C  28 04 00 3F */	cmplwi r4, 0x3f
 /* 8003D990 00006F50  40 80 00 1C */	bge .L_8003D9AC
 /* 8003D994 00006F54  80 03 00 0C */	lwz r0, 0xc(r3)
@@ -2147,7 +2147,7 @@
 /* 8003D9B8 00006F78  7C 00 1B 78 */	or r0, r0, r3
 /* 8003D9BC 00006F7C  54 03 0F FE */	srwi r3, r0, 0x1f
 /* 8003D9C0 00006F80  4E 80 00 20 */	blr 
-.endfn func_8003D98C
+.endfn CObjectState_func_8003D98C
 
 .fn func_8003D9C4, local
 /* 8003D9C4 00006F84  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -2333,17 +2333,17 @@
 /* 8003DC60 00007220  4E 80 00 20 */	blr 
 .endfn winTalk
 
-.fn func_8003DC64, global
+.fn CObjectState_func_8003DC64, global
 /* 8003DC64 00007224  80 03 00 04 */	lwz r0, 4(r3)
 /* 8003DC68 00007228  7C 00 23 78 */	or r0, r0, r4
 /* 8003DC6C 0000722C  90 03 00 04 */	stw r0, 4(r3)
 /* 8003DC70 00007230  4E 80 00 20 */	blr 
-.endfn func_8003DC64
+.endfn CObjectState_func_8003DC64
 
-.fn func_8003DC74, global
+.fn CObjectParam_func_8003DC74, global
 /* 8003DC74 00007234  90 83 00 34 */	stw r4, 0x34(r3)
 /* 8003DC78 00007238  4E 80 00 20 */	blr 
-.endfn func_8003DC74
+.endfn CObjectParam_func_8003DC74
 
 .fn func_8003DC7C, local
 /* 8003DC7C 0000723C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2398,12 +2398,12 @@
 /* 8003DD30 000072F0  4E 80 00 20 */	blr 
 .endfn func_8003DC7C
 
-.fn func_8003DD34, global
+.fn CObjectState_func_8003DD34, global
 /* 8003DD34 000072F4  80 03 00 04 */	lwz r0, 4(r3)
 /* 8003DD38 000072F8  7C 00 20 78 */	andc r0, r0, r4
 /* 8003DD3C 000072FC  90 03 00 04 */	stw r0, 4(r3)
 /* 8003DD40 00007300  4E 80 00 20 */	blr 
-.endfn func_8003DD34
+.endfn CObjectState_func_8003DD34
 
 .fn func_8003DD44, local
 /* 8003DD44 00007304  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -3056,10 +3056,10 @@
 /* 8003E660 00007C20  4E 80 00 20 */	blr 
 .endfn func_8003E528
 
-.fn func_8003E664, global
+.fn CObjectParam_func_8003E664, global
 /* 8003E664 00007C24  80 63 00 34 */	lwz r3, 0x34(r3)
 /* 8003E668 00007C28  4E 80 00 20 */	blr 
-.endfn func_8003E664
+.endfn CObjectParam_func_8003E664
 
 .fn func_8003E66C, local
 /* 8003E66C 00007C2C  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -3844,7 +3844,7 @@
 /* 8003F158 00008718  4E 80 00 20 */	blr 
 .endfn setRot
 
-.fn func_8003F15C, global
+.fn CfObject_func_8003F15C, global
 /* 8003F15C 0000871C  80 C4 00 00 */	lwz r6, 0(r4)
 /* 8003F160 00008720  80 A4 00 04 */	lwz r5, 4(r4)
 /* 8003F164 00008724  80 04 00 08 */	lwz r0, 8(r4)
@@ -3852,7 +3852,7 @@
 /* 8003F16C 0000872C  90 A3 00 4C */	stw r5, 0x4c(r3)
 /* 8003F170 00008730  90 03 00 50 */	stw r0, 0x50(r3)
 /* 8003F174 00008734  4E 80 00 20 */	blr 
-.endfn func_8003F15C
+.endfn CfObject_func_8003F15C
 
 .fn gravity, local
 /* 8003F178 00008738  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -3885,7 +3885,7 @@
 /* 8003F1E4 000087A4  4E 80 00 20 */	blr 
 .endfn gravity
 
-.fn func_8003F1E8, global
+.fn CfObject_func_8003F1E8, global
 /* 8003F1E8 000087A8  2C 04 00 00 */	cmpwi r4, 0
 /* 8003F1EC 000087AC  41 82 00 14 */	beq .L_8003F200
 /* 8003F1F0 000087B0  80 03 00 68 */	lwz r0, 0x68(r3)
@@ -3897,7 +3897,7 @@
 /* 8003F204 000087C4  54 00 02 0C */	rlwinm r0, r0, 0, 8, 6
 /* 8003F208 000087C8  90 03 00 68 */	stw r0, 0x68(r3)
 /* 8003F20C 000087CC  4E 80 00 20 */	blr 
-.endfn func_8003F1E8
+.endfn CfObject_func_8003F1E8
 
 .fn func_8003F210, local
 /* 8003F210 000087D0  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -5809,7 +5809,7 @@
 .balign 8
 
 .obj float_806684C8, global
-	.float 4096.0 #.4byte 0x45800000
+	.float 4096.0
 	.4byte 0
 .endobj float_806684C8
 
@@ -6640,7 +6640,7 @@
 
 .obj "@eti_800213E0", local
 .hidden "@eti_800213E0"
-	.4byte func_8003C7F8
+	.4byte CObjectParam_func_8003C7F8
 	.4byte 0x0000004C
 	.4byte "@etb_800069AC"
 .endobj "@eti_800213E0"
@@ -6654,7 +6654,7 @@
 
 .obj "@eti_800213F8", local
 .hidden "@eti_800213F8"
-	.4byte func_8003C914
+	.4byte CfObject_func_8003C914
 	.4byte 0x00000044
 	.4byte "@etb_800069BC"
 .endobj "@eti_800213F8"
@@ -6787,7 +6787,7 @@
 
 .obj "@eti_800214DC", local
 .hidden "@eti_800214DC"
-	.4byte func_8003D8C0
+	.4byte CObjectState_func_8003D8C0
 	.4byte 0x000000CC
 	.4byte "@etb_80006A54"
 .endobj "@eti_800214DC"

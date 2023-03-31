@@ -5649,9 +5649,9 @@
 	.float 1.0
 	.float 1.0
 	.float 1.0
-	.float 0.9 #0x3F666666
-	.float 0.7 #0x3F333333
-	.float 0.9 #0x3F666666
+	.float 0.9
+	.float 0.7
+	.float 0.9
 .endobj lbl_80530508
 
 
@@ -5664,7 +5664,7 @@
 	.4byte func_80121EA4
 	.4byte func_80121EA0
 	.4byte func_801220F4
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CArrow3D
 	.4byte 0xFFFFFFAC
 	.4byte func_8012215C
@@ -5696,7 +5696,7 @@
 	.4byte 0
 	.4byte func_801220AC
 	.4byte func_801220F4
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTTask_CArrow3D
 
 .obj CTTask_CArrow3D_hierarchy, global
@@ -5720,7 +5720,7 @@
 	.4byte func_8011DC38
 	.4byte func_8011DD04
 	.4byte func_80101FB8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuSymbolMark
 	.4byte 0xFFFFFFA8
 	.4byte func_8012213C
@@ -5849,7 +5849,7 @@
 
 
 .obj lbl_80664798, global
-	.4byte 0x72656600
+	.asciz "ref"
 	.4byte 0
 .endobj lbl_80664798
 
@@ -5860,12 +5860,12 @@
 
 
 .obj lbl_806647A8, global
-	.4byte 0x72656600
+	.asciz "ref"
 .endobj lbl_806647A8
 
 
 .obj lbl_806647AC, global
-	.4byte 0x72656600
+	.asciz "ref"
 .endobj lbl_806647AC
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
@@ -5888,17 +5888,17 @@
 
 
 .obj float_806699A4, global
-	.float 20 #0x41A00000
+	.float 20
 .endobj float_806699A4
 
 
 .obj float_806699A8, global
-	.float 30 #0x41F00000
+	.float 30
 .endobj float_806699A8
 
 
 .obj float_806699AC, global
-	.float 60 #0x42700000
+	.float 60
 .endobj float_806699AC
 
 
@@ -5908,12 +5908,12 @@
 
 
 .obj float_806699B4, global
-	.float 900 #0x44610000
+	.float 900
 .endobj float_806699B4
 
 
 .obj float_806699B8, global
-	.float 1.3 #0x3FA66666
+	.float 1.3
 .endobj float_806699B8
 
 
@@ -5923,17 +5923,17 @@
 
 
 .obj float_806699C0, global
-	.float 180 #0x43340000
+	.float 180
 .endobj float_806699C0
 
 
 .obj float_806699C4, global
-	.float 320 #0x43A00000
+	.float 320
 .endobj float_806699C4
 
 
 .obj float_806699C8, global
-	.float 224 #0x43600000
+	.float 224
 .endobj float_806699C8
 
 
@@ -5943,12 +5943,12 @@
 
 
 .obj float_806699D0, global
-	.float 32 #0x42000000
+	.float 32
 .endobj float_806699D0
 
 
 .obj float_806699D4, global
-	.float -224 #0xC3600000
+	.float -224
 .endobj float_806699D4
 
 
@@ -5967,27 +5967,27 @@
 
 
 .obj float_806699E8, global
-	.float 0.1 #0x3DCCCCCD
+	.float 0.1
 .endobj float_806699E8
 
 
 .obj float_806699EC, global
-	.float 1000 #0x447A0000
+	.float 1000
 .endobj float_806699EC
 
 
 .obj float_806699F0, global
-	.float 255 #0x437F0000
+	.float 255
 .endobj float_806699F0
 
 
 .obj float_806699F4, global
-	.float -400 #0xC3C80000
+	.float -400
 .endobj float_806699F4
 
 
 .obj float_806699F8, global
-	.float -0.5 #0xBF000000
+	.float -0.5
 	.4byte 0
 .endobj float_806699F8
 

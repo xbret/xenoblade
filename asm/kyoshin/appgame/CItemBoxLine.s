@@ -8696,11 +8696,11 @@
 .obj lbl_805028F4, global
 	.4byte 0
 	.float 1.0
-	.float 1.2 #0x3F99999A
+	.float 1.2
 	.float 1.5
-	.float 1.8 #0x3FE66666
-	.float 2 #0x40000000
-	.float 2.5 #0x40200000
+	.float 1.8
+	.float 2
+	.float 2.5
 .endobj lbl_805028F4
 
 .obj CItemBoxLine_typestr, global
@@ -9102,12 +9102,12 @@
 
 
 .obj float_8066A9DC, global
-	.float 276 #0x438A0000
+	.float 276
 .endobj float_8066A9DC
 
 
 .obj float_8066A9E0, global
-	.float 53 #0x42540000
+	.float 53
 .endobj float_8066A9E0
 
 
@@ -9122,7 +9122,7 @@
 
 
 .obj float_8066A9EC, global
-	.float 1.4 #0x3FB33333
+	.float 1.4
 .endobj float_8066A9EC
 
 

@@ -3052,7 +3052,7 @@
 	.4byte func_804B4D54
 	.4byte func_804B4D58
 	.4byte func_804B4E0C
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTaskColiManager
 
 .obj CTaskColiManager_hierarchy, global
@@ -3077,7 +3077,7 @@
 	.4byte 0
 	.4byte func_804B58FC
 	.4byte func_804B5944
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTTask_CTaskColiManager
 
 .obj CTTask_CTaskColiManager_hierarchy, global
@@ -3109,7 +3109,7 @@
 .balign 8
 
 .obj lbl_806663C8, global
-	.4byte 0x72656600
+	.asciz "ref"
 	.4byte 0
 .endobj lbl_806663C8
 
@@ -3159,7 +3159,7 @@
 
 
 .obj float_8066D678, global
-	.float 1000000 #0x49742400
+	.float 1000000
 	.4byte 0
 .endobj float_8066D678
 

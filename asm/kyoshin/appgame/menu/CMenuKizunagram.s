@@ -1274,7 +1274,7 @@
 	.4byte func_80256FA0
 	.4byte func_8025703C
 	.4byte func_80101FB8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuKizunagram
 	.4byte 0xFFFFFFA8
 	.4byte func_80257A84

@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_801BF76C, global
+.fn __ct__801BF76C, global
 /* 801BF76C 00188D2C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801BF770 00188D30  7C 08 02 A6 */	mflr r0
 /* 801BF774 00188D34  90 01 00 14 */	stw r0, 0x14(r1)
@@ -45,7 +45,7 @@
 /* 801BF800 00188DC0  7C 08 03 A6 */	mtlr r0
 /* 801BF804 00188DC4  38 21 00 10 */	addi r1, r1, 0x10
 /* 801BF808 00188DC8  4E 80 00 20 */	blr
-.endfn func_801BF76C
+.endfn __ct__801BF76C
 
 .fn __dt__801BF80C, global
 /* 801BF80C 00188DCC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2572,7 +2572,7 @@
 
 
 .obj float_8066A74C, global
-	.float 1000 #0x447A0000
+	.float 1000
 .endobj float_8066A74C
 
 
@@ -2581,7 +2581,7 @@
 .endobj double_8066A750
 
 .obj float_8066A758, global
-	.float 30 #0x41F00000
+	.float 30
 .endobj float_8066A758
 
 
@@ -2596,7 +2596,7 @@
 
 
 .obj float_8066A764, global
-	.float 5 #0x40A00000
+	.float 5
 .endobj float_8066A764
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
@@ -2941,7 +2941,7 @@
 
 .obj "@eti_8002AE54", local
 .hidden "@eti_8002AE54"
-	.4byte func_801BF76C
+	.4byte __ct__801BF76C
 	.4byte 0x000000A0
 	.4byte "@etb_800103E4"
 .endobj "@eti_8002AE54"

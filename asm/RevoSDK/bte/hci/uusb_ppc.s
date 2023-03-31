@@ -898,12 +898,12 @@
 
 
 .obj lbl_806658D0, global
-	.4byte 0x6F683000
+	.asciz "oh0"
 .endobj lbl_806658D0
 
 
 .obj lbl_806658D4, global
-	.4byte 0x6F683100
+	.asciz "oh1"
 .endobj lbl_806658D4
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

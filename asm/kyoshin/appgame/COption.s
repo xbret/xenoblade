@@ -3354,12 +3354,12 @@
 
 
 .obj float_8066B4BC, global
-	.float 176 #0x43300000
+	.float 176
 .endobj float_8066B4BC
 
 
 .obj float_8066B4C0, global
-	.float 150 #0x43160000
+	.float 150
 .endobj float_8066B4C0
 
 

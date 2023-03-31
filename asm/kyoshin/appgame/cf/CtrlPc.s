@@ -2164,7 +2164,7 @@
 
 
 .obj float_80668FB0, global
-	.float 30 #0x41F00000
+	.float 30
 	.4byte 0
 .endobj float_80668FB0
 

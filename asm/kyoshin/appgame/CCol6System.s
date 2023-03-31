@@ -7800,7 +7800,7 @@
 	.4byte func_80163E68
 	.4byte func_80163E78
 	.4byte func_80124584
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CCol6Invite
 	.4byte 0xFFFFFF94
 	.4byte func_80164118
@@ -7863,7 +7863,7 @@
 	.4byte func_8015EE2C
 	.4byte func_8015EF08
 	.4byte func_80124584
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CCol6System
 	.4byte 0xFFFFFF94
 	.4byte func_80164100
@@ -7934,7 +7934,7 @@
 	.4byte func_8015D72C
 	.4byte func_8015D7DC
 	.4byte func_80124584
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CCol6Hint
 	.4byte 0xFFFFFF94
 	.4byte func_801640E0
@@ -8005,7 +8005,7 @@
 	.4byte func_8015D138
 	.4byte func_8015D144
 	.4byte func_80124584
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CCol6CheckBat
 	.4byte 0xFFFFFF94
 	.4byte func_801640D0
@@ -8134,12 +8134,12 @@
 
 
 .obj float_80669E1C, global
-	.float -118 #0xC2EC0000
+	.float -118
 .endobj float_80669E1C
 
 
 .obj float_80669E20, global
-	.float 108 #0x42D80000
+	.float 108
 .endobj float_80669E20
 
 

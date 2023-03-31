@@ -1632,7 +1632,7 @@
 	.4byte func_802B4CF8
 	.4byte func_802B4D48
 	.4byte func_802B50E8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CUIErrMesWin
 	.4byte 0xFFFFFFAC
 	.4byte func_802B5130
@@ -1700,7 +1700,7 @@
 	.4byte 0
 	.4byte func_802B50A0
 	.4byte func_802B50E8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTTask_CUIErrMesWin
 
 .obj CTTask_CUIErrMesWin_hierarchy, global
@@ -1767,7 +1767,7 @@
 .balign 8
 
 .obj float_8066B7B8, global
-	.float 1.75 #0x3FE00000
+	.float 1.75
 .endobj float_8066B7B8
 
 
@@ -1777,7 +1777,7 @@
 
 
 .obj float_8066B7C0, global
-	.float 0.1 #0x3DCCCCCD
+	.float 0.1
 .endobj float_8066B7C0
 
 

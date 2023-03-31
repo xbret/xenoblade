@@ -433,7 +433,7 @@
 
 
 .obj lbl_806665B0, global
-	.4byte 0x72656600
+	.asciz "ref"
 	.4byte 0
 .endobj lbl_806665B0
 

@@ -188,7 +188,7 @@
 
 
 .obj lbl_80518B7C, global
-	.float 32000 #0x46FA0000
+	.float 32000
 .endobj lbl_80518B7C
 
 
@@ -208,264 +208,264 @@
 #the tables after are accessed by adding their offset from the first table
 .obj __HBMSYNCentsTable, local
 	.float 1.0
-	.float 1.000578 #0x3F8012F1
-	.float 1.001156 #0x3F8025E1
-	.float 1.001734 #0x3F8038D2
-	.float 1.002313 #0x3F804BCB
-	.float 1.002892 #0x3F805EC4
-	.float 1.003472 #0x3F8071C5
-	.float 1.004052 #0x3F8084C7
-	.float 1.004632 #0x3F8097C8
-	.float 1.0052119 #0x3F80AAC9
-	.float 1.005793 #0x3F80BDD3
-	.float 1.006374 #0x3F80D0DD
-	.float 1.006956 #0x3F80E3EF
-	.float 1.007537 #0x3F80F6F9
-	.float 1.0081199 #0x3F810A13
-	.float 1.008702 #0x3F811D26
-	.float 1.009285 #0x3F813040
-	.float 1.009868 #0x3F81435B
-	.float 1.010451 #0x3F815675
-	.float 1.011035 #0x3F816998
-	.float 1.011619 #0x3F817CBB
-	.float 1.0122041 #0x3F818FE7
-	.float 1.012789 #0x3F81A312
-	.float 1.013374 #0x3F81B63D
-	.float 1.0139591 #0x3F81C969
-	.float 1.014545 #0x3F81DC9C
-	.float 1.015132 #0x3F81EFD8
-	.float 1.015718 #0x3F82030C
-	.float 1.016305 #0x3F821648
-	.float 1.016892 #0x3F822984
-	.float 1.01748 #0x3F823CC9
-	.float 1.018068 #0x3F82500D
-	.float 1.018656 #0x3F826352
-	.float 1.019244 #0x3F827696
-	.float 1.019833 #0x3F8289E3
-	.float 1.0204231 #0x3F829D39
-	.float 1.0210119 #0x3F82B085
-	.float 1.021602 #0x3F82C3DB
-	.float 1.022192 #0x3F82D730
-	.float 1.022783 #0x3F82EA8E
-	.float 1.023374 #0x3F82FDEB
-	.float 1.023965 #0x3F831149
-	.float 1.024557 #0x3F8324AF
-	.float 1.025149 #0x3F833815
-	.float 1.025741 #0x3F834B7B
-	.float 1.026334 #0x3F835EEA
-	.float 1.026927 #0x3F837258
-	.float 1.0275199 #0x3F8385C6
-	.float 1.028114 #0x3F83993D
-	.float 1.028708 #0x3F83ACB4
-	.float 1.029302 #0x3F83C02B
-	.float 1.029897 #0x3F83D3AA
-	.float 1.0304919 #0x3F83E729
-	.float 1.031087 #0x3F83FAA9
-	.float 1.031683 #0x3F840E30
-	.float 1.032279 #0x3F8421B8
-	.float 1.032876 #0x3F843548
-	.float 1.0334719 #0x3F8448CF
-	.float 1.03407 #0x3F845C68
-	.float 1.034667 #0x3F846FF8
-	.float 1.035265 #0x3F848390
-	.float 1.035863 #0x3F849729
-	.float 1.0364619 #0x3F84AAC9
-	.float 1.03706 #0x3F84BE62
-	.float 1.03766 #0x3F84D20B
-	.float 1.038259 #0x3F84E5AC
-	.float 1.038859 #0x3F84F955
-	.float 1.039459 #0x3F850CFE
-	.float 1.04006 #0x3F8520B0
-	.float 1.040661 #0x3F853461
-	.float 1.041262 #0x3F854813
-	.float 1.041864 #0x3F855BCD
-	.float 1.042466 #0x3F856F87
-	.float 1.0430681 #0x3F858341
-	.float 1.043671 #0x3F859703
-	.float 1.044274 #0x3F85AAC5
-	.float 1.0448771 #0x3F85BE88
-	.float 1.045481 #0x3F85D252
-	.float 1.046085 #0x3F85E61D
-	.float 1.046689 #0x3F85F9E8
-	.float 1.047294 #0x3F860DBB
-	.float 1.047899 #0x3F86218E
-	.float 1.0485049 #0x3F863569
-	.float 1.049111 #0x3F864945
-	.float 1.0497169 #0x3F865D20
-	.float 1.050323 #0x3F8670FC
-	.float 1.05093 #0x3F8684E0
-	.float 1.051537 #0x3F8698C4
-	.float 1.052145 #0x3F86ACB0
-	.float 1.052753 #0x3F86C09C
-	.float 1.0533611 #0x3F86D489
-	.float 1.05397 #0x3F86E87D
-	.float 1.054579 #0x3F86FC72
-	.float 1.0551879 #0x3F871066
-	.float 1.0557981 #0x3F872464
-	.float 1.056408 #0x3F873861
-	.float 1.057018 #0x3F874C5E
-	.float 1.057629 #0x3F876063
-	.float 1.0582401 #0x3F877469
-	.float 1.058851 #0x3F87886E
+	.float 1.000578
+	.float 1.001156
+	.float 1.001734
+	.float 1.002313
+	.float 1.002892
+	.float 1.003472
+	.float 1.004052
+	.float 1.004632
+	.float 1.0052119
+	.float 1.005793
+	.float 1.006374
+	.float 1.006956
+	.float 1.007537
+	.float 1.0081199
+	.float 1.008702
+	.float 1.009285
+	.float 1.009868
+	.float 1.010451
+	.float 1.011035
+	.float 1.011619
+	.float 1.0122041
+	.float 1.012789
+	.float 1.013374
+	.float 1.0139591
+	.float 1.014545
+	.float 1.015132
+	.float 1.015718
+	.float 1.016305
+	.float 1.016892
+	.float 1.01748
+	.float 1.018068
+	.float 1.018656
+	.float 1.019244
+	.float 1.019833
+	.float 1.0204231
+	.float 1.0210119
+	.float 1.021602
+	.float 1.022192
+	.float 1.022783
+	.float 1.023374
+	.float 1.023965
+	.float 1.024557
+	.float 1.025149
+	.float 1.025741
+	.float 1.026334
+	.float 1.026927
+	.float 1.0275199
+	.float 1.028114
+	.float 1.028708
+	.float 1.029302
+	.float 1.029897
+	.float 1.0304919
+	.float 1.031087
+	.float 1.031683
+	.float 1.032279
+	.float 1.032876
+	.float 1.0334719
+	.float 1.03407
+	.float 1.034667
+	.float 1.035265
+	.float 1.035863
+	.float 1.0364619
+	.float 1.03706
+	.float 1.03766
+	.float 1.038259
+	.float 1.038859
+	.float 1.039459
+	.float 1.04006
+	.float 1.040661
+	.float 1.041262
+	.float 1.041864
+	.float 1.042466
+	.float 1.0430681
+	.float 1.043671
+	.float 1.044274
+	.float 1.0448771
+	.float 1.045481
+	.float 1.046085
+	.float 1.046689
+	.float 1.047294
+	.float 1.047899
+	.float 1.0485049
+	.float 1.049111
+	.float 1.0497169
+	.float 1.050323
+	.float 1.05093
+	.float 1.051537
+	.float 1.052145
+	.float 1.052753
+	.float 1.0533611
+	.float 1.05397
+	.float 1.054579
+	.float 1.0551879
+	.float 1.0557981
+	.float 1.056408
+	.float 1.057018
+	.float 1.057629
+	.float 1.0582401
+	.float 1.058851
 .endobj __HBMSYNCentsTable
 
 .obj __HBMSYNOctavesTableUp, local
 	.float 1.0
-	.float 2 #0x40000000
-	.float 4 #0x40800000
+	.float 2
+	.float 4
 	.float 8.0
-	.float 16 #0x41800000
-	.float 32 #0x42000000
-	.float 64 #0x42800000
-	.float 128 #0x43000000
-	.float 256 #0x43800000
-	.float 512 #0x44000000
-	.float 1024 #0x44800000
-	.float 2048 #0x45000000
+	.float 16
+	.float 32
+	.float 64
+	.float 128
+	.float 256
+	.float 512
+	.float 1024
+	.float 2048
 .endobj __HBMSYNOctavesTableUp
 
 .obj __HBMSYNSemitonesTableUp, local
 	.float 1.0
-	.float 1.059463 #0x3F879C7C
-	.float 1.122462 #0x3F8FACD6
-	.float 1.189207 #0x3F9837EF
-	.float 1.259921 #0x3FA14517
-	.float 1.3348401 #0x3FAADC0A
-	.float 1.414214 #0x3FB504F7
-	.float 1.498307 #0x3FBFC886
-	.float 1.587401 #0x3FCB2FF5
-	.float 1.681793 #0x3FD744FE
-	.float 1.7817971 #0x3FE411ED
-	.float 1.887749 #0x3FF1A1C2
+	.float 1.059463
+	.float 1.122462
+	.float 1.189207
+	.float 1.259921
+	.float 1.3348401
+	.float 1.414214
+	.float 1.498307
+	.float 1.587401
+	.float 1.681793
+	.float 1.7817971
+	.float 1.887749
 .endobj __HBMSYNSemitonesTableUp
 
 .obj __HBMSYNSemitonesTableDown, local
 	.float 1.0
-	.float 0.943874 #0x3F71A1BA
-	.float 0.890899 #0x3F6411F5
-	.float 0.84089601 #0x3F5744F6
-	.float 0.79370099 #0x3F4B2FFD
-	.float 0.74915397 #0x3F3FC88E
-	.float 0.70710701 #0x3F3504F7
-	.float 0.66742003 #0x3F2ADC0A
-	.float 0.62996101 #0x3F214520
-	.float 0.59460402 #0x3F1837F8
-	.float 0.56123102 #0x3F0FACD6
-	.float 0.52973199 #0x3F079C84
+	.float 0.943874
+	.float 0.890899
+	.float 0.84089601
+	.float 0.79370099
+	.float 0.74915397
+	.float 0.70710701
+	.float 0.66742003
+	.float 0.62996101
+	.float 0.59460402
+	.float 0.56123102
+	.float 0.52973199
 	.float 0.5
-	.float 0.471937 #0x3EF1A1BA
-	.float 0.44544899 #0x3EE411E4
-	.float 0.42044801 #0x3ED744F6
-	.float 0.39684999 #0x3ECB2FEC
-	.float 0.37457699 #0x3EBFC88E
-	.float 0.353553 #0x3EB504E6
-	.float 0.33371001 #0x3EAADC0A
-	.float 0.31498 #0x3EA1450F
-	.float 0.29730201 #0x3E9837F8
-	.float 0.28061599 #0x3E8FACE6
-	.float 0.26486599 #0x3E879C84
+	.float 0.471937
+	.float 0.44544899
+	.float 0.42044801
+	.float 0.39684999
+	.float 0.37457699
+	.float 0.353553
+	.float 0.33371001
+	.float 0.31498
+	.float 0.29730201
+	.float 0.28061599
+	.float 0.26486599
 	.float 0.25
-	.float 0.23596901 #0x3E71A1DC
-	.float 0.222725 #0x3E641206
-	.float 0.210224 #0x3E5744F6
-	.float 0.19842499 #0x3E4B2FEC
-	.float 0.187288 #0x3E3FC86D
-	.float 0.17677701 #0x3E350508
-	.float 0.16685501 #0x3E2ADC0A
-	.float 0.15749 #0x3E21450F
-	.float 0.148651 #0x3E1837F8
-	.float 0.14030799 #0x3E0FACE6
-	.float 0.132433 #0x3E079C84
+	.float 0.23596901
+	.float 0.222725
+	.float 0.210224
+	.float 0.19842499
+	.float 0.187288
+	.float 0.17677701
+	.float 0.16685501
+	.float 0.15749
+	.float 0.148651
+	.float 0.14030799
+	.float 0.132433
 	.float 0.125
-	.float 0.117984 #0x3DF1A198
-	.float 0.111362 #0x3DE411C3
-	.float 0.105112 #0x3DD744F6
-	.float 0.099212997 #0x3DCB302F
-	.float 0.093644001 #0x3DBFC86D
-	.float 0.088388003 #0x3DB504C5
-	.float 0.083426997 #0x3DAADBC6
-	.float 0.078745 #0x3DA1450F
-	.float 0.074325003 #0x3D9837B5
-	.float 0.070153996 #0x3D8FACE6
-	.float 0.066215999 #0x3D879C41
-	.float 0.0625 #0x3D800000
-	.float 0.058991998 #0x3D71A198
-	.float 0.055681001 #0x3D6411C3
-	.float 0.052556001 #0x3D5744F6
-	.float 0.049605999 #0x3D4B2FA9
-	.float 0.046822 #0x3D3FC86D
-	.float 0.044194002 #0x3D3504C5
-	.float 0.041714001 #0x3D2ADC4D
-	.float 0.039372999 #0x3D214595
-	.float 0.037163001 #0x3D18383B
-	.float 0.035076998 #0x3D0FACE6
-	.float 0.033108 #0x3D079C41
-	.float 0.03125 #0x3D000000
-	.float 0.029495999 #0x3CF1A198
-	.float 0.027841 #0x3CE412CF
-	.float 0.026278 #0x3CD744F6
-	.float 0.024803 #0x3CCB2FA9
-	.float 0.023411 #0x3CBFC86D
-	.float 0.022097001 #0x3CB504C5
-	.float 0.020857001 #0x3CAADC4D
-	.float 0.019686 #0x3CA14489
-	.float 0.018580999 #0x3C98372E
-	.float 0.017538 #0x3C8FABDA
-	.float 0.016554 #0x3C879C41
-	.float 0.015625 #0x3C800000
-	.float 0.014748 #0x3C71A198
-	.float 0.01392 #0x3C6410B6
-	.float 0.013139 #0x3C5744F6
-	.float 0.012402 #0x3C4B31C2
-	.float 0.011706 #0x3C3FCA86
-	.float 0.011049 #0x3C3506DD
-	.float 0.010428 #0x3C2ADA34
-	.float 0.0098430002 #0x3C214489
-	.float 0.0092909997 #0x3C183947
-	.float 0.0087689999 #0x3C0FABDA
-	.float 0.0082769999 #0x3C079C41
-	.float 0.0078130001 #0x3C000219
-	.float 0.0073739998 #0x3BF1A198
-	.float 0.0069599999 #0x3BE410B6
-	.float 0.0065700002 #0x3BD74928
-	.float 0.006201 #0x3BCB31C2
-	.float 0.0058530001 #0x3BBFCA86
-	.float 0.0055240002 #0x3BB502AC
-	.float 0.0052140001 #0x3BAADA34
-	.float 0.0049220002 #0x3BA148BB
-	.float 0.0046450002 #0x3B983516
-	.float 0.0043850001 #0x3B8FB00C
-	.float 0.0041390001 #0x3B87A073
-	.float 0.0039059999 #0x3B7FFBCE
-	.float 0.0036869999 #0x3B71A198
-	.float 0.00348 #0x3B6410B6
-	.float 0.0032850001 #0x3B574928
-	.float 0.0031000001 #0x3B4B295F
-	.float 0.0029259999 #0x3B3FC222
-	.float 0.0027620001 #0x3B3502AC
-	.float 0.0026070001 #0x3B2ADA34
-	.float 0.0024610001 #0x3B2148BB
-	.float 0.002323 #0x3B183D79
-	.float 0.0021919999 #0x3B0FA7A8
-	.float 0.0020689999 #0x3B07980F
-	.float 0.001953 #0x3AFFFBCE
-	.float 0.001844 #0x3AF1B25F
-	.float 0.00174 #0x3AE410B6
-	.float 0.001642 #0x3AD73861
-	.float 0.00155 #0x3ACB295F
-	.float 0.001463 #0x3ABFC222
-	.float 0.001381 #0x3AB502AC
-	.float 0.001304 #0x3AAAEAFB
-	.float 0.0012300001 #0x3AA137F4
-	.float 0.001161 #0x3A982CB2
-	.float 0.001096 #0x3A8FA7A8
-	.float 0.001035 #0x3A87A8D6
-	.float 0.00097699999 #0x3A800EAE
-	.float 0.00092199998 #0x3A71B25F
-	.float 0.00086999999 #0x3A6410B6
-	.float 0.00082100002 #0x3A573861
-	.float 0.00077500002 #0x3A4B295F
-	.float 0.00073199999 #0x3A3FE3B0
-	.float 0.00069100002 #0x3A35243A
-	.float 0.00065200002 #0x3A2AEAFB
+	.float 0.117984
+	.float 0.111362
+	.float 0.105112
+	.float 0.099212997
+	.float 0.093644001
+	.float 0.088388003
+	.float 0.083426997
+	.float 0.078745
+	.float 0.074325003
+	.float 0.070153996
+	.float 0.066215999
+	.float 0.0625
+	.float 0.058991998
+	.float 0.055681001
+	.float 0.052556001
+	.float 0.049605999
+	.float 0.046822
+	.float 0.044194002
+	.float 0.041714001
+	.float 0.039372999
+	.float 0.037163001
+	.float 0.035076998
+	.float 0.033108
+	.float 0.03125
+	.float 0.029495999
+	.float 0.027841
+	.float 0.026278
+	.float 0.024803
+	.float 0.023411
+	.float 0.022097001
+	.float 0.020857001
+	.float 0.019686
+	.float 0.018580999
+	.float 0.017538
+	.float 0.016554
+	.float 0.015625
+	.float 0.014748
+	.float 0.01392
+	.float 0.013139
+	.float 0.012402
+	.float 0.011706
+	.float 0.011049
+	.float 0.010428
+	.float 0.0098430002
+	.float 0.0092909997
+	.float 0.0087689999
+	.float 0.0082769999
+	.float 0.0078130001
+	.float 0.0073739998
+	.float 0.0069599999
+	.float 0.0065700002
+	.float 0.006201
+	.float 0.0058530001
+	.float 0.0055240002
+	.float 0.0052140001
+	.float 0.0049220002
+	.float 0.0046450002
+	.float 0.0043850001
+	.float 0.0041390001
+	.float 0.0039059999
+	.float 0.0036869999
+	.float 0.00348
+	.float 0.0032850001
+	.float 0.0031000001
+	.float 0.0029259999
+	.float 0.0027620001
+	.float 0.0026070001
+	.float 0.0024610001
+	.float 0.002323
+	.float 0.0021919999
+	.float 0.0020689999
+	.float 0.001953
+	.float 0.001844
+	.float 0.00174
+	.float 0.001642
+	.float 0.00155
+	.float 0.001463
+	.float 0.001381
+	.float 0.001304
+	.float 0.0012300001
+	.float 0.001161
+	.float 0.001096
+	.float 0.001035
+	.float 0.00097699999
+	.float 0.00092199998
+	.float 0.00086999999
+	.float 0.00082100002
+	.float 0.00077500002
+	.float 0.00073199999
+	.float 0.00069100002
+	.float 0.00065200002
 .endobj __HBMSYNSemitonesTableDown

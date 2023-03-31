@@ -435,7 +435,7 @@
 	.4byte func_80124E0C
 	.4byte func_80124E74
 	.4byte func_80124584
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CSysWinSelect
 	.4byte 0xFFFFFF94
 	.4byte func_801252B8
@@ -506,7 +506,7 @@
 	.4byte func_801248A0
 	.4byte func_80124908
 	.4byte func_80124584
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CSystemWindow
 	.4byte 0xFFFFFF94
 	.4byte func_801252A0

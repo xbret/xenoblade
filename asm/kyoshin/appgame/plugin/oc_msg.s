@@ -542,12 +542,6 @@
 .endobj lbl_806684B0
 
 
-.section .bss, "wa"  # 0x80573C80 - 0x8066417B
-
-.obj lbl_80573DD0, global
-	.skip 0x18
-.endobj lbl_80573DD0
-
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
 .balign 8

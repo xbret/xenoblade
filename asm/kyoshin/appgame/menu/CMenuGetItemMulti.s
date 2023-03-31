@@ -8768,7 +8768,7 @@
 	.4byte func_801B3F68
 	.4byte func_801B40C4
 	.4byte func_80124584
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuGetItemMulti
 	.4byte 0xFFFFFF94
 	.4byte func_801BA134
@@ -8859,7 +8859,7 @@
 
 
 .obj float_8066A6D4, global
-	.float 32 #0x42000000
+	.float 32
 .endobj float_8066A6D4
 
 
@@ -8873,7 +8873,7 @@
 
 
 .obj float_8066A6E4, global
-	.float 1.4 #0x3FB33333
+	.float 1.4
 .endobj float_8066A6E4
 
 

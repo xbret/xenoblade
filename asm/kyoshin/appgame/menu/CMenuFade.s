@@ -652,7 +652,7 @@
 	.4byte func_801139A4
 	.4byte func_80113A24
 	.4byte func_80113BF8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuFade
 	.4byte 0xFFFFFFA8
 	.4byte func_80113E38
@@ -738,7 +738,7 @@
 
 
 .obj float_80669928, global
-	.float 25 #0x41C80000
+	.float 25
 	.4byte 0
 .endobj float_80669928
 

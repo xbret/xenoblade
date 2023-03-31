@@ -812,7 +812,7 @@
 	.4byte func_802B09AC
 	.4byte func_802B0A10
 	.4byte func_80101FB8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuGCItem
 	.4byte 0xFFFFFFA8
 	.4byte func_802B0F10

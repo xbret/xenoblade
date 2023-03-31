@@ -686,7 +686,7 @@
 	.4byte func_802721F4
 	.4byte func_80272260
 	.4byte func_80101FB8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuKizunaTalkList
 	.4byte 0xFFFFFFA8
 	.4byte func_802726EC

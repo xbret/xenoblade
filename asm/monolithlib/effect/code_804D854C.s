@@ -595,12 +595,12 @@
 
 
 .obj float_8066D964, global
-	.float 30 #0x41F00000
+	.float 30
 .endobj float_8066D964
 
 
 .obj float_8066D968, global
-	.float 255 #0x437F0000
+	.float 255
 .endobj float_8066D968
 
 

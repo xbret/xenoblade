@@ -7634,15 +7634,15 @@
 	.4byte 0xFF6EFF66
 	.4byte 0xFF66FF66
 	.4byte 0xFF660000
-	.float 0.8 #0x3F4CCCCD
-	.float 0.8 #0x3F4CCCCD
-	.float 0.8 #0x3F4CCCCD
-	.float 0.8 #0x3F4CCCCD
-	.float 0.9 #0x3F666666
-	.float 0.8 #0x3F4CCCCD
-	.float 0.8 #0x3F4CCCCD
-	.float 0.8 #0x3F4CCCCD
-	.float 0.8 #0x3F4CCCCD
+	.float 0.8
+	.float 0.8
+	.float 0.8
+	.float 0.8
+	.float 0.9
+	.float 0.8
+	.float 0.8
+	.float 0.8
+	.float 0.8
 .endobj lbl_804F88F0
 
 
@@ -7833,7 +7833,7 @@
 	.4byte func_80103038
 	.4byte func_80103280
 	.4byte func_80108BE8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuArtsSelect
 	.4byte 0xFFFFFFA8
 	.4byte func_80108C30
@@ -7948,7 +7948,7 @@
 .endobj double_80669800
 
 .obj float_80669808, global
-	.float -80 #0xC2A00000
+	.float -80
 .endobj float_80669808
 
 
@@ -7988,12 +7988,12 @@
 
 
 .obj float_80669828, global
-	.float 900 #0x44610000
+	.float 900
 .endobj float_80669828
 
 
 .obj float_8066982C, global
-	.float 625 #0x441C4000
+	.float 625
 .endobj float_8066982C
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

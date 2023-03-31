@@ -1034,7 +1034,7 @@
 
 
 .obj lbl_80520854, global
-	.float 1.164 #0x3F94FDF4
+	.float 1.164
 .endobj lbl_80520854
 
 

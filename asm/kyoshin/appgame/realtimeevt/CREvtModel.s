@@ -960,12 +960,12 @@
 
 
 .obj lbl_80664D10, global
-	.4byte 0x72656600
+	.asciz "ref"
 .endobj lbl_80664D10
 
 
 .obj lbl_80664D14, global
-	.4byte 0x72656600
+	.asciz "ref"
 .endobj lbl_80664D14
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
@@ -978,17 +978,17 @@
 
 
 .obj float_8066A034, global
-	.float 0.9 #0x3F666666
+	.float 0.9
 .endobj float_8066A034
 
 
 .obj float_8066A038, global
-	.float 0.35 #0x3EB33333
+	.float 0.35
 .endobj float_8066A038
 
 
 .obj float_8066A03C, global
-	.float 255 #0x437F0000
+	.float 255
 .endobj float_8066A03C
 
 

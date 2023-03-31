@@ -1430,7 +1430,7 @@
 
 
 .obj float_8066CCFC, global
-	.float 1.2 #0x3F99999A
+	.float 1.2
 .endobj float_8066CCFC
 
 
@@ -1444,22 +1444,22 @@
 
 
 .obj float_8066CD0C, global
-	.float 1.25 #0x3FA00000
+	.float 1.25
 .endobj float_8066CD0C
 
 
 .obj float_8066CD10, global
-	.float 4 #0x40800000
+	.float 4
 .endobj float_8066CD10
 
 
 .obj float_8066CD14, global
-	.float 686 #0x442B8000
+	.float 686
 .endobj float_8066CD14
 
 
 .obj float_8066CD18, global
-	.float 640 #0x44200000
+	.float 640
 	.4byte 0
 .endobj float_8066CD18
 

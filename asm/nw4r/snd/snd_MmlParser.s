@@ -1488,7 +1488,7 @@
 
 
 .obj float_8066C7EC, global
-	.float 127 #0x42FE0000
+	.float 127
 .endobj float_8066C7EC
 
 

@@ -4019,7 +4019,7 @@
 
 
 .obj float_8066B170, global
-	.float 38 #0x42180000
+	.float 38
 	.4byte 0
 .endobj float_8066B170
 
@@ -4034,7 +4034,7 @@
 
 
 .obj float_8066B184, global
-	.float -16777216 #0xCB800000
+	.float -16777216
 .endobj float_8066B184
 
 
@@ -4049,7 +4049,7 @@
 
 
 .obj float_8066B190, global
-	.float 3 #0x40400000
+	.float 3
 .endobj float_8066B190
 
 

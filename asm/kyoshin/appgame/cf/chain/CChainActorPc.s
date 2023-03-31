@@ -932,7 +932,7 @@
 
 
 .obj float_8066B398, global
-	.float 0.01 #0x3C23D70A
+	.float 0.01
 	.4byte 0
 .endobj float_8066B398
 

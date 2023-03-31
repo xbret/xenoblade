@@ -1712,7 +1712,7 @@
 	.4byte func_802121EC
 	.4byte func_80212260
 	.4byte func_80101FB8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuMakeCrystal
 	.4byte 0xFFFFFFA8
 	.4byte func_802124FC

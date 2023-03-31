@@ -1870,7 +1870,7 @@
 	.4byte func_801B037C
 	.4byte func_801B03FC
 	.4byte func_80108BE8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuBattleCommu
 	.4byte 0xFFFFFFA8
 	.4byte func_801B18B8

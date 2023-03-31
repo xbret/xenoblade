@@ -6097,7 +6097,7 @@
 
 
 .obj float_8066D68C, global
-	.float -0.0001 #0xB8D1B717
+	.float -0.0001
 .endobj float_8066D68C
 
 
@@ -6107,12 +6107,12 @@
 
 
 .obj float_8066D694, global
-	.float 100000000 #0x4CBEBC20
+	.float 100000000
 .endobj float_8066D694
 
 
 .obj float_8066D698, global
-	.float -10000 #0xC61C4000
+	.float -10000
 .endobj float_8066D698
 
 

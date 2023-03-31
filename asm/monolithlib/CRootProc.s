@@ -495,7 +495,7 @@
 	.4byte func_8043C1D0
 	.4byte func_8043C1CC
 	.4byte func_8043C1C8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt___unnamed_CTaskManager_cpp_CRootProc
 
 .obj _unnamed_CTaskManager_cpp_CRootProc_hierarchy, global
@@ -520,7 +520,7 @@
 	.4byte 0
 	.4byte func_8043C1D8
 	.4byte func_8043C220
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTTask_unnamed_CTaskManager_cpp_CRootProc
 
 .obj CTTask_unnamed_CTaskManager_cpp_CRootProc_hierarchy, global

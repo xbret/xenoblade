@@ -2940,7 +2940,7 @@
 .balign 8
 
 .obj float_8066B128, global
-	.float 0.78 #0x3F47AE14
+	.float 0.78
 .endobj float_8066B128
 
 
@@ -2966,12 +2966,12 @@
 
 
 .obj float_8066B140, global
-	.float 17 #0x41880000
+	.float 17
 .endobj float_8066B140
 
 
 .obj float_8066B144, global
-	.float 9 #0x41100000
+	.float 9
 .endobj float_8066B144
 
 
@@ -2996,7 +2996,7 @@
 
 
 .obj lbl_8066B158, global
-	.4byte 0x76616C3F
+	.ascii "val?"
 .endobj lbl_8066B158
 
 

@@ -1038,12 +1038,12 @@
 
 
 .obj float_8066A6AC, global
-	.float 52 #0x42500000
+	.float 52
 .endobj float_8066A6AC
 
 
 .obj float_8066A6B0, global
-	.float 2 #0x40000000
+	.float 2
 .endobj float_8066A6B0
 
 

@@ -1913,7 +1913,7 @@
 
 
 .obj float_8066CC30, global
-	.float 255 #0x437F0000
+	.float 255
 .endobj float_8066CC30
 
 

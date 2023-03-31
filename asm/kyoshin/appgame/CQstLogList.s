@@ -2181,12 +2181,12 @@
 .balign 8
 
 .obj float_8066AE38, global
-	.float 214 #0x43560000
+	.float 214
 .endobj float_8066AE38
 
 
 .obj float_8066AE3C, global
-	.float 118 #0x42EC0000
+	.float 118
 .endobj float_8066AE3C
 
 

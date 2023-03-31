@@ -1246,7 +1246,7 @@
 	.4byte func_802512C8
 	.4byte func_80251340
 	.4byte func_80101FB8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuMapSelectSC
 	.4byte 0xFFFFFFA8
 	.4byte func_80251DF0

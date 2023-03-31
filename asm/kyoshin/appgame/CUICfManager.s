@@ -12124,12 +12124,12 @@
 .endobj lbl_804FB9F0
 
 .obj lbl_804FBA60, global
-	.4byte 0x00010203
-	.4byte 0x04050607
-	.4byte 0x08090A47
-	.4byte 0x48494A4B
-	.4byte 0x51525354
-	.4byte 0xFF000000
+	.byte 0x00,0x01,0x02,0x03
+	.byte 0x04,0x05,0x06,0x07
+	.byte 0x08,0x09,0x0A,0x47
+	.byte 0x48,0x49,0x4A,0x4B
+	.byte 0x51,0x52,0x53,0x54
+	.byte 0xFF,0x00,0x00,0x00
 .endobj lbl_804FBA60
 
 .obj lbl_804FBA78, global
@@ -12521,7 +12521,7 @@
 	.4byte func_8013272C
 	.4byte func_801327D0
 	.4byte func_80135F18
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CUICfManager
 	.4byte 0xFFFFFFAC
 	.4byte func_80135FC4
@@ -12610,7 +12610,7 @@
 	.4byte func_80135E38
 	.4byte func_80135E34
 	.4byte func_80135E30
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CUICfManager_CTest
 
 .obj CUICfManager_CTest_hierarchy, global
@@ -12635,7 +12635,7 @@
 	.4byte 0
 	.4byte func_80135E40
 	.4byte func_80135E88
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTTask_CUICfManager_CTest
 
 .obj CTTask_CUICfManager_CTest_hierarchy, global
@@ -12658,7 +12658,7 @@
 	.4byte 0
 	.4byte func_80135ED0
 	.4byte func_80135F18
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTTask_CUICfManager
 
 .obj CTTask_CUICfManager_hierarchy, global
@@ -12812,17 +12812,17 @@
 
 
 .obj float_80669BA0, global
-	.float 38 #0x42180000
+	.float 38
 .endobj float_80669BA0
 
 
 .obj float_80669BA4, global
-	.float -1000 #0xC47A0000
+	.float -1000
 .endobj float_80669BA4
 
 
 .obj float_80669BA8, global
-	.float 1000 #0x447A0000
+	.float 1000
 .endobj float_80669BA8
 
 
@@ -12846,7 +12846,7 @@
 .endobj double_80669BB8
 
 .obj float_80669BC0, global
-	.float 0.6 #0x3F19999A
+	.float 0.6
 .endobj float_80669BC0
 
 
@@ -12861,7 +12861,7 @@
 
 
 .obj float_80669BCC, global
-	.float 60 #0x42700000
+	.float 60
 .endobj float_80669BCC
 
 
@@ -12926,7 +12926,7 @@
 
 
 .obj float_80669C00, global
-	.float 0.1 #0x3DCCCCCD
+	.float 0.1
 .endobj float_80669C00
 
 
@@ -12936,7 +12936,7 @@
 
 
 .obj float_80669C08, global
-	.float 64 #0x42800000
+	.float 64
 	.4byte 0
 .endobj float_80669C08
 

@@ -1718,12 +1718,12 @@
 
 
 .obj float_80669D24, global
-	.float 9.8 #0x411CCCCD
+	.float 9.8
 .endobj float_80669D24
 
 
 .obj float_80669D28, global
-	.float 32 #0x42000000
+	.float 32
 .endobj float_80669D28
 
 
@@ -1733,17 +1733,17 @@
 
 
 .obj float_80669D30, global
-	.float 15 #0x41700000
+	.float 15
 .endobj float_80669D30
 
 
 .obj float_80669D34, global
-	.float 25 #0x41C80000
+	.float 25
 .endobj float_80669D34
 
 
 .obj float_80669D38, global
-	.float 2 #0x40000000
+	.float 2
 .endobj float_80669D38
 
 

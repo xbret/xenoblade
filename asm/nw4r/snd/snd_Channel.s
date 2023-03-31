@@ -1309,17 +1309,17 @@
 
 
 .obj float_8066C710, global
-	.float 255 #0x437F0000
+	.float 255
 .endobj float_8066C710
 
 
 .obj float_8066C714, global
-	.float 6 #0x40C00000
+	.float 6
 .endobj float_8066C714
 
 
 .obj float_8066C718, global
-	.float 256 #0x43800000
+	.float 256
 	.4byte 0
 .endobj float_8066C718
 
@@ -1333,7 +1333,7 @@
 .endobj double_8066C728
 
 .obj float_8066C730, global
-	.float -90.4 #0xC2B4CCCD
+	.float -90.4
 .endobj float_8066C730
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

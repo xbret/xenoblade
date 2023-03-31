@@ -2689,7 +2689,7 @@
 
 
 .obj float_8066AB74, global
-	.float 0.0001 #0x38D1B717
+	.float 0.0001
 .endobj float_8066AB74
 
 
@@ -2702,22 +2702,22 @@
 .endobj double_8066AB80
 
 .obj float_8066AB88, global
-	.float 50 #0x42480000
+	.float 50
 .endobj float_8066AB88
 
 
 .obj float_8066AB8C, global
-	.float 40000 #0x471C4000
+	.float 40000
 .endobj float_8066AB8C
 
 
 .obj float_8066AB90, global
-	.float 2.5 #0x40200000
+	.float 2.5
 .endobj float_8066AB90
 
 
 .obj float_8066AB94, global
-	.float 6.25 #0x40C80000
+	.float 6.25
 .endobj float_8066AB94
 
 
@@ -2727,12 +2727,12 @@
 
 
 .obj float_8066ABA0, global
-	.float 25 #0x41C80000
+	.float 25
 .endobj float_8066ABA0
 
 
 .obj float_8066ABA4, global
-	.float 0.6 #0x3F19999A
+	.float 0.6
 .endobj float_8066ABA4
 
 
@@ -2742,17 +2742,17 @@
 
 
 .obj float_8066ABAC, global
-	.float 60 #0x42700000
+	.float 60
 .endobj float_8066ABAC
 
 
 .obj float_8066ABB0, global
-	.float 30 #0x41F00000
+	.float 30
 .endobj float_8066ABB0
 
 
 .obj float_8066ABB4, global
-	.float 22 #0x41B00000
+	.float 22
 .endobj float_8066ABB4
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

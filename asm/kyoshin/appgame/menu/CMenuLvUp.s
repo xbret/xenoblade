@@ -1327,7 +1327,7 @@
 	.4byte func_80275BE4
 	.4byte func_80275CC0
 	.4byte func_80101FB8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuLvUp
 	.4byte 0xFFFFFFA8
 	.4byte func_80276C18
@@ -1413,12 +1413,12 @@
 
 
 .obj float_8066B2B0, global
-	.float 320 #0x43A00000
+	.float 320
 .endobj float_8066B2B0
 
 
 .obj float_8066B2B4, global
-	.float 224 #0x43600000
+	.float 224
 .endobj float_8066B2B4
 
 

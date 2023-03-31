@@ -1635,7 +1635,7 @@
 
 
 .obj float_80668E00, global
-	.float 4 #0x40800000
+	.float 4
 .endobj float_80668E00
 
 
@@ -1645,7 +1645,7 @@
 
 
 .obj float_80668E08, global
-	.float 0.15 #0x3E19999A
+	.float 0.15
 .endobj float_80668E08
 
 
@@ -1659,7 +1659,7 @@
 .endobj double_80668E10
 
 .obj float_80668E18, global
-	.float 30 #0x41F00000
+	.float 30
 	.4byte 0
 .endobj float_80668E18
 

@@ -2454,7 +2454,7 @@
 	.4byte 0
 	.4byte func_80108BA0
 	.4byte func_80108BE8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTTask_IUIBattle
 
 .obj CTTask_IUIBattle_hierarchy, global
@@ -2493,7 +2493,7 @@
 	.4byte func_80109084
 	.4byte func_80109160
 	.4byte func_80108BE8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuBattleDamage
 	.4byte 0xFFFFFFA8
 	.4byte func_8010A67C
@@ -2578,12 +2578,12 @@
 
 
 .obj float_80669838, global
-	.float 320 #0x43A00000
+	.float 320
 .endobj float_80669838
 
 
 .obj float_8066983C, global
-	.float 224 #0x43600000
+	.float 224
 .endobj float_8066983C
 
 
@@ -2593,7 +2593,7 @@
 
 
 .obj float_80669844, global
-	.float 25 #0x41C80000
+	.float 25
 .endobj float_80669844
 
 

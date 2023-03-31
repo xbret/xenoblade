@@ -1841,12 +1841,12 @@
 .endobj double_8066B4E8
 
 .obj float_8066B4F0, global
-	.float 11 #0x41300000
+	.float 11
 .endobj float_8066B4F0
 
 
 .obj float_8066B4F4, global
-	.float 60 #0x42700000
+	.float 60
 .endobj float_8066B4F4
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

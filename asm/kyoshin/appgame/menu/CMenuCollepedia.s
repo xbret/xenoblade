@@ -852,7 +852,7 @@
 	.4byte func_80252ACC
 	.4byte func_80252B38
 	.4byte func_80101FB8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuCollepedia
 	.4byte 0xFFFFFFA8
 	.4byte func_80253190

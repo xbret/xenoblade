@@ -659,7 +659,7 @@
 	.4byte func_802941F0
 	.4byte func_80294274
 	.4byte func_80124584
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CSysWinSave
 	.4byte 0xFFFFFF94
 	.4byte func_8029480C
@@ -745,7 +745,7 @@
 
 
 .obj float_8066B450, global
-	.float 2 #0x40000000
+	.float 2
 	.4byte 0
 .endobj float_8066B450
 

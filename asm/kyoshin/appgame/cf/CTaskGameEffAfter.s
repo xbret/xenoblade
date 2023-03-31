@@ -182,7 +182,7 @@
 	.4byte func_800615F4
 	.4byte func_80061650
 	.4byte func_800615F0
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTaskGameEffAfter
 
 .obj CTaskGameEffAfter_hierarchy, global
@@ -207,7 +207,7 @@
 	.4byte 0
 	.4byte func_80061650
 	.4byte func_80061698
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTTask_CTaskGameEffAfter
 
 .obj CTTask_CTaskGameEffAfter_hierarchy, global

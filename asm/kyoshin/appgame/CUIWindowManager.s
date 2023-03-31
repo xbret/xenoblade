@@ -6336,7 +6336,7 @@
 	.4byte func_8013C678
 	.4byte func_8013C6D8
 	.4byte func_8013F190
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CUIWindowManager
 	.4byte 0xFFFFFFAC
 	.4byte func_8013F23C
@@ -6388,7 +6388,7 @@
 	.4byte func_8013F0B0
 	.4byte func_8013F0AC
 	.4byte func_8013F0A8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CUIWindowManager_CTest
 
 .obj CUIWindowManager_CTest_hierarchy, global
@@ -6413,7 +6413,7 @@
 	.4byte 0
 	.4byte func_8013F0B8
 	.4byte func_8013F100
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTTask_CUIWindowManager_CTest
 
 .obj CTTask_CUIWindowManager_CTest_hierarchy, global
@@ -6436,7 +6436,7 @@
 	.4byte 0
 	.4byte func_8013F148
 	.4byte func_8013F190
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTTask_CUIWindowManager
 
 .obj CTTask_CUIWindowManager_hierarchy, global

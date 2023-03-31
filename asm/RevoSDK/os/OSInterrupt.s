@@ -2,6 +2,9 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
+.global __RAS_OSDisableInterrupts_begin
+__RAS_OSDisableInterrupts_begin:
+
 .balign 16, 0
 .fn OSDisableInterrupts, global
 /* 803589B0 00321F70  7C 60 00 A6 */	mfmsr r3

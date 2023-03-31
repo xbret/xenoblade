@@ -2129,7 +2129,7 @@
     .float 0.01840673
     .float 0.012271538
     .float 0.0061358851
-    .float 0 #0
+    .float 0
 .endobj Pan2RatioTableSinCos__Q44nw4r3snd6detail4Util
 
 .obj Pan2RatioTableLinear__Q44nw4r3snd6detail4Util, local
@@ -2389,7 +2389,7 @@
     .float 0.01171875
     .float 0.0078125
     .float 0.00390625
-    .float 0 #0
+    .float 0
 .endobj Pan2RatioTableLinear__Q44nw4r3snd6detail4Util
 
 
@@ -2777,7 +2777,7 @@
 
 
 .obj float_8066C8D4, global
-	.float 2 #0x40000000
+	.float 2
 .endobj float_8066C8D4
 
 
@@ -2787,12 +2787,12 @@
 
 
 .obj float_8066C8DC, global
-	.float 6 #0x40C00000
+	.float 6
 .endobj float_8066C8DC
 
 
 .obj float_8066C8E0, global
-	.float -90.4 #0xC2B4CCCD
+	.float -90.4
 .endobj float_8066C8E0
 
 
@@ -2807,7 +2807,7 @@
 
 
 .obj float_8066C8EC, global
-	.float 256 #0x43800000
+	.float 256
 .endobj float_8066C8EC
 
 
@@ -2822,7 +2822,7 @@
 
 
 .obj float_8066C8F8, global
-	.float 0.9 #0x3F666666
+	.float 0.9
 .endobj float_8066C8F8
 
 

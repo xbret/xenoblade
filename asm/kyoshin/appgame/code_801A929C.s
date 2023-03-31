@@ -1962,12 +1962,12 @@
 
 
 .obj float_8066A634, global
-	.float 10000000 #0x4B189680
+	.float 10000000
 .endobj float_8066A634
 
 
 .obj float_8066A638, global
-	.float 0.01 #0x3C23D70A
+	.float 0.01
 	.4byte 0
 .endobj float_8066A638
 

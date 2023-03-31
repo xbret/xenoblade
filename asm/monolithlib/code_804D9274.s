@@ -994,7 +994,7 @@
 
 
 .obj float_8066D998, global
-	.float 2147483648 #0x4F000000
+	.float 2147483648
 .endobj float_8066D998
 
 

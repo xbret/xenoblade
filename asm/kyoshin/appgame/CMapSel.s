@@ -1438,12 +1438,12 @@
 
 
 .obj float_8066AFF8, global
-	.float -56 #0xC2600000
+	.float -56
 .endobj float_8066AFF8
 
 
 .obj float_8066AFFC, global
-	.float 123 #0x42F60000
+	.float 123
 .endobj float_8066AFFC
 
 .obj CMapSel_typestr, global

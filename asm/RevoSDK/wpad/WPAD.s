@@ -8691,7 +8691,7 @@
 
 
 .obj lbl_80665D50, global
-	.4byte 0x322E3000
+	.asciz "2.0"
 .endobj lbl_80665D50
 
 

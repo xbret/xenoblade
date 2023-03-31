@@ -5308,7 +5308,7 @@
 	.4byte func_8010FC70
 	.4byte func_8010FDAC
 	.4byte func_80101FB8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuEnemyState
 	.4byte 0xFFFFFFA8
 	.4byte func_801135C8
@@ -5410,12 +5410,12 @@
 
 
 .obj float_806698B8, global
-	.float 320 #0x43A00000
+	.float 320
 .endobj float_806698B8
 
 
 .obj float_806698BC, global
-	.float 224 #0x43600000
+	.float 224
 .endobj float_806698BC
 
 
@@ -5425,12 +5425,12 @@
 
 
 .obj float_806698C4, global
-	.float 160 #0x43200000
+	.float 160
 .endobj float_806698C4
 
 
 .obj float_806698C8, global
-	.float 16 #0x41800000
+	.float 16
 .endobj float_806698C8
 
 
@@ -5440,12 +5440,12 @@
 
 
 .obj float_806698D0, global
-	.float 45 #0x42340000
+	.float 45
 .endobj float_806698D0
 
 
 .obj float_806698D4, global
-	.float 0.05 #0x3D4CCCCD
+	.float 0.05
 .endobj float_806698D4
 
 
@@ -5455,7 +5455,7 @@
 
 
 .obj float_806698DC, global
-	.float 10000 #0x461C4000
+	.float 10000
 .endobj float_806698DC
 
 
@@ -5465,27 +5465,27 @@
 
 
 .obj float_806698E4, global
-	.float 180 #0x43340000
+	.float 180
 .endobj float_806698E4
 
 
 .obj float_806698E8, global
-	.float 118 #0x42EC0000
+	.float 118
 .endobj float_806698E8
 
 
 .obj float_806698EC, global
-	.float 48 #0x42400000
+	.float 48
 .endobj float_806698EC
 
 
 .obj float_806698F0, global
-	.float 36 #0x42100000
+	.float 36
 .endobj float_806698F0
 
 
 .obj float_806698F4, global
-	.float 2 #0x40000000
+	.float 2
 .endobj float_806698F4
 
 
@@ -5494,7 +5494,7 @@
 .endobj double_806698F8
 
 .obj float_80669900, global
-	.float 60 #0x42700000
+	.float 60
 .endobj float_80669900
 
 
@@ -5504,32 +5504,32 @@
 
 
 .obj float_80669908, global
-	.float 94 #0x42BC0000
+	.float 94
 .endobj float_80669908
 
 
 .obj float_8066990C, global
-	.float 96 #0x42C00000
+	.float 96
 .endobj float_8066990C
 
 
 .obj float_80669910, global
-	.float 0.7 #0x3F333333
+	.float 0.7
 .endobj float_80669910
 
 
 .obj float_80669914, global
-	.float 46 #0x42380000
+	.float 46
 .endobj float_80669914
 
 
 .obj float_80669918, global
-	.float 37 #0x42140000
+	.float 37
 .endobj float_80669918
 
 
 .obj float_8066991C, global
-	.float 31 #0x41F80000
+	.float 31
 .endobj float_8066991C
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

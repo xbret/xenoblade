@@ -706,12 +706,12 @@
 
 
 .obj float_8066D764, global
-	.float 10000 #0x461C4000
+	.float 10000
 .endobj float_8066D764
 
 
 .obj float_8066D768, global
-	.float 1000000 #0x49742400
+	.float 1000000
 .endobj float_8066D768
 
 
@@ -721,7 +721,7 @@
 
 
 .obj float_8066D770, global
-	.float 255 #0x437F0000
+	.float 255
 .endobj float_8066D770
 
 .obj CLight_typestr, global

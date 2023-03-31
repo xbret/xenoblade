@@ -294,7 +294,7 @@
 	.4byte func_802956CC
 	.4byte func_802956E4
 	.4byte func_802957D4
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CTaskGameEvt
 	.4byte 0xFFFFFFAC
 	.4byte func_80295870
@@ -359,7 +359,7 @@
 	.4byte 0
 	.4byte func_802957D8
 	.4byte func_80295820
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTTask_CTaskGameEvt
 
 .obj CTTask_CTaskGameEvt_hierarchy, global

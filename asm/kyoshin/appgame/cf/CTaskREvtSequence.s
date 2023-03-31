@@ -5450,7 +5450,7 @@
 	.4byte func_8016A42C
 	.4byte func_8016C740
 	.4byte func_8016ABA4
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__cf_CTaskREvtSequence
 	.4byte 0xFFFFFFAC
 	.4byte func_8016C7D8
@@ -5515,7 +5515,7 @@
 	.4byte 0
 	.4byte func_8016C740
 	.4byte func_8016C788
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CTTask_cf_CTaskREvtSequence
 
 .obj CTTask_cf_CTaskREvtSequence_hierarchy, global
@@ -5596,17 +5596,17 @@
 
 
 .obj lbl_80664CBC, global
-	.4byte 0x72656600
+	.asciz "ref"
 .endobj lbl_80664CBC
 
 
 .obj lbl_80664CC0, global
-	.4byte 0x72656600
+	.asciz "ref"
 .endobj lbl_80664CC0
 
 
 .obj lbl_80664CC4, global
-	.4byte 0x72656600
+	.asciz "ref"
 .endobj lbl_80664CC4
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
@@ -5624,12 +5624,12 @@
 
 
 .obj float_80669F20, global
-	.float 0.7 #0x3F333333
+	.float 0.7
 .endobj float_80669F20
 
 
 .obj float_80669F24, global
-	.float 20 #0x41A00000
+	.float 20
 .endobj float_80669F24
 
 
@@ -5644,22 +5644,22 @@
 
 
 .obj float_80669F30, global
-	.float 5 #0x40A00000
+	.float 5
 .endobj float_80669F30
 
 
 .obj float_80669F34, global
-	.float 30 #0x41F00000
+	.float 30
 .endobj float_80669F34
 
 
 .obj float_80669F38, global
-	.float 0.1 #0x3DCCCCCD
+	.float 0.1
 .endobj float_80669F38
 
 
 .obj float_80669F3C, global
-	.float 85000 #0x47A60400
+	.float 85000
 .endobj float_80669F3C
 
 
@@ -5668,7 +5668,7 @@
 .endobj double_80669F40
 
 .obj float_80669F48, global
-	.float 0.01 #0x3C23D70A
+	.float 0.01
 	.4byte 0
 .endobj float_80669F48
 

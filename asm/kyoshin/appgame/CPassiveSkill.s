@@ -11783,7 +11783,7 @@
 .endobj double_8066B1C0
 
 .obj float_8066B1C8, global
-	.float 4 #0x40800000
+	.float 4
 	.4byte 0
 .endobj float_8066B1C8
 
@@ -11793,7 +11793,7 @@
 .endobj double_8066B1D0
 
 .obj float_8066B1D8, global
-	.float 43 #0x422C0000
+	.float 43
 .endobj float_8066B1D8
 
 
@@ -11808,12 +11808,12 @@
 
 
 .obj float_8066B1E4, global
-	.float 255 #0x437F0000
+	.float 255
 .endobj float_8066B1E4
 
 
 .obj float_8066B1E8, global
-	.float 160 #0x43200000
+	.float 160
 	.4byte 0
 .endobj float_8066B1E8
 

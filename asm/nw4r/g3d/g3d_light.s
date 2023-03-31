@@ -1040,7 +1040,7 @@
 
 
 .obj float_8066C514, global
-	.float 4000000 #0x4A742400
+	.float 4000000
 .endobj float_8066C514
 
 
@@ -1050,7 +1050,7 @@
 
 
 .obj float_8066C51C, global
-	.float 90 #0x42B40000
+	.float 90
 .endobj float_8066C51C
 
 

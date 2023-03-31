@@ -1113,12 +1113,12 @@
 
 
 .obj float_806655AC, global
-	.float 30 #0x41F00000
+	.float 30
 .endobj float_806655AC
 
 
 .obj float_806655B0, global
-	.float 1000 #0x447A0000
+	.float 1000
 	.4byte 0
 .endobj float_806655B0
 

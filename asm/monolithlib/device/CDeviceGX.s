@@ -784,7 +784,7 @@
 
 
 .obj float_8066CBF8, global
-	.float 2 #0x40000000
+	.float 2
 	.4byte 0
 .endobj float_8066CBF8
 

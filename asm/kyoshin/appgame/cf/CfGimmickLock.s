@@ -1221,12 +1221,12 @@
 
 
 .obj float_8066AC70, global
-	.float 2 #0x40000000
+	.float 2
 .endobj float_8066AC70
 
 
 .obj float_8066AC74, global
-	.float 0.01 #0x3C23D70A
+	.float 0.01
 .endobj float_8066AC74
 
 
@@ -1236,7 +1236,7 @@
 
 
 .obj float_8066AC7C, global
-	.float 0.05 #0x3D4CCCCD
+	.float 0.05
 .endobj float_8066AC7C
 
 
@@ -1246,7 +1246,7 @@
 
 
 .obj float_8066AC84, global
-	.float 30 #0x41F00000
+	.float 30
 .endobj float_8066AC84
 
 .section extab, "a" # 0x800066E0 - 0x80021020

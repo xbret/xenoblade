@@ -815,7 +815,7 @@
 
 
 .obj float_8066AD0C, global
-	.float 5 #0x40A00000
+	.float 5
 .endobj float_8066AD0C
 
 .section extab, "a" # 0x800066E0 - 0x80021020

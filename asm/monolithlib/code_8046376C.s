@@ -1082,7 +1082,7 @@
 
 
 .obj float_8066CDBC, global
-	.float 1000000 #0x49742400
+	.float 1000000
 .endobj float_8066CDBC
 
 

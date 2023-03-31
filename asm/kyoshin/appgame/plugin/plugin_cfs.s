@@ -2686,10 +2686,10 @@
 /* 80049990 00012F50  4E 80 00 20 */	blr 
 .endfn makeParty
 
-.fn func_80049994, global
+.fn CfObject_func_80049994, global
 /* 80049994 00012F54  C0 23 00 4C */	lfs f1, 0x4c(r3)
 /* 80049998 00012F58  4E 80 00 20 */	blr 
-.endfn func_80049994
+.endfn CfObject_func_80049994
 
 .fn makeGuestParty, local
 /* 8004999C 00012F5C  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -4733,12 +4733,12 @@
 
 
 .obj float_806686C8, global
-	.float 4096 #0x45800000
+	.float 4096
 .endobj float_806686C8
 
 
 .obj float_806686CC, global
-	.float 360 #0x43B40000
+	.float 360
 .endobj float_806686CC
 
 
@@ -4748,7 +4748,7 @@
 
 
 .obj float_806686D4, global
-	.float 4 #0x40800000
+	.float 4
 .endobj float_806686D4
 
 
@@ -4757,7 +4757,7 @@
 .endobj double_806686D8
 
 .obj float_806686E0, global
-	.float 0.1 #0x3DCCCCCD
+	.float 0.1
 .endobj float_806686E0
 
 

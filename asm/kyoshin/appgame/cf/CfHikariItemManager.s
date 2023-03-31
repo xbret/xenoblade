@@ -1125,7 +1125,7 @@
 
 
 .obj float_8066B6D8, global
-	.float -0.4 #0xBECCCCCD
+	.float -0.4
 .endobj float_8066B6D8
 
 
@@ -1135,7 +1135,7 @@
 
 
 .obj float_8066B6E0, global
-	.float -0.5 #0xBF000000
+	.float -0.5
 .endobj float_8066B6E0
 
 
@@ -1145,7 +1145,7 @@
 
 
 .obj float_8066B6E8, global
-	.float -0.125 #0xBE000000
+	.float -0.125
 .endobj float_8066B6E8
 
 

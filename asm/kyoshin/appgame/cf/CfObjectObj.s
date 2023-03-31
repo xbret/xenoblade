@@ -267,28 +267,28 @@
 .obj __vt__cf_CfObjectObj, global
 	.4byte __RTTI__cf_CfObjectObj
 	.4byte 0
-	.4byte func_8003DC64
-	.4byte func_8003CB58
-	.4byte func_8003DD34
-	.4byte func_800A34A8
-	.4byte func_8009489C
-	.4byte func_800A349C
-	.4byte func_80086B4C
-	.4byte func_8003CB20
-	.4byte func_8003D98C
-	.4byte func_8003D8C0
-	.4byte func_8003D7B0
-	.4byte func_800A3494
-	.4byte func_800A3488
-	.4byte func_8003C7F8
+	.4byte CObjectState_func_8003DC64
+	.4byte CObjectState_func_8003CB58
+	.4byte CObjectState_func_8003DD34
+	.4byte CObjectState_func_800A34A8
+	.4byte CObjectState_func_8009489C
+	.4byte CObjectState_func_800A349C
+	.4byte CObjectState_func_80086B4C
+	.4byte CObjectState_func_8003CB20
+	.4byte CObjectState_func_8003D98C
+	.4byte CObjectState_func_8003D8C0
+	.4byte CObjectState_func_8003D7B0
+	.4byte CObjectState_func_800A3494
+	.4byte CObjectState_func_800A3488
+	.4byte CObjectParam_func_8003C7F8
 	.4byte func_800BE0F4
-	.4byte func_800A34B4
+	.4byte CObjectParam_func_800A34B4
 	.4byte func_800BFAAC
-	.4byte func_8003E664
-	.4byte func_8003DC74
+	.4byte CObjectParam_func_8003E664
+	.4byte CObjectParam_func_8003DC74
 	.4byte __dt__800BFA14
 	.4byte func_800BFA88
-	.4byte func_800AC75C
+	.4byte CfObject_func_800AC75C
 	.4byte func_800BFB90
 	.4byte func_800BC758
 	.4byte func_800BC040
@@ -296,7 +296,7 @@
 	.4byte func_800BABBC
 	.4byte func_800BE984
 	.4byte func_800BE998
-	.4byte func_800AC5E4
+	.4byte CfObject_func_800AC5E4
 	.4byte func_800BE9E4
 	.4byte func_800BE088
 	.4byte func_800BE1C4
@@ -306,7 +306,7 @@
 	.4byte func_8008F9CC
 	.4byte func_800BDB6C
 	.4byte func_800BB0E8
-	.4byte func_800AC5A8
+	.4byte CfObject_func_800AC5A8
 	.4byte func_800BDBC0
 	.4byte func_800BDE8C
 	.4byte func_800BB168
@@ -326,10 +326,10 @@
 	.4byte func_800BECF8
 	.4byte func_800BEE34
 	.4byte func_800BEF20
-	.4byte func_800AC570
+	.4byte CfObject_func_800AC570
 	.4byte func_800BF014
 	.4byte func_800BF100
-	.4byte func_800AC558
+	.4byte CfObject_func_800AC558
 	.4byte func_800BF1F4
 	.4byte func_800BD774
 	.4byte func_800BD860

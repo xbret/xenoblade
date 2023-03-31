@@ -582,7 +582,7 @@
 
 
 .obj float_8066C068, global
-	.float 2 #0x40000000
+	.float 2
 	.4byte 0
 .endobj float_8066C068
 
@@ -593,7 +593,7 @@
 
 
 .obj float_8066C078, global
-	.float 8388638 #0x4B00001E
+	.float 8388638
 	.4byte 0
 .endobj float_8066C078
 
@@ -613,7 +613,7 @@
 
 
 .obj float_8066C094, global
-	.float 256 #0x43800000
+	.float 256
 .endobj float_8066C094
 
 

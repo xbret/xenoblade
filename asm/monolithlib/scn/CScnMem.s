@@ -254,7 +254,7 @@
 	.4byte func_80496584
 	.4byte func_804967B0
 	.4byte func_8049683C
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CScnNw4r
 	.4byte 0xFFFFFFAC
 	.4byte func_8048ED1C

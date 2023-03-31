@@ -493,7 +493,7 @@
 /* 8007C7A4 00045D64  48 3B 82 B9 */	bl heap_malloc
 /* 8007C7A8 00045D68  2C 03 00 00 */	cmpwi r3, 0
 /* 8007C7AC 00045D6C  41 82 00 08 */	beq .L_8007C7B4
-/* 8007C7B0 00045D70  4B FE D1 9D */	bl func_8006994C
+/* 8007C7B0 00045D70  4B FE D1 9D */	bl __ct__cf_CfTFile
 .L_8007C7B4:
 /* 8007C7B4 00045D74  3B DE 00 01 */	addi r30, r30, 1
 /* 8007C7B8 00045D78  90 7F 00 00 */	stw r3, 0(r31)
@@ -506,7 +506,7 @@
 /* 8007C7D4 00045D94  48 3B 82 89 */	bl heap_malloc
 /* 8007C7D8 00045D98  2C 03 00 00 */	cmpwi r3, 0
 /* 8007C7DC 00045D9C  41 82 00 08 */	beq .L_8007C7E4
-/* 8007C7E0 00045DA0  4B FF 8A B9 */	bl func_80075298
+/* 8007C7E0 00045DA0  4B FF 8A B9 */	bl __ct__80075298
 .L_8007C7E4:
 /* 8007C7E4 00045DA4  90 7D 00 B4 */	stw r3, 0xb4(r29)
 /* 8007C7E8 00045DA8  4B FE 58 15 */	bl func_80061FFC
@@ -515,7 +515,7 @@
 /* 8007C7F4 00045DB4  48 3B 82 69 */	bl heap_malloc
 /* 8007C7F8 00045DB8  2C 03 00 00 */	cmpwi r3, 0
 /* 8007C7FC 00045DBC  41 82 00 08 */	beq .L_8007C804
-/* 8007C800 00045DC0  48 0F 25 51 */	bl func_8016ED50
+/* 8007C800 00045DC0  48 0F 25 51 */	bl __ct__cf_CfMapEffectManager
 .L_8007C804:
 /* 8007C804 00045DC4  90 7D 00 A0 */	stw r3, 0xa0(r29)
 /* 8007C808 00045DC8  4B FE 57 F5 */	bl func_80061FFC
@@ -524,7 +524,7 @@
 /* 8007C814 00045DD4  48 3B 82 49 */	bl heap_malloc
 /* 8007C818 00045DD8  2C 03 00 00 */	cmpwi r3, 0
 /* 8007C81C 00045DDC  41 82 00 08 */	beq .L_8007C824
-/* 8007C820 00045DE0  48 10 9D 59 */	bl func_80186578
+/* 8007C820 00045DE0  48 10 9D 59 */	bl __ct__80186578
 .L_8007C824:
 /* 8007C824 00045DE4  90 7D 00 A4 */	stw r3, 0xa4(r29)
 /* 8007C828 00045DE8  4B FE 57 D5 */	bl func_80061FFC
@@ -533,7 +533,7 @@
 /* 8007C834 00045DF4  48 3B 82 29 */	bl heap_malloc
 /* 8007C838 00045DF8  2C 03 00 00 */	cmpwi r3, 0
 /* 8007C83C 00045DFC  41 82 00 08 */	beq .L_8007C844
-/* 8007C840 00045E00  48 14 2F 2D */	bl func_801BF76C
+/* 8007C840 00045E00  48 14 2F 2D */	bl __ct__801BF76C
 .L_8007C844:
 /* 8007C844 00045E04  90 6D A5 E4 */	stw r3, lbl_80666764@sda21(r13)
 /* 8007C848 00045E08  4B FE 57 B5 */	bl func_80061FFC
@@ -1864,9 +1864,9 @@
 /* 8007DA74 00047034  4E 80 00 20 */	blr 
 .endfn func_8007DA0C
 
-.fn func_8007DA78, global
+.fn CfObject_func_8007DA78, global
 /* 8007DA78 00047038  4E 80 00 20 */	blr 
-.endfn func_8007DA78
+.endfn CfObject_func_8007DA78
 
 .fn func_8007DA7C, global
 /* 8007DA7C 0004703C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -4810,19 +4810,19 @@
 /* 80080230 000497F0  4E 80 00 20 */	blr 
 .endfn func_8007FF6C
 
-.fn func_80080234, global
+.fn CfObject_func_80080234, global
 /* 80080234 000497F4  81 83 00 00 */	lwz r12, 0(r3)
 /* 80080238 000497F8  81 8C 00 D0 */	lwz r12, 0xd0(r12)
 /* 8008023C 000497FC  7D 89 03 A6 */	mtctr r12
 /* 80080240 00049800  4E 80 04 20 */	bctr 
-.endfn func_80080234
+.endfn CfObject_func_80080234
 
-.fn func_80080244, global
+.fn CfObject_func_80080244, global
 /* 80080244 00049804  C0 02 C6 90 */	lfs f0, deg2rad__2mm@sda21(r2)
 /* 80080248 00049808  EC 01 00 32 */	fmuls f0, f1, f0
 /* 8008024C 0004980C  D0 03 00 4C */	stfs f0, 0x4c(r3)
 /* 80080250 00049810  4E 80 00 20 */	blr 
-.endfn func_80080244
+.endfn CfObject_func_80080244
 
 .fn func_80080254, global
 /* 80080254 00049814  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -5117,11 +5117,11 @@
 /* 8008063C 00049BFC  4E 80 00 20 */	blr 
 .endfn __dt__cf_CfObjectImplPc
 
-.fn func_80080640, global
+.fn CObjectParam_func_80080640, global
 /* 80080640 00049C00  38 00 00 00 */	li r0, 0
 /* 80080644 00049C04  90 03 00 34 */	stw r0, 0x34(r3)
 /* 80080648 00049C08  4E 80 00 20 */	blr 
-.endfn func_80080640
+.endfn CObjectParam_func_80080640
 
 .fn func_8008064C, global
 /* 8008064C 00049C0C  94 21 FF B0 */	stwu r1, -0x50(r1)
@@ -12540,12 +12540,12 @@
 /* 80086B48 00050108  4B FE 33 58 */	b func_80069EA0
 .endfn func_80086B48
 
-.fn func_80086B4C, global
+.fn CObjectState_func_80086B4C, global
 /* 80086B4C 0005010C  80 03 00 08 */	lwz r0, 8(r3)
 /* 80086B50 00050110  7C 00 20 78 */	andc r0, r0, r4
 /* 80086B54 00050114  90 03 00 08 */	stw r0, 8(r3)
 /* 80086B58 00050118  4E 80 00 20 */	blr 
-.endfn func_80086B4C
+.endfn CObjectState_func_80086B4C
 
 .fn func_80086B5C, global
 /* 80086B5C 0005011C  94 21 FF D0 */	stwu r1, -0x30(r1)
@@ -13167,10 +13167,10 @@
 /* 80087358 00050918  4E 80 04 20 */	bctr 
 .endfn func_80087348
 
-.fn func_8008735C, global
+.fn CfObject_func_8008735C, global
 /* 8008735C 0005091C  38 60 00 00 */	li r3, 0
 /* 80087360 00050920  4E 80 00 20 */	blr 
-.endfn func_8008735C
+.endfn CfObject_func_8008735C
 
 .fn func_80087364, global
 /* 80087364 00050924  80 63 00 04 */	lwz r3, 4(r3)
@@ -13188,9 +13188,9 @@
 /* 80087388 00050948  4E 80 04 20 */	bctr 
 .endfn func_80087378
 
-.fn func_8008738C, global
+.fn CfObject_func_8008738C, global
 /* 8008738C 0005094C  4E 80 00 20 */	blr 
-.endfn func_8008738C
+.endfn CfObject_func_8008738C
 
 .fn func_80087390, global
 /* 80087390 00050950  80 63 00 04 */	lwz r3, 4(r3)
@@ -13200,10 +13200,10 @@
 /* 800873A0 00050960  4E 80 04 20 */	bctr 
 .endfn func_80087390
 
-.fn func_800873A4, global
+.fn CfObject_func_800873A4, global
 /* 800873A4 00050964  C0 22 89 A0 */	lfs f1, float_80668D20@sda21(r2)
 /* 800873A8 00050968  4E 80 00 20 */	blr 
-.endfn func_800873A4
+.endfn CfObject_func_800873A4
 
 .fn func_800873AC, global
 /* 800873AC 0005096C  80 63 00 04 */	lwz r3, 4(r3)
@@ -13213,10 +13213,10 @@
 /* 800873BC 0005097C  4E 80 04 20 */	bctr 
 .endfn func_800873AC
 
-.fn func_800873C0, global
+.fn CfObject_func_800873C0, global
 /* 800873C0 00050980  38 6D 83 38 */	addi r3, r13, lbl_806644B8@sda21
 /* 800873C4 00050984  4E 80 00 20 */	blr 
-.endfn func_800873C0
+.endfn CfObject_func_800873C0
 
 .fn func_800873C8, global
 /* 800873C8 00050988  80 63 00 04 */	lwz r3, 4(r3)
@@ -13389,22 +13389,22 @@
 
 
 .obj lbl_804F7020, global
-	.4byte 0xFF010203
-	.4byte 0x04050602
-	.4byte 0x01FF0708
-	.4byte 0x090A0B07
-	.4byte 0x0207FF0C
-	.4byte 0x0D0E0FFF
-	.4byte 0x03080CFF
-	.4byte 0x1011120C
-	.4byte 0x04090D10
-	.4byte 0xFF13140D
-	.4byte 0x050A0E11
-	.4byte 0x13FF150E
-	.4byte 0x060B0F12
-	.4byte 0x1415FF0F
-	.4byte 0x0207FF0C
-	.4byte 0x0D0E0FFF
+	.byte 0xFF,0x01,0x02,0x03
+	.byte 0x04,0x05,0x06,0x02
+	.byte 0x01,0xFF,0x07,0x08
+	.byte 0x09,0x0A,0x0B,0x07
+	.byte 0x02,0x07,0xFF,0x0C
+	.byte 0x0D,0x0E,0x0F,0xFF
+	.byte 0x03,0x08,0x0C,0xFF
+	.byte 0x10,0x11,0x12,0x0C
+	.byte 0x04,0x09,0x0D,0x10
+	.byte 0xFF,0x13,0x14,0x0D
+	.byte 0x05,0x0A,0x0E,0x11
+	.byte 0x13,0xFF,0x15,0x0E
+	.byte 0x06,0x0B,0x0F,0x12
+	.byte 0x14,0x15,0xFF,0x0F
+	.byte 0x02,0x07,0xFF,0x0C
+	.byte 0x0D,0x0E,0x0F,0xFF
 .endobj lbl_804F7020
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
@@ -13499,14 +13499,18 @@
 
 
 .obj lbl_806644C8, global
-	.4byte 0x00010003
-	.4byte 0x000C0000
+	.2byte 0x0001
+    .2byte 0x0003
+	.2byte 0x000C
+    .2byte 0x0000
 .endobj lbl_806644C8
 
 
 .obj lbl_806644D0, global
-	.4byte 0x000A000B
-	.4byte 0x000C0000
+	.2byte 0x000A
+    .2byte 0x000B
+	.2byte 0x000C
+    .2byte 0x0000
 .endobj lbl_806644D0
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
@@ -13524,97 +13528,97 @@
 
 
 .obj float_80668D28, global
-	.float 30 #0x41F00000
+	.float 30
 .endobj float_80668D28
 
 
 .obj float_80668D2C, global
-	.float 60 #0x42700000
+	.float 60
 .endobj float_80668D2C
 
 .obj lbl_80668D30, global
-	.4byte 0x62303100
+	.asciz "b01"
 .endobj lbl_80668D30
 
 .obj lbl_80668D34, global
-	.4byte 0x62303200
+	.asciz "b02"
 .endobj lbl_80668D34
 
 .obj lbl_80668D38, global
-	.4byte 0x62303300
+	.asciz "b03"
 .endobj lbl_80668D38
 
 .obj lbl_80668D3C, global
-	.4byte 0x62303400
+	.asciz "b04"
 .endobj lbl_80668D3C
 
 .obj lbl_80668D40, global
-	.4byte 0x62303500
+	.asciz "b05"
 .endobj lbl_80668D40
 
 .obj lbl_80668D44, global
-	.4byte 0x62303600
+	.asciz "b06"
 .endobj lbl_80668D44
 
 .obj lbl_80668D48, global
-	.4byte 0x62303700
+	.asciz "b07"
 .endobj lbl_80668D48
 
 .obj lbl_80668D4C, global
-	.4byte 0x62303800
+	.asciz "b08"
 .endobj lbl_80668D4C
 
 .obj lbl_80668D50, global
-	.4byte 0x62303900
+	.asciz "b09"
 .endobj lbl_80668D50
 
 .obj lbl_80668D54, global
-	.4byte 0x62313000
+	.asciz "b10"
 .endobj lbl_80668D54
 
 .obj lbl_80668D58, global
-	.4byte 0x62313100
+	.asciz "b11"
 .endobj lbl_80668D58
 
 .obj lbl_80668D5C, global
-	.4byte 0x62313200
+	.asciz "b12"
 .endobj lbl_80668D5C
 
 .obj lbl_80668D60, global
-	.4byte 0x62313300
+	.asciz "b13"
 .endobj lbl_80668D60
 
 .obj lbl_80668D64, global
-	.4byte 0x62313400
+	.asciz "b14"
 .endobj lbl_80668D64
 
 .obj lbl_80668D68, global
-	.4byte 0x62313500
+	.asciz "b15"
 .endobj lbl_80668D68
 
 .obj lbl_80668D6C, global
-	.4byte 0x62313600
+	.asciz "b16"
 .endobj lbl_80668D6C
 
 .obj lbl_80668D70, global
-	.4byte 0x62313700
+	.asciz "b17"
 .endobj lbl_80668D70
 
 .obj lbl_80668D74, global
-	.4byte 0x62313800
+	.asciz "b18"
 .endobj lbl_80668D74
 
 .obj lbl_80668D78, global
-	.4byte 0x62313900
+	.asciz "b19"
 .endobj lbl_80668D78
 
 .obj lbl_80668D7C, global
-	.4byte 0x62323000
+	.asciz "b20"
 .endobj lbl_80668D7C
 
 
 .obj float_80668D80, global
-	.float 45 #0x42340000
+	.float 45
 	.4byte 0
 .endobj float_80668D80
 
@@ -13625,17 +13629,17 @@
 
 
 .obj float_80668D90, global
-	.float 2.5 #0x40200000
+	.float 2.5
 .endobj float_80668D90
 
 
 .obj float_80668D94, global
-	.float 0.65 #0x3F266666
+	.float 0.65
 .endobj float_80668D94
 
 
 .obj float_80668D98, global
-	.float 0.7 #0x3F333333
+	.float 0.7
 .endobj float_80668D98
 
 
@@ -13663,7 +13667,7 @@
 .endobj double_80668DB8
 
 .obj float_80668DC0, global
-	.float 20 #0x41A00000
+	.float 20
 .endobj float_80668DC0
 
 
@@ -13673,7 +13677,7 @@
 
 
 .obj float_80668DC8, global
-	.float 3 #0x40400000
+	.float 3
 .endobj float_80668DC8
 
 
@@ -13683,27 +13687,27 @@
 
 
 .obj float_80668DD0, global
-	.float 2 #0x40000000
+	.float 2
 .endobj float_80668DD0
 
 
 .obj float_80668DD4, global
-	.float 10000 #0x461C4000
+	.float 10000
 .endobj float_80668DD4
 
 
 .obj float_80668DD8, global
-	.float 0.01 #0x3C23D70A
+	.float 0.01
 .endobj float_80668DD8
 
 
 .obj float_80668DDC, global
-	.float 1000 #0x447A0000
+	.float 1000
 .endobj float_80668DDC
 
 
 .obj float_80668DE0, global
-	.float 80 #0x42A00000
+	.float 80
 .endobj float_80668DE0
 
 
@@ -13713,22 +13717,22 @@
 
 
 .obj float_80668DE8, global
-	.float 360 #0x43B40000
+	.float 360
 .endobj float_80668DE8
 
 
 .obj float_80668DEC, global
-	.float 9 #0x41100000
+	.float 9
 .endobj float_80668DEC
 
 
 .obj float_80668DF0, global
-	.float 255 #0x437F0000
+	.float 255
 .endobj float_80668DF0
 
 
 .obj float_80668DF4, global
-	.float 5 #0x40A00000
+	.float 5
 .endobj float_80668DF4
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

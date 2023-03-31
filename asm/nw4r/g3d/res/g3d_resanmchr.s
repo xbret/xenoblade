@@ -2136,12 +2136,12 @@
 
 
 .obj float_8066C2E8, global
-	.float 2 #0x40000000
+	.float 2
 .endobj float_8066C2E8
 
 
 .obj float_8066C2EC, global
-	.float 3 #0x40400000
+	.float 3
 .endobj float_8066C2EC
 
 
@@ -2161,7 +2161,7 @@
 
 
 .obj float_8066C304, global
-	.float 90 #0x42B40000
+	.float 90
 .endobj float_8066C304
 
 

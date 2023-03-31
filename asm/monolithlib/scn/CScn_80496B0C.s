@@ -2420,12 +2420,12 @@
 .balign 8
 
 .obj lbl_80666300, global
-	.4byte 0x72656600
+	.asciz "ref"
 .endobj lbl_80666300
 
 
 .obj lbl_80666304, global
-	.4byte 0x72656600
+	.asciz "ref"
 .endobj lbl_80666304
 
 
@@ -2457,7 +2457,7 @@
 
 
 .obj float_8066D29C, global
-	.float 0.0001 #0x38D1B717
+	.float 0.0001
 .endobj float_8066D29C
 
 

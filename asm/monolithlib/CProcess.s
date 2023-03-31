@@ -2170,7 +2170,7 @@
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 .endobj __vt__CProcess
 
 

@@ -5283,7 +5283,7 @@
 	.4byte 0x08000000
 	.4byte 0x10000000
 	.4byte 0x20000000
-	.float 2 #0x40000000
+	.float 2
 	.4byte 0x80000000
 .endobj lbl_8052B828
 
@@ -5314,12 +5314,12 @@
 
 
 .obj float_80668FBC, global
-	.float -55 #0xC25C0000
+	.float -55
 .endobj float_80668FBC
 
 
 .obj float_80668FC0, global
-	.float 55 #0x425C0000
+	.float 55
 	.4byte 0
 .endobj float_80668FC0
 
@@ -5344,27 +5344,27 @@
 
 
 .obj float_80668FDC, global
-	.float 225 #0x43610000
+	.float 225
 .endobj float_80668FDC
 
 
 .obj float_80668FE0, global
-	.float 35 #0x420C0000
+	.float 35
 .endobj float_80668FE0
 
 
 .obj float_80668FE4, global
-	.float 140 #0x430C0000
+	.float 140
 .endobj float_80668FE4
 
 
 .obj float_80668FE8, global
-	.float -35 #0xC20C0000
+	.float -35
 .endobj float_80668FE8
 
 
 .obj float_80668FEC, global
-	.float -140 #0xC30C0000
+	.float -140
 .endobj float_80668FEC
 
 
@@ -5374,7 +5374,7 @@
 
 
 .obj float_80668FF4, global
-	.float 0.81 #0x3F4F5C29
+	.float 0.81
 .endobj float_80668FF4
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

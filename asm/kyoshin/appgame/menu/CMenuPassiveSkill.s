@@ -991,7 +991,7 @@
 	.4byte func_8026370C
 	.4byte func_80263778
 	.4byte func_80101FB8
-	.4byte func_80043F20
+	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuPassiveSkill
 	.4byte 0xFFFFFFA8
 	.4byte func_80263EB4

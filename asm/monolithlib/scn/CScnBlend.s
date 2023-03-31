@@ -443,7 +443,7 @@
 
 
 .obj float_8066D2AC, global
-	.float 255 #0x437F0000
+	.float 255
 .endobj float_8066D2AC
 
 .section extab, "a" # 0x800066E0 - 0x80021020

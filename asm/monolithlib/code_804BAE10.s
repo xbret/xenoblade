@@ -1965,12 +1965,12 @@
 
 
 .obj float_8066D6A4, global
-	.float 1000000 #0x49742400
+	.float 1000000
 .endobj float_8066D6A4
 
 
 .obj float_8066D6A8, global
-	.float -1000000 #0xC9742400
+	.float -1000000
 .endobj float_8066D6A8
 
 
@@ -1985,12 +1985,12 @@
 
 
 .obj float_8066D6B4, global
-	.float -100000 #0xC7C35000
+	.float -100000
 .endobj float_8066D6B4
 
 
 .obj float_8066D6B8, global
-	.float 100000 #0x47C35000
+	.float 100000
 	.4byte 0
 .endobj float_8066D6B8
 
