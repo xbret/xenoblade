@@ -552,7 +552,7 @@
 /* 802B0BEC 0027A1AC  4E 80 00 20 */	blr 
 .endfn func_802B0B4C
 
-.fn func_802B0BF0, global
+.fn __ct__CMenuGCItem, global
 /* 802B0BF0 0027A1B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802B0BF4 0027A1B4  7C 08 02 A6 */	mflr r0
 /* 802B0BF8 0027A1B8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -628,7 +628,7 @@
 /* 802B0D04 0027A2C4  7C 08 03 A6 */	mtlr r0
 /* 802B0D08 0027A2C8  38 21 00 20 */	addi r1, r1, 0x20
 /* 802B0D0C 0027A2CC  4E 80 00 20 */	blr 
-.endfn func_802B0BF0
+.endfn __ct__CMenuGCItem
 
 .fn func_802B0D10, global
 /* 802B0D10 0027A2D0  80 6D B3 60 */	lwz r3, lbl_806674E0@sda21(r13)
@@ -811,7 +811,7 @@
 	.4byte func_802B045C
 	.4byte func_802B09AC
 	.4byte func_802B0A10
-	.4byte func_80101FB8
+	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuGCItem
 	.4byte 0xFFFFFFA8
@@ -998,7 +998,7 @@
 
 .obj "@eti_8003338C", local
 .hidden "@eti_8003338C"
-	.4byte func_802B0BF0
+	.4byte __ct__CMenuGCItem
 	.4byte 0x00000120
 	.4byte "@etb_8001B734"
 .endobj "@eti_8003338C"

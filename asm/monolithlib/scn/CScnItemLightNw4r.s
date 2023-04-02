@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_80482440, global
+.fn __ct__CScnItemLightNw4r, global
 /* 80482440 0044BA00  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80482444 0044BA04  7C 08 02 A6 */	mflr r0
 /* 80482448 0044BA08  90 01 00 44 */	stw r0, 0x44(r1)
@@ -42,7 +42,7 @@
 /* 804824CC 0044BA8C  7F A6 EB 78 */	mr r6, r29
 /* 804824D0 0044BA90  7F C7 F3 78 */	mr r7, r30
 /* 804824D4 0044BA94  38 A1 00 08 */	addi r5, r1, 8
-/* 804824D8 0044BA98  4B FF FD C9 */	bl func_804822A0
+/* 804824D8 0044BA98  4B FF FD C9 */	bl __ct__CScnItemLight
 /* 804824DC 0044BA9C  3C 60 80 57 */	lis r3, __vt__CScnItemLightNw4r@ha
 /* 804824E0 0044BAA0  38 63 15 80 */	addi r3, r3, __vt__CScnItemLightNw4r@l
 /* 804824E4 0044BAA4  90 7F 00 00 */	stw r3, 0(r31)
@@ -64,7 +64,7 @@
 /* 8048251C 0044BADC  7C 08 03 A6 */	mtlr r0
 /* 80482520 0044BAE0  38 21 00 40 */	addi r1, r1, 0x40
 /* 80482524 0044BAE4  4E 80 00 20 */	blr 
-.endfn func_80482440
+.endfn __ct__CScnItemLightNw4r
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -134,7 +134,7 @@
 
 .obj "@eti_80036218", local
 .hidden "@eti_80036218"
-	.4byte func_80482440
+	.4byte __ct__CScnItemLightNw4r
 	.4byte 0x000000E8
 	.4byte "@etb_8001E2B8"
 .endobj "@eti_80036218"

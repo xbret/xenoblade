@@ -1263,7 +1263,7 @@
 /* 8044788C 00410E4C  4E 80 00 20 */	blr 
 .endfn func_804477E8
 
-.fn func_80447890, global
+.fn __ct__CDeviceRemotePad, global
 /* 80447890 00410E50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80447894 00410E54  7C 08 02 A6 */	mflr r0
 /* 80447898 00410E58  38 C0 00 00 */	li r6, 0
@@ -1292,7 +1292,7 @@
 /* 804478F4 00410EB4  7C 08 03 A6 */	mtlr r0
 /* 804478F8 00410EB8  38 21 00 10 */	addi r1, r1, 0x10
 /* 804478FC 00410EBC  4E 80 00 20 */	blr 
-.endfn func_80447890
+.endfn __ct__CDeviceRemotePad
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -1300,67 +1300,67 @@
 .balign 8
 
 .obj lbl_80526188, global
-	.4byte 0x00000001
-	.4byte 0x00000001
-	.4byte 0x00000002
-	.4byte 0x00000002
-	.4byte 0x00000008
-	.4byte 0x00000004
-	.4byte 0x00000004
-	.4byte 0x00000008
-	.4byte 0x00000800
-	.4byte 0x00000010
-	.4byte 0x00000400
-	.4byte 0x00000020
-	.4byte 0x00000200
-	.4byte 0x00000040
-	.4byte 0x00000100
-	.4byte 0x00000080
-	.4byte 0x00008000
-	.4byte 0x00000100
-	.4byte 0x00000010
-	.4byte 0x00000200
-	.4byte 0x00001000
-	.4byte 0x00000400
-	.4byte 0x00002000
-	.4byte 0x00001000
-	.4byte 0x00004000
-	.4byte 0x00000800
+	.4byte 0x1
+	.4byte 0x1
+	.4byte 0x2
+	.4byte 0x2
+	.4byte 0x8
+	.4byte 0x4
+	.4byte 0x4
+	.4byte 0x8
+	.4byte 0x800
+	.4byte 0x10
+	.4byte 0x400
+	.4byte 0x20
+	.4byte 0x200
+	.4byte 0x40
+	.4byte 0x100
+	.4byte 0x80
+	.4byte 0x8000
+	.4byte 0x100
+	.4byte 0x10
+	.4byte 0x200
+	.4byte 0x1000
+	.4byte 0x400
+	.4byte 0x2000
+	.4byte 0x1000
+	.4byte 0x4000
+	.4byte 0x800
 	.4byte 0
 	.4byte 0
 .endobj lbl_80526188
 
 
 .obj lbl_805261F8, global
-	.4byte 0x00000002
-	.4byte 0x00000001
-	.4byte 0x00008000
-	.4byte 0x00000002
-	.4byte 0x00000001
-	.4byte 0x00000004
-	.4byte 0x00004000
-	.4byte 0x00000008
-	.4byte 0x00000800
-	.4byte 0x00000100
-	.4byte 0x00000400
-	.4byte 0x00000200
-	.4byte 0x00001000
-	.4byte 0x00000400
-	.4byte 0x00000010
-	.4byte 0x00200000
-	.4byte 0x00000040
-	.4byte 0x00400000
-	.4byte 0x00000008
-	.4byte 0x00800000
-	.4byte 0x00000020
-	.4byte 0x01000000
-	.4byte 0x00002000
-	.4byte 0x02000000
-	.4byte 0x00000200
-	.4byte 0x04000000
-	.4byte 0x00000080
-	.4byte 0x08000000
-	.4byte 0x00000004
+	.4byte 0x2
+	.4byte 0x1
+	.4byte 0x8000
+	.4byte 0x2
+	.4byte 0x1
+	.4byte 0x4
+	.4byte 0x4000
+	.4byte 0x8
+	.4byte 0x800
+	.4byte 0x100
+	.4byte 0x400
+	.4byte 0x200
+	.4byte 0x1000
+	.4byte 0x400
+	.4byte 0x10
+	.4byte 0x200000
+	.4byte 0x40
+	.4byte 0x400000
+	.4byte 0x8
+	.4byte 0x800000
+	.4byte 0x20
+	.4byte 0x1000000
+	.4byte 0x2000
+	.4byte 0x2000000
+	.4byte 0x200
+	.4byte 0x4000000
+	.4byte 0x80
+	.4byte 0x8000000
+	.4byte 0x4
 	.4byte 0x10000000
 	.4byte 0
 	.4byte 0
@@ -1685,7 +1685,7 @@
 
 .obj "@eti_80034634", local
 .hidden "@eti_80034634"
-	.4byte func_80447890
+	.4byte __ct__CDeviceRemotePad
 	.4byte 0x00000070
 	.4byte "@etb_8001CA14"
 .endobj "@eti_80034634"

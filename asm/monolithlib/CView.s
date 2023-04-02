@@ -13,7 +13,7 @@
 /* 8043C2E0 004058A0  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8043C2E4 004058A4  4B FF B2 D9 */	bl __ct__CWorkThread
 /* 8043C2E8 004058A8  38 7E 01 C4 */	addi r3, r30, 0x1c4
-/* 8043C2EC 004058AC  48 00 CC F1 */	bl func_80448FDC
+/* 8043C2EC 004058AC  48 00 CC F1 */	bl __ct__CFontLayer
 /* 8043C2F0 004058B0  3C 80 80 57 */	lis r4, __vt__CView@ha
 /* 8043C2F4 004058B4  38 7E 01 C8 */	addi r3, r30, 0x1c8
 /* 8043C2F8 004058B8  38 84 EE 58 */	addi r4, r4, __vt__CView@l

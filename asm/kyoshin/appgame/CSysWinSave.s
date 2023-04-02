@@ -15,13 +15,13 @@
 /* 80293FD8 0025D598  41 82 00 50 */	beq .L_80294028
 /* 80293FDC 0025D59C  38 80 FF FF */	li r4, -1
 /* 80293FE0 0025D5A0  38 63 00 C4 */	addi r3, r3, 0xc4
-/* 80293FE4 0025D5A4  4B F3 EA 55 */	bl __dt__801D2A38
+/* 80293FE4 0025D5A4  4B F3 EA 55 */	bl __dt__CCur18
 /* 80293FE8 0025D5A8  38 7E 00 88 */	addi r3, r30, 0x88
 /* 80293FEC 0025D5AC  38 80 FF FF */	li r4, -1
 /* 80293FF0 0025D5B0  4B F9 76 B1 */	bl __dt__CSysWin
 /* 80293FF4 0025D5B4  38 7E 00 78 */	addi r3, r30, 0x78
 /* 80293FF8 0025D5B8  38 80 FF FF */	li r4, -1
-/* 80293FFC 0025D5BC  48 1C B5 85 */	bl __dt__8045F580
+/* 80293FFC 0025D5BC  48 1C B5 85 */	bl __dt__UnkClass_8045F564
 /* 80294000 0025D5C0  2C 1E 00 00 */	cmpwi r30, 0
 /* 80294004 0025D5C4  41 82 00 14 */	beq .L_80294018
 /* 80294008 0025D5C8  41 82 00 10 */	beq .L_80294018
@@ -136,7 +136,7 @@
 /* 802941A4 0025D764  98 1F 00 D8 */	stb r0, 0xd8(r31)
 /* 802941A8 0025D768  88 01 00 25 */	lbz r0, 0x25(r1)
 /* 802941AC 0025D76C  98 1F 00 D9 */	stb r0, 0xd9(r31)
-/* 802941B0 0025D770  4B F3 E8 89 */	bl __dt__801D2A38
+/* 802941B0 0025D770  4B F3 E8 89 */	bl __dt__CCur18
 /* 802941B4 0025D774  81 9F 00 C4 */	lwz r12, 0xc4(r31)
 /* 802941B8 0025D778  38 7F 00 C4 */	addi r3, r31, 0xc4
 /* 802941BC 0025D77C  81 8C 00 08 */	lwz r12, 8(r12)
@@ -362,7 +362,7 @@
 .endfn func_80294440
 
 
-.fn func_802944D8, global
+.fn __ct__802944D8, global
 /* 802944D8 0025DA98  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802944DC 0025DA9C  7C 08 02 A6 */	mflr r0
 /* 802944E0 0025DAA0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -424,7 +424,7 @@
 /* 802945BC 0025DB7C  90 9C 00 6C */	stw r4, 0x6c(r28)
 /* 802945C0 0025DB80  90 1C 00 70 */	stw r0, 0x70(r28)
 /* 802945C4 0025DB84  93 FC 00 74 */	stw r31, 0x74(r28)
-/* 802945C8 0025DB88  48 1C AF 9D */	bl __ct__8045F564
+/* 802945C8 0025DB88  48 1C AF 9D */	bl __ct__UnkClass_8045F564
 /* 802945CC 0025DB8C  38 7C 00 88 */	addi r3, r28, 0x88
 /* 802945D0 0025DB90  38 80 00 00 */	li r4, 0
 /* 802945D4 0025DB94  4B F9 70 45 */	bl __ct__CSysWin
@@ -449,7 +449,7 @@
 /* 80294618 0025DBD8  7C 08 03 A6 */	mtlr r0
 /* 8029461C 0025DBDC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80294620 0025DBE0  4E 80 00 20 */	blr 
-.endfn func_802944D8
+.endfn __ct__802944D8
 
 .fn func_80294624, global
 /* 80294624 0025DBE4  80 6D B1 78 */	lwz r3, lbl_806672F8@sda21(r13)
@@ -779,22 +779,22 @@
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x000000C4
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x000000C4
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x8780001E
 	.4byte 0x00000088
 	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x000000C4
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000088
 	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x00000078
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 	.4byte 0x0680001E
 	.4byte 0x00000070
 	.4byte __dt__IScnRender
@@ -850,7 +850,7 @@
 	.4byte __dt__CSysWin
 	.4byte 0x0780001C
 	.4byte 0x00000078
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 	.4byte 0x0680001C
 	.4byte 0x00000070
 	.4byte __dt__IScnRender
@@ -910,7 +910,7 @@
 
 .obj "@eti_80031CD0", local
 .hidden "@eti_80031CD0"
-	.4byte func_802944D8
+	.4byte __ct__802944D8
 	.4byte 0x0000014C
 	.4byte "@etb_80019A10"
 .endobj "@eti_80031CD0"

@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_80210264, global
+.fn __ct__cf_CfGimmickItem, global
 /* 80210264 001D9824  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 80210268 001D9828  7C 08 02 A6 */	mflr r0
 /* 8021026C 001D982C  90 01 00 84 */	stw r0, 0x84(r1)
@@ -10,7 +10,7 @@
 /* 80210274 001D9834  48 0A 9E DD */	bl _savegpr_26
 /* 80210278 001D9838  7C 7D 1B 78 */	mr r29, r3
 /* 8021027C 001D983C  7C 9E 23 78 */	mr r30, r4
-/* 80210280 001D9840  4B FF 86 61 */	bl func_802088E0
+/* 80210280 001D9840  4B FF 86 61 */	bl __ct__cf_CfGimmick
 /* 80210284 001D9844  3C 60 80 54 */	lis r3, __vt__cf_CfGimmickItem@ha
 /* 80210288 001D9848  38 00 00 06 */	li r0, 6
 /* 8021028C 001D984C  38 63 92 50 */	addi r3, r3, __vt__cf_CfGimmickItem@l
@@ -235,7 +235,7 @@
 /* 802105E8 001D9BA8  7C 08 03 A6 */	mtlr r0
 /* 802105EC 001D9BAC  38 21 00 80 */	addi r1, r1, 0x80
 /* 802105F0 001D9BB0  4E 80 00 20 */	blr 
-.endfn func_80210264
+.endfn __ct__cf_CfGimmickItem
 
 .fn __dt__cf_CfGimmickItem, global
 /* 802105F4 001D9BB4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -886,7 +886,7 @@
 
 .obj "@eti_8002D23C", local
 .hidden "@eti_8002D23C"
-	.4byte func_80210264
+	.4byte __ct__cf_CfGimmickItem
 	.4byte 0x00000390
 	.4byte "@etb_80013294"
 .endobj "@eti_8002D23C"

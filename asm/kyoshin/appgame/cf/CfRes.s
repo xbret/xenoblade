@@ -45,7 +45,7 @@
 /* 80065A60 0002F020  90 1F 00 50 */	stw r0, 0x50(r31)
 /* 80065A64 0002F024  90 BF 00 10 */	stw r5, 0x10(r31)
 /* 80065A68 0002F028  90 9F 00 54 */	stw r4, 0x54(r31)
-/* 80065A6C 0002F02C  48 00 15 31 */	bl func_80066F9C
+/* 80065A6C 0002F02C  48 00 15 31 */	bl __ct__80066F9C
 /* 80065A70 0002F030  38 80 00 00 */	li r4, 0
 /* 80065A74 0002F034  90 9E 1E 98 */	stw r4, 0x1e98(r30)
 /* 80065A78 0002F038  38 BE 1E A4 */	addi r5, r30, 0x1ea4
@@ -1678,7 +1678,7 @@
 .endfn func_80066E7C
 
 
-.fn func_80066F9C, global
+.fn __ct__80066F9C, global
 /* 80066F9C 0003055C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80066FA0 00030560  7C 08 02 A6 */	mflr r0
 /* 80066FA4 00030564  38 E3 00 40 */	addi r7, r3, 0x40
@@ -1959,7 +1959,7 @@
 /* 800673D4 00030994  7C 08 03 A6 */	mtlr r0
 /* 800673D8 00030998  38 21 00 30 */	addi r1, r1, 0x30
 /* 800673DC 0003099C  4E 80 00 20 */	blr 
-.endfn func_80066F9C
+.endfn __ct__80066F9C
 
 .fn __dt___reslist_base_unsigned_short, global
 /* 800673E0 000309A0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -4187,7 +4187,7 @@
 
 .obj "@eti_80022FAC", local
 .hidden "@eti_80022FAC"
-	.4byte func_80066F9C
+	.4byte __ct__80066F9C
 	.4byte 0x00000444
 	.4byte "@etb_80007D90"
 .endobj "@eti_80022FAC"

@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_804439CC, global
+.fn __ct__CWorkFlowSetup, global
 /* 804439CC 0040CF8C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804439D0 0040CF90  7C 08 02 A6 */	mflr r0
 /* 804439D4 0040CF94  38 C0 00 00 */	li r6, 0
@@ -22,7 +22,7 @@
 /* 80443A0C 0040CFCC  7C 08 03 A6 */	mtlr r0
 /* 80443A10 0040CFD0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80443A14 0040CFD4  4E 80 00 20 */	blr 
-.endfn func_804439CC
+.endfn __ct__CWorkFlowSetup
 
 .fn __dt__CWorkFlowSetup, global
 /* 80443A18 0040CFD8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -240,7 +240,7 @@
 
 .obj "@eti_80034358", local
 .hidden "@eti_80034358"
-	.4byte func_804439CC
+	.4byte __ct__CWorkFlowSetup
 	.4byte 0x0000004C
 	.4byte "@etb_8001C75C"
 .endobj "@eti_80034358"

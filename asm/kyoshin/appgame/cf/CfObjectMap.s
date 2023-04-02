@@ -2057,7 +2057,7 @@
 /* 800B2190 0007B750  2C 03 00 00 */	cmpwi r3, 0
 /* 800B2194 0007B754  7C 74 1B 78 */	mr r20, r3
 /* 800B2198 0007B758  41 82 00 7C */	beq .L_800B2214
-/* 800B219C 0007B75C  48 00 86 4D */	bl func_800BA7E8
+/* 800B219C 0007B75C  48 00 86 4D */	bl __ct__800BA7E8
 /* 800B21A0 0007B760  3C 80 80 53 */	lis r4, __vt__cf_CfObjectMap@ha
 /* 800B21A4 0007B764  38 60 00 00 */	li r3, 0
 /* 800B21A8 0007B768  38 84 C8 F8 */	addi r4, r4, __vt__cf_CfObjectMap@l
@@ -2617,7 +2617,7 @@
 /* 800B2990 0007BF50  48 38 20 CD */	bl heap_malloc
 /* 800B2994 0007BF54  2C 03 00 00 */	cmpwi r3, 0
 /* 800B2998 0007BF58  41 82 00 08 */	beq .L_800B29A0
-/* 800B299C 0007BF5C  4B FF 9C 91 */	bl func_800AC62C
+/* 800B299C 0007BF5C  4B FF 9C 91 */	bl __ct__800AC62C
 .L_800B29A0:
 /* 800B29A0 0007BF60  7C 7F 1B 78 */	mr r31, r3
 .L_800B29A4:
@@ -10623,7 +10623,7 @@
 /* 800B9680 00082C40  2C 03 00 00 */	cmpwi r3, 0
 /* 800B9684 00082C44  7C 64 1B 78 */	mr r4, r3
 /* 800B9688 00082C48  41 82 00 0C */	beq .L_800B9694
-/* 800B968C 00082C4C  48 00 00 81 */	bl func_800B970C
+/* 800B968C 00082C4C  48 00 00 81 */	bl __ct__800B970C
 /* 800B9690 00082C50  7C 64 1B 78 */	mr r4, r3
 .L_800B9694:
 /* 800B9694 00082C54  81 9E 00 00 */	lwz r12, 0(r30)
@@ -10679,7 +10679,7 @@
 
 #file boundary?
 
-.fn func_800B970C, global
+.fn __ct__800B970C, global
 /* 800B970C 00082CCC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800B9710 00082CD0  7C 08 02 A6 */	mflr r0
 /* 800B9714 00082CD4  3C A0 80 53 */	lis r5, __vt__cf_CfObjectImplMove@ha
@@ -10700,7 +10700,7 @@
 /* 800B9750 00082D10  93 E3 00 18 */	stw r31, 0x18(r3)
 /* 800B9754 00082D14  93 E3 00 1C */	stw r31, 0x1c(r3)
 /* 800B9758 00082D18  38 63 00 28 */	addi r3, r3, 0x28
-/* 800B975C 00082D1C  48 1E 73 A1 */	bl func_802A0AFC
+/* 800B975C 00082D1C  48 1E 73 A1 */	bl __ct__CCharVoice
 /* 800B9760 00082D20  3C 60 80 54 */	lis r3, __vt__cf_CfObjectImplTbox@ha
 /* 800B9764 00082D24  93 FE 00 6C */	stw r31, 0x6c(r30)
 /* 800B9768 00082D28  38 63 B7 68 */	addi r3, r3, __vt__cf_CfObjectImplTbox@l
@@ -10717,7 +10717,7 @@
 /* 800B9794 00082D54  7C 08 03 A6 */	mtlr r0
 /* 800B9798 00082D58  38 21 00 10 */	addi r1, r1, 0x10
 /* 800B979C 00082D5C  4E 80 00 20 */	blr 
-.endfn func_800B970C
+.endfn __ct__800B970C
 
 .fn func_800B97A0, global
 /* 800B97A0 00082D60  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -14345,7 +14345,7 @@
 
 .obj "@eti_80025544", local
 .hidden "@eti_80025544"
-	.4byte func_800B970C
+	.4byte __ct__800B970C
 	.4byte 0x00000094
 	.4byte "@etb_80009A88"
 .endobj "@eti_80025544"

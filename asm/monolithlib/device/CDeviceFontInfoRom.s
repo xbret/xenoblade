@@ -48,7 +48,7 @@
 /* 804536F0 0041CCB0  4B F0 51 70 */	b OSGetFontTexture
 .endfn func_804536DC
 
-.fn func_804536F4, global
+.fn __ct__CDeviceFontInfoRom, global
 /* 804536F4 0041CCB4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804536F8 0041CCB8  7C 08 02 A6 */	mflr r0
 /* 804536FC 0041CCBC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -89,7 +89,7 @@
 /* 80453780 0041CD40  7C 08 03 A6 */	mtlr r0
 /* 80453784 0041CD44  38 21 00 10 */	addi r1, r1, 0x10
 /* 80453788 0041CD48  4E 80 00 20 */	blr 
-.endfn func_804536F4
+.endfn __ct__CDeviceFontInfoRom
 
 .fn func_8045378C, global
 /* 8045378C 0041CD4C  80 83 00 10 */	lwz r4, 0x10(r3)
@@ -264,7 +264,7 @@
 
 .obj "@eti_80034DA8", local
 .hidden "@eti_80034DA8"
-	.4byte func_804536F4
+	.4byte __ct__CDeviceFontInfoRom
 	.4byte 0x00000098
 	.4byte "@etb_8001D104"
 .endobj "@eti_80034DA8"

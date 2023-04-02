@@ -273,7 +273,7 @@
 	.4byte func_801668C4
 	.4byte func_80167624
 	.4byte func_8016769C
-	.4byte func_80101FB8
+	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuItem
 	.4byte 0xFFFFFFA8

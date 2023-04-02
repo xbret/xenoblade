@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_804E7544, global
+.fn __ct__CMdlAnmEye, global
 /* 804E7544 004B0B04  C0 02 D7 88 */	lfs f0, float_8066DB08@sda21(r2)
 /* 804E7548 004B0B08  3C A0 80 57 */	lis r5, __vt__CMdlAnmEye@ha
 /* 804E754C 004B0B0C  38 80 00 00 */	li r4, 0
@@ -16,7 +16,7 @@
 /* 804E756C 004B0B2C  D0 03 00 28 */	stfs f0, 0x28(r3)
 /* 804E7570 004B0B30  90 03 00 2C */	stw r0, 0x2c(r3)
 /* 804E7574 004B0B34  4E 80 00 20 */	blr 
-.endfn func_804E7544
+.endfn __ct__CMdlAnmEye
 
 .fn __dt__CMdlAnmEye, global
 /* 804E7578 004B0B38  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -388,15 +388,15 @@
 
 .obj lbl_805280E0, global
 	.4byte 0
-	.4byte 0x3EAC0831
-	.4byte 0x3F2C0831
+	.float 0.336
+	.float 0.672
 .endobj lbl_805280E0
 
 
 .obj lbl_805280EC, global
 	.4byte 0
-	.4byte 0xBE000000
-	.4byte 0xBE800000
+	.float -0.125
+	.float -0.25
 .endobj lbl_805280EC
 
 .obj CMdlAnmEye_typestr, global

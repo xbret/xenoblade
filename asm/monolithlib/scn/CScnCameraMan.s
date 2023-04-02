@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8049ACBC, global
+.fn __ct__CScnCameraMan, global
 /* 8049ACBC 0046427C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8049ACC0 00464280  7C 08 02 A6 */	mflr r0
 /* 8049ACC4 00464284  3C C0 80 57 */	lis r6, __vt__CScnCameraMan@ha
@@ -89,7 +89,7 @@
 /* 8049AE04 004643C4  7C 08 03 A6 */	mtlr r0
 /* 8049AE08 004643C8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8049AE0C 004643CC  4E 80 00 20 */	blr 
-.endfn func_8049ACBC
+.endfn __ct__CScnCameraMan
 
 .fn __dt__CScnCameraMan, global
 /* 8049AE10 004643D0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1175,7 +1175,7 @@
 
 .obj "@eti_80036E00", local
 .hidden "@eti_80036E00"
-	.4byte func_8049ACBC
+	.4byte __ct__CScnCameraMan
 	.4byte 0x00000154
 	.4byte "@etb_8001F374"
 .endobj "@eti_80036E00"

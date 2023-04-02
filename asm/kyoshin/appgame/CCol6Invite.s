@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_80163FB8, global
+.fn __ct__CCol6Invite, global
 /* 80163FB8 0012D578  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80163FBC 0012D57C  7C 08 02 A6 */	mflr r0
 /* 80163FC0 0012D580  90 01 00 24 */	stw r0, 0x24(r1)
@@ -76,7 +76,7 @@
 /* 801640C4 0012D684  7C 08 03 A6 */	mtlr r0
 /* 801640C8 0012D688  38 21 00 20 */	addi r1, r1, 0x20
 /* 801640CC 0012D68C  4E 80 00 20 */	blr 
-.endfn func_80163FB8
+.endfn __ct__CCol6Invite
 
 .fn func_801640D0, global
 /* 801640D0 0012D690  38 63 FF 94 */	addi r3, r3, -108
@@ -144,7 +144,7 @@
 
 .obj "@eti_80028BBC", local
 .hidden "@eti_80028BBC"
-	.4byte func_80163FB8
+	.4byte __ct__CCol6Invite
 	.4byte 0x00000118
 	.4byte "@etb_8000DA98"
 .endobj "@eti_80028BBC"

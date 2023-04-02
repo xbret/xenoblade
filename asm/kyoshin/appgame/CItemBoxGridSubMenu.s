@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_80207F40, global
+.fn __ct__CItemBoxGridSubMenu, global
 /* 80207F40 001D1500  3C A0 80 54 */	lis r5, __vt__CItemBoxGridSubMenu@ha
 /* 80207F44 001D1504  38 80 00 00 */	li r4, 0
 /* 80207F48 001D1508  38 A5 8F 08 */	addi r5, r5, __vt__CItemBoxGridSubMenu@l
@@ -21,7 +21,7 @@
 /* 80207F7C 001D153C  98 83 00 23 */	stb r4, 0x23(r3)
 /* 80207F80 001D1540  98 83 00 24 */	stb r4, 0x24(r3)
 /* 80207F84 001D1544  4E 80 00 20 */	blr 
-.endfn func_80207F40
+.endfn __ct__CItemBoxGridSubMenu
 
 .fn __dt__CItemBoxGridSubMenu, global
 /* 80207F88 001D1548  94 21 FF F0 */	stwu r1, -0x10(r1)

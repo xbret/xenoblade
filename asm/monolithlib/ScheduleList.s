@@ -405,7 +405,7 @@
 /* 804E4880 004ADE40  4B F5 01 DD */	bl heap_malloc
 /* 804E4884 004ADE44  2C 03 00 00 */	cmpwi r3, 0
 /* 804E4888 004ADE48  41 82 00 08 */	beq .L_804E4890
-/* 804E488C 004ADE4C  4B FF EA 09 */	bl func_804E3294
+/* 804E488C 004ADE4C  4B FF EA 09 */	bl __ct__CSchedule
 .L_804E4890:
 /* 804E4890 004ADE50  7C 7D 1B 78 */	mr r29, r3
 /* 804E4894 004ADE54  48 00 00 08 */	b .L_804E489C
@@ -634,7 +634,7 @@
 .endfn func_804E4B48
 
 
-.fn func_804E4B64, global
+.fn __ct__804E4B64, global
 /* 804E4B64 004AE124  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804E4B68 004AE128  7C 08 02 A6 */	mflr r0
 /* 804E4B6C 004AE12C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -767,7 +767,7 @@
 /* 804E4D4C 004AE30C  7C 08 03 A6 */	mtlr r0
 /* 804E4D50 004AE310  38 21 00 20 */	addi r1, r1, 0x20
 /* 804E4D54 004AE314  4E 80 00 20 */	blr 
-.endfn func_804E4B64
+.endfn __ct__804E4B64
 
 .fn func_804E4D58, global
 /* 804E4D58 004AE318  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -942,7 +942,7 @@
 /* 804E4F98 004AE558  4E 80 00 20 */	blr
 .endfn func_804E4EF8
 
-.fn func_804E4F9C, global
+.fn __ct__804E4F9C, global
 /* 804E4F9C 004AE55C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804E4FA0 004AE560  7C 08 02 A6 */	mflr r0
 /* 804E4FA4 004AE564  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1202,7 +1202,7 @@
 /* 804E5360 004AE920  7C 08 03 A6 */	mtlr r0
 /* 804E5364 004AE924  38 21 00 20 */	addi r1, r1, 0x20
 /* 804E5368 004AE928  4E 80 00 20 */	blr
-.endfn func_804E4F9C
+.endfn __ct__804E4F9C
 
 .fn func_804E536C, global
 /* 804E536C 004AE92C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1588,7 +1588,7 @@
 
 .obj "@eti_80038D20", local
 .hidden "@eti_80038D20"
-	.4byte func_804E4B64
+	.4byte __ct__804E4B64
 	.4byte 0x000001F4
 	.4byte "@etb_80020BE0"
 .endobj "@eti_80038D20"
@@ -1630,7 +1630,7 @@
 
 .obj "@eti_80038D68", local
 .hidden "@eti_80038D68"
-	.4byte func_804E4F9C
+	.4byte __ct__804E4F9C
 	.4byte 0x000003D0
 	.4byte "@etb_80020C30"
 .endobj "@eti_80038D68"

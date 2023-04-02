@@ -540,7 +540,7 @@
 /* 8043A81C 00403DDC  4E 80 00 20 */	blr 
 .endfn CScriptCode_WorkThreadEvent5
 
-.fn func_8043A820, global
+.fn __ct__8043A820, global
 /* 8043A820 00403DE0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8043A824 00403DE4  7C 08 02 A6 */	mflr r0
 /* 8043A828 00403DE8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -568,7 +568,7 @@
 /* 8043A880 00403E40  38 7E 05 CC */	addi r3, r30, 0x5cc
 /* 8043A884 00403E44  B3 FE 03 C4 */	sth r31, 0x3c4(r30)
 /* 8043A888 00403E48  B3 FE 05 C8 */	sth r31, 0x5c8(r30)
-/* 8043A88C 00403E4C  48 00 00 F9 */	bl func_8043A984
+/* 8043A88C 00403E4C  48 00 00 F9 */	bl __ct__CToken
 /* 8043A890 00403E50  93 FE 17 38 */	stw r31, 0x1738(r30)
 /* 8043A894 00403E54  38 7E 05 CC */	addi r3, r30, 0x5cc
 /* 8043A898 00403E58  93 CD BD 10 */	stw r30, lbl_80667E90@sda21(r13)
@@ -588,7 +588,7 @@
 /* 8043A8CC 00403E8C  7C 08 03 A6 */	mtlr r0
 /* 8043A8D0 00403E90  38 21 00 20 */	addi r1, r1, 0x20
 /* 8043A8D4 00403E94  4E 80 00 20 */	blr 
-.endfn func_8043A820
+.endfn __ct__8043A820
 
 .fn func_8043A8D8, global
 /* 8043A8D8 00403E98  88 03 00 00 */	lbz r0, 0(r3)
@@ -837,7 +837,7 @@
 
 .obj "@eti_80033F98", local
 .hidden "@eti_80033F98"
-	.4byte func_8043A820
+	.4byte __ct__8043A820
 	.4byte 0x000000B8
 	.4byte "@etb_8001C310"
 .endobj "@eti_80033F98"

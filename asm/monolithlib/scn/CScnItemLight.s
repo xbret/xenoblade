@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_804822A0, global
+.fn __ct__CScnItemLight, global
 /* 804822A0 0044B860  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804822A4 0044B864  7C 08 02 A6 */	mflr r0
 /* 804822A8 0044B868  3D 00 80 57 */	lis r8, __vt__CScnItemLight@ha
@@ -38,7 +38,7 @@
 /* 80482320 0044B8E0  7C 08 03 A6 */	mtlr r0
 /* 80482324 0044B8E4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80482328 0044B8E8  4E 80 00 20 */	blr 
-.endfn func_804822A0
+.endfn __ct__CScnItemLight
 
 .fn __dt__CScnItemLight, global
 /* 8048232C 0044B8EC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -76,7 +76,7 @@
 
 .fn func_80482398, global
 /* 80482398 0044B958  7C 84 07 34 */	extsh r4, r4
-/* 8048239C 0044B95C  48 00 00 A4 */	b func_80482440
+/* 8048239C 0044B95C  48 00 00 A4 */	b __ct__CScnItemLightNw4r
 .endfn func_80482398
 
 .fn func_804823A0, global
@@ -208,7 +208,7 @@
 
 .obj "@eti_800361E8", local
 .hidden "@eti_800361E8"
-	.4byte func_804822A0
+	.4byte __ct__CScnItemLight
 	.4byte 0x0000008C
 	.4byte "@etb_8001E284"
 .endobj "@eti_800361E8"

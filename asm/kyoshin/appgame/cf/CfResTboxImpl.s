@@ -2,13 +2,13 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_801F8E34, global
+.fn __ct__cf_CfResTboxImpl, global
 /* 801F8E34 001C23F4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801F8E38 001C23F8  7C 08 02 A6 */	mflr r0
 /* 801F8E3C 001C23FC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801F8E40 001C2400  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801F8E44 001C2404  7C 7F 1B 78 */	mr r31, r3
-/* 801F8E48 001C2408  4B F7 39 A9 */	bl func_8016C7F0
+/* 801F8E48 001C2408  4B F7 39 A9 */	bl __ct__cf_CfResObjImpl
 /* 801F8E4C 001C240C  3C 80 80 54 */	lis r4, __vt__cf_CfResTboxImpl@ha
 /* 801F8E50 001C2410  7F E3 FB 78 */	mr r3, r31
 /* 801F8E54 001C2414  38 84 89 C0 */	addi r4, r4, __vt__cf_CfResTboxImpl@l
@@ -18,7 +18,7 @@
 /* 801F8E64 001C2424  7C 08 03 A6 */	mtlr r0
 /* 801F8E68 001C2428  38 21 00 10 */	addi r1, r1, 0x10
 /* 801F8E6C 001C242C  4E 80 00 20 */	blr 
-.endfn func_801F8E34
+.endfn __ct__cf_CfResTboxImpl
 
 .fn func_801F8E70, global
 /* 801F8E70 001C2430  38 60 01 00 */	li r3, 0x100
@@ -475,7 +475,7 @@
 
 .obj "@eti_8002C594", local
 .hidden "@eti_8002C594"
-	.4byte func_801F8E34
+	.4byte __ct__cf_CfResTboxImpl
 	.4byte 0x0000003C
 	.4byte "@etb_80012438"
 .endobj "@eti_8002C594"

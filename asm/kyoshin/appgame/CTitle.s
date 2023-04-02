@@ -1169,7 +1169,7 @@
 
 #CTitle
 
-.fn func_802B72F4, global
+.fn __ct__CTitle, global
 /* 802B72F4 002808B4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802B72F8 002808B8  7C 08 02 A6 */	mflr r0
 /* 802B72FC 002808BC  3C 80 80 54 */	lis r4, __vt__CTitle@ha
@@ -1179,7 +1179,7 @@
 /* 802B730C 002808CC  7C 7F 1B 78 */	mr r31, r3
 /* 802B7310 002808D0  90 83 00 00 */	stw r4, 0(r3)
 /* 802B7314 002808D4  38 63 00 04 */	addi r3, r3, 4
-/* 802B7318 002808D8  48 1A 82 4D */	bl __ct__8045F564
+/* 802B7318 002808D8  48 1A 82 4D */	bl __ct__UnkClass_8045F564
 /* 802B731C 002808DC  38 A0 00 00 */	li r5, 0
 /* 802B7320 002808E0  38 80 00 01 */	li r4, 1
 /* 802B7324 002808E4  38 00 FF FF */	li r0, -1
@@ -1202,7 +1202,7 @@
 /* 802B7368 00280928  7C 08 03 A6 */	mtlr r0
 /* 802B736C 0028092C  38 21 00 10 */	addi r1, r1, 0x10
 /* 802B7370 00280930  4E 80 00 20 */	blr 
-.endfn func_802B72F4
+.endfn __ct__CTitle
 
 .fn __dt__CTitle, global
 /* 802B7374 00280934  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1215,10 +1215,10 @@
 /* 802B7390 00280950  41 82 00 2C */	beq .L_802B73BC
 /* 802B7394 00280954  38 80 FF FF */	li r4, -1
 /* 802B7398 00280958  38 63 00 70 */	addi r3, r3, 0x70
-/* 802B739C 0028095C  4B F1 B6 9D */	bl __dt__801D2A38
+/* 802B739C 0028095C  4B F1 B6 9D */	bl __dt__CCur18
 /* 802B73A0 00280960  38 7E 00 04 */	addi r3, r30, 4
 /* 802B73A4 00280964  38 80 FF FF */	li r4, -1
-/* 802B73A8 00280968  48 1A 81 D9 */	bl __dt__8045F580
+/* 802B73A8 00280968  48 1A 81 D9 */	bl __dt__UnkClass_8045F564
 /* 802B73AC 0028096C  2C 1F 00 00 */	cmpwi r31, 0
 /* 802B73B0 00280970  40 81 00 0C */	ble .L_802B73BC
 /* 802B73B4 00280974  7F C3 F3 78 */	mr r3, r30
@@ -1720,7 +1720,7 @@
 /* 802B7A2C 00280FEC  98 1C 00 84 */	stb r0, 0x84(r28)
 /* 802B7A30 00280FF0  88 01 00 25 */	lbz r0, 0x25(r1)
 /* 802B7A34 00280FF4  98 1C 00 85 */	stb r0, 0x85(r28)
-/* 802B7A38 00280FF8  4B F1 B0 01 */	bl __dt__801D2A38
+/* 802B7A38 00280FF8  4B F1 B0 01 */	bl __dt__CCur18
 /* 802B7A3C 00280FFC  81 9C 00 70 */	lwz r12, 0x70(r28)
 /* 802B7A40 00281000  38 7C 00 70 */	addi r3, r28, 0x70
 /* 802B7A44 00281004  81 8C 00 08 */	lwz r12, 8(r12)
@@ -2263,7 +2263,7 @@
 	.4byte __dt__CTitleLogo
 	.4byte 0x0780001F
 	.4byte 0x00000004
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 	.4byte 0x8680001F
 	.4byte 0x00000000
 	.4byte __dt__IWorkEvent
@@ -2277,7 +2277,7 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000070
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000048
 	.4byte __dt__CTitleMenu
@@ -2599,7 +2599,7 @@
 
 .obj "@eti_80033800", local
 .hidden "@eti_80033800"
-	.4byte func_802B72F4
+	.4byte __ct__CTitle
 	.4byte 0x00000080
 	.4byte "@etb_8001BC54"
 .endobj "@eti_80033800"

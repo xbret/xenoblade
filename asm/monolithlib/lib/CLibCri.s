@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_80459864, global
+.fn __ct__CLibCri, global
 /* 80459864 00422E24  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80459868 00422E28  7C 08 02 A6 */	mflr r0
 /* 8045986C 00422E2C  38 C0 00 02 */	li r6, 2
@@ -11,7 +11,7 @@
 /* 80459878 00422E38  7C 7F 1B 78 */	mr r31, r3
 /* 8045987C 00422E3C  4B FD DD 41 */	bl __ct__CWorkThread
 /* 80459880 00422E40  38 7F 01 C4 */	addi r3, r31, 0x1c4
-/* 80459884 00422E44  4B FE F6 BD */	bl func_80448F40
+/* 80459884 00422E44  4B FE F6 BD */	bl __ct__CDeviceVICb
 /* 80459888 00422E48  3C 80 80 57 */	lis r4, __vt__CLibCri@ha
 /* 8045988C 00422E4C  2C 1F 00 00 */	cmpwi r31, 0
 /* 80459890 00422E50  38 84 06 A0 */	addi r4, r4, __vt__CLibCri@l
@@ -34,7 +34,7 @@
 /* 804598D0 00422E90  7C 08 03 A6 */	mtlr r0
 /* 804598D4 00422E94  38 21 00 10 */	addi r1, r1, 0x10
 /* 804598D8 00422E98  4E 80 00 20 */	blr
-.endfn func_80459864
+.endfn __ct__CLibCri
 
 .fn __dt__CLibCri, global
 /* 804598DC 00422E9C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -286,7 +286,7 @@
 /* 80459B70 00423130  41 82 00 10 */	beq .L_80459B80
 /* 80459B74 00423134  7F E4 FB 78 */	mr r4, r31
 /* 80459B78 00423138  7F C5 F3 78 */	mr r5, r30
-/* 80459B7C 0042313C  48 00 01 1D */	bl func_80459C98
+/* 80459B7C 0042313C  48 00 01 1D */	bl __ct__CLibCriMoviePlay
 .L_80459B80:
 /* 80459B80 00423140  7F C4 F3 78 */	mr r4, r30
 /* 80459B84 00423144  38 A0 00 00 */	li r5, 0
@@ -302,7 +302,7 @@
 /* 80459BAC 0042316C  41 82 00 10 */	beq .L_80459BBC
 /* 80459BB0 00423170  7F E4 FB 78 */	mr r4, r31
 /* 80459BB4 00423174  7F C5 F3 78 */	mr r5, r30
-/* 80459BB8 00423178  48 00 18 35 */	bl func_8045B3EC
+/* 80459BB8 00423178  48 00 18 35 */	bl __ct__CLibCriStreamingPlay
 .L_80459BBC:
 /* 80459BBC 0042317C  7F C4 F3 78 */	mr r4, r30
 /* 80459BC0 00423180  38 A0 00 00 */	li r5, 0
@@ -578,7 +578,7 @@
 
 .obj "@eti_80035114", local
 .hidden "@eti_80035114"
-	.4byte func_80459864
+	.4byte __ct__CLibCri
 	.4byte 0x00000078
 	.4byte "@etb_8001D4A8"
 .endobj "@eti_80035114"

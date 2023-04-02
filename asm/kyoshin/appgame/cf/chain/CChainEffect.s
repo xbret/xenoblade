@@ -78,7 +78,7 @@
 /* 802A08D4 00269E94  4E 80 00 20 */	blr 
 .endfn func_802A0818
 
-.fn func_802A08D8, global
+.fn __ct__cf_CChainEffect, global
 /* 802A08D8 00269E98  3C 80 80 54 */	lis r4, __vt__cf_CChainEffect@ha
 /* 802A08DC 00269E9C  38 00 00 00 */	li r0, 0
 /* 802A08E0 00269EA0  38 84 D0 20 */	addi r4, r4, __vt__cf_CChainEffect@l
@@ -86,7 +86,7 @@
 /* 802A08E8 00269EA8  90 03 00 04 */	stw r0, 4(r3)
 /* 802A08EC 00269EAC  90 03 00 08 */	stw r0, 8(r3)
 /* 802A08F0 00269EB0  4E 80 00 20 */	blr 
-.endfn func_802A08D8
+.endfn __ct__cf_CChainEffect
 
 .fn func_802A08F4, global
 /* 802A08F4 00269EB4  38 00 00 00 */	li r0, 0

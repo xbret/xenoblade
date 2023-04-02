@@ -6,6 +6,7 @@ extern "C" {
 
 #include "RevoSDK/dvd/dvd.h"
 #include "RevoSDK/dvd/dvd_broadway.h"
+#include "RevoSDK/dvd/dvdDeviceError.h"
 #include "RevoSDK/dvd/dvdfatal.h"
 #include "RevoSDK/dvd/dvdfs.h"
 #include "RevoSDK/dvd/dvdidutils.h"

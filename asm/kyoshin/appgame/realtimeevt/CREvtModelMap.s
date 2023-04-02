@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_801809B8, global
+.fn __ct__CREvtModelMap, global
 /* 801809B8 00149F78  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801809BC 00149F7C  7C 08 02 A6 */	mflr r0
 /* 801809C0 00149F80  38 A0 00 01 */	li r5, 1
@@ -10,7 +10,7 @@
 /* 801809C8 00149F88  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 801809CC 00149F8C  7C 7F 1B 78 */	mr r31, r3
 /* 801809D0 00149F90  93 C1 00 18 */	stw r30, 0x18(r1)
-/* 801809D4 00149F94  4B FF 1C 11 */	bl func_801725E4
+/* 801809D4 00149F94  4B FF 1C 11 */	bl __ct__CREvtModel
 /* 801809D8 00149F98  3C 60 80 53 */	lis r3, __vt__cf_CREvtModelMap@ha
 /* 801809DC 00149F9C  38 C0 00 00 */	li r6, 0
 /* 801809E0 00149FA0  38 63 55 50 */	addi r3, r3, __vt__cf_CREvtModelMap@l
@@ -87,9 +87,9 @@
 /* 80180AF4 0014A0B4  7C 08 03 A6 */	mtlr r0
 /* 80180AF8 0014A0B8  38 21 00 20 */	addi r1, r1, 0x20
 /* 80180AFC 0014A0BC  4E 80 00 20 */	blr
-.endfn func_801809B8
+.endfn __ct__CREvtModelMap
 
-.fn func_80180B00, global
+.fn __ct__80180B00, global
 /* 80180B00 0014A0C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80180B04 0014A0C4  7C 08 02 A6 */	mflr r0
 /* 80180B08 0014A0C8  2C 03 00 00 */	cmpwi r3, 0
@@ -169,7 +169,7 @@
 /* 80180C1C 0014A1DC  48 2E 1F 4D */	bl func_80462B68
 /* 80180C20 0014A1E0  7F 83 E3 78 */	mr r3, r28
 /* 80180C24 0014A1E4  38 80 00 00 */	li r4, 0
-/* 80180C28 0014A1E8  4B FF 1A 41 */	bl func_80172668
+/* 80180C28 0014A1E8  4B FF 1A 41 */	bl __ct__80172668
 /* 80180C2C 0014A1EC  2C 1D 00 00 */	cmpwi r29, 0
 /* 80180C30 0014A1F0  40 81 00 0C */	ble .L_80180C3C
 /* 80180C34 0014A1F4  7F 83 E3 78 */	mr r3, r28
@@ -184,7 +184,7 @@
 /* 80180C54 0014A214  7C 08 03 A6 */	mtlr r0
 /* 80180C58 0014A218  38 21 00 20 */	addi r1, r1, 0x20
 /* 80180C5C 0014A21C  4E 80 00 20 */	blr 
-.endfn func_80180B00
+.endfn __ct__80180B00
 
 .fn func_80180C60, global
 /* 80180C60 0014A220  80 83 00 1C */	lwz r4, 0x1c(r3)
@@ -1196,7 +1196,7 @@
 
 .fn func_80181A54, global
 /* 80181A54 0014B014  38 63 FF C8 */	addi r3, r3, -56
-/* 80181A58 0014B018  4B FF F0 A8 */	b func_80180B00
+/* 80181A58 0014B018  4B FF F0 A8 */	b __ct__80180B00
 .endfn func_80181A54
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -1265,7 +1265,7 @@
 .obj __vt__cf_CREvtModelMap, global
 	.4byte __RTTI__cf_CREvtModelMap
 	.4byte 0
-	.4byte func_80180B00
+	.4byte __ct__80180B00
 	.4byte func_801728F8
 	.4byte func_8017298C
 	.4byte func_8016A354
@@ -1413,7 +1413,7 @@
 	.4byte __dt__IWorkEvent
 	.4byte 0x8680001F
 	.4byte 0x00000000
-	.4byte func_80172668
+	.4byte __ct__80172668
 .endobj "@etb_8000E668"
 
 .obj "@etb_8000E690", local
@@ -1433,19 +1433,19 @@
 	.4byte __dt__IWorkEvent
 	.4byte 0x0680001C
 	.4byte 0x00000000
-	.4byte func_80172668
+	.4byte __ct__80172668
 	.4byte 0x0680001C
 	.4byte 0x00000038
 	.4byte __dt__IWorkEvent
 	.4byte 0x0680001C
 	.4byte 0x00000000
-	.4byte func_80172668
+	.4byte __ct__80172668
 	.4byte 0x0680001C
 	.4byte 0x00000038
 	.4byte __dt__IWorkEvent
 	.4byte 0x8680001C
 	.4byte 0x00000000
-	.4byte func_80172668
+	.4byte __ct__80172668
 	.4byte 0x8680001C
 	.4byte 0x00000038
 	.4byte __dt__IWorkEvent
@@ -1511,14 +1511,14 @@
 
 .obj "@eti_80029690", local
 .hidden "@eti_80029690"
-	.4byte func_801809B8
+	.4byte __ct__CREvtModelMap
 	.4byte 0x00000148
 	.4byte "@etb_8000E668"
 .endobj "@eti_80029690"
 
 .obj "@eti_8002969C", local
 .hidden "@eti_8002969C"
-	.4byte func_80180B00
+	.4byte __ct__80180B00
 	.4byte 0x00000160
 	.4byte "@etb_8000E690"
 .endobj "@eti_8002969C"

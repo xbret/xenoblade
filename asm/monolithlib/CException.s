@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_80457B9C, global
+.fn __ct__CException, global
 /* 80457B9C 0042115C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80457BA0 00421160  7C 08 02 A6 */	mflr r0
 /* 80457BA4 00421164  38 C0 00 08 */	li r6, 8
@@ -37,7 +37,7 @@
 /* 80457C18 004211D8  7C 08 03 A6 */	mtlr r0
 /* 80457C1C 004211DC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80457C20 004211E0  4E 80 00 20 */	blr 
-.endfn func_80457B9C
+.endfn __ct__CException
 
 .fn __dt__CException, global
 /* 80457C24 004211E4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -125,7 +125,7 @@
 /* 80457D40 00421300  41 82 00 14 */	beq .L_80457D54
 /* 80457D44 00421304  7F 84 E3 78 */	mr r4, r28
 /* 80457D48 00421308  7F C5 F3 78 */	mr r5, r30
-/* 80457D4C 0042130C  4B FF FE 51 */	bl func_80457B9C
+/* 80457D4C 0042130C  4B FF FE 51 */	bl __ct__CException
 /* 80457D50 00421310  7C 7B 1B 78 */	mr r27, r3
 .L_80457D54:
 /* 80457D54 00421314  7F 63 DB 78 */	mr r3, r27
@@ -151,7 +151,7 @@
 /* 80457DA0 00421360  41 82 00 14 */	beq .L_80457DB4
 /* 80457DA4 00421364  7F 84 E3 78 */	mr r4, r28
 /* 80457DA8 00421368  7F C5 F3 78 */	mr r5, r30
-/* 80457DAC 0042136C  4B FF FD F1 */	bl func_80457B9C
+/* 80457DAC 0042136C  4B FF FD F1 */	bl __ct__CException
 /* 80457DB0 00421370  7C 7B 1B 78 */	mr r27, r3
 .L_80457DB4:
 /* 80457DB4 00421374  7F 63 DB 78 */	mr r3, r27
@@ -2015,7 +2015,7 @@
 
 .obj "@eti_80035048", local
 .hidden "@eti_80035048"
-	.4byte func_80457B9C
+	.4byte __ct__CException
 	.4byte 0x00000088
 	.4byte "@etb_8001D3C0"
 .endobj "@eti_80035048"

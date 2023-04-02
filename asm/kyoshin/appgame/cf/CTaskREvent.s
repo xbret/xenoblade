@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_80164120, global
+.fn __ct__cf_CTaskREvent, global
 /* 80164120 0012D6E0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80164124 0012D6E4  7C 08 02 A6 */	mflr r0
 /* 80164128 0012D6E8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -29,7 +29,7 @@
 /* 8016417C 0012D73C  90 9F 00 48 */	stw r4, 0x48(r31)
 /* 80164180 0012D740  80 05 00 08 */	lwz r0, 8(r5)
 /* 80164184 0012D744  90 1F 00 50 */	stw r0, 0x50(r31)
-/* 80164188 0012D748  48 2E 4D B9 */	bl func_80448F40
+/* 80164188 0012D748  48 2E 4D B9 */	bl __ct__CDeviceVICb
 /* 8016418C 0012D74C  3C E0 80 53 */	lis r7, __vt__cf_CTaskREvent@ha
 /* 80164190 0012D750  3B C0 00 00 */	li r30, 0
 /* 80164194 0012D754  38 E7 3F 60 */	addi r7, r7, __vt__cf_CTaskREvent@l
@@ -46,9 +46,9 @@
 /* 801641C0 0012D780  93 DF 00 64 */	stw r30, 0x64(r31)
 /* 801641C4 0012D784  93 DF 00 68 */	stw r30, 0x68(r31)
 /* 801641C8 0012D788  93 DF 00 6C */	stw r30, 0x6c(r31)
-/* 801641CC 0012D78C  48 00 25 39 */	bl func_80166704
+/* 801641CC 0012D78C  48 00 25 39 */	bl __ct__cf_CInfoCf
 /* 801641D0 0012D790  38 7F 00 84 */	addi r3, r31, 0x84
-/* 801641D4 0012D794  48 00 3A 6D */	bl func_80167C40
+/* 801641D4 0012D794  48 00 3A 6D */	bl __ct__cf_CREvtMem
 /* 801641D8 0012D798  C0 02 9B 68 */	lfs f0, float_80669EE8@sda21(r2)
 /* 801641DC 0012D79C  38 00 FF FF */	li r0, -1
 /* 801641E0 0012D7A0  93 DF 00 B0 */	stw r30, 0xb0(r31)
@@ -108,7 +108,7 @@
 /* 801642B0 0012D870  7C 08 03 A6 */	mtlr r0
 /* 801642B4 0012D874  38 21 00 20 */	addi r1, r1, 0x20
 /* 801642B8 0012D878  4E 80 00 20 */	blr 
-.endfn func_80164120
+.endfn __ct__cf_CTaskREvent
 
 .fn __dt__CTTask_cf_CTaskREvent, global
 /* 801642BC 0012D87C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2676,7 +2676,7 @@
 /* 801665E4 0012FBA4  41 82 00 14 */	beq .L_801665F8
 /* 801665E8 0012FBA8  7F A4 EB 78 */	mr r4, r29
 /* 801665EC 0012FBAC  7F C5 F3 78 */	mr r5, r30
-/* 801665F0 0012FBB0  4B FF DB 31 */	bl func_80164120
+/* 801665F0 0012FBB0  4B FF DB 31 */	bl __ct__cf_CTaskREvent
 /* 801665F4 0012FBB4  7C 7F 1B 78 */	mr r31, r3
 .L_801665F8:
 /* 801665F8 0012FBB8  7F E3 FB 78 */	mr r3, r31
@@ -4857,7 +4857,7 @@
 
 .obj "@eti_80028BC8", local
 .hidden "@eti_80028BC8"
-	.4byte func_80164120
+	.4byte __ct__cf_CTaskREvent
 	.4byte 0x0000019C
 	.4byte "@etb_8000DAA0"
 .endobj "@eti_80028BC8"

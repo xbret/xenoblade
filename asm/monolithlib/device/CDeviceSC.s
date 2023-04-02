@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_80447B50, global
+.fn __ct__CDeviceSC, global
 /* 80447B50 00411110  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80447B54 00411114  7C 08 02 A6 */	mflr r0
 /* 80447B58 00411118  38 C0 00 08 */	li r6, 8
@@ -30,7 +30,7 @@
 /* 80447BB0 00411170  7C 08 03 A6 */	mtlr r0
 /* 80447BB4 00411174  38 21 00 10 */	addi r1, r1, 0x10
 /* 80447BB8 00411178  4E 80 00 20 */	blr 
-.endfn func_80447B50
+.endfn __ct__CDeviceSC
 
 .fn __dt__CDeviceSC, global
 /* 80447BBC 0041117C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -328,7 +328,7 @@
 
 .obj "@eti_80034670", local
 .hidden "@eti_80034670"
-	.4byte func_80447B50
+	.4byte __ct__CDeviceSC
 	.4byte 0x0000006C
 	.4byte "@etb_8001CA3C"
 .endobj "@eti_80034670"

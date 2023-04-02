@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_80454E80, global
+.fn __ct__CDeviceFontLoader, global
 /* 80454E80 0041E440  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80454E84 0041E444  7C 08 02 A6 */	mflr r0
 /* 80454E88 0041E448  38 C0 00 00 */	li r6, 0
@@ -25,7 +25,7 @@
 /* 80454ECC 0041E48C  7C 08 03 A6 */	mtlr r0
 /* 80454ED0 0041E490  38 21 00 10 */	addi r1, r1, 0x10
 /* 80454ED4 0041E494  4E 80 00 20 */	blr 
-.endfn func_80454E80
+.endfn __ct__CDeviceFontLoader
 
 .fn __dt__CDeviceFontLoader, global
 /* 80454ED8 0041E498  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -305,7 +305,7 @@
 
 .obj "@eti_80034E74", local
 .hidden "@eti_80034E74"
-	.4byte func_80454E80
+	.4byte __ct__CDeviceFontLoader
 	.4byte 0x00000058
 	.4byte "@etb_8001D1F4"
 .endobj "@eti_80034E74"

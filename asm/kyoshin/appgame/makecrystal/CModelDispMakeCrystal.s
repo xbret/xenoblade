@@ -26,7 +26,7 @@
 /* 8021BCC0 001E5280  92 E3 00 24 */	stw r23, 0x24(r3)
 /* 8021BCC4 001E5284  92 E3 00 28 */	stw r23, 0x28(r3)
 /* 8021BCC8 001E5288  38 63 00 2C */	addi r3, r3, 0x2c
-/* 8021BCCC 001E528C  48 24 38 99 */	bl __ct__8045F564
+/* 8021BCCC 001E528C  48 24 38 99 */	bl __ct__UnkClass_8045F564
 /* 8021BCD0 001E5290  3C 80 80 22 */	lis r4, func_8021C4F0@ha
 /* 8021BCD4 001E5294  3C A0 80 22 */	lis r5, __dt__8021C540@ha
 /* 8021BCD8 001E5298  92 FB 00 3C */	stw r23, 0x3c(r27)
@@ -101,7 +101,7 @@
 /* 8021BDEC 001E53AC  38 80 00 00 */	li r4, 0
 /* 8021BDF0 001E53B0  4B FB 6C 0D */	bl __ct__CCur18
 /* 8021BDF4 001E53B4  38 7B 0E CC */	addi r3, r27, 0xecc
-/* 8021BDF8 001E53B8  48 07 B6 39 */	bl func_80297430
+/* 8021BDF8 001E53B8  48 07 B6 39 */	bl __ct__CMCGetItemBox
 /* 8021BDFC 001E53BC  9A FB 13 9F */	stb r23, 0x139f(r27)
 /* 8021BE00 001E53C0  38 7B 13 A0 */	addi r3, r27, 0x13a0
 /* 8021BE04 001E53C4  38 1B 2D A0 */	addi r0, r27, 0x2da0
@@ -213,10 +213,10 @@
 /* 8021BF9C 001E555C  48 00 67 A5 */	bl __ct__CMCCrystalList
 /* 8021BFA0 001E5560  38 7B 0C 1C */	addi r3, r27, 0xc1c
 /* 8021BFA4 001E5564  38 81 00 CC */	addi r4, r1, 0xcc
-/* 8021BFA8 001E5568  4B F0 09 CD */	bl __ct__8011C974
+/* 8021BFA8 001E5568  4B F0 09 CD */	bl __ct__UnkClass_8011C974
 /* 8021BFAC 001E556C  38 7B 0C 2C */	addi r3, r27, 0xc2c
 /* 8021BFB0 001E5570  38 81 00 DC */	addi r4, r1, 0xdc
-/* 8021BFB4 001E5574  4B F0 09 C1 */	bl __ct__8011C974
+/* 8021BFB4 001E5574  4B F0 09 C1 */	bl __ct__UnkClass_8011C974
 /* 8021BFB8 001E5578  80 01 00 EC */	lwz r0, 0xec(r1)
 /* 8021BFBC 001E557C  38 61 00 C8 */	addi r3, r1, 0xc8
 /* 8021BFC0 001E5580  90 1B 0C 3C */	stw r0, 0xc3c(r27)
@@ -257,7 +257,7 @@
 /* 8021C04C 001E560C  4B FD 73 C5 */	bl __ct__CScrollBar
 /* 8021C050 001E5610  38 7B 0E 3C */	addi r3, r27, 0xe3c
 /* 8021C054 001E5614  38 81 00 8C */	addi r4, r1, 0x8c
-/* 8021C058 001E5618  4B F0 09 1D */	bl __ct__8011C974
+/* 8021C058 001E5618  4B F0 09 1D */	bl __ct__UnkClass_8011C974
 /* 8021C05C 001E561C  80 01 00 9C */	lwz r0, 0x9c(r1)
 /* 8021C060 001E5620  38 61 00 88 */	addi r3, r1, 0x88
 /* 8021C064 001E5624  90 1B 0E 4C */	stw r0, 0xe4c(r27)
@@ -299,13 +299,13 @@
 /* 8021C0F4 001E56B4  38 80 FF FF */	li r4, -1
 /* 8021C0F8 001E56B8  48 00 F5 A9 */	bl __dt__CSysWin
 /* 8021C0FC 001E56BC  38 61 01 20 */	addi r3, r1, 0x120
-/* 8021C100 001E56C0  48 07 B3 31 */	bl func_80297430
+/* 8021C100 001E56C0  48 07 B3 31 */	bl __ct__CMCGetItemBox
 /* 8021C104 001E56C4  38 7B 0E D0 */	addi r3, r27, 0xed0
 /* 8021C108 001E56C8  38 81 01 24 */	addi r4, r1, 0x124
-/* 8021C10C 001E56CC  4B F0 08 69 */	bl __ct__8011C974
+/* 8021C10C 001E56CC  4B F0 08 69 */	bl __ct__UnkClass_8011C974
 /* 8021C110 001E56D0  38 7B 0E E0 */	addi r3, r27, 0xee0
 /* 8021C114 001E56D4  38 81 01 34 */	addi r4, r1, 0x134
-/* 8021C118 001E56D8  4B F0 08 5D */	bl __ct__8011C974
+/* 8021C118 001E56D8  4B F0 08 5D */	bl __ct__UnkClass_8011C974
 /* 8021C11C 001E56DC  80 01 01 44 */	lwz r0, 0x144(r1)
 /* 8021C120 001E56E0  38 7B 0F 24 */	addi r3, r27, 0xf24
 /* 8021C124 001E56E4  90 1B 0E F0 */	stw r0, 0xef0(r27)
@@ -353,10 +353,10 @@
 /* 8021C1CC 001E578C  4B F4 B2 61 */	bl func_8016742C
 /* 8021C1D0 001E5790  38 7B 0F C4 */	addi r3, r27, 0xfc4
 /* 8021C1D4 001E5794  38 81 02 18 */	addi r4, r1, 0x218
-/* 8021C1D8 001E5798  4B F0 07 9D */	bl __ct__8011C974
+/* 8021C1D8 001E5798  4B F0 07 9D */	bl __ct__UnkClass_8011C974
 /* 8021C1DC 001E579C  38 7B 0F D4 */	addi r3, r27, 0xfd4
 /* 8021C1E0 001E57A0  38 81 02 28 */	addi r4, r1, 0x228
-/* 8021C1E4 001E57A4  4B F0 07 91 */	bl __ct__8011C974
+/* 8021C1E4 001E57A4  4B F0 07 91 */	bl __ct__UnkClass_8011C974
 /* 8021C1E8 001E57A8  80 61 02 38 */	lwz r3, 0x238(r1)
 /* 8021C1EC 001E57AC  38 00 00 03 */	li r0, 3
 /* 8021C1F0 001E57B0  90 7B 0F E4 */	stw r3, 0xfe4(r27)
@@ -568,7 +568,7 @@
 /* 8021C4FC 001E5ABC  BF A1 00 14 */	stmw r29, 0x14(r1)
 /* 8021C500 001E5AC0  7C 7D 1B 78 */	mr r29, r3
 /* 8021C504 001E5AC4  38 63 00 08 */	addi r3, r3, 8
-/* 8021C508 001E5AC8  4B E3 DF 65 */	bl func_8005A46C
+/* 8021C508 001E5AC8  4B E3 DF 65 */	bl __ct__cf_CActParamAnimGame
 /* 8021C50C 001E5ACC  3B DD 05 64 */	addi r30, r29, 0x564
 /* 8021C510 001E5AD0  3B FD 05 AC */	addi r31, r29, 0x5ac
 .L_8021C514:
@@ -624,7 +624,7 @@
 /* 8021C5BC 001E5B7C  48 07 B2 C5 */	bl __dt__CMCGetItemBox
 /* 8021C5C0 001E5B80  38 7E 0E B4 */	addi r3, r30, 0xeb4
 /* 8021C5C4 001E5B84  38 80 FF FF */	li r4, -1
-/* 8021C5C8 001E5B88  4B FB 64 71 */	bl __dt__801D2A38
+/* 8021C5C8 001E5B88  4B FB 64 71 */	bl __dt__CCur18
 /* 8021C5CC 001E5B8C  38 7E 0E 78 */	addi r3, r30, 0xe78
 /* 8021C5D0 001E5B90  38 80 FF FF */	li r4, -1
 /* 8021C5D4 001E5B94  48 00 F0 CD */	bl __dt__CSysWin
@@ -633,7 +633,7 @@
 /* 8021C5E0 001E5BA0  4B FD 6E C1 */	bl __dt__CScrollBar
 /* 8021C5E4 001E5BA4  38 7E 0E 20 */	addi r3, r30, 0xe20
 /* 8021C5E8 001E5BA8  38 80 FF FF */	li r4, -1
-/* 8021C5EC 001E5BAC  4B FB 64 4D */	bl __dt__801D2A38
+/* 8021C5EC 001E5BAC  4B FB 64 4D */	bl __dt__CCur18
 /* 8021C5F0 001E5BB0  38 7E 0D FC */	addi r3, r30, 0xdfc
 /* 8021C5F4 001E5BB4  38 80 FF FF */	li r4, -1
 /* 8021C5F8 001E5BB8  48 00 97 41 */	bl __dt__CMCEffCylinder
@@ -684,7 +684,7 @@
 /* 8021C6AC 001E5C6C  48 09 D5 4D */	bl __destroy_arr
 /* 8021C6B0 001E5C70  38 7E 00 2C */	addi r3, r30, 0x2c
 /* 8021C6B4 001E5C74  38 80 FF FF */	li r4, -1
-/* 8021C6B8 001E5C78  48 24 2E C9 */	bl __dt__8045F580
+/* 8021C6B8 001E5C78  48 24 2E C9 */	bl __dt__UnkClass_8045F564
 /* 8021C6BC 001E5C7C  2C 1F 00 00 */	cmpwi r31, 0
 /* 8021C6C0 001E5C80  40 81 00 0C */	ble .L_8021C6CC
 /* 8021C6C4 001E5C84  7F C3 F3 78 */	mr r3, r30
@@ -1373,7 +1373,7 @@
 /* 8021D034 001E65F4  8B E3 00 03 */	lbz r31, 3(r3)
 /* 8021D038 001E65F8  8B A3 00 01 */	lbz r29, 1(r3)
 /* 8021D03C 001E65FC  8B 8D AE 88 */	lbz r28, lbl_80667008@sda21(r13)
-/* 8021D040 001E6600  48 21 83 5D */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 8021D040 001E6600  48 21 83 5D */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 8021D044 001E6604  48 21 8A 99 */	bl rand__Q32mm3mtl6MTRandFv
 /* 8021D048 001E6608  38 A0 00 64 */	li r5, 0x64
 /* 8021D04C 001E660C  7F 80 07 74 */	extsb r0, r28
@@ -1548,7 +1548,7 @@
 /* 8021D2A8 001E6868  40 82 00 08 */	bne .L_8021D2B0
 /* 8021D2AC 001E686C  3B C0 00 01 */	li r30, 1
 .L_8021D2B0:
-/* 8021D2B0 001E6870  48 21 80 ED */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 8021D2B0 001E6870  48 21 80 ED */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 8021D2B4 001E6874  48 21 88 29 */	bl rand__Q32mm3mtl6MTRandFv
 /* 8021D2B8 001E6878  7C 64 3E 70 */	srawi r4, r3, 7
 /* 8021D2BC 001E687C  88 1F 2D B3 */	lbz r0, 0x2db3(r31)
@@ -1693,7 +1693,7 @@
 .L_8021D4B8:
 /* 8021D4B8 001E6A78  28 00 00 03 */	cmplwi r0, 3
 /* 8021D4BC 001E6A7C  41 80 00 90 */	blt .L_8021D54C
-/* 8021D4C0 001E6A80  48 21 7E DD */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 8021D4C0 001E6A80  48 21 7E DD */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 8021D4C4 001E6A84  48 21 86 19 */	bl rand__Q32mm3mtl6MTRandFv
 /* 8021D4C8 001E6A88  38 80 00 0A */	li r4, 0xa
 /* 8021D4CC 001E6A8C  7C 03 23 D6 */	divw r0, r3, r4
@@ -1770,7 +1770,7 @@
 /* 8021D5C8 001E6B88  88 03 2D A6 */	lbz r0, 0x2da6(r3)
 /* 8021D5CC 001E6B8C  7C 05 00 40 */	cmplw r5, r0
 /* 8021D5D0 001E6B90  41 80 00 28 */	blt .L_8021D5F8
-/* 8021D5D4 001E6B94  48 21 7D C9 */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 8021D5D4 001E6B94  48 21 7D C9 */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 8021D5D8 001E6B98  48 21 85 05 */	bl rand__Q32mm3mtl6MTRandFv
 /* 8021D5DC 001E6B9C  38 80 00 05 */	li r4, 5
 /* 8021D5E0 001E6BA0  7C 03 23 D6 */	divw r0, r3, r4
@@ -1782,7 +1782,7 @@
 .L_8021D5F8:
 /* 8021D5F8 001E6BB8  2C 1E 00 00 */	cmpwi r30, 0
 /* 8021D5FC 001E6BBC  40 82 00 68 */	bne .L_8021D664
-/* 8021D600 001E6BC0  48 21 7D 9D */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 8021D600 001E6BC0  48 21 7D 9D */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 8021D604 001E6BC4  48 21 84 D9 */	bl rand__Q32mm3mtl6MTRandFv
 /* 8021D608 001E6BC8  38 80 00 0B */	li r4, 0xb
 /* 8021D60C 001E6BCC  7C 03 23 D6 */	divw r0, r3, r4
@@ -1875,7 +1875,7 @@
 /* 8021D748 001E6D08  FC 00 00 1E */	fctiwz f0, f0
 /* 8021D74C 001E6D0C  D8 01 00 20 */	stfd f0, 0x20(r1)
 /* 8021D750 001E6D10  83 21 00 24 */	lwz r25, 0x24(r1)
-/* 8021D754 001E6D14  48 21 7C 49 */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 8021D754 001E6D14  48 21 7C 49 */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 8021D758 001E6D18  48 21 83 85 */	bl rand__Q32mm3mtl6MTRandFv
 /* 8021D75C 001E6D1C  7C 83 AB D6 */	divw r4, r3, r21
 /* 8021D760 001E6D20  57 20 04 3E */	clrlwi r0, r25, 0x10
@@ -1886,7 +1886,7 @@
 /* 8021D774 001E6D34  40 80 01 EC */	bge .L_8021D960
 /* 8021D778 001E6D38  C0 02 A9 E4 */	lfs f0, float_8066AD64@sda21(r2)
 /* 8021D77C 001E6D3C  D0 16 2D AC */	stfs f0, 0x2dac(r22)
-/* 8021D780 001E6D40  48 21 7C 1D */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 8021D780 001E6D40  48 21 7C 1D */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 8021D784 001E6D44  48 21 83 59 */	bl rand__Q32mm3mtl6MTRandFv
 /* 8021D788 001E6D48  38 E0 00 03 */	li r7, 3
 /* 8021D78C 001E6D4C  83 36 0E 1C */	lwz r25, 0xe1c(r22)
@@ -1911,7 +1911,7 @@
 /* 8021D7D8 001E6D98  B0 01 00 10 */	sth r0, 0x10(r1)
 /* 8021D7DC 001E6D9C  48 00 00 B0 */	b .L_8021D88C
 .L_8021D7E0:
-/* 8021D7E0 001E6DA0  48 21 7B BD */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 8021D7E0 001E6DA0  48 21 7B BD */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 8021D7E4 001E6DA4  2C 18 00 00 */	cmpwi r24, 0
 /* 8021D7E8 001E6DA8  41 82 00 18 */	beq .L_8021D800
 /* 8021D7EC 001E6DAC  48 21 82 F1 */	bl rand__Q32mm3mtl6MTRandFv
@@ -1923,7 +1923,7 @@
 /* 8021D800 001E6DC0  38 00 00 00 */	li r0, 0
 .L_8021D804:
 /* 8021D804 001E6DC4  7C 1B 07 74 */	extsb r27, r0
-/* 8021D808 001E6DC8  48 21 7B 95 */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 8021D808 001E6DC8  48 21 7B 95 */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 8021D80C 001E6DCC  48 21 82 D1 */	bl rand__Q32mm3mtl6MTRandFv
 /* 8021D810 001E6DD0  7C 03 EB D6 */	divw r0, r3, r29
 /* 8021D814 001E6DD4  38 C0 00 00 */	li r6, 0
@@ -2920,14 +2920,14 @@
 /* 8021E618 001E7BD8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8021E61C 001E7BDC  4B F3 9C E5 */	bl func_80158300
 /* 8021E620 001E7BE0  38 61 00 14 */	addi r3, r1, 0x14
-/* 8021E624 001E7BE4  4B F3 74 E5 */	bl func_80155B08
+/* 8021E624 001E7BE4  4B F3 74 E5 */	bl CItem_initItemImplInstances
 /* 8021E628 001E7BE8  81 83 00 00 */	lwz r12, 0(r3)
 /* 8021E62C 001E7BEC  38 81 00 14 */	addi r4, r1, 0x14
 /* 8021E630 001E7BF0  81 8C 00 1C */	lwz r12, 0x1c(r12)
 /* 8021E634 001E7BF4  7D 89 03 A6 */	mtctr r12
 /* 8021E638 001E7BF8  4E 80 04 21 */	bctrl 
 /* 8021E63C 001E7BFC  38 61 00 14 */	addi r3, r1, 0x14
-/* 8021E640 001E7C00  4B F3 74 C9 */	bl func_80155B08
+/* 8021E640 001E7C00  4B F3 74 C9 */	bl CItem_initItemImplInstances
 /* 8021E644 001E7C04  81 83 00 00 */	lwz r12, 0(r3)
 /* 8021E648 001E7C08  38 81 00 14 */	addi r4, r1, 0x14
 /* 8021E64C 001E7C0C  38 A0 00 01 */	li r5, 1
@@ -2940,7 +2940,7 @@
 /* 8021E668 001E7C28  3B A0 00 00 */	li r29, 0
 .L_8021E66C:
 /* 8021E66C 001E7C2C  38 61 00 14 */	addi r3, r1, 0x14
-/* 8021E670 001E7C30  4B F3 74 99 */	bl func_80155B08
+/* 8021E670 001E7C30  4B F3 74 99 */	bl CItem_initItemImplInstances
 /* 8021E674 001E7C34  81 83 00 00 */	lwz r12, 0(r3)
 /* 8021E678 001E7C38  38 81 00 14 */	addi r4, r1, 0x14
 /* 8021E67C 001E7C3C  57 A5 06 3E */	clrlwi r5, r29, 0x18
@@ -2949,7 +2949,7 @@
 /* 8021E688 001E7C48  7D 89 03 A6 */	mtctr r12
 /* 8021E68C 001E7C4C  4E 80 04 21 */	bctrl 
 /* 8021E690 001E7C50  38 61 00 14 */	addi r3, r1, 0x14
-/* 8021E694 001E7C54  4B F3 74 75 */	bl func_80155B08
+/* 8021E694 001E7C54  4B F3 74 75 */	bl CItem_initItemImplInstances
 /* 8021E698 001E7C58  81 83 00 00 */	lwz r12, 0(r3)
 /* 8021E69C 001E7C5C  38 81 00 14 */	addi r4, r1, 0x14
 /* 8021E6A0 001E7C60  57 A5 06 3E */	clrlwi r5, r29, 0x18
@@ -2961,7 +2961,7 @@
 /* 8021E6B8 001E7C78  28 1D 00 04 */	cmplwi r29, 4
 /* 8021E6BC 001E7C7C  41 80 FF B0 */	blt .L_8021E66C
 /* 8021E6C0 001E7C80  38 61 00 14 */	addi r3, r1, 0x14
-/* 8021E6C4 001E7C84  4B F3 74 45 */	bl func_80155B08
+/* 8021E6C4 001E7C84  4B F3 74 45 */	bl CItem_initItemImplInstances
 /* 8021E6C8 001E7C88  88 DE 2D A1 */	lbz r6, 0x2da1(r30)
 /* 8021E6CC 001E7C8C  38 81 00 14 */	addi r4, r1, 0x14
 /* 8021E6D0 001E7C90  88 1E 2D A2 */	lbz r0, 0x2da2(r30)
@@ -2977,7 +2977,7 @@
 /* 8021E6F8 001E7CB8  7D 89 03 A6 */	mtctr r12
 /* 8021E6FC 001E7CBC  4E 80 04 21 */	bctrl 
 /* 8021E700 001E7CC0  38 61 00 14 */	addi r3, r1, 0x14
-/* 8021E704 001E7CC4  4B F3 74 05 */	bl func_80155B08
+/* 8021E704 001E7CC4  4B F3 74 05 */	bl CItem_initItemImplInstances
 /* 8021E708 001E7CC8  88 DE 2D A1 */	lbz r6, 0x2da1(r30)
 /* 8021E70C 001E7CCC  38 81 00 14 */	addi r4, r1, 0x14
 /* 8021E710 001E7CD0  88 1E 2D A2 */	lbz r0, 0x2da2(r30)
@@ -4904,7 +4904,7 @@
 .L_80220164:
 /* 80220164 001E9724  83 C3 0E 1C */	lwz r30, 0xe1c(r3)
 /* 80220168 001E9728  8B 7E 00 00 */	lbz r27, 0(r30)
-/* 8022016C 001E972C  48 21 52 31 */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 8022016C 001E972C  48 21 52 31 */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 80220170 001E9730  2C 1B 00 00 */	cmpwi r27, 0
 /* 80220174 001E9734  41 82 00 18 */	beq .L_8022018C
 /* 80220178 001E9738  48 21 59 65 */	bl rand__Q32mm3mtl6MTRandFv
@@ -4916,7 +4916,7 @@
 /* 8022018C 001E974C  38 00 00 00 */	li r0, 0
 .L_80220190:
 /* 80220190 001E9750  7C 1F 07 74 */	extsb r31, r0
-/* 80220194 001E9754  48 21 52 09 */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 80220194 001E9754  48 21 52 09 */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 80220198 001E9758  48 21 59 45 */	bl rand__Q32mm3mtl6MTRandFv
 /* 8022019C 001E975C  7C 60 1E 70 */	srawi r0, r3, 3
 /* 802201A0 001E9760  7C 00 01 94 */	addze r0, r0
@@ -4929,7 +4929,7 @@
 /* 802201BC 001E977C  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 802201C0 001E9780  2C 00 00 02 */	cmpwi r0, 2
 /* 802201C4 001E9784  40 82 00 30 */	bne .L_802201F4
-/* 802201C8 001E9788  48 21 51 D5 */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 802201C8 001E9788  48 21 51 D5 */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 802201CC 001E978C  48 21 59 11 */	bl rand__Q32mm3mtl6MTRandFv
 /* 802201D0 001E9790  38 80 00 05 */	li r4, 5
 /* 802201D4 001E9794  7C 03 23 D6 */	divw r0, r3, r4
@@ -4978,12 +4978,12 @@
 /* 80220274 001E9834  8B 9D 00 00 */	lbz r28, 0(r29)
 /* 80220278 001E9838  48 00 00 AC */	b .L_80220324
 .L_8022027C:
-/* 8022027C 001E983C  48 21 51 21 */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 8022027C 001E983C  48 21 51 21 */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 80220280 001E9840  2C 1C 00 00 */	cmpwi r28, 0
 /* 80220284 001E9844  41 82 00 08 */	beq .L_8022028C
 /* 80220288 001E9848  48 21 58 55 */	bl rand__Q32mm3mtl6MTRandFv
 .L_8022028C:
-/* 8022028C 001E984C  48 21 51 11 */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 8022028C 001E984C  48 21 51 11 */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 80220290 001E9850  48 21 58 4D */	bl rand__Q32mm3mtl6MTRandFv
 /* 80220294 001E9854  7C 03 FB D6 */	divw r0, r3, r31
 /* 80220298 001E9858  7C 00 F9 D6 */	mullw r0, r0, r31
@@ -4995,7 +4995,7 @@
 /* 802202B0 001E9870  54 60 06 3E */	clrlwi r0, r3, 0x18
 /* 802202B4 001E9874  2C 00 00 07 */	cmpwi r0, 7
 /* 802202B8 001E9878  40 82 00 2C */	bne .L_802202E4
-/* 802202BC 001E987C  48 21 50 E1 */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 802202BC 001E987C  48 21 50 E1 */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 802202C0 001E9880  48 21 58 1D */	bl rand__Q32mm3mtl6MTRandFv
 /* 802202C4 001E9884  7C 03 FB D6 */	divw r0, r3, r31
 /* 802202C8 001E9888  7C 00 F9 D6 */	mullw r0, r0, r31
@@ -5138,7 +5138,7 @@
 /* 802204AC 001E9A6C  57 04 04 3E */	clrlwi r4, r24, 0x10
 /* 802204B0 001E9A70  4B F3 9A BD */	bl func_80159F6C
 /* 802204B4 001E9A74  38 61 00 0C */	addi r3, r1, 0xc
-/* 802204B8 001E9A78  4B F3 56 51 */	bl func_80155B08
+/* 802204B8 001E9A78  4B F3 56 51 */	bl CItem_initItemImplInstances
 /* 802204BC 001E9A7C  81 83 00 00 */	lwz r12, 0(r3)
 /* 802204C0 001E9A80  7F 65 DB 78 */	mr r5, r27
 /* 802204C4 001E9A84  38 81 00 0C */	addi r4, r1, 0xc
@@ -5283,7 +5283,7 @@
 /* 802206D0 001E9C90  54 18 06 3E */	clrlwi r24, r0, 0x18
 .L_802206D4:
 /* 802206D4 001E9C94  38 61 00 0C */	addi r3, r1, 0xc
-/* 802206D8 001E9C98  4B F3 54 31 */	bl func_80155B08
+/* 802206D8 001E9C98  4B F3 54 31 */	bl CItem_initItemImplInstances
 /* 802206DC 001E9C9C  81 83 00 00 */	lwz r12, 0(r3)
 /* 802206E0 001E9CA0  38 81 00 0C */	addi r4, r1, 0xc
 /* 802206E4 001E9CA4  57 05 06 3E */	clrlwi r5, r24, 0x18
@@ -5490,7 +5490,7 @@
 /* 802209B4 001E9F74  48 00 02 48 */	b .L_80220BFC
 .L_802209B8:
 /* 802209B8 001E9F78  7C BF 2B 78 */	mr r31, r5
-/* 802209BC 001E9F7C  48 21 49 E1 */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 802209BC 001E9F7C  48 21 49 E1 */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 802209C0 001E9F80  48 21 51 1D */	bl rand__Q32mm3mtl6MTRandFv
 /* 802209C4 001E9F84  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 802209C8 001E9F88  54 60 07 FE */	clrlwi r0, r3, 0x1f
@@ -5503,7 +5503,7 @@
 /* 802209E4 001E9FA4  54 1D 04 3E */	clrlwi r29, r0, 0x10
 /* 802209E8 001E9FA8  48 00 02 14 */	b .L_80220BFC
 .L_802209EC:
-/* 802209EC 001E9FAC  48 21 49 B1 */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 802209EC 001E9FAC  48 21 49 B1 */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 802209F0 001E9FB0  48 21 50 ED */	bl rand__Q32mm3mtl6MTRandFv
 /* 802209F4 001E9FB4  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 802209F8 001E9FB8  54 60 07 FE */	clrlwi r0, r3, 0x1f
@@ -5515,7 +5515,7 @@
 /* 80220A10 001E9FD0  88 63 05 F0 */	lbz r3, 0x5f0(r3)
 /* 80220A14 001E9FD4  4B F1 88 A1 */	bl func_801392B4
 /* 80220A18 001E9FD8  7C 7F 1B 78 */	mr r31, r3
-/* 80220A1C 001E9FDC  48 21 49 81 */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 80220A1C 001E9FDC  48 21 49 81 */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 80220A20 001E9FE0  48 21 50 BD */	bl rand__Q32mm3mtl6MTRandFv
 /* 80220A24 001E9FE4  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 80220A28 001E9FE8  54 60 07 FE */	clrlwi r0, r3, 0x1f
@@ -5528,7 +5528,7 @@
 /* 80220A44 001EA004  54 1D 04 3E */	clrlwi r29, r0, 0x10
 /* 80220A48 001EA008  48 00 01 B4 */	b .L_80220BFC
 .L_80220A4C:
-/* 80220A4C 001EA00C  48 21 49 51 */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 80220A4C 001EA00C  48 21 49 51 */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 80220A50 001EA010  48 21 50 8D */	bl rand__Q32mm3mtl6MTRandFv
 /* 80220A54 001EA014  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 80220A58 001EA018  54 60 07 FE */	clrlwi r0, r3, 0x1f
@@ -5540,7 +5540,7 @@
 /* 80220A70 001EA030  88 63 05 F0 */	lbz r3, 0x5f0(r3)
 /* 80220A74 001EA034  4B F1 88 41 */	bl func_801392B4
 /* 80220A78 001EA038  7C 7F 1B 78 */	mr r31, r3
-/* 80220A7C 001EA03C  48 21 49 21 */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 80220A7C 001EA03C  48 21 49 21 */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 80220A80 001EA040  48 21 50 5D */	bl rand__Q32mm3mtl6MTRandFv
 /* 80220A84 001EA044  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 80220A88 001EA048  54 60 07 FE */	clrlwi r0, r3, 0x1f
@@ -5554,7 +5554,7 @@
 /* 80220AA8 001EA068  48 00 01 54 */	b .L_80220BFC
 .L_80220AAC:
 /* 80220AAC 001EA06C  7C BF 2B 78 */	mr r31, r5
-/* 80220AB0 001EA070  48 21 48 ED */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 80220AB0 001EA070  48 21 48 ED */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 80220AB4 001EA074  48 21 50 29 */	bl rand__Q32mm3mtl6MTRandFv
 /* 80220AB8 001EA078  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 80220ABC 001EA07C  54 60 07 FE */	clrlwi r0, r3, 0x1f
@@ -5567,7 +5567,7 @@
 /* 80220AD8 001EA098  54 1D 04 3E */	clrlwi r29, r0, 0x10
 /* 80220ADC 001EA09C  48 00 01 20 */	b .L_80220BFC
 .L_80220AE0:
-/* 80220AE0 001EA0A0  48 21 48 BD */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 80220AE0 001EA0A0  48 21 48 BD */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 80220AE4 001EA0A4  48 21 4F F9 */	bl rand__Q32mm3mtl6MTRandFv
 /* 80220AE8 001EA0A8  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 80220AEC 001EA0AC  54 60 07 FE */	clrlwi r0, r3, 0x1f
@@ -5579,7 +5579,7 @@
 /* 80220B04 001EA0C4  88 63 05 F0 */	lbz r3, 0x5f0(r3)
 /* 80220B08 001EA0C8  4B F1 87 AD */	bl func_801392B4
 /* 80220B0C 001EA0CC  7C 7F 1B 78 */	mr r31, r3
-/* 80220B10 001EA0D0  48 21 48 8D */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 80220B10 001EA0D0  48 21 48 8D */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 80220B14 001EA0D4  48 21 4F C9 */	bl rand__Q32mm3mtl6MTRandFv
 /* 80220B18 001EA0D8  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 80220B1C 001EA0DC  54 60 07 FE */	clrlwi r0, r3, 0x1f
@@ -5592,7 +5592,7 @@
 /* 80220B38 001EA0F8  54 1D 04 3E */	clrlwi r29, r0, 0x10
 /* 80220B3C 001EA0FC  48 00 00 C0 */	b .L_80220BFC
 .L_80220B40:
-/* 80220B40 001EA100  48 21 48 5D */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 80220B40 001EA100  48 21 48 5D */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 80220B44 001EA104  48 21 4F 99 */	bl rand__Q32mm3mtl6MTRandFv
 /* 80220B48 001EA108  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 80220B4C 001EA10C  54 60 07 FE */	clrlwi r0, r3, 0x1f
@@ -5604,7 +5604,7 @@
 /* 80220B64 001EA124  88 63 05 F0 */	lbz r3, 0x5f0(r3)
 /* 80220B68 001EA128  4B F1 87 4D */	bl func_801392B4
 /* 80220B6C 001EA12C  7C 7F 1B 78 */	mr r31, r3
-/* 80220B70 001EA130  48 21 48 2D */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 80220B70 001EA130  48 21 48 2D */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 80220B74 001EA134  48 21 4F 69 */	bl rand__Q32mm3mtl6MTRandFv
 /* 80220B78 001EA138  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 80220B7C 001EA13C  54 60 07 FE */	clrlwi r0, r3, 0x1f
@@ -5617,7 +5617,7 @@
 /* 80220B98 001EA158  54 1D 04 3E */	clrlwi r29, r0, 0x10
 /* 80220B9C 001EA15C  48 00 00 60 */	b .L_80220BFC
 .L_80220BA0:
-/* 80220BA0 001EA160  48 21 47 FD */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 80220BA0 001EA160  48 21 47 FD */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 80220BA4 001EA164  48 21 4F 39 */	bl rand__Q32mm3mtl6MTRandFv
 /* 80220BA8 001EA168  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 80220BAC 001EA16C  54 60 07 FE */	clrlwi r0, r3, 0x1f
@@ -5629,7 +5629,7 @@
 /* 80220BC4 001EA184  88 63 05 F0 */	lbz r3, 0x5f0(r3)
 /* 80220BC8 001EA188  4B F1 86 ED */	bl func_801392B4
 /* 80220BCC 001EA18C  7C 7F 1B 78 */	mr r31, r3
-/* 80220BD0 001EA190  48 21 47 CD */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 80220BD0 001EA190  48 21 47 CD */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 80220BD4 001EA194  48 21 4F 09 */	bl rand__Q32mm3mtl6MTRandFv
 /* 80220BD8 001EA198  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 80220BDC 001EA19C  54 60 07 FE */	clrlwi r0, r3, 0x1f
@@ -6619,7 +6619,7 @@
 /* 80221A84 001EB044  4B F6 96 79 */	bl func_8018B0FC
 /* 80221A88 001EB048  38 61 00 28 */	addi r3, r1, 0x28
 /* 80221A8C 001EB04C  38 80 FF FF */	li r4, -1
-/* 80221A90 001EB050  4B FB 0F A9 */	bl __dt__801D2A38
+/* 80221A90 001EB050  4B FB 0F A9 */	bl __dt__CCur18
 /* 80221A94 001EB054  81 9F 0E 20 */	lwz r12, 0xe20(r31)
 /* 80221A98 001EB058  38 7F 0E 20 */	addi r3, r31, 0xe20
 /* 80221A9C 001EB05C  81 8C 00 08 */	lwz r12, 8(r12)
@@ -6634,7 +6634,7 @@
 /* 80221AC0 001EB080  4B F6 96 3D */	bl func_8018B0FC
 /* 80221AC4 001EB084  38 61 00 10 */	addi r3, r1, 0x10
 /* 80221AC8 001EB088  38 80 FF FF */	li r4, -1
-/* 80221ACC 001EB08C  4B FB 0F 6D */	bl __dt__801D2A38
+/* 80221ACC 001EB08C  4B FB 0F 6D */	bl __dt__CCur18
 /* 80221AD0 001EB090  81 9F 0E B4 */	lwz r12, 0xeb4(r31)
 /* 80221AD4 001EB094  38 7F 0E B4 */	addi r3, r31, 0xeb4
 /* 80221AD8 001EB098  81 8C 00 08 */	lwz r12, 8(r12)
@@ -7331,7 +7331,7 @@
 	.4byte __dt__CMCGetItemBox
 	.4byte 0x0780001B
 	.4byte 0x00000EB4
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001B
 	.4byte 0x00000E78
 	.4byte __dt__CSysWin
@@ -7340,7 +7340,7 @@
 	.4byte __dt__CScrollBar
 	.4byte 0x0780001B
 	.4byte 0x00000E20
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001B
 	.4byte 0x00000DFC
 	.4byte __dt__CMCEffCylinder
@@ -7390,7 +7390,7 @@
 	.4byte __dt__8021C540
 	.4byte 0x0780001B
 	.4byte 0x0000002C
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 	.4byte 0x0680001B
 	.4byte 0x00000008
 	.4byte __dt__80081C20
@@ -7466,13 +7466,13 @@
 	.4byte __dt__CMCGetItemBox
 	.4byte 0x8780001E
 	.4byte 0x00000EB4
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000ECC
 	.4byte __dt__CMCGetItemBox
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x8780001E
 	.4byte 0x00000E78
 	.4byte __dt__CSysWin
@@ -7481,7 +7481,7 @@
 	.4byte __dt__CMCGetItemBox
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000E78
 	.4byte __dt__CSysWin
@@ -7493,7 +7493,7 @@
 	.4byte __dt__CMCGetItemBox
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000E78
 	.4byte __dt__CSysWin
@@ -7502,13 +7502,13 @@
 	.4byte __dt__CScrollBar
 	.4byte 0x8780001E
 	.4byte 0x00000E20
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000ECC
 	.4byte __dt__CMCGetItemBox
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000E78
 	.4byte __dt__CSysWin
@@ -7517,7 +7517,7 @@
 	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x8780001E
 	.4byte 0x00000DFC
 	.4byte __dt__CMCEffCylinder
@@ -7526,7 +7526,7 @@
 	.4byte __dt__CMCGetItemBox
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000E78
 	.4byte __dt__CSysWin
@@ -7535,7 +7535,7 @@
 	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
 	.4byte __dt__CMCEffCylinder
@@ -7547,7 +7547,7 @@
 	.4byte __dt__CMCGetItemBox
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000E78
 	.4byte __dt__CSysWin
@@ -7556,7 +7556,7 @@
 	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
 	.4byte __dt__CMCEffCylinder
@@ -7571,7 +7571,7 @@
 	.4byte __dt__CMCGetItemBox
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000E78
 	.4byte __dt__CSysWin
@@ -7580,7 +7580,7 @@
 	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
 	.4byte __dt__CMCEffCylinder
@@ -7598,7 +7598,7 @@
 	.4byte __dt__CMCGetItemBox
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000E78
 	.4byte __dt__CSysWin
@@ -7607,7 +7607,7 @@
 	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
 	.4byte __dt__CMCEffCylinder
@@ -7628,7 +7628,7 @@
 	.4byte __dt__CMCGetItemBox
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000E78
 	.4byte __dt__CSysWin
@@ -7637,7 +7637,7 @@
 	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
 	.4byte __dt__CMCEffCylinder
@@ -7661,7 +7661,7 @@
 	.4byte __dt__CMCGetItemBox
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000E78
 	.4byte __dt__CSysWin
@@ -7670,7 +7670,7 @@
 	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
 	.4byte __dt__CMCEffCylinder
@@ -7697,7 +7697,7 @@
 	.4byte __dt__CMCGetItemBox
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000E78
 	.4byte __dt__CSysWin
@@ -7706,7 +7706,7 @@
 	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
 	.4byte __dt__CMCEffCylinder
@@ -7736,7 +7736,7 @@
 	.4byte __dt__CMCGetItemBox
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000E78
 	.4byte __dt__CSysWin
@@ -7745,7 +7745,7 @@
 	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
 	.4byte __dt__CMCEffCylinder
@@ -7778,7 +7778,7 @@
 	.4byte __dt__CMCGetItemBox
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000E78
 	.4byte __dt__CSysWin
@@ -7787,7 +7787,7 @@
 	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
 	.4byte __dt__CMCEffCylinder
@@ -7823,7 +7823,7 @@
 	.4byte __dt__CMCGetItemBox
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000E78
 	.4byte __dt__CSysWin
@@ -7832,7 +7832,7 @@
 	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
 	.4byte __dt__CMCEffCylinder
@@ -7871,7 +7871,7 @@
 	.4byte __dt__CMCGetItemBox
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000E78
 	.4byte __dt__CSysWin
@@ -7880,7 +7880,7 @@
 	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
 	.4byte __dt__CMCEffCylinder
@@ -7922,7 +7922,7 @@
 	.4byte __dt__CMCGetItemBox
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000E78
 	.4byte __dt__CSysWin
@@ -7931,7 +7931,7 @@
 	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
 	.4byte __dt__CMCEffCylinder
@@ -7976,7 +7976,7 @@
 	.4byte __dt__CMCGetItemBox
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000E78
 	.4byte __dt__CSysWin
@@ -7985,7 +7985,7 @@
 	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
 	.4byte __dt__CMCEffCylinder
@@ -8033,7 +8033,7 @@
 	.4byte __dt__CMCGetItemBox
 	.4byte 0x0780001E
 	.4byte 0x00000EB4
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000E78
 	.4byte __dt__CSysWin
@@ -8042,7 +8042,7 @@
 	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000E20
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000DFC
 	.4byte __dt__CMCEffCylinder

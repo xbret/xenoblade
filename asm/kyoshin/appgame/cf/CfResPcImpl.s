@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8018C9C4, global
+.fn __ct__cf_CfResPcImpl, global
 /* 8018C9C4 00155F84  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8018C9C8 00155F88  7C 08 02 A6 */	mflr r0
 /* 8018C9CC 00155F8C  3C A0 80 53 */	lis r5, __vt__cf_CfResPcImpl@ha
@@ -42,7 +42,7 @@
 /* 8018CA50 00156010  7C 08 03 A6 */	mtlr r0
 /* 8018CA54 00156014  38 21 00 10 */	addi r1, r1, 0x10
 /* 8018CA58 00156018  4E 80 00 20 */	blr 
-.endfn func_8018C9C4
+.endfn __ct__cf_CfResPcImpl
 
 .fn __dt__cf_CfResPcImpl, global
 /* 8018CA5C 0015601C  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -2497,7 +2497,7 @@
 /* 8018ED64 00158324  38 61 00 08 */	addi r3, r1, 8
 /* 8018ED68 00158328  80 9A 00 00 */	lwz r4, 0(r26)
 /* 8018ED6C 0015832C  80 84 07 04 */	lwz r4, 0x704(r4)
-/* 8018ED70 00158330  4B EC 96 A5 */	bl func_80058414
+/* 8018ED70 00158330  4B EC 96 A5 */	bl __ct__CMcaFile
 /* 8018ED74 00158334  4B ED 32 65 */	bl func_80061FD8
 /* 8018ED78 00158338  80 81 00 14 */	lwz r4, 0x14(r1)
 /* 8018ED7C 0015833C  38 A1 00 18 */	addi r5, r1, 0x18
@@ -3789,7 +3789,7 @@
 
 .obj "@eti_80029D8C", local
 .hidden "@eti_80029D8C"
-	.4byte func_8018C9C4
+	.4byte __ct__cf_CfResPcImpl
 	.4byte 0x00000098
 	.4byte "@etb_8000EFE0"
 .endobj "@eti_80029D8C"

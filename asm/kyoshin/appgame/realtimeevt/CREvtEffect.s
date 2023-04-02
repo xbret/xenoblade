@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_80184B14, global
+.fn __ct__CREvtEffect, global
 /* 80184B14 0014E0D4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80184B18 0014E0D8  7C 08 02 A6 */	mflr r0
 /* 80184B1C 0014E0DC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -78,9 +78,9 @@
 /* 80184C30 0014E1F0  7C 08 03 A6 */	mtlr r0
 /* 80184C34 0014E1F4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80184C38 0014E1F8  4E 80 00 20 */	blr
-.endfn func_80184B14
+.endfn __ct__CREvtEffect
 
-.fn func_80184C3C, global
+.fn __ct__80184C3C, global
 /* 80184C3C 0014E1FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80184C40 0014E200  7C 08 02 A6 */	mflr r0
 /* 80184C44 0014E204  2C 03 00 00 */	cmpwi r3, 0
@@ -142,7 +142,7 @@
 /* 80184D0C 0014E2CC  7C 08 03 A6 */	mtlr r0
 /* 80184D10 0014E2D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80184D14 0014E2D4  4E 80 00 20 */	blr 
-.endfn func_80184C3C
+.endfn __ct__80184C3C
 
 .fn func_80184D18, global
 /* 80184D18 0014E2D8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -819,7 +819,7 @@
 
 .fn func_80185688, global
 /* 80185688 0014EC48  38 63 FF EC */	addi r3, r3, -20
-/* 8018568C 0014EC4C  4B FF F5 B0 */	b func_80184C3C
+/* 8018568C 0014EC4C  4B FF F5 B0 */	b __ct__80184C3C
 .endfn func_80185688
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -845,7 +845,7 @@
 .obj __vt__cf_CREvtEffect, global
 	.4byte __RTTI__cf_CREvtEffect
 	.4byte 0
-	.4byte func_80184C3C
+	.4byte __ct__80184C3C
 	.4byte func_8018567C
 	.4byte func_80184D18
 	.4byte func_80185674
@@ -1038,14 +1038,14 @@
 
 .obj "@eti_80029840", local
 .hidden "@eti_80029840"
-	.4byte func_80184B14
+	.4byte __ct__CREvtEffect
 	.4byte 0x00000128
 	.4byte "@etb_8000E8E8"
 .endobj "@eti_80029840"
 
 .obj "@eti_8002984C", local
 .hidden "@eti_8002984C"
-	.4byte func_80184C3C
+	.4byte __ct__80184C3C
 	.4byte 0x000000DC
 	.4byte "@etb_8000E910"
 .endobj "@eti_8002984C"

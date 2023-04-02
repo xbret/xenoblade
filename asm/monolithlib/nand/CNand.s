@@ -50,7 +50,7 @@
 .endfn __dt__CNRequest
 
 
-.fn func_804DA154, global
+.fn __ct__CNand, global
 /* 804DA154 004A3714  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DA158 004A3718  7C 08 02 A6 */	mflr r0
 /* 804DA15C 004A371C  3C C0 80 57 */	lis r6, __vt__CNand@ha
@@ -75,7 +75,7 @@
 /* 804DA1A8 004A3768  7C 08 03 A6 */	mtlr r0
 /* 804DA1AC 004A376C  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DA1B0 004A3770  4E 80 00 20 */	blr 
-.endfn func_804DA154
+.endfn __ct__CNand
 
 .fn func_804DA1B4, global
 /* 804DA1B4 004A3774  38 80 00 00 */	li r4, 0
@@ -319,9 +319,9 @@
 .endfn func_804DA47C
 
 .fn sinit_804DA4C0, local
-/* 804DA4C0 004A3A80  3C 60 80 66 */	lis r3, lbl_806625C0@ha
-/* 804DA4C4 004A3A84  38 63 25 C0 */	addi r3, r3, lbl_806625C0@l
-/* 804DA4C8 004A3A88  4B FF FC 8C */	b func_804DA154
+/* 804DA4C0 004A3A80  3C 60 80 66 */	lis r3, CNand_instance@ha
+/* 804DA4C4 004A3A84  38 63 25 C0 */	addi r3, r3, CNand_instance@l
+/* 804DA4C8 004A3A88  4B FF FC 8C */	b __ct__CNand
 .endfn sinit_804DA4C0
 
 
@@ -388,9 +388,9 @@
 
 
 
-.obj lbl_806625C0, global
+.obj CNand_instance, global
 	.skip 0x130
-.endobj lbl_806625C0
+.endobj CNand_instance
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 
@@ -476,7 +476,7 @@
 
 .obj "@eti_800385DC", local
 .hidden "@eti_800385DC"
-	.4byte func_804DA154
+	.4byte __ct__CNand
 	.4byte 0x00000060
 	.4byte "@etb_80020660"
 .endobj "@eti_800385DC"

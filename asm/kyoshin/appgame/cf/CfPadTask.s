@@ -1166,7 +1166,7 @@
 /* 801C28C0 0018BE80  4E 80 00 20 */	blr 
 .endfn func_801C20FC
 
-.fn func_801C28C4, global
+.fn __ct__cf_CfPadTask, global
 /* 801C28C4 0018BE84  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801C28C8 0018BE88  7C 08 02 A6 */	mflr r0
 /* 801C28CC 0018BE8C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1228,7 +1228,7 @@
 /* 801C29A4 0018BF64  7C 08 03 A6 */	mtlr r0
 /* 801C29A8 0018BF68  38 21 00 10 */	addi r1, r1, 0x10
 /* 801C29AC 0018BF6C  4E 80 00 20 */	blr
-.endfn func_801C28C4
+.endfn __ct__cf_CfPadTask
 
 .fn func_801C29B0, global
 /* 801C29B0 0018BF70  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1797,7 +1797,7 @@
 
 .obj "@eti_8002B094", local
 .hidden "@eti_8002B094"
-	.4byte func_801C28C4
+	.4byte __ct__cf_CfPadTask
 	.4byte 0x000000EC
 	.4byte "@etb_800106BC"
 .endobj "@eti_8002B094"

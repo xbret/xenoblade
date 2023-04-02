@@ -14,7 +14,7 @@
 /* 802759E8 0023EFA8  41 82 00 38 */	beq .L_80275A20
 /* 802759EC 0023EFAC  38 80 FF FF */	li r4, -1
 /* 802759F0 0023EFB0  38 63 00 60 */	addi r3, r3, 0x60
-/* 802759F4 0023EFB4  48 1E 9B 8D */	bl __dt__8045F580
+/* 802759F4 0023EFB4  48 1E 9B 8D */	bl __dt__UnkClass_8045F564
 /* 802759F8 0023EFB8  2C 1E 00 00 */	cmpwi r30, 0
 /* 802759FC 0023EFBC  41 82 00 14 */	beq .L_80275A10
 /* 80275A00 0023EFC0  41 82 00 10 */	beq .L_80275A10
@@ -401,7 +401,7 @@
 /* 80275F70 0023F530  4E 80 00 20 */	blr 
 .endfn func_80275E7C
 
-.fn func_80275F74, global
+.fn __ct__CMenuLvUp, global
 /* 80275F74 0023F534  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80275F78 0023F538  7C 08 02 A6 */	mflr r0
 /* 80275F7C 0023F53C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -453,7 +453,7 @@
 /* 80276030 0023F5F0  90 BF 00 10 */	stw r5, 0x10(r31)
 /* 80276034 0023F5F4  90 9F 00 58 */	stw r4, 0x58(r31)
 /* 80276038 0023F5F8  90 1F 00 5C */	stw r0, 0x5c(r31)
-/* 8027603C 0023F5FC  48 1E 95 29 */	bl __ct__8045F564
+/* 8027603C 0023F5FC  48 1E 95 29 */	bl __ct__UnkClass_8045F564
 /* 80276040 0023F600  93 9F 00 70 */	stw r28, 0x70(r31)
 /* 80276044 0023F604  38 DF 00 74 */	addi r6, r31, 0x74
 /* 80276048 0023F608  38 7F 01 1C */	addi r3, r31, 0x11c
@@ -528,7 +528,7 @@
 /* 8027613C 0023F6FC  7C 08 03 A6 */	mtlr r0
 /* 80276140 0023F700  38 21 00 20 */	addi r1, r1, 0x20
 /* 80276144 0023F704  4E 80 00 20 */	blr 
-.endfn func_80275F74
+.endfn __ct__CMenuLvUp
 
 .fn func_80276148, global
 /* 80276148 0023F708  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1326,7 +1326,7 @@
 	.4byte func_80275A3C
 	.4byte func_80275BE4
 	.4byte func_80275CC0
-	.4byte func_80101FB8
+	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuLvUp
 	.4byte 0xFFFFFFA8
@@ -1447,7 +1447,7 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000060
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 	.4byte 0x0680001E
 	.4byte 0x0000005C
 	.4byte __dt__IScnRender
@@ -1576,7 +1576,7 @@
 
 .obj "@eti_80030CC8", local
 .hidden "@eti_80030CC8"
-	.4byte func_80275F74
+	.4byte __ct__CMenuLvUp
 	.4byte 0x000001D4
 	.4byte "@etb_80018654"
 .endobj "@eti_80030CC8"

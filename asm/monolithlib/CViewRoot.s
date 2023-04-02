@@ -305,7 +305,7 @@
 /* 804434F8 0040CAB8  4E 80 00 20 */	blr 
 .endfn CViewRoot_WorkThreadEvent5
 
-.fn func_804434FC, global
+.fn __ct__804434FC, global
 /* 804434FC 0040CABC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80443500 0040CAC0  7C 08 02 A6 */	mflr r0
 /* 80443504 0040CAC4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -443,7 +443,7 @@
 /* 8044370C 0040CCCC  7C 08 03 A6 */	mtlr r0
 /* 80443710 0040CCD0  38 21 00 20 */	addi r1, r1, 0x20
 /* 80443714 0040CCD4  4E 80 00 20 */	blr 
-.endfn func_804434FC
+.endfn __ct__804434FC
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -601,7 +601,7 @@
 
 .obj "@eti_800342F8", local
 .hidden "@eti_800342F8"
-	.4byte func_804434FC
+	.4byte __ct__804434FC
 	.4byte 0x0000021C
 	.4byte "@etb_8001C6D8"
 .endobj "@eti_800342F8"

@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_802293F0, global
+.fn __ct__CQstLogInfo, global
 /* 802293F0 001F29B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802293F4 001F29B4  7C 08 02 A6 */	mflr r0
 /* 802293F8 001F29B8  3C 80 80 54 */	lis r4, __vt__CQstLogInfo@ha
@@ -12,7 +12,7 @@
 /* 80229408 001F29C8  7C 7F 1B 78 */	mr r31, r3
 /* 8022940C 001F29CC  90 83 00 00 */	stw r4, 0(r3)
 /* 80229410 001F29D0  38 63 00 04 */	addi r3, r3, 4
-/* 80229414 001F29D4  48 23 61 51 */	bl __ct__8045F564
+/* 80229414 001F29D4  48 23 61 51 */	bl __ct__UnkClass_8045F564
 /* 80229418 001F29D8  38 80 00 00 */	li r4, 0
 /* 8022941C 001F29DC  38 00 00 01 */	li r0, 1
 /* 80229420 001F29E0  90 9F 00 14 */	stw r4, 0x14(r31)
@@ -34,7 +34,7 @@
 /* 80229460 001F2A20  7C 08 03 A6 */	mtlr r0
 /* 80229464 001F2A24  38 21 00 10 */	addi r1, r1, 0x10
 /* 80229468 001F2A28  4E 80 00 20 */	blr 
-.endfn func_802293F0
+.endfn __ct__CQstLogInfo
 
 .fn __dt__CQstLogInfo, global
 /* 8022946C 001F2A2C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -47,7 +47,7 @@
 /* 80229488 001F2A48  41 82 00 20 */	beq .L_802294A8
 /* 8022948C 001F2A4C  38 80 FF FF */	li r4, -1
 /* 80229490 001F2A50  38 63 00 04 */	addi r3, r3, 4
-/* 80229494 001F2A54  48 23 60 ED */	bl __dt__8045F580
+/* 80229494 001F2A54  48 23 60 ED */	bl __dt__UnkClass_8045F564
 /* 80229498 001F2A58  2C 1F 00 00 */	cmpwi r31, 0
 /* 8022949C 001F2A5C  40 81 00 0C */	ble .L_802294A8
 /* 802294A0 001F2A60  7F C3 F3 78 */	mr r3, r30
@@ -3065,7 +3065,7 @@
 
 .obj "@eti_8002E3DC", local
 .hidden "@eti_8002E3DC"
-	.4byte func_802293F0
+	.4byte __ct__CQstLogInfo
 	.4byte 0x0000007C
 	.4byte "@etb_8001550C"
 .endobj "@eti_8002E3DC"

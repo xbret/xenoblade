@@ -361,7 +361,7 @@
 /* 804C10CC 0048A68C  4B F7 39 91 */	bl heap_malloc
 /* 804C10D0 0048A690  2C 03 00 00 */	cmpwi r3, 0
 /* 804C10D4 0048A694  41 82 00 08 */	beq .L_804C10DC
-/* 804C10D8 0048A698  4B FD 7B 95 */	bl func_80498C6C
+/* 804C10D8 0048A698  4B FD 7B 95 */	bl __ct__CScnBlend
 .L_804C10DC:
 /* 804C10DC 0048A69C  90 7F 00 28 */	stw r3, 0x28(r31)
 /* 804C10E0 0048A6A0  80 7F 00 04 */	lwz r3, 4(r31)
@@ -8854,18 +8854,18 @@
 
 
 .obj lbl_80527DE8, global
-	.4byte 0x00000004
-	.4byte 0x00000005
-	.4byte 0x00000006
+	.4byte 4
+	.4byte 5
+	.4byte 6
 	.4byte 0
 .endobj lbl_80527DE8
 
 
 .obj lbl_80527DF8, global
-	.4byte 0x00000004
-	.4byte 0x00000008
-	.4byte 0x00000010
-	.4byte 0x00000020
+	.4byte 0x4
+	.4byte 0x8
+	.4byte 0x10
+	.4byte 0x20
 .endobj lbl_80527DF8
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60

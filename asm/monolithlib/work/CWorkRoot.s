@@ -28,9 +28,9 @@
 /* 80443B60 0040D120  38 7E 01 C4 */	addi r3, r30, 0x1c4
 /* 80443B64 0040D124  38 84 F1 B0 */	addi r4, r4, __vt___unnamed_CWorkRoot_cpp_CWorkRootThread@l
 /* 80443B68 0040D128  90 9E 00 00 */	stw r4, 0(r30)
-/* 80443B6C 0040D12C  48 00 00 55 */	bl func_80443BC0
+/* 80443B6C 0040D12C  48 00 00 55 */	bl __ct__reslist_CWorkThread
 /* 80443B70 0040D130  38 7E 01 E4 */	addi r3, r30, 0x1e4
-/* 80443B74 0040D134  48 00 00 4D */	bl func_80443BC0
+/* 80443B74 0040D134  48 00 00 4D */	bl __ct__reslist_CWorkThread
 /* 80443B78 0040D138  80 9E 00 54 */	lwz r4, 0x54(r30)
 /* 80443B7C 0040D13C  38 7E 01 C4 */	addi r3, r30, 0x1c4
 /* 80443B80 0040D140  38 A0 00 10 */	li r5, 0x10
@@ -52,7 +52,7 @@
 /* 80443BBC 0040D17C  4E 80 00 20 */	blr 
 .endfn __ct__CWorkRootThread
 
-.fn func_80443BC0, global
+.fn __ct__reslist_CWorkThread, global
 /* 80443BC0 0040D180  3C 80 80 57 */	lis r4, __vt___reslist_base_CWorkThread@ha
 /* 80443BC4 0040D184  38 00 00 00 */	li r0, 0
 /* 80443BC8 0040D188  38 84 EA 4C */	addi r4, r4, __vt___reslist_base_CWorkThread@l
@@ -68,7 +68,7 @@
 /* 80443BF0 0040D1B0  90 A5 00 04 */	stw r5, 4(r5)
 /* 80443BF4 0040D1B4  90 83 00 00 */	stw r4, 0(r3)
 /* 80443BF8 0040D1B8  4E 80 00 20 */	blr 
-.endfn func_80443BC0
+.endfn __ct__reslist_CWorkThread
 
 .fn func_80443BFC, global
 /* 80443BFC 0040D1BC  80 83 00 04 */	lwz r4, 4(r3)

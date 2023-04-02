@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_802088E0, global
+.fn __ct__cf_CfGimmick, global
 /* 802088E0 001D1EA0  3C 80 80 54 */	lis r4, __vt__cf_CfGimmick@ha
 /* 802088E4 001D1EA4  38 00 00 00 */	li r0, 0
 /* 802088E8 001D1EA8  38 84 8F FC */	addi r4, r4, __vt__cf_CfGimmick@l
@@ -22,7 +22,7 @@
 /* 80208920 001D1EE0  98 03 00 70 */	stb r0, 0x70(r3)
 /* 80208924 001D1EE4  90 03 00 74 */	stw r0, 0x74(r3)
 /* 80208928 001D1EE8  4E 80 00 20 */	blr 
-.endfn func_802088E0
+.endfn __ct__cf_CfGimmick
 
 .fn __dt__cf_CfGimmick, global
 /* 8020892C 001D1EEC  94 21 FF F0 */	stwu r1, -0x10(r1)

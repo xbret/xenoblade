@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_80124B80, global
+.fn __ct__CSysWinSelect, global
 /* 80124B80 000EE140  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80124B84 000EE144  7C 08 02 A6 */	mflr r0
 /* 80124B88 000EE148  90 01 00 34 */	stw r0, 0x34(r1)
@@ -93,7 +93,7 @@
 /* 80124CC4 000EE284  7C 08 03 A6 */	mtlr r0
 /* 80124CC8 000EE288  38 21 00 30 */	addi r1, r1, 0x30
 /* 80124CCC 000EE28C  4E 80 00 20 */	blr
-.endfn func_80124B80
+.endfn __ct__CSysWinSelect
 
 .fn __dt__CSysWinSelect, global
 /* 80124CD0 000EE290  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -107,7 +107,7 @@
 /* 80124CF0 000EE2B0  41 82 00 44 */	beq .L_80124D34
 /* 80124CF4 000EE2B4  38 80 FF FF */	li r4, -1
 /* 80124CF8 000EE2B8  38 63 00 B4 */	addi r3, r3, 0xb4
-/* 80124CFC 000EE2BC  48 0A DD 3D */	bl __dt__801D2A38
+/* 80124CFC 000EE2BC  48 0A DD 3D */	bl __dt__CCur18
 /* 80124D00 000EE2C0  38 7E 00 78 */	addi r3, r30, 0x78
 /* 80124D04 000EE2C4  38 80 FF FF */	li r4, -1
 /* 80124D08 000EE2C8  48 10 69 99 */	bl __dt__CSysWin
@@ -170,7 +170,7 @@
 /* 80124DD4 000EE394  98 1F 00 C8 */	stb r0, 0xc8(r31)
 /* 80124DD8 000EE398  88 01 00 1D */	lbz r0, 0x1d(r1)
 /* 80124DDC 000EE39C  98 1F 00 C9 */	stb r0, 0xc9(r31)
-/* 80124DE0 000EE3A0  48 0A DC 59 */	bl __dt__801D2A38
+/* 80124DE0 000EE3A0  48 0A DC 59 */	bl __dt__CCur18
 /* 80124DE4 000EE3A4  81 9F 00 B4 */	lwz r12, 0xb4(r31)
 /* 80124DE8 000EE3A8  38 7F 00 B4 */	addi r3, r31, 0xb4
 /* 80124DEC 000EE3AC  81 8C 00 08 */	lwz r12, 8(r12)
@@ -381,7 +381,7 @@
 /* 801250C4 000EE684  7F A5 EB 78 */	mr r5, r29
 /* 801250C8 000EE688  7F C6 F3 78 */	mr r6, r30
 /* 801250CC 000EE68C  7F E7 FB 78 */	mr r7, r31
-/* 801250D0 000EE690  4B FF FA B1 */	bl func_80124B80
+/* 801250D0 000EE690  4B FF FA B1 */	bl __ct__CSysWinSelect
 .L_801250D4:
 /* 801250D4 000EE694  90 6D A7 54 */	stw r3, lbl_806668D4@sda21(r13)
 /* 801250D8 000EE698  7F 64 DB 78 */	mr r4, r27
@@ -598,10 +598,10 @@
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x000000B4
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x000000B4
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000078
 	.4byte __dt__CSysWin
@@ -665,7 +665,7 @@
 
 .obj "@eti_800270B0", local
 .hidden "@eti_800270B0"
-	.4byte func_80124B80
+	.4byte __ct__CSysWinSelect
 	.4byte 0x00000150
 	.4byte "@etb_8000BE54"
 .endobj "@eti_800270B0"

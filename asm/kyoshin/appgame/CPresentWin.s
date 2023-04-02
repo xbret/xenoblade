@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8022D56C, global
+.fn __ct__CPresentWin, global
 /* 8022D56C 001F6B2C  3C A0 80 54 */	lis r5, __vt__CPresentWin@ha
 /* 8022D570 001F6B30  38 80 00 00 */	li r4, 0
 /* 8022D574 001F6B34  38 A5 9E 90 */	addi r5, r5, __vt__CPresentWin@l
@@ -29,7 +29,7 @@
 /* 8022D5C8 001F6B88  98 03 00 38 */	stb r0, 0x38(r3)
 /* 8022D5CC 001F6B8C  98 83 00 41 */	stb r4, 0x41(r3)
 /* 8022D5D0 001F6B90  4E 80 00 20 */	blr 
-.endfn func_8022D56C
+.endfn __ct__CPresentWin
 
 .fn __dt__CPresentWin, global
 /* 8022D5D4 001F6B94  94 21 FF F0 */	stwu r1, -0x10(r1)

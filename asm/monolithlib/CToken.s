@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8043A984, global
+.fn __ct__CToken, global
 /* 8043A984 00403F44  3C 80 80 57 */	lis r4, __vt__CToken@ha
 /* 8043A988 00403F48  38 00 00 00 */	li r0, 0
 /* 8043A98C 00403F4C  38 84 ED A4 */	addi r4, r4, __vt__CToken@l
@@ -25,7 +25,7 @@
 /* 8043A9D0 00403F90  90 03 11 3C */	stw r0, 0x113c(r3)
 /* 8043A9D4 00403F94  90 03 11 40 */	stw r0, 0x1140(r3)
 /* 8043A9D8 00403F98  4E 80 00 20 */	blr 
-.endfn func_8043A984
+.endfn __ct__CToken
 
 .fn __dt__CToken, global
 /* 8043A9DC 00403F9C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1354,17 +1354,17 @@
 .balign 8
 
 .obj lbl_80525E70, global
-	.4byte 0x00000004
-	.4byte 0x00000002
-	.4byte 0x00000002
-	.4byte 0x00000002
-	.4byte 0x00000003
-	.4byte 0x00000003
-	.4byte 0x00000003
-	.4byte 0x00000003
-	.4byte 0x00000003
-	.4byte 0x00000005
-	.4byte 0x00000002
+	.4byte 4
+	.4byte 2
+	.4byte 2
+	.4byte 2
+	.4byte 3
+	.4byte 3
+	.4byte 3
+	.4byte 3
+	.4byte 3
+	.4byte 5
+	.4byte 2
 	.4byte 0
 .endobj lbl_80525E70
 

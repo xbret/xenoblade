@@ -75,12 +75,12 @@
 /* 801FBEC4 001C5484  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801FBEC8 001C5488  7C 7F 1B 78 */	mr r31, r3
 /* 801FBECC 001C548C  38 63 00 0C */	addi r3, r3, 0xc
-/* 801FBED0 001C5490  4B E5 E5 9D */	bl func_8005A46C
-/* 801FBED4 001C5494  3C 80 80 06 */	lis r4, func_8005A46C@ha
+/* 801FBED0 001C5490  4B E5 E5 9D */	bl __ct__cf_CActParamAnimGame
+/* 801FBED4 001C5494  3C 80 80 06 */	lis r4, __ct__cf_CActParamAnimGame@ha
 /* 801FBED8 001C5498  3C A0 80 06 */	lis r5, __dt__cf_CActParamAnimGame@ha
 /* 801FBEDC 001C549C  38 7F 05 50 */	addi r3, r31, 0x550
 /* 801FBEE0 001C54A0  38 C0 05 3C */	li r6, 0x53c
-/* 801FBEE4 001C54A4  38 84 A4 6C */	addi r4, r4, func_8005A46C@l
+/* 801FBEE4 001C54A4  38 84 A4 6C */	addi r4, r4, __ct__cf_CActParamAnimGame@l
 /* 801FBEE8 001C54A8  38 A5 A4 CC */	addi r5, r5, __dt__cf_CActParamAnimGame@l
 /* 801FBEEC 001C54AC  38 E0 00 02 */	li r7, 2
 /* 801FBEF0 001C54B0  48 0B DC 11 */	bl __construct_array
@@ -828,7 +828,7 @@
 /* 801FC94C 001C5F0C  4E 80 04 21 */	bctrl 
 /* 801FC950 001C5F10  7C 64 1B 78 */	mr r4, r3
 /* 801FC954 001C5F14  38 61 00 20 */	addi r3, r1, 0x20
-/* 801FC958 001C5F18  4B E5 BA BD */	bl func_80058414
+/* 801FC958 001C5F18  4B E5 BA BD */	bl __ct__CMcaFile
 /* 801FC95C 001C5F1C  80 78 00 04 */	lwz r3, 4(r24)
 /* 801FC960 001C5F20  38 BF 00 08 */	addi r5, r31, 8
 /* 801FC964 001C5F24  80 81 00 2C */	lwz r4, 0x2c(r1)

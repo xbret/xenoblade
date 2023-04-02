@@ -111,7 +111,7 @@
 /* 8011D4B0 000E6A70  90 9F 00 58 */	stw r4, 0x58(r31)
 /* 8011D4B4 000E6A74  90 1F 00 5C */	stw r0, 0x5c(r31)
 /* 8011D4B8 000E6A78  93 9F 00 60 */	stw r28, 0x60(r31)
-/* 8011D4BC 000E6A7C  48 34 20 A9 */	bl __ct__8045F564
+/* 8011D4BC 000E6A7C  48 34 20 A9 */	bl __ct__UnkClass_8045F564
 /* 8011D4C0 000E6A80  39 1F 00 94 */	addi r8, r31, 0x94
 /* 8011D4C4 000E6A84  38 7F 02 74 */	addi r3, r31, 0x274
 /* 8011D4C8 000E6A88  80 A1 00 20 */	lwz r5, 0x20(r1)
@@ -455,7 +455,7 @@
 /* 8011D9E0 000E6FA0  41 82 00 38 */	beq .L_8011DA18
 /* 8011D9E4 000E6FA4  38 80 FF FF */	li r4, -1
 /* 8011D9E8 000E6FA8  38 63 00 64 */	addi r3, r3, 0x64
-/* 8011D9EC 000E6FAC  48 34 1B 95 */	bl __dt__8045F580
+/* 8011D9EC 000E6FAC  48 34 1B 95 */	bl __dt__UnkClass_8045F564
 /* 8011D9F0 000E6FB0  2C 1E 00 00 */	cmpwi r30, 0
 /* 8011D9F4 000E6FB4  41 82 00 14 */	beq .L_8011DA08
 /* 8011D9F8 000E6FB8  41 82 00 10 */	beq .L_8011DA08
@@ -480,7 +480,7 @@
 #CArrow3D start?
 
 
-.fn func_8011DA34, global
+.fn __ct__CArrow3D, global
 /* 8011DA34 000E6FF4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8011DA38 000E6FF8  7C 08 02 A6 */	mflr r0
 /* 8011DA3C 000E6FFC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -592,7 +592,7 @@
 /* 8011DBD4 000E7194  7C 08 03 A6 */	mtlr r0
 /* 8011DBD8 000E7198  38 21 00 20 */	addi r1, r1, 0x20
 /* 8011DBDC 000E719C  4E 80 00 20 */	blr 
-.endfn func_8011DA34
+.endfn __ct__CArrow3D
 
 .fn __dt__CTTask_CArrow3D, global
 /* 8011DBE0 000E71A0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -5716,10 +5716,10 @@
 	.4byte 0
 	.4byte __dt__CMenuSymbolMark
 	.4byte CChildListNode_Reset
-	.4byte func_8011DA34
+	.4byte __ct__CArrow3D
 	.4byte func_8011DC38
 	.4byte func_8011DD04
-	.4byte func_80101FB8
+	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuSymbolMark
 	.4byte 0xFFFFFFA8
@@ -6019,7 +6019,7 @@
 	.4byte 0x00000000
 	.4byte 0x0780001F
 	.4byte 0x00000064
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 	.4byte 0x0680001F
 	.4byte 0x0000005C
 	.4byte __dt__IScnRender
@@ -6039,7 +6039,7 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000064
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 	.4byte 0x0680001E
 	.4byte 0x0000005C
 	.4byte __dt__IScnRender
@@ -6230,7 +6230,7 @@
 
 .obj "@eti_80026E64", local
 .hidden "@eti_80026E64"
-	.4byte func_8011DA34
+	.4byte __ct__CArrow3D
 	.4byte 0x000001AC
 	.4byte "@etb_8000BB10"
 .endobj "@eti_80026E64"

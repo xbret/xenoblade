@@ -45,7 +45,7 @@
 /* 8026FD44 00239304  4B F5 41 8D */	bl __ct__CTitleAHelp
 /* 8026FD48 00239308  38 7D 00 B8 */	addi r3, r29, 0xb8
 /* 8026FD4C 0023930C  38 80 00 00 */	li r4, 0
-/* 8026FD50 00239310  48 00 0D C5 */	bl func_80270B14
+/* 8026FD50 00239310  48 00 0D C5 */	bl __ct__CPlayAwardList
 /* 8026FD54 00239314  C0 02 AE C0 */	lfs f0, float_8066B240@sda21(r2)
 /* 8026FD58 00239318  39 61 00 20 */	addi r11, r1, 0x20
 /* 8026FD5C 0023931C  D0 1D 11 5C */	stfs f0, 0x115c(r29)
@@ -105,7 +105,7 @@
 /* 8026FE18 002393D8  4B F5 3B 5D */	bl __ct__CBgTex
 /* 8026FE1C 002393DC  38 7F 00 64 */	addi r3, r31, 0x64
 /* 8026FE20 002393E0  38 81 00 0C */	addi r4, r1, 0xc
-/* 8026FE24 002393E4  4B EA CB 51 */	bl __ct__8011C974
+/* 8026FE24 002393E4  4B EA CB 51 */	bl __ct__UnkClass_8011C974
 /* 8026FE28 002393E8  80 01 00 1C */	lwz r0, 0x1c(r1)
 /* 8026FE2C 002393EC  38 61 00 08 */	addi r3, r1, 8
 /* 8026FE30 002393F0  90 1F 00 74 */	stw r0, 0x74(r31)
@@ -132,7 +132,7 @@
 /* 8026FE84 00239444  4B F5 40 4D */	bl __ct__CTitleAHelp
 /* 8026FE88 00239448  38 7F 00 84 */	addi r3, r31, 0x84
 /* 8026FE8C 0023944C  38 81 00 2C */	addi r4, r1, 0x2c
-/* 8026FE90 00239450  4B EA CA E5 */	bl __ct__8011C974
+/* 8026FE90 00239450  4B EA CA E5 */	bl __ct__UnkClass_8011C974
 /* 8026FE94 00239454  80 01 00 3C */	lwz r0, 0x3c(r1)
 /* 8026FE98 00239458  38 61 00 28 */	addi r3, r1, 0x28
 /* 8026FE9C 0023945C  90 1F 00 94 */	stw r0, 0x94(r31)
@@ -164,10 +164,10 @@
 /* 8026FF04 002394C4  4B F5 40 A1 */	bl CTitleAHelp_load
 /* 8026FF08 002394C8  38 61 00 60 */	addi r3, r1, 0x60
 /* 8026FF0C 002394CC  38 80 00 00 */	li r4, 0
-/* 8026FF10 002394D0  48 00 0C 05 */	bl func_80270B14
+/* 8026FF10 002394D0  48 00 0C 05 */	bl __ct__CPlayAwardList
 /* 8026FF14 002394D4  38 7F 00 BC */	addi r3, r31, 0xbc
 /* 8026FF18 002394D8  38 81 00 64 */	addi r4, r1, 0x64
-/* 8026FF1C 002394DC  4B EA CA 59 */	bl __ct__8011C974
+/* 8026FF1C 002394DC  4B EA CA 59 */	bl __ct__UnkClass_8011C974
 /* 8026FF20 002394E0  80 01 00 74 */	lwz r0, 0x74(r1)
 /* 8026FF24 002394E4  38 7F 01 04 */	addi r3, r31, 0x104
 /* 8026FF28 002394E8  90 1F 00 CC */	stw r0, 0xcc(r31)
@@ -196,7 +196,7 @@
 /* 8026FF84 00239544  98 1F 00 FC */	stb r0, 0xfc(r31)
 /* 8026FF88 00239548  88 01 00 A5 */	lbz r0, 0xa5(r1)
 /* 8026FF8C 0023954C  98 1F 00 FD */	stb r0, 0xfd(r31)
-/* 8026FF90 00239550  4B EA C9 E5 */	bl __ct__8011C974
+/* 8026FF90 00239550  4B EA C9 E5 */	bl __ct__UnkClass_8011C974
 /* 8026FF94 00239554  80 01 00 BC */	lwz r0, 0xbc(r1)
 /* 8026FF98 00239558  38 9F 01 4C */	addi r4, r31, 0x14c
 /* 8026FF9C 0023955C  90 1F 01 14 */	stw r0, 0x114(r31)
@@ -1045,7 +1045,7 @@
 #CPlayAwardList
 
 
-.fn func_80270B14, global
+.fn __ct__CPlayAwardList, global
 /* 80270B14 0023A0D4  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80270B18 0023A0D8  7C 08 02 A6 */	mflr r0
 /* 80270B1C 0023A0DC  3C 80 80 54 */	lis r4, __vt__CPlayAwardList@ha
@@ -1056,7 +1056,7 @@
 /* 80270B30 0023A0F0  7C 7E 1B 78 */	mr r30, r3
 /* 80270B34 0023A0F4  90 83 00 00 */	stw r4, 0(r3)
 /* 80270B38 0023A0F8  38 63 00 04 */	addi r3, r3, 4
-/* 80270B3C 0023A0FC  48 1E EA 29 */	bl __ct__8045F564
+/* 80270B3C 0023A0FC  48 1E EA 29 */	bl __ct__UnkClass_8045F564
 /* 80270B40 0023A100  3B E0 00 00 */	li r31, 0
 /* 80270B44 0023A104  93 FE 00 14 */	stw r31, 0x14(r30)
 /* 80270B48 0023A108  38 7E 00 30 */	addi r3, r30, 0x30
@@ -1130,7 +1130,7 @@
 /* 80270C58 0023A218  7C 08 03 A6 */	mtlr r0
 /* 80270C5C 0023A21C  38 21 00 50 */	addi r1, r1, 0x50
 /* 80270C60 0023A220  4E 80 00 20 */	blr 
-.endfn func_80270B14
+.endfn __ct__CPlayAwardList
 
 .fn __dt__CPlayAwardList, global
 /* 80270C64 0023A224  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1154,10 +1154,10 @@
 /* 80270CA8 0023A268  4B F8 27 F9 */	bl __dt__CScrollBar
 /* 80270CAC 0023A26C  38 7E 00 30 */	addi r3, r30, 0x30
 /* 80270CB0 0023A270  38 80 FF FF */	li r4, -1
-/* 80270CB4 0023A274  4B F6 1D 85 */	bl __dt__801D2A38
+/* 80270CB4 0023A274  4B F6 1D 85 */	bl __dt__CCur18
 /* 80270CB8 0023A278  38 7E 00 04 */	addi r3, r30, 4
 /* 80270CBC 0023A27C  38 80 FF FF */	li r4, -1
-/* 80270CC0 0023A280  48 1E E8 C1 */	bl __dt__8045F580
+/* 80270CC0 0023A280  48 1E E8 C1 */	bl __dt__UnkClass_8045F564
 /* 80270CC4 0023A284  2C 1F 00 00 */	cmpwi r31, 0
 /* 80270CC8 0023A288  40 81 00 0C */	ble .L_80270CD4
 /* 80270CCC 0023A28C  7F C3 F3 78 */	mr r3, r30
@@ -2328,7 +2328,7 @@
 /* 80271D20 0023B2E0  98 1F 00 44 */	stb r0, 0x44(r31)
 /* 80271D24 0023B2E4  88 01 00 25 */	lbz r0, 0x25(r1)
 /* 80271D28 0023B2E8  98 1F 00 45 */	stb r0, 0x45(r31)
-/* 80271D2C 0023B2EC  4B F6 0D 0D */	bl __dt__801D2A38
+/* 80271D2C 0023B2EC  4B F6 0D 0D */	bl __dt__CCur18
 /* 80271D30 0023B2F0  81 9F 00 30 */	lwz r12, 0x30(r31)
 /* 80271D34 0023B2F4  38 7F 00 30 */	addi r3, r31, 0x30
 /* 80271D38 0023B2F8  81 8C 00 08 */	lwz r12, 8(r12)
@@ -2448,7 +2448,7 @@
 	.4byte func_8026FDF4
 	.4byte func_802700E8
 	.4byte func_80270154
-	.4byte func_80101FB8
+	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuPlayAward
 	.4byte 0xFFFFFFA8
@@ -2762,10 +2762,10 @@
 	.4byte __dt__CScrollBar
 	.4byte 0x0780001E
 	.4byte 0x00000030
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000004
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 	.4byte 0x8680001E
 	.4byte 0x00000000
 	.4byte __dt__IWorkEvent
@@ -2798,7 +2798,7 @@
 	.4byte __dt__CScrollBar
 	.4byte 0x8780001E
 	.4byte 0x00000030
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 .endobj "@etb_80018004"
 
 .obj "@etb_8001806C", local
@@ -3055,7 +3055,7 @@
 
 .obj "@eti_8003077C", local
 .hidden "@eti_8003077C"
-	.4byte func_80270B14
+	.4byte __ct__CPlayAwardList
 	.4byte 0x00000150
 	.4byte "@etb_80017F98"
 .endobj "@eti_8003077C"

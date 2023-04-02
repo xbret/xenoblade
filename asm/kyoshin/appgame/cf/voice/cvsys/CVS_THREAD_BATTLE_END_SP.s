@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_802AB5F0, global
+.fn __ct__802AB5F0, global
 /* 802AB5F0 00274BB0  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 802AB5F4 00274BB4  7C 08 02 A6 */	mflr r0
 /* 802AB5F8 00274BB8  90 01 00 64 */	stw r0, 0x64(r1)
@@ -144,7 +144,7 @@
 .L_802AB7C0:
 /* 802AB7C0 00274D80  41 82 01 00 */	beq .L_802AB8C0
 /* 802AB7C4 00274D84  90 3F 00 2C */	stw r1, 0x2c(r31)
-/* 802AB7C8 00274D88  4B FF 82 B9 */	bl func_802A3A80
+/* 802AB7C8 00274D88  4B FF 82 B9 */	bl __ct__cf_CVS_THREAD
 /* 802AB7CC 00274D8C  3C 60 80 54 */	lis r3, __vt__cf_CVS_THREAD_BATTLE_END_SP@ha
 /* 802AB7D0 00274D90  2C 9E 00 00 */	cmpwi cr1, r30, 0
 /* 802AB7D4 00274D94  38 63 D9 48 */	addi r3, r3, __vt__cf_CVS_THREAD_BATTLE_END_SP@l
@@ -230,7 +230,7 @@
 /* 802AB8F4 00274EB4  7D 41 53 78 */	mr r1, r10
 /* 802AB8F8 00274EB8  7C 08 03 A6 */	mtlr r0
 /* 802AB8FC 00274EBC  4E 80 00 20 */	blr 
-.endfn func_802AB5F0
+.endfn __ct__802AB5F0
 
 .fn func_802AB900, global
 /* 802AB900 00274EC0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1130,7 +1130,7 @@
 
 .obj "@eti_80032EF4", local
 .hidden "@eti_80032EF4"
-	.4byte func_802AB5F0
+	.4byte __ct__802AB5F0
 	.4byte 0x00000310
 	.4byte "@etb_8001B0C8"
 .endobj "@eti_80032EF4"

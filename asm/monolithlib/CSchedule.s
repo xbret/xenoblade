@@ -2,12 +2,9 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
-
 #likely contains other files
 
-.fn func_804E3294, global
+.fn __ct__CSchedule, global
 /* 804E3294 004AC854  3C A0 80 57 */	lis r5, __vt__CSchedule@ha
 /* 804E3298 004AC858  38 80 00 00 */	li r4, 0
 /* 804E329C 004AC85C  38 A5 38 B0 */	addi r5, r5, __vt__CSchedule@l
@@ -51,7 +48,7 @@
 /* 804E3334 004AC8F4  B0 03 00 D4 */	sth r0, 0xd4(r3)
 /* 804E3338 004AC8F8  B0 03 00 D6 */	sth r0, 0xd6(r3)
 /* 804E333C 004AC8FC  4E 80 00 20 */	blr 
-.endfn func_804E3294
+.endfn __ct__CSchedule
 
 .fn __dt__CSchedule, global
 /* 804E3340 004AC900  94 21 FF E0 */	stwu r1, -0x20(r1)

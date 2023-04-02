@@ -86,6 +86,7 @@ public:
         pNext = state;
     }
 
+    static MTRand* getInstance();
     void mtInit(u32);
     void nextMt();
     u32 randInt();
@@ -107,10 +108,6 @@ protected:
         return m ^ (mask ^ (y >> 1));
     }
 };
-
-MTRand* getInstanceMTRand();
-
-bool func_80435C9C(s16*, s16*);
 
 }
 }

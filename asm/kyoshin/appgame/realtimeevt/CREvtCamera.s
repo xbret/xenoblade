@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8017FF78, global
+.fn __ct__CREvtCamera, global
 /* 8017FF78 00149538  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8017FF7C 0014953C  7C 08 02 A6 */	mflr r0
 /* 8017FF80 00149540  90 01 00 14 */	stw r0, 0x14(r1)
@@ -72,9 +72,9 @@
 /* 8018007C 0014963C  7C 08 03 A6 */	mtlr r0
 /* 80180080 00149640  38 21 00 10 */	addi r1, r1, 0x10
 /* 80180084 00149644  4E 80 00 20 */	blr 
-.endfn func_8017FF78
+.endfn __ct__CREvtCamera
 
-.fn func_80180088, global
+.fn __ct__80180088, global
 /* 80180088 00149648  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8018008C 0014964C  7C 08 02 A6 */	mflr r0
 /* 80180090 00149650  2C 03 00 00 */	cmpwi r3, 0
@@ -180,7 +180,7 @@
 /* 80180204 001497C4  7C 08 03 A6 */	mtlr r0
 /* 80180208 001497C8  38 21 00 40 */	addi r1, r1, 0x40
 /* 8018020C 001497CC  4E 80 00 20 */	blr 
-.endfn func_80180088
+.endfn __ct__80180088
 
 .fn func_80180210, global
 /* 80180210 001497D0  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -775,7 +775,7 @@
 .obj __vt__cf_CREvtCamera, global
 	.4byte __RTTI__cf_CREvtCamera
 	.4byte 0
-	.4byte func_80180088
+	.4byte __ct__80180088
 	.4byte func_80180414
 	.4byte func_80180620
 	.4byte func_801809B0
@@ -927,14 +927,14 @@
 
 .obj "@eti_80029630", local
 .hidden "@eti_80029630"
-	.4byte func_8017FF78
+	.4byte __ct__CREvtCamera
 	.4byte 0x00000110
 	.4byte "@etb_8000E600"
 .endobj "@eti_80029630"
 
 .obj "@eti_8002963C", local
 .hidden "@eti_8002963C"
-	.4byte func_80180088
+	.4byte __ct__80180088
 	.4byte 0x00000188
 	.4byte "@etb_8000E61C"
 .endobj "@eti_8002963C"

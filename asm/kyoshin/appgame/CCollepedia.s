@@ -1046,7 +1046,7 @@
 /* 80253FF0 0021D5B0  2C 1C 00 00 */	cmpwi r28, 0
 /* 80253FF4 0021D5B4  7C 7F 1B 78 */	mr r31, r3
 /* 80253FF8 0021D5B8  41 81 00 20 */	bgt .L_80254018
-/* 80253FFC 0021D5BC  4B F0 1B 0D */	bl func_80155B08
+/* 80253FFC 0021D5BC  4B F0 1B 0D */	bl CItem_initItemImplInstances
 /* 80254000 0021D5C0  81 83 00 00 */	lwz r12, 0(r3)
 /* 80254004 0021D5C4  7F E4 FB 78 */	mr r4, r31
 /* 80254008 0021D5C8  81 8C 00 10 */	lwz r12, 0x10(r12)
@@ -1621,9 +1621,9 @@
 /* 80254738 0021DCF8  7C 7E 1B 78 */	mr r30, r3
 /* 8025473C 0021DCFC  90 83 00 00 */	stw r4, 0(r3)
 /* 80254740 0021DD00  38 63 00 04 */	addi r3, r3, 4
-/* 80254744 0021DD04  48 20 AE 21 */	bl __ct__8045F564
+/* 80254744 0021DD04  48 20 AE 21 */	bl __ct__UnkClass_8045F564
 /* 80254748 0021DD08  38 7E 00 14 */	addi r3, r30, 0x14
-/* 8025474C 0021DD0C  48 20 AE 19 */	bl __ct__8045F564
+/* 8025474C 0021DD0C  48 20 AE 19 */	bl __ct__UnkClass_8045F564
 /* 80254750 0021DD10  3B E0 00 00 */	li r31, 0
 /* 80254754 0021DD14  38 00 00 01 */	li r0, 1
 /* 80254758 0021DD18  93 FE 00 24 */	stw r31, 0x24(r30)
@@ -1726,16 +1726,16 @@
 /* 802548D0 0021DE90  4B FD 6D D1 */	bl __dt__CSysWin
 /* 802548D4 0021DE94  38 7E 00 84 */	addi r3, r30, 0x84
 /* 802548D8 0021DE98  38 80 FF FF */	li r4, -1
-/* 802548DC 0021DE9C  4B F7 E1 5D */	bl __dt__801D2A38
+/* 802548DC 0021DE9C  4B F7 E1 5D */	bl __dt__CCur18
 /* 802548E0 0021DEA0  38 7E 00 54 */	addi r3, r30, 0x54
 /* 802548E4 0021DEA4  38 80 FF FF */	li r4, -1
-/* 802548E8 0021DEA8  4B F7 DA 51 */	bl __dt__801D2338
+/* 802548E8 0021DEA8  4B F7 DA 51 */	bl __dt__CCur07
 /* 802548EC 0021DEAC  38 7E 00 14 */	addi r3, r30, 0x14
 /* 802548F0 0021DEB0  38 80 FF FF */	li r4, -1
-/* 802548F4 0021DEB4  48 20 AC 8D */	bl __dt__8045F580
+/* 802548F4 0021DEB4  48 20 AC 8D */	bl __dt__UnkClass_8045F564
 /* 802548F8 0021DEB8  38 7E 00 04 */	addi r3, r30, 4
 /* 802548FC 0021DEBC  38 80 FF FF */	li r4, -1
-/* 80254900 0021DEC0  48 20 AC 81 */	bl __dt__8045F580
+/* 80254900 0021DEC0  48 20 AC 81 */	bl __dt__UnkClass_8045F564
 /* 80254904 0021DEC4  2C 1F 00 00 */	cmpwi r31, 0
 /* 80254908 0021DEC8  40 81 00 0C */	ble .L_80254914
 /* 8025490C 0021DECC  7F C3 F3 78 */	mr r3, r30
@@ -3929,7 +3929,7 @@
 /* 802567DC 0021FD9C  4B F3 49 21 */	bl func_8018B0FC
 /* 802567E0 0021FDA0  38 61 00 38 */	addi r3, r1, 0x38
 /* 802567E4 0021FDA4  38 80 FF FF */	li r4, -1
-/* 802567E8 0021FDA8  4B F7 C2 51 */	bl __dt__801D2A38
+/* 802567E8 0021FDA8  4B F7 C2 51 */	bl __dt__CCur18
 /* 802567EC 0021FDAC  81 9F 00 84 */	lwz r12, 0x84(r31)
 /* 802567F0 0021FDB0  38 7F 00 84 */	addi r3, r31, 0x84
 /* 802567F4 0021FDB4  81 8C 00 08 */	lwz r12, 8(r12)
@@ -3943,7 +3943,7 @@
 /* 80256814 0021FDD4  4B F3 48 E9 */	bl func_8018B0FC
 /* 80256818 0021FDD8  38 61 00 20 */	addi r3, r1, 0x20
 /* 8025681C 0021FDDC  38 80 FF FF */	li r4, -1
-/* 80256820 0021FDE0  4B F7 BB 19 */	bl __dt__801D2338
+/* 80256820 0021FDE0  4B F7 BB 19 */	bl __dt__CCur07
 /* 80256824 0021FDE4  81 9F 00 54 */	lwz r12, 0x54(r31)
 /* 80256828 0021FDE8  38 7F 00 54 */	addi r3, r31, 0x54
 /* 8025682C 0021FDEC  81 8C 00 08 */	lwz r12, 8(r12)
@@ -4487,19 +4487,19 @@
 	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x00000084
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x0000006C
 	.4byte __dt__802531C4
 	.4byte 0x0780001E
 	.4byte 0x00000054
-	.4byte __dt__801D2338
+	.4byte __dt__CCur07
 	.4byte 0x0780001E
 	.4byte 0x00000014
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 	.4byte 0x0780001E
 	.4byte 0x00000004
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 	.4byte 0x8680001E
 	.4byte 0x00000000
 	.4byte __dt__IWorkEvent
@@ -4545,7 +4545,7 @@
 	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x00000084
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x8780001E
 	.4byte 0x0000006C
 	.4byte __dt__802531C4
@@ -4560,13 +4560,13 @@
 	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x00000084
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x0000006C
 	.4byte __dt__802531C4
 	.4byte 0x8780001E
 	.4byte 0x00000054
-	.4byte __dt__801D2338
+	.4byte __dt__CCur07
 	.4byte 0x0780001E
 	.4byte 0x000028EC
 	.4byte __dt__802534B0
@@ -4578,16 +4578,16 @@
 	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x00000084
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x0000006C
 	.4byte __dt__802531C4
 	.4byte 0x0780001E
 	.4byte 0x00000054
-	.4byte __dt__801D2338
+	.4byte __dt__CCur07
 	.4byte 0x8780001E
 	.4byte 0x00000014
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 .endobj "@etb_80016EC4"
 
 .obj "@etb_80017008", local

@@ -2,13 +2,13 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_80098BE4, global
+.fn __ct__CtrlRemote, global
 /* 80098BE4 000621A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80098BE8 000621A8  7C 08 02 A6 */	mflr r0
 /* 80098BEC 000621AC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80098BF0 000621B0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80098BF4 000621B4  7C 7F 1B 78 */	mr r31, r3
-/* 80098BF8 000621B8  4B FF E4 0D */	bl func_80097004
+/* 80098BF8 000621B8  4B FF E4 0D */	bl __ct__cf_CtrlPc
 /* 80098BFC 000621BC  3C 60 80 53 */	lis r3, __vt__cf_CtrlRemote@ha
 /* 80098C00 000621C0  38 00 00 00 */	li r0, 0
 /* 80098C04 000621C4  38 63 B7 58 */	addi r3, r3, __vt__cf_CtrlRemote@l
@@ -56,7 +56,7 @@
 /* 80098CAC 0006226C  7C 08 03 A6 */	mtlr r0
 /* 80098CB0 00062270  38 21 00 10 */	addi r1, r1, 0x10
 /* 80098CB4 00062274  4E 80 00 20 */	blr 
-.endfn func_80098BE4
+.endfn __ct__CtrlRemote
 
 .fn func_80098CB8, global
 /* 80098CB8 00062278  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -5574,7 +5574,7 @@
 
 .obj "@eti_8002453C", local
 .hidden "@eti_8002453C"
-	.4byte func_80098BE4
+	.4byte __ct__CtrlRemote
 	.4byte 0x000000D4
 	.4byte "@etb_80008EA0"
 .endobj "@eti_8002453C"

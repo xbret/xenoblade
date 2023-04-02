@@ -116,11 +116,11 @@
 /* 801A3278 0016C838  3B 5A 08 34 */	addi r26, r26, 0x834
 /* 801A327C 0016C83C  7C 1A F0 40 */	cmplw r26, r30
 /* 801A3280 0016C840  41 80 FE 98 */	blt .L_801A3118
-/* 801A3284 0016C844  3C 80 80 1A */	lis r4, func_801A33AC@ha
+/* 801A3284 0016C844  3C 80 80 1A */	lis r4, __ct__801A33AC@ha
 /* 801A3288 0016C848  3C A0 80 1A */	lis r5, __dt__801A36D0@ha
 /* 801A328C 0016C84C  7F C3 F3 78 */	mr r3, r30
 /* 801A3290 0016C850  38 C0 48 18 */	li r6, 0x4818
-/* 801A3294 0016C854  38 84 33 AC */	addi r4, r4, func_801A33AC@l
+/* 801A3294 0016C854  38 84 33 AC */	addi r4, r4, __ct__801A33AC@l
 /* 801A3298 0016C858  38 A5 36 D0 */	addi r5, r5, __dt__801A36D0@l
 /* 801A329C 0016C85C  38 E0 00 08 */	li r7, 8
 /* 801A32A0 0016C860  48 11 68 61 */	bl __construct_array
@@ -194,7 +194,7 @@
 /* 801A33A8 0016C968  4E 80 00 20 */	blr
 .endfn __ct__cf_CVision
 
-.fn func_801A33AC, global
+.fn __ct__801A33AC, global
 /* 801A33AC 0016C96C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801A33B0 0016C970  7C 08 02 A6 */	mflr r0
 /* 801A33B4 0016C974  90 01 00 34 */	stw r0, 0x34(r1)
@@ -239,7 +239,7 @@
 /* 801A344C 0016CA0C  3B 9F 3A 20 */	addi r28, r31, 0x3a20
 .L_801A3450:
 /* 801A3450 0016CA10  7F 63 DB 78 */	mr r3, r27
-/* 801A3454 0016CA14  4B FB 20 B9 */	bl func_8015550C
+/* 801A3454 0016CA14  4B FB 20 B9 */	bl __ct__8015550C
 /* 801A3458 0016CA18  3B 7B 00 8C */	addi r27, r27, 0x8c
 /* 801A345C 0016CA1C  7C 1B E0 40 */	cmplw r27, r28
 /* 801A3460 0016CA20  41 80 FF F0 */	blt .L_801A3450
@@ -250,7 +250,7 @@
 /* 801A3474 0016CA34  3B 9F 3D 60 */	addi r28, r31, 0x3d60
 .L_801A3478:
 /* 801A3478 0016CA38  7F 63 DB 78 */	mr r3, r27
-/* 801A347C 0016CA3C  4B FB 0A 85 */	bl func_80153F00
+/* 801A347C 0016CA3C  4B FB 0A 85 */	bl __ct__CAttackParam
 /* 801A3480 0016CA40  3B 7B 00 88 */	addi r27, r27, 0x88
 /* 801A3484 0016CA44  7C 1B E0 40 */	cmplw r27, r28
 /* 801A3488 0016CA48  41 80 FF F0 */	blt .L_801A3478
@@ -405,7 +405,7 @@
 /* 801A36C4 0016CC84  7C 08 03 A6 */	mtlr r0
 /* 801A36C8 0016CC88  38 21 00 30 */	addi r1, r1, 0x30
 /* 801A36CC 0016CC8C  4E 80 00 20 */	blr
-.endfn func_801A33AC
+.endfn __ct__801A33AC
 
 .fn __dt__801A36D0, global
 /* 801A36D0 0016CC90  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -7547,7 +7547,7 @@
 
 .obj "@eti_8002A614", local
 .hidden "@eti_8002A614"
-	.4byte func_801A33AC
+	.4byte __ct__801A33AC
 	.4byte 0x00000324
 	.4byte "@etb_8000F8A8"
 .endobj "@eti_8002A614"

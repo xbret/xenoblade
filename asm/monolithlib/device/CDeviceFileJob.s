@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_80451E50, global
+.fn __ct__CDeviceFileJob, global
 /* 80451E50 0041B410  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80451E54 0041B414  7C 08 02 A6 */	mflr r0
 /* 80451E58 0041B418  38 C0 00 00 */	li r6, 0
@@ -27,7 +27,7 @@
 /* 80451EA4 0041B464  7C 08 03 A6 */	mtlr r0
 /* 80451EA8 0041B468  38 21 00 10 */	addi r1, r1, 0x10
 /* 80451EAC 0041B46C  4E 80 00 20 */	blr 
-.endfn func_80451E50
+.endfn __ct__CDeviceFileJob
 
 .fn func_80451EB0, global
 /* 80451EB0 0041B470  38 60 00 00 */	li r3, 0
@@ -169,7 +169,7 @@
 
 .obj "@eti_80034C64", local
 .hidden "@eti_80034C64"
-	.4byte func_80451E50
+	.4byte __ct__CDeviceFileJob
 	.4byte 0x00000060
 	.4byte "@etb_8001CF9C"
 .endobj "@eti_80034C64"

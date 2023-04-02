@@ -5,7 +5,7 @@
 namespace mm{
 namespace mtl{
 
-    MTRand* getInstanceMTRand(){
+    MTRand* MTRand::getInstance(){
         static MTRand instance;
         return &instance;
     }

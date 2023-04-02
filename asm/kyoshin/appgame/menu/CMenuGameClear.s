@@ -15,13 +15,13 @@
 /* 802B0F38 0027A4F8  41 82 00 50 */	beq .L_802B0F88
 /* 802B0F3C 0027A4FC  38 80 FF FF */	li r4, -1
 /* 802B0F40 0027A500  38 63 00 B0 */	addi r3, r3, 0xb0
-/* 802B0F44 0027A504  4B F2 1A F5 */	bl __dt__801D2A38
+/* 802B0F44 0027A504  4B F2 1A F5 */	bl __dt__CCur18
 /* 802B0F48 0027A508  38 7E 00 74 */	addi r3, r30, 0x74
 /* 802B0F4C 0027A50C  38 80 FF FF */	li r4, -1
 /* 802B0F50 0027A510  4B F7 A7 51 */	bl __dt__CSysWin
 /* 802B0F54 0027A514  38 7E 00 60 */	addi r3, r30, 0x60
 /* 802B0F58 0027A518  38 80 FF FF */	li r4, -1
-/* 802B0F5C 0027A51C  48 1A E6 25 */	bl __dt__8045F580
+/* 802B0F5C 0027A51C  48 1A E6 25 */	bl __dt__UnkClass_8045F564
 /* 802B0F60 0027A520  2C 1E 00 00 */	cmpwi r30, 0
 /* 802B0F64 0027A524  41 82 00 14 */	beq .L_802B0F78
 /* 802B0F68 0027A528  41 82 00 10 */	beq .L_802B0F78
@@ -115,7 +115,7 @@
 /* 802B10A4 0027A664  80 03 00 00 */	lwz r0, 0(r3)
 /* 802B10A8 0027A668  2C 00 00 00 */	cmpwi r0, 0
 /* 802B10AC 0027A66C  41 82 00 1C */	beq .L_802B10C8
-/* 802B10B0 0027A670  4B EA 4A 59 */	bl func_80155B08
+/* 802B10B0 0027A670  4B EA 4A 59 */	bl CItem_initItemImplInstances
 /* 802B10B4 0027A674  81 83 00 00 */	lwz r12, 0(r3)
 /* 802B10B8 0027A678  7F 44 D3 78 */	mr r4, r26
 /* 802B10BC 0027A67C  81 8C 00 10 */	lwz r12, 0x10(r12)
@@ -291,7 +291,7 @@
 /* 802B1350 0027A910  98 1B 00 C4 */	stb r0, 0xc4(r27)
 /* 802B1354 0027A914  88 01 00 25 */	lbz r0, 0x25(r1)
 /* 802B1358 0027A918  98 1B 00 C5 */	stb r0, 0xc5(r27)
-/* 802B135C 0027A91C  4B F2 16 DD */	bl __dt__801D2A38
+/* 802B135C 0027A91C  4B F2 16 DD */	bl __dt__CCur18
 /* 802B1360 0027A920  81 9B 00 B0 */	lwz r12, 0xb0(r27)
 /* 802B1364 0027A924  38 7B 00 B0 */	addi r3, r27, 0xb0
 /* 802B1368 0027A928  81 8C 00 08 */	lwz r12, 8(r12)
@@ -1334,7 +1334,7 @@
 /* 802B2258 0027B818  90 9D 00 10 */	stw r4, 0x10(r29)
 /* 802B225C 0027B81C  90 1D 00 58 */	stw r0, 0x58(r29)
 /* 802B2260 0027B820  93 9D 00 5C */	stw r28, 0x5c(r29)
-/* 802B2264 0027B824  48 1A D3 01 */	bl __ct__8045F564
+/* 802B2264 0027B824  48 1A D3 01 */	bl __ct__UnkClass_8045F564
 /* 802B2268 0027B828  9B DD 00 70 */	stb r30, 0x70(r29)
 /* 802B226C 0027B82C  38 7D 00 74 */	addi r3, r29, 0x74
 /* 802B2270 0027B830  38 80 00 00 */	li r4, 0
@@ -1696,7 +1696,7 @@
 	.4byte func_802B0FA4
 	.4byte func_802B13BC
 	.4byte func_802B1440
-	.4byte func_80101FB8
+	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuGameClear
 	.4byte 0xFFFFFFA8
@@ -1756,22 +1756,22 @@
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x000000B0
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x000000B0
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x8780001E
 	.4byte 0x00000074
 	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x000000B0
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000074
 	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x00000060
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 	.4byte 0x8680001E
 	.4byte 0x00000058
 	.4byte __dt__IScnRender
@@ -1823,13 +1823,13 @@
 	.4byte 0x00000000
 	.4byte 0x0780001D
 	.4byte 0x000000B0
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001D
 	.4byte 0x00000074
 	.4byte __dt__CSysWin
 	.4byte 0x0780001D
 	.4byte 0x00000060
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 	.4byte 0x0680001D
 	.4byte 0x00000058
 	.4byte __dt__IScnRender

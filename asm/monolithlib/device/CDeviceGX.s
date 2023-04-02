@@ -17,7 +17,7 @@
 /* 80455110 0041E6D0  90 7E 00 00 */	stw r3, 0(r30)
 /* 80455114 0041E6D4  38 7E 01 C8 */	addi r3, r30, 0x1c8
 /* 80455118 0041E6D8  93 FE 01 C4 */	stw r31, 0x1c4(r30)
-/* 8045511C 0041E6DC  4B FF 3E 25 */	bl func_80448F40
+/* 8045511C 0041E6DC  4B FF 3E 25 */	bl __ct__CDeviceVICb
 /* 80455120 0041E6E0  3C 60 80 57 */	lis r3, __vt__CDeviceGX@ha
 /* 80455124 0041E6E4  C0 02 C8 70 */	lfs f0, float_8066CBF0@sda21(r2)
 /* 80455128 0041E6E8  38 63 01 A8 */	addi r3, r3, __vt__CDeviceGX@l

@@ -82,6 +82,7 @@ s32 OSSuspendThread(OSThread* thread);
 void OSSleepThread(OSThreadQueue* queue);
 void OSWakeupThread(OSThreadQueue* queue);
 BOOL OSSetThreadPriority(OSThread* thread, s32 prio);
+s32 OSGetThreadPriority(OSThread* thread);
 void OSClearStack(u8 val);
 void OSSleepTicks(s64 ticks);
 

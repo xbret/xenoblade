@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_801B18D0, global
+.fn __ct__cf_CPcEffect07, global
 /* 801B18D0 0017AE90  3C E0 80 53 */	lis r7, __vt__cf_CPcEffect07@ha
 /* 801B18D4 0017AE94  39 03 00 28 */	addi r8, r3, 0x28
 /* 801B18D8 0017AE98  38 E7 6E FC */	addi r7, r7, __vt__cf_CPcEffect07@l
@@ -46,7 +46,7 @@
 /* 801B1968 0017AF28  D0 03 00 60 */	stfs f0, 0x60(r3)
 /* 801B196C 0017AF2C  90 6D AB 08 */	stw r3, lbl_80666C88@sda21(r13)
 /* 801B1970 0017AF30  4E 80 00 20 */	blr
-.endfn func_801B18D0
+.endfn __ct__cf_CPcEffect07
 
 .fn __dt__cf_CPcEffect07, global
 /* 801B1974 0017AF34  94 21 FF F0 */	stwu r1, -0x10(r1)

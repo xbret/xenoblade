@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_801993C4, global
+.fn __ct__801993C4, global
 /* 801993C4 00162984  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801993C8 00162988  7C 08 02 A6 */	mflr r0
 /* 801993CC 0016298C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -11,7 +11,7 @@
 /* 801993D8 00162998  7C 7E 1B 78 */	mr r30, r3
 /* 801993DC 0016299C  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 801993E0 001629A0  7C BD 2B 78 */	mr r29, r5
-/* 801993E4 001629A4  4B EE F5 21 */	bl func_80088904
+/* 801993E4 001629A4  4B EE F5 21 */	bl __ct__80088904
 /* 801993E8 001629A8  3C 60 80 53 */	lis r3, __vt__cf_CtrlMovePC@ha
 /* 801993EC 001629AC  3C A0 80 51 */	lis r5, lbl_8050CE10@ha
 /* 801993F0 001629B0  38 63 65 10 */	addi r3, r3, __vt__cf_CtrlMovePC@l
@@ -109,7 +109,7 @@
 /* 80199560 00162B20  7C 08 03 A6 */	mtlr r0
 /* 80199564 00162B24  38 21 00 20 */	addi r1, r1, 0x20
 /* 80199568 00162B28  4E 80 00 20 */	blr 
-.endfn func_801993C4
+.endfn __ct__801993C4
 
 .fn func_8019956C, global
 /* 8019956C 00162B2C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -7370,7 +7370,7 @@
 
 .obj "@eti_8002A350", local
 .hidden "@eti_8002A350"
-	.4byte func_801993C4
+	.4byte __ct__801993C4
 	.4byte 0x000001A8
 	.4byte "@etb_8000F4CC"
 .endobj "@eti_8002A350"

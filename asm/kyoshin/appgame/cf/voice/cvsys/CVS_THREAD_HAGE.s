@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_802A6E84, global
+.fn __ct__802A6E84, global
 /* 802A6E84 00270444  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802A6E88 00270448  7C 08 02 A6 */	mflr r0
 /* 802A6E8C 0027044C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -43,7 +43,7 @@
 .L_802A6F0C:
 /* 802A6F0C 002704CC  41 82 00 34 */	beq .L_802A6F40
 /* 802A6F10 002704D0  90 3F 00 1C */	stw r1, 0x1c(r31)
-/* 802A6F14 002704D4  4B FF CB 6D */	bl func_802A3A80
+/* 802A6F14 002704D4  4B FF CB 6D */	bl __ct__cf_CVS_THREAD
 /* 802A6F18 002704D8  3C 60 80 54 */	lis r3, __vt__cf_CVS_THREAD_HAGE@ha
 /* 802A6F1C 002704DC  38 63 D3 5C */	addi r3, r3, __vt__cf_CVS_THREAD_HAGE@l
 /* 802A6F20 002704E0  90 7E 00 1C */	stw r3, 0x1c(r30)
@@ -75,7 +75,7 @@
 /* 802A6F80 00270540  7D 41 53 78 */	mr r1, r10
 /* 802A6F84 00270544  7C 08 03 A6 */	mtlr r0
 /* 802A6F88 00270548  4E 80 00 20 */	blr 
-.endfn func_802A6E84
+.endfn __ct__802A6E84
 
 .fn func_802A6F8C, global
 /* 802A6F8C 0027054C  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -391,7 +391,7 @@
 
 .obj "@eti_80032B94", local
 .hidden "@eti_80032B94"
-	.4byte func_802A6E84
+	.4byte __ct__802A6E84
 	.4byte 0x00000108
 	.4byte "@etb_8001ACF0"
 .endobj "@eti_80032B94"

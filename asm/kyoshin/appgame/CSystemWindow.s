@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_801245EC, global
+.fn __ct__CSystemWindow, global
 /* 801245EC 000EDBAC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801245F0 000EDBB0  7C 08 02 A6 */	mflr r0
 /* 801245F4 000EDBB4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -80,7 +80,7 @@
 /* 80124704 000EDCC4  7C 08 03 A6 */	mtlr r0
 /* 80124708 000EDCC8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8012470C 000EDCCC  4E 80 00 20 */	blr
-.endfn func_801245EC
+.endfn __ct__CSystemWindow
 
 .fn __dt__CSystemWindow, global
 /* 80124710 000EDCD0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -387,7 +387,7 @@
 /* 80124B40 000EE100  7F A5 EB 78 */	mr r5, r29
 /* 80124B44 000EE104  7F C6 F3 78 */	mr r6, r30
 /* 80124B48 000EE108  7F E7 FB 78 */	mr r7, r31
-/* 80124B4C 000EE10C  4B FF FA A1 */	bl func_801245EC
+/* 80124B4C 000EE10C  4B FF FA A1 */	bl __ct__CSystemWindow
 .L_80124B50:
 /* 80124B50 000EE110  90 6D A7 50 */	stw r3, lbl_806668D0@sda21(r13)
 /* 80124B54 000EE114  7F 64 DB 78 */	mr r4, r27
@@ -671,7 +671,7 @@
 
 .obj "@eti_8002705C", local
 .hidden "@eti_8002705C"
-	.4byte func_801245EC
+	.4byte __ct__CSystemWindow
 	.4byte 0x00000124
 	.4byte "@etb_8000BDB4"
 .endobj "@eti_8002705C"

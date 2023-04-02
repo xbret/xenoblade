@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_802B8A3C, global
+.fn __ct__CVS_THREAD_ORDER, global
 /* 802B8A3C 00281FFC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802B8A40 00282000  7C 08 02 A6 */	mflr r0
 /* 802B8A44 00282004  38 80 00 00 */	li r4, 0
@@ -29,7 +29,7 @@
 .L_802B8A94:
 /* 802B8A94 00282054  41 82 00 30 */	beq .L_802B8AC4
 /* 802B8A98 00282058  90 3F 00 1C */	stw r1, 0x1c(r31)
-/* 802B8A9C 0028205C  4B FE AF E5 */	bl func_802A3A80
+/* 802B8A9C 0028205C  4B FE AF E5 */	bl __ct__cf_CVS_THREAD
 /* 802B8AA0 00282060  3C 60 80 54 */	lis r3, __vt__cf_CVS_THREAD_ORDER@ha
 /* 802B8AA4 00282064  38 63 EF 30 */	addi r3, r3, __vt__cf_CVS_THREAD_ORDER@l
 /* 802B8AA8 00282068  90 7E 00 1C */	stw r3, 0x1c(r30)
@@ -59,7 +59,7 @@
 /* 802B8B00 002820C0  7D 41 53 78 */	mr r1, r10
 /* 802B8B04 002820C4  7C 08 03 A6 */	mtlr r0
 /* 802B8B08 002820C8  4E 80 00 20 */	blr 
-.endfn func_802B8A3C
+.endfn __ct__CVS_THREAD_ORDER
 
 .fn func_802B8B0C, local
 /* 802B8B0C 002820CC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -768,7 +768,7 @@
 
 .obj "@eti_800339E0", local
 .hidden "@eti_800339E0"
-	.4byte func_802B8A3C
+	.4byte __ct__CVS_THREAD_ORDER
 	.4byte 0x000000D0
 	.4byte "@etb_8001BE38"
 .endobj "@eti_800339E0"

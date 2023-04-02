@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_80058414, global
+.fn __ct__CMcaFile, global
 /* 80058414 000219D4  3C A0 80 53 */	lis r5, __vt__CMcaFile@ha
 /* 80058418 000219D8  38 00 00 00 */	li r0, 0
 /* 8005841C 000219DC  38 A5 9B 78 */	addi r5, r5, __vt__CMcaFile@l
@@ -28,7 +28,7 @@
 /* 8005846C 00021A2C  7C 04 02 14 */	add r0, r4, r0
 /* 80058470 00021A30  90 03 00 0C */	stw r0, 0xc(r3)
 /* 80058474 00021A34  4E 80 00 20 */	blr 
-.endfn func_80058414
+.endfn __ct__CMcaFile
 
 .fn __dt__CMcaFile, global
 /* 80058478 00021A38  94 21 FF F0 */	stwu r1, -0x10(r1)

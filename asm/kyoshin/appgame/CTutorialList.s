@@ -178,7 +178,7 @@
 /* 802ACE20 002763E0  4E 80 00 20 */	blr 
 .endfn func_802ACE04
 
-.fn func_802ACE24, global
+.fn __ct__CTutorialList, global
 /* 802ACE24 002763E4  94 21 FD B0 */	stwu r1, -0x250(r1)
 /* 802ACE28 002763E8  7C 08 02 A6 */	mflr r0
 /* 802ACE2C 002763EC  3C A0 80 54 */	lis r5, __vt__CTutorialList@ha
@@ -189,7 +189,7 @@
 /* 802ACE40 00276400  7C 9D 23 78 */	mr r29, r4
 /* 802ACE44 00276404  90 A3 00 00 */	stw r5, 0(r3)
 /* 802ACE48 00276408  38 63 00 04 */	addi r3, r3, 4
-/* 802ACE4C 0027640C  48 1B 27 19 */	bl __ct__8045F564
+/* 802ACE4C 0027640C  48 1B 27 19 */	bl __ct__UnkClass_8045F564
 /* 802ACE50 00276410  3B C0 00 00 */	li r30, 0
 /* 802ACE54 00276414  93 DF 00 14 */	stw r30, 0x14(r31)
 /* 802ACE58 00276418  38 7F 00 2C */	addi r3, r31, 0x2c
@@ -229,7 +229,7 @@
 /* 802ACEE0 002764A0  4B F2 60 A1 */	bl __ct__CSortMenu
 /* 802ACEE4 002764A4  38 7F 00 88 */	addi r3, r31, 0x88
 /* 802ACEE8 002764A8  38 81 00 4C */	addi r4, r1, 0x4c
-/* 802ACEEC 002764AC  4B E6 FA 89 */	bl __ct__8011C974
+/* 802ACEEC 002764AC  4B E6 FA 89 */	bl __ct__UnkClass_8011C974
 /* 802ACEF0 002764B0  80 01 00 5C */	lwz r0, 0x5c(r1)
 /* 802ACEF4 002764B4  38 7F 00 B0 */	addi r3, r31, 0xb0
 /* 802ACEF8 002764B8  90 1F 00 98 */	stw r0, 0x98(r31)
@@ -294,7 +294,7 @@
 /* 802ACFDC 0027659C  7C 08 03 A6 */	mtlr r0
 /* 802ACFE0 002765A0  38 21 02 50 */	addi r1, r1, 0x250
 /* 802ACFE4 002765A4  4E 80 00 20 */	blr 
-.endfn func_802ACE24
+.endfn __ct__CTutorialList
 
 .fn __dt__CTutorialList, global
 /* 802ACFE8 002765A8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -313,10 +313,10 @@
 /* 802AD01C 002765DC  4B F4 64 85 */	bl __dt__CScrollBar
 /* 802AD020 002765E0  38 7E 00 2C */	addi r3, r30, 0x2c
 /* 802AD024 002765E4  38 80 FF FF */	li r4, -1
-/* 802AD028 002765E8  4B F2 5A 11 */	bl __dt__801D2A38
+/* 802AD028 002765E8  4B F2 5A 11 */	bl __dt__CCur18
 /* 802AD02C 002765EC  38 7E 00 04 */	addi r3, r30, 4
 /* 802AD030 002765F0  38 80 FF FF */	li r4, -1
-/* 802AD034 002765F4  48 1B 25 4D */	bl __dt__8045F580
+/* 802AD034 002765F4  48 1B 25 4D */	bl __dt__UnkClass_8045F564
 /* 802AD038 002765F8  2C 1F 00 00 */	cmpwi r31, 0
 /* 802AD03C 002765FC  40 81 00 0C */	ble .L_802AD048
 /* 802AD040 00276600  7F C3 F3 78 */	mr r3, r30
@@ -1655,7 +1655,7 @@
 /* 802AE2D4 00277894  98 1F 00 40 */	stb r0, 0x40(r31)
 /* 802AE2D8 00277898  88 01 00 2D */	lbz r0, 0x2d(r1)
 /* 802AE2DC 0027789C  98 1F 00 41 */	stb r0, 0x41(r31)
-/* 802AE2E0 002778A0  4B F2 47 59 */	bl __dt__801D2A38
+/* 802AE2E0 002778A0  4B F2 47 59 */	bl __dt__CCur18
 /* 802AE2E4 002778A4  81 9F 00 2C */	lwz r12, 0x2c(r31)
 /* 802AE2E8 002778A8  38 7F 00 2C */	addi r3, r31, 0x2c
 /* 802AE2EC 002778AC  81 8C 00 08 */	lwz r12, 8(r12)
@@ -1930,10 +1930,10 @@
 	.4byte __dt__CScrollBar
 	.4byte 0x0780001F
 	.4byte 0x0000002C
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001F
 	.4byte 0x00000004
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 	.4byte 0x8680001F
 	.4byte 0x00000000
 	.4byte __dt__IWorkEvent
@@ -1980,7 +1980,7 @@
 	.4byte __dt__CScrollBar
 	.4byte 0x8780001E
 	.4byte 0x0000002C
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 .endobj "@etb_8001B348"
 
 .obj "@etb_8001B3E8", local
@@ -2176,7 +2176,7 @@
 
 .obj "@eti_80033014", local
 .hidden "@eti_80033014"
-	.4byte func_802ACE24
+	.4byte __ct__CTutorialList
 	.4byte 0x000001C4
 	.4byte "@etb_8001B2D0"
 .endobj "@eti_80033014"

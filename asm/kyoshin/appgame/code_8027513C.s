@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8027513C, global
+.fn initCamControlInstances, global
 /* 8027513C 0023E6FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80275140 0023E700  7C 08 02 A6 */	mflr r0
 /* 80275144 0023E704  90 01 00 14 */	stw r0, 0x14(r1)
@@ -55,7 +55,7 @@
 /* 802751EC 0023E7AC  7C 08 03 A6 */	mtlr r0
 /* 802751F0 0023E7B0  38 21 00 10 */	addi r1, r1, 0x10
 /* 802751F4 0023E7B4  4E 80 00 20 */	blr 
-.endfn func_8027513C
+.endfn initCamControlInstances
 
 .fn func_802751F8, global
 /* 802751F8 0023E7B8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -63,7 +63,7 @@
 /* 80275200 0023E7C0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80275204 0023E7C4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80275208 0023E7C8  7C 7F 1B 78 */	mr r31, r3
-/* 8027520C 0023E7CC  4B FF FF 31 */	bl func_8027513C
+/* 8027520C 0023E7CC  4B FF FF 31 */	bl initCamControlInstances
 /* 80275210 0023E7D0  81 83 00 00 */	lwz r12, 0(r3)
 /* 80275214 0023E7D4  7F E4 FB 78 */	mr r4, r31
 /* 80275218 0023E7D8  81 8C 00 10 */	lwz r12, 0x10(r12)
@@ -82,7 +82,7 @@
 /* 80275240 0023E800  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80275244 0023E804  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80275248 0023E808  7C 7F 1B 78 */	mr r31, r3
-/* 8027524C 0023E80C  4B FF FE F1 */	bl func_8027513C
+/* 8027524C 0023E80C  4B FF FE F1 */	bl initCamControlInstances
 /* 80275250 0023E810  81 83 00 00 */	lwz r12, 0(r3)
 /* 80275254 0023E814  7F E4 FB 78 */	mr r4, r31
 /* 80275258 0023E818  81 8C 00 14 */	lwz r12, 0x14(r12)
@@ -101,7 +101,7 @@
 /* 80275280 0023E840  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80275284 0023E844  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80275288 0023E848  7C 7F 1B 78 */	mr r31, r3
-/* 8027528C 0023E84C  4B FF FE B1 */	bl func_8027513C
+/* 8027528C 0023E84C  4B FF FE B1 */	bl initCamControlInstances
 /* 80275290 0023E850  81 83 00 00 */	lwz r12, 0(r3)
 /* 80275294 0023E854  7F E4 FB 78 */	mr r4, r31
 /* 80275298 0023E858  81 8C 00 18 */	lwz r12, 0x18(r12)
@@ -120,7 +120,7 @@
 /* 802752C0 0023E880  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802752C4 0023E884  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802752C8 0023E888  7C 7F 1B 78 */	mr r31, r3
-/* 802752CC 0023E88C  4B FF FE 71 */	bl func_8027513C
+/* 802752CC 0023E88C  4B FF FE 71 */	bl initCamControlInstances
 /* 802752D0 0023E890  81 83 00 00 */	lwz r12, 0(r3)
 /* 802752D4 0023E894  7F E4 FB 78 */	mr r4, r31
 /* 802752D8 0023E898  81 8C 00 1C */	lwz r12, 0x1c(r12)
@@ -139,7 +139,7 @@
 /* 80275300 0023E8C0  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80275304 0023E8C4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80275308 0023E8C8  7C 7F 1B 78 */	mr r31, r3
-/* 8027530C 0023E8CC  4B FF FE 31 */	bl func_8027513C
+/* 8027530C 0023E8CC  4B FF FE 31 */	bl initCamControlInstances
 /* 80275310 0023E8D0  81 83 00 00 */	lwz r12, 0(r3)
 /* 80275314 0023E8D4  7F E4 FB 78 */	mr r4, r31
 /* 80275318 0023E8D8  81 8C 00 20 */	lwz r12, 0x20(r12)
@@ -158,7 +158,7 @@
 /* 80275340 0023E900  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80275344 0023E904  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80275348 0023E908  7C 7F 1B 78 */	mr r31, r3
-/* 8027534C 0023E90C  4B FF FD F1 */	bl func_8027513C
+/* 8027534C 0023E90C  4B FF FD F1 */	bl initCamControlInstances
 /* 80275350 0023E910  81 83 00 00 */	lwz r12, 0(r3)
 /* 80275354 0023E914  7F E4 FB 78 */	mr r4, r31
 /* 80275358 0023E918  81 8C 00 24 */	lwz r12, 0x24(r12)
@@ -177,7 +177,7 @@
 /* 80275380 0023E940  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80275384 0023E944  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80275388 0023E948  7C 7F 1B 78 */	mr r31, r3
-/* 8027538C 0023E94C  4B FF FD B1 */	bl func_8027513C
+/* 8027538C 0023E94C  4B FF FD B1 */	bl initCamControlInstances
 /* 80275390 0023E950  81 83 00 00 */	lwz r12, 0(r3)
 /* 80275394 0023E954  7F E4 FB 78 */	mr r4, r31
 /* 80275398 0023E958  81 8C 00 28 */	lwz r12, 0x28(r12)
@@ -196,7 +196,7 @@
 /* 802753C0 0023E980  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802753C4 0023E984  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802753C8 0023E988  7C 7F 1B 78 */	mr r31, r3
-/* 802753CC 0023E98C  4B FF FD 71 */	bl func_8027513C
+/* 802753CC 0023E98C  4B FF FD 71 */	bl initCamControlInstances
 /* 802753D0 0023E990  81 83 00 00 */	lwz r12, 0(r3)
 /* 802753D4 0023E994  7F E4 FB 78 */	mr r4, r31
 /* 802753D8 0023E998  81 8C 00 2C */	lwz r12, 0x2c(r12)
@@ -1034,7 +1034,7 @@
 
 .obj "@eti_80030BE4", local
 .hidden "@eti_80030BE4"
-	.4byte func_8027513C
+	.4byte initCamControlInstances
 	.4byte 0x000000BC
 	.4byte "@etb_80018570"
 .endobj "@eti_80030BE4"

@@ -73,7 +73,6 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/cfsys/CfObjectImplMove.o\
 	$(BUILD_DIR)/asm/kyoshin/cfsys/CfObjectImplEne.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CtrlAct.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/code_800D7A04.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CBattleManager.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_800F42AC.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfObjectEnumList.o\

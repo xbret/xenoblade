@@ -527,7 +527,7 @@
 /* 8045ECC0 00428280  4E 80 00 20 */	blr 
 .endfn CLibHbmControl_WorkThreadEvent2
 
-.fn func_8045ECC4, global
+.fn __ct__8045ECC4, global
 /* 8045ECC4 00428284  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8045ECC8 00428288  7C 08 02 A6 */	mflr r0
 /* 8045ECCC 0042828C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -579,7 +579,7 @@
 /* 8045ED80 00428340  7C 08 03 A6 */	mtlr r0
 /* 8045ED84 00428344  38 21 00 20 */	addi r1, r1, 0x20
 /* 8045ED88 00428348  4E 80 00 20 */	blr 
-.endfn func_8045ECC4
+.endfn __ct__8045ECC4
 
 .fn CLibHbmControl_WorkThreadEvent4, global
 /* 8045ED8C 0042834C  94 21 FF 90 */	stwu r1, -0x70(r1)
@@ -952,7 +952,7 @@
 
 .obj "@eti_800353B4", local
 .hidden "@eti_800353B4"
-	.4byte func_8045ECC4
+	.4byte __ct__8045ECC4
 	.4byte 0x000000C8
 	.4byte "@etb_8001D7A8"
 .endobj "@eti_800353B4"

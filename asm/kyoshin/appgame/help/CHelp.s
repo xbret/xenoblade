@@ -2,14 +2,14 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_802B7BD4, global
+.fn __ct__cf_CHelp, global
 /* 802B7BD4 00281194  3C C0 80 54 */	lis r6, __vt__cf_CHelp@ha
 /* 802B7BD8 00281198  90 83 00 00 */	stw r4, 0(r3)
 /* 802B7BDC 0028119C  38 C6 EA B8 */	addi r6, r6, __vt__cf_CHelp@l
 /* 802B7BE0 002811A0  90 C3 00 08 */	stw r6, 8(r3)
 /* 802B7BE4 002811A4  90 A3 00 04 */	stw r5, 4(r3)
 /* 802B7BE8 002811A8  4E 80 00 20 */	blr 
-.endfn func_802B7BD4
+.endfn __ct__cf_CHelp
 
 .fn func_802B7BEC, global
 /* 802B7BEC 002811AC  94 21 FF F0 */	stwu r1, -0x10(r1)

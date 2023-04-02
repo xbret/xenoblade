@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_80122164, global
+.fn __ct__CQuestWindow, global
 /* 80122164 000EB724  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80122168 000EB728  7C 08 02 A6 */	mflr r0
 /* 8012216C 000EB72C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -49,7 +49,7 @@
 /* 80122210 000EB7D0  90 9C 00 6C */	stw r4, 0x6c(r28)
 /* 80122214 000EB7D4  90 1C 00 70 */	stw r0, 0x70(r28)
 /* 80122218 000EB7D8  93 BC 00 74 */	stw r29, 0x74(r28)
-/* 8012221C 000EB7DC  48 33 D3 49 */	bl __ct__8045F564
+/* 8012221C 000EB7DC  48 33 D3 49 */	bl __ct__UnkClass_8045F564
 /* 80122220 000EB7E0  93 7C 00 88 */	stw r27, 0x88(r28)
 /* 80122224 000EB7E4  38 7C 00 A0 */	addi r3, r28, 0xa0
 /* 80122228 000EB7E8  38 80 00 00 */	li r4, 0
@@ -110,7 +110,7 @@
 /* 80122300 000EB8C0  7C 08 03 A6 */	mtlr r0
 /* 80122304 000EB8C4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80122308 000EB8C8  4E 80 00 20 */	blr 
-.endfn func_80122164
+.endfn __ct__CQuestWindow
 
 .fn __dt__CTTask_IUIWindow, global
 /* 8012230C 000EB8CC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -183,10 +183,10 @@
 /* 801223F4 000EB9B4  48 09 F7 A1 */	bl func_801C1B94
 /* 801223F8 000EB9B8  38 7E 00 A0 */	addi r3, r30, 0xa0
 /* 801223FC 000EB9BC  38 80 FF FF */	li r4, -1
-/* 80122400 000EB9C0  48 0B 06 39 */	bl __dt__801D2A38
+/* 80122400 000EB9C0  48 0B 06 39 */	bl __dt__CCur18
 /* 80122404 000EB9C4  38 7E 00 78 */	addi r3, r30, 0x78
 /* 80122408 000EB9C8  38 80 FF FF */	li r4, -1
-/* 8012240C 000EB9CC  48 33 D1 75 */	bl __dt__8045F580
+/* 8012240C 000EB9CC  48 33 D1 75 */	bl __dt__UnkClass_8045F564
 /* 80122410 000EB9D0  7F C3 F3 78 */	mr r3, r30
 /* 80122414 000EB9D4  38 80 00 00 */	li r4, 0
 /* 80122418 000EB9D8  4B FF FF 45 */	bl __dt__IUIWindow
@@ -600,7 +600,7 @@
 /* 801229BC 000EBF7C  98 1F 00 B4 */	stb r0, 0xb4(r31)
 /* 801229C0 000EBF80  88 01 00 25 */	lbz r0, 0x25(r1)
 /* 801229C4 000EBF84  98 1F 00 B5 */	stb r0, 0xb5(r31)
-/* 801229C8 000EBF88  48 0B 00 71 */	bl __dt__801D2A38
+/* 801229C8 000EBF88  48 0B 00 71 */	bl __dt__CCur18
 /* 801229CC 000EBF8C  81 9F 00 A0 */	lwz r12, 0xa0(r31)
 /* 801229D0 000EBF90  38 7F 00 A0 */	addi r3, r31, 0xa0
 /* 801229D4 000EBF94  81 8C 00 08 */	lwz r12, 8(r12)
@@ -724,7 +724,7 @@
 /* 80122B78 000EC138  7F A4 EB 78 */	mr r4, r29
 /* 80122B7C 000EC13C  7F C5 F3 78 */	mr r5, r30
 /* 80122B80 000EC140  7F E6 FB 78 */	mr r6, r31
-/* 80122B84 000EC144  4B FF F5 E1 */	bl func_80122164
+/* 80122B84 000EC144  4B FF F5 E1 */	bl __ct__CQuestWindow
 .L_80122B88:
 /* 80122B88 000EC148  90 6D A7 4C */	stw r3, lbl_806668CC@sda21(r13)
 /* 80122B8C 000EC14C  7F 84 E3 78 */	mr r4, r28
@@ -3298,10 +3298,10 @@
 	.4byte 0x00000000
 	.4byte 0x0780001C
 	.4byte 0x000000A0
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001C
 	.4byte 0x00000078
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 	.4byte 0x0680001C
 	.4byte 0x00000070
 	.4byte __dt__IScnRender
@@ -3337,10 +3337,10 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x000000A0
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000078
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 	.4byte 0x0680001E
 	.4byte 0x00000070
 	.4byte __dt__IScnRender
@@ -3352,13 +3352,13 @@
 	.4byte __dt__IUIWindow
 	.4byte 0x8780001E
 	.4byte 0x000000A0
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x000000A0
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000078
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 	.4byte 0x0680001E
 	.4byte 0x00000070
 	.4byte __dt__IScnRender
@@ -3477,7 +3477,7 @@
 
 .obj "@eti_80026F6C", local
 .hidden "@eti_80026F6C"
-	.4byte func_80122164
+	.4byte __ct__CQuestWindow
 	.4byte 0x000001A8
 	.4byte "@etb_8000BC10"
 .endobj "@eti_80026F6C"

@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8009689C, global
+.fn __ct__cf_CtrlPad, global
 /* 8009689C 0005FE5C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800968A0 0005FE60  7C 08 02 A6 */	mflr r0
 /* 800968A4 0005FE64  38 A0 00 00 */	li r5, 0
@@ -11,7 +11,7 @@
 /* 800968B0 0005FE70  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 800968B4 0005FE74  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 800968B8 0005FE78  7C 7D 1B 78 */	mr r29, r3
-/* 800968BC 0005FE7C  48 00 23 29 */	bl func_80098BE4
+/* 800968BC 0005FE7C  48 00 23 29 */	bl __ct__CtrlRemote
 /* 800968C0 0005FE80  3C 60 80 53 */	lis r3, __vt__cf_CtrlPad@ha
 /* 800968C4 0005FE84  38 63 B4 50 */	addi r3, r3, __vt__cf_CtrlPad@l
 /* 800968C8 0005FE88  90 7D 00 00 */	stw r3, 0(r29)
@@ -36,7 +36,7 @@
 /* 80096910 0005FED0  7C 08 03 A6 */	mtlr r0
 /* 80096914 0005FED4  38 21 00 20 */	addi r1, r1, 0x20
 /* 80096918 0005FED8  4E 80 00 20 */	blr 
-.endfn func_8009689C
+.endfn __ct__cf_CtrlPad
 
 .fn __dt__cf_CtrlRemote, global
 /* 8009691C 0005FEDC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -760,7 +760,7 @@
 
 .obj "@eti_80024458", local
 .hidden "@eti_80024458"
-	.4byte func_8009689C
+	.4byte __ct__cf_CtrlPad
 	.4byte 0x00000080
 	.4byte "@etb_80008DA4"
 .endobj "@eti_80024458"

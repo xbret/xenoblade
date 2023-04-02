@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8020C334, global
+.fn __ct__cf_CfGimmickLock, global
 /* 8020C334 001D58F4  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8020C338 001D58F8  7C 08 02 A6 */	mflr r0
 /* 8020C33C 001D58FC  90 01 00 34 */	stw r0, 0x34(r1)
@@ -12,7 +12,7 @@
 /* 8020C34C 001D590C  93 A1 00 24 */	stw r29, 0x24(r1)
 /* 8020C350 001D5910  93 81 00 20 */	stw r28, 0x20(r1)
 /* 8020C354 001D5914  7C 9C 23 78 */	mr r28, r4
-/* 8020C358 001D5918  4B FF C5 89 */	bl func_802088E0
+/* 8020C358 001D5918  4B FF C5 89 */	bl __ct__cf_CfGimmick
 /* 8020C35C 001D591C  3C 80 80 54 */	lis r4, __vt__cf_CfGimmickLock@ha
 /* 8020C360 001D5920  38 7F 00 8C */	addi r3, r31, 0x8c
 /* 8020C364 001D5924  38 84 90 B8 */	addi r4, r4, __vt__cf_CfGimmickLock@l
@@ -144,7 +144,7 @@
 /* 8020C54C 001D5B0C  7C 08 03 A6 */	mtlr r0
 /* 8020C550 001D5B10  38 21 00 30 */	addi r1, r1, 0x30
 /* 8020C554 001D5B14  4E 80 00 20 */	blr 
-.endfn func_8020C334
+.endfn __ct__cf_CfGimmickLock
 
 .fn __dt__cf_CfGimmickLock, global
 /* 8020C558 001D5B18  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1346,7 +1346,7 @@
 
 .obj "@eti_8002D0C8", local
 .hidden "@eti_8002D0C8"
-	.4byte func_8020C334
+	.4byte __ct__cf_CfGimmickLock
 	.4byte 0x00000224
 	.4byte "@etb_800130B0"
 .endobj "@eti_8002D0C8"

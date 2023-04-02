@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_80293D90, global
+.fn __ct__cf_CChainCombo, global
 /* 80293D90 0025D350  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80293D94 0025D354  7C 08 02 A6 */	mflr r0
 /* 80293D98 0025D358  3C 80 80 54 */	lis r4, __vt__cf_CChainCombo@ha
@@ -26,7 +26,7 @@
 /* 80293DE0 0025D3A0  7C 08 03 A6 */	mtlr r0
 /* 80293DE4 0025D3A4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80293DE8 0025D3A8  4E 80 00 20 */	blr 
-.endfn func_80293D90
+.endfn __ct__cf_CChainCombo
 
 .fn func_80293DEC, global
 /* 80293DEC 0025D3AC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -239,7 +239,7 @@
 
 .obj "@eti_80031C64", local
 .hidden "@eti_80031C64"
-	.4byte func_80293D90
+	.4byte __ct__cf_CChainCombo
 	.4byte 0x0000005C
 	.4byte "@etb_80019930"
 .endobj "@eti_80031C64"

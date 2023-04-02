@@ -363,7 +363,7 @@
 /* 80040624 00009BE4  48 45 5A F5 */	bl func_80496118
 /* 80040628 00009BE8  80 7F 00 74 */	lwz r3, 0x74(r31)
 /* 8004062C 00009BEC  48 02 19 B5 */	bl func_80061FE0
-/* 80040630 00009BF0  48 05 CF D5 */	bl func_8009D604
+/* 80040630 00009BF0  48 05 CF D5 */	bl __ct__8009D604
 /* 80040634 00009BF4  80 9F 00 74 */	lwz r4, 0x74(r31)
 /* 80040638 00009BF8  7F E3 FB 78 */	mr r3, r31
 /* 8004063C 00009BFC  48 00 4A 91 */	bl func_800450CC
@@ -373,11 +373,11 @@
 /* 8004064C 00009C0C  80 BF 00 70 */	lwz r5, 0x70(r31)
 /* 80040650 00009C10  7F E3 FB 78 */	mr r3, r31
 /* 80040654 00009C14  38 E0 00 00 */	li r7, 0
-/* 80040658 00009C18  48 42 22 AD */	bl func_80462904
+/* 80040658 00009C18  48 42 22 AD */	bl __ct__80462904
 /* 8004065C 00009C1C  48 3F BB 55 */	bl func_8043C1B0
 /* 80040660 00009C20  80 9F 00 74 */	lwz r4, 0x74(r31)
 /* 80040664 00009C24  80 BF 00 70 */	lwz r5, 0x70(r31)
-/* 80040668 00009C28  48 47 51 8D */	bl func_804B57F4
+/* 80040668 00009C28  48 47 51 8D */	bl __ct__804B57F4
 /* 8004066C 00009C2C  48 43 B9 3D */	bl __dt__8047BFA8
 /* 80040670 00009C30  48 43 C9 B5 */	bl func_8047D024
 /* 80040674 00009C34  80 9F 00 74 */	lwz r4, 0x74(r31)
@@ -1259,7 +1259,7 @@
 /* 800412C8 0000A888  80 9E 00 74 */	lwz r4, 0x74(r30)
 /* 800412CC 0000A88C  7F C3 F3 78 */	mr r3, r30
 /* 800412D0 0000A890  38 C0 00 04 */	li r6, 4
-/* 800412D4 0000A894  48 27 3B 21 */	bl func_802B4DF4
+/* 800412D4 0000A894  48 27 3B 21 */	bl __ct__802B4DF4
 /* 800412D8 0000A898  38 7F 00 C0 */	addi r3, r31, 0xc0
 /* 800412DC 0000A89C  80 9F 00 C0 */	lwz r4, 0xc0(r31)
 /* 800412E0 0000A8A0  80 03 00 04 */	lwz r0, 4(r3)
@@ -1388,7 +1388,7 @@
 /* 80041494 0000AA54  60 00 20 00 */	ori r0, r0, 0x2000
 /* 80041498 0000AA58  90 1F 00 68 */	stw r0, 0x68(r31)
 /* 8004149C 0000AA5C  38 C0 00 03 */	li r6, 3
-/* 800414A0 0000AA60  48 27 39 55 */	bl func_802B4DF4
+/* 800414A0 0000AA60  48 27 39 55 */	bl __ct__802B4DF4
 /* 800414A4 0000AA64  3C 80 80 53 */	lis r4, lbl_80528EC8@ha
 /* 800414A8 0000AA68  84 64 8E C8 */	lwzu r3, lbl_80528EC8@l(r4)
 /* 800414AC 0000AA6C  80 04 00 04 */	lwz r0, 4(r4)
@@ -1487,7 +1487,7 @@
 /* 800415F8 0000ABB8  60 00 20 00 */	ori r0, r0, 0x2000
 /* 800415FC 0000ABBC  90 1F 00 68 */	stw r0, 0x68(r31)
 /* 80041600 0000ABC0  38 C0 00 03 */	li r6, 3
-/* 80041604 0000ABC4  48 27 37 F1 */	bl func_802B4DF4
+/* 80041604 0000ABC4  48 27 37 F1 */	bl __ct__802B4DF4
 /* 80041608 0000ABC8  3C 80 80 53 */	lis r4, lbl_80528EF8@ha
 /* 8004160C 0000ABCC  84 64 8E F8 */	lwzu r3, lbl_80528EF8@l(r4)
 /* 80041610 0000ABD0  80 04 00 04 */	lwz r0, 4(r4)
@@ -1577,13 +1577,13 @@
 /* 80041738 0000ACF8  80 83 00 74 */	lwz r4, 0x74(r3)
 /* 8004173C 0000ACFC  38 A0 00 54 */	li r5, 0x54
 /* 80041740 0000AD00  38 C0 00 03 */	li r6, 3
-/* 80041744 0000AD04  48 27 36 B1 */	bl func_802B4DF4
+/* 80041744 0000AD04  48 27 36 B1 */	bl __ct__802B4DF4
 /* 80041748 0000AD08  48 00 00 14 */	b .L_8004175C
 .L_8004174C:
 /* 8004174C 0000AD0C  80 83 00 74 */	lwz r4, 0x74(r3)
 /* 80041750 0000AD10  38 A0 00 55 */	li r5, 0x55
 /* 80041754 0000AD14  38 C0 00 03 */	li r6, 3
-/* 80041758 0000AD18  48 27 36 9D */	bl func_802B4DF4
+/* 80041758 0000AD18  48 27 36 9D */	bl __ct__802B4DF4
 .L_8004175C:
 /* 8004175C 0000AD1C  3C 80 80 53 */	lis r4, lbl_80528F28@ha
 /* 80041760 0000AD20  84 64 8F 28 */	lwzu r3, lbl_80528F28@l(r4)
@@ -1681,7 +1681,7 @@
 /* 800418A8 0000AE68  60 00 20 00 */	ori r0, r0, 0x2000
 /* 800418AC 0000AE6C  90 1F 00 68 */	stw r0, 0x68(r31)
 /* 800418B0 0000AE70  38 C0 00 03 */	li r6, 3
-/* 800418B4 0000AE74  48 27 35 41 */	bl func_802B4DF4
+/* 800418B4 0000AE74  48 27 35 41 */	bl __ct__802B4DF4
 /* 800418B8 0000AE78  3C 80 80 53 */	lis r4, lbl_80528F58@ha
 /* 800418BC 0000AE7C  84 64 8F 58 */	lwzu r3, lbl_80528F58@l(r4)
 /* 800418C0 0000AE80  80 04 00 04 */	lwz r0, 4(r4)
@@ -4725,47 +4725,53 @@
 
 .balign 8
 
-
 .obj CTaskGame_typestr, global
 	.asciz "CTaskGame"
-	.balign 4
 .endobj CTaskGame_typestr
+
+.balign 4
 
 .obj CTTask_CTaskGame_typestr, global
 	.asciz "CTTask<CTaskGame>"
-	.balign 4
 .endobj CTTask_CTaskGame_typestr
+
+.balign 4
 
 .obj IErrMesWinSel_typestr, global
 	.asciz "IErrMesWinSel"
-	.balign 4
 .endobj IErrMesWinSel_typestr
+
+.balign 4
 
 .obj ITitleMenu_typestr, global
 	.asciz "ITitleMenu"
-	.balign 4
 .endobj ITitleMenu_typestr
+
+.balign 4
 
 .obj IGameException_typestr, global
 	.asciz "IGameException"
-	.balign 4
 .endobj IGameException_typestr
+
+.balign 4
 
 .obj IScnRender_typestr, global
 	.asciz "IScnRender"
-	.balign 4
 .endobj IScnRender_typestr
+
+.balign 4
 
 .obj CProcess_typestr, global
 	.asciz "CProcess"
-	.balign 4
 .endobj CProcess_typestr
+
+.balign 4
 
 .obj CChildListNode_typestr, global
 	.asciz "CChildListNode"
-	.balign 4
-	.4byte 0
 .endobj CChildListNode_typestr
+
+.balign 8
 
 .obj CDoubleListNode_typestr, global
 	.asciz "CDoubleListNode"
@@ -4782,8 +4788,6 @@
 	.asciz "0"
 	.asciz "%d"
 	.asciz "acbd"
-	.4byte 0
-	.byte 0x00
 .endobj lbl_804F6158
 
 

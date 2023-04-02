@@ -7,18 +7,18 @@ namespace ml{
 
     //func_80435EA4
     void mtInit(u32 seed){
-        getInstanceMTRand()->mtInit(seed);
+        MTRand::getInstance()->mtInit(seed);
     }
 
     int mtRand(){
-        return getInstanceMTRand()->rand();
+        return MTRand::getInstance()->rand();
     }
 
 
     //Random range (max only)
     //Max is exclusive
     int mtRand(int max){
-        MTRand* mtRand = getInstanceMTRand();
+        MTRand* mtRand = MTRand::getInstance();
 
         if(max != 0){
     	    int randVal = mtRand->rand();
@@ -31,7 +31,7 @@ namespace ml{
     //Random range (min and max)
     //Min is inclusive, max is exclusive
     int mtRand(int min, int max){
-        MTRand* mtRand = getInstanceMTRand();
+        MTRand* mtRand = MTRand::getInstance();
         int range = max - min;
         int result = 0;
 

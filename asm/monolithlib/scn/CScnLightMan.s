@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8048D024, global
+.fn __ct__CScnLightMan, global
 /* 8048D024 004565E4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8048D028 004565E8  7C 08 02 A6 */	mflr r0
 /* 8048D02C 004565EC  3C A0 80 57 */	lis r5, __vt__CScnLightMan@ha
@@ -54,7 +54,7 @@
 /* 8048D0D8 00456698  7C 08 03 A6 */	mtlr r0
 /* 8048D0DC 0045669C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8048D0E0 004566A0  4E 80 00 20 */	blr 
-.endfn func_8048D024
+.endfn __ct__CScnLightMan
 
 .fn __dt__CScnLightMan, global
 /* 8048D0E4 004566A4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -190,7 +190,7 @@
 
 .obj "@eti_80036740", local
 .hidden "@eti_80036740"
-	.4byte func_8048D024
+	.4byte __ct__CScnLightMan
 	.4byte 0x000000C0
 	.4byte "@etb_8001EB70"
 .endobj "@eti_80036740"

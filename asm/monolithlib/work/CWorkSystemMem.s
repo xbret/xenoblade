@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_804448B8, global
+.fn __ct__CWorkSystemMem, global
 /* 804448B8 0040DE78  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804448BC 0040DE7C  7C 08 02 A6 */	mflr r0
 /* 804448C0 0040DE80  38 C0 00 01 */	li r6, 1
@@ -27,7 +27,7 @@
 /* 8044490C 0040DECC  7C 08 03 A6 */	mtlr r0
 /* 80444910 0040DED0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80444914 0040DED4  4E 80 00 20 */	blr 
-.endfn func_804448B8
+.endfn __ct__CWorkSystemMem
 
 .fn __dt__CWorkSystemMem, global
 /* 80444918 0040DED8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -226,7 +226,7 @@
 
 .obj "@eti_80034484", local
 .hidden "@eti_80034484"
-	.4byte func_804448B8
+	.4byte __ct__CWorkSystemMem
 	.4byte 0x00000060
 	.4byte "@etb_8001C870"
 .endobj "@eti_80034484"

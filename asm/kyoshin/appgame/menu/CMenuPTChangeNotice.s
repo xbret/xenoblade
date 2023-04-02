@@ -46,7 +46,7 @@
 /* 802931E0 0025C7A0  90 BD 00 10 */	stw r5, 0x10(r29)
 /* 802931E4 0025C7A4  90 9D 00 6C */	stw r4, 0x6c(r29)
 /* 802931E8 0025C7A8  90 1D 00 70 */	stw r0, 0x70(r29)
-/* 802931EC 0025C7AC  48 1C C3 79 */	bl __ct__8045F564
+/* 802931EC 0025C7AC  48 1C C3 79 */	bl __ct__UnkClass_8045F564
 /* 802931F0 0025C7B0  93 DD 00 84 */	stw r30, 0x84(r29)
 /* 802931F4 0025C7B4  7F A3 EB 78 */	mr r3, r29
 /* 802931F8 0025C7B8  93 FD 00 88 */	stw r31, 0x88(r29)
@@ -83,7 +83,7 @@
 /* 80293268 0025C828  4B F2 E9 2D */	bl func_801C1B94
 /* 8029326C 0025C82C  38 7E 00 74 */	addi r3, r30, 0x74
 /* 80293270 0025C830  38 80 FF FF */	li r4, -1
-/* 80293274 0025C834  48 1C C3 0D */	bl __dt__8045F580
+/* 80293274 0025C834  48 1C C3 0D */	bl __dt__UnkClass_8045F564
 /* 80293278 0025C838  7F C3 F3 78 */	mr r3, r30
 /* 8029327C 0025C83C  38 80 00 00 */	li r4, 0
 /* 80293280 0025C840  4B E8 F0 DD */	bl __dt__IUIWindow
@@ -1071,7 +1071,7 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000074
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 	.4byte 0x0680001E
 	.4byte 0x00000070
 	.4byte __dt__IScnRender
@@ -1083,7 +1083,7 @@
 	.4byte __dt__IUIWindow
 	.4byte 0x0780001E
 	.4byte 0x00000074
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 	.4byte 0x0680001E
 	.4byte 0x00000070
 	.4byte __dt__IScnRender

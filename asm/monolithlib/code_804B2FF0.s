@@ -2880,7 +2880,7 @@
 /* 804B57F0 0047EDB0  4E 80 00 20 */	blr 
 .endfn func_804B5658
 
-.fn func_804B57F4, global
+.fn __ct__804B57F4, global
 /* 804B57F4 0047EDB4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804B57F8 0047EDB8  7C 08 02 A6 */	mflr r0
 /* 804B57FC 0047EDBC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2948,7 +2948,7 @@
 /* 804B58F0 0047EEB0  7C 08 03 A6 */	mtlr r0
 /* 804B58F4 0047EEB4  38 21 00 20 */	addi r1, r1, 0x20
 /* 804B58F8 0047EEB8  4E 80 00 20 */	blr 
-.endfn func_804B57F4
+.endfn __ct__804B57F4
 
 .fn func_804B58FC, global
 /* 804B58FC 0047EEBC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -3001,7 +3001,7 @@
 /* 804B5998 0047EF58  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804B599C 0047EF5C  3F E0 80 66 */	lis r31, lbl_8065F9F8@ha
 /* 804B59A0 0047EF60  38 7F F9 F8 */	addi r3, r31, lbl_8065F9F8@l
-/* 804B59A4 0047EF64  4B FF CB D5 */	bl func_804B2578
+/* 804B59A4 0047EF64  4B FF CB D5 */	bl __ct__CColiProc
 /* 804B59A8 0047EF68  3C 60 80 57 */	lis r3, __vt__CColiManCall@ha
 /* 804B59AC 0047EF6C  38 63 2D 38 */	addi r3, r3, __vt__CColiManCall@l
 /* 804B59B0 0047EF70  90 7F F9 F8 */	stw r3, lbl_8065F9F8@l(r31)
@@ -3535,7 +3535,7 @@
 
 .obj "@eti_80037A00", local
 .hidden "@eti_80037A00"
-	.4byte func_804B57F4
+	.4byte __ct__804B57F4
 	.4byte 0x00000108
 	.4byte "@etb_8001FD50"
 .endobj "@eti_80037A00"

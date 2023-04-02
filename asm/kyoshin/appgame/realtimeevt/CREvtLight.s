@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_801C35A8, global
+.fn __ct__CREvtLight, global
 /* 801C35A8 0018CB68  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801C35AC 0018CB6C  7C 08 02 A6 */	mflr r0
 /* 801C35B0 0018CB70  90 01 00 14 */	stw r0, 0x14(r1)
@@ -26,9 +26,9 @@
 /* 801C35F8 0018CBB8  7C 08 03 A6 */	mtlr r0
 /* 801C35FC 0018CBBC  38 21 00 10 */	addi r1, r1, 0x10
 /* 801C3600 0018CBC0  4E 80 00 20 */	blr 
-.endfn func_801C35A8
+.endfn __ct__CREvtLight
 
-.fn func_801C3604, global
+.fn __ct__801C3604, global
 /* 801C3604 0018CBC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801C3608 0018CBC8  7C 08 02 A6 */	mflr r0
 /* 801C360C 0018CBCC  2C 03 00 00 */	cmpwi r3, 0
@@ -79,7 +79,7 @@
 /* 801C36B8 0018CC78  7C 08 03 A6 */	mtlr r0
 /* 801C36BC 0018CC7C  38 21 00 10 */	addi r1, r1, 0x10
 /* 801C36C0 0018CC80  4E 80 00 20 */	blr 
-.endfn func_801C3604
+.endfn __ct__801C3604
 
 .fn func_801C36C4, global
 /* 801C36C4 0018CC84  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -295,7 +295,7 @@
 .obj __vt__cf_CREvtLight, global
 	.4byte __RTTI__cf_CREvtLight
 	.4byte 0
-	.4byte func_801C3604
+	.4byte __ct__801C3604
 	.4byte func_801C37C8
 	.4byte func_80169A34
 	.4byte func_80185758
@@ -386,14 +386,14 @@
 
 .obj "@eti_8002B154", local
 .hidden "@eti_8002B154"
-	.4byte func_801C35A8
+	.4byte __ct__CREvtLight
 	.4byte 0x0000005C
 	.4byte "@etb_80010874"
 .endobj "@eti_8002B154"
 
 .obj "@eti_8002B160", local
 .hidden "@eti_8002B160"
-	.4byte func_801C3604
+	.4byte __ct__801C3604
 	.4byte 0x000000C0
 	.4byte "@etb_8001087C"
 .endobj "@eti_8002B160"

@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_80212504, global
+.fn __ct__CMakeCrystalWin, global
 /* 80212504 001DBAC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80212508 001DBAC8  7C 08 02 A6 */	mflr r0
 /* 8021250C 001DBACC  3C C0 80 54 */	lis r6, __vt__CMakeCrystalWin@ha
@@ -27,7 +27,7 @@
 /* 80212558 001DBB18  48 00 97 19 */	bl __ct__CModelDispMakeCrystal
 /* 8021255C 001DBB1C  38 7E 2E 08 */	addi r3, r30, 0x2e08
 /* 80212560 001DBB20  38 80 00 00 */	li r4, 0
-/* 80212564 001DBB24  48 00 16 8D */	bl func_80213BF0
+/* 80212564 001DBB24  48 00 16 8D */	bl __ct__CMCCrystalBox
 /* 80212568 001DBB28  38 7E 43 10 */	addi r3, r30, 0x4310
 /* 8021256C 001DBB2C  38 80 00 00 */	li r4, 0
 /* 80212570 001DBB30  48 09 BE CD */	bl __ct__CLoad
@@ -39,7 +39,7 @@
 /* 80212588 001DBB48  7C 08 03 A6 */	mtlr r0
 /* 8021258C 001DBB4C  38 21 00 10 */	addi r1, r1, 0x10
 /* 80212590 001DBB50  4E 80 00 20 */	blr 
-.endfn func_80212504
+.endfn __ct__CMakeCrystalWin
 
 .fn __dt__CMakeCrystalWin, global
 /* 80212594 001DBB54  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -207,7 +207,7 @@
 /* 80212804 001DBDC4  4B FB 16 CD */	bl __ct__CTitleAHelp
 /* 80212808 001DBDC8  38 7F 00 1C */	addi r3, r31, 0x1c
 /* 8021280C 001DBDCC  38 81 00 84 */	addi r4, r1, 0x84
-/* 80212810 001DBDD0  4B F0 A1 65 */	bl __ct__8011C974
+/* 80212810 001DBDD0  4B F0 A1 65 */	bl __ct__UnkClass_8011C974
 /* 80212814 001DBDD4  80 01 00 94 */	lwz r0, 0x94(r1)
 /* 80212818 001DBDD8  38 61 00 80 */	addi r3, r1, 0x80
 /* 8021281C 001DBDDC  90 1F 00 2C */	stw r0, 0x2c(r31)
@@ -239,7 +239,7 @@
 /* 80212884 001DBE44  4B FB 17 21 */	bl CTitleAHelp_load
 /* 80212888 001DBE48  38 61 2E 98 */	addi r3, r1, 0x2e98
 /* 8021288C 001DBE4C  38 80 00 00 */	li r4, 0
-/* 80212890 001DBE50  48 00 13 61 */	bl func_80213BF0
+/* 80212890 001DBE50  48 00 13 61 */	bl __ct__CMCCrystalBox
 /* 80212894 001DBE54  38 7F 2E 08 */	addi r3, r31, 0x2e08
 /* 80212898 001DBE58  38 81 2E 98 */	addi r4, r1, 0x2e98
 /* 8021289C 001DBE5C  4B FF F4 51 */	bl func_80211CEC
@@ -264,7 +264,7 @@
 /* 802128E8 001DBEA8  48 09 BB 55 */	bl __ct__CLoad
 /* 802128EC 001DBEAC  38 7F 43 14 */	addi r3, r31, 0x4314
 /* 802128F0 001DBEB0  38 81 00 54 */	addi r4, r1, 0x54
-/* 802128F4 001DBEB4  4B F0 A0 81 */	bl __ct__8011C974
+/* 802128F4 001DBEB4  4B F0 A0 81 */	bl __ct__UnkClass_8011C974
 /* 802128F8 001DBEB8  80 01 00 64 */	lwz r0, 0x64(r1)
 /* 802128FC 001DBEBC  38 61 00 50 */	addi r3, r1, 0x50
 /* 80212900 001DBEC0  90 1F 43 24 */	stw r0, 0x4324(r31)
@@ -1031,7 +1031,7 @@
 /* 80213340 001DC900  48 00 95 71 */	bl func_8021C8B0
 /* 80213344 001DC904  38 61 2D C0 */	addi r3, r1, 0x2dc0
 /* 80213348 001DC908  38 80 00 00 */	li r4, 0
-/* 8021334C 001DC90C  48 00 08 A5 */	bl func_80213BF0
+/* 8021334C 001DC90C  48 00 08 A5 */	bl __ct__CMCCrystalBox
 /* 80213350 001DC910  38 7F 2E 08 */	addi r3, r31, 0x2e08
 /* 80213354 001DC914  38 81 2D C0 */	addi r4, r1, 0x2dc0
 /* 80213358 001DC918  4B FF E9 95 */	bl func_80211CEC
@@ -1421,7 +1421,7 @@
 
 .obj "@eti_8002D320", local
 .hidden "@eti_8002D320"
-	.4byte func_80212504
+	.4byte __ct__CMakeCrystalWin
 	.4byte 0x00000090
 	.4byte "@etb_800133E8"
 .endobj "@eti_8002D320"

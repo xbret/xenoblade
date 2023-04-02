@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8029A934, global
+.fn __ct__CTutorial, global
 /* 8029A934 00263EF4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8029A938 00263EF8  7C 08 02 A6 */	mflr r0
 /* 8029A93C 00263EFC  3C C0 80 54 */	lis r6, __vt__CTutorial@ha
@@ -14,9 +14,9 @@
 /* 8029A954 00263F14  7C BF 2B 78 */	mr r31, r5
 /* 8029A958 00263F18  90 C3 00 00 */	stw r6, 0(r3)
 /* 8029A95C 00263F1C  38 63 00 04 */	addi r3, r3, 4
-/* 8029A960 00263F20  48 1C 4C 05 */	bl __ct__8045F564
+/* 8029A960 00263F20  48 1C 4C 05 */	bl __ct__UnkClass_8045F564
 /* 8029A964 00263F24  38 7D 00 14 */	addi r3, r29, 0x14
-/* 8029A968 00263F28  48 1C 4B FD */	bl __ct__8045F564
+/* 8029A968 00263F28  48 1C 4B FD */	bl __ct__UnkClass_8045F564
 /* 8029A96C 00263F2C  38 80 00 00 */	li r4, 0
 /* 8029A970 00263F30  38 00 00 01 */	li r0, 1
 /* 8029A974 00263F34  90 9D 00 24 */	stw r4, 0x24(r29)
@@ -43,7 +43,7 @@
 /* 8029A9C8 00263F88  7C 08 03 A6 */	mtlr r0
 /* 8029A9CC 00263F8C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8029A9D0 00263F90  4E 80 00 20 */	blr 
-.endfn func_8029A934
+.endfn __ct__CTutorial
 
 .fn __dt__CTutorial, global
 /* 8029A9D4 00263F94  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -56,10 +56,10 @@
 /* 8029A9F0 00263FB0  41 82 00 2C */	beq .L_8029AA1C
 /* 8029A9F4 00263FB4  38 80 FF FF */	li r4, -1
 /* 8029A9F8 00263FB8  38 63 00 14 */	addi r3, r3, 0x14
-/* 8029A9FC 00263FBC  48 1C 4B 85 */	bl __dt__8045F580
+/* 8029A9FC 00263FBC  48 1C 4B 85 */	bl __dt__UnkClass_8045F564
 /* 8029AA00 00263FC0  38 7E 00 04 */	addi r3, r30, 4
 /* 8029AA04 00263FC4  38 80 FF FF */	li r4, -1
-/* 8029AA08 00263FC8  48 1C 4B 79 */	bl __dt__8045F580
+/* 8029AA08 00263FC8  48 1C 4B 79 */	bl __dt__UnkClass_8045F564
 /* 8029AA0C 00263FCC  2C 1F 00 00 */	cmpwi r31, 0
 /* 8029AA10 00263FD0  40 81 00 0C */	ble .L_8029AA1C
 /* 8029AA14 00263FD4  7F C3 F3 78 */	mr r3, r30
@@ -980,7 +980,7 @@
 	.4byte 0x00000000
 	.4byte 0x0780001D
 	.4byte 0x00000004
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 	.4byte 0x8680001D
 	.4byte 0x00000000
 	.4byte __dt__IWorkEvent
@@ -994,7 +994,7 @@
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x00000014
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 .endobj "@etb_8001A140"
 
 .obj "@etb_8001A15C", local
@@ -1095,7 +1095,7 @@
 
 .obj "@eti_80032108", local
 .hidden "@eti_80032108"
-	.4byte func_8029A934
+	.4byte __ct__CTutorial
 	.4byte 0x000000A0
 	.4byte "@etb_8001A110"
 .endobj "@eti_80032108"

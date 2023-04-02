@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8013C068, global
+.fn __ct__CUIWindowManager, global
 /* 8013C068 00105628  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8013C06C 0010562C  7C 08 02 A6 */	mflr r0
 /* 8013C070 00105630  90 01 00 24 */	stw r0, 0x24(r1)
@@ -120,7 +120,7 @@
 /* 8013C230 001057F0  7C 08 03 A6 */	mtlr r0
 /* 8013C234 001057F4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8013C238 001057F8  4E 80 00 20 */	blr 
-.endfn func_8013C068
+.endfn __ct__CUIWindowManager
 
 .fn __dt__CTTask_CUIWindowManager, global
 /* 8013C23C 001057FC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -352,7 +352,7 @@
 /* 8013C550 00105B10  4E 80 00 20 */	blr 
 .endfn func_8013C54C
 
-.fn func_8013C554, global
+.fn __ct__CUIWindowManager_CTest, global
 /* 8013C554 00105B14  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8013C558 00105B18  7C 08 02 A6 */	mflr r0
 /* 8013C55C 00105B1C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -406,7 +406,7 @@
 /* 8013C614 00105BD4  7C 08 03 A6 */	mtlr r0
 /* 8013C618 00105BD8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8013C61C 00105BDC  4E 80 00 20 */	blr 
-.endfn func_8013C554
+.endfn __ct__CUIWindowManager_CTest
 
 .fn __dt__CTTask_CUIWindowManager_CTest, global
 /* 8013C620 00105BE0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1146,7 +1146,7 @@
 /* 8013D03C 001065FC  41 82 00 10 */	beq .L_8013D04C
 /* 8013D040 00106600  7F C4 F3 78 */	mr r4, r30
 /* 8013D044 00106604  7F E5 FB 78 */	mr r5, r31
-/* 8013D048 00106608  4B FF F0 21 */	bl func_8013C068
+/* 8013D048 00106608  4B FF F0 21 */	bl __ct__CUIWindowManager
 .L_8013D04C:
 /* 8013D04C 0010660C  90 6D A7 F8 */	stw r3, lbl_80666978@sda21(r13)
 /* 8013D050 00106610  7F A4 EB 78 */	mr r4, r29
@@ -1714,7 +1714,7 @@
 /* 8013D7EC 00106DAC  80 64 00 9C */	lwz r3, 0x9c(r4)
 /* 8013D7F0 00106DB0  54 05 04 3E */	clrlwi r5, r0, 0x10
 /* 8013D7F4 00106DB4  80 84 00 58 */	lwz r4, 0x58(r4)
-/* 8013D7F8 00106DB8  48 13 71 51 */	bl func_80274948
+/* 8013D7F8 00106DB8  48 13 71 51 */	bl __ct__80274948
 /* 8013D7FC 00106DBC  2C 03 00 00 */	cmpwi r3, 0
 /* 8013D800 00106DC0  90 7F 00 08 */	stw r3, 8(r31)
 /* 8013D804 00106DC4  40 82 00 0C */	bne .L_8013D810
@@ -2279,7 +2279,7 @@
 /* 8013DF7C 0010753C  55 04 04 3E */	clrlwi r4, r8, 0x10
 /* 8013DF80 00107540  54 E5 06 3E */	clrlwi r5, r7, 0x18
 /* 8013DF84 00107544  54 06 06 3E */	clrlwi r6, r0, 0x18
-/* 8013DF88 00107548  48 02 60 31 */	bl func_80163FB8
+/* 8013DF88 00107548  48 02 60 31 */	bl __ct__CCol6Invite
 /* 8013DF8C 0010754C  2C 03 00 00 */	cmpwi r3, 0
 /* 8013DF90 00107550  90 7F 00 08 */	stw r3, 8(r31)
 /* 8013DF94 00107554  40 82 00 0C */	bne .L_8013DFA0
@@ -2342,7 +2342,7 @@
 /* 8013E054 00107614  48 00 00 94 */	b .L_8013E0E8
 .L_8013E058:
 /* 8013E058 00107618  80 63 00 9C */	lwz r3, 0x9c(r3)
-/* 8013E05C 0010761C  48 01 F1 AD */	bl func_8015D208
+/* 8013E05C 0010761C  48 01 F1 AD */	bl __ct__CCol6CheckBat
 /* 8013E060 00107620  2C 03 00 00 */	cmpwi r3, 0
 /* 8013E064 00107624  90 7F 00 08 */	stw r3, 8(r31)
 /* 8013E068 00107628  40 82 00 0C */	bne .L_8013E074
@@ -3065,7 +3065,7 @@
 .L_8013EA00:
 /* 8013EA00 00107FC0  80 64 00 9C */	lwz r3, 0x9c(r4)
 /* 8013EA04 00107FC4  80 84 00 58 */	lwz r4, 0x58(r4)
-/* 8013EA08 00107FC8  48 15 5A D1 */	bl func_802944D8
+/* 8013EA08 00107FC8  48 15 5A D1 */	bl __ct__802944D8
 /* 8013EA0C 00107FCC  2C 03 00 00 */	cmpwi r3, 0
 /* 8013EA10 00107FD0  90 7F 00 08 */	stw r3, 8(r31)
 /* 8013EA14 00107FD4  40 82 00 0C */	bne .L_8013EA20
@@ -6332,7 +6332,7 @@
 	.4byte 0
 	.4byte __dt__CUIWindowManager
 	.4byte CChildListNode_Reset
-	.4byte func_8013C554
+	.4byte __ct__CUIWindowManager_CTest
 	.4byte func_8013C678
 	.4byte func_8013C6D8
 	.4byte func_8013F190
@@ -6896,7 +6896,7 @@
 
 .obj "@eti_80027DDC", local
 .hidden "@eti_80027DDC"
-	.4byte func_8013C068
+	.4byte __ct__CUIWindowManager
 	.4byte 0x000001D4
 	.4byte "@etb_8000CB50"
 .endobj "@eti_80027DDC"
@@ -6931,7 +6931,7 @@
 
 .obj "@eti_80027E18", local
 .hidden "@eti_80027E18"
-	.4byte func_8013C554
+	.4byte __ct__CUIWindowManager_CTest
 	.4byte 0x000000CC
 	.4byte "@etb_8000CBDC"
 .endobj "@eti_80027E18"

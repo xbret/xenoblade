@@ -88,7 +88,7 @@
 /* 8006A95C 00033F1C  4E 80 00 20 */	blr 
 .endfn func_8006A90C
 
-.fn func_8006A960, global
+.fn CfCamEvent_initCamIntfInstances, global
 /* 8006A960 00033F20  88 0D A5 30 */	lbz r0, lbl_806666B0@sda21(r13)
 /* 8006A964 00033F24  7C 00 07 75 */	extsb. r0, r0
 /* 8006A968 00033F28  40 82 00 18 */	bne .L_8006A980
@@ -132,7 +132,7 @@
 /* 8006A9EC 00033FAC  4C 82 00 20 */	bnelr 
 /* 8006A9F0 00033FB0  38 6D A5 44 */	addi r3, r13, lbl_806666C4@sda21
 /* 8006A9F4 00033FB4  4E 80 00 20 */	blr 
-.endfn func_8006A960
+.endfn CfCamEvent_initCamIntfInstances
 
 .fn func_8006A9F8, global
 /* 8006A9F8 00033FB8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -160,7 +160,7 @@
 /* 8006AA44 00034004  7C 9F 23 78 */	mr r31, r4
 /* 8006AA48 00034008  93 C1 00 08 */	stw r30, 8(r1)
 /* 8006AA4C 0003400C  7C 7E 1B 78 */	mr r30, r3
-/* 8006AA50 00034010  4B FF FF 11 */	bl func_8006A960
+/* 8006AA50 00034010  4B FF FF 11 */	bl CfCamEvent_initCamIntfInstances
 /* 8006AA54 00034014  81 83 00 00 */	lwz r12, 0(r3)
 /* 8006AA58 00034018  7F C4 F3 78 */	mr r4, r30
 /* 8006AA5C 0003401C  7F E5 FB 78 */	mr r5, r31
@@ -190,7 +190,7 @@
 /* 8006AAAC 0003406C  90 A3 02 68 */	stw r5, 0x268(r3)
 /* 8006AAB0 00034070  80 04 00 08 */	lwz r0, 8(r4)
 /* 8006AAB4 00034074  90 03 02 70 */	stw r0, 0x270(r3)
-/* 8006AAB8 00034078  4B FF FE A9 */	bl func_8006A960
+/* 8006AAB8 00034078  4B FF FE A9 */	bl CfCamEvent_initCamIntfInstances
 /* 8006AABC 0003407C  81 83 00 00 */	lwz r12, 0(r3)
 /* 8006AAC0 00034080  7F C4 F3 78 */	mr r4, r30
 /* 8006AAC4 00034084  7F E5 FB 78 */	mr r5, r31
@@ -214,7 +214,7 @@
 /* 8006AB00 000340C0  93 C1 00 08 */	stw r30, 8(r1)
 /* 8006AB04 000340C4  7C 7E 1B 78 */	mr r30, r3
 /* 8006AB08 000340C8  D0 23 02 5C */	stfs f1, 0x25c(r3)
-/* 8006AB0C 000340CC  4B FF FE 55 */	bl func_8006A960
+/* 8006AB0C 000340CC  4B FF FE 55 */	bl CfCamEvent_initCamIntfInstances
 /* 8006AB10 000340D0  81 83 00 00 */	lwz r12, 0(r3)
 /* 8006AB14 000340D4  7F C4 F3 78 */	mr r4, r30
 /* 8006AB18 000340D8  7F E5 FB 78 */	mr r5, r31
@@ -238,7 +238,7 @@
 /* 8006AB54 00034114  93 C1 00 08 */	stw r30, 8(r1)
 /* 8006AB58 00034118  7C 7E 1B 78 */	mr r30, r3
 /* 8006AB5C 0003411C  D0 23 02 60 */	stfs f1, 0x260(r3)
-/* 8006AB60 00034120  4B FF FE 01 */	bl func_8006A960
+/* 8006AB60 00034120  4B FF FE 01 */	bl CfCamEvent_initCamIntfInstances
 /* 8006AB64 00034124  81 83 00 00 */	lwz r12, 0(r3)
 /* 8006AB68 00034128  7F C4 F3 78 */	mr r4, r30
 /* 8006AB6C 0003412C  7F E5 FB 78 */	mr r5, r31
@@ -272,7 +272,7 @@
 /* 8006ABD0 00034190  90 9E 02 5C */	stw r4, 0x25c(r30)
 /* 8006ABD4 00034194  80 1F 00 08 */	lwz r0, 8(r31)
 /* 8006ABD8 00034198  90 1E 02 64 */	stw r0, 0x264(r30)
-/* 8006ABDC 0003419C  4B FF FD 85 */	bl func_8006A960
+/* 8006ABDC 0003419C  4B FF FD 85 */	bl CfCamEvent_initCamIntfInstances
 /* 8006ABE0 000341A0  81 83 00 00 */	lwz r12, 0(r3)
 /* 8006ABE4 000341A4  7F C4 F3 78 */	mr r4, r30
 /* 8006ABE8 000341A8  7F E5 FB 78 */	mr r5, r31
@@ -778,7 +778,7 @@
 /* 8006B30C 000348CC  4E 80 00 20 */	blr 
 .endfn func_8006ACC0
 
-.fn func_8006B310, global
+.fn __ct__8006B310, global
 /* 8006B310 000348D0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8006B314 000348D4  7C 08 02 A6 */	mflr r0
 /* 8006B318 000348D8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -796,7 +796,7 @@
 /* 8006B348 00034908  41 82 00 84 */	beq .L_8006B3CC
 /* 8006B34C 0003490C  7F A4 EB 78 */	mr r4, r29
 /* 8006B350 00034910  7F C5 F3 78 */	mr r5, r30
-/* 8006B354 00034914  48 00 08 D9 */	bl func_8006BC2C
+/* 8006B354 00034914  48 00 08 D9 */	bl __ct__cf_CfCamFollow
 /* 8006B358 00034918  3C 60 80 53 */	lis r3, __vt__cf_CfCamEvent@ha
 /* 8006B35C 0003491C  3C 80 80 66 */	lis r4, zero__Q22mm4Vec3@ha
 /* 8006B360 00034920  38 63 A8 18 */	addi r3, r3, __vt__cf_CfCamEvent@l
@@ -835,7 +835,7 @@
 /* 8006B3E0 000349A0  7C 08 03 A6 */	mtlr r0
 /* 8006B3E4 000349A4  38 21 00 20 */	addi r1, r1, 0x20
 /* 8006B3E8 000349A8  4E 80 00 20 */	blr
-.endfn func_8006B310
+.endfn __ct__8006B310
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -964,6 +964,12 @@
 	.4byte 0
 	.4byte 0
 .endobj cf_CfCamDirectionIntf_hierarchy
+
+.obj cf_CfCamFollow_hierarchy, global
+	.4byte __RTTI__cf_CfCam
+	.4byte 0
+	.4byte 0
+.endobj cf_CfCamFollow_hierarchy
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
@@ -1248,7 +1254,7 @@
 
 .obj "@eti_80023390", local
 .hidden "@eti_80023390"
-	.4byte func_8006B310
+	.4byte __ct__8006B310
 	.4byte 0x000000DC
 	.4byte "@etb_8000806C"
 .endobj "@eti_80023390"

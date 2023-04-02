@@ -9,7 +9,7 @@
 /* 8008A0D4 00053694  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8008A0D8 00053698  3F E0 80 57 */	lis r31, lbl_80575008@ha
 /* 8008A0DC 0005369C  38 7F 50 08 */	addi r3, r31, lbl_80575008@l
-/* 8008A0E0 000536A0  48 42 84 99 */	bl func_804B2578
+/* 8008A0E0 000536A0  48 42 84 99 */	bl __ct__CColiProc
 /* 8008A0E4 000536A4  3C 60 80 53 */	lis r3, __vt__cf_CtrlEneAiCall@ha
 /* 8008A0E8 000536A8  38 63 AF E4 */	addi r3, r3, __vt__cf_CtrlEneAiCall@l
 /* 8008A0EC 000536AC  90 7F 50 08 */	stw r3, lbl_80575008@l(r31)

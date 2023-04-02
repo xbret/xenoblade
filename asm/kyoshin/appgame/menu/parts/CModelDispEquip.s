@@ -20,12 +20,12 @@
 /* 801FF59C 001C8B5C  7C BC 2B 78 */	mr r28, r5
 /* 801FF5A0 001C8B60  90 03 00 08 */	stw r0, 8(r3)
 /* 801FF5A4 001C8B64  38 7D 00 0C */	addi r3, r29, 0xc
-/* 801FF5A8 001C8B68  4B E5 AE C5 */	bl func_8005A46C
-/* 801FF5AC 001C8B6C  3C 80 80 06 */	lis r4, func_8005A46C@ha
+/* 801FF5A8 001C8B68  4B E5 AE C5 */	bl __ct__cf_CActParamAnimGame
+/* 801FF5AC 001C8B6C  3C 80 80 06 */	lis r4, __ct__cf_CActParamAnimGame@ha
 /* 801FF5B0 001C8B70  3C A0 80 06 */	lis r5, __dt__cf_CActParamAnimGame@ha
 /* 801FF5B4 001C8B74  38 7D 05 50 */	addi r3, r29, 0x550
 /* 801FF5B8 001C8B78  38 C0 05 3C */	li r6, 0x53c
-/* 801FF5BC 001C8B7C  38 84 A4 6C */	addi r4, r4, func_8005A46C@l
+/* 801FF5BC 001C8B7C  38 84 A4 6C */	addi r4, r4, __ct__cf_CActParamAnimGame@l
 /* 801FF5C0 001C8B80  38 A5 A4 CC */	addi r5, r5, __dt__cf_CActParamAnimGame@l
 /* 801FF5C4 001C8B84  38 E0 00 02 */	li r7, 2
 /* 801FF5C8 001C8B88  48 0B A5 39 */	bl __construct_array
@@ -908,7 +908,7 @@
 /* 802001EC 001C97AC  4E 80 04 21 */	bctrl 
 /* 802001F0 001C97B0  7C 64 1B 78 */	mr r4, r3
 /* 802001F4 001C97B4  38 61 00 28 */	addi r3, r1, 0x28
-/* 802001F8 001C97B8  4B E5 82 1D */	bl func_80058414
+/* 802001F8 001C97B8  4B E5 82 1D */	bl __ct__CMcaFile
 /* 802001FC 001C97BC  3C A0 80 50 */	lis r5, CModelDispEquip_strpool@ha
 /* 80200200 001C97C0  80 7D 00 0C */	lwz r3, 0xc(r29)
 /* 80200204 001C97C4  38 A5 37 50 */	addi r5, r5, CModelDispEquip_strpool@l
@@ -1520,7 +1520,7 @@
 /* 80200AD8 001CA098  80 01 00 20 */	lwz r0, 0x20(r1)
 /* 80200ADC 001CA09C  90 1C 10 A0 */	stw r0, 0x10a0(r28)
 /* 80200AE0 001CA0A0  D0 1C 10 A4 */	stfs f0, 0x10a4(r28)
-/* 80200AE4 001CA0A4  4B E5 79 31 */	bl func_80058414
+/* 80200AE4 001CA0A4  4B E5 79 31 */	bl __ct__CMcaFile
 /* 80200AE8 001CA0A8  3C A0 80 50 */	lis r5, CModelDispEquip_strpool@ha
 /* 80200AEC 001CA0AC  80 7C 00 0C */	lwz r3, 0xc(r28)
 /* 80200AF0 001CA0B0  38 A5 37 50 */	addi r5, r5, CModelDispEquip_strpool@l
@@ -1674,7 +1674,7 @@
 /* 80200D08 001CA2C8  80 1F 05 48 */	lwz r0, 0x548(r31)
 /* 80200D0C 001CA2CC  2C 00 00 00 */	cmpwi r0, 0
 /* 80200D10 001CA2D0  41 81 00 6C */	bgt .L_80200D7C
-/* 80200D14 001CA2D4  48 23 46 89 */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 80200D14 001CA2D4  48 23 46 89 */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 80200D18 001CA2D8  48 23 4D C5 */	bl rand__Q32mm3mtl6MTRandFv
 /* 80200D1C 001CA2DC  54 64 0F FE */	srwi r4, r3, 0x1f
 /* 80200D20 001CA2E0  54 60 07 FE */	clrlwi r0, r3, 0x1f

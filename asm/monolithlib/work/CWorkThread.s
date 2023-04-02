@@ -1378,7 +1378,7 @@
 /* 80438864 00401E24  7F 83 E3 78 */	mr r3, r28
 /* 80438868 00401E28  81 8C 00 94 */	lwz r12, 0x94(r12)
 /* 8043886C 00401E2C  7D 89 03 A6 */	mtctr r12
-/* 80438870 00401E30  4E 80 04 21 */	bctrl #call func_80455B38, which calls GameMain and in turn actually starts the game
+/* 80438870 00401E30  4E 80 04 21 */	bctrl #call __ct__80455B38, which calls GameMain and in turn actually starts the game
 /* 80438874 00401E34  2C 03 00 00 */	cmpwi r3, 0
 /* 80438878 00401E38  41 82 01 6C */	beq .L_804389E4
 .L_8043887C:

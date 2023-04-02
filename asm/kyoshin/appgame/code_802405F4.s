@@ -69,7 +69,7 @@
 /* 802406F8 00209CB8  40 82 00 70 */	bne .L_80240768
 /* 802406FC 00209CBC  C0 03 00 08 */	lfs f0, 8(r3)
 /* 80240700 00209CC0  D0 03 00 0C */	stfs f0, 0xc(r3)
-/* 80240704 00209CC4  48 1F 4C 99 */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 80240704 00209CC4  48 1F 4C 99 */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 80240708 00209CC8  48 1F 54 F1 */	bl randFloat1__Q32mm3mtl6MTRandFv
 /* 8024070C 00209CCC  C0 9F 00 20 */	lfs f4, 0x20(r31)
 /* 80240710 00209CD0  C0 42 AC 40 */	lfs f2, float_8066AFC0@sda21(r2)
@@ -84,7 +84,7 @@
 /* 80240734 00209CF4  40 81 00 08 */	ble .L_8024073C
 /* 80240738 00209CF8  C3 E2 AC 54 */	lfs f31, float_8066AFD4@sda21(r2)
 .L_8024073C:
-/* 8024073C 00209CFC  48 1F 4C 61 */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 8024073C 00209CFC  48 1F 4C 61 */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 80240740 00209D00  48 1F 54 B9 */	bl randFloat1__Q32mm3mtl6MTRandFv
 /* 80240744 00209D04  C0 62 AC 58 */	lfs f3, float_8066AFD8@sda21(r2)
 /* 80240748 00209D08  C0 02 AC 50 */	lfs f0, float_8066AFD0@sda21(r2)
@@ -513,12 +513,12 @@
 /* 80240D4C 0020A30C  D0 3F 00 3C */	stfs f1, 0x3c(r31)
 /* 80240D50 0020A310  D0 BF 00 40 */	stfs f5, 0x40(r31)
 /* 80240D54 0020A314  D0 1F 00 34 */	stfs f0, 0x34(r31)
-/* 80240D58 0020A318  48 1F 46 45 */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 80240D58 0020A318  48 1F 46 45 */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 80240D5C 0020A31C  48 1F 4E 9D */	bl randFloat1__Q32mm3mtl6MTRandFv
 /* 80240D60 0020A320  C0 02 AC 48 */	lfs f0, float_8066AFC8@sda21(r2)
 /* 80240D64 0020A324  EC 00 00 72 */	fmuls f0, f0, f1
 /* 80240D68 0020A328  D0 1F 00 1C */	stfs f0, 0x1c(r31)
-/* 80240D6C 0020A32C  48 1F 46 31 */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 80240D6C 0020A32C  48 1F 46 31 */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 80240D70 0020A330  48 1F 4E 89 */	bl randFloat1__Q32mm3mtl6MTRandFv
 /* 80240D74 0020A334  C0 5F 00 28 */	lfs f2, 0x28(r31)
 /* 80240D78 0020A338  C0 02 AC 4C */	lfs f0, float_8066AFCC@sda21(r2)
@@ -561,12 +561,12 @@
 /* 80240E08 0020A3C8  D0 3F 00 78 */	stfs f1, 0x78(r31)
 /* 80240E0C 0020A3CC  D0 BF 00 7C */	stfs f5, 0x7c(r31)
 /* 80240E10 0020A3D0  D0 1F 00 70 */	stfs f0, 0x70(r31)
-/* 80240E14 0020A3D4  48 1F 45 89 */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 80240E14 0020A3D4  48 1F 45 89 */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 80240E18 0020A3D8  48 1F 4D E1 */	bl randFloat1__Q32mm3mtl6MTRandFv
 /* 80240E1C 0020A3DC  C0 02 AC 48 */	lfs f0, float_8066AFC8@sda21(r2)
 /* 80240E20 0020A3E0  EC 00 00 72 */	fmuls f0, f0, f1
 /* 80240E24 0020A3E4  D0 1F 00 58 */	stfs f0, 0x58(r31)
-/* 80240E28 0020A3E8  48 1F 45 75 */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 80240E28 0020A3E8  48 1F 45 75 */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 80240E2C 0020A3EC  48 1F 4D CD */	bl randFloat1__Q32mm3mtl6MTRandFv
 /* 80240E30 0020A3F0  C0 5F 00 64 */	lfs f2, 0x64(r31)
 /* 80240E34 0020A3F4  C0 02 AC 4C */	lfs f0, float_8066AFCC@sda21(r2)
@@ -609,12 +609,12 @@
 /* 80240EC4 0020A484  D0 3F 00 B4 */	stfs f1, 0xb4(r31)
 /* 80240EC8 0020A488  D0 BF 00 B8 */	stfs f5, 0xb8(r31)
 /* 80240ECC 0020A48C  D0 1F 00 AC */	stfs f0, 0xac(r31)
-/* 80240ED0 0020A490  48 1F 44 CD */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 80240ED0 0020A490  48 1F 44 CD */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 80240ED4 0020A494  48 1F 4D 25 */	bl randFloat1__Q32mm3mtl6MTRandFv
 /* 80240ED8 0020A498  C0 02 AC 48 */	lfs f0, float_8066AFC8@sda21(r2)
 /* 80240EDC 0020A49C  EC 00 00 72 */	fmuls f0, f0, f1
 /* 80240EE0 0020A4A0  D0 1F 00 94 */	stfs f0, 0x94(r31)
-/* 80240EE4 0020A4A4  48 1F 44 B9 */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 80240EE4 0020A4A4  48 1F 44 B9 */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 80240EE8 0020A4A8  48 1F 4D 11 */	bl randFloat1__Q32mm3mtl6MTRandFv
 /* 80240EEC 0020A4AC  C0 5F 00 A0 */	lfs f2, 0xa0(r31)
 /* 80240EF0 0020A4B0  C0 02 AC 4C */	lfs f0, float_8066AFCC@sda21(r2)
@@ -666,12 +666,12 @@
 /* 80240FA4 0020A564  D0 3F 00 F0 */	stfs f1, 0xf0(r31)
 /* 80240FA8 0020A568  D0 BF 00 F4 */	stfs f5, 0xf4(r31)
 /* 80240FAC 0020A56C  D0 1F 00 E8 */	stfs f0, 0xe8(r31)
-/* 80240FB0 0020A570  48 1F 43 ED */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 80240FB0 0020A570  48 1F 43 ED */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 80240FB4 0020A574  48 1F 4C 45 */	bl randFloat1__Q32mm3mtl6MTRandFv
 /* 80240FB8 0020A578  C0 02 AC 48 */	lfs f0, float_8066AFC8@sda21(r2)
 /* 80240FBC 0020A57C  EC 00 00 72 */	fmuls f0, f0, f1
 /* 80240FC0 0020A580  D0 1F 00 D0 */	stfs f0, 0xd0(r31)
-/* 80240FC4 0020A584  48 1F 43 D9 */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 80240FC4 0020A584  48 1F 43 D9 */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 80240FC8 0020A588  48 1F 4C 31 */	bl randFloat1__Q32mm3mtl6MTRandFv
 /* 80240FCC 0020A58C  C0 5F 00 DC */	lfs f2, 0xdc(r31)
 /* 80240FD0 0020A590  C0 02 AC 4C */	lfs f0, float_8066AFCC@sda21(r2)
@@ -714,12 +714,12 @@
 /* 80241060 0020A620  D0 3F 01 2C */	stfs f1, 0x12c(r31)
 /* 80241064 0020A624  D0 BF 01 30 */	stfs f5, 0x130(r31)
 /* 80241068 0020A628  D0 1F 01 24 */	stfs f0, 0x124(r31)
-/* 8024106C 0020A62C  48 1F 43 31 */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 8024106C 0020A62C  48 1F 43 31 */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 80241070 0020A630  48 1F 4B 89 */	bl randFloat1__Q32mm3mtl6MTRandFv
 /* 80241074 0020A634  C0 02 AC 48 */	lfs f0, float_8066AFC8@sda21(r2)
 /* 80241078 0020A638  EC 00 00 72 */	fmuls f0, f0, f1
 /* 8024107C 0020A63C  D0 1F 01 0C */	stfs f0, 0x10c(r31)
-/* 80241080 0020A640  48 1F 43 1D */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 80241080 0020A640  48 1F 43 1D */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 80241084 0020A644  48 1F 4B 75 */	bl randFloat1__Q32mm3mtl6MTRandFv
 /* 80241088 0020A648  C0 5F 01 18 */	lfs f2, 0x118(r31)
 /* 8024108C 0020A64C  C0 02 AC 4C */	lfs f0, float_8066AFCC@sda21(r2)
@@ -762,12 +762,12 @@
 /* 8024111C 0020A6DC  D0 3F 01 68 */	stfs f1, 0x168(r31)
 /* 80241120 0020A6E0  D0 BF 01 6C */	stfs f5, 0x16c(r31)
 /* 80241124 0020A6E4  D0 1F 01 60 */	stfs f0, 0x160(r31)
-/* 80241128 0020A6E8  48 1F 42 75 */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 80241128 0020A6E8  48 1F 42 75 */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 8024112C 0020A6EC  48 1F 4A CD */	bl randFloat1__Q32mm3mtl6MTRandFv
 /* 80241130 0020A6F0  C0 02 AC 48 */	lfs f0, float_8066AFC8@sda21(r2)
 /* 80241134 0020A6F4  EC 00 00 72 */	fmuls f0, f0, f1
 /* 80241138 0020A6F8  D0 1F 01 48 */	stfs f0, 0x148(r31)
-/* 8024113C 0020A6FC  48 1F 42 61 */	bl getInstanceMTRand__Q22mm3mtlFv
+/* 8024113C 0020A6FC  48 1F 42 61 */	bl getInstance__Q32mm3mtl6MTRandFv
 /* 80241140 0020A700  48 1F 4A B9 */	bl randFloat1__Q32mm3mtl6MTRandFv
 /* 80241144 0020A704  C0 5F 01 54 */	lfs f2, 0x154(r31)
 /* 80241148 0020A708  C0 02 AC 4C */	lfs f0, float_8066AFCC@sda21(r2)
@@ -1089,7 +1089,7 @@
 /* 80241594 0020AB54  38 7F 00 80 */	addi r3, r31, 0x80
 /* 80241598 0020AB58  4B F8 2A 0D */	bl CTitleAHelp_load
 /* 8024159C 0020AB5C  38 61 00 88 */	addi r3, r1, 0x88
-/* 802415A0 0020AB60  48 00 1B 0D */	bl func_802430AC
+/* 802415A0 0020AB60  48 00 1B 0D */	bl __ct__CMapSel
 /* 802415A4 0020AB64  38 7F 00 B8 */	addi r3, r31, 0xb8
 /* 802415A8 0020AB68  38 81 00 88 */	addi r4, r1, 0x88
 /* 802415AC 0020AB6C  48 00 00 95 */	bl func_80241640
@@ -1109,7 +1109,7 @@
 /* 802415E4 0020ABA4  38 7F 01 6C */	addi r3, r31, 0x16c
 /* 802415E8 0020ABA8  48 00 2D B5 */	bl func_8024439C
 /* 802415EC 0020ABAC  38 61 01 40 */	addi r3, r1, 0x140
-/* 802415F0 0020ABB0  48 00 A2 E5 */	bl func_8024B8D4
+/* 802415F0 0020ABB0  48 00 A2 E5 */	bl __ct__CFloorMap
 /* 802415F4 0020ABB4  38 7F 01 94 */	addi r3, r31, 0x194
 /* 802415F8 0020ABB8  38 81 01 40 */	addi r4, r1, 0x140
 /* 802415FC 0020ABBC  48 00 03 25 */	bl func_80241920

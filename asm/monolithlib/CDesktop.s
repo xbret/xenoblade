@@ -121,7 +121,7 @@
 /* 80455B34 0041F0F4  48 00 85 98 */	b func_8045E0CC
 .endfn func_80455B34
 
-.fn func_80455B38, global
+.fn __ct__80455B38, global
 /* 80455B38 0041F0F8  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80455B3C 0041F0FC  7C 08 02 A6 */	mflr r0
 /* 80455B40 0041F100  90 01 00 64 */	stw r0, 0x64(r1)
@@ -304,7 +304,7 @@
 /* 80455DE8 0041F3A8  7C 08 03 A6 */	mtlr r0
 /* 80455DEC 0041F3AC  38 21 00 60 */	addi r1, r1, 0x60
 /* 80455DF0 0041F3B0  4E 80 00 20 */	blr 
-.endfn func_80455B38
+.endfn __ct__80455B38
 
 .fn func_80455DF4, global
 /* 80455DF4 0041F3B4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -747,7 +747,7 @@
 	.4byte func_80455AD8
 	.4byte func_80455AF8
 	.4byte func_80455B34
-	.4byte func_80455B38
+	.4byte __ct__80455B38
 	.4byte func_80455DF4
 	.4byte CWorkThread_WorkThreadEvent6
 .endobj __vt__CDesktop
@@ -963,7 +963,7 @@
 
 .obj "@eti_80034F4C", local
 .hidden "@eti_80034F4C"
-	.4byte func_80455B38
+	.4byte __ct__80455B38
 	.4byte 0x000002BC
 	.4byte "@etb_8001D318"
 .endobj "@eti_80034F4C"

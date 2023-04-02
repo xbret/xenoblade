@@ -58,7 +58,7 @@
 /* 80192B84 0015C144  38 7E 00 80 */	addi r3, r30, 0x80
 /* 80192B88 0015C148  38 80 00 00 */	li r4, 0
 /* 80192B8C 0015C14C  38 A0 00 00 */	li r5, 0
-/* 80192B90 0015C150  48 06 67 49 */	bl func_801F92D8
+/* 80192B90 0015C150  48 06 67 49 */	bl __ct__CPartyStateWin
 /* 80192B94 0015C154  9B FE 6C 6C */	stb r31, 0x6c6c(r30)
 .L_80192B98:
 /* 80192B98 0015C158  93 CD AA 70 */	stw r30, lbl_80666BF0@sda21(r13)
@@ -96,7 +96,7 @@
 /* 80192BF0 0015C1B0  4B FF E8 30 */	b __dt__CMenuPTState
 .endfn func_80192BEC
 
-.fn func_80192BF4, global
+.fn __ct__80192BF4, global
 /* 80192BF4 0015C1B4  C0 22 9F D8 */	lfs f1, float_8066A358@sda21(r2)
 /* 80192BF8 0015C1B8  38 00 00 00 */	li r0, 0
 /* 80192BFC 0015C1BC  C0 02 9F DC */	lfs f0, float_8066A35C@sda21(r2)
@@ -104,9 +104,9 @@
 /* 80192C04 0015C1C4  D0 23 00 04 */	stfs f1, 4(r3)
 /* 80192C08 0015C1C8  D0 03 00 08 */	stfs f0, 8(r3)
 /* 80192C0C 0015C1CC  4E 80 00 20 */	blr 
-.endfn func_80192BF4
+.endfn __ct__80192BF4
 
-.fn func_80192C10, global
+.fn __ct__80192C10, global
 /* 80192C10 0015C1D0  C0 22 9F D8 */	lfs f1, float_8066A358@sda21(r2)
 /* 80192C14 0015C1D4  38 00 00 00 */	li r0, 0
 /* 80192C18 0015C1D8  C0 02 9F DC */	lfs f0, float_8066A35C@sda21(r2)
@@ -114,7 +114,7 @@
 /* 80192C20 0015C1E0  D0 23 00 04 */	stfs f1, 4(r3)
 /* 80192C24 0015C1E4  D0 03 00 08 */	stfs f0, 8(r3)
 /* 80192C28 0015C1E8  4E 80 00 20 */	blr 
-.endfn func_80192C10
+.endfn __ct__80192C10
 
 .fn func_80192C2C, global
 /* 80192C2C 0015C1EC  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -262,7 +262,7 @@
 	.4byte func_801914A0
 	.4byte func_80192840
 	.4byte func_801928B8
-	.4byte func_80101FB8
+	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuPTState
 	.4byte 0xFFFFFFA8

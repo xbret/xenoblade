@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8027E4B0, global
+.fn __ct__CSysWinScenarioLog, global
 /* 8027E4B0 00247A70  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8027E4B4 00247A74  7C 08 02 A6 */	mflr r0
 /* 8027E4B8 00247A78  90 01 00 24 */	stw r0, 0x24(r1)
@@ -50,7 +50,7 @@
 /* 8027E560 00247B20  90 1D 00 70 */	stw r0, 0x70(r29)
 /* 8027E564 00247B24  93 FD 00 74 */	stw r31, 0x74(r29)
 /* 8027E568 00247B28  93 FD 00 78 */	stw r31, 0x78(r29)
-/* 8027E56C 00247B2C  48 1E 0F F9 */	bl __ct__8045F564
+/* 8027E56C 00247B2C  48 1E 0F F9 */	bl __ct__UnkClass_8045F564
 /* 8027E570 00247B30  93 DD 00 8C */	stw r30, 0x8c(r29)
 /* 8027E574 00247B34  38 60 00 01 */	li r3, 1
 /* 8027E578 00247B38  9B FD 00 90 */	stb r31, 0x90(r29)
@@ -68,7 +68,7 @@
 /* 8027E5A8 00247B68  7C 08 03 A6 */	mtlr r0
 /* 8027E5AC 00247B6C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8027E5B0 00247B70  4E 80 00 20 */	blr
-.endfn func_8027E4B0
+.endfn __ct__CSysWinScenarioLog
 
 .fn __dt__CSysWinScenarioLog, global
 /* 8027E5B4 00247B74  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -82,7 +82,7 @@
 /* 8027E5D4 00247B94  41 82 00 38 */	beq .L_8027E60C
 /* 8027E5D8 00247B98  38 80 FF FF */	li r4, -1
 /* 8027E5DC 00247B9C  38 63 00 7C */	addi r3, r3, 0x7c
-/* 8027E5E0 00247BA0  48 1E 0F A1 */	bl __dt__8045F580
+/* 8027E5E0 00247BA0  48 1E 0F A1 */	bl __dt__UnkClass_8045F564
 /* 8027E5E4 00247BA4  2C 1E 00 00 */	cmpwi r30, 0
 /* 8027E5E8 00247BA8  41 82 00 14 */	beq .L_8027E5FC
 /* 8027E5EC 00247BAC  41 82 00 10 */	beq .L_8027E5FC
@@ -397,7 +397,7 @@
 /* 8027EA28 00247FE8  2C 03 00 00 */	cmpwi r3, 0
 /* 8027EA2C 00247FEC  41 82 00 0C */	beq .L_8027EA38
 /* 8027EA30 00247FF0  7F E4 FB 78 */	mr r4, r31
-/* 8027EA34 00247FF4  4B FF FA 7D */	bl func_8027E4B0
+/* 8027EA34 00247FF4  4B FF FA 7D */	bl __ct__CSysWinScenarioLog
 .L_8027EA38:
 /* 8027EA38 00247FF8  90 6D B0 78 */	stw r3, lbl_806671F8@sda21(r13)
 /* 8027EA3C 00247FFC  7F C4 F3 78 */	mr r4, r30
@@ -3567,7 +3567,7 @@
 	.4byte 0x00000000
 	.4byte 0x0780001D
 	.4byte 0x0000007C
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 	.4byte 0x0680001D
 	.4byte 0x00000070
 	.4byte __dt__IScnRender
@@ -3587,7 +3587,7 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x0000007C
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 	.4byte 0x0680001E
 	.4byte 0x00000070
 	.4byte __dt__IScnRender
@@ -3784,7 +3784,7 @@
 
 .obj "@eti_800310F4", local
 .hidden "@eti_800310F4"
-	.4byte func_8027E4B0
+	.4byte __ct__CSysWinScenarioLog
 	.4byte 0x00000104
 	.4byte "@etb_80018ACC"
 .endobj "@eti_800310F4"

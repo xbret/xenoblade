@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8022C6B4, global
+.fn __ct__CSelShopWin, global
 /* 8022C6B4 001F5C74  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8022C6B8 001F5C78  7C 08 02 A6 */	mflr r0
 /* 8022C6BC 001F5C7C  3C 80 80 54 */	lis r4, __vt__CSelShopWin@ha
@@ -12,7 +12,7 @@
 /* 8022C6CC 001F5C8C  7C 7F 1B 78 */	mr r31, r3
 /* 8022C6D0 001F5C90  90 83 00 00 */	stw r4, 0(r3)
 /* 8022C6D4 001F5C94  38 63 00 04 */	addi r3, r3, 4
-/* 8022C6D8 001F5C98  48 23 2E 8D */	bl __ct__8045F564
+/* 8022C6D8 001F5C98  48 23 2E 8D */	bl __ct__UnkClass_8045F564
 /* 8022C6DC 001F5C9C  38 80 00 00 */	li r4, 0
 /* 8022C6E0 001F5CA0  38 00 00 01 */	li r0, 1
 /* 8022C6E4 001F5CA4  90 9F 00 14 */	stw r4, 0x14(r31)
@@ -29,7 +29,7 @@
 /* 8022C710 001F5CD0  7C 08 03 A6 */	mtlr r0
 /* 8022C714 001F5CD4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8022C718 001F5CD8  4E 80 00 20 */	blr 
-.endfn func_8022C6B4
+.endfn __ct__CSelShopWin
 
 .fn __dt__CSelShopWin, global
 /* 8022C71C 001F5CDC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -42,7 +42,7 @@
 /* 8022C738 001F5CF8  41 82 00 20 */	beq .L_8022C758
 /* 8022C73C 001F5CFC  38 80 FF FF */	li r4, -1
 /* 8022C740 001F5D00  38 63 00 04 */	addi r3, r3, 4
-/* 8022C744 001F5D04  48 23 2E 3D */	bl __dt__8045F580
+/* 8022C744 001F5D04  48 23 2E 3D */	bl __dt__UnkClass_8045F564
 /* 8022C748 001F5D08  2C 1F 00 00 */	cmpwi r31, 0
 /* 8022C74C 001F5D0C  40 81 00 0C */	ble .L_8022C758
 /* 8022C750 001F5D10  7F C3 F3 78 */	mr r3, r30
@@ -738,7 +738,7 @@
 
 .obj "@eti_8002E598", local
 .hidden "@eti_8002E598"
-	.4byte func_8022C6B4
+	.4byte __ct__CSelShopWin
 	.4byte 0x00000068
 	.4byte "@etb_8001567C"
 .endobj "@eti_8002E598"

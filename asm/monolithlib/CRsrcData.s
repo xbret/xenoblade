@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_80439CB4, global
+.fn __ct__CRsrcData, global
 /* 80439CB4 00403274  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80439CB8 00403278  7C 08 02 A6 */	mflr r0
 /* 80439CBC 0040327C  38 C0 00 00 */	li r6, 0
@@ -35,7 +35,7 @@
 /* 80439D28 004032E8  7C 08 03 A6 */	mtlr r0
 /* 80439D2C 004032EC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80439D30 004032F0  4E 80 00 20 */	blr 
-.endfn func_80439CB4
+.endfn __ct__CRsrcData
 
 .fn __dt__CRsrcData, global
 /* 80439D34 004032F4  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -194,7 +194,7 @@
 /* 80439F48 00403508  41 82 00 14 */	beq .L_80439F5C
 /* 80439F4C 0040350C  7F E4 FB 78 */	mr r4, r31
 /* 80439F50 00403510  7F 05 C3 78 */	mr r5, r24
-/* 80439F54 00403514  4B FF FD 61 */	bl func_80439CB4
+/* 80439F54 00403514  4B FF FD 61 */	bl __ct__CRsrcData
 /* 80439F58 00403518  7C 7E 1B 78 */	mr r30, r3
 .L_80439F5C:
 /* 80439F5C 0040351C  7F C3 F3 78 */	mr r3, r30
@@ -460,7 +460,7 @@
 
 .obj "@eti_80033EF0", local
 .hidden "@eti_80033EF0"
-	.4byte func_80439CB4
+	.4byte __ct__CRsrcData
 	.4byte 0x00000080
 	.4byte "@etb_8001C278"
 .endobj "@eti_80033EF0"

@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8027D0E8, global
+.fn __ct__8027D0E8, global
 /* 8027D0E8 002466A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027D0EC 002466AC  7C 08 02 A6 */	mflr r0
 /* 8027D0F0 002466B0  3C 80 80 54 */	lis r4, __vt__cf_Flusher_cf_CfObjectActor@ha
@@ -23,7 +23,7 @@
 /* 8027D12C 002466EC  4B D8 72 25 */	bl memset
 /* 8027D130 002466F0  9B FE 00 7C */	stb r31, 0x7c(r30)
 /* 8027D134 002466F4  38 7E 00 84 */	addi r3, r30, 0x84
-/* 8027D138 002466F8  4B FF FC 9D */	bl func_8027CDD4
+/* 8027D138 002466F8  4B FF FC 9D */	bl __ct__cf_CChainTime
 /* 8027D13C 002466FC  3C 60 80 54 */	lis r3, __vt__cf_CChainTimer@ha
 /* 8027D140 00246700  2C 1F 00 00 */	cmpwi r31, 0
 /* 8027D144 00246704  38 63 BA 30 */	addi r3, r3, __vt__cf_CChainTimer@l
@@ -51,7 +51,7 @@
 /* 8027D198 00246758  7C 08 03 A6 */	mtlr r0
 /* 8027D19C 0024675C  38 21 00 10 */	addi r1, r1, 0x10
 /* 8027D1A0 00246760  4E 80 00 20 */	blr 
-.endfn func_8027D0E8
+.endfn __ct__8027D0E8
 
 .fn func_8027D1A4, global
 /* 8027D1A4 00246764  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1572,7 +1572,7 @@
 
 .obj "@eti_80031070", local
 .hidden "@eti_80031070"
-	.4byte func_8027D0E8
+	.4byte __ct__8027D0E8
 	.4byte 0x000000BC
 	.4byte "@etb_80018A34"
 .endobj "@eti_80031070"

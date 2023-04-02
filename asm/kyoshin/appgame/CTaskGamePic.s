@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_80294CB4, global
+.fn __ct__CTaskGamePic, global
 /* 80294CB4 0025E274  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80294CB8 0025E278  7C 08 02 A6 */	mflr r0
 /* 80294CBC 0025E27C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -67,7 +67,7 @@
 /* 80294DA8 0025E368  7C 08 03 A6 */	mtlr r0
 /* 80294DAC 0025E36C  38 21 00 20 */	addi r1, r1, 0x20
 /* 80294DB0 0025E370  4E 80 00 20 */	blr 
-.endfn func_80294CB4
+.endfn __ct__CTaskGamePic
 
 .fn __dt__CTTask_CTaskGamePic, global
 /* 80294DB4 0025E374  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -551,7 +551,7 @@
 /* 80295474 0025EA34  7C 7F 1B 78 */	mr r31, r3
 /* 80295478 0025EA38  41 82 00 10 */	beq .L_80295488
 /* 8029547C 0025EA3C  7F C4 F3 78 */	mr r4, r30
-/* 80295480 0025EA40  4B FF F8 35 */	bl func_80294CB4
+/* 80295480 0025EA40  4B FF F8 35 */	bl __ct__CTaskGamePic
 /* 80295484 0025EA44  7C 7F 1B 78 */	mr r31, r3
 .L_80295488:
 /* 80295488 0025EA48  7F E3 FB 78 */	mr r3, r31
@@ -871,7 +871,7 @@
 
 .obj "@eti_80031D30", local
 .hidden "@eti_80031D30"
-	.4byte func_80294CB4
+	.4byte __ct__CTaskGamePic
 	.4byte 0x00000100
 	.4byte "@etb_80019AB8"
 .endobj "@eti_80031D30"

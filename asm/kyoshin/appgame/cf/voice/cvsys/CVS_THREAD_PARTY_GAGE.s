@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_802A8174, global
+.fn __ct__CVS_THREAD_PARTY_GAGE, global
 /* 802A8174 00271734  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802A8178 00271738  7C 08 02 A6 */	mflr r0
 /* 802A817C 0027173C  7C 03 20 00 */	cmpw r3, r4
@@ -72,7 +72,7 @@
 .L_802A825C:
 /* 802A825C 0027181C  41 82 00 38 */	beq .L_802A8294
 /* 802A8260 00271820  90 3F 00 1C */	stw r1, 0x1c(r31)
-/* 802A8264 00271824  4B FF B8 1D */	bl func_802A3A80
+/* 802A8264 00271824  4B FF B8 1D */	bl __ct__cf_CVS_THREAD
 /* 802A8268 00271828  3C 60 80 54 */	lis r3, __vt__cf_CVS_THREAD_PARTY_GAGE@ha
 /* 802A826C 0027182C  38 63 D3 FC */	addi r3, r3, __vt__cf_CVS_THREAD_PARTY_GAGE@l
 /* 802A8270 00271830  90 7B 00 1C */	stw r3, 0x1c(r27)
@@ -102,7 +102,7 @@
 /* 802A82C8 00271888  7D 41 53 78 */	mr r1, r10
 /* 802A82CC 0027188C  7C 08 03 A6 */	mtlr r0
 /* 802A82D0 00271890  4E 80 00 20 */	blr 
-.endfn func_802A8174
+.endfn __ct__CVS_THREAD_PARTY_GAGE
 
 .fn func_802A82D4, global
 /* 802A82D4 00271894  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -522,7 +522,7 @@
 
 .obj "@eti_80032C9C", local
 .hidden "@eti_80032C9C"
-	.4byte func_802A8174
+	.4byte __ct__CVS_THREAD_PARTY_GAGE
 	.4byte 0x00000160
 	.4byte "@etb_8001ADE8"
 .endobj "@eti_80032C9C"

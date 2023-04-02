@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_80044168, global
+.fn __ct__cf_CTaskGameCf, global
 /* 80044168 0000D728  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8004416C 0000D72C  7C 08 02 A6 */	mflr r0
 /* 80044170 0000D730  90 01 00 24 */	stw r0, 0x24(r1)
@@ -55,7 +55,7 @@
 /* 80044224 0000D7E4  7C 08 03 A6 */	mtlr r0
 /* 80044228 0000D7E8  38 21 00 20 */	addi r1, r1, 0x20
 /* 8004422C 0000D7EC  4E 80 00 20 */	blr 
-.endfn func_80044168
+.endfn __ct__cf_CTaskGameCf
 
 .fn __dt__CTTask_cf_CTaskGameCf, global
 /* 80044230 0000D7F0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -321,7 +321,7 @@
 /* 8004456C 0000DB2C  48 45 1A C1 */	bl func_8049602C
 .L_80044570:
 /* 80044570 0000DB30  48 0F 1A 6D */	bl func_80135FDC
-/* 80044574 0000DB34  48 0B 95 D9 */	bl func_800FDB4C
+/* 80044574 0000DB34  48 0B 95 D9 */	bl __ct__800FDB4C
 /* 80044578 0000DB38  A0 1F 00 5C */	lhz r0, 0x5c(r31)
 /* 8004457C 0000DB3C  3B C0 00 00 */	li r30, 0
 /* 80044580 0000DB40  2C 00 00 00 */	cmpwi r0, 0
@@ -643,7 +643,7 @@
 /* 800449EC 0000DFAC  41 82 00 14 */	beq .L_80044A00
 /* 800449F0 0000DFB0  7F A4 EB 78 */	mr r4, r29
 /* 800449F4 0000DFB4  7F C5 F3 78 */	mr r5, r30
-/* 800449F8 0000DFB8  4B FF F7 71 */	bl func_80044168
+/* 800449F8 0000DFB8  4B FF F7 71 */	bl __ct__cf_CTaskGameCf
 /* 800449FC 0000DFBC  7C 7F 1B 78 */	mr r31, r3
 .L_80044A00:
 /* 80044A00 0000DFC0  7F E3 FB 78 */	mr r3, r31
@@ -966,7 +966,7 @@
 
 .obj "@eti_80021A64", local
 .hidden "@eti_80021A64"
-	.4byte func_80044168
+	.4byte __ct__cf_CTaskGameCf
 	.4byte 0x000000C8
 	.4byte "@etb_80006E68"
 .endobj "@eti_80021A64"

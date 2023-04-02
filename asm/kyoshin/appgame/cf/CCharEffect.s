@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8015BAA8, global
+.fn __ct__CCharEffect, global
 /* 8015BAA8 00125068  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8015BAAC 0012506C  7C 08 02 A6 */	mflr r0
 /* 8015BAB0 00125070  3C 80 80 53 */	lis r4, __vt__cf_CCharEffect@ha
@@ -40,7 +40,7 @@
 /* 8015BB30 001250F0  7C 08 03 A6 */	mtlr r0
 /* 8015BB34 001250F4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8015BB38 001250F8  4E 80 00 20 */	blr 
-.endfn func_8015BAA8
+.endfn __ct__CCharEffect
 
 .fn func_8015BB3C, global
 /* 8015BB3C 001250FC  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -1551,7 +1551,7 @@
 
 .obj "@eti_800288EC", local
 .hidden "@eti_800288EC"
-	.4byte func_8015BAA8
+	.4byte __ct__CCharEffect
 	.4byte 0x00000094
 	.4byte "@etb_8000D614"
 .endobj "@eti_800288EC"

@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_804900BC, global
+.fn __ct__CScnTexWorkMan, global
 /* 804900BC 0045967C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804900C0 00459680  7C 08 02 A6 */	mflr r0
 /* 804900C4 00459684  90 01 00 24 */	stw r0, 0x24(r1)
@@ -14,7 +14,7 @@
 /* 804900DC 0045969C  7C 9D 23 78 */	mr r29, r4
 /* 804900E0 004596A0  93 81 00 10 */	stw r28, 0x10(r1)
 /* 804900E4 004596A4  7C 7C 1B 78 */	mr r28, r3
-/* 804900E8 004596A8  4B FB 8E 59 */	bl func_80448F40
+/* 804900E8 004596A8  4B FB 8E 59 */	bl __ct__CDeviceVICb
 /* 804900EC 004596AC  3C 60 80 57 */	lis r3, __vt__CScnTexWorkMan@ha
 /* 804900F0 004596B0  93 BC 00 04 */	stw r29, 4(r28)
 /* 804900F4 004596B4  38 63 20 18 */	addi r3, r3, __vt__CScnTexWorkMan@l
@@ -51,7 +51,7 @@
 /* 8049016C 0045972C  7C 08 03 A6 */	mtlr r0
 /* 80490170 00459730  38 21 00 20 */	addi r1, r1, 0x20
 /* 80490174 00459734  4E 80 00 20 */	blr 
-.endfn func_804900BC
+.endfn __ct__CScnTexWorkMan
 
 .fn __dt__CScnTexWorkMan, global
 /* 80490178 00459738  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2341,7 +2341,7 @@
 
 .obj "@eti_800368B4", local
 .hidden "@eti_800368B4"
-	.4byte func_804900BC
+	.4byte __ct__CScnTexWorkMan
 	.4byte 0x000000BC
 	.4byte "@etb_8001ECBC"
 .endobj "@eti_800368B4"

@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_801A1864, global
+.fn __ct__CSimpleEveTalkWin, global
 /* 801A1864 0016AE24  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 801A1868 0016AE28  7C 08 02 A6 */	mflr r0
 /* 801A186C 0016AE2C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -49,7 +49,7 @@
 /* 801A1910 0016AED0  90 BB 00 10 */	stw r5, 0x10(r27)
 /* 801A1914 0016AED4  90 9B 00 6C */	stw r4, 0x6c(r27)
 /* 801A1918 0016AED8  90 1B 00 70 */	stw r0, 0x70(r27)
-/* 801A191C 0016AEDC  48 2B DC 49 */	bl __ct__8045F564
+/* 801A191C 0016AEDC  48 2B DC 49 */	bl __ct__UnkClass_8045F564
 /* 801A1920 0016AEE0  38 00 00 04 */	li r0, 4
 /* 801A1924 0016AEE4  93 9B 00 84 */	stw r28, 0x84(r27)
 /* 801A1928 0016AEE8  7F 63 DB 78 */	mr r3, r27
@@ -67,7 +67,7 @@
 /* 801A1958 0016AF18  7C 08 03 A6 */	mtlr r0
 /* 801A195C 0016AF1C  38 21 00 30 */	addi r1, r1, 0x30
 /* 801A1960 0016AF20  4E 80 00 20 */	blr
-.endfn func_801A1864
+.endfn __ct__CSimpleEveTalkWin
 
 .fn __dt__CSimpleEveTalkWin, global
 /* 801A1964 0016AF24  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -81,7 +81,7 @@
 /* 801A1984 0016AF44  41 82 00 38 */	beq .L_801A19BC
 /* 801A1988 0016AF48  38 80 FF FF */	li r4, -1
 /* 801A198C 0016AF4C  38 63 00 74 */	addi r3, r3, 0x74
-/* 801A1990 0016AF50  48 2B DB F1 */	bl __dt__8045F580
+/* 801A1990 0016AF50  48 2B DB F1 */	bl __dt__UnkClass_8045F564
 /* 801A1994 0016AF54  2C 1E 00 00 */	cmpwi r30, 0
 /* 801A1998 0016AF58  41 82 00 14 */	beq .L_801A19AC
 /* 801A199C 0016AF5C  41 82 00 10 */	beq .L_801A19AC
@@ -128,7 +128,7 @@
 /* 801A1A2C 0016AFEC  48 29 30 31 */	bl heap_malloc
 /* 801A1A30 0016AFF0  2C 03 00 00 */	cmpwi r3, 0
 /* 801A1A34 0016AFF4  41 82 00 08 */	beq .L_801A1A3C
-/* 801A1A38 0016AFF8  4B F8 64 C9 */	bl func_80127F00
+/* 801A1A38 0016AFF8  4B F8 64 C9 */	bl __ct__CTagProcessorSE
 .L_801A1A3C:
 /* 801A1A3C 0016AFFC  90 7F 00 88 */	stw r3, 0x88(r31)
 /* 801A1A40 0016B000  C0 22 A1 E0 */	lfs f1, float_8066A560@sda21(r2)
@@ -627,7 +627,7 @@
 /* 801A2158 0016B718  7F A5 EB 78 */	mr r5, r29
 /* 801A215C 0016B71C  7F E7 FB 78 */	mr r7, r31
 /* 801A2160 0016B720  38 C1 00 08 */	addi r6, r1, 8
-/* 801A2164 0016B724  4B FF F7 01 */	bl func_801A1864
+/* 801A2164 0016B724  4B FF F7 01 */	bl __ct__CSimpleEveTalkWin
 .L_801A2168:
 /* 801A2168 0016B728  90 6D AA 90 */	stw r3, lbl_80666C10@sda21(r13)
 /* 801A216C 0016B72C  7F 64 DB 78 */	mr r4, r27
@@ -700,7 +700,7 @@
 /* 801A2258 0016B818  48 29 28 05 */	bl heap_malloc
 /* 801A225C 0016B81C  2C 03 00 00 */	cmpwi r3, 0
 /* 801A2260 0016B820  41 82 00 08 */	beq .L_801A2268
-/* 801A2264 0016B824  4B F8 5C 9D */	bl func_80127F00
+/* 801A2264 0016B824  4B F8 5C 9D */	bl __ct__CTagProcessorSE
 .L_801A2268:
 /* 801A2268 0016B828  90 7F 00 88 */	stw r3, 0x88(r31)
 /* 801A226C 0016B82C  C0 22 A1 E0 */	lfs f1, float_8066A560@sda21(r2)
@@ -1393,7 +1393,7 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000074
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 	.4byte 0x0680001E
 	.4byte 0x00000070
 	.4byte __dt__IScnRender
@@ -1466,7 +1466,7 @@
 
 .obj "@eti_8002A524", local
 .hidden "@eti_8002A524"
-	.4byte func_801A1864
+	.4byte __ct__CSimpleEveTalkWin
 	.4byte 0x00000100
 	.4byte "@etb_8000F6B0"
 .endobj "@eti_8002A524"

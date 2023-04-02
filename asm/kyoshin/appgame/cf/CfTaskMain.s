@@ -80,7 +80,7 @@
 /* 800697E4 00032DA4  48 01 64 48 */	b func_8007FC2C
 .endfn func_800697E4
 
-.fn func_800697E8, global
+.fn __ct__800697E8, global
 /* 800697E8 00032DA8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800697EC 00032DAC  7C 08 02 A6 */	mflr r0
 /* 800697F0 00032DB0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -133,7 +133,7 @@
 /* 800698A8 00032E68  7C 08 03 A6 */	mtlr r0
 /* 800698AC 00032E6C  38 21 00 20 */	addi r1, r1, 0x20
 /* 800698B0 00032E70  4E 80 00 20 */	blr 
-.endfn func_800697E8
+.endfn __ct__800697E8
 
 .fn func_800698B4, global
 /* 800698B4 00032E74  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -361,7 +361,7 @@
 
 .obj "@eti_800231E0", local
 .hidden "@eti_800231E0"
-	.4byte func_800697E8
+	.4byte __ct__800697E8
 	.4byte 0x000000CC
 	.4byte "@etb_80007F4C"
 .endobj "@eti_800231E0"

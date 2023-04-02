@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_80294874, global
+.fn __ct__CREvtMovie, global
 /* 80294874 0025DE34  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80294878 0025DE38  7C 08 02 A6 */	mflr r0
 /* 8029487C 0025DE3C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -26,9 +26,9 @@
 /* 802948C4 0025DE84  7C 08 03 A6 */	mtlr r0
 /* 802948C8 0025DE88  38 21 00 10 */	addi r1, r1, 0x10
 /* 802948CC 0025DE8C  4E 80 00 20 */	blr 
-.endfn func_80294874
+.endfn __ct__CREvtMovie
 
-.fn func_802948D0, global
+.fn __ct__802948D0, global
 /* 802948D0 0025DE90  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802948D4 0025DE94  7C 08 02 A6 */	mflr r0
 /* 802948D8 0025DE98  2C 03 00 00 */	cmpwi r3, 0
@@ -57,7 +57,7 @@
 /* 80294930 0025DEF0  7C 08 03 A6 */	mtlr r0
 /* 80294934 0025DEF4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80294938 0025DEF8  4E 80 00 20 */	blr 
-.endfn func_802948D0
+.endfn __ct__802948D0
 
 .fn func_8029493C, global
 /* 8029493C 0025DEFC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -326,7 +326,7 @@
 .obj __vt__cf_CREvtMovie, global
 	.4byte __RTTI__cf_CREvtMovie
 	.4byte 0
-	.4byte func_802948D0
+	.4byte __ct__802948D0
 	.4byte func_80294CB0
 	.4byte func_8029493C
 	.4byte func_80185758
@@ -404,14 +404,14 @@
 
 .obj "@eti_80031CE8", local
 .hidden "@eti_80031CE8"
-	.4byte func_80294874
+	.4byte __ct__CREvtMovie
 	.4byte 0x0000005C
 	.4byte "@etb_80019A74"
 .endobj "@eti_80031CE8"
 
 .obj "@eti_80031CF4", local
 .hidden "@eti_80031CF4"
-	.4byte func_802948D0
+	.4byte __ct__802948D0
 	.4byte 0x0000006C
 	.4byte "@etb_80019A7C"
 .endobj "@eti_80031CF4"

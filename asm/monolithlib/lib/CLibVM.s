@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_804600E0, global
+.fn __ct__CLibVM, global
 /* 804600E0 004296A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804600E4 004296A4  7C 08 02 A6 */	mflr r0
 /* 804600E8 004296A8  38 C0 00 00 */	li r6, 0
@@ -22,7 +22,7 @@
 /* 80460120 004296E0  7C 08 03 A6 */	mtlr r0
 /* 80460124 004296E4  38 21 00 10 */	addi r1, r1, 0x10
 /* 80460128 004296E8  4E 80 00 20 */	blr 
-.endfn func_804600E0
+.endfn __ct__CLibVM
 
 .fn __dt__CLibVM, global
 /* 8046012C 004296EC  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -3866,7 +3866,7 @@
 
 .obj "@eti_80035504", local
 .hidden "@eti_80035504"
-	.4byte func_804600E0
+	.4byte __ct__CLibVM
 	.4byte 0x0000004C
 	.4byte "@etb_8001D940"
 .endobj "@eti_80035504"

@@ -123,6 +123,7 @@ typedef struct NANDCommandBlock {
     u32 workBlocks;             // at 0xAC
     u32 workInodes;             // at 0xB0
     const char** dir;           // at 0xB4
+    u32 unkB8; //necessary so that OSPlayRecord's bss is correct. might be fake?
 } NANDCommandBlock;
 
 typedef struct NANDBanner {

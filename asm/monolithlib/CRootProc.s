@@ -2,11 +2,9 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
-
 #inside of CTaskManager.cpp
 
-.fn func_8043BC84, global
+.fn __ct__CRootProc, global
 /* 8043BC84 00405244  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8043BC88 00405248  7C 08 02 A6 */	mflr r0
 /* 8043BC8C 0040524C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -154,7 +152,7 @@
 /* 8043BEB4 00405474  7C 08 03 A6 */	mtlr r0
 /* 8043BEB8 00405478  38 21 00 10 */	addi r1, r1, 0x10
 /* 8043BEBC 0040547C  4E 80 00 20 */	blr 
-.endfn func_8043BC84
+.endfn __ct__CRootProc
 
 .fn __dt__CTTask_unnamed_CTaskManager_cpp_CRootProc, global
 /* 8043BEC0 00405480  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -214,7 +212,7 @@
 /* 8043BF70 00405530  48 00 95 68 */	b func_804454D8
 .endfn func_8043BF70
 
-.fn func_8043BF74, global
+.fn __ct__8043BF74, global
 /* 8043BF74 00405534  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8043BF78 00405538  7C 08 02 A6 */	mflr r0
 /* 8043BF7C 0040553C  90 01 00 14 */	stw r0, 0x14(r1)
@@ -362,7 +360,7 @@
 /* 8043C1A4 00405764  7C 08 03 A6 */	mtlr r0
 /* 8043C1A8 00405768  38 21 00 10 */	addi r1, r1, 0x10
 /* 8043C1AC 0040576C  4E 80 00 20 */	blr 
-.endfn func_8043BF74
+.endfn __ct__8043BF74
 
 .fn func_8043C1B0, global
 /* 8043C1B0 00405770  80 6D BD 18 */	lwz r3, lbl_80667E98@sda21(r13)
@@ -627,7 +625,7 @@
 
 .obj "@eti_80034004", local
 .hidden "@eti_80034004"
-	.4byte func_8043BC84
+	.4byte __ct__CRootProc
 	.4byte 0x0000023C
 	.4byte "@etb_8001C380"
 .endobj "@eti_80034004"
@@ -655,7 +653,7 @@
 
 .obj "@eti_80034034", local
 .hidden "@eti_80034034"
-	.4byte func_8043BF74
+	.4byte __ct__8043BF74
 	.4byte 0x0000023C
 	.4byte "@etb_8001C3A0"
 .endobj "@eti_80034034"

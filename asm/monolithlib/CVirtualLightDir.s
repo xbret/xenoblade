@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_804946FC, global
+.fn __ct__CVirtualLightDir, global
 /* 804946FC 0045DCBC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80494700 0045DCC0  7C 08 02 A6 */	mflr r0
 /* 80494704 0045DCC4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -23,7 +23,7 @@
 /* 80494740 0045DD00  7C 08 03 A6 */	mtlr r0
 /* 80494744 0045DD04  38 21 00 10 */	addi r1, r1, 0x10
 /* 80494748 0045DD08  4E 80 00 20 */	blr 
-.endfn func_804946FC
+.endfn __ct__CVirtualLightDir
 
 .fn func_8049474C, global
 /* 8049474C 0045DD0C  D0 23 00 34 */	stfs f1, 0x34(r3)
@@ -131,7 +131,7 @@
 
 .obj "@eti_80036ADC", local
 .hidden "@eti_80036ADC"
-	.4byte func_804946FC
+	.4byte __ct__CVirtualLightDir
 	.4byte 0x00000050
 	.4byte "@etb_8001EF24"
 .endobj "@eti_80036ADC"

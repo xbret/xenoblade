@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_80167C40, global
+.fn __ct__cf_CREvtMem, global
 /* 80167C40 00131200  C0 02 9B 90 */	lfs f0, float_80669F10@sda21(r2)
 /* 80167C44 00131204  3C 80 80 53 */	lis r4, __vt__cf_CREvtMem@ha
 /* 80167C48 00131208  38 00 00 00 */	li r0, 0
@@ -20,7 +20,7 @@
 /* 80167C78 00131238  90 03 00 10 */	stw r0, 0x10(r3)
 /* 80167C7C 0013123C  90 03 00 14 */	stw r0, 0x14(r3)
 /* 80167C80 00131240  4E 80 00 20 */	blr 
-.endfn func_80167C40
+.endfn __ct__cf_CREvtMem
 
 .fn __dt__cf_CREvtMem, global
 /* 80167C84 00131244  94 21 FF F0 */	stwu r1, -0x10(r1)

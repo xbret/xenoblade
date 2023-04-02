@@ -47,6 +47,7 @@ extern "C" {
 #define PAD_CHAN2_BIT 0x20000000
 #define PAD_CHAN3_BIT 0x10000000
 
+extern u32 __PADSpec;
 
 void PADControlMotor(s32 chan, u32 cmd);
 

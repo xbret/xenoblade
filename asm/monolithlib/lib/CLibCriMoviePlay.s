@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_80459C98, global
+.fn __ct__CLibCriMoviePlay, global
 /* 80459C98 00423258  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80459C9C 0042325C  7C 08 02 A6 */	mflr r0
 /* 80459CA0 00423260  38 C0 00 00 */	li r6, 0
@@ -12,7 +12,7 @@
 /* 80459CB0 00423270  7C 7E 1B 78 */	mr r30, r3
 /* 80459CB4 00423274  4B FD D9 09 */	bl __ct__CWorkThread
 /* 80459CB8 00423278  38 7E 01 C4 */	addi r3, r30, 0x1c4
-/* 80459CBC 0042327C  4B FE F2 85 */	bl func_80448F40
+/* 80459CBC 0042327C  4B FE F2 85 */	bl __ct__CDeviceVICb
 /* 80459CC0 00423280  3C A0 80 57 */	lis r5, __vt__CLibCriMoviePlay@ha
 /* 80459CC4 00423284  38 DE 02 DC */	addi r6, r30, 0x2dc
 /* 80459CC8 00423288  38 A5 07 90 */	addi r5, r5, __vt__CLibCriMoviePlay@l
@@ -62,7 +62,7 @@
 /* 80459D70 00423330  7C 08 03 A6 */	mtlr r0
 /* 80459D74 00423334  38 21 00 10 */	addi r1, r1, 0x10
 /* 80459D78 00423338  4E 80 00 20 */	blr
-.endfn func_80459C98
+.endfn __ct__CLibCriMoviePlay
 
 .fn __dt__CLibCriMoviePlay, global
 /* 80459D7C 0042333C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1965,7 +1965,7 @@
 
 .obj "@eti_80035150", local
 .hidden "@eti_80035150"
-	.4byte func_80459C98
+	.4byte __ct__CLibCriMoviePlay
 	.4byte 0x000000E4
 	.4byte "@etb_8001D564"
 .endobj "@eti_80035150"

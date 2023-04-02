@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8022CE70, global
+.fn __ct__CExchangeWin, global
 /* 8022CE70 001F6430  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8022CE74 001F6434  7C 08 02 A6 */	mflr r0
 /* 8022CE78 001F6438  3C 80 80 54 */	lis r4, __vt__CExchangeWin@ha
@@ -12,7 +12,7 @@
 /* 8022CE88 001F6448  7C 7F 1B 78 */	mr r31, r3
 /* 8022CE8C 001F644C  90 83 00 00 */	stw r4, 0(r3)
 /* 8022CE90 001F6450  38 63 00 04 */	addi r3, r3, 4
-/* 8022CE94 001F6454  48 23 26 D1 */	bl __ct__8045F564
+/* 8022CE94 001F6454  48 23 26 D1 */	bl __ct__UnkClass_8045F564
 /* 8022CE98 001F6458  38 80 00 00 */	li r4, 0
 /* 8022CE9C 001F645C  38 00 00 01 */	li r0, 1
 /* 8022CEA0 001F6460  90 9F 00 14 */	stw r4, 0x14(r31)
@@ -29,7 +29,7 @@
 /* 8022CECC 001F648C  7C 08 03 A6 */	mtlr r0
 /* 8022CED0 001F6490  38 21 00 10 */	addi r1, r1, 0x10
 /* 8022CED4 001F6494  4E 80 00 20 */	blr 
-.endfn func_8022CE70
+.endfn __ct__CExchangeWin
 
 .fn __dt__CExchangeWin, global
 /* 8022CED8 001F6498  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -42,7 +42,7 @@
 /* 8022CEF4 001F64B4  41 82 00 20 */	beq .L_8022CF14
 /* 8022CEF8 001F64B8  38 80 FF FF */	li r4, -1
 /* 8022CEFC 001F64BC  38 63 00 04 */	addi r3, r3, 4
-/* 8022CF00 001F64C0  48 23 26 81 */	bl __dt__8045F580
+/* 8022CF00 001F64C0  48 23 26 81 */	bl __dt__UnkClass_8045F564
 /* 8022CF04 001F64C4  2C 1F 00 00 */	cmpwi r31, 0
 /* 8022CF08 001F64C8  40 81 00 0C */	ble .L_8022CF14
 /* 8022CF0C 001F64CC  7F C3 F3 78 */	mr r3, r30
@@ -696,7 +696,7 @@
 
 .obj "@eti_8002E604", local
 .hidden "@eti_8002E604"
-	.4byte func_8022CE70
+	.4byte __ct__CExchangeWin
 	.4byte 0x00000068
 	.4byte "@etb_800156E8"
 .endobj "@eti_8002E604"

@@ -1,6 +1,6 @@
 OS_FILES:=\
 	$(BUILD_DIR)/asm/RevoSDK/os/OS.o\
-	$(BUILD_DIR)/asm/RevoSDK/os/OSAlarm.o\
+	$(BUILD_DIR)/src/RevoSDK/os/OSAlarm.o\
 	$(BUILD_DIR)/src/RevoSDK/os/OSAlloc.o\
 	$(BUILD_DIR)/src/RevoSDK/os/OSArena.o\
 	$(BUILD_DIR)/src/RevoSDK/os/OSAudioSystem.o\
@@ -11,6 +11,7 @@ OS_FILES:=\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSFatal.o\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSFont.o\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSInterrupt.o\
+	$(BUILD_DIR)/asm/RevoSDK/os/OSLink.o\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSMessage.o\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSMemory.o\
 	$(BUILD_DIR)/src/RevoSDK/os/OSMutex.o\
@@ -24,8 +25,8 @@ OS_FILES:=\
 	$(BUILD_DIR)/src/RevoSDK/os/OSIpc.o\
 	$(BUILD_DIR)/src/RevoSDK/os/OSStateTM.o\
 	$(BUILD_DIR)/src/RevoSDK/os/__start.o\
-	$(BUILD_DIR)/asm/RevoSDK/os/OSPlayRecord.o\
-	$(BUILD_DIR)/asm/RevoSDK/os/OSStateFlags.o\
+	$(BUILD_DIR)/src/RevoSDK/os/OSPlayRecord.o\
+	$(BUILD_DIR)/src/RevoSDK/os/OSStateFlags.o\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSNet.o\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSNandbootInfo.o\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSPlayTime.o\
@@ -38,6 +39,9 @@ DEPENDS += $(OS_FILES:.o=.d)
 #OSUtf only matches on 3.0?
 $(BUILD_DIR)/src/RevoSDK/os/OSUtf.o: MWCC_VERSION := 3.0
 $(BUILD_DIR)/src/RevoSDK/os/OSUtf.o: CONSOLE := GC
+
+#$(BUILD_DIR)/src/RevoSDK/os/OS.o: MWCC_VERSION := 3.0
+#$(BUILD_DIR)/src/RevoSDK/os/OS.o: CONSOLE := GC
 
 $(BUILD_DIR)/src/RevoSDK/os/os.a: $(OS_FILES)
 	@echo Linking... $@

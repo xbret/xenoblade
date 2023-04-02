@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_804E6544, global
+.fn __ct__CMdlMouth, global
 /* 804E6544 004AFB04  C0 22 D7 38 */	lfs f1, float_8066DAB8@sda21(r2)
 /* 804E6548 004AFB08  3C A0 80 57 */	lis r5, __vt__CMdlMouth@ha
 /* 804E654C 004AFB0C  38 80 00 00 */	li r4, 0
@@ -21,7 +21,7 @@
 /* 804E6580 004AFB40  90 83 00 28 */	stw r4, 0x28(r3)
 /* 804E6584 004AFB44  D0 03 00 2C */	stfs f0, 0x2c(r3)
 /* 804E6588 004AFB48  4E 80 00 20 */	blr 
-.endfn func_804E6544
+.endfn __ct__CMdlMouth
 
 .fn __dt__CMdlMouth, global
 /* 804E658C 004AFB4C  94 21 FF F0 */	stwu r1, -0x10(r1)

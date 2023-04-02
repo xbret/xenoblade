@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_801BA14C, global
+.fn __ct__cf_CSuddenCommu, global
 /* 801BA14C 0018370C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801BA150 00183710  7C 08 02 A6 */	mflr r0
 /* 801BA154 00183714  3C 80 80 53 */	lis r4, __vt__cf_CSuddenCommu@ha
@@ -39,7 +39,7 @@
 /* 801BA1D0 00183790  7C 08 03 A6 */	mtlr r0
 /* 801BA1D4 00183794  38 21 00 20 */	addi r1, r1, 0x20
 /* 801BA1D8 00183798  4E 80 00 20 */	blr 
-.endfn func_801BA14C
+.endfn __ct__cf_CSuddenCommu
 
 .fn func_801BA1DC, global
 /* 801BA1DC 0018379C  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -3322,7 +3322,7 @@
 
 .obj "@eti_8002AB78", local
 .hidden "@eti_8002AB78"
-	.4byte func_801BA14C
+	.4byte __ct__cf_CSuddenCommu
 	.4byte 0x00000090
 	.4byte "@etb_8000FFAC"
 .endobj "@eti_8002AB78"

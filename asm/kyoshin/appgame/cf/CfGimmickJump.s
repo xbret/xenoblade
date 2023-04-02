@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8020EF08, global
+.fn __ct__cf_CfGimmickJump, global
 /* 8020EF08 001D84C8  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8020EF0C 001D84CC  7C 08 02 A6 */	mflr r0
 /* 8020EF10 001D84D0  90 01 00 64 */	stw r0, 0x64(r1)
@@ -15,7 +15,7 @@
 /* 8020EF2C 001D84EC  93 81 00 50 */	stw r28, 0x50(r1)
 /* 8020EF30 001D84F0  90 01 00 40 */	stw r0, 0x40(r1)
 /* 8020EF34 001D84F4  90 01 00 48 */	stw r0, 0x48(r1)
-/* 8020EF38 001D84F8  4B FF 99 A9 */	bl func_802088E0
+/* 8020EF38 001D84F8  4B FF 99 A9 */	bl __ct__cf_CfGimmick
 /* 8020EF3C 001D84FC  3C 60 80 54 */	lis r3, __vt__cf_CfGimmickJump@ha
 /* 8020EF40 001D8500  38 00 00 05 */	li r0, 5
 /* 8020EF44 001D8504  38 63 91 D0 */	addi r3, r3, __vt__cf_CfGimmickJump@l
@@ -270,7 +270,7 @@
 /* 8020F30C 001D88CC  7C 08 03 A6 */	mtlr r0
 /* 8020F310 001D88D0  38 21 00 60 */	addi r1, r1, 0x60
 /* 8020F314 001D88D4  4E 80 00 20 */	blr 
-.endfn func_8020EF08
+.endfn __ct__cf_CfGimmickJump
 
 .fn __dt__cf_CfGimmickJump, global
 /* 8020F318 001D88D8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1562,7 +1562,7 @@
 
 .obj "@eti_8002D1D0", local
 .hidden "@eti_8002D1D0"
-	.4byte func_8020EF08
+	.4byte __ct__cf_CfGimmickJump
 	.4byte 0x00000410
 	.4byte "@etb_80013224"
 .endobj "@eti_8002D1D0"

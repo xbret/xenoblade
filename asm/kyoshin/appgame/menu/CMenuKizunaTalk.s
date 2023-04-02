@@ -48,7 +48,7 @@
 /* 801BCAE0 001860A0  90 9B 00 6C */	stw r4, 0x6c(r27)
 /* 801BCAE4 001860A4  90 1B 00 70 */	stw r0, 0x70(r27)
 /* 801BCAE8 001860A8  93 9B 00 74 */	stw r28, 0x74(r27)
-/* 801BCAEC 001860AC  48 2A 2A 79 */	bl __ct__8045F564
+/* 801BCAEC 001860AC  48 2A 2A 79 */	bl __ct__UnkClass_8045F564
 /* 801BCAF0 001860B0  93 DB 00 88 */	stw r30, 0x88(r27)
 /* 801BCAF4 001860B4  38 7B 00 A8 */	addi r3, r27, 0xa8
 /* 801BCAF8 001860B8  38 80 00 00 */	li r4, 0
@@ -85,10 +85,10 @@
 /* 801BCB68 00186128  48 06 EB 39 */	bl __dt__CSysWin
 /* 801BCB6C 0018612C  38 7E 00 A8 */	addi r3, r30, 0xa8
 /* 801BCB70 00186130  38 80 FF FF */	li r4, -1
-/* 801BCB74 00186134  48 01 5E C5 */	bl __dt__801D2A38
+/* 801BCB74 00186134  48 01 5E C5 */	bl __dt__CCur18
 /* 801BCB78 00186138  38 7E 00 78 */	addi r3, r30, 0x78
 /* 801BCB7C 0018613C  38 80 FF FF */	li r4, -1
-/* 801BCB80 00186140  48 2A 2A 01 */	bl __dt__8045F580
+/* 801BCB80 00186140  48 2A 2A 01 */	bl __dt__UnkClass_8045F564
 /* 801BCB84 00186144  7F C3 F3 78 */	mr r3, r30
 /* 801BCB88 00186148  38 80 00 00 */	li r4, 0
 /* 801BCB8C 0018614C  4B F6 57 D1 */	bl __dt__IUIWindow
@@ -456,7 +456,7 @@
 /* 801BD07C 0018663C  98 1E 00 BC */	stb r0, 0xbc(r30)
 /* 801BD080 00186640  88 01 00 1D */	lbz r0, 0x1d(r1)
 /* 801BD084 00186644  98 1E 00 BD */	stb r0, 0xbd(r30)
-/* 801BD088 00186648  48 01 59 B1 */	bl __dt__801D2A38
+/* 801BD088 00186648  48 01 59 B1 */	bl __dt__CCur18
 /* 801BD08C 0018664C  81 9E 00 A8 */	lwz r12, 0xa8(r30)
 /* 801BD090 00186650  38 7E 00 A8 */	addi r3, r30, 0xa8
 /* 801BD094 00186654  81 8C 00 08 */	lwz r12, 8(r12)
@@ -1564,10 +1564,10 @@
 	.4byte 0x00000000
 	.4byte 0x0780001B
 	.4byte 0x000000A8
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001B
 	.4byte 0x00000078
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 	.4byte 0x0680001B
 	.4byte 0x00000070
 	.4byte __dt__IScnRender
@@ -1597,16 +1597,16 @@
 	.4byte __dt__CSysWin
 	.4byte 0x8780001E
 	.4byte 0x000000A8
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x000000C0
 	.4byte __dt__CSysWin
 	.4byte 0x0780001E
 	.4byte 0x000000A8
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000078
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 	.4byte 0x0680001E
 	.4byte 0x00000070
 	.4byte __dt__IScnRender

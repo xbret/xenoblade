@@ -10,7 +10,7 @@
 /* 802B81A8 00281768  7C DF 33 78 */	mr r31, r6
 /* 802B81AC 0028176C  93 C1 00 08 */	stw r30, 8(r1)
 /* 802B81B0 00281770  7C 7E 1B 78 */	mr r30, r3
-/* 802B81B4 00281774  4B FF FA 21 */	bl func_802B7BD4
+/* 802B81B4 00281774  4B FF FA 21 */	bl __ct__cf_CHelp
 /* 802B81B8 00281778  3C 60 80 54 */	lis r3, __vt__cf_CHelp_LandMark@ha
 /* 802B81BC 0028177C  38 00 00 00 */	li r0, 0
 /* 802B81C0 00281780  38 63 ED 10 */	addi r3, r3, __vt__cf_CHelp_LandMark@l

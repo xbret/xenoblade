@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8005857C, global
+.fn __ct__CTaskEnvironment, global
 /* 8005857C 00021B3C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80058580 00021B40  7C 08 02 A6 */	mflr r0
 /* 80058584 00021B44  90 01 00 14 */	stw r0, 0x14(r1)
@@ -94,7 +94,7 @@
 /* 800586DC 00021C9C  7C 08 03 A6 */	mtlr r0
 /* 800586E0 00021CA0  38 21 00 10 */	addi r1, r1, 0x10
 /* 800586E4 00021CA4  4E 80 00 20 */	blr 
-.endfn func_8005857C
+.endfn __ct__CTaskEnvironment
 
 .fn func_800586E8, global
 /* 800586E8 00021CA8  80 E4 00 00 */	lwz r7, 0(r4)
@@ -1610,7 +1610,7 @@
 /* 80059C8C 0002324C  7C 7F 1B 78 */	mr r31, r3
 /* 80059C90 00023250  41 82 00 10 */	beq .L_80059CA0
 /* 80059C94 00023254  7F C4 F3 78 */	mr r4, r30
-/* 80059C98 00023258  4B FF E8 E5 */	bl func_8005857C
+/* 80059C98 00023258  4B FF E8 E5 */	bl __ct__CTaskEnvironment
 /* 80059C9C 0002325C  7C 7F 1B 78 */	mr r31, r3
 .L_80059CA0:
 /* 80059CA0 00023260  7F E3 FB 78 */	mr r3, r31
@@ -2156,7 +2156,7 @@
 
 .obj "@eti_800226DC", local
 .hidden "@eti_800226DC"
-	.4byte func_8005857C
+	.4byte __ct__CTaskEnvironment
 	.4byte 0x0000016C
 	.4byte "@etb_80007714"
 .endobj "@eti_800226DC"

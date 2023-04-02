@@ -96,7 +96,7 @@
 /* 8049E70C 00467CCC  4B F3 99 CC */	b GetResAnmChr__Q34nw4r3g3d7ResFileCFi
 .endfn func_8049E708
 
-.fn func_8049E710, global
+.fn __ct__8049E710, global
 /* 8049E710 00467CD0  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 8049E714 00467CD4  7C 08 02 A6 */	mflr r0
 /* 8049E718 00467CD8  90 01 00 54 */	stw r0, 0x54(r1)
@@ -210,7 +210,7 @@
 /* 8049E8A8 00467E68  7D 41 53 78 */	mr r1, r10
 /* 8049E8AC 00467E6C  7C 08 03 A6 */	mtlr r0
 /* 8049E8B0 00467E70  4E 80 00 20 */	blr 
-.endfn func_8049E710
+.endfn __ct__8049E710
 
 .fn func_8049E8B4, global
 /* 8049E8B4 00467E74  38 63 00 10 */	addi r3, r3, 0x10
@@ -328,7 +328,7 @@
 
 .obj "@eti_800371D8", local
 .hidden "@eti_800371D8"
-	.4byte func_8049E710
+	.4byte __ct__8049E710
 	.4byte 0x000001A4
 	.4byte "@etb_8001F724"
 .endobj "@eti_800371D8"

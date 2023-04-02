@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8016CDC0, global
+.fn __ct__cf_CfResReloadImpl, global
 /* 8016CDC0 00136380  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8016CDC4 00136384  7C 08 02 A6 */	mflr r0
 /* 8016CDC8 00136388  3C C0 80 53 */	lis r6, __vt__cf_CfResReloadImpl@ha
@@ -34,7 +34,7 @@
 /* 8016CE30 001363F0  7C 08 03 A6 */	mtlr r0
 /* 8016CE34 001363F4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8016CE38 001363F8  4E 80 00 20 */	blr 
-.endfn func_8016CDC0
+.endfn __ct__cf_CfResReloadImpl
 
 .fn func_8016CE3C, global
 /* 8016CE3C 001363FC  A0 83 00 08 */	lhz r4, 8(r3)
@@ -2722,7 +2722,7 @@
 
 .obj "@eti_8002903C", local
 .hidden "@eti_8002903C"
-	.4byte func_8016CDC0
+	.4byte __ct__cf_CfResReloadImpl
 	.4byte 0x0000007C
 	.4byte "@etb_8000E078"
 .endobj "@eti_8002903C"

@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_804E7A80, global
+.fn __ct__CMdlLook, global
 /* 804E7A80 004B1040  C0 02 D7 98 */	lfs f0, float_8066DB18@sda21(r2)
 /* 804E7A84 004B1044  3C 80 80 57 */	lis r4, __vt__CMdlLook@ha
 /* 804E7A88 004B1048  38 00 FF FF */	li r0, -1
@@ -33,7 +33,7 @@
 /* 804E7AEC 004B10AC  80 05 00 08 */	lwz r0, 8(r5)
 /* 804E7AF0 004B10B0  90 03 00 54 */	stw r0, 0x54(r3)
 /* 804E7AF4 004B10B4  4E 80 00 20 */	blr 
-.endfn func_804E7A80
+.endfn __ct__CMdlLook
 
 .fn __dt__CMdlLook, global
 /* 804E7AF8 004B10B8  94 21 FF F0 */	stwu r1, -0x10(r1)

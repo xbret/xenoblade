@@ -40,7 +40,7 @@
 /* 80108CE0 000D22A0  90 9F 00 58 */	stw r4, 0x58(r31)
 /* 80108CE4 000D22A4  90 1F 00 5C */	stw r0, 0x5c(r31)
 /* 80108CE8 000D22A8  93 BF 00 60 */	stw r29, 0x60(r31)
-/* 80108CEC 000D22AC  48 35 68 79 */	bl __ct__8045F564
+/* 80108CEC 000D22AC  48 35 68 79 */	bl __ct__UnkClass_8045F564
 /* 80108CF0 000D22B0  C0 02 94 B0 */	lfs f0, float_80669830@sda21(r2)
 /* 80108CF4 000D22B4  38 7F 00 74 */	addi r3, r31, 0x74
 /* 80108CF8 000D22B8  38 1F 07 74 */	addi r0, r31, 0x774
@@ -135,7 +135,7 @@
 /* 80108E48 000D2408  41 82 00 38 */	beq .L_80108E80
 /* 80108E4C 000D240C  38 80 FF FF */	li r4, -1
 /* 80108E50 000D2410  38 63 00 64 */	addi r3, r3, 0x64
-/* 80108E54 000D2414  48 35 67 2D */	bl __dt__8045F580
+/* 80108E54 000D2414  48 35 67 2D */	bl __dt__UnkClass_8045F564
 /* 80108E58 000D2418  2C 1E 00 00 */	cmpwi r30, 0
 /* 80108E5C 000D241C  41 82 00 14 */	beq .L_80108E70
 /* 80108E60 000D2420  41 82 00 10 */	beq .L_80108E70
@@ -1864,7 +1864,7 @@
 /* 8010A6B4 000D3C74  41 82 00 20 */	beq .L_8010A6D4
 /* 8010A6B8 000D3C78  38 80 FF FF */	li r4, -1
 /* 8010A6BC 000D3C7C  38 63 00 04 */	addi r3, r3, 4
-/* 8010A6C0 000D3C80  48 35 4E C1 */	bl __dt__8045F580
+/* 8010A6C0 000D3C80  48 35 4E C1 */	bl __dt__UnkClass_8045F564
 /* 8010A6C4 000D3C84  2C 1F 00 00 */	cmpwi r31, 0
 /* 8010A6C8 000D3C88  40 81 00 0C */	ble .L_8010A6D4
 /* 8010A6CC 000D3C8C  7F C3 F3 78 */	mr r3, r30
@@ -2395,7 +2395,6 @@
 	.asciz "txt_dot"
 	.asciz "txt_spike"
 	.asciz "pic_efct"
-.endobj CMenuBattleDamage_strpool
 
 	#ダブルアタック
 	.4byte 0x835F8375
@@ -2426,7 +2425,7 @@
 	.asciz "mf71_btl16_bufmk00.tpl"
 	.asciz "mf00_com00_dmy.tpl"
 	.asciz "pic_ic"
-	.balign 4
+.endobj CMenuBattleDamage_strpool
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
@@ -2645,7 +2644,7 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000064
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 	.4byte 0x0680001E
 	.4byte 0x0000005C
 	.4byte __dt__IScnRender

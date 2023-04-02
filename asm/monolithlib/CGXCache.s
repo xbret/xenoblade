@@ -10,13 +10,13 @@
 /* 80449174 00412734  93 C1 00 48 */	stw r30, 0x48(r1)
 /* 80449178 00412738  93 A1 00 44 */	stw r29, 0x44(r1)
 /* 8044917C 0041273C  7C 7D 1B 78 */	mr r29, r3
-/* 80449180 00412740  48 00 0B 75 */	bl func_80449CF4
+/* 80449180 00412740  48 00 0B 75 */	bl __ct__IStateCache
 /* 80449184 00412744  3C 60 80 57 */	lis r3, __vt__CGXCache@ha
 /* 80449188 00412748  7F A4 EB 78 */	mr r4, r29
 /* 8044918C 0041274C  38 63 F8 08 */	addi r3, r3, __vt__CGXCache@l
 /* 80449190 00412750  90 7D 00 00 */	stw r3, 0(r29)
 /* 80449194 00412754  38 7D 00 04 */	addi r3, r29, 4
-/* 80449198 00412758  48 00 02 B5 */	bl func_8044944C
+/* 80449198 00412758  48 00 02 B5 */	bl __ct__CMsgParam_32
 /* 8044919C 0041275C  4B FF F2 61 */	bl func_804483FC
 /* 804491A0 00412760  AB C3 00 06 */	lha r30, 6(r3)
 /* 804491A4 00412764  4B FF F2 59 */	bl func_804483FC
@@ -195,7 +195,7 @@
 /* 80449448 00412A08  4E 80 00 20 */	blr 
 .endfn __dt__IStateCache
 
-.fn func_8044944C, global
+.fn __ct__CMsgParam_32, global
 /* 8044944C 00412A0C  3C E0 80 57 */	lis r7, __vt__CMsgParam_32@ha
 /* 80449450 00412A10  38 00 00 00 */	li r0, 0
 /* 80449454 00412A14  38 E7 F8 24 */	addi r7, r7, __vt__CMsgParam_32@l
@@ -209,7 +209,7 @@
 /* 80449474 00412A34  90 03 04 94 */	stw r0, 0x494(r3)
 /* 80449478 00412A38  90 83 04 98 */	stw r4, 0x498(r3)
 /* 8044947C 00412A3C  4E 80 00 20 */	blr 
-.endfn func_8044944C
+.endfn __ct__CMsgParam_32
 
 .fn __dt__CMsgParam_32, global
 /* 80449480 00412A40  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -819,12 +819,12 @@
 /* 80449CF0 004132B0  4E 80 00 20 */	blr 
 .endfn func_80449B94
 
-.fn func_80449CF4, global
+.fn __ct__IStateCache, global
 /* 80449CF4 004132B4  3C 80 80 57 */	lis r4, __vt__IStateCache@ha
 /* 80449CF8 004132B8  38 84 F8 30 */	addi r4, r4, __vt__IStateCache@l
 /* 80449CFC 004132BC  90 83 00 00 */	stw r4, 0(r3)
 /* 80449D00 004132C0  4E 80 00 20 */	blr 
-.endfn func_80449CF4
+.endfn __ct__IStateCache
 
 .fn __dt__CGXCache, global
 /* 80449D04 004132C4  94 21 FF F0 */	stwu r1, -0x10(r1)

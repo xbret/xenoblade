@@ -96,7 +96,7 @@
 .endfn CProcRoot_WorkThreadEvent5
 
 
-.fn func_80439878, global
+.fn __ct__80439878, global
 /* 80439878 00402E38  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8043987C 00402E3C  7C 08 02 A6 */	mflr r0
 /* 80439880 00402E40  3C 80 80 52 */	lis r4, lbl_80525E2C@ha
@@ -137,7 +137,7 @@
 /* 80439908 00402EC8  7C 08 03 A6 */	mtlr r0
 /* 8043990C 00402ECC  38 21 00 20 */	addi r1, r1, 0x20
 /* 80439910 00402ED0  4E 80 00 20 */	blr 
-.endfn func_80439878
+.endfn __ct__80439878
 
 .fn func_80439914, global
 /* 80439914 00402ED4  2C 03 00 00 */	cmpwi r3, 0
@@ -608,7 +608,7 @@
 
 .obj "@eti_80033E9C", local
 .hidden "@eti_80033E9C"
-	.4byte func_80439878
+	.4byte __ct__80439878
 	.4byte 0x0000009C
 	.4byte "@etb_8001C240"
 .endobj "@eti_80033E9C"

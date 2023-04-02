@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_80166704, global
+.fn __ct__cf_CInfoCf, global
 /* 80166704 0012FCC4  3C 80 80 53 */	lis r4, __vt__cf_CInfoCf@ha
 /* 80166708 0012FCC8  38 00 00 00 */	li r0, 0
 /* 8016670C 0012FCCC  38 84 41 80 */	addi r4, r4, __vt__cf_CInfoCf@l
@@ -11,7 +11,7 @@
 /* 80166718 0012FCD8  90 03 00 08 */	stw r0, 8(r3)
 /* 8016671C 0012FCDC  90 6D A9 C0 */	stw r3, lbl_80666B40@sda21(r13)
 /* 80166720 0012FCE0  4E 80 00 20 */	blr 
-.endfn func_80166704
+.endfn __ct__cf_CInfoCf
 
 .fn __dt__cf_CInfoCf, global
 /* 80166724 0012FCE4  94 21 FF F0 */	stwu r1, -0x10(r1)

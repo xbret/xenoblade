@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8016FE68, global
+.fn __ct__cf_CfObjectActor, global
 /* 8016FE68 00139428  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8016FE6C 0013942C  7C 08 02 A6 */	mflr r0
 /* 8016FE70 00139430  2C 03 00 00 */	cmpwi r3, 0
@@ -15,7 +15,7 @@
 .L_8016FE8C:
 /* 8016FE8C 0013944C  7F E3 FB 78 */	mr r3, r31
 /* 8016FE90 00139450  38 A0 00 00 */	li r5, 0
-/* 8016FE94 00139454  48 00 53 D1 */	bl func_80175264
+/* 8016FE94 00139454  48 00 53 D1 */	bl __ct__80175264
 /* 8016FE98 00139458  38 7F 33 80 */	addi r3, r31, 0x3380
 /* 8016FE9C 0013945C  4B FD AA 69 */	bl __ct__cf_CAIAction
 /* 8016FEA0 00139460  38 7F 3E 9C */	addi r3, r31, 0x3e9c
@@ -45,7 +45,7 @@
 /* 8016FF00 001394C0  7C 08 03 A6 */	mtlr r0
 /* 8016FF04 001394C4  38 21 00 10 */	addi r1, r1, 0x10
 /* 8016FF08 001394C8  4E 80 00 20 */	blr
-.endfn func_8016FE68
+.endfn __ct__cf_CfObjectActor
 
 .fn func_8016FF0C, global
 /* 8016FF0C 001394CC  38 63 3E 9C */	addi r3, r3, 0x3e9c
@@ -3245,7 +3245,7 @@
 
 .obj "@eti_80029204", local
 .hidden "@eti_80029204"
-	.4byte func_8016FE68
+	.4byte __ct__cf_CfObjectActor
 	.4byte 0x000000A4
 	.4byte "@etb_8000E1BC"
 .endobj "@eti_80029204"

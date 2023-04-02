@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8048ED24, global
+.fn __ct__CScnRoot, global
 /* 8048ED24 004582E4  3C A0 80 57 */	lis r5, __vt__CScnRoot@ha
 /* 8048ED28 004582E8  38 00 00 00 */	li r0, 0
 /* 8048ED2C 004582EC  38 A5 1F 78 */	addi r5, r5, __vt__CScnRoot@l
@@ -10,7 +10,7 @@
 /* 8048ED34 004582F4  90 83 00 04 */	stw r4, 4(r3)
 /* 8048ED38 004582F8  90 03 00 08 */	stw r0, 8(r3)
 /* 8048ED3C 004582FC  4E 80 00 20 */	blr 
-.endfn func_8048ED24
+.endfn __ct__CScnRoot
 
 .fn __dt__CScnRoot, global
 /* 8048ED40 00458300  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -46,7 +46,7 @@
 /* 8048EDA8 00458368  41 82 00 10 */	beq .L_8048EDB8
 /* 8048EDAC 0045836C  7F C4 F3 78 */	mr r4, r30
 /* 8048EDB0 00458370  7F E5 FB 78 */	mr r5, r31
-/* 8048EDB4 00458374  48 00 00 35 */	bl func_8048EDE8
+/* 8048EDB4 00458374  48 00 00 35 */	bl __ct__CScnRootNw4r
 .L_8048EDB8:
 /* 8048EDB8 00458378  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8048EDBC 0045837C  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -71,7 +71,7 @@
 /* 8048EDE4 004583A4  4E 80 00 20 */	blr 
 .endfn func_8048EDE0
 
-.fn func_8048EDE8, global
+.fn __ct__CScnRootNw4r, global
 /* 8048EDE8 004583A8  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 8048EDEC 004583AC  7C 08 02 A6 */	mflr r0
 /* 8048EDF0 004583B0  90 01 00 84 */	stw r0, 0x84(r1)
@@ -85,7 +85,7 @@
 /* 8048EE10 004583D0  7C 9D 23 78 */	mr r29, r4
 /* 8048EE14 004583D4  90 01 00 28 */	stw r0, 0x28(r1)
 /* 8048EE18 004583D8  7C BA 2B 78 */	mr r26, r5
-/* 8048EE1C 004583DC  4B FF FF 09 */	bl func_8048ED24
+/* 8048EE1C 004583DC  4B FF FF 09 */	bl __ct__CScnRoot
 /* 8048EE20 004583E0  3C A0 80 57 */	lis r5, __vt__CScnRootNw4r@ha
 /* 8048EE24 004583E4  38 80 00 00 */	li r4, 0
 /* 8048EE28 004583E8  38 60 FF FF */	li r3, -1
@@ -412,7 +412,7 @@
 /* 8048F2E4 004588A4  7C 08 03 A6 */	mtlr r0
 /* 8048F2E8 004588A8  38 21 00 80 */	addi r1, r1, 0x80
 /* 8048F2EC 004588AC  4E 80 00 20 */	blr 
-.endfn func_8048EDE8
+.endfn __ct__CScnRootNw4r
 
 .fn func_8048F2F0, global
 /* 8048F2F0 004588B0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -562,7 +562,7 @@
 
 .obj "@eti_80036818", local
 .hidden "@eti_80036818"
-	.4byte func_8048EDE8
+	.4byte __ct__CScnRootNw4r
 	.4byte 0x00000508
 	.4byte "@etb_8001EC00"
 .endobj "@eti_80036818"

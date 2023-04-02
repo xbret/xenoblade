@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_802A3A80, global
+.fn __ct__cf_CVS_THREAD, global
 /* 802A3A80 0026D040  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A3A84 0026D044  7C 08 02 A6 */	mflr r0
 /* 802A3A88 0026D048  3C 80 80 54 */	lis r4, __vt__cf_CVS_THREAD@ha
@@ -22,7 +22,7 @@
 /* 802A3AC0 0026D080  7C 08 03 A6 */	mtlr r0
 /* 802A3AC4 0026D084  38 21 00 10 */	addi r1, r1, 0x10
 /* 802A3AC8 0026D088  4E 80 00 20 */	blr 
-.endfn func_802A3A80
+.endfn __ct__cf_CVS_THREAD
 
 .fn func_802A3ACC, global
 /* 802A3ACC 0026D08C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1224,7 +1224,7 @@
 
 .obj "@eti_80032948", local
 .hidden "@eti_80032948"
-	.4byte func_802A3A80
+	.4byte __ct__cf_CVS_THREAD
 	.4byte 0x0000004C
 	.4byte "@etb_8001AA90"
 .endobj "@eti_80032948"

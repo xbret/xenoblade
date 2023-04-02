@@ -14,7 +14,7 @@
 /* 80251E18 0021B3D8  41 82 00 38 */	beq .L_80251E50
 /* 80251E1C 0021B3DC  38 80 FF FF */	li r4, -1
 /* 80251E20 0021B3E0  38 63 00 64 */	addi r3, r3, 0x64
-/* 80251E24 0021B3E4  48 20 D7 5D */	bl __dt__8045F580
+/* 80251E24 0021B3E4  48 20 D7 5D */	bl __dt__UnkClass_8045F564
 /* 80251E28 0021B3E8  2C 1E 00 00 */	cmpwi r30, 0
 /* 80251E2C 0021B3EC  41 82 00 14 */	beq .L_80251E40
 /* 80251E30 0021B3F0  41 82 00 10 */	beq .L_80251E40
@@ -479,7 +479,7 @@
 /* 802524D0 0021BA90  90 9E 00 58 */	stw r4, 0x58(r30)
 /* 802524D4 0021BA94  90 1E 00 5C */	stw r0, 0x5c(r30)
 /* 802524D8 0021BA98  93 BE 00 60 */	stw r29, 0x60(r30)
-/* 802524DC 0021BA9C  48 20 D0 89 */	bl __ct__8045F564
+/* 802524DC 0021BA9C  48 20 D0 89 */	bl __ct__UnkClass_8045F564
 /* 802524E0 0021BAA0  93 FE 00 7C */	stw r31, 0x7c(r30)
 /* 802524E4 0021BAA4  93 FE 00 80 */	stw r31, 0x80(r30)
 /* 802524E8 0021BAA8  9B FE 00 84 */	stb r31, 0x84(r30)
@@ -636,7 +636,7 @@
 	.4byte func_80251E6C
 	.4byte func_802521FC
 	.4byte func_8025228C
-	.4byte func_80101FB8
+	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuPause
 	.4byte 0xFFFFFFA8
@@ -744,7 +744,7 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000064
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 	.4byte 0x0680001E
 	.4byte 0x0000005C
 	.4byte __dt__IScnRender

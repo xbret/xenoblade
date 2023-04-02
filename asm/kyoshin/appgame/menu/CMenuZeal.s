@@ -64,7 +64,7 @@
 /* 8017EE7C 0014843C  D0 1C 00 9C */	stfs f0, 0x9c(r28)
 /* 8017EE80 00148440  9B FC 00 A0 */	stb r31, 0xa0(r28)
 /* 8017EE84 00148444  9B FC 00 A1 */	stb r31, 0xa1(r28)
-/* 8017EE88 00148448  48 2E 06 DD */	bl __ct__8045F564
+/* 8017EE88 00148448  48 2E 06 DD */	bl __ct__UnkClass_8045F564
 /* 8017EE8C 0014844C  C0 02 9D B8 */	lfs f0, float_8066A138@sda21(r2)
 /* 8017EE90 00148450  38 00 00 01 */	li r0, 1
 /* 8017EE94 00148454  C0 22 9D B4 */	lfs f1, float_8066A134@sda21(r2)
@@ -102,7 +102,7 @@
 /* 8017EF08 001484C8  41 82 00 38 */	beq .L_8017EF40
 /* 8017EF0C 001484CC  38 80 FF FF */	li r4, -1
 /* 8017EF10 001484D0  38 63 00 A4 */	addi r3, r3, 0xa4
-/* 8017EF14 001484D4  48 2E 06 6D */	bl __dt__8045F580
+/* 8017EF14 001484D4  48 2E 06 6D */	bl __dt__UnkClass_8045F564
 /* 8017EF18 001484D8  2C 1E 00 00 */	cmpwi r30, 0
 /* 8017EF1C 001484DC  41 82 00 14 */	beq .L_8017EF30
 /* 8017EF20 001484E0  41 82 00 10 */	beq .L_8017EF30
@@ -1295,7 +1295,7 @@
 	.4byte func_8017EF5C
 	.4byte func_8017F358
 	.4byte func_8017F43C
-	.4byte func_80101FB8
+	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuZeal
 	.4byte 0xFFFFFFA8
@@ -1452,7 +1452,7 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x000000A4
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 	.4byte 0x0680001E
 	.4byte 0x0000005C
 	.4byte __dt__IScnRender

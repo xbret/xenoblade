@@ -450,7 +450,7 @@
 /* 8045F560 00428B20  4E 80 00 20 */	blr 
 .endfn func_8045F4E4
 
-.fn __ct__8045F564, global
+.fn __ct__UnkClass_8045F564, global
 /* 8045F564 00428B24  38 00 00 00 */	li r0, 0
 /* 8045F568 00428B28  38 80 FF FF */	li r4, -1
 /* 8045F56C 00428B2C  90 83 00 00 */	stw r4, 0(r3)
@@ -458,10 +458,10 @@
 /* 8045F574 00428B34  90 03 00 08 */	stw r0, 8(r3)
 /* 8045F578 00428B38  90 03 00 0C */	stw r0, 0xc(r3)
 /* 8045F57C 00428B3C  4E 80 00 20 */	blr 
-.endfn __ct__8045F564
+.endfn __ct__UnkClass_8045F564
 
 #FUN_002fe7a8 in xc3d
-.fn __dt__8045F580, global
+.fn __dt__UnkClass_8045F564, global
 /* 8045F580 00428B40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045F584 00428B44  7C 08 02 A6 */	mflr r0
 /* 8045F588 00428B48  2C 03 00 00 */	cmpwi r3, 0
@@ -534,7 +534,7 @@
 /* 8045F674 00428C34  7C 08 03 A6 */	mtlr r0
 /* 8045F678 00428C38  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045F67C 00428C3C  4E 80 00 20 */	blr 
-.endfn __dt__8045F580
+.endfn __dt__UnkClass_8045F564
 
 #r6: class name
 .fn func_8045F680, global
@@ -1024,7 +1024,7 @@
 
 .obj "@eti_80035450", local
 .hidden "@eti_80035450"
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 	.4byte 0x00000100
 	.4byte "@etb_8001D86C"
 .endobj "@eti_80035450"

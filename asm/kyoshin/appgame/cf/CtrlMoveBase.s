@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_80088904, global
+.fn __ct__80088904, global
 /* 80088904 00051EC4  3C E0 80 53 */	lis r7, __vt__cf_CtrlMoveBase@ha
 /* 80088908 00051EC8  38 C0 00 00 */	li r6, 0
 /* 8008890C 00051ECC  38 E7 AF D8 */	addi r7, r7, __vt__cf_CtrlMoveBase@l
@@ -31,7 +31,7 @@
 /* 80088968 00051F28  D0 23 00 38 */	stfs f1, 0x38(r3)
 /* 8008896C 00051F2C  D0 03 00 3C */	stfs f0, 0x3c(r3)
 /* 80088970 00051F30  4E 80 00 20 */	blr 
-.endfn func_80088904
+.endfn __ct__80088904
 
 .fn func_80088974, global
 /* 80088974 00051F34  94 21 FF 60 */	stwu r1, -0xa0(r1)

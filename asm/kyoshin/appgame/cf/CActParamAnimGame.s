@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8005A3FC, global
+.fn __ct__8005A3FC, global
 /* 8005A3FC 000239BC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8005A400 000239C0  7C 08 02 A6 */	mflr r0
 /* 8005A404 000239C4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -31,9 +31,9 @@
 /* 8005A460 00023A20  7C 08 03 A6 */	mtlr r0
 /* 8005A464 00023A24  38 21 00 10 */	addi r1, r1, 0x10
 /* 8005A468 00023A28  4E 80 00 20 */	blr 
-.endfn func_8005A3FC
+.endfn __ct__8005A3FC
 
-.fn func_8005A46C, global
+.fn __ct__cf_CActParamAnimGame, global
 /* 8005A46C 00023A2C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8005A470 00023A30  7C 08 02 A6 */	mflr r0
 /* 8005A474 00023A34  90 01 00 14 */	stw r0, 0x14(r1)
@@ -58,7 +58,7 @@
 /* 8005A4C0 00023A80  7C 08 03 A6 */	mtlr r0
 /* 8005A4C4 00023A84  38 21 00 10 */	addi r1, r1, 0x10
 /* 8005A4C8 00023A88  4E 80 00 20 */	blr 
-.endfn func_8005A46C
+.endfn __ct__cf_CActParamAnimGame
 
 .fn __dt__cf_CActParamAnimGame, global
 /* 8005A4CC 00023A8C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -7163,14 +7163,14 @@
 
 .obj "@eti_800227F0", local
 .hidden "@eti_800227F0"
-	.4byte func_8005A3FC
+	.4byte __ct__8005A3FC
 	.4byte 0x00000070
 	.4byte "@etb_800077EC"
 .endobj "@eti_800227F0"
 
 .obj "@eti_800227FC", local
 .hidden "@eti_800227FC"
-	.4byte func_8005A46C
+	.4byte __ct__cf_CActParamAnimGame
 	.4byte 0x00000060
 	.4byte "@etb_80007808"
 .endobj "@eti_800227FC"

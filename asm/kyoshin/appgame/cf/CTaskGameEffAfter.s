@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_800614F4, global
+.fn __ct__CTaskGameEffAfter, global
 /* 800614F4 0002AAB4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800614F8 0002AAB8  7C 08 02 A6 */	mflr r0
 /* 800614FC 0002AABC  90 01 00 14 */	stw r0, 0x14(r1)
@@ -47,7 +47,7 @@
 /* 80061594 0002AB54  7C 08 03 A6 */	mtlr r0
 /* 80061598 0002AB58  38 21 00 10 */	addi r1, r1, 0x10
 /* 8006159C 0002AB5C  4E 80 00 20 */	blr 
-.endfn func_800614F4
+.endfn __ct__CTaskGameEffAfter
 
 .fn __dt__CTTask_CTaskGameEffAfter, global
 /* 800615A0 0002AB60  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -277,7 +277,7 @@
 
 .obj "@eti_80022A24", local
 .hidden "@eti_80022A24"
-	.4byte func_800614F4
+	.4byte __ct__CTaskGameEffAfter
 	.4byte 0x000000AC
 	.4byte "@etb_8000798C"
 .endobj "@eti_80022A24"

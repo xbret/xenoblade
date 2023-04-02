@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_800BA7E8, global
+.fn __ct__800BA7E8, global
 /* 800BA7E8 00083DA8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800BA7EC 00083DAC  7C 08 02 A6 */	mflr r0
 /* 800BA7F0 00083DB0  3D 80 80 53 */	lis r12, __vt__cf_CfObject@ha
@@ -73,7 +73,7 @@
 /* 800BA8F4 00083EB4  7C 08 03 A6 */	mtlr r0
 /* 800BA8F8 00083EB8  38 21 00 10 */	addi r1, r1, 0x10
 /* 800BA8FC 00083EBC  4E 80 00 20 */	blr 
-.endfn func_800BA7E8
+.endfn __ct__800BA7E8
 
 .fn func_800BA900, global
 /* 800BA900 00083EC0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2083,7 +2083,7 @@
 
 .obj "@eti_800255EC", local
 .hidden "@eti_800255EC"
-	.4byte func_800BA7E8
+	.4byte __ct__800BA7E8
 	.4byte 0x00000118
 	.4byte "@etb_80009B68"
 .endobj "@eti_800255EC"

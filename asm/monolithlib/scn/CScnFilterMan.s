@@ -10,15 +10,15 @@
 /* 8049C958 00465F18  7C 9F 23 78 */	mr r31, r4
 /* 8049C95C 00465F1C  93 C1 00 08 */	stw r30, 8(r1)
 /* 8049C960 00465F20  7C 7E 1B 78 */	mr r30, r3
-/* 8049C964 00465F24  4B CA 5E 01 */	bl func_80142764
+/* 8049C964 00465F24  4B CA 5E 01 */	bl __ct__IScnRender
 /* 8049C968 00465F28  3C 80 80 57 */	lis r4, __vt__CScnFilterMan@ha
 /* 8049C96C 00465F2C  93 FE 00 04 */	stw r31, 4(r30)
 /* 8049C970 00465F30  38 84 23 C0 */	addi r4, r4, __vt__CScnFilterMan@l
 /* 8049C974 00465F34  38 7E 00 08 */	addi r3, r30, 8
 /* 8049C978 00465F38  90 9E 00 00 */	stw r4, 0(r30)
-/* 8049C97C 00465F3C  48 00 00 89 */	bl func_8049CA04
+/* 8049C97C 00465F3C  48 00 00 89 */	bl __ct__reslist_CScnFilter
 /* 8049C980 00465F40  38 7E 00 28 */	addi r3, r30, 0x28
-/* 8049C984 00465F44  48 00 02 51 */	bl func_8049CBD4
+/* 8049C984 00465F44  48 00 02 51 */	bl __ct__8049CBD4
 /* 8049C988 00465F48  38 7E 00 48 */	addi r3, r30, 0x48
 /* 8049C98C 00465F4C  48 00 00 6D */	bl func_8049C9F8
 /* 8049C990 00465F50  38 7E 00 48 */	addi r3, r30, 0x48
@@ -55,13 +55,13 @@
 /* 8049CA00 00465FC0  4E 80 00 20 */	blr 
 .endfn func_8049C9F8
 
-.fn func_8049CA04, global
+.fn __ct__reslist_CScnFilter, global
 /* 8049CA04 00465FC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049CA08 00465FC8  7C 08 02 A6 */	mflr r0
 /* 8049CA0C 00465FCC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8049CA10 00465FD0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8049CA14 00465FD4  7C 7F 1B 78 */	mr r31, r3
-/* 8049CA18 00465FD8  48 00 00 29 */	bl func_8049CA40
+/* 8049CA18 00465FD8  48 00 00 29 */	bl __ct___reslist_base_CScnFilter
 /* 8049CA1C 00465FDC  3C 80 80 57 */	lis r4, __vt__reslist_CScnFilter@ha
 /* 8049CA20 00465FE0  7F E3 FB 78 */	mr r3, r31
 /* 8049CA24 00465FE4  38 84 23 F4 */	addi r4, r4, __vt__reslist_CScnFilter@l
@@ -71,9 +71,9 @@
 /* 8049CA34 00465FF4  7C 08 03 A6 */	mtlr r0
 /* 8049CA38 00465FF8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8049CA3C 00465FFC  4E 80 00 20 */	blr 
-.endfn func_8049CA04
+.endfn __ct__reslist_CScnFilter
 
-.fn func_8049CA40, global
+.fn __ct___reslist_base_CScnFilter, global
 /* 8049CA40 00466000  38 00 00 00 */	li r0, 0
 /* 8049CA44 00466004  3C 80 80 57 */	lis r4, __vt___reslist_base_CScnFilter@ha
 /* 8049CA48 00466008  38 84 24 0C */	addi r4, r4, __vt___reslist_base_CScnFilter@l
@@ -86,7 +86,7 @@
 /* 8049CA64 00466024  90 84 00 00 */	stw r4, 0(r4)
 /* 8049CA68 00466028  90 84 00 04 */	stw r4, 4(r4)
 /* 8049CA6C 0046602C  4E 80 00 20 */	blr 
-.endfn func_8049CA40
+.endfn __ct___reslist_base_CScnFilter
 
 .fn __dt___reslist_base_CScnFilter, global
 /* 8049CA70 00466030  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -197,13 +197,13 @@
 /* 8049CBD0 00466190  4E 80 00 20 */	blr 
 .endfn __dt__reslist_CScnFilter
 
-.fn func_8049CBD4, global
+.fn __ct__8049CBD4, global
 /* 8049CBD4 00466194  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049CBD8 00466198  7C 08 02 A6 */	mflr r0
 /* 8049CBDC 0046619C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8049CBE0 004661A0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8049CBE4 004661A4  7C 7F 1B 78 */	mr r31, r3
-/* 8049CBE8 004661A8  48 00 00 29 */	bl func_8049CC10
+/* 8049CBE8 004661A8  48 00 00 29 */	bl __ct__8049CC10
 /* 8049CBEC 004661AC  3C 80 80 57 */	lis r4, __vt__reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter@ha
 /* 8049CBF0 004661B0  7F E3 FB 78 */	mr r3, r31
 /* 8049CBF4 004661B4  38 84 23 D0 */	addi r4, r4, __vt__reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter@l
@@ -213,9 +213,9 @@
 /* 8049CC04 004661C4  7C 08 03 A6 */	mtlr r0
 /* 8049CC08 004661C8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8049CC0C 004661CC  4E 80 00 20 */	blr 
-.endfn func_8049CBD4
+.endfn __ct__8049CBD4
 
-.fn func_8049CC10, global
+.fn __ct__8049CC10, global
 /* 8049CC10 004661D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049CC14 004661D4  7C 08 02 A6 */	mflr r0
 /* 8049CC18 004661D8  3C 80 80 57 */	lis r4, __vt___reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter@ha
@@ -240,7 +240,7 @@
 /* 8049CC64 00466224  7C 08 03 A6 */	mtlr r0
 /* 8049CC68 00466228  38 21 00 10 */	addi r1, r1, 0x10
 /* 8049CC6C 0046622C  4E 80 00 20 */	blr 
-.endfn func_8049CC10
+.endfn __ct__8049CC10
 
 .fn func_8049CC70, global
 /* 8049CC70 00466230  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1964,7 +1964,7 @@
 
 .obj "@eti_80036F98", local
 .hidden "@eti_80036F98"
-	.4byte func_8049CA04
+	.4byte __ct__reslist_CScnFilter
 	.4byte 0x0000003C
 	.4byte "@etb_8001F528"
 .endobj "@eti_80036F98"
@@ -1992,14 +1992,14 @@
 
 .obj "@eti_80036FC8", local
 .hidden "@eti_80036FC8"
-	.4byte func_8049CBD4
+	.4byte __ct__8049CBD4
 	.4byte 0x0000003C
 	.4byte "@etb_8001F548"
 .endobj "@eti_80036FC8"
 
 .obj "@eti_80036FD4", local
 .hidden "@eti_80036FD4"
-	.4byte func_8049CC10
+	.4byte __ct__8049CC10
 	.4byte 0x00000060
 	.4byte "@etb_8001F550"
 .endobj "@eti_80036FD4"

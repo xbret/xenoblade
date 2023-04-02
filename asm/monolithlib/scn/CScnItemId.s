@@ -31,7 +31,7 @@
 /* 804820F4 0044B6B4  4E 80 00 20 */	blr
 .endfn __dt__CScnItemId
 
-.fn func_804820F8, global
+.fn __ct__804820F8, global
 /* 804820F8 0044B6B8  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 804820FC 0044B6BC  7C 08 02 A6 */	mflr r0
 /* 80482100 0044B6C0  90 01 00 64 */	stw r0, 0x64(r1)
@@ -139,7 +139,7 @@
 /* 8048227C 0044B83C  7C 08 03 A6 */	mtlr r0
 /* 80482280 0044B840  38 21 00 60 */	addi r1, r1, 0x60
 /* 80482284 0044B844  4E 80 00 20 */	blr 
-.endfn func_804820F8
+.endfn __ct__804820F8
 
 .fn func_80482288, global
 /* 80482288 0044B848  4E 80 00 20 */	blr 
@@ -246,7 +246,7 @@
 
 .obj "@eti_800361DC", local
 .hidden "@eti_800361DC"
-	.4byte func_804820F8
+	.4byte __ct__804820F8
 	.4byte 0x00000190
 	.4byte "@etb_8001E254"
 .endobj "@eti_800361DC"

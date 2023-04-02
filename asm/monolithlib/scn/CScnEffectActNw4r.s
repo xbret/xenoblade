@@ -2,14 +2,14 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8049B994, global
+.fn __ct__CScnEffectActNw4r, global
 /* 8049B994 00464F54  3C 80 80 57 */	lis r4, __vt__CScnEffectActNw4r@ha
 /* 8049B998 00464F58  38 00 00 00 */	li r0, 0
 /* 8049B99C 00464F5C  38 84 23 20 */	addi r4, r4, __vt__CScnEffectActNw4r@l
 /* 8049B9A0 00464F60  90 83 00 00 */	stw r4, 0(r3)
 /* 8049B9A4 00464F64  90 03 01 88 */	stw r0, 0x188(r3)
 /* 8049B9A8 00464F68  4E 80 00 20 */	blr 
-.endfn func_8049B994
+.endfn __ct__CScnEffectActNw4r
 
 .fn __dt__CScnEffectActNw4r, global
 /* 8049B9AC 00464F6C  94 21 FF F0 */	stwu r1, -0x10(r1)

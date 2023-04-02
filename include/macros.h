@@ -20,6 +20,7 @@
 #define ALIGN(x) __attribute__((aligned(x)))
 #define DECL_SECTION(x) __declspec(section x)
 #define DECL_WEAK __declspec(weak)
+#define DONT_INLINE __attribute__((never_inline))
 
 // Codewarrior tricks for matching decomp
 // (Functions are given prototypes for -requireprotos)

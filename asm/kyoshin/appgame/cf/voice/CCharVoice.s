@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_802A0AFC, global
+.fn __ct__CCharVoice, global
 /* 802A0AFC 0026A0BC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802A0B00 0026A0C0  7C 08 02 A6 */	mflr r0
 /* 802A0B04 0026A0C4  3C 80 80 54 */	lis r4, __vt__cf_CCharVoice@ha
@@ -39,7 +39,7 @@
 /* 802A0B80 0026A140  7C 08 03 A6 */	mtlr r0
 /* 802A0B84 0026A144  38 21 00 20 */	addi r1, r1, 0x20
 /* 802A0B88 0026A148  4E 80 00 20 */	blr 
-.endfn func_802A0AFC
+.endfn __ct__CCharVoice
 
 .fn func_802A0B8C, global
 /* 802A0B8C 0026A14C  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -740,7 +740,7 @@
 
 .obj "@eti_8003266C", local
 .hidden "@eti_8003266C"
-	.4byte func_802A0AFC
+	.4byte __ct__CCharVoice
 	.4byte 0x00000090
 	.4byte "@etb_8001A880"
 .endobj "@eti_8003266C"

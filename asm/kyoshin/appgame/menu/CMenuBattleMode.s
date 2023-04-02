@@ -14,7 +14,7 @@
 /* 8019FE70 00169430  41 82 00 38 */	beq .L_8019FEA8
 /* 8019FE74 00169434  38 80 FF FF */	li r4, -1
 /* 8019FE78 00169438  38 63 00 60 */	addi r3, r3, 0x60
-/* 8019FE7C 0016943C  48 2B F7 05 */	bl __dt__8045F580
+/* 8019FE7C 0016943C  48 2B F7 05 */	bl __dt__UnkClass_8045F564
 /* 8019FE80 00169440  2C 1E 00 00 */	cmpwi r30, 0
 /* 8019FE84 00169444  41 82 00 14 */	beq .L_8019FE98
 /* 8019FE88 00169448  41 82 00 10 */	beq .L_8019FE98
@@ -418,7 +418,7 @@
 /* 801A0430 001699F0  90 BE 00 10 */	stw r5, 0x10(r30)
 /* 801A0434 001699F4  90 9E 00 58 */	stw r4, 0x58(r30)
 /* 801A0438 001699F8  90 1E 00 5C */	stw r0, 0x5c(r30)
-/* 801A043C 001699FC  48 2B F1 29 */	bl __ct__8045F564
+/* 801A043C 001699FC  48 2B F1 29 */	bl __ct__UnkClass_8045F564
 /* 801A0440 00169A00  93 BE 00 70 */	stw r29, 0x70(r30)
 /* 801A0444 00169A04  93 FE 00 74 */	stw r31, 0x74(r30)
 /* 801A0448 00169A08  93 FE 00 78 */	stw r31, 0x78(r30)
@@ -487,7 +487,7 @@
 	.4byte func_8019FEC4
 	.4byte func_8019FFF8
 	.4byte func_801A0078
-	.4byte func_80101FB8
+	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuBattleMode
 	.4byte 0xFFFFFFA8
@@ -594,7 +594,7 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000060
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 	.4byte 0x0680001E
 	.4byte 0x0000005C
 	.4byte __dt__IScnRender

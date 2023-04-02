@@ -12,7 +12,7 @@
 /* 80448F3C 004124FC  4B FF F2 4C */	b __dt__CDeviceVI
 .endfn func_80448F38
 
-.fn func_80448F40, global
+.fn __ct__CDeviceVICb, global
 /* 80448F40 00412500  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80448F44 00412504  7C 08 02 A6 */	mflr r0
 /* 80448F48 00412508  3C 80 80 57 */	lis r4, __vt__CDeviceVICb@ha
@@ -28,7 +28,7 @@
 /* 80448F70 00412530  7C 08 03 A6 */	mtlr r0
 /* 80448F74 00412534  38 21 00 10 */	addi r1, r1, 0x10
 /* 80448F78 00412538  4E 80 00 20 */	blr 
-.endfn func_80448F40
+.endfn __ct__CDeviceVICb
 
 .fn __dt__CDeviceVICb, global
 /* 80448F7C 0041253C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -111,7 +111,7 @@
 
 .obj "@eti_80034760", local
 .hidden "@eti_80034760"
-	.4byte func_80448F40
+	.4byte __ct__CDeviceVICb
 	.4byte 0x0000003C
 	.4byte "@etb_8001CB68"
 .endobj "@eti_80034760"

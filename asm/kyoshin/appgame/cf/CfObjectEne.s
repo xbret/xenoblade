@@ -8,7 +8,7 @@
 /* 800AD890 00076E50  90 01 00 14 */	stw r0, 0x14(r1)
 /* 800AD894 00076E54  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 800AD898 00076E58  7C 7F 1B 78 */	mr r31, r3
-/* 800AD89C 00076E5C  48 0C 25 CD */	bl func_8016FE68
+/* 800AD89C 00076E5C  48 0C 25 CD */	bl __ct__cf_CfObjectActor
 /* 800AD8A0 00076E60  3C 60 80 53 */	lis r3, __vt__cf_CfObjectEne@ha
 /* 800AD8A4 00076E64  38 00 00 00 */	li r0, 0
 /* 800AD8A8 00076E68  38 63 C1 E8 */	addi r3, r3, __vt__cf_CfObjectEne@l
@@ -36,7 +36,7 @@
 /* 800AD900 00076EC0  41 82 00 08 */	beq .L_800AD908
 /* 800AD904 00076EC4  38 9F 3E 9C */	addi r4, r31, 0x3e9c
 .L_800AD908:
-/* 800AD908 00076EC8  48 0B F4 B9 */	bl func_8016CDC0
+/* 800AD908 00076EC8  48 0B F4 B9 */	bl __ct__cf_CfResReloadImpl
 .L_800AD90C:
 /* 800AD90C 00076ECC  90 7F 3F 4C */	stw r3, 0x3f4c(r31)
 /* 800AD910 00076ED0  7F E3 FB 78 */	mr r3, r31

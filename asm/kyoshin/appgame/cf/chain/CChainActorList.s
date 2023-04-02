@@ -10,11 +10,11 @@
 /* 8027AA50 00244010  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027AA54 00244014  7C 08 02 A6 */	mflr r0
 /* 8027AA58 00244018  3C C0 80 54 */	lis r6, __vt__cf_CChainActorList@ha
-/* 8027AA5C 0024401C  3C 80 80 28 */	lis r4, func_8027AC00@ha
+/* 8027AA5C 0024401C  3C 80 80 28 */	lis r4, __ct__8027AC00@ha
 /* 8027AA60 00244020  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8027AA64 00244024  3C A0 80 28 */	lis r5, __dt__cf_CChainActorPc@ha
 /* 8027AA68 00244028  38 C6 BA C0 */	addi r6, r6, __vt__cf_CChainActorList@l
-/* 8027AA6C 0024402C  38 84 AC 00 */	addi r4, r4, func_8027AC00@l
+/* 8027AA6C 0024402C  38 84 AC 00 */	addi r4, r4, __ct__8027AC00@l
 /* 8027AA70 00244030  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8027AA74 00244034  38 A5 AC 78 */	addi r5, r5, __dt__cf_CChainActorPc@l
 /* 8027AA78 00244038  38 E0 00 03 */	li r7, 3
@@ -23,11 +23,11 @@
 /* 8027AA84 00244044  90 C3 1D AC */	stw r6, 0x1dac(r3)
 /* 8027AA88 00244048  38 C0 00 80 */	li r6, 0x80
 /* 8027AA8C 0024404C  48 03 F0 75 */	bl __construct_array
-/* 8027AA90 00244050  3C 80 80 28 */	lis r4, func_8027ACB8@ha
+/* 8027AA90 00244050  3C 80 80 28 */	lis r4, __ct__8027ACB8@ha
 /* 8027AA94 00244054  3C A0 80 28 */	lis r5, __dt__cf_CChainActorEne@ha
 /* 8027AA98 00244058  38 7E 01 80 */	addi r3, r30, 0x180
 /* 8027AA9C 0024405C  38 C0 00 80 */	li r6, 0x80
-/* 8027AAA0 00244060  38 84 AC B8 */	addi r4, r4, func_8027ACB8@l
+/* 8027AAA0 00244060  38 84 AC B8 */	addi r4, r4, __ct__8027ACB8@l
 /* 8027AAA4 00244064  38 A5 AD 30 */	addi r5, r5, __dt__cf_CChainActorEne@l
 /* 8027AAA8 00244068  38 E0 00 38 */	li r7, 0x38
 /* 8027AAAC 0024406C  48 03 F0 55 */	bl __construct_array
@@ -120,7 +120,7 @@
 /* 8027ABFC 002441BC  4E 80 00 20 */	blr
 .endfn __ct__cf_CChainActorList
 
-.fn func_8027AC00, global
+.fn __ct__8027AC00, global
 /* 8027AC00 002441C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027AC04 002441C4  7C 08 02 A6 */	mflr r0
 /* 8027AC08 002441C8  3C A0 80 54 */	lis r5, __vt__cf_CChainActor@ha
@@ -144,14 +144,14 @@
 /* 8027AC50 00244210  B0 1F 00 6C */	sth r0, 0x6c(r31)
 /* 8027AC54 00244214  90 1F 00 00 */	stw r0, 0(r31)
 /* 8027AC58 00244218  90 9F 00 70 */	stw r4, 0x70(r31)
-/* 8027AC5C 0024421C  48 02 5C 7D */	bl func_802A08D8
+/* 8027AC5C 0024421C  48 02 5C 7D */	bl __ct__cf_CChainEffect
 /* 8027AC60 00244220  7F E3 FB 78 */	mr r3, r31
 /* 8027AC64 00244224  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8027AC68 00244228  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8027AC6C 0024422C  7C 08 03 A6 */	mtlr r0
 /* 8027AC70 00244230  38 21 00 10 */	addi r1, r1, 0x10
 /* 8027AC74 00244234  4E 80 00 20 */	blr
-.endfn func_8027AC00
+.endfn __ct__8027AC00
 
 .fn __dt__cf_CChainActorPc, global
 /* 8027AC78 00244238  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -174,7 +174,7 @@
 .endfn __dt__cf_CChainActorPc
 
 
-.fn func_8027ACB8, global
+.fn __ct__8027ACB8, global
 /* 8027ACB8 00244278  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027ACBC 0024427C  7C 08 02 A6 */	mflr r0
 /* 8027ACC0 00244280  3C A0 80 54 */	lis r5, __vt__cf_CChainActor@ha
@@ -198,14 +198,14 @@
 /* 8027AD08 002442C8  B0 1F 00 6C */	sth r0, 0x6c(r31)
 /* 8027AD0C 002442CC  90 1F 00 00 */	stw r0, 0(r31)
 /* 8027AD10 002442D0  90 9F 00 70 */	stw r4, 0x70(r31)
-/* 8027AD14 002442D4  48 02 5B C5 */	bl func_802A08D8
+/* 8027AD14 002442D4  48 02 5B C5 */	bl __ct__cf_CChainEffect
 /* 8027AD18 002442D8  7F E3 FB 78 */	mr r3, r31
 /* 8027AD1C 002442DC  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8027AD20 002442E0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8027AD24 002442E4  7C 08 03 A6 */	mtlr r0
 /* 8027AD28 002442E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8027AD2C 002442EC  4E 80 00 20 */	blr
-.endfn func_8027ACB8
+.endfn __ct__8027ACB8
 
 .fn __dt__cf_CChainActorEne, global
 /* 8027AD30 002442F0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -3081,7 +3081,7 @@
 
 .obj "@eti_80030E90", local
 .hidden "@eti_80030E90"
-	.4byte func_8027AC00
+	.4byte __ct__8027AC00
 	.4byte 0x00000078
 	.4byte "@etb_80018860"
 .endobj "@eti_80030E90"
@@ -3095,7 +3095,7 @@
 
 .obj "@eti_80030EA8", local
 .hidden "@eti_80030EA8"
-	.4byte func_8027ACB8
+	.4byte __ct__8027ACB8
 	.4byte 0x00000078
 	.4byte "@etb_80018884"
 .endobj "@eti_80030EA8"

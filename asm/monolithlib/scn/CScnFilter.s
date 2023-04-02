@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8049C7F8, global
+.fn __ct__CScnFilter, global
 /* 8049C7F8 00465DB8  38 80 00 00 */	li r4, 0
 /* 8049C7FC 00465DBC  C0 02 CF D0 */	lfs f0, float_8066D350@sda21(r2)
 /* 8049C800 00465DC0  3C A0 80 57 */	lis r5, __vt__CScnFilter@ha
@@ -15,7 +15,7 @@
 /* 8049C81C 00465DDC  90 83 00 14 */	stw r4, 0x14(r3)
 /* 8049C820 00465DE0  90 03 00 08 */	stw r0, 8(r3)
 /* 8049C824 00465DE4  4E 80 00 20 */	blr 
-.endfn func_8049C7F8
+.endfn __ct__CScnFilter
 
 .fn __dt__CScnFilter, global
 /* 8049C828 00465DE8  94 21 FF F0 */	stwu r1, -0x10(r1)

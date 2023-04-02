@@ -60,11 +60,11 @@
 /* 802422F0 0020B8B0  38 A0 00 00 */	li r5, 0
 /* 802422F4 0020B8B4  4B F8 1B DD */	bl __ct__CTitleAHelp
 /* 802422F8 0020B8B8  38 7E 00 B8 */	addi r3, r30, 0xb8
-/* 802422FC 0020B8BC  48 00 0D B1 */	bl func_802430AC
+/* 802422FC 0020B8BC  48 00 0D B1 */	bl __ct__CMapSel
 /* 80242300 0020B8C0  38 7E 01 6C */	addi r3, r30, 0x16c
 /* 80242304 0020B8C4  48 00 1F DD */	bl __ct__CFade
 /* 80242308 0020B8C8  38 7E 01 94 */	addi r3, r30, 0x194
-/* 8024230C 0020B8CC  48 00 95 C9 */	bl func_8024B8D4
+/* 8024230C 0020B8CC  48 00 95 C9 */	bl __ct__CFloorMap
 /* 80242310 0020B8D0  9B FE 34 DC */	stb r31, 0x34dc(r30)
 /* 80242314 0020B8D4  C0 02 AC 60 */	lfs f0, float_8066AFE0@sda21(r2)
 /* 80242318 0020B8D8  D0 1E 34 E0 */	stfs f0, 0x34e0(r30)
@@ -229,7 +229,7 @@
 /* 80242540 0020BB00  2C 03 00 00 */	cmpwi r3, 0
 /* 80242544 0020BB04  41 82 04 D0 */	beq .L_80242A14
 /* 80242548 0020BB08  38 61 00 08 */	addi r3, r1, 8
-/* 8024254C 0020BB0C  48 00 93 89 */	bl func_8024B8D4
+/* 8024254C 0020BB0C  48 00 93 89 */	bl __ct__CFloorMap
 /* 80242550 0020BB10  80 01 00 0C */	lwz r0, 0xc(r1)
 /* 80242554 0020BB14  90 1F 01 98 */	stw r0, 0x198(r31)
 /* 80242558 0020BB18  80 01 00 10 */	lwz r0, 0x10(r1)
@@ -1049,7 +1049,7 @@
 	.4byte func_80241510
 	.4byte func_80241DB4
 	.4byte func_80241E3C
-	.4byte func_80101FB8
+	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
 	.4byte __RTTI__CMenuMapSelect
 	.4byte 0xFFFFFFA8

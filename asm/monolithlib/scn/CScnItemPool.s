@@ -14,9 +14,9 @@
 /* 8048BDB4 00455374  7C FD 3B 78 */	mr r29, r7
 /* 8048BDB8 00455378  7D 1E 43 78 */	mr r30, r8
 /* 8048BDBC 0045537C  7D 3F 4B 78 */	mr r31, r9
-/* 8048BDC0 00455380  4B CB 69 7D */	bl func_8014273C
+/* 8048BDC0 00455380  4B CB 69 7D */	bl __ct__IWorkEvent
 /* 8048BDC4 00455384  38 79 00 04 */	addi r3, r25, 4
-/* 8048BDC8 00455388  4B FB D1 79 */	bl func_80448F40
+/* 8048BDC8 00455388  4B FB D1 79 */	bl __ct__CDeviceVICb
 /* 8048BDCC 0045538C  3C 80 80 57 */	lis r4, __vt__CScnItemPool@ha
 /* 8048BDD0 00455390  93 59 00 08 */	stw r26, 8(r25)
 /* 8048BDD4 00455394  38 84 1C D0 */	addi r4, r4, __vt__CScnItemPool@l
@@ -24,17 +24,17 @@
 /* 8048BDDC 0045539C  38 04 00 88 */	addi r0, r4, 0x88
 /* 8048BDE0 004553A0  90 99 00 00 */	stw r4, 0(r25)
 /* 8048BDE4 004553A4  90 19 00 04 */	stw r0, 4(r25)
-/* 8048BDE8 004553A8  48 00 01 5D */	bl func_8048BF44
+/* 8048BDE8 004553A8  48 00 01 5D */	bl __ct__reslist_CScnItem
 /* 8048BDEC 004553AC  38 79 00 2C */	addi r3, r25, 0x2c
-/* 8048BDF0 004553B0  48 00 01 55 */	bl func_8048BF44
+/* 8048BDF0 004553B0  48 00 01 55 */	bl __ct__reslist_CScnItem
 /* 8048BDF4 004553B4  38 79 00 4C */	addi r3, r25, 0x4c
-/* 8048BDF8 004553B8  48 00 01 4D */	bl func_8048BF44
+/* 8048BDF8 004553B8  48 00 01 4D */	bl __ct__reslist_CScnItem
 /* 8048BDFC 004553BC  38 79 00 6C */	addi r3, r25, 0x6c
-/* 8048BE00 004553C0  48 00 01 45 */	bl func_8048BF44
+/* 8048BE00 004553C0  48 00 01 45 */	bl __ct__reslist_CScnItem
 /* 8048BE04 004553C4  38 79 00 8C */	addi r3, r25, 0x8c
-/* 8048BE08 004553C8  48 00 01 3D */	bl func_8048BF44
+/* 8048BE08 004553C8  48 00 01 3D */	bl __ct__reslist_CScnItem
 /* 8048BE0C 004553CC  38 79 00 AC */	addi r3, r25, 0xac
-/* 8048BE10 004553D0  48 00 01 35 */	bl func_8048BF44
+/* 8048BE10 004553D0  48 00 01 35 */	bl __ct__reslist_CScnItem
 /* 8048BE14 004553D4  38 00 00 00 */	li r0, 0
 /* 8048BE18 004553D8  B0 19 00 DC */	sth r0, 0xdc(r25)
 /* 8048BE1C 004553DC  7F 43 D3 78 */	mr r3, r26
@@ -113,7 +113,7 @@
 /* 8048BF40 00455500  4E 80 00 20 */	blr 
 .endfn __ct__CScnItemPool
 
-.fn func_8048BF44, global
+.fn __ct__reslist_CScnItem, global
 /* 8048BF44 00455504  3C 80 80 57 */	lis r4, __vt___reslist_base_CScnItem@ha
 /* 8048BF48 00455508  38 00 00 00 */	li r0, 0
 /* 8048BF4C 0045550C  38 84 1D A0 */	addi r4, r4, __vt___reslist_base_CScnItem@l
@@ -129,7 +129,7 @@
 /* 8048BF74 00455534  90 A5 00 04 */	stw r5, 4(r5)
 /* 8048BF78 00455538  90 83 00 00 */	stw r4, 0(r3)
 /* 8048BF7C 0045553C  4E 80 00 20 */	blr 
-.endfn func_8048BF44
+.endfn __ct__reslist_CScnItem
 
 .fn __dt___reslist_base_CScnItem, global
 /* 8048BF80 00455540  94 21 FF F0 */	stwu r1, -0x10(r1)

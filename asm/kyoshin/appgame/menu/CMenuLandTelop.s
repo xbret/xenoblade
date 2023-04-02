@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_801445A8, global
+.fn __ct__CMenuLandTelop, global
 /* 801445A8 0010DB68  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801445AC 0010DB6C  7C 08 02 A6 */	mflr r0
 /* 801445B0 0010DB70  90 01 00 24 */	stw r0, 0x24(r1)
@@ -50,7 +50,7 @@
 /* 80144658 0010DC18  90 9C 00 6C */	stw r4, 0x6c(r28)
 /* 8014465C 0010DC1C  90 1C 00 70 */	stw r0, 0x70(r28)
 /* 80144660 0010DC20  93 BC 00 74 */	stw r29, 0x74(r28)
-/* 80144664 0010DC24  48 31 AF 01 */	bl __ct__8045F564
+/* 80144664 0010DC24  48 31 AF 01 */	bl __ct__UnkClass_8045F564
 /* 80144668 0010DC28  38 BC 00 9E */	addi r5, r28, 0x9e
 /* 8014466C 0010DC2C  38 7C 00 DA */	addi r3, r28, 0xda
 /* 80144670 0010DC30  C0 02 99 08 */	lfs f0, float_80669C88@sda21(r2)
@@ -131,7 +131,7 @@
 /* 80144784 0010DD44  7C 08 03 A6 */	mtlr r0
 /* 80144788 0010DD48  38 21 00 20 */	addi r1, r1, 0x20
 /* 8014478C 0010DD4C  4E 80 00 20 */	blr
-.endfn func_801445A8
+.endfn __ct__CMenuLandTelop
 
 .fn __dt__CMenuLandTelop, global
 /* 80144790 0010DD50  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -145,7 +145,7 @@
 /* 801447B0 0010DD70  41 82 00 38 */	beq .L_801447E8
 /* 801447B4 0010DD74  38 80 FF FF */	li r4, -1
 /* 801447B8 0010DD78  38 63 00 78 */	addi r3, r3, 0x78
-/* 801447BC 0010DD7C  48 31 AD C5 */	bl __dt__8045F580
+/* 801447BC 0010DD7C  48 31 AD C5 */	bl __dt__UnkClass_8045F564
 /* 801447C0 0010DD80  2C 1E 00 00 */	cmpwi r30, 0
 /* 801447C4 0010DD84  41 82 00 14 */	beq .L_801447D8
 /* 801447C8 0010DD88  41 82 00 10 */	beq .L_801447D8
@@ -709,7 +709,7 @@
 /* 80144F84 0010E544  7F A4 EB 78 */	mr r4, r29
 /* 80144F88 0010E548  7F C5 F3 78 */	mr r5, r30
 /* 80144F8C 0010E54C  7F E6 FB 78 */	mr r6, r31
-/* 80144F90 0010E550  4B FF F6 19 */	bl func_801445A8
+/* 80144F90 0010E550  4B FF F6 19 */	bl __ct__CMenuLandTelop
 .L_80144F94:
 /* 80144F94 0010E554  90 6D A9 10 */	stw r3, lbl_80666A90@sda21(r13)
 /* 80144F98 0010E558  7F 84 E3 78 */	mr r4, r28
@@ -1739,7 +1739,7 @@
 	.4byte 0x00000000
 	.4byte 0x0780001E
 	.4byte 0x00000078
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 	.4byte 0x0680001E
 	.4byte 0x00000070
 	.4byte __dt__IScnRender
@@ -1816,7 +1816,7 @@
 
 .obj "@eti_80028238", local
 .hidden "@eti_80028238"
-	.4byte func_801445A8
+	.4byte __ct__CMenuLandTelop
 	.4byte 0x000001E8
 	.4byte "@etb_8000CF14"
 .endobj "@eti_80028238"

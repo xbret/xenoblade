@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8027CDD4, global
+.fn __ct__cf_CChainTime, global
 /* 8027CDD4 00246394  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027CDD8 00246398  7C 08 02 A6 */	mflr r0
 /* 8027CDDC 0024639C  3C 80 80 53 */	lis r4, __vt__cf_CChainTime@ha
@@ -12,7 +12,7 @@
 /* 8027CDEC 002463AC  7C 7F 1B 78 */	mr r31, r3
 /* 8027CDF0 002463B0  90 83 00 14 */	stw r4, 0x14(r3)
 /* 8027CDF4 002463B4  38 63 00 08 */	addi r3, r3, 8
-/* 8027CDF8 002463B8  48 02 3A E1 */	bl func_802A08D8
+/* 8027CDF8 002463B8  48 02 3A E1 */	bl __ct__cf_CChainEffect
 /* 8027CDFC 002463BC  C0 02 AF B0 */	lfs f0, float_8066B330@sda21(r2)
 /* 8027CE00 002463C0  38 00 00 01 */	li r0, 1
 /* 8027CE04 002463C4  38 80 00 00 */	li r4, 0
@@ -26,7 +26,7 @@
 /* 8027CE24 002463E4  7C 08 03 A6 */	mtlr r0
 /* 8027CE28 002463E8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8027CE2C 002463EC  4E 80 00 20 */	blr 
-.endfn func_8027CDD4
+.endfn __ct__cf_CChainTime
 
 .fn func_8027CE30, global
 /* 8027CE30 002463F0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -270,7 +270,7 @@
 
 .obj "@eti_80031040", local
 .hidden "@eti_80031040"
-	.4byte func_8027CDD4
+	.4byte __ct__cf_CChainTime
 	.4byte 0x0000005C
 	.4byte "@etb_80018A14"
 .endobj "@eti_80031040"

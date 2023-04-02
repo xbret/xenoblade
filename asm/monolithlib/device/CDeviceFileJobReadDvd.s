@@ -8,7 +8,7 @@
 /* 80451F28 0041B4E8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80451F2C 0041B4EC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80451F30 0041B4F0  7C 7F 1B 78 */	mr r31, r3
-/* 80451F34 0041B4F4  4B FF FF 1D */	bl func_80451E50
+/* 80451F34 0041B4F4  4B FF FF 1D */	bl __ct__CDeviceFileJob
 /* 80451F38 0041B4F8  3C 60 80 57 */	lis r3, __vt__CDeviceFileJobReadDvd@ha
 /* 80451F3C 0041B4FC  38 00 00 44 */	li r0, 0x44
 /* 80451F40 0041B500  38 63 FD E0 */	addi r3, r3, __vt__CDeviceFileJobReadDvd@l

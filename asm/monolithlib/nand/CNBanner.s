@@ -665,6 +665,7 @@
 .hidden "@etb_80021010"
 	.4byte 0x30080000
 	.4byte 0x00000000
+.endobj "@etb_80021010"
 
 .section extabindex, "a" # 0x80021020 - 0x80039220
 

@@ -2,13 +2,13 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8019F690, global
+.fn __ct__cf_CtrlMoveNpc, global
 /* 8019F690 00168C50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8019F694 00168C54  7C 08 02 A6 */	mflr r0
 /* 8019F698 00168C58  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8019F69C 00168C5C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8019F6A0 00168C60  7C 7F 1B 78 */	mr r31, r3
-/* 8019F6A4 00168C64  4B EE 92 61 */	bl func_80088904
+/* 8019F6A4 00168C64  4B EE 92 61 */	bl __ct__80088904
 /* 8019F6A8 00168C68  3C 60 80 53 */	lis r3, __vt__cf_CtrlMoveNpc@ha
 /* 8019F6AC 00168C6C  3C A0 80 51 */	lis r5, lbl_8050CE10@ha
 /* 8019F6B0 00168C70  38 63 65 6C */	addi r3, r3, __vt__cf_CtrlMoveNpc@l
@@ -25,7 +25,7 @@
 /* 8019F6DC 00168C9C  7C 08 03 A6 */	mtlr r0
 /* 8019F6E0 00168CA0  38 21 00 10 */	addi r1, r1, 0x10
 /* 8019F6E4 00168CA4  4E 80 00 20 */	blr
-.endfn func_8019F690
+.endfn __ct__cf_CtrlMoveNpc
 
 .fn func_8019F6E8, global
 /* 8019F6E8 00168CA8  94 21 FF B0 */	stwu r1, -0x50(r1)
@@ -707,7 +707,7 @@
 
 .obj "@eti_8002A428", local
 .hidden "@eti_8002A428"
-	.4byte func_8019F690
+	.4byte __ct__cf_CtrlMoveNpc
 	.4byte 0x00000058
 	.4byte "@etb_8000F55C"
 .endobj "@eti_8002A428"

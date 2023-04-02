@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_80448FDC, global
+.fn __ct__CFontLayer, global
 /* 80448FDC 0041259C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80448FE0 004125A0  7C 08 02 A6 */	mflr r0
 /* 80448FE4 004125A4  3C 80 80 57 */	lis r4, __vt__CFontLayer@ha
@@ -18,7 +18,7 @@
 /* 8044900C 004125CC  7C 08 03 A6 */	mtlr r0
 /* 80449010 004125D0  38 21 00 10 */	addi r1, r1, 0x10
 /* 80449014 004125D4  4E 80 00 20 */	blr 
-.endfn func_80448FDC
+.endfn __ct__CFontLayer
 
 .fn __dt__CFontLayer, global
 /* 80449018 004125D8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -172,7 +172,7 @@
 
 .obj "@eti_80034778", local
 .hidden "@eti_80034778"
-	.4byte func_80448FDC
+	.4byte __ct__CFontLayer
 	.4byte 0x0000003C
 	.4byte "@etb_8001CB78"
 .endobj "@eti_80034778"

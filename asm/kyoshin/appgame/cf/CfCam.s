@@ -421,7 +421,7 @@
 .endfn func_8006BC1C
 
 
-.fn func_8006BC2C, global
+.fn __ct__cf_CfCamFollow, global
 /* 8006BC2C 000351EC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8006BC30 000351F0  7C 08 02 A6 */	mflr r0
 /* 8006BC34 000351F4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -432,7 +432,7 @@
 /* 8006BC48 00035208  7F C4 F3 78 */	mr r4, r30
 /* 8006BC4C 0003520C  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8006BC50 00035210  7C 7D 1B 78 */	mr r29, r3
-/* 8006BC54 00035214  48 00 02 11 */	bl func_8006BE64
+/* 8006BC54 00035214  48 00 02 11 */	bl __ct__cf_CfCam
 /* 8006BC58 00035218  3C 80 80 53 */	lis r4, __vt__cf_CfCamFollow@ha
 /* 8006BC5C 0003521C  38 7D 00 1C */	addi r3, r29, 0x1c
 /* 8006BC60 00035220  38 84 AA 30 */	addi r4, r4, __vt__cf_CfCamFollow@l
@@ -564,9 +564,9 @@
 /* 8006BE58 00035418  7C 08 03 A6 */	mtlr r0
 /* 8006BE5C 0003541C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8006BE60 00035420  4E 80 00 20 */	blr 
-.endfn func_8006BC2C
+.endfn __ct__cf_CfCamFollow
 
-.fn func_8006BE64, global
+.fn __ct__cf_CfCam, global
 /* 8006BE64 00035424  3C A0 80 53 */	lis r5, __vt__cf_CfCam@ha
 /* 8006BE68 00035428  38 00 00 00 */	li r0, 0
 /* 8006BE6C 0003542C  38 A5 AA B8 */	addi r5, r5, __vt__cf_CfCam@l
@@ -574,7 +574,7 @@
 /* 8006BE74 00035434  90 03 00 04 */	stw r0, 4(r3)
 /* 8006BE78 00035438  90 83 00 0C */	stw r4, 0xc(r3)
 /* 8006BE7C 0003543C  4E 80 00 20 */	blr
-.endfn func_8006BE64
+.endfn __ct__cf_CfCam
 
 .fn __dt__cf_CfCam, global
 /* 8006BE80 00035440  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -10681,7 +10681,7 @@
 /* 80074D1C 0003E2DC  41 82 00 10 */	beq .L_80074D2C
 /* 80074D20 0003E2E0  7F C4 F3 78 */	mr r4, r30
 /* 80074D24 0003E2E4  7F E5 FB 78 */	mr r5, r31
-/* 80074D28 0003E2E8  4B FF 6F 05 */	bl func_8006BC2C
+/* 80074D28 0003E2E8  4B FF 6F 05 */	bl __ct__cf_CfCamFollow
 .L_80074D2C:
 /* 80074D2C 0003E2EC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80074D30 0003E2F0  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -10900,14 +10900,7 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-#.balign 8
-
-.obj cf_CfCamFollow_hierarchy, global
-	.4byte __RTTI__cf_CfCam
-	.4byte 0
-	.4byte 0
-.endobj cf_CfCamFollow_hierarchy
-
+.balign 8
 
 .obj lbl_8052A930, global
 	.float 1.0
@@ -12350,7 +12343,7 @@
 
 .obj "@eti_80023414", local
 .hidden "@eti_80023414"
-	.4byte func_8006BC2C
+	.4byte __ct__cf_CfCamFollow
 	.4byte 0x00000238
 	.4byte "@etb_800080D8"
 .endobj "@eti_80023414"

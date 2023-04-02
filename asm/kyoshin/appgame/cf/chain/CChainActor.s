@@ -416,7 +416,7 @@
 /* 80277170 00240730  4E 80 00 20 */	blr 
 .endfn func_80277154
 
-.fn func_80277174, global
+.fn __ct__80277174, global
 /* 80277174 00240734  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80277178 00240738  7C 08 02 A6 */	mflr r0
 /* 8027717C 0024073C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -439,14 +439,14 @@
 /* 802771C0 00240780  B3 FD 1E B4 */	sth r31, 0x1eb4(r29)
 /* 802771C4 00240784  93 DD 1E C0 */	stw r30, 0x1ec0(r29)
 /* 802771C8 00240788  B3 FD 1E BC */	sth r31, 0x1ebc(r29)
-/* 802771CC 0024078C  48 00 5C 09 */	bl func_8027CDD4
+/* 802771CC 0024078C  48 00 5C 09 */	bl __ct__cf_CChainTime
 /* 802771D0 00240790  3C 60 80 54 */	lis r3, __vt__cf_CChainChance@ha
 /* 802771D4 00240794  93 DD 1E E0 */	stw r30, 0x1ee0(r29)
 /* 802771D8 00240798  38 63 BA 24 */	addi r3, r3, __vt__cf_CChainChance@l
 /* 802771DC 0024079C  90 7D 1E EC */	stw r3, 0x1eec(r29)
 /* 802771E0 002407A0  38 7D 1E F4 */	addi r3, r29, 0x1ef4
 /* 802771E4 002407A4  B3 FD 1E DC */	sth r31, 0x1edc(r29)
-/* 802771E8 002407A8  48 01 CB A9 */	bl func_80293D90
+/* 802771E8 002407A8  48 01 CB A9 */	bl __ct__cf_CChainCombo
 /* 802771EC 002407AC  38 7D 1F 0C */	addi r3, r29, 0x1f0c
 /* 802771F0 002407B0  48 03 41 E1 */	bl func_802AB3D0
 /* 802771F4 002407B4  2C 1F 00 00 */	cmpwi r31, 0
@@ -488,7 +488,7 @@
 /* 80277280 00240840  7C 08 03 A6 */	mtlr r0
 /* 80277284 00240844  38 21 00 20 */	addi r1, r1, 0x20
 /* 80277288 00240848  4E 80 00 20 */	blr 
-.endfn func_80277174
+.endfn __ct__80277174
 
 .fn func_8027728C, global
 /* 8027728C 0024084C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -5111,7 +5111,7 @@
 
 .obj "@eti_80030D4C", local
 .hidden "@eti_80030D4C"
-	.4byte func_80277174
+	.4byte __ct__80277174
 	.4byte 0x00000118
 	.4byte "@etb_800186D8"
 .endobj "@eti_80030D4C"

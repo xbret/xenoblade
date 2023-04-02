@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_804E6C14, global
+.fn __ct__CMdlAnmUV, global
 /* 804E6C14 004B01D4  3C 80 80 57 */	lis r4, __vt__CMdlAnmUV@ha
 /* 804E6C18 004B01D8  38 00 00 00 */	li r0, 0
 /* 804E6C1C 004B01DC  38 84 3A 08 */	addi r4, r4, __vt__CMdlAnmUV@l
@@ -12,7 +12,7 @@
 /* 804E6C2C 004B01EC  98 03 00 3C */	stb r0, 0x3c(r3)
 /* 804E6C30 004B01F0  98 03 00 3D */	stb r0, 0x3d(r3)
 /* 804E6C34 004B01F4  4E 80 00 20 */	blr 
-.endfn func_804E6C14
+.endfn __ct__CMdlAnmUV
 
 .fn __dt__CMdlAnmUV, global
 /* 804E6C38 004B01F8  94 21 FF F0 */	stwu r1, -0x10(r1)

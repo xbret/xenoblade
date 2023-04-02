@@ -71,7 +71,7 @@
 /* 800AB4A8 00074A68  4E 80 04 20 */	bctr 
 .endfn func_800AB498
 
-.fn func_800AB4AC, global
+.fn CfObjectColl_initCollImplInstances, global
 /* 800AB4AC 00074A6C  88 0D A6 20 */	lbz r0, lbl_806667A0@sda21(r13)
 /* 800AB4B0 00074A70  7C 00 07 75 */	extsb. r0, r0
 /* 800AB4B4 00074A74  40 82 00 18 */	bne .L_800AB4CC
@@ -130,7 +130,7 @@
 .L_800AB574:
 /* 800AB574 00074B34  38 6D A6 2C */	addi r3, r13, lbl_806667AC@sda21
 /* 800AB578 00074B38  4E 80 00 20 */	blr 
-.endfn func_800AB4AC
+.endfn CfObjectColl_initCollImplInstances
 
 .fn func_800AB57C, global
 /* 800AB57C 00074B3C  48 01 60 BC */	b func_800C1638
@@ -178,7 +178,7 @@
 /* 800AB610 00074BD0  3B A0 00 00 */	li r29, 0
 .L_800AB614:
 /* 800AB614 00074BD4  7F C3 F3 78 */	mr r3, r30
-/* 800AB618 00074BD8  4B FF FE 95 */	bl func_800AB4AC
+/* 800AB618 00074BD8  4B FF FE 95 */	bl CfObjectColl_initCollImplInstances
 /* 800AB61C 00074BDC  81 83 00 00 */	lwz r12, 0(r3)
 /* 800AB620 00074BE0  FC 20 F8 90 */	fmr f1, f31
 /* 800AB624 00074BE4  7F C4 F3 78 */	mr r4, r30

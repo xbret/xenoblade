@@ -484,16 +484,16 @@
 
 .obj lbl_80527728, global
 	.4byte 0
-	.4byte 0x00000001
-	.4byte 0x00000002
-	.4byte 0x00000003
+	.4byte 1
+	.4byte 2
+	.4byte 3
 	
 .endobj lbl_80527728
 
 .obj lbl_80527738, global
-	.4byte 0x00000003
-	.4byte 0x00000002
-	.4byte 0x00000001
+	.4byte 3
+	.4byte 2
+	.4byte 1
 	.4byte 0
 .endobj lbl_80527738
 

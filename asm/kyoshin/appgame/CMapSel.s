@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_802430AC, global
+.fn __ct__CMapSel, global
 /* 802430AC 0020C66C  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 802430B0 0020C670  7C 08 02 A6 */	mflr r0
 /* 802430B4 0020C674  90 01 00 74 */	stw r0, 0x74(r1)
@@ -13,7 +13,7 @@
 /* 802430C8 0020C688  38 84 A5 C8 */	addi r4, r4, __vt__CMapSel@l
 /* 802430CC 0020C68C  90 83 00 00 */	stw r4, 0(r3)
 /* 802430D0 0020C690  38 63 00 04 */	addi r3, r3, 4
-/* 802430D4 0020C694  48 21 C4 91 */	bl __ct__8045F564
+/* 802430D4 0020C694  48 21 C4 91 */	bl __ct__UnkClass_8045F564
 /* 802430D8 0020C698  3A E0 00 00 */	li r23, 0
 /* 802430DC 0020C69C  38 00 00 01 */	li r0, 1
 /* 802430E0 0020C6A0  92 F9 00 14 */	stw r23, 0x14(r25)
@@ -222,7 +222,7 @@
 /* 802433C4 0020C984  7C 08 03 A6 */	mtlr r0
 /* 802433C8 0020C988  38 21 00 70 */	addi r1, r1, 0x70
 /* 802433CC 0020C98C  4E 80 00 20 */	blr 
-.endfn func_802430AC
+.endfn __ct__CMapSel
 
 .fn __dt__CMapSel, global
 /* 802433D0 0020C990  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -235,13 +235,13 @@
 /* 802433EC 0020C9AC  41 82 00 38 */	beq .L_80243424
 /* 802433F0 0020C9B0  38 80 FF FF */	li r4, -1
 /* 802433F4 0020C9B4  38 63 00 74 */	addi r3, r3, 0x74
-/* 802433F8 0020C9B8  4B F8 F6 41 */	bl __dt__801D2A38
+/* 802433F8 0020C9B8  4B F8 F6 41 */	bl __dt__CCur18
 /* 802433FC 0020C9BC  38 7E 00 34 */	addi r3, r30, 0x34
 /* 80243400 0020C9C0  38 80 FF FF */	li r4, -1
 /* 80243404 0020C9C4  4B FB 00 9D */	bl __dt__CScrollBar
 /* 80243408 0020C9C8  38 7E 00 04 */	addi r3, r30, 4
 /* 8024340C 0020C9CC  38 80 FF FF */	li r4, -1
-/* 80243410 0020C9D0  48 21 C1 71 */	bl __dt__8045F580
+/* 80243410 0020C9D0  48 21 C1 71 */	bl __dt__UnkClass_8045F564
 /* 80243414 0020C9D4  2C 1F 00 00 */	cmpwi r31, 0
 /* 80243418 0020C9D8  40 81 00 0C */	ble .L_80243424
 /* 8024341C 0020C9DC  7F C3 F3 78 */	mr r3, r30
@@ -1267,7 +1267,7 @@
 /* 80244254 0020D814  98 1C 00 88 */	stb r0, 0x88(r28)
 /* 80244258 0020D818  88 01 00 25 */	lbz r0, 0x25(r1)
 /* 8024425C 0020D81C  98 1C 00 89 */	stb r0, 0x89(r28)
-/* 80244260 0020D820  4B F8 E7 D9 */	bl __dt__801D2A38
+/* 80244260 0020D820  4B F8 E7 D9 */	bl __dt__CCur18
 /* 80244264 0020D824  81 9C 00 74 */	lwz r12, 0x74(r28)
 /* 80244268 0020D828  38 7C 00 74 */	addi r3, r28, 0x74
 /* 8024426C 0020D82C  81 8C 00 08 */	lwz r12, 8(r12)
@@ -1468,13 +1468,13 @@
 	.4byte 0x00000000
 	.4byte 0x07800019
 	.4byte 0x00000074
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x07800019
 	.4byte 0x00000034
 	.4byte __dt__CScrollBar
 	.4byte 0x07800019
 	.4byte 0x00000004
-	.4byte __dt__8045F580
+	.4byte __dt__UnkClass_8045F564
 	.4byte 0x86800019
 	.4byte 0x00000000
 	.4byte __dt__IWorkEvent
@@ -1490,10 +1490,10 @@
 	.4byte 0x00000000
 	.4byte 0x8780001E
 	.4byte 0x00000074
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x0780001E
 	.4byte 0x00000074
-	.4byte __dt__801D2A38
+	.4byte __dt__CCur18
 	.4byte 0x8780001E
 	.4byte 0x00000034
 	.4byte __dt__CScrollBar
@@ -1641,7 +1641,7 @@
 
 .obj "@eti_8002F180", local
 .hidden "@eti_8002F180"
-	.4byte func_802430AC
+	.4byte __ct__CMapSel
 	.4byte 0x00000324
 	.4byte "@etb_80016320"
 .endobj "@eti_8002F180"

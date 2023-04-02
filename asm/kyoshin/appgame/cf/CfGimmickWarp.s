@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn func_8020D3A0, global
+.fn __ct__cf_CfGimmickWarp, global
 /* 8020D3A0 001D6960  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8020D3A4 001D6964  7C 08 02 A6 */	mflr r0
 /* 8020D3A8 001D6968  90 01 00 64 */	stw r0, 0x64(r1)
@@ -10,7 +10,7 @@
 /* 8020D3B0 001D6970  48 0A CD A5 */	bl _savegpr_27
 /* 8020D3B4 001D6974  7C 7D 1B 78 */	mr r29, r3
 /* 8020D3B8 001D6978  7C 9E 23 78 */	mr r30, r4
-/* 8020D3BC 001D697C  4B FF B5 25 */	bl func_802088E0
+/* 8020D3BC 001D697C  4B FF B5 25 */	bl __ct__cf_CfGimmick
 /* 8020D3C0 001D6980  3C 60 80 54 */	lis r3, __vt__cf_CfGimmickWarp@ha
 /* 8020D3C4 001D6984  38 00 00 04 */	li r0, 4
 /* 8020D3C8 001D6988  38 63 91 68 */	addi r3, r3, __vt__cf_CfGimmickWarp@l
@@ -189,7 +189,7 @@
 /* 8020D674 001D6C34  7C 08 03 A6 */	mtlr r0
 /* 8020D678 001D6C38  38 21 00 60 */	addi r1, r1, 0x60
 /* 8020D67C 001D6C3C  4E 80 00 20 */	blr 
-.endfn func_8020D3A0
+.endfn __ct__cf_CfGimmickWarp
 
 .fn __dt__cf_CfGimmickWarp, global
 /* 8020D680 001D6C40  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2188,7 +2188,7 @@
 
 .obj "@eti_8002D128", local
 .hidden "@eti_8002D128"
-	.4byte func_8020D3A0
+	.4byte __ct__cf_CfGimmickWarp
 	.4byte 0x000002E0
 	.4byte "@etb_8001318C"
 .endobj "@eti_8002D128"
