@@ -4,20 +4,20 @@ OS_FILES:=\
 	$(BUILD_DIR)/src/RevoSDK/os/OSAlloc.o\
 	$(BUILD_DIR)/src/RevoSDK/os/OSArena.o\
 	$(BUILD_DIR)/src/RevoSDK/os/OSAudioSystem.o\
-	$(BUILD_DIR)/asm/RevoSDK/os/OSCache.o\
+	$(BUILD_DIR)/src/RevoSDK/os/OSCache.o\
 	$(BUILD_DIR)/src/RevoSDK/os/OSContext.o\
 	$(BUILD_DIR)/src/RevoSDK/os/OSError.o\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSExec.o\
-	$(BUILD_DIR)/asm/RevoSDK/os/OSFatal.o\
-	$(BUILD_DIR)/asm/RevoSDK/os/OSFont.o\
-	$(BUILD_DIR)/asm/RevoSDK/os/OSInterrupt.o\
-	$(BUILD_DIR)/asm/RevoSDK/os/OSLink.o\
-	$(BUILD_DIR)/asm/RevoSDK/os/OSMessage.o\
-	$(BUILD_DIR)/asm/RevoSDK/os/OSMemory.o\
+	$(BUILD_DIR)/src/RevoSDK/os/OSFatal.o\
+	$(BUILD_DIR)/src/RevoSDK/os/OSFont.o\
+	$(BUILD_DIR)/src/RevoSDK/os/OSInterrupt.o\
+	$(BUILD_DIR)/src/RevoSDK/os/OSLink.o\
+	$(BUILD_DIR)/src/RevoSDK/os/OSMessage.o\
+	$(BUILD_DIR)/src/RevoSDK/os/OSMemory.o\
 	$(BUILD_DIR)/src/RevoSDK/os/OSMutex.o\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSReboot.o\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSReset.o\
-	$(BUILD_DIR)/asm/RevoSDK/os/OSRtc.o\
+	$(BUILD_DIR)/src/RevoSDK/os/OSRtc.o\
 	$(BUILD_DIR)/src/RevoSDK/os/OSSync.o\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSThread.o\
 	$(BUILD_DIR)/src/RevoSDK/os/OSTime.o\
@@ -39,9 +39,6 @@ DEPENDS += $(OS_FILES:.o=.d)
 #OSUtf only matches on 3.0?
 $(BUILD_DIR)/src/RevoSDK/os/OSUtf.o: MWCC_VERSION := 3.0
 $(BUILD_DIR)/src/RevoSDK/os/OSUtf.o: CONSOLE := GC
-
-#$(BUILD_DIR)/src/RevoSDK/os/OS.o: MWCC_VERSION := 3.0
-#$(BUILD_DIR)/src/RevoSDK/os/OS.o: CONSOLE := GC
 
 $(BUILD_DIR)/src/RevoSDK/os/os.a: $(OS_FILES)
 	@echo Linking... $@

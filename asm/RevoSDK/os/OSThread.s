@@ -1659,6 +1659,8 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
+.balign 8
+
 .obj DefaultThread, local
 	.skip 0x318
 .endobj DefaultThread
