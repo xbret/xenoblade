@@ -19,7 +19,7 @@ OS_FILES:=\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSReset.o\
 	$(BUILD_DIR)/src/RevoSDK/os/OSRtc.o\
 	$(BUILD_DIR)/src/RevoSDK/os/OSSync.o\
-	$(BUILD_DIR)/asm/RevoSDK/os/OSThread.o\
+	$(BUILD_DIR)/src/RevoSDK/os/OSThread.o\
 	$(BUILD_DIR)/src/RevoSDK/os/OSTime.o\
 	$(BUILD_DIR)/src/RevoSDK/os/OSUtf.o\
 	$(BUILD_DIR)/src/RevoSDK/os/OSIpc.o\

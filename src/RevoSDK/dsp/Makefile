@@ -1,7 +1,7 @@
 DSP_FILES:=\
-	$(BUILD_DIR)/asm/RevoSDK/dsp/dsp.o\
-	$(BUILD_DIR)/asm/RevoSDK/dsp/dsp_debug.o\
-	$(BUILD_DIR)/asm/RevoSDK/dsp/dsp_task.o\
+	$(BUILD_DIR)/src/RevoSDK/dsp/dsp.o\
+	$(BUILD_DIR)/src/RevoSDK/dsp/dsp_debug.o\
+	$(BUILD_DIR)/src/RevoSDK/dsp/dsp_task.o\
 
 DEPENDS += $(DSP_FILES:.o=.d)
 

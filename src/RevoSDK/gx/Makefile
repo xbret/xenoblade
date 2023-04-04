@@ -5,7 +5,7 @@ GX_FILES:=\
 	$(BUILD_DIR)/asm/RevoSDK/gx/GXMisc.o\
 	$(BUILD_DIR)/asm/RevoSDK/gx/GXGeometry.o\
 	$(BUILD_DIR)/asm/RevoSDK/gx/GXFrameBuf.o\
-	$(BUILD_DIR)/asm/RevoSDK/gx/GXLight.o\
+	$(BUILD_DIR)/src/RevoSDK/gx/GXLight.o\
 	$(BUILD_DIR)/asm/RevoSDK/gx/GXTexture.o\
 	$(BUILD_DIR)/asm/RevoSDK/gx/GXBump.o\
 	$(BUILD_DIR)/asm/RevoSDK/gx/GXTev.o\

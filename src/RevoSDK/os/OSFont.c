@@ -33,16 +33,14 @@ static BOOL IsSjisTrailByte(u8 ch) {
     return (0x40 <= ch && ch <= 0xFC) && (ch != 0x7F);
 }
 
-//nonmatching
-//https://decomp.me/scratch/4QhdT
 static u32 GetFontCode(u16 encode, u16 code) {
     u32 tmp;
     s32 trail;
 
     if (encode == OS_FONT_ENCODE_SJIS) {
-        if (code >= 0x20 && code <= 0xDF) {
+        if (0x20 <= code && code <= 0xDF) {
             return HankakuToCode[code - 0x20];
-        } else if (code > 0x889E && code <= 0x9872) {
+        } else if (0x889E < code && code <= 0x9872) {
             tmp = ((code >> 8) - 0x88) * 0xBC;
             trail = code & 0xFF;
 
@@ -56,7 +54,7 @@ static u32 GetFontCode(u16 encode, u16 code) {
             }
 
             return tmp + trail + 0x2BE;
-        } else if (code >= 0x8140 && code < 0x879E) {
+        } else if (0x8140 <= code && code < 0x879E) {
             tmp = ((code >> 8) - 0x81) * 0xBC;
             trail = code & 0xFF;
 
@@ -173,15 +171,13 @@ u16 OSGetFontEncode(void) {
 }
 
 
-//nonmatching
-//https://decomp.me/scratch/wNfep
 u16 OSSetFontEncode(u16 encode) {
     u16 old = OSGetFontEncode();
 
     if (encode <= OS_FONT_ENCODE_UTF32) {
         FontEncode = encode;
 
-        if (encode >= OS_FONT_ENCODE_UTF8 && encode <= OS_FONT_ENCODE_UTF32) {
+        if (OS_FONT_ENCODE_UTF8 <= encode && encode <= OS_FONT_ENCODE_UTF32) {
             ParseString = ParseStringW;
         }
     }

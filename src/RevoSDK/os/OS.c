@@ -10,6 +10,8 @@
 #include "RevoSDK/SI.h"
 #include "stl/string.h" //<string.h>
 
+#define INVALID_NAME_CHAR(c) ('0' > c || ('9' < c && c < 'A') || c > 'Z')
+
 OSExecParams __OSRebootParams;
 static DVDDriveInfo DriveInfo ALIGN(32);
 static DVDDriveBlock DriveBlock;
@@ -351,7 +353,7 @@ static void ReportOSInfo(void) {
     category = type & OS_CONSOLE_MASK;
     switch (category) {
     case OS_CONSOLE_MASK_RVL:
-        switch (type) {
+        switch ((u32)type) {
         case OS_CONSOLE_RVL_PP_1:
             OSReport("Pre-production board 1\n");
             break;
@@ -421,7 +423,7 @@ static void CheckTargets(void) {
     case 0x81:
         OSReport("OS ERROR: boot program is not for RVL target. Please use "
                  "correct boot program.\n");
-#line 1112
+#line 1153
         OSError("Failed to run app");
         break;
     case 0x80:
@@ -433,7 +435,7 @@ static void CheckTargets(void) {
     case 0x81:
         OSReport("OS ERROR: apploader[D].img is not for RVL target. Please use "
                  "correct apploader[D].img.\n");
-#line 1130
+#line 1171
         OSError("Failed to run app");
         break;
     case 0x80:
@@ -450,9 +452,9 @@ static void CheckFirmare(void){
     __OSGetIOSRev(&rev);
 
     u32 minVersion = *(u32*)OSPhysicalToCached(OS_PHYS_MINIMUM_IOS_VERSION);
-    BOOL something = rev.idLo != minVersion;
-
-    if (something || (!something && rev.idLo < minVersion)) {
+    u32 myVersion = rev.idLo << 16 | rev.verMajor << 8 | rev.verMinor;
+    
+    if (rev.idLo != (minVersion >> 16) || (rev.idLo == (minVersion >> 16) && myVersion < minVersion)) {
         OSReport("OS ERROR: This firmware is an improper version for this SDK. Please use a correct Firmware.\n");
         OSFatal(textColor, bgColor, "\n\nERROR #002\nAn error has occurred.\nPress the Eject Button, remove the\nGame Disc, and turn off the power to \nthe console. \nPlease read the Wii Operations Manual \nfor further instructions.\n");
 #line 1236
@@ -918,13 +920,9 @@ const char* OSGetAppGamename(void) {
     const char* temp = (const char*)OSPhysicalToCached(OS_PHYS_CURRENT_APP_NAME_1);
     const char* name = temp;
 
-    if (__OSInIPL) {
+    if (__OSInIPL){
         name = AppGameNameForSysMenu;
-    }
-
-    char c = *temp;
-
-    if(c < '0' || (c > '9' && c < 'A') || c > 'Z'){
+    }else if(INVALID_NAME_CHAR(*temp)){
         name = (const char*)OSPhysicalToCached(OS_PHYS_CURRENT_APP_NAME);
     }
 

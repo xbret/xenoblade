@@ -17,6 +17,7 @@ void DSPAssertInt(void);
 void DSPInit(void);
 BOOL DSPCheckInit(void);
 DSPTask* DSPAddTask(DSPTask* task);
+DSPTask* DSPCancelTask(DSPTask* task);
 DSPTask* DSPAssertTask(DSPTask* task);
 
 #ifdef __cplusplus

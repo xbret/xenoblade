@@ -431,7 +431,6 @@ void OSYieldThread(void) {
     OSRestoreInterrupts(enabled);
 }
 
-//nonmatching
 BOOL OSCreateThread(OSThread* thread, OSThreadFunc func, void* funcArg,
                     void* stackBegin, u32 stackSize, s32 prio, u16 flags) {
     BOOL enabled;
@@ -439,7 +438,7 @@ BOOL OSCreateThread(OSThread* thread, OSThreadFunc func, void* funcArg,
     OSThread* tail;
     void* sp;
 
-    if (prio < OS_PRIORITY_MIN || prio > OS_PRIORITY_MAX) {
+    if (OS_PRIORITY_MIN > prio || prio > OS_PRIORITY_MAX) {
         return FALSE;
     }
 
@@ -903,13 +902,10 @@ void OSWakeupThread(OSThreadQueue* queue) {
     OSRestoreInterrupts(enabled);
 }
 
-//https://decomp.me/scratch/20zeZ
-//Matches on GC 3.0 (along with OSCreateThread), but likely used 1.1
-#ifdef NON_MATCHING
 BOOL OSSetThreadPriority(OSThread* thread, s32 prio) {
     BOOL enabled;
 
-    if (prio < OS_PRIORITY_MIN || prio > OS_PRIORITY_MAX) {
+    if (OS_PRIORITY_MIN > prio || prio > OS_PRIORITY_MAX) {
         return FALSE;
     }
 
@@ -924,79 +920,6 @@ BOOL OSSetThreadPriority(OSThread* thread, s32 prio) {
     OSRestoreInterrupts(enabled);
     return TRUE;
 }
-#else
-asm BOOL OSSetThreadPriority(OSThread* thread, s32 prio){
-    nofralloc
-    stwu r1, -0x20(r1)
-    mflr r0
-    cmpwi r4, 0
-    stw r0, 0x24(r1)
-    stw r31, 0x1c(r1)
-    stw r30, 0x18(r1)
-    mr r30, r4
-    stw r29, 0x14(r1)
-    mr r29, r3
-    blt L_8035C890
-    cmpwi r4, 0x1f
-    ble L_8035C898
-L_8035C890:
-    li r3, 0
-    b L_8035C930
-L_8035C898:
-    bl OSDisableInterrupts
-    lwz r0, 0x2d4(r29)
-    mr r31, r3
-    cmpw r0, r30
-    beq L_8035C924
-    stw r30, 0x2d4(r29)
-L_8035C8B0:
-    lwz r0, 0x2cc(r29)
-    cmpwi r0, 0
-    bgt L_8035C910
-    lwz r4, 0x2d4(r29)
-    lwz r3, 0x2f4(r29)
-    b L_8035C8E8
-L_8035C8C8:
-    lwz r5, 0(r3)
-    cmpwi r5, 0
-    beq L_8035C8E4
-    lwz r0, 0x2d0(r5)
-    cmpw r0, r4
-    bge L_8035C8E4
-    mr r4, r0
-L_8035C8E4:
-    lwz r3, 0x10(r3)
-L_8035C8E8:
-    cmpwi r3, 0
-    bne L_8035C8C8
-    lwz r0, 0x2d0(r29)
-    cmpw r0, r4
-    beq L_8035C910
-    mr r3, r29
-    bl SetEffectivePriority
-    cmpwi r3, 0
-    mr r29, r3
-    bne L_8035C8B0
-L_8035C910:
-    lwz r0,  RunQueueHint
-    cmpwi r0, 0
-    beq L_8035C924
-    li r3, 0
-    bl SelectThread
-L_8035C924:
-    mr r3, r31
-    bl OSRestoreInterrupts
-    li r3, 1
-L_8035C930:
-    lwz r0, 0x24(r1)
-    lwz r31, 0x1c(r1)
-    lwz r30, 0x18(r1)
-    lwz r29, 0x14(r1)
-    mtlr r0
-    addi r1, r1, 0x20
-    blr
-}
-#endif
 
 s32 OSGetThreadPriority(OSThread* thread){
     return thread->base;

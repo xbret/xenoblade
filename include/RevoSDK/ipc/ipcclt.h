@@ -124,7 +124,7 @@ typedef struct IPCIoctlArgs {
 typedef struct IPCIoctlvArgs {
     s32 type;             // at 0x0
     u32 inCount;          // at 0x4
-    u32 ioCount;          // at 0x8
+    u32 outCount;          // at 0x8
     IPCIOVector* vectors; // at 0xC
 } IPCIoctlvArgs;
 
@@ -151,6 +151,7 @@ typedef struct IPCRequestEx {
 } IPCRequestEx;
 
 s32 IPCCltInit(void);
+s32 IPCCltReInit(void);
 s32 IOS_OpenAsync(const char* path, IPCOpenMode mode, IPCAsyncCallback callback,
                   void* callbackArg);
 s32 IOS_Open(const char* path, IPCOpenMode mode);

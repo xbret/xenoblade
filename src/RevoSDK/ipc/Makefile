@@ -1,8 +1,8 @@
 IPC_FILES:=\
-	$(BUILD_DIR)/asm/RevoSDK/ipc/ipcMain.o\
+	$(BUILD_DIR)/src/RevoSDK/ipc/ipcMain.o\
 	$(BUILD_DIR)/asm/RevoSDK/ipc/ipcclt.o\
 	$(BUILD_DIR)/asm/RevoSDK/ipc/memory.o\
-	$(BUILD_DIR)/asm/RevoSDK/ipc/ipcProfile.o\
+	$(BUILD_DIR)/src/RevoSDK/ipc/ipcProfile.o\
 
 DEPENDS += $(IPC_FILES:.o=.d)
 

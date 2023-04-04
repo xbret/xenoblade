@@ -24,9 +24,9 @@ typedef enum {
 typedef void (*DSPTaskCallback)(struct DSPTask* task);
 
 typedef struct DSPTask {
-    u32 state;          // at 0x0
+    volatile u32 state;          // at 0x0
     u32 prio;           // at 0x4
-    u32 flags;          // at 0x8
+    volatile u32 flags;          // at 0x8
     void* iramMmemAddr; // at 0xC
     u32 iramMmemLen;    // at 0x10
     void* iramDspAddr;  // at 0x14
@@ -50,10 +50,11 @@ extern DSPTask* __DSP_last_task;
 extern DSPTask* __DSP_first_task;
 extern DSPTask* __DSP_curr_task;
 
-void __DSPHandler(s16 intr, struct OSContext* ctx);
+void __DSPHandler(s32 intr, struct OSContext* ctx);
 void __DSP_exec_task(DSPTask* task1, DSPTask* task2);
 void __DSP_boot_task(DSPTask* task);
 void __DSP_insert_task(DSPTask* task);
+void __DSP_add_task(DSPTask* task);
 void __DSP_remove_task(DSPTask* task);
 
 #ifdef __cplusplus
