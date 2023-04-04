@@ -9,7 +9,7 @@ OS_FILES:=\
 	$(BUILD_DIR)/src/RevoSDK/os/OSError.o\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSExec.o\
 	$(BUILD_DIR)/src/RevoSDK/os/OSFatal.o\
-	$(BUILD_DIR)/src/RevoSDK/os/OSFont.o\
+	$(BUILD_DIR)/asm/RevoSDK/os/OSFont.o\
 	$(BUILD_DIR)/src/RevoSDK/os/OSInterrupt.o\
 	$(BUILD_DIR)/src/RevoSDK/os/OSLink.o\
 	$(BUILD_DIR)/src/RevoSDK/os/OSMessage.o\
