@@ -80,12 +80,12 @@ BOOL __SCF1(const char* type, char* buf, u32 sz) {
     return FALSE;
 }
 
-BOOL SCGetProductAreaString(char* buf, u32 sz) {
-    return __SCF1("AREA", buf, sz);
+//unused
+void SCGetDvdMovieRegion(){
 }
 
-BOOL SCGetProductGameRegionString(char* buf, u32 sz) {
-    return __SCF1("GAME", buf, sz);
+BOOL SCGetProductAreaString(char* buf, u32 sz) {
+    return __SCF1("AREA", buf, sz);
 }
 
 s8 SCGetProductArea(void) {
@@ -102,6 +102,38 @@ s8 SCGetProductArea(void) {
     }
 
     return -1;
+}
+
+//unused
+void SCGetProductModel(){
+}
+
+//unused
+void SCGetProductCode(){
+}
+
+//unused
+void SCGetProductSNString(){
+}
+
+//unused
+void SCGetProductSN(){
+}
+
+//unused
+void SCGetProductMPChanString(){
+}
+
+//unused
+void SCGetProductMPChan(){
+}
+
+//unused
+void SCGetProductVideoMode(){
+}
+
+BOOL SCGetProductGameRegionString(char* buf, u32 sz) {
+    return __SCF1("GAME", buf, sz);
 }
 
 s8 SCGetProductGameRegion(void) {

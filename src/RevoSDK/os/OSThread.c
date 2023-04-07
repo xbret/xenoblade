@@ -106,6 +106,10 @@ static void __OSSwitchThread(OSThread* thread) {
     OSLoadContext(&thread->context);
 }
 
+//unused
+BOOL OSIsThreadSuspended(){
+}
+
 BOOL OSIsThreadTerminated(OSThread* thread) {
     return thread->state == OS_THREAD_STATE_MORIBUND ||
                    thread->state == OS_THREAD_STATE_EXITED
@@ -149,21 +153,6 @@ s32 OSEnableScheduler(void) {
     OSRestoreInterrupts(enabled);
 
     return old;
-}
-
-void OSClearStack(u8 val) {
-    u32* end;
-    u32* begin;
-    u32 longVal;
-
-    longVal = val << 24 | val << 16 | val << 8 | val;
-
-    begin = (u32*)OSGetStackPointer();
-    end = OSGetCurrentThread()->stackEnd + 1;
-
-    for (; end < (u32*)begin; end++) {
-        *end = longVal;
-    }
 }
 
 static void SetRun(OSThread* thread) {
@@ -925,13 +914,50 @@ s32 OSGetThreadPriority(OSThread* thread){
     return thread->base;
 }
 
-/*
+
+//unused
+void OSSetIdleFunction(){
+}
+
+//unused
+void OSGetIdleFunction(){
+}
+
+//unused
+void CheckThreadQueue(){
+}
+
+//unused
+void OSCheckActiveThreads(){
+}
+
+void OSClearStack(u8 val) {
+    u32* end;
+    u32* begin;
+    u32 longVal;
+
+    longVal = val << 24 | val << 16 | val << 8 | val;
+
+    begin = (u32*)OSGetStackPointer();
+    end = OSGetCurrentThread()->stackEnd + 1;
+
+    for (; end < (u32*)begin; end++) {
+        *end = longVal;
+    }
+}
+
+//unused
+void OSSetThreadSpecific(){
+}
+
+//unused
 static void SleepAlarmHandler(OSAlarm* alarm, OSContext* ctx) {
 #pragma unused(ctx)
 
     OSResumeThread((OSThread*)OSGetAlarmUserData(alarm));
 }
 
+//unused
 void OSSleepTicks(s64 ticks) {
     BOOL enabled;
     OSAlarm alarm;
@@ -954,6 +980,6 @@ void OSSleepTicks(s64 ticks) {
     OSCancelAlarm(&alarm);
     OSRestoreInterrupts(enabled);
 }
-*/
+
 
 CW_FORCE_BSS(OSThread_c, IdleThread);

@@ -3,6 +3,9 @@
 
 static float Unit01[] = { 0.0f, 1.0f };
 
+//unused
+void C_MTXIdentity(){
+}
 
 void PSMTXIdentity(register Mtx m) {
   // sdata2 ordering
@@ -26,6 +29,10 @@ void PSMTXIdentity(register Mtx m) {
   }
 }
 
+//unused
+void C_MTXCopy(){
+}
+
 asm void PSMTXCopy(const register Mtx in, register Mtx out) {
   nofralloc;
   psq_l fp0, 0(in), 0, 0;
@@ -41,6 +48,10 @@ asm void PSMTXCopy(const register Mtx in, register Mtx out) {
   psq_l fp5, 40(in), 0, 0;
   psq_st fp5, 40(out), 0, 0;
   blr;
+}
+
+//unused
+void C_MTXConcat(){
 }
 
 asm void PSMTXConcat(const register Mtx mA, const register Mtx mB,
@@ -97,6 +108,10 @@ asm void PSMTXConcat(const register Mtx mA, const register Mtx mB,
   lfd fp31, 40(r1);
   addi r1, r1, 64;
   blr;
+}
+
+//unused
+void C_MTXConcatArray(){
 }
 
 void PSMTXConcatArray(const register Mtx mtx1, const register Mtx* mtx2,
@@ -190,6 +205,10 @@ _loop:
   }
 }
 
+//unused
+void C_MTXTranspose(){
+}
+
 void PSMTXTranspose ( const register Mtx src, register Mtx xPose )
 {
     register f32 c_zero = 0.0f;
@@ -217,6 +236,10 @@ void PSMTXTranspose ( const register Mtx src, register Mtx xPose )
         psq_st      trns1, 24(xPose), 0, 0
         stfs        row0b, 40(xPose)
     }
+}
+
+//unused
+void C_MTXInverse(){
 }
 
 asm u32 PSMTXInverse(const register Mtx src, register Mtx inv) {
@@ -286,11 +309,19 @@ loc0:
   blr;
 }
 
+//unused
+void C_MTXRotRad(){
+}
+
 void PSMTXRotRad(Mtx m, char axis, float rad) {
   float sinA, cosA;
   sinA = sinf(rad);
   cosA = cosf(rad);
   PSMTXRotTrig(m, axis, sinA, cosA);
+}
+
+//unused
+void C_MTXRotTrig(){
 }
 
 void PSMTXRotTrig(register Mtx m, register char arg2, register float arg3,
@@ -353,6 +384,10 @@ loc3:
   }
 }
 
+//unused
+void C_MTXRotAxisRad(){
+}
+
 void __PSMTXRotAxisRadInternal(register Mtx m, const register Vec* arg2,
                                register float arg3, register float arg4) {
   register float vv1, vv2;
@@ -412,6 +447,10 @@ void PSMTXRotAxisRad(Mtx m, const Vec* arg2, float arg3) {
   __PSMTXRotAxisRadInternal(m, arg2, arg2sin, arg2cos);
 }
 
+//unused
+void C_MTXTrans(){
+}
+
 void PSMTXTrans(register Mtx m, register float _x, register float _y,
                 register float _z) {
   register float vv0 = 0.0f;
@@ -429,6 +468,10 @@ void PSMTXTrans(register Mtx m, register float _x, register float _y,
     stfs _z, 44(m);
     stfs vv1, 0(m);
   }
+}
+
+//unused
+void C_MTXTransApply(){
 }
 
 asm void PSMTXTransApply(const register Mtx in, register Mtx out,
@@ -455,6 +498,10 @@ asm void PSMTXTransApply(const register Mtx in, register Mtx out,
   blr;
 }
 
+//unused
+void C_MTXScale(){
+}
+
 void PSMTXScale(register Mtx m, register float _x, register float _y,
                 register float _z) {
   register float vv0 = 0.0F;
@@ -469,6 +516,10 @@ void PSMTXScale(register Mtx m, register float _x, register float _y,
     stfs _z, 40(m);
     stfs vv0, 44(m);
   }
+}
+
+//unused
+void C_MTXScaleApply(){
 }
 
 asm void PSMTXScaleApply(const register Mtx in, register Mtx out,
@@ -496,6 +547,10 @@ asm void PSMTXScaleApply(const register Mtx in, register Mtx out,
   psq_st fp8, 32(out), 0, 0;
   psq_st fp2, 40(out), 0, 0;
   blr;
+}
+
+//unused
+void C_MTXQuat(){
 }
 
 void PSMTXQuat(register Mtx m, const register PSQuaternion* quat) {
@@ -545,6 +600,14 @@ void PSMTXQuat(register Mtx m, const register PSQuaternion* quat) {
     psq_st tmp3, 24(m), 0, 0;
     psq_st tmp9, 32(m), 0, 0;
   }
+}
+
+//unused
+void C_MTXReflect(){
+}
+
+//unused
+asm void PSMTXReflect(){
 }
 
 void C_MTXLookAt(Mtx m, const Vec* _pos, const Vec* _up, const Vec* _dest) {

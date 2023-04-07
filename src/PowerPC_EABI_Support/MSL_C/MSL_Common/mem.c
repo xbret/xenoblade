@@ -96,3 +96,11 @@ int memcmp(const void* __s1, const void* __s2, size_t __n)
 
 	return 0;
 }
+
+//unused
+void memcpy_s(){
+}
+
+//unused
+void memmove_s(){
+}

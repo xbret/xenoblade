@@ -2,12 +2,11 @@
 
 static u32 next = 1;
 
-/*
+//unused
 void srand(u32 seed)
 {
     next = seed;
 }
-*/
 
 int rand()
 {

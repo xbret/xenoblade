@@ -1,5 +1,9 @@
 #include "RevoSDK/MTX.h"
 
+//unused
+void C_VECAdd(){
+}
+
 asm void PSVECAdd(const register Vec* vv1, const register Vec* vv2,
                   register Vec* out) {
   nofralloc;
@@ -14,7 +18,19 @@ asm void PSVECAdd(const register Vec* vv1, const register Vec* vv2,
   blr;
 }
 
-/*
+//unused
+void C_VECSubtract(){
+}
+
+//unused
+asm void PSVECSubtract(){
+}
+
+//unused
+void C_VECScale(){
+}
+
+//unused
 void PSVECScale(const register Vec* in, register Vec* out, register float vv1) {
   register float vxy, vz, rxy, rz;
   asm
@@ -27,7 +43,10 @@ void PSVECScale(const register Vec* in, register Vec* out, register float vv1) {
     psq_st rz, 8(out), 1, 0;
   }
 }
-*/
+
+//unused
+void C_VECNormalize(){
+}
 
 void PSVECNormalize(const register Vec* vec1, register Vec* dst) {
   register float vv1 = 0.5F;
@@ -55,6 +74,18 @@ void PSVECNormalize(const register Vec* vec1, register Vec* dst) {
     ps_muls0 vv4, vv4, vv8;
     psq_st   vv4, 8(dst), 1, 0;
   }
+}
+
+//unused
+void C_VECSquareMag(){
+}
+
+//unused
+asm void PSVECSquareMag(){
+}
+
+//unused
+void C_VECMag(){
 }
 
 float PSVECMag(const register Vec* v) {
@@ -85,6 +116,10 @@ float PSVECMag(const register Vec* v) {
   return vv3;
 }
 
+//unused
+void C_VECDotProduct(){
+}
+
 asm float PSVECDotProduct(const register Vec* vec1, const register Vec* vec2) {
   nofralloc;
   psq_l fp2, 4(vec1), 0, 0;
@@ -95,6 +130,10 @@ asm float PSVECDotProduct(const register Vec* vec1, const register Vec* vec2) {
   ps_madd fp3, fp5, fp4, fp2;
   ps_sum0 fp1, fp3, fp2, fp2;
   blr;
+}
+
+//unused
+void C_VECCrossProduct(){
 }
 
 asm void PSVECCrossProduct(const register Vec* vec1, const register Vec* vec2,
@@ -138,3 +177,24 @@ void C_VECHalfAngle(const Vec* a, const Vec* b, Vec* half) {
   else
     *half = vv3;
 }
+
+//unused
+void C_VECReflect(){
+}
+
+//unused
+void C_VECSquareDistance(){
+}
+
+//unused
+asm void PSVECSquareDistance(){
+}
+
+//unused
+void C_VECDistance(){
+}
+
+//unused
+void PSVECDistance(){
+}
+

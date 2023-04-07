@@ -94,7 +94,7 @@ void __OSUnlockAllMutex(OSThread* thread) {
     }
 };
 
-/*
+//unused
 BOOL OSTryLockMutex(OSMutex* mutex) {
     BOOL enabled = OSDisableInterrupts();
     OSThread* currThread = OSGetCurrentThread();
@@ -128,4 +128,28 @@ BOOL OSTryLockMutex(OSMutex* mutex) {
     OSRestoreInterrupts(enabled);
     return lock;
 }
-*/
+
+//unused
+void OSInitCond(){
+}
+
+//unused
+void OSWaitCond(){
+}
+
+//unused
+void OSSignalCond(){
+}
+
+//unused
+void __OSCheckMutex(){
+}
+
+//unused
+void __OSCheckDeadLock(){
+}
+
+//unused
+void __OSCheckMutexes(){
+}
+

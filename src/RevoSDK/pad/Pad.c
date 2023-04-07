@@ -9,6 +9,56 @@ static u32 Spec = 5;
 static u32 EnabledBits;
 u32 __PADSpec;
 
+
+//unused
+void UpdateOrigin(){
+}
+
+//unused
+void PADOriginCallback(){
+}
+
+//unused
+void PADOriginUpdateCallback(){
+}
+
+//unused
+void PADProbeCallback(){
+}
+
+//unused
+void PADTypeAndStatusCallback(){
+}
+
+//unused
+void PADReceiveCheckCallback(){
+}
+
+//unused
+void PADReset(){
+}
+
+//unused
+void PADRecalibrate(){
+}
+
+//unused
+void PADInit(){
+}
+
+//unused
+void PADRead(){
+}
+
+//unused
+void PADSetSamplingRate(){
+}
+
+//unused
+void PADControlAllMotors(){
+}
+
+
 void PADControlMotor(s32 chan, u32 command) {
   BOOL enabled;
   u32 chanBit;
@@ -30,6 +80,55 @@ void PADControlMotor(s32 chan, u32 command) {
   OSRestoreInterrupts(enabled);
 }
 
+//unused
+void PADSetSpec(){
+}
+
+//unused
+void PADGetSpec(){
+}
+
+//unused
+void SPEC0_MakeStatus(){
+}
+
+//unused
+void SPEC1_MakeStatus(){
+}
+
+//unused
+void SPEC2_MakeStatus(){
+}
+
+//unused
+void PADGetType(){
+}
+
+//unused
+void PADSync(){
+}
+
+//unused
+void PADSetAnalogMode(){
+}
+
+//unused
+void OnShutdown(){
+}
+
+//unused
+void __PADDisableXPatch(){
+}
+
+//unused
+void SamplingHandler(){
+}
+
+//unused
+void PADSetSamplingCallback(){
+}
+
+
 BOOL __PADDisableRecalibration(BOOL disable) {
   BOOL enabled;
   BOOL prev;
@@ -42,4 +141,12 @@ BOOL __PADDisableRecalibration(BOOL disable) {
   }
   OSRestoreInterrupts(enabled);
   return prev;
+}
+
+//unused
+void __PADDisableRumble(){
+}
+
+//unused
+void PADIsBarrel(){
 }

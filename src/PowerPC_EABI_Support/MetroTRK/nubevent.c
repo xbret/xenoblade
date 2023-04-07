@@ -18,9 +18,9 @@ TRKResult TRKInitializeEventQueue()
 	return TRKSuccess;
 }
 
+//unused
 void TRKCopyEvent(void)
 {
-	// UNUSED FUNCTION
 }
 
 BOOL TRKGetNextEvent(TRKEvent* ev)

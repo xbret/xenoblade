@@ -1,5 +1,28 @@
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/ansi_files.h"
 
+//unused
+void remove(){
+}
+
+//unused
+void rename(){
+}
+
+//unused
+void tmpnam(){
+}
+
+//unused
+void tmpnam_s(){
+}
+
+//unused
+void tmpfile(){
+}
+
+//unused
+void tmpfile_s(){
+}
 
 int fclose(FILE* file)
 {
@@ -67,4 +90,60 @@ int fflush(FILE* file)
 	file->mPosition       = pos;
 	file->mBufferLength   = 0;
 	return 0;
+}
+
+//unused
+void fopen(){
+}
+
+//unused
+void fopen_s(){
+}
+
+//unused
+void freopen(){
+}
+
+//unused
+void freopen_s(){
+}
+
+//unused
+void __reopen(){
+}
+
+//unused
+void __handle_open(){
+}
+
+//unused
+void __handle_reopen(){
+}
+
+//unused
+void __get_file_modes(){
+}
+
+//unused
+void __set_ref_con(){
+}
+
+//unused
+void __set_idle_proc(){
+}
+
+//unused
+void __msl_strnicmp(){
+}
+
+//unused
+void __msl_strrev(){
+}
+
+//unused
+void __msl_itoa(){
+}
+
+//unused
+void __msl_strdup(){
 }

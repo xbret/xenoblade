@@ -12,10 +12,22 @@ void dthandler(){
   abort();
 }
 
+//unused
+void set_terminate(void (*func)(void)){
+}
+
 asm void terminate(){
 	lwz r12, thandler__3std //@sda21(r13)
 	mtctr r12
 	bctr 
+}
+
+//unused
+void set_unexpected(void (*func)(void)){
+}
+
+//unused
+asm void unexpected(){
 }
 
 }
@@ -179,4 +191,12 @@ L_802B9CDC:
 	mtlr r0
 	addi r1, r1, 0x20
 	blr 
+}
+
+//unused
+void __destroy_new_array2(){
+}
+
+//unused
+void __destroy_new_array3(){
 }

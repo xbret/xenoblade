@@ -64,6 +64,10 @@ const u8* OSUTF8to32(const u8* utf8, u32* utf32) {
     return utf8;
 }
 
+//unused
+void OSUTF32to8(){
+}
+
 const wchar_t* OSUTF16to32(const wchar_t* utf16, u32* utf32) {
     wchar_t hi, lo;
     u32 full;
@@ -92,6 +96,10 @@ const wchar_t* OSUTF16to32(const wchar_t* utf16, u32* utf32) {
     return utf16;
 }
 
+//unused
+void OSUTF32to16(){
+}
+
 u8 OSUTF32toANSI(u32 utf32) {
     int i;
 
@@ -114,6 +122,10 @@ u8 OSUTF32toANSI(u32 utf32) {
     return 0;
 }
 
+//unused
+void OSANSItoUTF32(){
+}
+
 wchar_t OSUTF32toSJIS(u32 utf32) {
     if (utf32 >= 0x10000) {
         return 0;
@@ -124,6 +136,10 @@ wchar_t OSUTF32toSJIS(u32 utf32) {
     }
 
     return 0;
+}
+
+//unused
+void OSSJIStoUTF32(){
 }
 
 static wchar_t UcsAnsiTable[32] = {

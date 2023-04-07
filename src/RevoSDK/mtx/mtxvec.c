@@ -1,5 +1,9 @@
 #include "RevoSDK/MTX.h"
 
+//unused
+void C_MTXMultVec(){
+}
+
 asm void PSMTXMultVec(const register Mtx m, const register Vec* in,
                       register Vec* out) {
   nofralloc;
@@ -25,3 +29,28 @@ asm void PSMTXMultVec(const register Mtx m, const register Vec* in,
   psq_st fp6, 8(out), 1, 0;
   blr;
 }
+
+//unused
+void C_MTXMultVecArray(){
+}
+
+//unused
+asm void PSMTXMultVecArray(){
+}
+
+//unused
+void C_MTXMultVecSR(){
+}
+
+//unused
+asm void PSMTXMultVecSR(const Mtx mtx, const Vec* vec1, Vec* vec2){
+}
+
+//unused
+void C_MTXMultVecArraySR(){
+}
+
+//unused
+asm void PSMTXMultVecArraySR(){
+}
+

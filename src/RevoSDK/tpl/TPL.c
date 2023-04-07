@@ -59,3 +59,7 @@ void TPLGetGXTexObjFromPalette(TPLPalette* pal, GXTexObj* to, u32 id) {
                   desc->texHeader->maxLod, desc->texHeader->lodBias, 0,
                   desc->texHeader->edgeLodEnable, 0);
 }
+
+//unused
+void TPLGetGXTexObjFromPaletteCI(){
+}

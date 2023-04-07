@@ -1,8 +1,22 @@
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/math_api.h"
 #include "stl/fdlibm.h"
 
-//This shouldn't be necessary
-#pragma dont_inline on
+//unused
+void __msl_generic_count_bits32(){
+}
+
+//unused
+void __msl_generic_count_bits64(){
+}
+
+//unused
+void __msl_relation(){
+}
+
+//unused
+void __signbitf(){
+}
+
 int __fpclassifyf(float x)
 {
 	switch ((*(s32*)&x) & 0x7f800000) {
@@ -48,4 +62,3 @@ int __fpclassifyd(double x)
 	}
 	return 4;
 }
-#pragma dont_inline off

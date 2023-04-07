@@ -5,6 +5,58 @@
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/ansi_files.h"
 
 
+//unused
+void putwc(){
+}
+
+//unused
+void putwchar(){
+}
+
+//unused
+void fputwc(){
+}
+
+//unused
+void getwc(){
+}
+
+//unused
+void __getwc(){
+}
+
+//unused
+void __getwchar(){
+}
+
+//unused
+void fgetwc(){
+}
+
+//unused
+void __fgetwc(){
+}
+
+//unused
+void ungetwc(){
+}
+
+//unused
+void __ungetwc(){
+}
+
+//unused
+void fputws(){
+}
+
+//unused
+void fgetws(){
+}
+
+//unused
+void __fwide(){
+}
+
 int fwide(FILE* stream, int mode)
 {
 	int orientation;

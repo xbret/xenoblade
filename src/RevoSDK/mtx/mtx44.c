@@ -68,3 +68,99 @@ void C_MTXOrtho(Mtx44 m, float a1, float a2, float a3, float a4, float a5, float
   m[3][2] = 0.0f;
   m[3][3] = 1.0f;
 }
+
+//unused
+void C_MTX44Identity(){
+}
+
+//unused
+asm void PSMTX44Identity(){
+}
+
+//unused
+void C_MTX44Copy(){
+}
+
+//unused
+asm void PSMTX44Copy(Mtx44 mtx1, Mtx44 mtx2){
+}
+
+//unused
+void C_MTX44Concat(){
+}
+
+//unused
+asm void PSMTX44Concat(){
+}
+
+//unused
+void C_MTX44Transpose(){
+}
+
+//unused
+asm void PSMTX44Transpose(){
+}
+
+//unused
+void C_MTX44Inverse(){
+}
+
+//unused
+void C_MTX44Trans(){
+}
+
+//unused
+asm void PSMTX44Trans(){
+}
+
+//unused
+void C_MTX44TransApply(){
+}
+
+//unused
+asm void PSMTX44TransApply(){
+}
+
+//unused
+void C_MTX44Scale(){
+}
+
+//unused
+asm void PSMTX44Scale(){
+}
+
+//unused
+void C_MTX44ScaleApply(){
+}
+
+//unused
+asm void PSMTX44ScaleApply(){
+}
+
+//unused
+void C_MTX44RotRad(){
+}
+
+//unused
+asm void PSMTX44RotRad(){
+}
+
+//unused
+void C_MTX44RotTrig(){
+}
+
+//unused
+asm void PSMTX44RotTrig(){
+}
+
+//unused
+void C_MTX44RotAxisRad(){
+}
+
+//unused
+asm void __PSMTX44RotAxisRadInternal(){
+}
+
+//unused
+void PSMTX44RotAxisRad(){
+}

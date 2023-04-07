@@ -138,6 +138,10 @@ void __close_all()
 	//__end_critical_region(2);
 }
 
+//unused
+void __flush_line_buffered_output_files(){
+}
+
 u32 __flush_all()
 {
 	u32 retval = 0;

@@ -12,6 +12,22 @@ u8 SCGetAspectRatio(void) {
     return item;
 }
 
+//unused
+void SCSetAspectRatio(){
+}
+
+//unused
+void SCEmuSetAspectRatio(){
+}
+
+//unused
+void SCGetAutorunMode(){
+}
+
+//unused
+void SCSetAutorunMode(){
+}
+
 s8 SCGetDisplayOffsetH(void) {
     s8 item;
 
@@ -26,6 +42,10 @@ s8 SCGetDisplayOffsetH(void) {
     return item & ~1;
 }
 
+//unused
+void SCSetDisplayOffsetH(){
+}
+
 u8 SCGetEuRgb60Mode(void) {
     u8 item;
 
@@ -38,8 +58,16 @@ u8 SCGetEuRgb60Mode(void) {
     return item;
 }
 
+//unused
+void SCSetEuRgb60Mode(){
+}
+
 void SCGetIdleMode(SCIdleMode* mode) {
     SCFindByteArrayItem(mode, sizeof(SCIdleMode), SC_ITEM_IPL_IDL);
+}
+
+//unused
+void SCSetIdleMode(){
 }
 
 u8 SCGetLanguage(void) {
@@ -58,6 +86,22 @@ u8 SCGetLanguage(void) {
     return item;
 }
 
+//unused
+void SCSetLanguage(){
+}
+
+//unused
+void SCEmuSetLanguage(){
+}
+
+//unused
+void SCGetParentalControl(){
+}
+
+//unused
+void SCSetParentalControl(){
+}
+
 u8 SCGetProgressiveMode(void) {
     u8 item;
 
@@ -70,6 +114,10 @@ u8 SCGetProgressiveMode(void) {
     return item;
 }
 
+//unused
+void SCSetProgressiveMode(){
+}
+
 u8 SCGetScreenSaverMode(void) {
     u8 item;
 
@@ -80,6 +128,10 @@ u8 SCGetScreenSaverMode(void) {
     }
 
     return item;
+}
+
+//unused
+void SCSetScreenSaverMode(){
 }
 
 u8 SCGetSoundMode(void) {
@@ -95,6 +147,10 @@ u8 SCGetSoundMode(void) {
     return item;
 }
 
+//unused
+void SCSetSoundMode(){
+}
+
 u32 SCGetCounterBias(void) {
     u32 item;
 
@@ -103,6 +159,42 @@ u32 SCGetCounterBias(void) {
     }
 
     return item;
+}
+
+//unused
+void SCSetCounterBias(){
+}
+
+//unused
+void SCGetBootMode(){
+}
+
+//unused
+void SCSetBootMode(){
+}
+
+//unused
+void SCGetBootIRDVMode(){
+}
+
+//unused
+void SCSetBootIRDVMode(){
+}
+
+//unused
+void SCGetBootIRDCCode(){
+}
+
+//unused
+void SCSetBootIRDCCode(){
+}
+
+//unused
+void SCGetDriveSavingMode(){
+}
+
+//unused
+void SCSetDriveSavingMode(){
 }
 
 void SCGetBtDeviceInfoArray(SCBtDeviceInfoArray* info) {
@@ -136,6 +228,30 @@ u32 SCGetBtDpdSensibility(void) {
     return item;
 }
 
+//unused
+void SCSetBtDpdSensibility(){
+}
+
+//unused
+void SCGetDvdConfig(){
+}
+
+//unused
+void SCSetDvdConfig(){
+}
+
+//unused
+void SCGetWwwRestriction(){
+}
+
+//unused
+void SCSetWwwRestriction(){
+}
+
+//unused
+void SCRemoveWwwRestrictionTemporarily(){
+}
+
 u8 SCGetWpadMotorMode(void) {
     u8 item;
 
@@ -162,6 +278,10 @@ u8 SCGetWpadSensorBarPosition(void) {
     return item;
 }
 
+//unused
+void SCSetWpadSensorBarPosition(){
+}
+
 u8 SCGetWpadSpeakerVolume(void) {
     u8 item;
 
@@ -175,3 +295,147 @@ u8 SCGetWpadSpeakerVolume(void) {
 }
 
 void SCSetWpadSpeakerVolume(u8 vol) { SCReplaceU8Item(vol, SC_ITEM_BT_SPKV); }
+
+//unused
+void SCGetOwnerNickName(){
+}
+
+//unused
+void SCSetOwnerNickName(){
+}
+
+//unused
+void SCGetSimpleAddressID(){
+}
+
+//unused
+void SCGetSimpleAddressRegionIdHi(){
+}
+
+//unused
+void SCGetSimpleAddressRegionIdLow(){
+}
+
+//unused
+void SCGetSimpleAddressCountryName(){
+}
+
+//unused
+void SCGetSimpleAddressRegionName(){
+}
+
+//unused
+void SCGetSimpleAddressRegionNameHi(){
+}
+
+//unused
+void SCGetSimpleAddressRegionNameLow(){
+}
+
+//unused
+void SCGetSimpleAddressLatitude(){
+}
+
+//unused
+void SCGetSimpleAddressLongitude(){
+}
+
+//unused
+void SCGetSimpleAddressData(){
+}
+
+//unused
+void SCSetSimpleAddressData(){
+}
+
+//unused
+void SCGetNetContentRestrictions(){
+}
+
+//unused
+void SCSetNetContentRestrictions(){
+}
+
+//unused
+void SCGetWCRestriction(){
+}
+
+//unused
+void SCSetWCRestriction(){
+}
+
+//unused
+void SCGetConfigDoneFlag(){
+}
+
+//unused
+void SCSetConfigDoneFlag(){
+}
+
+//unused
+void SCGetConfigDoneFlag2(){
+}
+
+//unused
+void SCSetConfigDoneFlag2(){
+}
+
+//unused
+void SCGetUpdateType(){
+}
+
+//unused
+void SCSetUpdateType(){
+}
+
+//unused
+void SCGetEULA(){
+}
+
+//unused
+void SCSetEULA(){
+}
+
+//unused
+void SCGetWCFlags(){
+}
+
+//unused
+void SCSetWCFlags(){
+}
+
+//unused
+void SCGetFreeChannelAppCount(){
+}
+
+//unused
+void SCSetFreeChannelAppCount(){
+}
+
+//unused
+void SCGetInstalledChannelAppCount(){
+}
+
+//unused
+void SCSetInstalledChannelAppCount(){
+}
+
+//unused
+void SCCheckPCMessageRestriction(){
+}
+
+//unused
+void SCCheckPCShoppingRestriction(){
+}
+
+//unused
+void SCCheckPCPassword(){
+}
+
+//unused
+void SCGetTmpTitleID(){
+}
+
+//unused
+void SCSetTmpTitleID(){
+}

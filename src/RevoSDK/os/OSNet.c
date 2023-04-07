@@ -1,5 +1,5 @@
-#include <revolution/NWC24.h>
-#include <revolution/OS.h>
+#include "RevoSDK/NWC24.h"
+#include "RevoSDK/OS.h"
 
 void __OSInitNet(void) {
     s32 error;
@@ -31,6 +31,39 @@ void __OSInitNet(void) {
             "Failed to synchronize time with network resource managers. %d\n",
             error);
     }
+}
+
+//unused
+void __OSSyncTimeWithNetRM(){
+}
+
+//unused
+void REXInit(){
+}
+
+void NWC24iPrepareShutdown(){
+}
+
+void NWC24iSynchronizeRtcCounter(){
+}
+
+void NWC24SuspendScheduler(){
+}
+
+//unused
+void NWC24ResumeScheduler(){
+}
+
+void NWC24iRequestShutdown(){
+}
+
+void NWC24Shutdown_(){
+}
+
+void NWC24iSetRtcCounter_(){
+}
+
+void CallbackAsyncIpc(){
 }
 
 CW_FORCE_STRINGS(OSNet_c, "NWC24iPrepareShutdown", "/dev/net/kd/request",

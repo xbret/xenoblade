@@ -4,6 +4,18 @@
 extern TRKEventQueue gTRKEventQueue;
 extern TRKState gTRKState;
 
+//unused
+void TRKHandleRequestEvent(void){
+}
+
+//unused
+void TRKHandleSupportEvent(void){
+}
+
+//unused
+void TRKIdle(void){
+}
+
 /*
  * Perhaps the switch case takes TRK CMD defines as inputs?
  * As seen in Dolphin/trk.h
@@ -49,21 +61,4 @@ void TRKNubMainLoop(void)
 			var_r30 = FALSE;
 		}
 	}
-}
-
-
-void TRKIdle(void)
-{
-	// UNUSED FUNCTION
-}
-
-
-void TRKHandleSupportEvent(void)
-{
-	// UNUSED FUNCTION
-}
-
-void TRKHandleRequestEvent(void)
-{
-	// UNUSED FUNCTION
 }

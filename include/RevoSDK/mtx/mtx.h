@@ -32,7 +32,7 @@ void PSMTXQuat(Mtx, const PSQuaternion*);
 void PSMTXMultVec(const Mtx, const Vec*, Vec*);
 void PSMTXMultVecSR(const Mtx, const Vec*, Vec*);
 /* TODO: Determine what these params are. */
-void PSMTXMultVecArraySR(Mtx, float*, float*, float*);
+void PSMTXMultVecArraySR();
 void PSMTX44Copy(Mtx44, Mtx44);
 
 void C_MTXFrustum(Mtx44, float, float, float, float, float, float);

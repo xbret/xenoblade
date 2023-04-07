@@ -45,6 +45,14 @@ asm s32 OSGetTick(void){
     // clang-format on
 }
 
+//unused
+void __SetTime(){
+}
+
+//unused
+void __OSSetTime(){
+}
+
 s64 __OSGetSystemTime(void) {
     const BOOL enabled = OSDisableInterrupts();
     const s64 time = OSGetTime() + OS_SYSTEM_TIME;
@@ -57,6 +65,10 @@ s64 __OSTimeToSystemTime(s64 time) {
     const s64 sysTime = OS_SYSTEM_TIME + time;
     OSRestoreInterrupts(enabled);
     return sysTime;
+}
+
+//unused
+void __OSSetTick(){
 }
 
 static BOOL IsLeapYear(s32 year) {
@@ -125,7 +137,7 @@ void OSTicksToCalendarTime(s64 ticks, OSCalendarTime* cal) {
     cal->sec = secs % 60;
 }
 
-/*
+//unused
 s64 OSCalendarTimeToTicks(const OSCalendarTime* cal) {
     s64 seconds;
     s32 month;
@@ -154,4 +166,3 @@ s64 OSCalendarTimeToTicks(const OSCalendarTime* cal) {
     return OS_SEC_TO_TICKS(seconds) + OS_MSEC_TO_TICKS((s64)cal->msec) +
            OS_USEC_TO_TICKS((s64)cal->usec);
 }
-*/

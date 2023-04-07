@@ -1,10 +1,6 @@
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/ansi_files.h"
 
-/*
- * --INFO--
- * Address:	800C6224
- * Size:	000034
- */
+
 void __prep_buffer(FILE* file)
 
 {
@@ -15,11 +11,10 @@ void __prep_buffer(FILE* file)
 	return;
 }
 
-/*
- * --INFO--
- * Address:	800C6160
- * Size:	0000C4
- */
+//unused
+void __load_buffer(){
+}
+
 int __flush_buffer(FILE* file, size_t* length)
 {
 	size_t bufferLen;
@@ -43,4 +38,12 @@ int __flush_buffer(FILE* file, size_t* length)
 	file->mBufferLength   = file->mBufferLength - (file->mPosition & file->mBufferAlignment);
 	file->mBufferPosition = file->mPosition;
 	return 0;
+}
+
+//unused
+void setvbuf(){
+}
+
+//unused
+void setbuf(){
 }

@@ -11,9 +11,9 @@ void MWEnterCriticalSection(uint* section) { *section = OSDisableInterrupts(); }
 
 void MWExitCriticalSection(uint* section) { OSRestoreInterrupts(*section); }
 
+//unused
 void MWTerminateCriticalSection()
 {
-	// UNUSED FUNCTION
 }
 
 }

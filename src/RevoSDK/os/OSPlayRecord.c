@@ -60,8 +60,16 @@ static u32 RecordCheckSum(const OSPlayRecord* playRec) {
     return checksum;
 }
 
+//unused
+void __OSCreatePlayRecord(){
+}
+
 // Likely a result of __OSCreatePlayRecord
 CW_FORCE_BSS(OSPlayRecord_c, PlayRecord);
+
+//unused
+void __OSReadPlayRecord(){
+}
 
 static void PlayRecordAlarmCallback(OSAlarm* alarm, OSContext* ctx) {
 #pragma unused(alarm)
@@ -297,4 +305,8 @@ void __OSStopPlayRecord(void) {
     }
 
     PlayRecordState = PLAY_RECORD_STATE_STOPPED;
+}
+
+//unused
+void __OSGetPlayRecordState(){
 }

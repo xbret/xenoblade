@@ -16,6 +16,10 @@ static u32 CheckSum(const OSStateFlags* state) {
     return checksum;
 }
 
+//unused
+void __OSCreateStateFlags(){
+}
+
 BOOL __OSWriteStateFlags(const OSStateFlags* state) {
     NANDFileInfo file;
 

@@ -2,3 +2,7 @@
 
 double nan(char* arg){
 }
+
+//unused
+void scalbln(){
+}

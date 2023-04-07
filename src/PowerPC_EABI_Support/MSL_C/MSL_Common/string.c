@@ -6,7 +6,7 @@
 
 
 //thanks metrowerks very cool
-char*(strcpy)(char* dst, const char* src)
+char* strcpy(char* dst, const char* src)
 {
 	register u8 *destb, *fromb;
 	register u32 w, t, align;
@@ -244,6 +244,38 @@ char* strchr(const char* str, int chr)
 	return (c ? 0 : (char*)p);
 }
 
+//unused
+void strcoll(){
+}
+
+//unused
+void strxfrm(){
+}
+
+//unused
+void strrchr(){
+}
+
+//unused
+void strpbrk(){
+}
+
+//unused
+void strspn(){
+}
+
+//unused
+void strcspn(){
+}
+
+//unused
+void strtok(){
+}
+
+//unused
+void strtok_s(){
+}
+
 char* strstr(const char* str, const char* pat)
 {
 	u8* s1 = (u8*)str-1;
@@ -266,4 +298,36 @@ char* strstr(const char* str, const char* pat)
 		}
 		
 	return NULL;
+}
+
+//unused
+void strnlen_s(){
+}
+
+//unused
+void strcpy_s(){
+}
+
+//unused
+void strncpy_s(){
+}
+
+//unused
+void strcat_s(){
+}
+
+//unused
+void strncat_s(){
+}
+
+//unused
+void strerror(){
+}
+
+//unused
+void strerror_s(){
+}
+
+//unused
+void __strerror(){
 }

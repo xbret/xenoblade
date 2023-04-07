@@ -15,12 +15,7 @@ long __ptmf_test(PTMF* ptmf);
 long __ptmf_cmpr(PTMF *ptmf1, PTMF *ptmf2);
 void __ptmf_scall(...);
 
-/*
- * --INFO--
- * Address:	800C1AF4
- * Size:	000030
- */
-// clang-format off
+
 asm long __ptmf_test(register PTMF* ptmf)
 {
 	nofralloc
@@ -38,11 +33,6 @@ asm long __ptmf_test(register PTMF* ptmf)
 		blr
 }
 
-/*
- * --INFO--
- * Address:	........
- * Size:	00003C
- */
 asm long __ptmf_cmpr(PTMF *ptmf1, PTMF *ptmf2)
 {
     nofralloc
@@ -63,31 +53,16 @@ asm long __ptmf_cmpr(PTMF *ptmf1, PTMF *ptmf2)
         blr 
 }
 
-/*
- * --INFO--
- * Address:	........
- * Size:	000034
- */
+//unused
 void __ptmf_call(void)
 {
-	// UNUSED FUNCTION
 }
 
-/*
- * --INFO--
- * Address:	........
- * Size:	000034
- */
+//unused
 void __ptmf_call4(void)
 {
-	// UNUSED FUNCTION
 }
 
-/*
- * --INFO--
- * Address:	800C1B24
- * Size:	000028
- */
 asm void __ptmf_scall(...)
 {
 	nofralloc
@@ -103,23 +78,13 @@ asm void __ptmf_scall(...)
 		mtctr   r12
 		bctr
 }
-// clang-format on
-/*
- * --INFO--
- * Address:	........
- * Size:	000028
- */
+
+//unused
 void __ptmf_scall4(void)
 {
-	// UNUSED FUNCTION
 }
 
-/*
- * --INFO--
- * Address:	........
- * Size:	000024
- */
+//unused
 void __ptmf_cast(void)
 {
-	// UNUSED FUNCTION
 }

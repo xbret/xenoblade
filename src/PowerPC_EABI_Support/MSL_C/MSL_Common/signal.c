@@ -2,6 +2,10 @@
 
 sig_func signal_funcs[8];
 
+//unused
+void signal(){
+}
+
 int raise(int sig) {
     sig_func temp_r31;
     u32 temp_r0;

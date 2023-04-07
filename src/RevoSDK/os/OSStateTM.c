@@ -90,6 +90,14 @@ OSStateCallback OSSetPowerCallback(OSStateCallback callback) {
     else return old;
 }
 
+//unused
+void OSGetResetButtonState(){
+}
+
+//unused
+void OSGetResetSwitchState(){
+}
+
 BOOL __OSInitSTM(void) {
     BOOL success;
 
@@ -124,6 +132,10 @@ exit:
     return success;
 }
 
+//unused
+void __OSFinalizeSTM(){
+}
+
 void __OSShutdownToSBY(void) {
 #define in_args ((u32*)StmImInBuf)
 
@@ -141,6 +153,10 @@ void __OSShutdownToSBY(void) {
 #undef in_args
 }
 
+//unused
+void __OSShutdownToIDL(){
+}
+
 void __OSHotReset(void) {
     VI_HW_REGS[VI_REG_DCR] = 0;
 
@@ -152,8 +168,20 @@ void __OSHotReset(void) {
     LockUp();
 }
 
+//unused
+void __OSHotResetForPDN(){
+}
+
 BOOL __OSGetResetButtonStateRaw(void) {
     return (!(PI_HW_REGS[PI_INTSR] & PI_INTSR_RSWST)) ? TRUE : FALSE;
+}
+
+//unused
+void __OSIsSTMReady(){
+}
+
+//unused
+void __OSSetVIAutoDimming(){
 }
 
 s32 __OSSetVIForceDimming(u32 arg0, u32 arg1, u32 arg2) {
@@ -193,6 +221,11 @@ s32 __OSSetVIForceDimming(u32 arg0, u32 arg1, u32 arg2) {
 #undef in_args
 }
 
+//unused
+void __OSSetRFIdleForAutoDimming(){
+}
+
+//unused
 s32 __OSSetIdleLEDMode(u32 mode) {
 #define in_args ((u32*)StmImInBuf)
 
@@ -226,6 +259,10 @@ s32 __OSUnRegisterStateEvent(void) {
     }
 
     return result;
+}
+
+//unused
+void __OSSetSlotLED(){
 }
 
 static s32 AccessVIDimRegs(void) {

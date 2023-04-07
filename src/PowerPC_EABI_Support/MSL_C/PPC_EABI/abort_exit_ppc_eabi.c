@@ -8,3 +8,15 @@ void abort(void) {
     __aborting = TRUE;
     exit(1);
 }
+
+//unused
+void atexit(){
+}
+
+//unused
+void __atexit(){
+}
+
+//unused
+void __exit(){
+}

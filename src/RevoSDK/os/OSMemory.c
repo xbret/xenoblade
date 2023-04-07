@@ -41,6 +41,10 @@ static void MEMIntrruptHandler(s32 intr, OSContext* ctx) {
     }
 }
 
+//unused
+void OSProtectRange(){
+}
+
 static asm void ConfigMEM1_24MB(void) {
     // clang-format off
     nofralloc
@@ -358,6 +362,21 @@ static asm void ConfigMEM2_128MB(void) {
     // clang-format on
 }
 
+//unused
+void DisableInstsOnMEM1Hi8MB(){
+}
+
+//unused
+void DisableInstsOnMEM1Hi16MB(){
+}
+
+//unused
+void EnableInstsOnMEM2Lo8MB(){
+}
+
+//unused
+void EnableInstsOnMEM2Lo16MB(){
+}
 
 static asm void RealMode(register void* config) {
     // clang-format off
@@ -416,9 +435,25 @@ static void BATConfig(u32 size) {
     WeirdAssInline(size);
 }
 
+//unused
+void OSDisableCodeExecOnMEM1Hi8MB(){
+}
+
+//unused
+void OSDisableCodeExecOnMEM1Hi16MB(){
+}
+
 void __OSRestoreCodeExecOnMEM1(u32 size){
     RealMode(ConfigMEM1_24MB);
     WeirdAssInline(size);
+}
+
+//unused
+void OSEnableCodeExecOnMEM2Lo16MB(){
+}
+
+//unused
+void OSEnableCodeExecOnMEM2Lo8MB(){
 }
 
 void __OSInitMemoryProtection(void) {
