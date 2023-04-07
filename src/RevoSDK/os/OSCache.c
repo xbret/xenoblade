@@ -2,6 +2,10 @@
 #include "RevoSDK/DB.h"
 #include "RevoSDK/OS.h"
 
+//unused
+asm void DCFlashInvalidate(){
+}
+
 asm void DCEnable(void) {
     // clang-format off
     nofralloc
@@ -13,6 +17,38 @@ asm void DCEnable(void) {
 
     blr
     // clang-format on
+}
+
+//unused
+asm void DCDisable(){
+}
+
+//unused
+asm void DCFreeze(){
+}
+
+//unused
+asm void DCUnfreeze(){
+}
+
+//unused
+asm void DCTouchLoad(){
+}
+
+//unused
+asm void DCBlockZero(){
+}
+
+//unused
+asm void DCBlockStore(){
+}
+
+//unused
+asm void DCBlockFlush(){
+}
+
+//unused
+asm void DCBlockInvalidate(){
 }
 
 asm void DCInvalidateRange(register const void* buf, register u32 len) {
@@ -149,6 +185,10 @@ do_zero:
     // clang-format on
 }
 
+//unused
+asm void DCTouchRange(){
+}
+
 asm void ICInvalidateRange(register const void* buf, register u32 len) {
     // clang-format off
     nofralloc
@@ -197,6 +237,26 @@ asm void ICEnable(void) {
 
     blr
     // clang-format on
+}
+
+//unused
+asm void ICDisable(){
+}
+
+//unused
+asm void ICFreeze(){
+}
+
+//unused
+asm void ICUnfreeze(){
+}
+
+//unused
+asm void ICBlockInvalidate(){
+}
+
+//unused
+asm void ICSync(){
 }
 
 static asm void __LCEnable(void) {
@@ -292,6 +352,18 @@ do_invalidate:
     // clang-format on
 }
 
+//unused
+asm void LCIsEnable(){
+}
+
+//unused
+asm void LCAllocOneTag(){
+}
+
+//unused
+asm void LCAllocTags(){
+}
+
 asm void LCLoadBlocks(register void* dst, register const void* src,
                       register u32 len) {
     // clang-format off
@@ -326,6 +398,18 @@ asm void LCStoreBlocks(register void* dst, register const void* src,
 
     blr
     // clang-format on
+}
+
+//unused
+asm void LCAlloc(){
+}
+
+//unused
+asm void LCAllocNoInvalidate(){
+}
+
+//unused
+asm void LCLoadData(){
 }
 
 u32 LCStoreData(void* dst, const void* src, u32 len) {
@@ -372,6 +456,10 @@ asm void LCQueueWait(register u32 n) {
     // clang-format on
 }
 
+//unused
+asm void LCFlushQueue(){
+}
+
 static void L2Init(void) {
     u32 msr;
 
@@ -416,6 +504,14 @@ void L2GlobalInvalidate(void) {
     while (PPCMfl2cr() & L2CR_L2IP) {
         DBPrintf(">>> L2 INVALIDATE : SHOULD NEVER HAPPEN\n");
     }
+}
+
+//unused
+asm void L2SetDataOnly(){
+}
+
+//unused
+asm void L2SetWriteThrough(){
 }
 
 void DMAErrorHandler(u8 error, OSContext* ctx, u32 dsisr, u32 dar, ...) {

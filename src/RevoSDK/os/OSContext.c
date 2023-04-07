@@ -175,6 +175,10 @@ _exit:
     // clang-format on
 }
 
+//unused
+asm void OSLoadFPUContext(){
+}
+
 asm void OSSaveFPUContext(register OSContext* ctx) {
     // clang-format off
     nofralloc
@@ -353,6 +357,10 @@ asm void* OSGetStackPointer(void) {
     mr r3, r1
     blr
     // clang-format on
+}
+
+//unused
+asm void OSSwitchStack(){
 }
 
 asm void OSSwitchFiber(register void* func, register void* stack) {
@@ -586,4 +594,8 @@ void __OSContextInit(void) {
     __OSSetExceptionHandler(OS_ERR_FP_UNAVAIL, OSSwitchFPUContext);
     OS_CURRENT_FPU_CONTEXT = NULL;
     DBPrintf("FPU-unavailable handler installed\n");
+}
+
+//unused
+void OSFillFPUContext(){
 }

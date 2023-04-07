@@ -324,6 +324,14 @@ static u32 SetInterruptMask(u32 type, u32 mask) {
     }
 }
 
+//unused
+void OSGetInterruptMask(){
+}
+
+//unused
+void OSSetInterruptMask(){
+}
+
 u32 __OSMaskInterrupts(u32 userMask) {
     const BOOL enabled = OSDisableInterrupts();
     const u32 prevMask = *(u32*)OSPhysicalToCached(OS_PHYS_PREV_INTR_MASK);

@@ -36,3 +36,15 @@ void* OSAllocFromMEM1ArenaLo(size_t size, u32 align) {
     OSSetMEM1ArenaLo(blk_end);
     return blk_start;
 }
+
+//unused
+void OSAllocFromMEM2ArenaLo(){
+}
+
+//unused
+void OSAllocFromMEM1ArenaHi(){
+}
+
+//unused
+void OSAllocFromMEM2ArenaHi(){
+}

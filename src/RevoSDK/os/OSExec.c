@@ -22,6 +22,10 @@ void __OSGetExecParams(OSExecParams* out) {
     }
 }
 
+//unused
+void __OSSetExecParams(){
+}
+
 void __OSLaunchMenu(void) {
     // This makes me feel sick
     s32 result;

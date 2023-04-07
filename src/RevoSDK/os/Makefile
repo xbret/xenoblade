@@ -1,5 +1,5 @@
 OS_FILES:=\
-	$(BUILD_DIR)/asm/RevoSDK/os/OS.o\
+	$(BUILD_DIR)/src/RevoSDK/os/OS.o\
 	$(BUILD_DIR)/src/RevoSDK/os/OSAlarm.o\
 	$(BUILD_DIR)/src/RevoSDK/os/OSAlloc.o\
 	$(BUILD_DIR)/src/RevoSDK/os/OSArena.o\

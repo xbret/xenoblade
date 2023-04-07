@@ -21,6 +21,10 @@ static void SetTimer(const OSAlarm* alarm) {
     }
 }
 
+//unused
+void OSCheckAlarmQueue(){
+}
+
 void __OSInitAlarm(void) {
     if (__OSGetExceptionHandler(OS_ERR_DECREMENTER) !=
         DecrementerExceptionHandler) {
@@ -96,6 +100,10 @@ void OSSetAlarm(OSAlarm* alarm, s64 tick, OSAlarmHandler handler) {
     InsertAlarm(alarm, __OSGetSystemTime() + tick, handler);
 
     OSRestoreInterrupts(enabled);
+}
+
+//unused
+void OSSetAbsAlarm(){
 }
 
 void OSSetPeriodicAlarm(OSAlarm* alarm, s64 tick, s64 period,
@@ -222,6 +230,10 @@ static asm void DecrementerExceptionHandler(register u8 type,
 }
 
 void OSSetAlarmTag(OSAlarm* alarm, u32 tag) { alarm->tag = tag; }
+
+//unused
+void OSCancelAlarms(){
+}
 
 static BOOL OnReset(u32 pass, u32 event) {
     OSAlarm* iter;

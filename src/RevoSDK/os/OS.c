@@ -50,6 +50,11 @@ void __OSEVEnd(void);
 
 CW_FORCE_BSS(OS_c, __OSRebootParams);
 
+
+//unused
+void __OSIsDebuggerPresent(){
+}
+
 asm void __OSFPRInit(void) {
     // clang-format off
     nofralloc
@@ -140,8 +145,16 @@ paired_singles_disabled:
 
 static void DisableWriteGatherPipe(void) { PPCMthid2(PPCMfhid2() & ~HID2_WPE); }
 
+//unused
+void __OSGetBroadwayRev(){
+}
+
 u32 __OSGetHollywoodRev(void) {
     return *(u32*)OSPhysicalToCached(OS_PHYS_HOLLYWOOD_REV);
+}
+
+//unused
+void __OSGetGDDRVendorCode(){
 }
 
 void __OSGetIOSRev(OSIOSRev* rev) {
@@ -446,15 +459,15 @@ static void CheckTargets(void) {
 
 static void CheckFirmare(void){
     OSIOSRev rev;
-    const GXColor textColor = {0,0,255,0};
-    const GXColor bgColor = {255,255,255,0};
+    const GXColor bgColor = {0,0,255,0};
+    const GXColor textColor = {255,255,255,0};
 
     __OSGetIOSRev(&rev);
 
-    u32 minVersion = *(u32*)OSPhysicalToCached(OS_PHYS_MINIMUM_IOS_VERSION);
-    u32 myVersion = rev.idLo << 16 | rev.verMajor << 8 | rev.verMinor;
+    const u32 myVersion = rev.idLo << 16 | rev.verMajor << 8 | rev.verMinor;
     
-    if (rev.idLo != (minVersion >> 16) || (rev.idLo == (minVersion >> 16) && myVersion < minVersion)) {
+    if (rev.idLo != (OS_MINIMUM_IOS_VERSION >> 16)
+        || rev.idLo == (OS_MINIMUM_IOS_VERSION >> 16) && myVersion < OS_MINIMUM_IOS_VERSION) {
         OSReport("OS ERROR: This firmware is an improper version for this SDK. Please use a correct Firmware.\n");
         OSFatal(textColor, bgColor, "\n\nERROR #002\nAn error has occurred.\nPress the Eject Button, remove the\nGame Disc, and turn off the power to \nthe console. \nPlease read the Wii Operations Manual \nfor further instructions.\n");
 #line 1236
@@ -525,10 +538,10 @@ void OSInit(void) {
         mem1lo = *(void**)OSPhysicalToCached(OS_PHYS_USABLE_MEM1_START);
         if (mem1lo == NULL) {
             // Use the linker-generated arena if it is in MEM1...
-            if (OS_MEM_IS_MEM1(__ArenaLo)) {
+            if (OS_MEM_IS_MEM1(_db_stack_addr)) {
                 // ...and if the OS boot info does not specify one
                 mem1lo =
-                    BootInfo->arenaLo == NULL ? __ArenaLo : BootInfo->arenaLo;
+                    BootInfo->arenaLo == NULL ? _db_stack_addr : BootInfo->arenaLo;
 
                 /**
                  * Linker generates stack/arena in this order:
@@ -545,7 +558,7 @@ void OSInit(void) {
                  */
                 if (BootInfo->arenaLo == NULL && BI2DebugFlag != NULL &&
                     *BI2DebugFlag < 2) {
-                    mem1lo = ROUND_UP_PTR(_db_stack_end, 32);
+                    mem1lo = ROUND_UP_PTR(__ArenaLo, 32);
                 }
             } else {
                 // ???
@@ -567,12 +580,12 @@ void OSInit(void) {
         mem2lo = *(void**)OSPhysicalToCached(OS_PHYS_USABLE_MEM2_START);
         if (mem2lo != NULL) {
             // Use the linker-generated arena if it is in MEM2
-            if (OS_MEM_IS_MEM2(__ArenaLo)) {
-                mem2lo = __ArenaLo;
+            if (OS_MEM_IS_MEM2(_db_stack_addr)) {
+                mem2lo = _db_stack_addr;
 
                 // Use debugger stack if it would be wasted
                 if (BI2DebugFlag != NULL && *BI2DebugFlag < 2) {
-                    mem2lo = ROUND_UP_PTR(_db_stack_end, 32);
+                    mem2lo = ROUND_UP_PTR(_stack_addr, 32);
                 }
             }
             // First 2K of MEM2 is reserved?
@@ -648,10 +661,11 @@ void OSInit(void) {
                 DCInvalidateRange(&DriveInfo, sizeof(DVDDriveInfo));
                 DVDInquiryAsync(&DriveBlock, &DriveInfo, InquiryCallback);
             }
-        }
+        
 
-        if(GetAppType() == 0x80 && !__OSInReboot && !__DVDCheckDevice()){
-                OSReturnToMenu();
+            if(GetAppType() == 0x80 && !__OSInReboot && !__DVDCheckDevice()){
+                    OSReturnToMenu();
+            }
         }
 
         if (!__OSInIPL && !__OSInNandBoot) {
@@ -774,7 +788,7 @@ static asm void __OSDBJump(void){
 
     entry __OSDBJUMPSTART
 
-    bl __OSDBJUMPDEST
+    bla 0x60
 
     entry __OSDBJUMPEND
     // clang-format on
