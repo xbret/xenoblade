@@ -7,7 +7,7 @@ GX_FILES:=\
 	$(BUILD_DIR)/asm/RevoSDK/gx/GXFrameBuf.o\
 	$(BUILD_DIR)/src/RevoSDK/gx/GXLight.o\
 	$(BUILD_DIR)/asm/RevoSDK/gx/GXTexture.o\
-	$(BUILD_DIR)/asm/RevoSDK/gx/GXBump.o\
+	$(BUILD_DIR)/src/RevoSDK/gx/GXBump.o\
 	$(BUILD_DIR)/asm/RevoSDK/gx/GXTev.o\
 	$(BUILD_DIR)/asm/RevoSDK/gx/GXPixel.o\
 	$(BUILD_DIR)/src/RevoSDK/gx/GXDisplayList.o\
@@ -15,6 +15,9 @@ GX_FILES:=\
 	$(BUILD_DIR)/asm/RevoSDK/gx/GXPerf.o\
 
 DEPENDS += $(GX_FILES:.o=.d)
+
+#GXBump.c needs 1.0 for one function
+$(BUILD_DIR)/src/RevoSDK/gx/GXBump.o: MWCC_VERSION := 1.0
 
 $(BUILD_DIR)/src/RevoSDK/gx/gx.a: $(GX_FILES)
 	@echo Linking... $@

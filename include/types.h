@@ -58,4 +58,6 @@ typedef unsigned short wchar_t;
 		while (true) { }  \
 	}
 
+#define offsetof(ST, M) ((size_t) & (((ST*)0)->M))
+
 #endif

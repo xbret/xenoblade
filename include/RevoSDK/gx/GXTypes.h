@@ -12,9 +12,9 @@ extern "C" {
  */
 
 //! TODO: Many GX functions use 8-bit booleans.
-//! As those files are decompiled, update prototypes that use u8 -> GXBool8,
+//! As those files are decompiled, update prototypes that use u8 -> GXBool,
 //! so it is evident to callers that the 8-bit value is meant to be TRUE/FALSE
-typedef unsigned char GXBool8;
+typedef unsigned char GXBool;
 
 /**
  * Common structs

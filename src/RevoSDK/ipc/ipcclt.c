@@ -336,6 +336,14 @@ static s32 __ios_Ipc2(IPCRequestEx* req, IPCAsyncCallback callback) {
     return ret;
 }
 
+//unused
+void __ios_Ipc2WithTimeout(){
+}
+
+//unused
+void __timeout_cb(){
+}
+
 static s32 __ios_Open(IPCRequestEx* req, const char* path, IPCOpenMode mode) {
     s32 ret = IPC_RESULT_OK;
 
@@ -377,6 +385,10 @@ s32 IOS_Open(const char* path, IPCOpenMode mode) {
     return ret;
 }
 
+//unused
+void IOS_OpenWithTimeout(){
+}
+
 s32 IOS_CloseAsync(s32 fd, IPCAsyncCallback callback, void* callbackArg) {
     IPCRequestEx* req;
     s32 ret = __ios_Ipc1(fd, IPC_REQ_CLOSE, callback, callbackArg, &req);
@@ -395,6 +407,10 @@ s32 IOS_Close(s32 fd) {
     }
 
     return ret;
+}
+
+//unused
+void IOS_CloseWithTimeout(){
 }
 
 static s32 __ios_Read(IPCRequestEx* req, void* buf, s32 len) {

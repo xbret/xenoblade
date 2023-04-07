@@ -1,5 +1,33 @@
 #include "RevoSDK/cx/CXSecureUncompression.h"
 
+//unused
+void CXSecureUncompressAny(){
+}
+
+//unused
+void CXSecureUncompressRL(){
+}
+
+//unused
+void CXSecureUncompressLZ(){
+}
+
+//unused
+void CXiVerifyHuffmanTable_(){
+}
+
+//unused
+void CXSecureUncompressHuffman(){
+}
+
+//unused
+void CXiHuffImportTree(){
+}
+
+//unused
+void CXSecureUnfilterDiff(){
+}
+
 inline void someInline(u16* r3, u8 array[0x80], u32 offset, u32 i, u32 r29, u16 mask){
     if((r3[0] & mask) != 0){
 		u32 r10 = (i & ~1) + r29 + offset;
@@ -50,4 +78,20 @@ BOOL CXiLHVerifyTable(u16* r3, u32 r4) {
 	}
 
 	return TRUE;
+}
+
+//unused
+void CXSecureUncompressLH(){
+}
+
+//unused
+void RCAddCount_(){
+}
+
+//unused
+void RCSearch_(){
+}
+
+//unused
+void CXSecureUncompressLRC(){
 }

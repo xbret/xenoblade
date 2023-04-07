@@ -12,6 +12,10 @@ void DBInit(void) {
     DBVerbose = TRUE;
 }
 
+//unused
+void DBIsDebuggerPresent(){
+}
+
 void __DBExceptionDestinationAux(void) {
     const void* physCtx = (void*)OS_PHYS_CURRENT_CONTEXT_PHYS;
     OSContext* ctx = (OSContext*)OSPhysicalToCached(*(u32*)physCtx);
@@ -35,6 +39,14 @@ asm void __DBExceptionDestination(void){
 
 BOOL __DBIsExceptionMarked(u8 exc) {
     return __DBInterface->exceptionMask & (1 << exc);
+}
+
+//unused
+void __DBMarkException(){
+}
+
+//unused
+void __DBSetPresent(){
 }
 
 void DBPrintf(const char* msg, ...) {}

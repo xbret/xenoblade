@@ -191,6 +191,14 @@ end:
     return ret;
 }
 
+//unused
+void ISFS_OpenLibEx(){
+}
+
+//unused
+void ISFS_CloseLib(){
+}
+
 s32 _isfsFuncCb(s32 result, void* arg) {
     FSCommandBlock* block = (FSCommandBlock*)arg;
 
@@ -231,7 +239,23 @@ static s32 _FSGetStatsCb(s32 result, FSCommandBlock* block) {
     return IPC_RESULT_OK;
 }
 
-/*
+//unused
+void ISFS_Format(){
+}
+
+//unused
+void ISFS_FormatAsync(){
+}
+
+//unused
+void ISFS_GetStats(){
+}
+
+//unused
+void ISFS_GetStatsAsync(){
+}
+
+//unused
 s32 ISFS_CreateDir(const char* path, u32 attr, u32 ownerPerm,
                          u32 groupPerm, u32 otherPerm) {
     FSCommandBlock* block;
@@ -269,7 +293,6 @@ end:
 
     return ret;
 }
-*/
 
 s32 ISFS_CreateDirAsync(const char* path, u32 attr, u32 ownerPerm,
                               u32 groupPerm, u32 otherPerm,
@@ -445,6 +468,14 @@ s32 ISFS_ReadDirAsync(const char* path, char* filesOut, u32* fileCountOut,
 
     return IOS_IoctlvAsync(__fsFd, IPC_IOCTL_READ_DIR, inCount, outCount,
                            vectors, _isfsFuncCb, block);
+}
+
+//unused
+void ISFS_SetAttr(){
+}
+
+//unused
+void ISFS_SetAttrAsync(){
 }
 
 s32 ISFS_GetAttr(const char* path, u32* ownerIdOut, u16* groupIdOut,
@@ -676,6 +707,11 @@ s32 ISFS_RenameAsync(const char* from, const char* to,
 }
 
 
+//unused
+s32 ISFS_GetUsage(const char* path, s32* blockCountOut, s32* fileCountOut){
+}
+
+
 s32 ISFS_GetUsageAsync(const char* path, s32* blockCountOut,
                         s32* fileCountOut, FSAsyncCallback callback, void* callbackArg) {
     s32 ret;
@@ -820,6 +856,14 @@ s32 ISFS_CreateFileAsync(const char* path, u32 attr, u32 ownerPerm,
                           sizeof(FSFileIoctl), NULL, 0, _isfsFuncCb, block);
 }
 
+//unused
+void ISFS_SetFileVersionControl(){
+}
+
+//unused
+void ISFS_SetFileVersionControlAsync(){
+}
+
 s32 ISFS_Open(const char* path, IPCOpenMode mode) {
     s32 ret;
     size_t len;
@@ -875,7 +919,8 @@ s32 ISFS_OpenAsync(const char* path, IPCOpenMode mode,
     return IOS_OpenAsync((const char*)block->ioctlWork, mode, _isfsFuncCb,
                          block);
 }
-/*
+
+//unused
 s32 ISFS_GetFileStats(s32 fd, FSFileStats* statsOut) {
     if (statsOut == NULL || (u32)statsOut % 32 != 0) {
         return IPC_RESULT_INVALID;
@@ -883,7 +928,7 @@ s32 ISFS_GetFileStats(s32 fd, FSFileStats* statsOut) {
 
     return IOS_Ioctl(fd, IPC_IOCTL_GET_FILE_STATS, NULL, 0, statsOut,
                      sizeof(FSFileStats));
-}*/
+}
 
 static s32 _FSGetFileStatsCb(s32 result, FSCommandBlock* block){
     if(result == IPC_RESULT_OK){
@@ -914,10 +959,11 @@ s32 ISFS_GetFileStatsAsync(s32 fd, FSFileStats* statsOut,
     return IOS_IoctlAsync(fd, IPC_IOCTL_GET_FILE_STATS, NULL, 0, block,
                           sizeof(FSFileStats), _isfsFuncCb, block);
 }
-/*
+
+//unused
 s32 ISFS_Seek(s32 fd, s32 offset, IPCSeekMode mode) {
     return IOS_Seek(fd, offset, mode);
-}*/
+}
 
 s32 ISFS_SeekAsync(s32 fd, s32 offset, IPCSeekMode mode,
                          FSAsyncCallback callback, void* callbackArg) {
@@ -1006,6 +1052,10 @@ s32 ISFS_CloseAsync(s32 fd, FSAsyncCallback callback, void* callbackArg) {
     block->callbackState = CB_STATE_NONE;
 
     return IOS_CloseAsync(fd, _isfsFuncCb, block);
+}
+
+//unused
+void ISFS_Shutdown(){
 }
 
 s32 ISFS_ShutdownAsync(FSAsyncCallback callback, void* callbackArg) {

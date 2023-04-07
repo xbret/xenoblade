@@ -3,6 +3,18 @@
 
 const u32 __EXIFreq = 4;
 
+//unused
+void EXIGetConsoleType(){
+}
+
+//unused
+void EXIWait(){
+}
+
+//unused
+void EXIReadReg(){
+}
+
 BOOL EXIWriteReg(EXIChannel chan, u32 dev, u32 r5, const void* buf,
                  s32 len) {
     BOOL error = FALSE;
@@ -39,4 +51,20 @@ BOOL EXIWriteReg(EXIChannel chan, u32 dev, u32 r5, const void* buf,
     error |= !EXIUnlock(chan);
 
     return error == FALSE;
+}
+
+//unused
+void EXIReadRam(){
+}
+
+//unused
+void EXIWriteRam(){
+}
+
+//unused
+void EXIReadRamImm(){
+}
+
+//unused
+void EXIWriteRamImm(){
 }

@@ -17,10 +17,18 @@ void GXInitLightAttnA(GXLightObj* light, f32 a, f32 b, f32 c) {
     light->ac = c;
 }
 
+//unused
+void GXGetLightAttnA(){
+}
+
 void GXInitLightAttnK(GXLightObj* light, f32 a, f32 b, f32 c) {
     light->ka = a;
     light->kb = b;
     light->kc = c;
+}
+
+//unused
+void GXGetLightAttnK(){
 }
 
 void GXInitLightSpot(GXLightObj* light, f32 angle, GXSpotFn fn) {
@@ -166,8 +174,16 @@ void GXInitSpecularDir(GXLightObj* light, f32 x, f32 y, f32 z) {
     light->posZ = -9.9999998E17f * z;
 }
 
+//unused
+void GXInitSpecularDirHA(){
+}
+
 void GXInitLightColor(GXLightObj* light, GXColor color) {
     *(u32*)&light->color = *(u32*)&color;
+}
+
+//unused
+void GXGetLightColor(){
 }
 
 asm void GXLoadLightObjImm(register GXLightObj* light, register u32 id) {
@@ -320,7 +336,7 @@ void GXSetNumChans(u8 num) {
     __GXData->dirtyFlags |= 0x4;
 }
 
-void GXSetChanCtrl(GXChannelID chan, GXBool8 r4, GXColorSrc src0,
+void GXSetChanCtrl(GXChannelID chan, GXBool r4, GXColorSrc src0,
                    GXColorSrc src1, GXLightID light, GXDiffuseFn diffFn,
                    GXAttnFn attnFn) {
     u32 field = 0;

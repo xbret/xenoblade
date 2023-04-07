@@ -14,6 +14,10 @@ BOOL DSPCheckMailFromDSP(void) {
     return (DSP_HW_REGS[DSP_CPUMBOX_H] & DSP_CPUMBOX_H_STATUS) != 0;
 }
 
+//unused
+void DSPReadCPUToDSPMbox(){
+}
+
 DSPMail DSPReadMailFromDSP(void) {
     return (DSPMail)(DSP_HW_REGS[DSP_CPUMBOX_H] << 16 |
                      DSP_HW_REGS[DSP_CPUMBOX_L]);
@@ -73,6 +77,22 @@ void DSPInit(void) {
 }
 
 BOOL DSPCheckInit(void) { return __DSP_init_flag; }
+
+//unused
+void DSPReset(){
+}
+
+//unused
+void DSPHalt(){
+}
+
+//unused
+void DSPUnhalt(){
+}
+
+//unused
+void DSPGetDMAStatus(){
+}
 
 DSPTask* DSPAddTask(DSPTask* task) {
     BOOL enabled;

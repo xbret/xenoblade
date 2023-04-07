@@ -233,6 +233,10 @@ s32 ARCConvertPathToEntrynum(ARCHandle* handle, const char* path) {
     }
 }
 
+//unused
+void ARCEntrynumIsDir(){
+}
+
 static u32 entryToPath(ARCHandle* handle, u32 entrynum, char* string,
                        u32 maxlen) {
     char* name;

@@ -17,6 +17,19 @@ asm void PPCMtmsr(register u32 val) {
     // clang-format on
 }
 
+
+//unused
+asm void PPCOrMsr(){
+}
+
+//unused
+asm void PPCAndMsr(){
+}
+
+//unused
+asm void PPCAndCMsr(){
+}
+
 asm u32 PPCMfhid0(void) {
     // clang-format off
     nofralloc
@@ -31,6 +44,10 @@ asm void PPCMthid0(register u32 val) {
     mthid0 val
     blr
     // clang-format on
+}
+
+//unused
+asm void PPCMfhid1(){
 }
 
 asm u32 PPCMfl2cr(void) {
@@ -57,12 +74,20 @@ asm void PPCMtdec(register u32 val) {
     // clang-format on
 }
 
+//unused
+asm void PPCMfdec(){
+}
+
 asm void PPCSync(void) {
     // clang-format off
     nofralloc
     sc
     blr
     // clang-format on
+}
+
+//unused
+asm void PPCEieio(){
 }
 
 asm void PPCHalt(void) {
@@ -78,12 +103,20 @@ loop:
     // clang-format on
 }
 
+//unused
+asm void PPCMfmmcr0(){
+}
+
 asm void PPCMtmmcr0(register u32 val) {
     // clang-format off
     nofralloc
     mtmmcr0 val
     blr
     // clang-format on
+}
+
+//unused
+asm void PPCMfmmcr1(){
 }
 
 asm void PPCMtmmcr1(register u32 val) {
@@ -94,12 +127,20 @@ asm void PPCMtmmcr1(register u32 val) {
     // clang-format on
 }
 
+//unused
+asm void PPCMfpmc1(){
+}
+
 asm void PPCMtpmc1(register u32 val) {
     // clang-format off
     nofralloc
     mtpmc1 val
     blr
     // clang-format on
+}
+
+//unused
+asm void PPCMfpmc2(){
 }
 
 asm void PPCMtpmc2(register u32 val) {
@@ -110,6 +151,10 @@ asm void PPCMtpmc2(register u32 val) {
     // clang-format on
 }
 
+//unused
+asm void PPCMfpmc3(){
+}
+
 asm void PPCMtpmc3(register u32 val) {
     // clang-format off
     nofralloc
@@ -118,12 +163,24 @@ asm void PPCMtpmc3(register u32 val) {
     // clang-format on
 }
 
+//unused
+asm void PPCMfpmc4(){
+}
+
 asm void PPCMtpmc4(register u32 val){
     // clang-format off
     nofralloc
     mtpmc4 val
     blr
     // clang-format on
+}
+
+//unused
+asm void PPCMfsia(){
+}
+
+//unused
+asm void PPCMtsia(){
 }
 
 u32 PPCMffpscr(void) {
@@ -188,7 +245,35 @@ asm void PPCMtwpar(register u32 val) {
     // clang-format on
 }
 
+//unused
+asm void PPCMfdmaU(){
+}
+
+//unused
+asm void PPCMfdmaL(){
+}
+
+//unused
+asm void PPCMtdmaU(){
+}
+
+//unused
+asm void PPCMtdmaL(){
+}
+
+//unused
+asm void PPCMfpvr(){
+}
+
+//unused
+void PPCEnableSpeculation(){
+}
+
 void PPCDisableSpeculation(void) { PPCMthid0(PPCMfhid0() | HID0_SPD); }
+
+//unused
+asm void PPCSetFpIEEEMode(){
+}
 
 asm void PPCSetFpNonIEEEMode(void) {
     // clang-format off
@@ -196,6 +281,10 @@ asm void PPCSetFpNonIEEEMode(void) {
     mtfsb1 29
     blr
     // clang-format on
+}
+
+//unused
+void PPCMfhid4(){
 }
 
 void PPCMthid4(register u32 val) {

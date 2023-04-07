@@ -7,6 +7,7 @@ static GXFifoObj DisplayListFifo;
 static GXData __savedGXdata;
 static GXFifoObj OldCPUFifo;
 
+//unused
 void GXBeginDisplayList(void* list, u32 size) {
     GXFifoObj* fifo = &DisplayListFifo;
 
@@ -32,6 +33,7 @@ void GXBeginDisplayList(void* list, u32 size) {
     GXResetWriteGatherPipe();
 }
 
+//unused
 u32 GXEndDisplayList(void) {
     u8 wrap;
     BOOL enabled;
@@ -58,7 +60,8 @@ u32 GXEndDisplayList(void) {
     }
 
     return 0;
-}*/
+}
+*/
 
 void GXCallDisplayList(void* list, u32 size) {
     if (__GXData->dirtyFlags != 0) {

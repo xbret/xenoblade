@@ -58,6 +58,10 @@ void AIInitDMA(void* buffer, u32 length) {
     OSRestoreInterrupts(enabled);
 }
 
+//unused
+void AIGetDMAEnableFlag(){
+}
+
 void AIStartDMA(void) { DSP_HW_REGS[DSP_AI_DMA_CSR] |= DSP_AI_DMA_CSR_PLAY; }
 
 void AIStopDMA(void) { DSP_HW_REGS[DSP_AI_DMA_CSR] &= ~DSP_AI_DMA_CSR_PLAY; }
@@ -127,6 +131,10 @@ void AIInit(void* stack) {
 
         __AI_init_flag = TRUE;
     }
+}
+
+//unused
+void AIReset(){
 }
 
 void __AIDHandler(s32 intr, OSContext* ctx) {
@@ -242,4 +250,8 @@ void __AI_SRC_INIT(void) {
     while (end + wait > OSGetTime()) {
         ;
     }
+}
+
+//unused
+void __ai_src_get_time(){
 }

@@ -6,7 +6,7 @@ extern "C" {
 
 #include "RevoSDK/gx/GX.h"
 //#include "RevoSDK/gx/GXAttr.h"
-//#include "RevoSDK/gx/GXBump.h"
+#include "RevoSDK/gx/GXBump.h"
 //#include "RevoSDK/gx/GXDisplayList.h"
 //#include "RevoSDK/gx/GXFifo.h"
 #include "RevoSDK/gx/GXFrameBuf.h"

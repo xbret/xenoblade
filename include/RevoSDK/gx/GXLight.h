@@ -40,7 +40,7 @@ void GXLoadLightObjIndx(u32 index, u32 id);
 void GXSetChanAmbColor(GXChannelID chan, GXColor color);
 void GXSetChanMatColor(GXChannelID chan, GXColor color);
 void GXSetNumChans(u8 num);
-void GXSetChanCtrl(GXChannelID chan, GXBool8 r4, GXColorSrc src0,
+void GXSetChanCtrl(GXChannelID chan, GXBool r4, GXColorSrc src0,
                    GXColorSrc src1, GXLightID light, GXDiffuseFn diffFn,
                    GXAttnFn attnFn);
 

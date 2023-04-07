@@ -13,6 +13,18 @@ static void DelReqInfo(IPCRequestEx* req, s32 fd);
 
 CW_FORCE_BSS(IPCPROFILE_c, IpcFdArray);
 
+//unused
+void IPCGetNumPendingReqs(){
+}
+
+//unused
+void IPCGetNumUnIssuedReqs(){
+}
+
+//unused
+void IPCGetQueueStatus(){
+}
+
 void IPCiProfInit(void) {
     int i;
 

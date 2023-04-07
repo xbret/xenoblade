@@ -1,9 +1,9 @@
 MEM_FILES:=\
-	$(BUILD_DIR)/asm/RevoSDK/mem/mem_heapCommon.o\
+	$(BUILD_DIR)/src/RevoSDK/mem/mem_heapCommon.o\
 	$(BUILD_DIR)/asm/RevoSDK/mem/mem_expHeap.o\
-	$(BUILD_DIR)/asm/RevoSDK/mem/mem_frameHeap.o\
-	$(BUILD_DIR)/asm/RevoSDK/mem/mem_allocator.o\
-	$(BUILD_DIR)/asm/RevoSDK/mem/mem_list.o\
+	$(BUILD_DIR)/src/RevoSDK/mem/mem_frameHeap.o\
+	$(BUILD_DIR)/src/RevoSDK/mem/mem_allocator.o\
+	$(BUILD_DIR)/src/RevoSDK/mem/mem_list.o\
 
 DEPENDS += $(MEM_FILES:.o=.d)
 
