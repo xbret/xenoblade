@@ -1,5 +1,5 @@
 #include "types.h"
-#include "stl/typeinfo" //#include <typeinfo>
+#include "typeinfo" //#include <typeinfo>
 
 
 //idk what this is

@@ -28,7 +28,7 @@ OS_FILES:=\
 	$(BUILD_DIR)/src/RevoSDK/os/OSPlayRecord.o\
 	$(BUILD_DIR)/src/RevoSDK/os/OSStateFlags.o\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSNet.o\
-	$(BUILD_DIR)/asm/RevoSDK/os/OSNandbootInfo.o\
+	$(BUILD_DIR)/src/RevoSDK/os/OSNandbootInfo.o\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSPlayTime.o\
 	$(BUILD_DIR)/src/RevoSDK/os/OSCrc.o\
 	$(BUILD_DIR)/asm/RevoSDK/os/OSLaunch.o\

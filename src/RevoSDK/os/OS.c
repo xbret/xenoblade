@@ -8,7 +8,7 @@
 #include "RevoSDK/PAD.h"
 #include "RevoSDK/SC.h"
 #include "RevoSDK/SI.h"
-#include "stl/string.h" //<string.h>
+#include "string.h" //<string.h>
 
 #define INVALID_NAME_CHAR(c) ('0' > c || ('9' < c && c < 'A') || c > 'Z')
 

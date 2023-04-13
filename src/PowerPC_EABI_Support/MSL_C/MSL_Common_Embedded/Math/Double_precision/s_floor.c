@@ -20,7 +20,7 @@
  *	Inexact flag raised if x not equal to floor(x).
  */
 
-#include "stl/fdlibm.h"
+#include "fdlibm.h"
 
 #ifdef __STDC__
 static const double huge = 1.0e300;

@@ -1,7 +1,7 @@
 #include "RevoSDK/FS.h"
 #include "RevoSDK/IPC.h"
 #include "RevoSDK/OS.h"
-#include "stl/string.h"
+#include "string.h"
 
 /**
  * Ioctl arguments/filesystem specifications adapted from:

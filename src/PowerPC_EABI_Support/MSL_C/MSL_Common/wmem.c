@@ -1,5 +1,5 @@
-#include "stl/wchar.h"
-#include "stl/mem.h"
+#include "wchar.h"
+#include "mem.h"
 
 void wmemcpy(wchar_t* dest, const wchar_t* src, size_t n){
     memcpy(dest,src,n*2);

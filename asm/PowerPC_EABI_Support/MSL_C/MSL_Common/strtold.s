@@ -1421,8 +1421,7 @@
 /* 802C3D4C 0028D30C  4E 80 00 20 */	blr 
 .endfn __strtold
 
-#might be strtod
-.fn strtof, global
+.fn strtod, global
 /* 802C3D50 0028D310  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802C3D54 0028D314  7C 08 02 A6 */	mflr r0
 /* 802C3D58 0028D318  3C 80 80 2C */	lis r4, __StringRead@ha
@@ -1447,7 +1446,7 @@
 /* 802C3DA0 0028D360  7C 08 03 A6 */	mtlr r0
 /* 802C3DA4 0028D364  38 21 00 20 */	addi r1, r1, 0x20
 /* 802C3DA8 0028D368  4E 80 00 20 */	blr 
-.endfn strtof
+.endfn strtod
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

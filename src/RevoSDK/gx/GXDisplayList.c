@@ -1,6 +1,6 @@
 #include "RevoSDK/GX.h"
 #include "RevoSDK/OS.h"
-#include "stl/string.h" //<string.h>
+#include "string.h" //<string.h>
 
 /*
 static GXFifoObj DisplayListFifo;

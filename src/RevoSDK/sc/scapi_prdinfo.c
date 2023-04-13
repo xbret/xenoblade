@@ -1,6 +1,6 @@
 #include "RevoSDK/OS.h"
 #include "RevoSDK/SC.h"
-#include "stl/string.h" //<string.h>
+#include "string.h" //<string.h>
 
 #define XOR_KEY 0x73B5DBFA
 

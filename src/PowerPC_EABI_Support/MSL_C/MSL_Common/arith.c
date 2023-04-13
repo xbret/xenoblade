@@ -13,11 +13,11 @@ long labs(long __x)
 }
 
 //unused
-void llabs(){
+s64 llabs(s64 __x){
 }
 
 //unused
-void div(){
+div_t div(s32 __numer, s32 __denom){
 }
 
 //unused

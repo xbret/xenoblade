@@ -1,5 +1,5 @@
-#include "types.h"
-#include "stl/mem.h"
+#include "mem.h"
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common/mem_funcs.h"
 
 void* memmove(void* dst, const void* src, size_t len)
 {

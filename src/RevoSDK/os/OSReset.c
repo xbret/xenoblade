@@ -3,7 +3,7 @@
 #include "RevoSDK/PAD.h"
 #include "RevoSDK/SC.h"
 #include "RevoSDK/VI.h"
-#include "stl/string.h" //<string.h>
+#include "string.h" //<string.h>
 
 static OSShutdownFunctionQueue ShutdownFunctionQueue;
 

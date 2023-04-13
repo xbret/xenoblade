@@ -1,7 +1,7 @@
 #ifndef _TYPEINFO
 #define _TYPEINFO
 
-#include "stl/exception" //#include <exception>
+#include "exception" //#include <exception>
 
 namespace std{
     class bad_cast : public exception {

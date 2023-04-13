@@ -3,7 +3,7 @@
 #include "RevoSDK/mem/mem_list.h"
 #include "RevoSDK/OS.h"
 #include "types.h"
-#include "stl/string.h" //<string.h>
+#include "string.h" //<string.h>
 #ifdef __cplusplus
 extern "C" {
 #endif

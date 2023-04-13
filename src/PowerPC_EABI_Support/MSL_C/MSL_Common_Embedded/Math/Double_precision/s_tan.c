@@ -41,7 +41,7 @@
  *	TRIG(x) returns trig(x) nearly rounded
  */
 
-#include "stl/fdlibm.h"
+#include "fdlibm.h"
 
 #ifdef __STDC__
 double tan(double x)

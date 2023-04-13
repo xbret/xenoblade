@@ -81,9 +81,9 @@
  *---------------
  */
 
-#include "stl/fdlibm.h"
-#include "PowerPC_EABI_Support/MSL_C/MSL_Common/errno.h"
-#include "PowerPC_EABI_Support/MSL_C/MSL_Common/float.h"
+#include "fdlibm.h"
+#include "errno.h"
+#include "float.h"
 
 #ifdef __STDC__
 static const double one = 1.0, tiny = 1.0e-300;
@@ -107,7 +107,7 @@ double __ieee754_sqrt(x) double x;
 
 	/* take care of Inf and NaN */
 	if ((ix0 & 0x7ff00000) == 0x7ff00000) {
-		errno = 33;
+		errno = EDOM;
 		return x * x + x; /* sqrt(NaN)=NaN, sqrt(+inf)=+inf
 		             sqrt(-inf)=sNaN */
 	}
@@ -116,8 +116,8 @@ double __ieee754_sqrt(x) double x;
 		if (((ix0 & (~sign)) | ix1) == 0)
 			return x; /* sqrt(+-0) = +-0 */
 		else if (ix0 < 0) {
-			errno = 33;
-			return NaN;
+			errno = EDOM;
+			return NAN;
 		} /* sqrt(-ve) = sNaN */
 	}
 	/* normalize x */

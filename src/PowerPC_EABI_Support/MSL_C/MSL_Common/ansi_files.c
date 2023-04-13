@@ -117,8 +117,6 @@ void __close_all()
 	FILE* p = &__files[0];
 	FILE* plast;
 
-	//__begin_critical_region(2);
-
 	while (p) {
 		if (p->mMode.file_kind != __closed_file) {
 			fclose(p);
@@ -134,8 +132,6 @@ void __close_all()
 				plast->mNextFile = nullptr;
 		}
 	}
-
-	//__end_critical_region(2);
 }
 
 //unused

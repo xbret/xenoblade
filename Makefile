@@ -97,7 +97,7 @@ TRANSFORM_DEP := tools/transform-win.py
 endif
 
 # Options
-INCLUDES := -i include/ -i src/
+INCLUDES := -i include/ -i src/ -i include/stl
 ASM_INCLUDES := -I include/
 
 ASFLAGS := -mgekko $(ASM_INCLUDES)

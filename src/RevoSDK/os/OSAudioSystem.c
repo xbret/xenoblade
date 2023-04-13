@@ -1,6 +1,6 @@
 #include "RevoSDK/DSP.h"
 #include "RevoSDK/OS.h"
-#include "stl/string.h" //<string.h>
+#include "string.h" //<string.h>
 
 #define DSP_CODE_WORK_MEM ((void*)0x81000000)
 #define DSP_CODE_WORK_MEM_BACKUP ((u8*)OSGetArenaHi() - sizeof(DSPInitCode))

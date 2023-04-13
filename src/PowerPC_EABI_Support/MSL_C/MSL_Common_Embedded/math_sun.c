@@ -1,4 +1,4 @@
-#include "stl/fdlibm.h"
+#include "fdlibm.h"
 
 double scalbn(double x, int y) {
     int sp8;

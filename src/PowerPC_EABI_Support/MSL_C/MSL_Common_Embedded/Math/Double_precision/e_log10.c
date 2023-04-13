@@ -44,8 +44,8 @@
  * shown.
  */
 
-#include "stl/fdlibm.h"
-#include "PowerPC_EABI_Support/MSL_C/MSL_Common/errno.h"
+#include "fdlibm.h"
+#include "errno.h"
 
 #ifdef __STDC__
 static const double
@@ -76,11 +76,11 @@ double __ieee754_log10(x) double x;
 	k = 0;
 	if (hx < 0x00100000) { /* x < 2**-1022  */
 		if (((hx & 0x7fffffff) | lx) == 0) {
-			errno = 33;
+			errno = EDOM;
 			return -two54 / zero;
 		} /* log(+-0)=-inf */
 		if (hx < 0) {
-			errno = 33;
+			errno = EDOM;
 			return (x - x) / zero;
 		} /* log(-#) = NaN */
 		k -= 54;

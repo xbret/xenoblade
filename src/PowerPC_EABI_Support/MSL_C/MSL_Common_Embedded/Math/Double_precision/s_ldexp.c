@@ -12,7 +12,7 @@
  * ====================================================
  */
 
-#include "stl/fdlibm.h"
+#include "fdlibm.h"
 #include "RevoSDK/math.h" /* for isfinite macro */
 
 

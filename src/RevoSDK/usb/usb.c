@@ -1,7 +1,7 @@
 #include "RevoSDK/FS.h"
 #include "RevoSDK/OS.h"
 #include "RevoSDK/USB.h"
-#include "stl/stdio.h" //<stdio.h>
+#include "stdio.h" //<stdio.h>
 
 /**
  * Documentation from WiiBrew:

@@ -1,4 +1,4 @@
-#include "stl/wctype.h"
+#include "wctype.h"
 
 
 #define ctype_alpha  0x0001

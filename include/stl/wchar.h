@@ -5,12 +5,11 @@
 
 #ifdef __cplusplus
 extern "C" {
-#endif // ifdef __cplusplus
+#endif
 
-void wmemcpy(wchar_t* dest, const wchar_t* src, size_t n);
-wchar_t* wmemchr(wchar_t* s, wchar_t c, int n);
-
-void* memmove(void*, const void*, size_t);
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common/wchar_io.h"
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common/wmem.h"
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common/wstring.h"
 
 #ifdef __cplusplus
 };

@@ -18,7 +18,7 @@
  * use __kernel_rem_pio2()
  */
 
-#include "stl/fdlibm.h"
+#include "fdlibm.h"
 #include "RevoSDK/math.h"
 
 /*

@@ -3,8 +3,8 @@
 #define MSL_STRING_H
 #include "types.h"
 
-#include "stl/mem.h"
-#include "stl/extras.h"
+#include "mem.h"
+#include "extras.h"
 #ifdef __cplusplus
 extern "C" {
 #endif

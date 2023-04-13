@@ -3,7 +3,7 @@
 #include "RevoSDK/DSP.h"
 #include "RevoSDK/EXI.h"
 #include "RevoSDK/OS.h"
-#include "stl/string.h" //<string.h>
+#include "string.h" //<string.h>
 
 static OSInterruptHandler* InterruptHandlerTable;
 s64 __OSLastInterruptTime;

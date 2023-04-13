@@ -111,9 +111,9 @@
  */
 
 #include "types.h"
-#include "PowerPC_EABI_Support/MSL_C/MSL_Common/errno.h"
-#include "PowerPC_EABI_Support/MSL_C/MSL_Common/float.h"
-#include "stl/fdlibm.h"
+#include "errno.h"
+#include "float.h"
+#include "fdlibm.h"
 
 #ifndef _DOUBLE_IS_32BITS
 
@@ -254,8 +254,8 @@ double __ieee754_pow(x, y) double x, y;
 	   implementation defined.  */
 
 	if (((((int)hx >> 31) + 1) | yisint) == 0) {
-		errno = 33;
-		return (double)NaN;
+		errno = EDOM;
+		return (double)NAN;
 	};
 
 	/* |y| is huge */

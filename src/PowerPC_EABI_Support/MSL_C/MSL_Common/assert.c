@@ -1,5 +1,5 @@
-#include "stl/assert.h"
-#include "stl/stdio.h"
+#include "assert.h"
+#include "stdio.h"
 
 extern void abort();
 

@@ -1,7 +1,7 @@
 ADX_FILES :=\
 	$(BUILD_DIR)/asm/CriWare/adx/adxf/adx_fini.o\
 	$(BUILD_DIR)/asm/CriWare/adx/adxf/adx_fs.o\
-	$(BUILD_DIR)/asm/CriWare/adx/adxf/adx_fcch.o\
+	$(BUILD_DIR)/src/CriWare/adx/adxf/adx_fcch.o\
 	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_fsvr.o\
 	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_inis.o\
 	$(BUILD_DIR)/asm/CriWare/adx/adxt/adx_lsc.o\

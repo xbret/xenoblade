@@ -1,7 +1,7 @@
 #pragma once
 
 #include "types.h"
-#include "stl/string.h"
+#include "string.h"
 #include "kyoshin/"
 
 struct PackHeader{

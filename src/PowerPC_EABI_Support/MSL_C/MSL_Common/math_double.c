@@ -1,5 +1,5 @@
-#include "stl/fdlibm.h"
-#include "stl/math.h"
+#include "fdlibm.h"
+#include "math.h"
 
 float sqrtf(float f){
     return sqrt(f);

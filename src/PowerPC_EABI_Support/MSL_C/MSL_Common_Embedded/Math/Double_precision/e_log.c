@@ -67,8 +67,8 @@
  * to produce the hexadecimal values shown.
  */
 
-#include "stl/fdlibm.h"
-#include "PowerPC_EABI_Support/MSL_C/MSL_Common/errno.h"
+#include "fdlibm.h"
+#include "errno.h"
 
 #ifdef __STDC__
 static const double
@@ -107,7 +107,7 @@ double __ieee754_log(x) double x;
 		if (((hx & 0x7fffffff) | lx) == 0)
 			return -two54 / zero; /* log(+-0)=-inf */
 		if (hx < 0) {
-			errno = 33;
+			errno = EDOM;
 			return (x - x) / zero;
 		} /* log(-#) = NaN */
 		k -= 54;

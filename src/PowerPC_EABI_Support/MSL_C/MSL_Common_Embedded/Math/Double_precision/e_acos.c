@@ -35,10 +35,9 @@
  * Function needed: sqrt
  */
 
-#include "stl/fdlibm.h"
-#include "PowerPC_EABI_Support/MSL_C/MSL_Common/errno.h"
-#include "PowerPC_EABI_Support/MSL_C/MSL_Common/float.h"
-#include "RevoSDK/math.h"
+#include "fdlibm.h"
+#include "errno.h"
+#include "math.h"
 
 #ifdef __STDC__
 static const double
@@ -77,8 +76,8 @@ double __ieee754_acos(x) double x;
 		if(hx>0) return 0.0;		/* acos(1) = 0  */
 		else return pi+2.0*pio2_lo;	/* acos(-1)= pi */
 	    }
-		errno = 33;
-	    return NaN;		/* acos(|x|>1) is NaN */
+		errno = EDOM;
+	    return NAN;		/* acos(|x|>1) is NaN */
 	}
 	if(ix<0x3fe00000) {	/* |x| < 0.5 */
 	    if(ix<=0x3c600000) return pio2_hi+pio2_lo;/*if|x|<2**-57*/

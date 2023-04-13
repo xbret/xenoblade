@@ -1,6 +1,6 @@
 #include "RevoSDK/arc/arc.h"
 #include "RevoSDK/OS.h"
-#include "stl/ctype.h"
+#include "ctype.h"
 
 /**
  * Modified from decompilation by riidefi in WiiCore

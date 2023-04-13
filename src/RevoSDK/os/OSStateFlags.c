@@ -1,6 +1,6 @@
 #include "RevoSDK/NAND.h"
 #include "RevoSDK/OS.h"
-#include "stl/string.h" //<string.h>
+#include "string.h" //<string.h>
 
 static OSStateFlags StateFlags ALIGN(32);
 

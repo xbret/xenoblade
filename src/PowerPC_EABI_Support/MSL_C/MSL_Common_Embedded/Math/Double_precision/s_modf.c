@@ -21,7 +21,7 @@
  *	No exception.
  */
 
-#include "stl/fdlibm.h"
+#include "fdlibm.h"
 
 #ifdef __STDC__
 static const double one = 1.0;
