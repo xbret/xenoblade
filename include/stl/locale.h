@@ -2,7 +2,7 @@
 #define STL_LOCALE_H
 
 #include "types.h"
-#include "mbstring.h"
+#include "stdlib.h"
 
 #ifdef __cplusplus
 extern "C" {

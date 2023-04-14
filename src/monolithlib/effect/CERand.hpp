@@ -1,9 +1,11 @@
 #pragma once
 
 #include "types.h"
-#include "Vector3.h"
 #include "limits.h"
 #include "mm/Random.hpp"
+#include "mm/Math.hpp"
+
+using namespace mm;
 
 
 class IRandomizer {

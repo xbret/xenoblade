@@ -10,16 +10,6 @@ int sprintf(char*, const char*, ...);
 int snprintf(char*, size_t, const char*, ...);
 int vsprintf(char*, const char*, va_list);
 int vsnprintf(char*, size_t, const char*, va_list);
-void fprintf(FILE*, const char* format, ...);
-
-void __StringWrite(void);
-void __FileWrite(int, long, int);
-void __pformatter(void);
-void float2str(void);
-void round_decimal(void);
-void double2hex(void);
-void longlong2str(void);
-void long2str(void);
-void parse_format(void);
+int fprintf(FILE*, const char* format, ...);
 
 #endif

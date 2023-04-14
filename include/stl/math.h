@@ -2,7 +2,6 @@
 #define _MATH_H
 
 #include "types.h"
-#include "float.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/math_api.h"
 
 #ifdef __cplusplus
@@ -27,6 +26,15 @@ extern "C" {
 #define HALF_PI 1.5707964f
 
 #define LONG_TAU 6.2831854820251465
+
+
+extern int __float_nan[];
+extern int __float_huge[];
+extern int __double_huge[];
+
+#define INFINITY (*(float*) __float_huge)	
+#define NAN (*(float*) __float_nan)
+#define HUGE_VAL (*(double*) __double_huge)
 
 
 inline long double fabsl(long double x) {

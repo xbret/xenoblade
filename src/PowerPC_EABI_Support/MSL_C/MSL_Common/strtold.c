@@ -1,17 +1,13 @@
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common/strtold.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/stdio_api.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/ansi_fp.h"
+#include "PowerPC_EABI_Support/MSL_C/PPC_EABI/math_ppc.h"
 #include "errno.h"
 #include "locale.h"
 #include "ctype.h"
 #include "math.h"
 #include "mem.h"
 #include "limits.h"
-
-extern double nan(const char *);
-
-#define LDBL_MAX					0x1.fffffffffffffP1023L
-#define LDBL_EPSILON				0x1.0000000000000P-52L
-#define LDBL_MIN					0x1.0000000000000P-1022L
 
 #define final_state(scan_state)	(scan_state & (2048 | 4096))
 #define success(scan_state) (scan_state & 3628)

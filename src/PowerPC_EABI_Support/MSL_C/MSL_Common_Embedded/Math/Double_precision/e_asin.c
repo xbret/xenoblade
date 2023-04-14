@@ -42,7 +42,6 @@
  */
 
 #include "fdlibm.h"
-#include "float.h"
 #include "errno.h"
 #include "math.h"
 

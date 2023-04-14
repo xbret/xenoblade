@@ -21,8 +21,8 @@ extern "C" {
 #define INT_MIN -2147483647
 #define INT_MAX 2147483647
 
-#define LONG_MIN INT_MIN
-#define LONG_MAX INT_MAX
+#define LONG_MIN (-2147483647L - 1)
+#define LONG_MAX 2147483647L
 #define ULONG_MAX 4294967295
 
 #ifdef __cplusplus
