@@ -1,15 +1,15 @@
 NW4R_UT_FILES:=\
-	$(BUILD_DIR)/asm/nw4r/ut/ut_LinkList.o\
-	$(BUILD_DIR)/asm/nw4r/ut/ut_binaryFileFormat.o\
-	$(BUILD_DIR)/asm/nw4r/ut/ut_CharStrmReader.o\
-	$(BUILD_DIR)/asm/nw4r/ut/ut_TagProcessorBase.o\
-	$(BUILD_DIR)/asm/nw4r/ut/ut_IOStream.o\
-	$(BUILD_DIR)/asm/nw4r/ut/ut_FileStream.o\
+	$(BUILD_DIR)/src/nw4r/ut/ut_LinkList.o\
+	$(BUILD_DIR)/src/nw4r/ut/ut_binaryFileFormat.o\
+	$(BUILD_DIR)/src/nw4r/ut/ut_CharStrmReader.o\
+	$(BUILD_DIR)/src/nw4r/ut/ut_TagProcessorBase.o\
+	$(BUILD_DIR)/src/nw4r/ut/ut_IOStream.o\
+	$(BUILD_DIR)/src/nw4r/ut/ut_FileStream.o\
 	$(BUILD_DIR)/asm/nw4r/ut/ut_DvdFileStream.o\
-	$(BUILD_DIR)/asm/nw4r/ut/ut_LockedCache.o\
-	$(BUILD_DIR)/asm/nw4r/ut/ut_Font.o\
+	$(BUILD_DIR)/src/nw4r/ut/ut_LockedCache.o\
+	$(BUILD_DIR)/src/nw4r/ut/ut_Font.o\
 	$(BUILD_DIR)/asm/nw4r/ut/ut_ResFontBase.o\
-	$(BUILD_DIR)/asm/nw4r/ut/ut_ResFont.o\
+	$(BUILD_DIR)/src/nw4r/ut/ut_ResFont.o\
 	$(BUILD_DIR)/asm/nw4r/ut/ut_ArchiveFontBase.o\
 	$(BUILD_DIR)/asm/nw4r/ut/ut_PackedFont.o\
 	$(BUILD_DIR)/asm/nw4r/ut/ut_CharWriter.o\

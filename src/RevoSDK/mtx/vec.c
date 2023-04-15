@@ -187,7 +187,7 @@ void C_VECSquareDistance(){
 }
 
 //unused
-asm void PSVECSquareDistance(){
+asm float PSVECSquareDistance(const register Vec* a, const register Vec* b){
 }
 
 //unused

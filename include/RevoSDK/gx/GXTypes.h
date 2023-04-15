@@ -389,6 +389,14 @@ typedef enum _GXTevColorChan {
     GX_CH_ALPHA
 } GXTevColorChan;
 
+typedef enum _GXTevMode {
+    GX_DECAL,
+    GX_MODULATE,
+    GX_REPLACE,
+    GX_PASSCLR,
+    GX_BLEND
+} GXTevMode;
+
 typedef enum _GXTevOp {
     GX_TEV_ADD,
     GX_TEV_SUB,
@@ -655,6 +663,13 @@ typedef enum _GXTlutFmt {
 
     GX_MAX_TLUTFMT
 } GXTlutFmt;
+
+typedef enum _GXZTexOp {
+    GX_ZT_DISABLE,
+    GX_ZT_ADD,
+    GX_ZT_REPLACE,
+    GX_MAX_ZTEXOP
+} GXZTexOp;
 
 #ifdef __cplusplus
 }

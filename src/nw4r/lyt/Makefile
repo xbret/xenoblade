@@ -9,9 +9,9 @@ NW4R_LYT_FILES:=\
 	$(BUILD_DIR)/asm/nw4r/lyt/lyt_bounding.o\
 	$(BUILD_DIR)/asm/nw4r/lyt/lyt_material.o\
 	$(BUILD_DIR)/asm/nw4r/lyt/lyt_texMap.o\
-	$(BUILD_DIR)/asm/nw4r/lyt/lyt_drawInfo.o\
+	$(BUILD_DIR)/src/nw4r/lyt/lyt_drawInfo.o\
 	$(BUILD_DIR)/asm/nw4r/lyt/lyt_animation.o\
-	$(BUILD_DIR)/asm/nw4r/lyt/lyt_resourceAccessor.o\
+	$(BUILD_DIR)/src/nw4r/lyt/lyt_resourceAccessor.o\
 	$(BUILD_DIR)/asm/nw4r/lyt/lyt_arcResourceAccessor.o\
 	$(BUILD_DIR)/asm/nw4r/lyt/lyt_common.o\
 	$(BUILD_DIR)/asm/nw4r/lyt/lyt_util.o\

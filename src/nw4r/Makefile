@@ -11,7 +11,7 @@ NW4R_FILES:=\
 #$(NW4R_FILES): MWCC_VERSION := 3.0
 #$(NW4R_FILES): CONSOLE := GC
 
-$(NW4R_FILES): CFLAGS += -inline auto -Cpp_exceptions off
+$(NW4R_FILES): CFLAGS += -inline auto -Cpp_exceptions off -RTTI off
 
 
 $(BUILD_DIR)/src/nw4r/nw4r.a: $(NW4R_FILES)
