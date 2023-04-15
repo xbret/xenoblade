@@ -64,7 +64,7 @@ typedef struct {
 	size_t CharsWritten;
 } __OutStrCtrl;
 
-/*static*/ const wchar_t* parse_format(const wchar_t *format_string, va_list *arg, print_format *format) {
+static const wchar_t* parse_format(const wchar_t *format_string, va_list *arg, print_format *format) {
 	print_format f;
 	const wchar_t* s = format_string;
 	wchar_t c;
@@ -314,7 +314,7 @@ typedef struct {
 	return ((const wchar_t*)s + 1);
 }
 
-wchar_t * long2str(long num, wchar_t * buff, print_format format) {
+static wchar_t * long2str(long num, wchar_t * buff, print_format format) {
 	unsigned long unsigned_num, base;
 	wchar_t* p;
 	int n, digits;
@@ -425,7 +425,7 @@ wchar_t * long2str(long num, wchar_t * buff, print_format format) {
 	return p;
 }
 
-wchar_t* longlong2str(long long num, wchar_t *pBuf, print_format fmt) {
+static wchar_t* longlong2str(long long num, wchar_t *pBuf, print_format fmt) {
 	unsigned long long unsigned_num, base;
 	wchar_t* p;
 	int n, digits;
@@ -533,7 +533,7 @@ wchar_t* longlong2str(long long num, wchar_t *pBuf, print_format fmt) {
 	return p;
 }
 
-wchar_t * double2hex(long double num, wchar_t * buff, print_format format)  {
+static wchar_t * double2hex(long double num, wchar_t * buff, print_format format)  {
 	wchar_t *p;	
 	unsigned char *q;
 	unsigned char working_byte;
@@ -725,7 +725,7 @@ wchar_t * double2hex(long double num, wchar_t * buff, print_format format)  {
 	return p;
 }
 
-void round_decimal(decimal *dec, int new_length) {
+static void round_decimal(decimal *dec, int new_length) {
 	char c;
 	char* p;
 	int carry;
@@ -780,7 +780,7 @@ return_zero:
 	dec->sig.length = new_length;
 }
 
-wchar_t* float2str(long double num, wchar_t *wbuff, print_format format) {
+static wchar_t* float2str(long double num, wchar_t *wbuff, print_format format) {
 	decimal dec;
 	decform form;
     wchar_t* pw;
@@ -1019,7 +1019,7 @@ wchar_t* float2str(long double num, wchar_t *wbuff, print_format format) {
 	return pw;
 }
 
-int __wpformatter(void *(*WriteProc)(void *, const wchar_t *, size_t), void *WriteProcArg, const wchar_t * format_str, va_list arg, int is_secure) {
+static int __wpformatter(void *(*WriteProc)(void *, const wchar_t *, size_t), void *WriteProcArg, const wchar_t * format_str, va_list arg, int is_secure) {
 	int num_chars, chars_written, field_width;
 	const wchar_t* format_ptr;
 	const wchar_t* curr_format;
@@ -1365,10 +1365,10 @@ int __wpformatter(void *(*WriteProc)(void *, const wchar_t *, size_t), void *Wri
 }
 
 //unused
-void __wFileWrite(){
+static void __wFileWrite(){
 }
 
-void* __wStringWrite(void *wosc, const wchar_t * buffer, size_t numchars) {
+static void* __wStringWrite(void *wosc, const wchar_t * buffer, size_t numchars) {
     size_t tobewritten;
     void* res;
     __wOutStrCtrl * wOscp = (__wOutStrCtrl*)wosc;

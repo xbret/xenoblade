@@ -16,7 +16,7 @@ MSLC_FILES:=\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/mem_funcs.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/math_api.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/misc_io.o\
-	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/printf.o\
+	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/printf.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/rand.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/float.o\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/scanf.o\

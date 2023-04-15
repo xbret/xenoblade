@@ -65,7 +65,7 @@ typedef struct {
 	size_t CharsWritten;
 } __OutStrCtrl;
 
-/*static*/ const char* parse_format(const char *format_string, va_list *arg, print_format *format) {
+static const char* parse_format(const char *format_string, va_list *arg, print_format *format) {
 	print_format f;
 	const char* s = format_string;
 	int c;
@@ -338,7 +338,7 @@ static char * long2str(long num, char * buff, print_format format) {
 			base = 10;
 			
 			if (num < 0) {
-				if (num | ((num >> 31) ^ 0x80000000)) {
+				if(num != 0x8000000000000000L){
 					unsigned_num = -num;
                 }
 
@@ -427,7 +427,7 @@ static char * long2str(long num, char * buff, print_format format) {
 	return p;
 }
 
-char* longlong2str(long long num, char *pBuf, print_format fmt) {
+static char* longlong2str(long long num, char *pBuf, print_format fmt) {
 	unsigned long long unsigned_num, base;
 	char* p;
 	int n, digits;
@@ -535,7 +535,7 @@ char* longlong2str(long long num, char *pBuf, print_format fmt) {
 	return p;
 }
 
-char * double2hex(long double num, char * buff, print_format format)  {
+static char * double2hex(long double num, char * buff, print_format format)  {
 	char *p;	
 	unsigned char *q;
 	unsigned char working_byte;
@@ -713,7 +713,7 @@ char * double2hex(long double num, char * buff, print_format format)  {
 	return p;
 }
 
-void round_decimal(decimal *dec, int new_length) {
+static void round_decimal(decimal *dec, int new_length) {
 	char c;
 	char* p;
 	int carry;
@@ -768,7 +768,7 @@ return_zero:
 	dec->sig.length = new_length;
 }
 
-char* float2str(long double num, char *buff, print_format format) {
+static char* float2str(long double num, char *buff, print_format format) {
 	decimal dec;
 	decform form;
 	char* p;
@@ -1003,7 +1003,7 @@ char* float2str(long double num, char *buff, print_format format) {
 	return p;
 }
 
-int __pformatter(void *(*WriteProc)(void *, const char *, size_t), void *WriteProcArg, const char * format_str, va_list arg, int is_secure) {
+static int __pformatter(void *(*WriteProc)(void *, const char *, size_t), void *WriteProcArg, const char * format_str, va_list arg, int is_secure) {
 	int num_chars, chars_written, field_width;
 	const char* format_ptr;
 	const char* curr_format;
@@ -1334,11 +1334,11 @@ int __pformatter(void *(*WriteProc)(void *, const char *, size_t), void *WritePr
 	return chars_written;
 }
 
-void* __FileWrite(void *pFile, const char *pBuffer, size_t char_num) {
+static void* __FileWrite(void *pFile, const char *pBuffer, size_t char_num) {
     return (__fwrite(pBuffer, 1, char_num, (FILE*)pFile) == char_num ? pFile : 0);
 }
 
-void* __StringWrite(void *pCtrl, const char *pBuffer, size_t char_num) {
+static void* __StringWrite(void *pCtrl, const char *pBuffer, size_t char_num) {
 	size_t chars;
 	__OutStrCtrl* ctrl = (__OutStrCtrl*)pCtrl;
 	void* res;
