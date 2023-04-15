@@ -21,41 +21,45 @@ static int __count_trailing_zero(double n){
 }
 
 static int __must_round(const decimal* d, int digits){
-    u8 const* sigText = d->sig.text + digits;
+    //regswap fun here
+    u8 const* i = d->sig.text + digits;
             
-    if (*sigText > 5) {
+    if (*i > 5) {
         return 1;
-    } else if (*sigText < 5) {
+    }
+    
+    if (*i < 5) {
         return -1;
-    } 
-        for(sigText++; sigText < d->sig.text + d->sig.length; sigText++){
-            if (*sigText != 0) {
-               return 1;
-            }
-        }
-                  
-        if ((d->sig.text[digits - 1] & 1) != 0) {
+    }
+    
+    for(i++; i < d->sig.text + d->sig.length; i++){
+        if (*i != 0) {
             return 1;
         }
+    }
+                  
+    if (d->sig.text[digits - 1] & 1) {
+        return 1;
+    }
 
-        return -1;
+    return -1;
 }
 
 static void __dorounddecup(decimal* d, int digits){
-    u8* temp_r4_3 = d->sig.text;
-    u8* var_r5 = temp_r4_3 + digits - 1;
+    u8* b = d->sig.text;
+    u8* i = b + digits - 1;
                 
     while(1){
-        if (*var_r5 < 9) {
-            *var_r5 += 1;
+        if (*i < 9) {
+            *i += 1;
             break;
         }
-        if (var_r5 == temp_r4_3) {
-            *var_r5 = 1;
+        if (i == b) {
+            *i = 1;
             d->exp++;
             break;
         }
-        *var_r5-- = 0;
+        *i-- = 0;
     }
 }
 
@@ -552,158 +556,31 @@ static inline int unkInline1(decimal* d, s16 digits){
     return unkBool;
 }
 
-//https://decomp.me/scratch/LEWxt dumb regswap issues
-#ifdef NON_MATCHING
-void __num2dec(const decform* form, double val, decimal* d) {
-    s16 digits = form->digits;
+void __num2dec(const decform* form, double x, decimal* d) {
+    short digits = form->digits;
     int i;
-    __num2dec_internal(d, val);
+    __num2dec_internal(d, x);
     
-    if (d->sig.text[0] <= 9) {
-        if (digits > SIGDIGLEN) {
-            digits = SIGDIGLEN;
-        }
-        __rounddec(d, digits);
-
-       while(d->sig.length < digits){
-            d->sig.text[d->sig.length++] = 0;
-        }
+    if (d->sig.text[0] > 9) {
+        return;
+    }
+        
+    if (digits > SIGDIGLEN) {
+        digits = SIGDIGLEN;
+    }
     
-        d->exp -= d->sig.length - 1;
+    __rounddec(d, digits);
 
-        for(i = 0; i < d->sig.length; i++) {
-            d->sig.text[i] += 0x30;
-        }
+    while(d->sig.length < digits){
+        d->sig.text[d->sig.length++] = 0;
+    }
+    
+    d->exp -= d->sig.length - 1;
+
+    for(i = 0; i < d->sig.length; i++) {
+        d->sig.text[i] += '0';
     }
 }
-#else
-asm void __num2dec(const decform* form, double val, decimal* d){
-    nofralloc
-    stwu r1, -0x10(r1)
-    mflr r0
-    stw r0, 0x14(r1)
-    stw r31, 0xc(r1)
-    lha r31, 2(r3)
-    stw r30, 8(r1)
-    mr r30, r4
-    mr r3, r30
-    bl __num2dec_internal
-    lbz r0, 5(r30)
-    cmplwi r0, 9
-    bgt lbl_802BD4F8
-    cmpwi r31, 0x24
-    ble lbl_802BD3A8
-    li r31, 0x24
-lbl_802BD3A8:
-    cmpwi r31, 0
-    ble lbl_802BD494
-    lbz r0, 4(r30)
-    cmpw r31, r0
-    bge lbl_802BD494
-    addi r4, r30, 5
-    lbzx r0, r4, r31
-    add r3, r4, r31
-    cmplwi r0, 5
-    ble lbl_802BD3D8
-    li r4, 1
-    b lbl_802BD434
-lbl_802BD3D8:
-    bge lbl_802BD3E4
-    li r4, -1
-    b lbl_802BD434
-lbl_802BD3E4:
-    lbz r0, 4(r30)
-    addi r3, r3, 1
-    add r4, r4, r0
-    subf r0, r3, r4
-    mtctr r0
-    cmplw r3, r4
-    bge lbl_802BD41C
-lbl_802BD400:
-    lbz r0, 0(r3)
-    cmpwi r0, 0
-    beq lbl_802BD414
-    li r4, 1
-    b lbl_802BD434
-lbl_802BD414:
-    addi r3, r3, 1
-    bdnz lbl_802BD400
-lbl_802BD41C:
-    add r3, r31, r30
-    li r4, -1
-    lbz r0, 4(r3)
-    clrlwi. r0, r0, 0x1f
-    beq lbl_802BD434
-    li r4, 1
-lbl_802BD434:
-    cmpwi r4, 0
-    stb r31, 4(r30)
-    blt lbl_802BD494
-    addi r4, r30, 5
-    li r0, 0
-    add r5, r4, r31
-    addi r5, r5, -1
-lbl_802BD450:
-    lbz r3, 0(r5)
-    cmplwi r3, 9
-    bge lbl_802BD468
-    addi r0, r3, 1
-    stb r0, 0(r5)
-    b lbl_802BD494
-lbl_802BD468:
-    cmplw r5, r4
-    bne lbl_802BD488
-    li r0, 1
-    stb r0, 0(r5)
-    lha r3, 2(r30)
-    addi r0, r3, 1
-    sth r0, 2(r30)
-    b lbl_802BD494
-lbl_802BD488:
-    stb r0, 0(r5)
-    addi r5, r5, -1
-    b lbl_802BD450
-lbl_802BD494:
-    li r5, 0
-    b lbl_802BD4B0
-lbl_802BD49C:
-    lbz r4, 4(r30)
-    add r3, r30, r4
-    addi r0, r4, 1
-    stb r5, 5(r3)
-    stb r0, 4(r30)
-lbl_802BD4B0:
-    lbz r3, 4(r30)
-    cmpw r3, r31
-    blt lbl_802BD49C
-    addi r3, r3, -1
-    lha r0, 2(r30)
-    extsh r3, r3
-    li r5, 0
-    subf r0, r3, r0
-    sth r0, 2(r30)
-    b lbl_802BD4EC
-lbl_802BD4D8:
-    add r4, r30, r5
-    addi r5, r5, 1
-    lbz r3, 5(r4)
-    addi r0, r3, 0x30
-    stb r0, 5(r4)
-lbl_802BD4EC:
-    lbz r0, 4(r30)
-    cmpw r5, r0
-    blt lbl_802BD4D8
-lbl_802BD4F8:
-    lwz r0, 0x14(r1)
-    lwz r31, 0xc(r1)
-    lwz r30, 8(r1)
-    mtlr r0
-    addi r1, r1, 0x10
-    blr 
-}
-#endif
-
-
 
 double __dec2num(const decimal *d)
 {

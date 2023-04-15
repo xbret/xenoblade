@@ -29,7 +29,7 @@ BUILD_DIR := build/$(NAME).$(VERSION)
 
 # Inputs
 S_FILES := $(wildcard asm/*.s)
-C_FILES := $(wildMakefilecard src/*.c)
+C_FILES := $(wildcard src/*.c)
 CPP_FILES := $(wildcard src/*.cpp)
 CPP_FILES += $(wildcard src/*.cp)
 LDSCRIPT := $(BUILD_DIR)/ldscript.lcf
@@ -41,7 +41,7 @@ MAP     := $(BUILD_DIR)/$(NAME).$(VERSION).MAP
 
 
 ifeq ($(MAPGENFLAG),1)
-  MAPGEN := -map $(MAP)
+  MAPGEN := -map $(MAP) -mapunused
 endif
 
 include obj_files.mk

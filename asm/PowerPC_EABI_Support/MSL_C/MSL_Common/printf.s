@@ -431,7 +431,7 @@
 /* 802BF204 002887C4  4E 80 00 20 */	blr
 .endfn parse_format
 
-.fn long2str, global
+.fn long2str, local
 /* 802BF208 002887C8  2C 03 00 00 */	cmpwi r3, 0
 /* 802BF20C 002887CC  39 00 00 00 */	li r8, 0
 /* 802BF210 002887D0  99 04 FF FF */	stb r8, -1(r4)
@@ -600,7 +600,7 @@
 /* 802BF444 00288A04  4E 80 00 20 */	blr 
 .endfn long2str
 
-.fn longlong2str, global
+.fn longlong2str, local
 /* 802BF448 00288A08  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802BF44C 00288A0C  7C 08 02 A6 */	mflr r0
 /* 802BF450 00288A10  90 01 00 34 */	stw r0, 0x34(r1)
@@ -797,7 +797,7 @@
 /* 802BF6F4 00288CB4  4E 80 00 20 */	blr 
 .endfn longlong2str
 
-.fn double2hex, global
+.fn double2hex, local
 /* 802BF6F8 00288CB8  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 802BF6FC 00288CBC  7C 08 02 A6 */	mflr r0
 /* 802BF700 00288CC0  3C A0 80 54 */	lis r5, __lconv@ha
@@ -1073,7 +1073,7 @@
 /* 802BFABC 0028907C  4E 80 00 20 */	blr 
 .endfn double2hex
 
-.fn round_decimal, global
+.fn round_decimal, local
 /* 802BFAC0 00289080  2C 04 00 00 */	cmpwi r4, 0
 /* 802BFAC4 00289084  40 80 00 20 */	bge .L_802BFAE4
 .L_802BFAC8:
@@ -1163,7 +1163,7 @@
 /* 802BFBE4 002891A4  4E 80 00 20 */	blr 
 .endfn round_decimal
 
-.fn float2str, global
+.fn float2str, local
 /* 802BFBE8 002891A8  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 802BFBEC 002891AC  7C 08 02 A6 */	mflr r0
 /* 802BFBF0 002891B0  3C A0 80 54 */	lis r5, __lconv@ha
@@ -1731,7 +1731,7 @@
 /* 802C0380 00289940  4E 80 00 20 */	blr 
 .endfn float2str
 
-.fn __pformatter, global
+.fn __pformatter, local
 /* 802C0384 00289944  94 21 FD 30 */	stwu r1, -0x2d0(r1)
 /* 802C0388 00289948  7C 08 02 A6 */	mflr r0
 /* 802C038C 0028994C  90 01 02 D4 */	stw r0, 0x2d4(r1)
@@ -2364,7 +2364,7 @@
 /* 802C0C2C 0028A1EC  4E 80 00 20 */	blr
 .endfn __pformatter
 
-.fn __FileWrite, global
+.fn __FileWrite, local
 /* 802C0C30 0028A1F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802C0C34 0028A1F4  7C 08 02 A6 */	mflr r0
 /* 802C0C38 0028A1F8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -2391,7 +2391,7 @@
 /* 802C0C84 0028A244  4E 80 00 20 */	blr
 .endfn __FileWrite
 
-.fn __StringWrite, global
+.fn __StringWrite, local
 /* 802C0C88 0028A248  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802C0C8C 0028A24C  7C 08 02 A6 */	mflr r0
 /* 802C0C90 0028A250  90 01 00 14 */	stw r0, 0x14(r1)

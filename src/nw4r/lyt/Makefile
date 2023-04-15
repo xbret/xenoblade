@@ -1,5 +1,5 @@
 NW4R_LYT_FILES:=\
-	$(BUILD_DIR)/asm/nw4r/lyt/lyt_init.o\
+	$(BUILD_DIR)/src/nw4r/lyt/lyt_init.o\
 	$(BUILD_DIR)/asm/nw4r/lyt/lyt_pane.o\
 	$(BUILD_DIR)/asm/nw4r/lyt/lyt_group.o\
 	$(BUILD_DIR)/asm/nw4r/lyt/lyt_layout.o\

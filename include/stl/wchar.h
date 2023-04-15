@@ -9,6 +9,7 @@ extern "C" {
 
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/wchar_io.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/wmem.h"
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common/wprintf.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/wstring.h"
 
 #ifdef __cplusplus

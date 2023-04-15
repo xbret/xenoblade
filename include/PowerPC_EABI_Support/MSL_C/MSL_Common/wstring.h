@@ -1,5 +1,5 @@
-#ifndef MSL_WMEM_H
-#define MSL_WMEM_H
+#ifndef MSL_WSTRING_H
+#define MSL_WSTRING_H
 
 #include "types.h"
 

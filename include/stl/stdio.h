@@ -10,7 +10,6 @@ extern "C" {
 //#include "internal/file_io.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/printf.h"
 //#include "internal/scanf.h"
-#include "PowerPC_EABI_Support/MSL_C/MSL_Common/wchar_io.h"
 
 #ifdef __cplusplus
 };

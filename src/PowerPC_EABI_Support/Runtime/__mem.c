@@ -4,7 +4,7 @@
 #pragma section code_type ".init"
 
 //Handwritten
-asm void memcpy(void* dest, const void* src, size_t size){
+asm void* memcpy(void* dest, const void* src, size_t size){
 	cmplwi cr1, r5, 0
 	beqlr cr1
 	cmplw cr1, r4, r3

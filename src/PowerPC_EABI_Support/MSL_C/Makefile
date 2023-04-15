@@ -27,7 +27,7 @@ MSLC_FILES:=\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/wcstoul.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/wctype.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/wmem.o\
-	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/wprintf.o\
+	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/wprintf.o\
 	$(BUILD_DIR)/asm/PowerPC_EABI_Support/MSL_C/MSL_Common/wscanf.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/wstring.o\
 	$(BUILD_DIR)/src/PowerPC_EABI_Support/MSL_C/MSL_Common/wchar_io.o\
