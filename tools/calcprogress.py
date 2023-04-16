@@ -63,6 +63,8 @@ DATA_SECTIONS = [
     "extab_", "extabindex_", "_extab", "_exidx", "extab", "extabindex"
 ]
 
+LIBS = ["CriWare", "NdevExi2A", "nw4r", "PowerPC_EABI_Support", "RevoSDK"]
+
 # DOL info
 TEXT_SECTION_COUNT = 7
 DATA_SECTION_COUNT = 11
@@ -219,6 +221,10 @@ if __name__ == "__main__":
     symbols = mapfile.readlines()
 
     src_o_files = list(Path(sys.argv[3] + "/src").rglob("*.o"))
+    
+    #Get all the src o files from the libs folder
+    for libName in LIBS:
+        src_o_files.append(list(Path(sys.argv[3] + "/libs/" + libName + "/src").rglob("*.o")))
 
     decomp_code_size = 0
     decomp_data_size = 0

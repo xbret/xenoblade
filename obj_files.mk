@@ -2,19 +2,19 @@ GAME :=\
 	$(BUILD_DIR)/src/kyoshin/kyoshin.a\
 
 MW :=\
-	$(BUILD_DIR)/src/PowerPC_EABI_Support/PowerPC_EABI_Support.a\
+	$(BUILD_DIR)/libs/PowerPC_EABI_Support/PowerPC_EABI_Support.a\
 
 NDEV :=\
-	$(BUILD_DIR)/src/NdevExi2A/NdevExi2A.a\
+	$(BUILD_DIR)/libs/NdevExi2A/NdevExi2A.a\
 
 RVL_SDK :=\
-	$(BUILD_DIR)/src/RevoSDK/RevoSDK.a\
+	$(BUILD_DIR)/libs/RevoSDK/RevoSDK.a\
 
 CRIWARE :=\
-	$(BUILD_DIR)/src/CriWare/CriWare.a\
+	$(BUILD_DIR)/libs/CriWare/CriWare.a\
 
 NW4R :=\
-	$(BUILD_DIR)/src/nw4r/nw4r.a\
+	$(BUILD_DIR)/libs/nw4r/nw4r.a\
 
 MM :=\
 	$(BUILD_DIR)/src/mm/mm.a\
