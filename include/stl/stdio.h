@@ -9,7 +9,7 @@ extern "C" {
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/FILE_POS.h"
 //#include "internal/file_io.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/printf.h"
-//#include "internal/scanf.h"
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common/scanf.h"
 
 #ifdef __cplusplus
 };

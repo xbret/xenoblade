@@ -9,6 +9,19 @@ enum __ReadProcActions {
 	__TestForError
 };
 
+enum __WReadProcActions
+{
+	__GetAwChar,
+	__UngetAwChar,
+	__TestForwcsError
+};
+
+typedef struct {
+	char* CharStr;
+	size_t MaxCharCount;
+	size_t CharsWritten;
+} __OutStrCtrl;
+
 typedef struct{
 	char* NextChar;
 	int NullCharDetected;
@@ -26,5 +39,6 @@ typedef struct {
 } __wInStrCtrl;
 
 int __StringRead(void *, int, int);
+wint_t __wStringRead(void*, wint_t, int);
 
 #endif // STDIO_API_H

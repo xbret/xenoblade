@@ -5,6 +5,7 @@
 #include "string.h"
 #include "stdio.h"
 #include "stdlib.h"
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common/stdio_api.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/ansi_fp.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/secure_error.h"
 
@@ -58,12 +59,6 @@ typedef struct {
 	int			  	field_width;				// _8
 	int				precision;					// _C
 } print_format;
-
-typedef struct {
-	char* CharStr;
-	size_t MaxCharCount;
-	size_t CharsWritten;
-} __OutStrCtrl;
 
 static const char* parse_format(const char *format_string, va_list *arg, print_format *format) {
 	print_format f;

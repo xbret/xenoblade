@@ -58,12 +58,6 @@ typedef struct {
 	int				precision;					// _C
 } print_format;
 
-typedef struct {
-	char* CharStr;
-	size_t MaxCharCount;
-	size_t CharsWritten;
-} __OutStrCtrl;
-
 static const wchar_t* parse_format(const wchar_t *format_string, va_list *arg, print_format *format) {
 	print_format f;
 	const wchar_t* s = format_string;
