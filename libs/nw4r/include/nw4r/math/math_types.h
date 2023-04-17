@@ -1,7 +1,7 @@
 #pragma once
 
 #include "nw4r/types_nw4r.h"
-#include "RevoSDK/MTX.h"
+#include "revolution/MTX.h"
 
 #define NW4R_PI_F32 3.1415927f
 #define NW4R_DEG_TO_FIDX (256.0f / 360.0f)

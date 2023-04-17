@@ -97,7 +97,7 @@ TRANSFORM_DEP := tools/transform-win.py
 endif
 
 # Options
-INCLUDES := -i include/ -i src/ -i libs/NdevExi2A/include/ -i libs/RevoSDK/include/ -i libs/PowerPC_EABI_Support/include/ -i libs/PowerPC_EABI_Support/include/stl -i libs/nw4r/include/
+INCLUDES := -i include/ -i src/ -i libs/NdevExi2A/include/ -i libs/RVL_SDK/include/ -i libs/PowerPC_EABI_Support/include/ -i libs/PowerPC_EABI_Support/include/stl -i libs/nw4r/include/
 ASM_INCLUDES := -I include/
 
 ASFLAGS := -mgekko $(ASM_INCLUDES)

@@ -1,5 +1,5 @@
 #include "nw4r/ut/ut_ResFontBase.h"
-#include "RevoSDK/GX.h"
+#include "revolution/GX.h"
 
 namespace nw4r
 {

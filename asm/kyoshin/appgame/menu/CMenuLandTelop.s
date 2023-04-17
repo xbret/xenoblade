@@ -1086,7 +1086,7 @@
 /* 80145498 0010EA58  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8014549C 0010EA5C  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 801454A0 0010EA60  7C 7E 1B 78 */	mr r30, r3
-/* 801454A4 0010EA64  48 2E EE FD */	bl func_804343A0
+/* 801454A4 0010EA64  48 2E EE FD */	bl Heap_getMem2RegionIndex1
 /* 801454A8 0010EA68  3F E0 80 50 */	lis r31, CMenuLandTelop_strpool@ha
 /* 801454AC 0010EA6C  7C 64 1B 78 */	mr r4, r3
 /* 801454B0 0010EA70  3B FF CF 50 */	addi r31, r31, CMenuLandTelop_strpool@l

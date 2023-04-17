@@ -1,5 +1,5 @@
 #include "types.h"
-#include "RevoSDK/OS.h"
+#include "revolution/OS.h"
 
 inline static void InitDefaultHeap()
 {

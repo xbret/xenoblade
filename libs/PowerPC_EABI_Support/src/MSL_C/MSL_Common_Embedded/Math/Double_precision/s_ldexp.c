@@ -13,7 +13,7 @@
  */
 
 #include "fdlibm.h"
-#include "RevoSDK/math.h" /* for isfinite macro */
+#include "revolution/math.h" /* for isfinite macro */
 
 
 static const double

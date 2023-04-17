@@ -1,7 +1,7 @@
 #pragma once
 
 #include "nw4r/types_nw4r.h"
-#include "RevoSDK/GX.h"
+#include "revolution/GX.h"
 /*
 #define r channels[0]
 #define g channels[1]

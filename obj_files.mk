@@ -8,7 +8,7 @@ NDEV :=\
 	$(BUILD_DIR)/libs/NdevExi2A/NdevExi2A.a\
 
 RVL_SDK :=\
-	$(BUILD_DIR)/libs/RevoSDK/RevoSDK.a\
+	$(BUILD_DIR)/libs/RVL_SDK/RVL_SDK.a\
 
 CRIWARE :=\
 	$(BUILD_DIR)/libs/CriWare/CriWare.a\

@@ -3,7 +3,7 @@
 #include "nw4r/ut/ut_IOStream.h"
 #include "nw4r/ut/ut_FileStream.h"
 #include "nw4r/ut/ut_algorithm.h"
-#include "RevoSDK/dvd/dvd.h"
+#include "revolution/dvd/dvd.h"
 
 namespace nw4r
 {

@@ -1,6 +1,6 @@
-#include "RevoSDK/EXI.h"
+#include "revolution/EXI.h"
 #include "NdevExi2A/exi2.h"
-#include "RevoSDK/OS.h"
+#include "revolution/OS.h"
 
 static BOOL __EXI2Select(void) {
     u32 temp = EXI_CHAN_CTRL[EXI_CHAN_2].csr;

@@ -1,7 +1,7 @@
 #ifndef NDEV_EXI2AD_DEBUGGER_DRIVER_H
 #define NDEV_EXI2AD_DEBUGGER_DRIVER_H
 #include "NdevExi2A/exi2.h"
-#include "RevoSDK/OS.h"
+#include "revolution/OS.h"
 #include "types.h"
 #ifdef __cplusplus
 extern "C" {

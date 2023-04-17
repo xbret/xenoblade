@@ -1,5 +1,5 @@
 #include "nw4r/ut/ut_CharWriter.h"
-#include "RevoSDK/GX.h"
+#include "revolution/GX.h"
 
 namespace
 {

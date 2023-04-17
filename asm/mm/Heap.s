@@ -1209,20 +1209,20 @@
 /* 80434394 003FD954  4E 80 00 20 */	blr 
 .endfn func_804341D0
 
-.fn func_80434398, global
+.fn Heap_getMem1RegionIndex, global
 /* 80434398 003FD958  80 6D 9C B0 */	lwz r3, mem1RegionIndex@sda21(r13)
 /* 8043439C 003FD95C  4E 80 00 20 */	blr 
-.endfn func_80434398
+.endfn Heap_getMem1RegionIndex
 
-.fn func_804343A0, global
+.fn Heap_getMem2RegionIndex1, global
 /* 804343A0 003FD960  80 6D 9C B4 */	lwz r3, mem2RegionIndex@sda21(r13)
 /* 804343A4 003FD964  4E 80 00 20 */	blr 
-.endfn func_804343A0
+.endfn Heap_getMem2RegionIndex1
 
-.fn func_804343A8, global
+.fn Heap_getMem2RegionIndex2, global
 /* 804343A8 003FD968  80 6D 9C B4 */	lwz r3, mem2RegionIndex@sda21(r13)
 /* 804343AC 003FD96C  4E 80 00 20 */	blr 
-.endfn func_804343A8
+.endfn Heap_getMem2RegionIndex2
 
 .fn func_804343B0, global
 /* 804343B0 003FD970  94 21 FF F0 */	stwu r1, -0x10(r1)

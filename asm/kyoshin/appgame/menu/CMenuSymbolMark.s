@@ -492,7 +492,7 @@
 /* 8011DA54 000E7014  80 03 02 7C */	lwz r0, 0x27c(r3)
 /* 8011DA58 000E7018  2C 00 00 00 */	cmpwi r0, 0
 /* 8011DA5C 000E701C  41 82 01 64 */	beq .L_8011DBC0
-/* 8011DA60 000E7020  48 31 69 41 */	bl func_804343A0
+/* 8011DA60 000E7020  48 31 69 41 */	bl Heap_getMem2RegionIndex1
 /* 8011DA64 000E7024  3C A0 80 50 */	lis r5, CMenuSymbolMark_strpool@ha
 /* 8011DA68 000E7028  7C 64 1B 78 */	mr r4, r3
 /* 8011DA6C 000E702C  3B A5 9F 60 */	addi r29, r5, CMenuSymbolMark_strpool@l

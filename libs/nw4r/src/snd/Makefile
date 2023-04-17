@@ -55,7 +55,7 @@ NW4R_SND_FILES:=\
 	$(BUILD_DIR)/libs/nw4r/asm/snd/snd_WaveSoundHandle.o\
 	$(BUILD_DIR)/libs/nw4r/asm/snd/snd_WsdFile.o\
 	$(BUILD_DIR)/libs/nw4r/asm/snd/snd_WsdPlayer.o\
-	$(BUILD_DIR)/libs/nw4r/asm/snd/snd_adpcm.o\
+	$(BUILD_DIR)/libs/nw4r/src/snd/snd_adpcm.o\
 
 DEPENDS += $(NW4R_SND_FILES:.o=.d)
 

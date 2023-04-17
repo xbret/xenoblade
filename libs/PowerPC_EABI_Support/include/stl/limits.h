@@ -7,18 +7,18 @@ extern "C" {
 
 #define CHAR_BIT 8
 
-#define SCHAR_MIN -127
-#define SCHAR_MAX 127
-#define UCHAR_MAX 255
+#define SCHAR_MIN (-0x7F - 1)
+#define SCHAR_MAX 0x7F
+#define UCHAR_MAX 0xFF
 
 #define CHAR_MIN 0
 #define CHAR_MAX SCHAR_MAX
 
-#define SHRT_MIN -0x7FFF
+#define SHRT_MIN (-0x7FFF - 1)
 #define SHRT_MAX 0x7FFF
 #define USHRT_MAX 0xFFFF
 
-#define INT_MIN -0x7FFFFFFF
+#define INT_MIN (-0x7FFFFFFF - 1)
 #define INT_MAX 0x7FFFFFFF
 #define UINT_MAX 0xFFFFFFFF
 

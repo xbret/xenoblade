@@ -122,7 +122,7 @@
 /* 8012BDE8 000F53A8  39 61 00 30 */	addi r11, r1, 0x30
 /* 8012BDEC 000F53AC  48 18 E3 61 */	bl _savegpr_25
 /* 8012BDF0 000F53B0  7C 79 1B 78 */	mr r25, r3
-/* 8012BDF4 000F53B4  48 30 85 AD */	bl func_804343A0
+/* 8012BDF4 000F53B4  48 30 85 AD */	bl Heap_getMem2RegionIndex1
 /* 8012BDF8 000F53B8  3C C0 80 50 */	lis r6, CTalkWindow_strpool@ha
 /* 8012BDFC 000F53BC  7C 64 1B 78 */	mr r4, r3
 /* 8012BE00 000F53C0  38 79 00 78 */	addi r3, r25, 0x78

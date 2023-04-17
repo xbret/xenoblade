@@ -4,7 +4,7 @@
 #include "nw4r/math/math_types.h"
 #include "nw4r/ut/ut_Color.h"
 #include "nw4r/ut/ut_Font.h"
-#include "RevoSDK/GX.h"
+#include "revolution/GX.h"
 
 namespace nw4r
 {

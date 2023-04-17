@@ -63,7 +63,7 @@ DATA_SECTIONS = [
     "extab_", "extabindex_", "_extab", "_exidx", "extab", "extabindex"
 ]
 
-LIBS = ["CriWare", "NdevExi2A", "nw4r", "PowerPC_EABI_Support", "RevoSDK"]
+LIBS = ["CriWare", "NdevExi2A", "nw4r", "PowerPC_EABI_Support", "RVL_SDK"]
 
 # DOL info
 TEXT_SECTION_COUNT = 7

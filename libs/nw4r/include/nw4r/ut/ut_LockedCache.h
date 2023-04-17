@@ -1,7 +1,7 @@
 #pragma once
 
 #include "nw4r/types_nw4r.h"
-#include "RevoSDK/OS.h"
+#include "revolution/OS.h"
 
 namespace nw4r
 {

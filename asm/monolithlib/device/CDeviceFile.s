@@ -478,7 +478,7 @@
 #Opens either an arc file (in/outside an archive), or gets a file outside of an archive?
 #might reference files in pkb archives (cannot find list of archive file names anywhere though)
 #r3: ?, r4: path string pointer, r5, r6, r7
-.fn func_8044E794, global
+.fn CDeviceFile_openFile1, global
 /* 8044E794 00417D54  94 21 FF 10 */	stwu r1, -0xf0(r1)
 /* 8044E798 00417D58  7C 08 02 A6 */	mflr r0
 /* 8044E79C 00417D5C  39 00 00 00 */	li r8, 0
@@ -753,11 +753,11 @@
 /* 8044EB58 00418118  7D 41 53 78 */	mr r1, r10
 /* 8044EB5C 0041811C  7C 08 03 A6 */	mtlr r0
 /* 8044EB60 00418120  4E 80 00 20 */	blr 
-.endfn func_8044E794
+.endfn CDeviceFile_openFile1
 
 #Similar to the above function, but used to open files in archives that aren't sound
 #files (usually) or arc files?
-.fn func_8044EB64, global
+.fn CDeviceFile_openFile2, global
 /* 8044EB64 00418124  94 21 FF 10 */	stwu r1, -0xf0(r1)
 /* 8044EB68 00418128  7C 08 02 A6 */	mflr r0
 /* 8044EB6C 0041812C  2C 03 00 00 */	cmpwi r3, 0
@@ -1037,7 +1037,7 @@
 /* 8044EF38 004184F8  7D 41 53 78 */	mr r1, r10
 /* 8044EF3C 004184FC  7C 08 03 A6 */	mtlr r0
 /* 8044EF40 00418500  4E 80 00 20 */	blr 
-.endfn func_8044EB64
+.endfn CDeviceFile_openFile2
 
 #does something with arc files?
 .fn func_8044EF44, global
@@ -1841,14 +1841,14 @@
 
 .obj "@eti_80034A48", local
 .hidden "@eti_80034A48"
-	.4byte func_8044E794
+	.4byte CDeviceFile_openFile1
 	.4byte 0x000003D0
 	.4byte "@etb_8001CDE0"
 .endobj "@eti_80034A48"
 
 .obj "@eti_80034A54", local
 .hidden "@eti_80034A54"
-	.4byte func_8044EB64
+	.4byte CDeviceFile_openFile2
 	.4byte 0x000003E0
 	.4byte "@etb_8001CDE8"
 .endobj "@eti_80034A54"
