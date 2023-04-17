@@ -1,5 +1,5 @@
-#ifndef MSL_STDLIB_H
-#define MSL_STDLIB_H
+#ifndef _STDLIB_H
+#define _STDLIB_H
 
 #include "types.h"
 #ifdef __cplusplus

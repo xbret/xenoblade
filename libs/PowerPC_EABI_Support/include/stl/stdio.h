@@ -1,5 +1,5 @@
-#ifndef MSL_STDIO_H
-#define MSL_STDIO_H
+#ifndef _STDIO_H
+#define _STDIO_H
 
 #include "types.h"
 #ifdef __cplusplus
@@ -7,7 +7,7 @@ extern "C" {
 #endif // ifdef __cplusplus
 
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/FILE_POS.h"
-//#include "internal/file_io.h"
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common/file_io.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/printf.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/scanf.h"
 

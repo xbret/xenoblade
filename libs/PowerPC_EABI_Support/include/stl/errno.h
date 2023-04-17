@@ -1,6 +1,11 @@
 #ifndef _ERRNO_H
 #define _ERRNO_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+
 //Error constants
 #define E2BIG 7
 #define EACCES 13
@@ -47,5 +52,9 @@
 #define EXDEV 18
 
 extern int errno;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

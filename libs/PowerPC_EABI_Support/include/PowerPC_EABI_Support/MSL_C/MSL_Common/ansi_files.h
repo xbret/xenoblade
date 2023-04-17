@@ -75,7 +75,6 @@ extern FILE __files[4];
 extern "C" {
 #endif // ifdef __cplusplus
 
-int fflush(FILE* __stream);
 int __flush_buffer(FILE* file, size_t* length);
 void __prep_buffer(FILE* file);
 u32 __flush_all();

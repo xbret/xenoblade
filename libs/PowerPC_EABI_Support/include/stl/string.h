@@ -1,8 +1,7 @@
+#ifndef _STRING_H
+#define _STRING_H
 
-#ifndef MSL_STRING_H
-#define MSL_STRING_H
 #include "types.h"
-
 #include "mem.h"
 #include "extras.h"
 #ifdef __cplusplus

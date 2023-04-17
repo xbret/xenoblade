@@ -1,5 +1,5 @@
-#ifndef _MSL_FLOAT_H
-#define _MSL_FLOAT_H
+#ifndef _FLOAT_H
+#define _FLOAT_H
 
 #ifdef __cplusplus
 extern "C" {

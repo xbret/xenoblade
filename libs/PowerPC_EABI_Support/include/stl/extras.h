@@ -1,5 +1,5 @@
-#ifndef MSL_EXTRAS_H
-#define MSL_EXTRAS_H
+#ifndef _EXTRAS_H
+#define _EXTRAS_H
 #include "types.h"
 #ifdef __cplusplus
 extern "C" {

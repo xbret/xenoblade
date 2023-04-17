@@ -270,11 +270,12 @@ if __name__ == "__main__":
             # Has the object file changed?
             last_object = cur_object
             cur_object = match_obj.group("Object").strip()
-            if last_object != cur_object or cur_object.endswith(" (asm)"):
+            if last_object == cur_object:
                 continue
-            # Is the symbol a file-wide section?
             symb = match_obj.group("Symbol")
-            if (symb.startswith("*fill*")) or (symb.startswith(".") and symb[1:] in TEXT_SECTIONS or symb[1:] in DATA_SECTIONS):
+            is_file_symbol = (symb.startswith(".") and symb[1:] in TEXT_SECTIONS or symb[1:] in DATA_SECTIONS)
+
+            if (symb.startswith("*fill*")) or not is_file_symbol:
                 continue
 
             # Subtract the size of the symbol if the object file is in the asm folder

@@ -6,6 +6,7 @@ static char stdout_buff[0x100];
 static char stderr_buff[0x100];
 
 extern void fclose(FILE*);
+extern void fflush(FILE*);
 extern int __read_console(u32, char*, u32*, void*);
 extern int __write_console(u32, char*, u32*, void*);
 extern int __close_console(u32);

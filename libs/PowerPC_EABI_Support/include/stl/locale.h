@@ -1,5 +1,5 @@
-#ifndef STL_LOCALE_H
-#define STL_LOCALE_H
+#ifndef _LOCALE_H
+#define _LOCALE_H
 
 #include "types.h"
 #include "stdlib.h"
