@@ -1,8 +1,8 @@
 TRK_FILES:=\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/targsupp.o\
-	$(BUILD_DIR)/libs/PowerPC_EABI_Support/asm/MetroTRK/custconn/cc_gdev.o\
+	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/custconn/cc_gdev.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/custconn/MWCriticalSection_gc.o\
-	$(BUILD_DIR)/libs/PowerPC_EABI_Support/asm/MetroTRK/custconn/CircleBuffer.o\
+	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/custconn/CircleBuffer.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/flush_cache.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/main_TRK.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/mainloop.o\
@@ -17,7 +17,7 @@ TRK_FILES:=\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/string_TRK.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/asm/MetroTRK/support.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/targcont.o\
-	$(BUILD_DIR)/libs/PowerPC_EABI_Support/asm/MetroTRK/mpc_7xx_603e.o\
+	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/mpc_7xx_603e.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/msg.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/asm/MetroTRK/msgbuf.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/asm/MetroTRK/msghndlr.o\

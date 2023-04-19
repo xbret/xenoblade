@@ -1,9 +1,6 @@
 #include "types.h"
 #include "PowerPC_EABI_Support/MetroTRK/trk.h"
 
-extern TRKEventQueue gTRKEventQueue;
-extern TRKState gTRKState;
-
 //unused
 void TRKHandleRequestEvent(void){
 }
