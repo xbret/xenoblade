@@ -11,7 +11,7 @@ HBM_FILES:=\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/hbm/nw4hbm/lyt/lyt_arcResourceAccessor.o\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/hbm/nw4hbm/lyt/lyt_bounding.o\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/hbm/nw4hbm/lyt/lyt_common.o\
-	$(BUILD_DIR)/libs/RVL_SDK/asm/hbm/nw4hbm/lyt/lyt_drawInfo.o\
+	$(BUILD_DIR)/libs/RVL_SDK/src/hbm/nw4hbm/lyt/lyt_drawInfo.o\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/hbm/nw4hbm/lyt/lyt_group.o\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/hbm/nw4hbm/lyt/lyt_layout.o\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/hbm/nw4hbm/lyt/lyt_material.o\
@@ -21,14 +21,14 @@ HBM_FILES:=\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/hbm/nw4hbm/lyt/lyt_textBox.o\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/hbm/nw4hbm/lyt/lyt_window.o\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/hbm/nw4hbm/math/math_triangular.o\
-	$(BUILD_DIR)/libs/RVL_SDK/asm/hbm/nw4hbm/ut/ut_binaryFileFormat.o\
+	$(BUILD_DIR)/libs/RVL_SDK/src/hbm/nw4hbm/ut/ut_binaryFileFormat.o\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/hbm/nw4hbm/ut/ut_CharStrmReader.o\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/hbm/nw4hbm/ut/ut_CharWriter.o\
-	$(BUILD_DIR)/libs/RVL_SDK/asm/hbm/nw4hbm/ut/ut_Font.o\
-	$(BUILD_DIR)/libs/RVL_SDK/asm/hbm/nw4hbm/ut/ut_LinkList.o\
+	$(BUILD_DIR)/libs/RVL_SDK/src/hbm/nw4hbm/ut/ut_Font.o\
+	$(BUILD_DIR)/libs/RVL_SDK/src/hbm/nw4hbm/ut/ut_LinkList.o\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/hbm/nw4hbm/ut/ut_list.o\
-	$(BUILD_DIR)/libs/RVL_SDK/asm/hbm/nw4hbm/ut/ut_ResFont.o\
-	$(BUILD_DIR)/libs/RVL_SDK/asm/hbm/nw4hbm/ut/ut_ResFontBase.o\
+	$(BUILD_DIR)/libs/RVL_SDK/src/hbm/nw4hbm/ut/ut_ResFont.o\
+	$(BUILD_DIR)/libs/RVL_SDK/src/hbm/nw4hbm/ut/ut_ResFontBase.o\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/hbm/nw4hbm/ut/ut_TagProcessorBase.o\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/hbm/nw4hbm/ut/ut_TextWriterBase.o\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/hbm/mix.o\
@@ -42,6 +42,14 @@ HBM_FILES:=\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/hbm/seq.o\
 
 DEPENDS += $(HBM_FILES:.o=.d)
+
+$(HBM_FILES): INCLUDES += -i libs/RVL_SDK/src/hbm/include/
+
+#HBM uses Wii 1.0
+$(HBM_FILES): MWCC_VERSION := 1.0
+
+#HBM doesn't use the small data sections
+$(HBM_FILES): CFLAGS += -sdata 0 -sdata2 0
 
 $(BUILD_DIR)/libs/RVL_SDK/src/hbm/homebuttonLib.a: $(HBM_FILES)
 	@echo Linking... $@

@@ -3,45 +3,45 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .fn InitMetroTRK, global
-/* 802CBF00  38 21 FF FC */		addi r1,r1,-4
-/* 802CBF04  90 61 00 00 */		stw r3,0(r1)
-/* 802CBF08  3C 60 80 57 */		lis r3, gTRKCPUState@h
-/* 802CBF0C  60 63 D3 F8 */		ori r3,r3, gTRKCPUState@l
-/* 802CBF10  BC 03 00 00 */		stmw r0,0(r3)
-/* 802CBF14  80 81 00 00 */		lwz r4,0(r1)
-/* 802CBF18  38 21 00 04 */		addi r1,r1,4
-/* 802CBF1C  90 23 00 04 */		stw r1,4(r3)
-/* 802CBF20  90 83 00 0C */		stw r4,12(r3)
-/* 802CBF24  7C 88 02 A6 */		mflr r4
-/* 802CBF28  90 83 00 84 */		stw r4,132(r3)
-/* 802CBF2C  90 83 00 80 */		stw r4,128(r3)
-/* 802CBF30  7C 80 00 26 */		mfcr r4
-/* 802CBF34  90 83 00 88 */		stw r4,136(r3)
-/* 802CBF38  7C 80 00 A6 */		mfmsr r4
-/* 802CBF3C  60 83 80 00 */		ori r3,r4, 0x8000
-/* 802CBF40  68 63 80 00 */		xori r3,r3, 0x8000
-/* 802CBF44  7C 60 01 24 */		mtmsr r3
-/* 802CBF48  7C 9B 03 A6 */		mtsrr1 r4
-/* 802CBF4C  48 00 11 AD */		bl TRKSaveExtended1Block
-/* 802CBF50  3C 60 80 57 */		lis r3, gTRKCPUState@h
-/* 802CBF54  60 63 D3 F8 */		ori r3,r3, gTRKCPUState@l
-/* 802CBF58  B8 03 00 00 */	.4byte 0xB8030000  /* illegal lmw r0, 0(r3) */
-/* 802CBF5C  38 00 00 00 */		li r0,0
-/* 802CBF60  7C 12 FB A6 */		mtspr 0x3f2 ,r0
-/* 802CBF64  7C 15 FB A6 */		mtspr 0x3f5 ,r0
-/* 802CBF68  3C 20 80 67 */		lis r1, _db_stack_addr@h
-/* 802CBF6C  60 21 FD 00 */		ori r1,r1, _db_stack_addr@l
-/* 802CBF70  7C A3 2B 78 */		mr r3,r5
-/* 802CBF74  48 00 03 71 */		bl InitMetroTRKCommTable
-/* 802CBF78  2C 03 00 01 */		cmpwi r3,1
-/* 802CBF7C  40 82 00 14 */		bne .L_802CBF90
-/* 802CBF80  80 83 00 84 */		lwz r4,132(r3)
-/* 802CBF84  7C 88 03 A6 */		mtlr r4
-/* 802CBF88  B8 03 00 00 */	.4byte 0xB8030000  /* illegal lmw r0, 0(r3) */
-/* 802CBF8C  4E 80 00 20 */		blr
+/* 802CBF00 002954C0  38 21 FF FC */	addi r1, r1, -4
+/* 802CBF04 002954C4  90 61 00 00 */	stw r3, 0(r1)
+/* 802CBF08 002954C8  3C 60 80 57 */	lis r3, gTRKCPUState@h
+/* 802CBF0C 002954CC  60 63 D3 F8 */	ori r3,r3, gTRKCPUState@l
+/* 802CBF10 002954D0  BC 03 00 00 */	stmw r0, 0(r3)
+/* 802CBF14 002954D4  80 81 00 00 */	lwz r4, 0(r1)
+/* 802CBF18 002954D8  38 21 00 04 */	addi r1, r1, 4
+/* 802CBF1C 002954DC  90 23 00 04 */	stw r1, 4(r3)
+/* 802CBF20 002954E0  90 83 00 0C */	stw r4, 12(r3)
+/* 802CBF24 002954E4  7C 88 02 A6 */	mflr r4
+/* 802CBF28 002954E8  90 83 00 84 */	stw r4, 132(r3)
+/* 802CBF2C 002954EC  90 83 00 80 */	stw r4, 128(r3)
+/* 802CBF30 002954F0  7C 80 00 26 */	mfcr r4
+/* 802CBF34 002954F4  90 83 00 88 */	stw r4, 136(r3)
+/* 802CBF38 002954F8  7C 80 00 A6 */	mfmsr r4
+/* 802CBF3C 002954FC  60 83 80 00 */	ori r3, r4, 0x8000
+/* 802CBF40 00295500  68 63 80 00 */	xori r3, r3, 0x8000
+/* 802CBF44 00295504  7C 60 01 24 */	mtmsr r3
+/* 802CBF48 00295508  7C 9B 03 A6 */	mtsrr1 r4
+/* 802CBF4C 0029550C  48 00 11 AD */	bl TRKSaveExtended1Block
+/* 802CBF50 00295510  3C 60 80 57 */	lis r3, gTRKCPUState@h
+/* 802CBF54 00295514  60 63 D3 F8 */	ori r3, r3, gTRKCPUState@l
+/* 802CBF58 00295518  B8 03 00 00 */	.4byte 0xB8030000  /* illegal lmw r0, 0(r3) */
+/* 802CBF5C 0029551C  38 00 00 00 */	li r0,0
+/* 802CBF60 00295520  7C 12 FB A6 */	mtspr 0x3f2, r0
+/* 802CBF64 00295524  7C 15 FB A6 */	mtspr 0x3f5, r0
+/* 802CBF68 00295528  3C 20 80 67 */	lis r1, _db_stack_addr@h
+/* 802CBF6C 0029552C  60 21 FD 00 */	ori r1, r1, _db_stack_addr@l
+/* 802CBF70 00295530  7C A3 2B 78 */	mr r3,r5
+/* 802CBF74 00295534  48 00 03 71 */	bl InitMetroTRKCommTable
+/* 802CBF78 00295538  2C 03 00 01 */	cmpwi r3,1
+/* 802CBF7C 0029553C  40 82 00 14 */	bne .L_802CBF90
+/* 802CBF80 00295540  80 83 00 84 */	lwz r4, 132(r3)
+/* 802CBF84 00295544  7C 88 03 A6 */	mtlr r4
+/* 802CBF88 00295548  B8 03 00 00 */	.4byte 0xB8030000  /* illegal lmw r0, 0(r3) */
+/* 802CBF8C 0029554C  4E 80 00 20 */	blr
 .L_802CBF90:
-/* 802CBF90  4B FF FA C4 */		b TRK_main
-/* 802CBF94  4E 80 00 20 */		blr
+/* 802CBF90 00295550  4B FF FA C4 */	b TRK_main
+/* 802CBF94 00295554  4E 80 00 20 */	blr
 .endfn InitMetroTRK
 
 .fn InitMetroTRK_BBA, global

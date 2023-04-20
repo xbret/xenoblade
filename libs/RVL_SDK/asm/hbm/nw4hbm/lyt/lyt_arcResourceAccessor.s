@@ -295,7 +295,7 @@
 .endobj lbl_8054D654
 
 .obj lbl_8054D678, global
-	.4byte lbl_8054D6B0
+	.4byte __RTTI__Q36nw4hbm3lyt16ResourceAccessor
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -311,7 +311,7 @@
 	.balign 4
 .endobj lbl_8054D690
 
-.obj lbl_8054D6B0, global
+.obj __RTTI__Q36nw4hbm3lyt16ResourceAccessor, global
 	.4byte lbl_8054D690
 	.4byte 0
-.endobj lbl_8054D6B0
+.endobj __RTTI__Q36nw4hbm3lyt16ResourceAccessor

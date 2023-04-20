@@ -1,14 +1,14 @@
 AX_FILES:=\
-	$(BUILD_DIR)/libs/RVL_SDK/asm/ax/AX.o\
+	$(BUILD_DIR)/libs/RVL_SDK/src/ax/AX.o\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/ax/AXAlloc.o\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/ax/AXAux.o\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/ax/AXCL.o\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/ax/AXOut.o\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/ax/AXSPB.o\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/ax/AXVPB.o\
-	$(BUILD_DIR)/libs/RVL_SDK/asm/ax/AXProf.o\
-	$(BUILD_DIR)/libs/RVL_SDK/asm/ax/AXComp.o\
-	$(BUILD_DIR)/libs/RVL_SDK/asm/ax/DSPCode.o\
+	$(BUILD_DIR)/libs/RVL_SDK/src/ax/AXProf.o\
+	$(BUILD_DIR)/libs/RVL_SDK/src/ax/AXComp.o\
+	$(BUILD_DIR)/libs/RVL_SDK/src/ax/DSPCode.o\
 
 DEPENDS += $(AX_FILES:.o=.d)
 

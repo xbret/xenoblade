@@ -25,8 +25,8 @@
 
 .balign 16, 0
 .fn __ct__Q36nw4hbm3lyt16ResourceAccessorFv, global
-/* 80332CD0 002FC290  3C 80 80 55 */	lis r4, lbl_8054D9D8@ha
-/* 80332CD4 002FC294  38 84 D9 D8 */	addi r4, r4, lbl_8054D9D8@l
+/* 80332CD0 002FC290  3C 80 80 55 */	lis r4, __vt__Q36nw4hbm3lyt16ResourceAccessor@ha
+/* 80332CD4 002FC294  38 84 D9 D8 */	addi r4, r4, __vt__Q36nw4hbm3lyt16ResourceAccessor@l
 /* 80332CD8 002FC298  90 83 00 00 */	stw r4, 0(r3)
 /* 80332CDC 002FC29C  4E 80 00 20 */	blr 
 .endfn __ct__Q36nw4hbm3lyt16ResourceAccessorFv
@@ -41,15 +41,11 @@
 
 .balign 8
 
-.obj lbl_8054D9D8, global
-	.4byte lbl_8054D6B0
+.obj __vt__Q36nw4hbm3lyt16ResourceAccessor, global
+	.4byte __RTTI__Q36nw4hbm3lyt16ResourceAccessor
 	.4byte 0
 	.4byte __dt__Q36nw4hbm3lyt16ResourceAccessorFv
 	.4byte 0
 	.4byte GetFont__Q36nw4hbm3lyt16ResourceAccessorFPCc
 	.4byte 0
-.endobj lbl_8054D9D8
-
-.obj lbl_8054D9F0, global
-	.4byte 0x000A0000
-.endobj lbl_8054D9F0
+.endobj __vt__Q36nw4hbm3lyt16ResourceAccessor

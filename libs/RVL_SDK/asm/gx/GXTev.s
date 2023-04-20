@@ -544,13 +544,13 @@
 #@LOCAL@GXSetTevOrder__F13_GXTevStageID13_GXTexCoordID11_GXTexMapID12_GXChannelID@c2r
 .obj lbl_8054C0E8, local
 	.4byte 0
-	.4byte 0x00000001
+	.4byte 1
 	.4byte 0
-	.4byte 0x00000001
+	.4byte 1
 	.4byte 0
-	.4byte 0x00000001
-	.4byte 0x00000007
-	.4byte 0x00000005
-	.4byte 0x00000006
+	.4byte 1
+	.4byte 7
+	.4byte 5
+	.4byte 6
 	.4byte 0
 .endobj lbl_8054C0E8
