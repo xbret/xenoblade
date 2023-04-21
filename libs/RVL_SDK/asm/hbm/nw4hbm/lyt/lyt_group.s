@@ -9,11 +9,11 @@
 /* 8032D4E8 002F6AA8  90 01 00 44 */	stw r0, 0x44(r1)
 /* 8032D4EC 002F6AAC  39 61 00 40 */	addi r11, r1, 0x40
 /* 8032D4F0 002F6AB0  4B F8 CC 55 */	bl _savegpr_23
-/* 8032D4F4 002F6AB4  3C C0 80 55 */	lis r6, lbl_8054D7D0@ha
+/* 8032D4F4 002F6AB4  3C C0 80 55 */	lis r6, __vt__Q36nw4hbm3lyt5Group@ha
 /* 8032D4F8 002F6AB8  3B A0 00 00 */	li r29, 0
 /* 8032D4FC 002F6ABC  38 03 00 10 */	addi r0, r3, 0x10
 /* 8032D500 002F6AC0  93 A3 00 04 */	stw r29, 4(r3)
-/* 8032D504 002F6AC4  38 C6 D7 D0 */	addi r6, r6, lbl_8054D7D0@l
+/* 8032D504 002F6AC4  38 C6 D7 D0 */	addi r6, r6, __vt__Q36nw4hbm3lyt5Group@l
 /* 8032D508 002F6AC8  7C 98 23 78 */	mr r24, r4
 /* 8032D50C 002F6ACC  7C B9 2B 78 */	mr r25, r5
 /* 8032D510 002F6AD0  90 C3 00 00 */	stw r6, 0(r3)
@@ -86,9 +86,9 @@
 /* 8032D608 002F6BC8  7C 7A 1B 78 */	mr r26, r3
 /* 8032D60C 002F6BCC  7C 9B 23 78 */	mr r27, r4
 /* 8032D610 002F6BD0  41 82 00 6C */	beq .L_8032D67C
-/* 8032D614 002F6BD4  3C 80 80 55 */	lis r4, lbl_8054D7D0@ha
+/* 8032D614 002F6BD4  3C 80 80 55 */	lis r4, __vt__Q36nw4hbm3lyt5Group@ha
 /* 8032D618 002F6BD8  83 E3 00 10 */	lwz r31, 0x10(r3)
-/* 8032D61C 002F6BDC  38 84 D7 D0 */	addi r4, r4, lbl_8054D7D0@l
+/* 8032D61C 002F6BDC  38 84 D7 D0 */	addi r4, r4, __vt__Q36nw4hbm3lyt5Group@l
 /* 8032D620 002F6BE0  90 83 00 00 */	stw r4, 0(r3)
 /* 8032D624 002F6BE4  3B C3 00 10 */	addi r30, r3, 0x10
 /* 8032D628 002F6BE8  3F A0 80 5D */	lis r29, mspAllocator__Q36nw4hbm3lyt6Layout@ha
@@ -243,18 +243,18 @@
 
 .balign 8
 
-.obj lbl_8054D7D0, global
-	.4byte lbl_8054D7F0
+.obj __vt__Q36nw4hbm3lyt5Group, global
+	.4byte __RTTI__Q36nw4hbm3lyt5Group
 	.4byte 0
 	.4byte __dt__Q36nw4hbm3lyt5GroupFv
-.endobj lbl_8054D7D0
+.endobj __vt__Q36nw4hbm3lyt5Group
 
 .obj lbl_8054D7DC, global
 	.asciz "nw4hbm::lyt::Group"
 	.balign 4
 .endobj lbl_8054D7DC
 
-.obj lbl_8054D7F0, global
+.obj __RTTI__Q36nw4hbm3lyt5Group, global
 	.4byte lbl_8054D7DC
 	.4byte 0
-.endobj lbl_8054D7F0
+.endobj __RTTI__Q36nw4hbm3lyt5Group

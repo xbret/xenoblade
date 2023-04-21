@@ -13,9 +13,9 @@
 /* 80332D08 002FC2C8  7C 9D 23 78 */	mr r29, r4
 /* 80332D0C 002FC2CC  7C BE 2B 78 */	mr r30, r5
 /* 80332D10 002FC2D0  4B FF EA 31 */	bl __ct__Q36nw4hbm3lyt4PaneFPCQ46nw4hbm3lyt3res4Pane
-/* 80332D14 002FC2D4  3C 60 80 55 */	lis r3, __vt__8054D9F4@ha
+/* 80332D14 002FC2D4  3C 60 80 55 */	lis r3, __vt__Q36nw4hbm3lyt7TextBox@ha
 /* 80332D18 002FC2D8  3C 80 80 33 */	lis r4, __ct__Q36nw4hbm2ut5ColorFv@ha
-/* 80332D1C 002FC2DC  38 63 D9 F4 */	addi r3, r3, __vt__8054D9F4@l
+/* 80332D1C 002FC2DC  38 63 D9 F4 */	addi r3, r3, __vt__Q36nw4hbm3lyt7TextBox@l
 /* 80332D20 002FC2E0  3C A0 80 33 */	lis r5, __dt__Q36nw4hbm2ut5ColorFv@ha
 /* 80332D24 002FC2E4  90 7C 00 00 */	stw r3, 0(r28)
 /* 80332D28 002FC2E8  38 7C 00 D8 */	addi r3, r28, 0xd8
@@ -199,8 +199,8 @@
 /* 80332FCC 002FC58C  7C 7E 1B 78 */	mr r30, r3
 /* 80332FD0 002FC590  41 82 01 54 */	beq .L_80333124
 /* 80332FD4 002FC594  88 03 00 FD */	lbz r0, 0xfd(r3)
-/* 80332FD8 002FC598  3C 80 80 55 */	lis r4, __vt__8054D9F4@ha
-/* 80332FDC 002FC59C  38 84 D9 F4 */	addi r4, r4, __vt__8054D9F4@l
+/* 80332FD8 002FC598  3C 80 80 55 */	lis r4, __vt__Q36nw4hbm3lyt7TextBox@ha
+/* 80332FDC 002FC59C  38 84 D9 F4 */	addi r4, r4, __vt__Q36nw4hbm3lyt7TextBox@l
 /* 80332FE0 002FC5A0  90 83 00 00 */	stw r4, 0(r3)
 /* 80332FE4 002FC5A4  54 00 CF FF */	rlwinm. r0, r0, 0x19, 0x1f, 0x1f
 /* 80332FE8 002FC5A8  41 82 00 38 */	beq .L_80333020
@@ -1456,8 +1456,8 @@
 	.4byte 0x000A0000
 .endobj lbl_8054D9F0
 
-.obj __vt__8054D9F4, global
-	.4byte lbl_8054DA98
+.obj __vt__Q36nw4hbm3lyt7TextBox, global
+	.4byte __RTTI__Q36nw4hbm3lyt7TextBox
 	.4byte 0
 	.4byte __dt__Q36nw4hbm3lyt7TextBoxFv
 	.4byte GetRuntimeTypeInfo__Q36nw4hbm3lyt7TextBoxCFv
@@ -1486,7 +1486,7 @@
 	.4byte FreeStringBuffer__Q36nw4hbm3lyt7TextBoxFv
 	.4byte SetString__Q36nw4hbm3lyt7TextBoxFPCwUs
 	.4byte SetString__Q36nw4hbm3lyt7TextBoxFPCwUsUs
-.endobj __vt__8054D9F4
+.endobj __vt__Q36nw4hbm3lyt7TextBox
 
 .obj lbl_8054DA68, global
 	.asciz "nw4hbm::lyt::TextBox"
@@ -1494,18 +1494,18 @@
 .endobj lbl_8054DA68
 
 .obj lbl_8054DA80, global
-	.4byte lbl_8054D798
+	.4byte __RTTI__Q46nw4hbm3lyt6detail8PaneBase
 	.4byte 0
-	.4byte lbl_8054D770
+	.4byte __RTTI__Q36nw4hbm3lyt4Pane
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj lbl_8054DA80
 
-.obj lbl_8054DA98, global
+.obj __RTTI__Q36nw4hbm3lyt7TextBox, global
 	.4byte lbl_8054DA68
 	.4byte lbl_8054DA80
-.endobj lbl_8054DA98
+.endobj __RTTI__Q36nw4hbm3lyt7TextBox
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

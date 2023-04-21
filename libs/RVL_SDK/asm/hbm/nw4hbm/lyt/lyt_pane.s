@@ -7,14 +7,14 @@
 /* 80331740 002FAD00  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80331744 002FAD04  7C 08 02 A6 */	mflr r0
 /* 80331748 002FAD08  3C A0 80 52 */	lis r5, lbl_80518A98@ha
-/* 8033174C 002FAD0C  3C C0 80 55 */	lis r6, lbl_8054D8D0@ha
+/* 8033174C 002FAD0C  3C C0 80 55 */	lis r6, __vt__Q36nw4hbm3lyt4Pane@ha
 /* 80331750 002FAD10  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80331754 002FAD14  38 00 00 00 */	li r0, 0
 /* 80331758 002FAD18  C0 05 8A 98 */	lfs f0, lbl_80518A98@l(r5)
 /* 8033175C 002FAD1C  38 E3 00 14 */	addi r7, r3, 0x14
 /* 80331760 002FAD20  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80331764 002FAD24  39 03 00 20 */	addi r8, r3, 0x20
-/* 80331768 002FAD28  38 C6 D8 D0 */	addi r6, r6, lbl_8054D8D0@l
+/* 80331768 002FAD28  38 C6 D8 D0 */	addi r6, r6, __vt__Q36nw4hbm3lyt4Pane@l
 /* 8033176C 002FAD2C  7C 9F 23 78 */	mr r31, r4
 /* 80331770 002FAD30  93 C1 00 08 */	stw r30, 8(r1)
 /* 80331774 002FAD34  7C 7E 1B 78 */	mr r30, r3
@@ -87,9 +87,9 @@
 /* 80331878 002FAE38  7C 7A 1B 78 */	mr r26, r3
 /* 8033187C 002FAE3C  7C 9B 23 78 */	mr r27, r4
 /* 80331880 002FAE40  41 82 00 F8 */	beq .L_80331978
-/* 80331884 002FAE44  3C 80 80 55 */	lis r4, lbl_8054D8D0@ha
+/* 80331884 002FAE44  3C 80 80 55 */	lis r4, __vt__Q36nw4hbm3lyt4Pane@ha
 /* 80331888 002FAE48  83 E3 00 14 */	lwz r31, 0x14(r3)
-/* 8033188C 002FAE4C  38 84 D8 D0 */	addi r4, r4, lbl_8054D8D0@l
+/* 8033188C 002FAE4C  38 84 D8 D0 */	addi r4, r4, __vt__Q36nw4hbm3lyt4Pane@l
 /* 80331890 002FAE50  90 83 00 00 */	stw r4, 0(r3)
 /* 80331894 002FAE54  3B C3 00 14 */	addi r30, r3, 0x14
 /* 80331898 002FAE58  3F A0 80 5D */	lis r29, mspAllocator__Q36nw4hbm3lyt6Layout@ha
@@ -1173,15 +1173,14 @@
 	.4byte 0
 	.float 1.0
 	.4byte 0x3C8EFA35
-#@LOCAL@CalculateMtx__Q36nw4hbm3lyt4PaneFRCQ36nw4hbm3lyt8DrawInfo@invAlpha
 	.4byte 0x3B808081
 	.4byte 0x43300000
 	.4byte 0
 .endobj lbl_80518A98
 
-
 .obj lbl_80518AB0, global
 	.float 0.5
+#@LOCAL@CalculateMtx__Q36nw4hbm3lyt4PaneFRCQ36nw4hbm3lyt8DrawInfo@invAlpha
 	.4byte 0x3B808081
 .endobj lbl_80518AB0
 
@@ -1189,8 +1188,8 @@
 
 .balign 8
 
-.obj lbl_8054D8D0, global
-	.4byte lbl_8054D770
+.obj __vt__Q36nw4hbm3lyt4Pane, global
+	.4byte __RTTI__Q36nw4hbm3lyt4Pane
 	.4byte 0
 	.4byte __dt__Q36nw4hbm3lyt4PaneFv
 	.4byte GetRuntimeTypeInfo__Q36nw4hbm3lyt4PaneCFv
@@ -1216,7 +1215,7 @@
 	.4byte GetMaterial__Q36nw4hbm3lyt4PaneCFv
 	.4byte LoadMtx__Q36nw4hbm3lyt4PaneFRCQ36nw4hbm3lyt8DrawInfo
 	.4byte 0
-.endobj lbl_8054D8D0
+.endobj __vt__Q36nw4hbm3lyt4Pane
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

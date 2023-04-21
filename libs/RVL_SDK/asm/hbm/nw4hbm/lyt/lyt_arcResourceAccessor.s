@@ -165,11 +165,11 @@
 /* 8032C2AC 002F586C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8032C2B0 002F5870  7C 7F 1B 78 */	mr r31, r3
 /* 8032C2B4 002F5874  48 00 6A 1D */	bl __ct__Q36nw4hbm3lyt16ResourceAccessorFv
-/* 8032C2B8 002F5878  3C 80 80 55 */	lis r4, lbl_8054D640@ha
+/* 8032C2B8 002F5878  3C 80 80 55 */	lis r4, __vt__Q36nw4hbm3lyt19ArcResourceAccessor@ha
 /* 8032C2BC 002F587C  38 BF 00 28 */	addi r5, r31, 0x28
 /* 8032C2C0 002F5880  38 00 00 00 */	li r0, 0
 /* 8032C2C4 002F5884  90 1F 00 20 */	stw r0, 0x20(r31)
-/* 8032C2C8 002F5888  38 84 D6 40 */	addi r4, r4, lbl_8054D640@l
+/* 8032C2C8 002F5888  38 84 D6 40 */	addi r4, r4, __vt__Q36nw4hbm3lyt19ArcResourceAccessor@l
 /* 8032C2CC 002F588C  7F E3 FB 78 */	mr r3, r31
 /* 8032C2D0 002F5890  90 9F 00 00 */	stw r4, 0(r31)
 /* 8032C2D4 002F5894  90 1F 00 24 */	stw r0, 0x24(r31)
@@ -281,13 +281,13 @@
 .endobj lbl_8054D63C
 
 
-.obj lbl_8054D640, global
-	.4byte lbl_8054D688
+.obj __vt__Q36nw4hbm3lyt19ArcResourceAccessor, global
+	.4byte __RTTI__Q36nw4hbm3lyt19ArcResourceAccessor
 	.4byte 0
 	.4byte __dt__Q36nw4hbm3lyt19ArcResourceAccessorFv
 	.4byte GetResource__Q36nw4hbm3lyt19ArcResourceAccessorFUlPCcPUl
 	.4byte GetFont__Q36nw4hbm3lyt24MultiArcResourceAccessorFPCc
-.endobj lbl_8054D640
+.endobj __vt__Q36nw4hbm3lyt19ArcResourceAccessor
 
 .obj lbl_8054D654, global
 	.asciz "nw4hbm::lyt::ArcResourceAccessor"
@@ -301,10 +301,10 @@
 	.4byte 0
 .endobj lbl_8054D678
 
-.obj lbl_8054D688, global
+.obj __RTTI__Q36nw4hbm3lyt19ArcResourceAccessor, global
 	.4byte lbl_8054D654
 	.4byte lbl_8054D678
-.endobj lbl_8054D688
+.endobj __RTTI__Q36nw4hbm3lyt19ArcResourceAccessor
 
 .obj lbl_8054D690, global
 	.asciz "nw4hbm::lyt::ResourceAccessor"

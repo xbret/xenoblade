@@ -1772,7 +1772,7 @@
 /* 80338484 00301A44  38 21 00 20 */	addi r1, r1, 0x20
 /* 80338488 00301A48  4E 80 00 20 */	blr 
 .endfn SetupGXWithColorMapping__Q36nw4hbm2ut10CharWriterFQ36nw4hbm2ut5ColorQ36nw4hbm2ut5Color
-.4byte 0 #fake
+
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 

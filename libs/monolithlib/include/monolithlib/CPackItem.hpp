@@ -2,7 +2,6 @@
 
 #include "types.h"
 #include "string.h"
-#include "kyoshin/"
 
 struct PackHeader{
         u32 unk0;

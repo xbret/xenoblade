@@ -3125,17 +3125,17 @@
 /* 8033C8D0 00305E90  41 82 00 08 */	beq .L_8033C8D8
 /* 8033C8D4 00305E94  48 00 00 20 */	b .L_8033C8F4
 .L_8033C8D8:
-/* 8033C8D8 00305E98  3C 60 80 55 */	lis r3, lbl_8054EEFC@ha
+/* 8033C8D8 00305E98  3C 60 80 55 */	lis r3, "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>"@ha
 /* 8033C8DC 00305E9C  80 01 00 00 */	lwz r0, 0(r1)
-/* 8033C8E0 00305EA0  80 63 EE FC */	lwz r3, lbl_8054EEFC@l(r3)
+/* 8033C8E0 00305EA0  80 63 EE FC */	lwz r3, "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>"@l(r3)
 /* 8033C8E4 00305EA4  7D E3 00 D0 */	neg r15, r3
 /* 8033C8E8 00305EA8  55 EF 00 38 */	rlwinm r15, r15, 0, 0, 0x1c
 /* 8033C8EC 00305EAC  7C 01 79 6E */	stwux r0, r1, r15
 /* 8033C8F0 00305EB0  39 E1 00 08 */	addi r15, r1, 8
 .L_8033C8F4:
-/* 8033C8F4 00305EB4  3C 80 80 55 */	lis r4, lbl_8054EEFC@ha
+/* 8033C8F4 00305EB4  3C 80 80 55 */	lis r4, "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>"@ha
 /* 8033C8F8 00305EB8  7D E3 7B 78 */	mr r3, r15
-/* 8033C8FC 00305EBC  80 84 EE FC */	lwz r4, lbl_8054EEFC@l(r4)
+/* 8033C8FC 00305EBC  80 84 EE FC */	lwz r4, "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>"@l(r4)
 /* 8033C900 00305EC0  7E 05 83 78 */	mr r5, r16
 /* 8033C904 00305EC4  38 DF 00 68 */	addi r6, r31, 0x68
 /* 8033C908 00305EC8  4B F8 A5 99 */	bl vswprintf
@@ -3258,17 +3258,17 @@
 /* 8033CAD0 00306090  41 82 00 08 */	beq .L_8033CAD8
 /* 8033CAD4 00306094  48 00 00 20 */	b .L_8033CAF4
 .L_8033CAD8:
-/* 8033CAD8 00306098  3C 60 80 55 */	lis r3, lbl_8054EEFC@ha
+/* 8033CAD8 00306098  3C 60 80 55 */	lis r3, "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>"@ha
 /* 8033CADC 0030609C  80 01 00 00 */	lwz r0, 0(r1)
-/* 8033CAE0 003060A0  80 63 EE FC */	lwz r3, lbl_8054EEFC@l(r3)
+/* 8033CAE0 003060A0  80 63 EE FC */	lwz r3, "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>"@l(r3)
 /* 8033CAE4 003060A4  7D E3 00 D0 */	neg r15, r3
 /* 8033CAE8 003060A8  55 EF 00 38 */	rlwinm r15, r15, 0, 0, 0x1c
 /* 8033CAEC 003060AC  7C 01 79 6E */	stwux r0, r1, r15
 /* 8033CAF0 003060B0  39 E1 00 08 */	addi r15, r1, 8
 .L_8033CAF4:
-/* 8033CAF4 003060B4  3C 80 80 55 */	lis r4, lbl_8054EEFC@ha
+/* 8033CAF4 003060B4  3C 80 80 55 */	lis r4, "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>"@ha
 /* 8033CAF8 003060B8  7D E3 7B 78 */	mr r3, r15
-/* 8033CAFC 003060BC  80 84 EE FC */	lwz r4, lbl_8054EEFC@l(r4)
+/* 8033CAFC 003060BC  80 84 EE FC */	lwz r4, "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>"@l(r4)
 /* 8033CB00 003060C0  7E 05 83 78 */	mr r5, r16
 /* 8033CB04 003060C4  38 DF 00 68 */	addi r6, r31, 0x68
 /* 8033CB08 003060C8  4B F8 A3 99 */	bl vswprintf
@@ -3385,17 +3385,17 @@
 /* 8033CCB8 00306278  41 82 00 08 */	beq .L_8033CCC0
 /* 8033CCBC 0030627C  48 00 00 20 */	b .L_8033CCDC
 .L_8033CCC0:
-/* 8033CCC0 00306280  3C 60 80 55 */	lis r3, lbl_8054EEFC@ha
+/* 8033CCC0 00306280  3C 60 80 55 */	lis r3, "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>"@ha
 /* 8033CCC4 00306284  80 01 00 00 */	lwz r0, 0(r1)
-/* 8033CCC8 00306288  80 63 EE FC */	lwz r3, lbl_8054EEFC@l(r3)
+/* 8033CCC8 00306288  80 63 EE FC */	lwz r3, "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>"@l(r3)
 /* 8033CCCC 0030628C  7D E3 00 D0 */	neg r15, r3
 /* 8033CCD0 00306290  55 EF 00 38 */	rlwinm r15, r15, 0, 0, 0x1c
 /* 8033CCD4 00306294  7C 01 79 6E */	stwux r0, r1, r15
 /* 8033CCD8 00306298  39 E1 00 08 */	addi r15, r1, 8
 .L_8033CCDC:
-/* 8033CCDC 0030629C  3C 80 80 55 */	lis r4, lbl_8054EEFC@ha
+/* 8033CCDC 0030629C  3C 80 80 55 */	lis r4, "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>"@ha
 /* 8033CCE0 003062A0  7D E3 7B 78 */	mr r3, r15
-/* 8033CCE4 003062A4  80 84 EE FC */	lwz r4, lbl_8054EEFC@l(r4)
+/* 8033CCE4 003062A4  80 84 EE FC */	lwz r4, "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>"@l(r4)
 /* 8033CCE8 003062A8  38 DF 00 68 */	addi r6, r31, 0x68
 /* 8033CCEC 003062AC  4B F8 A1 B5 */	bl vswprintf
 /* 8033CCF0 003062B0  82 1E 00 00 */	lwz r16, 0(r30)
@@ -3484,17 +3484,17 @@
 /* 8033CE2C 003063EC  41 82 00 08 */	beq .L_8033CE34
 /* 8033CE30 003063F0  48 00 00 20 */	b .L_8033CE50
 .L_8033CE34:
-/* 8033CE34 003063F4  3C 60 80 55 */	lis r3, lbl_8054EEFC@ha
+/* 8033CE34 003063F4  3C 60 80 55 */	lis r3, "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>"@ha
 /* 8033CE38 003063F8  80 01 00 00 */	lwz r0, 0(r1)
-/* 8033CE3C 003063FC  80 63 EE FC */	lwz r3, lbl_8054EEFC@l(r3)
+/* 8033CE3C 003063FC  80 63 EE FC */	lwz r3, "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>"@l(r3)
 /* 8033CE40 00306400  7D E3 00 D0 */	neg r15, r3
 /* 8033CE44 00306404  55 EF 00 38 */	rlwinm r15, r15, 0, 0, 0x1c
 /* 8033CE48 00306408  7C 01 79 6E */	stwux r0, r1, r15
 /* 8033CE4C 0030640C  39 E1 00 08 */	addi r15, r1, 8
 .L_8033CE50:
-/* 8033CE50 00306410  3C 80 80 55 */	lis r4, lbl_8054EEFC@ha
+/* 8033CE50 00306410  3C 80 80 55 */	lis r4, "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>"@ha
 /* 8033CE54 00306414  7D E3 7B 78 */	mr r3, r15
-/* 8033CE58 00306418  80 84 EE FC */	lwz r4, lbl_8054EEFC@l(r4)
+/* 8033CE58 00306418  80 84 EE FC */	lwz r4, "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>"@l(r4)
 /* 8033CE5C 0030641C  4B F8 A0 45 */	bl vswprintf
 /* 8033CE60 00306420  82 1E 00 00 */	lwz r16, 0(r30)
 /* 8033CE64 00306424  7E 44 93 78 */	mr r4, r18
@@ -4109,17 +4109,17 @@
 /* 8033D770 00306D30  41 82 00 08 */	beq .L_8033D778
 /* 8033D774 00306D34  48 00 00 20 */	b .L_8033D794
 .L_8033D778:
-/* 8033D778 00306D38  3C 60 80 55 */	lis r3, lbl_8054EEFC@ha
+/* 8033D778 00306D38  3C 60 80 55 */	lis r3, "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>"@ha
 /* 8033D77C 00306D3C  80 01 00 00 */	lwz r0, 0(r1)
-/* 8033D780 00306D40  80 63 EE FC */	lwz r3, lbl_8054EEFC@l(r3)
+/* 8033D780 00306D40  80 63 EE FC */	lwz r3, "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>"@l(r3)
 /* 8033D784 00306D44  7F A3 00 D0 */	neg r29, r3
 /* 8033D788 00306D48  57 BD 00 38 */	rlwinm r29, r29, 0, 0, 0x1c
 /* 8033D78C 00306D4C  7C 01 E9 6E */	stwux r0, r1, r29
 /* 8033D790 00306D50  3B A1 00 08 */	addi r29, r1, 8
 .L_8033D794:
-/* 8033D794 00306D54  3C 80 80 55 */	lis r4, lbl_8054EEFC@ha
+/* 8033D794 00306D54  3C 80 80 55 */	lis r4, "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>"@ha
 /* 8033D798 00306D58  7F A3 EB 78 */	mr r3, r29
-/* 8033D79C 00306D5C  80 84 EE FC */	lwz r4, lbl_8054EEFC@l(r4)
+/* 8033D79C 00306D5C  80 84 EE FC */	lwz r4, "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>"@l(r4)
 /* 8033D7A0 00306D60  7F 85 E3 78 */	mr r5, r28
 /* 8033D7A4 00306D64  38 DF 00 68 */	addi r6, r31, 0x68
 /* 8033D7A8 00306D68  4B F8 96 F9 */	bl vswprintf
@@ -4230,17 +4230,17 @@
 /* 8033D944 00306F04  41 82 00 08 */	beq .L_8033D94C
 /* 8033D948 00306F08  48 00 00 20 */	b .L_8033D968
 .L_8033D94C:
-/* 8033D94C 00306F0C  3C 60 80 55 */	lis r3, lbl_8054EEFC@ha
+/* 8033D94C 00306F0C  3C 60 80 55 */	lis r3, "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>"@ha
 /* 8033D950 00306F10  80 01 00 00 */	lwz r0, 0(r1)
-/* 8033D954 00306F14  80 63 EE FC */	lwz r3, lbl_8054EEFC@l(r3)
+/* 8033D954 00306F14  80 63 EE FC */	lwz r3, "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>"@l(r3)
 /* 8033D958 00306F18  7F A3 00 D0 */	neg r29, r3
 /* 8033D95C 00306F1C  57 BD 00 38 */	rlwinm r29, r29, 0, 0, 0x1c
 /* 8033D960 00306F20  7C 01 E9 6E */	stwux r0, r1, r29
 /* 8033D964 00306F24  3B A1 00 08 */	addi r29, r1, 8
 .L_8033D968:
-/* 8033D968 00306F28  3C 80 80 55 */	lis r4, lbl_8054EEFC@ha
+/* 8033D968 00306F28  3C 80 80 55 */	lis r4, "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>"@ha
 /* 8033D96C 00306F2C  7F A3 EB 78 */	mr r3, r29
-/* 8033D970 00306F30  80 84 EE FC */	lwz r4, lbl_8054EEFC@l(r4)
+/* 8033D970 00306F30  80 84 EE FC */	lwz r4, "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>"@l(r4)
 /* 8033D974 00306F34  7C E5 3B 78 */	mr r5, r7
 /* 8033D978 00306F38  4B F8 95 29 */	bl vswprintf
 /* 8033D97C 00306F3C  80 1E 00 00 */	lwz r0, 0(r30)
@@ -4517,8 +4517,8 @@
 /* 8033DDA0 00307360  3C C0 80 5D */	lis r6, "mFormatBuffer__Q36nw4hbm2ut17TextWriterBase<w>"@ha
 /* 8033DDA4 00307364  7C 60 1B 78 */	mr r0, r3
 /* 8033DDA8 00307368  80 66 D8 18 */	lwz r3, "mFormatBuffer__Q36nw4hbm2ut17TextWriterBase<w>"@l(r6)
-/* 8033DDAC 0030736C  3C A0 80 55 */	lis r5, lbl_8054EEFC@ha
-/* 8033DDB0 00307370  90 85 EE FC */	stw r4, lbl_8054EEFC@l(r5)
+/* 8033DDAC 0030736C  3C A0 80 55 */	lis r5, "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>"@ha
+/* 8033DDB0 00307370  90 85 EE FC */	stw r4, "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>"@l(r5)
 /* 8033DDB4 00307374  90 06 D8 18 */	stw r0, "mFormatBuffer__Q36nw4hbm2ut17TextWriterBase<w>"@l(r6)
 /* 8033DDB8 00307378  4E 80 00 20 */	blr
 .endfn "SetBuffer__Q36nw4hbm2ut17TextWriterBase<w>FPwUl"
@@ -4528,17 +4528,17 @@
 /* 8033DDC0 00307380  3C A0 80 5D */	lis r5, "mFormatBuffer__Q36nw4hbm2ut17TextWriterBase<w>"@ha
 /* 8033DDC4 00307384  7C 66 1B 78 */	mr r6, r3
 /* 8033DDC8 00307388  80 65 D8 18 */	lwz r3, "mFormatBuffer__Q36nw4hbm2ut17TextWriterBase<w>"@l(r5)
-/* 8033DDCC 0030738C  3C 80 80 55 */	lis r4, lbl_8054EEFC@ha
+/* 8033DDCC 0030738C  3C 80 80 55 */	lis r4, "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>"@ha
 /* 8033DDD0 00307390  38 00 00 00 */	li r0, 0
-/* 8033DDD4 00307394  90 C4 EE FC */	stw r6, lbl_8054EEFC@l(r4)
+/* 8033DDD4 00307394  90 C4 EE FC */	stw r6, "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>"@l(r4)
 /* 8033DDD8 00307398  90 05 D8 18 */	stw r0, "mFormatBuffer__Q36nw4hbm2ut17TextWriterBase<w>"@l(r5)
 /* 8033DDDC 0030739C  4E 80 00 20 */	blr
 .endfn "SetBuffer__Q36nw4hbm2ut17TextWriterBase<w>FUl"
 
 .balign 16, 0
 .fn "GetBufferSize__Q36nw4hbm2ut17TextWriterBase<w>Fv", global
-/* 8033DDE0 003073A0  3C 60 80 55 */	lis r3, lbl_8054EEFC@ha
-/* 8033DDE4 003073A4  80 63 EE FC */	lwz r3, lbl_8054EEFC@l(r3)
+/* 8033DDE0 003073A0  3C 60 80 55 */	lis r3, "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>"@ha
+/* 8033DDE4 003073A4  80 63 EE FC */	lwz r3, "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>"@l(r3)
 /* 8033DDE8 003073A8  4E 80 00 20 */	blr
 .endfn "GetBufferSize__Q36nw4hbm2ut17TextWriterBase<w>Fv"
 
@@ -5833,9 +5833,9 @@
 	.4byte 0x00000100
 .endobj "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<c>"
 
-.obj lbl_8054EEFC, global
+.obj "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>", global
 	.4byte 0x00000100
-.endobj lbl_8054EEFC
+.endobj "mFormatBufferSize__Q36nw4hbm2ut17TextWriterBase<w>"
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

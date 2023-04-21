@@ -142,10 +142,10 @@
 /* 8032D9D0 002F6F90  3C 80 80 52 */	lis r4, lbl_80518A60@ha
 /* 8032D9D4 002F6F94  38 00 00 00 */	li r0, 0
 /* 8032D9D8 002F6F98  C0 04 8A 60 */	lfs f0, lbl_80518A60@l(r4)
-/* 8032D9DC 002F6F9C  3C 80 80 55 */	lis r4, lbl_8054D7F8@ha
+/* 8032D9DC 002F6F9C  3C 80 80 55 */	lis r4, __vt__Q36nw4hbm3lyt6Layout@ha
 /* 8032D9E0 002F6FA0  38 A3 00 08 */	addi r5, r3, 8
 /* 8032D9E4 002F6FA4  90 03 00 04 */	stw r0, 4(r3)
-/* 8032D9E8 002F6FA8  38 84 D7 F8 */	addi r4, r4, lbl_8054D7F8@l
+/* 8032D9E8 002F6FA8  38 84 D7 F8 */	addi r4, r4, __vt__Q36nw4hbm3lyt6Layout@l
 /* 8032D9EC 002F6FAC  90 83 00 00 */	stw r4, 0(r3)
 /* 8032D9F0 002F6FB0  90 A3 00 08 */	stw r5, 8(r3)
 /* 8032D9F4 002F6FB4  90 A3 00 0C */	stw r5, 0xc(r3)
@@ -169,8 +169,8 @@
 /* 8032DA2C 002F6FEC  7C 9B 23 78 */	mr r27, r4
 /* 8032DA30 002F6FF0  41 82 00 EC */	beq .L_8032DB1C
 /* 8032DA34 002F6FF4  80 03 00 14 */	lwz r0, 0x14(r3)
-/* 8032DA38 002F6FF8  3C 80 80 55 */	lis r4, lbl_8054D7F8@ha
-/* 8032DA3C 002F6FFC  38 84 D7 F8 */	addi r4, r4, lbl_8054D7F8@l
+/* 8032DA38 002F6FF8  3C 80 80 55 */	lis r4, __vt__Q36nw4hbm3lyt6Layout@ha
+/* 8032DA3C 002F6FFC  38 84 D7 F8 */	addi r4, r4, __vt__Q36nw4hbm3lyt6Layout@l
 /* 8032DA40 002F7000  90 83 00 00 */	stw r4, 0(r3)
 /* 8032DA44 002F7004  2C 00 00 00 */	cmpwi r0, 0
 /* 8032DA48 002F7008  41 82 00 20 */	beq .L_8032DA68
@@ -974,8 +974,8 @@
 
 .balign 8
 
-.obj lbl_8054D7F8, global
-	.4byte lbl_8054D840
+.obj __vt__Q36nw4hbm3lyt6Layout, global
+	.4byte __RTTI__Q36nw4hbm3lyt6Layout
 	.4byte 0
 	.4byte __dt__Q36nw4hbm3lyt6LayoutFv
 	.4byte Build__Q36nw4hbm3lyt6LayoutFPCvPQ36nw4hbm3lyt16ResourceAccessor
@@ -988,16 +988,16 @@
 	.4byte Draw__Q36nw4hbm3lyt6LayoutFRCQ36nw4hbm3lyt8DrawInfo
 	.4byte Animate__Q36nw4hbm3lyt6LayoutFUl
 	.4byte "SetTagProcessor__Q36nw4hbm3lyt6LayoutFPQ36nw4hbm2ut19TagProcessorBase<w>"
-.endobj lbl_8054D7F8
+.endobj __vt__Q36nw4hbm3lyt6Layout
 
 .obj lbl_8054D82C, global
 	.asciz "nw4hbm::lyt::Layout"
 .endobj lbl_8054D82C
 
-.obj lbl_8054D840, global
+.obj __RTTI__Q36nw4hbm3lyt6Layout, global
 	.4byte lbl_8054D82C
 	.4byte 0
-.endobj lbl_8054D840
+.endobj __RTTI__Q36nw4hbm3lyt6Layout
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

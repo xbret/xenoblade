@@ -10,9 +10,9 @@
 /* 8032C41C 002F59DC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8032C420 002F59E0  7C 7F 1B 78 */	mr r31, r3
 /* 8032C424 002F59E4  48 00 53 1D */	bl __ct__Q36nw4hbm3lyt4PaneFPCQ46nw4hbm3lyt3res4Pane
-/* 8032C428 002F59E8  3C 80 80 55 */	lis r4, lbl_8054D6B8@ha
+/* 8032C428 002F59E8  3C 80 80 55 */	lis r4, __vt__Q36nw4hbm3lyt8Bounding@ha
 /* 8032C42C 002F59EC  7F E3 FB 78 */	mr r3, r31
-/* 8032C430 002F59F0  38 84 D6 B8 */	addi r4, r4, lbl_8054D6B8@l
+/* 8032C430 002F59F0  38 84 D6 B8 */	addi r4, r4, __vt__Q36nw4hbm3lyt8Bounding@l
 /* 8032C434 002F59F4  90 9F 00 00 */	stw r4, 0(r31)
 /* 8032C438 002F59F8  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8032C43C 002F59FC  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -126,8 +126,8 @@
 
 .balign 8
 
-.obj lbl_8054D6B8, global
-	.4byte lbl_8054D748
+.obj __vt__Q36nw4hbm3lyt8Bounding, global
+	.4byte __RTTI__Q36nw4hbm3lyt8Bounding
 	.4byte 0
 	.4byte __dt__Q36nw4hbm3lyt8BoundingFv
 	.4byte GetRuntimeTypeInfo__Q36nw4hbm3lyt8BoundingCFv
@@ -152,7 +152,7 @@
 	.4byte SetAnimationEnable__Q36nw4hbm3lyt4PaneFPQ36nw4hbm3lyt13AnimTransformbb
 	.4byte GetMaterial__Q36nw4hbm3lyt4PaneCFv
 	.4byte LoadMtx__Q36nw4hbm3lyt4PaneFRCQ36nw4hbm3lyt8DrawInfo
-.endobj lbl_8054D6B8
+.endobj __vt__Q36nw4hbm3lyt8Bounding
 
 .obj lbl_8054D71C, global
 	.asciz "nw4hbm::lyt::Bounding"
@@ -160,17 +160,17 @@
 .endobj lbl_8054D71C
 
 .obj lbl_8054D734, global
-	.4byte lbl_8054D798
+	.4byte __RTTI__Q46nw4hbm3lyt6detail8PaneBase
 	.4byte 0
-	.4byte lbl_8054D770
+	.4byte __RTTI__Q36nw4hbm3lyt4Pane
 	.4byte 0
 	.4byte 0
 .endobj lbl_8054D734
 
-.obj lbl_8054D748, global
+.obj __RTTI__Q36nw4hbm3lyt8Bounding, global
 	.4byte lbl_8054D71C
 	.4byte lbl_8054D734
-.endobj lbl_8054D748
+.endobj __RTTI__Q36nw4hbm3lyt8Bounding
 
 .obj lbl_8054D750, global
 	.asciz "nw4hbm::lyt::Pane"
@@ -178,25 +178,25 @@
 .endobj lbl_8054D750
 
 .obj lbl_8054D764, global
-	.4byte lbl_8054D798
+	.4byte __RTTI__Q46nw4hbm3lyt6detail8PaneBase
 	.4byte 0
 	.4byte 0
 .endobj lbl_8054D764
 
-.obj lbl_8054D770, global
+.obj __RTTI__Q36nw4hbm3lyt4Pane, global
 	.4byte lbl_8054D750
 	.4byte lbl_8054D764
-.endobj lbl_8054D770
+.endobj __RTTI__Q36nw4hbm3lyt4Pane
 
 .obj lbl_8054D778, global
 	.asciz "nw4hbm::lyt::detail::PaneBase"
 	.balign 4
 .endobj lbl_8054D778
 
-.obj lbl_8054D798, global
+.obj __RTTI__Q46nw4hbm3lyt6detail8PaneBase, global
 	.4byte lbl_8054D778
 	.4byte 0
-.endobj lbl_8054D798
+.endobj __RTTI__Q46nw4hbm3lyt6detail8PaneBase
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

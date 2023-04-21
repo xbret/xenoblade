@@ -215,8 +215,8 @@
 /* 8032B790 002F4D50  3C 80 80 52 */	lis r4, lbl_80518A40@ha
 /* 8032B794 002F4D54  38 00 00 00 */	li r0, 0
 /* 8032B798 002F4D58  C0 04 8A 40 */	lfs f0, lbl_80518A40@l(r4)
-/* 8032B79C 002F4D5C  3C 80 80 55 */	lis r4, lbl_8054D5B8@ha
-/* 8032B7A0 002F4D60  38 84 D5 B8 */	addi r4, r4, lbl_8054D5B8@l
+/* 8032B79C 002F4D5C  3C 80 80 55 */	lis r4, __vt__Q36nw4hbm3lyt18AnimTransformBasic@ha
+/* 8032B7A0 002F4D60  38 84 D5 B8 */	addi r4, r4, __vt__Q36nw4hbm3lyt18AnimTransformBasic@l
 /* 8032B7A4 002F4D64  90 03 00 04 */	stw r0, 4(r3)
 /* 8032B7A8 002F4D68  90 03 00 08 */	stw r0, 8(r3)
 /* 8032B7AC 002F4D6C  90 03 00 0C */	stw r0, 0xc(r3)
@@ -240,8 +240,8 @@
 /* 8032B7EC 002F4DAC  7C 7E 1B 78 */	mr r30, r3
 /* 8032B7F0 002F4DB0  41 82 00 50 */	beq .L_8032B840
 /* 8032B7F4 002F4DB4  80 83 00 18 */	lwz r4, 0x18(r3)
-/* 8032B7F8 002F4DB8  3C A0 80 55 */	lis r5, lbl_8054D5B8@ha
-/* 8032B7FC 002F4DBC  38 A5 D5 B8 */	addi r5, r5, lbl_8054D5B8@l
+/* 8032B7F8 002F4DB8  3C A0 80 55 */	lis r5, __vt__Q36nw4hbm3lyt18AnimTransformBasic@ha
+/* 8032B7FC 002F4DBC  38 A5 D5 B8 */	addi r5, r5, __vt__Q36nw4hbm3lyt18AnimTransformBasic@l
 /* 8032B800 002F4DC0  90 A3 00 00 */	stw r5, 0(r3)
 /* 8032B804 002F4DC4  2C 04 00 00 */	cmpwi r4, 0
 /* 8032B808 002F4DC8  41 82 00 10 */	beq .L_8032B818
@@ -885,7 +885,7 @@
 
 .balign 8
 
-.obj lbl_8054D5B8, global
+.obj __vt__Q36nw4hbm3lyt18AnimTransformBasic, global
 	.4byte lbl_8054D608
 	.4byte 0
 	.4byte __dt__Q36nw4hbm3lyt18AnimTransformBasicFv
@@ -894,7 +894,7 @@
 	.4byte Bind__Q36nw4hbm3lyt18AnimTransformBasicFPQ36nw4hbm3lyt8Material
 	.4byte Animate__Q36nw4hbm3lyt18AnimTransformBasicFUlPQ36nw4hbm3lyt4Pane
 	.4byte Animate__Q36nw4hbm3lyt18AnimTransformBasicFUlPQ36nw4hbm3lyt8Material
-.endobj lbl_8054D5B8
+.endobj __vt__Q36nw4hbm3lyt18AnimTransformBasic
 
 .obj lbl_8054D5D8, global
 	.asciz "nw4hbm::lyt::AnimTransformBasic"

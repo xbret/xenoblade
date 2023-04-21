@@ -229,9 +229,9 @@
 /* 8032E818 002F7DD8  90 01 00 84 */	stw r0, 0x84(r1)
 /* 8032E81C 002F7DDC  39 61 00 80 */	addi r11, r1, 0x80
 /* 8032E820 002F7DE0  4B F8 B9 01 */	bl _savegpr_14
-/* 8032E824 002F7DE4  3C C0 80 55 */	lis r6, lbl_8054D888@ha
+/* 8032E824 002F7DE4  3C C0 80 55 */	lis r6, __vt__Q36nw4hbm3lyt8Material@ha
 /* 8032E828 002F7DE8  38 03 00 1C */	addi r0, r3, 0x1c
-/* 8032E82C 002F7DEC  38 C6 D8 88 */	addi r6, r6, lbl_8054D888@l
+/* 8032E82C 002F7DEC  38 C6 D8 88 */	addi r6, r6, __vt__Q36nw4hbm3lyt8Material@l
 /* 8032E830 002F7DF0  39 C0 00 00 */	li r14, 0
 /* 8032E834 002F7DF4  90 C3 00 00 */	stw r6, 0(r3)
 /* 8032E838 002F7DF8  3C E0 80 33 */	lis r7, __ct__Q36nw4hbm2ut5ColorFv@ha
@@ -1408,8 +1408,8 @@
 /* 8032F9B8 002F8F78  93 C1 00 08 */	stw r30, 8(r1)
 /* 8032F9BC 002F8F7C  7C 7E 1B 78 */	mr r30, r3
 /* 8032F9C0 002F8F80  41 82 00 74 */	beq .L_8032FA34
-/* 8032F9C4 002F8F84  3D 80 80 55 */	lis r12, lbl_8054D888@ha
-/* 8032F9C8 002F8F88  39 8C D8 88 */	addi r12, r12, lbl_8054D888@l
+/* 8032F9C4 002F8F84  3D 80 80 55 */	lis r12, __vt__Q36nw4hbm3lyt8Material@ha
+/* 8032F9C8 002F8F88  39 8C D8 88 */	addi r12, r12, __vt__Q36nw4hbm3lyt8Material@l
 /* 8032F9CC 002F8F8C  91 83 00 00 */	stw r12, 0(r3)
 /* 8032F9D0 002F8F90  81 8C 00 18 */	lwz r12, 0x18(r12)
 /* 8032F9D4 002F8F94  7D 89 03 A6 */	mtctr r12
@@ -3485,6 +3485,7 @@
 
 .balign 8
 
+#kColSels
 .obj lbl_8054D848, global
 	.4byte 0x0000001F
 	.4byte 0x0000001B
@@ -3496,7 +3497,7 @@
 	.4byte 0x00000012
 .endobj lbl_8054D848
 
-
+#kAlpSels
 .obj lbl_8054D868, global
 	.4byte 0x0000001F
 	.4byte 0x0000001B
@@ -3509,8 +3510,8 @@
 .endobj lbl_8054D868
 
 
-.obj lbl_8054D888, global
-	.4byte lbl_8054D8C8
+.obj __vt__Q36nw4hbm3lyt8Material, global
+	.4byte __RTTI__Q36nw4hbm3lyt8Material
 	.4byte 0
 	.4byte __dt__Q36nw4hbm3lyt8MaterialFv
 	.4byte SetupGX__Q36nw4hbm3lyt8MaterialFbUc
@@ -3520,14 +3521,14 @@
 	.4byte Animate__Q36nw4hbm3lyt8MaterialFv
 	.4byte FindAnimationLink__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransform
 	.4byte SetAnimationEnable__Q36nw4hbm3lyt8MaterialFPQ36nw4hbm3lyt13AnimTransformb
-.endobj lbl_8054D888
+.endobj __vt__Q36nw4hbm3lyt8Material
 
 .obj lbl_8054D8B0, global
 	.asciz "nw4hbm::lyt::Material"
 	.balign 4
 .endobj lbl_8054D8B0
 
-.obj lbl_8054D8C8, global
+.obj __RTTI__Q36nw4hbm3lyt8Material, global
 	.4byte lbl_8054D8B0
 	.4byte 0
-.endobj lbl_8054D8C8
+.endobj __RTTI__Q36nw4hbm3lyt8Material

@@ -27,6 +27,7 @@ TRK_FILES:=\
 
 DEPENDS += $(TRK_FILES:.o=.d)
 
+$(TRK_FILES): INCLUDES += -i libs/NdevExi2A/include/
 $(TRK_FILES): CFLAGS += -Cpp_exceptions off -inline on
 
 $(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/TRK_Hollywood_Revolution.a: $(TRK_FILES)

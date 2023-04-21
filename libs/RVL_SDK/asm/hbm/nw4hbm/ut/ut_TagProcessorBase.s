@@ -4,8 +4,8 @@
 
 .balign 16, 0
 .fn "__ct__Q36nw4hbm2ut19TagProcessorBase<c>Fv", global
-/* 80339110 003026D0  3C 80 80 55 */	lis r4, lbl_8054EEB8@ha
-/* 80339114 003026D4  38 84 EE B8 */	addi r4, r4, lbl_8054EEB8@l
+/* 80339110 003026D0  3C 80 80 55 */	lis r4, "__vt__Q36nw4hbm2ut19TagProcessorBase<c>"@ha
+/* 80339114 003026D4  38 84 EE B8 */	addi r4, r4, "__vt__Q36nw4hbm2ut19TagProcessorBase<c>"@l
 /* 80339118 003026D8  90 83 00 00 */	stw r4, 0(r3)
 /* 8033911C 003026DC  4E 80 00 20 */	blr
 .endfn "__ct__Q36nw4hbm2ut19TagProcessorBase<c>Fv"
@@ -384,8 +384,8 @@
 
 .balign 16, 0
 .fn "__ct__Q36nw4hbm2ut19TagProcessorBase<w>Fv", global
-/* 80339670 00302C30  3C 80 80 55 */	lis r4, __vt__8054EE70@ha
-/* 80339674 00302C34  38 84 EE 70 */	addi r4, r4, __vt__8054EE70@l
+/* 80339670 00302C30  3C 80 80 55 */	lis r4, "__vt__Q36nw4hbm2ut19TagProcessorBase<w>"@ha
+/* 80339674 00302C34  38 84 EE 70 */	addi r4, r4, "__vt__Q36nw4hbm2ut19TagProcessorBase<w>"@l
 /* 80339678 00302C38  90 83 00 00 */	stw r4, 0(r3)
 /* 8033967C 00302C3C  4E 80 00 20 */	blr
 .endfn "__ct__Q36nw4hbm2ut19TagProcessorBase<w>Fv"
@@ -776,13 +776,13 @@
 .balign 8
 
 
-.obj __vt__8054EE70, global
-	.4byte lbl_8054EEB0
+.obj "__vt__Q36nw4hbm2ut19TagProcessorBase<w>", global
+	.4byte "__RTTI__Q36nw4hbm2ut19TagProcessorBase<w>"
 	.4byte 0
 	.4byte "__dt__Q36nw4hbm2ut19TagProcessorBase<w>Fv"
 	.4byte "Process__Q36nw4hbm2ut19TagProcessorBase<w>FUsPQ36nw4hbm2ut15PrintContext<w>"
 	.4byte "CalcRect__Q36nw4hbm2ut19TagProcessorBase<w>FPQ36nw4hbm2ut4RectUsPQ36nw4hbm2ut15PrintContext<w>"
-.endobj __vt__8054EE70
+.endobj "__vt__Q36nw4hbm2ut19TagProcessorBase<w>"
 
 .obj lbl_8054EE84, global
 	.asciz "nw4hbm::ut::TagProcessorBase<wchar_t>"
@@ -790,25 +790,25 @@
 	.4byte 0
 .endobj lbl_8054EE84
 
-.obj lbl_8054EEB0, global
+.obj "__RTTI__Q36nw4hbm2ut19TagProcessorBase<w>", global
 	.4byte lbl_8054EE84
 	.4byte 0
-.endobj lbl_8054EEB0
+.endobj "__RTTI__Q36nw4hbm2ut19TagProcessorBase<w>"
 
-.obj lbl_8054EEB8, global
-	.4byte lbl_8054EEF0
+.obj "__vt__Q36nw4hbm2ut19TagProcessorBase<c>", global
+	.4byte "__RTTI__Q36nw4hbm2ut19TagProcessorBase<c>"
 	.4byte 0
 	.4byte "__dt__Q36nw4hbm2ut19TagProcessorBase<c>Fv"
 	.4byte "Process__Q36nw4hbm2ut19TagProcessorBase<c>FUsPQ36nw4hbm2ut15PrintContext<c>"
 	.4byte "CalcRect__Q36nw4hbm2ut19TagProcessorBase<c>FPQ36nw4hbm2ut4RectUsPQ36nw4hbm2ut15PrintContext<c>"
-.endobj lbl_8054EEB8
+.endobj "__vt__Q36nw4hbm2ut19TagProcessorBase<c>"
 
 .obj lbl_8054EECC, global
 	.asciz "nw4hbm::ut::TagProcessorBase<char>"
 	.balign 4
 .endobj lbl_8054EECC
 
-.obj lbl_8054EEF0, global
+.obj "__RTTI__Q36nw4hbm2ut19TagProcessorBase<c>", global
 	.4byte lbl_8054EECC
 	.4byte 0
-.endobj lbl_8054EEF0
+.endobj "__RTTI__Q36nw4hbm2ut19TagProcessorBase<c>"

@@ -15,9 +15,9 @@
 /* 80332750 002FBD10  93 81 00 10 */	stw r28, 0x10(r1)
 /* 80332754 002FBD14  7C 7C 1B 78 */	mr r28, r3
 /* 80332758 002FBD18  4B FF EF E9 */	bl __ct__Q36nw4hbm3lyt4PaneFPCQ46nw4hbm3lyt3res4Pane
-/* 8033275C 002FBD1C  3C 60 80 55 */	lis r3, __vt__8054D938@ha
+/* 8033275C 002FBD1C  3C 60 80 55 */	lis r3, __vt__Q36nw4hbm3lyt7Picture@ha
 /* 80332760 002FBD20  3C 80 80 33 */	lis r4, __ct__Q36nw4hbm2ut5ColorFv@ha
-/* 80332764 002FBD24  38 63 D9 38 */	addi r3, r3, __vt__8054D938@l
+/* 80332764 002FBD24  38 63 D9 38 */	addi r3, r3, __vt__Q36nw4hbm3lyt7Picture@l
 /* 80332768 002FBD28  3C A0 80 33 */	lis r5, __dt__Q36nw4hbm2ut5ColorFv@ha
 /* 8033276C 002FBD2C  90 7C 00 00 */	stw r3, 0(r28)
 /* 80332770 002FBD30  38 7C 00 D4 */	addi r3, r28, 0xd4
@@ -97,8 +97,8 @@
 /* 8033287C 002FBE3C  7C 7E 1B 78 */	mr r30, r3
 /* 80332880 002FBE40  41 82 00 94 */	beq .L_80332914
 /* 80332884 002FBE44  80 A3 00 28 */	lwz r5, 0x28(r3)
-/* 80332888 002FBE48  3C 80 80 55 */	lis r4, __vt__8054D938@ha
-/* 8033288C 002FBE4C  38 84 D9 38 */	addi r4, r4, __vt__8054D938@l
+/* 80332888 002FBE48  3C 80 80 55 */	lis r4, __vt__Q36nw4hbm3lyt7Picture@ha
+/* 8033288C 002FBE4C  38 84 D9 38 */	addi r4, r4, __vt__Q36nw4hbm3lyt7Picture@l
 /* 80332890 002FBE50  90 83 00 00 */	stw r4, 0(r3)
 /* 80332894 002FBE54  2C 05 00 00 */	cmpwi r5, 0
 /* 80332898 002FBE58  41 82 00 40 */	beq .L_803328D8
@@ -404,8 +404,8 @@
 
 .balign 8
 
-.obj __vt__8054D938, global
-	.4byte lbl_8054D9D0
+.obj __vt__Q36nw4hbm3lyt7Picture, global
+	.4byte __RTTI__Q36nw4hbm3lyt7Picture
 	.4byte 0
 	.4byte __dt__Q36nw4hbm3lyt7PictureFv
 	.4byte GetRuntimeTypeInfo__Q36nw4hbm3lyt7PictureCFv
@@ -432,7 +432,7 @@
 	.4byte LoadMtx__Q36nw4hbm3lyt4PaneFRCQ36nw4hbm3lyt8DrawInfo
 	.4byte Append__Q36nw4hbm3lyt7PictureFP10TPLPalette
 	.4byte Append__Q36nw4hbm3lyt7PictureFRC9_GXTexObj
-.endobj __vt__8054D938
+.endobj __vt__Q36nw4hbm3lyt7Picture
 
 .obj lbl_8054D9A4, global
 	.asciz "nw4hbm::lyt::Picture"
@@ -440,17 +440,17 @@
 .endobj lbl_8054D9A4
 
 .obj lbl_8054D9BC, global
-	.4byte lbl_8054D798
+	.4byte __RTTI__Q46nw4hbm3lyt6detail8PaneBase
 	.4byte 0
-	.4byte lbl_8054D770
+	.4byte __RTTI__Q36nw4hbm3lyt4Pane
 	.4byte 0
 	.4byte 0
 .endobj lbl_8054D9BC
 
-.obj lbl_8054D9D0, global
+.obj __RTTI__Q36nw4hbm3lyt7Picture, global
 	.4byte lbl_8054D9A4
 	.4byte lbl_8054D9BC
-.endobj lbl_8054D9D0
+.endobj __RTTI__Q36nw4hbm3lyt7Picture
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

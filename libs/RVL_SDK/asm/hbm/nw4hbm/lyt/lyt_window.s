@@ -2517,7 +2517,7 @@
 
 
 .obj __vt__Q36nw4hbm3lyt6Window, global
-	.4byte lbl_8054DB80
+	.4byte __RTTI__Q36nw4hbm3lyt6Window
 	.4byte 0
 	.4byte __dt__Q36nw4hbm3lyt6WindowFv
 	.4byte GetRuntimeTypeInfo__Q36nw4hbm3lyt6WindowCFv
@@ -2555,17 +2555,17 @@
 .endobj lbl_8054DB58
 
 .obj lbl_8054DB6C, global
-	.4byte lbl_8054D798
+	.4byte __RTTI__Q46nw4hbm3lyt6detail8PaneBase
 	.4byte 0
-	.4byte lbl_8054D770
+	.4byte __RTTI__Q36nw4hbm3lyt4Pane
 	.4byte 0
 	.4byte 0
 .endobj lbl_8054DB6C
 
-.obj lbl_8054DB80, global
+.obj __RTTI__Q36nw4hbm3lyt6Window, global
 	.4byte lbl_8054DB58
 	.4byte lbl_8054DB6C
-.endobj lbl_8054DB80
+.endobj __RTTI__Q36nw4hbm3lyt6Window
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
