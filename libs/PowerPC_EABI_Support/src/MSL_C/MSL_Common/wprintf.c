@@ -7,9 +7,7 @@
 #include "wctype.h"
 #include "wchar.h"
 
-#define LDBL_MANT_DIG          24
-#define LDBL_MAX_EXP          128
-#define TARGET_FLOAT_BITS 32
+#define TARGET_FLOAT_BITS 64
 #define TARGET_FLOAT_BYTES	(TARGET_FLOAT_BITS/8)
 #define TARGET_FLOAT_MAX_EXP	LDBL_MAX_EXP
 #define TARGET_FLOAT_MANT_DIG	LDBL_MANT_DIG

@@ -1,3 +1,5 @@
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common/alloc.h"
+
 typedef struct Block {
     struct Block* prev;
     struct Block* next;
@@ -229,6 +231,10 @@ static Block* __unlink(__mem_pool_obj* pool_obj, Block* bp) {
 void allocate_from_var_pools(){
 }
 
+//unused
+void soft_allocate_from_var_pools(){
+}
+
 static void deallocate_from_var_pools(__mem_pool_obj* pool_obj, void *ptr) {
     SubBlock* sb = SubBlock_from_pointer(ptr);
     SubBlock* _sb;
@@ -240,10 +246,6 @@ static void deallocate_from_var_pools(__mem_pool_obj* pool_obj, void *ptr) {
 		__unlink(pool_obj, bp);
 		__sys_free(bp);
 	}
-}
-
-//unused
-void soft_allocate_from_var_pools(){
 }
 
 //unused

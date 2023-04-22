@@ -1,3 +1,6 @@
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common/stdio_api.h"
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common/ansi_fp.h"
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common/secure_error.h"
 #include "ctype.h"
 #include "math.h"
 #include "mem.h"
@@ -5,13 +8,8 @@
 #include "string.h"
 #include "stdio.h"
 #include "stdlib.h"
-#include "PowerPC_EABI_Support/MSL_C/MSL_Common/stdio_api.h"
-#include "PowerPC_EABI_Support/MSL_C/MSL_Common/ansi_fp.h"
-#include "PowerPC_EABI_Support/MSL_C/MSL_Common/secure_error.h"
 
-#define LDBL_MANT_DIG          24
-#define LDBL_MAX_EXP          128
-#define TARGET_FLOAT_BITS 32
+#define TARGET_FLOAT_BITS 64
 #define TARGET_FLOAT_BYTES	(TARGET_FLOAT_BITS/8)
 #define TARGET_FLOAT_MAX_EXP	LDBL_MAX_EXP
 #define TARGET_FLOAT_MANT_DIG	LDBL_MANT_DIG

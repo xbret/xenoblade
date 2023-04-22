@@ -22,7 +22,7 @@ HBM_FILES:=\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/hbm/nw4hbm/lyt/lyt_window.o\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/hbm/nw4hbm/math/math_triangular.o\
 	$(BUILD_DIR)/libs/RVL_SDK/src/hbm/nw4hbm/ut/ut_binaryFileFormat.o\
-	$(BUILD_DIR)/libs/RVL_SDK/asm/hbm/nw4hbm/ut/ut_CharStrmReader.o\
+	$(BUILD_DIR)/libs/RVL_SDK/src/hbm/nw4hbm/ut/ut_CharStrmReader.o\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/hbm/nw4hbm/ut/ut_CharWriter.o\
 	$(BUILD_DIR)/libs/RVL_SDK/src/hbm/nw4hbm/ut/ut_Font.o\
 	$(BUILD_DIR)/libs/RVL_SDK/src/hbm/nw4hbm/ut/ut_LinkList.o\

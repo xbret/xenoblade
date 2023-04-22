@@ -14,7 +14,7 @@ void __msl_relation(){
 }
 
 //unused
-void __signbitf(){
+int __signbitf(float x){
 }
 
 int __fpclassifyf(float x)

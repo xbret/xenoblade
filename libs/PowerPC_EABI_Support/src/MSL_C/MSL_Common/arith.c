@@ -1,15 +1,15 @@
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/arith.h"
 
 
-int abs(int __x)
+int abs(int x)
 {
-	return (__x >> 0x1f ^ __x) - (__x >> 0x1f);
+	return x > 0 ? x : -x;
 }
 
 //might be llabs
-long labs(long __x)
+long labs(long x)
 {
-	return (__x >> 0x1f ^ __x) - (__x >> 0x1f);
+	return x > 0 ? x : -x;
 }
 
 //unused

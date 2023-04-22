@@ -8,7 +8,7 @@ namespace nw4hbm
 		{
 			static inline bool IsSJISLeadByte(u8 byte)
 			{
-				return byte >= 0x81 && byte < 0xa0 || byte >= 0xe0;
+				return 0x81 <= byte && byte < 0xa0 || 0xe0 <= byte;
 			}
 		}
 		

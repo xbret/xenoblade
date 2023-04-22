@@ -2,6 +2,7 @@
 #define STDIO_API_H
 
 #include "types.h"
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common/ansi_files.h"
 
 enum __ReadProcActions {
 	__GetAChar,
@@ -38,6 +39,8 @@ typedef struct {
 	int    wNullCharDetected;
 } __wInStrCtrl;
 
+//__fread
+size_t __fwrite(const void *pPtr, size_t memb_size, size_t num_memb, FILE *pFile);
 int __StringRead(void *, int, int);
 wint_t __wStringRead(void*, wint_t, int);
 
