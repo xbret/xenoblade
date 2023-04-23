@@ -3,39 +3,36 @@
 
 #include "types.h"
 #include "locale.h"
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common/ctype_api.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-extern const unsigned short __ctype_mapC[256];
-extern const unsigned char __lower_mapC[256];
-extern const unsigned char __upper_mapC[256];
-
-__declspec(weak) static inline int isalpha(int c) {
-    return (c < 0 || c >= 256) ? 0 : (int)(_current_locale.ctype_cmpt_ptr->ctype_map_ptr[c] & 0x1);
+static inline int isalpha(int c) {
+    return (c < 0 || c >= 256) ? 0 : (int)(_current_locale.ctype_cmpt_ptr->ctype_map_ptr[c] & __msl_alpha);
 }
 
-__declspec(weak) static inline int isdigit(int c) {
-    return (c < 0 || c >= 256) ? 0 : (int)(_current_locale.ctype_cmpt_ptr->ctype_map_ptr[c] & 0x8);
+static inline int isdigit(int c) {
+    return (c < 0 || c >= 256) ? 0 : (int)(_current_locale.ctype_cmpt_ptr->ctype_map_ptr[c] & __msl_digit);
 }
 
-__declspec(weak) static inline int isspace(int c) { 
-    return (c < 0 || c >= 256) ? 0 : (int)(_current_locale.ctype_cmpt_ptr->ctype_map_ptr[c] & 0x100); 
+static inline int isspace(int c) { 
+    return (c < 0 || c >= 256) ? 0 : (int)(_current_locale.ctype_cmpt_ptr->ctype_map_ptr[c] & __msl_space); 
 }
 
-__declspec(weak) static inline int isupper(int c) { 
-    return (c < 0 || c >= 256) ? 0 : (int)(_current_locale.ctype_cmpt_ptr->ctype_map_ptr[c] & 0x200); 
+static inline int isupper(int c) { 
+    return (c < 0 || c >= 256) ? 0 : (int)(_current_locale.ctype_cmpt_ptr->ctype_map_ptr[c] & __msl_upper); 
 }
 
-__declspec(weak) static inline int isxdigit(int c) { 
-    return (c < 0 || c >= 256) ? 0 : (int)(_current_locale.ctype_cmpt_ptr->ctype_map_ptr[c] & 0x400); 
+static inline int isxdigit(int c) { 
+    return (c < 0 || c >= 256) ? 0 : (int)(_current_locale.ctype_cmpt_ptr->ctype_map_ptr[c] & __msl_xdigit); 
 }
 
-__declspec(weak) static inline int tolower(int c) {
+static inline int tolower(int c) {
     return (c < 0 || c >= 256) ? c : (int)(&_current_locale)->ctype_cmpt_ptr->lower_map_ptr[c];
 }
-__declspec(weak) static inline int toupper(int c) {
+static inline int toupper(int c) {
     return (c < 0 || c >= 256) ? c : (int)(&_current_locale)->ctype_cmpt_ptr->upper_map_ptr[c];
 }
 

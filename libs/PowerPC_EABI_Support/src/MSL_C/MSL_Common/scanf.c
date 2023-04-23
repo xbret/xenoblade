@@ -821,7 +821,7 @@ inline int isspace_string(const char *s) {
     return 1;
 }
 
-inline int vsscanf(const char *s, const char *format, va_list arg) {
+int vsscanf(const char *s, const char *format, va_list arg) {
     __InStrCtrl isc;
     isc.NextChar = (char*)s;
 

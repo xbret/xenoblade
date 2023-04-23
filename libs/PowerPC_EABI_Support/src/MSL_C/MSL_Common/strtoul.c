@@ -325,7 +325,7 @@ unsigned long strtoul(const char *str, char **end, int base) {
 void strtoull(){
 }
 
-inline long strtol(const char *str, char **end, int base) {
+long strtol(const char *str, char **end, int base) {
     unsigned long uvalue;
     long svalue;
     int count, negative, overflow;

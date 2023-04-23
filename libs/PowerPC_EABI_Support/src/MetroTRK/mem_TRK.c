@@ -26,7 +26,7 @@ void* TRK_memcpy(void* dst, const void* src, size_t n)
 }
 
 
-static inline void TRK_fill_mem(void* dst, int val, size_t n)
+static void TRK_fill_mem(void* dst, int val, size_t n)
 {
 	u32 v = (u8)val;
 	u32 i, j;

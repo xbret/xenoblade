@@ -9,16 +9,60 @@
 #include "mem.h"
 #include "limits.h"
 
-#define final_state(scan_state)	(scan_state & (2048 | 4096))
-#define success(scan_state) (scan_state & 3628)
-#define hex_success(count, scan_state) (count-1 > 2 && scan_state & (398))
+#define TARGET_FLOAT_BITS 64
+#define TARGET_FLOAT_BYTES	(TARGET_FLOAT_BITS/8)
+#define TARGET_FLOAT_MAX_EXP	LDBL_MAX_EXP
+#define TARGET_FLOAT_MANT_DIG	LDBL_MANT_DIG
+#define TARGET_FLOAT_IMPLICIT_J_BIT 1
+#define TARGET_FLOAT_MANT_BITS		(TARGET_FLOAT_MANT_DIG - TARGET_FLOAT_IMPLICIT_J_BIT)
+#define TARGET_FLOAT_EXP_BITS		(TARGET_FLOAT_BITS - TARGET_FLOAT_MANT_BITS - 1)
+
+enum scan_states
+{
+	start				= 0x0001,
+	sig_start			= 0x0002,
+	leading_sig_zeroes	= 0x0004,
+	int_digit_loop		= 0x0008,
+	frac_start			= 0x0010,
+	frac_digit_loop		= 0x0020,
+	sig_end				= 0x0040,
+	exp_start			= 0x0080,
+	leading_exp_digit	= 0x0100,
+	leading_exp_zeroes	= 0x0200,
+	exp_digit_loop		= 0x0400,
+	finished			= 0x0800,
+	failure				= 0x1000,
+	nan_state			= 0x2000,
+	infin_state			= 0x4000,
+	hex_state			= 0x8000
+};
+
+enum hex_scan_states
+{
+	not_hex					= 0x0000,
+	hex_start				= 0x0001,
+	hex_leading_sig_zeroes	= 0x0002,
+	hex_int_digit_loop		= 0x0004,
+	hex_frac_digit_loop		= 0x0008,
+	hex_sig_end				= 0x0010,
+	hex_exp_start			= 0x0020,
+	hex_leading_exp_digit	= 0x0040,
+	hex_leading_exp_zeroes	= 0x0080,
+	hex_exp_digit_loop		= 0x0100
+};
+
+#define final_state(scan_state)	(scan_state & (finished | failure))
+#define success(scan_state) (scan_state & (leading_sig_zeroes | int_digit_loop | frac_digit_loop \
+							| leading_exp_zeroes | exp_digit_loop | finished))
+#define hex_success(count, scan_state) (count-1 > 2 && scan_state & (hex_leading_sig_zeroes	| hex_int_digit_loop \
+							| hex_frac_digit_loop | hex_leading_exp_zeroes | hex_exp_digit_loop))
 
 #define fetch() (count++, (*ReadProc)(ReadProcArg, 0, __GetAChar))
 #define unfetch(c)	(*ReadProc)(ReadProcArg, c, __UngetAChar)	
 
 long double __strtold(int max_width, int (*ReadProc)(void *, int, int), void* ReadProcArg, int* chars_scanned, int* overflow) {
-	int scan_state = 1;
-	int hex_scan_state	= 0;
+	int scan_state = start;
+	int hex_scan_state = not_hex;
 	int count = 0;
 	int spaces = 0;
 	int c;
@@ -28,11 +72,11 @@ long double __strtold(int max_width, int (*ReadProc)(void *, int, int), void* Re
 	long exp_value = 0;
 	int exp_adjust = 0;
 	register long double result = 0.0;
-	int sign_detected	= 0;
+	int sign_detected = 0;
 	int radix_marker = *(unsigned char*)(__lconv).decimal_point;
 	
-	unsigned char*	chptr;
-	unsigned char	mantissa[8];
+	unsigned char* chptr;
+	unsigned char mantissa[TARGET_FLOAT_BYTES];
 	unsigned mantissa_digits;
 	unsigned long exponent = 0;
 
@@ -48,7 +92,7 @@ long double __strtold(int max_width, int (*ReadProc)(void *, int, int), void* Re
 	
 	while (count <= max_width && c != -1 && !final_state(scan_state)) {
 		switch (scan_state) {
-			case 1:
+			case start:
 				if (isspace(c)) {
 					c = fetch();
 					count--;
@@ -66,21 +110,21 @@ long double __strtold(int max_width, int (*ReadProc)(void *, int, int), void* Re
 						break;
 					case 'I':
 						c = fetch();
-						scan_state = 16384;
+						scan_state = infin_state;
 						break;
 						
 					case 'N':
 						c = fetch();
-						scan_state = 8192;
+						scan_state = nan_state;
 						break;
 				
 					default:
-						scan_state = 2;
+						scan_state = sig_start;
 						break;
 				}
 				break;
 
-			case 16384: {
+			case infin_state: {
 				int i = 1;
 				char model[] = "INFINITY";
 
@@ -101,13 +145,13 @@ long double __strtold(int max_width, int (*ReadProc)(void *, int, int), void* Re
 					return result;
 				}
 				else {
-					scan_state = 4096;
+					scan_state = failure;
 				}
 
 				break;
 			}
 			
-			case 8192: {
+			case nan_state: {
 				int i = 1, j = 0;
 				char model[] = "NAN(";
 				char nan_arg[32] = "";
@@ -124,7 +168,7 @@ long double __strtold(int max_width, int (*ReadProc)(void *, int, int), void* Re
 						}
 
 						if (c != ')') {
-							scan_state = 4096;
+							scan_state = failure;
 							break;
 						}
 						else {
@@ -144,54 +188,54 @@ long double __strtold(int max_width, int (*ReadProc)(void *, int, int), void* Re
 					return result;
 				}
 				else {
-					scan_state = 4096;
+					scan_state = failure;
 				}
 				break;
 			}
 
-			case 2:
+			case sig_start:
 				if (c == radix_marker) {
-					scan_state = 16;
+					scan_state = frac_start;
 					c = fetch();
 					break;
 				}
 				if (!isdigit(c)) {
-					scan_state = 4096;
+					scan_state = failure;
 					break;
 				}
 
 				if (c == '0') {
 					c = fetch();
 					if (toupper(c) == 'X') {
-						scan_state = 32768;
-						hex_scan_state = 1;
+						scan_state = hex_state;
+						hex_scan_state = hex_start;
 					}
 					else {
-						scan_state = 4;
+						scan_state = leading_sig_zeroes;
 					}
 					break;
 				}
 
-				scan_state = 8;
+				scan_state = int_digit_loop;
 				break;
 			
-			case 4:
+			case leading_sig_zeroes:
 				if (c == '0') {
 					c = fetch();
 					
 					break;
 				}
-				scan_state = 8;
+				scan_state = int_digit_loop;
 				break;
 			
-			case 8:
+			case int_digit_loop:
 				if (!isdigit(c)) {
 					if (c == radix_marker) {
-						scan_state = 32;
+						scan_state = frac_digit_loop;
 						c = fetch();
 					}
 					else {
-						scan_state = 64;
+						scan_state = sig_end;
 					}
 					break;
 				}
@@ -205,18 +249,18 @@ long double __strtold(int max_width, int (*ReadProc)(void *, int, int), void* Re
 				c = fetch();
 				break;
 			
-			case 16:
+			case frac_start:
 				if (!isdigit(c)) {
-					scan_state = 4096;
+					scan_state = failure;
 					break;
 				}
 
-				scan_state = 32;
+				scan_state = frac_digit_loop;
 				break;
 			
-			case 32:
+			case frac_digit_loop:
 				if (!isdigit(c)) {
-					scan_state = 64;
+					scan_state = sig_end;
 					break;
 				}
 
@@ -230,16 +274,16 @@ long double __strtold(int max_width, int (*ReadProc)(void *, int, int), void* Re
 				c = fetch();
 				break;
 			
-			case 64:
+			case sig_end:
 				if (toupper(c) == 'E') {
-					scan_state = 128;
+					scan_state = exp_start;
 					c = fetch();
 					break;
 				}
-				scan_state = 2048;
+				scan_state = finished;
 				break;
 			
-			case 128:
+			case exp_start:
 				if (c == '+') {
 					c = fetch();
 				}
@@ -248,36 +292,36 @@ long double __strtold(int max_width, int (*ReadProc)(void *, int, int), void* Re
 					exp_negative = 1;
 				}
 
-				scan_state = 256;
+				scan_state = leading_exp_digit;
 				break;
 					
-			case 256:
+			case leading_exp_digit:
 				if (!isdigit(c)) {
-					scan_state = 4096;
+					scan_state = failure;
 					break;
 				}
 
 				if (c == '0') {
-					scan_state = 512;
+					scan_state = leading_exp_zeroes;
 					c = fetch();
 					break;
 				}
 
-				scan_state = 1024;
+				scan_state = exp_digit_loop;
 				break;
 			
-			case 512:
+			case leading_exp_zeroes:
 				if (c == '0') {
 					c = fetch();
 					break;
 				}
 
-				scan_state = 1024;
+				scan_state = exp_digit_loop;
 				break;
 			
-			case 1024:
+			case exp_digit_loop:
 				if (!isdigit(c)) {
-					scan_state = 2048;
+					scan_state = finished;
 					break;
 				}
 
@@ -290,36 +334,36 @@ long double __strtold(int max_width, int (*ReadProc)(void *, int, int), void* Re
 				break;
 
 		
-			case 32768: {
+			case hex_state: {
 				switch(hex_scan_state) {
-					case 1:
+					case hex_start:
 						memset(mantissa, 0, sizeof(mantissa));
 						chptr			= mantissa;
 						mantissa_digits = (53 + 3) / 4;
 						intdigits		= 0;
 						NibbleIndex		= 0;
-						hex_scan_state = 2;
+						hex_scan_state = hex_leading_sig_zeroes;
 						c = fetch();
 						break;
 					
-					case 2:
+					case hex_leading_sig_zeroes:
 						if (c == '0') {
 							c = fetch();
 							break;
 						}
 
-						hex_scan_state = 4;						
+						hex_scan_state = hex_int_digit_loop;						
 						break;
 					
-					case 4: 
+					case hex_int_digit_loop: 
 						if (!isxdigit(c)) {
 							if (c == radix_marker) {
-								hex_scan_state = 8;
+								hex_scan_state = hex_frac_digit_loop;
 								c = fetch();
 							}
 
 							else {
-								hex_scan_state = 16;
+								hex_scan_state = hex_sig_end;
 							}
 							break;
 						}
@@ -356,9 +400,9 @@ long double __strtold(int max_width, int (*ReadProc)(void *, int, int), void* Re
 
 						break;
 					
-					case 8:
+					case hex_frac_digit_loop:
 						if (!isxdigit(c)) {
-							hex_scan_state = 16;
+							hex_scan_state = hex_sig_end;
 							break;
 						}
 
@@ -390,19 +434,19 @@ long double __strtold(int max_width, int (*ReadProc)(void *, int, int), void* Re
 						}
 						break;
 
-					case 16:
+					case hex_sig_end:
 						if (toupper(c) == 'P') {
-							hex_scan_state = 32;
+							hex_scan_state = hex_exp_start;
 							exp_digits++;
 							c = fetch();
 						}
 						else {
-							scan_state = 2048;
+							scan_state = finished;
 						}
 
 						break;
 							
-					case 32:		
+					case hex_exp_start:		
 						exp_digits++;
 						if (c == '-') {
 							expsign = 1;
@@ -413,38 +457,38 @@ long double __strtold(int max_width, int (*ReadProc)(void *, int, int), void* Re
 							exp_digits--;
 						}
 
-						hex_scan_state = 64;
+						hex_scan_state = hex_leading_exp_digit;
 						c = fetch();
 						break;
 							
-					case 64:
+					case hex_leading_exp_digit:
 						if (!isdigit(c)) {
-							scan_state = 4096;
+							scan_state = failure;
 							break;
 						}
 
 						if (c == '0') {
 							exp_digits++;
-							hex_scan_state = 128;
+							hex_scan_state = hex_leading_exp_zeroes;
 							c = fetch();
 							break;
 						}
 
-						hex_scan_state = 256;
+						hex_scan_state = hex_exp_digit_loop;
 						break;
 
-					case 128:
+					case hex_leading_exp_zeroes:
 						if (c == '0') {
 							c = fetch();
 							break;
 						}
 
-						hex_scan_state = 256;
+						hex_scan_state = hex_exp_digit_loop;
 						break;
 											
-					case 256:
+					case hex_exp_digit_loop:
 						if (!isdigit(c)) {
-							scan_state = 2048;
+							scan_state = finished;
 							break;
 						}
 
@@ -476,7 +520,7 @@ long double __strtold(int max_width, int (*ReadProc)(void *, int, int), void* Re
 	
 	unfetch(c);
 
-	if (hex_scan_state == 0) {
+	if (hex_scan_state == not_hex) {
 		if (exp_negative) {
 			exp_value = -exp_value;
 		}
@@ -552,7 +596,7 @@ long double __strtold(int max_width, int (*ReadProc)(void *, int, int), void* Re
 
 		exponent--;
 
-		if (1) {
+		if (TARGET_FLOAT_IMPLICIT_J_BIT) {
 			one_bit++;
 		}
 
@@ -566,14 +610,14 @@ long double __strtold(int max_width, int (*ReadProc)(void *, int, int), void* Re
 		}
 		
 		memset(dbl_bits, 0, sizeof(dbl_bits_storage));
-		dbl_bit = (64 - 52);
+		dbl_bit = (TARGET_FLOAT_BITS - TARGET_FLOAT_MANT_BITS);
 		
-		for (mantissa_bit = 0; mantissa_bit < 52; mantissa_bit += 8) {
+		for (mantissa_bit = 0; mantissa_bit < TARGET_FLOAT_MANT_BITS; mantissa_bit += 8) {
 			unsigned char ui = mantissa[mantissa_bit >> 3];
 			int halfbits;
 
-			if (mantissa_bit + 8 > 52) {
-				ui &= 0xff << (52 - mantissa_bit);
+			if (mantissa_bit + 8 > TARGET_FLOAT_MANT_BITS) {
+				ui &= 0xff << (TARGET_FLOAT_MANT_BITS - mantissa_bit);
 			}
 			
 			halfbits = (dbl_bit & 7);
@@ -582,26 +626,26 @@ long double __strtold(int max_width, int (*ReadProc)(void *, int, int), void* Re
 			dbl_bits[dbl_bit>>3] |= (unsigned char)(ui << (8 - halfbits));
 		}
 
-		exponent += 1024-1+exp_value;
+		exponent += TARGET_FLOAT_MAX_EXP-1+exp_value;
 
-		if ((exponent & ~(1024 * 2 - 1))) {
+		if ((exponent & ~(TARGET_FLOAT_MAX_EXP * 2 - 1))) {
 			*overflow = 1;
 			return 0.0;
 		}
 
-		exponent <<= 32 - 11;
+		exponent <<= 32 - TARGET_FLOAT_EXP_BITS;
 		
 		dbl_bits[0] |= exponent >> 25;
 
-		if (11 > 7) {
+		if (TARGET_FLOAT_EXP_BITS > 7) {
 			dbl_bits[1] |= exponent >> 17;
 		}
 
-		if (11 > 15) {
+		if (TARGET_FLOAT_EXP_BITS > 15) {
 			dbl_bits[2] |= exponent >> 9;
 		}
 
-		if (11 > 23) {
+		if (TARGET_FLOAT_EXP_BITS > 23) {
 			dbl_bits[3] |= exponent >> 1;
 		}
 	

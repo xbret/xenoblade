@@ -1,8 +1,7 @@
 #include "types.h"
 #include "revolution/OS.h"
 
-inline static void InitDefaultHeap()
-{
+static void InitDefaultHeap(){
 	void* arenaLo;
 	void* arenaHi;
 
@@ -22,13 +21,7 @@ inline static void InitDefaultHeap()
 	OSSetArenaLo(arenaLo = arenaHi);
 }
 
-/*
- * --INFO--
- * Address:	800C23A8
- * Size:	0000B8
- */
-__declspec(weak) extern void __sys_free(void* ptr)
-{
+__declspec(weak) extern void __sys_free(void* ptr){
 	if (__OSCurrHeap == -1) {
 		InitDefaultHeap();
 	}

@@ -43,6 +43,10 @@ extern u8 __ArenaHi[];
 extern u8 _stack_addr[];
 extern u8 _stack_end[];
 
+// Small data bases
+extern u8 _SDA_BASE_[];
+extern u8 _SDA2_BASE_[];
+
 // ROM sections
 DECL_ROM_SECTION(_init);
 DECL_ROM_SECTION(extab);
@@ -62,13 +66,13 @@ DECL_BSS_SECTION(_sbss);
 DECL_BSS_SECTION(_sbss2);
 
 typedef struct RomSection {
-    void* virtOfs; // at 0x0
-    void* romOfs;  // at 0x4
+    void* romOfs; // at 0x0
+    void* virtualOfs;  // at 0x4
     size_t size;   // at 0x8
 } RomSection;
 
 typedef struct BssSection {
-    void* virtOfs; // at 0x0
+    void* virtualOfs; // at 0x0
     size_t size;   // at 0x8
 } BssSection;
 

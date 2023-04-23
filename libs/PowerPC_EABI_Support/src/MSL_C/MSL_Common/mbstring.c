@@ -55,7 +55,7 @@ int __wctomb_noconv(char *src, wchar_t cr) {
     return 1;
 }
 
-inline int wctomb(char *src, wchar_t wchar) {
+int wctomb(char *src, wchar_t wchar) {
     return _current_locale.ctype_cmpt_ptr->encode_wc(src, wchar);
 }
 

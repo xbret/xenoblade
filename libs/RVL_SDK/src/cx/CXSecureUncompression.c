@@ -28,13 +28,6 @@ void CXiHuffImportTree(){
 void CXSecureUnfilterDiff(){
 }
 
-inline void someInline(u16* r3, u8 array[0x80], u32 offset, u32 i, u32 r29, u16 mask){
-    if((r3[0] & mask) != 0){
-		u32 r10 = (i & ~1) + r29 + offset;
-		array[r10/8] |= 1 << (r10 & 0x7);
-	}
-}
-
 //Doesn't match on the 1.0 compiler
 BOOL CXiLHVerifyTable(u16* r3, u32 r4) {
     u16* r30 = r3;
@@ -67,9 +60,16 @@ BOOL CXiLHVerifyTable(u16* r3, u32 r4) {
 			    if(r11 >= (u32)r31_20){
 				    return FALSE;
 			    }
- 
-                someInline(r30,array,0,i,r29,r8);
-			    someInline(r30,array,1,i,r29,r9);
+
+				if((r30[0] & r8) != 0){
+					u32 r10 = (i & ~1) + r29;
+					array[r10/8] |= 1 << (r10 & 0x7);
+				}
+
+				if((r30[0] & r9) != 0){
+					u32 r10 = (i & ~1) + r29 + 1;
+					array[r10/8] |= 1 << (r10 & 0x7);
+				}
             }
 		}
 

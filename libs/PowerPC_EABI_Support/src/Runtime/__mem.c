@@ -5,37 +5,47 @@
 
 //Handwritten
 asm void* memcpy(void* dest, const void* src, size_t size){
+	//Return if size is 0
 	cmplwi cr1, r5, 0
 	beqlr cr1
+
 	cmplw cr1, r4, r3
-	blt cr1, lbl_80004178
+	blt cr1, reverse
 	beqlr cr1
+
 	li r6, 0x80
 	cmplw cr5, r5, r6
-	blt cr5, lbl_800040C0
+	blt cr5, test_word_alignment
+
 	clrlwi r9, r4, 0x1d
 	clrlwi r10, r3, 0x1d
 	subf r8, r10, r3
+
+	//Request a data cache block fetch
 	dcbt 0, r4
+
 	xor. r11, r10, r9
-	bne lbl_8000415C
+	bne byte_setup
 	andi. r10, r10, 7
-	beq+ lbl_80004068
+	beq+ double_copy_setup
 	li r6, 8
 	subf r9, r9, r6
 	addi r8, r3, 0
 	mtctr r9
 	subf r5, r9, r5
-lbl_80004054:
+
+byte_loop_double_align:
 	lbz r9, 0(r4)
 	addi r4, r4, 1
 	stb r9, 0(r8)
 	addi r8, r8, 1
-	bdnz lbl_80004054
-lbl_80004068:
+	bdnz byte_loop_double_align
+
+double_copy_setup:
 	srwi r6, r5, 5
 	mtctr r6
-lbl_80004070:
+
+double_loop:
 	lfd f1, 0(r4)
 	lfd f2, 8(r4)
 	lfd f3, 0x10(r4)
@@ -45,40 +55,47 @@ lbl_80004070:
 	stfd f2, 8(r8)
 	stfd f3, 0x10(r8)
 	stfd f4, 0x18(r8)
+
 	addi r8, r8, 0x20
-	bdnz lbl_80004070
+	bdnz double_loop
 	andi. r6, r5, 0x1f
 	beqlr 
 	addi r4, r4, -1
 	mtctr r6
 	addi r8, r8, -1
-lbl_800040B0:
+
+byte_loop_1:
 	lbzu r9, 1(r4)
 	stbu r9, 1(r8)
-	bdnz lbl_800040B0
+	bdnz byte_loop_1
 	blr 
-lbl_800040C0:
+
+test_word_alignment:
 	li r6, 0x14
 	cmplw cr5, r5, r6
-	ble cr5, lbl_8000415C
+	ble cr5, byte_setup
 	clrlwi r9, r4, 0x1e
 	clrlwi r10, r3, 0x1e
 	xor. r11, r10, r9
-	bne lbl_8000415C
+	bne byte_setup
 	li r6, 4
 	subf r9, r9, r6
 	addi r8, r3, 0
 	subf r5, r9, r5
 	mtctr r9
-lbl_800040F0:
+
+byte_loop_word_align:
 	lbz r9, 0(r4)
 	addi r4, r4, 1
 	stb r9, 0(r8)
 	addi r8, r8, 1
-	bdnz lbl_800040F0
+	bdnz byte_loop_word_align
+
+word_copy_setup:
 	srwi r6, r5, 4
 	mtctr r6
-lbl_8000410C:
+
+word_loop:
 	lwz r9, 0(r4)
 	lwz r10, 4(r4)
 	lwz r11, 8(r4)
@@ -89,48 +106,56 @@ lbl_8000410C:
 	stw r11, 8(r8)
 	stw r12, 0xc(r8)
 	addi r8, r8, 0x10
-	bdnz lbl_8000410C
+	bdnz word_loop
+
 	andi. r6, r5, 0xf
 	beqlr 
 	addi r4, r4, -1
 	mtctr r6
 	addi r8, r8, -1
-lbl_8000414C:
+
+byte_loop_2:
 	lbzu r9, 1(r4)
 	stbu r9, 1(r8)
-	bdnz lbl_8000414C
+	bdnz byte_loop_2
 	blr 
-lbl_8000415C:
+
+byte_setup:
 	addi r7, r4, -1
 	addi r8, r3, -1
 	mtctr r5
-lbl_80004168:
+
+byte_loop_3:
 	lbzu r9, 1(r7)
 	stbu r9, 1(r8)
-	bdnz lbl_80004168
+	bdnz byte_loop_3
 	blr 
-lbl_80004178:
+
+reverse:
 	add r4, r4, r5
 	add r12, r3, r5
 	li r6, 0x80
 	cmplw cr5, r5, r6
-	blt cr5, lbl_80004204
+	blt cr5, reverse_test_word_alignment
 	clrlwi r9, r4, 0x1d
 	clrlwi r10, r12, 0x1d
 	xor. r11, r10, r9
-	bne lbl_80004288
+	bne reverse_byte_setup
 	andi. r10, r10, 7
-	beq+ lbl_800041B4
+	beq+ reverse_double_copy_setup
 	mtctr r10
-lbl_800041A8:
+
+reverse_byte_loop_double_align:
 	lbzu r9, -1(r4)
 	stbu r9, -1(r12)
-	bdnz lbl_800041A8
-lbl_800041B4:
+	bdnz reverse_byte_loop_double_align
+
+reverse_double_copy_setup:
 	subf r5, r10, r5
 	srwi r6, r5, 5
 	mtctr r6
-lbl_800041C0:
+
+reverse_double_loop:
 	lfd f1, -8(r4)
 	lfd f2, -0x10(r4)
 	lfd f3, -0x18(r4)
@@ -140,35 +165,42 @@ lbl_800041C0:
 	stfd f2, -0x10(r12)
 	stfd f3, -0x18(r12)
 	stfdu f4, -0x20(r12)
-	bdnz lbl_800041C0
+
+	bdnz reverse_double_loop
+
 	andi. r6, r5, 0x1f
 	beqlr 
 	mtctr r6
-lbl_800041F4:
+
+reverse_byte_loop_1:
 	lbzu r9, -1(r4)
 	stbu r9, -1(r12)
-	bdnz lbl_800041F4
+	bdnz reverse_byte_loop_1
 	blr 
-lbl_80004204:
+
+reverse_test_word_alignment:
 	li r6, 0x14
 	cmplw cr5, r5, r6
-	ble cr5, lbl_80004288
+	ble cr5, reverse_byte_setup
 	clrlwi r9, r4, 0x1e
 	clrlwi r10, r12, 0x1e
 	xor. r11, r10, r9
-	bne lbl_80004288
+	bne reverse_byte_setup
 	andi. r10, r10, 7
-	beq+ lbl_80004238
+	beq+ reverse_word_loop_setup
 	mtctr r10
-lbl_8000422C:
+
+reverse_byte_loop_word_align:
 	lbzu r9, -1(r4)
 	stbu r9, -1(r12)
-	bdnz lbl_8000422C
-lbl_80004238:
+	bdnz reverse_byte_loop_word_align
+
+reverse_word_loop_setup:
 	subf r5, r10, r5
 	srwi r6, r5, 4
 	mtctr r6
-lbl_80004244:
+
+reverse_word_loop:
 	lwz r9, -4(r4)
 	lwz r10, -8(r4)
 	lwz r11, -0xc(r4)
@@ -178,21 +210,25 @@ lbl_80004244:
 	stw r10, -8(r12)
 	stw r11, -0xc(r12)
 	stwu r8, -0x10(r12)
-	bdnz lbl_80004244
+	bdnz reverse_word_loop
+
 	andi. r6, r5, 0xf
 	beqlr 
 	mtctr r6
-lbl_80004278:
+
+reverse_byte_loop_2:
 	lbzu r9, -1(r4)
 	stbu r9, -1(r12)
-	bdnz lbl_80004278
+	bdnz reverse_byte_loop_2
 	blr
-lbl_80004288:
+
+reverse_byte_setup:
 	mtctr r5
-lbl_8000428C:
+
+reverse_byte_loop_3:
 	lbzu r9, -1(r4)
 	stbu r9, -1(r12)
-	bdnz lbl_8000428C
+	bdnz reverse_byte_loop_3
 	blr 
 }
 
