@@ -77,9 +77,9 @@ static asm void ConfigMEM1_24MB(void) {
     isync
     mfmsr r3
     ori r3, r3, 0x30
-    mtspr 0x1b, r3
+    mtsrr1 r3
     mflr r3
-    mtspr 0x1a, r3
+    mtsrr0 r3
     rfi
     // clang-format on
 }
@@ -98,19 +98,19 @@ static asm void ConfigMEM2_52MB(void) {
     lis r5, 0xD00007FF@ha
     addi r5, r5, 0xD00007FF@l
     isync
-    mtspr 0x238, r7
-    mtspr 0x239, r4
-    mtspr 0x238, r3
+    mtspr DBAT4U, r7
+    mtspr DBAT4L, r4
+    mtspr DBAT4U, r3
     isync
-    mtspr 0x230, r7
-    mtspr 0x231, r7
+    mtspr IBAT4U, r7
+    mtspr IBAT4L, r7
     isync
-    mtspr 0x23a, r7
-    mtspr 0x23b, r6
-    mtspr 0x23a, r5
+    mtspr DBAT5U, r7
+    mtspr DBAT5L, r6
+    mtspr DBAT5U, r5
     isync
-    mtspr 0x232, r7
-    mtspr 0x233, r7
+    mtspr IBAT5U, r7
+    mtspr IBAT5L, r7
     isync
     lis r4, 0x12000002@ha
     addi r4, r4, 0x12000002@l
@@ -121,25 +121,25 @@ static asm void ConfigMEM2_52MB(void) {
     lis r5, 0x9300007F@ha
     addi r5, r5, 0x9300007F@l
     isync
-    mtspr 0x23c, r7
-    mtspr 0x23d, r4
-    mtspr 0x23c, r3
+    mtspr DBAT6U, r7
+    mtspr DBAT6L, r4
+    mtspr DBAT6U, r3
     isync
-    mtspr 0x234, r7
-    mtspr 0x235, r7
+    mtspr IBAT6U, r7
+    mtspr IBAT6L, r7
     isync
-    mtspr 0x23e, r7
-    mtspr 0x23f, r6
-    mtspr 0x23e, r5
+    mtspr DBAT7U, r7
+    mtspr DBAT7L, r6
+    mtspr DBAT7U, r5
     isync
-    mtspr 0x236, r7
-    mtspr 0x237, r7
+    mtspr IBAT7U, r7
+    mtspr IBAT7L, r7
     isync
     mfmsr r3
     ori r3, r3, 0x30
-    mtspr 0x1b, r3
+    mtsrr1 r3
     mflr r3
-    mtspr 0x1a, r3
+    mtsrr0 r3
     rfi
     // clang-format on
 }
@@ -158,19 +158,19 @@ static asm void ConfigMEM2_56MB(void) {
     lis r5, 0xD00007FF@ha
     addi r5, r5, 0xD00007FF@l
     isync
-    mtspr 0x238, r7
-    mtspr 0x239, r4
-    mtspr 0x238, r3
+    mtspr DBAT4U, r7
+    mtspr DBAT4L, r4
+    mtspr DBAT4U, r3
     isync
-    mtspr 0x230, r7
-    mtspr 0x231, r7
+    mtspr IBAT4U, r7
+    mtspr IBAT4L, r7
     isync
-    mtspr 0x23a, r7
-    mtspr 0x23b, r6
-    mtspr 0x23a, r5
+    mtspr DBAT5U, r7
+    mtspr DBAT5L, r6
+    mtspr DBAT5U, r5
     isync
-    mtspr 0x232, r7
-    mtspr 0x233, r7
+    mtspr IBAT5U, r7
+    mtspr IBAT5L, r7
     isync
     lis r4, 0x12000002@ha
     addi r4, r4, 0x12000002@l
@@ -181,25 +181,25 @@ static asm void ConfigMEM2_56MB(void) {
     lis r5, 0x930000FF@ha
     addi r5, r5, 0x930000FF@l
     isync
-    mtspr 0x23c, r7
-    mtspr 0x23d, r4
-    mtspr 0x23c, r3
+    mtspr DBAT6U, r7
+    mtspr DBAT6L, r4
+    mtspr DBAT6U, r3
     isync
-    mtspr 0x234, r7
-    mtspr 0x235, r7
+    mtspr IBAT6U, r7
+    mtspr IBAT6L, r7
     isync
-    mtspr 0x23e, r7
-    mtspr 0x23f, r6
-    mtspr 0x23e, r5
+    mtspr DBAT7U, r7
+    mtspr DBAT7L, r6
+    mtspr DBAT7U, r5
     isync
-    mtspr 0x236, r7
-    mtspr 0x237, r7
+    mtspr IBAT7U, r7
+    mtspr IBAT7L, r7
     isync
     mfmsr r3
     ori r3, r3, 0x30
-    mtspr 0x1b, r3
+    mtsrr1 r3
     mflr r3
-    mtspr 0x1a, r3
+    mtsrr0 r3
     rfi
     // clang-format on
 }
@@ -218,37 +218,37 @@ static asm void ConfigMEM2_64MB(void) {
     lis r5, 0xD00007FF@ha
     addi r5, r5, 0xD00007FF@l
     isync
-    mtspr 0x238, r7
-    mtspr 0x239, r4
-    mtspr 0x238, r3
+    mtspr DBAT4U, r7
+    mtspr DBAT4L, r4
+    mtspr DBAT4U, r3
     isync
-    mtspr 0x230, r7
-    mtspr 0x231, r7
+    mtspr IBAT4U, r7
+    mtspr IBAT4L, r7
     isync
-    mtspr 0x23a, r7
-    mtspr 0x23b, r6
-    mtspr 0x23a, r5
+    mtspr DBAT5U, r7
+    mtspr DBAT5L, r6
+    mtspr DBAT5U, r5
     isync
-    mtspr 0x232, r7
-    mtspr 0x233, r7
+    mtspr IBAT5U, r7
+    mtspr IBAT5L, r7
     isync
-    mtspr 0x234, r7
-    mtspr 0x235, r7
+    mtspr IBAT6U, r7
+    mtspr IBAT6L, r7
     isync
-    mtspr 0x236, r7
-    mtspr 0x237, r7
+    mtspr IBAT7U, r7
+    mtspr IBAT7L, r7
     isync
-    mtspr 0x23c, r7
-    mtspr 0x23d, r7
+    mtspr DBAT6U, r7
+    mtspr DBAT6L, r7
     isync
-    mtspr 0x23e, r7
-    mtspr 0x23f, r7
+    mtspr DBAT7U, r7
+    mtspr DBAT7L, r7
     isync
     mfmsr r3
     ori r3, r3, 0x30
-    mtspr 0x1b, r3
+    mtsrr1 r3
     mflr r3
-    mtspr 0x1a, r3
+    mtsrr0 r3
     rfi
     // clang-format on
 }
@@ -267,19 +267,19 @@ static asm void ConfigMEM2_112MB(void) {
     lis r5, 0xD0000FFF@ha
     addi r5, r5, 0xD0000FFF@l
     isync
-    mtspr 0x238, r7
-    mtspr 0x239, r4
-    mtspr 0x238, r3
+    mtspr DBAT4U, r7
+    mtspr DBAT4L, r4
+    mtspr DBAT4U, r3
     isync
-    mtspr 0x230, r7
-    mtspr 0x231, r7
+    mtspr IBAT4U, r7
+    mtspr IBAT4L, r7
     isync
-    mtspr 0x23a, r7
-    mtspr 0x23b, r6
-    mtspr 0x23a, r5
+    mtspr DBAT5U, r7
+    mtspr DBAT5L, r6
+    mtspr DBAT5U, r5
     isync
-    mtspr 0x232, r7
-    mtspr 0x233, r7
+    mtspr IBAT5U, r7
+    mtspr IBAT5L, r7
     isync
     lis r4, 0x14000002@ha
     addi r4, r4, 0x14000002@l
@@ -290,25 +290,25 @@ static asm void ConfigMEM2_112MB(void) {
     lis r5, 0x960001FF@ha
     addi r5, r5, 0x960001FF@l
     isync
-    mtspr 0x23c, r7
-    mtspr 0x23d, r4
-    mtspr 0x23c, r3
+    mtspr DBAT6U, r7
+    mtspr DBAT6L, r4
+    mtspr DBAT6U, r3
     isync
-    mtspr 0x234, r7
-    mtspr 0x235, r7
+    mtspr IBAT6U, r7
+    mtspr IBAT6L, r7
     isync
-    mtspr 0x23e, r7
-    mtspr 0x23f, r6
-    mtspr 0x23e, r5
+    mtspr DBAT7U, r7
+    mtspr DBAT7L, r6
+    mtspr DBAT7U, r5
     isync
-    mtspr 0x236, r7
-    mtspr 0x237, r7
+    mtspr IBAT7U, r7
+    mtspr IBAT7L, r7
     isync
     mfmsr r3
     ori r3, r3, 0x30
-    mtspr 0x1b, r3
+    mtsrr1 r3
     mflr r3
-    mtspr 0x1a, r3
+    mtsrr0 r3
     rfi
     // clang-format on
 }
@@ -327,37 +327,37 @@ static asm void ConfigMEM2_128MB(void) {
     lis r5, 0xD0000FFF@ha
     addi r5, r5, 0xD0000FFF@l
     isync
-    mtspr 0x238, r7
-    mtspr 0x239, r4
-    mtspr 0x238, r3
+    mtspr DBAT4U, r7
+    mtspr DBAT4L, r4
+    mtspr DBAT4U, r3
     isync
-    mtspr 0x230, r7
-    mtspr 0x231, r7
+    mtspr IBAT4U, r7
+    mtspr IBAT4L, r7
     isync
-    mtspr 0x23a, r7
-    mtspr 0x23b, r6
-    mtspr 0x23a, r5
+    mtspr DBAT5U, r7
+    mtspr DBAT5L, r6
+    mtspr DBAT5U, r5
     isync
-    mtspr 0x232, r7
-    mtspr 0x233, r7
+    mtspr IBAT5U, r7
+    mtspr IBAT5L, r7
     isync
-    mtspr 0x234, r7
-    mtspr 0x235, r7
+    mtspr IBAT6U, r7
+    mtspr IBAT6L, r7
     isync
-    mtspr 0x236, r7
-    mtspr 0x237, r7
+    mtspr IBAT7U, r7
+    mtspr IBAT7L, r7
     isync
-    mtspr 0x23c, r7
-    mtspr 0x23d, r7
+    mtspr DBAT6U, r7
+    mtspr DBAT6L, r7
     isync
-    mtspr 0x23e, r7
-    mtspr 0x23f, r7
+    mtspr DBAT7U, r7
+    mtspr DBAT7L, r7
     isync
     mfmsr r3
     ori r3, r3, 0x30
-    mtspr 0x1b, r3
+    mtsrr1 r3
     mflr r3
-    mtspr 0x1a, r3
+    mtsrr0 r3
     rfi
     // clang-format on
 }
@@ -383,10 +383,10 @@ static asm void RealMode(register void* config) {
     nofralloc
 
     clrlwi config, config, 2
-    mtspr 0x1a, config
+    mtsrr0 config
     mfmsr config
     rlwinm config, config, 0, 0x1c, 0x19
-    mtspr 0x1b, config
+    mtsrr1 config
     rfi
     // clang-format on
 }

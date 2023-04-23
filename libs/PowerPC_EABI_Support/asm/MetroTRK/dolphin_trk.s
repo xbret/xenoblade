@@ -27,8 +27,8 @@
 /* 802CBF54 00295514  60 63 D3 F8 */	ori r3, r3, gTRKCPUState@l
 /* 802CBF58 00295518  B8 03 00 00 */	.4byte 0xB8030000  /* illegal lmw r0, 0(r3) */
 /* 802CBF5C 0029551C  38 00 00 00 */	li r0,0
-/* 802CBF60 00295520  7C 12 FB A6 */	mtspr 0x3f2, r0
-/* 802CBF64 00295524  7C 15 FB A6 */	mtspr 0x3f5, r0
+/* 802CBF60 00295520  7C 12 FB A6 */	mtiabr r0
+/* 802CBF64 00295524  7C 15 FB A6 */	mtdabr r0
 /* 802CBF68 00295528  3C 20 80 67 */	lis r1, _db_stack_addr@h
 /* 802CBF6C 0029552C  60 21 FD 00 */	ori r1, r1, _db_stack_addr@l
 /* 802CBF70 00295530  7C A3 2B 78 */	mr r3,r5
@@ -62,14 +62,14 @@
 /* 802CBFD0 00295590  7C 80 00 A6 */	mfmsr r4
 /* 802CBFD4 00295594  60 83 80 00 */	ori r3, r4, 0x8000
 /* 802CBFD8 00295598  7C 60 01 24 */	mtmsr r3
-/* 802CBFDC 0029559C  7C 9B 03 A6 */	mtspr 0x1b, r4
+/* 802CBFDC 0029559C  7C 9B 03 A6 */	mtsrr1 r4
 /* 802CBFE0 002955A0  48 00 11 19 */	bl TRKSaveExtended1Block
 /* 802CBFE4 002955A4  3C 60 80 57 */	lis r3, gTRKCPUState@h
 /* 802CBFE8 002955A8  60 63 D3 F8 */	ori r3, r3, gTRKCPUState@l
 /* 802CBFEC 002955AC  B8 03 00 00 */	.4byte 0xB8030000  /* illegal lmw r0, 0(r3) */
 /* 802CBFF0 002955B0  38 00 00 00 */	li r0, 0
-/* 802CBFF4 002955B4  7C 12 FB A6 */	mtspr 0x3f2, r0
-/* 802CBFF8 002955B8  7C 15 FB A6 */	mtspr 0x3f5, r0
+/* 802CBFF4 002955B4  7C 12 FB A6 */	mtiabr r0
+/* 802CBFF8 002955B8  7C 15 FB A6 */	mtdabr r0
 /* 802CBFFC 002955BC  3C 20 80 67 */	lis r1, _db_stack_addr@h
 /* 802CC000 002955C0  60 21 FD 00 */	ori r1, r1, _db_stack_addr@l
 /* 802CC004 002955C4  38 60 00 02 */	li r3, 2

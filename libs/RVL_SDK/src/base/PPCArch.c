@@ -215,7 +215,7 @@ void PPCMtfpscr(register u32 val) {
 asm u32 PPCMfhid2(void) {
     // clang-format off
     nofralloc
-    mfspr r3, 0x398
+    mfspr r3, 0x398 //HID2
     blr
     // clang-format on
 }
@@ -223,7 +223,7 @@ asm u32 PPCMfhid2(void) {
 asm void PPCMthid2(register u32 val) {
     // clang-format off
     nofralloc
-    mtspr 0x398, val
+    mtspr 0x398, val //HID2
     blr
     // clang-format on
 }
@@ -291,7 +291,7 @@ void PPCMthid4(register u32 val) {
     if (val & HID4_H4A) {
         // clang-format off
         asm {
-            mtspr 0x3F3, val
+            mtspr 0x3F3, val //HID4
         }
         // clang-format on
     } else {
@@ -299,7 +299,7 @@ void PPCMthid4(register u32 val) {
         val |= HID4_H4A;
         // clang-format off
         asm {
-            mtspr 0x3F3, val
+            mtspr 0x3F3, val //HID4
         }
         // clang-format on
     }

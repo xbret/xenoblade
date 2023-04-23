@@ -91,6 +91,8 @@
 .set SPRG2, 274
 .set SPRG3, 275
 .set EAR, 282
+.set TBL, 284
+.set TBU, 285
 .set PVR, 287
 .set IBAT0U, 528
 .set IBAT0L, 529
@@ -100,6 +102,14 @@
 .set IBAT2L, 533
 .set IBAT3U, 534
 .set IBAT3L, 535
+.set IBAT4U, 560
+.set IBAT4L, 561
+.set IBAT5U, 562
+.set IBAT5L, 563
+.set IBAT6U, 564
+.set IBAT6L, 565
+.set IBAT7U, 566
+.set IBAT7L, 567
 .set DBAT0U, 536
 .set DBAT0L, 537
 .set DBAT1U, 538
@@ -108,6 +118,14 @@
 .set DBAT2L, 541
 .set DBAT3U, 542
 .set DBAT3L, 543
+.set DBAT4U, 568
+.set DBAT4L, 569
+.set DBAT5U, 570
+.set DBAT5L, 571
+.set DBAT6U, 572
+.set DBAT6L, 573
+.set DBAT7U, 574
+.set DBAT7L, 575
 .set GQR0, 912
 .set GQR1, 913
 .set GQR2, 914
@@ -139,6 +157,7 @@
 .set HID0, 1008
 .set HID1, 1009
 .set IABR, 1010
+.set HID4, 1011
 .set DABR, 1013
 .set L2CR, 1017
 .set ICTC, 1019

@@ -22,9 +22,9 @@ asm void TRKSaveExtended1Block(){
     stmw r16, 0x1a8(r2)
     mftb r27
     mftbu r28
-    mfspr r29, 0x3f0
-    mfspr r30, 0x3f1
-    mfspr r31, 0x1b
+    mfhid0 r29
+    mfhid1 r30
+    mfsrr1 r31
     stmw r27, 0x1e8(r2)
     mfpvr r15
     mfibatu r16, 0
@@ -44,74 +44,74 @@ asm void TRKSaveExtended1Block(){
     mfdbatu r30, 3
     mfdbatl r31, 3
     stmw r15, 0x1fc(r2)
-    mfspr r24, 0x230
-    mfspr r25, 0x231
-    mfspr r26, 0x232
-    mfspr r27, 0x233
-    mfspr r28, 0x234
-    mfspr r29, 0x235
-    mfspr r30, 0x236
-    mfspr r31, 0x237
+    mfspr r24, IBAT4U
+    mfspr r25, IBAT4L
+    mfspr r26, IBAT5U
+    mfspr r27, IBAT5L
+    mfspr r28, IBAT6U
+    mfspr r29, IBAT6L
+    mfspr r30, IBAT7U
+    mfspr r31, IBAT7L
     stmw r24, 0x240(r2)
-    mfspr r22, 0x19
+    mfsdr1 r22
     mfdar r23
     mfdsisr r24
-    mfspr r25, 0x110
-    mfspr r26, 0x111
-    mfspr r27, 0x112
-    mfspr r28, 0x113
-    mfspr r29, 0x16
-    mfspr r30, 0x3f2
-    mfspr r31, 0x11a
+    mfsprg0 r25
+    mfsprg1 r26
+    mfsprg2 r27
+    mfsprg3 r28
+    mfdec r29
+    mfiabr r30
+    mfear r31
     stmw r22, 0x25c(r2)
-    mfspr r24, 0x3f5
-    mfspr r25, 0x3b9
-    mfspr r26, 0x3ba
-    mfspr r27, 0x3bd
-    mfspr r28, 0x3be
-    mfspr r29, 0x3bb
-    mfspr r30, 0x3b8
-    mfspr r31, 0x3bc
+    mfdabr r24
+    mfpmc1 r25
+    mfpmc2 r26
+    mfpmc3 r27
+    mfpmc4 r28
+    mfsia r29
+    mfmmcr0 r30
+    mfmmcr1 r31
     stmw r24, 0x284(r2)
-    mfspr r29, 0x237
-    mfspr r30, 0x238
-    mfspr r31, 0x239
+    mfspr r29, IBAT7L
+    mfspr r30, DBAT4U
+    mfspr r31, DBAT4L
     stmw r29, 0x2a4(r2)
-    mfspr r30, 0x3FB
-    mfspr r31, 0x3f9
+    mfictc r30
+    mfl2cr r31
     stmw r30, 0x2b0(r2)
-    mfspr r16, 0x1a
+    mfsrr0 r16
     stw r16, 0x2b8(r2)
-    mfspr r17, 0x23a
+    mfspr r17, DBAT5U
     stw r17, 0x2bc(r2)
-    mfspr r25, 0x3a8
-    mfspr r26, 0x3a9
-    mfspr r27, 0x3aa
-    mfspr r28, 0x3ab
-    mfspr r29, 0x3ac
-    mfspr r30, 0x3ad
-    mfspr r31, 0x3ae
+    mfummcr0 r25
+    mfupmc1 r26
+    mfupmc2 r27
+    mfusia r28
+    mfummcr1 r29
+    mfupmc3 r30
+    mfupmc4 r31
     stmw r25, 0x2c0(r2)
-    mfspr r25, 0x23b
-    mfspr r26, 0x23c
-    mfspr r27, 0x23d
-    mfspr r28, 0x23e
-    mfspr r29, 0x23f
-    mfspr r30, 0x398
-    mfspr r31, 0x3f3
+    mfspr r25, DBAT5L
+    mfspr r26, DBAT6U
+    mfspr r27, DBAT6L
+    mfspr r28, DBAT7U
+    mfspr r29, DBAT7L
+    mfspr r30, 0x398 //HID2
+    mfspr r31, 0x3f3 //HID4
     stmw r25, 0x2dc(r2)
-    mfspr r20, 0x390
-    mfspr r21, 0x391
-    mfspr r22, 0x392
-    mfspr r23, 0x393
-    mfspr r24, 0x394
-    mfspr r25, 0x395
-    mfspr r26, 0x396
-    mfspr r27, 0x397
-    mfspr r28, 0x398
-    mfspr r29, 0x399
-    mfspr r30, 0x39a
-    mfspr r31, 0x39b
+    mfgqr0 r20
+    mfgqr1 r21
+    mfgqr2 r22
+    mfgqr3 r23
+    mfgqr4 r24
+    mfgqr5 r25
+    mfgqr6 r26
+    mfgqr7 r27
+    mfspr r28, 0x398 //HID2
+    mfwpar r29
+    mfspr r30, DMA_U
+    mfspr r31, DMA_L
     stmw r20, 0x2fc(r2)
     blr 
 }
@@ -134,30 +134,30 @@ asm void TRKRestoreExtended1Block(){
     mttbu r25
 L_802CD2F8:
     lmw r20, 0x2fc(r2)
-    mtspr 0x390, r20
-    mtspr 0x391, r21
-    mtspr 0x392, r22
-    mtspr 0x393, r23
-    mtspr 0x394, r24
-    mtspr 0x395, r25
-    mtspr 0x396, r26
-    mtspr 0x397, r27
-    mtspr 0x398, r28
-    mtspr 0x39a, r30
-    mtspr 0x39b, r31
-    b L_802CD32C //wtf???
+    mtgqr0 r20
+    mtgqr1 r21
+    mtgqr2 r22
+    mtgqr3 r23
+    mtgqr4 r24
+    mtgqr5 r25
+    mtgqr6 r26
+    mtgqr7 r27
+    mtspr 0x398, r28 //HID2
+    mtspr DMA_U, r30
+    mtspr DMA_L, r31
+    b L_802CD32C
 L_802CD32C:
     lmw r19, 0x284(r2)
-    mtspr 0x3f5, r19
-    mtspr 0x3b9, r20
-    mtspr 0x3ba, r21
-    mtspr 0x3bd, r22
-    mtspr 0x3be, r23
-    mtspr 0x3bb, r24
-    mtspr 0x3b8, r25
-    mtspr 0x3bc, r26
+    mtdabr r19
+    mtpmc1 r20
+    mtpmc2 r21
+    mtpmc3 r22
+    mtpmc4 r23
+    mtsia r24
+    mtmmcr0 r25
+    mtmmcr1 r26
     mtictc r30
-    mtspr 0x3f9, r31
+    mtl2cr r31
     b L_802CD35C
 L_802CD35C:
     lmw r16, 0x1a8(r2)
@@ -178,10 +178,10 @@ L_802CD35C:
     mtsr 0xe, r30
     mtsr 0xf, r31
     lmw r12, 0x1f0(r2)
-    mtspr 0x3f0, r12
-    mtspr 0x3f1, r13
-    mtspr 0x1b, r14
-    mtspr 0x11f, r15
+    mthid0 r12
+    mthid1 r13
+    mtsrr1 r14
+    mtpvr r15
     mtibatu 0, r16
     mtibatl 0, r17
     mtibatu 1, r18
@@ -199,14 +199,14 @@ L_802CD35C:
     mtdbatu 3, r30
     mtdbatl 3, r31
     lmw r22, 0x25c(r2)
-    mtspr 0x19, r22
+    mtsdr1 r22
     mtdar r23
     mtdsisr r24
-    mtspr 0x110, r25
-    mtspr 0x111, r26
-    mtspr 0x112, r27
-    mtspr 0x113, r28
-    mtspr 0x3f2, r30
-    mtspr 0x11a, r31
+    mtsprg 0, r25
+    mtsprg 1, r26
+    mtsprg 2, r27
+    mtsprg 3, r28
+    mtiabr r30
+    mtear r31
     blr
 }

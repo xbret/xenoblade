@@ -276,9 +276,9 @@ do_store:
     addi r3, r3, 32
     bdnz do_store
 
-    mfspr r4, 0x398
+    mfspr r4, 0x398 //HID2
     oris r4, r4, 0x100F
-    mtspr 0x398, r4
+    mtspr 0x398, r4 //HID2
     
     nop
     nop
@@ -344,9 +344,9 @@ do_invalidate:
     addi r3, r3, 32
     bdnz do_invalidate
     
-    mfspr r4, 0x398
+    mfspr r4, 0x398 //HID2
     rlwinm r4, r4, 0, 4, 2
-    mtspr 0x398, r4
+    mtspr 0x398, r4 //HID2
 
     blr
     // clang-format on
@@ -436,7 +436,7 @@ asm u32 LCQueueLength(void) {
     // clang-format off
     nofralloc
 
-    mfspr r4, 0x398
+    mfspr r4, 0x398 //HID2
     rlwinm r3, r4, 8, 28, 31
 
     blr
@@ -447,7 +447,7 @@ asm void LCQueueWait(register u32 n) {
     // clang-format off
     nofralloc
 
-    mfspr r4, 0x398
+    mfspr r4, 0x398 //HID2
     rlwinm r4, r4, 8, 28, 31
     cmpw r4, n
     bgt LCQueueWait

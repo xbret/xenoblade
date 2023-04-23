@@ -336,6 +336,7 @@
 /* 8045E9E4 00427FA4  4E 80 00 20 */	blr 
 .endfn CLibHbmControl_wkUpdate
 
+#inlines initFastCast
 .fn CLibHbmControl_WorkThreadEvent2, global
 /* 8045E9E8 00427FA8  94 21 FE B0 */	stwu r1, -0x150(r1)
 /* 8045E9EC 00427FAC  7C 08 02 A6 */	mflr r0
@@ -501,16 +502,16 @@
 /* 8045EC5C 0042821C  4B EB F8 E5 */	bl GXSetProjection
 /* 8045EC60 00428220  38 60 00 04 */	li r3, 4
 /* 8045EC64 00428224  64 63 00 04 */	oris r3, r3, 4
-/* 8045EC68 00428228  7C 72 E3 A6 */	mtspr 0x392, r3
+/* 8045EC68 00428228  7C 72 E3 A6 */	mtgqr 2, r3
 /* 8045EC6C 0042822C  38 60 00 05 */	li r3, 5
 /* 8045EC70 00428230  64 63 00 05 */	oris r3, r3, 5
-/* 8045EC74 00428234  7C 73 E3 A6 */	mtspr 0x393, r3
+/* 8045EC74 00428234  7C 73 E3 A6 */	mtgqr 3, r3
 /* 8045EC78 00428238  38 60 00 06 */	li r3, 6
 /* 8045EC7C 0042823C  64 63 00 06 */	oris r3, r3, 6
-/* 8045EC80 00428240  7C 74 E3 A6 */	mtspr 0x394, r3
+/* 8045EC80 00428240  7C 74 E3 A6 */	mtgqr 4, r3
 /* 8045EC84 00428244  38 60 00 07 */	li r3, 7
 /* 8045EC88 00428248  64 63 00 07 */	oris r3, r3, 7
-/* 8045EC8C 0042824C  7C 75 E3 A6 */	mtspr 0x395, r3
+/* 8045EC8C 0042824C  7C 75 E3 A6 */	mtgqr 5, r3
 /* 8045EC90 00428250  4B EC 43 71 */	bl HBMDraw
 .L_8045EC94:
 /* 8045EC94 00428254  80 6D BD FC */	lwz r3, lbl_80667F7C@sda21(r13)

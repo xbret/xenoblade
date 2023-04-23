@@ -65,7 +65,7 @@ asm void __OSFPRInit(void) {
     mtmsr r3
 
     // Check if paired-singles are enabled in HID2
-    mfspr r3, 0x398
+    mfspr r3, 0x398 //HID2
     rlwinm. r3, r3, 3, 31, 31
     beq paired_singles_disabled
 
@@ -879,19 +879,19 @@ asm void OSDefaultExceptionHandler(u8 type, register OSContext* ctx) {
     stw r2, ctx->gprs[2]
     stmw r6, ctx->gprs[6]
 
-    mfspr r0, GQR1
+    mfgqr1 r0
     stw r0, ctx->gqrs[1]
-    mfspr r0, GQR2
+    mfgqr2 r0
     stw r0, ctx->gqrs[2]
-    mfspr r0, GQR3
+    mfgqr3 r0
     stw r0, ctx->gqrs[3]
-    mfspr r0, GQR4
+    mfgqr4 r0
     stw r0, ctx->gqrs[4]
-    mfspr r0, GQR5
+    mfgqr5 r0
     stw r0, ctx->gqrs[5]
-    mfspr r0, GQR6
+    mfgqr6 r0
     stw r0, ctx->gqrs[6]
-    mfspr r0, GQR7
+    mfgqr7 r0
     stw r0, ctx->gqrs[7]
 
     mfdsisr r5

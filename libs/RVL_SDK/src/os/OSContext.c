@@ -12,7 +12,7 @@ static asm void __OSLoadFPUContext(u32 unused, register OSContext* ctx) {
     
     lfd f0, ctx->fpscr_pad
     mtfs f0
-    mfspr r5, 0x398
+    mfspr r5, 0x398 //HID2
     rlwinm. r5, r5, 3, 31, 31
     beq _load_fprs
     
@@ -133,7 +133,7 @@ static asm void __OSSaveFPUContext(u32 unused, u32 unused1,
     mffs f0
     stfd f0, ctx->fpscr_pad
     lfd f0, ctx->fprs[0]
-    mfspr r3, 0x398
+    mfspr r3, 0x398 //HID2
     rlwinm. r3, r3, 3, 31, 31
     beq _exit
 
