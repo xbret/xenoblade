@@ -16,9 +16,9 @@
 /* 8027E4D8 00247A98  3C A0 80 54 */	lis r5, __vt__CSysWinScenarioLog@ha
 /* 8027E4DC 00247A9C  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
 /* 8027E4E0 00247AA0  90 7D 00 10 */	stw r3, 0x10(r29)
-/* 8027E4E4 00247AA4  3D 40 80 51 */	lis r10, lbl_8050CE10@ha
+/* 8027E4E4 00247AA4  3D 40 80 51 */	lis r10, __ptmf_null@ha
 /* 8027E4E8 00247AA8  38 A5 BB 10 */	addi r5, r5, __vt__CSysWinScenarioLog@l
-/* 8027E4EC 00247AAC  84 6A CE 10 */	lwzu r3, lbl_8050CE10@l(r10)
+/* 8027E4EC 00247AAC  84 6A CE 10 */	lwzu r3, __ptmf_null@l(r10)
 /* 8027E4F0 00247AB0  38 85 00 24 */	addi r4, r5, 0x24
 /* 8027E4F4 00247AB4  3B E0 00 00 */	li r31, 0
 /* 8027E4F8 00247AB8  38 E0 FF FF */	li r7, -1

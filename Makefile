@@ -185,6 +185,11 @@ $(BUILD_DIR)/%.o: %.c
 	@echo "Compiling " $<
 	$(QUIET) mkdir -p $(dir $@)
 	$(QUIET) $(CC) $(CFLAGS) -lang=c99 -c -o $(dir $@) $<
+
+$(BUILD_DIR)/%.o: %.cp
+	@echo "Compiling " $<
+	$(QUIET) mkdir -p $(dir $@)
+	$(QUIET) $(CC) $(CFLAGS) -lang=c++ -c -o $(dir $@) $<
 	
 $(BUILD_DIR)/%.o: %.cpp
 	@echo "Compiling " $<

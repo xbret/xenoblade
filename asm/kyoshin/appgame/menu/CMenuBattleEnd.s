@@ -16,9 +16,9 @@
 /* 8026F3A4 00238964  3C A0 80 54 */	lis r5, __vt__CMenuBattleEnd@ha
 /* 8026F3A8 00238968  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
 /* 8026F3AC 0023896C  90 7C 00 10 */	stw r3, 0x10(r28)
-/* 8026F3B0 00238970  3D 40 80 51 */	lis r10, lbl_8050CE10@ha
+/* 8026F3B0 00238970  3D 40 80 51 */	lis r10, __ptmf_null@ha
 /* 8026F3B4 00238974  38 A5 B2 68 */	addi r5, r5, __vt__CMenuBattleEnd@l
-/* 8026F3B8 00238978  84 6A CE 10 */	lwzu r3, lbl_8050CE10@l(r10)
+/* 8026F3B8 00238978  84 6A CE 10 */	lwzu r3, __ptmf_null@l(r10)
 /* 8026F3BC 0023897C  38 85 00 24 */	addi r4, r5, 0x24
 /* 8026F3C0 00238980  3B 60 00 00 */	li r27, 0
 /* 8026F3C4 00238984  38 E0 FF FF */	li r7, -1

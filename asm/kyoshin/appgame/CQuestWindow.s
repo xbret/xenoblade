@@ -16,9 +16,9 @@
 /* 8012218C 000EB74C  3C A0 80 53 */	lis r5, __vt__CQuestWindow@ha
 /* 80122190 000EB750  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
 /* 80122194 000EB754  90 7C 00 10 */	stw r3, 0x10(r28)
-/* 80122198 000EB758  3D 40 80 51 */	lis r10, lbl_8050CE10@ha
+/* 80122198 000EB758  3D 40 80 51 */	lis r10, __ptmf_null@ha
 /* 8012219C 000EB75C  38 A5 08 C0 */	addi r5, r5, __vt__CQuestWindow@l
-/* 801221A0 000EB760  84 6A CE 10 */	lwzu r3, lbl_8050CE10@l(r10)
+/* 801221A0 000EB760  84 6A CE 10 */	lwzu r3, __ptmf_null@l(r10)
 /* 801221A4 000EB764  38 85 00 24 */	addi r4, r5, 0x24
 /* 801221A8 000EB768  3B 60 00 00 */	li r27, 0
 /* 801221AC 000EB76C  38 E0 FF FF */	li r7, -1

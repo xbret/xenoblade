@@ -11,7 +11,6 @@ extern int __read_console(u32, char*, u32*, void*);
 extern int __write_console(u32, char*, u32*, void*);
 extern int __close_console(u32);
 
-// clang-format off
 FILE __files[4] = 
 { 
 	{ 0,                  // _00
@@ -111,7 +110,6 @@ FILE __files[4] =
 		&__files[3]          // _4C
 	},
 };
-// clang-format on
 
 
 void __close_all()

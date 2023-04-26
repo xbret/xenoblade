@@ -343,10 +343,10 @@
 /* 80274990 0023DF50  41 82 00 C0 */	beq .L_80274A50
 /* 80274994 0023DF54  48 1D 00 85 */	bl __ct__8CProcessFv
 /* 80274998 0023DF58  3C 60 80 53 */	lis r3, __vt__CTTask_IUIWindow@ha
-/* 8027499C 0023DF5C  3D 60 80 51 */	lis r11, lbl_8050CE10@ha
+/* 8027499C 0023DF5C  3D 60 80 51 */	lis r11, __ptmf_null@ha
 /* 802749A0 0023DF60  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
 /* 802749A4 0023DF64  90 7F 00 10 */	stw r3, 0x10(r31)
-/* 802749A8 0023DF68  39 6B CE 10 */	addi r11, r11, lbl_8050CE10@l
+/* 802749A8 0023DF68  39 6B CE 10 */	addi r11, r11, __ptmf_null@l
 /* 802749AC 0023DF6C  3C C0 80 54 */	lis r6, __vt__CSysWinBuff@ha
 /* 802749B0 0023DF70  80 0B 00 04 */	lwz r0, 4(r11)
 /* 802749B4 0023DF74  38 C6 B5 78 */	addi r6, r6, __vt__CSysWinBuff@l

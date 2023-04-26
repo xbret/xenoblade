@@ -15,8 +15,8 @@
 /* 80295588 0025EB48  38 63 C4 A0 */	addi r3, r3, __vt__CTTask_CTaskGameEvt@l
 /* 8029558C 0025EB4C  90 7E 00 10 */	stw r3, 0x10(r30)
 /* 80295590 0025EB50  38 C6 C3 B8 */	addi r6, r6, __vt__CTaskGameEvt@l
-/* 80295594 0025EB54  3D 20 80 51 */	lis r9, lbl_8050CE10@ha
-/* 80295598 0025EB58  84 E9 CE 10 */	lwzu r7, lbl_8050CE10@l(r9)
+/* 80295594 0025EB54  3D 20 80 51 */	lis r9, __ptmf_null@ha
+/* 80295598 0025EB58  84 E9 CE 10 */	lwzu r7, __ptmf_null@l(r9)
 /* 8029559C 0025EB5C  38 A6 00 24 */	addi r5, r6, 0x24
 /* 802955A0 0025EB60  38 86 00 AC */	addi r4, r6, 0xac
 /* 802955A4 0025EB64  7F C3 F3 78 */	mr r3, r30

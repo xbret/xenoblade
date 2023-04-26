@@ -19,9 +19,9 @@
 /* 8012BC78 000F5238  3C A0 80 53 */	lis r5, __vt__CTalkWindow@ha
 /* 8012BC7C 000F523C  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
 /* 8012BC80 000F5240  90 79 00 10 */	stw r3, 0x10(r25)
-/* 8012BC84 000F5244  3D 20 80 51 */	lis r9, lbl_8050CE10@ha
+/* 8012BC84 000F5244  3D 20 80 51 */	lis r9, __ptmf_null@ha
 /* 8012BC88 000F5248  38 A5 17 78 */	addi r5, r5, __vt__CTalkWindow@l
-/* 8012BC8C 000F524C  84 69 CE 10 */	lwzu r3, lbl_8050CE10@l(r9)
+/* 8012BC8C 000F524C  84 69 CE 10 */	lwzu r3, __ptmf_null@l(r9)
 /* 8012BC90 000F5250  38 85 00 24 */	addi r4, r5, 0x24
 /* 8012BC94 000F5254  3A E0 00 00 */	li r23, 0
 /* 8012BC98 000F5258  38 C0 FF FF */	li r6, -1

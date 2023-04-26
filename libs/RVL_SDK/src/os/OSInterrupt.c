@@ -17,8 +17,7 @@ static u32 InterruptPrioTable[] = {
 static void ExternalInterruptHandler(u8 type, OSContext* ctx);
 
 asm BOOL OSDisableInterrupts(void) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     entry __RAS_OSDisableInterrupts_begin
 
@@ -32,12 +31,10 @@ asm BOOL OSDisableInterrupts(void) {
     // Return old interrupt status
     rlwinm r3, r3, 17, 31, 31
     blr
-    // clang-format on
-}
+    }
 
 asm BOOL OSEnableInterrupts(void) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     mfmsr r3
     // Set external interrupts bit
@@ -47,12 +44,10 @@ asm BOOL OSEnableInterrupts(void) {
     // Return old interrupt status
     rlwinm r3, r3, 17, 31, 31
     blr
-    // clang-format on
-}
+    }
 
 asm BOOL OSRestoreInterrupts(register BOOL status){
-    // clang-format off
-    nofralloc
+        nofralloc
 
     cmpwi status, 0
     mfmsr r4
@@ -71,8 +66,7 @@ set_msr:
     // Return old interrupt status
     rlwinm r3, r4, 17, 31, 31
     blr
-    // clang-format on
-}
+    }
 
 OSInterruptHandler
     __OSSetInterruptHandler(OSInterruptType type, OSInterruptHandler handler) {
@@ -538,8 +532,7 @@ void __OSDispatchInterrupt(u8 intr, OSContext* ctx) {
 
 static asm void ExternalInterruptHandler(register u8 type,
                                          register OSContext* ctx) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     stw r0, ctx->gprs[0]
     stw r1, ctx->gprs[1]
@@ -563,5 +556,4 @@ static asm void ExternalInterruptHandler(register u8 type,
 
     stwu r1, -8(r1)
     b __OSDispatchInterrupt
-    // clang-format on
-}
+    }

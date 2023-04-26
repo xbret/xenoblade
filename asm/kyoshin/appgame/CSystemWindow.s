@@ -17,9 +17,9 @@
 /* 80124618 000EDBD8  3C C0 80 53 */	lis r6, __vt__CSystemWindow@ha
 /* 8012461C 000EDBDC  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
 /* 80124620 000EDBE0  90 7B 00 10 */	stw r3, 0x10(r27)
-/* 80124624 000EDBE4  3D 60 80 51 */	lis r11, lbl_8050CE10@ha
+/* 80124624 000EDBE4  3D 60 80 51 */	lis r11, __ptmf_null@ha
 /* 80124628 000EDBE8  38 C6 0B 48 */	addi r6, r6, __vt__CSystemWindow@l
-/* 8012462C 000EDBEC  84 6B CE 10 */	lwzu r3, lbl_8050CE10@l(r11)
+/* 8012462C 000EDBEC  84 6B CE 10 */	lwzu r3, __ptmf_null@l(r11)
 /* 80124630 000EDBF0  38 A6 00 24 */	addi r5, r6, 0x24
 /* 80124634 000EDBF4  3B 40 00 00 */	li r26, 0
 /* 80124638 000EDBF8  39 00 FF FF */	li r8, -1

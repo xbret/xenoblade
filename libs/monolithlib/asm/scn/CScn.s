@@ -13,9 +13,9 @@
 /* 80495C48 0045F208  3D 20 80 57 */	lis r9, __vt__CScn@ha
 /* 80495C4C 0045F20C  38 63 21 CC */	addi r3, r3, __vt__CTTask_CScn@l
 /* 80495C50 0045F210  90 7F 00 10 */	stw r3, 0x10(r31)
-/* 80495C54 0045F214  3D 80 80 51 */	lis r12, lbl_8050CE10@ha
+/* 80495C54 0045F214  3D 80 80 51 */	lis r12, __ptmf_null@ha
 /* 80495C58 0045F218  39 29 21 18 */	addi r9, r9, __vt__CScn@l
-/* 80495C5C 0045F21C  84 6C CE 10 */	lwzu r3, lbl_8050CE10@l(r12)
+/* 80495C5C 0045F21C  84 6C CE 10 */	lwzu r3, __ptmf_null@l(r12)
 /* 80495C60 0045F220  38 E0 00 00 */	li r7, 0
 /* 80495C64 0045F224  C0 02 CE F0 */	lfs f0, float_8066D270@sda21(r2)
 /* 80495C68 0045F228  39 09 00 24 */	addi r8, r9, 0x24

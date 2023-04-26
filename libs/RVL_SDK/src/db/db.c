@@ -25,8 +25,7 @@ void __DBExceptionDestinationAux(void) {
 }
 
 asm void __DBExceptionDestination(void){
-    // clang-format off
-    nofralloc
+        nofralloc
     
     // Set up MMU
     mfmsr r3
@@ -34,8 +33,7 @@ asm void __DBExceptionDestination(void){
     mtmsr r3
 
     b __DBExceptionDestinationAux
-    // clang-format on
-}
+    }
 
 BOOL __DBIsExceptionMarked(u8 exc) {
     return __DBInterface->exceptionMask & (1 << exc);

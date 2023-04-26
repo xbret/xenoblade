@@ -15,9 +15,9 @@
 /* 800585A0 00021B60  3C C0 80 53 */	lis r6, __vt__CTaskEnvironment@ha
 /* 800585A4 00021B64  38 63 9C 08 */	addi r3, r3, __vt__CTTask_CTaskEnvironment@l
 /* 800585A8 00021B68  90 7E 00 10 */	stw r3, 0x10(r30)
-/* 800585AC 00021B6C  3D 20 80 51 */	lis r9, lbl_8050CE10@ha
+/* 800585AC 00021B6C  3D 20 80 51 */	lis r9, __ptmf_null@ha
 /* 800585B0 00021B70  C0 62 84 B0 */	lfs f3, float_80668830@sda21(r2)
-/* 800585B4 00021B74  84 69 CE 10 */	lwzu r3, lbl_8050CE10@l(r9)
+/* 800585B4 00021B74  84 69 CE 10 */	lwzu r3, __ptmf_null@l(r9)
 /* 800585B8 00021B78  38 C6 9B C0 */	addi r6, r6, __vt__CTaskEnvironment@l
 /* 800585BC 00021B7C  C0 42 84 B4 */	lfs f2, float_80668834@sda21(r2)
 /* 800585C0 00021B80  38 A0 00 00 */	li r5, 0

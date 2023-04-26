@@ -27,10 +27,10 @@
 /* 8022F458 001F8A18  41 82 00 A0 */	beq .L_8022F4F8
 /* 8022F45C 001F8A1C  48 21 55 BD */	bl __ct__8CProcessFv
 /* 8022F460 001F8A20  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
-/* 8022F464 001F8A24  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 8022F464 001F8A24  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 8022F468 001F8A28  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
 /* 8022F46C 001F8A2C  90 7E 00 10 */	stw r3, 0x10(r30)
-/* 8022F470 001F8A30  39 08 CE 10 */	addi r8, r8, lbl_8050CE10@l
+/* 8022F470 001F8A30  39 08 CE 10 */	addi r8, r8, __ptmf_null@l
 /* 8022F474 001F8A34  3C A0 80 54 */	lis r5, __vt__CMenuArtsSet@ha
 /* 8022F478 001F8A38  80 C8 00 04 */	lwz r6, 4(r8)
 /* 8022F47C 001F8A3C  3B E0 00 00 */	li r31, 0

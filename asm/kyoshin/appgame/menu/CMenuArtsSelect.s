@@ -17,8 +17,8 @@
 /* 8010204C 000CB60C  38 63 F9 90 */	addi r3, r3, __vt__CTTask_IUIBattle@l
 /* 80102050 000CB610  90 7E 00 10 */	stw r3, 0x10(r30)
 /* 80102054 000CB614  38 C6 F8 54 */	addi r6, r6, __vt__CMenuArtsSelect@l
-/* 80102058 000CB618  3D 20 80 51 */	lis r9, lbl_8050CE10@ha
-/* 8010205C 000CB61C  84 69 CE 10 */	lwzu r3, lbl_8050CE10@l(r9)
+/* 80102058 000CB618  3D 20 80 51 */	lis r9, __ptmf_null@ha
+/* 8010205C 000CB61C  84 69 CE 10 */	lwzu r3, __ptmf_null@l(r9)
 /* 80102060 000CB620  38 A6 00 24 */	addi r5, r6, 0x24
 /* 80102064 000CB624  38 86 00 AC */	addi r4, r6, 0xac
 /* 80102068 000CB628  3B E0 00 00 */	li r31, 0

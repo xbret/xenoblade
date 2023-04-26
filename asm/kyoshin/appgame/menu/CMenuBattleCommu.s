@@ -16,9 +16,9 @@
 /* 801AFE44 00179404  3C A0 80 53 */	lis r5, __vt__CMenuBattleCommu@ha
 /* 801AFE48 00179408  38 63 F9 90 */	addi r3, r3, __vt__CTTask_IUIBattle@l
 /* 801AFE4C 0017940C  90 7D 00 10 */	stw r3, 0x10(r29)
-/* 801AFE50 00179410  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 801AFE50 00179410  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 801AFE54 00179414  38 A5 6D F0 */	addi r5, r5, __vt__CMenuBattleCommu@l
-/* 801AFE58 00179418  84 C8 CE 10 */	lwzu r6, lbl_8050CE10@l(r8)
+/* 801AFE58 00179418  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 801AFE5C 0017941C  38 85 00 24 */	addi r4, r5, 0x24
 /* 801AFE60 00179420  3B E0 00 00 */	li r31, 0
 /* 801AFE64 00179424  38 7D 00 64 */	addi r3, r29, 0x64

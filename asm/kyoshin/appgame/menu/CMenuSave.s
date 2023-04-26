@@ -17,9 +17,9 @@
 /* 8028DCD8 00257298  3C A0 80 54 */	lis r5, __vt__CMenuSave@ha
 /* 8028DCDC 0025729C  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
 /* 8028DCE0 002572A0  90 7A 00 10 */	stw r3, 0x10(r26)
-/* 8028DCE4 002572A4  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 8028DCE4 002572A4  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 8028DCE8 002572A8  38 A5 BE C8 */	addi r5, r5, __vt__CMenuSave@l
-/* 8028DCEC 002572AC  84 C8 CE 10 */	lwzu r6, lbl_8050CE10@l(r8)
+/* 8028DCEC 002572AC  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 8028DCF0 002572B0  38 05 00 24 */	addi r0, r5, 0x24
 /* 8028DCF4 002572B4  3B E0 00 00 */	li r31, 0
 /* 8028DCF8 002572B8  38 80 00 00 */	li r4, 0

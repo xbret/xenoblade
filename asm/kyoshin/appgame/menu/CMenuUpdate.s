@@ -109,11 +109,11 @@
 /* 801426DC 0010BC9C  7C 7F 1B 78 */	mr r31, r3
 /* 801426E0 0010BCA0  48 30 23 39 */	bl __ct__8CProcessFv
 /* 801426E4 0010BCA4  3C 60 80 53 */	lis r3, __vt__CTTask_IUIWindow@ha
-/* 801426E8 0010BCA8  3C A0 80 51 */	lis r5, lbl_8050CE10@ha
+/* 801426E8 0010BCA8  3C A0 80 51 */	lis r5, __ptmf_null@ha
 /* 801426EC 0010BCAC  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
 /* 801426F0 0010BCB0  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 801426F4 0010BCB4  7F E3 FB 78 */	mr r3, r31
-/* 801426F8 0010BCB8  84 85 CE 10 */	lwzu r4, lbl_8050CE10@l(r5)
+/* 801426F8 0010BCB8  84 85 CE 10 */	lwzu r4, __ptmf_null@l(r5)
 /* 801426FC 0010BCBC  80 05 00 04 */	lwz r0, 4(r5)
 /* 80142700 0010BCC0  90 1F 00 40 */	stw r0, 0x40(r31)
 /* 80142704 0010BCC4  90 9F 00 3C */	stw r4, 0x3c(r31)

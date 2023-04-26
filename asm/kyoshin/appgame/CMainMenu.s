@@ -114,9 +114,9 @@
 /* 800FEBB0 000C8170  3C A0 80 53 */	lis r5, __vt__CMainMenu@ha
 /* 800FEBB4 000C8174  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
 /* 800FEBB8 000C8178  90 7F 00 10 */	stw r3, 0x10(r31)
-/* 800FEBBC 000C817C  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 800FEBBC 000C817C  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 800FEBC0 000C8180  38 A5 F5 F4 */	addi r5, r5, __vt__CMainMenu@l
-/* 800FEBC4 000C8184  84 C8 CE 10 */	lwzu r6, lbl_8050CE10@l(r8)
+/* 800FEBC4 000C8184  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 800FEBC8 000C8188  38 85 00 24 */	addi r4, r5, 0x24
 /* 800FEBCC 000C818C  3B C0 00 00 */	li r30, 0
 /* 800FEBD0 000C8190  38 7F 00 60 */	addi r3, r31, 0x60

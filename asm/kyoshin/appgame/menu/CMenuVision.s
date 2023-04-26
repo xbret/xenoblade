@@ -16,9 +16,9 @@
 /* 801ABE28 001753E8  3C A0 80 53 */	lis r5, __vt__CMenuVision@ha
 /* 801ABE2C 001753EC  38 63 F9 90 */	addi r3, r3, __vt__CTTask_IUIBattle@l
 /* 801ABE30 001753F0  90 7F 00 10 */	stw r3, 0x10(r31)
-/* 801ABE34 001753F4  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 801ABE34 001753F4  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 801ABE38 001753F8  38 A5 6C F0 */	addi r5, r5, __vt__CMenuVision@l
-/* 801ABE3C 001753FC  84 C8 CE 10 */	lwzu r6, lbl_8050CE10@l(r8)
+/* 801ABE3C 001753FC  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 801ABE40 00175400  38 85 00 24 */	addi r4, r5, 0x24
 /* 801ABE44 00175404  3B C0 00 00 */	li r30, 0
 /* 801ABE48 00175408  38 7F 00 64 */	addi r3, r31, 0x64

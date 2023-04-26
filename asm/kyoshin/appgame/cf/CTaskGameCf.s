@@ -15,9 +15,9 @@
 /* 8004418C 0000D74C  3C A0 80 53 */	lis r5, __vt__cf_CTaskGameCf@ha
 /* 80044190 0000D750  38 63 93 F4 */	addi r3, r3, __vt__CTTask_cf_CTaskGameCf@l
 /* 80044194 0000D754  90 7D 00 10 */	stw r3, 0x10(r29)
-/* 80044198 0000D758  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 80044198 0000D758  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 8004419C 0000D75C  2C 1F 00 00 */	cmpwi r31, 0
-/* 800441A0 0000D760  84 C8 CE 10 */	lwzu r6, lbl_8050CE10@l(r8)
+/* 800441A0 0000D760  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 800441A4 0000D764  38 A5 93 AC */	addi r5, r5, __vt__cf_CTaskGameCf@l
 /* 800441A8 0000D768  38 80 00 00 */	li r4, 0
 /* 800441AC 0000D76C  38 60 00 01 */	li r3, 1

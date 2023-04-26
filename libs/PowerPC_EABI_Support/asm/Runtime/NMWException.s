@@ -452,6 +452,15 @@
 /* 802B9CEC 002832AC  4E 80 00 20 */	blr 
 .endfn __destroy_new_array
 
+.section .sdata, "wa"  # 0x80664180 - 0x80666600
+
+.balign 8
+
+.obj thandler__3std, global
+	.4byte dthandler__3stdFv
+	.4byte 0
+.endobj thandler__3std
+
 .section extab, "a" # 0x800066E0 - 0x80021020
 
 .balign 4

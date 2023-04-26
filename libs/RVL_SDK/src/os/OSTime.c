@@ -21,8 +21,7 @@ static s32 LeapYearDays[MONTH_MAX] = {0,   31,  60,  91,  121, 152,
                                       182, 213, 244, 274, 305, 335};
 
 asm s64 OSGetTime(void) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     mftbu r3
     mftb r4
@@ -33,17 +32,14 @@ asm s64 OSGetTime(void) {
     bne OSGetTime
 
     blr
-    // clang-format on
-}
+    }
 
 asm s32 OSGetTick(void){
-    // clang-format off
-    nofralloc
+        nofralloc
 
     mftb r3
     blr
-    // clang-format on
-}
+    }
 
 //unused
 void __SetTime(){
@@ -154,15 +150,13 @@ s64 OSCalendarTimeToTicks(const OSCalendarTime* cal) {
 
     year = cal->year + ovMon;
 
-    // clang-format off
-    seconds = (s64)SECS_IN_YEAR * year +
+        seconds = (s64)SECS_IN_YEAR * year +
               (s64)SECS_IN_DAY * (cal->month_day + GetLeapDays(year) + GetYearDays(year, month) - 1) +
               (s64)SECS_IN_HOUR * cal->hour +
               (s64)SECS_IN_MIN * cal->min +
               cal->sec -
               (s64)0xEB1E1BF80ULL;
-    // clang-format on
-
+    
     return OS_SEC_TO_TICKS(seconds) + OS_MSEC_TO_TICKS((s64)cal->msec) +
            OS_USEC_TO_TICKS((s64)cal->usec);
 }

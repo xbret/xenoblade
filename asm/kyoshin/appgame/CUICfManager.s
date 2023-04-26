@@ -2246,9 +2246,9 @@
 /* 80131ED8 000FB498  3C A0 80 53 */	lis r5, __vt__CUICfManager@ha
 /* 80131EDC 000FB49C  38 63 1C 14 */	addi r3, r3, __vt__CTTask_CUICfManager@l
 /* 80131EE0 000FB4A0  90 7D 00 10 */	stw r3, 0x10(r29)
-/* 80131EE4 000FB4A4  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 80131EE4 000FB4A4  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 80131EE8 000FB4A8  38 A5 1A 70 */	addi r5, r5, __vt__CUICfManager@l
-/* 80131EEC 000FB4AC  84 C8 CE 10 */	lwzu r6, lbl_8050CE10@l(r8)
+/* 80131EEC 000FB4AC  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 80131EF0 000FB4B0  38 85 00 24 */	addi r4, r5, 0x24
 /* 80131EF4 000FB4B4  3B 80 00 00 */	li r28, 0
 /* 80131EF8 000FB4B8  38 7D 00 60 */	addi r3, r29, 0x60
@@ -2633,10 +2633,10 @@
 /* 80132450 000FBA10  41 82 00 58 */	beq .L_801324A8
 /* 80132454 000FBA14  48 31 25 C5 */	bl __ct__8CProcessFv
 /* 80132458 000FBA18  3C 60 80 53 */	lis r3, __vt__CTTask_CUICfManager_CTest@ha
-/* 8013245C 000FBA1C  3C A0 80 51 */	lis r5, lbl_8050CE10@ha
+/* 8013245C 000FBA1C  3C A0 80 51 */	lis r5, __ptmf_null@ha
 /* 80132460 000FBA20  38 63 1B D4 */	addi r3, r3, __vt__CTTask_CUICfManager_CTest@l
 /* 80132464 000FBA24  90 76 00 10 */	stw r3, 0x10(r22)
-/* 80132468 000FBA28  38 A5 CE 10 */	addi r5, r5, lbl_8050CE10@l
+/* 80132468 000FBA28  38 A5 CE 10 */	addi r5, r5, __ptmf_null@l
 /* 8013246C 000FBA2C  80 05 00 04 */	lwz r0, 4(r5)
 /* 80132470 000FBA30  3C 60 80 53 */	lis r3, __vt__CUICfManager_CTest@ha
 /* 80132474 000FBA34  80 85 00 00 */	lwz r4, 0(r5)

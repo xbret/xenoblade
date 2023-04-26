@@ -16,8 +16,8 @@
 /* 801A29F4 0016BFB4  38 63 68 A0 */	addi r3, r3, __vt__CTTask_cf_CTaskCulling@l
 /* 801A29F8 0016BFB8  90 7E 00 10 */	stw r3, 0x10(r30)
 /* 801A29FC 0016BFBC  38 C6 67 98 */	addi r6, r6, __vt__cf_CTaskCulling@l
-/* 801A2A00 0016BFC0  3D 20 80 51 */	lis r9, lbl_8050CE10@ha
-/* 801A2A04 0016BFC4  84 E9 CE 10 */	lwzu r7, lbl_8050CE10@l(r9)
+/* 801A2A00 0016BFC0  3D 20 80 51 */	lis r9, __ptmf_null@ha
+/* 801A2A04 0016BFC4  84 E9 CE 10 */	lwzu r7, __ptmf_null@l(r9)
 /* 801A2A08 0016BFC8  38 A6 00 24 */	addi r5, r6, 0x24
 /* 801A2A0C 0016BFCC  38 86 00 AC */	addi r4, r6, 0xac
 /* 801A2A10 0016BFD0  38 7E 00 60 */	addi r3, r30, 0x60

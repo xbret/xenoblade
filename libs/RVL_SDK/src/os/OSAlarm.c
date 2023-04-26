@@ -201,8 +201,7 @@ static void DecrementerExceptionCallback(u8 type, OSContext* ctx) {
 
 static asm void DecrementerExceptionHandler(register u8 type,
                                             register OSContext* ctx) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     stw r0, ctx->gprs[0]
     stw r1, ctx->gprs[1]
@@ -226,8 +225,7 @@ static asm void DecrementerExceptionHandler(register u8 type,
 
     stwu r1, -8(r1)
     b DecrementerExceptionCallback
-    // clang-format on
-}
+    }
 
 void OSSetAlarmTag(OSAlarm* alarm, u32 tag) { alarm->tag = tag; }
 

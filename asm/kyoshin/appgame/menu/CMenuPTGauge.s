@@ -16,9 +16,9 @@
 /* 80186F28 001504E8  3C A0 80 53 */	lis r5, __vt__CMenuPTGauge@ha
 /* 80186F2C 001504EC  38 63 F9 90 */	addi r3, r3, __vt__CTTask_IUIBattle@l
 /* 80186F30 001504F0  90 7D 00 10 */	stw r3, 0x10(r29)
-/* 80186F34 001504F4  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 80186F34 001504F4  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 80186F38 001504F8  38 A5 5C 20 */	addi r5, r5, __vt__CMenuPTGauge@l
-/* 80186F3C 001504FC  84 C8 CE 10 */	lwzu r6, lbl_8050CE10@l(r8)
+/* 80186F3C 001504FC  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 80186F40 00150500  38 85 00 24 */	addi r4, r5, 0x24
 /* 80186F44 00150504  3B E0 00 00 */	li r31, 0
 /* 80186F48 00150508  38 7D 00 64 */	addi r3, r29, 0x64

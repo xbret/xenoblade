@@ -451,10 +451,10 @@
 /* 80252460 0021BA20  41 82 00 8C */	beq .L_802524EC
 /* 80252464 0021BA24  48 1F 25 B5 */	bl __ct__8CProcessFv
 /* 80252468 0021BA28  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
-/* 8025246C 0021BA2C  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 8025246C 0021BA2C  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 80252470 0021BA30  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
 /* 80252474 0021BA34  90 7E 00 10 */	stw r3, 0x10(r30)
-/* 80252478 0021BA38  39 08 CE 10 */	addi r8, r8, lbl_8050CE10@l
+/* 80252478 0021BA38  39 08 CE 10 */	addi r8, r8, __ptmf_null@l
 /* 8025247C 0021BA3C  3C A0 80 54 */	lis r5, __vt__CMenuPause@ha
 /* 80252480 0021BA40  80 C8 00 04 */	lwz r6, 4(r8)
 /* 80252484 0021BA44  38 A5 A9 58 */	addi r5, r5, __vt__CMenuPause@l

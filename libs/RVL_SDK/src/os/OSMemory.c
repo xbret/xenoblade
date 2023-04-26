@@ -46,8 +46,7 @@ void OSProtectRange(){
 }
 
 static asm void ConfigMEM1_24MB(void) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     li r7, 0
     lis r4, 0x00000002@ha
@@ -81,12 +80,10 @@ static asm void ConfigMEM1_24MB(void) {
     mflr r3
     mtsrr0 r3
     rfi
-    // clang-format on
-}
+    }
 
 static asm void ConfigMEM2_52MB(void) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     li r7, 0
     lis r4, 0x10000002@ha
@@ -141,12 +138,10 @@ static asm void ConfigMEM2_52MB(void) {
     mflr r3
     mtsrr0 r3
     rfi
-    // clang-format on
-}
+    }
 
 static asm void ConfigMEM2_56MB(void) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     li r7, 0
     lis r4, 0x10000002@ha
@@ -201,12 +196,10 @@ static asm void ConfigMEM2_56MB(void) {
     mflr r3
     mtsrr0 r3
     rfi
-    // clang-format on
-}
+    }
 
 static asm void ConfigMEM2_64MB(void) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     li r7, 0
     lis r4, 0x10000002@ha
@@ -250,12 +243,10 @@ static asm void ConfigMEM2_64MB(void) {
     mflr r3
     mtsrr0 r3
     rfi
-    // clang-format on
-}
+    }
 
 static asm void ConfigMEM2_112MB(void) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     li r7, 0
     lis r4, 0x10000002@ha
@@ -310,12 +301,10 @@ static asm void ConfigMEM2_112MB(void) {
     mflr r3
     mtsrr0 r3
     rfi
-    // clang-format on
-}
+    }
 
 static asm void ConfigMEM2_128MB(void) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     li r7, 0
     lis r4, 0x10000002@ha
@@ -359,8 +348,7 @@ static asm void ConfigMEM2_128MB(void) {
     mflr r3
     mtsrr0 r3
     rfi
-    // clang-format on
-}
+    }
 
 //unused
 void DisableInstsOnMEM1Hi8MB(){
@@ -379,8 +367,7 @@ void EnableInstsOnMEM2Lo16MB(){
 }
 
 static asm void RealMode(register void* config) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     clrlwi config, config, 2
     mtsrr0 config
@@ -388,8 +375,7 @@ static asm void RealMode(register void* config) {
     rlwinm config, config, 0, 0x1c, 0x19
     mtsrr1 config
     rfi
-    // clang-format on
-}
+    }
 
 //Does nothing. There might've been extra code while was commented out/removed.
 static void WeirdAssInline(u32 size){

@@ -3,12 +3,15 @@
 
 
 namespace std{
-    extern void dthandler();
-    typedef void (*terminate_handler)();
-    extern terminate_handler thandler;
-
     class exception{
+    public:
+        virtual ~exception(){}
+        virtual const char* what() const {
+            return "exception";
+        }
     };
+
+    typedef void (*terminate_handler)();
 }
 
 #endif

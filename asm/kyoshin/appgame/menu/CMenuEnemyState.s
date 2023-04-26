@@ -518,9 +518,9 @@
 /* 8010F198 000D8758  3C A0 80 53 */	lis r5, __vt__CMenuEnemyState@ha
 /* 8010F19C 000D875C  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
 /* 8010F1A0 000D8760  90 7F 00 10 */	stw r3, 0x10(r31)
-/* 8010F1A4 000D8764  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 8010F1A4 000D8764  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 8010F1A8 000D8768  38 A5 FC 08 */	addi r5, r5, __vt__CMenuEnemyState@l
-/* 8010F1AC 000D876C  84 C8 CE 10 */	lwzu r6, lbl_8050CE10@l(r8)
+/* 8010F1AC 000D876C  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 8010F1B0 000D8770  38 85 00 24 */	addi r4, r5, 0x24
 /* 8010F1B4 000D8774  3B C0 00 00 */	li r30, 0
 /* 8010F1B8 000D8778  38 7F 00 64 */	addi r3, r31, 0x64

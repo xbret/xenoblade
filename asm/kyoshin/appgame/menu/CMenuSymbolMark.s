@@ -87,9 +87,9 @@
 /* 8011D450 000E6A10  3C A0 80 53 */	lis r5, __vt__CMenuSymbolMark@ha
 /* 8011D454 000E6A14  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
 /* 8011D458 000E6A18  90 7F 00 10 */	stw r3, 0x10(r31)
-/* 8011D45C 000E6A1C  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 8011D45C 000E6A1C  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 8011D460 000E6A20  38 A5 05 C8 */	addi r5, r5, __vt__CMenuSymbolMark@l
-/* 8011D464 000E6A24  84 C8 CE 10 */	lwzu r6, lbl_8050CE10@l(r8)
+/* 8011D464 000E6A24  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 8011D468 000E6A28  38 85 00 24 */	addi r4, r5, 0x24
 /* 8011D46C 000E6A2C  3B C0 00 00 */	li r30, 0
 /* 8011D470 000E6A30  38 7F 00 64 */	addi r3, r31, 0x64
@@ -550,10 +550,10 @@
 /* 8011DB34 000E70F4  41 82 00 6C */	beq .L_8011DBA0
 /* 8011DB38 000E70F8  48 32 6E E1 */	bl __ct__8CProcessFv
 /* 8011DB3C 000E70FC  3C 60 80 53 */	lis r3, __vt__CTTask_CArrow3D@ha
-/* 8011DB40 000E7100  3C E0 80 51 */	lis r7, lbl_8050CE10@ha
+/* 8011DB40 000E7100  3C E0 80 51 */	lis r7, __ptmf_null@ha
 /* 8011DB44 000E7104  38 63 05 84 */	addi r3, r3, __vt__CTTask_CArrow3D@l
 /* 8011DB48 000E7108  90 7D 00 10 */	stw r3, 0x10(r29)
-/* 8011DB4C 000E710C  38 E7 CE 10 */	addi r7, r7, lbl_8050CE10@l
+/* 8011DB4C 000E710C  38 E7 CE 10 */	addi r7, r7, __ptmf_null@l
 /* 8011DB50 000E7110  3C 80 80 53 */	lis r4, __vt__CArrow3D@ha
 /* 8011DB54 000E7114  80 A7 00 04 */	lwz r5, 4(r7)
 /* 8011DB58 000E7118  38 84 05 20 */	addi r4, r4, __vt__CArrow3D@l

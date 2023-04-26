@@ -1182,10 +1182,10 @@
 /* 801C28F4 0018BEB4  41 82 00 90 */	beq .L_801C2984
 /* 801C28F8 0018BEB8  48 28 21 21 */	bl __ct__8CProcessFv
 /* 801C28FC 0018BEBC  3C 60 80 53 */	lis r3, __vt__CTTask_cf_CfPadTask@ha
-/* 801C2900 0018BEC0  3D 20 80 51 */	lis r9, lbl_8050CE10@ha
+/* 801C2900 0018BEC0  3D 20 80 51 */	lis r9, __ptmf_null@ha
 /* 801C2904 0018BEC4  38 63 74 C0 */	addi r3, r3, __vt__CTTask_cf_CfPadTask@l
 /* 801C2908 0018BEC8  90 7F 00 10 */	stw r3, 0x10(r31)
-/* 801C290C 0018BECC  39 29 CE 10 */	addi r9, r9, lbl_8050CE10@l
+/* 801C290C 0018BECC  39 29 CE 10 */	addi r9, r9, __ptmf_null@l
 /* 801C2910 0018BED0  3C C0 80 53 */	lis r6, __vt__cf_CfPadTask@ha
 /* 801C2914 0018BED4  80 69 00 04 */	lwz r3, 4(r9)
 /* 801C2918 0018BED8  38 C6 74 48 */	addi r6, r6, __vt__cf_CfPadTask@l

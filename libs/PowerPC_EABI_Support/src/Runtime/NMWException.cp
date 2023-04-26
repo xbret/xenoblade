@@ -1,4 +1,5 @@
 #include "PowerPC_EABI_Support/Runtime/NMWException.h"
+#include "exception"
 
 extern "C"{
 	extern void __dla__FPv();
@@ -8,27 +9,27 @@ extern "C"{
 
 namespace std{
 
-void dthandler(){
-  abort();
-}
+	terminate_handler thandler = dthandler;
 
-//unused
-void set_terminate(void (*func)(void)){
-}
+	void dthandler(){
+	  abort();
+	}
 
-asm void terminate(){
-	lwz r12, thandler__3std //@sda21(r13)
-	mtctr r12
-	bctr 
-}
+	//unused
+	void set_terminate(void (*func)(void)){
+	}
 
-//unused
-void set_unexpected(void (*func)(void)){
-}
+	void terminate(){
+		thandler();
+	}
 
-//unused
-asm void unexpected(){
-}
+	//unused
+	void set_unexpected(void (*func)(void)){
+	}
+
+	//unused
+	void unexpected(){
+	}
 
 }
 

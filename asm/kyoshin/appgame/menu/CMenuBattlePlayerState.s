@@ -15,9 +15,9 @@
 /* 8010ADC8 000D4388  3C A0 80 53 */	lis r5, __vt__CMenuBattlePlayerState@ha
 /* 8010ADCC 000D438C  38 63 F9 90 */	addi r3, r3, __vt__CTTask_IUIBattle@l
 /* 8010ADD0 000D4390  90 7B 00 10 */	stw r3, 0x10(r27)
-/* 8010ADD4 000D4394  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 8010ADD4 000D4394  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 8010ADD8 000D4398  38 A5 FB 00 */	addi r5, r5, __vt__CMenuBattlePlayerState@l
-/* 8010ADDC 000D439C  84 C8 CE 10 */	lwzu r6, lbl_8050CE10@l(r8)
+/* 8010ADDC 000D439C  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 8010ADE0 000D43A0  38 85 00 24 */	addi r4, r5, 0x24
 /* 8010ADE4 000D43A4  3B E0 00 00 */	li r31, 0
 /* 8010ADE8 000D43A8  38 7B 00 64 */	addi r3, r27, 0x64

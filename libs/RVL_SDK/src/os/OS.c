@@ -56,8 +56,7 @@ void __OSIsDebuggerPresent(){
 }
 
 asm void __OSFPRInit(void) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     // Set FP available bit
     mfmsr r3
@@ -140,8 +139,7 @@ paired_singles_disabled:
     mtfsf 0xff, f0
 
     blr
-    // clang-format on
-}
+    }
 
 static void DisableWriteGatherPipe(void) { PPCMthid2(PPCMfhid2() & ~HID2_WPE); }
 
@@ -753,8 +751,7 @@ static void OSExceptionInit(void) {
 }
 
 static asm void __OSDBIntegrator(void) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     entry __OSDBINTSTART
 
@@ -779,20 +776,17 @@ static asm void __OSDBIntegrator(void) {
     blr
 
     entry __OSDBINTEND
-    // clang-format on
-}
+    }
 
 static asm void __OSDBJump(void){
-    // clang-format off
-    nofralloc
+        nofralloc
 
     entry __OSDBJUMPSTART
 
     bla 0x60
 
     entry __OSDBJUMPEND
-    // clang-format on
-}
+    }
 
 OSExceptionHandler
     __OSSetExceptionHandler(u8 type, OSExceptionHandler handler) {
@@ -806,8 +800,7 @@ OSExceptionHandler __OSGetExceptionHandler(u8 type) {
 }
 
 static asm void OSExceptionVector(void) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     entry __OSEVStart
 
@@ -867,12 +860,10 @@ lbl_800ECF70:
     entry __OSEVEnd
 
     nop
-    // clang-format on
-}
+    }
 
 asm void OSDefaultExceptionHandler(u8 type, register OSContext* ctx) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     stw r0, ctx->gprs[0]
     stw r1, ctx->gprs[1]
@@ -899,15 +890,13 @@ asm void OSDefaultExceptionHandler(u8 type, register OSContext* ctx) {
 
     stwu r1, -8(r1)
     b __OSUnhandledException
-    // clang-format on
-}
+    }
 
 void __OSPSInit(void) {
     PPCMthid2(PPCMfhid2() | (1 << 31) | HID2_PSE);
     ICFlashInvalidate();
 
-    // clang-format off
-    asm {
+        asm {
         sync
         li r3, 0
         mtgqr0 r3
@@ -919,8 +908,7 @@ void __OSPSInit(void) {
         mtgqr6 r3
         mtgqr7 r3
     }
-    // clang-format on
-}
+    }
 
 u32 __OSGetDIConfig(void) { return OS_DI_CONFIG & 0xFF; }
 

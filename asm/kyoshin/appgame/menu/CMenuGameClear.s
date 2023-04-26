@@ -1308,10 +1308,10 @@
 /* 802B21F0 0027B7B0  41 82 00 B8 */	beq .L_802B22A8
 /* 802B21F4 0027B7B4  48 19 28 25 */	bl __ct__8CProcessFv
 /* 802B21F8 0027B7B8  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
-/* 802B21FC 0027B7BC  3C E0 80 51 */	lis r7, lbl_8050CE10@ha
+/* 802B21FC 0027B7BC  3C E0 80 51 */	lis r7, __ptmf_null@ha
 /* 802B2200 0027B7C0  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
 /* 802B2204 0027B7C4  90 7D 00 10 */	stw r3, 0x10(r29)
-/* 802B2208 0027B7C8  38 E7 CE 10 */	addi r7, r7, lbl_8050CE10@l
+/* 802B2208 0027B7C8  38 E7 CE 10 */	addi r7, r7, __ptmf_null@l
 /* 802B220C 0027B7CC  3C 80 80 54 */	lis r4, __vt__CMenuGameClear@ha
 /* 802B2210 0027B7D0  80 A7 00 04 */	lwz r5, 4(r7)
 /* 802B2214 0027B7D4  3B C0 00 00 */	li r30, 0

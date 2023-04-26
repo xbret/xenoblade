@@ -21,6 +21,10 @@ static void InitDefaultHeap(){
 	OSSetArenaLo(arenaLo = arenaHi);
 }
 
+//unused
+void __sys_alloc(){
+}
+
 __declspec(weak) extern void __sys_free(void* ptr){
 	if (__OSCurrHeap == -1) {
 		InitDefaultHeap();

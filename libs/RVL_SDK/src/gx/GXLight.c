@@ -187,8 +187,7 @@ void GXGetLightColor(){
 }
 
 asm void GXLoadLightObjImm(register GXLightObj* light, register u32 id) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     cntlzw r0, id
     lis r4, WGPIPE@ha
@@ -224,13 +223,11 @@ asm void GXLoadLightObjImm(register GXLightObj* light, register u32 id) {
     sth r0, 2(r3)
 
     blr
-    // clang-format on
-}
+    }
 
 //unused
 asm void GXLoadLightObjIndx(register u32 index, register u32 id) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     cntlzw r0, id
     lis r5, WGPIPE@ha
@@ -249,8 +246,7 @@ asm void GXLoadLightObjIndx(register u32 index, register u32 id) {
     sth r0, 2(r4)
 
     blr
-    // clang-format on
-}
+    }
 
 void GXSetChanAmbColor(GXChannelID chan, GXColor color) {
     u32 ambColor;

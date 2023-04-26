@@ -15,9 +15,9 @@
 /* 80252664 0021BC24  3C A0 80 54 */	lis r5, __vt__CMenuCollepedia@ha
 /* 80252668 0021BC28  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
 /* 8025266C 0021BC2C  90 7D 00 10 */	stw r3, 0x10(r29)
-/* 80252670 0021BC30  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 80252670 0021BC30  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 80252674 0021BC34  38 A5 AA 58 */	addi r5, r5, __vt__CMenuCollepedia@l
-/* 80252678 0021BC38  84 C8 CE 10 */	lwzu r6, lbl_8050CE10@l(r8)
+/* 80252678 0021BC38  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 8025267C 0021BC3C  38 05 00 24 */	addi r0, r5, 0x24
 /* 80252680 0021BC40  3B E0 00 00 */	li r31, 0
 /* 80252684 0021BC44  38 80 00 00 */	li r4, 0

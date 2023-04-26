@@ -16,9 +16,9 @@
 /* 80168064 00131624  3C A0 80 53 */	lis r5, __vt__cf_CTaskREvtSequence@ha
 /* 80168068 00131628  38 63 43 C4 */	addi r3, r3, __vt__CTTask_cf_CTaskREvtSequence@l
 /* 8016806C 0013162C  90 7E 00 10 */	stw r3, 0x10(r30)
-/* 80168070 00131630  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 80168070 00131630  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 80168074 00131634  38 A5 42 DC */	addi r5, r5, __vt__cf_CTaskREvtSequence@l
-/* 80168078 00131638  84 C8 CE 10 */	lwzu r6, lbl_8050CE10@l(r8)
+/* 80168078 00131638  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 8016807C 0013163C  38 85 00 24 */	addi r4, r5, 0x24
 /* 80168080 00131640  3B A0 00 00 */	li r29, 0
 /* 80168084 00131644  7F E3 FB 78 */	mr r3, r31

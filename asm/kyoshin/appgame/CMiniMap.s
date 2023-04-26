@@ -6805,10 +6805,10 @@
 /* 8011C1FC 000E57BC  41 82 00 C0 */	beq .L_8011C2BC
 /* 8011C200 000E57C0  48 32 88 19 */	bl __ct__8CProcessFv
 /* 8011C204 000E57C4  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
-/* 8011C208 000E57C8  3D 40 80 51 */	lis r10, lbl_8050CE10@ha
+/* 8011C208 000E57C8  3D 40 80 51 */	lis r10, __ptmf_null@ha
 /* 8011C20C 000E57CC  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
 /* 8011C210 000E57D0  90 7C 00 10 */	stw r3, 0x10(r28)
-/* 8011C214 000E57D4  39 4A CE 10 */	addi r10, r10, lbl_8050CE10@l
+/* 8011C214 000E57D4  39 4A CE 10 */	addi r10, r10, __ptmf_null@l
 /* 8011C218 000E57D8  3C E0 80 53 */	lis r7, __vt__CMenuMiniMap2@ha
 /* 8011C21C 000E57DC  80 0A 00 04 */	lwz r0, 4(r10)
 /* 8011C220 000E57E0  38 E7 00 28 */	addi r7, r7, __vt__CMenuMiniMap2@l

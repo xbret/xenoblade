@@ -391,10 +391,10 @@
 /* 801A03C4 00169984  41 82 00 90 */	beq .L_801A0454
 /* 801A03C8 00169988  48 2A 46 51 */	bl __ct__8CProcessFv
 /* 801A03CC 0016998C  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
-/* 801A03D0 00169990  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 801A03D0 00169990  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 801A03D4 00169994  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
 /* 801A03D8 00169998  90 7E 00 10 */	stw r3, 0x10(r30)
-/* 801A03DC 0016999C  39 08 CE 10 */	addi r8, r8, lbl_8050CE10@l
+/* 801A03DC 0016999C  39 08 CE 10 */	addi r8, r8, __ptmf_null@l
 /* 801A03E0 001699A0  3C A0 80 53 */	lis r5, __vt__CMenuBattleMode@ha
 /* 801A03E4 001699A4  80 C8 00 04 */	lwz r6, 4(r8)
 /* 801A03E8 001699A8  38 A5 65 88 */	addi r5, r5, __vt__CMenuBattleMode@l

@@ -16,9 +16,9 @@
 /* 8018B6E0 00154CA0  3C A0 80 53 */	lis r5, __vt__CMenuShopBuy@ha
 /* 8018B6E4 00154CA4  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
 /* 8018B6E8 00154CA8  90 7C 00 10 */	stw r3, 0x10(r28)
-/* 8018B6EC 00154CAC  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 8018B6EC 00154CAC  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 8018B6F0 00154CB0  38 A5 5E 90 */	addi r5, r5, __vt__CMenuShopBuy@l
-/* 8018B6F4 00154CB4  84 C8 CE 10 */	lwzu r6, lbl_8050CE10@l(r8)
+/* 8018B6F4 00154CB4  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 8018B6F8 00154CB8  38 05 00 24 */	addi r0, r5, 0x24
 /* 8018B6FC 00154CBC  3B E0 00 00 */	li r31, 0
 /* 8018B700 00154CC0  38 80 00 00 */	li r4, 0

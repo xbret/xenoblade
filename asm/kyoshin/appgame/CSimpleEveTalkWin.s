@@ -17,9 +17,9 @@
 /* 801A1890 0016AE50  3C A0 80 53 */	lis r5, __vt__CSimpleEveTalkWin@ha
 /* 801A1894 0016AE54  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
 /* 801A1898 0016AE58  90 7B 00 10 */	stw r3, 0x10(r27)
-/* 801A189C 0016AE5C  3D 20 80 51 */	lis r9, lbl_8050CE10@ha
+/* 801A189C 0016AE5C  3D 20 80 51 */	lis r9, __ptmf_null@ha
 /* 801A18A0 0016AE60  38 A5 66 98 */	addi r5, r5, __vt__CSimpleEveTalkWin@l
-/* 801A18A4 0016AE64  84 69 CE 10 */	lwzu r3, lbl_8050CE10@l(r9)
+/* 801A18A4 0016AE64  84 69 CE 10 */	lwzu r3, __ptmf_null@l(r9)
 /* 801A18A8 0016AE68  38 85 00 24 */	addi r4, r5, 0x24
 /* 801A18AC 0016AE6C  3B 20 00 00 */	li r25, 0
 /* 801A18B0 0016AE70  38 C0 FF FF */	li r6, -1

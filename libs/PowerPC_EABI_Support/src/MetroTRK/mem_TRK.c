@@ -1,8 +1,8 @@
 #include "types.h"
 
 #define WRITE(dst, add, n_dst, n_src) ((u##n_dst*)dst) = ((u##n_dst*)(((u##n_src*)dst) + add)) - 1
-#define WRITE_BYTE(dst, add)          WRITE(dst, add, 8, 32)
-#define WRITE_WORD(dst, add)          WRITE(dst, add, 32, 8)
+#define WRITE_BYTE(dst, add) WRITE(dst, add, 8, 32)
+#define WRITE_WORD(dst, add) WRITE(dst, add, 32, 8)
 
 
 //unused
@@ -17,7 +17,7 @@ void ppc_writebyte1(){
 void* TRK_memcpy(void* dst, const void* src, size_t n)
 {
 	const u8* s = (const u8*)src - 1;
-	u8* d       = (u8*)dst - 1;
+	u8* d = (u8*)dst - 1;
 
 	n++;
 	while (--n != 0)

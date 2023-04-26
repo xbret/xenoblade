@@ -16,9 +16,9 @@
 /* 802ABDD8 00275398  3C A0 80 54 */	lis r5, __vt__CMenuTutorialList@ha
 /* 802ABDDC 0027539C  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
 /* 802ABDE0 002753A0  90 7C 00 10 */	stw r3, 0x10(r28)
-/* 802ABDE4 002753A4  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 802ABDE4 002753A4  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 802ABDE8 002753A8  38 A5 D9 C8 */	addi r5, r5, __vt__CMenuTutorialList@l
-/* 802ABDEC 002753AC  84 C8 CE 10 */	lwzu r6, lbl_8050CE10@l(r8)
+/* 802ABDEC 002753AC  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 802ABDF0 002753B0  38 05 00 24 */	addi r0, r5, 0x24
 /* 802ABDF4 002753B4  3B E0 00 00 */	li r31, 0
 /* 802ABDF8 002753B8  38 80 00 00 */	li r4, 0

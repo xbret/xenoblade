@@ -14,9 +14,9 @@
 /* 8018A648 00153C08  3C A0 80 53 */	lis r5, __vt__CMenuShopSell@ha
 /* 8018A64C 00153C0C  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
 /* 8018A650 00153C10  90 7D 00 10 */	stw r3, 0x10(r29)
-/* 8018A654 00153C14  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 8018A654 00153C14  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 8018A658 00153C18  38 A5 5E 20 */	addi r5, r5, __vt__CMenuShopSell@l
-/* 8018A65C 00153C1C  84 C8 CE 10 */	lwzu r6, lbl_8050CE10@l(r8)
+/* 8018A65C 00153C1C  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 8018A660 00153C20  38 05 00 24 */	addi r0, r5, 0x24
 /* 8018A664 00153C24  3B E0 00 00 */	li r31, 0
 /* 8018A668 00153C28  38 80 00 00 */	li r4, 0

@@ -16,8 +16,8 @@
 /* 80044AE0 0000E0A0  38 63 95 04 */	addi r3, r3, __vt__CTTask_CTaskGameEff@l
 /* 80044AE4 0000E0A4  90 7E 00 10 */	stw r3, 0x10(r30)
 /* 80044AE8 0000E0A8  39 6B 94 54 */	addi r11, r11, __vt__CTaskGameEff@l
-/* 80044AEC 0000E0AC  3F 80 80 51 */	lis r28, lbl_8050CE10@ha
-/* 80044AF0 0000E0B0  84 7C CE 10 */	lwzu r3, lbl_8050CE10@l(r28)
+/* 80044AEC 0000E0AC  3F 80 80 51 */	lis r28, __ptmf_null@ha
+/* 80044AF0 0000E0B0  84 7C CE 10 */	lwzu r3, __ptmf_null@l(r28)
 /* 80044AF4 0000E0B4  3C E0 80 53 */	lis r7, __vt__CTaskGameEff_CEffRenderHighPrio@ha
 /* 80044AF8 0000E0B8  3C C0 80 53 */	lis r6, __vt___reslist_base_CScn@ha
 /* 80044AFC 0000E0BC  3C 80 80 53 */	lis r4, __vt__reslist_CScn@ha

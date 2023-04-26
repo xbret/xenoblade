@@ -11,6 +11,14 @@ namespace std{
             return "bad_cast";
         }
     };
+
+    class bad_typeid : public exception {
+    public:
+        virtual ~bad_typeid(){}
+        virtual const char* what() const{
+            return "bad_typeid";
+        }
+    };
 }
 
 #endif

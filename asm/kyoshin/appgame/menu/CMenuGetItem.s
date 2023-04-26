@@ -18,9 +18,9 @@
 /* 801497B0 00112D70  3C A0 80 53 */	lis r5, __vt__CMenuGetItem@ha
 /* 801497B4 00112D74  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
 /* 801497B8 00112D78  90 7C 00 10 */	stw r3, 0x10(r28)
-/* 801497BC 00112D7C  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 801497BC 00112D7C  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 801497C0 00112D80  38 A5 22 10 */	addi r5, r5, __vt__CMenuGetItem@l
-/* 801497C4 00112D84  84 C8 CE 10 */	lwzu r6, lbl_8050CE10@l(r8)
+/* 801497C4 00112D84  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 801497C8 00112D88  38 85 00 24 */	addi r4, r5, 0x24
 /* 801497CC 00112D8C  3B E0 00 00 */	li r31, 0
 /* 801497D0 00112D90  38 7C 00 64 */	addi r3, r28, 0x64
@@ -83,9 +83,9 @@
 /* 801498A8 00112E68  3C A0 80 53 */	lis r5, __vt__CMenuGetItem@ha
 /* 801498AC 00112E6C  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
 /* 801498B0 00112E70  90 7C 00 10 */	stw r3, 0x10(r28)
-/* 801498B4 00112E74  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 801498B4 00112E74  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 801498B8 00112E78  38 A5 22 10 */	addi r5, r5, __vt__CMenuGetItem@l
-/* 801498BC 00112E7C  84 C8 CE 10 */	lwzu r6, lbl_8050CE10@l(r8)
+/* 801498BC 00112E7C  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 801498C0 00112E80  38 85 00 24 */	addi r4, r5, 0x24
 /* 801498C4 00112E84  3B E0 00 00 */	li r31, 0
 /* 801498C8 00112E88  38 7C 00 64 */	addi r3, r28, 0x64
@@ -147,9 +147,9 @@
 /* 8014999C 00112F5C  3C A0 80 53 */	lis r5, __vt__CMenuGetItem@ha
 /* 801499A0 00112F60  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
 /* 801499A4 00112F64  90 7B 00 10 */	stw r3, 0x10(r27)
-/* 801499A8 00112F68  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 801499A8 00112F68  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 801499AC 00112F6C  38 A5 22 10 */	addi r5, r5, __vt__CMenuGetItem@l
-/* 801499B0 00112F70  84 C8 CE 10 */	lwzu r6, lbl_8050CE10@l(r8)
+/* 801499B0 00112F70  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 801499B4 00112F74  38 85 00 24 */	addi r4, r5, 0x24
 /* 801499B8 00112F78  3B E0 00 00 */	li r31, 0
 /* 801499BC 00112F7C  38 7B 00 64 */	addi r3, r27, 0x64

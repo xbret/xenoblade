@@ -15,9 +15,9 @@
 /* 8011C470 000E5A30  3C A0 80 53 */	lis r5, __vt__CMenuQuestLog@ha
 /* 8011C474 000E5A34  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
 /* 8011C478 000E5A38  90 7C 00 10 */	stw r3, 0x10(r28)
-/* 8011C47C 000E5A3C  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 8011C47C 000E5A3C  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 8011C480 000E5A40  38 A5 04 08 */	addi r5, r5, __vt__CMenuQuestLog@l
-/* 8011C484 000E5A44  84 C8 CE 10 */	lwzu r6, lbl_8050CE10@l(r8)
+/* 8011C484 000E5A44  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 8011C488 000E5A48  38 05 00 24 */	addi r0, r5, 0x24
 /* 8011C48C 000E5A4C  3B E0 00 00 */	li r31, 0
 /* 8011C490 000E5A50  38 80 00 00 */	li r4, 0

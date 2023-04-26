@@ -21,9 +21,9 @@
 /* 801B25A0 0017BB60  3C A0 80 53 */	lis r5, __vt__CMenuGetItemMulti@ha
 /* 801B25A4 0017BB64  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
 /* 801B25A8 0017BB68  90 77 00 10 */	stw r3, 0x10(r23)
-/* 801B25AC 0017BB6C  3D 40 80 51 */	lis r10, lbl_8050CE10@ha
+/* 801B25AC 0017BB6C  3D 40 80 51 */	lis r10, __ptmf_null@ha
 /* 801B25B0 0017BB70  38 A5 70 74 */	addi r5, r5, __vt__CMenuGetItemMulti@l
-/* 801B25B4 0017BB74  84 6A CE 10 */	lwzu r3, lbl_8050CE10@l(r10)
+/* 801B25B4 0017BB74  84 6A CE 10 */	lwzu r3, __ptmf_null@l(r10)
 /* 801B25B8 0017BB78  38 85 00 24 */	addi r4, r5, 0x24
 /* 801B25BC 0017BB7C  3A C0 00 00 */	li r22, 0
 /* 801B25C0 0017BB80  38 E0 FF FF */	li r7, -1
@@ -164,9 +164,9 @@
 /* 801B27B8 0017BD78  3C A0 80 53 */	lis r5, __vt__CMenuGetItemMulti@ha
 /* 801B27BC 0017BD7C  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
 /* 801B27C0 0017BD80  90 7F 00 10 */	stw r3, 0x10(r31)
-/* 801B27C4 0017BD84  3D 20 80 51 */	lis r9, lbl_8050CE10@ha
+/* 801B27C4 0017BD84  3D 20 80 51 */	lis r9, __ptmf_null@ha
 /* 801B27C8 0017BD88  38 A5 70 74 */	addi r5, r5, __vt__CMenuGetItemMulti@l
-/* 801B27CC 0017BD8C  84 69 CE 10 */	lwzu r3, lbl_8050CE10@l(r9)
+/* 801B27CC 0017BD8C  84 69 CE 10 */	lwzu r3, __ptmf_null@l(r9)
 /* 801B27D0 0017BD90  38 85 00 24 */	addi r4, r5, 0x24
 /* 801B27D4 0017BD94  3B A0 00 00 */	li r29, 0
 /* 801B27D8 0017BD98  38 C0 FF FF */	li r6, -1

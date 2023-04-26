@@ -14,9 +14,9 @@
 /* 80210C40 001DA200  3C A0 80 54 */	lis r5, __vt__CMenuMakeCrystal@ha
 /* 80210C44 001DA204  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
 /* 80210C48 001DA208  90 7D 00 10 */	stw r3, 0x10(r29)
-/* 80210C4C 001DA20C  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 80210C4C 001DA20C  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 80210C50 001DA210  38 A5 92 88 */	addi r5, r5, __vt__CMenuMakeCrystal@l
-/* 80210C54 001DA214  84 C8 CE 10 */	lwzu r6, lbl_8050CE10@l(r8)
+/* 80210C54 001DA214  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 80210C58 001DA218  38 05 00 24 */	addi r0, r5, 0x24
 /* 80210C5C 001DA21C  3B E0 00 00 */	li r31, 0
 /* 80210C60 001DA220  38 80 00 00 */	li r4, 0

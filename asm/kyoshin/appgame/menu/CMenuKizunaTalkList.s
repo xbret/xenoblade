@@ -14,9 +14,9 @@
 /* 80271DF4 0023B3B4  3C A0 80 54 */	lis r5, __vt__CMenuKizunaTalkList@ha
 /* 80271DF8 0023B3B8  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
 /* 80271DFC 0023B3BC  90 7D 00 10 */	stw r3, 0x10(r29)
-/* 80271E00 0023B3C0  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 80271E00 0023B3C0  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 80271E04 0023B3C4  38 A5 B4 70 */	addi r5, r5, __vt__CMenuKizunaTalkList@l
-/* 80271E08 0023B3C8  84 C8 CE 10 */	lwzu r6, lbl_8050CE10@l(r8)
+/* 80271E08 0023B3C8  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 80271E0C 0023B3CC  38 05 00 24 */	addi r0, r5, 0x24
 /* 80271E10 0023B3D0  3B E0 00 00 */	li r31, 0
 /* 80271E14 0023B3D4  38 80 00 00 */	li r4, 0

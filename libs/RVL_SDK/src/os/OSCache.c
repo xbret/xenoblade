@@ -7,8 +7,7 @@ asm void DCFlashInvalidate(){
 }
 
 asm void DCEnable(void) {
-    // clang-format off
-    nofralloc
+        nofralloc
     
     sync
     mfhid0 r3
@@ -16,8 +15,7 @@ asm void DCEnable(void) {
     mthid0 r3
 
     blr
-    // clang-format on
-}
+    }
 
 //unused
 asm void DCDisable(){
@@ -52,8 +50,7 @@ asm void DCBlockInvalidate(){
 }
 
 asm void DCInvalidateRange(register const void* buf, register u32 len) {
-    // clang-format off
-    nofralloc
+        nofralloc
     
     cmplwi len, 0
     blelr 
@@ -70,12 +67,10 @@ do_invalidate:
     bdnz do_invalidate
 
     blr
-    // clang-format on
-}
+    }
 
 asm void DCFlushRange(register const void* buf, register u32 len) {
-    // clang-format off
-    nofralloc
+        nofralloc
     
     cmplwi len, 0
     blelr 
@@ -93,12 +88,10 @@ do_flush:
     sc
 
     blr
-    // clang-format on
-}
+    }
 
 asm void DCStoreRange(register const void* buf, register u32 len) {
-    // clang-format off
-    nofralloc
+        nofralloc
     
     cmplwi len, 0
     blelr 
@@ -116,12 +109,10 @@ do_store:
     sc
 
     blr
-    // clang-format on
-}
+    }
 
 asm void DCFlushRangeNoSync(register const void* buf, register u32 len) {
-    // clang-format off
-    nofralloc
+        nofralloc
     
     cmplwi len, 0
     blelr 
@@ -138,12 +129,10 @@ do_flush:
     bdnz do_flush
 
     blr
-    // clang-format on
-}
+    }
 
 asm void DCStoreRangeNoSync(register const void* buf, register u32 len) {
-    // clang-format off
-    nofralloc
+        nofralloc
     
     cmplwi len, 0
     blelr 
@@ -160,12 +149,10 @@ do_store:
     bdnz do_store
 
     blr
-    // clang-format on
-}
+    }
 
 asm void DCZeroRange(register const void* buf, register u32 len) {
-    // clang-format off
-    nofralloc
+        nofralloc
     
     cmplwi len, 0
     blelr 
@@ -182,16 +169,14 @@ do_zero:
     bdnz do_zero
 
     blr
-    // clang-format on
-}
+    }
 
 //unused
 asm void DCTouchRange(){
 }
 
 asm void ICInvalidateRange(register const void* buf, register u32 len) {
-    // clang-format off
-    nofralloc
+        nofralloc
     
     cmplwi len, 0
     blelr 
@@ -211,24 +196,20 @@ do_invalidate:
     isync
 
     blr
-    // clang-format on
-}
+    }
 
 asm void ICFlashInvalidate(void) {
-    // clang-format off
-    nofralloc
+        nofralloc
     
     mfhid0 r3
     ori r3, r3, 0x800
     mthid0 r3
 
     blr
-    // clang-format on
-}
+    }
 
 asm void ICEnable(void) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     isync
     mfhid0 r3
@@ -236,8 +217,7 @@ asm void ICEnable(void) {
     mthid0 r3
 
     blr
-    // clang-format on
-}
+    }
 
 //unused
 asm void ICDisable(){
@@ -260,8 +240,7 @@ asm void ICSync(){
 }
 
 static asm void __LCEnable(void) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     mfmsr r5
     ori r5, r5, 0x1000
@@ -323,8 +302,7 @@ do_load:
     nop
     
     blr
-    // clang-format on
-}
+    }
 
 void LCEnable(void) {
     const BOOL enabled = OSDisableInterrupts();
@@ -333,8 +311,7 @@ void LCEnable(void) {
 }
 
 asm void LCDisable(void) {
-    // clang-format off
-    nofralloc
+        nofralloc
     
     lis r3, 0xE0000000@ha
     li r4, 512
@@ -349,8 +326,7 @@ do_invalidate:
     mtspr 0x398, r4 //HID2
 
     blr
-    // clang-format on
-}
+    }
 
 //unused
 asm void LCIsEnable(){
@@ -366,8 +342,7 @@ asm void LCAllocTags(){
 
 asm void LCLoadBlocks(register void* dst, register const void* src,
                       register u32 len) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     rlwinm r6, len, 30, 27, 31
     clrlwi src, src, 3
@@ -379,13 +354,11 @@ asm void LCLoadBlocks(register void* dst, register const void* src,
     mtspr DMA_L, r6
 
     blr
-    // clang-format on
-}
+    }
 
 asm void LCStoreBlocks(register void* dst, register const void* src,
                        register u32 len){
-    // clang-format off
-    nofralloc
+        nofralloc
 
     rlwinm r6, len, 30, 27, 31
     clrlwi dst, dst, 3
@@ -397,8 +370,7 @@ asm void LCStoreBlocks(register void* dst, register const void* src,
     mtspr DMA_L, r6
 
     blr
-    // clang-format on
-}
+    }
 
 //unused
 asm void LCAlloc(){
@@ -433,19 +405,16 @@ u32 LCStoreData(void* dst, const void* src, u32 len) {
 }
 
 asm u32 LCQueueLength(void) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     mfspr r4, 0x398 //HID2
     rlwinm r3, r4, 8, 28, 31
 
     blr
-    // clang-format on
-}
+    }
 
 asm void LCQueueWait(register u32 n) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     mfspr r4, 0x398 //HID2
     rlwinm r4, r4, 8, 28, 31
@@ -453,8 +422,7 @@ asm void LCQueueWait(register u32 n) {
     bgt LCQueueWait
 
     blr
-    // clang-format on
-}
+    }
 
 //unused
 asm void LCFlushQueue(){

@@ -17,9 +17,9 @@
 /* 80124BAC 000EE16C  3C C0 80 53 */	lis r6, __vt__CSysWinSelect@ha
 /* 80124BB0 000EE170  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
 /* 80124BB4 000EE174  90 7B 00 10 */	stw r3, 0x10(r27)
-/* 80124BB8 000EE178  3D 40 80 51 */	lis r10, lbl_8050CE10@ha
+/* 80124BB8 000EE178  3D 40 80 51 */	lis r10, __ptmf_null@ha
 /* 80124BBC 000EE17C  38 C6 0A 48 */	addi r6, r6, __vt__CSysWinSelect@l
-/* 80124BC0 000EE180  84 6A CE 10 */	lwzu r3, lbl_8050CE10@l(r10)
+/* 80124BC0 000EE180  84 6A CE 10 */	lwzu r3, __ptmf_null@l(r10)
 /* 80124BC4 000EE184  38 A6 00 24 */	addi r5, r6, 0x24
 /* 80124BC8 000EE188  3B 20 00 00 */	li r25, 0
 /* 80124BCC 000EE18C  38 E0 FF FF */	li r7, -1

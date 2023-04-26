@@ -31,12 +31,10 @@ static inline void OSInitFastCast(){
 static inline f32 __OSu16tof32(register const u16* arg) {
     register f32 ret;
 
-    // clang-format off
-    asm {
+        asm {
         psq_l ret, 0(arg), 1, 3
     }
-    // clang-format on
-
+    
     return ret;
 }
 
@@ -47,12 +45,10 @@ static inline u16 __OSf32tou16(register f32 arg) {
     register f32* ptr = &a;
     u16 r;
 
-    // clang-format off
-    asm {
+        asm {
         psq_st arg, 0(ptr), 1, 3
     }
-    // clang-format on
-
+    
     r = *(u16*)ptr;
     return r;
 }
@@ -62,12 +58,10 @@ static void OSf32tou16(const f32* in, u16* out) { *out = __OSf32tou16(*in); }
 static f32 __OSs16tof32(register const s16* arg) {
     register f32 ret;
 
-    // clang-format off
-    asm {
+        asm {
         psq_l ret, 0(arg), 1, 5
     }
-    // clang-format on
-
+    
     return ret;
 }
 
@@ -78,12 +72,10 @@ static inline s16 __OSf32tos16(register f32 arg) {
     register f32* ptr = &a;
     s16 r;
 
-    // clang-format off
-    asm {
+        asm {
         psq_st arg, 0(ptr), 1, 5
     }
-    // clang-format on
-
+    
     r = *(s16*)ptr;
     return r;
 }

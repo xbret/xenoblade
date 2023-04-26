@@ -23,8 +23,7 @@ DECL_SECTION(".init") static void __set_debug_bba(void) { Debug_BBA = TRUE; }
 DECL_SECTION(".init") static BOOL __get_debug_bba(void) { return Debug_BBA; }
 
 asm void __start(void) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     // Setup hardware
     bl __init_registers
@@ -281,8 +280,7 @@ _after_init_metro_trk_bba:
     mr r4, r15
     bl main
     b exit // <- Will halt CPU
-    // clang-format on
-}
+    }
 
 DECL_SECTION(".init")
 static void __copy_rom_section(void* dst, const void* src, size_t size) {
@@ -304,8 +302,7 @@ static void __init_bss_section(void* dst, size_t size) {
 }
 
 DECL_SECTION(".init") static asm void __init_registers(void) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     li r0, 0
     li r3, 0
@@ -345,8 +342,7 @@ DECL_SECTION(".init") static asm void __init_registers(void) {
     ori r13, r13, _SDA_BASE_@l
 
     blr
-    // clang-format on
-}
+    }
 
 DECL_SECTION(".init") static void __init_data(void) {
     const RomSection* rs;

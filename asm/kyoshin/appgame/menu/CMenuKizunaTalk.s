@@ -15,9 +15,9 @@
 /* 801BCA5C 0018601C  3C A0 80 53 */	lis r5, __vt__CMenuKizunaTalk@ha
 /* 801BCA60 00186020  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
 /* 801BCA64 00186024  90 7B 00 10 */	stw r3, 0x10(r27)
-/* 801BCA68 00186028  3D 20 80 51 */	lis r9, lbl_8050CE10@ha
+/* 801BCA68 00186028  3D 20 80 51 */	lis r9, __ptmf_null@ha
 /* 801BCA6C 0018602C  38 A5 72 50 */	addi r5, r5, __vt__CMenuKizunaTalk@l
-/* 801BCA70 00186030  84 69 CE 10 */	lwzu r3, lbl_8050CE10@l(r9)
+/* 801BCA70 00186030  84 69 CE 10 */	lwzu r3, __ptmf_null@l(r9)
 /* 801BCA74 00186034  38 85 00 24 */	addi r4, r5, 0x24
 /* 801BCA78 00186038  3B C0 00 00 */	li r30, 0
 /* 801BCA7C 0018603C  38 C0 FF FF */	li r6, -1

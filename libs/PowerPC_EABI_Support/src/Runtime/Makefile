@@ -1,11 +1,11 @@
 RUNTIME_FILES:=\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/Runtime/__mem.o\
-	$(BUILD_DIR)/libs/PowerPC_EABI_Support/asm/MetroTRK/__exception.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/Runtime/__va_arg.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/Runtime/global_destructor_chain.o\
+	$(BUILD_DIR)/libs/PowerPC_EABI_Support/asm/Runtime/exception_rtti.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/asm/Runtime/NMWException.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/Runtime/ptmf.o\
-	$(BUILD_DIR)/libs/PowerPC_EABI_Support/asm/Runtime/MWRTTI.o\
+	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/Runtime/MWRTTI.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/Runtime/runtime.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/Runtime/__init_cpp_exceptions.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/asm/Runtime/Gecko_ExceptionPPC.o\

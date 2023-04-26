@@ -15,9 +15,9 @@
 /* 8029B520 00264AE0  3C A0 80 54 */	lis r5, __vt__CMenuOption@ha
 /* 8029B524 00264AE4  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
 /* 8029B528 00264AE8  90 7C 00 10 */	stw r3, 0x10(r28)
-/* 8029B52C 00264AEC  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 8029B52C 00264AEC  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 8029B530 00264AF0  38 A5 CA 80 */	addi r5, r5, __vt__CMenuOption@l
-/* 8029B534 00264AF4  84 C8 CE 10 */	lwzu r6, lbl_8050CE10@l(r8)
+/* 8029B534 00264AF4  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 8029B538 00264AF8  38 05 00 24 */	addi r0, r5, 0x24
 /* 8029B53C 00264AFC  3B E0 00 00 */	li r31, 0
 /* 8029B540 00264B00  38 80 00 00 */	li r4, 0

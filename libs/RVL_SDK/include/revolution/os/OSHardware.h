@@ -87,7 +87,6 @@ typedef struct OSBI2 {
 /**
  * 0x80000000 - 0x80000100
  */
-// clang-format off
 OS_DEF_GLOBAL_VAR(OSBootInfo, BOOT_INFO,                   0x80000000);
 OS_DEF_GLOBAL_VAR(OSDebugInterface, DEBUG_INTERFACE,       0x80000040);
 OS_DEF_GLOBAL_ARR(u8, DB_INTEGRATOR_HOOK, [0x24],          0x80000060);
@@ -106,12 +105,10 @@ OS_DEF_GLOBAL_VAR(u32, SIMULATED_MEM_SIZE,                 0x800000F0);
 OS_DEF_GLOBAL_VAR(OSBI2*, DVD_BI2,                         0x800000F4);
 OS_DEF_GLOBAL_VAR(u32, BUS_CLOCK_SPEED,                    0x800000F8);
 OS_DEF_GLOBAL_VAR(u32, CPU_CLOCK_SPEED,                    0x800000FC);
-// clang-format on
 
 /**
  * 0x80003000 - 0x80003F00
  */
-// clang-format off
 OS_DEF_GLOBAL_ARR(void*, EXCEPTION_TABLE, [15],          0x80003000);
 OS_DEF_GLOBAL_VAR(void*, INTR_HANDLER_TABLE,             0x80003040);
 OS_DEF_GLOBAL_ARR(volatile s32, EXI_800030C0, [],        0x800030C0);
@@ -152,7 +149,6 @@ OS_DEF_GLOBAL_VAR(u32, NAND_TITLE_LAUNCH_CODE,           0x8000318C);
 OS_DEF_GLOBAL_VAR(u32, NAND_TITLE_RETURN_CODE,           0x80003190);
 OS_DEF_GLOBAL_VAR(u32, CURRENT_APP_NAME_1,                 0x80003194);
 OS_DEF_GLOBAL_ARR(u8, SC_PRDINFO, [0x100],               0x80003800);
-// clang-format on
 
 /**
  * PI hardware globals
@@ -254,20 +250,16 @@ typedef enum {
 /**
  * DI hardware globals
  */
-// clang-format off
 OS_DEF_HW_REG(volatile u32, DI_DMA_ADDR, 0xCD006014);
 OS_DEF_HW_REG(volatile u32, DI_CONFIG,   0xCD006024);
-// clang-format on
 
 /**
  * Misc/unknown globals
  */
-// clang-format off
 OS_DEF_HW_REG(volatile u32, UNK_CD000034, 0xCD000034);
 OS_DEF_HW_REG(volatile u32, UNK_CD800180, 0xCD800180);
 OS_DEF_HW_REG(volatile u32, UNK_CD8001CC, 0xCD8001CC);
 OS_DEF_HW_REG(volatile u32, UNK_CD8001D0, 0xCD8001D0);
-// clang-format on
 
 #ifdef __cplusplus
 }

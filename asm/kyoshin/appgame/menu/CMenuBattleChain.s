@@ -18,9 +18,9 @@
 /* 802A9BBC 0027317C  3C A0 80 54 */	lis r5, __vt__CMenuBattleChain@ha
 /* 802A9BC0 00273180  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
 /* 802A9BC4 00273184  90 7C 00 10 */	stw r3, 0x10(r28)
-/* 802A9BC8 00273188  3D 40 80 51 */	lis r10, lbl_8050CE10@ha
+/* 802A9BC8 00273188  3D 40 80 51 */	lis r10, __ptmf_null@ha
 /* 802A9BCC 0027318C  38 A5 D5 D8 */	addi r5, r5, __vt__CMenuBattleChain@l
-/* 802A9BD0 00273190  84 6A CE 10 */	lwzu r3, lbl_8050CE10@l(r10)
+/* 802A9BD0 00273190  84 6A CE 10 */	lwzu r3, __ptmf_null@l(r10)
 /* 802A9BD4 00273194  38 85 00 24 */	addi r4, r5, 0x24
 /* 802A9BD8 00273198  3B E0 00 00 */	li r31, 0
 /* 802A9BDC 0027319C  38 E0 FF FF */	li r7, -1

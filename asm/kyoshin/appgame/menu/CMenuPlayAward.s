@@ -15,9 +15,9 @@
 /* 8026FCCC 0023928C  3C A0 80 54 */	lis r5, __vt__CMenuPlayAward@ha
 /* 8026FCD0 00239290  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
 /* 8026FCD4 00239294  90 7D 00 10 */	stw r3, 0x10(r29)
-/* 8026FCD8 00239298  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 8026FCD8 00239298  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 8026FCDC 0023929C  38 A5 B3 68 */	addi r5, r5, __vt__CMenuPlayAward@l
-/* 8026FCE0 002392A0  84 C8 CE 10 */	lwzu r6, lbl_8050CE10@l(r8)
+/* 8026FCE0 002392A0  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 8026FCE4 002392A4  38 05 00 24 */	addi r0, r5, 0x24
 /* 8026FCE8 002392A8  3B E0 00 00 */	li r31, 0
 /* 8026FCEC 002392AC  38 80 00 00 */	li r4, 0

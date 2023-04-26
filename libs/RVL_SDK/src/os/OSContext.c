@@ -3,8 +3,7 @@
 #include "revolution/OS.h"
 
 static asm void __OSLoadFPUContext(u32 unused, register OSContext* ctx) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     lhz r5, ctx->state
     clrlwi. r5, r5, 31
@@ -85,13 +84,11 @@ _load_fprs:
 
 _exit:
     blr
-    // clang-format on
-}
+    }
 
 static asm void __OSSaveFPUContext(u32 unused, u32 unused1,
                                    register OSContext* ctx) {
-    // clang-format off
-    nofralloc
+        nofralloc
     
     lhz r3, ctx->state
     ori r3, r3, OS_CONTEXT_STATE_FP_SAVED
@@ -172,25 +169,21 @@ static asm void __OSSaveFPUContext(u32 unused, u32 unused1,
 
 _exit:
     blr
-    // clang-format on
-}
+    }
 
 //unused
 asm void OSLoadFPUContext(){
 }
 
 asm void OSSaveFPUContext(register OSContext* ctx) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     addi r5, ctx, 0
     b __OSSaveFPUContext
-    // clang-format on
-}
+    }
 
 asm void OSSetCurrentContext(register OSContext* ctx) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     lis r4, 0x80000000@ha
     stw ctx, OS_CURRENT_CONTEXT@l(r4)
@@ -221,14 +214,12 @@ _not_current_fpu_ctx:
 
     isync
     blr
-    // clang-format on
-}
+    }
 
 OSContext* OSGetCurrentContext(void) { return OS_CURRENT_CONTEXT; }
 
 asm BOOL OSSaveContext(register OSContext* ctx) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     stmw r13, ctx->gprs[13]
 
@@ -271,12 +262,10 @@ asm BOOL OSSaveContext(register OSContext* ctx) {
 
     li r3, 0
     blr
-    // clang-format on
-}
+    }
 
 asm void OSLoadContext(register OSContext* ctx) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     // If the context was in OSDisableInterrupts,
     // jump back to the beginning of the function
@@ -347,25 +336,21 @@ _load_special_regs:
     lwz r3, ctx->gprs[3]
 
     rfi
-    // clang-format on
-}
+    }
 
 asm void* OSGetStackPointer(void) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     mr r3, r1
     blr
-    // clang-format on
-}
+    }
 
 //unused
 asm void OSSwitchStack(){
 }
 
 asm void OSSwitchFiber(register void* func, register void* stack) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     mflr r0
     // Back chain
@@ -384,13 +369,11 @@ asm void OSSwitchFiber(register void* func, register void* stack) {
     mtlr r0
     mr r1, r5
     blr
-    // clang-format on
-}
+    }
 
 asm void OSSwitchFiberEx(u32 r3, u32 r4, u32 r5, u32 r6, register void* func,
                          register void* stack) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     mflr r0
     // Back chain
@@ -409,8 +392,7 @@ asm void OSSwitchFiberEx(u32 r3, u32 r4, u32 r5, u32 r6, register void* func,
     mtlr r0
     mr r1, r5
     blr
-    // clang-format on
-}
+    }
 
 void OSClearContext(OSContext* ctx) {
     ctx->mode = 0;
@@ -423,8 +405,7 @@ void OSClearContext(OSContext* ctx) {
 
 asm void OSInitContext(register OSContext* ctx, register void* _srr0,
                        register void* stack) {
-    // clang-format off
-    nofralloc
+        nofralloc
     
     stw _srr0, ctx->srr0
     stw stack, ctx->gprs[1]
@@ -479,8 +460,7 @@ asm void OSInitContext(register OSContext* ctx, register void* _srr0,
     stw r0, ctx->gqrs[7]
 
     b OSClearContext
-    // clang-format on
-}
+    }
 
 void OSDumpContext(const OSContext* ctx) {
     u32 i;
@@ -541,8 +521,7 @@ void OSDumpContext(const OSContext* ctx) {
 }
 
 static asm void OSSwitchFPUContext(register u8 err, register OSContext* ctx) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     mfmsr r5
     ori r5, r5, MSR_FP
@@ -587,8 +566,7 @@ _ctx_is_curr_fpu_ctx:
     lwz r4, ctx->gprs[4]
 
     rfi
-    // clang-format on
-}
+    }
 
 void __OSContextInit(void) {
     __OSSetExceptionHandler(OS_ERR_FP_UNAVAIL, OSSwitchFPUContext);

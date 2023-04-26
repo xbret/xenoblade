@@ -10,12 +10,12 @@
 /* 8008A114 000536D4  7C 7F 1B 78 */	mr r31, r3
 /* 8008A118 000536D8  4B FF E7 ED */	bl __ct__80088904
 /* 8008A11C 000536DC  3C 60 80 53 */	lis r3, __vt__cf_CtrlMoveEne@ha
-/* 8008A120 000536E0  3C C0 80 51 */	lis r6, lbl_8050CE10@ha
+/* 8008A120 000536E0  3C C0 80 51 */	lis r6, __ptmf_null@ha
 /* 8008A124 000536E4  38 63 B1 CC */	addi r3, r3, __vt__cf_CtrlMoveEne@l
 /* 8008A128 000536E8  90 7F 00 48 */	stw r3, 0x48(r31)
 /* 8008A12C 000536EC  C0 22 8A C8 */	lfs f1, float_80668E48@sda21(r2)
 /* 8008A130 000536F0  38 00 00 00 */	li r0, 0
-/* 8008A134 000536F4  84 86 CE 10 */	lwzu r4, lbl_8050CE10@l(r6)
+/* 8008A134 000536F4  84 86 CE 10 */	lwzu r4, __ptmf_null@l(r6)
 /* 8008A138 000536F8  3C A0 80 66 */	lis r5, zero__Q22mm4Vec3@ha
 /* 8008A13C 000536FC  C0 02 8A CC */	lfs f0, float_80668E4C@sda21(r2)
 /* 8008A140 00053700  80 66 00 04 */	lwz r3, 4(r6)

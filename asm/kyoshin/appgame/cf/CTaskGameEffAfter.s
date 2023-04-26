@@ -17,10 +17,10 @@
 /* 80061520 0002AAE0  41 82 00 58 */	beq .L_80061578
 /* 80061524 0002AAE4  48 3E 34 F5 */	bl __ct__8CProcessFv
 /* 80061528 0002AAE8  3C 60 80 53 */	lis r3, __vt__CTTask_CTaskGameEffAfter@ha
-/* 8006152C 0002AAEC  3C A0 80 51 */	lis r5, lbl_8050CE10@ha
+/* 8006152C 0002AAEC  3C A0 80 51 */	lis r5, __ptmf_null@ha
 /* 80061530 0002AAF0  38 63 9E 80 */	addi r3, r3, __vt__CTTask_CTaskGameEffAfter@l
 /* 80061534 0002AAF4  90 7F 00 10 */	stw r3, 0x10(r31)
-/* 80061538 0002AAF8  38 A5 CE 10 */	addi r5, r5, lbl_8050CE10@l
+/* 80061538 0002AAF8  38 A5 CE 10 */	addi r5, r5, __ptmf_null@l
 /* 8006153C 0002AAFC  80 05 00 04 */	lwz r0, 4(r5)
 /* 80061540 0002AB00  3C 60 80 53 */	lis r3, __vt__CTaskGameEffAfter@ha
 /* 80061544 0002AB04  80 85 00 00 */	lwz r4, 0(r5)

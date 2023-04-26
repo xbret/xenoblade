@@ -7,8 +7,7 @@ DECL_SECTION(".ctors$00") extern funcptr_t _ctors[];
 DECL_SECTION(".dtors$00") extern funcptr_t _dtors[];
 
 asm void __init_hardware(void) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     // Enable floating-point
     mfmsr r0
@@ -25,12 +24,10 @@ asm void __init_hardware(void) {
     // Restore LR
     mtlr r31
     blr
-    // clang-format on
-}
+    }
 
 asm void __flush_cache(register void* dst, register size_t n) {
-    // clang-format off
-    nofralloc
+        nofralloc
 
     lis r5, 0xFFFFFFF1@h
     ori r5, r5, 0xFFFFFFF1@l
@@ -49,19 +46,16 @@ _loop:
 
     isync
     blr
-    // clang-format on
-}
+    }
 
 asm void __init_user(void) {
-    // clang-format off
-    fralloc
+        fralloc
 
     bl __init_cpp
 
     frfree
     blr
-    // clang-format on
-}
+    }
 
 void __init_cpp(void) {
     funcptr_t* ctor;

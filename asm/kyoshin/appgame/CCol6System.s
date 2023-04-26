@@ -132,10 +132,10 @@
 /* 8015D24C 0012680C  41 82 00 94 */	beq .L_8015D2E0
 /* 8015D250 00126810  48 2E 77 C9 */	bl __ct__8CProcessFv
 /* 8015D254 00126814  3C 60 80 53 */	lis r3, __vt__CTTask_IUIWindow@ha
-/* 8015D258 00126818  3D 20 80 51 */	lis r9, lbl_8050CE10@ha
+/* 8015D258 00126818  3D 20 80 51 */	lis r9, __ptmf_null@ha
 /* 8015D25C 0012681C  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
 /* 8015D260 00126820  90 7F 00 10 */	stw r3, 0x10(r31)
-/* 8015D264 00126824  39 29 CE 10 */	addi r9, r9, lbl_8050CE10@l
+/* 8015D264 00126824  39 29 CE 10 */	addi r9, r9, __ptmf_null@l
 /* 8015D268 00126828  38 C0 00 00 */	li r6, 0
 /* 8015D26C 0012682C  80 E9 00 04 */	lwz r7, 4(r9)
 /* 8015D270 00126830  3C 60 80 53 */	lis r3, __vt__CCol6CheckBat@ha
@@ -295,9 +295,9 @@
 /* 8015D498 00126A58  3C A0 80 53 */	lis r5, __vt__CCol6Hint@ha
 /* 8015D49C 00126A5C  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
 /* 8015D4A0 00126A60  90 7D 00 10 */	stw r3, 0x10(r29)
-/* 8015D4A4 00126A64  3D 40 80 51 */	lis r10, lbl_8050CE10@ha
+/* 8015D4A4 00126A64  3D 40 80 51 */	lis r10, __ptmf_null@ha
 /* 8015D4A8 00126A68  38 A5 38 EC */	addi r5, r5, __vt__CCol6Hint@l
-/* 8015D4AC 00126A6C  84 6A CE 10 */	lwzu r3, lbl_8050CE10@l(r10)
+/* 8015D4AC 00126A6C  84 6A CE 10 */	lwzu r3, __ptmf_null@l(r10)
 /* 8015D4B0 00126A70  38 85 00 24 */	addi r4, r5, 0x24
 /* 8015D4B4 00126A74  3B E0 00 00 */	li r31, 0
 /* 8015D4B8 00126A78  38 E0 FF FF */	li r7, -1
@@ -1728,9 +1728,9 @@
 /* 8015E974 00127F34  3C A0 80 53 */	lis r5, __vt__CCol6System@ha
 /* 8015E978 00127F38  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
 /* 8015E97C 00127F3C  90 7E 00 10 */	stw r3, 0x10(r30)
-/* 8015E980 00127F40  3D 40 80 51 */	lis r10, lbl_8050CE10@ha
+/* 8015E980 00127F40  3D 40 80 51 */	lis r10, __ptmf_null@ha
 /* 8015E984 00127F44  38 A5 37 EC */	addi r5, r5, __vt__CCol6System@l
-/* 8015E988 00127F48  84 6A CE 10 */	lwzu r3, lbl_8050CE10@l(r10)
+/* 8015E988 00127F48  84 6A CE 10 */	lwzu r3, __ptmf_null@l(r10)
 /* 8015E98C 00127F4C  38 85 00 24 */	addi r4, r5, 0x24
 /* 8015E990 00127F50  3B E0 00 00 */	li r31, 0
 /* 8015E994 00127F54  38 E0 FF FF */	li r7, -1

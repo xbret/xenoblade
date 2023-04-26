@@ -21,9 +21,9 @@
 /* 8017EDD0 00148390  3C A0 80 53 */	lis r5, __vt__CMenuZeal@ha
 /* 8017EDD4 00148394  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
 /* 8017EDD8 00148398  90 7C 00 10 */	stw r3, 0x10(r28)
-/* 8017EDDC 0014839C  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 8017EDDC 0014839C  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 8017EDE0 001483A0  38 A5 53 B8 */	addi r5, r5, __vt__CMenuZeal@l
-/* 8017EDE4 001483A4  84 68 CE 10 */	lwzu r3, lbl_8050CE10@l(r8)
+/* 8017EDE4 001483A4  84 68 CE 10 */	lwzu r3, __ptmf_null@l(r8)
 /* 8017EDE8 001483A8  38 85 00 24 */	addi r4, r5, 0x24
 /* 8017EDEC 001483AC  C0 22 9D B0 */	lfs f1, float_8066A130@sda21(r2)
 /* 8017EDF0 001483B0  3B E0 00 00 */	li r31, 0

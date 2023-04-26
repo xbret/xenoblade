@@ -165,8 +165,7 @@ void __AIDHandler(s32 intr, OSContext* ctx) {
 }
 
 static asm void __AICallbackStackSwitch(register AIDMACallback callback) {
-    // clang-format off
-
+    
     mr r31, callback
 
     lis r5, __OldStack@ha
@@ -188,8 +187,7 @@ static asm void __AICallbackStackSwitch(register AIDMACallback callback) {
     frfree
     blr
 
-    // clang-format on
-}
+    }
 
 void __AI_SRC_INIT(void) {
      s64 start = 0;

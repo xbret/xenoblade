@@ -13,9 +13,9 @@
 /* 8023BD0C 002052CC  3C C0 80 54 */	lis r6, __vt__cf_CfNandManager@ha
 /* 8023BD10 002052D0  38 63 A4 6C */	addi r3, r3, __vt__CTTask_cf_CfNandManager@l
 /* 8023BD14 002052D4  90 7F 00 10 */	stw r3, 0x10(r31)
-/* 8023BD18 002052D8  3D 20 80 51 */	lis r9, lbl_8050CE10@ha
+/* 8023BD18 002052D8  3D 20 80 51 */	lis r9, __ptmf_null@ha
 /* 8023BD1C 002052DC  38 C6 A3 74 */	addi r6, r6, __vt__cf_CfNandManager@l
-/* 8023BD20 002052E0  84 69 CE 10 */	lwzu r3, lbl_8050CE10@l(r9)
+/* 8023BD20 002052E0  84 69 CE 10 */	lwzu r3, __ptmf_null@l(r9)
 /* 8023BD24 002052E4  38 9F 01 60 */	addi r4, r31, 0x160
 /* 8023BD28 002052E8  39 5F 00 70 */	addi r10, r31, 0x70
 /* 8023BD2C 002052EC  38 A6 00 24 */	addi r5, r6, 0x24
@@ -128,7 +128,7 @@
 /* 8023BEC0 00205480  38 1F 00 60 */	addi r0, r31, 0x60
 /* 8023BEC4 00205484  38 60 00 10 */	li r3, 0x10
 /* 8023BEC8 00205488  90 7F 01 6C */	stw r3, 0x16c(r31)
-/* 8023BECC 0020548C  3C C0 80 51 */	lis r6, lbl_8050CE10@ha
+/* 8023BECC 0020548C  3C C0 80 51 */	lis r6, __ptmf_null@ha
 /* 8023BED0 00205490  3C A0 80 54 */	lis r5, lbl_8053A2D8@ha
 /* 8023BED4 00205494  90 04 00 00 */	stw r0, 0(r4)
 /* 8023BED8 00205498  7F E3 FB 78 */	mr r3, r31
@@ -141,7 +141,7 @@
 /* 8023BEF4 002054B4  98 FF 01 7F */	stb r7, 0x17f(r31)
 /* 8023BEF8 002054B8  90 FF 01 80 */	stw r7, 0x180(r31)
 /* 8023BEFC 002054BC  B0 FF 01 84 */	sth r7, 0x184(r31)
-/* 8023BF00 002054C0  84 86 CE 10 */	lwzu r4, lbl_8050CE10@l(r6)
+/* 8023BF00 002054C0  84 86 CE 10 */	lwzu r4, __ptmf_null@l(r6)
 /* 8023BF04 002054C4  80 06 00 04 */	lwz r0, 4(r6)
 /* 8023BF08 002054C8  90 1F 01 8C */	stw r0, 0x18c(r31)
 /* 8023BF0C 002054CC  90 9F 01 88 */	stw r4, 0x188(r31)

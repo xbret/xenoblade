@@ -14,9 +14,9 @@
 /* 8029E804 00267DC4  3C A0 80 54 */	lis r5, __vt__CMenuSkipTimer@ha
 /* 8029E808 00267DC8  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
 /* 8029E80C 00267DCC  90 7D 00 10 */	stw r3, 0x10(r29)
-/* 8029E810 00267DD0  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 8029E810 00267DD0  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 8029E814 00267DD4  38 A5 CF 10 */	addi r5, r5, __vt__CMenuSkipTimer@l
-/* 8029E818 00267DD8  84 C8 CE 10 */	lwzu r6, lbl_8050CE10@l(r8)
+/* 8029E818 00267DD8  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 8029E81C 00267DDC  38 05 00 24 */	addi r0, r5, 0x24
 /* 8029E820 00267DE0  3B E0 00 00 */	li r31, 0
 /* 8029E824 00267DE4  38 80 00 00 */	li r4, 0

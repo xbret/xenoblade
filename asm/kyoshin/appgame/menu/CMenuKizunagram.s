@@ -15,9 +15,9 @@
 /* 8025698C 0021FF4C  3C C0 80 54 */	lis r6, __vt__CMenuKizunagram@ha
 /* 80256990 0021FF50  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
 /* 80256994 0021FF54  90 7C 00 10 */	stw r3, 0x10(r28)
-/* 80256998 0021FF58  3D 20 80 51 */	lis r9, lbl_8050CE10@ha
+/* 80256998 0021FF58  3D 20 80 51 */	lis r9, __ptmf_null@ha
 /* 8025699C 0021FF5C  38 C6 AC 68 */	addi r6, r6, __vt__CMenuKizunagram@l
-/* 802569A0 0021FF60  84 A9 CE 10 */	lwzu r5, lbl_8050CE10@l(r9)
+/* 802569A0 0021FF60  84 A9 CE 10 */	lwzu r5, __ptmf_null@l(r9)
 /* 802569A4 0021FF64  38 06 00 24 */	addi r0, r6, 0x24
 /* 802569A8 0021FF68  3B E0 00 00 */	li r31, 0
 /* 802569AC 0021FF6C  38 80 00 00 */	li r4, 0

@@ -17,9 +17,9 @@
 /* 8013C094 00105654  3D 00 80 53 */	lis r8, __vt__CUIWindowManager@ha
 /* 8013C098 00105658  38 63 1E 80 */	addi r3, r3, __vt__CTTask_CUIWindowManager@l
 /* 8013C09C 0010565C  90 7D 00 10 */	stw r3, 0x10(r29)
-/* 8013C0A0 00105660  3D 60 80 51 */	lis r11, lbl_8050CE10@ha
+/* 8013C0A0 00105660  3D 60 80 51 */	lis r11, __ptmf_null@ha
 /* 8013C0A4 00105664  3C E0 80 53 */	lis r7, __vt___reslist_base_IUIWindow@ha
-/* 8013C0A8 00105668  84 6B CE 10 */	lwzu r3, lbl_8050CE10@l(r11)
+/* 8013C0A8 00105668  84 6B CE 10 */	lwzu r3, __ptmf_null@l(r11)
 /* 8013C0AC 0010566C  3C A0 80 53 */	lis r5, __vt__reslist_IUIWindow@ha
 /* 8013C0B0 00105670  39 08 1D 70 */	addi r8, r8, __vt__CUIWindowManager@l
 /* 8013C0B4 00105674  38 E7 1D EC */	addi r7, r7, __vt___reslist_base_IUIWindow@l
@@ -368,10 +368,10 @@
 /* 8013C584 00105B44  41 82 00 58 */	beq .L_8013C5DC
 /* 8013C588 00105B48  48 30 84 91 */	bl __ct__8CProcessFv
 /* 8013C58C 00105B4C  3C 60 80 53 */	lis r3, __vt__CTTask_CUIWindowManager_CTest@ha
-/* 8013C590 00105B50  3C A0 80 51 */	lis r5, lbl_8050CE10@ha
+/* 8013C590 00105B50  3C A0 80 51 */	lis r5, __ptmf_null@ha
 /* 8013C594 00105B54  38 63 1E 40 */	addi r3, r3, __vt__CTTask_CUIWindowManager_CTest@l
 /* 8013C598 00105B58  90 7F 00 10 */	stw r3, 0x10(r31)
-/* 8013C59C 00105B5C  38 A5 CE 10 */	addi r5, r5, lbl_8050CE10@l
+/* 8013C59C 00105B5C  38 A5 CE 10 */	addi r5, r5, __ptmf_null@l
 /* 8013C5A0 00105B60  80 05 00 04 */	lwz r0, 4(r5)
 /* 8013C5A4 00105B64  3C 60 80 53 */	lis r3, __vt__CUIWindowManager_CTest@ha
 /* 8013C5A8 00105B68  80 85 00 00 */	lwz r4, 0(r5)

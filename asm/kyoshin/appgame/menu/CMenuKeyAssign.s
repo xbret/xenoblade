@@ -1238,10 +1238,10 @@
 /* 80114FA0 000DE560  41 82 00 88 */	beq .L_80115028
 /* 80114FA4 000DE564  48 32 FA 75 */	bl __ct__8CProcessFv
 /* 80114FA8 000DE568  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
-/* 80114FAC 000DE56C  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 80114FAC 000DE56C  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 80114FB0 000DE570  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
 /* 80114FB4 000DE574  90 7E 00 10 */	stw r3, 0x10(r30)
-/* 80114FB8 000DE578  39 08 CE 10 */	addi r8, r8, lbl_8050CE10@l
+/* 80114FB8 000DE578  39 08 CE 10 */	addi r8, r8, __ptmf_null@l
 /* 80114FBC 000DE57C  3C A0 80 53 */	lis r5, __vt__CMenuKeyAssign@ha
 /* 80114FC0 000DE580  80 C8 00 04 */	lwz r6, 4(r8)
 /* 80114FC4 000DE584  38 A5 FE 10 */	addi r5, r5, __vt__CMenuKeyAssign@l

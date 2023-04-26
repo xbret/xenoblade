@@ -15,9 +15,9 @@
 /* 8026317C 0022C73C  3C A0 80 54 */	lis r5, __vt__CMenuPassiveSkill@ha
 /* 80263180 0022C740  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
 /* 80263184 0022C744  90 7D 00 10 */	stw r3, 0x10(r29)
-/* 80263188 0022C748  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 80263188 0022C748  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 8026318C 0022C74C  38 A5 B0 68 */	addi r5, r5, __vt__CMenuPassiveSkill@l
-/* 80263190 0022C750  84 C8 CE 10 */	lwzu r6, lbl_8050CE10@l(r8)
+/* 80263190 0022C750  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 80263194 0022C754  38 05 00 24 */	addi r0, r5, 0x24
 /* 80263198 0022C758  3B E0 00 00 */	li r31, 0
 /* 8026319C 0022C75C  38 80 00 00 */	li r4, 0

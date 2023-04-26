@@ -28,10 +28,10 @@
 /* 802B5E40 0027F400  41 82 00 94 */	beq .L_802B5ED4
 /* 802B5E44 0027F404  48 18 EB D5 */	bl __ct__8CProcessFv
 /* 802B5E48 0027F408  3C 60 80 54 */	lis r3, __vt__CTTask_CMenuTitle@ha
-/* 802B5E4C 0027F40C  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 802B5E4C 0027F40C  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 802B5E50 0027F410  38 63 E8 C4 */	addi r3, r3, __vt__CTTask_CMenuTitle@l
 /* 802B5E54 0027F414  90 7E 00 10 */	stw r3, 0x10(r30)
-/* 802B5E58 0027F418  39 08 CE 10 */	addi r8, r8, lbl_8050CE10@l
+/* 802B5E58 0027F418  39 08 CE 10 */	addi r8, r8, __ptmf_null@l
 /* 802B5E5C 0027F41C  3C A0 80 54 */	lis r5, __vt__CMenuTitle@ha
 /* 802B5E60 0027F420  80 C8 00 04 */	lwz r6, 4(r8)
 /* 802B5E64 0027F424  38 A5 E7 D0 */	addi r5, r5, __vt__CMenuTitle@l

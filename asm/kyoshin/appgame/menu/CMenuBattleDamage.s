@@ -16,9 +16,9 @@
 /* 80108C80 000D2240  3C A0 80 53 */	lis r5, __vt__CMenuBattleDamage@ha
 /* 80108C84 000D2244  38 63 F9 90 */	addi r3, r3, __vt__CTTask_IUIBattle@l
 /* 80108C88 000D2248  90 7F 00 10 */	stw r3, 0x10(r31)
-/* 80108C8C 000D224C  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 80108C8C 000D224C  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 80108C90 000D2250  38 A5 FA 00 */	addi r5, r5, __vt__CMenuBattleDamage@l
-/* 80108C94 000D2254  84 C8 CE 10 */	lwzu r6, lbl_8050CE10@l(r8)
+/* 80108C94 000D2254  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 80108C98 000D2258  38 85 00 24 */	addi r4, r5, 0x24
 /* 80108C9C 000D225C  3B C0 00 00 */	li r30, 0
 /* 80108CA0 000D2260  38 7F 00 64 */	addi r3, r31, 0x64

@@ -432,10 +432,10 @@
 /* 802B4E40 0027E400  41 82 00 88 */	beq .L_802B4EC8
 /* 802B4E44 0027E404  48 18 FB D5 */	bl __ct__8CProcessFv
 /* 802B4E48 0027E408  3C 60 80 54 */	lis r3, __vt__CTTask_CUIErrMesWin@ha
-/* 802B4E4C 0027E40C  3D 20 80 51 */	lis r9, lbl_8050CE10@ha
+/* 802B4E4C 0027E40C  3D 20 80 51 */	lis r9, __ptmf_null@ha
 /* 802B4E50 0027E410  38 63 E7 14 */	addi r3, r3, __vt__CTTask_CUIErrMesWin@l
 /* 802B4E54 0027E414  90 7E 00 10 */	stw r3, 0x10(r30)
-/* 802B4E58 0027E418  39 29 CE 10 */	addi r9, r9, lbl_8050CE10@l
+/* 802B4E58 0027E418  39 29 CE 10 */	addi r9, r9, __ptmf_null@l
 /* 802B4E5C 0027E41C  3C C0 80 54 */	lis r6, __vt__CUIErrMesWin@ha
 /* 802B4E60 0027E420  80 E9 00 04 */	lwz r7, 4(r9)
 /* 802B4E64 0027E424  38 C6 E6 20 */	addi r6, r6, __vt__CUIErrMesWin@l

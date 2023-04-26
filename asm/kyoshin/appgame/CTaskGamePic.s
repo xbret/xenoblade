@@ -15,9 +15,9 @@
 /* 80294CD8 0025E298  C0 22 B0 D8 */	lfs f1, float_8066B458@sda21(r2)
 /* 80294CDC 0025E29C  38 63 C3 78 */	addi r3, r3, __vt__CTTask_CTaskGamePic@l
 /* 80294CE0 0025E2A0  90 7D 00 10 */	stw r3, 0x10(r29)
-/* 80294CE4 0025E2A4  3D 00 80 51 */	lis r8, lbl_8050CE10@ha
+/* 80294CE4 0025E2A4  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 80294CE8 0025E2A8  3C A0 80 54 */	lis r5, __vt__CTaskGamePic@ha
-/* 80294CEC 0025E2AC  84 68 CE 10 */	lwzu r3, lbl_8050CE10@l(r8)
+/* 80294CEC 0025E2AC  84 68 CE 10 */	lwzu r3, __ptmf_null@l(r8)
 /* 80294CF0 0025E2B0  38 A5 C2 90 */	addi r5, r5, __vt__CTaskGamePic@l
 /* 80294CF4 0025E2B4  FC 40 08 90 */	fmr f2, f1
 /* 80294CF8 0025E2B8  38 85 00 24 */	addi r4, r5, 0x24

@@ -387,10 +387,10 @@
 /* 80294528 0025DAE8  41 82 00 C4 */	beq .L_802945EC
 /* 8029452C 0025DAEC  48 1B 04 ED */	bl __ct__8CProcessFv
 /* 80294530 0025DAF0  3C 60 80 53 */	lis r3, __vt__CTTask_IUIWindow@ha
-/* 80294534 0025DAF4  3D 40 80 51 */	lis r10, lbl_8050CE10@ha
+/* 80294534 0025DAF4  3D 40 80 51 */	lis r10, __ptmf_null@ha
 /* 80294538 0025DAF8  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
 /* 8029453C 0025DAFC  90 7C 00 10 */	stw r3, 0x10(r28)
-/* 80294540 0025DB00  39 4A CE 10 */	addi r10, r10, lbl_8050CE10@l
+/* 80294540 0025DB00  39 4A CE 10 */	addi r10, r10, __ptmf_null@l
 /* 80294544 0025DB04  3C A0 80 54 */	lis r5, __vt__CSysWinSave@ha
 /* 80294548 0025DB08  80 0A 00 04 */	lwz r0, 4(r10)
 /* 8029454C 0025DB0C  38 A5 C1 58 */	addi r5, r5, __vt__CSysWinSave@l
