@@ -1,6 +1,6 @@
 SI_FILES:=\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/si/SIBios.o\
-	$(BUILD_DIR)/libs/RVL_SDK/asm/si/SISamplingRate.o\
+	$(BUILD_DIR)/libs/RVL_SDK/src/si/SISamplingRate.o\
 
 DEPENDS += $(SI_FILES:.o=.d)
 

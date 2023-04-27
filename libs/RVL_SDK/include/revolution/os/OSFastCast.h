@@ -53,9 +53,9 @@ static inline u16 __OSf32tou16(register f32 arg) {
     return r;
 }
 
-static void OSf32tou16(const f32* in, u16* out) { *out = __OSf32tou16(*in); }
+static inline void OSf32tou16(const f32* in, u16* out) { *out = __OSf32tou16(*in); }
 
-static f32 __OSs16tof32(register const s16* arg) {
+static inline f32 __OSs16tof32(register const s16* arg) {
     register f32 ret;
 
         asm {

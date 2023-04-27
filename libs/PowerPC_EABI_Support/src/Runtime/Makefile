@@ -2,7 +2,7 @@ RUNTIME_FILES:=\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/Runtime/__mem.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/Runtime/__va_arg.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/Runtime/global_destructor_chain.o\
-	$(BUILD_DIR)/libs/PowerPC_EABI_Support/asm/Runtime/exception_rtti.o\
+	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/Runtime/New.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/asm/Runtime/NMWException.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/Runtime/ptmf.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/Runtime/MWRTTI.o\
@@ -17,6 +17,7 @@ $(RUNTIME_FILES): CFLAGS = -Cpp_exceptions off -use_lmw_stmw on -inline on -proc
 $(BUILD_DIR)/libs/PowerPC_EABI_Support/src/Runtime/NMWException.o: CFLAGS += -Cpp_exceptions on
 $(BUILD_DIR)/libs/PowerPC_EABI_Support/src/Runtime/MWRTTI.o: CFLAGS += -Cpp_exceptions on
 $(BUILD_DIR)/libs/PowerPC_EABI_Support/src/Runtime/Gecko_ExceptionPPC.o: CFLAGS += -Cpp_exceptions on
+$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/Runtime/New.o: CFLAGS += -Cpp_exceptions on
 
 DEPENDS += $(RUNTIME_FILES:.o=.d)
 

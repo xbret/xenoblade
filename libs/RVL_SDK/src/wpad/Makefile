@@ -3,7 +3,7 @@ WPAD_FILES:=\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/wpad/WPADHIDParser.o\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/wpad/WPADEncrypt.o\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/wpad/WPADMem.o\
-	$(BUILD_DIR)/libs/RVL_SDK/asm/wpad/debug_msg.o\
+	$(BUILD_DIR)/libs/RVL_SDK/src/wpad/debug_msg.o\
 
 DEPENDS += $(WPAD_FILES:.o=.d)
 

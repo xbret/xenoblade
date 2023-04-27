@@ -7,7 +7,7 @@ extern "C" {
 #include "revolution/exi/EXIBios.h"
 #include "revolution/exi/EXICommon.h"
 #include "revolution/exi/EXIHardware.h"
-//#include "revolution/exi/EXIUart.h"
+#include "revolution/exi/EXIUart.h"
 
 #ifdef __cplusplus
 }

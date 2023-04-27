@@ -1,7 +1,7 @@
 WUD_FILES:=\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/wud/WUD.o\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/wud/WUDHidHost.o\
-	$(BUILD_DIR)/libs/RVL_SDK/asm/wud/debug_msg.o\
+	$(BUILD_DIR)/libs/RVL_SDK/src/wud/debug_msg.o\
 
 DEPENDS += $(WUD_FILES:.o=.d)
 

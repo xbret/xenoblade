@@ -15,7 +15,7 @@ OS_FILES:=\
 	$(BUILD_DIR)/libs/RVL_SDK/src/os/OSMessage.o\
 	$(BUILD_DIR)/libs/RVL_SDK/src/os/OSMemory.o\
 	$(BUILD_DIR)/libs/RVL_SDK/src/os/OSMutex.o\
-	$(BUILD_DIR)/libs/RVL_SDK/asm/os/OSReboot.o\
+	$(BUILD_DIR)/libs/RVL_SDK/src/os/OSReboot.o\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/os/OSReset.o\
 	$(BUILD_DIR)/libs/RVL_SDK/src/os/OSRtc.o\
 	$(BUILD_DIR)/libs/RVL_SDK/src/os/OSSync.o\

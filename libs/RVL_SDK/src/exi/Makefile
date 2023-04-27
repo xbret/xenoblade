@@ -1,6 +1,6 @@
 EXI_FILES:=\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/exi/EXIBios.o\
-	$(BUILD_DIR)/libs/RVL_SDK/asm/exi/EXIUart.o\
+	$(BUILD_DIR)/libs/RVL_SDK/src/exi/EXIUart.o\
 	$(BUILD_DIR)/libs/RVL_SDK/src/exi/EXICommon.o\
 
 DEPENDS += $(EXI_FILES:.o=.d)
