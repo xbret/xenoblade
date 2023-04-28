@@ -7,6 +7,8 @@ extern "C" {
 #endif
 
 typedef void (*USBCallback)(IPCResult result, void* arg);
+typedef void (*USBISOCallback)(IPCResult result, void* arg1, void* arg2);
+
 
 IPCResult IUSB_OpenLib(void);
 IPCResult IUSB_CloseLib(void);

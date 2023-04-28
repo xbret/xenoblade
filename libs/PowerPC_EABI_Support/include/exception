@@ -12,6 +12,7 @@ namespace std{
     };
 
     typedef void (*terminate_handler)();
+    void terminate();
 }
 
 #endif

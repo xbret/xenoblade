@@ -2449,7 +2449,7 @@
 /* 80042370 0000B930  38 61 00 08 */	addi r3, r1, 8
 /* 80042374 0000B934  38 84 00 4B */	addi r4, r4, 0x4b
 /* 80042378 0000B938  4C C6 31 82 */	crclr 6
-/* 8004237C 0000B93C  48 00 1C 3D */	bl func_80043FB8
+/* 8004237C 0000B93C  48 00 1C 3D */	bl CTaskGame_sprintf
 /* 80042380 0000B940  38 7F 01 04 */	addi r3, r31, 0x104
 /* 80042384 0000B944  38 81 00 08 */	addi r4, r1, 8
 /* 80042388 0000B948  48 00 1D 3D */	bl func_800440C4
@@ -2468,7 +2468,7 @@
 /* 800423B4 0000B974  38 61 00 08 */	addi r3, r1, 8
 /* 800423B8 0000B978  38 9E 00 4B */	addi r4, r30, 0x4b
 /* 800423BC 0000B97C  4C C6 31 82 */	crclr 6
-/* 800423C0 0000B980  48 00 1B F9 */	bl func_80043FB8
+/* 800423C0 0000B980  48 00 1B F9 */	bl CTaskGame_sprintf
 /* 800423C4 0000B984  38 7F 01 04 */	addi r3, r31, 0x104
 /* 800423C8 0000B988  38 81 00 08 */	addi r4, r1, 8
 /* 800423CC 0000B98C  48 00 1C F9 */	bl func_800440C4
@@ -2485,7 +2485,7 @@
 /* 800423F4 0000B9B4  38 61 00 08 */	addi r3, r1, 8
 /* 800423F8 0000B9B8  38 84 00 4B */	addi r4, r4, 0x4b
 /* 800423FC 0000B9BC  4C C6 31 82 */	crclr 6
-/* 80042400 0000B9C0  48 00 1B B9 */	bl func_80043FB8
+/* 80042400 0000B9C0  48 00 1B B9 */	bl CTaskGame_sprintf
 /* 80042404 0000B9C4  38 7F 01 04 */	addi r3, r31, 0x104
 /* 80042408 0000B9C8  38 81 00 08 */	addi r4, r1, 8
 /* 8004240C 0000B9CC  48 00 1C B9 */	bl func_800440C4
@@ -4570,8 +4570,7 @@
 /* 80043FB4 0000D574  4E 80 00 20 */	blr 
 .endfn func_80043F70
 
-#string format?
-.fn func_80043FB8, global
+.fn CTaskGame_sprintf, global
 /* 80043FB8 0000D578  94 21 FE 70 */	stwu r1, -0x190(r1)
 /* 80043FBC 0000D57C  7C 08 02 A6 */	mflr r0
 /* 80043FC0 0000D580  90 01 01 94 */	stw r0, 0x194(r1)
@@ -4619,7 +4618,7 @@
 /* 80044064 0000D624  7C 08 03 A6 */	mtlr r0
 /* 80044068 0000D628  38 21 01 90 */	addi r1, r1, 0x190
 /* 8004406C 0000D62C  4E 80 00 20 */	blr 
-.endfn func_80043FB8
+.endfn CTaskGame_sprintf
 
 .fn func_80044070, global
 /* 80044070 0000D630  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -6379,7 +6378,7 @@
 
 .obj "@eti_80021A40", local
 .hidden "@eti_80021A40"
-	.4byte func_80043FB8
+	.4byte CTaskGame_sprintf
 	.4byte 0x000000B8
 	.4byte "@etb_80006E50"
 .endobj "@eti_80021A40"
