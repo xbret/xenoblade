@@ -56,6 +56,7 @@ namespace nw4hbm
 			return true;
 		}
 		
+		//TODO: fix mwcc warnings
 		FontInformation * ResFont::Rebuild(BinaryFileHeader * pFile)
 		{
 			BinaryBlockHeader * pCurBlock = (BinaryBlockHeader *)((u8 *)pFile + pFile->headerLen);

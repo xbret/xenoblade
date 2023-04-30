@@ -2,8 +2,8 @@
 #define _STRING_H
 
 #include "types.h"
-#include "mem.h"
-#include "extras.h"
+#include <mem.h>
+#include <extras.h>
 #ifdef __cplusplus
 extern "C" {
 #endif

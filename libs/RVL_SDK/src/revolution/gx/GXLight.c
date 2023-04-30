@@ -1,8 +1,8 @@
-#include "revolution/math.h" //<math.h>
+#include "revolution/math.h"
 #include "revolution/GX.h"
 
-void GXInitLightAttn(GXLightObj* light, f32 aa, f32 ab, f32 ac, f32 ka, f32 kb,
-                     f32 kc) {
+void GXInitLightAttn(GXLightObj* light, float aa, float ab, float ac, float ka, float kb,
+                     float kc) {
     light->aa = aa;
     light->ab = ab;
     light->ac = ac;
@@ -11,7 +11,7 @@ void GXInitLightAttn(GXLightObj* light, f32 aa, f32 ab, f32 ac, f32 ka, f32 kb,
     light->kc = kc;
 }
 
-void GXInitLightAttnA(GXLightObj* light, f32 a, f32 b, f32 c) {
+void GXInitLightAttnA(GXLightObj* light, float a, float b, float c) {
     light->aa = a;
     light->ab = b;
     light->ac = c;
@@ -21,7 +21,7 @@ void GXInitLightAttnA(GXLightObj* light, f32 a, f32 b, f32 c) {
 void GXGetLightAttnA(){
 }
 
-void GXInitLightAttnK(GXLightObj* light, f32 a, f32 b, f32 c) {
+void GXInitLightAttnK(GXLightObj* light, float a, float b, float c) {
     light->ka = a;
     light->kb = b;
     light->kc = c;
@@ -31,9 +31,9 @@ void GXInitLightAttnK(GXLightObj* light, f32 a, f32 b, f32 c) {
 void GXGetLightAttnK(){
 }
 
-void GXInitLightSpot(GXLightObj* light, f32 angle, GXSpotFn fn) {
-    f32 rad;
-    f32 a, b, c, d;
+void GXInitLightSpot(GXLightObj* light, float angle, GXSpotFn fn) {
+    float rad;
+    float a, b, c, d;
 
     if (angle <= 0.0f || angle > 90.0f) {
         fn = GX_SP_OFF;
@@ -88,8 +88,8 @@ void GXInitLightSpot(GXLightObj* light, f32 angle, GXSpotFn fn) {
     light->ac = c;
 }
 
-void GXInitLightDistAttn(GXLightObj* light, f32 f1, f32 f2, GXDistAttnFn fn) {
-    f32 a, b, c;
+void GXInitLightDistAttn(GXLightObj* light, float f1, float f2, GXDistAttnFn fn) {
+    float a, b, c;
 
     if (f1 < 0.0f) {
         fn = GX_DA_OFF;
@@ -128,33 +128,33 @@ void GXInitLightDistAttn(GXLightObj* light, f32 f1, f32 f2, GXDistAttnFn fn) {
     light->kc = c;
 }
 
-void GXInitLightPos(GXLightObj* light, f32 x, f32 y, f32 z) {
+void GXInitLightPos(GXLightObj* light, float x, float y, float z) {
     light->posX = x;
     light->posY = y;
     light->posZ = z;
 }
 
-void GXGetLightPos(const GXLightObj* light, f32* x, f32* y, f32* z) {
+void GXGetLightPos(const GXLightObj* light, float* x, float* y, float* z) {
     *x = light->posX;
     *y = light->posY;
     *z = light->posZ;
 }
 
-void GXInitLightDir(GXLightObj* light, f32 x, f32 y, f32 z) {
+void GXInitLightDir(GXLightObj* light, float x, float y, float z) {
     light->dirX = -x;
     light->dirY = -y;
     light->dirZ = -z;
 }
 
-void GXGetLightDir(const GXLightObj* light, f32* x, f32* y, f32* z) {
+void GXGetLightDir(const GXLightObj* light, float* x, float* y, float* z) {
     *x = -light->dirX;
     *y = -light->dirY;
     *z = -light->dirZ;
 }
 
-void GXInitSpecularDir(GXLightObj* light, f32 x, f32 y, f32 z) {
-    f32 dirX, dirY, dirZ;
-    f32 mag;
+void GXInitSpecularDir(GXLightObj* light, float x, float y, float z) {
+    float dirX, dirY, dirZ;
+    float mag;
 
     dirX = -x;
     dirY = -y;

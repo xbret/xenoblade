@@ -1,5 +1,5 @@
 #include "types.h"
-#include "ctype.h"
+#include <ctype.h>
 
 //unused
 void strdup(){

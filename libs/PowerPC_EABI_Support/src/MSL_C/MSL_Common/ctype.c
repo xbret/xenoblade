@@ -1,18 +1,18 @@
-#include "ctype.h"
+#include <ctype.h>
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/ctype_api.h"
 
 
-#define alph  __msl_alpha
-#define blnk  __msl_blank
-#define cntl  __msl_cntrl
-#define digi  __msl_digit | __msl_graph | __msl_print
-#define grph  __msl_graph
-#define lowc  __msl_lower | __msl_alpha | __msl_graph | __msl_print
-#define prnt  __msl_print
-#define punc  __msl_punct | __msl_graph | __msl_print
-#define spac  __msl_space
-#define uppc  __msl_upper | __msl_alpha | __msl_graph | __msl_print
-#define hexd  __msl_xdigit
+#define alph  ctype_alpha
+#define blnk  ctype_blank
+#define cntl  ctype_cntrl
+#define digi  ctype_digit | ctype_graph | ctype_print
+#define grph  ctype_graph
+#define lowc  ctype_lower | ctype_alpha | ctype_graph | ctype_print
+#define prnt  ctype_print
+#define punc  ctype_punct | ctype_graph | ctype_print
+#define spac  ctype_space
+#define uppc  ctype_upper | ctype_alpha | ctype_graph | ctype_print
+#define hexd  ctype_xdigit
 #define dhex  hexd | digi
 #define uhex  hexd | uppc
 #define lhex  hexd | lowc

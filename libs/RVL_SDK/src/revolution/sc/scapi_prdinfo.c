@@ -1,6 +1,6 @@
 #include "revolution/OS.h"
 #include "revolution/SC.h"
-#include "string.h" //<string.h>
+#include <string.h>
 
 #define XOR_KEY 0x73B5DBFA
 

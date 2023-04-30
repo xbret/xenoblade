@@ -1,5 +1,4 @@
 #include "mm/Operators.hpp"
-#include "fdlibm.h"
 
 /*Compiled with the ec++ flag? without it the compiler requires throw()
 to be added for the operators, which messes them up*/

@@ -2,14 +2,12 @@
 #define _LOCALE_H
 
 #include "types.h"
-#include "stdlib.h"
+#include <stdlib.h>
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common/locale_api.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif
-
-typedef int (*__decode_mbyte)(wchar_t*, const char*, size_t);
-typedef int (*__encode_mbyte)(char*, wchar_t);
 
 struct lconv {
 	char* decimal_point;

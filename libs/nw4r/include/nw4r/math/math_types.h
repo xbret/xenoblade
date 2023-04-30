@@ -25,7 +25,7 @@ namespace nw4r
 
 			inline VEC2() {}
 
-			inline VEC2(f32 x, f32 y)
+			inline VEC2(float x, float y)
 			{
 				mCoords.x = x;
 				mCoords.y = y;
@@ -82,7 +82,7 @@ namespace nw4r
 		
 		inline float VEC3Dot(register const VEC3 * vec1, register const VEC3 * vec2)
 		{
-			register f32 a, b, d, c, e;
+			register float a, b, d, c, e;
 			asm
 			{
 				psq_l a, 0x4(vec1), 0, 0
@@ -252,13 +252,17 @@ namespace nw4r
 			PSMTXConcat(*inMtx1, *inMtx2, *outMtx);
 		}
 
+		void MTX34Add(MTX34*, const MTX34*, const MTX34*);
+
+		void MTX34Mult(MTX34*, const MTX34*, float);
+
 		void MTX34Scale(register MTX34 *, register const MTX34 *, register const VEC3 *);
 
 		void MTX34Trans(register MTX34 *, register const MTX34 *, register const VEC3 *);
 
-		MTX34 * MTX34RotAxisFIdx(MTX34 *, const VEC3 *, f32 );
+		MTX34 * MTX34RotAxisFIdx(MTX34 *, const VEC3 *, float );
 
-		MTX34 * MTX34RotXYZFIdx(MTX34 *, f32, f32, f32);
+		void MTX34RotXYZFIdx(MTX34 *, float, float, float);
 
 		inline void MTX34Identity(MTX34 * mtx)
 		{
@@ -277,8 +281,6 @@ namespace nw4r
 		void MTX44Copy(register MTX44 *, register const MTX44 *);
 
 		//UNKTYPE GetDirMtxY(MTX34 *, const VEC3 &);
-		
-		MTX34 * MTX34RotXYZFIdx(MTX34 *, float, float, float);
 		
 		inline void MTX34Scale(MTX34 * outMtx, const VEC3 * vec, const MTX34 * inMtx)
 		{

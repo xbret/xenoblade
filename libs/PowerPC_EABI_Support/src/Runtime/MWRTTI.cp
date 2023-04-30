@@ -1,5 +1,5 @@
 #include "types.h"
-#include "typeinfo" //#include <typeinfo>
+#include <typeinfo>
 
 
 typedef struct type_info_struct type_info_struct;

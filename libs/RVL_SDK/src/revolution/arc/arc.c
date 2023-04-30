@@ -1,6 +1,6 @@
 #include "revolution/arc/arc.h"
 #include "revolution/OS.h"
-#include "ctype.h"
+#include <ctype.h>
 
 /**
  * Modified from decompilation by riidefi in WiiCore

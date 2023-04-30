@@ -1,5 +1,5 @@
 #include "PowerPC_EABI_Support/Runtime/__mem.h"
-#include "string.h"
+#include <string.h>
 
 #pragma section code_type ".init"
 

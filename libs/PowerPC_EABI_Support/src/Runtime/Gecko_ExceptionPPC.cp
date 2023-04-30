@@ -1,11 +1,8 @@
 #include "PowerPC_EABI_Support/Runtime/MWCPlusLib.h"
-#include "exception"
+#include <exception.h>
 #include "PowerPC_EABI_Support/Runtime/Gecko_ExceptionPPC.h"
 #include "PowerPC_EABI_Support/Runtime/NMWException.h"
 #include "PowerPC_EABI_Support/Runtime/__ppc_eabi_linker.h"
-
-using std::terminate;
-
 
 
 #define RETURN_ADDRESS 4

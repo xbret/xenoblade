@@ -1,5 +1,5 @@
 #include "mm/Math.hpp"
-#include "math.h"
+#include <math.h>
 
 //General math constants
 

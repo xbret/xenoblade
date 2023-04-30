@@ -1,6 +1,6 @@
 #include "revolution/NAND.h"
 #include "revolution/OS.h"
-#include "string.h" //<string.h>
+#include <string.h>
 
 static OSStateFlags StateFlags ALIGN(32);
 

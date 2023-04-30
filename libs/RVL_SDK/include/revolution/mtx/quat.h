@@ -8,7 +8,7 @@ extern "C" {
 #endif // ifdef __cplusplus
 
 typedef struct {
-  f32 x, y, z, w;
+  float x, y, z, w;
 } Quaternion;
 
 void PSQUATAdd(const Quaternion*, const Quaternion*, Quaternion*);

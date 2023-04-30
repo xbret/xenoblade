@@ -1,6 +1,6 @@
 #pragma once
 
-#include "stdarg.h"
+#include <stdarg.h>
 #include "nw4hbm/ut/ut_TagProcessorBase.h"
 #include "nw4hbm/ut/ut_CharWriter.h"
 #include "nw4hbm/ut/ut_Rect.h"

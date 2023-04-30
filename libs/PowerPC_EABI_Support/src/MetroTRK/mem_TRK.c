@@ -1,81 +1,76 @@
 #include "types.h"
 
-#define WRITE(dst, add, n_dst, n_src) ((u##n_dst*)dst) = ((u##n_dst*)(((u##n_src*)dst) + add)) - 1
-#define WRITE_BYTE(dst, add) WRITE(dst, add, 8, 32)
-#define WRITE_WORD(dst, add) WRITE(dst, add, 32, 8)
 
-
-//unused
-void ppc_readbyte1(){
+static u8 ppc_readbyte1(const void* ptr){
+	u32* something = (u32 *)((u32)ptr & ~3);
+	return (*something >> ((3 - ((u32)ptr - (u32)something)) << 3)) & 0xff;
 }
 
-//unused
-void ppc_writebyte1(){
+static void ppc_writebyte1(void* ptr, u8 param_2){
+	u32 *something = (u32 *)((u32)ptr & ~3);
+	u32 iVar1 = (3 - ((u32)ptr - (u32)something)) << 3;
+	u32 uVar3 = 0xff << iVar1;
+	*something = (*something & ~uVar3) | (uVar3 & (param_2 << iVar1));
 }
-
 
 void* TRK_memcpy(void* dst, const void* src, size_t n)
 {
-	const u8* s = (const u8*)src - 1;
-	u8* d = (u8*)dst - 1;
+	if (n != 0) {
+		u32 uVar10 = n >> 1;
 
-	n++;
-	while (--n != 0)
-		*++d = *++s;
+		if(uVar10 != 0){
+			do{
+				ppc_writebyte1(dst, ppc_readbyte1(src));
+				ppc_writebyte1((void*)((u32)dst + 1), ppc_readbyte1((void*)((u32)src + 1)));
+				
+				src = (void *)((u32)src + 2);
+				dst = (void *)((u32)dst + 2);
+				uVar10--;
+			}while (uVar10 != 0);
+
+			n &= 1;
+			if(n == 0) return dst;
+		}
+
+		do{
+			ppc_writebyte1(dst, ppc_readbyte1(src));
+			src = (void*)((u32)src + 1);
+			dst = (void*)((u32)dst + 1);
+			n--;
+		}while (n != 0);
+	}
+
 	return dst;
 }
 
+void TRK_fill_mem(void* dst, int val, size_t n){
+	u32 uVar1 = val & 0xff;
+	u32 uVar6;
 
-static void TRK_fill_mem(void* dst, int val, size_t n)
-{
-	u32 v = (u8)val;
-	u32 i, j;
+	if(n == 0) return;
 
-	WRITE_BYTE(dst, 0);
+	uVar6 = n >> 2;
 
-	if (n >= 32) {
-		i = (~(u32)dst) & 3;
+	if(uVar6 != 0){
+		do{
+			ppc_writebyte1(dst, uVar1);
+			ppc_writebyte1((void*)((u32)dst + 1), uVar1);
+			ppc_writebyte1((void*)((u32)dst + 2), uVar1);
+			ppc_writebyte1((void*)((u32)dst + 3), uVar1);
+			dst = (void*)((u32)dst + 4);
+			uVar6--;
+		}while (uVar6 != 0);
 
-		if (i) {
-			n -= i;
+		n &= 3;
 
-			do {
-				*++(((u8*)dst)) = v;
-			} while (--i);
-		}
-
-		if (v)
-			v |= v << 24 | v << 16 | v << 8;
-
-		WRITE_WORD(dst, 4);
-		WRITE_WORD(dst, 1);
-
-		i = n / 32;
-
-		if (i) {
-			do {
-				for (j = 0; j < 8; j++)
-					*++((u32*)dst) = v;
-			} while (--i);
-		}
-
-		i = (n / 4) % 8;
-
-		if (i) {
-			do {
-				*++((u32*)dst) = v;
-			} while (--i);
-		}
-
-		WRITE_BYTE(dst, 1);
-
-		n %= 4;
+		if(n == 0) return;
 	}
 
-	if (n)
-		do {
-			*++((u8*)dst) = v;
-		} while (--n);
+	do{
+		ppc_writebyte1(dst, uVar1);
+		dst = (void*)((u32)dst + 1);
+		n--;
+	}while (n != 0);
 
 	return;
 }

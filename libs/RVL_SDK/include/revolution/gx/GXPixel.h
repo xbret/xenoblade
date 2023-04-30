@@ -6,7 +6,7 @@
 extern "C" {
 #endif
 
-void GXSetFog(GXFogType, GXColor, f32, f32, f32, f32);
+void GXSetFog(GXFogType, GXColor, float, float, float, float);
 
 void GXSetBlendMode(GXBlendMode, GXBlendFactor, GXBlendFactor, GXLogicOp);
 void GXSetColorUpdate(u8);

@@ -1,6 +1,6 @@
-#include "locale.h"
-#include "ctype.h"
-#include "wctype.h"
+#include <locale.h>
+#include <ctype.h>
+#include <wctype.h>
 
 #pragma options align=native
 #pragma warn_padding off

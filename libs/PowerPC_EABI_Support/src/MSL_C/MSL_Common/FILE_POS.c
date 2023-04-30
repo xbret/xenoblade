@@ -5,7 +5,7 @@
 #endif
 
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/FILE_POS.h"
-#include "errno.h"
+#include <errno.h>
 
 int _ftell(FILE* file)
 {

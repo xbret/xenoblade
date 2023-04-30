@@ -1,6 +1,6 @@
 #include "PowerPC_EABI_Support/Runtime/NMWException.h"
 #include "PowerPC_EABI_Support/Runtime/MWCPlusLib.h"
-#include "exception"
+#include <exception>
 
 
 #define ARRAY_HEADER_SIZE 16

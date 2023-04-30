@@ -1,7 +1,7 @@
 #ifndef RVL_SDK_OS_ERROR_H
 #define RVL_SDK_OS_ERROR_H
 #include "types.h"
-#include "stdio.h" //<stdio.h>
+#include <stdio.h>
 #ifdef __cplusplus
 extern "C" {
 #endif

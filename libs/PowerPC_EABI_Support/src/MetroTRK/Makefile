@@ -1,6 +1,6 @@
 TRK_FILES:=\
-	$(BUILD_DIR)/libs/PowerPC_EABI_Support/asm/MetroTRK/__exception.o\
-	$(BUILD_DIR)/libs/PowerPC_EABI_Support/asm/MetroTRK/targsupp.o\
+	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/__exception.o\
+	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/targsupp.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/custconn/cc_gdev.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/custconn/MWCriticalSection_gc.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/custconn/CircleBuffer.o\

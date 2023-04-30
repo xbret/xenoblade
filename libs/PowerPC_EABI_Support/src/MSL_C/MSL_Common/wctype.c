@@ -1,16 +1,16 @@
-#include "wctype.h"
+#include <wctype.h>
 
-#define alph  __msl_walpha
-#define blnk  __msl_wblank
-#define cntl  __msl_wcntrl
-#define digi  __msl_wdigit | __msl_wgraph | __msl_wprint
-#define grph  __msl_wgraph
-#define lowc  __msl_wlower | __msl_walpha | __msl_wgraph | __msl_wprint
-#define prnt  __msl_wprint
-#define punc  __msl_wpunct | __msl_wgraph | __msl_wprint
-#define spac  __msl_wspace
-#define uppc  __msl_wupper | __msl_walpha | __msl_wgraph | __msl_wprint
-#define hexd  __msl_wxdigit
+#define alph  wctype_alpha
+#define blnk  wctype_blank
+#define cntl  wctype_cntrl
+#define digi  wctype_digit | wctype_graph | wctype_print
+#define grph  wctype_graph
+#define lowc  wctype_lower | wctype_alpha | wctype_graph | wctype_print
+#define prnt  wctype_print
+#define punc  wctype_punct | wctype_graph | wctype_print
+#define spac  wctype_space
+#define uppc  wctype_upper | wctype_alpha | wctype_graph | wctype_print
+#define hexd  wctype_xdigit
 #define dhex  hexd | digi
 #define uhex  hexd | uppc
 #define lhex  hexd | lowc

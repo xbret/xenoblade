@@ -211,9 +211,9 @@ void C_MTXTranspose(){
 
 void PSMTXTranspose ( const register Mtx src, register Mtx xPose )
 {
-    register f32 c_zero = 0.0f;
-    register f32 row0a, row1a, row0b, row1b;
-    register f32 trns0, trns1, trns2;
+    register float c_zero = 0.0f;
+    register float row0a, row1a, row0b, row1b;
+    register float trns0, trns1, trns2;
 
     asm
     {

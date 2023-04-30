@@ -3,7 +3,7 @@
 #include "revolution/DSP.h"
 #include "revolution/EXI.h"
 #include "revolution/OS.h"
-#include "string.h" //<string.h>
+#include <string.h>
 
 static OSInterruptHandler* InterruptHandlerTable;
 s64 __OSLastInterruptTime;

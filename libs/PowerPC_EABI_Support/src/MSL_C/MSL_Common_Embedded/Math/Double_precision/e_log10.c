@@ -45,7 +45,7 @@
  */
 
 #include "fdlibm.h"
-#include "errno.h"
+#include <errno.h>
 
 #ifdef __STDC__
 static const double

@@ -1,11 +1,11 @@
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/ansi_fp.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/stdio_api.h"
-#include "math.h"
-#include "locale.h"
-#include "stdarg.h"
-#include "stdlib.h"
-#include "wctype.h"
-#include "wchar.h"
+#include <math.h>
+#include <locale.h>
+#include <stdarg.h>
+#include <stdlib.h>
+#include <wctype.h>
+#include <wchar.h>
 
 #define TARGET_FLOAT_BITS 64
 #define TARGET_FLOAT_BYTES	(TARGET_FLOAT_BITS/8)

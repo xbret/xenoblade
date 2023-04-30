@@ -2,7 +2,7 @@
 #define MSL_WPRINTF_H
 
 #include "types.h"
-#include "stdarg.h"
+#include <stdarg.h>
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/file_struc.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/ansi_files.h"
 

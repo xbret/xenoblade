@@ -358,6 +358,6 @@
 
 
 .obj lbl_8066C650, global
-	.4byte 0x47800000
-	.4byte 0x47800000
+	.float 65536
+	.float 65536
 .endobj lbl_8066C650

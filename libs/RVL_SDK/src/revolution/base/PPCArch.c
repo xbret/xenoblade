@@ -165,8 +165,8 @@ u32 PPCMffpscr(void) {
 
 void PPCMtfpscr(register u32 val) {
         register struct {
-        f32 tmp;
-        f32 data;
+        float tmp;
+        float data;
     } fpscr;
 
     asm {

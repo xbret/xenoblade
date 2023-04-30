@@ -1,9 +1,9 @@
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/wcstoul.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/stdio_api.h"
-#include "ctype.h"
-#include "wctype.h"
-#include "errno.h"
-#include "limits.h"
+#include <ctype.h>
+#include <wctype.h>
+#include <errno.h>
+#include <limits.h>
 
 
 enum scan_states

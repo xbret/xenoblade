@@ -15,7 +15,7 @@ MM_FILES:=\
 	$(BUILD_DIR)/libs/mm/src/Mat44.o\
 	$(BUILD_DIR)/libs/mm/asm/Quat.o\
 
-$(MM_FILES): INCLUDES += -i libs/mm/include/
+#$(MM_FILES): INCLUDES += -i libs/mm/include/
 #MTRand seems to be the same without ipa file or inline deferred. needs to be tested
 $(MM_FILES): CFLAGS += -ipa file -inline deferred -str pool,readonly,reuse -RTTI on -enc SJIS
 

@@ -1,6 +1,6 @@
 #include "revolution/GX.h"
 #include "revolution/OS.h"
-#include "string.h" //<string.h>
+#include <string.h>
 
 /*
 static GXFifoObj DisplayListFifo;

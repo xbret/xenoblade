@@ -1,4 +1,4 @@
-#include "signal.h"
+#include <signal.h>
 
 void (*__stdio_exit)(void);
 BOOL __aborting;

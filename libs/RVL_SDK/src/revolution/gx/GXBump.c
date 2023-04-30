@@ -26,7 +26,7 @@ void GXSetTevIndirect(GXTevStageID tev_stage, GXIndTexStageID ind_stage,
 
 //only matches on 1.0
 
-void GXSetIndTexMtx(GXIndTexMtxID mtx_sel, const f32 offset_mtx[2][3], s8 scale_exp) {
+void GXSetIndTexMtx(GXIndTexMtxID mtx_sel, const float offset_mtx[2][3], s8 scale_exp) {
     u32 val;
     u32 field;
 

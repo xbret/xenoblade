@@ -1,7 +1,7 @@
 #include "revolution/FS.h"
 #include "revolution/OS.h"
 #include "revolution/USB.h"
-#include "stdio.h" //<stdio.h>
+#include <stdio.h>
 
 /**
  * Documentation from WiiBrew:
@@ -54,11 +54,11 @@ static u8 s_usb_log = FALSE;
 static u8 s_usb_err = TRUE;
 
 //unused
-static inline void _usb_enable_log(){
+static void _usb_enable_log(){
 }
 
 //unused
-static inline void _usb_disable_log(){
+static void _usb_disable_log(){
 }
 
 static void USB_LOG(const char* fmt, ...) {

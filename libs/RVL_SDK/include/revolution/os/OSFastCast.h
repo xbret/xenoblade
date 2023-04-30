@@ -28,21 +28,21 @@ static inline void OSInitFastCast(){
 }
 
 
-static inline f32 __OSu16tof32(register const u16* arg) {
-    register f32 ret;
+static inline float __OSu16tof32(register const u16* arg) {
+    register float ret;
 
-        asm {
+    asm {
         psq_l ret, 0(arg), 1, 3
     }
     
     return ret;
 }
 
-static inline void OSu16tof32(const u16* in, f32* out) { *out = __OSu16tof32(in); }
+static inline void OSu16tof32(const u16* in, float* out) { *out = __OSu16tof32(in); }
 
-static inline u16 __OSf32tou16(register f32 arg) {
-    f32 a;
-    register f32* ptr = &a;
+static inline u16 __OSf32tou16(register float arg) {
+    float a;
+    register float* ptr = &a;
     u16 r;
 
         asm {
@@ -53,10 +53,10 @@ static inline u16 __OSf32tou16(register f32 arg) {
     return r;
 }
 
-static inline void OSf32tou16(const f32* in, u16* out) { *out = __OSf32tou16(*in); }
+static inline void OSf32tou16(const float* in, u16* out) { *out = __OSf32tou16(*in); }
 
-static inline f32 __OSs16tof32(register const s16* arg) {
-    register f32 ret;
+static inline float __OSs16tof32(register const s16* arg) {
+    register float ret;
 
         asm {
         psq_l ret, 0(arg), 1, 5
@@ -65,11 +65,11 @@ static inline f32 __OSs16tof32(register const s16* arg) {
     return ret;
 }
 
-static inline void OSs16tof32(const s16* in, f32* out) { *out = __OSs16tof32(in); }
+static inline void OSs16tof32(const s16* in, float* out) { *out = __OSs16tof32(in); }
 
-static inline s16 __OSf32tos16(register f32 arg) {
-    f32 a;
-    register f32* ptr = &a;
+static inline s16 __OSf32tos16(register float arg) {
+    float a;
+    register float* ptr = &a;
     s16 r;
 
         asm {
@@ -80,7 +80,7 @@ static inline s16 __OSf32tos16(register f32 arg) {
     return r;
 }
 
-static inline void OSf32tos16(const f32* in, s16* out) { *out = __OSf32tos16(*in); }
+static inline void OSf32tos16(const float* in, s16* out) { *out = __OSf32tos16(*in); }
 
 #ifdef __cplusplus
 };

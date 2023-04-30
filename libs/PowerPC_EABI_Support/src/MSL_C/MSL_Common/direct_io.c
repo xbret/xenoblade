@@ -4,8 +4,8 @@
 #define _MSL_WIDE_CHAR
 #endif
 
-#include "wchar.h"
-#include "stdio.h"
+#include <wchar.h>
+#include <stdio.h>
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/stdio_api.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/misc_io.h"
 

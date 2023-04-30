@@ -1,6 +1,6 @@
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/mbstring.h"
-#include "locale.h"
-#include "string.h"
+#include <locale.h>
+#include <string.h>
 
 //unused
 void mblen(){

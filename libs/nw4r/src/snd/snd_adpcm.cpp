@@ -1,5 +1,5 @@
 #include "nw4r/snd/snd_adpcm.h"
-#include "limits.h"
+#include <limits.h>
 
 namespace nw4r
 {

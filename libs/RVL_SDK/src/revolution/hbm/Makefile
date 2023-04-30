@@ -27,7 +27,7 @@ HBM_FILES:=\
 	$(BUILD_DIR)/libs/RVL_SDK/src/revolution/hbm/nw4hbm/ut/ut_Font.o\
 	$(BUILD_DIR)/libs/RVL_SDK/src/revolution/hbm/nw4hbm/ut/ut_LinkList.o\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/revolution/hbm/nw4hbm/ut/ut_list.o\
-	$(BUILD_DIR)/libs/RVL_SDK/src/revolution/hbm/nw4hbm/ut/ut_ResFont.o\
+	$(BUILD_DIR)/libs/RVL_SDK/asm/revolution/hbm/nw4hbm/ut/ut_ResFont.o\
 	$(BUILD_DIR)/libs/RVL_SDK/src/revolution/hbm/nw4hbm/ut/ut_ResFontBase.o\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/revolution/hbm/nw4hbm/ut/ut_TagProcessorBase.o\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/revolution/hbm/nw4hbm/ut/ut_TextWriterBase.o\

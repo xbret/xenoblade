@@ -1,4 +1,4 @@
-#include "signal.h"
+#include <signal.h>
 
 sig_func signal_funcs[8];
 

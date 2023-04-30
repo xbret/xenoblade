@@ -1,5 +1,5 @@
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/ansi_files.h"
-#include "stdlib.h"
+#include <stdlib.h>
 
 static char stdin_buff[0x100];
 static char stdout_buff[0x100];

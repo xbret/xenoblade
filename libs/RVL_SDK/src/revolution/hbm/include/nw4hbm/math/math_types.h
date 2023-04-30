@@ -25,7 +25,7 @@ namespace nw4hbm
 
 			inline VEC2() {}
 
-			inline VEC2(f32 x, f32 y)
+			inline VEC2(float x, float y)
 			{
 				mCoords.x = x;
 				mCoords.y = y;
@@ -82,7 +82,7 @@ namespace nw4hbm
 		
 		inline float VEC3Dot(register const VEC3 * vec1, register const VEC3 * vec2)
 		{
-			register f32 a, b, d, c, e;
+			register float a, b, d, c, e;
 			asm
 			{
 				psq_l a, 0x4(vec1), 0, 0
@@ -247,18 +247,22 @@ namespace nw4hbm
 			PSMTXInverse(*in, *out);
 		}
 		
-		inline void MTX34Mult(MTX34 * outMtx, const MTX34 * inMtx1, const MTX34 * inMtx2)
+		void MTX34Mult(MTX34 * outMtx, const MTX34 * inMtx1, const MTX34 * inMtx2)
 		{
 			PSMTXConcat(*inMtx1, *inMtx2, *outMtx);
 		}
+
+		void MTX34Add(MTX34* out, const MTX34* mtx1, const MTX34* mtx2);
+
+		void MTX34Mult(MTX34* out, const MTX34* in, float factor);
 
 		void MTX34Scale(register MTX34 *, register const MTX34 *, register const VEC3 *);
 
 		void MTX34Trans(register MTX34 *, register const MTX34 *, register const VEC3 *);
 
-		MTX34 * MTX34RotAxisFIdx(MTX34 *, const VEC3 *, f32 );
+		MTX34 * MTX34RotAxisFIdx(MTX34 *, const VEC3 *, float );
 
-		MTX34 * MTX34RotXYZFIdx(MTX34 *, f32, f32, f32);
+		MTX34 * MTX34RotXYZFIdx(MTX34 *, float, float, float);
 
 		inline void MTX34Identity(MTX34 * mtx)
 		{

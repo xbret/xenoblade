@@ -8,7 +8,7 @@
 #include "revolution/PAD.h"
 #include "revolution/SC.h"
 #include "revolution/SI.h"
-#include "string.h" //<string.h>
+#include <string.h>
 
 #define INVALID_NAME_CHAR(c) ('0' > c || ('9' < c && c < 'A') || c > 'Z')
 
@@ -23,8 +23,8 @@ static u32 BI2DebugFlagHolder;
 
 static char GameNameBuffer[sizeof('ABCD') + 1];
 
-static f64 ZeroF;     // for lfd
-static f32 ZeroPS[2]; // for psl_l
+static double ZeroF;     // for lfd
+static float ZeroPS[2]; // for psl_l
 
 static OSExceptionHandler* OSExceptionTable;
 

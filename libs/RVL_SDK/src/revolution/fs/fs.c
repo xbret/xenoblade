@@ -1,7 +1,7 @@
 #include "revolution/FS.h"
 #include "revolution/IPC.h"
 #include "revolution/OS.h"
-#include "string.h"
+#include <string.h>
 
 /**
  * Ioctl arguments/filesystem specifications adapted from:

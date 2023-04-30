@@ -1,7 +1,7 @@
 #ifndef MSL_SCANF_H
 #define MSL_SCANF_H
 
-#include "stdarg.h"
+#include <stdarg.h>
 
 //fscanf
 //fscanf_s

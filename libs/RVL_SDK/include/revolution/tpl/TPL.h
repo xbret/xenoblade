@@ -23,7 +23,7 @@ typedef struct TPLHeader {
     GXTexWrapMode wrapT; // at 0x10
     GXTexFilter minFilt; // at 0x14
     GXTexFilter magFilt; // at 0x18
-    f32 lodBias;         // at 0x1C
+    float lodBias;         // at 0x1C
     u8 edgeLodEnable;    // at 0x20
     u8 minLod;           // at 0x21
     u8 maxLod;           // at 0x22
