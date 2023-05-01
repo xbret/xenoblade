@@ -32,14 +32,14 @@ asm s64 OSGetTime(void) {
     bne OSGetTime
 
     blr
-    }
+}
 
 asm s32 OSGetTick(void){
         nofralloc
 
     mftb r3
     blr
-    }
+}
 
 //unused
 void __SetTime(){
@@ -89,11 +89,11 @@ static void GetDates(s32 days, OSCalendarTime* cal) {
     s32 month;
 
     cal->week_day = (days + 6) % WEEK_DAY_MAX;
+    year = days / YEAR_DAY_MAX;
 
     // WTF??
-    for (year = days / YEAR_DAY_MAX;
-         days < (totalDays = year * YEAR_DAY_MAX + GetLeapDays(year)); year--) {
-        ;
+    while (days < (totalDays = year * YEAR_DAY_MAX + GetLeapDays(year))) {
+        year--;
     }
     days -= totalDays;
     cal->year = year;

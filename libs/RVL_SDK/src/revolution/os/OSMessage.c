@@ -1,7 +1,6 @@
 #include "revolution/OS.h"
 
-void OSInitMessageQueue(OSMessageQueue* queue, OSMessage* buffer,
-                        s32 capacity) {
+void OSInitMessageQueue(OSMessageQueue* queue, OSMessage* buffer, s32 capacity) {
     OSInitThreadQueue(&queue->sendQueue);
     OSInitThreadQueue(&queue->recvQueue);
     queue->buffer = buffer;

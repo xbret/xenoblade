@@ -1,81 +1,45 @@
-#include "types.h"
+#include "PowerPC_EABI_Support/MetroTRK/trk.h"
 
 
-static u8 ppc_readbyte1(const void* ptr){
-	u32* something = (u32 *)((u32)ptr & ~3);
-	return (*something >> ((3 - ((u32)ptr - (u32)something)) << 3)) & 0xff;
+static u8 ppc_readbyte1(const u8* ptr){
+	u32* alignedPtr = (u32 *)((u32)ptr & ~3);
+	return (u8)(*alignedPtr >> ((3 - ((u32)ptr - (u32)alignedPtr)) << 3));
 }
 
-static void ppc_writebyte1(void* ptr, u8 param_2){
-	u32 *something = (u32 *)((u32)ptr & ~3);
-	u32 iVar1 = (3 - ((u32)ptr - (u32)something)) << 3;
-	u32 uVar3 = 0xff << iVar1;
-	*something = (*something & ~uVar3) | (uVar3 & (param_2 << iVar1));
+static void ppc_writebyte1(u8* ptr, u8 val){
+	u32 iVar1;
+    u32 *alignedPtr;
+    u32 uVar3;
+    
+    alignedPtr = (u32 *)((u32)ptr & ~3);
+	iVar1 = (3 - ((u32)ptr - (u32)alignedPtr)) << 3;
+	uVar3 = 0xff << iVar1;
+	*alignedPtr = (*alignedPtr & ~uVar3) | (uVar3 & (val << iVar1));
 }
 
-void* TRK_memcpy(void* dst, const void* src, size_t n)
-{
-	if (n != 0) {
-		u32 uVar10 = n >> 1;
-
-		if(uVar10 != 0){
-			do{
-				ppc_writebyte1(dst, ppc_readbyte1(src));
-				ppc_writebyte1((void*)((u32)dst + 1), ppc_readbyte1((void*)((u32)src + 1)));
-				
-				src = (void *)((u32)src + 2);
-				dst = (void *)((u32)dst + 2);
-				uVar10--;
-			}while (uVar10 != 0);
-
-			n &= 1;
-			if(n == 0) return dst;
-		}
-
-		do{
-			ppc_writebyte1(dst, ppc_readbyte1(src));
-			src = (void*)((u32)src + 1);
-			dst = (void*)((u32)dst + 1);
-			n--;
-		}while (n != 0);
+void* TRK_memcpy(void* dst, const void* src, int n){
+    u8* srcTemp = (u8*)src;
+    u8* dstTemp = (u8*)dst;
+    
+    for(int i = 0; i != n; i++){
+		ppc_writebyte1(dstTemp, ppc_readbyte1(srcTemp));
+		srcTemp++;
+		dstTemp++;
 	}
 
 	return dst;
 }
 
-void TRK_fill_mem(void* dst, int val, size_t n){
-	u32 uVar1 = val & 0xff;
-	u32 uVar6;
+void TRK_fill_mem(u8* dst, int val, int n){
+	u8 b = val;
 
-	if(n == 0) return;
-
-	uVar6 = n >> 2;
-
-	if(uVar6 != 0){
-		do{
-			ppc_writebyte1(dst, uVar1);
-			ppc_writebyte1((void*)((u32)dst + 1), uVar1);
-			ppc_writebyte1((void*)((u32)dst + 2), uVar1);
-			ppc_writebyte1((void*)((u32)dst + 3), uVar1);
-			dst = (void*)((u32)dst + 4);
-			uVar6--;
-		}while (uVar6 != 0);
-
-		n &= 3;
-
-		if(n == 0) return;
+    for(int i = 0; i != n; i++){
+		ppc_writebyte1(dst, b);
+		dst++;
 	}
-
-	do{
-		ppc_writebyte1(dst, uVar1);
-		dst = (void*)((u32)dst + 1);
-		n--;
-	}while (n != 0);
-
-	return;
 }
 
-void* TRK_memset(void* dst, int val, size_t n)
+void* TRK_memset(void* dst, int val, int n)
 {
 	TRK_fill_mem(dst, val, n);
 	return dst;

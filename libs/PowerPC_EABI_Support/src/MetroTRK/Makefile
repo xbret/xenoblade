@@ -7,7 +7,7 @@ TRK_FILES:=\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/flush_cache.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/main_TRK.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/mainloop.o\
-	$(BUILD_DIR)/libs/PowerPC_EABI_Support/asm/MetroTRK/mem_TRK.o\
+	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/mem_TRK.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/dispatch.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/asm/MetroTRK/dolphin_trk.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/asm/MetroTRK/dolphin_trk_glue.o\
