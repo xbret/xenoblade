@@ -1,46 +1,67 @@
 #include "types.h"
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common/ansi_files.h"
 #include "PowerPC_EABI_Support/MetroTRK/target_options.h"
+#include "PowerPC_EABI_Support/MetroTRK/targsupp.h"
 #include "PowerPC_EABI_Support/MetroTRK/trk.h"
 
-int __read_file(u32 r3, char* r4, u32* r5, void* r6);
-int __write_file(u32 r3, char* r4, u32* r5, void* r6);
-int __access_file(u32 r3, char* r4, u32* r5, void* r6, u32 r7);
+DSIOResult __read_file(__file_handle, char*, size_t*, __ref_con);
+DSIOResult __write_file(__file_handle, char*, size_t*, __ref_con);
+DSIOResult __access_file(__file_handle, char*, size_t*, __ref_con, MessageCommandID);
 
 
-int __read_console(u32 r3, char* r4, u32* r5, void* r6){
+DSIOResult __read_console(__file_handle handle, char* buf, size_t* count, __ref_con ref_con){
     if(GetUseSerialIO() == 0) return 1;
-    return __read_file(0, r4, r5, r6);
+    return __read_file(0, buf, count, ref_con);
 }
 
-int __TRK_write_console(u32 r3, char* r4, u32* r5, void* r6){
+DSIOResult __TRK_write_console(__file_handle handle, char* buf, size_t* count, __ref_con ref_con){
     if(GetUseSerialIO() == 0) return 1;
-    return __write_file(1, r4, r5, r6);
+    return __write_file(1, buf, count, ref_con);
 }
 
-int __read_file(u32 r3, char* r4, u32* r5, void* r6){
-    return __access_file(r3, r4, r5, r6, 0xD1);
+DSIOResult __read_file(__file_handle handle, char* buf, size_t* count, __ref_con ref_con){
+    return __access_file(handle, buf, count, ref_con, kDSReadFile);
 }
 
-int __write_file(u32 r3, char* r4, u32* r5, void* r6){
-    return __access_file(r3, r4, r5, r6, 0xD0);
+DSIOResult __write_file(__file_handle handle, char* buf, size_t* count, __ref_con ref_con){
+    return __access_file(handle, buf, count, ref_con, kDSWriteFile);
 }
 
+//unused
+DSIOResult __open_file(){
+}
 
-int __access_file(u32 r3, char* r4, u32* r5, void* r6, u32 r7){
-    u32 sp8;
+//unused
+DSIOResult __close_file(){
+}
 
-    if(!GetTRKConnected()) return 1;
+//unused
+int __position_file(){
+}
 
-    sp8 = *r5;
-    u32 r0 = TRKAccessFile(r7, r3, &sp8, r4);
-    *r5 = sp8;
+//unused
+int convertFileMode(){
+}
+
+DSIOResult __access_file(__file_handle handle, char* buf, size_t* count, __ref_con ref_con, MessageCommandID id){
+    size_t countTemp;
+
+    if(!GetTRKConnected()) return kDSIOError;
+
+    countTemp = *count;
+    u32 r0 = TRKAccessFile(id, handle, &countTemp, buf);
+    *count = countTemp;
 
     switch((u8)r0){
-        case 0:
-            return 0;
-        case 2:
-            return 2;
+        case kDSIONoError:
+            return kDSIONoError;
+        case kDSIOEOF:
+            return kDSIOEOF;
         default:
-            return 1;
+            return kDSIOError;
     }
+}
+
+//unused
+int __open_temp_file(){
 }

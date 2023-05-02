@@ -1,48 +1,48 @@
-#include "PowerPC_EABI_Support/MetroTRK/dispatch.h"
+#include "PowerPC_EABI_Support/MetroTRK/trk.h"
 
-u32 TRKDispatchMessage(MessageBuffer* messageBuffer) {
+u32 TRKDispatchMessage(MessageBuffer* buffer) {
     u32 result = 0x500;
-    MessageBuffer* temp = messageBuffer;
+    MessageBuffer* temp = buffer;
     
-    TRKSetBufferPosition(messageBuffer, 0);
+    TRKSetBufferPosition(buffer, 0);
     
-    u8 command = temp->commandId;
+    u8 command = temp->mCommandId;
     
     switch(command){
-        case 1:
+        case kDSConnect:
             result = TRKDoConnect(temp);
         	break;
-        case 2:
+        case kDSDisconnect:
             result = TRKDoDisconnect(temp);
         	break;
-        case 3:
+        case kDSReset:
             result = TRKDoReset(temp);
         	break;
-        case 7:
+        case kDSOverride:
             result = TRKDoOverride(temp);
         	break;
-        case 16:
+        case kDSReadMemory:
             result = TRKDoReadMemory(temp);
         	break;
-        case 17:
+        case kDSWriteMemory:
             result = TRKDoWriteMemory(temp);
         	break;
-        case 18:
+        case kDSReadRegisters:
             result = TRKDoReadRegisters(temp);
         	break;
-        case 19:
+        case kDSWriteRegisters:
             result = TRKDoWriteRegisters(temp);
         	break;
-        case 24:
+        case kDSContinue:
             result = TRKDoContinue(temp);
         	break;
-        case 25:
+        case kDSStep:
             result = TRKDoStep(temp);
         	break;
-        case 26:
+        case kDSStop:
             result = TRKDoStop(temp);
         	break;
-        case 23:
+        case kDSSetOption:
             result = TRKDoSetOption(temp);
         	break;
     }

@@ -2,28 +2,13 @@
 #define _METROTRK_TRK_H
 
 #include "types.h"
+#include "PowerPC_EABI_Support/MetroTRK/msgcmd.h"
+#include "PowerPC_EABI_Support/MetroTRK/uart.h"
 #include "revolution/DB.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif // ifdef __cplusplus
-
-/* TRK */
-
-#define TRK_DISPATCH_CMD_CONNECT        1 /* Connect to the console */
-#define TRK_DISPATCH_CMD_DISCONNECT     2 /* Disconnect from the console */
-#define TRK_DISPATCH_CMD_RESET          3 /* Reset the debugger */
-#define TRK_DISPATCH_CMD_GETVERSION     4 /* Get debugger version */
-#define TRK_DISPATCH_CMD_GETSUPPORTMASK 5 /* Get Support Mask */
-#define TRK_DISPATCH_CMD_OVERRIDE       7 /* Override? */
-#define TRK_DISPATCH_CMD_READMEM        16 /* Reading from memory */
-#define TRK_DISPATCH_CMD_WRITEMEM       17 /* Writing to memory */
-#define TRK_DISPATCH_CMD_READREGS       18 /* Read a register value */
-#define TRK_DISPATCH_CMD_WRITEREGS      19 /* Set a register */
-#define TRK_DISPATCH_CMD_SETOPTION      23 /* Set an option? */
-#define TRK_DISPATCH_CMD_CONTINUE       24 /* Continue debugging */
-#define TRK_DISPATCH_CMD_STEP           25 /* Step through an instruction */
-#define TRK_DISPATCH_CMD_STOP           26 /* Stop the debugger */
 
 typedef struct _TRK_Msg {
 	u8 _00[4];      // _00
@@ -431,20 +416,21 @@ typedef struct TRKCPUState{
 	u32 unk42C;
 } TRKCPUState;
 
-typedef struct TRKBuffer {
-	u8 _00[4];
-	u32 _04;
-	s32 _08;
-	u32 _0C;
-	u32 _10;
+typedef struct MessageBuffer {
+	u32 unk0;
+	u32 unk4;
+	s32 unk8;
+	u32 unkC;
+	u8 mCommandId;
+	u8 unk11[3];
 	u8 mBuffer[0x87C]; /* _10 */
-} TRKBuffer;
+} MessageBuffer;
 
 typedef struct TRKBufferUnk{
-    int unk0;
+    MessageBuffer* unk0;
     int unk4;
     u8 unk8[0x40];
-    u8 unk48[0x880];
+    u8 mBuffer[0x880]; //0x48
 } TRKBufferUnk;
 
 typedef struct TRKPacketSeq {
@@ -460,32 +446,38 @@ extern TRKCPUState gTRKCPUState;
 
 extern TRKEventQueue gTRKEventQueue;
 
-typedef enum { TRKSuccess = 0, TRKError100 = 0x100, TRKError301 = 0x301, TRKError302 = 0x302 } TRKResult;
+typedef enum {
+	TRKSuccess = 0,
+	TRKError100 = 0x100,
+	TRKError301 = 0x301,
+	TRKError302 = 0x302,
+	TRKResult500 = 0x500
+} TRKResult;
 
 extern BOOL gTRKBigEndian;
 
 BOOL GetTRKConnected();
-u32 TRKDoConnect(TRKBuffer*);
-u32 TRKDoDisconnect(TRKBuffer*);
-u32 TRKDoReset(TRKBuffer*);
-u32 TRKDoVersions(TRKBuffer*);
-u32 TRKDoSupportMask(TRKBuffer*);
-u32 TRKDoOverride(TRKBuffer*);
-u32 TRKDoReadMemory(TRKBuffer*);
-u32 TRKDoWriteMemory(TRKBuffer*);
-u32 TRKDoReadRegisters(TRKBuffer*);
-u32 TRKDoWriteRegisters(TRKBuffer*);
-u32 TRKDoSetOption(TRKBuffer*);
-u32 TRKDoContinue(TRKBuffer*);
-u32 TRKDoStep(TRKBuffer*);
-u32 TRKDoStop(TRKBuffer*);
+u32 TRKDoConnect(MessageBuffer*);
+u32 TRKDoDisconnect(MessageBuffer*);
+u32 TRKDoReset(MessageBuffer*);
+u32 TRKDoVersions(MessageBuffer*);
+u32 TRKDoSupportMask(MessageBuffer*);
+u32 TRKDoOverride(MessageBuffer*);
+u32 TRKDoReadMemory(MessageBuffer*);
+u32 TRKDoWriteMemory(MessageBuffer*);
+u32 TRKDoReadRegisters(MessageBuffer*);
+u32 TRKDoWriteRegisters(MessageBuffer*);
+u32 TRKDoSetOption(MessageBuffer*);
+u32 TRKDoContinue(MessageBuffer*);
+u32 TRKDoStep(MessageBuffer*);
+u32 TRKDoStop(MessageBuffer*);
 
 void InitMetroTRK(void);
 void InitMetroTRK_BBA(void);
 void EnableMetroTRKInterrupts(void);
 
 void TRKDestructEvent(TRKEvent*);
-TRKResult TRKDispatchMessage(TRKBuffer*);
+u32 TRKDispatchMessage(MessageBuffer*);
 void* TRKGetBuffer(int);
 void TRKReleaseBuffer(int);
 void TRKGetInput();
@@ -497,8 +489,8 @@ BOOL TRKTargetStopped();
 void TRKTargetSetStopped(uint);
 TRKResult TRKTargetSupportRequest();
 
-TRKResult TRKAppendBuffer_ui8(TRKBuffer*, u8*, int);
-TRKResult TRKSetBufferPosition(TRKBuffer*, u32);
+TRKResult TRKAppendBuffer_ui8(MessageBuffer*, u8*, int);
+TRKResult TRKSetBufferPosition(MessageBuffer*, u32);
 
 TRKResult TRKMessageSend(TRK_Msg*);
 void TRKSwapAndGo(void);
@@ -528,35 +520,6 @@ void ReserveEXI2Port(void);
 /* MW */
 void MWTRACE(u8, char*, ...);
 
-/* UART */
-typedef int UARTError;
-
-enum {
-	kUARTNoError = 0,
-	kUARTUnknownBaudRate,
-	kUARTConfigurationError,
-	kUARTBufferOverflow, /* specified buffer was too small */
-	kUARTNoData          /* no data available from polling */
-};
-
-typedef enum {
-	kBaudHWSet  = -1,  /* use HW settings such as DIP switches */
-	kBaud300    = 300, /* valid baud rates */
-	kBaud600    = 600,
-	kBaud1200   = 1200,
-	kBaud1800   = 1800,
-	kBaud2000   = 2000,
-	kBaud2400   = 2400,
-	kBaud3600   = 3600,
-	kBaud4800   = 4800,
-	kBaud7200   = 7200,
-	kBaud9600   = 9600,
-	kBaud19200  = 19200,
-	kBaud38400  = 38400,
-	kBaud57600  = 57600,
-	kBaud115200 = 115200,
-	kBaud230400 = 230400
-} UARTBaudRate;
 
 UARTError InitializeUART(UARTBaudRate baudRate);
 TRKResult TRKInitializeIntDrivenUART(unknown, unknown, void*);
@@ -578,8 +541,6 @@ void MWInitializeCriticalSection(uint* section);
 void MWEnterCriticalSection(uint* section);
 void MWExitCriticalSection(uint* section);
 void MWTerminateCriticalSection(uint* section);
-
-u32 TRKAccessFile(u32, u32, u32*, char*);
 
 #ifdef __cplusplus
 };
