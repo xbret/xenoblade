@@ -440,6 +440,12 @@ typedef struct TRKBuffer {
 	u8 mBuffer[0x87C]; /* _10 */
 } TRKBuffer;
 
+typedef struct TRKBufferUnk{
+    int unk0;
+    int unk4;
+    u8 unk8[0x40];
+    u8 unk48[0x880];
+} TRKBufferUnk;
 
 typedef struct TRKPacketSeq {
 	u16 unk0;
@@ -458,6 +464,7 @@ typedef enum { TRKSuccess = 0, TRKError100 = 0x100, TRKError301 = 0x301, TRKErro
 
 extern BOOL gTRKBigEndian;
 
+BOOL GetTRKConnected();
 u32 TRKDoConnect(TRKBuffer*);
 u32 TRKDoDisconnect(TRKBuffer*);
 u32 TRKDoReset(TRKBuffer*);
@@ -512,6 +519,8 @@ TRKResult InitializeProgramEndTrap();
 TRKResult TRKInitializeSerialHandler();
 TRKResult TRKInitializeTarget();
 
+void TRKProcessInput(int bufferIndex);
+
 /* EXI2 */
 void UnreserveEXI2Port(void);
 void ReserveEXI2Port(void);
@@ -551,6 +560,8 @@ typedef enum {
 
 UARTError InitializeUART(UARTBaudRate baudRate);
 TRKResult TRKInitializeIntDrivenUART(unknown, unknown, void*);
+int TRKPollUART();
+int TRKReadUARTN(u8*, u32);
 void usr_put_initialize();
 void TRKTargetSetInputPendingPtr(void*);
 extern void* gTRKInputPendingPtr;
@@ -567,6 +578,8 @@ void MWInitializeCriticalSection(uint* section);
 void MWEnterCriticalSection(uint* section);
 void MWExitCriticalSection(uint* section);
 void MWTerminateCriticalSection(uint* section);
+
+u32 TRKAccessFile(u32, u32, u32*, char*);
 
 #ifdef __cplusplus
 };

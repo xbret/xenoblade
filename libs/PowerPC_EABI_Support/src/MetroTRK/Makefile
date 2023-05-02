@@ -14,7 +14,7 @@ TRK_FILES:=\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/notify.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/nubevent.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/nubinit.o\
-	$(BUILD_DIR)/libs/PowerPC_EABI_Support/asm/MetroTRK/serpoll.o\
+	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/serpoll.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/string_TRK.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/asm/MetroTRK/support.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/targcont.o\
@@ -22,7 +22,7 @@ TRK_FILES:=\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/msg.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/asm/MetroTRK/msgbuf.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/asm/MetroTRK/msghndlr.o\
-	$(BUILD_DIR)/libs/PowerPC_EABI_Support/asm/MetroTRK/mslsupp.o\
+	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/mslsupp.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/asm/MetroTRK/targimpl.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/target_options.o\
 
