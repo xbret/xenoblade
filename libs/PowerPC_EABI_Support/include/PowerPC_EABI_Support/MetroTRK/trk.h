@@ -546,7 +546,7 @@ void MWTerminateCriticalSection(uint* section);
 
 void InitMetroTRKCommTable(int);
 
-void TRK_main();
+int TRK_main();
 
 #ifdef __cplusplus
 };
