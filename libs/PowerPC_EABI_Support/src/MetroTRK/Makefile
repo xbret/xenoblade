@@ -9,7 +9,7 @@ TRK_FILES:=\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/mainloop.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/mem_TRK.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/dispatch.o\
-	$(BUILD_DIR)/libs/PowerPC_EABI_Support/asm/MetroTRK/dolphin_trk.o\
+	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/dolphin_trk.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/asm/MetroTRK/dolphin_trk_glue.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/notify.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/nubevent.o\

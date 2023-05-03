@@ -62,12 +62,6 @@ bytecopy:
 	return dst;
 }
 
-
-/*
- * --INFO--
- * Address:	800CA814
- * Size:	000044
- */
 char* strncpy(char* dst, const char* src, size_t n)
 {
 	const unsigned char* p = (const unsigned char*)src - 1;
@@ -85,11 +79,6 @@ char* strncpy(char* dst, const char* src, size_t n)
 	return (dst);
 }
 
-/*
- * --INFO--
- * Address:	800CA7E8
- * Size:	00002C
- */
 char* strcat(char* dst, const char* src)
 {
 	const u8* p = (u8*)src - 1;
@@ -204,11 +193,6 @@ bytecopy:
 	} while (1);
 }
 
-/*
- * --INFO--
- * Address:	800CA680
- * Size:	000040
- */
 int strncmp(const char* str1, const char* str2, size_t n)
 {
 	const u8* p1 = (u8*)str1 - 1;
@@ -225,12 +209,6 @@ int strncmp(const char* str1, const char* str2, size_t n)
 	return 0;
 }
 
-
-/*
- * --INFO--
- * Address:	800CA650
- * Size:	000030
- */
 char* strchr(const char* str, int chr)
 {
 	const u8* p = (u8*)str - 1;

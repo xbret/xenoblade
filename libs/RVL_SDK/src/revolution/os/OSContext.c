@@ -84,7 +84,7 @@ _load_fprs:
 
 _exit:
     blr
-    }
+}
 
 static asm void __OSSaveFPUContext(u32 unused, u32 unused1,
                                    register OSContext* ctx) {
@@ -169,7 +169,7 @@ static asm void __OSSaveFPUContext(u32 unused, u32 unused1,
 
 _exit:
     blr
-    }
+}
 
 //unused
 asm void OSLoadFPUContext(){
@@ -180,7 +180,7 @@ asm void OSSaveFPUContext(register OSContext* ctx) {
 
     addi r5, ctx, 0
     b __OSSaveFPUContext
-    }
+}
 
 asm void OSSetCurrentContext(register OSContext* ctx) {
         nofralloc
@@ -214,7 +214,7 @@ _not_current_fpu_ctx:
 
     isync
     blr
-    }
+}
 
 OSContext* OSGetCurrentContext(void) { return OS_CURRENT_CONTEXT; }
 
@@ -262,7 +262,7 @@ asm BOOL OSSaveContext(register OSContext* ctx) {
 
     li r3, 0
     blr
-    }
+}
 
 asm void OSLoadContext(register OSContext* ctx) {
         nofralloc
@@ -392,7 +392,7 @@ asm void OSSwitchFiberEx(u32 r3, u32 r4, u32 r5, u32 r6, register void* func,
     mtlr r0
     mr r1, r5
     blr
-    }
+}
 
 void OSClearContext(OSContext* ctx) {
     ctx->mode = 0;
@@ -460,7 +460,7 @@ asm void OSInitContext(register OSContext* ctx, register void* _srr0,
     stw r0, ctx->gqrs[7]
 
     b OSClearContext
-    }
+}
 
 void OSDumpContext(const OSContext* ctx) {
     u32 i;
@@ -566,7 +566,7 @@ _ctx_is_curr_fpu_ctx:
     lwz r4, ctx->gprs[4]
 
     rfi
-    }
+}
 
 void __OSContextInit(void) {
     __OSSetExceptionHandler(OS_ERR_FP_UNAVAIL, OSSwitchFPUContext);

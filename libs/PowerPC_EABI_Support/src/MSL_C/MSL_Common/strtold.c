@@ -368,7 +368,6 @@ long double __strtold(int max_width, int (*ReadProc)(void *, int, int), void* Re
 							break;
 						}
 
-
 						if (intdigits < mantissa_digits) {
 							intdigits++;
 							uch = *(chptr + NibbleIndex / 2);

@@ -24,10 +24,10 @@ asm void __init_hardware(void) {
     // Restore LR
     mtlr r31
     blr
-    }
+}
 
 asm void __flush_cache(register void* dst, register size_t n) {
-        nofralloc
+    nofralloc
 
     lis r5, 0xFFFFFFF1@h
     ori r5, r5, 0xFFFFFFF1@l
@@ -46,7 +46,7 @@ _loop:
 
     isync
     blr
-    }
+}
 
 asm void __init_user(void) {
         fralloc
@@ -55,7 +55,7 @@ asm void __init_user(void) {
 
     frfree
     blr
-    }
+}
 
 void __init_cpp(void) {
     funcptr_t* ctor;

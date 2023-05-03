@@ -9,9 +9,6 @@ static u8 Debug_BBA;
 DECL_SECTION(".init") DECL_WEAK void __start(void);
 int main(int argc, char** argv);
 
-DECL_SECTION(".init") static void __init_registers(void);
-DECL_SECTION(".init") static void __init_data(void);
-
 DECL_SECTION(".init") static void __check_pad3(void) {
     if ((OS_GC_PAD_3_BTN & 0x0EEF) == 0x0EEF) {
         OSResetSystem(0, 0, 0);
@@ -282,8 +279,7 @@ _after_init_metro_trk_bba:
     b exit // <- Will halt CPU
     }
 
-DECL_SECTION(".init")
-static void __copy_rom_section(void* dst, const void* src, size_t size) {
+DECL_SECTION(".init") static void __copy_rom_section(void* dst, const void* src, size_t size) {
     if (size == 0 || dst == src) {
         return;
     }
@@ -292,8 +288,7 @@ static void __copy_rom_section(void* dst, const void* src, size_t size) {
     __flush_cache(dst, size);
 }
 
-DECL_SECTION(".init")
-static void __init_bss_section(void* dst, size_t size) {
+DECL_SECTION(".init") static void __init_bss_section(void* dst, size_t size) {
     if (size == 0) {
         return;
     }
@@ -302,7 +297,7 @@ static void __init_bss_section(void* dst, size_t size) {
 }
 
 DECL_SECTION(".init") static asm void __init_registers(void) {
-        nofralloc
+    nofralloc
 
     li r0, 0
     li r3, 0
@@ -345,8 +340,8 @@ DECL_SECTION(".init") static asm void __init_registers(void) {
     }
 
 DECL_SECTION(".init") static void __init_data(void) {
-    const RomSection* rs;
-    const BssSection* bs;
+    const __rom_copy_info* rs;
+    const __bss_init_info* bs;
 
     rs = _rom_copy_info;
     while (TRUE) {
@@ -354,7 +349,7 @@ DECL_SECTION(".init") static void __init_data(void) {
             break;
         }
 
-        __copy_rom_section(rs->virtualOfs, rs->romOfs, rs->size);
+        __copy_rom_section(rs->addr, rs->rom, rs->size);
         rs++;
     }
 
@@ -364,7 +359,7 @@ DECL_SECTION(".init") static void __init_data(void) {
             break;
         }
 
-        __init_bss_section(bs->virtualOfs, bs->size);
+        __init_bss_section(bs->addr, bs->size);
         bs++;
     }
 }

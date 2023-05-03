@@ -99,50 +99,50 @@ typedef struct TRKSaveState{
  * @size{0xA4}
  */
 typedef struct TRKState {
-	u32 _00;
-	u32 _04;
-	u32 _08;
-	u32 _0C;
-	u32 _10;
-	u32 _14;
-	u32 _18;
-	u32 _1C;
-	u32 _20;
-	u32 _24;
-	u32 _28;
-	u32 _2C;
-	u32 _30;
-	u32 _34;
-	u32 _38;
-	u32 _3C;
-	u32 _40;
-	u32 _44;
-	u32 _48;
-	u32 _4C;
-	u32 _50;
-	u32 _54;
-	u32 _58;
-	u32 _5C;
-	u32 _60;
-	u32 _64;
-	u32 _68;
-	u32 _6C;
-	u32 _70;
-	u32 _74;
-	u32 _78;
-	u32 _7C;
-	u32 _80;
-	u32 _84;
-	u32 _88;
-	u32 _8C;
-	u32 _90;
-	u32 _94;
+	u32 unk00;
+	u32 unk04;
+	u32 unk08;
+	u32 unk0C;
+	u32 unk10;
+	u32 unk14;
+	u32 unk18;
+	u32 unk1C;
+	u32 unk20;
+	u32 unk24;
+	u32 unk28;
+	u32 unk2C;
+	u32 unk30;
+	u32 unk34;
+	u32 unk38;
+	u32 unk3C;
+	u32 unk40;
+	u32 unk44;
+	u32 unk48;
+	u32 unk4C;
+	u32 unk50;
+	u32 unk54;
+	u32 unk58;
+	u32 unk5C;
+	u32 unk60;
+	u32 unk64;
+	u32 unk68;
+	u32 unk6C;
+	u32 unk70;
+	u32 unk74;
+	u32 unk78;
+	u32 unk7C;
+	u32 unk80;
+	u32 unk84;
+	u32 unk88;
+	u32 unk8C;
+	u32 unk90;
+	u32 unk94;
 	BOOL mIsStopped;
-	u32 _9C;
-	u32 _A0;
-	u32 _A4;
-	u32 _A8;
-	u32 _AC;
+	u32 unk9C;
+	u32 unkA0;
+	u32 unkA4;
+	u32 unkA8;
+	u32 unkAC;
 } TRKState;
 
 typedef struct TRKCPUState{
@@ -492,6 +492,8 @@ TRKResult TRKTargetSupportRequest();
 TRKResult TRKAppendBuffer_ui8(MessageBuffer*, u8*, int);
 TRKResult TRKSetBufferPosition(MessageBuffer*, u32);
 
+u32 __TRK_get_MSR();
+
 TRKResult TRKMessageSend(TRK_Msg*);
 void TRKSwapAndGo(void);
 TRKResult TRKWriteUARTN(const void* bytes, u32 length);
@@ -541,6 +543,10 @@ void MWInitializeCriticalSection(uint* section);
 void MWEnterCriticalSection(uint* section);
 void MWExitCriticalSection(uint* section);
 void MWTerminateCriticalSection(uint* section);
+
+void InitMetroTRKCommTable(int);
+
+void TRK_main();
 
 #ifdef __cplusplus
 };
