@@ -13,7 +13,7 @@ typedef enum{
 
 void OutputData();
 BOOL IsInitialized();
-int gdev_cc_initialize(u8** flagOut, OSInterruptHandler handler);
+int gdev_cc_initialize(void* flagOut, OSInterruptHandler handler);
 int gdev_cc_shutdown();
 int gdev_cc_open();
 int gdev_cc_close();

@@ -17,8 +17,8 @@ BOOL IsInitialized(){
     return gIsInitialized;
 }
 
-int gdev_cc_initialize(u8** flagOut, OSInterruptHandler handler){
-    DBInitComm(flagOut, handler);
+int gdev_cc_initialize(void* flagOut, OSInterruptHandler handler){
+    DBInitComm((u8**)flagOut, handler);
     CircleBufferInitialize(&gRecvCB, gRecvBuf, sizeof(gRecvBuf));
     return 0;
 }

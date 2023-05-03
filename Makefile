@@ -101,7 +101,7 @@ INCLUDES := -I- -i include/ -i libs/RVL_SDK/include/ -i libs/PowerPC_EABI_Suppor
 ASM_INCLUDES := -I include/
 
 # TODO: fix the makefile to make objdiff work without this
-INCLUDES += -i libs/nw4r/include/ -i libs/mm/include/ -i libs/monolithlib/include/ -i src/
+INCLUDES += -i libs/nw4r/include/ -i libs/mm/include/ -i libs/monolithlib/include/ -i src/ -i libs/NdevExi2A/include/
 
 ASFLAGS := -mgekko $(ASM_INCLUDES)
 ifeq ($(VERBOSE),1)

@@ -509,7 +509,7 @@ TRKResult TRKReleaseMutex(void*);
 TRKResult TRKInitializeEventQueue();
 TRKResult TRKInitializeMessageBuffers();
 TRKResult TRKInitializeDispatcher();
-TRKResult InitializeProgramEndTrap();
+void InitializeProgramEndTrap();
 TRKResult TRKInitializeSerialHandler();
 TRKResult TRKInitializeTarget();
 
@@ -524,7 +524,7 @@ void MWTRACE(u8, char*, ...);
 
 
 UARTError InitializeUART(UARTBaudRate baudRate);
-TRKResult TRKInitializeIntDrivenUART(unknown, unknown, void*);
+TRKResult TRKInitializeIntDrivenUART(u32, u32, void*);
 int TRKPollUART();
 int TRKReadUARTN(u8*, u32);
 void usr_put_initialize();
@@ -544,9 +544,11 @@ void MWEnterCriticalSection(uint* section);
 void MWExitCriticalSection(uint* section);
 void MWTerminateCriticalSection(uint* section);
 
-void InitMetroTRKCommTable(int);
+int InitMetroTRKCommTable(int);
 
 int TRK_main();
+
+void TRKInterruptHandler();
 
 #ifdef __cplusplus
 };

@@ -10,7 +10,7 @@ TRK_FILES:=\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/mem_TRK.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/dispatch.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/dolphin_trk.o\
-	$(BUILD_DIR)/libs/PowerPC_EABI_Support/asm/MetroTRK/dolphin_trk_glue.o\
+	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/dolphin_trk_glue.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/notify.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/nubevent.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/nubinit.o\
@@ -28,8 +28,10 @@ TRK_FILES:=\
 
 DEPENDS += $(TRK_FILES:.o=.d)
 
-$(TRK_FILES): INCLUDES += -i libs/NdevExi2A/include/
+#$(TRK_FILES): INCLUDES += -i libs/NdevExi2A/include/
 $(TRK_FILES): CFLAGS += -Cpp_exceptions off -inline on
+
+$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/dolphin_trk_glue.o: CFLAGS += -str pool
 
 $(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/TRK_Hollywood_Revolution.a: $(TRK_FILES)
 	@echo Linking... $@
