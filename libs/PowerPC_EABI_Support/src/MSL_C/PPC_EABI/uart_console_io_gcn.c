@@ -1,12 +1,14 @@
 #include "types.h"
+#include "revolution/OS.h"
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/UART.h"
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common/ansi_files.h"
 
-s32 InitializeUART(u32);                      /* extern */
-s32 OSGetConsoleType();                       /* extern */
-s32 WriteUARTN(s32, s32);                     /* extern */
-s32 __TRK_write_console(s32, s32, s32*, s32); /* extern */
+
 static BOOL initialized;
 
-BOOL __write_console(s32 arg0, s32 arg1, s32* arg2, s32 arg3)
+int __TRK_write_console(__file_handle, char*, size_t*, __ref_con);
+
+BOOL __write_console(__file_handle handle, char* buf, size_t* count, __ref_con ref_con)
 {
 
 	if ((OSGetConsoleType() & 0x20000000) == 0) {
@@ -21,16 +23,16 @@ BOOL __write_console(s32 arg0, s32 arg1, s32* arg2, s32 arg3)
 		if (r3_cond != 0) {
 			return TRUE;
 		}
-		if (WriteUARTN(arg1, *arg2) != 0) {
-			*arg2 = 0;
+		if (WriteUARTN(buf, *count) != 0) {
+			*count = 0;
 			return TRUE;
 		}
 	}
-	__TRK_write_console(arg0, arg1, arg2, arg3);
+	__TRK_write_console(handle, buf, count, ref_con);
 	return FALSE;
 }
 
-s32 __close_console(){
+int __close_console(){
     return 0;
 }
 

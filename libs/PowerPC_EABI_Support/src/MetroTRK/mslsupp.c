@@ -1,12 +1,7 @@
-#include "types.h"
-#include "PowerPC_EABI_Support/MSL_C/MSL_Common/ansi_files.h"
 #include "PowerPC_EABI_Support/MetroTRK/target_options.h"
 #include "PowerPC_EABI_Support/MetroTRK/targsupp.h"
-#include "PowerPC_EABI_Support/MetroTRK/trk.h"
+#include "PowerPC_EABI_Support/MetroTRK/mslsupp.h"
 
-DSIOResult __read_file(__file_handle, char*, size_t*, __ref_con);
-DSIOResult __write_file(__file_handle, char*, size_t*, __ref_con);
-DSIOResult __access_file(__file_handle, char*, size_t*, __ref_con, MessageCommandID);
 
 
 DSIOResult __read_console(__file_handle handle, char* buf, size_t* count, __ref_con ref_con){

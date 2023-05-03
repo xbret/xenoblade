@@ -1,10 +1,9 @@
 #ifndef _UART_H
 #define _UART_H
 
-/* UART */
 typedef int UARTError;
 
-enum {
+ enum {
 	kUARTNoError = 0,
 	kUARTUnknownBaudRate,
 	kUARTConfigurationError,
@@ -30,5 +29,9 @@ typedef enum {
 	kBaud115200 = 115200,
 	kBaud230400 = 230400
 } UARTBaudRate;
+
+UARTError InitializeUART(UARTBaudRate baudRate);
+
+UARTError WriteUARTN(const void* bytes, unsigned long length);
 
 #endif

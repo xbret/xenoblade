@@ -2,13 +2,13 @@
 #include "PowerPC_EABI_Support/MetroTRK/trk.h"
 
 
-s32 TRKDoNotifyStopped(s32 arg0){
-	s32 sp8;
-	s32 spC;
-	s32 sp10;
-	s32 retval; // r31
+int TRKDoNotifyStopped(int arg0){
+	int sp8;
+	int spC;
+	int sp10;
+	int retval; // r31
 
-	retval = TRKGetFreeBuffer(&spC, &sp10);
+	retval = TRKGetFreeBuffer(&spC, (MessageBuffer*)&sp10);
 
 	if (retval == 0) {
 		if (arg0 == 0x90) {

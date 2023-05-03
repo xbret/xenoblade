@@ -33,18 +33,14 @@ TRKResult TRKInitializeNub(void)
 	return TVar1;
 }
 
-extern TRKResult TRKTerminateSerialHandler(void);
 TRKResult TRKTerminateNub(void)
 {
-
 	TRKTerminateSerialHandler();
 	return TRKSuccess;
 }
 
-extern void TRK_board_display(char*);
 void TRKNubWelcome(void)
 {
-
 	TRK_board_display("MetroTRK for Revolution v0.4");
 	return;
 }

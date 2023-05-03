@@ -1,4 +1,5 @@
 #include "PowerPC_EABI_Support/MetroTRK/trk.h"
+#include "PowerPC_EABI_Support/MetroTRK/dolphin_trk.h"
 #include "PowerPC_EABI_Support/MetroTRK/__exception.h"
 #include "revolution/OS.h"
 

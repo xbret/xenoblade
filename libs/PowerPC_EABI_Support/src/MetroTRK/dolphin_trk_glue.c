@@ -90,10 +90,10 @@ int InitMetroTRKCommTable(int hwId){
 void TRKUARTInterruptHandler(){
 }
 
-TRKResult TRKInitializeIntDrivenUART(u32 r3, u32 r4, void* r5){
+UARTError TRKInitializeIntDrivenUART(u32 r3, u32 r4, void* r5){
     gDBCommTable.initialize_func(r5, TRKEXICallBack);
     gDBCommTable.open_func();
-    return TRKSuccess;
+    return kUARTNoError;
 }
 
 void EnableEXI2Interrupts(){
@@ -108,15 +108,15 @@ int TRKPollUART(){
     return gDBCommTable.peek_func();
 }
 
-int TRKReadUARTN(u8* bytes, u32 length){
-    int r3 = gDBCommTable.read_func(bytes, length);
+int TRKReadUARTN(void* bytes, u32 limit){
+    int r3 = gDBCommTable.read_func(bytes, limit);
     int r0 = -r3;
     r0 |= r3;
     r3 = r0 >> 31;
     return r3;
 }
 
-TRKResult TRKWriteUARTN(const void* bytes, u32 length){
+int TRKWriteUARTN(const void* bytes, u32 length){
     int r3 = gDBCommTable.write_func(bytes, length);
     int r0 = -r3;
     r0 |= r3;
@@ -140,7 +140,7 @@ void UnreserveEXI2Port(){
     gDBCommTable.pre_continue_func();
 }
 
-void TRK_board_display(const char* str){
+void TRK_board_display(char* str){
     OSReport("%s\n", str);
 }
 

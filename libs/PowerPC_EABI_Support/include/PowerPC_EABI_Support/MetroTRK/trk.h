@@ -3,7 +3,7 @@
 
 #include "types.h"
 #include "PowerPC_EABI_Support/MetroTRK/msgcmd.h"
-#include "PowerPC_EABI_Support/MetroTRK/uart.h"
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/UART.h"
 #include "revolution/DB.h"
 
 #ifdef __cplusplus
@@ -443,8 +443,10 @@ extern TRKStepStatus gTRKStepStatus;
 extern TRKSaveState gTRKSaveState;
 extern TRKState gTRKState;
 extern TRKCPUState gTRKCPUState;
-
 extern TRKEventQueue gTRKEventQueue;
+
+extern BOOL gTRKBigEndian;
+extern void* gTRKInputPendingPtr;
 
 typedef enum {
 	TRKSuccess = 0,
@@ -454,8 +456,75 @@ typedef enum {
 	TRKResult500 = 0x500
 } TRKResult;
 
-extern BOOL gTRKBigEndian;
 
+//MWCriticalSection_gc
+void MWInitializeCriticalSection(uint* section);
+void MWEnterCriticalSection(uint* section);
+void MWExitCriticalSection(uint* section);
+void MWTerminateCriticalSection(uint* section);
+
+//main_TRK
+int TRK_main();
+
+//mainloop
+void TRKNubMainLoop(void);
+
+//dispatch
+u32 TRKDispatchMessage(MessageBuffer*);
+
+//dolphin_trk
+TRKResult TRKInitializeTarget();
+
+//dolphin_trk_glue
+int InitMetroTRKCommTable(int);
+void TRKUARTInterruptHandler();
+UARTError TRKInitializeIntDrivenUART(u32, u32, void*);
+void EnableEXI2Interrupts();
+int TRKPollUART();
+int TRKReadUARTN(void*, u32);
+int TRKWriteUARTN(const void*, u32);
+void ReserveEXI2Port(void);
+void UnreserveEXI2Port(void);
+void TRK_board_display(char*);
+void InitializeProgramEndTrap();
+
+//nubevent
+TRKResult TRKInitializeEventQueue();
+BOOL TRKGetNextEvent(TRKEvent*);
+TRKResult TRKPostEvent(TRKEvent*);
+void TRKConstructEvent(TRKEvent*, int);
+void TRKDestructEvent(TRKEvent*);
+
+//nubinit
+TRKResult TRKInitializeNub(void);
+TRKResult TRKTerminateNub(void);
+void TRKNubWelcome(void);
+
+//serpoll
+void TRKGetInput();
+void TRKProcessInput(int);
+TRKResult TRKInitializeSerialHandler();
+TRKResult TRKTerminateSerialHandler();
+
+//targcont
+TRKResult TRKTargetContinue(void);
+
+//mpc_7xx_603e
+void TRKSaveExtended1Block();
+void TRKRestoreExtended1Block();
+
+//msg
+TRKResult TRKMessageSend(TRK_Msg*);
+
+//msgbuf
+TRKResult TRKInitializeMessageBuffers();
+int TRKGetFreeBuffer(int*, MessageBuffer*);
+void* TRKGetBuffer(int);
+void TRKReleaseBuffer(int);
+TRKResult TRKSetBufferPosition(MessageBuffer*, u32);
+TRKResult TRKAppendBuffer_ui8(MessageBuffer*, u8*, int);
+
+//msghndlr
 BOOL GetTRKConnected();
 u32 TRKDoConnect(MessageBuffer*);
 u32 TRKDoDisconnect(MessageBuffer*);
@@ -467,88 +536,29 @@ u32 TRKDoReadMemory(MessageBuffer*);
 u32 TRKDoWriteMemory(MessageBuffer*);
 u32 TRKDoReadRegisters(MessageBuffer*);
 u32 TRKDoWriteRegisters(MessageBuffer*);
-u32 TRKDoSetOption(MessageBuffer*);
 u32 TRKDoContinue(MessageBuffer*);
 u32 TRKDoStep(MessageBuffer*);
 u32 TRKDoStop(MessageBuffer*);
+u32 TRKDoSetOption(MessageBuffer*);
 
-void InitMetroTRK(void);
-void InitMetroTRK_BBA(void);
-void EnableMetroTRKInterrupts(void);
-
-void TRKDestructEvent(TRKEvent*);
-u32 TRKDispatchMessage(MessageBuffer*);
-void* TRKGetBuffer(int);
-void TRKReleaseBuffer(int);
-void TRKGetInput();
-BOOL TRKGetNextEvent(TRKEvent*);
-
-TRKResult TRKTargetContinue(void);
+//targimpl
+u32 __TRK_get_MSR();
+void TRKInterruptHandler();
+void TRKSwapAndGo(void);
 TRKResult TRKTargetInterrupt(TRKEvent*);
+void TRKTargetAddStopInfo(int);
+void TRKTargetAddExceptionInfo(int);
+TRKResult TRKTargetSupportRequest();
 BOOL TRKTargetStopped();
 void TRKTargetSetStopped(uint);
-TRKResult TRKTargetSupportRequest();
-
-TRKResult TRKAppendBuffer_ui8(MessageBuffer*, u8*, int);
-TRKResult TRKSetBufferPosition(MessageBuffer*, u32);
-
-u32 __TRK_get_MSR();
-
-TRKResult TRKMessageSend(TRK_Msg*);
-void TRKSwapAndGo(void);
-TRKResult TRKWriteUARTN(const void* bytes, u32 length);
-TRKResult TRKInitializeNub(void);
-TRKResult TRKTerminateNub(void);
-void TRKNubWelcome(void);
-void TRKNubMainLoop(void);
-
-TRKResult TRKInitializeMutex(void*);
-TRKResult TRKAcquireMutex(void*);
-TRKResult TRKReleaseMutex(void*);
-
-TRKResult TRKInitializeEventQueue();
-TRKResult TRKInitializeMessageBuffers();
-TRKResult TRKInitializeDispatcher();
-void InitializeProgramEndTrap();
-TRKResult TRKInitializeSerialHandler();
-TRKResult TRKInitializeTarget();
-
-void TRKProcessInput(int bufferIndex);
-
-/* EXI2 */
-void UnreserveEXI2Port(void);
-void ReserveEXI2Port(void);
-
-/* MW */
-void MWTRACE(u8, char*, ...);
-
-
-UARTError InitializeUART(UARTBaudRate baudRate);
-TRKResult TRKInitializeIntDrivenUART(u32, u32, void*);
-int TRKPollUART();
-int TRKReadUARTN(u8*, u32);
-void usr_put_initialize();
 void TRKTargetSetInputPendingPtr(void*);
-extern void* gTRKInputPendingPtr;
+
 
 void* TRK_memcpy(void* dst, const void* src, int n);
 void* TRK_memset(void* dst, int val, int n);
 
 int TRK_strlen(const char*);
 
-void TRKSaveExtended1Block();
-void TRKRestoreExtended1Block();
-
-void MWInitializeCriticalSection(uint* section);
-void MWEnterCriticalSection(uint* section);
-void MWExitCriticalSection(uint* section);
-void MWTerminateCriticalSection(uint* section);
-
-int InitMetroTRKCommTable(int);
-
-int TRK_main();
-
-void TRKInterruptHandler();
 
 #ifdef __cplusplus
 };

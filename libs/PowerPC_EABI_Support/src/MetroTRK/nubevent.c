@@ -72,8 +72,8 @@ TRKResult TRKPostEvent(TRKEvent* ev)
 
 void TRKConstructEvent(TRKEvent* event, int eventType)
 {
-	event->mEventType   = eventType;
-	event->_04          = 0;
+	event->mEventType = eventType;
+	event->_04 = 0;
 	event->mBufferIndex = -1;
 }
 
