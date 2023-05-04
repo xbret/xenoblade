@@ -48,7 +48,7 @@ void TRKNubWelcome(void)
 BOOL TRK_InitializeEndian(void)
 {
 	u8 bendian[4];
-	BOOL result   = FALSE;
+	BOOL result = FALSE;
 	gTRKBigEndian = TRUE;
 
 	bendian[0] = 0x12;

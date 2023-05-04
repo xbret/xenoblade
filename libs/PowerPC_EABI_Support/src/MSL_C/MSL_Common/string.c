@@ -65,8 +65,8 @@ bytecopy:
 char* strncpy(char* dst, const char* src, size_t n)
 {
 	const unsigned char* p = (const unsigned char*)src - 1;
-	unsigned char* q       = (unsigned char*)dst - 1;
-	unsigned char zero     = 0;
+	unsigned char* q = (unsigned char*)dst - 1;
+	unsigned char zero = 0;
 
 	n++;
 
@@ -82,7 +82,7 @@ char* strncpy(char* dst, const char* src, size_t n)
 char* strcat(char* dst, const char* src)
 {
 	const u8* p = (u8*)src - 1;
-	u8* q       = (u8*)dst - 1;
+	u8* q = (u8*)dst - 1;
 
 	while (*++q)
 		;
@@ -123,8 +123,7 @@ char* strncat(char* dst, const char* src, size_t n)
 int strcmp(const char* str1, const char* str2)
 {
 	// bless metrowerks for this implementation
-
-	register u8* left  = (u8*)str1;
+	register u8* left = (u8*)str1;
 	register u8* right = (u8*)str2;
 	u32 align, l1, r1, x;
 
@@ -157,7 +156,7 @@ int strcmp(const char* str1, const char* str2)
 
 	l1 = *(int*)left;
 	r1 = *(int*)right;
-	x  = l1 + K2;
+	x = l1 + K2;
     x &= ~l1;
 	if (x & K1) {
 		goto adjust;
@@ -165,7 +164,7 @@ int strcmp(const char* str1, const char* str2)
 	while (l1 == r1) {
 		l1 = *(++((int*)(left)));
 		r1 = *(++((int*)(right)));
-		x  = l1 + K2;
+		x = l1 + K2;
 		if (x & K1) {
 			goto adjust;
 		}
@@ -212,7 +211,7 @@ int strncmp(const char* str1, const char* str2, size_t n)
 char* strchr(const char* str, int chr)
 {
 	const u8* p = (u8*)str - 1;
-	u32 c       = (chr & 0xFF);
+	u32 c = (chr & 0xFF);
 	u32 ch;
 
 	while (ch = *++p)

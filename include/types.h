@@ -38,8 +38,9 @@ typedef void (*funcptr_t)(void);
 
 #ifndef __cplusplus
 typedef unsigned short wchar_t;
-typedef wchar_t wint_t;
 #endif
+
+typedef wchar_t wint_t;
 
 // Basic defines to allow newer-like C++ code to be written
 #define TRUE 1

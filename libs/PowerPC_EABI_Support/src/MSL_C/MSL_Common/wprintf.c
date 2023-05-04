@@ -1,11 +1,11 @@
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/ansi_fp.h"
-#include "PowerPC_EABI_Support/MSL_C/MSL_Common/stdio_api.h"
 #include <math.h>
 #include <locale.h>
 #include <stdarg.h>
 #include <stdlib.h>
 #include <wctype.h>
 #include <wchar.h>
+#include <stdio.h>
 
 #define TARGET_FLOAT_BITS 64
 #define TARGET_FLOAT_BYTES	(TARGET_FLOAT_BITS/8)
@@ -540,7 +540,7 @@ static wchar_t * double2hex(long double num, wchar_t * buff, print_format format
 	decimal dec;	
 	int radix_marker;
 	
-    radix_marker = 	* (unsigned char *)(__lconv).decimal_point;
+    radix_marker = *(unsigned char *)(__lconv).decimal_point;
 	p = buff;
 	ld = num;
 	
@@ -548,7 +548,7 @@ static wchar_t * double2hex(long double num, wchar_t * buff, print_format format
 		return 0;
 	}
 
-	form.style  = (char)0;
+	form.style = (char)0;
 	form.digits = 0x20;           
 	__num2dec(&form, num, &dec);
 
@@ -754,7 +754,7 @@ return_zero:
 			--new_length;
 		}
 		else {
-			*p  = c + L'0';
+			*p = c + L'0';
 			break;
 		}
 	}
@@ -901,11 +901,11 @@ static wchar_t* float2str(long double num, wchar_t *wbuff, print_format format) 
 				round_decimal(&dec, format.precision + 1);
 			}
 			
-			n    = dec.exp;
+			n = dec.exp;
 			sign = '+';
 			
 			if (n < 0) {
-				n    = -n;
+				n = -n;
 				sign = '-';
 			}
 			

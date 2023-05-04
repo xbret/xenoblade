@@ -1,4 +1,3 @@
-#include "PowerPC_EABI_Support/MSL_C/MSL_Common/stdio_api.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/ansi_fp.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/secure_error.h"
 #include <ctype.h>
@@ -543,7 +542,7 @@ static char * double2hex(long double num, char * buff, print_format format)  {
 	decimal dec;	
 	int radix_marker;
 	
-    radix_marker = 	* (unsigned char *)(__lconv).decimal_point;
+    radix_marker = *(unsigned char *)(__lconv).decimal_point;
 	p = buff;
 	ld = num;
 	
@@ -551,7 +550,7 @@ static char * double2hex(long double num, char * buff, print_format format)  {
 		return 0;
 	}
 
-	form.style  = (char)0;
+	form.style = (char)0;
 	form.digits = 0x20;           
 	__num2dec(&form, num, &dec);
 
@@ -743,7 +742,7 @@ return_zero:
 			--new_length;
 		}
 		else {
-			*p  = c + '0';
+			*p = c + '0';
 			break;
 		}
 	}
@@ -888,11 +887,11 @@ static char* float2str(long double num, char *buff, print_format format) {
 				round_decimal(&dec, format.precision + 1);
 			}
 			
-			n    = dec.exp;
+			n = dec.exp;
 			sign = '+';
 			
 			if (n < 0) {
-				n    = -n;
+				n = -n;
 				sign = '-';
 			}
 			
@@ -1327,8 +1326,8 @@ static int __pformatter(void *(*WriteProc)(void *, const char *, size_t), void *
 	return chars_written;
 }
 
-static void* __FileWrite(void *pFile, const char *pBuffer, size_t char_num) {
-    return (__fwrite(pBuffer, 1, char_num, (FILE*)pFile) == char_num ? pFile : 0);
+static void* __FileWrite(void *file, const char *pBuffer, size_t char_num) {
+    return (__fwrite(pBuffer, 1, char_num, (FILE*)file) == char_num ? file : 0);
 }
 
 static void* __StringWrite(void *pCtrl, const char *pBuffer, size_t char_num) {
@@ -1350,17 +1349,17 @@ void printf(){
 void printf_s(){
 }
 
-int fprintf(FILE *pFile, const char *format, ...) {
+int fprintf(FILE *file, const char *format, ...) {
 	int res;
 
-	if (fwide(pFile, -1) >= 0) {
+	if (fwide(file, -1) >= 0) {
 		return -1;
 	}
 
 	{
 		va_list args;
 		va_start(args, format);
-		res = __pformatter(&__FileWrite, (void*)pFile, format, args, FALSE);
+		res = __pformatter(&__FileWrite, (void*)file, format, args, FALSE);
 		return res;
 	}
 }

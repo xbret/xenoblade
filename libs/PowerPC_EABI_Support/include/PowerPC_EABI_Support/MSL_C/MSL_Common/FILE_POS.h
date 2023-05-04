@@ -2,12 +2,7 @@
 #define MSL_FILE_POS_H
 
 #include "types.h"
-#include "PowerPC_EABI_Support/MSL_C/MSL_Common/ansi_files.h"
-
-// define standard C file pointer location names
-#define SEEK_SET (0)
-#define SEEK_CUR (1)
-#define SEEK_END (2)
+#include <stdio.h>
 
 #ifdef __cplusplus
 extern "C" {

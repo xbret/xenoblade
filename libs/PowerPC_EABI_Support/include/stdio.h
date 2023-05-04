@@ -6,6 +6,7 @@
 extern "C" {
 #endif // ifdef __cplusplus
 
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common/stdio_api.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/FILE_POS.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/file_io.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/printf.h"

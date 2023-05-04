@@ -53,8 +53,8 @@ void* memchr(u8* s, int c, size_t n)
 	size_t char_check;
 
 	char_check = (u8)c;
-	s          = &s[-1];
-	n_count    = n + 1;
+	s = &s[-1];
+	n_count = n + 1;
 	while (--n_count) {
 		if (*++s == char_check) {
 			return s;
@@ -86,7 +86,7 @@ int memcmp(const void* __s1, const void* __s2, size_t __n)
 {
 	const u8* val1 = ((const u8*)__s1 - 1);
 	const u8* val2 = ((const u8*)__s2 - 1);
-	size_t size    = __n + 1;
+	size_t size = __n + 1;
 
 	while (--size > 0) {
 		if (*++val1 != *++val2) {

@@ -93,7 +93,7 @@ namespace mtl{
     //Checks whether a point is within the given rect
     bool PointInRect(Rect* rect, Rect* point) {
         if(point->x < rect->x) return false;
-        s16 maxX =  rect->x + rect->width;
+        s16 maxX = rect->x + rect->width;
         if(point->x >= maxX) return false;
         if(point->y < rect->y) return false;
         s16 maxY = rect->y + rect->height;

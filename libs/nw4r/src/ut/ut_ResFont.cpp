@@ -15,17 +15,17 @@ namespace nw4r
 		
 		bool ResFont::SetResource(void * pBuffer)
 		{
-			BinaryFileHeader * pFile = static_cast<BinaryFileHeader *>(pBuffer);
+			BinaryFileHeader * file = static_cast<BinaryFileHeader *>(pBuffer);
 			
 			FontInformation * pFontInfo = NULL;
 			
 			if (mBuffer) return false;
 			
-			if (pFile->magic == 'RFNU') //IsManaging?
+			if (file->magic == 'RFNU') //IsManaging?
 			{
-				BinaryBlockHeader * pCurBlock = (BinaryBlockHeader *)((u8 *)pFile + pFile->headerLen);
+				BinaryBlockHeader * pCurBlock = (BinaryBlockHeader *)((u8 *)file + file->headerLen);
 				
-				for (int i = 0; i < pFile->blockCount; i++)
+				for (int i = 0; i < file->blockCount; i++)
 				{
 					if (pCurBlock->magic == 'FINF')
 					{
@@ -37,15 +37,15 @@ namespace nw4r
 			}
 			else
 			{
-				if (pFile->version == 0x0104)
+				if (file->version == 0x0104)
 				{
-					if (!IsValidBinaryFile(pFile, 'RFNT', 0x0104, 2)) return false;
+					if (!IsValidBinaryFile(file, 'RFNT', 0x0104, 2)) return false;
 				}
 				else
 				{
-					if (!IsValidBinaryFile(pFile, 'RFNT', 0x0102, 2)) return false;
+					if (!IsValidBinaryFile(file, 'RFNT', 0x0102, 2)) return false;
 				}
-				pFontInfo = Rebuild(pFile);
+				pFontInfo = Rebuild(file);
 			}
 			
 			if (pFontInfo == NULL) return false;
@@ -56,31 +56,31 @@ namespace nw4r
 			return true;
 		}
 		
-		FontInformation * ResFont::Rebuild(BinaryFileHeader * pFile)
+		FontInformation * ResFont::Rebuild(BinaryFileHeader * file)
 		{
-			BinaryBlockHeader * pCurBlock = (BinaryBlockHeader *)((u8 *)pFile + pFile->headerLen);
+			BinaryBlockHeader * pCurBlock = (BinaryBlockHeader *)((u8 *)file + file->headerLen);
 			FontInformation * pFontInfo = NULL;
 			
-			for (int i = 0; i < pFile->blockCount; i++)
+			for (int i = 0; i < file->blockCount; i++)
 			{
 				switch (pCurBlock->magic)
 				{
 					case 'FINF': //8000ABD8
 						pFontInfo = reinterpret_cast<FontInformation *>(pCurBlock + 1);
-						ResolveOffset<FontTextureGlyph>(pFontInfo->mTextureGlyph, pFile);
-						if (pFontInfo->mWidthList) ResolveOffset<FontWidth>(pFontInfo->mWidthList, pFile);
-						if (pFontInfo->mCodeMapList) ResolveOffset<FontCodeMap>(pFontInfo->mCodeMapList, pFile);
+						ResolveOffset<FontTextureGlyph>(pFontInfo->mTextureGlyph, file);
+						if (pFontInfo->mWidthList) ResolveOffset<FontWidth>(pFontInfo->mWidthList, file);
+						if (pFontInfo->mCodeMapList) ResolveOffset<FontCodeMap>(pFontInfo->mCodeMapList, file);
 						break;
 					case 'TGLP': //8000AC14
-						ResolveOffset<u8>(reinterpret_cast<FontTextureGlyph *>(pCurBlock + 1)->PTR_0x14, pFile);
+						ResolveOffset<u8>(reinterpret_cast<FontTextureGlyph *>(pCurBlock + 1)->PTR_0x14, file);
 						break;
 					case 'CWDH': //8000AC24
 						FontWidth * pWidths = reinterpret_cast<FontWidth *>(pCurBlock + 1);
-						if (pWidths->mNext) ResolveOffset<FontWidth>(pWidths->mNext, pFile);
+						if (pWidths->mNext) ResolveOffset<FontWidth>(pWidths->mNext, file);
 						break;
 					case 'CMAP': //8000AC3C
 						FontCodeMap * pMap = reinterpret_cast<FontCodeMap *>(pCurBlock + 1);
-						if (pMap->mNext) ResolveOffset<FontCodeMap>(pMap->mNext, pFile);
+						if (pMap->mNext) ResolveOffset<FontCodeMap>(pMap->mNext, file);
 						break;
 					case 'GLGR':
 						break;
@@ -91,7 +91,7 @@ namespace nw4r
 				pCurBlock = (BinaryBlockHeader *)((u8 *)pCurBlock + pCurBlock->length);
 			}
 			
-			pFile->magic = 'RFNU';
+			file->magic = 'RFNU';
 			return pFontInfo;
 		}
 	}

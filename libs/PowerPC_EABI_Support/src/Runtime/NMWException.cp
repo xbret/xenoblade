@@ -74,8 +74,8 @@ extern char __throw_catch_compare(const char* throwtype, const char* catchtype, 
 					return true;
 				}
 			}else{
-				while(*cptr1++!='!'){}
-				while(*cptr1++!='!'){}
+				while(*cptr1++ != '!'){}
+				while(*cptr1++ != '!'){}
 				if(*cptr1 == 0) return false;
 
 				cptr2 = catchtype + 1;

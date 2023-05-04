@@ -5,6 +5,7 @@
 #endif
 
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/FILE_POS.h"
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common/buffer_io.h"
 #include <errno.h>
 
 int _ftell(FILE* file)
@@ -12,25 +13,25 @@ int _ftell(FILE* file)
 	int charsInUndoBuffer = 0;
 	int position;
 
-	u8 tmp_kind = file->mMode.file_kind;
-	if (!(tmp_kind == __disk_file || tmp_kind == __console_file) || file->mState.error) {
+	u8 tmp_kind = file->mode.file_kind;
+	if (!(tmp_kind == __disk_file || tmp_kind == __console_file) || file->state.error) {
 		errno = EFPOS;
 		return -1;
 	}
 
-	if (file->mState.io_state == __neutral)
-		return (file->mPosition);
+	if (file->state.io_state == __neutral)
+		return (file->position);
 
-	position = file->mBufferPosition + (file->mBufferPtr - file->mBuffer);
+	position = file->buffer_pos + (file->buffer_ptr - file->buffer);
 
-	if (file->mState.io_state >= __rereading) {
-		charsInUndoBuffer = file->mState.io_state - __rereading + 1;
+	if (file->state.io_state >= __rereading) {
+		charsInUndoBuffer = file->state.io_state - __rereading + 1;
 		position -= charsInUndoBuffer;
 	}
 
-	if (!file->mMode.binary_io) {
-		int n = file->mBufferPtr - file->mBuffer - charsInUndoBuffer;
-		u8* p = (u8*)file->mBuffer;
+	if (!file->mode.binary_io) {
+		int n = file->buffer_ptr - file->buffer - charsInUndoBuffer;
+		u8* p = (u8*)file->buffer;
 
 		while (n--)
 			if (*p++ == '\n')
@@ -62,15 +63,15 @@ int _fseek(FILE* file, u32 offset, int whence)
 
 	char* ptr;
 
-	if (file->mMode.file_kind != 1 || file->mState.error != 0) {
+	if (file->mode.file_kind != 1 || file->state.error != 0) {
 		errno = EFPOS;
 		return -1;
 	}
 
-	if (file->mState.io_state == 1) {
+	if (file->state.io_state == 1) {
 		if (__flush_buffer(file, nullptr) != 0) {
-			file->mState.error  = 1;
-			file->mBufferLength = 0;
+			file->state.error = 1;
+			file->buffer_len = 0;
 			errno = EFPOS;
 			return -1;
 		}
@@ -81,28 +82,28 @@ int _fseek(FILE* file, u32 offset, int whence)
         offset += _ftell(file);
     }
 
-	if ((whence != SEEK_END) && (file->mMode.io_mode != 3) && (file->mState.io_state == 2 || file->mState.io_state == 3)) {
-		if ((offset >= file->mPosition) || !(offset >= file->mBufferPosition)) {
-			file->mState.io_state = 0;
+	if ((whence != SEEK_END) && (file->mode.io_mode != 3) && (file->state.io_state == 2 || file->state.io_state == 3)) {
+		if ((offset >= file->position) || !(offset >= file->buffer_pos)) {
+			file->state.io_state = 0;
 		} else {
-			file->mBufferPtr      = file->mBuffer + (offset - file->mBufferPosition);
-			file->mBufferLength   = file->mPosition - offset;
-			file->mState.io_state = 2;
+			file->buffer_ptr = file->buffer + (offset - file->buffer_pos);
+			file->buffer_len = file->position - offset;
+			file->state.io_state = 2;
 		}
 	} else {
-		file->mState.io_state = 0;
+		file->state.io_state = 0;
 	}
 
-	if (file->mState.io_state == 0) {
-		if (file->positionFunc != nullptr && (int)file->positionFunc(file->mHandle, &offset, whence, file->ref_con)) {
-			file->mState.error  = 1;
-			file->mBufferLength = 0;
+	if (file->state.io_state == 0) {
+		if (file->position_proc != nullptr && (int)file->position_proc(file->handle, &offset, whence, file->ref_con)) {
+			file->state.error = 1;
+			file->buffer_len = 0;
 			errno = EFPOS;
 			return -1;
 		} else {
-			file->mState.eof = 0;
-			file->mPosition = offset;
-			file->mBufferLength = 0;
+			file->state.eof = 0;
+			file->position = offset;
+			file->buffer_len = 0;
 		}
 	}
 

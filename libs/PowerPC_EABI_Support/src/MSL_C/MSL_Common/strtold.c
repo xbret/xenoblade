@@ -1,5 +1,4 @@
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/strtold.h"
-#include "PowerPC_EABI_Support/MSL_C/MSL_Common/stdio_api.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/ansi_fp.h"
 #include "PowerPC_EABI_Support/MSL_C/PPC_EABI/math_ppc.h"
 #include <errno.h>
@@ -8,6 +7,7 @@
 #include <math.h>
 #include <mem.h>
 #include <limits.h>
+#include <stdio.h>
 
 #define TARGET_FLOAT_BITS 64
 #define TARGET_FLOAT_BYTES	(TARGET_FLOAT_BITS/8)
@@ -338,10 +338,10 @@ long double __strtold(int max_width, int (*ReadProc)(void *, int, int), void* Re
 				switch(hex_scan_state) {
 					case hex_start:
 						memset(mantissa, 0, sizeof(mantissa));
-						chptr			= mantissa;
+						chptr = mantissa;
 						mantissa_digits = (53 + 3) / 4;
-						intdigits		= 0;
-						NibbleIndex		= 0;
+						intdigits = 0;
+						NibbleIndex = 0;
 						hex_scan_state = hex_leading_sig_zeroes;
 						c = fetch();
 						break;
@@ -566,7 +566,7 @@ long double __strtold(int max_width, int (*ReadProc)(void *, int, int), void* Re
 		}
 		else if (result > LDBL_MAX) {
 			*overflow = 1;
-			result	  = HUGE_VAL;
+			result = HUGE_VAL;
 		} 
 		
 		if (sig_negative && success(scan_state)) {
@@ -620,9 +620,9 @@ long double __strtold(int max_width, int (*ReadProc)(void *, int, int), void* Re
 			}
 			
 			halfbits = (dbl_bit & 7);
-			dbl_bits[dbl_bit>>3] |= (unsigned char)(ui >> halfbits);
+			dbl_bits[dbl_bit >> 3] |= (unsigned char)(ui >> halfbits);
 			dbl_bit += 8;
-			dbl_bits[dbl_bit>>3] |= (unsigned char)(ui << (8 - halfbits));
+			dbl_bits[dbl_bit >> 3] |= (unsigned char)(ui << (8 - halfbits));
 		}
 
 		exponent += TARGET_FLOAT_MAX_EXP-1+exp_value;

@@ -2,7 +2,6 @@
 #include <stdarg.h>
 #include <ctype.h>
 #include <stdio.h>
-#include "PowerPC_EABI_Support/MSL_C/MSL_Common/stdio_api.h"
 
 typedef long long intmax_t;
 
@@ -276,7 +275,7 @@ static int __sformatter(int (*ReadProc)(void *, int, int), void * ReadProcArg, c
 	int elem_valid;
 	size_t elem_maxsize;
 	int match_failure = 0;
-	int terminate  = 0;
+	int terminate = 0;
 
 	format_ptr = format_str;
 	chars_read = 0;

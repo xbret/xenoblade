@@ -1,5 +1,5 @@
-#ifndef _MSL_MATH_API_H
-#define _MSL_MATH_API_H
+#ifndef _MSL_MISC_IO_H
+#define _MSL_MISC_IO_H
 
 extern void (*__stdio_exit)(void);
 

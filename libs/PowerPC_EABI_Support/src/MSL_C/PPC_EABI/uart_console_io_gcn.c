@@ -1,7 +1,7 @@
 #include "types.h"
 #include "revolution/OS.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/UART.h"
-#include "PowerPC_EABI_Support/MSL_C/MSL_Common/ansi_files.h"
+#include <stdio.h>
 
 
 static BOOL initialized;
@@ -32,7 +32,7 @@ BOOL __write_console(__file_handle handle, char* buf, size_t* count, __ref_con r
 	return FALSE;
 }
 
-int __close_console(){
+int __close_console(__file_handle handle){
     return 0;
 }
 

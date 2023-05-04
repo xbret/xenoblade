@@ -144,10 +144,10 @@ static void ExPPC_FindExceptionRecord(char* returnaddr, MWExceptionInfo* info){
 	FragmentInfo frag;
 	ExceptionTableIndex *exceptionindex,*p;
 	unsigned long returnoffset;
-	long i,m,n;
+	long i, m, n;
 
-	info->exception_record=0;
-	info->action_pointer=0;
+	info->exception_record = 0;
+	info->action_pointer = 0;
 	
 	if ((ExPPC_FindExceptionFragment(returnaddr, &frag)) == 0) return;
 	fragment = &frag;

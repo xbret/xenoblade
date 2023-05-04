@@ -630,7 +630,7 @@ double __dec2num(const decimal *d)
     	    	else if (!guessed_low && !__less_dec(&dec, &feedback2)){
     	    		difflow = feedback1;
     	    		feedback1 = feedback2;
-    	    		feedback2 =  difflow;
+    	    		feedback2 = difflow;
                     {
     	    		    double temp = first_guess;
     	    		    first_guess = next_guess;

@@ -204,25 +204,25 @@ namespace nw4hbm
 				u32 i = r30 / r3->SHORT_0xC;
 				u32 j = r30 % r3->SHORT_0xC;
 				
-				u32 r8 =  j * (r3->mCellWidth + 1);
-				u32 r9 =  i * (r3->mCellHeight + 1);
-				pGlyph->PTR_0x0 = r3->PTR_0x14 + (r11 * r3->WORD_0x4);//stw r0,0(r4)
+				u32 r8 = j * (r3->mCellWidth + 1);
+				u32 r9 = i * (r3->mCellHeight + 1);
+				pGlyph->PTR_0x0 = r3->PTR_0x14 + (r11 * r3->WORD_0x4); //stw r0,0(r4)
 				
 				const CharWidths & r7_2 = GetCharWidthsFromIndex(glyphIndex);
 				
-				pGlyph->BYTE_0x4=r7_2.BYTE_0x0;
-				pGlyph->cellWidth=r7_2.BYTE_0x1;
-				pGlyph->BYTE_0x6=r7_2.BYTE_0x2;
+				pGlyph->BYTE_0x4 = r7_2.BYTE_0x0;
+				pGlyph->cellWidth = r7_2.BYTE_0x1;
+				pGlyph->BYTE_0x6 = r7_2.BYTE_0x2;
 				
-				pGlyph->cellHeight=r3->mCellHeight;
+				pGlyph->cellHeight = r3->mCellHeight;
 				
-				pGlyph->WORD_0x8= (GXTexFmt)r3->mFormat;
+				pGlyph->WORD_0x8 = (GXTexFmt)r3->mFormat;
 				
-				pGlyph->SHORT_0xC=r3->SHORT_0x10;
-				pGlyph->SHORT_0xE=r3->SHORT_0x12;
+				pGlyph->SHORT_0xC = r3->SHORT_0x10;
+				pGlyph->SHORT_0xE = r3->SHORT_0x12;
 				
-				pGlyph->SHORT_0x10=r8+1;
-				pGlyph->SHORT_0x12=r9+1;
+				pGlyph->SHORT_0x10 = r8 + 1;
+				pGlyph->SHORT_0x12 = r9 + 1;
 			}
 		}
 	}
