@@ -6,9 +6,9 @@
 
 static BOOL initialized;
 
-int __TRK_write_console(__file_handle, char*, size_t*, __ref_con);
+int __TRK_write_console(__file_handle, u8*, size_t*, __ref_con);
 
-BOOL __write_console(__file_handle handle, char* buf, size_t* count, __ref_con ref_con)
+BOOL __write_console(__file_handle handle, u8* buffer, size_t* count, __ref_con ref_con)
 {
 
 	if ((OSGetConsoleType() & 0x20000000) == 0) {
@@ -23,12 +23,12 @@ BOOL __write_console(__file_handle handle, char* buf, size_t* count, __ref_con r
 		if (r3_cond != 0) {
 			return TRUE;
 		}
-		if (WriteUARTN(buf, *count) != 0) {
+		if (WriteUARTN(buffer, *count) != 0) {
 			*count = 0;
 			return TRUE;
 		}
 	}
-	__TRK_write_console(handle, buf, count, ref_con);
+	__TRK_write_console(handle, buffer, count, ref_con);
 	return FALSE;
 }
 
