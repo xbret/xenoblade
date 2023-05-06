@@ -99,8 +99,8 @@
  *                     = 1 - 2*(tan(y) - (tan(y)^2)/(1+tan(y)))
  */
 
-#include "fdlibm.h"
-#include "revolution/math.h"
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/fdlibm.h"
+
 static const double one = 1.00000000000000000000e+00, /* 0x3FF00000, 0x00000000 */
     pio4                = 7.85398163397448278999e-01, /* 0x3FE921FB, 0x54442D18 */
     pio4lo              = 3.06161699786838301793e-17, /* 0x3C81A626, 0x33145C07 */
@@ -130,7 +130,7 @@ double __kernel_tan(double x, double y, int iy)
 	{
 		if ((int)x == 0) { /* generate inexact */
 			if (((ix | __LO(x)) | (iy + 1)) == 0) {
-				double ret = fabs(x);
+				double ret = __fabs(x);
 				return one / ret;
 			} else
 				return (iy == 1) ? x : -one / x;

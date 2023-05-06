@@ -1,0 +1,10 @@
+#ifndef MSL_CPP_CCTYPE_H
+#define MSL_CPP_CCTYPE_H
+#include <ctype.h>
+
+namespace std {
+using ::tolower;
+using ::toupper;
+} // namespace std
+
+#endif

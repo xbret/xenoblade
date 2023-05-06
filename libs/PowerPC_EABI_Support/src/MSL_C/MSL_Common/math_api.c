@@ -1,5 +1,5 @@
+#include "types.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/math_api.h"
-#include "fdlibm.h"
 
 //unused
 void __msl_generic_count_bits32(){

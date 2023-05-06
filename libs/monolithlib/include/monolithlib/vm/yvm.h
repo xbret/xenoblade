@@ -1,7 +1,7 @@
 #pragma once
 
 #include "types.h"
-#include "PowerPC_EABI_Support/Runtime/__mem.h"
+#include <string.h>
 
 #ifdef __cplusplus
 extern "C" {
@@ -32,16 +32,16 @@ typedef struct ScriptFuncContext{
 
 void vmInit();
 void vmLink();
-BOOL vmPluginRegist(unknown);
+BOOL vmPluginRegist(UNKWORD);
 void* vmArgPtrGet(ScriptFuncContext*);
 BOOL vmArgBoolGet(ScriptFuncContext*);
 int vmArgIntGet(ScriptFuncContext*);
 void vmArgFixedGet(ScriptFuncContext*);
-char* vmArgStringGet(ScriptFuncContext*, unknown);
-void* vmArgFunctionGet(ScriptFuncContext*, unknown);
-void* vmArgArrayGet(ScriptFuncContext*, unknown);
-void* vmArgOCGet(ScriptFuncContext*, unknown);
-void vmRetValSet(ScriptFuncContext*, unknown);
+char* vmArgStringGet(ScriptFuncContext*, UNKWORD);
+void* vmArgFunctionGet(ScriptFuncContext*, UNKWORD);
+void* vmArgArrayGet(ScriptFuncContext*, UNKWORD);
+void* vmArgOCGet(ScriptFuncContext*, UNKWORD);
+void vmRetValSet(ScriptFuncContext*, UNKWORD);
 void vmWaitModeSet();
 int vmWkIdxGet(ScriptFuncContext*);
 void vmWkIdxSet(ScriptFuncContext*);

@@ -9,14 +9,14 @@ extern "C" {
 static void GXEnd(void) {}
 
 void __GXSetDirtyState(void);
-void GXBegin(GXPrimitive prim, u32 fmtIndex, u16 num);
+void GXBegin(GXPrimitive prim, GXVtxFmtIdx fmt, u16 verts);
 void __GXSendFlushPrim(void);
-void GXSetLineWidth(u8 width, u32 r5);
-void GXSetPointSize(u8 width, u32 r5);
-void GXEnableTexOffsets(u32 coordId, GXBool r4, GXBool r5);
+void GXSetLineWidth(u8 width, u32 offset);
+void GXSetPointSize(u8 size, u32 offset);
+void GXEnableTexOffsets(GXTexCoordID coordId, GXBool lineOfs, GXBool pointOfs);
 void GXSetCullMode(GXCullMode mode);
 void GXGetCullMode(GXCullMode* out);
-void GXSetCoPlanar(u8 enable);
+void GXSetCoPlanar(GXBool coplanar);
 void __GXSetGenMode(void);
 
 #ifdef __cplusplus

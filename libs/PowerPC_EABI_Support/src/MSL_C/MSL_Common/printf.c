@@ -2,7 +2,6 @@
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/secure_error.h"
 #include <ctype.h>
 #include <math.h>
-#include <mem.h>
 #include <stdarg.h>
 #include <string.h>
 #include <stdio.h>

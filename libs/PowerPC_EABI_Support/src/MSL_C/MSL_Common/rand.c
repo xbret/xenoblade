@@ -1,15 +1,16 @@
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/rand.h"
 
-static u32 next = 1;
+static u32 random_next = 1;
 
+//LCG (linear congruential generator) RNG algorithm
 int rand()
 {
-	next = next * 1103515245 + 12345;
-	return ((next >> 16) & 0x7fff);
+	random_next = random_next * 1103515245 + 12345;
+	return ((random_next >> 16) & 0x7fff);
 }
 
 //unused
 void srand(u32 seed)
 {
-    next = seed;
+    random_next = seed;
 }

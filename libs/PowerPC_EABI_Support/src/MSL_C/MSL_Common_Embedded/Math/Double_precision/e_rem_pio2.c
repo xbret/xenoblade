@@ -18,8 +18,7 @@
  * use __kernel_rem_pio2()
  */
 
-#include "fdlibm.h"
-#include "revolution/math.h"
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/fdlibm.h"
 
 /*
  * Table of constants for 2/pi, 396 Hex digits (476 decimal) of 2/pi

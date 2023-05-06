@@ -1,11 +1,10 @@
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/strtold.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/ansi_fp.h"
-#include "PowerPC_EABI_Support/MSL_C/PPC_EABI/math_ppc.h"
 #include <errno.h>
 #include <locale.h>
 #include <ctype.h>
 #include <math.h>
-#include <mem.h>
+#include <string.h>
 #include <limits.h>
 #include <stdio.h>
 

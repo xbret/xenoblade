@@ -2,44 +2,44 @@
 
 BOOL gTRKBigEndian;
 
-TRKResult TRKInitializeNub(void)
+TRKResult TRK_InitializeNub(void)
 {
-	TRKResult TVar1;
-	TRKResult TVar2;
+	TRKResult result;
+	TRKResult resultTemp;
 
-	TVar1 = TRK_InitializeEndian();
+	result = TRK_InitializeEndian();
 
-	if (TVar1 == TRKSuccess) {
-		TVar1 = TRKInitializeEventQueue();
+	if (result == TRKSuccess) {
+		result = TRKInitializeEventQueue();
 	}
-	if (TVar1 == TRKSuccess) {
-		TVar1 = TRKInitializeMessageBuffers();
+	if (result == TRKSuccess) {
+		result = TRKInitializeMessageBuffers();
 	}
 	InitializeProgramEndTrap();
-	if (TVar1 == TRKSuccess) {
-		TVar1 = TRKInitializeSerialHandler();
+	if (result == TRKSuccess) {
+		result = TRKInitializeSerialHandler();
 	}
-	if (TVar1 == TRKSuccess) {
-		TVar1 = TRKInitializeTarget();
+	if (result == TRKSuccess) {
+		result = TRKInitializeTarget();
 	}
-	if (TVar1 == TRKSuccess) {
+	if (result == TRKSuccess) {
 
-		TVar2 = TRKInitializeIntDrivenUART(1, 0, &gTRKInputPendingPtr);
+		resultTemp = TRKInitializeIntDrivenUART(1, 0, &gTRKInputPendingPtr);
 		TRKTargetSetInputPendingPtr(gTRKInputPendingPtr);
-		if (TVar2 != TRKSuccess) {
-			TVar1 = TVar2;
+		if (resultTemp != TRKSuccess) {
+			result = resultTemp;
 		}
 	}
-	return TVar1;
+	return result;
 }
 
-TRKResult TRKTerminateNub(void)
+TRKResult TRK_TerminateNub(void)
 {
 	TRKTerminateSerialHandler();
 	return TRKSuccess;
 }
 
-void TRKNubWelcome(void)
+void TRK_NubWelcome(void)
 {
 	TRK_board_display("MetroTRK for Revolution v0.4");
 	return;

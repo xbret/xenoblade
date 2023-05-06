@@ -110,10 +110,7 @@
  * to produce the hexadecimal values shown.
  */
 
-#include "types.h"
-#include <errno.h>
-#include <math.h>
-#include "fdlibm.h"
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/fdlibm.h"
 
 #ifndef _DOUBLE_IS_32BITS
 
@@ -164,7 +161,7 @@ double __ieee754_pow(x, y) double x, y;
 	double y1, t1, t2, r, s, t, u, v, w;
 	int i0, i1, i, j, k, yisint, n;
 	int hx, hy, ix, iy;
-	u32 lx, ly;
+	unsigned int lx, ly;
 
 	i0 = ((*(int*)&one) >> 29) ^ 1;
 	i1 = 1 - i0;

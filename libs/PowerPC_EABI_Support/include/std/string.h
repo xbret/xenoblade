@@ -2,8 +2,9 @@
 #define _STRING_H
 
 #include "types.h"
-#include <mem.h>
-#include <extras.h>
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common/string_api.h"
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common/extras.h"
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -21,6 +22,13 @@ char* strchr(const char*, int);
 char* strstr(const char*, const char*);
 
 size_t strlen(const char*);
+
+void* memmove(void*, const void*, size_t);
+int memcmp(const void*, const void*, size_t);
+void* memchr(const void*, int, size_t);
+
+void* memcpy(void* dest, const void* src, size_t n);
+void* memset(void* dest, int val, size_t count);
 
 #ifdef __cplusplus
 }

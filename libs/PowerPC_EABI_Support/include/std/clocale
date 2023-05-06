@@ -1,0 +1,9 @@
+#ifndef MSL_CPP_CLOCALE_H
+#define MSL_CPP_CLOCALE_H
+#include <locale.h>
+
+namespace std {
+using ::lconv;
+} // namespace std
+
+#endif

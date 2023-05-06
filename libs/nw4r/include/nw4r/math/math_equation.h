@@ -6,7 +6,7 @@ namespace nw4r
 {
 	namespace math
 	{
-        inline f32 FSelect(register f32 val, register f32 zero, register f32 notzero)
+        inline float FSelect(register float val, register float zero, register float notzero)
         {
             asm
             {

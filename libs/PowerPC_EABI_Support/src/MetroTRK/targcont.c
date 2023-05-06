@@ -6,5 +6,5 @@ TRKResult TRKTargetContinue(void)
 	UnreserveEXI2Port();
 	TRKSwapAndGo();
 	ReserveEXI2Port();
-	return EXIT_SUCCESS;
+	return TRKSuccess;
 }

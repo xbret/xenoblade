@@ -1,4 +1,4 @@
-#include "PowerPC_EABI_Support/MSL_C/PPC_EABI/math_ppc.h"
+#include <math.h>
 
 double nan(const char* arg){
 }

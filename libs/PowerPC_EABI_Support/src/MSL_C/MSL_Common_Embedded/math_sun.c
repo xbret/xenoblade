@@ -1,4 +1,4 @@
-#include "fdlibm.h"
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/fdlibm.h"
 
 double scalbn(double x, int y) {
     int sp8;

@@ -11,5 +11,5 @@ TRKResult TRKMessageSend(TRK_Msg* msg)
 
 	u32 write_val = TRKWriteUARTN(&msg->mMsg, msg->mMsgLength);
 	if(write_val != 0) OSReport("MetroTRK - TRK_WriteUARTN returned %ld\n", write_val);
-	return EXIT_SUCCESS;
+	return TRKSuccess;
 }

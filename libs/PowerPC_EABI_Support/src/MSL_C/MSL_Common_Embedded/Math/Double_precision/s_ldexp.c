@@ -12,8 +12,8 @@
  * ====================================================
  */
 
-#include "fdlibm.h"
-#include "revolution/math.h" /* for isfinite macro */
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/fdlibm.h"
+#include <math.h> /* for isfinite macro */
 
 
 static const double

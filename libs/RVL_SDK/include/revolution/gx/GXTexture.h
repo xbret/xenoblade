@@ -1,15 +1,13 @@
 #ifndef RVL_SDK_GX_TEXTURE_H
 #define RVL_SDK_GX_TEXTURE_H
-#include "revolution/gx/GX.h"
-#include "revolution/gx/GXTev.h"
+#include "revolution/gx/GXInternal.h"
+#include "revolution/gx/GXTypes.h"
 #include "types.h"
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-typedef struct _GXTexObj {
-    char UNK_0x0[0x20];
-} GXTexObj;
+GX_DECL_PUBLIC_STRUCT(GXTexObj, 32);
 
 void __GXSetSUTexRegs(void);
 

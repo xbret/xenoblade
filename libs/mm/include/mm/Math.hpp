@@ -2,7 +2,7 @@
 
 #include "types.h"
 
-//Basic math utility structs.
+//Basic math utility structs/definitions.
 
 namespace mm{
 

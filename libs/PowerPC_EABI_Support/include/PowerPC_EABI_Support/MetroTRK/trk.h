@@ -416,6 +416,13 @@ typedef struct TRKCPUState{
 	u32 unk42C;
 } TRKCPUState;
 
+typedef struct TRKMemMap{
+	u32 unk0[2];
+	int unk8;
+	int unkC;
+} TRKMemMap;
+
+
 typedef struct MessageBuffer {
 	u32 unk0;
 	u32 unk4;
@@ -496,9 +503,9 @@ void TRKConstructEvent(TRKEvent*, int);
 void TRKDestructEvent(TRKEvent*);
 
 //nubinit
-TRKResult TRKInitializeNub(void);
-TRKResult TRKTerminateNub(void);
-void TRKNubWelcome(void);
+TRKResult TRK_InitializeNub(void);
+TRKResult TRK_TerminateNub(void);
+void TRK_NubWelcome(void);
 
 //serpoll
 void TRKGetInput();

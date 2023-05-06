@@ -11,7 +11,7 @@ GX_FILES:=\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/revolution/gx/GXTev.o\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/revolution/gx/GXPixel.o\
 	$(BUILD_DIR)/libs/RVL_SDK/src/revolution/gx/GXDisplayList.o\
-	$(BUILD_DIR)/libs/RVL_SDK/asm/revolution/gx/GXTransform.o\
+	$(BUILD_DIR)/libs/RVL_SDK/src/revolution/gx/GXTransform.o\
 	$(BUILD_DIR)/libs/RVL_SDK/asm/revolution/gx/GXPerf.o\
 
 DEPENDS += $(GX_FILES:.o=.d)

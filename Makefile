@@ -97,11 +97,11 @@ TRANSFORM_DEP := tools/transform-win.py
 endif
 
 # Options
-INCLUDES := -I- -i include/ -i libs/RVL_SDK/include/ -i libs/PowerPC_EABI_Support/include/
+INCLUDES := -I- -i include/ -i libs/RVL_SDK/include/ -i libs/PowerPC_EABI_Support/include/std
 ASM_INCLUDES := -I include/
 
 # TODO: fix the makefile to make objdiff work without this
-INCLUDES += -i libs/nw4r/include/ -i libs/mm/include/ -i libs/monolithlib/include/ -i src/ -i libs/NdevExi2A/include/
+INCLUDES += -i libs/nw4r/include/ -i libs/mm/include/ -i libs/monolithlib/include/ -i src/ -i libs/NdevExi2A/include/ -i libs/PowerPC_EABI_Support/include/
 
 ASFLAGS := -mgekko $(ASM_INCLUDES)
 ifeq ($(VERBOSE),1)

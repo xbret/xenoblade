@@ -6,6 +6,7 @@
 
 #include <wchar.h>
 #include <stdio.h>
+#include <string.h>
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/buffer_io.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/misc_io.h"
 
@@ -22,7 +23,7 @@ void __fread(){
 void fwrite(){
 }
 
-size_t __fwrite(const void *pPtr, size_t memb_size, size_t num_memb, FILE *file) {
+size_t __fwrite(const void* pPtr, size_t memb_size, size_t num_memb, FILE* file) {
     unsigned char* cur_ptr;
     size_t num_bytes, rem_bytes, bytes_written;
     int res, buff;
@@ -75,7 +76,7 @@ size_t __fwrite(const void *pPtr, size_t memb_size, size_t num_memb, FILE *file)
             }
 
             if (file->mode.buffer_mode == 1 && num_bytes) {
-                if ((nw = (unsigned char*) __memrchr(cur_ptr, '\n', num_bytes)) != 0) {
+                if ((nw = (unsigned char*)__memrchr(cur_ptr, '\n', num_bytes)) != 0) {
                     num_bytes = nw + 1 - cur_ptr;
                 }
             }

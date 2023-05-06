@@ -20,7 +20,7 @@
  *	Inexact flag raised if x not equal to floor(x).
  */
 
-#include "fdlibm.h"
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/fdlibm.h"
 
 #ifdef __STDC__
 static const double huge = 1.0e300;

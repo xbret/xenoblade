@@ -35,9 +35,7 @@
  * Function needed: sqrt
  */
 
-#include "fdlibm.h"
-#include <errno.h>
-#include <math.h>
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/fdlibm.h"
 
 #ifdef __STDC__
 static const double
@@ -70,7 +68,7 @@ double __ieee754_acos(x) double x;
 	hx = __HI(x);
 	ix = hx&0x7fffffff;
 	if(ix>=0x3ff00000) {	/* |x| >= 1 */
-	    u32 lx;
+	    unsigned int lx;
 	    lx = __LO(x);
 	    if(((ix-0x3ff00000)|lx)==0) {	/* |x|==1 */
 		if(hx>0) return 0.0;		/* acos(1) = 0  */

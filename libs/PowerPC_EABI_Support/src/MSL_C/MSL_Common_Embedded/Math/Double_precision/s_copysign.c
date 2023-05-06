@@ -17,7 +17,7 @@
  * with the sign bit of y.
  */
 
-#include "fdlibm.h"
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/fdlibm.h"
 
 #ifdef __STDC__
 double copysign(double x, double y)

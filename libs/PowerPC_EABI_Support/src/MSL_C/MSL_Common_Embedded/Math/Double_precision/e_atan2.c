@@ -39,7 +39,7 @@
  * to produce the hexadecimal values shown.
  */
 
-#include "fdlibm.h"
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/Math/fdlibm.h"
 
 #ifdef __STDC__
 static const double

@@ -1,7 +1,10 @@
 #include "mm/Math.hpp"
-#include <math.h>
 
 //General math constants
+
+#define PI 3.14159265f
+#define TAU 6.2831855f
+#define HALF_PI 1.5707964f
 
 namespace mm {
     const float pi = PI;

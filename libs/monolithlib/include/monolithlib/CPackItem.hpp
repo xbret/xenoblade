@@ -1,7 +1,7 @@
 #pragma once
 
 #include "types.h"
-#include <string.h>
+#include <cstring>
 
 struct PackHeader{
         u32 unk0;

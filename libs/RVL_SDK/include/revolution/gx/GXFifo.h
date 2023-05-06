@@ -1,22 +1,12 @@
 #ifndef RVL_SDK_GX_FIFO_H
 #define RVL_SDK_GX_FIFO_H
+#include "revolution/gx/GXInternal.h"
 #include "types.h"
 #ifdef __cplusplus
 extern "C" {
 #endif
 
-typedef struct _GXFifoObj {
-    void* base;        // at 0x0
-    void* end;         // at 0x4
-    u32 size;          // at 0x8
-    void* hiWatermark; // at 0xC
-    void* loWatermark; // at 0x10
-    void* readPtr;     // at 0x14
-    void* writePtr;    // at 0x18
-    u32 count;         // at 0x1C
-    u8 wrap;           // at 0x20
-    char UNK_0x21[0x80 - 0x21];
-} GXFifoObj;
+GX_DECL_PUBLIC_STRUCT(GXFifoObj, 128);
 
 void GXSetCPUFifo(GXFifoObj*);
 BOOL GXGetCPUFifo(GXFifoObj*);

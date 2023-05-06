@@ -8,15 +8,23 @@
 extern "C" {
 #endif // ifdef __cplusplus
 
-int __signbitf(float);
-int __fpclassifyf(float);
-int __signbitd(double);
-int __fpclassifyd(double);
 
+#if defined(i386) || defined(i486) || defined(intel) || defined(x86) || defined(i86pc) || defined(__alpha) || defined(__osf__)
+#define __LITTLE_ENDIAN
+#endif
 
-#define fpclassify(x) ((sizeof(x) == sizeof(float)) ? __fpclassifyf((float)(x)) : __fpclassifyd((double)(x)))
-#define isfinite(x) ((fpclassify(x) > 2))
-#define signbit(x) ((sizeof(x) == sizeof(float)) ? __signbitf((float)(x)) : __signbitd((double)(x)))
+#ifdef __LITTLE_ENDIAN
+#define __HI(x)  *(1 + (int*)&x)
+#define __LO(x)  *(int*)&x
+#define __HIp(x) *(1 + (int*)x)
+#define __LOp(x) *(int*)x
+#else
+#define __HI(x)  *(int*)&x
+#define __LO(x)  *(1 + (int*)&x)
+#define __HIp(x) *(int*)x
+#define __LOp(x) *(1 + (int*)x)
+#endif
+
 
 #ifdef __cplusplus
 };

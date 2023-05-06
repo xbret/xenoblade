@@ -1,5 +1,5 @@
 #include "mm/StringUtils.hpp"
-#include <string.h>
+#include <cstring>
 
 namespace mm{
 
@@ -117,7 +117,7 @@ namespace mm{
 		int iVar4;
 		int iVar5;
 		int iVar6;
-		uint uVar7;
+		u32 uVar7;
 		short local_58 [2];
 		char acStack_54 [16];
 		size_t local_44;

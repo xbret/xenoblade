@@ -4,14 +4,14 @@ static s32 TRK_mainError;
 
 int TRK_main(void)
 {
-	TRK_mainError = TRKInitializeNub();
+	TRK_mainError = TRK_InitializeNub();
 
 	if (!TRK_mainError) {
-		TRKNubWelcome();
+		TRK_NubWelcome();
 		TRKNubMainLoop();
 	}
 
-	TRK_mainError = TRKTerminateNub();
+	TRK_mainError = TRK_TerminateNub();
 
 	return TRK_mainError;
 }

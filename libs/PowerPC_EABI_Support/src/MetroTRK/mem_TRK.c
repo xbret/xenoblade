@@ -7,14 +7,11 @@ static u8 ppc_readbyte1(const u8* ptr){
 }
 
 static void ppc_writebyte1(u8* ptr, u8 val){
-	u32 iVar1;
-    u32 *alignedPtr;
-    u32 uVar3;
-    
-    alignedPtr = (u32 *)((u32)ptr & ~3);
-	iVar1 = (3 - ((u32)ptr - (u32)alignedPtr)) << 3;
-	uVar3 = 0xff << iVar1;
-	*alignedPtr = (*alignedPtr & ~uVar3) | (uVar3 & (val << iVar1));
+    u32* alignedPtr = (u32 *)((u32)ptr & ~3);
+    u32 v = *alignedPtr;
+    u32 uVar3 = 0xff << ((3 - ((u32)ptr - (u32)alignedPtr)) << 3);
+    u32 iVar1 = (3 - ((u32)ptr - (u32)alignedPtr)) << 3;
+	*alignedPtr = (v & ~uVar3) | (uVar3 & (val << iVar1));
 }
 
 void* TRK_memcpy(void* dst, const void* src, int n){
