@@ -16,8 +16,7 @@ public:
     virtual float randSign() = 0;  //0x14
 };
 
-//Check if public is necessary for IRandomizer later
-//Also consider maybe omitting the unused constructors/destructors?
+//Consider maybe omitting the unused constructors/destructors?
 class CERandomizer : public IRandomizer {
 public:
     CERandomizer(){}
@@ -43,7 +42,7 @@ public:
 class CERandomizerSimple : public IRandomizer {
 public:
     CERandomizerSimple();
-    ~CERandomizerSimple() {}
+    ~CERandomizerSimple(){}
 
     virtual u32 rand(){
         u32 temp = seed1 * 673 + 945;

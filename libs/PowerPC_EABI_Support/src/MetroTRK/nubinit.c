@@ -1,42 +1,44 @@
-#include "PowerPC_EABI_Support/MetroTRK/trk.h"
+#include "PowerPC_EABI_Support/MetroTRK/nubinit.h"
+
+extern DSError TRKInitializeTarget();
 
 BOOL gTRKBigEndian;
 
-TRKResult TRK_InitializeNub(void)
+DSError TRK_InitializeNub(void)
 {
-	TRKResult result;
-	TRKResult resultTemp;
+	DSError result;
+	DSError resultTemp;
 
 	result = TRK_InitializeEndian();
 
-	if (result == TRKSuccess) {
+	if (result == kNoError) {
 		result = TRKInitializeEventQueue();
 	}
-	if (result == TRKSuccess) {
+	if (result == kNoError) {
 		result = TRKInitializeMessageBuffers();
 	}
 	InitializeProgramEndTrap();
-	if (result == TRKSuccess) {
+	if (result == kNoError) {
 		result = TRKInitializeSerialHandler();
 	}
-	if (result == TRKSuccess) {
+	if (result == kNoError) {
 		result = TRKInitializeTarget();
 	}
-	if (result == TRKSuccess) {
+	if (result == kNoError) {
 
 		resultTemp = TRKInitializeIntDrivenUART(1, 0, &gTRKInputPendingPtr);
 		TRKTargetSetInputPendingPtr(gTRKInputPendingPtr);
-		if (resultTemp != TRKSuccess) {
+		if (resultTemp != kNoError) {
 			result = resultTemp;
 		}
 	}
 	return result;
 }
 
-TRKResult TRK_TerminateNub(void)
+DSError TRK_TerminateNub(void)
 {
 	TRKTerminateSerialHandler();
-	return TRKSuccess;
+	return kNoError;
 }
 
 void TRK_NubWelcome(void)

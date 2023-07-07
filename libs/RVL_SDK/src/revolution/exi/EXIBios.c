@@ -279,6 +279,10 @@ BOOL EXIProbe(EXIChannel chan) {
     return FALSE;
 }
 
+//unused
+void EXIProbeEx(){
+}
+
 static BOOL __EXIAttach(EXIChannel chan, EXICallback callback) {
     EXIData* exi = &Ecb[chan];
     BOOL enabled;
@@ -340,6 +344,10 @@ BOOL EXIDetach(EXIChannel chan) {
     return TRUE;
 }
 
+//unused
+void EXISelectSD(){
+}
+
 BOOL EXISelect(EXIChannel chan, u32 dev, u32 freq) {
     EXIData* exi = &Ecb[chan];
     BOOL enabled;
@@ -378,6 +386,10 @@ BOOL EXISelect(EXIChannel chan, u32 dev, u32 freq) {
     return TRUE;
 }
 
+//unused
+static inline void EXISelectEx(){
+}
+
 BOOL EXIDeselect(EXIChannel chan) {
     EXIData* exi = &Ecb[chan];
     u32 flag;
@@ -412,6 +424,10 @@ BOOL EXIDeselect(EXIChannel chan) {
     }
 
     return TRUE;
+}
+
+//unused
+static inline void EXIDeselectEx(){
 }
 
 static void EXIIntrruptHandler(s32 intr, OSContext* ctx) {
@@ -592,6 +608,10 @@ BOOL EXIUnlock(EXIChannel chan) {
     return TRUE;
 }
 
+//unused
+void EXIGetState(){
+}
+
 // Does nothing???
 static void UnlockedHandler(EXIChannel chan, OSContext* ctx) {
 #pragma unused(ctx)
@@ -660,4 +680,16 @@ s32 EXIGetID(EXIChannel chan, u32 dev, u32* out) {
     }
 
     return ret == 0;
+}
+
+//unused
+void EXIGetIDEx(){
+}
+
+//unused
+void EXIGetType(){
+}
+
+//unused
+void EXIGetTypeString(){
 }

@@ -1,6 +1,5 @@
-
-#ifndef _DOLPHIN_OS_OSUTIL_H
-#define _DOLPHIN_OS_OSUTIL_H
+#ifndef _RVL_SDK_OS_OSUTIL_H
+#define _RVL_SDK_OS_OSUTIL_H
 
 #include "types.h"
 

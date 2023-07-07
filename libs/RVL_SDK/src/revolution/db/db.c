@@ -33,7 +33,7 @@ asm void __DBExceptionDestination(void){
     mtmsr r3
 
     b __DBExceptionDestinationAux
-    }
+}
 
 BOOL __DBIsExceptionMarked(u8 exc) {
     return __DBInterface->exceptionMask & (1 << exc);

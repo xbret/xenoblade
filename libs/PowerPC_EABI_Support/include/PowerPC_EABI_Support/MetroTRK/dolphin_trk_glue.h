@@ -3,6 +3,7 @@
 
 #include "types.h"
 #include "revolution/OS.h"
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/UART.h"
 
 typedef enum{
     HARDWARE_GDEV = 0,
@@ -27,5 +28,17 @@ typedef struct DBCommTable{
     DBCommFunc pre_continue_func;
     DBCommFunc post_stop_func;
 } DBCommTable;
+
+int InitMetroTRKCommTable(int);
+void TRKUARTInterruptHandler();
+UARTError TRKInitializeIntDrivenUART(u32, u32, void*);
+void EnableEXI2Interrupts();
+int TRKPollUART();
+UARTError TRKReadUARTN(void*, u32);
+UARTError TRKWriteUARTN(const void*, u32);
+void ReserveEXI2Port(void);
+void UnreserveEXI2Port(void);
+void TRK_board_display(char*);
+void InitializeProgramEndTrap();
 
 #endif

@@ -1,4 +1,5 @@
-#include "PowerPC_EABI_Support/MetroTRK/trk.h"
+#include "PowerPC_EABI_Support/MetroTRK/main_TRK.h"
+#include "PowerPC_EABI_Support/MetroTRK/mainloop.h"
 
 static s32 TRK_mainError;
 

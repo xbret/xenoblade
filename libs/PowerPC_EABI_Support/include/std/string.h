@@ -2,12 +2,13 @@
 #define _STRING_H
 
 #include "types.h"
-#include "PowerPC_EABI_Support/MSL_C/MSL_Common/string_api.h"
-#include "PowerPC_EABI_Support/MSL_C/MSL_Common/extras.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common/string_api.h"
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common/extras.h"
 
 char* strcpy(char*, const char*);
 char* strncpy(char*, const char*, size_t);

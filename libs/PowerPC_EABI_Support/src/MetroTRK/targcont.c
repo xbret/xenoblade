@@ -1,10 +1,10 @@
-#include "PowerPC_EABI_Support/MetroTRK/trk.h"
+#include "PowerPC_EABI_Support/MetroTRK/targcont.h"
 
-TRKResult TRKTargetContinue(void)
+DSError TRKTargetContinue(void)
 {
 	TRKTargetSetStopped(0);
 	UnreserveEXI2Port();
 	TRKSwapAndGo();
 	ReserveEXI2Port();
-	return TRKSuccess;
+	return kNoError;
 }

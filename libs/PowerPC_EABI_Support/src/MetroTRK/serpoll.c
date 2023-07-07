@@ -1,5 +1,12 @@
-#include "PowerPC_EABI_Support/MetroTRK/trk.h"
-#include "types.h"
+#include "PowerPC_EABI_Support/MetroTRK/serpoll.h"
+#include "PowerPC_EABI_Support/MetroTRK/nubevent.h"
+
+typedef struct TRKBufferUnk{
+    MessageBuffer* unk0;
+    int unk4;
+    u8 unk8[0x40];
+    u8 mBuffer[0x880]; //0x48
+} TRKBufferUnk;
 
 void* gTRKInputPendingPtr;
 
@@ -49,10 +56,10 @@ void TRKProcessInput(int bufferIndex){
     TRKPostEvent(&event);
 }
 
-TRKResult TRKInitializeSerialHandler(){
-    return TRKSuccess;
+DSError TRKInitializeSerialHandler(){
+    return kNoError;
 }
 
-TRKResult TRKTerminateSerialHandler(){
-    return TRKSuccess;
+DSError TRKTerminateSerialHandler(){
+    return kNoError;
 }

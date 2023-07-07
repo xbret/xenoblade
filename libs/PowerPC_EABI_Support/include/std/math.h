@@ -2,11 +2,12 @@
 #define _MATH_H
 
 #include "types.h"
-#include "PowerPC_EABI_Support/MSL_C/MSL_Common/math_api.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif // ifdef __cplusplus
+
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common/math_api.h"
 
 extern int __float_nan[];
 extern int __float_huge[];

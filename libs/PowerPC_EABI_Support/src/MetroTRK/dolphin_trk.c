@@ -1,6 +1,11 @@
 #include "PowerPC_EABI_Support/MetroTRK/trk.h"
+#include "PowerPC_EABI_Support/MetroTRK/mem_TRK.h"
 #include "PowerPC_EABI_Support/MetroTRK/dolphin_trk.h"
+#include "PowerPC_EABI_Support/MetroTRK/dolphin_trk_glue.h"
 #include "PowerPC_EABI_Support/MetroTRK/__exception.h"
+#include "PowerPC_EABI_Support/MetroTRK/mpc_7xx_603e.h"
+#include "PowerPC_EABI_Support/MetroTRK/targimpl.h"
+#include "PowerPC_EABI_Support/MetroTRK/main_TRK.h"
 #include "revolution/OS.h"
 
 
@@ -118,7 +123,7 @@ void EnableMetroTRKInterrupts(){
 
 u32 TRKTargetTranslate(u32 r3){
     if(r3 >= lc_base && r3 < lc_base + 0x4000){
-        if(gTRKCPUState.unk238 & 3) return r3;
+        if(gTRKCPUState.dbatl3 & 3) return r3;
     }
 
     if(r3 < 0x3000000){
@@ -141,7 +146,7 @@ static void TRK_copy_vector(u32 offset){
 void __TRK_copy_vectors(){
     u32 r3 = lc_base;
 
-    if(r3 <= 0x44 && r3 + 0x4000 > 0x44 && (gTRKCPUState.unk238 & 0x3)){
+    if(r3 <= 0x44 && r3 + 0x4000 > 0x44 && (gTRKCPUState.dbatl3 & 0x3)){
         r3 = 0x44;
     }else{
         r3 = 0x80000044;
@@ -161,11 +166,11 @@ void __TRK_copy_vectors(){
     }while(i <= 14);
 }
 
-TRKResult TRKInitializeTarget(){
-    gTRKState.mIsStopped = TRUE;
-    gTRKState.unk8C = __TRK_get_MSR();
+DSError TRKInitializeTarget(){
+    gTRKState.stopped = TRUE;
+    gTRKState.msr = __TRK_get_MSR();
     lc_base = 0xE0000000;
-    return TRKSuccess;
+    return kNoError;
 }
 
 void __TRKreset(){

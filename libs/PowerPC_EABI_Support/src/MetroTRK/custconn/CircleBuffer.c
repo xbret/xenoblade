@@ -1,4 +1,5 @@
 #include "PowerPC_EABI_Support/MetroTRK/custconn/CircleBuffer.h"
+#include "PowerPC_EABI_Support/MetroTRK/custconn/MWCriticalSection_gc.h"
 #include "PowerPC_EABI_Support/MetroTRK/trk.h"
 
 u32 CBGetBytesAvailableForRead(CircleBuffer* cb){

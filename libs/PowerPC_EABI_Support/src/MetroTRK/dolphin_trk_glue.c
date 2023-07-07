@@ -1,7 +1,9 @@
 #include "revolution/BASE.h"
 #include "PowerPC_EABI_Support/MetroTRK/trk.h"
+#include "PowerPC_EABI_Support/MetroTRK/mem_TRK.h"
 #include "PowerPC_EABI_Support/MetroTRK/dolphin_trk_glue.h"
 #include "PowerPC_EABI_Support/MetroTRK/custconn/cc_gdev.h"
+#include "PowerPC_EABI_Support/MetroTRK/targimpl.h"
 
 
 
@@ -108,20 +110,14 @@ int TRKPollUART(){
     return gDBCommTable.peek_func();
 }
 
-int TRKReadUARTN(void* bytes, u32 limit){
+UARTError TRKReadUARTN(void* bytes, u32 limit){
     int r3 = gDBCommTable.read_func(bytes, limit);
-    int r0 = -r3;
-    r0 |= r3;
-    r3 = r0 >> 31;
-    return r3;
+    return ((-r3 | r3) >> 31);
 }
 
-int TRKWriteUARTN(const void* bytes, u32 length){
+UARTError TRKWriteUARTN(const void* bytes, u32 length){
     int r3 = gDBCommTable.write_func(bytes, length);
-    int r0 = -r3;
-    r0 |= r3;
-    r3 = r0 >> 31;
-    return r3;
+    return ((-r3 | r3) >> 31);
 }
 
 //unused

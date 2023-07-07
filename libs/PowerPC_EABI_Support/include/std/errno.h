@@ -5,7 +5,6 @@
 extern "C" {
 #endif
 
-
 //Error constants
 #define E2BIG 7
 #define EACCES 13

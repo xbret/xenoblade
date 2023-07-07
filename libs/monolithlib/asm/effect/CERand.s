@@ -146,7 +146,7 @@
 /* 804DB614 004A4BD4  4E 80 00 20 */	blr 
 .endfn execute__6CERandFf
 
-.fn randVec__6CERandFP4Vec3, global
+.fn randVec__6CERandFPQ22mm4Vec3, global
 /* 804DB618 004A4BD8  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 804DB61C 004A4BDC  7C 08 02 A6 */	mflr r0
 /* 804DB620 004A4BE0  90 01 00 34 */	stw r0, 0x34(r1)
@@ -196,7 +196,7 @@
 /* 804DB6D0 004A4C90  7C 08 03 A6 */	mtlr r0
 /* 804DB6D4 004A4C94  38 21 00 30 */	addi r1, r1, 0x30
 /* 804DB6D8 004A4C98  4E 80 00 20 */	blr 
-.endfn randVec__6CERandFP4Vec3
+.endfn randVec__6CERandFPQ22mm4Vec3
 
 .fn randFHalf__12CERandomizerFv, global
 /* 804DB6DC 004A4C9C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -220,7 +220,7 @@
 /* 804DB724 004A4CE4  4E 80 00 20 */	blr 
 .endfn randFHalf__12CERandomizerFv
 
-.fn randSignVec__6CERandFP4Vec3, global
+.fn randSignVec__6CERandFPQ22mm4Vec3, global
 /* 804DB728 004A4CE8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DB72C 004A4CEC  7C 08 02 A6 */	mflr r0
 /* 804DB730 004A4CF0  90 01 00 14 */	stw r0, 0x14(r1)
@@ -273,7 +273,7 @@
 /* 804DB7D4 004A4D94  7C 08 03 A6 */	mtlr r0
 /* 804DB7D8 004A4D98  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DB7DC 004A4D9C  4E 80 00 20 */	blr 
-.endfn randSignVec__6CERandFP4Vec3
+.endfn randSignVec__6CERandFPQ22mm4Vec3
 
 .fn randSign__12CERandomizerFv, global
 /* 804DB7E0 004A4DA0  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -635,7 +635,7 @@
 
 .obj "@eti_800387C8", local
 .hidden "@eti_800387C8"
-	.4byte randVec__6CERandFP4Vec3
+	.4byte randVec__6CERandFPQ22mm4Vec3
 	.4byte 0x000000C4
 	.4byte "@etb_800207A8"
 .endobj "@eti_800387C8"
@@ -649,7 +649,7 @@
 
 .obj "@eti_800387E0", local
 .hidden "@eti_800387E0"
-	.4byte randSignVec__6CERandFP4Vec3
+	.4byte randSignVec__6CERandFPQ22mm4Vec3
 	.4byte 0x000000B8
 	.4byte "@etb_800207B8"
 .endobj "@eti_800387E0"

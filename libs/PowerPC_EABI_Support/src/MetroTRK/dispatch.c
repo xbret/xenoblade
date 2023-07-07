@@ -1,7 +1,7 @@
-#include "PowerPC_EABI_Support/MetroTRK/trk.h"
+#include "PowerPC_EABI_Support/MetroTRK/dispatch.h"
 
-u32 TRKDispatchMessage(MessageBuffer* buffer) {
-    u32 result = 0x500;
+DSError TRKDispatchMessage(MessageBuffer* buffer) {
+    DSError result = TRKError500;
     MessageBuffer* temp = buffer;
     
     TRKSetBufferPosition(buffer, 0);
@@ -10,7 +10,7 @@ u32 TRKDispatchMessage(MessageBuffer* buffer) {
     
     switch(command){
         case kDSConnect:
-            result = TRKDoConnect(temp);
+            result = TRK_DoConnect(temp);
         	break;
         case kDSDisconnect:
             result = TRKDoDisconnect(temp);

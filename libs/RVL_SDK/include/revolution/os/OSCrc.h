@@ -1,4 +1,3 @@
-
 #ifndef RVL_SDK_OS_CRC_H
 #define RVL_SDK_OS_CRC_H
 #include "types.h"

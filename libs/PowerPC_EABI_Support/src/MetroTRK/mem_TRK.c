@@ -1,4 +1,4 @@
-#include "PowerPC_EABI_Support/MetroTRK/trk.h"
+#include "PowerPC_EABI_Support/MetroTRK/mem_TRK.h"
 
 
 static u8 ppc_readbyte1(const u8* ptr){
@@ -14,11 +14,11 @@ static void ppc_writebyte1(u8* ptr, u8 val){
 	*alignedPtr = (v & ~uVar3) | (uVar3 & (val << iVar1));
 }
 
-void* TRK_memcpy(void* dst, const void* src, int n){
+void* TRK_memcpy(void* dst, const void* src, int size){
     u8* srcTemp = (u8*)src;
     u8* dstTemp = (u8*)dst;
     
-    for(int i = 0; i != n; i++){
+    for(int i = 0; i != size; i++){
 		ppc_writebyte1(dstTemp, ppc_readbyte1(srcTemp));
 		srcTemp++;
 		dstTemp++;
@@ -27,17 +27,17 @@ void* TRK_memcpy(void* dst, const void* src, int n){
 	return dst;
 }
 
-void TRK_fill_mem(u8* dst, int val, int n){
+void TRK_fill_mem(u8* dst, int val, int size){
 	u8 b = val;
 
-    for(int i = 0; i != n; i++){
+    for(int i = 0; i != size; i++){
 		ppc_writebyte1(dst, b);
 		dst++;
 	}
 }
 
-void* TRK_memset(void* dst, int val, int n)
+void* TRK_memset(void* dst, int val, int size)
 {
-	TRK_fill_mem(dst, val, n);
+	TRK_fill_mem(dst, val, size);
 	return dst;
 }

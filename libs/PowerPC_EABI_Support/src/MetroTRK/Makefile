@@ -32,6 +32,7 @@ DEPENDS += $(TRK_FILES:.o=.d)
 $(TRK_FILES): CFLAGS += -Cpp_exceptions off -inline on
 
 $(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/dolphin_trk_glue.o: CFLAGS += -str pool
+$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/msghndlr.o: CFLAGS += -str pool -use_lmw_stmw off
 
 $(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/TRK_Hollywood_Revolution.a: $(TRK_FILES)
 	@echo Linking... $@

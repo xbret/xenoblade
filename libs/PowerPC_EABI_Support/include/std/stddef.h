@@ -1,5 +1,5 @@
-#ifndef MSL_STDDEF_H
-#define MSL_STDDEF_H
+#ifndef _STDDEF_H
+#define _STDDEF_H
 #ifdef __cplusplus
 extern "C" {
 #endif

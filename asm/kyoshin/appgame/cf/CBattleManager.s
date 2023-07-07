@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-
+#r3: CfObjectPc*, r4: CfObjectEne*
 .fn func_800D7A04, global
 /* 800D7A04 000A0FC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800D7A08 000A0FC8  7C 08 02 A6 */	mflr r0
@@ -223,6 +223,7 @@
 /* 800D7D20 000A12E0  4E 80 00 20 */	blr 
 .endfn func_800D7A04
 
+#r3:
 .fn func_800D7D24, global
 /* 800D7D24 000A12E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800D7D28 000A12E8  7C 08 02 A6 */	mflr r0
@@ -336,6 +337,7 @@
 /* 800D7E9C 000A145C  4E 80 00 20 */	blr 
 .endfn func_800D7D24
 
+#r3: CfObjectPc*, r4:
 .fn func_800D7EA0, global
 /* 800D7EA0 000A1460  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 800D7EA4 000A1464  7C 08 02 A6 */	mflr r0
@@ -545,6 +547,7 @@
 /* 800D81A4 000A1764  4E 80 00 20 */	blr 
 .endfn func_800D7EA0
 
+#r3: CfObjectPc*, r4: CfObjectPc*, r5:
 .fn func_800D81A8, global
 /* 800D81A8 000A1768  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 800D81AC 000A176C  7C 08 02 A6 */	mflr r0
@@ -4583,6 +4586,7 @@
 /* 800DBAC8 000A5088  4E 80 00 20 */	blr 
 .endfn func_800DBA2C
 
+#calculate evasion?
 .fn func_800DBACC, global
 /* 800DBACC 000A508C  94 21 FF 40 */	stwu r1, -0xc0(r1)
 /* 800DBAD0 000A5090  7C 08 02 A6 */	mflr r0

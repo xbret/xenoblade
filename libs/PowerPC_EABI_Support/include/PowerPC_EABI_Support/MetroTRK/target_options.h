@@ -3,7 +3,14 @@
 
 #include "types.h"
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 void SetUseSerialIO(u8);
 u8 GetUseSerialIO(void);
 
+#ifdef __cplusplus
+}
+#endif
 #endif

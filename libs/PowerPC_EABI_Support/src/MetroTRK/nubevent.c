@@ -1,13 +1,14 @@
-#include "PowerPC_EABI_Support/MetroTRK/trk.h"
+#include "PowerPC_EABI_Support/MetroTRK/nubevent.h"
+#include "PowerPC_EABI_Support/MetroTRK/mem_TRK.h"
 
 TRKEventQueue gTRKEventQueue;
 
 
-static inline TRKResult TRKReleaseMutex(void* p1) { return TRKSuccess; }
-static inline TRKResult TRKAcquireMutex(void* p1) { return TRKSuccess; }
-static inline TRKResult TRKInitializeMutex(void* p1) { return TRKSuccess; }
+static inline DSError TRKReleaseMutex(void* p1) { return kNoError; }
+static inline DSError TRKAcquireMutex(void* p1) { return kNoError; }
+static inline DSError TRKInitializeMutex(void* p1) { return kNoError; }
 
-TRKResult TRKInitializeEventQueue()
+DSError TRKInitializeEventQueue()
 {
 	TRKInitializeMutex(&gTRKEventQueue);
 	TRKAcquireMutex(&gTRKEventQueue);
@@ -15,7 +16,7 @@ TRKResult TRKInitializeEventQueue()
 	gTRKEventQueue.mNextSlotToOverwrite = 0;
 	gTRKEventQueue._24 = 0x100;
 	TRKReleaseMutex(&gTRKEventQueue);
-	return TRKSuccess;
+	return kNoError;
 }
 
 //unused
@@ -44,9 +45,9 @@ BOOL TRKGetNextEvent(TRKEvent* ev)
 	return ret;
 }
 
-TRKResult TRKPostEvent(TRKEvent* ev)
+DSError TRKPostEvent(TRKEvent* ev)
 {
-	TRKResult ret = 0;
+	DSError ret = 0;
 	int evID;
 
 	TRKAcquireMutex(&gTRKEventQueue);

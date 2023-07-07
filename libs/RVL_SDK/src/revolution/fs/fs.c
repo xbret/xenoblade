@@ -231,14 +231,6 @@ s32 _isfsFuncCb(s32 result, void* arg) {
     return result;
 }
 
-static s32 _FSGetStatsCb(s32 result, FSCommandBlock* block) {
-    if (result == IPC_RESULT_OK) {
-        memcpy(block->getStatsCtx.statsOut, block->ioctlWork, sizeof(FSStats));
-    }
-
-    return IPC_RESULT_OK;
-}
-
 //unused
 void ISFS_Format(){
 }
@@ -249,6 +241,14 @@ void ISFS_FormatAsync(){
 
 //unused
 void ISFS_GetStats(){
+}
+
+static s32 _FSGetStatsCb(s32 result, FSCommandBlock* block) {
+    if (result == IPC_RESULT_OK) {
+        memcpy(block->getStatsCtx.statsOut, block->ioctlWork, sizeof(FSStats));
+    }
+
+    return IPC_RESULT_OK;
 }
 
 //unused
@@ -711,6 +711,21 @@ s32 ISFS_RenameAsync(const char* from, const char* to,
 s32 ISFS_GetUsage(const char* path, s32* blockCountOut, s32* fileCountOut){
 }
 
+static s32 _FSGetUsageCb(s32 result, FSCommandBlock* block) {
+    u8* work;
+
+    if (result == IPC_RESULT_OK) {
+        work = ROUND_UP_PTR(block->ioctlWork + (sizeof(IPCIOVector) * 4), 32);
+
+        work = ROUND_UP_PTR(work + FS_MAX_PATH, 32);
+        *block->getUsageCtx.blockCountOut = *(u32*)work;
+
+        work = ROUND_UP_PTR(work + sizeof(u32), 32);
+        *block->getUsageCtx.fileCountOut = *(u32*)work;
+    }
+
+    return IPC_RESULT_OK;
+}
 
 s32 ISFS_GetUsageAsync(const char* path, s32* blockCountOut,
                         s32* fileCountOut, FSAsyncCallback callback, void* callbackArg) {
@@ -769,22 +784,6 @@ s32 ISFS_GetUsageAsync(const char* path, s32* blockCountOut,
 end:
 
     return ret;
-}
-
-static s32 _FSGetUsageCb(s32 result, FSCommandBlock* block) {
-    u8* work;
-
-    if (result == IPC_RESULT_OK) {
-        work = ROUND_UP_PTR(block->ioctlWork + (sizeof(IPCIOVector) * 4), 32);
-
-        work = ROUND_UP_PTR(work + FS_MAX_PATH, 32);
-        *block->getUsageCtx.blockCountOut = *(u32*)work;
-
-        work = ROUND_UP_PTR(work + sizeof(u32), 32);
-        *block->getUsageCtx.fileCountOut = *(u32*)work;
-    }
-
-    return IPC_RESULT_OK;
 }
 
 s32 ISFS_CreateFile(const char* path, u32 attr, u32 ownerPerm,

@@ -1,6 +1,10 @@
 #ifndef _TRK_MSGCMD_H
 #define _TRK_MSGCMD_H
 
+#ifdef __cplusplus
+extern "C"{
+#endif
+
 typedef enum {
     kDSIONoError = 0x00,
     kDSIOError = 0x01,
@@ -34,6 +38,43 @@ typedef enum {
 	kDSPositionFile = 0xD4
 } MessageCommandID;
 
+//Memory commands options
+#define DS_MSG_MEMORY_SEGMENTED	0x01		/* non-flat addr space */
+#define DS_MSG_MEMORY_EXTENDED	0x02		/* > 32-bit data addr */
+#define DS_MSG_MEMORY_PROTECTED	0x04		/* non-user memory */
+#define DS_MSG_MEMORY_USERVIEW	0x08		/* breakpoints are invisible */
+
+
+#define DS_MSG_MEMORY_SPACE_PROGRAM	0x00
+#define DS_MSG_MEMORY_SPACE_DATA	0x40
+#define DS_MSG_MEMORY_SPACE_IO		0x80
+
+//Others
+
+#define DS_MSG_MEMORY_SPACE_MASK	0xc0
+
+#define DS_MAXREADWRITELENGTH	0x0800	/* 2K data portion */
+#define DS_MAXMESSAGESIZE (DS_MAXREADWRITELENGTH + 0x80)
+											/* max size of all message including cmd hdr */
+#define MAXMESSAGESIZE	DS_MAXMESSAGESIZE
+
+//Register commands options
+typedef enum {
+	kDSRegistersDefault = 0x0,
+	kDSRegistersFP = 0x1,
+	kDSRegistersExtended1 = 0x2,
+	kDSRegistersExtended2 = 0x3
+} DSMessageRegisterOptions;
+
+//Step command options
+typedef enum {
+	kDSStepIntoCount = 0x00,			/* Exec count instructions & stop */
+	kDSStepIntoRange = 0x01,			/* Exec until PC is out of specified range */
+	kDSStepOverCount = 0x10,			/* Step over 1*count instructions & stop */
+	kDSStepOverRange = 0x11				/* Step over until PC is out of specified range */
+} DSMessageStepOptions;
+
+//Reply errors
 typedef enum {
 	kDSReplyNoError = 0x00,
 	kDSReplyError = 0x01,
@@ -56,6 +97,10 @@ typedef enum {
 	kDSReplyInvalidProcessId = 0x21,
 	kDSReplyInvalidThreadId = 0x22,
 	kDSDebugSecurityError = 0x23
-} DSError;
+} DSReplyError;
 
+
+#ifdef __cplusplus
+}
+#endif
 #endif

@@ -7,7 +7,7 @@ class CArcItem : IWorkEvent {
 public:
     CArcItem(int param);
     virtual ~CArcItem();
-    virtual BOOL OnFileEvent();
+    virtual bool OnFileEvent();
 
     int unk4;
     u8 unk8[0x24 - 0x8];

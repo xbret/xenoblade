@@ -1,4 +1,4 @@
-#include "PowerPC_EABI_Support/MetroTRK/trk.h"
+#include "PowerPC_EABI_Support/MetroTRK/string_TRK.h"
 
 int TRK_strlen(const char* s) {
     u8 c;

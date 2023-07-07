@@ -1,8 +1,8 @@
-#include "PowerPC_EABI_Support/MetroTRK/trk.h"
+#include "PowerPC_EABI_Support/MetroTRK/msg.h"
 
 TRKPacketSeq gPacketSeq;
 
-TRKResult TRKMessageSend(TRK_Msg* msg)
+DSError TRK_MessageSend(TRK_Msg* msg)
 {
     u16 val = gPacketSeq.unk0;
     if(val == 0) val = 1;
@@ -11,5 +11,5 @@ TRKResult TRKMessageSend(TRK_Msg* msg)
 
 	u32 write_val = TRKWriteUARTN(&msg->mMsg, msg->mMsgLength);
 	if(write_val != 0) OSReport("MetroTRK - TRK_WriteUARTN returned %ld\n", write_val);
-	return TRKSuccess;
+	return 0;
 }

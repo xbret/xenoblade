@@ -1,5 +1,7 @@
-#include "types.h"
-#include "PowerPC_EABI_Support/MetroTRK/trk.h"
+#include "PowerPC_EABI_Support/MetroTRK/msgbuf.h"
+#include "PowerPC_EABI_Support/MetroTRK/dispatch.h"
+#include "PowerPC_EABI_Support/MetroTRK/nubevent.h"
+#include "PowerPC_EABI_Support/MetroTRK/mainloop.h"
 
 //unused
 void TRKHandleRequestEvent(void){

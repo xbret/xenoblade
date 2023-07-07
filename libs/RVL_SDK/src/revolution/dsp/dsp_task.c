@@ -312,7 +312,7 @@ void __DSP_insert_task(DSPTask* task) {
     }
 }
 
-//Unused
+//unused
 void __DSP_add_task(DSPTask* task){
 }
 

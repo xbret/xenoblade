@@ -1,4 +1,4 @@
-#include "PowerPC_EABI_Support/MetroTRK/trk.h"
+#include "PowerPC_EABI_Support/MetroTRK/targimpl.h"
 
 static u32 gTRKExceptionStatus[4] = {
     0,
@@ -13,6 +13,14 @@ static TRKMemMap gTRKMemMap = {
     1,
     1
 };
+
+TRKRestoreFlags gTRKRestoreFlags;
+TRKStepStatus gTRKStepStatus;
+TRKSaveState gTRKSaveState;
+u8 TRKvalue128_temp[16];
+TRKState gTRKState;
+TRKCPUState gTRKCPUState;
+
 
 asm u32 __TRK_get_MSR(){
     nofralloc
@@ -269,11 +277,11 @@ void TRKTargetFlushCache(){
 }
 
 BOOL TRKTargetStopped(){
-    return gTRKState.mIsStopped;
+    return gTRKState.stopped;
 }
 
 void TRKTargetSetStopped(BOOL val){
-    gTRKState.mIsStopped = val;
+    gTRKState.stopped = val;
 }
 
 int TRKTargetStop(){
@@ -323,8 +331,8 @@ void TRKPPCAccessSpecialReg(r3, r4){
 
 }
 
-void TRKTargetSetInputPendingPtr(u32 val){
-    gTRKState.unkA0 = val;
+void TRKTargetSetInputPendingPtr(void* ptr){
+    gTRKState.trkInputPendingPtr = ptr;
 }
 
 //unused

@@ -1,0 +1,19 @@
+#ifndef TRK_SERPOLL
+#define TRK_SERPOLL
+
+#include "types.h"
+#include "PowerPC_EABI_Support/MetroTRK/trk.h"
+
+#ifdef __cplusplus
+extern "C"{
+#endif
+
+void TRKGetInput();
+void TRKProcessInput(int);
+DSError TRKInitializeSerialHandler();
+DSError TRKTerminateSerialHandler();
+
+#ifdef __cplusplus
+}
+#endif
+#endif

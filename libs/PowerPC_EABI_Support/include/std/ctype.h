@@ -3,12 +3,12 @@
 
 #include "types.h"
 #include <locale.h>
-#include "PowerPC_EABI_Support/MSL_C/MSL_Common/ctype_api.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
+#include "PowerPC_EABI_Support/MSL_C/MSL_Common/ctype_api.h"
 
 static inline int isalnum(int c) {
     return (c < 0 || c >= 256) ? 0 : (int)(_current_locale.ctype_cmpt_ptr->ctype_map_ptr[c] & ctype_alnum);

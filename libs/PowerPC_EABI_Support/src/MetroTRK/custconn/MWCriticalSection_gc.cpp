@@ -1,9 +1,7 @@
 #include "types.h"
+#include "revolution/OS.h"
 
 extern "C" {
-bool OSRestoreInterrupts(uint);
-uint OSDisableInterrupts();
-
 
 void MWInitializeCriticalSection(uint* section) { }
 

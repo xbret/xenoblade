@@ -12,57 +12,6 @@
 #define ARCNodeIsFolder(node) ((node).packed_type_name & 0xff000000)
 #define ARCNodeGetName(node) ((node).packed_type_name & 0x00ffffff)
 
-static u32 entryToPath(ARCHandle* handle, u32 entrynum, char* string,
-                       u32 maxlen);
-
-
-static inline BOOL isSame(const char* lhs, const char* rhs) {
-    while (rhs[0] != '\0') {
-        if (tolower(*lhs++) != tolower(*rhs++))
-            return FALSE;
-    }
-
-    if (lhs[0] == '/' || lhs[0] == '\0')
-        return TRUE;
-
-    return FALSE;
-}
-
-static inline u32 myStrncpy(char* dst, char* src, u32 maxlen) {
-    u32 i;
-    for (i = maxlen; i != 0 && src[0] != '\0'; --i)
-        *dst++ = *src++;
-
-    return maxlen - i;
-}
-
-static BOOL ARCConvertEntrynumToPath(ARCHandle* handle, s32 entrynum,
-                                     char* string, u32 maxlen) {
-    ARCNode* nodes = handle->nodes;
-    u32 written = entryToPath(handle, entrynum, string, maxlen);
-
-    if (written == maxlen) {
-        string[maxlen - 1] = '\0';
-        return FALSE;
-    }
-
-    if (ARCNodeIsFolder(nodes[entrynum])) {
-        if (written == maxlen - 1) {
-            string[written] = '\0';
-            return FALSE;
-        }
-
-        string[written++] = '/';
-    }
-
-    string[written] = '\0';
-    return TRUE;
-}
-
-BOOL ARCGetCurrentDir(ARCHandle* handle, char* string, u32 maxlen) {
-    return ARCConvertEntrynumToPath(handle, handle->entrynum, string, maxlen);
-}
-
 BOOL ARCInitHandle(void* bin, ARCHandle* handle) {
     ARCNode* nodes;
     ARCHeader* header = (ARCHeader*)bin;
@@ -126,6 +75,18 @@ BOOL ARCFastOpen(ARCHandle* handle, s32 entrynum, ARCFileInfo* info) {
     info->size = nodes[entrynum].file.size;
 
     return TRUE;
+}
+
+static inline BOOL isSame(const char* lhs, const char* rhs) {
+    while (rhs[0] != '\0') {
+        if (tolower(*lhs++) != tolower(*rhs++))
+            return FALSE;
+    }
+
+    if (lhs[0] == '/' || lhs[0] == '\0')
+        return TRUE;
+
+    return FALSE;
 }
 
 s32 ARCConvertPathToEntrynum(ARCHandle* handle, const char* path) {
@@ -237,25 +198,56 @@ s32 ARCConvertPathToEntrynum(ARCHandle* handle, const char* path) {
 void ARCEntrynumIsDir(){
 }
 
+static inline u32 myStrncpy(char* dst, char* src, u32 maxlen) {
+    u32 i;
+    for (i = maxlen; i != 0 && src[0] != '\0'; --i)
+        *dst++ = *src++;
+
+    return maxlen - i;
+}
+
 static u32 entryToPath(ARCHandle* handle, u32 entrynum, char* string,
                        u32 maxlen) {
     char* name;
     u32 written;
     ARCNode* nodes = handle->nodes;
 
-    if (entrynum == 0)
-        return 0;
+    if (entrynum == 0) return 0;
 
     name = ((char*)handle->strings) + nodes[entrynum].name;
+    written = entryToPath(handle, nodes[entrynum].folder.parent, string, maxlen);
 
-    written =
-        entryToPath(handle, nodes[entrynum].folder.parent, string, maxlen);
-
-    if (written == maxlen)
-        return written;
+    if (written == maxlen) return written;
 
     string[written++] = '/';
     return written + myStrncpy(string + written, name, maxlen - written);
+}
+
+static BOOL ARCConvertEntrynumToPath(ARCHandle* handle, s32 entrynum,
+                                     char* string, u32 maxlen) {
+    ARCNode* nodes = handle->nodes;
+    u32 written = entryToPath(handle, entrynum, string, maxlen);
+
+    if (written == maxlen) {
+        string[maxlen - 1] = '\0';
+        return FALSE;
+    }
+
+    if (ARCNodeIsFolder(nodes[entrynum])) {
+        if (written == maxlen - 1) {
+            string[written] = '\0';
+            return FALSE;
+        }
+
+        string[written++] = '/';
+    }
+
+    string[written] = '\0';
+    return TRUE;
+}
+
+BOOL ARCGetCurrentDir(ARCHandle* handle, char* string, u32 maxlen) {
+    return ARCConvertEntrynumToPath(handle, handle->entrynum, string, maxlen);
 }
 
 void* ARCGetStartAddrInMem(ARCFileInfo* info) {
@@ -319,8 +311,7 @@ BOOL ARCReadDir(ARCDir* dir, ARCEntry* entry) {
             continue;
         }
 
-        dir->path_it =
-            ARCNodeIsFolder(nodes[it]) ? nodes[it].folder.sibling_next : it + 1;
+        dir->path_it = ARCNodeIsFolder(nodes[it]) ? nodes[it].folder.sibling_next : it + 1;
         return TRUE;
     }
 }
