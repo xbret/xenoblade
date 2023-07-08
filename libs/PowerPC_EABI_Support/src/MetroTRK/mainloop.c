@@ -22,7 +22,7 @@ void TRKIdle(void){
  */
 void TRKNubMainLoop(void)
 {
-	void* msg;
+	MessageBuffer* msg;
 	TRKEvent sp8;
 	BOOL var_r31;
 	BOOL var_r30;
@@ -32,7 +32,7 @@ void TRKNubMainLoop(void)
 	while (var_r31 == FALSE) {
 		if (TRKGetNextEvent(&sp8) != FALSE) {
 			var_r30 = FALSE;
-			switch (sp8.mEventType) { /* irregular */
+			switch (sp8.mEventType) {
 			case 0:
 				break;
 			case 2:

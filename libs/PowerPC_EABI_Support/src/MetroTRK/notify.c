@@ -10,7 +10,7 @@ DSError TRKDoNotifyStopped(MessageCommandID cmdId){
 	MessageBuffer* buffer;
 	DSError result;
 
-	result = TRKGetFreeBuffer(&spC, &buffer);
+	result = TRK_GetFreeBuffer(&spC, &buffer);
 
 	if (result == kNoError) {
 		if(cmdId == kDSNotifyStopped){
@@ -22,10 +22,10 @@ DSError TRKDoNotifyStopped(MessageCommandID cmdId){
 		result = TRKRequestSend(buffer, &sp8);
 
 		if(result == kNoError){
-			TRKReleaseBuffer(sp8);
+			TRK_ReleaseBuffer(sp8);
 		}
 
-		TRKReleaseBuffer(spC);
+		TRK_ReleaseBuffer(spC);
 	}
 
 	return result;

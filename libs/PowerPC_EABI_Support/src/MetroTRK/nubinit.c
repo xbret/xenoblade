@@ -16,7 +16,7 @@ DSError TRK_InitializeNub(void)
 		result = TRKInitializeEventQueue();
 	}
 	if (result == kNoError) {
-		result = TRKInitializeMessageBuffers();
+		result = TRK_InitializeMessageBuffers();
 	}
 	InitializeProgramEndTrap();
 	if (result == kNoError) {

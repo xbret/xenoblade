@@ -106,9 +106,9 @@ DSError TRKDoReadMemory(MessageBuffer* b){
 	u32 length;
 	CommandReply reply3;
 
-	options = b->mBuffer[4];
-	start = *(u32*)(b->mBuffer + 12);
-	length = *(u16*)(b->mBuffer + 8);
+	options = b->fData[8];
+	start = *(u32*)(b->fData + 16);
+	length = *(u16*)(b->fData + 12);
 	
 	if(options & DS_MSG_MEMORY_EXTENDED){
 		return TRKStandardACK(b, kDSReplyACK, kDSReplyUnsupportedOptionError);
@@ -182,9 +182,9 @@ DSError TRKDoWriteMemory(MessageBuffer* b){
 	u32 length;
 	CommandReply reply3;
 
-	options = b->mBuffer[4];
-	start = *(u32*)(b->mBuffer + 12);
-	length = *(u16*)(b->mBuffer + 8);
+	options = b->fData[8];
+	start = *(u32*)(b->fData + 16);
+	length = *(u16*)(b->fData + 12);
 	
 	if(options & DS_MSG_MEMORY_EXTENDED){
 		return TRKStandardACK(b, kDSReplyACK, kDSReplyUnsupportedOptionError);
@@ -195,7 +195,7 @@ DSError TRKDoWriteMemory(MessageBuffer* b){
 
 		size_t tempLength = length;
 
-		TRKSetBufferPosition(b,0x40);
+		TRK_SetBufferPosition(b,0x40);
 		result = TRK_ReadBuffer(b,buf,tempLength);
 		result = TRKTargetReadInstruction(buf, start, &tempLength, options & DS_MSG_MEMORY_USERVIEW ? 0 : 1, 0);
 		TRKResetBuffer(b, 0);
@@ -254,9 +254,9 @@ DSError TRKDoReadRegisters(MessageBuffer* b){
 	u8 buf[8];
 	CommandReply local_50;
 	
-	options = b->mBuffer[4];
-	firstRegister = *(u16*)(b->mBuffer + 8);
-	lastRegister = *(u16*)(b->mBuffer + 12);
+	options = b->fData[8];
+	firstRegister = *(u16*)(b->fData + 12);
+	lastRegister = *(u16*)(b->fData + 16);
 
 	if(firstRegister > lastRegister){
 		return TRKStandardACK(b, kDSReplyACK, kDSReplyInvalidRegisterRange);
@@ -330,17 +330,17 @@ DSError TRKDoWriteRegisters(MessageBuffer* b){
 	u8 buf[8];
 	CommandReply local_50;
 	
-	options = b->mBuffer[4];
-	firstRegister = *(u16*)(b->mBuffer + 8);
-	lastRegister = *(u16*)(b->mBuffer + 12);
+	options = b->fData[8];
+	firstRegister = *(u16*)(b->fData + 12);
+	lastRegister = *(u16*)(b->fData + 16);
 
-	TRKSetBufferPosition(b,0);
+	TRK_SetBufferPosition(b,0);
 
 	if(firstRegister > lastRegister){
 		return TRKStandardACK(b, kDSReplyACK, kDSReplyInvalidRegisterRange);
 	}
 
-	TRKSetBufferPosition(b,0x40);
+	TRK_SetBufferPosition(b,0x40);
 
 	switch(options){
 		case kDSRegistersDefault:
@@ -437,18 +437,18 @@ DSError TRKDoStep(MessageBuffer *b){
 	u32 rangeStart;
 	u32 rangeEnd;
 
-	TRKSetBufferPosition(b, 0);
+	TRK_SetBufferPosition(b, 0);
 
-	options = b->mBuffer[4];
-	rangeStart = *(u32*)(b->mBuffer + 12);
-	rangeEnd = *(u32*)(b->mBuffer + 16);
+	options = b->fData[8];
+	rangeStart = *(u32*)(b->fData + 16);
+	rangeEnd = *(u32*)(b->fData + 20);
 
 	switch(options){
 	//Count step
 	case kDSStepIntoCount:
 	case kDSStepOverCount:
 		//Continue if the step count is at least 1
-		count = b->mBuffer[8];
+		count = b->fData[12];
 		if(count >= 1){
 			break;
 		}
@@ -515,9 +515,9 @@ DSError TRKDoStop(MessageBuffer* b){
 }
 
 DSError TRKDoSetOption(MessageBuffer *b){
-	u8 options = b->mBuffer[8];
+	u8 options = b->fData[12];
 
-	if(b->mBuffer[4] == 1) {
+	if(b->fData[8] == 1) {
 		OSReport("\nMetroTRK Option : SerialIO - ");
 
 		if(options != 0){

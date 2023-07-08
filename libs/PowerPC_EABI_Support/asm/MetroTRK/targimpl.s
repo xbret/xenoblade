@@ -349,7 +349,7 @@
 .L_802CF264:
 /* 802CF264 00298824  7F 83 E3 78 */	mr r3, r28
 /* 802CF268 00298828  38 81 00 08 */	addi r4, r1, 8
-/* 802CF26C 0029882C  4B FF E7 C5 */	bl TRKAppendBuffer_ui64
+/* 802CF26C 0029882C  4B FF E7 C5 */	bl TRKReadBuffer1_ui64
 /* 802CF270 00298830  7F 44 D3 78 */	mr r4, r26
 /* 802CF274 00298834  7F C5 F3 78 */	mr r5, r30
 /* 802CF278 00298838  38 61 00 08 */	addi r3, r1, 8
@@ -551,7 +551,7 @@
 .L_802CF538:
 /* 802CF538 00298AF8  7F 83 E3 78 */	mr r3, r28
 /* 802CF53C 00298AFC  38 81 00 10 */	addi r4, r1, 0x10
-/* 802CF540 00298B00  4B FF E4 F1 */	bl TRKAppendBuffer_ui64
+/* 802CF540 00298B00  4B FF E4 F1 */	bl TRKReadBuffer1_ui64
 /* 802CF544 00298B04  7F 44 D3 78 */	mr r4, r26
 /* 802CF548 00298B08  7F C5 F3 78 */	mr r5, r30
 /* 802CF54C 00298B0C  38 61 00 10 */	addi r3, r1, 0x10
@@ -1808,6 +1808,8 @@
 .endobj lbl_8050DF08
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
+
+.balign 8
 
 .obj gTRKRestoreFlags, global
 	.skip 0x10

@@ -20,7 +20,7 @@ TRK_FILES:=\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/targcont.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/mpc_7xx_603e.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/msg.o\
-	$(BUILD_DIR)/libs/PowerPC_EABI_Support/asm/MetroTRK/msgbuf.o\
+	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/msgbuf.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/msghndlr.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/mslsupp.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/asm/MetroTRK/targimpl.o\

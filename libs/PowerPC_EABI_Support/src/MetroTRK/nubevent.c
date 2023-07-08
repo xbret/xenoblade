@@ -80,5 +80,5 @@ void TRKConstructEvent(TRKEvent* event, int eventType)
 
 
 void TRKDestructEvent(TRKEvent* event) {
-	TRKReleaseBuffer(event->mBufferIndex);
+	TRK_ReleaseBuffer(event->mBufferIndex);
 }

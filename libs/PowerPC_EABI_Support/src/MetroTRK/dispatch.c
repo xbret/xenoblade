@@ -4,9 +4,9 @@ DSError TRKDispatchMessage(MessageBuffer* buffer) {
     DSError result = TRKError500;
     MessageBuffer* temp = buffer;
     
-    TRKSetBufferPosition(buffer, 0);
+    TRK_SetBufferPosition(buffer, 0);
     
-    u8 command = temp->mBuffer[0];
+    u8 command = temp->fData[4];
     
     switch(command){
         case kDSConnect:

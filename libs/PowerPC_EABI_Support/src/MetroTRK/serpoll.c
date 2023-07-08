@@ -17,8 +17,8 @@ int TRKTestForPacket(){
 
     if(TRKPollUART() <= 0) return -1;
 
-    freeBuffer = TRKGetFreeBuffer(&buffer.unk4, &buffer.unk0);
-    TRKSetBufferPosition(buffer.unk0, 0);
+    freeBuffer = TRK_GetFreeBuffer(&buffer.unk4, &buffer.unk0);
+    TRK_SetBufferPosition(buffer.unk0, 0);
     
     if(!TRKReadUARTN(buffer.unk8, sizeof(buffer.unk8))){
         TRKAppendBuffer_ui8(buffer.unk0, buffer.unk8, sizeof(buffer.unk8));
@@ -29,12 +29,12 @@ int TRKTestForPacket(){
             if(!TRKReadUARTN(buffer.mBuffer, r4)){
                 TRKAppendBuffer_ui8(buffer.unk0, buffer.mBuffer, *(u32*)(buffer.unk8));
             }else{
-                TRKReleaseBuffer(freeBuffer);
+                TRK_ReleaseBuffer(freeBuffer);
                 freeBuffer = -1;
             }
         }
     }else{
-        TRKReleaseBuffer(freeBuffer);
+        TRK_ReleaseBuffer(freeBuffer);
         freeBuffer = -1;
     }
     

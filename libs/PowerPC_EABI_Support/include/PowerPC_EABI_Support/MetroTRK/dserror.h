@@ -10,6 +10,7 @@ typedef enum {
 	TRKError1 = 1,
 	TRKError2 = 2,
 	TRKError100 = 0x100,
+	TRKError300 = 0x300,
 	TRKError301 = 0x301,
 	TRKError302 = 0x302,
 	TRKError500 = 0x500,
