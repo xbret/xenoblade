@@ -2,11 +2,11 @@
 
 TRKPacketSeq gPacketSeq;
 
-DSError TRK_MessageSend(TRK_Msg* msg)
+DSError TRK_MessageSend(MessageBuffer* msg)
 {
     u16 val = gPacketSeq.unk0;
     if(val == 0) val = 1;
-    msg->unk12 = val;
+    *(u16*)(msg->mBuffer + 2) = val;
     gPacketSeq.unk0 = (val & 0xFFFF) + 1;
 
 	u32 write_val = TRKWriteUARTN(&msg->mMsg, msg->mMsgLength);

@@ -8,6 +8,8 @@
 extern "C"{
 #endif
 
+extern BOOL gTRKBigEndian;
+
 DSError TRK_InitializeNub(void);
 DSError TRK_TerminateNub(void);
 void TRK_NubWelcome(void);

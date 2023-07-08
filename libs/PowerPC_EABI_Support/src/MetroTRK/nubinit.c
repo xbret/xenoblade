@@ -1,4 +1,5 @@
 #include "PowerPC_EABI_Support/MetroTRK/nubinit.h"
+#include "PowerPC_EABI_Support/MetroTRK/serpoll.h"
 
 extern DSError TRKInitializeTarget();
 

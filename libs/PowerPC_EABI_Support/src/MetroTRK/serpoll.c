@@ -1,5 +1,6 @@
 #include "PowerPC_EABI_Support/MetroTRK/serpoll.h"
 #include "PowerPC_EABI_Support/MetroTRK/nubevent.h"
+#include "PowerPC_EABI_Support/MetroTRK/msgbuf.h"
 
 typedef struct TRKBufferUnk{
     MessageBuffer* unk0;

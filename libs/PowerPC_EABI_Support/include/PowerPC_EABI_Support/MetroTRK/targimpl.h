@@ -4,6 +4,7 @@
 #include "types.h"
 #include "PowerPC_EABI_Support/MetroTRK/trk.h"
 #include "PowerPC_EABI_Support/MetroTRK/nubevent.h"
+#include "PowerPC_EABI_Support/MetroTRK/msgbuf.h"
 
 #ifdef __cplusplus
 extern "C"{
@@ -171,18 +172,21 @@ u32 __TRK_get_MSR();
 void TRKInterruptHandler();
 void TRKSwapAndGo(void);
 DSError TRKTargetInterrupt(TRKEvent*);
-void TRKTargetAddStopInfo(int);
-void TRKTargetAddExceptionInfo(int);
+void TRKTargetAddStopInfo(MessageBuffer*);
+void TRKTargetAddExceptionInfo(MessageBuffer*);
 DSError TRKTargetSupportRequest();
 DSError TRKTargetStop();
 BOOL TRKTargetStopped();
-void TRKTargetSetStopped(uint);
+void TRKTargetSetStopped(BOOL);
 void TRKTargetSetInputPendingPtr(void*);
-DSError TRKTargetAccessDefault(u16,u16,MessageBuffer*,u8*,int);
-DSError TRKTargetAccessFP(u16,u16,MessageBuffer*,u8*,int);
-DSError TRKTargetAccessExtended1(u16,u16,MessageBuffer*,u8*,int);
-DSError TRKTargetAccessExtended2(u16,u16,MessageBuffer*,u8*,int);
-DSError TRKTargetReadInstruction(MessageBuffer*,u16,u16,BOOL,int);
+u32 TRKTargetGetPC();
+DSError TRKTargetSingleStep(u8,BOOL);
+DSError TRKTargetStepOutOfRange(u32,u32,BOOL);
+DSError TRKTargetAccessDefault(u16,u16,MessageBuffer*,u8*,BOOL);
+DSError TRKTargetAccessFP(u16,u16,MessageBuffer*,u8*,BOOL);
+DSError TRKTargetAccessExtended1(u16,u16,MessageBuffer*,u8*,BOOL);
+DSError TRKTargetAccessExtended2(u16,u16,MessageBuffer*,u8*,BOOL);
+DSError TRKTargetReadInstruction(u8*,u16,u16,BOOL,BOOL);
 
 #ifdef __cplusplus
 }

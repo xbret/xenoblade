@@ -178,26 +178,27 @@ static void TRK_ppc_memcpy(void* dest, const void* src, int n, u32 param_4, u32 
 }
 
 //unused
-void TRKTargetAccessMemory(){
+//deprecated in favor of TRKTargetReadInstruction
+DSError TRKTargetAccessMemory(){
 }
 
-void TRKTargetReadInstruction(r3, r4, r5, r6, r7){
-
-}
-
-void TRKTargetAccessDefault(r3, r4, r5, r6, r7){
+DSError TRKTargetReadInstruction(u8* r3, u16 r4, u16 r5, BOOL r6, BOOL r7){
 
 }
 
-void TRKTargetAccessFP(r3, r4, r5, r6, r7){
+DSError TRKTargetAccessDefault(u16 r3, u16 r4, MessageBuffer* r5, u8* r6, BOOL r7){
 
 }
 
-void TRKTargetAccessExtended1(r3, r4, r5, r6){
+DSError TRKTargetAccessFP(u16 r3, u16 r4, MessageBuffer* r5, u8* r6, BOOL r7){
 
 }
 
-void TRKTargetAccessExtended2(r3, r4, r5, r6, r7){
+DSError TRKTargetAccessExtended1(u16 r3, u16 r4, MessageBuffer* r5, u8* r6, BOOL r7){
+
+}
+
+DSError TRKTargetAccessExtended2(u16 r3, u16 r4, MessageBuffer* r5, u8* r6, BOOL r7){
 
 }
 
@@ -228,15 +229,15 @@ void TRKSwapAndGo(){
 void TRKInterruptHandlerEnableInterrupts(){
 }
 
-void TRKTargetInterrupt(){
+DSError TRKTargetInterrupt(TRKEvent* event){
 
 }
 
-void TRKTargetAddStopInfo(){
+void TRKTargetAddStopInfo(int r3){
 
 }
 
-void TRKTargetAddExceptionInfo(){
+void TRKTargetAddExceptionInfo(int r3){
 
 }
 
@@ -256,19 +257,19 @@ void TRKTargetCheckStep(){
 
 }
 
-void TRKTargetSingleStep(){
+DSError TRKTargetSingleStep(u8 count, BOOL stepOver){
 
 }
 
-void TRKTargetStepOutOfRange(){
+DSError TRKTargetStepOutOfRange(u32 rangeStart, u32 rangeEnd, BOOL stepOver){
 
 }
 
-void TRKTargetGetPC(){
+u32 TRKTargetGetPC(){
 
 }
 
-void TRKTargetSupportRequest(){
+DSError TRKTargetSupportRequest(){
 
 }
 
@@ -284,9 +285,9 @@ void TRKTargetSetStopped(BOOL val){
     gTRKState.stopped = val;
 }
 
-int TRKTargetStop(){
+DSError TRKTargetStop(){
     TRKTargetSetStopped(TRUE);
-    return 0;
+    return kNoError;
 }
 
 void TRKPPCAccessSPR(r3, r4, r5){

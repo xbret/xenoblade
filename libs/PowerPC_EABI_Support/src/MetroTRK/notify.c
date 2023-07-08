@@ -1,28 +1,32 @@
-#include "types.h"
-#include "PowerPC_EABI_Support/MetroTRK/trk.h"
+#include "PowerPC_EABI_Support/MetroTRK/notify.h"
+#include "PowerPC_EABI_Support/MetroTRK/msgbuf.h"
+#include "PowerPC_EABI_Support/MetroTRK/targimpl.h"
+#include "PowerPC_EABI_Support/MetroTRK/support.h"
 
 
-int TRKDoNotifyStopped(int arg0){
+DSError TRKDoNotifyStopped(MessageCommandID cmdId){
 	int sp8;
 	int spC;
-	int sp10;
-	int retval; // r31
+	MessageBuffer* buffer;
+	DSError result;
 
-	retval = TRKGetFreeBuffer(&spC, (MessageBuffer*)&sp10);
+	result = TRKGetFreeBuffer(&spC, &buffer);
 
-	if (retval == 0) {
-		if (arg0 == 0x90) {
-			TRKTargetAddStopInfo(sp10);
-		} else {
-			TRKTargetAddExceptionInfo(sp10);
+	if (result == kNoError) {
+		if(cmdId == kDSNotifyStopped){
+			TRKTargetAddStopInfo(buffer);
+		}else{
+			TRKTargetAddExceptionInfo(buffer);
 		}
 		
-		retval = TRKRequestSend(sp10, &sp8);
+		result = TRKRequestSend(buffer, &sp8);
 
-		if (retval == 0) {
+		if(result == kNoError){
 			TRKReleaseBuffer(sp8);
 		}
+
 		TRKReleaseBuffer(spC);
 	}
-	return retval;
+
+	return result;
 }

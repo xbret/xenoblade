@@ -8,6 +8,8 @@
 extern "C"{
 #endif
 
+extern void* gTRKInputPendingPtr;
+
 void TRKGetInput();
 void TRKProcessInput(int);
 DSError TRKInitializeSerialHandler();

@@ -3,6 +3,7 @@
 
 #include "types.h"
 #include "PowerPC_EABI_Support/MetroTRK/trk.h"
+#include "PowerPC_EABI_Support/MetroTRK/msgbuf.h"
 
 #ifdef __cplusplus
 extern "C"{

@@ -8,8 +8,19 @@
 extern "C"{
 #endif
 
+#define BUFFER_SIZE 0x800 + 0x80
+
+typedef struct MessageBuffer {
+	u32 unk0;
+	u32 mMsgLength;
+	s32 unk8;
+	u32 mMsg;
+	u8 mBuffer[BUFFER_SIZE]; //0x10
+} MessageBuffer;
+
+
 DSError TRKInitializeMessageBuffers();
-int TRKGetFreeBuffer(int*, MessageBuffer*);
+int TRKGetFreeBuffer(int*, MessageBuffer**);
 void* TRKGetBuffer(int);
 void TRKReleaseBuffer(int);
 void TRKResetBuffer(MessageBuffer*, u32);

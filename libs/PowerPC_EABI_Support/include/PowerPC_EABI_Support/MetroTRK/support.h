@@ -1,5 +1,5 @@
-#ifndef METROTRK_DISPATCH
-#define METROTRK_DISPATCH
+#ifndef METROTRK_SUPPORT
+#define METROTRK_SUPPORT
 
 #include "types.h"
 #include "PowerPC_EABI_Support/MetroTRK/trk.h"
@@ -9,7 +9,7 @@
 extern "C"{
 #endif
 
-DSError TRKDispatchMessage(MessageBuffer*);
+DSError TRKRequestSend(MessageBuffer*, int*);
 
 #ifdef __cplusplus
 }
