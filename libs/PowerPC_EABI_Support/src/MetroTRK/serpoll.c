@@ -17,7 +17,7 @@ int TRKTestForPacket(){
 
     if(TRKPollUART() <= 0) return -1;
 
-    freeBuffer = TRKGetFreeBuffer(&buffer.unk4, (MessageBuffer*)&buffer.unk0);
+    freeBuffer = TRKGetFreeBuffer(&buffer.unk4, &buffer.unk0);
     TRKSetBufferPosition(buffer.unk0, 0);
     
     if(!TRKReadUARTN(buffer.unk8, sizeof(buffer.unk8))){
