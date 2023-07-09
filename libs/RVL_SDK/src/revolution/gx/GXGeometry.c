@@ -209,6 +209,7 @@ void GXSetCullMode(GXCullMode mode) {
     __GXData->dirtyFlags |= GX_DIRTY_GEN_MODE;
 }
 
+//unused
 void GXGetCullMode(GXCullMode* out) {
     s32 bits = 0;
     bits |= (s32)(__GXData->genMode >> 14 & 2) >> 1;

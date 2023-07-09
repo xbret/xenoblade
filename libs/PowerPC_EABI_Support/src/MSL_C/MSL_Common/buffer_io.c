@@ -1,6 +1,14 @@
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common/buffer_io.h"
 #include <stdio.h>
 
+//unused
+void __convert_from_newlines(){
+}
+
+//unused
+void __convert_to_newlines(){
+}
+
 void __prep_buffer(FILE* file)
 {
 	file->buffer_ptr = file->buffer;

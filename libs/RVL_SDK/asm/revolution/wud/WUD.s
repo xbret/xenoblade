@@ -94,8 +94,9 @@
 /* 80375D04 0033F2C4  4E 80 00 20 */	blr 
 .endfn __wudSyncFlushCallback
 
+#WUDiIsSyncDisabled
 .balign 16, 0
-.fn WUDiIsSyncDisabled, global
+.fn __wudSyncPrepareSearch, global
 /* 80375D10 0033F2D0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80375D14 0033F2D4  7C 08 02 A6 */	mflr r0
 /* 80375D18 0033F2D8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -191,7 +192,7 @@
 /* 80375E5C 0033F41C  7C 08 03 A6 */	mtlr r0
 /* 80375E60 0033F420  38 21 00 30 */	addi r1, r1, 0x30
 /* 80375E64 0033F424  4E 80 00 20 */	blr 
-.endfn WUDiIsSyncDisabled
+.endfn __wudSyncPrepareSearch
 
 #WUDiTryConnecting
 .balign 16, 0
@@ -965,7 +966,7 @@
 /* 8037691C 0033FEDC  41 82 07 28 */	beq .L_80377044
 /* 80376920 0033FEE0  48 00 09 A0 */	b .L_803772C0
 .L_80376924:
-/* 80376924 0033FEE4  4B FF F3 ED */	bl WUDiIsSyncDisabled
+/* 80376924 0033FEE4  4B FF F3 ED */	bl __wudSyncPrepareSearch
 /* 80376928 0033FEE8  98 7C 00 0C */	stb r3, 0xc(r28)
 /* 8037692C 0033FEEC  48 00 09 A0 */	b .L_803772CC
 .L_80376930:

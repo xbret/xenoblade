@@ -951,6 +951,10 @@ void OSSetThreadSpecific(){
 }
 
 //unused
+void OSGetThreadSpecific(){
+}
+
+//unused
 static void SleepAlarmHandler(OSAlarm* alarm, OSContext* ctx) {
 #pragma unused(ctx)
 

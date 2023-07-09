@@ -19,7 +19,7 @@ DSError TRKDoNotifyStopped(MessageCommandID cmdId){
 			TRKTargetAddExceptionInfo(buffer);
 		}
 		
-		result = TRKRequestSend(buffer, &sp8);
+		result = TRK_RequestSend(buffer, &sp8);
 
 		if(result == kNoError){
 			TRK_ReleaseBuffer(sp8);

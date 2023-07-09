@@ -111,9 +111,15 @@ FILE __files[_STATIC_FILES] = {
 	},
 };
 
+//unused
+void __find_unopened_file(){
+}
 
-void __close_all()
-{
+//unused
+void __init_file(){
+}
+
+void __close_all(){
 	FILE* p = &__files[0];
 	FILE* plast;
 

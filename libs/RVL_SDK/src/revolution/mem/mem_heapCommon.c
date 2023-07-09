@@ -65,6 +65,10 @@ void MEMiFinalizeHeap(MEMiHeapHead* heap) {
 }
 
 //unused
+void MEMiDumpHeapHead(){
+}
+
+//unused
 MEMiHeapHead* MEMFindContainHeap(const void* memBlock) {
     return FindContainHeap_(&sRootList, memBlock);
 }

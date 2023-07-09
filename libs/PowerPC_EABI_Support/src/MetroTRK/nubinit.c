@@ -27,7 +27,7 @@ DSError TRK_InitializeNub(void)
 	}
 	if (result == kNoError) {
 
-		resultTemp = TRKInitializeIntDrivenUART(1, 0, &gTRKInputPendingPtr);
+		resultTemp = TRK_InitializeIntDrivenUART(1, 0, &gTRKInputPendingPtr);
 		TRKTargetSetInputPendingPtr(gTRKInputPendingPtr);
 		if (resultTemp != kNoError) {
 			result = resultTemp;

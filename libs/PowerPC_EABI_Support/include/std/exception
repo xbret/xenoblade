@@ -3,16 +3,32 @@
 
 
 namespace std{
-    class exception{
-    public:
-        virtual ~exception(){}
-        virtual const char* what() const {
-            return "exception";
-        }
-    };
+	class exception{
+	public:
+		exception(){}
+		virtual ~exception(){}
+		virtual const char* what() const {
+			return "exception";
+		}
+	};
 
-    typedef void (*terminate_handler)();
-    void terminate();
+	class bad_exception{
+	public:
+		bad_exception(){}
+		virtual ~bad_exception(){}
+		virtual const char* what() const {
+			return "bad_exception";
+		}
+	};
+
+	typedef void (*unexpected_handler)();
+	unexpected_handler set_unexpected(unexpected_handler handler);
+	void unexpected();
+
+	typedef void (*terminate_handler)();
+	terminate_handler set_terminate(terminate_handler handler);
+	void terminate();
+
 }
 
 #endif

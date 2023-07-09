@@ -47,7 +47,7 @@ static DSError TRKStandardACK(MessageBuffer* b, MessageCommandID commandId, DSRe
 	reply.replyError = replyError;
 	reply.unkC = nextSequence;
 	g_CurrentSequence = nextSequence + 1;
-	TRKWriteUARTN((void*)&reply, sizeof(CommandReply));
+	TRK_WriteUARTN((void*)&reply, sizeof(CommandReply));
 	return kNoError;
 }
 

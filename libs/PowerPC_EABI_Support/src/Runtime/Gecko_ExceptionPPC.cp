@@ -537,6 +537,25 @@ static int ExPPC_IsInSpecification(char* extype, ex_specification* spec){
 
 //unused
 extern void __unexpected(CatchInfo* catchinfo){
+	ex_specification* unexp = (ex_specification*)catchinfo->stacktop;
+
+#pragma exception_magic
+
+	try {
+		unexpected();
+	}
+	catch(...){
+		if(ExPPC_IsInSpecification((char*)((CatchInfo*)&__exception_magic)->typeinfo, unexp)){
+			throw;
+		}
+		if(ExPPC_IsInSpecification("!bad_exception!!",unexp)){
+			throw bad_exception();
+		}
+		if(ExPPC_IsInSpecification("!std::bad_exception!!",unexp)){
+			throw bad_exception();
+		}
+	}
+	terminate();
 }
 
 static asm void ExPPC_LongJump(register ThrowContext* context, register void* newRTOC, register void* newPC){

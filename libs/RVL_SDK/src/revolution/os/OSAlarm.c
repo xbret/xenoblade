@@ -201,7 +201,7 @@ static void DecrementerExceptionCallback(u8 type, OSContext* ctx) {
 
 static asm void DecrementerExceptionHandler(register u8 type,
                                             register OSContext* ctx) {
-        nofralloc
+    nofralloc
 
     stw r0, ctx->gprs[0]
     stw r1, ctx->gprs[1]
@@ -259,6 +259,12 @@ void OSSetAlarmUserData(OSAlarm* alarm, void* userData) {
 }
 
 void* OSGetAlarmUserData(const OSAlarm* alarm) { return alarm->userData; }
+
+//unused
+void __OSSetInternalAlarmUserData(OSAlarm* alarm, void* userData){
+	alarm->userData = userData;
+	alarm->tag = -1;
+}
 
 void __OSCancelInternalAlarms(OSThread* thread) {
     BOOL enabled = OSDisableInterrupts();

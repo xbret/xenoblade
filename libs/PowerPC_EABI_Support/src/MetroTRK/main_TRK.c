@@ -9,7 +9,7 @@ int TRK_main(void)
 
 	if (!TRK_mainError) {
 		TRK_NubWelcome();
-		TRKNubMainLoop();
+		TRK_NubMainLoop();
 	}
 
 	TRK_mainError = TRK_TerminateNub();

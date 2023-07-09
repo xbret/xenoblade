@@ -92,7 +92,7 @@ int InitMetroTRKCommTable(int hwId){
 void TRKUARTInterruptHandler(){
 }
 
-UARTError TRKInitializeIntDrivenUART(u32 r3, u32 r4, void* r5){
+UARTError TRK_InitializeIntDrivenUART(u32 r3, u32 r4, void* r5){
     gDBCommTable.initialize_func(r5, TRKEXICallBack);
     gDBCommTable.open_func();
     return kUARTNoError;
@@ -115,7 +115,7 @@ UARTError TRKReadUARTN(void* bytes, u32 limit){
     return ((-r3 | r3) >> 31);
 }
 
-UARTError TRKWriteUARTN(const void* bytes, u32 length){
+UARTError TRK_WriteUARTN(const void* bytes, u32 length){
     int r3 = gDBCommTable.write_func(bytes, length);
     return ((-r3 | r3) >> 31);
 }

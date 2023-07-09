@@ -54,11 +54,11 @@ static u8 s_usb_log = FALSE;
 static u8 s_usb_err = TRUE;
 
 //unused
-static void _usb_enable_log(){
+void _usb_enable_log(){
 }
 
 //unused
-static void _usb_disable_log(){
+void _usb_disable_log(){
 }
 
 static void USB_LOG(const char* fmt, ...) {
@@ -482,6 +482,10 @@ IPCResult IUSB_ReadBlkMsgAsync(s32 fd, u32 endpoint, u32 length, void* buffer,
                                USB_IOCTLV_BLKMSG, callback, callbackArg, TRUE);
     return __LongBlkMsgInt(fd, endpoint, length, (void*)buffer, callback,
                            callbackArg, TRUE);
+}
+
+//unused
+void IUSB_WriteBlkMsg(){
 }
 
 IPCResult IUSB_WriteBlkMsgAsync(s32 fd, u32 endpoint, u32 length,

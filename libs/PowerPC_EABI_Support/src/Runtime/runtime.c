@@ -6,11 +6,17 @@ extern "C" {
 #define SAVE_FPR(reg) _savefpr_ ## reg
 #define RESTORE_FPR(reg) _restfpr_ ## reg
 #define SAVE_GPR(reg) _savegpr_ ## reg
+#define SAVE32_GPR(reg) _save32gpr_ ## reg
 #define RESTORE_GPR(reg) _restgpr_ ## reg
+#define RESTORE32_GPR(reg) _rest32gpr_ ## reg
+
 #define ENTRY_SAVE_FPR(reg) entry SAVE_FPR(reg)
+#define ENTRY_SAVE32_GPR(reg) entry SAVE32_GPR(reg)
 #define ENTRY_RESTORE_FPR(reg) entry RESTORE_FPR(reg)
 #define ENTRY_SAVE_GPR(reg) entry SAVE_GPR(reg)
 #define ENTRY_RESTORE_GPR(reg) entry RESTORE_GPR(reg)
+#define ENTRY_RESTORE32_GPR(reg) entry RESTORE32_GPR(reg)
+
 #define SAVE_FPR2(reg) _savef ## reg
 #define RESTORE_FPR2(reg) _restf ## reg
 #define ENTRY_SAVE_FPR2(reg)
@@ -123,6 +129,24 @@ void SAVE_GPR(28)(void);
 void SAVE_GPR(29)(void);
 void SAVE_GPR(30)(void);
 void SAVE_GPR(31)(void);
+void SAVE32_GPR(14)(void);
+void SAVE32_GPR(15)(void);
+void SAVE32_GPR(16)(void);
+void SAVE32_GPR(17)(void);
+void SAVE32_GPR(18)(void);
+void SAVE32_GPR(19)(void);
+void SAVE32_GPR(20)(void);
+void SAVE32_GPR(21)(void);
+void SAVE32_GPR(22)(void);
+void SAVE32_GPR(23)(void);
+void SAVE32_GPR(24)(void);
+void SAVE32_GPR(25)(void);
+void SAVE32_GPR(26)(void);
+void SAVE32_GPR(27)(void);
+void SAVE32_GPR(28)(void);
+void SAVE32_GPR(29)(void);
+void SAVE32_GPR(30)(void);
+void SAVE32_GPR(31)(void);
 void RESTORE_GPR(14)(void);
 void RESTORE_GPR(15)(void);
 void RESTORE_GPR(16)(void);
@@ -141,6 +165,24 @@ void RESTORE_GPR(28)(void);
 void RESTORE_GPR(29)(void);
 void RESTORE_GPR(30)(void);
 void RESTORE_GPR(31)(void);
+void RESTORE32_GPR(14)(void);
+void RESTORE32_GPR(15)(void);
+void RESTORE32_GPR(16)(void);
+void RESTORE32_GPR(17)(void);
+void RESTORE32_GPR(18)(void);
+void RESTORE32_GPR(19)(void);
+void RESTORE32_GPR(20)(void);
+void RESTORE32_GPR(21)(void);
+void RESTORE32_GPR(22)(void);
+void RESTORE32_GPR(23)(void);
+void RESTORE32_GPR(24)(void);
+void RESTORE32_GPR(25)(void);
+void RESTORE32_GPR(26)(void);
+void RESTORE32_GPR(27)(void);
+void RESTORE32_GPR(28)(void);
+void RESTORE32_GPR(29)(void);
+void RESTORE32_GPR(30)(void);
+void RESTORE32_GPR(31)(void);
 
 static const unsigned long __constants[] = {
 		0x00000000, 0x00000000,		
@@ -301,40 +343,58 @@ static asm void __save_gpr(void)
 {
 	nofralloc
 	ENTRY_SAVE_GPR(14)
+	ENTRY_SAVE32_GPR(14)
 		stw		r14,-72(save_restore_reg)
 	ENTRY_SAVE_GPR(15)
+	ENTRY_SAVE32_GPR(15)
 		stw		r15,-68(save_restore_reg)
 	ENTRY_SAVE_GPR(16)
+	ENTRY_SAVE32_GPR(16)
 		stw		r16,-64(save_restore_reg)
 	ENTRY_SAVE_GPR(17)
+	ENTRY_SAVE32_GPR(17)
 		stw		r17,-60(save_restore_reg)
 	ENTRY_SAVE_GPR(18)
+	ENTRY_SAVE32_GPR(18)
 		stw		r18,-56(save_restore_reg)
 	ENTRY_SAVE_GPR(19)
+	ENTRY_SAVE32_GPR(19)
 		stw		r19,-52(save_restore_reg)
 	ENTRY_SAVE_GPR(20)
+	ENTRY_SAVE32_GPR(20)
 		stw		r20,-48(save_restore_reg)
 	ENTRY_SAVE_GPR(21)
+	ENTRY_SAVE32_GPR(21)
 		stw		r21,-44(save_restore_reg)
 	ENTRY_SAVE_GPR(22)
+	ENTRY_SAVE32_GPR(22)
 		stw		r22,-40(save_restore_reg)
 	ENTRY_SAVE_GPR(23)
+	ENTRY_SAVE32_GPR(23)
 		stw		r23,-36(save_restore_reg)
 	ENTRY_SAVE_GPR(24)
+	ENTRY_SAVE32_GPR(24)
 		stw		r24,-32(save_restore_reg)
 	ENTRY_SAVE_GPR(25)
+	ENTRY_SAVE32_GPR(25)
 		stw		r25,-28(save_restore_reg)
 	ENTRY_SAVE_GPR(26)
+	ENTRY_SAVE32_GPR(26)
 		stw		r26,-24(save_restore_reg)
 	ENTRY_SAVE_GPR(27)
+	ENTRY_SAVE32_GPR(27)
 		stw		r27,-20(save_restore_reg)
 	ENTRY_SAVE_GPR(28)
+	ENTRY_SAVE32_GPR(28)
 		stw		r28,-16(save_restore_reg)
 	ENTRY_SAVE_GPR(29)
+	ENTRY_SAVE32_GPR(29)
 		stw		r29,-12(save_restore_reg)
 	ENTRY_SAVE_GPR(30)
+	ENTRY_SAVE32_GPR(30)
 		stw		r30,-8(save_restore_reg)
 	ENTRY_SAVE_GPR(31)
+	ENTRY_SAVE32_GPR(31)
 		stw		r31,-4(save_restore_reg)
 		blr
 }
@@ -343,40 +403,58 @@ static asm void __restore_gpr(void)
 {
 	nofralloc
 	ENTRY_RESTORE_GPR(14)
+	ENTRY_RESTORE32_GPR(14)
 		lwz		r14,-72(save_restore_reg)
 	ENTRY_RESTORE_GPR(15)
+	ENTRY_RESTORE32_GPR(15)
 		lwz		r15,-68(save_restore_reg)
 	ENTRY_RESTORE_GPR(16)
+	ENTRY_RESTORE32_GPR(16)
 		lwz		r16,-64(save_restore_reg)
 	ENTRY_RESTORE_GPR(17)
+	ENTRY_RESTORE32_GPR(17)
 		lwz		r17,-60(save_restore_reg)
 	ENTRY_RESTORE_GPR(18)
+	ENTRY_RESTORE32_GPR(18)
 		lwz		r18,-56(save_restore_reg)
 	ENTRY_RESTORE_GPR(19)
+	ENTRY_RESTORE32_GPR(19)
 		lwz		r19,-52(save_restore_reg)
 	ENTRY_RESTORE_GPR(20)
+	ENTRY_RESTORE32_GPR(20)
 		lwz		r20,-48(save_restore_reg)
 	ENTRY_RESTORE_GPR(21)
+	ENTRY_RESTORE32_GPR(21)
 		lwz		r21,-44(save_restore_reg)
 	ENTRY_RESTORE_GPR(22)
+	ENTRY_RESTORE32_GPR(22)
 		lwz		r22,-40(save_restore_reg)
 	ENTRY_RESTORE_GPR(23)
+	ENTRY_RESTORE32_GPR(23)
 		lwz		r23,-36(save_restore_reg)
 	ENTRY_RESTORE_GPR(24)
+	ENTRY_RESTORE32_GPR(24)
 		lwz		r24,-32(save_restore_reg)
 	ENTRY_RESTORE_GPR(25)
+	ENTRY_RESTORE32_GPR(25)
 		lwz		r25,-28(save_restore_reg)
 	ENTRY_RESTORE_GPR(26)
+	ENTRY_RESTORE32_GPR(26)
 		lwz		r26,-24(save_restore_reg)
 	ENTRY_RESTORE_GPR(27)
+	ENTRY_RESTORE32_GPR(27)
 		lwz		r27,-20(save_restore_reg)
 	ENTRY_RESTORE_GPR(28)
+	ENTRY_RESTORE32_GPR(28)
 		lwz		r28,-16(save_restore_reg)
 	ENTRY_RESTORE_GPR(29)
+	ENTRY_RESTORE32_GPR(29)
 		lwz		r29,-12(save_restore_reg)
 	ENTRY_RESTORE_GPR(30)
+	ENTRY_RESTORE32_GPR(30)
 		lwz		r30,-8(save_restore_reg)
 	ENTRY_RESTORE_GPR(31)
+	ENTRY_RESTORE32_GPR(31)
 		lwz		r31,-4(save_restore_reg)
 		blr
 }
@@ -751,6 +829,7 @@ asm void __shr2u(void)
 
 asm void __shr2i(void)
 {
+	nofralloc
     subfic r8, r5, 0x20
     addic. r9, r5, -0x20
     srw r4, r4, r5
@@ -766,23 +845,117 @@ L_802BA610:
 
 //unused
 asm void __cvt_sll_dbl(void){
+	nofralloc
+	stwu r1,-16(r1)
+  	rlwinm.	r5,r3,0,0,0
+	beq positive
+	subfic r4,r4,0
+	subfze r3,r3
+positive:
+	or. r7,r3,r4
+	li r6,0
+	beq zero
+	cntlzw r7,r3
+	cntlzw r8,r4
+	rlwinm r9,r7,26,0,4
+	srawi r9,r9,31
+	and r9,r9,r8
+	add r7,r7,r9
+	subfic r8,r7,32
+	subic r9,r7,32
+	slw r3,r3,r7
+	srw r10,r4,r8
+	or r3,r3,r10
+	slw r10,r4,r9
+	or r3,r3,r10
+	slw r4,r4,r7
+	sub r6,r6,r7
+	rlwinm r7,r4,0,21,31
+	cmpi cr0,r7,0x400
+	addi r6,r6,1086
+	blt noround
+	bgt round
+	rlwinm.	r7,r4,0,20,20
+	beq noround
+round:
+	addic r4,r4,0x0800
+	addze r3,r3
+	addze r6,r6
+noround:
+	rlwinm r4,r4,21,0,31
+	rlwimi r4,r3,21,0,10
+	rlwinm r3,r3,21,12,31
+	rlwinm r6,r6,20,0,11
+	or r3,r6,r3
+	or r3,r5,r3
+zero:
+	stw	r3,8(r1)
+	stw	r4,12(r1)
+	lfd	f1,8(r1)
+	addi r1,r1,16
+	blr
 }
 
 //unused
 asm void __cvt_ull_dbl(void){
+	nofralloc
+	stwu r1,-0x10(r1)
+	or. r7,r3,r4
+	li r6,0x0
+	beq zero
+	cntlzw r7,r3
+	cntlzw r8,r4
+	rlwinm r9,r7,0x1a,0x0,0x4
+	srawi r9,r9,0x1f
+	and r9,r9,r8
+	add r7,r7,r9
+	subfic r8,r7,0x20
+	subic r9,r7,0x20
+	slw r3,r3,r7
+	srw r10,r4,r8
+	or r3,r3,r10
+	slw r10,r4,r9
+	or r3,r3,r10
+	slw r4,r4,r7
+	subf r6,r7,r6
+	rlwinm r7,r4,0x0,0x15,0x1f
+	cmpwi r7,0x400
+	addi r6,r6,0x43e
+	blt noround
+	bgt round
+	rlwinm. r7,r4,0x0,0x14,0x14
+	beq noround
+round:
+	addic r4,r4,0x800
+	addze r3,r3
+	addze r6,r6
+noround:
+	rlwinm r4,r4,0x15,0x0,0x1f
+	rlwimi r4,r3,0x15,0x0,0xa
+	rlwinm r3,r3,0x15,0xc,0x1f
+	rlwinm r6,r6,0x14,0x0,0xb
+	or r3,r6,r3
+zero:
+	stw r3,0x8(r1)
+	stw r4,0xc(r1)
+	lfd f1,0x8(r1)
+	addi r1,r1,0x10
+	blr
+
 }
 
 asm void __cvt_sll_flt(void)
 {
+	nofralloc
     stwu r1, -0x10(r1)
     clrrwi. r5, r3, 31
-    beq L_802BA62C
+    beq positive
     subfic r4, r4, 0x0
     subfze r3, r3
-L_802BA62C:
+positive:
     or. r7, r3, r4
     li r6, 0x0
-    beq L_802BA6B4
+    beq zero
     cntlzw r7, r3
     cntlzw r8, r4
     extlwi r9, r7, 5, 26
@@ -801,22 +974,22 @@ L_802BA62C:
     clrlwi r7, r4, 21
     cmpwi r7, 0x400
     addi r6, r6, 0x43e
-    blt L_802BA69C
-    bgt L_802BA690
+    blt noround
+    bgt round
     rlwinm. r7, r4, 0, 20, 20
-    beq L_802BA69C
-L_802BA690:
+    beq noround
+round:
     addic r4, r4, 0x800
     addze r3, r3
     addze r6, r6
-L_802BA69C:
+noround:
     rotrwi r4, r4, 11
     rlwimi r4, r3, 21, 0, 10
     extrwi r3, r3, 20, 1
     slwi r6, r6, 20
     or r3, r6, r3
     or r3, r5, r3
-L_802BA6B4:
+zero:
     stw r3, 0x8(r1)
     stw r4, 0xc(r1)
     lfd f1, 0x8(r1)
@@ -827,6 +1000,50 @@ L_802BA6B4:
 
 //unused
 asm void __cvt_ull_flt(void){
+	nofralloc
+	stwu r1,-0x10(r1)
+	or. r7,r3,r4
+	li r6,0x0
+	beq zero
+	cntlzw r7,r3
+	cntlzw r8,r4
+	rlwinm r9,r7,0x1a,0x0,0x4
+	srawi r9,r9,0x1f
+	and r9,r9,r8
+	add r7,r7,r9
+	subfic r8,r7,0x20
+	subic r9,r7,0x20
+	slw r3,r3,r7
+	srw r10,r4,r8
+	or r3,r3,r10
+	slw r10,r4,r9
+	or r3,r3,r10
+	slw r4,r4,r7
+	subf r6,r7,r6
+	rlwinm r7,r4,0x0,0x15,0x1f
+	cmpwi r7,0x400
+	addi r6,r6,0x43e
+	blt noround
+	bgt round
+	rlwinm. r7,r4,0x0,0x14,0x14
+	beq noround
+round:
+	addic r4,r4,0x800
+	addze r3,r3
+	addze r6,r6
+noround:
+	rlwinm r4,r4,0x15,0x0,0x1f
+	rlwimi r4,r3,0x15,0x0,0xa
+	rlwinm r3,r3,0x15,0xc,0x1f
+	rlwinm r6,r6,0x14,0x0,0xb
+	or r3,r6,r3
+zero:
+	stw r3,0x8(r1)
+	stw r4,0xc(r1)
+	lfd f1,0x8(r1)
+	frsp f1,f1
+	addi r1,r1,0x10
+	blr
 }
 
 //unused
@@ -901,21 +1118,21 @@ void __cvt_dbl_ull(void) {
     lwz r4, 0xC(r1)
     extrwi r5, r3, 11, 1
     cmplwi r5, 0x3FF
-    bge loc_80518FB4
+    bge not_fraction
 
-loc_80518FA8:
+return_zero:
     li r3, 0
     li r4, 0
-    b end
+    b func_end
 
-loc_80518FB4:
+not_fraction:
     clrrwi. r6, r3, 31
-    bne loc_80518FA8
+    bne return_zero
     clrlwi r3, r3, 12
     oris r3, r3, 0x10
     addi r5, r5, -0x433
     cmpwi r5, 0
-    bge loc_80518FF8
+    bge left
     neg r5, r5
     subfic r8, r5, 0x20
     addic r9, r5, -0x20
@@ -925,16 +1142,16 @@ loc_80518FB4:
     srw r10, r3, r9
     or r4, r4, r10
     srw r3, r3, r5
-    b end
+    b around
 
-loc_80518FF8:
+left:
     cmpwi r5, 0xB
-    ble+ loc_8051900C
+    ble+ no_overflow
     li r3, -1
     li r4, -1
-    b end
+    b func_end
 
-loc_8051900C:
+no_overflow:
     subfic r8, r5, 0x20
     addic r9, r5, -0x20
     slw r3, r3, r5
@@ -944,7 +1161,8 @@ loc_8051900C:
     or r3, r3, r10
     slw r4, r4, r5
 
-end:
+around:
+func_end:
     addi r1, r1, 0x10
     blr
 }

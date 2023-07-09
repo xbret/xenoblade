@@ -13,12 +13,23 @@ namespace std{
 
 	static void dthandler(){
 		abort();
-	};
-	terminate_handler thandler = dthandler;
+	}
+
+	static terminate_handler thandler = dthandler;
+
+
+	static void duhandler(){
+		terminate();
+	}
+
+	static unexpected_handler uhandler = duhandler;
 
 
 	//unused
-	extern void set_terminate(){
+	extern terminate_handler set_terminate(terminate_handler handler){
+		terminate_handler old = thandler;
+		thandler = handler;
+		return old;
 	}
 
 	extern void terminate(){
@@ -26,11 +37,15 @@ namespace std{
 	}
 
 	//unused
-	extern void set_unexpected(){
+	extern unexpected_handler set_unexpected(unexpected_handler handler){
+		unexpected_handler old = uhandler;
+		uhandler = handler;
+		return old;
 	}
 
 	//unused
 	extern void unexpected(){
+		uhandler();
 	}
 
 }

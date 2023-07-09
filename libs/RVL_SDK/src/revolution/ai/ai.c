@@ -81,7 +81,7 @@ u32 AIGetDMALength(void) {
 BOOL AICheckInit(void) { return __AI_init_flag; }
 
 
-inline void AISetDSPSampleRate(u32 rate) {
+void AISetDSPSampleRate(u32 rate) {
     BOOL enabled;
 
     if (rate != AIGetDSPSampleRate()) {
@@ -98,7 +98,7 @@ inline void AISetDSPSampleRate(u32 rate) {
     }
 }
 
-inline u32 AIGetDSPSampleRate(void) {
+u32 AIGetDSPSampleRate(void) {
     return ((AI_HW_REGS[AI_AICR] & AI_AICR_SAMPLERATE) >> 6) ^ 1;
 }
 

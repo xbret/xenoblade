@@ -31,11 +31,11 @@ typedef struct DBCommTable{
 
 int InitMetroTRKCommTable(int);
 void TRKUARTInterruptHandler();
-UARTError TRKInitializeIntDrivenUART(u32, u32, void*);
+UARTError TRK_InitializeIntDrivenUART(u32, u32, void*);
 void EnableEXI2Interrupts();
 int TRKPollUART();
 UARTError TRKReadUARTN(void*, u32);
-UARTError TRKWriteUARTN(const void*, u32);
+UARTError TRK_WriteUARTN(const void*, u32);
 void ReserveEXI2Port(void);
 void UnreserveEXI2Port(void);
 void TRK_board_display(char*);

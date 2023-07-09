@@ -1357,10 +1357,10 @@ static int __wpformatter(void *(*WriteProc)(void *, const wchar_t *, size_t), vo
 }
 
 //unused
-static void __wFileWrite(){
+void __wFileWrite(){
 }
 
-static void* __wStringWrite(void *wosc, const wchar_t * buffer, size_t numchars) {
+void* __wStringWrite(void *wosc, const wchar_t * buffer, size_t numchars) {
     size_t tobewritten;
     void* res;
     __wOutStrCtrl * wOscp = (__wOutStrCtrl*)wosc;

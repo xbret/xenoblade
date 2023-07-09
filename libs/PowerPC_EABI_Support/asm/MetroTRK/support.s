@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn TRKSuppAccessFile, global
+.fn TRK_SuppAccessFile, global
 /* 802CCAA0 00296060  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 802CCAA4 00296064  7C 08 02 A6 */	mflr r0
 /* 802CCAA8 00296068  2C 04 00 00 */	cmpwi r4, 0
@@ -77,7 +77,7 @@
 /* 802CCBA0 00296160  41 82 00 98 */	beq .L_802CCC38
 /* 802CCBA4 00296164  80 61 00 08 */	lwz r3, 8(r1)
 /* 802CCBA8 00296168  38 81 00 10 */	addi r4, r1, 0x10
-/* 802CCBAC 0029616C  48 00 00 E9 */	bl TRKRequestSend
+/* 802CCBAC 0029616C  48 00 00 E9 */	bl TRK_RequestSend
 /* 802CCBB0 00296170  2C 03 00 00 */	cmpwi r3, 0
 /* 802CCBB4 00296174  7C 77 1B 78 */	mr r23, r3
 /* 802CCBB8 00296178  40 82 00 10 */	bne .L_802CCBC8
@@ -143,9 +143,9 @@
 /* 802CCC88 00296248  7C 08 03 A6 */	mtlr r0
 /* 802CCC8C 0029624C  38 21 00 90 */	addi r1, r1, 0x90
 /* 802CCC90 00296250  4E 80 00 20 */	blr 
-.endfn TRKSuppAccessFile
+.endfn TRK_SuppAccessFile
 
-.fn TRKRequestSend, global
+.fn TRK_RequestSend, global
 /* 802CCC94 00296254  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802CCC98 00296258  7C 08 02 A6 */	mflr r0
 /* 802CCC9C 0029625C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -229,7 +229,7 @@
 /* 802CCDB0 00296370  7C 08 03 A6 */	mtlr r0
 /* 802CCDB4 00296374  38 21 00 20 */	addi r1, r1, 0x20
 /* 802CCDB8 00296378  4E 80 00 20 */	blr 
-.endfn TRKRequestSend
+.endfn TRK_RequestSend
 
 .fn HandleOpenFileSupportRequest, global
 /* 802CCDBC 0029637C  94 21 FF 90 */	stwu r1, -0x70(r1)
@@ -282,7 +282,7 @@
 /* 802CCE74 00296434  90 1D 00 00 */	stw r0, 0(r29)
 /* 802CCE78 00296438  38 81 00 10 */	addi r4, r1, 0x10
 /* 802CCE7C 0029643C  80 61 00 08 */	lwz r3, 8(r1)
-/* 802CCE80 00296440  4B FF FE 15 */	bl TRKRequestSend
+/* 802CCE80 00296440  4B FF FE 15 */	bl TRK_RequestSend
 /* 802CCE84 00296444  2C 03 00 00 */	cmpwi r3, 0
 /* 802CCE88 00296448  7C 7F 1B 78 */	mr r31, r3
 /* 802CCE8C 0029644C  40 82 00 10 */	bne .L_802CCE9C
@@ -343,7 +343,7 @@
 /* 802CCF50 00296510  90 1D 00 00 */	stw r0, 0(r29)
 /* 802CCF54 00296514  38 81 00 10 */	addi r4, r1, 0x10
 /* 802CCF58 00296518  80 61 00 08 */	lwz r3, 8(r1)
-/* 802CCF5C 0029651C  4B FF FD 39 */	bl TRKRequestSend
+/* 802CCF5C 0029651C  4B FF FD 39 */	bl TRK_RequestSend
 /* 802CCF60 00296520  2C 03 00 00 */	cmpwi r3, 0
 /* 802CCF64 00296524  7C 7F 1B 78 */	mr r31, r3
 /* 802CCF68 00296528  40 82 00 10 */	bne .L_802CCF78
@@ -415,7 +415,7 @@
 /* 802CD054 00296614  38 81 00 10 */	addi r4, r1, 0x10
 /* 802CD058 00296618  90 1D 00 00 */	stw r0, 0(r29)
 /* 802CD05C 0029661C  80 61 00 08 */	lwz r3, 8(r1)
-/* 802CD060 00296620  4B FF FC 35 */	bl TRKRequestSend
+/* 802CD060 00296620  4B FF FC 35 */	bl TRK_RequestSend
 /* 802CD064 00296624  2C 03 00 00 */	cmpwi r3, 0
 /* 802CD068 00296628  7C 7F 1B 78 */	mr r31, r3
 /* 802CD06C 0029662C  40 82 00 24 */	bne .L_802CD090
