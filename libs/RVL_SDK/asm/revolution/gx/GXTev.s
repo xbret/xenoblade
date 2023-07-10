@@ -434,9 +434,9 @@
 /* 8031DBF0 002E71B0  38 00 00 07 */	li r0, 7
 /* 8031DBF4 002E71B4  48 00 00 14 */	b .L_8031DC08
 .L_8031DBF8:
-/* 8031DBF8 002E71B8  3C 60 80 55 */	lis r3, lbl_8054C0E8@ha
+/* 8031DBF8 002E71B8  3C 60 80 55 */	lis r3, "@LOCAL@GXSetTevOrder__F13_GXTevStageID13_GXTexCoordID11_GXTexMapID12_GXChannelID@c2r"@ha
 /* 8031DBFC 002E71BC  54 C0 10 3A */	slwi r0, r6, 2
-/* 8031DC00 002E71C0  38 63 C0 E8 */	addi r3, r3, lbl_8054C0E8@l
+/* 8031DC00 002E71C0  38 63 C0 E8 */	addi r3, r3, "@LOCAL@GXSetTevOrder__F13_GXTevStageID13_GXTexCoordID11_GXTexMapID12_GXChannelID@c2r"@l
 /* 8031DC04 002E71C4  7C 03 00 2E */	lwzx r0, r3, r0
 .L_8031DC08:
 /* 8031DC08 002E71C8  2C 05 00 FF */	cmpwi r5, 0xff
@@ -461,9 +461,9 @@
 /* 8031DC4C 002E720C  38 00 00 07 */	li r0, 7
 /* 8031DC50 002E7210  48 00 00 14 */	b .L_8031DC64
 .L_8031DC54:
-/* 8031DC54 002E7214  3C 60 80 55 */	lis r3, lbl_8054C0E8@ha
+/* 8031DC54 002E7214  3C 60 80 55 */	lis r3, "@LOCAL@GXSetTevOrder__F13_GXTevStageID13_GXTexCoordID11_GXTexMapID12_GXChannelID@c2r"@ha
 /* 8031DC58 002E7218  54 C0 10 3A */	slwi r0, r6, 2
-/* 8031DC5C 002E721C  38 63 C0 E8 */	addi r3, r3, lbl_8054C0E8@l
+/* 8031DC5C 002E721C  38 63 C0 E8 */	addi r3, r3, "@LOCAL@GXSetTevOrder__F13_GXTevStageID13_GXTexCoordID11_GXTexMapID12_GXChannelID@c2r"@l
 /* 8031DC60 002E7220  7C 03 00 2E */	lwzx r0, r3, r0
 .L_8031DC64:
 /* 8031DC64 002E7224  2C 05 00 FF */	cmpwi r5, 0xff
@@ -541,8 +541,7 @@
 	.4byte 0xC108FF80
 .endobj TEVAOpTableST1
 
-#@LOCAL@GXSetTevOrder__F13_GXTevStageID13_GXTexCoordID11_GXTexMapID12_GXChannelID@c2r
-.obj lbl_8054C0E8, local
+.obj "@LOCAL@GXSetTevOrder__F13_GXTevStageID13_GXTexCoordID11_GXTexMapID12_GXChannelID@c2r", local
 	.4byte 0
 	.4byte 1
 	.4byte 0
@@ -553,4 +552,4 @@
 	.4byte 5
 	.4byte 6
 	.4byte 0
-.endobj lbl_8054C0E8
+.endobj "@LOCAL@GXSetTevOrder__F13_GXTevStageID13_GXTexCoordID11_GXTexMapID12_GXChannelID@c2r"

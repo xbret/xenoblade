@@ -33,7 +33,7 @@
 /* 802F7518 002C0AD8  4E 80 00 20 */	blr
 .endfn l2c_csm_execute
 
-.fn l2c_csm_closed, global
+.fn l2c_csm_closed, local
 /* 802F751C 002C0ADC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802F7520 002C0AE0  7C 08 02 A6 */	mflr r0
 /* 802F7524 002C0AE4  90 01 00 34 */	stw r0, 0x34(r1)
@@ -217,7 +217,7 @@
 /* 802F77AC 002C0D6C  4E 80 00 20 */	blr
 .endfn l2c_csm_closed
 
-.fn l2c_csm_orig_w4_sec_comp, global
+.fn l2c_csm_orig_w4_sec_comp, local
 /* 802F77B0 002C0D70  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802F77B4 002C0D74  7C 08 02 A6 */	mflr r0
 /* 802F77B8 002C0D78  90 01 00 34 */	stw r0, 0x34(r1)
@@ -321,7 +321,7 @@
 /* 802F791C 002C0EDC  4E 80 00 20 */	blr
 .endfn l2c_csm_orig_w4_sec_comp
 
-.fn l2c_csm_term_w4_sec_comp, global
+.fn l2c_csm_term_w4_sec_comp, local
 /* 802F7920 002C0EE0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F7924 002C0EE4  7C 08 02 A6 */	mflr r0
 /* 802F7928 002C0EE8  3C C0 80 5C */	lis r6, l2cb@ha
@@ -423,7 +423,7 @@
 /* 802F7A84 002C1044  4E 80 00 20 */	blr
 .endfn l2c_csm_term_w4_sec_comp
 
-.fn l2c_csm_w4_l2cap_connect_rsp, global
+.fn l2c_csm_w4_l2cap_connect_rsp, local
 /* 802F7A88 002C1048  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802F7A8C 002C104C  7C 08 02 A6 */	mflr r0
 /* 802F7A90 002C1050  90 01 00 34 */	stw r0, 0x34(r1)
@@ -585,7 +585,7 @@
 /* 802F7CC8 002C1288  4E 80 00 20 */	blr
 .endfn l2c_csm_w4_l2cap_connect_rsp
 
-.fn l2c_csm_w4_l2ca_connect_rsp, global
+.fn l2c_csm_w4_l2ca_connect_rsp, local
 /* 802F7CCC 002C128C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F7CD0 002C1290  7C 08 02 A6 */	mflr r0
 /* 802F7CD4 002C1294  90 01 00 24 */	stw r0, 0x24(r1)
@@ -718,7 +718,7 @@
 /* 802F7EA0 002C1460  4E 80 00 20 */	blr
 .endfn l2c_csm_w4_l2ca_connect_rsp
 
-.fn l2c_csm_config, global
+.fn l2c_csm_config, local
 /* 802F7EA4 002C1464  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F7EA8 002C1468  7C 08 02 A6 */	mflr r0
 /* 802F7EAC 002C146C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -988,7 +988,7 @@
 /* 802F8268 002C1828  4E 80 00 20 */	blr
 .endfn l2c_csm_config
 
-.fn l2c_csm_open, global
+.fn l2c_csm_open, local
 /* 802F826C 002C182C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F8270 002C1830  7C 08 02 A6 */	mflr r0
 /* 802F8274 002C1834  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1155,7 +1155,7 @@
 /* 802F84C4 002C1A84  4E 80 00 20 */	blr
 .endfn l2c_csm_open
 
-.fn l2c_csm_w4_l2cap_disconnect_rsp, global
+.fn l2c_csm_w4_l2cap_disconnect_rsp, local
 /* 802F84C8 002C1A88  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802F84CC 002C1A8C  7C 08 02 A6 */	mflr r0
 /* 802F84D0 002C1A90  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1290,7 +1290,7 @@
 /* 802F86A8 002C1C68  4E 80 00 20 */	blr
 .endfn l2c_csm_w4_l2cap_disconnect_rsp
 
-.fn l2c_csm_w4_l2ca_disconnect_rsp, global
+.fn l2c_csm_w4_l2ca_disconnect_rsp, local
 /* 802F86AC 002C1C6C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F86B0 002C1C70  7C 08 02 A6 */	mflr r0
 /* 802F86B4 002C1C74  90 01 00 24 */	stw r0, 0x24(r1)

@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.fn gki_init_free_queue, global
+.fn gki_init_free_queue, local
 /* 802DAD60 002A4320  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802DAD64 002A4324  7C 08 02 A6 */	mflr r0
 /* 802DAD68 002A4328  90 01 00 44 */	stw r0, 0x44(r1)

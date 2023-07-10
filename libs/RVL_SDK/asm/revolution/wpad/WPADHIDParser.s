@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.fn __wpadAbortInitExtension, global
+.fn __wpadAbortInitExtension, local
 /* 80370700 00339CC0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80370704 00339CC4  7C 08 02 A6 */	mflr r0
 /* 80370708 00339CC8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -99,7 +99,7 @@
 .endfn __wpadAbortInitExtension
 
 .balign 16, 0
-.fn __wpadGetDevConfig, global
+.fn __wpadGetDevConfig, local
 /* 80370860 00339E20  94 21 FE F0 */	stwu r1, -0x110(r1)
 /* 80370864 00339E24  7C 08 02 A6 */	mflr r0
 /* 80370868 00339E28  90 01 01 14 */	stw r0, 0x114(r1)
@@ -835,7 +835,7 @@
 .endfn __wpadGetDevConfig
 
 .balign 16, 0
-.fn __wpadGetExtConfig, global
+.fn __wpadGetExtConfig, local
 /* 80371350 0033A910  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80371354 0033A914  7C 08 02 A6 */	mflr r0
 /* 80371358 0033A918  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1197,7 +1197,7 @@
 .endfn __wpadGetExtConfig
 
 .balign 16, 0
-.fn __wpadGetExtType, global
+.fn __wpadGetExtType, local
 /* 80371890 0033AE50  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80371894 0033AE54  7C 08 02 A6 */	mflr r0
 /* 80371898 0033AE58  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1500,7 +1500,7 @@
 .endfn __wpadGetExtType
 
 .balign 16, 0
-.fn __wpadGetGameInfo, global
+.fn __wpadGetGameInfo, local
 /* 80371CD0 0033B290  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80371CD4 0033B294  7C 08 02 A6 */	mflr r0
 /* 80371CD8 0033B298  3C C0 80 5E */	lis r6, __rvl_p_wpadcb@ha
@@ -1696,7 +1696,7 @@
 .endfn WPADiHIDParser
 
 .balign 16, 0
-.fn __a1_20_status_report, global
+.fn __a1_20_status_report, local
 /* 80371FB0 0033B570  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80371FB4 0033B574  7C 08 02 A6 */	mflr r0
 /* 80371FB8 0033B578  90 01 00 44 */	stw r0, 0x44(r1)
@@ -1921,7 +1921,7 @@
 .endfn __a1_20_status_report
 
 .balign 16, 0
-.fn __a1_21_user_data, global
+.fn __a1_21_user_data, local
 /* 803722F0 0033B8B0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803722F4 0033B8B4  7C 08 02 A6 */	mflr r0
 /* 803722F8 0033B8B8  90 01 00 44 */	stw r0, 0x44(r1)
@@ -2143,7 +2143,7 @@
 .endfn __a1_21_user_data
 
 .balign 16, 0
-.fn __a1_22_ack, global
+.fn __a1_22_ack, local
 /* 80372620 0033BBE0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80372624 0033BBE4  7C 08 02 A6 */	mflr r0
 /* 80372628 0033BBE8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -2231,7 +2231,7 @@
 .endfn __a1_22_ack
 
 .balign 16, 0
-.fn __parse_dpd_data, global
+.fn __parse_dpd_data, local
 /* 80372760 0033BD20  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 80372764 0033BD24  7C 08 02 A6 */	mflr r0
 /* 80372768 0033BD28  90 01 00 A4 */	stw r0, 0xa4(r1)
@@ -2546,7 +2546,7 @@
 .endfn __parse_dpd_data
 
 .balign 16, 0
-.fn __parse_dpdex_data, global
+.fn __parse_dpdex_data, local
 /* 80372C00 0033C1C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80372C04 0033C1C4  54 A3 1D 78 */	rlwinm r3, r5, 3, 0x15, 0x1c
 /* 80372C08 0033C1C8  1C 05 00 0C */	mulli r0, r5, 0xc
@@ -2710,7 +2710,7 @@
 .endfn __parse_dpdex_data
 
 .balign 16, 0
-.fn __parse_cl_data, global
+.fn __parse_cl_data, local
 /* 80372E80 0033C440  3D 00 80 5E */	lis r8, __rvl_p_wpadcb@ha
 /* 80372E84 0033C444  2C 05 00 02 */	cmpwi r5, 2
 /* 80372E88 0033C448  54 60 10 3A */	slwi r0, r3, 2
@@ -3048,7 +3048,7 @@
 .endfn __parse_cl_data
 
 .balign 16, 0
-.fn __parse_vs_data, global
+.fn __parse_vs_data, local
 /* 80373350 0033C910  80 64 00 00 */	lwz r3, 0(r4)
 /* 80373354 0033C914  28 87 00 15 */	cmplwi cr1, r7, 0x15
 /* 80373358 0033C918  88 06 00 00 */	lbz r0, 0(r6)
@@ -3164,7 +3164,7 @@
 .endfn __parse_vs_data
 
 .balign 16, 0
-.fn __a1_30_data_type, global
+.fn __a1_30_data_type, local
 /* 80373510 0033CAD0  88 C4 00 02 */	lbz r6, 2(r4)
 /* 80373514 0033CAD4  3C E0 80 5E */	lis r7, __rvl_p_wpadcb@ha
 /* 80373518 0033CAD8  88 04 00 01 */	lbz r0, 1(r4)
@@ -3194,7 +3194,7 @@
 
 
 .balign 16, 0
-.fn __a1_31_data_type, global
+.fn __a1_31_data_type, local
 /* 80373570 0033CB30  88 C4 00 02 */	lbz r6, 2(r4)
 /* 80373574 0033CB34  3C E0 80 5E */	lis r7, __rvl_p_wpadcb@ha
 /* 80373578 0033CB38  88 04 00 01 */	lbz r0, 1(r4)
@@ -3265,7 +3265,7 @@
 .endfn __a1_31_data_type
 
 .balign 16, 0
-.fn __a1_32_data_type, global
+.fn __a1_32_data_type, local
 /* 80373680 0033CC40  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80373684 0033CC44  7C 08 02 A6 */	mflr r0
 /* 80373688 0033CC48  3C C0 80 5E */	lis r6, __rvl_p_wpadcb@ha
@@ -3479,7 +3479,7 @@
 .endfn __a1_32_data_type
 
 .balign 16, 0
-.fn __a1_33_data_type, global
+.fn __a1_33_data_type, local
 /* 803739A0 0033CF60  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803739A4 0033CF64  7C 08 02 A6 */	mflr r0
 /* 803739A8 0033CF68  3C E0 80 5E */	lis r7, __rvl_p_wpadcb@ha
@@ -3568,7 +3568,7 @@
 .endfn __a1_33_data_type
 
 .balign 16, 0
-.fn __a1_34_data_type, global
+.fn __a1_34_data_type, local
 /* 80373AF0 0033D0B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80373AF4 0033D0B4  7C 08 02 A6 */	mflr r0
 /* 80373AF8 0033D0B8  3C E0 80 5E */	lis r7, __rvl_p_wpadcb@ha
@@ -3701,7 +3701,7 @@
 .endfn __a1_34_data_type
 
 .balign 16, 0
-.fn __a1_35_data_type, global
+.fn __a1_35_data_type, local
 /* 80373CD0 0033D290  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80373CD4 0033D294  7C 08 02 A6 */	mflr r0
 /* 80373CD8 0033D298  90 01 00 34 */	stw r0, 0x34(r1)
@@ -3949,7 +3949,7 @@
 .endfn __a1_35_data_type
 
 .balign 16, 0
-.fn __a1_36_data_type, global
+.fn __a1_36_data_type, local
 /* 80374070 0033D630  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80374074 0033D634  7C 08 02 A6 */	mflr r0
 /* 80374078 0033D638  3C E0 80 5E */	lis r7, __rvl_p_wpadcb@ha
@@ -4021,7 +4021,7 @@
 .endfn __a1_36_data_type
 
 .balign 16, 0
-.fn __a1_37_data_type, global
+.fn __a1_37_data_type, local
 /* 80374180 0033D740  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80374184 0033D744  7C 08 02 A6 */	mflr r0
 /* 80374188 0033D748  90 01 00 34 */	stw r0, 0x34(r1)
@@ -4272,7 +4272,7 @@
 .endfn __a1_37_data_type
 
 .balign 16, 0
-.fn __a1_3d_data_type, global
+.fn __a1_3d_data_type, local
 /* 80374530 0033DAF0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80374534 0033DAF4  7C 08 02 A6 */	mflr r0
 /* 80374538 0033DAF8  3C C0 80 5E */	lis r6, __rvl_p_wpadcb@ha
@@ -4349,7 +4349,7 @@
 .endfn __a1_3d_data_type
 
 .balign 16, 0
-.fn __a1_3e_data_type, global
+.fn __a1_3e_data_type, local
 /* 80374650 0033DC10  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80374654 0033DC14  7C 08 02 A6 */	mflr r0
 /* 80374658 0033DC18  90 01 00 34 */	stw r0, 0x34(r1)
@@ -4467,7 +4467,7 @@
 .endfn __a1_3e_data_type
 
 .balign 16, 0
-.fn __a1_3f_data_type, global
+.fn __a1_3f_data_type, local
 /* 80374810 0033DDD0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80374814 0033DDD4  7C 08 02 A6 */	mflr r0
 /* 80374818 0033DDD8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -4584,7 +4584,7 @@
 .endfn __a1_3f_data_type
 
 .balign 16, 0
-.fn __a1_unused_report, global
+.fn __a1_unused_report, local
 /* 803749C0 0033DF80  4E 80 00 20 */	blr 
 .endfn __a1_unused_report
 
@@ -4593,7 +4593,7 @@
 
 .balign 8
 
-.obj _cExtInvalidData, global
+.obj _cExtInvalidData, local
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
 	.4byte 0xFFFFFFFF
@@ -4606,7 +4606,7 @@
 
 .balign 8
 
-.obj __a1_input_reports_array, global
+.obj __a1_input_reports_array, local
 	.4byte __a1_20_status_report
 	.4byte __a1_21_user_data
 	.4byte __a1_22_ack
@@ -4847,8 +4847,10 @@
 .endobj _wpadRolag
 
 .obj _wpadExtRawData, local
-	.skip 0x30
+	.skip 0x15
 .endobj _wpadExtRawData
+
+.skip 0x1b
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

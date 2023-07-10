@@ -45,7 +45,7 @@
 /* 802E69AC 002AFF6C  4E 80 00 20 */	blr 
 .endfn btm_dev_init
 
-.fn btm_db_reset, global
+.fn btm_db_reset, local
 /* 802E69B0 002AFF70  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E69B4 002AFF74  7C 08 02 A6 */	mflr r0
 /* 802E69B8 002AFF78  90 01 00 14 */	stw r0, 0x14(r1)

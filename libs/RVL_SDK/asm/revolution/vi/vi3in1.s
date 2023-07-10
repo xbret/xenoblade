@@ -1860,7 +1860,7 @@
 .endobj gammaSet
 
 
-.obj VINtscACPType1, local
+.obj VINtscACPType1, global
 	.4byte 0x36000000
 	.4byte 0
 	.4byte 0x1B1B2407
@@ -1870,7 +1870,7 @@
 	.4byte 0
 .endobj VINtscACPType1
 
-.obj VINtscACPType2, local
+.obj VINtscACPType2, global
 	.4byte 0x3E1D1125
 	.4byte 0x11010700
 	.4byte 0x1B1B2407
@@ -1880,7 +1880,7 @@
 	.4byte 0xFF000000
 .endobj VINtscACPType2
 
-.obj VINtscACPType3, local
+.obj VINtscACPType3, global
 	.4byte 0x3E171521
 	.4byte 0x15050502
 	.4byte 0x1B1B2407
@@ -1890,7 +1890,7 @@
 	.4byte 0xFF000000
 .endobj VINtscACPType3
 
-.obj VIPalACPType1, local
+.obj VIPalACPType1, global
 	.4byte 0x361A222A
 	.4byte 0x22050200
 	.4byte 0x1C3D1403
@@ -1900,7 +1900,7 @@
 	.4byte 0x55010000
 .endobj VIPalACPType1
 
-.obj VIPalACPType2, local
+.obj VIPalACPType2, global
 	.4byte 0x361A222A
 	.4byte 0x22050200
 	.4byte 0x1C3D1403
@@ -1910,7 +1910,7 @@
 	.4byte 0x55010000
 .endobj VIPalACPType2
 
-.obj VIPalACPType3, local
+.obj VIPalACPType3, global
 	.4byte 0x361A222A
 	.4byte 0x22050200
 	.4byte 0x1C3D1403
@@ -1920,7 +1920,7 @@
 	.4byte 0x55010000
 .endobj VIPalACPType3
 
-.obj VIEurgb60ACPType1, local
+.obj VIEurgb60ACPType1, global
 	.4byte 0x36000000
 	.4byte 0
 	.4byte 0x1B1B2407
@@ -1930,7 +1930,7 @@
 	.4byte 0x00010000
 .endobj VIEurgb60ACPType1
 
-.obj VIEurgb60ACPType2, local
+.obj VIEurgb60ACPType2, global
 	.4byte 0x361D1125
 	.4byte 0x11010700
 	.4byte 0x1B1B2407
@@ -1940,7 +1940,7 @@
 	.4byte 0xFF010000
 .endobj VIEurgb60ACPType2
 
-.obj VIEurgb60ACPType3, local
+.obj VIEurgb60ACPType3, global
 	.4byte 0x36171521
 	.4byte 0x15050502
 	.4byte 0x1B1B2407
@@ -1950,7 +1950,7 @@
 	.4byte 0xFF010000
 .endobj VIEurgb60ACPType3
 
-.obj VIMpalACPType1, local
+.obj VIMpalACPType1, global
 	.4byte 0x36000000
 	.4byte 0
 	.4byte 0x1B1B2407
@@ -1961,7 +1961,7 @@
 .endobj VIMpalACPType1
 
 
-.obj VIMpalACPType2, local
+.obj VIMpalACPType2, global
 	.4byte 0x361D1125
 	.4byte 0x11010700
 	.4byte 0x1B1B2407
@@ -1972,7 +1972,7 @@
 .endobj VIMpalACPType2
 
 
-.obj VIMpalACPType3, local
+.obj VIMpalACPType3, global
 	.4byte 0x36171521
 	.4byte 0x15050502
 	.4byte 0x1B1B2407
@@ -1982,7 +1982,7 @@
 	.4byte 0xFF000000
 .endobj VIMpalACPType3
 
-.obj VIProgressiveACPType, local
+.obj VIProgressiveACPType, global
 	.4byte 0x01000000
 	.4byte 0
 	.4byte 0
@@ -2059,9 +2059,11 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj VIZeroACPType, local
-	.skip 0x30
+.obj VIZeroACPType, global
+	.skip 0x1A
 .endobj VIZeroACPType
+
+.skip 0x16
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.fn PackArgs, global
+.fn PackArgs, local
 /* 80355510 0031EAD0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80355514 0031EAD4  7C 08 02 A6 */	mflr r0
 /* 80355518 0031EAD8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -111,7 +111,7 @@
 .endfn PackArgs
 
 .balign 16, 0
-.fn Utf16ToArg, global
+.fn Utf16ToArg, local
 /* 80355690 0031EC50  2C 04 00 00 */	cmpwi r4, 0
 /* 80355694 0031EC54  41 82 01 4C */	beq .L_803557E0
 /* 80355698 0031EC58  38 C0 00 04 */	li r6, 4
@@ -215,7 +215,7 @@
 .endfn Utf16ToArg
 
 .balign 16, 0
-.fn PackInstallerArgs, global
+.fn PackInstallerArgs, local
 /* 803557F0 0031EDB0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803557F4 0031EDB4  7C 08 02 A6 */	mflr r0
 /* 803557F8 0031EDB8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -344,7 +344,7 @@
 .endfn PackInstallerArgs
 
 .balign 16, 0
-.fn Run, global
+.fn Run, local
 /* 803559C0 0031EF80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803559C4 0031EF84  7C 08 02 A6 */	mflr r0
 /* 803559C8 0031EF88  90 01 00 14 */	stw r0, 0x14(r1)
@@ -384,7 +384,7 @@
 .endfn __OSGetExecParams
 
 .balign 16, 0
-.fn callback, global
+.fn callback, local
 /* 80355A40 0031F000  90 6D B8 F0 */	stw r3, DVDLowIntType@sda21(r13)
 /* 80355A44 0031F004  4E 80 00 20 */	blr 
 .endfn callback
@@ -1012,7 +1012,7 @@
 /* 8035633C 0031F8FC  38 60 00 20 */	li r3, 0x20
 /* 80356340 0031F900  38 80 00 20 */	li r4, 0x20
 /* 80356344 0031F904  4B FF D7 1D */	bl OSAllocFromMEM1ArenaLo
-/* 80356348 0031F908  80 CD B8 EC */	lwz r6, lbl_80667A6C@sda21(r13)
+/* 80356348 0031F908  80 CD B8 EC */	lwz r6, "@LOCAL@GetApploaderPosition__Fv@apploaderPosition"@sda21(r13)
 /* 8035634C 0031F90C  7C 7F 1B 78 */	mr r31, r3
 /* 80356350 0031F910  2C 06 00 00 */	cmpwi r6, 0
 /* 80356354 0031F914  41 82 00 08 */	beq .L_8035635C
@@ -1056,11 +1056,11 @@
 /* 803563DC 0031F99C  80 03 30 F4 */	lwz r0, 0x800030F4@l(r3)
 /* 803563E0 0031F9A0  7C 00 22 14 */	add r0, r0, r4
 /* 803563E4 0031F9A4  7C 06 16 70 */	srawi r6, r0, 2
-/* 803563E8 0031F9A8  90 CD B8 EC */	stw r6, lbl_80667A6C@sda21(r13)
+/* 803563E8 0031F9A8  90 CD B8 EC */	stw r6, "@LOCAL@GetApploaderPosition__Fv@apploaderPosition"@sda21(r13)
 /* 803563EC 0031F9AC  48 00 00 0C */	b .L_803563F8
 .L_803563F0:
 /* 803563F0 0031F9B0  38 C0 09 10 */	li r6, 0x910
-/* 803563F4 0031F9B4  90 CD B8 EC */	stw r6, lbl_80667A6C@sda21(r13)
+/* 803563F4 0031F9B4  90 CD B8 EC */	stw r6, "@LOCAL@GetApploaderPosition__Fv@apploaderPosition"@sda21(r13)
 .L_803563F8:
 /* 803563F8 0031F9B8  7F E4 FB 78 */	mr r4, r31
 /* 803563FC 0031F9BC  38 61 01 50 */	addi r3, r1, 0x150
@@ -1085,7 +1085,7 @@
 /* 8035643C 0031F9FC  4B FB 86 95 */	bl DVDGetCommandBlockStatus
 /* 80356440 0031FA00  2C 03 00 00 */	cmpwi r3, 0
 /* 80356444 0031FA04  40 82 FF D0 */	bne .L_80356414
-/* 80356448 0031FA08  80 CD B8 EC */	lwz r6, lbl_80667A6C@sda21(r13)
+/* 80356448 0031FA08  80 CD B8 EC */	lwz r6, "@LOCAL@GetApploaderPosition__Fv@apploaderPosition"@sda21(r13)
 /* 8035644C 0031FA0C  2C 06 00 00 */	cmpwi r6, 0
 /* 80356450 0031FA10  41 82 00 08 */	beq .L_80356458
 /* 80356454 0031FA14  48 00 00 A0 */	b .L_803564F4
@@ -1128,11 +1128,11 @@
 /* 803564D8 0031FA98  80 03 30 F4 */	lwz r0, 0x800030F4@l(r3)
 /* 803564DC 0031FA9C  7C 00 22 14 */	add r0, r0, r4
 /* 803564E0 0031FAA0  7C 06 16 70 */	srawi r6, r0, 2
-/* 803564E4 0031FAA4  90 CD B8 EC */	stw r6, lbl_80667A6C@sda21(r13)
+/* 803564E4 0031FAA4  90 CD B8 EC */	stw r6, "@LOCAL@GetApploaderPosition__Fv@apploaderPosition"@sda21(r13)
 /* 803564E8 0031FAA8  48 00 00 0C */	b .L_803564F4
 .L_803564EC:
 /* 803564EC 0031FAAC  38 C0 09 10 */	li r6, 0x910
-/* 803564F0 0031FAB0  90 CD B8 EC */	stw r6, lbl_80667A6C@sda21(r13)
+/* 803564F0 0031FAB0  90 CD B8 EC */	stw r6, "@LOCAL@GetApploaderPosition__Fv@apploaderPosition"@sda21(r13)
 .L_803564F4:
 /* 803564F4 0031FAB4  80 BF 00 14 */	lwz r5, 0x14(r31)
 /* 803564F8 0031FAB8  38 61 01 B0 */	addi r3, r1, 0x1b0
@@ -1182,7 +1182,7 @@
 /* 80356594 0031FB54  3C 1B 00 01 */	addis r0, r27, 1
 /* 80356598 0031FB58  28 00 FF FF */	cmplwi r0, 0xffff
 /* 8035659C 0031FB5C  40 82 00 C0 */	bne .L_8035665C
-/* 803565A0 0031FB60  80 CD B8 EC */	lwz r6, lbl_80667A6C@sda21(r13)
+/* 803565A0 0031FB60  80 CD B8 EC */	lwz r6, "@LOCAL@GetApploaderPosition__Fv@apploaderPosition"@sda21(r13)
 /* 803565A4 0031FB64  2C 06 00 00 */	cmpwi r6, 0
 /* 803565A8 0031FB68  41 82 00 08 */	beq .L_803565B0
 /* 803565AC 0031FB6C  48 00 00 A0 */	b .L_8035664C
@@ -1225,11 +1225,11 @@
 /* 80356630 0031FBF0  80 03 30 F4 */	lwz r0, 0x800030F4@l(r3)
 /* 80356634 0031FBF4  7C 00 22 14 */	add r0, r0, r4
 /* 80356638 0031FBF8  7C 06 16 70 */	srawi r6, r0, 2
-/* 8035663C 0031FBFC  90 CD B8 EC */	stw r6, lbl_80667A6C@sda21(r13)
+/* 8035663C 0031FBFC  90 CD B8 EC */	stw r6, "@LOCAL@GetApploaderPosition__Fv@apploaderPosition"@sda21(r13)
 /* 80356640 0031FC00  48 00 00 0C */	b .L_8035664C
 .L_80356644:
 /* 80356644 0031FC04  38 C0 09 10 */	li r6, 0x910
-/* 80356648 0031FC08  90 CD B8 EC */	stw r6, lbl_80667A6C@sda21(r13)
+/* 80356648 0031FC08  90 CD B8 EC */	stw r6, "@LOCAL@GetApploaderPosition__Fv@apploaderPosition"@sda21(r13)
 .L_8035664C:
 /* 8035664C 0031FC0C  80 7F 00 14 */	lwz r3, 0x14(r31)
 /* 80356650 0031FC10  38 03 00 20 */	addi r0, r3, 0x20
@@ -1328,7 +1328,7 @@
 /* 803567A8 0031FD68  38 00 00 01 */	li r0, 1
 /* 803567AC 0031FD6C  93 A3 DF EC */	stw r29, -0x2014(r3)
 /* 803567B0 0031FD70  98 1B 30 E2 */	stb r0, 0x800030E2@l(r27)
-/* 803567B4 0031FD74  80 CD B8 EC */	lwz r6, lbl_80667A6C@sda21(r13)
+/* 803567B4 0031FD74  80 CD B8 EC */	lwz r6, "@LOCAL@GetApploaderPosition__Fv@apploaderPosition"@sda21(r13)
 /* 803567B8 0031FD78  2C 06 00 00 */	cmpwi r6, 0
 /* 803567BC 0031FD7C  41 82 00 08 */	beq .L_803567C4
 /* 803567C0 0031FD80  48 00 00 9C */	b .L_8035685C
@@ -1370,11 +1370,11 @@
 /* 80356840 0031FE00  80 03 30 F4 */	lwz r0, 0x800030F4@l(r3)
 /* 80356844 0031FE04  7C 00 22 14 */	add r0, r0, r4
 /* 80356848 0031FE08  7C 06 16 70 */	srawi r6, r0, 2
-/* 8035684C 0031FE0C  90 CD B8 EC */	stw r6, lbl_80667A6C@sda21(r13)
+/* 8035684C 0031FE0C  90 CD B8 EC */	stw r6, "@LOCAL@GetApploaderPosition__Fv@apploaderPosition"@sda21(r13)
 /* 80356850 0031FE10  48 00 00 0C */	b .L_8035685C
 .L_80356854:
 /* 80356854 0031FE14  38 C0 09 10 */	li r6, 0x910
-/* 80356858 0031FE18  90 CD B8 EC */	stw r6, lbl_80667A6C@sda21(r13)
+/* 80356858 0031FE18  90 CD B8 EC */	stw r6, "@LOCAL@GetApploaderPosition__Fv@apploaderPosition"@sda21(r13)
 .L_8035685C:
 /* 8035685C 0031FE1C  80 FF 00 14 */	lwz r7, 0x14(r31)
 /* 80356860 0031FE20  38 61 00 60 */	addi r3, r1, 0x60
@@ -1610,10 +1610,9 @@
 	.skip 0x4
 .endobj __OSNextPartitionType
 
-#@LOCAL@GetApploaderPosition__Fv@apploaderPosition
-.obj lbl_80667A6C, local
+.obj "@LOCAL@GetApploaderPosition__Fv@apploaderPosition", local
 	.skip 0x4
-.endobj lbl_80667A6C
+.endobj "@LOCAL@GetApploaderPosition__Fv@apploaderPosition"
 
 .obj DVDLowIntType, local
 	.skip 0x4

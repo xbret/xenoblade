@@ -147,18 +147,18 @@
 /* 8032C76C 002F5D2C  88 03 00 00 */	lbz r0, 0(r3)
 /* 8032C770 002F5D30  7C 04 00 40 */	cmplw r4, r0
 /* 8032C774 002F5D34  4D 81 00 20 */	bgtlr 
-/* 8032C778 002F5D38  3D 00 80 5D */	lis r8, lbl_805CD790@ha
-/* 8032C77C 002F5D3C  88 08 D7 90 */	lbz r0, lbl_805CD790@l(r8)
+/* 8032C778 002F5D38  3D 00 80 5D */	lis r8, "@GUARD@texCoords$7412"@ha
+/* 8032C77C 002F5D3C  88 08 D7 90 */	lbz r0, "@GUARD@texCoords$7412"@l(r8)
 /* 8032C780 002F5D40  7C 00 07 75 */	extsb. r0, r0
 /* 8032C784 002F5D44  40 82 00 44 */	bne .L_8032C7C8
 /* 8032C788 002F5D48  3C C0 80 52 */	lis r6, lbl_80518A48@ha
 /* 8032C78C 002F5D4C  3C A0 80 52 */	lis r5, lbl_80518A4C@ha
-/* 8032C790 002F5D50  3C E0 80 5D */	lis r7, lbl_805CD798@ha
+/* 8032C790 002F5D50  3C E0 80 5D */	lis r7, "texCoords$7412"@ha
 /* 8032C794 002F5D54  C0 26 8A 48 */	lfs f1, lbl_80518A48@l(r6)
-/* 8032C798 002F5D58  38 C7 D7 98 */	addi r6, r7, lbl_805CD798@l
+/* 8032C798 002F5D58  38 C7 D7 98 */	addi r6, r7, "texCoords$7412"@l
 /* 8032C79C 002F5D5C  C0 05 8A 4C */	lfs f0, lbl_80518A4C@l(r5)
 /* 8032C7A0 002F5D60  38 00 00 01 */	li r0, 1
-/* 8032C7A4 002F5D64  D0 27 D7 98 */	stfs f1, lbl_805CD798@l(r7)
+/* 8032C7A4 002F5D64  D0 27 D7 98 */	stfs f1, "texCoords$7412"@l(r7)
 /* 8032C7A8 002F5D68  D0 26 00 04 */	stfs f1, 4(r6)
 /* 8032C7AC 002F5D6C  D0 06 00 08 */	stfs f0, 8(r6)
 /* 8032C7B0 002F5D70  D0 26 00 0C */	stfs f1, 0xc(r6)
@@ -166,12 +166,12 @@
 /* 8032C7B8 002F5D78  D0 06 00 14 */	stfs f0, 0x14(r6)
 /* 8032C7BC 002F5D7C  D0 06 00 18 */	stfs f0, 0x18(r6)
 /* 8032C7C0 002F5D80  D0 06 00 1C */	stfs f0, 0x1c(r6)
-/* 8032C7C4 002F5D84  98 08 D7 90 */	stb r0, lbl_805CD790@l(r8)
+/* 8032C7C4 002F5D84  98 08 D7 90 */	stb r0, "@GUARD@texCoords$7412"@l(r8)
 .L_8032C7C8:
 /* 8032C7C8 002F5D88  88 E3 00 01 */	lbz r7, 1(r3)
-/* 8032C7CC 002F5D8C  3C C0 80 5D */	lis r6, lbl_805CD798@ha
-/* 8032C7D0 002F5D90  38 A6 D7 98 */	addi r5, r6, lbl_805CD798@l
-/* 8032C7D4 002F5D94  C0 E6 D7 98 */	lfs f7, lbl_805CD798@l(r6)
+/* 8032C7CC 002F5D8C  3C C0 80 5D */	lis r6, "texCoords$7412"@ha
+/* 8032C7D0 002F5D90  38 A6 D7 98 */	addi r5, r6, "texCoords$7412"@l
+/* 8032C7D4 002F5D94  C0 E6 D7 98 */	lfs f7, "texCoords$7412"@l(r6)
 /* 8032C7D8 002F5D98  7C 07 20 50 */	subf r0, r7, r4
 /* 8032C7DC 002F5D9C  54 E6 28 34 */	slwi r6, r7, 5
 /* 8032C7E0 002F5DA0  C0 C5 00 04 */	lfs f6, 4(r5)
@@ -1040,12 +1040,12 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-#@GUARD@texCoords$7412
-.obj lbl_805CD790, global
-	.skip 0x8
-.endobj lbl_805CD790
+.obj "@GUARD@texCoords$7412", global
+	.skip 0x1
+.endobj "@GUARD@texCoords$7412"
 
-#texCoords$7412
-.obj lbl_805CD798, global
+.skip 7
+
+.obj "texCoords$7412", global
 	.skip 0x20
-.endobj lbl_805CD798
+.endobj "texCoords$7412"

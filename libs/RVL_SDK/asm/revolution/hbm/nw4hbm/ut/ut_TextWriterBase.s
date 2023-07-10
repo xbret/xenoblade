@@ -5761,9 +5761,9 @@
 /* 8033EF94 00308554  7C 08 02 A6 */	mflr r0
 /* 8033EF98 00308558  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8033EF9C 0030855C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8033EFA0 00308560  3F E0 80 5D */	lis r31, lbl_805CD820@ha
+/* 8033EFA0 00308560  3F E0 80 5D */	lis r31, "@GUARD@mDefaultTagProcessor__Q36nw4hbm2ut17TextWriterBase<c>"@ha
 /* 8033EFA4 00308564  93 C1 00 08 */	stw r30, 8(r1)
-/* 8033EFA8 00308568  88 1F D8 20 */	lbz r0, lbl_805CD820@l(r31)
+/* 8033EFA8 00308568  88 1F D8 20 */	lbz r0, "@GUARD@mDefaultTagProcessor__Q36nw4hbm2ut17TextWriterBase<c>"@l(r31)
 /* 8033EFAC 0030856C  7C 00 07 75 */	extsb. r0, r0
 /* 8033EFB0 00308570  40 82 00 30 */	bne .L_8033EFE0
 /* 8033EFB4 00308574  3F C0 80 5D */	lis r30, "mDefaultTagProcessor__Q36nw4hbm2ut17TextWriterBase<c>"@ha
@@ -5776,10 +5776,10 @@
 /* 8033EFD0 00308590  38 A5 D7 F8 */	addi r5, r5, lbl_805CD7F8@l
 /* 8033EFD4 00308594  4B F7 A6 C9 */	bl __register_global_object
 /* 8033EFD8 00308598  38 00 00 01 */	li r0, 1
-/* 8033EFDC 0030859C  98 1F D8 20 */	stb r0, lbl_805CD820@l(r31)
+/* 8033EFDC 0030859C  98 1F D8 20 */	stb r0, "@GUARD@mDefaultTagProcessor__Q36nw4hbm2ut17TextWriterBase<c>"@l(r31)
 .L_8033EFE0:
-/* 8033EFE0 003085A0  3F C0 80 5D */	lis r30, lbl_805CD821@ha
-/* 8033EFE4 003085A4  88 1E D8 21 */	lbz r0, lbl_805CD821@l(r30)
+/* 8033EFE0 003085A0  3F C0 80 5D */	lis r30, "@GUARD@mDefaultTagProcessor__Q36nw4hbm2ut17TextWriterBase<w>"@ha
+/* 8033EFE4 003085A4  88 1E D8 21 */	lbz r0, "@GUARD@mDefaultTagProcessor__Q36nw4hbm2ut17TextWriterBase<w>"@l(r30)
 /* 8033EFE8 003085A8  7C 00 07 75 */	extsb. r0, r0
 /* 8033EFEC 003085AC  40 82 00 30 */	bne .L_8033F01C
 /* 8033EFF0 003085B0  3F E0 80 5D */	lis r31, "mDefaultTagProcessor__Q36nw4hbm2ut17TextWriterBase<w>"@ha
@@ -5792,7 +5792,7 @@
 /* 8033F00C 003085CC  38 A5 D8 04 */	addi r5, r5, lbl_805CD804@l
 /* 8033F010 003085D0  4B F7 A6 8D */	bl __register_global_object
 /* 8033F014 003085D4  38 00 00 01 */	li r0, 1
-/* 8033F018 003085D8  98 1E D8 21 */	stb r0, lbl_805CD821@l(r30)
+/* 8033F018 003085D8  98 1E D8 21 */	stb r0, "@GUARD@mDefaultTagProcessor__Q36nw4hbm2ut17TextWriterBase<w>"@l(r30)
 .L_8033F01C:
 /* 8033F01C 003085DC  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8033F020 003085E0  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -5864,12 +5864,12 @@
 	.skip 0x4
 .endobj "mDefaultTagProcessor__Q36nw4hbm2ut17TextWriterBase<w>"
 
-#@GUARD@mDefaultTagProcessor__Q36nw4hbm2ut17TextWriterBase<c>
-.obj lbl_805CD820, local
+.obj "@GUARD@mDefaultTagProcessor__Q36nw4hbm2ut17TextWriterBase<c>", local
 	.skip 0x1
-.endobj lbl_805CD820
+.endobj "@GUARD@mDefaultTagProcessor__Q36nw4hbm2ut17TextWriterBase<c>"
 
-#@GUARD@mDefaultTagProcessor__Q36nw4hbm2ut17TextWriterBase<w>
-.obj lbl_805CD821, local
-	.skip 0x7
-.endobj lbl_805CD821
+.obj "@GUARD@mDefaultTagProcessor__Q36nw4hbm2ut17TextWriterBase<w>", local
+	.skip 0x1
+.endobj "@GUARD@mDefaultTagProcessor__Q36nw4hbm2ut17TextWriterBase<w>"
+
+.skip 6

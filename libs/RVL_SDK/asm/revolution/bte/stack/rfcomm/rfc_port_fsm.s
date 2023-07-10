@@ -49,7 +49,7 @@
 /* 802FFA54 002C9014  4E 80 00 20 */	blr
 .endfn rfc_port_sm_execute
 
-.fn rfc_port_sm_state_closed, global
+.fn rfc_port_sm_state_closed, local
 /* 802FFA58 002C9018  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FFA5C 002C901C  7C 08 02 A6 */	mflr r0
 /* 802FFA60 002C9020  28 04 00 0E */	cmplwi r4, 0xe
@@ -156,7 +156,7 @@
 /* 802FFBC8 002C9188  4E 80 00 20 */	blr
 .endfn rfc_port_sm_state_closed
 
-.fn rfc_port_sm_sabme_wait_ua, global
+.fn rfc_port_sm_sabme_wait_ua, local
 /* 802FFBCC 002C918C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FFBD0 002C9190  7C 08 02 A6 */	mflr r0
 /* 802FFBD4 002C9194  28 04 00 0E */	cmplwi r4, 0xe
@@ -274,7 +274,7 @@
 /* 802FFD64 002C9324  4E 80 00 20 */	blr
 .endfn rfc_port_sm_sabme_wait_ua
 
-.fn rfc_port_sm_term_wait_sec_check, global
+.fn rfc_port_sm_term_wait_sec_check, local
 /* 802FFD68 002C9328  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FFD6C 002C932C  7C 08 02 A6 */	mflr r0
 /* 802FFD70 002C9330  3C E0 80 55 */	lis r7, lbl_80548A70@ha
@@ -401,7 +401,7 @@
 /* 802FFF20 002C94E0  4E 80 00 20 */	blr
 .endfn rfc_port_sm_term_wait_sec_check
 
-.fn rfc_port_sm_orig_wait_sec_check, global
+.fn rfc_port_sm_orig_wait_sec_check, local
 /* 802FFF24 002C94E4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FFF28 002C94E8  7C 08 02 A6 */	mflr r0
 /* 802FFF2C 002C94EC  3C E0 80 55 */	lis r7, lbl_80548A70@ha
@@ -497,7 +497,7 @@
 /* 80300070 002C9630  4E 80 00 20 */	blr
 .endfn rfc_port_sm_orig_wait_sec_check
 
-.fn rfc_port_sm_opened, global
+.fn rfc_port_sm_opened, local
 /* 80300074 002C9634  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80300078 002C9638  7C 08 02 A6 */	mflr r0
 /* 8030007C 002C963C  28 04 00 0E */	cmplwi r4, 0xe
@@ -637,7 +637,7 @@
 /* 8030025C 002C981C  4E 80 00 20 */	blr
 .endfn rfc_port_sm_opened
 
-.fn rfc_port_sm_disc_wait_ua, global
+.fn rfc_port_sm_disc_wait_ua, local
 /* 80300260 002C9820  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80300264 002C9824  7C 08 02 A6 */	mflr r0
 /* 80300268 002C9828  28 04 00 0E */	cmplwi r4, 0xe
@@ -1249,7 +1249,7 @@
 /* 80300AC0 002CA080  4E 80 00 20 */	blr 
 .endfn rfc_process_l2cap_congestion
 
-.fn rfc_set_port_state, global
+.fn rfc_set_port_state, local
 /* 80300AC4 002CA084  A0 04 00 12 */	lhz r0, 0x12(r4)
 /* 80300AC8 002CA088  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 80300ACC 002CA08C  41 82 00 0C */	beq .L_80300AD8

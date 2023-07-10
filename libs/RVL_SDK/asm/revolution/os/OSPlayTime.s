@@ -13,7 +13,7 @@
 .endfn OSPlayTimeIsLimited
 
 .balign 16, 0
-.fn __OSPlayTimeFadeLastAIDCallback, global
+.fn __OSPlayTimeFadeLastAIDCallback, local
 /* 8035E840 00327E00  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8035E844 00327E04  7C 08 02 A6 */	mflr r0
 /* 8035E848 00327E08  90 01 00 44 */	stw r0, 0x44(r1)
@@ -224,7 +224,7 @@
 .endfn __OSWriteExpiredFlagIfSet
 
 .balign 16, 0
-.fn __OSPlayTimeRebootThread, global
+.fn __OSPlayTimeRebootThread, local
 /* 8035EB40 00328100  54 2B 06 FE */	clrlwi r11, r1, 0x1b
 /* 8035EB44 00328104  7C 2C 0B 78 */	mr r12, r1
 /* 8035EB48 00328108  21 6B FB 20 */	subfic r11, r11, -1248
@@ -290,7 +290,7 @@
 .endfn __OSPlayTimeRebootThread
 
 .balign 16, 0
-.fn __OSPlayTimeAlarmExpired, global
+.fn __OSPlayTimeAlarmExpired, local
 /* 8035EC30 003281F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035EC34 003281F4  7C 08 02 A6 */	mflr r0
 /* 8035EC38 003281F8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -611,9 +611,11 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj __OSExpireAlarm, local
-	.skip 0x40
+.obj __OSExpireAlarm, global
+	.skip 0x30
 .endobj __OSExpireAlarm
+
+.skip 0x10
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
@@ -623,14 +625,14 @@
 	.skip 0x4
 .endobj __OSExpireAIFade
 
-.obj __OSExpireSetExpiredFlag, local
+.obj __OSExpireSetExpiredFlag, global
 	.skip 0x4
 .endobj __OSExpireSetExpiredFlag
 
-.obj __OSExpireCallback, local
+.obj __OSExpireCallback, global
 	.skip 0x8
 .endobj __OSExpireCallback
 
-.obj __OSExpireTime, local
+.obj __OSExpireTime, global
 	.skip 0x8
 .endobj __OSExpireTime

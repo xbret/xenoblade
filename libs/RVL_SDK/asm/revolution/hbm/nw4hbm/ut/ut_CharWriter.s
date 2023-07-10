@@ -285,8 +285,8 @@
 /* 80336E90 00300450  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 80336E94 00300454  3B E0 00 00 */	li r31, 0
 /* 80336E98 00300458  93 C1 00 28 */	stw r30, 0x28(r1)
-/* 80336E9C 0030045C  3F C0 80 5D */	lis r30, lbl_805CD7E0@ha
-/* 80336EA0 00300460  3B DE D7 E0 */	addi r30, r30, lbl_805CD7E0@l
+/* 80336E9C 0030045C  3F C0 80 5D */	lis r30, "@GUARD@fog$5416"@ha
+/* 80336EA0 00300460  3B DE D7 E0 */	addi r30, r30, "@GUARD@fog$5416"@l
 /* 80336EA4 00300464  38 9E 00 08 */	addi r4, r30, 8
 /* 80336EA8 00300468  90 1E 00 08 */	stw r0, 8(r30)
 /* 80336EAC 0030046C  93 E4 00 04 */	stw r31, 4(r4)
@@ -1581,26 +1581,26 @@
 .fn SetupGXWithColorMapping__Q36nw4hbm2ut10CharWriterFQ36nw4hbm2ut5ColorQ36nw4hbm2ut5Color, global
 /* 80338190 00301750  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80338194 00301754  7C 08 02 A6 */	mflr r0
-/* 80338198 00301758  3C A0 80 5D */	lis r5, lbl_805CD7E0@ha
+/* 80338198 00301758  3C A0 80 5D */	lis r5, "@GUARD@fog$5416"@ha
 /* 8033819C 0030175C  90 01 00 24 */	stw r0, 0x24(r1)
 /* 803381A0 00301760  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 803381A4 00301764  7C 9F 23 78 */	mr r31, r4
 /* 803381A8 00301768  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 803381AC 0030176C  7C 7E 1B 78 */	mr r30, r3
-/* 803381B0 00301770  88 05 D7 E0 */	lbz r0, lbl_805CD7E0@l(r5)
+/* 803381B0 00301770  88 05 D7 E0 */	lbz r0, "@GUARD@fog$5416"@l(r5)
 /* 803381B4 00301774  7C 00 07 75 */	extsb. r0, r0
 /* 803381B8 00301778  40 82 00 18 */	bne .L_803381D0
-/* 803381BC 0030177C  3C 60 80 5D */	lis r3, lbl_805CD7E4@ha
+/* 803381BC 0030177C  3C 60 80 5D */	lis r3, "fog$5416"@ha
 /* 803381C0 00301780  38 80 00 00 */	li r4, 0
 /* 803381C4 00301784  38 00 00 01 */	li r0, 1
-/* 803381C8 00301788  90 83 D7 E4 */	stw r4, lbl_805CD7E4@l(r3)
-/* 803381CC 0030178C  98 05 D7 E0 */	stb r0, lbl_805CD7E0@l(r5)
+/* 803381C8 00301788  90 83 D7 E4 */	stw r4, "fog$5416"@l(r3)
+/* 803381CC 0030178C  98 05 D7 E0 */	stb r0, "@GUARD@fog$5416"@l(r5)
 .L_803381D0:
 /* 803381D0 00301790  3C 60 80 52 */	lis r3, lbl_80518B18@ha
-/* 803381D4 00301794  3C 80 80 5D */	lis r4, lbl_805CD7E4@ha
+/* 803381D4 00301794  3C 80 80 5D */	lis r4, "fog$5416"@ha
 /* 803381D8 00301798  C0 23 8B 18 */	lfs f1, lbl_80518B18@l(r3)
 /* 803381DC 0030179C  38 60 00 00 */	li r3, 0
-/* 803381E0 003017A0  80 04 D7 E4 */	lwz r0, lbl_805CD7E4@l(r4)
+/* 803381E0 003017A0  80 04 D7 E4 */	lwz r0, "fog$5416"@l(r4)
 /* 803381E4 003017A4  38 81 00 08 */	addi r4, r1, 8
 /* 803381E8 003017A8  FC 40 08 90 */	fmr f2, f1
 /* 803381EC 003017AC  90 01 00 08 */	stw r0, 8(r1)
@@ -1805,16 +1805,16 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-#@GUARD@fog$5416
-.obj lbl_805CD7E0, global
-	.skip 0x4
-.endobj lbl_805CD7E0
+.obj "@GUARD@fog$5416", global
+	.skip 0x1
+.endobj "@GUARD@fog$5416"
 
-#fog$5416
-.obj lbl_805CD7E4, global
-	.skip 0x4
-.endobj lbl_805CD7E4
+.skip 3
 
-.obj mLoadingTexture__Q36nw4hbm2ut10CharWriter, local
+.obj "fog$5416", global
+	.skip 0x4
+.endobj "fog$5416"
+
+.obj mLoadingTexture__Q36nw4hbm2ut10CharWriter, global
 	.skip 0x10
 .endobj mLoadingTexture__Q36nw4hbm2ut10CharWriter

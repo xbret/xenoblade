@@ -58,7 +58,7 @@
 /* 802F3C08 002BD1C8  4E 80 00 20 */	blr
 .endfn HID_HostGetSDPRecord
 
-.fn hidh_search_callback, global
+.fn hidh_search_callback, local
 /* 802F3C0C 002BD1CC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802F3C10 002BD1D0  7C 08 02 A6 */	mflr r0
 /* 802F3C14 002BD1D4  38 80 00 02 */	li r4, 2
@@ -1010,5 +1010,7 @@
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .obj hh_cb, global
-	.skip 0x408
+	.skip 0x404
 .endobj hh_cb
+
+.skip 4

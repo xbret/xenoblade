@@ -1,7 +1,7 @@
 #include "PowerPC_EABI_Support/MetroTRK/dispatch.h"
 
 DSError TRK_DispatchMessage(MessageBuffer* buffer) {
-    DSError result = TRKError500;
+    DSError result = kDispatchError;
     MessageBuffer* temp = buffer;
     
     TRK_SetBufferPosition(buffer, 0);

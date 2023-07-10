@@ -1,6 +1,6 @@
 #include <signal.h>
 
-sig_func signal_funcs[8];
+sig_func signal_funcs[7];
 
 //unused
 void signal(){

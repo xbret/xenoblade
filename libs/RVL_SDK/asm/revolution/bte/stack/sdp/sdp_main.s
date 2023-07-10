@@ -112,7 +112,7 @@
 /* 80305E04 002CF3C4  4E 80 00 20 */	blr
 .endfn sdp_init
 
-.fn sdp_connect_ind, global
+.fn sdp_connect_ind, local
 /* 80305E08 002CF3C8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80305E0C 002CF3CC  7C 08 02 A6 */	mflr r0
 /* 80305E10 002CF3D0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -165,7 +165,7 @@
 /* 80305EC8 002CF488  4E 80 00 20 */	blr
 .endfn sdp_connect_ind
 
-.fn sdp_connect_cfm, global
+.fn sdp_connect_cfm, local
 /* 80305ECC 002CF48C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80305ED0 002CF490  7C 08 02 A6 */	mflr r0
 /* 80305ED4 002CF494  90 01 00 24 */	stw r0, 0x24(r1)
@@ -276,7 +276,7 @@
 /* 80306058 002CF618  4E 80 00 20 */	blr
 .endfn sdp_connect_cfm
 
-.fn sdp_config_ind, global
+.fn sdp_config_ind, local
 /* 8030605C 002CF61C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80306060 002CF620  7C 08 02 A6 */	mflr r0
 /* 80306064 002CF624  90 01 00 24 */	stw r0, 0x24(r1)
@@ -365,7 +365,7 @@
 /* 80306194 002CF754  4E 80 00 20 */	blr
 .endfn sdp_config_ind
 
-.fn sdp_config_cfm, global
+.fn sdp_config_cfm, local
 /* 80306198 002CF758  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8030619C 002CF75C  7C 08 02 A6 */	mflr r0
 /* 803061A0 002CF760  3C A0 80 5C */	lis r5, sdp_cb@ha
@@ -471,7 +471,7 @@
 /* 80306310 002CF8D0  4E 80 00 20 */	blr
 .endfn sdp_config_cfm
 
-.fn sdp_disconnect_ind, global
+.fn sdp_disconnect_ind, local
 /* 80306314 002CF8D4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80306318 002CF8D8  7C 08 02 A6 */	mflr r0
 /* 8030631C 002CF8DC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -541,7 +541,7 @@
 /* 80306408 002CF9C8  4E 80 00 20 */	blr
 .endfn sdp_disconnect_ind
 
-.fn sdp_data_ind, global
+.fn sdp_data_ind, local
 /* 8030640C 002CF9CC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80306410 002CF9D0  7C 08 02 A6 */	mflr r0
 /* 80306414 002CF9D4  90 01 00 14 */	stw r0, 0x14(r1)
@@ -725,7 +725,7 @@
 /* 8030668C 002CFC4C  4E 80 00 20 */	blr
 .endfn sdp_disconnect
 
-.fn sdp_disconnect_cfm, global
+.fn sdp_disconnect_cfm, local
 /* 80306690 002CFC50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80306694 002CFC54  7C 08 02 A6 */	mflr r0
 /* 80306698 002CFC58  90 01 00 14 */	stw r0, 0x14(r1)
@@ -909,5 +909,7 @@
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .obj sdp_cb, global
-	.skip 0x4640
+	.skip 0x4634
 .endobj sdp_cb
+
+.skip 0xC

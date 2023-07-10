@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.fn cbForNandClose, global
+.fn cbForNandClose, local
 /* 8030F6F0 002D8CB0  81 8D B7 00 */	lwz r12, Callback@sda21(r13)
 /* 8030F6F4 002D8CB4  2C 0C 00 00 */	cmpwi r12, 0
 /* 8030F6F8 002D8CB8  4D 82 00 20 */	beqlr 
@@ -18,7 +18,7 @@
 .endfn cbForNandClose
 
 .balign 16, 0
-.fn cbForNandWrite, global
+.fn cbForNandWrite, local
 /* 8030F720 002D8CE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030F724 002D8CE4  7C 08 02 A6 */	mflr r0
 /* 8030F728 002D8CE8  3C 60 80 5D */	lis r3, NandInfo@ha
@@ -46,7 +46,7 @@
 .endfn cbForNandWrite
 
 .balign 16, 0
-.fn cbForNandSeek, global
+.fn cbForNandSeek, local
 /* 8030F780 002D8D40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030F784 002D8D44  7C 08 02 A6 */	mflr r0
 /* 8030F788 002D8D48  90 01 00 14 */	stw r0, 0x14(r1)
@@ -116,7 +116,7 @@
 .endfn cbForNandSeek
 
 .balign 16, 0
-.fn cbForNandWrite0, global
+.fn cbForNandWrite0, local
 /* 8030F880 002D8E40  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030F884 002D8E44  7C 08 02 A6 */	mflr r0
 /* 8030F888 002D8E48  28 03 00 80 */	cmplwi r3, 0x80
@@ -209,7 +209,7 @@
 .endfn cbForNandWrite0
 
 .balign 16, 0
-.fn cbForNandSeek2, global
+.fn cbForNandSeek2, local
 /* 8030F9E0 002D8FA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030F9E4 002D8FA4  7C 08 02 A6 */	mflr r0
 /* 8030F9E8 002D8FA8  28 03 00 80 */	cmplwi r3, 0x80
@@ -262,7 +262,7 @@
 .endfn cbForNandSeek2
 
 .balign 16, 0
-.fn cbForNandRead, global
+.fn cbForNandRead, local
 /* 8030FAA0 002D9060  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030FAA4 002D9064  7C 08 02 A6 */	mflr r0
 /* 8030FAA8 002D9068  28 03 00 80 */	cmplwi r3, 0x80
@@ -326,7 +326,7 @@
 .endfn cbForNandRead
 
 .balign 16, 0
-.fn cbForNandSeek0, global
+.fn cbForNandSeek0, local
 /* 8030FB90 002D9150  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030FB94 002D9154  7C 08 02 A6 */	mflr r0
 /* 8030FB98 002D9158  2C 03 00 00 */	cmpwi r3, 0
@@ -372,7 +372,7 @@
 .endfn cbForNandSeek0
 
 .balign 16, 0
-.fn cbForNandSeek1, global
+.fn cbForNandSeek1, local
 /* 8030FC30 002D91F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030FC34 002D91F4  7C 08 02 A6 */	mflr r0
 /* 8030FC38 002D91F8  28 03 00 80 */	cmplwi r3, 0x80
@@ -442,7 +442,7 @@
 .endfn cbForNandSeek1
 
 .balign 16, 0
-.fn cbForNandOpen, global
+.fn cbForNandOpen, local
 /* 8030FD30 002D92F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030FD34 002D92F4  7C 08 02 A6 */	mflr r0
 /* 8030FD38 002D92F8  2C 03 00 00 */	cmpwi r3, 0
@@ -520,7 +520,7 @@
 .endfn cbForNandOpen
 
 .balign 16, 0
-.fn cbForNandCreate, global
+.fn cbForNandCreate, local
 /* 8030FE50 002D9410  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030FE54 002D9414  7C 08 02 A6 */	mflr r0
 /* 8030FE58 002D9418  2C 03 00 00 */	cmpwi r3, 0
@@ -567,7 +567,7 @@
 .endfn cbForNandCreate
 
 .balign 16, 0
-.fn cbForNandCreateDir, global
+.fn cbForNandCreateDir, local
 /* 8030FEF0 002D94B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030FEF4 002D94B4  7C 08 02 A6 */	mflr r0
 /* 8030FEF8 002D94B8  2C 03 00 00 */	cmpwi r3, 0
@@ -611,7 +611,7 @@
 .endfn cbForNandCreateDir
 
 .balign 16, 0
-.fn cbForPrepareControlRegister, global
+.fn cbForPrepareControlRegister, local
 /* 8030FF90 002D9550  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8030FF94 002D9554  7C 08 02 A6 */	mflr r0
 /* 8030FF98 002D9558  28 03 00 01 */	cmplwi r3, 1
@@ -654,7 +654,7 @@
 .endfn cbForPrepareControlRegister
 
 .balign 16, 0
-.fn cbForPrepareStatusRegister, global
+.fn cbForPrepareStatusRegister, local
 /* 80310020 002D95E0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80310024 002D95E4  7C 08 02 A6 */	mflr r0
 /* 80310028 002D95E8  28 03 00 01 */	cmplwi r3, 1
@@ -742,12 +742,18 @@
 .endobj NandInfo
 
 .obj NandCb, local
-	.skip 0xD4
+	.skip 0xBC
 .endobj NandCb
 
+.skip 0x18
+
 .obj __ErrorInfo, global
-	.skip 0x100
+	.skip 0x80
 .endobj __ErrorInfo
+
+.obj __FirstErrorInfo, local
+	.skip 0x80
+.endobj __FirstErrorInfo
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

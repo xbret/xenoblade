@@ -17,15 +17,11 @@ typedef struct TRKEvent {
 	int mBufferIndex;
 } TRKEvent;
 
-/**
- * @size{0x28}
- */
 typedef struct TRKEventQueue {
 	int mCurrEvtID;
 	int mNextSlotToOverwrite;
 	TRKEvent mEvents[2];
-	u32 _24; /* max of 0x100? */
-	u8 unk28[4];
+	u32 _24; //max of 0x100?
 } TRKEventQueue;
 
 extern TRKEventQueue gTRKEventQueue;

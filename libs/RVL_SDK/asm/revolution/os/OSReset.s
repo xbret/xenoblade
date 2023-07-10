@@ -362,7 +362,7 @@
 .endfn OSRestart
 
 .balign 16, 0
-.fn __OSReturnToMenu, global
+.fn __OSReturnToMenu, local
 /* 8035A3D0 00323990  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 8035A3D4 00323994  7C 08 02 A6 */	mflr r0
 /* 8035A3D8 00323998  90 01 00 94 */	stw r0, 0x94(r1)

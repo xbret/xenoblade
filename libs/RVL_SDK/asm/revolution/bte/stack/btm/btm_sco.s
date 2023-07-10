@@ -22,7 +22,7 @@
 /* 802EAB94 002B4154  4E 80 00 20 */	blr 
 .endfn btm_sco_init
 
-.fn btm_esco_conn_rsp, global
+.fn btm_esco_conn_rsp, local
 /* 802EAB98 002B4158  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802EAB9C 002B415C  7C 08 02 A6 */	mflr r0
 /* 802EABA0 002B4160  90 01 00 24 */	stw r0, 0x24(r1)

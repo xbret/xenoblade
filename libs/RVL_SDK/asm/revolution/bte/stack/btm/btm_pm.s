@@ -301,7 +301,7 @@
 /* 802EA2C8 002B3888  4E 80 00 20 */	blr 
 .endfn btm_pm_sm_alloc
 
-.fn btm_pm_compare_modes, global
+.fn btm_pm_compare_modes, local
 /* 802EA2CC 002B388C  2C 03 00 00 */	cmpwi r3, 0
 /* 802EA2D0 002B3890  40 82 00 34 */	bne .L_802EA304
 /* 802EA2D4 002B3894  A0 C4 00 00 */	lhz r6, 0(r4)
@@ -455,7 +455,7 @@
 /* 802EA4E4 002B3AA4  4E 80 00 20 */	blr 
 .endfn btm_pm_compare_modes
 
-.fn btm_pm_get_set_mode, global
+.fn btm_pm_get_set_mode, local
 /* 802EA4E8 002B3AA8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802EA4EC 002B3AAC  7C 08 02 A6 */	mflr r0
 /* 802EA4F0 002B3AB0  90 01 00 24 */	stw r0, 0x24(r1)
@@ -555,7 +555,7 @@
 /* 802EA644 002B3C04  4E 80 00 20 */	blr 
 .endfn btm_pm_get_set_mode
 
-.fn btm_pm_snd_md_req, global
+.fn btm_pm_snd_md_req, local
 /* 802EA648 002B3C08  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802EA64C 002B3C0C  7C 08 02 A6 */	mflr r0
 /* 802EA650 002B3C10  3C C0 80 5C */	lis r6, btm_cb@ha
@@ -932,7 +932,7 @@
 
 .balign 8
 
-.obj btm_pm_md_comp_matrix, local
+.obj btm_pm_md_comp_matrix, global
 	.4byte 0x03020201
 	.4byte 0x03010102
 	.4byte 0x03000000
@@ -943,10 +943,10 @@
 
 .balign 8
 
-.obj btm_pm_mode_off, local
+.obj btm_pm_mode_off, global
 	.4byte 0x00000100
 .endobj btm_pm_mode_off
 
-.obj btm_pm_mode_msk, local
+.obj btm_pm_mode_msk, global
 	.4byte 0x40800100
 .endobj btm_pm_mode_msk

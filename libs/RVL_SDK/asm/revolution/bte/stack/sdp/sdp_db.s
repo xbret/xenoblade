@@ -97,7 +97,7 @@
 /* 80303E5C 002CD41C  4E 80 00 20 */	blr 
 .endfn sdp_db_service_search
 
-.fn find_uuid_in_seq, global
+.fn find_uuid_in_seq, local
 /* 80303E60 002CD420  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80303E64 002CD424  7C 08 02 A6 */	mflr r0
 /* 80303E68 002CD428  90 01 00 34 */	stw r0, 0x34(r1)

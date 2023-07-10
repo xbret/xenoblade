@@ -201,8 +201,10 @@
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .obj bta_sys_cb, global
-	.skip 0x90
+	.skip 0x8C
 .endobj bta_sys_cb
+
+.skip 4
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

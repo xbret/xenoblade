@@ -299,7 +299,7 @@
 /* 802F9F78 002C3538  4E 80 00 20 */	blr 
 .endfn l2c_rcv_acl_data
 
-.fn process_l2cap_cmd, global
+.fn process_l2cap_cmd, local
 /* 802F9F7C 002C353C  94 21 FF 60 */	stwu r1, -0xa0(r1)
 /* 802F9F80 002C3540  7C 08 02 A6 */	mflr r0
 /* 802F9F84 002C3544  90 01 00 A4 */	stw r0, 0xa4(r1)

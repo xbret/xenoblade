@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn btm_cback, global
+.fn btm_cback, local
 /* 802F08A0 002B9E60  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F08A4 002B9E64  7C 08 02 A6 */	mflr r0
 /* 802F08A8 002B9E68  3C E0 80 54 */	lis r7, lbl_805463A0@ha
@@ -315,7 +315,7 @@
 /* 802F0CA4 002BA264  4E 80 00 20 */	blr
 .endfn gap_find_addr_name_cb
 
-.fn gap_find_addr_inq_cb, local
+.fn gap_find_addr_inq_cb, global
 /* 802F0CA8 002BA268  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F0CAC 002BA26C  7C 08 02 A6 */	mflr r0
 /* 802F0CB0 002BA270  90 01 00 24 */	stw r0, 0x24(r1)
@@ -452,7 +452,7 @@
 .endfn gap_find_addr_inq_cb
 
 #unreferenced?
-.fn gap_convert_btm_status, local
+.fn gap_convert_btm_status, global
 /* 802F0E5C 002BA41C  28 03 00 08 */	cmplwi r3, 8
 /* 802F0E60 002BA420  41 81 00 54 */	bgt .L_802F0EB4
 /* 802F0E64 002BA424  3C 80 80 54 */	lis r4, jumptable_8054666C@ha
@@ -605,5 +605,7 @@
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .obj gap_cb, global
-	.skip 0x3B0
+	.skip 0x3AC
 .endobj gap_cb
+
+.skip 4

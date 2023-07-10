@@ -31,8 +31,8 @@ gTRKInterruptVectorTable:
 	mfmsr r3
 	ori r3, r3, 0x30
 	mtsrr1 r3
-	lis r3, TRKInterruptHandler@h
-	ori r3, r3, TRKInterruptHandler@l
+	lis r3, TRK_InterruptHandler@h
+	ori r3, r3, TRK_InterruptHandler@l
 	mtsrr0 r3
 	li r3, 0x200
 	rfi 
@@ -47,8 +47,8 @@ gTRKInterruptVectorTable:
 	mfmsr r3
 	ori r3, r3, 0x30
 	mtsrr1 r3
-	lis r3, TRKInterruptHandler@h
-	ori r3, r3, TRKInterruptHandler@l
+	lis r3, TRK_InterruptHandler@h
+	ori r3, r3, TRK_InterruptHandler@l
 	mtsrr0 r3
 	li r3, 0x300
 	rfi 
@@ -63,8 +63,8 @@ gTRKInterruptVectorTable:
 	mfmsr r3
 	ori r3, r3, 0x30
 	mtsrr1 r3
-	lis r3, TRKInterruptHandler@h
-	ori r3, r3, TRKInterruptHandler@l
+	lis r3, TRK_InterruptHandler@h
+	ori r3, r3, TRK_InterruptHandler@l
 	mtsrr0 r3
 	li r3, 0x400
 	rfi 
@@ -79,8 +79,8 @@ gTRKInterruptVectorTable:
 	mfmsr r3
 	ori r3, r3, 0x30
 	mtsrr1 r3
-	lis r3, TRKInterruptHandler@h
-	ori r3, r3, TRKInterruptHandler@l
+	lis r3, TRK_InterruptHandler@h
+	ori r3, r3, TRK_InterruptHandler@l
 	mtsrr0 r3
 	li r3, 0x500
 	rfi 
@@ -95,8 +95,8 @@ gTRKInterruptVectorTable:
 	mfmsr r3
 	ori r3, r3, 0x30
 	mtsrr1 r3
-	lis r3, TRKInterruptHandler@h
-	ori r3, r3, TRKInterruptHandler@l
+	lis r3, TRK_InterruptHandler@h
+	ori r3, r3, TRK_InterruptHandler@l
 	mtsrr0 r3
 	li r3, 0x600
 	rfi 
@@ -111,8 +111,8 @@ gTRKInterruptVectorTable:
 	mfmsr r3
 	ori r3, r3, 0x30
 	mtsrr1 r3
-	lis r3, TRKInterruptHandler@h
-	ori r3, r3, TRKInterruptHandler@l
+	lis r3, TRK_InterruptHandler@h
+	ori r3, r3, TRK_InterruptHandler@l
 	mtsrr0 r3
 	li r3, 0x700
 	rfi 
@@ -127,8 +127,8 @@ gTRKInterruptVectorTable:
 	mfmsr r3
 	ori r3, r3, 0x30
 	mtsrr1 r3
-	lis r3, TRKInterruptHandler@h
-	ori r3, r3, TRKInterruptHandler@l
+	lis r3, TRK_InterruptHandler@h
+	ori r3, r3, TRK_InterruptHandler@l
 	mtsrr0 r3
 	li r3, 0x800
 	rfi 
@@ -143,8 +143,8 @@ gTRKInterruptVectorTable:
 	mfmsr r3
 	ori r3, r3, 0x30
 	mtsrr1 r3
-	lis r3, TRKInterruptHandler@h
-	ori r3, r3, TRKInterruptHandler@l
+	lis r3, TRK_InterruptHandler@h
+	ori r3, r3, TRK_InterruptHandler@l
 	mtsrr0 r3
 	li r3, 0x900
 	rfi 
@@ -165,8 +165,8 @@ gTRKInterruptVectorTable:
 	mfmsr r3
 	ori r3, r3, 0x30
 	mtsrr1 r3
-	lis r3, TRKInterruptHandler@h
-	ori r3, r3, TRKInterruptHandler@l
+	lis r3, TRK_InterruptHandler@h
+	ori r3, r3, TRK_InterruptHandler@l
 	mtsrr0 r3
 	li r3, 0xc00
 	rfi 
@@ -181,8 +181,8 @@ gTRKInterruptVectorTable:
 	mfmsr r3
 	ori r3, r3, 0x30
 	mtsrr1 r3
-	lis r3, TRKInterruptHandler@h
-	ori r3, r3, TRKInterruptHandler@l
+	lis r3, TRK_InterruptHandler@h
+	ori r3, r3, TRK_InterruptHandler@l
 	mtsrr0 r3
 	li r3, 0xd00
 	rfi 
@@ -202,8 +202,8 @@ gTRKInterruptVectorTable:
 	mfmsr r3
 	ori r3, r3, 0x30
 	mtsrr1 r3
-	lis r3, TRKInterruptHandler@h
-	ori r3, r3, TRKInterruptHandler@l
+	lis r3, TRK_InterruptHandler@h
+	ori r3, r3, TRK_InterruptHandler@l
 	mtsrr0 r3
 	li r3, 0xe00
 	rfi 
@@ -224,8 +224,8 @@ gTRKInterruptVectorTable:
 	mfmsr r3
 	ori r3, r3, 0x30
 	mtsrr1 r3
-	lis r3, TRKInterruptHandler@h
-	ori r3, r3, TRKInterruptHandler@l
+	lis r3, TRK_InterruptHandler@h
+	ori r3, r3, TRK_InterruptHandler@l
 	mtsrr0 r3
 	li r3, 0xf20
 	rfi 
@@ -238,8 +238,8 @@ gTRKInterruptVectorTable:
 	mfmsr r3
 	ori r3, r3, 0x30
 	mtsrr1 r3
-	lis r3, TRKInterruptHandler@h
-	ori r3, r3, TRKInterruptHandler@l
+	lis r3, TRK_InterruptHandler@h
+	ori r3, r3, TRK_InterruptHandler@l
 	mtsrr0 r3
 	li r3, 0xf00
 	rfi 
@@ -270,8 +270,8 @@ gTRKInterruptVectorTable:
 	mfmsr r3
 	ori r3, r3, 0x30
 	mtsrr1 r3
-	lis r3, TRKInterruptHandler@h
-	ori r3, r3, TRKInterruptHandler@l
+	lis r3, TRK_InterruptHandler@h
+	ori r3, r3, TRK_InterruptHandler@l
 	mtsrr0 r3
 	li r3, 0x1000
 	rfi 
@@ -307,8 +307,8 @@ gTRKInterruptVectorTable:
 	mfmsr r3
 	ori r3, r3, 0x30
 	mtsrr1 r3
-	lis r3, TRKInterruptHandler@h
-	ori r3, r3, TRKInterruptHandler@l
+	lis r3, TRK_InterruptHandler@h
+	ori r3, r3, TRK_InterruptHandler@l
 	mtsrr0 r3
 	li r3, 0x1100
 	rfi 
@@ -339,8 +339,8 @@ gTRKInterruptVectorTable:
 	mfmsr r3
 	ori r3, r3, 0x30
 	mtsrr1 r3
-	lis r3, TRKInterruptHandler@h
-	ori r3, r3, TRKInterruptHandler@l
+	lis r3, TRK_InterruptHandler@h
+	ori r3, r3, TRK_InterruptHandler@l
 	mtsrr0 r3
 	li r3, 0x1200
 	rfi 
@@ -355,8 +355,8 @@ gTRKInterruptVectorTable:
 	mfmsr r3
 	ori r3, r3, 0x30
 	mtsrr1 r3
-	lis r3, TRKInterruptHandler@h
-	ori r3, r3, TRKInterruptHandler@l
+	lis r3, TRK_InterruptHandler@h
+	ori r3, r3, TRK_InterruptHandler@l
 	mtsrr0 r3
 	li r3, 0x1300
 	rfi 
@@ -371,8 +371,8 @@ gTRKInterruptVectorTable:
 	mfmsr r3
 	ori r3, r3, 0x30
 	mtsrr1 r3
-	lis r3, TRKInterruptHandler@h
-	ori r3, r3, TRKInterruptHandler@l
+	lis r3, TRK_InterruptHandler@h
+	ori r3, r3, TRK_InterruptHandler@l
 	mtsrr0 r3
 	li r3, 0x1400
 	rfi 
@@ -387,8 +387,8 @@ gTRKInterruptVectorTable:
 	mfmsr r3
 	ori r3, r3, 0x30
 	mtsrr1 r3
-	lis r3, TRKInterruptHandler@h
-	ori r3, r3, TRKInterruptHandler@l
+	lis r3, TRK_InterruptHandler@h
+	ori r3, r3, TRK_InterruptHandler@l
 	mtsrr0 r3
 	li r3, 0x1600
 	rfi 
@@ -403,8 +403,8 @@ gTRKInterruptVectorTable:
 	mfmsr r3
 	ori r3, r3, 0x30
 	mtsrr1 r3
-	lis r3, TRKInterruptHandler@h
-	ori r3, r3, TRKInterruptHandler@l
+	lis r3, TRK_InterruptHandler@h
+	ori r3, r3, TRK_InterruptHandler@l
 	mtsrr0 r3
 	li r3, 0x1700
 	rfi 
@@ -419,8 +419,8 @@ gTRKInterruptVectorTable:
 	mfmsr r3
 	ori r3, r3, 0x30
 	mtsrr1 r3
-	lis r3, TRKInterruptHandler@h
-	ori r3, r3, TRKInterruptHandler@l
+	lis r3, TRK_InterruptHandler@h
+	ori r3, r3, TRK_InterruptHandler@l
 	mtsrr0 r3
 	li r3, 0x1c00
 	rfi 
@@ -435,8 +435,8 @@ gTRKInterruptVectorTable:
 	mfmsr r3
 	ori r3, r3, 0x30
 	mtsrr1 r3
-	lis r3, TRKInterruptHandler@h
-	ori r3, r3, TRKInterruptHandler@l
+	lis r3, TRK_InterruptHandler@h
+	ori r3, r3, TRK_InterruptHandler@l
 	mtsrr0 r3
 	li r3, 0x1d00
 	rfi 
@@ -451,8 +451,8 @@ gTRKInterruptVectorTable:
 	mfmsr r3
 	ori r3, r3, 0x30
 	mtsrr1 r3
-	lis r3, TRKInterruptHandler@h
-	ori r3, r3, TRKInterruptHandler@l
+	lis r3, TRK_InterruptHandler@h
+	ori r3, r3, TRK_InterruptHandler@l
 	mtsrr0 r3
 	li r3, 0x1e00
 	rfi 
@@ -467,8 +467,8 @@ gTRKInterruptVectorTable:
 	mfmsr r3
 	ori r3, r3, 0x30
 	mtsrr1 r3
-	lis r3, TRKInterruptHandler@h
-	ori r3, r3, TRKInterruptHandler@l
+	lis r3, TRK_InterruptHandler@h
+	ori r3, r3, TRK_InterruptHandler@l
 	mtsrr0 r3
 	li r3, 0x1f00
 	rfi 

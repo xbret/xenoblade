@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.fn reset_kpad, global
+.fn reset_kpad, local
 /* 80344AC0 0030E080  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80344AC4 0030E084  38 03 00 F0 */	addi r0, r3, 0xf0
 /* 80344AC8 0030E088  C0 C2 BD 38 */	lfs f6, float_8066C0B8@sda21(r2)
@@ -137,7 +137,7 @@
 .endfn KPADEnableAimingMode
 
 .balign 16, 0
-.fn calc_button_repeat, global
+.fn calc_button_repeat, local
 /* 80344CB0 0030E270  80 03 00 04 */	lwz r0, 4(r3)
 /* 80344CB4 0030E274  2C 00 00 00 */	cmpwi r0, 0
 /* 80344CB8 0030E278  40 82 00 10 */	bne .L_80344CC8
@@ -253,7 +253,7 @@
 .endfn calc_button_repeat
 
 
-.fn read_kpad_button, global
+.fn read_kpad_button, local
 /* 80344E50 0030E410  80 03 00 00 */	lwz r0, 0(r3)
 /* 80344E54 0030E414  70 C9 9F FF */	andi. r9, r6, 0x9fff
 /* 80344E58 0030E418  28 04 00 01 */	cmplwi r4, 1
@@ -300,7 +300,7 @@
 .endfn read_kpad_button
 
 .balign 16, 0
-.fn calc_acc, global
+.fn calc_acc, local
 /* 80344EF0 0030E4B0  C0 44 00 00 */	lfs f2, 0(r4)
 /* 80344EF4 0030E4B4  80 03 05 6C */	lwz r0, 0x56c(r3)
 /* 80344EF8 0030E4B8  EC 61 10 28 */	fsubs f3, f1, f2
@@ -355,7 +355,7 @@
 .endfn calc_acc
 
 .balign 16, 0
-.fn calc_acc_horizon, global
+.fn calc_acc_horizon, local
 /* 80344FB0 0030E570  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80344FB4 0030E574  7C 08 02 A6 */	mflr r0
 /* 80344FB8 0030E578  90 01 00 34 */	stw r0, 0x34(r1)
@@ -464,7 +464,7 @@
 .endfn calc_acc_horizon
 
 .balign 16, 0
-.fn calc_acc_vertical, global
+.fn calc_acc_vertical, local
 /* 80345150 0030E710  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80345154 0030E714  7C 08 02 A6 */	mflr r0
 /* 80345158 0030E718  90 01 00 44 */	stw r0, 0x44(r1)
@@ -544,7 +544,7 @@
 .endfn calc_acc_vertical
 
 .balign 16, 0
-.fn read_kpad_acc, global
+.fn read_kpad_acc, local
 /* 80345280 0030E840  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80345284 0030E844  7C 08 02 A6 */	mflr r0
 /* 80345288 0030E848  3C A0 43 30 */	lis r5, 0x4330
@@ -850,7 +850,7 @@
 .endfn read_kpad_acc
 
 .balign 16, 0
-.fn select_2obj_first, global
+.fn select_2obj_first, local
 /* 803456E0 0030ECA0  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 803456E4 0030ECA4  7C 08 02 A6 */	mflr r0
 /* 803456E8 0030ECA8  90 01 00 84 */	stw r0, 0x84(r1)
@@ -983,7 +983,7 @@
 .endfn select_2obj_first
 
 .balign 16, 0
-.fn select_2obj_continue, global
+.fn select_2obj_continue, local
 /* 803458D0 0030EE90  94 21 FF 80 */	stwu r1, -0x80(r1)
 /* 803458D4 0030EE94  7C 08 02 A6 */	mflr r0
 /* 803458D8 0030EE98  90 01 00 84 */	stw r0, 0x84(r1)
@@ -1136,7 +1136,7 @@
 .endfn select_2obj_continue
 
 .balign 16, 0
-.fn select_1obj_first, global
+.fn select_1obj_first, local
 /* 80345B00 0030F0C0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80345B04 0030F0C4  39 03 00 F0 */	addi r8, r3, 0xf0
 /* 80345B08 0030F0C8  38 03 01 20 */	addi r0, r3, 0x120
@@ -1255,7 +1255,7 @@
 .endfn select_1obj_first
 
 .balign 16, 0
-.fn select_1obj_continue, global
+.fn select_1obj_continue, local
 /* 80345CC0 0030F280  C0 0D 99 20 */	lfs f0, kp_err_near_pos@sda21(r13)
 /* 80345CC4 0030F284  38 C3 01 20 */	addi r6, r3, 0x120
 /* 80345CC8 0030F288  38 03 01 38 */	addi r0, r3, 0x138
@@ -1360,7 +1360,7 @@
 .endfn select_1obj_continue
 
 .balign 16, 0
-.fn calc_dpd_variable, global
+.fn calc_dpd_variable, local
 /* 80345E40 0030F400  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80345E44 0030F404  7C 08 02 A6 */	mflr r0
 /* 80345E48 0030F408  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1761,7 +1761,7 @@
 .endfn calc_dpd_variable
 
 .balign 16, 0
-.fn read_kpad_dpd, global
+.fn read_kpad_dpd, local
 /* 80346410 0030F9D0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80346414 0030F9D4  7C 08 02 A6 */	mflr r0
 /* 80346418 0030F9D8  90 01 00 44 */	stw r0, 0x44(r1)
@@ -2319,7 +2319,7 @@
 .endfn clamp_stick_cross
 
 .balign 16, 0
-.fn read_kpad_ext, global
+.fn read_kpad_ext, local
 /* 80346BF0 003101B0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80346BF4 003101B4  7C 08 02 A6 */	mflr r0
 /* 80346BF8 003101B8  3C A0 43 30 */	lis r5, 0x4330
@@ -2331,7 +2331,7 @@
 /* 80346C10 003101D0  3B C3 00 60 */	addi r30, r3, 0x60
 /* 80346C14 003101D4  93 A1 00 24 */	stw r29, 0x24(r1)
 /* 80346C18 003101D8  7C 9D 23 78 */	mr r29, r4
-/* 80346C1C 003101DC  80 0D B8 20 */	lwz r0, lbl_806679A0@sda21(r13)
+/* 80346C1C 003101DC  80 0D B8 20 */	lwz r0, kp_stick_clamp_cross@sda21(r13)
 /* 80346C20 003101E0  90 A1 00 08 */	stw r5, 8(r1)
 /* 80346C24 003101E4  2C 00 00 00 */	cmpwi r0, 0
 /* 80346C28 003101E8  90 A1 00 10 */	stw r5, 0x10(r1)
@@ -2518,7 +2518,7 @@
 /* 80346ED0 00310490  80 ED 99 30 */	lwz r7, kp_cl_stick_max@sda21(r13)
 /* 80346ED4 00310494  7D 89 03 A6 */	mtctr r12
 /* 80346ED8 00310498  4E 80 04 21 */	bctrl 
-/* 80346EDC 0031049C  80 8D B8 28 */	lwz r4, lbl_806679A8@sda21(r13)
+/* 80346EDC 0031049C  80 8D B8 28 */	lwz r4, kp_ex_analog_min@sda21(r13)
 /* 80346EE0 003104A0  A8 7D 00 30 */	lha r3, 0x30(r29)
 /* 80346EE4 003104A4  80 0D 99 48 */	lwz r0, kp_ex_analog_max@sda21(r13)
 /* 80346EE8 003104A8  7C 03 20 00 */	cmpw r3, r4
@@ -2547,7 +2547,7 @@
 /* 80346F3C 003104FC  EC 01 00 24 */	fdivs f0, f1, f0
 /* 80346F40 00310500  D0 1E 00 14 */	stfs f0, 0x14(r30)
 .L_80346F44:
-/* 80346F44 00310504  80 8D B8 28 */	lwz r4, lbl_806679A8@sda21(r13)
+/* 80346F44 00310504  80 8D B8 28 */	lwz r4, kp_ex_analog_min@sda21(r13)
 /* 80346F48 00310508  A8 7D 00 32 */	lha r3, 0x32(r29)
 /* 80346F4C 0031050C  80 0D 99 48 */	lwz r0, kp_ex_analog_max@sda21(r13)
 /* 80346F50 00310510  7C 03 20 00 */	cmpw r3, r4
@@ -2576,7 +2576,7 @@
 /* 80346FA4 00310564  EC 01 00 24 */	fdivs f0, f1, f0
 /* 80346FA8 00310568  D0 1E 00 18 */	stfs f0, 0x18(r30)
 .L_80346FAC:
-/* 80346FAC 0031056C  80 8D B8 24 */	lwz r4, lbl_806679A4@sda21(r13)
+/* 80346FAC 0031056C  80 8D B8 24 */	lwz r4, kp_ex_trigger_min@sda21(r13)
 /* 80346FB0 00310570  88 7D 00 34 */	lbz r3, 0x34(r29)
 /* 80346FB4 00310574  80 0D 99 44 */	lwz r0, kp_ex_trigger_max@sda21(r13)
 /* 80346FB8 00310578  7C 03 20 00 */	cmpw r3, r4
@@ -2605,7 +2605,7 @@
 /* 8034700C 003105CC  EC 01 00 24 */	fdivs f0, f1, f0
 /* 80347010 003105D0  D0 1E 00 1C */	stfs f0, 0x1c(r30)
 .L_80347014:
-/* 80347014 003105D4  80 8D B8 24 */	lwz r4, lbl_806679A4@sda21(r13)
+/* 80347014 003105D4  80 8D B8 24 */	lwz r4, kp_ex_trigger_min@sda21(r13)
 /* 80347018 003105D8  88 7D 00 35 */	lbz r3, 0x35(r29)
 /* 8034701C 003105DC  80 0D 99 44 */	lwz r0, kp_ex_trigger_max@sda21(r13)
 /* 80347020 003105E0  7C 03 20 00 */	cmpw r3, r4
@@ -2668,7 +2668,7 @@
 /* 803470F4 003106B4  D0 1E 00 0C */	stfs f0, 0xc(r30)
 /* 803470F8 003106B8  D0 1E 00 18 */	stfs f0, 0x18(r30)
 /* 803470FC 003106BC  D0 1E 00 14 */	stfs f0, 0x14(r30)
-/* 80347100 003106C0  80 AD B8 24 */	lwz r5, lbl_806679A4@sda21(r13)
+/* 80347100 003106C0  80 AD B8 24 */	lwz r5, kp_ex_trigger_min@sda21(r13)
 /* 80347104 003106C4  88 64 00 2C */	lbz r3, 0x2c(r4)
 /* 80347108 003106C8  80 0D 99 44 */	lwz r0, kp_ex_trigger_max@sda21(r13)
 /* 8034710C 003106CC  7C 03 28 00 */	cmpw r3, r5
@@ -2696,7 +2696,7 @@
 /* 8034715C 0031071C  EC 01 00 24 */	fdivs f0, f1, f0
 /* 80347160 00310720  D0 1E 00 1C */	stfs f0, 0x1c(r30)
 .L_80347164:
-/* 80347164 00310724  80 AD B8 24 */	lwz r5, lbl_806679A4@sda21(r13)
+/* 80347164 00310724  80 AD B8 24 */	lwz r5, kp_ex_trigger_min@sda21(r13)
 /* 80347168 00310728  88 64 00 2D */	lbz r3, 0x2d(r4)
 /* 8034716C 0031072C  80 0D 99 44 */	lwz r0, kp_ex_trigger_max@sda21(r13)
 /* 80347170 00310730  7C 03 28 00 */	cmpw r3, r5
@@ -2887,13 +2887,13 @@
 /* 80347434 003109F4  38 00 00 00 */	li r0, 0
 /* 80347438 003109F8  98 0D B8 43 */	stb r0, kp_wbc_tgc_weight_issued@sda21(r13)
 /* 8034743C 003109FC  7F A4 EB 78 */	mr r4, r29
-/* 80347440 00310A00  38 6D B8 38 */	addi r3, r13, double_806679B8@sda21
+/* 80347440 00310A00  38 6D B8 38 */	addi r3, r13, kp_wbc_tgc_weight@sda21
 /* 80347444 00310A04  FC 04 00 2A */	fadd f0, f4, f0
 /* 80347448 00310A08  FC 21 00 2A */	fadd f1, f1, f0
 /* 8034744C 00310A0C  48 02 1A 15 */	bl WBCGetTGCWeightDummy
 /* 80347450 00310A10  90 7E 00 48 */	stw r3, 0x48(r30)
 /* 80347454 00310A14  C8 02 BD 70 */	lfd f0, double_8066C0F0@sda21(r2)
-/* 80347458 00310A18  C8 2D B8 38 */	lfd f1, double_806679B8@sda21(r13)
+/* 80347458 00310A18  C8 2D B8 38 */	lfd f1, kp_wbc_tgc_weight@sda21(r13)
 /* 8034745C 00310A1C  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 80347460 00310A20  40 80 00 0C */	bge .L_8034746C
 /* 80347464 00310A24  38 00 FF FC */	li r0, -4
@@ -2909,7 +2909,7 @@
 /* 80347488 00310A48  D8 1E 00 38 */	stfd f0, 0x38(r30)
 /* 8034748C 00310A4C  C8 03 00 18 */	lfd f0, 0x18(r3)
 /* 80347490 00310A50  D8 1E 00 40 */	stfd f0, 0x40(r30)
-/* 80347494 00310A54  C8 0D B8 38 */	lfd f0, double_806679B8@sda21(r13)
+/* 80347494 00310A54  C8 0D B8 38 */	lfd f0, kp_wbc_tgc_weight@sda21(r13)
 /* 80347498 00310A58  D8 1E 00 00 */	stfd f0, 0(r30)
 /* 8034749C 00310A5C  88 0D B8 43 */	lbz r0, kp_wbc_tgc_weight_issued@sda21(r13)
 /* 803474A0 00310A60  90 1E 00 4C */	stw r0, 0x4c(r30)
@@ -3799,7 +3799,7 @@
 .endfn KPADReset
 
 .balign 16, 0
-.fn KPADiConnectCallback, global
+.fn KPADiConnectCallback, local
 /* 803480F0 003116B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803480F4 003116B4  7C 08 02 A6 */	mflr r0
 /* 803480F8 003116B8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -4275,9 +4275,9 @@
 .L_80348784:
 /* 80348784 00311D44  38 80 00 00 */	li r4, 0
 .L_80348788:
-/* 80348788 00311D48  3C 60 80 55 */	lis r3, lbl_805504D8@ha
+/* 80348788 00311D48  3C 60 80 55 */	lis r3, "@LOCAL@KPADiSamplingCallback__Fl@table"@ha
 /* 8034878C 00311D4C  57 60 08 3C */	slwi r0, r27, 1
-/* 80348790 00311D50  38 63 04 D8 */	addi r3, r3, lbl_805504D8@l
+/* 80348790 00311D50  38 63 04 D8 */	addi r3, r3, "@LOCAL@KPADiSamplingCallback__Fl@table"@l
 /* 80348794 00311D54  7F 63 02 14 */	add r27, r3, r0
 /* 80348798 00311D58  7C 03 00 AE */	lbzx r0, r3, r0
 /* 8034879C 00311D5C  7C 04 00 40 */	cmplw r4, r0
@@ -4539,23 +4539,20 @@
 	.balign 4
 .endobj lbl_80550490
 
-
-#table$3758
-#@LOCAL@KPADiSamplingCallback__Fl@table
-.obj lbl_805504D8, global
+.obj "@LOCAL@KPADiSamplingCallback__Fl@table", local
 	.4byte 0x00010302
 	.4byte 0x00040105
 	.4byte 0x00070108
 	.4byte 0x000B010B
 	.4byte 0x000C000C
 	.4byte 0x000A000A
-.endobj lbl_805504D8
+.endobj "@LOCAL@KPADiSamplingCallback__Fl@table"
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __KPADVersion, local
+.obj __KPADVersion, global
 	.4byte lbl_80550490
 .endobj __KPADVersion
 
@@ -4575,67 +4572,67 @@
 .endobj isec_nrm_hori
 
 
-.obj kp_obj_interval, local
+.obj kp_obj_interval, global
 	.float 0.2
 .endobj kp_obj_interval
 
 
-.obj kp_acc_horizon_pw, local
+.obj kp_acc_horizon_pw, global
 	.float 0.05
 .endobj kp_acc_horizon_pw
 
 
-.obj kp_ah_circle_radius, local
+.obj kp_ah_circle_radius, global
 	.float 0.07
 .endobj kp_ah_circle_radius
 
 
-.obj kp_ah_circle_pw, local
+.obj kp_ah_circle_pw, global
 	.float 0.06
 .endobj kp_ah_circle_pw
 
 
-.obj kp_ah_circle_ct, local
+.obj kp_ah_circle_ct, global
 	.4byte 0x00640000
 .endobj kp_ah_circle_ct
 
 
-.obj kp_err_outside_frame, local
+.obj kp_err_outside_frame, global
 	.float 0.05
 .endobj kp_err_outside_frame
 
 
-.obj kp_err_dist_max, local
+.obj kp_err_dist_max, global
 	.float 3
 .endobj kp_err_dist_max
 
 
-.obj kp_err_dist_speed, local
+.obj kp_err_dist_speed, global
 	.float 0.04
 .endobj kp_err_dist_speed
 
 
-.obj kp_err_first_inpr, local
+.obj kp_err_first_inpr, global
 	.float 0.9
 .endobj kp_err_first_inpr
 
 
-.obj kp_err_next_inpr, local
+.obj kp_err_next_inpr, global
 	.float 0.9
 .endobj kp_err_next_inpr
 
 
-.obj kp_err_acc_inpr, local
+.obj kp_err_acc_inpr, global
 	.float 0.9
 .endobj kp_err_acc_inpr
 
 
-.obj kp_err_up_inpr, local
+.obj kp_err_up_inpr, global
 	.float 0.7
 .endobj kp_err_up_inpr
 
 
-.obj kp_err_near_pos, local
+.obj kp_err_near_pos, global
 	.float 0.1
 .endobj kp_err_near_pos
 
@@ -4817,7 +4814,7 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj inside_kpads, local
+.obj inside_kpads, global
 	.skip 0x15E0
 .endobj inside_kpads
 
@@ -4837,23 +4834,23 @@
 
 .balign 8
 
-.obj icenter_org, global
+.obj icenter_org, local
 	.skip 0x8
 .endobj icenter_org
 
-.obj lbl_806679A0, global
+.obj kp_stick_clamp_cross, global
 	.skip 0x4
-.endobj lbl_806679A0
+.endobj kp_stick_clamp_cross
 
-.obj lbl_806679A4, global
+.obj kp_ex_trigger_min, local
 	.skip 0x4
-.endobj lbl_806679A4
+.endobj kp_ex_trigger_min
 
-.obj lbl_806679A8, global
+.obj kp_ex_analog_min, local
 	.skip 0x4
-.endobj lbl_806679A8
+.endobj kp_ex_analog_min
 
-.obj kp_initialized, global
+.obj kp_initialized, local
 	.skip 0x4
 .endobj kp_initialized
 
@@ -4861,35 +4858,35 @@
 	.skip 0x8
 .endobj Vec2_0
 
-.obj double_806679B8, global
+.obj kp_wbc_tgc_weight, local
 	.skip 0x8
-.endobj double_806679B8
+.endobj kp_wbc_tgc_weight
 
-.obj kp_wbc_ave_sample_count, global
+.obj kp_wbc_ave_sample_count, local
 	.skip 0x2
 .endobj kp_wbc_ave_sample_count
 
-.obj kp_wbc_zero_point_done, global
+.obj kp_wbc_zero_point_done, local
 	.skip 0x1
 .endobj kp_wbc_zero_point_done
 
-.obj kp_wbc_tgc_weight_issued, global
+.obj kp_wbc_tgc_weight_issued, local
 	.skip 0x1
 .endobj kp_wbc_tgc_weight_issued
 
-.obj kp_wbc_setup, global
+.obj kp_wbc_setup, local
 	.skip 0x1
 .endobj kp_wbc_setup
 
-.obj kp_wbc_enabled, global
+.obj kp_wbc_enabled, local
 	.skip 0x1
 .endobj kp_wbc_enabled
 
-.obj kp_wbc_issued, global
+.obj kp_wbc_issued, local
 	.skip 0x2
 .endobj kp_wbc_issued
 
-.obj kp_dist_vv1, global
+.obj kp_dist_vv1, local
 	.skip 0x4
 .endobj kp_dist_vv1
 

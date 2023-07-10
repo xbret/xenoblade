@@ -582,7 +582,7 @@
 .endfn GXSetDrawSyncCallback
 
 .balign 16, 0
-.fn GXTokenInterruptHandler, global
+.fn GXTokenInterruptHandler, local
 /* 8031A590 002E3B50  94 21 FD 20 */	stwu r1, -0x2e0(r1)
 /* 8031A594 002E3B54  7C 08 02 A6 */	mflr r0
 /* 8031A598 002E3B58  90 01 02 E4 */	stw r0, 0x2e4(r1)
@@ -641,7 +641,7 @@
 .endfn GXSetDrawDoneCallback
 
 .balign 16, 0
-.fn GXFinishInterruptHandler, global
+.fn GXFinishInterruptHandler, local
 /* 8031A670 002E3C30  94 21 FD 20 */	stwu r1, -0x2e0(r1)
 /* 8031A674 002E3C34  7C 08 02 A6 */	mflr r0
 /* 8031A678 002E3C38  38 60 00 01 */	li r3, 1

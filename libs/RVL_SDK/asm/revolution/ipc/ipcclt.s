@@ -21,7 +21,7 @@
 .endfn strnlen
 
 .balign 16, 0
-.fn IpcReplyHandler, global
+.fn IpcReplyHandler, local
 /* 80342AE0 0030C0A0  94 21 FD 20 */	stwu r1, -0x2e0(r1)
 /* 80342AE4 0030C0A4  7C 08 02 A6 */	mflr r0
 /* 80342AE8 0030C0A8  38 60 00 02 */	li r3, 2
@@ -315,7 +315,7 @@
 /* 80342EF0 0030C4B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80342EF4 0030C4B4  7C 08 02 A6 */	mflr r0
 /* 80342EF8 0030C4B8  90 01 00 24 */	stw r0, 0x24(r1)
-/* 80342EFC 0030C4BC  80 0D B8 0C */	lwz r0, lbl_8066798C@sda21(r13)
+/* 80342EFC 0030C4BC  80 0D B8 0C */	lwz r0, "@LOCAL@IPCCltInit__Fv@initialized"@sda21(r13)
 /* 80342F00 0030C4C0  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80342F04 0030C4C4  2C 00 00 00 */	cmpwi r0, 0
 /* 80342F08 0030C4C8  93 C1 00 18 */	stw r30, 0x18(r1)
@@ -323,7 +323,7 @@
 /* 80342F10 0030C4D0  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80342F14 0030C4D4  40 82 00 7C */	bne .L_80342F90
 /* 80342F18 0030C4D8  38 00 00 01 */	li r0, 1
-/* 80342F1C 0030C4DC  90 0D B8 0C */	stw r0, lbl_8066798C@sda21(r13)
+/* 80342F1C 0030C4DC  90 0D B8 0C */	stw r0, "@LOCAL@IPCCltInit__Fv@initialized"@sda21(r13)
 /* 80342F20 0030C4E0  4B FF FA A1 */	bl IPCInit
 /* 80342F24 0030C4E4  4B FF FB 6D */	bl IPCGetBufferLo
 /* 80342F28 0030C4E8  7C 7D 1B 78 */	mr r29, r3
@@ -400,7 +400,7 @@
 .endfn IPCCltReInit
 
 .balign 16, 0
-.fn __ios_Ipc2, global
+.fn __ios_Ipc2, local
 /* 80343030 0030C5F0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80343034 0030C5F4  7C 08 02 A6 */	mflr r0
 /* 80343038 0030C5F8  2C 03 00 00 */	cmpwi r3, 0
@@ -1394,7 +1394,7 @@
 .endfn IOS_Ioctl
 
 .balign 16, 0
-.fn __ios_Ioctlv, global
+.fn __ios_Ioctlv, local
 /* 80343DA0 0030D360  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80343DA4 0030D364  7C 08 02 A6 */	mflr r0
 /* 80343DA8 0030D368  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1868,7 +1868,6 @@
 	.skip 0x4
 .endobj __relnchRpcSave
 
-#@LOCAL@IPCCltInit__Fv@initialized
-.obj lbl_8066798C, local
+.obj "@LOCAL@IPCCltInit__Fv@initialized", local
 	.skip 0x4
-.endobj lbl_8066798C
+.endobj "@LOCAL@IPCCltInit__Fv@initialized"

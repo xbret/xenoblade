@@ -300,8 +300,10 @@
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .obj __AXStudio, local
-	.skip 0x80
+	.skip 0x78
 .endobj __AXStudio
+
+.skip 8
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

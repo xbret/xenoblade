@@ -1,5 +1,4 @@
-#include "PowerPC_EABI_Support/MetroTRK/trk.h"
-#include "PowerPC_EABI_Support/MetroTRK/targimpl.h"
+#include "PowerPC_EABI_Support/MetroTRK/Processor/ppc/Generic/ppc_targimpl.h"
 
 asm void TRKSaveExtended1Block(){
     lis r2, gTRKCPUState@h

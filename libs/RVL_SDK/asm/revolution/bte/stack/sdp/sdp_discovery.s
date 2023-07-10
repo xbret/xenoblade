@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn sdpu_build_uuid_seq, global
+.fn sdpu_build_uuid_seq, local
 /* 803049F0 002CDFB0  38 00 00 35 */	li r0, 0x35
 /* 803049F4 002CDFB4  39 63 00 01 */	addi r11, r3, 1
 /* 803049F8 002CDFB8  7D 6A 5B 78 */	mr r10, r11
@@ -71,7 +71,7 @@
 /* 80304AD8 002CE098  4E 80 00 20 */	blr 
 .endfn sdpu_build_uuid_seq
 
-.fn sdp_snd_service_search_req, global
+.fn sdp_snd_service_search_req, local
 /* 80304ADC 002CE09C  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80304AE0 002CE0A0  7C 08 02 A6 */	mflr r0
 /* 80304AE4 002CE0A4  90 01 00 34 */	stw r0, 0x34(r1)
@@ -260,7 +260,7 @@
 /* 80304D7C 002CE33C  4E 80 00 20 */	blr 
 .endfn sdp_disc_server_rsp
 
-.fn process_service_search_rsp, global
+.fn process_service_search_rsp, local
 /* 80304D80 002CE340  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80304D84 002CE344  7C 08 02 A6 */	mflr r0
 /* 80304D88 002CE348  38 A4 00 08 */	addi r5, r4, 8
@@ -352,7 +352,7 @@
 /* 80304EC4 002CE484  4E 80 00 20 */	blr 
 .endfn process_service_search_rsp
 
-.fn process_service_attr_rsp, global
+.fn process_service_attr_rsp, local
 /* 80304EC8 002CE488  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80304ECC 002CE48C  7C 08 02 A6 */	mflr r0
 /* 80304ED0 002CE490  90 01 00 34 */	stw r0, 0x34(r1)
@@ -537,7 +537,7 @@
 /* 8030516C 002CE72C  4E 80 00 20 */	blr 
 .endfn process_service_attr_rsp
 
-.fn process_service_search_attr_rsp, global
+.fn process_service_search_attr_rsp, local
 /* 80305170 002CE730  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80305174 002CE734  7C 08 02 A6 */	mflr r0
 /* 80305178 002CE738  90 01 00 34 */	stw r0, 0x34(r1)
@@ -735,7 +735,7 @@
 /* 80305440 002CEA00  4E 80 00 20 */	blr 
 .endfn process_service_search_attr_rsp
 
-.fn save_attr_seq, global
+.fn save_attr_seq, local
 /* 80305444 002CEA04  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80305448 002CEA08  7C 08 02 A6 */	mflr r0
 /* 8030544C 002CEA0C  90 01 00 34 */	stw r0, 0x34(r1)
@@ -874,7 +874,7 @@
 /* 8030562C 002CEBEC  4E 80 00 20 */	blr 
 .endfn save_attr_seq
 
-.fn add_record, global
+.fn add_record, local
 /* 80305630 002CEBF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80305634 002CEBF4  7C 08 02 A6 */	mflr r0
 /* 80305638 002CEBF8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -922,7 +922,7 @@
 /* 803056CC 002CEC8C  4E 80 00 20 */	blr 
 .endfn add_record
 
-.fn add_attr, global
+.fn add_attr, local
 /* 803056D0 002CEC90  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 803056D4 002CEC94  7C 08 02 A6 */	mflr r0
 /* 803056D8 002CEC98  90 01 00 44 */	stw r0, 0x44(r1)

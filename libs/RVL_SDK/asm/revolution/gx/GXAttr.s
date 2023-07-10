@@ -246,7 +246,7 @@
 /* 80319560 002E2B20  2C 00 00 00 */	cmpwi r0, 0
 /* 80319564 002E2B24  41 82 01 0C */	beq .L_80319670
 /* 80319568 002E2B28  81 23 00 14 */	lwz r9, 0x14(r3)
-/* 8031956C 002E2B2C  38 ED 98 80 */	addi r7, r13, lbl_80665A00@sda21
+/* 8031956C 002E2B2C  38 ED 98 80 */	addi r7, r13, "@LOCAL@__GXCalculateVLim__Fv@tbl3@1"@sda21
 /* 80319570 002E2B30  80 A3 00 1C */	lwz r5, 0x1c(r3)
 /* 80319574 002E2B34  55 20 07 FE */	clrlwi r0, r9, 0x1f
 /* 80319578 002E2B38  55 24 FF FE */	rlwinm r4, r9, 0x1f, 0x1f, 0x1f
@@ -278,13 +278,13 @@
 /* 803195E0 002E2BA0  38 80 00 03 */	li r4, 3
 .L_803195E4:
 /* 803195E4 002E2BA4  7D 05 21 D6 */	mullw r8, r5, r4
-/* 803195E8 002E2BA8  38 ED 98 78 */	addi r7, r13, lbl_806659F8@sda21
+/* 803195E8 002E2BA8  38 ED 98 78 */	addi r7, r13, "@LOCAL@__GXCalculateVLim__Fv@tbl1"@sda21
 /* 803195EC 002E2BAC  55 24 9F BE */	rlwinm r4, r9, 0x13, 0x1e, 0x1f
 /* 803195F0 002E2BB0  55 25 8F BE */	rlwinm r5, r9, 0x11, 0x1e, 0x1f
 /* 803195F4 002E2BB4  7C C7 20 AE */	lbzx r6, r7, r4
 /* 803195F8 002E2BB8  7C A7 28 AE */	lbzx r5, r7, r5
 /* 803195FC 002E2BBC  7C 00 42 14 */	add r0, r0, r8
-/* 80319600 002E2BC0  39 8D 98 7C */	addi r12, r13, lbl_806659FC@sda21
+/* 80319600 002E2BC0  39 8D 98 7C */	addi r12, r13, "@LOCAL@__GXCalculateVLim__Fv@tbl2@0"@sda21
 /* 80319604 002E2BC4  7C 00 32 14 */	add r0, r0, r6
 /* 80319608 002E2BC8  57 E4 07 BE */	clrlwi r4, r31, 0x1e
 /* 8031960C 002E2BCC  57 EA F7 BE */	rlwinm r10, r31, 0x1e, 0x1e, 0x1f
@@ -955,18 +955,15 @@
 
 .balign 8
 
-#@LOCAL@__GXCalculateVLim__Fv@tbl1
-.obj lbl_806659F8, local
+.obj "@LOCAL@__GXCalculateVLim__Fv@tbl1", local
 	.4byte 0x00040102
-.endobj lbl_806659F8
+.endobj "@LOCAL@__GXCalculateVLim__Fv@tbl1"
 
-#@LOCAL@__GXCalculateVLim__Fv@tbl2@0
-.obj lbl_806659FC, local
+.obj "@LOCAL@__GXCalculateVLim__Fv@tbl2@0", local
 	.4byte 0x00080102
-.endobj lbl_806659FC
+.endobj "@LOCAL@__GXCalculateVLim__Fv@tbl2@0"
 
-#@LOCAL@__GXCalculateVLim__Fv@tbl3@1
-.obj lbl_80665A00, local
+.obj "@LOCAL@__GXCalculateVLim__Fv@tbl3@1", local
 	.4byte 0x000C0102
 	.4byte 0
-.endobj lbl_80665A00
+.endobj "@LOCAL@__GXCalculateVLim__Fv@tbl3@1"

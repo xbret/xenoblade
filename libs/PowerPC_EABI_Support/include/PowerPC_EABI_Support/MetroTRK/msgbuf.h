@@ -8,14 +8,14 @@
 extern "C"{
 #endif
 
-#define BUFFER_SIZE 0x800 + 0x80
+#define kMessageBufferSize 0x800 + 0x80
 #define NUM_BUFFERS 3
 
 typedef struct MessageBuffer {
 	BOOL fInUse; //0x0
 	u32 fLength; //0x4
 	u32 fPosition; //0x8
-	u8 fData[BUFFER_SIZE]; //0xC
+	u8 fData[kMessageBufferSize]; //0xC
 } MessageBuffer;
 
 
@@ -29,8 +29,8 @@ DSError TRK_AppendBuffer(MessageBuffer*, const void*, size_t);
 DSError TRK_ReadBuffer(MessageBuffer*, void*, size_t);
 
 inline DSError TRKAppendBuffer1_ui8(MessageBuffer* buffer, const ui8 data) {
-	if (buffer->fPosition >= BUFFER_SIZE) {
-		return TRKError301;
+	if (buffer->fPosition >= kMessageBufferSize) {
+		return kMessageBufferOverflow;
 	}
 
 	buffer->fData[buffer->fPosition++] = data;

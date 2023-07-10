@@ -567,7 +567,7 @@
 .endfn NANDInit
 
 .balign 16, 0
-.fn nandOnShutdown, global
+.fn nandOnShutdown, local
 /* 80350590 00319B50  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80350594 00319B54  7C 08 02 A6 */	mflr r0
 /* 80350598 00319B58  90 01 00 34 */	stw r0, 0x34(r1)
@@ -627,14 +627,14 @@
 .endfn nandOnShutdown
 
 .balign 16, 0
-.fn nandShutdownCallback, global
+.fn nandShutdownCallback, local
 /* 80350660 00319C20  38 00 00 01 */	li r0, 1
 /* 80350664 00319C24  90 04 00 00 */	stw r0, 0(r4)
 /* 80350668 00319C28  4E 80 00 20 */	blr 
 .endfn nandShutdownCallback
 
 .balign 16, 0
-.fn nandChangeDir, global
+.fn nandChangeDir, local
 /* 80350670 00319C30  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80350674 00319C34  7C 08 02 A6 */	mflr r0
 /* 80350678 00319C38  2C 05 00 00 */	cmpwi r5, 0
@@ -846,7 +846,7 @@
 .endfn NANDChangeDirAsync
 
 .balign 16, 0
-.fn nandChangeDirCallback, global
+.fn nandChangeDirCallback, local
 /* 80350960 00319F20  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80350964 00319F24  7C 08 02 A6 */	mflr r0
 /* 80350968 00319F28  2C 03 00 00 */	cmpwi r3, 0
@@ -969,7 +969,7 @@
 .endfn nandCallback
 
 .balign 16, 0
-.fn nandGetType, global
+.fn nandGetType, local
 /* 80350B00 0031A0C0  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 80350B04 0031A0C4  7C 08 02 A6 */	mflr r0
 /* 80350B08 0031A0C8  90 01 00 74 */	stw r0, 0x74(r1)
@@ -1199,7 +1199,7 @@
 .endfn NANDPrivateGetTypeAsync
 
 .balign 16, 0
-.fn nandGetTypeCallback, global
+.fn nandGetTypeCallback, local
 /* 80350E30 0031A3F0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80350E34 0031A3F4  7C 08 02 A6 */	mflr r0
 /* 80350E38 0031A3F8  2C 03 00 00 */	cmpwi r3, 0

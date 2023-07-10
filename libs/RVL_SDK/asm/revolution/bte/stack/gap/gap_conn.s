@@ -33,7 +33,7 @@
 /* 802EFDD0 002B9390  4E 80 00 20 */	blr
 .endfn gap_conn_init
 
-.fn gap_connect_ind, global
+.fn gap_connect_ind, local
 /* 802EFDD4 002B9394  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802EFDD8 002B9398  7C 08 02 A6 */	mflr r0
 /* 802EFDDC 002B939C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -144,7 +144,7 @@
 /* 802EFF5C 002B951C  4E 80 00 20 */	blr
 .endfn gap_connect_ind
 
-.fn gap_connect_cfm, global
+.fn gap_connect_cfm, local
 /* 802EFF60 002B9520  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802EFF64 002B9524  7C 08 02 A6 */	mflr r0
 /* 802EFF68 002B9528  3C A0 80 5C */	lis r5, gap_cb@ha
@@ -282,7 +282,7 @@
 /* 802F0138 002B96F8  4E 80 00 20 */	blr
 .endfn gap_connect_cfm
 
-.fn gap_config_ind, global
+.fn gap_config_ind, local
 /* 802F013C 002B96FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F0140 002B9700  7C 08 02 A6 */	mflr r0
 /* 802F0144 002B9704  3C A0 80 5C */	lis r5, gap_cb@ha
@@ -374,7 +374,7 @@
 /* 802F0274 002B9834  4E 80 00 20 */	blr
 .endfn gap_config_ind
 
-.fn gap_config_cfm, global
+.fn gap_config_cfm, local
 /* 802F0278 002B9838  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F027C 002B983C  7C 08 02 A6 */	mflr r0
 /* 802F0280 002B9840  3C A0 80 5C */	lis r5, gap_cb@ha
@@ -515,7 +515,7 @@
 /* 802F0460 002B9A20  4E 80 00 20 */	blr
 .endfn gap_config_cfm
 
-.fn gap_disconnect_ind, global
+.fn gap_disconnect_ind, local
 /* 802F0464 002B9A24  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F0468 002B9A28  7C 08 02 A6 */	mflr r0
 /* 802F046C 002B9A2C  3C A0 80 5C */	lis r5, gap_cb@ha
@@ -660,7 +660,7 @@
 /* 802F0658 002B9C18  4E 80 00 20 */	blr
 .endfn gap_disconnect_ind
 
-.fn gap_data_ind, global
+.fn gap_data_ind, local
 /* 802F065C 002B9C1C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F0660 002B9C20  7C 08 02 A6 */	mflr r0
 /* 802F0664 002B9C24  3C A0 80 5C */	lis r5, gap_cb@ha
@@ -740,7 +740,7 @@
 /* 802F0768 002B9D28  4E 80 00 20 */	blr
 .endfn gap_data_ind
 
-.fn gap_congestion_ind, global
+.fn gap_congestion_ind, local
 /* 802F076C 002B9D2C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F0770 002B9D30  7C 08 02 A6 */	mflr r0
 /* 802F0774 002B9D34  3C A0 80 5C */	lis r5, gap_cb@ha

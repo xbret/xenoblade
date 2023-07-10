@@ -63,7 +63,7 @@
 .endfn __HBMSYNResetAllControllers
 
 .balign 16, 0
-.fn __HBMSYNNoteOn__FP11HBMSYNSYNTHUcUcUc, global
+.fn __HBMSYNNoteOn__FP11HBMSYNSYNTHUcUcUc, local
 /* 80340F30 0030A4F0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80340F34 0030A4F4  7C 08 02 A6 */	mflr r0
 /* 80340F38 0030A4F8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -213,7 +213,7 @@
 .endfn __HBMSYNNoteOn__FP11HBMSYNSYNTHUcUcUc
 
 .balign 16, 0
-.fn __HBMSYNMidiIn__FP11HBMSYNSYNTHPUc, global
+.fn __HBMSYNMidiIn__FP11HBMSYNSYNTHPUc, local
 /* 80341160 0030A720  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80341164 0030A724  7C 08 02 A6 */	mflr r0
 /* 80341168 0030A728  90 01 00 14 */	stw r0, 0x14(r1)

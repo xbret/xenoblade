@@ -292,7 +292,7 @@
 /* 802E1AC8 002AB088  4E 80 00 20 */	blr 
 .endfn bta_dm_pm_cback
 
-.fn bta_dm_pm_set_mode, global
+.fn bta_dm_pm_set_mode, local
 /* 802E1ACC 002AB08C  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 802E1AD0 002AB090  7C 08 02 A6 */	mflr r0
 /* 802E1AD4 002AB094  90 01 00 54 */	stw r0, 0x54(r1)
@@ -538,7 +538,7 @@
 /* 802E1E48 002AB408  4E 80 00 20 */	blr
 .endfn bta_dm_pm_set_mode
 
-.fn bta_dm_pm_btm_cback, global
+.fn bta_dm_pm_btm_cback, local
 /* 802E1E4C 002AB40C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E1E50 002AB410  7C 08 02 A6 */	mflr r0
 /* 802E1E54 002AB414  90 01 00 24 */	stw r0, 0x24(r1)
@@ -572,7 +572,7 @@
 /* 802E1EC0 002AB480  4E 80 00 20 */	blr
 .endfn bta_dm_pm_btm_cback
 
-.fn bta_dm_pm_timer_cback, global
+.fn bta_dm_pm_timer_cback, local
 /* 802E1EC4 002AB484  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802E1EC8 002AB488  7C 08 02 A6 */	mflr r0
 /* 802E1ECC 002AB48C  3C 80 80 5C */	lis r4, bta_dm_cb@ha
@@ -752,5 +752,7 @@
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .obj bta_dm_conn_srvcs, global
-	.skip 0x30
+	.skip 0x2E
 .endobj bta_dm_conn_srvcs
+
+.skip 2

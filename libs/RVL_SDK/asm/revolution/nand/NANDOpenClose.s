@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.fn nandOpen, global
+.fn nandOpen, local
 /* 8034F8B0 00318E70  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8034F8B4 00318E74  7C 08 02 A6 */	mflr r0
 /* 8034F8B8 00318E78  90 01 00 64 */	stw r0, 0x64(r1)

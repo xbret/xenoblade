@@ -132,7 +132,7 @@
 .endfn SCCheckStatus
 
 .balign 16, 0
-.fn SCReloadConfFileAsync, global
+.fn SCReloadConfFileAsync, local
 /* 8035F6F0 00328CB0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035F6F4 00328CB4  7C 08 02 A6 */	mflr r0
 /* 8035F6F8 00328CB8  28 04 40 00 */	cmplwi r4, 0x4000
@@ -267,7 +267,7 @@
 .endfn OpenCallbackFromReload
 
 .balign 16, 0
-.fn ReadCallbackFromReload, global
+.fn ReadCallbackFromReload, local
 /* 8035F8E0 00328EA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035F8E4 00328EA4  7C 08 02 A6 */	mflr r0
 /* 8035F8E8 00328EA8  3C A0 80 5D */	lis r5, Control@ha
@@ -377,7 +377,7 @@
 .endfn CloseCallbackFromReload
 
 .balign 16, 0
-.fn FinishFromReload, global
+.fn FinishFromReload, local
 /* 8035FA60 00329020  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035FA64 00329024  7C 08 02 A6 */	mflr r0
 /* 8035FA68 00329028  90 01 00 24 */	stw r0, 0x24(r1)
@@ -465,7 +465,7 @@
 .endfn CloseCallbackFromReloadError
 
 .balign 16, 0
-.fn ParseConfBuf, global
+.fn ParseConfBuf, local
 /* 8035FBA0 00329160  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8035FBA4 00329164  7C 08 02 A6 */	mflr r0
 /* 8035FBA8 00329168  90 01 00 64 */	stw r0, 0x64(r1)
@@ -629,7 +629,7 @@
 .endfn ParseConfBuf
 
 .balign 16, 0
-.fn UnpackItem, global
+.fn UnpackItem, local
 /* 8035FDF0 003293B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035FDF4 003293B4  7C 08 02 A6 */	mflr r0
 /* 8035FDF8 003293B8  38 A0 00 20 */	li r5, 0x20
@@ -740,7 +740,7 @@
 .endfn UnpackItem
 
 .balign 16, 0
-.fn DeleteItemByID, global
+.fn DeleteItemByID, local
 /* 8035FF70 00329530  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8035FF74 00329534  7C 08 02 A6 */	mflr r0
 /* 8035FF78 00329538  90 01 00 34 */	stw r0, 0x34(r1)
@@ -854,7 +854,7 @@
 .endfn DeleteItemByID
 
 .balign 16, 0
-.fn CreateItemByID, global
+.fn CreateItemByID, local
 /* 80360110 003296D0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80360114 003296D4  7C 08 02 A6 */	mflr r0
 /* 80360118 003296D8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1979,7 +1979,7 @@
 
 .balign 8
 
-.obj __SCVersion, local
+.obj __SCVersion, global
 	.4byte lbl_8055EEF8
 .endobj __SCVersion
 
@@ -2130,8 +2130,10 @@
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .obj Control, local
-	.skip 0x1A0
+	.skip 0x190
 .endobj Control
+
+.skip 0x10
 
 .obj ConfBuf, local
 	.skip 0x4000

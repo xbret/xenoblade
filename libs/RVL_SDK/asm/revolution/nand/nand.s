@@ -991,7 +991,7 @@
 .endfn NANDTellAsync
 
 .balign 16, 0
-.fn nandComposePerm, global
+.fn nandComposePerm, local
 /* 8034F4E0 00318AA0  54 80 07 FF */	clrlwi. r0, r4, 0x1f
 /* 8034F4E4 00318AA4  38 E0 00 00 */	li r7, 0
 /* 8034F4E8 00318AA8  41 82 00 08 */	beq .L_8034F4F0
@@ -1022,7 +1022,7 @@
 .endfn nandComposePerm
 
 .balign 16, 0
-.fn nandSplitPerm, global
+.fn nandSplitPerm, local
 /* 8034F540 00318B00  54 60 06 F7 */	rlwinm. r0, r3, 0, 0x1b, 0x1b
 /* 8034F544 00318B04  38 00 00 00 */	li r0, 0
 /* 8034F548 00318B08  90 04 00 00 */	stw r0, 0(r4)
@@ -1066,7 +1066,7 @@
 .endfn nandSplitPerm
 
 .balign 16, 0
-.fn nandGetStatus, global
+.fn nandGetStatus, local
 /* 8034F5D0 00318B90  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8034F5D4 00318B94  7C 08 02 A6 */	mflr r0
 /* 8034F5D8 00318B98  90 01 00 74 */	stw r0, 0x74(r1)

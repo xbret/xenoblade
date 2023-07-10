@@ -1172,17 +1172,18 @@
 .obj lbl_80518A98, global
 	.4byte 0
 	.float 1.0
-	.4byte 0x3C8EFA35
-	.4byte 0x3B808081
-	.4byte 0x43300000
-	.4byte 0
+	.float 0.017453292
+	.float 0.0039215688
+	.8byte 0x4330000000000000
 .endobj lbl_80518A98
 
 .obj lbl_80518AB0, global
 	.float 0.5
-#@LOCAL@CalculateMtx__Q36nw4hbm3lyt4PaneFRCQ36nw4hbm3lyt8DrawInfo@invAlpha
-	.4byte 0x3B808081
 .endobj lbl_80518AB0
+
+.obj "invAlpha$8122", local
+	.float 0.0039215688 #1/255
+.endobj "invAlpha$8122"
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
@@ -1220,5 +1221,7 @@
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .obj typeInfo__Q36nw4hbm3lyt4Pane, global
-	.skip 0x8
+	.skip 0x4
 .endobj typeInfo__Q36nw4hbm3lyt4Pane
+
+.skip 4

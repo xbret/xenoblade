@@ -905,18 +905,20 @@
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 
-.obj sBatteryFlag__Q210homebutton10Controller, local
-	.skip 0x8
+.obj sBatteryFlag__Q210homebutton10Controller, global
+	.skip 0x4
 .endobj sBatteryFlag__Q210homebutton10Controller
 
-.obj sAlarm__Q210homebutton10Controller, local
+.skip 4
+
+.obj sAlarm__Q210homebutton10Controller, global
 	.skip 0xC0
 .endobj sAlarm__Q210homebutton10Controller
 
-.obj sAlarmSoundOff__Q210homebutton10Controller, local
+.obj sAlarmSoundOff__Q210homebutton10Controller, global
 	.skip 0xC0
 .endobj sAlarmSoundOff__Q210homebutton10Controller
 
-.obj sThis__Q210homebutton10Controller, local
+.obj sThis__Q210homebutton10Controller, global
 	.skip 0x10
 .endobj sThis__Q210homebutton10Controller

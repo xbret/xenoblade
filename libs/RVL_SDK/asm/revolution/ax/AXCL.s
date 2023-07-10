@@ -754,7 +754,7 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj __AXCommandList, global
+.obj __AXCommandList, local
 	.skip 0x100
 .endobj __AXCommandList
 

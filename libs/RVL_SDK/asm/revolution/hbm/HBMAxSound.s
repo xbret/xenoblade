@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.fn "GetFreePlayer__24@unnamed@HBMAxSound_cpp@Fi", global
+.fn "GetFreePlayer__24@unnamed@HBMAxSound_cpp@Fi", local
 /* 803222B0 002EB870  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803222B4 002EB874  7C 08 02 A6 */	mflr r0
 /* 803222B8 002EB878  2C 03 00 04 */	cmpwi r3, 4
@@ -126,7 +126,7 @@
 .endfn "GetFreePlayer__24@unnamed@HBMAxSound_cpp@Fi"
 
 .balign 16, 0
-.fn "AudioFrameCallback__24@unnamed@HBMAxSound_cpp@Fv", global
+.fn "AudioFrameCallback__24@unnamed@HBMAxSound_cpp@Fv", local
 /* 80322450 002EBA10  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80322454 002EBA14  7C 08 02 A6 */	mflr r0
 /* 80322458 002EBA18  90 01 00 14 */	stw r0, 0x14(r1)
@@ -156,7 +156,7 @@
 .endfn "AudioFrameCallback__24@unnamed@HBMAxSound_cpp@Fv"
 
 .balign 16, 0
-.fn "AudioSoundThreadProc__24@unnamed@HBMAxSound_cpp@FPv", global
+.fn "AudioSoundThreadProc__24@unnamed@HBMAxSound_cpp@FPv", local
 /* 803224C0 002EBA80  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803224C4 002EBA84  7C 08 02 A6 */	mflr r0
 /* 803224C8 002EBA88  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1011,5 +1011,7 @@
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .obj "sWork__24@unnamed@HBMAxSound_cpp@", local
-	.skip 0x8
+	.skip 0x4
 .endobj "sWork__24@unnamed@HBMAxSound_cpp@"
+
+.skip 4

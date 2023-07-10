@@ -22,7 +22,7 @@ DSError TRK_InitializeMessageBuffers(){
 }
 
 DSError TRK_GetFreeBuffer(int* bufferIndexPtr, MessageBuffer** destBufPtr){
-	DSError error = TRKError300;
+	DSError error = kNoMessageBufferAvailable;
 	*destBufPtr = NULL;
 
 	for(int i = 0; i < NUM_BUFFERS; i++){
@@ -38,7 +38,7 @@ DSError TRK_GetFreeBuffer(int* bufferIndexPtr, MessageBuffer** destBufPtr){
 		}
 	}
 
-	if(error == TRKError300){
+	if(error == kNoMessageBufferAvailable){
 		OSReport("MetroTRK - ERROR : No buffer available\n");
 	}
 
@@ -66,15 +66,15 @@ void TRKResetBuffer(MessageBuffer* buf, BOOL keepData){
 	buf->fPosition = 0;
 
 	if(!keepData){
-		TRK_memset(buf->fData, 0, BUFFER_SIZE);
+		TRK_memset(buf->fData, 0, kMessageBufferSize);
 	}
 }
 
 DSError TRK_SetBufferPosition(MessageBuffer* buf, u32 pos){
 	DSError error = kNoError;
 
-	if(pos > BUFFER_SIZE){
-		error = TRKError301;
+	if(pos > kMessageBufferSize){
+		error = kMessageBufferOverflow;
 	}else{
 		buf->fPosition = pos;
 		//If the new position is past the current length,
@@ -96,12 +96,12 @@ DSError TRK_AppendBuffer(MessageBuffer* buf, const void* data, size_t length){
 		return kNoError;
 	}
 
-	bytesLeft = BUFFER_SIZE - buf->fPosition;
+	bytesLeft = kMessageBufferSize - buf->fPosition;
 
 	//If there isn't enough space left in the buffer, change the number
 	//of bytes to append to the remaning number of bytes
 	if(bytesLeft < length){
-		error = TRKError301;
+		error = kMessageBufferOverflow;
 		length = bytesLeft;
 	}
 
@@ -134,7 +134,7 @@ DSError TRK_ReadBuffer(MessageBuffer* buf, void* data, size_t length){
 	//If the number of bytes to read exceeds the buffer length, change
 	//the length to the remaining number of bytes
 	if(length > bytesLeft){
-		error = TRKError302;
+		error = kMessageBufferReadError;
 		length = bytesLeft;
 	}
 

@@ -230,7 +230,7 @@
 /* 802F4BEC 002BE1AC  4E 80 00 20 */	blr 
 .endfn hidh_sec_check_complete_term
 
-.fn hidh_l2cif_connect_ind, global
+.fn hidh_l2cif_connect_ind, local
 /* 802F4BF0 002BE1B0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802F4BF4 002BE1B4  7C 08 02 A6 */	mflr r0
 /* 802F4BF8 002BE1B8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -636,7 +636,7 @@
 /* 802F51A4 002BE764  4E 80 00 20 */	blr 
 .endfn hidh_sec_check_complete_orig
 
-.fn hidh_l2cif_connect_cfm, global
+.fn hidh_l2cif_connect_cfm, local
 /* 802F51A8 002BE768  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F51AC 002BE76C  7C 08 02 A6 */	mflr r0
 /* 802F51B0 002BE770  3C C0 80 5C */	lis r6, hh_cb@ha
@@ -870,7 +870,7 @@
 /* 802F54EC 002BEAAC  4E 80 00 20 */	blr 
 .endfn hidh_l2cif_connect_cfm
 
-.fn hidh_l2cif_config_ind, global
+.fn hidh_l2cif_config_ind, local
 /* 802F54F0 002BEAB0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F54F4 002BEAB4  7C 08 02 A6 */	mflr r0
 /* 802F54F8 002BEAB8  3C A0 80 5C */	lis r5, hh_cb@ha
@@ -1058,7 +1058,7 @@
 /* 802F5794 002BED54  4E 80 00 20 */	blr 
 .endfn hidh_l2cif_config_ind
 
-.fn hidh_l2cif_config_cfm, global
+.fn hidh_l2cif_config_cfm, local
 /* 802F5798 002BED58  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F579C 002BED5C  7C 08 02 A6 */	mflr r0
 /* 802F57A0 002BED60  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1274,7 +1274,7 @@
 /* 802F5AA0 002BF060  4E 80 00 20 */	blr 
 .endfn hidh_l2cif_config_cfm
 
-.fn hidh_l2cif_disconnect_ind, global
+.fn hidh_l2cif_disconnect_ind, local
 /* 802F5AA4 002BF064  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F5AA8 002BF068  7C 08 02 A6 */	mflr r0
 /* 802F5AAC 002BF06C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1470,7 +1470,7 @@
 /* 802F5D64 002BF324  4E 80 00 20 */	blr 
 .endfn hidh_l2cif_disconnect_ind
 
-.fn hidh_l2cif_disconnect_cfm, global
+.fn hidh_l2cif_disconnect_cfm, local
 /* 802F5D68 002BF328  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F5D6C 002BF32C  7C 08 02 A6 */	mflr r0
 /* 802F5D70 002BF330  3C 80 80 5C */	lis r4, hh_cb@ha
@@ -1631,7 +1631,7 @@
 /* 802F5FAC 002BF56C  4E 80 00 20 */	blr 
 .endfn hidh_l2cif_disconnect_cfm
 
-.fn hidh_l2cif_cong_ind, global
+.fn hidh_l2cif_cong_ind, local
 /* 802F5FB0 002BF570  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802F5FB4 002BF574  7C 08 02 A6 */	mflr r0
 /* 802F5FB8 002BF578  3C A0 80 5C */	lis r5, hh_cb@ha
@@ -1771,7 +1771,7 @@
 /* 802F61A4 002BF764  4E 80 00 20 */	blr 
 .endfn hidh_l2cif_cong_ind
 
-.fn hidh_l2cif_data_ind, global
+.fn hidh_l2cif_data_ind, local
 /* 802F61A8 002BF768  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802F61AC 002BF76C  7C 08 02 A6 */	mflr r0
 /* 802F61B0 002BF770  3C C0 80 5C */	lis r6, hh_cb@ha

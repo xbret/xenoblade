@@ -201,5 +201,7 @@
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .obj typeInfo__Q36nw4hbm3lyt8Bounding, global
-	.skip 0x8
+	.skip 0x4
 .endobj typeInfo__Q36nw4hbm3lyt8Bounding
+
+.skip 4

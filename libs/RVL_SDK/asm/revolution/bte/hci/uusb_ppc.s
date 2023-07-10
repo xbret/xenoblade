@@ -919,11 +919,11 @@
 	.skip 0x3
 .endobj uusb_g_trace_state_initialized
 
-.obj __ntd_ohci, local
+.obj __ntd_ohci, global
 	.skip 0x4
 .endobj __ntd_ohci
 
-.obj __ntd_ohci_init_flag, local
+.obj __ntd_ohci_init_flag, global
 	.skip 0x4
 .endobj __ntd_ohci_init_flag
 
@@ -942,13 +942,15 @@
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .obj usb, local
-	.skip 0x60
+	.skip 0x4c
 .endobj usb
 
-.obj __uusb_ppc_stack1, local
+.skip 0x14
+
+.obj __uusb_ppc_stack1, global
 	.skip 0x1000
 .endobj __uusb_ppc_stack1
 
-.obj __uusb_ppc_stack2, local
+.obj __uusb_ppc_stack2, global
 	.skip 0x1000
 .endobj __uusb_ppc_stack2

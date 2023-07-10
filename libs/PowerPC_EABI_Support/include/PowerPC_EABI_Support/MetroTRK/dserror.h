@@ -7,20 +7,19 @@ extern "C" {
 
 typedef enum {
 	kNoError = 0,
-	TRKError1 = 1,
-	TRKError2 = 2,
-	TRKError100 = 0x100,
-	TRKError300 = 0x300,
-	TRKError301 = 0x301,
-	TRKError302 = 0x302,
-	TRKError500 = 0x500,
-	TRKError700 = 0x700,
-	TRKError701 = 0x701,
-	TRKError702 = 0x702,
-	TRKError703 = 0x703,
-	TRKError704 = 0x704,
-	TRKError705 = 0x705,
-	TRKError706 = 0x706
+	kStepError = 1,
+	kEventQueueFull = 0x100,
+	kNoMessageBufferAvailable = 0x300,
+	kMessageBufferOverflow = 0x301,
+	kMessageBufferReadError = 0x302,
+	kDispatchError = 0x500,
+	kInvalidMemory = 0x700,
+	kInvalidRegister = 0x701,
+	kCWDSException = 0x702,
+	kUnsupportedError = 0x703,
+	kInvalidProcessId = 0x704,
+	kInvalidThreadId = 0x705,
+	kOsError = 0x706
 } DSError;
 
 #ifdef __cplusplus

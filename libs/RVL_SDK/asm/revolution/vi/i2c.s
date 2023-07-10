@@ -42,7 +42,7 @@
 .endfn WaitMicroTime
 
 .balign 16, 0
-.fn sendSlaveAddr, global
+.fn sendSlaveAddr, local
 /* 80366A90 00330050  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80366A94 00330054  7C 08 02 A6 */	mflr r0
 /* 80366A98 00330058  90 01 00 34 */	stw r0, 0x34(r1)

@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.fn AllocUsedBlockFromFreeBlock_, global
+.fn AllocUsedBlockFromFreeBlock_, local
 /* 80348FC0 00312580  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80348FC4 00312584  7C 08 02 A6 */	mflr r0
 /* 80348FC8 00312588  90 01 00 24 */	stw r0, 0x24(r1)
@@ -168,7 +168,7 @@
 .endfn AllocUsedBlockFromFreeBlock_
 
 .balign 16, 0
-.fn AllocFromHead_, global
+.fn AllocFromHead_, local
 /* 803491F0 003127B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 803491F4 003127B4  7C 08 02 A6 */	mflr r0
 /* 803491F8 003127B8  38 63 00 3C */	addi r3, r3, 0x3c
@@ -233,7 +233,7 @@
 .endfn AllocFromHead_
 
 .balign 16, 0
-.fn AllocFromTail_, global
+.fn AllocFromTail_, local
 /* 803492D0 00312890  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803492D4 00312894  7C 08 02 A6 */	mflr r0
 /* 803492D8 00312898  38 63 00 3C */	addi r3, r3, 0x3c
@@ -293,7 +293,7 @@
 .endfn AllocFromTail_
 
 .balign 16, 0
-.fn RecycleRegion_, global
+.fn RecycleRegion_, local
 /* 803493A0 00312960  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803493A4 00312964  39 00 00 00 */	li r8, 0
 /* 803493A8 00312968  80 A4 00 00 */	lwz r5, 0(r4)

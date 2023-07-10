@@ -29,7 +29,7 @@
 /* 802FEDC4 002C8384  4E 80 00 20 */	blr
 .endfn rfc_mx_sm_execute
 
-.fn rfc_mx_sm_state_idle, global
+.fn rfc_mx_sm_state_idle, local
 /* 802FEDC8 002C8388  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 802FEDCC 002C838C  7C 08 02 A6 */	mflr r0
 /* 802FEDD0 002C8390  3C C0 80 5C */	lis r6, rfc_cb@ha
@@ -177,7 +177,7 @@
 /* 802FEFD8 002C8598  4E 80 00 20 */	blr
 .endfn rfc_mx_sm_state_idle
 
-.fn rfc_mx_sm_state_wait_conn_cnf, global
+.fn rfc_mx_sm_state_wait_conn_cnf, local
 /* 802FEFDC 002C859C  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 802FEFE0 002C85A0  7C 08 02 A6 */	mflr r0
 /* 802FEFE4 002C85A4  3C C0 80 5C */	lis r6, rfc_cb@ha
@@ -301,7 +301,7 @@
 /* 802FF194 002C8754  4E 80 00 20 */	blr
 .endfn rfc_mx_sm_state_wait_conn_cnf
 
-.fn rfc_mx_sm_state_configure, global
+.fn rfc_mx_sm_state_configure, local
 /* 802FF198 002C8758  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FF19C 002C875C  7C 08 02 A6 */	mflr r0
 /* 802FF1A0 002C8760  3C C0 80 5C */	lis r6, rfc_cb@ha
@@ -385,7 +385,7 @@
 /* 802FF2BC 002C887C  4E 80 00 20 */	blr
 .endfn rfc_mx_sm_state_configure
 
-.fn rfc_mx_sm_sabme_wait_ua, global
+.fn rfc_mx_sm_sabme_wait_ua, local
 /* 802FF2C0 002C8880  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FF2C4 002C8884  7C 08 02 A6 */	mflr r0
 /* 802FF2C8 002C8888  3C C0 80 5C */	lis r6, rfc_cb@ha
@@ -491,7 +491,7 @@
 /* 802FF430 002C89F0  4E 80 00 20 */	blr
 .endfn rfc_mx_sm_sabme_wait_ua
 
-.fn rfc_mx_sm_state_wait_sabme, global
+.fn rfc_mx_sm_state_wait_sabme, local
 /* 802FF434 002C89F4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FF438 002C89F8  7C 08 02 A6 */	mflr r0
 /* 802FF43C 002C89FC  3C C0 80 5C */	lis r6, rfc_cb@ha
@@ -574,7 +574,7 @@
 /* 802FF550 002C8B10  4E 80 00 20 */	blr
 .endfn rfc_mx_sm_state_wait_sabme
 
-.fn rfc_mx_sm_state_connected, global
+.fn rfc_mx_sm_state_connected, local
 /* 802FF554 002C8B14  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FF558 002C8B18  7C 08 02 A6 */	mflr r0
 /* 802FF55C 002C8B1C  3C A0 80 5C */	lis r5, rfc_cb@ha
@@ -654,7 +654,7 @@
 /* 802FF668 002C8C28  4E 80 00 20 */	blr
 .endfn rfc_mx_sm_state_connected
 
-.fn rfc_mx_sm_state_disc_wait_ua, global
+.fn rfc_mx_sm_state_disc_wait_ua, local
 /* 802FF66C 002C8C2C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FF670 002C8C30  7C 08 02 A6 */	mflr r0
 /* 802FF674 002C8C34  3C C0 80 5C */	lis r6, rfc_cb@ha
@@ -762,7 +762,7 @@
 /* 802FF7E0 002C8DA0  4E 80 00 20 */	blr 
 .endfn rfc_mx_sm_state_disc_wait_ua
 
-.fn rfc_mx_conf_cnf, global
+.fn rfc_mx_conf_cnf, local
 /* 802FF7E4 002C8DA4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FF7E8 002C8DA8  7C 08 02 A6 */	mflr r0
 /* 802FF7EC 002C8DAC  3C A0 80 5C */	lis r5, rfc_cb@ha
@@ -833,7 +833,7 @@
 /* 802FF8D4 002C8E94  4E 80 00 20 */	blr 
 .endfn rfc_mx_conf_cnf
 
-.fn rfc_mx_conf_ind, global
+.fn rfc_mx_conf_ind, local
 /* 802FF8D8 002C8E98  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802FF8DC 002C8E9C  7C 08 02 A6 */	mflr r0
 /* 802FF8E0 002C8EA0  3C A0 80 5C */	lis r5, rfc_cb@ha

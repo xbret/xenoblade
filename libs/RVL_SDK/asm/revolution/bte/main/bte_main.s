@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.fn BTUInterruptHandler, global
+.fn BTUInterruptHandler, local
 /* 802DE080 002A7640  3C 80 80 5C */	lis r4, __BTUInterruptHandlerStack@ha
 /* 802DE084 002A7644  3C 60 80 2E */	lis r3, btu_task_msg_handler@ha
 /* 802DE088 002A7648  38 84 E4 A0 */	addi r4, r4, __BTUInterruptHandlerStack@l
@@ -121,7 +121,7 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj __BTUInterruptHandlerStack, local
+.obj __BTUInterruptHandlerStack, global
 	.skip 0x1000
 .endobj __BTUInterruptHandlerStack
 

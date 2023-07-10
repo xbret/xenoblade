@@ -539,7 +539,7 @@ static int ExPPC_IsInSpecification(char* extype, ex_specification* spec){
 extern void __unexpected(CatchInfo* catchinfo){
 	ex_specification* unexp = (ex_specification*)catchinfo->stacktop;
 
-#pragma exception_magic
+	#pragma exception_magic //allow access to __exception_magic in try/catch blocks
 
 	try {
 		unexpected();
@@ -908,4 +908,7 @@ asm void __throw(char* throwtype, void* location, void* dtor){
 
 //unused
 void __end__catch(CatchInfo* catchinfo){
+	if (catchinfo->location && catchinfo->dtor){
+		DTORCALL_COMPLETE(catchinfo->dtor,catchinfo->location);
+	}
 }

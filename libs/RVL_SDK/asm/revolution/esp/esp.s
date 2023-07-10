@@ -450,7 +450,7 @@
 
 .balign 8
 
-.obj __esFd, local
+.obj __esFd, global
 	.4byte 0xFFFFFFFF
 	.4byte 0
 .endobj __esFd

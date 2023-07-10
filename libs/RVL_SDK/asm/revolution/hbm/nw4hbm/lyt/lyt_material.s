@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.fn "CalcTextureMtx__26@unnamed@lyt_material_cpp@FPQ36nw4hbm4math5MTX34RCQ36nw4hbm3lyt6TexSRT", global
+.fn "CalcTextureMtx__26@unnamed@lyt_material_cpp@FPQ36nw4hbm4math5MTX34RCQ36nw4hbm3lyt6TexSRT", local
 /* 8032E4D0 002F7A90  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8032E4D4 002F7A94  7C 08 02 A6 */	mflr r0
 /* 8032E4D8 002F7A98  C0 24 00 08 */	lfs f1, 8(r4)
@@ -77,7 +77,7 @@
 .endfn "CalcTextureMtx__26@unnamed@lyt_material_cpp@FPQ36nw4hbm4math5MTX34RCQ36nw4hbm3lyt6TexSRT"
 
 .balign 16, 0
-.fn "SetIndTexMtx__26@unnamed@lyt_material_cpp@F14_GXIndTexMtxIDPA3_Cf", global
+.fn "SetIndTexMtx__26@unnamed@lyt_material_cpp@F14_GXIndTexMtxIDPA3_Cf", local
 /* 8032E5F0 002F7BB0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8032E5F4 002F7BB4  7C 08 02 A6 */	mflr r0
 /* 8032E5F8 002F7BB8  C0 44 00 00 */	lfs f2, 0(r4)

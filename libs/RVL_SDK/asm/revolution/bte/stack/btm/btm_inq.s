@@ -1142,7 +1142,7 @@
 /* 802E9318 002B28D8  4E 80 00 20 */	blr 
 .endfn btm_inq_db_init
 
-.fn btm_inq_find_bdaddr, global
+.fn btm_inq_find_bdaddr, local
 /* 802E931C 002B28DC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E9320 002B28E0  7C 08 02 A6 */	mflr r0
 /* 802E9324 002B28E4  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1207,7 +1207,7 @@
 /* 802E93F4 002B29B4  4E 80 00 20 */	blr 
 .endfn btm_inq_find_bdaddr
 
-.fn btm_inq_db_new, global
+.fn btm_inq_db_new, local
 /* 802E93F8 002B29B8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E93FC 002B29BC  7C 08 02 A6 */	mflr r0
 /* 802E9400 002B29C0  3C 80 80 5C */	lis r4, btm_cb@ha
@@ -1280,7 +1280,7 @@
 /* 802E94F8 002B2AB8  4E 80 00 20 */	blr 
 .endfn btm_inq_db_new
 
-.fn btm_set_inq_event_filter, global
+.fn btm_set_inq_event_filter, local
 /* 802E94FC 002B2ABC  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802E9500 002B2AC0  7C 08 02 A6 */	mflr r0
 /* 802E9504 002B2AC4  90 01 00 34 */	stw r0, 0x34(r1)

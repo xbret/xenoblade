@@ -12,7 +12,7 @@ namespace std{
 		}
 	};
 
-	class bad_exception{
+	class bad_exception : public exception {
 	public:
 		bad_exception(){}
 		virtual ~bad_exception(){}

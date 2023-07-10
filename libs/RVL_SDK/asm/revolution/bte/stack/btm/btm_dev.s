@@ -387,7 +387,7 @@
 /* 802E6774 002AFD34  4E 80 00 20 */	blr 
 .endfn btm_find_dev
 
-.fn btm_find_oldest_dev, global
+.fn btm_find_oldest_dev, local
 /* 802E6778 002AFD38  3C 60 80 5C */	lis r3, btm_cb@ha
 /* 802E677C 002AFD3C  38 00 00 04 */	li r0, 4
 /* 802E6780 002AFD40  38 63 F9 F8 */	addi r3, r3, btm_cb@l

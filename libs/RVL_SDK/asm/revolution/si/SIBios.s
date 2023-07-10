@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.fn CompleteTransfer, global
+.fn CompleteTransfer, local
 /* 80361660 0032AC20  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80361664 0032AC24  7C 08 02 A6 */	mflr r0
 /* 80361668 0032AC28  90 01 00 24 */	stw r0, 0x24(r1)
@@ -325,7 +325,7 @@
 /* 80361B0C 0032B0CC  54 00 F0 BE */	srwi r0, r0, 2
 /* 80361B10 0032B0D0  7E C3 B3 78 */	mr r3, r22
 /* 80361B14 0032B0D4  7C 04 00 16 */	mulhwu r0, r4, r0
-/* 80361B18 0032B0D8  38 8D B9 F0 */	addi r4, r13, lbl_80667B70@sda21
+/* 80361B18 0032B0D8  38 8D B9 F0 */	addi r4, r13, "@LOCAL@SIInterruptHandler__FsP9OSContext@cmdTypeAndStatus"@sda21
 /* 80361B1C 0032B0DC  38 A0 00 01 */	li r5, 1
 /* 80361B20 0032B0E0  38 E0 00 03 */	li r7, 3
 /* 80361B24 0032B0E4  39 20 00 00 */	li r9, 0
@@ -486,7 +486,7 @@
 /* 80361D50 0032B310  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80361D54 0032B314  7C 08 02 A6 */	mflr r0
 /* 80361D58 0032B318  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80361D5C 0032B31C  80 0D B9 F4 */	lwz r0, lbl_80667B74@sda21(r13)
+/* 80361D5C 0032B31C  80 0D B9 F4 */	lwz r0, "@LOCAL@SIInit__Fv@Initialized"@sda21(r13)
 /* 80361D60 0032B320  2C 00 00 00 */	cmpwi r0, 0
 /* 80361D64 0032B324  40 82 00 9C */	bne .L_80361E00
 /* 80361D68 0032B328  80 6D 9B 60 */	lwz r3, __SIVersion@sda21(r13)
@@ -527,7 +527,7 @@
 /* 80361DF0 0032B3B0  38 60 00 03 */	li r3, 3
 /* 80361DF4 0032B3B4  48 00 07 1D */	bl SIGetType
 /* 80361DF8 0032B3B8  38 00 00 01 */	li r0, 1
-/* 80361DFC 0032B3BC  90 0D B9 F4 */	stw r0, lbl_80667B74@sda21(r13)
+/* 80361DFC 0032B3BC  90 0D B9 F4 */	stw r0, "@LOCAL@SIInit__Fv@Initialized"@sda21(r13)
 .L_80361E00:
 /* 80361E00 0032B3C0  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80361E04 0032B3C4  7C 08 03 A6 */	mtlr r0
@@ -536,7 +536,7 @@
 .endfn SIInit
 
 .balign 16, 0
-.fn __SITransfer, global
+.fn __SITransfer, local
 /* 80361E10 0032B3D0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80361E14 0032B3D4  7C 08 02 A6 */	mflr r0
 /* 80361E18 0032B3D8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1124,7 +1124,7 @@
 /* 80362668 0032BC28  7F C6 F3 78 */	mr r6, r30
 /* 8036266C 0032BC2C  80 05 00 F8 */	lwz r0, 0x800000F8@l(r5)
 /* 80362670 0032BC30  39 08 22 50 */	addi r8, r8, GetTypeCallback@l
-/* 80362674 0032BC34  38 8D B9 F8 */	addi r4, r13, lbl_80667B78@sda21
+/* 80362674 0032BC34  38 8D B9 F8 */	addi r4, r13, "@LOCAL@SIGetType__Fl@cmdTypeAndStatus"@sda21
 /* 80362678 0032BC38  38 A0 00 01 */	li r5, 1
 /* 8036267C 0032BC3C  54 00 F0 BE */	srwi r0, r0, 2
 /* 80362680 0032BC40  38 E0 00 03 */	li r7, 3
@@ -1176,7 +1176,7 @@
 
 .balign 8
 
-.obj __SIVersion, local
+.obj __SIVersion, global
 	.4byte lbl_8055F138
 	.4byte 0
 .endobj __SIVersion
@@ -1216,8 +1216,9 @@
 	.skip 0x10
 .endobj RDSTHandler
 
-#@LOCAL@GetTypeCallback__FlUlP9OSContext@cmdFixDevice
+.obj "@LOCAL@GetTypeCallback__FlUlP9OSContext@cmdFixDevice", local
 	.skip 0x10
+.endobj "@LOCAL@GetTypeCallback__FlUlP9OSContext@cmdFixDevice"
 
 .obj TypeCallback, local
 	.skip 0x40
@@ -1227,21 +1228,18 @@
 
 .balign 8
 
-#@LOCAL@SIInterruptHandler__FsP9OSContext@cmdTypeAndStatus
-.obj lbl_80667B70, local
+.obj "@LOCAL@SIInterruptHandler__FsP9OSContext@cmdTypeAndStatus", local
 	.skip 0x4
-.endobj lbl_80667B70
+.endobj "@LOCAL@SIInterruptHandler__FsP9OSContext@cmdTypeAndStatus"
 
-#@LOCAL@SIInit__Fv@Initialized
-.obj lbl_80667B74, local
+.obj "@LOCAL@SIInit__Fv@Initialized", local
 	.skip 0x4
-.endobj lbl_80667B74
+.endobj "@LOCAL@SIInit__Fv@Initialized"
 
-#@LOCAL@SIGetType__Fl@cmdTypeAndStatus
-.obj lbl_80667B78, local
+.obj "@LOCAL@SIGetType__Fl@cmdTypeAndStatus", local
 	.skip 0x4
-.endobj lbl_80667B78
+.endobj "@LOCAL@SIGetType__Fl@cmdTypeAndStatus"
 
-.obj __PADFixBits, local
+.obj __PADFixBits, global
 	.skip 0x4
 .endobj __PADFixBits

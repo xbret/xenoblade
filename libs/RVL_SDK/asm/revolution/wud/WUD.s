@@ -59,7 +59,7 @@
 
 #SyncFlushCallback
 .balign 16, 0
-.fn __wudSyncFlushCallback, global
+.fn __wudSyncFlushCallback, local
 /* 80375C90 0033F250  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80375C94 0033F254  7C 08 02 A6 */	mflr r0
 /* 80375C98 0033F258  90 01 00 14 */	stw r0, 0x14(r1)
@@ -96,7 +96,7 @@
 
 #WUDiIsSyncDisabled
 .balign 16, 0
-.fn __wudSyncPrepareSearch, global
+.fn __wudSyncPrepareSearch, local
 /* 80375D10 0033F2D0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80375D14 0033F2D4  7C 08 02 A6 */	mflr r0
 /* 80375D18 0033F2D8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -196,7 +196,7 @@
 
 #WUDiTryConnecting
 .balign 16, 0
-.fn __wudSyncTryConnect, global
+.fn __wudSyncTryConnect, local
 /* 80375E70 0033F430  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80375E74 0033F434  7C 08 02 A6 */	mflr r0
 /* 80375E78 0033F438  90 01 00 34 */	stw r0, 0x34(r1)
@@ -301,7 +301,7 @@
 
 #WUDiGetNewStdDevInfo
 .balign 16, 0
-.fn __wudSyncVirginStandard, global
+.fn __wudSyncVirginStandard, local
 /* 80375FE0 0033F5A0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80375FE4 0033F5A4  7C 08 02 A6 */	mflr r0
 /* 80375FE8 0033F5A8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -545,7 +545,7 @@
 
 #WUDiSaveDeviceToNand
 .balign 16, 0
-.fn __wudSyncStoredDevInfoToNand, global
+.fn __wudSyncStoredDevInfoToNand, local
 /* 80376360 0033F920  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80376364 0033F924  7C 08 02 A6 */	mflr r0
 /* 80376368 0033F928  90 01 00 24 */	stw r0, 0x24(r1)
@@ -779,7 +779,7 @@
 
 #WUDiSyncDone
 .balign 16, 0
-.fn __wudSyncDone, global
+.fn __wudSyncDone, local
 /* 80376690 0033FC50  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80376694 0033FC54  7C 08 02 A6 */	mflr r0
 /* 80376698 0033FC58  3C 60 80 5E */	lis r3, __rvl_wudcb@ha
@@ -1724,7 +1724,7 @@
 
 #WUDiTerminateDevice
 .balign 16, 0
-.fn __wudDeleteDisconnectAll, global
+.fn __wudDeleteDisconnectAll, local
 /* 80377370 00340930  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80377374 00340934  7C 08 02 A6 */	mflr r0
 /* 80377378 00340938  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1771,7 +1771,7 @@
 
 #WUDiDeleteDevice
 .balign 16, 0
-.fn __wudDeleteCleanupDatabase, global
+.fn __wudDeleteCleanupDatabase, local
 /* 80377410 003409D0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80377414 003409D4  7C 08 02 A6 */	mflr r0
 /* 80377418 003409D8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -2148,7 +2148,7 @@
 
 #DeleteAllHandler0
 .balign 16, 0
-.fn __wudDeleteHandler0, global
+.fn __wudDeleteHandler0, local
 /* 80377970 00340F30  3D 00 80 5E */	lis r8, _wudHandlerStack@ha
 /* 80377974 00340F34  3C E0 80 37 */	lis r7, __wudDeleteHandler@ha
 /* 80377978 00340F38  39 08 21 E0 */	addi r8, r8, _wudHandlerStack@l
@@ -2161,7 +2161,7 @@
 
 #WUDiClearUnregisteredDevice
 .balign 16, 0
-.fn __wudStackCheckDeviceInfo, global
+.fn __wudStackCheckDeviceInfo, local
 /* 80377990 00340F50  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80377994 00340F54  7C 08 02 A6 */	mflr r0
 /* 80377998 00340F58  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2371,7 +2371,7 @@
 
 #WUDiGetRegisteredDevice
 .balign 16, 0
-.fn __wudInitDevInfo, global
+.fn __wudInitDevInfo, local
 /* 80377C60 00341220  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 80377C64 00341224  7C 08 02 A6 */	mflr r0
 /* 80377C68 00341228  90 01 00 64 */	stw r0, 0x64(r1)
@@ -2846,7 +2846,7 @@
 .endfn __wudNandResultCallback
 
 .balign 16, 0
-.fn __wudNandFlushCallback, global
+.fn __wudNandFlushCallback, local
 /* 80378320 003418E0  80 6D BB 80 */	lwz r3, _wudNandPhase@sda21(r13)
 /* 80378324 003418E4  38 00 00 00 */	li r0, 0
 /* 80378328 003418E8  98 0D BB 84 */	stb r0, _wudNandLocked@sda21(r13)
@@ -2856,7 +2856,7 @@
 .endfn __wudNandFlushCallback
 
 .balign 16, 0
-.fn __wudGetDevInfoFromWiiFit, global
+.fn __wudGetDevInfoFromWiiFit, local
 /* 80378340 00341900  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80378344 00341904  7C 08 02 A6 */	mflr r0
 /* 80378348 00341908  90 01 00 44 */	stw r0, 0x44(r1)
@@ -3214,7 +3214,7 @@
 
 #InitHandler
 .balign 16, 0
-.fn __wudInitHandler, global
+.fn __wudInitHandler, local
 /* 80378870 00341E30  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80378874 00341E34  7C 08 02 A6 */	mflr r0
 /* 80378878 00341E38  90 01 00 14 */	stw r0, 0x14(r1)
@@ -3396,7 +3396,7 @@
 .endfn __wudShutdownHandler0
 
 .balign 16, 0
-.fn __wudClearControlBlock, global
+.fn __wudClearControlBlock, local
 /* 80378AE0 003420A0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80378AE4 003420A4  7C 08 02 A6 */	mflr r0
 /* 80378AE8 003420A8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -4001,7 +4001,7 @@
 
 #StartSyncDevice
 .balign 16, 0
-.fn __wudStartSyncDevice, global
+.fn __wudStartSyncDevice, local
 /* 80379370 00342930  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 80379374 00342934  7C 08 02 A6 */	mflr r0
 /* 80379378 00342938  90 01 00 34 */	stw r0, 0x34(r1)
@@ -4348,7 +4348,7 @@
 .endfn __wudModuleRebootCallback
 
 .balign 16, 0
-.fn __wudInstallPatchCallback, global
+.fn __wudInstallPatchCallback, local
 /* 80379840 00342E00  94 21 FE E0 */	stwu r1, -0x120(r1)
 /* 80379844 00342E04  7C 08 02 A6 */	mflr r0
 /* 80379848 00342E08  90 01 01 24 */	stw r0, 0x124(r1)
@@ -4417,7 +4417,7 @@
 .endfn __wudInstallPatchCallback
 
 .balign 16, 0
-.fn __wudWritePatchCallback, global
+.fn __wudWritePatchCallback, local
 /* 80379930 00342EF0  94 21 FD E0 */	stwu r1, -0x220(r1)
 /* 80379934 00342EF4  7C 08 02 A6 */	mflr r0
 /* 80379938 00342EF8  2C 03 00 00 */	cmpwi r3, 0
@@ -4728,7 +4728,7 @@
 .endfn __wudSuperPeekPokeCallback
 
 .balign 16, 0
-.fn __wudAppendRuntimePatch, global
+.fn __wudAppendRuntimePatch, local
 /* 80379DB0 00343370  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80379DB4 00343374  7C 08 02 A6 */	mflr r0
 /* 80379DB8 00343378  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4797,7 +4797,7 @@
 .endfn __wudAppendRuntimePatch
 
 .balign 16, 0
-.fn __wudInitSub, global
+.fn __wudInitSub, local
 /* 80379EB0 00343470  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80379EB4 00343474  7C 08 02 A6 */	mflr r0
 /* 80379EB8 00343478  3C 60 80 56 */	lis r3, lbl_80562C2C@ha
@@ -6228,7 +6228,7 @@
 .endfn __wudSecurityEventStackCallback
 
 .balign 16, 0
-.fn __wudSearchEventStackCallback, global
+.fn __wudSearchEventStackCallback, local
 /* 8037B320 003448E0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8037B324 003448E4  7C 08 02 A6 */	mflr r0
 /* 8037B328 003448E8  2C 03 00 00 */	cmpwi r3, 0
@@ -6584,7 +6584,7 @@
 .endfn __wudDeviceStatusEventStackCallback
 
 .balign 16, 0
-.fn __wudLinkKeyEventStackCallback, global
+.fn __wudLinkKeyEventStackCallback, local
 /* 8037B830 00344DF0  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 8037B834 00344DF4  7C 08 02 A6 */	mflr r0
 /* 8037B838 00344DF8  90 01 00 64 */	stw r0, 0x64(r1)

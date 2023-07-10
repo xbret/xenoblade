@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.fn GXCPInterruptHandler, global
+.fn GXCPInterruptHandler, local
 /* 80318600 002E1BC0  94 21 FD 20 */	stwu r1, -0x2e0(r1)
 /* 80318604 002E1BC4  7C 08 02 A6 */	mflr r0
 /* 80318608 002E1BC8  90 01 02 E4 */	stw r0, 0x2e4(r1)
@@ -138,7 +138,7 @@
 .endfn GXInitFifoBase
 
 .balign 16, 0
-.fn CPGPLinkCheck, global
+.fn CPGPLinkCheck, local
 /* 803187F0 002E1DB0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803187F4 002E1DB4  7C 08 02 A6 */	mflr r0
 /* 803187F8 002E1DB8  38 E0 00 00 */	li r7, 0
@@ -894,7 +894,7 @@
 	.skip 0x4
 .endobj __GXOverflowCount
 
-.obj __GXCurrentBP, local
+.obj __GXCurrentBP, global
 	.skip 0x4
 .endobj __GXCurrentBP
 

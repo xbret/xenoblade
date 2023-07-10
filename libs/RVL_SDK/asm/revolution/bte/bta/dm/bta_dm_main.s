@@ -105,7 +105,7 @@
 
 .balign 8
 
-.obj bta_dm_action, local
+.obj bta_dm_action, global
 	.4byte bta_dm_enable
 	.4byte bta_dm_disable
 	.4byte bta_dm_set_dev_name
@@ -122,7 +122,7 @@
 .endobj bta_dm_action
 
 
-.obj bta_dm_st_table, local
+.obj bta_dm_st_table, global
 	.4byte 0x000D0001
 	.4byte 0x0D00020D
 	.4byte 0x00030D00
@@ -137,7 +137,7 @@
 .endobj bta_dm_st_table
 
 
-.obj bta_dm_search_action, local
+.obj bta_dm_search_action, global
 	.4byte bta_dm_search_start
 	.4byte bta_dm_search_cancel
 	.4byte bta_dm_discover
@@ -158,7 +158,7 @@
 	.4byte bta_dm_cancel_rmt_name
 .endobj bta_dm_search_action
 
-.obj bta_dm_search_idle_st_table, local
+.obj bta_dm_search_idle_st_table, global
 	.4byte 0x0012010E
 	.4byte 0x12000212
 	.4byte 0x03121200
@@ -168,7 +168,7 @@
 	.4byte 0x12120000
 .endobj bta_dm_search_idle_st_table
 
-.obj bta_dm_search_search_active_st_table, local
+.obj bta_dm_search_search_active_st_table, global
 	.4byte 0x12120101
 	.4byte 0x12021212
 	.4byte 0x01031201
@@ -178,7 +178,7 @@
 	.4byte 0x09120100
 .endobj bta_dm_search_search_active_st_table
 
-.obj bta_dm_search_search_cancelling_st_table, local
+.obj bta_dm_search_search_cancelling_st_table, global
 	.4byte 0x0A12020C
 	.4byte 0x0E020B12
 	.4byte 0x020D1200
@@ -188,7 +188,7 @@
 	.4byte 0x0D120000
 .endobj bta_dm_search_search_cancelling_st_table
 
-.obj bta_dm_search_disc_active_st_table, local
+.obj bta_dm_search_disc_active_st_table, global
 	.4byte 0x1212030E
 	.4byte 0x12031212
 	.4byte 0x03121203
@@ -199,7 +199,7 @@
 .endobj bta_dm_search_disc_active_st_table
 
 
-.obj bta_dm_search_st_tbl, local
+.obj bta_dm_search_st_tbl, global
 	.4byte bta_dm_search_idle_st_table
 	.4byte bta_dm_search_search_active_st_table
 	.4byte bta_dm_search_search_cancelling_st_table

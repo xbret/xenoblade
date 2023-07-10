@@ -12,6 +12,9 @@ static u32 gReadPos; //unused
 static u32 gWritePos; //unused
 static u8 TRK_Use_BBA;
 static DBCommTable gDBCommTable;
+static u8 gReadBuf[0x110a]; //unused
+static u8 gWriteBuf[0x110a]; //unused
+//_MetroTRK_Has_Framing //unused
 
 
 asm void TRKLoadContext(OSContext* ctx, u32 r4){
@@ -51,7 +54,7 @@ L_802CC250:
     lwz r2, 0x198(r31)
     lwz r4, 0x19c(r31)
     lwz r31, 0x7c(r31)
-    b TRKInterruptHandler
+    b TRK_InterruptHandler
 }
 
 void TRKEXICallBack(s32 r3, OSContext* ctx){

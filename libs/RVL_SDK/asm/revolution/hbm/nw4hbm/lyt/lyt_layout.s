@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.fn "SetTagProcessorImpl__24@unnamed@lyt_layout_cpp@FPQ36nw4hbm3lyt4PanePQ36nw4hbm2ut19TagProcessorBase<w>", global
+.fn "SetTagProcessorImpl__24@unnamed@lyt_layout_cpp@FPQ36nw4hbm3lyt4PanePQ36nw4hbm2ut19TagProcessorBase<w>", local
 /* 8032D830 002F6DF0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8032D834 002F6DF4  7C 08 02 A6 */	mflr r0
 /* 8032D838 002F6DF8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1002,5 +1002,7 @@
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .obj mspAllocator__Q36nw4hbm3lyt6Layout, global
-	.skip 0x8
+	.skip 0x4
 .endobj mspAllocator__Q36nw4hbm3lyt6Layout
+
+.skip 4

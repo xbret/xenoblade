@@ -1,25 +1,52 @@
 #include "PowerPC_EABI_Support/MetroTRK/targimpl.h"
 
-static u32 gTRKExceptionStatus[4] = {
+#include "PowerPC_EABI_Support/MetroTRK/Processor/ppc/Board/dolphin/memmap.h"
+#include "PowerPC_EABI_Support/MetroTRK/Processor/ppc/Generic/ppc_targimpl.h"
+
+typedef struct TRKExceptionStatus{
+	u32 unk0;
+	u32 unk4;
+	u32 unk8;
+	u8 unkC;
+	u8 unkD;
+	u8 unkE;
+	u8 unkF;
+}TRKExceptionStatus;
+
+typedef struct TRKStepStatus {
+	BOOL stepping; //0x0
+	DSMessageStepOptions stepType; //0x4
+	u32 stepCount; //0x8
+	u32 stepRangeStart; //0xC
+	u32 stepRangeEnd; //0x10
+	u32 unk14;
+} TRKStepStatus;
+
+TRKRestoreFlags gTRKRestoreFlags;
+TRKCPUState gTRKCPUState;
+
+static TRKExceptionStatus gTRKExceptionStatus = {
     0,
     0,
     0,
-    0x1000000
+	1,
+	0,
+	0,
+	0,
 };
 
-static TRKMemMap gTRKMemMap = {
+const TRKMemMap gTRKMemMap = {
     0,
     -1,
     1,
     1
 };
 
-TRKRestoreFlags gTRKRestoreFlags;
-TRKStepStatus gTRKStepStatus;
-TRKSaveState gTRKSaveState;
-u8 TRKvalue128_temp[16];
 TRKState gTRKState;
-TRKCPUState gTRKCPUState;
+
+ui128 TRKvalue128_temp;
+TRKSaveState gTRKSaveState;
+static TRKStepStatus gTRKStepStatus;
 
 
 asm u32 __TRK_get_MSR(){
@@ -36,100 +63,148 @@ asm void __TRK_set_MSR(u32 val){
 
 //unused
 asm void __TRK_get_PVR(){
+	nofralloc
+	mfpvr r3
+	blr
 }
 
 //unused
 asm void __TRK_get_IBAT0U(){
+	nofralloc
+	mfibatu r3, 0
+	blr
 }
 
 //unused
 asm void __TRK_get_IBAT0L(){
+	nofralloc
+	mfibatl r3, 0
+	blr
 }
 
 //unused
 asm void __TRK_get_IBAT1U(){
+	nofralloc
+	mfibatu r3, 1
+	blr
 }
 
 //unused
 asm void __TRK_get_IBAT1L(){
+	nofralloc
+	mfibatl r3, 1
+	blr
 }
 
 //unused
 asm void __TRK_get_IBAT2U(){
+	nofralloc
+	mfibatu r3, 2
+	blr
 }
 
 //unused
 asm void __TRK_get_IBAT2L(){
+	nofralloc
+	mfibatl r3, 2
+	blr
 }
 
 //unused
 asm void __TRK_get_IBAT3U(){
+	nofralloc
+	mfibatu r3, 3
+	blr
 }
 
 //unused
 asm void __TRK_get_IBAT3L(){
+	nofralloc
+	mfibatl r3, 3
+	blr
 }
 
 //unused
 asm void __TRK_get_DBAT0U(){
+	nofralloc
+	mfdbatu r3, 0
+	blr
 }
 
 //unused
 asm void __TRK_get_DBAT0L(){
+	nofralloc
+	mfdbatl r3, 0
+	blr
 }
 
 //unused
 asm void __TRK_get_DBAT1U(){
+	nofralloc
+	mfdbatu r3, 1
+	blr
 }
 
 //unused
 asm void __TRK_get_DBAT1L(){
+	nofralloc
+	mfdbatl r3, 1
+	blr
 }
 
 //unused
 asm void __TRK_get_DBAT2U(){
+	nofralloc
+	mfdbatu r3, 2
+	blr
 }
 
 //unused
 asm void __TRK_get_DBAT2L(){
+	nofralloc
+	mfdbatl r3, 2
+	blr
 }
 
 //unused
 asm void __TRK_get_DBAT3U(){
+	nofralloc
+	mfdbatu r3, 3
+	blr
 }
 
 //unused
 asm void __TRK_get_DBAT3L(){
+	nofralloc
+	mfdbatl r3, 3
+	blr
 }
 
-static int TRKValidMemory32(u32 param1, u32 param2, int param3){
-    int result;
+static DSError TRKValidMemory32(const void* addr, size_t length, ValidMemoryOptions readWriteable){
+    DSError result;
     u32 r31;
-    TRKMemMap *map;
 
-    param2 += param1;
-    r31 = (param2  - 1);    
+    length += (u32)addr;
+    r31 = (length  - 1);
 
-    result = 0x700; //r6;
+    result = kInvalidMemory; //r6;
     
-    if(r31 < param1){
-        return 0x700;
+    if(r31 < (u32)addr){
+        return kInvalidMemory;
     }
 
-    map = &gTRKMemMap;
-
-    if(param1 <= gTRKMemMap.unk0[1] && r31 >= map->unk0[0]){
-        if((param3 == 0 && gTRKMemMap.unk8 == 0) || (param3 == 1 && gTRKMemMap.unkC == 0)){
-            result = 0x700;
+    if((u32)addr <= gTRKMemMap.unk0[1] && r31 >= gTRKMemMap.unk0[0]){
+        if((readWriteable == kValidMemoryReadable && gTRKMemMap.unk8 == 0) || (readWriteable == kValidMemoryWriteable && gTRKMemMap.unkC == 0)){
+            result = kInvalidMemory;
         }else{
-            result = 0;
+            result = kNoError;
 
-            if(param1 < gTRKMemMap.unk0[0]){
-                result = TRKValidMemory32(param1, gTRKMemMap.unk0[0] - param1, param3);
+            if((u32)addr < gTRKMemMap.unk0[0]){
+                result = TRKValidMemory32(addr, gTRKMemMap.unk0[0] - (u32)addr, readWriteable);
             }
                 
-            if(result == 0 && r31 > gTRKMemMap.unk0[1]){
-                result = TRKValidMemory32(gTRKMemMap.unk0[1], r31 - gTRKMemMap.unk0[1], param3);
+            if(result == kNoError && r31 > gTRKMemMap.unk0[1]){
+                result = TRKValidMemory32((void*)gTRKMemMap.unk0[1], r31 - gTRKMemMap.unk0[1], readWriteable);
             }
         }
     }
@@ -177,45 +252,108 @@ static void TRK_ppc_memcpy(void* dest, const void* src, int n, u32 param_4, u32 
     __TRK_set_MSR(msr); //restore MSR to its original value
 }
 
-//unused
-//deprecated in favor of TRKTargetReadInstruction
-DSError TRKTargetAccessMemory(){
-}
-
-DSError TRKTargetReadInstruction(u8* r3, u16 r4, u16 r5, BOOL r6, BOOL r7){
-
-}
-
-DSError TRKTargetAccessDefault(u16 r3, u16 r4, MessageBuffer* r5, u8* r6, BOOL r7){
-
-}
-
-DSError TRKTargetAccessFP(u16 r3, u16 r4, MessageBuffer* r5, u8* r6, BOOL r7){
-
-}
-
-DSError TRKTargetAccessExtended1(u16 r3, u16 r4, MessageBuffer* r5, u8* r6, BOOL r7){
-
-}
-
-DSError TRKTargetAccessExtended2(u16 r3, u16 r4, MessageBuffer* r5, u8* r6, BOOL r7){
+DSError TRKTargetAccessMemory(void* data, u32 start, size_t* length, MemoryAccessOptions accessOptions, BOOL read){
 
 }
 
 //unused
-void TRKTargetVersions(){
+DSError TRKTargetReadInstruction(void* data, u32 start){
+	DSError error;
+	size_t registersLength = 4;
+
+	error = TRKTargetAccessMemory(data, start, &registersLength, kUserMemory, TRUE);
+
+	if(error == kNoError && registersLength != 4){
+		error = kInvalidMemory;
+	}
+
+	return error;
+}
+
+DSError TRKTargetAccessDefault(u32 firstRegister, u32 lastRegister, MessageBuffer* b, size_t* registersLengthPtr, BOOL read){
+
+}
+
+DSError TRKTargetAccessFP(u32 firstRegister, u32 lastRegister, MessageBuffer* b, size_t* registersLengthPtr, BOOL read){
+
+}
+
+DSError TRKTargetAccessExtended1(u32 firstRegister, u32 lastRegister, MessageBuffer* b, size_t* registersLengthPtr, BOOL read){
+
+}
+
+DSError TRKTargetAccessExtended2(u32 firstRegister, u32 lastRegister, MessageBuffer* b, size_t* registersLengthPtr, BOOL read){
+
 }
 
 //unused
-void TRKTargetCheckException(){
-}
-
-void TRKInterruptHandler(){
-
+DSError TRKTargetVersions(u8* r3){
+	r3[0] = 0;
+	r3[1] = 4;
+	r3[2] = 1;
+	r3[3] = 10;
+	return kNoError;
 }
 
 //unused
-void TRKExceptionHandler(){
+DSError TRKTargetCheckException(){
+	DSError error = kNoError;
+
+	if (gTRKExceptionStatus.unkD != 0) {
+		gTRKExceptionStatus.unkD = 0;
+		error = kCWDSException;
+	}
+
+	return error;
+}
+
+void TRK_InterruptHandler(){
+
+}
+
+
+static asm void TRKExceptionHandler(u16 r3){ 
+	lis r2, gTRKExceptionStatus@h
+	ori r2, r2, gTRKExceptionStatus@l
+	sth r3, 0x8(r2)
+	mfsrr0 r3
+	stw r3, 0x0(r2)
+	lhz r3, 0x8(r2)
+	cmpwi r3, 0x200
+	beq LAB_00010ba4
+	cmpwi r3, 0x300
+	beq LAB_00010ba4
+	cmpwi r3, 0x400
+	beq LAB_00010ba4
+	cmpwi r3, 0x600
+	beq LAB_00010ba4
+	cmpwi r3, 0x700
+	beq LAB_00010ba4
+	cmpwi r3, 0x800
+	beq LAB_00010ba4
+	cmpwi r3, 0x1000
+	beq LAB_00010ba4
+	cmpwi r3, 0x1100
+	beq LAB_00010ba4
+	cmpwi r3, 0x1200
+	beq LAB_00010ba4
+	cmpwi r3, 0x1300
+	beq LAB_00010ba4
+	b LAB_00010bb0
+LAB_00010ba4:
+	mfsrr0 r3
+	addi r3, r3, 0x4
+	mtsrr0 r3
+LAB_00010bb0:
+	lis r2, gTRKExceptionStatus@h
+	ori r2, r2, gTRKExceptionStatus@l
+	li r3, 0x1
+	stb r3, 0xd(r2)
+	mfsprg r3, 3
+	mtcrf 0xff, r3
+	mfsprg r2, 1
+	mfsprg r3, 2
+	rfi
 }
 
 void TRKPostInterruptEvent(){
@@ -233,27 +371,72 @@ DSError TRKTargetInterrupt(TRKEvent* event){
 
 }
 
-void TRKTargetAddStopInfo(int r3){
+void TRKTargetAddStopInfo(MessageBuffer* b){
 
 }
 
-void TRKTargetAddExceptionInfo(int r3){
+void TRKTargetAddExceptionInfo(MessageBuffer* b){
 
+}
+
+DSError TRKTargetEnableTrace(u32 val){
+	if(val != 0){
+		gTRKCPUState.unk1F8 = (gTRKCPUState.unk1F8 | 0x400) & 0xffff7fff;
+	}else{
+		gTRKCPUState.unk1F8 = (gTRKCPUState.unk1F8 & 0xfffffbff) | 0x8000;
+	}
+	return kNoError;
 }
 
 //unused
-void TRKTargetEnableTrace(){
+DSError TRKTargetStepDone(){
+	DSError error = kStepError;
+
+	if (gTRKStepStatus.stepping) {
+		return error;
+	}
+
+	if ((gTRKCPUState.unk2F8 & 0xffff) != 0xd00) { //unk2f8 loaded as u32
+		return error;
+	}
+
+	if (gTRKStepStatus.stepType == kDSStepIntoCount) {
+		if (gTRKStepStatus.stepCount == 0) {
+			return error;
+		}else{
+			return kNoError;
+		}
+	}
+
+	if (gTRKStepStatus.stepType != kDSStepIntoRange) {
+		return error;
+	}
+
+	if (gTRKCPUState.pc < gTRKStepStatus.stepRangeStart) {
+		return error;
+	}
+
+	if (gTRKStepStatus.stepRangeEnd < gTRKCPUState.pc) {
+		return error;
+	}
+
+	return kNoError;
 }
 
 //unused
-void TRKTargetStepDone(){
+DSError TRKTargetDoStep(){
+	gTRKStepStatus.stepping = TRUE;
+	TRKTargetEnableTrace(1);
+	
+	if (gTRKStepStatus.stepType == kDSStepIntoCount || gTRKStepStatus.stepType == kDSStepOverCount) {
+		gTRKStepStatus.stepCount--;
+	}
+
+	TRKTargetSetStopped(FALSE);
+	return kNoError;
 }
 
-//unused
-void TRKTargetDoStep(){
-}
-
-void TRKTargetCheckStep(){
+static void TRKTargetCheckStep(){
 
 }
 
@@ -266,7 +449,7 @@ DSError TRKTargetStepOutOfRange(u32 rangeStart, u32 rangeEnd, BOOL stepOver){
 }
 
 u32 TRKTargetGetPC(){
-
+	return gTRKCPUState.pc;
 }
 
 DSError TRKTargetSupportRequest(){
@@ -274,7 +457,16 @@ DSError TRKTargetSupportRequest(){
 }
 
 //unused
-void TRKTargetFlushCache(){
+DSError TRKTargetFlushCache(u32 r3, u32 r4, u32 r5){
+	DSError error;
+
+	if(r4 < r5){
+		TRK_flush_cache(r4, r5 - r4);
+		error = kNoError;
+	}else{
+		error = kInvalidMemory;
+	}
+	return error;
 }
 
 BOOL TRKTargetStopped(){
@@ -290,11 +482,11 @@ DSError TRKTargetStop(){
     return kNoError;
 }
 
-void TRKPPCAccessSPR(r3, r4, r5){
+void TRKPPCAccessSPR(u32 r3, u32 r4, u32 r5){
 
 }
 
-void TRKPPCAccessPairedSingleRegister(r3, r4, r5){
+void TRKPPCAccessPairedSingleRegister(u32 r3, u32 r4, u32 r5){
 
 }
 
@@ -302,10 +494,10 @@ asm void ReadFPSCR(){
     nofralloc
     stwu r1, -0x40(r1)
     stfd f31, 0x10(r1)
-    psq_st f31, 32(r1), 0, qr0
+    psq_st f31, 32(r1), 0, 0
     mffs f31
     stfd f31, 0(r3)
-    psq_l f31, 32(r1), 0, qr0
+    psq_l f31, 32(r1), 0, 0
     lfd f31, 0x10(r1)
     addi r1, r1, 0x40
     blr
@@ -315,20 +507,20 @@ asm void WriteFPSCR(){
     nofralloc
     stwu r1, -0x40(r1)
     stfd f31, 0x10(r1)
-    psq_st f31, 32(r1), 0, qr0
+    psq_st f31, 32(r1), 0, 0
     lfd f31, 0(r3)
     mtfsf 0xff, f31
-    psq_l f31, 32(r1), 0, qr0
+    psq_l f31, 32(r1), 0, 0
     lfd f31, 0x10(r1)
     addi r1, r1, 0x40
     blr 
 }
 
-void TRKPPCAccessFPRegister(r3, r4, r5){
+void TRKPPCAccessFPRegister(u32 r3, u32 r4, u32 r5){
 
 }
 
-void TRKPPCAccessSpecialReg(r3, r4){
+void TRKPPCAccessSpecialReg(u32 r3, u32 r4){
 
 }
 
@@ -337,16 +529,18 @@ void TRKTargetSetInputPendingPtr(void* ptr){
 }
 
 //unused
-void SetInputState(){
+void SetInputState(u32 state){
+	gTRKState.unk9C = state;
 }
 
 //unused
-void TRKGetInTRKFlag(){
+u8 TRKGetInTRKFlag(){
+	return gTRKExceptionStatus.unkC;
 }
 
 u32 ConvertAddress(u32 addr){
     return addr | 0x80000000;
 }
 
-void GetThreadInfo(){
+static void GetThreadInfo(){
 }

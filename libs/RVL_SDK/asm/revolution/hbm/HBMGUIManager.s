@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.fn drawLine___Q210homebutton3guiFfffffUcR8_GXColor, global
+.fn drawLine___Q210homebutton3guiFfffffUcR8_GXColor, local
 /* 8031F560 002E8B20  94 21 FF 70 */	stwu r1, -0x90(r1)
 /* 8031F564 002E8B24  7C 08 02 A6 */	mflr r0
 /* 8031F568 002E8B28  90 01 00 94 */	stw r0, 0x94(r1)
@@ -1556,7 +1556,7 @@
 .endfn draw__Q310homebutton3gui13PaneComponentFv
 
 .balign 16, 0
-.fn is_visible__Q210homebutton3guiFPQ36nw4hbm3lyt4Pane, global
+.fn is_visible__Q210homebutton3guiFPQ36nw4hbm3lyt4Pane, local
 /* 80320AC0 002EA080  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80320AC4 002EA084  7C 08 02 A6 */	mflr r0
 /* 80320AC8 002EA088  90 01 00 14 */	stw r0, 0x14(r1)
@@ -1791,8 +1791,9 @@
 	.float 0.5
 .endobj lbl_80518670
 
-#@LOCAL@drawLine___Q210homebutton3guiFfffffUcR8_GXColor@cubeScale
+.obj "cubeScale$8924", local
 	.float 1.0
+.endobj "cubeScale$8924"
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
@@ -1987,6 +1988,8 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj suIDCounter__Q310homebutton3gui11PaneManager, local
-	.skip 0x8
+.obj suIDCounter__Q310homebutton3gui11PaneManager, global
+	.skip 0x4
 .endobj suIDCounter__Q310homebutton3gui11PaneManager
+
+.skip 4

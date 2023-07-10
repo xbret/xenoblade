@@ -5,12 +5,12 @@
 
 
 DSIOResult __read_console(__file_handle handle, u8* buffer, size_t* count, __ref_con ref_con){
-    if(GetUseSerialIO() == 0) return 1;
+    if(GetUseSerialIO() == 0) return kDSIOError;
     return __read_file(0, buffer, count, ref_con);
 }
 
 DSIOResult __TRK_write_console(__file_handle handle, u8* buffer, size_t* count, __ref_con ref_con){
-    if(GetUseSerialIO() == 0) return 1;
+    if(GetUseSerialIO() == 0) return kDSIOError;
     return __write_file(1, buffer, count, ref_con);
 }
 

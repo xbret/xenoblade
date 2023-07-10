@@ -22,11 +22,11 @@
 /* 802DDF18 002A74D8  38 01 00 08 */	addi r0, r1, 8
 /* 802DDF1C 002A74DC  3D 80 02 00 */	lis r12, 0x200
 /* 802DDF20 002A74E0  90 61 00 08 */	stw r3, 8(r1)
-/* 802DDF24 002A74E4  3F E0 80 5C */	lis r31, lbl_805BDCC0@ha
+/* 802DDF24 002A74E4  3F E0 80 5C */	lis r31, "@LOCAL@LogMsg__FUlPCce@tmp"@ha
 /* 802DDF28 002A74E8  38 61 00 68 */	addi r3, r1, 0x68
 /* 802DDF2C 002A74EC  90 A1 00 10 */	stw r5, 0x10(r1)
 /* 802DDF30 002A74F0  7C 65 1B 78 */	mr r5, r3
-/* 802DDF34 002A74F4  38 7F DC C0 */	addi r3, r31, lbl_805BDCC0@l
+/* 802DDF34 002A74F4  38 7F DC C0 */	addi r3, r31, "@LOCAL@LogMsg__FUlPCce@tmp"@l
 /* 802DDF38 002A74F8  90 81 00 0C */	stw r4, 0xc(r1)
 /* 802DDF3C 002A74FC  90 C1 00 14 */	stw r6, 0x14(r1)
 /* 802DDF40 002A7500  90 E1 00 18 */	stw r7, 0x18(r1)
@@ -37,12 +37,12 @@
 /* 802DDF54 002A7514  91 61 00 6C */	stw r11, 0x6c(r1)
 /* 802DDF58 002A7518  90 01 00 70 */	stw r0, 0x70(r1)
 /* 802DDF5C 002A751C  4B FE 2F 65 */	bl vsprintf
-/* 802DDF60 002A7520  38 7F DC C0 */	addi r3, r31, lbl_805BDCC0@l
+/* 802DDF60 002A7520  38 7F DC C0 */	addi r3, r31, "@LOCAL@LogMsg__FUlPCce@tmp"@l
 /* 802DDF64 002A7524  38 8D 97 88 */	addi r4, r13, lbl_80665908@sda21
 /* 802DDF68 002A7528  7C 65 1B 78 */	mr r5, r3
 /* 802DDF6C 002A752C  4C C6 31 82 */	crclr 6
 /* 802DDF70 002A7530  4B FE 30 C9 */	bl sprintf
-/* 802DDF74 002A7534  38 7F DC C0 */	addi r3, r31, lbl_805BDCC0@l
+/* 802DDF74 002A7534  38 7F DC C0 */	addi r3, r31, "@LOCAL@LogMsg__FUlPCce@tmp"@l
 /* 802DDF78 002A7538  4C C6 31 82 */	crclr 6
 /* 802DDF7C 002A753C  48 07 6F 75 */	bl OSReport
 /* 802DDF80 002A7540  80 01 00 84 */	lwz r0, 0x84(r1)
@@ -134,7 +134,8 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-#@LOCAL@LogMsg__FUlPCce@tmp
-.obj lbl_805BDCC0, global
-	.skip 0x7E0
-.endobj lbl_805BDCC0
+.obj "@LOCAL@LogMsg__FUlPCce@tmp", global
+	.skip 0x7D0
+.endobj "@LOCAL@LogMsg__FUlPCce@tmp"
+
+.skip 0x10

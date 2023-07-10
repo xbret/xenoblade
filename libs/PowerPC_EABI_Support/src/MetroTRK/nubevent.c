@@ -47,13 +47,13 @@ BOOL TRKGetNextEvent(TRKEvent* ev)
 
 DSError TRKPostEvent(TRKEvent* ev)
 {
-	DSError ret = 0;
+	DSError ret = kNoError;
 	int evID;
 
 	TRKAcquireMutex(&gTRKEventQueue);
 
 	if (gTRKEventQueue.mCurrEvtID == 2) {
-		ret = 256;
+		ret = kEventQueueFull;
 		OSReport("MetroTRK - Event Queue full\n");
 	} else {
 		evID = (gTRKEventQueue.mNextSlotToOverwrite + gTRKEventQueue.mCurrEvtID) % 2;

@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.fn doTransactionCallback, global
+.fn doTransactionCallback, local
 /* 80310600 002D9BC0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80310604 002D9BC4  7C 08 02 A6 */	mflr r0
 /* 80310608 002D9BC8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -57,7 +57,7 @@
 .endfn doTransactionCallback
 
 .balign 16, 0
-.fn doPrepareCoverRegisterCallback, global
+.fn doPrepareCoverRegisterCallback, local
 /* 803106C0 002D9C80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803106C4 002D9C84  7C 08 02 A6 */	mflr r0
 /* 803106C8 002D9C88  3C A0 80 5D */	lis r5, diRegValCache@ha
@@ -2916,7 +2916,7 @@
 
 .balign 8
 
-.obj DiFD, local
+.obj DiFD, global
 	.4byte 0xFFFFFFFF
 	.4byte 0
 .endobj DiFD
@@ -2942,8 +2942,10 @@
 .endobj registerBuf
 
 .obj ioVec, local
-	.skip 0x60
+	.skip 0x50
 .endobj ioVec
+
+.skip 0x10
 
 .obj lastTicketError, local
 	.skip 0x20

@@ -199,7 +199,7 @@
 
 .balign 8
 
-.obj __DVDDeviceErrorMessage, local
+.obj __DVDDeviceErrorMessage, global
 	.4byte lbl_8054A528
 	.4byte lbl_8054A564
 	.4byte lbl_8054A59C

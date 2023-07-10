@@ -682,6 +682,8 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj spInstance__Q210homebutton9RemoteSpk, local
-	.skip 0x8
+.obj spInstance__Q210homebutton9RemoteSpk, global
+	.skip 0x4
 .endobj spInstance__Q210homebutton9RemoteSpk
+
+.skip 4

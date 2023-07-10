@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.fn __HBMSYNRemoveSynthFromList__FP11HBMSYNSYNTH, global
+.fn __HBMSYNRemoveSynthFromList__FP11HBMSYNSYNTH, local
 /* 803409B0 00309F70  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803409B4 00309F74  7C 08 02 A6 */	mflr r0
 /* 803409B8 00309F78  90 01 00 14 */	stw r0, 0x14(r1)
@@ -352,5 +352,7 @@
 .endobj __s_HBMSYNVoice
 
 .obj __init, local
-	.skip 0x8
+	.skip 0x4
 .endobj __init
+
+.skip 4

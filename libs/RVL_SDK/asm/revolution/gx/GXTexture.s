@@ -832,7 +832,7 @@
 .endfn GXSetTlutRegionCallback
 
 .balign 16, 0
-.fn __SetSURegs, global
+.fn __SetSURegs, local
 /* 8031CC10 002E61D0  81 62 BC 20 */	lwz r11, __GXData@sda21(r2)
 /* 8031CC14 002E61D4  54 86 10 3A */	slwi r6, r4, 2
 /* 8031CC18 002E61D8  54 60 10 3A */	slwi r0, r3, 2

@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.fn __HBMMIXSetPan__FP13HBMMIXChannel, global
+.fn __HBMMIXSetPan__FP13HBMMIXChannel, local
 /* 8033F040 00308600  3C 80 80 5D */	lis r4, __HBMMIXSoundMode@ha
 /* 8033F044 00308604  3C C0 80 55 */	lis r6, __HBMMIXVolumeTable@ha
 /* 8033F048 00308608  80 04 D8 98 */	lwz r0, __HBMMIXSoundMode@l(r4)
@@ -1860,7 +1860,7 @@
 
 #The arrays after are accessed by adding their offsets from the first array
 
-.obj __HBMMIXVolumeTable, global
+.obj __HBMMIXVolumeTable, local
 	.2byte 0x0000, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001
 	.2byte 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001
 	.2byte 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001, 0x0001
@@ -1988,5 +1988,7 @@
 .endobj __s_HBMMIXChannel
 
 .obj __init, local
-	.skip 0x8
+	.skip 0x4
 .endobj __init
+
+.skip 4

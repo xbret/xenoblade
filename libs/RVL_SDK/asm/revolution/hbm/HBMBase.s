@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.fn initgx__10homebuttonFv, global
+.fn initgx__10homebuttonFv, local
 /* 80323110 002EC6D0  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80323114 002EC6D4  7C 08 02 A6 */	mflr r0
 /* 80323118 002EC6D8  38 60 00 00 */	li r3, 0
@@ -4199,7 +4199,7 @@
 
 
 .balign 16, 0
-.fn SpeakerCallback__10homebuttonFP7OSAlarmP9OSContext, global
+.fn SpeakerCallback__10homebuttonFP7OSAlarmP9OSContext, local
 /* 80326CC0 002F0280  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80326CC4 002F0284  7C 08 02 A6 */	mflr r0
 /* 80326CC8 002F0288  90 01 00 24 */	stw r0, 0x24(r1)
@@ -4264,7 +4264,7 @@
 
 
 .balign 16, 0
-.fn MotorCallback__10homebuttonFP7OSAlarmP9OSContext, global
+.fn MotorCallback__10homebuttonFP7OSAlarmP9OSContext, local
 /* 80326DB0 002F0370  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80326DB4 002F0374  7C 08 02 A6 */	mflr r0
 /* 80326DB8 002F0378  90 01 00 14 */	stw r0, 0x14(r1)
@@ -4337,7 +4337,7 @@
 
 
 .balign 16, 0
-.fn SimpleSyncCallback__10homebuttonFll, global
+.fn SimpleSyncCallback__10homebuttonFll, local
 /* 80326EB0 002F0470  2C 03 00 01 */	cmpwi r3, 1
 /* 80326EB4 002F0474  40 82 00 14 */	bne .L_80326EC8
 /* 80326EB8 002F0478  3C A0 80 5D */	lis r5, spHomeButtonObj__Q210homebutton10HomeButton@ha
@@ -9556,39 +9556,39 @@
 	.4byte 0x00000015
 .endobj scGroupAnmTable__10homebutton
 
-.obj scReConnectTime__Q210homebutton10HomeButton, local
+.obj scReConnectTime__Q210homebutton10HomeButton, global
 	.4byte 0x00000E10
 .endobj scReConnectTime__Q210homebutton10HomeButton
 
-.obj scReConnectTime2__Q210homebutton10HomeButton, local
+.obj scReConnectTime2__Q210homebutton10HomeButton, global
 	.4byte 0x00000DF2
 .endobj scReConnectTime2__Q210homebutton10HomeButton
 
-.obj scPadDrawWaitTime__Q210homebutton10HomeButton, local
+.obj scPadDrawWaitTime__Q210homebutton10HomeButton, global
 	.4byte 0x00000005
 .endobj scPadDrawWaitTime__Q210homebutton10HomeButton
 
-.obj scGetPadInfoTime__Q210homebutton10HomeButton, local
+.obj scGetPadInfoTime__Q210homebutton10HomeButton, global
 	.4byte 0x00000064
 .endobj scGetPadInfoTime__Q210homebutton10HomeButton
 
-.obj scForcusSEWaitTime__Q210homebutton10HomeButton, local
+.obj scForcusSEWaitTime__Q210homebutton10HomeButton, global
 	.4byte 0x00000002
 .endobj scForcusSEWaitTime__Q210homebutton10HomeButton
 
-.obj scOnPaneVibTime__Q210homebutton10HomeButton, local
+.obj scOnPaneVibTime__Q210homebutton10HomeButton, global
 	.float 3
 .endobj scOnPaneVibTime__Q210homebutton10HomeButton
 
-.obj scOnPaneVibWaitTime__Q210homebutton10HomeButton, local
+.obj scOnPaneVibWaitTime__Q210homebutton10HomeButton, global
 	.float 9
 .endobj scOnPaneVibWaitTime__Q210homebutton10HomeButton
 
-.obj scWaitStopMotorTime__Q210homebutton10HomeButton, local
+.obj scWaitStopMotorTime__Q210homebutton10HomeButton, global
 	.4byte 0x0000001E
 .endobj scWaitStopMotorTime__Q210homebutton10HomeButton
 
-.obj scWaitDisConnectTime__Q210homebutton10HomeButton, local
+.obj scWaitDisConnectTime__Q210homebutton10HomeButton, global
 	.4byte 0x000000B4
 .endobj scWaitDisConnectTime__Q210homebutton10HomeButton
 
@@ -9634,19 +9634,19 @@
 	.4byte 0x40400000
 .endobj lbl_805189F8
 
-.obj scSoundHeapSize_but2__Q210homebutton10HomeButton, local
+.obj scSoundHeapSize_but2__Q210homebutton10HomeButton, global
 	.4byte 0x00060000
 .endobj scSoundHeapSize_but2__Q210homebutton10HomeButton
 
-.obj scSoundHeapSize_but3__Q210homebutton10HomeButton, local
+.obj scSoundHeapSize_but3__Q210homebutton10HomeButton, global
 	.4byte 0x0006F800
 .endobj scSoundHeapSize_but3__Q210homebutton10HomeButton
 
-.obj scSoundThreadPrio__Q210homebutton10HomeButton, local
+.obj scSoundThreadPrio__Q210homebutton10HomeButton, global
 	.4byte 0x00000004
 .endobj scSoundThreadPrio__Q210homebutton10HomeButton
 
-.obj scDvdThreadPrio__Q210homebutton10HomeButton, local
+.obj scDvdThreadPrio__Q210homebutton10HomeButton, global
 	.4byte 0x00000003
 .endobj scDvdThreadPrio__Q210homebutton10HomeButton
 
@@ -9674,7 +9674,7 @@
 	.balign 4
 .endobj lbl_8054C8F8
 
-.obj scCursorLytName__Q210homebutton10HomeButton, local
+.obj scCursorLytName__Q210homebutton10HomeButton, global
 	.4byte lbl_8054C8C8
 	.4byte lbl_8054C8D8
 	.4byte lbl_8054C8E8
@@ -9685,7 +9685,7 @@
 	.asciz "N_Trans"
 .endobj lbl_8054C918
 
-.obj scCursorPaneName__Q210homebutton10HomeButton, local
+.obj scCursorPaneName__Q210homebutton10HomeButton, global
 	.4byte lbl_8054C918
 .endobj scCursorPaneName__Q210homebutton10HomeButton
 
@@ -9694,7 +9694,7 @@
 	.balign 4
 .endobj lbl_8054C924
 
-.obj scCursorRotPaneName__Q210homebutton10HomeButton, local
+.obj scCursorRotPaneName__Q210homebutton10HomeButton, global
 	.4byte lbl_8054C924
 .endobj scCursorRotPaneName__Q210homebutton10HomeButton
 
@@ -9703,7 +9703,7 @@
 	.balign 4
 .endobj lbl_8054C930
 
-.obj scCursorSRotPaneName__Q210homebutton10HomeButton, local
+.obj scCursorSRotPaneName__Q210homebutton10HomeButton, global
 	.4byte lbl_8054C930
 .endobj scCursorSRotPaneName__Q210homebutton10HomeButton
 
@@ -9746,7 +9746,7 @@
 	.4byte 0
 .endobj lbl_8054C988
 
-.obj scTxtName__Q210homebutton10HomeButton, local
+.obj scTxtName__Q210homebutton10HomeButton, global
 	.4byte lbl_8054C970
 	.4byte lbl_8054C97C
 	.4byte lbl_8054C988
@@ -9789,7 +9789,7 @@
 	.asciz "btnL_11_psh"
 .endobj lbl_8054CA0C
 
-.obj scGrName__Q210homebutton10HomeButton, local
+.obj scGrName__Q210homebutton10HomeButton, global
 	.4byte lbl_8054C9A8
 	.4byte lbl_8054C9B8
 	.4byte lbl_8054C9C8
@@ -9815,7 +9815,7 @@
 	.balign 4
 .endobj lbl_8054CA60
 
-.obj scAnimName__Q210homebutton10HomeButton, local
+.obj scAnimName__Q210homebutton10HomeButton, global
 	.4byte lbl_8054CA38
 	.4byte lbl_8054CA4C
 	.4byte lbl_8054CA60
@@ -9891,7 +9891,7 @@
 	.asciz "_12btn_on.brlan"
 .endobj lbl_8054CBA8
 
-.obj scPairGroupAnimName__Q210homebutton10HomeButton, local
+.obj scPairGroupAnimName__Q210homebutton10HomeButton, global
 	.4byte lbl_8054CA80
 	.4byte lbl_8054CA94
 	.4byte lbl_8054CAA8
@@ -9982,7 +9982,7 @@
 	.balign 4
 .endobj lbl_8054CCBC
 
-.obj scPairGroupName__Q210homebutton10HomeButton, local
+.obj scPairGroupName__Q210homebutton10HomeButton, global
 	.4byte lbl_8054CBF4
 	.4byte lbl_8054CC00
 	.4byte lbl_8054CC10
@@ -10105,7 +10105,7 @@
 	.asciz "_btry_red.brlan"
 .endobj lbl_8054CEC8
 
-.obj scGroupAnimName__Q210homebutton10HomeButton, local
+.obj scGroupAnimName__Q210homebutton10HomeButton, global
 	.4byte lbl_8054CD04
 	.4byte lbl_8054CD18
 	.4byte lbl_8054CD2C
@@ -10297,7 +10297,7 @@
 	.asciz "plyr_03"
 .endobj lbl_8054D0F8
 
-.obj scGroupName__Q210homebutton10HomeButton, local
+.obj scGroupName__Q210homebutton10HomeButton, global
 	.4byte lbl_8054CF30
 	.4byte lbl_8054CF3C
 	.4byte lbl_8054CF48
@@ -10360,7 +10360,7 @@
 	.balign 4
 .endobj lbl_8054D1BC
 
-.obj scFuncPaneName__Q210homebutton10HomeButton, local
+.obj scFuncPaneName__Q210homebutton10HomeButton, global
 	.4byte lbl_8054D18C
 	.4byte lbl_8054D198
 	.4byte lbl_8054D1A4
@@ -10419,7 +10419,7 @@
 .endobj lbl_8054D254
 
 
-.obj scFuncTouchPaneName__Q210homebutton10HomeButton, local
+.obj scFuncTouchPaneName__Q210homebutton10HomeButton, global
 	.4byte lbl_8054D1DC
 	.4byte lbl_8054D1E8
 	.4byte lbl_8054D1F4
@@ -10448,7 +10448,7 @@
 .endobj lbl_8054D2A0
 
 
-.obj scFuncTextPaneName__Q210homebutton10HomeButton, local
+.obj scFuncTextPaneName__Q210homebutton10HomeButton, global
 	.4byte lbl_8054D288
 	.4byte lbl_8054D294
 	.4byte lbl_8054D2A0
@@ -10535,7 +10535,7 @@
 .endobj lbl_8054D3A8
 
 
-.obj scBatteryPaneName__Q210homebutton10HomeButton, local
+.obj scBatteryPaneName__Q210homebutton10HomeButton, global
 	.4byte lbl_8054D2B8
 	.4byte lbl_8054D2C8
 	.4byte lbl_8054D2D8
@@ -10684,10 +10684,12 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj spHomeButtonObj__Q210homebutton10HomeButton, local
-	.skip 0x8
+.obj spHomeButtonObj__Q210homebutton10HomeButton, global
+	.skip 0x4
 .endobj spHomeButtonObj__Q210homebutton10HomeButton
 
-.obj sMutex__Q210homebutton10HomeButton, local
+.skip 4
+
+.obj sMutex__Q210homebutton10HomeButton, global
 	.skip 0x18
 .endobj sMutex__Q210homebutton10HomeButton

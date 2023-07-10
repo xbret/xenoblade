@@ -97,7 +97,7 @@
 /* 80306924 002CFEE4  4E 80 00 20 */	blr 
 .endfn sdp_server_handle_client_req
 
-.fn process_service_search, global
+.fn process_service_search, local
 /* 80306928 002CFEE8  94 21 FE 30 */	stwu r1, -0x1d0(r1)
 /* 8030692C 002CFEEC  7C 08 02 A6 */	mflr r0
 /* 80306930 002CFEF0  90 01 01 D4 */	stw r0, 0x1d4(r1)
@@ -382,7 +382,7 @@
 /* 80306D34 002D02F4  4E 80 00 20 */	blr 
 .endfn process_service_search
 
-.fn process_service_attr_req, global
+.fn process_service_attr_req, local
 /* 80306D38 002D02F8  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 80306D3C 002D02FC  7C 08 02 A6 */	mflr r0
 /* 80306D40 002D0300  90 01 00 74 */	stw r0, 0x74(r1)
@@ -631,7 +631,7 @@
 /* 803070C4 002D0684  4E 80 00 20 */	blr 
 .endfn process_service_attr_req
 
-.fn process_service_search_attr_req, global
+.fn process_service_search_attr_req, local
 /* 803070C8 002D0688  94 21 FE 10 */	stwu r1, -0x1f0(r1)
 /* 803070CC 002D068C  7C 08 02 A6 */	mflr r0
 /* 803070D0 002D0690  90 01 01 F4 */	stw r0, 0x1f4(r1)

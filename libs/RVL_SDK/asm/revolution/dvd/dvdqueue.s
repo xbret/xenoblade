@@ -192,5 +192,7 @@
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .obj WaitingQueue, local
-	.skip 0x30
+	.skip 0x20
 .endobj WaitingQueue
+
+.skip 0x10

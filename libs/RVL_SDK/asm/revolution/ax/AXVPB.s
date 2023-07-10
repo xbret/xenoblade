@@ -651,7 +651,7 @@
 .endfn __AXVPBInit
 
 .balign 16, 0
-.fn __AXVPBInitCommon, global
+.fn __AXVPBInitCommon, local
 /* 802D5050 0029E610  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802D5054 0029E614  7C 08 02 A6 */	mflr r0
 /* 802D5058 0029E618  90 01 00 34 */	stw r0, 0x34(r1)
@@ -1237,7 +1237,7 @@
 	.skip 0x4
 .endobj __AXVPB
 
-.obj __AXMaxVoices, local
+.obj __AXMaxVoices, global
 	.skip 0x4
 .endobj __AXMaxVoices
 

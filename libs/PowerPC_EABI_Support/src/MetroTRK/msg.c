@@ -11,5 +11,5 @@ DSError TRK_MessageSend(MessageBuffer* msg)
 
 	u32 write_val = TRK_WriteUARTN(&msg->fData, msg->fLength);
 	if(write_val != 0) OSReport("MetroTRK - TRK_WriteUARTN returned %ld\n", write_val);
-	return 0;
+	return kNoError;
 }

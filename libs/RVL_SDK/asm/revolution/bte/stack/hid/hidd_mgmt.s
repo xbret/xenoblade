@@ -74,5 +74,7 @@
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .obj hd_cb, global
-	.skip 0x148
+	.skip 0x144
 .endobj hd_cb
+
+.skip 4

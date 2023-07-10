@@ -532,5 +532,7 @@
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .obj hcisu_h2_cb, local
-	.skip 0x40
+	.skip 0x24
 .endobj hcisu_h2_cb
+
+.skip 0x1c

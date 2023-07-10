@@ -508,7 +508,7 @@
 .endfn AXFXReverbStdExpCallback
 
 .balign 16, 0
-.fn __AllocDelayLine, global
+.fn __AllocDelayLine, local
 /* 802D80D0 002A1690  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802D80D4 002A1694  7C 08 02 A6 */	mflr r0
 /* 802D80D8 002A1698  90 01 00 34 */	stw r0, 0x34(r1)

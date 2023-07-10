@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.fn __MIXSetPan, global
+.fn __MIXSetPan, local
 /* 80349BF0 003131B0  80 0D B8 64 */	lwz r0, __MIXSoundMode@sda21(r13)
 /* 80349BF4 003131B4  3C 80 80 55 */	lis r4, __MIXVolumeTable@ha
 /* 80349BF8 003131B8  80 A3 00 18 */	lwz r5, 0x18(r3)

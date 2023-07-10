@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.fn __HBMSEQRunEvent__FP11HBMSYNSYNTHP12_HBMSEQTRACK, global
+.fn __HBMSEQRunEvent__FP11HBMSYNSYNTHP12_HBMSEQTRACK, local
 /* 803420C0 0030B680  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 803420C4 0030B684  7C 08 02 A6 */	mflr r0
 /* 803420C8 0030B688  3D 00 80 52 */	lis r8, lbl_80518B90@ha
@@ -202,7 +202,7 @@
 .endfn __HBMSEQRunEvent__FP11HBMSYNSYNTHP12_HBMSEQTRACK
 
 .balign 16, 0
-.fn __HBMSEQInitTracks__FP15_HBMSEQSEQUENCEPUci, global
+.fn __HBMSEQInitTracks__FP15_HBMSEQSEQUENCEPUci, local
 /* 80342390 0030B950  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 80342394 0030B954  7C 08 02 A6 */	mflr r0
 /* 80342398 0030B958  90 01 00 74 */	stw r0, 0x74(r1)
@@ -281,7 +281,7 @@
 .endfn __HBMSEQInitTracks__FP15_HBMSEQSEQUENCEPUci
 
 .balign 16, 0
-.fn __HBMSEQReadHeader__FP15_HBMSEQSEQUENCEPUc, global
+.fn __HBMSEQReadHeader__FP15_HBMSEQSEQUENCEPUc, local
 /* 803424B0 0030BA70  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803424B4 0030BA74  7C 08 02 A6 */	mflr r0
 /* 803424B8 0030BA78  38 C4 00 0E */	addi r6, r4, 0xe
@@ -679,7 +679,7 @@
 .balign 8
 
 
-.obj __HBMSEQMidiEventLength, global
+.obj __HBMSEQMidiEventLength, local
 	.byte 0x02,0x02
 	.byte 0x02,0x02
 	.byte 0x02,0x02

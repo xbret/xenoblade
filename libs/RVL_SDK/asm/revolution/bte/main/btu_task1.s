@@ -348,17 +348,19 @@
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .obj btu_cb, global
-	.skip 0x88
+	.skip 0x84
 .endobj btu_cb
+
+.skip 4
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
 .balign 8
 
-.obj _btu_g_count, global
+.obj _btu_g_count, local
 	.skip 0x4
 .endobj _btu_g_count
 
-.obj _btu_last_timer_tick, global
+.obj _btu_last_timer_tick, local
 	.skip 0x4
 .endobj _btu_last_timer_tick

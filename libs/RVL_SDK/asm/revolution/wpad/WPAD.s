@@ -3,14 +3,14 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.fn __wpadNoAlloc, global
+.fn __wpadNoAlloc, local
 /* 80368D70 00332330  38 60 00 00 */	li r3, 0
 /* 80368D74 00332334  4E 80 00 20 */	blr
 .endfn __wpadNoAlloc
 
 
 .balign 16, 0
-.fn __wpadNoFree, global
+.fn __wpadNoFree, local
 /* 80368D80 00332340  38 60 00 00 */	li r3, 0
 /* 80368D84 00332344  4E 80 00 20 */	blr
 .endfn __wpadNoFree
@@ -379,7 +379,7 @@
 
 #same as WPADiRadioSensitivity?
 .balign 16, 0
-.fn __wpadCalcRadioQuality, global
+.fn __wpadCalcRadioQuality, local
 /* 80369240 00332800  A0 0D BA EA */	lhz r0, _wpadSenseCnt@sda21(r13)
 /* 80369244 00332804  3C 80 80 5E */	lis r4, __rvl_p_wpadcb@ha
 /* 80369248 00332808  54 63 10 3A */	slwi r3, r3, 2
@@ -456,7 +456,7 @@
 
 #IsControllerDataChanged
 .balign 16, 0
-.fn __wpadIsControllerDataChanged, global
+.fn __wpadIsControllerDataChanged, local
 /* 80369350 00332910  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80369354 00332914  39 40 00 00 */	li r10, 0
 /* 80369358 00332918  93 E1 00 1C */	stw r31, 0x1c(r1)
@@ -1091,7 +1091,7 @@
 
 #CheckButtonCombination
 .balign 16, 0
-.fn __wpadCalcRecalibration, global
+.fn __wpadCalcRecalibration, local
 /* 80369C50 00333210  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80369C54 00333214  7C 08 02 A6 */	mflr r0
 /* 80369C58 00333218  3C A0 80 5E */	lis r5, __rvl_p_wpadcb@ha
@@ -1259,7 +1259,7 @@
 
 #WPADiManageHandler
 .balign 16, 0
-.fn __wpadManageHandler, global
+.fn __wpadManageHandler, local
 /* 80369EB0 00333470  94 21 FE 20 */	stwu r1, -0x1e0(r1)
 /* 80369EB4 00333474  7C 08 02 A6 */	mflr r0
 /* 80369EB8 00333478  90 01 01 E4 */	stw r0, 0x1e4(r1)
@@ -1944,10 +1944,10 @@
 .endfn __wpadManageHandler
 
 .balign 16, 0
-.fn __wpadManageHandler0, global
-/* 8036A890 00333E50  3D 00 80 5E */	lis r8, _wpadHandle2PortTable@ha
+.fn __wpadManageHandler0, local
+/* 8036A890 00333E50  3D 00 80 5E */	lis r8, __wpadManageHandlerStack@ha
 /* 8036A894 00333E54  3C E0 80 37 */	lis r7, __wpadManageHandler@ha
-/* 8036A898 00333E58  39 08 DA E0 */	addi r8, r8, _wpadHandle2PortTable@l
+/* 8036A898 00333E58  39 08 DA E0 */	addi r8, r8, __wpadManageHandlerStack@l
 /* 8036A89C 00333E5C  38 A0 00 00 */	li r5, 0
 /* 8036A8A0 00333E60  38 E7 9E B0 */	addi r7, r7, __wpadManageHandler@l
 /* 8036A8A4 00333E64  38 C0 00 00 */	li r6, 0
@@ -1957,7 +1957,7 @@
 
 #__ClearControlBlock
 .balign 16, 0
-.fn __wpadClearControlBlock, global
+.fn __wpadClearControlBlock, local
 /* 8036A8B0 00333E70  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8036A8B4 00333E74  7C 08 02 A6 */	mflr r0
 /* 8036A8B8 00333E78  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2119,7 +2119,7 @@
 
 #WPADiInitSub
 .balign 16, 0
-.fn __wpadInitSub, global
+.fn __wpadInitSub, local
 /* 8036AB30 003340F0  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8036AB34 003340F4  7C 08 02 A6 */	mflr r0
 /* 8036AB38 003340F8  90 01 00 34 */	stw r0, 0x34(r1)
@@ -2381,7 +2381,7 @@
 
 #setupCallback
 .balign 16, 0
-.fn __wpadSetupConnectionCallback, global
+.fn __wpadSetupConnectionCallback, local
 /* 8036AEE0 003344A0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8036AEE4 003344A4  7C 08 02 A6 */	mflr r0
 /* 8036AEE8 003344A8  2C 04 00 00 */	cmpwi r4, 0
@@ -2441,7 +2441,7 @@
 
 #abortConnCallback
 .balign 16, 0
-.fn __wpadAbortConnectionCallback, global
+.fn __wpadAbortConnectionCallback, local
 /* 8036AFB0 00334570  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8036AFB4 00334574  7C 08 02 A6 */	mflr r0
 /* 8036AFB8 00334578  2C 04 00 00 */	cmpwi r4, 0
@@ -3106,7 +3106,7 @@
 
 #WPADiRetrieveChannel
 .balign 16, 0
-.fn __wpadRetrieveChannel, global
+.fn __wpadRetrieveChannel, local
 /* 8036B9A0 00334F60  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8036B9A4 00334F64  7C 08 02 A6 */	mflr r0
 /* 8036B9A8 00334F68  90 01 00 24 */	stw r0, 0x24(r1)
@@ -3215,8 +3215,8 @@
 /* 8036BB14 003350D4  2C 03 00 00 */	cmpwi r3, 0
 /* 8036BB18 003350D8  7C 7C 1B 78 */	mr r28, r3
 /* 8036BB1C 003350DC  41 80 04 40 */	blt .L_8036BF5C
-/* 8036BB20 003350E0  3C 80 80 5E */	lis r4, __rvl_wpadcb@ha
-/* 8036BB24 003350E4  38 84 EA E0 */	addi r4, r4, __rvl_wpadcb@l
+/* 8036BB20 003350E0  3C 80 80 5E */	lis r4, _wpadHandle2PortTable@ha
+/* 8036BB24 003350E4  38 84 EA E0 */	addi r4, r4, _wpadHandle2PortTable@l
 /* 8036BB28 003350E8  7C 64 D9 AE */	stbx r3, r4, r27
 /* 8036BB2C 003350EC  4B FF ED 85 */	bl __wpadClearControlBlock
 /* 8036BB30 003350F0  3C 80 80 5E */	lis r4, __rvl_p_wpadcb@ha
@@ -3365,9 +3365,9 @@
 /* 8036BD54 00335314  4B FF AC 9D */	bl __VIResetRFIdle
 /* 8036BD58 00335318  48 00 02 04 */	b .L_8036BF5C
 .L_8036BD5C:
-/* 8036BD5C 0033531C  3C 60 80 5E */	lis r3, __rvl_wpadcb@ha
+/* 8036BD5C 0033531C  3C 60 80 5E */	lis r3, _wpadHandle2PortTable@ha
 /* 8036BD60 00335320  38 80 FF FF */	li r4, -1
-/* 8036BD64 00335324  38 63 EA E0 */	addi r3, r3, __rvl_wpadcb@l
+/* 8036BD64 00335324  38 63 EA E0 */	addi r3, r3, _wpadHandle2PortTable@l
 /* 8036BD68 00335328  7F C3 D8 AE */	lbzx r30, r3, r27
 /* 8036BD6C 0033532C  7F DE 07 74 */	extsb r30, r30
 /* 8036BD70 00335330  7C 83 D9 AE */	stbx r4, r3, r27
@@ -3516,12 +3516,12 @@
 
 #WPADiRecvCallback
 .balign 16, 0
-.fn __wpadReceiveCallback, global
+.fn __wpadReceiveCallback, local
 /* 8036BF80 00335540  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8036BF84 00335544  7C 08 02 A6 */	mflr r0
-/* 8036BF88 00335548  3C A0 80 5E */	lis r5, __rvl_wpadcb@ha
+/* 8036BF88 00335548  3C A0 80 5E */	lis r5, _wpadHandle2PortTable@ha
 /* 8036BF8C 0033554C  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8036BF90 00335550  38 A5 EA E0 */	addi r5, r5, __rvl_wpadcb@l
+/* 8036BF90 00335550  38 A5 EA E0 */	addi r5, r5, _wpadHandle2PortTable@l
 /* 8036BF94 00335554  7C 65 18 AE */	lbzx r3, r5, r3
 /* 8036BF98 00335558  28 03 00 04 */	cmplwi r3, 4
 /* 8036BF9C 0033555C  40 80 00 24 */	bge .L_8036BFC0
@@ -6272,7 +6272,7 @@
 
 #IsBusyStream
 .balign 16, 0
-.fn __wpadIsBusyStream, global
+.fn __wpadIsBusyStream, local
 /* 8036E750 00337D10  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 8036E754 00337D14  7C 08 02 A6 */	mflr r0
 /* 8036E758 00337D18  90 01 00 34 */	stw r0, 0x34(r1)
@@ -7218,7 +7218,7 @@
 /* 8036F524 00338AE4  4B FE 94 CD */	bl OSRestoreInterrupts
 .L_8036F528:
 /* 8036F528 00338AE8  88 AD BB 35 */	lbz r5, _wpadDpdSense@sda21(r13)
-/* 8036F52C 00338AEC  3C 80 80 52 */	lis r4, lbl_80518DC8@ha
+/* 8036F52C 00338AEC  3C 80 80 52 */	lis r4, "@LOCAL@WPADControlDpd__FlUlPFll_v@cfg1"@ha
 /* 8036F530 00338AF0  3D 20 04 B0 */	lis r9, 0x4b0
 /* 8036F534 00338AF4  38 60 00 09 */	li r3, 9
 /* 8036F538 00338AF8  39 05 FF FF */	addi r8, r5, -1
@@ -7228,7 +7228,7 @@
 /* 8036F548 00338B08  38 00 00 00 */	li r0, 0
 /* 8036F54C 00338B0C  98 61 00 0D */	stb r3, 0xd(r1)
 /* 8036F550 00338B10  7C E7 42 14 */	add r7, r7, r8
-/* 8036F554 00338B14  38 84 8D C8 */	addi r4, r4, lbl_80518DC8@l
+/* 8036F554 00338B14  38 84 8D C8 */	addi r4, r4, "@LOCAL@WPADControlDpd__FlUlPFll_v@cfg1"@l
 /* 8036F558 00338B18  90 A1 01 A8 */	stw r5, 0x1a8(r1)
 /* 8036F55C 00338B1C  7F 44 3A 14 */	add r26, r4, r7
 /* 8036F560 00338B20  38 61 01 AC */	addi r3, r1, 0x1ac
@@ -7324,7 +7324,7 @@
 /* 8036F6BC 00338C7C  88 AD BB 35 */	lbz r5, _wpadDpdSense@sda21(r13)
 /* 8036F6C0 00338C80  3C C0 04 B0 */	lis r6, 0x04B0001A@ha
 /* 8036F6C4 00338C84  39 06 00 1A */	addi r8, r6, 0x04B0001A@l
-/* 8036F6C8 00338C88  3C 80 80 52 */	lis r4, lbl_80518DF8@ha
+/* 8036F6C8 00338C88  3C 80 80 52 */	lis r4, "@LOCAL@WPADControlDpd__FlUlPFll_v@cfg2@0"@ha
 /* 8036F6CC 00338C8C  38 E5 FF FF */	addi r7, r5, -1
 /* 8036F6D0 00338C90  38 60 00 02 */	li r3, 2
 /* 8036F6D4 00338C94  38 A0 00 16 */	li r5, 0x16
@@ -7332,7 +7332,7 @@
 /* 8036F6DC 00338C9C  38 00 00 00 */	li r0, 0
 /* 8036F6E0 00338CA0  98 61 00 0C */	stb r3, 0xc(r1)
 /* 8036F6E4 00338CA4  54 E7 08 3C */	slwi r7, r7, 1
-/* 8036F6E8 00338CA8  38 84 8D F8 */	addi r4, r4, lbl_80518DF8@l
+/* 8036F6E8 00338CA8  38 84 8D F8 */	addi r4, r4, "@LOCAL@WPADControlDpd__FlUlPFll_v@cfg2@0"@l
 /* 8036F6EC 00338CAC  90 A1 01 48 */	stw r5, 0x148(r1)
 /* 8036F6F0 00338CB0  7F 44 3A 14 */	add r26, r4, r7
 /* 8036F6F4 00338CB4  38 61 01 4C */	addi r3, r1, 0x14c
@@ -8443,8 +8443,7 @@
 
 .balign 8
 
-#@LOCAL@WPADControlDpd__FlUlPFll_v@cfg1
-.obj lbl_80518DC8, global
+.obj "@LOCAL@WPADControlDpd__FlUlPFll_v@cfg1", local
 	.4byte 0x02000071
 	.4byte 0x01006400
 	.4byte 0xFE020000
@@ -8456,16 +8455,16 @@
 	.4byte 0x00C80036
 	.4byte 0x07000071
 	.4byte 0x01007200
-	.4byte 0x20000000
-.endobj lbl_80518DC8
+	.byte 0x20
+.endobj "@LOCAL@WPADControlDpd__FlUlPFll_v@cfg1"
 
-#@LOCAL@WPADControlDpd__FlUlPFll_v@cfg2@0
-.obj lbl_80518DF8, global
+.balign 8
+
+.obj "@LOCAL@WPADControlDpd__FlUlPFll_v@cfg2@0", local
 	.4byte 0xFD05B304
 	.4byte 0x63033503
-	.4byte 0x1F030000
-	.4byte 0
-.endobj lbl_80518DF8
+	.2byte 0x1F03
+.endobj "@LOCAL@WPADControlDpd__FlUlPFll_v@cfg2@0"
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
@@ -8668,7 +8667,7 @@
 
 .balign 8
 
-.obj __WPADVersion, local
+.obj __WPADVersion, global
 	.4byte lbl_80560608
 .endobj __WPADVersion
 
@@ -8754,15 +8753,19 @@
 	.skip 0x10
 .endobj __rvl_p_wpadcb
 
-.obj _wpadHandle2PortTable, local
+.obj __wpadManageHandlerStack, local
 	.skip 0x1000
+.endobj __wpadManageHandlerStack
+
+.obj _wpadHandle2PortTable, local
+	.skip 0x10
 .endobj _wpadHandle2PortTable
 
-.obj __rvl_wpadcb, local
+.skip 0x10
+
+.obj __rvl_wpadcb, global
 	.skip 0x2700
 .endobj __rvl_wpadcb
-
-.skip 0x20
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.fn SetExiInterruptMask, global
+.fn SetExiInterruptMask, local
 /* 803140F0 002DD6B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803140F4 002DD6B4  7C 08 02 A6 */	mflr r0
 /* 803140F8 002DD6B8  90 01 00 14 */	stw r0, 0x14(r1)
@@ -584,7 +584,7 @@
 .endfn EXISetExiCallback
 
 .balign 16, 0
-.fn __EXIProbe, global
+.fn __EXIProbe, local
 /* 80314920 002DDEE0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80314924 002DDEE4  7C 08 02 A6 */	mflr r0
 /* 80314928 002DDEE8  90 01 00 24 */	stw r0, 0x24(r1)
@@ -1779,7 +1779,7 @@
 
 .balign 8
 
-.obj __EXIVersion, local
+.obj __EXIVersion, global
 	.4byte lbl_8054B610
 	.4byte 0
 .endobj __EXIVersion

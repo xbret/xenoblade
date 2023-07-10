@@ -220,7 +220,7 @@
 /* 802E2400 002AB9C0  4E 80 00 20 */	blr
 .endfn bta_hh_disc_cmpl
 
-.fn bta_hh_sdp_cback, global
+.fn bta_hh_sdp_cback, local
 /* 802E2404 002AB9C4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E2408 002AB9C8  7C 08 02 A6 */	mflr r0
 /* 802E240C 002AB9CC  3C C0 80 5C */	lis r6, bta_hh_cb@ha
@@ -1497,7 +1497,7 @@
 /* 802E3594 002ACB54  4E 80 00 20 */	blr
 .endfn bta_hh_write_dev_act
 
-.fn bta_hh_cback, global
+.fn bta_hh_cback, local
 /* 802E3598 002ACB58  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802E359C 002ACB5C  7C 08 02 A6 */	mflr r0
 /* 802E35A0 002ACB60  3C E0 80 54 */	lis r7, lbl_80544198@ha

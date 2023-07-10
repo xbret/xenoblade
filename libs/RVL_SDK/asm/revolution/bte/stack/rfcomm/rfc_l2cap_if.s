@@ -76,7 +76,7 @@
 /* 802FE554 002C7B14  4E 80 00 20 */	blr
 .endfn RFCOMM_ConnectInd
 
-.fn RFCOMM_ConnectCnf, global
+.fn RFCOMM_ConnectCnf, local
 /* 802FE558 002C7B18  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FE55C 002C7B1C  7C 08 02 A6 */	mflr r0
 /* 802FE560 002C7B20  90 01 00 24 */	stw r0, 0x24(r1)
@@ -150,7 +150,7 @@
 /* 802FE658 002C7C18  4E 80 00 20 */	blr
 .endfn RFCOMM_ConnectCnf
 
-.fn RFCOMM_ConfigInd, global
+.fn RFCOMM_ConfigInd, local
 /* 802FE65C 002C7C1C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FE660 002C7C20  7C 08 02 A6 */	mflr r0
 /* 802FE664 002C7C24  90 01 00 24 */	stw r0, 0x24(r1)
@@ -225,7 +225,7 @@
 /* 802FE760 002C7D20  4E 80 00 20 */	blr
 .endfn RFCOMM_ConfigInd
 
-.fn RFCOMM_ConfigCnf, global
+.fn RFCOMM_ConfigCnf, local
 /* 802FE764 002C7D24  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FE768 002C7D28  7C 08 02 A6 */	mflr r0
 /* 802FE76C 002C7D2C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -300,11 +300,11 @@
 /* 802FE868 002C7E28  4E 80 00 20 */	blr
 .endfn RFCOMM_ConfigCnf
 
-.fn RFCOMM_QoSViolationInd, global
+.fn RFCOMM_QoSViolationInd, local
 /* 802FE86C 002C7E2C  4E 80 00 20 */	blr
 .endfn RFCOMM_QoSViolationInd
 
-.fn RFCOMM_DisconnectInd, global
+.fn RFCOMM_DisconnectInd, local
 /* 802FE870 002C7E30  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FE874 002C7E34  7C 08 02 A6 */	mflr r0
 /* 802FE878 002C7E38  90 01 00 24 */	stw r0, 0x24(r1)
@@ -387,7 +387,7 @@
 /* 802FE990 002C7F50  4E 80 00 20 */	blr
 .endfn RFCOMM_DisconnectInd
 
-.fn RFCOMM_BufDataInd, global
+.fn RFCOMM_BufDataInd, local
 /* 802FE994 002C7F54  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FE998 002C7F58  7C 08 02 A6 */	mflr r0
 /* 802FE99C 002C7F5C  90 01 00 24 */	stw r0, 0x24(r1)
@@ -578,7 +578,7 @@
 /* 802FEC30 002C81F0  4E 80 00 20 */	blr
 .endfn RFCOMM_BufDataInd
 
-.fn RFCOMM_CongestionStatusInd, global
+.fn RFCOMM_CongestionStatusInd, local
 /* 802FEC34 002C81F4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802FEC38 002C81F8  7C 08 02 A6 */	mflr r0
 /* 802FEC3C 002C81FC  90 01 00 24 */	stw r0, 0x24(r1)

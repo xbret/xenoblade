@@ -352,7 +352,7 @@
 /* 802E409C 002AD65C  4E 80 00 20 */	blr 
 .endfn bta_hh_hdl_event
 
-.fn bta_hh_evt_code, global
+.fn bta_hh_evt_code, local
 /* 802E40A0 002AD660  38 03 E9 00 */	addi r0, r3, -5888
 /* 802E40A4 002AD664  3C 80 80 54 */	lis r4, lbl_805446C0@ha
 /* 802E40A8 002AD668  28 00 00 0F */	cmplwi r0, 0xf
@@ -421,7 +421,7 @@
 
 .balign 8
 
-.obj bta_hh_action, local
+.obj bta_hh_action, global
 	.4byte bta_hh_api_disc_act
 	.4byte bta_hh_open_act
 	.4byte bta_hh_close_act
@@ -436,7 +436,7 @@
 	.4byte bta_hh_open_cmpl_act
 .endobj bta_hh_action
 
-.obj bta_hh_st_idle, local
+.obj bta_hh_st_idle, global
 	.4byte 0x06020C01
 	.4byte 0x01020201
 	.4byte 0x0C010C01
@@ -445,7 +445,7 @@
 	.4byte 0x0A010C01
 .endobj bta_hh_st_idle
 
-.obj bta_hh_st_w4_conn, local
+.obj bta_hh_st_w4_conn, global
 	.4byte 0x0C020C01
 	.4byte 0x01020201
 	.4byte 0x0C020C02
@@ -454,7 +454,7 @@
 	.4byte 0x0A010B03
 .endobj bta_hh_st_w4_conn
 
-.obj bta_hh_st_connected, local
+.obj bta_hh_st_connected, global
 	.4byte 0x0C030003
 	.4byte 0x01030201
 	.4byte 0x03030403
@@ -463,7 +463,7 @@
 	.4byte 0x0A030C03
 .endobj bta_hh_st_connected
 
-.obj bta_hh_st_tbl, local
+.obj bta_hh_st_tbl, global
 	.4byte bta_hh_st_idle
 	.4byte bta_hh_st_w4_conn
 	.4byte bta_hh_st_connected

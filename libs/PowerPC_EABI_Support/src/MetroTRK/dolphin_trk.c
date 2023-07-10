@@ -4,7 +4,7 @@
 #include "PowerPC_EABI_Support/MetroTRK/dolphin_trk_glue.h"
 #include "PowerPC_EABI_Support/MetroTRK/__exception.h"
 #include "PowerPC_EABI_Support/MetroTRK/mpc_7xx_603e.h"
-#include "PowerPC_EABI_Support/MetroTRK/targimpl.h"
+#include "PowerPC_EABI_Support/MetroTRK/Processor/ppc/Generic/ppc_targimpl.h"
 #include "PowerPC_EABI_Support/MetroTRK/main_TRK.h"
 #include "revolution/OS.h"
 

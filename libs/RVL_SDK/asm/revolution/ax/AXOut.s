@@ -221,14 +221,14 @@
 .endfn __AXOutAiCallback
 
 .balign 16, 0
-.fn __AXDSPInitCallback, global
+.fn __AXDSPInitCallback, local
 /* 802D3D80 0029D340  38 00 00 01 */	li r0, 1
 /* 802D3D84 0029D344  90 0D B5 30 */	stw r0, __AXDSPInitFlag@sda21(r13)
 /* 802D3D88 0029D348  4E 80 00 20 */	blr 
 .endfn __AXDSPInitCallback
 
 .balign 16, 0
-.fn __AXDSPResumeCallback, global
+.fn __AXDSPResumeCallback, local
 /* 802D3D90 0029D350  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802D3D94 0029D354  7C 08 02 A6 */	mflr r0
 /* 802D3D98 0029D358  90 01 00 14 */	stw r0, 0x14(r1)
@@ -255,7 +255,7 @@
 .endfn __AXDSPResumeCallback
 
 .balign 16, 0
-.fn __AXDSPDoneCallback, global
+.fn __AXDSPDoneCallback, local
 /* 802D3DF0 0029D3B0  38 00 00 01 */	li r0, 1
 /* 802D3DF4 0029D3B4  90 0D B5 2C */	stw r0, __AXDSPDoneFlag@sda21(r13)
 /* 802D3DF8 0029D3B8  38 6D B5 20 */	addi r3, r13, __AXOutThreadQueue@sda21
@@ -263,7 +263,7 @@
 .endfn __AXDSPDoneCallback
 
 .balign 16, 0
-.fn __AXDSPRequestCallback, global
+.fn __AXDSPRequestCallback, local
 /* 802D3E00 0029D3C0  4E 80 00 20 */	blr 
 .endfn __AXDSPRequestCallback
 
@@ -647,9 +647,11 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj __AXLocalProfile, local
-	.skip 0x40
+.obj __AXLocalProfile, global
+	.skip 0x38
 .endobj __AXLocalProfile
+
+.skip 8
 
 .obj __AXRmtOutBuffer, local
 	.skip 0x5A0
@@ -664,8 +666,10 @@
 .endobj __AXOutBuffer
 
 .obj __AXDSPTask, local
-	.skip 0x60
+	.skip 0x50
 .endobj __AXDSPTask
+
+.skip 0x10
 
 .obj __AXDramImage, local
 	.skip 0x40
@@ -675,54 +679,54 @@
 
 .balign 8
 
-.obj __AXExceedCallback, global
+.obj __AXExceedCallback, local
 	.skip 0x4
 .endobj __AXExceedCallback
 
-.obj __AXRmtCpuPtr, global
+.obj __AXRmtCpuPtr, local
 	.skip 0x4
 .endobj __AXRmtCpuPtr
 
-.obj __AXRmtDspPtr, global
+.obj __AXRmtDspPtr, local
 	.skip 0x4
 .endobj __AXRmtDspPtr
 
-.obj __AXRmtBuffLen, global
+.obj __AXRmtBuffLen, local
 	.skip 0x4
 .endobj __AXRmtBuffLen
 
-.obj __AXOutputBufferMode, global
+.obj __AXOutputBufferMode, local
 	.skip 0x8
 .endobj __AXOutputBufferMode
 
-.obj __AXOutThreadQueue, global
+.obj __AXOutThreadQueue, local
 	.skip 0x8
 .endobj __AXOutThreadQueue
 
-.obj __AXDebugSteppingMode, global
+.obj __AXDebugSteppingMode, local
 	.skip 0x4
 .endobj __AXDebugSteppingMode
 
-.obj __AXDSPDoneFlag, global
+.obj __AXDSPDoneFlag, local
 	.skip 0x4
 .endobj __AXDSPDoneFlag
 
-.obj __AXDSPInitFlag, global
+.obj __AXDSPInitFlag, local
 	.skip 0x4
 .endobj __AXDSPInitFlag
 
-.obj __AXUserFrameCallback, global
+.obj __AXUserFrameCallback, local
 	.skip 0x4
 .endobj __AXUserFrameCallback
 
-.obj __AXOutDspReady, global
+.obj __AXOutDspReady, local
 	.skip 0x4
 .endobj __AXOutDspReady
 
-.obj __AXAiDmaFrame, global
+.obj __AXAiDmaFrame, local
 	.skip 0x4
 .endobj __AXAiDmaFrame
 
-.obj __AXOutFrame, global
+.obj __AXOutFrame, local
 	.skip 0x8
 .endobj __AXOutFrame

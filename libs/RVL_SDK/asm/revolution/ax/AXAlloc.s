@@ -419,8 +419,10 @@
 .endobj __AXStackHead
 
 .obj __AXStackTail, local
-	.skip 0x98
+	.skip 0x80
 .endobj __AXStackTail
+
+.skip 0x18
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

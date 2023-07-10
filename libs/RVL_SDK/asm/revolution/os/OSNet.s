@@ -194,9 +194,9 @@
 .L_8035E300:
 /* 8035E300 003278C0  2C 1F 00 00 */	cmpwi r31, 0
 /* 8035E304 003278C4  41 80 00 70 */	blt .L_8035E374
-/* 8035E308 003278C8  3C E0 80 5D */	lis r7, lbl_805D5460@ha
+/* 8035E308 003278C8  3C E0 80 5D */	lis r7, "@LOCAL@NWC24SuspendScheduler__Fv@susResult"@ha
 /* 8035E30C 003278CC  7F C3 F3 78 */	mr r3, r30
-/* 8035E310 003278D0  38 E7 54 60 */	addi r7, r7, lbl_805D5460@l
+/* 8035E310 003278D0  38 E7 54 60 */	addi r7, r7, "@LOCAL@NWC24SuspendScheduler__Fv@susResult"@l
 /* 8035E314 003278D4  38 80 00 01 */	li r4, 1
 /* 8035E318 003278D8  38 A0 00 00 */	li r5, 0
 /* 8035E31C 003278DC  38 C0 00 00 */	li r6, 0
@@ -211,8 +211,8 @@
 .L_8035E33C:
 /* 8035E33C 003278FC  2C 1F 00 00 */	cmpwi r31, 0
 /* 8035E340 00327900  41 80 00 0C */	blt .L_8035E34C
-/* 8035E344 00327904  3C 60 80 5D */	lis r3, lbl_805D5460@ha
-/* 8035E348 00327908  83 E3 54 60 */	lwz r31, lbl_805D5460@l(r3)
+/* 8035E344 00327904  3C 60 80 5D */	lis r3, "@LOCAL@NWC24SuspendScheduler__Fv@susResult"@ha
+/* 8035E348 00327908  83 E3 54 60 */	lwz r31, "@LOCAL@NWC24SuspendScheduler__Fv@susResult"@l(r3)
 .L_8035E34C:
 /* 8035E34C 0032790C  7F C3 F3 78 */	mr r3, r30
 /* 8035E350 00327910  4B FE 52 31 */	bl IOS_Close
@@ -238,17 +238,17 @@
 .endfn NWC24SuspendScheduler
 
 .balign 16, 0
-.fn NWC24iRequestShutdown, global
+.fn NWC24iRequestShutdown, local
 /* 8035E390 00327950  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035E394 00327954  7C 08 02 A6 */	mflr r0
-/* 8035E398 00327958  3C E0 80 5D */	lis r7, lbl_805D54A0@ha
+/* 8035E398 00327958  3C E0 80 5D */	lis r7, "@LOCAL@NWC24iRequestShutdown__FUlPl@shtResult@0"@ha
 /* 8035E39C 0032795C  3D 20 80 36 */	lis r9, CallbackAsyncIpc@ha
 /* 8035E3A0 00327960  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8035E3A4 00327964  3C A0 80 5D */	lis r5, lbl_805D5480@ha
+/* 8035E3A4 00327964  3C A0 80 5D */	lis r5, "@LOCAL@NWC24iRequestShutdown__FUlPl@shtBuffer"@ha
 /* 8035E3A8 00327968  7C 8A 23 78 */	mr r10, r4
-/* 8035E3AC 0032796C  38 E7 54 A0 */	addi r7, r7, lbl_805D54A0@l
-/* 8035E3B0 00327970  90 65 54 80 */	stw r3, lbl_805D5480@l(r5)
-/* 8035E3B4 00327974  38 A5 54 80 */	addi r5, r5, lbl_805D5480@l
+/* 8035E3AC 0032796C  38 E7 54 A0 */	addi r7, r7, "@LOCAL@NWC24iRequestShutdown__FUlPl@shtResult@0"@l
+/* 8035E3B0 00327970  90 65 54 80 */	stw r3, "@LOCAL@NWC24iRequestShutdown__FUlPl@shtBuffer"@l(r5)
+/* 8035E3B4 00327974  38 A5 54 80 */	addi r5, r5, "@LOCAL@NWC24iRequestShutdown__FUlPl@shtBuffer"@l
 /* 8035E3B8 00327978  80 6D 9A 28 */	lwz r3, nwc24ShtFd@sda21(r13)
 /* 8035E3BC 0032797C  39 29 E5 F0 */	addi r9, r9, CallbackAsyncIpc@l
 /* 8035E3C0 00327980  38 80 00 28 */	li r4, 0x28
@@ -271,7 +271,7 @@
 .endfn NWC24iRequestShutdown
 
 .balign 16, 0
-.fn NWC24Shutdown_, global
+.fn NWC24Shutdown_, local
 /* 8035E400 003279C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8035E404 003279C4  7C 08 02 A6 */	mflr r0
 /* 8035E408 003279C8  2C 03 00 00 */	cmpwi r3, 0
@@ -280,7 +280,7 @@
 /* 8035E414 003279D4  38 60 00 01 */	li r3, 1
 /* 8035E418 003279D8  48 00 00 90 */	b .L_8035E4A8
 .L_8035E41C:
-/* 8035E41C 003279DC  80 0D B9 B0 */	lwz r0, lbl_80667B30@sda21(r13)
+/* 8035E41C 003279DC  80 0D B9 B0 */	lwz r0, "@LOCAL@NWC24Shutdown___FiUl@shuttingdown"@sda21(r13)
 /* 8035E420 003279E0  2C 00 00 00 */	cmpwi r0, 0
 /* 8035E424 003279E4  41 82 00 64 */	beq .L_8035E488
 /* 8035E428 003279E8  80 0D B9 AC */	lwz r0, NWC24iIsRequestPending@sda21(r13)
@@ -289,7 +289,7 @@
 /* 8035E434 003279F4  38 60 00 00 */	li r3, 0
 /* 8035E438 003279F8  48 00 00 70 */	b .L_8035E4A8
 .L_8035E43C:
-/* 8035E43C 003279FC  80 0D B9 B4 */	lwz r0, lbl_80667B34@sda21(r13)
+/* 8035E43C 003279FC  80 0D B9 B4 */	lwz r0, "@LOCAL@NWC24Shutdown___FiUl@result@0"@sda21(r13)
 /* 8035E440 00327A00  2C 00 00 00 */	cmpwi r0, 0
 /* 8035E444 00327A04  41 80 00 0C */	blt .L_8035E450
 /* 8035E448 00327A08  38 60 00 01 */	li r3, 1
@@ -300,7 +300,7 @@
 /* 8035E458 00327A18  40 81 00 18 */	ble .L_8035E470
 /* 8035E45C 00327A1C  38 03 FF FF */	addi r0, r3, -1
 /* 8035E460 00327A20  38 60 00 00 */	li r3, 0
-/* 8035E464 00327A24  90 6D B9 B0 */	stw r3, lbl_80667B30@sda21(r13)
+/* 8035E464 00327A24  90 6D B9 B0 */	stw r3, "@LOCAL@NWC24Shutdown___FiUl@shuttingdown"@sda21(r13)
 /* 8035E468 00327A28  90 0D B9 A8 */	stw r0, nwc24ShtRetryRest@sda21(r13)
 /* 8035E46C 00327A2C  48 00 00 38 */	b .L_8035E4A4
 .L_8035E470:
@@ -312,12 +312,12 @@
 /* 8035E484 00327A44  48 00 00 24 */	b .L_8035E4A8
 .L_8035E488:
 /* 8035E488 00327A48  7C 83 23 78 */	mr r3, r4
-/* 8035E48C 00327A4C  38 8D B9 B4 */	addi r4, r13, lbl_80667B34@sda21
+/* 8035E48C 00327A4C  38 8D B9 B4 */	addi r4, r13, "@LOCAL@NWC24Shutdown___FiUl@result@0"@sda21
 /* 8035E490 00327A50  4B FF FF 01 */	bl NWC24iRequestShutdown
 /* 8035E494 00327A54  2C 03 00 00 */	cmpwi r3, 0
 /* 8035E498 00327A58  41 80 00 0C */	blt .L_8035E4A4
 /* 8035E49C 00327A5C  38 00 00 01 */	li r0, 1
-/* 8035E4A0 00327A60  90 0D B9 B0 */	stw r0, lbl_80667B30@sda21(r13)
+/* 8035E4A0 00327A60  90 0D B9 B0 */	stw r0, "@LOCAL@NWC24Shutdown___FiUl@shuttingdown"@sda21(r13)
 .L_8035E4A4:
 /* 8035E4A4 00327A64  38 60 00 00 */	li r3, 0
 .L_8035E4A8:
@@ -418,7 +418,7 @@
 .endfn NWC24iSetRtcCounter
 
 .balign 16, 0
-.fn CallbackAsyncIpc, global
+.fn CallbackAsyncIpc, local
 /* 8035E5F0 00327BB0  2C 04 00 00 */	cmpwi r4, 0
 /* 8035E5F4 00327BB4  41 82 00 08 */	beq .L_8035E5FC
 /* 8035E5F8 00327BB8  90 64 00 00 */	stw r3, 0(r4)
@@ -475,7 +475,7 @@
 
 .balign 8
 
-.obj nwc24ShtFd, global
+.obj nwc24ShtFd, local
 	.4byte 0xFFFFFFFF
 	.4byte 0
 .endobj nwc24ShtFd
@@ -486,20 +486,19 @@
 	.skip 0x20
 .endobj ShutdownFuncInfo
 
-#@LOCAL@NWC24SuspendScheduler__Fv@susResult
-.obj lbl_805D5460, local
+.obj "@LOCAL@NWC24SuspendScheduler__Fv@susResult", local
 	.skip 0x20
-.endobj lbl_805D5460
+.endobj "@LOCAL@NWC24SuspendScheduler__Fv@susResult"
 
-#@LOCAL@NWC24iRequestShutdown__FUlPl@shtBuffer
-.obj lbl_805D5480, local
-	.skip 0x20
-.endobj lbl_805D5480
+#@LOCAL@NWC24ResumeScheduler__Fv@susResult (unused)
 
-#@LOCAL@NWC24iRequestShutdown__FUlPl@shtResult@0
-.obj lbl_805D54A0, local
+.obj "@LOCAL@NWC24iRequestShutdown__FUlPl@shtBuffer", local
 	.skip 0x20
-.endobj lbl_805D54A0
+.endobj "@LOCAL@NWC24iRequestShutdown__FUlPl@shtBuffer"
+
+.obj "@LOCAL@NWC24iRequestShutdown__FUlPl@shtResult@0", local
+	.skip 0x20
+.endobj "@LOCAL@NWC24iRequestShutdown__FUlPl@shtResult@0"
 
 .obj nwc24TimeCommonBuffer, local
 	.skip 0x20
@@ -521,12 +520,10 @@
 	.skip 0x4
 .endobj NWC24iIsRequestPending
 
-#@LOCAL@NWC24Shutdown___FiUl@shuttingdown
-.obj lbl_80667B30, local
+.obj "@LOCAL@NWC24Shutdown___FiUl@shuttingdown", local
 	.skip 0x4
-.endobj lbl_80667B30
+.endobj "@LOCAL@NWC24Shutdown___FiUl@shuttingdown"
 
-#@LOCAL@NWC24Shutdown___FiUl@result@0
-.obj lbl_80667B34, local
+.obj "@LOCAL@NWC24Shutdown___FiUl@result@0", local
 	.skip 0x4
-.endobj lbl_80667B34
+.endobj "@LOCAL@NWC24Shutdown___FiUl@result@0"

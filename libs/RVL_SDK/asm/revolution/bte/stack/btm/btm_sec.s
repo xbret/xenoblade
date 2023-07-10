@@ -2976,7 +2976,7 @@
 /* 802EE33C 002B78FC  4E 80 00 20 */	blr 
 .endfn btm_sec_update_clock_offset
 
-.fn btm_sec_execute_procedure, global
+.fn btm_sec_execute_procedure, local
 /* 802EE340 002B7900  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802EE344 002B7904  7C 08 02 A6 */	mflr r0
 /* 802EE348 002B7908  3C 80 80 5C */	lis r4, btm_cb@ha
@@ -3260,7 +3260,7 @@
 /* 802EE71C 002B7CDC  4E 80 00 20 */	blr 
 .endfn btm_sec_execute_procedure
 
-.fn btm_sec_start_authorization, global
+.fn btm_sec_start_authorization, local
 /* 802EE720 002B7CE0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802EE724 002B7CE4  7C 08 02 A6 */	mflr r0
 /* 802EE728 002B7CE8  38 C0 00 00 */	li r6, 0
@@ -3343,7 +3343,7 @@
 /* 802EE838 002B7DF8  4E 80 00 20 */	blr
 .endfn btm_sec_start_authorization
 
-.fn btm_sec_collision_timeout, global
+.fn btm_sec_collision_timeout, local
 /* 802EE83C 002B7DFC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802EE840 002B7E00  7C 08 02 A6 */	mflr r0
 /* 802EE844 002B7E04  3C 60 80 5C */	lis r3, btm_cb@ha

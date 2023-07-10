@@ -698,7 +698,7 @@
 .endfn DVDReadAsyncPrio
 
 .balign 16, 0
-.fn cbForReadAsync, global
+.fn cbForReadAsync, local
 /* 8030A6E0 002D3CA0  81 84 00 38 */	lwz r12, 0x38(r4)
 /* 8030A6E4 002D3CA4  2C 0C 00 00 */	cmpwi r12, 0
 /* 8030A6E8 002D3CA8  4D 82 00 20 */	beqlr 

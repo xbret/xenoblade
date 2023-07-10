@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.fn "GetStepCurveValue__27@unnamed@lyt_animation_cpp@FfPCQ46nw4hbm3lyt3res7StepKeyUl", global
+.fn "GetStepCurveValue__27@unnamed@lyt_animation_cpp@FfPCQ46nw4hbm3lyt3res7StepKeyUl", local
 /* 8032B4C0 002F4A80  28 04 00 01 */	cmplwi r4, 1
 /* 8032B4C4 002F4A84  41 82 00 14 */	beq .L_8032B4D8
 /* 8032B4C8 002F4A88  C0 03 00 00 */	lfs f0, 0(r3)
@@ -76,7 +76,7 @@
 .endfn "GetStepCurveValue__27@unnamed@lyt_animation_cpp@FfPCQ46nw4hbm3lyt3res7StepKeyUl"
 
 .balign 16, 0
-.fn "GetHermiteCurveValue__27@unnamed@lyt_animation_cpp@FfPCQ46nw4hbm3lyt3res10HermiteKeyUl", global
+.fn "GetHermiteCurveValue__27@unnamed@lyt_animation_cpp@FfPCQ46nw4hbm3lyt3res10HermiteKeyUl", local
 /* 8032B5B0 002F4B70  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8032B5B4 002F4B74  DB E1 00 10 */	stfd f31, 0x10(r1)
 /* 8032B5B8 002F4B78  F3 E1 00 18 */	psq_st f31, 24(r1), 0, qr0

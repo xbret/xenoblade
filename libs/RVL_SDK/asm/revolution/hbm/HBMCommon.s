@@ -258,7 +258,7 @@
 .endobj lbl_8054C878
 
 
-.obj __HBMVersion, local
+.obj __HBMVersion, global
 	.4byte lbl_8054C878
 .endobj __HBMVersion
 

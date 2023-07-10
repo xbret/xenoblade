@@ -730,9 +730,9 @@
 /* 80334B64 002FE124  38 61 00 50 */	addi r3, r1, 0x50
 /* 80334B68 002FE128  38 A0 00 00 */	li r5, 0
 /* 80334B6C 002FE12C  4B FF CA C5 */	bl GetTextureSize__Q36nw4hbm3lyt6detailFPQ36nw4hbm3lyt8MaterialUc
-/* 80334B70 002FE130  3F 00 80 55 */	lis r24, lbl_8054DAA0@ha
+/* 80334B70 002FE130  3F 00 80 55 */	lis r24, "flipInfos$7762"@ha
 /* 80334B74 002FE134  38 00 FF FF */	li r0, -1
-/* 80334B78 002FE138  3B 18 DA A0 */	addi r24, r24, lbl_8054DAA0@l
+/* 80334B78 002FE138  3B 18 DA A0 */	addi r24, r24, "flipInfos$7762"@l
 /* 80334B7C 002FE13C  3F A0 80 52 */	lis r29, double_80518AE8@ha
 /* 80334B80 002FE140  89 18 00 09 */	lbz r8, 9(r24)
 /* 80334B84 002FE144  3F 20 80 52 */	lis r25, double_80518AE0@ha
@@ -1127,10 +1127,10 @@
 /* 8033518C 002FE74C  D0 21 00 60 */	stfs f1, 0x60(r1)
 /* 80335190 002FE750  4B FF C4 A1 */	bl GetTextureSize__Q36nw4hbm3lyt6detailFPQ36nw4hbm3lyt8MaterialUc
 /* 80335194 002FE754  1C 10 00 0A */	mulli r0, r16, 0xa
-/* 80335198 002FE758  3F 00 80 55 */	lis r24, lbl_8054DAA0@ha
+/* 80335198 002FE758  3F 00 80 55 */	lis r24, "flipInfos$7762"@ha
 /* 8033519C 002FE75C  3F A0 80 52 */	lis r29, double_80518AE8@ha
 /* 803351A0 002FE760  C0 41 00 5C */	lfs f2, 0x5c(r1)
-/* 803351A4 002FE764  3B 18 DA A0 */	addi r24, r24, lbl_8054DAA0@l
+/* 803351A4 002FE764  3B 18 DA A0 */	addi r24, r24, "flipInfos$7762"@l
 /* 803351A8 002FE768  C0 61 00 58 */	lfs f3, 0x58(r1)
 /* 803351AC 002FE76C  7C 98 02 14 */	add r4, r24, r0
 /* 803351B0 002FE770  3F 20 80 52 */	lis r25, double_80518AE0@ha
@@ -1561,10 +1561,10 @@
 /* 8033584C 002FEE0C  D0 21 01 04 */	stfs f1, 0x104(r1)
 /* 80335850 002FEE10  4B FF BD E1 */	bl GetTextureSize__Q36nw4hbm3lyt6detailFPQ36nw4hbm3lyt8MaterialUc
 /* 80335854 002FEE14  1C 10 00 0A */	mulli r0, r16, 0xa
-/* 80335858 002FEE18  3E 60 80 55 */	lis r19, lbl_8054DAA0@ha
+/* 80335858 002FEE18  3E 60 80 55 */	lis r19, "flipInfos$7762"@ha
 /* 8033585C 002FEE1C  3F 00 80 52 */	lis r24, double_80518AE8@ha
 /* 80335860 002FEE20  C0 41 00 F4 */	lfs f2, 0xf4(r1)
-/* 80335864 002FEE24  3A 73 DA A0 */	addi r19, r19, lbl_8054DAA0@l
+/* 80335864 002FEE24  3A 73 DA A0 */	addi r19, r19, "flipInfos$7762"@l
 /* 80335868 002FEE28  C0 61 00 F0 */	lfs f3, 0xf0(r1)
 /* 8033586C 002FEE2C  7C 93 02 14 */	add r4, r19, r0
 /* 80335870 002FEE30  3E 80 80 52 */	lis r20, double_80518AE0@ha
@@ -2497,7 +2497,7 @@
 .balign 8
 
 #@LOCAL@GetTexutreFlipInfo__24@unnamed@lyt_window_cpp@FUc@flipInfos
-.obj lbl_8054DAA0, global
+.obj "flipInfos$7762", local
 	.4byte 0x00000100
 	.4byte 0x00010101
 	.4byte 0x00010100
@@ -2513,7 +2513,7 @@
 	.4byte 0x00010100
 	.4byte 0x01010000
 	.4byte 0x00010100
-.endobj lbl_8054DAA0
+.endobj "flipInfos$7762"
 
 
 .obj __vt__Q36nw4hbm3lyt6Window, global
@@ -2570,5 +2570,7 @@
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .obj typeInfo__Q36nw4hbm3lyt6Window, global
-	.skip 0x8
+	.skip 0x4
 .endobj typeInfo__Q36nw4hbm3lyt6Window
+
+.skip 4

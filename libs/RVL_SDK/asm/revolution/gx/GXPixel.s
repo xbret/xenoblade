@@ -415,9 +415,9 @@
 .balign 16, 0
 .fn GXSetPixelFmt, global
 /* 8031E2B0 002E7870  81 22 BC 20 */	lwz r9, __GXData@sda21(r2)
-/* 8031E2B4 002E7874  3C C0 80 55 */	lis r6, lbl_8054C110@ha
+/* 8031E2B4 002E7874  3C C0 80 55 */	lis r6, "@LOCAL@GXSetPixelFmt__F11_GXPixelFmt9_GXZFmt16@p2f"@ha
 /* 8031E2B8 002E7878  54 67 10 3A */	slwi r7, r3, 2
-/* 8031E2BC 002E787C  38 C6 C1 10 */	addi r6, r6, lbl_8054C110@l
+/* 8031E2BC 002E787C  38 C6 C1 10 */	addi r6, r6, "@LOCAL@GXSetPixelFmt__F11_GXPixelFmt9_GXZFmt16@p2f"@l
 /* 8031E2C0 002E7880  81 09 02 2C */	lwz r8, 0x22c(r9)
 /* 8031E2C4 002E7884  7C 06 38 2E */	lwzx r0, r6, r7
 /* 8031E2C8 002E7888  7D 05 43 78 */	mr r5, r8
@@ -544,8 +544,7 @@
 
 .balign 8
 
-#@LOCAL@GXSetPixelFmt__F11_GXPixelFmt9_GXZFmt16@p2f
-.obj lbl_8054C110, local
+.obj "@LOCAL@GXSetPixelFmt__F11_GXPixelFmt9_GXZFmt16@p2f", local
 	.4byte 0
 	.4byte 0x00000001
 	.4byte 0x00000002
@@ -554,7 +553,7 @@
 	.4byte 0x00000004
 	.4byte 0x00000004
 	.4byte 0x00000005
-.endobj lbl_8054C110
+.endobj "@LOCAL@GXSetPixelFmt__F11_GXPixelFmt9_GXZFmt16@p2f"
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

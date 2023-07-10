@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.fn reserveFileDescriptor, global
+.fn reserveFileDescriptor, local
 /* 80351290 0031A850  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80351294 0031A854  7C 08 02 A6 */	mflr r0
 /* 80351298 0031A858  90 01 00 14 */	stw r0, 0x14(r1)
@@ -442,11 +442,13 @@
 	.skip 0x100
 .endobj s_message
 
-#@LOCAL@asyncRoutine__FlPv@s_rBuf
+.obj "@LOCAL@asyncRoutine__FlPv@s_rBuf", local
 .skip 0x100
+.endobj "@LOCAL@asyncRoutine__FlPv@s_rBuf"
 
-#@LOCAL@asyncRoutine__FlPv@s_wBuf@0
+.obj "@LOCAL@asyncRoutine__FlPv@s_wBuf@0", local
 .skip 0x100
+.endobj "@LOCAL@asyncRoutine__FlPv@s_wBuf@0"
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

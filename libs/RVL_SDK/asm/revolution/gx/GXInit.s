@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .balign 16, 0
-.fn __GXDefaultTexRegionCallback, global
+.fn __GXDefaultTexRegionCallback, local
 /* 80317470 002E0A30  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80317474 002E0A34  7C 08 02 A6 */	mflr r0
 /* 80317478 002E0A38  90 01 00 24 */	stw r0, 0x24(r1)
@@ -69,7 +69,7 @@
 .endfn __GXDefaultTexRegionCallback
 
 .balign 16, 0
-.fn __GXDefaultTlutRegionCallback, global
+.fn __GXDefaultTlutRegionCallback, local
 /* 80317560 002E0B20  28 03 00 14 */	cmplwi r3, 0x14
 /* 80317564 002E0B24  41 80 00 0C */	blt .L_80317570
 /* 80317568 002E0B28  38 60 00 00 */	li r3, 0
@@ -83,14 +83,14 @@
 .endfn __GXDefaultTlutRegionCallback
 
 .balign 16, 0
-.fn __GXShutdown, global
+.fn __GXShutdown, local
 /* 80317590 002E0B50  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80317594 002E0B54  7C 08 02 A6 */	mflr r0
 /* 80317598 002E0B58  2C 03 00 00 */	cmpwi r3, 0
 /* 8031759C 002E0B5C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 803175A0 002E0B60  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 803175A4 002E0B64  40 82 00 DC */	bne .L_80317680
-/* 803175A8 002E0B68  80 0D B7 A8 */	lwz r0, lbl_80667928@sda21(r13)
+/* 803175A8 002E0B68  80 0D B7 A8 */	lwz r0, "@LOCAL@__GXShutdown__FiUl@calledOnce@1"@sda21(r13)
 /* 803175AC 002E0B6C  2C 00 00 00 */	cmpwi r0, 0
 /* 803175B0 002E0B70  40 82 00 4C */	bne .L_803175FC
 /* 803175B4 002E0B74  80 AD B7 94 */	lwz r5, __memReg@sda21(r13)
@@ -104,13 +104,13 @@
 /* 803175D0 002E0B90  40 82 FF F0 */	bne .L_803175C0
 /* 803175D4 002E0B94  54 80 80 1E */	slwi r0, r4, 0x10
 /* 803175D8 002E0B98  7C 00 1B 78 */	or r0, r0, r3
-/* 803175DC 002E0B9C  90 0D B7 98 */	stw r0, lbl_80667918@sda21(r13)
+/* 803175DC 002E0B9C  90 0D B7 98 */	stw r0, "@LOCAL@__GXShutdown__FiUl@peCount"@sda21(r13)
 /* 803175E0 002E0BA0  48 04 53 81 */	bl OSGetTime
-/* 803175E4 002E0BA4  90 6D B7 A0 */	stw r3, lbl_80667920@sda21(r13)
+/* 803175E4 002E0BA4  90 6D B7 A0 */	stw r3, "@LOCAL@__GXShutdown__FiUl@time@0"@sda21(r13)
 /* 803175E8 002E0BA8  38 00 00 01 */	li r0, 1
 /* 803175EC 002E0BAC  38 60 00 00 */	li r3, 0
-/* 803175F0 002E0BB0  90 8D B7 A4 */	stw r4, lbl_80667920+0x4@sda21(r13)
-/* 803175F4 002E0BB4  90 0D B7 A8 */	stw r0, lbl_80667928@sda21(r13)
+/* 803175F0 002E0BB0  90 8D B7 A4 */	stw r4, "@LOCAL@__GXShutdown__FiUl@time@0"+0x4@sda21(r13)
+/* 803175F4 002E0BB4  90 0D B7 A8 */	stw r0, "@LOCAL@__GXShutdown__FiUl@calledOnce@1"@sda21(r13)
 /* 803175F8 002E0BB8  48 00 00 F4 */	b .L_803176EC
 .L_803175FC:
 /* 803175FC 002E0BBC  48 04 53 65 */	bl OSGetTime
@@ -122,9 +122,9 @@
 /* 80317610 002E0BD0  A0 E5 00 4E */	lhz r7, 0x4e(r5)
 /* 80317614 002E0BD4  7C 07 00 40 */	cmplw r7, r0
 /* 80317618 002E0BD8  40 82 FF F0 */	bne .L_80317608
-/* 8031761C 002E0BDC  80 AD B7 A4 */	lwz r5, lbl_80667920+0x4@sda21(r13)
+/* 8031761C 002E0BDC  80 AD B7 A4 */	lwz r5, "@LOCAL@__GXShutdown__FiUl@time@0"+0x4@sda21(r13)
 /* 80317620 002E0BE0  38 00 00 00 */	li r0, 0
-/* 80317624 002E0BE4  80 CD B7 A0 */	lwz r6, lbl_80667920@sda21(r13)
+/* 80317624 002E0BE4  80 CD B7 A0 */	lwz r6, "@LOCAL@__GXShutdown__FiUl@time@0"@sda21(r13)
 /* 80317628 002E0BE8  54 E9 80 1E */	slwi r9, r7, 0x10
 /* 8031762C 002E0BEC  7D 05 20 10 */	subfc r8, r5, r4
 /* 80317630 002E0BF0  38 A0 00 0A */	li r5, 0xa
@@ -140,13 +140,13 @@
 /* 80317658 002E0C18  38 60 00 00 */	li r3, 0
 /* 8031765C 002E0C1C  48 00 00 90 */	b .L_803176EC
 .L_80317660:
-/* 80317660 002E0C20  80 0D B7 98 */	lwz r0, lbl_80667918@sda21(r13)
+/* 80317660 002E0C20  80 0D B7 98 */	lwz r0, "@LOCAL@__GXShutdown__FiUl@peCount"@sda21(r13)
 /* 80317664 002E0C24  7C 05 00 40 */	cmplw r5, r0
 /* 80317668 002E0C28  41 82 00 80 */	beq .L_803176E8
-/* 8031766C 002E0C2C  90 6D B7 A0 */	stw r3, lbl_80667920@sda21(r13)
+/* 8031766C 002E0C2C  90 6D B7 A0 */	stw r3, "@LOCAL@__GXShutdown__FiUl@time@0"@sda21(r13)
 /* 80317670 002E0C30  38 60 00 00 */	li r3, 0
-/* 80317674 002E0C34  90 AD B7 98 */	stw r5, lbl_80667918@sda21(r13)
-/* 80317678 002E0C38  90 8D B7 A4 */	stw r4, lbl_80667920+0x4@sda21(r13)
+/* 80317674 002E0C34  90 AD B7 98 */	stw r5, "@LOCAL@__GXShutdown__FiUl@peCount"@sda21(r13)
+/* 80317678 002E0C38  90 8D B7 A4 */	stw r4, "@LOCAL@__GXShutdown__FiUl@time@0"+0x4@sda21(r13)
 /* 8031767C 002E0C3C  48 00 00 70 */	b .L_803176EC
 .L_80317680:
 /* 80317680 002E0C40  38 60 00 00 */	li r3, 0
@@ -306,13 +306,13 @@
 /* 803178BC 002E0E7C  48 00 10 35 */	bl GXSetCPUFifo
 /* 803178C0 002E0E80  38 7C CE E0 */	addi r3, r28, FifoObj@l
 /* 803178C4 002E0E84  48 00 12 0D */	bl GXSetGPFifo
-/* 803178C8 002E0E88  80 0D B7 AC */	lwz r0, lbl_8066792C@sda21(r13)
+/* 803178C8 002E0E88  80 0D B7 AC */	lwz r0, "@LOCAL@GXInit__FPvUl@shutdownFuncRegistered"@sda21(r13)
 /* 803178CC 002E0E8C  2C 00 00 00 */	cmpwi r0, 0
 /* 803178D0 002E0E90  40 82 00 14 */	bne .L_803178E4
 /* 803178D4 002E0E94  3C 60 80 55 */	lis r3, GXShutdownFuncInfo@ha
 /* 803178D8 002E0E98  38 63 B8 B0 */	addi r3, r3, GXShutdownFuncInfo@l
 /* 803178DC 002E0E9C  48 04 26 35 */	bl OSRegisterShutdownFunction
-/* 803178E0 002E0EA0  93 AD B7 AC */	stw r29, lbl_8066792C@sda21(r13)
+/* 803178E0 002E0EA0  93 AD B7 AC */	stw r29, "@LOCAL@GXInit__FPvUl@shutdownFuncRegistered"@sda21(r13)
 .L_803178E4:
 /* 803178E4 002E0EA4  48 00 2E 0D */	bl __GXPEInit
 /* 803178E8 002E0EA8  4B FC 33 B9 */	bl PPCMfhid2
@@ -1411,22 +1411,18 @@
 	.skip 0x4
 .endobj __memReg
 
-#@LOCAL@__GXShutdown__FiUl@peCount
-.obj lbl_80667918, local
+.obj "@LOCAL@__GXShutdown__FiUl@peCount", local
 	.skip 0x8
-.endobj lbl_80667918
+.endobj "@LOCAL@__GXShutdown__FiUl@peCount"
 
-#@LOCAL@__GXShutdown__FiUl@time@0
-.obj lbl_80667920, local
+.obj "@LOCAL@__GXShutdown__FiUl@time@0", local
 	.skip 0x8
-.endobj lbl_80667920
+.endobj "@LOCAL@__GXShutdown__FiUl@time@0"
 
-#@LOCAL@__GXShutdown__FiUl@calledOnce@1
-.obj lbl_80667928, local
+.obj "@LOCAL@__GXShutdown__FiUl@calledOnce@1", local
 	.skip 0x4
-.endobj lbl_80667928
+.endobj "@LOCAL@__GXShutdown__FiUl@calledOnce@1"
 
-#@LOCAL@GXInit__FPvUl@shutdownFuncRegistered
-.obj lbl_8066792C, local
+.obj "@LOCAL@GXInit__FPvUl@shutdownFuncRegistered", local
 	.skip 0x4
-.endobj lbl_8066792C
+.endobj "@LOCAL@GXInit__FPvUl@shutdownFuncRegistered"

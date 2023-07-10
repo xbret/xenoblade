@@ -84,7 +84,7 @@
 /* 802CEEA4 00298464  4E 80 00 20 */	blr 
 .endfn TRKValidMemory32
 
-.fn TRK_ppc_memcpy, global
+.fn TRK_ppc_memcpy, local
 /* 802CEEA8 00298468  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 802CEEAC 0029846C  7C 08 02 A6 */	mflr r0
 /* 802CEEB0 00298470  90 01 00 34 */	stw r0, 0x34(r1)
@@ -140,7 +140,7 @@
 /* 802CEF70 00298530  4E 80 00 20 */	blr 
 .endfn TRK_ppc_memcpy
 
-.fn TRKTargetReadInstruction, global
+.fn TRKTargetAccessMemory, global
 /* 802CEF74 00298534  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802CEF78 00298538  7C 08 02 A6 */	mflr r0
 /* 802CEF7C 0029853C  3D 00 80 54 */	lis r8, gTRKExceptionStatus@ha
@@ -229,7 +229,7 @@
 /* 802CF0B8 00298678  7C 08 03 A6 */	mtlr r0
 /* 802CF0BC 0029867C  38 21 00 40 */	addi r1, r1, 0x40
 /* 802CF0C0 00298680  4E 80 00 20 */	blr 
-.endfn TRKTargetReadInstruction
+.endfn TRKTargetAccessMemory
 
 .fn TRKTargetAccessDefault, global
 /* 802CF0C4 00298684  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -594,7 +594,7 @@
 .endfn TRKTargetAccessExtended2
 
 
-.fn TRKInterruptHandler, global
+.fn TRK_InterruptHandler, global
 /* 802CF5CC 00298B8C  7C 5A 03 A6 */	mtsrr0 r2
 /* 802CF5D0 00298B90  7C 9B 03 A6 */	mtsrr1 r4
 /* 802CF5D4 00298B94  7C 93 42 A6 */	mfsprg r4, 3
@@ -654,7 +654,7 @@
 /* 802CF6A4 00298C64  60 42 FF A8 */	ori r2, r2, gTRKExceptionStatus@l
 /* 802CF6A8 00298C68  88 42 00 0C */	lbz r2, 0xc(r2)
 /* 802CF6AC 00298C6C  2C 02 00 00 */	cmpwi r2, 0
-/* 802CF6B0 00298C70  40 82 00 B0 */	bne .L_802CF760
+/* 802CF6B0 00298C70  40 82 00 B0 */	bne TRKExceptionHandler
 /* 802CF6B4 00298C74  3C 40 80 57 */	lis r2, gTRKCPUState@h
 /* 802CF6B8 00298C78  60 42 D3 F8 */	ori r2, r2, gTRKCPUState@l
 /* 802CF6BC 00298C7C  90 02 00 00 */	stw r0, 0(r2)
@@ -698,7 +698,9 @@
 /* 802CF754 00298D14  80 22 00 04 */	lwz r1, 4(r2)
 /* 802CF758 00298D18  80 42 00 08 */	lwz r2, 8(r2)
 /* 802CF75C 00298D1C  48 00 00 A0 */	b TRKPostInterruptEvent
-.L_802CF760:
+.endfn TRK_InterruptHandler
+
+.fn TRKExceptionHandler, local
 /* 802CF760 00298D20  3C 40 80 53 */	lis r2, gTRKExceptionStatus@h
 /* 802CF764 00298D24  60 42 FF A8 */	ori r2, r2, gTRKExceptionStatus@l
 /* 802CF768 00298D28  B0 62 00 08 */	sth r3, 8(r2)
@@ -740,7 +742,7 @@
 /* 802CF7F0 00298DB0  7C 51 42 A6 */	mfsprg r2, 1
 /* 802CF7F4 00298DB4  7C 72 42 A6 */	mfsprg r3, 2
 /* 802CF7F8 00298DB8  4C 00 00 64 */	rfi
-.endfn TRKInterruptHandler
+.endfn TRKExceptionHandler
 
 .fn TRKPostInterruptEvent, global
 /* 802CF7FC 00298DBC  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -773,7 +775,7 @@
 /* 802CF860 00298E20  38 A1 00 08 */	addi r5, r1, 8
 /* 802CF864 00298E24  38 C0 00 00 */	li r6, 0
 /* 802CF868 00298E28  38 E0 00 01 */	li r7, 1
-/* 802CF86C 00298E2C  4B FF F7 09 */	bl TRKTargetReadInstruction
+/* 802CF86C 00298E2C  4B FF F7 09 */	bl TRKTargetAccessMemory
 /* 802CF870 00298E30  80 61 00 0C */	lwz r3, 0xc(r1)
 /* 802CF874 00298E34  3C 03 F0 20 */	addis r0, r3, 0xf020
 /* 802CF878 00298E38  28 00 00 00 */	cmplwi r0, 0
@@ -937,7 +939,7 @@
 /* 802CFAA8 00299068  90 01 00 08 */	stw r0, 8(r1)
 /* 802CFAAC 0029906C  38 C0 00 00 */	li r6, 0
 /* 802CFAB0 00299070  38 E0 00 01 */	li r7, 1
-/* 802CFAB4 00299074  4B FF F4 C1 */	bl TRKTargetReadInstruction
+/* 802CFAB4 00299074  4B FF F4 C1 */	bl TRKTargetAccessMemory
 /* 802CFAB8 00299078  80 1F 02 F8 */	lwz r0, 0x2f8(r31)
 /* 802CFABC 0029907C  7F A3 EB 78 */	mr r3, r29
 /* 802CFAC0 00299080  80 A1 00 18 */	lwz r5, 0x18(r1)
@@ -1019,7 +1021,7 @@
 /* 802CFBE4 002991A4  38 C0 00 00 */	li r6, 0
 /* 802CFBE8 002991A8  54 04 00 2A */	rlwinm r4, r0, 0, 0, 0x15
 /* 802CFBEC 002991AC  38 E0 00 01 */	li r7, 1
-/* 802CFBF0 002991B0  4B FF F3 85 */	bl TRKTargetReadInstruction
+/* 802CFBF0 002991B0  4B FF F3 85 */	bl TRKTargetAccessMemory
 /* 802CFBF4 002991B4  7C 7E 1B 78 */	mr r30, r3
 /* 802CFBF8 002991B8  7F A3 EB 78 */	mr r3, r29
 /* 802CFBFC 002991BC  38 81 00 60 */	addi r4, r1, 0x60
@@ -1060,7 +1062,7 @@
 /* 802CFC78 00299238  38 E0 00 01 */	li r7, 1
 /* 802CFC7C 0029923C  90 81 00 18 */	stw r4, 0x18(r1)
 /* 802CFC80 00299240  90 01 00 08 */	stw r0, 8(r1)
-/* 802CFC84 00299244  4B FF F2 F1 */	bl TRKTargetReadInstruction
+/* 802CFC84 00299244  4B FF F2 F1 */	bl TRKTargetAccessMemory
 /* 802CFC88 00299248  38 7F FF A8 */	addi r3, r31, gTRKExceptionStatus@l
 /* 802CFC8C 0029924C  80 81 00 0C */	lwz r4, 0xc(r1)
 /* 802CFC90 00299250  A0 03 00 08 */	lhz r0, 8(r3)
@@ -1078,7 +1080,7 @@
 /* 802CFCC0 00299280  4E 80 00 20 */	blr 
 .endfn TRKTargetAddExceptionInfo
 
-.fn TRKTargetCheckStep, global
+.fn TRKTargetCheckStep, local
 /* 802CFCC4 00299284  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802CFCC8 00299288  7C 08 02 A6 */	mflr r0
 /* 802CFCCC 0029928C  3C 60 80 58 */	lis r3, gTRKStepStatus@ha
@@ -1702,7 +1704,7 @@
 /* 802D0530 00299AF0  4E 80 00 20 */	blr 
 .endfn ConvertAddress
 
-.fn GetThreadInfo, global
+.fn GetThreadInfo, local
 /* 802D0534 00299AF4  38 00 00 01 */	li r0, 1
 /* 802D0538 00299AF8  90 03 00 00 */	stw r0, 0(r3)
 /* 802D053C 00299AFC  38 00 00 00 */	li r0, 0
@@ -1761,7 +1763,7 @@
 
 .balign 8 #needed to align nubinit.c
 
-.obj gTRKMemMap, local
+.obj gTRKMemMap, global
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte 0x00000001
@@ -1812,24 +1814,30 @@
 .balign 8
 
 .obj gTRKRestoreFlags, global
-	.skip 0x10
+	.skip 0x9
 .endobj gTRKRestoreFlags
 
-.obj gTRKStepStatus, global
+.skip 0x7
+
+.obj gTRKStepStatus, local
 	.skip 0x18
 .endobj gTRKStepStatus
 
 .obj gTRKSaveState, global
-	.skip 0x98
+	.skip 0x94
 .endobj gTRKSaveState
+
+.skip 0x4
 
 .obj TRKvalue128_temp, global
 	.skip 0x10
 .endobj TRKvalue128_temp
 
 .obj gTRKState, global
-	.skip 0xA8
+	.skip 0xA4
 .endobj gTRKState
+
+.skip 0x4
 
 .obj gTRKCPUState, global
 	.skip 0x430
@@ -1839,6 +1847,6 @@
 
 .balign 8
 
-.obj TRK_saved_exceptionID, global
+.obj TRK_saved_exceptionID, local
 	.skip 0x8
 .endobj TRK_saved_exceptionID

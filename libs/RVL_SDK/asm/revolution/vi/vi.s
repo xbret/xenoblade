@@ -23,7 +23,7 @@
 /* 80363F70 0032D530  41 82 01 30 */	beq .L_803640A0
 /* 80363F74 0032D534  48 00 01 3C */	b .L_803640B0
 .L_80363F78:
-/* 80363F78 0032D538  80 0D 9B 84 */	lwz r0, lbl_80665D04@sda21(r13)
+/* 80363F78 0032D538  80 0D 9B 84 */	lwz r0, "@LOCAL@OnShutdown__FiUl@first"@sda21(r13)
 /* 80363F7C 0032D53C  2C 00 00 00 */	cmpwi r0, 0
 /* 80363F80 0032D540  41 82 01 00 */	beq .L_80364080
 /* 80363F84 0032D544  48 00 45 FD */	bl VISetRGBModeImm
@@ -89,12 +89,12 @@
 /* 80364064 0032D624  4B FF 49 8D */	bl OSRestoreInterrupts
 /* 80364068 0032D628  80 6D BA C4 */	lwz r3, retraceCount@sda21(r13)
 /* 8036406C 0032D62C  38 00 00 00 */	li r0, 0
-/* 80364070 0032D630  90 6D BA 70 */	stw r3, lbl_80667BF0@sda21(r13)
+/* 80364070 0032D630  90 6D BA 70 */	stw r3, "@LOCAL@OnShutdown__FiUl@count@0"@sda21(r13)
 /* 80364074 0032D634  38 60 00 00 */	li r3, 0
-/* 80364078 0032D638  90 0D 9B 84 */	stw r0, lbl_80665D04@sda21(r13)
+/* 80364078 0032D638  90 0D 9B 84 */	stw r0, "@LOCAL@OnShutdown__FiUl@first"@sda21(r13)
 /* 8036407C 0032D63C  48 00 00 34 */	b .L_803640B0
 .L_80364080:
-/* 80364080 0032D640  80 6D BA 70 */	lwz r3, lbl_80667BF0@sda21(r13)
+/* 80364080 0032D640  80 6D BA 70 */	lwz r3, "@LOCAL@OnShutdown__FiUl@count@0"@sda21(r13)
 /* 80364084 0032D644  80 0D BA C4 */	lwz r0, retraceCount@sda21(r13)
 /* 80364088 0032D648  7C 03 00 40 */	cmplw r3, r0
 /* 8036408C 0032D64C  40 82 00 0C */	bne .L_80364098
@@ -119,7 +119,7 @@
 .endfn OnShutdown
 
 .balign 16, 0
-.fn __VIRetraceHandler, global
+.fn __VIRetraceHandler, local
 /* 803640D0 0032D690  94 21 FD 10 */	stwu r1, -0x2f0(r1)
 /* 803640D4 0032D694  7C 08 02 A6 */	mflr r0
 /* 803640D8 0032D698  90 01 02 F4 */	stw r0, 0x2f4(r1)
@@ -335,14 +335,14 @@
 /* 803643D0 0032D990  A0 04 20 6E */	lhz r0, 0xCC00206E@l(r4)
 /* 803643D4 0032D994  54 1A 07 BE */	clrlwi r26, r0, 0x1e
 /* 803643D8 0032D998  4B FF 46 19 */	bl OSRestoreInterrupts
-/* 803643DC 0032D99C  80 0D 9B 88 */	lwz r0, lbl_80665D08@sda21(r13)
+/* 803643DC 0032D99C  80 0D 9B 88 */	lwz r0, "@LOCAL@__VIRetraceHandler__FsP9OSContext@old_dtvStatus"@sda21(r13)
 /* 803643E0 0032D9A0  57 5A 07 FE */	clrlwi r26, r26, 0x1f
 /* 803643E4 0032D9A4  7C 1A 00 40 */	cmplw r26, r0
 /* 803643E8 0032D9A8  41 82 00 0C */	beq .L_803643F4
 /* 803643EC 0032D9AC  7F 43 D3 78 */	mr r3, r26
 /* 803643F0 0032D9B0  48 00 2F 31 */	bl __VISetYUVSEL
 .L_803643F4:
-/* 803643F4 0032D9B4  93 4D 9B 88 */	stw r26, lbl_80665D08@sda21(r13)
+/* 803643F4 0032D9B4  93 4D 9B 88 */	stw r26, "@LOCAL@__VIRetraceHandler__FsP9OSContext@old_dtvStatus"@sda21(r13)
 /* 803643F8 0032D9B8  4B FF 45 B9 */	bl OSDisableInterrupts
 /* 803643FC 0032D9BC  80 AD BA 88 */	lwz r5, CurrTvMode@sda21(r13)
 /* 80364400 0032D9C0  28 05 00 08 */	cmplwi r5, 8
@@ -363,7 +363,7 @@
 /* 80364430 0032D9F0  7C BD 2B 78 */	mr r29, r5
 .L_80364434:
 /* 80364434 0032D9F4  4B FF 45 BD */	bl OSRestoreInterrupts
-/* 80364438 0032D9F8  80 0D 9B 8C */	lwz r0, lbl_80665D0C@sda21(r13)
+/* 80364438 0032D9F8  80 0D 9B 8C */	lwz r0, "@LOCAL@__VIRetraceHandler__FsP9OSContext@old_tvtype@0"@sda21(r13)
 /* 8036443C 0032D9FC  7C 1D 00 40 */	cmplw r29, r0
 /* 80364440 0032DA00  41 82 00 CC */	beq .L_8036450C
 /* 80364444 0032DA04  28 1D 00 05 */	cmplwi r29, 5
@@ -430,7 +430,7 @@
 /* 80364508 0032DAC8  90 0D BA 38 */	stw r0, _gIdleCount_dvd@sda21(r13)
 .L_8036450C:
 /* 8036450C 0032DACC  80 0D BA BC */	lwz r0, flushFlag3in1@sda21(r13)
-/* 80364510 0032DAD0  93 AD 9B 8C */	stw r29, lbl_80665D0C@sda21(r13)
+/* 80364510 0032DAD0  93 AD 9B 8C */	stw r29, "@LOCAL@__VIRetraceHandler__FsP9OSContext@old_tvtype@0"@sda21(r13)
 /* 80364514 0032DAD4  2C 00 00 00 */	cmpwi r0, 0
 /* 80364518 0032DAD8  41 82 00 D8 */	beq .L_803645F0
 /* 8036451C 0032DADC  3B A0 00 01 */	li r29, 1
@@ -581,7 +581,7 @@
 /* 80364708 0032DCC8  7C 03 00 40 */	cmplw r3, r0
 /* 8036470C 0032DCCC  41 80 00 0C */	blt .L_80364718
 /* 80364710 0032DCD0  38 00 00 01 */	li r0, 1
-/* 80364714 0032DCD4  90 0D BA 78 */	stw r0, lbl_80667BF8@sda21(r13)
+/* 80364714 0032DCD4  90 0D BA 78 */	stw r0, "@LOCAL@__VIRetraceHandler__FsP9OSContext@DimmingOFF_Pending@4"@sda21(r13)
 .L_80364718:
 /* 80364718 0032DCD8  80 6D BA 38 */	lwz r3, _gIdleCount_dvd@sda21(r13)
 /* 8036471C 0032DCDC  80 0D BA 30 */	lwz r0, THD_TIME_TO_DVD_STOP@sda21(r13)
@@ -595,7 +595,7 @@
 /* 80364738 0032DCF8  80 0D BA 2C */	lwz r0, NEW_TIME_TO_DIMMING@sda21(r13)
 /* 8036473C 0032DCFC  90 0D BA 28 */	stw r0, THD_TIME_TO_DIMMING@sda21(r13)
 .L_80364740:
-/* 80364740 0032DD00  80 6D 9B 90 */	lwz r3, lbl_80665D10@sda21(r13)
+/* 80364740 0032DD00  80 6D 9B 90 */	lwz r3, "@LOCAL@__VIRetraceHandler__FsP9OSContext@__VIDimmingFlag_Enable_old@1"@sda21(r13)
 /* 80364744 0032DD04  80 0D BA B8 */	lwz r0, __VIDimmingFlag_Enable@sda21(r13)
 /* 80364748 0032DD08  7C 03 00 00 */	cmpw r3, r0
 /* 8036474C 0032DD0C  41 82 00 38 */	beq .L_80364784
@@ -607,7 +607,7 @@
 /* 80364764 0032DD24  7C 03 00 40 */	cmplw r3, r0
 /* 80364768 0032DD28  41 80 00 0C */	blt .L_80364774
 /* 8036476C 0032DD2C  38 00 00 01 */	li r0, 1
-/* 80364770 0032DD30  90 0D BA 78 */	stw r0, lbl_80667BF8@sda21(r13)
+/* 80364770 0032DD30  90 0D BA 78 */	stw r0, "@LOCAL@__VIRetraceHandler__FsP9OSContext@DimmingOFF_Pending@4"@sda21(r13)
 .L_80364774:
 /* 80364774 0032DD34  38 00 00 00 */	li r0, 0
 /* 80364778 0032DD38  90 0D BA 34 */	stw r0, _gIdleCount_dimming@sda21(r13)
@@ -619,9 +619,9 @@
 /* 8036478C 0032DD4C  7C 03 00 40 */	cmplw r3, r0
 /* 80364790 0032DD50  40 82 00 0C */	bne .L_8036479C
 /* 80364794 0032DD54  38 00 00 01 */	li r0, 1
-/* 80364798 0032DD58  90 0D BA 74 */	stw r0, lbl_80667BF4@sda21(r13)
+/* 80364798 0032DD58  90 0D BA 74 */	stw r0, "@LOCAL@__VIRetraceHandler__FsP9OSContext@DimmingON_Pending@3"@sda21(r13)
 .L_8036479C:
-/* 8036479C 0032DD5C  80 0D BA 78 */	lwz r0, lbl_80667BF8@sda21(r13)
+/* 8036479C 0032DD5C  80 0D BA 78 */	lwz r0, "@LOCAL@__VIRetraceHandler__FsP9OSContext@DimmingOFF_Pending@4"@sda21(r13)
 /* 803647A0 0032DD60  2C 00 00 00 */	cmpwi r0, 0
 /* 803647A4 0032DD64  41 82 00 28 */	beq .L_803647CC
 /* 803647A8 0032DD68  38 60 00 00 */	li r3, 0
@@ -631,10 +631,10 @@
 /* 803647B8 0032DD78  2C 03 00 01 */	cmpwi r3, 1
 /* 803647BC 0032DD7C  40 82 00 10 */	bne .L_803647CC
 /* 803647C0 0032DD80  38 00 00 00 */	li r0, 0
-/* 803647C4 0032DD84  90 0D BA 78 */	stw r0, lbl_80667BF8@sda21(r13)
+/* 803647C4 0032DD84  90 0D BA 78 */	stw r0, "@LOCAL@__VIRetraceHandler__FsP9OSContext@DimmingOFF_Pending@4"@sda21(r13)
 /* 803647C8 0032DD88  90 0D BA 3C */	stw r0, __VIDimmingState@sda21(r13)
 .L_803647CC:
-/* 803647CC 0032DD8C  80 0D BA 74 */	lwz r0, lbl_80667BF4@sda21(r13)
+/* 803647CC 0032DD8C  80 0D BA 74 */	lwz r0, "@LOCAL@__VIRetraceHandler__FsP9OSContext@DimmingON_Pending@3"@sda21(r13)
 /* 803647D0 0032DD90  2C 00 00 00 */	cmpwi r0, 0
 /* 803647D4 0032DD94  41 82 00 2C */	beq .L_80364800
 /* 803647D8 0032DD98  38 60 00 01 */	li r3, 1
@@ -645,10 +645,10 @@
 /* 803647EC 0032DDAC  40 82 00 14 */	bne .L_80364800
 /* 803647F0 0032DDB0  38 60 00 00 */	li r3, 0
 /* 803647F4 0032DDB4  38 00 00 01 */	li r0, 1
-/* 803647F8 0032DDB8  90 6D BA 74 */	stw r3, lbl_80667BF4@sda21(r13)
+/* 803647F8 0032DDB8  90 6D BA 74 */	stw r3, "@LOCAL@__VIRetraceHandler__FsP9OSContext@DimmingON_Pending@3"@sda21(r13)
 /* 803647FC 0032DDBC  90 0D BA 3C */	stw r0, __VIDimmingState@sda21(r13)
 .L_80364800:
-/* 80364800 0032DDC0  80 6D 9B 94 */	lwz r3, lbl_80665D14@sda21(r13)
+/* 80364800 0032DDC0  80 6D 9B 94 */	lwz r3, "@LOCAL@__VIRetraceHandler__FsP9OSContext@__VIDVDStopFlag_Enable_old@2"@sda21(r13)
 /* 80364804 0032DDC4  80 0D BA B4 */	lwz r0, __VIDVDStopFlag_Enable@sda21(r13)
 /* 80364808 0032DDC8  7C 03 00 00 */	cmpw r3, r0
 /* 8036480C 0032DDCC  41 82 00 2C */	beq .L_80364838
@@ -691,9 +691,9 @@
 /* 80364894 0032DE54  80 8D BA B4 */	lwz r4, __VIDVDStopFlag_Enable@sda21(r13)
 /* 80364898 0032DE58  80 6D BA 2C */	lwz r3, NEW_TIME_TO_DIMMING@sda21(r13)
 /* 8036489C 0032DE5C  80 0D BA 34 */	lwz r0, _gIdleCount_dimming@sda21(r13)
-/* 803648A0 0032DE60  90 AD 9B 90 */	stw r5, lbl_80665D10@sda21(r13)
+/* 803648A0 0032DE60  90 AD 9B 90 */	stw r5, "@LOCAL@__VIRetraceHandler__FsP9OSContext@__VIDimmingFlag_Enable_old@1"@sda21(r13)
 /* 803648A4 0032DE64  7C 03 00 40 */	cmplw r3, r0
-/* 803648A8 0032DE68  90 8D 9B 94 */	stw r4, lbl_80665D14@sda21(r13)
+/* 803648A8 0032DE68  90 8D 9B 94 */	stw r4, "@LOCAL@__VIRetraceHandler__FsP9OSContext@__VIDVDStopFlag_Enable_old@2"@sda21(r13)
 /* 803648AC 0032DE6C  40 81 00 18 */	ble .L_803648C4
 /* 803648B0 0032DE70  80 0D BA 3C */	lwz r0, __VIDimmingState@sda21(r13)
 /* 803648B4 0032DE74  2C 00 00 00 */	cmpwi r0, 0
@@ -752,7 +752,7 @@
 .endfn VISetPostRetraceCallback
 
 .balign 16, 0
-.fn getTiming, global
+.fn getTiming, local
 /* 80364980 0032DF40  28 03 00 22 */	cmplwi r3, 0x22
 /* 80364984 0032DF44  41 81 01 0C */	bgt .L_80364A90
 /* 80364988 0032DF48  3C 80 80 56 */	lis r4, jumptable_8055FDAC@ha
@@ -1364,7 +1364,7 @@
 .endfn VIWaitForRetrace
 
 .balign 16, 0
-.fn setFbbRegs, global
+.fn setFbbRegs, local
 /* 80365250 0032E810  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80365254 0032E814  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80365258 0032E818  89 03 00 2C */	lbz r8, 0x2c(r3)
@@ -1549,7 +1549,7 @@
 .endfn setFbbRegs
 
 .balign 16, 0
-.fn setHorizontalRegs, global
+.fn setHorizontalRegs, local
 /* 80365500 0032EAC0  80 ED BA 50 */	lwz r7, changed@sda21(r13)
 /* 80365504 0032EAC4  3D 20 80 5E */	lis r9, regs@ha
 /* 80365508 0032EAC8  3C C0 80 5E */	lis r6, HorVer@ha
@@ -1611,7 +1611,7 @@
 .endfn setHorizontalRegs
 
 .balign 16, 0
-.fn setVerticalRegs, global
+.fn setVerticalRegs, local
 /* 803655E0 0032EBA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 803655E4 0032EBA4  3D 60 80 5E */	lis r11, HorVer@ha
 /* 803655E8 0032EBA8  39 6B D9 F0 */	addi r11, r11, HorVer@l
@@ -1749,11 +1749,11 @@
 /* 803657DC 0032ED9C  54 1C F0 BE */	srwi r28, r0, 2
 /* 803657E0 0032EDA0  28 1C 00 04 */	cmplwi r28, 4
 /* 803657E4 0032EDA4  40 82 00 6C */	bne .L_80365850
-/* 803657E8 0032EDA8  80 0D BA 7C */	lwz r0, lbl_80667BFC@sda21(r13)
+/* 803657E8 0032EDA8  80 0D BA 7C */	lwz r0, "@LOCAL@PrintDebugPalCaution__Fv@message"@sda21(r13)
 /* 803657EC 0032EDAC  2C 00 00 00 */	cmpwi r0, 0
 /* 803657F0 0032EDB0  40 82 00 60 */	bne .L_80365850
 /* 803657F4 0032EDB4  38 00 00 01 */	li r0, 1
-/* 803657F8 0032EDB8  90 0D BA 7C */	stw r0, lbl_80667BFC@sda21(r13)
+/* 803657F8 0032EDB8  90 0D BA 7C */	stw r0, "@LOCAL@PrintDebugPalCaution__Fv@message"@sda21(r13)
 /* 803657FC 0032EDBC  38 7F 03 BC */	addi r3, r31, 0x3bc
 /* 80365800 0032EDC0  4C C6 31 82 */	crclr 6
 /* 80365804 0032EDC4  4B FE F6 ED */	bl OSReport
@@ -3011,9 +3011,9 @@
 
 .balign 16, 0
 .fn VIResetDimmingCount, global
-/* 803669D0 0032FF90  3C 60 80 5E */	lis r3, lbl_805DDA48@ha
+/* 803669D0 0032FF90  3C 60 80 5E */	lis r3, __VIDimmingFlag_DEV_IDLE@ha
 /* 803669D4 0032FF94  38 00 00 00 */	li r0, 0
-/* 803669D8 0032FF98  90 03 DA 48 */	stw r0, lbl_805DDA48@l(r3)
+/* 803669D8 0032FF98  90 03 DA 48 */	stw r0, __VIDimmingFlag_DEV_IDLE@l(r3)
 /* 803669DC 0032FF9C  38 60 00 01 */	li r3, 1
 /* 803669E0 0032FFA0  4E 80 00 20 */	blr
 .endfn VIResetDimmingCount
@@ -3282,7 +3282,7 @@
 .endobj taps
 
 
-.obj GXPal528Prog, local
+.obj GXPal528Prog, global
 	.2byte 0x0000
 	.2byte 0x0006
 	.2byte 0x0280
@@ -3315,7 +3315,7 @@
 	.2byte 0x0000
 .endobj GXPal528Prog
 
-.obj GXPal528ProgSoft, local
+.obj GXPal528ProgSoft, global
 	.2byte 0x0000
 	.2byte 0x0006
 	.2byte 0x0280
@@ -3348,7 +3348,7 @@
 	.2byte 0x0000
 .endobj GXPal528ProgSoft
 
-.obj GXPal524ProgAa, local
+.obj GXPal524ProgAa, global
 	.2byte 0x0000
 	.2byte 0x0006
 	.2byte 0x0280
@@ -3502,39 +3502,34 @@
 .balign 8
 
 
-.obj __VIVersion, local
+.obj __VIVersion, global
 	.4byte lbl_8055FAA0
 .endobj __VIVersion
 
 
-#@LOCAL@OnShutdown__FiUl@first
-.obj lbl_80665D04, local
+.obj "@LOCAL@OnShutdown__FiUl@first", local
 	.4byte 0x00000001
-.endobj lbl_80665D04
+.endobj "@LOCAL@OnShutdown__FiUl@first"
 
 
-#@LOCAL@__VIRetraceHandler__FsP9OSContext@old_dtvStatus
-.obj lbl_80665D08, local
+.obj "@LOCAL@__VIRetraceHandler__FsP9OSContext@old_dtvStatus", local
 	.4byte 0x000003E7
-.endobj lbl_80665D08
+.endobj "@LOCAL@__VIRetraceHandler__FsP9OSContext@old_dtvStatus"
 
 
-#@LOCAL@__VIRetraceHandler__FsP9OSContext@old_tvtype@0
-.obj lbl_80665D0C, local
+.obj "@LOCAL@__VIRetraceHandler__FsP9OSContext@old_tvtype@0", local
 	.4byte 0x000003E7
-.endobj lbl_80665D0C
+.endobj "@LOCAL@__VIRetraceHandler__FsP9OSContext@old_tvtype@0"
 
 
-#@LOCAL@__VIRetraceHandler__FsP9OSContext@__VIDimmingFlag_Enable_old@1
-.obj lbl_80665D10, local
+.obj "@LOCAL@__VIRetraceHandler__FsP9OSContext@__VIDimmingFlag_Enable_old@1", local
 	.4byte 0x00000001
-.endobj lbl_80665D10
+.endobj "@LOCAL@__VIRetraceHandler__FsP9OSContext@__VIDimmingFlag_Enable_old@1"
 
 
-#@LOCAL@__VIRetraceHandler__FsP9OSContext@__VIDVDStopFlag_Enable_old@2
-.obj lbl_80665D14, local
+.obj "@LOCAL@__VIRetraceHandler__FsP9OSContext@__VIDVDStopFlag_Enable_old@2", local
 	.4byte 0x00000001
-.endobj lbl_80665D14
+.endobj "@LOCAL@__VIRetraceHandler__FsP9OSContext@__VIDVDStopFlag_Enable_old@2"
 
 
 .obj lbl_80665D18, global
@@ -3546,20 +3541,24 @@
 
 
 .obj shdwRegs, local
-	.skip 0x78
+	.skip 0x76
 .endobj shdwRegs
 
+.skip 2
+
 .obj regs, local
-	.skip 0x78
+	.skip 0x76
 .endobj regs
+
+.skip 2
 
 .obj HorVer, local
 	.skip 0x58
 .endobj HorVer
 
-.obj lbl_805DDA48, local
+.obj __VIDimmingFlag_DEV_IDLE, local
 	.skip 0x28
-.endobj lbl_805DDA48
+.endobj __VIDimmingFlag_DEV_IDLE
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
@@ -3642,25 +3641,21 @@
 	.skip 0x4
 .endobj timingExtra
 
-#@LOCAL@OnShutdown__FiUl@count@0
-.obj lbl_80667BF0, local
+.obj "@LOCAL@OnShutdown__FiUl@count@0", local
 	.skip 0x4
-.endobj lbl_80667BF0
+.endobj "@LOCAL@OnShutdown__FiUl@count@0"
 
-#@LOCAL@__VIRetraceHandler__FsP9OSContext@DimmingON_Pending@3
-.obj lbl_80667BF4, local
+.obj "@LOCAL@__VIRetraceHandler__FsP9OSContext@DimmingON_Pending@3", local
 	.skip 0x4
-.endobj lbl_80667BF4
+.endobj "@LOCAL@__VIRetraceHandler__FsP9OSContext@DimmingON_Pending@3"
 
-#@LOCAL@__VIRetraceHandler__FsP9OSContext@DimmingOFF_Pending@4
-.obj lbl_80667BF8, local
+.obj "@LOCAL@__VIRetraceHandler__FsP9OSContext@DimmingOFF_Pending@4", local
 	.skip 0x4
-.endobj lbl_80667BF8
+.endobj "@LOCAL@__VIRetraceHandler__FsP9OSContext@DimmingOFF_Pending@4"
 
-#@LOCAL@PrintDebugPalCaution__Fv@message
-.obj lbl_80667BFC, local
+.obj "@LOCAL@PrintDebugPalCaution__Fv@message", local
 	.skip 0x4
-.endobj lbl_80667BFC
+.endobj "@LOCAL@PrintDebugPalCaution__Fv@message"
 
 .obj CurrBufAddr, local
 	.skip 0x4

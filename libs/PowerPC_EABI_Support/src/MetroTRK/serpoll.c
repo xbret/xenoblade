@@ -14,19 +14,25 @@ void* gTRKInputPendingPtr;
 int TRKTestForPacket(){
     TRKBufferUnk buffer;
     int freeBuffer; //r31
+	UARTError uartError;
+	DSError error;
 
     if(TRKPollUART() <= 0) return -1;
 
+	//TODO: this should set error
     freeBuffer = TRK_GetFreeBuffer(&buffer.unk4, &buffer.unk0);
     TRK_SetBufferPosition(buffer.unk0, 0);
+
+	uartError = TRKReadUARTN(buffer.unk8, sizeof(buffer.unk8));
     
-    if(!TRKReadUARTN(buffer.unk8, sizeof(buffer.unk8))){
+    if(uartError == kUARTNoError){
         TRKAppendBuffer_ui8(buffer.unk0, buffer.unk8, sizeof(buffer.unk8));
         freeBuffer = buffer.unk4;
         int r4 = *(u32*)(buffer.unk8) - sizeof(buffer.unk8);
         
         if(r4 > 0){
-            if(!TRKReadUARTN(buffer.mBuffer, r4)){
+			uartError = TRKReadUARTN(buffer.mBuffer, r4);
+            if(uartError == kUARTNoError){
                 TRKAppendBuffer_ui8(buffer.unk0, buffer.mBuffer, *(u32*)(buffer.unk8));
             }else{
                 TRK_ReleaseBuffer(freeBuffer);
