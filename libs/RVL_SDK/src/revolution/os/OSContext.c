@@ -521,7 +521,7 @@ void OSDumpContext(const OSContext* ctx) {
 }
 
 static asm void OSSwitchFPUContext(register u8 err, register OSContext* ctx) {
-        nofralloc
+    nofralloc
 
     mfmsr r5
     ori r5, r5, MSR_FP

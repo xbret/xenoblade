@@ -1848,5 +1848,5 @@
 .balign 8
 
 .obj TRK_saved_exceptionID, local
-	.skip 0x8
+	.skip 0x2
 .endobj TRK_saved_exceptionID

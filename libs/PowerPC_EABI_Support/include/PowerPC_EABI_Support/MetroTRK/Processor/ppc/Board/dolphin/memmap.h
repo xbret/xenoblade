@@ -8,7 +8,8 @@ extern "C"{
 #endif
 
 typedef struct TRKMemMap{
-	u32 unk0[2];
+	u32 unk0;
+	u32 unk4;
 	int unk8;
 	int unkC;
 } TRKMemMap;

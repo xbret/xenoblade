@@ -10,21 +10,15 @@ extern "C"{
 
 
 typedef struct TRKCPUState{
-	u32 unk0;
-	u32 unk4;
-	u32 unk8;
-	u32 unkC;
-	u32 unk10;
-	u32 unk14;
-	u32 unk18;
-	u8 unk1C[0x80 - 0x1c];
+	u32 gprs[32]; //0x0
 	u32 pc; //0x80
-	u32 unk84;
-	u32 unk88;
-	u32 unk8C;
-	u32 unk90;
-	u8 unk94[0x1a8 - 0x94];
-	float srs[16]; //0x1a8
+	u32 lr; //0x84
+	u32 cr; //0x88
+	u32 ctr; //0x8C
+	u32 xer; //0x90
+	double fprs[32]; //0x94 no proof but likely
+	u8 unk194[0x14];
+	u32 srs[16]; //0x1a8
 	u32 unk1E8; //tbl
 	u32 unk1EC; //tbu
 	u32 unk1F0; //hid0
@@ -101,16 +95,15 @@ typedef struct TRKCPUState{
 	u32 unk2F0; //hid2?
 	u32 unk2F4; //hid4?
 
-	u16 unk2F8; //also read as a 32bit num
-	u16 unk2FA;
+	u32 unk2F8;
 
 	u32 gqrs[8]; //0x2fc
 	u32 wpar; //0x31c
 	u32 dmau; //0x320
 	u32 dmal; //0x324
 
-	u8 unk2FC[0x42c - 0x328];
-	u32 lr; //0x42c
+	u8 unk328[0x42c - 0x328];
+	u32 unk42C; //0x42c lr?
 } TRKCPUState;
 
 #ifdef __cplusplus

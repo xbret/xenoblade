@@ -19,41 +19,41 @@ static u8 gWriteBuf[0x110a]; //unused
 
 asm void TRKLoadContext(OSContext* ctx, u32 r4){
     nofralloc
-    lwz r0, 0(r3)
-    lwz r1, 4(r3)
-    lwz r2, 8(r3)
-    lhz r5, 0x1a2(r3)
+    lwz r0, OSContext.gprs[0](r3)
+    lwz r1, OSContext.gprs[1](r3)
+    lwz r2, OSContext.gprs[2](r3)
+    lhz r5, OSContext.state(r3)
     rlwinm. r6, r5, 0, 0x1e, 0x1e
     beq L_802CC24C
     rlwinm r5, r5, 0, 0x1f, 0x1d
-    sth r5, 0x1a2(r3)
-    lmw r5, 0x14(r3)
+    sth r5, OSContext.state(r3)
+    lmw r5, OSContext.gprs[5](r3)
     b L_802CC250
 L_802CC24C:
-    lmw r13, 0x34(r3)
+    lmw r13, OSContext.gprs[13](r3)
 L_802CC250:
     mr r31, r3
     mr r3, r4
-    lwz r4, 0x80(r31)
+    lwz r4, OSContext.cr(r31)
     mtcrf 0xff, r4
-    lwz r4, 0x84(r31)
+    lwz r4, OSContext.lr(r31)
     mtlr r4
-    lwz r4, 0x88(r31)
+    lwz r4, OSContext.ctr(r31)
     mtctr r4
-    lwz r4, 0x8c(r31)
+    lwz r4, OSContext.xer(r31)
     mtxer r4
     mfmsr r4
     rlwinm r4, r4, 0, 0x11, 0xf
     rlwinm r4, r4, 0, 0x1f, 0x1d
     mtmsr r4
     mtsprg 1, r2
-    lwz r4, 0xc(r31)
+    lwz r4, OSContext.gprs[3](r31)
     mtsprg 2, r4
-    lwz r4, 0x10(r31)
+    lwz r4, OSContext.gprs[4](r31)
     mtsprg 3, r4
-    lwz r2, 0x198(r31)
-    lwz r4, 0x19c(r31)
-    lwz r31, 0x7c(r31)
+    lwz r2, OSContext.srr0(r31)
+    lwz r4, OSContext.srr1(r31)
+    lwz r31, OSContext.gprs[31](r31)
     b TRK_InterruptHandler
 }
 

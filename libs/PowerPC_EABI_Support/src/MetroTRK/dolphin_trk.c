@@ -10,110 +10,138 @@
 
 
 static u32 TRK_ISR_OFFSETS[16] = {
-    0x100,
-    0x200,
-    0x300,
-    0x400,
-    0x500,
-    0x600,
-    0x700,
-    0x800,
-    0x900,
-    0xC00,
-    0xD00,
-    0xF00,
-    0x1300,
-    0x1400,
-    0x1700,
+    PPC_SystemReset,
+    PPC_MachineCheck,
+    PPC_DataStorage,
+    PPC_InstructionStorage,
+    PPC_ExternalInterrupt,
+    PPC_Alignment,
+    PPC_Program,
+    PPC_FloatingPointUnavaiable,
+    PPC_Decrementer,
+    PPC_SystemCall,
+    PPC_Trace,
+    PPC_PerformanceMonitor,
+    PPC_InstructionAddressBreakpoint,
+    PPC_SystemManagementInterrupt,
+    PPC_ThermalManagementInterrupt,
     0
 };
 
 static u32 lc_base;
 
-//u32 r3, u32 r4, u32 r5
+//r5: hardware id
 asm void InitMetroTRK(){
     nofralloc
     addi r1, r1, -4
     stw r3, 0(r1)
     lis r3, gTRKCPUState@h
-    ori r3,r3, gTRKCPUState@l
-    stmw r0, 0(r3)
+    ori r3, r3, gTRKCPUState@l
+    stmw r0, TRKCPUState.gprs(r3) //Save the gprs
     lwz r4, 0(r1)
     addi r1, r1, 4
-    stw r1, 0x4(r3)
-    stw r4, 0xc(r3)
+    stw r1, TRKCPUState.gprs[1](r3)
+    stw r4, TRKCPUState.gprs[3](r3)
     mflr r4
-    stw r4, 0x84(r3)
-    stw r4, 0x80(r3)
+    stw r4, TRKCPUState.lr(r3)
+    stw r4, TRKCPUState.pc(r3)
     mfcr r4
-    stw r4, 0x88(r3)
+    stw r4, TRKCPUState.cr(r3)
     mfmsr r4
     ori r3, r4, 0x8000
     xori r3, r3, 0x8000
     mtmsr r3
     mtsrr1 r4
+	//Save misc registers to gTRKCPUState
     bl TRKSaveExtended1Block
     lis r3, gTRKCPUState@h
     ori r3, r3, gTRKCPUState@l
-    lmw r0, 0(r3)
-    li r0,0
+    lmw r0, TRKCPUState.gprs(r3) //Restore the gprs
+	//Reset IABR and DABR
+    li r0, 0
     mtiabr r0
     mtdabr r0
+	//Restore stack pointer
     lis r1, _db_stack_addr@h
     ori r1, r1, _db_stack_addr@l
-    mr r3,r5
-    bl InitMetroTRKCommTable
-    cmpwi r3,1
-    bne L_802CBF90
-    lwz r4, 0x84(r3)
+    mr r3, r5
+    bl InitMetroTRKCommTable //Initialize comm table
+	/*
+	If InitMetroTRKCommTable returned 1 (failure), an invalid hardware
+	id or the id for GDEV was somehow passed. Since only BBA or NDEV
+	are supported, we return early. Otherwise, we proceed with
+	starting up TRK.
+	*/
+    cmpwi r3, 1
+    bne initCommTableSuccess
+	/*
+	BUG: The code probably orginally reloaded gTRKCPUState here, but
+	as is it will read the returned value of InitMetroTRKCommTable
+	as a TRKCPUState struct pointer, causing the CPU to return to
+	a garbage code address.
+	*/
+    lwz r4, TRKCPUState.lr(r3)
     mtlr r4
-    lmw r0, 0(r3)
+    lmw r0, TRKCPUState.gprs(r3) //Restore the gprs
     blr
-L_802CBF90:
-    b TRK_main
+initCommTableSuccess:
+    b TRK_main //Jump to TRK_main
     blr
 }
 
-//u32 r3, u32 r4, u32 r5
 asm void InitMetroTRK_BBA(){
     nofralloc
     addi r1, r1, -4
     stw r3, 0(r1)
     lis r3, gTRKCPUState@h
     ori r3, r3, gTRKCPUState@l
-    stmw r0, 0(r3)
+    stmw r0, TRKCPUState.gprs(r3) //Save the gprs
     lwz r4, 0(r1)
     addi r1, r1, 4
-    stw r1, 4(r3)
-    stw r4, 0xc(r3)
+    stw r1, TRKCPUState.gprs[1](r3)
+    stw r4, TRKCPUState.gprs[3](r3)
     mflr r4
-    stw r4, 0x84(r3)
-    stw r4, 0x80(r3)
+    stw r4, TRKCPUState.lr(r3)
+    stw r4, TRKCPUState.pc(r3)
     mfcr r4
-    stw r4, 0x88(r3)
+    stw r4, TRKCPUState.cr(r3)
     mfmsr r4
     ori r3, r4, 0x8000
     mtmsr r3
     mtsrr1 r4
+	//Save misc registers to gTRKCPUState
     bl TRKSaveExtended1Block
     lis r3, gTRKCPUState@h
     ori r3, r3, gTRKCPUState@l
-    lmw r0, 0(r3)
+    lmw r0, TRKCPUState.gprs(r3) //Restore the gprs
+	//Reset IABR and DABR
     li r0, 0
     mtiabr r0
     mtdabr r0
+	//Restore the stack pointer
     lis r1, _db_stack_addr@h
     ori r1, r1, _db_stack_addr@l
     li r3, 2
-    bl InitMetroTRKCommTable
+    bl InitMetroTRKCommTable //Initialize comm table as BBA hardware
+	/*
+	If InitMetroTRKCommTable returned 1 (failure), something went wrong 
+	or whatever reason. If everything goes as expected, we proceed with
+	starting up TRK.
+	*/
     cmpwi r3, 1
-    bne L_802CC024
-    lwz r4, 0x84(r3)
+    bne initCommTableSuccess
+	/*
+	BUG: The code probably orginally reloaded gTRKCPUState here, but
+	as is it will read the returned value of InitMetroTRKCommTable
+	as a TRKCPUState struct pointer, causing the CPU to return to
+	a garbage code address.
+	*/
+    lwz r4, TRKCPUState.lr(r3)
     mtlr r4
-    lmw r0, 0(r3)
+    lmw r0, TRKCPUState.gprs(r3)
     blr
-L_802CC024:
-    b TRK_main
+initCommTableSuccess:
+    b TRK_main //Jump to TRK_main
     blr
 }
 
@@ -174,5 +202,6 @@ DSError TRKInitializeTarget(){
 }
 
 void __TRKreset(){
+	//Looks like the devs forgot to update this lol
     OSResetSystem(0, 0, 0);
 }

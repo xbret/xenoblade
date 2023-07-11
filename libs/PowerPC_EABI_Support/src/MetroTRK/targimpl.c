@@ -1,6 +1,7 @@
 #include "PowerPC_EABI_Support/MetroTRK/targimpl.h"
 
 #include "PowerPC_EABI_Support/MetroTRK/Processor/ppc/Board/dolphin/memmap.h"
+#include "revolution/OS.h"
 #include "PowerPC_EABI_Support/MetroTRK/Processor/ppc/Generic/ppc_targimpl.h"
 
 typedef struct TRKExceptionStatus{
@@ -26,9 +27,9 @@ TRKRestoreFlags gTRKRestoreFlags;
 TRKCPUState gTRKCPUState;
 
 static TRKExceptionStatus gTRKExceptionStatus = {
-    0,
-    0,
-    0,
+	0,
+	0,
+	0,
 	1,
 	0,
 	0,
@@ -36,10 +37,10 @@ static TRKExceptionStatus gTRKExceptionStatus = {
 };
 
 const TRKMemMap gTRKMemMap = {
-    0,
-    -1,
-    1,
-    1
+	0,
+	-1,
+	1,
+	1
 };
 
 TRKState gTRKState;
@@ -47,18 +48,24 @@ TRKState gTRKState;
 ui128 TRKvalue128_temp;
 TRKSaveState gTRKSaveState;
 static TRKStepStatus gTRKStepStatus;
+static u16 TRK_saved_exceptionID;
+
+typedef void (*RegAccessFunc)(u32* destPtr, ui128 val);
+
+void TRKPPCAccessSPR(u32* destPtr, u32 reg, u32 something);
+DSError TRKPPCAccessSpecialReg(u32* destPtr, u32* data);
 
 
 asm u32 __TRK_get_MSR(){
-    nofralloc
-    mfmsr r3
-    blr
+	nofralloc
+	mfmsr r3
+	blr
 }
 
 asm void __TRK_set_MSR(u32 val){
-    nofralloc
-    mtmsr r3
-    blr
+	nofralloc
+	mtmsr r3
+	blr
 }
 
 //unused
@@ -181,35 +188,38 @@ asm void __TRK_get_DBAT3L(){
 }
 
 static DSError TRKValidMemory32(const void* addr, size_t length, ValidMemoryOptions readWriteable){
-    DSError result;
-    u32 r31;
+	DSError result;
+	TRKMemMap* map;
+	u32 r31;
 
-    length += (u32)addr;
-    r31 = (length  - 1);
+	length += (u32)addr;
+	r31 = (length - 1);
 
-    result = kInvalidMemory; //r6;
-    
-    if(r31 < (u32)addr){
-        return kInvalidMemory;
-    }
+	result = kInvalidMemory; //r6;
+	
+	if(r31 < (u32)addr){
+		return result;
+	}
 
-    if((u32)addr <= gTRKMemMap.unk0[1] && r31 >= gTRKMemMap.unk0[0]){
-        if((readWriteable == kValidMemoryReadable && gTRKMemMap.unk8 == 0) || (readWriteable == kValidMemoryWriteable && gTRKMemMap.unkC == 0)){
-            result = kInvalidMemory;
-        }else{
-            result = kNoError;
+	map = (TRKMemMap*)&gTRKMemMap;
 
-            if((u32)addr < gTRKMemMap.unk0[0]){
-                result = TRKValidMemory32(addr, gTRKMemMap.unk0[0] - (u32)addr, readWriteable);
-            }
-                
-            if(result == kNoError && r31 > gTRKMemMap.unk0[1]){
-                result = TRKValidMemory32((void*)gTRKMemMap.unk0[1], r31 - gTRKMemMap.unk0[1], readWriteable);
-            }
-        }
-    }
+	if((u32)addr <= map->unk4 && r31 >= map->unk0){
+		if((readWriteable == kValidMemoryReadable && gTRKMemMap.unk8 == 0) || (readWriteable == kValidMemoryWriteable && gTRKMemMap.unkC == 0)){
+			result = kInvalidMemory;
+		}else{
+			result = kNoError;
 
-    return result;
+			if((u32)addr < gTRKMemMap.unk0){
+				result = TRKValidMemory32(addr, gTRKMemMap.unk0 - (u32)addr, readWriteable);
+			}
+				
+			if(result == kNoError && r31 > gTRKMemMap.unk4){
+				result = TRKValidMemory32((void*)gTRKMemMap.unk4, r31 - gTRKMemMap.unk4, readWriteable);
+			}
+		}
+	}
+
+	return result;
 }
 
 //copy pasted from mem_TRK.c, yuck
@@ -220,36 +230,36 @@ static u8 ppc_readbyte1(const u8* ptr){
 }
 
 static void ppc_writebyte1(u8* ptr, u8 val){
-    u32* alignedPtr = (u32 *)((u32)ptr & ~3);
-    u32 v = *alignedPtr;
-    u32 uVar3 = 0xff << ((3 - ((u32)ptr - (u32)alignedPtr)) << 3);
-    u32 iVar1 = (3 - ((u32)ptr - (u32)alignedPtr)) << 3;
+	u32* alignedPtr = (u32 *)((u32)ptr & ~3);
+	u32 v = *alignedPtr;
+	u32 uVar3 = 0xff << ((3 - ((u32)ptr - (u32)alignedPtr)) << 3);
+	u32 iVar1 = (3 - ((u32)ptr - (u32)alignedPtr)) << 3;
 	*alignedPtr = (v & ~uVar3) | (uVar3 & (val << iVar1));
 }
 
 static void TRK_ppc_memcpy(void* dest, const void* src, int n, u32 param_4, u32 param_5){
-    u32 msr;
-    u8* srcTemp = (u8*)src;
-    u8* destTemp = (u8*)dest;
+	u32 msr;
+	u8* srcTemp = (u8*)src;
+	u8* destTemp = (u8*)dest;
 
-    msr = __TRK_get_MSR(); //save the original MSR value
+	msr = __TRK_get_MSR(); //save the original MSR value
 
-    while(n != 0) {
-        u8 val;
-        __TRK_set_MSR(param_5);
-        val = ppc_readbyte1(srcTemp);
-        asm{sync}
+	while(n != 0) {
+		u8 val;
+		__TRK_set_MSR(param_5);
+		val = ppc_readbyte1(srcTemp);
+		asm{sync}
 
-        __TRK_set_MSR(param_4);
-        ppc_writebyte1(destTemp, val);
-        asm{sync}
+		__TRK_set_MSR(param_4);
+		ppc_writebyte1(destTemp, val);
+		asm{sync}
 
-        srcTemp++;
-        destTemp++;
-        n--;
-    }
+		srcTemp++;
+		destTemp++;
+		n--;
+	}
 
-    __TRK_set_MSR(msr); //restore MSR to its original value
+	__TRK_set_MSR(msr); //restore MSR to its original value
 }
 
 DSError TRKTargetAccessMemory(void* data, u32 start, size_t* length, MemoryAccessOptions accessOptions, BOOL read){
@@ -368,7 +378,14 @@ void TRKInterruptHandlerEnableInterrupts(){
 }
 
 DSError TRKTargetInterrupt(TRKEvent* event){
+	DSError error = kNoError;
 
+	if (event->mEventType - 3 >= 0 && event->mEventType - 3 < 2 && TRKTargetCheckStep() == FALSE) {
+		TRKTargetSetStopped(TRUE);
+		error = TRKDoNotifyStopped(kDSNotifyStopped);
+	}
+
+	return error;
 }
 
 void TRKTargetAddStopInfo(MessageBuffer* b){
@@ -436,7 +453,7 @@ DSError TRKTargetDoStep(){
 	return kNoError;
 }
 
-static void TRKTargetCheckStep(){
+static BOOL TRKTargetCheckStep(){
 
 }
 
@@ -470,20 +487,39 @@ DSError TRKTargetFlushCache(u32 r3, u32 r4, u32 r5){
 }
 
 BOOL TRKTargetStopped(){
-    return gTRKState.stopped;
+	return gTRKState.stopped;
 }
 
 void TRKTargetSetStopped(BOOL val){
-    gTRKState.stopped = val;
+	gTRKState.stopped = val;
 }
 
 DSError TRKTargetStop(){
-    TRKTargetSetStopped(TRUE);
-    return kNoError;
+	TRKTargetSetStopped(TRUE);
+	return kNoError;
 }
 
-void TRKPPCAccessSPR(u32 r3, u32 r4, u32 r5){
+void TRKPPCAccessSPR(u32* destPtr, u32 reg, u32 something){
+	u32 somethingElse[10] = {
+		0x60000000,
+		0x60000000,
+		0x60000000,
+		0x60000000,
+		0x60000000,
+		0x60000000,
+		0x60000000,
+		0x60000000
+	};
 
+	if(something != 0){
+		somethingElse[0] = (reg & 0xFE0) << 6 | 0x7c800000 | (reg & 0x1F) << 0x10 | 0x2a6;
+		somethingElse[1] = 0x90830000;
+	}else{
+		somethingElse[0] = 0x80830000;
+		somethingElse[1] = (reg & 0xFE0) << 6 | 0x7c800000 | (reg & 0x1F) << 0x10 | 0x3a6;
+	}
+
+	TRKPPCAccessSpecialReg(destPtr, somethingElse);
 }
 
 void TRKPPCAccessPairedSingleRegister(u32 r3, u32 r4, u32 r5){
@@ -491,41 +527,46 @@ void TRKPPCAccessPairedSingleRegister(u32 r3, u32 r4, u32 r5){
 }
 
 asm void ReadFPSCR(){
-    nofralloc
-    stwu r1, -0x40(r1)
-    stfd f31, 0x10(r1)
-    psq_st f31, 32(r1), 0, 0
-    mffs f31
-    stfd f31, 0(r3)
-    psq_l f31, 32(r1), 0, 0
-    lfd f31, 0x10(r1)
-    addi r1, r1, 0x40
-    blr
+	nofralloc
+	stwu r1, -0x40(r1)
+	stfd f31, 0x10(r1)
+	psq_st f31, 32(r1), 0, 0
+	mffs f31
+	stfd f31, 0(r3)
+	psq_l f31, 32(r1), 0, 0
+	lfd f31, 0x10(r1)
+	addi r1, r1, 0x40
+	blr
 }
 
 asm void WriteFPSCR(){
-    nofralloc
-    stwu r1, -0x40(r1)
-    stfd f31, 0x10(r1)
-    psq_st f31, 32(r1), 0, 0
-    lfd f31, 0(r3)
-    mtfsf 0xff, f31
-    psq_l f31, 32(r1), 0, 0
-    lfd f31, 0x10(r1)
-    addi r1, r1, 0x40
-    blr 
+	nofralloc
+	stwu r1, -0x40(r1)
+	stfd f31, 0x10(r1)
+	psq_st f31, 32(r1), 0, 0
+	lfd f31, 0(r3)
+	mtfsf 0xff, f31
+	psq_l f31, 32(r1), 0, 0
+	lfd f31, 0x10(r1)
+	addi r1, r1, 0x40
+	blr 
 }
 
 void TRKPPCAccessFPRegister(u32 r3, u32 r4, u32 r5){
 
 }
 
-void TRKPPCAccessSpecialReg(u32 r3, u32 r4){
-
+DSError TRKPPCAccessSpecialReg(u32* destPtr, u32* data){
+	RegAccessFunc accessFunc;
+	data[9] = 0x4e800020;
+	TRK_flush_cache(data, 0x28);
+	accessFunc = (RegAccessFunc)data;
+	accessFunc(destPtr,TRKvalue128_temp);
+	return 0;
 }
 
 void TRKTargetSetInputPendingPtr(void* ptr){
-    gTRKState.trkInputPendingPtr = ptr;
+	gTRKState.trkInputPendingPtr = ptr;
 }
 
 //unused
@@ -538,9 +579,35 @@ u8 TRKGetInTRKFlag(){
 	return gTRKExceptionStatus.unkC;
 }
 
-u32 ConvertAddress(u32 addr){
-    return addr | 0x80000000;
+u32* ConvertAddress(u32 addr){
+	return (u32*)(addr | 0x80000000);
 }
 
-static void GetThreadInfo(){
+#define INVALID_THREAD(thread) ((u32)thread == 0xFFFFFFFF || thread == NULL || (u32)thread == 0x80000000)
+
+static void GetThreadInfo(int* r3, int* r4){
+	int i;
+	OSThread* thread;
+	
+	*r3 = 1;
+	*r4 = 0;
+
+	if (INVALID_THREAD(OS_THREAD_QUEUE.head)) {
+		return;
+	}
+
+	i = 0;
+	thread = OS_THREAD_QUEUE.head;
+
+	while (thread != NULL) {
+		if(thread == OS_CURRENT_THREAD){
+			*r4 = i;
+		}
+
+		i++;
+		thread = (OSThread*)ConvertAddress((u32)thread->nextActive);
+		if (INVALID_THREAD(thread)) break;
+	}
+
+	*r3 = i;
 }
