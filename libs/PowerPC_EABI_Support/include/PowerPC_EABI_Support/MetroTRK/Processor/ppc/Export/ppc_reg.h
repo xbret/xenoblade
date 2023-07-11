@@ -17,7 +17,7 @@ typedef struct TRKCPUState{
 	u32 ctr; //0x8C
 	u32 xer; //0x90
 	double fprs[32]; //0x94 no proof but likely
-	u8 unk194[0x14];
+	u8 unk198[0x10];
 	u32 srs[16]; //0x1a8
 	u32 unk1E8; //tbl
 	u32 unk1EC; //tbu
