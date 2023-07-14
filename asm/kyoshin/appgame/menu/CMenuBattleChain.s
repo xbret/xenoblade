@@ -536,7 +536,7 @@
 /* 802AA334 002738F4  4E 80 00 20 */	blr 
 .endfn func_802AA2A0
 
-.fn func_802AA338, global
+.fn func_802AA338__Fv, global
 /* 802AA338 002738F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802AA33C 002738FC  7C 08 02 A6 */	mflr r0
 /* 802AA340 00273900  90 01 00 14 */	stw r0, 0x14(r1)
@@ -576,7 +576,7 @@
 /* 802AA3C4 00273984  7C 08 03 A6 */	mtlr r0
 /* 802AA3C8 00273988  38 21 00 10 */	addi r1, r1, 0x10
 /* 802AA3CC 0027398C  4E 80 00 20 */	blr 
-.endfn func_802AA338
+.endfn func_802AA338__Fv
 
 .fn func_802AA3D0, global
 /* 802AA3D0 00273990  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -2485,7 +2485,7 @@
 
 .obj "@eti_80032E70", local
 .hidden "@eti_80032E70"
-	.4byte func_802AA338
+	.4byte func_802AA338__Fv
 	.4byte 0x00000098
 	.4byte "@etb_8001B070"
 .endobj "@eti_80032E70"

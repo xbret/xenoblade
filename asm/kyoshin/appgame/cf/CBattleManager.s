@@ -1273,7 +1273,7 @@
 /* 800D8C18 000A21D8  4E 80 00 20 */	blr 
 .endfn __dt__800D8B9C
 
-.fn __dt__cf_CChainCombo, global
+.fn __dt__Q22cf11CChainComboFv, weak
 /* 800D8C1C 000A21DC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800D8C20 000A21E0  7C 08 02 A6 */	mflr r0
 /* 800D8C24 000A21E4  2C 03 00 00 */	cmpwi r3, 0
@@ -1291,7 +1291,7 @@
 /* 800D8C50 000A2210  7C 08 03 A6 */	mtlr r0
 /* 800D8C54 000A2214  38 21 00 10 */	addi r1, r1, 0x10
 /* 800D8C58 000A2218  4E 80 00 20 */	blr 
-.endfn __dt__cf_CChainCombo
+.endfn __dt__Q22cf11CChainComboFv
 
 .fn __dt__cf_CChainChance, global
 /* 800D8C5C 000A221C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -33490,13 +33490,13 @@
 	.4byte __dt__cf_CChainEffect
 	.4byte 0x0780001D
 	.4byte 0x00001EF4
-	.4byte __dt__cf_CChainCombo
+	.4byte __dt__Q22cf11CChainComboFv
 	.4byte 0x8780001D
 	.4byte 0x00001EDC
 	.4byte __dt__cf_CChainChance
 	.4byte 0x0780001D
 	.4byte 0x00001EF4
-	.4byte __dt__cf_CChainCombo
+	.4byte __dt__Q22cf11CChainComboFv
 	.4byte 0x0780001D
 	.4byte 0x00001EDC
 	.4byte __dt__cf_CChainChance
@@ -33643,7 +33643,7 @@
 	.4byte __dt__cf_CChainEffect
 	.4byte 0x0780001C
 	.4byte 0x00001EF4
-	.4byte __dt__cf_CChainCombo
+	.4byte __dt__Q22cf11CChainComboFv
 	.4byte 0x0780001C
 	.4byte 0x00001EDC
 	.4byte __dt__cf_CChainChance
@@ -33658,7 +33658,7 @@
 	.4byte __dt__800D8DBC
 	.4byte 0x0780001C
 	.4byte 0x00001EF4
-	.4byte __dt__cf_CChainCombo
+	.4byte __dt__Q22cf11CChainComboFv
 	.4byte 0x0780001C
 	.4byte 0x00001EDC
 	.4byte __dt__cf_CChainChance
@@ -34079,7 +34079,7 @@
 
 .obj "@eti_800261C8", local
 .hidden "@eti_800261C8"
-	.4byte __dt__cf_CChainCombo
+	.4byte __dt__Q22cf11CChainComboFv
 	.4byte 0x00000040
 	.4byte "@etb_8000A764"
 .endobj "@eti_800261C8"

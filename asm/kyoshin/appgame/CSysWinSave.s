@@ -602,19 +602,19 @@
 /* 80294820 0025DDE0  4B FF F7 98 */	b __dt__CSysWinSave
 .endfn func_8029481C
 
-.fn func_80294824, global
+.fn func_80294824__FPv, global
 /* 80294824 0025DDE4  C0 02 B0 C8 */	lfs f0, float_8066B448@sda21(r2)
 /* 80294828 0025DDE8  D0 03 00 00 */	stfs f0, 0(r3)
 /* 8029482C 0025DDEC  D0 03 00 04 */	stfs f0, 4(r3)
 /* 80294830 0025DDF0  4E 80 00 20 */	blr 
-.endfn func_80294824
+.endfn func_80294824__FPv
 
-.fn func_80294834, global
+.fn func_80294834__FPv, global
 /* 80294834 0025DDF4  C0 02 B0 C8 */	lfs f0, float_8066B448@sda21(r2)
 /* 80294838 0025DDF8  D0 03 00 00 */	stfs f0, 0(r3)
 /* 8029483C 0025DDFC  D0 03 00 04 */	stfs f0, 4(r3)
 /* 80294840 0025DE00  4E 80 00 20 */	blr 
-.endfn func_80294834
+.endfn func_80294834__FPv
 
 .fn func_80294844, global
 /* 80294844 0025DE04  C0 42 B0 CC */	lfs f2, float_8066B44C@sda21(r2)
