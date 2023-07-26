@@ -261,7 +261,7 @@
 /* 802B12D8 0027A898  81 8C 00 88 */	lwz r12, 0x88(r12)
 /* 802B12DC 0027A89C  7D 89 03 A6 */	mtctr r12
 /* 802B12E0 0027A8A0  4E 80 04 21 */	bctrl 
-/* 802B12E4 0027A8A4  48 18 30 BD */	bl Heap_getMem2RegionIndex1
+/* 802B12E4 0027A8A4  48 18 30 BD */	bl Heap_getRegionIndex2
 /* 802B12E8 0027A8A8  3C A0 80 51 */	lis r5, CMenuGameClear_strpool@ha
 /* 802B12EC 0027A8AC  7C 64 1B 78 */	mr r4, r3
 /* 802B12F0 0027A8B0  38 A5 C9 48 */	addi r5, r5, CMenuGameClear_strpool@l

@@ -1238,7 +1238,7 @@
 /* 802B73DC 0028099C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802B73E0 002809A0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802B73E4 002809A4  7C 7F 1B 78 */	mr r31, r3
-/* 802B73E8 002809A8  48 17 CF B9 */	bl Heap_getMem2RegionIndex1
+/* 802B73E8 002809A8  48 17 CF B9 */	bl Heap_getRegionIndex2
 /* 802B73EC 002809AC  3C 80 80 51 */	lis r4, CTitle_strpool@ha
 /* 802B73F0 002809B0  7F E5 FB 78 */	mr r5, r31
 /* 802B73F4 002809B4  38 84 CA 50 */	addi r4, r4, CTitle_strpool@l
@@ -1674,7 +1674,7 @@
 /* 802B7974 00280F34  80 04 00 04 */	lwz r0, 4(r4)
 /* 802B7978 00280F38  7C 05 00 40 */	cmplw r5, r0
 /* 802B797C 00280F3C  40 82 00 FC */	bne .L_802B7A78
-/* 802B7980 00280F40  48 17 CA 21 */	bl Heap_getMem2RegionIndex1
+/* 802B7980 00280F40  48 17 CA 21 */	bl Heap_getRegionIndex2
 /* 802B7984 00280F44  3F C0 80 51 */	lis r30, CTitle_strpool@ha
 /* 802B7988 00280F48  7C 64 1B 78 */	mr r4, r3
 /* 802B798C 00280F4C  3B DE CA 50 */	addi r30, r30, CTitle_strpool@l

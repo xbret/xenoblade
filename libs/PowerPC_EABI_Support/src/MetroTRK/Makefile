@@ -16,7 +16,7 @@ TRK_FILES:=\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/nubinit.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/serpoll.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/string_TRK.o\
-	$(BUILD_DIR)/libs/PowerPC_EABI_Support/asm/MetroTRK/support.o\
+	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/support.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/targcont.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/mpc_7xx_603e.o\
 	$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/msg.o\
@@ -33,6 +33,7 @@ $(TRK_FILES): CFLAGS += -Cpp_exceptions off -inline on
 
 $(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/dolphin_trk_glue.o: CFLAGS += -str pool
 $(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/msghndlr.o: CFLAGS += -str pool
+$(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/support.o: CFLAGS += -str pool
 
 $(BUILD_DIR)/libs/PowerPC_EABI_Support/src/MetroTRK/TRK_Hollywood_Revolution.a: $(TRK_FILES)
 	@echo Linking... $@

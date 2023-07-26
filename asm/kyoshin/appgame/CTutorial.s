@@ -79,7 +79,7 @@
 /* 8029AA3C 00263FFC  90 01 00 54 */	stw r0, 0x54(r1)
 /* 8029AA40 00264000  BF C1 00 48 */	stmw r30, 0x48(r1)
 /* 8029AA44 00264004  7C 7E 1B 78 */	mr r30, r3
-/* 8029AA48 00264008  48 19 99 59 */	bl Heap_getMem2RegionIndex1
+/* 8029AA48 00264008  48 19 99 59 */	bl Heap_getRegionIndex2
 /* 8029AA4C 0026400C  3F E0 80 51 */	lis r31, CTutorial_strpool@ha
 /* 8029AA50 00264010  7F C5 F3 78 */	mr r5, r30
 /* 8029AA54 00264014  38 9F B8 84 */	addi r4, r31, CTutorial_strpool@l
@@ -95,7 +95,7 @@
 /* 8029AA7C 0026403C  38 84 00 13 */	addi r4, r4, 0x13
 /* 8029AA80 00264040  4C C6 31 82 */	crclr 6
 /* 8029AA84 00264044  48 02 65 B5 */	bl sprintf
-/* 8029AA88 00264048  48 19 99 19 */	bl Heap_getMem2RegionIndex1
+/* 8029AA88 00264048  48 19 99 19 */	bl Heap_getRegionIndex2
 /* 8029AA8C 0026404C  7F C5 F3 78 */	mr r5, r30
 /* 8029AA90 00264050  38 81 00 08 */	addi r4, r1, 8
 /* 8029AA94 00264054  38 C0 00 00 */	li r6, 0
@@ -124,7 +124,7 @@
 /* 8029AAE8 002640A8  4C C6 31 82 */	crclr 6
 /* 8029AAEC 002640AC  48 02 65 4D */	bl sprintf
 .L_8029AAF0:
-/* 8029AAF0 002640B0  48 19 98 B1 */	bl Heap_getMem2RegionIndex1
+/* 8029AAF0 002640B0  48 19 98 B1 */	bl Heap_getRegionIndex2
 /* 8029AAF4 002640B4  7F C5 F3 78 */	mr r5, r30
 /* 8029AAF8 002640B8  38 81 00 08 */	addi r4, r1, 8
 /* 8029AAFC 002640BC  38 C0 00 00 */	li r6, 0
@@ -673,7 +673,7 @@
 /* 8029B230 002647F0  80 03 00 24 */	lwz r0, 0x24(r3)
 /* 8029B234 002647F4  7C 00 20 40 */	cmplw r0, r4
 /* 8029B238 002647F8  40 82 01 68 */	bne .L_8029B3A0
-/* 8029B23C 002647FC  48 19 91 65 */	bl Heap_getMem2RegionIndex1
+/* 8029B23C 002647FC  48 19 91 65 */	bl Heap_getRegionIndex2
 /* 8029B240 00264800  3F A0 80 51 */	lis r29, CTutorial_strpool@ha
 /* 8029B244 00264804  7C 64 1B 78 */	mr r4, r3
 /* 8029B248 00264808  3B BD B8 84 */	addi r29, r29, CTutorial_strpool@l
@@ -788,7 +788,7 @@
 /* 8029B3F0 002649B0  80 03 00 2C */	lwz r0, 0x2c(r3)
 /* 8029B3F4 002649B4  7C 00 20 40 */	cmplw r0, r4
 /* 8029B3F8 002649B8  40 82 00 88 */	bne .L_8029B480
-/* 8029B3FC 002649BC  48 19 8F A5 */	bl Heap_getMem2RegionIndex1
+/* 8029B3FC 002649BC  48 19 8F A5 */	bl Heap_getRegionIndex2
 /* 8029B400 002649C0  3F A0 80 51 */	lis r29, CTutorial_strpool@ha
 /* 8029B404 002649C4  7C 64 1B 78 */	mr r4, r3
 /* 8029B408 002649C8  3B BD B8 84 */	addi r29, r29, CTutorial_strpool@l

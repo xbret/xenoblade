@@ -239,7 +239,7 @@
 /* 80098F54 00062514  7D 89 03 A6 */	mtctr r12
 /* 80098F58 00062518  4E 80 04 21 */	bctrl 
 /* 80098F5C 0006251C  7C 7F 1B 78 */	mr r31, r3
-/* 80098F60 00062520  48 04 02 29 */	bl func_800D9188
+/* 80098F60 00062520  48 04 02 29 */	bl getBattleManagerInstance
 /* 80098F64 00062524  88 03 01 AA */	lbz r0, 0x1aa(r3)
 /* 80098F68 00062528  3B C0 00 00 */	li r30, 0
 /* 80098F6C 0006252C  28 00 00 01 */	cmplwi r0, 1
@@ -248,7 +248,7 @@
 /* 80098F78 00062538  41 81 00 08 */	bgt .L_80098F80
 /* 80098F7C 0006253C  3B C0 00 01 */	li r30, 1
 .L_80098F80:
-/* 80098F80 00062540  48 04 02 09 */	bl func_800D9188
+/* 80098F80 00062540  48 04 02 09 */	bl getBattleManagerInstance
 /* 80098F84 00062544  83 99 00 5C */	lwz r28, 0x5c(r25)
 /* 80098F88 00062548  A8 83 20 C8 */	lha r4, 0x20c8(r3)
 /* 80098F8C 0006254C  80 7C 00 04 */	lwz r3, 4(r28)
@@ -1408,7 +1408,7 @@
 /* 8009A090 00063650  7D 89 03 A6 */	mtctr r12
 /* 8009A094 00063654  4E 80 04 21 */	bctrl 
 .L_8009A098:
-/* 8009A098 00063658  48 03 F0 F1 */	bl func_800D9188
+/* 8009A098 00063658  48 03 F0 F1 */	bl getBattleManagerInstance
 /* 8009A09C 0006365C  80 99 00 5C */	lwz r4, 0x5c(r25)
 /* 8009A0A0 00063660  38 63 01 A8 */	addi r3, r3, 0x1a8
 /* 8009A0A4 00063664  48 1D F9 4D */	bl func_802799F0
@@ -3414,7 +3414,7 @@
 /* 8009BD7C 0006533C  48 0D 8F 1D */	bl func_80174C98
 /* 8009BD80 00065340  2C 03 00 00 */	cmpwi r3, 0
 /* 8009BD84 00065344  41 82 04 18 */	beq .L_8009C19C
-/* 8009BD88 00065348  48 03 D4 01 */	bl func_800D9188
+/* 8009BD88 00065348  48 03 D4 01 */	bl getBattleManagerInstance
 /* 8009BD8C 0006534C  88 63 01 AA */	lbz r3, 0x1aa(r3)
 /* 8009BD90 00065350  38 00 00 00 */	li r0, 0
 /* 8009BD94 00065354  28 03 00 01 */	cmplwi r3, 1
@@ -3425,7 +3425,7 @@
 .L_8009BDA8:
 /* 8009BDA8 00065368  2C 00 00 00 */	cmpwi r0, 0
 /* 8009BDAC 0006536C  40 82 03 F0 */	bne .L_8009C19C
-/* 8009BDB0 00065370  48 03 D3 D9 */	bl func_800D9188
+/* 8009BDB0 00065370  48 03 D3 D9 */	bl getBattleManagerInstance
 /* 8009BDB4 00065374  A8 03 20 C8 */	lha r0, 0x20c8(r3)
 /* 8009BDB8 00065378  2C 00 00 00 */	cmpwi r0, 0
 /* 8009BDBC 0006537C  40 82 03 E0 */	bne .L_8009C19C
@@ -3455,7 +3455,7 @@
 /* 8009BE14 000653D4  80 03 00 00 */	lwz r0, 0(r3)
 /* 8009BE18 000653D8  7C 00 E8 39 */	and. r0, r0, r29
 /* 8009BE1C 000653DC  41 82 03 80 */	beq .L_8009C19C
-/* 8009BE20 000653E0  48 03 D3 69 */	bl func_800D9188
+/* 8009BE20 000653E0  48 03 D3 69 */	bl getBattleManagerInstance
 /* 8009BE24 000653E4  80 A3 00 28 */	lwz r5, 0x28(r3)
 /* 8009BE28 000653E8  38 80 00 00 */	li r4, 0
 /* 8009BE2C 000653EC  80 65 00 00 */	lwz r3, 0(r5)
@@ -3730,7 +3730,7 @@
 /* 8009C1EC 000657AC  48 0F 47 55 */	bl func_80190940
 /* 8009C1F0 000657B0  83 9B 03 70 */	lwz r28, 0x370(r27)
 /* 8009C1F4 000657B4  7C 7D 1B 78 */	mr r29, r3
-/* 8009C1F8 000657B8  48 03 CF 91 */	bl func_800D9188
+/* 8009C1F8 000657B8  48 03 CF 91 */	bl getBattleManagerInstance
 /* 8009C1FC 000657BC  38 63 21 6C */	addi r3, r3, 0x216c
 /* 8009C200 000657C0  48 11 E0 C9 */	bl func_801BA2C8
 /* 8009C204 000657C4  2C 03 00 00 */	cmpwi r3, 0
@@ -3805,7 +3805,7 @@
 .L_8009C304:
 /* 8009C304 000658C4  28 00 00 05 */	cmplwi r0, 5
 /* 8009C308 000658C8  40 82 00 38 */	bne .L_8009C340
-/* 8009C30C 000658CC  48 03 CE 7D */	bl func_800D9188
+/* 8009C30C 000658CC  48 03 CE 7D */	bl getBattleManagerInstance
 /* 8009C310 000658D0  48 04 E1 35 */	bl func_800EA444
 /* 8009C314 000658D4  2C 03 00 00 */	cmpwi r3, 0
 /* 8009C318 000658D8  7C 7E 1B 78 */	mr r30, r3
@@ -3993,12 +3993,12 @@
 .L_8009C5D8:
 /* 8009C5D8 00065B98  2C 1C 00 01 */	cmpwi r28, 1
 /* 8009C5DC 00065B9C  40 82 00 C0 */	bne .L_8009C69C
-/* 8009C5E0 00065BA0  48 03 CB A9 */	bl func_800D9188
+/* 8009C5E0 00065BA0  48 03 CB A9 */	bl getBattleManagerInstance
 /* 8009C5E4 00065BA4  3B 83 21 9C */	addi r28, r3, 0x219c
-/* 8009C5E8 00065BA8  48 03 CB A1 */	bl func_800D9188
+/* 8009C5E8 00065BA8  48 03 CB A1 */	bl getBattleManagerInstance
 /* 8009C5EC 00065BAC  48 04 DE 59 */	bl func_800EA444
 /* 8009C5F0 00065BB0  83 A3 00 00 */	lwz r29, 0(r3)
-/* 8009C5F4 00065BB4  48 03 CB 95 */	bl func_800D9188
+/* 8009C5F4 00065BB4  48 03 CB 95 */	bl getBattleManagerInstance
 /* 8009C5F8 00065BB8  80 9F 00 5C */	lwz r4, 0x5c(r31)
 /* 8009C5FC 00065BBC  7F C5 F3 78 */	mr r5, r30
 /* 8009C600 00065BC0  7F A6 EB 78 */	mr r6, r29
@@ -4012,7 +4012,7 @@
 /* 8009C620 00065BE0  3C 7C 00 02 */	addis r3, r28, 2
 /* 8009C624 00065BE4  38 00 00 01 */	li r0, 1
 /* 8009C628 00065BE8  98 03 61 A4 */	stb r0, 0x61a4(r3)
-/* 8009C62C 00065BEC  48 03 CB 5D */	bl func_800D9188
+/* 8009C62C 00065BEC  48 03 CB 5D */	bl getBattleManagerInstance
 /* 8009C630 00065BF0  38 80 FF 9C */	li r4, -100
 /* 8009C634 00065BF4  38 63 01 94 */	addi r3, r3, 0x194
 /* 8009C638 00065BF8  48 0F 01 E9 */	bl func_8018C820
@@ -4245,7 +4245,7 @@
 .L_8009C944:
 /* 8009C944 00065F04  2C 1E 00 00 */	cmpwi r30, 0
 /* 8009C948 00065F08  40 82 00 18 */	bne .L_8009C960
-/* 8009C94C 00065F0C  48 39 7A 55 */	bl Heap_getMem2RegionIndex1
+/* 8009C94C 00065F0C  48 39 7A 55 */	bl Heap_getRegionIndex2
 /* 8009C950 00065F10  7F E4 FB 78 */	mr r4, r31
 /* 8009C954 00065F14  38 A0 00 04 */	li r5, 4
 /* 8009C958 00065F18  48 39 7A D5 */	bl func_8043442C
@@ -5399,11 +5399,15 @@
 
 .obj "@etb_80008EA0", local
 .hidden "@etb_80008EA0"
-	.4byte 0x080A0000
+	.2byte 0x080A
+	.2byte 0x0000
 	.4byte 0x000000BC
-	.4byte 0x00000010
+	.2byte 0x0000
+	.2byte 0x0010
 	.4byte 0x00000000
-	.4byte 0x8680001F
+	.byte 0x86
+	.byte 0x80
+	.2byte 0x001F
 	.4byte 0x00000000
 	.4byte __dt__cf_CtrlPc
 .endobj "@etb_80008EA0"
@@ -5440,29 +5444,42 @@
 
 .obj "@etb_80008EE4", local
 .hidden "@etb_80008EE4"
-	.4byte 0x18080000
+	.2byte 0x1808
+	.2byte 0x0000
 	.4byte 0x000001FC
-	.4byte 0x00030010
+	.2byte 0x0003
+	.2byte 0x0010
 	.4byte 0x00000000
-	.4byte 0x82000040
+	.2byte 0x8200
+	.2byte 0x0040
 	.4byte __dt__80043E88
 .endobj "@etb_80008EE4"
 
 .obj "@etb_80008EFC", local
 .hidden "@etb_80008EFC"
-	.4byte 0x20080000
+	.2byte 0x2008
+	.2byte 0x0000
 	.4byte 0x000001D4
-	.4byte 0x00230020
+	.2byte 0x0023
+	.2byte 0x0020
 	.4byte 0x000002D0
-	.4byte 0x002C0028
+	.2byte 0x002C
+	.2byte 0x0028
 	.4byte 0x000003F0
-	.4byte 0x00230030
+	.2byte 0x0023
+	.2byte 0x0030
 	.4byte 0x00000000
-	.4byte 0x82000020
+	.byte 0x82
+	.byte 0x00
+	.2byte 0x0020
 	.4byte __dt__80043E88
-	.4byte 0x82000018
+	.byte 0x82
+	.byte 0x00
+	.2byte 0x0018
 	.4byte __dt__80043E88
-	.4byte 0x82000010
+	.byte 0x82
+	.byte 0x00
+	.2byte 0x0010
 	.4byte __dt__80043E88
 .endobj "@etb_80008EFC"
 

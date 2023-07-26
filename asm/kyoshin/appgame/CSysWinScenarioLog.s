@@ -125,7 +125,7 @@
 /* 8027E668 00247C28  41 82 00 08 */	beq .L_8027E670
 /* 8027E66C 00247C2C  3B FE 00 6C */	addi r31, r30, 0x6c
 .L_8027E670:
-/* 8027E670 00247C30  48 1B 5D 31 */	bl Heap_getMem2RegionIndex1
+/* 8027E670 00247C30  48 1B 5D 31 */	bl Heap_getRegionIndex2
 /* 8027E674 00247C34  3C 80 80 51 */	lis r4, CSysWinScenarioLog_strpool@ha
 /* 8027E678 00247C38  7F E5 FB 78 */	mr r5, r31
 /* 8027E67C 00247C3C  38 84 A4 A8 */	addi r4, r4, CSysWinScenarioLog_strpool@l
@@ -572,7 +572,7 @@
 /* 8027ECA0 00248260  80 03 00 74 */	lwz r0, 0x74(r3)
 /* 8027ECA4 00248264  7C 00 20 40 */	cmplw r0, r4
 /* 8027ECA8 00248268  40 82 01 5C */	bne .L_8027EE04
-/* 8027ECAC 0024826C  48 1B 56 F5 */	bl Heap_getMem2RegionIndex1
+/* 8027ECAC 0024826C  48 1B 56 F5 */	bl Heap_getRegionIndex2
 /* 8027ECB0 00248270  3C C0 80 51 */	lis r6, CSysWinScenarioLog_strpool@ha
 /* 8027ECB4 00248274  3C A0 00 01 */	lis r5, 1
 /* 8027ECB8 00248278  38 C6 A4 A8 */	addi r6, r6, CSysWinScenarioLog_strpool@l
@@ -778,7 +778,7 @@
 /* 8027EF64 00248524  88 0D B0 80 */	lbz r0, lbl_80667200@sda21(r13)
 /* 8027EF68 00248528  2C 00 00 00 */	cmpwi r0, 0
 /* 8027EF6C 0024852C  41 82 01 10 */	beq .L_8027F07C
-/* 8027EF70 00248530  4B E5 A2 19 */	bl func_800D9188
+/* 8027EF70 00248530  4B E5 A2 19 */	bl getBattleManagerInstance
 /* 8027EF74 00248534  80 A3 00 48 */	lwz r5, 0x48(r3)
 /* 8027EF78 00248538  38 80 00 00 */	li r4, 0
 /* 8027EF7C 0024853C  80 65 00 00 */	lwz r3, 0(r5)
@@ -875,7 +875,7 @@
 /* 8027F0B8 00248678  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027F0BC 0024867C  7C 08 02 A6 */	mflr r0
 /* 8027F0C0 00248680  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8027F0C4 00248684  4B E5 A0 C5 */	bl func_800D9188
+/* 8027F0C4 00248684  4B E5 A0 C5 */	bl getBattleManagerInstance
 /* 8027F0C8 00248688  80 A3 00 28 */	lwz r5, 0x28(r3)
 /* 8027F0CC 0024868C  38 80 00 00 */	li r4, 0
 /* 8027F0D0 00248690  80 65 00 00 */	lwz r3, 0(r5)
@@ -2524,7 +2524,7 @@
 /* 802807B4 00249D74  80 03 3F 00 */	lwz r0, 0x3f00(r3)
 /* 802807B8 00249D78  54 00 07 7B */	rlwinm. r0, r0, 0, 0x1d, 0x1d
 /* 802807BC 00249D7C  41 82 00 34 */	beq .L_802807F0
-/* 802807C0 00249D80  4B E5 89 C9 */	bl func_800D9188
+/* 802807C0 00249D80  4B E5 89 C9 */	bl getBattleManagerInstance
 /* 802807C4 00249D84  7F E4 FB 78 */	mr r4, r31
 /* 802807C8 00249D88  4B E5 98 A5 */	bl func_800DA06C
 /* 802807CC 00249D8C  2C 03 00 00 */	cmpwi r3, 0

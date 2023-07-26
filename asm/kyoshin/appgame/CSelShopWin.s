@@ -62,7 +62,7 @@
 /* 8022C778 001F5D38  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8022C77C 001F5D3C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8022C780 001F5D40  7C 7F 1B 78 */	mr r31, r3
-/* 8022C784 001F5D44  48 20 7C 1D */	bl Heap_getMem2RegionIndex1
+/* 8022C784 001F5D44  48 20 7C 1D */	bl Heap_getRegionIndex2
 /* 8022C788 001F5D48  3C 80 80 50 */	lis r4, CSelShopWin_strpool@ha
 /* 8022C78C 001F5D4C  7F E5 FB 78 */	mr r5, r31
 /* 8022C790 001F5D50  38 84 5D 2C */	addi r4, r4, CSelShopWin_strpool@l
@@ -312,7 +312,7 @@
 /* 8022CAB0 001F6070  7C 05 00 40 */	cmplw r5, r0
 /* 8022CAB4 001F6074  90 C1 00 28 */	stw r6, 0x28(r1)
 /* 8022CAB8 001F6078  40 82 03 9C */	bne .L_8022CE54
-/* 8022CABC 001F607C  48 20 78 E5 */	bl Heap_getMem2RegionIndex1
+/* 8022CABC 001F607C  48 20 78 E5 */	bl Heap_getRegionIndex2
 /* 8022CAC0 001F6080  3F C0 80 50 */	lis r30, CSelShopWin_strpool@ha
 /* 8022CAC4 001F6084  3C A0 00 01 */	lis r5, 1
 /* 8022CAC8 001F6088  3B DE 5D 2C */	addi r30, r30, CSelShopWin_strpool@l

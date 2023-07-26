@@ -583,7 +583,7 @@
 /* 80496344 0045F904  7F 44 D3 78 */	mr r4, r26
 /* 80496348 0045F908  38 7C 03 C0 */	addi r3, r28, 0x3c0
 /* 8049634C 0045F90C  4B E2 C3 6D */	bl strcpy
-/* 80496350 0045F910  4B F9 E0 49 */	bl Heap_getMem1RegionIndex
+/* 80496350 0045F910  4B F9 E0 49 */	bl Heap_getRegionIndex1
 /* 80496354 0045F914  7C 64 1B 78 */	mr r4, r3
 /* 80496358 0045F918  38 60 00 08 */	li r3, 8
 /* 8049635C 0045F91C  4B F9 E7 01 */	bl heap_malloc
@@ -602,7 +602,7 @@
 /* 80496390 0045F950  38 E0 00 00 */	li r7, 0
 /* 80496394 0045F954  4B E8 5D 2D */	bl GXGetTexBufferSize
 /* 80496398 0045F958  54 7B 08 3C */	slwi r27, r3, 1
-/* 8049639C 0045F95C  4B F9 E0 05 */	bl Heap_getMem2RegionIndex1
+/* 8049639C 0045F95C  4B F9 E0 05 */	bl Heap_getRegionIndex2
 /* 804963A0 0045F960  7C 65 1B 78 */	mr r5, r3
 /* 804963A4 0045F964  7F 43 D3 78 */	mr r3, r26
 /* 804963A8 0045F968  7F 84 E3 78 */	mr r4, r28
@@ -1091,7 +1091,7 @@
 /* 804969FC 0045FFBC  3C 1D 00 01 */	addis r0, r29, 1
 /* 80496A00 0045FFC0  28 00 FF FF */	cmplwi r0, 0xffff
 /* 80496A04 0045FFC4  40 82 00 0C */	bne .L_80496A10
-/* 80496A08 0045FFC8  4B F9 D9 91 */	bl Heap_getMem1RegionIndex
+/* 80496A08 0045FFC8  4B F9 D9 91 */	bl Heap_getRegionIndex1
 /* 80496A0C 0045FFCC  7C 7D 1B 78 */	mr r29, r3
 .L_80496A10:
 /* 80496A10 0045FFD0  4B FA 0B A5 */	bl getHeapIndex

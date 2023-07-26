@@ -261,7 +261,7 @@
 /* 80243444 0020CA04  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80243448 0020CA08  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8024344C 0020CA0C  7C 7F 1B 78 */	mr r31, r3
-/* 80243450 0020CA10  48 1F 0F 51 */	bl Heap_getMem2RegionIndex1
+/* 80243450 0020CA10  48 1F 0F 51 */	bl Heap_getRegionIndex2
 /* 80243454 0020CA14  3C 80 80 50 */	lis r4, CMapSel_strpool@ha
 /* 80243458 0020CA18  7F E5 FB 78 */	mr r5, r31
 /* 8024345C 0020CA1C  38 84 6B A8 */	addi r4, r4, CMapSel_strpool@l
@@ -1077,7 +1077,7 @@
 /* 80243F84 0020D544  38 9F 00 77 */	addi r4, r31, 0x77
 /* 80243F88 0020D548  4C C6 31 82 */	crclr 6
 /* 80243F8C 0020D54C  48 07 D0 AD */	bl sprintf
-/* 80243F90 0020D550  48 1F 04 11 */	bl Heap_getMem2RegionIndex1
+/* 80243F90 0020D550  48 1F 04 11 */	bl Heap_getRegionIndex2
 /* 80243F94 0020D554  7F C5 F3 78 */	mr r5, r30
 /* 80243F98 0020D558  38 81 00 08 */	addi r4, r1, 8
 /* 80243F9C 0020D55C  38 C0 00 00 */	li r6, 0
@@ -1180,7 +1180,7 @@
 /* 802440F8 0020D6B8  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 802440FC 0020D6BC  7C 00 20 40 */	cmplw r0, r4
 /* 80244100 0020D6C0  40 82 01 A0 */	bne .L_802442A0
-/* 80244104 0020D6C4  48 1F 02 9D */	bl Heap_getMem2RegionIndex1
+/* 80244104 0020D6C4  48 1F 02 9D */	bl Heap_getRegionIndex2
 /* 80244108 0020D6C8  3F C0 80 50 */	lis r30, CMapSel_strpool@ha
 /* 8024410C 0020D6CC  3C A0 00 01 */	lis r5, 0x00014000@ha
 /* 80244110 0020D6D0  3B DE 6B A8 */	addi r30, r30, CMapSel_strpool@l

@@ -8,6 +8,7 @@ extern "C" {
 typedef enum {
 	kNoError = 0,
 	kStepError = 1,
+	kParameterError = 2,
 	kEventQueueFull = 0x100,
 	kNoMessageBufferAvailable = 0x300,
 	kMessageBufferOverflow = 0x301,
@@ -19,7 +20,8 @@ typedef enum {
 	kUnsupportedError = 0x703,
 	kInvalidProcessId = 0x704,
 	kInvalidThreadId = 0x705,
-	kOsError = 0x706
+	kOsError = 0x706,
+	kError800 = 0x800
 } DSError;
 
 #ifdef __cplusplus

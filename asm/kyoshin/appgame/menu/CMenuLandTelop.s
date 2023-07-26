@@ -675,7 +675,7 @@
 /* 80144F0C 0010E4CC  93 81 00 10 */	stw r28, 0x10(r1)
 /* 80144F10 0010E4D0  7C 7C 1B 78 */	mr r28, r3
 /* 80144F14 0010E4D4  40 82 00 38 */	bne .L_80144F4C
-/* 80144F18 0010E4D8  4B F9 42 71 */	bl func_800D9188
+/* 80144F18 0010E4D8  4B F9 42 71 */	bl getBattleManagerInstance
 /* 80144F1C 0010E4DC  80 A3 00 08 */	lwz r5, 8(r3)
 /* 80144F20 0010E4E0  38 80 00 00 */	li r4, 0
 /* 80144F24 0010E4E4  80 65 00 00 */	lwz r3, 0(r5)
@@ -1086,7 +1086,7 @@
 /* 80145498 0010EA58  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8014549C 0010EA5C  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 801454A0 0010EA60  7C 7E 1B 78 */	mr r30, r3
-/* 801454A4 0010EA64  48 2E EE FD */	bl Heap_getMem2RegionIndex1
+/* 801454A4 0010EA64  48 2E EE FD */	bl Heap_getRegionIndex2
 /* 801454A8 0010EA68  3F E0 80 50 */	lis r31, CMenuLandTelop_strpool@ha
 /* 801454AC 0010EA6C  7C 64 1B 78 */	mr r4, r3
 /* 801454B0 0010EA70  3B FF CF 50 */	addi r31, r31, CMenuLandTelop_strpool@l

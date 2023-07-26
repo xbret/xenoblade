@@ -66,7 +66,7 @@
 /* 801EAE94 001B4454  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801EAE98 001B4458  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801EAE9C 001B445C  7C 7F 1B 78 */	mr r31, r3
-/* 801EAEA0 001B4460  48 24 95 01 */	bl Heap_getMem2RegionIndex1
+/* 801EAEA0 001B4460  48 24 95 01 */	bl Heap_getRegionIndex2
 /* 801EAEA4 001B4464  3C 80 80 50 */	lis r4, CNumSelect_strpool@ha
 /* 801EAEA8 001B4468  7F E5 FB 78 */	mr r5, r31
 /* 801EAEAC 001B446C  38 84 23 B0 */	addi r4, r4, CNumSelect_strpool@l
@@ -696,7 +696,7 @@
 /* 801EB730 001B4CF0  7C 05 00 40 */	cmplw r5, r0
 /* 801EB734 001B4CF4  90 C1 00 28 */	stw r6, 0x28(r1)
 /* 801EB738 001B4CF8  40 82 03 80 */	bne .L_801EBAB8
-/* 801EB73C 001B4CFC  48 24 8C 65 */	bl Heap_getMem2RegionIndex1
+/* 801EB73C 001B4CFC  48 24 8C 65 */	bl Heap_getRegionIndex2
 /* 801EB740 001B4D00  3F C0 80 50 */	lis r30, CNumSelect_strpool@ha
 /* 801EB744 001B4D04  3C A0 00 01 */	lis r5, 1
 /* 801EB748 001B4D08  3B DE 23 B0 */	addi r30, r30, CNumSelect_strpool@l

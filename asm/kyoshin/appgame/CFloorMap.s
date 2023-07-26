@@ -8371,7 +8371,7 @@
 /* 8024C0C8 00215688  38 84 04 D8 */	addi r4, r4, 0x4d8
 /* 8024C0CC 0021568C  4C C6 31 82 */	crclr 6
 /* 8024C0D0 00215690  48 07 4F 69 */	bl sprintf
-/* 8024C0D4 00215694  48 1E 82 CD */	bl Heap_getMem2RegionIndex1
+/* 8024C0D4 00215694  48 1E 82 CD */	bl Heap_getRegionIndex2
 /* 8024C0D8 00215698  7F E5 FB 78 */	mr r5, r31
 /* 8024C0DC 0021569C  38 81 00 08 */	addi r4, r1, 8
 /* 8024C0E0 002156A0  38 C0 00 00 */	li r6, 0
@@ -8392,7 +8392,7 @@
 /* 8024C110 002156D0  93 E1 00 7C */	stw r31, 0x7c(r1)
 /* 8024C114 002156D4  93 C1 00 78 */	stw r30, 0x78(r1)
 /* 8024C118 002156D8  7C 7E 1B 78 */	mr r30, r3
-/* 8024C11C 002156DC  48 1E 82 85 */	bl Heap_getMem2RegionIndex1
+/* 8024C11C 002156DC  48 1E 82 85 */	bl Heap_getRegionIndex2
 /* 8024C120 002156E0  3F E0 80 50 */	lis r31, CFloorMap_strpool@ha
 /* 8024C124 002156E4  7F C5 F3 78 */	mr r5, r30
 /* 8024C128 002156E8  3B FF 75 40 */	addi r31, r31, CFloorMap_strpool@l
@@ -8420,7 +8420,7 @@
 /* 8024C17C 0021573C  90 65 00 04 */	stw r3, 4(r5)
 /* 8024C180 00215740  94 05 00 08 */	stwu r0, 8(r5)
 /* 8024C184 00215744  42 00 FF F0 */	bdnz .L_8024C174
-/* 8024C188 00215748  48 1E 82 19 */	bl Heap_getMem2RegionIndex1
+/* 8024C188 00215748  48 1E 82 19 */	bl Heap_getRegionIndex2
 /* 8024C18C 0021574C  88 ED AF 08 */	lbz r7, lbl_80667088@sda21(r13)
 /* 8024C190 00215750  38 81 00 08 */	addi r4, r1, 8
 /* 8024C194 00215754  7F C5 F3 78 */	mr r5, r30
@@ -9577,7 +9577,7 @@
 /* 8024D1F4 002167B4  38 84 04 D8 */	addi r4, r4, 0x4d8
 /* 8024D1F8 002167B8  4C C6 31 82 */	crclr 6
 /* 8024D1FC 002167BC  48 07 3E 3D */	bl sprintf
-/* 8024D200 002167C0  48 1E 71 A1 */	bl Heap_getMem2RegionIndex1
+/* 8024D200 002167C0  48 1E 71 A1 */	bl Heap_getRegionIndex2
 /* 8024D204 002167C4  7F E5 FB 78 */	mr r5, r31
 /* 8024D208 002167C8  38 81 00 50 */	addi r4, r1, 0x50
 /* 8024D20C 002167CC  38 C0 00 00 */	li r6, 0
@@ -9840,7 +9840,7 @@
 /* 8024D5CC 00216B8C  38 84 04 D8 */	addi r4, r4, 0x4d8
 /* 8024D5D0 00216B90  4C C6 31 82 */	crclr 6
 /* 8024D5D4 00216B94  48 07 3A 65 */	bl sprintf
-/* 8024D5D8 00216B98  48 1E 6D C9 */	bl Heap_getMem2RegionIndex1
+/* 8024D5D8 00216B98  48 1E 6D C9 */	bl Heap_getRegionIndex2
 /* 8024D5DC 00216B9C  7F E5 FB 78 */	mr r5, r31
 /* 8024D5E0 00216BA0  38 81 00 50 */	addi r4, r1, 0x50
 /* 8024D5E4 00216BA4  38 C0 00 00 */	li r6, 0
@@ -12636,7 +12636,7 @@
 /* 8024FD64 00219324  80 03 00 24 */	lwz r0, 0x24(r3)
 /* 8024FD68 00219328  7C 00 20 40 */	cmplw r0, r4
 /* 8024FD6C 0021932C  40 82 09 08 */	bne .L_80250674
-/* 8024FD70 00219330  48 1E 46 31 */	bl Heap_getMem2RegionIndex1
+/* 8024FD70 00219330  48 1E 46 31 */	bl Heap_getRegionIndex2
 /* 8024FD74 00219334  3F E0 80 50 */	lis r31, CFloorMap_strpool@ha
 /* 8024FD78 00219338  7C 64 1B 78 */	mr r4, r3
 /* 8024FD7C 0021933C  3B FF 75 40 */	addi r31, r31, CFloorMap_strpool@l
@@ -13244,7 +13244,7 @@
 /* 80250674 00219C34  80 03 00 28 */	lwz r0, 0x28(r3)
 /* 80250678 00219C38  7C 00 20 40 */	cmplw r0, r4
 /* 8025067C 00219C3C  40 82 02 A8 */	bne .L_80250924
-/* 80250680 00219C40  48 1E 3D 21 */	bl Heap_getMem2RegionIndex1
+/* 80250680 00219C40  48 1E 3D 21 */	bl Heap_getRegionIndex2
 /* 80250684 00219C44  3F E0 80 50 */	lis r31, CFloorMap_strpool@ha
 /* 80250688 00219C48  3C A0 00 01 */	lis r5, 0x00014000@ha
 /* 8025068C 00219C4C  3B FF 75 40 */	addi r31, r31, CFloorMap_strpool@l

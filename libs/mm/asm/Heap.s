@@ -13,11 +13,11 @@
 /* 8043331C 003FC8DC  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80433320 003FC8E0  7C 7D 1B 78 */	mr r29, r3
 /* 80433324 003FC8E4  41 82 03 A0 */	beq .L_804336C4
-/* 80433328 003FC8E8  80 8D 9C B0 */	lwz r4, mem1RegionIndex@sda21(r13)
+/* 80433328 003FC8E8  80 8D 9C B0 */	lwz r4, regionIndex1@sda21(r13)
 /* 8043332C 003FC8EC  80 A3 00 68 */	lwz r5, 0x68(r3)
 /* 80433330 003FC8F0  7C 05 20 40 */	cmplw r5, r4
 /* 80433334 003FC8F4  41 82 01 A0 */	beq .L_804334D4
-/* 80433338 003FC8F8  80 0D 9C B4 */	lwz r0, mem2RegionIndex@sda21(r13)
+/* 80433338 003FC8F8  80 0D 9C B4 */	lwz r0, regionIndex2@sda21(r13)
 /* 8043333C 003FC8FC  7C 05 00 40 */	cmplw r5, r0
 /* 80433340 003FC900  41 82 01 94 */	beq .L_804334D4
 /* 80433344 003FC904  80 63 00 10 */	lwz r3, 0x10(r3)
@@ -132,18 +132,18 @@
 /* 804334D0 003FCA90  90 1F 00 18 */	stw r0, 0x18(r31)
 .L_804334D4:
 /* 804334D4 003FCA94  80 7D 00 68 */	lwz r3, 0x68(r29)
-/* 804334D8 003FCA98  80 0D 9C B0 */	lwz r0, mem1RegionIndex@sda21(r13)
+/* 804334D8 003FCA98  80 0D 9C B0 */	lwz r0, regionIndex1@sda21(r13)
 /* 804334DC 003FCA9C  7C 03 00 40 */	cmplw r3, r0
 /* 804334E0 003FCAA0  40 82 00 10 */	bne .L_804334F0
 /* 804334E4 003FCAA4  38 00 FF FF */	li r0, -1
-/* 804334E8 003FCAA8  90 0D 9C B0 */	stw r0, mem1RegionIndex@sda21(r13)
+/* 804334E8 003FCAA8  90 0D 9C B0 */	stw r0, regionIndex1@sda21(r13)
 /* 804334EC 003FCAAC  48 00 00 18 */	b .L_80433504
 .L_804334F0:
-/* 804334F0 003FCAB0  80 0D 9C B4 */	lwz r0, mem2RegionIndex@sda21(r13)
+/* 804334F0 003FCAB0  80 0D 9C B4 */	lwz r0, regionIndex2@sda21(r13)
 /* 804334F4 003FCAB4  7C 03 00 40 */	cmplw r3, r0
 /* 804334F8 003FCAB8  40 82 00 0C */	bne .L_80433504
 /* 804334FC 003FCABC  38 00 FF FF */	li r0, -1
-/* 80433500 003FCAC0  90 0D 9C B4 */	stw r0, mem2RegionIndex@sda21(r13)
+/* 80433500 003FCAC0  90 0D 9C B4 */	stw r0, regionIndex2@sda21(r13)
 .L_80433504:
 /* 80433504 003FCAC4  2C 1E 00 00 */	cmpwi r30, 0
 /* 80433508 003FCAC8  38 00 00 00 */	li r0, 0
@@ -159,7 +159,7 @@
 /* 80433530 003FCAF0  40 81 01 94 */	ble .L_804336C4
 /* 80433534 003FCAF4  2C 1D 00 00 */	cmpwi r29, 0
 /* 80433538 003FCAF8  41 82 01 8C */	beq .L_804336C4
-/* 8043353C 003FCAFC  80 6D 9C B0 */	lwz r3, mem1RegionIndex@sda21(r13)
+/* 8043353C 003FCAFC  80 6D 9C B0 */	lwz r3, regionIndex1@sda21(r13)
 /* 80433540 003FCB00  3C 03 00 01 */	addis r0, r3, 1
 /* 80433544 003FCB04  28 00 FF FF */	cmplwi r0, 0xffff
 /* 80433548 003FCB08  41 82 01 7C */	beq .L_804336C4
@@ -658,7 +658,7 @@
 /* 80433BEC 003FD1AC  2C 00 00 00 */	cmpwi r0, 0
 /* 80433BF0 003FD1B0  41 82 00 DC */	beq .L_80433CCC
 /* 80433BF4 003FD1B4  80 63 00 68 */	lwz r3, 0x68(r3)
-/* 80433BF8 003FD1B8  80 0D 9C B4 */	lwz r0, mem2RegionIndex@sda21(r13)
+/* 80433BF8 003FD1B8  80 0D 9C B4 */	lwz r0, regionIndex2@sda21(r13)
 /* 80433BFC 003FD1BC  7C 03 00 40 */	cmplw r3, r0
 /* 80433C00 003FD1C0  40 82 00 CC */	bne .L_80433CCC
 /* 80433C04 003FD1C4  2C 04 00 00 */	cmpwi r4, 0
@@ -866,7 +866,7 @@
 /* 80433ED0 003FD490  41 80 FF 44 */	blt .L_80433E14
 /* 80433ED4 003FD494  3B 40 FF FF */	li r26, -1
 .L_80433ED8:
-/* 80433ED8 003FD498  93 4D 9C B0 */	stw r26, mem1RegionIndex@sda21(r13)
+/* 80433ED8 003FD498  93 4D 9C B0 */	stw r26, regionIndex1@sda21(r13)
 /* 80433EDC 003FD49C  83 8D 9C AC */	lwz r28, lbl_80665E2C@sda21(r13)
 /* 80433EE0 003FD4A0  4B F1 FB 01 */	bl OSGetMEM2ArenaLo
 /* 80433EE4 003FD4A4  3C 00 93 5E */	lis r0, 0x935e
@@ -928,7 +928,7 @@
 /* 80433FB8 003FD578  41 80 FF 44 */	blt .L_80433EFC
 /* 80433FBC 003FD57C  3B A0 FF FF */	li r29, -1
 .L_80433FC0:
-/* 80433FC0 003FD580  93 AD 9C B4 */	stw r29, mem2RegionIndex@sda21(r13)
+/* 80433FC0 003FD580  93 AD 9C B4 */	stw r29, regionIndex2@sda21(r13)
 /* 80433FC4 003FD584  7F EA FB 78 */	mr r10, r31
 /* 80433FC8 003FD588  BB 2A 00 24 */	lmw r25, 0x24(r10)
 /* 80433FCC 003FD58C  81 41 00 00 */	lwz r10, 0(r1)
@@ -1209,20 +1209,20 @@
 /* 80434394 003FD954  4E 80 00 20 */	blr 
 .endfn func_804341D0
 
-.fn Heap_getMem1RegionIndex, global
-/* 80434398 003FD958  80 6D 9C B0 */	lwz r3, mem1RegionIndex@sda21(r13)
+.fn Heap_getRegionIndex1, global
+/* 80434398 003FD958  80 6D 9C B0 */	lwz r3, regionIndex1@sda21(r13)
 /* 8043439C 003FD95C  4E 80 00 20 */	blr 
-.endfn Heap_getMem1RegionIndex
+.endfn Heap_getRegionIndex1
 
-.fn Heap_getMem2RegionIndex1, global
-/* 804343A0 003FD960  80 6D 9C B4 */	lwz r3, mem2RegionIndex@sda21(r13)
+.fn Heap_getRegionIndex2, global
+/* 804343A0 003FD960  80 6D 9C B4 */	lwz r3, regionIndex2@sda21(r13)
 /* 804343A4 003FD964  4E 80 00 20 */	blr 
-.endfn Heap_getMem2RegionIndex1
+.endfn Heap_getRegionIndex2
 
-.fn Heap_getMem2RegionIndex2, global
-/* 804343A8 003FD968  80 6D 9C B4 */	lwz r3, mem2RegionIndex@sda21(r13)
+.fn Heap_getRegionIndex2_2, global
+/* 804343A8 003FD968  80 6D 9C B4 */	lwz r3, regionIndex2@sda21(r13)
 /* 804343AC 003FD96C  4E 80 00 20 */	blr 
-.endfn Heap_getMem2RegionIndex2
+.endfn Heap_getRegionIndex2_2
 
 .fn func_804343B0, global
 /* 804343B0 003FD970  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1323,7 +1323,7 @@
 /* 804344F0 003FDAB0  38 60 00 01 */	li r3, 1
 /* 804344F4 003FDAB4  48 00 01 98 */	b .L_8043468C
 .L_804344F8:
-/* 804344F8 003FDAB8  80 8D 9C B0 */	lwz r4, mem1RegionIndex@sda21(r13)
+/* 804344F8 003FDAB8  80 8D 9C B0 */	lwz r4, regionIndex1@sda21(r13)
 /* 804344FC 003FDABC  3C 04 00 01 */	addis r0, r4, 1
 /* 80434500 003FDAC0  28 00 FF FF */	cmplwi r0, 0xffff
 /* 80434504 003FDAC4  40 82 00 0C */	bne .L_80434510
@@ -1899,7 +1899,7 @@
 /* 80434C38 003FE1F8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80434C3C 003FE1FC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80434C40 003FE200  41 82 01 8C */	beq .L_80434DCC
-/* 80434C44 003FE204  80 8D 9C B0 */	lwz r4, mem1RegionIndex@sda21(r13)
+/* 80434C44 003FE204  80 8D 9C B0 */	lwz r4, regionIndex1@sda21(r13)
 /* 80434C48 003FE208  3C 04 00 01 */	addis r0, r4, 1
 /* 80434C4C 003FE20C  28 00 FF FF */	cmplwi r0, 0xffff
 /* 80434C50 003FE210  41 82 01 7C */	beq .L_80434DCC
@@ -2022,7 +2022,7 @@
 /* 80434DEC 003FE3AC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80434DF0 003FE3B0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80434DF4 003FE3B4  41 82 01 8C */	beq .L_80434F80
-/* 80434DF8 003FE3B8  80 8D 9C B0 */	lwz r4, mem1RegionIndex@sda21(r13)
+/* 80434DF8 003FE3B8  80 8D 9C B0 */	lwz r4, regionIndex1@sda21(r13)
 /* 80434DFC 003FE3BC  3C 04 00 01 */	addis r0, r4, 1
 /* 80434E00 003FE3C0  28 00 FF FF */	cmplwi r0, 0xffff
 /* 80434E04 003FE3C4  41 82 01 7C */	beq .L_80434F80
@@ -2181,14 +2181,14 @@
 	.4byte lbl_8066C9B0
 .endobj lbl_80665E2C
 
-.obj mem1RegionIndex, global
+.obj regionIndex1, global
 	.4byte -1
-.endobj mem1RegionIndex
+.endobj regionIndex1
 
 
-.obj mem2RegionIndex, global
+.obj regionIndex2, global
 	.4byte -1
-.endobj mem2RegionIndex
+.endobj regionIndex2
 
 
 .obj lbl_80665E38, global

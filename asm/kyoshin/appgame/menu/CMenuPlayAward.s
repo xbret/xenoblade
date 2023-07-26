@@ -1177,7 +1177,7 @@
 /* 80270CF4 0023A2B4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80270CF8 0023A2B8  BF C1 00 08 */	stmw r30, 8(r1)
 /* 80270CFC 0023A2BC  7C 7E 1B 78 */	mr r30, r3
-/* 80270D00 0023A2C0  48 1C 36 A1 */	bl Heap_getMem2RegionIndex1
+/* 80270D00 0023A2C0  48 1C 36 A1 */	bl Heap_getRegionIndex2
 /* 80270D04 0023A2C4  3F E0 80 51 */	lis r31, CMenuPlayAward_strpool@ha
 /* 80270D08 0023A2C8  7F C5 F3 78 */	mr r5, r30
 /* 80270D0C 0023A2CC  3B FF 9E 50 */	addi r31, r31, CMenuPlayAward_strpool@l
@@ -2189,7 +2189,7 @@
 /* 80271AFC 0023B0BC  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 80271B00 0023B0C0  7C 00 20 40 */	cmplw r0, r4
 /* 80271B04 0023B0C4  40 82 02 6C */	bne .L_80271D70
-/* 80271B08 0023B0C8  48 1C 28 99 */	bl Heap_getMem2RegionIndex1
+/* 80271B08 0023B0C8  48 1C 28 99 */	bl Heap_getRegionIndex2
 /* 80271B0C 0023B0CC  3C A0 80 51 */	lis r5, CMenuPlayAward_strpool@ha
 /* 80271B10 0023B0D0  7C 64 1B 78 */	mr r4, r3
 /* 80271B14 0023B0D4  38 A5 9E 50 */	addi r5, r5, CMenuPlayAward_strpool@l

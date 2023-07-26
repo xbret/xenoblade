@@ -491,7 +491,7 @@
 /* 801686D4 00131C94  41 82 00 08 */	beq .L_801686DC
 /* 801686D8 00131C98  3B FE 00 54 */	addi r31, r30, 0x54
 .L_801686DC:
-/* 801686DC 00131C9C  48 2C BC C5 */	bl Heap_getMem2RegionIndex1
+/* 801686DC 00131C9C  48 2C BC C5 */	bl Heap_getRegionIndex2
 /* 801686E0 00131CA0  7F E5 FB 78 */	mr r5, r31
 /* 801686E4 00131CA4  38 9E 00 60 */	addi r4, r30, 0x60
 /* 801686E8 00131CA8  38 C0 00 00 */	li r6, 0
@@ -599,7 +599,7 @@
 /* 80168850 00131E10  2C 00 FF FF */	cmpwi r0, -1
 /* 80168854 00131E14  40 82 FF E0 */	bne .L_80168834
 .L_80168858:
-/* 80168858 00131E18  48 2C BB 49 */	bl Heap_getMem2RegionIndex1
+/* 80168858 00131E18  48 2C BB 49 */	bl Heap_getRegionIndex2
 /* 8016885C 00131E1C  38 80 04 00 */	li r4, 0x400
 /* 80168860 00131E20  38 A0 00 04 */	li r5, 4
 /* 80168864 00131E24  48 2C BB C9 */	bl func_8043442C
@@ -806,7 +806,7 @@
 /* 80168ADC 0013209C  7C 65 1A 14 */	add r3, r5, r3
 /* 80168AE0 001320A0  7C 04 02 14 */	add r0, r4, r0
 /* 80168AE4 001320A4  7F 63 02 14 */	add r27, r3, r0
-/* 80168AE8 001320A8  48 2C B8 B9 */	bl Heap_getMem2RegionIndex1
+/* 80168AE8 001320A8  48 2C B8 B9 */	bl Heap_getRegionIndex2
 /* 80168AEC 001320AC  90 7F 00 B0 */	stw r3, 0xb0(r31)
 /* 80168AF0 001320B0  57 64 10 3A */	slwi r4, r27, 2
 /* 80168AF4 001320B4  38 A0 00 04 */	li r5, 4
@@ -1409,14 +1409,14 @@
 /* 8016932C 001328EC  80 04 00 4C */	lwz r0, 0x4c(r4)
 /* 80169330 001328F0  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 80169334 001328F4  41 82 00 0C */	beq .L_80169340
-/* 80169338 001328F8  48 2C B0 61 */	bl Heap_getMem1RegionIndex
+/* 80169338 001328F8  48 2C B0 61 */	bl Heap_getRegionIndex1
 /* 8016933C 001328FC  7C 7D 1B 78 */	mr r29, r3
 .L_80169340:
 /* 80169340 00132900  80 7F 00 C4 */	lwz r3, 0xc4(r31)
 /* 80169344 00132904  80 03 00 4C */	lwz r0, 0x4c(r3)
 /* 80169348 00132908  54 00 06 B5 */	rlwinm. r0, r0, 0, 0x1a, 0x1a
 /* 8016934C 0013290C  41 82 00 0C */	beq .L_80169358
-/* 80169350 00132910  48 2C B0 51 */	bl Heap_getMem2RegionIndex1
+/* 80169350 00132910  48 2C B0 51 */	bl Heap_getRegionIndex2
 /* 80169354 00132914  7C 7D 1B 78 */	mr r29, r3
 .L_80169358:
 /* 80169358 00132918  4B FF B1 21 */	bl func_80164478
@@ -5033,6 +5033,7 @@
 /* 8016C44C 00135A0C  4E 80 00 20 */	blr 
 .endfn func_8016C410
 
+#decrypts rev data?
 .fn func_8016C450, global
 /* 8016C450 00135A10  94 21 FF 90 */	stwu r1, -0x70(r1)
 /* 8016C454 00135A14  7C 08 02 A6 */	mflr r0
@@ -5782,13 +5783,13 @@
 	.4byte 0x00000040
 	.4byte 0x00000000
 	.4byte 0x8A80001B
-	.4byte func_80185754
+	.4byte __dt__80185754
 	.4byte 0x8A80001B
-	.4byte func_80185754
+	.4byte __dt__80185754
 	.4byte 0x8A80001B
-	.4byte func_80185754
+	.4byte __dt__80185754
 	.4byte 0x8A80001B
-	.4byte func_80185754
+	.4byte __dt__80185754
 .endobj "@etb_8000DF08"
 
 .obj "@etb_8000DF50", local

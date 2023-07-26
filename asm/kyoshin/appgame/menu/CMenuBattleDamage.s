@@ -166,7 +166,7 @@
 /* 80108EB0 000D2470  F3 E1 00 38 */	psq_st f31, 56(r1), 0, qr0
 /* 80108EB4 000D2474  48 1B 12 A1 */	bl _savegpr_27
 /* 80108EB8 000D2478  7C 7B 1B 78 */	mr r27, r3
-/* 80108EBC 000D247C  48 32 B4 E5 */	bl Heap_getMem2RegionIndex1
+/* 80108EBC 000D247C  48 32 B4 E5 */	bl Heap_getRegionIndex2
 /* 80108EC0 000D2480  3C A0 00 05 */	lis r5, 0x00051000@ha
 /* 80108EC4 000D2484  3F E0 80 50 */	lis r31, CMenuBattleDamage_strpool@ha
 /* 80108EC8 000D2488  7C 64 1B 78 */	mr r4, r3

@@ -67,7 +67,7 @@
 /* 802294C8 001F2A88  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802294CC 001F2A8C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802294D0 001F2A90  7C 7F 1B 78 */	mr r31, r3
-/* 802294D4 001F2A94  48 20 AE CD */	bl Heap_getMem2RegionIndex1
+/* 802294D4 001F2A94  48 20 AE CD */	bl Heap_getRegionIndex2
 /* 802294D8 001F2A98  3C 80 80 50 */	lis r4, CQstLogInfo_strpool@ha
 /* 802294DC 001F2A9C  7F E5 FB 78 */	mr r5, r31
 /* 802294E0 001F2AA0  38 84 57 C4 */	addi r4, r4, CQstLogInfo_strpool@l
@@ -2207,7 +2207,7 @@
 /* 8022B374 001F4934  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 8022B378 001F4938  7C 00 20 40 */	cmplw r0, r4
 /* 8022B37C 001F493C  40 82 02 24 */	bne .L_8022B5A0
-/* 8022B380 001F4940  48 20 90 21 */	bl Heap_getMem2RegionIndex1
+/* 8022B380 001F4940  48 20 90 21 */	bl Heap_getRegionIndex2
 /* 8022B384 001F4944  3C A0 80 50 */	lis r5, CQstLogInfo_strpool@ha
 /* 8022B388 001F4948  7C 64 1B 78 */	mr r4, r3
 /* 8022B38C 001F494C  38 A5 57 C4 */	addi r5, r5, CQstLogInfo_strpool@l

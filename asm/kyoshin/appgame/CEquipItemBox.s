@@ -4355,7 +4355,7 @@
 /* 802861B0 0024F770  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802861B4 0024F774  BF C1 00 08 */	stmw r30, 8(r1)
 /* 802861B8 0024F778  7C 7E 1B 78 */	mr r30, r3
-/* 802861BC 0024F77C  48 1A E1 E5 */	bl Heap_getMem2RegionIndex1
+/* 802861BC 0024F77C  48 1A E1 E5 */	bl Heap_getRegionIndex2
 /* 802861C0 0024F780  3F E0 80 51 */	lis r31, CEquipItemBox_strpool@ha
 /* 802861C4 0024F784  7F C5 F3 78 */	mr r5, r30
 /* 802861C8 0024F788  3B FF A6 54 */	addi r31, r31, CEquipItemBox_strpool@l
@@ -4365,7 +4365,7 @@
 /* 802861D8 0024F798  48 1C 85 BD */	bl CDeviceFile_openFile1
 /* 802861DC 0024F79C  90 7E 00 24 */	stw r3, 0x24(r30)
 /* 802861E0 0024F7A0  48 1C 92 25 */	bl func_8044F404
-/* 802861E4 0024F7A4  48 1A E1 BD */	bl Heap_getMem2RegionIndex1
+/* 802861E4 0024F7A4  48 1A E1 BD */	bl Heap_getRegionIndex2
 /* 802861E8 0024F7A8  7F C5 F3 78 */	mr r5, r30
 /* 802861EC 0024F7AC  38 9F 01 4B */	addi r4, r31, 0x14b
 /* 802861F0 0024F7B0  38 C0 00 00 */	li r6, 0
@@ -12214,7 +12214,7 @@
 /* 8028D1BC 0025677C  80 03 00 24 */	lwz r0, 0x24(r3)
 /* 8028D1C0 00256780  7C 00 20 40 */	cmplw r0, r4
 /* 8028D1C4 00256784  40 82 07 D4 */	bne .L_8028D998
-/* 8028D1C8 00256788  48 1A 71 D9 */	bl Heap_getMem2RegionIndex1
+/* 8028D1C8 00256788  48 1A 71 D9 */	bl Heap_getRegionIndex2
 /* 8028D1CC 0025678C  3C A0 80 51 */	lis r5, CEquipItemBox_strpool@ha
 /* 8028D1D0 00256790  7C 64 1B 78 */	mr r4, r3
 /* 8028D1D4 00256794  3B A5 A6 54 */	addi r29, r5, CEquipItemBox_strpool@l
@@ -12721,7 +12721,7 @@
 /* 8028D998 00256F58  80 03 00 28 */	lwz r0, 0x28(r3)
 /* 8028D99C 00256F5C  7C 00 20 40 */	cmplw r0, r4
 /* 8028D9A0 00256F60  40 82 00 88 */	bne .L_8028DA28
-/* 8028D9A4 00256F64  48 1A 69 FD */	bl Heap_getMem2RegionIndex1
+/* 8028D9A4 00256F64  48 1A 69 FD */	bl Heap_getRegionIndex2
 /* 8028D9A8 00256F68  3F A0 80 51 */	lis r29, CEquipItemBox_strpool@ha
 /* 8028D9AC 00256F6C  7C 64 1B 78 */	mr r4, r3
 /* 8028D9B0 00256F70  3B BD A6 54 */	addi r29, r29, CEquipItemBox_strpool@l

@@ -7,16 +7,6 @@
 #include "PowerPC_EABI_Support/MetroTRK/target_options.h"
 #include "revolution/OS.h"
 
-typedef struct CommandReply {
-	u32 unk0;
-	u8 commandId;
-	u8 unk5[3];
-	u8 replyError;
-	u8 unk9[3];
-	u32 unkC;
-	u8 unk10[0x30];
-} CommandReply;
-
 extern void __TRK_copy_vectors();
 extern void __TRKreset();
 

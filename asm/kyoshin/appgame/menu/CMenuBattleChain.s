@@ -112,7 +112,7 @@
 /* 802A9D14 002732D4  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 802A9D18 002732D8  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 802A9D1C 002732DC  7C 7E 1B 78 */	mr r30, r3
-/* 802A9D20 002732E0  48 18 A6 81 */	bl Heap_getMem2RegionIndex1
+/* 802A9D20 002732E0  48 18 A6 81 */	bl Heap_getRegionIndex2
 /* 802A9D24 002732E4  3F E0 80 51 */	lis r31, CMenuBattleChain_strpool@ha
 /* 802A9D28 002732E8  7C 64 1B 78 */	mr r4, r3
 /* 802A9D2C 002732EC  38 7E 00 78 */	addi r3, r30, 0x78

@@ -5070,7 +5070,7 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-
+.balign 8
 
 #Some of these are also used in other files in monolithlib
 .obj lbl_80662940, global

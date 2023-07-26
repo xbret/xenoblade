@@ -852,7 +852,7 @@
 /* 802732FC 0023C8BC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80273300 0023C8C0  BF C1 00 08 */	stmw r30, 8(r1)
 /* 80273304 0023C8C4  7C 7E 1B 78 */	mr r30, r3
-/* 80273308 0023C8C8  48 1C 10 99 */	bl Heap_getMem2RegionIndex1
+/* 80273308 0023C8C8  48 1C 10 99 */	bl Heap_getRegionIndex2
 /* 8027330C 0023C8CC  3F E0 80 51 */	lis r31, CMenuKizunaTalkList_strpool@ha
 /* 80273310 0023C8D0  7F C5 F3 78 */	mr r5, r30
 /* 80273314 0023C8D4  3B FF A0 18 */	addi r31, r31, CMenuKizunaTalkList_strpool@l
@@ -1956,7 +1956,7 @@
 /* 80274280 0023D840  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 80274284 0023D844  7C 00 20 40 */	cmplw r0, r4
 /* 80274288 0023D848  40 82 01 6C */	bne .L_802743F4
-/* 8027428C 0023D84C  48 1C 01 15 */	bl Heap_getMem2RegionIndex1
+/* 8027428C 0023D84C  48 1C 01 15 */	bl Heap_getRegionIndex2
 /* 80274290 0023D850  3F A0 80 51 */	lis r29, CMenuKizunaTalkList_strpool@ha
 /* 80274294 0023D854  7C 64 1B 78 */	mr r4, r3
 /* 80274298 0023D858  3B BD A0 18 */	addi r29, r29, CMenuKizunaTalkList_strpool@l

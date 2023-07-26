@@ -12,8 +12,8 @@ Heap heapArray[80];
 int arenaMemorySize;
 int lbl_80665E28;
 int lbl_80665E2C;
-u32 mem1RegionIndex;
-u32 mem2RegionIndex;
+u32 regionIndex1;
+u32 regionIndex2;
 bool lbl_80665E38;
 bool lbl_80665E39;
 s32 lbl_80667E50;
@@ -271,7 +271,7 @@ void* operator new(u32 arg0) {
 
 static inline void deallocate(void* p){
     if(p != nullptr){
-        if(mem1RegionIndex != -1){
+        if(regionIndex1 != -1){
             MemBlock* entryToDelete = VoidToMemBlock(p);
             Heap* heap = &(heapArray[(u8)entryToDelete->heapIndex]);
 

@@ -5,6 +5,12 @@
 extern "C"{
 #endif
 
+typedef enum DSFileHandle {
+	kDSStdin  = 0x00,
+	kDSStdout = 0x01,
+	kDSStderr = 0x02
+} DSFileHandle;
+
 typedef enum {
     kDSIONoError = 0x00,
     kDSIOError = 0x01,
@@ -37,6 +43,8 @@ typedef enum {
 	kDSCloseFile = 0xD3,
 	kDSPositionFile = 0xD4
 } MessageCommandID;
+
+#define DS_MIN_REPLY_LENGTH 0x40
 
 //Memory commands options
 #define DS_MSG_MEMORY_SEGMENTED	0x01		/* non-flat addr space */

@@ -72,7 +72,7 @@
 /* 801F34FC 001BCABC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801F3500 001BCAC0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801F3504 001BCAC4  7C 7F 1B 78 */	mr r31, r3
-/* 801F3508 001BCAC8  48 24 0E 99 */	bl Heap_getMem2RegionIndex1
+/* 801F3508 001BCAC8  48 24 0E 99 */	bl Heap_getRegionIndex2
 /* 801F350C 001BCACC  3C 80 80 50 */	lis r4, CScrollBar_strpool@ha
 /* 801F3510 001BCAD0  7F E5 FB 78 */	mr r5, r31
 /* 801F3514 001BCAD4  38 84 31 A4 */	addi r4, r4, CScrollBar_strpool@l
@@ -441,7 +441,7 @@
 /* 801F39EC 001BCFAC  80 04 00 04 */	lwz r0, 4(r4)
 /* 801F39F0 001BCFB0  7C 05 00 40 */	cmplw r5, r0
 /* 801F39F4 001BCFB4  40 82 01 D0 */	bne .L_801F3BC4
-/* 801F39F8 001BCFB8  48 24 09 A9 */	bl Heap_getMem2RegionIndex1
+/* 801F39F8 001BCFB8  48 24 09 A9 */	bl Heap_getRegionIndex2
 /* 801F39FC 001BCFBC  3F A0 80 50 */	lis r29, CScrollBar_strpool@ha
 /* 801F3A00 001BCFC0  7C 64 1B 78 */	mr r4, r3
 /* 801F3A04 001BCFC4  3B BD 31 A4 */	addi r29, r29, CScrollBar_strpool@l

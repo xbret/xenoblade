@@ -492,7 +492,7 @@
 /* 8011DA54 000E7014  80 03 02 7C */	lwz r0, 0x27c(r3)
 /* 8011DA58 000E7018  2C 00 00 00 */	cmpwi r0, 0
 /* 8011DA5C 000E701C  41 82 01 64 */	beq .L_8011DBC0
-/* 8011DA60 000E7020  48 31 69 41 */	bl Heap_getMem2RegionIndex1
+/* 8011DA60 000E7020  48 31 69 41 */	bl Heap_getRegionIndex2
 /* 8011DA64 000E7024  3C A0 80 50 */	lis r5, CMenuSymbolMark_strpool@ha
 /* 8011DA68 000E7028  7C 64 1B 78 */	mr r4, r3
 /* 8011DA6C 000E702C  3B A5 9F 60 */	addi r29, r5, CMenuSymbolMark_strpool@l
@@ -4206,7 +4206,7 @@
 /* 80121008 000EA5C8  80 03 02 14 */	lwz r0, 0x214(r3)
 /* 8012100C 000EA5CC  54 00 02 D7 */	rlwinm. r0, r0, 0, 0xb, 0xb
 /* 80121010 000EA5D0  40 82 0E 58 */	bne .L_80121E68
-/* 80121014 000EA5D4  4B FB 81 75 */	bl func_800D9188
+/* 80121014 000EA5D4  4B FB 81 75 */	bl getBattleManagerInstance
 /* 80121018 000EA5D8  80 A3 00 08 */	lwz r5, 8(r3)
 /* 8012101C 000EA5DC  38 80 00 00 */	li r4, 0
 /* 80121020 000EA5E0  80 03 00 08 */	lwz r0, 8(r3)

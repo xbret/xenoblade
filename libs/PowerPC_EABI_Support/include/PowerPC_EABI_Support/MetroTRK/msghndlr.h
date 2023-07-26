@@ -9,6 +9,21 @@
 extern "C"{
 #endif
 
+typedef struct CommandReply {
+	u32 unk0;
+	//TODO: fix enum size shenanigans
+	union{
+		u8 commandId;
+		MessageCommandID commandIdInt;
+	};
+	union{
+	    u8 replyError;
+        DSReplyError replyErrorInt;
+    };
+	u32 unkC;
+	u8 unk10[0x30];
+} CommandReply;
+
 BOOL GetTRKConnected();
 DSError TRK_DoConnect(MessageBuffer*);
 DSError TRKDoDisconnect(MessageBuffer*);

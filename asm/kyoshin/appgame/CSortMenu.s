@@ -72,7 +72,7 @@
 /* 801D306C 0019C62C  90 01 00 54 */	stw r0, 0x54(r1)
 /* 801D3070 0019C630  93 E1 00 4C */	stw r31, 0x4c(r1)
 /* 801D3074 0019C634  7C 7F 1B 78 */	mr r31, r3
-/* 801D3078 0019C638  48 26 13 29 */	bl Heap_getMem2RegionIndex1
+/* 801D3078 0019C638  48 26 13 29 */	bl Heap_getRegionIndex2
 /* 801D307C 0019C63C  3C 80 80 50 */	lis r4, CSortMenu_strpool@ha
 /* 801D3080 0019C640  7F E5 FB 78 */	mr r5, r31
 /* 801D3084 0019C644  38 84 1A 20 */	addi r4, r4, CSortMenu_strpool@l
@@ -862,7 +862,7 @@
 /* 801D3B08 0019D0C8  80 04 00 04 */	lwz r0, 4(r4)
 /* 801D3B0C 0019D0CC  7C 05 00 40 */	cmplw r5, r0
 /* 801D3B10 0019D0D0  40 82 01 4C */	bne .L_801D3C5C
-/* 801D3B14 0019D0D4  48 26 08 8D */	bl Heap_getMem2RegionIndex1
+/* 801D3B14 0019D0D4  48 26 08 8D */	bl Heap_getRegionIndex2
 /* 801D3B18 0019D0D8  3F E0 80 50 */	lis r31, CSortMenu_strpool@ha
 /* 801D3B1C 0019D0DC  7C 64 1B 78 */	mr r4, r3
 /* 801D3B20 0019D0E0  3B FF 1A 20 */	addi r31, r31, CSortMenu_strpool@l

@@ -336,7 +336,7 @@
 /* 802AD068 00276628  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802AD06C 0027662C  BF C1 00 08 */	stmw r30, 8(r1)
 /* 802AD070 00276630  7C 7E 1B 78 */	mr r30, r3
-/* 802AD074 00276634  48 18 73 2D */	bl Heap_getMem2RegionIndex1
+/* 802AD074 00276634  48 18 73 2D */	bl Heap_getRegionIndex2
 /* 802AD078 00276638  3F E0 80 51 */	lis r31, CTutorialList_strpool@ha
 /* 802AD07C 0027663C  7F C5 F3 78 */	mr r5, r30
 /* 802AD080 00276640  3B FF C1 90 */	addi r31, r31, CTutorialList_strpool@l
@@ -1510,7 +1510,7 @@
 /* 802AE098 00277658  80 03 00 14 */	lwz r0, 0x14(r3)
 /* 802AE09C 0027765C  7C 00 20 40 */	cmplw r0, r4
 /* 802AE0A0 00277660  40 82 02 84 */	bne .L_802AE324
-/* 802AE0A4 00277664  48 18 62 FD */	bl Heap_getMem2RegionIndex1
+/* 802AE0A4 00277664  48 18 62 FD */	bl Heap_getRegionIndex2
 /* 802AE0A8 00277668  3F C0 80 51 */	lis r30, CTutorialList_strpool@ha
 /* 802AE0AC 0027766C  7C 64 1B 78 */	mr r4, r3
 /* 802AE0B0 00277670  3B DE C1 90 */	addi r30, r30, CTutorialList_strpool@l

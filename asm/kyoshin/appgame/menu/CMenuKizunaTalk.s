@@ -413,7 +413,7 @@
 /* 801BCFD8 00186598  41 82 00 08 */	beq .L_801BCFE0
 /* 801BCFDC 0018659C  3B FE 00 6C */	addi r31, r30, 0x6c
 .L_801BCFE0:
-/* 801BCFE0 001865A0  48 27 73 C1 */	bl Heap_getMem2RegionIndex1
+/* 801BCFE0 001865A0  48 27 73 C1 */	bl Heap_getRegionIndex2
 /* 801BCFE4 001865A4  3C 80 80 50 */	lis r4, CMenuKizunaTalk_strpool@ha
 /* 801BCFE8 001865A8  7F E5 FB 78 */	mr r5, r31
 /* 801BCFEC 001865AC  38 84 09 38 */	addi r4, r4, CMenuKizunaTalk_strpool@l
@@ -993,7 +993,7 @@
 /* 801BD7F4 00186DB4  80 03 00 88 */	lwz r0, 0x88(r3)
 /* 801BD7F8 00186DB8  7C 00 20 40 */	cmplw r0, r4
 /* 801BD7FC 00186DBC  40 82 05 28 */	bne .L_801BDD24
-/* 801BD800 00186DC0  48 27 6B A1 */	bl Heap_getMem2RegionIndex1
+/* 801BD800 00186DC0  48 27 6B A1 */	bl Heap_getRegionIndex2
 /* 801BD804 00186DC4  3F 40 80 50 */	lis r26, CMenuKizunaTalk_strpool@ha
 /* 801BD808 00186DC8  7C 64 1B 78 */	mr r4, r3
 /* 801BD80C 00186DCC  3B 5A 09 38 */	addi r26, r26, CMenuKizunaTalk_strpool@l

@@ -47,11 +47,12 @@ asm void InitMetroTRK(){
     stw r4, TRKCPUState.pc(r3)
     mfcr r4
     stw r4, TRKCPUState.cr(r3)
+	//???
     mfmsr r4
-    ori r3, r4, 0x8000
-    xori r3, r3, 0x8000
+    ori r3, r4, MSR_EE
+    xori r3, r3, MSR_EE
     mtmsr r3
-    mtsrr1 r4
+    mtsrr1 r4 //Copy msr to srr1
 	//Save misc registers to gTRKCPUState
     bl TRKSaveExtended1Block
     lis r3, gTRKCPUState@h
@@ -105,10 +106,11 @@ asm void InitMetroTRK_BBA(){
     stw r4, TRKCPUState.pc(r3)
     mfcr r4
     stw r4, TRKCPUState.cr(r3)
+	//Turn on external interrupts
     mfmsr r4
-    ori r3, r4, 0x8000
+    ori r3, r4, MSR_EE
     mtmsr r3
-    mtsrr1 r4
+    mtsrr1 r4 //Copy original msr to srr1
 	//Save misc registers to gTRKCPUState
     bl TRKSaveExtended1Block
     lis r3, gTRKCPUState@h

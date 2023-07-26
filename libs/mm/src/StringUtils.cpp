@@ -1,4 +1,5 @@
 #include "mm/StringUtils.hpp"
+#include "mm/FixedString.hpp"
 #include <cstring>
 
 namespace mm{
@@ -6,17 +7,17 @@ namespace mm{
 	const char* getFilenameFromPath(const char* str){
 		int endIndex = strlen(str) - 1;
 
-	    for(int i = endIndex; i >= 0; i--) {
-	    	char c = str[i];
+		for(int i = endIndex; i >= 0; i--) {
+			char c = str[i];
 
 			/* If the current character is a path separator character, return the rest
 			of the string */
-	    	if (c == '/' || c == '\\' || c == ':') {
-	    		return str + (endIndex + 1);
-	    	}
+			if (c == '/' || c == '\\' || c == ':') {
+				return str + (endIndex + 1);
+			}
 
 			endIndex--;
-	    }
+		}
 
 		//If no path separator characters were found, just return the string
 		return str;
@@ -25,92 +26,64 @@ namespace mm{
 	const char* getFileExtensionFromPath(const char* str){
 		int endIndex = strlen(str) - 1;
 
-	    for(int i = endIndex; i >= 0; i--) {
-	    	char c = str[i];
+		for(int i = endIndex; i >= 0; i--) {
+			char c = str[i];
 
-	    	if (c == '.') {
-	    		return str + (endIndex + 1);
-	    	}
+			if (c == '.') {
+				return str + (endIndex + 1);
+			}
 
 			endIndex--;
-	    }
+		}
 
 		//If no '.' was found, return null
 		return nullptr;
 	}
 
-	struct UnkStruct {
-		char str[0x40];
-		u32 unk40;
-	};
-
-	inline int unkInline1(char* strArray, int sVar2, int local_28){
-		if (local_28 == 0) {
-			return -1;
-		}else {
-			char* dot = ".";
-			int length = strlen(dot);
-
-			for (char* pcVar3 = strArray + sVar2; pcVar3 != strArray; pcVar3--) {
-				if (!strncmp(pcVar3,dot,length)) {
-					return (int)pcVar3 - (int)(strArray + 1);
-				}
-			}
-			return -1;
-		}
-	}
-
-	void func_80435078(UnkStruct* param_1, const char* param_2){
+	void func_80435078(FixedString<64>* param_1, const char* param_2){
 		char cVar1;
 		int sVar2;
-		char strArray[65];
+		FixedString<64> temp;
 
-		strArray[1] = 0;
+		temp.string[0] = 0;
 		int local_28 = 0;
 
 		param_2 = getFilenameFromPath(param_2);
 
 		if (param_2 == nullptr) {
-			sVar2 = strlen(strArray + 1);
-			param_1->unk40 = sVar2;
-			strcpy(param_1->str,strArray + 1);
+			sVar2 = strlen(temp.string);
+			param_1->length = sVar2;
+			strcpy(param_1->string, temp.string);
 		}else {
 			local_28 = strlen(param_2);
-			strcpy(strArray + 1,param_2);
-			sVar2 = local_28;
+			strcpy(temp.string, param_2);
 
-			sVar2 = unkInline1(strArray, sVar2, local_28);
+			sVar2 = getFilenameLengthWithoutExtension(temp.string, local_28);
 
-	    	if (sVar2 + 1 < 2) {
-	    		sVar2 = strlen(strArray + 1);
-	    		param_1->unk40 = sVar2;
-	    		strcpy(param_1->str,strArray + 1);
-	    	}
-	    	else {
-	    	  	param_1->str[0] = '\0';
-	    	  	param_1->unk40 = 0;
+			if (sVar2 + 1 < 2) {
+				sVar2 = strlen(temp.string);
+				param_1->length = sVar2;
+				strcpy(param_1->string,temp.string);
+			}
+			else {
+				param_1->string[0] = 0;
+				param_1->length = 0;
 
-	    	  	if (local_28 != 0) {
-	    	  	  	if (sVar2 == -1) {
-	    	  	  	  	sVar2 = local_28;
-	    	  	  	}
+				if (local_28 != 0) {
+					if (sVar2 == -1) {
+						sVar2 = local_28;
+					}
 
-	    	  	  	strncpy(param_1->str,strArray + 1,sVar2);
-	    	  	  	param_1->str[sVar2] = '\0';
-	    	  	  	sVar2 = strlen(param_1->str);
-	    	  	  	param_1->unk40 = sVar2;
-	    	  	}
-	    	}
+					strncpy(param_1->string,temp.string,sVar2);
+					param_1->string[sVar2] = 0;
+					sVar2 = strlen(param_1->string);
+					param_1->length = sVar2;
+				}
+			}
 		}
-	  return;
 	}
 
-	struct UnkStruct1 {
-		char str[0x10];
-		u32 unk10;
-	};
-
-	void func_80435220(UnkStruct1* param_1, int param_2, int param_3){
+	void func_80435220(FixedString<16>* param_1, int param_2, int param_3){
 		bool bVar1;
 		int iVar2;
 		size_t sVar3;
@@ -125,10 +98,10 @@ namespace mm{
 		size_t local_30;
 
 		sVar3 = strlen("");
-		param_1->unk10 = sVar3;
-		strcpy(param_1->str, "");
+		param_1->length = sVar3;
+		strcpy(param_1->string, "");
 
-		for (iVar6 = 0; iVar6 < param_3; iVar6 = iVar6 + 1) {
+		for (iVar6 = 0; iVar6 < param_3; iVar6++) {
 			iVar4 = 1;
 			iVar5 = 0;
 
@@ -164,12 +137,12 @@ namespace mm{
 			strcpy(acStack_40,(char *)local_58);
 			local_44 = strlen(acStack_40);
 			strcpy(acStack_54,acStack_40);
-			sVar3 = strlen(param_1->str);
-			strcat(acStack_54,param_1->str);
+			sVar3 = strlen(param_1->string);
+			strcat(acStack_54,param_1->string);
 			local_44 = local_44 + sVar3;
 			sVar3 = strlen(acStack_54);
-			param_1->unk10 = sVar3;
-			strcpy(param_1->str,acStack_54);
+			param_1->length = sVar3;
+			strcpy(param_1->string,acStack_54);
 		}
 		return;
 	}

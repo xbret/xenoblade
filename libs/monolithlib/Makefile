@@ -127,7 +127,7 @@ MONOLITHLIB_FILES:=\
 	$(BUILD_DIR)/libs/monolithlib/asm/nand/CNReqtaskReaddir.o\
 	$(BUILD_DIR)/libs/monolithlib/asm/nand/CNReqtaskRemove.o\
 	$(BUILD_DIR)/libs/monolithlib/asm/nand/CNReqtaskCheck.o\
-	$(BUILD_DIR)/libs/monolithlib/asm/effect/CERand.o\
+	$(BUILD_DIR)/libs/monolithlib/src/effect/CERand.o\
 	$(BUILD_DIR)/libs/monolithlib/asm/code_804DB938.o\
 	$(BUILD_DIR)/libs/monolithlib/asm/work/CWorkSystemPack.o\
 	$(BUILD_DIR)/libs/monolithlib/asm/CPackItem.o\

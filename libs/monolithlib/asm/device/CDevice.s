@@ -140,12 +140,12 @@
 /* 8044DA00 00416FC0  4B FF AB 3D */	bl func_8044853C
 .L_8044DA04:
 /* 8044DA04 00416FC4  7F FF 1A 14 */	add r31, r31, r3
-/* 8044DA08 00416FC8  4B FE 69 91 */	bl Heap_getMem1RegionIndex
+/* 8044DA08 00416FC8  4B FE 69 91 */	bl Heap_getRegionIndex1
 /* 8044DA0C 00416FCC  80 AD 9E 18 */	lwz r5, lbl_80665F98@sda21(r13)
 /* 8044DA10 00416FD0  7F E4 FB 78 */	mr r4, r31
 /* 8044DA14 00416FD4  4B FE 66 2D */	bl heap_createRegion
 /* 8044DA18 00416FD8  90 6D 9E 20 */	stw r3, lbl_80665FA0@sda21(r13)
-/* 8044DA1C 00416FDC  4B FE 69 85 */	bl Heap_getMem2RegionIndex1
+/* 8044DA1C 00416FDC  4B FE 69 85 */	bl Heap_getRegionIndex2
 /* 8044DA20 00416FE0  80 AD 9E 1C */	lwz r5, lbl_80665F9C@sda21(r13)
 /* 8044DA24 00416FE4  3C 80 00 1A */	lis r4, 0x1a
 /* 8044DA28 00416FE8  4B FE 66 19 */	bl heap_createRegion

@@ -329,7 +329,7 @@
 /* 8029C364 00265924  90 01 00 94 */	stw r0, 0x94(r1)
 /* 8029C368 00265928  93 E1 00 8C */	stw r31, 0x8c(r1)
 /* 8029C36C 0026592C  7C 7F 1B 78 */	mr r31, r3
-/* 8029C370 00265930  48 19 80 31 */	bl Heap_getMem2RegionIndex1
+/* 8029C370 00265930  48 19 80 31 */	bl Heap_getRegionIndex2
 /* 8029C374 00265934  3C 80 80 51 */	lis r4, COption_strpool@ha
 /* 8029C378 00265938  7F E5 FB 78 */	mr r5, r31
 /* 8029C37C 0026593C  38 84 B9 C8 */	addi r4, r4, COption_strpool@l
@@ -2864,7 +2864,7 @@
 /* 8029E614 00267BD4  80 04 00 04 */	lwz r0, 4(r4)
 /* 8029E618 00267BD8  7C 05 00 40 */	cmplw r5, r0
 /* 8029E61C 00267BDC  40 82 01 A4 */	bne .L_8029E7C0
-/* 8029E620 00267BE0  48 19 5D 81 */	bl Heap_getMem2RegionIndex1
+/* 8029E620 00267BE0  48 19 5D 81 */	bl Heap_getRegionIndex2
 /* 8029E624 00267BE4  3F C0 80 51 */	lis r30, COption_strpool@ha
 /* 8029E628 00267BE8  7C 64 1B 78 */	mr r4, r3
 /* 8029E62C 00267BEC  3B DE B9 C8 */	addi r30, r30, COption_strpool@l

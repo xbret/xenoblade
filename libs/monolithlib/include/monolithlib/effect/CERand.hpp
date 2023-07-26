@@ -10,16 +10,15 @@ using namespace mm;
 
 class IRandomizer {
 public:
-    virtual u32 rand() = 0;        //0x8
-    virtual float randF() = 0;     //0xC
-    virtual float randFHalf() = 0; //0x10
-    virtual float randSign() = 0;  //0x14
+    virtual u32 rand();        //0x8
+    virtual float randF();     //0xC
+    virtual float randFHalf(); //0x10
+    virtual float randSign();  //0x14
 };
 
 //Consider maybe omitting the unused constructors/destructors?
 class CERandomizer : public IRandomizer {
 public:
-    CERandomizer(){}
     ~CERandomizer(){}
 
     virtual u32 rand(){

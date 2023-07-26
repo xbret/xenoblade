@@ -47,7 +47,7 @@
 /* 80275A58 0023F018  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80275A5C 0023F01C  93 81 00 10 */	stw r28, 0x10(r1)
 /* 80275A60 0023F020  7C 7C 1B 78 */	mr r28, r3
-/* 80275A64 0023F024  48 1B E9 3D */	bl Heap_getMem2RegionIndex1
+/* 80275A64 0023F024  48 1B E9 3D */	bl Heap_getRegionIndex2
 /* 80275A68 0023F028  3F E0 80 51 */	lis r31, CMenuLvUp_strpool@ha
 /* 80275A6C 0023F02C  7C 64 1B 78 */	mr r4, r3
 /* 80275A70 0023F030  38 7C 00 60 */	addi r3, r28, 0x60

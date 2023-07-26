@@ -43,8 +43,8 @@ L_802CC250:
     lwz r4, OSContext.xer(r31)
     mtxer r4
     mfmsr r4
-    rlwinm r4, r4, 0, 0x11, 0xf
-    rlwinm r4, r4, 0, 0x1f, 0x1d
+    rlwinm r4, r4, 0, 0x11, 0xf //Turn off external exceptions
+    rlwinm r4, r4, 0, 0x1f, 0x1d //Turn off recoverable exception flag
     mtmsr r4
     mtsprg 1, r2
     lwz r4, OSContext.gprs[3](r31)

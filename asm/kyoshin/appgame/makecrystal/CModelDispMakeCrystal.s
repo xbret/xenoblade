@@ -704,7 +704,7 @@
 /* 8021C6EC 001E5CAC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8021C6F0 001E5CB0  BF C1 00 08 */	stmw r30, 8(r1)
 /* 8021C6F4 001E5CB4  7C 7E 1B 78 */	mr r30, r3
-/* 8021C6F8 001E5CB8  48 21 7C A9 */	bl Heap_getMem2RegionIndex1
+/* 8021C6F8 001E5CB8  48 21 7C A9 */	bl Heap_getRegionIndex2
 /* 8021C6FC 001E5CBC  3F E0 80 50 */	lis r31, CModelDispMakeCrystal_strpool@ha
 /* 8021C700 001E5CC0  7F C5 F3 78 */	mr r5, r30
 /* 8021C704 001E5CC4  38 9F 48 14 */	addi r4, r31, CModelDispMakeCrystal_strpool@l
@@ -712,7 +712,7 @@
 /* 8021C70C 001E5CCC  38 E0 00 00 */	li r7, 0
 /* 8021C710 001E5CD0  48 23 20 85 */	bl CDeviceFile_openFile1
 /* 8021C714 001E5CD4  90 7E 00 24 */	stw r3, 0x24(r30)
-/* 8021C718 001E5CD8  48 21 7C 89 */	bl Heap_getMem2RegionIndex1
+/* 8021C718 001E5CD8  48 21 7C 89 */	bl Heap_getRegionIndex2
 /* 8021C71C 001E5CDC  3B FF 48 14 */	addi r31, r31, CModelDispMakeCrystal_strpool@l
 /* 8021C720 001E5CE0  7F C5 F3 78 */	mr r5, r30
 /* 8021C724 001E5CE4  38 9F 00 11 */	addi r4, r31, 0x11
@@ -720,7 +720,7 @@
 /* 8021C72C 001E5CEC  38 E0 00 00 */	li r7, 0
 /* 8021C730 001E5CF0  48 23 20 65 */	bl CDeviceFile_openFile1
 /* 8021C734 001E5CF4  90 7E 00 18 */	stw r3, 0x18(r30)
-/* 8021C738 001E5CF8  48 21 7C 69 */	bl Heap_getMem2RegionIndex1
+/* 8021C738 001E5CF8  48 21 7C 69 */	bl Heap_getRegionIndex2
 /* 8021C73C 001E5CFC  7F C5 F3 78 */	mr r5, r30
 /* 8021C740 001E5D00  38 9F 00 25 */	addi r4, r31, 0x25
 /* 8021C744 001E5D04  38 C0 00 00 */	li r6, 0
@@ -5641,7 +5641,7 @@
 /* 80220BF4 001EA1B4  38 03 0E 16 */	addi r0, r3, 0xe16
 /* 80220BF8 001EA1B8  54 1D 04 3E */	clrlwi r29, r0, 0x10
 .L_80220BFC:
-/* 80220BFC 001EA1BC  48 21 37 A5 */	bl Heap_getMem2RegionIndex1
+/* 80220BFC 001EA1BC  48 21 37 A5 */	bl Heap_getRegionIndex2
 /* 80220C00 001EA1C0  C0 22 A9 E0 */	lfs f1, float_8066AD60@sda21(r2)
 /* 80220C04 001EA1C4  7C 65 1B 78 */	mr r5, r3
 /* 80220C08 001EA1C8  7F A4 EB 78 */	mr r4, r29
@@ -5880,7 +5880,7 @@
 /* 80220F64 001EA524  38 E0 00 0A */	li r7, 0xa
 /* 80220F68 001EA528  4C C6 31 82 */	crclr 6
 /* 80220F6C 001EA52C  48 0A 00 CD */	bl sprintf
-/* 80220F70 001EA530  48 21 34 31 */	bl Heap_getMem2RegionIndex1
+/* 80220F70 001EA530  48 21 34 31 */	bl Heap_getRegionIndex2
 /* 80220F74 001EA534  7F C5 F3 78 */	mr r5, r30
 /* 80220F78 001EA538  38 81 00 20 */	addi r4, r1, 0x20
 /* 80220F7C 001EA53C  38 C0 00 00 */	li r6, 0
@@ -6159,7 +6159,7 @@
 /* 80221384 001EA944  38 E0 00 0A */	li r7, 0xa
 /* 80221388 001EA948  4C C6 31 82 */	crclr 6
 /* 8022138C 001EA94C  48 09 FC AD */	bl sprintf
-/* 80221390 001EA950  48 21 30 11 */	bl Heap_getMem2RegionIndex1
+/* 80221390 001EA950  48 21 30 11 */	bl Heap_getRegionIndex2
 /* 80221394 001EA954  7F A5 EB 78 */	mr r5, r29
 /* 80221398 001EA958  38 81 00 10 */	addi r4, r1, 0x10
 /* 8022139C 001EA95C  38 C0 00 00 */	li r6, 0
@@ -6317,7 +6317,7 @@
 /* 802215D0 001EAB90  80 03 00 3C */	lwz r0, 0x3c(r3)
 /* 802215D4 001EAB94  7C 00 30 40 */	cmplw r0, r6
 /* 802215D8 001EAB98  40 82 05 30 */	bne .L_80221B08
-/* 802215DC 001EAB9C  48 21 2D C5 */	bl Heap_getMem2RegionIndex1
+/* 802215DC 001EAB9C  48 21 2D C5 */	bl Heap_getRegionIndex2
 /* 802215E0 001EABA0  3F C0 80 50 */	lis r30, CModelDispMakeCrystal_strpool@ha
 /* 802215E4 001EABA4  3C A0 00 03 */	lis r5, 0x0002F000@ha
 /* 802215E8 001EABA8  3B DE 48 14 */	addi r30, r30, CModelDispMakeCrystal_strpool@l

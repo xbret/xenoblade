@@ -22,7 +22,7 @@ extern "C"{
 #define PPC_FloatingPointAssist 0xE00 //unimplemented in 750CL
 #define PPC_PerformanceMonitor 0xF00 //Dolphin/Broadway specific
 //0x1000-0x1200 are unimplemented in 750CL
-#define PPC_InstructionAddressBreakpoint 0x1300
+#define PPC_InstructionAddressBreakpoint 0x1300 //Dolphin/Broadway specific
 //0x1400-0x2F00 are reserved, but TRK uses some
 #define PPC_SystemManagementInterrupt 0x1400
 //0x1500-0x1600 are unimplemented in 750CL
