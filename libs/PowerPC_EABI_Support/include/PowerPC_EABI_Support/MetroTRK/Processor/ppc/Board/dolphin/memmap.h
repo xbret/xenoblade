@@ -3,10 +3,6 @@
 #include "types.h"
 #include "PowerPC_EABI_Support/MetroTRK/trk.h"
 
-#ifdef __cplusplus
-extern "C"{
-#endif
-
 typedef struct TRKMemMap{
 	u32 unk0;
 	u32 unk4;
@@ -14,7 +10,12 @@ typedef struct TRKMemMap{
 	int unkC;
 } TRKMemMap;
 
-#ifdef __cplusplus
-}
-#endif
+const TRKMemMap gTRKMemMap = {
+	0,
+	-1,
+	1,
+	1
+};
+
+
 #endif

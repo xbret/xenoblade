@@ -20,38 +20,35 @@ void TRK_Idle(void){
  * Perhaps the switch case takes TRK CMD defines as inputs?
  * As seen in Dolphin/trk.h
  */
-void TRK_NubMainLoop(void)
-{
+void TRK_NubMainLoop(void){
 	MessageBuffer* msg;
-	TRKEvent sp8;
-	BOOL var_r31;
-	BOOL var_r30;
+	NubEvent event;
+	BOOL var_r31 = FALSE;
+	BOOL var_r30 = FALSE;
 
-	var_r31 = FALSE;
-	var_r30 = FALSE;
 	while (var_r31 == FALSE) {
-		if (TRKGetNextEvent(&sp8) != FALSE) {
+		if (TRKGetNextEvent(&event) != FALSE) {
 			var_r30 = FALSE;
-			switch (sp8.mEventType) {
-			case 0:
+			switch (event.fType) {
+			case kNullEvent:
 				break;
-			case 2:
-				msg = TRKGetBuffer(sp8.mBufferIndex);
+			case kRequestEvent:
+				msg = TRKGetBuffer(event.fMessageBufferID);
 				TRK_DispatchMessage(msg);
 				break;
-			case 1:
+			case kShutdownEvent:
 				var_r31 = TRUE;
 				break;
-			case 3:
-			case 4:
-				TRKTargetInterrupt(&sp8);
+			case kBreakpointEvent:
+			case kExceptionEvent:
+				TRKTargetInterrupt(&event);
 				break;
-			case 5:
+			case kSupportEvent:
 				TRKTargetSupportRequest();
 				break;
 			}
-			TRKDestructEvent(&sp8);
-		} else if ((var_r30 == FALSE) || (*(u8*)gTRKInputPendingPtr != '\0')) {
+			TRKDestructEvent(&event);
+		} else if (var_r30 == FALSE || *(u8*)gTRKInputPendingPtr != 0) {
 			var_r30 = TRUE;
 			TRKGetInput();
 		} else {

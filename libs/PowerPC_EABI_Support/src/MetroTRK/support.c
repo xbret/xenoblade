@@ -139,7 +139,7 @@ DSError TRK_RequestSend(MessageBuffer* msgBuf, int* bufferId){
 	return error;
 }
 
-DSError HandleOpenFileSupportRequest(const char* path, u8 replyError, u32* param_3, u32* param_4){
+DSError HandleOpenFileSupportRequest(const char* path, u8 replyError, u32* param_3, DSIOResult* ioResult){
 	DSError error;
 	int bufferId2;
 	int bufferId1;
@@ -161,14 +161,14 @@ DSError HandleOpenFileSupportRequest(const char* path, u8 replyError, u32* param
 	}
 	
 	if (error == kNoError) {
-		*param_4 = 0;
+		*ioResult = kDSIONoError;
 		error = TRK_RequestSend(buffer,&bufferId2);
 		
 		if (error == kNoError) {
 			tempBuffer = TRKGetBuffer(bufferId2);
 		}
 		
-		*param_4 = *(u32*)(tempBuffer->fData + 0x10);
+		*ioResult = *(u32*)(tempBuffer->fData + 0x10);
 		*param_3 = *(u32*)(tempBuffer->fData + 0x8);
 		TRK_ReleaseBuffer(bufferId2);
 	}
@@ -178,7 +178,7 @@ DSError HandleOpenFileSupportRequest(const char* path, u8 replyError, u32* param
 
 
 
-DSError HandleCloseFileSupportRequest(int replyError,int* param_2){
+DSError HandleCloseFileSupportRequest(int replyError, DSIOResult* ioResult){
 	DSError error;
 	int replyBufferId;
 	int bufferId;
@@ -197,7 +197,7 @@ DSError HandleCloseFileSupportRequest(int replyError,int* param_2){
 	}
 	
 	if (error == kNoError) {
-		*param_2 = 0;
+		*ioResult = kDSIONoError;
 		error = TRK_RequestSend(buffer1,&replyBufferId);
 		
 		if (error == kNoError) {
@@ -205,7 +205,7 @@ DSError HandleCloseFileSupportRequest(int replyError,int* param_2){
 		}
 		
 		if(error == kNoError){
-			*param_2 = *(u32 *)(buffer2->fData + 0x10);
+			*ioResult = *(u32*)(buffer2->fData + 0x10);
 		}
 		
 		TRK_ReleaseBuffer(replyBufferId);
@@ -216,7 +216,7 @@ DSError HandleCloseFileSupportRequest(int replyError,int* param_2){
 }
 
 
-DSError HandlePositionFileSupportRequest(u32 param_1, int* param_2,u8 param_3, int* param_4){
+DSError HandlePositionFileSupportRequest(u32 param_1, u32* param_2, u8 param_3, DSIOResult* ioResult){
 	DSError error;
 	int bufferId2;
 	int bufferId1;
@@ -237,7 +237,7 @@ DSError HandlePositionFileSupportRequest(u32 param_1, int* param_2,u8 param_3, i
 	}
 	
 	if (error == kNoError) {
-		*param_4 = 0;
+		*ioResult = kDSIONoError;
 		*param_2 = -1;
 		error = TRK_RequestSend(buffer1,&bufferId2);
 
@@ -245,8 +245,8 @@ DSError HandlePositionFileSupportRequest(u32 param_1, int* param_2,u8 param_3, i
 			buffer2 = TRKGetBuffer(bufferId2);
 		
 			if (buffer2 != NULL) {
-				*param_4 = *(int*)(buffer2->fData + 0x10);
-				*param_2 = *(int*)(buffer2->fData + 0x18);
+				*ioResult = *(u32*)(buffer2->fData + 0x10);
+				*param_2 = *(u32*)(buffer2->fData + 0x18);
 			}
 		}
 		

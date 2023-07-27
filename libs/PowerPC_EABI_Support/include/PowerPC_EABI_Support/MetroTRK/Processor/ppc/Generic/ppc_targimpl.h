@@ -10,17 +10,6 @@
 extern "C"{
 #endif
 
-typedef struct TRKSaveState{
-	u32 unk0;
-	u32 unk4;
-	u32 unk8;
-	u32 unkC;
-	u8 unk10[0x88 - 0x10];
-	u32 cr; //0x88
-	u32 unk8C;
-	u32 unk90;
-} TRKSaveState;
-
 typedef struct TRKState {
 	u32 gprs[32]; //0x0
 	u32 lr; //0x80
@@ -35,14 +24,21 @@ typedef struct TRKState {
 } TRKState;
 
 typedef struct TRKRestoreFlags {
-	u8 unk0;
-	u8 unk1;
+	u8 tbr;
+	u8 dec;
 	u8 unk2[0x9 - 0x2];
 } TRKRestoreFlags;
 
 extern TRKRestoreFlags gTRKRestoreFlags;
 extern TRKCPUState gTRKCPUState;
 extern TRKState gTRKState;
+
+DSError TRKPPCAccessSPR(void* srcDestPtr, u32 spr, BOOL read);
+DSError TRKPPCAccessPairedSingleRegister(void* srcDestPtr, u32 psr, BOOL read);
+DSError TRKPPCAccessFPRegister(void* srcDestPtr, u32 fpr, BOOL read);
+DSError TRKPPCAccessSpecialReg(void* srcDestPtr, u32* instructionData, BOOL read);
+void TRKPostInterruptEvent();
+u32* ConvertAddress(u32);
 
 #ifdef __cplusplus
 }

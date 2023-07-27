@@ -3,34 +3,34 @@
 
 #include "types.h"
 #include "PowerPC_EABI_Support/MetroTRK/trk.h"
+#include "PowerPC_EABI_Support/MetroTRK/msgbuf.h"
 
 #ifdef __cplusplus
 extern "C"{
 #endif
 
-/**
- * @size{0xC}
- */
-typedef struct TRKEvent {
-	int mEventType;
-	int _04;
-	int mBufferIndex;
-} TRKEvent;
+typedef unsigned long NubEventID;
 
-typedef struct TRKEventQueue {
-	int mCurrEvtID;
-	int mNextSlotToOverwrite;
-	TRKEvent mEvents[2];
-	u32 _24; //max of 0x100?
-} TRKEventQueue;
+typedef enum NubEventType {
+	kNullEvent,
+	kShutdownEvent,
+	kRequestEvent,
+	kBreakpointEvent,
+	kExceptionEvent,
+	kSupportEvent
+} NubEventType;
 
-extern TRKEventQueue gTRKEventQueue;
+typedef struct NubEvent {
+	NubEventType fType;
+	NubEventID fID;
+	MessageBufferID fMessageBufferID;
+} NubEvent;
 
 DSError TRKInitializeEventQueue();
-BOOL TRKGetNextEvent(TRKEvent*);
-DSError TRKPostEvent(TRKEvent*);
-void TRKConstructEvent(TRKEvent*, int);
-void TRKDestructEvent(TRKEvent*);
+BOOL TRKGetNextEvent(NubEvent*);
+DSError TRKPostEvent(NubEvent*);
+void TRKConstructEvent(NubEvent*, int);
+void TRKDestructEvent(NubEvent*);
 
 #ifdef __cplusplus
 }

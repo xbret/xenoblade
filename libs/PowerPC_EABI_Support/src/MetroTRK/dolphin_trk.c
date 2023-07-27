@@ -37,16 +37,16 @@ asm void InitMetroTRK(){
     stw r3, 0(r1)
     lis r3, gTRKCPUState@h
     ori r3, r3, gTRKCPUState@l
-    stmw r0, TRKCPUState.gprs(r3) //Save the gprs
+    stmw r0, TRKCPUState.defaultState.gprs(r3) //Save the gprs
     lwz r4, 0(r1)
     addi r1, r1, 4
-    stw r1, TRKCPUState.gprs[1](r3)
-    stw r4, TRKCPUState.gprs[3](r3)
+    stw r1, TRKCPUState.defaultState.gprs[1](r3)
+    stw r4, TRKCPUState.defaultState.gprs[3](r3)
     mflr r4
-    stw r4, TRKCPUState.lr(r3)
-    stw r4, TRKCPUState.pc(r3)
+    stw r4, TRKCPUState.defaultState.lr(r3)
+    stw r4, TRKCPUState.defaultState.pc(r3)
     mfcr r4
-    stw r4, TRKCPUState.cr(r3)
+    stw r4, TRKCPUState.defaultState.cr(r3)
 	//???
     mfmsr r4
     ori r3, r4, MSR_EE
@@ -57,7 +57,7 @@ asm void InitMetroTRK(){
     bl TRKSaveExtended1Block
     lis r3, gTRKCPUState@h
     ori r3, r3, gTRKCPUState@l
-    lmw r0, TRKCPUState.gprs(r3) //Restore the gprs
+    lmw r0, TRKCPUState.defaultState.gprs(r3) //Restore the gprs
 	//Reset IABR and DABR
     li r0, 0
     mtiabr r0
@@ -81,9 +81,9 @@ asm void InitMetroTRK(){
 	as a TRKCPUState struct pointer, causing the CPU to return to
 	a garbage code address.
 	*/
-    lwz r4, TRKCPUState.lr(r3)
+    lwz r4, TRKCPUState.defaultState.lr(r3)
     mtlr r4
-    lmw r0, TRKCPUState.gprs(r3) //Restore the gprs
+    lmw r0, TRKCPUState.defaultState.gprs(r3) //Restore the gprs
     blr
 initCommTableSuccess:
     b TRK_main //Jump to TRK_main
@@ -96,16 +96,16 @@ asm void InitMetroTRK_BBA(){
     stw r3, 0(r1)
     lis r3, gTRKCPUState@h
     ori r3, r3, gTRKCPUState@l
-    stmw r0, TRKCPUState.gprs(r3) //Save the gprs
+    stmw r0, TRKCPUState.defaultState.gprs(r3) //Save the gprs
     lwz r4, 0(r1)
     addi r1, r1, 4
-    stw r1, TRKCPUState.gprs[1](r3)
-    stw r4, TRKCPUState.gprs[3](r3)
+    stw r1, TRKCPUState.defaultState.gprs[1](r3)
+    stw r4, TRKCPUState.defaultState.gprs[3](r3)
     mflr r4
-    stw r4, TRKCPUState.lr(r3)
-    stw r4, TRKCPUState.pc(r3)
+    stw r4, TRKCPUState.defaultState.lr(r3)
+    stw r4, TRKCPUState.defaultState.pc(r3)
     mfcr r4
-    stw r4, TRKCPUState.cr(r3)
+    stw r4, TRKCPUState.defaultState.cr(r3)
 	//Turn on external interrupts
     mfmsr r4
     ori r3, r4, MSR_EE
@@ -115,7 +115,7 @@ asm void InitMetroTRK_BBA(){
     bl TRKSaveExtended1Block
     lis r3, gTRKCPUState@h
     ori r3, r3, gTRKCPUState@l
-    lmw r0, TRKCPUState.gprs(r3) //Restore the gprs
+    lmw r0, TRKCPUState.defaultState.gprs(r3) //Restore the gprs
 	//Reset IABR and DABR
     li r0, 0
     mtiabr r0
@@ -138,9 +138,9 @@ asm void InitMetroTRK_BBA(){
 	as a TRKCPUState struct pointer, causing the CPU to return to
 	a garbage code address.
 	*/
-    lwz r4, TRKCPUState.lr(r3)
+    lwz r4, TRKCPUState.defaultState.lr(r3)
     mtlr r4
-    lmw r0, TRKCPUState.gprs(r3)
+    lmw r0, TRKCPUState.defaultState.gprs(r3)
     blr
 initCommTableSuccess:
     b TRK_main //Jump to TRK_main

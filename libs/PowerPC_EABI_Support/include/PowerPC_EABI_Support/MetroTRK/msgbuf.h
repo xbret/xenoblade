@@ -4,9 +4,8 @@
 #include "types.h"
 #include "PowerPC_EABI_Support/MetroTRK/trk.h"
 
-#ifdef __cplusplus
-extern "C"{
-#endif
+
+typedef int MessageBufferID;
 
 #define kMessageBufferSize 0x800 + 0x80
 #define NUM_BUFFERS 3
@@ -61,7 +60,5 @@ DSError TRKReadBuffer_ui32(MessageBuffer* buffer, ui32* data, int count);
 DSError TRKReadBuffer_ui64(MessageBuffer* buffer, ui64* data, int count);
 DSError TRKReadBuffer_ui128(MessageBuffer* buffer, ui128* data, int count);
 
-#ifdef __cplusplus
-}
-#endif
+
 #endif

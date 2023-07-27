@@ -58,7 +58,7 @@ DSError TRK_DoConnect(MessageBuffer* b){
 }
 
 DSError TRKDoDisconnect(MessageBuffer* b){
-	TRKEvent event;
+	NubEvent event;
 
 	IsTRKConnected = FALSE;
 	TRKStandardACK(b,0x80,kDSReplyNoError);

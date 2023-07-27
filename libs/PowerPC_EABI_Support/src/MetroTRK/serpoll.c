@@ -56,10 +56,10 @@ void TRKGetInput(){
 }
 
 void TRKProcessInput(int bufferIndex){
-    TRKEvent event;
+    NubEvent event;
 
     TRKConstructEvent(&event, 2);
-    event.mBufferIndex = bufferIndex;
+    event.fMessageBufferID = bufferIndex;
     TRKPostEvent(&event);
 }
 

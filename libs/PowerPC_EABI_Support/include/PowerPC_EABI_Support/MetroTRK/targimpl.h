@@ -37,9 +37,9 @@ DSError TRKTargetCheckException();
 void TRK_InterruptHandler();
 void TRKSwapAndGo();
 
-DSError TRKTargetInterrupt(TRKEvent*);
+DSError TRKTargetInterrupt(NubEvent*);
 
-void TRKTargetAddStopInfo(MessageBuffer*);
+DSError TRKTargetAddStopInfo(MessageBuffer*);
 void TRKTargetAddExceptionInfo(MessageBuffer*);
 
 DSError TRKTargetSingleStep(u8,BOOL);
