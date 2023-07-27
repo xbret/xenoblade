@@ -1,7 +1,7 @@
 #ifndef TRK_MPC_7XX_603E
 #define TRK_MPC_7XX_603E
 
-#include "types.h"
+#include "PowerPC_EABI_Support/MetroTRK/dstypes.h"
 
 #ifdef __cplusplus
 extern "C"{

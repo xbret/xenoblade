@@ -23,12 +23,12 @@ void TRK_Idle(void){
 void TRK_NubMainLoop(void){
 	MessageBuffer* msg;
 	NubEvent event;
-	BOOL var_r31 = FALSE;
-	BOOL var_r30 = FALSE;
+	bool var_r31 = false;
+	bool var_r30 = false;
 
-	while (var_r31 == FALSE) {
-		if (TRKGetNextEvent(&event) != FALSE) {
-			var_r30 = FALSE;
+	while (var_r31 == false) {
+		if (TRKGetNextEvent(&event) != false) {
+			var_r30 = false;
 			switch (event.fType) {
 			case kNullEvent:
 				break;
@@ -37,7 +37,7 @@ void TRK_NubMainLoop(void){
 				TRK_DispatchMessage(msg);
 				break;
 			case kShutdownEvent:
-				var_r31 = TRUE;
+				var_r31 = true;
 				break;
 			case kBreakpointEvent:
 			case kExceptionEvent:
@@ -48,14 +48,14 @@ void TRK_NubMainLoop(void){
 				break;
 			}
 			TRKDestructEvent(&event);
-		} else if (var_r30 == FALSE || *(u8*)gTRKInputPendingPtr != 0) {
-			var_r30 = TRUE;
+		} else if (var_r30 == false || *(ui8*)gTRKInputPendingPtr != 0) {
+			var_r30 = true;
 			TRKGetInput();
 		} else {
-			if (TRKTargetStopped() == FALSE) {
+			if (TRKTargetStopped() == false) {
 				TRKTargetContinue();
 			}
-			var_r30 = FALSE;
+			var_r30 = false;
 		}
 	}
 }

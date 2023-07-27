@@ -1,7 +1,7 @@
 #ifndef TRK_MSG
 #define TRK_MSG
 
-#include "types.h"
+#include "PowerPC_EABI_Support/MetroTRK/dstypes.h"
 #include "PowerPC_EABI_Support/MetroTRK/trk.h"
 #include "PowerPC_EABI_Support/MetroTRK/msgbuf.h"
 
@@ -10,8 +10,8 @@ extern "C"{
 #endif
 
 typedef struct TRKPacketSeq {
-	u16 unk0;
-	u8 unk2[6];
+	ui16 unk0;
+	ui8 unk2[6];
 } TRKPacketSeq;
 
 DSError TRK_MessageSend(MessageBuffer*);

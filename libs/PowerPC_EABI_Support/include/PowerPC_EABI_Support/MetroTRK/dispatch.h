@@ -1,7 +1,6 @@
 #ifndef METROTRK_DISPATCH
 #define METROTRK_DISPATCH
 
-#include "types.h"
 #include "PowerPC_EABI_Support/MetroTRK/trk.h"
 #include "PowerPC_EABI_Support/MetroTRK/msgbuf.h"
 

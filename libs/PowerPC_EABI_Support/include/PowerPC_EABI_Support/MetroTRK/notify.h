@@ -1,7 +1,7 @@
 #ifndef METROTRK_NOTIFY
 #define METROTRK_NOTIFY
 
-#include "types.h"
+#include "PowerPC_EABI_Support/MetroTRK/dstypes.h"
 #include "PowerPC_EABI_Support/MetroTRK/trk.h"
 
 #ifdef __cplusplus

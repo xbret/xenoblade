@@ -1,114 +1,116 @@
 #ifndef METROTRK_PPC_REG
 #define METROTRK_PPC_REG
 
-#include "types.h"
+#include "PowerPC_EABI_Support/MetroTRK/dstypes.h"
 #include "PowerPC_EABI_Support/MetroTRK/trk.h"
 
-#ifdef __cplusplus
-extern "C"{
-#endif
+typedef struct Default_PPC{
+	ui32 GPR[32];
+	ui32 PC;
+	ui32 LR;
+	ui32 CR;
+	ui32 CTR;
+	ui32 XER;
+} Default_PPC;
 
-typedef struct DefaultState{
-	u32 gprs[32]; //0x0
-	u32 pc; //0x80
-	u32 lr; //0x84
-	u32 cr; //0x88
-	u32 ctr; //0x8C
-	u32 xer; //0x90
-} DefaultState;
+typedef struct Float_PPC{
+	ui64 FPR[32];
+	ui64 FPSCR;
+	ui64 FPECR;
+} Float_PPC;
 
-typedef struct TRKCPUState{
-	DefaultState defaultState;
-	u64 fprs[32]; //0x9c no proof but likely
-	u64 fpscr; //0x19c
-	u64 fpecr; //0x1a4
-	u32 srs[16]; //0x1a8
-	u32 tbl; //0x1e8
-	u32 tbu; //0x1ec
-	u32 unk1F0; //hid0
-	u32 unk1F4; //hid1
-	u32 unk1F8; //srr1
+typedef struct Extended1_PPC_6xx_7xx{
+	ui32 SR[16];
+	ui32 TBL;
+	ui32 TBU;
+	ui32 HID0;
+	ui32 HID1;
+	ui32 MSR;
+	ui32 PVR;
+	ui32 IBAT0U;
+	ui32 IBAT0L;
+	ui32 IBAT1U;
+	ui32 IBAT1L;
+	ui32 IBAT2U;
+	ui32 IBAT2L;
+	ui32 IBAT3U;
+	ui32 IBAT3L;
+	ui32 DBAT0U;
+	ui32 DBAT0L;
+	ui32 DBAT1U;
+	ui32 DBAT1L;
+	ui32 DBAT2U;
+	ui32 DBAT2L;
+	ui32 DBAT3U;
+	ui32 DBAT3L;
+	ui32 DMISS;
+	ui32 DCMP;
+	ui32 HASH1;
+	ui32 HASH2;
+	ui32 IMISS;
+	ui32 ICMP;
+	ui32 RPA;
+	ui32 SDR1;
+	ui32 DAR;
+	ui32 DSISR;
+	ui32 SPRG0;
+	ui32 SPRG1;
+	ui32 SPRG2;
+	ui32 SPRG3;
+	ui32 DEC;
+	ui32 IABR;
+	ui32 EAR;
+	ui32 DABR;
+	ui32 PMC1;
+	ui32 PMC2;
+	ui32 PMC3;
+	ui32 PMC4;
+	ui32 SIA;
+	ui32 MMCR0;
+	ui32 MMCR1;
+	ui32 THRM1;
+	ui32 THRM2;
+	ui32 THRM3;
+	ui32 ICTC;
+	ui32 L2CR;
+	ui32 UMMCR2;
+	ui32 UBAMR;
+	ui32 UMMCR0;
+	ui32 UPMC1;
+	ui32 UPMC2;
+	ui32 USIA;
+	ui32 UMMCR1;
+	ui32 UPMC3;
+	ui32 UPMC4;
+	ui32 USDA;
+	ui32 MMCR2;
+	ui32 BAMR;
+	ui32 SDA;
+	ui32 MSSCR0;
+	ui32 MSSCR1;
+	ui32 PIR;
+	ui32 exceptionID;
+	ui32 GQR[8];
+	ui32 HID_G;
+	ui32 WPAR;
+	ui32 DMA_U;
+	ui32 DMA_L;
+} Extended1_PPC_6xx_7xx;
 
-	//IBAT/DBAT 0-3
-	u32 ibatu0; //0x1fc
-	u32 ibatl0; //0x200
-	u32 ibatu1; //0x204
-	u32 ibatl1; //0x208
-	u32 ibatu2; //0x20c
-	u32 ibatl2; //0x210
-	u32 ibatu3; //0x214
-	u32 ibatl3; //0x218
-	u32 dbatu0; //0x21c
-	u32 dbatl0; //0x220
-	u32 dbatu1; //0x224
-	u32 dbatl1; //0x228
-	u32 dbatu2; //0x22c
-	u32 dbatl2; //0x230
-	u32 dbatu3; //0x234
-	u32 dbatl3; //0x238
+typedef struct Extended2_PPC_6xx_7xx{
+	ui32 PSR[32][2];
+} Extended2_PPC_6xx_7xx;
 
-	u32 unk23C;
+typedef struct ProcessorState_PPC_6xx_7xx{
+	Default_PPC Default;
+	Float_PPC Float;
+	Extended1_PPC_6xx_7xx Extended1;
+	Extended2_PPC_6xx_7xx Extended2;
+	ui32 transport_handler_saved_ra;
+} ProcessorState_PPC_6xx_7xx;
 
-	//IBAT 4-7
-	u32 ibatu4; //0x240
-	u32 ibatl4; //0x244
-	u32 ibatu5; //0x248
-	u32 ibatl5; //0x24c
-	u32 ibatu6; //0x250
-	u32 ibatl6; //0x254
-	u32 ibatu7; //0x258
-	u32 ibatl7; //0x25c, also used for sdr1?
 
-	u32 dar; //0x260
-	u32 dsisr; //0x264
-	u32 sprg0; //0x268
-	u32 sprg1; //0x26c
-	u32 sprg2; //0x270
-	u32 sprg3; //0x274
-	u32 dec; //0x278
-	u32 iabr; //0x27c
-	u32 ear; //0x280
-	u32 dabr; //0x284
-	u32 pmc1; //0x288
-	u32 pmc2; //0x28c
-	u32 pmc3; //0x290
-	u32 pmc4; //0x294
-	u32 sia; //0x298
-	u32 mmcr0; //0x29c
-	u32 mmcr1; //0x2a0
-	u32 unk2A4; //ibat7l?
-	u32 unk2A8; //dbat4u?
-	u32 unk2AC; //dbat4l?
-	u32 ictc; //0x2b0
-	u32 l2cr; //0x2b4
-	u32 srr0; //0x2b8
-	u32 unk2BC; //dbat5u?
-	u32 ummcr0; //0x2c0
-	u32 upmc1; //0x2c4
-	u32 upmc2; //0x2c8
-	u32 usia; //0x2cc
-	u32 ummcr1; //0x2d0
-	u32 upmc3; //0x2d4
-	u32 upmc4; //0x2d8
-
-	u32 unk2DC; //dbat5l?
-	u32 unk2E0; //dbat6u?
-	u32 unk2E4; //dbat6l?
-	u32 unk2E8; //dbat7u?
-	u32 unk2EC; //dbat7l?
-	u32 unk2F0; //hid2?
-	u32 unk2F4; //hid4?
-
-	u32 unk2F8;
-
-	u32 gqrs[8]; //0x2fc
-	u32 wpar; //0x31c
-	u32 dmau; //0x320
-	u32 dmal; //0x324
-
-	u8 unk328[0x42c - 0x328];
-	u32 unk42C; //0x42c lr?
-} TRKCPUState;
+typedef ProcessorState_PPC_6xx_7xx ProcessorState_PPC;
 
 
 #define SPR_XER 1
@@ -236,10 +238,5 @@ typedef struct TRKCPUState{
 #define MSR_RI (1 << (31 - 30))
 // Little-endian mode enable
 #define MSR_LE (1 << (31 - 31))
-
-#ifdef __cplusplus
-}
-#endif
-
 
 #endif

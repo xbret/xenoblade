@@ -6,7 +6,7 @@ DSError TRK_DispatchMessage(MessageBuffer* buffer) {
     
     TRK_SetBufferPosition(buffer, 0);
     
-    u8 command = temp->fData[4];
+    ui8 command = temp->fData[4];
     
     switch(command){
         case kDSConnect:

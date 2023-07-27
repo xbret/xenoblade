@@ -2,6 +2,8 @@
 #include "NdevExi2A/exi2.h"
 #include "revolution/OS.h"
 
+//In regular NdevExi2, EXI_CHAN_CTRL instead points to 0xCC006800 (GC address?).
+
 static BOOL __EXI2Select(void) {
     u32 temp = EXI_CHAN_CTRL[EXI_CHAN_2].csr;
     EXI_CHAN_CTRL[EXI_CHAN_2].csr = ((temp & 0x405) | 0xC0);

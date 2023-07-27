@@ -1,7 +1,7 @@
 #ifndef _TRK_DOLPHIN_TRK_GLUE_H
 #define _TRK_DOLPHIN_TRK_GLUE_H
 
-#include "types.h"
+#include "PowerPC_EABI_Support/MetroTRK/dstypes.h"
 #include "revolution/OS.h"
 #include "PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/UART.h"
 
@@ -13,8 +13,8 @@ typedef enum{
 
 typedef int (*DBCommFunc)();
 typedef int (*DBCommInitFunc)(void*, OSInterruptHandler);
-typedef int (*DBCommReadFunc)(u8*, int);
-typedef int (*DBCommWriteFunc)(const u8*, int);
+typedef int (*DBCommReadFunc)(ui8*, int);
+typedef int (*DBCommWriteFunc)(const ui8*, int);
 
 typedef struct DBCommTable{
     DBCommInitFunc initialize_func;
@@ -31,11 +31,11 @@ typedef struct DBCommTable{
 
 int InitMetroTRKCommTable(int);
 void TRKUARTInterruptHandler();
-UARTError TRK_InitializeIntDrivenUART(u32, u32, void*);
+UARTError TRK_InitializeIntDrivenUART(ui32, ui32, void*);
 void EnableEXI2Interrupts();
 int TRKPollUART();
-UARTError TRKReadUARTN(void*, u32);
-UARTError TRK_WriteUARTN(const void*, u32);
+UARTError TRKReadUARTN(void*, ui32);
+UARTError TRK_WriteUARTN(const void*, ui32);
 void ReserveEXI2Port(void);
 void UnreserveEXI2Port(void);
 void TRK_board_display(char*);

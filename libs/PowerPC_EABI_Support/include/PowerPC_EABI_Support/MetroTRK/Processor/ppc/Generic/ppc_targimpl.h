@@ -1,7 +1,7 @@
 #ifndef METROTRK_PPC_TARGIMPL
 #define METROTRK_PPC_TARGIMPL
 
-#include "types.h"
+#include "PowerPC_EABI_Support/MetroTRK/dstypes.h"
 #include "PowerPC_EABI_Support/MetroTRK/trk.h"
 #include "PowerPC_EABI_Support/MetroTRK/Processor/ppc/Export/ppc_except.h"
 #include "PowerPC_EABI_Support/MetroTRK/Processor/ppc/Export/ppc_reg.h"
@@ -10,35 +10,35 @@
 extern "C"{
 #endif
 
-typedef struct TRKState {
-	u32 gprs[32]; //0x0
-	u32 lr; //0x80
-	u32 ctr; //0x84
-	u32 xer; //0x88
-	u32 msr; //0x8c
-	u32 dar; //0x90
-	u32 dsisr; //0x94
-	BOOL stopped; //0x98
-	u32 unk9C;
-	void* trkInputPendingPtr; //0xA0
-} TRKState;
+typedef struct TRKState_PPC {
+	ui32 GPR[32]; //0x0
+	ui32 LR; //0x80
+	ui32 CTR; //0x84
+	ui32 XER; //0x88
+	ui32 MSR; //0x8c
+	ui32 DAR; //0x90
+	ui32 DSISR; //0x94
+	bool stopped; //0x98
+	bool inputActivated; //0x9c
+	ui8* inputPendingPtr; //0xA0
+} TRKState_PPC;
 
-typedef struct TRKRestoreFlags {
-	u8 tbr;
-	u8 dec;
-	u8 unk2[0x9 - 0x2];
-} TRKRestoreFlags;
+typedef struct ProcessorRestoreFlags_PPC {
+	ui8 TBR;
+	ui8 DEC;
+	ui8 linker_padding[0x9 - 0x2];
+} ProcessorRestoreFlags_PPC;
 
-extern TRKRestoreFlags gTRKRestoreFlags;
-extern TRKCPUState gTRKCPUState;
-extern TRKState gTRKState;
+extern ProcessorRestoreFlags_PPC gTRKRestoreFlags;
+extern ProcessorState_PPC gTRKCPUState;
+extern TRKState_PPC gTRKState;
 
-DSError TRKPPCAccessSPR(void* srcDestPtr, u32 spr, BOOL read);
-DSError TRKPPCAccessPairedSingleRegister(void* srcDestPtr, u32 psr, BOOL read);
-DSError TRKPPCAccessFPRegister(void* srcDestPtr, u32 fpr, BOOL read);
-DSError TRKPPCAccessSpecialReg(void* srcDestPtr, u32* instructionData, BOOL read);
+DSError TRKPPCAccessSPR(void* srcDestPtr, ui32 spr, bool read);
+DSError TRKPPCAccessPairedSingleRegister(void* srcDestPtr, ui32 psr, bool read);
+DSError TRKPPCAccessFPRegister(void* srcDestPtr, ui32 fpr, bool read);
+DSError TRKPPCAccessSpecialReg(void* srcDestPtr, ui32* instructionData, bool read);
 void TRKPostInterruptEvent();
-u32* ConvertAddress(u32);
+ui32* ConvertAddress(ui32);
 
 #ifdef __cplusplus
 }

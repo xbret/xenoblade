@@ -10,15 +10,15 @@
 extern void __TRK_copy_vectors();
 extern void __TRKreset();
 
-static BOOL IsTRKConnected;
-static u32 g_CurrentSequence;
+static bool IsTRKConnected;
+static ui32 g_CurrentSequence;
 
-BOOL GetTRKConnected(){
+bool GetTRKConnected(){
 	return IsTRKConnected;
 }
 
 //unused
-void SetTRKConnected(BOOL value){
+void SetTRKConnected(bool value){
 	IsTRKConnected = value;
 }
 
@@ -28,7 +28,7 @@ static DSError TRKSendACK(MessageBuffer* b){
 
 static DSError TRKStandardACK(MessageBuffer* b, MessageCommandID commandId, DSReplyError replyError){
 	CommandReply reply;
-	u32 nextSequence;
+	ui32 nextSequence;
 
 	TRK_memset((void*)&reply, 0, sizeof(CommandReply));
 	nextSequence = g_CurrentSequence + 1;
@@ -53,14 +53,14 @@ DSError TRKDoUnsupported(MessageBuffer* b){
 }
 
 DSError TRK_DoConnect(MessageBuffer* b){
-	IsTRKConnected = TRUE;
+	IsTRKConnected = true;
 	return TRKStandardACK(b,0x80,kDSReplyNoError);
 }
 
 DSError TRKDoDisconnect(MessageBuffer* b){
 	NubEvent event;
 
-	IsTRKConnected = FALSE;
+	IsTRKConnected = false;
 	TRKStandardACK(b,0x80,kDSReplyNoError);
 	TRKConstructEvent(&event, 1);
 	TRKPostEvent(&event);
@@ -82,35 +82,35 @@ DSError TRKDoOverride(MessageBuffer* b){
 
 /*
 Message parameters:
-0x4: command (u8)
-0x8: options (u8)
-0xc: length (u16)
-0x10: start (u16)
+0x4: command (ui8)
+0x8: options (ui8)
+0xc: length (ui16)
+0x10: start (ui16)
 0x14: register data (void*)
 */
 DSError TRKDoReadMemory(MessageBuffer* b){
 	DSError result = kNoError;
 	DSReplyError replyError;
-	u8 options;
-	u32 test;
-	u32 start;
-	u32 length;
+	ui8 options;
+	ui32 test;
+	ui32 start;
+	ui32 length;
 	CommandReply reply3;
 
 	options = b->fData[8];
-	start = *(u32*)(b->fData + 16);
-	length = *(u16*)(b->fData + 12);
+	start = *(ui32*)(b->fData + 16);
+	length = *(ui16*)(b->fData + 12);
 	
 	if(options & DS_MSG_MEMORY_EXTENDED){
 		return TRKStandardACK(b, kDSReplyACK, kDSReplyUnsupportedOptionError);
 	}
 
 	if (result == 0) {
-		u8 buf[0x820] ALIGN(32);
+		ui8 buf[0x820] ALIGN(32);
 		
 		size_t tempLength = length;
 
-		result = TRKTargetAccessMemory(buf, start, &tempLength, options & DS_MSG_MEMORY_USERVIEW ? 0 : 1, TRUE);
+		result = TRKTargetAccessMemory(buf, start, &tempLength, options & DS_MSG_MEMORY_USERVIEW ? 0 : 1, true);
 		TRKResetBuffer(b, 0);
 
 		if(result == kNoError){
@@ -120,7 +120,7 @@ DSError TRKDoReadMemory(MessageBuffer* b){
 			reply3.commandId = kDSReplyACK;
 			reply3.unkC = g_CurrentSequence;
 			g_CurrentSequence++;
-			TRK_AppendBuffer(b,(u8*)&reply3,sizeof(CommandReply));
+			TRK_AppendBuffer(b,(ui8*)&reply3,sizeof(CommandReply));
 
 			if (options & DS_MSG_MEMORY_SPACE_DATA) {
 				result = TRK_AppendBuffer(b, buf + (start & 0x1F), tempLength);
@@ -160,36 +160,36 @@ DSError TRKDoReadMemory(MessageBuffer* b){
 
 /*
 Message parameters:
-0x4: command (u8)
-0x8: options (u8)
-0xc: first register (u16)
-0x10: last register (u16)
+0x4: command (ui8)
+0x8: options (ui8)
+0xc: first register (ui16)
+0x10: last register (ui16)
 0x14: register data (void*)
 */
 DSError TRKDoWriteMemory(MessageBuffer* b){
 	DSError result = kNoError;
 	DSReplyError replyError;
-	u8 options;
-	u32 start;
-	u32 length;
+	ui8 options;
+	ui32 start;
+	ui32 length;
 	CommandReply reply3;
 
 	options = b->fData[8];
-	start = *(u32*)(b->fData + 16);
-	length = *(u16*)(b->fData + 12);
+	start = *(ui32*)(b->fData + 16);
+	length = *(ui16*)(b->fData + 12);
 	
 	if(options & DS_MSG_MEMORY_EXTENDED){
 		return TRKStandardACK(b, kDSReplyACK, kDSReplyUnsupportedOptionError);
 	}
 
 	if (result == kNoError) {
-		u8 buf[0x820] ALIGN(32);
+		ui8 buf[0x820] ALIGN(32);
 
 		size_t tempLength = length;
 
 		TRK_SetBufferPosition(b,0x40);
 		result = TRK_ReadBuffer(b,buf,tempLength);
-		result = TRKTargetAccessMemory(buf, start, &tempLength, options & DS_MSG_MEMORY_USERVIEW ? 0 : 1, FALSE);
+		result = TRKTargetAccessMemory(buf, start, &tempLength, options & DS_MSG_MEMORY_USERVIEW ? 0 : 1, false);
 		TRKResetBuffer(b, 0);
 	
 		if(result == kNoError){
@@ -199,7 +199,7 @@ DSError TRKDoWriteMemory(MessageBuffer* b){
 			reply3.replyError = result;
 			reply3.unkC = g_CurrentSequence;
 			g_CurrentSequence++;
-			result = TRK_AppendBuffer(b,(u8*)&reply3,sizeof(CommandReply));
+			result = TRK_AppendBuffer(b,(ui8*)&reply3,sizeof(CommandReply));
 		}
 	}
 
@@ -233,24 +233,24 @@ DSError TRKDoWriteMemory(MessageBuffer* b){
 
 /*
 Message parameters:
-0x4: command (u8)
-0x8: options (u8)
-0xC: first register (u16)
-0x10: last register (u16)
-0x14: register data (u32[])
+0x4: command (ui8)
+0x8: options (ui8)
+0xC: first register (ui16)
+0x10: last register (ui16)
+0x14: register data (ui32[])
 */
 DSError TRKDoReadRegisters(MessageBuffer* b){
 	DSError error;
 	DSReplyError replyError;
-	u8 options;
-	u16 firstRegister;
-	u16 lastRegister;
+	ui8 options;
+	ui16 firstRegister;
+	ui16 lastRegister;
 	size_t registersLength;
 	CommandReply local_50;
 	
 	options = b->fData[8];
-	firstRegister = *(u16*)(b->fData + 12);
-	lastRegister = *(u16*)(b->fData + 16);
+	firstRegister = *(ui16*)(b->fData + 12);
+	lastRegister = *(ui16*)(b->fData + 16);
 
 	if(firstRegister > lastRegister){
 		return TRKStandardACK(b, kDSReplyACK, kDSReplyInvalidRegisterRange);
@@ -262,19 +262,19 @@ DSError TRKDoReadRegisters(MessageBuffer* b){
 	g_CurrentSequence++;
 
 	TRKResetBuffer(b,0);
-	TRKAppendBuffer_ui8(b,(u8*)&local_50,sizeof(CommandReply));
+	TRKAppendBuffer_ui8(b,(ui8*)&local_50,sizeof(CommandReply));
 
 	//???
-	error = TRKTargetAccessDefault(0, 36, b, &registersLength, TRUE);
+	error = TRKTargetAccessDefault(0, 36, b, &registersLength, true);
 
 	if(error == kNoError){
-		error = TRKTargetAccessFP(0, 33, b, &registersLength, TRUE);
+		error = TRKTargetAccessFP(0, 33, b, &registersLength, true);
 	}
 	if(error == kNoError){
-		error = TRKTargetAccessExtended1(0, 0x60, b, &registersLength, TRUE);
+		error = TRKTargetAccessExtended1(0, 0x60, b, &registersLength, true);
 	}
 	if(error == kNoError){
-		error = TRKTargetAccessExtended2(0, 31, b, &registersLength, TRUE);
+		error = TRKTargetAccessExtended2(0, 31, b, &registersLength, true);
 	}
 
 	//Check if there was an error, and respond accordingly
@@ -311,24 +311,24 @@ DSError TRKDoReadRegisters(MessageBuffer* b){
 
 /*
 Message parameters:
-0x4: command (u8)
-0x8: options (u8)
-0xC: first register (u16)
-0x10: last register (u16)
-0x14: register data (u32[])
+0x4: command (ui8)
+0x8: options (ui8)
+0xC: first register (ui16)
+0x10: last register (ui16)
+0x14: register data (ui32[])
 */
 DSError TRKDoWriteRegisters(MessageBuffer* b){
 	DSError error;
 	DSReplyError replyError;
-	u8 options;
-	u16 firstRegister;
-	u16 lastRegister;
+	ui8 options;
+	ui16 firstRegister;
+	ui16 lastRegister;
 	size_t registersLength;
 	CommandReply local_50;
 	
 	options = b->fData[8];
-	firstRegister = *(u16*)(b->fData + 12);
-	lastRegister = *(u16*)(b->fData + 16);
+	firstRegister = *(ui16*)(b->fData + 12);
+	lastRegister = *(ui16*)(b->fData + 16);
 
 	TRK_SetBufferPosition(b,0);
 
@@ -340,16 +340,16 @@ DSError TRKDoWriteRegisters(MessageBuffer* b){
 
 	switch(options){
 		case kDSRegistersDefault:
-		error = TRKTargetAccessDefault(firstRegister, lastRegister, b, &registersLength, FALSE);
+		error = TRKTargetAccessDefault(firstRegister, lastRegister, b, &registersLength, false);
 		break;
 		case kDSRegistersFP:
-		error = TRKTargetAccessFP(firstRegister, lastRegister, b, &registersLength, FALSE);
+		error = TRKTargetAccessFP(firstRegister, lastRegister, b, &registersLength, false);
 		break;
 		case kDSRegistersExtended1:
-		error = TRKTargetAccessExtended1(firstRegister, lastRegister, b, &registersLength, FALSE);
+		error = TRKTargetAccessExtended1(firstRegister, lastRegister, b, &registersLength, false);
 		break;
 		case kDSRegistersExtended2:
-		error = TRKTargetAccessExtended2(firstRegister, lastRegister, b, &registersLength, FALSE);
+		error = TRKTargetAccessExtended2(firstRegister, lastRegister, b, &registersLength, false);
 		break;
 		default:
 		//invalid option
@@ -366,7 +366,7 @@ DSError TRKDoWriteRegisters(MessageBuffer* b){
 		local_50.replyError = error;
 		local_50.unkC = g_CurrentSequence;
 		g_CurrentSequence = g_CurrentSequence + 1;
-		error = TRK_AppendBuffer(b, (u8*)&local_50, sizeof(CommandReply));
+		error = TRK_AppendBuffer(b, (ui8*)&local_50, sizeof(CommandReply));
 	}
 
 	//Check if there was an error, and respond accordingly
@@ -419,26 +419,26 @@ DSError TRKDoContinue(MessageBuffer* b){
 
 /*
 Message parameters:
-0x4: command (u8)
-0x8: options (u8, DSMessageStepOptions enum value)
+0x4: command (ui8)
+0x8: options (ui8, DSMessageStepOptions enum value)
 If kDSStepIntoCount/kDSStepOverCount:
-0xC: count (u8, instructions to step over)
+0xC: count (ui8, instructions to step over)
 If kDSStepIntoRange/kDSStepOverRange:
-0x10: range start (u32)
-0x14: range end (u32)
+0x10: range start (ui32)
+0x14: range end (ui32)
 */
 DSError TRKDoStep(MessageBuffer *b){
 	DSError result;
-	u8 options;
-	u8 count;
-	u32 rangeStart;
-	u32 rangeEnd;
+	ui8 options;
+	ui8 count;
+	ui32 rangeStart;
+	ui32 rangeEnd;
 
 	TRK_SetBufferPosition(b, 0);
 
 	options = b->fData[8];
-	rangeStart = *(u32*)(b->fData + 16);
-	rangeEnd = *(u32*)(b->fData + 20);
+	rangeStart = *(ui32*)(b->fData + 16);
+	rangeEnd = *(ui32*)(b->fData + 20);
 
 	switch(options){
 	//Count step
@@ -453,7 +453,7 @@ DSError TRKDoStep(MessageBuffer *b){
 	//Range step
 	case kDSStepIntoRange:
 	case kDSStepOverRange:
-		u32 pc = TRKTargetGetPC();
+		ui32 pc = TRKTargetGetPC();
 		//Continue if the current pc is within the step range
 		if(pc >= rangeStart && pc <= rangeEnd){
 			break;
@@ -488,7 +488,7 @@ DSError TRKDoStep(MessageBuffer *b){
 
 DSError TRKDoStop(MessageBuffer* b){
 	CommandReply reply;
-	u8 replyError;
+	ui8 replyError;
 
 	switch(TRKTargetStop()){
 		case kNoError:
@@ -514,12 +514,12 @@ DSError TRKDoStop(MessageBuffer* b){
 /*
 Doesn't exist in standard MetroTRK, might be GC/Wii exclusive
 Message parameters:
-0x4: command? (u8?)
+0x4: command? (ui8?)
 0x8:
-0xC: options? (u8?)
+0xC: options? (ui8?)
 */
 DSError TRKDoSetOption(MessageBuffer *b){
-	u8 options = b->fData[12];
+	ui8 options = b->fData[12];
 
 	if(b->fData[8] == 1) {
 		OSReport("\nMetroTRK Option : SerialIO - ");

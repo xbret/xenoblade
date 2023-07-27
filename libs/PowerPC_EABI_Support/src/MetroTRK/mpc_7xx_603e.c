@@ -19,13 +19,13 @@ asm void TRKSaveExtended1Block(){
     mfsr r29, 0xd
     mfsr r30, 0xe
     mfsr r31, 0xf
-    stmw r16, 0x1a8(r2)
+    stmw r16, ProcessorState_PPC.Extended1.SR(r2)
     mftb r27
     mftbu r28
     mfhid0 r29
     mfhid1 r30
     mfsrr1 r31
-    stmw r27, 0x1e8(r2)
+    stmw r27, ProcessorState_PPC.Extended1.TBL(r2)
     mfpvr r15
     mfibatu r16, 0
     mfibatl r17, 0
@@ -43,7 +43,7 @@ asm void TRKSaveExtended1Block(){
     mfdbatl r29, 2
     mfdbatu r30, 3
     mfdbatl r31, 3
-    stmw r15, 0x1fc(r2)
+    stmw r15, ProcessorState_PPC.Extended1.PVR(r2)
     mfspr r24, IBAT4U
     mfspr r25, IBAT4L
     mfspr r26, IBAT5U
@@ -52,7 +52,7 @@ asm void TRKSaveExtended1Block(){
     mfspr r29, IBAT6L
     mfspr r30, IBAT7U
     mfspr r31, IBAT7L
-    stmw r24, 0x240(r2)
+    stmw r24, ProcessorState_PPC.Extended1.DMISS(r2)
     mfsdr1 r22
     mfdar r23
     mfdsisr r24
@@ -63,7 +63,7 @@ asm void TRKSaveExtended1Block(){
     mfdec r29
     mfiabr r30
     mfear r31
-    stmw r22, 0x25c(r2)
+    stmw r22, ProcessorState_PPC.Extended1.SDR1(r2)
     mfdabr r24
     mfpmc1 r25
     mfpmc2 r26
@@ -72,18 +72,18 @@ asm void TRKSaveExtended1Block(){
     mfsia r29
     mfmmcr0 r30
     mfmmcr1 r31
-    stmw r24, 0x284(r2)
+    stmw r24, ProcessorState_PPC.Extended1.DABR(r2)
     mfspr r29, IBAT7L
     mfspr r30, DBAT4U
     mfspr r31, DBAT4L
-    stmw r29, 0x2a4(r2)
+    stmw r29, ProcessorState_PPC.Extended1.THRM1(r2)
     mfictc r30
     mfl2cr r31
-    stmw r30, 0x2b0(r2)
+    stmw r30, ProcessorState_PPC.Extended1.ICTC(r2)
     mfsrr0 r16
-    stw r16, 0x2b8(r2)
+    stw r16, ProcessorState_PPC.Extended1.UMMCR2(r2)
     mfspr r17, DBAT5U
-    stw r17, 0x2bc(r2)
+    stw r17, ProcessorState_PPC.Extended1.UBAMR(r2)
     mfummcr0 r25
     mfupmc1 r26
     mfupmc2 r27
@@ -91,7 +91,7 @@ asm void TRKSaveExtended1Block(){
     mfummcr1 r29
     mfupmc3 r30
     mfupmc4 r31
-    stmw r25, 0x2c0(r2)
+    stmw r25, ProcessorState_PPC.Extended1.UMMCR0(r2)
     mfspr r25, DBAT5L
     mfspr r26, DBAT6U
     mfspr r27, DBAT6L
@@ -99,7 +99,7 @@ asm void TRKSaveExtended1Block(){
     mfspr r29, DBAT7L
     mfspr r30, 0x398 //HID2
     mfspr r31, 0x3f3 //HID4
-    stmw r25, 0x2dc(r2)
+    stmw r25, ProcessorState_PPC.Extended1.USDA(r2)
     mfgqr0 r20
     mfgqr1 r21
     mfgqr2 r22
@@ -112,7 +112,7 @@ asm void TRKSaveExtended1Block(){
     mfwpar r29
     mfspr r30, DMA_U
     mfspr r31, DMA_L
-    stmw r20, 0x2fc(r2)
+    stmw r20, ProcessorState_PPC.Extended1.GQR(r2)
     blr 
 }
 
@@ -121,19 +121,19 @@ asm void TRKRestoreExtended1Block(){
     ori r2, r2, gTRKCPUState@l
     lis r5, gTRKRestoreFlags@h
     ori r5, r5, gTRKRestoreFlags@l
-    lbz r3, 0(r5)
-    lbz r6, 1(r5)
+    lbz r3, ProcessorRestoreFlags_PPC.TBR(r5)
+    lbz r6, ProcessorRestoreFlags_PPC.DEC(r5)
     li r0, 0
-    stb r0, 0(r5)
-    stb r0, 1(r5)
+    stb r0, ProcessorRestoreFlags_PPC.TBR(r5)
+    stb r0, ProcessorRestoreFlags_PPC.DEC(r5)
     cmpwi r3, 0
     beq L_802CD2F8
-    lwz r24, 0x1e8(r2)
-    lwz r25, 0x1ec(r2)
+    lwz r24, ProcessorState_PPC.Extended1.TBL(r2)
+    lwz r25, ProcessorState_PPC.Extended1.TBU(r2)
     mttbl r24
     mttbu r25
 L_802CD2F8:
-    lmw r20, 0x2fc(r2)
+    lmw r20, ProcessorState_PPC.Extended1.GQR(r2)
     mtgqr0 r20
     mtgqr1 r21
     mtgqr2 r22
@@ -147,7 +147,7 @@ L_802CD2F8:
     mtspr DMA_L, r31
     b L_802CD32C
 L_802CD32C:
-    lmw r19, 0x284(r2)
+    lmw r19, ProcessorState_PPC.Extended1.DABR(r2)
     mtdabr r19
     mtpmc1 r20
     mtpmc2 r21
@@ -160,7 +160,7 @@ L_802CD32C:
     mtl2cr r31
     b L_802CD35C
 L_802CD35C:
-    lmw r16, 0x1a8(r2)
+    lmw r16, ProcessorState_PPC.Extended1.SR(r2)
     mtsr 0, r16
     mtsr 1, r17
     mtsr 2, r18
@@ -177,7 +177,7 @@ L_802CD35C:
     mtsr 0xd, r29
     mtsr 0xe, r30
     mtsr 0xf, r31
-    lmw r12, 0x1f0(r2)
+    lmw r12, ProcessorState_PPC.Extended1.HID0(r2)
     mthid0 r12
     mthid1 r13
     mtsrr1 r14
@@ -198,7 +198,7 @@ L_802CD35C:
     mtdbatl 2, r29
     mtdbatu 3, r30
     mtdbatl 3, r31
-    lmw r22, 0x25c(r2)
+    lmw r22, ProcessorState_PPC.Extended1.SDR1(r2)
     mtsdr1 r22
     mtdar r23
     mtdsisr r24

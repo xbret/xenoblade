@@ -1,7 +1,7 @@
 #ifndef TRK_MSGBUF
 #define TRK_MSGBUF
 
-#include "types.h"
+#include "PowerPC_EABI_Support/MetroTRK/dstypes.h"
 #include "PowerPC_EABI_Support/MetroTRK/trk.h"
 
 
@@ -11,10 +11,10 @@ typedef int MessageBufferID;
 #define NUM_BUFFERS 3
 
 typedef struct MessageBuffer {
-	BOOL fInUse; //0x0
-	u32 fLength; //0x4
-	u32 fPosition; //0x8
-	u8 fData[kMessageBufferSize]; //0xC
+	bool fInUse; //0x0
+	ui32 fLength; //0x4
+	ui32 fPosition; //0x8
+	ui8 fData[kMessageBufferSize]; //0xC
 } MessageBuffer;
 
 
@@ -22,8 +22,8 @@ DSError TRK_InitializeMessageBuffers();
 DSError TRK_GetFreeBuffer(int*, MessageBuffer**);
 MessageBuffer* TRKGetBuffer(int);
 void TRK_ReleaseBuffer(int);
-void TRKResetBuffer(MessageBuffer*, BOOL);
-DSError TRK_SetBufferPosition(MessageBuffer*, u32);
+void TRKResetBuffer(MessageBuffer*, bool);
+DSError TRK_SetBufferPosition(MessageBuffer*, ui32);
 DSError TRK_AppendBuffer(MessageBuffer*, const void*, size_t);
 DSError TRK_ReadBuffer(MessageBuffer*, void*, size_t);
 

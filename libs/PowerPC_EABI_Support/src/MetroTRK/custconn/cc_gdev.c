@@ -2,9 +2,9 @@
 #include "PowerPC_EABI_Support/MetroTRK/custconn/CircleBuffer.h"
 #include "PowerPC_EABI_Support/MetroTRK/trk.h"
 
-static u8 gRecvBuf[0x500];
+static ui8 gRecvBuf[0x500];
 static CircleBuffer gRecvCB;
-static BOOL gIsInitialized;
+static bool gIsInitialized;
 
 CW_FORCE_BSS(CC_GDEV_c, gRecvBuf);
 
@@ -13,12 +13,12 @@ void OutputData(){
 }
 
 //unused
-BOOL IsInitialized(){
+bool IsInitialized(){
     return gIsInitialized;
 }
 
 int gdev_cc_initialize(void* flagOut, OSInterruptHandler handler){
-    DBInitComm((u8**)flagOut, handler);
+    DBInitComm((ui8**)flagOut, handler);
     CircleBufferInitialize(&gRecvCB, gRecvBuf, sizeof(gRecvBuf));
     return 0;
 }
@@ -31,7 +31,7 @@ int gdev_cc_open(){
     if(gIsInitialized){
         return GDEV_RESULT_10005;
     }else{
-        gIsInitialized = TRUE;
+        gIsInitialized = true;
         return 0;
     }
 }
@@ -40,10 +40,10 @@ int gdev_cc_close(){
     return 0;
 }
 
-int gdev_cc_read(u8* dest, int size){
+int gdev_cc_read(ui8* dest, int size){
     int sizeTemp = size;
-    u8* destTemp = dest;
-    u8 buf[0x500];
+    ui8* destTemp = dest;
+    ui8 buf[0x500];
     int r30 = 0;
 
     if(!gIsInitialized){
@@ -68,9 +68,9 @@ int gdev_cc_read(u8* dest, int size){
     return r30;
 }
 
-int gdev_cc_write(const u8* src, int size){
+int gdev_cc_write(const ui8* src, int size){
     int sizeTemp = size;
-    u8* srcTemp = (u8*)src;
+    ui8* srcTemp = (ui8*)src;
 
     if(!gIsInitialized){
         return GDEV_RESULT_10001;
@@ -101,7 +101,7 @@ int gdev_cc_post_stop(){
 
 int gdev_cc_peek(){
     int r3 = DBQueryData();
-    u8 buf[0x500];
+    ui8 buf[0x500];
 
     if(r3 <= 0){
         return 0;

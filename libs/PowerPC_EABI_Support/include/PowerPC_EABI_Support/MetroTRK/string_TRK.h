@@ -1,7 +1,7 @@
 #ifndef METROTRK_STRING_TRK
 #define METROTRK_STRING_TRK
 
-#include "types.h"
+#include "PowerPC_EABI_Support/MetroTRK/dstypes.h"
 
 #ifdef __cplusplus
 extern "C"{

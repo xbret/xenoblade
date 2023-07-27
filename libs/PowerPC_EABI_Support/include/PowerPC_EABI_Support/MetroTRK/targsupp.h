@@ -1,13 +1,13 @@
 #ifndef _TRK_TARGSUPP_H
 #define _TRK_TARGSUPP_H
 
-#include "types.h"
+#include "PowerPC_EABI_Support/MetroTRK/dstypes.h"
 
 #ifdef __cplusplus
 extern "C"{
 #endif
 
-u32 TRKAccessFile(u32, u32, u32*, u8*);
+ui32 TRKAccessFile(ui32, ui32, ui32*, ui8*);
 
 #ifdef __cplusplus
 }

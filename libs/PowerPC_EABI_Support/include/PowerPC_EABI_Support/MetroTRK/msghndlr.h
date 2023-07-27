@@ -1,7 +1,7 @@
 #ifndef TRK_MSGHNDLR
 #define TRK_MSGHNDLR
 
-#include "types.h"
+#include "PowerPC_EABI_Support/MetroTRK/dstypes.h"
 #include "PowerPC_EABI_Support/MetroTRK/trk.h"
 #include "PowerPC_EABI_Support/MetroTRK/msgbuf.h"
 
@@ -10,21 +10,21 @@ extern "C"{
 #endif
 
 typedef struct CommandReply {
-	u32 unk0;
+	ui32 unk0;
 	//TODO: fix enum size shenanigans
 	union{
-		u8 commandId;
+		ui8 commandId;
 		MessageCommandID commandIdInt;
 	};
 	union{
-	    u8 replyError;
+	    ui8 replyError;
         DSReplyError replyErrorInt;
     };
-	u32 unkC;
-	u8 unk10[0x30];
+	ui32 unkC;
+	ui8 unk10[0x30];
 } CommandReply;
 
-BOOL GetTRKConnected();
+bool GetTRKConnected();
 DSError TRK_DoConnect(MessageBuffer*);
 DSError TRKDoDisconnect(MessageBuffer*);
 DSError TRKDoReset(MessageBuffer*);

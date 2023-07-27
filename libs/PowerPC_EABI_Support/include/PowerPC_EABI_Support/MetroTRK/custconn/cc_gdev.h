@@ -1,7 +1,7 @@
 #ifndef TRK_CC_GDEV_H
 #define TRK_CC_GDEV_H
 
-#include "types.h"
+#include "PowerPC_EABI_Support/MetroTRK/dstypes.h"
 #include "NdevExi2A/DebuggerDriver.h"
 
 //TODO: figure out what these values represent
@@ -12,13 +12,13 @@ typedef enum{
 }UnkGdevEnum;
 
 void OutputData();
-BOOL IsInitialized();
+bool IsInitialized();
 int gdev_cc_initialize(void* flagOut, OSInterruptHandler handler);
 int gdev_cc_shutdown();
 int gdev_cc_open();
 int gdev_cc_close();
-int gdev_cc_read(u8* dest, int size);
-int gdev_cc_write(const u8* src, int size);
+int gdev_cc_read(ui8* dest, int size);
+int gdev_cc_write(const ui8* src, int size);
 int gdev_cc_pre_continue();
 int gdev_cc_post_stop();
 int gdev_cc_peek();

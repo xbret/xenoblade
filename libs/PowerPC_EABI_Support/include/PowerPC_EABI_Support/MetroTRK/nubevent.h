@@ -1,7 +1,7 @@
 #ifndef TRK_NUBEVENT
 #define TRK_NUBEVENT
 
-#include "types.h"
+#include "PowerPC_EABI_Support/MetroTRK/dstypes.h"
 #include "PowerPC_EABI_Support/MetroTRK/trk.h"
 #include "PowerPC_EABI_Support/MetroTRK/msgbuf.h"
 
@@ -27,7 +27,7 @@ typedef struct NubEvent {
 } NubEvent;
 
 DSError TRKInitializeEventQueue();
-BOOL TRKGetNextEvent(NubEvent*);
+bool TRKGetNextEvent(NubEvent*);
 DSError TRKPostEvent(NubEvent*);
 void TRKConstructEvent(NubEvent*, int);
 void TRKDestructEvent(NubEvent*);

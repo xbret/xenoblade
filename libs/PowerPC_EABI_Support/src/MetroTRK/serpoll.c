@@ -5,8 +5,8 @@
 typedef struct TRKBufferUnk{
     MessageBuffer* unk0;
     int unk4;
-    u8 unk8[0x40];
-    u8 mBuffer[0x880]; //0x48
+    ui8 unk8[0x40];
+    ui8 mBuffer[0x880]; //0x48
 } TRKBufferUnk;
 
 void* gTRKInputPendingPtr;
@@ -28,12 +28,12 @@ int TRKTestForPacket(){
     if(uartError == kUARTNoError){
         TRKAppendBuffer_ui8(buffer.unk0, buffer.unk8, sizeof(buffer.unk8));
         freeBuffer = buffer.unk4;
-        int r4 = *(u32*)(buffer.unk8) - sizeof(buffer.unk8);
+        int r4 = *(ui32*)(buffer.unk8) - sizeof(buffer.unk8);
         
         if(r4 > 0){
 			uartError = TRKReadUARTN(buffer.mBuffer, r4);
             if(uartError == kUARTNoError){
-                TRKAppendBuffer_ui8(buffer.unk0, buffer.mBuffer, *(u32*)(buffer.unk8));
+                TRKAppendBuffer_ui8(buffer.unk0, buffer.mBuffer, *(ui32*)(buffer.unk8));
             }else{
                 TRK_ReleaseBuffer(freeBuffer);
                 freeBuffer = -1;

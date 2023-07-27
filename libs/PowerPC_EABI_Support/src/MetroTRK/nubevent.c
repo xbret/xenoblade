@@ -31,9 +31,9 @@ void TRKCopyEvent(void)
 {
 }
 
-BOOL TRKGetNextEvent(NubEvent* ev)
+bool TRKGetNextEvent(NubEvent* ev)
 {
-	BOOL ret = FALSE;
+	bool ret = false;
 
 	TRKAcquireMutex(&gTRKEventQueue);
 
@@ -45,7 +45,7 @@ BOOL TRKGetNextEvent(NubEvent* ev)
 			gTRKEventQueue.fFirst = 0;
 		}
 
-		ret = TRUE;
+		ret = true;
 	}
 
 	TRKReleaseMutex(&gTRKEventQueue);

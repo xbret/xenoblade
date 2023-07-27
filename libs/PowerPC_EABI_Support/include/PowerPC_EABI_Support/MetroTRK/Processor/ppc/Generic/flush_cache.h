@@ -1,8 +1,8 @@
 #ifndef METROTRK_FLUSH_CACHE
 #define METROTRK_FLUSH_CACHE
 
-#include "types.h"
+#include "PowerPC_EABI_Support/MetroTRK/dstypes.h"
 
-asm void TRK_flush_cache(u32 addr, u32 length);
+asm void TRK_flush_cache(ui32 addr, ui32 length);
 
 #endif

@@ -1,7 +1,7 @@
 #ifndef TRK_TARGIMPL
 #define TRK_TARGIMPL
 
-#include "types.h"
+#include "PowerPC_EABI_Support/MetroTRK/dstypes.h"
 #include "PowerPC_EABI_Support/MetroTRK/trk.h"
 #include "PowerPC_EABI_Support/MetroTRK/nubevent.h"
 #include "PowerPC_EABI_Support/MetroTRK/msgbuf.h"
@@ -20,18 +20,18 @@ typedef enum MemoryAccessOptions {
 	kDebuggerMemory
 } MemoryAccessOptions;
 
-u32 __TRK_get_MSR();
+ui32 __TRK_get_MSR();
 
-void TRKTargetSetStopped(BOOL);
+void TRKTargetSetStopped(bool);
 void TRKTargetSetInputPendingPtr(void*);
 
-DSError TRKTargetAccessMemory(void*,u32,size_t*,MemoryAccessOptions,BOOL);
-DSError TRKTargetAccessDefault(u32,u32,MessageBuffer*,size_t*,BOOL);
-DSError TRKTargetAccessFP(u32,u32,MessageBuffer*,size_t*,BOOL);
-DSError TRKTargetAccessExtended1(u32,u32,MessageBuffer*,size_t*,BOOL);
-DSError TRKTargetAccessExtended2(u32,u32,MessageBuffer*,size_t*,BOOL);
+DSError TRKTargetAccessMemory(void*,ui32,size_t*,MemoryAccessOptions,bool);
+DSError TRKTargetAccessDefault(ui32,ui32,MessageBuffer*,size_t*,bool);
+DSError TRKTargetAccessFP(ui32,ui32,MessageBuffer*,size_t*,bool);
+DSError TRKTargetAccessExtended1(ui32,ui32,MessageBuffer*,size_t*,bool);
+DSError TRKTargetAccessExtended2(ui32,ui32,MessageBuffer*,size_t*,bool);
 
-DSError TRKTargetVersions(u8*);
+DSError TRKTargetVersions(DSVersions*);
 DSError TRKTargetCheckException();
 
 void TRK_InterruptHandler();
@@ -42,16 +42,16 @@ DSError TRKTargetInterrupt(NubEvent*);
 DSError TRKTargetAddStopInfo(MessageBuffer*);
 void TRKTargetAddExceptionInfo(MessageBuffer*);
 
-DSError TRKTargetSingleStep(u8,BOOL);
-DSError TRKTargetStepOutOfRange(u32,u32,BOOL);
+DSError TRKTargetSingleStep(ui8,bool);
+DSError TRKTargetStepOutOfRange(ui32,ui32,bool);
 
-u32 TRKTargetGetPC();
+ui32 TRKTargetGetPC();
 
 DSError TRKTargetSupportRequest();
-DSError TRKTargetFlushCache(u32,u32,u32);
+DSError TRKTargetFlushCache(ui32,ui32,ui32);
 
-BOOL TRKTargetStopped();
-void TRKTargetSetStopped(BOOL);
+bool TRKTargetStopped();
+void TRKTargetSetStopped(bool);
 DSError TRKTargetStop();
 
 void TRKTargetSetInputPendingPtr(void*);

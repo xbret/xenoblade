@@ -1,6 +1,6 @@
 #include "PowerPC_EABI_Support/MetroTRK/target_options.h"
 
-static u8 bUseSerialIO;
+static ui8 bUseSerialIO;
 
 
 void SetUseSerialIO(unsigned char sio)

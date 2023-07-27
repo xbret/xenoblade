@@ -3,7 +3,7 @@
 
 extern DSError TRKInitializeTarget();
 
-BOOL gTRKBigEndian;
+bool gTRKBigEndian;
 
 DSError TRK_InitializeNub(void)
 {
@@ -48,23 +48,23 @@ void TRK_NubWelcome(void)
 	return;
 }
 
-BOOL TRK_InitializeEndian(void)
+bool TRK_InitializeEndian(void)
 {
-	u8 bendian[4];
-	BOOL result = FALSE;
-	gTRKBigEndian = TRUE;
+	ui8 bendian[4];
+	bool result = false;
+	gTRKBigEndian = true;
 
 	bendian[0] = 0x12;
 	bendian[1] = 0x34;
 	bendian[2] = 0x56;
 	bendian[3] = 0x78;
 
-	if (*(u32*)bendian == 0x12345678) {
-		gTRKBigEndian = TRUE;
-	} else if (*(u32*)bendian == 0x78563412) {
-		gTRKBigEndian = FALSE;
+	if (*(ui32*)bendian == 0x12345678) {
+		gTRKBigEndian = true;
+	} else if (*(ui32*)bendian == 0x78563412) {
+		gTRKBigEndian = false;
 	} else {
-		result = TRUE;
+		result = true;
 	}
 	return result;
 }

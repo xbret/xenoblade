@@ -9,13 +9,13 @@ typedef struct TRKMsgBufs{
 TRKMsgBufs gTRKMsgBufs;
 
 
-static void TRK_SetBufferUsed(MessageBuffer* b, BOOL state){
+static void TRK_SetBufferUsed(MessageBuffer* b, bool state){
 	b->fInUse = state;
 }
 
 DSError TRK_InitializeMessageBuffers(){
 	for(int i = 0; i < NUM_BUFFERS; i++){
-		TRK_SetBufferUsed(&gTRKMsgBufs.buffers[i],FALSE);
+		TRK_SetBufferUsed(&gTRKMsgBufs.buffers[i],false);
 	}
 
 	return kNoError;
@@ -30,7 +30,7 @@ DSError TRK_GetFreeBuffer(int* bufferIndexPtr, MessageBuffer** destBufPtr){
 
 		if(!buf->fInUse){
 			TRKResetBuffer(buf, 1);
-			TRK_SetBufferUsed(buf, TRUE);
+			TRK_SetBufferUsed(buf, true);
 			error = kNoError;
 			*destBufPtr = buf;
 			*bufferIndexPtr = i;
@@ -57,11 +57,11 @@ MessageBuffer* TRKGetBuffer(int index){
 
 void TRK_ReleaseBuffer(int index){
 	if(index != -1 && index >= 0 && index < NUM_BUFFERS){
-		TRK_SetBufferUsed(&gTRKMsgBufs.buffers[index],FALSE);
+		TRK_SetBufferUsed(&gTRKMsgBufs.buffers[index],false);
 	}
 }
 
-void TRKResetBuffer(MessageBuffer* buf, BOOL keepData){
+void TRKResetBuffer(MessageBuffer* buf, bool keepData){
 	buf->fLength = 0;
 	buf->fPosition = 0;
 
@@ -70,7 +70,7 @@ void TRKResetBuffer(MessageBuffer* buf, BOOL keepData){
 	}
 }
 
-DSError TRK_SetBufferPosition(MessageBuffer* buf, u32 pos){
+DSError TRK_SetBufferPosition(MessageBuffer* buf, ui32 pos){
 	DSError error = kNoError;
 
 	if(pos > kMessageBufferSize){
@@ -89,7 +89,7 @@ DSError TRK_SetBufferPosition(MessageBuffer* buf, u32 pos){
 
 DSError TRK_AppendBuffer(MessageBuffer* buf, const void* data, size_t length){
 	DSError error = kNoError; //r31
-	u32 bytesLeft;
+	ui32 bytesLeft;
 
 	//Return if no bytes to append
 	if(length == 0){
@@ -107,7 +107,7 @@ DSError TRK_AppendBuffer(MessageBuffer* buf, const void* data, size_t length){
 
 	if(length == 1){
 		//If the length of bytes to append is 1, just copy the byte over
-		buf->fData[buf->fPosition] = ((u8*)data)[0];
+		buf->fData[buf->fPosition] = ((ui8*)data)[0];
 	}else{
 		//Otherwise, use memcpy
 		TRK_memcpy(buf->fData + buf->fPosition,data,length);
@@ -122,7 +122,7 @@ DSError TRK_AppendBuffer(MessageBuffer* buf, const void* data, size_t length){
 
 DSError TRK_ReadBuffer(MessageBuffer* buf, void* data, size_t length){
 	DSError error = kNoError;
-	u32 bytesLeft;
+	ui32 bytesLeft;
 
 	//Return if no bytes to read
 	if(length == 0){

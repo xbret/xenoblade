@@ -1,6 +1,7 @@
 #ifndef METROTRK_MAINLOOP
 #define METROTRK_MAINLOOP
-#include "types.h"
+
+#include "PowerPC_EABI_Support/MetroTRK/dstypes.h"
 
 #ifdef __cplusplus
 extern "C"{

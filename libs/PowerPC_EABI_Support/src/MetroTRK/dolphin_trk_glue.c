@@ -7,17 +7,17 @@
 
 
 
-static u32 gReadCount; //unused
-static u32 gReadPos; //unused
-static u32 gWritePos; //unused
-static u8 TRK_Use_BBA;
+static ui32 gReadCount; //unused
+static ui32 gReadPos; //unused
+static ui32 gWritePos; //unused
+static ui8 TRK_Use_BBA;
 static DBCommTable gDBCommTable;
-static u8 gReadBuf[0x110a]; //unused
-static u8 gWriteBuf[0x110a]; //unused
+static ui8 gReadBuf[0x110a]; //unused
+static ui8 gWriteBuf[0x110a]; //unused
 //_MetroTRK_Has_Framing //unused
 
 
-asm void TRKLoadContext(OSContext* ctx, u32 r4){
+asm void TRKLoadContext(OSContext* ctx, ui32 r4){
     nofralloc
     lwz r0, OSContext.gprs[0](r3)
     lwz r1, OSContext.gprs[1](r3)
@@ -65,7 +65,7 @@ void TRKEXICallBack(s32 r3, OSContext* ctx){
 int InitMetroTRKCommTable(int hwId){
     OSReport("Devkit set to : %ld\n", hwId);
     OSReport("MetroTRK : Sizeof Reply - %ld bytes\n", 0x40);
-    TRK_Use_BBA = FALSE;
+    TRK_Use_BBA = false;
     
     if(hwId == HARDWARE_BBA){ //BBA hardware
         //The code here was probably stubbed for release.
@@ -95,7 +95,7 @@ int InitMetroTRKCommTable(int hwId){
 void TRKUARTInterruptHandler(){
 }
 
-UARTError TRK_InitializeIntDrivenUART(u32 r3, u32 r4, void* r5){
+UARTError TRK_InitializeIntDrivenUART(ui32 r3, ui32 r4, void* r5){
     gDBCommTable.initialize_func(r5, TRKEXICallBack);
     gDBCommTable.open_func();
     return kUARTNoError;
@@ -113,12 +113,12 @@ int TRKPollUART(){
     return gDBCommTable.peek_func();
 }
 
-UARTError TRKReadUARTN(void* bytes, u32 limit){
+UARTError TRKReadUARTN(void* bytes, ui32 limit){
     int r3 = gDBCommTable.read_func(bytes, limit);
     return ((-r3 | r3) >> 31);
 }
 
-UARTError TRK_WriteUARTN(const void* bytes, u32 length){
+UARTError TRK_WriteUARTN(const void* bytes, ui32 length){
     int r3 = gDBCommTable.write_func(bytes, length);
     return ((-r3 | r3) >> 31);
 }
@@ -144,10 +144,10 @@ void TRK_board_display(char* str){
 }
 
 void InitializeProgramEndTrap(){
-    static const u32 EndofProgramInstruction = 0x00454E44; //\x00END
+    static const ui32 EndofProgramInstruction = 0x00454E44; //\x00END
 
-    u8* endOfProgramInstructionBytes = (u8*)&EndofProgramInstruction;
-    u8* ppcHaltPtr = (u8*)PPCHalt;
+    ui8* endOfProgramInstructionBytes = (ui8*)&EndofProgramInstruction;
+    ui8* ppcHaltPtr = (ui8*)PPCHalt;
     TRK_memcpy(ppcHaltPtr + 4, endOfProgramInstructionBytes, 4);
     ICInvalidateRange(ppcHaltPtr + 4, 4);
     DCFlushRange(ppcHaltPtr + 4, 4);
