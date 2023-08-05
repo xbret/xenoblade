@@ -66,6 +66,7 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfObjectObj.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfObjectPc.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfObjectPoint.o\
+	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_800C17DC.o\
 	$(BUILD_DIR)/asm/kyoshin/cfsys/CfObjectImplWalker.o\
 	$(BUILD_DIR)/asm/kyoshin/cfsys/CfObjectImplPc.o\
 	$(BUILD_DIR)/asm/kyoshin/cfsys/CfObjectImplObj.o\

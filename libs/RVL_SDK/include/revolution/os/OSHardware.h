@@ -2,6 +2,7 @@
 #define RVL_SDK_OS_HARDWARE_H
 #include "revolution/os/OSAddress.h"
 #include "revolution/os/OSThread.h"
+#include "revolution/dvd/dvdidutils.h"
 #include "types.h"
 #ifdef __cplusplus
 extern "C" {
@@ -42,24 +43,16 @@ typedef struct OSExecParams;
     /* Memory-mapped value for direct access */                                \
     type OS_##name : (addr);
 
-typedef struct OSBootInfo {
-    u32 appName;    // at 0x0
-    u16 appMaker;   // at 0x4
-    u8 diskID;      // at 0x6
-    u8 diskVer;     // at 0x7
-    u8 strmEnable;  // at 0x8
-    u8 strmBufSize; // at 0x9
-    char UNK_0xA[0x18 - 0xA];
-    u32 rvlDiscMagic; // at 0x18
-    u32 gcDiscMagic;  // at 0x1C
-    u32 bootMagic;    // at 0x20
-    u32 aplVersion;   // at 0x24
-    u32 physMemSize;  // at 0x28
-    u32 consoleType;  // at 0x2C
-    void* arenaLo;    // at 0x30
-    void* arenaHi;    // at 0x34
-    void* fstStart;   // at 0x38
-    u32 fstSize;      // at 0x3C
+typedef struct OSBootInfo_s {
+	DVDDiskID DVDDiskID;  // at 0x0
+    u32 bootMagic;        // at 0x20
+    u32 version;          // at 0x24
+    u32 memorySize;       // at 0x28
+    u32 consoleType;      // at 0x2C
+    void* arenaLo;        // at 0x30
+    void* arenaHi;        // at 0x34
+    void* FSTLocation;    // at 0x38
+    u32 FSTMaxLength;     // at 0x3C
 } OSBootInfo;
 
 typedef struct OSDebugInterface {
@@ -144,10 +137,12 @@ OS_DEF_GLOBAL_VAR(u8, APPLOADER_TARGET,                  0x8000315D);
 OS_DEF_GLOBAL_VAR(BOOL, MIOS_SHUTDOWN_FLAG,              0x80003164);
 OS_DEF_GLOBAL_VAR(u8, CURRENT_APP_NAME,                  0x80003180);
 OS_DEF_GLOBAL_VAR(u8, CURRENT_APP_TYPE,                  0x80003184);
+OS_DEF_GLOBAL_VAR(u8, LOCKED_FLAG,                       0x80003187);
 OS_DEF_GLOBAL_VAR(u32, MINIMUM_IOS_VERSION,              0x80003188);
 OS_DEF_GLOBAL_VAR(u32, NAND_TITLE_LAUNCH_CODE,           0x8000318C);
 OS_DEF_GLOBAL_VAR(u32, NAND_TITLE_RETURN_CODE,           0x80003190);
-OS_DEF_GLOBAL_VAR(u32, CURRENT_APP_NAME_1,                 0x80003194);
+OS_DEF_GLOBAL_VAR(u32, CURRENT_APP_NAME_1,               0x80003194);
+OS_DEF_GLOBAL_VAR(u8, DEVICE_CHECK_CODE,                 0x8000319C);
 OS_DEF_GLOBAL_ARR(u8, SC_PRDINFO, [0x100],               0x80003800);
 
 /**

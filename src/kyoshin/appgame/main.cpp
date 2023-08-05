@@ -23,14 +23,14 @@ const char* const pkhFilenames[13] = {
 const u32 padding = 0;
 
 StaticArcFile staticArcFiles[9] = {
-	{"SHA","dvddata/etc/shadow.sha",1,0,0},
-	{"CAM","dvddata/etc/cam.chr",1,0,0},
-	{"EFF","dvddata/etc/eff.chr",1,0,0},
-	{"ARROW","dvddata/etc/arrow.mdo",1,0,0},
-	{"43","dvddata/menu/Mode43.arc",1,0,0},
+	{"SHA","dvddata/etc/shadow.sha",1,nullptr,nullptr},
+	{"CAM","dvddata/etc/cam.chr",1,nullptr,nullptr},
+	{"EFF","dvddata/etc/eff.chr",1,nullptr,nullptr},
+	{"ARROW","dvddata/etc/arrow.mdo",1,nullptr,nullptr},
+	{"43","dvddata/menu/Mode43.arc",1,nullptr,nullptr},
 	{"BDAT","dvddata/common/jp/bdat.bin",1,&func_80039EFC,&func_80039F34},
 	{"AIDAT","dvddata/etc/ai.bin",1,&func_80039F5C,&func_80039F60},
-	{"HIKARI","dvddata/etc/hikari.brres",1,0,0},
+	{"HIKARI","dvddata/etc/hikari.brres",1,nullptr,nullptr},
 	{"HBMSTOP","dvddata/etc/hbmstop.tpl",1,&func_80039F64,&func_80039F68}
 };
 

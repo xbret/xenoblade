@@ -1,6 +1,7 @@
 #ifndef RVL_SDK_DVD_BROADWAY_H
 #define RVL_SDK_DVD_BROADWAY_H
 #include "types.h"
+#include "revolution/ESP.h"
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -8,8 +9,6 @@ extern "C" {
 // Forward declarations
 typedef struct DVDDiskID;
 typedef struct DVDDriveInfo;
-typedef struct ESPTicket;
-typedef struct ESPTmd;
 typedef struct OSAlarm;
 
 /**
@@ -27,16 +26,18 @@ typedef enum {
     DVD_INTTYPE_ARGS = (1 << 7), //!< Bad arguments
 } DVDLowIntType;
 
+typedef struct DVDVideoReportKey {
+    u8 data[32];
+} DVDVideoReportKey;
+
 typedef void (*DVDLowCallback)(u32 intType);
 
 BOOL DVDLowInit(void);
 BOOL DVDLowReadDiskID(struct DVDDiskID* out, DVDLowCallback callback);
-BOOL DVDLowOpenPartition(u32 offset, const struct ESPTicket* ticket,
-                         u32 certsSize, const void* certs, struct ESPTmd* tmd,
-                         DVDLowCallback callback);
+BOOL DVDLowOpenPartition(const u32 offset, const ESTicket* const ticket,
+u32 certsSize, const u8* const certs, ESTitleMeta* tmd, DVDLowCallback callback);
 BOOL DVDLowClosePartition(DVDLowCallback callback);
-BOOL DVDLowUnencryptedRead(void* dst, u32 size, u32 offset,
-                           DVDLowCallback callback);
+BOOL DVDLowUnencryptedRead(void* dst, u32 size, u32 offset, DVDLowCallback callback);
 BOOL DVDLowStopMotor(BOOL eject, BOOL kill, DVDLowCallback callback);
 BOOL DVDLowInquiry(struct DVDDriveInfo* out, DVDLowCallback callback);
 BOOL DVDLowRequestError(DVDLowCallback callback);
@@ -47,7 +48,11 @@ BOOL DVDLowSetMaximumRotation(u32 speed, DVDLowCallback callback);
 BOOL DVDLowRead(void* dst, u32 size, u32 offset, DVDLowCallback callback);
 BOOL DVDLowSeek(u32 offset, DVDLowCallback callback);
 u32 DVDLowGetCoverRegister(void);
+u32 DVDLowGetStatusRegister(void);
+u32 DVDLowGetControlRegister(void);
 BOOL DVDLowPrepareCoverRegister(DVDLowCallback callback);
+BOOL DVDLowPrepareStatusRegister(DVDLowCallback callback);
+BOOL DVDLowPrepareControlRegister(DVDLowCallback callback);
 u32 DVDLowGetImmBufferReg(void);
 BOOL DVDLowUnmaskStatusInterrupts(void);
 BOOL DVDLowMaskCoverInterrupt(void);

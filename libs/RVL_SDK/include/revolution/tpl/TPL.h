@@ -51,7 +51,7 @@ typedef struct TPLPalette {
 
 void TPLBind(TPLPalette* pal);
 TPLDescriptor* TPLGet(TPLPalette* pal, u32 id);
-void TPLGetGXTexObjFromPalette(TPLPalette*, GXTexObj*, u32);
+void TPLGetGXTexObjFromPalette(TPLPalette* pal, GXTexObj* to, u32 id);
 
 #ifdef __cplusplus
 }

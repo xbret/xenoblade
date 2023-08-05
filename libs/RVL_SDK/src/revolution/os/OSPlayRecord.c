@@ -2,7 +2,7 @@
 #include "revolution/OS.h"
 
 // Why?!? :(
-#define MY_SEC_TO_TICKS(x) (x * (s64)OS_SEC_TO_TICKS(1))
+#define MY_SEC_TO_TICKS(x) (x * (s64)OSSecondsToTicks(1))
 
 typedef enum {
     PLAY_RECORD_STATE_STARTED,   //!< __OSStartPlayRecord
@@ -278,7 +278,7 @@ void __OSStopPlayRecord(void) {
                     break;
                 }
 
-                if (OSGetTime() - start > OS_MSEC_TO_TICKS(500)) {
+                if (OSGetTime() - start > OSMillisecondsToTicks(500)) {
                     PlayRecordState = PLAY_RECORD_STATE_TIMEOUT;
                     return;
                 }

@@ -111,17 +111,17 @@ void OSTicksToCalendarTime(s64 ticks, OSCalendarTime* cal) {
     s32 days, secs;
     s64 d;
 
-    d = ticks % OS_SEC_TO_TICKS(1);
+    d = ticks % OSSecondsToTicks(1);
     if (d < 0) {
-        d += OS_SEC_TO_TICKS(1);
+        d += OSSecondsToTicks(1);
     }
 
-    cal->usec = OS_TICKS_TO_USEC(d) % USEC_MAX;
-    cal->msec = OS_TICKS_TO_MSEC(d) % MSEC_MAX;
+    cal->usec = OSTicksToMicroseconds(d) % USEC_MAX;
+    cal->msec = OSTicksToMilliseconds(d) % MSEC_MAX;
     ticks -= d;
 
-    days = (OS_TICKS_TO_SEC(ticks) / SECS_IN_DAY) + BIAS;
-    secs = OS_TICKS_TO_SEC(ticks) % SECS_IN_DAY;
+    days = (OSTicksToSeconds(ticks) / SECS_IN_DAY) + BIAS;
+    secs = OSTicksToSeconds(ticks) % SECS_IN_DAY;
     if (secs < 0) {
         days -= 1;
         secs += SECS_IN_DAY;
@@ -157,6 +157,6 @@ s64 OSCalendarTimeToTicks(const OSCalendarTime* cal) {
               cal->sec -
               (s64)0xEB1E1BF80ULL;
     
-    return OS_SEC_TO_TICKS(seconds) + OS_MSEC_TO_TICKS((s64)cal->msec) +
-           OS_USEC_TO_TICKS((s64)cal->usec);
+    return OSSecondsToTicks(seconds) + OSMillisecondsToTicks((s64)cal->msec) +
+           OSMicrosecondsToTicks((s64)cal->usec);
 }

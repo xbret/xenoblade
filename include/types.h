@@ -31,7 +31,8 @@ typedef unsigned int uint;
 typedef int UNKWORD;
 typedef void UNKTYPE;
 
-enum { FALSE, TRUE };
+#define FALSE 0
+#define TRUE 1
 typedef int BOOL;
 
 #endif

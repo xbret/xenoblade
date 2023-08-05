@@ -1,5 +1,5 @@
 ESP_FILES:=\
-	$(BUILD_DIR)/libs/RVL_SDK/asm/revolution/esp/esp.o\
+	$(BUILD_DIR)/libs/RVL_SDK/src/revolution/esp/esp.o\
 
 DEPENDS += $(ESP_FILES:.o=.d)
 

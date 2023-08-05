@@ -22,7 +22,7 @@ static void waitMicroSec(u32 usec) {
     const s32 start = OSGetTick();
     do {
         ;
-    } while (OS_TICKS_TO_USEC(OSGetTick() - start) < usec);
+    } while (OSTicksToMicroseconds(OSGetTick() - start) < usec);
 }
 
 static void __AIClockInit(BOOL arg0) {

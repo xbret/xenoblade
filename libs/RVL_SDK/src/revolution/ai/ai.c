@@ -106,11 +106,11 @@ void AIInit(void* stack) {
     if (__AI_init_flag != TRUE) {
         OSRegisterVersion(__AIVersion);
 
-        bound_32KHz = OS_NSEC_TO_TICKS(31524);
-        bound_48KHz = OS_NSEC_TO_TICKS(42024);
-        min_wait = OS_NSEC_TO_TICKS(42000);
-        max_wait = OS_NSEC_TO_TICKS(63000);
-        buffer = OS_NSEC_TO_TICKS(3000);
+        bound_32KHz = OSNanosecondsToTicks(31524);
+        bound_48KHz = OSNanosecondsToTicks(42024);
+        min_wait = OSNanosecondsToTicks(42000);
+        max_wait = OSNanosecondsToTicks(63000);
+        buffer = OSNanosecondsToTicks(3000);
 
         AI_HW_REGS[AI_AICR] &=
             ~(AI_AICR_PSTAT | AI_AICR_AIINTMSK | AI_AICR_AIINTVLD);

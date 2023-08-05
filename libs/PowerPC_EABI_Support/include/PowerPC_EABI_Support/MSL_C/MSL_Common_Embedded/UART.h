@@ -30,8 +30,7 @@ typedef enum {
 	kBaud230400 = 230400
 } UARTBaudRate;
 
-UARTError InitializeUART(UARTBaudRate baudRate);
-
-UARTError WriteUARTN(const void* bytes, unsigned long length);
+extern UARTError InitializeUART(UARTBaudRate baudRate);
+extern UARTError WriteUARTN(const void* bytes, unsigned long length);
 
 #endif

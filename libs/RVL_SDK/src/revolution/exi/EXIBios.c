@@ -244,7 +244,7 @@ static BOOL __EXIProbe(EXIChannel chan) {
         }
 
         if (flag & 0x1000) {
-            s32 time = (s32)(OS_TICKS_TO_MSEC(OSGetTime()) / 100) + 1;
+            s32 time = (s32)(OSTicksToMilliseconds(OSGetTime()) / 100) + 1;
             if (OS_EXI_800030C0[chan] == 0) {
                 OS_EXI_800030C0[chan] = time;
             }

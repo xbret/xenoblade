@@ -5081,7 +5081,6 @@
 .obj lbl_80668A7C, global
 	.asciz "DAP1"
 	.balign 4
-	.4byte 0
 .endobj lbl_80668A7C
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

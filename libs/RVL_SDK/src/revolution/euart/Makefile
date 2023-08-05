@@ -1,5 +1,5 @@
 EUART_FILES:=\
-	$(BUILD_DIR)/libs/RVL_SDK/asm/revolution/euart/euart.o\
+	$(BUILD_DIR)/libs/RVL_SDK/src/revolution/euart/euart.o\
 
 DEPENDS += $(EUART_FILES:.o=.d)
 
