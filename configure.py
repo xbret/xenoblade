@@ -1910,6 +1910,13 @@ if __name__ == "__main__":
                 c_file = src_path / f"{object}.c"
             elif os.path.exists(src_path / f"{object}.C"):
                 c_file = src_path / f"{object}.C"
+            elif os.path.exists(src_path / f"{object}.s"): # specifically for __exception.s
+                n.build(
+                    outputs=path(build_src_path / f"{object}.o"),
+                    rule="as",
+                    inputs=path(src_path / f"{object}.s"),
+                    implicit=path(dtk),
+                )
             if c_file is not None:
                 n.build(
                     outputs=path(build_src_path / f"{object}.o"),
