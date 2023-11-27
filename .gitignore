@@ -31,3 +31,5 @@ tools/dtk-*
 disasm.log
 link_order.txt
 rsp
+.ninja_log
+*.ninja
