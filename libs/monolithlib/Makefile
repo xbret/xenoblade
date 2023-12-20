@@ -1,4 +1,19 @@
 MONOLITHLIB_FILES:=\
+	$(BUILD_DIR)/libs/monolithlib/asm/Transform.o\
+	$(BUILD_DIR)/libs/monolithlib/asm/Heap.o\
+	$(BUILD_DIR)/libs/monolithlib/asm/StringUtils.o\
+	$(BUILD_DIR)/libs/monolithlib/src/MTRand.o\
+	$(BUILD_DIR)/libs/monolithlib/src/Vec3.o\
+	$(BUILD_DIR)/libs/monolithlib/src/Vec4.o\
+	$(BUILD_DIR)/libs/monolithlib/src/FastCast.o\
+	$(BUILD_DIR)/libs/monolithlib/src/MathConstants.o\
+	$(BUILD_DIR)/libs/monolithlib/src/Random.o\
+	$(BUILD_DIR)/libs/monolithlib/src/FloatUtils.o\
+	$(BUILD_DIR)/libs/monolithlib/src/Col3.o\
+	$(BUILD_DIR)/libs/monolithlib/src/Col4.o\
+	$(BUILD_DIR)/libs/monolithlib/asm/Mat34.o\
+	$(BUILD_DIR)/libs/monolithlib/src/Mat44.o\
+	$(BUILD_DIR)/libs/monolithlib/asm/Quat.o\
 	$(BUILD_DIR)/libs/monolithlib/asm/code_8043738C.o\
 	$(BUILD_DIR)/libs/monolithlib/asm/work/CWorkThread.o\
 	$(BUILD_DIR)/libs/monolithlib/asm/CProc.o\

@@ -33053,10 +33053,10 @@
 	.4byte __RTTI__cf_CBattleManager
 	.4byte 0
 	.4byte __dt__cf_CBattleManager
-	.4byte func_800B2D84
+	.4byte IFactoryEvent_FactoryEvent1
 	.4byte func_800D963C
-	.4byte func_800B1378
-	.4byte func_800B1814
+	.4byte IFactoryEvent_FactoryEvent3
+	.4byte IFactoryEvent_FactoryEvent4
 	.4byte func_80085220
 	.4byte func_800E2584
 	.4byte func_800F42A0

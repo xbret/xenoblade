@@ -146,7 +146,7 @@
 /* 8035E25C 0032781C  7F E3 FB 78 */	mr r3, r31
 /* 8035E260 00327820  7C 00 F3 78 */	or r0, r0, r30
 /* 8035E264 00327824  54 04 0F FE */	srwi r4, r0, 0x1f
-/* 8035E268 00327828  48 00 02 59 */	bl NWC24iSetRtcCounter
+/* 8035E268 00327828  48 00 02 59 */	bl NWC24iSetRtcCounter_
 .L_8035E26C:
 /* 8035E26C 0032782C  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 8035E270 00327830  83 E1 00 0C */	lwz r31, 0xc(r1)
@@ -328,7 +328,7 @@
 .endfn NWC24Shutdown_
 
 .balign 16, 0
-.fn NWC24iSetRtcCounter, global
+.fn NWC24iSetRtcCounter_, local
 /* 8035E4C0 00327A80  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8035E4C4 00327A84  7C 08 02 A6 */	mflr r0
 /* 8035E4C8 00327A88  90 01 00 24 */	stw r0, 0x24(r1)
@@ -415,7 +415,7 @@
 /* 8035E5D8 00327B98  7C 08 03 A6 */	mtlr r0
 /* 8035E5DC 00327B9C  38 21 00 20 */	addi r1, r1, 0x20
 /* 8035E5E0 00327BA0  4E 80 00 20 */	blr 
-.endfn NWC24iSetRtcCounter
+.endfn NWC24iSetRtcCounter_
 
 .balign 16, 0
 .fn CallbackAsyncIpc, local
@@ -468,7 +468,6 @@
 .obj lbl_8055EE80, global
 	.asciz "/dev/net/kd/time"
 	.balign 4
-	.4byte 0
 .endobj lbl_8055EE80
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -477,14 +476,15 @@
 
 .obj nwc24ShtFd, local
 	.4byte 0xFFFFFFFF
-	.4byte 0
 .endobj nwc24ShtFd
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
 .obj ShutdownFuncInfo, local
-	.skip 0x20
+	.skip 0x10
 .endobj ShutdownFuncInfo
+
+.skip 0x10
 
 .obj "@LOCAL@NWC24SuspendScheduler__Fv@susResult", local
 	.skip 0x20

@@ -70,9 +70,10 @@ static void GetThreadInfo(int*, int*);
 #define INSTR_PSQ_L(psr, offset, rSrc, w, gqr) (0xE0000000 | (psr << 21) | (rSrc << 16) | (w << 15) | (gqr << 12) | offset)
 #define INSTR_STW(rSrc, offset, rDest) (0x90000000 | (rSrc << 21) | (rDest << 16) | offset)
 #define INSTR_LWZ(rDest, offset, rSrc) (0x80000000 | (rDest << 21) | (rSrc << 16) | offset)
+#define INSTR_STFD(fprSrc, offset, rDest) (0xD8000000 | (fprSrc << 21) | (rDest << 16) | offset)
+#define INSTR_LFD(fprDest, offset, rSrc) (0xC8000000 | (fprDest << 21) | (rSrc << 16) | offset)
 #define INSTR_MFSPR(rDest, spr) (0x7C000000 | (rDest << 21) | ((spr & 0xFE0) << 6) | ((spr & 0x1F) << 16) | 0x2A6)
 #define INSTR_MTSPR(spr, rSrc) (0x7C000000 | (rSrc << 21) | ((spr & 0xFE0) << 6) | ((spr & 0x1F) << 16) | 0x3A6)
-
 
 asm ui32 __TRK_get_MSR(){
 	nofralloc
@@ -679,11 +680,11 @@ void TRKPostInterruptEvent(void){
 	}else{
 		if ((int)(gTRKCPUState.Extended1.exceptionID & 0xFFFF) == 0x700 || (int)(gTRKCPUState.Extended1.exceptionID & 0xFFFF) == 0xd00) {
 			registerSize = 4;
-			TRKTargetAccessMemory(&local_14,gTRKCPUState.Default.PC,&registerSize,0,1);
+			TRKTargetAccessMemory(&local_14,gTRKCPUState.Default.PC,&registerSize,0,true);
+
 			if (local_14 == 0xfe00000) {
 				eventType = 5;
-			}
-			else {
+			}else{
 				eventType = 3;
 			}
 		}
@@ -807,7 +808,7 @@ DSError TRKTargetAddStopInfo(MessageBuffer* b){
 	puVar1 = ConvertAddress(0xe4);
 	*(ui32*)&reply.unk10[8] = *puVar1;
 	local_468 = 4;
-	TRKTargetAccessMemory(&local_458, gTRKCPUState.Default.PC, &local_468, 0, 1);
+	TRKTargetAccessMemory(&local_458, gTRKCPUState.Default.PC, &local_468, 0, true);
 	reply.unkC = local_458;
 	*(ui32*)reply.unk10 = gTRKCPUState.Extended1.exceptionID & 0xFFFF;
 
@@ -826,21 +827,21 @@ DSError TRKTargetAddStopInfo(MessageBuffer* b){
 	}
 
 	if (error == kNoError) {
-		puVar2 = *ConvertAddress(0xd4);
+		puVar2 = *ConvertAddress(OS_PHYS_CURRENT_CONTEXT);
 		TRKAppendBuffer1_ui32(b,puVar2);
-		puVar2 = *ConvertAddress(0xd8);
+		puVar2 = *ConvertAddress(OS_PHYS_CURRENT_FPU_CONTEXT);
 		TRKAppendBuffer1_ui32(b,puVar2);
-		puVar2 = *ConvertAddress(0xdc);
+		puVar2 = *ConvertAddress(OS_PHYS_THREAD_QUEUE);
 		TRKAppendBuffer1_ui32(b,puVar2);
-		puVar2 = *ConvertAddress(0xe0);
+		puVar2 = *ConvertAddress(OS_PHYS_THREAD_QUEUE + 4);
 		TRKAppendBuffer1_ui32(b,puVar2);
-		puVar2 = *ConvertAddress(0xe4);
+		puVar2 = *ConvertAddress(OS_PHYS_CURRENT_THREAD);
 		error = TRKAppendBuffer1_ui32(b,puVar2);
 	}
 
 	if (error == kNoError) {
 		local_464 = 0x400;
-		error = TRKTargetAccessMemory(buf,gTRKCPUState.Default.PC & 0xfffffc00,&local_464,0,1);
+		error = TRKTargetAccessMemory(buf,gTRKCPUState.Default.PC & 0xfffffc00,&local_464,0,true);
 		TRK_AppendBuffer(b,buf,0x400);
 	}
 
@@ -857,7 +858,7 @@ void TRKTargetAddExceptionInfo(MessageBuffer* b){
 	reply.commandId = 0x91;
 	reply.replyErrorInt = gTRKExceptionStatus.exceptionInfo.PC;
 	local_58 = 4;
-	TRKTargetAccessMemory(&local_54,gTRKExceptionStatus.exceptionInfo.PC,&local_58,0,1);
+	TRKTargetAccessMemory(&local_54,gTRKExceptionStatus.exceptionInfo.PC,&local_58,0,true);
 	*(ui32*)&reply.unkC = local_54;
 	*(ui32*)reply.unk10 = gTRKExceptionStatus.exceptionInfo.exceptionID;
 	TRKAppendBuffer_ui8(b,(ui8 *)&reply,0x40);
@@ -1149,12 +1150,11 @@ DSError TRKPPCAccessFPRegister(void* srcDestPtr, ui32 fpr, bool read){
 		INSTR_NOP
 	};
 	
-	if (fpr < 0x20) {
-		
-		if (read) {
-			instructionData1[0] = 0xd8030000 | (fpr << 21); //stfd fpr, 0(r3)
+	if(fpr < 0x20){
+		if(read){
+			instructionData1[0] = INSTR_STFD(fpr, 0, 3); //stfd fpr, 0(r3)
 		}else{
-			instructionData1[0] = 0xc8030000 | (fpr << 21); //lfd fpr, 0(r3)
+			instructionData1[0] = INSTR_LFD(fpr, 0, 3); //lfd fpr, 0(r3)
 		}
 		
 		error = TRKPPCAccessSpecialReg(srcDestPtr, instructionData1, read);

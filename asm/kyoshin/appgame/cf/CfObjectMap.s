@@ -263,7 +263,7 @@
 /* 800B0A48 0007A008  93 FE 0C A4 */	stw r31, 0xca4(r30)
 /* 800B0A4C 0007A00C  93 FE 0C A8 */	stw r31, 0xca8(r30)
 /* 800B0A50 0007A010  93 FE 0C AC */	stw r31, 0xcac(r30)
-/* 800B0A54 0007A014  4B F8 94 99 */	bl __ct__80039EEC
+/* 800B0A54 0007A014  4B F8 94 99 */	bl "__ct__10FixStr<64>Fv"
 /* 800B0A58 0007A018  93 FE 0C FC */	stw r31, 0xcfc(r30)
 /* 800B0A5C 0007A01C  38 6D A6 60 */	addi r3, r13, lbl_806667E0@sda21
 /* 800B0A60 0007A020  93 FE 0D 00 */	stw r31, 0xd00(r30)
@@ -945,9 +945,9 @@
 .endfn func_800B1368
 
 #part of IFactoryEvent?
-.fn func_800B1378, global
+.fn IFactoryEvent_FactoryEvent3, global
 /* 800B1378 0007A938  4E 80 00 20 */	blr 
-.endfn func_800B1378
+.endfn IFactoryEvent_FactoryEvent3
 
 .fn func_800B137C, global
 /* 800B137C 0007A93C  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -1295,9 +1295,9 @@
 .endfn func_800B1808
 
 #part of IFactoryEvent?
-.fn func_800B1814, global
+.fn IFactoryEvent_FactoryEvent4, global
 /* 800B1814 0007ADD4  4E 80 00 20 */	blr 
-.endfn func_800B1814
+.endfn IFactoryEvent_FactoryEvent4
 
 .fn func_800B1818, global
 /* 800B1818 0007ADD8  90 83 00 00 */	stw r4, 0(r3)
@@ -2896,9 +2896,9 @@
 .endfn __dt__800B2D30
 
 #part of IFactoryEvent?
-.fn func_800B2D84, global
+.fn IFactoryEvent_FactoryEvent1, global
 /* 800B2D84 0007C344  4E 80 00 20 */	blr 
-.endfn func_800B2D84
+.endfn IFactoryEvent_FactoryEvent1
 
 .fn func_800B2D88, global
 /* 800B2D88 0007C348  94 21 FF F0 */	stwu r1, -0x10(r1)

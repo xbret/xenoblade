@@ -2,64 +2,55 @@
 #include "PowerPC_EABI_Support/MetroTRK/nubevent.h"
 #include "PowerPC_EABI_Support/MetroTRK/msgbuf.h"
 
-typedef struct TRKBufferUnk{
-    MessageBuffer* unk0;
-    int unk4;
-    ui8 unk8[0x40];
-    ui8 mBuffer[0x880]; //0x48
-} TRKBufferUnk;
-
 void* gTRKInputPendingPtr;
 
-int TRKTestForPacket(){
-    TRKBufferUnk buffer;
-    int freeBuffer; //r31
-	UARTError uartError;
-	DSError error;
+MessageBufferID TRKTestForPacket(){
+    ui8 payloadBuf[0x880];
+	ui8 packetBuf[0x40];
+	int bufID;
+	MessageBuffer* msg;
+    MessageBufferID result;
 
     if(TRKPollUART() <= 0) return -1;
-
-	//TODO: this should set error
-    freeBuffer = TRK_GetFreeBuffer(&buffer.unk4, &buffer.unk0);
-    TRK_SetBufferPosition(buffer.unk0, 0);
-
-	uartError = TRKReadUARTN(buffer.unk8, sizeof(buffer.unk8));
     
-    if(uartError == kUARTNoError){
-        TRKAppendBuffer_ui8(buffer.unk0, buffer.unk8, sizeof(buffer.unk8));
-        freeBuffer = buffer.unk4;
-        int r4 = *(ui32*)(buffer.unk8) - sizeof(buffer.unk8);
+    result = TRK_GetFreeBuffer(&bufID, &msg);
+    TRK_SetBufferPosition(msg, 0);
+    
+    if(TRKReadUARTN(packetBuf, sizeof(packetBuf)) == kUARTNoError){
+        int readSize;
+        TRKAppendBuffer_ui8(msg, packetBuf, sizeof(packetBuf));
+        result = bufID;
+        readSize = *(ui32*)(packetBuf) - sizeof(packetBuf);
         
-        if(r4 > 0){
-			uartError = TRKReadUARTN(buffer.mBuffer, r4);
-            if(uartError == kUARTNoError){
-                TRKAppendBuffer_ui8(buffer.unk0, buffer.mBuffer, *(ui32*)(buffer.unk8));
+        if(readSize > 0){
+            if(TRKReadUARTN(payloadBuf, readSize) == kUARTNoError){
+                TRKAppendBuffer_ui8(msg, payloadBuf, *(ui32*)(packetBuf));
             }else{
-                TRK_ReleaseBuffer(freeBuffer);
-                freeBuffer = -1;
+                TRK_ReleaseBuffer(result);
+                result = -1;
             }
         }
     }else{
-        TRK_ReleaseBuffer(freeBuffer);
-        freeBuffer = -1;
+        TRK_ReleaseBuffer(result);
+        result = -1;
     }
     
-    return freeBuffer;
+    return result;
 }
 
 void TRKGetInput(){
-    int bufferIndex = TRKTestForPacket();
+    MessageBufferID bufID = TRKTestForPacket();
 
-    if(bufferIndex != -1){
-        TRKProcessInput(bufferIndex);
+    if(bufID != -1){
+        TRKProcessInput(bufID);
     }
 }
 
-void TRKProcessInput(int bufferIndex){
+void TRKProcessInput(MessageBufferID bufID){
     NubEvent event;
 
     TRKConstructEvent(&event, 2);
-    event.fMessageBufferID = bufferIndex;
+    event.fMessageBufferID = bufID;
     TRKPostEvent(&event);
 }
 

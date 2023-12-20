@@ -3,10 +3,11 @@
 static ui8 bUseSerialIO;
 
 
-void SetUseSerialIO(unsigned char sio)
-{
+void SetUseSerialIO(ui8 sio){
 	bUseSerialIO = sio;
 	return;
 }
 
-unsigned char GetUseSerialIO(void) { return bUseSerialIO; }
+ui8 GetUseSerialIO(void) {
+	return bUseSerialIO;
+}

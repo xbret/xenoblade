@@ -2,8 +2,8 @@
 
 #include "types.h"
 #include <limits.h>
-#include "mm/Random.hpp"
-#include "mm/Math.hpp"
+#include "monolithlib/Random.hpp"
+#include "monolithlib/Math.hpp"
 
 using namespace mm;
 

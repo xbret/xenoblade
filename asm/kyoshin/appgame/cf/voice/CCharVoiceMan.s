@@ -2755,7 +2755,7 @@
 /* 802A3800 0026CDC0  4E 80 00 20 */	blr 
 .endfn func_802A3748
 
-.fn func_802A3804, global
+.fn CCharVoiceMan_FactoryEvent2, global
 /* 802A3804 0026CDC4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802A3808 0026CDC8  7C 08 02 A6 */	mflr r0
 /* 802A380C 0026CDCC  90 01 00 24 */	stw r0, 0x24(r1)
@@ -2811,7 +2811,7 @@
 /* 802A38BC 0026CE7C  7C 08 03 A6 */	mtlr r0
 /* 802A38C0 0026CE80  38 21 00 20 */	addi r1, r1, 0x20
 /* 802A38C4 0026CE84  4E 80 00 20 */	blr 
-.endfn func_802A3804
+.endfn CCharVoiceMan_FactoryEvent2
 
 .fn func_802A38C8, global
 /* 802A38C8 0026CE88  94 21 FF C0 */	stwu r1, -0x40(r1)
@@ -2966,10 +2966,10 @@
 	.4byte __RTTI__cf_CCharVoiceMan
 	.4byte 0
 	.4byte __dt__cf_CCharVoiceMan
-	.4byte func_800B2D84
-	.4byte func_802A3804
-	.4byte func_800B1378
-	.4byte func_800B1814
+	.4byte IFactoryEvent_FactoryEvent1
+	.4byte CCharVoiceMan_FactoryEvent2
+	.4byte IFactoryEvent_FactoryEvent3
+	.4byte IFactoryEvent_FactoryEvent4
 .endobj __vt__cf_CCharVoiceMan
 
 .obj cf_CCharVoiceMan_hierarchy, global
@@ -3747,7 +3747,7 @@
 
 .obj "@eti_80032930", local
 .hidden "@eti_80032930"
-	.4byte func_802A3804
+	.4byte CCharVoiceMan_FactoryEvent2
 	.4byte 0x000000C4
 	.4byte "@etb_8001AA80"
 .endobj "@eti_80032930"

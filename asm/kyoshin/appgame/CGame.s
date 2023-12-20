@@ -540,7 +540,7 @@
 .endfn CGame_WorkThreadEvent5
 
 #part of lyt_arcResourceAccessor
-.fn __dt__Q34nw4r3lyt19ArcResourceAccessorFv, global
+.fn __dt__Q34nw4r3lyt19ArcResourceAccessorFv, weak
 /* 8003997C 00002F3C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80039980 00002F40  7C 08 02 A6 */	mflr r0
 /* 80039984 00002F44  2C 03 00 00 */	cmpwi r3, 0
@@ -570,7 +570,7 @@
 /* 800399DC 00002F9C  4E 80 00 20 */	blr 
 .endfn __dt__Q34nw4r3lyt19ArcResourceAccessorFv
 
-.fn __dt__800399E0, global
+.fn __dt__800399E0, weak
 /* 800399E0 00002FA0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800399E4 00002FA4  7C 08 02 A6 */	mflr r0
 /* 800399E8 00002FA8  2C 03 00 00 */	cmpwi r3, 0
@@ -827,169 +827,169 @@
 
 #weak funcs from IWorkEvent/CWorkThread
 
-.fn IWorkEvent_WorkEvent31, global
+.fn IWorkEvent_WorkEvent31, weak
 /* 80039D40 00003300  4E 80 00 20 */	blr
 .endfn IWorkEvent_WorkEvent31
 
-.fn IWorkEvent_WorkEvent30, global
+.fn IWorkEvent_WorkEvent30, weak
 /* 80039D44 00003304  38 60 00 00 */	li r3, 0
 /* 80039D48 00003308  4E 80 00 20 */	blr
 .endfn IWorkEvent_WorkEvent30
 
-.fn IWorkEvent_WorkEvent29, global
+.fn IWorkEvent_WorkEvent29, weak
 /* 80039D4C 0000330C  38 60 00 00 */	li r3, 0
 /* 80039D50 00003310  4E 80 00 20 */	blr 
 .endfn IWorkEvent_WorkEvent29
 
-.fn IWorkEvent_WorkEvent28, global
+.fn IWorkEvent_WorkEvent28, weak
 /* 80039D54 00003314  38 60 00 00 */	li r3, 0
 /* 80039D58 00003318  4E 80 00 20 */	blr 
 .endfn IWorkEvent_WorkEvent28
 
-.fn IWorkEvent_WorkEvent27, global
+.fn IWorkEvent_WorkEvent27, weak
 /* 80039D5C 0000331C  38 60 00 00 */	li r3, 0
 /* 80039D60 00003320  4E 80 00 20 */	blr 
 .endfn IWorkEvent_WorkEvent27
 
-.fn IWorkEvent_WorkEvent26, global
+.fn IWorkEvent_WorkEvent26, weak
 /* 80039D64 00003324  38 60 00 00 */	li r3, 0
 /* 80039D68 00003328  4E 80 00 20 */	blr 
 .endfn IWorkEvent_WorkEvent26
 
-.fn IWorkEvent_WorkEvent25, global
+.fn IWorkEvent_WorkEvent25, weak
 /* 80039D6C 0000332C  38 60 00 00 */	li r3, 0
 /* 80039D70 00003330  4E 80 00 20 */	blr 
 .endfn IWorkEvent_WorkEvent25
 
-.fn IWorkEvent_WorkEvent24, global
+.fn IWorkEvent_WorkEvent24, weak
 /* 80039D74 00003334  38 60 00 00 */	li r3, 0
 /* 80039D78 00003338  4E 80 00 20 */	blr 
 .endfn IWorkEvent_WorkEvent24
 
-.fn IWorkEvent_WorkEvent23, global
+.fn IWorkEvent_WorkEvent23, weak
 /* 80039D7C 0000333C  38 60 00 00 */	li r3, 0
 /* 80039D80 00003340  4E 80 00 20 */	blr 
 .endfn IWorkEvent_WorkEvent23
 
-.fn IWorkEvent_WorkEvent22, global
+.fn IWorkEvent_WorkEvent22, weak
 /* 80039D84 00003344  38 60 00 00 */	li r3, 0
 /* 80039D88 00003348  4E 80 00 20 */	blr 
 .endfn IWorkEvent_WorkEvent22
 
-.fn IWorkEvent_WorkEvent21, global
+.fn IWorkEvent_WorkEvent21, weak
 /* 80039D8C 0000334C  38 60 00 00 */	li r3, 0
 /* 80039D90 00003350  4E 80 00 20 */	blr 
 .endfn IWorkEvent_WorkEvent21
 
-.fn IWorkEvent_WorkEvent20, global
+.fn IWorkEvent_WorkEvent20, weak
 /* 80039D94 00003354  38 60 00 00 */	li r3, 0
 /* 80039D98 00003358  4E 80 00 20 */	blr 
 .endfn IWorkEvent_WorkEvent20
 
-.fn IWorkEvent_WorkEvent19, global
+.fn IWorkEvent_WorkEvent19, weak
 /* 80039D9C 0000335C  38 60 00 00 */	li r3, 0
 /* 80039DA0 00003360  4E 80 00 20 */	blr 
 .endfn IWorkEvent_WorkEvent19
 
-.fn IWorkEvent_WorkEvent18, global
+.fn IWorkEvent_WorkEvent18, weak
 /* 80039DA4 00003364  38 60 00 00 */	li r3, 0
 /* 80039DA8 00003368  4E 80 00 20 */	blr 
 .endfn IWorkEvent_WorkEvent18
 
-.fn IWorkEvent_WorkEvent17, global
+.fn IWorkEvent_WorkEvent17, weak
 /* 80039DAC 0000336C  38 60 00 00 */	li r3, 0
 /* 80039DB0 00003370  4E 80 00 20 */	blr 
 .endfn IWorkEvent_WorkEvent17
 
-.fn IWorkEvent_WorkEvent16, global
+.fn IWorkEvent_WorkEvent16, weak
 /* 80039DB4 00003374  38 60 00 00 */	li r3, 0
 /* 80039DB8 00003378  4E 80 00 20 */	blr 
 .endfn IWorkEvent_WorkEvent16
 
-.fn IWorkEvent_WorkEvent15, global
+.fn IWorkEvent_WorkEvent15, weak
 /* 80039DBC 0000337C  38 60 00 00 */	li r3, 0
 /* 80039DC0 00003380  4E 80 00 20 */	blr 
 .endfn IWorkEvent_WorkEvent15
 
-.fn IWorkEvent_WorkEvent14, global
+.fn IWorkEvent_WorkEvent14, weak
 /* 80039DC4 00003384  38 60 00 00 */	li r3, 0
 /* 80039DC8 00003388  4E 80 00 20 */	blr 
 .endfn IWorkEvent_WorkEvent14
 
-.fn IWorkEvent_WorkEvent13, global
+.fn IWorkEvent_WorkEvent13, weak
 /* 80039DCC 0000338C  38 60 00 00 */	li r3, 0
 /* 80039DD0 00003390  4E 80 00 20 */	blr 
 .endfn IWorkEvent_WorkEvent13
 
-.fn IWorkEvent_WorkEvent12, global
+.fn IWorkEvent_WorkEvent12, weak
 /* 80039DD4 00003394  38 60 00 00 */	li r3, 0
 /* 80039DD8 00003398  4E 80 00 20 */	blr 
 .endfn IWorkEvent_WorkEvent12
 
-.fn IWorkEvent_WorkEvent11, global
+.fn IWorkEvent_WorkEvent11, weak
 /* 80039DDC 0000339C  38 60 00 00 */	li r3, 0
 /* 80039DE0 000033A0  4E 80 00 20 */	blr 
 .endfn IWorkEvent_WorkEvent11
 
-.fn IWorkEvent_WorkEvent10, global
+.fn IWorkEvent_WorkEvent10, weak
 /* 80039DE4 000033A4  38 60 00 00 */	li r3, 0
 /* 80039DE8 000033A8  4E 80 00 20 */	blr 
 .endfn IWorkEvent_WorkEvent10
 
-.fn IWorkEvent_WorkEvent9, global
+.fn IWorkEvent_WorkEvent9, weak
 /* 80039DEC 000033AC  38 60 00 00 */	li r3, 0
 /* 80039DF0 000033B0  4E 80 00 20 */	blr 
 .endfn IWorkEvent_WorkEvent9
 
-.fn IWorkEvent_WorkEvent8, global
+.fn IWorkEvent_WorkEvent8, weak
 /* 80039DF4 000033B4  38 60 00 00 */	li r3, 0
 /* 80039DF8 000033B8  4E 80 00 20 */	blr 
 .endfn IWorkEvent_WorkEvent8
 
-.fn IWorkEvent_WorkEvent7, global
+.fn IWorkEvent_WorkEvent7, weak
 /* 80039DFC 000033BC  38 60 00 00 */	li r3, 0
 /* 80039E00 000033C0  4E 80 00 20 */	blr 
 .endfn IWorkEvent_WorkEvent7
 
-.fn IWorkEvent_WorkEvent6, global
+.fn IWorkEvent_WorkEvent6, weak
 /* 80039E04 000033C4  38 60 00 00 */	li r3, 0
 /* 80039E08 000033C8  4E 80 00 20 */	blr 
 .endfn IWorkEvent_WorkEvent6
 
-.fn IWorkEvent_WorkEvent5, global
+.fn IWorkEvent_WorkEvent5, weak
 /* 80039E0C 000033CC  4E 80 00 20 */	blr 
 .endfn IWorkEvent_WorkEvent5
 
-.fn IWorkEvent_WorkEvent4, global
+.fn IWorkEvent_WorkEvent4, weak
 /* 80039E10 000033D0  38 60 00 00 */	li r3, 0
 /* 80039E14 000033D4  4E 80 00 20 */	blr 
 .endfn IWorkEvent_WorkEvent4
 
-.fn IWorkEvent_WorkEvent3, global
+.fn IWorkEvent_WorkEvent3, weak
 /* 80039E18 000033D8  38 60 00 00 */	li r3, 0
 /* 80039E1C 000033DC  4E 80 00 20 */	blr 
 .endfn IWorkEvent_WorkEvent3
 
-.fn IWorkEvent_OnFileEvent, global
+.fn IWorkEvent_OnFileEvent, weak
 /* 80039E20 000033E0  38 60 00 00 */	li r3, 0
 /* 80039E24 000033E4  4E 80 00 20 */	blr 
 .endfn IWorkEvent_OnFileEvent
 
-.fn IWorkEvent_WorkEvent1, global
+.fn IWorkEvent_WorkEvent1, weak
 /* 80039E28 000033E8  38 60 00 00 */	li r3, 0
 /* 80039E2C 000033EC  4E 80 00 20 */	blr 
 .endfn IWorkEvent_WorkEvent1
 
-.fn CWorkThread_WorkThreadEvent6, global
+.fn CWorkThread_WorkThreadEvent6, weak
 /* 80039E30 000033F0  38 60 00 01 */	li r3, 1
 /* 80039E34 000033F4  4E 80 00 20 */	blr 
 .endfn CWorkThread_WorkThreadEvent6
 
-.fn CWorkThread_WorkThreadEvent3, global
+.fn CWorkThread_WorkThreadEvent3, weak
 /* 80039E38 000033F8  4E 80 00 20 */	blr 
 .endfn CWorkThread_WorkThreadEvent3
 
-.fn CWorkThread_WorkThreadEvent2, global
+.fn CWorkThread_WorkThreadEvent2, weak
 /* 80039E3C 000033FC  4E 80 00 20 */	blr 
 .endfn CWorkThread_WorkThreadEvent2
 
@@ -1046,15 +1046,15 @@
 .fn sinit_80039EE0, local
 /* 80039EE0 000034A0  3C 60 80 57 */	lis r3, lbl_80573C80@ha
 /* 80039EE4 000034A4  38 63 3C 80 */	addi r3, r3, lbl_80573C80@l
-/* 80039EE8 000034A8  48 00 00 04 */	b __ct__80039EEC
+/* 80039EE8 000034A8  48 00 00 04 */	b "__ct__10FixStr<64>Fv"
 .endfn sinit_80039EE0
 
-.fn __ct__80039EEC, global
+.fn "__ct__10FixStr<64>Fv", weak
 /* 80039EEC 000034AC  38 00 00 00 */	li r0, 0
 /* 80039EF0 000034B0  98 03 00 00 */	stb r0, 0(r3)
 /* 80039EF4 000034B4  90 03 00 40 */	stw r0, 0x40(r3)
 /* 80039EF8 000034B8  4E 80 00 20 */	blr
-.endfn __ct__80039EEC
+.endfn "__ct__10FixStr<64>Fv"
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 

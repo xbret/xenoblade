@@ -675,7 +675,7 @@
 /* 8045F854 00428E14  4E 80 00 20 */	blr 
 .endfn func_8045F810
 
-.fn func_8045F858, global
+.fn __ct__Class_8045F858, global
 /* 8045F858 00428E18  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045F85C 00428E1C  7C 08 02 A6 */	mflr r0
 /* 8045F860 00428E20  90 01 00 14 */	stw r0, 0x14(r1)
@@ -704,9 +704,9 @@
 /* 8045F8BC 00428E7C  7C 08 03 A6 */	mtlr r0
 /* 8045F8C0 00428E80  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045F8C4 00428E84  4E 80 00 20 */	blr 
-.endfn func_8045F858
+.endfn __ct__Class_8045F858
 
-.fn __dt__8045F8C8, global
+.fn __dt__Class_8045F858, global
 /* 8045F8C8 00428E88  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8045F8CC 00428E8C  7C 08 02 A6 */	mflr r0
 /* 8045F8D0 00428E90  2C 03 00 00 */	cmpwi r3, 0
@@ -734,7 +734,7 @@
 /* 8045F924 00428EE4  7C 08 03 A6 */	mtlr r0
 /* 8045F928 00428EE8  38 21 00 10 */	addi r1, r1, 0x10
 /* 8045F92C 00428EEC  4E 80 00 20 */	blr 
-.endfn __dt__8045F8C8
+.endfn __dt__Class_8045F858
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
 
@@ -1052,14 +1052,14 @@
 
 .obj "@eti_80035480", local
 .hidden "@eti_80035480"
-	.4byte func_8045F858
+	.4byte __ct__Class_8045F858
 	.4byte 0x00000070
 	.4byte "@etb_8001D88C"
 .endobj "@eti_80035480"
 
 .obj "@eti_8003548C", local
 .hidden "@eti_8003548C"
-	.4byte __dt__8045F8C8
+	.4byte __dt__Class_8045F858
 	.4byte 0x00000068
 	.4byte "@etb_8001D894"
 .endobj "@eti_8003548C"

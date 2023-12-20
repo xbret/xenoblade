@@ -3,7 +3,7 @@
 
 #include "PowerPC_EABI_Support/MetroTRK/dstypes.h"
 #include "revolution/OS.h"
-#include "PowerPC_EABI_Support/MSL_C/MSL_Common_Embedded/UART.h"
+#include "PowerPC_EABI_Support/MetroTRK/UART.h"
 
 typedef enum{
     HARDWARE_GDEV = 0,
