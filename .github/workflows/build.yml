@@ -26,7 +26,7 @@ jobs:
       env:
         PROGRESS_API_KEY: ${{secrets.PROGRESS_API_KEY}}
       run: |
-        python3 tools/upload-progress.py -b https://progress.deco.mp/ -p xenoblade -v jp \
+        python3 tools/upload-progress.py -b https://progress.decomp.club/ -p xenoblade -v jp \
           build/xenoblade.jp/main.dol.progress
     - name: Upload map
       uses: actions/upload-artifact@v3
