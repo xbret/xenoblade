@@ -8,7 +8,7 @@ endif
 NON_MATCHING ?= 0
 
 # If 0, tells the console to chill out. (Quiets the make process.)
-VERBOSE ?= 1
+VERBOSE ?= 0
 
 # If MAPGENFLAG set to 1, tells LDFLAGS to generate a mapfile, which makes linking take several minutes.
 MAPGENFLAG ?= 1
@@ -32,7 +32,7 @@ S_FILES := $(wildcard asm/*.s)
 C_FILES := $(wildcard src/*.c)
 CPP_FILES := $(wildcard src/*.cpp)
 CPP_FILES += $(wildcard src/*.cp)
-LDSCRIPT := $(BUILD_DIR)/ldscript.lcf
+LDSCRIPT := ldscript.lcf
 
 # Outputs
 DOL     := $(BUILD_DIR)/main.dol
@@ -61,10 +61,10 @@ MWLD_VERSION := 1.1
 CONSOLE := Wii
 
 # Programs
+POWERPC ?= tools/powerpc
 ifeq ($(WINDOWS),1)
   WINE :=
-  AS      := $(DEVKITPPC)/bin/powerpc-eabi-as.exe
-  CPP     := $(DEVKITPPC)/bin/powerpc-eabi-cpp.exe -P
+  AS      := $(POWERPC)/powerpc-eabi-as.exe
   PYTHON  := python
 else
   WIBO   := $(shell command -v wibo 2> /dev/null)
@@ -75,10 +75,7 @@ else
   endif
   # Disable wine debug output for cleanliness
   export WINEDEBUG ?= -all
-  # Default devkitPPC path
-  DEVKITPPC ?= /opt/devkitpro/devkitPPC
-  AS      := $(DEVKITPPC)/bin/powerpc-eabi-as
-  CPP     := $(DEVKITPPC)/bin/powerpc-eabi-cpp -P
+  AS      := $(POWERPC)/powerpc-eabi-as
   PYTHON  := python3
 endif
 COMPILERS ?= tools/mwcc_compiler
@@ -134,9 +131,6 @@ ALL_DIRS := $(sort $(dir $(O_FILES)))
 
 # Make sure build directory exists before compiling anything
 DUMMY != mkdir -p $(ALL_DIRS)
-
-$(LDSCRIPT): ldscript.lcf
-	$(QUIET) $(CPP) -MMD -MP -MT $@ -MF $@.d -I include/ -I . -DBUILD_DIR=$(BUILD_DIR) -o $@ $<
 
 $(DOL): $(ELF) | $(DTK)
 	$(QUIET) $(ELF2DOL) $< $@

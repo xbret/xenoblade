@@ -82,10 +82,14 @@
 /* 803D47FC 0039DDBC  38 80 00 00 */	li r4, 0
 /* 803D4800 0039DDC0  38 60 00 00 */	li r3, 0
 /* 803D4804 0039DDC4  4E 80 00 20 */	blr
+#This is super gross but the latest devkitpro assembler is stupid af and hates mftb
 .L_803D4808:
-/* 803D4808 0039DDC8  7C 6D 42 E6 */	mftbu r3
-/* 803D480C 0039DDCC  7C 8C 42 E6 */	mftb r4, 0x10c
-/* 803D4810 0039DDD0  7C 0D 42 E6 */	mftbu r0
+	.4byte 0x7C6D42E6
+	.4byte 0x7C8C42E6
+	.4byte 0x7C0D42E6
+#/* 803D4808 0039DDC8  7C 6D 42 E6 */	mftbu r3
+#/* 803D480C 0039DDCC  7C 8C 42 E6 */	mftb r4, 0x10c
+#/* 803D4810 0039DDD0  7C 0D 42 E6 */	mftbu r0
 /* 803D4814 0039DDD4  7C 00 18 00 */	cmpw r0, r3
 /* 803D4818 0039DDD8  40 82 FF F0 */	bne .L_803D4808
 /* 803D481C 0039DDDC  4E 80 00 20 */	blr 

@@ -1,35 +1,53 @@
-
-# Build artifacts
-build/
-*.o
-*.elf
-*.map
-*.dol
-
-# Temporary files
-*.swp
-*.dump
-include/*.s
-
-# IDE
-build.bat
-clean.bat
-
-# .DS_Store files
-.DS_Store
-
-__pycache__
+*.dat
 *.exe
 *.dll
+*.idb
+*.id0
+*.id1
+*.id2
+*.nam
+*.til
+*.o
+*.out
+*.elf
+*.dol
+*.a
+*.d
+*.map
+*.exe
+*.dump
+*.7z
 *.bat
+*.sln
+*.filters
+*.vcxproj
+*.user
+include/*.s
 
-# DTK stuff
-#OS X
-tools/dtk
-#Linux
-tools/dtk-*
-disasm.log
-link_order.txt
-rsp
+build/
+tools/mwcc_compiler/
+tools/powerpc/
+!aoi.exe
+decomp/
+errors.txt
+output.asm
+Debug/
+.vs/
+.vscode/*.log
+
+ctx.c
+out-ok.txt
+out.txt
+.DS_Store
+sheet.py
+sheet.csv
+sheet.tsv
+*.lnk
+*.log
+build.ninja
+__pycache__
+.ninja_deps
 .ninja_log
-*.ninja
+newlines.py
+objdiff.json
+tools/dtk

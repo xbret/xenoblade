@@ -35,7 +35,7 @@ jobs:
         path: build/*/xenoblade.jp.MAP
   
   build_make:
-    name: Build
+    name: Build (legacy)
     runs-on: ubuntu-latest
     container: ghcr.io/xbret/build:main
     strategy:
