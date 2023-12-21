@@ -46,8 +46,7 @@ endif
 
 include obj_files.mk
 
-O_FILES :=  $(GAME) $(MW) $(NDEV) $(RVL_SDK) $(CRIWARE) \
-			$(NW4R) $(UTILS) $(MM) $(MONOLITHLIB)
+O_FILES := $(GAME) $(MW) $(NDEV) $(RVL_SDK) $(CRIWARE) $(NW4R) $(MONOLITHLIB)
 
 DEPENDS := $($(filter *.o,O_FILES):.o=.d)
 # If a specific .o file is passed as a target, also process its deps
@@ -57,7 +56,6 @@ DEPENDS += $(MAKECMDGOALS:.o=.d)
 # Tools
 #-------------------------------------------------------------------------------
 
-# Could also be 1.0?
 MWCC_VERSION := 1.1
 MWLD_VERSION := 1.1
 CONSOLE := Wii
@@ -113,7 +111,7 @@ ifeq ($(VERBOSE),0)
 LDFLAGS := $(MAPGEN) -fp hard -nodefaults -w off
 endif
 LIBRARY_LDFLAGS := -nodefaults -fp hard -proc gekko
-CFLAGS = -enum int -use_lmw_stmw on -proc gekko -fp hard -O4,p -nodefaults -func_align 4 $(INCLUDES)
+CFLAGS = -enum int -use_lmw_stmw on -proc gekko -fp hard -O4,p -nodefaults -func_align 4 -MMD $(INCLUDES)
 
 ifeq ($(VERBOSE),0)
 # this set of ASFLAGS generates no warnings.
@@ -137,20 +135,16 @@ ALL_DIRS := $(sort $(dir $(O_FILES)))
 # Make sure build directory exists before compiling anything
 DUMMY != mkdir -p $(ALL_DIRS)
 
-# ifeq ($(EPILOGUE_PROCESS),1)
-# Make sure profile directory exists before compiling anything
-# DUMMY != mkdir -p $(EPI_DIRS)
-# endif
-
 $(LDSCRIPT): ldscript.lcf
 	$(QUIET) $(CPP) -MMD -MP -MT $@ -MF $@.d -I include/ -I . -DBUILD_DIR=$(BUILD_DIR) -o $@ $<
 
 $(DOL): $(ELF) | $(DTK)
 	$(QUIET) $(ELF2DOL) $< $@
 	$(QUIET) $(SHASUM) -c sha1/$(NAME).$(VERSION).sha1
-ifneq ($(findstring -map,$(LDFLAGS)),)
-	$(PYTHON) tools/calcprogress.py $(DOL) $(MAP) $(BUILD_DIR) -o $(DOL).progress
-endif
+#TODO: fix object file paths so that the progress script works
+#ifneq ($(findstring -map,$(LDFLAGS)),)
+#	$(PYTHON) tools/calcprogress.py $(DOL) $(MAP) $(BUILD_DIR) -o $(DOL).progress
+#endif
 
 clean:
 	rm -f -d -r build
