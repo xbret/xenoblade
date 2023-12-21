@@ -48,4 +48,4 @@ jobs:
     - name: Build
       run: |
         python configure.py --map --compilers /compilers
-        make -j$(nproc) COMPILERS=/compilers
+        make -j$(nproc) COMPILERS=/compilers POWERPC=/opt/devkitpro/devkitPPC/bin
