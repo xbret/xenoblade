@@ -279,7 +279,6 @@ if __name__ == "__main__":
 				object_path = object_parts[1]
 
 				if "/src/" in object_path:
-					print(object_path)
 					in_asm_file = False
 				
 				if in_asm_file == True:

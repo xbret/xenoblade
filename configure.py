@@ -2,7 +2,8 @@ LIBS = [
 	{
 		"lib": "kyoshin",
 		"cflags": "$cflags_base -ipa file -inline deferred -str pool,readonly,reuse -RTTI on -enc SJIS",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"host": True,
 		"objects": [
 			["asm/kyoshin/appgame/CGame", False],
@@ -333,7 +334,8 @@ LIBS = [
 	{
 		"lib": "Runtime.PPCEABI.H.a",
 		"cflags": "$cflags_base -Cpp_exceptions off -inline on -proc gekko -fp hard -O4,p -str pool,readonly,reuse -func_align 4",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"host": True,
 		"objects": [
 			["libs/PowerPC_EABI_Support/src/Runtime/__mem", True],
@@ -368,7 +370,8 @@ LIBS = [
 	{
 		"lib": "MSL_C.PPCEABI.bare.H",
 		"cflags": "$cflags_base -Cpp_exceptions off -inline on -str pool,readonly,reuse -ipa file",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"host": True,
 		"objects": [
 			["libs/PowerPC_EABI_Support/src/MSL_C/MSL_Common/alloc", True],
@@ -446,7 +449,8 @@ LIBS = [
 	{
 		"lib": "TRK_Hollywood_Revolution",
 		"cflags": "$cflags_base -Cpp_exceptions off -inline on",
-		"mw_version": "Wii/1.0",
+		"mw_console": "Wii",
+		"mw_version": "1.0",
 		"host": True,
 		"objects": [
 			["libs/PowerPC_EABI_Support/src/MetroTRK/__exception", True],
@@ -496,7 +500,8 @@ LIBS = [
 	{
 		"lib": "NdevExi2A",
 		"cflags": "$cflags_base -use_lmw_stmw off -inline auto -ipa file -Cpp_exceptions off",
-		"mw_version": "GC/3.0",
+		"mw_console": "GC",
+		"mw_version": "3.0",
 		"host": True,
 		"objects": [
 			["libs/NdevExi2A/src/DebuggerDriver", True],
@@ -506,7 +511,8 @@ LIBS = [
 	{
 		"lib": "ai",
 		"cflags": "$cflags_sdk",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"host": True,
 		"objects": [
 			["libs/RVL_SDK/src/revolution/ai/ai", True],
@@ -515,7 +521,8 @@ LIBS = [
 	{
 		"lib": "arc",
 		"cflags": "$cflags_sdk",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"host": True,
 		"objects": [
 			["libs/RVL_SDK/src/revolution/arc/arc", True],
@@ -524,7 +531,8 @@ LIBS = [
 	{
 		"lib": "ax",
 		"cflags": "$cflags_sdk",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"host": True,
 		"objects": [
 			["libs/RVL_SDK/src/revolution/ax/AX", True],
@@ -542,7 +550,8 @@ LIBS = [
 	{
 		"lib": "axfx",
 		"cflags": "$cflags_sdk",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"host": True,
 		"objects": [
 			["libs/RVL_SDK/asm/revolution/axfx/AXFXReverbHi", False],
@@ -561,7 +570,8 @@ LIBS = [
 	{
 		"lib": "base",
 		"cflags": "$cflags_sdk",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"host": True,
 		"objects": [
 			["libs/RVL_SDK/src/revolution/base/PPCArch", True],
@@ -570,7 +580,8 @@ LIBS = [
 	{
 		"lib": "bte",
 		"cflags": "$cflags_base -Cpp_exceptions off -enum int -inline auto -ipa file",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"host": True,
 		"objects": [
 			["libs/RVL_SDK/asm/revolution/bte/gki/gki_buffer", False],
@@ -646,7 +657,8 @@ LIBS = [
 	{
 		"lib": "cx",
 		"cflags": "$cflags_sdk",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"host": True,
 		"objects": [
 			["libs/RVL_SDK/asm/revolution/cx/CXStreamingUncompression", False],
@@ -657,7 +669,8 @@ LIBS = [
 	{
 		"lib": "db",
 		"cflags": "$cflags_sdk",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"host": True,
 		"objects": [
 			["libs/RVL_SDK/src/revolution/db/db", True],
@@ -666,7 +679,8 @@ LIBS = [
 	{
 		"lib": "dsp",
 		"cflags": "$cflags_sdk",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"host": True,
 		"objects": [
 			["libs/RVL_SDK/src/revolution/dsp/dsp", True],
@@ -677,7 +691,8 @@ LIBS = [
 	{
 		"lib": "dvd",
 		"cflags": "$cflags_sdk",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"host": True,
 		"objects": [
 			["libs/RVL_SDK/src/revolution/dvd/dvdfs", True],
@@ -693,7 +708,8 @@ LIBS = [
 	{
 		"lib": "enc",
 		"cflags": "$cflags_sdk",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"host": True,
 		"objects": [
 			["libs/RVL_SDK/asm/revolution/enc/encutility", False],
@@ -703,7 +719,8 @@ LIBS = [
 	{
 		"lib": "esp",
 		"cflags": "$cflags_sdk",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"host": True,
 		"objects": [
 			["libs/RVL_SDK/src/revolution/esp/esp", True],
@@ -712,7 +729,8 @@ LIBS = [
 	{
 		"lib": "euart",
 		"cflags": "$cflags_sdk",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"host": True,
 		"objects": [
 			["libs/RVL_SDK/src/revolution/euart/euart", True],
@@ -721,7 +739,8 @@ LIBS = [
 	{
 		"lib": "exi",
 		"cflags": "$cflags_sdk",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"host": True,
 		"objects": [
 			["libs/RVL_SDK/asm/revolution/exi/EXIBios", False],
@@ -732,7 +751,8 @@ LIBS = [
 	{
 		"lib": "fs",
 		"cflags": "$cflags_sdk",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"host": True,
 		"objects": [
 			["libs/RVL_SDK/src/revolution/fs/fs", True],
@@ -741,7 +761,8 @@ LIBS = [
 	{
 		"lib": "gx",
 		"cflags": "$cflags_sdk",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"host": True,
 		"objects": [
 			["libs/RVL_SDK/asm/revolution/gx/GXInit", False],
@@ -752,7 +773,7 @@ LIBS = [
 			["libs/RVL_SDK/asm/revolution/gx/GXFrameBuf", False],
 			["libs/RVL_SDK/src/revolution/gx/GXLight", True],
 			["libs/RVL_SDK/asm/revolution/gx/GXTexture", False],
-			["libs/RVL_SDK/src/revolution/gx/GXBump", True, {"mw_version" : "Wii/1.0"}],
+			["libs/RVL_SDK/src/revolution/gx/GXBump", True, {"mw_version" : "1.0"}],
 			["libs/RVL_SDK/asm/revolution/gx/GXTev", False],
 			["libs/RVL_SDK/asm/revolution/gx/GXPixel", False],
 			["libs/RVL_SDK/src/revolution/gx/GXDisplayList", True],
@@ -763,7 +784,8 @@ LIBS = [
 	{
 		"lib": "homebuttonLib",
 		"cflags": "$cflags_sdk -sdata 0 -sdata2 0 -i libs/RVL_SDK/src/revolution/hbm/include/",
-		"mw_version": "Wii/1.0",
+		"mw_console": "Wii",
+		"mw_version": "1.0",
 		"host": True,
 		"objects": [
 			["libs/RVL_SDK/asm/revolution/hbm/HBMFrameController", False],
@@ -812,7 +834,8 @@ LIBS = [
 	{
 		"lib": "ipc",
 		"cflags": "$cflags_sdk",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"host": True,
 		"objects": [
 			["libs/RVL_SDK/src/revolution/ipc/ipcMain", True],
@@ -823,7 +846,8 @@ LIBS = [
 	},
 	{
 		"lib": "kpad",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"cflags": "$cflags_sdk",
 		"host": False,
 		"objects": [
@@ -832,7 +856,8 @@ LIBS = [
 	},
 	{
 		"lib": "mem",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"cflags": "$cflags_sdk",
 		"host": False,
 		"objects": [
@@ -845,7 +870,8 @@ LIBS = [
 	},
 	{
 		"lib": "mix",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"cflags": "$cflags_sdk",
 		"host": False,
 		"objects": [
@@ -855,7 +881,8 @@ LIBS = [
 	},
 	{
 		"lib": "mtx",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"cflags": "$cflags_sdk",
 		"host": False,
 		"objects": [
@@ -868,7 +895,8 @@ LIBS = [
 	},
 	{
 		"lib": "nand",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"cflags": "$cflags_sdk",
 		"host": False,
 		"objects": [
@@ -881,7 +909,8 @@ LIBS = [
 	},
 	{
 		"lib": "os",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"cflags": "$cflags_sdk",
 		"host": False,
 		"objects": [
@@ -907,7 +936,7 @@ LIBS = [
 			["libs/RVL_SDK/src/revolution/os/OSSync", True],
 			["libs/RVL_SDK/src/revolution/os/OSThread", True],
 			["libs/RVL_SDK/src/revolution/os/OSTime", True],
-			["libs/RVL_SDK/src/revolution/os/OSUtf", True, {"mw_version" : "GC/3.0"}],
+			["libs/RVL_SDK/src/revolution/os/OSUtf", True, {"mw_console" : "GC", "mw_version" : "3.0"}],
 			["libs/RVL_SDK/src/revolution/os/OSIpc", True],
 			["libs/RVL_SDK/src/revolution/os/OSStateTM", True],
 			["libs/RVL_SDK/src/revolution/os/__start", True],
@@ -923,7 +952,8 @@ LIBS = [
 	},
 	{
 		"lib": "pad",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"cflags": "$cflags_sdk",
 		"host": False,
 		"objects": [
@@ -932,18 +962,20 @@ LIBS = [
 	},
 	{
 		"lib": "sc",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"cflags": "$cflags_sdk",
 		"host": False,
 		"objects": [
 			["libs/RVL_SDK/asm/revolution/sc/scsystem", False],
 			["libs/RVL_SDK/src/revolution/sc/scapi", True],
-			["libs/RVL_SDK/src/revolution/sc/scapi_prdinfo", True, {"mw_version" : "GC/3.0"}],
+			["libs/RVL_SDK/src/revolution/sc/scapi_prdinfo", True, {"mw_console" : "GC", "mw_version" : "3.0"}],
 		],
 	},
 	{
 		"lib": "si",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"cflags": "$cflags_sdk",
 		"host": False,
 		"objects": [
@@ -953,7 +985,8 @@ LIBS = [
 	},
 	{
 		"lib": "tpl",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"cflags": "$cflags_sdk",
 		"host": False,
 		"objects": [
@@ -962,7 +995,8 @@ LIBS = [
 	},
 	{
 		"lib": "usb",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"cflags": "$cflags_sdk",
 		"host": False,
 		"objects": [
@@ -971,7 +1005,8 @@ LIBS = [
 	},
 	{
 		"lib": "vi",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"cflags": "$cflags_sdk",
 		"host": False,
 		"objects": [
@@ -982,7 +1017,8 @@ LIBS = [
 	},
 	{
 		"lib": "wenc",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"cflags": "$cflags_sdk",
 		"host": False,
 		"objects": [
@@ -991,7 +1027,8 @@ LIBS = [
 	},
 	{
 		"lib": "wpad",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"cflags": "$cflags_sdk",
 		"host": False,
 		"objects": [
@@ -1004,7 +1041,8 @@ LIBS = [
 	},
 	{
 		"lib": "wud",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"cflags": "$cflags_sdk",
 		"host": False,
 		"objects": [
@@ -1015,7 +1053,8 @@ LIBS = [
 	},
 	{
 		"lib": "libadxwii",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"cflags": "$cflags_criware",
 		"host": False,
 		"objects": [
@@ -1086,7 +1125,8 @@ LIBS = [
 	},
 	{
 		"lib": "libmwsfdwii",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"cflags": "$cflags_criware",
 		"host": False,
 		"objects": [
@@ -1177,7 +1217,8 @@ LIBS = [
 	},
 	{
 		"lib": "libnw4r_db",
-		"mw_version": "GC/3.0",
+		"mw_console": "GC",
+		"mw_version": "3.0",
 		"cflags": "$cflags_nw4r",
 		"host": False,
 		"objects": [
@@ -1187,7 +1228,8 @@ LIBS = [
 	},
 	{
 		"lib": "libnw4r_g3d",
-		"mw_version": "GC/3.0",
+		"mw_console": "GC",
+		"mw_version": "3.0",
 		"cflags": "$cflags_nw4r",
 		"host": False,
 		"objects": [
@@ -1251,7 +1293,8 @@ LIBS = [
 	},
 	{
 		"lib": "libnw4r_lyt",
-		"mw_version": "GC/3.0",
+		"mw_console": "GC",
+		"mw_version": "3.0",
 		"cflags": "$cflags_nw4r",
 		"host": False,
 		"objects": [
@@ -1275,7 +1318,8 @@ LIBS = [
 	},
 	{
 		"lib": "libnw4r_math",
-		"mw_version": "GC/3.0",
+		"mw_console": "GC",
+		"mw_version": "3.0",
 		"cflags": "$cflags_nw4r",
 		"host": False,
 		"objects": [
@@ -1287,7 +1331,8 @@ LIBS = [
 	},
 	{
 		"lib": "libnw4r_snd",
-		"mw_version": "GC/3.0",
+		"mw_console": "GC",
+		"mw_version": "3.0",
 		"cflags": "$cflags_nw4r",
 		"host": False,
 		"objects": [
@@ -1352,7 +1397,8 @@ LIBS = [
 	},
 	{
 		"lib": "libnw4r_ut",
-		"mw_version": "GC/3.0",
+		"mw_console": "GC",
+		"mw_version": "3.0",
 		"cflags": "$cflags_nw4r",
 		"host": False,
 		"objects": [
@@ -1376,7 +1422,8 @@ LIBS = [
 	{
 		"lib": "monolithlib",
 		"cflags": "$cflags_base -ipa file -inline auto -str pool,readonly,reuse -RTTI on -enc SJIS",
-		"mw_version": "Wii/1.1",
+		"mw_console": "Wii",
+		"mw_version": "1.1",
 		"host": True,
 		"objects": [
 			["libs/monolithlib/asm/Transform", False],
@@ -1678,7 +1725,9 @@ def main():
 		ldflags += " -w off"
 	n.variable("ldflags", ldflags)
 
-	mw_link_version = "Wii/1.1"
+	mw_link_console = "Wii"
+	mw_link_version = "1.1"
+	n.variable("mw_console", mw_link_console)
 	n.variable("mw_version", mw_link_version)
 	if os.name == "nt":
 		exe = ".exe"
@@ -1785,7 +1834,7 @@ def main():
 	###
 	# Rules
 	###
-	compiler_path = args.compilers / "$mw_version"
+	compiler_path = args.compilers / "$mw_console" / "$mw_version"
 	mwcc = compiler_path / "mwcceppc.exe"
 	mwld = compiler_path / "mwldeppc.exe"
 	gnu_as = args.powerpc / f"powerpc-eabi-as{exe}"
@@ -1903,6 +1952,7 @@ def main():
 			completed = False
 			options = {
 				"add_to_all": True,
+				"mw_console": None,
 				"mw_version": None,
 				"cflags": None,
 			}
@@ -1914,8 +1964,9 @@ def main():
 				object = object[0]
 
 			cflags = options["cflags"] or lib["cflags"]
+			mw_console = options["mw_console"] or lib["mw_console"]
 			mw_version = options["mw_version"] or lib["mw_version"]
-			used_compiler_versions.add(mw_version)
+			used_compiler_versions.add((mw_console, mw_version))
 
 			# objdiff config
 			unit_config = {
@@ -1939,6 +1990,7 @@ def main():
 					rule="mwcc",
 					inputs=path(c_file),
 					variables={
+						"mw_console": mw_console,
 						"mw_version": mw_version,
 						"cflags": options["cflags"] or lib["cflags"],
 						"basedir": os.path.dirname(build_path / f"{object}"),
@@ -1987,14 +2039,14 @@ def main():
 		n.newline()
 
 	# Check if all compiler versions exist
-	for mw_version in used_compiler_versions:
-		mw_path = args.compilers / mw_version / "mwcceppc.exe"
+	for (mw_console, mw_version) in used_compiler_versions:
+		mw_path = args.compilers / mw_console / mw_version / "mwcceppc.exe"
 		if not os.path.exists(mw_path):
 			print(f"Compiler {mw_path} does not exist")
 			exit(1)
 
 	# Check if linker exists
-	mw_path = args.compilers / mw_link_version / "mwldeppc.exe"
+	mw_path = args.compilers / mw_link_console / mw_link_version / "mwldeppc.exe"
 	if not os.path.exists(mw_path):
 		print(f"Linker {mw_path} does not exist")
 		exit(1)
