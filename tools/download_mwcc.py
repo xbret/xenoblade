@@ -22,7 +22,6 @@ def main() -> None:
 
     with tempfile.TemporaryDirectory() as tmp_dir:
         tmp_zip = f"{tmp_dir}/mwcc_compiler.zip"
-        tmp_gc = f"{tmp_dir}/GC"
 
         request = urllib.request.Request(
             url=HARDLINK,
@@ -34,8 +33,6 @@ def main() -> None:
 
         with zipfile.ZipFile(tmp_zip) as zip_file:
             zip_file.extractall(tmp_dir)
-
-        shutil.move(tmp_gc, output)
 
     st = os.stat(output)
     os.chmod(output, st.st_mode | stat.S_IEXEC)
