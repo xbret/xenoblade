@@ -18,6 +18,7 @@ REPO = "https://github.com/encounter/gc-wii-binutils"
 
 
 def main() -> None:
+	print("Downloading devkitpro files")
     output = f"{os.path.dirname(__file__)}/powerpc"
 
     uname = platform.uname()
