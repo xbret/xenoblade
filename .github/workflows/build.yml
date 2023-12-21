@@ -18,7 +18,7 @@ jobs:
       run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
     - name: Build
       run: |
-        python configure.py --map --compilers /compilers/GC
+        python configure.py --map --compilers /compilers
         ninja
     - name: Upload progress
       if: github.ref == 'refs/heads/main'
