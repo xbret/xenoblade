@@ -56,8 +56,8 @@
 /* 8037F700 00348CC0  38 63 96 50 */	addi r3, r3, adxt_build@l
 /* 8037F704 00348CC4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8037F708 00348CC8  93 C1 00 08 */	stw r30, 8(r1)
-/* 8037F70C 00348CCC  3F C0 80 5E */	lis r30, lbl_805E5D48@ha
-/* 8037F710 00348CD0  3B DE 5D 48 */	addi r30, r30, lbl_805E5D48@l
+/* 8037F70C 00348CCC  3F C0 80 5E */	lis r30, adxt_init_cnt@ha
+/* 8037F710 00348CD0  3B DE 5D 48 */	addi r30, r30, adxt_init_cnt@l
 /* 8037F714 00348CD4  90 7E 00 18 */	stw r3, 0x18(r30)
 /* 8037F718 00348CD8  48 01 BC F1 */	bl criCrw_GetVersion
 /* 8037F71C 00348CDC  80 1E 00 00 */	lwz r0, 0(r30)
@@ -134,8 +134,8 @@
 /* 8037F828 00348DE8  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8037F82C 00348DEC  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8037F830 00348DF0  93 C1 00 18 */	stw r30, 0x18(r1)
-/* 8037F834 00348DF4  3F C0 80 5E */	lis r30, lbl_805E5D48@ha
-/* 8037F838 00348DF8  3B DE 5D 48 */	addi r30, r30, lbl_805E5D48@l
+/* 8037F834 00348DF4  3F C0 80 5E */	lis r30, adxt_init_cnt@ha
+/* 8037F838 00348DF8  3B DE 5D 48 */	addi r30, r30, adxt_init_cnt@l
 /* 8037F83C 00348DFC  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8037F840 00348E00  80 1E 00 00 */	lwz r0, 0(r30)
 /* 8037F844 00348E04  2C 00 00 00 */	cmpwi r0, 0
@@ -203,7 +203,6 @@
 
 .balign 8
 
-
 .obj adxt_build, global
 	.asciz "\nADXT/WII Ver.10.67 Build:Nov 13 2008 10:52:50\n"
 	.asciz "Append: MW4199 WII30Jul2008Patch02\n"
@@ -221,6 +220,37 @@
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 
-.obj lbl_805E5D48, global
-	.skip 0xC
-.endobj lbl_805E5D48
+.obj adxt_init_cnt, global
+	.skip 0x4
+.endobj adxt_init_cnt
+
+.obj adxt_svr_id, global
+	.skip 0x4
+.endobj adxt_svr_id
+
+.obj adxt_svr_main_id, global
+	.skip 0x4
+.endobj adxt_svr_main_id
+
+.obj adxt_output_mono_flag, global
+	.skip 0x4
+.endobj adxt_output_mono_flag
+
+.obj adxt_svr_fs_id, global
+	.skip 0x4
+.endobj adxt_svr_fs_id
+
+.obj adxt_vsync_cnt, global
+	.skip 0x4
+.endobj adxt_vsync_cnt
+
+.obj cri_verstr_ptr, local
+	.skip 0x4
+.endobj cri_verstr_ptr
+
+.skip 0x4
+
+.obj adxt_obj, global
+	.skip 0xC40
+.endobj adxt_obj
+
