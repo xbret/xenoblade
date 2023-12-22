@@ -1840,6 +1840,7 @@ def main():
 	gnu_as = args.powerpc / f"powerpc-eabi-as{exe}"
 
 	#The dkp files for Linux don't have the powerpc-eabi prefix.
+	print(os.uname().sysname)
 	if os.uname().sysname == "Linux":
 		gnu_as = args.powerpc / f"as"
 
