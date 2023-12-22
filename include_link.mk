@@ -49,5 +49,4 @@
 -include libs/nw4r/src/snd/Makefile
 -include libs/nw4r/src/ut/Makefile
 -include libs/nw4r/Makefile
--include libs/mm/Makefile
 -include libs/monolithlib/Makefile
