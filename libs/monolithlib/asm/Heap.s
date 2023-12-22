@@ -2165,8 +2165,6 @@
 	.4byte 0xB482A682
 	.4byte 0xDC82B582
 	.2byte 0xBD00
-	.2byte 0
-	.4byte 0
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 

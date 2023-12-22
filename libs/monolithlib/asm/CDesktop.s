@@ -816,11 +816,7 @@
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
-#.balign 8
-
-.obj lbl_80667F7C, global
-	.skip 0x4
-.endobj lbl_80667F7C
+.balign 8
 
 .obj CDesktop_startFunctionStruct, global
 	.skip 0x4

@@ -849,6 +849,11 @@
 	.asciz "_reslist_base<CPackItem *>"
 	.balign 4
 .endobj _reslist_base_CPackItem_typestr
+
+.obj CPackItem_typestr, global
+	.asciz "CPackItem"
+	.balign 4
+.endobj CPackItem_typestr
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

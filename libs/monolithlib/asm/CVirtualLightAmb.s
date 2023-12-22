@@ -51,6 +51,16 @@
 	.asciz "CVirtualLightAmb"
 	.balign 4
 .endobj CVirtualLightAmb_typestr
+
+.obj CVirtualLightObj_typestr, global
+	.asciz "CVirtualLightObj"
+	.balign 4
+.endobj CVirtualLightObj_typestr
+
+.obj CVirtualLightDir_typestr, global
+	.asciz "CVirtualLightDir"
+	.balign 4
+.endobj CVirtualLightDir_typestr
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

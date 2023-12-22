@@ -7900,6 +7900,42 @@
 	.4byte 0
 .endobj CMenuArtsSelect_hierarchy
 
+
+.obj IUIBattle_hierarchy, global
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_IUIBattle
+	.4byte 0
+	.4byte 0
+.endobj IUIBattle_hierarchy
+
+
+.obj __vt__CTTask_IUIBattle, global
+	.4byte __RTTI__CTTask_IUIBattle
+	.4byte 0
+	.4byte __dt__CTTask_IUIBattle
+	.4byte CChildListNode_Reset
+	.4byte 0
+	.4byte 0
+	.4byte func_80108BA0
+	.4byte func_80108BE8
+	.4byte CProcess_func_80043F20
+.endobj __vt__CTTask_IUIBattle
+
+.obj CTTask_IUIBattle_hierarchy, global
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte 0
+.endobj CTTask_IUIBattle_hierarchy
+
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8

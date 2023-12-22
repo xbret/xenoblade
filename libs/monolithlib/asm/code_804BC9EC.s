@@ -1132,6 +1132,67 @@
 	.float 0.707099974155
 .endobj mlib_invsqrt2
 
+
+.obj float_8066D6D4, global
+	.float 0
+.endobj float_8066D6D4
+
+
+.obj float_8066D6D8, global
+	.float 1.0
+.endobj float_8066D6D8
+
+
+.obj float_8066D6DC, global
+	.float 0.5
+.endobj float_8066D6DC
+
+
+.obj float_8066D6E0, global
+	.float 0.05
+.endobj float_8066D6E0
+
+
+.obj float_8066D6E4, global
+	.float 2
+.endobj float_8066D6E4
+
+
+.obj float_8066D6E8, global
+	.float 6.10351562E-05 #0x38800000
+.endobj float_8066D6E8
+
+
+.obj float_8066D6EC, global
+	.float 0.3
+.endobj float_8066D6EC
+
+
+.obj float_8066D6F0, global
+	.float -0.3
+.endobj float_8066D6F0
+
+
+.obj float_8066D6F4, global
+	.float 0
+.endobj float_8066D6F4
+
+
+.obj float_8066D6F8, global
+	.float -0.001
+.endobj float_8066D6F8
+
+
+.obj float_8066D6FC, global
+	.float 1.0
+.endobj float_8066D6FC
+
+
+.obj float_8066D700, global
+	.float 0.001
+	.4byte 0
+.endobj float_8066D700
+
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
 .balign 8

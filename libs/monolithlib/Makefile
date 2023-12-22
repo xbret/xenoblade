@@ -14,7 +14,6 @@ MONOLITHLIB_FILES:=\
 	$(BUILD_DIR)/libs/monolithlib/asm/Mat34.o\
 	$(BUILD_DIR)/libs/monolithlib/src/Mat44.o\
 	$(BUILD_DIR)/libs/monolithlib/asm/Quat.o\
-	$(BUILD_DIR)/libs/monolithlib/asm/code_8043738C.o\
 	$(BUILD_DIR)/libs/monolithlib/asm/work/CWorkThread.o\
 	$(BUILD_DIR)/libs/monolithlib/asm/CProc.o\
 	$(BUILD_DIR)/libs/monolithlib/asm/CProcRoot.o\
@@ -136,7 +135,6 @@ MONOLITHLIB_FILES:=\
 	$(BUILD_DIR)/libs/monolithlib/asm/work/CWorkSystemCache.o\
 	$(BUILD_DIR)/libs/monolithlib/asm/code_804D9274.o\
 	$(BUILD_DIR)/libs/monolithlib/asm/nand/CNand.o\
-	$(BUILD_DIR)/libs/monolithlib/asm/nand/code_804DA4CC.o\
 	$(BUILD_DIR)/libs/monolithlib/asm/nand/CNReqtaskSave.o\
 	$(BUILD_DIR)/libs/monolithlib/asm/nand/CNReqtaskLoad.o\
 	$(BUILD_DIR)/libs/monolithlib/asm/nand/CNReqtaskReaddir.o\

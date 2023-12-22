@@ -4300,6 +4300,11 @@
 	.4byte 0
 .endobj CMenuBattlePlayerState_hierarchy
 
+.obj __vt__CPcSelectCursor01, global
+	.4byte __RTTI__CPcSelectCursor01
+	.4byte 0
+	.4byte __dt__CPcSelectCursor01
+.endobj __vt__CPcSelectCursor01
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 

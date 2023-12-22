@@ -2078,68 +2078,7 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-#.balign 8
-
-.obj float_8066D6D4, global
-	.float 0
-.endobj float_8066D6D4
-
-
-.obj float_8066D6D8, global
-	.float 1.0
-.endobj float_8066D6D8
-
-
-.obj float_8066D6DC, global
-	.float 0.5
-.endobj float_8066D6DC
-
-
-.obj float_8066D6E0, global
-	.float 0.05
-.endobj float_8066D6E0
-
-
-.obj float_8066D6E4, global
-	.float 2
-.endobj float_8066D6E4
-
-
-.obj float_8066D6E8, global
-	.float 6.10351562E-05 #0x38800000
-.endobj float_8066D6E8
-
-
-.obj float_8066D6EC, global
-	.float 0.3
-.endobj float_8066D6EC
-
-
-.obj float_8066D6F0, global
-	.float -0.3
-.endobj float_8066D6F0
-
-
-.obj float_8066D6F4, global
-	.float 0
-.endobj float_8066D6F4
-
-
-.obj float_8066D6F8, global
-	.float -0.001
-.endobj float_8066D6F8
-
-
-.obj float_8066D6FC, global
-	.float 1.0
-.endobj float_8066D6FC
-
-
-.obj float_8066D700, global
-	.float 0.001
-	.4byte 0
-.endobj float_8066D700
-
+.balign 8
 
 .obj double_8066D708, global
 	.8byte 0x4330000080000000 #signed int to float constant

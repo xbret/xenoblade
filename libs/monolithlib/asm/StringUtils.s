@@ -308,8 +308,6 @@
 
 .obj lbl_80525D70, global
 	.asciz "."
-	.4byte 0
-	.2byte 0
 .endobj lbl_80525D70
 
 

@@ -256,7 +256,7 @@
 /* 80414148 003DD708  38 00 00 FF */	li r0, 0xff
 /* 8041414C 003DD70C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80414150 003DD710  3B E0 00 00 */	li r31, 0
-/* 80414154 003DD714  C0 22 C3 B0 */	lfs f1, float_8066C730@sda21(r2)
+/* 80414154 003DD714  C0 22 C3 B0 */	lfs f1, VOLUME_INIT__Q44nw4r3snd6detail12EnvGenerator@sda21(r2)
 /* 80414158 003DD718  93 C1 00 08 */	stw r30, 8(r1)
 /* 8041415C 003DD71C  7C 7E 1B 78 */	mr r30, r3
 /* 80414160 003DD720  93 E3 00 F4 */	stw r31, 0xf4(r3)
@@ -855,7 +855,7 @@
 /* 80414A2C 003DDFEC  90 A3 00 D0 */	stw r5, 0xd0(r3)
 /* 80414A30 003DDFF0  38 63 00 1C */	addi r3, r3, 0x1c
 /* 80414A34 003DDFF4  48 00 25 51 */	bl Reset__Q44nw4r3snd6detail3LfoFv
-/* 80414A38 003DDFF8  C0 22 C3 B0 */	lfs f1, float_8066C730@sda21(r2)
+/* 80414A38 003DDFF8  C0 22 C3 B0 */	lfs f1, VOLUME_INIT__Q44nw4r3snd6detail12EnvGenerator@sda21(r2)
 /* 80414A3C 003DDFFC  7F A3 EB 78 */	mr r3, r29
 /* 80414A40 003DE000  48 00 0A 09 */	bl Reset__Q44nw4r3snd6detail12EnvGeneratorFf
 /* 80414A44 003DE004  38 00 00 00 */	li r0, 0
@@ -1331,10 +1331,6 @@
 .obj double_8066C728, global
 	.8byte 0x4330000080000000 #signed int to float constant
 .endobj double_8066C728
-
-.obj float_8066C730, global
-	.float -90.4
-.endobj float_8066C730
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

@@ -26,8 +26,6 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/plugin_cam.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CTaskGameEffAfter.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/plugin_pad.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_80061870.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfResTask.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfRes.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/IResInfo.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfScript.o\
@@ -42,10 +40,8 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/code_8007C0F8.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CtrlEnemy.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CtrlMoveBase.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CtrlEneAiCall.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CtrlMoveEne.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CtrlNpc.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CtrlPad.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CtrlPc.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CtrlRemote.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CtrlObjectParam.o\
@@ -291,7 +287,6 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuGCItem.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuGameClear.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfHikariItemManager.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/cf/code_802B3750.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CUIErrMesWin.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuTitle.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTitle.o\

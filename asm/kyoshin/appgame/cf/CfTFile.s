@@ -1210,18 +1210,7 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-#.balign 8
-
-.obj float_80668A9C, global
-	.float 1.2
-.endobj float_80668A9C
-
-
-.obj float_80668AA0, global
-	.float 1.0
-	.4byte 0
-.endobj float_80668AA0
-
+.balign 8
 
 .obj double_80668AA8, global
 	.8byte 0x4330000000000000 #unsigned int to float constant

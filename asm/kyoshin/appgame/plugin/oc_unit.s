@@ -5743,6 +5743,552 @@
 	.4byte 0
 .endobj cf_CObjectParam_hierarchy
 
+#CTaskGame?
+
+
+.obj lbl_80528DC0, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041024
+.endobj lbl_80528DC0
+
+.obj lbl_80528DCC, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80040AF4
+.endobj lbl_80528DCC
+
+.obj lbl_80528DD8, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80040B38
+.endobj lbl_80528DD8
+
+.obj lbl_80528DE4, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80040C2C
+.endobj lbl_80528DE4
+
+.obj lbl_80528DF0, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80040CD8
+.endobj lbl_80528DF0
+
+.obj lbl_80528DFC, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041BC0
+.endobj lbl_80528DFC
+
+.obj lbl_80528E08, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041024
+.endobj lbl_80528E08
+
+.obj lbl_80528E14, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80040DE4
+.endobj lbl_80528E14
+
+.obj lbl_80528E20, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80040EB4
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041024
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041024
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80040C2C
+.endobj lbl_80528E20
+
+.obj lbl_80528E50, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041BC0
+.endobj lbl_80528E50
+
+.obj lbl_80528E5C, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_800411A4
+.endobj lbl_80528E5C
+
+.obj lbl_80528E68, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8004125C
+.endobj lbl_80528E68
+
+.obj lbl_80528E74, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041BC0
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041348
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041658
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041908
+.endobj lbl_80528E74
+
+.obj lbl_80528EA4, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041390
+.endobj lbl_80528EA4
+
+.obj lbl_80528EB0, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041448
+.endobj lbl_80528EB0
+
+.obj lbl_80528EBC, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041BC0
+.endobj lbl_80528EBC
+
+.obj lbl_80528EC8, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041B94
+.endobj lbl_80528EC8
+
+.obj lbl_80528ED4, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_800414F4
+.endobj lbl_80528ED4
+
+.obj lbl_80528EE0, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_800415AC
+.endobj lbl_80528EE0
+
+.obj lbl_80528EEC, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041BC0
+.endobj lbl_80528EEC
+
+.obj lbl_80528EF8, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041B94
+.endobj lbl_80528EF8
+
+.obj lbl_80528F04, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_800411A4
+.endobj lbl_80528F04
+
+.obj lbl_80528F10, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_800416FC
+.endobj lbl_80528F10
+
+.obj lbl_80528F1C, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041BC0
+.endobj lbl_80528F1C
+
+.obj lbl_80528F28, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041B94
+.endobj lbl_80528F28
+
+.obj lbl_80528F34, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_800417AC
+.endobj lbl_80528F34
+
+.obj lbl_80528F40, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8004185C
+.endobj lbl_80528F40
+
+.obj lbl_80528F4C, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041BC0
+.endobj lbl_80528F4C
+
+.obj lbl_80528F58, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041B94
+.endobj lbl_80528F58
+
+.obj lbl_80528F64, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041908
+.endobj lbl_80528F64
+
+.obj lbl_80528F70, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_800419BC
+.endobj lbl_80528F70
+
+.obj lbl_80528F7C, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041BC0
+.endobj lbl_80528F7C
+
+.obj lbl_80528F88, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041A48
+.endobj lbl_80528F88
+
+.obj lbl_80528F94, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041BC0
+.endobj lbl_80528F94
+
+.obj lbl_80528FA0, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041AFC
+.endobj lbl_80528FA0
+
+.obj lbl_80528FAC, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041BC0
+.endobj lbl_80528FAC
+
+.obj lbl_80528FB8, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041BC0
+.endobj lbl_80528FB8
+
+.obj lbl_80528FC4, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041BC0
+.endobj lbl_80528FC4
+
+.obj lbl_80528FD0, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041BC0
+.endobj lbl_80528FD0
+
+.obj lbl_80528FDC, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041CC8
+.endobj lbl_80528FDC
+
+.obj lbl_80528FE8, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041E54
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8004213C
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041F54
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80042048
+.endobj lbl_80528FE8
+
+.obj lbl_80529018, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041CC8
+.endobj lbl_80529018
+
+.obj lbl_80529024, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041CC8
+.endobj lbl_80529024
+
+.obj lbl_80529030, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8004256C
+.endobj lbl_80529030
+
+.obj lbl_8052903C, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80042274
+.endobj lbl_8052903C
+
+.obj lbl_80529048, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_800424E0
+.endobj lbl_80529048
+
+.obj lbl_80529054, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8004256C
+.endobj lbl_80529054
+
+.obj lbl_80529060, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8004213C
+.endobj lbl_80529060
+
+.obj lbl_8052906C, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80042630
+.endobj lbl_8052906C
+
+.obj lbl_80529078, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_800426A4
+.endobj lbl_80529078
+
+.obj lbl_80529084, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8004256C
+.endobj lbl_80529084
+
+.obj lbl_80529090, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8004256C
+.endobj lbl_80529090
+
+.obj lbl_8052909C, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_8004213C
+.endobj lbl_8052909C
+
+.obj lbl_805290A8, global
+	.4byte 0
+	.4byte 0xFFFFFFFF
+	.4byte func_80041CC8
+.endobj lbl_805290A8
+
+
+.obj __vt___reslist_base_cf_CfObject, global
+	.4byte __RTTI___reslist_base_cf_CfObject
+	.4byte 0
+	.4byte __dt___reslist_base_cf_CfObject
+.endobj __vt___reslist_base_cf_CfObject
+
+
+.obj __vt__CTaskGame, global
+	.4byte __RTTI__CTaskGame
+	.4byte 0
+	.4byte __dt__CTaskGame
+	.4byte CChildListNode_Reset
+	.4byte func_80040510
+	.4byte func_800407DC
+	.4byte func_80043F28
+	.4byte func_80040A38
+	.4byte CProcess_func_80043F20
+	.4byte __RTTI__CTaskGame
+	.4byte 0xFFFFFFAC
+	.4byte func_80044120
+	.4byte IWorkEvent_WorkEvent1
+	.4byte CTaskGame_OnFileEvent
+	.4byte IWorkEvent_WorkEvent3
+	.4byte IWorkEvent_WorkEvent4
+	.4byte IWorkEvent_WorkEvent5
+	.4byte IWorkEvent_WorkEvent6
+	.4byte IWorkEvent_WorkEvent7
+	.4byte IWorkEvent_WorkEvent8
+	.4byte IWorkEvent_WorkEvent9
+	.4byte IWorkEvent_WorkEvent10
+	.4byte IWorkEvent_WorkEvent11
+	.4byte IWorkEvent_WorkEvent12
+	.4byte IWorkEvent_WorkEvent13
+	.4byte IWorkEvent_WorkEvent14
+	.4byte IWorkEvent_WorkEvent15
+	.4byte IWorkEvent_WorkEvent16
+	.4byte IWorkEvent_WorkEvent17
+	.4byte IWorkEvent_WorkEvent18
+	.4byte IWorkEvent_WorkEvent19
+	.4byte IWorkEvent_WorkEvent20
+	.4byte IWorkEvent_WorkEvent21
+	.4byte IWorkEvent_WorkEvent22
+	.4byte IWorkEvent_WorkEvent23
+	.4byte IWorkEvent_WorkEvent24
+	.4byte IWorkEvent_WorkEvent25
+	.4byte IWorkEvent_WorkEvent26
+	.4byte IWorkEvent_WorkEvent27
+	.4byte IWorkEvent_WorkEvent28
+	.4byte IWorkEvent_WorkEvent29
+	.4byte IWorkEvent_WorkEvent30
+	.4byte IWorkEvent_WorkEvent31
+	.4byte __RTTI__CTaskGame
+	.4byte 0xFFFFFFA8
+	.4byte func_80044130
+	.4byte func_80044128
+	.4byte __RTTI__CTaskGame
+	.4byte 0xFFFFFFA4
+	.4byte func_80044140
+	.4byte func_80044138
+	.4byte __RTTI__CTaskGame
+	.4byte 0xFFFFFFA0
+	.4byte func_80044150
+	.4byte func_80044148
+	.4byte __RTTI__CTaskGame
+	.4byte 0xFFFFFF9C
+	.4byte func_80044160
+	.4byte func_80044158
+	.4byte func_800436F4
+	.4byte func_800428D4
+	.4byte func_80043024
+	.4byte func_800433A8
+	.4byte func_80043730
+.endobj __vt__CTaskGame
+
+.obj CTaskGame_hierarchy, global
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte __RTTI__CTTask_CTaskGame
+	.4byte 0
+	.4byte 0
+.endobj CTaskGame_hierarchy
+
+
+.obj __vt__CTTask_CTaskGame, global
+	.4byte __RTTI__CTTask_CTaskGame
+	.4byte 0
+	.4byte __dt__CTTask_CTaskGame
+	.4byte CChildListNode_Reset
+	.4byte 0
+	.4byte 0
+	.4byte func_80043F28
+	.4byte func_80043F70
+	.4byte CProcess_func_80043F20
+.endobj __vt__CTTask_CTaskGame
+
+.obj CTTask_CTaskGame_hierarchy, global
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte __RTTI__CProcess
+	.4byte 0
+	.4byte 0
+	.4byte 0
+.endobj CTTask_CTaskGame_hierarchy
+
+#unreferenced vtables?
+.obj __vt__IErrMesWinSel, global
+	.4byte __RTTI__IErrMesWinSel
+	.4byte 0
+	.4byte __dt__IErrMesWinSel
+	.4byte 0
+.endobj __vt__IErrMesWinSel
+
+.obj __vt__ITitleMenu, global
+	.4byte __RTTI__ITitleMenu
+	.4byte 0
+	.4byte __dt__ITitleMenu
+	.4byte 0
+.endobj __vt__ITitleMenu
+
+.obj __vt__IGameException, global
+	.4byte __RTTI__IGameException
+	.4byte 0
+	.4byte __dt__IGameException
+	.4byte 0
+.endobj __vt__IGameException
+
+
+.obj __vt__IScnRender, global
+	.4byte __RTTI__IScnRender
+	.4byte 0
+	.4byte __dt__IScnRender
+	.4byte IScnRender_func_80043F20
+.endobj __vt__IScnRender
+
+
+.obj __vt__IWorkEvent, global
+	.4byte __RTTI__IWorkEvent
+	.4byte 0
+	.4byte __dt__IWorkEvent
+	.4byte IWorkEvent_WorkEvent1
+	.4byte IWorkEvent_OnFileEvent
+	.4byte IWorkEvent_WorkEvent3
+	.4byte IWorkEvent_WorkEvent4
+	.4byte IWorkEvent_WorkEvent5
+	.4byte IWorkEvent_WorkEvent6
+	.4byte IWorkEvent_WorkEvent7
+	.4byte IWorkEvent_WorkEvent8
+	.4byte IWorkEvent_WorkEvent9
+	.4byte IWorkEvent_WorkEvent10
+	.4byte IWorkEvent_WorkEvent11
+	.4byte IWorkEvent_WorkEvent12
+	.4byte IWorkEvent_WorkEvent13
+	.4byte IWorkEvent_WorkEvent14
+	.4byte IWorkEvent_WorkEvent15
+	.4byte IWorkEvent_WorkEvent16
+	.4byte IWorkEvent_WorkEvent17
+	.4byte IWorkEvent_WorkEvent18
+	.4byte IWorkEvent_WorkEvent19
+	.4byte IWorkEvent_WorkEvent20
+	.4byte IWorkEvent_WorkEvent21
+	.4byte IWorkEvent_WorkEvent22
+	.4byte IWorkEvent_WorkEvent23
+	.4byte IWorkEvent_WorkEvent24
+	.4byte IWorkEvent_WorkEvent25
+	.4byte IWorkEvent_WorkEvent26
+	.4byte IWorkEvent_WorkEvent27
+	.4byte IWorkEvent_WorkEvent28
+	.4byte IWorkEvent_WorkEvent29
+	.4byte IWorkEvent_WorkEvent30
+	.4byte IWorkEvent_WorkEvent31
+.endobj __vt__IWorkEvent
+
+.obj CProcess_hierarchy, global
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__CChildListNode
+	.4byte 0
+	.4byte 0
+.endobj CProcess_hierarchy
+
+.obj CChildListNode_hierarchy, global
+	.4byte __RTTI__CDoubleListNode
+	.4byte 0
+	.4byte 0
+.endobj CChildListNode_hierarchy
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600

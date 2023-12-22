@@ -51,22 +51,6 @@
 /* 80494794 0045DD54  4E 80 00 20 */	blr 
 .endfn __dt__CVirtualLightDir
 
-.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
-
-#.balign 8
-
-
-.obj CVirtualLightObj_typestr, global
-	.asciz "CVirtualLightObj"
-	.balign 4
-.endobj CVirtualLightObj_typestr
-
-.obj CVirtualLightDir_typestr, global
-	.asciz "CVirtualLightDir"
-	.balign 4
-	.4byte 0
-.endobj CVirtualLightDir_typestr
-
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
 .balign 8

@@ -69,10 +69,9 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-#.balign 8
+.balign 8
 
 #padding?
-.4byte 0
 .4byte 0
 .4byte 0
 .4byte 0

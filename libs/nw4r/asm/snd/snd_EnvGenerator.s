@@ -3,7 +3,7 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .fn __ct__Q44nw4r3snd6detail12EnvGeneratorFv, global
-/* 804153C4 003DE984  C0 22 C3 B0 */	lfs f1, float_8066C730@sda21(r2)
+/* 804153C4 003DE984  C0 22 C3 B0 */	lfs f1, VOLUME_INIT__Q44nw4r3snd6detail12EnvGenerator@sda21(r2)
 /* 804153C8 003DE988  38 80 00 00 */	li r4, 0
 /* 804153CC 003DE98C  C0 02 C3 B8 */	lfs f0, float_8066C738@sda21(r2)
 /* 804153D0 003DE990  3C A0 80 52 */	lis r5, lbl_80523658@ha
@@ -553,7 +553,11 @@
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
-#.balign 8
+.balign 8
+
+.obj VOLUME_INIT__Q44nw4r3snd6detail12EnvGenerator, global
+	.float -90.4
+.endobj VOLUME_INIT__Q44nw4r3snd6detail12EnvGenerator
 
 .obj float_8066C734, global
 	.float 65535

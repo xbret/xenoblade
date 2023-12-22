@@ -904,7 +904,13 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-#.balign 8
+.balign 8
+
+.obj CScnMaruShadowNw4r_hierarchy, global
+	.4byte __RTTI__IScnPolyShadow
+	.4byte 0
+	.4byte 0
+.endobj CScnMaruShadowNw4r_hierarchy
 
 .obj __vt__cf_CREvtModel, global
 	.4byte __RTTI__cf_CREvtModel

@@ -560,17 +560,6 @@
 /* 804DEB0C 004A80CC  38 21 00 10 */	addi r1, r1, 0x10
 /* 804DEB10 004A80D0  4E 80 00 20 */	blr 
 .endfn CPackItem_CalculatePackFileHash
-
-
-.section .rodata, "a"  # 0x804F5B20 - 0x805281E0
-
-#.balign 8
-
-.obj CPackItem_typestr, global
-	.asciz "CPackItem"
-	.balign 4
-.endobj CPackItem_typestr
-
 	
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 

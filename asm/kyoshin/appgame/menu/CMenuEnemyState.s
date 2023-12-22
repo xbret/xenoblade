@@ -5290,14 +5290,7 @@
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
-#.balign 8
-
-
-.obj __vt__CPcSelectCursor01, global
-	.4byte __RTTI__CPcSelectCursor01
-	.4byte 0
-	.4byte __dt__CPcSelectCursor01
-.endobj __vt__CPcSelectCursor01
+.balign 8
 
 .obj __vt__CMenuEnemyState, global
 	.4byte __RTTI__CMenuEnemyState

@@ -1371,6 +1371,10 @@
 	.balign 4
 .endobj CDeviceRemotePad_typestr
 
+.obj CDeviceBase_typestr, global
+	.asciz "CDeviceBase"
+.endobj CDeviceBase_typestr
+
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
 
 .balign 8

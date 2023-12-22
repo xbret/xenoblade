@@ -813,6 +813,10 @@
 	.skip 0x4
 .endobj lbl_80667F78
 
+.obj lbl_80667F7C, global
+	.skip 0x4
+.endobj lbl_80667F7C
+
 .section extab, "a" # 0x800066E0 - 0x80021020
 
 .balign 4

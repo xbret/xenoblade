@@ -3082,12 +3082,6 @@
 	.4byte func_800B0620
 .endobj __vt__cf_CfObjectActor
 
-.obj CScnMaruShadowNw4r_hierarchy, global
-	.4byte __RTTI__IScnPolyShadow
-	.4byte 0
-	.4byte 0
-.endobj CScnMaruShadowNw4r_hierarchy
-
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 
 .balign 8
