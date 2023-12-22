@@ -1,8 +1,8 @@
 ifneq ($(findstring MINGW,$(shell uname)),)
-  WINDOWS := 1
+	WINDOWS := 1
 endif
 ifneq ($(findstring MSYS,$(shell uname)),)
-  WINDOWS := 1
+	WINDOWS := 1
 endif
 
 NON_MATCHING ?= 0
@@ -14,7 +14,7 @@ VERBOSE ?= 0
 MAPGENFLAG ?= 1
 
 ifeq ($(VERBOSE),0)
-  QUIET := @
+	QUIET := @
 endif
 
 #-------------------------------------------------------------------------------
@@ -41,7 +41,7 @@ MAP     := $(BUILD_DIR)/$(NAME).$(VERSION).MAP
 
 
 ifeq ($(MAPGENFLAG),1)
-  MAPGEN := -map $(MAP) -mapunused
+	MAPGEN := -map $(MAP) -mapunused
 endif
 
 include obj_files.mk
@@ -63,20 +63,25 @@ CONSOLE := Wii
 # Programs
 POWERPC ?= tools/powerpc
 ifeq ($(WINDOWS),1)
-  WINE :=
-  AS      := $(POWERPC)/powerpc-eabi-as.exe
-  PYTHON  := python
+	WINE :=
+	AS      := $(POWERPC)/powerpc-eabi-as.exe
+	PYTHON  := python
 else
-  WIBO   := $(shell command -v wibo 2> /dev/null)
-  ifdef WIBO
-    WINE ?= wibo
-  else
-    WINE ?= wine
-  endif
-  # Disable wine debug output for cleanliness
-  export WINEDEBUG ?= -all
-  AS      := $(POWERPC)/powerpc-eabi-as
-  PYTHON  := python3
+	WIBO := $(shell command -v wibo 2> /dev/null)
+	ifdef WIBO
+		WINE ?= wibo
+	else
+		WINE ?= wine
+	endif
+	# Disable wine debug output for cleanliness
+	export WINEDEBUG ?= -all
+	# The Linux dkp files don't have the powerpc-eabi prefix
+	ifeq ($(shell uname -s), Darwin)
+		AS := $(POWERPC)/powerpc-eabi-as
+	else
+		AS := $(POWERPC)/as
+	endif
+	PYTHON  := python3
 endif
 COMPILERS ?= tools/mwcc_compiler
 CC      = $(WINE) $(COMPILERS)/$(CONSOLE)/$(MWCC_VERSION)/mwcceppc.exe

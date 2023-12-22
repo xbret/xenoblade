@@ -1839,6 +1839,10 @@ def main():
 	mwld = compiler_path / "mwldeppc.exe"
 	gnu_as = args.powerpc / f"powerpc-eabi-as{exe}"
 
+	#The dkp files for Linux don't have the powerpc-eabi prefix.
+	if os.uname().sysname == "Linux":
+		gnu_as = args.powerpc / f"as"
+
 	mwcc_cmd = f"{chain}{wine}{mwcc} $cflags -MMD -c $in -o $basedir"
 	mwld_cmd = f"{wine}{mwld} $ldflags -o $out @$out.rsp"
 	as_cmd = (
