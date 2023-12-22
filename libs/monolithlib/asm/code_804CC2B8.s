@@ -11748,7 +11748,6 @@
 	.4byte .L_804CE580
 	.4byte .L_804CE580
 	.4byte .L_804CE598
-	.4byte 0
 .endobj jumptable_80573458
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

@@ -5398,9 +5398,9 @@
 	.4byte .L_8028F364
 	.4byte .L_8028F36C
 	.4byte .L_8028F374
-	.4byte 0
 .endobj jumptable_8053BF38
 
+.balign 8
 
 .obj __vt__CSaveLoad, global
 	.4byte __RTTI__CSaveLoad

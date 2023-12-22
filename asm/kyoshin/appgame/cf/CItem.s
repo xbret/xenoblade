@@ -7766,9 +7766,9 @@
 	.4byte .L_80157FB4
 	.4byte .L_80157FBC
 	.4byte .L_80157FC4
-	.4byte 0
 .endobj jumptable_80532F04
 
+.balign 8
 
 .obj __vt__cf_ItemPurifyKessyouImpl, global
 	.4byte __RTTI__cf_ItemPurifyKessyouImpl

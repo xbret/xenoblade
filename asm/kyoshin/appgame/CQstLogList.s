@@ -2113,9 +2113,9 @@
 	.4byte .L_8022902C
 	.4byte .L_80228FC0
 	.4byte .L_8022902C
-	.4byte 0
 .endobj jumptable_805399E0
 
+.balign 8
 
 .obj __vt__CQstLogList, global
 	.4byte __RTTI__CQstLogList

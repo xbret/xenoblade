@@ -1781,7 +1781,6 @@
 
 .obj __EXIVersion, global
 	.4byte lbl_8054B610
-	.4byte 0
 .endobj __EXIVersion
 
 

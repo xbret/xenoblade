@@ -3060,7 +3060,6 @@
 	.4byte .L_803C9348
 	.4byte .L_803C95C8
 	.4byte .L_803C95C8
-	.4byte 0
 .endobj jumptable_8056C5F0
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

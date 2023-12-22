@@ -1826,9 +1826,9 @@
 	.4byte .L_801BECDC
 	.4byte .L_801BECE8
 	.4byte .L_801BECF4
-	.4byte 0
 .endobj jumptable_80537350
 
+.balign 8
 
 .obj __vt__CMenuItemExchange, global
 	.4byte __RTTI__CMenuItemExchange

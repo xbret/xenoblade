@@ -5282,9 +5282,9 @@
 	.4byte .L_800CA1E4
 	.4byte .L_800CA174
 	.4byte .L_800CA174
-	.4byte 0
 .endobj jumptable_8052DF28
 
+.balign 8
 
 .obj __vt__cf_CfObjectImplPc, global
 	.4byte __RTTI__cf_CfObjectImplPc

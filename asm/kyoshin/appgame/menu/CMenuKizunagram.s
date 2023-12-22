@@ -1261,9 +1261,9 @@
 	.4byte .L_80257150
 	.4byte .L_8025715C
 	.4byte .L_80257168
-	.4byte 0
 .endobj jumptable_8053AC38
 
+.balign 8
 
 .obj __vt__CMenuKizunagram, global
 	.4byte __RTTI__CMenuKizunagram

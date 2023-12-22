@@ -1813,9 +1813,9 @@
 	.4byte .L_802E2DB8
 	.4byte .L_802E2DC0
 	.4byte .L_802E2DC8
-	.4byte 0
 .endobj jumptable_805444C4
 
+.balign 8
 
 .obj lbl_805444F0, global
 	.asciz "invalid command"

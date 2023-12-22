@@ -2443,9 +2443,9 @@
 	.4byte .L_80109E74
 	.4byte .L_80109EA4
 	.4byte .L_80109ED4
-	.4byte 0
 .endobj jumptable_8052F9D0
 
+.balign 8
 
 .obj __vt__CMenuBattleDamage, global
 	.4byte __RTTI__CMenuBattleDamage

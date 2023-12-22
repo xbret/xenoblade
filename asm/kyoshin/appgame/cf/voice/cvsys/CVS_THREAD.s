@@ -1100,7 +1100,6 @@
 	.4byte .L_802A46CC
 	.4byte .L_802A46E0
 	.4byte .L_802A46F4
-	.4byte 0
 .endobj jumptable_8053D0C0
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600

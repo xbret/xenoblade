@@ -1841,7 +1841,6 @@
 .obj ProductInfoFileName, local
 	.asciz "/title/00000001/00000002/data/setting.txt"
 	.balign 4
-	.4byte 0
 .endobj ProductInfoFileName
 
 .section .data, "wa"  # 0x805281E0 - 0x80573C60
@@ -2149,8 +2148,10 @@
 
 
 .obj BgJobStatus, local
-	.skip 0x4
+	.skip 0x1
 .endobj BgJobStatus
+
+.skip 3
 
 .obj ItemRestSize, local
 	.skip 0x4
@@ -2177,5 +2178,5 @@
 .endobj DirtyFlag
 
 .obj Initialized, local
-	.skip 0x2
+	.skip 0x1
 .endobj Initialized

@@ -33045,9 +33045,9 @@
 	.4byte .L_800ECF8C
 	.4byte .L_800ECF98
 	.4byte .L_800ECFA4
-	.4byte 0
 .endobj jumptable_8052F484
 
+.balign 8
 
 .obj __vt__cf_CBattleManager, global
 	.4byte __RTTI__cf_CBattleManager

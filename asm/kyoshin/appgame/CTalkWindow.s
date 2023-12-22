@@ -2469,9 +2469,9 @@
 	.4byte .L_8012BF2C
 	.4byte .L_8012BF40
 	.4byte .L_8012BF50
-	.4byte 0
 .endobj jumptable_80531750
 
+.balign 8
 
 .obj __vt__CTalkWindow, global
 	.4byte __RTTI__CTalkWindow

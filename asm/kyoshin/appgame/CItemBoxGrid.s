@@ -15379,9 +15379,9 @@
 	.4byte .L_801D129C
 	.4byte .L_801D12A4
 	.4byte .L_801D12AC
-	.4byte 0
 .endobj jumptable_80537EBC
 
+.balign 8
 
 .obj __vt__CItemBoxGrid, global
 	.4byte __RTTI__CItemBoxGrid

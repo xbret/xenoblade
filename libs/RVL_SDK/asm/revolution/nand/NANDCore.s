@@ -1520,5 +1520,5 @@
 .balign 8
 
 .obj s_libState, local
-	.skip 0x8
+	.skip 0x4
 .endobj s_libState

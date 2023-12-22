@@ -13228,9 +13228,9 @@
 	.4byte .L_8028D168
 	.4byte .L_8028D170
 	.4byte .L_8028D178
-	.4byte 0
 .endobj jumptable_8053BDD4
 
+.balign 8
 
 .obj __vt__CEquipItemBox, global
 	.4byte __RTTI__CEquipItemBox

@@ -1735,5 +1735,4 @@
 	.4byte .L_803D3D68
 	.4byte .L_803D3D70
 	.4byte .L_803D3D78
-	.4byte 0
 .endobj jumptable_8056C784

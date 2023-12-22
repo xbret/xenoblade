@@ -8925,9 +8925,9 @@
 	.4byte .L_801F1D5C
 	.4byte .L_801F1D74
 	.4byte .L_801F1D8C
-	.4byte 0
 .endobj jumptable_80538478
 
+.balign 8
 
 .obj __vt__CItemBoxLine, global
 	.4byte __RTTI__CItemBoxLine

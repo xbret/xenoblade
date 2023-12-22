@@ -25414,10 +25414,9 @@
 	.4byte .L_801D65EC
 	.4byte .L_801D6604
 	.4byte .L_801D661C
-	.4byte 0
 .endobj jumptable_80538220
 
-
+.balign 8
 
 .obj __vt__CItemBoxInfo2, global
 	.4byte __RTTI__CItemBoxInfo2

@@ -1685,8 +1685,9 @@
 	.4byte .L_802B1FBC
 	.4byte .L_802B200C
 	.4byte .L_802B2034
-	.4byte 0
 .endobj jumptable_8053E490
+
+.balign 8
 
 .obj __vt__CMenuGameClear, global
 	.4byte __RTTI__CMenuGameClear

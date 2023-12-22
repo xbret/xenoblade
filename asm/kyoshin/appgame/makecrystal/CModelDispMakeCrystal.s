@@ -7033,9 +7033,9 @@
 	.4byte .L_80220AE0
 	.4byte .L_80220B40
 	.4byte .L_80220BA0
-	.4byte 0
 .endobj jumptable_80539604
 
+.balign 8
 
 .obj __vt__CModelDispMakeCrystal, global
 	.4byte __RTTI__CModelDispMakeCrystal

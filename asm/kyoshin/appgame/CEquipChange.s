@@ -4754,9 +4754,9 @@
 	.4byte .L_802031F8
 	.4byte .L_80203208
 	.4byte .L_80203200
-	.4byte 0
 .endobj jumptable_80538E04
 
+.balign 8
 
 .obj __vt__CEquipChange, global
 	.4byte __RTTI__CEquipChange

@@ -1372,5 +1372,4 @@
 	.4byte .L_8039C870
 	.4byte .L_8039C878
 	.4byte .L_8039C878
-	.4byte 0
 .endobj jumptable_805697A8

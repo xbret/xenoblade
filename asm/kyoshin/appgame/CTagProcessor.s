@@ -8972,9 +8972,9 @@
 	.4byte .L_8012650C
 	.4byte .L_80127568
 	.4byte .L_801267E0
-	.4byte 0
 .endobj jumptable_80530DAC
 
+.balign 8
 
 .obj __vt___unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal, global
 	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal
@@ -9286,9 +9286,9 @@
 	.4byte .L_8012ACD0
 	.4byte .L_8012ACD8
 	.4byte .L_8012ACE0
-	.4byte 0
 .endobj jumptable_8053108C
 
+.balign 8
 
 .obj __vt___unnamed_CTagProcessor_cpp_CTagCodeCol, global
 	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeCol

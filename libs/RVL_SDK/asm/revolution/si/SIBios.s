@@ -1178,7 +1178,6 @@
 
 .obj __SIVersion, global
 	.4byte lbl_8055F138
-	.4byte 0
 .endobj __SIVersion
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

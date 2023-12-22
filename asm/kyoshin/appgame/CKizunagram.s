@@ -6565,9 +6565,9 @@
 	.4byte .L_8025BE54
 	.4byte .L_8025BE6C
 	.4byte .L_8025BE84
-	.4byte 0
 .endobj jumptable_8053ACD8
 
+.balign 8
 
 .obj __vt__CKizunagram, global
 	.4byte __RTTI__CKizunagram

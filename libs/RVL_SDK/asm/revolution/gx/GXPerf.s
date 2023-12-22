@@ -666,5 +666,4 @@
 	.4byte .L_8031EF58
 	.4byte .L_8031EF74
 	.4byte .L_8031ECCC
-	.4byte 0
 .endobj jumptable_8054C188

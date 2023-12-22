@@ -11659,9 +11659,9 @@
 	.4byte .L_802673FC
 	.4byte .L_80267418
 	.4byte .L_80267414
-	.4byte 0
 .endobj jumptable_8053B0D8
 
+.balign 8
 
 .obj __vt__UI_CPassiveSkill, global
 	.4byte __RTTI__UI_CPassiveSkill

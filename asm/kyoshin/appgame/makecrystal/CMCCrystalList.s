@@ -1635,9 +1635,9 @@
 	.4byte .L_80222924
 	.4byte .L_8022292C
 	.4byte .L_80222934
-	.4byte 0
 .endobj jumptable_80539710
 
+.balign 8
 
 .obj __vt__CMCCrystalList, global
 	.4byte __RTTI__CMCCrystalList

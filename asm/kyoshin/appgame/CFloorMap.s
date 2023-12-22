@@ -14438,9 +14438,9 @@
 	.4byte .L_8024F4CC
 	.4byte .L_8024F4E8
 	.4byte .L_8024F504
-	.4byte 0
 .endobj jumptable_8053A768
 
+.balign 8
 
 .obj __vt__CFloorMap, global
 	.4byte __RTTI__CFloorMap

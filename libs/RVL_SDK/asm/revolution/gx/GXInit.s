@@ -1334,7 +1334,6 @@
 
 .obj __GXVersion, global
 	.4byte lbl_8054B680
-	.4byte 0
 .endobj __GXVersion
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

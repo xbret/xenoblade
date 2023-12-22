@@ -750,8 +750,9 @@
 	.4byte .L_8045E790
 	.4byte .L_8045E7B0
 	.4byte .L_8045E7BC
-	.4byte 0
 .endobj jumptable_80570AA8
+
+.balign 8
 
 .obj __vt__CLibHbmControl, global
 	.4byte __RTTI__CLibHbmControl

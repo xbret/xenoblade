@@ -3231,9 +3231,9 @@
 	.4byte .L_8029E0A0
 	.4byte .L_8029E0CC
 	.4byte .L_8029E0F8
-	.4byte 0
 .endobj jumptable_8053CD74
 
+.balign 8
 
 .obj __vt__COption, global
 	.4byte __RTTI__COption
