@@ -44,6 +44,13 @@ def main() -> None:
 	#FIXME: the above doesn't work for whatever reason
 	for filename in os.listdir(output):
 		f = os.path.join(output, filename)
+		#The Linux versions of encounter's dkp binutils are missing the prefix,
+		#so this is needed until the issue is fixed
+		if not filename.startswith("powerpc-eabi-"):
+			new_filename = "powerpc-eabi-" + filename
+			new_file = os.path.join(output, new_filename)
+			os.rename(f, new_file)
+
 		st = os.stat(f)
 		os.chmod(f, st.st_mode | stat.S_IEXEC)
 
