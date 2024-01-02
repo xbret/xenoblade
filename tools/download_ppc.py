@@ -50,6 +50,7 @@ def main() -> None:
 			new_filename = "powerpc-eabi-" + filename
 			new_file = os.path.join(output, new_filename)
 			os.rename(f, new_file)
+			f = new_file
 
 		st = os.stat(f)
 		os.chmod(f, st.st_mode | stat.S_IEXEC)
