@@ -1,7 +1,7 @@
 #include "PowerPC_EABI_Support/MetroTRK/nubinit.h"
 #include "PowerPC_EABI_Support/MetroTRK/serpoll.h"
+#include "PowerPC_EABI_Support/MetroTRK/targimpl.h"
 
-extern DSError TRKInitializeTarget();
 
 bool gTRKBigEndian;
 

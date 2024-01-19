@@ -33,7 +33,7 @@ def main() -> None:
 
 	with tempfile.TemporaryDirectory() as tmp_dir:
 		tmp_zip = f"{tmp_dir}/powerpc.zip"
-		url = f"{REPO}/releases/latest/download/{system}-{arch}.zip"
+		url = f"{REPO}/releases/tag/2.41-1/download/{system}-{arch}.zip"
 
 		urllib.request.urlretrieve(url, tmp_zip)
 		with zipfile.ZipFile(tmp_zip) as zip_file:
@@ -44,14 +44,6 @@ def main() -> None:
 	#FIXME: the above doesn't work for whatever reason
 	for filename in os.listdir(output):
 		f = os.path.join(output, filename)
-		#The Linux versions of encounter's dkp binutils are missing the prefix,
-		#so this is needed until the issue is fixed
-		if not filename.startswith("powerpc-eabi-"):
-			new_filename = "powerpc-eabi-" + filename
-			new_file = os.path.join(output, new_filename)
-			os.rename(f, new_file)
-			f = new_file
-
 		st = os.stat(f)
 		os.chmod(f, st.st_mode | stat.S_IEXEC)
 

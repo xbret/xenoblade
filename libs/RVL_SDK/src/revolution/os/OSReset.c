@@ -226,10 +226,10 @@ u32 OSGetResetCode(void) {
     return PI_HW_REGS[PI_RESET] >> 3;
 }
 
-void OSResetSystem(u32 arg0, u32 arg1, u32 arg2) {
-#pragma unused(arg0)
-#pragma unused(arg1)
-#pragma unused(arg2)
+void OSResetSystem(BOOL reset, u32 resetCode, BOOL forceMenu) {
+#pragma unused(reset)
+#pragma unused(resetCode)
+#pragma unused(forceMenu)
 
 #line 1020
     OSError("OSResetSystem() is obsoleted. It doesn't work any longer.\n");

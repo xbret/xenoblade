@@ -11,7 +11,7 @@ int main(int argc, char** argv);
 
 DECL_SECTION(".init") static void __check_pad3(void) {
     if ((OS_GC_PAD_3_BTN & 0x0EEF) == 0x0EEF) {
-        OSResetSystem(0, 0, 0);
+        OSResetSystem(FALSE, 0, FALSE);
     }
 }
 

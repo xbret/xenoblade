@@ -815,7 +815,7 @@
 
 .fn func_800BB2CC, global
 /* 800BB2CC 0008488C  81 83 00 00 */	lwz r12, 0(r3)
-/* 800BB2D0 00084890  C0 02 C6 90 */	lfs f0, deg2rad__2mm@sda21(r2)
+/* 800BB2D0 00084890  C0 02 C6 90 */	lfs f0, deg2rad__2ml@sda21(r2)
 /* 800BB2D4 00084894  81 8C 00 C4 */	lwz r12, 0xc4(r12)
 /* 800BB2D8 00084898  EC 21 00 32 */	fmuls f1, f1, f0
 /* 800BB2DC 0008489C  7D 89 03 A6 */	mtctr r12
@@ -830,7 +830,7 @@
 /* 800BB2F4 000848B4  81 8C 00 CC */	lwz r12, 0xcc(r12)
 /* 800BB2F8 000848B8  7D 89 03 A6 */	mtctr r12
 /* 800BB2FC 000848BC  4E 80 04 21 */	bctrl 
-/* 800BB300 000848C0  C0 02 C6 8C */	lfs f0, rad2deg__2mm@sda21(r2)
+/* 800BB300 000848C0  C0 02 C6 8C */	lfs f0, rad2deg__2ml@sda21(r2)
 /* 800BB304 000848C4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 800BB308 000848C8  EC 21 00 32 */	fmuls f1, f1, f0
 /* 800BB30C 000848CC  7C 08 03 A6 */	mtlr r0
@@ -1279,8 +1279,8 @@
 /* 800BB894 00084E54  90 01 00 1C */	stw r0, 0x1c(r1)
 /* 800BB898 00084E58  48 00 00 20 */	b .L_800BB8B8
 .L_800BB89C:
-/* 800BB89C 00084E5C  3C A0 80 66 */	lis r5, zero__Q22mm4Vec3@ha
-/* 800BB8A0 00084E60  84 85 9D B0 */	lwzu r4, zero__Q22mm4Vec3@l(r5)
+/* 800BB89C 00084E5C  3C A0 80 66 */	lis r5, zero__Q22ml5CVec3@ha
+/* 800BB8A0 00084E60  84 85 9D B0 */	lwzu r4, zero__Q22ml5CVec3@l(r5)
 /* 800BB8A4 00084E64  90 81 00 14 */	stw r4, 0x14(r1)
 /* 800BB8A8 00084E68  80 65 00 04 */	lwz r3, 4(r5)
 /* 800BB8AC 00084E6C  80 05 00 08 */	lwz r0, 8(r5)

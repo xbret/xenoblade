@@ -1,7 +1,7 @@
-#include "monolithlib/Vector.hpp"
+#include "monolib/Vector.hpp"
 
 namespace cf{
-using namespace mm;
+using namespace ml;
 
 class CfCam{
 
@@ -14,11 +14,11 @@ class CfCamFollow : CfCam{
 class CfCamEvent : CfCamFollow{
 public:
     u8 unk0[0x28];
-    Vec3i unk28;
+    CVec3 unk28;
     u8 unk34[0x264-0x34];
     float unk264;
-    Vec3i lookat;
-    Vec3i unk274;
+    CVec3 lookat;
+    CVec3 unk274;
 };
 
 
@@ -33,9 +33,9 @@ public:
 class CfCamLookatIntf : CfCamIntf{
 public:
     virtual void update(CfCamEvent*);
-    virtual void setPos(CfCamEvent*, Vec3i const&);
-    virtual void setDir(CfCamEvent*, Vec3i const&);
-    virtual void setLookat(CfCamEvent*, Vec3i const&);
+    virtual void setPos(CfCamEvent*, CVec3 const&);
+    virtual void setDir(CfCamEvent*, CVec3 const&);
+    virtual void setLookat(CfCamEvent*, CVec3 const&);
 };
 
 

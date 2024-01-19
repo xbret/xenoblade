@@ -1,8 +1,10 @@
 #include "PowerPC_EABI_Support/MetroTRK/Processor/ppc/Generic/ppc_targimpl.h"
 
 asm void TRKSaveExtended1Block(){
+	nofralloc
     lis r2, gTRKCPUState@h
     ori r2, r2, gTRKCPUState@l
+
     mfsr r16, 0
     mfsr r17, 1
     mfsr r18, 2
@@ -19,148 +21,167 @@ asm void TRKSaveExtended1Block(){
     mfsr r29, 0xd
     mfsr r30, 0xe
     mfsr r31, 0xf
-    stmw r16, ProcessorState_PPC.Extended1.SR(r2)
-    mftb r27
-    mftbu r28
-    mfhid0 r29
-    mfhid1 r30
-    mfsrr1 r31
+    stmw r16, ProcessorState_PPC.Extended1.SR[0](r2)
+
+    mftb r27, TBR_TBL_READ
+    mftb r28, TBR_TBU_READ
+    mfspr r29, SPR_HID0
+    mfspr r30, SPR_HID1
+    mfspr r31, SPR_SRR1
     stmw r27, ProcessorState_PPC.Extended1.TBL(r2)
-    mfpvr r15
-    mfibatu r16, 0
-    mfibatl r17, 0
-    mfibatu r18, 1
-    mfibatl r19, 1
-    mfibatu r20, 2
-    mfibatl r21, 2
-    mfibatu r22, 3
-    mfibatl r23, 3
-    mfdbatu r24, 0
-    mfdbatl r25, 0
-    mfdbatu r26, 1
-    mfdbatl r27, 1
-    mfdbatu r28, 2
-    mfdbatl r29, 2
-    mfdbatu r30, 3
-    mfdbatl r31, 3
+
+    mfspr r15, SPR_PVR
+    mfspr r16, SPR_IBAT0U
+    mfspr r17, SPR_IBAT0L
+    mfspr r18, SPR_IBAT1U
+    mfspr r19, SPR_IBAT1L
+    mfspr r20, SPR_IBAT2U
+    mfspr r21, SPR_IBAT2L
+    mfspr r22, SPR_IBAT3U
+    mfspr r23, SPR_IBAT3L
+    mfspr r24, SPR_DBAT0U
+    mfspr r25, SPR_DBAT0L
+    mfspr r26, SPR_DBAT1U
+    mfspr r27, SPR_DBAT1L
+    mfspr r28, SPR_DBAT2U
+    mfspr r29, SPR_DBAT2L
+    mfspr r30, SPR_DBAT3U
+    mfspr r31, SPR_DBAT3L
     stmw r15, ProcessorState_PPC.Extended1.PVR(r2)
-    mfspr r24, IBAT4U
-    mfspr r25, IBAT4L
-    mfspr r26, IBAT5U
-    mfspr r27, IBAT5L
-    mfspr r28, IBAT6U
-    mfspr r29, IBAT6L
-    mfspr r30, IBAT7U
-    mfspr r31, IBAT7L
-    stmw r24, ProcessorState_PPC.Extended1.DMISS(r2)
-    mfsdr1 r22
-    mfdar r23
-    mfdsisr r24
-    mfsprg0 r25
-    mfsprg1 r26
-    mfsprg2 r27
-    mfsprg3 r28
-    mfdec r29
-    mfiabr r30
-    mfear r31
+
+    mfspr r24, SPR_IBAT4U
+    mfspr r25, SPR_IBAT4L
+    mfspr r26, SPR_IBAT5U
+    mfspr r27, SPR_IBAT5L
+    mfspr r28, SPR_IBAT6U
+    mfspr r29, SPR_IBAT6L
+    mfspr r30, SPR_IBAT7U
+    mfspr r31, SPR_IBAT7L
+    stmw r24, ProcessorState_PPC.Extended1.IBAT4U(r2)
+
+    mfspr r22, SPR_SDR1
+    mfspr r23, SPR_DAR
+    mfspr r24, SPR_DSISR
+    mfspr r25, SPR_SPRG0
+    mfspr r26, SPR_SPRG1
+    mfspr r27, SPR_SPRG2
+    mfspr r28, SPR_SPRG3
+    mfspr r29, SPR_DEC
+    mfspr r30, SPR_IABR
+    mfspr r31, SPR_EAR
     stmw r22, ProcessorState_PPC.Extended1.SDR1(r2)
-    mfdabr r24
-    mfpmc1 r25
-    mfpmc2 r26
-    mfpmc3 r27
-    mfpmc4 r28
-    mfsia r29
-    mfmmcr0 r30
-    mfmmcr1 r31
+
+    mfspr r24, SPR_DABR
+    mfspr r25, SPR_PMC1
+    mfspr r26, SPR_PMC2
+    mfspr r27, SPR_PMC3
+    mfspr r28, SPR_PMC4
+    mfspr r29, SPR_SIA
+    mfspr r30, SPR_MMCR0
+    mfspr r31, SPR_MMCR1
     stmw r24, ProcessorState_PPC.Extended1.DABR(r2)
-    mfspr r29, IBAT7L
-    mfspr r30, DBAT4U
-    mfspr r31, DBAT4L
-    stmw r29, ProcessorState_PPC.Extended1.THRM1(r2)
-    mfictc r30
-    mfl2cr r31
+
+    mfspr r29, SPR_IBAT7L
+    mfspr r30, SPR_DBAT4U
+    mfspr r31, SPR_DBAT4L
+    stmw r29, ProcessorState_PPC.Extended1.IBAT7L(r2)
+
+    mfspr r30, SPR_ICTC
+    mfspr r31, SPR_L2CR
     stmw r30, ProcessorState_PPC.Extended1.ICTC(r2)
-    mfsrr0 r16
-    stw r16, ProcessorState_PPC.Extended1.UMMCR2(r2)
-    mfspr r17, DBAT5U
-    stw r17, ProcessorState_PPC.Extended1.UBAMR(r2)
-    mfummcr0 r25
-    mfupmc1 r26
-    mfupmc2 r27
-    mfusia r28
-    mfummcr1 r29
-    mfupmc3 r30
-    mfupmc4 r31
+
+    mfspr r16, SPR_SRR0
+    stw r16, ProcessorState_PPC.Extended1.SRR0(r2)
+
+    mfspr r17, SPR_DBAT5U
+    stw r17, ProcessorState_PPC.Extended1.DBAT5U(r2)
+
+    mfspr r25, SPR_UMMCR0
+    mfspr r26, SPR_UPMC1
+    mfspr r27, SPR_UPMC2
+    mfspr r28, SPR_USIA
+    mfspr r29, SPR_UMMCR1
+    mfspr r30, SPR_UPMC3
+    mfspr r31, SPR_UPMC4
     stmw r25, ProcessorState_PPC.Extended1.UMMCR0(r2)
-    mfspr r25, DBAT5L
-    mfspr r26, DBAT6U
-    mfspr r27, DBAT6L
-    mfspr r28, DBAT7U
-    mfspr r29, DBAT7L
-    mfspr r30, 0x398 //HID2
-    mfspr r31, 0x3f3 //HID4
-    stmw r25, ProcessorState_PPC.Extended1.USDA(r2)
-    mfgqr0 r20
-    mfgqr1 r21
-    mfgqr2 r22
-    mfgqr3 r23
-    mfgqr4 r24
-    mfgqr5 r25
-    mfgqr6 r26
-    mfgqr7 r27
-    mfspr r28, 0x398 //HID2
-    mfwpar r29
-    mfspr r30, DMA_U
-    mfspr r31, DMA_L
+
+    mfspr r25, SPR_DBAT5L
+    mfspr r26, SPR_DBAT6U
+    mfspr r27, SPR_DBAT6L
+    mfspr r28, SPR_DBAT7U
+    mfspr r29, SPR_DBAT7L
+    mfspr r30, SPR_HID2
+    mfspr r31, SPR_HID4
+    stmw r25, ProcessorState_PPC.Extended1.DBAT5L(r2)
+
+    mfspr r20, SPR_GQR0
+    mfspr r21, SPR_GQR1
+    mfspr r22, SPR_GQR2
+    mfspr r23, SPR_GQR3
+    mfspr r24, SPR_GQR4
+    mfspr r25, SPR_GQR5
+    mfspr r26, SPR_GQR6
+    mfspr r27, SPR_GQR7
+    mfspr r28, SPR_HID2
+    mfspr r29, SPR_WPAR
+    mfspr r30, SPR_DMAU
+    mfspr r31, SPR_DMAL
     stmw r20, ProcessorState_PPC.Extended1.GQR(r2)
     blr 
 }
 
 asm void TRKRestoreExtended1Block(){
+	nofralloc
     lis r2, gTRKCPUState@h
     ori r2, r2, gTRKCPUState@l
+
     lis r5, gTRKRestoreFlags@h
     ori r5, r5, gTRKRestoreFlags@l
     lbz r3, ProcessorRestoreFlags_PPC.TBR(r5)
     lbz r6, ProcessorRestoreFlags_PPC.DEC(r5)
+
     li r0, 0
     stb r0, ProcessorRestoreFlags_PPC.TBR(r5)
     stb r0, ProcessorRestoreFlags_PPC.DEC(r5)
     cmpwi r3, 0
-    beq L_802CD2F8
+    beq no_tbr_restore
+
     lwz r24, ProcessorState_PPC.Extended1.TBL(r2)
     lwz r25, ProcessorState_PPC.Extended1.TBU(r2)
-    mttbl r24
-    mttbu r25
-L_802CD2F8:
+    mtspr TBR_TBL_WRITE, r24
+    mtspr TBR_TBU_WRITE, r25
+
+no_tbr_restore:
     lmw r20, ProcessorState_PPC.Extended1.GQR(r2)
-    mtgqr0 r20
-    mtgqr1 r21
-    mtgqr2 r22
-    mtgqr3 r23
-    mtgqr4 r24
-    mtgqr5 r25
-    mtgqr6 r26
-    mtgqr7 r27
-    mtspr 0x398, r28 //HID2
-    mtspr DMA_U, r30
-    mtspr DMA_L, r31
-    b L_802CD32C
-L_802CD32C:
+    mtspr SPR_GQR0, r20
+    mtspr SPR_GQR1, r21
+    mtspr SPR_GQR2, r22
+    mtspr SPR_GQR3, r23
+    mtspr SPR_GQR4, r24
+    mtspr SPR_GQR5, r25
+    mtspr SPR_GQR6, r26
+    mtspr SPR_GQR7, r27
+    mtspr SPR_HID2, r28
+    mtspr SPR_DMAU, r30
+    mtspr SPR_DMAL, r31
+    b __603e_specific_restore
+	//Stubbed code only present in Wii MetroTRK v0.1
+__603e_specific_restore:
     lmw r19, ProcessorState_PPC.Extended1.DABR(r2)
-    mtdabr r19
-    mtpmc1 r20
-    mtpmc2 r21
-    mtpmc3 r22
-    mtpmc4 r23
-    mtsia r24
-    mtmmcr0 r25
-    mtmmcr1 r26
-    mtictc r30
-    mtl2cr r31
-    b L_802CD35C
-L_802CD35C:
-    lmw r16, ProcessorState_PPC.Extended1.SR(r2)
+    mtspr SPR_DABR, r19
+    mtspr SPR_PMC1, r20
+    mtspr SPR_PMC2, r21
+    mtspr SPR_PMC3, r22
+    mtspr SPR_PMC4, r23
+    mtspr SPR_SIA, r24
+    mtspr SPR_MMCR0, r25
+    mtspr SPR_MMCR1, r26
+    mtspr SPR_ICTC, r30
+    mtspr SPR_L2CR, r31
+    b __end_specific_restore
+	//Stubbed code only present in Wii MetroTRK v0.1
+__end_specific_restore:
+    lmw r16, ProcessorState_PPC.Extended1.SR[0](r2)
     mtsr 0, r16
     mtsr 1, r17
     mtsr 2, r18
@@ -177,36 +198,39 @@ L_802CD35C:
     mtsr 0xd, r29
     mtsr 0xe, r30
     mtsr 0xf, r31
+
     lmw r12, ProcessorState_PPC.Extended1.HID0(r2)
-    mthid0 r12
-    mthid1 r13
-    mtsrr1 r14
-    mtpvr r15
-    mtibatu 0, r16
-    mtibatl 0, r17
-    mtibatu 1, r18
-    mtibatl 1, r19
-    mtibatu 2, r20
-    mtibatl 2, r21
-    mtibatu 3, r22
-    mtibatl 3, r23
-    mtdbatu 0, r24
-    mtdbatl 0, r25
-    mtdbatu 1, r26
-    mtdbatl 1, r27
-    mtdbatu 2, r28
-    mtdbatl 2, r29
-    mtdbatu 3, r30
-    mtdbatl 3, r31
+    mtspr SPR_HID0, r12
+    mtspr SPR_HID1, r13
+    mtspr SPR_SRR1, r14
+    mtspr SPR_PVR, r15
+    mtspr SPR_IBAT0U, r16
+    mtspr SPR_IBAT0L, r17
+    mtspr SPR_IBAT1U, r18
+    mtspr SPR_IBAT1L, r19
+    mtspr SPR_IBAT2U, r20
+    mtspr SPR_IBAT2L, r21
+    mtspr SPR_IBAT3U, r22
+    mtspr SPR_IBAT3L, r23
+    mtspr SPR_DBAT0U, r24
+    mtspr SPR_DBAT0L, r25
+    mtspr SPR_DBAT1U, r26
+    mtspr SPR_DBAT1L, r27
+    mtspr SPR_DBAT2U, r28
+    mtspr SPR_DBAT2L, r29
+    mtspr SPR_DBAT3U, r30
+    mtspr SPR_DBAT3L, r31
+
     lmw r22, ProcessorState_PPC.Extended1.SDR1(r2)
-    mtsdr1 r22
-    mtdar r23
-    mtdsisr r24
-    mtsprg 0, r25
-    mtsprg 1, r26
-    mtsprg 2, r27
-    mtsprg 3, r28
-    mtiabr r30
-    mtear r31
+    mtspr SPR_SDR1, r22
+    mtspr SPR_DAR, r23
+    mtspr SPR_DSISR, r24
+    mtspr SPR_SPRG0, r25
+    mtspr SPR_SPRG1, r26
+    mtspr SPR_SPRG2, r27
+    mtspr SPR_SPRG3, r28
+	
+    mtspr SPR_IABR, r30
+    mtspr SPR_EAR, r31
     blr
 }

@@ -16,5 +16,5 @@ CRIWARE :=\
 NW4R :=\
 	$(BUILD_DIR)/libs/nw4r/nw4r.a\
 
-MONOLITHLIB :=\
-	$(BUILD_DIR)/libs/monolithlib/monolithlib.a\
+MONOLIB :=\
+	$(BUILD_DIR)/libs/monolib/monolib.a\

@@ -1,6 +1,21 @@
 #include "PowerPC_EABI_Support/MetroTRK/support.h"
-#include "PowerPC_EABI_Support/MetroTRK/msghndlr.h"
+#include "PowerPC_EABI_Support/MetroTRK/msgcmd.h"
 #include "revolution/OS.h"
+
+
+// Custom structure used as temporary buffer for message data transmission
+typedef struct
+{
+    u32 msg_length;
+    u8 command[4];
+    u8 handle[4];
+    u16 length[2];
+    u8 data[4];
+
+    // most likely used for padding to 64 bytes
+    // (as this is the length of the whole message)
+    u8 unknown[0x2C];
+} msgbuf_t;
 
 DSError TRK_SuppAccessFile(ui32 file_handle, ui8* data, size_t* count, DSIOResult* io_result,
 bool need_reply, bool read){
@@ -14,7 +29,7 @@ bool need_reply, bool read){
 	ui8 replyIOResult;
 	ui32 replyLength;
 	bool exit;
-	CommandReply reply;
+	msgbuf_t reply;
 	
   
 	if(data == NULL || *count == 0){
@@ -23,7 +38,7 @@ bool need_reply, bool read){
 		
 	for (exit = false, *io_result = kDSIONoError, i = 0, error = kNoError;
 		!exit && i < *count && error == kNoError && *io_result == 0; i += length) {
-		TRK_memset(&reply, 0, sizeof(CommandReply));
+		TRK_memset(&reply, 0, sizeof(msgbuf_t));
 		
 		length = DS_MAXREADWRITELENGTH;
 			
@@ -31,19 +46,13 @@ bool need_reply, bool read){
 			length = *count - i;
 		}
 			
-		reply.commandId = read ? kDSReadFile : kDSWriteFile;  
-
-		if(read){
-			reply.unk0 = 0x40;
-		}else {
-			reply.unk0 = length + 0x40;
-		}
-	  
-		reply.replyErrorInt = file_handle;
-		*(ui16*)&reply.unkC = length;
+		reply.command[0] = read ? kDSReadFile : kDSWriteFile;  
+		reply.msg_length = read ? TRK_MSG_HEADER_LENGTH : ((ui32)length + TRK_MSG_HEADER_LENGTH);
+		*(DSFileHandle*)reply.handle = file_handle;
+		reply.length[0] = (ui16)length;
 		
 		TRK_GetFreeBuffer(&bufferId,&buffer);
-		error = TRKAppendBuffer_ui8(buffer,(const ui8*)&reply,0x40);
+		error = TRKAppendBuffer_ui8(buffer,(const ui8*)&reply,TRK_MSG_HEADER_LENGTH);
 		
 		if (!read && error == kNoError) {
 			error = TRKAppendBuffer_ui8(buffer,data + i,length);
@@ -112,7 +121,7 @@ DSError TRK_RequestSend(MessageBuffer* msgBuf, int* bufferId){
 		}
 		
 		if (*bufferId != -1) {
-			if(buffer->fLength < DS_MIN_REPLY_LENGTH) {
+			if(buffer->fLength < TRK_MSG_HEADER_LENGTH) {
 				OSReport("MetroTRK - bad reply size %ld\n", buffer->fLength);
 				badReply = true;
 			}
@@ -133,7 +142,7 @@ DSError TRK_RequestSend(MessageBuffer* msgBuf, int* bufferId){
 	
 	if (*bufferId == -1) {
 		OSReport("MetroTRK - failed in RequestSend\n");
-		error = kError800;
+		error = kWaitACKError;
 	}
 	
 	return error;
@@ -145,14 +154,14 @@ DSError HandleOpenFileSupportRequest(const char* path, ui8 replyError, ui32* par
 	int bufferId1;
 	MessageBuffer* tempBuffer;
 	MessageBuffer* buffer;
-	CommandReply reply;
+	msgbuf_t reply;
 	
-	TRK_memset(&reply,0,sizeof(CommandReply));
+	TRK_memset(&reply,0,sizeof(msgbuf_t));
 	*param_3 = 0;
-	reply.commandId = kDSOpenFile;
-	reply.unk0 = TRK_strlen(path) + 0x41;
-	reply.replyError = replyError;
-	*(ui16*)&reply.unkC = TRK_strlen(path) + 1;
+	reply.command[0] = kDSOpenFile;
+	reply.msg_length = TRK_strlen(path) + TRK_MSG_REPLY_HEADER_LENGTH;
+	reply.handle[0] = replyError;
+	reply.length[0] = (ui16)(TRK_strlen(path) + 1);
 	TRK_GetFreeBuffer(&bufferId1,&buffer);
 	error = TRKAppendBuffer_ui8(buffer, (ui8 *)&reply, 0x40);
 	
@@ -184,16 +193,16 @@ DSError HandleCloseFileSupportRequest(int replyError, DSIOResult* ioResult){
 	int bufferId;
 	MessageBuffer *buffer1;
 	MessageBuffer *buffer2;
-	CommandReply reply;
+	msgbuf_t reply;
 	
-	TRK_memset(&reply,0,sizeof(CommandReply));
-	reply.commandId = kDSCloseFile;
-	reply.unk0 = DS_MIN_REPLY_LENGTH;
-	reply.replyErrorInt = replyError;
+	TRK_memset(&reply,0, TRK_MSG_HEADER_LENGTH);
+	reply.command[0] = kDSCloseFile;
+	reply.msg_length = TRK_MSG_HEADER_LENGTH;
+	*(DSFileHandle *)reply.handle = replyError;
 	error = TRK_GetFreeBuffer(&bufferId,&buffer1);
 	
 	if (error == kNoError) {
-		error = TRKAppendBuffer_ui8(buffer1, (ui8*)&reply, sizeof(CommandReply));
+		error = TRKAppendBuffer_ui8(buffer1, (ui8*)&reply, sizeof(msgbuf_t));
 	}
 	
 	if (error == kNoError) {
@@ -222,18 +231,18 @@ DSError HandlePositionFileSupportRequest(ui32 param_1, ui32* param_2, ui8 param_
 	int bufferId1;
 	MessageBuffer *buffer1;
 	MessageBuffer *buffer2;
-	CommandReply reply;
+	msgbuf_t reply;
 	
-	TRK_memset(&reply, 0, sizeof(CommandReply));
-	reply.commandId = 0xd4;
-	reply.unk0 = DS_MIN_REPLY_LENGTH;
-	reply.replyErrorInt = param_1;
-	reply.unkC = *param_2;
-	reply.unk10[0] = param_3;
+	TRK_memset(&reply, 0, TRK_MSG_HEADER_LENGTH);
+	reply.command[0] = kDSPositionFile;
+	reply.msg_length = TRK_MSG_HEADER_LENGTH;
+	*(DSFileHandle *)reply.handle = param_1;
+	*(s32*)reply.length = *param_2;
+	reply.data[0] = param_3;
 	error = TRK_GetFreeBuffer(&bufferId1,&buffer1);
 	
 	if (error == kNoError) {
-		error = TRKAppendBuffer_ui8(buffer1, (ui8*)&reply, sizeof(CommandReply));
+		error = TRKAppendBuffer_ui8(buffer1, (ui8*)&reply, sizeof(msgbuf_t));
 	}
 	
 	if (error == kNoError) {

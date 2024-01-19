@@ -1531,7 +1531,7 @@
 .L_8011E94C:
 /* 8011E94C 000E7F0C  C0 42 96 40 */	lfs f2, float_806699C0@sda21(r2)
 /* 8011E950 000E7F10  38 81 00 10 */	addi r4, r1, 0x10
-/* 8011E954 000E7F14  C0 22 C6 78 */	lfs f1, pi__2mm@sda21(r2)
+/* 8011E954 000E7F14  C0 22 C6 78 */	lfs f1, pi__2ml@sda21(r2)
 /* 8011E958 000E7F18  FC 00 F8 18 */	frsp f0, f31
 /* 8011E95C 000E7F1C  80 7E 00 08 */	lwz r3, 8(r30)
 /* 8011E960 000E7F20  EC 62 08 24 */	fdivs f3, f2, f1
@@ -4312,7 +4312,7 @@
 /* 8012118C 000EA74C  FC 40 00 50 */	fneg f2, f0
 /* 80121190 000EA750  48 2E 9C C9 */	bl Atan2FIdx__Q24nw4r4mathFff
 /* 80121194 000EA754  C0 02 96 60 */	lfs f0, float_806699E0@sda21(r2)
-/* 80121198 000EA758  C0 42 C6 78 */	lfs f2, pi__2mm@sda21(r2)
+/* 80121198 000EA758  C0 42 C6 78 */	lfs f2, pi__2ml@sda21(r2)
 /* 8012119C 000EA75C  EC 20 00 72 */	fmuls f1, f0, f1
 /* 801211A0 000EA760  C0 15 01 1C */	lfs f0, 0x11c(r21)
 /* 801211A4 000EA764  EC 02 00 2A */	fadds f0, f2, f0
@@ -4321,15 +4321,15 @@
 /* 801211B0 000EA770  FC 1E 10 40 */	fcmpo cr0, f30, f2
 /* 801211B4 000EA774  4C 41 13 82 */	cror 2, 1, 2
 /* 801211B8 000EA778  40 82 00 0C */	bne .L_801211C4
-/* 801211BC 000EA77C  C0 02 C6 7C */	lfs f0, tau__2mm@sda21(r2)
+/* 801211BC 000EA77C  C0 02 C6 7C */	lfs f0, tau__2ml@sda21(r2)
 /* 801211C0 000EA780  EF DE 00 28 */	fsubs f30, f30, f0
 .L_801211C4:
-/* 801211C4 000EA784  C0 02 C6 78 */	lfs f0, pi__2mm@sda21(r2)
+/* 801211C4 000EA784  C0 02 C6 78 */	lfs f0, pi__2ml@sda21(r2)
 /* 801211C8 000EA788  FC 00 00 50 */	fneg f0, f0
 /* 801211CC 000EA78C  FC 1E 00 40 */	fcmpo cr0, f30, f0
 /* 801211D0 000EA790  4C 40 13 82 */	cror 2, 0, 2
 /* 801211D4 000EA794  40 82 00 0C */	bne .L_801211E0
-/* 801211D8 000EA798  C0 02 C6 7C */	lfs f0, tau__2mm@sda21(r2)
+/* 801211D8 000EA798  C0 02 C6 7C */	lfs f0, tau__2ml@sda21(r2)
 /* 801211DC 000EA79C  EF DE 00 2A */	fadds f30, f30, f0
 .L_801211E0:
 /* 801211E0 000EA7A0  C0 62 96 1C */	lfs f3, float_8066999C@sda21(r2)
@@ -4341,8 +4341,8 @@
 /* 801211F8 000EA7B8  EC 00 08 3A */	fmadds f0, f0, f0, f1
 /* 801211FC 000EA7BC  FC 03 00 00 */	fcmpu cr0, f3, f0
 /* 80121200 000EA7C0  40 82 00 24 */	bne .L_80121224
-/* 80121204 000EA7C4  3C A0 80 66 */	lis r5, zero__Q22mm4Vec3@ha
-/* 80121208 000EA7C8  84 85 9D B0 */	lwzu r4, zero__Q22mm4Vec3@l(r5)
+/* 80121204 000EA7C4  3C A0 80 66 */	lis r5, zero__Q22ml5CVec3@ha
+/* 80121208 000EA7C8  84 85 9D B0 */	lwzu r4, zero__Q22ml5CVec3@l(r5)
 /* 8012120C 000EA7CC  90 81 00 BC */	stw r4, 0xbc(r1)
 /* 80121210 000EA7D0  80 65 00 04 */	lwz r3, 4(r5)
 /* 80121214 000EA7D4  80 05 00 08 */	lwz r0, 8(r5)
@@ -4372,8 +4372,8 @@
 /* 8012126C 000EA82C  EC 00 08 3A */	fmadds f0, f0, f0, f1
 /* 80121270 000EA830  FC 03 00 00 */	fcmpu cr0, f3, f0
 /* 80121274 000EA834  40 82 00 24 */	bne .L_80121298
-/* 80121278 000EA838  3C A0 80 66 */	lis r5, zero__Q22mm4Vec3@ha
-/* 8012127C 000EA83C  84 85 9D B0 */	lwzu r4, zero__Q22mm4Vec3@l(r5)
+/* 80121278 000EA838  3C A0 80 66 */	lis r5, zero__Q22ml5CVec3@ha
+/* 8012127C 000EA83C  84 85 9D B0 */	lwzu r4, zero__Q22ml5CVec3@l(r5)
 /* 80121280 000EA840  90 81 00 B0 */	stw r4, 0xb0(r1)
 /* 80121284 000EA844  80 65 00 04 */	lwz r3, 4(r5)
 /* 80121288 000EA848  80 05 00 08 */	lwz r0, 8(r5)
@@ -4441,7 +4441,7 @@
 /* 80121364 000EA924  EC 20 00 72 */	fmuls f1, f0, f1
 /* 80121368 000EA928  48 2E 99 C5 */	bl SinFIdx__Q24nw4r4mathFf
 /* 8012136C 000EA92C  C0 62 96 28 */	lfs f3, float_806699A8@sda21(r2)
-/* 80121370 000EA930  C0 42 C6 90 */	lfs f2, deg2rad__2mm@sda21(r2)
+/* 80121370 000EA930  C0 42 C6 90 */	lfs f2, deg2rad__2ml@sda21(r2)
 /* 80121374 000EA934  C0 02 96 1C */	lfs f0, float_8066999C@sda21(r2)
 /* 80121378 000EA938  EC 43 00 B2 */	fmuls f2, f3, f2
 /* 8012137C 000EA93C  FC 1E 00 40 */	fcmpo cr0, f30, f0
@@ -4562,9 +4562,9 @@
 /* 80121540 000EAB00  38 61 01 A8 */	addi r3, r1, 0x1a8
 /* 80121544 000EAB04  38 80 00 00 */	li r4, 0
 /* 80121548 000EAB08  48 1F D0 B9 */	bl GXLoadPosMtxImm
-/* 8012154C 000EAB0C  3C 60 80 66 */	lis r3, identity__Q22mm5Mat34@ha
+/* 8012154C 000EAB0C  3C 60 80 66 */	lis r3, identity__Q22ml6CMat34@ha
 /* 80121550 000EAB10  38 80 00 00 */	li r4, 0
-/* 80121554 000EAB14  38 63 9F B8 */	addi r3, r3, identity__Q22mm5Mat34@l
+/* 80121554 000EAB14  38 63 9F B8 */	addi r3, r3, identity__Q22ml6CMat34@l
 /* 80121558 000EAB18  48 1F D1 29 */	bl GXLoadNrmMtxImm
 /* 8012155C 000EAB1C  38 60 00 00 */	li r3, 0
 /* 80121560 000EAB20  38 80 00 09 */	li r4, 9

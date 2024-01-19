@@ -1,11 +1,10 @@
-#include "revolution/BASE.h"
 #include "PowerPC_EABI_Support/MetroTRK/trk.h"
 #include "PowerPC_EABI_Support/MetroTRK/mem_TRK.h"
 #include "PowerPC_EABI_Support/MetroTRK/dolphin_trk_glue.h"
 #include "PowerPC_EABI_Support/MetroTRK/custconn/cc_gdev.h"
 #include "PowerPC_EABI_Support/MetroTRK/targimpl.h"
 
-
+extern void PPCHalt(void);
 
 static ui32 gReadCount; //unused
 static ui32 gReadPos; //unused

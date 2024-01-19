@@ -21,7 +21,7 @@ typedef enum {
 	kInvalidProcessId = 0x704,
 	kInvalidThreadId = 0x705,
 	kOsError = 0x706,
-	kError800 = 0x800
+	kWaitACKError = 0x800
 } DSError;
 
 #ifdef __cplusplus

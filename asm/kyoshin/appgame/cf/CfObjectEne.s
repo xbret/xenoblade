@@ -547,7 +547,7 @@
 /* 800AE064 00077624  90 01 01 3C */	stw r0, 0x13c(r1)
 /* 800AE068 00077628  C8 42 8E E8 */	lfd f2, double_80669268@sda21(r2)
 /* 800AE06C 0007762C  C8 21 01 38 */	lfd f1, 0x138(r1)
-/* 800AE070 00077630  C0 02 C6 90 */	lfs f0, deg2rad__2mm@sda21(r2)
+/* 800AE070 00077630  C0 02 C6 90 */	lfs f0, deg2rad__2ml@sda21(r2)
 /* 800AE074 00077634  EC 21 10 28 */	fsubs f1, f1, f2
 /* 800AE078 00077638  81 8C 02 6C */	lwz r12, 0x26c(r12)
 /* 800AE07C 0007763C  EC 21 00 32 */	fmuls f1, f1, f0
@@ -577,7 +577,7 @@
 /* 800AE0DC 0007769C  81 8C 01 A4 */	lwz r12, 0x1a4(r12)
 /* 800AE0E0 000776A0  7D 89 03 A6 */	mtctr r12
 /* 800AE0E4 000776A4  4E 80 04 21 */	bctrl 
-/* 800AE0E8 000776A8  C0 22 C6 78 */	lfs f1, pi__2mm@sda21(r2)
+/* 800AE0E8 000776A8  C0 22 C6 78 */	lfs f1, pi__2ml@sda21(r2)
 /* 800AE0EC 000776AC  7E E3 BB 78 */	mr r3, r23
 /* 800AE0F0 000776B0  C0 02 8E D4 */	lfs f0, float_80669254@sda21(r2)
 /* 800AE0F4 000776B4  81 97 00 00 */	lwz r12, 0(r23)
@@ -648,7 +648,7 @@
 /* 800AE1F8 000777B8  7F A3 EB 78 */	mr r3, r29
 /* 800AE1FC 000777BC  38 9E 00 96 */	addi r4, r30, 0x96
 /* 800AE200 000777C0  4B F8 C9 49 */	bl func_8003AB48
-/* 800AE204 000777C4  C0 22 C6 78 */	lfs f1, pi__2mm@sda21(r2)
+/* 800AE204 000777C4  C0 22 C6 78 */	lfs f1, pi__2ml@sda21(r2)
 /* 800AE208 000777C8  C0 02 8E D8 */	lfs f0, float_80669258@sda21(r2)
 /* 800AE20C 000777CC  90 61 00 88 */	stw r3, 0x88(r1)
 /* 800AE210 000777D0  7E E3 BB 78 */	mr r3, r23
@@ -1968,7 +1968,7 @@
 /* 800AF5B0 00078B70  4B F8 B4 F5 */	bl func_8003AAA4
 /* 800AF5B4 00078B74  C3 C2 8E B0 */	lfs f30, float_80669230@sda21(r2)
 /* 800AF5B8 00078B78  7C 7C 1B 78 */	mr r28, r3
-/* 800AF5BC 00078B7C  C3 E2 C6 8C */	lfs f31, rad2deg__2mm@sda21(r2)
+/* 800AF5BC 00078B7C  C3 E2 C6 8C */	lfs f31, rad2deg__2ml@sda21(r2)
 /* 800AF5C0 00078B80  3B 60 00 00 */	li r27, 0
 /* 800AF5C4 00078B84  3A E0 00 01 */	li r23, 1
 .L_800AF5C8:
@@ -2429,7 +2429,7 @@
 .endfn func_800AFBBC
 
 .fn func_800AFBC4, global
-/* 800AFBC4 00079184  C0 22 C6 78 */	lfs f1, pi__2mm@sda21(r2)
+/* 800AFBC4 00079184  C0 22 C6 78 */	lfs f1, pi__2ml@sda21(r2)
 /* 800AFBC8 00079188  C0 03 16 30 */	lfs f0, 0x1630(r3)
 /* 800AFBCC 0007918C  EC 21 00 28 */	fsubs f1, f1, f0
 /* 800AFBD0 00079190  4E 80 00 20 */	blr 

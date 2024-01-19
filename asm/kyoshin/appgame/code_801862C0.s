@@ -451,7 +451,7 @@
 /* 801868FC 0014FEBC  C8 42 9F 18 */	lfd f2, double_8066A298@sda21(r2)
 /* 80186900 0014FEC0  C8 21 00 78 */	lfd f1, 0x78(r1)
 /* 80186904 0014FEC4  C0 61 00 5C */	lfs f3, 0x5c(r1)
-/* 80186908 0014FEC8  C0 02 C6 90 */	lfs f0, deg2rad__2mm@sda21(r2)
+/* 80186908 0014FEC8  C0 02 C6 90 */	lfs f0, deg2rad__2ml@sda21(r2)
 /* 8018690C 0014FECC  EC 41 10 28 */	fsubs f2, f1, f2
 /* 80186910 0014FED0  C0 81 00 60 */	lfs f4, 0x60(r1)
 /* 80186914 0014FED4  C0 22 9F 08 */	lfs f1, float_8066A288@sda21(r2)

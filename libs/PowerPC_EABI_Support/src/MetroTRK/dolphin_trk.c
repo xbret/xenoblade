@@ -6,29 +6,30 @@
 #include "PowerPC_EABI_Support/MetroTRK/mpc_7xx_603e.h"
 #include "PowerPC_EABI_Support/MetroTRK/Processor/ppc/Generic/ppc_targimpl.h"
 #include "PowerPC_EABI_Support/MetroTRK/main_TRK.h"
-#include "revolution/OS.h"
+#include "PowerPC_EABI_Support/MetroTRK/rvl_mem.h"
 
+#define EXCEPTION_SIZE  0x100
+#define NUM_EXCEPTIONS  15
 
-static ui32 TRK_ISR_OFFSETS[16] = {
-    PPC_SystemReset,
-    PPC_MachineCheck,
-    PPC_DataStorage,
-    PPC_InstructionStorage,
-    PPC_ExternalInterrupt,
-    PPC_Alignment,
-    PPC_Program,
-    PPC_FloatingPointUnavaiable,
-    PPC_Decrementer,
-    PPC_SystemCall,
-    PPC_Trace,
-    PPC_PerformanceMonitor,
-    PPC_InstructionAddressBreakpoint,
-    PPC_SystemManagementInterrupt,
-    PPC_ThermalManagementInterrupt,
-    0
+static ui32 TRK_ISR_OFFSETS[NUM_EXCEPTIONS] = {
+    PPC_SYSTEMRESET,
+    PPC_MACHINECHECK,
+    PPC_DATAACCESSERROR,
+    PPC_INSTACCESSERROR,
+    PPC_EXTERNALINTERRUPT,
+    PPC_ALIGNMENTERROR,
+    PPC_PROGRAMERROR,
+    PPC_FPUNAVAILABLE,
+    PPC_DECREMENTERINTERRUPT,
+    PPC_SYSTEMCALL,
+    PPC_TRACE,
+    PPC_PERFORMANCE_MONITOR,
+    PPC7xx_603E_INSTR_ADDR_BREAK,
+    PPC7xx_603E_SYS_MANAGE,
+    PPC_THERMAL_MANAGE
 };
 
-static ui32 lc_base;
+static ui32* lc_base;
 
 //r5: hardware id
 asm void InitMetroTRK(){
@@ -151,43 +152,46 @@ void EnableMetroTRKInterrupts(){
     EnableEXI2Interrupts();
 }
 
-ui32 TRKTargetTranslate(ui32 r3){
-    if(r3 >= lc_base && r3 < lc_base + 0x4000){
-        if(gTRKCPUState.Extended1.DBAT3U & 3) return r3;
+void* TRKTargetTranslate(ui32* addr){
+	if(addr >= lc_base && addr < &lc_base[0x1000]){
+        if(gTRKCPUState.Extended1.DBAT2L & 3) return addr;
     }
 
-    if(r3 < 0x3000000){
-        return (r3 & 0x3FFFFFFF) | 0x80000000;
+    if((ui32)addr < 0x3000000){
+        return (void*)(((ui32)addr & 0x3FFFFFFF) | BOOTINFO);
     }
 
-    if(r3 >= 0x10000000 && 0x1C000000 > r3){
-        return (r3 & 0x3FFFFFFF) | 0x90000000;
+    if((ui32)addr >= 0x10000000 && 0x1C000000 > (ui32)addr){
+        return (void*)(((ui32)addr & 0x3FFFFFFF) | MEM2_CACHED);
     }
     
-    return r3;
+    return addr;
 }
 
 static void TRK_copy_vector(ui32 offset){
-    void* destPtr = (void*)TRKTargetTranslate(offset);
-    TRK_memcpy(destPtr, (void*)(gTRKInterruptVectorTable + offset), 0x100);
-    TRK_flush_cache(destPtr, 0x100);
+    void* destPtr = (void*)TRKTargetTranslate((ui32*)offset);
+    TRK_memcpy(destPtr, (void*)(gTRKInterruptVectorTable + offset), EXCEPTION_SIZE);
+    TRK_flush_cache(destPtr, EXCEPTION_SIZE);
 }
 
 void __TRK_copy_vectors(){
-    ui32 r3 = lc_base;
+    ui32* data_ptr;
+	ui32* isrOffsetPtr;
+	int i;
+	ui32 data;
 
-    if(r3 <= 0x44 && r3 + 0x4000 > 0x44 && (gTRKCPUState.Extended1.DBAT3U & 0x3)){
-        r3 = 0x44;
+    if((ui32)lc_base <= DB_EXCEPTION_MASK && (ui32)&lc_base[0x1000] > DB_EXCEPTION_MASK && gTRKCPUState.Extended1.DBAT2L & 0x3){
+        data_ptr = (ui32*)DB_EXCEPTION_MASK;
     }else{
-        r3 = 0x80000044;
+        data_ptr = (ui32*)(BOOTINFO + DB_EXCEPTION_MASK);
     }
 
-    ui32* isrOffsetPtr = TRK_ISR_OFFSETS;
-    int i = 0;
-    ui32 r29 = *(ui32*)r3;
+    isrOffsetPtr = TRK_ISR_OFFSETS;
+    i = 0;
+	data = *data_ptr;
 
     do{
-        if((r29 & (1 << i)) && i != 4){
+        if((data & (1 << i)) != 0 && i != 4){
             TRK_copy_vector(*isrOffsetPtr);
         }
 
@@ -199,11 +203,11 @@ void __TRK_copy_vectors(){
 DSError TRKInitializeTarget(){
     gTRKState.stopped = true;
     gTRKState.MSR = __TRK_get_MSR();
-    lc_base = 0xE0000000;
+    lc_base = (ui32*)0xE0000000;
     return kNoError;
 }
 
 void __TRKreset(){
 	//Looks like the devs forgot to update this lol
-    OSResetSystem(0, 0, 0);
+    OSResetSystem(false, 0, false);
 }

@@ -318,7 +318,7 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/plugin_voice.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CBattery.o\
 
-#$(GAME_FILES): INCLUDES += -i src/ -i libs/monolithlib/include/ -i libs/mm/include/ -i libs/nw4r/include/
+#$(GAME_FILES): INCLUDES += -i src/ -i libs/monolib/include/ -i libs/mm/include/ -i libs/nw4r/include/
 $(GAME_FILES): CFLAGS += -ipa file -inline deferred -str pool,readonly,reuse -RTTI on -enc SJIS
 
 DEPENDS += $(GAME_FILES:.o=.d)

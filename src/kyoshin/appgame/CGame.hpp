@@ -1,7 +1,7 @@
 #pragma once
 
-#include "monolithlib/CProc.hpp"
-#include "monolithlib/CView.hpp"
+#include "monolib/CProc.hpp"
+#include "monolib/CView.hpp"
 
 namespace cf{
 

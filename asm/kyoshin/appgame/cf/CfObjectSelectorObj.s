@@ -50,9 +50,9 @@
 /* 800FD820 000C6DE0  80 1C 30 4C */	lwz r0, 0x304c(r28)
 /* 800FD824 000C6DE4  54 00 04 63 */	rlwinm. r0, r0, 0, 0x11, 0x11
 /* 800FD828 000C6DE8  41 82 01 B4 */	beq .L_800FD9DC
-/* 800FD82C 000C6DEC  C3 A2 C6 7C */	lfs f29, tau__2mm@sda21(r2)
+/* 800FD82C 000C6DEC  C3 A2 C6 7C */	lfs f29, tau__2ml@sda21(r2)
 /* 800FD830 000C6DF0  3B C1 00 08 */	addi r30, r1, 8
-/* 800FD834 000C6DF4  C3 C2 C6 78 */	lfs f30, pi__2mm@sda21(r2)
+/* 800FD834 000C6DF4  C3 C2 C6 78 */	lfs f30, pi__2ml@sda21(r2)
 /* 800FD838 000C6DF8  3B E1 00 14 */	addi r31, r1, 0x14
 /* 800FD83C 000C6DFC  C3 82 94 44 */	lfs f28, float_806697C4@sda21(r2)
 /* 800FD840 000C6E00  3B A0 00 00 */	li r29, 0
@@ -1334,7 +1334,7 @@
 .endfn func_800FE96C
 
 .fn sinit_800FEA14, local
-/* 800FEA14 000C7FD4  C0 42 C6 78 */	lfs f2, pi__2mm@sda21(r2)
+/* 800FEA14 000C7FD4  C0 42 C6 78 */	lfs f2, pi__2ml@sda21(r2)
 /* 800FEA18 000C7FD8  C0 22 94 54 */	lfs f1, float_806697D4@sda21(r2)
 /* 800FEA1C 000C7FDC  C0 02 94 50 */	lfs f0, float_806697D0@sda21(r2)
 /* 800FEA20 000C7FE0  EC 22 08 24 */	fdivs f1, f2, f1

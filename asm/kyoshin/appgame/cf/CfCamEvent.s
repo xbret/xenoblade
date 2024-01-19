@@ -427,11 +427,11 @@
 /* 8006ADE8 000343A8  90 BE 01 8C */	stw r5, 0x18c(r30)
 /* 8006ADEC 000343AC  90 9E 01 90 */	stw r4, 0x190(r30)
 /* 8006ADF0 000343B0  90 1E 01 94 */	stw r0, 0x194(r30)
-/* 8006ADF4 000343B4  48 3C AF 35 */	bl isInvalid__Q22mm4Vec3CFv
+/* 8006ADF4 000343B4  48 3C AF 35 */	bl isErr__Q22ml5CVec3CFv
 /* 8006ADF8 000343B8  2C 03 00 00 */	cmpwi r3, 0
 /* 8006ADFC 000343BC  41 82 00 20 */	beq .L_8006AE1C
-/* 8006AE00 000343C0  3C 80 80 66 */	lis r4, zero__Q22mm4Vec3@ha
-/* 8006AE04 000343C4  84 64 9D B0 */	lwzu r3, zero__Q22mm4Vec3@l(r4)
+/* 8006AE00 000343C0  3C 80 80 66 */	lis r4, zero__Q22ml5CVec3@ha
+/* 8006AE04 000343C4  84 64 9D B0 */	lwzu r3, zero__Q22ml5CVec3@l(r4)
 /* 8006AE08 000343C8  80 04 00 04 */	lwz r0, 4(r4)
 /* 8006AE0C 000343CC  90 1E 01 90 */	stw r0, 0x190(r30)
 /* 8006AE10 000343D0  90 7E 01 8C */	stw r3, 0x18c(r30)
@@ -726,7 +726,7 @@
 /* 8006B254 00034814  FC 20 F8 90 */	fmr f1, f31
 /* 8006B258 00034818  48 25 FF A9 */	bl acos
 /* 8006B25C 0003481C  FC 40 08 18 */	frsp f2, f1
-/* 8006B260 00034820  C0 22 C6 8C */	lfs f1, rad2deg__2mm@sda21(r2)
+/* 8006B260 00034820  C0 22 C6 8C */	lfs f1, rad2deg__2ml@sda21(r2)
 /* 8006B264 00034824  C0 02 87 8C */	lfs f0, float_80668B0C@sda21(r2)
 /* 8006B268 00034828  EC 22 00 72 */	fmuls f1, f2, f1
 /* 8006B26C 0003482C  FC 01 00 40 */	fcmpo cr0, f1, f0
@@ -798,13 +798,13 @@
 /* 8006B350 00034910  7F C5 F3 78 */	mr r5, r30
 /* 8006B354 00034914  48 00 08 D9 */	bl __ct__cf_CfCamFollow
 /* 8006B358 00034918  3C 60 80 53 */	lis r3, __vt__cf_CfCamEvent@ha
-/* 8006B35C 0003491C  3C 80 80 66 */	lis r4, zero__Q22mm4Vec3@ha
+/* 8006B35C 0003491C  3C 80 80 66 */	lis r4, zero__Q22ml5CVec3@ha
 /* 8006B360 00034920  38 63 A8 18 */	addi r3, r3, __vt__cf_CfCamEvent@l
 /* 8006B364 00034924  90 7F 00 00 */	stw r3, 0(r31)
 /* 8006B368 00034928  38 60 00 00 */	li r3, 0
 /* 8006B36C 0003492C  38 00 00 08 */	li r0, 8
 /* 8006B370 00034930  90 7F 02 90 */	stw r3, 0x290(r31)
-/* 8006B374 00034934  38 84 9D B0 */	addi r4, r4, zero__Q22mm4Vec3@l
+/* 8006B374 00034934  38 84 9D B0 */	addi r4, r4, zero__Q22ml5CVec3@l
 /* 8006B378 00034938  98 7F 02 94 */	stb r3, 0x294(r31)
 /* 8006B37C 0003493C  90 1F 00 08 */	stw r0, 8(r31)
 /* 8006B380 00034940  80 04 00 04 */	lwz r0, 4(r4)

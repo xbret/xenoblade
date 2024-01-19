@@ -1,45 +1,50 @@
 #ifndef METROTRK_PPC_EXCEPT
 #define METROTRK_PPC_EXCEPT
 
-#ifdef __cplusplus
-extern "C"{
-#endif
+#define PPC_SYSTEMRESET              0x0100
+#define PPC_MACHINECHECK             0x0200
+#define PPC_DATAACCESSERROR          0x0300
+#define PPC_INSTACCESSERROR          0x0400
+#define PPC_EXTERNALINTERRUPT        0x0500
+#define PPC_ALIGNMENTERROR           0x0600
+#define PPC_PROGRAMERROR             0x0700
+#define PPC_FPUNAVAILABLE            0x0800
+#define PPC_DECREMENTERINTERRUPT     0x0900
+#define PPC_RESERVED_0A00            0x0A00
+#define PPC_RESERVED_0B00            0x0B00
+#define PPC_SYSTEMCALL               0x0C00
+#define PPC_TRACE                    0x0D00
+#define PPC_FPASSIST                 0x0E00
 
-//PPC exceptions
-//0x000 is reserved
-#define PPC_SystemReset 0x100
-#define PPC_MachineCheck 0x200
-#define PPC_DataStorage 0x300
-#define PPC_InstructionStorage 0x400
-#define PPC_ExternalInterrupt 0x500
-#define PPC_Alignment 0x600
-#define PPC_Program 0x700
-#define PPC_FloatingPointUnavaiable 0x800
-#define PPC_Decrementer 0x900
-//0xA00-0xB00 are reserved
-#define PPC_SystemCall 0xC00
-#define PPC_Trace 0xD00
-#define PPC_FloatingPointAssist 0xE00 //unimplemented in 750CL
-#define PPC_PerformanceMonitor 0xF00 //Dolphin/Broadway specific
-//0x1000-0x1200 are unimplemented in 750CL
-#define PPC_InstructionAddressBreakpoint 0x1300 //Dolphin/Broadway specific
-//0x1400-0x2F00 are reserved, but TRK uses some
-#define PPC_SystemManagementInterrupt 0x1400
-//0x1500-0x1600 are unimplemented in 750CL
-#define PPC_ThermalManagementInterrupt 0x1700
-#define PPC_1800Exception 0x1800
-#define PPC_1900Exception 0x1900
-#define PPC_1A00Exception 0x1A00
-#define PPC_1B00Exception 0x1B00
-#define PPC_1C00Exception 0x1C00 //Data breakpoint?
-#define PPC_1D00Exception 0x1D00 //Instruction breakpoint?
-#define PPC_1E00Exception 0x1E00 //Peripheral breakpoint?
-#define PPC_1F00Exception 0x1F00 //Non maskable development port?
-#define PPC_2000Exception 0x2000
+#define PPC_PERFORMANCE_MONITOR      0x0F00    /* PPC 740 and 750 */
+#define PPC_ALTIVEC_UNAVAILABLE      0x0F20    /* PPC 7400 (Max processor) */
 
+#define PPC5xx_8xx_SOFTWAREEMULATION 0x1000    /* PPC 505, 821, and 860 */
 
-#ifdef __cplusplus
-}
-#endif
+#define PPC8xx_INSTTLBMISS           0x1100    /* PPC 821 and 860 */
+#define PPC8xx_DATATLBMISS           0x1200    /* PPC 821 and 860 */
+#define PPC8xx_INSTTLBERROR          0x1300    /* PPC 821, 860, and 555 */
+#define PPC8xx_DATATLBERROR          0x1400    /* PPC 821, 860, and 555 */
+#define PPC_DENORM_DETECT_JAVA_MODE  0x1600    /* PPC 7400 (Max processor) */
+
+#define PPC603E_INSTR_TLB_MISS       0x1000    /* PPC 603e */
+#define PPC603E_DATA_LOAD_TLB_MISS   0x1100    /* PPC 603e */
+#define PPC603E_DATA_STORE_TLB_MISS  0x1200    /* PPC 603e */
+
+#define PPC7xx_603E_INSTR_ADDR_BREAK 0x1300    /* PPC 603e, 740, 750 */
+
+#define PPC7xx_603E_SYS_MANAGE       0x1400    /* PPC 603e, 740, 750 */
+
+#define PPC_RESERVED_1500            0x1500
+#define PPC_RESERVED_1600            0x1600
+#define PPC_THERMAL_MANAGE           0x1700    /* PPC 740 and 750 */
+#define PPC_RESERVED_1800            0x1800
+#define PPC_RESERVED_1900            0x1900
+#define PPC_RESERVED_1A00            0x1A00
+#define PPC_RESERVED_1B00            0x1B00
+#define PPC_DATABREAKPOINT           0x1C00    /* PPC 821, 860, and 505 */
+#define PPC_INSTBREAKPOINT           0x1D00    /* PPC 821, 860, and 505 */
+#define PPC_PERIPHERALBREAKPOINT     0x1E00    /* PPC 821, 860, and 505 */
+#define PPC_NMDEVELOPMENTPORT        0x1F00    /* PPC 821, 860, and 505 */
 
 #endif

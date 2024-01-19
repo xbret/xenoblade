@@ -7335,7 +7335,7 @@
 /* 8024B1A8 00214768  C0 22 AC CC */	lfs f1, float_8066B04C@sda21(r2)
 /* 8024B1AC 0021476C  C0 02 AC 9C */	lfs f0, float_8066B01C@sda21(r2)
 /* 8024B1B0 00214770  EC 41 00 B2 */	fmuls f2, f1, f2
-/* 8024B1B4 00214774  C0 22 C6 78 */	lfs f1, pi__2mm@sda21(r2)
+/* 8024B1B4 00214774  C0 22 C6 78 */	lfs f1, pi__2ml@sda21(r2)
 /* 8024B1B8 00214778  D0 1C 00 38 */	stfs f0, 0x38(r28)
 /* 8024B1BC 0021477C  EC 22 08 24 */	fdivs f1, f2, f1
 /* 8024B1C0 00214780  D0 1C 00 3C */	stfs f0, 0x3c(r28)
@@ -7523,7 +7523,7 @@
 /* 8024B474 00214A34  C0 62 AC CC */	lfs f3, float_8066B04C@sda21(r2)
 /* 8024B478 00214A38  C0 02 AC 9C */	lfs f0, float_8066B01C@sda21(r2)
 /* 8024B47C 00214A3C  EC 43 00 72 */	fmuls f2, f3, f1
-/* 8024B480 00214A40  C0 22 C6 78 */	lfs f1, pi__2mm@sda21(r2)
+/* 8024B480 00214A40  C0 22 C6 78 */	lfs f1, pi__2ml@sda21(r2)
 /* 8024B484 00214A44  D0 1A 00 38 */	stfs f0, 0x38(r26)
 /* 8024B488 00214A48  EC 22 08 24 */	fdivs f1, f2, f1
 /* 8024B48C 00214A4C  D0 1A 00 3C */	stfs f0, 0x3c(r26)

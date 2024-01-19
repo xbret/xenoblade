@@ -644,7 +644,7 @@
 
 .fn func_800ACE60, global
 /* 800ACE60 00076420  81 83 00 00 */	lwz r12, 0(r3)
-/* 800ACE64 00076424  C0 02 C6 90 */	lfs f0, deg2rad__2mm@sda21(r2)
+/* 800ACE64 00076424  C0 02 C6 90 */	lfs f0, deg2rad__2ml@sda21(r2)
 /* 800ACE68 00076428  81 8C 00 C4 */	lwz r12, 0xc4(r12)
 /* 800ACE6C 0007642C  EC 21 00 32 */	fmuls f1, f1, f0
 /* 800ACE70 00076430  7D 89 03 A6 */	mtctr r12
@@ -659,7 +659,7 @@
 /* 800ACE88 00076448  81 8C 00 CC */	lwz r12, 0xcc(r12)
 /* 800ACE8C 0007644C  7D 89 03 A6 */	mtctr r12
 /* 800ACE90 00076450  4E 80 04 21 */	bctrl 
-/* 800ACE94 00076454  C0 02 C6 8C */	lfs f0, rad2deg__2mm@sda21(r2)
+/* 800ACE94 00076454  C0 02 C6 8C */	lfs f0, rad2deg__2ml@sda21(r2)
 /* 800ACE98 00076458  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 800ACE9C 0007645C  EC 21 00 32 */	fmuls f1, f1, f0
 /* 800ACEA0 00076460  7C 08 03 A6 */	mtlr r0

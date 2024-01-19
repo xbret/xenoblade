@@ -7529,14 +7529,14 @@
 /* 800FB31C 000C48DC  80 C3 06 20 */	lwz r6, 0x620(r3)
 /* 800FB320 000C48E0  3C 80 80 53 */	lis r4, __vt__cf_CfObjEnumList_OBJ_LIST@ha
 /* 800FB324 000C48E4  38 84 F5 70 */	addi r4, r4, __vt__cf_CfObjEnumList_OBJ_LIST@l
-/* 800FB328 000C48E8  C3 42 C6 78 */	lfs f26, pi__2mm@sda21(r2)
+/* 800FB328 000C48E8  C3 42 C6 78 */	lfs f26, pi__2ml@sda21(r2)
 /* 800FB32C 000C48EC  38 04 00 08 */	addi r0, r4, 8
 /* 800FB330 000C48F0  90 C1 06 20 */	stw r6, 0x620(r1)
 /* 800FB334 000C48F4  FF 60 D0 50 */	fneg f27, f26
 /* 800FB338 000C48F8  3B A0 00 00 */	li r29, 0
 /* 800FB33C 000C48FC  90 81 06 28 */	stw r4, 0x628(r1)
 /* 800FB340 000C4900  3B C1 00 20 */	addi r30, r1, 0x20
-/* 800FB344 000C4904  C3 22 C6 7C */	lfs f25, tau__2mm@sda21(r2)
+/* 800FB344 000C4904  C3 22 C6 7C */	lfs f25, tau__2ml@sda21(r2)
 /* 800FB348 000C4908  3B 61 00 08 */	addi r27, r1, 8
 /* 800FB34C 000C490C  90 01 06 24 */	stw r0, 0x624(r1)
 /* 800FB350 000C4910  3B 81 00 14 */	addi r28, r1, 0x14
@@ -7761,14 +7761,14 @@
 /* 800FB670 000C4C30  80 C3 06 20 */	lwz r6, 0x620(r3)
 /* 800FB674 000C4C34  3C 80 80 53 */	lis r4, __vt__cf_CfObjEnumList_OBJ_LIST@ha
 /* 800FB678 000C4C38  38 84 F5 70 */	addi r4, r4, __vt__cf_CfObjEnumList_OBJ_LIST@l
-/* 800FB67C 000C4C3C  C2 C2 C6 78 */	lfs f22, pi__2mm@sda21(r2)
+/* 800FB67C 000C4C3C  C2 C2 C6 78 */	lfs f22, pi__2ml@sda21(r2)
 /* 800FB680 000C4C40  38 04 00 08 */	addi r0, r4, 8
 /* 800FB684 000C4C44  90 C1 06 38 */	stw r6, 0x638(r1)
 /* 800FB688 000C4C48  FF C0 B0 50 */	fneg f30, f22
 /* 800FB68C 000C4C4C  3B A0 00 00 */	li r29, 0
 /* 800FB690 000C4C50  90 81 06 40 */	stw r4, 0x640(r1)
 /* 800FB694 000C4C54  3B C1 00 38 */	addi r30, r1, 0x38
-/* 800FB698 000C4C58  C2 A2 C6 7C */	lfs f21, tau__2mm@sda21(r2)
+/* 800FB698 000C4C58  C2 A2 C6 7C */	lfs f21, tau__2ml@sda21(r2)
 /* 800FB69C 000C4C5C  3B 61 00 20 */	addi r27, r1, 0x20
 /* 800FB6A0 000C4C60  90 01 06 3C */	stw r0, 0x63c(r1)
 /* 800FB6A4 000C4C64  3B 81 00 2C */	addi r28, r1, 0x2c

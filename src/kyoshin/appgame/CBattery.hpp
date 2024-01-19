@@ -1,7 +1,7 @@
 #pragma once
 
 #include "types.h"
-#include "monolithlib/IWorkEvent.hpp"
+#include "monolib/IWorkEvent.hpp"
 
 class Class_8045F564{
 public:

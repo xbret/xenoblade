@@ -218,9 +218,9 @@
 /* 801A95AC 00172B6C  D0 41 00 7C */	stfs f2, 0x7c(r1)
 /* 801A95B0 00172B70  48 26 18 A9 */	bl Atan2FIdx__Q24nw4r4mathFff
 /* 801A95B4 00172B74  C0 02 A2 AC */	lfs f0, float_8066A62C@sda21(r2)
-/* 801A95B8 00172B78  C0 42 C6 7C */	lfs f2, tau__2mm@sda21(r2)
+/* 801A95B8 00172B78  C0 42 C6 7C */	lfs f2, tau__2ml@sda21(r2)
 /* 801A95BC 00172B7C  EC 20 00 72 */	fmuls f1, f0, f1
-/* 801A95C0 00172B80  C0 02 C6 78 */	lfs f0, pi__2mm@sda21(r2)
+/* 801A95C0 00172B80  C0 02 C6 78 */	lfs f0, pi__2ml@sda21(r2)
 /* 801A95C4 00172B84  EC 61 F0 28 */	fsubs f3, f1, f30
 /* 801A95C8 00172B88  48 00 00 08 */	b .L_801A95D0
 .L_801A95CC:
@@ -229,8 +229,8 @@
 /* 801A95D0 00172B90  FC 00 18 40 */	fcmpo cr0, f0, f3
 /* 801A95D4 00172B94  4C 40 13 82 */	cror 2, 0, 2
 /* 801A95D8 00172B98  41 82 FF F4 */	beq .L_801A95CC
-/* 801A95DC 00172B9C  C0 02 C6 78 */	lfs f0, pi__2mm@sda21(r2)
-/* 801A95E0 00172BA0  C0 22 C6 7C */	lfs f1, tau__2mm@sda21(r2)
+/* 801A95DC 00172B9C  C0 02 C6 78 */	lfs f0, pi__2ml@sda21(r2)
+/* 801A95E0 00172BA0  C0 22 C6 7C */	lfs f1, tau__2ml@sda21(r2)
 /* 801A95E4 00172BA4  FC 00 00 50 */	fneg f0, f0
 /* 801A95E8 00172BA8  48 00 00 08 */	b .L_801A95F0
 .L_801A95EC:
@@ -258,8 +258,8 @@
 /* 801A9638 00172BF8  EC 00 08 3A */	fmadds f0, f0, f0, f1
 /* 801A963C 00172BFC  FC 03 00 00 */	fcmpu cr0, f3, f0
 /* 801A9640 00172C00  40 82 00 24 */	bne .L_801A9664
-/* 801A9644 00172C04  3C A0 80 66 */	lis r5, zero__Q22mm4Vec3@ha
-/* 801A9648 00172C08  84 85 9D B0 */	lwzu r4, zero__Q22mm4Vec3@l(r5)
+/* 801A9644 00172C04  3C A0 80 66 */	lis r5, zero__Q22ml5CVec3@ha
+/* 801A9648 00172C08  84 85 9D B0 */	lwzu r4, zero__Q22ml5CVec3@l(r5)
 /* 801A964C 00172C0C  90 81 00 68 */	stw r4, 0x68(r1)
 /* 801A9650 00172C10  80 65 00 04 */	lwz r3, 4(r5)
 /* 801A9654 00172C14  80 05 00 08 */	lwz r0, 8(r5)
@@ -378,7 +378,7 @@
 /* 801A97F4 00172DB4  98 01 00 54 */	stb r0, 0x54(r1)
 /* 801A97F8 00172DB8  C3 A2 A2 B8 */	lfs f29, float_8066A638@sda21(r2)
 /* 801A97FC 00172DBC  90 01 00 74 */	stw r0, 0x74(r1)
-/* 801A9800 00172DC0  C3 C2 C6 88 */	lfs f30, epsilon__2mm@sda21(r2)
+/* 801A9800 00172DC0  C3 C2 C6 88 */	lfs f30, epsilon__2ml@sda21(r2)
 .L_801A9804:
 /* 801A9804 00172DC4  7F C5 F3 78 */	mr r5, r30
 /* 801A9808 00172DC8  38 61 00 54 */	addi r3, r1, 0x54

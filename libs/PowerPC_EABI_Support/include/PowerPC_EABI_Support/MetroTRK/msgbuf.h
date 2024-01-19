@@ -7,6 +7,11 @@
 
 typedef int MessageBufferID;
 
+enum
+{
+    kInvalidMessageBufferId = -1
+};
+
 #define kMessageBufferSize 0x800 + 0x80
 #define NUM_BUFFERS 3
 

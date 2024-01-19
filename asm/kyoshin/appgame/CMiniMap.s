@@ -5707,7 +5707,7 @@
 /* 8011B218 000E47D8  7D 89 03 A6 */	mtctr r12
 /* 8011B21C 000E47DC  4E 80 04 21 */	bctrl 
 /* 8011B220 000E47E0  C0 42 96 04 */	lfs f2, float_80669984@sda21(r2)
-/* 8011B224 000E47E4  C0 02 C6 78 */	lfs f0, pi__2mm@sda21(r2)
+/* 8011B224 000E47E4  C0 02 C6 78 */	lfs f0, pi__2ml@sda21(r2)
 /* 8011B228 000E47E8  EC 22 00 72 */	fmuls f1, f2, f1
 /* 8011B22C 000E47EC  EF E1 00 24 */	fdivs f31, f1, f0
 /* 8011B230 000E47F0  48 00 00 14 */	b .L_8011B244
@@ -5906,7 +5906,7 @@
 /* 8011B50C 000E4ACC  C0 22 95 D8 */	lfs f1, float_80669958@sda21(r2)
 /* 8011B510 000E4AD0  3B 7B FF 58 */	addi r27, r27, lbl_8052FF58@l
 /* 8011B514 000E4AD4  EC 45 00 32 */	fmuls f2, f5, f0
-/* 8011B518 000E4AD8  C0 02 C6 78 */	lfs f0, pi__2mm@sda21(r2)
+/* 8011B518 000E4AD8  C0 02 C6 78 */	lfs f0, pi__2ml@sda21(r2)
 /* 8011B51C 000E4ADC  D0 3C 00 38 */	stfs f1, 0x38(r28)
 /* 8011B520 000E4AE0  C0 61 00 40 */	lfs f3, 0x40(r1)
 /* 8011B524 000E4AE4  3B 00 00 00 */	li r24, 0
@@ -5996,7 +5996,7 @@
 /* 8011B658 000E4C18  C0 22 96 04 */	lfs f1, float_80669984@sda21(r2)
 /* 8011B65C 000E4C1C  C0 02 95 D8 */	lfs f0, float_80669958@sda21(r2)
 /* 8011B660 000E4C20  EC 41 00 B2 */	fmuls f2, f1, f2
-/* 8011B664 000E4C24  C0 22 C6 78 */	lfs f1, pi__2mm@sda21(r2)
+/* 8011B664 000E4C24  C0 22 C6 78 */	lfs f1, pi__2ml@sda21(r2)
 /* 8011B668 000E4C28  D0 1C 00 38 */	stfs f0, 0x38(r28)
 /* 8011B66C 000E4C2C  EC 22 08 24 */	fdivs f1, f2, f1
 /* 8011B670 000E4C30  D0 1C 00 3C */	stfs f0, 0x3c(r28)

@@ -744,7 +744,7 @@
 /* 80164B2C 0012E0EC  80 04 00 6C */	lwz r0, 0x6c(r4)
 /* 80164B30 0012E0F0  60 00 00 01 */	ori r0, r0, 1
 /* 80164B34 0012E0F4  90 04 00 6C */	stw r0, 0x6c(r4)
-/* 80164B38 0012E0F8  48 2D 04 5D */	bl getFilenameFromPath__2mmFPCc
+/* 80164B38 0012E0F8  48 2D 04 5D */	bl getFilenameFromPath__2mlFPCc
 /* 80164B3C 0012E0FC  7C 7D 1B 78 */	mr r29, r3
 /* 80164B40 0012E100  48 15 4A 79 */	bl strlen
 /* 80164B44 0012E104  90 61 00 28 */	stw r3, 0x28(r1)

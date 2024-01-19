@@ -11,9 +11,9 @@ typedef struct memRange{
 } memRange;
 
 
-const memRange gTRKMemMap[1] = {{
-	(ui8*)0,
-	(ui8*)-1,
+const memRange gTRKMemMap[] = {{
+	(ui8*)0x00000000,
+	(ui8*)0xFFFFFFFF,
 	true,
 	true
 }};

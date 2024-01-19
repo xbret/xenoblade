@@ -3,9 +3,9 @@
 #include "types.h"
 #include "kyoshin/appgame/code_802AEB74.hpp"
 #include "kyoshin/appgame/plugin/plugin_main.hpp"
-#include "monolithlib/code_80450B14.hpp"
-#include "monolithlib/Unknown1.hpp"
-#include "monolithlib/vm/yvm.h"
+#include "monolib/code_80450B14.hpp"
+#include "monolib/Unknown1.hpp"
+#include "monolib/vm/yvm.h"
 
 struct FunctionStruct{
     const char* name;

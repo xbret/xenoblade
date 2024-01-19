@@ -46,7 +46,7 @@ endif
 
 include obj_files.mk
 
-O_FILES := $(GAME) $(MW) $(NDEV) $(RVL_SDK) $(CRIWARE) $(NW4R) $(MONOLITHLIB)
+O_FILES := $(GAME) $(MW) $(NDEV) $(RVL_SDK) $(CRIWARE) $(NW4R) $(MONOLIB)
 
 DEPENDS := $($(filter *.o,O_FILES):.o=.d)
 # If a specific .o file is passed as a target, also process its deps
@@ -96,7 +96,7 @@ INCLUDES := -I- -i include/ -i libs/RVL_SDK/include/ -i libs/PowerPC_EABI_Suppor
 ASM_INCLUDES := -I include/
 
 # TODO: fix the makefile to make objdiff work without this
-INCLUDES += -i libs/nw4r/include/ -i libs/monolithlib/include/ -i src/ -i libs/NdevExi2A/include/ -i libs/PowerPC_EABI_Support/include/
+INCLUDES += -i libs/nw4r/include/ -i libs/monolib/include/ -i src/ -i libs/NdevExi2A/include/ -i libs/PowerPC_EABI_Support/include/
 
 ASFLAGS := -mgekko $(ASM_INCLUDES)
 ifeq ($(VERBOSE),1)

@@ -769,7 +769,7 @@
 /* 800BC6C0 00085C80  41 82 00 74 */	beq .L_800BC734
 /* 800BC6C4 00085C84  C0 43 00 A8 */	lfs f2, 0xa8(r3)
 /* 800BC6C8 00085C88  C0 22 8F F0 */	lfs f1, float_80669370@sda21(r2)
-/* 800BC6CC 00085C8C  C0 02 C6 88 */	lfs f0, epsilon__2mm@sda21(r2)
+/* 800BC6CC 00085C8C  C0 02 C6 88 */	lfs f0, epsilon__2ml@sda21(r2)
 /* 800BC6D0 00085C90  EC 42 08 28 */	fsubs f2, f2, f1
 /* 800BC6D4 00085C94  FC 40 12 10 */	fabs f2, f2
 /* 800BC6D8 00085C98  FC 40 10 18 */	frsp f2, f2
@@ -1066,7 +1066,7 @@
 /* 800BCAFC 000860BC  3B C0 00 01 */	li r30, 1
 .L_800BCB00:
 /* 800BCB00 000860C0  FC 20 F2 10 */	fabs f1, f30
-/* 800BCB04 000860C4  C0 02 C6 88 */	lfs f0, epsilon__2mm@sda21(r2)
+/* 800BCB04 000860C4  C0 02 C6 88 */	lfs f0, epsilon__2ml@sda21(r2)
 /* 800BCB08 000860C8  FC 20 08 18 */	frsp f1, f1
 /* 800BCB0C 000860CC  FC 01 00 40 */	fcmpo cr0, f1, f0
 /* 800BCB10 000860D0  41 81 00 0C */	bgt .L_800BCB1C
@@ -1364,8 +1364,8 @@
 /* 800BCF5C 0008651C  D0 1F 00 4C */	stfs f0, 0x4c(r31)
 /* 800BCF60 00086520  48 00 00 2C */	b .L_800BCF8C
 .L_800BCF64:
-/* 800BCF64 00086524  3C C0 80 66 */	lis r6, zero__Q22mm4Vec3@ha
-/* 800BCF68 00086528  84 A6 9D B0 */	lwzu r5, zero__Q22mm4Vec3@l(r6)
+/* 800BCF64 00086524  3C C0 80 66 */	lis r6, zero__Q22ml5CVec3@ha
+/* 800BCF68 00086528  84 A6 9D B0 */	lwzu r5, zero__Q22ml5CVec3@l(r6)
 /* 800BCF6C 0008652C  38 9F 00 3C */	addi r4, r31, 0x3c
 /* 800BCF70 00086530  80 06 00 04 */	lwz r0, 4(r6)
 /* 800BCF74 00086534  90 03 00 58 */	stw r0, 0x58(r3)
@@ -2481,7 +2481,7 @@
 /* 800BDEE4 000874A4  54 00 06 31 */	rlwinm. r0, r0, 0, 0x18, 0x18
 /* 800BDEE8 000874A8  41 82 00 48 */	beq .L_800BDF30
 /* 800BDEEC 000874AC  C0 24 00 00 */	lfs f1, 0(r4)
-/* 800BDEF0 000874B0  C0 02 C6 88 */	lfs f0, epsilon__2mm@sda21(r2)
+/* 800BDEF0 000874B0  C0 02 C6 88 */	lfs f0, epsilon__2ml@sda21(r2)
 /* 800BDEF4 000874B4  FC 20 0A 10 */	fabs f1, f1
 /* 800BDEF8 000874B8  FC 20 08 18 */	frsp f1, f1
 /* 800BDEFC 000874BC  FC 01 00 40 */	fcmpo cr0, f1, f0
@@ -2588,7 +2588,7 @@
 
 .fn func_800BE058, global
 /* 800BE058 00087618  81 83 00 00 */	lwz r12, 0(r3)
-/* 800BE05C 0008761C  C0 02 C6 90 */	lfs f0, deg2rad__2mm@sda21(r2)
+/* 800BE05C 0008761C  C0 02 C6 90 */	lfs f0, deg2rad__2ml@sda21(r2)
 /* 800BE060 00087620  81 8C 00 C4 */	lwz r12, 0xc4(r12)
 /* 800BE064 00087624  EC 21 00 32 */	fmuls f1, f1, f0
 /* 800BE068 00087628  7D 89 03 A6 */	mtctr r12
@@ -2597,7 +2597,7 @@
 
 .fn func_800BE070, global
 /* 800BE070 00087630  81 83 00 00 */	lwz r12, 0(r3)
-/* 800BE074 00087634  C0 02 C6 90 */	lfs f0, deg2rad__2mm@sda21(r2)
+/* 800BE074 00087634  C0 02 C6 90 */	lfs f0, deg2rad__2ml@sda21(r2)
 /* 800BE078 00087638  81 8C 00 C8 */	lwz r12, 0xc8(r12)
 /* 800BE07C 0008763C  EC 21 00 32 */	fmuls f1, f1, f0
 /* 800BE080 00087640  7D 89 03 A6 */	mtctr r12

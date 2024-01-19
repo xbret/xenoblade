@@ -5208,10 +5208,10 @@
 /* 800CF420 000989E0  EF 61 00 B2 */	fmuls f27, f1, f2
 /* 800CF424 000989E4  EC 20 06 F2 */	fmuls f1, f0, f27
 /* 800CF428 000989E8  48 33 B9 05 */	bl SinFIdx__Q24nw4r4mathFf
-/* 800CF42C 000989EC  3C 60 80 66 */	lis r3, unitY__Q22mm4Vec3@ha
+/* 800CF42C 000989EC  3C 60 80 66 */	lis r3, unitY__Q22ml5CVec3@ha
 /* 800CF430 000989F0  C0 02 92 08 */	lfs f0, float_80669588@sda21(r2)
-/* 800CF434 000989F4  3B A3 9D C8 */	addi r29, r3, unitY__Q22mm4Vec3@l
-/* 800CF438 000989F8  C0 83 9D C8 */	lfs f4, unitY__Q22mm4Vec3@l(r3)
+/* 800CF434 000989F4  3B A3 9D C8 */	addi r29, r3, unitY__Q22ml5CVec3@l
+/* 800CF438 000989F8  C0 83 9D C8 */	lfs f4, unitY__Q22ml5CVec3@l(r3)
 /* 800CF43C 000989FC  C0 7D 00 04 */	lfs f3, 4(r29)
 /* 800CF440 00098A00  C0 5D 00 08 */	lfs f2, 8(r29)
 /* 800CF444 00098A04  EC 84 00 72 */	fmuls f4, f4, f1
@@ -5360,7 +5360,7 @@
 /* 800CF654 00098C14  C0 21 00 60 */	lfs f1, 0x60(r1)
 /* 800CF658 00098C18  C0 41 00 64 */	lfs f2, 0x64(r1)
 /* 800CF65C 00098C1C  EC 83 06 F2 */	fmuls f4, f3, f27
-/* 800CF660 00098C20  C0 02 C6 80 */	lfs f0, halfpi__2mm@sda21(r2)
+/* 800CF660 00098C20  C0 02 C6 80 */	lfs f0, halfpi__2ml@sda21(r2)
 /* 800CF664 00098C24  EF C3 07 32 */	fmuls f30, f3, f28
 /* 800CF668 00098C28  D0 A1 00 4C */	stfs f5, 0x4c(r1)
 /* 800CF66C 00098C2C  FC 05 00 40 */	fcmpo cr0, f5, f0
@@ -5696,10 +5696,10 @@
 /* 800CFB48 00099108  EF 61 00 B2 */	fmuls f27, f1, f2
 /* 800CFB4C 0009910C  EC 20 06 F2 */	fmuls f1, f0, f27
 /* 800CFB50 00099110  48 33 B1 DD */	bl SinFIdx__Q24nw4r4mathFf
-/* 800CFB54 00099114  3C 60 80 66 */	lis r3, unitY__Q22mm4Vec3@ha
+/* 800CFB54 00099114  3C 60 80 66 */	lis r3, unitY__Q22ml5CVec3@ha
 /* 800CFB58 00099118  C0 02 92 08 */	lfs f0, float_80669588@sda21(r2)
-/* 800CFB5C 0009911C  3B C3 9D C8 */	addi r30, r3, unitY__Q22mm4Vec3@l
-/* 800CFB60 00099120  C0 83 9D C8 */	lfs f4, unitY__Q22mm4Vec3@l(r3)
+/* 800CFB5C 0009911C  3B C3 9D C8 */	addi r30, r3, unitY__Q22ml5CVec3@l
+/* 800CFB60 00099120  C0 83 9D C8 */	lfs f4, unitY__Q22ml5CVec3@l(r3)
 /* 800CFB64 00099124  C0 7E 00 04 */	lfs f3, 4(r30)
 /* 800CFB68 00099128  C0 5E 00 08 */	lfs f2, 8(r30)
 /* 800CFB6C 0009912C  EC 84 00 72 */	fmuls f4, f4, f1
@@ -5848,7 +5848,7 @@
 /* 800CFD7C 0009933C  C0 21 00 78 */	lfs f1, 0x78(r1)
 /* 800CFD80 00099340  C0 41 00 7C */	lfs f2, 0x7c(r1)
 /* 800CFD84 00099344  EC 83 06 F2 */	fmuls f4, f3, f27
-/* 800CFD88 00099348  C0 02 C6 80 */	lfs f0, halfpi__2mm@sda21(r2)
+/* 800CFD88 00099348  C0 02 C6 80 */	lfs f0, halfpi__2ml@sda21(r2)
 /* 800CFD8C 0009934C  EF C3 07 32 */	fmuls f30, f3, f28
 /* 800CFD90 00099350  D0 A1 00 64 */	stfs f5, 0x64(r1)
 /* 800CFD94 00099354  FC 05 00 40 */	fcmpo cr0, f5, f0

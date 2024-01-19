@@ -35,7 +35,7 @@ void __OSGetDiscState(u8* out);
 void OSShutdownSystem(void);
 void OSReturnToMenu(void);
 u32 OSGetResetCode(void);
-void OSResetSystem(u32 arg0, u32 arg1, u32 arg2);
+void OSResetSystem(BOOL reset, u32 resetCode, BOOL forceMenu);
 
 #ifdef __cplusplus
 }

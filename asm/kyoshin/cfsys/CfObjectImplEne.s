@@ -948,7 +948,7 @@
 /* 800D0D6C 0009A32C  E0 66 00 00 */	psq_l f3, 0(r6), 0, qr0
 /* 800D0D70 0009A330  D0 01 00 58 */	stfs f0, 0x58(r1)
 /* 800D0D74 0009A334  10 64 18 28 */	ps_sub f3, f4, f3
-/* 800D0D78 0009A338  C0 02 C6 88 */	lfs f0, epsilon__2mm@sda21(r2)
+/* 800D0D78 0009A338  C0 02 C6 88 */	lfs f0, epsilon__2ml@sda21(r2)
 /* 800D0D7C 0009A33C  D0 41 00 4C */	stfs f2, 0x4c(r1)
 /* 800D0D80 0009A340  E0 85 80 08 */	psq_l f4, 8(r5), 1, qr0
 /* 800D0D84 0009A344  F0 64 00 00 */	psq_st f3, 0(r4), 0, qr0
@@ -975,7 +975,7 @@
 /* 800D0DD4 0009A394  2C 07 00 00 */	cmpwi r7, 0
 /* 800D0DD8 0009A398  41 82 00 24 */	beq .L_800D0DFC
 /* 800D0DDC 0009A39C  C0 21 00 40 */	lfs f1, 0x40(r1)
-/* 800D0DE0 0009A3A0  C0 02 C6 88 */	lfs f0, epsilon__2mm@sda21(r2)
+/* 800D0DE0 0009A3A0  C0 02 C6 88 */	lfs f0, epsilon__2ml@sda21(r2)
 /* 800D0DE4 0009A3A4  FC 20 0A 10 */	fabs f1, f1
 /* 800D0DE8 0009A3A8  FC 20 08 18 */	frsp f1, f1
 /* 800D0DEC 0009A3AC  FC 01 00 40 */	fcmpo cr0, f1, f0
@@ -1001,8 +1001,8 @@
 /* 800D0E34 0009A3F4  EC 00 08 3A */	fmadds f0, f0, f0, f1
 /* 800D0E38 0009A3F8  FC 03 00 00 */	fcmpu cr0, f3, f0
 /* 800D0E3C 0009A3FC  40 82 00 24 */	bne .L_800D0E60
-/* 800D0E40 0009A400  3C A0 80 66 */	lis r5, zero__Q22mm4Vec3@ha
-/* 800D0E44 0009A404  84 85 9D B0 */	lwzu r4, zero__Q22mm4Vec3@l(r5)
+/* 800D0E40 0009A400  3C A0 80 66 */	lis r5, zero__Q22ml5CVec3@ha
+/* 800D0E44 0009A404  84 85 9D B0 */	lwzu r4, zero__Q22ml5CVec3@l(r5)
 /* 800D0E48 0009A408  90 81 00 38 */	stw r4, 0x38(r1)
 /* 800D0E4C 0009A40C  80 65 00 04 */	lwz r3, 4(r5)
 /* 800D0E50 0009A410  80 05 00 08 */	lwz r0, 8(r5)

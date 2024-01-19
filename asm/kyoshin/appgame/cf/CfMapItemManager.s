@@ -263,7 +263,7 @@
 /* 80173568 0013CB28  41 82 02 14 */	beq .L_8017377C
 /* 8017356C 0013CB2C  C3 82 9C C8 */	lfs f28, float_8066A048@sda21(r2)
 /* 80173570 0013CB30  3B C1 00 3C */	addi r30, r1, 0x3c
-/* 80173574 0013CB34  C3 A2 C6 90 */	lfs f29, deg2rad__2mm@sda21(r2)
+/* 80173574 0013CB34  C3 A2 C6 90 */	lfs f29, deg2rad__2ml@sda21(r2)
 /* 80173578 0013CB38  3B E1 00 48 */	addi r31, r1, 0x48
 /* 8017357C 0013CB3C  C3 C2 9C CC */	lfs f30, float_8066A04C@sda21(r2)
 /* 80173580 0013CB40  3B A1 00 30 */	addi r29, r1, 0x30
@@ -538,11 +538,11 @@
 /* 8017393C 0013CEFC  EF C0 00 72 */	fmuls f30, f0, f1
 .L_80173940:
 /* 80173940 0013CF00  38 00 00 01 */	li r0, 1
-/* 80173944 0013CF04  3F C0 80 66 */	lis r30, zero__Q22mm4Vec3@ha
+/* 80173944 0013CF04  3F C0 80 66 */	lis r30, zero__Q22ml5CVec3@ha
 /* 80173948 0013CF08  3F A0 80 50 */	lis r29, CfMapItemManager_strpool@ha
 /* 8017394C 0013CF0C  B0 17 38 04 */	sth r0, 0x3804(r23)
 /* 80173950 0013CF10  C3 E2 9C C0 */	lfs f31, float_8066A040@sda21(r2)
-/* 80173954 0013CF14  3B DE 9D B0 */	addi r30, r30, zero__Q22mm4Vec3@l
+/* 80173954 0013CF14  3B DE 9D B0 */	addi r30, r30, zero__Q22ml5CVec3@l
 /* 80173958 0013CF18  3B BD EB F0 */	addi r29, r29, CfMapItemManager_strpool@l
 /* 8017395C 0013CF1C  3B E0 00 00 */	li r31, 0
 /* 80173960 0013CF20  48 00 01 5C */	b .L_80173ABC
