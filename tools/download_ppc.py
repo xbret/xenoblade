@@ -33,7 +33,7 @@ def main() -> None:
 
 	with tempfile.TemporaryDirectory() as tmp_dir:
 		tmp_zip = f"{tmp_dir}/powerpc.zip"
-		url = f"{REPO}/releases/tag/2.41-1/download/{system}-{arch}.zip"
+		url = f"{REPO}/releases/latest/download/{system}-{arch}.zip"
 
 		urllib.request.urlretrieve(url, tmp_zip)
 		with zipfile.ZipFile(tmp_zip) as zip_file:
