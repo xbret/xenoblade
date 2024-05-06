@@ -23,7 +23,7 @@ LIBS = [
 			["asm/kyoshin/appgame/plugin/plugin_ui", False],
 			["asm/kyoshin/appgame/plugin/plugin_eve", False],
 			["asm/kyoshin/appgame/plugin/plugin_cfs", False],
-			["asm/kyoshin/appgame/plugin/plugin_math", False],
+			["src/kyoshin/appgame/plugin/plugin_math", True],
 			["asm/kyoshin/action/CActParamAnim", False],
 			["asm/kyoshin/action/CActParamData", False],
 			["asm/kyoshin/appgame/cf/CMcaFile", False],

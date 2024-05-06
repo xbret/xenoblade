@@ -16,7 +16,7 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/plugin_ui.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/plugin_eve.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/plugin_cfs.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/plugin_math.o\
+	$(BUILD_DIR)/src/kyoshin/appgame/plugin/plugin_math.o\
 	$(BUILD_DIR)/asm/kyoshin/action/CActParamAnim.o\
 	$(BUILD_DIR)/asm/kyoshin/action/CActParamData.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CMcaFile.o\

@@ -1,5 +1,7 @@
 #pragma once
 
+#include "kyoshin/appgame/plugin/plugin_math.hpp"
+
 extern "C"{
 void pluginGameRegist();
 void pluginDebRegist();
@@ -10,7 +12,6 @@ void pluginUiRegist();
 void pluginEveRegist();
 void pluginCfsRegist();
 void pluginCamRegist();
-void pluginMathRegist();
 void pluginPadRegist();
 void pluginTimeRegist();
 void pluginSndRegist();

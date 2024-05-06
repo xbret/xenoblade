@@ -17,7 +17,19 @@ typedef struct SBOpcode{
 typedef struct VMMemory{
 } VMMemory;
 
-typedef struct ScriptFuncContext{
+typedef struct RetVal{
+    u8 type; //0x0
+    int val; //0x4
+} RetVal;
+
+enum SBTypes {
+    SBTYPE_0,
+    SBTYPE_1,
+    SBTYPE_2,
+    SBTYPE_3
+};
+
+typedef struct _sVMThread{
     int unk0;
     int unk4;
     int unk8;
@@ -28,24 +40,31 @@ typedef struct ScriptFuncContext{
     u8 unk40[0x10];
     BOOL waitMode; //0x50
     int wkIdx; //0x54
-} ScriptFuncContext;
+} _sVMThread;
+
+typedef int(*PluginFunc)(_sVMThread* pThread);
+
+typedef struct PluginFuncData{
+	const char* name;
+	PluginFunc func;
+} PluginFuncData;
 
 void vmInit();
 void vmLink();
-BOOL vmPluginRegist(UNKWORD);
-void* vmArgPtrGet(ScriptFuncContext*);
-BOOL vmArgBoolGet(ScriptFuncContext*);
-int vmArgIntGet(ScriptFuncContext*);
-void vmArgFixedGet(ScriptFuncContext*);
-char* vmArgStringGet(ScriptFuncContext*, UNKWORD);
-void* vmArgFunctionGet(ScriptFuncContext*, UNKWORD);
-void* vmArgArrayGet(ScriptFuncContext*, UNKWORD);
-void* vmArgOCGet(ScriptFuncContext*, UNKWORD);
-void vmRetValSet(ScriptFuncContext*, UNKWORD);
+BOOL vmPluginRegist(const char* name, PluginFuncData* plugin_funcs);
+int* vmArgPtrGet(_sVMThread*, int);
+BOOL vmArgBoolGet(_sVMThread*);
+int vmArgIntGet(int, int*); 
+void vmArgFixedGet(_sVMThread*);
+char* vmArgStringGet(_sVMThread*, UNKWORD);
+void* vmArgFunctionGet(_sVMThread*, UNKWORD);
+void* vmArgArrayGet(_sVMThread*, UNKWORD);
+void* vmArgOCGet(_sVMThread*, UNKWORD);
+void vmRetValSet(_sVMThread*, RetVal*);
 void vmWaitModeSet();
-int vmWkIdxGet(ScriptFuncContext*);
-void vmWkIdxSet(ScriptFuncContext*);
-int vmWkGet(ScriptFuncContext*);
+int vmWkIdxGet(_sVMThread*);
+void vmWkIdxSet(_sVMThread*);
+int vmWkGet(_sVMThread*);
 
 
 #ifdef __cplusplus
