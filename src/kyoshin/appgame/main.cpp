@@ -20,9 +20,7 @@ const char* const pkhFilenames[13] = {
 	"work.pkh"
 };
 
-const u32 padding = 0;
-
-StaticArcFile staticArcFiles[9] = {
+StaticArcFile staticArcFiles[10] = {
 	{"SHA","dvddata/etc/shadow.sha",1,nullptr,nullptr},
 	{"CAM","dvddata/etc/cam.chr",1,nullptr,nullptr},
 	{"EFF","dvddata/etc/eff.chr",1,nullptr,nullptr},

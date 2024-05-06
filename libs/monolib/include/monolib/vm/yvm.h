@@ -52,19 +52,19 @@ typedef struct PluginFuncData{
 void vmInit();
 void vmLink();
 BOOL vmPluginRegist(const char* name, PluginFuncData* plugin_funcs);
-int* vmArgPtrGet(_sVMThread*, int);
-BOOL vmArgBoolGet(_sVMThread*);
-int vmArgIntGet(int, int*); 
-void vmArgFixedGet(_sVMThread*);
-char* vmArgStringGet(_sVMThread*, UNKWORD);
-void* vmArgFunctionGet(_sVMThread*, UNKWORD);
-void* vmArgArrayGet(_sVMThread*, UNKWORD);
-void* vmArgOCGet(_sVMThread*, UNKWORD);
-void vmRetValSet(_sVMThread*, RetVal*);
-void vmWaitModeSet();
-int vmWkIdxGet(_sVMThread*);
-void vmWkIdxSet(_sVMThread*);
-int vmWkGet(_sVMThread*);
+void* vmArgPtrGet(_sVMThread* pThread, int);
+BOOL vmArgBoolGet(_sVMThread* pThread);
+int vmArgIntGet(int, void*); 
+void vmArgFixedGet(_sVMThread* pThread);
+char* vmArgStringGet(int, void*);
+void* vmArgFunctionGet(_sVMThread* pthread, int);
+void* vmArgArrayGet(_sVMThread* pThread, int);
+void* vmArgOCGet(_sVMThread* pThread, int);
+void vmRetValSet(_sVMThread* pThread, RetVal* pRetval);
+void vmWaitModeSet(_sVMThread* pThread);
+int vmWkIdxGet(_sVMThread* pThread);
+void vmWkIdxSet(_sVMThread* pThread, int);
+int* vmWkGet(_sVMThread* pThread, int);
 
 
 #ifdef __cplusplus

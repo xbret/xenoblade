@@ -1,13 +1,13 @@
 #pragma once
 
+#include "kyoshin/appgame/plugin/plugin_game.hpp"
+#include "kyoshin/appgame/plugin/plugin_deb.hpp"
+#include "kyoshin/appgame/plugin/plugin_wait.hpp"
 #include "kyoshin/appgame/plugin/plugin_math.hpp"
 
 extern "C"{
-void pluginGameRegist();
-void pluginDebRegist();
 void pluginBtlRegist();
 void pluginUnitRegist();
-void pluginWaitRegist();
 void pluginUiRegist();
 void pluginEveRegist();
 void pluginCfsRegist();

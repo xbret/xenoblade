@@ -1,8 +1,8 @@
 GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CGame.o\
 	$(BUILD_DIR)/src/kyoshin/appgame/main.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/plugin_deb.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/plugin_wait.o\
+	$(BUILD_DIR)/src/kyoshin/appgame/plugin/plugin_deb.o\
+	$(BUILD_DIR)/src/kyoshin/appgame/plugin/plugin_wait.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/oc_builtin.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/oc_thread.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/oc_msg.o\
@@ -146,7 +146,7 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CVision.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/code_801A929C.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/plugin_snd.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/plugin_game.o\
+	$(BUILD_DIR)/src/kyoshin/appgame/plugin/plugin_game.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuVision.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuBattleCommu.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CPcEffect07.o\
