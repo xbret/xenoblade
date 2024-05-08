@@ -1,9 +1,9 @@
 #pragma once
 
-#include "kyoshin/appgame/plugin/plugin_game.hpp"
-#include "kyoshin/appgame/plugin/plugin_deb.hpp"
-#include "kyoshin/appgame/plugin/plugin_wait.hpp"
-#include "kyoshin/appgame/plugin/plugin_math.hpp"
+#include "kyoshin/appgame/plugin/pluginGame.hpp"
+#include "kyoshin/appgame/plugin/pluginDeb.hpp"
+#include "kyoshin/appgame/plugin/pluginWait.hpp"
+#include "kyoshin/appgame/plugin/pluginMath.hpp"
 
 extern "C"{
 void pluginBtlRegist();

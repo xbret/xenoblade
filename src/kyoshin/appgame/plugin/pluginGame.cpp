@@ -1,4 +1,4 @@
-#include "kyoshin/appgame/plugin/plugin_game.hpp"
+#include "kyoshin/appgame/plugin/pluginGame.hpp"
 
 PluginFuncData pluginGameFuncs[] = {
 	{"cmd", game_cmd},

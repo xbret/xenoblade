@@ -1,5 +1,5 @@
 #include "kyoshin/appgame/plugin/plugins.hpp"
-#include "kyoshin/appgame/plugin/plugin_main.hpp"
+#include "kyoshin/appgame/plugin/pluginMain.hpp"
 
 //Register all the plugins (SB script helper function modules) into the VM.
 void pluginRegist(){

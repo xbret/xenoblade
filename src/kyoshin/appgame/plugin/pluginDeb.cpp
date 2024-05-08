@@ -1,4 +1,4 @@
-#include "kyoshin/appgame/plugin/plugin_deb.hpp"
+#include "kyoshin/appgame/plugin/pluginDeb.hpp"
 
 PluginFuncData pluginDebFuncs[] = {
 	{"put", deb_put},

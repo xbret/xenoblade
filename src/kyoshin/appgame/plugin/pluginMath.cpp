@@ -1,4 +1,4 @@
-#include "kyoshin/appgame/plugin/plugin_math.hpp"
+#include "kyoshin/appgame/plugin/pluginMath.hpp"
 #include "monolib/Random.hpp"
 
 PluginFuncData pluginMathFuncs[] = {

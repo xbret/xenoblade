@@ -1,4 +1,4 @@
-#include "kyoshin/appgame/plugin/plugin_wait.hpp"
+#include "kyoshin/appgame/plugin/pluginWait.hpp"
 
 PluginFuncData pluginWaitFuncs[] = {
 	{"frame", wait_frame},
@@ -12,7 +12,7 @@ int wait_frame(_sVMThread* pThread) {
     if (wkIdx == 0) {
         int* temp_r3 = vmWkGet(pThread, 0);
         *temp_r3 = temp_r30 << 0xC;
-        vmWkIdxSet(pThread, wkIdx + 1);
+        vmWkIdxSet(pThread, wkIdx + 1); //why not just set it to 1???
         vmWaitModeSet(pThread);
     } else {
         int* temp_r3 = vmWkGet(pThread, 0);
