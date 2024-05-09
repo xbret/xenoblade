@@ -4,6 +4,7 @@
 #include "kyoshin/appgame/plugin/pluginDeb.hpp"
 #include "kyoshin/appgame/plugin/pluginWait.hpp"
 #include "kyoshin/appgame/plugin/pluginMath.hpp"
+#include "kyoshin/appgame/plugin/pluginPad.hpp"
 
 extern "C"{
 void pluginBtlRegist();
@@ -12,7 +13,6 @@ void pluginUiRegist();
 void pluginEveRegist();
 void pluginCfsRegist();
 void pluginCamRegist();
-void pluginPadRegist();
 void pluginTimeRegist();
 void pluginSndRegist();
 void pluginVoiceRegist();

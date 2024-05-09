@@ -3,11 +3,11 @@
 
 namespace ml{
 	void CAttrTransform::clear() {
-    	vec1 = Vec3::zero;
-    	rotation = Vec3::zero;
+    	vec1 = CVec3::zero;
+    	rotation = CVec3::zero;
     	PSMTXIdentity(mtx1.m);
-    	unkB8 = Vec3::zero;
-    	unkC4 = Vec3::zero;
+    	unkB8 = CVec3::zero;
+    	unkC4 = CVec3::zero;
     	PSMTXIdentity(mtx2.m); 
     	PSMTXIdentity(mtx3.m);
     	unkD0.x = 0;

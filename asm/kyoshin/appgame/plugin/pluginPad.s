@@ -2,7 +2,7 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn get, local
+.fn pad_get__FP10_sVMThread, local
 /* 800616E0 0002ACA0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800616E4 0002ACA4  7C 08 02 A6 */	mflr r0
 /* 800616E8 0002ACA8  38 80 00 01 */	li r4, 1
@@ -32,21 +32,21 @@
 .L_80061740:
 /* 80061740 0002AD00  38 00 00 03 */	li r0, 3
 /* 80061744 0002AD04  98 01 00 08 */	stb r0, 8(r1)
-/* 80061748 0002AD08  48 3E 5E 39 */	bl func_80447580
+/* 80061748 0002AD08  48 3E 5E 39 */	bl CDeviceRemotePad_80447580
 /* 8006174C 0002AD0C  80 03 00 00 */	lwz r0, 0(r3)
 /* 80061750 0002AD10  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80061754 0002AD14  48 00 00 44 */	b .L_80061798
 .L_80061758:
 /* 80061758 0002AD18  38 00 00 03 */	li r0, 3
 /* 8006175C 0002AD1C  98 01 00 08 */	stb r0, 8(r1)
-/* 80061760 0002AD20  48 3E 5E 21 */	bl func_80447580
+/* 80061760 0002AD20  48 3E 5E 21 */	bl CDeviceRemotePad_80447580
 /* 80061764 0002AD24  80 03 00 04 */	lwz r0, 4(r3)
 /* 80061768 0002AD28  90 01 00 0C */	stw r0, 0xc(r1)
 /* 8006176C 0002AD2C  48 00 00 2C */	b .L_80061798
 .L_80061770:
 /* 80061770 0002AD30  38 00 00 03 */	li r0, 3
 /* 80061774 0002AD34  98 01 00 08 */	stb r0, 8(r1)
-/* 80061778 0002AD38  48 3E 5E 09 */	bl func_80447580
+/* 80061778 0002AD38  48 3E 5E 09 */	bl CDeviceRemotePad_80447580
 /* 8006177C 0002AD3C  80 03 00 08 */	lwz r0, 8(r3)
 /* 80061780 0002AD40  90 01 00 0C */	stw r0, 0xc(r1)
 /* 80061784 0002AD44  48 00 00 14 */	b .L_80061798
@@ -66,9 +66,9 @@
 /* 800617B0 0002AD70  7C 08 03 A6 */	mtlr r0
 /* 800617B4 0002AD74  38 21 00 20 */	addi r1, r1, 0x20
 /* 800617B8 0002AD78  4E 80 00 20 */	blr 
-.endfn get
+.endfn pad_get__FP10_sVMThread
 
-.fn enable, local
+.fn pad_enable__FP10_sVMThread, local
 /* 800617BC 0002AD7C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800617C0 0002AD80  7C 08 02 A6 */	mflr r0
 /* 800617C4 0002AD84  38 80 00 01 */	li r4, 1
@@ -111,15 +111,15 @@
 /* 80061850 0002AE10  7C 08 03 A6 */	mtlr r0
 /* 80061854 0002AE14  38 21 00 10 */	addi r1, r1, 0x10
 /* 80061858 0002AE18  4E 80 00 20 */	blr 
-.endfn enable
+.endfn pad_enable__FP10_sVMThread
 
-.fn pluginPadRegist, global
+.fn pluginPadRegist__Fv, global
 /* 8006185C 0002AE1C  3C 60 80 4F */	lis r3, lbl_804F6A18@ha
 /* 80061860 0002AE20  3C 80 80 53 */	lis r4, lbl_80529EC0@ha
 /* 80061864 0002AE24  38 63 6A 18 */	addi r3, r3, lbl_804F6A18@l
 /* 80061868 0002AE28  38 84 9E C0 */	addi r4, r4, lbl_80529EC0@l
 /* 8006186C 0002AE2C  48 43 F3 24 */	b vmPluginRegist
-.endfn pluginPadRegist
+.endfn pluginPadRegist__Fv
 
 
 
@@ -139,9 +139,9 @@
 
 .obj lbl_80529EC0, global
 	.4byte lbl_80668A68
-	.4byte get
+	.4byte pad_get__FP10_sVMThread
 	.4byte lbl_80668A6C
-	.4byte enable
+	.4byte pad_enable__FP10_sVMThread
 	.4byte 0
 	.4byte 0
 .endobj lbl_80529EC0
@@ -184,14 +184,14 @@
 
 .obj "@eti_80022A60", local
 .hidden "@eti_80022A60"
-	.4byte get
+	.4byte pad_get__FP10_sVMThread
 	.4byte 0x000000DC
 	.4byte "@etb_800079B4"
 .endobj "@eti_80022A60"
 
 .obj "@eti_80022A6C", local
 .hidden "@eti_80022A6C"
-	.4byte enable
+	.4byte pad_enable__FP10_sVMThread
 	.4byte 0x000000A0
 	.4byte "@etb_800079BC"
 .endobj "@eti_80022A6C"

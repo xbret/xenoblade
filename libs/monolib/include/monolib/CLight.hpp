@@ -5,7 +5,7 @@ using namespace ml;
 class CLight{
 public:
 	CLight();
-	virtual ~CLight();
+	virtual ~CLight(){}
 
 	CVec3 unk4;
 	CVec3 unk10;

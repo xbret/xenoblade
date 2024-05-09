@@ -2,13 +2,13 @@
 
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
-.fn __ct__CLight, global
+.fn __ct__6CLightFv, global
 /* 804C0280 00489840  C0 62 D3 D8 */	lfs f3, float_8066D758@sda21(r2)
 /* 804C0284 00489844  38 80 00 00 */	li r4, 0
 /* 804C0288 00489848  C0 42 D3 DC */	lfs f2, float_8066D75C@sda21(r2)
-/* 804C028C 0048984C  3C A0 80 57 */	lis r5, __vt__CLight@ha
+/* 804C028C 0048984C  3C A0 80 57 */	lis r5, __vt__6CLight@ha
 /* 804C0290 00489850  C0 22 D3 E0 */	lfs f1, float_8066D760@sda21(r2)
-/* 804C0294 00489854  38 A5 31 98 */	addi r5, r5, __vt__CLight@l
+/* 804C0294 00489854  38 A5 31 98 */	addi r5, r5, __vt__6CLight@l
 /* 804C0298 00489858  C0 02 D3 E4 */	lfs f0, float_8066D764@sda21(r2)
 /* 804C029C 0048985C  60 80 00 0F */	ori r0, r4, 0xf
 /* 804C02A0 00489860  90 A3 00 00 */	stw r5, 0(r3)
@@ -28,7 +28,7 @@
 /* 804C02D8 00489898  D0 03 00 3C */	stfs f0, 0x3c(r3)
 /* 804C02DC 0048989C  90 03 00 30 */	stw r0, 0x30(r3)
 /* 804C02E0 004898A0  4E 80 00 20 */	blr 
-.endfn __ct__CLight
+.endfn __ct__6CLightFv
 
 .fn func_804C02E4, global
 /* 804C02E4 004898A4  94 21 FF E0 */	stwu r1, -0x20(r1)
@@ -669,12 +669,12 @@
 
 .balign 8
 
-.obj __vt__CLight, global
+.obj __vt__6CLight, global
 	.4byte __RTTI__CLight
 	.4byte 0
 	.4byte __dt__CLight
 	.4byte 0
-.endobj __vt__CLight
+.endobj __vt__6CLight
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600

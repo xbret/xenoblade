@@ -4,7 +4,7 @@
 
 .fn func_8044676C, global
 /* 8044676C 0040FD2C  1C 03 0B 00 */	mulli r0, r3, 0xb00
-/* 80446770 0040FD30  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 80446770 0040FD30  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80446774 0040FD34  7C 63 02 14 */	add r3, r3, r0
 /* 80446778 0040FD38  38 63 08 E8 */	addi r3, r3, 0x8e8
 /* 8044677C 0040FD3C  4E 80 00 20 */	blr
@@ -17,7 +17,7 @@
 /* 8044678C 0040FD4C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80446790 0040FD50  7C 7F 1B 78 */	mr r31, r3
 /* 80446794 0040FD54  4B FE DC 0D */	bl Heap_getRegionIndex2
-/* 80446798 0040FD58  80 8D BD 90 */	lwz r4, lbl_80667F10@sda21(r13)
+/* 80446798 0040FD58  80 8D BD 90 */	lwz r4, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 8044679C 0040FD5C  2C 04 00 00 */	cmpwi r4, 0
 /* 804467A0 0040FD60  41 82 00 08 */	beq .L_804467A8
 /* 804467A4 0040FD64  80 64 00 00 */	lwz r3, 0(r4)
@@ -58,31 +58,31 @@
 /* 80446810 0040FDD0  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80446814 0040FDD4  7C 7D 1B 78 */	mr r29, r3
 /* 80446818 0040FDD8  4B FE DC 15 */	bl func_8043442C
-/* 8044681C 0040FDDC  90 6D BD 90 */	stw r3, lbl_80667F10@sda21(r13)
+/* 8044681C 0040FDDC  90 6D BD 90 */	stw r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80446820 0040FDE0  3B E0 00 00 */	li r31, 0
 /* 80446824 0040FDE4  3C 80 80 44 */	lis r4, func_804467C8@ha
 /* 80446828 0040FDE8  3C A0 80 44 */	lis r5, func_80446780@ha
 /* 8044682C 0040FDEC  93 E3 51 18 */	stw r31, 0x5118(r3)
 /* 80446830 0040FDF0  38 65 67 80 */	addi r3, r5, func_80446780@l
 /* 80446834 0040FDF4  38 84 67 C8 */	addi r4, r4, func_804467C8@l
-/* 80446838 0040FDF8  80 AD BD 90 */	lwz r5, lbl_80667F10@sda21(r13)
+/* 80446838 0040FDF8  80 AD BD 90 */	lwz r5, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 8044683C 0040FDFC  93 A5 00 00 */	stw r29, 0(r5)
 /* 80446840 0040FE00  4B F2 45 F1 */	bl WPADRegisterAllocator
-/* 80446844 0040FE04  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 80446844 0040FE04  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80446848 0040FE08  38 80 00 80 */	li r4, 0x80
 /* 8044684C 0040FE0C  38 63 35 18 */	addi r3, r3, 0x3518
 /* 80446850 0040FE10  4B F0 13 B1 */	bl KPADInitEx
-/* 80446854 0040FE14  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 80446854 0040FE14  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80446858 0040FE18  38 80 00 00 */	li r4, 0
 /* 8044685C 0040FE1C  38 A0 07 C0 */	li r5, 0x7c0
 /* 80446860 0040FE20  38 63 00 24 */	addi r3, r3, 0x24
 /* 80446864 0040FE24  4B BB DA ED */	bl memset
-/* 80446868 0040FE28  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 80446868 0040FE28  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 8044686C 0040FE2C  38 80 00 00 */	li r4, 0
 /* 80446870 0040FE30  38 A0 00 F8 */	li r5, 0xf8
 /* 80446874 0040FE34  38 63 07 E4 */	addi r3, r3, 0x7e4
 /* 80446878 0040FE38  4B BB DA D9 */	bl memset
-/* 8044687C 0040FE3C  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 8044687C 0040FE3C  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80446880 0040FE40  38 C0 00 0A */	li r6, 0xa
 /* 80446884 0040FE44  38 A0 00 03 */	li r5, 3
 /* 80446888 0040FE48  38 80 00 14 */	li r4, 0x14
@@ -90,42 +90,42 @@
 /* 80446890 0040FE50  90 03 08 DC */	stw r0, 0x8dc(r3)
 /* 80446894 0040FE54  38 00 00 05 */	li r0, 5
 /* 80446898 0040FE58  C0 02 C7 A0 */	lfs f0, float_8066CB20@sda21(r2)
-/* 8044689C 0040FE5C  80 ED BD 90 */	lwz r7, lbl_80667F10@sda21(r13)
+/* 8044689C 0040FE5C  80 ED BD 90 */	lwz r7, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 804468A0 0040FE60  38 67 07 E4 */	addi r3, r7, 0x7e4
 /* 804468A4 0040FE64  90 67 08 E0 */	stw r3, 0x8e0(r7)
-/* 804468A8 0040FE68  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 804468A8 0040FE68  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 804468AC 0040FE6C  90 C3 00 08 */	stw r6, 8(r3)
-/* 804468B0 0040FE70  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 804468B0 0040FE70  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 804468B4 0040FE74  90 A3 00 0C */	stw r5, 0xc(r3)
-/* 804468B8 0040FE78  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 804468B8 0040FE78  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 804468BC 0040FE7C  90 83 00 10 */	stw r4, 0x10(r3)
-/* 804468C0 0040FE80  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 804468C0 0040FE80  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 804468C4 0040FE84  90 03 00 14 */	stw r0, 0x14(r3)
-/* 804468C8 0040FE88  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 804468C8 0040FE88  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 804468CC 0040FE8C  D0 03 00 18 */	stfs f0, 0x18(r3)
-/* 804468D0 0040FE90  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 804468D0 0040FE90  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 804468D4 0040FE94  D0 03 00 1C */	stfs f0, 0x1c(r3)
-/* 804468D8 0040FE98  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 804468D8 0040FE98  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 804468DC 0040FE9C  93 E3 00 04 */	stw r31, 4(r3)
-/* 804468E0 0040FEA0  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 804468E0 0040FEA0  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 804468E4 0040FEA4  93 E3 51 1C */	stw r31, 0x511c(r3)
-/* 804468E8 0040FEA8  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 804468E8 0040FEA8  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 804468EC 0040FEAC  9B E3 01 11 */	stb r31, 0x111(r3)
-/* 804468F0 0040FEB0  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 804468F0 0040FEB0  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 804468F4 0040FEB4  9B E3 02 09 */	stb r31, 0x209(r3)
-/* 804468F8 0040FEB8  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 804468F8 0040FEB8  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 804468FC 0040FEBC  9B E3 03 01 */	stb r31, 0x301(r3)
-/* 80446900 0040FEC0  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 80446900 0040FEC0  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80446904 0040FEC4  9B E3 03 F9 */	stb r31, 0x3f9(r3)
-/* 80446908 0040FEC8  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 80446908 0040FEC8  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 8044690C 0040FECC  9B E3 04 F1 */	stb r31, 0x4f1(r3)
-/* 80446910 0040FED0  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 80446910 0040FED0  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80446914 0040FED4  9B E3 05 E9 */	stb r31, 0x5e9(r3)
-/* 80446918 0040FED8  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 80446918 0040FED8  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 8044691C 0040FEDC  9B E3 06 E1 */	stb r31, 0x6e1(r3)
-/* 80446920 0040FEE0  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 80446920 0040FEE0  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80446924 0040FEE4  9B E3 07 D9 */	stb r31, 0x7d9(r3)
-/* 80446928 0040FEE8  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 80446928 0040FEE8  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 8044692C 0040FEEC  90 A3 00 20 */	stw r5, 0x20(r3)
 .L_80446930:
 /* 80446930 0040FEF0  4B F2 45 11 */	bl WPADGetStatus
@@ -140,24 +140,24 @@
 /* 80446950 0040FF10  7F A3 EB 78 */	mr r3, r29
 /* 80446954 0040FF14  38 9E 6A 5C */	addi r4, r30, func_80446A5C@l
 /* 80446958 0040FF18  4B F0 19 09 */	bl KPADSetConnectCallback
-/* 8044695C 0040FF1C  80 0D BD 90 */	lwz r0, lbl_80667F10@sda21(r13)
+/* 8044695C 0040FF1C  80 0D BD 90 */	lwz r0, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80446960 0040FF20  7C 60 FA 14 */	add r3, r0, r31
 /* 80446964 0040FF24  3B FF 00 F8 */	addi r31, r31, 0xf8
 /* 80446968 0040FF28  93 A3 01 14 */	stw r29, 0x114(r3)
 /* 8044696C 0040FF2C  3B BD 00 01 */	addi r29, r29, 1
 /* 80446970 0040FF30  2C 1D 00 04 */	cmpwi r29, 4
 /* 80446974 0040FF34  41 80 FF D4 */	blt .L_80446948
-/* 80446978 0040FF38  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 80446978 0040FF38  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 8044697C 0040FF3C  38 00 00 00 */	li r0, 0
 /* 80446980 0040FF40  38 A0 00 01 */	li r5, 1
 /* 80446984 0040FF44  38 80 00 02 */	li r4, 2
 /* 80446988 0040FF48  90 03 04 F4 */	stw r0, 0x4f4(r3)
 /* 8044698C 0040FF4C  38 00 00 03 */	li r0, 3
-/* 80446990 0040FF50  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 80446990 0040FF50  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80446994 0040FF54  90 A3 05 EC */	stw r5, 0x5ec(r3)
-/* 80446998 0040FF58  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 80446998 0040FF58  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 8044699C 0040FF5C  90 83 06 E4 */	stw r4, 0x6e4(r3)
-/* 804469A0 0040FF60  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 804469A0 0040FF60  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 804469A4 0040FF64  90 03 07 DC */	stw r0, 0x7dc(r3)
 /* 804469A8 0040FF68  4B F0 16 A9 */	bl KPADReset
 /* 804469AC 0040FF6C  83 E1 00 1C */	lwz r31, 0x1c(r1)
@@ -176,12 +176,12 @@
 /* 804469D4 0040FF94  7C 08 02 A6 */	mflr r0
 /* 804469D8 0040FF98  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804469DC 0040FF9C  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 804469E0 0040FFA0  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 804469E0 0040FFA0  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 804469E4 0040FFA4  2C 03 00 00 */	cmpwi r3, 0
 /* 804469E8 0040FFA8  41 82 00 10 */	beq .L_804469F8
 /* 804469EC 0040FFAC  4B FE DA ED */	bl func_804344D8
 /* 804469F0 0040FFB0  38 00 00 00 */	li r0, 0
-/* 804469F4 0040FFB4  90 0D BD 90 */	stw r0, lbl_80667F10@sda21(r13)
+/* 804469F4 0040FFB4  90 0D BD 90 */	stw r0, CDeviceRemotePad_instancePtr@sda21(r13)
 .L_804469F8:
 /* 804469F8 0040FFB8  3B E0 00 00 */	li r31, 0
 .L_804469FC:
@@ -202,20 +202,20 @@
 .endfn func_804469D0
 
 .fn func_80446A34, global
-/* 80446A34 0040FFF4  80 8D BD 90 */	lwz r4, lbl_80667F10@sda21(r13)
+/* 80446A34 0040FFF4  80 8D BD 90 */	lwz r4, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80446A38 0040FFF8  90 64 00 10 */	stw r3, 0x10(r4)
 /* 80446A3C 0040FFFC  4E 80 00 20 */	blr 
 .endfn func_80446A34
 
 .fn func_80446A40, global
-/* 80446A40 00410000  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 80446A40 00410000  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80446A44 00410004  C0 02 C7 A0 */	lfs f0, float_8066CB20@sda21(r2)
 /* 80446A48 00410008  D0 03 00 1C */	stfs f0, 0x1c(r3)
 /* 80446A4C 0041000C  4E 80 00 20 */	blr 
 .endfn func_80446A40
 
 .fn func_80446A50, global
-/* 80446A50 00410010  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 80446A50 00410010  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80446A54 00410014  D0 23 00 1C */	stfs f1, 0x1c(r3)
 /* 80446A58 00410018  4E 80 00 20 */	blr 
 .endfn func_80446A50
@@ -229,7 +229,7 @@
 /* 80446A70 00410030  7C 9E 23 78 */	mr r30, r4
 /* 80446A74 00410034  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80446A78 00410038  7C 7D 1B 78 */	mr r29, r3
-/* 80446A7C 0041003C  80 AD BD 90 */	lwz r5, lbl_80667F10@sda21(r13)
+/* 80446A7C 0041003C  80 AD BD 90 */	lwz r5, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80446A80 00410040  2C 05 00 00 */	cmpwi r5, 0
 /* 80446A84 00410044  41 82 00 90 */	beq .L_80446B14
 /* 80446A88 00410048  80 05 00 20 */	lwz r0, 0x20(r5)
@@ -264,7 +264,7 @@
 /* 80446AEC 004100AC  98 1F 00 ED */	stb r0, 0xed(r31)
 /* 80446AF0 004100B0  90 1F 00 E8 */	stw r0, 0xe8(r31)
 .L_80446AF4:
-/* 80446AF4 004100B4  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 80446AF4 004100B4  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80446AF8 004100B8  81 83 51 1C */	lwz r12, 0x511c(r3)
 /* 80446AFC 004100BC  2C 0C 00 00 */	cmpwi r12, 0
 /* 80446B00 004100C0  41 82 00 14 */	beq .L_80446B14
@@ -283,7 +283,7 @@
 .endfn func_80446A5C
 
 .fn func_80446B30, global
-/* 80446B30 004100F0  80 AD BD 90 */	lwz r5, lbl_80667F10@sda21(r13)
+/* 80446B30 004100F0  80 AD BD 90 */	lwz r5, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80446B34 004100F4  2C 05 00 00 */	cmpwi r5, 0
 /* 80446B38 004100F8  4D 82 00 20 */	beqlr 
 /* 80446B3C 004100FC  80 05 00 20 */	lwz r0, 0x20(r5)
@@ -333,7 +333,7 @@
 /* 80446BC8 00410188  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80446BCC 0041018C  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80446BD0 00410190  93 81 00 10 */	stw r28, 0x10(r1)
-/* 80446BD4 00410194  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 80446BD4 00410194  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80446BD8 00410198  80 03 00 20 */	lwz r0, 0x20(r3)
 /* 80446BDC 0041019C  54 00 07 FF */	clrlwi. r0, r0, 0x1f
 /* 80446BE0 004101A0  41 82 00 C8 */	beq .L_80446CA8
@@ -346,12 +346,12 @@
 /* 80446BF8 004101B8  4B F2 57 99 */	bl WPADSetExtensionCallback
 /* 80446BFC 004101BC  2C 1C 00 04 */	cmpwi r28, 4
 /* 80446C00 004101C0  40 80 00 14 */	bge .L_80446C14
-/* 80446C04 004101C4  80 0D BD 90 */	lwz r0, lbl_80667F10@sda21(r13)
+/* 80446C04 004101C4  80 0D BD 90 */	lwz r0, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80446C08 004101C8  7C 60 FA 14 */	add r3, r0, r31
 /* 80446C0C 004101CC  3B A3 00 24 */	addi r29, r3, 0x24
 /* 80446C10 004101D0  48 00 00 0C */	b .L_80446C1C
 .L_80446C14:
-/* 80446C14 004101D4  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 80446C14 004101D4  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80446C18 004101D8  3B A3 07 E4 */	addi r29, r3, 0x7e4
 .L_80446C1C:
 /* 80446C1C 004101DC  88 1D 00 ED */	lbz r0, 0xed(r29)
@@ -414,7 +414,7 @@
 /* 80446CD4 00410294  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80446CD8 00410298  7C 7F 1B 78 */	mr r31, r3
 /* 80446CDC 0041029C  93 C1 00 08 */	stw r30, 8(r1)
-/* 80446CE0 004102A0  80 AD BD 90 */	lwz r5, lbl_80667F10@sda21(r13)
+/* 80446CE0 004102A0  80 AD BD 90 */	lwz r5, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80446CE4 004102A4  C0 23 00 60 */	lfs f1, 0x60(r3)
 /* 80446CE8 004102A8  C0 05 00 18 */	lfs f0, 0x18(r5)
 /* 80446CEC 004102AC  FC 00 00 50 */	fneg f0, f0
@@ -500,7 +500,7 @@
 /* 80446E04 004103C4  88 EA 00 18 */	lbz r7, 0x18(r10)
 /* 80446E08 004103C8  38 E7 00 01 */	addi r7, r7, 1
 /* 80446E0C 004103CC  98 EA 00 18 */	stb r7, 0x18(r10)
-/* 80446E10 004103D0  80 ED BD 90 */	lwz r7, lbl_80667F10@sda21(r13)
+/* 80446E10 004103D0  80 ED BD 90 */	lwz r7, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80446E14 004103D4  89 0A 00 38 */	lbz r8, 0x38(r10)
 /* 80446E18 004103D8  80 E7 00 10 */	lwz r7, 0x10(r7)
 /* 80446E1C 004103DC  7C 08 38 00 */	cmpw r8, r7
@@ -508,7 +508,7 @@
 /* 80446E24 004103E4  38 E8 00 01 */	addi r7, r8, 1
 /* 80446E28 004103E8  98 EA 00 38 */	stb r7, 0x38(r10)
 .L_80446E2C:
-/* 80446E2C 004103EC  80 ED BD 90 */	lwz r7, lbl_80667F10@sda21(r13)
+/* 80446E2C 004103EC  80 ED BD 90 */	lwz r7, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80446E30 004103F0  89 2A 00 18 */	lbz r9, 0x18(r10)
 /* 80446E34 004103F4  81 07 00 08 */	lwz r8, 8(r7)
 /* 80446E38 004103F8  80 E7 00 0C */	lwz r7, 0xc(r7)
@@ -518,14 +518,14 @@
 /* 80446E48 00410408  80 E3 00 08 */	lwz r7, 8(r3)
 /* 80446E4C 0041040C  7C E7 2B 78 */	or r7, r7, r5
 /* 80446E50 00410410  90 E3 00 08 */	stw r7, 8(r3)
-/* 80446E54 00410414  81 0D BD 90 */	lwz r8, lbl_80667F10@sda21(r13)
+/* 80446E54 00410414  81 0D BD 90 */	lwz r8, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80446E58 00410418  88 EA 00 18 */	lbz r7, 0x18(r10)
 /* 80446E5C 0041041C  81 08 00 0C */	lwz r8, 0xc(r8)
 /* 80446E60 00410420  55 08 06 3E */	clrlwi r8, r8, 0x18
 /* 80446E64 00410424  7C E8 38 50 */	subf r7, r8, r7
 /* 80446E68 00410428  98 EA 00 18 */	stb r7, 0x18(r10)
 .L_80446E6C:
-/* 80446E6C 0041042C  80 ED BD 90 */	lwz r7, lbl_80667F10@sda21(r13)
+/* 80446E6C 0041042C  80 ED BD 90 */	lwz r7, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80446E70 00410430  89 0A 00 38 */	lbz r8, 0x38(r10)
 /* 80446E74 00410434  80 E7 00 10 */	lwz r7, 0x10(r7)
 /* 80446E78 00410438  7C 08 38 00 */	cmpw r8, r7
@@ -538,7 +538,7 @@
 /* 80446E90 00410450  80 E3 00 0C */	lwz r7, 0xc(r3)
 /* 80446E94 00410454  7C E7 28 39 */	and. r7, r7, r5
 /* 80446E98 00410458  41 82 00 28 */	beq .L_80446EC0
-/* 80446E9C 0041045C  81 0D BD 90 */	lwz r8, lbl_80667F10@sda21(r13)
+/* 80446E9C 0041045C  81 0D BD 90 */	lwz r8, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80446EA0 00410460  7C E3 32 14 */	add r7, r3, r6
 /* 80446EA4 00410464  88 E7 00 38 */	lbz r7, 0x38(r7)
 /* 80446EA8 00410468  81 08 00 14 */	lwz r8, 0x14(r8)
@@ -551,7 +551,7 @@
 /* 80446EC0 00410480  54 A5 08 3C */	slwi r5, r5, 1
 /* 80446EC4 00410484  38 C6 00 01 */	addi r6, r6, 1
 /* 80446EC8 00410488  42 00 FF 18 */	bdnz .L_80446DE0
-/* 80446ECC 0041048C  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 80446ECC 0041048C  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80446ED0 00410490  83 C3 00 04 */	lwz r30, 4(r3)
 /* 80446ED4 00410494  48 00 00 20 */	b .L_80446EF4
 .L_80446ED8:
@@ -629,7 +629,7 @@
 /* 80446FDC 0041059C  3B A0 00 02 */	li r29, 2
 /* 80446FE0 004105A0  3E E0 43 30 */	lis r23, 0x4330
 .L_80446FE4:
-/* 80446FE4 004105A4  80 0D BD 90 */	lwz r0, lbl_80667F10@sda21(r13)
+/* 80446FE4 004105A4  80 0D BD 90 */	lwz r0, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80446FE8 004105A8  7F 23 CB 78 */	mr r3, r25
 /* 80446FEC 004105AC  38 C1 00 08 */	addi r6, r1, 8
 /* 80446FF0 004105B0  38 A0 00 10 */	li r5, 0x10
@@ -638,12 +638,12 @@
 /* 80446FFC 004105BC  4B F0 04 C5 */	bl KPADReadEx
 /* 80447000 004105C0  2C 19 00 04 */	cmpwi r25, 4
 /* 80447004 004105C4  40 80 00 14 */	bge .L_80447018
-/* 80447008 004105C8  80 8D BD 90 */	lwz r4, lbl_80667F10@sda21(r13)
+/* 80447008 004105C8  80 8D BD 90 */	lwz r4, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 8044700C 004105CC  7C 64 C2 14 */	add r3, r4, r24
 /* 80447010 004105D0  3B 63 00 24 */	addi r27, r3, 0x24
 /* 80447014 004105D4  48 00 00 0C */	b .L_80447020
 .L_80447018:
-/* 80447018 004105D8  80 8D BD 90 */	lwz r4, lbl_80667F10@sda21(r13)
+/* 80447018 004105D8  80 8D BD 90 */	lwz r4, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 8044701C 004105DC  3B 64 07 E4 */	addi r27, r4, 0x7e4
 .L_80447020:
 /* 80447020 004105E0  88 1B 00 ED */	lbz r0, 0xed(r27)
@@ -908,19 +908,19 @@
 .endfn func_80446F14
 
 .fn func_804473E4, global
-/* 804473E4 004109A4  80 8D BD 90 */	lwz r4, lbl_80667F10@sda21(r13)
+/* 804473E4 004109A4  80 8D BD 90 */	lwz r4, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 804473E8 004109A8  38 00 00 08 */	li r0, 8
 /* 804473EC 004109AC  38 A0 00 00 */	li r5, 0
 /* 804473F0 004109B0  38 64 07 E4 */	addi r3, r4, 0x7e4
 /* 804473F4 004109B4  90 64 08 DC */	stw r3, 0x8dc(r4)
-/* 804473F8 004109B8  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 804473F8 004109B8  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 804473FC 004109BC  7C 09 03 A6 */	mtctr r0
 .L_80447400:
 /* 80447400 004109C0  88 03 01 11 */	lbz r0, 0x111(r3)
 /* 80447404 004109C4  2C 00 00 00 */	cmpwi r0, 0
 /* 80447408 004109C8  41 82 00 1C */	beq .L_80447424
 /* 8044740C 004109CC  1C 05 00 F8 */	mulli r0, r5, 0xf8
-/* 80447410 004109D0  80 8D BD 90 */	lwz r4, lbl_80667F10@sda21(r13)
+/* 80447410 004109D0  80 8D BD 90 */	lwz r4, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80447414 004109D4  7C 64 02 14 */	add r3, r4, r0
 /* 80447418 004109D8  38 03 00 24 */	addi r0, r3, 0x24
 /* 8044741C 004109DC  90 04 08 DC */	stw r0, 0x8dc(r4)
@@ -930,11 +930,11 @@
 /* 80447428 004109E8  38 A5 00 01 */	addi r5, r5, 1
 /* 8044742C 004109EC  42 00 FF D4 */	bdnz .L_80447400
 .L_80447430:
-/* 80447430 004109F0  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 80447430 004109F0  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80447434 004109F4  38 80 00 04 */	li r4, 4
 /* 80447438 004109F8  38 03 07 E4 */	addi r0, r3, 0x7e4
 /* 8044743C 004109FC  90 03 08 E0 */	stw r0, 0x8e0(r3)
-/* 80447440 00410A00  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 80447440 00410A00  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80447444 00410A04  38 63 03 E0 */	addi r3, r3, 0x3e0
 /* 80447448 00410A08  7C 89 03 A6 */	mtctr r4
 .L_8044744C:
@@ -942,7 +942,7 @@
 /* 80447450 00410A10  2C 00 00 00 */	cmpwi r0, 0
 /* 80447454 00410A14  41 82 00 1C */	beq .L_80447470
 /* 80447458 00410A18  1C 04 00 F8 */	mulli r0, r4, 0xf8
-/* 8044745C 00410A1C  80 8D BD 90 */	lwz r4, lbl_80667F10@sda21(r13)
+/* 8044745C 00410A1C  80 8D BD 90 */	lwz r4, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80447460 00410A20  7C 64 02 14 */	add r3, r4, r0
 /* 80447464 00410A24  38 03 00 24 */	addi r0, r3, 0x24
 /* 80447468 00410A28  90 04 08 E0 */	stw r0, 0x8e0(r4)
@@ -960,7 +960,7 @@
 /* 80447488 00410A48  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8044748C 00410A4C  4B FF F7 2D */	bl func_80446BB8
 /* 80447490 00410A50  4B FF FA 85 */	bl func_80446F14
-/* 80447494 00410A54  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 80447494 00410A54  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80447498 00410A58  C0 22 C7 A4 */	lfs f1, float_8066CB24@sda21(r2)
 /* 8044749C 00410A5C  80 63 08 DC */	lwz r3, 0x8dc(r3)
 /* 804474A0 00410A60  C0 43 00 F4 */	lfs f2, 0xf4(r3)
@@ -1008,7 +1008,7 @@
 /* 8044752C 00410AEC  2C 04 00 04 */	cmpwi r4, 4
 /* 80447530 00410AF0  40 80 00 38 */	bge .L_80447568
 /* 80447534 00410AF4  38 04 00 04 */	addi r0, r4, 4
-/* 80447538 00410AF8  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 80447538 00410AF8  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 8044753C 00410AFC  1C 00 00 F8 */	mulli r0, r0, 0xf8
 /* 80447540 00410B00  7C 63 02 14 */	add r3, r3, r0
 /* 80447544 00410B04  38 63 00 24 */	addi r3, r3, 0x24
@@ -1017,30 +1017,30 @@
 /* 8044754C 00410B0C  2C 04 00 04 */	cmpwi r4, 4
 /* 80447550 00410B10  40 80 00 18 */	bge .L_80447568
 /* 80447554 00410B14  1C 04 00 F8 */	mulli r0, r4, 0xf8
-/* 80447558 00410B18  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 80447558 00410B18  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 8044755C 00410B1C  7C 63 02 14 */	add r3, r3, r0
 /* 80447560 00410B20  38 63 00 24 */	addi r3, r3, 0x24
 /* 80447564 00410B24  4E 80 00 20 */	blr
 .L_80447568:
-/* 80447568 00410B28  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 80447568 00410B28  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 8044756C 00410B2C  38 63 07 E4 */	addi r3, r3, 0x7e4
 /* 80447570 00410B30  4E 80 00 20 */	blr 
 .endfn func_80447518
 
 .fn func_80447574, global
-/* 80447574 00410B34  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 80447574 00410B34  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80447578 00410B38  38 63 07 E4 */	addi r3, r3, 0x7e4
 /* 8044757C 00410B3C  4E 80 00 20 */	blr 
 .endfn func_80447574
 
-.fn func_80447580, global
-/* 80447580 00410B40  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+.fn CDeviceRemotePad_80447580, global
+/* 80447580 00410B40  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80447584 00410B44  80 63 08 DC */	lwz r3, 0x8dc(r3)
 /* 80447588 00410B48  4E 80 00 20 */	blr
-.endfn func_80447580
+.endfn CDeviceRemotePad_80447580
 
 .fn func_8044758C, global
-/* 8044758C 00410B4C  80 6D BD 90 */	lwz r3, lbl_80667F10@sda21(r13)
+/* 8044758C 00410B4C  80 6D BD 90 */	lwz r3, CDeviceRemotePad_instancePtr@sda21(r13)
 /* 80447590 00410B50  80 63 08 E0 */	lwz r3, 0x8e0(r3)
 /* 80447594 00410B54  4E 80 00 20 */	blr 
 .endfn func_8044758C
@@ -1513,9 +1513,9 @@
 
 .balign 8
 
-.obj lbl_80667F10, global
+.obj CDeviceRemotePad_instancePtr, global
 	.skip 0x8
-.endobj lbl_80667F10
+.endobj CDeviceRemotePad_instancePtr
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

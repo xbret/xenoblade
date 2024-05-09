@@ -33,7 +33,7 @@ LIBS = [
             ["kyoshin/appgame/cf/CActParamAnimGame", False],
             ["kyoshin/appgame/plugin/pluginCam", False],
             ["kyoshin/appgame/cf/CTaskGameEffAfter", False],
-            ["kyoshin/appgame/plugin/pluginPad", False],
+            ["kyoshin/appgame/plugin/pluginPad", True],
             ["kyoshin/appgame/cf/CfRes", False],
             ["kyoshin/appgame/cf/IResInfo", False],
             ["kyoshin/appgame/cf/CfScript", False],
@@ -1973,8 +1973,6 @@ def main():
         asm_path = Path(root_dir) / Path("asm")
         build_src_path = build_path / src_path
         build_asm_path = build_path / asm_path
-
-        print(src_path)
 
         for object in lib["objects"]:
             completed = False

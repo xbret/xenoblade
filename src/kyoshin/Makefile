@@ -25,7 +25,7 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CActParamAnimGame.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/pluginCam.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CTaskGameEffAfter.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/pluginPad.o\
+	$(BUILD_DIR)/src/kyoshin/appgame/plugin/pluginPad.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfRes.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/IResInfo.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CfScript.o\
