@@ -1307,16 +1307,16 @@
 /* 802B21EC 0027B7AC  7C 7D 1B 78 */	mr r29, r3
 /* 802B21F0 0027B7B0  41 82 00 B8 */	beq .L_802B22A8
 /* 802B21F4 0027B7B4  48 19 28 25 */	bl __ct__8CProcessFv
-/* 802B21F8 0027B7B8  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
+/* 802B21F8 0027B7B8  3C 60 80 53 */	lis r3, "__vt__14CTTask<5IUICf>"@ha
 /* 802B21FC 0027B7BC  3C E0 80 51 */	lis r7, __ptmf_null@ha
-/* 802B2200 0027B7C0  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
+/* 802B2200 0027B7C0  38 63 F7 40 */	addi r3, r3, "__vt__14CTTask<5IUICf>"@l
 /* 802B2204 0027B7C4  90 7D 00 10 */	stw r3, 0x10(r29)
 /* 802B2208 0027B7C8  38 E7 CE 10 */	addi r7, r7, __ptmf_null@l
-/* 802B220C 0027B7CC  3C 80 80 54 */	lis r4, __vt__CMenuGameClear@ha
+/* 802B220C 0027B7CC  3C 80 80 54 */	lis r4, __vt__14CMenuGameClear@ha
 /* 802B2210 0027B7D0  80 A7 00 04 */	lwz r5, 4(r7)
 /* 802B2214 0027B7D4  3B C0 00 00 */	li r30, 0
 /* 802B2218 0027B7D8  80 07 00 00 */	lwz r0, 0(r7)
-/* 802B221C 0027B7DC  38 84 E5 38 */	addi r4, r4, __vt__CMenuGameClear@l
+/* 802B221C 0027B7DC  38 84 E5 38 */	addi r4, r4, __vt__14CMenuGameClear@l
 /* 802B2220 0027B7E0  90 1D 00 3C */	stw r0, 0x3c(r29)
 /* 802B2224 0027B7E4  38 04 00 24 */	addi r0, r4, 0x24
 /* 802B2228 0027B7E8  38 7D 00 60 */	addi r3, r29, 0x60
@@ -1689,8 +1689,8 @@
 
 .balign 8
 
-.obj __vt__CMenuGameClear, global
-	.4byte __RTTI__CMenuGameClear
+.obj __vt__14CMenuGameClear, global
+	.4byte __RTTI__14CMenuGameClear
 	.4byte 0
 	.4byte __dt__CMenuGameClear
 	.4byte CChildListNode_Reset
@@ -1699,25 +1699,25 @@
 	.4byte func_802B1440
 	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuGameClear
+	.4byte __RTTI__14CMenuGameClear
 	.4byte 0xFFFFFFA8
 	.4byte func_802B2624
 	.4byte func_802B261C
 	.4byte func_802B2104
-.endobj __vt__CMenuGameClear
+.endobj __vt__14CMenuGameClear
 
 .obj CMenuGameClear_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000058
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUICf
+	.4byte "__RTTI__14CTTask<5IUICf>"
 	.4byte 0
-	.4byte __RTTI__IUICf
+	.4byte __RTTI__5IUICf
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1727,10 +1727,10 @@
 
 .balign 8
 
-.obj __RTTI__CMenuGameClear, global
+.obj __RTTI__14CMenuGameClear, global
 	.4byte CMenuGameClear_typestr
 	.4byte CMenuGameClear_hierarchy
-.endobj __RTTI__CMenuGameClear
+.endobj __RTTI__14CMenuGameClear
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

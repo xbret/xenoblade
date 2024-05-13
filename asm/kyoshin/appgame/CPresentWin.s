@@ -3,9 +3,9 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .fn __ct__CPresentWin, global
-/* 8022D56C 001F6B2C  3C A0 80 54 */	lis r5, __vt__CPresentWin@ha
+/* 8022D56C 001F6B2C  3C A0 80 54 */	lis r5, __vt__11CPresentWin@ha
 /* 8022D570 001F6B30  38 80 00 00 */	li r4, 0
-/* 8022D574 001F6B34  38 A5 9E 90 */	addi r5, r5, __vt__CPresentWin@l
+/* 8022D574 001F6B34  38 A5 9E 90 */	addi r5, r5, __vt__11CPresentWin@l
 /* 8022D578 001F6B38  38 00 00 01 */	li r0, 1
 /* 8022D57C 001F6B3C  90 A3 00 00 */	stw r5, 0(r3)
 /* 8022D580 001F6B40  90 83 00 04 */	stw r4, 4(r3)
@@ -1417,8 +1417,8 @@
 
 .balign 8
 
-.obj __vt__CPresentWin, global
-	.4byte __RTTI__CPresentWin
+.obj __vt__11CPresentWin, global
+	.4byte __RTTI__11CPresentWin
 	.4byte 0
 	.4byte __dt__CPresentWin
 	.4byte IWorkEvent_WorkEvent1
@@ -1452,10 +1452,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CPresentWin
+.endobj __vt__11CPresentWin
 
 .obj CPresentWin_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1465,10 +1465,10 @@
 
 .balign 8
 
-.obj __RTTI__CPresentWin, global
+.obj __RTTI__11CPresentWin, global
 	.4byte CPresentWin_typestr
 	.4byte CPresentWin_hierarchy
-.endobj __RTTI__CPresentWin
+.endobj __RTTI__11CPresentWin
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

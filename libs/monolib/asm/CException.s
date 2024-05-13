@@ -11,10 +11,10 @@
 /* 80457BB0 00421170  7C 7F 1B 78 */	mr r31, r3
 /* 80457BB4 00421174  4B FE 10 7D */	bl __ct__CProc
 /* 80457BB8 00421178  C0 02 C8 C0 */	lfs f0, float_8066CC40@sda21(r2)
-/* 80457BBC 0042117C  3C 60 80 57 */	lis r3, __vt__CException@ha
+/* 80457BBC 0042117C  3C 60 80 57 */	lis r3, __vt__10CException@ha
 /* 80457BC0 00421180  38 A0 00 00 */	li r5, 0
 /* 80457BC4 00421184  38 C0 FF FF */	li r6, -1
-/* 80457BC8 00421188  38 63 05 28 */	addi r3, r3, __vt__CException@l
+/* 80457BC8 00421188  38 63 05 28 */	addi r3, r3, __vt__10CException@l
 /* 80457BCC 0042118C  38 80 00 05 */	li r4, 5
 /* 80457BD0 00421190  38 00 00 19 */	li r0, 0x19
 /* 80457BD4 00421194  90 7F 00 00 */	stw r3, 0(r31)
@@ -1747,8 +1747,8 @@
 
 .balign 8
 
-.obj __vt__CException, global
-	.4byte __RTTI__CException
+.obj __vt__10CException, global
+	.4byte __RTTI__10CException
 	.4byte 0
 	.4byte __dt__CException
 	.4byte IWorkEvent_WorkEvent1
@@ -1788,14 +1788,14 @@
 	.4byte CException_WorkThreadEvent4
 	.4byte CException_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-.endobj __vt__CException
+.endobj __vt__10CException
 
 .obj CException_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
-	.4byte __RTTI__CProc
+	.4byte __RTTI__5CProc
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1806,10 +1806,10 @@
 
 .balign 8
 
-.obj __RTTI__CException, global
+.obj __RTTI__10CException, global
 	.4byte CException_typestr
 	.4byte CException_hierarchy
-.endobj __RTTI__CException
+.endobj __RTTI__10CException
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

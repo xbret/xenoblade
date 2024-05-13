@@ -12,9 +12,9 @@
 /* 80164138 0012D6F8  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8016413C 0012D6FC  7C 9D 23 78 */	mr r29, r4
 /* 80164140 0012D700  48 2E 08 D9 */	bl __ct__8CProcessFv
-/* 80164144 0012D704  3C 60 80 53 */	lis r3, __vt__CTTask_cf_CTaskREvent@ha
+/* 80164144 0012D704  3C 60 80 53 */	lis r3, "__vt__26CTTask<Q22cf11CTaskREvent>"@ha
 /* 80164148 0012D708  3C A0 80 51 */	lis r5, __ptmf_null@ha
-/* 8016414C 0012D70C  38 63 40 78 */	addi r3, r3, __vt__CTTask_cf_CTaskREvent@l
+/* 8016414C 0012D70C  38 63 40 78 */	addi r3, r3, "__vt__26CTTask<Q22cf11CTaskREvent>"@l
 /* 80164150 0012D710  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 80164154 0012D714  38 7F 00 54 */	addi r3, r31, 0x54
 /* 80164158 0012D718  84 85 CE 10 */	lwzu r4, __ptmf_null@l(r5)
@@ -30,9 +30,9 @@
 /* 80164180 0012D740  80 05 00 08 */	lwz r0, 8(r5)
 /* 80164184 0012D744  90 1F 00 50 */	stw r0, 0x50(r31)
 /* 80164188 0012D748  48 2E 4D B9 */	bl __ct__CDeviceVICb
-/* 8016418C 0012D74C  3C E0 80 53 */	lis r7, __vt__cf_CTaskREvent@ha
+/* 8016418C 0012D74C  3C E0 80 53 */	lis r7, __vt__Q22cf11CTaskREvent@ha
 /* 80164190 0012D750  3B C0 00 00 */	li r30, 0
-/* 80164194 0012D754  38 E7 3F 60 */	addi r7, r7, __vt__cf_CTaskREvent@l
+/* 80164194 0012D754  38 E7 3F 60 */	addi r7, r7, __vt__Q22cf11CTaskREvent@l
 /* 80164198 0012D758  90 FF 00 10 */	stw r7, 0x10(r31)
 /* 8016419C 0012D75C  38 C7 00 24 */	addi r6, r7, 0x24
 /* 801641A0 0012D760  38 7F 00 70 */	addi r3, r31, 0x70
@@ -146,9 +146,9 @@
 /* 8016432C 0012D8EC  93 C1 00 08 */	stw r30, 8(r1)
 /* 80164330 0012D8F0  7C 7E 1B 78 */	mr r30, r3
 /* 80164334 0012D8F4  41 82 00 C0 */	beq .L_801643F4
-/* 80164338 0012D8F8  3D 00 80 53 */	lis r8, __vt__cf_CTaskREvent@ha
+/* 80164338 0012D8F8  3D 00 80 53 */	lis r8, __vt__Q22cf11CTaskREvent@ha
 /* 8016433C 0012D8FC  7F C4 F3 78 */	mr r4, r30
-/* 80164340 0012D900  39 08 3F 60 */	addi r8, r8, __vt__cf_CTaskREvent@l
+/* 80164340 0012D900  39 08 3F 60 */	addi r8, r8, __vt__Q22cf11CTaskREvent@l
 /* 80164344 0012D904  91 03 00 10 */	stw r8, 0x10(r3)
 /* 80164348 0012D908  38 E8 00 24 */	addi r7, r8, 0x24
 /* 8016434C 0012D90C  38 C8 00 3C */	addi r6, r8, 0x3c
@@ -4245,8 +4245,8 @@
 .endobj lbl_80533EE0
 
 
-.obj __vt__cf_CTaskREvent, global
-	.4byte __RTTI__cf_CTaskREvent
+.obj __vt__Q22cf11CTaskREvent, global
+	.4byte __RTTI__Q22cf11CTaskREvent
 	.4byte 0
 	.4byte __dt__cf_CTaskREvent
 	.4byte CChildListNode_Reset
@@ -4255,21 +4255,21 @@
 	.4byte func_80165188
 	.4byte func_80165DB8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__cf_CTaskREvent
+	.4byte __RTTI__Q22cf11CTaskREvent
 	.4byte 0xFFFFFFAC
 	.4byte func_801666CC
 	.4byte func_80166630
 	.4byte func_8016662C
 	.4byte func_801666C4
-	.4byte __RTTI__cf_CTaskREvent
+	.4byte __RTTI__Q22cf11CTaskREvent
 	.4byte 0xFFFFFFA8
 	.4byte func_801666DC
 	.4byte func_801666D4
-	.4byte __RTTI__cf_CTaskREvent
+	.4byte __RTTI__Q22cf11CTaskREvent
 	.4byte 0xFFFFFFA4
 	.4byte func_801666EC
 	.4byte func_801666E4
-	.4byte __RTTI__cf_CTaskREvent
+	.4byte __RTTI__Q22cf11CTaskREvent
 	.4byte 0xFFFFFFA0
 	.4byte func_801666FC
 	.4byte IWorkEvent_WorkEvent1
@@ -4307,23 +4307,23 @@
 	.4byte func_801644D8
 	.4byte func_80166250
 	.4byte func_801662E8
-.endobj __vt__cf_CTaskREvent
+.endobj __vt__Q22cf11CTaskREvent
 
 .obj cf_CTaskREvent_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_cf_CTaskREvent
+	.4byte "__RTTI__26CTTask<Q22cf11CTaskREvent>"
 	.4byte 0
 	.4byte 0
 .endobj cf_CTaskREvent_hierarchy
 
 
-.obj __vt__CTTask_cf_CTaskREvent, global
-	.4byte __RTTI__CTTask_cf_CTaskREvent
+.obj "__vt__26CTTask<Q22cf11CTaskREvent>", global
+	.4byte "__RTTI__26CTTask<Q22cf11CTaskREvent>"
 	.4byte 0
 	.4byte __dt__CTTask_cf_CTaskREvent
 	.4byte CChildListNode_Reset
@@ -4332,16 +4332,14 @@
 	.4byte func_80166634
 	.4byte func_8016667C
 	.4byte CProcess_func_80043F20
-.endobj __vt__CTTask_cf_CTaskREvent
+.endobj "__vt__26CTTask<Q22cf11CTaskREvent>"
 
 .obj CTTask_cf_CTaskREvent_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
-	.4byte 0
-	.4byte 0
+	.4byte __RTTI__8CProcess
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -4384,12 +4382,14 @@
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte __RTTI__CDoubleListNode
-	.4byte 0
-	.4byte __RTTI__CChildListNode
 	.4byte 0
 	.4byte 0
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__14CChildListNode
+	.4byte 0
+	.4byte 0
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
 	.4byte 0
 .endobj CTTask_cf_CTaskREvent_hierarchy
@@ -4408,15 +4408,15 @@
 	.4byte 0x00000064
 .endobj lbl_80664C7C
 
-.obj __RTTI__cf_CTaskREvent, global
+.obj __RTTI__Q22cf11CTaskREvent, global
 	.4byte cf_CTaskREvent_typestr
 	.4byte cf_CTaskREvent_hierarchy
-.endobj __RTTI__cf_CTaskREvent
+.endobj __RTTI__Q22cf11CTaskREvent
 
-.obj __RTTI__CTTask_cf_CTaskREvent, global
+.obj "__RTTI__26CTTask<Q22cf11CTaskREvent>", global
 	.4byte CTTask_cf_CTaskREvent_typestr
 	.4byte CTTask_cf_CTaskREvent_hierarchy
-.endobj __RTTI__CTTask_cf_CTaskREvent
+.endobj "__RTTI__26CTTask<Q22cf11CTaskREvent>"
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

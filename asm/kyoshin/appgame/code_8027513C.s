@@ -10,27 +10,27 @@
 /* 8027514C 0023E70C  88 0D B0 58 */	lbz r0, lbl_806671D8@sda21(r13)
 /* 80275150 0023E710  7C 00 07 75 */	extsb. r0, r0
 /* 80275154 0023E714  40 82 00 18 */	bne .L_8027516C
-/* 80275158 0023E718  3C 60 80 54 */	lis r3, __vt__cf_ICamControlRemote@ha
+/* 80275158 0023E718  3C 60 80 54 */	lis r3, __vt__Q22cf17ICamControlRemote@ha
 /* 8027515C 0023E71C  38 00 00 01 */	li r0, 1
-/* 80275160 0023E720  38 63 B7 10 */	addi r3, r3, __vt__cf_ICamControlRemote@l
+/* 80275160 0023E720  38 63 B7 10 */	addi r3, r3, __vt__Q22cf17ICamControlRemote@l
 /* 80275164 0023E724  90 6D B0 5C */	stw r3, lbl_806671DC@sda21(r13)
 /* 80275168 0023E728  98 0D B0 58 */	stb r0, lbl_806671D8@sda21(r13)
 .L_8027516C:
 /* 8027516C 0023E72C  88 0D B0 60 */	lbz r0, lbl_806671E0@sda21(r13)
 /* 80275170 0023E730  7C 00 07 75 */	extsb. r0, r0
 /* 80275174 0023E734  40 82 00 18 */	bne .L_8027518C
-/* 80275178 0023E738  3C 60 80 54 */	lis r3, __vt__cf_ICamControlClassic@ha
+/* 80275178 0023E738  3C 60 80 54 */	lis r3, __vt__Q22cf18ICamControlClassic@ha
 /* 8027517C 0023E73C  38 00 00 01 */	li r0, 1
-/* 80275180 0023E740  38 63 B6 88 */	addi r3, r3, __vt__cf_ICamControlClassic@l
+/* 80275180 0023E740  38 63 B6 88 */	addi r3, r3, __vt__Q22cf18ICamControlClassic@l
 /* 80275184 0023E744  90 6D B0 64 */	stw r3, lbl_806671E4@sda21(r13)
 /* 80275188 0023E748  98 0D B0 60 */	stb r0, lbl_806671E0@sda21(r13)
 .L_8027518C:
 /* 8027518C 0023E74C  88 0D B0 68 */	lbz r0, lbl_806671E8@sda21(r13)
 /* 80275190 0023E750  7C 00 07 75 */	extsb. r0, r0
 /* 80275194 0023E754  40 82 00 18 */	bne .L_802751AC
-/* 80275198 0023E758  3C 60 80 54 */	lis r3, __vt__cf_ICamControlGc@ha
+/* 80275198 0023E758  3C 60 80 54 */	lis r3, __vt__Q22cf13ICamControlGc@ha
 /* 8027519C 0023E75C  38 00 00 01 */	li r0, 1
-/* 802751A0 0023E760  38 63 B6 C8 */	addi r3, r3, __vt__cf_ICamControlGc@l
+/* 802751A0 0023E760  38 63 B6 C8 */	addi r3, r3, __vt__Q22cf13ICamControlGc@l
 /* 802751A4 0023E764  90 6D B0 6C */	stw r3, lbl_806671EC@sda21(r13)
 /* 802751A8 0023E768  98 0D B0 68 */	stb r0, lbl_806671E8@sda21(r13)
 .L_802751AC:
@@ -677,8 +677,8 @@
 .endobj lbl_8053B678
 
 
-.obj __vt__cf_ICamControlClassic, global
-	.4byte __RTTI__cf_ICamControlClassic
+.obj __vt__Q22cf18ICamControlClassic, global
+	.4byte __RTTI__Q22cf18ICamControlClassic
 	.4byte 0
 	.4byte func_80274EA8
 	.4byte func_80274EB0
@@ -690,18 +690,18 @@
 	.4byte func_8027505C
 	.4byte func_80275090
 	.4byte func_802750C4
-.endobj __vt__cf_ICamControlClassic
+.endobj __vt__Q22cf18ICamControlClassic
 
 .obj cf_ICamControlClassic_hierarchy, global
-	.4byte __RTTI__cf_ICamControl
+	.4byte __RTTI__Q22cf11ICamControl
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj cf_ICamControlClassic_hierarchy
 
 
-.obj __vt__cf_ICamControlGc, global
-	.4byte __RTTI__cf_ICamControlGc
+.obj __vt__Q22cf13ICamControlGc, global
+	.4byte __RTTI__Q22cf13ICamControlGc
 	.4byte 0
 	.4byte func_80274B28
 	.4byte func_80274C20
@@ -713,20 +713,20 @@
 	.4byte func_80274E40
 	.4byte func_80274E74
 	.4byte func_80274DA4
-.endobj __vt__cf_ICamControlGc
+.endobj __vt__Q22cf13ICamControlGc
 
 .obj cf_ICamControlGc_hierarchy, global
-	.4byte __RTTI__cf_ICamControl
+	.4byte __RTTI__Q22cf11ICamControl
 	.4byte 0
-	.4byte __RTTI__cf_ICamControlRemote
+	.4byte __RTTI__Q22cf17ICamControlRemote
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj cf_ICamControlGc_hierarchy
 
 
-.obj __vt__cf_ICamControlRemote, global
-	.4byte __RTTI__cf_ICamControlRemote
+.obj __vt__Q22cf17ICamControlRemote, global
+	.4byte __RTTI__Q22cf17ICamControlRemote
 	.4byte 0
 	.4byte func_80274B28
 	.4byte func_80274C20
@@ -738,10 +738,10 @@
 	.4byte func_80274D3C
 	.4byte func_80274D70
 	.4byte func_80274DA4
-.endobj __vt__cf_ICamControlRemote
+.endobj __vt__Q22cf17ICamControlRemote
 
 .obj cf_ICamControlRemote_hierarchy, global
-	.4byte __RTTI__cf_ICamControl
+	.4byte __RTTI__Q22cf11ICamControl
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -758,8 +758,8 @@
 .endobj lbl_8053B750
 
 
-.obj __vt__cf_CfObjectImplTbox, global
-	.4byte __RTTI__cf_CfObjectImplTbox
+.obj __vt__Q22cf16CfObjectImplTbox, global
+	.4byte __RTTI__Q22cf16CfObjectImplTbox
 	.4byte 0
 	.4byte __dt__cf_CfObjectImplTbox
 	.4byte func_80054A20
@@ -804,11 +804,11 @@
 	.4byte func_800C596C
 	.4byte func_80275824
 	.4byte func_800CAB00
-	.4byte __RTTI__cf_CfObjectImplTbox
+	.4byte __RTTI__Q22cf16CfObjectImplTbox
 	.4byte 0xFFFFFFF4
 	.4byte func_802759B0
 	.4byte func_800CA6CC
-	.4byte __RTTI__cf_CfObjectImplTbox
+	.4byte __RTTI__Q22cf16CfObjectImplTbox
 	.4byte 0xFFFFFFF0
 	.4byte func_802759C0
 	.4byte func_802759B8
@@ -819,16 +819,16 @@
 	.4byte func_802759A8
 	.4byte func_800CEE28
 	.4byte func_8027594C
-.endobj __vt__cf_CfObjectImplTbox
+.endobj __vt__Q22cf16CfObjectImplTbox
 
 .obj cf_CfObjectImplTbox_hierarchy, global
-	.4byte __RTTI__cf_IObjectInfo
+	.4byte __RTTI__Q22cf11IObjectInfo
 	.4byte 0x00000010
-	.4byte __RTTI__IActParamEvent
+	.4byte __RTTI__14IActParamEvent
 	.4byte 0
-	.4byte __RTTI__cf_CfObjectImpl
+	.4byte __RTTI__Q22cf8CfObjectImpl
 	.4byte 0
-	.4byte __RTTI__cf_CfObjectImplMove
+	.4byte __RTTI__Q22cf16CfObjectImplMove
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -838,30 +838,30 @@
 
 .balign 8
 
-.obj __RTTI__cf_ICamControlClassic, global
+.obj __RTTI__Q22cf18ICamControlClassic, global
 	.4byte cf_ICamControlClassic_typestr
 	.4byte cf_ICamControlClassic_hierarchy
-.endobj __RTTI__cf_ICamControlClassic
+.endobj __RTTI__Q22cf18ICamControlClassic
 
-.obj __RTTI__cf_ICamControlGc, global
+.obj __RTTI__Q22cf13ICamControlGc, global
 	.4byte cf_ICamControlGc_typestr
 	.4byte cf_ICamControlGc_hierarchy
-.endobj __RTTI__cf_ICamControlGc
+.endobj __RTTI__Q22cf13ICamControlGc
 
-.obj __RTTI__cf_ICamControlRemote, global
+.obj __RTTI__Q22cf17ICamControlRemote, global
 	.4byte cf_ICamControlRemote_typestr
 	.4byte cf_ICamControlRemote_hierarchy
-.endobj __RTTI__cf_ICamControlRemote
+.endobj __RTTI__Q22cf17ICamControlRemote
 
-.obj __RTTI__cf_ICamControl, global
+.obj __RTTI__Q22cf11ICamControl, global
 	.4byte cf_ICamControl_typestr
 	.4byte 0
-.endobj __RTTI__cf_ICamControl
+.endobj __RTTI__Q22cf11ICamControl
 
-.obj __RTTI__cf_CfObjectImplTbox, global
+.obj __RTTI__Q22cf16CfObjectImplTbox, global
 	.4byte cf_CfObjectImplTbox_typestr
 	.4byte cf_CfObjectImplTbox_hierarchy
-.endobj __RTTI__cf_CfObjectImplTbox
+.endobj __RTTI__Q22cf16CfObjectImplTbox
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

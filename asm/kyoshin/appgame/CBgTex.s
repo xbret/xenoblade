@@ -5,9 +5,9 @@
 .fn __ct__CBgTex, global
 /* 801C3974 0018CF34  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801C3978 0018CF38  7C 08 02 A6 */	mflr r0
-/* 801C397C 0018CF3C  3C A0 80 53 */	lis r5, __vt__CBgTex@ha
+/* 801C397C 0018CF3C  3C A0 80 53 */	lis r5, __vt__6CBgTex@ha
 /* 801C3980 0018CF40  90 01 00 14 */	stw r0, 0x14(r1)
-/* 801C3984 0018CF44  38 A5 75 80 */	addi r5, r5, __vt__CBgTex@l
+/* 801C3984 0018CF44  38 A5 75 80 */	addi r5, r5, __vt__6CBgTex@l
 /* 801C3988 0018CF48  BF C1 00 08 */	stmw r30, 8(r1)
 /* 801C398C 0018CF4C  7C 7E 1B 78 */	mr r30, r3
 /* 801C3990 0018CF50  7C 9F 23 78 */	mr r31, r4
@@ -431,8 +431,8 @@
 
 .balign 8
 
-.obj __vt__CBgTex, global
-	.4byte __RTTI__CBgTex
+.obj __vt__6CBgTex, global
+	.4byte __RTTI__6CBgTex
 	.4byte 0
 	.4byte __dt__CBgTex
 	.4byte IWorkEvent_WorkEvent1
@@ -466,10 +466,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CBgTex
+.endobj __vt__6CBgTex
 
 .obj CBgTex_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -479,10 +479,10 @@
 
 .balign 8
 
-.obj __RTTI__CBgTex, global
+.obj __RTTI__6CBgTex, global
 	.4byte CBgTex_typestr
 	.4byte CBgTex_hierarchy
-.endobj __RTTI__CBgTex
+.endobj __RTTI__6CBgTex
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

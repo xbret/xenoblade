@@ -9,12 +9,12 @@
 /* 8023BCFC 002052BC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8023BD00 002052C0  7C 7F 1B 78 */	mr r31, r3
 /* 8023BD04 002052C4  48 20 8D 15 */	bl __ct__8CProcessFv
-/* 8023BD08 002052C8  3C 60 80 54 */	lis r3, __vt__CTTask_cf_CfNandManager@ha
-/* 8023BD0C 002052CC  3C C0 80 54 */	lis r6, __vt__cf_CfNandManager@ha
-/* 8023BD10 002052D0  38 63 A4 6C */	addi r3, r3, __vt__CTTask_cf_CfNandManager@l
+/* 8023BD08 002052C8  3C 60 80 54 */	lis r3, "__vt__28CTTask<Q22cf13CfNandManager>"@ha
+/* 8023BD0C 002052CC  3C C0 80 54 */	lis r6, __vt__Q22cf13CfNandManager@ha
+/* 8023BD10 002052D0  38 63 A4 6C */	addi r3, r3, "__vt__28CTTask<Q22cf13CfNandManager>"@l
 /* 8023BD14 002052D4  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 8023BD18 002052D8  3D 20 80 51 */	lis r9, __ptmf_null@ha
-/* 8023BD1C 002052DC  38 C6 A3 74 */	addi r6, r6, __vt__cf_CfNandManager@l
+/* 8023BD1C 002052DC  38 C6 A3 74 */	addi r6, r6, __vt__Q22cf13CfNandManager@l
 /* 8023BD20 002052E0  84 69 CE 10 */	lwzu r3, __ptmf_null@l(r9)
 /* 8023BD24 002052E4  38 9F 01 60 */	addi r4, r31, 0x160
 /* 8023BD28 002052E8  39 5F 00 70 */	addi r10, r31, 0x70
@@ -231,8 +231,8 @@
 /* 8023C030 002055F0  93 C1 00 08 */	stw r30, 8(r1)
 /* 8023C034 002055F4  7C 7E 1B 78 */	mr r30, r3
 /* 8023C038 002055F8  41 82 00 A8 */	beq .L_8023C0E0
-/* 8023C03C 002055FC  3C A0 80 54 */	lis r5, __vt__cf_CfNandManager@ha
-/* 8023C040 00205600  38 A5 A3 74 */	addi r5, r5, __vt__cf_CfNandManager@l
+/* 8023C03C 002055FC  3C A0 80 54 */	lis r5, __vt__Q22cf13CfNandManager@ha
+/* 8023C040 00205600  38 A5 A3 74 */	addi r5, r5, __vt__Q22cf13CfNandManager@l
 /* 8023C044 00205604  90 A3 00 10 */	stw r5, 0x10(r3)
 /* 8023C048 00205608  38 85 00 24 */	addi r4, r5, 0x24
 /* 8023C04C 0020560C  38 05 00 AC */	addi r0, r5, 0xac
@@ -5210,8 +5210,8 @@
 .endobj jumptable_8053A2E4
 
 
-.obj __vt__cf_CfNandManager, global
-	.4byte __RTTI__cf_CfNandManager
+.obj __vt__Q22cf13CfNandManager, global
+	.4byte __RTTI__Q22cf13CfNandManager
 	.4byte 0
 	.4byte __dt__cf_CfNandManager
 	.4byte CChildListNode_Reset
@@ -5220,7 +5220,7 @@
 	.4byte func_8023C154
 	.4byte func_802405A8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__cf_CfNandManager
+	.4byte __RTTI__Q22cf13CfNandManager
 	.4byte 0xFFFFFFAC
 	.4byte func_802405FC
 	.4byte IWorkEvent_WorkEvent1
@@ -5254,33 +5254,33 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__cf_CfNandManager
+	.4byte __RTTI__Q22cf13CfNandManager
 	.4byte 0xFFFFFFA8
 	.4byte func_8024060C
 	.4byte func_80240604
 	.4byte __dt__8023E4D4
 	.4byte func_8024047C
-.endobj __vt__cf_CfNandManager
+.endobj __vt__Q22cf13CfNandManager
 
 .obj cf_CfNandManager_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000058
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x00000054
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_cf_CfNandManager
+	.4byte "__RTTI__28CTTask<Q22cf13CfNandManager>"
 	.4byte 0
 	.4byte 0
 .endobj cf_CfNandManager_hierarchy
 
 
-.obj __vt__CTTask_cf_CfNandManager, global
-	.4byte __RTTI__CTTask_cf_CfNandManager
+.obj "__vt__28CTTask<Q22cf13CfNandManager>", global
+	.4byte "__RTTI__28CTTask<Q22cf13CfNandManager>"
 	.4byte 0
 	.4byte __dt__CTTask_cf_CfNandManager
 	.4byte CChildListNode_Reset
@@ -5289,14 +5289,14 @@
 	.4byte func_80240560
 	.4byte func_802405A8
 	.4byte CProcess_func_80043F20
-.endobj __vt__CTTask_cf_CfNandManager
+.endobj "__vt__28CTTask<Q22cf13CfNandManager>"
 
 .obj CTTask_cf_CfNandManager_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -5311,15 +5311,15 @@
 	.4byte 0
 .endobj lbl_806651B8
 
-.obj __RTTI__cf_CfNandManager, global
+.obj __RTTI__Q22cf13CfNandManager, global
 	.4byte cf_CfNandManager_typestr
 	.4byte cf_CfNandManager_hierarchy
-.endobj __RTTI__cf_CfNandManager
+.endobj __RTTI__Q22cf13CfNandManager
 
-.obj __RTTI__CTTask_cf_CfNandManager, global
+.obj "__RTTI__28CTTask<Q22cf13CfNandManager>", global
 	.4byte CTTask_cf_CfNandManager_typestr
 	.4byte CTTask_cf_CfNandManager_hierarchy
-.endobj __RTTI__CTTask_cf_CfNandManager
+.endobj "__RTTI__28CTTask<Q22cf13CfNandManager>"
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

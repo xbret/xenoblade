@@ -10,9 +10,9 @@
 /* 801A30E8 0016C6A8  DB E1 00 40 */	stfd f31, 0x40(r1)
 /* 801A30EC 0016C6AC  F3 E1 00 48 */	psq_st f31, 72(r1), 0, qr0
 /* 801A30F0 0016C6B0  48 11 70 5D */	bl _savegpr_25
-/* 801A30F4 0016C6B4  3C 80 80 53 */	lis r4, __vt__cf_CVision@ha
+/* 801A30F4 0016C6B4  3C 80 80 53 */	lis r4, __vt__Q22cf7CVision@ha
 /* 801A30F8 0016C6B8  C3 E2 A2 14 */	lfs f31, float_8066A594@sda21(r2)
-/* 801A30FC 0016C6BC  38 84 6A 88 */	addi r4, r4, __vt__cf_CVision@l
+/* 801A30FC 0016C6BC  38 84 6A 88 */	addi r4, r4, __vt__Q22cf7CVision@l
 /* 801A3100 0016C6C0  90 83 00 00 */	stw r4, 0(r3)
 /* 801A3104 0016C6C4  7C 7F 1B 78 */	mr r31, r3
 /* 801A3108 0016C6C8  3B 43 00 04 */	addi r26, r3, 4
@@ -202,9 +202,9 @@
 /* 801A33BC 0016C97C  DB E1 00 20 */	stfd f31, 0x20(r1)
 /* 801A33C0 0016C980  F3 E1 00 28 */	psq_st f31, 40(r1), 0, qr0
 /* 801A33C4 0016C984  48 11 6D 91 */	bl _savegpr_27
-/* 801A33C8 0016C988  3C 80 80 53 */	lis r4, __vt__cf_CObjectState@ha
+/* 801A33C8 0016C988  3C 80 80 53 */	lis r4, __vt__Q22cf12CObjectState@ha
 /* 801A33CC 0016C98C  38 00 00 00 */	li r0, 0
-/* 801A33D0 0016C990  38 84 B9 0C */	addi r4, r4, __vt__cf_CObjectState@l
+/* 801A33D0 0016C990  38 84 B9 0C */	addi r4, r4, __vt__Q22cf12CObjectState@l
 /* 801A33D4 0016C994  90 83 00 00 */	stw r4, 0(r3)
 /* 801A33D8 0016C998  7C 7F 1B 78 */	mr r31, r3
 /* 801A33DC 0016C99C  90 03 00 04 */	stw r0, 4(r3)
@@ -232,9 +232,9 @@
 /* 801A3430 0016C9F0  41 80 FF E8 */	blt .L_801A3418
 /* 801A3434 0016C9F4  38 7F 2C C8 */	addi r3, r31, 0x2cc8
 /* 801A3438 0016C9F8  4B FB 07 B5 */	bl __ct__cf__sArtsSet
-/* 801A343C 0016C9FC  3C 60 80 53 */	lis r3, __vt__cf_CArtsSet@ha
+/* 801A343C 0016C9FC  3C 60 80 53 */	lis r3, __vt__Q22cf8CArtsSet@ha
 /* 801A3440 0016CA00  3B 7F 2D 00 */	addi r27, r31, 0x2d00
-/* 801A3444 0016CA04  38 63 2D 90 */	addi r3, r3, __vt__cf_CArtsSet@l
+/* 801A3444 0016CA04  38 63 2D 90 */	addi r3, r3, __vt__Q22cf8CArtsSet@l
 /* 801A3448 0016CA08  90 7F 2C FC */	stw r3, 0x2cfc(r31)
 /* 801A344C 0016CA0C  3B 9F 3A 20 */	addi r28, r31, 0x3a20
 .L_801A3450:
@@ -243,9 +243,9 @@
 /* 801A3458 0016CA18  3B 7B 00 8C */	addi r27, r27, 0x8c
 /* 801A345C 0016CA1C  7C 1B E0 40 */	cmplw r27, r28
 /* 801A3460 0016CA20  41 80 FF F0 */	blt .L_801A3450
-/* 801A3464 0016CA24  3C 60 80 53 */	lis r3, __vt__cf_CAttackSet@ha
+/* 801A3464 0016CA24  3C 60 80 53 */	lis r3, __vt__Q22cf10CAttackSet@ha
 /* 801A3468 0016CA28  3B 7F 3A 30 */	addi r27, r31, 0x3a30
-/* 801A346C 0016CA2C  38 63 2D 78 */	addi r3, r3, __vt__cf_CAttackSet@l
+/* 801A346C 0016CA2C  38 63 2D 78 */	addi r3, r3, __vt__Q22cf10CAttackSet@l
 /* 801A3470 0016CA30  90 7F 3A 2C */	stw r3, 0x3a2c(r31)
 /* 801A3474 0016CA34  3B 9F 3D 60 */	addi r28, r31, 0x3d60
 .L_801A3478:
@@ -467,8 +467,8 @@
 /* 801A378C 0016CD4C  93 C1 00 08 */	stw r30, 8(r1)
 /* 801A3790 0016CD50  7C 7E 1B 78 */	mr r30, r3
 /* 801A3794 0016CD54  41 82 00 5C */	beq .L_801A37F0
-/* 801A3798 0016CD58  3D 80 80 53 */	lis r12, __vt__cf_CVision@ha
-/* 801A379C 0016CD5C  39 8C 6A 88 */	addi r12, r12, __vt__cf_CVision@l
+/* 801A3798 0016CD58  3D 80 80 53 */	lis r12, __vt__Q22cf7CVision@ha
+/* 801A379C 0016CD5C  39 8C 6A 88 */	addi r12, r12, __vt__Q22cf7CVision@l
 /* 801A37A0 0016CD60  91 83 00 00 */	stw r12, 0(r3)
 /* 801A37A4 0016CD64  81 8C 00 34 */	lwz r12, 0x34(r12)
 /* 801A37A8 0016CD68  7D 89 03 A6 */	mtctr r12
@@ -1316,8 +1316,8 @@
 /* 801A43D4 0016D994  7F 64 DB 78 */	mr r4, r27
 /* 801A43D8 0016D998  4B F5 2A D5 */	bl func_800F6EAC
 /* 801A43DC 0016D99C  38 80 00 00 */	li r4, 0
-/* 801A43E0 0016D9A0  38 AD 80 68 */	addi r5, r13, __RTTI__cf_CfObjectModel@sda21
-/* 801A43E4 0016D9A4  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
+/* 801A43E0 0016D9A0  38 AD 80 68 */	addi r5, r13, __RTTI__Q22cf13CfObjectModel@sda21
+/* 801A43E4 0016D9A4  38 CD 80 70 */	addi r6, r13, __RTTI__Q22cf8CfObject@sda21
 /* 801A43E8 0016D9A8  38 E0 00 00 */	li r7, 0
 /* 801A43EC 0016D9AC  48 11 59 99 */	bl __dynamic_cast
 /* 801A43F0 0016D9B0  2C 03 00 00 */	cmpwi r3, 0
@@ -1764,8 +1764,8 @@
 /* 801A4A24 0016DFE4  7F 64 DB 78 */	mr r4, r27
 /* 801A4A28 0016DFE8  4B F5 24 85 */	bl func_800F6EAC
 /* 801A4A2C 0016DFEC  38 80 00 00 */	li r4, 0
-/* 801A4A30 0016DFF0  38 AD 80 68 */	addi r5, r13, __RTTI__cf_CfObjectModel@sda21
-/* 801A4A34 0016DFF4  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
+/* 801A4A30 0016DFF0  38 AD 80 68 */	addi r5, r13, __RTTI__Q22cf13CfObjectModel@sda21
+/* 801A4A34 0016DFF4  38 CD 80 70 */	addi r6, r13, __RTTI__Q22cf8CfObject@sda21
 /* 801A4A38 0016DFF8  38 E0 00 00 */	li r7, 0
 /* 801A4A3C 0016DFFC  48 11 53 49 */	bl __dynamic_cast
 /* 801A4A40 0016E000  2C 03 00 00 */	cmpwi r3, 0
@@ -3429,8 +3429,8 @@
 /* 801A61BC 0016F77C  7F E4 FB 78 */	mr r4, r31
 /* 801A61C0 0016F780  4B F5 0C ED */	bl func_800F6EAC
 /* 801A61C4 0016F784  38 80 00 00 */	li r4, 0
-/* 801A61C8 0016F788  38 AD 80 68 */	addi r5, r13, __RTTI__cf_CfObjectModel@sda21
-/* 801A61CC 0016F78C  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
+/* 801A61C8 0016F788  38 AD 80 68 */	addi r5, r13, __RTTI__Q22cf13CfObjectModel@sda21
+/* 801A61CC 0016F78C  38 CD 80 70 */	addi r6, r13, __RTTI__Q22cf8CfObject@sda21
 /* 801A61D0 0016F790  38 E0 00 00 */	li r7, 0
 /* 801A61D4 0016F794  48 11 3B B1 */	bl __dynamic_cast
 /* 801A61D8 0016F798  2C 03 00 00 */	cmpwi r3, 0
@@ -4680,8 +4680,8 @@
 /* 801A7374 00170934  7F 24 CB 78 */	mr r4, r25
 /* 801A7378 00170938  4B F4 FB 35 */	bl func_800F6EAC
 /* 801A737C 0017093C  38 80 00 00 */	li r4, 0
-/* 801A7380 00170940  38 AD 80 30 */	addi r5, r13, __RTTI__cf_CfObjectActor@sda21
-/* 801A7384 00170944  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
+/* 801A7380 00170940  38 AD 80 30 */	addi r5, r13, __RTTI__Q22cf13CfObjectActor@sda21
+/* 801A7384 00170944  38 CD 80 70 */	addi r6, r13, __RTTI__Q22cf8CfObject@sda21
 /* 801A7388 00170948  38 E0 00 00 */	li r7, 0
 /* 801A738C 0017094C  48 11 29 F9 */	bl __dynamic_cast
 /* 801A7390 00170950  7C 03 E0 40 */	cmplw r3, r28
@@ -5008,8 +5008,8 @@
 /* 801A7830 00170DF0  7F E4 FB 78 */	mr r4, r31
 /* 801A7834 00170DF4  4B F4 F6 79 */	bl func_800F6EAC
 /* 801A7838 00170DF8  38 80 00 00 */	li r4, 0
-/* 801A783C 00170DFC  38 AD 80 30 */	addi r5, r13, __RTTI__cf_CfObjectActor@sda21
-/* 801A7840 00170E00  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
+/* 801A783C 00170DFC  38 AD 80 30 */	addi r5, r13, __RTTI__Q22cf13CfObjectActor@sda21
+/* 801A7840 00170E00  38 CD 80 70 */	addi r6, r13, __RTTI__Q22cf8CfObject@sda21
 /* 801A7844 00170E04  38 E0 00 00 */	li r7, 0
 /* 801A7848 00170E08  48 11 25 3D */	bl __dynamic_cast
 /* 801A784C 00170E0C  7C 03 E8 40 */	cmplw r3, r29
@@ -5295,8 +5295,8 @@
 /* 801A7C98 00171258  7F 24 CB 78 */	mr r4, r25
 /* 801A7C9C 0017125C  4B F4 F2 11 */	bl func_800F6EAC
 /* 801A7CA0 00171260  38 80 00 00 */	li r4, 0
-/* 801A7CA4 00171264  38 AD 80 F0 */	addi r5, r13, __RTTI__cf_CfObjectEff@sda21
-/* 801A7CA8 00171268  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
+/* 801A7CA4 00171264  38 AD 80 F0 */	addi r5, r13, __RTTI__Q22cf11CfObjectEff@sda21
+/* 801A7CA8 00171268  38 CD 80 70 */	addi r6, r13, __RTTI__Q22cf8CfObject@sda21
 /* 801A7CAC 0017126C  38 E0 00 00 */	li r7, 0
 /* 801A7CB0 00171270  48 11 20 D5 */	bl __dynamic_cast
 /* 801A7CB4 00171274  2C 03 00 00 */	cmpwi r3, 0
@@ -5386,8 +5386,8 @@
 /* 801A7DD4 00171394  7F A4 EB 78 */	mr r4, r29
 /* 801A7DD8 00171398  4B F4 F0 D5 */	bl func_800F6EAC
 /* 801A7DDC 0017139C  38 80 00 00 */	li r4, 0
-/* 801A7DE0 001713A0  38 AD 80 68 */	addi r5, r13, __RTTI__cf_CfObjectModel@sda21
-/* 801A7DE4 001713A4  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
+/* 801A7DE0 001713A0  38 AD 80 68 */	addi r5, r13, __RTTI__Q22cf13CfObjectModel@sda21
+/* 801A7DE4 001713A4  38 CD 80 70 */	addi r6, r13, __RTTI__Q22cf8CfObject@sda21
 /* 801A7DE8 001713A8  38 E0 00 00 */	li r7, 0
 /* 801A7DEC 001713AC  48 11 1F 99 */	bl __dynamic_cast
 /* 801A7DF0 001713B0  2C 03 00 00 */	cmpwi r3, 0
@@ -5493,8 +5493,8 @@
 /* 801A7F60 00171520  7F 84 E3 78 */	mr r4, r28
 /* 801A7F64 00171524  4B F4 EF 49 */	bl func_800F6EAC
 /* 801A7F68 00171528  38 80 00 00 */	li r4, 0
-/* 801A7F6C 0017152C  38 AD 80 30 */	addi r5, r13, __RTTI__cf_CfObjectActor@sda21
-/* 801A7F70 00171530  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
+/* 801A7F6C 0017152C  38 AD 80 30 */	addi r5, r13, __RTTI__Q22cf13CfObjectActor@sda21
+/* 801A7F70 00171530  38 CD 80 70 */	addi r6, r13, __RTTI__Q22cf8CfObject@sda21
 /* 801A7F74 00171534  38 E0 00 00 */	li r7, 0
 /* 801A7F78 00171538  48 11 1E 0D */	bl __dynamic_cast
 /* 801A7F7C 0017153C  A0 03 33 88 */	lhz r0, 0x3388(r3)
@@ -6985,39 +6985,39 @@
 	.4byte 0
 	.4byte 0xFFFFFFFF
 	.4byte func_801A64F8
-	.4byte __RTTI__cf_CObjectState
+	.4byte __RTTI__Q22cf12CObjectState
 	.4byte 0
-	.4byte __RTTI__cf_CObjectParam
+	.4byte __RTTI__Q22cf12CObjectParam
 	.4byte 0
-	.4byte __RTTI__cf_CfObject
+	.4byte __RTTI__Q22cf8CfObject
 	.4byte 0
 	.4byte 0
-	.4byte __RTTI__cf_CObjectState
+	.4byte __RTTI__Q22cf12CObjectState
 	.4byte 0x00003E9C
-	.4byte __RTTI__cf_CObjectParam
+	.4byte __RTTI__Q22cf12CObjectParam
 	.4byte 0x00003E9C
-	.4byte __RTTI__cf_CfObject
+	.4byte __RTTI__Q22cf8CfObject
 	.4byte 0x00003E9C
-	.4byte __RTTI__cf_CfObjectModel
+	.4byte __RTTI__Q22cf13CfObjectModel
 	.4byte 0x00003E9C
-	.4byte __RTTI__cf_CfObjectMove
+	.4byte __RTTI__Q22cf12CfObjectMove
 	.4byte 0x00003E9C
-	.4byte __RTTI__cf_CAIAction
+	.4byte __RTTI__Q22cf9CAIAction
 	.4byte 0x00003380
-	.4byte __RTTI__cf_CDebugState
+	.4byte __RTTI__Q22cf11CDebugState
 	.4byte 0x000015DC
-	.4byte __RTTI__cf_CBattleState
+	.4byte __RTTI__Q22cf12CBattleState
 	.4byte 0x00000008
-	.4byte __RTTI__cf_CActorState
+	.4byte __RTTI__Q22cf11CActorState
 	.4byte 0
-	.4byte __RTTI__cf_CActorParam
+	.4byte __RTTI__Q22cf11CActorParam
 	.4byte 0
 	.4byte 0
 .endobj lbl_805369E8
 
 
-.obj __vt__cf_CVision, global
-	.4byte __RTTI__cf_CVision
+.obj __vt__Q22cf7CVision, global
+	.4byte __RTTI__Q22cf7CVision
 	.4byte 0
 	.4byte __dt__cf_CVision
 	.4byte func_801A924C
@@ -7031,10 +7031,10 @@
 	.4byte func_801A808C
 	.4byte func_801A80FC
 	.4byte func_801A8138
-.endobj __vt__cf_CVision
+.endobj __vt__Q22cf7CVision
 
 .obj cf_CVision_hierarchy, global
-	.4byte __RTTI__cf_IObjectInfo
+	.4byte __RTTI__Q22cf11IObjectInfo
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -7042,35 +7042,35 @@
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte __RTTI__cf_CDebugState
+	.4byte __RTTI__Q22cf11CDebugState
 	.4byte 0x000015DC
-	.4byte __RTTI__cf_CBattleState
+	.4byte __RTTI__Q22cf12CBattleState
 	.4byte 0x00000008
-	.4byte __RTTI__cf_CActorState
+	.4byte __RTTI__Q22cf11CActorState
 	.4byte 0
 	.4byte 0
-	.4byte __RTTI__cf_CObjectState
+	.4byte __RTTI__Q22cf12CObjectState
 	.4byte 0
-	.4byte __RTTI__cf_CObjectParam
+	.4byte __RTTI__Q22cf12CObjectParam
 	.4byte 0
-	.4byte __RTTI__cf_CfObject
+	.4byte __RTTI__Q22cf8CfObject
 	.4byte 0
-	.4byte __RTTI__cf_CfObjectModel
-	.4byte 0
-	.4byte 0
-	.4byte __RTTI__cf_CObjectState
-	.4byte 0
-	.4byte __RTTI__cf_CObjectParam
-	.4byte 0
-	.4byte __RTTI__cf_CfObject
+	.4byte __RTTI__Q22cf13CfObjectModel
 	.4byte 0
 	.4byte 0
-	.4byte __RTTI__cf_CObjectState
+	.4byte __RTTI__Q22cf12CObjectState
 	.4byte 0
-	.4byte __RTTI__cf_CObjectParam
+	.4byte __RTTI__Q22cf12CObjectParam
+	.4byte 0
+	.4byte __RTTI__Q22cf8CfObject
 	.4byte 0
 	.4byte 0
-	.4byte __RTTI__cf_CObjectState
+	.4byte __RTTI__Q22cf12CObjectState
+	.4byte 0
+	.4byte __RTTI__Q22cf12CObjectParam
+	.4byte 0
+	.4byte 0
+	.4byte __RTTI__Q22cf12CObjectState
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -7095,10 +7095,10 @@
 
 .balign 8
 
-.obj __RTTI__cf_CVision, global
+.obj __RTTI__Q22cf7CVision, global
 	.4byte cf_CVision_typestr
 	.4byte cf_CVision_hierarchy
-.endobj __RTTI__cf_CVision
+.endobj __RTTI__Q22cf7CVision
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

@@ -20,9 +20,9 @@
 /* 8016FE9C 0013945C  4B FD AA 69 */	bl __ct__cf_CAIAction
 /* 8016FEA0 00139460  38 7F 3E 9C */	addi r3, r31, 0x3e9c
 /* 8016FEA4 00139464  4B F4 BD A9 */	bl __ct__cf_CfObjectMove
-/* 8016FEA8 00139468  3C E0 80 53 */	lis r7, __vt__cf_CfObjectActor@ha
+/* 8016FEA8 00139468  3C E0 80 53 */	lis r7, __vt__Q22cf13CfObjectActor@ha
 /* 8016FEAC 0013946C  7F E3 FB 78 */	mr r3, r31
-/* 8016FEB0 00139470  38 E7 48 6C */	addi r7, r7, __vt__cf_CfObjectActor@l
+/* 8016FEB0 00139470  38 E7 48 6C */	addi r7, r7, __vt__Q22cf13CfObjectActor@l
 /* 8016FEB4 00139474  90 FF 00 00 */	stw r7, 0(r31)
 /* 8016FEB8 00139478  38 C7 00 0C */	addi r6, r7, 0xc
 /* 8016FEBC 0013947C  38 80 00 03 */	li r4, 3
@@ -2706,11 +2706,11 @@
 .endobj lbl_80534860
 
 
-.obj __vt__cf_CfObjectActor, global
-	.4byte __RTTI__cf_CfObjectActor
+.obj __vt__Q22cf13CfObjectActor, global
+	.4byte __RTTI__Q22cf13CfObjectActor
 	.4byte 0
 	.4byte func_800AFB04
-	.4byte __RTTI__cf_CfObjectActor
+	.4byte __RTTI__Q22cf13CfObjectActor
 	.4byte 0xFFFFFFF8
 	.4byte func_800B064C
 	.4byte func_800B0654
@@ -2926,11 +2926,11 @@
 	.4byte func_801715A8
 	.4byte func_801716B8
 	.4byte func_800AFBA0
-	.4byte __RTTI__cf_CfObjectActor
+	.4byte __RTTI__Q22cf13CfObjectActor
 	.4byte 0xFFFFCC80
 	.4byte func_8014AA18
 	.4byte func_8014AB28
-	.4byte __RTTI__cf_CfObjectActor
+	.4byte __RTTI__Q22cf13CfObjectActor
 	.4byte 0xFFFFC164
 	.4byte CObjectState_func_8003DC64
 	.4byte CObjectState_func_8003CB58
@@ -3080,7 +3080,7 @@
 	.4byte func_801725C0
 	.4byte func_800B062C
 	.4byte func_800B0620
-.endobj __vt__cf_CfObjectActor
+.endobj __vt__Q22cf13CfObjectActor
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

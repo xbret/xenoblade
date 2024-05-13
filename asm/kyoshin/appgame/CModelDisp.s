@@ -5,10 +5,10 @@
 .fn __ct__CModelDisp, global
 /* 801FBDC8 001C5388  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801FBDCC 001C538C  7C 08 02 A6 */	mflr r0
-/* 801FBDD0 001C5390  3C C0 80 54 */	lis r6, __vt__CModelDisp@ha
+/* 801FBDD0 001C5390  3C C0 80 54 */	lis r6, __vt__10CModelDisp@ha
 /* 801FBDD4 001C5394  3C A0 80 20 */	lis r5, __dt__801FBF0C@ha
 /* 801FBDD8 001C5398  90 01 00 14 */	stw r0, 0x14(r1)
-/* 801FBDDC 001C539C  38 C6 8B 48 */	addi r6, r6, __vt__CModelDisp@l
+/* 801FBDDC 001C539C  38 C6 8B 48 */	addi r6, r6, __vt__10CModelDisp@l
 /* 801FBDE0 001C53A0  38 A5 BF 0C */	addi r5, r5, __dt__801FBF0C@l
 /* 801FBDE4 001C53A4  38 E0 00 03 */	li r7, 3
 /* 801FBDE8 001C53A8  93 E1 00 0C */	stw r31, 0xc(r1)
@@ -1235,8 +1235,8 @@
 
 .balign 8
 
-.obj __vt__CModelDisp, global
-	.4byte __RTTI__CModelDisp
+.obj __vt__10CModelDisp, global
+	.4byte __RTTI__10CModelDisp
 	.4byte 0
 	.4byte __dt__CModelDisp
 	.4byte func_801FCBF4
@@ -1247,10 +1247,10 @@
 	.4byte func_800554D8
 	.4byte func_800554D0
 	.4byte func_801FCDB4
-.endobj __vt__CModelDisp
+.endobj __vt__10CModelDisp
 
 .obj CModelDisp_hierarchy, global
-	.4byte __RTTI__IActParamEvent
+	.4byte __RTTI__14IActParamEvent
 	.4byte 0
 	.4byte 0
 .endobj CModelDisp_hierarchy
@@ -1259,10 +1259,10 @@
 
 .balign 8
 
-.obj __RTTI__CModelDisp, global
+.obj __RTTI__10CModelDisp, global
 	.4byte CModelDisp_typestr
 	.4byte CModelDisp_hierarchy
-.endobj __RTTI__CModelDisp
+.endobj __RTTI__10CModelDisp
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

@@ -10,9 +10,9 @@
 /* 80444428 0040D9E8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8044442C 0040D9EC  7C 7F 1B 78 */	mr r31, r3
 /* 80444430 0040D9F0  4B FF 31 8D */	bl __ct__CWorkThread
-/* 80444434 0040D9F4  3C 60 80 57 */	lis r3, __vt__CWorkSystem@ha
+/* 80444434 0040D9F4  3C 60 80 57 */	lis r3, __vt__11CWorkSystem@ha
 /* 80444438 0040D9F8  38 80 00 00 */	li r4, 0
-/* 8044443C 0040D9FC  38 63 F2 68 */	addi r3, r3, __vt__CWorkSystem@l
+/* 8044443C 0040D9FC  38 63 F2 68 */	addi r3, r3, __vt__11CWorkSystem@l
 /* 80444440 0040DA00  38 A0 FF FF */	li r5, -1
 /* 80444444 0040DA04  90 7F 00 00 */	stw r3, 0(r31)
 /* 80444448 0040DA08  38 00 00 02 */	li r0, 2
@@ -381,8 +381,8 @@
 
 .balign 8
 
-.obj __vt__CWorkSystem, global
-	.4byte __RTTI__CWorkSystem
+.obj __vt__11CWorkSystem, global
+	.4byte __RTTI__11CWorkSystem
 	.4byte 0
 	.4byte __dt__CWorkSystem
 	.4byte IWorkEvent_WorkEvent1
@@ -422,12 +422,12 @@
 	.4byte CWorkSystem_WorkThreadEvent4
 	.4byte CWorkSystem_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-.endobj __vt__CWorkSystem
+.endobj __vt__11CWorkSystem
 
 .obj CWorkSystem_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -438,10 +438,10 @@
 
 .balign 8
 
-.obj __RTTI__CWorkSystem, global
+.obj __RTTI__11CWorkSystem, global
 	.4byte CWorkSystem_typestr
 	.4byte CWorkSystem_hierarchy
-.endobj __RTTI__CWorkSystem
+.endobj __RTTI__11CWorkSystem
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

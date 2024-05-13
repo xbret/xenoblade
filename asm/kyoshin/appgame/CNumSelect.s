@@ -5,9 +5,9 @@
 .fn __ct__CNumSelect, global
 /* 801EADC0 001B4380  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801EADC4 001B4384  7C 08 02 A6 */	mflr r0
-/* 801EADC8 001B4388  3C A0 80 54 */	lis r5, __vt__CNumSelect@ha
+/* 801EADC8 001B4388  3C A0 80 54 */	lis r5, __vt__10CNumSelect@ha
 /* 801EADCC 001B438C  90 01 00 14 */	stw r0, 0x14(r1)
-/* 801EADD0 001B4390  38 A5 83 78 */	addi r5, r5, __vt__CNumSelect@l
+/* 801EADD0 001B4390  38 A5 83 78 */	addi r5, r5, __vt__10CNumSelect@l
 /* 801EADD4 001B4394  BF C1 00 08 */	stmw r30, 8(r1)
 /* 801EADD8 001B4398  7C 7E 1B 78 */	mr r30, r3
 /* 801EADDC 001B439C  7C 9F 23 78 */	mr r31, r4
@@ -985,8 +985,8 @@
 
 .balign 8
 
-.obj __vt__CNumSelect, global
-	.4byte __RTTI__CNumSelect
+.obj __vt__10CNumSelect, global
+	.4byte __RTTI__10CNumSelect
 	.4byte 0
 	.4byte __dt__CNumSelect
 	.4byte IWorkEvent_WorkEvent1
@@ -1020,10 +1020,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CNumSelect
+.endobj __vt__10CNumSelect
 
 .obj CNumSelect_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1033,10 +1033,10 @@
 
 .balign 8
 
-.obj __RTTI__CNumSelect, global
+.obj __RTTI__10CNumSelect, global
 	.4byte CNumSelect_typestr
 	.4byte CNumSelect_hierarchy
-.endobj __RTTI__CNumSelect
+.endobj __RTTI__10CNumSelect
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

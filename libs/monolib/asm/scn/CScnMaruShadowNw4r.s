@@ -9,9 +9,9 @@
 /* 8048D1C4 00456784  38 A0 00 00 */	li r5, 0
 /* 8048D1C8 00456788  C0 22 CD 84 */	lfs f1, float_8066D104@sda21(r2)
 /* 8048D1CC 0045678C  C0 02 CD 88 */	lfs f0, float_8066D108@sda21(r2)
-/* 8048D1D0 00456790  3C C0 80 57 */	lis r6, __vt__CScnMaruShadowNw4r@ha
+/* 8048D1D0 00456790  3C C0 80 57 */	lis r6, __vt__18CScnMaruShadowNw4r@ha
 /* 8048D1D4 00456794  C0 42 CD 80 */	lfs f2, float_8066D100@sda21(r2)
-/* 8048D1D8 00456798  38 C6 1D E0 */	addi r6, r6, __vt__CScnMaruShadowNw4r@l
+/* 8048D1D8 00456798  38 C6 1D E0 */	addi r6, r6, __vt__18CScnMaruShadowNw4r@l
 /* 8048D1DC 0045679C  60 A0 00 01 */	ori r0, r5, 1
 /* 8048D1E0 004567A0  38 80 00 80 */	li r4, 0x80
 /* 8048D1E4 004567A4  90 C3 00 00 */	stw r6, 0(r3)
@@ -1779,8 +1779,8 @@
 .endobj lbl_80571DC0
 
 
-.obj __vt__CScnMaruShadowNw4r, global
-	.4byte __RTTI__CScnMaruShadowNw4r
+.obj __vt__18CScnMaruShadowNw4r, global
+	.4byte __RTTI__18CScnMaruShadowNw4r
 	.4byte 0
 	.4byte func_8048E67C
 	.4byte func_8048EA9C
@@ -1788,7 +1788,7 @@
 	.4byte func_8048DB58
 	.4byte func_8048EA74
 	.4byte func_8048EA48
-.endobj __vt__CScnMaruShadowNw4r
+.endobj __vt__18CScnMaruShadowNw4r
 
 
 

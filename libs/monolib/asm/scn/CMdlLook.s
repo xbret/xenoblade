@@ -4,10 +4,10 @@
 
 .fn __ct__CMdlLook, global
 /* 804E7A80 004B1040  C0 02 D7 98 */	lfs f0, float_8066DB18@sda21(r2)
-/* 804E7A84 004B1044  3C 80 80 57 */	lis r4, __vt__CMdlLook@ha
+/* 804E7A84 004B1044  3C 80 80 57 */	lis r4, __vt__8CMdlLook@ha
 /* 804E7A88 004B1048  38 00 FF FF */	li r0, -1
 /* 804E7A8C 004B104C  D0 03 00 58 */	stfs f0, 0x58(r3)
-/* 804E7A90 004B1050  38 84 3A 28 */	addi r4, r4, __vt__CMdlLook@l
+/* 804E7A90 004B1050  38 84 3A 28 */	addi r4, r4, __vt__8CMdlLook@l
 /* 804E7A94 004B1054  3C A0 80 66 */	lis r5, zero__Q22ml5CVec3@ha
 /* 804E7A98 004B1058  90 83 00 00 */	stw r4, 0(r3)
 /* 804E7A9C 004B105C  D0 03 00 5C */	stfs f0, 0x5c(r3)
@@ -1805,22 +1805,22 @@
 
 .balign 8
 
-.obj __vt__CMdlLook, global
-	.4byte __RTTI__CMdlLook
+.obj __vt__8CMdlLook, global
+	.4byte __RTTI__8CMdlLook
 	.4byte 0
 	.4byte __dt__CMdlLook
 	.4byte 0
-.endobj __vt__CMdlLook
+.endobj __vt__8CMdlLook
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CMdlLook, global
+.obj __RTTI__8CMdlLook, global
 	.4byte CMdlLook_typestr
 	.4byte 0
-.endobj __RTTI__CMdlLook
+.endobj __RTTI__8CMdlLook
 
 
 .obj lbl_806665C0, global

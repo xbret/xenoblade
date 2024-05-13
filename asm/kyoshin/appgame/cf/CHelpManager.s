@@ -16,9 +16,9 @@
 /* 802958B0 0025EE70  2C 03 00 00 */	cmpwi r3, 0
 /* 802958B4 0025EE74  7C 7E 1B 78 */	mr r30, r3
 /* 802958B8 0025EE78  41 82 00 4C */	beq .L_80295904
-/* 802958BC 0025EE7C  3C 80 80 54 */	lis r4, __vt__cf_CHelpManager@ha
+/* 802958BC 0025EE7C  3C 80 80 54 */	lis r4, __vt__Q22cf12CHelpManager@ha
 /* 802958C0 0025EE80  7F DD F3 78 */	mr r29, r30
-/* 802958C4 0025EE84  38 84 C8 D4 */	addi r4, r4, __vt__cf_CHelpManager@l
+/* 802958C4 0025EE84  38 84 C8 D4 */	addi r4, r4, __vt__Q22cf12CHelpManager@l
 /* 802958C8 0025EE88  90 83 00 1C */	stw r4, 0x1c(r3)
 /* 802958CC 0025EE8C  3B E3 00 10 */	addi r31, r3, 0x10
 .L_802958D0:
@@ -426,9 +426,9 @@
 /* 80295DD0 0025F390  38 A0 00 02 */	li r5, 2
 /* 80295DD4 0025F394  38 76 00 00 */	addi r3, r22, 0
 /* 80295DD8 0025F398  48 02 1D FD */	bl __ct__cf_CHelp
-/* 80295DDC 0025F39C  3E E0 80 54 */	lis r23, __vt__cf_CHelp_Target@ha
+/* 80295DDC 0025F39C  3E E0 80 54 */	lis r23, __vt__Q22cf5CHelp_Target@ha
 /* 80295DE0 0025F3A0  38 D6 00 00 */	addi r6, r22, 0
-/* 80295DE4 0025F3A4  3A F7 EE D8 */	addi r23, r23, __vt__cf_CHelp_Target@l
+/* 80295DE4 0025F3A4  3A F7 EE D8 */	addi r23, r23, __vt__Q22cf5CHelp_Target@l
 /* 80295DE8 0025F3A8  3B 00 00 01 */	li r24, 1
 /* 80295DEC 0025F3AC  92 E6 00 08 */	stw r23, 8(r6)
 /* 80295DF0 0025F3B0  38 76 00 10 */	addi r3, r22, 0x10
@@ -436,9 +436,9 @@
 /* 80295DF8 0025F3B8  38 A0 00 03 */	li r5, 3
 /* 80295DFC 0025F3BC  93 06 00 0C */	stw r24, 0xc(r6)
 /* 80295E00 0025F3C0  48 02 1D D5 */	bl __ct__cf_CHelp
-/* 80295E04 0025F3C4  3F 40 80 54 */	lis r26, __vt__cf_CHelp_ToAttack@ha
+/* 80295E04 0025F3C4  3F 40 80 54 */	lis r26, __vt__Q22cf14CHelp_ToAttack@ha
 /* 80295E08 0025F3C8  38 76 00 10 */	addi r3, r22, 0x10
-/* 80295E0C 0025F3CC  3B 5A EA 90 */	addi r26, r26, __vt__cf_CHelp_ToAttack@l
+/* 80295E0C 0025F3CC  3B 5A EA 90 */	addi r26, r26, __vt__Q22cf14CHelp_ToAttack@l
 /* 80295E10 0025F3D0  93 43 00 08 */	stw r26, 8(r3)
 /* 80295E14 0025F3D4  81 83 00 08 */	lwz r12, 8(r3)
 /* 80295E18 0025F3D8  81 8C 00 08 */	lwz r12, 8(r12)
@@ -448,10 +448,10 @@
 /* 80295E28 0025F3E8  38 80 33 43 */	li r4, 0x3343
 /* 80295E2C 0025F3EC  38 A0 00 04 */	li r5, 4
 /* 80295E30 0025F3F0  48 02 1D A5 */	bl __ct__cf_CHelp
-/* 80295E34 0025F3F4  3F 20 80 54 */	lis r25, __vt__cf_CHelp_Sp@ha
+/* 80295E34 0025F3F4  3F 20 80 54 */	lis r25, __vt__Q22cf5CHelp_Sp@ha
 /* 80295E38 0025F3F8  38 D6 00 20 */	addi r6, r22, 0x20
 /* 80295E3C 0025F3FC  C0 02 B0 F0 */	lfs f0, float_8066B470@sda21(r2)
-/* 80295E40 0025F400  3B 39 EE 88 */	addi r25, r25, __vt__cf_CHelp_Sp@l
+/* 80295E40 0025F400  3B 39 EE 88 */	addi r25, r25, __vt__Q22cf5CHelp_Sp@l
 /* 80295E44 0025F404  93 26 00 08 */	stw r25, 8(r6)
 /* 80295E48 0025F408  38 76 00 30 */	addi r3, r22, 0x30
 /* 80295E4C 0025F40C  38 80 33 44 */	li r4, 0x3344
@@ -468,17 +468,17 @@
 /* 80295E78 0025F438  38 80 33 45 */	li r4, 0x3345
 /* 80295E7C 0025F43C  38 A0 00 06 */	li r5, 6
 /* 80295E80 0025F440  48 02 1D 55 */	bl __ct__cf_CHelp
-/* 80295E84 0025F444  3F C0 80 54 */	lis r30, __vt__cf_CHelp_Always@ha
+/* 80295E84 0025F444  3F C0 80 54 */	lis r30, __vt__Q22cf12CHelp_Always@ha
 /* 80295E88 0025F448  38 76 00 40 */	addi r3, r22, 0x40
-/* 80295E8C 0025F44C  3B DE C8 A0 */	addi r30, r30, __vt__cf_CHelp_Always@l
+/* 80295E8C 0025F44C  3B DE C8 A0 */	addi r30, r30, __vt__Q22cf12CHelp_Always@l
 /* 80295E90 0025F450  93 C3 00 08 */	stw r30, 8(r3)
 /* 80295E94 0025F454  38 76 00 50 */	addi r3, r22, 0x50
 /* 80295E98 0025F458  38 80 33 46 */	li r4, 0x3346
 /* 80295E9C 0025F45C  38 A0 00 07 */	li r5, 7
 /* 80295EA0 0025F460  48 02 1D 35 */	bl __ct__cf_CHelp
-/* 80295EA4 0025F464  3C 60 80 54 */	lis r3, __vt__cf_CHelp_ArtsAttack@ha
+/* 80295EA4 0025F464  3C 60 80 54 */	lis r3, __vt__Q22cf5CHelp_ArtsAttack@ha
 /* 80295EA8 0025F468  38 96 00 50 */	addi r4, r22, 0x50
-/* 80295EAC 0025F46C  38 63 EA D8 */	addi r3, r3, __vt__cf_CHelp_ArtsAttack@l
+/* 80295EAC 0025F46C  38 63 EA D8 */	addi r3, r3, __vt__Q22cf5CHelp_ArtsAttack@l
 /* 80295EB0 0025F470  90 64 00 08 */	stw r3, 8(r4)
 /* 80295EB4 0025F474  38 76 00 60 */	addi r3, r22, 0x60
 /* 80295EB8 0025F478  38 80 33 47 */	li r4, 0x3347
@@ -492,9 +492,9 @@
 /* 80295ED8 0025F498  38 A0 00 09 */	li r5, 9
 /* 80295EDC 0025F49C  D0 06 00 0C */	stfs f0, 0xc(r6)
 /* 80295EE0 0025F4A0  48 02 1C F5 */	bl __ct__cf_CHelp
-/* 80295EE4 0025F4A4  3C 60 80 54 */	lis r3, __vt__cf_CHelp_EnemyCount@ha
+/* 80295EE4 0025F4A4  3C 60 80 54 */	lis r3, __vt__Q22cf5CHelp_EnemyCount@ha
 /* 80295EE8 0025F4A8  38 D6 00 70 */	addi r6, r22, 0x70
-/* 80295EEC 0025F4AC  38 63 EC 08 */	addi r3, r3, __vt__cf_CHelp_EnemyCount@l
+/* 80295EEC 0025F4AC  38 63 EC 08 */	addi r3, r3, __vt__Q22cf5CHelp_EnemyCount@l
 /* 80295EF0 0025F4B0  3B 20 00 00 */	li r25, 0
 /* 80295EF4 0025F4B4  90 66 00 08 */	stw r3, 8(r6)
 /* 80295EF8 0025F4B8  38 76 00 84 */	addi r3, r22, 0x84
@@ -502,9 +502,9 @@
 /* 80295F00 0025F4C0  38 A0 00 0A */	li r5, 0xa
 /* 80295F04 0025F4C4  93 26 00 0C */	stw r25, 0xc(r6)
 /* 80295F08 0025F4C8  48 02 1C CD */	bl __ct__cf_CHelp
-/* 80295F0C 0025F4CC  3C 80 80 54 */	lis r4, __vt__cf_CHelp_EnemyEnable@ha
+/* 80295F0C 0025F4CC  3C 80 80 54 */	lis r4, __vt__Q22cf5CHelp_EnemyEnable@ha
 /* 80295F10 0025F4D0  38 76 00 84 */	addi r3, r22, 0x84
-/* 80295F14 0025F4D4  38 84 EC 30 */	addi r4, r4, __vt__cf_CHelp_EnemyEnable@l
+/* 80295F14 0025F4D4  38 84 EC 30 */	addi r4, r4, __vt__Q22cf5CHelp_EnemyEnable@l
 /* 80295F18 0025F4D8  90 83 00 08 */	stw r4, 8(r3)
 /* 80295F1C 0025F4DC  38 76 00 90 */	addi r3, r22, 0x90
 /* 80295F20 0025F4E0  38 A0 00 0B */	li r5, 0xb
@@ -521,8 +521,8 @@
 /* 80295F4C 0025F50C  38 A0 00 0C */	li r5, 0xc
 /* 80295F50 0025F510  48 02 1C 85 */	bl __ct__cf_CHelp
 /* 80295F54 0025F514  38 96 00 A0 */	addi r4, r22, 0xa0
-/* 80295F58 0025F518  3F 40 80 54 */	lis r26, __vt__cf_CHelp_EndEvent@ha
-/* 80295F5C 0025F51C  3B 5A EB E0 */	addi r26, r26, __vt__cf_CHelp_EndEvent@l
+/* 80295F58 0025F518  3F 40 80 54 */	lis r26, __vt__Q22cf5CHelp_EndEvent@ha
+/* 80295F5C 0025F51C  3B 5A EB E0 */	addi r26, r26, __vt__Q22cf5CHelp_EndEvent@l
 /* 80295F60 0025F520  93 44 00 08 */	stw r26, 8(r4)
 /* 80295F64 0025F524  38 76 00 B4 */	addi r3, r22, 0xb4
 /* 80295F68 0025F528  38 A0 00 12 */	li r5, 0x12
@@ -547,9 +547,9 @@
 /* 80295FB4 0025F574  38 80 33 65 */	li r4, 0x3365
 /* 80295FB8 0025F578  38 A0 00 26 */	li r5, 0x26
 /* 80295FBC 0025F57C  48 02 1C 19 */	bl __ct__cf_CHelp
-/* 80295FC0 0025F580  3F 60 80 54 */	lis r27, __vt__cf_CHelp_AlwaysTIPS@ha
+/* 80295FC0 0025F580  3F 60 80 54 */	lis r27, __vt__Q22cf16CHelp_AlwaysTIPS@ha
 /* 80295FC4 0025F584  38 76 00 D8 */	addi r3, r22, 0xd8
-/* 80295FC8 0025F588  3B 7B C8 70 */	addi r27, r27, __vt__cf_CHelp_AlwaysTIPS@l
+/* 80295FC8 0025F588  3B 7B C8 70 */	addi r27, r27, __vt__Q22cf16CHelp_AlwaysTIPS@l
 /* 80295FCC 0025F58C  93 63 00 08 */	stw r27, 8(r3)
 /* 80295FD0 0025F590  38 76 00 E4 */	addi r3, r22, 0xe4
 /* 80295FD4 0025F594  38 80 33 96 */	li r4, 0x3396
@@ -573,9 +573,9 @@
 /* 8029601C 0025F5DC  38 80 33 4E */	li r4, 0x334e
 /* 80296020 0025F5E0  38 A0 00 0F */	li r5, 0xf
 /* 80296024 0025F5E4  48 02 1B B1 */	bl __ct__cf_CHelp
-/* 80296028 0025F5E8  3F 80 80 54 */	lis r28, __vt__cf_CHelp_ClosePartyMenu@ha
+/* 80296028 0025F5E8  3F 80 80 54 */	lis r28, __vt__Q22cf5CHelp_ClosePartyMenu@ha
 /* 8029602C 0025F5EC  38 76 01 08 */	addi r3, r22, 0x108
-/* 80296030 0025F5F0  3B 9C ED 78 */	addi r28, r28, __vt__cf_CHelp_ClosePartyMenu@l
+/* 80296030 0025F5F0  3B 9C ED 78 */	addi r28, r28, __vt__Q22cf5CHelp_ClosePartyMenu@l
 /* 80296034 0025F5F4  93 83 00 08 */	stw r28, 8(r3)
 /* 80296038 0025F5F8  38 76 01 18 */	addi r3, r22, 0x118
 /* 8029603C 0025F5FC  38 80 33 4F */	li r4, 0x334f
@@ -593,9 +593,9 @@
 /* 8029606C 0025F62C  38 80 33 52 */	li r4, 0x3352
 /* 80296070 0025F630  38 A0 00 13 */	li r5, 0x13
 /* 80296074 0025F634  48 02 1B 61 */	bl __ct__cf_CHelp
-/* 80296078 0025F638  3F A0 80 54 */	lis r29, __vt__cf_CHelp_CloseQuestMenu@ha
+/* 80296078 0025F638  3F A0 80 54 */	lis r29, __vt__Q22cf5CHelp_CloseQuestMenu@ha
 /* 8029607C 0025F63C  38 76 01 30 */	addi r3, r22, 0x130
-/* 80296080 0025F640  3B BD EE 00 */	addi r29, r29, __vt__cf_CHelp_CloseQuestMenu@l
+/* 80296080 0025F640  3B BD EE 00 */	addi r29, r29, __vt__Q22cf5CHelp_CloseQuestMenu@l
 /* 80296084 0025F644  93 A3 00 08 */	stw r29, 8(r3)
 /* 80296088 0025F648  38 76 01 40 */	addi r3, r22, 0x140
 /* 8029608C 0025F64C  38 80 33 53 */	li r4, 0x3353
@@ -766,9 +766,9 @@
 /* 80296320 0025F8E0  38 A0 00 1F */	li r5, 0x1f
 /* 80296324 0025F8E4  93 26 00 10 */	stw r25, 0x10(r6)
 /* 80296328 0025F8E8  48 02 18 AD */	bl __ct__cf_CHelp
-/* 8029632C 0025F8EC  3F E0 80 54 */	lis r31, __vt__cf_CHelp_CloseSysMenu@ha
+/* 8029632C 0025F8EC  3F E0 80 54 */	lis r31, __vt__Q22cf5CHelp_CloseSysMenu@ha
 /* 80296330 0025F8F0  38 76 02 D8 */	addi r3, r22, 0x2d8
-/* 80296334 0025F8F4  3B FF EB A8 */	addi r31, r31, __vt__cf_CHelp_CloseSysMenu@l
+/* 80296334 0025F8F4  3B FF EB A8 */	addi r31, r31, __vt__Q22cf5CHelp_CloseSysMenu@l
 /* 80296338 0025F8F8  93 E3 00 08 */	stw r31, 8(r3)
 /* 8029633C 0025F8FC  38 76 02 E8 */	addi r3, r22, 0x2e8
 /* 80296340 0025F900  38 80 33 6F */	li r4, 0x336f
@@ -780,9 +780,9 @@
 /* 80296358 0025F918  38 80 33 9C */	li r4, 0x339c
 /* 8029635C 0025F91C  38 A0 00 5D */	li r5, 0x5d
 /* 80296360 0025F920  48 02 18 75 */	bl __ct__cf_CHelp
-/* 80296364 0025F924  3C 60 80 54 */	lis r3, __vt__cf_CHelp_CloseItemMenu@ha
+/* 80296364 0025F924  3C 60 80 54 */	lis r3, __vt__Q22cf5CHelp_CloseItemMenu@ha
 /* 80296368 0025F928  38 96 02 F8 */	addi r4, r22, 0x2f8
-/* 8029636C 0025F92C  38 63 EB 70 */	addi r3, r3, __vt__cf_CHelp_CloseItemMenu@l
+/* 8029636C 0025F92C  38 63 EB 70 */	addi r3, r3, __vt__Q22cf5CHelp_CloseItemMenu@l
 /* 80296370 0025F930  90 64 00 08 */	stw r3, 8(r4)
 /* 80296374 0025F934  38 76 03 08 */	addi r3, r22, 0x308
 /* 80296378 0025F938  38 80 33 72 */	li r4, 0x3372
@@ -833,17 +833,17 @@
 /* 8029642C 0025F9EC  38 A0 00 25 */	li r5, 0x25
 /* 80296430 0025F9F0  93 26 00 10 */	stw r25, 0x10(r6)
 /* 80296434 0025F9F4  48 02 17 A1 */	bl __ct__cf_CHelp
-/* 80296438 0025F9F8  3C 80 80 54 */	lis r4, __vt__cf_CHelp_OpenPartyMenu@ha
+/* 80296438 0025F9F8  3C 80 80 54 */	lis r4, __vt__Q22cf5CHelp_OpenPartyMenu@ha
 /* 8029643C 0025F9FC  38 76 03 74 */	addi r3, r22, 0x374
-/* 80296440 0025FA00  38 84 ED B0 */	addi r4, r4, __vt__cf_CHelp_OpenPartyMenu@l
+/* 80296440 0025FA00  38 84 ED B0 */	addi r4, r4, __vt__Q22cf5CHelp_OpenPartyMenu@l
 /* 80296444 0025FA04  90 83 00 08 */	stw r4, 8(r3)
 /* 80296448 0025FA08  38 76 03 80 */	addi r3, r22, 0x380
 /* 8029644C 0025FA0C  38 A0 00 37 */	li r5, 0x37
 /* 80296450 0025FA10  38 80 33 76 */	li r4, 0x3376
 /* 80296454 0025FA14  48 02 17 81 */	bl __ct__cf_CHelp
 /* 80296458 0025FA18  38 96 03 80 */	addi r4, r22, 0x380
-/* 8029645C 0025FA1C  3F C0 80 54 */	lis r30, __vt__cf_CHelp_EndEventTIPS@ha
-/* 80296460 0025FA20  3B DE C8 1C */	addi r30, r30, __vt__cf_CHelp_EndEventTIPS@l
+/* 8029645C 0025FA1C  3F C0 80 54 */	lis r30, __vt__Q22cf18CHelp_EndEventTIPS@ha
+/* 80296460 0025FA20  3B DE C8 1C */	addi r30, r30, __vt__Q22cf18CHelp_EndEventTIPS@l
 /* 80296464 0025FA24  93 24 00 10 */	stw r25, 0x10(r4)
 /* 80296468 0025FA28  38 76 03 98 */	addi r3, r22, 0x398
 /* 8029646C 0025FA2C  38 A0 00 49 */	li r5, 0x49
@@ -902,52 +902,52 @@
 /* 80296540 0025FB00  38 A0 00 3B */	li r5, 0x3b
 /* 80296544 0025FB04  93 C6 00 08 */	stw r30, 8(r6)
 /* 80296548 0025FB08  48 02 16 8D */	bl __ct__cf_CHelp
-/* 8029654C 0025FB0C  3C 80 80 54 */	lis r4, __vt__cf_CHelp_Kizuna@ha
+/* 8029654C 0025FB0C  3C 80 80 54 */	lis r4, __vt__Q22cf5CHelp_Kizuna@ha
 /* 80296550 0025FB10  38 76 04 24 */	addi r3, r22, 0x424
-/* 80296554 0025FB14  38 84 EC F0 */	addi r4, r4, __vt__cf_CHelp_Kizuna@l
+/* 80296554 0025FB14  38 84 EC F0 */	addi r4, r4, __vt__Q22cf5CHelp_Kizuna@l
 /* 80296558 0025FB18  90 83 00 08 */	stw r4, 8(r3)
 /* 8029655C 0025FB1C  38 76 04 30 */	addi r3, r22, 0x430
 /* 80296560 0025FB20  38 A0 00 3C */	li r5, 0x3c
 /* 80296564 0025FB24  38 80 33 7B */	li r4, 0x337b
 /* 80296568 0025FB28  48 02 16 6D */	bl __ct__cf_CHelp
-/* 8029656C 0025FB2C  3C 60 80 54 */	lis r3, __vt__cf_CHelp_KizunaTIPS@ha
+/* 8029656C 0025FB2C  3C 60 80 54 */	lis r3, __vt__Q22cf16CHelp_KizunaTIPS@ha
 /* 80296570 0025FB30  38 96 04 30 */	addi r4, r22, 0x430
-/* 80296574 0025FB34  38 63 C7 E0 */	addi r3, r3, __vt__cf_CHelp_KizunaTIPS@l
+/* 80296574 0025FB34  38 63 C7 E0 */	addi r3, r3, __vt__Q22cf16CHelp_KizunaTIPS@l
 /* 80296578 0025FB38  90 64 00 08 */	stw r3, 8(r4)
 /* 8029657C 0025FB3C  38 76 04 3C */	addi r3, r22, 0x43c
 /* 80296580 0025FB40  38 80 33 7C */	li r4, 0x337c
 /* 80296584 0025FB44  38 A0 00 3D */	li r5, 0x3d
 /* 80296588 0025FB48  48 02 16 4D */	bl __ct__cf_CHelp
-/* 8029658C 0025FB4C  3C 80 80 54 */	lis r4, __vt__cf_CHelp_ItemCole@ha
+/* 8029658C 0025FB4C  3C 80 80 54 */	lis r4, __vt__Q22cf5CHelp_ItemCole@ha
 /* 80296590 0025FB50  38 76 04 3C */	addi r3, r22, 0x43c
-/* 80296594 0025FB54  38 84 EC C8 */	addi r4, r4, __vt__cf_CHelp_ItemCole@l
+/* 80296594 0025FB54  38 84 EC C8 */	addi r4, r4, __vt__Q22cf5CHelp_ItemCole@l
 /* 80296598 0025FB58  90 83 00 08 */	stw r4, 8(r3)
 /* 8029659C 0025FB5C  38 76 04 48 */	addi r3, r22, 0x448
 /* 802965A0 0025FB60  38 A0 00 3F */	li r5, 0x3f
 /* 802965A4 0025FB64  38 80 33 7E */	li r4, 0x337e
 /* 802965A8 0025FB68  48 02 16 2D */	bl __ct__cf_CHelp
-/* 802965AC 0025FB6C  3C 80 80 54 */	lis r4, __vt__cf_CHelp_ShopSel@ha
+/* 802965AC 0025FB6C  3C 80 80 54 */	lis r4, __vt__Q22cf5CHelp_ShopSel@ha
 /* 802965B0 0025FB70  38 76 04 48 */	addi r3, r22, 0x448
-/* 802965B4 0025FB74  38 84 EE 38 */	addi r4, r4, __vt__cf_CHelp_ShopSel@l
+/* 802965B4 0025FB74  38 84 EE 38 */	addi r4, r4, __vt__Q22cf5CHelp_ShopSel@l
 /* 802965B8 0025FB78  90 83 00 08 */	stw r4, 8(r3)
 /* 802965BC 0025FB7C  38 76 04 54 */	addi r3, r22, 0x454
 /* 802965C0 0025FB80  38 A0 00 55 */	li r5, 0x55
 /* 802965C4 0025FB84  38 80 33 94 */	li r4, 0x3394
 /* 802965C8 0025FB88  48 02 16 0D */	bl __ct__cf_CHelp
-/* 802965CC 0025FB8C  3C 80 80 54 */	lis r4, __vt__cf_CHelp_ShopBuy@ha
+/* 802965CC 0025FB8C  3C 80 80 54 */	lis r4, __vt__Q22cf5CHelp_ShopBuy@ha
 /* 802965D0 0025FB90  38 76 04 54 */	addi r3, r22, 0x454
-/* 802965D4 0025FB94  38 84 EE 60 */	addi r4, r4, __vt__cf_CHelp_ShopBuy@l
+/* 802965D4 0025FB94  38 84 EE 60 */	addi r4, r4, __vt__Q22cf5CHelp_ShopBuy@l
 /* 802965D8 0025FB98  90 83 00 08 */	stw r4, 8(r3)
 /* 802965DC 0025FB9C  38 76 04 60 */	addi r3, r22, 0x460
 /* 802965E0 0025FBA0  38 A0 00 2F */	li r5, 0x2f
 /* 802965E4 0025FBA4  38 80 33 6E */	li r4, 0x336e
 /* 802965E8 0025FBA8  48 02 15 ED */	bl __ct__cf_CHelp
 /* 802965EC 0025FBAC  38 D6 04 60 */	addi r6, r22, 0x460
-/* 802965F0 0025FBB0  3F E0 80 54 */	lis r31, __vt__cf_CHelp_TalkTIPS@ha
-/* 802965F4 0025FBB4  3B FF C7 8C */	addi r31, r31, __vt__cf_CHelp_TalkTIPS@l
-/* 802965F8 0025FBB8  3F C0 80 54 */	lis r30, __vt__cf_CHelp_Talk@ha
+/* 802965F0 0025FBB0  3F E0 80 54 */	lis r31, __vt__Q22cf14CHelp_TalkTIPS@ha
+/* 802965F4 0025FBB4  3B FF C7 8C */	addi r31, r31, __vt__Q22cf14CHelp_TalkTIPS@l
+/* 802965F8 0025FBB8  3F C0 80 54 */	lis r30, __vt__Q22cf5CHelp_Talk@ha
 /* 802965FC 0025FBBC  93 26 00 10 */	stw r25, 0x10(r6)
-/* 80296600 0025FBC0  3B DE EE B0 */	addi r30, r30, __vt__cf_CHelp_Talk@l
+/* 80296600 0025FBC0  3B DE EE B0 */	addi r30, r30, __vt__Q22cf5CHelp_Talk@l
 /* 80296604 0025FBC4  38 76 04 78 */	addi r3, r22, 0x478
 /* 80296608 0025FBC8  38 80 33 7F */	li r4, 0x337f
 /* 8029660C 0025FBCC  9B 26 00 14 */	stb r25, 0x14(r6)
@@ -962,9 +962,9 @@
 /* 80296630 0025FBF0  38 80 33 80 */	li r4, 0x3380
 /* 80296634 0025FBF4  38 A0 00 41 */	li r5, 0x41
 /* 80296638 0025FBF8  48 02 15 9D */	bl __ct__cf_CHelp
-/* 8029663C 0025FBFC  3C 60 80 54 */	lis r3, __vt__cf_CHelp_CkKizuna@ha
+/* 8029663C 0025FBFC  3C 60 80 54 */	lis r3, __vt__Q22cf5CHelp_CkKizuna@ha
 /* 80296640 0025FC00  38 96 04 88 */	addi r4, r22, 0x488
-/* 80296644 0025FC04  38 63 EB 38 */	addi r3, r3, __vt__cf_CHelp_CkKizuna@l
+/* 80296644 0025FC04  38 63 EB 38 */	addi r3, r3, __vt__Q22cf5CHelp_CkKizuna@l
 /* 80296648 0025FC08  90 64 00 08 */	stw r3, 8(r4)
 /* 8029664C 0025FC0C  38 76 04 98 */	addi r3, r22, 0x498
 /* 80296650 0025FC10  38 80 33 81 */	li r4, 0x3381
@@ -988,17 +988,17 @@
 /* 80296698 0025FC58  38 80 33 84 */	li r4, 0x3384
 /* 8029669C 0025FC5C  38 A0 00 45 */	li r5, 0x45
 /* 802966A0 0025FC60  48 02 15 35 */	bl __ct__cf_CHelp
-/* 802966A4 0025FC64  3C 80 80 54 */	lis r4, __vt__cf_CHelp_Exchange@ha
+/* 802966A4 0025FC64  3C 80 80 54 */	lis r4, __vt__Q22cf5CHelp_Exchange@ha
 /* 802966A8 0025FC68  38 76 04 D0 */	addi r3, r22, 0x4d0
-/* 802966AC 0025FC6C  38 84 EC 78 */	addi r4, r4, __vt__cf_CHelp_Exchange@l
+/* 802966AC 0025FC6C  38 84 EC 78 */	addi r4, r4, __vt__Q22cf5CHelp_Exchange@l
 /* 802966B0 0025FC70  90 83 00 08 */	stw r4, 8(r3)
 /* 802966B4 0025FC74  38 76 04 E0 */	addi r3, r22, 0x4e0
 /* 802966B8 0025FC78  38 A0 00 46 */	li r5, 0x46
 /* 802966BC 0025FC7C  38 80 33 85 */	li r4, 0x3385
 /* 802966C0 0025FC80  48 02 15 15 */	bl __ct__cf_CHelp
-/* 802966C4 0025FC84  3C 60 80 54 */	lis r3, __vt__cf_CHelp_LearnArts@ha
+/* 802966C4 0025FC84  3C 60 80 54 */	lis r3, __vt__Q22cf5CHelp_LearnArts@ha
 /* 802966C8 0025FC88  38 D6 04 E0 */	addi r6, r22, 0x4e0
-/* 802966CC 0025FC8C  38 63 ED 50 */	addi r3, r3, __vt__cf_CHelp_LearnArts@l
+/* 802966CC 0025FC8C  38 63 ED 50 */	addi r3, r3, __vt__Q22cf5CHelp_LearnArts@l
 /* 802966D0 0025FC90  38 00 00 09 */	li r0, 9
 /* 802966D4 0025FC94  90 66 00 08 */	stw r3, 8(r6)
 /* 802966D8 0025FC98  38 76 04 F0 */	addi r3, r22, 0x4f0
@@ -1018,8 +1018,8 @@
 /* 80296710 0025FCD0  9B 26 00 16 */	stb r25, 0x16(r6)
 /* 80296714 0025FCD4  48 02 14 C1 */	bl __ct__cf_CHelp
 /* 80296718 0025FCD8  38 D6 05 08 */	addi r6, r22, 0x508
-/* 8029671C 0025FCDC  3F 40 80 54 */	lis r26, __vt__cf_CHelp_GameOver@ha
-/* 80296720 0025FCE0  3B 5A EC A0 */	addi r26, r26, __vt__cf_CHelp_GameOver@l
+/* 8029671C 0025FCDC  3F 40 80 54 */	lis r26, __vt__Q22cf5CHelp_GameOver@ha
+/* 80296720 0025FCE0  3B 5A EC A0 */	addi r26, r26, __vt__Q22cf5CHelp_GameOver@l
 /* 80296724 0025FCE4  93 46 00 08 */	stw r26, 8(r6)
 /* 80296728 0025FCE8  38 76 05 1C */	addi r3, r22, 0x51c
 /* 8029672C 0025FCEC  38 80 33 8B */	li r4, 0x338b
@@ -1044,9 +1044,9 @@
 /* 80296778 0025FD38  38 A0 00 4F */	li r5, 0x4f
 /* 8029677C 0025FD3C  90 06 00 0C */	stw r0, 0xc(r6)
 /* 80296780 0025FD40  48 02 14 55 */	bl __ct__cf_CHelp
-/* 80296784 0025FD44  3C 60 80 54 */	lis r3, __vt__cf_CHelp_ArtsSet@ha
+/* 80296784 0025FD44  3C 60 80 54 */	lis r3, __vt__Q22cf5CHelp_ArtsSet@ha
 /* 80296788 0025FD48  38 D6 05 40 */	addi r6, r22, 0x540
-/* 8029678C 0025FD4C  38 63 EB 10 */	addi r3, r3, __vt__cf_CHelp_ArtsSet@l
+/* 8029678C 0025FD4C  38 63 EB 10 */	addi r3, r3, __vt__Q22cf5CHelp_ArtsSet@l
 /* 80296790 0025FD50  38 00 00 2C */	li r0, 0x2c
 /* 80296794 0025FD54  90 66 00 08 */	stw r3, 8(r6)
 /* 80296798 0025FD58  38 76 05 50 */	addi r3, r22, 0x550
@@ -1085,26 +1085,26 @@
 /* 8029681C 0025FDDC  9B 26 00 16 */	stb r25, 0x16(r6)
 /* 80296820 0025FDE0  93 E6 00 08 */	stw r31, 8(r6)
 /* 80296824 0025FDE4  48 02 13 B1 */	bl __ct__cf_CHelp
-/* 80296828 0025FDE8  3C 80 80 54 */	lis r4, __vt__cf_CHelp_EtherMake@ha
+/* 80296828 0025FDE8  3C 80 80 54 */	lis r4, __vt__Q22cf5CHelp_EtherMake@ha
 /* 8029682C 0025FDEC  38 76 05 98 */	addi r3, r22, 0x598
-/* 80296830 0025FDF0  38 84 EC 58 */	addi r4, r4, __vt__cf_CHelp_EtherMake@l
+/* 80296830 0025FDF0  38 84 EC 58 */	addi r4, r4, __vt__Q22cf5CHelp_EtherMake@l
 /* 80296834 0025FDF4  90 83 00 08 */	stw r4, 8(r3)
 /* 80296838 0025FDF8  38 76 05 A4 */	addi r3, r22, 0x5a4
 /* 8029683C 0025FDFC  38 A0 00 53 */	li r5, 0x53
 /* 80296840 0025FE00  38 80 33 92 */	li r4, 0x3392
 /* 80296844 0025FE04  48 02 13 91 */	bl __ct__cf_CHelp
-/* 80296848 0025FE08  3C 60 80 54 */	lis r3, __vt__cf_CHelp_EtherMakeTIPS@ha
+/* 80296848 0025FE08  3C 60 80 54 */	lis r3, __vt__Q22cf19CHelp_EtherMakeTIPS@ha
 /* 8029684C 0025FE0C  38 96 05 A4 */	addi r4, r22, 0x5a4
-/* 80296850 0025FE10  38 63 C7 50 */	addi r3, r3, __vt__cf_CHelp_EtherMakeTIPS@l
+/* 80296850 0025FE10  38 63 C7 50 */	addi r3, r3, __vt__Q22cf19CHelp_EtherMakeTIPS@l
 /* 80296854 0025FE14  90 64 00 08 */	stw r3, 8(r4)
 /* 80296858 0025FE18  38 76 05 B0 */	addi r3, r22, 0x5b0
 /* 8029685C 0025FE1C  38 80 33 6B */	li r4, 0x336b
 /* 80296860 0025FE20  38 A0 00 2C */	li r5, 0x2c
 /* 80296864 0025FE24  48 02 13 71 */	bl __ct__cf_CHelp
-/* 80296868 0025FE28  3C 80 80 54 */	lis r4, __vt__cf_CHelp_Pg@ha
+/* 80296868 0025FE28  3C 80 80 54 */	lis r4, __vt__Q22cf5CHelp_Pg@ha
 /* 8029686C 0025FE2C  38 76 05 B0 */	addi r3, r22, 0x5b0
 /* 80296870 0025FE30  C0 02 B0 F4 */	lfs f0, float_8066B474@sda21(r2)
-/* 80296874 0025FE34  38 84 ED D8 */	addi r4, r4, __vt__cf_CHelp_Pg@l
+/* 80296874 0025FE34  38 84 ED D8 */	addi r4, r4, __vt__Q22cf5CHelp_Pg@l
 /* 80296878 0025FE38  90 83 00 08 */	stw r4, 8(r3)
 /* 8029687C 0025FE3C  39 61 00 30 */	addi r11, r1, 0x30
 /* 80296880 0025FE40  D0 03 00 0C */	stfs f0, 0xc(r3)
@@ -1514,33 +1514,33 @@
 	.4byte 0
 .endobj lbl_8053C648
 
-.obj __vt__cf_CHelp_EtherMakeTIPS, global
-	.4byte __RTTI__cf_CHelp_EtherMakeTIPS
+.obj __vt__Q22cf19CHelp_EtherMakeTIPS, global
+	.4byte __RTTI__Q22cf19CHelp_EtherMakeTIPS
 	.4byte 0
 	.4byte func_80295D88
 	.4byte func_80295D8C
 	.4byte func_802B80A4
 	.4byte func_802B80EC
 	.4byte func_80295D80
-.endobj __vt__cf_CHelp_EtherMakeTIPS
+.endobj __vt__Q22cf19CHelp_EtherMakeTIPS
 
 .obj cf_CHelp_EtherMakeTIPS_hierarchy, global
-	.4byte __RTTI__cf_CHelp
+	.4byte __RTTI__Q22cf5CHelp
 	.4byte 0
-	.4byte __RTTI__cf_CHelp_EtherMake
+	.4byte __RTTI__Q22cf5CHelp_EtherMake
 	.4byte 0
 	.4byte 0
 .endobj cf_CHelp_EtherMakeTIPS_hierarchy
 
 .obj cf_CHelp_EtherMake_hierarchy, global
-	.4byte __RTTI__cf_CHelp
+	.4byte __RTTI__Q22cf5CHelp
 	.4byte 0
 	.4byte 0
 .endobj cf_CHelp_EtherMake_hierarchy
 
 
-.obj __vt__cf_CHelp_TalkTIPS, global
-	.4byte __RTTI__cf_CHelp_TalkTIPS
+.obj __vt__Q22cf14CHelp_TalkTIPS, global
+	.4byte __RTTI__Q22cf14CHelp_TalkTIPS
 	.4byte 0
 	.4byte func_802B86BC
 	.4byte func_80295D98
@@ -1549,54 +1549,54 @@
 	.4byte func_80295D80
 	.4byte func_802B7CBC
 	.4byte func_802B7CE4
-.endobj __vt__cf_CHelp_TalkTIPS
+.endobj __vt__Q22cf14CHelp_TalkTIPS
 
 .obj cf_CHelp_TalkTIPS_hierarchy, global
-	.4byte __RTTI__cf_CHelp
+	.4byte __RTTI__Q22cf5CHelp
 	.4byte 0
-	.4byte __RTTI__cf_CHelpSwitch
+	.4byte __RTTI__Q22cf5CHelpSwitch
 	.4byte 0
-	.4byte __RTTI__cf_CHelp_Talk
+	.4byte __RTTI__Q22cf5CHelp_Talk
 	.4byte 0
 	.4byte 0
 .endobj cf_CHelp_TalkTIPS_hierarchy
 
 .obj cf_CHelp_Talk_hierarchy, global
-	.4byte __RTTI__cf_CHelp
+	.4byte __RTTI__Q22cf5CHelp
 	.4byte 0
-	.4byte __RTTI__cf_CHelpSwitch
+	.4byte __RTTI__Q22cf5CHelpSwitch
 	.4byte 0
 	.4byte 0
 .endobj cf_CHelp_Talk_hierarchy
 
 
-.obj __vt__cf_CHelp_KizunaTIPS, global
-	.4byte __RTTI__cf_CHelp_KizunaTIPS
+.obj __vt__Q22cf16CHelp_KizunaTIPS, global
+	.4byte __RTTI__Q22cf16CHelp_KizunaTIPS
 	.4byte 0
 	.4byte func_80295D88
 	.4byte func_80295D9C
 	.4byte func_802B818C
 	.4byte func_80295D90
 	.4byte func_80295D80
-.endobj __vt__cf_CHelp_KizunaTIPS
+.endobj __vt__Q22cf16CHelp_KizunaTIPS
 
 .obj cf_CHelp_KizunaTIPS_hierarchy, global
-	.4byte __RTTI__cf_CHelp
+	.4byte __RTTI__Q22cf5CHelp
 	.4byte 0
-	.4byte __RTTI__cf_CHelp_Kizuna
+	.4byte __RTTI__Q22cf5CHelp_Kizuna
 	.4byte 0
 	.4byte 0
 .endobj cf_CHelp_KizunaTIPS_hierarchy
 
 .obj cf_CHelp_Kizuna_hierarchy, global
-	.4byte __RTTI__cf_CHelp
+	.4byte __RTTI__Q22cf5CHelp
 	.4byte 0
 	.4byte 0
 .endobj cf_CHelp_Kizuna_hierarchy
 
 
-.obj __vt__cf_CHelp_EndEventTIPS, global
-	.4byte __RTTI__cf_CHelp_EndEventTIPS
+.obj __vt__Q22cf18CHelp_EndEventTIPS, global
+	.4byte __RTTI__Q22cf18CHelp_EndEventTIPS
 	.4byte 0
 	.4byte func_802B7CB0
 	.4byte func_80295DA0
@@ -1605,74 +1605,74 @@
 	.4byte func_80295D80
 	.4byte func_802B7CBC
 	.4byte func_802B7CE4
-.endobj __vt__cf_CHelp_EndEventTIPS
+.endobj __vt__Q22cf18CHelp_EndEventTIPS
 
 .obj cf_CHelp_EndEventTIPS_hierarchy, global
-	.4byte __RTTI__cf_CHelp
+	.4byte __RTTI__Q22cf5CHelp
 	.4byte 0
-	.4byte __RTTI__cf_CHelpSwitch
+	.4byte __RTTI__Q22cf5CHelpSwitch
 	.4byte 0
-	.4byte __RTTI__cf_CHelp_EndEvent
+	.4byte __RTTI__Q22cf5CHelp_EndEvent
 	.4byte 0
 	.4byte 0
 .endobj cf_CHelp_EndEventTIPS_hierarchy
 
 .obj cf_CHelp_EndEvent_hierarchy, global
-	.4byte __RTTI__cf_CHelp
+	.4byte __RTTI__Q22cf5CHelp
 	.4byte 0
-	.4byte __RTTI__cf_CHelpSwitch
+	.4byte __RTTI__Q22cf5CHelpSwitch
 	.4byte 0
 	.4byte 0
 .endobj cf_CHelp_EndEvent_hierarchy
 
 
-.obj __vt__cf_CHelp_AlwaysTIPS, global
-	.4byte __RTTI__cf_CHelp_AlwaysTIPS
+.obj __vt__Q22cf16CHelp_AlwaysTIPS, global
+	.4byte __RTTI__Q22cf16CHelp_AlwaysTIPS
 	.4byte 0
 	.4byte func_80295D88
 	.4byte func_80295DAC
 	.4byte func_80295DA4
 	.4byte func_80295D90
 	.4byte func_80295D80
-.endobj __vt__cf_CHelp_AlwaysTIPS
+.endobj __vt__Q22cf16CHelp_AlwaysTIPS
 
 .obj cf_CHelp_AlwaysTIPS_hierarchy, global
-	.4byte __RTTI__cf_CHelp
+	.4byte __RTTI__Q22cf5CHelp
 	.4byte 0
-	.4byte __RTTI__cf_CHelp_Always
+	.4byte __RTTI__Q22cf12CHelp_Always
 	.4byte 0
 	.4byte 0
 .endobj cf_CHelp_AlwaysTIPS_hierarchy
 
 
-.obj __vt__cf_CHelp_Always, global
-	.4byte __RTTI__cf_CHelp_Always
+.obj __vt__Q22cf12CHelp_Always, global
+	.4byte __RTTI__Q22cf12CHelp_Always
 	.4byte 0
 	.4byte func_80295D88
 	.4byte func_802B7BEC
 	.4byte func_80295DA4
 	.4byte func_80295D90
 	.4byte func_80295D80
-.endobj __vt__cf_CHelp_Always
+.endobj __vt__Q22cf12CHelp_Always
 
 .obj cf_CHelp_Always_hierarchy, global
-	.4byte __RTTI__cf_CHelp
+	.4byte __RTTI__Q22cf5CHelp
 	.4byte 0
 	.4byte 0
 .endobj cf_CHelp_Always_hierarchy
 
 .obj cf_CHelpSwitch_hierarchy, global
-	.4byte __RTTI__cf_CHelp
+	.4byte __RTTI__Q22cf5CHelp
 	.4byte 0
 	.4byte 0
 .endobj cf_CHelpSwitch_hierarchy
 
 
-.obj __vt__cf_CHelpManager, global
-	.4byte __RTTI__cf_CHelpManager
+.obj __vt__Q22cf12CHelpManager, global
+	.4byte __RTTI__Q22cf12CHelpManager
 	.4byte 0
 	.4byte __dt__cf_CHelpManager
-.endobj __vt__cf_CHelpManager
+.endobj __vt__Q22cf12CHelpManager
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -1774,70 +1774,70 @@
 	.4byte 0
 .endobj lbl_806654C8
 
-.obj __RTTI__cf_CHelp_EtherMakeTIPS, global
+.obj __RTTI__Q22cf19CHelp_EtherMakeTIPS, global
 	.4byte cf_CHelp_EtherMakeTIPS_typestr
 	.4byte cf_CHelp_EtherMakeTIPS_hierarchy
-.endobj __RTTI__cf_CHelp_EtherMakeTIPS
+.endobj __RTTI__Q22cf19CHelp_EtherMakeTIPS
 
-.obj __RTTI__cf_CHelp_EtherMake, global
+.obj __RTTI__Q22cf5CHelp_EtherMake, global
 	.4byte cf_CHelp_EtherMake_typestr
 	.4byte cf_CHelp_EtherMake_hierarchy
-.endobj __RTTI__cf_CHelp_EtherMake
+.endobj __RTTI__Q22cf5CHelp_EtherMake
 
-.obj __RTTI__cf_CHelp_TalkTIPS, global
+.obj __RTTI__Q22cf14CHelp_TalkTIPS, global
 	.4byte cf_CHelp_TalkTIPS_typestr
 	.4byte cf_CHelp_TalkTIPS_hierarchy
-.endobj __RTTI__cf_CHelp_TalkTIPS
+.endobj __RTTI__Q22cf14CHelp_TalkTIPS
 
-.obj __RTTI__cf_CHelp_Talk, global
+.obj __RTTI__Q22cf5CHelp_Talk, global
 	.4byte cf_CHelp_Talk_typestr
 	.4byte cf_CHelp_Talk_hierarchy
-.endobj __RTTI__cf_CHelp_Talk
+.endobj __RTTI__Q22cf5CHelp_Talk
 
-.obj __RTTI__cf_CHelp_KizunaTIPS, global
+.obj __RTTI__Q22cf16CHelp_KizunaTIPS, global
 	.4byte cf_CHelp_KizunaTIPS_typestr
 	.4byte cf_CHelp_KizunaTIPS_hierarchy
-.endobj __RTTI__cf_CHelp_KizunaTIPS
+.endobj __RTTI__Q22cf16CHelp_KizunaTIPS
 
-.obj __RTTI__cf_CHelp_Kizuna, global
+.obj __RTTI__Q22cf5CHelp_Kizuna, global
 	.4byte cf_CHelp_Kizuna_typestr
 	.4byte cf_CHelp_Kizuna_hierarchy
-.endobj __RTTI__cf_CHelp_Kizuna
+.endobj __RTTI__Q22cf5CHelp_Kizuna
 
-.obj __RTTI__cf_CHelp_EndEventTIPS, global
+.obj __RTTI__Q22cf18CHelp_EndEventTIPS, global
 	.4byte cf_CHelp_EndEventTIPS_typestr
 	.4byte cf_CHelp_EndEventTIPS_hierarchy
-.endobj __RTTI__cf_CHelp_EndEventTIPS
+.endobj __RTTI__Q22cf18CHelp_EndEventTIPS
 
-.obj __RTTI__cf_CHelp_EndEvent, global
+.obj __RTTI__Q22cf5CHelp_EndEvent, global
 	.4byte cf_CHelp_EndEvent_typestr
 	.4byte cf_CHelp_EndEvent_hierarchy
-.endobj __RTTI__cf_CHelp_EndEvent
+.endobj __RTTI__Q22cf5CHelp_EndEvent
 
-.obj __RTTI__cf_CHelp_AlwaysTIPS, global
+.obj __RTTI__Q22cf16CHelp_AlwaysTIPS, global
 	.4byte cf_CHelp_AlwaysTIPS_typestr
 	.4byte cf_CHelp_AlwaysTIPS_hierarchy
-.endobj __RTTI__cf_CHelp_AlwaysTIPS
+.endobj __RTTI__Q22cf16CHelp_AlwaysTIPS
 
-.obj __RTTI__cf_CHelp_Always, global
+.obj __RTTI__Q22cf12CHelp_Always, global
 	.4byte cf_CHelp_Always_typestr
 	.4byte cf_CHelp_Always_hierarchy
-.endobj __RTTI__cf_CHelp_Always
+.endobj __RTTI__Q22cf12CHelp_Always
 
-.obj __RTTI__cf_CHelpSwitch, global
+.obj __RTTI__Q22cf5CHelpSwitch, global
 	.4byte cf_CHelpSwitch_typestr
 	.4byte cf_CHelpSwitch_hierarchy
-.endobj __RTTI__cf_CHelpSwitch
+.endobj __RTTI__Q22cf5CHelpSwitch
 
-.obj __RTTI__cf_CHelp, global
+.obj __RTTI__Q22cf5CHelp, global
 	.4byte cf_CHelp_typestr
 	.4byte 0
-.endobj __RTTI__cf_CHelp
+.endobj __RTTI__Q22cf5CHelp
 
-.obj __RTTI__cf_CHelpManager, global
+.obj __RTTI__Q22cf12CHelpManager, global
 	.4byte cf_CHelpManager_typestr
 	.4byte 0
-.endobj __RTTI__cf_CHelpManager
+.endobj __RTTI__Q22cf12CHelpManager
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

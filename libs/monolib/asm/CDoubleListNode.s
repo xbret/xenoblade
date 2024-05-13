@@ -3,9 +3,9 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .fn __ct__15CDoubleListNodeFv, global
-/* 80446578 0040FB38  3C A0 80 57 */	lis r5, __vt__CDoubleListNode@ha
+/* 80446578 0040FB38  3C A0 80 57 */	lis r5, __vt__15CDoubleListNode@ha
 /* 8044657C 0040FB3C  38 80 00 00 */	li r4, 0
-/* 80446580 0040FB40  38 A5 F4 08 */	addi r5, r5, __vt__CDoubleListNode@l
+/* 80446580 0040FB40  38 A5 F4 08 */	addi r5, r5, __vt__15CDoubleListNode@l
 /* 80446584 0040FB44  38 00 FF FF */	li r0, -1
 /* 80446588 0040FB48  90 A3 00 10 */	stw r5, 0x10(r3)
 /* 8044658C 0040FB4C  90 83 00 00 */	stw r4, 0(r3)
@@ -123,9 +123,9 @@
 
 .balign 8
 
-.obj __vt__CDoubleListNode, global
-	.4byte __RTTI__CDoubleListNode
+.obj __vt__15CDoubleListNode, global
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
 	.4byte __dt__15CDoubleListNodeFv
 	.4byte CDoubleListNode_Reset
-.endobj __vt__CDoubleListNode
+.endobj __vt__15CDoubleListNode

@@ -6,9 +6,9 @@
 
 
 .fn __ct__CTitleLogo, global
-/* 802B632C 0027F8EC  3C A0 80 54 */	lis r5, __vt__CTitleLogo@ha
+/* 802B632C 0027F8EC  3C A0 80 54 */	lis r5, __vt__10CTitleLogo@ha
 /* 802B6330 0027F8F0  38 80 00 00 */	li r4, 0
-/* 802B6334 0027F8F4  38 A5 EA 80 */	addi r5, r5, __vt__CTitleLogo@l
+/* 802B6334 0027F8F4  38 A5 EA 80 */	addi r5, r5, __vt__10CTitleLogo@l
 /* 802B6338 0027F8F8  38 00 00 01 */	li r0, 1
 /* 802B633C 0027F8FC  90 A3 00 00 */	stw r5, 0(r3)
 /* 802B6340 0027F900  90 83 00 04 */	stw r4, 4(r3)
@@ -435,9 +435,9 @@
 #CTitleMenu
 
 .fn __ct__CTitleMenu, global
-/* 802B68EC 0027FEAC  3C A0 80 54 */	lis r5, __vt__CTitleMenu@ha
+/* 802B68EC 0027FEAC  3C A0 80 54 */	lis r5, __vt__10CTitleMenu@ha
 /* 802B68F0 0027FEB0  38 80 00 00 */	li r4, 0
-/* 802B68F4 0027FEB4  38 A5 EA 74 */	addi r5, r5, __vt__CTitleMenu@l
+/* 802B68F4 0027FEB4  38 A5 EA 74 */	addi r5, r5, __vt__10CTitleMenu@l
 /* 802B68F8 0027FEB8  38 00 00 01 */	li r0, 1
 /* 802B68FC 0027FEBC  90 A3 00 00 */	stw r5, 0(r3)
 /* 802B6900 0027FEC0  90 83 00 04 */	stw r4, 4(r3)
@@ -1172,9 +1172,9 @@
 .fn __ct__CTitle, global
 /* 802B72F4 002808B4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802B72F8 002808B8  7C 08 02 A6 */	mflr r0
-/* 802B72FC 002808BC  3C 80 80 54 */	lis r4, __vt__CTitle@ha
+/* 802B72FC 002808BC  3C 80 80 54 */	lis r4, __vt__6CTitle@ha
 /* 802B7300 002808C0  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802B7304 002808C4  38 84 E9 E0 */	addi r4, r4, __vt__CTitle@l
+/* 802B7304 002808C4  38 84 E9 E0 */	addi r4, r4, __vt__6CTitle@l
 /* 802B7308 002808C8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802B730C 002808CC  7C 7F 1B 78 */	mr r31, r3
 /* 802B7310 002808D0  90 83 00 00 */	stw r4, 0(r3)
@@ -1940,8 +1940,8 @@
 .endobj lbl_8053E98C
 
 
-.obj __vt__CTitle, global
-	.4byte __RTTI__CTitle
+.obj __vt__6CTitle, global
+	.4byte __RTTI__6CTitle
 	.4byte 0
 	.4byte __dt__CTitle
 	.4byte IWorkEvent_WorkEvent1
@@ -1975,47 +1975,47 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CTitle
+.endobj __vt__6CTitle
 
 .obj CTitle_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 .endobj CTitle_hierarchy
 
 
-.obj __vt__CTitleMenu, global
-	.4byte __RTTI__CTitleMenu
+.obj __vt__10CTitleMenu, global
+	.4byte __RTTI__10CTitleMenu
 	.4byte 0
 	.4byte __dt__CTitleMenu
-.endobj __vt__CTitleMenu
+.endobj __vt__10CTitleMenu
 
 
-.obj __vt__CTitleLogo, global
-	.4byte __RTTI__CTitleLogo
+.obj __vt__10CTitleLogo, global
+	.4byte __RTTI__10CTitleLogo
 	.4byte 0
 	.4byte __dt__CTitleLogo
 	.4byte 0
-.endobj __vt__CTitleLogo
+.endobj __vt__10CTitleLogo
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CTitle, global
+.obj __RTTI__6CTitle, global
 	.4byte CTitle_typestr
 	.4byte CTitle_hierarchy
-.endobj __RTTI__CTitle
+.endobj __RTTI__6CTitle
 
-.obj __RTTI__CTitleMenu, global
+.obj __RTTI__10CTitleMenu, global
 	.4byte CTitleMenu_typestr
 	.4byte 0
-.endobj __RTTI__CTitleMenu
+.endobj __RTTI__10CTitleMenu
 
-.obj __RTTI__CTitleLogo, global
+.obj __RTTI__10CTitleLogo, global
 	.4byte CTitleLogo_typestr
 	.4byte 0
-.endobj __RTTI__CTitleLogo
+.endobj __RTTI__10CTitleLogo
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

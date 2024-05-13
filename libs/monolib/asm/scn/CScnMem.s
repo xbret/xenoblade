@@ -3,9 +3,9 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .fn __ct__CScnMem, global
-/* 8048EAA8 00458068  3C A0 80 57 */	lis r5, __vt__CScnMem@ha
+/* 8048EAA8 00458068  3C A0 80 57 */	lis r5, __vt__7CScnMem@ha
 /* 8048EAAC 0045806C  38 80 00 00 */	li r4, 0
-/* 8048EAB0 00458070  38 A5 1E 00 */	addi r5, r5, __vt__CScnMem@l
+/* 8048EAB0 00458070  38 A5 1E 00 */	addi r5, r5, __vt__7CScnMem@l
 /* 8048EAB4 00458074  38 00 FF FF */	li r0, -1
 /* 8048EAB8 00458078  90 A3 00 00 */	stw r5, 0(r3)
 /* 8048EABC 0045807C  90 83 00 04 */	stw r4, 4(r3)
@@ -24,8 +24,8 @@
 /* 8048EAE4 004580A4  93 C1 00 08 */	stw r30, 8(r1)
 /* 8048EAE8 004580A8  7C 7E 1B 78 */	mr r30, r3
 /* 8048EAEC 004580AC  41 82 00 28 */	beq .L_8048EB14
-/* 8048EAF0 004580B0  3C 80 80 57 */	lis r4, __vt__CScnMem@ha
-/* 8048EAF4 004580B4  38 84 1E 00 */	addi r4, r4, __vt__CScnMem@l
+/* 8048EAF0 004580B0  3C 80 80 57 */	lis r4, __vt__7CScnMem@ha
+/* 8048EAF4 004580B4  38 84 1E 00 */	addi r4, r4, __vt__7CScnMem@l
 /* 8048EAF8 004580B8  90 83 00 00 */	stw r4, 0(r3)
 /* 8048EAFC 004580BC  80 63 00 08 */	lwz r3, 8(r3)
 /* 8048EB00 004580C0  4B FA 58 B1 */	bl func_804343B0
@@ -71,9 +71,9 @@
 /* 8048EB84 00458144  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8048EB88 00458148  7C 7F 1B 78 */	mr r31, r3
 /* 8048EB8C 0045814C  48 00 70 A1 */	bl __ct__CScn
-/* 8048EB90 00458150  3C 80 80 57 */	lis r4, __vt__CScnNw4r@ha
+/* 8048EB90 00458150  3C 80 80 57 */	lis r4, __vt__8CScnNw4r@ha
 /* 8048EB94 00458154  7F E3 FB 78 */	mr r3, r31
-/* 8048EB98 00458158  38 84 1E 10 */	addi r4, r4, __vt__CScnNw4r@l
+/* 8048EB98 00458158  38 84 1E 10 */	addi r4, r4, __vt__8CScnNw4r@l
 /* 8048EB9C 0045815C  90 9F 00 10 */	stw r4, 0x10(r31)
 /* 8048EBA0 00458160  38 04 00 24 */	addi r0, r4, 0x24
 /* 8048EBA4 00458164  90 1F 00 54 */	stw r0, 0x54(r31)
@@ -238,15 +238,15 @@
 
 .balign 8
 
-.obj __vt__CScnMem, global
-	.4byte __RTTI__CScnMem
+.obj __vt__7CScnMem, global
+	.4byte __RTTI__7CScnMem
 	.4byte 0
 	.4byte __dt__CScnMem
 	.4byte 0
-.endobj __vt__CScnMem
+.endobj __vt__7CScnMem
 
-.obj __vt__CScnNw4r, global
-	.4byte __RTTI__CScnNw4r
+.obj __vt__8CScnNw4r, global
+	.4byte __RTTI__8CScnNw4r
 	.4byte 0
 	.4byte __dt__CScnNw4r
 	.4byte CChildListNode_Reset
@@ -255,7 +255,7 @@
 	.4byte func_804967B0
 	.4byte func_8049683C
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CScnNw4r
+	.4byte __RTTI__8CScnNw4r
 	.4byte 0xFFFFFFAC
 	.4byte func_8048ED1C
 	.4byte IWorkEvent_WorkEvent1
@@ -291,44 +291,44 @@
 	.4byte IWorkEvent_WorkEvent31
 	.4byte func_80496970
 	.4byte func_8049695C
-.endobj __vt__CScnNw4r
+.endobj __vt__8CScnNw4r
 
 .obj CScnNw4r_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x00000054
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_CScn
+	.4byte "__RTTI__13CTTask<4CScn>"
 	.4byte 0
-	.4byte __RTTI__CScn
+	.4byte __RTTI__4CScn
 	.4byte 0
 	.4byte 0
 .endobj CScnNw4r_hierarchy
 
 .obj CScn_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x00000054
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_CScn
+	.4byte "__RTTI__13CTTask<4CScn>"
 	.4byte 0
 	.4byte 0
 .endobj CScn_hierarchy
 
 .obj CTTask_CScn_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
 	.4byte 0
 .endobj CTTask_CScn_hierarchy
@@ -350,25 +350,25 @@
 
 .balign 8
 
-.obj __RTTI__CScnMem, global
+.obj __RTTI__7CScnMem, global
 	.4byte CScnMem_typestr
 	.4byte 0
-.endobj __RTTI__CScnMem
+.endobj __RTTI__7CScnMem
 
-.obj __RTTI__CScnNw4r, global
+.obj __RTTI__8CScnNw4r, global
 	.4byte CScnNw4r_typestr
 	.4byte CScnNw4r_hierarchy
-.endobj __RTTI__CScnNw4r
+.endobj __RTTI__8CScnNw4r
 
-.obj __RTTI__CScn, global
+.obj __RTTI__4CScn, global
 	.4byte CScn_typestr
 	.4byte CScn_hierarchy
-.endobj __RTTI__CScn
+.endobj __RTTI__4CScn
 
-.obj __RTTI__CTTask_CScn, global
+.obj "__RTTI__13CTTask<4CScn>", global
 	.4byte CTTask_CScn_typestr
 	.4byte CTTask_CScn_hierarchy
-.endobj __RTTI__CTTask_CScn
+.endobj "__RTTI__13CTTask<4CScn>"
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

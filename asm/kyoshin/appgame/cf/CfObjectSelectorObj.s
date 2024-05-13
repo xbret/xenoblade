@@ -292,9 +292,9 @@
 /* 800FDB8C 000C714C  4B FF 6C 3D */	bl __ct__cf_CfObjEnumList
 /* 800FDB90 000C7150  38 7D 30 40 */	addi r3, r29, 0x3040
 /* 800FDB94 000C7154  4B FF 6C 35 */	bl __ct__cf_CfObjEnumList
-/* 800FDB98 000C7158  3F C0 80 53 */	lis r30, __vt__cf_CfObjectSelectorObj@ha
+/* 800FDB98 000C7158  3F C0 80 53 */	lis r30, __vt__Q22cf19CfObjectSelectorObj@ha
 /* 800FDB9C 000C715C  3B 7D 60 A0 */	addi r27, r29, 0x60a0
-/* 800FDBA0 000C7160  3B DE F5 A8 */	addi r30, r30, __vt__cf_CfObjectSelectorObj@l
+/* 800FDBA0 000C7160  3B DE F5 A8 */	addi r30, r30, __vt__Q22cf19CfObjectSelectorObj@l
 /* 800FDBA4 000C7164  93 DD 60 A0 */	stw r30, 0x60a0(r29)
 /* 800FDBA8 000C7168  38 7B 00 04 */	addi r3, r27, 4
 /* 800FDBAC 000C716C  4B FF 6C 1D */	bl __ct__cf_CfObjEnumList
@@ -346,9 +346,9 @@
 /* 800FDC50 000C7210  41 82 00 70 */	beq .L_800FDCC0
 /* 800FDC54 000C7214  41 82 00 6C */	beq .L_800FDCC0
 /* 800FDC58 000C7218  41 82 00 68 */	beq .L_800FDCC0
-/* 800FDC5C 000C721C  3C 60 80 53 */	lis r3, __vt___reslist_base_cf_CfObject@ha
+/* 800FDC5C 000C721C  3C 60 80 53 */	lis r3, "__vt__30_reslist_base<PQ22cf8CfObject>"@ha
 /* 800FDC60 000C7220  38 00 00 00 */	li r0, 0
-/* 800FDC64 000C7224  38 63 90 B4 */	addi r3, r3, __vt___reslist_base_cf_CfObject@l
+/* 800FDC64 000C7224  38 63 90 B4 */	addi r3, r3, "__vt__30_reslist_base<PQ22cf8CfObject>"@l
 /* 800FDC68 000C7228  90 7E 00 00 */	stw r3, 0(r30)
 /* 800FDC6C 000C722C  80 7E 00 04 */	lwz r3, 4(r30)
 /* 800FDC70 000C7230  80 63 00 00 */	lwz r3, 0(r3)
@@ -380,9 +380,9 @@
 /* 800FDCCC 000C728C  41 82 00 70 */	beq .L_800FDD3C
 /* 800FDCD0 000C7290  41 82 00 6C */	beq .L_800FDD3C
 /* 800FDCD4 000C7294  41 82 00 68 */	beq .L_800FDD3C
-/* 800FDCD8 000C7298  3C 60 80 53 */	lis r3, __vt___reslist_base_cf_CfObject@ha
+/* 800FDCD8 000C7298  3C 60 80 53 */	lis r3, "__vt__30_reslist_base<PQ22cf8CfObject>"@ha
 /* 800FDCDC 000C729C  38 00 00 00 */	li r0, 0
-/* 800FDCE0 000C72A0  38 63 90 B4 */	addi r3, r3, __vt___reslist_base_cf_CfObject@l
+/* 800FDCE0 000C72A0  38 63 90 B4 */	addi r3, r3, "__vt__30_reslist_base<PQ22cf8CfObject>"@l
 /* 800FDCE4 000C72A4  90 7E 00 00 */	stw r3, 0(r30)
 /* 800FDCE8 000C72A8  80 7E 00 04 */	lwz r3, 4(r30)
 /* 800FDCEC 000C72AC  80 63 00 00 */	lwz r3, 0(r3)
@@ -412,9 +412,9 @@
 /* 800FDD40 000C7300  41 82 00 70 */	beq .L_800FDDB0
 /* 800FDD44 000C7304  41 82 00 6C */	beq .L_800FDDB0
 /* 800FDD48 000C7308  41 82 00 68 */	beq .L_800FDDB0
-/* 800FDD4C 000C730C  3C 60 80 53 */	lis r3, __vt___reslist_base_cf_CfObject@ha
+/* 800FDD4C 000C730C  3C 60 80 53 */	lis r3, "__vt__30_reslist_base<PQ22cf8CfObject>"@ha
 /* 800FDD50 000C7310  38 00 00 00 */	li r0, 0
-/* 800FDD54 000C7314  38 63 90 B4 */	addi r3, r3, __vt___reslist_base_cf_CfObject@l
+/* 800FDD54 000C7314  38 63 90 B4 */	addi r3, r3, "__vt__30_reslist_base<PQ22cf8CfObject>"@l
 /* 800FDD58 000C7318  90 7E 00 00 */	stw r3, 0(r30)
 /* 800FDD5C 000C731C  80 7E 00 04 */	lwz r3, 4(r30)
 /* 800FDD60 000C7320  80 83 00 00 */	lwz r4, 0(r3)
@@ -444,9 +444,9 @@
 /* 800FDDB4 000C7374  41 82 00 70 */	beq .L_800FDE24
 /* 800FDDB8 000C7378  41 82 00 6C */	beq .L_800FDE24
 /* 800FDDBC 000C737C  41 82 00 68 */	beq .L_800FDE24
-/* 800FDDC0 000C7380  3C 60 80 53 */	lis r3, __vt___reslist_base_cf_CfObject@ha
+/* 800FDDC0 000C7380  3C 60 80 53 */	lis r3, "__vt__30_reslist_base<PQ22cf8CfObject>"@ha
 /* 800FDDC4 000C7384  38 00 00 00 */	li r0, 0
-/* 800FDDC8 000C7388  38 63 90 B4 */	addi r3, r3, __vt___reslist_base_cf_CfObject@l
+/* 800FDDC8 000C7388  38 63 90 B4 */	addi r3, r3, "__vt__30_reslist_base<PQ22cf8CfObject>"@l
 /* 800FDDCC 000C738C  90 7F 00 00 */	stw r3, 0(r31)
 /* 800FDDD0 000C7390  80 7F 00 04 */	lwz r3, 4(r31)
 /* 800FDDD4 000C7394  80 83 00 00 */	lwz r4, 0(r3)
@@ -1363,12 +1363,12 @@
 
 .balign 8
 
-.obj __vt__cf_CfObjectSelectorObj, global
-	.4byte __RTTI__cf_CfObjectSelectorObj
+.obj __vt__Q22cf19CfObjectSelectorObj, global
+	.4byte __RTTI__Q22cf19CfObjectSelectorObj
 	.4byte 0
 	.4byte __dt__cf_CfObjectSelectorObj
 	.4byte 0
-.endobj __vt__cf_CfObjectSelectorObj
+.endobj __vt__Q22cf19CfObjectSelectorObj
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
@@ -1379,10 +1379,10 @@
 	.4byte 0
 .endobj float_806646A8
 
-.obj __RTTI__cf_CfObjectSelectorObj, global
+.obj __RTTI__Q22cf19CfObjectSelectorObj, global
 	.4byte cf_CfObjectSelectorObj_typestr
 	.4byte 0
-.endobj __RTTI__cf_CfObjectSelectorObj
+.endobj __RTTI__Q22cf19CfObjectSelectorObj
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

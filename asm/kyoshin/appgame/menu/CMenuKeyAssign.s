@@ -1237,14 +1237,14 @@
 /* 80114F9C 000DE55C  7C 7E 1B 78 */	mr r30, r3
 /* 80114FA0 000DE560  41 82 00 88 */	beq .L_80115028
 /* 80114FA4 000DE564  48 32 FA 75 */	bl __ct__8CProcessFv
-/* 80114FA8 000DE568  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
+/* 80114FA8 000DE568  3C 60 80 53 */	lis r3, "__vt__14CTTask<5IUICf>"@ha
 /* 80114FAC 000DE56C  3D 00 80 51 */	lis r8, __ptmf_null@ha
-/* 80114FB0 000DE570  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
+/* 80114FB0 000DE570  38 63 F7 40 */	addi r3, r3, "__vt__14CTTask<5IUICf>"@l
 /* 80114FB4 000DE574  90 7E 00 10 */	stw r3, 0x10(r30)
 /* 80114FB8 000DE578  39 08 CE 10 */	addi r8, r8, __ptmf_null@l
-/* 80114FBC 000DE57C  3C A0 80 53 */	lis r5, __vt__CMenuKeyAssign@ha
+/* 80114FBC 000DE57C  3C A0 80 53 */	lis r5, __vt__14CMenuKeyAssign@ha
 /* 80114FC0 000DE580  80 C8 00 04 */	lwz r6, 4(r8)
-/* 80114FC4 000DE584  38 A5 FE 10 */	addi r5, r5, __vt__CMenuKeyAssign@l
+/* 80114FC4 000DE584  38 A5 FE 10 */	addi r5, r5, __vt__14CMenuKeyAssign@l
 /* 80114FC8 000DE588  80 08 00 00 */	lwz r0, 0(r8)
 /* 80114FCC 000DE58C  3B E0 00 00 */	li r31, 0
 /* 80114FD0 000DE590  90 1E 00 3C */	stw r0, 0x3c(r30)
@@ -2372,8 +2372,8 @@
 
 .balign 8
 
-.obj __vt__CMenuKeyAssign, global
-	.4byte __RTTI__CMenuKeyAssign
+.obj __vt__14CMenuKeyAssign, global
+	.4byte __RTTI__14CMenuKeyAssign
 	.4byte 0
 	.4byte __dt__CMenuKeyAssign
 	.4byte CChildListNode_Reset
@@ -2382,7 +2382,7 @@
 	.4byte func_80114028
 	.4byte func_80114E84
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuKeyAssign
+	.4byte __RTTI__14CMenuKeyAssign
 	.4byte 0xFFFFFFA8
 	.4byte func_80115FB8
 	.4byte IWorkEvent_WorkEvent1
@@ -2416,27 +2416,27 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CMenuKeyAssign
+	.4byte __RTTI__14CMenuKeyAssign
 	.4byte 0xFFFFFFA4
 	.4byte func_80115FC8
 	.4byte func_80115FC0
 	.4byte func_80114E88
-.endobj __vt__CMenuKeyAssign
+.endobj __vt__14CMenuKeyAssign
 
 .obj CMenuKeyAssign_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x0000005C
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x00000058
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUICf
+	.4byte "__RTTI__14CTTask<5IUICf>"
 	.4byte 0
-	.4byte __RTTI__IUICf
+	.4byte __RTTI__5IUICf
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -2446,10 +2446,10 @@
 
 .balign 8
 
-.obj __RTTI__CMenuKeyAssign, global
+.obj __RTTI__14CMenuKeyAssign, global
 	.4byte CMenuKeyAssign_typestr
 	.4byte CMenuKeyAssign_hierarchy
-.endobj __RTTI__CMenuKeyAssign
+.endobj __RTTI__14CMenuKeyAssign
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

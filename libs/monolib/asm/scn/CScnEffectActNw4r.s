@@ -3,9 +3,9 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .fn __ct__CScnEffectActNw4r, global
-/* 8049B994 00464F54  3C 80 80 57 */	lis r4, __vt__CScnEffectActNw4r@ha
+/* 8049B994 00464F54  3C 80 80 57 */	lis r4, __vt__17CScnEffectActNw4r@ha
 /* 8049B998 00464F58  38 00 00 00 */	li r0, 0
-/* 8049B99C 00464F5C  38 84 23 20 */	addi r4, r4, __vt__CScnEffectActNw4r@l
+/* 8049B99C 00464F5C  38 84 23 20 */	addi r4, r4, __vt__17CScnEffectActNw4r@l
 /* 8049B9A0 00464F60  90 83 00 00 */	stw r4, 0(r3)
 /* 8049B9A4 00464F64  90 03 01 88 */	stw r0, 0x188(r3)
 /* 8049B9A8 00464F68  4E 80 00 20 */	blr 
@@ -842,8 +842,8 @@
 
 .balign 8
 
-.obj __vt__CScnEffectActNw4r, global
-	.4byte __RTTI__CScnEffectActNw4r
+.obj __vt__17CScnEffectActNw4r, global
+	.4byte __RTTI__17CScnEffectActNw4r
 	.4byte 0
 	.4byte __dt__CScnEffectActNw4r
 	.4byte func_8049BEA4
@@ -869,10 +869,10 @@
 	.4byte func_8049C3A4
 	.4byte func_8049C3AC
 	.4byte func_8049C420
-.endobj __vt__CScnEffectActNw4r
+.endobj __vt__17CScnEffectActNw4r
 
 .obj CScnEffectActNw4r_hierarchy, global
-	.4byte __RTTI__IEffectAct
+	.4byte __RTTI__10IEffectAct
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -887,15 +887,15 @@
 	.4byte 0
 .endobj lbl_80666338
 
-.obj __RTTI__CScnEffectActNw4r, global
+.obj __RTTI__17CScnEffectActNw4r, global
 	.4byte CScnEffectActNw4r_typestr
 	.4byte CScnEffectActNw4r_hierarchy
-.endobj __RTTI__CScnEffectActNw4r
+.endobj __RTTI__17CScnEffectActNw4r
 
-.obj __RTTI__IEffectAct, global
+.obj __RTTI__10IEffectAct, global
 	.4byte IEffectAct_typestr
 	.4byte 0
-.endobj __RTTI__IEffectAct
+.endobj __RTTI__10IEffectAct
 
 
 .obj lbl_80666350, global

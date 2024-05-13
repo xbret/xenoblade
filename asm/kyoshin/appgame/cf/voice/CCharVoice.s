@@ -5,10 +5,10 @@
 .fn __ct__CCharVoice, global
 /* 802A0AFC 0026A0BC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 802A0B00 0026A0C0  7C 08 02 A6 */	mflr r0
-/* 802A0B04 0026A0C4  3C 80 80 54 */	lis r4, __vt__cf_CCharVoice@ha
+/* 802A0B04 0026A0C4  3C 80 80 54 */	lis r4, __vt__Q22cf10CCharVoice@ha
 /* 802A0B08 0026A0C8  90 01 00 24 */	stw r0, 0x24(r1)
 /* 802A0B0C 0026A0CC  38 00 FF FF */	li r0, -1
-/* 802A0B10 0026A0D0  38 84 D0 40 */	addi r4, r4, __vt__cf_CCharVoice@l
+/* 802A0B10 0026A0D0  38 84 D0 40 */	addi r4, r4, __vt__Q22cf10CCharVoice@l
 /* 802A0B14 0026A0D4  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 802A0B18 0026A0D8  3B E0 00 00 */	li r31, 0
 /* 802A0B1C 0026A0DC  93 C1 00 18 */	stw r30, 0x18(r1)
@@ -644,12 +644,12 @@
 
 .balign 8
 
-.obj __vt__cf_CCharVoice, global
-	.4byte __RTTI__cf_CCharVoice
+.obj __vt__Q22cf10CCharVoice, global
+	.4byte __RTTI__Q22cf10CCharVoice
 	.4byte 0
 	.4byte __dt__cf_CCharVoice
 	.4byte 0
-.endobj __vt__cf_CCharVoice
+.endobj __vt__Q22cf10CCharVoice
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
@@ -660,10 +660,10 @@
 	.4byte 0
 .endobj lbl_80665590
 
-.obj __RTTI__cf_CCharVoice, global
+.obj __RTTI__Q22cf10CCharVoice, global
 	.4byte cf_CCharVoice_typestr
 	.4byte 0
-.endobj __RTTI__cf_CCharVoice
+.endobj __RTTI__Q22cf10CCharVoice
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

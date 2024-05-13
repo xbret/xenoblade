@@ -4,11 +4,11 @@
 
 .fn __ct__CMdlMouth, global
 /* 804E6544 004AFB04  C0 22 D7 38 */	lfs f1, float_8066DAB8@sda21(r2)
-/* 804E6548 004AFB08  3C A0 80 57 */	lis r5, __vt__CMdlMouth@ha
+/* 804E6548 004AFB08  3C A0 80 57 */	lis r5, __vt__9CMdlMouth@ha
 /* 804E654C 004AFB0C  38 80 00 00 */	li r4, 0
 /* 804E6550 004AFB10  38 00 FF FF */	li r0, -1
 /* 804E6554 004AFB14  C0 02 D7 3C */	lfs f0, float_8066DABC@sda21(r2)
-/* 804E6558 004AFB18  38 A5 39 F8 */	addi r5, r5, __vt__CMdlMouth@l
+/* 804E6558 004AFB18  38 A5 39 F8 */	addi r5, r5, __vt__9CMdlMouth@l
 /* 804E655C 004AFB1C  90 A3 00 00 */	stw r5, 0(r3)
 /* 804E6560 004AFB20  90 83 00 04 */	stw r4, 4(r3)
 /* 804E6564 004AFB24  90 83 00 08 */	stw r4, 8(r3)
@@ -512,12 +512,12 @@
 
 .balign 8
 
-.obj __vt__CMdlMouth, global
-	.4byte __RTTI__CMdlMouth
+.obj __vt__9CMdlMouth, global
+	.4byte __RTTI__9CMdlMouth
 	.4byte 0
 	.4byte __dt__CMdlMouth
 	.4byte 0
-.endobj __vt__CMdlMouth
+.endobj __vt__9CMdlMouth
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -533,10 +533,10 @@
 	.4byte lbl_805280A0
 .endobj lbl_80666574
 
-.obj __RTTI__CMdlMouth, global
+.obj __RTTI__9CMdlMouth, global
 	.4byte CMdlMouth_typestr
 	.4byte 0
-.endobj __RTTI__CMdlMouth
+.endobj __RTTI__9CMdlMouth
 
 
 .obj lbl_80666580, global

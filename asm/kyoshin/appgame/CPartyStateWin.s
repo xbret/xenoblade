@@ -5,9 +5,9 @@
 .fn __ct__CPartyStateWin, global
 /* 801F92D8 001C2898  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801F92DC 001C289C  7C 08 02 A6 */	mflr r0
-/* 801F92E0 001C28A0  3C C0 80 54 */	lis r6, __vt__CPartyStateWin@ha
+/* 801F92E0 001C28A0  3C C0 80 54 */	lis r6, __vt__14CPartyStateWin@ha
 /* 801F92E4 001C28A4  90 01 00 14 */	stw r0, 0x14(r1)
-/* 801F92E8 001C28A8  38 C6 8A 94 */	addi r6, r6, __vt__CPartyStateWin@l
+/* 801F92E8 001C28A8  38 C6 8A 94 */	addi r6, r6, __vt__14CPartyStateWin@l
 /* 801F92EC 001C28AC  38 06 00 88 */	addi r0, r6, 0x88
 /* 801F92F0 001C28B0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801F92F4 001C28B4  3B E0 00 00 */	li r31, 0
@@ -3092,8 +3092,8 @@
 .endobj jumptable_80538A40
 
 
-.obj __vt__CPartyStateWin, global
-	.4byte __RTTI__CPartyStateWin
+.obj __vt__14CPartyStateWin, global
+	.4byte __RTTI__14CPartyStateWin
 	.4byte 0
 	.4byte __dt__CPartyStateWin
 	.4byte IWorkEvent_WorkEvent1
@@ -3127,17 +3127,17 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CPartyStateWin
+	.4byte __RTTI__14CPartyStateWin
 	.4byte 0xFFFFFFFC
 	.4byte func_801FBDC0
 	.4byte func_801FBDB8
 	.4byte func_801FBCFC
-.endobj __vt__CPartyStateWin
+.endobj __vt__14CPartyStateWin
 
 .obj CPartyStateWin_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000004
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -3147,10 +3147,10 @@
 
 .balign 8
 
-.obj __RTTI__CPartyStateWin, global
+.obj __RTTI__14CPartyStateWin, global
 	.4byte CPartyStateWin_typestr
 	.4byte CPartyStateWin_hierarchy
-.endobj __RTTI__CPartyStateWin
+.endobj __RTTI__14CPartyStateWin
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

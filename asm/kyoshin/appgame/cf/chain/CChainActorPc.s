@@ -868,8 +868,8 @@
 
 .balign 8
 
-.obj __vt__cf_CChainActorPc, global
-	.4byte __RTTI__cf_CChainActorPc
+.obj __vt__Q22cf13CChainActorPc, global
+	.4byte __RTTI__Q22cf13CChainActorPc
 	.4byte 0
 	.4byte __dt__cf_CChainActorPc
 	.4byte func_80281924
@@ -899,10 +899,10 @@
 	.4byte func_802822F8
 	.4byte func_8027A324
 	.4byte func_802821E0
-.endobj __vt__cf_CChainActorPc
+.endobj __vt__Q22cf13CChainActorPc
 
 .obj cf_CChainActorPc_hierarchy, global
-	.4byte __RTTI__cf_CChainActor
+	.4byte __RTTI__Q22cf11CChainActor
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -912,10 +912,10 @@
 
 .balign 8
 
-.obj __RTTI__cf_CChainActorPc, global
+.obj __RTTI__Q22cf13CChainActorPc, global
 	.4byte cf_CChainActorPc_typestr
 	.4byte cf_CChainActorPc_hierarchy
-.endobj __RTTI__cf_CChainActorPc
+.endobj __RTTI__Q22cf13CChainActorPc
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

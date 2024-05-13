@@ -582,8 +582,8 @@
 /* 8003C3F0 000059B0  7F E4 FB 78 */	mr r4, r31
 /* 8003C3F4 000059B4  48 14 A0 E9 */	bl func_801864DC
 /* 8003C3F8 000059B8  38 80 00 00 */	li r4, 0
-/* 8003C3FC 000059BC  38 AD 80 30 */	addi r5, r13, __RTTI__cf_CfObjectActor@sda21
-/* 8003C400 000059C0  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
+/* 8003C3FC 000059BC  38 AD 80 30 */	addi r5, r13, __RTTI__Q22cf13CfObjectActor@sda21
+/* 8003C400 000059C0  38 CD 80 70 */	addi r6, r13, __RTTI__Q22cf8CfObject@sda21
 /* 8003C404 000059C4  38 E0 00 00 */	li r7, 0
 /* 8003C408 000059C8  48 27 D9 7D */	bl __dynamic_cast
 /* 8003C40C 000059CC  2C 03 00 00 */	cmpwi r3, 0
@@ -1194,8 +1194,8 @@
 /* 8003CC40 00006200  7F C4 F3 78 */	mr r4, r30
 /* 8003CC44 00006204  48 14 98 99 */	bl func_801864DC
 /* 8003CC48 00006208  38 80 00 00 */	li r4, 0
-/* 8003CC4C 0000620C  38 AD 80 58 */	addi r5, r13, __RTTI__cf_CfObjectMove@sda21
-/* 8003CC50 00006210  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
+/* 8003CC4C 0000620C  38 AD 80 58 */	addi r5, r13, __RTTI__Q22cf12CfObjectMove@sda21
+/* 8003CC50 00006210  38 CD 80 70 */	addi r6, r13, __RTTI__Q22cf8CfObject@sda21
 /* 8003CC54 00006214  38 E0 00 00 */	li r7, 0
 /* 8003CC58 00006218  48 27 D1 2D */	bl __dynamic_cast
 /* 8003CC5C 0000621C  2C 03 00 00 */	cmpwi r3, 0
@@ -2699,8 +2699,8 @@
 /* 8003E160 00007720  48 14 83 7D */	bl func_801864DC
 /* 8003E164 00007724  7C 7F 1B 78 */	mr r31, r3
 /* 8003E168 00007728  38 80 00 00 */	li r4, 0
-/* 8003E16C 0000772C  38 AD 80 68 */	addi r5, r13, __RTTI__cf_CfObjectModel@sda21
-/* 8003E170 00007730  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
+/* 8003E16C 0000772C  38 AD 80 68 */	addi r5, r13, __RTTI__Q22cf13CfObjectModel@sda21
+/* 8003E170 00007730  38 CD 80 70 */	addi r6, r13, __RTTI__Q22cf8CfObject@sda21
 /* 8003E174 00007734  38 E0 00 00 */	li r7, 0
 /* 8003E178 00007738  48 27 BC 0D */	bl __dynamic_cast
 /* 8003E17C 0000773C  2C 03 00 00 */	cmpwi r3, 0
@@ -3252,8 +3252,8 @@
 /* 8003E904 00007EC4  7F C4 F3 78 */	mr r4, r30
 /* 8003E908 00007EC8  48 14 7B D5 */	bl func_801864DC
 /* 8003E90C 00007ECC  38 80 00 00 */	li r4, 0
-/* 8003E910 00007ED0  38 AD 80 30 */	addi r5, r13, __RTTI__cf_CfObjectActor@sda21
-/* 8003E914 00007ED4  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
+/* 8003E910 00007ED0  38 AD 80 30 */	addi r5, r13, __RTTI__Q22cf13CfObjectActor@sda21
+/* 8003E914 00007ED4  38 CD 80 70 */	addi r6, r13, __RTTI__Q22cf8CfObject@sda21
 /* 8003E918 00007ED8  38 E0 00 00 */	li r7, 0
 /* 8003E91C 00007EDC  48 27 B4 69 */	bl __dynamic_cast
 /* 8003E920 00007EE0  2C 03 00 00 */	cmpwi r3, 0
@@ -3370,8 +3370,8 @@
 /* 8003EAA8 00008068  7F 44 D3 78 */	mr r4, r26
 /* 8003EAAC 0000806C  48 14 7A 31 */	bl func_801864DC
 /* 8003EAB0 00008070  38 80 00 00 */	li r4, 0
-/* 8003EAB4 00008074  38 AD 80 30 */	addi r5, r13, __RTTI__cf_CfObjectActor@sda21
-/* 8003EAB8 00008078  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
+/* 8003EAB4 00008074  38 AD 80 30 */	addi r5, r13, __RTTI__Q22cf13CfObjectActor@sda21
+/* 8003EAB8 00008078  38 CD 80 70 */	addi r6, r13, __RTTI__Q22cf8CfObject@sda21
 /* 8003EABC 0000807C  38 E0 00 00 */	li r7, 0
 /* 8003EAC0 00008080  48 27 B2 C5 */	bl __dynamic_cast
 /* 8003EAC4 00008084  2C 03 00 00 */	cmpwi r3, 0
@@ -3434,8 +3434,8 @@
 /* 8003EB98 00008158  7F C4 F3 78 */	mr r4, r30
 /* 8003EB9C 0000815C  48 14 79 41 */	bl func_801864DC
 /* 8003EBA0 00008160  38 80 00 00 */	li r4, 0
-/* 8003EBA4 00008164  38 AD 80 30 */	addi r5, r13, __RTTI__cf_CfObjectActor@sda21
-/* 8003EBA8 00008168  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
+/* 8003EBA4 00008164  38 AD 80 30 */	addi r5, r13, __RTTI__Q22cf13CfObjectActor@sda21
+/* 8003EBA8 00008168  38 CD 80 70 */	addi r6, r13, __RTTI__Q22cf8CfObject@sda21
 /* 8003EBAC 0000816C  38 E0 00 00 */	li r7, 0
 /* 8003EBB0 00008170  48 27 B1 D5 */	bl __dynamic_cast
 /* 8003EBB4 00008174  2C 03 00 00 */	cmpwi r3, 0
@@ -3472,8 +3472,8 @@
 /* 8003EC20 000081E0  7F C4 F3 78 */	mr r4, r30
 /* 8003EC24 000081E4  48 14 78 B9 */	bl func_801864DC
 /* 8003EC28 000081E8  38 80 00 00 */	li r4, 0
-/* 8003EC2C 000081EC  38 AD 80 58 */	addi r5, r13, __RTTI__cf_CfObjectMove@sda21
-/* 8003EC30 000081F0  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
+/* 8003EC2C 000081EC  38 AD 80 58 */	addi r5, r13, __RTTI__Q22cf12CfObjectMove@sda21
+/* 8003EC30 000081F0  38 CD 80 70 */	addi r6, r13, __RTTI__Q22cf8CfObject@sda21
 /* 8003EC34 000081F4  38 E0 00 00 */	li r7, 0
 /* 8003EC38 000081F8  48 27 B1 4D */	bl __dynamic_cast
 /* 8003EC3C 000081FC  2C 03 00 00 */	cmpwi r3, 0
@@ -5673,72 +5673,72 @@
 .endobj lbl_80528C68
 
 .obj cf_CfObjectActor_hierarchy, global
-	.4byte __RTTI__cf_CObjectState
+	.4byte __RTTI__Q22cf12CObjectState
 	.4byte 0x00003E9C
-	.4byte __RTTI__cf_CObjectParam
+	.4byte __RTTI__Q22cf12CObjectParam
 	.4byte 0x00003E9C
-	.4byte __RTTI__cf_CfObject
+	.4byte __RTTI__Q22cf8CfObject
 	.4byte 0x00003E9C
-	.4byte __RTTI__cf_CfObjectModel
+	.4byte __RTTI__Q22cf13CfObjectModel
 	.4byte 0x00003E9C
-	.4byte __RTTI__cf_CfObjectMove
+	.4byte __RTTI__Q22cf12CfObjectMove
 	.4byte 0x00003E9C
-	.4byte __RTTI__cf_CAIAction
+	.4byte __RTTI__Q22cf9CAIAction
 	.4byte 0x00003380
-	.4byte __RTTI__cf_CDebugState
+	.4byte __RTTI__Q22cf11CDebugState
 	.4byte 0x000015DC
-	.4byte __RTTI__cf_CBattleState
+	.4byte __RTTI__Q22cf12CBattleState
 	.4byte 0x00000008
-	.4byte __RTTI__cf_CActorState
+	.4byte __RTTI__Q22cf11CActorState
 	.4byte 0
-	.4byte __RTTI__cf_CActorParam
+	.4byte __RTTI__Q22cf11CActorParam
 	.4byte 0
 	.4byte 0
 .endobj cf_CfObjectActor_hierarchy
 
 
 .obj cf_CActorParam_hierarchy, global
-	.4byte __RTTI__cf_CDebugState
+	.4byte __RTTI__Q22cf11CDebugState
 	.4byte 0x000015DC
-	.4byte __RTTI__cf_CBattleState
+	.4byte __RTTI__Q22cf12CBattleState
 	.4byte 0x00000008
-	.4byte __RTTI__cf_CActorState
+	.4byte __RTTI__Q22cf11CActorState
 	.4byte 0
 	.4byte 0
 .endobj cf_CActorParam_hierarchy
 
 .obj cf_CfObjectMove_hierarchy, global
-	.4byte __RTTI__cf_CObjectState
+	.4byte __RTTI__Q22cf12CObjectState
 	.4byte 0
-	.4byte __RTTI__cf_CObjectParam
+	.4byte __RTTI__Q22cf12CObjectParam
 	.4byte 0
-	.4byte __RTTI__cf_CfObject
+	.4byte __RTTI__Q22cf8CfObject
 	.4byte 0
-	.4byte __RTTI__cf_CfObjectModel
+	.4byte __RTTI__Q22cf13CfObjectModel
 	.4byte 0
 	.4byte 0
 .endobj cf_CfObjectMove_hierarchy
 
 .obj cf_CfObjectModel_hierarchy, global
-	.4byte __RTTI__cf_CObjectState
+	.4byte __RTTI__Q22cf12CObjectState
 	.4byte 0
-	.4byte __RTTI__cf_CObjectParam
+	.4byte __RTTI__Q22cf12CObjectParam
 	.4byte 0
-	.4byte __RTTI__cf_CfObject
+	.4byte __RTTI__Q22cf8CfObject
 	.4byte 0
 	.4byte 0
 .endobj cf_CfObjectModel_hierarchy
 
 .obj cf_CfObject_hierarchy, global
-	.4byte __RTTI__cf_CObjectState
+	.4byte __RTTI__Q22cf12CObjectState
 	.4byte 0
-	.4byte __RTTI__cf_CObjectParam
+	.4byte __RTTI__Q22cf12CObjectParam
 	.4byte 0
 	.4byte 0
 .endobj cf_CfObject_hierarchy
 
 .obj cf_CObjectParam_hierarchy, global
-	.4byte __RTTI__cf_CObjectState
+	.4byte __RTTI__Q22cf12CObjectState
 	.4byte 0
 	.4byte 0
 .endobj cf_CObjectParam_hierarchy
@@ -6098,15 +6098,15 @@
 .endobj lbl_805290A8
 
 
-.obj __vt___reslist_base_cf_CfObject, global
-	.4byte __RTTI___reslist_base_cf_CfObject
+.obj "__vt__30_reslist_base<PQ22cf8CfObject>", global
+	.4byte "__RTTI__30_reslist_base<PQ22cf8CfObject>"
 	.4byte 0
 	.4byte __dt___reslist_base_cf_CfObject
-.endobj __vt___reslist_base_cf_CfObject
+.endobj "__vt__30_reslist_base<PQ22cf8CfObject>"
 
 
-.obj __vt__CTaskGame, global
-	.4byte __RTTI__CTaskGame
+.obj __vt__9CTaskGame, global
+	.4byte __RTTI__9CTaskGame
 	.4byte 0
 	.4byte __dt__CTaskGame
 	.4byte CChildListNode_Reset
@@ -6115,7 +6115,7 @@
 	.4byte func_80043F28
 	.4byte func_80040A38
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CTaskGame
+	.4byte __RTTI__9CTaskGame
 	.4byte 0xFFFFFFAC
 	.4byte func_80044120
 	.4byte IWorkEvent_WorkEvent1
@@ -6149,19 +6149,19 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CTaskGame
+	.4byte __RTTI__9CTaskGame
 	.4byte 0xFFFFFFA8
 	.4byte func_80044130
 	.4byte func_80044128
-	.4byte __RTTI__CTaskGame
+	.4byte __RTTI__9CTaskGame
 	.4byte 0xFFFFFFA4
 	.4byte func_80044140
 	.4byte func_80044138
-	.4byte __RTTI__CTaskGame
+	.4byte __RTTI__9CTaskGame
 	.4byte 0xFFFFFFA0
 	.4byte func_80044150
 	.4byte func_80044148
-	.4byte __RTTI__CTaskGame
+	.4byte __RTTI__9CTaskGame
 	.4byte 0xFFFFFF9C
 	.4byte func_80044160
 	.4byte func_80044158
@@ -6170,23 +6170,23 @@
 	.4byte func_80043024
 	.4byte func_800433A8
 	.4byte func_80043730
-.endobj __vt__CTaskGame
+.endobj __vt__9CTaskGame
 
 .obj CTaskGame_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_CTaskGame
+	.4byte "__RTTI__18CTTask<9CTaskGame>"
 	.4byte 0
 	.4byte 0
 .endobj CTaskGame_hierarchy
 
 
-.obj __vt__CTTask_CTaskGame, global
-	.4byte __RTTI__CTTask_CTaskGame
+.obj "__vt__18CTTask<9CTaskGame>", global
+	.4byte "__RTTI__18CTTask<9CTaskGame>"
 	.4byte 0
 	.4byte __dt__CTTask_CTaskGame
 	.4byte CChildListNode_Reset
@@ -6195,52 +6195,52 @@
 	.4byte func_80043F28
 	.4byte func_80043F70
 	.4byte CProcess_func_80043F20
-.endobj __vt__CTTask_CTaskGame
+.endobj "__vt__18CTTask<9CTaskGame>"
 
 .obj CTTask_CTaskGame_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj CTTask_CTaskGame_hierarchy
 
 #unreferenced vtables?
-.obj __vt__IErrMesWinSel, global
-	.4byte __RTTI__IErrMesWinSel
+.obj __vt__13IErrMesWinSel, global
+	.4byte __RTTI__13IErrMesWinSel
 	.4byte 0
 	.4byte __dt__IErrMesWinSel
 	.4byte 0
-.endobj __vt__IErrMesWinSel
+.endobj __vt__13IErrMesWinSel
 
-.obj __vt__ITitleMenu, global
-	.4byte __RTTI__ITitleMenu
+.obj __vt__10ITitleMenu, global
+	.4byte __RTTI__10ITitleMenu
 	.4byte 0
 	.4byte __dt__ITitleMenu
 	.4byte 0
-.endobj __vt__ITitleMenu
+.endobj __vt__10ITitleMenu
 
-.obj __vt__IGameException, global
-	.4byte __RTTI__IGameException
+.obj __vt__14IGameException, global
+	.4byte __RTTI__14IGameException
 	.4byte 0
 	.4byte __dt__IGameException
 	.4byte 0
-.endobj __vt__IGameException
+.endobj __vt__14IGameException
 
 
-.obj __vt__IScnRender, global
-	.4byte __RTTI__IScnRender
+.obj __vt__10IScnRender, global
+	.4byte __RTTI__10IScnRender
 	.4byte 0
 	.4byte __dt__IScnRender
 	.4byte IScnRender_func_80043F20
-.endobj __vt__IScnRender
+.endobj __vt__10IScnRender
 
 
-.obj __vt__IWorkEvent, global
-	.4byte __RTTI__IWorkEvent
+.obj __vt__10IWorkEvent, global
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte __dt__IWorkEvent
 	.4byte IWorkEvent_WorkEvent1
@@ -6274,18 +6274,18 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__IWorkEvent
+.endobj __vt__10IWorkEvent
 
 .obj CProcess_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
 	.4byte 0
 .endobj CProcess_hierarchy
 
 .obj CChildListNode_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
 	.4byte 0
 .endobj CChildListNode_hierarchy
@@ -6295,58 +6295,58 @@
 
 .balign 8
 
-.obj __RTTI__cf_CActorParam, global
+.obj __RTTI__Q22cf11CActorParam, global
 	.4byte cf_CActorParam_typestr
 	.4byte cf_CActorParam_hierarchy
-.endobj __RTTI__cf_CActorParam
+.endobj __RTTI__Q22cf11CActorParam
 
-.obj __RTTI__cf_CDebugState, global
+.obj __RTTI__Q22cf11CDebugState, global
 	.4byte cf_CDebugState_typestr
 	.4byte 0
-.endobj __RTTI__cf_CDebugState
+.endobj __RTTI__Q22cf11CDebugState
 
-.obj __RTTI__cf_CActorState, global
+.obj __RTTI__Q22cf11CActorState, global
 	.4byte cf_CActorState_typestr
 	.4byte 0
-.endobj __RTTI__cf_CActorState
+.endobj __RTTI__Q22cf11CActorState
 
-.obj __RTTI__cf_CBattleState, global
+.obj __RTTI__Q22cf12CBattleState, global
 	.4byte cf_CBattleState_typestr
 	.4byte 0
-.endobj __RTTI__cf_CBattleState
+.endobj __RTTI__Q22cf12CBattleState
 
 
-.obj __RTTI__cf_CfObjectMove, global
+.obj __RTTI__Q22cf12CfObjectMove, global
 	.4byte cf_CfObjectMove_typestr
 	.4byte cf_CfObjectMove_hierarchy
-.endobj __RTTI__cf_CfObjectMove
+.endobj __RTTI__Q22cf12CfObjectMove
 
-.obj __RTTI__cf_CAIAction, global
+.obj __RTTI__Q22cf9CAIAction, global
 	.4byte cf_CAIAction_typestr
 	.4byte 0
-.endobj __RTTI__cf_CAIAction
+.endobj __RTTI__Q22cf9CAIAction
 
 
-.obj __RTTI__cf_CfObjectModel, global
+.obj __RTTI__Q22cf13CfObjectModel, global
 	.4byte cf_CfObjectModel_typestr
 	.4byte cf_CfObjectModel_hierarchy
-.endobj __RTTI__cf_CfObjectModel
+.endobj __RTTI__Q22cf13CfObjectModel
 
 
-.obj __RTTI__cf_CfObject, global
+.obj __RTTI__Q22cf8CfObject, global
 	.4byte cf_CfObject_typestr
 	.4byte cf_CfObject_hierarchy
-.endobj __RTTI__cf_CfObject
+.endobj __RTTI__Q22cf8CfObject
 
-.obj __RTTI__cf_CObjectParam, global
+.obj __RTTI__Q22cf12CObjectParam, global
 	.4byte cf_CObjectParam_typestr
 	.4byte cf_CObjectParam_hierarchy
-.endobj __RTTI__cf_CObjectParam
+.endobj __RTTI__Q22cf12CObjectParam
 
-.obj __RTTI__cf_CObjectState, global
+.obj __RTTI__Q22cf12CObjectState, global
 	.4byte cf_CObjectState_typestr
 	.4byte 0
-.endobj __RTTI__cf_CObjectState
+.endobj __RTTI__Q22cf12CObjectState
 
 
 

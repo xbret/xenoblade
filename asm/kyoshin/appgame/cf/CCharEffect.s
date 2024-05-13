@@ -5,11 +5,11 @@
 .fn __ct__CCharEffect, global
 /* 8015BAA8 00125068  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8015BAAC 0012506C  7C 08 02 A6 */	mflr r0
-/* 8015BAB0 00125070  3C 80 80 53 */	lis r4, __vt__cf_CCharEffect@ha
+/* 8015BAB0 00125070  3C 80 80 53 */	lis r4, __vt__Q22cf11CCharEffect@ha
 /* 8015BAB4 00125074  38 A0 00 B0 */	li r5, 0xb0
 /* 8015BAB8 00125078  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8015BABC 0012507C  38 00 00 00 */	li r0, 0
-/* 8015BAC0 00125080  38 84 35 88 */	addi r4, r4, __vt__cf_CCharEffect@l
+/* 8015BAC0 00125080  38 84 35 88 */	addi r4, r4, __vt__Q22cf11CCharEffect@l
 /* 8015BAC4 00125084  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8015BAC8 00125088  7C 7F 1B 78 */	mr r31, r3
 /* 8015BACC 0012508C  90 83 00 00 */	stw r4, 0(r3)
@@ -1417,8 +1417,8 @@
 .endobj lbl_805334D8
 
 
-.obj __vt__cf_CCharEffect, global
-	.4byte __RTTI__cf_CCharEffect
+.obj __vt__Q22cf11CCharEffect, global
+	.4byte __RTTI__Q22cf11CCharEffect
 	.4byte 0
 	.4byte __dt__cf_CCharEffect
 	.4byte func_8015BF04
@@ -1426,16 +1426,16 @@
 	.4byte func_800CEE7C
 	.4byte 0
 	.4byte func_8015C2B0
-.endobj __vt__cf_CCharEffect
+.endobj __vt__Q22cf11CCharEffect
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__cf_CCharEffect, global
+.obj __RTTI__Q22cf11CCharEffect, global
 	.4byte cf_CCharEffect_typestr
 	.4byte 0
-.endobj __RTTI__cf_CCharEffect
+.endobj __RTTI__Q22cf11CCharEffect
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

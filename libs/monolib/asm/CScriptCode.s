@@ -11,9 +11,9 @@
 /* 8043A0F4 004036B4  7C 7B 1B 78 */	mr r27, r3
 /* 8043A0F8 004036B8  7C 9C 23 78 */	mr r28, r4
 /* 8043A0FC 004036BC  41 82 00 C0 */	beq .L_8043A1BC
-/* 8043A100 004036C0  3C 80 80 57 */	lis r4, __vt__CScriptCode@ha
+/* 8043A100 004036C0  3C 80 80 57 */	lis r4, __vt__11CScriptCode@ha
 /* 8043A104 004036C4  7F 7E DB 78 */	mr r30, r27
-/* 8043A108 004036C8  38 84 EC 90 */	addi r4, r4, __vt__CScriptCode@l
+/* 8043A108 004036C8  38 84 EC 90 */	addi r4, r4, __vt__11CScriptCode@l
 /* 8043A10C 004036CC  90 83 00 00 */	stw r4, 0(r3)
 /* 8043A110 004036D0  3B A0 00 00 */	li r29, 0
 /* 8043A114 004036D4  3B E0 00 00 */	li r31, 0
@@ -561,9 +561,9 @@
 /* 8043A864 00403E24  7F A5 EB 78 */	mr r5, r29
 /* 8043A868 00403E28  38 C0 00 01 */	li r6, 1
 /* 8043A86C 00403E2C  4B FF CD 51 */	bl __ct__CWorkThread
-/* 8043A870 00403E30  3C 60 80 57 */	lis r3, __vt__CScriptCode@ha
+/* 8043A870 00403E30  3C 60 80 57 */	lis r3, __vt__11CScriptCode@ha
 /* 8043A874 00403E34  3B E0 00 00 */	li r31, 0
-/* 8043A878 00403E38  38 63 EC 90 */	addi r3, r3, __vt__CScriptCode@l
+/* 8043A878 00403E38  38 63 EC 90 */	addi r3, r3, __vt__11CScriptCode@l
 /* 8043A87C 00403E3C  90 7E 00 00 */	stw r3, 0(r30)
 /* 8043A880 00403E40  38 7E 05 CC */	addi r3, r30, 0x5cc
 /* 8043A884 00403E44  B3 FE 03 C4 */	sth r31, 0x3c4(r30)
@@ -659,8 +659,8 @@
 
 .balign 8
 
-.obj __vt__CScriptCode, global
-	.4byte __RTTI__CScriptCode
+.obj __vt__11CScriptCode, global
+	.4byte __RTTI__11CScriptCode
 	.4byte 0
 	.4byte __dt__CScriptCode
 	.4byte IWorkEvent_WorkEvent1
@@ -700,12 +700,12 @@
 	.4byte CWorkThread_WorkThreadEvent4
 	.4byte CScriptCode_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-.endobj __vt__CScriptCode
+.endobj __vt__11CScriptCode
 
 .obj CScriptCode_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -715,10 +715,10 @@
 
 .balign 8
 
-.obj __RTTI__CScriptCode, global
+.obj __RTTI__11CScriptCode, global
 	.4byte CScriptCode_typestr
 	.4byte CScriptCode_hierarchy
-.endobj __RTTI__CScriptCode
+.endobj __RTTI__11CScriptCode
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

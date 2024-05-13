@@ -11,12 +11,12 @@
 /* 8026316C 0022C72C  7C 7D 1B 78 */	mr r29, r3
 /* 80263170 0022C730  7C 9E 23 78 */	mr r30, r4
 /* 80263174 0022C734  48 1E 18 A5 */	bl __ct__8CProcessFv
-/* 80263178 0022C738  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
-/* 8026317C 0022C73C  3C A0 80 54 */	lis r5, __vt__CMenuPassiveSkill@ha
-/* 80263180 0022C740  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
+/* 80263178 0022C738  3C 60 80 53 */	lis r3, "__vt__14CTTask<5IUICf>"@ha
+/* 8026317C 0022C73C  3C A0 80 54 */	lis r5, __vt__17CMenuPassiveSkill@ha
+/* 80263180 0022C740  38 63 F7 40 */	addi r3, r3, "__vt__14CTTask<5IUICf>"@l
 /* 80263184 0022C744  90 7D 00 10 */	stw r3, 0x10(r29)
 /* 80263188 0022C748  3D 00 80 51 */	lis r8, __ptmf_null@ha
-/* 8026318C 0022C74C  38 A5 B0 68 */	addi r5, r5, __vt__CMenuPassiveSkill@l
+/* 8026318C 0022C74C  38 A5 B0 68 */	addi r5, r5, __vt__17CMenuPassiveSkill@l
 /* 80263190 0022C750  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 80263194 0022C754  38 05 00 24 */	addi r0, r5, 0x24
 /* 80263198 0022C758  3B E0 00 00 */	li r31, 0
@@ -982,8 +982,8 @@
 
 .balign 8
 
-.obj __vt__CMenuPassiveSkill, global
-	.4byte __RTTI__CMenuPassiveSkill
+.obj __vt__17CMenuPassiveSkill, global
+	.4byte __RTTI__17CMenuPassiveSkill
 	.4byte 0
 	.4byte __dt__CMenuPassiveSkill
 	.4byte CChildListNode_Reset
@@ -992,25 +992,25 @@
 	.4byte func_80263778
 	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuPassiveSkill
+	.4byte __RTTI__17CMenuPassiveSkill
 	.4byte 0xFFFFFFA8
 	.4byte func_80263EB4
 	.4byte func_80263EAC
 	.4byte func_8026382C
-.endobj __vt__CMenuPassiveSkill
+.endobj __vt__17CMenuPassiveSkill
 
 .obj CMenuPassiveSkill_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000058
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUICf
+	.4byte "__RTTI__14CTTask<5IUICf>"
 	.4byte 0
-	.4byte __RTTI__IUICf
+	.4byte __RTTI__5IUICf
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1020,10 +1020,10 @@
 
 .balign 8
 
-.obj __RTTI__CMenuPassiveSkill, global
+.obj __RTTI__17CMenuPassiveSkill, global
 	.4byte CMenuPassiveSkill_typestr
 	.4byte CMenuPassiveSkill_hierarchy
-.endobj __RTTI__CMenuPassiveSkill
+.endobj __RTTI__17CMenuPassiveSkill
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

@@ -11,12 +11,12 @@
 /* 8029B510 00264AD0  7C 9D 23 78 */	mr r29, r4
 /* 8029B514 00264AD4  7C BE 2B 78 */	mr r30, r5
 /* 8029B518 00264AD8  48 1A 95 01 */	bl __ct__8CProcessFv
-/* 8029B51C 00264ADC  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
-/* 8029B520 00264AE0  3C A0 80 54 */	lis r5, __vt__CMenuOption@ha
-/* 8029B524 00264AE4  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
+/* 8029B51C 00264ADC  3C 60 80 53 */	lis r3, "__vt__14CTTask<5IUICf>"@ha
+/* 8029B520 00264AE0  3C A0 80 54 */	lis r5, __vt__11CMenuOption@ha
+/* 8029B524 00264AE4  38 63 F7 40 */	addi r3, r3, "__vt__14CTTask<5IUICf>"@l
 /* 8029B528 00264AE8  90 7C 00 10 */	stw r3, 0x10(r28)
 /* 8029B52C 00264AEC  3D 00 80 51 */	lis r8, __ptmf_null@ha
-/* 8029B530 00264AF0  38 A5 CA 80 */	addi r5, r5, __vt__CMenuOption@l
+/* 8029B530 00264AF0  38 A5 CA 80 */	addi r5, r5, __vt__11CMenuOption@l
 /* 8029B534 00264AF4  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 8029B538 00264AF8  38 05 00 24 */	addi r0, r5, 0x24
 /* 8029B53C 00264AFC  3B E0 00 00 */	li r31, 0
@@ -727,8 +727,8 @@
 
 .balign 8
 
-.obj __vt__CMenuOption, global
-	.4byte __RTTI__CMenuOption
+.obj __vt__11CMenuOption, global
+	.4byte __RTTI__11CMenuOption
 	.4byte 0
 	.4byte __dt__CMenuOption
 	.4byte CChildListNode_Reset
@@ -737,25 +737,25 @@
 	.4byte func_8029B9CC
 	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuOption
+	.4byte __RTTI__11CMenuOption
 	.4byte 0xFFFFFFA8
 	.4byte func_8029BED4
 	.4byte func_8029BECC
 	.4byte func_8029BA80
-.endobj __vt__CMenuOption
+.endobj __vt__11CMenuOption
 
 .obj CMenuOption_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000058
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUICf
+	.4byte "__RTTI__14CTTask<5IUICf>"
 	.4byte 0
-	.4byte __RTTI__IUICf
+	.4byte __RTTI__5IUICf
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -765,10 +765,10 @@
 
 .balign 8
 
-.obj __RTTI__CMenuOption, global
+.obj __RTTI__11CMenuOption, global
 	.4byte CMenuOption_typestr
 	.4byte CMenuOption_hierarchy
-.endobj __RTTI__CMenuOption
+.endobj __RTTI__11CMenuOption
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

@@ -5,11 +5,11 @@
 .fn __ct__CScnFadeMan, global
 /* 8049C438 004659F8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049C43C 004659FC  7C 08 02 A6 */	mflr r0
-/* 8049C440 00465A00  3C E0 80 57 */	lis r7, __vt__CScnFadeMan@ha
+/* 8049C440 00465A00  3C E0 80 57 */	lis r7, __vt__11CScnFadeMan@ha
 /* 8049C444 00465A04  C0 02 CF B8 */	lfs f0, float_8066D338@sda21(r2)
 /* 8049C448 00465A08  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8049C44C 00465A0C  38 00 00 00 */	li r0, 0
-/* 8049C450 00465A10  38 E7 23 98 */	addi r7, r7, __vt__CScnFadeMan@l
+/* 8049C450 00465A10  38 E7 23 98 */	addi r7, r7, __vt__11CScnFadeMan@l
 /* 8049C454 00465A14  7C 88 23 78 */	mr r8, r4
 /* 8049C458 00465A18  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8049C45C 00465A1C  7C 7F 1B 78 */	mr r31, r3
@@ -52,9 +52,9 @@
 /* 8049C4E4 00465AA4  93 C1 00 08 */	stw r30, 8(r1)
 /* 8049C4E8 00465AA8  7C 7E 1B 78 */	mr r30, r3
 /* 8049C4EC 00465AAC  41 82 00 2C */	beq .L_8049C518
-/* 8049C4F0 00465AB0  3C A0 80 57 */	lis r5, __vt__CScnFadeMan@ha
+/* 8049C4F0 00465AB0  3C A0 80 57 */	lis r5, __vt__11CScnFadeMan@ha
 /* 8049C4F4 00465AB4  7F C4 F3 78 */	mr r4, r30
-/* 8049C4F8 00465AB8  38 A5 23 98 */	addi r5, r5, __vt__CScnFadeMan@l
+/* 8049C4F8 00465AB8  38 A5 23 98 */	addi r5, r5, __vt__11CScnFadeMan@l
 /* 8049C4FC 00465ABC  90 A3 00 00 */	stw r5, 0(r3)
 /* 8049C500 00465AC0  80 63 00 04 */	lwz r3, 4(r3)
 /* 8049C504 00465AC4  4B FF 9A 4D */	bl func_80495F50
@@ -287,22 +287,22 @@
 
 .balign 8
 
-.obj __vt__CScnFadeMan, global
-	.4byte __RTTI__CScnFadeMan
+.obj __vt__11CScnFadeMan, global
+	.4byte __RTTI__11CScnFadeMan
 	.4byte 0
 	.4byte __dt__CScnFadeMan
 	.4byte func_8049C678
-.endobj __vt__CScnFadeMan
+.endobj __vt__11CScnFadeMan
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CScnFadeMan, global
+.obj __RTTI__11CScnFadeMan, global
 	.4byte CScnFadeMan_typestr
 	.4byte 0
-.endobj __RTTI__CScnFadeMan
+.endobj __RTTI__11CScnFadeMan
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

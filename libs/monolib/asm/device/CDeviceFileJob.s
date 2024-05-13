@@ -10,9 +10,9 @@
 /* 80451E60 0041B420  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80451E64 0041B424  7C 7F 1B 78 */	mr r31, r3
 /* 80451E68 0041B428  4B FE 57 55 */	bl __ct__CWorkThread
-/* 80451E6C 0041B42C  3C 60 80 57 */	lis r3, __vt__CDeviceFileJob@ha
+/* 80451E6C 0041B42C  3C 60 80 57 */	lis r3, __vt__14CDeviceFileJob@ha
 /* 80451E70 0041B430  38 80 00 00 */	li r4, 0
-/* 80451E74 0041B434  38 63 FD 20 */	addi r3, r3, __vt__CDeviceFileJob@l
+/* 80451E74 0041B434  38 63 FD 20 */	addi r3, r3, __vt__14CDeviceFileJob@l
 /* 80451E78 0041B438  38 00 00 41 */	li r0, 0x41
 /* 80451E7C 0041B43C  90 7F 00 00 */	stw r3, 0(r31)
 /* 80451E80 0041B440  7F E3 FB 78 */	mr r3, r31
@@ -84,8 +84,8 @@
 
 .balign 8
 
-.obj __vt__CDeviceFileJob, global
-	.4byte __RTTI__CDeviceFileJob
+.obj __vt__14CDeviceFileJob, global
+	.4byte __RTTI__14CDeviceFileJob
 	.4byte 0
 	.4byte __dt__CDeviceFileJob
 	.4byte IWorkEvent_WorkEvent1
@@ -128,12 +128,12 @@
 	.4byte func_80451EC0
 	.4byte func_80451EB0
 	.4byte func_80451EB8
-.endobj __vt__CDeviceFileJob
+.endobj __vt__14CDeviceFileJob
 
 .obj CDeviceFileJob_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
 	.4byte 0
 .endobj CDeviceFileJob_hierarchy
@@ -142,10 +142,10 @@
 
 .balign 8
 
-.obj __RTTI__CDeviceFileJob, global
+.obj __RTTI__14CDeviceFileJob, global
 	.4byte CDeviceFileJob_typestr
 	.4byte CDeviceFileJob_hierarchy
-.endobj __RTTI__CDeviceFileJob
+.endobj __RTTI__14CDeviceFileJob
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

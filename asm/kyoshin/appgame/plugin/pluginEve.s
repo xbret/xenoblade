@@ -362,8 +362,8 @@
 /* 80046DB0 00010370  38 60 00 00 */	li r3, 0
 /* 80046DB4 00010374  48 03 BF A1 */	bl func_80082D54
 /* 80046DB8 00010378  38 80 00 00 */	li r4, 0
-/* 80046DBC 0001037C  38 AD 80 30 */	addi r5, r13, __RTTI__cf_CfObjectActor@sda21
-/* 80046DC0 00010380  38 CD 80 58 */	addi r6, r13, __RTTI__cf_CfObjectMove@sda21
+/* 80046DBC 0001037C  38 AD 80 30 */	addi r5, r13, __RTTI__Q22cf13CfObjectActor@sda21
+/* 80046DC0 00010380  38 CD 80 58 */	addi r6, r13, __RTTI__Q22cf12CfObjectMove@sda21
 /* 80046DC4 00010384  38 E0 00 00 */	li r7, 0
 /* 80046DC8 00010388  48 27 2F BD */	bl __dynamic_cast
 /* 80046DCC 0001038C  81 83 3E 9C */	lwz r12, 0x3e9c(r3)
@@ -415,8 +415,8 @@
 /* 80046E6C 0001042C  38 60 00 00 */	li r3, 0
 /* 80046E70 00010430  48 03 BE E5 */	bl func_80082D54
 /* 80046E74 00010434  38 80 00 00 */	li r4, 0
-/* 80046E78 00010438  38 AD 80 30 */	addi r5, r13, __RTTI__cf_CfObjectActor@sda21
-/* 80046E7C 0001043C  38 CD 80 58 */	addi r6, r13, __RTTI__cf_CfObjectMove@sda21
+/* 80046E78 00010438  38 AD 80 30 */	addi r5, r13, __RTTI__Q22cf13CfObjectActor@sda21
+/* 80046E7C 0001043C  38 CD 80 58 */	addi r6, r13, __RTTI__Q22cf12CfObjectMove@sda21
 /* 80046E80 00010440  38 E0 00 00 */	li r7, 0
 /* 80046E84 00010444  48 27 2F 01 */	bl __dynamic_cast
 /* 80046E88 00010448  81 83 3E 9C */	lwz r12, 0x3e9c(r3)

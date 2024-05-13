@@ -10,9 +10,9 @@
 /* 80439CC4 00403284  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80439CC8 00403288  7C 7F 1B 78 */	mr r31, r3
 /* 80439CCC 0040328C  4B FF D8 F1 */	bl __ct__CWorkThread
-/* 80439CD0 00403290  3C 60 80 57 */	lis r3, __vt__CRsrcData@ha
+/* 80439CD0 00403290  3C 60 80 57 */	lis r3, __vt__9CRsrcData@ha
 /* 80439CD4 00403294  38 80 00 00 */	li r4, 0
-/* 80439CD8 00403298  38 63 EB D8 */	addi r3, r3, __vt__CRsrcData@l
+/* 80439CD8 00403298  38 63 EB D8 */	addi r3, r3, __vt__9CRsrcData@l
 /* 80439CDC 0040329C  38 00 00 38 */	li r0, 0x38
 /* 80439CE0 004032A0  90 7F 00 00 */	stw r3, 0(r31)
 /* 80439CE4 004032A4  7F E3 FB 78 */	mr r3, r31
@@ -47,8 +47,8 @@
 /* 80439D4C 0040330C  7C 9F 23 78 */	mr r31, r4
 /* 80439D50 00403310  41 82 00 48 */	beq .L_80439D98
 /* 80439D54 00403314  80 03 04 D0 */	lwz r0, 0x4d0(r3)
-/* 80439D58 00403318  3C 80 80 57 */	lis r4, __vt__CRsrcData@ha
-/* 80439D5C 0040331C  38 84 EB D8 */	addi r4, r4, __vt__CRsrcData@l
+/* 80439D58 00403318  3C 80 80 57 */	lis r4, __vt__9CRsrcData@ha
+/* 80439D5C 0040331C  38 84 EB D8 */	addi r4, r4, __vt__9CRsrcData@l
 /* 80439D60 00403320  90 83 00 00 */	stw r4, 0(r3)
 /* 80439D64 00403324  2C 00 00 00 */	cmpwi r0, 0
 /* 80439D68 00403328  41 82 00 14 */	beq .L_80439D7C
@@ -336,8 +336,8 @@
 
 .balign 8
 
-.obj __vt__CRsrcData, global
-	.4byte __RTTI__CRsrcData
+.obj __vt__9CRsrcData, global
+	.4byte __RTTI__9CRsrcData
 	.4byte 0
 	.4byte __dt__CRsrcData
 	.4byte IWorkEvent_WorkEvent1
@@ -377,12 +377,12 @@
 	.4byte CRsrcData_WorkThreadEvent4
 	.4byte CRsrcData_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-.endobj __vt__CRsrcData
+.endobj __vt__9CRsrcData
 
 .obj CRsrcData_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -392,10 +392,10 @@
 
 .balign 8
 
-.obj __RTTI__CRsrcData, global
+.obj __RTTI__9CRsrcData, global
 	.4byte CRsrcData_typestr
 	.4byte CRsrcData_hierarchy
-.endobj __RTTI__CRsrcData
+.endobj __RTTI__9CRsrcData
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

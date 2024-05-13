@@ -5,14 +5,14 @@
 .fn __ct__cf_CfResPcImpl, global
 /* 8018C9C4 00155F84  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8018C9C8 00155F88  7C 08 02 A6 */	mflr r0
-/* 8018C9CC 00155F8C  3C A0 80 53 */	lis r5, __vt__cf_CfResPcImpl@ha
+/* 8018C9CC 00155F8C  3C A0 80 53 */	lis r5, __vt__Q22cf11CfResPcImpl@ha
 /* 8018C9D0 00155F90  C0 02 9F 80 */	lfs f0, float_8066A300@sda21(r2)
 /* 8018C9D4 00155F94  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8018C9D8 00155F98  2C 04 00 00 */	cmpwi r4, 0
 /* 8018C9DC 00155F9C  38 E0 00 00 */	li r7, 0
 /* 8018C9E0 00155FA0  38 C0 FF FF */	li r6, -1
 /* 8018C9E4 00155FA4  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 8018C9E8 00155FA8  38 A5 5F 48 */	addi r5, r5, __vt__cf_CfResPcImpl@l
+/* 8018C9E8 00155FA8  38 A5 5F 48 */	addi r5, r5, __vt__Q22cf11CfResPcImpl@l
 /* 8018C9EC 00155FAC  38 00 00 03 */	li r0, 3
 /* 8018C9F0 00155FB0  7C 7F 1B 78 */	mr r31, r3
 /* 8018C9F4 00155FB4  D0 03 00 04 */	stfs f0, 4(r3)
@@ -57,8 +57,8 @@
 /* 8018CA80 00156040  7C 7C 1B 78 */	mr r28, r3
 /* 8018CA84 00156044  41 82 00 6C */	beq .L_8018CAF0
 /* 8018CA88 00156048  AB C3 00 0E */	lha r30, 0xe(r3)
-/* 8018CA8C 0015604C  3C 80 80 53 */	lis r4, __vt__cf_CfResPcImpl@ha
-/* 8018CA90 00156050  38 84 5F 48 */	addi r4, r4, __vt__cf_CfResPcImpl@l
+/* 8018CA8C 0015604C  3C 80 80 53 */	lis r4, __vt__Q22cf11CfResPcImpl@ha
+/* 8018CA90 00156050  38 84 5F 48 */	addi r4, r4, __vt__Q22cf11CfResPcImpl@l
 /* 8018CA94 00156054  90 83 00 10 */	stw r4, 0x10(r3)
 /* 8018CA98 00156058  2C 1E 00 00 */	cmpwi r30, 0
 /* 8018CA9C 0015605C  41 80 00 44 */	blt .L_8018CAE0
@@ -1802,8 +1802,8 @@
 /* 8018E334 001578F4  80 84 00 90 */	lwz r4, 0x90(r4)
 /* 8018E338 001578F8  48 30 7B 55 */	bl func_80495E8C
 /* 8018E33C 001578FC  38 80 00 00 */	li r4, 0
-/* 8018E340 00157900  38 AD 8C 38 */	addi r5, r13, __RTTI__CScnItemModelNw4r@sda21
-/* 8018E344 00157904  38 CD 8C 48 */	addi r6, r13, __RTTI__CScnItemModel@sda21
+/* 8018E340 00157900  38 AD 8C 38 */	addi r5, r13, __RTTI__17CScnItemModelNw4r@sda21
+/* 8018E344 00157904  38 CD 8C 48 */	addi r6, r13, __RTTI__13CScnItemModel@sda21
 /* 8018E348 00157908  38 E0 00 00 */	li r7, 0
 /* 8018E34C 0015790C  48 12 BA 39 */	bl __dynamic_cast
 /* 8018E350 00157910  7C 64 1B 78 */	mr r4, r3
@@ -3409,17 +3409,17 @@
 .endobj lbl_80535F00
 
 .obj CScnItemModelNw4r_hierarchy, global
-	.4byte __RTTI__CScnItem
+	.4byte __RTTI__4CScnItem
 	.4byte 0
-	.4byte __RTTI__CScnItemModel
+	.4byte __RTTI__13CScnItemModel
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj CScnItemModelNw4r_hierarchy
 
 
-.obj __vt__cf_CfResPcImpl, global
-	.4byte __RTTI__cf_CfResPcImpl
+.obj __vt__Q22cf11CfResPcImpl, global
+	.4byte __RTTI__Q22cf11CfResPcImpl
 	.4byte 0
 	.4byte __dt__cf_CfResPcImpl
 	.4byte func_8018EEF0
@@ -3445,16 +3445,16 @@
 	.4byte func_8018CF90
 	.4byte func_8016CD54
 	.4byte func_800BF30C
-.endobj __vt__cf_CfResPcImpl
+.endobj __vt__Q22cf11CfResPcImpl
 
 .obj cf_CfResPcImpl_hierarchy, global
-	.4byte __RTTI__cf_CfResImpl
+	.4byte __RTTI__Q22cf5CfResImpl
 	.4byte 0
 	.4byte 0
 .endobj cf_CfResPcImpl_hierarchy
 
 .obj CScnItemModel_hierarchy, global
-	.4byte __RTTI__CScnItem
+	.4byte __RTTI__4CScnItem
 	.4byte 0
 	.4byte 0
 .endobj CScnItemModel_hierarchy
@@ -3483,27 +3483,27 @@
 
 .balign 8
 
-.obj __RTTI__CScnItemModelNw4r, global
+.obj __RTTI__17CScnItemModelNw4r, global
 	.4byte CScnItemModelNw4r_typestr
 	.4byte CScnItemModelNw4r_hierarchy
-.endobj __RTTI__CScnItemModelNw4r
+.endobj __RTTI__17CScnItemModelNw4r
 
-.obj __RTTI__cf_CfResPcImpl, global
+.obj __RTTI__Q22cf11CfResPcImpl, global
 	.4byte cf_CfResPcImpl_typestr
 	.4byte cf_CfResPcImpl_hierarchy
-.endobj __RTTI__cf_CfResPcImpl
+.endobj __RTTI__Q22cf11CfResPcImpl
 
 
-.obj __RTTI__CScnItemModel, global
+.obj __RTTI__13CScnItemModel, global
 	.4byte CScnItemModel_typestr
 	.4byte CScnItemModel_hierarchy
-.endobj __RTTI__CScnItemModel
+.endobj __RTTI__13CScnItemModel
 
 
-.obj __RTTI__CScnItem, global
+.obj __RTTI__4CScnItem, global
 	.4byte CScnItem_typestr
 	.4byte 0
-.endobj __RTTI__CScnItem
+.endobj __RTTI__4CScnItem
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

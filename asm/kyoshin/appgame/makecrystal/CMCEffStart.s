@@ -3,9 +3,9 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .fn __ct__CMCEffStart, global
-/* 80223D40 001ED300  3C C0 80 54 */	lis r6, __vt__CMCEffStart@ha
+/* 80223D40 001ED300  3C C0 80 54 */	lis r6, __vt__11CMCEffStart@ha
 /* 80223D44 001ED304  38 A0 00 00 */	li r5, 0
-/* 80223D48 001ED308  38 C6 98 CC */	addi r6, r6, __vt__CMCEffStart@l
+/* 80223D48 001ED308  38 C6 98 CC */	addi r6, r6, __vt__11CMCEffStart@l
 /* 80223D4C 001ED30C  38 00 00 01 */	li r0, 1
 /* 80223D50 001ED310  90 C3 00 00 */	stw r6, 0(r3)
 /* 80223D54 001ED314  98 A3 00 04 */	stb r5, 4(r3)
@@ -192,9 +192,9 @@
 /* 80223F9C 001ED55C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80223FA0 001ED560  7C 7F 1B 78 */	mr r31, r3
 /* 80223FA4 001ED564  4B FF FD 9D */	bl __ct__CMCEffStart
-/* 80223FA8 001ED568  3C 80 80 54 */	lis r4, __vt__CMCEffUpRed@ha
+/* 80223FA8 001ED568  3C 80 80 54 */	lis r4, __vt__11CMCEffUpRed@ha
 /* 80223FAC 001ED56C  7F E3 FB 78 */	mr r3, r31
-/* 80223FB0 001ED570  38 84 98 AC */	addi r4, r4, __vt__CMCEffUpRed@l
+/* 80223FB0 001ED570  38 84 98 AC */	addi r4, r4, __vt__11CMCEffUpRed@l
 /* 80223FB4 001ED574  90 9F 00 00 */	stw r4, 0(r31)
 /* 80223FB8 001ED578  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80223FBC 001ED57C  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -284,9 +284,9 @@
 /* 802240D0 001ED690  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802240D4 001ED694  7C 7F 1B 78 */	mr r31, r3
 /* 802240D8 001ED698  4B FF FC 69 */	bl __ct__CMCEffStart
-/* 802240DC 001ED69C  3C 80 80 54 */	lis r4, __vt__CMCEffUpBlue@ha
+/* 802240DC 001ED69C  3C 80 80 54 */	lis r4, __vt__12CMCEffUpBlue@ha
 /* 802240E0 001ED6A0  7F E3 FB 78 */	mr r3, r31
-/* 802240E4 001ED6A4  38 84 98 8C */	addi r4, r4, __vt__CMCEffUpBlue@l
+/* 802240E4 001ED6A4  38 84 98 8C */	addi r4, r4, __vt__12CMCEffUpBlue@l
 /* 802240E8 001ED6A8  90 9F 00 00 */	stw r4, 0(r31)
 /* 802240EC 001ED6AC  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 802240F0 001ED6B0  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -377,9 +377,9 @@
 /* 80224204 001ED7C4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80224208 001ED7C8  7C 7F 1B 78 */	mr r31, r3
 /* 8022420C 001ED7CC  4B FF FB 35 */	bl __ct__CMCEffStart
-/* 80224210 001ED7D0  3C 80 80 54 */	lis r4, __vt__CMCEffUpGreen@ha
+/* 80224210 001ED7D0  3C 80 80 54 */	lis r4, __vt__13CMCEffUpGreen@ha
 /* 80224214 001ED7D4  7F E3 FB 78 */	mr r3, r31
-/* 80224218 001ED7D8  38 84 98 6C */	addi r4, r4, __vt__CMCEffUpGreen@l
+/* 80224218 001ED7D8  38 84 98 6C */	addi r4, r4, __vt__13CMCEffUpGreen@l
 /* 8022421C 001ED7DC  90 9F 00 00 */	stw r4, 0(r31)
 /* 80224220 001ED7E0  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80224224 001ED7E4  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -463,9 +463,9 @@
 #CMCEffUpPrm
 
 .fn __ct__CMCEffUpPrm, global
-/* 8022432C 001ED8EC  3C A0 80 54 */	lis r5, __vt__CMCEffUpPrm@ha
+/* 8022432C 001ED8EC  3C A0 80 54 */	lis r5, __vt__11CMCEffUpPrm@ha
 /* 80224330 001ED8F0  38 00 00 01 */	li r0, 1
-/* 80224334 001ED8F4  38 A5 98 60 */	addi r5, r5, __vt__CMCEffUpPrm@l
+/* 80224334 001ED8F4  38 A5 98 60 */	addi r5, r5, __vt__11CMCEffUpPrm@l
 /* 80224338 001ED8F8  90 A3 00 00 */	stw r5, 0(r3)
 /* 8022433C 001ED8FC  38 C3 00 0C */	addi r6, r3, 0xc
 /* 80224340 001ED900  98 03 00 04 */	stb r0, 4(r3)
@@ -745,9 +745,9 @@
 #CMCEffSuccess
 
 .fn __ct__CMCEffSuccess, global
-/* 802246EC 001EDCAC  3C C0 80 54 */	lis r6, __vt__CMCEffSuccess@ha
+/* 802246EC 001EDCAC  3C C0 80 54 */	lis r6, __vt__13CMCEffSuccess@ha
 /* 802246F0 001EDCB0  38 A0 00 00 */	li r5, 0
-/* 802246F4 001EDCB4  38 C6 98 50 */	addi r6, r6, __vt__CMCEffSuccess@l
+/* 802246F4 001EDCB4  38 C6 98 50 */	addi r6, r6, __vt__13CMCEffSuccess@l
 /* 802246F8 001EDCB8  38 00 00 01 */	li r0, 1
 /* 802246FC 001EDCBC  90 C3 00 00 */	stw r6, 0(r3)
 /* 80224700 001EDCC0  98 A3 00 04 */	stb r5, 4(r3)
@@ -1081,9 +1081,9 @@
 /* 80224B4C 001EE10C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80224B50 001EE110  7C 7F 1B 78 */	mr r31, r3
 /* 80224B54 001EE114  4B FF F1 ED */	bl __ct__CMCEffStart
-/* 80224B58 001EE118  3C 80 80 54 */	lis r4, __vt__CMCEffFailure@ha
+/* 80224B58 001EE118  3C 80 80 54 */	lis r4, __vt__13CMCEffFailure@ha
 /* 80224B5C 001EE11C  7F E3 FB 78 */	mr r3, r31
-/* 80224B60 001EE120  38 84 98 30 */	addi r4, r4, __vt__CMCEffFailure@l
+/* 80224B60 001EE120  38 84 98 30 */	addi r4, r4, __vt__13CMCEffFailure@l
 /* 80224B64 001EE124  90 9F 00 00 */	stw r4, 0(r31)
 /* 80224B68 001EE128  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80224B6C 001EE12C  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -1155,9 +1155,9 @@
 
 
 .fn __ct__CMCEffCrystal, global
-/* 80224C4C 001EE20C  3C C0 80 54 */	lis r6, __vt__CMCEffCrystal@ha
+/* 80224C4C 001EE20C  3C C0 80 54 */	lis r6, __vt__13CMCEffCrystal@ha
 /* 80224C50 001EE210  38 A0 00 00 */	li r5, 0
-/* 80224C54 001EE214  38 C6 98 20 */	addi r6, r6, __vt__CMCEffCrystal@l
+/* 80224C54 001EE214  38 C6 98 20 */	addi r6, r6, __vt__13CMCEffCrystal@l
 /* 80224C58 001EE218  38 00 00 01 */	li r0, 1
 /* 80224C5C 001EE21C  90 C3 00 00 */	stw r6, 0(r3)
 /* 80224C60 001EE220  98 A3 00 04 */	stb r5, 4(r3)
@@ -2191,9 +2191,9 @@
 /* 80225AA4 001EF064  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80225AA8 001EF068  7C 7F 1B 78 */	mr r31, r3
 /* 80225AAC 001EF06C  4B FF E2 95 */	bl __ct__CMCEffStart
-/* 80225AB0 001EF070  3C 80 80 54 */	lis r4, __vt__CMCEffUpRank@ha
+/* 80225AB0 001EF070  3C 80 80 54 */	lis r4, __vt__12CMCEffUpRank@ha
 /* 80225AB4 001EF074  7F E3 FB 78 */	mr r3, r31
-/* 80225AB8 001EF078  38 84 98 00 */	addi r4, r4, __vt__CMCEffUpRank@l
+/* 80225AB8 001EF078  38 84 98 00 */	addi r4, r4, __vt__12CMCEffUpRank@l
 /* 80225ABC 001EF07C  90 9F 00 00 */	stw r4, 0(r31)
 /* 80225AC0 001EF080  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80225AC4 001EF084  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -2284,9 +2284,9 @@
 /* 80225BD8 001EF198  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80225BDC 001EF19C  7C 7F 1B 78 */	mr r31, r3
 /* 80225BE0 001EF1A0  4B FF E1 61 */	bl __ct__CMCEffStart
-/* 80225BE4 001EF1A4  3C 80 80 54 */	lis r4, __vt__CMCEffDivide@ha
+/* 80225BE4 001EF1A4  3C 80 80 54 */	lis r4, __vt__12CMCEffDivide@ha
 /* 80225BE8 001EF1A8  7F E3 FB 78 */	mr r3, r31
-/* 80225BEC 001EF1AC  38 84 97 E0 */	addi r4, r4, __vt__CMCEffDivide@l
+/* 80225BEC 001EF1AC  38 84 97 E0 */	addi r4, r4, __vt__12CMCEffDivide@l
 /* 80225BF0 001EF1B0  90 9F 00 00 */	stw r4, 0(r31)
 /* 80225BF4 001EF1B4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80225BF8 001EF1B8  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -2371,9 +2371,9 @@
 
 
 .fn __ct__CMCEffCylinder, global
-/* 80225D00 001EF2C0  3C C0 80 54 */	lis r6, __vt__CMCEffCylinder@ha
+/* 80225D00 001EF2C0  3C C0 80 54 */	lis r6, __vt__14CMCEffCylinder@ha
 /* 80225D04 001EF2C4  38 A0 00 00 */	li r5, 0
-/* 80225D08 001EF2C8  38 C6 97 D0 */	addi r6, r6, __vt__CMCEffCylinder@l
+/* 80225D08 001EF2C8  38 C6 97 D0 */	addi r6, r6, __vt__14CMCEffCylinder@l
 /* 80225D0C 001EF2CC  38 00 00 01 */	li r0, 1
 /* 80225D10 001EF2D0  90 C3 00 00 */	stw r6, 0(r3)
 /* 80225D14 001EF2D4  98 A3 00 04 */	stb r5, 4(r3)
@@ -2920,194 +2920,194 @@
 
 .balign 8
 
-.obj __vt__CMCEffCylinder, global
-	.4byte __RTTI__CMCEffCylinder
+.obj __vt__14CMCEffCylinder, global
+	.4byte __RTTI__14CMCEffCylinder
 	.4byte 0
 	.4byte __dt__CMCEffCylinder
 	.4byte func_80225D78
-.endobj __vt__CMCEffCylinder
+.endobj __vt__14CMCEffCylinder
 
 
-.obj __vt__CMCEffDivide, global
-	.4byte __RTTI__CMCEffDivide
+.obj __vt__12CMCEffDivide, global
+	.4byte __RTTI__12CMCEffDivide
 	.4byte 0
 	.4byte __dt__CMCEffDivide
 	.4byte func_80225C48
 	.4byte func_80225CD8
-.endobj __vt__CMCEffDivide
+.endobj __vt__12CMCEffDivide
 
 .obj CMCEffDivide_hierarchy, global
-	.4byte __RTTI__CMCEffStart
+	.4byte __RTTI__11CMCEffStart
 	.4byte 0
 	.4byte 0
 .endobj CMCEffDivide_hierarchy
 
 
-.obj __vt__CMCEffUpRank, global
-	.4byte __RTTI__CMCEffUpRank
+.obj __vt__12CMCEffUpRank, global
+	.4byte __RTTI__12CMCEffUpRank
 	.4byte 0
 	.4byte __dt__CMCEffUpRank
 	.4byte func_80225B14
 	.4byte func_80225BA4
-.endobj __vt__CMCEffUpRank
+.endobj __vt__12CMCEffUpRank
 
 .obj CMCEffUpRank_hierarchy, global
-	.4byte __RTTI__CMCEffStart
+	.4byte __RTTI__11CMCEffStart
 	.4byte 0
 	.4byte 0
 .endobj CMCEffUpRank_hierarchy
 
 
-.obj __vt__CMCEffCrystal, global
-	.4byte __RTTI__CMCEffCrystal
+.obj __vt__13CMCEffCrystal, global
+	.4byte __RTTI__13CMCEffCrystal
 	.4byte 0
 	.4byte __dt__CMCEffCrystal
 	.4byte func_80224CE4
-.endobj __vt__CMCEffCrystal
+.endobj __vt__13CMCEffCrystal
 
 
-.obj __vt__CMCEffFailure, global
-	.4byte __RTTI__CMCEffFailure
+.obj __vt__13CMCEffFailure, global
+	.4byte __RTTI__13CMCEffFailure
 	.4byte 0
 	.4byte __dt__CMCEffFailure
 	.4byte func_80224BBC
 	.4byte func_80223F24
-.endobj __vt__CMCEffFailure
+.endobj __vt__13CMCEffFailure
 
 .obj CMCEffFailure_hierarchy, global
-	.4byte __RTTI__CMCEffStart
+	.4byte __RTTI__11CMCEffStart
 	.4byte 0
 	.4byte 0
 .endobj CMCEffFailure_hierarchy
 
 
-.obj __vt__CMCEffSuccess, global
-	.4byte __RTTI__CMCEffSuccess
+.obj __vt__13CMCEffSuccess, global
+	.4byte __RTTI__13CMCEffSuccess
 	.4byte 0
 	.4byte __dt__CMCEffSuccess
 	.4byte func_80224760
-.endobj __vt__CMCEffSuccess
+.endobj __vt__13CMCEffSuccess
 
 
-.obj __vt__CMCEffUpPrm, global
-	.4byte __RTTI__CMCEffUpPrm
+.obj __vt__11CMCEffUpPrm, global
+	.4byte __RTTI__11CMCEffUpPrm
 	.4byte 0
 	.4byte __dt__CMCEffUpPrm
-.endobj __vt__CMCEffUpPrm
+.endobj __vt__11CMCEffUpPrm
 
 
-.obj __vt__CMCEffUpGreen, global
-	.4byte __RTTI__CMCEffUpGreen
+.obj __vt__13CMCEffUpGreen, global
+	.4byte __RTTI__13CMCEffUpGreen
 	.4byte 0
 	.4byte __dt__CMCEffUpGreen
 	.4byte func_80224274
 	.4byte func_80224304
-.endobj __vt__CMCEffUpGreen
+.endobj __vt__13CMCEffUpGreen
 
 .obj CMCEffUpGreen_hierarchy, global
-	.4byte __RTTI__CMCEffStart
+	.4byte __RTTI__11CMCEffStart
 	.4byte 0
 	.4byte 0
 .endobj CMCEffUpGreen_hierarchy
 
 
-.obj __vt__CMCEffUpBlue, global
-	.4byte __RTTI__CMCEffUpBlue
+.obj __vt__12CMCEffUpBlue, global
+	.4byte __RTTI__12CMCEffUpBlue
 	.4byte 0
 	.4byte __dt__CMCEffUpBlue
 	.4byte func_80224140
 	.4byte func_802241D0
-.endobj __vt__CMCEffUpBlue
+.endobj __vt__12CMCEffUpBlue
 
 .obj CMCEffUpBlue_hierarchy, global
-	.4byte __RTTI__CMCEffStart
+	.4byte __RTTI__11CMCEffStart
 	.4byte 0
 	.4byte 0
 .endobj CMCEffUpBlue_hierarchy
 
 
-.obj __vt__CMCEffUpRed, global
-	.4byte __RTTI__CMCEffUpRed
+.obj __vt__11CMCEffUpRed, global
+	.4byte __RTTI__11CMCEffUpRed
 	.4byte 0
 	.4byte __dt__CMCEffUpRed
 	.4byte func_8022400C
 	.4byte func_8022409C
-.endobj __vt__CMCEffUpRed
+.endobj __vt__11CMCEffUpRed
 
 .obj CMCEffUpRed_hierarchy, global
-	.4byte __RTTI__CMCEffStart
+	.4byte __RTTI__11CMCEffStart
 	.4byte 0
 	.4byte 0
 .endobj CMCEffUpRed_hierarchy
 
 
-.obj __vt__CMCEffStart, global
-	.4byte __RTTI__CMCEffStart
+.obj __vt__11CMCEffStart, global
+	.4byte __RTTI__11CMCEffStart
 	.4byte 0
 	.4byte __dt__CMCEffStart
 	.4byte func_80223DB0
 	.4byte func_80223F24
-.endobj __vt__CMCEffStart
+.endobj __vt__11CMCEffStart
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CMCEffCylinder, global
+.obj __RTTI__14CMCEffCylinder, global
 	.4byte CMCEffCylinder_typestr
 	.4byte 0
-.endobj __RTTI__CMCEffCylinder
+.endobj __RTTI__14CMCEffCylinder
 
-.obj __RTTI__CMCEffDivide, global
+.obj __RTTI__12CMCEffDivide, global
 	.4byte CMCEffDivide_typestr
 	.4byte CMCEffDivide_hierarchy
-.endobj __RTTI__CMCEffDivide
+.endobj __RTTI__12CMCEffDivide
 
-.obj __RTTI__CMCEffUpRank, global
+.obj __RTTI__12CMCEffUpRank, global
 	.4byte CMCEffUpRank_typestr
 	.4byte CMCEffUpRank_hierarchy
-.endobj __RTTI__CMCEffUpRank
+.endobj __RTTI__12CMCEffUpRank
 
-.obj __RTTI__CMCEffCrystal, global
+.obj __RTTI__13CMCEffCrystal, global
 	.4byte CMCEffCrystal_typestr
 	.4byte 0
-.endobj __RTTI__CMCEffCrystal
+.endobj __RTTI__13CMCEffCrystal
 
-.obj __RTTI__CMCEffFailure, global
+.obj __RTTI__13CMCEffFailure, global
 	.4byte CMCEffFailure_typestr
 	.4byte CMCEffFailure_hierarchy
-.endobj __RTTI__CMCEffFailure
+.endobj __RTTI__13CMCEffFailure
 
-.obj __RTTI__CMCEffSuccess, global
+.obj __RTTI__13CMCEffSuccess, global
 	.4byte CMCEffSuccess_typestr
 	.4byte 0
-.endobj __RTTI__CMCEffSuccess
+.endobj __RTTI__13CMCEffSuccess
 
-.obj __RTTI__CMCEffUpPrm, global
+.obj __RTTI__11CMCEffUpPrm, global
 	.4byte CMCEffUpPrm_typestr
 	.4byte 0
-.endobj __RTTI__CMCEffUpPrm
+.endobj __RTTI__11CMCEffUpPrm
 
-.obj __RTTI__CMCEffUpGreen, global
+.obj __RTTI__13CMCEffUpGreen, global
 	.4byte CMCEffUpGreen_typestr
 	.4byte CMCEffUpGreen_hierarchy
-.endobj __RTTI__CMCEffUpGreen
+.endobj __RTTI__13CMCEffUpGreen
 
-.obj __RTTI__CMCEffUpBlue, global
+.obj __RTTI__12CMCEffUpBlue, global
 	.4byte CMCEffUpBlue_typestr
 	.4byte CMCEffUpBlue_hierarchy
-.endobj __RTTI__CMCEffUpBlue
+.endobj __RTTI__12CMCEffUpBlue
 
-.obj __RTTI__CMCEffUpRed, global
+.obj __RTTI__11CMCEffUpRed, global
 	.4byte CMCEffUpRed_typestr
 	.4byte CMCEffUpRed_hierarchy
-.endobj __RTTI__CMCEffUpRed
+.endobj __RTTI__11CMCEffUpRed
 
-.obj __RTTI__CMCEffStart, global
+.obj __RTTI__11CMCEffStart, global
 	.4byte CMCEffStart_typestr
 	.4byte 0
-.endobj __RTTI__CMCEffStart
+.endobj __RTTI__11CMCEffStart
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

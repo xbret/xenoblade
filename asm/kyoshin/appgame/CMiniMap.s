@@ -1853,15 +1853,15 @@
 .fn __ct__CMiniMap, global
 /* 80117A18 000E0FD8  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 80117A1C 000E0FDC  7C 08 02 A6 */	mflr r0
-/* 80117A20 000E0FE0  3C 80 80 53 */	lis r4, __vt__CMiniMap@ha
-/* 80117A24 000E0FE4  3C C0 80 53 */	lis r6, __vt__CMMTex@ha
+/* 80117A20 000E0FE0  3C 80 80 53 */	lis r4, __vt__8CMiniMap@ha
+/* 80117A24 000E0FE4  3C C0 80 53 */	lis r6, __vt__6CMMTex@ha
 /* 80117A28 000E0FE8  90 01 00 44 */	stw r0, 0x44(r1)
 /* 80117A2C 000E0FEC  3C A0 80 53 */	lis r5, lbl_8052FF10@ha
 /* 80117A30 000E0FF0  C0 02 95 D8 */	lfs f0, float_80669958@sda21(r2)
 /* 80117A34 000E0FF4  38 E0 00 00 */	li r7, 0
 /* 80117A38 000E0FF8  93 E1 00 3C */	stw r31, 0x3c(r1)
-/* 80117A3C 000E0FFC  38 84 01 28 */	addi r4, r4, __vt__CMiniMap@l
-/* 80117A40 000E1000  38 C6 01 C0 */	addi r6, r6, __vt__CMMTex@l
+/* 80117A3C 000E0FFC  38 84 01 28 */	addi r4, r4, __vt__8CMiniMap@l
+/* 80117A40 000E1000  38 C6 01 C0 */	addi r6, r6, __vt__6CMMTex@l
 /* 80117A44 000E1004  38 00 00 01 */	li r0, 1
 /* 80117A48 000E1008  93 C1 00 38 */	stw r30, 0x38(r1)
 /* 80117A4C 000E100C  3F C0 80 50 */	lis r30, CMinimap_strpool@ha
@@ -6096,9 +6096,9 @@
 /* 8011B7AC 000E4D6C  38 A0 00 0A */	li r5, 0xa
 /* 8011B7B0 000E4D70  38 C0 00 00 */	li r6, 0
 /* 8011B7B4 000E4D74  48 37 A7 01 */	bl func_80495EB4
-/* 8011B7B8 000E4D78  3C 60 80 53 */	lis r3, __vt__CMMClock@ha
+/* 8011B7B8 000E4D78  3C 60 80 53 */	lis r3, __vt__8CMMClock@ha
 /* 8011B7BC 000E4D7C  38 80 00 00 */	li r4, 0
-/* 8011B7C0 000E4D80  38 63 02 58 */	addi r3, r3, __vt__CMMClock@l
+/* 8011B7C0 000E4D80  38 63 02 58 */	addi r3, r3, __vt__8CMMClock@l
 /* 8011B7C4 000E4D84  38 00 00 01 */	li r0, 1
 /* 8011B7C8 000E4D88  90 61 00 38 */	stw r3, 0x38(r1)
 /* 8011B7CC 000E4D8C  3B A1 00 38 */	addi r29, r1, 0x38
@@ -6274,10 +6274,10 @@
 /* 8011BA68 000E5028  48 33 2D 2D */	bl CDeviceFile_openFile1
 /* 8011BA6C 000E502C  90 7F 00 94 */	stw r3, 0x94(r31)
 /* 8011BA70 000E5030  38 C0 00 00 */	li r6, 0
-/* 8011BA74 000E5034  3C 60 80 53 */	lis r3, __vt__CMMTex@ha
+/* 8011BA74 000E5034  3C 60 80 53 */	lis r3, __vt__6CMMTex@ha
 /* 8011BA78 000E5038  3B 81 00 08 */	addi r28, r1, 8
 /* 8011BA7C 000E503C  80 8D A8 F4 */	lwz r4, lbl_80666A74@sda21(r13)
-/* 8011BA80 000E5040  38 63 01 C0 */	addi r3, r3, __vt__CMMTex@l
+/* 8011BA80 000E5040  38 63 01 C0 */	addi r3, r3, __vt__6CMMTex@l
 /* 8011BA84 000E5044  90 61 00 08 */	stw r3, 8(r1)
 /* 8011BA88 000E5048  38 61 00 18 */	addi r3, r1, 0x18
 /* 8011BA8C 000E504C  38 04 FF FF */	addi r0, r4, -1
@@ -6804,23 +6804,23 @@
 /* 8011C1F8 000E57B8  7C 7C 1B 78 */	mr r28, r3
 /* 8011C1FC 000E57BC  41 82 00 C0 */	beq .L_8011C2BC
 /* 8011C200 000E57C0  48 32 88 19 */	bl __ct__8CProcessFv
-/* 8011C204 000E57C4  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
+/* 8011C204 000E57C4  3C 60 80 53 */	lis r3, "__vt__14CTTask<5IUICf>"@ha
 /* 8011C208 000E57C8  3D 40 80 51 */	lis r10, __ptmf_null@ha
-/* 8011C20C 000E57CC  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
+/* 8011C20C 000E57CC  38 63 F7 40 */	addi r3, r3, "__vt__14CTTask<5IUICf>"@l
 /* 8011C210 000E57D0  90 7C 00 10 */	stw r3, 0x10(r28)
 /* 8011C214 000E57D4  39 4A CE 10 */	addi r10, r10, __ptmf_null@l
-/* 8011C218 000E57D8  3C E0 80 53 */	lis r7, __vt__CMenuMiniMap2@ha
+/* 8011C218 000E57D8  3C E0 80 53 */	lis r7, __vt__13CMenuMiniMap2@ha
 /* 8011C21C 000E57DC  80 0A 00 04 */	lwz r0, 4(r10)
-/* 8011C220 000E57E0  38 E7 00 28 */	addi r7, r7, __vt__CMenuMiniMap2@l
+/* 8011C220 000E57E0  38 E7 00 28 */	addi r7, r7, __vt__13CMenuMiniMap2@l
 /* 8011C224 000E57E4  80 6A 00 00 */	lwz r3, 0(r10)
-/* 8011C228 000E57E8  3C 80 80 53 */	lis r4, __vt__CMMClock@ha
+/* 8011C228 000E57E8  3C 80 80 53 */	lis r4, __vt__8CMMClock@ha
 /* 8011C22C 000E57EC  90 7C 00 3C */	stw r3, 0x3c(r28)
 /* 8011C230 000E57F0  3B 7C 00 64 */	addi r27, r28, 0x64
 /* 8011C234 000E57F4  3B A0 00 00 */	li r29, 0
 /* 8011C238 000E57F8  38 C7 00 24 */	addi r6, r7, 0x24
 /* 8011C23C 000E57FC  90 1C 00 40 */	stw r0, 0x40(r28)
 /* 8011C240 000E5800  38 A7 00 AC */	addi r5, r7, 0xac
-/* 8011C244 000E5804  38 84 02 58 */	addi r4, r4, __vt__CMMClock@l
+/* 8011C244 000E5804  38 84 02 58 */	addi r4, r4, __vt__8CMMClock@l
 /* 8011C248 000E5808  38 00 00 01 */	li r0, 1
 /* 8011C24C 000E580C  81 0A 00 08 */	lwz r8, 8(r10)
 /* 8011C250 000E5810  38 7B 00 1C */	addi r3, r27, 0x1c
@@ -7362,8 +7362,8 @@
 .endobj lbl_8052FFB8
 
 
-.obj __vt__CMenuMiniMap2, global
-	.4byte __RTTI__CMenuMiniMap2
+.obj __vt__13CMenuMiniMap2, global
+	.4byte __RTTI__13CMenuMiniMap2
 	.4byte 0
 	.4byte __dt__CMenuMiniMap2
 	.4byte CChildListNode_Reset
@@ -7372,7 +7372,7 @@
 	.4byte func_8011BBCC
 	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuMiniMap2
+	.4byte __RTTI__13CMenuMiniMap2
 	.4byte 0xFFFFFFA8
 	.4byte func_8011C434
 	.4byte IWorkEvent_WorkEvent1
@@ -7406,35 +7406,35 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CMenuMiniMap2
+	.4byte __RTTI__13CMenuMiniMap2
 	.4byte 0xFFFFFFA4
 	.4byte func_8011C444
 	.4byte func_8011C43C
 	.4byte func_8011C0C0
-.endobj __vt__CMenuMiniMap2
+.endobj __vt__13CMenuMiniMap2
 
 .obj CMenuMiniMap2_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x0000005C
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x00000058
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUICf
+	.4byte "__RTTI__14CTTask<5IUICf>"
 	.4byte 0
-	.4byte __RTTI__IUICf
+	.4byte __RTTI__5IUICf
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj CMenuMiniMap2_hierarchy
 
 
-.obj __vt__CMiniMap, global
-	.4byte __RTTI__CMiniMap
+.obj __vt__8CMiniMap, global
+	.4byte __RTTI__8CMiniMap
 	.4byte 0
 	.4byte __dt__CMiniMap
 	.4byte IWorkEvent_WorkEvent1
@@ -7468,18 +7468,18 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CMiniMap
+.endobj __vt__8CMiniMap
 
 .obj CMiniMap_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj CMiniMap_hierarchy
 
 
-.obj __vt__CMMTex, global
-	.4byte __RTTI__CMMTex
+.obj __vt__6CMMTex, global
+	.4byte __RTTI__6CMMTex
 	.4byte 0
 	.4byte __dt__CMMTex
 	.4byte IWorkEvent_WorkEvent1
@@ -7513,18 +7513,18 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CMMTex
+.endobj __vt__6CMMTex
 
 .obj CMMTex_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj CMMTex_hierarchy
 
 
-.obj __vt__CMMClock, global
-	.4byte __RTTI__CMMClock
+.obj __vt__8CMMClock, global
+	.4byte __RTTI__8CMMClock
 	.4byte 0
 	.4byte __dt__CMMClock
 	.4byte IWorkEvent_WorkEvent1
@@ -7558,10 +7558,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CMMClock
+.endobj __vt__8CMMClock
 
 .obj CMMClock_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 .endobj CMMClock_hierarchy
@@ -7624,26 +7624,26 @@
 	.4byte 0
 .endobj float_80664740
 
-.obj __RTTI__CMenuMiniMap2, global
+.obj __RTTI__13CMenuMiniMap2, global
 	.4byte CMenuMiniMap2_typestr
 	.4byte CMenuMiniMap2_hierarchy
-.endobj __RTTI__CMenuMiniMap2
+.endobj __RTTI__13CMenuMiniMap2
 
-.obj __RTTI__CMiniMap, global
+.obj __RTTI__8CMiniMap, global
 	.4byte CMiniMap_typestr
 	.4byte CMiniMap_hierarchy
-.endobj __RTTI__CMiniMap
+.endobj __RTTI__8CMiniMap
 
-.obj __RTTI__CMMTex, global
+.obj __RTTI__6CMMTex, global
 	.4byte CMMTex_typestr
 	.4byte CMMTex_hierarchy
-.endobj __RTTI__CMMTex
+.endobj __RTTI__6CMMTex
 
 
-.obj __RTTI__CMMClock, global
+.obj __RTTI__8CMMClock, global
 	.4byte CMMClock_typestr
 	.4byte CMMClock_hierarchy
-.endobj __RTTI__CMMClock
+.endobj __RTTI__8CMMClock
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

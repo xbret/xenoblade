@@ -5,9 +5,9 @@
 .fn __ct__CExchangeWin, global
 /* 8022CE70 001F6430  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8022CE74 001F6434  7C 08 02 A6 */	mflr r0
-/* 8022CE78 001F6438  3C 80 80 54 */	lis r4, __vt__CExchangeWin@ha
+/* 8022CE78 001F6438  3C 80 80 54 */	lis r4, __vt__12CExchangeWin@ha
 /* 8022CE7C 001F643C  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8022CE80 001F6440  38 84 9D F8 */	addi r4, r4, __vt__CExchangeWin@l
+/* 8022CE80 001F6440  38 84 9D F8 */	addi r4, r4, __vt__12CExchangeWin@l
 /* 8022CE84 001F6444  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8022CE88 001F6448  7C 7F 1B 78 */	mr r31, r3
 /* 8022CE8C 001F644C  90 83 00 00 */	stw r4, 0(r3)
@@ -549,8 +549,8 @@
 
 .balign 8
 
-.obj __vt__CExchangeWin, global
-	.4byte __RTTI__CExchangeWin
+.obj __vt__12CExchangeWin, global
+	.4byte __RTTI__12CExchangeWin
 	.4byte 0
 	.4byte __dt__CExchangeWin
 	.4byte IWorkEvent_WorkEvent1
@@ -584,10 +584,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CExchangeWin
+.endobj __vt__12CExchangeWin
 
 .obj CExchangeWin_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -597,10 +597,10 @@
 
 .balign 8
 
-.obj __RTTI__CExchangeWin, global
+.obj __RTTI__12CExchangeWin, global
 	.4byte CExchangeWin_typestr
 	.4byte CExchangeWin_hierarchy
-.endobj __RTTI__CExchangeWin
+.endobj __RTTI__12CExchangeWin
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

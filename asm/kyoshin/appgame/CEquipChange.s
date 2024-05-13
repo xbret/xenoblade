@@ -5,9 +5,9 @@
 .fn __ct__CEquipChange, global
 /* 80201A84 001CB044  94 21 D6 30 */	stwu r1, -0x29d0(r1)
 /* 80201A88 001CB048  7C 08 02 A6 */	mflr r0
-/* 80201A8C 001CB04C  3C 80 80 54 */	lis r4, __vt__CEquipChange@ha
+/* 80201A8C 001CB04C  3C 80 80 54 */	lis r4, __vt__12CEquipChange@ha
 /* 80201A90 001CB050  90 01 29 D4 */	stw r0, 0x29d4(r1)
-/* 80201A94 001CB054  38 84 8E 40 */	addi r4, r4, __vt__CEquipChange@l
+/* 80201A94 001CB054  38 84 8E 40 */	addi r4, r4, __vt__12CEquipChange@l
 /* 80201A98 001CB058  93 E1 29 CC */	stw r31, 0x29cc(r1)
 /* 80201A9C 001CB05C  7C 7F 1B 78 */	mr r31, r3
 /* 80201AA0 001CB060  93 C1 29 C8 */	stw r30, 0x29c8(r1)
@@ -4758,8 +4758,8 @@
 
 .balign 8
 
-.obj __vt__CEquipChange, global
-	.4byte __RTTI__CEquipChange
+.obj __vt__12CEquipChange, global
+	.4byte __RTTI__12CEquipChange
 	.4byte 0
 	.4byte __dt__CEquipChange
 	.4byte IWorkEvent_WorkEvent1
@@ -4793,10 +4793,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CEquipChange
+.endobj __vt__12CEquipChange
 
 .obj CEquipChange_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -4806,10 +4806,10 @@
 
 .balign 8
 
-.obj __RTTI__CEquipChange, global
+.obj __RTTI__12CEquipChange, global
 	.4byte CEquipChange_typestr
 	.4byte CEquipChange_hierarchy
-.endobj __RTTI__CEquipChange
+.endobj __RTTI__12CEquipChange
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

@@ -12,10 +12,10 @@
 /* 80184B2C 0014E0EC  93 C1 00 08 */	stw r30, 8(r1)
 /* 80184B30 0014E0F0  7C 7E 1B 78 */	mr r30, r3
 /* 80184B34 0014E0F4  48 00 0B 5D */	bl __ct__cf_CREvtObj
-/* 80184B38 0014E0F8  3C A0 80 53 */	lis r5, __vt__cf_CREvtEffect@ha
+/* 80184B38 0014E0F8  3C A0 80 53 */	lis r5, __vt__Q22cf11CREvtEffect@ha
 /* 80184B3C 0014E0FC  C0 22 9E 7C */	lfs f1, float_8066A1FC@sda21(r2)
 /* 80184B40 0014E100  C0 02 9E 80 */	lfs f0, float_8066A200@sda21(r2)
-/* 80184B44 0014E104  38 A5 5A A8 */	addi r5, r5, __vt__cf_CREvtEffect@l
+/* 80184B44 0014E104  38 A5 5A A8 */	addi r5, r5, __vt__Q22cf11CREvtEffect@l
 /* 80184B48 0014E108  38 60 00 00 */	li r3, 0
 /* 80184B4C 0014E10C  38 00 FF FF */	li r0, -1
 /* 80184B50 0014E110  38 85 00 28 */	addi r4, r5, 0x28
@@ -90,8 +90,8 @@
 /* 80184C54 0014E214  93 C1 00 08 */	stw r30, 8(r1)
 /* 80184C58 0014E218  7C 7E 1B 78 */	mr r30, r3
 /* 80184C5C 0014E21C  41 82 00 A0 */	beq .L_80184CFC
-/* 80184C60 0014E220  3D 80 80 53 */	lis r12, __vt__cf_CREvtEffect@ha
-/* 80184C64 0014E224  39 8C 5A A8 */	addi r12, r12, __vt__cf_CREvtEffect@l
+/* 80184C60 0014E220  3D 80 80 53 */	lis r12, __vt__Q22cf11CREvtEffect@ha
+/* 80184C64 0014E224  39 8C 5A A8 */	addi r12, r12, __vt__Q22cf11CREvtEffect@l
 /* 80184C68 0014E228  91 83 00 00 */	stw r12, 0(r3)
 /* 80184C6C 0014E22C  38 0C 00 28 */	addi r0, r12, 0x28
 /* 80184C70 0014E230  90 03 00 14 */	stw r0, 0x14(r3)
@@ -842,8 +842,8 @@
 
 .balign 8
 
-.obj __vt__cf_CREvtEffect, global
-	.4byte __RTTI__cf_CREvtEffect
+.obj __vt__Q22cf11CREvtEffect, global
+	.4byte __RTTI__Q22cf11CREvtEffect
 	.4byte 0
 	.4byte __ct__80184C3C
 	.4byte func_8018567C
@@ -853,15 +853,15 @@
 	.4byte func_801809A8
 	.4byte func_801696C4
 	.4byte func_80184D5C
-	.4byte __RTTI__cf_CREvtEffect
+	.4byte __RTTI__Q22cf11CREvtEffect
 	.4byte 0xFFFFFFEC
 	.4byte func_80185688
 	.4byte func_80185680
 	.4byte func_801855C4
-.endobj __vt__cf_CREvtEffect
+.endobj __vt__Q22cf11CREvtEffect
 
 .obj cf_CREvtEffect_hierarchy, global
-	.4byte __RTTI__cf_CREvtObj
+	.4byte __RTTI__Q22cf8CREvtObj
 	.4byte 0
 	.4byte 0
 .endobj cf_CREvtEffect_hierarchy
@@ -885,10 +885,10 @@
 	.4byte 0
 .endobj lbl_80664D70
 
-.obj __RTTI__cf_CREvtEffect, global
+.obj __RTTI__Q22cf11CREvtEffect, global
 	.4byte cf_CREvtEffect_typestr
 	.4byte cf_CREvtEffect_hierarchy
-.endobj __RTTI__cf_CREvtEffect
+.endobj __RTTI__Q22cf11CREvtEffect
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

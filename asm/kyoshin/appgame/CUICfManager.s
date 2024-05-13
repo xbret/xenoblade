@@ -2242,12 +2242,12 @@
 /* 80131EC8 000FB488  7C 7D 1B 78 */	mr r29, r3
 /* 80131ECC 000FB48C  93 81 00 10 */	stw r28, 0x10(r1)
 /* 80131ED0 000FB490  48 31 2B 49 */	bl __ct__8CProcessFv
-/* 80131ED4 000FB494  3C 60 80 53 */	lis r3, __vt__CTTask_CUICfManager@ha
-/* 80131ED8 000FB498  3C A0 80 53 */	lis r5, __vt__CUICfManager@ha
-/* 80131EDC 000FB49C  38 63 1C 14 */	addi r3, r3, __vt__CTTask_CUICfManager@l
+/* 80131ED4 000FB494  3C 60 80 53 */	lis r3, "__vt__22CTTask<12CUICfManager>"@ha
+/* 80131ED8 000FB498  3C A0 80 53 */	lis r5, __vt__12CUICfManager@ha
+/* 80131EDC 000FB49C  38 63 1C 14 */	addi r3, r3, "__vt__22CTTask<12CUICfManager>"@l
 /* 80131EE0 000FB4A0  90 7D 00 10 */	stw r3, 0x10(r29)
 /* 80131EE4 000FB4A4  3D 00 80 51 */	lis r8, __ptmf_null@ha
-/* 80131EE8 000FB4A8  38 A5 1A 70 */	addi r5, r5, __vt__CUICfManager@l
+/* 80131EE8 000FB4A8  38 A5 1A 70 */	addi r5, r5, __vt__12CUICfManager@l
 /* 80131EEC 000FB4AC  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 80131EF0 000FB4B0  38 85 00 24 */	addi r4, r5, 0x24
 /* 80131EF4 000FB4B4  3B 80 00 00 */	li r28, 0
@@ -2273,14 +2273,14 @@
 /* 80131F44 000FB504  48 2F BB 9D */	bl __ct__Q34nw4r2ut10PackedFontFv
 /* 80131F48 000FB508  38 7D 00 D8 */	addi r3, r29, 0xd8
 /* 80131F4C 000FB50C  48 2F BB 95 */	bl __ct__Q34nw4r2ut10PackedFontFv
-/* 80131F50 000FB510  3C C0 80 53 */	lis r6, __vt___reslist_base_IUICf@ha
+/* 80131F50 000FB510  3C C0 80 53 */	lis r6, "__vt__22_reslist_base<P5IUICf>"@ha
 /* 80131F54 000FB514  38 BD 01 2C */	addi r5, r29, 0x12c
-/* 80131F58 000FB518  38 C6 1B 80 */	addi r6, r6, __vt___reslist_base_IUICf@l
+/* 80131F58 000FB518  38 C6 1B 80 */	addi r6, r6, "__vt__22_reslist_base<P5IUICf>"@l
 /* 80131F5C 000FB51C  93 9D 01 14 */	stw r28, 0x114(r29)
-/* 80131F60 000FB520  3C 60 80 53 */	lis r3, __vt__reslist_IUICf@ha
+/* 80131F60 000FB520  3C 60 80 53 */	lis r3, "__vt__16reslist<P5IUICf>"@ha
 /* 80131F64 000FB524  38 FD 01 4C */	addi r7, r29, 0x14c
 /* 80131F68 000FB528  93 FD 01 18 */	stw r31, 0x118(r29)
-/* 80131F6C 000FB52C  38 63 1B 68 */	addi r3, r3, __vt__reslist_IUICf@l
+/* 80131F6C 000FB52C  38 63 1B 68 */	addi r3, r3, "__vt__16reslist<P5IUICf>"@l
 /* 80131F70 000FB530  39 1D 0C 8C */	addi r8, r29, 0xc8c
 /* 80131F74 000FB534  38 80 00 07 */	li r4, 7
 /* 80131F78 000FB538  93 DD 01 1C */	stw r30, 0x11c(r29)
@@ -2438,9 +2438,9 @@
 /* 801321A0 000FB760  93 C1 00 08 */	stw r30, 8(r1)
 /* 801321A4 000FB764  7C 7E 1B 78 */	mr r30, r3
 /* 801321A8 000FB768  41 82 00 78 */	beq .L_80132220
-/* 801321AC 000FB76C  3C A0 80 53 */	lis r5, __vt___reslist_base_IUICf@ha
+/* 801321AC 000FB76C  3C A0 80 53 */	lis r5, "__vt__22_reslist_base<P5IUICf>"@ha
 /* 801321B0 000FB770  80 83 00 04 */	lwz r4, 4(r3)
-/* 801321B4 000FB774  38 A5 1B 80 */	addi r5, r5, __vt___reslist_base_IUICf@l
+/* 801321B4 000FB774  38 A5 1B 80 */	addi r5, r5, "__vt__22_reslist_base<P5IUICf>"@l
 /* 801321B8 000FB778  90 A3 00 00 */	stw r5, 0(r3)
 /* 801321BC 000FB77C  38 00 00 00 */	li r0, 0
 /* 801321C0 000FB780  80 A4 00 00 */	lwz r5, 0(r4)
@@ -2491,9 +2491,9 @@
 /* 80132258 000FB818  7C 7E 1B 78 */	mr r30, r3
 /* 8013225C 000FB81C  41 82 00 7C */	beq .L_801322D8
 /* 80132260 000FB820  41 82 00 68 */	beq .L_801322C8
-/* 80132264 000FB824  3C A0 80 53 */	lis r5, __vt___reslist_base_IUICf@ha
+/* 80132264 000FB824  3C A0 80 53 */	lis r5, "__vt__22_reslist_base<P5IUICf>"@ha
 /* 80132268 000FB828  80 83 00 04 */	lwz r4, 4(r3)
-/* 8013226C 000FB82C  38 A5 1B 80 */	addi r5, r5, __vt___reslist_base_IUICf@l
+/* 8013226C 000FB82C  38 A5 1B 80 */	addi r5, r5, "__vt__22_reslist_base<P5IUICf>"@l
 /* 80132270 000FB830  90 A3 00 00 */	stw r5, 0(r3)
 /* 80132274 000FB834  38 00 00 00 */	li r0, 0
 /* 80132278 000FB838  80 84 00 00 */	lwz r4, 0(r4)
@@ -2547,9 +2547,9 @@
 /* 8013231C 000FB8DC  37 E3 01 24 */	addic. r31, r3, 0x124
 /* 80132320 000FB8E0  41 82 00 6C */	beq .L_8013238C
 /* 80132324 000FB8E4  41 82 00 68 */	beq .L_8013238C
-/* 80132328 000FB8E8  3C 80 80 53 */	lis r4, __vt___reslist_base_IUICf@ha
+/* 80132328 000FB8E8  3C 80 80 53 */	lis r4, "__vt__22_reslist_base<P5IUICf>"@ha
 /* 8013232C 000FB8EC  80 7F 00 04 */	lwz r3, 4(r31)
-/* 80132330 000FB8F0  38 84 1B 80 */	addi r4, r4, __vt___reslist_base_IUICf@l
+/* 80132330 000FB8F0  38 84 1B 80 */	addi r4, r4, "__vt__22_reslist_base<P5IUICf>"@l
 /* 80132334 000FB8F4  90 9F 00 00 */	stw r4, 0(r31)
 /* 80132338 000FB8F8  38 00 00 00 */	li r0, 0
 /* 8013233C 000FB8FC  80 83 00 00 */	lwz r4, 0(r3)
@@ -2632,15 +2632,15 @@
 /* 8013244C 000FBA0C  7C 76 1B 78 */	mr r22, r3
 /* 80132450 000FBA10  41 82 00 58 */	beq .L_801324A8
 /* 80132454 000FBA14  48 31 25 C5 */	bl __ct__8CProcessFv
-/* 80132458 000FBA18  3C 60 80 53 */	lis r3, __vt__CTTask_CUICfManager_CTest@ha
+/* 80132458 000FBA18  3C 60 80 53 */	lis r3, "__vt__30CTTask<Q212CUICfManager5CTest>"@ha
 /* 8013245C 000FBA1C  3C A0 80 51 */	lis r5, __ptmf_null@ha
-/* 80132460 000FBA20  38 63 1B D4 */	addi r3, r3, __vt__CTTask_CUICfManager_CTest@l
+/* 80132460 000FBA20  38 63 1B D4 */	addi r3, r3, "__vt__30CTTask<Q212CUICfManager5CTest>"@l
 /* 80132464 000FBA24  90 76 00 10 */	stw r3, 0x10(r22)
 /* 80132468 000FBA28  38 A5 CE 10 */	addi r5, r5, __ptmf_null@l
 /* 8013246C 000FBA2C  80 05 00 04 */	lwz r0, 4(r5)
-/* 80132470 000FBA30  3C 60 80 53 */	lis r3, __vt__CUICfManager_CTest@ha
+/* 80132470 000FBA30  3C 60 80 53 */	lis r3, __vt__Q212CUICfManager5CTest@ha
 /* 80132474 000FBA34  80 85 00 00 */	lwz r4, 0(r5)
-/* 80132478 000FBA38  38 63 1B 8C */	addi r3, r3, __vt__CUICfManager_CTest@l
+/* 80132478 000FBA38  38 63 1B 8C */	addi r3, r3, __vt__Q212CUICfManager5CTest@l
 /* 8013247C 000FBA3C  90 96 00 3C */	stw r4, 0x3c(r22)
 /* 80132480 000FBA40  90 16 00 40 */	stw r0, 0x40(r22)
 /* 80132484 000FBA44  80 05 00 08 */	lwz r0, 8(r5)
@@ -14740,8 +14740,8 @@
 .endobj lbl_80531A64
 
 
-.obj __vt__CUICfManager, global
-	.4byte __RTTI__CUICfManager
+.obj __vt__12CUICfManager, global
+	.4byte __RTTI__12CUICfManager
 	.4byte 0
 	.4byte __dt__CUICfManager
 	.4byte CChildListNode_Reset
@@ -14750,7 +14750,7 @@
 	.4byte func_801327D0
 	.4byte func_80135F18
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CUICfManager
+	.4byte __RTTI__12CUICfManager
 	.4byte 0xFFFFFFAC
 	.4byte func_80135FC4
 	.4byte IWorkEvent_WorkEvent1
@@ -14784,53 +14784,53 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CUICfManager
+	.4byte __RTTI__12CUICfManager
 	.4byte 0xFFFFFFA8
 	.4byte func_80135FD4
 	.4byte func_80135FCC
 	.4byte func_8013317C
 	.4byte func_80133324
-.endobj __vt__CUICfManager
+.endobj __vt__12CUICfManager
 
 .obj CUICfManager_hierarchy, global
-	.4byte __RTTI__cf_IFlagEvent
+	.4byte __RTTI__Q22cf10IFlagEvent
 	.4byte 0x00000058
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x00000054
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_CUICfManager
+	.4byte "__RTTI__22CTTask<12CUICfManager>"
 	.4byte 0
 	.4byte 0
 .endobj CUICfManager_hierarchy
 
 
-.obj __vt__reslist_IUICf, global
-	.4byte __RTTI__reslist_IUICf
+.obj "__vt__16reslist<P5IUICf>", global
+	.4byte "__RTTI__16reslist<P5IUICf>"
 	.4byte 0
 	.4byte __dt__reslist_IUICf
-.endobj __vt__reslist_IUICf
+.endobj "__vt__16reslist<P5IUICf>"
 
 .obj reslist_IUICf_hierarchy, global
-	.4byte __RTTI___reslist_base_IUICf
+	.4byte "__RTTI__22_reslist_base<P5IUICf>"
 	.4byte 0
 	.4byte 0
 .endobj reslist_IUICf_hierarchy
 
 
-.obj __vt___reslist_base_IUICf, global
-	.4byte __RTTI___reslist_base_IUICf
+.obj "__vt__22_reslist_base<P5IUICf>", global
+	.4byte "__RTTI__22_reslist_base<P5IUICf>"
 	.4byte 0
 	.4byte __dt___reslist_base_IUICf
-.endobj __vt___reslist_base_IUICf
+.endobj "__vt__22_reslist_base<P5IUICf>"
 
 
-.obj __vt__CUICfManager_CTest, global
-	.4byte __RTTI__CUICfManager_CTest
+.obj __vt__Q212CUICfManager5CTest, global
+	.4byte __RTTI__Q212CUICfManager5CTest
 	.4byte 0
 	.4byte __dt__CUICfManager_CTest
 	.4byte CChildListNode_Reset
@@ -14839,23 +14839,23 @@
 	.4byte func_80135E34
 	.4byte func_80135E30
 	.4byte CProcess_func_80043F20
-.endobj __vt__CUICfManager_CTest
+.endobj __vt__Q212CUICfManager5CTest
 
 .obj CUICfManager_CTest_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_CUICfManager_CTest
+	.4byte "__RTTI__30CTTask<Q212CUICfManager5CTest>"
 	.4byte 0
 	.4byte 0
 .endobj CUICfManager_CTest_hierarchy
 
 
-.obj __vt__CTTask_CUICfManager_CTest, global
-	.4byte __RTTI__CTTask_CUICfManager_CTest
+.obj "__vt__30CTTask<Q212CUICfManager5CTest>", global
+	.4byte "__RTTI__30CTTask<Q212CUICfManager5CTest>"
 	.4byte 0
 	.4byte __dt__CTTask_CUICfManager_CTest
 	.4byte CChildListNode_Reset
@@ -14864,21 +14864,21 @@
 	.4byte func_80135E40
 	.4byte func_80135E88
 	.4byte CProcess_func_80043F20
-.endobj __vt__CTTask_CUICfManager_CTest
+.endobj "__vt__30CTTask<Q212CUICfManager5CTest>"
 
 .obj CTTask_CUICfManager_CTest_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
 	.4byte 0
 .endobj CTTask_CUICfManager_CTest_hierarchy
 
 
-.obj __vt__CTTask_CUICfManager, global
-	.4byte __RTTI__CTTask_CUICfManager
+.obj "__vt__22CTTask<12CUICfManager>", global
+	.4byte "__RTTI__22CTTask<12CUICfManager>"
 	.4byte 0
 	.4byte __dt__CTTask_CUICfManager
 	.4byte CChildListNode_Reset
@@ -14887,14 +14887,14 @@
 	.4byte func_80135ED0
 	.4byte func_80135F18
 	.4byte CProcess_func_80043F20
-.endobj __vt__CTTask_CUICfManager
+.endobj "__vt__22CTTask<12CUICfManager>"
 
 .obj CTTask_CUICfManager_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -14974,40 +14974,40 @@
 	.4byte 0
 .endobj lbl_80664AA0
 
-.obj __RTTI__CUICfManager, global
+.obj __RTTI__12CUICfManager, global
 	.4byte CUICfManager_typestr
 	.4byte CUICfManager_hierarchy
-.endobj __RTTI__CUICfManager
+.endobj __RTTI__12CUICfManager
 
-.obj __RTTI__reslist_IUICf, global
+.obj "__RTTI__16reslist<P5IUICf>", global
 	.4byte reslist_IUICf_typestr
 	.4byte reslist_IUICf_hierarchy
-.endobj __RTTI__reslist_IUICf
+.endobj "__RTTI__16reslist<P5IUICf>"
 
-.obj __RTTI___reslist_base_IUICf, global
+.obj "__RTTI__22_reslist_base<P5IUICf>", global
 	.4byte _reslist_base_IUICf_typestr
 	.4byte 0
-.endobj __RTTI___reslist_base_IUICf
+.endobj "__RTTI__22_reslist_base<P5IUICf>"
 
-.obj __RTTI__CUICfManager_CTest, global
+.obj __RTTI__Q212CUICfManager5CTest, global
 	.4byte CUICfManager_CTest_typestr
 	.4byte CUICfManager_CTest_hierarchy
-.endobj __RTTI__CUICfManager_CTest
+.endobj __RTTI__Q212CUICfManager5CTest
 
-.obj __RTTI__CTTask_CUICfManager_CTest, global
+.obj "__RTTI__30CTTask<Q212CUICfManager5CTest>", global
 	.4byte CTTask_CUICfManager_CTest_typestr
 	.4byte CTTask_CUICfManager_CTest_hierarchy
-.endobj __RTTI__CTTask_CUICfManager_CTest
+.endobj "__RTTI__30CTTask<Q212CUICfManager5CTest>"
 
-.obj __RTTI__CTTask_CUICfManager, global
+.obj "__RTTI__22CTTask<12CUICfManager>", global
 	.4byte CTTask_CUICfManager_typestr
 	.4byte CTTask_CUICfManager_hierarchy
-.endobj __RTTI__CTTask_CUICfManager
+.endobj "__RTTI__22CTTask<12CUICfManager>"
 
-.obj __RTTI__cf_IFlagEvent, global
+.obj __RTTI__Q22cf10IFlagEvent, global
 	.4byte cf_IFlagEvent_typestr
 	.4byte 0
-.endobj __RTTI__cf_IFlagEvent
+.endobj __RTTI__Q22cf10IFlagEvent
 
 .obj lbl_80664AE0, global
 	.4byte 0x25730000

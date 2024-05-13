@@ -5,9 +5,9 @@
 .fn __ct__CPartyState, global
 /* 801FCE70 001C6430  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801FCE74 001C6434  7C 08 02 A6 */	mflr r0
-/* 801FCE78 001C6438  3C 80 80 54 */	lis r4, __vt__CPartyState@ha
+/* 801FCE78 001C6438  3C 80 80 54 */	lis r4, __vt__11CPartyState@ha
 /* 801FCE7C 001C643C  90 01 00 14 */	stw r0, 0x14(r1)
-/* 801FCE80 001C6440  38 84 8B 80 */	addi r4, r4, __vt__CPartyState@l
+/* 801FCE80 001C6440  38 84 8B 80 */	addi r4, r4, __vt__11CPartyState@l
 /* 801FCE84 001C6444  BF C1 00 08 */	stmw r30, 8(r1)
 /* 801FCE88 001C6448  7C 7E 1B 78 */	mr r30, r3
 /* 801FCE8C 001C644C  90 83 00 00 */	stw r4, 0(r3)
@@ -1959,8 +1959,8 @@
 
 .balign 8
 
-.obj __vt__CPartyState, global
-	.4byte __RTTI__CPartyState
+.obj __vt__11CPartyState, global
+	.4byte __RTTI__11CPartyState
 	.4byte 0
 	.4byte __dt__CPartyState
 	.4byte IWorkEvent_WorkEvent1
@@ -1994,10 +1994,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CPartyState
+.endobj __vt__11CPartyState
 
 .obj CPartyState_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -2013,10 +2013,10 @@
 	.4byte 0
 .endobj lbl_80665020
 
-.obj __RTTI__CPartyState, global
+.obj __RTTI__11CPartyState, global
 	.4byte CPartyState_typestr
 	.4byte CPartyState_hierarchy
-.endobj __RTTI__CPartyState
+.endobj __RTTI__11CPartyState
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

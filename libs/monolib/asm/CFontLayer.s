@@ -5,9 +5,9 @@
 .fn __ct__CFontLayer, global
 /* 80448FDC 0041259C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80448FE0 004125A0  7C 08 02 A6 */	mflr r0
-/* 80448FE4 004125A4  3C 80 80 57 */	lis r4, __vt__CFontLayer@ha
+/* 80448FE4 004125A4  3C 80 80 57 */	lis r4, __vt__10CFontLayer@ha
 /* 80448FE8 004125A8  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80448FEC 004125AC  38 84 F7 C0 */	addi r4, r4, __vt__CFontLayer@l
+/* 80448FEC 004125AC  38 84 F7 C0 */	addi r4, r4, __vt__10CFontLayer@l
 /* 80448FF0 004125B0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80448FF4 004125B4  7C 7F 1B 78 */	mr r31, r3
 /* 80448FF8 004125B8  90 83 00 00 */	stw r4, 0(r3)
@@ -30,8 +30,8 @@
 /* 80449030 004125F0  93 C1 00 08 */	stw r30, 8(r1)
 /* 80449034 004125F4  7C 7E 1B 78 */	mr r30, r3
 /* 80449038 004125F8  41 82 00 24 */	beq .L_8044905C
-/* 8044903C 004125FC  3C 80 80 57 */	lis r4, __vt__CFontLayer@ha
-/* 80449040 00412600  38 84 F7 C0 */	addi r4, r4, __vt__CFontLayer@l
+/* 8044903C 004125FC  3C 80 80 57 */	lis r4, __vt__10CFontLayer@ha
+/* 80449040 00412600  38 84 F7 C0 */	addi r4, r4, __vt__10CFontLayer@l
 /* 80449044 00412604  90 83 00 00 */	stw r4, 0(r3)
 /* 80449048 00412608  48 00 96 49 */	bl func_80452690
 /* 8044904C 0041260C  2C 1F 00 00 */	cmpwi r31, 0
@@ -137,12 +137,12 @@
 
 .balign 8
 
-.obj __vt__CFontLayer, global
-	.4byte __RTTI__CFontLayer
+.obj __vt__10CFontLayer, global
+	.4byte __RTTI__10CFontLayer
 	.4byte 0
 	.4byte __dt__CFontLayer
 	.4byte 0
-.endobj __vt__CFontLayer
+.endobj __vt__10CFontLayer
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

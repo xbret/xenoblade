@@ -9,15 +9,15 @@
 /* 800BF998 00088F58  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 800BF99C 00088F5C  7C 7F 1B 78 */	mr r31, r3
 /* 800BF9A0 00088F60  4B FF C2 AD */	bl __ct__cf_CfObjectMove
-/* 800BF9A4 00088F64  3C 60 80 53 */	lis r3, __vt__cf_CfObjectObj@ha
+/* 800BF9A4 00088F64  3C 60 80 53 */	lis r3, __vt__Q22cf11CfObjectObj@ha
 /* 800BF9A8 00088F68  38 00 00 00 */	li r0, 0
-/* 800BF9AC 00088F6C  38 63 D3 1C */	addi r3, r3, __vt__cf_CfObjectObj@l
+/* 800BF9AC 00088F6C  38 63 D3 1C */	addi r3, r3, __vt__Q22cf11CfObjectObj@l
 /* 800BF9B0 00088F70  90 7F 00 00 */	stw r3, 0(r31)
 /* 800BF9B4 00088F74  7F E3 FB 78 */	mr r3, r31
 /* 800BF9B8 00088F78  38 80 00 00 */	li r4, 0
 /* 800BF9BC 00088F7C  B0 1F 07 16 */	sth r0, 0x716(r31)
-/* 800BF9C0 00088F80  38 AD 84 90 */	addi r5, r13, __RTTI__cf_CfObjectTbox@sda21
-/* 800BF9C4 00088F84  38 CD 84 98 */	addi r6, r13, __RTTI__cf_CfObjectObj@sda21
+/* 800BF9C0 00088F80  38 AD 84 90 */	addi r5, r13, __RTTI__Q22cf12CfObjectTbox@sda21
+/* 800BF9C4 00088F84  38 CD 84 98 */	addi r6, r13, __RTTI__Q22cf11CfObjectObj@sda21
 /* 800BF9C8 00088F88  38 E0 00 00 */	li r7, 0
 /* 800BF9CC 00088F8C  48 1F A3 B9 */	bl __dynamic_cast
 /* 800BF9D0 00088F90  2C 03 00 00 */	cmpwi r3, 0
@@ -51,8 +51,8 @@
 /* 800BFA2C 00088FEC  93 C1 00 08 */	stw r30, 8(r1)
 /* 800BFA30 00088FF0  7C 7E 1B 78 */	mr r30, r3
 /* 800BFA34 00088FF4  41 82 00 38 */	beq .L_800BFA6C
-/* 800BFA38 00088FF8  3D 80 80 53 */	lis r12, __vt__cf_CfObjectObj@ha
-/* 800BFA3C 00088FFC  39 8C D3 1C */	addi r12, r12, __vt__cf_CfObjectObj@l
+/* 800BFA38 00088FF8  3D 80 80 53 */	lis r12, __vt__Q22cf11CfObjectObj@ha
+/* 800BFA3C 00088FFC  39 8C D3 1C */	addi r12, r12, __vt__Q22cf11CfObjectObj@l
 /* 800BFA40 00089000  91 83 00 00 */	stw r12, 0(r3)
 /* 800BFA44 00089004  81 8C 00 68 */	lwz r12, 0x68(r12)
 /* 800BFA48 00089008  7D 89 03 A6 */	mtctr r12
@@ -248,24 +248,24 @@
 .balign 8
 
 .obj cf_CfObjectTbox_hierarchy, global
-	.4byte __RTTI__cf_CObjectState
+	.4byte __RTTI__Q22cf12CObjectState
 	.4byte 0
-	.4byte __RTTI__cf_CObjectParam
+	.4byte __RTTI__Q22cf12CObjectParam
 	.4byte 0
-	.4byte __RTTI__cf_CfObject
+	.4byte __RTTI__Q22cf8CfObject
 	.4byte 0
-	.4byte __RTTI__cf_CfObjectModel
+	.4byte __RTTI__Q22cf13CfObjectModel
 	.4byte 0
-	.4byte __RTTI__cf_CfObjectMove
+	.4byte __RTTI__Q22cf12CfObjectMove
 	.4byte 0
-	.4byte __RTTI__cf_CfObjectObj
+	.4byte __RTTI__Q22cf11CfObjectObj
 	.4byte 0
 	.4byte 0
 .endobj cf_CfObjectTbox_hierarchy
 
 
-.obj __vt__cf_CfObjectObj, global
-	.4byte __RTTI__cf_CfObjectObj
+.obj __vt__Q22cf11CfObjectObj, global
+	.4byte __RTTI__Q22cf11CfObjectObj
 	.4byte 0
 	.4byte CObjectState_func_8003DC64
 	.4byte CObjectState_func_8003CB58
@@ -402,18 +402,18 @@
 	.4byte func_800BE5F4
 	.4byte func_800BE65C
 	.4byte func_800BE858
-.endobj __vt__cf_CfObjectObj
+.endobj __vt__Q22cf11CfObjectObj
 
 .obj cf_CfObjectObj_hierarchy, global
-	.4byte __RTTI__cf_CObjectState
+	.4byte __RTTI__Q22cf12CObjectState
 	.4byte 0
-	.4byte __RTTI__cf_CObjectParam
+	.4byte __RTTI__Q22cf12CObjectParam
 	.4byte 0
-	.4byte __RTTI__cf_CfObject
+	.4byte __RTTI__Q22cf8CfObject
 	.4byte 0
-	.4byte __RTTI__cf_CfObjectModel
+	.4byte __RTTI__Q22cf13CfObjectModel
 	.4byte 0
-	.4byte __RTTI__cf_CfObjectMove
+	.4byte __RTTI__Q22cf12CfObjectMove
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -424,16 +424,16 @@
 
 .balign 8
 
-.obj __RTTI__cf_CfObjectTbox, global
+.obj __RTTI__Q22cf12CfObjectTbox, global
 	.4byte cf_CfObjectTbox_typestr
 	.4byte cf_CfObjectTbox_hierarchy
-.endobj __RTTI__cf_CfObjectTbox
+.endobj __RTTI__Q22cf12CfObjectTbox
 
 
-.obj __RTTI__cf_CfObjectObj, global
+.obj __RTTI__Q22cf11CfObjectObj, global
 	.4byte cf_CfObjectObj_typestr
 	.4byte cf_CfObjectObj_hierarchy
-.endobj __RTTI__cf_CfObjectObj
+.endobj __RTTI__Q22cf11CfObjectObj
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

@@ -9,12 +9,12 @@
 /* 80495C38 0045F1F8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80495C3C 0045F1FC  7C 7F 1B 78 */	mr r31, r3
 /* 80495C40 0045F200  4B FA ED D9 */	bl __ct__8CProcessFv
-/* 80495C44 0045F204  3C 60 80 57 */	lis r3, __vt__CTTask_CScn@ha
-/* 80495C48 0045F208  3D 20 80 57 */	lis r9, __vt__CScn@ha
-/* 80495C4C 0045F20C  38 63 21 CC */	addi r3, r3, __vt__CTTask_CScn@l
+/* 80495C44 0045F204  3C 60 80 57 */	lis r3, "__vt__13CTTask<4CScn>"@ha
+/* 80495C48 0045F208  3D 20 80 57 */	lis r9, __vt__4CScn@ha
+/* 80495C4C 0045F20C  38 63 21 CC */	addi r3, r3, "__vt__13CTTask<4CScn>"@l
 /* 80495C50 0045F210  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 80495C54 0045F214  3D 80 80 51 */	lis r12, __ptmf_null@ha
-/* 80495C58 0045F218  39 29 21 18 */	addi r9, r9, __vt__CScn@l
+/* 80495C58 0045F218  39 29 21 18 */	addi r9, r9, __vt__4CScn@l
 /* 80495C5C 0045F21C  84 6C CE 10 */	lwzu r3, __ptmf_null@l(r12)
 /* 80495C60 0045F220  38 E0 00 00 */	li r7, 0
 /* 80495C64 0045F224  C0 02 CE F0 */	lfs f0, float_8066D270@sda21(r2)
@@ -119,8 +119,8 @@
 /* 80495DD4 0045F394  7C 7E 1B 78 */	mr r30, r3
 /* 80495DD8 0045F398  41 82 00 6C */	beq .L_80495E44
 /* 80495DDC 0045F39C  80 A3 00 88 */	lwz r5, 0x88(r3)
-/* 80495DE0 0045F3A0  3C 80 80 57 */	lis r4, __vt__CScn@ha
-/* 80495DE4 0045F3A4  38 84 21 18 */	addi r4, r4, __vt__CScn@l
+/* 80495DE0 0045F3A0  3C 80 80 57 */	lis r4, __vt__4CScn@ha
+/* 80495DE4 0045F3A4  38 84 21 18 */	addi r4, r4, __vt__4CScn@l
 /* 80495DE8 0045F3A8  90 83 00 10 */	stw r4, 0x10(r3)
 /* 80495DEC 0045F3AC  2C 05 00 00 */	cmpwi r5, 0
 /* 80495DF0 0045F3B0  38 04 00 24 */	addi r0, r4, 0x24
@@ -1186,8 +1186,8 @@
 
 .balign 8
 
-.obj __vt__CScn, global
-	.4byte __RTTI__CScn
+.obj __vt__4CScn, global
+	.4byte __RTTI__4CScn
 	.4byte 0
 	.4byte __dt__CScn
 	.4byte CChildListNode_Reset
@@ -1196,7 +1196,7 @@
 	.4byte func_804967B0
 	.4byte func_8049683C
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CScn
+	.4byte __RTTI__4CScn
 	.4byte 0xFFFFFFAC
 	.4byte func_80496B04
 	.4byte IWorkEvent_WorkEvent1
@@ -1232,11 +1232,11 @@
 	.4byte IWorkEvent_WorkEvent31
 	.4byte func_80496970
 	.4byte func_8049695C
-.endobj __vt__CScn
+.endobj __vt__4CScn
 
 
-.obj __vt__CTTask_CScn, global
-	.4byte __RTTI__CTTask_CScn
+.obj "__vt__13CTTask<4CScn>", global
+	.4byte "__RTTI__13CTTask<4CScn>"
 	.4byte 0
 	.4byte __dt__CTTask_CScn
 	.4byte CChildListNode_Reset
@@ -1245,7 +1245,7 @@
 	.4byte func_80496A74
 	.4byte func_80496ABC
 	.4byte CProcess_func_80043F20
-.endobj __vt__CTTask_CScn
+.endobj "__vt__13CTTask<4CScn>"
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

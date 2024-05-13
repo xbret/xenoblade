@@ -11,9 +11,9 @@
 /* 80449178 00412738  93 A1 00 44 */	stw r29, 0x44(r1)
 /* 8044917C 0041273C  7C 7D 1B 78 */	mr r29, r3
 /* 80449180 00412740  48 00 0B 75 */	bl __ct__IStateCache
-/* 80449184 00412744  3C 60 80 57 */	lis r3, __vt__CGXCache@ha
+/* 80449184 00412744  3C 60 80 57 */	lis r3, __vt__8CGXCache@ha
 /* 80449188 00412748  7F A4 EB 78 */	mr r4, r29
-/* 8044918C 0041274C  38 63 F8 08 */	addi r3, r3, __vt__CGXCache@l
+/* 8044918C 0041274C  38 63 F8 08 */	addi r3, r3, __vt__8CGXCache@l
 /* 80449190 00412750  90 7D 00 00 */	stw r3, 0(r29)
 /* 80449194 00412754  38 7D 00 04 */	addi r3, r29, 4
 /* 80449198 00412758  48 00 02 B5 */	bl __ct__CMsgParam_32
@@ -196,9 +196,9 @@
 .endfn __dt__IStateCache
 
 .fn __ct__CMsgParam_32, global
-/* 8044944C 00412A0C  3C E0 80 57 */	lis r7, __vt__CMsgParam_32@ha
+/* 8044944C 00412A0C  3C E0 80 57 */	lis r7, "__vt__13CMsgParam<32>"@ha
 /* 80449450 00412A10  38 00 00 00 */	li r0, 0
-/* 80449454 00412A14  38 E7 F8 24 */	addi r7, r7, __vt__CMsgParam_32@l
+/* 80449454 00412A14  38 E7 F8 24 */	addi r7, r7, "__vt__13CMsgParam<32>"@l
 /* 80449458 00412A18  38 A3 00 04 */	addi r5, r3, 4
 /* 8044945C 00412A1C  38 C0 00 20 */	li r6, 0x20
 /* 80449460 00412A20  90 E3 00 00 */	stw r7, 0(r3)
@@ -820,8 +820,8 @@
 .endfn func_80449B94
 
 .fn __ct__IStateCache, global
-/* 80449CF4 004132B4  3C 80 80 57 */	lis r4, __vt__IStateCache@ha
-/* 80449CF8 004132B8  38 84 F8 30 */	addi r4, r4, __vt__IStateCache@l
+/* 80449CF4 004132B4  3C 80 80 57 */	lis r4, __vt__11IStateCache@ha
+/* 80449CF8 004132B8  38 84 F8 30 */	addi r4, r4, __vt__11IStateCache@l
 /* 80449CFC 004132BC  90 83 00 00 */	stw r4, 0(r3)
 /* 80449D00 004132C0  4E 80 00 20 */	blr 
 .endfn __ct__IStateCache
@@ -1451,33 +1451,33 @@
 .endobj jumptable_8056F7D0
 
 
-.obj __vt__CGXCache, global
-	.4byte __RTTI__CGXCache
+.obj __vt__8CGXCache, global
+	.4byte __RTTI__8CGXCache
 	.4byte 0
 	.4byte __dt__CGXCache
 	.4byte func_80449D68
-.endobj __vt__CGXCache
+.endobj __vt__8CGXCache
 
 .obj CGXCache_hierarchy, global
-	.4byte __RTTI__IStateCache
+	.4byte __RTTI__11IStateCache
 	.4byte 0
 	.4byte 0
 .endobj CGXCache_hierarchy
 
 
-.obj __vt__CMsgParam_32, global
-	.4byte __RTTI__CMsgParam_32
+.obj "__vt__13CMsgParam<32>", global
+	.4byte "__RTTI__13CMsgParam<32>"
 	.4byte 0
 	.4byte __dt__CMsgParam_32
-.endobj __vt__CMsgParam_32
+.endobj "__vt__13CMsgParam<32>"
 
 
-.obj __vt__IStateCache, global
-	.4byte __RTTI__IStateCache
+.obj __vt__11IStateCache, global
+	.4byte __RTTI__11IStateCache
 	.4byte 0
 	.4byte __dt__IStateCache
 	.4byte 0
-.endobj __vt__IStateCache
+.endobj __vt__11IStateCache
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
@@ -1547,21 +1547,21 @@
 	.4byte 0
 .endobj lbl_80665F78
 
-.obj __RTTI__CGXCache, global
+.obj __RTTI__8CGXCache, global
 	.4byte CGXCache_typestr
 	.4byte CGXCache_hierarchy
-.endobj __RTTI__CGXCache
+.endobj __RTTI__8CGXCache
 
 
-.obj __RTTI__CMsgParam_32, global
+.obj "__RTTI__13CMsgParam<32>", global
 	.4byte CMsgParam_32_typestr
 	.4byte 0
-.endobj __RTTI__CMsgParam_32
+.endobj "__RTTI__13CMsgParam<32>"
 
-.obj __RTTI__IStateCache, global
+.obj __RTTI__11IStateCache, global
 	.4byte IStateCache_typestr
 	.4byte 0
-.endobj __RTTI__IStateCache
+.endobj __RTTI__11IStateCache
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

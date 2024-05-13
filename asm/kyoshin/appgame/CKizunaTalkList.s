@@ -724,9 +724,9 @@
 .fn __ct__CKizunaTalkList, global
 /* 80273120 0023C6E0  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80273124 0023C6E4  7C 08 02 A6 */	mflr r0
-/* 80273128 0023C6E8  3C 80 80 54 */	lis r4, __vt__CKizunaTalkList@ha
+/* 80273128 0023C6E8  3C 80 80 54 */	lis r4, __vt__15CKizunaTalkList@ha
 /* 8027312C 0023C6EC  90 01 00 54 */	stw r0, 0x54(r1)
-/* 80273130 0023C6F0  38 84 B4 E0 */	addi r4, r4, __vt__CKizunaTalkList@l
+/* 80273130 0023C6F0  38 84 B4 E0 */	addi r4, r4, __vt__15CKizunaTalkList@l
 /* 80273134 0023C6F4  93 E1 00 4C */	stw r31, 0x4c(r1)
 /* 80273138 0023C6F8  93 C1 00 48 */	stw r30, 0x48(r1)
 /* 8027313C 0023C6FC  7C 7E 1B 78 */	mr r30, r3
@@ -2169,8 +2169,8 @@
 
 .balign 8
 
-.obj __vt__CKizunaTalkList, global
-	.4byte __RTTI__CKizunaTalkList
+.obj __vt__15CKizunaTalkList, global
+	.4byte __RTTI__15CKizunaTalkList
 	.4byte 0
 	.4byte __dt__CKizunaTalkList
 	.4byte IWorkEvent_WorkEvent1
@@ -2204,10 +2204,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CKizunaTalkList
+.endobj __vt__15CKizunaTalkList
 
 .obj CKizunaTalkList_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -2217,10 +2217,10 @@
 
 .balign 8
 
-.obj __RTTI__CKizunaTalkList, global
+.obj __RTTI__15CKizunaTalkList, global
 	.4byte CKizunaTalkList_typestr
 	.4byte CKizunaTalkList_hierarchy
-.endobj __RTTI__CKizunaTalkList
+.endobj __RTTI__15CKizunaTalkList
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

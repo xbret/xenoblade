@@ -3,9 +3,9 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .fn __ct__CBaseCur, global
-/* 801D1FC0 0019B580  3C A0 80 54 */	lis r5, __vt__CBaseCur@ha
+/* 801D1FC0 0019B580  3C A0 80 54 */	lis r5, __vt__8CBaseCur@ha
 /* 801D1FC4 0019B584  38 00 00 00 */	li r0, 0
-/* 801D1FC8 0019B588  38 A5 81 58 */	addi r5, r5, __vt__CBaseCur@l
+/* 801D1FC8 0019B588  38 A5 81 58 */	addi r5, r5, __vt__8CBaseCur@l
 /* 801D1FCC 0019B58C  90 A3 00 00 */	stw r5, 0(r3)
 /* 801D1FD0 0019B590  90 83 00 04 */	stw r4, 4(r3)
 /* 801D1FD4 0019B594  90 03 00 08 */	stw r0, 8(r3)
@@ -260,9 +260,9 @@
 /* 801D2308 0019B8C8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801D230C 0019B8CC  7C 7F 1B 78 */	mr r31, r3
 /* 801D2310 0019B8D0  4B FF FC B1 */	bl __ct__CBaseCur
-/* 801D2314 0019B8D4  3C 80 80 54 */	lis r4, __vt__CCur07@ha
+/* 801D2314 0019B8D4  3C 80 80 54 */	lis r4, __vt__6CCur07@ha
 /* 801D2318 0019B8D8  7F E3 FB 78 */	mr r3, r31
-/* 801D231C 0019B8DC  38 84 81 30 */	addi r4, r4, __vt__CCur07@l
+/* 801D231C 0019B8DC  38 84 81 30 */	addi r4, r4, __vt__6CCur07@l
 /* 801D2320 0019B8E0  90 9F 00 00 */	stw r4, 0(r31)
 /* 801D2324 0019B8E4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 801D2328 0019B8E8  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -334,9 +334,9 @@
 /* 801D2408 0019B9C8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801D240C 0019B9CC  7C 7F 1B 78 */	mr r31, r3
 /* 801D2410 0019B9D0  4B FF FB B1 */	bl __ct__CBaseCur
-/* 801D2414 0019B9D4  3C 80 80 54 */	lis r4, __vt__CCur09@ha
+/* 801D2414 0019B9D4  3C 80 80 54 */	lis r4, __vt__6CCur09@ha
 /* 801D2418 0019B9D8  7F E3 FB 78 */	mr r3, r31
-/* 801D241C 0019B9DC  38 84 81 08 */	addi r4, r4, __vt__CCur09@l
+/* 801D241C 0019B9DC  38 84 81 08 */	addi r4, r4, __vt__6CCur09@l
 /* 801D2420 0019B9E0  90 9F 00 00 */	stw r4, 0(r31)
 /* 801D2424 0019B9E4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 801D2428 0019B9E8  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -440,9 +440,9 @@
 /* 801D257C 0019BB3C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801D2580 0019BB40  7C 7F 1B 78 */	mr r31, r3
 /* 801D2584 0019BB44  4B FF FA 3D */	bl __ct__CBaseCur
-/* 801D2588 0019BB48  3C 80 80 54 */	lis r4, __vt__CCur11@ha
+/* 801D2588 0019BB48  3C 80 80 54 */	lis r4, __vt__6CCur11@ha
 /* 801D258C 0019BB4C  7F E3 FB 78 */	mr r3, r31
-/* 801D2590 0019BB50  38 84 80 E0 */	addi r4, r4, __vt__CCur11@l
+/* 801D2590 0019BB50  38 84 80 E0 */	addi r4, r4, __vt__6CCur11@l
 /* 801D2594 0019BB54  90 9F 00 00 */	stw r4, 0(r31)
 /* 801D2598 0019BB58  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 801D259C 0019BB5C  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -553,9 +553,9 @@
 /* 801D2708 0019BCC8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801D270C 0019BCCC  7C 7F 1B 78 */	mr r31, r3
 /* 801D2710 0019BCD0  4B FF F8 B1 */	bl __ct__CBaseCur
-/* 801D2714 0019BCD4  3C 80 80 54 */	lis r4, __vt__CCur14@ha
+/* 801D2714 0019BCD4  3C 80 80 54 */	lis r4, __vt__6CCur14@ha
 /* 801D2718 0019BCD8  7F E3 FB 78 */	mr r3, r31
-/* 801D271C 0019BCDC  38 84 80 B8 */	addi r4, r4, __vt__CCur14@l
+/* 801D271C 0019BCDC  38 84 80 B8 */	addi r4, r4, __vt__6CCur14@l
 /* 801D2720 0019BCE0  90 9F 00 00 */	stw r4, 0(r31)
 /* 801D2724 0019BCE4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 801D2728 0019BCE8  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -627,9 +627,9 @@
 /* 801D2808 0019BDC8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801D280C 0019BDCC  7C 7F 1B 78 */	mr r31, r3
 /* 801D2810 0019BDD0  4B FF F7 B1 */	bl __ct__CBaseCur
-/* 801D2814 0019BDD4  3C 80 80 54 */	lis r4, __vt__CCur15@ha
+/* 801D2814 0019BDD4  3C 80 80 54 */	lis r4, __vt__6CCur15@ha
 /* 801D2818 0019BDD8  7F E3 FB 78 */	mr r3, r31
-/* 801D281C 0019BDDC  38 84 80 90 */	addi r4, r4, __vt__CCur15@l
+/* 801D281C 0019BDDC  38 84 80 90 */	addi r4, r4, __vt__6CCur15@l
 /* 801D2820 0019BDE0  90 9F 00 00 */	stw r4, 0(r31)
 /* 801D2824 0019BDE4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 801D2828 0019BDE8  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -701,9 +701,9 @@
 /* 801D2908 0019BEC8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801D290C 0019BECC  7C 7F 1B 78 */	mr r31, r3
 /* 801D2910 0019BED0  4B FF F6 B1 */	bl __ct__CBaseCur
-/* 801D2914 0019BED4  3C 80 80 54 */	lis r4, __vt__CCur16@ha
+/* 801D2914 0019BED4  3C 80 80 54 */	lis r4, __vt__6CCur16@ha
 /* 801D2918 0019BED8  7F E3 FB 78 */	mr r3, r31
-/* 801D291C 0019BEDC  38 84 80 68 */	addi r4, r4, __vt__CCur16@l
+/* 801D291C 0019BEDC  38 84 80 68 */	addi r4, r4, __vt__6CCur16@l
 /* 801D2920 0019BEE0  90 9F 00 00 */	stw r4, 0(r31)
 /* 801D2924 0019BEE4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 801D2928 0019BEE8  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -775,9 +775,9 @@
 /* 801D2A08 0019BFC8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801D2A0C 0019BFCC  7C 7F 1B 78 */	mr r31, r3
 /* 801D2A10 0019BFD0  4B FF F5 B1 */	bl __ct__CBaseCur
-/* 801D2A14 0019BFD4  3C 80 80 54 */	lis r4, __vt__CCur18@ha
+/* 801D2A14 0019BFD4  3C 80 80 54 */	lis r4, __vt__6CCur18@ha
 /* 801D2A18 0019BFD8  7F E3 FB 78 */	mr r3, r31
-/* 801D2A1C 0019BFDC  38 84 80 3C */	addi r4, r4, __vt__CCur18@l
+/* 801D2A1C 0019BFDC  38 84 80 3C */	addi r4, r4, __vt__6CCur18@l
 /* 801D2A20 0019BFE0  90 9F 00 00 */	stw r4, 0(r31)
 /* 801D2A24 0019BFE4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 801D2A28 0019BFE8  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -849,9 +849,9 @@
 /* 801D2B08 0019C0C8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801D2B0C 0019C0CC  7C 7F 1B 78 */	mr r31, r3
 /* 801D2B10 0019C0D0  4B FF F4 B1 */	bl __ct__CBaseCur
-/* 801D2B14 0019C0D4  3C 80 80 54 */	lis r4, __vt__CCur22@ha
+/* 801D2B14 0019C0D4  3C 80 80 54 */	lis r4, __vt__6CCur22@ha
 /* 801D2B18 0019C0D8  7F E3 FB 78 */	mr r3, r31
-/* 801D2B1C 0019C0DC  38 84 80 14 */	addi r4, r4, __vt__CCur22@l
+/* 801D2B1C 0019C0DC  38 84 80 14 */	addi r4, r4, __vt__6CCur22@l
 /* 801D2B20 0019C0E0  90 9F 00 00 */	stw r4, 0(r31)
 /* 801D2B24 0019C0E4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 801D2B28 0019C0E8  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -1021,9 +1021,9 @@
 /* 801D2D58 0019C318  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801D2D5C 0019C31C  7C 7F 1B 78 */	mr r31, r3
 /* 801D2D60 0019C320  4B FF F2 61 */	bl __ct__CBaseCur
-/* 801D2D64 0019C324  3C 80 80 53 */	lis r4, __vt__CSubCur@ha
+/* 801D2D64 0019C324  3C 80 80 53 */	lis r4, __vt__7CSubCur@ha
 /* 801D2D68 0019C328  7F E3 FB 78 */	mr r3, r31
-/* 801D2D6C 0019C32C  38 84 7F F0 */	addi r4, r4, __vt__CSubCur@l
+/* 801D2D6C 0019C32C  38 84 7F F0 */	addi r4, r4, __vt__7CSubCur@l
 /* 801D2D70 0019C330  90 9F 00 00 */	stw r4, 0(r31)
 /* 801D2D74 0019C334  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 801D2D78 0019C338  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -1254,216 +1254,216 @@
 .endobj lbl_80537FE0
 
 
-.obj __vt__CSubCur, global
-	.4byte __RTTI__CSubCur
+.obj __vt__7CSubCur, global
+	.4byte __RTTI__7CSubCur
 	.4byte 0
 	.4byte func_801D2DC8
 	.4byte func_801D20DC
 	.4byte func_801D2144
 	.4byte func_801D2180
-.endobj __vt__CSubCur
+.endobj __vt__7CSubCur
 
 .obj CSubCur_hierarchy, global
-	.4byte __RTTI__CBaseCur
+	.4byte __RTTI__8CBaseCur
 	.4byte 0
 	.4byte 0
 .endobj CSubCur_hierarchy
 
 
-.obj __vt__CCur22, global
-	.4byte __RTTI__CCur22
+.obj __vt__6CCur22, global
+	.4byte __RTTI__6CCur22
 	.4byte 0
 	.4byte func_801D2B78
 	.4byte func_801D20DC
 	.4byte func_801D2144
 	.4byte func_801D2180
 	.4byte __dt__801D2B38
-.endobj __vt__CCur22
+.endobj __vt__6CCur22
 
 .obj CCur22_hierarchy, global
-	.4byte __RTTI__CBaseCur
+	.4byte __RTTI__8CBaseCur
 	.4byte 0
 	.4byte 0
 .endobj CCur22_hierarchy
 
 
-.obj __vt__CCur18, global
-	.4byte __RTTI__CCur18
+.obj __vt__6CCur18, global
+	.4byte __RTTI__6CCur18
 	.4byte 0
 	.4byte func_801D2A78
 	.4byte func_801D20DC
 	.4byte func_801D2144
 	.4byte func_801D2180
 	.4byte __dt__CCur18
-.endobj __vt__CCur18
+.endobj __vt__6CCur18
 
 .obj CCur18_hierarchy, global
-	.4byte __RTTI__CBaseCur
+	.4byte __RTTI__8CBaseCur
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj CCur18_hierarchy
 
 
-.obj __vt__CCur16, global
-	.4byte __RTTI__CCur16
+.obj __vt__6CCur16, global
+	.4byte __RTTI__6CCur16
 	.4byte 0
 	.4byte func_801D2978
 	.4byte func_801D20DC
 	.4byte func_801D2144
 	.4byte func_801D2180
-.endobj __vt__CCur16
+.endobj __vt__6CCur16
 
 .obj CCur16_hierarchy, global
-	.4byte __RTTI__CBaseCur
+	.4byte __RTTI__8CBaseCur
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj CCur16_hierarchy
 
 
-.obj __vt__CCur15, global
-	.4byte __RTTI__CCur15
+.obj __vt__6CCur15, global
+	.4byte __RTTI__6CCur15
 	.4byte 0
 	.4byte func_801D2878
 	.4byte func_801D20DC
 	.4byte func_801D2144
 	.4byte func_801D2180
-.endobj __vt__CCur15
+.endobj __vt__6CCur15
 
 .obj CCur15_hierarchy, global
-	.4byte __RTTI__CBaseCur
+	.4byte __RTTI__8CBaseCur
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj CCur15_hierarchy
 
 
-.obj __vt__CCur14, global
-	.4byte __RTTI__CCur14
+.obj __vt__6CCur14, global
+	.4byte __RTTI__6CCur14
 	.4byte 0
 	.4byte func_801D2778
 	.4byte func_801D20DC
 	.4byte func_801D2144
 	.4byte func_801D2180
-.endobj __vt__CCur14
+.endobj __vt__6CCur14
 
 .obj CCur14_hierarchy, global
-	.4byte __RTTI__CBaseCur
+	.4byte __RTTI__8CBaseCur
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj CCur14_hierarchy
 
 
-.obj __vt__CCur11, global
-	.4byte __RTTI__CCur11
+.obj __vt__6CCur11, global
+	.4byte __RTTI__6CCur11
 	.4byte 0
 	.4byte func_801D25EC
 	.4byte func_801D20DC
 	.4byte func_801D2144
 	.4byte func_801D2180
-.endobj __vt__CCur11
+.endobj __vt__6CCur11
 
 .obj CCur11_hierarchy, global
-	.4byte __RTTI__CBaseCur
+	.4byte __RTTI__8CBaseCur
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj CCur11_hierarchy
 
 
-.obj __vt__CCur09, global
-	.4byte __RTTI__CCur09
+.obj __vt__6CCur09, global
+	.4byte __RTTI__6CCur09
 	.4byte 0
 	.4byte func_801D2478
 	.4byte func_801D20DC
 	.4byte func_801D2144
 	.4byte func_801D2180
-.endobj __vt__CCur09
+.endobj __vt__6CCur09
 
 .obj CCur09_hierarchy, global
-	.4byte __RTTI__CBaseCur
+	.4byte __RTTI__8CBaseCur
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj CCur09_hierarchy
 
 
-.obj __vt__CCur07, global
-	.4byte __RTTI__CCur07
+.obj __vt__6CCur07, global
+	.4byte __RTTI__6CCur07
 	.4byte 0
 	.4byte func_801D2378
 	.4byte func_801D20DC
 	.4byte func_801D2144
 	.4byte func_801D2180
-.endobj __vt__CCur07
+.endobj __vt__6CCur07
 
 .obj CCur07_hierarchy, global
-	.4byte __RTTI__CBaseCur
+	.4byte __RTTI__8CBaseCur
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj CCur07_hierarchy
 
 
-.obj __vt__CBaseCur, global
-	.4byte __RTTI__CBaseCur
+.obj __vt__8CBaseCur, global
+	.4byte __RTTI__8CBaseCur
 	.4byte 0
 	.4byte 0
 	.4byte func_801D20DC
 	.4byte func_801D2144
 	.4byte func_801D2180
-.endobj __vt__CBaseCur
+.endobj __vt__8CBaseCur
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CSubCur, global
+.obj __RTTI__7CSubCur, global
 	.4byte CSubCur_typestr
 	.4byte CSubCur_hierarchy
-.endobj __RTTI__CSubCur
+.endobj __RTTI__7CSubCur
 
-.obj __RTTI__CCur22, global
+.obj __RTTI__6CCur22, global
 	.4byte CCur22_typestr
 	.4byte CCur22_hierarchy
-.endobj __RTTI__CCur22
+.endobj __RTTI__6CCur22
 
-.obj __RTTI__CCur18, global
+.obj __RTTI__6CCur18, global
 	.4byte CCur18_typestr
 	.4byte CCur18_hierarchy
-.endobj __RTTI__CCur18
+.endobj __RTTI__6CCur18
 
-.obj __RTTI__CCur16, global
+.obj __RTTI__6CCur16, global
 	.4byte CCur16_typestr
 	.4byte CCur16_hierarchy
-.endobj __RTTI__CCur16
+.endobj __RTTI__6CCur16
 
-.obj __RTTI__CCur15, global
+.obj __RTTI__6CCur15, global
 	.4byte CCur15_typestr
 	.4byte CCur15_hierarchy
-.endobj __RTTI__CCur15
+.endobj __RTTI__6CCur15
 
-.obj __RTTI__CCur14, global
+.obj __RTTI__6CCur14, global
 	.4byte CCur14_typestr
 	.4byte CCur14_hierarchy
-.endobj __RTTI__CCur14
+.endobj __RTTI__6CCur14
 
-.obj __RTTI__CCur11, global
+.obj __RTTI__6CCur11, global
 	.4byte CCur11_typestr
 	.4byte CCur11_hierarchy
-.endobj __RTTI__CCur11
+.endobj __RTTI__6CCur11
 
-.obj __RTTI__CCur09, global
+.obj __RTTI__6CCur09, global
 	.4byte CCur09_typestr
 	.4byte CCur09_hierarchy
-.endobj __RTTI__CCur09
+.endobj __RTTI__6CCur09
 
-.obj __RTTI__CCur07, global
+.obj __RTTI__6CCur07, global
 	.4byte CCur07_typestr
 	.4byte CCur07_hierarchy
-.endobj __RTTI__CCur07
+.endobj __RTTI__6CCur07
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

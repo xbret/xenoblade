@@ -5,9 +5,9 @@
 #likely contains other files
 
 .fn __ct__CSchedule, global
-/* 804E3294 004AC854  3C A0 80 57 */	lis r5, __vt__CSchedule@ha
+/* 804E3294 004AC854  3C A0 80 57 */	lis r5, __vt__9CSchedule@ha
 /* 804E3298 004AC858  38 80 00 00 */	li r4, 0
-/* 804E329C 004AC85C  38 A5 38 B0 */	addi r5, r5, __vt__CSchedule@l
+/* 804E329C 004AC85C  38 A5 38 B0 */	addi r5, r5, __vt__9CSchedule@l
 /* 804E32A0 004AC860  90 A3 00 EC */	stw r5, 0xec(r3)
 /* 804E32A4 004AC864  38 00 FF FF */	li r0, -1
 /* 804E32A8 004AC868  90 83 00 04 */	stw r4, 4(r3)
@@ -60,8 +60,8 @@
 /* 804E3358 004AC918  7C 9C 23 78 */	mr r28, r4
 /* 804E335C 004AC91C  41 82 00 C0 */	beq .L_804E341C
 /* 804E3360 004AC920  80 03 00 04 */	lwz r0, 4(r3)
-/* 804E3364 004AC924  3C 80 80 57 */	lis r4, __vt__CSchedule@ha
-/* 804E3368 004AC928  38 84 38 B0 */	addi r4, r4, __vt__CSchedule@l
+/* 804E3364 004AC924  3C 80 80 57 */	lis r4, __vt__9CSchedule@ha
+/* 804E3368 004AC928  38 84 38 B0 */	addi r4, r4, __vt__9CSchedule@l
 /* 804E336C 004AC92C  90 83 00 EC */	stw r4, 0xec(r3)
 /* 804E3370 004AC930  2C 00 00 00 */	cmpwi r0, 0
 /* 804E3374 004AC934  41 82 00 98 */	beq .L_804E340C
@@ -322,21 +322,21 @@
 
 .balign 8
 
-.obj __vt__CSchedule, global
-	.4byte __RTTI__CSchedule
+.obj __vt__9CSchedule, global
+	.4byte __RTTI__9CSchedule
 	.4byte 0
 	.4byte __dt__CSchedule
 	.4byte 0
-.endobj __vt__CSchedule
+.endobj __vt__9CSchedule
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CSchedule, global
+.obj __RTTI__9CSchedule, global
 	.4byte CSchedule_typestr
 	.4byte 0
-.endobj __RTTI__CSchedule
+.endobj __RTTI__9CSchedule
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

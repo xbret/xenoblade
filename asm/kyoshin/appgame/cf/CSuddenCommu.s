@@ -5,9 +5,9 @@
 .fn __ct__cf_CSuddenCommu, global
 /* 801BA14C 0018370C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801BA150 00183710  7C 08 02 A6 */	mflr r0
-/* 801BA154 00183714  3C 80 80 53 */	lis r4, __vt__cf_CSuddenCommu@ha
+/* 801BA154 00183714  3C 80 80 53 */	lis r4, __vt__Q22cf12CSuddenCommu@ha
 /* 801BA158 00183718  90 01 00 24 */	stw r0, 0x24(r1)
-/* 801BA15C 0018371C  38 84 71 78 */	addi r4, r4, __vt__cf_CSuddenCommu@l
+/* 801BA15C 0018371C  38 84 71 78 */	addi r4, r4, __vt__Q22cf12CSuddenCommu@l
 /* 801BA160 00183720  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 801BA164 00183724  3B E0 FF FF */	li r31, -1
 /* 801BA168 00183728  93 C1 00 18 */	stw r30, 0x18(r1)
@@ -2798,8 +2798,8 @@
 
 .fn sinit_801BC86C, local
 /* 801BC86C 00185E2C  94 21 FF A0 */	stwu r1, -0x60(r1)
-/* 801BC870 00185E30  3C 80 80 53 */	lis r4, __vt__cf_CSuddenCommu@ha
-/* 801BC874 00185E34  38 84 71 78 */	addi r4, r4, __vt__cf_CSuddenCommu@l
+/* 801BC870 00185E30  3C 80 80 53 */	lis r4, __vt__Q22cf12CSuddenCommu@ha
+/* 801BC874 00185E34  38 84 71 78 */	addi r4, r4, __vt__Q22cf12CSuddenCommu@l
 /* 801BC878 00185E38  3C 60 80 58 */	lis r3, lbl_80579068@ha
 /* 801BC87C 00185E3C  BD C1 00 18 */	stmw r14, 0x18(r1)
 /* 801BC880 00185E40  39 24 00 54 */	addi r9, r4, 0x54
@@ -2950,15 +2950,15 @@
 
 .balign 8
 
-.obj __vt__cf_CSuddenCommu, global
-	.4byte __RTTI__cf_CSuddenCommu
+.obj __vt__Q22cf12CSuddenCommu, global
+	.4byte __RTTI__Q22cf12CSuddenCommu
 	.4byte 0
 	.4byte __dt__cf_CSuddenCommu
 	.4byte func_801BA250
-.endobj __vt__cf_CSuddenCommu
+.endobj __vt__Q22cf12CSuddenCommu
 
 .obj cf_CSuddenCommu_hierarchy, global
-	.4byte __RTTI__cf_IObjectInfo
+	.4byte __RTTI__Q22cf11IObjectInfo
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -3053,10 +3053,10 @@
 	.4byte 0x03EE0000
 .endobj lbl_80664F00
 
-.obj __RTTI__cf_CSuddenCommu, global
+.obj __RTTI__Q22cf12CSuddenCommu, global
 	.4byte cf_CSuddenCommu_typestr
 	.4byte cf_CSuddenCommu_hierarchy
-.endobj __RTTI__cf_CSuddenCommu
+.endobj __RTTI__Q22cf12CSuddenCommu
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

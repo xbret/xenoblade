@@ -11,12 +11,12 @@
 /* 8026FCBC 0023927C  7C 7D 1B 78 */	mr r29, r3
 /* 8026FCC0 00239280  7C 9E 23 78 */	mr r30, r4
 /* 8026FCC4 00239284  48 1D 4D 55 */	bl __ct__8CProcessFv
-/* 8026FCC8 00239288  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
-/* 8026FCCC 0023928C  3C A0 80 54 */	lis r5, __vt__CMenuPlayAward@ha
-/* 8026FCD0 00239290  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
+/* 8026FCC8 00239288  3C 60 80 53 */	lis r3, "__vt__14CTTask<5IUICf>"@ha
+/* 8026FCCC 0023928C  3C A0 80 54 */	lis r5, __vt__14CMenuPlayAward@ha
+/* 8026FCD0 00239290  38 63 F7 40 */	addi r3, r3, "__vt__14CTTask<5IUICf>"@l
 /* 8026FCD4 00239294  90 7D 00 10 */	stw r3, 0x10(r29)
 /* 8026FCD8 00239298  3D 00 80 51 */	lis r8, __ptmf_null@ha
-/* 8026FCDC 0023929C  38 A5 B3 68 */	addi r5, r5, __vt__CMenuPlayAward@l
+/* 8026FCDC 0023929C  38 A5 B3 68 */	addi r5, r5, __vt__14CMenuPlayAward@l
 /* 8026FCE0 002392A0  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 8026FCE4 002392A4  38 05 00 24 */	addi r0, r5, 0x24
 /* 8026FCE8 002392A8  3B E0 00 00 */	li r31, 0
@@ -1048,9 +1048,9 @@
 .fn __ct__CPlayAwardList, global
 /* 80270B14 0023A0D4  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80270B18 0023A0D8  7C 08 02 A6 */	mflr r0
-/* 80270B1C 0023A0DC  3C 80 80 54 */	lis r4, __vt__CPlayAwardList@ha
+/* 80270B1C 0023A0DC  3C 80 80 54 */	lis r4, __vt__14CPlayAwardList@ha
 /* 80270B20 0023A0E0  90 01 00 54 */	stw r0, 0x54(r1)
-/* 80270B24 0023A0E4  38 84 B3 D8 */	addi r4, r4, __vt__CPlayAwardList@l
+/* 80270B24 0023A0E4  38 84 B3 D8 */	addi r4, r4, __vt__14CPlayAwardList@l
 /* 80270B28 0023A0E8  93 E1 00 4C */	stw r31, 0x4c(r1)
 /* 80270B2C 0023A0EC  93 C1 00 48 */	stw r30, 0x48(r1)
 /* 80270B30 0023A0F0  7C 7E 1B 78 */	mr r30, r3
@@ -2440,8 +2440,8 @@
 
 .balign 8
 
-.obj __vt__CMenuPlayAward, global
-	.4byte __RTTI__CMenuPlayAward
+.obj __vt__14CMenuPlayAward, global
+	.4byte __RTTI__14CMenuPlayAward
 	.4byte 0
 	.4byte __dt__CMenuPlayAward
 	.4byte CChildListNode_Reset
@@ -2450,33 +2450,33 @@
 	.4byte func_80270154
 	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuPlayAward
+	.4byte __RTTI__14CMenuPlayAward
 	.4byte 0xFFFFFFA8
 	.4byte func_8027064C
 	.4byte func_80270644
 	.4byte func_80270264
-.endobj __vt__CMenuPlayAward
+.endobj __vt__14CMenuPlayAward
 
 .obj CMenuPlayAward_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000058
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUICf
+	.4byte "__RTTI__14CTTask<5IUICf>"
 	.4byte 0
-	.4byte __RTTI__IUICf
+	.4byte __RTTI__5IUICf
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj CMenuPlayAward_hierarchy
 
 
-.obj __vt__CPlayAwardList, global
-	.4byte __RTTI__CPlayAwardList
+.obj __vt__14CPlayAwardList, global
+	.4byte __RTTI__14CPlayAwardList
 	.4byte 0
 	.4byte __dt__CPlayAwardList
 	.4byte IWorkEvent_WorkEvent1
@@ -2510,10 +2510,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CPlayAwardList
+.endobj __vt__14CPlayAwardList
 
 .obj CPlayAwardList_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -2523,16 +2523,16 @@
 
 .balign 8
 
-.obj __RTTI__CMenuPlayAward, global
+.obj __RTTI__14CMenuPlayAward, global
 	.4byte CMenuPlayAward_typestr
 	.4byte CMenuPlayAward_hierarchy
-.endobj __RTTI__CMenuPlayAward
+.endobj __RTTI__14CMenuPlayAward
 
 
-.obj __RTTI__CPlayAwardList, global
+.obj __RTTI__14CPlayAwardList, global
 	.4byte CPlayAwardList_typestr
 	.4byte CPlayAwardList_hierarchy
-.endobj __RTTI__CPlayAwardList
+.endobj __RTTI__14CPlayAwardList
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

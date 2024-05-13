@@ -13,12 +13,12 @@
 /* 80124608 000EDBC8  7C DE 33 78 */	mr r30, r6
 /* 8012460C 000EDBCC  7C FF 3B 78 */	mr r31, r7
 /* 80124610 000EDBD0  48 32 04 09 */	bl __ct__8CProcessFv
-/* 80124614 000EDBD4  3C 60 80 53 */	lis r3, __vt__CTTask_IUIWindow@ha
-/* 80124618 000EDBD8  3C C0 80 53 */	lis r6, __vt__CSystemWindow@ha
-/* 8012461C 000EDBDC  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
+/* 80124614 000EDBD4  3C 60 80 53 */	lis r3, "__vt__18CTTask<9IUIWindow>"@ha
+/* 80124618 000EDBD8  3C C0 80 53 */	lis r6, __vt__13CSystemWindow@ha
+/* 8012461C 000EDBDC  38 63 0A 08 */	addi r3, r3, "__vt__18CTTask<9IUIWindow>"@l
 /* 80124620 000EDBE0  90 7B 00 10 */	stw r3, 0x10(r27)
 /* 80124624 000EDBE4  3D 60 80 51 */	lis r11, __ptmf_null@ha
-/* 80124628 000EDBE8  38 C6 0B 48 */	addi r6, r6, __vt__CSystemWindow@l
+/* 80124628 000EDBE8  38 C6 0B 48 */	addi r6, r6, __vt__13CSystemWindow@l
 /* 8012462C 000EDBEC  84 6B CE 10 */	lwzu r3, __ptmf_null@l(r11)
 /* 80124630 000EDBF0  38 A6 00 24 */	addi r5, r6, 0x24
 /* 80124634 000EDBF4  3B 40 00 00 */	li r26, 0
@@ -426,8 +426,8 @@
 
 .balign 8
 
-.obj __vt__CSysWinSelect, global
-	.4byte __RTTI__CSysWinSelect
+.obj __vt__13CSysWinSelect, global
+	.4byte __RTTI__13CSysWinSelect
 	.4byte 0
 	.4byte __dt__CSysWinSelect
 	.4byte CChildListNode_Reset
@@ -436,7 +436,7 @@
 	.4byte func_80124E74
 	.4byte func_80124584
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CSysWinSelect
+	.4byte __RTTI__13CSysWinSelect
 	.4byte 0xFFFFFF94
 	.4byte func_801252B8
 	.4byte IWorkEvent_WorkEvent1
@@ -470,35 +470,35 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CSysWinSelect
+	.4byte __RTTI__13CSysWinSelect
 	.4byte 0xFFFFFF90
 	.4byte func_801252C8
 	.4byte func_801252C0
 	.4byte func_80124FD8
-.endobj __vt__CSysWinSelect
+.endobj __vt__13CSysWinSelect
 
 .obj CSysWinSelect_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000070
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x0000006C
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUIWindow
+	.4byte "__RTTI__18CTTask<9IUIWindow>"
 	.4byte 0
-	.4byte __RTTI__IUIWindow
+	.4byte __RTTI__9IUIWindow
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj CSysWinSelect_hierarchy
 
 
-.obj __vt__CSystemWindow, global
-	.4byte __RTTI__CSystemWindow
+.obj __vt__13CSystemWindow, global
+	.4byte __RTTI__13CSystemWindow
 	.4byte 0
 	.4byte __dt__CSystemWindow
 	.4byte CChildListNode_Reset
@@ -507,7 +507,7 @@
 	.4byte func_80124908
 	.4byte func_80124584
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CSystemWindow
+	.4byte __RTTI__13CSystemWindow
 	.4byte 0xFFFFFF94
 	.4byte func_801252A0
 	.4byte IWorkEvent_WorkEvent1
@@ -541,27 +541,27 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CSystemWindow
+	.4byte __RTTI__13CSystemWindow
 	.4byte 0xFFFFFF90
 	.4byte func_801252B0
 	.4byte func_801252A8
 	.4byte func_80124A60
-.endobj __vt__CSystemWindow
+.endobj __vt__13CSystemWindow
 
 .obj CSystemWindow_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000070
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x0000006C
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUIWindow
+	.4byte "__RTTI__18CTTask<9IUIWindow>"
 	.4byte 0
-	.4byte __RTTI__IUIWindow
+	.4byte __RTTI__9IUIWindow
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -571,15 +571,15 @@
 
 .balign 8
 
-.obj __RTTI__CSysWinSelect, global
+.obj __RTTI__13CSysWinSelect, global
 	.4byte CSysWinSelect_typestr
 	.4byte CSysWinSelect_hierarchy
-.endobj __RTTI__CSysWinSelect
+.endobj __RTTI__13CSysWinSelect
 
-.obj __RTTI__CSystemWindow, global
+.obj __RTTI__13CSystemWindow, global
 	.4byte CSystemWindow_typestr
 	.4byte CSystemWindow_hierarchy
-.endobj __RTTI__CSystemWindow
+.endobj __RTTI__13CSystemWindow
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

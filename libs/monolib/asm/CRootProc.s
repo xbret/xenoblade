@@ -19,15 +19,15 @@
 /* 8043BCB0 00405270  7C 7F 1B 78 */	mr r31, r3
 /* 8043BCB4 00405274  41 82 00 58 */	beq .L_8043BD0C
 /* 8043BCB8 00405278  48 00 8D 61 */	bl __ct__8CProcessFv
-/* 8043BCBC 0040527C  3C 60 80 57 */	lis r3, __vt__CTTask_unnamed_CTaskManager_cpp_CRootProc@ha
+/* 8043BCBC 0040527C  3C 60 80 57 */	lis r3, "__vt__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>"@ha
 /* 8043BCC0 00405280  3C A0 80 51 */	lis r5, __ptmf_null@ha
-/* 8043BCC4 00405284  38 63 ED F8 */	addi r3, r3, __vt__CTTask_unnamed_CTaskManager_cpp_CRootProc@l
+/* 8043BCC4 00405284  38 63 ED F8 */	addi r3, r3, "__vt__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>"@l
 /* 8043BCC8 00405288  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 8043BCCC 0040528C  38 A5 CE 10 */	addi r5, r5, __ptmf_null@l
 /* 8043BCD0 00405290  80 05 00 04 */	lwz r0, 4(r5)
-/* 8043BCD4 00405294  3C 60 80 57 */	lis r3, __vt___unnamed_CTaskManager_cpp_CRootProc@ha
+/* 8043BCD4 00405294  3C 60 80 57 */	lis r3, "__vt__Q226@unnamed@CTaskManager_cpp@9CRootProc"@ha
 /* 8043BCD8 00405298  80 85 00 00 */	lwz r4, 0(r5)
-/* 8043BCDC 0040529C  38 63 ED B0 */	addi r3, r3, __vt___unnamed_CTaskManager_cpp_CRootProc@l
+/* 8043BCDC 0040529C  38 63 ED B0 */	addi r3, r3, "__vt__Q226@unnamed@CTaskManager_cpp@9CRootProc"@l
 /* 8043BCE0 004052A0  90 9F 00 3C */	stw r4, 0x3c(r31)
 /* 8043BCE4 004052A4  90 1F 00 40 */	stw r0, 0x40(r31)
 /* 8043BCE8 004052A8  80 05 00 08 */	lwz r0, 8(r5)
@@ -53,15 +53,15 @@
 /* 8043BD34 004052F4  7C 7F 1B 78 */	mr r31, r3
 /* 8043BD38 004052F8  41 82 00 58 */	beq .L_8043BD90
 /* 8043BD3C 004052FC  48 00 8C DD */	bl __ct__8CProcessFv
-/* 8043BD40 00405300  3C 60 80 57 */	lis r3, __vt__CTTask_unnamed_CTaskManager_cpp_CRootProc@ha
+/* 8043BD40 00405300  3C 60 80 57 */	lis r3, "__vt__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>"@ha
 /* 8043BD44 00405304  3C A0 80 51 */	lis r5, __ptmf_null@ha
-/* 8043BD48 00405308  38 63 ED F8 */	addi r3, r3, __vt__CTTask_unnamed_CTaskManager_cpp_CRootProc@l
+/* 8043BD48 00405308  38 63 ED F8 */	addi r3, r3, "__vt__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>"@l
 /* 8043BD4C 0040530C  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 8043BD50 00405310  38 A5 CE 10 */	addi r5, r5, __ptmf_null@l
 /* 8043BD54 00405314  80 05 00 04 */	lwz r0, 4(r5)
-/* 8043BD58 00405318  3C 60 80 57 */	lis r3, __vt___unnamed_CTaskManager_cpp_CRootProc@ha
+/* 8043BD58 00405318  3C 60 80 57 */	lis r3, "__vt__Q226@unnamed@CTaskManager_cpp@9CRootProc"@ha
 /* 8043BD5C 0040531C  80 85 00 00 */	lwz r4, 0(r5)
-/* 8043BD60 00405320  38 63 ED B0 */	addi r3, r3, __vt___unnamed_CTaskManager_cpp_CRootProc@l
+/* 8043BD60 00405320  38 63 ED B0 */	addi r3, r3, "__vt__Q226@unnamed@CTaskManager_cpp@9CRootProc"@l
 /* 8043BD64 00405324  90 9F 00 3C */	stw r4, 0x3c(r31)
 /* 8043BD68 00405328  90 1F 00 40 */	stw r0, 0x40(r31)
 /* 8043BD6C 0040532C  80 05 00 08 */	lwz r0, 8(r5)
@@ -87,15 +87,15 @@
 /* 8043BDB8 00405378  7C 7F 1B 78 */	mr r31, r3
 /* 8043BDBC 0040537C  41 82 00 58 */	beq .L_8043BE14
 /* 8043BDC0 00405380  48 00 8C 59 */	bl __ct__8CProcessFv
-/* 8043BDC4 00405384  3C 60 80 57 */	lis r3, __vt__CTTask_unnamed_CTaskManager_cpp_CRootProc@ha
+/* 8043BDC4 00405384  3C 60 80 57 */	lis r3, "__vt__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>"@ha
 /* 8043BDC8 00405388  3C A0 80 51 */	lis r5, __ptmf_null@ha
-/* 8043BDCC 0040538C  38 63 ED F8 */	addi r3, r3, __vt__CTTask_unnamed_CTaskManager_cpp_CRootProc@l
+/* 8043BDCC 0040538C  38 63 ED F8 */	addi r3, r3, "__vt__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>"@l
 /* 8043BDD0 00405390  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 8043BDD4 00405394  38 A5 CE 10 */	addi r5, r5, __ptmf_null@l
 /* 8043BDD8 00405398  80 05 00 04 */	lwz r0, 4(r5)
-/* 8043BDDC 0040539C  3C 60 80 57 */	lis r3, __vt___unnamed_CTaskManager_cpp_CRootProc@ha
+/* 8043BDDC 0040539C  3C 60 80 57 */	lis r3, "__vt__Q226@unnamed@CTaskManager_cpp@9CRootProc"@ha
 /* 8043BDE0 004053A0  80 85 00 00 */	lwz r4, 0(r5)
-/* 8043BDE4 004053A4  38 63 ED B0 */	addi r3, r3, __vt___unnamed_CTaskManager_cpp_CRootProc@l
+/* 8043BDE4 004053A4  38 63 ED B0 */	addi r3, r3, "__vt__Q226@unnamed@CTaskManager_cpp@9CRootProc"@l
 /* 8043BDE8 004053A8  90 9F 00 3C */	stw r4, 0x3c(r31)
 /* 8043BDEC 004053AC  90 1F 00 40 */	stw r0, 0x40(r31)
 /* 8043BDF0 004053B0  80 05 00 08 */	lwz r0, 8(r5)
@@ -121,15 +121,15 @@
 /* 8043BE3C 004053FC  7C 7F 1B 78 */	mr r31, r3
 /* 8043BE40 00405400  41 82 00 58 */	beq .L_8043BE98
 /* 8043BE44 00405404  48 00 8B D5 */	bl __ct__8CProcessFv
-/* 8043BE48 00405408  3C 60 80 57 */	lis r3, __vt__CTTask_unnamed_CTaskManager_cpp_CRootProc@ha
+/* 8043BE48 00405408  3C 60 80 57 */	lis r3, "__vt__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>"@ha
 /* 8043BE4C 0040540C  3C A0 80 51 */	lis r5, __ptmf_null@ha
-/* 8043BE50 00405410  38 63 ED F8 */	addi r3, r3, __vt__CTTask_unnamed_CTaskManager_cpp_CRootProc@l
+/* 8043BE50 00405410  38 63 ED F8 */	addi r3, r3, "__vt__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>"@l
 /* 8043BE54 00405414  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 8043BE58 00405418  38 A5 CE 10 */	addi r5, r5, __ptmf_null@l
 /* 8043BE5C 0040541C  80 05 00 04 */	lwz r0, 4(r5)
-/* 8043BE60 00405420  3C 60 80 57 */	lis r3, __vt___unnamed_CTaskManager_cpp_CRootProc@ha
+/* 8043BE60 00405420  3C 60 80 57 */	lis r3, "__vt__Q226@unnamed@CTaskManager_cpp@9CRootProc"@ha
 /* 8043BE64 00405424  80 85 00 00 */	lwz r4, 0(r5)
-/* 8043BE68 00405428  38 63 ED B0 */	addi r3, r3, __vt___unnamed_CTaskManager_cpp_CRootProc@l
+/* 8043BE68 00405428  38 63 ED B0 */	addi r3, r3, "__vt__Q226@unnamed@CTaskManager_cpp@9CRootProc"@l
 /* 8043BE6C 0040542C  90 9F 00 3C */	stw r4, 0x3c(r31)
 /* 8043BE70 00405430  90 1F 00 40 */	stw r0, 0x40(r31)
 /* 8043BE74 00405434  80 05 00 08 */	lwz r0, 8(r5)
@@ -227,15 +227,15 @@
 /* 8043BFA0 00405560  7C 7F 1B 78 */	mr r31, r3
 /* 8043BFA4 00405564  41 82 00 58 */	beq .L_8043BFFC
 /* 8043BFA8 00405568  48 00 8A 71 */	bl __ct__8CProcessFv
-/* 8043BFAC 0040556C  3C 60 80 57 */	lis r3, __vt__CTTask_unnamed_CTaskManager_cpp_CRootProc@ha
+/* 8043BFAC 0040556C  3C 60 80 57 */	lis r3, "__vt__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>"@ha
 /* 8043BFB0 00405570  3C A0 80 51 */	lis r5, __ptmf_null@ha
-/* 8043BFB4 00405574  38 63 ED F8 */	addi r3, r3, __vt__CTTask_unnamed_CTaskManager_cpp_CRootProc@l
+/* 8043BFB4 00405574  38 63 ED F8 */	addi r3, r3, "__vt__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>"@l
 /* 8043BFB8 00405578  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 8043BFBC 0040557C  38 A5 CE 10 */	addi r5, r5, __ptmf_null@l
 /* 8043BFC0 00405580  80 05 00 04 */	lwz r0, 4(r5)
-/* 8043BFC4 00405584  3C 60 80 57 */	lis r3, __vt___unnamed_CTaskManager_cpp_CRootProc@ha
+/* 8043BFC4 00405584  3C 60 80 57 */	lis r3, "__vt__Q226@unnamed@CTaskManager_cpp@9CRootProc"@ha
 /* 8043BFC8 00405588  80 85 00 00 */	lwz r4, 0(r5)
-/* 8043BFCC 0040558C  38 63 ED B0 */	addi r3, r3, __vt___unnamed_CTaskManager_cpp_CRootProc@l
+/* 8043BFCC 0040558C  38 63 ED B0 */	addi r3, r3, "__vt__Q226@unnamed@CTaskManager_cpp@9CRootProc"@l
 /* 8043BFD0 00405590  90 9F 00 3C */	stw r4, 0x3c(r31)
 /* 8043BFD4 00405594  90 1F 00 40 */	stw r0, 0x40(r31)
 /* 8043BFD8 00405598  80 05 00 08 */	lwz r0, 8(r5)
@@ -261,15 +261,15 @@
 /* 8043C024 004055E4  7C 7F 1B 78 */	mr r31, r3
 /* 8043C028 004055E8  41 82 00 58 */	beq .L_8043C080
 /* 8043C02C 004055EC  48 00 89 ED */	bl __ct__8CProcessFv
-/* 8043C030 004055F0  3C 60 80 57 */	lis r3, __vt__CTTask_unnamed_CTaskManager_cpp_CRootProc@ha
+/* 8043C030 004055F0  3C 60 80 57 */	lis r3, "__vt__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>"@ha
 /* 8043C034 004055F4  3C A0 80 51 */	lis r5, __ptmf_null@ha
-/* 8043C038 004055F8  38 63 ED F8 */	addi r3, r3, __vt__CTTask_unnamed_CTaskManager_cpp_CRootProc@l
+/* 8043C038 004055F8  38 63 ED F8 */	addi r3, r3, "__vt__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>"@l
 /* 8043C03C 004055FC  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 8043C040 00405600  38 A5 CE 10 */	addi r5, r5, __ptmf_null@l
 /* 8043C044 00405604  80 05 00 04 */	lwz r0, 4(r5)
-/* 8043C048 00405608  3C 60 80 57 */	lis r3, __vt___unnamed_CTaskManager_cpp_CRootProc@ha
+/* 8043C048 00405608  3C 60 80 57 */	lis r3, "__vt__Q226@unnamed@CTaskManager_cpp@9CRootProc"@ha
 /* 8043C04C 0040560C  80 85 00 00 */	lwz r4, 0(r5)
-/* 8043C050 00405610  38 63 ED B0 */	addi r3, r3, __vt___unnamed_CTaskManager_cpp_CRootProc@l
+/* 8043C050 00405610  38 63 ED B0 */	addi r3, r3, "__vt__Q226@unnamed@CTaskManager_cpp@9CRootProc"@l
 /* 8043C054 00405614  90 9F 00 3C */	stw r4, 0x3c(r31)
 /* 8043C058 00405618  90 1F 00 40 */	stw r0, 0x40(r31)
 /* 8043C05C 0040561C  80 05 00 08 */	lwz r0, 8(r5)
@@ -295,15 +295,15 @@
 /* 8043C0A8 00405668  7C 7F 1B 78 */	mr r31, r3
 /* 8043C0AC 0040566C  41 82 00 58 */	beq .L_8043C104
 /* 8043C0B0 00405670  48 00 89 69 */	bl __ct__8CProcessFv
-/* 8043C0B4 00405674  3C 60 80 57 */	lis r3, __vt__CTTask_unnamed_CTaskManager_cpp_CRootProc@ha
+/* 8043C0B4 00405674  3C 60 80 57 */	lis r3, "__vt__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>"@ha
 /* 8043C0B8 00405678  3C A0 80 51 */	lis r5, __ptmf_null@ha
-/* 8043C0BC 0040567C  38 63 ED F8 */	addi r3, r3, __vt__CTTask_unnamed_CTaskManager_cpp_CRootProc@l
+/* 8043C0BC 0040567C  38 63 ED F8 */	addi r3, r3, "__vt__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>"@l
 /* 8043C0C0 00405680  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 8043C0C4 00405684  38 A5 CE 10 */	addi r5, r5, __ptmf_null@l
 /* 8043C0C8 00405688  80 05 00 04 */	lwz r0, 4(r5)
-/* 8043C0CC 0040568C  3C 60 80 57 */	lis r3, __vt___unnamed_CTaskManager_cpp_CRootProc@ha
+/* 8043C0CC 0040568C  3C 60 80 57 */	lis r3, "__vt__Q226@unnamed@CTaskManager_cpp@9CRootProc"@ha
 /* 8043C0D0 00405690  80 85 00 00 */	lwz r4, 0(r5)
-/* 8043C0D4 00405694  38 63 ED B0 */	addi r3, r3, __vt___unnamed_CTaskManager_cpp_CRootProc@l
+/* 8043C0D4 00405694  38 63 ED B0 */	addi r3, r3, "__vt__Q226@unnamed@CTaskManager_cpp@9CRootProc"@l
 /* 8043C0D8 00405698  90 9F 00 3C */	stw r4, 0x3c(r31)
 /* 8043C0DC 0040569C  90 1F 00 40 */	stw r0, 0x40(r31)
 /* 8043C0E0 004056A0  80 05 00 08 */	lwz r0, 8(r5)
@@ -329,15 +329,15 @@
 /* 8043C12C 004056EC  7C 7F 1B 78 */	mr r31, r3
 /* 8043C130 004056F0  41 82 00 58 */	beq .L_8043C188
 /* 8043C134 004056F4  48 00 88 E5 */	bl __ct__8CProcessFv
-/* 8043C138 004056F8  3C 60 80 57 */	lis r3, __vt__CTTask_unnamed_CTaskManager_cpp_CRootProc@ha
+/* 8043C138 004056F8  3C 60 80 57 */	lis r3, "__vt__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>"@ha
 /* 8043C13C 004056FC  3C A0 80 51 */	lis r5, __ptmf_null@ha
-/* 8043C140 00405700  38 63 ED F8 */	addi r3, r3, __vt__CTTask_unnamed_CTaskManager_cpp_CRootProc@l
+/* 8043C140 00405700  38 63 ED F8 */	addi r3, r3, "__vt__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>"@l
 /* 8043C144 00405704  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 8043C148 00405708  38 A5 CE 10 */	addi r5, r5, __ptmf_null@l
 /* 8043C14C 0040570C  80 05 00 04 */	lwz r0, 4(r5)
-/* 8043C150 00405710  3C 60 80 57 */	lis r3, __vt___unnamed_CTaskManager_cpp_CRootProc@ha
+/* 8043C150 00405710  3C 60 80 57 */	lis r3, "__vt__Q226@unnamed@CTaskManager_cpp@9CRootProc"@ha
 /* 8043C154 00405714  80 85 00 00 */	lwz r4, 0(r5)
-/* 8043C158 00405718  38 63 ED B0 */	addi r3, r3, __vt___unnamed_CTaskManager_cpp_CRootProc@l
+/* 8043C158 00405718  38 63 ED B0 */	addi r3, r3, "__vt__Q226@unnamed@CTaskManager_cpp@9CRootProc"@l
 /* 8043C15C 0040571C  90 9F 00 3C */	stw r4, 0x3c(r31)
 /* 8043C160 00405720  90 1F 00 40 */	stw r0, 0x40(r31)
 /* 8043C164 00405724  80 05 00 08 */	lwz r0, 8(r5)
@@ -484,8 +484,8 @@
 
 .balign 8
 
-.obj __vt___unnamed_CTaskManager_cpp_CRootProc, global
-	.4byte __RTTI___unnamed_CTaskManager_cpp_CRootProc
+.obj "__vt__Q226@unnamed@CTaskManager_cpp@9CRootProc", global
+	.4byte "__RTTI__Q226@unnamed@CTaskManager_cpp@9CRootProc"
 	.4byte 0
 	.4byte __dt___unnamed_CTaskManager_cpp_CRootProc
 	.4byte CChildListNode_Reset
@@ -494,23 +494,23 @@
 	.4byte func_8043C1CC
 	.4byte func_8043C1C8
 	.4byte CProcess_func_80043F20
-.endobj __vt___unnamed_CTaskManager_cpp_CRootProc
+.endobj "__vt__Q226@unnamed@CTaskManager_cpp@9CRootProc"
 
 .obj _unnamed_CTaskManager_cpp_CRootProc_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_unnamed_CTaskManager_cpp_CRootProc
+	.4byte "__RTTI__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>"
 	.4byte 0
 	.4byte 0
 .endobj _unnamed_CTaskManager_cpp_CRootProc_hierarchy
 
 
-.obj __vt__CTTask_unnamed_CTaskManager_cpp_CRootProc, global
-	.4byte __RTTI__CTTask_unnamed_CTaskManager_cpp_CRootProc
+.obj "__vt__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>", global
+	.4byte "__RTTI__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>"
 	.4byte 0
 	.4byte __dt__CTTask_unnamed_CTaskManager_cpp_CRootProc
 	.4byte CChildListNode_Reset
@@ -519,14 +519,14 @@
 	.4byte func_8043C1D8
 	.4byte func_8043C220
 	.4byte CProcess_func_80043F20
-.endobj __vt__CTTask_unnamed_CTaskManager_cpp_CRootProc
+.endobj "__vt__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>"
 
 .obj CTTask_unnamed_CTaskManager_cpp_CRootProc_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
 	.4byte 0
 .endobj CTTask_unnamed_CTaskManager_cpp_CRootProc_hierarchy
@@ -536,15 +536,15 @@
 
 .balign 8
 
-.obj __RTTI___unnamed_CTaskManager_cpp_CRootProc, global
+.obj "__RTTI__Q226@unnamed@CTaskManager_cpp@9CRootProc", global
 	.4byte _unnamed_CTaskManager_cpp_CRootProc_typestr
 	.4byte _unnamed_CTaskManager_cpp_CRootProc_hierarchy
-.endobj __RTTI___unnamed_CTaskManager_cpp_CRootProc
+.endobj "__RTTI__Q226@unnamed@CTaskManager_cpp@9CRootProc"
 
-.obj __RTTI__CTTask_unnamed_CTaskManager_cpp_CRootProc, global
+.obj "__RTTI__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>", global
 	.4byte CTTask_unnamed_CTaskManager_cpp_CRootProc_typestr
 	.4byte CTTask_unnamed_CTaskManager_cpp_CRootProc_hierarchy
-.endobj __RTTI__CTTask_unnamed_CTaskManager_cpp_CRootProc
+.endobj "__RTTI__48CTTask<Q226@unnamed@CTaskManager_cpp@9CRootProc>"
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

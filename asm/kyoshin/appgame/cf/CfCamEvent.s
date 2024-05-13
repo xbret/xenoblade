@@ -92,27 +92,27 @@
 /* 8006A960 00033F20  88 0D A5 30 */	lbz r0, lbl_806666B0@sda21(r13)
 /* 8006A964 00033F24  7C 00 07 75 */	extsb. r0, r0
 /* 8006A968 00033F28  40 82 00 18 */	bne .L_8006A980
-/* 8006A96C 00033F2C  3C 80 80 53 */	lis r4, __vt__cf_CfCamDirectionIntf@ha
+/* 8006A96C 00033F2C  3C 80 80 53 */	lis r4, __vt__Q22cf18CfCamDirectionIntf@ha
 /* 8006A970 00033F30  38 00 00 01 */	li r0, 1
-/* 8006A974 00033F34  38 84 A9 00 */	addi r4, r4, __vt__cf_CfCamDirectionIntf@l
+/* 8006A974 00033F34  38 84 A9 00 */	addi r4, r4, __vt__Q22cf18CfCamDirectionIntf@l
 /* 8006A978 00033F38  90 8D A5 34 */	stw r4, lbl_806666B4@sda21(r13)
 /* 8006A97C 00033F3C  98 0D A5 30 */	stb r0, lbl_806666B0@sda21(r13)
 .L_8006A980:
 /* 8006A980 00033F40  88 0D A5 38 */	lbz r0, lbl_806666B8@sda21(r13)
 /* 8006A984 00033F44  7C 00 07 75 */	extsb. r0, r0
 /* 8006A988 00033F48  40 82 00 18 */	bne .L_8006A9A0
-/* 8006A98C 00033F4C  3C 80 80 53 */	lis r4, __vt__cf_CfCamLookatIntf@ha
+/* 8006A98C 00033F4C  3C 80 80 53 */	lis r4, __vt__Q22cf15CfCamLookatIntf@ha
 /* 8006A990 00033F50  38 00 00 01 */	li r0, 1
-/* 8006A994 00033F54  38 84 A8 D8 */	addi r4, r4, __vt__cf_CfCamLookatIntf@l
+/* 8006A994 00033F54  38 84 A8 D8 */	addi r4, r4, __vt__Q22cf15CfCamLookatIntf@l
 /* 8006A998 00033F58  90 8D A5 3C */	stw r4, lbl_806666BC@sda21(r13)
 /* 8006A99C 00033F5C  98 0D A5 38 */	stb r0, lbl_806666B8@sda21(r13)
 .L_8006A9A0:
 /* 8006A9A0 00033F60  88 0D A5 40 */	lbz r0, lbl_806666C0@sda21(r13)
 /* 8006A9A4 00033F64  7C 00 07 75 */	extsb. r0, r0
 /* 8006A9A8 00033F68  40 82 00 18 */	bne .L_8006A9C0
-/* 8006A9AC 00033F6C  3C 80 80 53 */	lis r4, __vt__cf_CfCamTargetIntf@ha
+/* 8006A9AC 00033F6C  3C 80 80 53 */	lis r4, __vt__Q22cf15CfCamTargetIntf@ha
 /* 8006A9B0 00033F70  38 00 00 01 */	li r0, 1
-/* 8006A9B4 00033F74  38 84 A8 A8 */	addi r4, r4, __vt__cf_CfCamTargetIntf@l
+/* 8006A9B4 00033F74  38 84 A8 A8 */	addi r4, r4, __vt__Q22cf15CfCamTargetIntf@l
 /* 8006A9B8 00033F78  90 8D A5 44 */	stw r4, lbl_806666C4@sda21(r13)
 /* 8006A9BC 00033F7C  98 0D A5 40 */	stb r0, lbl_806666C0@sda21(r13)
 .L_8006A9C0:
@@ -797,9 +797,9 @@
 /* 8006B34C 0003490C  7F A4 EB 78 */	mr r4, r29
 /* 8006B350 00034910  7F C5 F3 78 */	mr r5, r30
 /* 8006B354 00034914  48 00 08 D9 */	bl __ct__cf_CfCamFollow
-/* 8006B358 00034918  3C 60 80 53 */	lis r3, __vt__cf_CfCamEvent@ha
+/* 8006B358 00034918  3C 60 80 53 */	lis r3, __vt__Q22cf10CfCamEvent@ha
 /* 8006B35C 0003491C  3C 80 80 66 */	lis r4, zero__Q22ml5CVec3@ha
-/* 8006B360 00034920  38 63 A8 18 */	addi r3, r3, __vt__cf_CfCamEvent@l
+/* 8006B360 00034920  38 63 A8 18 */	addi r3, r3, __vt__Q22cf10CfCamEvent@l
 /* 8006B364 00034924  90 7F 00 00 */	stw r3, 0(r31)
 /* 8006B368 00034928  38 60 00 00 */	li r3, 0
 /* 8006B36C 0003492C  38 00 00 08 */	li r0, 8
@@ -872,8 +872,8 @@
 
 .balign 8
 
-.obj __vt__cf_CfCamEvent, global
-	.4byte __RTTI__cf_CfCamEvent
+.obj __vt__Q22cf10CfCamEvent, global
+	.4byte __RTTI__Q22cf10CfCamEvent
 	.4byte 0
 	.4byte __dt__cf_CfCamEvent
 	.4byte func_8006A8C4
@@ -903,70 +903,70 @@
 	.4byte func_8006AC60
 	.4byte func_80074A3C
 	.4byte func_80074AA4
-.endobj __vt__cf_CfCamEvent
+.endobj __vt__Q22cf10CfCamEvent
 
 .obj cf_CfCamEvent_hierarchy, global
-	.4byte __RTTI__cf_CfCam
+	.4byte __RTTI__Q22cf5CfCam
 	.4byte 0
-	.4byte __RTTI__cf_CfCamFollow
+	.4byte __RTTI__Q22cf11CfCamFollow
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj cf_CfCamEvent_hierarchy
 
-.obj __vt__cf_CfCamTargetIntf, global
-	.4byte __RTTI__cf_CfCamTargetIntf
+.obj __vt__Q22cf15CfCamTargetIntf, global
+	.4byte __RTTI__Q22cf15CfCamTargetIntf
 	.4byte 0
 	.4byte CfCamTargetIntf_update
 	.4byte CfCamTargetIntf_setPos
 	.4byte CfCamTargetIntf_setDir
 	.4byte CfCamTargetIntf_setLookat
-.endobj __vt__cf_CfCamTargetIntf
+.endobj __vt__Q22cf15CfCamTargetIntf
 
 .obj cf_CfCamTargetIntf_hierarchy, global
-	.4byte __RTTI__cf_CfCamIntf
+	.4byte __RTTI__Q22cf5CfCamIntf
 	.4byte 0
-	.4byte __RTTI__cf_CfCamLookatIntf
+	.4byte __RTTI__Q22cf15CfCamLookatIntf
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj cf_CfCamTargetIntf_hierarchy
 
 
-.obj __vt__cf_CfCamLookatIntf, global
-	.4byte __RTTI__cf_CfCamLookatIntf
+.obj __vt__Q22cf15CfCamLookatIntf, global
+	.4byte __RTTI__Q22cf15CfCamLookatIntf
 	.4byte 0
 	.4byte CamLookatIntf_update
 	.4byte CamLookatIntf_setPos
 	.4byte CamLookatIntf_setDir
 	.4byte CamLookatIntf_setLookat
-.endobj __vt__cf_CfCamLookatIntf
+.endobj __vt__Q22cf15CfCamLookatIntf
 
 .obj cf_CfCamLookatIntf_hierarchy, global
-	.4byte __RTTI__cf_CfCamIntf
+	.4byte __RTTI__Q22cf5CfCamIntf
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj cf_CfCamLookatIntf_hierarchy
 
 
-.obj __vt__cf_CfCamDirectionIntf, global
-	.4byte __RTTI__cf_CfCamDirectionIntf
+.obj __vt__Q22cf18CfCamDirectionIntf, global
+	.4byte __RTTI__Q22cf18CfCamDirectionIntf
 	.4byte 0
 	.4byte CfCamDirectionIntf_update
 	.4byte CfCamDirectionIntf_setPos
 	.4byte CfCamDirectionIntf_setDir
 	.4byte CfCamDirectionIntf_setLookat
-.endobj __vt__cf_CfCamDirectionIntf
+.endobj __vt__Q22cf18CfCamDirectionIntf
 
 .obj cf_CfCamDirectionIntf_hierarchy, global
-	.4byte __RTTI__cf_CfCamIntf
+	.4byte __RTTI__Q22cf5CfCamIntf
 	.4byte 0
 	.4byte 0
 .endobj cf_CfCamDirectionIntf_hierarchy
 
 .obj cf_CfCamFollow_hierarchy, global
-	.4byte __RTTI__cf_CfCam
+	.4byte __RTTI__Q22cf5CfCam
 	.4byte 0
 	.4byte 0
 .endobj cf_CfCamFollow_hierarchy
@@ -975,36 +975,36 @@
 
 .balign 8
 
-.obj __RTTI__cf_CfCamEvent, global
+.obj __RTTI__Q22cf10CfCamEvent, global
 	.4byte cf_CfCamEvent_typestr
 	.4byte cf_CfCamEvent_hierarchy
-.endobj __RTTI__cf_CfCamEvent
+.endobj __RTTI__Q22cf10CfCamEvent
 
-.obj __RTTI__cf_CfCamTargetIntf, global
+.obj __RTTI__Q22cf15CfCamTargetIntf, global
 	.4byte cf_CfCamTargetIntf_typestr
 	.4byte cf_CfCamTargetIntf_hierarchy
-.endobj __RTTI__cf_CfCamTargetIntf
+.endobj __RTTI__Q22cf15CfCamTargetIntf
 
-.obj __RTTI__cf_CfCamLookatIntf, global
+.obj __RTTI__Q22cf15CfCamLookatIntf, global
 	.4byte cf_CfCamLookatIntf_typestr
 	.4byte cf_CfCamLookatIntf_hierarchy
-.endobj __RTTI__cf_CfCamLookatIntf
+.endobj __RTTI__Q22cf15CfCamLookatIntf
 
-.obj __RTTI__cf_CfCamDirectionIntf, global
+.obj __RTTI__Q22cf18CfCamDirectionIntf, global
 	.4byte cf_CfCamDirectionIntf_typestr
 	.4byte cf_CfCamDirectionIntf_hierarchy
-.endobj __RTTI__cf_CfCamDirectionIntf
+.endobj __RTTI__Q22cf18CfCamDirectionIntf
 
-.obj __RTTI__cf_CfCamIntf, global
+.obj __RTTI__Q22cf5CfCamIntf, global
 	.4byte cf_CfCamIntf_typestr
 	.4byte 0
-.endobj __RTTI__cf_CfCamIntf
+.endobj __RTTI__Q22cf5CfCamIntf
 
 
-.obj __RTTI__cf_CfCamFollow, global
+.obj __RTTI__Q22cf11CfCamFollow, global
 	.4byte cf_CfCamFollow_typestr
 	.4byte cf_CfCamFollow_hierarchy
-.endobj __RTTI__cf_CfCamFollow
+.endobj __RTTI__Q22cf11CfCamFollow
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

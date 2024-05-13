@@ -3,11 +3,11 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .fn __ct__CMdlDynamics, global
-/* 804E942C 004B29EC  3C A0 80 57 */	lis r5, __vt__CMdlDynamics@ha
+/* 804E942C 004B29EC  3C A0 80 57 */	lis r5, __vt__12CMdlDynamics@ha
 /* 804E9430 004B29F0  38 80 00 00 */	li r4, 0
 /* 804E9434 004B29F4  38 00 FF FF */	li r0, -1
 /* 804E9438 004B29F8  90 83 00 04 */	stw r4, 4(r3)
-/* 804E943C 004B29FC  38 A5 3A 44 */	addi r5, r5, __vt__CMdlDynamics@l
+/* 804E943C 004B29FC  38 A5 3A 44 */	addi r5, r5, __vt__12CMdlDynamics@l
 /* 804E9440 004B2A00  90 A3 00 00 */	stw r5, 0(r3)
 /* 804E9444 004B2A04  90 83 00 08 */	stw r4, 8(r3)
 /* 804E9448 004B2A08  90 83 00 0C */	stw r4, 0xc(r3)
@@ -5490,11 +5490,11 @@
 .endobj lbl_80573A38
 
 
-.obj __vt__CMdlDynamics, global
-	.4byte __RTTI__CMdlDynamics
+.obj __vt__12CMdlDynamics, global
+	.4byte __RTTI__12CMdlDynamics
 	.4byte 0
 	.4byte __dt__CMdlDynamics
-.endobj __vt__CMdlDynamics
+.endobj __vt__12CMdlDynamics
 
 
 .obj lbl_80573A50, global
@@ -5516,10 +5516,10 @@
 
 .balign 8
 
-.obj __RTTI__CMdlDynamics, global
+.obj __RTTI__12CMdlDynamics, global
 	.4byte CMdlDynamics_typestr
 	.4byte 0
-.endobj __RTTI__CMdlDynamics
+.endobj __RTTI__12CMdlDynamics
 
 
 .obj lbl_806665D0, global

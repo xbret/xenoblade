@@ -8,10 +8,10 @@
 
 .fn __ct__CKizunaRadar, global
 /* 80257A8C 0022104C  C0 02 AD 58 */	lfs f0, float_8066B0D8@sda21(r2)
-/* 80257A90 00221050  3C A0 80 54 */	lis r5, __vt__CKizunaRadar@ha
+/* 80257A90 00221050  3C A0 80 54 */	lis r5, __vt__12CKizunaRadar@ha
 /* 80257A94 00221054  38 00 00 00 */	li r0, 0
 /* 80257A98 00221058  90 83 00 04 */	stw r4, 4(r3)
-/* 80257A9C 0022105C  38 A5 AD C0 */	addi r5, r5, __vt__CKizunaRadar@l
+/* 80257A9C 0022105C  38 A5 AD C0 */	addi r5, r5, __vt__12CKizunaRadar@l
 /* 80257AA0 00221060  90 A3 00 00 */	stw r5, 0(r3)
 /* 80257AA4 00221064  90 03 00 08 */	stw r0, 8(r3)
 /* 80257AA8 00221068  90 03 00 0C */	stw r0, 0xc(r3)
@@ -245,9 +245,9 @@
 #CKizunaCur
 
 .fn __ct__CKizunaCur, global
-/* 80257DE8 002213A8  3C C0 80 54 */	lis r6, __vt__CKizunaCur@ha
+/* 80257DE8 002213A8  3C C0 80 54 */	lis r6, __vt__10CKizunaCur@ha
 /* 80257DEC 002213AC  38 A0 00 00 */	li r5, 0
-/* 80257DF0 002213B0  38 C6 AD B4 */	addi r6, r6, __vt__CKizunaCur@l
+/* 80257DF0 002213B0  38 C6 AD B4 */	addi r6, r6, __vt__10CKizunaCur@l
 /* 80257DF4 002213B4  38 00 00 01 */	li r0, 1
 /* 80257DF8 002213B8  90 C3 00 00 */	stw r6, 0(r3)
 /* 80257DFC 002213BC  90 83 00 04 */	stw r4, 4(r3)
@@ -415,10 +415,10 @@
 
 .fn __ct__CKizunaLine, global
 /* 80258024 002215E4  C0 02 AD 58 */	lfs f0, float_8066B0D8@sda21(r2)
-/* 80258028 002215E8  3D 00 80 54 */	lis r8, __vt__CKizunaLine@ha
+/* 80258028 002215E8  3D 00 80 54 */	lis r8, __vt__11CKizunaLine@ha
 /* 8025802C 002215EC  38 E0 00 00 */	li r7, 0
 /* 80258030 002215F0  38 00 00 01 */	li r0, 1
-/* 80258034 002215F4  39 08 AD A8 */	addi r8, r8, __vt__CKizunaLine@l
+/* 80258034 002215F4  39 08 AD A8 */	addi r8, r8, __vt__11CKizunaLine@l
 /* 80258038 002215F8  91 03 00 00 */	stw r8, 0(r3)
 /* 8025803C 002215FC  90 83 00 04 */	stw r4, 4(r3)
 /* 80258040 00221600  90 A3 00 08 */	stw r5, 8(r3)
@@ -4151,11 +4151,11 @@
 #KizunaInfo
 
 .fn __ct__CKizunaInfo, global
-/* 8025B5F8 00224BB8  3C C0 80 54 */	lis r6, __vt__CKizunaInfo@ha
+/* 8025B5F8 00224BB8  3C C0 80 54 */	lis r6, __vt__11CKizunaInfo@ha
 /* 8025B5FC 00224BBC  38 A0 00 00 */	li r5, 0
 /* 8025B600 00224BC0  38 00 00 01 */	li r0, 1
 /* 8025B604 00224BC4  90 83 00 04 */	stw r4, 4(r3)
-/* 8025B608 00224BC8  38 C6 AD 9C */	addi r6, r6, __vt__CKizunaInfo@l
+/* 8025B608 00224BC8  38 C6 AD 9C */	addi r6, r6, __vt__11CKizunaInfo@l
 /* 8025B60C 00224BCC  90 C3 00 00 */	stw r6, 0(r3)
 /* 8025B610 00224BD0  90 A3 00 08 */	stw r5, 8(r3)
 /* 8025B614 00224BD4  90 A3 00 0C */	stw r5, 0xc(r3)
@@ -5131,9 +5131,9 @@
 /* 8025C3E4 002259A4  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8025C3E8 002259A8  39 61 00 20 */	addi r11, r1, 0x20
 /* 8025C3EC 002259AC  48 05 DD 6D */	bl _savegpr_28
-/* 8025C3F0 002259B0  3C A0 80 54 */	lis r5, __vt__CKizunagram@ha
+/* 8025C3F0 002259B0  3C A0 80 54 */	lis r5, __vt__11CKizunagram@ha
 /* 8025C3F4 002259B4  7C 7C 1B 78 */	mr r28, r3
-/* 8025C3F8 002259B8  38 A5 AD 08 */	addi r5, r5, __vt__CKizunagram@l
+/* 8025C3F8 002259B8  38 A5 AD 08 */	addi r5, r5, __vt__11CKizunagram@l
 /* 8025C3FC 002259BC  90 A3 00 00 */	stw r5, 0(r3)
 /* 8025C400 002259C0  7C 9D 23 78 */	mr r29, r4
 /* 8025C404 002259C4  38 63 00 08 */	addi r3, r3, 8
@@ -6569,8 +6569,8 @@
 
 .balign 8
 
-.obj __vt__CKizunagram, global
-	.4byte __RTTI__CKizunagram
+.obj __vt__11CKizunagram, global
+	.4byte __RTTI__11CKizunagram
 	.4byte 0
 	.4byte __dt__CKizunagram
 	.4byte IWorkEvent_WorkEvent1
@@ -6604,71 +6604,71 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CKizunagram
+.endobj __vt__11CKizunagram
 
 .obj CKizunagram_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 .endobj CKizunagram_hierarchy
 
 
-.obj __vt__CKizunaInfo, global
-	.4byte __RTTI__CKizunaInfo
+.obj __vt__11CKizunaInfo, global
+	.4byte __RTTI__11CKizunaInfo
 	.4byte 0
 	.4byte __dt__CKizunaInfo
-.endobj __vt__CKizunaInfo
+.endobj __vt__11CKizunaInfo
 
 
-.obj __vt__CKizunaLine, global
-	.4byte __RTTI__CKizunaLine
+.obj __vt__11CKizunaLine, global
+	.4byte __RTTI__11CKizunaLine
 	.4byte 0
 	.4byte __dt__CKizunaLine
-.endobj __vt__CKizunaLine
+.endobj __vt__11CKizunaLine
 
 
-.obj __vt__CKizunaCur, global
-	.4byte __RTTI__CKizunaCur
+.obj __vt__10CKizunaCur, global
+	.4byte __RTTI__10CKizunaCur
 	.4byte 0
 	.4byte __dt__CKizunaCur
-.endobj __vt__CKizunaCur
+.endobj __vt__10CKizunaCur
 
 
-.obj __vt__CKizunaRadar, global
-	.4byte __RTTI__CKizunaRadar
+.obj __vt__12CKizunaRadar, global
+	.4byte __RTTI__12CKizunaRadar
 	.4byte 0
 	.4byte __dt__CKizunaRadar
 	.4byte 0
-.endobj __vt__CKizunaRadar
+.endobj __vt__12CKizunaRadar
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CKizunagram, global
+.obj __RTTI__11CKizunagram, global
 	.4byte CKizunagram_typestr
 	.4byte CKizunagram_hierarchy
-.endobj __RTTI__CKizunagram
+.endobj __RTTI__11CKizunagram
 
-.obj __RTTI__CKizunaInfo, global
+.obj __RTTI__11CKizunaInfo, global
 	.4byte CKizunaInfo_typestr
 	.4byte 0
-.endobj __RTTI__CKizunaInfo
+.endobj __RTTI__11CKizunaInfo
 
-.obj __RTTI__CKizunaLine, global
+.obj __RTTI__11CKizunaLine, global
 	.4byte CKizunaLine_typestr
 	.4byte 0
-.endobj __RTTI__CKizunaLine
+.endobj __RTTI__11CKizunaLine
 
-.obj __RTTI__CKizunaCur, global
+.obj __RTTI__10CKizunaCur, global
 	.4byte CKizunaCur_typestr
 	.4byte 0
-.endobj __RTTI__CKizunaCur
+.endobj __RTTI__10CKizunaCur
 
-.obj __RTTI__CKizunaRadar, global
+.obj __RTTI__12CKizunaRadar, global
 	.4byte CKizunaRadar_typestr
 	.4byte 0
-.endobj __RTTI__CKizunaRadar
+.endobj __RTTI__12CKizunaRadar
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

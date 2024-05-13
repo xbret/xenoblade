@@ -5,9 +5,9 @@
 .fn __ct__cf__sArtsSet, global
 /* 80153BEC 0011D1AC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80153BF0 0011D1B0  7C 08 02 A6 */	mflr r0
-/* 80153BF4 0011D1B4  3D 80 80 53 */	lis r12, __vt__cf__sArtsSet@ha
+/* 80153BF4 0011D1B4  3D 80 80 53 */	lis r12, __vt__Q22cf9_sArtsSet@ha
 /* 80153BF8 0011D1B8  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80153BFC 0011D1BC  39 8C 2D A8 */	addi r12, r12, __vt__cf__sArtsSet@l
+/* 80153BFC 0011D1BC  39 8C 2D A8 */	addi r12, r12, __vt__Q22cf9_sArtsSet@l
 /* 80153C00 0011D1C0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80153C04 0011D1C4  7C 7F 1B 78 */	mr r31, r3
 /* 80153C08 0011D1C8  91 83 00 34 */	stw r12, 0x34(r3)
@@ -356,62 +356,62 @@
 
 .balign 8
 
-.obj __vt__cf_CAttackSet, global
-	.4byte __RTTI__cf_CAttackSet
+.obj __vt__Q22cf10CAttackSet, global
+	.4byte __RTTI__Q22cf10CAttackSet
 	.4byte 0
 	.4byte func_80153E88
-.endobj __vt__cf_CAttackSet
+.endobj __vt__Q22cf10CAttackSet
 
 .obj cf_CAttackSet_hierarchy, global
-	.4byte __RTTI__cf__sAttackSet
+	.4byte __RTTI__Q22cf11_sAttackSet
 	.4byte 0
 	.4byte 0
 .endobj cf_CAttackSet_hierarchy
 
 
-.obj __vt__cf_CArtsSet, global
-	.4byte __RTTI__cf_CArtsSet
+.obj __vt__Q22cf8CArtsSet, global
+	.4byte __RTTI__Q22cf8CArtsSet
 	.4byte 0
 	.4byte func_80153CFC
-.endobj __vt__cf_CArtsSet
+.endobj __vt__Q22cf8CArtsSet
 
 .obj cf_CArtsSet_hierarchy, global
-	.4byte __RTTI__cf__sArtsSet
+	.4byte __RTTI__Q22cf9_sArtsSet
 	.4byte 0
 	.4byte 0
 .endobj cf_CArtsSet_hierarchy
 
 
-.obj __vt__cf__sArtsSet, global
-	.4byte __RTTI__cf__sArtsSet
+.obj __vt__Q22cf9_sArtsSet, global
+	.4byte __RTTI__Q22cf9_sArtsSet
 	.4byte 0
 	.4byte func_80153C30
 	.4byte 0
-.endobj __vt__cf__sArtsSet
+.endobj __vt__Q22cf9_sArtsSet
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__cf_CAttackSet, global
+.obj __RTTI__Q22cf10CAttackSet, global
 	.4byte cf_CAttackSet_typestr
 	.4byte cf_CAttackSet_hierarchy
-.endobj __RTTI__cf_CAttackSet
+.endobj __RTTI__Q22cf10CAttackSet
 
-.obj __RTTI__cf__sAttackSet, global
+.obj __RTTI__Q22cf11_sAttackSet, global
 	.4byte cf__sAttackSet_typestr
 	.4byte 0
-.endobj __RTTI__cf__sAttackSet
+.endobj __RTTI__Q22cf11_sAttackSet
 
-.obj __RTTI__cf_CArtsSet, global
+.obj __RTTI__Q22cf8CArtsSet, global
 	.4byte cf_CArtsSet_typestr
 	.4byte cf_CArtsSet_hierarchy
-.endobj __RTTI__cf_CArtsSet
+.endobj __RTTI__Q22cf8CArtsSet
 
-.obj __RTTI__cf__sArtsSet, global
+.obj __RTTI__Q22cf9_sArtsSet, global
 	.4byte cf__sArtsSet_typestr
 	.4byte 0
-.endobj __RTTI__cf__sArtsSet
+.endobj __RTTI__Q22cf9_sArtsSet
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

@@ -180,9 +180,9 @@
 #CSLCur
 
 .fn __ct__CSLCur, global
-/* 8028EA08 00257FC8  3C A0 80 54 */	lis r5, __vt__CSLCur@ha
+/* 8028EA08 00257FC8  3C A0 80 54 */	lis r5, __vt__6CSLCur@ha
 /* 8028EA0C 00257FCC  38 00 00 00 */	li r0, 0
-/* 8028EA10 00257FD0  38 A5 C0 04 */	addi r5, r5, __vt__CSLCur@l
+/* 8028EA10 00257FD0  38 A5 C0 04 */	addi r5, r5, __vt__6CSLCur@l
 /* 8028EA14 00257FD4  90 A3 00 00 */	stw r5, 0(r3)
 /* 8028EA18 00257FD8  90 83 00 04 */	stw r4, 4(r3)
 /* 8028EA1C 00257FDC  90 03 00 08 */	stw r0, 8(r3)
@@ -631,9 +631,9 @@
 /* 8028EFE4 002585A4  90 01 00 D4 */	stw r0, 0xd4(r1)
 /* 8028EFE8 002585A8  39 61 00 D0 */	addi r11, r1, 0xd0
 /* 8028EFEC 002585AC  48 02 B1 6D */	bl _savegpr_28
-/* 8028EFF0 002585B0  3C C0 80 54 */	lis r6, __vt__CSaveLoad@ha
+/* 8028EFF0 002585B0  3C C0 80 54 */	lis r6, __vt__9CSaveLoad@ha
 /* 8028EFF4 002585B4  7C 7C 1B 78 */	mr r28, r3
-/* 8028EFF8 002585B8  38 C6 BF 70 */	addi r6, r6, __vt__CSaveLoad@l
+/* 8028EFF8 002585B8  38 C6 BF 70 */	addi r6, r6, __vt__9CSaveLoad@l
 /* 8028EFFC 002585BC  90 C3 00 00 */	stw r6, 0(r3)
 /* 8028F000 002585C0  7C 9D 23 78 */	mr r29, r4
 /* 8028F004 002585C4  7C BE 2B 78 */	mr r30, r5
@@ -3466,8 +3466,8 @@
 /* 8029185C 0025AE1C  93 C1 00 08 */	stw r30, 8(r1)
 /* 80291860 0025AE20  7C 7E 1B 78 */	mr r30, r3
 /* 80291864 0025AE24  41 82 00 2C */	beq .L_80291890
-/* 80291868 0025AE28  3C 80 80 54 */	lis r4, __vt__cf_CfAward@ha
-/* 8029186C 0025AE2C  38 84 C0 10 */	addi r4, r4, __vt__cf_CfAward@l
+/* 80291868 0025AE28  3C 80 80 54 */	lis r4, __vt__Q22cf7CfAward@ha
+/* 8029186C 0025AE2C  38 84 C0 10 */	addi r4, r4, __vt__Q22cf7CfAward@l
 /* 80291870 0025AE30  90 83 00 04 */	stw r4, 4(r3)
 /* 80291874 0025AE34  38 04 00 08 */	addi r0, r4, 8
 /* 80291878 0025AE38  90 03 00 00 */	stw r0, 0(r3)
@@ -5259,10 +5259,10 @@
 .fn sinit_802930E0, local
 /* 802930E0 0025C6A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802930E4 0025C6A4  7C 08 02 A6 */	mflr r0
-/* 802930E8 0025C6A8  3C 80 80 54 */	lis r4, __vt__cf_CfAward@ha
+/* 802930E8 0025C6A8  3C 80 80 54 */	lis r4, __vt__Q22cf7CfAward@ha
 /* 802930EC 0025C6AC  38 6D B1 68 */	addi r3, r13, lbl_806672E8@sda21
 /* 802930F0 0025C6B0  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802930F4 0025C6B4  38 84 C0 10 */	addi r4, r4, __vt__cf_CfAward@l
+/* 802930F4 0025C6B4  38 84 C0 10 */	addi r4, r4, __vt__Q22cf7CfAward@l
 /* 802930F8 0025C6B8  38 04 00 08 */	addi r0, r4, 8
 /* 802930FC 0025C6BC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80293100 0025C6C0  3B ED B1 68 */	addi r31, r13, lbl_806672E8@sda21
@@ -5402,8 +5402,8 @@
 
 .balign 8
 
-.obj __vt__CSaveLoad, global
-	.4byte __RTTI__CSaveLoad
+.obj __vt__9CSaveLoad, global
+	.4byte __RTTI__9CSaveLoad
 	.4byte 0
 	.4byte __dt__CSaveLoad
 	.4byte IWorkEvent_WorkEvent1
@@ -5437,35 +5437,35 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CSaveLoad
+.endobj __vt__9CSaveLoad
 
 .obj CSaveLoad_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 .endobj CSaveLoad_hierarchy
 
 
-.obj __vt__CSLCur, global
-	.4byte __RTTI__CSLCur
+.obj __vt__6CSLCur, global
+	.4byte __RTTI__6CSLCur
 	.4byte 0
 	.4byte func_8028EA74
-.endobj __vt__CSLCur
+.endobj __vt__6CSLCur
 
 
-.obj __vt__cf_CfAward, global
-	.4byte __RTTI__cf_CfAward
+.obj __vt__Q22cf7CfAward, global
+	.4byte __RTTI__Q22cf7CfAward
 	.4byte 0
-	.4byte __RTTI__cf_CfAward
+	.4byte __RTTI__Q22cf7CfAward
 	.4byte 0
 	.4byte __dt__CfAward
 	.4byte func_80291B18
 	.4byte __dt__CfAward
 	.4byte func_80291B18
-.endobj __vt__cf_CfAward
+.endobj __vt__Q22cf7CfAward
 
 .obj cf_CfAward_hierarchy, global
-	.4byte __RTTI__cf_CAwardBase
+	.4byte __RTTI__Q22cf10CAwardBase
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -5490,25 +5490,25 @@
 	.4byte 0
 .endobj lbl_806653C8
 
-.obj __RTTI__CSaveLoad, global
+.obj __RTTI__9CSaveLoad, global
 	.4byte CSaveLoad_typestr
 	.4byte CSaveLoad_hierarchy
-.endobj __RTTI__CSaveLoad
+.endobj __RTTI__9CSaveLoad
 
-.obj __RTTI__CSLCur, global
+.obj __RTTI__6CSLCur, global
 	.4byte CSLCur_typestr
 	.4byte 0
-.endobj __RTTI__CSLCur
+.endobj __RTTI__6CSLCur
 
-.obj __RTTI__cf_CfAward, global
+.obj __RTTI__Q22cf7CfAward, global
 	.4byte cf_CfAward_typestr
 	.4byte cf_CfAward_hierarchy
-.endobj __RTTI__cf_CfAward
+.endobj __RTTI__Q22cf7CfAward
 
-.obj __RTTI__cf_CAwardBase, global
+.obj __RTTI__Q22cf10CAwardBase, global
 	.4byte cf_CAwardBase_typestr
 	.4byte 0
-.endobj __RTTI__cf_CAwardBase
+.endobj __RTTI__Q22cf10CAwardBase
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

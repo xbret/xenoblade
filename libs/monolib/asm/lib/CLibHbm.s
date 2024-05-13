@@ -11,10 +11,10 @@
 /* 8045D368 00426928  7C 7F 1B 78 */	mr r31, r3
 /* 8045D36C 0042692C  4B FD A2 51 */	bl __ct__CWorkThread
 /* 8045D370 00426930  C0 02 C9 70 */	lfs f0, float_8066CCF0@sda21(r2)
-/* 8045D374 00426934  3C 60 80 57 */	lis r3, __vt__CLibHbm@ha
+/* 8045D374 00426934  3C 60 80 57 */	lis r3, __vt__7CLibHbm@ha
 /* 8045D378 00426938  38 80 00 00 */	li r4, 0
 /* 8045D37C 0042693C  38 A0 FF FF */	li r5, -1
-/* 8045D380 00426940  38 63 09 F0 */	addi r3, r3, __vt__CLibHbm@l
+/* 8045D380 00426940  38 63 09 F0 */	addi r3, r3, __vt__7CLibHbm@l
 /* 8045D384 00426944  90 7F 00 00 */	stw r3, 0(r31)
 /* 8045D388 00426948  38 00 00 0D */	li r0, 0xd
 /* 8045D38C 0042694C  90 BF 01 C4 */	stw r5, 0x1c4(r31)
@@ -1343,8 +1343,8 @@
 
 .balign 8
 
-.obj __vt__CLibHbm, global
-	.4byte __RTTI__CLibHbm
+.obj __vt__7CLibHbm, global
+	.4byte __RTTI__7CLibHbm
 	.4byte 0
 	.4byte __dt__CLibHbm
 	.4byte IWorkEvent_WorkEvent1
@@ -1384,12 +1384,12 @@
 	.4byte CLibHbm_WorkThreadEvent4
 	.4byte CLibHbm_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-.endobj __vt__CLibHbm
+.endobj __vt__7CLibHbm
 
 .obj CLibHbm_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1404,10 +1404,10 @@
 	.4byte 0
 .endobj lbl_806660E0
 
-.obj __RTTI__CLibHbm, global
+.obj __RTTI__7CLibHbm, global
 	.4byte CLibHbm_typestr
 	.4byte CLibHbm_hierarchy
-.endobj __RTTI__CLibHbm
+.endobj __RTTI__7CLibHbm
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

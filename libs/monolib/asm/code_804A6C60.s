@@ -12971,11 +12971,11 @@
 /* 804B2534 0047BAF4  3F E0 80 66 */	lis r31, lbl_8065F960@ha
 /* 804B2538 0047BAF8  38 7F F9 60 */	addi r3, r31, lbl_8065F960@l
 /* 804B253C 0047BAFC  48 00 00 3D */	bl __ct__CColiProc
-/* 804B2540 0047BB00  3C 80 80 57 */	lis r4, __vt__CColiObjCall@ha
+/* 804B2540 0047BB00  3C 80 80 57 */	lis r4, __vt__12CColiObjCall@ha
 /* 804B2544 0047BB04  38 7F F9 60 */	addi r3, r31, lbl_8065F960@l
 /* 804B2548 0047BB08  38 00 00 00 */	li r0, 0
 /* 804B254C 0047BB0C  C0 02 D2 B8 */	lfs f0, float_8066D638@sda21(r2)
-/* 804B2550 0047BB10  38 84 2B C8 */	addi r4, r4, __vt__CColiObjCall@l
+/* 804B2550 0047BB10  38 84 2B C8 */	addi r4, r4, __vt__12CColiObjCall@l
 /* 804B2554 0047BB14  90 9F F9 60 */	stw r4, lbl_8065F960@l(r31)
 /* 804B2558 0047BB18  90 03 00 38 */	stw r0, 0x38(r3)
 /* 804B255C 0047BB1C  D0 03 00 3C */	stfs f0, 0x3c(r3)
@@ -13130,14 +13130,14 @@
 .endobj lbl_80572A20
 
 
-.obj __vt__CColiObjCall, global
-	.4byte __RTTI__CColiObjCall
+.obj __vt__12CColiObjCall, global
+	.4byte __RTTI__12CColiObjCall
 	.4byte 0
 	.4byte func_804B24A4
-.endobj __vt__CColiObjCall
+.endobj __vt__12CColiObjCall
 
 .obj CColiObjCall_hierarchy, global
-	.4byte __RTTI__CColiProc
+	.4byte __RTTI__9CColiProc
 	.4byte 0
 	.4byte 0
 .endobj CColiObjCall_hierarchy
@@ -13152,10 +13152,10 @@
 	.4byte 0
 .endobj lbl_806663B0
 
-.obj __RTTI__CColiObjCall, global
+.obj __RTTI__12CColiObjCall, global
 	.4byte CColiObjCall_typestr
 	.4byte CColiObjCall_hierarchy
-.endobj __RTTI__CColiObjCall
+.endobj __RTTI__12CColiObjCall
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

@@ -12,9 +12,9 @@
 /* 801993DC 0016299C  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 801993E0 001629A0  7C BD 2B 78 */	mr r29, r5
 /* 801993E4 001629A4  4B EE F5 21 */	bl __ct__80088904
-/* 801993E8 001629A8  3C 60 80 53 */	lis r3, __vt__cf_CtrlMovePC@ha
+/* 801993E8 001629A8  3C 60 80 53 */	lis r3, __vt__Q22cf10CtrlMovePC@ha
 /* 801993EC 001629AC  3C A0 80 51 */	lis r5, __ptmf_null@ha
-/* 801993F0 001629B0  38 63 65 10 */	addi r3, r3, __vt__cf_CtrlMovePC@l
+/* 801993F0 001629B0  38 63 65 10 */	addi r3, r3, __vt__Q22cf10CtrlMovePC@l
 /* 801993F4 001629B4  90 7E 00 48 */	stw r3, 0x48(r30)
 /* 801993F8 001629B8  7F C3 F3 78 */	mr r3, r30
 /* 801993FC 001629BC  84 85 CE 10 */	lwzu r4, __ptmf_null@l(r5)
@@ -6920,14 +6920,14 @@
 .endobj lbl_80536504
 
 
-.obj __vt__cf_CtrlMovePC, global
-	.4byte __RTTI__cf_CtrlMovePC
+.obj __vt__Q22cf10CtrlMovePC, global
+	.4byte __RTTI__Q22cf10CtrlMovePC
 	.4byte 0
 	.4byte func_80089628
-.endobj __vt__cf_CtrlMovePC
+.endobj __vt__Q22cf10CtrlMovePC
 
 .obj cf_CtrlMovePC_hierarchy, global
-	.4byte __RTTI__cf_CtrlMoveBase
+	.4byte __RTTI__Q22cf12CtrlMoveBase
 	.4byte 0
 	.4byte 0
 .endobj cf_CtrlMovePC_hierarchy
@@ -6943,10 +6943,10 @@
 
 .balign 8
 
-.obj __RTTI__cf_CtrlMovePC, global
+.obj __RTTI__Q22cf10CtrlMovePC, global
 	.4byte cf_CtrlMovePC_typestr
 	.4byte cf_CtrlMovePC_hierarchy
-.endobj __RTTI__cf_CtrlMovePC
+.endobj __RTTI__Q22cf10CtrlMovePC
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

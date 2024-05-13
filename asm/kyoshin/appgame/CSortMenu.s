@@ -5,9 +5,9 @@
 .fn __ct__CSortMenu, global
 /* 801D2F80 0019C540  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801D2F84 0019C544  7C 08 02 A6 */	mflr r0
-/* 801D2F88 0019C548  3C 80 80 54 */	lis r4, __vt__CSortMenu@ha
+/* 801D2F88 0019C548  3C 80 80 54 */	lis r4, __vt__9CSortMenu@ha
 /* 801D2F8C 0019C54C  90 01 00 14 */	stw r0, 0x14(r1)
-/* 801D2F90 0019C550  38 84 81 88 */	addi r4, r4, __vt__CSortMenu@l
+/* 801D2F90 0019C550  38 84 81 88 */	addi r4, r4, __vt__9CSortMenu@l
 /* 801D2F94 0019C554  BF C1 00 08 */	stmw r30, 8(r1)
 /* 801D2F98 0019C558  7C 7E 1B 78 */	mr r30, r3
 /* 801D2F9C 0019C55C  90 83 00 00 */	stw r4, 0(r3)
@@ -1021,8 +1021,8 @@
 .endobj lbl_80538170
 
 
-.obj __vt__CSortMenu, global
-	.4byte __RTTI__CSortMenu
+.obj __vt__9CSortMenu, global
+	.4byte __RTTI__9CSortMenu
 	.4byte 0
 	.4byte __dt__CSortMenu
 	.4byte IWorkEvent_WorkEvent1
@@ -1056,10 +1056,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CSortMenu
+.endobj __vt__9CSortMenu
 
 .obj CSortMenu_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1069,10 +1069,10 @@
 
 .balign 8
 
-.obj __RTTI__CSortMenu, global
+.obj __RTTI__9CSortMenu, global
 	.4byte CSortMenu_typestr
 	.4byte CSortMenu_hierarchy
-.endobj __RTTI__CSortMenu
+.endobj __RTTI__9CSortMenu
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

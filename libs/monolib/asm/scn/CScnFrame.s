@@ -4,8 +4,8 @@
 
 .fn __ct__CScnFrame, global
 /* 8049E380 00467940  C0 02 D0 10 */	lfs f0, float_8066D390@sda21(r2)
-/* 8049E384 00467944  3C A0 80 57 */	lis r5, __vt__CScnFrame@ha
-/* 8049E388 00467948  38 A5 24 B8 */	addi r5, r5, __vt__CScnFrame@l
+/* 8049E384 00467944  3C A0 80 57 */	lis r5, __vt__9CScnFrame@ha
+/* 8049E388 00467948  38 A5 24 B8 */	addi r5, r5, __vt__9CScnFrame@l
 /* 8049E38C 0046794C  38 00 00 00 */	li r0, 0
 /* 8049E390 00467950  90 A3 00 00 */	stw r5, 0(r3)
 /* 8049E394 00467954  90 83 00 04 */	stw r4, 4(r3)
@@ -83,22 +83,22 @@
 
 .balign 8
 
-.obj __vt__CScnFrame, global
-	.4byte __RTTI__CScnFrame
+.obj __vt__9CScnFrame, global
+	.4byte __RTTI__9CScnFrame
 	.4byte 0
 	.4byte __dt__CScnFrame
 	.4byte 0
-.endobj __vt__CScnFrame
+.endobj __vt__9CScnFrame
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CScnFrame, global
+.obj __RTTI__9CScnFrame, global
 	.4byte CScnFrame_typestr
 	.4byte 0
-.endobj __RTTI__CScnFrame
+.endobj __RTTI__9CScnFrame
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

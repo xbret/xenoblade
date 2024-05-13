@@ -118,9 +118,9 @@
 /* 804398C0 00402E80  7F A5 EB 78 */	mr r5, r29
 /* 804398C4 00402E84  38 C0 00 20 */	li r6, 0x20
 /* 804398C8 00402E88  4B FF DC F5 */	bl __ct__CWorkThread
-/* 804398CC 00402E8C  3C 60 80 57 */	lis r3, __vt__CProcRoot@ha
+/* 804398CC 00402E8C  3C 60 80 57 */	lis r3, __vt__9CProcRoot@ha
 /* 804398D0 00402E90  38 00 00 15 */	li r0, 0x15
-/* 804398D4 00402E94  38 63 EB 20 */	addi r3, r3, __vt__CProcRoot@l
+/* 804398D4 00402E94  38 63 EB 20 */	addi r3, r3, __vt__9CProcRoot@l
 /* 804398D8 00402E98  90 7E 00 00 */	stw r3, 0(r30)
 /* 804398DC 00402E9C  93 CD BD 00 */	stw r30, lbl_80667E80@sda21(r13)
 /* 804398E0 00402EA0  90 1E 00 50 */	stw r0, 0x50(r30)
@@ -448,8 +448,8 @@
 
 .balign 8
 
-.obj __vt__CProcRoot, global
-	.4byte __RTTI__CProcRoot
+.obj __vt__9CProcRoot, global
+	.4byte __RTTI__9CProcRoot
 	.4byte 0
 	.4byte __dt__CProcRoot
 	.4byte IWorkEvent_WorkEvent1
@@ -489,12 +489,12 @@
 	.4byte CProcRoot_WorkThreadEvent4
 	.4byte CProcRoot_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-.endobj __vt__CProcRoot
+.endobj __vt__9CProcRoot
 
 .obj CProcRoot_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -505,10 +505,10 @@
 
 .balign 8
 
-.obj __RTTI__CProcRoot, global
+.obj __RTTI__9CProcRoot, global
 	.4byte CProcRoot_typestr
 	.4byte CProcRoot_hierarchy
-.endobj __RTTI__CProcRoot
+.endobj __RTTI__9CProcRoot
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

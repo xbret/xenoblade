@@ -431,14 +431,14 @@
 /* 802B4E3C 0027E3FC  7C 7E 1B 78 */	mr r30, r3
 /* 802B4E40 0027E400  41 82 00 88 */	beq .L_802B4EC8
 /* 802B4E44 0027E404  48 18 FB D5 */	bl __ct__8CProcessFv
-/* 802B4E48 0027E408  3C 60 80 54 */	lis r3, __vt__CTTask_CUIErrMesWin@ha
+/* 802B4E48 0027E408  3C 60 80 54 */	lis r3, "__vt__22CTTask<12CUIErrMesWin>"@ha
 /* 802B4E4C 0027E40C  3D 20 80 51 */	lis r9, __ptmf_null@ha
-/* 802B4E50 0027E410  38 63 E7 14 */	addi r3, r3, __vt__CTTask_CUIErrMesWin@l
+/* 802B4E50 0027E410  38 63 E7 14 */	addi r3, r3, "__vt__22CTTask<12CUIErrMesWin>"@l
 /* 802B4E54 0027E414  90 7E 00 10 */	stw r3, 0x10(r30)
 /* 802B4E58 0027E418  39 29 CE 10 */	addi r9, r9, __ptmf_null@l
-/* 802B4E5C 0027E41C  3C C0 80 54 */	lis r6, __vt__CUIErrMesWin@ha
+/* 802B4E5C 0027E41C  3C C0 80 54 */	lis r6, __vt__12CUIErrMesWin@ha
 /* 802B4E60 0027E420  80 E9 00 04 */	lwz r7, 4(r9)
-/* 802B4E64 0027E424  38 C6 E6 20 */	addi r6, r6, __vt__CUIErrMesWin@l
+/* 802B4E64 0027E424  38 C6 E6 20 */	addi r6, r6, __vt__12CUIErrMesWin@l
 /* 802B4E68 0027E428  80 09 00 00 */	lwz r0, 0(r9)
 /* 802B4E6C 0027E42C  38 A6 00 24 */	addi r5, r6, 0x24
 /* 802B4E70 0027E430  90 1E 00 3C */	stw r0, 0x3c(r30)
@@ -1623,8 +1623,8 @@
 .endobj lbl_8053E5C8
 
 
-.obj __vt__CUIErrMesWin, global
-	.4byte __RTTI__CUIErrMesWin
+.obj __vt__12CUIErrMesWin, global
+	.4byte __RTTI__12CUIErrMesWin
 	.4byte 0
 	.4byte __dt__CUIErrMesWin
 	.4byte CChildListNode_Reset
@@ -1633,7 +1633,7 @@
 	.4byte func_802B4D48
 	.4byte func_802B50E8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CUIErrMesWin
+	.4byte __RTTI__12CUIErrMesWin
 	.4byte 0xFFFFFFAC
 	.4byte func_802B5130
 	.4byte IWorkEvent_WorkEvent1
@@ -1667,32 +1667,32 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CUIErrMesWin
+	.4byte __RTTI__12CUIErrMesWin
 	.4byte 0xFFFFFFA8
 	.4byte func_802B5140
 	.4byte func_802B5138
 	.4byte func_802B4D94
-.endobj __vt__CUIErrMesWin
+.endobj __vt__12CUIErrMesWin
 
 .obj CUIErrMesWin_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000058
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x00000054
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_CUIErrMesWin
+	.4byte "__RTTI__22CTTask<12CUIErrMesWin>"
 	.4byte 0
 	.4byte 0
 .endobj CUIErrMesWin_hierarchy
 
 
-.obj __vt__CTTask_CUIErrMesWin, global
-	.4byte __RTTI__CTTask_CUIErrMesWin
+.obj "__vt__22CTTask<12CUIErrMesWin>", global
+	.4byte "__RTTI__22CTTask<12CUIErrMesWin>"
 	.4byte 0
 	.4byte __dt__CTTask_CUIErrMesWin
 	.4byte CChildListNode_Reset
@@ -1701,14 +1701,14 @@
 	.4byte func_802B50A0
 	.4byte func_802B50E8
 	.4byte CProcess_func_80043F20
-.endobj __vt__CTTask_CUIErrMesWin
+.endobj "__vt__22CTTask<12CUIErrMesWin>"
 
 .obj CTTask_CUIErrMesWin_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1752,15 +1752,15 @@
 
 .balign 8
 
-.obj __RTTI__CUIErrMesWin, global
+.obj __RTTI__12CUIErrMesWin, global
 	.4byte CUIErrMesWin_typestr
 	.4byte CUIErrMesWin_hierarchy
-.endobj __RTTI__CUIErrMesWin
+.endobj __RTTI__12CUIErrMesWin
 
-.obj __RTTI__CTTask_CUIErrMesWin, global
+.obj "__RTTI__22CTTask<12CUIErrMesWin>", global
 	.4byte CTTask_CUIErrMesWin_typestr
 	.4byte CTTask_CUIErrMesWin_hierarchy
-.endobj __RTTI__CTTask_CUIErrMesWin
+.endobj "__RTTI__22CTTask<12CUIErrMesWin>"
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

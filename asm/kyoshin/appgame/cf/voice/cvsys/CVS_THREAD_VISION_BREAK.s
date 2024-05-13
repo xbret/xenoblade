@@ -52,8 +52,8 @@
 /* 802A937C 0027293C  41 82 00 34 */	beq .L_802A93B0
 /* 802A9380 00272940  90 3F 00 1C */	stw r1, 0x1c(r31)
 /* 802A9384 00272944  4B FF A6 FD */	bl __ct__cf_CVS_THREAD
-/* 802A9388 00272948  3C 60 80 54 */	lis r3, __vt__cf_CVS_THREAD_VISION_BREAK@ha
-/* 802A938C 0027294C  38 63 D5 18 */	addi r3, r3, __vt__cf_CVS_THREAD_VISION_BREAK@l
+/* 802A9388 00272948  3C 60 80 54 */	lis r3, __vt__Q22cf23CVS_THREAD_VISION_BREAK@ha
+/* 802A938C 0027294C  38 63 D5 18 */	addi r3, r3, __vt__Q22cf23CVS_THREAD_VISION_BREAK@l
 /* 802A9390 00272950  90 7E 00 1C */	stw r3, 0x1c(r30)
 /* 802A9394 00272954  93 9E 00 20 */	stw r28, 0x20(r30)
 /* 802A9398 00272958  93 BE 00 24 */	stw r29, 0x24(r30)
@@ -320,18 +320,18 @@
 .endobj lbl_8053D50C
 
 
-.obj __vt__cf_CVS_THREAD_VISION_BREAK, global
-	.4byte __RTTI__cf_CVS_THREAD_VISION_BREAK
+.obj __vt__Q22cf23CVS_THREAD_VISION_BREAK, global
+	.4byte __RTTI__Q22cf23CVS_THREAD_VISION_BREAK
 	.4byte 0
 	.4byte func_802A3B50
 	.4byte func_802A95A4
 	.4byte func_802A95FC
 	.4byte func_802A1EA0
 	.4byte func_802A3740
-.endobj __vt__cf_CVS_THREAD_VISION_BREAK
+.endobj __vt__Q22cf23CVS_THREAD_VISION_BREAK
 
 .obj cf_CVS_THREAD_VISION_BREAK_hierarchy, global
-	.4byte __RTTI__cf_CVS_THREAD
+	.4byte __RTTI__Q22cf10CVS_THREAD
 	.4byte 0
 	.4byte 0
 .endobj cf_CVS_THREAD_VISION_BREAK_hierarchy
@@ -351,10 +351,10 @@
 	.4byte 0x01940000
 .endobj lbl_80665640
 
-.obj __RTTI__cf_CVS_THREAD_VISION_BREAK, global
+.obj __RTTI__Q22cf23CVS_THREAD_VISION_BREAK, global
 	.4byte cf_CVS_THREAD_VISION_BREAK_typestr
 	.4byte cf_CVS_THREAD_VISION_BREAK_hierarchy
-.endobj __RTTI__cf_CVS_THREAD_VISION_BREAK
+.endobj __RTTI__Q22cf23CVS_THREAD_VISION_BREAK
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

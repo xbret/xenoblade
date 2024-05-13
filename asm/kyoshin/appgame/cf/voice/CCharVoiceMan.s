@@ -5,12 +5,12 @@
 .fn __ct__CCharVoiceMan, global
 /* 802A13BC 0026A97C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A13C0 0026A980  7C 08 02 A6 */	mflr r0
-/* 802A13C4 0026A984  3C A0 80 54 */	lis r5, __vt__cf_CCharVoiceMan@ha
+/* 802A13C4 0026A984  3C A0 80 54 */	lis r5, __vt__Q22cf13CCharVoiceMan@ha
 /* 802A13C8 0026A988  C0 02 B1 90 */	lfs f0, float_8066B510@sda21(r2)
 /* 802A13CC 0026A98C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802A13D0 0026A990  38 80 00 00 */	li r4, 0
 /* 802A13D4 0026A994  38 00 00 01 */	li r0, 1
-/* 802A13D8 0026A998  38 A5 D0 5C */	addi r5, r5, __vt__cf_CCharVoiceMan@l
+/* 802A13D8 0026A998  38 A5 D0 5C */	addi r5, r5, __vt__Q22cf13CCharVoiceMan@l
 /* 802A13DC 0026A99C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802A13E0 0026A9A0  7C 7F 1B 78 */	mr r31, r3
 /* 802A13E4 0026A9A4  90 A3 00 00 */	stw r5, 0(r3)
@@ -52,8 +52,8 @@
 /* 802A1468 0026AA28  93 C1 00 08 */	stw r30, 8(r1)
 /* 802A146C 0026AA2C  7C 7E 1B 78 */	mr r30, r3
 /* 802A1470 0026AA30  41 82 00 2C */	beq .L_802A149C
-/* 802A1474 0026AA34  3C 80 80 54 */	lis r4, __vt__cf_CCharVoiceMan@ha
-/* 802A1478 0026AA38  38 84 D0 5C */	addi r4, r4, __vt__cf_CCharVoiceMan@l
+/* 802A1474 0026AA34  3C 80 80 54 */	lis r4, __vt__Q22cf13CCharVoiceMan@ha
+/* 802A1478 0026AA38  38 84 D0 5C */	addi r4, r4, __vt__Q22cf13CCharVoiceMan@l
 /* 802A147C 0026AA3C  90 83 00 00 */	stw r4, 0(r3)
 /* 802A1480 0026AA40  4B E0 F3 69 */	bl func_800B07E8
 /* 802A1484 0026AA44  7F C4 F3 78 */	mr r4, r30
@@ -2962,18 +2962,18 @@
 .endobj lbl_8053D050
 
 
-.obj __vt__cf_CCharVoiceMan, global
-	.4byte __RTTI__cf_CCharVoiceMan
+.obj __vt__Q22cf13CCharVoiceMan, global
+	.4byte __RTTI__Q22cf13CCharVoiceMan
 	.4byte 0
 	.4byte __dt__cf_CCharVoiceMan
 	.4byte IFactoryEvent_FactoryEvent1
 	.4byte CCharVoiceMan_FactoryEvent2
 	.4byte IFactoryEvent_FactoryEvent3
 	.4byte IFactoryEvent_FactoryEvent4
-.endobj __vt__cf_CCharVoiceMan
+.endobj __vt__Q22cf13CCharVoiceMan
 
 .obj cf_CCharVoiceMan_hierarchy, global
-	.4byte __RTTI__cf_IFactoryEvent
+	.4byte __RTTI__Q22cf13IFactoryEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -2983,10 +2983,10 @@
 
 .balign 8
 
-.obj __RTTI__cf_CCharVoiceMan, global
+.obj __RTTI__Q22cf13CCharVoiceMan, global
 	.4byte cf_CCharVoiceMan_typestr
 	.4byte cf_CCharVoiceMan_hierarchy
-.endobj __RTTI__cf_CCharVoiceMan
+.endobj __RTTI__Q22cf13CCharVoiceMan
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

@@ -114,8 +114,8 @@
 /* 804DB0D8 004A4698  38 6D C1 40 */	addi r3, r13, lbl_806682C0@sda21
 /* 804DB0DC 004A469C  48 00 00 04 */	b .L_804DB0E0
 .L_804DB0E0:
-/* 804DB0E0 004A46A0  3C 80 80 57 */	lis r4, __vt__CNReqtaskLoad@ha
-/* 804DB0E4 004A46A4  38 84 35 D0 */	addi r4, r4, __vt__CNReqtaskLoad@l
+/* 804DB0E0 004A46A0  3C 80 80 57 */	lis r4, __vt__13CNReqtaskLoad@ha
+/* 804DB0E4 004A46A4  38 84 35 D0 */	addi r4, r4, __vt__13CNReqtaskLoad@l
 /* 804DB0E8 004A46A8  90 83 00 00 */	stw r4, 0(r3)
 /* 804DB0EC 004A46AC  4E 80 00 20 */	blr
 .endfn sinit_804DB0D8
@@ -140,15 +140,15 @@
 
 .balign 8
 
-.obj __vt__CNReqtaskLoad, global
-	.4byte __RTTI__CNReqtaskLoad
+.obj __vt__13CNReqtaskLoad, global
+	.4byte __RTTI__13CNReqtaskLoad
 	.4byte 0
 	.4byte func_804DAFB8
 	.4byte func_804DA4CC
-.endobj __vt__CNReqtaskLoad
+.endobj __vt__13CNReqtaskLoad
 
 .obj CNReqtaskLoad_hierarchy, global
-	.4byte __RTTI__CNReqtask
+	.4byte __RTTI__9CNReqtask
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -158,10 +158,10 @@
 
 .balign 8
 
-.obj __RTTI__CNReqtaskLoad, global
+.obj __RTTI__13CNReqtaskLoad, global
 	.4byte CNReqtaskLoad_typestr
 	.4byte CNReqtaskLoad_hierarchy
-.endobj __RTTI__CNReqtaskLoad
+.endobj __RTTI__13CNReqtaskLoad
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

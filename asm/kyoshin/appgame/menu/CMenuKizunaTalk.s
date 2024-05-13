@@ -11,12 +11,12 @@
 /* 801BCA4C 0018600C  7C 9C 23 78 */	mr r28, r4
 /* 801BCA50 00186010  7C BD 2B 78 */	mr r29, r5
 /* 801BCA54 00186014  48 28 7F C5 */	bl __ct__8CProcessFv
-/* 801BCA58 00186018  3C 60 80 53 */	lis r3, __vt__CTTask_IUIWindow@ha
-/* 801BCA5C 0018601C  3C A0 80 53 */	lis r5, __vt__CMenuKizunaTalk@ha
-/* 801BCA60 00186020  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
+/* 801BCA58 00186018  3C 60 80 53 */	lis r3, "__vt__18CTTask<9IUIWindow>"@ha
+/* 801BCA5C 0018601C  3C A0 80 53 */	lis r5, __vt__15CMenuKizunaTalk@ha
+/* 801BCA60 00186020  38 63 0A 08 */	addi r3, r3, "__vt__18CTTask<9IUIWindow>"@l
 /* 801BCA64 00186024  90 7B 00 10 */	stw r3, 0x10(r27)
 /* 801BCA68 00186028  3D 20 80 51 */	lis r9, __ptmf_null@ha
-/* 801BCA6C 0018602C  38 A5 72 50 */	addi r5, r5, __vt__CMenuKizunaTalk@l
+/* 801BCA6C 0018602C  38 A5 72 50 */	addi r5, r5, __vt__15CMenuKizunaTalk@l
 /* 801BCA70 00186030  84 69 CE 10 */	lwzu r3, __ptmf_null@l(r9)
 /* 801BCA74 00186034  38 85 00 24 */	addi r4, r5, 0x24
 /* 801BCA78 00186038  3B C0 00 00 */	li r30, 0
@@ -1438,8 +1438,8 @@
 
 .balign 8
 
-.obj __vt__CMenuKizunaTalk, global
-	.4byte __RTTI__CMenuKizunaTalk
+.obj __vt__15CMenuKizunaTalk, global
+	.4byte __RTTI__15CMenuKizunaTalk
 	.4byte 0
 	.4byte __dt__CMenuKizunaTalk
 	.4byte CChildListNode_Reset
@@ -1448,7 +1448,7 @@
 	.4byte func_801BCCE4
 	.4byte func_80124584
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuKizunaTalk
+	.4byte __RTTI__15CMenuKizunaTalk
 	.4byte 0xFFFFFF94
 	.4byte func_801BDD8C
 	.4byte IWorkEvent_WorkEvent1
@@ -1482,28 +1482,28 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CMenuKizunaTalk
+	.4byte __RTTI__15CMenuKizunaTalk
 	.4byte 0xFFFFFF90
 	.4byte func_801BDD9C
 	.4byte func_801BDD94
 	.4byte func_801BCDEC
 	.4byte func_801BD7D8
-.endobj __vt__CMenuKizunaTalk
+.endobj __vt__15CMenuKizunaTalk
 
 .obj CMenuKizunaTalk_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000070
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x0000006C
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUIWindow
+	.4byte "__RTTI__18CTTask<9IUIWindow>"
 	.4byte 0
-	.4byte __RTTI__IUIWindow
+	.4byte __RTTI__9IUIWindow
 	.4byte 0
 	.4byte 0
 .endobj CMenuKizunaTalk_hierarchy
@@ -1512,10 +1512,10 @@
 
 .balign 8
 
-.obj __RTTI__CMenuKizunaTalk, global
+.obj __RTTI__15CMenuKizunaTalk, global
 	.4byte CMenuKizunaTalk_typestr
 	.4byte CMenuKizunaTalk_hierarchy
-.endobj __RTTI__CMenuKizunaTalk
+.endobj __RTTI__15CMenuKizunaTalk
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

@@ -5,10 +5,10 @@
 .fn __ct__CScnItemCamera, global
 /* 8049E8C4 00467E84  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 8049E8C8 00467E88  7C 08 02 A6 */	mflr r0
-/* 8049E8CC 00467E8C  3C C0 80 57 */	lis r6, __vt__CScnItemCamera@ha
+/* 8049E8CC 00467E8C  3C C0 80 57 */	lis r6, __vt__14CScnItemCamera@ha
 /* 8049E8D0 00467E90  38 E0 00 04 */	li r7, 4
 /* 8049E8D4 00467E94  90 01 00 44 */	stw r0, 0x44(r1)
-/* 8049E8D8 00467E98  38 C6 25 08 */	addi r6, r6, __vt__CScnItemCamera@l
+/* 8049E8D8 00467E98  38 C6 25 08 */	addi r6, r6, __vt__14CScnItemCamera@l
 /* 8049E8DC 00467E9C  38 00 FF FF */	li r0, -1
 /* 8049E8E0 00467EA0  DB E1 00 30 */	stfd f31, 0x30(r1)
 /* 8049E8E4 00467EA4  F3 E1 00 38 */	psq_st f31, 56(r1), 0, qr0
@@ -1363,8 +1363,8 @@
 
 .balign 8
 
-.obj __vt__CScnItemCamera, global
-	.4byte __RTTI__CScnItemCamera
+.obj __vt__14CScnItemCamera, global
+	.4byte __RTTI__14CScnItemCamera
 	.4byte 0
 	.4byte __dt__CScnItemCamera
 	.4byte func_8049F9A4
@@ -1374,7 +1374,7 @@
 	.4byte func_80482040
 	.4byte 0
 	.4byte func_8049EBF0
-.endobj __vt__CScnItemCamera
+.endobj __vt__14CScnItemCamera
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

@@ -28,9 +28,9 @@
 /* 802A8C54 00272214  41 82 00 34 */	beq .L_802A8C88
 /* 802A8C58 00272218  90 3F 00 1C */	stw r1, 0x1c(r31)
 /* 802A8C5C 0027221C  4B FF AE 25 */	bl __ct__cf_CVS_THREAD
-/* 802A8C60 00272220  3C 60 80 54 */	lis r3, __vt__cf_CVS_THREAD_SUDDEN@ha
+/* 802A8C60 00272220  3C 60 80 54 */	lis r3, __vt__Q22cf17CVS_THREAD_SUDDEN@ha
 /* 802A8C64 00272224  38 00 00 00 */	li r0, 0
-/* 802A8C68 00272228  38 63 D4 84 */	addi r3, r3, __vt__cf_CVS_THREAD_SUDDEN@l
+/* 802A8C68 00272228  38 63 D4 84 */	addi r3, r3, __vt__Q22cf17CVS_THREAD_SUDDEN@l
 /* 802A8C6C 0027222C  90 7E 00 1C */	stw r3, 0x1c(r30)
 /* 802A8C70 00272230  90 1E 00 20 */	stw r0, 0x20(r30)
 /* 802A8C74 00272234  48 00 00 14 */	b .L_802A8C88
@@ -168,18 +168,18 @@
 .endobj lbl_8053D478
 
 
-.obj __vt__cf_CVS_THREAD_SUDDEN, global
-	.4byte __RTTI__cf_CVS_THREAD_SUDDEN
+.obj __vt__Q22cf17CVS_THREAD_SUDDEN, global
+	.4byte __RTTI__Q22cf17CVS_THREAD_SUDDEN
 	.4byte 0
 	.4byte func_802A3B50
 	.4byte func_802A8D08
 	.4byte func_802A8DE0
 	.4byte func_802A1EA0
 	.4byte func_802A8D60
-.endobj __vt__cf_CVS_THREAD_SUDDEN
+.endobj __vt__Q22cf17CVS_THREAD_SUDDEN
 
 .obj cf_CVS_THREAD_SUDDEN_hierarchy, global
-	.4byte __RTTI__cf_CVS_THREAD
+	.4byte __RTTI__Q22cf10CVS_THREAD
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -189,10 +189,10 @@
 
 .balign 8
 
-.obj __RTTI__cf_CVS_THREAD_SUDDEN, global
+.obj __RTTI__Q22cf17CVS_THREAD_SUDDEN, global
 	.4byte cf_CVS_THREAD_SUDDEN_typestr
 	.4byte cf_CVS_THREAD_SUDDEN_hierarchy
-.endobj __RTTI__cf_CVS_THREAD_SUDDEN
+.endobj __RTTI__Q22cf17CVS_THREAD_SUDDEN
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

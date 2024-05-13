@@ -13,9 +13,9 @@
 /* 80459CB4 00423274  4B FD D9 09 */	bl __ct__CWorkThread
 /* 80459CB8 00423278  38 7E 01 C4 */	addi r3, r30, 0x1c4
 /* 80459CBC 0042327C  4B FE F2 85 */	bl __ct__CDeviceVICb
-/* 80459CC0 00423280  3C A0 80 57 */	lis r5, __vt__CLibCriMoviePlay@ha
+/* 80459CC0 00423280  3C A0 80 57 */	lis r5, __vt__16CLibCriMoviePlay@ha
 /* 80459CC4 00423284  38 DE 02 DC */	addi r6, r30, 0x2dc
-/* 80459CC8 00423288  38 A5 07 90 */	addi r5, r5, __vt__CLibCriMoviePlay@l
+/* 80459CC8 00423288  38 A5 07 90 */	addi r5, r5, __vt__16CLibCriMoviePlay@l
 /* 80459CCC 0042328C  38 7E 06 18 */	addi r3, r30, 0x618
 /* 80459CD0 00423290  38 80 00 00 */	li r4, 0
 /* 80459CD4 00423294  90 BE 00 00 */	stw r5, 0(r30)
@@ -1723,8 +1723,8 @@
 
 .balign 8
 
-.obj __vt__CLibCriMoviePlay, global
-	.4byte __RTTI__CLibCriMoviePlay
+.obj __vt__16CLibCriMoviePlay, global
+	.4byte __RTTI__16CLibCriMoviePlay
 	.4byte 0
 	.4byte __dt__CLibCriMoviePlay
 	.4byte IWorkEvent_WorkEvent1
@@ -1764,7 +1764,7 @@
 	.4byte CLibCriMoviePlay_WorkThreadEvent4
 	.4byte CLibCriMoviePlay_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-	.4byte __RTTI__CLibCriMoviePlay
+	.4byte __RTTI__16CLibCriMoviePlay
 	.4byte 0xFFFFFE3C
 	.4byte func_8045B3E4
 	.4byte func_8045B3DC
@@ -1772,14 +1772,14 @@
 	.4byte func_80448A40
 	.4byte func_8045AE84
 	.4byte func_8045B1DC
-.endobj __vt__CLibCriMoviePlay
+.endobj __vt__16CLibCriMoviePlay
 
 .obj CLibCriMoviePlay_hierarchy, global
-	.4byte __RTTI__CDeviceVICb
+	.4byte __RTTI__11CDeviceVICb
 	.4byte 0x000001C4
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1789,10 +1789,10 @@
 
 .balign 8
 
-.obj __RTTI__CLibCriMoviePlay, global
+.obj __RTTI__16CLibCriMoviePlay, global
 	.4byte CLibCriMoviePlay_typestr
 	.4byte CLibCriMoviePlay_hierarchy
-.endobj __RTTI__CLibCriMoviePlay
+.endobj __RTTI__16CLibCriMoviePlay
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

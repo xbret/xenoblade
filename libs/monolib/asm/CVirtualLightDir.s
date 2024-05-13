@@ -10,8 +10,8 @@
 /* 8049470C 0045DCCC  7C 7F 1B 78 */	mr r31, r3
 /* 80494710 0045DCD0  48 00 00 89 */	bl __ct__CVirtualLightObj
 /* 80494714 0045DCD4  C0 02 CE C0 */	lfs f0, float_8066D240@sda21(r2)
-/* 80494718 0045DCD8  3C 60 80 57 */	lis r3, __vt__CVirtualLightDir@ha
-/* 8049471C 0045DCDC  38 63 20 E0 */	addi r3, r3, __vt__CVirtualLightDir@l
+/* 80494718 0045DCD8  3C 60 80 57 */	lis r3, __vt__16CVirtualLightDir@ha
+/* 8049471C 0045DCDC  38 63 20 E0 */	addi r3, r3, __vt__16CVirtualLightDir@l
 /* 80494720 0045DCE0  38 00 00 02 */	li r0, 2
 /* 80494724 0045DCE4  90 7F 00 00 */	stw r3, 0(r31)
 /* 80494728 0045DCE8  7F E3 FB 78 */	mr r3, r31
@@ -55,16 +55,16 @@
 
 .balign 8
 
-.obj __vt__CVirtualLightDir, global
-	.4byte __RTTI__CVirtualLightDir
+.obj __vt__16CVirtualLightDir, global
+	.4byte __RTTI__16CVirtualLightDir
 	.4byte 0
 	.4byte __dt__CVirtualLightDir
 	.4byte func_804947EC
 	.4byte func_8049488C
-.endobj __vt__CVirtualLightDir
+.endobj __vt__16CVirtualLightDir
 
 .obj CVirtualLightDir_hierarchy, global
-	.4byte __RTTI__CVirtualLightObj
+	.4byte __RTTI__16CVirtualLightObj
 	.4byte 0
 	.4byte 0
 .endobj CVirtualLightDir_hierarchy
@@ -74,15 +74,15 @@
 
 .balign 8
 
-.obj __RTTI__CVirtualLightObj, global
+.obj __RTTI__16CVirtualLightObj, global
 	.4byte CVirtualLightObj_typestr
 	.4byte 0
-.endobj __RTTI__CVirtualLightObj
+.endobj __RTTI__16CVirtualLightObj
 
-.obj __RTTI__CVirtualLightDir, global
+.obj __RTTI__16CVirtualLightDir, global
 	.4byte CVirtualLightDir_typestr
 	.4byte CVirtualLightDir_hierarchy
-.endobj __RTTI__CVirtualLightDir
+.endobj __RTTI__16CVirtualLightDir
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

@@ -19,9 +19,9 @@
 /* 80142590 0010BB50  48 00 01 AD */	bl __ct__IWorkEvent
 /* 80142594 0010BB54  38 79 00 70 */	addi r3, r25, 0x70
 /* 80142598 0010BB58  48 00 01 CD */	bl __ct__IScnRender
-/* 8014259C 0010BB5C  3C A0 80 53 */	lis r5, __vt__CMenuUpdate@ha
+/* 8014259C 0010BB5C  3C A0 80 53 */	lis r5, __vt__11CMenuUpdate@ha
 /* 801425A0 0010BB60  93 D9 00 74 */	stw r30, 0x74(r25)
-/* 801425A4 0010BB64  38 A5 1F 80 */	addi r5, r5, __vt__CMenuUpdate@l
+/* 801425A4 0010BB64  38 A5 1F 80 */	addi r5, r5, __vt__11CMenuUpdate@l
 /* 801425A8 0010BB68  38 79 00 78 */	addi r3, r25, 0x78
 /* 801425AC 0010BB6C  38 85 00 24 */	addi r4, r5, 0x24
 /* 801425B0 0010BB70  90 B9 00 10 */	stw r5, 0x10(r25)
@@ -78,9 +78,9 @@
 /* 8014266C 0010BC2C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80142670 0010BC30  7C 7F 1B 78 */	mr r31, r3
 /* 80142674 0010BC34  48 00 00 59 */	bl __ct__CTTask_IUIWindow
-/* 80142678 0010BC38  3C 60 80 53 */	lis r3, __vt__IUIWindow@ha
+/* 80142678 0010BC38  3C 60 80 53 */	lis r3, __vt__9IUIWindow@ha
 /* 8014267C 0010BC3C  38 A0 00 00 */	li r5, 0
-/* 80142680 0010BC40  38 63 09 C0 */	addi r3, r3, __vt__IUIWindow@l
+/* 80142680 0010BC40  38 63 09 C0 */	addi r3, r3, __vt__9IUIWindow@l
 /* 80142684 0010BC44  38 80 FF FF */	li r4, -1
 /* 80142688 0010BC48  38 00 00 01 */	li r0, 1
 /* 8014268C 0010BC4C  90 7F 00 10 */	stw r3, 0x10(r31)
@@ -108,9 +108,9 @@
 /* 801426D8 0010BC98  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801426DC 0010BC9C  7C 7F 1B 78 */	mr r31, r3
 /* 801426E0 0010BCA0  48 30 23 39 */	bl __ct__8CProcessFv
-/* 801426E4 0010BCA4  3C 60 80 53 */	lis r3, __vt__CTTask_IUIWindow@ha
+/* 801426E4 0010BCA4  3C 60 80 53 */	lis r3, "__vt__18CTTask<9IUIWindow>"@ha
 /* 801426E8 0010BCA8  3C A0 80 51 */	lis r5, __ptmf_null@ha
-/* 801426EC 0010BCAC  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
+/* 801426EC 0010BCAC  38 63 0A 08 */	addi r3, r3, "__vt__18CTTask<9IUIWindow>"@l
 /* 801426F0 0010BCB0  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 801426F4 0010BCB4  7F E3 FB 78 */	mr r3, r31
 /* 801426F8 0010BCB8  84 85 CE 10 */	lwzu r4, __ptmf_null@l(r5)
@@ -133,8 +133,8 @@
 .endfn __ct__CTTask_IUIWindow
 
 .fn __ct__IWorkEvent, global
-/* 8014273C 0010BCFC  3C 80 80 53 */	lis r4, __vt__IWorkEvent@ha
-/* 80142740 0010BD00  38 84 92 68 */	addi r4, r4, __vt__IWorkEvent@l
+/* 8014273C 0010BCFC  3C 80 80 53 */	lis r4, __vt__10IWorkEvent@ha
+/* 80142740 0010BD00  38 84 92 68 */	addi r4, r4, __vt__10IWorkEvent@l
 /* 80142744 0010BD04  90 83 00 00 */	stw r4, 0(r3)
 /* 80142748 0010BD08  4E 80 00 20 */	blr 
 .endfn __ct__IWorkEvent
@@ -149,8 +149,8 @@
 .endfn __ct__8014274C
 
 .fn __ct__IScnRender, global
-/* 80142764 0010BD24  3C 80 80 53 */	lis r4, __vt__IScnRender@ha
-/* 80142768 0010BD28  38 84 92 58 */	addi r4, r4, __vt__IScnRender@l
+/* 80142764 0010BD24  3C 80 80 53 */	lis r4, __vt__10IScnRender@ha
+/* 80142768 0010BD28  38 84 92 58 */	addi r4, r4, __vt__10IScnRender@l
 /* 8014276C 0010BD2C  90 83 00 00 */	stw r4, 0(r3)
 /* 80142770 0010BD30  4E 80 00 20 */	blr
 .endfn __ct__IScnRender
@@ -2400,8 +2400,8 @@
 
 .balign 8
 
-.obj __vt__CMenuUpdate, global
-	.4byte __RTTI__CMenuUpdate
+.obj __vt__11CMenuUpdate, global
+	.4byte __RTTI__11CMenuUpdate
 	.4byte 0
 	.4byte __dt__CMenuUpdate
 	.4byte CChildListNode_Reset
@@ -2410,7 +2410,7 @@
 	.4byte func_801429E4
 	.4byte func_80124584
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuUpdate
+	.4byte __RTTI__11CMenuUpdate
 	.4byte 0xFFFFFF94
 	.4byte func_80144590
 	.4byte IWorkEvent_WorkEvent1
@@ -2444,27 +2444,27 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CMenuUpdate
+	.4byte __RTTI__11CMenuUpdate
 	.4byte 0xFFFFFF90
 	.4byte func_801445A0
 	.4byte func_80144598
 	.4byte func_80142AA4
-.endobj __vt__CMenuUpdate
+.endobj __vt__11CMenuUpdate
 
 .obj CMenuUpdate_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000070
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x0000006C
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUIWindow
+	.4byte "__RTTI__18CTTask<9IUIWindow>"
 	.4byte 0
-	.4byte __RTTI__IUIWindow
+	.4byte __RTTI__9IUIWindow
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -2474,10 +2474,10 @@
 
 .balign 8
 
-.obj __RTTI__CMenuUpdate, global
+.obj __RTTI__11CMenuUpdate, global
 	.4byte CMenuUpdate_typestr
 	.4byte CMenuUpdate_hierarchy
-.endobj __RTTI__CMenuUpdate
+.endobj __RTTI__11CMenuUpdate
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

@@ -11,18 +11,18 @@
 /* 804522B0 0041B870  93 C1 00 08 */	stw r30, 8(r1)
 /* 804522B4 0041B874  7C 7E 1B 78 */	mr r30, r3
 /* 804522B8 0041B878  4B FE 53 05 */	bl __ct__CWorkThread
-/* 804522BC 0041B87C  3C 60 80 57 */	lis r3, __vt__CDeviceFont@ha
-/* 804522C0 0041B880  3C C0 80 57 */	lis r6, __vt___reslist_base_IDeviceFontInfo@ha
+/* 804522BC 0041B87C  3C 60 80 57 */	lis r3, __vt__11CDeviceFont@ha
+/* 804522C0 0041B880  3C C0 80 57 */	lis r6, "__vt__33_reslist_base<P15IDeviceFontInfo>"@ha
 /* 804522C4 0041B884  3B E0 00 00 */	li r31, 0
 /* 804522C8 0041B888  93 FE 01 C4 */	stw r31, 0x1c4(r30)
 /* 804522CC 0041B88C  38 BE 01 D0 */	addi r5, r30, 0x1d0
-/* 804522D0 0041B890  38 63 FE A8 */	addi r3, r3, __vt__CDeviceFont@l
-/* 804522D4 0041B894  38 C6 FF 7C */	addi r6, r6, __vt___reslist_base_IDeviceFontInfo@l
+/* 804522D0 0041B890  38 63 FE A8 */	addi r3, r3, __vt__11CDeviceFont@l
+/* 804522D4 0041B894  38 C6 FF 7C */	addi r6, r6, "__vt__33_reslist_base<P15IDeviceFontInfo>"@l
 /* 804522D8 0041B898  90 7E 00 00 */	stw r3, 0(r30)
-/* 804522DC 0041B89C  3C 80 80 57 */	lis r4, __vt__reslist_IDeviceFontInfo@ha
+/* 804522DC 0041B89C  3C 80 80 57 */	lis r4, "__vt__27reslist<P15IDeviceFontInfo>"@ha
 /* 804522E0 0041B8A0  38 60 00 60 */	li r3, 0x60
 /* 804522E4 0041B8A4  90 DE 01 C8 */	stw r6, 0x1c8(r30)
-/* 804522E8 0041B8A8  38 84 FF 64 */	addi r4, r4, __vt__reslist_IDeviceFontInfo@l
+/* 804522E8 0041B8A8  38 84 FF 64 */	addi r4, r4, "__vt__27reslist<P15IDeviceFontInfo>"@l
 /* 804522EC 0041B8AC  93 FE 01 DC */	stw r31, 0x1dc(r30)
 /* 804522F0 0041B8B0  93 FE 01 E0 */	stw r31, 0x1e0(r30)
 /* 804522F4 0041B8B4  9B FE 01 E4 */	stb r31, 0x1e4(r30)
@@ -72,9 +72,9 @@
 /* 80452398 0041B958  93 C1 00 08 */	stw r30, 8(r1)
 /* 8045239C 0041B95C  7C 7E 1B 78 */	mr r30, r3
 /* 804523A0 0041B960  41 82 00 78 */	beq .L_80452418
-/* 804523A4 0041B964  3C A0 80 57 */	lis r5, __vt___reslist_base_IDeviceFontInfo@ha
+/* 804523A4 0041B964  3C A0 80 57 */	lis r5, "__vt__33_reslist_base<P15IDeviceFontInfo>"@ha
 /* 804523A8 0041B968  80 83 00 04 */	lwz r4, 4(r3)
-/* 804523AC 0041B96C  38 A5 FF 7C */	addi r5, r5, __vt___reslist_base_IDeviceFontInfo@l
+/* 804523AC 0041B96C  38 A5 FF 7C */	addi r5, r5, "__vt__33_reslist_base<P15IDeviceFontInfo>"@l
 /* 804523B0 0041B970  90 A3 00 00 */	stw r5, 0(r3)
 /* 804523B4 0041B974  38 00 00 00 */	li r0, 0
 /* 804523B8 0041B978  80 A4 00 00 */	lwz r5, 0(r4)
@@ -125,9 +125,9 @@
 /* 80452450 0041BA10  7C 7E 1B 78 */	mr r30, r3
 /* 80452454 0041BA14  41 82 00 7C */	beq .L_804524D0
 /* 80452458 0041BA18  41 82 00 68 */	beq .L_804524C0
-/* 8045245C 0041BA1C  3C A0 80 57 */	lis r5, __vt___reslist_base_IDeviceFontInfo@ha
+/* 8045245C 0041BA1C  3C A0 80 57 */	lis r5, "__vt__33_reslist_base<P15IDeviceFontInfo>"@ha
 /* 80452460 0041BA20  80 83 00 04 */	lwz r4, 4(r3)
-/* 80452464 0041BA24  38 A5 FF 7C */	addi r5, r5, __vt___reslist_base_IDeviceFontInfo@l
+/* 80452464 0041BA24  38 A5 FF 7C */	addi r5, r5, "__vt__33_reslist_base<P15IDeviceFontInfo>"@l
 /* 80452468 0041BA28  90 A3 00 00 */	stw r5, 0(r3)
 /* 8045246C 0041BA2C  38 00 00 00 */	li r0, 0
 /* 80452470 0041BA30  80 84 00 00 */	lwz r4, 0(r4)
@@ -183,9 +183,9 @@
 /* 8045251C 0041BADC  90 0D BD D8 */	stw r0, lbl_80667F58@sda21(r13)
 /* 80452520 0041BAE0  41 82 00 68 */	beq .L_80452588
 /* 80452524 0041BAE4  41 82 00 64 */	beq .L_80452588
-/* 80452528 0041BAE8  3C 80 80 57 */	lis r4, __vt___reslist_base_IDeviceFontInfo@ha
+/* 80452528 0041BAE8  3C 80 80 57 */	lis r4, "__vt__33_reslist_base<P15IDeviceFontInfo>"@ha
 /* 8045252C 0041BAEC  80 7F 00 04 */	lwz r3, 4(r31)
-/* 80452530 0041BAF0  38 84 FF 7C */	addi r4, r4, __vt___reslist_base_IDeviceFontInfo@l
+/* 80452530 0041BAF0  38 84 FF 7C */	addi r4, r4, "__vt__33_reslist_base<P15IDeviceFontInfo>"@l
 /* 80452534 0041BAF4  90 9F 00 00 */	stw r4, 0(r31)
 /* 80452538 0041BAF8  80 83 00 00 */	lwz r4, 0(r3)
 /* 8045253C 0041BAFC  48 00 00 10 */	b .L_8045254C
@@ -1287,8 +1287,8 @@
 
 .balign 8
 
-.obj __vt__CDeviceFont, global
-	.4byte __RTTI__CDeviceFont
+.obj __vt__11CDeviceFont, global
+	.4byte __RTTI__11CDeviceFont
 	.4byte 0
 	.4byte __dt__CDeviceFont
 	.4byte IWorkEvent_WorkEvent1
@@ -1328,37 +1328,37 @@
 	.4byte CDeviceFont_WorkThreadEvent4
 	.4byte CDeviceFont_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-.endobj __vt__CDeviceFont
+.endobj __vt__11CDeviceFont
 
 .obj CDeviceFont_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
-	.4byte __RTTI__CDeviceBase
+	.4byte __RTTI__11CDeviceBase
 	.4byte 0
 	.4byte 0
 .endobj CDeviceFont_hierarchy
 
 
-.obj __vt__reslist_IDeviceFontInfo, global
-	.4byte __RTTI__reslist_IDeviceFontInfo
+.obj "__vt__27reslist<P15IDeviceFontInfo>", global
+	.4byte "__RTTI__27reslist<P15IDeviceFontInfo>"
 	.4byte 0
 	.4byte __dt__reslist_IDeviceFontInfo
-.endobj __vt__reslist_IDeviceFontInfo
+.endobj "__vt__27reslist<P15IDeviceFontInfo>"
 
 .obj reslist_IDeviceFontInfo_hierarchy, global
-	.4byte __RTTI___reslist_base_IDeviceFontInfo
+	.4byte "__RTTI__33_reslist_base<P15IDeviceFontInfo>"
 	.4byte 0
 	.4byte 0
 .endobj reslist_IDeviceFontInfo_hierarchy
 
 
-.obj __vt___reslist_base_IDeviceFontInfo, global
-	.4byte __RTTI___reslist_base_IDeviceFontInfo
+.obj "__vt__33_reslist_base<P15IDeviceFontInfo>", global
+	.4byte "__RTTI__33_reslist_base<P15IDeviceFontInfo>"
 	.4byte 0
 	.4byte __dt___reslist_base_IDeviceFontInfo
-.endobj __vt___reslist_base_IDeviceFontInfo
+.endobj "__vt__33_reslist_base<P15IDeviceFontInfo>"
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -1374,20 +1374,20 @@
 	.4byte lbl_80526694
 .endobj lbl_80666024
 
-.obj __RTTI__CDeviceFont, global
+.obj __RTTI__11CDeviceFont, global
 	.4byte CDeviceFont_typestr
 	.4byte CDeviceFont_hierarchy
-.endobj __RTTI__CDeviceFont
+.endobj __RTTI__11CDeviceFont
 
-.obj __RTTI__reslist_IDeviceFontInfo, global
+.obj "__RTTI__27reslist<P15IDeviceFontInfo>", global
 	.4byte reslist_IDeviceFontInfo_typestr
 	.4byte reslist_IDeviceFontInfo_hierarchy
-.endobj __RTTI__reslist_IDeviceFontInfo
+.endobj "__RTTI__27reslist<P15IDeviceFontInfo>"
 
-.obj __RTTI___reslist_base_IDeviceFontInfo, global
+.obj "__RTTI__33_reslist_base<P15IDeviceFontInfo>", global
 	.4byte _reslist_base_IDeviceFontInfo_typestr
 	.4byte 0
-.endobj __RTTI___reslist_base_IDeviceFontInfo
+.endobj "__RTTI__33_reslist_base<P15IDeviceFontInfo>"
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

@@ -11,9 +11,9 @@
 /* 8045F944 00428F04  93 C1 00 08 */	stw r30, 8(r1)
 /* 8045F948 00428F08  7C 7E 1B 78 */	mr r30, r3
 /* 8045F94C 00428F0C  4B FD 7C 71 */	bl __ct__CWorkThread
-/* 8045F950 00428F10  3C 60 80 57 */	lis r3, __vt__CLibStaticData@ha
+/* 8045F950 00428F10  3C 60 80 57 */	lis r3, __vt__14CLibStaticData@ha
 /* 8045F954 00428F14  3B E0 00 00 */	li r31, 0
-/* 8045F958 00428F18  38 63 0C 50 */	addi r3, r3, __vt__CLibStaticData@l
+/* 8045F958 00428F18  38 63 0C 50 */	addi r3, r3, __vt__14CLibStaticData@l
 /* 8045F95C 00428F1C  90 7E 00 00 */	stw r3, 0(r30)
 /* 8045F960 00428F20  38 00 00 13 */	li r0, 0x13
 /* 8045F964 00428F24  38 80 00 40 */	li r4, 0x40
@@ -423,10 +423,10 @@
 .fn __ct__CLibStaticData_CItem, global
 /* 8045FEA8 00429468  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8045FEAC 0042946C  7C 08 02 A6 */	mflr r0
-/* 8045FEB0 00429470  3C A0 80 57 */	lis r5, __vt__CLibStaticData_CItem@ha
+/* 8045FEB0 00429470  3C A0 80 57 */	lis r5, __vt__Q214CLibStaticData5CItem@ha
 /* 8045FEB4 00429474  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8045FEB8 00429478  38 00 00 00 */	li r0, 0
-/* 8045FEBC 0042947C  38 A5 0D 08 */	addi r5, r5, __vt__CLibStaticData_CItem@l
+/* 8045FEBC 0042947C  38 A5 0D 08 */	addi r5, r5, __vt__Q214CLibStaticData5CItem@l
 /* 8045FEC0 00429480  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8045FEC4 00429484  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8045FEC8 00429488  7C 9E 23 78 */	mr r30, r4
@@ -499,8 +499,8 @@
 /* 8045FFB8 00429578  7C 7E 1B 78 */	mr r30, r3
 /* 8045FFBC 0042957C  41 82 00 88 */	beq .L_80460044
 /* 8045FFC0 00429580  80 03 00 08 */	lwz r0, 8(r3)
-/* 8045FFC4 00429584  3C 80 80 57 */	lis r4, __vt__CLibStaticData_CItem@ha
-/* 8045FFC8 00429588  38 84 0D 08 */	addi r4, r4, __vt__CLibStaticData_CItem@l
+/* 8045FFC4 00429584  3C 80 80 57 */	lis r4, __vt__Q214CLibStaticData5CItem@ha
+/* 8045FFC8 00429588  38 84 0D 08 */	addi r4, r4, __vt__Q214CLibStaticData5CItem@l
 /* 8045FFCC 0042958C  90 83 00 00 */	stw r4, 0(r3)
 /* 8045FFD0 00429590  2C 00 00 00 */	cmpwi r0, 0
 /* 8045FFD4 00429594  41 82 00 14 */	beq .L_8045FFE8
@@ -602,8 +602,8 @@
 
 .balign 8
 
-.obj __vt__CLibStaticData, global
-	.4byte __RTTI__CLibStaticData
+.obj __vt__14CLibStaticData, global
+	.4byte __RTTI__14CLibStaticData
 	.4byte 0
 	.4byte __dt__CLibStaticData
 	.4byte IWorkEvent_WorkEvent1
@@ -643,20 +643,20 @@
 	.4byte CLibStaticData_WorkThreadEvent4
 	.4byte CLibStaticData_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-.endobj __vt__CLibStaticData
+.endobj __vt__14CLibStaticData
 
 .obj CLibStaticData_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj CLibStaticData_hierarchy
 
 
-.obj __vt__CLibStaticData_CItem, global
-	.4byte __RTTI__CLibStaticData_CItem
+.obj __vt__Q214CLibStaticData5CItem, global
+	.4byte __RTTI__Q214CLibStaticData5CItem
 	.4byte 0
 	.4byte __dt__CLibStaticData_CItem
 	.4byte IWorkEvent_WorkEvent1
@@ -690,21 +690,21 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CLibStaticData_CItem
+.endobj __vt__Q214CLibStaticData5CItem
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CLibStaticData, global
+.obj __RTTI__14CLibStaticData, global
 	.4byte CLibStaticData_typestr
 	.4byte CLibStaticData_hierarchy
-.endobj __RTTI__CLibStaticData
+.endobj __RTTI__14CLibStaticData
 
-.obj __RTTI__CLibStaticData_CItem, global
+.obj __RTTI__Q214CLibStaticData5CItem, global
 	.4byte CLibStaticData_CItem_typestr
 	.4byte 0
-.endobj __RTTI__CLibStaticData_CItem
+.endobj __RTTI__Q214CLibStaticData5CItem
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

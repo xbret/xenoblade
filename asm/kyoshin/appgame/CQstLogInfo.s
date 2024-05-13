@@ -5,9 +5,9 @@
 .fn __ct__CQstLogInfo, global
 /* 802293F0 001F29B0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802293F4 001F29B4  7C 08 02 A6 */	mflr r0
-/* 802293F8 001F29B8  3C 80 80 54 */	lis r4, __vt__CQstLogInfo@ha
+/* 802293F8 001F29B8  3C 80 80 54 */	lis r4, __vt__11CQstLogInfo@ha
 /* 802293FC 001F29BC  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80229400 001F29C0  38 84 9C 30 */	addi r4, r4, __vt__CQstLogInfo@l
+/* 80229400 001F29C0  38 84 9C 30 */	addi r4, r4, __vt__11CQstLogInfo@l
 /* 80229404 001F29C4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80229408 001F29C8  7C 7F 1B 78 */	mr r31, r3
 /* 8022940C 001F29CC  90 83 00 00 */	stw r4, 0(r3)
@@ -2852,8 +2852,8 @@
 .endobj jumptable_80539BF8
 
 
-.obj __vt__CQstLogInfo, global
-	.4byte __RTTI__CQstLogInfo
+.obj __vt__11CQstLogInfo, global
+	.4byte __RTTI__11CQstLogInfo
 	.4byte 0
 	.4byte __dt__CQstLogInfo
 	.4byte IWorkEvent_WorkEvent1
@@ -2887,10 +2887,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CQstLogInfo
+.endobj __vt__11CQstLogInfo
 
 .obj CQstLogInfo_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -2900,10 +2900,10 @@
 
 .balign 8
 
-.obj __RTTI__CQstLogInfo, global
+.obj __RTTI__11CQstLogInfo, global
 	.4byte CQstLogInfo_typestr
 	.4byte CQstLogInfo_hierarchy
-.endobj __RTTI__CQstLogInfo
+.endobj __RTTI__11CQstLogInfo
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

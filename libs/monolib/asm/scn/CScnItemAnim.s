@@ -12,9 +12,9 @@
 /* 8049E5F4 00467BB4  93 C1 00 08 */	stw r30, 8(r1)
 /* 8049E5F8 00467BB8  7C 7E 1B 78 */	mr r30, r3
 /* 8049E5FC 00467BBC  41 82 00 30 */	beq .L_8049E62C
-/* 8049E600 00467BC0  3C 80 80 57 */	lis r4, __vt__CScnItemAnim@ha
+/* 8049E600 00467BC0  3C 80 80 57 */	lis r4, __vt__12CScnItemAnim@ha
 /* 8049E604 00467BC4  80 A3 00 04 */	lwz r5, 4(r3)
-/* 8049E608 00467BC8  38 84 24 D8 */	addi r4, r4, __vt__CScnItemAnim@l
+/* 8049E608 00467BC8  38 84 24 D8 */	addi r4, r4, __vt__12CScnItemAnim@l
 /* 8049E60C 00467BCC  90 83 00 00 */	stw r4, 0(r3)
 /* 8049E610 00467BD0  7F C4 F3 78 */	mr r4, r30
 /* 8049E614 00467BD4  80 65 00 60 */	lwz r3, 0x60(r5)
@@ -139,10 +139,10 @@
 /* 8049E7A4 00467D64  41 82 00 E0 */	beq .L_8049E884
 /* 8049E7A8 00467D68  93 43 00 04 */	stw r26, 4(r3)
 /* 8049E7AC 00467D6C  38 00 00 02 */	li r0, 2
-/* 8049E7B0 00467D70  3C 80 80 57 */	lis r4, __vt__CScnItemAnim@ha
+/* 8049E7B0 00467D70  3C 80 80 57 */	lis r4, __vt__12CScnItemAnim@ha
 /* 8049E7B4 00467D74  2C 1E 00 00 */	cmpwi r30, 0
 /* 8049E7B8 00467D78  B0 03 00 08 */	sth r0, 8(r3)
-/* 8049E7BC 00467D7C  38 84 24 D8 */	addi r4, r4, __vt__CScnItemAnim@l
+/* 8049E7BC 00467D7C  38 84 24 D8 */	addi r4, r4, __vt__12CScnItemAnim@l
 /* 8049E7C0 00467D80  90 83 00 00 */	stw r4, 0(r3)
 /* 8049E7C4 00467D84  90 3F 00 2C */	stw r1, 0x2c(r31)
 /* 8049E7C8 00467D88  93 63 00 0C */	stw r27, 0xc(r3)
@@ -236,8 +236,8 @@
 
 .balign 8
 
-.obj __vt__CScnItemAnim, global
-	.4byte __RTTI__CScnItemAnim
+.obj __vt__12CScnItemAnim, global
+	.4byte __RTTI__12CScnItemAnim
 	.4byte 0
 	.4byte __dt__CScnItemAnim
 	.4byte func_8048228C
@@ -245,10 +245,10 @@
 	.4byte func_80482288
 	.4byte func_8049E8B4
 	.4byte func_8049E8BC
-.endobj __vt__CScnItemAnim
+.endobj __vt__12CScnItemAnim
 
 .obj CScnItemAnim_hierarchy, global
-	.4byte __RTTI__CScnItem
+	.4byte __RTTI__4CScnItem
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -258,10 +258,10 @@
 
 .balign 8
 
-.obj __RTTI__CScnItemAnim, global
+.obj __RTTI__12CScnItemAnim, global
 	.4byte CScnItemAnim_typestr
 	.4byte CScnItemAnim_hierarchy
-.endobj __RTTI__CScnItemAnim
+.endobj __RTTI__12CScnItemAnim
 
 
 .obj lbl_806663A8, global

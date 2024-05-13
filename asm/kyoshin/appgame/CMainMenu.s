@@ -110,12 +110,12 @@
 /* 800FEBA0 000C8160  93 81 00 10 */	stw r28, 0x10(r1)
 /* 800FEBA4 000C8164  7C 9C 23 78 */	mr r28, r4
 /* 800FEBA8 000C8168  48 34 5E 71 */	bl __ct__8CProcessFv
-/* 800FEBAC 000C816C  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
-/* 800FEBB0 000C8170  3C A0 80 53 */	lis r5, __vt__CMainMenu@ha
-/* 800FEBB4 000C8174  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
+/* 800FEBAC 000C816C  3C 60 80 53 */	lis r3, "__vt__14CTTask<5IUICf>"@ha
+/* 800FEBB0 000C8170  3C A0 80 53 */	lis r5, __vt__9CMainMenu@ha
+/* 800FEBB4 000C8174  38 63 F7 40 */	addi r3, r3, "__vt__14CTTask<5IUICf>"@l
 /* 800FEBB8 000C8178  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 800FEBBC 000C817C  3D 00 80 51 */	lis r8, __ptmf_null@ha
-/* 800FEBC0 000C8180  38 A5 F5 F4 */	addi r5, r5, __vt__CMainMenu@l
+/* 800FEBC0 000C8180  38 A5 F5 F4 */	addi r5, r5, __vt__9CMainMenu@l
 /* 800FEBC4 000C8184  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 800FEBC8 000C8188  38 85 00 24 */	addi r4, r5, 0x24
 /* 800FEBCC 000C818C  3B C0 00 00 */	li r30, 0
@@ -150,9 +150,9 @@
 /* 800FEC40 000C8200  93 DF 00 88 */	stw r30, 0x88(r31)
 /* 800FEC44 000C8204  93 DF 00 8C */	stw r30, 0x8c(r31)
 /* 800FEC48 000C8208  48 0D 33 79 */	bl __ct__CBaseCur
-/* 800FEC4C 000C820C  3C 80 80 53 */	lis r4, __vt__CMainCur@ha
+/* 800FEC4C 000C820C  3C 80 80 53 */	lis r4, __vt__8CMainCur@ha
 /* 800FEC50 000C8210  38 7F 00 A8 */	addi r3, r31, 0xa8
-/* 800FEC54 000C8214  38 84 F6 F8 */	addi r4, r4, __vt__CMainCur@l
+/* 800FEC54 000C8214  38 84 F6 F8 */	addi r4, r4, __vt__8CMainCur@l
 /* 800FEC58 000C8218  90 9D 00 00 */	stw r4, 0(r29)
 /* 800FEC5C 000C821C  38 80 00 00 */	li r4, 0
 /* 800FEC60 000C8220  48 0D 40 ED */	bl __ct__CSubCur
@@ -758,9 +758,9 @@
 /* 800FF4D4 000C8A94  80 9F 00 78 */	lwz r4, 0x78(r31)
 /* 800FF4D8 000C8A98  38 61 00 28 */	addi r3, r1, 0x28
 /* 800FF4DC 000C8A9C  48 0D 2A E5 */	bl __ct__CBaseCur
-/* 800FF4E0 000C8AA0  3C 60 80 53 */	lis r3, __vt__CMainCur@ha
+/* 800FF4E0 000C8AA0  3C 60 80 53 */	lis r3, __vt__8CMainCur@ha
 /* 800FF4E4 000C8AA4  80 01 00 2C */	lwz r0, 0x2c(r1)
-/* 800FF4E8 000C8AA8  38 63 F6 F8 */	addi r3, r3, __vt__CMainCur@l
+/* 800FF4E8 000C8AA8  38 63 F6 F8 */	addi r3, r3, __vt__8CMainCur@l
 /* 800FF4EC 000C8AAC  90 61 00 28 */	stw r3, 0x28(r1)
 /* 800FF4F0 000C8AB0  38 61 00 28 */	addi r3, r1, 0x28
 /* 800FF4F4 000C8AB4  38 80 00 00 */	li r4, 0
@@ -3942,8 +3942,8 @@
 .endobj jumptable_8052F5D0
 
 
-.obj __vt__CMainMenu, global
-	.4byte __RTTI__CMainMenu
+.obj __vt__9CMainMenu, global
+	.4byte __RTTI__9CMainMenu
 	.4byte 0
 	.4byte __dt__CMainMenu
 	.4byte CChildListNode_Reset
@@ -3952,7 +3952,7 @@
 	.4byte CTTask_IUICf_func_80101F70
 	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMainMenu
+	.4byte __RTTI__9CMainMenu
 	.4byte 0xFFFFFFA8
 	.4byte func_80102008
 	.4byte IWorkEvent_WorkEvent1
@@ -3986,63 +3986,63 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CMainMenu
+	.4byte __RTTI__9CMainMenu
 	.4byte 0xFFFFFFA4
 	.4byte func_80102018
 	.4byte func_80102010
 	.4byte func_800FF604
 	.4byte __ct__800FF300
-.endobj __vt__CMainMenu
+.endobj __vt__9CMainMenu
 
 .obj CMainMenu_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x0000005C
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x00000058
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUICf
+	.4byte "__RTTI__14CTTask<5IUICf>"
 	.4byte 0
-	.4byte __RTTI__IUICf
+	.4byte __RTTI__5IUICf
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj CMainMenu_hierarchy
 
-.obj __vt__CMainCur, global
-	.4byte __RTTI__CMainCur
+.obj __vt__8CMainCur, global
+	.4byte __RTTI__8CMainCur
 	.4byte 0
 	.4byte func_800FEA88
 	.4byte func_801D20DC
 	.4byte func_800FEB14
 	.4byte func_801D2180
-.endobj __vt__CMainCur
+.endobj __vt__8CMainCur
 
 .obj CMainCur_hierarchy, global
-	.4byte __RTTI__CBaseCur
+	.4byte __RTTI__8CBaseCur
 	.4byte 0
 	.4byte 0
 .endobj CMainCur_hierarchy
 
 .obj IUICf_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUICf
+	.4byte "__RTTI__14CTTask<5IUICf>"
 	.4byte 0
 	.4byte 0
 .endobj IUICf_hierarchy
 
 
-.obj __vt__CTTask_IUICf, global
-	.4byte __RTTI__CTTask_IUICf
+.obj "__vt__14CTTask<5IUICf>", global
+	.4byte "__RTTI__14CTTask<5IUICf>"
 	.4byte 0
 	.4byte __dt__CTTask_IUICf
 	.4byte CChildListNode_Reset
@@ -4051,14 +4051,14 @@
 	.4byte CTTask_IUICf_func_80101F70
 	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
-.endobj __vt__CTTask_IUICf
+.endobj "__vt__14CTTask<5IUICf>"
 
 .obj CTTask_IUICf_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
 	.4byte 0
 .endobj CTTask_IUICf_hierarchy
@@ -4072,30 +4072,30 @@
 	.4byte 0
 .endobj lbl_806646B8
 
-.obj __RTTI__CMainMenu, global
+.obj __RTTI__9CMainMenu, global
 	.4byte CMainMenu_typestr
 	.4byte CMainMenu_hierarchy
-.endobj __RTTI__CMainMenu
+.endobj __RTTI__9CMainMenu
 
-.obj __RTTI__CMainCur, global
+.obj __RTTI__8CMainCur, global
 	.4byte CMainCur_typestr
 	.4byte CMainCur_hierarchy
-.endobj __RTTI__CMainCur
+.endobj __RTTI__8CMainCur
 
-.obj __RTTI__CBaseCur, global
+.obj __RTTI__8CBaseCur, global
 	.4byte CBaseCur_typestr
 	.4byte 0
-.endobj __RTTI__CBaseCur
+.endobj __RTTI__8CBaseCur
 
-.obj __RTTI__IUICf, global
+.obj __RTTI__5IUICf, global
 	.4byte IUICf_typestr
 	.4byte IUICf_hierarchy
-.endobj __RTTI__IUICf
+.endobj __RTTI__5IUICf
 
-.obj __RTTI__CTTask_IUICf, global
+.obj "__RTTI__14CTTask<5IUICf>", global
 	.4byte CTTask_IUICf_typestr
 	.4byte CTTask_IUICf_hierarchy
-.endobj __RTTI__CTTask_IUICf
+.endobj "__RTTI__14CTTask<5IUICf>"
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

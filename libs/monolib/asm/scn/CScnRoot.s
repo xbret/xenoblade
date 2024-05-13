@@ -3,9 +3,9 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .fn __ct__CScnRoot, global
-/* 8048ED24 004582E4  3C A0 80 57 */	lis r5, __vt__CScnRoot@ha
+/* 8048ED24 004582E4  3C A0 80 57 */	lis r5, __vt__8CScnRoot@ha
 /* 8048ED28 004582E8  38 00 00 00 */	li r0, 0
-/* 8048ED2C 004582EC  38 A5 1F 78 */	addi r5, r5, __vt__CScnRoot@l
+/* 8048ED2C 004582EC  38 A5 1F 78 */	addi r5, r5, __vt__8CScnRoot@l
 /* 8048ED30 004582F0  90 A3 00 00 */	stw r5, 0(r3)
 /* 8048ED34 004582F4  90 83 00 04 */	stw r4, 4(r3)
 /* 8048ED38 004582F8  90 03 00 08 */	stw r0, 8(r3)
@@ -86,11 +86,11 @@
 /* 8048EE14 004583D4  90 01 00 28 */	stw r0, 0x28(r1)
 /* 8048EE18 004583D8  7C BA 2B 78 */	mr r26, r5
 /* 8048EE1C 004583DC  4B FF FF 09 */	bl __ct__CScnRoot
-/* 8048EE20 004583E0  3C A0 80 57 */	lis r5, __vt__CScnRootNw4r@ha
+/* 8048EE20 004583E0  3C A0 80 57 */	lis r5, __vt__12CScnRootNw4r@ha
 /* 8048EE24 004583E4  38 80 00 00 */	li r4, 0
 /* 8048EE28 004583E8  38 60 FF FF */	li r3, -1
 /* 8048EE2C 004583EC  90 9C 00 10 */	stw r4, 0x10(r28)
-/* 8048EE30 004583F0  38 A5 1F B0 */	addi r5, r5, __vt__CScnRootNw4r@l
+/* 8048EE30 004583F0  38 A5 1F B0 */	addi r5, r5, __vt__12CScnRootNw4r@l
 /* 8048EE34 004583F4  2C 1A 00 00 */	cmpwi r26, 0
 /* 8048EE38 004583F8  38 05 00 38 */	addi r0, r5, 0x38
 /* 8048EE3C 004583FC  90 1C 00 0C */	stw r0, 0xc(r28)
@@ -451,8 +451,8 @@
 
 .balign 8
 
-.obj __vt__CScnRoot, global
-	.4byte __RTTI__CScnRoot
+.obj __vt__8CScnRoot, global
+	.4byte __RTTI__8CScnRoot
 	.4byte 0
 	.4byte __dt__CScnRoot
 	.4byte 0
@@ -466,17 +466,17 @@
 	.4byte func_8048EDD8
 	.4byte func_8048EDD0
 	.4byte 0
-.endobj __vt__CScnRoot
+.endobj __vt__8CScnRoot
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CScnRoot, global
+.obj __RTTI__8CScnRoot, global
 	.4byte CScnRoot_typestr
 	.4byte 0
-.endobj __RTTI__CScnRoot
+.endobj __RTTI__8CScnRoot
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

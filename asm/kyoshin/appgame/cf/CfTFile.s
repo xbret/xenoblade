@@ -5,11 +5,11 @@
 .fn __ct__cf_CfTFile, global
 /* 8006994C 00032F0C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80069950 00032F10  7C 08 02 A6 */	mflr r0
-/* 80069954 00032F14  3C 80 80 53 */	lis r4, __vt__cf_CfTFile@ha
+/* 80069954 00032F14  3C 80 80 53 */	lis r4, __vt__Q22cf7CfTFile@ha
 /* 80069958 00032F18  38 C0 00 00 */	li r6, 0
 /* 8006995C 00032F1C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80069960 00032F20  38 03 00 23 */	addi r0, r3, 0x23
-/* 80069964 00032F24  38 84 A7 68 */	addi r4, r4, __vt__cf_CfTFile@l
+/* 80069964 00032F24  38 84 A7 68 */	addi r4, r4, __vt__Q22cf7CfTFile@l
 /* 80069968 00032F28  38 A0 06 28 */	li r5, 0x628
 /* 8006996C 00032F2C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80069970 00032F30  54 00 00 34 */	rlwinm r0, r0, 0, 0, 0x1a
@@ -1150,8 +1150,8 @@
 
 .balign 8
 
-.obj __vt__cf_CfTFile, global
-	.4byte __RTTI__cf_CfTFile
+.obj __vt__Q22cf7CfTFile, global
+	.4byte __RTTI__Q22cf7CfTFile
 	.4byte 0
 	.4byte __dt__cf_CfTFile
 	.4byte IWorkEvent_WorkEvent1
@@ -1185,10 +1185,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__cf_CfTFile
+.endobj __vt__Q22cf7CfTFile
 
 .obj cf_CfTFile_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1267,10 +1267,10 @@
 
 .balign 8
 
-.obj __RTTI__cf_CfTFile, global
+.obj __RTTI__Q22cf7CfTFile, global
 	.4byte cf_CfTFile_typestr
 	.4byte cf_CfTFile_hierarchy
-.endobj __RTTI__cf_CfTFile
+.endobj __RTTI__Q22cf7CfTFile
 
 
 .obj float_806643E8, global

@@ -3,9 +3,9 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .fn __ct__cf_CREvtObj, global
-/* 80185690 0014EC50  3C C0 80 53 */	lis r6, __vt__cf_CREvtObj@ha
+/* 80185690 0014EC50  3C C0 80 53 */	lis r6, __vt__Q22cf8CREvtObj@ha
 /* 80185694 0014EC54  90 83 00 04 */	stw r4, 4(r3)
-/* 80185698 0014EC58  38 C6 5A F0 */	addi r6, r6, __vt__cf_CREvtObj@l
+/* 80185698 0014EC58  38 C6 5A F0 */	addi r6, r6, __vt__Q22cf8CREvtObj@l
 /* 8018569C 0014EC5C  3C A0 80 51 */	lis r5, __ptmf_null@ha
 /* 801856A0 0014EC60  90 C3 00 00 */	stw r6, 0(r3)
 /* 801856A4 0014EC64  84 85 CE 10 */	lwzu r4, __ptmf_null@l(r5)
@@ -80,8 +80,8 @@
 
 .balign 8
 
-.obj __vt__cf_CREvtObj, global
-	.4byte __RTTI__cf_CREvtObj
+.obj __vt__Q22cf8CREvtObj, global
+	.4byte __RTTI__Q22cf8CREvtObj
 	.4byte 0
 	.4byte __dt__801856C0
 	.4byte 0
@@ -91,7 +91,7 @@
 	.4byte func_801809A8
 	.4byte func_801696C4
 	.4byte func_80185700
-.endobj __vt__cf_CREvtObj
+.endobj __vt__Q22cf8CREvtObj
 
 
 

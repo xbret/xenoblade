@@ -5,9 +5,9 @@
 .fn __ct__CTitleAHelp, global
 /* 801C3ED0 0018D490  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801C3ED4 0018D494  7C 08 02 A6 */	mflr r0
-/* 801C3ED8 0018D498  3C C0 80 53 */	lis r6, __vt__CTitleAHelp@ha
+/* 801C3ED8 0018D498  3C C0 80 53 */	lis r6, __vt__11CTitleAHelp@ha
 /* 801C3EDC 0018D49C  90 01 00 24 */	stw r0, 0x24(r1)
-/* 801C3EE0 0018D4A0  38 C6 7C B8 */	addi r6, r6, __vt__CTitleAHelp@l
+/* 801C3EE0 0018D4A0  38 C6 7C B8 */	addi r6, r6, __vt__11CTitleAHelp@l
 /* 801C3EE4 0018D4A4  BF A1 00 14 */	stmw r29, 0x14(r1)
 /* 801C3EE8 0018D4A8  7C 7D 1B 78 */	mr r29, r3
 /* 801C3EEC 0018D4AC  7C 9E 23 78 */	mr r30, r4
@@ -1397,8 +1397,8 @@
 .endobj lbl_80537618
 
 
-.obj __vt__CTitleAHelp, global
-	.4byte __RTTI__CTitleAHelp
+.obj __vt__11CTitleAHelp, global
+	.4byte __RTTI__11CTitleAHelp
 	.4byte 0
 	.4byte __dt__CTitleAHelp
 	.4byte IWorkEvent_WorkEvent1
@@ -1432,10 +1432,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CTitleAHelp
+.endobj __vt__11CTitleAHelp
 
 .obj CTitleAHelp_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1445,10 +1445,10 @@
 
 .balign 8
 
-.obj __RTTI__CTitleAHelp, global
+.obj __RTTI__11CTitleAHelp, global
 	.4byte CTitleAHelp_typestr
 	.4byte CTitleAHelp_hierarchy
-.endobj __RTTI__CTitleAHelp
+.endobj __RTTI__11CTitleAHelp
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

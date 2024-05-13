@@ -11,14 +11,14 @@
 /* 8004417C 0000D73C  7C 9E 23 78 */	mr r30, r4
 /* 80044180 0000D740  7C BF 2B 78 */	mr r31, r5
 /* 80044184 0000D744  48 40 08 95 */	bl __ct__8CProcessFv
-/* 80044188 0000D748  3C 60 80 53 */	lis r3, __vt__CTTask_cf_CTaskGameCf@ha
-/* 8004418C 0000D74C  3C A0 80 53 */	lis r5, __vt__cf_CTaskGameCf@ha
-/* 80044190 0000D750  38 63 93 F4 */	addi r3, r3, __vt__CTTask_cf_CTaskGameCf@l
+/* 80044188 0000D748  3C 60 80 53 */	lis r3, "__vt__26CTTask<Q22cf11CTaskGameCf>"@ha
+/* 8004418C 0000D74C  3C A0 80 53 */	lis r5, __vt__Q22cf11CTaskGameCf@ha
+/* 80044190 0000D750  38 63 93 F4 */	addi r3, r3, "__vt__26CTTask<Q22cf11CTaskGameCf>"@l
 /* 80044194 0000D754  90 7D 00 10 */	stw r3, 0x10(r29)
 /* 80044198 0000D758  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 8004419C 0000D75C  2C 1F 00 00 */	cmpwi r31, 0
 /* 800441A0 0000D760  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
-/* 800441A4 0000D764  38 A5 93 AC */	addi r5, r5, __vt__cf_CTaskGameCf@l
+/* 800441A4 0000D764  38 A5 93 AC */	addi r5, r5, __vt__Q22cf11CTaskGameCf@l
 /* 800441A8 0000D768  38 80 00 00 */	li r4, 0
 /* 800441AC 0000D76C  38 60 00 01 */	li r3, 1
 /* 800441B0 0000D770  80 08 00 04 */	lwz r0, 4(r8)
@@ -786,8 +786,8 @@
 .endobj lbl_805293A0
 
 
-.obj __vt__cf_CTaskGameCf, global
-	.4byte __RTTI__cf_CTaskGameCf
+.obj __vt__Q22cf11CTaskGameCf, global
+	.4byte __RTTI__Q22cf11CTaskGameCf
 	.4byte 0
 	.4byte __dt__cf_CTaskGameCf
 	.4byte CChildListNode_Reset
@@ -796,23 +796,23 @@
 	.4byte func_80044A28
 	.4byte func_80044420
 	.4byte CProcess_func_80043F20
-.endobj __vt__cf_CTaskGameCf
+.endobj __vt__Q22cf11CTaskGameCf
 
 .obj cf_CTaskGameCf_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_cf_CTaskGameCf
+	.4byte "__RTTI__26CTTask<Q22cf11CTaskGameCf>"
 	.4byte 0
 	.4byte 0
 .endobj cf_CTaskGameCf_hierarchy
 
 
-.obj __vt__CTTask_cf_CTaskGameCf, global
-	.4byte __RTTI__CTTask_cf_CTaskGameCf
+.obj "__vt__26CTTask<Q22cf11CTaskGameCf>", global
+	.4byte "__RTTI__26CTTask<Q22cf11CTaskGameCf>"
 	.4byte 0
 	.4byte __dt__CTTask_cf_CTaskGameCf
 	.4byte CChildListNode_Reset
@@ -821,14 +821,14 @@
 	.4byte func_80044A28
 	.4byte func_80044A70
 	.4byte CProcess_func_80043F20
-.endobj __vt__CTTask_cf_CTaskGameCf
+.endobj "__vt__26CTTask<Q22cf11CTaskGameCf>"
 
 .obj CTTask_cf_CTaskGameCf_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -852,15 +852,15 @@
 
 .balign 8
 
-.obj __RTTI__cf_CTaskGameCf, global
+.obj __RTTI__Q22cf11CTaskGameCf, global
 	.4byte cf_CTaskGameCf_typestr
 	.4byte cf_CTaskGameCf_hierarchy
-.endobj __RTTI__cf_CTaskGameCf
+.endobj __RTTI__Q22cf11CTaskGameCf
 
-.obj __RTTI__CTTask_cf_CTaskGameCf, global
+.obj "__RTTI__26CTTask<Q22cf11CTaskGameCf>", global
 	.4byte CTTask_cf_CTaskGameCf_typestr
 	.4byte CTTask_cf_CTaskGameCf_hierarchy
-.endobj __RTTI__CTTask_cf_CTaskGameCf
+.endobj "__RTTI__26CTTask<Q22cf11CTaskGameCf>"
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

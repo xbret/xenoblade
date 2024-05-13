@@ -5,9 +5,9 @@
 .fn __ct__CScnFilter, global
 /* 8049C7F8 00465DB8  38 80 00 00 */	li r4, 0
 /* 8049C7FC 00465DBC  C0 02 CF D0 */	lfs f0, float_8066D350@sda21(r2)
-/* 8049C800 00465DC0  3C A0 80 57 */	lis r5, __vt__CScnFilter@ha
+/* 8049C800 00465DC0  3C A0 80 57 */	lis r5, __vt__10CScnFilter@ha
 /* 8049C804 00465DC4  98 83 00 04 */	stb r4, 4(r3)
-/* 8049C808 00465DC8  38 A5 23 A8 */	addi r5, r5, __vt__CScnFilter@l
+/* 8049C808 00465DC8  38 A5 23 A8 */	addi r5, r5, __vt__10CScnFilter@l
 /* 8049C80C 00465DCC  60 80 00 03 */	ori r0, r4, 3
 /* 8049C810 00465DD0  90 A3 00 00 */	stw r5, 0(r3)
 /* 8049C814 00465DD4  90 83 00 0C */	stw r4, 0xc(r3)
@@ -105,14 +105,14 @@
 
 .balign 8
 
-.obj __vt__CScnFilter, global
-	.4byte __RTTI__CScnFilter
+.obj __vt__10CScnFilter, global
+	.4byte __RTTI__10CScnFilter
 	.4byte 0
 	.4byte __dt__CScnFilter
 	.4byte func_8049C868
 	.4byte 0
 	.4byte 0
-.endobj __vt__CScnFilter
+.endobj __vt__10CScnFilter
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

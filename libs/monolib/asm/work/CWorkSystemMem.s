@@ -10,9 +10,9 @@
 /* 804448C8 0040DE88  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804448CC 0040DE8C  7C 7F 1B 78 */	mr r31, r3
 /* 804448D0 0040DE90  4B FF 2C ED */	bl __ct__CWorkThread
-/* 804448D4 0040DE94  3C 60 80 57 */	lis r3, __vt__CWorkSystemMem@ha
+/* 804448D4 0040DE94  3C 60 80 57 */	lis r3, __vt__14CWorkSystemMem@ha
 /* 804448D8 0040DE98  38 00 FF FF */	li r0, -1
-/* 804448DC 0040DE9C  38 63 F3 20 */	addi r3, r3, __vt__CWorkSystemMem@l
+/* 804448DC 0040DE9C  38 63 F3 20 */	addi r3, r3, __vt__14CWorkSystemMem@l
 /* 804448E0 0040DEA0  90 7F 00 00 */	stw r3, 0(r31)
 /* 804448E4 0040DEA4  90 1F 01 C4 */	stw r0, 0x1c4(r31)
 /* 804448E8 0040DEA8  93 ED BD 80 */	stw r31, lbl_80667F00@sda21(r13)
@@ -124,8 +124,8 @@
 
 .balign 8
 
-.obj __vt__CWorkSystemMem, global
-	.4byte __RTTI__CWorkSystemMem
+.obj __vt__14CWorkSystemMem, global
+	.4byte __RTTI__14CWorkSystemMem
 	.4byte 0
 	.4byte __dt__CWorkSystemMem
 	.4byte IWorkEvent_WorkEvent1
@@ -165,12 +165,12 @@
 	.4byte CWorkSystemMem_WorkThreadEvent4
 	.4byte CWorkSystemMem_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-.endobj __vt__CWorkSystemMem
+.endobj __vt__14CWorkSystemMem
 
 .obj CWorkSystemMem_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -180,10 +180,10 @@
 
 .balign 8
 
-.obj __RTTI__CWorkSystemMem, global
+.obj __RTTI__14CWorkSystemMem, global
 	.4byte CWorkSystemMem_typestr
 	.4byte CWorkSystemMem_hierarchy
-.endobj __RTTI__CWorkSystemMem
+.endobj __RTTI__14CWorkSystemMem
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

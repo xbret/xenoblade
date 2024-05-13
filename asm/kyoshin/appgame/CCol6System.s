@@ -131,18 +131,18 @@
 /* 8015D248 00126808  7C 7F 1B 78 */	mr r31, r3
 /* 8015D24C 0012680C  41 82 00 94 */	beq .L_8015D2E0
 /* 8015D250 00126810  48 2E 77 C9 */	bl __ct__8CProcessFv
-/* 8015D254 00126814  3C 60 80 53 */	lis r3, __vt__CTTask_IUIWindow@ha
+/* 8015D254 00126814  3C 60 80 53 */	lis r3, "__vt__18CTTask<9IUIWindow>"@ha
 /* 8015D258 00126818  3D 20 80 51 */	lis r9, __ptmf_null@ha
-/* 8015D25C 0012681C  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
+/* 8015D25C 0012681C  38 63 0A 08 */	addi r3, r3, "__vt__18CTTask<9IUIWindow>"@l
 /* 8015D260 00126820  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 8015D264 00126824  39 29 CE 10 */	addi r9, r9, __ptmf_null@l
 /* 8015D268 00126828  38 C0 00 00 */	li r6, 0
 /* 8015D26C 0012682C  80 E9 00 04 */	lwz r7, 4(r9)
-/* 8015D270 00126830  3C 60 80 53 */	lis r3, __vt__CCol6CheckBat@ha
+/* 8015D270 00126830  3C 60 80 53 */	lis r3, __vt__13CCol6CheckBat@ha
 /* 8015D274 00126834  80 09 00 00 */	lwz r0, 0(r9)
 /* 8015D278 00126838  38 A0 FF FF */	li r5, -1
 /* 8015D27C 0012683C  90 1F 00 3C */	stw r0, 0x3c(r31)
-/* 8015D280 00126840  38 63 39 EC */	addi r3, r3, __vt__CCol6CheckBat@l
+/* 8015D280 00126840  38 63 39 EC */	addi r3, r3, __vt__13CCol6CheckBat@l
 /* 8015D284 00126844  38 80 00 01 */	li r4, 1
 /* 8015D288 00126848  90 FF 00 40 */	stw r7, 0x40(r31)
 /* 8015D28C 0012684C  38 03 00 24 */	addi r0, r3, 0x24
@@ -291,12 +291,12 @@
 /* 8015D488 00126A48  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8015D48C 00126A4C  7C 7D 1B 78 */	mr r29, r3
 /* 8015D490 00126A50  48 2E 75 89 */	bl __ct__8CProcessFv
-/* 8015D494 00126A54  3C 60 80 53 */	lis r3, __vt__CTTask_IUIWindow@ha
-/* 8015D498 00126A58  3C A0 80 53 */	lis r5, __vt__CCol6Hint@ha
-/* 8015D49C 00126A5C  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
+/* 8015D494 00126A54  3C 60 80 53 */	lis r3, "__vt__18CTTask<9IUIWindow>"@ha
+/* 8015D498 00126A58  3C A0 80 53 */	lis r5, __vt__9CCol6Hint@ha
+/* 8015D49C 00126A5C  38 63 0A 08 */	addi r3, r3, "__vt__18CTTask<9IUIWindow>"@l
 /* 8015D4A0 00126A60  90 7D 00 10 */	stw r3, 0x10(r29)
 /* 8015D4A4 00126A64  3D 40 80 51 */	lis r10, __ptmf_null@ha
-/* 8015D4A8 00126A68  38 A5 38 EC */	addi r5, r5, __vt__CCol6Hint@l
+/* 8015D4A8 00126A68  38 A5 38 EC */	addi r5, r5, __vt__9CCol6Hint@l
 /* 8015D4AC 00126A6C  84 6A CE 10 */	lwzu r3, __ptmf_null@l(r10)
 /* 8015D4B0 00126A70  38 85 00 24 */	addi r4, r5, 0x24
 /* 8015D4B4 00126A74  3B E0 00 00 */	li r31, 0
@@ -1724,12 +1724,12 @@
 /* 8015E964 00127F24  7C 7E 1B 78 */	mr r30, r3
 /* 8015E968 00127F28  7C 90 23 78 */	mr r16, r4
 /* 8015E96C 00127F2C  48 2E 60 AD */	bl __ct__8CProcessFv
-/* 8015E970 00127F30  3C 60 80 53 */	lis r3, __vt__CTTask_IUIWindow@ha
-/* 8015E974 00127F34  3C A0 80 53 */	lis r5, __vt__CCol6System@ha
-/* 8015E978 00127F38  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
+/* 8015E970 00127F30  3C 60 80 53 */	lis r3, "__vt__18CTTask<9IUIWindow>"@ha
+/* 8015E974 00127F34  3C A0 80 53 */	lis r5, __vt__11CCol6System@ha
+/* 8015E978 00127F38  38 63 0A 08 */	addi r3, r3, "__vt__18CTTask<9IUIWindow>"@l
 /* 8015E97C 00127F3C  90 7E 00 10 */	stw r3, 0x10(r30)
 /* 8015E980 00127F40  3D 40 80 51 */	lis r10, __ptmf_null@ha
-/* 8015E984 00127F44  38 A5 37 EC */	addi r5, r5, __vt__CCol6System@l
+/* 8015E984 00127F44  38 A5 37 EC */	addi r5, r5, __vt__11CCol6System@l
 /* 8015E988 00127F48  84 6A CE 10 */	lwzu r3, __ptmf_null@l(r10)
 /* 8015E98C 00127F4C  38 85 00 24 */	addi r4, r5, 0x24
 /* 8015E990 00127F50  3B E0 00 00 */	li r31, 0
@@ -7791,8 +7791,8 @@
 .endobj jumptable_80533668
 
 
-.obj __vt__CCol6Invite, global
-	.4byte __RTTI__CCol6Invite
+.obj __vt__11CCol6Invite, global
+	.4byte __RTTI__11CCol6Invite
 	.4byte 0
 	.4byte __dt__CCol6Invite
 	.4byte CChildListNode_Reset
@@ -7801,7 +7801,7 @@
 	.4byte func_80163E78
 	.4byte func_80124584
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CCol6Invite
+	.4byte __RTTI__11CCol6Invite
 	.4byte 0xFFFFFF94
 	.4byte func_80164118
 	.4byte IWorkEvent_WorkEvent1
@@ -7835,27 +7835,27 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CCol6Invite
+.endobj __vt__11CCol6Invite
 
 .obj CCol6Invite_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x0000006C
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUIWindow
+	.4byte "__RTTI__18CTTask<9IUIWindow>"
 	.4byte 0
-	.4byte __RTTI__IUIWindow
+	.4byte __RTTI__9IUIWindow
 	.4byte 0
 	.4byte 0
 .endobj CCol6Invite_hierarchy
 
 
-.obj __vt__CCol6System, global
-	.4byte __RTTI__CCol6System
+.obj __vt__11CCol6System, global
+	.4byte __RTTI__11CCol6System
 	.4byte 0
 	.4byte __dt__CCol6System
 	.4byte CChildListNode_Reset
@@ -7864,7 +7864,7 @@
 	.4byte func_8015EF08
 	.4byte func_80124584
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CCol6System
+	.4byte __RTTI__11CCol6System
 	.4byte 0xFFFFFF94
 	.4byte func_80164100
 	.4byte IWorkEvent_WorkEvent1
@@ -7898,35 +7898,35 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CCol6System
+	.4byte __RTTI__11CCol6System
 	.4byte 0xFFFFFF90
 	.4byte func_80164110
 	.4byte func_80164108
 	.4byte func_80160214
 	.4byte func_80160118
-.endobj __vt__CCol6System
+.endobj __vt__11CCol6System
 
 .obj CCol6System_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000070
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x0000006C
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUIWindow
+	.4byte "__RTTI__18CTTask<9IUIWindow>"
 	.4byte 0
-	.4byte __RTTI__IUIWindow
+	.4byte __RTTI__9IUIWindow
 	.4byte 0
 	.4byte 0
 .endobj CCol6System_hierarchy
 
 
-.obj __vt__CCol6Hint, global
-	.4byte __RTTI__CCol6Hint
+.obj __vt__9CCol6Hint, global
+	.4byte __RTTI__9CCol6Hint
 	.4byte 0
 	.4byte __dt__CCol6Hint
 	.4byte CChildListNode_Reset
@@ -7935,7 +7935,7 @@
 	.4byte func_8015D7DC
 	.4byte func_80124584
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CCol6Hint
+	.4byte __RTTI__9CCol6Hint
 	.4byte 0xFFFFFF94
 	.4byte func_801640E0
 	.4byte IWorkEvent_WorkEvent1
@@ -7969,35 +7969,35 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CCol6Hint
+	.4byte __RTTI__9CCol6Hint
 	.4byte 0xFFFFFF90
 	.4byte func_801640F0
 	.4byte func_801640E8
 	.4byte func_8015DC04
 	.4byte func_8015DB08
-.endobj __vt__CCol6Hint
+.endobj __vt__9CCol6Hint
 
 .obj CCol6Hint_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000070
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x0000006C
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUIWindow
+	.4byte "__RTTI__18CTTask<9IUIWindow>"
 	.4byte 0
-	.4byte __RTTI__IUIWindow
+	.4byte __RTTI__9IUIWindow
 	.4byte 0
 	.4byte 0
 .endobj CCol6Hint_hierarchy
 
 
-.obj __vt__CCol6CheckBat, global
-	.4byte __RTTI__CCol6CheckBat
+.obj __vt__13CCol6CheckBat, global
+	.4byte __RTTI__13CCol6CheckBat
 	.4byte 0
 	.4byte __dt__CCol6CheckBat
 	.4byte CChildListNode_Reset
@@ -8006,7 +8006,7 @@
 	.4byte func_8015D144
 	.4byte func_80124584
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CCol6CheckBat
+	.4byte __RTTI__13CCol6CheckBat
 	.4byte 0xFFFFFF94
 	.4byte func_801640D0
 	.4byte IWorkEvent_WorkEvent1
@@ -8040,20 +8040,20 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CCol6CheckBat
+.endobj __vt__13CCol6CheckBat
 
 .obj CCol6CheckBat_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x0000006C
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUIWindow
+	.4byte "__RTTI__18CTTask<9IUIWindow>"
 	.4byte 0
-	.4byte __RTTI__IUIWindow
+	.4byte __RTTI__9IUIWindow
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -8072,25 +8072,25 @@
 	.4byte 0xFFFFFFFF
 .endobj lbl_80664C54
 
-.obj __RTTI__CCol6Invite, global
+.obj __RTTI__11CCol6Invite, global
 	.4byte CCol6Invite_typestr
 	.4byte CCol6Invite_hierarchy
-.endobj __RTTI__CCol6Invite
+.endobj __RTTI__11CCol6Invite
 
-.obj __RTTI__CCol6System, global
+.obj __RTTI__11CCol6System, global
 	.4byte CCol6System_typestr
 	.4byte CCol6System_hierarchy
-.endobj __RTTI__CCol6System
+.endobj __RTTI__11CCol6System
 
-.obj __RTTI__CCol6Hint, global
+.obj __RTTI__9CCol6Hint, global
 	.4byte CCol6Hint_typestr
 	.4byte CCol6Hint_hierarchy
-.endobj __RTTI__CCol6Hint
+.endobj __RTTI__9CCol6Hint
 
-.obj __RTTI__CCol6CheckBat, global
+.obj __RTTI__13CCol6CheckBat, global
 	.4byte CCol6CheckBat_typestr
 	.4byte CCol6CheckBat_hierarchy
-.endobj __RTTI__CCol6CheckBat
+.endobj __RTTI__13CCol6CheckBat
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

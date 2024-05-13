@@ -5,10 +5,10 @@
 .fn __ct__CtrlNpc, global
 /* 80093698 0005CC58  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8009369C 0005CC5C  7C 08 02 A6 */	mflr r0
-/* 800936A0 0005CC60  3C A0 80 53 */	lis r5, __vt__cf_CtrlBase@ha
+/* 800936A0 0005CC60  3C A0 80 53 */	lis r5, __vt__Q22cf8CtrlBase@ha
 /* 800936A4 0005CC64  C0 02 8B A0 */	lfs f0, float_80668F20@sda21(r2)
 /* 800936A8 0005CC68  90 01 00 14 */	stw r0, 0x14(r1)
-/* 800936AC 0005CC6C  38 A5 B3 80 */	addi r5, r5, __vt__cf_CtrlBase@l
+/* 800936AC 0005CC6C  38 A5 B3 80 */	addi r5, r5, __vt__Q22cf8CtrlBase@l
 /* 800936B0 0005CC70  38 C0 00 02 */	li r6, 2
 /* 800936B4 0005CC74  38 00 FF FF */	li r0, -1
 /* 800936B8 0005CC78  93 E1 00 0C */	stw r31, 0xc(r1)
@@ -26,9 +26,9 @@
 /* 800936E8 0005CCA8  90 1E 00 24 */	stw r0, 0x24(r30)
 /* 800936EC 0005CCAC  90 BE 00 00 */	stw r5, 0(r30)
 /* 800936F0 0005CCB0  48 02 85 1D */	bl func_800BBC0C
-/* 800936F4 0005CCB4  3C A0 80 53 */	lis r5, __vt__cf_CtrlNpc@ha
+/* 800936F4 0005CCB4  3C A0 80 53 */	lis r5, __vt__Q22cf7CtrlNpc@ha
 /* 800936F8 0005CCB8  90 7E 00 28 */	stw r3, 0x28(r30)
-/* 800936FC 0005CCBC  38 A5 B3 08 */	addi r5, r5, __vt__cf_CtrlNpc@l
+/* 800936FC 0005CCBC  38 A5 B3 08 */	addi r5, r5, __vt__Q22cf7CtrlNpc@l
 /* 80093700 0005CCC0  7F C4 F3 78 */	mr r4, r30
 /* 80093704 0005CCC4  93 FE 00 2C */	stw r31, 0x2c(r30)
 /* 80093708 0005CCC8  38 7E 00 30 */	addi r3, r30, 0x30
@@ -3681,8 +3681,8 @@
 .endobj lbl_8052B2E0
 
 
-.obj __vt__cf_CtrlNpc, global
-	.4byte __RTTI__cf_CtrlNpc
+.obj __vt__Q22cf7CtrlNpc, global
+	.4byte __RTTI__Q22cf7CtrlNpc
 	.4byte 0
 	.4byte __dt__cf_CtrlNpc
 	.4byte func_80093938
@@ -3706,20 +3706,20 @@
 	.4byte func_80088870
 	.4byte func_8009398C
 	.4byte func_80093F28
-.endobj __vt__cf_CtrlNpc
+.endobj __vt__Q22cf7CtrlNpc
 
 .obj cf_CtrlNpc_hierarchy, global
-	.4byte __RTTI__CActInput
+	.4byte __RTTI__9CActInput
 	.4byte 0
-	.4byte __RTTI__cf_CtrlBase
+	.4byte __RTTI__Q22cf8CtrlBase
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj cf_CtrlNpc_hierarchy
 
 
-.obj __vt__cf_CtrlBase, global
-	.4byte __RTTI__cf_CtrlBase
+.obj __vt__Q22cf8CtrlBase, global
+	.4byte __RTTI__Q22cf8CtrlBase
 	.4byte 0
 	.4byte __dt__cf_CtrlBase
 	.4byte 0
@@ -3741,17 +3741,17 @@
 	.4byte func_80088880
 	.4byte func_80088878
 	.4byte func_80088870
-.endobj __vt__cf_CtrlBase
+.endobj __vt__Q22cf8CtrlBase
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__cf_CtrlNpc, global
+.obj __RTTI__Q22cf7CtrlNpc, global
 	.4byte cf_CtrlNpc_typestr
 	.4byte cf_CtrlNpc_hierarchy
-.endobj __RTTI__cf_CtrlNpc
+.endobj __RTTI__Q22cf7CtrlNpc
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

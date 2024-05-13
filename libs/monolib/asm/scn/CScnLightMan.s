@@ -5,9 +5,9 @@
 .fn __ct__CScnLightMan, global
 /* 8048D024 004565E4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8048D028 004565E8  7C 08 02 A6 */	mflr r0
-/* 8048D02C 004565EC  3C A0 80 57 */	lis r5, __vt__CScnLightMan@ha
+/* 8048D02C 004565EC  3C A0 80 57 */	lis r5, __vt__12CScnLightMan@ha
 /* 8048D030 004565F0  90 01 00 24 */	stw r0, 0x24(r1)
-/* 8048D034 004565F4  38 A5 1D B0 */	addi r5, r5, __vt__CScnLightMan@l
+/* 8048D034 004565F4  38 A5 1D B0 */	addi r5, r5, __vt__12CScnLightMan@l
 /* 8048D038 004565F8  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8048D03C 004565FC  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 8048D040 00456600  93 A1 00 14 */	stw r29, 0x14(r1)
@@ -139,22 +139,22 @@
 
 .balign 8
 
-.obj __vt__CScnLightMan, global
-	.4byte __RTTI__CScnLightMan
+.obj __vt__12CScnLightMan, global
+	.4byte __RTTI__12CScnLightMan
 	.4byte 0
 	.4byte __dt__CScnLightMan
 	.4byte 0
-.endobj __vt__CScnLightMan
+.endobj __vt__12CScnLightMan
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CScnLightMan, global
+.obj __RTTI__12CScnLightMan, global
 	.4byte CScnLightMan_typestr
 	.4byte 0
-.endobj __RTTI__CScnLightMan
+.endobj __RTTI__12CScnLightMan
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

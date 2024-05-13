@@ -241,9 +241,9 @@
 .fn __ct__CMCCrystalBox, global
 /* 80213BF0 001DD1B0  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80213BF4 001DD1B4  7C 08 02 A6 */	mflr r0
-/* 80213BF8 001DD1B8  3C A0 80 54 */	lis r5, __vt__CMCCrystalBox@ha
+/* 80213BF8 001DD1B8  3C A0 80 54 */	lis r5, __vt__13CMCCrystalBox@ha
 /* 80213BFC 001DD1BC  90 01 00 24 */	stw r0, 0x24(r1)
-/* 80213C00 001DD1C0  38 A5 94 18 */	addi r5, r5, __vt__CMCCrystalBox@l
+/* 80213C00 001DD1C0  38 A5 94 18 */	addi r5, r5, __vt__13CMCCrystalBox@l
 /* 80213C04 001DD1C4  BF 81 00 10 */	stmw r28, 0x10(r1)
 /* 80213C08 001DD1C8  7C 7C 1B 78 */	mr r28, r3
 /* 80213C0C 001DD1CC  7C 9D 23 78 */	mr r29, r4
@@ -7868,8 +7868,8 @@
 
 .balign 8
 
-.obj __vt__CMCCrystalBox, global
-	.4byte __RTTI__CMCCrystalBox
+.obj __vt__13CMCCrystalBox, global
+	.4byte __RTTI__13CMCCrystalBox
 	.4byte 0
 	.4byte __dt__CMCCrystalBox
 	.4byte IWorkEvent_WorkEvent1
@@ -7903,10 +7903,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CMCCrystalBox
+.endobj __vt__13CMCCrystalBox
 
 .obj CMCCrystalBox_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -7917,10 +7917,10 @@
 
 .balign 8
 
-.obj __RTTI__CMCCrystalBox, global
+.obj __RTTI__13CMCCrystalBox, global
 	.4byte CMCCrystalBox_typestr
 	.4byte CMCCrystalBox_hierarchy
-.endobj __RTTI__CMCCrystalBox
+.endobj __RTTI__13CMCCrystalBox
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

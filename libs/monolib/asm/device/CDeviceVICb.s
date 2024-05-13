@@ -15,9 +15,9 @@
 .fn __ct__CDeviceVICb, global
 /* 80448F40 00412500  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80448F44 00412504  7C 08 02 A6 */	mflr r0
-/* 80448F48 00412508  3C 80 80 57 */	lis r4, __vt__CDeviceVICb@ha
+/* 80448F48 00412508  3C 80 80 57 */	lis r4, __vt__11CDeviceVICb@ha
 /* 80448F4C 0041250C  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80448F50 00412510  38 84 F7 A8 */	addi r4, r4, __vt__CDeviceVICb@l
+/* 80448F50 00412510  38 84 F7 A8 */	addi r4, r4, __vt__11CDeviceVICb@l
 /* 80448F54 00412514  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80448F58 00412518  7C 7F 1B 78 */	mr r31, r3
 /* 80448F5C 0041251C  90 83 00 00 */	stw r4, 0(r3)
@@ -40,8 +40,8 @@
 /* 80448F94 00412554  93 C1 00 08 */	stw r30, 8(r1)
 /* 80448F98 00412558  7C 7E 1B 78 */	mr r30, r3
 /* 80448F9C 0041255C  41 82 00 24 */	beq .L_80448FC0
-/* 80448FA0 00412560  3C 80 80 57 */	lis r4, __vt__CDeviceVICb@ha
-/* 80448FA4 00412564  38 84 F7 A8 */	addi r4, r4, __vt__CDeviceVICb@l
+/* 80448FA0 00412560  3C 80 80 57 */	lis r4, __vt__11CDeviceVICb@ha
+/* 80448FA4 00412564  38 84 F7 A8 */	addi r4, r4, __vt__11CDeviceVICb@l
 /* 80448FA8 00412568  90 83 00 00 */	stw r4, 0(r3)
 /* 80448FAC 0041256C  4B FF F5 19 */	bl func_804484C4
 /* 80448FB0 00412570  2C 1F 00 00 */	cmpwi r31, 0
@@ -71,23 +71,23 @@
 
 .balign 8
 
-.obj __vt__CDeviceVICb, global
-	.4byte __RTTI__CDeviceVICb
+.obj __vt__11CDeviceVICb, global
+	.4byte __RTTI__11CDeviceVICb
 	.4byte 0
 	.4byte __dt__CDeviceVICb
 	.4byte func_80166630
 	.4byte func_8016662C
 	.4byte func_80448A40
-.endobj __vt__CDeviceVICb
+.endobj __vt__11CDeviceVICb
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CDeviceVICb, global
+.obj __RTTI__11CDeviceVICb, global
 	.4byte CDeviceVICb_typestr
 	.4byte 0
-.endobj __RTTI__CDeviceVICb
+.endobj __RTTI__11CDeviceVICb
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

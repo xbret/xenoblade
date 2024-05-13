@@ -53,11 +53,11 @@
 .fn __ct__CNand, global
 /* 804DA154 004A3714  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804DA158 004A3718  7C 08 02 A6 */	mflr r0
-/* 804DA15C 004A371C  3C C0 80 57 */	lis r6, __vt__CNand@ha
+/* 804DA15C 004A371C  3C C0 80 57 */	lis r6, __vt__5CNand@ha
 /* 804DA160 004A3720  3C 80 80 4E */	lis r4, __ct__CNRequest@ha
 /* 804DA164 004A3724  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804DA168 004A3728  3C A0 80 4E */	lis r5, __dt__CNRequest@ha
-/* 804DA16C 004A372C  38 C6 35 90 */	addi r6, r6, __vt__CNand@l
+/* 804DA16C 004A372C  38 C6 35 90 */	addi r6, r6, __vt__5CNand@l
 /* 804DA170 004A3730  38 84 AA A8 */	addi r4, r4, __ct__CNRequest@l
 /* 804DA174 004A3734  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804DA178 004A3738  7C 7F 1B 78 */	mr r31, r3
@@ -358,21 +358,21 @@
 
 .balign 8
 
-.obj __vt__CNand, global
-	.4byte __RTTI__CNand
+.obj __vt__5CNand, global
+	.4byte __RTTI__5CNand
 	.4byte 0
 	.4byte __dt__CNand
 	.4byte 0
-.endobj __vt__CNand
+.endobj __vt__5CNand
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CNand, global
+.obj __RTTI__5CNand, global
 	.4byte CNand_typestr
 	.4byte 0
-.endobj __RTTI__CNand
+.endobj __RTTI__5CNand
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

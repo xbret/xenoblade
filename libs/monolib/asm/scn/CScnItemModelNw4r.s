@@ -20,9 +20,9 @@
 /* 804860D0 0044F690  7D 1C 43 78 */	mr r28, r8
 /* 804860D4 0044F694  7F A5 EB 78 */	mr r5, r29
 /* 804860D8 0044F698  4B FF C4 51 */	bl __ct__CScnItemModel
-/* 804860DC 0044F69C  3C 80 80 57 */	lis r4, __vt__CScnItemModelNw4r@ha
+/* 804860DC 0044F69C  3C 80 80 57 */	lis r4, __vt__17CScnItemModelNw4r@ha
 /* 804860E0 0044F6A0  C0 02 CD 20 */	lfs f0, float_8066D0A0@sda21(r2)
-/* 804860E4 0044F6A4  38 84 16 C8 */	addi r4, r4, __vt__CScnItemModelNw4r@l
+/* 804860E4 0044F6A4  38 84 16 C8 */	addi r4, r4, __vt__17CScnItemModelNw4r@l
 /* 804860E8 0044F6A8  90 99 00 00 */	stw r4, 0(r25)
 /* 804860EC 0044F6AC  38 64 00 DC */	addi r3, r4, 0xdc
 /* 804860F0 0044F6B0  3B 00 00 00 */	li r24, 0
@@ -1223,8 +1223,8 @@
 /* 80487264 00450824  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80487268 00450828  7C 7D 1B 78 */	mr r29, r3
 /* 8048726C 0045082C  41 82 00 E0 */	beq .L_8048734C
-/* 80487270 00450830  3C A0 80 57 */	lis r5, __vt__CScnItemModelNw4r@ha
-/* 80487274 00450834  38 A5 16 C8 */	addi r5, r5, __vt__CScnItemModelNw4r@l
+/* 80487270 00450830  3C A0 80 57 */	lis r5, __vt__17CScnItemModelNw4r@ha
+/* 80487274 00450834  38 A5 16 C8 */	addi r5, r5, __vt__17CScnItemModelNw4r@l
 /* 80487278 00450838  90 A3 00 00 */	stw r5, 0(r3)
 /* 8048727C 0045083C  38 85 00 DC */	addi r4, r5, 0xdc
 /* 80487280 00450840  38 05 00 F4 */	addi r0, r5, 0xf4
@@ -6731,8 +6731,8 @@
 	.float 0.7
 .endobj lbl_80571698
 
-.obj __vt__CScnItemModelNw4r, global
-	.4byte __RTTI__CScnItemModelNw4r
+.obj __vt__17CScnItemModelNw4r, global
+	.4byte __RTTI__17CScnItemModelNw4r
 	.4byte 0
 	.4byte __dt__CScnItemModelNw4r
 	.4byte func_80487EE0
@@ -6787,13 +6787,13 @@
 	.4byte func_804884F8
 	.4byte func_80488984
 	.4byte func_80488AAC
-	.4byte __RTTI__CScnItemModelNw4r
+	.4byte __RTTI__17CScnItemModelNw4r
 	.4byte 0xFFFFEB9C
 	.4byte func_8048BD6C
 	.4byte func_8048BD64
 	.4byte func_8048BD5C
 	.4byte func_8048BD54
-	.4byte __RTTI__CScnItemModelNw4r
+	.4byte __RTTI__17CScnItemModelNw4r
 	.4byte 0xFFFFEB98
 	.4byte func_8048BD8C
 	.4byte func_8048BD84
@@ -6807,16 +6807,16 @@
 	.4byte func_80489584
 	.4byte func_80489924
 	.4byte func_804899F4
-	.4byte __RTTI__CScnItem
+	.4byte __RTTI__4CScnItem
 	.4byte 0
-	.4byte __RTTI__CScnItemModel
-	.4byte 0
-	.4byte 0
-	.4byte __RTTI__CScnItem
+	.4byte __RTTI__13CScnItemModel
 	.4byte 0
 	.4byte 0
+	.4byte __RTTI__4CScnItem
 	.4byte 0
-	.4byte __RTTI__nw4r_g3d_IScnObjCallback
+	.4byte 0
+	.4byte 0
+	.4byte __RTTI__Q34nw4r3g3d15IScnObjCallback
 	.4byte 0
 	.4byte __dt__Q34nw4r3g3d15IScnObjCallbackFv
 	.4byte ExecCallback_CALC_WORLD__Q34nw4r3g3d15IScnObjCallbackFQ44nw4r3g3d6ScnObj6TimingPQ34nw4r3g3d6ScnObjUlPv
@@ -6824,13 +6824,13 @@
 	.4byte ExecCallback_CALC_VIEW__Q34nw4r3g3d15IScnObjCallbackFQ44nw4r3g3d6ScnObj6TimingPQ34nw4r3g3d6ScnObjUlPv
 	.4byte func_803F7C30
 	.4byte func_803F7C34
-	.4byte __RTTI__nw4r_g3d_ICalcWorldCallback
+	.4byte __RTTI__Q34nw4r3g3d18ICalcWorldCallback
 	.4byte 0
 	.4byte __dt__Q34nw4r3g3d18ICalcWorldCallbackFv
 	.4byte ExecCallbackA__Q34nw4r3g3d18ICalcWorldCallbackFPQ34nw4r3g3d12ChrAnmResultQ34nw4r3g3d6ResMdlPQ34nw4r3g3d16FuncObjCalcWorld
 	.4byte ExecCallbackB__Q34nw4r3g3d18ICalcWorldCallbackFPQ34nw4r3g3d13WorldMtxManipQ34nw4r3g3d6ResMdlPQ34nw4r3g3d16FuncObjCalcWorld
 	.4byte ExecCallbackC__Q34nw4r3g3d18ICalcWorldCallbackFPQ34nw4r4math5MTX34Q34nw4r3g3d6ResMdlPQ34nw4r3g3d16FuncObjCalcWorld
-.endobj __vt__CScnItemModelNw4r
+.endobj __vt__17CScnItemModelNw4r
 
 #These strings are also used later in the Mdl files. Maybe they used some flag that does pooling across files?
 
@@ -7013,15 +7013,15 @@
 	.4byte lbl_8066D098
 .endobj lbl_806661F4
 
-.obj __RTTI__nw4r_g3d_IScnObjCallback, global
+.obj __RTTI__Q34nw4r3g3d15IScnObjCallback, global
 	.4byte nw4r_g3d_IScnObjCallback_typestr
 	.4byte 0
-.endobj __RTTI__nw4r_g3d_IScnObjCallback
+.endobj __RTTI__Q34nw4r3g3d15IScnObjCallback
 
-.obj __RTTI__nw4r_g3d_ICalcWorldCallback, global
+.obj __RTTI__Q34nw4r3g3d18ICalcWorldCallback, global
 	.4byte nw4r_g3d_ICalcWorldCallback_typestr
 	.4byte 0
-.endobj __RTTI__nw4r_g3d_ICalcWorldCallback
+.endobj __RTTI__Q34nw4r3g3d18ICalcWorldCallback
 
 
 .obj lbl_80666208, global

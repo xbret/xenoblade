@@ -12,12 +12,12 @@
 /* 8012217C 000EB73C  7C BE 2B 78 */	mr r30, r5
 /* 80122180 000EB740  7C DF 33 78 */	mr r31, r6
 /* 80122184 000EB744  48 32 28 95 */	bl __ct__8CProcessFv
-/* 80122188 000EB748  3C 60 80 53 */	lis r3, __vt__CTTask_IUIWindow@ha
-/* 8012218C 000EB74C  3C A0 80 53 */	lis r5, __vt__CQuestWindow@ha
-/* 80122190 000EB750  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
+/* 80122188 000EB748  3C 60 80 53 */	lis r3, "__vt__18CTTask<9IUIWindow>"@ha
+/* 8012218C 000EB74C  3C A0 80 53 */	lis r5, __vt__12CQuestWindow@ha
+/* 80122190 000EB750  38 63 0A 08 */	addi r3, r3, "__vt__18CTTask<9IUIWindow>"@l
 /* 80122194 000EB754  90 7C 00 10 */	stw r3, 0x10(r28)
 /* 80122198 000EB758  3D 40 80 51 */	lis r10, __ptmf_null@ha
-/* 8012219C 000EB75C  38 A5 08 C0 */	addi r5, r5, __vt__CQuestWindow@l
+/* 8012219C 000EB75C  38 A5 08 C0 */	addi r5, r5, __vt__12CQuestWindow@l
 /* 801221A0 000EB760  84 6A CE 10 */	lwzu r3, __ptmf_null@l(r10)
 /* 801221A4 000EB764  38 85 00 24 */	addi r4, r5, 0x24
 /* 801221A8 000EB768  3B 60 00 00 */	li r27, 0
@@ -172,9 +172,9 @@
 /* 801223C8 000EB988  93 C1 00 08 */	stw r30, 8(r1)
 /* 801223CC 000EB98C  7C 7E 1B 78 */	mr r30, r3
 /* 801223D0 000EB990  41 82 00 5C */	beq .L_8012242C
-/* 801223D4 000EB994  3C A0 80 53 */	lis r5, __vt__CQuestWindow@ha
+/* 801223D4 000EB994  3C A0 80 53 */	lis r5, __vt__12CQuestWindow@ha
 /* 801223D8 000EB998  C0 22 96 80 */	lfs f1, float_80669A00@sda21(r2)
-/* 801223DC 000EB99C  38 A5 08 C0 */	addi r5, r5, __vt__CQuestWindow@l
+/* 801223DC 000EB99C  38 A5 08 C0 */	addi r5, r5, __vt__12CQuestWindow@l
 /* 801223E0 000EB9A0  90 A3 00 10 */	stw r5, 0x10(r3)
 /* 801223E4 000EB9A4  38 85 00 24 */	addi r4, r5, 0x24
 /* 801223E8 000EB9A8  38 05 00 AC */	addi r0, r5, 0xac
@@ -3060,8 +3060,8 @@
 .endobj jumptable_80530888
 
 
-.obj __vt__CQuestWindow, global
-	.4byte __RTTI__CQuestWindow
+.obj __vt__12CQuestWindow, global
+	.4byte __RTTI__12CQuestWindow
 	.4byte 0
 	.4byte __dt__CQuestWindow
 	.4byte CChildListNode_Reset
@@ -3070,7 +3070,7 @@
 	.4byte func_8012453C
 	.4byte func_80124584
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CQuestWindow
+	.4byte __RTTI__12CQuestWindow
 	.4byte 0xFFFFFF94
 	.4byte func_801245D4
 	.4byte IWorkEvent_WorkEvent1
@@ -3104,35 +3104,35 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CQuestWindow
+	.4byte __RTTI__12CQuestWindow
 	.4byte 0xFFFFFF90
 	.4byte func_801245E4
 	.4byte func_801245DC
 	.4byte func_80122A80
 	.4byte func_8012278C
-.endobj __vt__CQuestWindow
+.endobj __vt__12CQuestWindow
 
 .obj CQuestWindow_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000070
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x0000006C
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUIWindow
+	.4byte "__RTTI__18CTTask<9IUIWindow>"
 	.4byte 0
-	.4byte __RTTI__IUIWindow
+	.4byte __RTTI__9IUIWindow
 	.4byte 0
 	.4byte 0
 .endobj CQuestWindow_hierarchy
 
 
-.obj __vt__IUIWindow, global
-	.4byte __RTTI__IUIWindow
+.obj __vt__9IUIWindow, global
+	.4byte __RTTI__9IUIWindow
 	.4byte 0
 	.4byte __dt__IUIWindow
 	.4byte CChildListNode_Reset
@@ -3141,23 +3141,23 @@
 	.4byte func_8012453C
 	.4byte func_80124584
 	.4byte CProcess_func_80043F20
-.endobj __vt__IUIWindow
+.endobj __vt__9IUIWindow
 
 .obj IUIWindow_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUIWindow
+	.4byte "__RTTI__18CTTask<9IUIWindow>"
 	.4byte 0
 	.4byte 0
 .endobj IUIWindow_hierarchy
 
 
-.obj __vt__CTTask_IUIWindow, global
-	.4byte __RTTI__CTTask_IUIWindow
+.obj "__vt__18CTTask<9IUIWindow>", global
+	.4byte "__RTTI__18CTTask<9IUIWindow>"
 	.4byte 0
 	.4byte __dt__CTTask_IUIWindow
 	.4byte CChildListNode_Reset
@@ -3166,14 +3166,14 @@
 	.4byte func_8012453C
 	.4byte func_80124584
 	.4byte CProcess_func_80043F20
-.endobj __vt__CTTask_IUIWindow
+.endobj "__vt__18CTTask<9IUIWindow>"
 
 .obj CTTask_IUIWindow_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
 	.4byte 0
 .endobj CTTask_IUIWindow_hierarchy
@@ -3187,21 +3187,21 @@
 	.4byte 0
 .endobj lbl_806647B0
 
-.obj __RTTI__CQuestWindow, global
+.obj __RTTI__12CQuestWindow, global
 	.4byte CQuestWindow_typestr
 	.4byte CQuestWindow_hierarchy
-.endobj __RTTI__CQuestWindow
+.endobj __RTTI__12CQuestWindow
 
 
-.obj __RTTI__IUIWindow, global
+.obj __RTTI__9IUIWindow, global
 	.4byte IUIWindow_typestr
 	.4byte IUIWindow_hierarchy
-.endobj __RTTI__IUIWindow
+.endobj __RTTI__9IUIWindow
 
-.obj __RTTI__CTTask_IUIWindow, global
+.obj "__RTTI__18CTTask<9IUIWindow>", global
 	.4byte CTTask_IUIWindow_typestr
 	.4byte CTTask_IUIWindow_hierarchy
-.endobj __RTTI__CTTask_IUIWindow
+.endobj "__RTTI__18CTTask<9IUIWindow>"
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

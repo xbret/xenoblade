@@ -22,12 +22,12 @@
 /* 80113620 000DCBE0  7C BD 2B 78 */	mr r29, r5
 /* 80113624 000DCBE4  7C DE 33 78 */	mr r30, r6
 /* 80113628 000DCBE8  48 33 13 F1 */	bl __ct__8CProcessFv
-/* 8011362C 000DCBEC  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
-/* 80113630 000DCBF0  3C A0 80 53 */	lis r5, __vt__CMenuFade@ha
-/* 80113634 000DCBF4  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
+/* 8011362C 000DCBEC  3C 60 80 53 */	lis r3, "__vt__14CTTask<5IUICf>"@ha
+/* 80113630 000DCBF0  3C A0 80 53 */	lis r5, __vt__9CMenuFade@ha
+/* 80113634 000DCBF4  38 63 F7 40 */	addi r3, r3, "__vt__14CTTask<5IUICf>"@l
 /* 80113638 000DCBF8  90 7B 00 10 */	stw r3, 0x10(r27)
 /* 8011363C 000DCBFC  3D 00 80 51 */	lis r8, __ptmf_null@ha
-/* 80113640 000DCC00  38 A5 FD 10 */	addi r5, r5, __vt__CMenuFade@l
+/* 80113640 000DCC00  38 A5 FD 10 */	addi r5, r5, __vt__9CMenuFade@l
 /* 80113644 000DCC04  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 80113648 000DCC08  38 85 00 24 */	addi r4, r5, 0x24
 /* 8011364C 000DCC0C  3B E0 00 00 */	li r31, 0
@@ -643,8 +643,8 @@
 
 .balign 8
 
-.obj __vt__CMenuFade, global
-	.4byte __RTTI__CMenuFade
+.obj __vt__9CMenuFade, global
+	.4byte __RTTI__9CMenuFade
 	.4byte 0
 	.4byte __dt__CMenuFade
 	.4byte CChildListNode_Reset
@@ -653,7 +653,7 @@
 	.4byte func_80113A24
 	.4byte func_80113BF8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuFade
+	.4byte __RTTI__9CMenuFade
 	.4byte 0xFFFFFFA8
 	.4byte func_80113E38
 	.4byte IWorkEvent_WorkEvent1
@@ -687,27 +687,27 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CMenuFade
+	.4byte __RTTI__9CMenuFade
 	.4byte 0xFFFFFFA4
 	.4byte func_80113E48
 	.4byte func_80113E40
 	.4byte func_80113BFC
-.endobj __vt__CMenuFade
+.endobj __vt__9CMenuFade
 
 .obj CMenuFade_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x0000005C
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x00000058
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUICf
+	.4byte "__RTTI__14CTTask<5IUICf>"
 	.4byte 0
-	.4byte __RTTI__IUICf
+	.4byte __RTTI__5IUICf
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -718,10 +718,10 @@
 
 .balign 8
 
-.obj __RTTI__CMenuFade, global
+.obj __RTTI__9CMenuFade, global
 	.4byte CMenuFade_typestr
 	.4byte CMenuFade_hierarchy
-.endobj __RTTI__CMenuFade
+.endobj __RTTI__9CMenuFade
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

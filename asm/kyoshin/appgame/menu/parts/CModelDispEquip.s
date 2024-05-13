@@ -8,9 +8,9 @@
 /* 801FF56C 001C8B2C  90 01 00 34 */	stw r0, 0x34(r1)
 /* 801FF570 001C8B30  39 61 00 30 */	addi r11, r1, 0x30
 /* 801FF574 001C8B34  48 0B AB E5 */	bl _savegpr_28
-/* 801FF578 001C8B38  3C C0 80 54 */	lis r6, __vt__CModelDispEquip@ha
+/* 801FF578 001C8B38  3C C0 80 54 */	lis r6, __vt__15CModelDispEquip@ha
 /* 801FF57C 001C8B3C  90 83 00 0C */	stw r4, 0xc(r3)
-/* 801FF580 001C8B40  38 C6 8C 80 */	addi r6, r6, __vt__CModelDispEquip@l
+/* 801FF580 001C8B40  38 C6 8C 80 */	addi r6, r6, __vt__15CModelDispEquip@l
 /* 801FF584 001C8B44  3B A3 00 10 */	addi r29, r3, 0x10
 /* 801FF588 001C8B48  38 86 00 88 */	addi r4, r6, 0x88
 /* 801FF58C 001C8B4C  90 C3 00 00 */	stw r6, 0(r3)
@@ -2735,8 +2735,8 @@
 
 .balign 8
 
-.obj __vt__CModelDispEquip, global
-	.4byte __RTTI__CModelDispEquip
+.obj __vt__15CModelDispEquip, global
+	.4byte __RTTI__15CModelDispEquip
 	.4byte 0
 	.4byte __dt__CModelDispEquip
 	.4byte IWorkEvent_WorkEvent1
@@ -2770,7 +2770,7 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CModelDispEquip
+	.4byte __RTTI__15CModelDispEquip
 	.4byte 0xFFFFFFFC
 	.4byte func_80201A6C
 	.4byte func_80201A64
@@ -2781,7 +2781,7 @@
 	.4byte func_800554D8
 	.4byte func_800554D0
 	.4byte func_80201A44
-	.4byte __RTTI__CModelDispEquip
+	.4byte __RTTI__15CModelDispEquip
 	.4byte 0xFFFFFFF8
 	.4byte func_80201A7C
 	.4byte func_80201A74
@@ -2791,10 +2791,10 @@
 	.4byte func_80201440
 	.4byte func_80201318
 	.4byte func_80201444
-.endobj __vt__CModelDispEquip
+.endobj __vt__15CModelDispEquip
 
 .obj CModelDispEquip_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 .endobj CModelDispEquip_hierarchy
@@ -2808,10 +2808,10 @@
 	.4byte 0x00000012
 .endobj lbl_80665030
 
-.obj __RTTI__CModelDispEquip, global
+.obj __RTTI__15CModelDispEquip, global
 	.4byte CModelDispEquip_typestr
 	.4byte CModelDispEquip_hierarchy
-.endobj __RTTI__CModelDispEquip
+.endobj __RTTI__15CModelDispEquip
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

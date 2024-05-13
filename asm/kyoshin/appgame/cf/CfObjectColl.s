@@ -40,8 +40,8 @@
 /* 800AB43C 000749FC  93 C1 00 08 */	stw r30, 8(r1)
 /* 800AB440 00074A00  7C 7E 1B 78 */	mr r30, r3
 /* 800AB444 00074A04  41 82 00 38 */	beq .L_800AB47C
-/* 800AB448 00074A08  3D 80 80 53 */	lis r12, __vt__cf_CfObjectColl@ha
-/* 800AB44C 00074A0C  39 8C BD D0 */	addi r12, r12, __vt__cf_CfObjectColl@l
+/* 800AB448 00074A08  3D 80 80 53 */	lis r12, __vt__Q22cf12CfObjectColl@ha
+/* 800AB44C 00074A0C  39 8C BD D0 */	addi r12, r12, __vt__Q22cf12CfObjectColl@l
 /* 800AB450 00074A10  91 83 00 00 */	stw r12, 0(r3)
 /* 800AB454 00074A14  81 8C 00 68 */	lwz r12, 0x68(r12)
 /* 800AB458 00074A18  7D 89 03 A6 */	mtctr r12
@@ -75,45 +75,45 @@
 /* 800AB4AC 00074A6C  88 0D A6 20 */	lbz r0, lbl_806667A0@sda21(r13)
 /* 800AB4B0 00074A70  7C 00 07 75 */	extsb. r0, r0
 /* 800AB4B4 00074A74  40 82 00 18 */	bne .L_800AB4CC
-/* 800AB4B8 00074A78  3C 80 80 53 */	lis r4, __vt__cf_CfCollCircleImpl@ha
+/* 800AB4B8 00074A78  3C 80 80 53 */	lis r4, __vt__Q22cf16CfCollCircleImpl@ha
 /* 800AB4BC 00074A7C  38 00 00 01 */	li r0, 1
-/* 800AB4C0 00074A80  38 84 BF F0 */	addi r4, r4, __vt__cf_CfCollCircleImpl@l
+/* 800AB4C0 00074A80  38 84 BF F0 */	addi r4, r4, __vt__Q22cf16CfCollCircleImpl@l
 /* 800AB4C4 00074A84  90 8D A6 24 */	stw r4, lbl_806667A4@sda21(r13)
 /* 800AB4C8 00074A88  98 0D A6 20 */	stb r0, lbl_806667A0@sda21(r13)
 .L_800AB4CC:
 /* 800AB4CC 00074A8C  88 0D A6 28 */	lbz r0, lbl_806667A8@sda21(r13)
 /* 800AB4D0 00074A90  7C 00 07 75 */	extsb. r0, r0
 /* 800AB4D4 00074A94  40 82 00 18 */	bne .L_800AB4EC
-/* 800AB4D8 00074A98  3C 80 80 53 */	lis r4, __vt__cf_CfCollSphereImpl@ha
+/* 800AB4D8 00074A98  3C 80 80 53 */	lis r4, __vt__Q22cf16CfCollSphereImpl@ha
 /* 800AB4DC 00074A9C  38 00 00 01 */	li r0, 1
-/* 800AB4E0 00074AA0  38 84 BF D0 */	addi r4, r4, __vt__cf_CfCollSphereImpl@l
+/* 800AB4E0 00074AA0  38 84 BF D0 */	addi r4, r4, __vt__Q22cf16CfCollSphereImpl@l
 /* 800AB4E4 00074AA4  90 8D A6 2C */	stw r4, lbl_806667AC@sda21(r13)
 /* 800AB4E8 00074AA8  98 0D A6 28 */	stb r0, lbl_806667A8@sda21(r13)
 .L_800AB4EC:
 /* 800AB4EC 00074AAC  88 0D A6 30 */	lbz r0, lbl_806667B0@sda21(r13)
 /* 800AB4F0 00074AB0  7C 00 07 75 */	extsb. r0, r0
 /* 800AB4F4 00074AB4  40 82 00 18 */	bne .L_800AB50C
-/* 800AB4F8 00074AB8  3C 80 80 53 */	lis r4, __vt__cf_CfCollAABBImpl@ha
+/* 800AB4F8 00074AB8  3C 80 80 53 */	lis r4, __vt__Q22cf14CfCollAABBImpl@ha
 /* 800AB4FC 00074ABC  38 00 00 01 */	li r0, 1
-/* 800AB500 00074AC0  38 84 BF B0 */	addi r4, r4, __vt__cf_CfCollAABBImpl@l
+/* 800AB500 00074AC0  38 84 BF B0 */	addi r4, r4, __vt__Q22cf14CfCollAABBImpl@l
 /* 800AB504 00074AC4  90 8D A6 34 */	stw r4, lbl_806667B4@sda21(r13)
 /* 800AB508 00074AC8  98 0D A6 30 */	stb r0, lbl_806667B0@sda21(r13)
 .L_800AB50C:
 /* 800AB50C 00074ACC  88 0D A6 38 */	lbz r0, lbl_806667B8@sda21(r13)
 /* 800AB510 00074AD0  7C 00 07 75 */	extsb. r0, r0
 /* 800AB514 00074AD4  40 82 00 18 */	bne .L_800AB52C
-/* 800AB518 00074AD8  3C 80 80 53 */	lis r4, __vt__cf_CfCollCylinderImpl@ha
+/* 800AB518 00074AD8  3C 80 80 53 */	lis r4, __vt__Q22cf18CfCollCylinderImpl@ha
 /* 800AB51C 00074ADC  38 00 00 01 */	li r0, 1
-/* 800AB520 00074AE0  38 84 BF 90 */	addi r4, r4, __vt__cf_CfCollCylinderImpl@l
+/* 800AB520 00074AE0  38 84 BF 90 */	addi r4, r4, __vt__Q22cf18CfCollCylinderImpl@l
 /* 800AB524 00074AE4  90 8D A6 3C */	stw r4, lbl_806667BC@sda21(r13)
 /* 800AB528 00074AE8  98 0D A6 38 */	stb r0, lbl_806667B8@sda21(r13)
 .L_800AB52C:
 /* 800AB52C 00074AEC  88 0D A6 40 */	lbz r0, lbl_806667C0@sda21(r13)
 /* 800AB530 00074AF0  7C 00 07 75 */	extsb. r0, r0
 /* 800AB534 00074AF4  40 82 00 18 */	bne .L_800AB54C
-/* 800AB538 00074AF8  3C 80 80 53 */	lis r4, __vt__cf_CfCollCapsuleImpl@ha
+/* 800AB538 00074AF8  3C 80 80 53 */	lis r4, __vt__Q22cf17CfCollCapsuleImpl@ha
 /* 800AB53C 00074AFC  38 00 00 01 */	li r0, 1
-/* 800AB540 00074B00  38 84 BF 70 */	addi r4, r4, __vt__cf_CfCollCapsuleImpl@l
+/* 800AB540 00074B00  38 84 BF 70 */	addi r4, r4, __vt__Q22cf17CfCollCapsuleImpl@l
 /* 800AB544 00074B04  90 8D A6 44 */	stw r4, lbl_806667C4@sda21(r13)
 /* 800AB548 00074B08  98 0D A6 40 */	stb r0, lbl_806667C0@sda21(r13)
 .L_800AB54C:
@@ -1479,8 +1479,8 @@
 .endobj lbl_8052BDB8
 
 
-.obj __vt__cf_CfObjectColl, global
-	.4byte __RTTI__cf_CfObjectColl
+.obj __vt__Q22cf12CfObjectColl, global
+	.4byte __RTTI__Q22cf12CfObjectColl
 	.4byte 0
 	.4byte CObjectState_func_8003DC64
 	.4byte CObjectState_func_8003CB58
@@ -1574,101 +1574,101 @@
 	.4byte CfObject_func_800AC4BC
 	.4byte CfObject_func_800AC4B8
 	.4byte CfObject_func_800AC4B0
-.endobj __vt__cf_CfObjectColl
+.endobj __vt__Q22cf12CfObjectColl
 
 .obj cf_CfObjectColl_hierarchy, global
-	.4byte __RTTI__cf_CObjectState
+	.4byte __RTTI__Q22cf12CObjectState
 	.4byte 0
-	.4byte __RTTI__cf_CObjectParam
+	.4byte __RTTI__Q22cf12CObjectParam
 	.4byte 0
-	.4byte __RTTI__cf_CfObject
+	.4byte __RTTI__Q22cf8CfObject
 	.4byte 0
-	.4byte __RTTI__cf_CfObjectPoint
+	.4byte __RTTI__Q22cf13CfObjectPoint
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj cf_CfObjectColl_hierarchy
 
 
-.obj __vt__cf_CfCollCapsuleImpl, global
-	.4byte __RTTI__cf_CfCollCapsuleImpl
+.obj __vt__Q22cf17CfCollCapsuleImpl, global
+	.4byte __RTTI__Q22cf17CfCollCapsuleImpl
 	.4byte 0
 	.4byte func_800AB2E4
 	.4byte func_800AB3B8
-.endobj __vt__cf_CfCollCapsuleImpl
+.endobj __vt__Q22cf17CfCollCapsuleImpl
 
 .obj cf_CfCollCapsuleImpl_hierarchy, global
-	.4byte __RTTI__cf_CfCollImpl
+	.4byte __RTTI__Q22cf10CfCollImpl
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj cf_CfCollCapsuleImpl_hierarchy
 
 
-.obj __vt__cf_CfCollCylinderImpl, global
-	.4byte __RTTI__cf_CfCollCylinderImpl
+.obj __vt__Q22cf18CfCollCylinderImpl, global
+	.4byte __RTTI__Q22cf18CfCollCylinderImpl
 	.4byte 0
 	.4byte func_800AB010
 	.4byte func_800AB248
-.endobj __vt__cf_CfCollCylinderImpl
+.endobj __vt__Q22cf18CfCollCylinderImpl
 
 .obj cf_CfCollCylinderImpl_hierarchy, global
-	.4byte __RTTI__cf_CfCollImpl
+	.4byte __RTTI__Q22cf10CfCollImpl
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj cf_CfCollCylinderImpl_hierarchy
 
 
-.obj __vt__cf_CfCollAABBImpl, global
-	.4byte __RTTI__cf_CfCollAABBImpl
+.obj __vt__Q22cf14CfCollAABBImpl, global
+	.4byte __RTTI__Q22cf14CfCollAABBImpl
 	.4byte 0
 	.4byte func_800AAE24
 	.4byte func_800AAFF4
-.endobj __vt__cf_CfCollAABBImpl
+.endobj __vt__Q22cf14CfCollAABBImpl
 
 .obj cf_CfCollAABBImpl_hierarchy, global
-	.4byte __RTTI__cf_CfCollImpl
+	.4byte __RTTI__Q22cf10CfCollImpl
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj cf_CfCollAABBImpl_hierarchy
 
 
-.obj __vt__cf_CfCollSphereImpl, global
-	.4byte __RTTI__cf_CfCollSphereImpl
+.obj __vt__Q22cf16CfCollSphereImpl, global
+	.4byte __RTTI__Q22cf16CfCollSphereImpl
 	.4byte 0
 	.4byte func_800AAD28
 	.4byte func_800AAD94
-.endobj __vt__cf_CfCollSphereImpl
+.endobj __vt__Q22cf16CfCollSphereImpl
 
 .obj cf_CfCollSphereImpl_hierarchy, global
-	.4byte __RTTI__cf_CfCollImpl
+	.4byte __RTTI__Q22cf10CfCollImpl
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj cf_CfCollSphereImpl_hierarchy
 
 
-.obj __vt__cf_CfCollCircleImpl, global
-	.4byte __RTTI__cf_CfCollCircleImpl
+.obj __vt__Q22cf16CfCollCircleImpl, global
+	.4byte __RTTI__Q22cf16CfCollCircleImpl
 	.4byte 0
 	.4byte func_800AABD4
 	.4byte func_800AAC98
-.endobj __vt__cf_CfCollCircleImpl
+.endobj __vt__Q22cf16CfCollCircleImpl
 
 .obj cf_CfCollCircleImpl_hierarchy, global
-	.4byte __RTTI__cf_CfCollImpl
+	.4byte __RTTI__Q22cf10CfCollImpl
 	.4byte 0
 	.4byte 0
 .endobj cf_CfCollCircleImpl_hierarchy
 
 .obj cf_CfObjectPoint_hierarchy, global
-	.4byte __RTTI__cf_CObjectState
+	.4byte __RTTI__Q22cf12CObjectState
 	.4byte 0
-	.4byte __RTTI__cf_CObjectParam
+	.4byte __RTTI__Q22cf12CObjectParam
 	.4byte 0
-	.4byte __RTTI__cf_CfObject
+	.4byte __RTTI__Q22cf8CfObject
 	.4byte 0
 	.4byte 0
 .endobj cf_CfObjectPoint_hierarchy
@@ -1678,46 +1678,46 @@
 
 .balign 8
 
-.obj __RTTI__cf_CfObjectColl, global
+.obj __RTTI__Q22cf12CfObjectColl, global
 	.4byte cf_CfObjectColl_typestr
 	.4byte cf_CfObjectColl_hierarchy
-.endobj __RTTI__cf_CfObjectColl
+.endobj __RTTI__Q22cf12CfObjectColl
 
-.obj __RTTI__cf_CfCollCapsuleImpl, global
+.obj __RTTI__Q22cf17CfCollCapsuleImpl, global
 	.4byte cf_CfCollCapsuleImpl_typestr
 	.4byte cf_CfCollCapsuleImpl_hierarchy
-.endobj __RTTI__cf_CfCollCapsuleImpl
+.endobj __RTTI__Q22cf17CfCollCapsuleImpl
 
-.obj __RTTI__cf_CfCollCylinderImpl, global
+.obj __RTTI__Q22cf18CfCollCylinderImpl, global
 	.4byte cf_CfCollCylinderImpl_typestr
 	.4byte cf_CfCollCylinderImpl_hierarchy
-.endobj __RTTI__cf_CfCollCylinderImpl
+.endobj __RTTI__Q22cf18CfCollCylinderImpl
 
-.obj __RTTI__cf_CfCollAABBImpl, global
+.obj __RTTI__Q22cf14CfCollAABBImpl, global
 	.4byte cf_CfCollAABBImpl_typestr
 	.4byte cf_CfCollAABBImpl_hierarchy
-.endobj __RTTI__cf_CfCollAABBImpl
+.endobj __RTTI__Q22cf14CfCollAABBImpl
 
-.obj __RTTI__cf_CfCollSphereImpl, global
+.obj __RTTI__Q22cf16CfCollSphereImpl, global
 	.4byte cf_CfCollSphereImpl_typestr
 	.4byte cf_CfCollSphereImpl_hierarchy
-.endobj __RTTI__cf_CfCollSphereImpl
+.endobj __RTTI__Q22cf16CfCollSphereImpl
 
-.obj __RTTI__cf_CfCollCircleImpl, global
+.obj __RTTI__Q22cf16CfCollCircleImpl, global
 	.4byte cf_CfCollCircleImpl_typestr
 	.4byte cf_CfCollCircleImpl_hierarchy
-.endobj __RTTI__cf_CfCollCircleImpl
+.endobj __RTTI__Q22cf16CfCollCircleImpl
 
-.obj __RTTI__cf_CfCollImpl, global
+.obj __RTTI__Q22cf10CfCollImpl, global
 	.4byte cf_CfCollImpl_typestr
 	.4byte 0
-.endobj __RTTI__cf_CfCollImpl
+.endobj __RTTI__Q22cf10CfCollImpl
 
 
-.obj __RTTI__cf_CfObjectPoint, global
+.obj __RTTI__Q22cf13CfObjectPoint, global
 	.4byte cf_CfObjectPoint_typestr
 	.4byte cf_CfObjectPoint_hierarchy
-.endobj __RTTI__cf_CfObjectPoint
+.endobj __RTTI__Q22cf13CfObjectPoint
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

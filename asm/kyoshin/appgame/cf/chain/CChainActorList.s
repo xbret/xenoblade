@@ -9,11 +9,11 @@
 .fn __ct__cf_CChainActorList, global
 /* 8027AA50 00244010  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027AA54 00244014  7C 08 02 A6 */	mflr r0
-/* 8027AA58 00244018  3C C0 80 54 */	lis r6, __vt__cf_CChainActorList@ha
+/* 8027AA58 00244018  3C C0 80 54 */	lis r6, __vt__Q22cf15CChainActorList@ha
 /* 8027AA5C 0024401C  3C 80 80 28 */	lis r4, __ct__8027AC00@ha
 /* 8027AA60 00244020  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8027AA64 00244024  3C A0 80 28 */	lis r5, __dt__cf_CChainActorPc@ha
-/* 8027AA68 00244028  38 C6 BA C0 */	addi r6, r6, __vt__cf_CChainActorList@l
+/* 8027AA68 00244028  38 C6 BA C0 */	addi r6, r6, __vt__Q22cf15CChainActorList@l
 /* 8027AA6C 0024402C  38 84 AC 00 */	addi r4, r4, __ct__8027AC00@l
 /* 8027AA70 00244030  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8027AA74 00244034  38 A5 AC 78 */	addi r5, r5, __dt__cf_CChainActorPc@l
@@ -31,14 +31,14 @@
 /* 8027AAA4 00244064  38 A5 AD 30 */	addi r5, r5, __dt__cf_CChainActorEne@l
 /* 8027AAA8 00244068  38 E0 00 38 */	li r7, 0x38
 /* 8027AAAC 0024406C  48 03 F0 55 */	bl __construct_array
-/* 8027AAB0 00244070  3C 60 80 54 */	lis r3, __vt___reslist_base_cf_CChainActor@ha
+/* 8027AAB0 00244070  3C 60 80 54 */	lis r3, "__vt__34_reslist_base<PQ22cf11CChainActor>"@ha
 /* 8027AAB4 00244074  3B E0 00 00 */	li r31, 0
-/* 8027AAB8 00244078  38 63 BA E4 */	addi r3, r3, __vt___reslist_base_cf_CChainActor@l
+/* 8027AAB8 00244078  38 63 BA E4 */	addi r3, r3, "__vt__34_reslist_base<PQ22cf11CChainActor>"@l
 /* 8027AABC 0024407C  90 7E 1D 88 */	stw r3, 0x1d88(r30)
 /* 8027AAC0 00244080  38 9E 1D 90 */	addi r4, r30, 0x1d90
 /* 8027AAC4 00244084  93 FE 1D 9C */	stw r31, 0x1d9c(r30)
-/* 8027AAC8 00244088  3C 60 80 54 */	lis r3, __vt__reslist_cf_CChainActor@ha
-/* 8027AACC 0024408C  38 63 BA CC */	addi r3, r3, __vt__reslist_cf_CChainActor@l
+/* 8027AAC8 00244088  3C 60 80 54 */	lis r3, "__vt__28reslist<PQ22cf11CChainActor>"@ha
+/* 8027AACC 0024408C  38 63 BA CC */	addi r3, r3, "__vt__28reslist<PQ22cf11CChainActor>"@l
 /* 8027AAD0 00244090  93 FE 1D A0 */	stw r31, 0x1da0(r30)
 /* 8027AAD4 00244094  9B FE 1D A4 */	stb r31, 0x1da4(r30)
 /* 8027AAD8 00244098  90 9E 1D 8C */	stw r4, 0x1d8c(r30)
@@ -123,11 +123,11 @@
 .fn __ct__8027AC00, global
 /* 8027AC00 002441C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027AC04 002441C4  7C 08 02 A6 */	mflr r0
-/* 8027AC08 002441C8  3C A0 80 54 */	lis r5, __vt__cf_CChainActor@ha
-/* 8027AC0C 002441CC  3C 80 80 54 */	lis r4, __vt__cf_CChainTemp@ha
+/* 8027AC08 002441C8  3C A0 80 54 */	lis r5, __vt__Q22cf11CChainActor@ha
+/* 8027AC0C 002441CC  3C 80 80 54 */	lis r4, __vt__Q22cf10CChainTemp@ha
 /* 8027AC10 002441D0  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8027AC14 002441D4  38 A5 BA 48 */	addi r5, r5, __vt__cf_CChainActor@l
-/* 8027AC18 002441D8  38 84 BA F0 */	addi r4, r4, __vt__cf_CChainTemp@l
+/* 8027AC14 002441D4  38 A5 BA 48 */	addi r5, r5, __vt__Q22cf11CChainActor@l
+/* 8027AC18 002441D8  38 84 BA F0 */	addi r4, r4, __vt__Q22cf10CChainTemp@l
 /* 8027AC1C 002441DC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8027AC20 002441E0  7C 7F 1B 78 */	mr r31, r3
 /* 8027AC24 002441E4  90 A3 00 70 */	stw r5, 0x70(r3)
@@ -136,9 +136,9 @@
 /* 8027AC30 002441F0  38 80 00 00 */	li r4, 0
 /* 8027AC34 002441F4  38 63 00 04 */	addi r3, r3, 4
 /* 8027AC38 002441F8  4B D8 97 19 */	bl memset
-/* 8027AC3C 002441FC  3C 80 80 54 */	lis r4, __vt__cf_CChainActorPc@ha
+/* 8027AC3C 002441FC  3C 80 80 54 */	lis r4, __vt__Q22cf13CChainActorPc@ha
 /* 8027AC40 00244200  38 00 00 00 */	li r0, 0
-/* 8027AC44 00244204  38 84 BC 98 */	addi r4, r4, __vt__cf_CChainActorPc@l
+/* 8027AC44 00244204  38 84 BC 98 */	addi r4, r4, __vt__Q22cf13CChainActorPc@l
 /* 8027AC48 00244208  98 1F 00 64 */	stb r0, 0x64(r31)
 /* 8027AC4C 0024420C  38 7F 00 74 */	addi r3, r31, 0x74
 /* 8027AC50 00244210  B0 1F 00 6C */	sth r0, 0x6c(r31)
@@ -177,11 +177,11 @@
 .fn __ct__8027ACB8, global
 /* 8027ACB8 00244278  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027ACBC 0024427C  7C 08 02 A6 */	mflr r0
-/* 8027ACC0 00244280  3C A0 80 54 */	lis r5, __vt__cf_CChainActor@ha
-/* 8027ACC4 00244284  3C 80 80 54 */	lis r4, __vt__cf_CChainTemp@ha
+/* 8027ACC0 00244280  3C A0 80 54 */	lis r5, __vt__Q22cf11CChainActor@ha
+/* 8027ACC4 00244284  3C 80 80 54 */	lis r4, __vt__Q22cf10CChainTemp@ha
 /* 8027ACC8 00244288  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8027ACCC 0024428C  38 A5 BA 48 */	addi r5, r5, __vt__cf_CChainActor@l
-/* 8027ACD0 00244290  38 84 BA F0 */	addi r4, r4, __vt__cf_CChainTemp@l
+/* 8027ACCC 0024428C  38 A5 BA 48 */	addi r5, r5, __vt__Q22cf11CChainActor@l
+/* 8027ACD0 00244290  38 84 BA F0 */	addi r4, r4, __vt__Q22cf10CChainTemp@l
 /* 8027ACD4 00244294  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8027ACD8 00244298  7C 7F 1B 78 */	mr r31, r3
 /* 8027ACDC 0024429C  90 A3 00 70 */	stw r5, 0x70(r3)
@@ -190,9 +190,9 @@
 /* 8027ACE8 002442A8  38 80 00 00 */	li r4, 0
 /* 8027ACEC 002442AC  38 63 00 04 */	addi r3, r3, 4
 /* 8027ACF0 002442B0  4B D8 96 61 */	bl memset
-/* 8027ACF4 002442B4  3C 80 80 54 */	lis r4, __vt__cf_CChainActorEne@ha
+/* 8027ACF4 002442B4  3C 80 80 54 */	lis r4, __vt__Q22cf14CChainActorEne@ha
 /* 8027ACF8 002442B8  38 00 00 00 */	li r0, 0
-/* 8027ACFC 002442BC  38 84 BC 10 */	addi r4, r4, __vt__cf_CChainActorEne@l
+/* 8027ACFC 002442BC  38 84 BC 10 */	addi r4, r4, __vt__Q22cf14CChainActorEne@l
 /* 8027AD00 002442C0  98 1F 00 64 */	stb r0, 0x64(r31)
 /* 8027AD04 002442C4  38 7F 00 74 */	addi r3, r31, 0x74
 /* 8027AD08 002442C8  B0 1F 00 6C */	sth r0, 0x6c(r31)
@@ -273,9 +273,9 @@
 /* 8027AE08 002443C8  93 C1 00 08 */	stw r30, 8(r1)
 /* 8027AE0C 002443CC  7C 7E 1B 78 */	mr r30, r3
 /* 8027AE10 002443D0  41 82 00 78 */	beq .L_8027AE88
-/* 8027AE14 002443D4  3C A0 80 54 */	lis r5, __vt___reslist_base_cf_CChainActor@ha
+/* 8027AE14 002443D4  3C A0 80 54 */	lis r5, "__vt__34_reslist_base<PQ22cf11CChainActor>"@ha
 /* 8027AE18 002443D8  80 83 00 04 */	lwz r4, 4(r3)
-/* 8027AE1C 002443DC  38 A5 BA E4 */	addi r5, r5, __vt___reslist_base_cf_CChainActor@l
+/* 8027AE1C 002443DC  38 A5 BA E4 */	addi r5, r5, "__vt__34_reslist_base<PQ22cf11CChainActor>"@l
 /* 8027AE20 002443E0  90 A3 00 00 */	stw r5, 0(r3)
 /* 8027AE24 002443E4  38 00 00 00 */	li r0, 0
 /* 8027AE28 002443E8  80 A4 00 00 */	lwz r5, 0(r4)
@@ -326,9 +326,9 @@
 /* 8027AEC0 00244480  7C 7E 1B 78 */	mr r30, r3
 /* 8027AEC4 00244484  41 82 00 7C */	beq .L_8027AF40
 /* 8027AEC8 00244488  41 82 00 68 */	beq .L_8027AF30
-/* 8027AECC 0024448C  3C A0 80 54 */	lis r5, __vt___reslist_base_cf_CChainActor@ha
+/* 8027AECC 0024448C  3C A0 80 54 */	lis r5, "__vt__34_reslist_base<PQ22cf11CChainActor>"@ha
 /* 8027AED0 00244490  80 83 00 04 */	lwz r4, 4(r3)
-/* 8027AED4 00244494  38 A5 BA E4 */	addi r5, r5, __vt___reslist_base_cf_CChainActor@l
+/* 8027AED4 00244494  38 A5 BA E4 */	addi r5, r5, "__vt__34_reslist_base<PQ22cf11CChainActor>"@l
 /* 8027AED8 00244498  90 A3 00 00 */	stw r5, 0(r3)
 /* 8027AEDC 0024449C  38 00 00 00 */	li r0, 0
 /* 8027AEE0 002444A0  80 84 00 00 */	lwz r4, 0(r4)
@@ -379,9 +379,9 @@
 /* 8027AF78 00244538  7C 7E 1B 78 */	mr r30, r3
 /* 8027AF7C 0024453C  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8027AF80 00244540  41 82 01 C4 */	beq .L_8027B144
-/* 8027AF84 00244544  3C A0 80 54 */	lis r5, __vt__cf_CChainActorList@ha
+/* 8027AF84 00244544  3C A0 80 54 */	lis r5, __vt__Q22cf15CChainActorList@ha
 /* 8027AF88 00244548  80 83 1D 8C */	lwz r4, 0x1d8c(r3)
-/* 8027AF8C 0024454C  38 A5 BA C0 */	addi r5, r5, __vt__cf_CChainActorList@l
+/* 8027AF8C 0024454C  38 A5 BA C0 */	addi r5, r5, __vt__Q22cf15CChainActorList@l
 /* 8027AF90 00244550  90 A3 1D AC */	stw r5, 0x1dac(r3)
 /* 8027AF94 00244554  83 A4 00 00 */	lwz r29, 0(r4)
 /* 8027AF98 00244558  48 00 00 1C */	b .L_8027AFB4
@@ -457,9 +457,9 @@
 /* 8027B08C 0024464C  90 1E 1D A0 */	stw r0, 0x1da0(r30)
 /* 8027B090 00244650  41 82 00 68 */	beq .L_8027B0F8
 /* 8027B094 00244654  41 82 00 64 */	beq .L_8027B0F8
-/* 8027B098 00244658  3C 80 80 54 */	lis r4, __vt___reslist_base_cf_CChainActor@ha
+/* 8027B098 00244658  3C 80 80 54 */	lis r4, "__vt__34_reslist_base<PQ22cf11CChainActor>"@ha
 /* 8027B09C 0024465C  80 7D 00 04 */	lwz r3, 4(r29)
-/* 8027B0A0 00244660  38 84 BA E4 */	addi r4, r4, __vt___reslist_base_cf_CChainActor@l
+/* 8027B0A0 00244660  38 84 BA E4 */	addi r4, r4, "__vt__34_reslist_base<PQ22cf11CChainActor>"@l
 /* 8027B0A4 00244664  90 9D 00 00 */	stw r4, 0(r29)
 /* 8027B0A8 00244668  80 83 00 00 */	lwz r4, 0(r3)
 /* 8027B0AC 0024466C  48 00 00 10 */	b .L_8027B0BC
@@ -2683,71 +2683,71 @@
 
 .balign 8
 
-.obj __vt__cf_CChainActorList, global
-	.4byte __RTTI__cf_CChainActorList
+.obj __vt__Q22cf15CChainActorList, global
+	.4byte __RTTI__Q22cf15CChainActorList
 	.4byte 0
 	.4byte __dt__cf_CChainActorList
-.endobj __vt__cf_CChainActorList
+.endobj __vt__Q22cf15CChainActorList
 
 
-.obj __vt__reslist_cf_CChainActor, global
-	.4byte __RTTI__reslist_cf_CChainActor
+.obj "__vt__28reslist<PQ22cf11CChainActor>", global
+	.4byte "__RTTI__28reslist<PQ22cf11CChainActor>"
 	.4byte 0
 	.4byte __dt__reslist_cf_CChainActor
-.endobj __vt__reslist_cf_CChainActor
+.endobj "__vt__28reslist<PQ22cf11CChainActor>"
 
 .obj reslist_cf_CChainActor_hierarchy, global
-	.4byte __RTTI___reslist_base_cf_CChainActor
+	.4byte "__RTTI__34_reslist_base<PQ22cf11CChainActor>"
 	.4byte 0
 	.4byte 0
 .endobj reslist_cf_CChainActor_hierarchy
 
 
-.obj __vt___reslist_base_cf_CChainActor, global
-	.4byte __RTTI___reslist_base_cf_CChainActor
+.obj "__vt__34_reslist_base<PQ22cf11CChainActor>", global
+	.4byte "__RTTI__34_reslist_base<PQ22cf11CChainActor>"
 	.4byte 0
 	.4byte __dt___reslist_base_cf_CChainActor
-.endobj __vt___reslist_base_cf_CChainActor
+.endobj "__vt__34_reslist_base<PQ22cf11CChainActor>"
 
 
-.obj __vt__cf_CChainTemp, global
-	.4byte __RTTI__cf_CChainTemp
+.obj __vt__Q22cf10CChainTemp, global
+	.4byte __RTTI__Q22cf10CChainTemp
 	.4byte 0
 	.4byte __dt__cf_CChainTemp
 	.4byte 0
-.endobj __vt__cf_CChainTemp
+.endobj __vt__Q22cf10CChainTemp
 
 
-.obj __vt__cf_Flusher_cf_CfObjectActor, global
-	.4byte __RTTI__cf_Flusher_cf_CfObjectActor
+.obj "__vt__Q22cf29Flusher<Q22cf13CfObjectActor>", global
+	.4byte "__RTTI__Q22cf29Flusher<Q22cf13CfObjectActor>"
 	.4byte 0
 	.4byte __dt__cf_Flusher_cf_CfObjectActor
 	.4byte 0
-.endobj __vt__cf_Flusher_cf_CfObjectActor
+.endobj "__vt__Q22cf29Flusher<Q22cf13CfObjectActor>"
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__cf_CChainActorList, global
+.obj __RTTI__Q22cf15CChainActorList, global
 	.4byte cf_CChainActorList_typestr
 	.4byte 0
-.endobj __RTTI__cf_CChainActorList
+.endobj __RTTI__Q22cf15CChainActorList
 
-.obj __RTTI__reslist_cf_CChainActor, global
+.obj "__RTTI__28reslist<PQ22cf11CChainActor>", global
 	.4byte reslist_cf_CChainActor_typestr
 	.4byte reslist_cf_CChainActor_hierarchy
-.endobj __RTTI__reslist_cf_CChainActor
+.endobj "__RTTI__28reslist<PQ22cf11CChainActor>"
 
-.obj __RTTI___reslist_base_cf_CChainActor, global
+.obj "__RTTI__34_reslist_base<PQ22cf11CChainActor>", global
 	.4byte _reslist_base_cf_CChainActor_typestr
 	.4byte 0
-.endobj __RTTI___reslist_base_cf_CChainActor
+.endobj "__RTTI__34_reslist_base<PQ22cf11CChainActor>"
 
-.obj __RTTI__cf_CChainTemp, global
+.obj __RTTI__Q22cf10CChainTemp, global
 	.4byte cf_CChainTemp_typestr
 	.4byte 0
-.endobj __RTTI__cf_CChainTemp
+.endobj __RTTI__Q22cf10CChainTemp
 
 
 .obj lbl_80665378, global
@@ -2755,10 +2755,10 @@
 	.4byte 0
 .endobj lbl_80665378
 
-.obj __RTTI__cf_Flusher_cf_CfObjectActor, global
+.obj "__RTTI__Q22cf29Flusher<Q22cf13CfObjectActor>", global
 	.4byte cf_Flusher_cf_CfObjectActor_typestr
 	.4byte 0
-.endobj __RTTI__cf_Flusher_cf_CfObjectActor
+.endobj "__RTTI__Q22cf29Flusher<Q22cf13CfObjectActor>"
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

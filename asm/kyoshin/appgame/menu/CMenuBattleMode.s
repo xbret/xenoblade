@@ -390,14 +390,14 @@
 /* 801A03C0 00169980  7C 7E 1B 78 */	mr r30, r3
 /* 801A03C4 00169984  41 82 00 90 */	beq .L_801A0454
 /* 801A03C8 00169988  48 2A 46 51 */	bl __ct__8CProcessFv
-/* 801A03CC 0016998C  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
+/* 801A03CC 0016998C  3C 60 80 53 */	lis r3, "__vt__14CTTask<5IUICf>"@ha
 /* 801A03D0 00169990  3D 00 80 51 */	lis r8, __ptmf_null@ha
-/* 801A03D4 00169994  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
+/* 801A03D4 00169994  38 63 F7 40 */	addi r3, r3, "__vt__14CTTask<5IUICf>"@l
 /* 801A03D8 00169998  90 7E 00 10 */	stw r3, 0x10(r30)
 /* 801A03DC 0016999C  39 08 CE 10 */	addi r8, r8, __ptmf_null@l
-/* 801A03E0 001699A0  3C A0 80 53 */	lis r5, __vt__CMenuBattleMode@ha
+/* 801A03E0 001699A0  3C A0 80 53 */	lis r5, __vt__15CMenuBattleMode@ha
 /* 801A03E4 001699A4  80 C8 00 04 */	lwz r6, 4(r8)
-/* 801A03E8 001699A8  38 A5 65 88 */	addi r5, r5, __vt__CMenuBattleMode@l
+/* 801A03E8 001699A8  38 A5 65 88 */	addi r5, r5, __vt__15CMenuBattleMode@l
 /* 801A03EC 001699AC  80 08 00 00 */	lwz r0, 0(r8)
 /* 801A03F0 001699B0  3B E0 00 00 */	li r31, 0
 /* 801A03F4 001699B4  90 1E 00 3C */	stw r0, 0x3c(r30)
@@ -479,8 +479,8 @@
 
 .balign 8
 
-.obj __vt__CMenuBattleMode, global
-	.4byte __RTTI__CMenuBattleMode
+.obj __vt__15CMenuBattleMode, global
+	.4byte __RTTI__15CMenuBattleMode
 	.4byte 0
 	.4byte __dt__CMenuBattleMode
 	.4byte CChildListNode_Reset
@@ -489,7 +489,7 @@
 	.4byte func_801A0078
 	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuBattleMode
+	.4byte __RTTI__15CMenuBattleMode
 	.4byte 0xFFFFFFA8
 	.4byte func_801A048C
 	.4byte IWorkEvent_WorkEvent1
@@ -523,27 +523,27 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CMenuBattleMode
+	.4byte __RTTI__15CMenuBattleMode
 	.4byte 0xFFFFFFA4
 	.4byte func_801A049C
 	.4byte func_801A0494
 	.4byte func_801A02C0
-.endobj __vt__CMenuBattleMode
+.endobj __vt__15CMenuBattleMode
 
 .obj CMenuBattleMode_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x0000005C
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x00000058
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUICf
+	.4byte "__RTTI__14CTTask<5IUICf>"
 	.4byte 0
-	.4byte __RTTI__IUICf
+	.4byte __RTTI__5IUICf
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -554,10 +554,10 @@
 
 .balign 8
 
-.obj __RTTI__CMenuBattleMode, global
+.obj __RTTI__15CMenuBattleMode, global
 	.4byte CMenuBattleMode_typestr
 	.4byte CMenuBattleMode_hierarchy
-.endobj __RTTI__CMenuBattleMode
+.endobj __RTTI__15CMenuBattleMode
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

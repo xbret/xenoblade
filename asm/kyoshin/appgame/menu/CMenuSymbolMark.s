@@ -83,12 +83,12 @@
 /* 8011D440 000E6A00  93 81 00 50 */	stw r28, 0x50(r1)
 /* 8011D444 000E6A04  7C 9C 23 78 */	mr r28, r4
 /* 8011D448 000E6A08  48 32 75 D1 */	bl __ct__8CProcessFv
-/* 8011D44C 000E6A0C  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
-/* 8011D450 000E6A10  3C A0 80 53 */	lis r5, __vt__CMenuSymbolMark@ha
-/* 8011D454 000E6A14  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
+/* 8011D44C 000E6A0C  3C 60 80 53 */	lis r3, "__vt__14CTTask<5IUICf>"@ha
+/* 8011D450 000E6A10  3C A0 80 53 */	lis r5, __vt__15CMenuSymbolMark@ha
+/* 8011D454 000E6A14  38 63 F7 40 */	addi r3, r3, "__vt__14CTTask<5IUICf>"@l
 /* 8011D458 000E6A18  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 8011D45C 000E6A1C  3D 00 80 51 */	lis r8, __ptmf_null@ha
-/* 8011D460 000E6A20  38 A5 05 C8 */	addi r5, r5, __vt__CMenuSymbolMark@l
+/* 8011D460 000E6A20  38 A5 05 C8 */	addi r5, r5, __vt__15CMenuSymbolMark@l
 /* 8011D464 000E6A24  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 8011D468 000E6A28  38 85 00 24 */	addi r4, r5, 0x24
 /* 8011D46C 000E6A2C  3B C0 00 00 */	li r30, 0
@@ -549,14 +549,14 @@
 /* 8011DB30 000E70F0  7C 7D 1B 78 */	mr r29, r3
 /* 8011DB34 000E70F4  41 82 00 6C */	beq .L_8011DBA0
 /* 8011DB38 000E70F8  48 32 6E E1 */	bl __ct__8CProcessFv
-/* 8011DB3C 000E70FC  3C 60 80 53 */	lis r3, __vt__CTTask_CArrow3D@ha
+/* 8011DB3C 000E70FC  3C 60 80 53 */	lis r3, "__vt__17CTTask<8CArrow3D>"@ha
 /* 8011DB40 000E7100  3C E0 80 51 */	lis r7, __ptmf_null@ha
-/* 8011DB44 000E7104  38 63 05 84 */	addi r3, r3, __vt__CTTask_CArrow3D@l
+/* 8011DB44 000E7104  38 63 05 84 */	addi r3, r3, "__vt__17CTTask<8CArrow3D>"@l
 /* 8011DB48 000E7108  90 7D 00 10 */	stw r3, 0x10(r29)
 /* 8011DB4C 000E710C  38 E7 CE 10 */	addi r7, r7, __ptmf_null@l
-/* 8011DB50 000E7110  3C 80 80 53 */	lis r4, __vt__CArrow3D@ha
+/* 8011DB50 000E7110  3C 80 80 53 */	lis r4, __vt__8CArrow3D@ha
 /* 8011DB54 000E7114  80 A7 00 04 */	lwz r5, 4(r7)
-/* 8011DB58 000E7118  38 84 05 20 */	addi r4, r4, __vt__CArrow3D@l
+/* 8011DB58 000E7118  38 84 05 20 */	addi r4, r4, __vt__8CArrow3D@l
 /* 8011DB5C 000E711C  80 07 00 00 */	lwz r0, 0(r7)
 /* 8011DB60 000E7120  38 64 00 24 */	addi r3, r4, 0x24
 /* 8011DB64 000E7124  90 1D 00 3C */	stw r0, 0x3c(r29)
@@ -5655,8 +5655,8 @@
 .endobj lbl_80530508
 
 
-.obj __vt__CArrow3D, global
-	.4byte __RTTI__CArrow3D
+.obj __vt__8CArrow3D, global
+	.4byte __RTTI__8CArrow3D
 	.4byte 0
 	.4byte __dt__CArrow3D
 	.4byte CChildListNode_Reset
@@ -5665,30 +5665,30 @@
 	.4byte func_80121EA0
 	.4byte func_801220F4
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CArrow3D
+	.4byte __RTTI__8CArrow3D
 	.4byte 0xFFFFFFAC
 	.4byte func_8012215C
 	.4byte func_80122154
 	.4byte func_80120F50
-.endobj __vt__CArrow3D
+.endobj __vt__8CArrow3D
 
 .obj CArrow3D_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000054
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_CArrow3D
+	.4byte "__RTTI__17CTTask<8CArrow3D>"
 	.4byte 0
 	.4byte 0
 .endobj CArrow3D_hierarchy
 
 
-.obj __vt__CTTask_CArrow3D, global
-	.4byte __RTTI__CTTask_CArrow3D
+.obj "__vt__17CTTask<8CArrow3D>", global
+	.4byte "__RTTI__17CTTask<8CArrow3D>"
 	.4byte 0
 	.4byte __dt__CTTask_CArrow3D
 	.4byte CChildListNode_Reset
@@ -5697,22 +5697,22 @@
 	.4byte func_801220AC
 	.4byte func_801220F4
 	.4byte CProcess_func_80043F20
-.endobj __vt__CTTask_CArrow3D
+.endobj "__vt__17CTTask<8CArrow3D>"
 
 .obj CTTask_CArrow3D_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj CTTask_CArrow3D_hierarchy
 
 
-.obj __vt__CMenuSymbolMark, global
-	.4byte __RTTI__CMenuSymbolMark
+.obj __vt__15CMenuSymbolMark, global
+	.4byte __RTTI__15CMenuSymbolMark
 	.4byte 0
 	.4byte __dt__CMenuSymbolMark
 	.4byte CChildListNode_Reset
@@ -5721,7 +5721,7 @@
 	.4byte func_8011DD04
 	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuSymbolMark
+	.4byte __RTTI__15CMenuSymbolMark
 	.4byte 0xFFFFFFA8
 	.4byte func_8012213C
 	.4byte IWorkEvent_WorkEvent1
@@ -5755,27 +5755,27 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CMenuSymbolMark
+	.4byte __RTTI__15CMenuSymbolMark
 	.4byte 0xFFFFFFA4
 	.4byte func_8012214C
 	.4byte func_80122144
 	.4byte func_8011E3C0
-.endobj __vt__CMenuSymbolMark
+.endobj __vt__15CMenuSymbolMark
 
 .obj CMenuSymbolMark_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x0000005C
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x00000058
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUICf
+	.4byte "__RTTI__14CTTask<5IUICf>"
 	.4byte 0
-	.4byte __RTTI__IUICf
+	.4byte __RTTI__5IUICf
 	.4byte 0
 	.4byte 0
 .endobj CMenuSymbolMark_hierarchy
@@ -5820,20 +5820,20 @@
 
 .balign 8
 
-.obj __RTTI__CArrow3D, global
+.obj __RTTI__8CArrow3D, global
 	.4byte CArrow3D_typestr
 	.4byte CArrow3D_hierarchy
-.endobj __RTTI__CArrow3D
+.endobj __RTTI__8CArrow3D
 
-.obj __RTTI__CTTask_CArrow3D, global
+.obj "__RTTI__17CTTask<8CArrow3D>", global
 	.4byte CTTask_CArrow3D_typestr
 	.4byte CTTask_CArrow3D_hierarchy
-.endobj __RTTI__CTTask_CArrow3D
+.endobj "__RTTI__17CTTask<8CArrow3D>"
 
-.obj __RTTI__CMenuSymbolMark, global
+.obj __RTTI__15CMenuSymbolMark, global
 	.4byte CMenuSymbolMark_typestr
 	.4byte CMenuSymbolMark_hierarchy
-.endobj __RTTI__CMenuSymbolMark
+.endobj __RTTI__15CMenuSymbolMark
 
 
 .obj lbl_80664788, global

@@ -326,22 +326,22 @@
 /* 80443540 0040CB00  7F A5 EB 78 */	mr r5, r29
 /* 80443544 0040CB04  38 C0 00 80 */	li r6, 0x80
 /* 80443548 0040CB08  4B FF 40 75 */	bl __ct__CWorkThread
-/* 8044354C 0040CB0C  3C 60 80 57 */	lis r3, __vt__CViewRoot@ha
-/* 80443550 0040CB10  3C C0 80 57 */	lis r6, __vt___reslist_base_unsigned_long@ha
-/* 80443554 0040CB14  38 63 EF 88 */	addi r3, r3, __vt__CViewRoot@l
+/* 8044354C 0040CB0C  3C 60 80 57 */	lis r3, __vt__9CViewRoot@ha
+/* 80443550 0040CB10  3C C0 80 57 */	lis r6, "__vt__17_reslist_base<Ul>"@ha
+/* 80443554 0040CB14  38 63 EF 88 */	addi r3, r3, __vt__9CViewRoot@l
 /* 80443558 0040CB18  90 7E 00 00 */	stw r3, 0(r30)
 /* 8044355C 0040CB1C  39 20 00 20 */	li r9, 0x20
-/* 80443560 0040CB20  3C 80 80 57 */	lis r4, __vt__reslist_unsigned_long@ha
+/* 80443560 0040CB20  3C 80 80 57 */	lis r4, "__vt__11reslist<Ul>"@ha
 /* 80443564 0040CB24  91 3E 02 D0 */	stw r9, 0x2d0(r30)
 /* 80443568 0040CB28  38 1E 01 C4 */	addi r0, r30, 0x1c4
 /* 8044356C 0040CB2C  3B E0 00 00 */	li r31, 0
 /* 80443570 0040CB30  39 1E 02 D4 */	addi r8, r30, 0x2d4
 /* 80443574 0040CB34  90 1E 02 C4 */	stw r0, 0x2c4(r30)
 /* 80443578 0040CB38  38 FE 03 E4 */	addi r7, r30, 0x3e4
-/* 8044357C 0040CB3C  38 C6 EB 10 */	addi r6, r6, __vt___reslist_base_unsigned_long@l
+/* 8044357C 0040CB3C  38 C6 EB 10 */	addi r6, r6, "__vt__17_reslist_base<Ul>"@l
 /* 80443580 0040CB40  38 BE 04 FC */	addi r5, r30, 0x4fc
 /* 80443584 0040CB44  93 FE 02 CC */	stw r31, 0x2cc(r30)
-/* 80443588 0040CB48  38 84 EA F8 */	addi r4, r4, __vt__reslist_unsigned_long@l
+/* 80443588 0040CB48  38 84 EA F8 */	addi r4, r4, "__vt__11reslist<Ul>"@l
 /* 8044358C 0040CB4C  38 00 00 16 */	li r0, 0x16
 /* 80443590 0040CB50  38 60 06 00 */	li r3, 0x600
 /* 80443594 0040CB54  93 FE 02 C8 */	stw r31, 0x2c8(r30)
@@ -466,8 +466,8 @@
 
 .balign 8
 
-.obj __vt__CViewRoot, global
-	.4byte __RTTI__CViewRoot
+.obj __vt__9CViewRoot, global
+	.4byte __RTTI__9CViewRoot
 	.4byte 0
 	.4byte __dt__CViewRoot
 	.4byte IWorkEvent_WorkEvent1
@@ -507,12 +507,12 @@
 	.4byte CViewRoot_WorkThreadEvent4
 	.4byte CViewRoot_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-.endobj __vt__CViewRoot
+.endobj __vt__9CViewRoot
 
 .obj CViewRoot_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -522,10 +522,10 @@
 
 .balign 8
 
-.obj __RTTI__CViewRoot, global
+.obj __RTTI__9CViewRoot, global
 	.4byte CViewRoot_typestr
 	.4byte CViewRoot_hierarchy
-.endobj __RTTI__CViewRoot
+.endobj __RTTI__9CViewRoot
 
 
 .section extab, "a" # 0x800066E0 - 0x80021020

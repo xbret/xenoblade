@@ -5,9 +5,9 @@
 .fn __ct__CMCCrystalInfo, global
 /* 8021A634 001E3BF4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8021A638 001E3BF8  7C 08 02 A6 */	mflr r0
-/* 8021A63C 001E3BFC  3C 80 80 54 */	lis r4, __vt__CMCCrystalInfo@ha
+/* 8021A63C 001E3BFC  3C 80 80 54 */	lis r4, __vt__14CMCCrystalInfo@ha
 /* 8021A640 001E3C00  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8021A644 001E3C04  38 84 94 B0 */	addi r4, r4, __vt__CMCCrystalInfo@l
+/* 8021A644 001E3C04  38 84 94 B0 */	addi r4, r4, __vt__14CMCCrystalInfo@l
 /* 8021A648 001E3C08  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8021A64C 001E3C0C  7C 7F 1B 78 */	mr r31, r3
 /* 8021A650 001E3C10  90 83 00 00 */	stw r4, 0(r3)
@@ -1656,8 +1656,8 @@
 
 .balign 8
 
-.obj __vt__CMCCrystalInfo, global
-	.4byte __RTTI__CMCCrystalInfo
+.obj __vt__14CMCCrystalInfo, global
+	.4byte __RTTI__14CMCCrystalInfo
 	.4byte 0
 	.4byte __dt__CMCCrystalInfo
 	.4byte IWorkEvent_WorkEvent1
@@ -1691,10 +1691,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CMCCrystalInfo
+.endobj __vt__14CMCCrystalInfo
 
 .obj CMCCrystalInfo_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1704,10 +1704,10 @@
 
 .balign 8
 
-.obj __RTTI__CMCCrystalInfo, global
+.obj __RTTI__14CMCCrystalInfo, global
 	.4byte CMCCrystalInfo_typestr
 	.4byte CMCCrystalInfo_hierarchy
-.endobj __RTTI__CMCCrystalInfo
+.endobj __RTTI__14CMCCrystalInfo
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

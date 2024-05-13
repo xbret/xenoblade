@@ -13,22 +13,22 @@
 /* 8013C084 00105644  7C 7D 1B 78 */	mr r29, r3
 /* 8013C088 00105648  93 81 00 10 */	stw r28, 0x10(r1)
 /* 8013C08C 0010564C  48 30 89 8D */	bl __ct__8CProcessFv
-/* 8013C090 00105650  3C 60 80 53 */	lis r3, __vt__CTTask_CUIWindowManager@ha
-/* 8013C094 00105654  3D 00 80 53 */	lis r8, __vt__CUIWindowManager@ha
-/* 8013C098 00105658  38 63 1E 80 */	addi r3, r3, __vt__CTTask_CUIWindowManager@l
+/* 8013C090 00105650  3C 60 80 53 */	lis r3, "__vt__26CTTask<16CUIWindowManager>"@ha
+/* 8013C094 00105654  3D 00 80 53 */	lis r8, __vt__16CUIWindowManager@ha
+/* 8013C098 00105658  38 63 1E 80 */	addi r3, r3, "__vt__26CTTask<16CUIWindowManager>"@l
 /* 8013C09C 0010565C  90 7D 00 10 */	stw r3, 0x10(r29)
 /* 8013C0A0 00105660  3D 60 80 51 */	lis r11, __ptmf_null@ha
-/* 8013C0A4 00105664  3C E0 80 53 */	lis r7, __vt___reslist_base_IUIWindow@ha
+/* 8013C0A4 00105664  3C E0 80 53 */	lis r7, "__vt__26_reslist_base<P9IUIWindow>"@ha
 /* 8013C0A8 00105668  84 6B CE 10 */	lwzu r3, __ptmf_null@l(r11)
-/* 8013C0AC 0010566C  3C A0 80 53 */	lis r5, __vt__reslist_IUIWindow@ha
-/* 8013C0B0 00105670  39 08 1D 70 */	addi r8, r8, __vt__CUIWindowManager@l
-/* 8013C0B4 00105674  38 E7 1D EC */	addi r7, r7, __vt___reslist_base_IUIWindow@l
+/* 8013C0AC 0010566C  3C A0 80 53 */	lis r5, "__vt__20reslist<P9IUIWindow>"@ha
+/* 8013C0B0 00105670  39 08 1D 70 */	addi r8, r8, __vt__16CUIWindowManager@l
+/* 8013C0B4 00105674  38 E7 1D EC */	addi r7, r7, "__vt__26_reslist_base<P9IUIWindow>"@l
 /* 8013C0B8 00105678  80 0B 00 04 */	lwz r0, 4(r11)
 /* 8013C0BC 0010567C  3B E0 00 00 */	li r31, 0
 /* 8013C0C0 00105680  90 1D 00 40 */	stw r0, 0x40(r29)
 /* 8013C0C4 00105684  38 08 00 24 */	addi r0, r8, 0x24
 /* 8013C0C8 00105688  38 DD 00 64 */	addi r6, r29, 0x64
-/* 8013C0CC 0010568C  38 A5 1D D4 */	addi r5, r5, __vt__reslist_IUIWindow@l
+/* 8013C0CC 0010568C  38 A5 1D D4 */	addi r5, r5, "__vt__20reslist<P9IUIWindow>"@l
 /* 8013C0D0 00105690  90 7D 00 3C */	stw r3, 0x3c(r29)
 /* 8013C0D4 00105694  38 9D 00 84 */	addi r4, r29, 0x84
 /* 8013C0D8 00105698  80 6B 00 08 */	lwz r3, 8(r11)
@@ -158,9 +158,9 @@
 /* 8013C2AC 0010586C  93 C1 00 08 */	stw r30, 8(r1)
 /* 8013C2B0 00105870  7C 7E 1B 78 */	mr r30, r3
 /* 8013C2B4 00105874  41 82 00 78 */	beq .L_8013C32C
-/* 8013C2B8 00105878  3C A0 80 53 */	lis r5, __vt___reslist_base_IUIWindow@ha
+/* 8013C2B8 00105878  3C A0 80 53 */	lis r5, "__vt__26_reslist_base<P9IUIWindow>"@ha
 /* 8013C2BC 0010587C  80 83 00 04 */	lwz r4, 4(r3)
-/* 8013C2C0 00105880  38 A5 1D EC */	addi r5, r5, __vt___reslist_base_IUIWindow@l
+/* 8013C2C0 00105880  38 A5 1D EC */	addi r5, r5, "__vt__26_reslist_base<P9IUIWindow>"@l
 /* 8013C2C4 00105884  90 A3 00 00 */	stw r5, 0(r3)
 /* 8013C2C8 00105888  38 00 00 00 */	li r0, 0
 /* 8013C2CC 0010588C  80 A4 00 00 */	lwz r5, 0(r4)
@@ -211,9 +211,9 @@
 /* 8013C364 00105924  7C 7E 1B 78 */	mr r30, r3
 /* 8013C368 00105928  41 82 00 7C */	beq .L_8013C3E4
 /* 8013C36C 0010592C  41 82 00 68 */	beq .L_8013C3D4
-/* 8013C370 00105930  3C A0 80 53 */	lis r5, __vt___reslist_base_IUIWindow@ha
+/* 8013C370 00105930  3C A0 80 53 */	lis r5, "__vt__26_reslist_base<P9IUIWindow>"@ha
 /* 8013C374 00105934  80 83 00 04 */	lwz r4, 4(r3)
-/* 8013C378 00105938  38 A5 1D EC */	addi r5, r5, __vt___reslist_base_IUIWindow@l
+/* 8013C378 00105938  38 A5 1D EC */	addi r5, r5, "__vt__26_reslist_base<P9IUIWindow>"@l
 /* 8013C37C 0010593C  90 A3 00 00 */	stw r5, 0(r3)
 /* 8013C380 00105940  38 00 00 00 */	li r0, 0
 /* 8013C384 00105944  80 84 00 00 */	lwz r4, 0(r4)
@@ -267,9 +267,9 @@
 /* 8013C428 001059E8  37 A3 00 7C */	addic. r29, r3, 0x7c
 /* 8013C42C 001059EC  41 82 00 6C */	beq .L_8013C498
 /* 8013C430 001059F0  41 82 00 68 */	beq .L_8013C498
-/* 8013C434 001059F4  3C 80 80 53 */	lis r4, __vt___reslist_base_IUIWindow@ha
+/* 8013C434 001059F4  3C 80 80 53 */	lis r4, "__vt__26_reslist_base<P9IUIWindow>"@ha
 /* 8013C438 001059F8  80 7D 00 04 */	lwz r3, 4(r29)
-/* 8013C43C 001059FC  38 84 1D EC */	addi r4, r4, __vt___reslist_base_IUIWindow@l
+/* 8013C43C 001059FC  38 84 1D EC */	addi r4, r4, "__vt__26_reslist_base<P9IUIWindow>"@l
 /* 8013C440 00105A00  90 9D 00 00 */	stw r4, 0(r29)
 /* 8013C444 00105A04  38 00 00 00 */	li r0, 0
 /* 8013C448 00105A08  80 83 00 00 */	lwz r4, 0(r3)
@@ -298,9 +298,9 @@
 /* 8013C498 00105A58  37 BE 00 5C */	addic. r29, r30, 0x5c
 /* 8013C49C 00105A5C  41 82 00 6C */	beq .L_8013C508
 /* 8013C4A0 00105A60  41 82 00 68 */	beq .L_8013C508
-/* 8013C4A4 00105A64  3C 80 80 53 */	lis r4, __vt___reslist_base_IUIWindow@ha
+/* 8013C4A4 00105A64  3C 80 80 53 */	lis r4, "__vt__26_reslist_base<P9IUIWindow>"@ha
 /* 8013C4A8 00105A68  80 7D 00 04 */	lwz r3, 4(r29)
-/* 8013C4AC 00105A6C  38 84 1D EC */	addi r4, r4, __vt___reslist_base_IUIWindow@l
+/* 8013C4AC 00105A6C  38 84 1D EC */	addi r4, r4, "__vt__26_reslist_base<P9IUIWindow>"@l
 /* 8013C4B0 00105A70  90 9D 00 00 */	stw r4, 0(r29)
 /* 8013C4B4 00105A74  38 00 00 00 */	li r0, 0
 /* 8013C4B8 00105A78  80 83 00 00 */	lwz r4, 0(r3)
@@ -367,15 +367,15 @@
 /* 8013C580 00105B40  7C 7F 1B 78 */	mr r31, r3
 /* 8013C584 00105B44  41 82 00 58 */	beq .L_8013C5DC
 /* 8013C588 00105B48  48 30 84 91 */	bl __ct__8CProcessFv
-/* 8013C58C 00105B4C  3C 60 80 53 */	lis r3, __vt__CTTask_CUIWindowManager_CTest@ha
+/* 8013C58C 00105B4C  3C 60 80 53 */	lis r3, "__vt__34CTTask<Q216CUIWindowManager5CTest>"@ha
 /* 8013C590 00105B50  3C A0 80 51 */	lis r5, __ptmf_null@ha
-/* 8013C594 00105B54  38 63 1E 40 */	addi r3, r3, __vt__CTTask_CUIWindowManager_CTest@l
+/* 8013C594 00105B54  38 63 1E 40 */	addi r3, r3, "__vt__34CTTask<Q216CUIWindowManager5CTest>"@l
 /* 8013C598 00105B58  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 8013C59C 00105B5C  38 A5 CE 10 */	addi r5, r5, __ptmf_null@l
 /* 8013C5A0 00105B60  80 05 00 04 */	lwz r0, 4(r5)
-/* 8013C5A4 00105B64  3C 60 80 53 */	lis r3, __vt__CUIWindowManager_CTest@ha
+/* 8013C5A4 00105B64  3C 60 80 53 */	lis r3, __vt__Q216CUIWindowManager5CTest@ha
 /* 8013C5A8 00105B68  80 85 00 00 */	lwz r4, 0(r5)
-/* 8013C5AC 00105B6C  38 63 1D F8 */	addi r3, r3, __vt__CUIWindowManager_CTest@l
+/* 8013C5AC 00105B6C  38 63 1D F8 */	addi r3, r3, __vt__Q216CUIWindowManager5CTest@l
 /* 8013C5B0 00105B70  90 9F 00 3C */	stw r4, 0x3c(r31)
 /* 8013C5B4 00105B74  90 1F 00 40 */	stw r0, 0x40(r31)
 /* 8013C5B8 00105B78  80 05 00 08 */	lwz r0, 8(r5)
@@ -1287,8 +1287,8 @@
 /* 8013D220 001067E0  40 82 00 30 */	bne .L_8013D250
 /* 8013D224 001067E4  7C 83 23 78 */	mr r3, r4
 /* 8013D228 001067E8  38 80 00 10 */	li r4, 0x10
-/* 8013D22C 001067EC  38 AD 88 E8 */	addi r5, r13, __RTTI__CTalkWindow@sda21
-/* 8013D230 001067F0  38 CD 86 40 */	addi r6, r13, __RTTI__IUIWindow@sda21
+/* 8013D22C 001067EC  38 AD 88 E8 */	addi r5, r13, __RTTI__11CTalkWindow@sda21
+/* 8013D230 001067F0  38 CD 86 40 */	addi r6, r13, __RTTI__9IUIWindow@sda21
 /* 8013D234 001067F4  38 E0 00 00 */	li r7, 0
 /* 8013D238 001067F8  48 17 CB 4D */	bl __dynamic_cast
 /* 8013D23C 001067FC  2C 03 00 00 */	cmpwi r3, 0
@@ -6327,8 +6327,8 @@
 
 .balign 8
 
-.obj __vt__CUIWindowManager, global
-	.4byte __RTTI__CUIWindowManager
+.obj __vt__16CUIWindowManager, global
+	.4byte __RTTI__16CUIWindowManager
 	.4byte 0
 	.4byte __dt__CUIWindowManager
 	.4byte CChildListNode_Reset
@@ -6337,50 +6337,50 @@
 	.4byte func_8013C6D8
 	.4byte func_8013F190
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CUIWindowManager
+	.4byte __RTTI__16CUIWindowManager
 	.4byte 0xFFFFFFAC
 	.4byte func_8013F23C
 	.4byte func_8013F234
 	.4byte func_8013CBB4
-.endobj __vt__CUIWindowManager
+.endobj __vt__16CUIWindowManager
 
 .obj CUIWindowManager_hierarchy, global
-	.4byte __RTTI__cf_IFlagEvent
+	.4byte __RTTI__Q22cf10IFlagEvent
 	.4byte 0x00000054
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_CUIWindowManager
+	.4byte "__RTTI__26CTTask<16CUIWindowManager>"
 	.4byte 0
 	.4byte 0
 .endobj CUIWindowManager_hierarchy
 
 
-.obj __vt__reslist_IUIWindow, global
-	.4byte __RTTI__reslist_IUIWindow
+.obj "__vt__20reslist<P9IUIWindow>", global
+	.4byte "__RTTI__20reslist<P9IUIWindow>"
 	.4byte 0
 	.4byte __dt__reslist_IUIWindow
-.endobj __vt__reslist_IUIWindow
+.endobj "__vt__20reslist<P9IUIWindow>"
 
 .obj reslist_IUIWindow_hierarchy, global
-	.4byte __RTTI___reslist_base_IUIWindow
+	.4byte "__RTTI__26_reslist_base<P9IUIWindow>"
 	.4byte 0
 	.4byte 0
 .endobj reslist_IUIWindow_hierarchy
 
 
-.obj __vt___reslist_base_IUIWindow, global
-	.4byte __RTTI___reslist_base_IUIWindow
+.obj "__vt__26_reslist_base<P9IUIWindow>", global
+	.4byte "__RTTI__26_reslist_base<P9IUIWindow>"
 	.4byte 0
 	.4byte __dt___reslist_base_IUIWindow
-.endobj __vt___reslist_base_IUIWindow
+.endobj "__vt__26_reslist_base<P9IUIWindow>"
 
 
-.obj __vt__CUIWindowManager_CTest, global
-	.4byte __RTTI__CUIWindowManager_CTest
+.obj __vt__Q216CUIWindowManager5CTest, global
+	.4byte __RTTI__Q216CUIWindowManager5CTest
 	.4byte 0
 	.4byte __dt__CUIWindowManager_CTest
 	.4byte CChildListNode_Reset
@@ -6389,23 +6389,23 @@
 	.4byte func_8013F0AC
 	.4byte func_8013F0A8
 	.4byte CProcess_func_80043F20
-.endobj __vt__CUIWindowManager_CTest
+.endobj __vt__Q216CUIWindowManager5CTest
 
 .obj CUIWindowManager_CTest_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_CUIWindowManager_CTest
+	.4byte "__RTTI__34CTTask<Q216CUIWindowManager5CTest>"
 	.4byte 0
 	.4byte 0
 .endobj CUIWindowManager_CTest_hierarchy
 
 
-.obj __vt__CTTask_CUIWindowManager_CTest, global
-	.4byte __RTTI__CTTask_CUIWindowManager_CTest
+.obj "__vt__34CTTask<Q216CUIWindowManager5CTest>", global
+	.4byte "__RTTI__34CTTask<Q216CUIWindowManager5CTest>"
 	.4byte 0
 	.4byte __dt__CTTask_CUIWindowManager_CTest
 	.4byte CChildListNode_Reset
@@ -6414,21 +6414,21 @@
 	.4byte func_8013F0B8
 	.4byte func_8013F100
 	.4byte CProcess_func_80043F20
-.endobj __vt__CTTask_CUIWindowManager_CTest
+.endobj "__vt__34CTTask<Q216CUIWindowManager5CTest>"
 
 .obj CTTask_CUIWindowManager_CTest_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
 	.4byte 0
 .endobj CTTask_CUIWindowManager_CTest_hierarchy
 
 
-.obj __vt__CTTask_CUIWindowManager, global
-	.4byte __RTTI__CTTask_CUIWindowManager
+.obj "__vt__26CTTask<16CUIWindowManager>", global
+	.4byte "__RTTI__26CTTask<16CUIWindowManager>"
 	.4byte 0
 	.4byte __dt__CTTask_CUIWindowManager
 	.4byte CChildListNode_Reset
@@ -6437,14 +6437,14 @@
 	.4byte func_8013F148
 	.4byte func_8013F190
 	.4byte CProcess_func_80043F20
-.endobj __vt__CTTask_CUIWindowManager
+.endobj "__vt__26CTTask<16CUIWindowManager>"
 
 .obj CTTask_CUIWindowManager_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
 	.4byte 0
 .endobj CTTask_CUIWindowManager_hierarchy
@@ -6453,35 +6453,35 @@
 
 .balign 8
 
-.obj __RTTI__CUIWindowManager, global
+.obj __RTTI__16CUIWindowManager, global
 	.4byte CUIWindowManager_typestr
 	.4byte CUIWindowManager_hierarchy
-.endobj __RTTI__CUIWindowManager
+.endobj __RTTI__16CUIWindowManager
 
-.obj __RTTI__reslist_IUIWindow, global
+.obj "__RTTI__20reslist<P9IUIWindow>", global
 	.4byte reslist_IUIWindow_typestr
 	.4byte reslist_IUIWindow_hierarchy
-.endobj __RTTI__reslist_IUIWindow
+.endobj "__RTTI__20reslist<P9IUIWindow>"
 
-.obj __RTTI___reslist_base_IUIWindow, global
+.obj "__RTTI__26_reslist_base<P9IUIWindow>", global
 	.4byte _reslist_base_IUIWindow_typestr
 	.4byte 0
-.endobj __RTTI___reslist_base_IUIWindow
+.endobj "__RTTI__26_reslist_base<P9IUIWindow>"
 
-.obj __RTTI__CUIWindowManager_CTest, global
+.obj __RTTI__Q216CUIWindowManager5CTest, global
 	.4byte CUIWindowManager_CTest_typestr
 	.4byte CUIWindowManager_CTest_hierarchy
-.endobj __RTTI__CUIWindowManager_CTest
+.endobj __RTTI__Q216CUIWindowManager5CTest
 
-.obj __RTTI__CTTask_CUIWindowManager_CTest, global
+.obj "__RTTI__34CTTask<Q216CUIWindowManager5CTest>", global
 	.4byte CTTask_CUIWindowManager_CTest_typestr
 	.4byte CTTask_CUIWindowManager_CTest_hierarchy
-.endobj __RTTI__CTTask_CUIWindowManager_CTest
+.endobj "__RTTI__34CTTask<Q216CUIWindowManager5CTest>"
 
-.obj __RTTI__CTTask_CUIWindowManager, global
+.obj "__RTTI__26CTTask<16CUIWindowManager>", global
 	.4byte CTTask_CUIWindowManager_typestr
 	.4byte CTTask_CUIWindowManager_hierarchy
-.endobj __RTTI__CTTask_CUIWindowManager
+.endobj "__RTTI__26CTTask<16CUIWindowManager>"
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

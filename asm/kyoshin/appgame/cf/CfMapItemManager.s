@@ -5,14 +5,14 @@
 .fn __ct__cf_CfMapItemManager, global
 /* 801731B4 0013C774  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801731B8 0013C778  7C 08 02 A6 */	mflr r0
-/* 801731BC 0013C77C  3C 80 80 53 */	lis r4, __vt__cf_CfMapItemManager@ha
+/* 801731BC 0013C77C  3C 80 80 53 */	lis r4, __vt__Q22cf16CfMapItemManager@ha
 /* 801731C0 0013C780  38 A3 00 20 */	addi r5, r3, 0x20
 /* 801731C4 0013C784  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801731C8 0013C788  38 E3 38 04 */	addi r7, r3, 0x3804
 /* 801731CC 0013C78C  C0 02 9C C0 */	lfs f0, float_8066A040@sda21(r2)
 /* 801731D0 0013C790  7C 05 38 40 */	cmplw r5, r7
 /* 801731D4 0013C794  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 801731D8 0013C798  38 84 4E C8 */	addi r4, r4, __vt__cf_CfMapItemManager@l
+/* 801731D8 0013C798  38 84 4E C8 */	addi r4, r4, __vt__Q22cf16CfMapItemManager@l
 /* 801731DC 0013C79C  38 00 00 00 */	li r0, 0
 /* 801731E0 0013C7A0  7C 7F 1B 78 */	mr r31, r3
 /* 801731E4 0013C7A4  90 83 00 00 */	stw r4, 0(r3)
@@ -2337,31 +2337,31 @@
 
 .balign 8
 
-.obj __vt__cf_CfValueItemManager, global
-	.4byte __RTTI__cf_CfValueItemManager
+.obj __vt__Q22cf18CfValueItemManager, global
+	.4byte __RTTI__Q22cf18CfValueItemManager
 	.4byte 0
 	.4byte func_80173AEC
 	.4byte func_80174650
 	.4byte func_80173894
 	.4byte func_801738A4
-.endobj __vt__cf_CfValueItemManager
+.endobj __vt__Q22cf18CfValueItemManager
 
 .obj cf_CfValueItemManager_hierarchy, global
-	.4byte __RTTI__cf_CfMapItemManager
+	.4byte __RTTI__Q22cf16CfMapItemManager
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj cf_CfValueItemManager_hierarchy
 
 
-.obj __vt__cf_CfMapItemManager, global
-	.4byte __RTTI__cf_CfMapItemManager
+.obj __vt__Q22cf16CfMapItemManager, global
+	.4byte __RTTI__Q22cf16CfMapItemManager
 	.4byte 0
 	.4byte func_801738AC
 	.4byte func_801737CC
 	.4byte func_801737D4
 	.4byte func_8017389C
-.endobj __vt__cf_CfMapItemManager
+.endobj __vt__Q22cf16CfMapItemManager
 
 
 .obj jumptable_80534EE0, global
@@ -2389,15 +2389,15 @@
 	.asciz "itm?Per"
 .endobj lbl_80664D20
 
-.obj __RTTI__cf_CfValueItemManager, global
+.obj __RTTI__Q22cf18CfValueItemManager, global
 	.4byte cf_CfValueItemManager_typestr
 	.4byte cf_CfValueItemManager_hierarchy
-.endobj __RTTI__cf_CfValueItemManager
+.endobj __RTTI__Q22cf18CfValueItemManager
 
-.obj __RTTI__cf_CfMapItemManager, global
+.obj __RTTI__Q22cf16CfMapItemManager, global
 	.4byte cf_CfMapItemManager_typestr
 	.4byte 0
-.endobj __RTTI__cf_CfMapItemManager
+.endobj __RTTI__Q22cf16CfMapItemManager
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

@@ -6,9 +6,9 @@
 
 
 .fn __ct__CPcKizunaCur, global
-/* 8025D470 00226A30  3C C0 80 54 */	lis r6, __vt__CPcKizunaCur@ha
+/* 8025D470 00226A30  3C C0 80 54 */	lis r6, __vt__12CPcKizunaCur@ha
 /* 8025D474 00226A34  38 A0 00 00 */	li r5, 0
-/* 8025D478 00226A38  38 C6 AE 64 */	addi r6, r6, __vt__CPcKizunaCur@l
+/* 8025D478 00226A38  38 C6 AE 64 */	addi r6, r6, __vt__12CPcKizunaCur@l
 /* 8025D47C 00226A3C  38 00 00 01 */	li r0, 1
 /* 8025D480 00226A40  90 C3 00 00 */	stw r6, 0(r3)
 /* 8025D484 00226A44  90 83 00 04 */	stw r4, 4(r3)
@@ -240,9 +240,9 @@
 .fn __ct__CPcKizunagram, global
 /* 8025D794 00226D54  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8025D798 00226D58  7C 08 02 A6 */	mflr r0
-/* 8025D79C 00226D5C  3C 80 80 54 */	lis r4, __vt__CPcKizunagram@ha
+/* 8025D79C 00226D5C  3C 80 80 54 */	lis r4, __vt__13CPcKizunagram@ha
 /* 8025D7A0 00226D60  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8025D7A4 00226D64  38 84 AD D0 */	addi r4, r4, __vt__CPcKizunagram@l
+/* 8025D7A4 00226D64  38 84 AD D0 */	addi r4, r4, __vt__13CPcKizunagram@l
 /* 8025D7A8 00226D68  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8025D7AC 00226D6C  93 C1 00 08 */	stw r30, 8(r1)
 /* 8025D7B0 00226D70  7C 7E 1B 78 */	mr r30, r3
@@ -2870,8 +2870,8 @@
 
 .balign 8
 
-.obj __vt__CPcKizunagram, global
-	.4byte __RTTI__CPcKizunagram
+.obj __vt__13CPcKizunagram, global
+	.4byte __RTTI__13CPcKizunagram
 	.4byte 0
 	.4byte __dt__CPcKizunagram
 	.4byte IWorkEvent_WorkEvent1
@@ -2905,35 +2905,35 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CPcKizunagram
+.endobj __vt__13CPcKizunagram
 
 .obj CPcKizunagram_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 .endobj CPcKizunagram_hierarchy
 
 
-.obj __vt__CPcKizunaCur, global
-	.4byte __RTTI__CPcKizunaCur
+.obj __vt__12CPcKizunaCur, global
+	.4byte __RTTI__12CPcKizunaCur
 	.4byte 0
 	.4byte __dt__CPcKizunaCur
-.endobj __vt__CPcKizunaCur
+.endobj __vt__12CPcKizunaCur
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CPcKizunagram, global
+.obj __RTTI__13CPcKizunagram, global
 	.4byte CPcKizunagram_typestr
 	.4byte CPcKizunagram_hierarchy
-.endobj __RTTI__CPcKizunagram
+.endobj __RTTI__13CPcKizunagram
 
-.obj __RTTI__CPcKizunaCur, global
+.obj __RTTI__12CPcKizunaCur, global
 	.4byte CPcKizunaCur_typestr
 	.4byte 0
-.endobj __RTTI__CPcKizunaCur
+.endobj __RTTI__12CPcKizunaCur
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

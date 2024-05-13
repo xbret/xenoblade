@@ -10,9 +10,9 @@
 /* 8044F5D4 00418B94  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8044F5D8 00418B98  7C 7F 1B 78 */	mr r31, r3
 /* 8044F5DC 00418B9C  4B FE 7F E1 */	bl __ct__CWorkThread
-/* 8044F5E0 00418BA0  3C A0 80 57 */	lis r5, __vt__CDeviceFileCri@ha
+/* 8044F5E0 00418BA0  3C A0 80 57 */	lis r5, __vt__14CDeviceFileCri@ha
 /* 8044F5E4 00418BA4  38 60 00 00 */	li r3, 0
-/* 8044F5E8 00418BA8  38 A5 FB 94 */	addi r5, r5, __vt__CDeviceFileCri@l
+/* 8044F5E8 00418BA8  38 A5 FB 94 */	addi r5, r5, __vt__14CDeviceFileCri@l
 /* 8044F5EC 00418BAC  38 00 FF FF */	li r0, -1
 /* 8044F5F0 00418BB0  38 85 00 A0 */	addi r4, r5, 0xa0
 /* 8044F5F4 00418BB4  90 BF 00 00 */	stw r5, 0(r31)
@@ -75,9 +75,9 @@
 /* 8044F6B8 00418C78  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8044F6BC 00418C7C  7C 7D 1B 78 */	mr r29, r3
 /* 8044F6C0 00418C80  41 82 00 64 */	beq .L_8044F724
-/* 8044F6C4 00418C84  3C 80 80 57 */	lis r4, __vt__CDeviceFileCri@ha
+/* 8044F6C4 00418C84  3C 80 80 57 */	lis r4, __vt__14CDeviceFileCri@ha
 /* 8044F6C8 00418C88  7F A5 EB 78 */	mr r5, r29
-/* 8044F6CC 00418C8C  38 84 FB 94 */	addi r4, r4, __vt__CDeviceFileCri@l
+/* 8044F6CC 00418C8C  38 84 FB 94 */	addi r4, r4, __vt__14CDeviceFileCri@l
 /* 8044F6D0 00418C90  90 83 00 00 */	stw r4, 0(r3)
 /* 8044F6D4 00418C94  38 04 00 A0 */	addi r0, r4, 0xa0
 /* 8044F6D8 00418C98  90 03 01 C4 */	stw r0, 0x1c4(r3)
@@ -1636,8 +1636,8 @@
 .endobj jumptable_8056FB70
 
 
-.obj __vt__CDeviceFileCri, global
-	.4byte __RTTI__CDeviceFileCri
+.obj __vt__14CDeviceFileCri, global
+	.4byte __RTTI__14CDeviceFileCri
 	.4byte 0
 	.4byte __dt__CDeviceFileCri
 	.4byte IWorkEvent_WorkEvent1
@@ -1677,17 +1677,17 @@
 	.4byte CDeviceFileCri_WorkThreadEvent4
 	.4byte CDeviceFileCri_WorkThreadEvent5
 	.4byte CDeviceFileCri_WorkThreadEvent6
-	.4byte __RTTI__CDeviceFileCri
+	.4byte __RTTI__14CDeviceFileCri
 	.4byte 0xFFFFFE3C
 	.4byte func_80450B4C
 	.4byte func_80450B44
 	.4byte func_80450AB8
-.endobj __vt__CDeviceFileCri
+.endobj __vt__14CDeviceFileCri
 
 .obj CDeviceFileCri_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
 	.4byte 0
 .endobj CDeviceFileCri_hierarchy
@@ -1719,10 +1719,10 @@
 	.4byte 0
 .endobj lbl_80665FF8
 
-.obj __RTTI__CDeviceFileCri, global
+.obj __RTTI__14CDeviceFileCri, global
 	.4byte CDeviceFileCri_typestr
 	.4byte CDeviceFileCri_hierarchy
-.endobj __RTTI__CDeviceFileCri
+.endobj __RTTI__14CDeviceFileCri
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

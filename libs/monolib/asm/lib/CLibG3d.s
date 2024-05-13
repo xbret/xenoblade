@@ -10,9 +10,9 @@
 /* 8045D160 00426720  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8045D164 00426724  7C 7F 1B 78 */	mr r31, r3
 /* 8045D168 00426728  4B FD A4 55 */	bl __ct__CWorkThread
-/* 8045D16C 0042672C  3C 60 80 57 */	lis r3, __vt__CLibG3d@ha
+/* 8045D16C 0042672C  3C 60 80 57 */	lis r3, __vt__7CLibG3d@ha
 /* 8045D170 00426730  38 00 00 0C */	li r0, 0xc
-/* 8045D174 00426734  38 63 09 38 */	addi r3, r3, __vt__CLibG3d@l
+/* 8045D174 00426734  38 63 09 38 */	addi r3, r3, __vt__7CLibG3d@l
 /* 8045D178 00426738  90 7F 00 00 */	stw r3, 0(r31)
 /* 8045D17C 0042673C  7F E3 FB 78 */	mr r3, r31
 /* 8045D180 00426740  93 ED BE 48 */	stw r31, lbl_80667FC8@sda21(r13)
@@ -165,8 +165,8 @@
 
 .balign 8
 
-.obj __vt__CLibG3d, global
-	.4byte __RTTI__CLibG3d
+.obj __vt__7CLibG3d, global
+	.4byte __RTTI__7CLibG3d
 	.4byte 0
 	.4byte __dt__CLibG3d
 	.4byte IWorkEvent_WorkEvent1
@@ -206,12 +206,12 @@
 	.4byte CLibG3d_WorkThreadEvent4
 	.4byte CLibG3d_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-.endobj __vt__CLibG3d
+.endobj __vt__7CLibG3d
 
 .obj CLibG3d_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -222,10 +222,10 @@
 
 .balign 8
 
-.obj __RTTI__CLibG3d, global
+.obj __RTTI__7CLibG3d, global
 	.4byte CLibG3d_typestr
 	.4byte CLibG3d_hierarchy
-.endobj __RTTI__CLibG3d
+.endobj __RTTI__7CLibG3d
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

@@ -5,11 +5,11 @@
 .fn __ct__CScnIdMan, global
 /* 8049E458 00467A18  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049E45C 00467A1C  7C 08 02 A6 */	mflr r0
-/* 8049E460 00467A20  3C C0 80 57 */	lis r6, __vt__CScnIdMan@ha
+/* 8049E460 00467A20  3C C0 80 57 */	lis r6, __vt__9CScnIdMan@ha
 /* 8049E464 00467A24  7C 87 23 78 */	mr r7, r4
 /* 8049E468 00467A28  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8049E46C 00467A2C  38 00 00 00 */	li r0, 0
-/* 8049E470 00467A30  38 C6 24 C8 */	addi r6, r6, __vt__CScnIdMan@l
+/* 8049E470 00467A30  38 C6 24 C8 */	addi r6, r6, __vt__9CScnIdMan@l
 /* 8049E474 00467A34  38 A0 00 06 */	li r5, 6
 /* 8049E478 00467A38  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8049E47C 00467A3C  7C 7F 1B 78 */	mr r31, r3
@@ -38,9 +38,9 @@
 /* 8049E4CC 00467A8C  93 C1 00 08 */	stw r30, 8(r1)
 /* 8049E4D0 00467A90  7C 7E 1B 78 */	mr r30, r3
 /* 8049E4D4 00467A94  41 82 00 2C */	beq .L_8049E500
-/* 8049E4D8 00467A98  3C A0 80 57 */	lis r5, __vt__CScnIdMan@ha
+/* 8049E4D8 00467A98  3C A0 80 57 */	lis r5, __vt__9CScnIdMan@ha
 /* 8049E4DC 00467A9C  7F C4 F3 78 */	mr r4, r30
-/* 8049E4E0 00467AA0  38 A5 24 C8 */	addi r5, r5, __vt__CScnIdMan@l
+/* 8049E4E0 00467AA0  38 A5 24 C8 */	addi r5, r5, __vt__9CScnIdMan@l
 /* 8049E4E4 00467AA4  90 A3 00 00 */	stw r5, 0(r3)
 /* 8049E4E8 00467AA8  80 63 00 04 */	lwz r3, 4(r3)
 /* 8049E4EC 00467AAC  4B FF 7A 65 */	bl func_80495F50
@@ -130,21 +130,21 @@
 
 .balign 8
 
-.obj __vt__CScnIdMan, global
-	.4byte __RTTI__CScnIdMan
+.obj __vt__9CScnIdMan, global
+	.4byte __RTTI__9CScnIdMan
 	.4byte 0
 	.4byte __dt__CScnIdMan
 	.4byte func_8049E570
-.endobj __vt__CScnIdMan
+.endobj __vt__9CScnIdMan
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CScnIdMan, global
+.obj __RTTI__9CScnIdMan, global
 	.4byte CScnIdMan_typestr
 	.4byte 0
-.endobj __RTTI__CScnIdMan
+.endobj __RTTI__9CScnIdMan
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

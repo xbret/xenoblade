@@ -11,9 +11,9 @@
 /* 8020D3B4 001D6974  7C 7D 1B 78 */	mr r29, r3
 /* 8020D3B8 001D6978  7C 9E 23 78 */	mr r30, r4
 /* 8020D3BC 001D697C  4B FF B5 25 */	bl __ct__cf_CfGimmick
-/* 8020D3C0 001D6980  3C 60 80 54 */	lis r3, __vt__cf_CfGimmickWarp@ha
+/* 8020D3C0 001D6980  3C 60 80 54 */	lis r3, __vt__Q22cf13CfGimmickWarp@ha
 /* 8020D3C4 001D6984  38 00 00 04 */	li r0, 4
-/* 8020D3C8 001D6988  38 63 91 68 */	addi r3, r3, __vt__cf_CfGimmickWarp@l
+/* 8020D3C8 001D6988  38 63 91 68 */	addi r3, r3, __vt__Q22cf13CfGimmickWarp@l
 /* 8020D3CC 001D698C  90 7D 00 00 */	stw r3, 0(r29)
 /* 8020D3D0 001D6990  B0 1D 00 82 */	sth r0, 0x82(r29)
 /* 8020D3D4 001D6994  4B E2 D6 61 */	bl func_8003AA34
@@ -201,8 +201,8 @@
 /* 8020D698 001D6C58  93 C1 00 08 */	stw r30, 8(r1)
 /* 8020D69C 001D6C5C  7C 7E 1B 78 */	mr r30, r3
 /* 8020D6A0 001D6C60  41 82 00 40 */	beq .L_8020D6E0
-/* 8020D6A4 001D6C64  3C 80 80 54 */	lis r4, __vt__cf_CfGimmickWarp@ha
-/* 8020D6A8 001D6C68  38 84 91 68 */	addi r4, r4, __vt__cf_CfGimmickWarp@l
+/* 8020D6A4 001D6C64  3C 80 80 54 */	lis r4, __vt__Q22cf13CfGimmickWarp@ha
+/* 8020D6A8 001D6C68  38 84 91 68 */	addi r4, r4, __vt__Q22cf13CfGimmickWarp@l
 /* 8020D6AC 001D6C6C  90 83 00 00 */	stw r4, 0(r3)
 /* 8020D6B0 001D6C70  4B FF B8 35 */	bl func_80208EE4
 /* 8020D6B4 001D6C74  38 7E 00 7C */	addi r3, r30, 0x7c
@@ -1996,8 +1996,8 @@
 .endobj lbl_805390F0
 
 
-.obj __vt__cf_CfGimmickWarp, global
-	.4byte __RTTI__cf_CfGimmickWarp
+.obj __vt__Q22cf13CfGimmickWarp, global
+	.4byte __RTTI__Q22cf13CfGimmickWarp
 	.4byte 0
 	.4byte __dt__cf_CfGimmickWarp
 	.4byte func_8020D7BC
@@ -2006,12 +2006,12 @@
 	.4byte func_801F4BF8
 	.4byte func_801F4C8C
 	.4byte func_8020D7DC
-.endobj __vt__cf_CfGimmickWarp
+.endobj __vt__Q22cf13CfGimmickWarp
 
 .obj cf_CfGimmickWarp_hierarchy, global
-	.4byte __RTTI__cf_IObjectInfo
+	.4byte __RTTI__Q22cf11IObjectInfo
 	.4byte 0
-	.4byte __RTTI__cf_CfGimmick
+	.4byte __RTTI__Q22cf9CfGimmick
 	.4byte 0
 	.4byte 0
 .endobj cf_CfGimmickWarp_hierarchy
@@ -2020,10 +2020,10 @@
 
 .balign 8
 
-.obj __RTTI__cf_CfGimmickWarp, global
+.obj __RTTI__Q22cf13CfGimmickWarp, global
 	.4byte cf_CfGimmickWarp_typestr
 	.4byte cf_CfGimmickWarp_hierarchy
-.endobj __RTTI__cf_CfGimmickWarp
+.endobj __RTTI__Q22cf13CfGimmickWarp
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

@@ -10,9 +10,9 @@
 /* 80183734 0014CCF4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80183738 0014CCF8  7C 7F 1B 78 */	mr r31, r3
 /* 8018373C 0014CCFC  4B FE EE A9 */	bl __ct__CREvtModel
-/* 80183740 0014CD00  3C 60 80 53 */	lis r3, __vt__cf_CREvtModelPc@ha
+/* 80183740 0014CD00  3C 60 80 53 */	lis r3, __vt__Q22cf12CREvtModelPc@ha
 /* 80183744 0014CD04  38 80 00 00 */	li r4, 0
-/* 80183748 0014CD08  38 63 59 C0 */	addi r3, r3, __vt__cf_CREvtModelPc@l
+/* 80183748 0014CD08  38 63 59 C0 */	addi r3, r3, __vt__Q22cf12CREvtModelPc@l
 /* 8018374C 0014CD0C  C0 02 9E 58 */	lfs f0, float_8066A1D8@sda21(r2)
 /* 80183750 0014CD10  38 C3 00 44 */	addi r6, r3, 0x44
 /* 80183754 0014CD14  38 00 FF FF */	li r0, -1
@@ -95,8 +95,8 @@
 /* 80183874 0014CE34  93 C1 00 08 */	stw r30, 8(r1)
 /* 80183878 0014CE38  7C 7E 1B 78 */	mr r30, r3
 /* 8018387C 0014CE3C  41 82 00 40 */	beq .L_801838BC
-/* 80183880 0014CE40  3D 80 80 53 */	lis r12, __vt__cf_CREvtModelPc@ha
-/* 80183884 0014CE44  39 8C 59 C0 */	addi r12, r12, __vt__cf_CREvtModelPc@l
+/* 80183880 0014CE40  3D 80 80 53 */	lis r12, __vt__Q22cf12CREvtModelPc@ha
+/* 80183884 0014CE44  39 8C 59 C0 */	addi r12, r12, __vt__Q22cf12CREvtModelPc@l
 /* 80183888 0014CE48  91 83 00 00 */	stw r12, 0(r3)
 /* 8018388C 0014CE4C  38 0C 00 44 */	addi r0, r12, 0x44
 /* 80183890 0014CE50  90 03 00 38 */	stw r0, 0x38(r3)
@@ -1534,8 +1534,8 @@
 .endobj lbl_805359B0
 
 
-.obj __vt__cf_CREvtModelPc, global
-	.4byte __RTTI__cf_CREvtModelPc
+.obj __vt__Q22cf12CREvtModelPc, global
+	.4byte __RTTI__Q22cf12CREvtModelPc
 	.4byte 0
 	.4byte __ct__8018385C
 	.4byte func_801728F8
@@ -1552,7 +1552,7 @@
 	.4byte func_80172CC0
 	.4byte func_80183978
 	.4byte func_80183A3C
-	.4byte __RTTI__cf_CREvtModelPc
+	.4byte __RTTI__Q22cf12CREvtModelPc
 	.4byte 0xFFFFFFC8
 	.4byte func_80184B0C
 	.4byte IWorkEvent_WorkEvent1
@@ -1587,12 +1587,12 @@
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
 	.4byte func_80184A24
-.endobj __vt__cf_CREvtModelPc
+.endobj __vt__Q22cf12CREvtModelPc
 
 .obj cf_CREvtModelPc_hierarchy, global
-	.4byte __RTTI__cf_CREvtObj
+	.4byte __RTTI__Q22cf8CREvtObj
 	.4byte 0
-	.4byte __RTTI__cf_CREvtModel
+	.4byte __RTTI__Q22cf10CREvtModel
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1602,10 +1602,10 @@
 
 .balign 8
 
-.obj __RTTI__cf_CREvtModelPc, global
+.obj __RTTI__Q22cf12CREvtModelPc, global
 	.4byte cf_CREvtModelPc_typestr
 	.4byte cf_CREvtModelPc_hierarchy
-.endobj __RTTI__cf_CREvtModelPc
+.endobj __RTTI__Q22cf12CREvtModelPc
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

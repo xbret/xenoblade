@@ -12,9 +12,9 @@
 /* 801C35C0 0018CB80  93 C1 00 08 */	stw r30, 8(r1)
 /* 801C35C4 0018CB84  7C 7E 1B 78 */	mr r30, r3
 /* 801C35C8 0018CB88  4B FC 20 C9 */	bl __ct__cf_CREvtObj
-/* 801C35CC 0018CB8C  3C 60 80 53 */	lis r3, __vt__cf_CREvtLight@ha
+/* 801C35CC 0018CB8C  3C 60 80 53 */	lis r3, __vt__Q22cf10CREvtLight@ha
 /* 801C35D0 0018CB90  38 00 00 00 */	li r0, 0
-/* 801C35D4 0018CB94  38 63 75 48 */	addi r3, r3, __vt__cf_CREvtLight@l
+/* 801C35D4 0018CB94  38 63 75 48 */	addi r3, r3, __vt__Q22cf10CREvtLight@l
 /* 801C35D8 0018CB98  90 7E 00 00 */	stw r3, 0(r30)
 /* 801C35DC 0018CB9C  7F C3 F3 78 */	mr r3, r30
 /* 801C35E0 0018CBA0  90 1E 00 14 */	stw r0, 0x14(r30)
@@ -39,8 +39,8 @@
 /* 801C3620 0018CBE0  7C 7E 1B 78 */	mr r30, r3
 /* 801C3624 0018CBE4  41 82 00 84 */	beq .L_801C36A8
 /* 801C3628 0018CBE8  80 83 00 20 */	lwz r4, 0x20(r3)
-/* 801C362C 0018CBEC  3C A0 80 53 */	lis r5, __vt__cf_CREvtLight@ha
-/* 801C3630 0018CBF0  38 A5 75 48 */	addi r5, r5, __vt__cf_CREvtLight@l
+/* 801C362C 0018CBEC  3C A0 80 53 */	lis r5, __vt__Q22cf10CREvtLight@ha
+/* 801C3630 0018CBF0  38 A5 75 48 */	addi r5, r5, __vt__Q22cf10CREvtLight@l
 /* 801C3634 0018CBF4  90 A3 00 00 */	stw r5, 0(r3)
 /* 801C3638 0018CBF8  2C 04 00 00 */	cmpwi r4, 0
 /* 801C363C 0018CBFC  41 82 00 50 */	beq .L_801C368C
@@ -292,8 +292,8 @@
 
 .balign 8
 
-.obj __vt__cf_CREvtLight, global
-	.4byte __RTTI__cf_CREvtLight
+.obj __vt__Q22cf10CREvtLight, global
+	.4byte __RTTI__Q22cf10CREvtLight
 	.4byte 0
 	.4byte __ct__801C3604
 	.4byte func_801C37C8
@@ -303,10 +303,10 @@
 	.4byte func_801809A8
 	.4byte func_801696C4
 	.4byte func_801C37C4
-.endobj __vt__cf_CREvtLight
+.endobj __vt__Q22cf10CREvtLight
 
 .obj cf_CREvtLight_hierarchy, global
-	.4byte __RTTI__cf_CREvtObj
+	.4byte __RTTI__Q22cf8CREvtObj
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -316,10 +316,10 @@
 
 .balign 8
 
-.obj __RTTI__cf_CREvtLight, global
+.obj __RTTI__Q22cf10CREvtLight, global
 	.4byte cf_CREvtLight_typestr
 	.4byte cf_CREvtLight_hierarchy
-.endobj __RTTI__cf_CREvtLight
+.endobj __RTTI__Q22cf10CREvtLight
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

@@ -1216,8 +1216,8 @@
 
 .balign 8
 
-.obj __vt__cf_CfObjectImplEne, global
-	.4byte __RTTI__cf_CfObjectImplEne
+.obj __vt__Q22cf15CfObjectImplEne, global
+	.4byte __RTTI__Q22cf15CfObjectImplEne
 	.4byte 0
 	.4byte __dt__cf_CfObjectImplEne
 	.4byte func_80054A20
@@ -1262,11 +1262,11 @@
 	.4byte func_800C596C
 	.4byte func_800D0090
 	.4byte func_800CAB00
-	.4byte __RTTI__cf_CfObjectImplEne
+	.4byte __RTTI__Q22cf15CfObjectImplEne
 	.4byte 0xFFFFFFF4
 	.4byte func_800D10BC
 	.4byte func_800D10B4
-	.4byte __RTTI__cf_CfObjectImplEne
+	.4byte __RTTI__Q22cf15CfObjectImplEne
 	.4byte 0xFFFFFFF0
 	.4byte func_800D10C4
 	.4byte func_800C5988
@@ -1277,22 +1277,22 @@
 	.4byte func_800D0088
 	.4byte func_800D0A58
 	.4byte func_800CFFA0
-	.4byte __RTTI__cf_CfObjectImplEne
+	.4byte __RTTI__Q22cf15CfObjectImplEne
 	.4byte 0xFFFFFF98
 	.4byte func_800D10D4
 	.4byte func_800D10CC
 	.4byte func_800D0B04
 	.4byte func_800D1020
-.endobj __vt__cf_CfObjectImplEne
+.endobj __vt__Q22cf15CfObjectImplEne
 
 .obj cf_CfObjectImplEne_hierarchy, global
-	.4byte __RTTI__cf_IObjectInfo
+	.4byte __RTTI__Q22cf11IObjectInfo
 	.4byte 0x00000010
-	.4byte __RTTI__IActParamEvent
+	.4byte __RTTI__14IActParamEvent
 	.4byte 0
-	.4byte __RTTI__cf_CfObjectImpl
+	.4byte __RTTI__Q22cf8CfObjectImpl
 	.4byte 0
-	.4byte __RTTI__cf_CfObjectImplMove
+	.4byte __RTTI__Q22cf16CfObjectImplMove
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1308,10 +1308,10 @@
 	.4byte 0
 .endobj lbl_80664640
 
-.obj __RTTI__cf_CfObjectImplEne, global
+.obj __RTTI__Q22cf15CfObjectImplEne, global
 	.4byte cf_CfObjectImplEne_typestr
 	.4byte cf_CfObjectImplEne_hierarchy
-.endobj __RTTI__cf_CfObjectImplEne
+.endobj __RTTI__Q22cf15CfObjectImplEne
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

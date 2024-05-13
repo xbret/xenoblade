@@ -3,9 +3,9 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .fn __ct__CToken, global
-/* 8043A984 00403F44  3C 80 80 57 */	lis r4, __vt__CToken@ha
+/* 8043A984 00403F44  3C 80 80 57 */	lis r4, __vt__6CToken@ha
 /* 8043A988 00403F48  38 00 00 00 */	li r0, 0
-/* 8043A98C 00403F4C  38 84 ED A4 */	addi r4, r4, __vt__CToken@l
+/* 8043A98C 00403F4C  38 84 ED A4 */	addi r4, r4, __vt__6CToken@l
 /* 8043A990 00403F50  90 83 00 00 */	stw r4, 0(r3)
 /* 8043A994 00403F54  B0 03 11 64 */	sth r0, 0x1164(r3)
 /* 8043A998 00403F58  90 03 11 04 */	stw r0, 0x1104(r3)
@@ -1403,21 +1403,21 @@
 .endobj jumptable_8056ED78
 
 
-.obj __vt__CToken, global
-	.4byte __RTTI__CToken
+.obj __vt__6CToken, global
+	.4byte __RTTI__6CToken
 	.4byte 0
 	.4byte __dt__CToken
-.endobj __vt__CToken
+.endobj __vt__6CToken
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CToken, global
+.obj __RTTI__6CToken, global
 	.4byte CToken_typestr
 	.4byte 0
-.endobj __RTTI__CToken
+.endobj __RTTI__6CToken
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

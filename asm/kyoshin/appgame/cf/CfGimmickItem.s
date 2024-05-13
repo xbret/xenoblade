@@ -11,9 +11,9 @@
 /* 80210278 001D9838  7C 7D 1B 78 */	mr r29, r3
 /* 8021027C 001D983C  7C 9E 23 78 */	mr r30, r4
 /* 80210280 001D9840  4B FF 86 61 */	bl __ct__cf_CfGimmick
-/* 80210284 001D9844  3C 60 80 54 */	lis r3, __vt__cf_CfGimmickItem@ha
+/* 80210284 001D9844  3C 60 80 54 */	lis r3, __vt__Q22cf13CfGimmickItem@ha
 /* 80210288 001D9848  38 00 00 06 */	li r0, 6
-/* 8021028C 001D984C  38 63 92 50 */	addi r3, r3, __vt__cf_CfGimmickItem@l
+/* 8021028C 001D984C  38 63 92 50 */	addi r3, r3, __vt__Q22cf13CfGimmickItem@l
 /* 80210290 001D9850  90 7D 00 00 */	stw r3, 0(r29)
 /* 80210294 001D9854  B0 1D 00 82 */	sth r0, 0x82(r29)
 /* 80210298 001D9858  4B E2 A7 9D */	bl func_8003AA34
@@ -247,8 +247,8 @@
 /* 8021060C 001D9BCC  93 C1 00 08 */	stw r30, 8(r1)
 /* 80210610 001D9BD0  7C 7E 1B 78 */	mr r30, r3
 /* 80210614 001D9BD4  41 82 00 38 */	beq .L_8021064C
-/* 80210618 001D9BD8  3C 80 80 54 */	lis r4, __vt__cf_CfGimmickItem@ha
-/* 8021061C 001D9BDC  38 84 92 50 */	addi r4, r4, __vt__cf_CfGimmickItem@l
+/* 80210618 001D9BD8  3C 80 80 54 */	lis r4, __vt__Q22cf13CfGimmickItem@ha
+/* 8021061C 001D9BDC  38 84 92 50 */	addi r4, r4, __vt__Q22cf13CfGimmickItem@l
 /* 80210620 001D9BE0  90 83 00 00 */	stw r4, 0(r3)
 /* 80210624 001D9BE4  4B FF 88 C1 */	bl func_80208EE4
 /* 80210628 001D9BE8  38 7E 00 7C */	addi r3, r30, 0x7c
@@ -760,8 +760,8 @@
 .endobj lbl_80539208
 
 
-.obj __vt__cf_CfGimmickItem, global
-	.4byte __RTTI__cf_CfGimmickItem
+.obj __vt__Q22cf13CfGimmickItem, global
+	.4byte __RTTI__Q22cf13CfGimmickItem
 	.4byte 0
 	.4byte __dt__cf_CfGimmickItem
 	.4byte func_8020896C
@@ -770,12 +770,12 @@
 	.4byte func_801F4BF8
 	.4byte func_801F4C8C
 	.4byte func_80208988
-.endobj __vt__cf_CfGimmickItem
+.endobj __vt__Q22cf13CfGimmickItem
 
 .obj cf_CfGimmickItem_hierarchy, global
-	.4byte __RTTI__cf_IObjectInfo
+	.4byte __RTTI__Q22cf11IObjectInfo
 	.4byte 0
-	.4byte __RTTI__cf_CfGimmick
+	.4byte __RTTI__Q22cf9CfGimmick
 	.4byte 0
 	.4byte 0
 .endobj cf_CfGimmickItem_hierarchy
@@ -789,10 +789,10 @@
 	.4byte lbl_8066AD00
 .endobj lbl_806650B0
 
-.obj __RTTI__cf_CfGimmickItem, global
+.obj __RTTI__Q22cf13CfGimmickItem, global
 	.4byte cf_CfGimmickItem_typestr
 	.4byte cf_CfGimmickItem_hierarchy
-.endobj __RTTI__cf_CfGimmickItem
+.endobj __RTTI__Q22cf13CfGimmickItem
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

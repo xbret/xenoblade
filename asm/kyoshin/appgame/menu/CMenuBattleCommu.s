@@ -12,12 +12,12 @@
 /* 801AFE34 001793F4  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 801AFE38 001793F8  7C 7D 1B 78 */	mr r29, r3
 /* 801AFE3C 001793FC  48 29 4B DD */	bl __ct__8CProcessFv
-/* 801AFE40 00179400  3C 60 80 53 */	lis r3, __vt__CTTask_IUIBattle@ha
-/* 801AFE44 00179404  3C A0 80 53 */	lis r5, __vt__CMenuBattleCommu@ha
-/* 801AFE48 00179408  38 63 F9 90 */	addi r3, r3, __vt__CTTask_IUIBattle@l
+/* 801AFE40 00179400  3C 60 80 53 */	lis r3, "__vt__18CTTask<9IUIBattle>"@ha
+/* 801AFE44 00179404  3C A0 80 53 */	lis r5, __vt__16CMenuBattleCommu@ha
+/* 801AFE48 00179408  38 63 F9 90 */	addi r3, r3, "__vt__18CTTask<9IUIBattle>"@l
 /* 801AFE4C 0017940C  90 7D 00 10 */	stw r3, 0x10(r29)
 /* 801AFE50 00179410  3D 00 80 51 */	lis r8, __ptmf_null@ha
-/* 801AFE54 00179414  38 A5 6D F0 */	addi r5, r5, __vt__CMenuBattleCommu@l
+/* 801AFE54 00179414  38 A5 6D F0 */	addi r5, r5, __vt__16CMenuBattleCommu@l
 /* 801AFE58 00179418  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 801AFE5C 0017941C  38 85 00 24 */	addi r4, r5, 0x24
 /* 801AFE60 00179420  3B E0 00 00 */	li r31, 0
@@ -1042,8 +1042,8 @@
 /* 801B0D88 0017A348  41 82 00 28 */	beq .L_801B0DB0
 /* 801B0D8C 0017A34C  80 7F 00 38 */	lwz r3, 0x38(r31)
 /* 801B0D90 0017A350  38 80 00 00 */	li r4, 0
-/* 801B0D94 0017A354  38 AD 83 D8 */	addi r5, r13, __RTTI__cf_CfObjectImplPc@sda21
-/* 801B0D98 0017A358  38 CD 83 60 */	addi r6, r13, __RTTI__cf_CfObjectImpl@sda21
+/* 801B0D94 0017A354  38 AD 83 D8 */	addi r5, r13, __RTTI__Q22cf14CfObjectImplPc@sda21
+/* 801B0D98 0017A358  38 CD 83 60 */	addi r6, r13, __RTTI__Q22cf8CfObjectImpl@sda21
 /* 801B0D9C 0017A35C  38 E0 00 00 */	li r7, 0
 /* 801B0DA0 0017A360  48 10 8F E5 */	bl __dynamic_cast
 /* 801B0DA4 0017A364  80 03 03 6C */	lwz r0, 0x36c(r3)
@@ -1658,8 +1658,8 @@
 /* 801B1698 0017AC58  80 7F 00 38 */	lwz r3, 0x38(r31)
 /* 801B169C 0017AC5C  3B C0 00 00 */	li r30, 0
 /* 801B16A0 0017AC60  38 80 00 00 */	li r4, 0
-/* 801B16A4 0017AC64  38 AD 83 D8 */	addi r5, r13, __RTTI__cf_CfObjectImplPc@sda21
-/* 801B16A8 0017AC68  38 CD 83 60 */	addi r6, r13, __RTTI__cf_CfObjectImpl@sda21
+/* 801B16A4 0017AC64  38 AD 83 D8 */	addi r5, r13, __RTTI__Q22cf14CfObjectImplPc@sda21
+/* 801B16A8 0017AC68  38 CD 83 60 */	addi r6, r13, __RTTI__Q22cf8CfObjectImpl@sda21
 /* 801B16AC 0017AC6C  38 E0 00 00 */	li r7, 0
 /* 801B16B0 0017AC70  48 10 86 D5 */	bl __dynamic_cast
 /* 801B16B4 0017AC74  80 03 03 6C */	lwz r0, 0x36c(r3)
@@ -1861,8 +1861,8 @@
 
 .balign 8
 
-.obj __vt__CMenuBattleCommu, global
-	.4byte __RTTI__CMenuBattleCommu
+.obj __vt__16CMenuBattleCommu, global
+	.4byte __RTTI__16CMenuBattleCommu
 	.4byte 0
 	.4byte __dt__CMenuBattleCommu
 	.4byte CChildListNode_Reset
@@ -1871,7 +1871,7 @@
 	.4byte func_801B03FC
 	.4byte func_80108BE8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuBattleCommu
+	.4byte __RTTI__16CMenuBattleCommu
 	.4byte 0xFFFFFFA8
 	.4byte func_801B18B8
 	.4byte IWorkEvent_WorkEvent1
@@ -1905,27 +1905,27 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CMenuBattleCommu
+	.4byte __RTTI__16CMenuBattleCommu
 	.4byte 0xFFFFFFA4
 	.4byte func_801B18C8
 	.4byte func_801B18C0
 	.4byte func_801B0CDC
-.endobj __vt__CMenuBattleCommu
+.endobj __vt__16CMenuBattleCommu
 
 .obj CMenuBattleCommu_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x0000005C
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x00000058
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUIBattle
+	.4byte "__RTTI__18CTTask<9IUIBattle>"
 	.4byte 0
-	.4byte __RTTI__IUIBattle
+	.4byte __RTTI__9IUIBattle
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1936,10 +1936,10 @@
 
 .balign 8
 
-.obj __RTTI__CMenuBattleCommu, global
+.obj __RTTI__16CMenuBattleCommu, global
 	.4byte CMenuBattleCommu_typestr
 	.4byte CMenuBattleCommu_hierarchy
-.endobj __RTTI__CMenuBattleCommu
+.endobj __RTTI__16CMenuBattleCommu
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

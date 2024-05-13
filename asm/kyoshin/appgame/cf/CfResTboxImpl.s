@@ -9,9 +9,9 @@
 /* 801F8E40 001C2400  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801F8E44 001C2404  7C 7F 1B 78 */	mr r31, r3
 /* 801F8E48 001C2408  4B F7 39 A9 */	bl __ct__cf_CfResObjImpl
-/* 801F8E4C 001C240C  3C 80 80 54 */	lis r4, __vt__cf_CfResTboxImpl@ha
+/* 801F8E4C 001C240C  3C 80 80 54 */	lis r4, __vt__Q22cf13CfResTboxImpl@ha
 /* 801F8E50 001C2410  7F E3 FB 78 */	mr r3, r31
-/* 801F8E54 001C2414  38 84 89 C0 */	addi r4, r4, __vt__cf_CfResTboxImpl@l
+/* 801F8E54 001C2414  38 84 89 C0 */	addi r4, r4, __vt__Q22cf13CfResTboxImpl@l
 /* 801F8E58 001C2418  90 9F 00 10 */	stw r4, 0x10(r31)
 /* 801F8E5C 001C241C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 801F8E60 001C2420  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -367,8 +367,8 @@
 .endobj lbl_80538998
 
 
-.obj __vt__cf_CfResTboxImpl, global
-	.4byte __RTTI__cf_CfResTboxImpl
+.obj __vt__Q22cf13CfResTboxImpl, global
+	.4byte __RTTI__Q22cf13CfResTboxImpl
 	.4byte 0
 	.4byte __dt__cf_CfResTboxImpl
 	.4byte func_801F91B4
@@ -394,12 +394,12 @@
 	.4byte func_801F8E78
 	.4byte func_8016CD54
 	.4byte func_800BF30C
-.endobj __vt__cf_CfResTboxImpl
+.endobj __vt__Q22cf13CfResTboxImpl
 
 .obj cf_CfResTboxImpl_hierarchy, global
-	.4byte __RTTI__cf_CfResImpl
+	.4byte __RTTI__Q22cf5CfResImpl
 	.4byte 0
-	.4byte __RTTI__cf_CfResObjImpl
+	.4byte __RTTI__Q22cf12CfResObjImpl
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -409,10 +409,10 @@
 
 .balign 8
 
-.obj __RTTI__cf_CfResTboxImpl, global
+.obj __RTTI__Q22cf13CfResTboxImpl, global
 	.4byte cf_CfResTboxImpl_typestr
 	.4byte cf_CfResTboxImpl_hierarchy
-.endobj __RTTI__cf_CfResTboxImpl
+.endobj __RTTI__Q22cf13CfResTboxImpl
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

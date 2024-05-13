@@ -11,18 +11,18 @@
 /* 80438C44 00402204  7C 7F 1B 78 */	mr r31, r3
 /* 80438C48 00402208  93 C1 00 08 */	stw r30, 8(r1)
 /* 80438C4C 0040220C  4B FF E9 71 */	bl __ct__CWorkThread
-/* 80438C50 00402210  3C 80 80 57 */	lis r4, __vt__CProc@ha
-/* 80438C54 00402214  3C 60 80 57 */	lis r3, __vt___reslist_base_unsigned_long@ha
+/* 80438C50 00402210  3C 80 80 57 */	lis r4, __vt__5CProc@ha
+/* 80438C54 00402214  3C 60 80 57 */	lis r3, "__vt__17_reslist_base<Ul>"@ha
 /* 80438C58 00402218  3B C0 00 00 */	li r30, 0
 /* 80438C5C 0040221C  93 DF 01 D8 */	stw r30, 0x1d8(r31)
 /* 80438C60 00402220  38 FF 01 CC */	addi r7, r31, 0x1cc
-/* 80438C64 00402224  38 84 EA 58 */	addi r4, r4, __vt__CProc@l
-/* 80438C68 00402228  38 63 EB 10 */	addi r3, r3, __vt___reslist_base_unsigned_long@l
+/* 80438C64 00402224  38 84 EA 58 */	addi r4, r4, __vt__5CProc@l
+/* 80438C68 00402228  38 63 EB 10 */	addi r3, r3, "__vt__17_reslist_base<Ul>"@l
 /* 80438C6C 0040222C  90 9F 00 00 */	stw r4, 0(r31)
-/* 80438C70 00402230  3C 80 80 57 */	lis r4, __vt__reslist_unsigned_long@ha
+/* 80438C70 00402230  3C 80 80 57 */	lis r4, "__vt__11reslist<Ul>"@ha
 /* 80438C74 00402234  38 C0 FF FF */	li r6, -1
 /* 80438C78 00402238  90 7F 01 C4 */	stw r3, 0x1c4(r31)
-/* 80438C7C 0040223C  38 84 EA F8 */	addi r4, r4, __vt__reslist_unsigned_long@l
+/* 80438C7C 0040223C  38 84 EA F8 */	addi r4, r4, "__vt__11reslist<Ul>"@l
 /* 80438C80 00402240  38 A0 00 02 */	li r5, 2
 /* 80438C84 00402244  38 00 00 17 */	li r0, 0x17
 /* 80438C88 00402248  93 DF 01 DC */	stw r30, 0x1dc(r31)
@@ -90,9 +90,9 @@
 /* 80438D74 00402334  93 C1 00 08 */	stw r30, 8(r1)
 /* 80438D78 00402338  7C 7E 1B 78 */	mr r30, r3
 /* 80438D7C 0040233C  41 82 00 78 */	beq .L_80438DF4
-/* 80438D80 00402340  3C A0 80 57 */	lis r5, __vt___reslist_base_unsigned_long@ha
+/* 80438D80 00402340  3C A0 80 57 */	lis r5, "__vt__17_reslist_base<Ul>"@ha
 /* 80438D84 00402344  80 83 00 04 */	lwz r4, 4(r3)
-/* 80438D88 00402348  38 A5 EB 10 */	addi r5, r5, __vt___reslist_base_unsigned_long@l
+/* 80438D88 00402348  38 A5 EB 10 */	addi r5, r5, "__vt__17_reslist_base<Ul>"@l
 /* 80438D8C 0040234C  90 A3 00 00 */	stw r5, 0(r3)
 /* 80438D90 00402350  38 00 00 00 */	li r0, 0
 /* 80438D94 00402354  80 A4 00 00 */	lwz r5, 0(r4)
@@ -143,9 +143,9 @@
 /* 80438E2C 004023EC  7C 7E 1B 78 */	mr r30, r3
 /* 80438E30 004023F0  41 82 00 7C */	beq .L_80438EAC
 /* 80438E34 004023F4  41 82 00 68 */	beq .L_80438E9C
-/* 80438E38 004023F8  3C A0 80 57 */	lis r5, __vt___reslist_base_unsigned_long@ha
+/* 80438E38 004023F8  3C A0 80 57 */	lis r5, "__vt__17_reslist_base<Ul>"@ha
 /* 80438E3C 004023FC  80 83 00 04 */	lwz r4, 4(r3)
-/* 80438E40 00402400  38 A5 EB 10 */	addi r5, r5, __vt___reslist_base_unsigned_long@l
+/* 80438E40 00402400  38 A5 EB 10 */	addi r5, r5, "__vt__17_reslist_base<Ul>"@l
 /* 80438E44 00402404  90 A3 00 00 */	stw r5, 0(r3)
 /* 80438E48 00402408  38 00 00 00 */	li r0, 0
 /* 80438E4C 0040240C  80 84 00 00 */	lwz r4, 0(r4)
@@ -196,9 +196,9 @@
 /* 80438EE4 004024A4  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80438EE8 004024A8  7C 7D 1B 78 */	mr r29, r3
 /* 80438EEC 004024AC  41 82 00 B4 */	beq .L_80438FA0
-/* 80438EF0 004024B0  3C 80 80 57 */	lis r4, __vt__CProc@ha
+/* 80438EF0 004024B0  3C 80 80 57 */	lis r4, __vt__5CProc@ha
 /* 80438EF4 004024B4  80 A3 01 C8 */	lwz r5, 0x1c8(r3)
-/* 80438EF8 004024B8  38 84 EA 58 */	addi r4, r4, __vt__CProc@l
+/* 80438EF8 004024B8  38 84 EA 58 */	addi r4, r4, __vt__5CProc@l
 /* 80438EFC 004024BC  90 83 00 00 */	stw r4, 0(r3)
 /* 80438F00 004024C0  80 85 00 00 */	lwz r4, 0(r5)
 /* 80438F04 004024C4  48 00 00 08 */	b .L_80438F0C
@@ -210,9 +210,9 @@
 /* 80438F14 004024D4  37 E3 01 C4 */	addic. r31, r3, 0x1c4
 /* 80438F18 004024D8  41 82 00 6C */	beq .L_80438F84
 /* 80438F1C 004024DC  41 82 00 68 */	beq .L_80438F84
-/* 80438F20 004024E0  3C 80 80 57 */	lis r4, __vt___reslist_base_unsigned_long@ha
+/* 80438F20 004024E0  3C 80 80 57 */	lis r4, "__vt__17_reslist_base<Ul>"@ha
 /* 80438F24 004024E4  80 7F 00 04 */	lwz r3, 4(r31)
-/* 80438F28 004024E8  38 84 EB 10 */	addi r4, r4, __vt___reslist_base_unsigned_long@l
+/* 80438F28 004024E8  38 84 EB 10 */	addi r4, r4, "__vt__17_reslist_base<Ul>"@l
 /* 80438F2C 004024EC  90 9F 00 00 */	stw r4, 0(r31)
 /* 80438F30 004024F0  38 00 00 00 */	li r0, 0
 /* 80438F34 004024F4  80 83 00 00 */	lwz r4, 0(r3)
@@ -849,8 +849,8 @@
 
 .balign 8
 
-.obj __vt__CProc, global
-	.4byte __RTTI__CProc
+.obj __vt__5CProc, global
+	.4byte __RTTI__5CProc
 	.4byte 0
 	.4byte __dt__CProc
 	.4byte IWorkEvent_WorkEvent1
@@ -890,43 +890,43 @@
 	.4byte CProc_WorkThreadEvent4
 	.4byte CProc_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-.endobj __vt__CProc
+.endobj __vt__5CProc
 
 
-.obj __vt__reslist_unsigned_long, global
-	.4byte __RTTI__reslist_unsigned_long
+.obj "__vt__11reslist<Ul>", global
+	.4byte "__RTTI__11reslist<Ul>"
 	.4byte 0
 	.4byte __dt__reslist_unsigned_long
-.endobj __vt__reslist_unsigned_long
+.endobj "__vt__11reslist<Ul>"
 
 .obj reslist_unsigned_long_hierarchy, global
-	.4byte __RTTI___reslist_base_unsigned_long
+	.4byte "__RTTI__17_reslist_base<Ul>"
 	.4byte 0
 	.4byte 0
 .endobj reslist_unsigned_long_hierarchy
 
 
-.obj __vt___reslist_base_unsigned_long, global
-	.4byte __RTTI___reslist_base_unsigned_long
+.obj "__vt__17_reslist_base<Ul>", global
+	.4byte "__RTTI__17_reslist_base<Ul>"
 	.4byte 0
 	.4byte __dt___reslist_base_unsigned_long
 	.4byte 0
-.endobj __vt___reslist_base_unsigned_long
+.endobj "__vt__17_reslist_base<Ul>"
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__reslist_unsigned_long, global
+.obj "__RTTI__11reslist<Ul>", global
 	.4byte reslist_unsigned_long_typestr
 	.4byte reslist_unsigned_long_hierarchy
-.endobj __RTTI__reslist_unsigned_long
+.endobj "__RTTI__11reslist<Ul>"
 
-.obj __RTTI___reslist_base_unsigned_long, global
+.obj "__RTTI__17_reslist_base<Ul>", global
 	.4byte _reslist_base_unsigned_long_typestr
 	.4byte 0
-.endobj __RTTI___reslist_base_unsigned_long
+.endobj "__RTTI__17_reslist_base<Ul>"
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

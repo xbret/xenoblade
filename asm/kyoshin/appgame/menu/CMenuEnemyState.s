@@ -8,9 +8,9 @@
 .fn __ct__CPcSelectCursor, global
 /* 8010EA64 000D8024  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8010EA68 000D8028  7C 08 02 A6 */	mflr r0
-/* 8010EA6C 000D802C  3C 80 80 53 */	lis r4, __vt__CPcSelectCursor@ha
+/* 8010EA6C 000D802C  3C 80 80 53 */	lis r4, __vt__15CPcSelectCursor@ha
 /* 8010EA70 000D8030  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8010EA74 000D8034  38 84 FD 04 */	addi r4, r4, __vt__CPcSelectCursor@l
+/* 8010EA74 000D8034  38 84 FD 04 */	addi r4, r4, __vt__15CPcSelectCursor@l
 /* 8010EA78 000D8038  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8010EA7C 000D803C  3B E0 00 00 */	li r31, 0
 /* 8010EA80 000D8040  93 C1 00 08 */	stw r30, 8(r1)
@@ -514,12 +514,12 @@
 /* 8010F188 000D8748  93 A1 00 54 */	stw r29, 0x54(r1)
 /* 8010F18C 000D874C  7C 9D 23 78 */	mr r29, r4
 /* 8010F190 000D8750  48 33 58 89 */	bl __ct__8CProcessFv
-/* 8010F194 000D8754  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
-/* 8010F198 000D8758  3C A0 80 53 */	lis r5, __vt__CMenuEnemyState@ha
-/* 8010F19C 000D875C  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
+/* 8010F194 000D8754  3C 60 80 53 */	lis r3, "__vt__14CTTask<5IUICf>"@ha
+/* 8010F198 000D8758  3C A0 80 53 */	lis r5, __vt__15CMenuEnemyState@ha
+/* 8010F19C 000D875C  38 63 F7 40 */	addi r3, r3, "__vt__14CTTask<5IUICf>"@l
 /* 8010F1A0 000D8760  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 8010F1A4 000D8764  3D 00 80 51 */	lis r8, __ptmf_null@ha
-/* 8010F1A8 000D8768  38 A5 FC 08 */	addi r5, r5, __vt__CMenuEnemyState@l
+/* 8010F1A8 000D8768  38 A5 FC 08 */	addi r5, r5, __vt__15CMenuEnemyState@l
 /* 8010F1AC 000D876C  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 8010F1B0 000D8770  38 85 00 24 */	addi r4, r5, 0x24
 /* 8010F1B4 000D8774  3B C0 00 00 */	li r30, 0
@@ -5292,8 +5292,8 @@
 
 .balign 8
 
-.obj __vt__CMenuEnemyState, global
-	.4byte __RTTI__CMenuEnemyState
+.obj __vt__15CMenuEnemyState, global
+	.4byte __RTTI__15CMenuEnemyState
 	.4byte 0
 	.4byte __dt__CMenuEnemyState
 	.4byte CChildListNode_Reset
@@ -5302,7 +5302,7 @@
 	.4byte func_8010FDAC
 	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuEnemyState
+	.4byte __RTTI__15CMenuEnemyState
 	.4byte 0xFFFFFFA8
 	.4byte func_801135C8
 	.4byte IWorkEvent_WorkEvent1
@@ -5336,57 +5336,57 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CMenuEnemyState
+	.4byte __RTTI__15CMenuEnemyState
 	.4byte 0xFFFFFFA4
 	.4byte func_801135D8
 	.4byte func_801135D0
 	.4byte func_80110764
-.endobj __vt__CMenuEnemyState
+.endobj __vt__15CMenuEnemyState
 
 .obj CMenuEnemyState_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x0000005C
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x00000058
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUICf
+	.4byte "__RTTI__14CTTask<5IUICf>"
 	.4byte 0
-	.4byte __RTTI__IUICf
+	.4byte __RTTI__5IUICf
 	.4byte 0
 	.4byte 0
 .endobj CMenuEnemyState_hierarchy
 
 
-.obj __vt__CPcSelectCursor, global
-	.4byte __RTTI__CPcSelectCursor
+.obj __vt__15CPcSelectCursor, global
+	.4byte __RTTI__15CPcSelectCursor
 	.4byte 0
 	.4byte __dt__CPcSelectCursor
-.endobj __vt__CPcSelectCursor
+.endobj __vt__15CPcSelectCursor
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
 
-.obj __RTTI__CPcSelectCursor01, global
+.obj __RTTI__17CPcSelectCursor01, global
 	.4byte CPcSelectCursor01_typestr
 	.4byte 0
-.endobj __RTTI__CPcSelectCursor01
+.endobj __RTTI__17CPcSelectCursor01
 
-.obj __RTTI__CMenuEnemyState, global
+.obj __RTTI__15CMenuEnemyState, global
 	.4byte CMenuEnemyState_typestr
 	.4byte CMenuEnemyState_hierarchy
-.endobj __RTTI__CMenuEnemyState
+.endobj __RTTI__15CMenuEnemyState
 
-.obj __RTTI__CPcSelectCursor, global
+.obj __RTTI__15CPcSelectCursor, global
 	.4byte CPcSelectCursor_typestr
 	.4byte 0
-.endobj __RTTI__CPcSelectCursor
+.endobj __RTTI__15CPcSelectCursor
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

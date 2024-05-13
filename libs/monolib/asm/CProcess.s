@@ -9,9 +9,9 @@
 /* 80444A24 0040DFE4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80444A28 0040DFE8  7C 7F 1B 78 */	mr r31, r3
 /* 80444A2C 0040DFEC  48 00 1C B5 */	bl __ct__CChildListNode
-/* 80444A30 0040DFF0  3C 80 80 57 */	lis r4, __vt__CProcess@ha
+/* 80444A30 0040DFF0  3C 80 80 57 */	lis r4, __vt__8CProcess@ha
 /* 80444A34 0040DFF4  38 00 00 00 */	li r0, 0
-/* 80444A38 0040DFF8  38 84 F3 D8 */	addi r4, r4, __vt__CProcess@l
+/* 80444A38 0040DFF8  38 84 F3 D8 */	addi r4, r4, __vt__8CProcess@l
 /* 80444A3C 0040DFFC  3C 60 80 66 */	lis r3, lbl_8065A404@ha
 /* 80444A40 0040E000  90 9F 00 10 */	stw r4, 0x10(r31)
 /* 80444A44 0040E004  7F E4 FB 78 */	mr r4, r31
@@ -101,8 +101,8 @@
 /* 80444B58 0040E118  7C 7D 1B 78 */	mr r29, r3
 /* 80444B5C 0040E11C  41 82 00 CC */	beq .L_80444C28
 /* 80444B60 0040E120  80 A3 00 24 */	lwz r5, 0x24(r3)
-/* 80444B64 0040E124  3C 80 80 57 */	lis r4, __vt__CProcess@ha
-/* 80444B68 0040E128  38 84 F3 D8 */	addi r4, r4, __vt__CProcess@l
+/* 80444B64 0040E124  3C 80 80 57 */	lis r4, __vt__8CProcess@ha
+/* 80444B68 0040E128  38 84 F3 D8 */	addi r4, r4, __vt__8CProcess@l
 /* 80444B6C 0040E12C  90 83 00 10 */	stw r4, 0x10(r3)
 /* 80444B70 0040E130  2C 05 00 00 */	cmpwi r5, 0
 /* 80444B74 0040E134  41 82 00 0C */	beq .L_80444B80
@@ -2092,8 +2092,8 @@
 /* 804464C4 0040FA84  3F E0 80 44 */	lis r31, __dt__TChildListHeader_CProcess@ha
 /* 804464C8 0040FA88  38 9F 65 38 */	addi r4, r31, __dt__TChildListHeader_CProcess@l
 /* 804464CC 0040FA8C  93 C1 00 18 */	stw r30, 0x18(r1)
-/* 804464D0 0040FA90  3F C0 80 57 */	lis r30, __vt__TChildListHeader_CProcess@ha
-/* 804464D4 0040FA94  3B DE F3 FC */	addi r30, r30, __vt__TChildListHeader_CProcess@l
+/* 804464D0 0040FA90  3F C0 80 57 */	lis r30, "__vt__27TChildListHeader<8CProcess>"@ha
+/* 804464D4 0040FA94  3B DE F3 FC */	addi r30, r30, "__vt__27TChildListHeader<8CProcess>"@l
 /* 804464D8 0040FA98  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 804464DC 0040FA9C  3B A0 00 00 */	li r29, 0
 /* 804464E0 0040FAA0  93 81 00 10 */	stw r28, 0x10(r1)
@@ -2161,8 +2161,8 @@
 
 .balign 8
 
-.obj __vt__CProcess, global
-	.4byte __RTTI__CProcess
+.obj __vt__8CProcess, global
+	.4byte __RTTI__8CProcess
 	.4byte 0
 	.4byte __dt__CProcess
 	.4byte CChildListNode_Reset
@@ -2171,24 +2171,24 @@
 	.4byte 0
 	.4byte 0
 	.4byte CProcess_func_80043F20
-.endobj __vt__CProcess
+.endobj __vt__8CProcess
 
 
-.obj __vt__TChildListHeader_CProcess, global
-	.4byte __RTTI__TChildListHeader_CProcess
+.obj "__vt__27TChildListHeader<8CProcess>", global
+	.4byte "__RTTI__27TChildListHeader<8CProcess>"
 	.4byte 0
 	.4byte __dt__TChildListHeader_CProcess
-.endobj __vt__TChildListHeader_CProcess
+.endobj "__vt__27TChildListHeader<8CProcess>"
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__TChildListHeader_CProcess, global
+.obj "__RTTI__27TChildListHeader<8CProcess>", global
 	.4byte TChildListHeader_CProcess_typestr
 	.4byte 0
-.endobj __RTTI__TChildListHeader_CProcess
+.endobj "__RTTI__27TChildListHeader<8CProcess>"
 
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B

@@ -5,11 +5,11 @@
 .fn __ct__cf_CfHikariItemManager, global
 /* 802B2634 0027BBF4  94 21 FF C0 */	stwu r1, -0x40(r1)
 /* 802B2638 0027BBF8  7C 08 02 A6 */	mflr r0
-/* 802B263C 0027BBFC  3C 80 80 54 */	lis r4, __vt__cf_CfHikariItemManager@ha
+/* 802B263C 0027BBFC  3C 80 80 54 */	lis r4, __vt__Q22cf19CfHikariItemManager@ha
 /* 802B2640 0027BC00  38 A0 00 01 */	li r5, 1
 /* 802B2644 0027BC04  90 01 00 44 */	stw r0, 0x44(r1)
 /* 802B2648 0027BC08  38 00 00 00 */	li r0, 0
-/* 802B264C 0027BC0C  38 84 E5 A8 */	addi r4, r4, __vt__cf_CfHikariItemManager@l
+/* 802B264C 0027BC0C  38 84 E5 A8 */	addi r4, r4, __vt__Q22cf19CfHikariItemManager@l
 /* 802B2650 0027BC10  38 C0 00 00 */	li r6, 0
 /* 802B2654 0027BC14  93 E1 00 3C */	stw r31, 0x3c(r1)
 /* 802B2658 0027BC18  93 C1 00 38 */	stw r30, 0x38(r1)
@@ -119,9 +119,9 @@
 /* 802B27E0 0027BDA0  7C 7B 1B 78 */	mr r27, r3
 /* 802B27E4 0027BDA4  7C 9C 23 78 */	mr r28, r4
 /* 802B27E8 0027BDA8  41 82 00 94 */	beq .L_802B287C
-/* 802B27EC 0027BDAC  3C 80 80 54 */	lis r4, __vt__cf_CfHikariItemManager@ha
+/* 802B27EC 0027BDAC  3C 80 80 54 */	lis r4, __vt__Q22cf19CfHikariItemManager@ha
 /* 802B27F0 0027BDB0  3B C0 00 00 */	li r30, 0
-/* 802B27F4 0027BDB4  38 84 E5 A8 */	addi r4, r4, __vt__cf_CfHikariItemManager@l
+/* 802B27F4 0027BDB4  38 84 E5 A8 */	addi r4, r4, __vt__Q22cf19CfHikariItemManager@l
 /* 802B27F8 0027BDB8  90 83 00 00 */	stw r4, 0(r3)
 /* 802B27FC 0027BDBC  3B A0 00 00 */	li r29, 0
 /* 802B2800 0027BDC0  3B E0 00 00 */	li r31, 0
@@ -2414,15 +2414,15 @@
 
 .balign 8
 
-.obj __vt__cf_CfHikariItemManager, global
-	.4byte __RTTI__cf_CfHikariItemManager
+.obj __vt__Q22cf19CfHikariItemManager, global
+	.4byte __RTTI__Q22cf19CfHikariItemManager
 	.4byte 0
 	.4byte __dt__cf_CfHikariItemManager
 	.4byte func_802B2AE0
-.endobj __vt__cf_CfHikariItemManager
+.endobj __vt__Q22cf19CfHikariItemManager
 
 .obj cf_CfHikariItemManager_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -2433,10 +2433,10 @@
 
 .balign 8
 
-.obj __RTTI__cf_CfHikariItemManager, global
+.obj __RTTI__Q22cf19CfHikariItemManager, global
 	.4byte cf_CfHikariItemManager_typestr
 	.4byte cf_CfHikariItemManager_hierarchy
-.endobj __RTTI__cf_CfHikariItemManager
+.endobj __RTTI__Q22cf19CfHikariItemManager
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

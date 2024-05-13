@@ -5,10 +5,10 @@
 .fn __ct__CScnItemLight, global
 /* 804822A0 0044B860  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804822A4 0044B864  7C 08 02 A6 */	mflr r0
-/* 804822A8 0044B868  3D 00 80 57 */	lis r8, __vt__CScnItemLight@ha
+/* 804822A8 0044B868  3D 00 80 57 */	lis r8, __vt__13CScnItemLight@ha
 /* 804822AC 0044B86C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804822B0 0044B870  38 00 00 03 */	li r0, 3
-/* 804822B4 0044B874  39 08 15 50 */	addi r8, r8, __vt__CScnItemLight@l
+/* 804822B4 0044B874  39 08 15 50 */	addi r8, r8, __vt__13CScnItemLight@l
 /* 804822B8 0044B878  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804822BC 0044B87C  7C BF 2B 78 */	mr r31, r5
 /* 804822C0 0044B880  93 C1 00 08 */	stw r30, 8(r1)
@@ -142,8 +142,8 @@
 
 .balign 8
 
-.obj __vt__CScnItemLight, global
-	.4byte __RTTI__CScnItemLight
+.obj __vt__13CScnItemLight, global
+	.4byte __RTTI__13CScnItemLight
 	.4byte 0
 	.4byte __dt__CScnItemLight
 	.4byte func_80482388
@@ -151,10 +151,10 @@
 	.4byte func_80482288
 	.4byte func_804823A0
 	.4byte func_80482040
-.endobj __vt__CScnItemLight
+.endobj __vt__13CScnItemLight
 
 .obj CScnItemLight_hierarchy, global
-	.4byte __RTTI__CScnItem
+	.4byte __RTTI__4CScnItem
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -164,10 +164,10 @@
 
 .balign 8
 
-.obj __RTTI__CScnItemLight, global
+.obj __RTTI__13CScnItemLight, global
 	.4byte CScnItemLight_typestr
 	.4byte CScnItemLight_hierarchy
-.endobj __RTTI__CScnItemLight
+.endobj __RTTI__13CScnItemLight
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

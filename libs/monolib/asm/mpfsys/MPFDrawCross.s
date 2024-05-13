@@ -6,9 +6,9 @@
 /* 80479F04 004434C4  88 0D C0 00 */	lbz r0, lbl_80668180@sda21(r13)
 /* 80479F08 004434C8  7C 00 07 75 */	extsb. r0, r0
 /* 80479F0C 004434CC  40 82 00 18 */	bne .L_80479F24
-/* 80479F10 004434D0  3C 60 80 57 */	lis r3, __vt__mpfsys_MPFDrawCross@ha
+/* 80479F10 004434D0  3C 60 80 57 */	lis r3, __vt__Q26mpfsys12MPFDrawCross@ha
 /* 80479F14 004434D4  38 00 00 01 */	li r0, 1
-/* 80479F18 004434D8  38 63 14 70 */	addi r3, r3, __vt__mpfsys_MPFDrawCross@l
+/* 80479F18 004434D8  38 63 14 70 */	addi r3, r3, __vt__Q26mpfsys12MPFDrawCross@l
 /* 80479F1C 004434DC  90 6D C0 04 */	stw r3, lbl_80668184@sda21(r13)
 /* 80479F20 004434E0  98 0D C0 00 */	stb r0, lbl_80668180@sda21(r13)
 .L_80479F24:

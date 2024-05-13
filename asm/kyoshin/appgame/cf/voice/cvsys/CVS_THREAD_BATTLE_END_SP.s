@@ -145,9 +145,9 @@
 /* 802AB7C0 00274D80  41 82 01 00 */	beq .L_802AB8C0
 /* 802AB7C4 00274D84  90 3F 00 2C */	stw r1, 0x2c(r31)
 /* 802AB7C8 00274D88  4B FF 82 B9 */	bl __ct__cf_CVS_THREAD
-/* 802AB7CC 00274D8C  3C 60 80 54 */	lis r3, __vt__cf_CVS_THREAD_BATTLE_END_SP@ha
+/* 802AB7CC 00274D8C  3C 60 80 54 */	lis r3, __vt__Q22cf24CVS_THREAD_BATTLE_END_SP@ha
 /* 802AB7D0 00274D90  2C 9E 00 00 */	cmpwi cr1, r30, 0
-/* 802AB7D4 00274D94  38 63 D9 48 */	addi r3, r3, __vt__cf_CVS_THREAD_BATTLE_END_SP@l
+/* 802AB7D4 00274D94  38 63 D9 48 */	addi r3, r3, __vt__Q22cf24CVS_THREAD_BATTLE_END_SP@l
 /* 802AB7D8 00274D98  90 7D 00 1C */	stw r3, 0x1c(r29)
 /* 802AB7DC 00274D9C  38 80 00 00 */	li r4, 0
 /* 802AB7E0 00274DA0  93 DD 00 2C */	stw r30, 0x2c(r29)
@@ -833,18 +833,18 @@
 .endobj lbl_8053D93C
 
 
-.obj __vt__cf_CVS_THREAD_BATTLE_END_SP, global
-	.4byte __RTTI__cf_CVS_THREAD_BATTLE_END_SP
+.obj __vt__Q22cf24CVS_THREAD_BATTLE_END_SP, global
+	.4byte __RTTI__Q22cf24CVS_THREAD_BATTLE_END_SP
 	.4byte 0
 	.4byte func_802A3B50
 	.4byte func_802ABAC0
 	.4byte func_802ABB38
 	.4byte func_802A1EA0
 	.4byte func_802A3740
-.endobj __vt__cf_CVS_THREAD_BATTLE_END_SP
+.endobj __vt__Q22cf24CVS_THREAD_BATTLE_END_SP
 
 .obj cf_CVS_THREAD_BATTLE_END_SP_hierarchy, global
-	.4byte __RTTI__cf_CVS_THREAD
+	.4byte __RTTI__Q22cf10CVS_THREAD
 	.4byte 0
 	.4byte 0
 .endobj cf_CVS_THREAD_BATTLE_END_SP_hierarchy
@@ -853,10 +853,10 @@
 
 .balign 8
 
-.obj __RTTI__cf_CVS_THREAD_BATTLE_END_SP, global
+.obj __RTTI__Q22cf24CVS_THREAD_BATTLE_END_SP, global
 	.4byte cf_CVS_THREAD_BATTLE_END_SP_typestr
 	.4byte cf_CVS_THREAD_BATTLE_END_SP_hierarchy
-.endobj __RTTI__cf_CVS_THREAD_BATTLE_END_SP
+.endobj __RTTI__Q22cf24CVS_THREAD_BATTLE_END_SP
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

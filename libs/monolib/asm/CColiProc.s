@@ -3,9 +3,9 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .fn __ct__CColiProc, global
-/* 804B2578 0047BB38  3C 80 80 57 */	lis r4, __vt__CColiProc@ha
+/* 804B2578 0047BB38  3C 80 80 57 */	lis r4, __vt__9CColiProc@ha
 /* 804B257C 0047BB3C  38 00 00 00 */	li r0, 0
-/* 804B2580 0047BB40  38 84 2B E0 */	addi r4, r4, __vt__CColiProc@l
+/* 804B2580 0047BB40  38 84 2B E0 */	addi r4, r4, __vt__9CColiProc@l
 /* 804B2584 0047BB44  90 83 00 00 */	stw r4, 0(r3)
 /* 804B2588 0047BB48  90 03 00 04 */	stw r0, 4(r3)
 /* 804B258C 0047BB4C  4E 80 00 20 */	blr 
@@ -752,8 +752,8 @@
 /* 804B2FC4 0047C584  3F E0 80 66 */	lis r31, lbl_8065F9A8@ha
 /* 804B2FC8 0047C588  38 7F F9 A8 */	addi r3, r31, lbl_8065F9A8@l
 /* 804B2FCC 0047C58C  4B FF F5 AD */	bl __ct__CColiProc
-/* 804B2FD0 0047C590  3C 60 80 57 */	lis r3, __vt__CColiResCall@ha
-/* 804B2FD4 0047C594  38 63 2B F0 */	addi r3, r3, __vt__CColiResCall@l
+/* 804B2FD0 0047C590  3C 60 80 57 */	lis r3, __vt__12CColiResCall@ha
+/* 804B2FD4 0047C594  38 63 2B F0 */	addi r3, r3, __vt__12CColiResCall@l
 /* 804B2FD8 0047C598  90 7F F9 A8 */	stw r3, lbl_8065F9A8@l(r31)
 /* 804B2FDC 0047C59C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 804B2FE0 0047C5A0  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -782,22 +782,22 @@
 
 .balign 8
 
-.obj __vt__CColiProc, global
-	.4byte __RTTI__CColiProc
+.obj __vt__9CColiProc, global
+	.4byte __RTTI__9CColiProc
 	.4byte 0
 	.4byte func_804A822C
 	.4byte 0
-.endobj __vt__CColiProc
+.endobj __vt__9CColiProc
 
 
-.obj __vt__CColiResCall, global
-	.4byte __RTTI__CColiResCall
+.obj __vt__12CColiResCall, global
+	.4byte __RTTI__12CColiResCall
 	.4byte 0
 	.4byte func_804B2FF0
-.endobj __vt__CColiResCall
+.endobj __vt__12CColiResCall
 
 .obj CColiResCall_hierarchy, global
-	.4byte __RTTI__CColiProc
+	.4byte __RTTI__9CColiProc
 	.4byte 0
 	.4byte 0
 .endobj CColiResCall_hierarchy
@@ -872,10 +872,10 @@
 
 .balign 8
 
-.obj __RTTI__CColiResCall, global
+.obj __RTTI__12CColiResCall, global
 	.4byte CColiResCall_typestr
 	.4byte CColiResCall_hierarchy
-.endobj __RTTI__CColiResCall
+.endobj __RTTI__12CColiResCall
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

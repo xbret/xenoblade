@@ -4,10 +4,10 @@
 
 .fn __ct__CVirtualLightObj, global
 /* 80494798 0045DD58  C0 02 CE C8 */	lfs f0, float_8066D248@sda21(r2)
-/* 8049479C 0045DD5C  3C C0 80 57 */	lis r6, __vt__CVirtualLightObj@ha
+/* 8049479C 0045DD5C  3C C0 80 57 */	lis r6, __vt__16CVirtualLightObj@ha
 /* 804947A0 0045DD60  38 80 00 00 */	li r4, 0
 /* 804947A4 0045DD64  38 A0 00 01 */	li r5, 1
-/* 804947A8 0045DD68  38 C6 21 00 */	addi r6, r6, __vt__CVirtualLightObj@l
+/* 804947A8 0045DD68  38 C6 21 00 */	addi r6, r6, __vt__16CVirtualLightObj@l
 /* 804947AC 0045DD6C  38 00 FF FF */	li r0, -1
 /* 804947B0 0045DD70  90 C3 00 00 */	stw r6, 0(r3)
 /* 804947B4 0045DD74  D0 03 00 04 */	stfs f0, 4(r3)
@@ -1427,14 +1427,14 @@
 
 .balign 8
 
-.obj __vt__CVirtualLightObj, global
-	.4byte __RTTI__CVirtualLightObj
+.obj __vt__16CVirtualLightObj, global
+	.4byte __RTTI__16CVirtualLightObj
 	.4byte 0
 	.4byte __dt__CVirtualLightObj
 	.4byte func_804947EC
 	.4byte func_8049488C
 	.4byte 0
-.endobj __vt__CVirtualLightObj
+.endobj __vt__16CVirtualLightObj
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

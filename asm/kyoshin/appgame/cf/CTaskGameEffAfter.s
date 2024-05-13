@@ -16,15 +16,15 @@
 /* 8006151C 0002AADC  7C 7F 1B 78 */	mr r31, r3
 /* 80061520 0002AAE0  41 82 00 58 */	beq .L_80061578
 /* 80061524 0002AAE4  48 3E 34 F5 */	bl __ct__8CProcessFv
-/* 80061528 0002AAE8  3C 60 80 53 */	lis r3, __vt__CTTask_CTaskGameEffAfter@ha
+/* 80061528 0002AAE8  3C 60 80 53 */	lis r3, "__vt__27CTTask<17CTaskGameEffAfter>"@ha
 /* 8006152C 0002AAEC  3C A0 80 51 */	lis r5, __ptmf_null@ha
-/* 80061530 0002AAF0  38 63 9E 80 */	addi r3, r3, __vt__CTTask_CTaskGameEffAfter@l
+/* 80061530 0002AAF0  38 63 9E 80 */	addi r3, r3, "__vt__27CTTask<17CTaskGameEffAfter>"@l
 /* 80061534 0002AAF4  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 80061538 0002AAF8  38 A5 CE 10 */	addi r5, r5, __ptmf_null@l
 /* 8006153C 0002AAFC  80 05 00 04 */	lwz r0, 4(r5)
-/* 80061540 0002AB00  3C 60 80 53 */	lis r3, __vt__CTaskGameEffAfter@ha
+/* 80061540 0002AB00  3C 60 80 53 */	lis r3, __vt__17CTaskGameEffAfter@ha
 /* 80061544 0002AB04  80 85 00 00 */	lwz r4, 0(r5)
-/* 80061548 0002AB08  38 63 9E 38 */	addi r3, r3, __vt__CTaskGameEffAfter@l
+/* 80061548 0002AB08  38 63 9E 38 */	addi r3, r3, __vt__17CTaskGameEffAfter@l
 /* 8006154C 0002AB0C  90 9F 00 3C */	stw r4, 0x3c(r31)
 /* 80061550 0002AB10  90 1F 00 40 */	stw r0, 0x40(r31)
 /* 80061554 0002AB14  80 05 00 08 */	lwz r0, 8(r5)
@@ -173,8 +173,8 @@
 
 .balign 8
 
-.obj __vt__CTaskGameEffAfter, global
-	.4byte __RTTI__CTaskGameEffAfter
+.obj __vt__17CTaskGameEffAfter, global
+	.4byte __RTTI__17CTaskGameEffAfter
 	.4byte 0
 	.4byte __dt__CTaskGameEffAfter
 	.4byte CChildListNode_Reset
@@ -183,23 +183,23 @@
 	.4byte func_80061650
 	.4byte func_800615F0
 	.4byte CProcess_func_80043F20
-.endobj __vt__CTaskGameEffAfter
+.endobj __vt__17CTaskGameEffAfter
 
 .obj CTaskGameEffAfter_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_CTaskGameEffAfter
+	.4byte "__RTTI__27CTTask<17CTaskGameEffAfter>"
 	.4byte 0
 	.4byte 0
 .endobj CTaskGameEffAfter_hierarchy
 
 
-.obj __vt__CTTask_CTaskGameEffAfter, global
-	.4byte __RTTI__CTTask_CTaskGameEffAfter
+.obj "__vt__27CTTask<17CTaskGameEffAfter>", global
+	.4byte "__RTTI__27CTTask<17CTaskGameEffAfter>"
 	.4byte 0
 	.4byte __dt__CTTask_CTaskGameEffAfter
 	.4byte CChildListNode_Reset
@@ -208,14 +208,14 @@
 	.4byte func_80061650
 	.4byte func_80061698
 	.4byte CProcess_func_80043F20
-.endobj __vt__CTTask_CTaskGameEffAfter
+.endobj "__vt__27CTTask<17CTaskGameEffAfter>"
 
 .obj CTTask_CTaskGameEffAfter_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
 	.4byte 0
 .endobj CTTask_CTaskGameEffAfter_hierarchy
@@ -225,15 +225,15 @@
 
 .balign 8
 
-.obj __RTTI__CTaskGameEffAfter, global
+.obj __RTTI__17CTaskGameEffAfter, global
 	.4byte CTaskGameEffAfter_typestr
 	.4byte CTaskGameEffAfter_hierarchy
-.endobj __RTTI__CTaskGameEffAfter
+.endobj __RTTI__17CTaskGameEffAfter
 
-.obj __RTTI__CTTask_CTaskGameEffAfter, global
+.obj "__RTTI__27CTTask<17CTaskGameEffAfter>", global
 	.4byte CTTask_CTaskGameEffAfter_typestr
 	.4byte CTTask_CTaskGameEffAfter_hierarchy
-.endobj __RTTI__CTTask_CTaskGameEffAfter
+.endobj "__RTTI__27CTTask<17CTaskGameEffAfter>"
 
 
 

@@ -26,16 +26,16 @@
 /* 8022F454 001F8A14  7C 7E 1B 78 */	mr r30, r3
 /* 8022F458 001F8A18  41 82 00 A0 */	beq .L_8022F4F8
 /* 8022F45C 001F8A1C  48 21 55 BD */	bl __ct__8CProcessFv
-/* 8022F460 001F8A20  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
+/* 8022F460 001F8A20  3C 60 80 53 */	lis r3, "__vt__14CTTask<5IUICf>"@ha
 /* 8022F464 001F8A24  3D 00 80 51 */	lis r8, __ptmf_null@ha
-/* 8022F468 001F8A28  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
+/* 8022F468 001F8A28  38 63 F7 40 */	addi r3, r3, "__vt__14CTTask<5IUICf>"@l
 /* 8022F46C 001F8A2C  90 7E 00 10 */	stw r3, 0x10(r30)
 /* 8022F470 001F8A30  39 08 CE 10 */	addi r8, r8, __ptmf_null@l
-/* 8022F474 001F8A34  3C A0 80 54 */	lis r5, __vt__CMenuArtsSet@ha
+/* 8022F474 001F8A34  3C A0 80 54 */	lis r5, __vt__12CMenuArtsSet@ha
 /* 8022F478 001F8A38  80 C8 00 04 */	lwz r6, 4(r8)
 /* 8022F47C 001F8A3C  3B E0 00 00 */	li r31, 0
 /* 8022F480 001F8A40  80 08 00 00 */	lwz r0, 0(r8)
-/* 8022F484 001F8A44  38 A5 9F C0 */	addi r5, r5, __vt__CMenuArtsSet@l
+/* 8022F484 001F8A44  38 A5 9F C0 */	addi r5, r5, __vt__12CMenuArtsSet@l
 /* 8022F488 001F8A48  90 1E 00 3C */	stw r0, 0x3c(r30)
 /* 8022F48C 001F8A4C  38 05 00 24 */	addi r0, r5, 0x24
 /* 8022F490 001F8A50  38 7E 00 60 */	addi r3, r30, 0x60
@@ -4433,9 +4433,9 @@
 /* 802331BC 001FC77C  90 01 01 14 */	stw r0, 0x114(r1)
 /* 802331C0 001FC780  39 61 01 10 */	addi r11, r1, 0x110
 /* 802331C4 001FC784  48 08 6F 99 */	bl _savegpr_29
-/* 802331C8 001FC788  3C 80 80 54 */	lis r4, __vt__CArtsList@ha
+/* 802331C8 001FC788  3C 80 80 54 */	lis r4, __vt__9CArtsList@ha
 /* 802331CC 001FC78C  7C 7E 1B 78 */	mr r30, r3
-/* 802331D0 001FC790  38 84 A0 C0 */	addi r4, r4, __vt__CArtsList@l
+/* 802331D0 001FC790  38 84 A0 C0 */	addi r4, r4, __vt__9CArtsList@l
 /* 802331D4 001FC794  90 83 00 00 */	stw r4, 0(r3)
 /* 802331D8 001FC798  38 63 00 04 */	addi r3, r3, 4
 /* 802331DC 001FC79C  48 22 C3 89 */	bl __ct__UnkClass_8045F564
@@ -7349,8 +7349,8 @@
 
 .balign 8
 
-.obj __vt__CMenuArtsSet, global
-	.4byte __RTTI__CMenuArtsSet
+.obj __vt__12CMenuArtsSet, global
+	.4byte __RTTI__12CMenuArtsSet
 	.4byte 0
 	.4byte __dt__CMenuArtsSet
 	.4byte CChildListNode_Reset
@@ -7359,25 +7359,25 @@
 	.4byte func_8022F228
 	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuArtsSet
+	.4byte __RTTI__12CMenuArtsSet
 	.4byte 0xFFFFFFA8
 	.4byte func_8022FA50
 	.4byte func_8022FA48
 	.4byte func_8022F364
-.endobj __vt__CMenuArtsSet
+.endobj __vt__12CMenuArtsSet
 
 .obj CMenuArtsSet_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000058
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUICf
+	.4byte "__RTTI__14CTTask<5IUICf>"
 	.4byte 0
-	.4byte __RTTI__IUICf
+	.4byte __RTTI__5IUICf
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -7436,8 +7436,8 @@
 .endobj jumptable_8053A09C
 
 
-.obj __vt__CArtsList, global
-	.4byte __RTTI__CArtsList
+.obj __vt__9CArtsList, global
+	.4byte __RTTI__9CArtsList
 	.4byte 0
 	.4byte __dt__CArtsList
 	.4byte IWorkEvent_WorkEvent1
@@ -7471,10 +7471,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CArtsList
+.endobj __vt__9CArtsList
 
 .obj CArtsList_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -7484,10 +7484,10 @@
 
 .balign 8
 
-.obj __RTTI__CMenuArtsSet, global
+.obj __RTTI__12CMenuArtsSet, global
 	.4byte CMenuArtsSet_typestr
 	.4byte CMenuArtsSet_hierarchy
-.endobj __RTTI__CMenuArtsSet
+.endobj __RTTI__12CMenuArtsSet
 
 
 .obj lbl_806651A0, global
@@ -7496,10 +7496,10 @@
 .endobj lbl_806651A0
 
 
-.obj __RTTI__CArtsList, global
+.obj __RTTI__9CArtsList, global
 	.4byte CArtsList_typestr
 	.4byte CArtsList_hierarchy
-.endobj __RTTI__CArtsList
+.endobj __RTTI__9CArtsList
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

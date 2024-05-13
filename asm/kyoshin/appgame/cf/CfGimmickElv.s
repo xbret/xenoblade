@@ -13,9 +13,9 @@
 /* 8020AB9C 001D415C  93 81 00 60 */	stw r28, 0x60(r1)
 /* 8020ABA0 001D4160  7C 7C 1B 78 */	mr r28, r3
 /* 8020ABA4 001D4164  4B FF DD 3D */	bl __ct__cf_CfGimmick
-/* 8020ABA8 001D4168  3C 60 80 54 */	lis r3, __vt__cf_CfGimmickElv@ha
+/* 8020ABA8 001D4168  3C 60 80 54 */	lis r3, __vt__Q22cf12CfGimmickElv@ha
 /* 8020ABAC 001D416C  38 00 00 03 */	li r0, 3
-/* 8020ABB0 001D4170  38 63 90 80 */	addi r3, r3, __vt__cf_CfGimmickElv@l
+/* 8020ABB0 001D4170  38 63 90 80 */	addi r3, r3, __vt__Q22cf12CfGimmickElv@l
 /* 8020ABB4 001D4174  90 7C 00 00 */	stw r3, 0(r28)
 /* 8020ABB8 001D4178  B0 1C 00 82 */	sth r0, 0x82(r28)
 /* 8020ABBC 001D417C  4B E2 FE 79 */	bl func_8003AA34
@@ -415,8 +415,8 @@
 /* 8020B198 001D4758  93 C1 00 08 */	stw r30, 8(r1)
 /* 8020B19C 001D475C  7C 7E 1B 78 */	mr r30, r3
 /* 8020B1A0 001D4760  41 82 00 50 */	beq .L_8020B1F0
-/* 8020B1A4 001D4764  3C 80 80 54 */	lis r4, __vt__cf_CfGimmickElv@ha
-/* 8020B1A8 001D4768  38 84 90 80 */	addi r4, r4, __vt__cf_CfGimmickElv@l
+/* 8020B1A4 001D4764  3C 80 80 54 */	lis r4, __vt__Q22cf12CfGimmickElv@ha
+/* 8020B1A8 001D4768  38 84 90 80 */	addi r4, r4, __vt__Q22cf12CfGimmickElv@l
 /* 8020B1AC 001D476C  90 83 00 00 */	stw r4, 0(r3)
 /* 8020B1B0 001D4770  4B FF DD 35 */	bl func_80208EE4
 /* 8020B1B4 001D4774  38 7E 00 7C */	addi r3, r30, 0x7c
@@ -1728,8 +1728,8 @@
 .endobj lbl_80539020
 
 
-.obj __vt__cf_CfGimmickElv, global
-	.4byte __RTTI__cf_CfGimmickElv
+.obj __vt__Q22cf12CfGimmickElv, global
+	.4byte __RTTI__Q22cf12CfGimmickElv
 	.4byte 0
 	.4byte __dt__cf_CfGimmickElv
 	.4byte func_8020896C
@@ -1738,12 +1738,12 @@
 	.4byte func_801F4BF8
 	.4byte func_801F4C8C
 	.4byte func_8020B2E4
-.endobj __vt__cf_CfGimmickElv
+.endobj __vt__Q22cf12CfGimmickElv
 
 .obj cf_CfGimmickElv_hierarchy, global
-	.4byte __RTTI__cf_IObjectInfo
+	.4byte __RTTI__Q22cf11IObjectInfo
 	.4byte 0
-	.4byte __RTTI__cf_CfGimmick
+	.4byte __RTTI__Q22cf9CfGimmick
 	.4byte 0
 	.4byte 0
 .endobj cf_CfGimmickElv_hierarchy
@@ -1753,10 +1753,10 @@
 
 .balign 8
 
-.obj __RTTI__cf_CfGimmickElv, global
+.obj __RTTI__Q22cf12CfGimmickElv, global
 	.4byte cf_CfGimmickElv_typestr
 	.4byte cf_CfGimmickElv_hierarchy
-.endobj __RTTI__cf_CfGimmickElv
+.endobj __RTTI__Q22cf12CfGimmickElv
 
 
 

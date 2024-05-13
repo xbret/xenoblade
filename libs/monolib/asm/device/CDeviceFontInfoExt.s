@@ -5,9 +5,9 @@
 .fn __ct__CDeviceFontInfoExt, global
 /* 804532D4 0041C894  94 21 FF D0 */	stwu r1, -0x30(r1)
 /* 804532D8 0041C898  7C 08 02 A6 */	mflr r0
-/* 804532DC 0041C89C  3C C0 80 57 */	lis r6, __vt__CDeviceFontInfoExt@ha
+/* 804532DC 0041C89C  3C C0 80 57 */	lis r6, __vt__18CDeviceFontInfoExt@ha
 /* 804532E0 0041C8A0  90 01 00 34 */	stw r0, 0x34(r1)
-/* 804532E4 0041C8A4  38 C6 FF 88 */	addi r6, r6, __vt__CDeviceFontInfoExt@l
+/* 804532E4 0041C8A4  38 C6 FF 88 */	addi r6, r6, __vt__18CDeviceFontInfoExt@l
 /* 804532E8 0041C8A8  93 E1 00 2C */	stw r31, 0x2c(r1)
 /* 804532EC 0041C8AC  3B E0 00 00 */	li r31, 0
 /* 804532F0 0041C8B0  93 C1 00 28 */	stw r30, 0x28(r1)
@@ -83,8 +83,8 @@
 /* 804533F8 0041C9B8  93 C1 00 08 */	stw r30, 8(r1)
 /* 804533FC 0041C9BC  7C 7E 1B 78 */	mr r30, r3
 /* 80453400 0041C9C0  41 82 00 4C */	beq .L_8045344C
-/* 80453404 0041C9C4  3C 80 80 57 */	lis r4, __vt__CDeviceFontInfoExt@ha
-/* 80453408 0041C9C8  38 84 FF 88 */	addi r4, r4, __vt__CDeviceFontInfoExt@l
+/* 80453404 0041C9C4  3C 80 80 57 */	lis r4, __vt__18CDeviceFontInfoExt@ha
+/* 80453408 0041C9C8  38 84 FF 88 */	addi r4, r4, __vt__18CDeviceFontInfoExt@l
 /* 8045340C 0041C9CC  90 83 00 00 */	stw r4, 0(r3)
 /* 80453410 0041C9D0  38 63 00 1C */	addi r3, r3, 0x1c
 /* 80453414 0041C9D4  4B FD AD 05 */	bl Destroy__Q34nw4r2ut10PackedFontFv
@@ -299,8 +299,8 @@
 
 .balign 8
 
-.obj __vt__CDeviceFontInfoExt, global
-	.4byte __RTTI__CDeviceFontInfoExt
+.obj __vt__18CDeviceFontInfoExt, global
+	.4byte __RTTI__18CDeviceFontInfoExt
 	.4byte 0
 	.4byte __dt__CDeviceFontInfoExt
 	.4byte func_80453654
@@ -315,10 +315,10 @@
 	.4byte func_804535DC
 	.4byte func_804535F4
 	.4byte func_80453608
-.endobj __vt__CDeviceFontInfoExt
+.endobj __vt__18CDeviceFontInfoExt
 
 .obj CDeviceFontInfoExt_hierarchy, global
-	.4byte __RTTI__IDeviceFontInfo
+	.4byte __RTTI__15IDeviceFontInfo
 	.4byte 0
 	.4byte 0
 .endobj CDeviceFontInfoExt_hierarchy
@@ -328,15 +328,15 @@
 
 .balign 8
 
-.obj __RTTI__CDeviceFontInfoExt, global
+.obj __RTTI__18CDeviceFontInfoExt, global
 	.4byte CDeviceFontInfoExt_typestr
 	.4byte CDeviceFontInfoExt_hierarchy
-.endobj __RTTI__CDeviceFontInfoExt
+.endobj __RTTI__18CDeviceFontInfoExt
 
-.obj __RTTI__IDeviceFontInfo, global
+.obj __RTTI__15IDeviceFontInfo, global
 	.4byte IDeviceFontInfo_typestr
 	.4byte 0
-.endobj __RTTI__IDeviceFontInfo
+.endobj __RTTI__15IDeviceFontInfo
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

@@ -51,10 +51,10 @@
 .fn __ct__cf_CAIAction, global
 /* 8014A904 00113EC4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8014A908 00113EC8  7C 08 02 A6 */	mflr r0
-/* 8014A90C 00113ECC  3C 80 80 53 */	lis r4, __vt__cf_CAIAction@ha
+/* 8014A90C 00113ECC  3C 80 80 53 */	lis r4, __vt__Q22cf9CAIAction@ha
 /* 8014A910 00113ED0  90 01 00 24 */	stw r0, 0x24(r1)
 /* 8014A914 00113ED4  38 00 00 00 */	li r0, 0
-/* 8014A918 00113ED8  38 84 2D 68 */	addi r4, r4, __vt__cf_CAIAction@l
+/* 8014A918 00113ED8  38 84 2D 68 */	addi r4, r4, __vt__Q22cf9CAIAction@l
 /* 8014A91C 00113EDC  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 8014A920 00113EE0  3B E3 00 0C */	addi r31, r3, 0xc
 /* 8014A924 00113EE4  93 C1 00 18 */	stw r30, 0x18(r1)
@@ -4154,8 +4154,8 @@
 .L_8014E3F8:
 /* 8014E3F8 001179B8  80 7D 0B 14 */	lwz r3, 0xb14(r29)
 /* 8014E3FC 001179BC  38 80 00 00 */	li r4, 0
-/* 8014E400 001179C0  38 AD 83 D8 */	addi r5, r13, __RTTI__cf_CfObjectImplPc@sda21
-/* 8014E404 001179C4  38 CD 83 60 */	addi r6, r13, __RTTI__cf_CfObjectImpl@sda21
+/* 8014E400 001179C0  38 AD 83 D8 */	addi r5, r13, __RTTI__Q22cf14CfObjectImplPc@sda21
+/* 8014E404 001179C4  38 CD 83 60 */	addi r6, r13, __RTTI__Q22cf8CfObjectImpl@sda21
 /* 8014E408 001179C8  80 63 3E D4 */	lwz r3, 0x3ed4(r3)
 /* 8014E40C 001179CC  38 E0 00 00 */	li r7, 0
 /* 8014E410 001179D0  48 16 B9 75 */	bl __dynamic_cast
@@ -4284,8 +4284,8 @@
 .L_8014E5E4:
 /* 8014E5E4 00117BA4  80 7D 0B 14 */	lwz r3, 0xb14(r29)
 /* 8014E5E8 00117BA8  38 80 00 00 */	li r4, 0
-/* 8014E5EC 00117BAC  38 AD 83 D8 */	addi r5, r13, __RTTI__cf_CfObjectImplPc@sda21
-/* 8014E5F0 00117BB0  38 CD 83 60 */	addi r6, r13, __RTTI__cf_CfObjectImpl@sda21
+/* 8014E5EC 00117BAC  38 AD 83 D8 */	addi r5, r13, __RTTI__Q22cf14CfObjectImplPc@sda21
+/* 8014E5F0 00117BB0  38 CD 83 60 */	addi r6, r13, __RTTI__Q22cf8CfObjectImpl@sda21
 /* 8014E5F4 00117BB4  80 63 3E D4 */	lwz r3, 0x3ed4(r3)
 /* 8014E5F8 00117BB8  38 E0 00 00 */	li r7, 0
 /* 8014E5FC 00117BBC  48 16 B7 89 */	bl __dynamic_cast
@@ -4414,8 +4414,8 @@
 .L_8014E7D0:
 /* 8014E7D0 00117D90  80 7D 0B 14 */	lwz r3, 0xb14(r29)
 /* 8014E7D4 00117D94  38 80 00 00 */	li r4, 0
-/* 8014E7D8 00117D98  38 AD 83 D8 */	addi r5, r13, __RTTI__cf_CfObjectImplPc@sda21
-/* 8014E7DC 00117D9C  38 CD 83 60 */	addi r6, r13, __RTTI__cf_CfObjectImpl@sda21
+/* 8014E7D8 00117D98  38 AD 83 D8 */	addi r5, r13, __RTTI__Q22cf14CfObjectImplPc@sda21
+/* 8014E7DC 00117D9C  38 CD 83 60 */	addi r6, r13, __RTTI__Q22cf8CfObjectImpl@sda21
 /* 8014E7E0 00117DA0  80 63 3E D4 */	lwz r3, 0x3ed4(r3)
 /* 8014E7E4 00117DA4  38 E0 00 00 */	li r7, 0
 /* 8014E7E8 00117DA8  48 16 B5 9D */	bl __dynamic_cast
@@ -4475,8 +4475,8 @@
 .L_8014E8B0:
 /* 8014E8B0 00117E70  80 7D 0B 14 */	lwz r3, 0xb14(r29)
 /* 8014E8B4 00117E74  38 80 00 00 */	li r4, 0
-/* 8014E8B8 00117E78  38 AD 83 D8 */	addi r5, r13, __RTTI__cf_CfObjectImplPc@sda21
-/* 8014E8BC 00117E7C  38 CD 83 60 */	addi r6, r13, __RTTI__cf_CfObjectImpl@sda21
+/* 8014E8B8 00117E78  38 AD 83 D8 */	addi r5, r13, __RTTI__Q22cf14CfObjectImplPc@sda21
+/* 8014E8BC 00117E7C  38 CD 83 60 */	addi r6, r13, __RTTI__Q22cf8CfObjectImpl@sda21
 /* 8014E8C0 00117E80  80 63 3E D4 */	lwz r3, 0x3ed4(r3)
 /* 8014E8C4 00117E84  38 E0 00 00 */	li r7, 0
 /* 8014E8C8 00117E88  48 16 B4 BD */	bl __dynamic_cast
@@ -4536,8 +4536,8 @@
 .L_8014E990:
 /* 8014E990 00117F50  80 7D 0B 14 */	lwz r3, 0xb14(r29)
 /* 8014E994 00117F54  38 80 00 00 */	li r4, 0
-/* 8014E998 00117F58  38 AD 83 D8 */	addi r5, r13, __RTTI__cf_CfObjectImplPc@sda21
-/* 8014E99C 00117F5C  38 CD 83 60 */	addi r6, r13, __RTTI__cf_CfObjectImpl@sda21
+/* 8014E998 00117F58  38 AD 83 D8 */	addi r5, r13, __RTTI__Q22cf14CfObjectImplPc@sda21
+/* 8014E99C 00117F5C  38 CD 83 60 */	addi r6, r13, __RTTI__Q22cf8CfObjectImpl@sda21
 /* 8014E9A0 00117F60  80 63 3E D4 */	lwz r3, 0x3ed4(r3)
 /* 8014E9A4 00117F64  38 E0 00 00 */	li r7, 0
 /* 8014E9A8 00117F68  48 16 B3 DD */	bl __dynamic_cast
@@ -4593,8 +4593,8 @@
 .L_8014EA60:
 /* 8014EA60 00118020  80 7D 0B 14 */	lwz r3, 0xb14(r29)
 /* 8014EA64 00118024  38 80 00 00 */	li r4, 0
-/* 8014EA68 00118028  38 AD 83 D8 */	addi r5, r13, __RTTI__cf_CfObjectImplPc@sda21
-/* 8014EA6C 0011802C  38 CD 83 60 */	addi r6, r13, __RTTI__cf_CfObjectImpl@sda21
+/* 8014EA68 00118028  38 AD 83 D8 */	addi r5, r13, __RTTI__Q22cf14CfObjectImplPc@sda21
+/* 8014EA6C 0011802C  38 CD 83 60 */	addi r6, r13, __RTTI__Q22cf8CfObjectImpl@sda21
 /* 8014EA70 00118030  80 63 3E D4 */	lwz r3, 0x3ed4(r3)
 /* 8014EA74 00118034  38 E0 00 00 */	li r7, 0
 /* 8014EA78 00118038  48 16 B3 0D */	bl __dynamic_cast
@@ -11056,12 +11056,12 @@
 .endobj jumptable_80532CD4
 
 
-.obj __vt__cf_CAIAction, global
-	.4byte __RTTI__cf_CAIAction
+.obj __vt__Q22cf9CAIAction, global
+	.4byte __RTTI__Q22cf9CAIAction
 	.4byte 0
 	.4byte func_8014AA18
 	.4byte func_8014AB28
-.endobj __vt__cf_CAIAction
+.endobj __vt__Q22cf9CAIAction
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

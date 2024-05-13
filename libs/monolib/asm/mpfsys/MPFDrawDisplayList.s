@@ -6,9 +6,9 @@
 /* 80474F80 0043E540  88 0D BF E0 */	lbz r0, lbl_80668160@sda21(r13)
 /* 80474F84 0043E544  7C 00 07 75 */	extsb. r0, r0
 /* 80474F88 0043E548  40 82 00 1C */	bne .L_80474FA4
-/* 80474F8C 0043E54C  3C 60 80 57 */	lis r3, __vt__mpfsys_MPFDrawDisplayList@ha
+/* 80474F8C 0043E54C  3C 60 80 57 */	lis r3, __vt__Q26mpfsys18MPFDrawDisplayList@ha
 /* 80474F90 0043E550  3C 80 80 66 */	lis r4, lbl_8065AD40@ha
-/* 80474F94 0043E554  38 63 13 E8 */	addi r3, r3, __vt__mpfsys_MPFDrawDisplayList@l
+/* 80474F94 0043E554  38 63 13 E8 */	addi r3, r3, __vt__Q26mpfsys18MPFDrawDisplayList@l
 /* 80474F98 0043E558  38 00 00 01 */	li r0, 1
 /* 80474F9C 0043E55C  90 64 AD 40 */	stw r3, lbl_8065AD40@l(r4)
 /* 80474FA0 0043E560  98 0D BF E0 */	stb r0, lbl_80668160@sda21(r13)
@@ -5061,15 +5061,15 @@
 
 .balign 8
 
-.obj __vt__mpfsys_MPFDrawDisplayList, global
-	.4byte __RTTI__mpfsys_MPFDrawDisplayList
+.obj __vt__Q26mpfsys18MPFDrawDisplayList, global
+	.4byte __RTTI__Q26mpfsys18MPFDrawDisplayList
 	.4byte 0
 	.4byte func_80479840
 	.4byte func_8047983C
-.endobj __vt__mpfsys_MPFDrawDisplayList
+.endobj __vt__Q26mpfsys18MPFDrawDisplayList
 
 .obj mpfsys_MPFDrawDisplayList_hierarchy, global
-	.4byte __RTTI__mpfsys_MPFDraw
+	.4byte __RTTI__Q26mpfsys7MPFDraw
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -5080,15 +5080,15 @@
 
 .balign 8
 
-.obj __RTTI__mpfsys_MPFDrawDisplayList, global
+.obj __RTTI__Q26mpfsys18MPFDrawDisplayList, global
 	.4byte mpfsys_MPFDrawDisplayList_typestr
 	.4byte mpfsys_MPFDrawDisplayList_hierarchy
-.endobj __RTTI__mpfsys_MPFDrawDisplayList
+.endobj __RTTI__Q26mpfsys18MPFDrawDisplayList
 
-.obj __RTTI__mpfsys_MPFDraw, global
+.obj __RTTI__Q26mpfsys7MPFDraw, global
 	.4byte mpfsys_MPFDraw_typestr
 	.4byte 0
-.endobj __RTTI__mpfsys_MPFDraw
+.endobj __RTTI__Q26mpfsys7MPFDraw
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

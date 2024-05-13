@@ -10,20 +10,20 @@
 /* 80175274 0013E834  DB E1 00 30 */	stfd f31, 0x30(r1)
 /* 80175278 0013E838  F3 E1 00 38 */	psq_st f31, 56(r1), 0, qr0
 /* 8017527C 0013E83C  48 14 4E D9 */	bl _savegpr_27
-/* 80175280 0013E840  3C C0 80 53 */	lis r6, __vt__cf_CActorState@ha
+/* 80175280 0013E840  3C C0 80 53 */	lis r6, __vt__Q22cf11CActorState@ha
 /* 80175284 0013E844  90 83 00 04 */	stw r4, 4(r3)
-/* 80175288 0013E848  38 C6 53 AC */	addi r6, r6, __vt__cf_CActorState@l
+/* 80175288 0013E848  38 C6 53 AC */	addi r6, r6, __vt__Q22cf11CActorState@l
 /* 8017528C 0013E84C  7C 7F 1B 78 */	mr r31, r3
 /* 80175290 0013E850  90 C3 00 00 */	stw r6, 0(r3)
 /* 80175294 0013E854  7C 9C 23 78 */	mr r28, r4
 /* 80175298 0013E858  7C BB 2B 78 */	mr r27, r5
 /* 8017529C 0013E85C  38 63 00 08 */	addi r3, r3, 8
 /* 801752A0 0013E860  4B FD 08 7D */	bl __ct__cf_CBattleState
-/* 801752A4 0013E864  3C 80 80 53 */	lis r4, __vt__cf_CActorParam@ha
+/* 801752A4 0013E864  3C 80 80 53 */	lis r4, __vt__Q22cf11CActorParam@ha
 /* 801752A8 0013E868  38 BF 16 C1 */	addi r5, r31, 0x16c1
 /* 801752AC 0013E86C  38 1F 16 C4 */	addi r0, r31, 0x16c4
 /* 801752B0 0013E870  38 60 00 00 */	li r3, 0
-/* 801752B4 0013E874  38 84 50 40 */	addi r4, r4, __vt__cf_CActorParam@l
+/* 801752B4 0013E874  38 84 50 40 */	addi r4, r4, __vt__Q22cf11CActorParam@l
 /* 801752B8 0013E878  90 9F 00 00 */	stw r4, 0(r31)
 /* 801752BC 0013E87C  38 84 00 0C */	addi r4, r4, 0xc
 /* 801752C0 0013E880  7C 05 00 40 */	cmplw r5, r0
@@ -191,9 +191,9 @@
 /* 8017550C 0013EACC  41 80 FF E8 */	blt .L_801754F4
 /* 80175510 0013EAD0  38 7F 19 E8 */	addi r3, r31, 0x19e8
 /* 80175514 0013EAD4  4B FD E6 D9 */	bl __ct__cf__sArtsSet
-/* 80175518 0013EAD8  3C 60 80 53 */	lis r3, __vt__cf_CArtsSet@ha
+/* 80175518 0013EAD8  3C 60 80 53 */	lis r3, __vt__Q22cf8CArtsSet@ha
 /* 8017551C 0013EADC  3B 7F 1A 20 */	addi r27, r31, 0x1a20
-/* 80175520 0013EAE0  38 63 2D 90 */	addi r3, r3, __vt__cf_CArtsSet@l
+/* 80175520 0013EAE0  38 63 2D 90 */	addi r3, r3, __vt__Q22cf8CArtsSet@l
 /* 80175524 0013EAE4  90 7F 1A 1C */	stw r3, 0x1a1c(r31)
 /* 80175528 0013EAE8  3B 9F 27 40 */	addi r28, r31, 0x2740
 .L_8017552C:
@@ -202,9 +202,9 @@
 /* 80175534 0013EAF4  3B 7B 00 8C */	addi r27, r27, 0x8c
 /* 80175538 0013EAF8  7C 1B E0 40 */	cmplw r27, r28
 /* 8017553C 0013EAFC  41 80 FF F0 */	blt .L_8017552C
-/* 80175540 0013EB00  3C 60 80 53 */	lis r3, __vt__cf_CAttackSet@ha
+/* 80175540 0013EB00  3C 60 80 53 */	lis r3, __vt__Q22cf10CAttackSet@ha
 /* 80175544 0013EB04  3B 7F 27 50 */	addi r27, r31, 0x2750
-/* 80175548 0013EB08  38 63 2D 78 */	addi r3, r3, __vt__cf_CAttackSet@l
+/* 80175548 0013EB08  38 63 2D 78 */	addi r3, r3, __vt__Q22cf10CAttackSet@l
 /* 8017554C 0013EB0C  90 7F 27 4C */	stw r3, 0x274c(r31)
 /* 80175550 0013EB10  3B 9F 2A 80 */	addi r28, r31, 0x2a80
 .L_80175554:
@@ -10828,11 +10828,11 @@
 .endobj jumptable_80535018
 
 
-.obj __vt__cf_CActorParam, global
-	.4byte __RTTI__cf_CActorParam
+.obj __vt__Q22cf11CActorParam, global
+	.4byte __RTTI__Q22cf11CActorParam
 	.4byte 0
 	.4byte func_800AFB04
-	.4byte __RTTI__cf_CActorParam
+	.4byte __RTTI__Q22cf11CActorParam
 	.4byte 0xFFFFFFF8
 	.4byte func_8017ED84
 	.4byte func_8017ED8C
@@ -11048,14 +11048,14 @@
 	.4byte func_8017CF74
 	.4byte func_8017D078
 	.4byte func_800AFBA0
-.endobj __vt__cf_CActorParam
+.endobj __vt__Q22cf11CActorParam
 
 
-.obj __vt__cf_CActorState, global
-	.4byte __RTTI__cf_CActorState
+.obj __vt__Q22cf11CActorState, global
+	.4byte __RTTI__Q22cf11CActorState
 	.4byte 0
 	.4byte func_800AFB04
-.endobj __vt__cf_CActorState
+.endobj __vt__Q22cf11CActorState
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

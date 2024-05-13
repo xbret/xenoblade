@@ -8,9 +8,9 @@
 /* 802430B4 0020C674  90 01 00 74 */	stw r0, 0x74(r1)
 /* 802430B8 0020C678  39 61 00 70 */	addi r11, r1, 0x70
 /* 802430BC 0020C67C  48 07 70 85 */	bl _savegpr_22
-/* 802430C0 0020C680  3C 80 80 54 */	lis r4, __vt__CMapSel@ha
+/* 802430C0 0020C680  3C 80 80 54 */	lis r4, __vt__7CMapSel@ha
 /* 802430C4 0020C684  7C 79 1B 78 */	mr r25, r3
-/* 802430C8 0020C688  38 84 A5 C8 */	addi r4, r4, __vt__CMapSel@l
+/* 802430C8 0020C688  38 84 A5 C8 */	addi r4, r4, __vt__7CMapSel@l
 /* 802430CC 0020C68C  90 83 00 00 */	stw r4, 0(r3)
 /* 802430D0 0020C690  38 63 00 04 */	addi r3, r3, 4
 /* 802430D4 0020C694  48 21 C4 91 */	bl __ct__UnkClass_8045F564
@@ -1370,8 +1370,8 @@
 .endobj jumptable_8053A550
 
 
-.obj __vt__CMapSel, global
-	.4byte __RTTI__CMapSel
+.obj __vt__7CMapSel, global
+	.4byte __RTTI__7CMapSel
 	.4byte 0
 	.4byte __dt__CMapSel
 	.4byte IWorkEvent_WorkEvent1
@@ -1405,10 +1405,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CMapSel
+.endobj __vt__7CMapSel
 
 .obj CMapSel_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1418,10 +1418,10 @@
 
 .balign 8
 
-.obj __RTTI__CMapSel, global
+.obj __RTTI__7CMapSel, global
 	.4byte CMapSel_typestr
 	.4byte CMapSel_hierarchy
-.endobj __RTTI__CMapSel
+.endobj __RTTI__7CMapSel
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

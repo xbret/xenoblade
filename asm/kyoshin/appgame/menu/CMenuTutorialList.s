@@ -12,12 +12,12 @@
 /* 802ABDC8 00275388  7C 9D 23 78 */	mr r29, r4
 /* 802ABDCC 0027538C  7C BE 2B 78 */	mr r30, r5
 /* 802ABDD0 00275390  48 19 8C 49 */	bl __ct__8CProcessFv
-/* 802ABDD4 00275394  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
-/* 802ABDD8 00275398  3C A0 80 54 */	lis r5, __vt__CMenuTutorialList@ha
-/* 802ABDDC 0027539C  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
+/* 802ABDD4 00275394  3C 60 80 53 */	lis r3, "__vt__14CTTask<5IUICf>"@ha
+/* 802ABDD8 00275398  3C A0 80 54 */	lis r5, __vt__17CMenuTutorialList@ha
+/* 802ABDDC 0027539C  38 63 F7 40 */	addi r3, r3, "__vt__14CTTask<5IUICf>"@l
 /* 802ABDE0 002753A0  90 7C 00 10 */	stw r3, 0x10(r28)
 /* 802ABDE4 002753A4  3D 00 80 51 */	lis r8, __ptmf_null@ha
-/* 802ABDE8 002753A8  38 A5 D9 C8 */	addi r5, r5, __vt__CMenuTutorialList@l
+/* 802ABDE8 002753A8  38 A5 D9 C8 */	addi r5, r5, __vt__17CMenuTutorialList@l
 /* 802ABDEC 002753AC  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 802ABDF0 002753B0  38 05 00 24 */	addi r0, r5, 0x24
 /* 802ABDF4 002753B4  3B E0 00 00 */	li r31, 0
@@ -1057,8 +1057,8 @@
 .endobj jumptable_8053D9A8
 
 
-.obj __vt__CMenuTutorialList, global
-	.4byte __RTTI__CMenuTutorialList
+.obj __vt__17CMenuTutorialList, global
+	.4byte __RTTI__17CMenuTutorialList
 	.4byte 0
 	.4byte __dt__CMenuTutorialList
 	.4byte CChildListNode_Reset
@@ -1067,25 +1067,25 @@
 	.4byte func_802AC2A0
 	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuTutorialList
+	.4byte __RTTI__17CMenuTutorialList
 	.4byte 0xFFFFFFA8
 	.4byte func_802ACBD4
 	.4byte func_802ACBCC
 	.4byte func_802AC3E4
-.endobj __vt__CMenuTutorialList
+.endobj __vt__17CMenuTutorialList
 
 .obj CMenuTutorialList_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000058
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUICf
+	.4byte "__RTTI__14CTTask<5IUICf>"
 	.4byte 0
-	.4byte __RTTI__IUICf
+	.4byte __RTTI__5IUICf
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1095,10 +1095,10 @@
 
 .balign 8
 
-.obj __RTTI__CMenuTutorialList, global
+.obj __RTTI__17CMenuTutorialList, global
 	.4byte CMenuTutorialList_typestr
 	.4byte CMenuTutorialList_hierarchy
-.endobj __RTTI__CMenuTutorialList
+.endobj __RTTI__17CMenuTutorialList
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

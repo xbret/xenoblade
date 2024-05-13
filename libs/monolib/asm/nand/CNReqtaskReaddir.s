@@ -101,8 +101,8 @@
 /* 804DB228 004A47E8  38 6D C1 48 */	addi r3, r13, lbl_806682C8@sda21
 /* 804DB22C 004A47EC  48 00 00 04 */	b .L_804DB230
 .L_804DB230:
-/* 804DB230 004A47F0  3C 80 80 57 */	lis r4, __vt__CNReqtaskReaddir@ha
-/* 804DB234 004A47F4  38 84 35 F0 */	addi r4, r4, __vt__CNReqtaskReaddir@l
+/* 804DB230 004A47F0  3C 80 80 57 */	lis r4, __vt__16CNReqtaskReaddir@ha
+/* 804DB234 004A47F4  38 84 35 F0 */	addi r4, r4, __vt__16CNReqtaskReaddir@l
 /* 804DB238 004A47F8  90 83 00 00 */	stw r4, 0(r3)
 /* 804DB23C 004A47FC  4E 80 00 20 */	blr
 .endfn sinit_804DB228
@@ -127,15 +127,15 @@
 
 .balign 8
 
-.obj __vt__CNReqtaskReaddir, global
-	.4byte __RTTI__CNReqtaskReaddir
+.obj __vt__16CNReqtaskReaddir, global
+	.4byte __RTTI__16CNReqtaskReaddir
 	.4byte 0
 	.4byte func_804DB114
 	.4byte func_804DA4CC
-.endobj __vt__CNReqtaskReaddir
+.endobj __vt__16CNReqtaskReaddir
 
 .obj CNReqtaskReaddir_hierarchy, global
-	.4byte __RTTI__CNReqtask
+	.4byte __RTTI__9CNReqtask
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -145,10 +145,10 @@
 
 .balign 8
 
-.obj __RTTI__CNReqtaskReaddir, global
+.obj __RTTI__16CNReqtaskReaddir, global
 	.4byte CNReqtaskReaddir_typestr
 	.4byte CNReqtaskReaddir_hierarchy
-.endobj __RTTI__CNReqtaskReaddir
+.endobj __RTTI__16CNReqtaskReaddir
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

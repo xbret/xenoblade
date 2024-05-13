@@ -5,11 +5,11 @@
 .fn __ct__CActParamData, global
 /* 800539EC 0001CFAC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800539F0 0001CFB0  7C 08 02 A6 */	mflr r0
-/* 800539F4 0001CFB4  3C 80 80 53 */	lis r4, __vt__CActParamData@ha
+/* 800539F4 0001CFB4  3C 80 80 53 */	lis r4, __vt__13CActParamData@ha
 /* 800539F8 0001CFB8  38 A0 00 00 */	li r5, 0
 /* 800539FC 0001CFBC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80053A00 0001CFC0  38 00 00 00 */	li r0, 0
-/* 80053A04 0001CFC4  38 84 9B 68 */	addi r4, r4, __vt__CActParamData@l
+/* 80053A04 0001CFC4  38 84 9B 68 */	addi r4, r4, __vt__13CActParamData@l
 /* 80053A08 0001CFC8  38 C0 00 00 */	li r6, 0
 /* 80053A0C 0001CFCC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80053A10 0001CFD0  7C 7F 1B 78 */	mr r31, r3
@@ -5708,12 +5708,12 @@
 
 .balign 8
 
-.obj __vt__CActParamData, global
-	.4byte __RTTI__CActParamData
+.obj __vt__13CActParamData, global
+	.4byte __RTTI__13CActParamData
 	.4byte 0
 	.4byte __dt__CActParamData
 	.4byte 0
-.endobj __vt__CActParamData
+.endobj __vt__13CActParamData
 
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
@@ -5732,10 +5732,10 @@
 
 .balign 8
 
-.obj __RTTI__CActParamData, global
+.obj __RTTI__13CActParamData, global
 	.4byte CActParamData_typestr
 	.4byte 0
-.endobj __RTTI__CActParamData
+.endobj __RTTI__13CActParamData
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

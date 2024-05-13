@@ -4,10 +4,10 @@
 
 .fn __ct__CMCCylinderGauge, global
 /* 80221E6C 001EB42C  C0 02 AA 58 */	lfs f0, float_8066ADD8@sda21(r2)
-/* 80221E70 001EB430  3C C0 80 54 */	lis r6, __vt__CMCCylinderGauge@ha
+/* 80221E70 001EB430  3C C0 80 54 */	lis r6, __vt__16CMCCylinderGauge@ha
 /* 80221E74 001EB434  38 A0 00 00 */	li r5, 0
 /* 80221E78 001EB438  38 00 00 01 */	li r0, 1
-/* 80221E7C 001EB43C  38 C6 97 00 */	addi r6, r6, __vt__CMCCylinderGauge@l
+/* 80221E7C 001EB43C  38 C6 97 00 */	addi r6, r6, __vt__16CMCCylinderGauge@l
 /* 80221E80 001EB440  90 C3 00 00 */	stw r6, 0(r3)
 /* 80221E84 001EB444  90 83 00 04 */	stw r4, 4(r3)
 /* 80221E88 001EB448  90 A3 00 08 */	stw r5, 8(r3)
@@ -674,21 +674,21 @@
 
 .balign 8
 
-.obj __vt__CMCCylinderGauge, global
-	.4byte __RTTI__CMCCylinderGauge
+.obj __vt__16CMCCylinderGauge, global
+	.4byte __RTTI__16CMCCylinderGauge
 	.4byte 0
 	.4byte __dt__CMCCylinderGauge
 	.4byte 0
-.endobj __vt__CMCCylinderGauge
+.endobj __vt__16CMCCylinderGauge
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CMCCylinderGauge, global
+.obj __RTTI__16CMCCylinderGauge, global
 	.4byte CMCCylinderGauge_typestr
 	.4byte 0
-.endobj __RTTI__CMCCylinderGauge
+.endobj __RTTI__16CMCCylinderGauge
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

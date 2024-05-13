@@ -5,11 +5,11 @@
 .fn __ct__CTimeLightGrp, global
 /* 80059EB8 00023478  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80059EBC 0002347C  7C 08 02 A6 */	mflr r0
-/* 80059EC0 00023480  3C A0 80 53 */	lis r5, __vt__CTimeLightGrp@ha
-/* 80059EC4 00023484  3C E0 80 53 */	lis r7, __vt___reslist_base_CVirtualLightObj@ha
+/* 80059EC0 00023480  3C A0 80 53 */	lis r5, __vt__13CTimeLightGrp@ha
+/* 80059EC4 00023484  3C E0 80 53 */	lis r7, "__vt__34_reslist_base<P16CVirtualLightObj>"@ha
 /* 80059EC8 00023488  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80059ECC 0002348C  38 A5 9C 48 */	addi r5, r5, __vt__CTimeLightGrp@l
-/* 80059ED0 00023490  38 E7 9C 78 */	addi r7, r7, __vt___reslist_base_CVirtualLightObj@l
+/* 80059ECC 0002348C  38 A5 9C 48 */	addi r5, r5, __vt__13CTimeLightGrp@l
+/* 80059ED0 00023490  38 E7 9C 78 */	addi r7, r7, "__vt__34_reslist_base<P16CVirtualLightObj>"@l
 /* 80059ED4 00023494  38 C3 00 10 */	addi r6, r3, 0x10
 /* 80059ED8 00023498  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80059EDC 0002349C  3B E0 00 00 */	li r31, 0
@@ -17,8 +17,8 @@
 /* 80059EE4 000234A4  93 C1 00 08 */	stw r30, 8(r1)
 /* 80059EE8 000234A8  7C 7E 1B 78 */	mr r30, r3
 /* 80059EEC 000234AC  90 A3 00 00 */	stw r5, 0(r3)
-/* 80059EF0 000234B0  3C A0 80 53 */	lis r5, __vt__reslist_CVirtualLightObj@ha
-/* 80059EF4 000234B4  38 A5 9C 60 */	addi r5, r5, __vt__reslist_CVirtualLightObj@l
+/* 80059EF0 000234B0  3C A0 80 53 */	lis r5, "__vt__28reslist<P16CVirtualLightObj>"@ha
+/* 80059EF4 000234B4  38 A5 9C 60 */	addi r5, r5, "__vt__28reslist<P16CVirtualLightObj>"@l
 /* 80059EF8 000234B8  90 83 00 04 */	stw r4, 4(r3)
 /* 80059EFC 000234BC  90 E3 00 08 */	stw r7, 8(r3)
 /* 80059F00 000234C0  93 E3 00 1C */	stw r31, 0x1c(r3)
@@ -133,9 +133,9 @@
 /* 8005A094 00023654  93 C1 00 08 */	stw r30, 8(r1)
 /* 8005A098 00023658  7C 7E 1B 78 */	mr r30, r3
 /* 8005A09C 0002365C  41 82 00 78 */	beq .L_8005A114
-/* 8005A0A0 00023660  3C A0 80 53 */	lis r5, __vt___reslist_base_CVirtualLightObj@ha
+/* 8005A0A0 00023660  3C A0 80 53 */	lis r5, "__vt__34_reslist_base<P16CVirtualLightObj>"@ha
 /* 8005A0A4 00023664  80 83 00 04 */	lwz r4, 4(r3)
-/* 8005A0A8 00023668  38 A5 9C 78 */	addi r5, r5, __vt___reslist_base_CVirtualLightObj@l
+/* 8005A0A8 00023668  38 A5 9C 78 */	addi r5, r5, "__vt__34_reslist_base<P16CVirtualLightObj>"@l
 /* 8005A0AC 0002366C  90 A3 00 00 */	stw r5, 0(r3)
 /* 8005A0B0 00023670  38 00 00 00 */	li r0, 0
 /* 8005A0B4 00023674  80 A4 00 00 */	lwz r5, 0(r4)
@@ -186,9 +186,9 @@
 /* 8005A14C 0002370C  7C 7E 1B 78 */	mr r30, r3
 /* 8005A150 00023710  41 82 00 7C */	beq .L_8005A1CC
 /* 8005A154 00023714  41 82 00 68 */	beq .L_8005A1BC
-/* 8005A158 00023718  3C A0 80 53 */	lis r5, __vt___reslist_base_CVirtualLightObj@ha
+/* 8005A158 00023718  3C A0 80 53 */	lis r5, "__vt__34_reslist_base<P16CVirtualLightObj>"@ha
 /* 8005A15C 0002371C  80 83 00 04 */	lwz r4, 4(r3)
-/* 8005A160 00023720  38 A5 9C 78 */	addi r5, r5, __vt___reslist_base_CVirtualLightObj@l
+/* 8005A160 00023720  38 A5 9C 78 */	addi r5, r5, "__vt__34_reslist_base<P16CVirtualLightObj>"@l
 /* 8005A164 00023724  90 A3 00 00 */	stw r5, 0(r3)
 /* 8005A168 00023728  38 00 00 00 */	li r0, 0
 /* 8005A16C 0002372C  80 84 00 00 */	lwz r4, 0(r4)
@@ -239,9 +239,9 @@
 /* 8005A204 000237C4  7C 7E 1B 78 */	mr r30, r3
 /* 8005A208 000237C8  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8005A20C 000237CC  41 82 00 C4 */	beq .L_8005A2D0
-/* 8005A210 000237D0  3C A0 80 53 */	lis r5, __vt__CTimeLightGrp@ha
+/* 8005A210 000237D0  3C A0 80 53 */	lis r5, __vt__13CTimeLightGrp@ha
 /* 8005A214 000237D4  80 83 00 0C */	lwz r4, 0xc(r3)
-/* 8005A218 000237D8  38 A5 9C 48 */	addi r5, r5, __vt__CTimeLightGrp@l
+/* 8005A218 000237D8  38 A5 9C 48 */	addi r5, r5, __vt__13CTimeLightGrp@l
 /* 8005A21C 000237DC  90 A3 00 00 */	stw r5, 0(r3)
 /* 8005A220 000237E0  38 00 00 00 */	li r0, 0
 /* 8005A224 000237E4  80 A4 00 00 */	lwz r5, 0(r4)
@@ -260,9 +260,9 @@
 /* 8005A250 00023810  90 63 00 04 */	stw r3, 4(r3)
 /* 8005A254 00023814  41 82 00 6C */	beq .L_8005A2C0
 /* 8005A258 00023818  41 82 00 68 */	beq .L_8005A2C0
-/* 8005A25C 0002381C  3C 80 80 53 */	lis r4, __vt___reslist_base_CVirtualLightObj@ha
+/* 8005A25C 0002381C  3C 80 80 53 */	lis r4, "__vt__34_reslist_base<P16CVirtualLightObj>"@ha
 /* 8005A260 00023820  80 7D 00 04 */	lwz r3, 4(r29)
-/* 8005A264 00023824  38 84 9C 78 */	addi r4, r4, __vt___reslist_base_CVirtualLightObj@l
+/* 8005A264 00023824  38 84 9C 78 */	addi r4, r4, "__vt__34_reslist_base<P16CVirtualLightObj>"@l
 /* 8005A268 00023828  90 9D 00 00 */	stw r4, 0(r29)
 /* 8005A26C 0002382C  38 00 00 00 */	li r0, 0
 /* 8005A270 00023830  80 83 00 00 */	lwz r4, 0(r3)
@@ -388,38 +388,38 @@
 
 .balign 8
 
-.obj __vt__CTimeLightGrp, global
-	.4byte __RTTI__CTimeLightGrp
+.obj __vt__13CTimeLightGrp, global
+	.4byte __RTTI__13CTimeLightGrp
 	.4byte 0
 	.4byte __dt__CTimeLightGrp
-.endobj __vt__CTimeLightGrp
+.endobj __vt__13CTimeLightGrp
 
 .obj CTimeLightGrp_hierarchy, global
-	.4byte __RTTI__CTimeLightObj
+	.4byte __RTTI__13CTimeLightObj
 	.4byte 0
 	.4byte 0
 .endobj CTimeLightGrp_hierarchy
 
 
-.obj __vt__reslist_CVirtualLightObj, global
-	.4byte __RTTI__reslist_CVirtualLightObj
+.obj "__vt__28reslist<P16CVirtualLightObj>", global
+	.4byte "__RTTI__28reslist<P16CVirtualLightObj>"
 	.4byte 0
 	.4byte __dt__reslist_CVirtualLightObj
-.endobj __vt__reslist_CVirtualLightObj
+.endobj "__vt__28reslist<P16CVirtualLightObj>"
 
 .obj reslist_CVirtualLightObj_hierarchy, global
-	.4byte __RTTI___reslist_base_CVirtualLightObj
+	.4byte "__RTTI__34_reslist_base<P16CVirtualLightObj>"
 	.4byte 0
 	.4byte 0
 .endobj reslist_CVirtualLightObj_hierarchy
 
 
-.obj __vt___reslist_base_CVirtualLightObj, global
-	.4byte __RTTI___reslist_base_CVirtualLightObj
+.obj "__vt__34_reslist_base<P16CVirtualLightObj>", global
+	.4byte "__RTTI__34_reslist_base<P16CVirtualLightObj>"
 	.4byte 0
 	.4byte __dt___reslist_base_CVirtualLightObj
 	.4byte 0
-.endobj __vt___reslist_base_CVirtualLightObj
+.endobj "__vt__34_reslist_base<P16CVirtualLightObj>"
 
 
 .section .rodata, "a"  # 0x804F5B20 - 0x805281E0
@@ -450,25 +450,25 @@
 
 .balign 8
 
-.obj __RTTI__CTimeLightGrp, global
+.obj __RTTI__13CTimeLightGrp, global
 	.4byte CTimeLightGrp_typestr
 	.4byte CTimeLightGrp_hierarchy
-.endobj __RTTI__CTimeLightGrp
+.endobj __RTTI__13CTimeLightGrp
 
-.obj __RTTI__CTimeLightObj, global
+.obj __RTTI__13CTimeLightObj, global
 	.4byte CTimeLightObj_typestr
 	.4byte 0
-.endobj __RTTI__CTimeLightObj
+.endobj __RTTI__13CTimeLightObj
 
-.obj __RTTI__reslist_CVirtualLightObj, global
+.obj "__RTTI__28reslist<P16CVirtualLightObj>", global
 	.4byte reslist_CVirtualLightObj_typestr
 	.4byte reslist_CVirtualLightObj_hierarchy
-.endobj __RTTI__reslist_CVirtualLightObj
+.endobj "__RTTI__28reslist<P16CVirtualLightObj>"
 
-.obj __RTTI___reslist_base_CVirtualLightObj, global
+.obj "__RTTI__34_reslist_base<P16CVirtualLightObj>", global
 	.4byte _reslist_base_CVirtualLightObj_typestr
 	.4byte 0
-.endobj __RTTI___reslist_base_CVirtualLightObj
+.endobj "__RTTI__34_reslist_base<P16CVirtualLightObj>"
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

@@ -10,9 +10,9 @@
 /* 80181A6C 0014B02C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80181A70 0014B030  7C 7F 1B 78 */	mr r31, r3
 /* 80181A74 0014B034  4B FF 0B 71 */	bl __ct__CREvtModel
-/* 80181A78 0014B038  3C 60 80 53 */	lis r3, __vt__cf_CREvtModelObj@ha
+/* 80181A78 0014B038  3C 60 80 53 */	lis r3, __vt__Q22cf13CREvtModelObj@ha
 /* 80181A7C 0014B03C  38 80 00 00 */	li r4, 0
-/* 80181A80 0014B040  38 63 57 70 */	addi r3, r3, __vt__cf_CREvtModelObj@l
+/* 80181A80 0014B040  38 63 57 70 */	addi r3, r3, __vt__Q22cf13CREvtModelObj@l
 /* 80181A84 0014B044  38 00 FF FF */	li r0, -1
 /* 80181A88 0014B048  38 E3 00 44 */	addi r7, r3, 0x44
 /* 80181A8C 0014B04C  90 7F 00 00 */	stw r3, 0(r31)
@@ -88,8 +88,8 @@
 /* 80181B90 0014B150  7C 7E 1B 78 */	mr r30, r3
 /* 80181B94 0014B154  41 82 00 E0 */	beq .L_80181C74
 /* 80181B98 0014B158  80 C3 00 7C */	lwz r6, 0x7c(r3)
-/* 80181B9C 0014B15C  3C A0 80 53 */	lis r5, __vt__cf_CREvtModelObj@ha
-/* 80181BA0 0014B160  38 A5 57 70 */	addi r5, r5, __vt__cf_CREvtModelObj@l
+/* 80181B9C 0014B15C  3C A0 80 53 */	lis r5, __vt__Q22cf13CREvtModelObj@ha
+/* 80181BA0 0014B160  38 A5 57 70 */	addi r5, r5, __vt__Q22cf13CREvtModelObj@l
 /* 80181BA4 0014B164  90 A3 00 00 */	stw r5, 0(r3)
 /* 80181BA8 0014B168  2C 06 00 00 */	cmpwi r6, 0
 /* 80181BAC 0014B16C  38 85 00 44 */	addi r4, r5, 0x44
@@ -2182,8 +2182,8 @@
 .endobj lbl_80535764
 
 
-.obj __vt__cf_CREvtModelObj, global
-	.4byte __RTTI__cf_CREvtModelObj
+.obj __vt__Q22cf13CREvtModelObj, global
+	.4byte __RTTI__Q22cf13CREvtModelObj
 	.4byte 0
 	.4byte __ct__80181B74
 	.4byte func_801728F8
@@ -2200,7 +2200,7 @@
 	.4byte func_80172CC0
 	.4byte func_80181DDC
 	.4byte func_80181F28
-	.4byte __RTTI__cf_CREvtModelObj
+	.4byte __RTTI__Q22cf13CREvtModelObj
 	.4byte 0xFFFFFFC8
 	.4byte func_8018370C
 	.4byte IWorkEvent_WorkEvent1
@@ -2234,25 +2234,25 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__cf_CREvtModelObj
+	.4byte __RTTI__Q22cf13CREvtModelObj
 	.4byte 0xFFFFFFC4
 	.4byte func_8018371C
 	.4byte func_80183714
 	.4byte func_801835D4
 	.4byte func_801836CC
-.endobj __vt__cf_CREvtModelObj
+.endobj __vt__Q22cf13CREvtModelObj
 
 .obj cf_CREvtModelObj_hierarchy, global
-	.4byte __RTTI__cf_CREvtObj
+	.4byte __RTTI__Q22cf8CREvtObj
 	.4byte 0
-	.4byte __RTTI__cf_CREvtModel
-	.4byte 0
-	.4byte 0
+	.4byte __RTTI__Q22cf10CREvtModel
 	.4byte 0
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte __RTTI__cf_CREvtObj
+	.4byte 0
+	.4byte 0
+	.4byte __RTTI__Q22cf8CREvtObj
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -2304,10 +2304,10 @@
 
 .balign 8
 
-.obj __RTTI__cf_CREvtModelObj, global
+.obj __RTTI__Q22cf13CREvtModelObj, global
 	.4byte cf_CREvtModelObj_typestr
 	.4byte cf_CREvtModelObj_hierarchy
-.endobj __RTTI__cf_CREvtModelObj
+.endobj __RTTI__Q22cf13CREvtModelObj
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

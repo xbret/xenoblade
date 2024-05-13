@@ -15,12 +15,12 @@
 /* 8012BC68 000F5228  7D 1E 43 78 */	mr r30, r8
 /* 8012BC6C 000F522C  7D 3F 4B 78 */	mr r31, r9
 /* 8012BC70 000F5230  48 31 8D A9 */	bl __ct__8CProcessFv
-/* 8012BC74 000F5234  3C 60 80 53 */	lis r3, __vt__CTTask_IUIWindow@ha
-/* 8012BC78 000F5238  3C A0 80 53 */	lis r5, __vt__CTalkWindow@ha
-/* 8012BC7C 000F523C  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
+/* 8012BC74 000F5234  3C 60 80 53 */	lis r3, "__vt__18CTTask<9IUIWindow>"@ha
+/* 8012BC78 000F5238  3C A0 80 53 */	lis r5, __vt__11CTalkWindow@ha
+/* 8012BC7C 000F523C  38 63 0A 08 */	addi r3, r3, "__vt__18CTTask<9IUIWindow>"@l
 /* 8012BC80 000F5240  90 79 00 10 */	stw r3, 0x10(r25)
 /* 8012BC84 000F5244  3D 20 80 51 */	lis r9, __ptmf_null@ha
-/* 8012BC88 000F5248  38 A5 17 78 */	addi r5, r5, __vt__CTalkWindow@l
+/* 8012BC88 000F5248  38 A5 17 78 */	addi r5, r5, __vt__11CTalkWindow@l
 /* 8012BC8C 000F524C  84 69 CE 10 */	lwzu r3, __ptmf_null@l(r9)
 /* 8012BC90 000F5250  38 85 00 24 */	addi r4, r5, 0x24
 /* 8012BC94 000F5254  3A E0 00 00 */	li r23, 0
@@ -2473,8 +2473,8 @@
 
 .balign 8
 
-.obj __vt__CTalkWindow, global
-	.4byte __RTTI__CTalkWindow
+.obj __vt__11CTalkWindow, global
+	.4byte __RTTI__11CTalkWindow
 	.4byte 0
 	.4byte __dt__CTalkWindow
 	.4byte CChildListNode_Reset
@@ -2483,7 +2483,7 @@
 	.4byte func_8012C8A8
 	.4byte func_8012CBD0
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CTalkWindow
+	.4byte __RTTI__11CTalkWindow
 	.4byte 0xFFFFFF94
 	.4byte func_8012DF78
 	.4byte IWorkEvent_WorkEvent1
@@ -2517,27 +2517,27 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CTalkWindow
+	.4byte __RTTI__11CTalkWindow
 	.4byte 0xFFFFFF90
 	.4byte func_8012DF88
 	.4byte func_8012DF80
 	.4byte func_8012CBD4
-.endobj __vt__CTalkWindow
+.endobj __vt__11CTalkWindow
 
 .obj CTalkWindow_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000070
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x0000006C
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUIWindow
+	.4byte "__RTTI__18CTTask<9IUIWindow>"
 	.4byte 0
-	.4byte __RTTI__IUIWindow
+	.4byte __RTTI__9IUIWindow
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -2547,10 +2547,10 @@
 
 .balign 8
 
-.obj __RTTI__CTalkWindow, global
+.obj __RTTI__11CTalkWindow, global
 	.4byte CTalkWindow_typestr
 	.4byte CTalkWindow_hierarchy
-.endobj __RTTI__CTalkWindow
+.endobj __RTTI__11CTalkWindow
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

@@ -8,9 +8,9 @@
 .fn __ct__CSkipTimer2, global
 /* 8029F0A8 00268668  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029F0AC 0026866C  7C 08 02 A6 */	mflr r0
-/* 8029F0B0 00268670  3C A0 80 54 */	lis r5, __vt__CSkipTimer2@ha
+/* 8029F0B0 00268670  3C A0 80 54 */	lis r5, __vt__11CSkipTimer2@ha
 /* 8029F0B4 00268674  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8029F0B8 00268678  38 A5 D0 14 */	addi r5, r5, __vt__CSkipTimer2@l
+/* 8029F0B8 00268678  38 A5 D0 14 */	addi r5, r5, __vt__11CSkipTimer2@l
 /* 8029F0BC 0026867C  BF C1 00 08 */	stmw r30, 8(r1)
 /* 8029F0C0 00268680  7C 7E 1B 78 */	mr r30, r3
 /* 8029F0C4 00268684  7C 9F 23 78 */	mr r31, r4
@@ -735,9 +735,9 @@
 .fn __ct__CSkipTimer, global
 /* 8029FAE4 002690A4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029FAE8 002690A8  7C 08 02 A6 */	mflr r0
-/* 8029FAEC 002690AC  3C 80 80 54 */	lis r4, __vt__CSkipTimer@ha
+/* 8029FAEC 002690AC  3C 80 80 54 */	lis r4, __vt__10CSkipTimer@ha
 /* 8029FAF0 002690B0  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8029FAF4 002690B4  38 84 CF 80 */	addi r4, r4, __vt__CSkipTimer@l
+/* 8029FAF4 002690B4  38 84 CF 80 */	addi r4, r4, __vt__10CSkipTimer@l
 /* 8029FAF8 002690B8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8029FAFC 002690BC  7C 7F 1B 78 */	mr r31, r3
 /* 8029FB00 002690C0  90 83 00 00 */	stw r4, 0(r3)
@@ -1752,8 +1752,8 @@
 
 .balign 8
 
-.obj __vt__CSkipTimer, global
-	.4byte __RTTI__CSkipTimer
+.obj __vt__10CSkipTimer, global
+	.4byte __RTTI__10CSkipTimer
 	.4byte 0
 	.4byte __dt__CSkipTimer
 	.4byte IWorkEvent_WorkEvent1
@@ -1787,20 +1787,20 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CSkipTimer
+.endobj __vt__10CSkipTimer
 
 .obj CSkipTimer_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 .endobj CSkipTimer_hierarchy
 
 
-.obj __vt__CSkipTimer2, global
-	.4byte __RTTI__CSkipTimer2
+.obj __vt__11CSkipTimer2, global
+	.4byte __RTTI__11CSkipTimer2
 	.4byte 0
 	.4byte __dt__CSkipTimer2
-.endobj __vt__CSkipTimer2
+.endobj __vt__11CSkipTimer2
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -1812,15 +1812,15 @@
 	.4byte 0
 .endobj float_80665570
 
-.obj __RTTI__CSkipTimer, global
+.obj __RTTI__10CSkipTimer, global
 	.4byte CSkipTimer_typestr
 	.4byte CSkipTimer_hierarchy
-.endobj __RTTI__CSkipTimer
+.endobj __RTTI__10CSkipTimer
 
-.obj __RTTI__CSkipTimer2, global
+.obj __RTTI__11CSkipTimer2, global
 	.4byte CSkipTimer2_typestr
 	.4byte 0
-.endobj __RTTI__CSkipTimer2
+.endobj __RTTI__11CSkipTimer2
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

@@ -81,8 +81,8 @@
 /* 804DB330 004A48F0  38 6D C1 50 */	addi r3, r13, lbl_806682D0@sda21
 /* 804DB334 004A48F4  48 00 00 04 */	b .L_804DB338
 .L_804DB338:
-/* 804DB338 004A48F8  3C 80 80 57 */	lis r4, __vt__CNReqtaskRemove@ha
-/* 804DB33C 004A48FC  38 84 36 10 */	addi r4, r4, __vt__CNReqtaskRemove@l
+/* 804DB338 004A48F8  3C 80 80 57 */	lis r4, __vt__15CNReqtaskRemove@ha
+/* 804DB33C 004A48FC  38 84 36 10 */	addi r4, r4, __vt__15CNReqtaskRemove@l
 /* 804DB340 004A4900  90 83 00 00 */	stw r4, 0(r3)
 /* 804DB344 004A4904  4E 80 00 20 */	blr 
 .endfn sinit_804DB330
@@ -106,15 +106,15 @@
 
 .balign 8
 
-.obj __vt__CNReqtaskRemove, global
-	.4byte __RTTI__CNReqtaskRemove
+.obj __vt__15CNReqtaskRemove, global
+	.4byte __RTTI__15CNReqtaskRemove
 	.4byte 0
 	.4byte func_804DB278
 	.4byte func_804DA4CC
-.endobj __vt__CNReqtaskRemove
+.endobj __vt__15CNReqtaskRemove
 
 .obj CNReqtaskRemove_hierarchy, global
-	.4byte __RTTI__CNReqtask
+	.4byte __RTTI__9CNReqtask
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -124,10 +124,10 @@
 
 .balign 8
 
-.obj __RTTI__CNReqtaskRemove, global
+.obj __RTTI__15CNReqtaskRemove, global
 	.4byte CNReqtaskRemove_typestr
 	.4byte CNReqtaskRemove_hierarchy
-.endobj __RTTI__CNReqtaskRemove
+.endobj __RTTI__15CNReqtaskRemove
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

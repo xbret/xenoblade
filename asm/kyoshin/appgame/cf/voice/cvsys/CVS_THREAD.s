@@ -5,10 +5,10 @@
 .fn __ct__cf_CVS_THREAD, global
 /* 802A3A80 0026D040  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802A3A84 0026D044  7C 08 02 A6 */	mflr r0
-/* 802A3A88 0026D048  3C 80 80 54 */	lis r4, __vt__cf_CVS_THREAD@ha
+/* 802A3A88 0026D048  3C 80 80 54 */	lis r4, __vt__Q22cf10CVS_THREAD@ha
 /* 802A3A8C 0026D04C  90 01 00 14 */	stw r0, 0x14(r1)
 /* 802A3A90 0026D050  38 00 00 00 */	li r0, 0
-/* 802A3A94 0026D054  38 84 D0 A0 */	addi r4, r4, __vt__cf_CVS_THREAD@l
+/* 802A3A94 0026D054  38 84 D0 A0 */	addi r4, r4, __vt__Q22cf10CVS_THREAD@l
 /* 802A3A98 0026D058  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802A3A9C 0026D05C  7C 7F 1B 78 */	mr r31, r3
 /* 802A3AA0 0026D060  90 83 00 1C */	stw r4, 0x1c(r3)
@@ -1078,8 +1078,8 @@
 .endobj lbl_8053D098
 
 
-.obj __vt__cf_CVS_THREAD, global
-	.4byte __RTTI__cf_CVS_THREAD
+.obj __vt__Q22cf10CVS_THREAD, global
+	.4byte __RTTI__Q22cf10CVS_THREAD
 	.4byte 0
 	.4byte func_802A3B50
 	.4byte func_802A3BEC
@@ -1087,7 +1087,7 @@
 	.4byte func_802A1EA0
 	.4byte func_802A3740
 	.4byte 0
-.endobj __vt__cf_CVS_THREAD
+.endobj __vt__Q22cf10CVS_THREAD
 
 
 .obj jumptable_8053D0C0, global
@@ -1121,10 +1121,10 @@
 	.4byte 0
 .endobj float_806655B0
 
-.obj __RTTI__cf_CVS_THREAD, global
+.obj __RTTI__Q22cf10CVS_THREAD, global
 	.4byte cf_CVS_THREAD_typestr
 	.4byte 0
-.endobj __RTTI__cf_CVS_THREAD
+.endobj __RTTI__Q22cf10CVS_THREAD
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

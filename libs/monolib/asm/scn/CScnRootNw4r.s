@@ -11,9 +11,9 @@
 /* 8048F34C 0045890C  7C 7B 1B 78 */	mr r27, r3
 /* 8048F350 00458910  7C 9C 23 78 */	mr r28, r4
 /* 8048F354 00458914  41 82 01 64 */	beq .L_8048F4B8
-/* 8048F358 00458918  3C 80 80 57 */	lis r4, __vt__CScnRootNw4r@ha
+/* 8048F358 00458918  3C 80 80 57 */	lis r4, __vt__12CScnRootNw4r@ha
 /* 8048F35C 0045891C  3F E0 80 52 */	lis r31, TYPE_NAME__Q34nw4r3g3d8ScnGroup@ha
-/* 8048F360 00458920  38 84 1F B0 */	addi r4, r4, __vt__CScnRootNw4r@l
+/* 8048F360 00458920  38 84 1F B0 */	addi r4, r4, __vt__12CScnRootNw4r@l
 /* 8048F364 00458924  90 83 00 00 */	stw r4, 0(r3)
 /* 8048F368 00458928  38 04 00 38 */	addi r0, r4, 0x38
 /* 8048F36C 0045892C  3B FF 10 A0 */	addi r31, r31, TYPE_NAME__Q34nw4r3g3d8ScnGroup@l
@@ -1039,8 +1039,8 @@
 
 .balign 8
 
-.obj __vt__CScnRootNw4r, global
-	.4byte __RTTI__CScnRootNw4r
+.obj __vt__12CScnRootNw4r, global
+	.4byte __RTTI__12CScnRootNw4r
 	.4byte 0
 	.4byte __dt__CScnRootNw4r
 	.4byte func_8048F5C8
@@ -1054,7 +1054,7 @@
 	.4byte func_804871A8
 	.4byte func_80490040
 	.4byte func_80490038
-	.4byte __RTTI__CScnRootNw4r
+	.4byte __RTTI__12CScnRootNw4r
 	.4byte 0xFFFFFFF4
 	.4byte func_80490090
 	.4byte func_80490088
@@ -1063,10 +1063,10 @@
 	.4byte func_803F7C30
 	.4byte func_803F7C34
 	.4byte func_8048FED8
-.endobj __vt__CScnRootNw4r
+.endobj __vt__12CScnRootNw4r
 
 .obj CScnRootNw4r_hierarchy, global
-	.4byte __RTTI__CScnRoot
+	.4byte __RTTI__8CScnRoot
 	.4byte 0
 	.4byte 0
 .endobj CScnRootNw4r_hierarchy
@@ -1075,10 +1075,10 @@
 
 .balign 8
 
-.obj __RTTI__CScnRootNw4r, global
+.obj __RTTI__12CScnRootNw4r, global
 	.4byte CScnRootNw4r_typestr
 	.4byte CScnRootNw4r_hierarchy
-.endobj __RTTI__CScnRootNw4r
+.endobj __RTTI__12CScnRootNw4r
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

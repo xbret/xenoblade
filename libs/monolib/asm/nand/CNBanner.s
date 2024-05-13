@@ -5,14 +5,14 @@
 .fn __ct__CNBanner, global
 /* 804F5158 004BE718  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 804F515C 004BE71C  7C 08 02 A6 */	mflr r0
-/* 804F5160 004BE720  3C C0 80 57 */	lis r6, __vt__CNBanner@ha
+/* 804F5160 004BE720  3C C0 80 57 */	lis r6, __vt__8CNBanner@ha
 /* 804F5164 004BE724  38 E3 01 20 */	addi r7, r3, 0x120
 /* 804F5168 004BE728  90 01 00 14 */	stw r0, 0x14(r1)
 /* 804F516C 004BE72C  38 83 02 FC */	addi r4, r3, 0x2fc
 /* 804F5170 004BE730  7C 07 20 40 */	cmplw r7, r4
 /* 804F5174 004BE734  38 A0 00 00 */	li r5, 0
 /* 804F5178 004BE738  93 E1 00 0C */	stw r31, 0xc(r1)
-/* 804F517C 004BE73C  38 C6 3B C0 */	addi r6, r6, __vt__CNBanner@l
+/* 804F517C 004BE73C  38 C6 3B C0 */	addi r6, r6, __vt__8CNBanner@l
 /* 804F5180 004BE740  93 C1 00 08 */	stw r30, 8(r1)
 /* 804F5184 004BE744  7C 7E 1B 78 */	mr r30, r3
 /* 804F5188 004BE748  90 C3 00 00 */	stw r6, 0(r3)
@@ -71,8 +71,8 @@
 /* 804F5248 004BE808  7C 7C 1B 78 */	mr r28, r3
 /* 804F524C 004BE80C  41 82 00 88 */	beq .L_804F52D4
 /* 804F5250 004BE810  88 03 03 24 */	lbz r0, 0x324(r3)
-/* 804F5254 004BE814  3C 80 80 57 */	lis r4, __vt__CNBanner@ha
-/* 804F5258 004BE818  38 84 3B C0 */	addi r4, r4, __vt__CNBanner@l
+/* 804F5254 004BE814  3C 80 80 57 */	lis r4, __vt__8CNBanner@ha
+/* 804F5258 004BE818  38 84 3B C0 */	addi r4, r4, __vt__8CNBanner@l
 /* 804F525C 004BE81C  90 83 00 00 */	stw r4, 0(r3)
 /* 804F5260 004BE820  2C 00 00 00 */	cmpwi r0, 0
 /* 804F5264 004BE824  41 82 00 48 */	beq .L_804F52AC
@@ -570,8 +570,8 @@
 
 .balign 8
 
-.obj __vt__CNBanner, global
-	.4byte __RTTI__CNBanner
+.obj __vt__8CNBanner, global
+	.4byte __RTTI__8CNBanner
 	.4byte 0
 	.4byte __dt__CNBanner
 	.4byte IWorkEvent_WorkEvent1
@@ -605,10 +605,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CNBanner
+.endobj __vt__8CNBanner
 
 .obj CNBanner_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 .endobj CNBanner_hierarchy
@@ -617,10 +617,10 @@
 
 .balign 8
 
-.obj __RTTI__CNBanner, global
+.obj __RTTI__8CNBanner, global
 	.4byte CNBanner_typestr
 	.4byte CNBanner_hierarchy
-.endobj __RTTI__CNBanner
+.endobj __RTTI__8CNBanner
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

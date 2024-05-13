@@ -8,14 +8,14 @@
 /* 804D6C68 004A0228  90 01 00 54 */	stw r0, 0x54(r1)
 /* 804D6C6C 004A022C  39 61 00 50 */	addi r11, r1, 0x50
 /* 804D6C70 004A0230  4B DE 34 D5 */	bl _savegpr_23
-/* 804D6C74 004A0234  3D 60 80 57 */	lis r11, __vt__CETrail@ha
-/* 804D6C78 004A0238  3D 80 80 57 */	lis r12, __vt___reslist_base_CETrail_POINT@ha
-/* 804D6C7C 004A023C  39 6B 34 88 */	addi r11, r11, __vt__CETrail@l
+/* 804D6C74 004A0234  3D 60 80 57 */	lis r11, __vt__7CETrail@ha
+/* 804D6C78 004A0238  3D 80 80 57 */	lis r12, "__vt__31_reslist_base<Q27CETrail5POINT>"@ha
+/* 804D6C7C 004A023C  39 6B 34 88 */	addi r11, r11, __vt__7CETrail@l
 /* 804D6C80 004A0240  3F 00 80 66 */	lis r24, zero__Q22ml5CVec3@ha
-/* 804D6C84 004A0244  39 8C 34 AC */	addi r12, r12, __vt___reslist_base_CETrail_POINT@l
+/* 804D6C84 004A0244  39 8C 34 AC */	addi r12, r12, "__vt__31_reslist_base<Q27CETrail5POINT>"@l
 /* 804D6C88 004A0248  91 63 01 84 */	stw r11, 0x184(r3)
 /* 804D6C8C 004A024C  3A F8 9D B0 */	addi r23, r24, zero__Q22ml5CVec3@l
-/* 804D6C90 004A0250  3D 60 80 57 */	lis r11, __vt__reslist_CETrail_POINT@ha
+/* 804D6C90 004A0250  3D 60 80 57 */	lis r11, "__vt__25reslist<Q27CETrail5POINT>"@ha
 /* 804D6C94 004A0254  91 83 00 00 */	stw r12, 0(r3)
 /* 804D6C98 004A0258  7D 5F 53 78 */	mr r31, r10
 /* 804D6C9C 004A025C  C0 02 D5 84 */	lfs f0, float_8066D904@sda21(r2)
@@ -33,7 +33,7 @@
 /* 804D6CCC 004A028C  D0 41 00 18 */	stfs f2, 0x18(r1)
 /* 804D6CD0 004A0290  7D 3E 4B 78 */	mr r30, r9
 /* 804D6CD4 004A0294  80 C1 00 14 */	lwz r6, 0x14(r1)
-/* 804D6CD8 004A0298  39 6B 34 94 */	addi r11, r11, __vt__reslist_CETrail_POINT@l
+/* 804D6CD8 004A0298  39 6B 34 94 */	addi r11, r11, "__vt__25reslist<Q27CETrail5POINT>"@l
 /* 804D6CDC 004A029C  D0 21 00 1C */	stfs f1, 0x1c(r1)
 /* 804D6CE0 004A02A0  7C 78 1B 78 */	mr r24, r3
 /* 804D6CE4 004A02A4  80 A1 00 18 */	lwz r5, 0x18(r1)
@@ -347,9 +347,9 @@
 /* 804D7128 004A06E8  93 C1 00 08 */	stw r30, 8(r1)
 /* 804D712C 004A06EC  7C 7E 1B 78 */	mr r30, r3
 /* 804D7130 004A06F0  41 82 00 80 */	beq .L_804D71B0
-/* 804D7134 004A06F4  3C A0 80 57 */	lis r5, __vt___reslist_base_CETrail_POINT@ha
+/* 804D7134 004A06F4  3C A0 80 57 */	lis r5, "__vt__31_reslist_base<Q27CETrail5POINT>"@ha
 /* 804D7138 004A06F8  80 83 00 04 */	lwz r4, 4(r3)
-/* 804D713C 004A06FC  38 A5 34 AC */	addi r5, r5, __vt___reslist_base_CETrail_POINT@l
+/* 804D713C 004A06FC  38 A5 34 AC */	addi r5, r5, "__vt__31_reslist_base<Q27CETrail5POINT>"@l
 /* 804D7140 004A0700  90 A3 00 00 */	stw r5, 0(r3)
 /* 804D7144 004A0704  38 00 00 00 */	li r0, 0
 /* 804D7148 004A0708  80 A4 00 00 */	lwz r5, 0(r4)
@@ -403,9 +403,9 @@
 /* 804D71E8 004A07A8  7C 7E 1B 78 */	mr r30, r3
 /* 804D71EC 004A07AC  41 82 00 84 */	beq .L_804D7270
 /* 804D71F0 004A07B0  41 82 00 70 */	beq .L_804D7260
-/* 804D71F4 004A07B4  3C A0 80 57 */	lis r5, __vt___reslist_base_CETrail_POINT@ha
+/* 804D71F4 004A07B4  3C A0 80 57 */	lis r5, "__vt__31_reslist_base<Q27CETrail5POINT>"@ha
 /* 804D71F8 004A07B8  80 83 00 04 */	lwz r4, 4(r3)
-/* 804D71FC 004A07BC  38 A5 34 AC */	addi r5, r5, __vt___reslist_base_CETrail_POINT@l
+/* 804D71FC 004A07BC  38 A5 34 AC */	addi r5, r5, "__vt__31_reslist_base<Q27CETrail5POINT>"@l
 /* 804D7200 004A07C0  90 A3 00 00 */	stw r5, 0(r3)
 /* 804D7204 004A07C4  38 00 00 00 */	li r0, 0
 /* 804D7208 004A07C8  80 84 00 00 */	lwz r4, 0(r4)
@@ -459,8 +459,8 @@
 /* 804D72A8 004A0868  7C 7E 1B 78 */	mr r30, r3
 /* 804D72AC 004A086C  41 82 01 34 */	beq .L_804D73E0
 /* 804D72B0 004A0870  80 A3 00 3C */	lwz r5, 0x3c(r3)
-/* 804D72B4 004A0874  3C 80 80 57 */	lis r4, __vt__CETrail@ha
-/* 804D72B8 004A0878  38 84 34 88 */	addi r4, r4, __vt__CETrail@l
+/* 804D72B4 004A0874  3C 80 80 57 */	lis r4, __vt__7CETrail@ha
+/* 804D72B8 004A0878  38 84 34 88 */	addi r4, r4, __vt__7CETrail@l
 /* 804D72BC 004A087C  90 83 01 84 */	stw r4, 0x184(r3)
 /* 804D72C0 004A0880  2C 05 00 00 */	cmpwi r5, 0
 /* 804D72C4 004A0884  41 82 00 18 */	beq .L_804D72DC
@@ -511,9 +511,9 @@
 /* 804D735C 004A091C  90 1E 00 30 */	stw r0, 0x30(r30)
 /* 804D7360 004A0920  41 82 00 70 */	beq .L_804D73D0
 /* 804D7364 004A0924  41 82 00 6C */	beq .L_804D73D0
-/* 804D7368 004A0928  3C 80 80 57 */	lis r4, __vt___reslist_base_CETrail_POINT@ha
+/* 804D7368 004A0928  3C 80 80 57 */	lis r4, "__vt__31_reslist_base<Q27CETrail5POINT>"@ha
 /* 804D736C 004A092C  80 7E 00 04 */	lwz r3, 4(r30)
-/* 804D7370 004A0930  38 84 34 AC */	addi r4, r4, __vt___reslist_base_CETrail_POINT@l
+/* 804D7370 004A0930  38 84 34 AC */	addi r4, r4, "__vt__31_reslist_base<Q27CETrail5POINT>"@l
 /* 804D7374 004A0934  90 9E 00 00 */	stw r4, 0(r30)
 /* 804D7378 004A0938  80 83 00 00 */	lwz r4, 0(r3)
 /* 804D737C 004A093C  48 00 00 10 */	b .L_804D738C
@@ -1768,50 +1768,50 @@
 
 .balign 8
 
-.obj __vt__CETrail, global
-	.4byte __RTTI__CETrail
+.obj __vt__7CETrail, global
+	.4byte __RTTI__7CETrail
 	.4byte 0
 	.4byte __dt__CETrail
-.endobj __vt__CETrail
+.endobj __vt__7CETrail
 
 
-.obj __vt__reslist_CETrail_POINT, global
-	.4byte __RTTI__reslist_CETrail_POINT
+.obj "__vt__25reslist<Q27CETrail5POINT>", global
+	.4byte "__RTTI__25reslist<Q27CETrail5POINT>"
 	.4byte 0
 	.4byte __dt__reslist_CETrail_POINT
-.endobj __vt__reslist_CETrail_POINT
+.endobj "__vt__25reslist<Q27CETrail5POINT>"
 
 .obj reslist_CETrail_POINT_hierarchy, global
-	.4byte __RTTI___reslist_base_CETrail_POINT
+	.4byte "__RTTI__31_reslist_base<Q27CETrail5POINT>"
 	.4byte 0
 	.4byte 0
 .endobj reslist_CETrail_POINT_hierarchy
 
 
-.obj __vt___reslist_base_CETrail_POINT, global
-	.4byte __RTTI___reslist_base_CETrail_POINT
+.obj "__vt__31_reslist_base<Q27CETrail5POINT>", global
+	.4byte "__RTTI__31_reslist_base<Q27CETrail5POINT>"
 	.4byte 0
 	.4byte __dt___reslist_base_CETrail_POINT
-.endobj __vt___reslist_base_CETrail_POINT
+.endobj "__vt__31_reslist_base<Q27CETrail5POINT>"
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CETrail, global
+.obj __RTTI__7CETrail, global
 	.4byte CETrail_typestr
 	.4byte 0
-.endobj __RTTI__CETrail
+.endobj __RTTI__7CETrail
 
-.obj __RTTI__reslist_CETrail_POINT, global
+.obj "__RTTI__25reslist<Q27CETrail5POINT>", global
 	.4byte reslist_CETrail_POINT_typestr
 	.4byte reslist_CETrail_POINT_hierarchy
-.endobj __RTTI__reslist_CETrail_POINT
+.endobj "__RTTI__25reslist<Q27CETrail5POINT>"
 
-.obj __RTTI___reslist_base_CETrail_POINT, global
+.obj "__RTTI__31_reslist_base<Q27CETrail5POINT>", global
 	.4byte _reslist_base_CETrail_POINT_typestr
 	.4byte 0
-.endobj __RTTI___reslist_base_CETrail_POINT
+.endobj "__RTTI__31_reslist_base<Q27CETrail5POINT>"
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

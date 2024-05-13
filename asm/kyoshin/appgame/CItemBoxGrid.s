@@ -463,9 +463,9 @@
 #CVisionItem
 
 .fn __ct__CVisionItem, global
-/* 801C51FC 0018E7BC  3C 80 80 53 */	lis r4, __vt__CVisionItem@ha
+/* 801C51FC 0018E7BC  3C 80 80 53 */	lis r4, __vt__11CVisionItem@ha
 /* 801C5200 0018E7C0  38 00 00 00 */	li r0, 0
-/* 801C5204 0018E7C4  38 84 7F B0 */	addi r4, r4, __vt__CVisionItem@l
+/* 801C5204 0018E7C4  38 84 7F B0 */	addi r4, r4, __vt__11CVisionItem@l
 /* 801C5208 0018E7C8  B0 03 08 04 */	sth r0, 0x804(r3)
 /* 801C520C 0018E7CC  90 83 00 00 */	stw r4, 0(r3)
 /* 801C5210 0018E7D0  4E 80 00 20 */	blr 
@@ -578,9 +578,9 @@
 #CArtsBookItem
 
 .fn __ct__CArtsBookItem, global
-/* 801C5380 0018E940  3C 80 80 53 */	lis r4, __vt__CArtsBookItem@ha
+/* 801C5380 0018E940  3C 80 80 53 */	lis r4, __vt__13CArtsBookItem@ha
 /* 801C5384 0018E944  38 00 00 00 */	li r0, 0
-/* 801C5388 0018E948  38 84 7F 90 */	addi r4, r4, __vt__CArtsBookItem@l
+/* 801C5388 0018E948  38 84 7F 90 */	addi r4, r4, __vt__13CArtsBookItem@l
 /* 801C538C 0018E94C  B0 03 08 04 */	sth r0, 0x804(r3)
 /* 801C5390 0018E950  90 83 00 00 */	stw r4, 0(r3)
 /* 801C5394 0018E954  4E 80 00 20 */	blr 
@@ -719,9 +719,9 @@
 /* 801C555C 0018EB1C  3B BD 00 0A */	addi r29, r29, 0xa
 /* 801C5560 0018EB20  7C 1D F8 40 */	cmplw r29, r31
 /* 801C5564 0018EB24  41 80 FF D0 */	blt .L_801C5534
-/* 801C5568 0018EB28  3C 80 80 53 */	lis r4, __vt__CQuestItem@ha
+/* 801C5568 0018EB28  3C 80 80 53 */	lis r4, __vt__10CQuestItem@ha
 /* 801C556C 0018EB2C  3B E0 00 00 */	li r31, 0
-/* 801C5570 0018EB30  38 84 7F D0 */	addi r4, r4, __vt__CQuestItem@l
+/* 801C5570 0018EB30  38 84 7F D0 */	addi r4, r4, __vt__10CQuestItem@l
 /* 801C5574 0018EB34  B3 FC 28 00 */	sth r31, 0x2800(r28)
 /* 801C5578 0018EB38  38 7C 34 B0 */	addi r3, r28, 0x34b0
 /* 801C557C 0018EB3C  9B FC 28 02 */	stb r31, 0x2802(r28)
@@ -6197,9 +6197,9 @@
 /* 801CA1A0 00193760  90 01 48 C4 */	stw r0, 0x48c4(r1)
 /* 801CA1A4 00193764  39 61 48 C0 */	addi r11, r1, 0x48c0
 /* 801CA1A8 00193768  48 0E FF A9 */	bl _savegpr_26
-/* 801CA1AC 0019376C  3D 00 80 53 */	lis r8, __vt__CItemBoxGrid@ha
+/* 801CA1AC 0019376C  3D 00 80 53 */	lis r8, __vt__12CItemBoxGrid@ha
 /* 801CA1B0 00193770  90 C3 00 04 */	stw r6, 4(r3)
-/* 801CA1B4 00193774  39 08 7E F8 */	addi r8, r8, __vt__CItemBoxGrid@l
+/* 801CA1B4 00193774  39 08 7E F8 */	addi r8, r8, __vt__12CItemBoxGrid@l
 /* 801CA1B8 00193778  7C 7E 1B 78 */	mr r30, r3
 /* 801CA1BC 0019377C  91 03 00 00 */	stw r8, 0(r3)
 /* 801CA1C0 00193780  7C 9F 23 78 */	mr r31, r4
@@ -15383,8 +15383,8 @@
 
 .balign 8
 
-.obj __vt__CItemBoxGrid, global
-	.4byte __RTTI__CItemBoxGrid
+.obj __vt__12CItemBoxGrid, global
+	.4byte __RTTI__12CItemBoxGrid
 	.4byte 0
 	.4byte __dt__CItemBoxGrid
 	.4byte IWorkEvent_WorkEvent1
@@ -15418,77 +15418,77 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CItemBoxGrid
+.endobj __vt__12CItemBoxGrid
 
 .obj CItemBoxGrid_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj CItemBoxGrid_hierarchy
 
 
-.obj __vt__CArtsBookItem, global
-	.4byte __RTTI__CArtsBookItem
+.obj __vt__13CArtsBookItem, global
+	.4byte __RTTI__13CArtsBookItem
 	.4byte 0
 	.4byte __dt__CArtsBookItem
 	.4byte func_801C53D8
-.endobj __vt__CArtsBookItem
+.endobj __vt__13CArtsBookItem
 
 .obj CArtsBookItem_hierarchy, global
-	.4byte __RTTI__CQuestItem
+	.4byte __RTTI__10CQuestItem
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj CArtsBookItem_hierarchy
 
 
-.obj __vt__CVisionItem, global
-	.4byte __RTTI__CVisionItem
+.obj __vt__11CVisionItem, global
+	.4byte __RTTI__11CVisionItem
 	.4byte 0
 	.4byte __dt__CVisionItem
 	.4byte func_801C5254
-.endobj __vt__CVisionItem
+.endobj __vt__11CVisionItem
 
 .obj CVisionItem_hierarchy, global
-	.4byte __RTTI__CQuestItem
+	.4byte __RTTI__10CQuestItem
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj CVisionItem_hierarchy
 
 
-.obj __vt__CQuestItem, global
-	.4byte __RTTI__CQuestItem
+.obj __vt__10CQuestItem, global
+	.4byte __RTTI__10CQuestItem
 	.4byte 0
 	.4byte __dt__CQuestItem
 	.4byte func_801C4BB4
-.endobj __vt__CQuestItem
+.endobj __vt__10CQuestItem
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CItemBoxGrid, global
+.obj __RTTI__12CItemBoxGrid, global
 	.4byte CItemBoxGrid_typestr
 	.4byte CItemBoxGrid_hierarchy
-.endobj __RTTI__CItemBoxGrid
+.endobj __RTTI__12CItemBoxGrid
 
-.obj __RTTI__CArtsBookItem, global
+.obj __RTTI__13CArtsBookItem, global
 	.4byte CArtsBookItem_typestr
 	.4byte CArtsBookItem_hierarchy
-.endobj __RTTI__CArtsBookItem
+.endobj __RTTI__13CArtsBookItem
 
-.obj __RTTI__CVisionItem, global
+.obj __RTTI__11CVisionItem, global
 	.4byte CVisionItem_typestr
 	.4byte CVisionItem_hierarchy
-.endobj __RTTI__CVisionItem
+.endobj __RTTI__11CVisionItem
 
-.obj __RTTI__CQuestItem, global
+.obj __RTTI__10CQuestItem, global
 	.4byte CQuestItem_typestr
 	.4byte 0
-.endobj __RTTI__CQuestItem
+.endobj __RTTI__10CQuestItem
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

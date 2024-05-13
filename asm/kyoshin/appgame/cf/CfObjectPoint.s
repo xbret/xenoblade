@@ -13,8 +13,8 @@
 /* 800C1290 0008A850  7C 7E 1B 78 */	mr r30, r3
 /* 800C1294 0008A854  41 82 00 74 */	beq .L_800C1308
 /* 800C1298 0008A858  80 03 00 68 */	lwz r0, 0x68(r3)
-/* 800C129C 0008A85C  3C 80 80 53 */	lis r4, __vt__cf_CfObjectPoint@ha
-/* 800C12A0 0008A860  38 84 DB 80 */	addi r4, r4, __vt__cf_CfObjectPoint@l
+/* 800C129C 0008A85C  3C 80 80 53 */	lis r4, __vt__Q22cf13CfObjectPoint@ha
+/* 800C12A0 0008A860  38 84 DB 80 */	addi r4, r4, __vt__Q22cf13CfObjectPoint@l
 /* 800C12A4 0008A864  90 83 00 00 */	stw r4, 0(r3)
 /* 800C12A8 0008A868  54 00 00 43 */	rlwinm. r0, r0, 0, 1, 1
 /* 800C12AC 0008A86C  41 82 00 10 */	beq .L_800C12BC
@@ -29,9 +29,9 @@
 /* 800C12CC 0008A88C  4E 80 04 21 */	bctrl 
 /* 800C12D0 0008A890  2C 1E 00 00 */	cmpwi r30, 0
 /* 800C12D4 0008A894  41 82 00 24 */	beq .L_800C12F8
-/* 800C12D8 0008A898  3C 80 80 53 */	lis r4, __vt__cf_CfObject@ha
+/* 800C12D8 0008A898  3C 80 80 53 */	lis r4, __vt__Q22cf8CfObject@ha
 /* 800C12DC 0008A89C  7F C3 F3 78 */	mr r3, r30
-/* 800C12E0 0008A8A0  38 84 CC B0 */	addi r4, r4, __vt__cf_CfObject@l
+/* 800C12E0 0008A8A0  38 84 CC B0 */	addi r4, r4, __vt__Q22cf8CfObject@l
 /* 800C12E4 0008A8A4  90 9E 00 00 */	stw r4, 0(r30)
 /* 800C12E8 0008A8A8  81 9E 00 00 */	lwz r12, 0(r30)
 /* 800C12EC 0008A8AC  81 8C 00 68 */	lwz r12, 0x68(r12)
@@ -408,8 +408,8 @@
 
 .balign 8
 
-.obj __vt__cf_CfObjectPoint, global
-	.4byte __RTTI__cf_CfObjectPoint
+.obj __vt__Q22cf13CfObjectPoint, global
+	.4byte __RTTI__Q22cf13CfObjectPoint
 	.4byte 0
 	.4byte CObjectState_func_8003DC64
 	.4byte CObjectState_func_8003CB58
@@ -503,7 +503,7 @@
 	.4byte CfObject_func_800AC4BC
 	.4byte CfObject_func_800AC4B8
 	.4byte CfObject_func_800AC4B0
-.endobj __vt__cf_CfObjectPoint
+.endobj __vt__Q22cf13CfObjectPoint
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

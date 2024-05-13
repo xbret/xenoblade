@@ -653,9 +653,9 @@
 .fn __ct__CMCGetItemBox, global
 /* 80297430 002609F0  94 21 FB E0 */	stwu r1, -0x420(r1)
 /* 80297434 002609F4  7C 08 02 A6 */	mflr r0
-/* 80297438 002609F8  3C 80 80 54 */	lis r4, __vt__CMCGetItemBox@ha
+/* 80297438 002609F8  3C 80 80 54 */	lis r4, __vt__13CMCGetItemBox@ha
 /* 8029743C 002609FC  90 01 04 24 */	stw r0, 0x424(r1)
-/* 80297440 00260A00  38 84 C8 E0 */	addi r4, r4, __vt__CMCGetItemBox@l
+/* 80297440 00260A00  38 84 C8 E0 */	addi r4, r4, __vt__13CMCGetItemBox@l
 /* 80297444 00260A04  BF C1 04 18 */	stmw r30, 0x418(r1)
 /* 80297448 00260A08  7C 7F 1B 78 */	mr r31, r3
 /* 8029744C 00260A0C  90 83 00 00 */	stw r4, 0(r3)
@@ -3907,8 +3907,8 @@
 
 .balign 8
 
-.obj __vt__CMCGetItemBox, global
-	.4byte __RTTI__CMCGetItemBox
+.obj __vt__13CMCGetItemBox, global
+	.4byte __RTTI__13CMCGetItemBox
 	.4byte 0
 	.4byte __dt__CMCGetItemBox
 	.4byte IWorkEvent_WorkEvent1
@@ -3942,10 +3942,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CMCGetItemBox
+.endobj __vt__13CMCGetItemBox
 
 .obj CMCGetItemBox_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -3955,10 +3955,10 @@
 
 .balign 8
 
-.obj __RTTI__CMCGetItemBox, global
+.obj __RTTI__13CMCGetItemBox, global
 	.4byte CMCGetItemBox_typestr
 	.4byte CMCGetItemBox_hierarchy
-.endobj __RTTI__CMCGetItemBox
+.endobj __RTTI__13CMCGetItemBox
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

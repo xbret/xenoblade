@@ -3,9 +3,9 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .fn __ct__cf_CfGimmick, global
-/* 802088E0 001D1EA0  3C 80 80 54 */	lis r4, __vt__cf_CfGimmick@ha
+/* 802088E0 001D1EA0  3C 80 80 54 */	lis r4, __vt__Q22cf9CfGimmick@ha
 /* 802088E4 001D1EA4  38 00 00 00 */	li r0, 0
-/* 802088E8 001D1EA8  38 84 8F FC */	addi r4, r4, __vt__cf_CfGimmick@l
+/* 802088E8 001D1EA8  38 84 8F FC */	addi r4, r4, __vt__Q22cf9CfGimmick@l
 /* 802088EC 001D1EAC  90 83 00 00 */	stw r4, 0(r3)
 /* 802088F0 001D1EB0  B0 03 00 64 */	sth r0, 0x64(r3)
 /* 802088F4 001D1EB4  B0 03 00 80 */	sth r0, 0x80(r3)
@@ -2596,8 +2596,8 @@
 .endobj lbl_80538FE8
 
 
-.obj __vt__cf_CfGimmick, global
-	.4byte __RTTI__cf_CfGimmick
+.obj __vt__Q22cf9CfGimmick, global
+	.4byte __RTTI__Q22cf9CfGimmick
 	.4byte 0
 	.4byte __dt__cf_CfGimmick
 	.4byte func_8020896C
@@ -2606,7 +2606,7 @@
 	.4byte func_801F4BF8
 	.4byte func_801F4C8C
 	.4byte func_80208988
-.endobj __vt__cf_CfGimmick
+.endobj __vt__Q22cf9CfGimmick
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 

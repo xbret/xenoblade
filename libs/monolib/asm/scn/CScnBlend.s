@@ -18,8 +18,8 @@
 /* 80498C9C 0046225C  C0 22 CF 24 */	lfs f1, float_8066D2A4@sda21(r2)
 /* 80498CA0 00462260  38 00 00 01 */	li r0, 1
 /* 80498CA4 00462264  D0 41 00 08 */	stfs f2, 8(r1)
-/* 80498CA8 00462268  3F C0 80 57 */	lis r30, __vt__CScnBlend@ha
-/* 80498CAC 0046226C  3B DE 22 30 */	addi r30, r30, __vt__CScnBlend@l
+/* 80498CA8 00462268  3F C0 80 57 */	lis r30, __vt__9CScnBlend@ha
+/* 80498CAC 0046226C  3B DE 22 30 */	addi r30, r30, __vt__9CScnBlend@l
 /* 80498CB0 00462270  63 E5 00 03 */	ori r5, r31, 3
 /* 80498CB4 00462274  D0 41 00 0C */	stfs f2, 0xc(r1)
 /* 80498CB8 00462278  7F A3 EB 78 */	mr r3, r29
@@ -394,16 +394,16 @@
 
 .balign 8
 
-.obj __vt__CScnBlend, global
-	.4byte __RTTI__CScnBlend
+.obj __vt__9CScnBlend, global
+	.4byte __RTTI__9CScnBlend
 	.4byte 0
 	.4byte __dt__CScnBlend
 	.4byte func_8049C868
 	.4byte func_80498DE8
-.endobj __vt__CScnBlend
+.endobj __vt__9CScnBlend
 
 .obj CScnBlend_hierarchy, global
-	.4byte __RTTI__CScnFilter
+	.4byte __RTTI__10CScnFilter
 	.4byte 0
 	.4byte 0
 .endobj CScnBlend_hierarchy
@@ -413,15 +413,15 @@
 
 .balign 8
 
-.obj __RTTI__CScnBlend, global
+.obj __RTTI__9CScnBlend, global
 	.4byte CScnBlend_typestr
 	.4byte CScnBlend_hierarchy
-.endobj __RTTI__CScnBlend
+.endobj __RTTI__9CScnBlend
 
-.obj __RTTI__CScnFilter, global
+.obj __RTTI__10CScnFilter, global
 	.4byte CScnFilter_typestr
 	.4byte 0
-.endobj __RTTI__CScnFilter
+.endobj __RTTI__10CScnFilter
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

@@ -670,7 +670,7 @@
 .balign 8
 
 .obj __vt__6CLight, global
-	.4byte __RTTI__CLight
+	.4byte __RTTI__6CLight
 	.4byte 0
 	.4byte __dt__CLight
 	.4byte 0
@@ -681,10 +681,10 @@
 
 .balign 8
 
-.obj __RTTI__CLight, global
+.obj __RTTI__6CLight, global
 	.4byte CLight_typestr
 	.4byte 0
-.endobj __RTTI__CLight
+.endobj __RTTI__6CLight
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

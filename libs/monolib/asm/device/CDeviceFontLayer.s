@@ -11,18 +11,18 @@
 /* 8045384C 0041CE0C  93 C1 00 08 */	stw r30, 8(r1)
 /* 80453850 0041CE10  7C 7E 1B 78 */	mr r30, r3
 /* 80453854 0041CE14  4B FE 3D 69 */	bl __ct__CWorkThread
-/* 80453858 0041CE18  3C 80 80 57 */	lis r4, __vt__CDeviceFontLayer@ha
-/* 8045385C 0041CE1C  3C 60 80 57 */	lis r3, __vt___reslist_base_const_CDeviceFontLayer_LAYER_QUE@ha
+/* 80453858 0041CE18  3C 80 80 57 */	lis r4, __vt__16CDeviceFontLayer@ha
+/* 8045385C 0041CE1C  3C 60 80 57 */	lis r3, "__vt__47_reslist_base<PCQ216CDeviceFontLayer9LAYER_QUE>"@ha
 /* 80453860 0041CE20  3B E0 00 00 */	li r31, 0
 /* 80453864 0041CE24  93 FE 01 D8 */	stw r31, 0x1d8(r30)
 /* 80453868 0041CE28  38 BE 01 CC */	addi r5, r30, 0x1cc
-/* 8045386C 0041CE2C  38 84 00 18 */	addi r4, r4, __vt__CDeviceFontLayer@l
-/* 80453870 0041CE30  38 63 00 E4 */	addi r3, r3, __vt___reslist_base_const_CDeviceFontLayer_LAYER_QUE@l
+/* 8045386C 0041CE2C  38 84 00 18 */	addi r4, r4, __vt__16CDeviceFontLayer@l
+/* 80453870 0041CE30  38 63 00 E4 */	addi r3, r3, "__vt__47_reslist_base<PCQ216CDeviceFontLayer9LAYER_QUE>"@l
 /* 80453874 0041CE34  90 9E 00 00 */	stw r4, 0(r30)
-/* 80453878 0041CE38  3C 80 80 57 */	lis r4, __vt__reslist_const_CDeviceFontLayer_LAYER_QUE@ha
+/* 80453878 0041CE38  3C 80 80 57 */	lis r4, "__vt__41reslist<PCQ216CDeviceFontLayer9LAYER_QUE>"@ha
 /* 8045387C 0041CE3C  C0 02 C8 48 */	lfs f0, float_8066CBC8@sda21(r2)
 /* 80453880 0041CE40  90 7E 01 C4 */	stw r3, 0x1c4(r30)
-/* 80453884 0041CE44  38 84 00 CC */	addi r4, r4, __vt__reslist_const_CDeviceFontLayer_LAYER_QUE@l
+/* 80453884 0041CE44  38 84 00 CC */	addi r4, r4, "__vt__41reslist<PCQ216CDeviceFontLayer9LAYER_QUE>"@l
 /* 80453888 0041CE48  38 00 00 01 */	li r0, 1
 /* 8045388C 0041CE4C  38 7E 02 20 */	addi r3, r30, 0x220
 /* 80453890 0041CE50  93 FE 01 DC */	stw r31, 0x1dc(r30)
@@ -93,9 +93,9 @@
 /* 80453980 0041CF40  93 C1 00 08 */	stw r30, 8(r1)
 /* 80453984 0041CF44  7C 7E 1B 78 */	mr r30, r3
 /* 80453988 0041CF48  41 82 00 78 */	beq .L_80453A00
-/* 8045398C 0041CF4C  3C A0 80 57 */	lis r5, __vt___reslist_base_const_CDeviceFontLayer_LAYER_QUE@ha
+/* 8045398C 0041CF4C  3C A0 80 57 */	lis r5, "__vt__47_reslist_base<PCQ216CDeviceFontLayer9LAYER_QUE>"@ha
 /* 80453990 0041CF50  80 83 00 04 */	lwz r4, 4(r3)
-/* 80453994 0041CF54  38 A5 00 E4 */	addi r5, r5, __vt___reslist_base_const_CDeviceFontLayer_LAYER_QUE@l
+/* 80453994 0041CF54  38 A5 00 E4 */	addi r5, r5, "__vt__47_reslist_base<PCQ216CDeviceFontLayer9LAYER_QUE>"@l
 /* 80453998 0041CF58  90 A3 00 00 */	stw r5, 0(r3)
 /* 8045399C 0041CF5C  38 00 00 00 */	li r0, 0
 /* 804539A0 0041CF60  80 A4 00 00 */	lwz r5, 0(r4)
@@ -146,9 +146,9 @@
 /* 80453A38 0041CFF8  7C 7E 1B 78 */	mr r30, r3
 /* 80453A3C 0041CFFC  41 82 00 7C */	beq .L_80453AB8
 /* 80453A40 0041D000  41 82 00 68 */	beq .L_80453AA8
-/* 80453A44 0041D004  3C A0 80 57 */	lis r5, __vt___reslist_base_const_CDeviceFontLayer_LAYER_QUE@ha
+/* 80453A44 0041D004  3C A0 80 57 */	lis r5, "__vt__47_reslist_base<PCQ216CDeviceFontLayer9LAYER_QUE>"@ha
 /* 80453A48 0041D008  80 83 00 04 */	lwz r4, 4(r3)
-/* 80453A4C 0041D00C  38 A5 00 E4 */	addi r5, r5, __vt___reslist_base_const_CDeviceFontLayer_LAYER_QUE@l
+/* 80453A4C 0041D00C  38 A5 00 E4 */	addi r5, r5, "__vt__47_reslist_base<PCQ216CDeviceFontLayer9LAYER_QUE>"@l
 /* 80453A50 0041D010  90 A3 00 00 */	stw r5, 0(r3)
 /* 80453A54 0041D014  38 00 00 00 */	li r0, 0
 /* 80453A58 0041D018  80 84 00 00 */	lwz r4, 0(r4)
@@ -205,9 +205,9 @@
 /* 80453B08 0041D0C8  37 FD 01 C4 */	addic. r31, r29, 0x1c4
 /* 80453B0C 0041D0CC  41 82 00 6C */	beq .L_80453B78
 /* 80453B10 0041D0D0  41 82 00 68 */	beq .L_80453B78
-/* 80453B14 0041D0D4  3C 80 80 57 */	lis r4, __vt___reslist_base_const_CDeviceFontLayer_LAYER_QUE@ha
+/* 80453B14 0041D0D4  3C 80 80 57 */	lis r4, "__vt__47_reslist_base<PCQ216CDeviceFontLayer9LAYER_QUE>"@ha
 /* 80453B18 0041D0D8  80 7F 00 04 */	lwz r3, 4(r31)
-/* 80453B1C 0041D0DC  38 84 00 E4 */	addi r4, r4, __vt___reslist_base_const_CDeviceFontLayer_LAYER_QUE@l
+/* 80453B1C 0041D0DC  38 84 00 E4 */	addi r4, r4, "__vt__47_reslist_base<PCQ216CDeviceFontLayer9LAYER_QUE>"@l
 /* 80453B20 0041D0E0  90 9F 00 00 */	stw r4, 0(r31)
 /* 80453B24 0041D0E4  38 00 00 00 */	li r0, 0
 /* 80453B28 0041D0E8  80 83 00 00 */	lwz r4, 0(r3)
@@ -1614,8 +1614,8 @@
 
 .balign 8
 
-.obj __vt__CDeviceFontLayer, global
-	.4byte __RTTI__CDeviceFontLayer
+.obj __vt__16CDeviceFontLayer, global
+	.4byte __RTTI__16CDeviceFontLayer
 	.4byte 0
 	.4byte __dt__CDeviceFontLayer
 	.4byte IWorkEvent_WorkEvent1
@@ -1655,55 +1655,55 @@
 	.4byte CWorkThread_WorkThreadEvent4
 	.4byte CDeviceFontLayer_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-.endobj __vt__CDeviceFontLayer
+.endobj __vt__16CDeviceFontLayer
 
 .obj CDeviceFontLayer_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
 	.4byte 0
 .endobj CDeviceFontLayer_hierarchy
 
 
-.obj __vt__reslist_const_CDeviceFontLayer_LAYER_QUE, global
-	.4byte __RTTI__reslist_const_CDeviceFontLayer_LAYER_QUE
+.obj "__vt__41reslist<PCQ216CDeviceFontLayer9LAYER_QUE>", global
+	.4byte "__RTTI__41reslist<PCQ216CDeviceFontLayer9LAYER_QUE>"
 	.4byte 0
 	.4byte __dt__reslist_const_CDeviceFontLayer_LAYER_QUE
-.endobj __vt__reslist_const_CDeviceFontLayer_LAYER_QUE
+.endobj "__vt__41reslist<PCQ216CDeviceFontLayer9LAYER_QUE>"
 
 .obj reslist_const_CDeviceFontLayer_LAYER_QUE_hierarchy, global
-	.4byte __RTTI___reslist_base_const_CDeviceFontLayer_LAYER_QUE
+	.4byte "__RTTI__47_reslist_base<PCQ216CDeviceFontLayer9LAYER_QUE>"
 	.4byte 0
 	.4byte 0
 .endobj reslist_const_CDeviceFontLayer_LAYER_QUE_hierarchy
 
 
-.obj __vt___reslist_base_const_CDeviceFontLayer_LAYER_QUE, global
-	.4byte __RTTI___reslist_base_const_CDeviceFontLayer_LAYER_QUE
+.obj "__vt__47_reslist_base<PCQ216CDeviceFontLayer9LAYER_QUE>", global
+	.4byte "__RTTI__47_reslist_base<PCQ216CDeviceFontLayer9LAYER_QUE>"
 	.4byte 0
 	.4byte __dt___reslist_base_const_CDeviceFontLayer_LAYER_QUE
-.endobj __vt___reslist_base_const_CDeviceFontLayer_LAYER_QUE
+.endobj "__vt__47_reslist_base<PCQ216CDeviceFontLayer9LAYER_QUE>"
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CDeviceFontLayer, global
+.obj __RTTI__16CDeviceFontLayer, global
 	.4byte CDeviceFontLayer_typestr
 	.4byte CDeviceFontLayer_hierarchy
-.endobj __RTTI__CDeviceFontLayer
+.endobj __RTTI__16CDeviceFontLayer
 
-.obj __RTTI__reslist_const_CDeviceFontLayer_LAYER_QUE, global
+.obj "__RTTI__41reslist<PCQ216CDeviceFontLayer9LAYER_QUE>", global
 	.4byte reslist_const_CDeviceFontLayer_LAYER_QUE_typestr
 	.4byte reslist_const_CDeviceFontLayer_LAYER_QUE_hierarchy
-.endobj __RTTI__reslist_const_CDeviceFontLayer_LAYER_QUE
+.endobj "__RTTI__41reslist<PCQ216CDeviceFontLayer9LAYER_QUE>"
 
-.obj __RTTI___reslist_base_const_CDeviceFontLayer_LAYER_QUE, global
+.obj "__RTTI__47_reslist_base<PCQ216CDeviceFontLayer9LAYER_QUE>", global
 	.4byte _reslist_base_const_CDeviceFontLayer_LAYER_QUE_typestr
 	.4byte 0
-.endobj __RTTI___reslist_base_const_CDeviceFontLayer_LAYER_QUE
+.endobj "__RTTI__47_reslist_base<PCQ216CDeviceFontLayer9LAYER_QUE>"
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

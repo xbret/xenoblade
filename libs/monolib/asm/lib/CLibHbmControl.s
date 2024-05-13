@@ -551,9 +551,9 @@
 /* 8045ED10 004282D0  7F C5 F3 78 */	mr r5, r30
 /* 8045ED14 004282D4  38 C0 00 08 */	li r6, 8
 /* 8045ED18 004282D8  4B FD 9F 19 */	bl __ct__CProc
-/* 8045ED1C 004282DC  3C 60 80 57 */	lis r3, __vt__CLibHbmControl@ha
+/* 8045ED1C 004282DC  3C 60 80 57 */	lis r3, __vt__14CLibHbmControl@ha
 /* 8045ED20 004282E0  38 C0 00 00 */	li r6, 0
-/* 8045ED24 004282E4  38 63 0A D8 */	addi r3, r3, __vt__CLibHbmControl@l
+/* 8045ED24 004282E4  38 63 0A D8 */	addi r3, r3, __vt__14CLibHbmControl@l
 /* 8045ED28 004282E8  90 7D 00 00 */	stw r3, 0(r29)
 /* 8045ED2C 004282EC  38 00 00 2D */	li r0, 0x2d
 /* 8045ED30 004282F0  38 80 00 00 */	li r4, 0
@@ -754,8 +754,8 @@
 
 .balign 8
 
-.obj __vt__CLibHbmControl, global
-	.4byte __RTTI__CLibHbmControl
+.obj __vt__14CLibHbmControl, global
+	.4byte __RTTI__14CLibHbmControl
 	.4byte 0
 	.4byte __dt__CLibHbmControl
 	.4byte IWorkEvent_WorkEvent1
@@ -795,14 +795,14 @@
 	.4byte CLibHbmControl_WorkThreadEvent4
 	.4byte CLibHbmControl_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-.endobj __vt__CLibHbmControl
+.endobj __vt__14CLibHbmControl
 
 .obj CLibHbmControl_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
-	.4byte __RTTI__CProc
+	.4byte __RTTI__5CProc
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -812,10 +812,10 @@
 
 .balign 8
 
-.obj __RTTI__CLibHbmControl, global
+.obj __RTTI__14CLibHbmControl, global
 	.4byte CLibHbmControl_typestr
 	.4byte CLibHbmControl_hierarchy
-.endobj __RTTI__CLibHbmControl
+.endobj __RTTI__14CLibHbmControl
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

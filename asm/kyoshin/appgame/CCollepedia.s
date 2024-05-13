@@ -6,9 +6,9 @@
 
 
 .fn __ct__CCLPCur, global
-/* 80253198 0021C758  3C A0 80 54 */	lis r5, __vt__CCLPCur@ha
+/* 80253198 0021C758  3C A0 80 54 */	lis r5, __vt__7CCLPCur@ha
 /* 8025319C 0021C75C  38 00 00 00 */	li r0, 0
-/* 802531A0 0021C760  38 A5 AC 2C */	addi r5, r5, __vt__CCLPCur@l
+/* 802531A0 0021C760  38 A5 AC 2C */	addi r5, r5, __vt__7CCLPCur@l
 /* 802531A4 0021C764  90 A3 00 00 */	stw r5, 0(r3)
 /* 802531A8 0021C768  90 83 00 04 */	stw r4, 4(r3)
 /* 802531AC 0021C76C  90 03 00 08 */	stw r0, 8(r3)
@@ -1614,9 +1614,9 @@
 .fn __ct__CCollepedia, global
 /* 80254720 0021DCE0  94 21 FF B0 */	stwu r1, -0x50(r1)
 /* 80254724 0021DCE4  7C 08 02 A6 */	mflr r0
-/* 80254728 0021DCE8  3C 80 80 54 */	lis r4, __vt__CCollepedia@ha
+/* 80254728 0021DCE8  3C 80 80 54 */	lis r4, __vt__11CCollepedia@ha
 /* 8025472C 0021DCEC  90 01 00 54 */	stw r0, 0x54(r1)
-/* 80254730 0021DCF0  38 84 AB 98 */	addi r4, r4, __vt__CCollepedia@l
+/* 80254730 0021DCF0  38 84 AB 98 */	addi r4, r4, __vt__11CCollepedia@l
 /* 80254734 0021DCF4  BF C1 00 48 */	stmw r30, 0x48(r1)
 /* 80254738 0021DCF8  7C 7E 1B 78 */	mr r30, r3
 /* 8025473C 0021DCFC  90 83 00 00 */	stw r4, 0(r3)
@@ -4213,8 +4213,8 @@
 .endobj jumptable_8053AB74
 
 
-.obj __vt__CCollepedia, global
-	.4byte __RTTI__CCollepedia
+.obj __vt__11CCollepedia, global
+	.4byte __RTTI__11CCollepedia
 	.4byte 0
 	.4byte __dt__CCollepedia
 	.4byte IWorkEvent_WorkEvent1
@@ -4248,20 +4248,20 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CCollepedia
+.endobj __vt__11CCollepedia
 
 .obj CCollepedia_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 .endobj CCollepedia_hierarchy
 
 
-.obj __vt__CCLPCur, global
-	.4byte __RTTI__CCLPCur
+.obj __vt__7CCLPCur, global
+	.4byte __RTTI__7CCLPCur
 	.4byte 0
 	.4byte func_80253204
-.endobj __vt__CCLPCur
+.endobj __vt__7CCLPCur
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

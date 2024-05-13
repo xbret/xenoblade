@@ -14,12 +14,12 @@
 /* 802A9BAC 0027316C  93 81 00 10 */	stw r28, 0x10(r1)
 /* 802A9BB0 00273170  7C 7C 1B 78 */	mr r28, r3
 /* 802A9BB4 00273174  48 19 AE 65 */	bl __ct__8CProcessFv
-/* 802A9BB8 00273178  3C 60 80 53 */	lis r3, __vt__CTTask_IUIWindow@ha
-/* 802A9BBC 0027317C  3C A0 80 54 */	lis r5, __vt__CMenuBattleChain@ha
-/* 802A9BC0 00273180  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
+/* 802A9BB8 00273178  3C 60 80 53 */	lis r3, "__vt__18CTTask<9IUIWindow>"@ha
+/* 802A9BBC 0027317C  3C A0 80 54 */	lis r5, __vt__16CMenuBattleChain@ha
+/* 802A9BC0 00273180  38 63 0A 08 */	addi r3, r3, "__vt__18CTTask<9IUIWindow>"@l
 /* 802A9BC4 00273184  90 7C 00 10 */	stw r3, 0x10(r28)
 /* 802A9BC8 00273188  3D 40 80 51 */	lis r10, __ptmf_null@ha
-/* 802A9BCC 0027318C  38 A5 D5 D8 */	addi r5, r5, __vt__CMenuBattleChain@l
+/* 802A9BCC 0027318C  38 A5 D5 D8 */	addi r5, r5, __vt__16CMenuBattleChain@l
 /* 802A9BD0 00273190  84 6A CE 10 */	lwzu r3, __ptmf_null@l(r10)
 /* 802A9BD4 00273194  38 85 00 24 */	addi r4, r5, 0x24
 /* 802A9BD8 00273198  3B E0 00 00 */	li r31, 0
@@ -1877,8 +1877,8 @@
 .endobj jumptable_8053D5B4
 
 
-.obj __vt__CMenuBattleChain, global
-	.4byte __RTTI__CMenuBattleChain
+.obj __vt__16CMenuBattleChain, global
+	.4byte __RTTI__16CMenuBattleChain
 	.4byte 0
 	.4byte __dt__CMenuBattleChain
 	.4byte CChildListNode_Reset
@@ -1887,7 +1887,7 @@
 	.4byte func_802A9F3C
 	.4byte func_80124584
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuBattleChain
+	.4byte __RTTI__16CMenuBattleChain
 	.4byte 0xFFFFFF94
 	.4byte func_802AB3B8
 	.4byte IWorkEvent_WorkEvent1
@@ -1921,27 +1921,27 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CMenuBattleChain
+	.4byte __RTTI__16CMenuBattleChain
 	.4byte 0xFFFFFF90
 	.4byte func_802AB3C8
 	.4byte func_802AB3C0
 	.4byte func_802AA20C
-.endobj __vt__CMenuBattleChain
+.endobj __vt__16CMenuBattleChain
 
 .obj CMenuBattleChain_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000070
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x0000006C
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUIWindow
+	.4byte "__RTTI__18CTTask<9IUIWindow>"
 	.4byte 0
-	.4byte __RTTI__IUIWindow
+	.4byte __RTTI__9IUIWindow
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -2070,10 +2070,10 @@
 	.4byte 0xA0A0A0FF
 .endobj lbl_806656C4
 
-.obj __RTTI__CMenuBattleChain, global
+.obj __RTTI__16CMenuBattleChain, global
 	.4byte CMenuBattleChain_typestr
 	.4byte CMenuBattleChain_hierarchy
-.endobj __RTTI__CMenuBattleChain
+.endobj __RTTI__16CMenuBattleChain
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

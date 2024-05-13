@@ -6,9 +6,9 @@
 
 
 .fn __ct__UI_CPassiveSkillCur, global
-/* 80263EBC 0022D47C  3C C0 80 54 */	lis r6, __vt__UI_CPassiveSkillCur@ha
+/* 80263EBC 0022D47C  3C C0 80 54 */	lis r6, __vt__Q22UI16CPassiveSkillCur@ha
 /* 80263EC0 0022D480  38 A0 00 00 */	li r5, 0
-/* 80263EC4 0022D484  38 C6 B1 CC */	addi r6, r6, __vt__UI_CPassiveSkillCur@l
+/* 80263EC4 0022D484  38 C6 B1 CC */	addi r6, r6, __vt__Q22UI16CPassiveSkillCur@l
 /* 80263EC8 0022D488  38 00 00 01 */	li r0, 1
 /* 80263ECC 0022D48C  90 C3 00 00 */	stw r6, 0(r3)
 /* 80263ED0 0022D490  90 83 00 04 */	stw r4, 4(r3)
@@ -555,12 +555,12 @@
 .fn __ct__UI_CPassiveSkillInfo, global
 /* 80264630 0022DBF0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80264634 0022DBF4  7C 08 02 A6 */	mflr r0
-/* 80264638 0022DBF8  3C C0 80 54 */	lis r6, __vt__UI_CPassiveSkillInfo@ha
+/* 80264638 0022DBF8  3C C0 80 54 */	lis r6, __vt__Q22UI17CPassiveSkillInfo@ha
 /* 8026463C 0022DBFC  C0 02 AE 34 */	lfs f0, float_8066B1B4@sda21(r2)
 /* 80264640 0022DC00  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80264644 0022DC04  38 A0 00 00 */	li r5, 0
 /* 80264648 0022DC08  38 00 00 01 */	li r0, 1
-/* 8026464C 0022DC0C  38 C6 B1 C0 */	addi r6, r6, __vt__UI_CPassiveSkillInfo@l
+/* 8026464C 0022DC0C  38 C6 B1 C0 */	addi r6, r6, __vt__Q22UI17CPassiveSkillInfo@l
 /* 80264650 0022DC10  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80264654 0022DC14  7C 7F 1B 78 */	mr r31, r3
 /* 80264658 0022DC18  90 83 00 04 */	stw r4, 4(r3)
@@ -3034,10 +3034,10 @@
 .fn __ct__UI_CPassiveSkillLine, global
 /* 80266A34 0022FFF4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80266A38 0022FFF8  7C 08 02 A6 */	mflr r0
-/* 80266A3C 0022FFFC  3C A0 80 54 */	lis r5, __vt__UI_CPassiveSkillLine@ha
+/* 80266A3C 0022FFFC  3C A0 80 54 */	lis r5, __vt__Q22UI17CPassiveSkillLine@ha
 /* 80266A40 00230000  C0 02 AE 34 */	lfs f0, float_8066B1B4@sda21(r2)
 /* 80266A44 00230004  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80266A48 00230008  38 A5 B1 B4 */	addi r5, r5, __vt__UI_CPassiveSkillLine@l
+/* 80266A48 00230008  38 A5 B1 B4 */	addi r5, r5, __vt__Q22UI17CPassiveSkillLine@l
 /* 80266A4C 0023000C  38 00 00 01 */	li r0, 1
 /* 80266A50 00230010  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80266A54 00230014  3B E0 00 00 */	li r31, 0
@@ -10431,9 +10431,9 @@
 .fn __ct__UI_CPassiveSkill, global
 /* 8026D4C0 00236A80  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8026D4C4 00236A84  7C 08 02 A6 */	mflr r0
-/* 8026D4C8 00236A88  3C 80 80 54 */	lis r4, __vt__UI_CPassiveSkill@ha
+/* 8026D4C8 00236A88  3C 80 80 54 */	lis r4, __vt__Q22UI13CPassiveSkill@ha
 /* 8026D4CC 00236A8C  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8026D4D0 00236A90  38 84 B1 20 */	addi r4, r4, __vt__UI_CPassiveSkill@l
+/* 8026D4D0 00236A90  38 84 B1 20 */	addi r4, r4, __vt__Q22UI13CPassiveSkill@l
 /* 8026D4D4 00236A94  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8026D4D8 00236A98  7C 7F 1B 78 */	mr r31, r3
 /* 8026D4DC 00236A9C  90 83 00 00 */	stw r4, 0(r3)
@@ -11663,8 +11663,8 @@
 
 .balign 8
 
-.obj __vt__UI_CPassiveSkill, global
-	.4byte __RTTI__UI_CPassiveSkill
+.obj __vt__Q22UI13CPassiveSkill, global
+	.4byte __RTTI__Q22UI13CPassiveSkill
 	.4byte 0
 	.4byte __dt__UI_CPassiveSkill
 	.4byte IWorkEvent_WorkEvent1
@@ -11698,34 +11698,34 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__UI_CPassiveSkill
+.endobj __vt__Q22UI13CPassiveSkill
 
 .obj UI_CPassiveSkill_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 .endobj UI_CPassiveSkill_hierarchy
 
 
-.obj __vt__UI_CPassiveSkillLine, global
-	.4byte __RTTI__UI_CPassiveSkillLine
+.obj __vt__Q22UI17CPassiveSkillLine, global
+	.4byte __RTTI__Q22UI17CPassiveSkillLine
 	.4byte 0
 	.4byte __dt__UI_CPassiveSkillLine
-.endobj __vt__UI_CPassiveSkillLine
+.endobj __vt__Q22UI17CPassiveSkillLine
 
 
-.obj __vt__UI_CPassiveSkillInfo, global
-	.4byte __RTTI__UI_CPassiveSkillInfo
+.obj __vt__Q22UI17CPassiveSkillInfo, global
+	.4byte __RTTI__Q22UI17CPassiveSkillInfo
 	.4byte 0
 	.4byte __dt__UI_CPassiveSkillInfo
-.endobj __vt__UI_CPassiveSkillInfo
+.endobj __vt__Q22UI17CPassiveSkillInfo
 
 
-.obj __vt__UI_CPassiveSkillCur, global
-	.4byte __RTTI__UI_CPassiveSkillCur
+.obj __vt__Q22UI16CPassiveSkillCur, global
+	.4byte __RTTI__Q22UI16CPassiveSkillCur
 	.4byte 0
 	.4byte __dt__UI_CPassiveSkillCur
-.endobj __vt__UI_CPassiveSkillCur
+.endobj __vt__Q22UI16CPassiveSkillCur
 
 
 
@@ -11733,25 +11733,25 @@
 
 .balign 8
 
-.obj __RTTI__UI_CPassiveSkill, global
+.obj __RTTI__Q22UI13CPassiveSkill, global
 	.4byte UI_CPassiveSkill_typestr
 	.4byte UI_CPassiveSkill_hierarchy
-.endobj __RTTI__UI_CPassiveSkill
+.endobj __RTTI__Q22UI13CPassiveSkill
 
-.obj __RTTI__UI_CPassiveSkillLine, global
+.obj __RTTI__Q22UI17CPassiveSkillLine, global
 	.4byte UI_CPassiveSkillLine_typestr
 	.4byte 0
-.endobj __RTTI__UI_CPassiveSkillLine
+.endobj __RTTI__Q22UI17CPassiveSkillLine
 
-.obj __RTTI__UI_CPassiveSkillInfo, global
+.obj __RTTI__Q22UI17CPassiveSkillInfo, global
 	.4byte UI_CPassiveSkillInfo_typestr
 	.4byte 0
-.endobj __RTTI__UI_CPassiveSkillInfo
+.endobj __RTTI__Q22UI17CPassiveSkillInfo
 
-.obj __RTTI__UI_CPassiveSkillCur, global
+.obj __RTTI__Q22UI16CPassiveSkillCur, global
 	.4byte UI_CPassiveSkillCur_typestr
 	.4byte 0
-.endobj __RTTI__UI_CPassiveSkillCur
+.endobj __RTTI__Q22UI16CPassiveSkillCur
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

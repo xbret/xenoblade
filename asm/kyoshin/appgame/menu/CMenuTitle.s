@@ -27,14 +27,14 @@
 /* 802B5E3C 0027F3FC  7C 7E 1B 78 */	mr r30, r3
 /* 802B5E40 0027F400  41 82 00 94 */	beq .L_802B5ED4
 /* 802B5E44 0027F404  48 18 EB D5 */	bl __ct__8CProcessFv
-/* 802B5E48 0027F408  3C 60 80 54 */	lis r3, __vt__CTTask_CMenuTitle@ha
+/* 802B5E48 0027F408  3C 60 80 54 */	lis r3, "__vt__20CTTask<10CMenuTitle>"@ha
 /* 802B5E4C 0027F40C  3D 00 80 51 */	lis r8, __ptmf_null@ha
-/* 802B5E50 0027F410  38 63 E8 C4 */	addi r3, r3, __vt__CTTask_CMenuTitle@l
+/* 802B5E50 0027F410  38 63 E8 C4 */	addi r3, r3, "__vt__20CTTask<10CMenuTitle>"@l
 /* 802B5E54 0027F414  90 7E 00 10 */	stw r3, 0x10(r30)
 /* 802B5E58 0027F418  39 08 CE 10 */	addi r8, r8, __ptmf_null@l
-/* 802B5E5C 0027F41C  3C A0 80 54 */	lis r5, __vt__CMenuTitle@ha
+/* 802B5E5C 0027F41C  3C A0 80 54 */	lis r5, __vt__10CMenuTitle@ha
 /* 802B5E60 0027F420  80 C8 00 04 */	lwz r6, 4(r8)
-/* 802B5E64 0027F424  38 A5 E7 D0 */	addi r5, r5, __vt__CMenuTitle@l
+/* 802B5E64 0027F424  38 A5 E7 D0 */	addi r5, r5, __vt__10CMenuTitle@l
 /* 802B5E68 0027F428  80 08 00 00 */	lwz r0, 0(r8)
 /* 802B5E6C 0027F42C  38 85 00 24 */	addi r4, r5, 0x24
 /* 802B5E70 0027F430  90 1E 00 3C */	stw r0, 0x3c(r30)
@@ -426,8 +426,8 @@
 
 .balign 8
 
-.obj __vt__CMenuTitle, global
-	.4byte __RTTI__CMenuTitle
+.obj __vt__10CMenuTitle, global
+	.4byte __RTTI__10CMenuTitle
 	.4byte 0
 	.4byte __dt__CMenuTitle
 	.4byte CChildListNode_Reset
@@ -436,7 +436,7 @@
 	.4byte func_802B5D34
 	.4byte func_802B62CC
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuTitle
+	.4byte __RTTI__10CMenuTitle
 	.4byte 0xFFFFFFAC
 	.4byte func_802B6314
 	.4byte IWorkEvent_WorkEvent1
@@ -470,32 +470,32 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CMenuTitle
+	.4byte __RTTI__10CMenuTitle
 	.4byte 0xFFFFFFA8
 	.4byte func_802B6324
 	.4byte func_802B631C
 	.4byte func_802B5D80
-.endobj __vt__CMenuTitle
+.endobj __vt__10CMenuTitle
 
 .obj CMenuTitle_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000058
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x00000054
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_CMenuTitle
+	.4byte "__RTTI__20CTTask<10CMenuTitle>"
 	.4byte 0
 	.4byte 0
 .endobj CMenuTitle_hierarchy
 
 
-.obj __vt__CTTask_CMenuTitle, global
-	.4byte __RTTI__CTTask_CMenuTitle
+.obj "__vt__20CTTask<10CMenuTitle>", global
+	.4byte "__RTTI__20CTTask<10CMenuTitle>"
 	.4byte 0
 	.4byte __dt__CTTask_CMenuTitle
 	.4byte CChildListNode_Reset
@@ -504,14 +504,14 @@
 	.4byte func_802B6284
 	.4byte func_802B62CC
 	.4byte CProcess_func_80043F20
-.endobj __vt__CTTask_CMenuTitle
+.endobj "__vt__20CTTask<10CMenuTitle>"
 
 .obj CTTask_CMenuTitle_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -522,15 +522,15 @@
 
 .balign 8
 
-.obj __RTTI__CMenuTitle, global
+.obj __RTTI__10CMenuTitle, global
 	.4byte CMenuTitle_typestr
 	.4byte CMenuTitle_hierarchy
-.endobj __RTTI__CMenuTitle
+.endobj __RTTI__10CMenuTitle
 
-.obj __RTTI__CTTask_CMenuTitle, global
+.obj "__RTTI__20CTTask<10CMenuTitle>", global
 	.4byte CTTask_CMenuTitle_typestr
 	.4byte CTTask_CMenuTitle_hierarchy
-.endobj __RTTI__CTTask_CMenuTitle
+.endobj "__RTTI__20CTTask<10CMenuTitle>"
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

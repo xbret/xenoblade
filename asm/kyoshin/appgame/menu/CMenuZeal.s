@@ -17,12 +17,12 @@
 /* 8017EDC0 00148380  93 81 00 10 */	stw r28, 0x10(r1)
 /* 8017EDC4 00148384  7C 7C 1B 78 */	mr r28, r3
 /* 8017EDC8 00148388  48 2C 5C 51 */	bl __ct__8CProcessFv
-/* 8017EDCC 0014838C  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
-/* 8017EDD0 00148390  3C A0 80 53 */	lis r5, __vt__CMenuZeal@ha
-/* 8017EDD4 00148394  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
+/* 8017EDCC 0014838C  3C 60 80 53 */	lis r3, "__vt__14CTTask<5IUICf>"@ha
+/* 8017EDD0 00148390  3C A0 80 53 */	lis r5, __vt__9CMenuZeal@ha
+/* 8017EDD4 00148394  38 63 F7 40 */	addi r3, r3, "__vt__14CTTask<5IUICf>"@l
 /* 8017EDD8 00148398  90 7C 00 10 */	stw r3, 0x10(r28)
 /* 8017EDDC 0014839C  3D 00 80 51 */	lis r8, __ptmf_null@ha
-/* 8017EDE0 001483A0  38 A5 53 B8 */	addi r5, r5, __vt__CMenuZeal@l
+/* 8017EDE0 001483A0  38 A5 53 B8 */	addi r5, r5, __vt__9CMenuZeal@l
 /* 8017EDE4 001483A4  84 68 CE 10 */	lwzu r3, __ptmf_null@l(r8)
 /* 8017EDE8 001483A8  38 85 00 24 */	addi r4, r5, 0x24
 /* 8017EDEC 001483AC  C0 22 9D B0 */	lfs f1, float_8066A130@sda21(r2)
@@ -1287,8 +1287,8 @@
 
 .balign 8
 
-.obj __vt__CMenuZeal, global
-	.4byte __RTTI__CMenuZeal
+.obj __vt__9CMenuZeal, global
+	.4byte __RTTI__9CMenuZeal
 	.4byte 0
 	.4byte __dt__CMenuZeal
 	.4byte CChildListNode_Reset
@@ -1297,7 +1297,7 @@
 	.4byte func_8017F43C
 	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuZeal
+	.4byte __RTTI__9CMenuZeal
 	.4byte 0xFFFFFFA8
 	.4byte func_8017FF60
 	.4byte IWorkEvent_WorkEvent1
@@ -1331,27 +1331,27 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CMenuZeal
+	.4byte __RTTI__9CMenuZeal
 	.4byte 0xFFFFFFA4
 	.4byte func_8017FF70
 	.4byte func_8017FF68
 	.4byte func_8017FBB4
-.endobj __vt__CMenuZeal
+.endobj __vt__9CMenuZeal
 
 .obj CMenuZeal_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x0000005C
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x00000058
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUICf
+	.4byte "__RTTI__14CTTask<5IUICf>"
 	.4byte 0
-	.4byte __RTTI__IUICf
+	.4byte __RTTI__5IUICf
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1361,10 +1361,10 @@
 
 .balign 8
 
-.obj __RTTI__CMenuZeal, global
+.obj __RTTI__9CMenuZeal, global
 	.4byte CMenuZeal_typestr
 	.4byte CMenuZeal_hierarchy
-.endobj __RTTI__CMenuZeal
+.endobj __RTTI__9CMenuZeal
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

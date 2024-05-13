@@ -4,10 +4,10 @@
 
 .fn __ct__CMdlAnmEye, global
 /* 804E7544 004B0B04  C0 02 D7 88 */	lfs f0, float_8066DB08@sda21(r2)
-/* 804E7548 004B0B08  3C A0 80 57 */	lis r5, __vt__CMdlAnmEye@ha
+/* 804E7548 004B0B08  3C A0 80 57 */	lis r5, __vt__10CMdlAnmEye@ha
 /* 804E754C 004B0B0C  38 80 00 00 */	li r4, 0
 /* 804E7550 004B0B10  38 00 00 01 */	li r0, 1
-/* 804E7554 004B0B14  38 A5 3A 18 */	addi r5, r5, __vt__CMdlAnmEye@l
+/* 804E7554 004B0B14  38 A5 3A 18 */	addi r5, r5, __vt__10CMdlAnmEye@l
 /* 804E7558 004B0B18  90 A3 00 00 */	stw r5, 0(r3)
 /* 804E755C 004B0B1C  90 83 00 04 */	stw r4, 4(r3)
 /* 804E7560 004B0B20  90 83 00 1C */	stw r4, 0x1c(r3)
@@ -409,12 +409,12 @@
 
 .balign 8
 
-.obj __vt__CMdlAnmEye, global
-	.4byte __RTTI__CMdlAnmEye
+.obj __vt__10CMdlAnmEye, global
+	.4byte __RTTI__10CMdlAnmEye
 	.4byte 0
 	.4byte __dt__CMdlAnmEye
 	.4byte 0
-.endobj __vt__CMdlAnmEye
+.endobj __vt__10CMdlAnmEye
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -426,10 +426,10 @@
 	.4byte 0
 .endobj lbl_806665A0
 
-.obj __RTTI__CMdlAnmEye, global
+.obj __RTTI__10CMdlAnmEye, global
 	.4byte CMdlAnmEye_typestr
 	.4byte 0
-.endobj __RTTI__CMdlAnmEye
+.endobj __RTTI__10CMdlAnmEye
 
 
 .obj lbl_806665B0, global

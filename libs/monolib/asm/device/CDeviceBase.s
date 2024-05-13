@@ -198,8 +198,8 @@
 
 .balign 8
 
-.obj __vt__CDeviceBase, global
-	.4byte __RTTI__CDeviceBase
+.obj __vt__11CDeviceBase, global
+	.4byte __RTTI__11CDeviceBase
 	.4byte 0
 	.4byte __dt__CDeviceBase
 	.4byte IWorkEvent_WorkEvent1
@@ -239,12 +239,12 @@
 	.4byte CWorkThread_WorkThreadEvent4
 	.4byte CWorkThread_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-.endobj __vt__CDeviceBase
+.endobj __vt__11CDeviceBase
 
 .obj CDeviceBase_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -254,10 +254,10 @@
 
 .balign 8
 
-.obj __RTTI__CDeviceBase, global
+.obj __RTTI__11CDeviceBase, global
 	.4byte CDeviceBase_typestr
 	.4byte CDeviceBase_hierarchy
-.endobj __RTTI__CDeviceBase
+.endobj __RTTI__11CDeviceBase
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

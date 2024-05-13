@@ -5,9 +5,9 @@
 .fn __ct__CScnItemModel, global
 /* 80482528 0044BAE8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8048252C 0044BAEC  7C 08 02 A6 */	mflr r0
-/* 80482530 0044BAF0  3C C0 80 57 */	lis r6, __vt__CScnItemModel@ha
+/* 80482530 0044BAF0  3C C0 80 57 */	lis r6, __vt__13CScnItemModel@ha
 /* 80482534 0044BAF4  90 01 00 24 */	stw r0, 0x24(r1)
-/* 80482538 0044BAF8  38 C6 15 B8 */	addi r6, r6, __vt__CScnItemModel@l
+/* 80482538 0044BAF8  38 C6 15 B8 */	addi r6, r6, __vt__13CScnItemModel@l
 /* 8048253C 0044BAFC  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80482540 0044BB00  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80482544 0044BB04  3B C0 00 01 */	li r30, 1
@@ -4547,8 +4547,8 @@
 
 .balign 8
 
-.obj __vt__CScnItemModel, global
-	.4byte __RTTI__CScnItemModel
+.obj __vt__13CScnItemModel, global
+	.4byte __RTTI__13CScnItemModel
 	.4byte 0
 	.4byte __dt__CScnItemModel
 	.4byte func_80485CE8
@@ -4604,7 +4604,7 @@
 	.4byte func_804857DC
 	.4byte func_804857F0
 	.4byte 0
-.endobj __vt__CScnItemModel
+.endobj __vt__13CScnItemModel
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

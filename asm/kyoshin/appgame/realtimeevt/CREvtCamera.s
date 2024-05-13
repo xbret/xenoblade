@@ -13,11 +13,11 @@
 /* 8017FF94 00149554  7C 7E 1B 78 */	mr r30, r3
 /* 8017FF98 00149558  48 00 56 F9 */	bl __ct__cf_CREvtObj
 /* 8017FF9C 0014955C  C0 42 9D E4 */	lfs f2, float_8066A164@sda21(r2)
-/* 8017FFA0 00149560  3C 80 80 53 */	lis r4, __vt__cf_CREvtCamera@ha
+/* 8017FFA0 00149560  3C 80 80 53 */	lis r4, __vt__Q22cf11CREvtCamera@ha
 /* 8017FFA4 00149564  38 60 00 00 */	li r3, 0
 /* 8017FFA8 00149568  C0 22 9D E8 */	lfs f1, float_8066A168@sda21(r2)
 /* 8017FFAC 0014956C  C0 02 9D EC */	lfs f0, float_8066A16C@sda21(r2)
-/* 8017FFB0 00149570  38 84 54 B8 */	addi r4, r4, __vt__cf_CREvtCamera@l
+/* 8017FFB0 00149570  38 84 54 B8 */	addi r4, r4, __vt__Q22cf11CREvtCamera@l
 /* 8017FFB4 00149574  38 00 FF FF */	li r0, -1
 /* 8017FFB8 00149578  90 9E 00 00 */	stw r4, 0(r30)
 /* 8017FFBC 0014957C  90 7E 00 14 */	stw r3, 0x14(r30)
@@ -88,9 +88,9 @@
 /* 801800B0 00149670  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 801800B4 00149674  7C 7E 1B 78 */	mr r30, r3
 /* 801800B8 00149678  41 82 01 2C */	beq .L_801801E4
-/* 801800BC 0014967C  3C 80 80 53 */	lis r4, __vt__cf_CREvtCamera@ha
+/* 801800BC 0014967C  3C 80 80 53 */	lis r4, __vt__Q22cf11CREvtCamera@ha
 /* 801800C0 00149680  38 00 00 00 */	li r0, 0
-/* 801800C4 00149684  38 84 54 B8 */	addi r4, r4, __vt__cf_CREvtCamera@l
+/* 801800C4 00149684  38 84 54 B8 */	addi r4, r4, __vt__Q22cf11CREvtCamera@l
 /* 801800C8 00149688  90 83 00 00 */	stw r4, 0(r3)
 /* 801800CC 0014968C  90 0D AA 18 */	stw r0, lbl_80666B98@sda21(r13)
 /* 801800D0 00149690  4B F0 21 29 */	bl func_800821F8
@@ -772,8 +772,8 @@
 
 .balign 8
 
-.obj __vt__cf_CREvtCamera, global
-	.4byte __RTTI__cf_CREvtCamera
+.obj __vt__Q22cf11CREvtCamera, global
+	.4byte __RTTI__Q22cf11CREvtCamera
 	.4byte 0
 	.4byte __ct__80180088
 	.4byte func_80180414
@@ -783,10 +783,10 @@
 	.4byte func_801809A8
 	.4byte func_801696C4
 	.4byte func_801804CC
-.endobj __vt__cf_CREvtCamera
+.endobj __vt__Q22cf11CREvtCamera
 
 .obj cf_CREvtCamera_hierarchy, global
-	.4byte __RTTI__cf_CREvtObj
+	.4byte __RTTI__Q22cf8CREvtObj
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -805,10 +805,10 @@
 	.4byte lbl_8066A160
 .endobj lbl_80664D44
 
-.obj __RTTI__cf_CREvtCamera, global
+.obj __RTTI__Q22cf11CREvtCamera, global
 	.4byte cf_CREvtCamera_typestr
 	.4byte cf_CREvtCamera_hierarchy
-.endobj __RTTI__cf_CREvtCamera
+.endobj __RTTI__Q22cf11CREvtCamera
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

@@ -6114,8 +6114,8 @@
 .endobj jumptable_8052E3A0
 
 
-.obj __vt__cf_CfObjectImplMove, global
-	.4byte __RTTI__cf_CfObjectImplMove
+.obj __vt__Q22cf16CfObjectImplMove, global
+	.4byte __RTTI__Q22cf16CfObjectImplMove
 	.4byte 0
 	.4byte __dt__cf_CfObjectImplMove
 	.4byte func_80054A20
@@ -6160,11 +6160,11 @@
 	.4byte func_800C596C
 	.4byte func_800CAA44
 	.4byte func_800CAB00
-	.4byte __RTTI__cf_CfObjectImplMove
+	.4byte __RTTI__Q22cf16CfObjectImplMove
 	.4byte 0xFFFFFFF4
 	.4byte func_800CFFBC
 	.4byte func_800CA6CC
-	.4byte __RTTI__cf_CfObjectImplMove
+	.4byte __RTTI__Q22cf16CfObjectImplMove
 	.4byte 0xFFFFFFF0
 	.4byte func_800CFFC4
 	.4byte func_800C5988
@@ -6175,7 +6175,7 @@
 	.4byte 0
 	.4byte func_800CEE28
 	.4byte func_800CFFA0
-.endobj __vt__cf_CfObjectImplMove
+.endobj __vt__Q22cf16CfObjectImplMove
 
 
 .obj lbl_8052E558, global

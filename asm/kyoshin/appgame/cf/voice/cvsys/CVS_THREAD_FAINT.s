@@ -44,8 +44,8 @@
 /* 802A6B30 002700F0  41 82 00 34 */	beq .L_802A6B64
 /* 802A6B34 002700F4  90 3F 00 1C */	stw r1, 0x1c(r31)
 /* 802A6B38 002700F8  4B FF CF 49 */	bl __ct__cf_CVS_THREAD
-/* 802A6B3C 002700FC  3C 60 80 54 */	lis r3, __vt__cf_CVS_THREAD_FAINT@ha
-/* 802A6B40 00270100  38 63 D3 0C */	addi r3, r3, __vt__cf_CVS_THREAD_FAINT@l
+/* 802A6B3C 002700FC  3C 60 80 54 */	lis r3, __vt__Q22cf16CVS_THREAD_FAINT@ha
+/* 802A6B40 00270100  38 63 D3 0C */	addi r3, r3, __vt__Q22cf16CVS_THREAD_FAINT@l
 /* 802A6B44 00270104  90 7E 00 1C */	stw r3, 0x1c(r30)
 /* 802A6B48 00270108  93 9E 00 20 */	stw r28, 0x20(r30)
 /* 802A6B4C 0027010C  93 BE 00 24 */	stw r29, 0x24(r30)
@@ -323,18 +323,18 @@
 .endobj lbl_8053D300
 
 
-.obj __vt__cf_CVS_THREAD_FAINT, global
-	.4byte __RTTI__cf_CVS_THREAD_FAINT
+.obj __vt__Q22cf16CVS_THREAD_FAINT, global
+	.4byte __RTTI__Q22cf16CVS_THREAD_FAINT
 	.4byte 0
 	.4byte func_802A3B50
 	.4byte func_802A6D74
 	.4byte func_802A6DEC
 	.4byte func_802A1EA0
 	.4byte func_802A3740
-.endobj __vt__cf_CVS_THREAD_FAINT
+.endobj __vt__Q22cf16CVS_THREAD_FAINT
 
 .obj cf_CVS_THREAD_FAINT_hierarchy, global
-	.4byte __RTTI__cf_CVS_THREAD
+	.4byte __RTTI__Q22cf10CVS_THREAD
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -344,10 +344,10 @@
 
 .balign 8
 
-.obj __RTTI__cf_CVS_THREAD_FAINT, global
+.obj __RTTI__Q22cf16CVS_THREAD_FAINT, global
 	.4byte cf_CVS_THREAD_FAINT_typestr
 	.4byte cf_CVS_THREAD_FAINT_hierarchy
-.endobj __RTTI__cf_CVS_THREAD_FAINT
+.endobj __RTTI__Q22cf16CVS_THREAD_FAINT
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

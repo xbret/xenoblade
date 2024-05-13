@@ -10,18 +10,18 @@
 /* 804D8DA0 004A2360  BF C1 00 08 */	stmw r30, 8(r1)
 /* 804D8DA4 004A2364  7C 7E 1B 78 */	mr r30, r3
 /* 804D8DA8 004A2368  4B F5 E8 15 */	bl __ct__CWorkThread
-/* 804D8DAC 004A236C  3C 60 80 57 */	lis r3, __vt__CWorkSystemCache@ha
-/* 804D8DB0 004A2370  3C A0 80 57 */	lis r5, __vt___reslist_base_CCacheItem@ha
+/* 804D8DAC 004A236C  3C 60 80 57 */	lis r3, __vt__16CWorkSystemCache@ha
+/* 804D8DB0 004A2370  3C A0 80 57 */	lis r5, "__vt__28_reslist_base<P10CCacheItem>"@ha
 /* 804D8DB4 004A2374  3B E0 00 00 */	li r31, 0
 /* 804D8DB8 004A2378  93 FE 01 D8 */	stw r31, 0x1d8(r30)
 /* 804D8DBC 004A237C  38 9E 01 CC */	addi r4, r30, 0x1cc
-/* 804D8DC0 004A2380  38 63 34 B8 */	addi r3, r3, __vt__CWorkSystemCache@l
-/* 804D8DC4 004A2384  38 A5 35 84 */	addi r5, r5, __vt___reslist_base_CCacheItem@l
+/* 804D8DC0 004A2380  38 63 34 B8 */	addi r3, r3, __vt__16CWorkSystemCache@l
+/* 804D8DC4 004A2384  38 A5 35 84 */	addi r5, r5, "__vt__28_reslist_base<P10CCacheItem>"@l
 /* 804D8DC8 004A2388  90 7E 00 00 */	stw r3, 0(r30)
-/* 804D8DCC 004A238C  3C 60 80 57 */	lis r3, __vt__reslist_CCacheItem@ha
+/* 804D8DCC 004A238C  3C 60 80 57 */	lis r3, "__vt__22reslist<P10CCacheItem>"@ha
 /* 804D8DD0 004A2390  38 00 00 06 */	li r0, 6
 /* 804D8DD4 004A2394  90 BE 01 C4 */	stw r5, 0x1c4(r30)
-/* 804D8DD8 004A2398  38 63 35 6C */	addi r3, r3, __vt__reslist_CCacheItem@l
+/* 804D8DD8 004A2398  38 63 35 6C */	addi r3, r3, "__vt__22reslist<P10CCacheItem>"@l
 /* 804D8DDC 004A239C  93 FE 01 DC */	stw r31, 0x1dc(r30)
 /* 804D8DE0 004A23A0  9B FE 01 E0 */	stb r31, 0x1e0(r30)
 /* 804D8DE4 004A23A4  90 9E 01 C8 */	stw r4, 0x1c8(r30)
@@ -62,8 +62,8 @@
 /* 804D8E60 004A2420  7C 7E 1B 78 */	mr r30, r3
 /* 804D8E64 004A2424  7C 9F 23 78 */	mr r31, r4
 /* 804D8E68 004A2428  41 82 00 48 */	beq .L_804D8EB0
-/* 804D8E6C 004A242C  3C 80 80 57 */	lis r4, __vt___reslist_base_CCacheItem@ha
-/* 804D8E70 004A2430  38 84 35 84 */	addi r4, r4, __vt___reslist_base_CCacheItem@l
+/* 804D8E6C 004A242C  3C 80 80 57 */	lis r4, "__vt__28_reslist_base<P10CCacheItem>"@ha
+/* 804D8E70 004A2430  38 84 35 84 */	addi r4, r4, "__vt__28_reslist_base<P10CCacheItem>"@l
 /* 804D8E74 004A2434  90 83 00 00 */	stw r4, 0(r3)
 /* 804D8E78 004A2438  48 00 00 51 */	bl func_804D8EC8
 /* 804D8E7C 004A243C  88 1E 00 1C */	lbz r0, 0x1c(r30)
@@ -403,8 +403,8 @@
 
 .balign 8
 
-.obj __vt__CWorkSystemCache, global
-	.4byte __RTTI__CWorkSystemCache
+.obj __vt__16CWorkSystemCache, global
+	.4byte __RTTI__16CWorkSystemCache
 	.4byte 0
 	.4byte __dt__CWorkSystemCache
 	.4byte IWorkEvent_WorkEvent1
@@ -444,54 +444,54 @@
 	.4byte CWorkSystemCache_WorkThreadEvent4
 	.4byte CWorkSystemCache_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-.endobj __vt__CWorkSystemCache
+.endobj __vt__16CWorkSystemCache
 
 .obj CWorkSystemCache_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
 	.4byte 0
 .endobj CWorkSystemCache_hierarchy
 
 
-.obj __vt__reslist_CCacheItem, global
-	.4byte __RTTI__reslist_CCacheItem
+.obj "__vt__22reslist<P10CCacheItem>", global
+	.4byte "__RTTI__22reslist<P10CCacheItem>"
 	.4byte 0
 	.4byte __dt__reslist_CCacheItem
-.endobj __vt__reslist_CCacheItem
+.endobj "__vt__22reslist<P10CCacheItem>"
 
 .obj reslist_CCacheItem_hierarchy, global
-	.4byte __RTTI___reslist_base_CCacheItem
+	.4byte "__RTTI__28_reslist_base<P10CCacheItem>"
 	.4byte 0
 	.4byte 0
 .endobj reslist_CCacheItem_hierarchy
 
 
-.obj __vt___reslist_base_CCacheItem, global
-	.4byte __RTTI___reslist_base_CCacheItem
+.obj "__vt__28_reslist_base<P10CCacheItem>", global
+	.4byte "__RTTI__28_reslist_base<P10CCacheItem>"
 	.4byte 0
 	.4byte __dt___reslist_base_CCacheItem
-.endobj __vt___reslist_base_CCacheItem
+.endobj "__vt__28_reslist_base<P10CCacheItem>"
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CWorkSystemCache, global
+.obj __RTTI__16CWorkSystemCache, global
 	.4byte CWorkSystemCache_typestr
 	.4byte CWorkSystemCache_hierarchy
-.endobj __RTTI__CWorkSystemCache
+.endobj __RTTI__16CWorkSystemCache
 
-.obj __RTTI__reslist_CCacheItem, global
+.obj "__RTTI__22reslist<P10CCacheItem>", global
 	.4byte reslist_CCacheItem_typestr
 	.4byte reslist_CCacheItem_hierarchy
-.endobj __RTTI__reslist_CCacheItem
+.endobj "__RTTI__22reslist<P10CCacheItem>"
 
-.obj __RTTI___reslist_base_CCacheItem, global
+.obj "__RTTI__28_reslist_base<P10CCacheItem>", global
 	.4byte _reslist_base_CCacheItem_typestr
 	.4byte 0
-.endobj __RTTI___reslist_base_CCacheItem
+.endobj "__RTTI__28_reslist_base<P10CCacheItem>"
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

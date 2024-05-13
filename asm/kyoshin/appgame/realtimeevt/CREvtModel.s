@@ -15,8 +15,8 @@
 /* 80172608 0013BBC8  7C 7D 1B 78 */	mr r29, r3
 /* 8017260C 0013BBCC  48 01 30 85 */	bl __ct__cf_CREvtObj
 /* 80172610 0013BBD0  38 80 00 00 */	li r4, 0
-/* 80172614 0013BBD4  3C 60 80 53 */	lis r3, __vt__cf_CREvtModel@ha
-/* 80172618 0013BBD8  38 63 4E 4C */	addi r3, r3, __vt__cf_CREvtModel@l
+/* 80172614 0013BBD4  3C 60 80 53 */	lis r3, __vt__Q22cf10CREvtModel@ha
+/* 80172618 0013BBD8  38 63 4E 4C */	addi r3, r3, __vt__Q22cf10CREvtModel@l
 /* 8017261C 0013BBDC  90 7D 00 00 */	stw r3, 0(r29)
 /* 80172620 0013BBE0  60 80 00 08 */	ori r0, r4, 8
 /* 80172624 0013BBE4  93 FD 00 14 */	stw r31, 0x14(r29)
@@ -48,8 +48,8 @@
 /* 80172680 0013BC40  93 C1 00 08 */	stw r30, 8(r1)
 /* 80172684 0013BC44  7C 7E 1B 78 */	mr r30, r3
 /* 80172688 0013BC48  41 82 00 38 */	beq .L_801726C0
-/* 8017268C 0013BC4C  3D 80 80 53 */	lis r12, __vt__cf_CREvtModel@ha
-/* 80172690 0013BC50  39 8C 4E 4C */	addi r12, r12, __vt__cf_CREvtModel@l
+/* 8017268C 0013BC4C  3D 80 80 53 */	lis r12, __vt__Q22cf10CREvtModel@ha
+/* 80172690 0013BC50  39 8C 4E 4C */	addi r12, r12, __vt__Q22cf10CREvtModel@l
 /* 80172694 0013BC54  91 83 00 00 */	stw r12, 0(r3)
 /* 80172698 0013BC58  81 8C 00 3C */	lwz r12, 0x3c(r12)
 /* 8017269C 0013BC5C  7D 89 03 A6 */	mtctr r12
@@ -570,8 +570,8 @@
 .L_80172DB4:
 /* 80172DB4 0013C374  80 7E 07 EC */	lwz r3, 0x7ec(r30)
 /* 80172DB8 0013C378  38 80 00 00 */	li r4, 0
-/* 80172DBC 0013C37C  38 AD 8B 70 */	addi r5, r13, __RTTI__CScnMaruShadowNw4r@sda21
-/* 80172DC0 0013C380  38 CD 8B 78 */	addi r6, r13, __RTTI__IScnPolyShadow@sda21
+/* 80172DBC 0013C37C  38 AD 8B 70 */	addi r5, r13, __RTTI__18CScnMaruShadowNw4r@sda21
+/* 80172DC0 0013C380  38 CD 8B 78 */	addi r6, r13, __RTTI__14IScnPolyShadow@sda21
 /* 80172DC4 0013C384  38 E0 00 00 */	li r7, 0
 /* 80172DC8 0013C388  48 14 6F BD */	bl __dynamic_cast
 /* 80172DCC 0013C38C  2C 03 00 00 */	cmpwi r3, 0
@@ -907,13 +907,13 @@
 .balign 8
 
 .obj CScnMaruShadowNw4r_hierarchy, global
-	.4byte __RTTI__IScnPolyShadow
+	.4byte __RTTI__14IScnPolyShadow
 	.4byte 0
 	.4byte 0
 .endobj CScnMaruShadowNw4r_hierarchy
 
-.obj __vt__cf_CREvtModel, global
-	.4byte __RTTI__cf_CREvtModel
+.obj __vt__Q22cf10CREvtModel, global
+	.4byte __RTTI__Q22cf10CREvtModel
 	.4byte 0
 	.4byte __ct__80172668
 	.4byte func_801728F8
@@ -930,10 +930,10 @@
 	.4byte func_80172CC0
 	.4byte func_801726DC
 	.4byte func_80172768
-.endobj __vt__cf_CREvtModel
+.endobj __vt__Q22cf10CREvtModel
 
 .obj cf_CREvtModel_hierarchy, global
-	.4byte __RTTI__cf_CREvtObj
+	.4byte __RTTI__Q22cf8CREvtObj
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -943,26 +943,26 @@
 
 .balign 8
 
-.obj __RTTI__CScnMaruShadowNw4r, global
+.obj __RTTI__18CScnMaruShadowNw4r, global
 	.4byte CScnMaruShadowNw4r_typestr
 	.4byte CScnMaruShadowNw4r_hierarchy
-.endobj __RTTI__CScnMaruShadowNw4r
+.endobj __RTTI__18CScnMaruShadowNw4r
 
 
-.obj __RTTI__IScnPolyShadow, global
+.obj __RTTI__14IScnPolyShadow, global
 	.4byte IScnPolyShadow_typestr
 	.4byte 0
-.endobj __RTTI__IScnPolyShadow
+.endobj __RTTI__14IScnPolyShadow
 
-.obj __RTTI__cf_CREvtModel, global
+.obj __RTTI__Q22cf10CREvtModel, global
 	.4byte cf_CREvtModel_typestr
 	.4byte cf_CREvtModel_hierarchy
-.endobj __RTTI__cf_CREvtModel
+.endobj __RTTI__Q22cf10CREvtModel
 
-.obj __RTTI__cf_CREvtObj, global
+.obj __RTTI__Q22cf8CREvtObj, global
 	.4byte cf_CREvtObj_typestr
 	.4byte 0
-.endobj __RTTI__cf_CREvtObj
+.endobj __RTTI__Q22cf8CREvtObj
 
 
 .obj lbl_80664D10, global

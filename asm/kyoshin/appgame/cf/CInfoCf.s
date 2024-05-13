@@ -3,9 +3,9 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .fn __ct__cf_CInfoCf, global
-/* 80166704 0012FCC4  3C 80 80 53 */	lis r4, __vt__cf_CInfoCf@ha
+/* 80166704 0012FCC4  3C 80 80 53 */	lis r4, __vt__Q22cf7CInfoCf@ha
 /* 80166708 0012FCC8  38 00 00 00 */	li r0, 0
-/* 8016670C 0012FCCC  38 84 41 80 */	addi r4, r4, __vt__cf_CInfoCf@l
+/* 8016670C 0012FCCC  38 84 41 80 */	addi r4, r4, __vt__Q22cf7CInfoCf@l
 /* 80166710 0012FCD0  90 83 00 00 */	stw r4, 0(r3)
 /* 80166714 0012FCD4  90 03 00 04 */	stw r0, 4(r3)
 /* 80166718 0012FCD8  90 03 00 08 */	stw r0, 8(r3)
@@ -1259,21 +1259,21 @@
 
 .balign 8
 
-.obj __vt__cf_CInfoCf, global
-	.4byte __RTTI__cf_CInfoCf
+.obj __vt__Q22cf7CInfoCf, global
+	.4byte __RTTI__Q22cf7CInfoCf
 	.4byte 0
 	.4byte __dt__cf_CInfoCf
 	.4byte 0
-.endobj __vt__cf_CInfoCf
+.endobj __vt__Q22cf7CInfoCf
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__cf_CInfoCf, global
+.obj __RTTI__Q22cf7CInfoCf, global
 	.4byte cf_CInfoCf_typestr
 	.4byte 0
-.endobj __RTTI__cf_CInfoCf
+.endobj __RTTI__Q22cf7CInfoCf
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

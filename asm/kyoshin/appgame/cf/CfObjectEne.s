@@ -9,9 +9,9 @@
 /* 800AD894 00076E54  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 800AD898 00076E58  7C 7F 1B 78 */	mr r31, r3
 /* 800AD89C 00076E5C  48 0C 25 CD */	bl __ct__cf_CfObjectActor
-/* 800AD8A0 00076E60  3C 60 80 53 */	lis r3, __vt__cf_CfObjectEne@ha
+/* 800AD8A0 00076E60  3C 60 80 53 */	lis r3, __vt__Q22cf11CfObjectEne@ha
 /* 800AD8A4 00076E64  38 00 00 00 */	li r0, 0
-/* 800AD8A8 00076E68  38 63 C1 E8 */	addi r3, r3, __vt__cf_CfObjectEne@l
+/* 800AD8A8 00076E68  38 63 C1 E8 */	addi r3, r3, __vt__Q22cf11CfObjectEne@l
 /* 800AD8AC 00076E6C  C0 02 8E B0 */	lfs f0, float_80669230@sda21(r2)
 /* 800AD8B0 00076E70  38 A3 00 0C */	addi r5, r3, 0xc
 /* 800AD8B4 00076E74  90 7F 00 00 */	stw r3, 0(r31)
@@ -146,8 +146,8 @@
 /* 800ADA6C 0007702C  93 C1 00 08 */	stw r30, 8(r1)
 /* 800ADA70 00077030  7C 7E 1B 78 */	mr r30, r3
 /* 800ADA74 00077034  41 82 00 9C */	beq .L_800ADB10
-/* 800ADA78 00077038  3C C0 80 53 */	lis r6, __vt__cf_CfObjectEne@ha
-/* 800ADA7C 0007703C  38 C6 C1 E8 */	addi r6, r6, __vt__cf_CfObjectEne@l
+/* 800ADA78 00077038  3C C0 80 53 */	lis r6, __vt__Q22cf11CfObjectEne@ha
+/* 800ADA7C 0007703C  38 C6 C1 E8 */	addi r6, r6, __vt__Q22cf11CfObjectEne@l
 /* 800ADA80 00077040  90 C3 00 00 */	stw r6, 0(r3)
 /* 800ADA84 00077044  38 A6 00 0C */	addi r5, r6, 0xc
 /* 800ADA88 00077048  38 86 03 6C */	addi r4, r6, 0x36c
@@ -3548,11 +3548,11 @@
 
 .balign 8
 
-.obj __vt__cf_CfObjectEne, global
-	.4byte __RTTI__cf_CfObjectEne
+.obj __vt__Q22cf11CfObjectEne, global
+	.4byte __RTTI__Q22cf11CfObjectEne
 	.4byte 0
 	.4byte func_800AFB04
-	.4byte __RTTI__cf_CfObjectEne
+	.4byte __RTTI__Q22cf11CfObjectEne
 	.4byte 0xFFFFFFF8
 	.4byte func_800B064C
 	.4byte func_800B0654
@@ -3768,11 +3768,11 @@
 	.4byte func_801715A8
 	.4byte func_801716B8
 	.4byte func_800AFBA0
-	.4byte __RTTI__cf_CfObjectEne
+	.4byte __RTTI__Q22cf11CfObjectEne
 	.4byte 0xFFFFCC80
 	.4byte func_8014AA18
 	.4byte func_8014AB28
-	.4byte __RTTI__cf_CfObjectEne
+	.4byte __RTTI__Q22cf11CfObjectEne
 	.4byte 0xFFFFC164
 	.4byte CObjectState_func_8003DC64
 	.4byte CObjectState_func_8003CB58
@@ -3926,30 +3926,30 @@
 	.4byte func_800ADBD4
 	.4byte func_800ADDA8
 	.4byte func_800AEC68
-.endobj __vt__cf_CfObjectEne
+.endobj __vt__Q22cf11CfObjectEne
 
 .obj cf_CfObjectEne_hierarchy, global
-	.4byte __RTTI__cf_CObjectState
+	.4byte __RTTI__Q22cf12CObjectState
 	.4byte 0x00003E9C
-	.4byte __RTTI__cf_CObjectParam
+	.4byte __RTTI__Q22cf12CObjectParam
 	.4byte 0x00003E9C
-	.4byte __RTTI__cf_CfObject
+	.4byte __RTTI__Q22cf8CfObject
 	.4byte 0x00003E9C
-	.4byte __RTTI__cf_CfObjectModel
+	.4byte __RTTI__Q22cf13CfObjectModel
 	.4byte 0x00003E9C
-	.4byte __RTTI__cf_CfObjectMove
+	.4byte __RTTI__Q22cf12CfObjectMove
 	.4byte 0x00003E9C
-	.4byte __RTTI__cf_CAIAction
+	.4byte __RTTI__Q22cf9CAIAction
 	.4byte 0x00003380
-	.4byte __RTTI__cf_CDebugState
+	.4byte __RTTI__Q22cf11CDebugState
 	.4byte 0x000015DC
-	.4byte __RTTI__cf_CBattleState
+	.4byte __RTTI__Q22cf12CBattleState
 	.4byte 0x00000008
-	.4byte __RTTI__cf_CActorState
+	.4byte __RTTI__Q22cf11CActorState
 	.4byte 0
-	.4byte __RTTI__cf_CActorParam
+	.4byte __RTTI__Q22cf11CActorParam
 	.4byte 0
-	.4byte __RTTI__cf_CfObjectActor
+	.4byte __RTTI__Q22cf13CfObjectActor
 	.4byte 0
 	.4byte 0
 .endobj cf_CfObjectEne_hierarchy
@@ -3968,10 +3968,10 @@
 	.4byte lbl_804F7970
 .endobj lbl_806645B4
 
-.obj __RTTI__cf_CfObjectEne, global
+.obj __RTTI__Q22cf11CfObjectEne, global
 	.4byte cf_CfObjectEne_typestr
 	.4byte cf_CfObjectEne_hierarchy
-.endobj __RTTI__cf_CfObjectEne
+.endobj __RTTI__Q22cf11CfObjectEne
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

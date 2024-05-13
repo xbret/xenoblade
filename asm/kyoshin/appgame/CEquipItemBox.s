@@ -3750,9 +3750,9 @@
 
 
 .fn __ct__CEIBCur, global
-/* 80285928 0024EEE8  3C A0 80 54 */	lis r5, __vt__CEIBCur@ha
+/* 80285928 0024EEE8  3C A0 80 54 */	lis r5, __vt__7CEIBCur@ha
 /* 8028592C 0024EEEC  38 00 00 00 */	li r0, 0
-/* 80285930 0024EEF0  38 A5 BE BC */	addi r5, r5, __vt__CEIBCur@l
+/* 80285930 0024EEF0  38 A5 BE BC */	addi r5, r5, __vt__7CEIBCur@l
 /* 80285934 0024EEF4  90 A3 00 00 */	stw r5, 0(r3)
 /* 80285938 0024EEF8  90 83 00 04 */	stw r4, 4(r3)
 /* 8028593C 0024EEFC  90 03 00 08 */	stw r0, 8(r3)
@@ -3974,9 +3974,9 @@
 /* 80285C14 0024F1D4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80285C18 0024F1D8  7C 7F 1B 78 */	mr r31, r3
 /* 80285C1C 0024F1DC  4B FF FD 0D */	bl __ct__CEIBCur
-/* 80285C20 0024F1E0  3C 80 80 54 */	lis r4, __vt__CEIBPageCur@ha
+/* 80285C20 0024F1E0  3C 80 80 54 */	lis r4, __vt__11CEIBPageCur@ha
 /* 80285C24 0024F1E4  7F E3 FB 78 */	mr r3, r31
-/* 80285C28 0024F1E8  38 84 BE A4 */	addi r4, r4, __vt__CEIBPageCur@l
+/* 80285C28 0024F1E8  38 84 BE A4 */	addi r4, r4, __vt__11CEIBPageCur@l
 /* 80285C2C 0024F1EC  90 9F 00 00 */	stw r4, 0(r31)
 /* 80285C30 0024F1F0  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80285C34 0024F1F4  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -4077,9 +4077,9 @@
 /* 80285D84 0024F344  90 01 25 B4 */	stw r0, 0x25b4(r1)
 /* 80285D88 0024F348  39 61 25 B0 */	addi r11, r1, 0x25b0
 /* 80285D8C 0024F34C  48 03 43 D1 */	bl _savegpr_29
-/* 80285D90 0024F350  3C 80 80 54 */	lis r4, __vt__CEquipItemBox@ha
+/* 80285D90 0024F350  3C 80 80 54 */	lis r4, __vt__13CEquipItemBox@ha
 /* 80285D94 0024F354  7C 7F 1B 78 */	mr r31, r3
-/* 80285D98 0024F358  38 84 BE 10 */	addi r4, r4, __vt__CEquipItemBox@l
+/* 80285D98 0024F358  38 84 BE 10 */	addi r4, r4, __vt__13CEquipItemBox@l
 /* 80285D9C 0024F35C  90 83 00 00 */	stw r4, 0(r3)
 /* 80285DA0 0024F360  38 63 00 04 */	addi r3, r3, 4
 /* 80285DA4 0024F364  48 1D 97 C1 */	bl __ct__UnkClass_8045F564
@@ -13232,8 +13232,8 @@
 
 .balign 8
 
-.obj __vt__CEquipItemBox, global
-	.4byte __RTTI__CEquipItemBox
+.obj __vt__13CEquipItemBox, global
+	.4byte __RTTI__13CEquipItemBox
 	.4byte 0
 	.4byte __dt__CEquipItemBox
 	.4byte IWorkEvent_WorkEvent1
@@ -13267,52 +13267,52 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CEquipItemBox
+.endobj __vt__13CEquipItemBox
 
 .obj CEquipItemBox_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 .endobj CEquipItemBox_hierarchy
 
 
-.obj __vt__CEIBPageCur, global
-	.4byte __RTTI__CEIBPageCur
+.obj __vt__11CEIBPageCur, global
+	.4byte __RTTI__11CEIBPageCur
 	.4byte 0
 	.4byte func_80285C84
-.endobj __vt__CEIBPageCur
+.endobj __vt__11CEIBPageCur
 
 .obj CEIBPageCur_hierarchy, global
-	.4byte __RTTI__CEIBCur
+	.4byte __RTTI__7CEIBCur
 	.4byte 0
 	.4byte 0
 .endobj CEIBPageCur_hierarchy
 
 
-.obj __vt__CEIBCur, global
-	.4byte __RTTI__CEIBCur
+.obj __vt__7CEIBCur, global
+	.4byte __RTTI__7CEIBCur
 	.4byte 0
 	.4byte func_80285994
-.endobj __vt__CEIBCur
+.endobj __vt__7CEIBCur
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CEquipItemBox, global
+.obj __RTTI__13CEquipItemBox, global
 	.4byte CEquipItemBox_typestr
 	.4byte CEquipItemBox_hierarchy
-.endobj __RTTI__CEquipItemBox
+.endobj __RTTI__13CEquipItemBox
 
-.obj __RTTI__CEIBPageCur, global
+.obj __RTTI__11CEIBPageCur, global
 	.4byte CEIBPageCur_typestr
 	.4byte CEIBPageCur_hierarchy
-.endobj __RTTI__CEIBPageCur
+.endobj __RTTI__11CEIBPageCur
 
-.obj __RTTI__CEIBCur, global
+.obj __RTTI__7CEIBCur, global
 	.4byte CEIBCur_typestr
 	.4byte 0
-.endobj __RTTI__CEIBCur
+.endobj __RTTI__7CEIBCur
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

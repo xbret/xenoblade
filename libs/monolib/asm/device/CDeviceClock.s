@@ -11,18 +11,18 @@
 /* 8044DB38 004170F8  93 C1 00 08 */	stw r30, 8(r1)
 /* 8044DB3C 004170FC  7C 7E 1B 78 */	mr r30, r3
 /* 8044DB40 00417100  4B FE 9A 7D */	bl __ct__CWorkThread
-/* 8044DB44 00417104  3C 60 80 57 */	lis r3, __vt__CDeviceClock@ha
-/* 8044DB48 00417108  3D 00 80 57 */	lis r8, __vt___reslist_base_IDeviceClockFrame@ha
+/* 8044DB44 00417104  3C 60 80 57 */	lis r3, __vt__12CDeviceClock@ha
+/* 8044DB48 00417108  3D 00 80 57 */	lis r8, "__vt__35_reslist_base<P17IDeviceClockFrame>"@ha
 /* 8044DB4C 0041710C  3B E0 00 00 */	li r31, 0
 /* 8044DB50 00417110  93 FE 01 C4 */	stw r31, 0x1c4(r30)
 /* 8044DB54 00417114  38 FE 01 D4 */	addi r7, r30, 0x1d4
-/* 8044DB58 00417118  38 63 F9 B0 */	addi r3, r3, __vt__CDeviceClock@l
-/* 8044DB5C 0041711C  39 08 FA 84 */	addi r8, r8, __vt___reslist_base_IDeviceClockFrame@l
+/* 8044DB58 00417118  38 63 F9 B0 */	addi r3, r3, __vt__12CDeviceClock@l
+/* 8044DB5C 0041711C  39 08 FA 84 */	addi r8, r8, "__vt__35_reslist_base<P17IDeviceClockFrame>"@l
 /* 8044DB60 00417120  90 7E 00 00 */	stw r3, 0(r30)
-/* 8044DB64 00417124  3C C0 80 57 */	lis r6, __vt__reslist_IDeviceClockFrame@ha
+/* 8044DB64 00417124  3C C0 80 57 */	lis r6, "__vt__29reslist<P17IDeviceClockFrame>"@ha
 /* 8044DB68 00417128  38 7E 02 10 */	addi r3, r30, 0x210
 /* 8044DB6C 0041712C  93 FE 01 C8 */	stw r31, 0x1c8(r30)
-/* 8044DB70 00417130  38 C6 FA 6C */	addi r6, r6, __vt__reslist_IDeviceClockFrame@l
+/* 8044DB70 00417130  38 C6 FA 6C */	addi r6, r6, "__vt__29reslist<P17IDeviceClockFrame>"@l
 /* 8044DB74 00417134  38 80 00 00 */	li r4, 0
 /* 8044DB78 00417138  38 A0 00 28 */	li r5, 0x28
 /* 8044DB7C 0041713C  91 1E 01 CC */	stw r8, 0x1cc(r30)
@@ -105,9 +105,9 @@
 /* 8044DCA4 00417264  93 C1 00 08 */	stw r30, 8(r1)
 /* 8044DCA8 00417268  7C 7E 1B 78 */	mr r30, r3
 /* 8044DCAC 0041726C  41 82 00 78 */	beq .L_8044DD24
-/* 8044DCB0 00417270  3C A0 80 57 */	lis r5, __vt___reslist_base_IDeviceClockFrame@ha
+/* 8044DCB0 00417270  3C A0 80 57 */	lis r5, "__vt__35_reslist_base<P17IDeviceClockFrame>"@ha
 /* 8044DCB4 00417274  80 83 00 04 */	lwz r4, 4(r3)
-/* 8044DCB8 00417278  38 A5 FA 84 */	addi r5, r5, __vt___reslist_base_IDeviceClockFrame@l
+/* 8044DCB8 00417278  38 A5 FA 84 */	addi r5, r5, "__vt__35_reslist_base<P17IDeviceClockFrame>"@l
 /* 8044DCBC 0041727C  90 A3 00 00 */	stw r5, 0(r3)
 /* 8044DCC0 00417280  38 00 00 00 */	li r0, 0
 /* 8044DCC4 00417284  80 A4 00 00 */	lwz r5, 0(r4)
@@ -158,9 +158,9 @@
 /* 8044DD5C 0041731C  7C 7E 1B 78 */	mr r30, r3
 /* 8044DD60 00417320  41 82 00 7C */	beq .L_8044DDDC
 /* 8044DD64 00417324  41 82 00 68 */	beq .L_8044DDCC
-/* 8044DD68 00417328  3C A0 80 57 */	lis r5, __vt___reslist_base_IDeviceClockFrame@ha
+/* 8044DD68 00417328  3C A0 80 57 */	lis r5, "__vt__35_reslist_base<P17IDeviceClockFrame>"@ha
 /* 8044DD6C 0041732C  80 83 00 04 */	lwz r4, 4(r3)
-/* 8044DD70 00417330  38 A5 FA 84 */	addi r5, r5, __vt___reslist_base_IDeviceClockFrame@l
+/* 8044DD70 00417330  38 A5 FA 84 */	addi r5, r5, "__vt__35_reslist_base<P17IDeviceClockFrame>"@l
 /* 8044DD74 00417334  90 A3 00 00 */	stw r5, 0(r3)
 /* 8044DD78 00417338  38 00 00 00 */	li r0, 0
 /* 8044DD7C 0041733C  80 84 00 00 */	lwz r4, 0(r4)
@@ -216,9 +216,9 @@
 /* 8044DE28 004173E8  90 0D BD B8 */	stw r0, lbl_80667F38@sda21(r13)
 /* 8044DE2C 004173EC  41 82 00 68 */	beq .L_8044DE94
 /* 8044DE30 004173F0  41 82 00 64 */	beq .L_8044DE94
-/* 8044DE34 004173F4  3C 80 80 57 */	lis r4, __vt___reslist_base_IDeviceClockFrame@ha
+/* 8044DE34 004173F4  3C 80 80 57 */	lis r4, "__vt__35_reslist_base<P17IDeviceClockFrame>"@ha
 /* 8044DE38 004173F8  80 7F 00 04 */	lwz r3, 4(r31)
-/* 8044DE3C 004173FC  38 84 FA 84 */	addi r4, r4, __vt___reslist_base_IDeviceClockFrame@l
+/* 8044DE3C 004173FC  38 84 FA 84 */	addi r4, r4, "__vt__35_reslist_base<P17IDeviceClockFrame>"@l
 /* 8044DE40 00417400  90 9F 00 00 */	stw r4, 0(r31)
 /* 8044DE44 00417404  80 83 00 00 */	lwz r4, 0(r3)
 /* 8044DE48 00417408  48 00 00 10 */	b .L_8044DE58
@@ -481,8 +481,8 @@
 
 .balign 8
 
-.obj __vt__CDeviceClock, global
-	.4byte __RTTI__CDeviceClock
+.obj __vt__12CDeviceClock, global
+	.4byte __RTTI__12CDeviceClock
 	.4byte 0
 	.4byte __dt__CDeviceClock
 	.4byte IWorkEvent_WorkEvent1
@@ -522,57 +522,57 @@
 	.4byte CDeviceClock_WorkThreadEvent4
 	.4byte CDeviceClock_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-.endobj __vt__CDeviceClock
+.endobj __vt__12CDeviceClock
 
 .obj CDeviceClock_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
-	.4byte __RTTI__CDeviceBase
+	.4byte __RTTI__11CDeviceBase
 	.4byte 0
 	.4byte 0
 .endobj CDeviceClock_hierarchy
 
 
-.obj __vt__reslist_IDeviceClockFrame, global
-	.4byte __RTTI__reslist_IDeviceClockFrame
+.obj "__vt__29reslist<P17IDeviceClockFrame>", global
+	.4byte "__RTTI__29reslist<P17IDeviceClockFrame>"
 	.4byte 0
 	.4byte __dt__reslist_IDeviceClockFrame
-.endobj __vt__reslist_IDeviceClockFrame
+.endobj "__vt__29reslist<P17IDeviceClockFrame>"
 
 .obj reslist_IDeviceClockFrame_hierarchy, global
-	.4byte __RTTI___reslist_base_IDeviceClockFrame
+	.4byte "__RTTI__35_reslist_base<P17IDeviceClockFrame>"
 	.4byte 0
 	.4byte 0
 .endobj reslist_IDeviceClockFrame_hierarchy
 
 
-.obj __vt___reslist_base_IDeviceClockFrame, global
-	.4byte __RTTI___reslist_base_IDeviceClockFrame
+.obj "__vt__35_reslist_base<P17IDeviceClockFrame>", global
+	.4byte "__RTTI__35_reslist_base<P17IDeviceClockFrame>"
 	.4byte 0
 	.4byte __dt___reslist_base_IDeviceClockFrame
-.endobj __vt___reslist_base_IDeviceClockFrame
+.endobj "__vt__35_reslist_base<P17IDeviceClockFrame>"
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CDeviceClock, global
+.obj __RTTI__12CDeviceClock, global
 	.4byte CDeviceClock_typestr
 	.4byte CDeviceClock_hierarchy
-.endobj __RTTI__CDeviceClock
+.endobj __RTTI__12CDeviceClock
 
-.obj __RTTI__reslist_IDeviceClockFrame, global
+.obj "__RTTI__29reslist<P17IDeviceClockFrame>", global
 	.4byte reslist_IDeviceClockFrame_typestr
 	.4byte reslist_IDeviceClockFrame_hierarchy
-.endobj __RTTI__reslist_IDeviceClockFrame
+.endobj "__RTTI__29reslist<P17IDeviceClockFrame>"
 
-.obj __RTTI___reslist_base_IDeviceClockFrame, global
+.obj "__RTTI__35_reslist_base<P17IDeviceClockFrame>", global
 	.4byte _reslist_base_IDeviceClockFrame_typestr
 	.4byte 0
-.endobj __RTTI___reslist_base_IDeviceClockFrame
+.endobj "__RTTI__35_reslist_base<P17IDeviceClockFrame>"
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

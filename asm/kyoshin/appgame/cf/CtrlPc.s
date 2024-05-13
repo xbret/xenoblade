@@ -13,8 +13,8 @@
 /* 800968B4 0005FE74  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 800968B8 0005FE78  7C 7D 1B 78 */	mr r29, r3
 /* 800968BC 0005FE7C  48 00 23 29 */	bl __ct__CtrlRemote
-/* 800968C0 0005FE80  3C 60 80 53 */	lis r3, __vt__cf_CtrlPad@ha
-/* 800968C4 0005FE84  38 63 B4 50 */	addi r3, r3, __vt__cf_CtrlPad@l
+/* 800968C0 0005FE80  3C 60 80 53 */	lis r3, __vt__Q22cf7CtrlPad@ha
+/* 800968C4 0005FE84  38 63 B4 50 */	addi r3, r3, __vt__Q22cf7CtrlPad@l
 /* 800968C8 0005FE88  90 7D 00 00 */	stw r3, 0(r29)
 /* 800968CC 0005FE8C  4B FF 08 F1 */	bl func_800871BC
 /* 800968D0 0005FE90  3F E0 80 53 */	lis r31, lbl_8052B3D8@ha
@@ -568,9 +568,9 @@
 /* 80097020 000605E0  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80097024 000605E4  7C 7D 1B 78 */	mr r29, r3
 /* 80097028 000605E8  48 03 A0 B5 */	bl __ct__800D10DC
-/* 8009702C 000605EC  3C 60 80 53 */	lis r3, __vt__cf_CtrlPc@ha
+/* 8009702C 000605EC  3C 60 80 53 */	lis r3, __vt__Q22cf6CtrlPc@ha
 /* 80097030 000605F0  7F A4 EB 78 */	mr r4, r29
-/* 80097034 000605F4  38 63 B5 80 */	addi r3, r3, __vt__cf_CtrlPc@l
+/* 80097034 000605F4  38 63 B5 80 */	addi r3, r3, __vt__Q22cf6CtrlPc@l
 /* 80097038 000605F8  90 7D 00 00 */	stw r3, 0(r29)
 /* 8009703C 000605FC  7F C5 F3 78 */	mr r5, r30
 /* 80097040 00060600  38 7D 00 8C */	addi r3, r29, 0x8c
@@ -623,8 +623,8 @@
 /* 800970E8 000606A8  93 C1 00 08 */	stw r30, 8(r1)
 /* 800970EC 000606AC  7C 7E 1B 78 */	mr r30, r3
 /* 800970F0 000606B0  41 82 00 28 */	beq .L_80097118
-/* 800970F4 000606B4  3C 80 80 53 */	lis r4, __vt__cf_CtrlPc@ha
-/* 800970F8 000606B8  38 84 B5 80 */	addi r4, r4, __vt__cf_CtrlPc@l
+/* 800970F4 000606B4  3C 80 80 53 */	lis r4, __vt__Q22cf6CtrlPc@ha
+/* 800970F8 000606B8  38 84 B5 80 */	addi r4, r4, __vt__Q22cf6CtrlPc@l
 /* 800970FC 000606BC  90 83 00 00 */	stw r4, 0(r3)
 /* 80097100 000606C0  38 63 00 8C */	addi r3, r3, 0x8c
 /* 80097104 000606C4  48 10 25 15 */	bl func_80199618
@@ -2070,8 +2070,8 @@
 /* 800985FC 00061BBC  40 82 00 74 */	bne .L_80098670
 /* 80098600 00061BC0  80 63 00 5C */	lwz r3, 0x5c(r3)
 /* 80098604 00061BC4  38 80 00 00 */	li r4, 0
-/* 80098608 00061BC8  38 AD 83 D8 */	addi r5, r13, __RTTI__cf_CfObjectImplPc@sda21
-/* 8009860C 00061BCC  38 CD 83 60 */	addi r6, r13, __RTTI__cf_CfObjectImpl@sda21
+/* 80098608 00061BC8  38 AD 83 D8 */	addi r5, r13, __RTTI__Q22cf14CfObjectImplPc@sda21
+/* 8009860C 00061BCC  38 CD 83 60 */	addi r6, r13, __RTTI__Q22cf8CfObjectImpl@sda21
 /* 80098610 00061BD0  80 63 3E D4 */	lwz r3, 0x3ed4(r3)
 /* 80098614 00061BD4  38 E0 00 00 */	li r7, 0
 /* 80098618 00061BD8  48 22 17 6D */	bl __dynamic_cast
@@ -2592,8 +2592,8 @@
 .endobj lbl_8052B3D8
 
 
-.obj __vt__cf_CtrlPad, global
-	.4byte __RTTI__cf_CtrlPad
+.obj __vt__Q22cf7CtrlPad, global
+	.4byte __RTTI__Q22cf7CtrlPad
 	.4byte 0
 	.4byte __dt__cf_CtrlPad
 	.4byte func_80098CB8
@@ -2641,47 +2641,47 @@
 	.4byte func_8009BD14
 	.4byte func_8009C1BC
 	.4byte func_80096F30
-.endobj __vt__cf_CtrlPad
+.endobj __vt__Q22cf7CtrlPad
 
 .obj cf_CtrlPad_hierarchy, global
-	.4byte __RTTI__CActInput
+	.4byte __RTTI__9CActInput
 	.4byte 0
-	.4byte __RTTI__cf_CtrlBase
+	.4byte __RTTI__Q22cf8CtrlBase
 	.4byte 0
-	.4byte __RTTI__cf_CtrlAct
+	.4byte __RTTI__Q22cf7CtrlAct
 	.4byte 0
-	.4byte __RTTI__cf_CtrlPc
+	.4byte __RTTI__Q22cf6CtrlPc
 	.4byte 0
-	.4byte __RTTI__cf_CtrlRemote
+	.4byte __RTTI__Q22cf10CtrlRemote
 	.4byte 0
 	.4byte 0
 .endobj cf_CtrlPad_hierarchy
 
 .obj cf_CtrlRemote_hierarchy, global
-	.4byte __RTTI__CActInput
+	.4byte __RTTI__9CActInput
 	.4byte 0
-	.4byte __RTTI__cf_CtrlBase
+	.4byte __RTTI__Q22cf8CtrlBase
 	.4byte 0
-	.4byte __RTTI__cf_CtrlAct
+	.4byte __RTTI__Q22cf7CtrlAct
 	.4byte 0
-	.4byte __RTTI__cf_CtrlPc
+	.4byte __RTTI__Q22cf6CtrlPc
 	.4byte 0
 	.4byte 0
 .endobj cf_CtrlRemote_hierarchy
 
 .obj cf_CtrlPc_hierarchy, global
-	.4byte __RTTI__CActInput
+	.4byte __RTTI__9CActInput
 	.4byte 0
-	.4byte __RTTI__cf_CtrlBase
+	.4byte __RTTI__Q22cf8CtrlBase
 	.4byte 0
-	.4byte __RTTI__cf_CtrlAct
+	.4byte __RTTI__Q22cf7CtrlAct
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj cf_CtrlPc_hierarchy
 
-.obj __vt__cf_CtrlPc, global
-	.4byte __RTTI__cf_CtrlPc
+.obj __vt__Q22cf6CtrlPc, global
+	.4byte __RTTI__Q22cf6CtrlPc
 	.4byte 0
 	.4byte __dt__cf_CtrlPc
 	.4byte func_80097134
@@ -2722,26 +2722,26 @@
 	.4byte func_80097DFC
 	.4byte func_80098AF0
 	.4byte func_80098B64
-.endobj __vt__cf_CtrlPc
+.endobj __vt__Q22cf6CtrlPc
 
 .obj cf_CfObjectImplPc_hierarchy, global
-	.4byte __RTTI__cf_IObjectInfo
+	.4byte __RTTI__Q22cf11IObjectInfo
 	.4byte 0x00000010
-	.4byte __RTTI__IActParamEvent
+	.4byte __RTTI__14IActParamEvent
 	.4byte 0
-	.4byte __RTTI__cf_CfObjectImpl
+	.4byte __RTTI__Q22cf8CfObjectImpl
 	.4byte 0
-	.4byte __RTTI__cf_CfObjectImplMove
+	.4byte __RTTI__Q22cf16CfObjectImplMove
 	.4byte 0
 	.4byte 0
 .endobj cf_CfObjectImplPc_hierarchy
 
 .obj cf_CfObjectImplMove_hierarchy, global
-	.4byte __RTTI__cf_IObjectInfo
+	.4byte __RTTI__Q22cf11IObjectInfo
 	.4byte 0x00000010
-	.4byte __RTTI__IActParamEvent
+	.4byte __RTTI__14IActParamEvent
 	.4byte 0
-	.4byte __RTTI__cf_CfObjectImpl
+	.4byte __RTTI__Q22cf8CfObjectImpl
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -2820,30 +2820,30 @@
 
 .balign 8
 
-.obj __RTTI__cf_CtrlPad, global
+.obj __RTTI__Q22cf7CtrlPad, global
 	.4byte cf_CtrlPad_typestr
 	.4byte cf_CtrlPad_hierarchy
-.endobj __RTTI__cf_CtrlPad
+.endobj __RTTI__Q22cf7CtrlPad
 
-.obj __RTTI__cf_CtrlRemote, global
+.obj __RTTI__Q22cf10CtrlRemote, global
 	.4byte cf_CtrlRemote_typestr
 	.4byte cf_CtrlRemote_hierarchy
-.endobj __RTTI__cf_CtrlRemote
+.endobj __RTTI__Q22cf10CtrlRemote
 
-.obj __RTTI__cf_CtrlPc, global
+.obj __RTTI__Q22cf6CtrlPc, global
 	.4byte cf_CtrlPc_typestr
 	.4byte cf_CtrlPc_hierarchy
-.endobj __RTTI__cf_CtrlPc
+.endobj __RTTI__Q22cf6CtrlPc
 
-.obj __RTTI__cf_CfObjectImplPc, global
+.obj __RTTI__Q22cf14CfObjectImplPc, global
 	.4byte cf_CfObjectImplPc_typestr
 	.4byte cf_CfObjectImplPc_hierarchy
-.endobj __RTTI__cf_CfObjectImplPc
+.endobj __RTTI__Q22cf14CfObjectImplPc
 
-.obj __RTTI__cf_CfObjectImplMove, global
+.obj __RTTI__Q22cf16CfObjectImplMove, global
 	.4byte cf_CfObjectImplMove_typestr
 	.4byte cf_CfObjectImplMove_hierarchy
-.endobj __RTTI__cf_CfObjectImplMove
+.endobj __RTTI__Q22cf16CfObjectImplMove
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

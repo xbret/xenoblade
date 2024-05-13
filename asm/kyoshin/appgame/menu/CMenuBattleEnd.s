@@ -12,12 +12,12 @@
 /* 8026F394 00238954  7C BE 2B 78 */	mr r30, r5
 /* 8026F398 00238958  7C DF 33 78 */	mr r31, r6
 /* 8026F39C 0023895C  48 1D 56 7D */	bl __ct__8CProcessFv
-/* 8026F3A0 00238960  3C 60 80 53 */	lis r3, __vt__CTTask_IUIWindow@ha
-/* 8026F3A4 00238964  3C A0 80 54 */	lis r5, __vt__CMenuBattleEnd@ha
-/* 8026F3A8 00238968  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
+/* 8026F3A0 00238960  3C 60 80 53 */	lis r3, "__vt__18CTTask<9IUIWindow>"@ha
+/* 8026F3A4 00238964  3C A0 80 54 */	lis r5, __vt__14CMenuBattleEnd@ha
+/* 8026F3A8 00238968  38 63 0A 08 */	addi r3, r3, "__vt__18CTTask<9IUIWindow>"@l
 /* 8026F3AC 0023896C  90 7C 00 10 */	stw r3, 0x10(r28)
 /* 8026F3B0 00238970  3D 40 80 51 */	lis r10, __ptmf_null@ha
-/* 8026F3B4 00238974  38 A5 B2 68 */	addi r5, r5, __vt__CMenuBattleEnd@l
+/* 8026F3B4 00238974  38 A5 B2 68 */	addi r5, r5, __vt__14CMenuBattleEnd@l
 /* 8026F3B8 00238978  84 6A CE 10 */	lwzu r3, __ptmf_null@l(r10)
 /* 8026F3BC 0023897C  38 85 00 24 */	addi r4, r5, 0x24
 /* 8026F3C0 00238980  3B 60 00 00 */	li r27, 0
@@ -689,8 +689,8 @@
 
 .balign 8
 
-.obj __vt__CMenuBattleEnd, global
-	.4byte __RTTI__CMenuBattleEnd
+.obj __vt__14CMenuBattleEnd, global
+	.4byte __RTTI__14CMenuBattleEnd
 	.4byte 0
 	.4byte __dt__CMenuBattleEnd
 	.4byte CChildListNode_Reset
@@ -699,7 +699,7 @@
 	.4byte func_8026F79C
 	.4byte func_80124584
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuBattleEnd
+	.4byte __RTTI__14CMenuBattleEnd
 	.4byte 0xFFFFFF94
 	.4byte func_8026FC90
 	.4byte IWorkEvent_WorkEvent1
@@ -733,27 +733,27 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CMenuBattleEnd
+	.4byte __RTTI__14CMenuBattleEnd
 	.4byte 0xFFFFFF90
 	.4byte func_8026FCA0
 	.4byte func_8026FC98
 	.4byte func_8026F81C
-.endobj __vt__CMenuBattleEnd
+.endobj __vt__14CMenuBattleEnd
 
 .obj CMenuBattleEnd_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000070
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x0000006C
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUIWindow
+	.4byte "__RTTI__18CTTask<9IUIWindow>"
 	.4byte 0
-	.4byte __RTTI__IUIWindow
+	.4byte __RTTI__9IUIWindow
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -763,10 +763,10 @@
 
 .balign 8
 
-.obj __RTTI__CMenuBattleEnd, global
+.obj __RTTI__14CMenuBattleEnd, global
 	.4byte CMenuBattleEnd_typestr
 	.4byte CMenuBattleEnd_hierarchy
-.endobj __RTTI__CMenuBattleEnd
+.endobj __RTTI__14CMenuBattleEnd
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

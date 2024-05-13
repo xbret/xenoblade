@@ -13,9 +13,9 @@
 /* 8020C350 001D5910  93 81 00 20 */	stw r28, 0x20(r1)
 /* 8020C354 001D5914  7C 9C 23 78 */	mr r28, r4
 /* 8020C358 001D5918  4B FF C5 89 */	bl __ct__cf_CfGimmick
-/* 8020C35C 001D591C  3C 80 80 54 */	lis r4, __vt__cf_CfGimmickLock@ha
+/* 8020C35C 001D591C  3C 80 80 54 */	lis r4, __vt__Q22cf13CfGimmickLock@ha
 /* 8020C360 001D5920  38 7F 00 8C */	addi r3, r31, 0x8c
-/* 8020C364 001D5924  38 84 90 B8 */	addi r4, r4, __vt__cf_CfGimmickLock@l
+/* 8020C364 001D5924  38 84 90 B8 */	addi r4, r4, __vt__Q22cf13CfGimmickLock@l
 /* 8020C368 001D5928  90 9F 00 00 */	stw r4, 0(r31)
 /* 8020C36C 001D592C  48 2A 45 B9 */	bl func_804B0924
 /* 8020C370 001D5930  38 7F 01 40 */	addi r3, r31, 0x140
@@ -156,8 +156,8 @@
 /* 8020C570 001D5B30  93 C1 00 08 */	stw r30, 8(r1)
 /* 8020C574 001D5B34  7C 7E 1B 78 */	mr r30, r3
 /* 8020C578 001D5B38  41 82 00 AC */	beq .L_8020C624
-/* 8020C57C 001D5B3C  3C 80 80 54 */	lis r4, __vt__cf_CfGimmickLock@ha
-/* 8020C580 001D5B40  38 84 90 B8 */	addi r4, r4, __vt__cf_CfGimmickLock@l
+/* 8020C57C 001D5B3C  3C 80 80 54 */	lis r4, __vt__Q22cf13CfGimmickLock@ha
+/* 8020C580 001D5B40  38 84 90 B8 */	addi r4, r4, __vt__Q22cf13CfGimmickLock@l
 /* 8020C584 001D5B44  90 83 00 00 */	stw r4, 0(r3)
 /* 8020C588 001D5B48  4B FF C9 5D */	bl func_80208EE4
 /* 8020C58C 001D5B4C  80 1E 00 74 */	lwz r0, 0x74(r30)
@@ -1176,8 +1176,8 @@
 
 .balign 8
 
-.obj __vt__cf_CfGimmickLock, global
-	.4byte __RTTI__cf_CfGimmickLock
+.obj __vt__Q22cf13CfGimmickLock, global
+	.4byte __RTTI__Q22cf13CfGimmickLock
 	.4byte 0
 	.4byte __dt__cf_CfGimmickLock
 	.4byte func_8020896C
@@ -1186,12 +1186,12 @@
 	.4byte func_801F4BF8
 	.4byte func_801F4C8C
 	.4byte func_8020CB28
-.endobj __vt__cf_CfGimmickLock
+.endobj __vt__Q22cf13CfGimmickLock
 
 .obj cf_CfGimmickLock_hierarchy, global
-	.4byte __RTTI__cf_IObjectInfo
+	.4byte __RTTI__Q22cf11IObjectInfo
 	.4byte 0
-	.4byte __RTTI__cf_CfGimmick
+	.4byte __RTTI__Q22cf9CfGimmick
 	.4byte 0
 	.4byte 0
 .endobj cf_CfGimmickLock_hierarchy
@@ -1205,10 +1205,10 @@
 	.4byte 0
 .endobj lbl_80665090
 
-.obj __RTTI__cf_CfGimmickLock, global
+.obj __RTTI__Q22cf13CfGimmickLock, global
 	.4byte cf_CfGimmickLock_typestr
 	.4byte cf_CfGimmickLock_hierarchy
-.endobj __RTTI__cf_CfGimmickLock
+.endobj __RTTI__Q22cf13CfGimmickLock
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

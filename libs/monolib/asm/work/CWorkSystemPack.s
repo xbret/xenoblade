@@ -10,23 +10,23 @@
 /* 804DD904 004A6EC4  BF A1 00 14 */	stmw r29, 0x14(r1)
 /* 804DD908 004A6EC8  7C 7F 1B 78 */	mr r31, r3
 /* 804DD90C 004A6ECC  4B F5 9C B1 */	bl __ct__CWorkThread
-/* 804DD910 004A6ED0  3C 80 80 57 */	lis r4, __vt__CWorkSystemPack@ha
-/* 804DD914 004A6ED4  3C 60 80 57 */	lis r3, __vt___reslist_base_CPackItem@ha
+/* 804DD910 004A6ED0  3C 80 80 57 */	lis r4, __vt__15CWorkSystemPack@ha
+/* 804DD914 004A6ED4  3C 60 80 57 */	lis r3, "__vt__26_reslist_base<P9CPackItem>"@ha
 /* 804DD918 004A6ED8  3B C0 00 00 */	li r30, 0
 /* 804DD91C 004A6EDC  93 DF 01 D8 */	stw r30, 0x1d8(r31)
 /* 804DD920 004A6EE0  38 FF 01 CC */	addi r7, r31, 0x1cc
-/* 804DD924 004A6EE4  38 84 36 A0 */	addi r4, r4, __vt__CWorkSystemPack@l
-/* 804DD928 004A6EE8  38 63 37 90 */	addi r3, r3, __vt___reslist_base_CPackItem@l
+/* 804DD924 004A6EE4  38 84 36 A0 */	addi r4, r4, __vt__15CWorkSystemPack@l
+/* 804DD928 004A6EE8  38 63 37 90 */	addi r3, r3, "__vt__26_reslist_base<P9CPackItem>"@l
 /* 804DD92C 004A6EEC  90 9F 00 00 */	stw r4, 0(r31)
-/* 804DD930 004A6EF0  3C C0 80 57 */	lis r6, __vt__reslist_CPackItem@ha
-/* 804DD934 004A6EF4  3C A0 80 57 */	lis r5, __vt___reslist_base_CArcItem@ha
+/* 804DD930 004A6EF0  3C C0 80 57 */	lis r6, "__vt__20reslist<P9CPackItem>"@ha
+/* 804DD934 004A6EF4  3C A0 80 57 */	lis r5, "__vt__25_reslist_base<P8CArcItem>"@ha
 /* 804DD938 004A6EF8  90 7F 01 C4 */	stw r3, 0x1c4(r31)
-/* 804DD93C 004A6EFC  38 C6 37 78 */	addi r6, r6, __vt__reslist_CPackItem@l
-/* 804DD940 004A6F00  38 A5 37 6C */	addi r5, r5, __vt___reslist_base_CArcItem@l
+/* 804DD93C 004A6EFC  38 C6 37 78 */	addi r6, r6, "__vt__20reslist<P9CPackItem>"@l
+/* 804DD940 004A6F00  38 A5 37 6C */	addi r5, r5, "__vt__25_reslist_base<P8CArcItem>"@l
 /* 804DD944 004A6F04  38 9F 01 EC */	addi r4, r31, 0x1ec
 /* 804DD948 004A6F08  93 DF 01 DC */	stw r30, 0x1dc(r31)
-/* 804DD94C 004A6F0C  3C 60 80 57 */	lis r3, __vt__reslist_CArcItem@ha
-/* 804DD950 004A6F10  38 63 37 54 */	addi r3, r3, __vt__reslist_CArcItem@l
+/* 804DD94C 004A6F0C  3C 60 80 57 */	lis r3, "__vt__19reslist<P8CArcItem>"@ha
+/* 804DD950 004A6F10  38 63 37 54 */	addi r3, r3, "__vt__19reslist<P8CArcItem>"@l
 /* 804DD954 004A6F14  38 00 00 07 */	li r0, 7
 /* 804DD958 004A6F18  9B DF 01 E0 */	stb r30, 0x1e0(r31)
 /* 804DD95C 004A6F1C  90 FF 01 C8 */	stw r7, 0x1c8(r31)
@@ -112,8 +112,8 @@
 /* 804DDA74 004A7034  7C 7E 1B 78 */	mr r30, r3
 /* 804DDA78 004A7038  7C 9F 23 78 */	mr r31, r4
 /* 804DDA7C 004A703C  41 82 00 48 */	beq .L_804DDAC4
-/* 804DDA80 004A7040  3C 80 80 57 */	lis r4, __vt___reslist_base_CPackItem@ha
-/* 804DDA84 004A7044  38 84 37 90 */	addi r4, r4, __vt___reslist_base_CPackItem@l
+/* 804DDA80 004A7040  3C 80 80 57 */	lis r4, "__vt__26_reslist_base<P9CPackItem>"@ha
+/* 804DDA84 004A7044  38 84 37 90 */	addi r4, r4, "__vt__26_reslist_base<P9CPackItem>"@l
 /* 804DDA88 004A7048  90 83 00 00 */	stw r4, 0(r3)
 /* 804DDA8C 004A704C  48 00 00 51 */	bl func_804DDADC
 /* 804DDA90 004A7050  88 1E 00 1C */	lbz r0, 0x1c(r30)
@@ -189,8 +189,8 @@
 /* 804DDB70 004A7130  7C 7E 1B 78 */	mr r30, r3
 /* 804DDB74 004A7134  7C 9F 23 78 */	mr r31, r4
 /* 804DDB78 004A7138  41 82 00 48 */	beq .L_804DDBC0
-/* 804DDB7C 004A713C  3C 80 80 57 */	lis r4, __vt___reslist_base_CArcItem@ha
-/* 804DDB80 004A7140  38 84 37 6C */	addi r4, r4, __vt___reslist_base_CArcItem@l
+/* 804DDB7C 004A713C  3C 80 80 57 */	lis r4, "__vt__25_reslist_base<P8CArcItem>"@ha
+/* 804DDB80 004A7140  38 84 37 6C */	addi r4, r4, "__vt__25_reslist_base<P8CArcItem>"@l
 /* 804DDB84 004A7144  90 83 00 00 */	stw r4, 0(r3)
 /* 804DDB88 004A7148  48 00 00 51 */	bl func_804DDBD8
 /* 804DDB8C 004A714C  88 1E 00 1C */	lbz r0, 0x1c(r30)
@@ -859,8 +859,8 @@
 
 .balign 8
 
-.obj __vt__CWorkSystemPack, global
-	.4byte __RTTI__CWorkSystemPack
+.obj __vt__15CWorkSystemPack, global
+	.4byte __RTTI__15CWorkSystemPack
 	.4byte 0
 	.4byte __dt__CWorkSystemPack
 	.4byte IWorkEvent_WorkEvent1
@@ -900,86 +900,86 @@
 	.4byte CWorkSystemPack_WorkThreadEvent4
 	.4byte CWorkSystemPack_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-.endobj __vt__CWorkSystemPack
+.endobj __vt__15CWorkSystemPack
 
 .obj CWorkSystemPack_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
 	.4byte 0
 .endobj CWorkSystemPack_hierarchy
 
 
-.obj __vt__reslist_CArcItem, global
-	.4byte __RTTI__reslist_CArcItem
+.obj "__vt__19reslist<P8CArcItem>", global
+	.4byte "__RTTI__19reslist<P8CArcItem>"
 	.4byte 0
 	.4byte __dt__reslist_CArcItem
-.endobj __vt__reslist_CArcItem
+.endobj "__vt__19reslist<P8CArcItem>"
 
 .obj reslist_CArcItem_hierarchy, global
-	.4byte __RTTI___reslist_base_CArcItem
+	.4byte "__RTTI__25_reslist_base<P8CArcItem>"
 	.4byte 0
 	.4byte 0
 .endobj reslist_CArcItem_hierarchy
 
 
-.obj __vt___reslist_base_CArcItem, global
-	.4byte __RTTI___reslist_base_CArcItem
+.obj "__vt__25_reslist_base<P8CArcItem>", global
+	.4byte "__RTTI__25_reslist_base<P8CArcItem>"
 	.4byte 0
 	.4byte __dt___reslist_base_CArcItem
-.endobj __vt___reslist_base_CArcItem
+.endobj "__vt__25_reslist_base<P8CArcItem>"
 
 
-.obj __vt__reslist_CPackItem, global
-	.4byte __RTTI__reslist_CPackItem
+.obj "__vt__20reslist<P9CPackItem>", global
+	.4byte "__RTTI__20reslist<P9CPackItem>"
 	.4byte 0
 	.4byte __dt__reslist_CPackItem
-.endobj __vt__reslist_CPackItem
+.endobj "__vt__20reslist<P9CPackItem>"
 
 .obj reslist_CPackItem_hierarchy, global
-	.4byte __RTTI___reslist_base_CPackItem
+	.4byte "__RTTI__26_reslist_base<P9CPackItem>"
 	.4byte 0
 	.4byte 0
 .endobj reslist_CPackItem_hierarchy
 
 
-.obj __vt___reslist_base_CPackItem, global
-	.4byte __RTTI___reslist_base_CPackItem
+.obj "__vt__26_reslist_base<P9CPackItem>", global
+	.4byte "__RTTI__26_reslist_base<P9CPackItem>"
 	.4byte 0
 	.4byte __dt___reslist_base_CPackItem
 	.4byte 0
-.endobj __vt___reslist_base_CPackItem
+.endobj "__vt__26_reslist_base<P9CPackItem>"
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CWorkSystemPack, global
+.obj __RTTI__15CWorkSystemPack, global
 	.4byte CWorkSystemPack_typestr
 	.4byte CWorkSystemPack_hierarchy
-.endobj __RTTI__CWorkSystemPack
+.endobj __RTTI__15CWorkSystemPack
 
-.obj __RTTI__reslist_CArcItem, global
+.obj "__RTTI__19reslist<P8CArcItem>", global
 	.4byte reslist_CArcItem_typestr
 	.4byte reslist_CArcItem_hierarchy
-.endobj __RTTI__reslist_CArcItem
+.endobj "__RTTI__19reslist<P8CArcItem>"
 
-.obj __RTTI___reslist_base_CArcItem, global
+.obj "__RTTI__25_reslist_base<P8CArcItem>", global
 	.4byte _reslist_base_CArcItem_typestr
 	.4byte 0
-.endobj __RTTI___reslist_base_CArcItem
+.endobj "__RTTI__25_reslist_base<P8CArcItem>"
 
-.obj __RTTI__reslist_CPackItem, global
+.obj "__RTTI__20reslist<P9CPackItem>", global
 	.4byte reslist_CPackItem_typestr
 	.4byte reslist_CPackItem_hierarchy
-.endobj __RTTI__reslist_CPackItem
+.endobj "__RTTI__20reslist<P9CPackItem>"
 
-.obj __RTTI___reslist_base_CPackItem, global
+.obj "__RTTI__26_reslist_base<P9CPackItem>", global
 	.4byte _reslist_base_CPackItem_typestr
 	.4byte 0
-.endobj __RTTI___reslist_base_CPackItem
+.endobj "__RTTI__26_reslist_base<P9CPackItem>"
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

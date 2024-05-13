@@ -5,9 +5,9 @@
 .fn __ct__CTutorial, global
 /* 8029A934 00263EF4  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8029A938 00263EF8  7C 08 02 A6 */	mflr r0
-/* 8029A93C 00263EFC  3C C0 80 54 */	lis r6, __vt__CTutorial@ha
+/* 8029A93C 00263EFC  3C C0 80 54 */	lis r6, __vt__9CTutorial@ha
 /* 8029A940 00263F00  90 01 00 24 */	stw r0, 0x24(r1)
-/* 8029A944 00263F04  38 C6 C9 E8 */	addi r6, r6, __vt__CTutorial@l
+/* 8029A944 00263F04  38 C6 C9 E8 */	addi r6, r6, __vt__9CTutorial@l
 /* 8029A948 00263F08  BF A1 00 14 */	stmw r29, 0x14(r1)
 /* 8029A94C 00263F0C  7C 7D 1B 78 */	mr r29, r3
 /* 8029A950 00263F10  7C 9E 23 78 */	mr r30, r4
@@ -896,8 +896,8 @@
 
 .balign 8
 
-.obj __vt__CTutorial, global
-	.4byte __RTTI__CTutorial
+.obj __vt__9CTutorial, global
+	.4byte __RTTI__9CTutorial
 	.4byte 0
 	.4byte __dt__CTutorial
 	.4byte IWorkEvent_WorkEvent1
@@ -931,10 +931,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CTutorial
+.endobj __vt__9CTutorial
 
 .obj CTutorial_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -944,10 +944,10 @@
 
 .balign 8
 
-.obj __RTTI__CTutorial, global
+.obj __RTTI__9CTutorial, global
 	.4byte CTutorial_typestr
 	.4byte CTutorial_hierarchy
-.endobj __RTTI__CTutorial
+.endobj __RTTI__9CTutorial
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

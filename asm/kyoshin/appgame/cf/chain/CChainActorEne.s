@@ -494,8 +494,8 @@
 
 .balign 8
 
-.obj __vt__cf_CChainActorEne, global
-	.4byte __RTTI__cf_CChainActorEne
+.obj __vt__Q22cf14CChainActorEne, global
+	.4byte __RTTI__Q22cf14CChainActorEne
 	.4byte 0
 	.4byte __dt__cf_CChainActorEne
 	.4byte func_80281308
@@ -525,10 +525,10 @@
 	.4byte func_80278F5C
 	.4byte func_8027A324
 	.4byte func_8027A9D0
-.endobj __vt__cf_CChainActorEne
+.endobj __vt__Q22cf14CChainActorEne
 
 .obj cf_CChainActorEne_hierarchy, global
-	.4byte __RTTI__cf_CChainActor
+	.4byte __RTTI__Q22cf11CChainActor
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -538,10 +538,10 @@
 
 .balign 8
 
-.obj __RTTI__cf_CChainActorEne, global
+.obj __RTTI__Q22cf14CChainActorEne, global
 	.4byte cf_CChainActorEne_typestr
 	.4byte cf_CChainActorEne_hierarchy
-.endobj __RTTI__cf_CChainActorEne
+.endobj __RTTI__Q22cf14CChainActorEne
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

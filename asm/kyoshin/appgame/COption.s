@@ -12,9 +12,9 @@
 /* 8029BEE8 002654A8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8029BEEC 002654AC  7C 7F 1B 78 */	mr r31, r3
 /* 8029BEF0 002654B0  4B F3 60 D1 */	bl __ct__CBaseCur
-/* 8029BEF4 002654B4  3C 80 80 54 */	lis r4, __vt__CCur19@ha
+/* 8029BEF4 002654B4  3C 80 80 54 */	lis r4, __vt__6CCur19@ha
 /* 8029BEF8 002654B8  7F E3 FB 78 */	mr r3, r31
-/* 8029BEFC 002654BC  38 84 CE 60 */	addi r4, r4, __vt__CCur19@l
+/* 8029BEFC 002654BC  38 84 CE 60 */	addi r4, r4, __vt__6CCur19@l
 /* 8029BF00 002654C0  90 9F 00 00 */	stw r4, 0(r31)
 /* 8029BF04 002654C4  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8029BF08 002654C8  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -229,9 +229,9 @@
 .fn __ct__COption, global
 /* 8029C1F8 002657B8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8029C1FC 002657BC  7C 08 02 A6 */	mflr r0
-/* 8029C200 002657C0  3C A0 80 54 */	lis r5, __vt__COption@ha
+/* 8029C200 002657C0  3C A0 80 54 */	lis r5, __vt__7COption@ha
 /* 8029C204 002657C4  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8029C208 002657C8  38 A5 CD C8 */	addi r5, r5, __vt__COption@l
+/* 8029C208 002657C8  38 A5 CD C8 */	addi r5, r5, __vt__7COption@l
 /* 8029C20C 002657CC  BF C1 00 08 */	stmw r30, 8(r1)
 /* 8029C210 002657D0  7C 7E 1B 78 */	mr r30, r3
 /* 8029C214 002657D4  7C 9F 23 78 */	mr r31, r4
@@ -3235,8 +3235,8 @@
 
 .balign 8
 
-.obj __vt__COption, global
-	.4byte __RTTI__COption
+.obj __vt__7COption, global
+	.4byte __RTTI__7COption
 	.4byte 0
 	.4byte __dt__COption
 	.4byte IWorkEvent_WorkEvent1
@@ -3270,27 +3270,27 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__COption
+.endobj __vt__7COption
 
 .obj COption_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj COption_hierarchy
 
 
-.obj __vt__CCur19, global
-	.4byte __RTTI__CCur19
+.obj __vt__6CCur19, global
+	.4byte __RTTI__6CCur19
 	.4byte 0
 	.4byte func_8029BF68
 	.4byte func_801D20DC
 	.4byte func_801D2144
 	.4byte func_8029C14C
-.endobj __vt__CCur19
+.endobj __vt__6CCur19
 
 .obj CCur19_hierarchy, global
-	.4byte __RTTI__CBaseCur
+	.4byte __RTTI__8CBaseCur
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -3334,15 +3334,15 @@
 
 .balign 8
 
-.obj __RTTI__COption, global
+.obj __RTTI__7COption, global
 	.4byte COption_typestr
 	.4byte COption_hierarchy
-.endobj __RTTI__COption
+.endobj __RTTI__7COption
 
-.obj __RTTI__CCur19, global
+.obj __RTTI__6CCur19, global
 	.4byte CCur19_typestr
 	.4byte CCur19_hierarchy
-.endobj __RTTI__CCur19
+.endobj __RTTI__6CCur19
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

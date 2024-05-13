@@ -11,12 +11,12 @@
 /* 8025697C 0021FF3C  7C 9D 23 78 */	mr r29, r4
 /* 80256980 0021FF40  7C BE 2B 78 */	mr r30, r5
 /* 80256984 0021FF44  48 1E E0 95 */	bl __ct__8CProcessFv
-/* 80256988 0021FF48  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
-/* 8025698C 0021FF4C  3C C0 80 54 */	lis r6, __vt__CMenuKizunagram@ha
-/* 80256990 0021FF50  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
+/* 80256988 0021FF48  3C 60 80 53 */	lis r3, "__vt__14CTTask<5IUICf>"@ha
+/* 8025698C 0021FF4C  3C C0 80 54 */	lis r6, __vt__15CMenuKizunagram@ha
+/* 80256990 0021FF50  38 63 F7 40 */	addi r3, r3, "__vt__14CTTask<5IUICf>"@l
 /* 80256994 0021FF54  90 7C 00 10 */	stw r3, 0x10(r28)
 /* 80256998 0021FF58  3D 20 80 51 */	lis r9, __ptmf_null@ha
-/* 8025699C 0021FF5C  38 C6 AC 68 */	addi r6, r6, __vt__CMenuKizunagram@l
+/* 8025699C 0021FF5C  38 C6 AC 68 */	addi r6, r6, __vt__15CMenuKizunagram@l
 /* 802569A0 0021FF60  84 A9 CE 10 */	lwzu r5, __ptmf_null@l(r9)
 /* 802569A4 0021FF64  38 06 00 24 */	addi r0, r6, 0x24
 /* 802569A8 0021FF68  3B E0 00 00 */	li r31, 0
@@ -1265,8 +1265,8 @@
 
 .balign 8
 
-.obj __vt__CMenuKizunagram, global
-	.4byte __RTTI__CMenuKizunagram
+.obj __vt__15CMenuKizunagram, global
+	.4byte __RTTI__15CMenuKizunagram
 	.4byte 0
 	.4byte __dt__CMenuKizunagram
 	.4byte CChildListNode_Reset
@@ -1275,25 +1275,25 @@
 	.4byte func_8025703C
 	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuKizunagram
+	.4byte __RTTI__15CMenuKizunagram
 	.4byte 0xFFFFFFA8
 	.4byte func_80257A84
 	.4byte func_80257A7C
 	.4byte func_802571B8
-.endobj __vt__CMenuKizunagram
+.endobj __vt__15CMenuKizunagram
 
 .obj CMenuKizunagram_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000058
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUICf
+	.4byte "__RTTI__14CTTask<5IUICf>"
 	.4byte 0
-	.4byte __RTTI__IUICf
+	.4byte __RTTI__5IUICf
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1303,10 +1303,10 @@
 
 .balign 8
 
-.obj __RTTI__CMenuKizunagram, global
+.obj __RTTI__15CMenuKizunagram, global
 	.4byte CMenuKizunagram_typestr
 	.4byte CMenuKizunagram_hierarchy
-.endobj __RTTI__CMenuKizunagram
+.endobj __RTTI__15CMenuKizunagram
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

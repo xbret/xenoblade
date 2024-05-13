@@ -12,22 +12,22 @@
 /* 8012DFA8 000F7568  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8012DFAC 000F756C  7C 7D 1B 78 */	mr r29, r3
 /* 8012DFB0 000F7570  48 31 6A 69 */	bl __ct__8CProcessFv
-/* 8012DFB4 000F7574  3C 60 80 53 */	lis r3, __vt__CTTask_CUIBattleManager@ha
-/* 8012DFB8 000F7578  3D 20 80 53 */	lis r9, __vt__CUIBattleManager@ha
-/* 8012DFBC 000F757C  38 63 1A 18 */	addi r3, r3, __vt__CTTask_CUIBattleManager@l
+/* 8012DFB4 000F7574  3C 60 80 53 */	lis r3, "__vt__26CTTask<16CUIBattleManager>"@ha
+/* 8012DFB8 000F7578  3D 20 80 53 */	lis r9, __vt__16CUIBattleManager@ha
+/* 8012DFBC 000F757C  38 63 1A 18 */	addi r3, r3, "__vt__26CTTask<16CUIBattleManager>"@l
 /* 8012DFC0 000F7580  90 7D 00 10 */	stw r3, 0x10(r29)
 /* 8012DFC4 000F7584  3D 80 80 51 */	lis r12, __ptmf_null@ha
-/* 8012DFC8 000F7588  3C E0 80 53 */	lis r7, __vt___reslist_base_IUIBattle@ha
+/* 8012DFC8 000F7588  3C E0 80 53 */	lis r7, "__vt__26_reslist_base<P9IUIBattle>"@ha
 /* 8012DFCC 000F758C  84 6C CE 10 */	lwzu r3, __ptmf_null@l(r12)
-/* 8012DFD0 000F7590  39 29 18 90 */	addi r9, r9, __vt__CUIBattleManager@l
-/* 8012DFD4 000F7594  3C A0 80 53 */	lis r5, __vt__reslist_IUIBattle@ha
+/* 8012DFD0 000F7590  39 29 18 90 */	addi r9, r9, __vt__16CUIBattleManager@l
+/* 8012DFD4 000F7594  3C A0 80 53 */	lis r5, "__vt__20reslist<P9IUIBattle>"@ha
 /* 8012DFD8 000F7598  3B E0 00 00 */	li r31, 0
 /* 8012DFDC 000F759C  80 0C 00 04 */	lwz r0, 4(r12)
 /* 8012DFE0 000F75A0  39 09 00 24 */	addi r8, r9, 0x24
 /* 8012DFE4 000F75A4  90 1D 00 40 */	stw r0, 0x40(r29)
-/* 8012DFE8 000F75A8  38 E7 19 84 */	addi r7, r7, __vt___reslist_base_IUIBattle@l
+/* 8012DFE8 000F75A8  38 E7 19 84 */	addi r7, r7, "__vt__26_reslist_base<P9IUIBattle>"@l
 /* 8012DFEC 000F75AC  38 DD 00 64 */	addi r6, r29, 0x64
-/* 8012DFF0 000F75B0  38 A5 19 6C */	addi r5, r5, __vt__reslist_IUIBattle@l
+/* 8012DFF0 000F75B0  38 A5 19 6C */	addi r5, r5, "__vt__20reslist<P9IUIBattle>"@l
 /* 8012DFF4 000F75B4  90 7D 00 3C */	stw r3, 0x3c(r29)
 /* 8012DFF8 000F75B8  63 E0 00 08 */	ori r0, r31, 8
 /* 8012DFFC 000F75BC  38 80 FF FF */	li r4, -1
@@ -167,9 +167,9 @@
 /* 8012E1F8 000F77B8  93 C1 00 08 */	stw r30, 8(r1)
 /* 8012E1FC 000F77BC  7C 7E 1B 78 */	mr r30, r3
 /* 8012E200 000F77C0  41 82 00 78 */	beq .L_8012E278
-/* 8012E204 000F77C4  3C A0 80 53 */	lis r5, __vt___reslist_base_IUIBattle@ha
+/* 8012E204 000F77C4  3C A0 80 53 */	lis r5, "__vt__26_reslist_base<P9IUIBattle>"@ha
 /* 8012E208 000F77C8  80 83 00 04 */	lwz r4, 4(r3)
-/* 8012E20C 000F77CC  38 A5 19 84 */	addi r5, r5, __vt___reslist_base_IUIBattle@l
+/* 8012E20C 000F77CC  38 A5 19 84 */	addi r5, r5, "__vt__26_reslist_base<P9IUIBattle>"@l
 /* 8012E210 000F77D0  90 A3 00 00 */	stw r5, 0(r3)
 /* 8012E214 000F77D4  38 00 00 00 */	li r0, 0
 /* 8012E218 000F77D8  80 A4 00 00 */	lwz r5, 0(r4)
@@ -220,9 +220,9 @@
 /* 8012E2B0 000F7870  7C 7E 1B 78 */	mr r30, r3
 /* 8012E2B4 000F7874  41 82 00 7C */	beq .L_8012E330
 /* 8012E2B8 000F7878  41 82 00 68 */	beq .L_8012E320
-/* 8012E2BC 000F787C  3C A0 80 53 */	lis r5, __vt___reslist_base_IUIBattle@ha
+/* 8012E2BC 000F787C  3C A0 80 53 */	lis r5, "__vt__26_reslist_base<P9IUIBattle>"@ha
 /* 8012E2C0 000F7880  80 83 00 04 */	lwz r4, 4(r3)
-/* 8012E2C4 000F7884  38 A5 19 84 */	addi r5, r5, __vt___reslist_base_IUIBattle@l
+/* 8012E2C4 000F7884  38 A5 19 84 */	addi r5, r5, "__vt__26_reslist_base<P9IUIBattle>"@l
 /* 8012E2C8 000F7888  90 A3 00 00 */	stw r5, 0(r3)
 /* 8012E2CC 000F788C  38 00 00 00 */	li r0, 0
 /* 8012E2D0 000F7890  80 84 00 00 */	lwz r4, 0(r4)
@@ -276,9 +276,9 @@
 /* 8012E374 000F7934  37 E3 00 5C */	addic. r31, r3, 0x5c
 /* 8012E378 000F7938  41 82 00 6C */	beq .L_8012E3E4
 /* 8012E37C 000F793C  41 82 00 68 */	beq .L_8012E3E4
-/* 8012E380 000F7940  3C 80 80 53 */	lis r4, __vt___reslist_base_IUIBattle@ha
+/* 8012E380 000F7940  3C 80 80 53 */	lis r4, "__vt__26_reslist_base<P9IUIBattle>"@ha
 /* 8012E384 000F7944  80 7F 00 04 */	lwz r3, 4(r31)
-/* 8012E388 000F7948  38 84 19 84 */	addi r4, r4, __vt___reslist_base_IUIBattle@l
+/* 8012E388 000F7948  38 84 19 84 */	addi r4, r4, "__vt__26_reslist_base<P9IUIBattle>"@l
 /* 8012E38C 000F794C  90 9F 00 00 */	stw r4, 0(r31)
 /* 8012E390 000F7950  38 00 00 00 */	li r0, 0
 /* 8012E394 000F7954  80 83 00 00 */	lwz r4, 0(r3)
@@ -340,15 +340,15 @@
 /* 8012E454 000F7A14  7C 7F 1B 78 */	mr r31, r3
 /* 8012E458 000F7A18  41 82 00 58 */	beq .L_8012E4B0
 /* 8012E45C 000F7A1C  48 31 65 BD */	bl __ct__8CProcessFv
-/* 8012E460 000F7A20  3C 60 80 53 */	lis r3, __vt__CTTask_CUIBattleManager_CTest@ha
+/* 8012E460 000F7A20  3C 60 80 53 */	lis r3, "__vt__34CTTask<Q216CUIBattleManager5CTest>"@ha
 /* 8012E464 000F7A24  3C A0 80 51 */	lis r5, __ptmf_null@ha
-/* 8012E468 000F7A28  38 63 19 D8 */	addi r3, r3, __vt__CTTask_CUIBattleManager_CTest@l
+/* 8012E468 000F7A28  38 63 19 D8 */	addi r3, r3, "__vt__34CTTask<Q216CUIBattleManager5CTest>"@l
 /* 8012E46C 000F7A2C  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 8012E470 000F7A30  38 A5 CE 10 */	addi r5, r5, __ptmf_null@l
 /* 8012E474 000F7A34  80 05 00 04 */	lwz r0, 4(r5)
-/* 8012E478 000F7A38  3C 60 80 53 */	lis r3, __vt__CUIBattleManager_CTest@ha
+/* 8012E478 000F7A38  3C 60 80 53 */	lis r3, __vt__Q216CUIBattleManager5CTest@ha
 /* 8012E47C 000F7A3C  80 85 00 00 */	lwz r4, 0(r5)
-/* 8012E480 000F7A40  38 63 19 90 */	addi r3, r3, __vt__CUIBattleManager_CTest@l
+/* 8012E480 000F7A40  38 63 19 90 */	addi r3, r3, __vt__Q216CUIBattleManager5CTest@l
 /* 8012E484 000F7A44  90 9F 00 3C */	stw r4, 0x3c(r31)
 /* 8012E488 000F7A48  90 1F 00 40 */	stw r0, 0x40(r31)
 /* 8012E48C 000F7A4C  80 05 00 08 */	lwz r0, 8(r5)
@@ -2399,8 +2399,8 @@
 .endobj lbl_80531884
 
 
-.obj __vt__CUIBattleManager, global
-	.4byte __RTTI__CUIBattleManager
+.obj __vt__16CUIBattleManager, global
+	.4byte __RTTI__16CUIBattleManager
 	.4byte 0
 	.4byte __dt__CUIBattleManager
 	.4byte CChildListNode_Reset
@@ -2409,7 +2409,7 @@
 	.4byte func_8012E79C
 	.4byte func_8012FEC0
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CUIBattleManager
+	.4byte __RTTI__16CUIBattleManager
 	.4byte 0xFFFFFFAC
 	.4byte func_8012FF6C
 	.4byte IWorkEvent_WorkEvent1
@@ -2444,45 +2444,45 @@
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
 	.4byte func_8012F2C0
-.endobj __vt__CUIBattleManager
+.endobj __vt__16CUIBattleManager
 
 .obj CUIBattleManager_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x00000054
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_CUIBattleManager
+	.4byte "__RTTI__26CTTask<16CUIBattleManager>"
 	.4byte 0
 	.4byte 0
 .endobj CUIBattleManager_hierarchy
 
 
-.obj __vt__reslist_IUIBattle, global
-	.4byte __RTTI__reslist_IUIBattle
+.obj "__vt__20reslist<P9IUIBattle>", global
+	.4byte "__RTTI__20reslist<P9IUIBattle>"
 	.4byte 0
 	.4byte __dt__reslist_IUIBattle
-.endobj __vt__reslist_IUIBattle
+.endobj "__vt__20reslist<P9IUIBattle>"
 
 .obj reslist_IUIBattle_hierarchy, global
-	.4byte __RTTI___reslist_base_IUIBattle
+	.4byte "__RTTI__26_reslist_base<P9IUIBattle>"
 	.4byte 0
 	.4byte 0
 .endobj reslist_IUIBattle_hierarchy
 
 
-.obj __vt___reslist_base_IUIBattle, global
-	.4byte __RTTI___reslist_base_IUIBattle
+.obj "__vt__26_reslist_base<P9IUIBattle>", global
+	.4byte "__RTTI__26_reslist_base<P9IUIBattle>"
 	.4byte 0
 	.4byte __dt___reslist_base_IUIBattle
-.endobj __vt___reslist_base_IUIBattle
+.endobj "__vt__26_reslist_base<P9IUIBattle>"
 
 
-.obj __vt__CUIBattleManager_CTest, global
-	.4byte __RTTI__CUIBattleManager_CTest
+.obj __vt__Q216CUIBattleManager5CTest, global
+	.4byte __RTTI__Q216CUIBattleManager5CTest
 	.4byte 0
 	.4byte __dt__CUIBattleManager_CTest
 	.4byte CChildListNode_Reset
@@ -2491,23 +2491,23 @@
 	.4byte func_8012FDDC
 	.4byte func_8012FDD8
 	.4byte CProcess_func_80043F20
-.endobj __vt__CUIBattleManager_CTest
+.endobj __vt__Q216CUIBattleManager5CTest
 
 .obj CUIBattleManager_CTest_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_CUIBattleManager_CTest
+	.4byte "__RTTI__34CTTask<Q216CUIBattleManager5CTest>"
 	.4byte 0
 	.4byte 0
 .endobj CUIBattleManager_CTest_hierarchy
 
 
-.obj __vt__CTTask_CUIBattleManager_CTest, global
-	.4byte __RTTI__CTTask_CUIBattleManager_CTest
+.obj "__vt__34CTTask<Q216CUIBattleManager5CTest>", global
+	.4byte "__RTTI__34CTTask<Q216CUIBattleManager5CTest>"
 	.4byte 0
 	.4byte __dt__CTTask_CUIBattleManager_CTest
 	.4byte CChildListNode_Reset
@@ -2516,21 +2516,21 @@
 	.4byte func_8012FDE8
 	.4byte func_8012FE30
 	.4byte CProcess_func_80043F20
-.endobj __vt__CTTask_CUIBattleManager_CTest
+.endobj "__vt__34CTTask<Q216CUIBattleManager5CTest>"
 
 .obj CTTask_CUIBattleManager_CTest_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
 	.4byte 0
 .endobj CTTask_CUIBattleManager_CTest_hierarchy
 
 
-.obj __vt__CTTask_CUIBattleManager, global
-	.4byte __RTTI__CTTask_CUIBattleManager
+.obj "__vt__26CTTask<16CUIBattleManager>", global
+	.4byte "__RTTI__26CTTask<16CUIBattleManager>"
 	.4byte 0
 	.4byte __dt__CTTask_CUIBattleManager
 	.4byte CChildListNode_Reset
@@ -2539,14 +2539,14 @@
 	.4byte func_8012FE78
 	.4byte func_8012FEC0
 	.4byte CProcess_func_80043F20
-.endobj __vt__CTTask_CUIBattleManager
+.endobj "__vt__26CTTask<16CUIBattleManager>"
 
 .obj CTTask_CUIBattleManager_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
 	.4byte 0
 .endobj CTTask_CUIBattleManager_hierarchy
@@ -2555,35 +2555,35 @@
 
 .balign 8
 
-.obj __RTTI__CUIBattleManager, global
+.obj __RTTI__16CUIBattleManager, global
 	.4byte CUIBattleManager_typestr
 	.4byte CUIBattleManager_hierarchy
-.endobj __RTTI__CUIBattleManager
+.endobj __RTTI__16CUIBattleManager
 
-.obj __RTTI__reslist_IUIBattle, global
+.obj "__RTTI__20reslist<P9IUIBattle>", global
 	.4byte reslist_IUIBattle_typestr
 	.4byte reslist_IUIBattle_hierarchy
-.endobj __RTTI__reslist_IUIBattle
+.endobj "__RTTI__20reslist<P9IUIBattle>"
 
-.obj __RTTI___reslist_base_IUIBattle, global
+.obj "__RTTI__26_reslist_base<P9IUIBattle>", global
 	.4byte _reslist_base_IUIBattle_typestr
 	.4byte 0
-.endobj __RTTI___reslist_base_IUIBattle
+.endobj "__RTTI__26_reslist_base<P9IUIBattle>"
 
-.obj __RTTI__CUIBattleManager_CTest, global
+.obj __RTTI__Q216CUIBattleManager5CTest, global
 	.4byte CUIBattleManager_CTest_typestr
 	.4byte CUIBattleManager_CTest_hierarchy
-.endobj __RTTI__CUIBattleManager_CTest
+.endobj __RTTI__Q216CUIBattleManager5CTest
 
-.obj __RTTI__CTTask_CUIBattleManager_CTest, global
+.obj "__RTTI__34CTTask<Q216CUIBattleManager5CTest>", global
 	.4byte CTTask_CUIBattleManager_CTest_typestr
 	.4byte CTTask_CUIBattleManager_CTest_hierarchy
-.endobj __RTTI__CTTask_CUIBattleManager_CTest
+.endobj "__RTTI__34CTTask<Q216CUIBattleManager5CTest>"
 
-.obj __RTTI__CTTask_CUIBattleManager, global
+.obj "__RTTI__26CTTask<16CUIBattleManager>", global
 	.4byte CTTask_CUIBattleManager_typestr
 	.4byte CTTask_CUIBattleManager_hierarchy
-.endobj __RTTI__CTTask_CUIBattleManager
+.endobj "__RTTI__26CTTask<16CUIBattleManager>"
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

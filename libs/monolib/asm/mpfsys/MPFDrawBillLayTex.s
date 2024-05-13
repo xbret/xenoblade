@@ -6,9 +6,9 @@
 /* 80479F2C 004434EC  88 0D C0 08 */	lbz r0, lbl_80668188@sda21(r13)
 /* 80479F30 004434F0  7C 00 07 75 */	extsb. r0, r0
 /* 80479F34 004434F4  40 82 00 18 */	bne .L_80479F4C
-/* 80479F38 004434F8  3C 60 80 57 */	lis r3, __vt__mpfsys_MPFDrawBillLayTex@ha
+/* 80479F38 004434F8  3C 60 80 57 */	lis r3, __vt__Q26mpfsys17MPFDrawBillLayTex@ha
 /* 80479F3C 004434FC  38 00 00 01 */	li r0, 1
-/* 80479F40 00443500  38 63 14 48 */	addi r3, r3, __vt__mpfsys_MPFDrawBillLayTex@l
+/* 80479F40 00443500  38 63 14 48 */	addi r3, r3, __vt__Q26mpfsys17MPFDrawBillLayTex@l
 /* 80479F44 00443504  90 6D C0 0C */	stw r3, lbl_8066818C@sda21(r13)
 /* 80479F48 00443508  98 0D C0 08 */	stb r0, lbl_80668188@sda21(r13)
 .L_80479F4C:

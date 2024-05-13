@@ -12,12 +12,12 @@
 /* 80108C70 000D2230  93 A1 00 44 */	stw r29, 0x44(r1)
 /* 80108C74 000D2234  7C 9D 23 78 */	mr r29, r4
 /* 80108C78 000D2238  48 33 BD A1 */	bl __ct__8CProcessFv
-/* 80108C7C 000D223C  3C 60 80 53 */	lis r3, __vt__CTTask_IUIBattle@ha
-/* 80108C80 000D2240  3C A0 80 53 */	lis r5, __vt__CMenuBattleDamage@ha
-/* 80108C84 000D2244  38 63 F9 90 */	addi r3, r3, __vt__CTTask_IUIBattle@l
+/* 80108C7C 000D223C  3C 60 80 53 */	lis r3, "__vt__18CTTask<9IUIBattle>"@ha
+/* 80108C80 000D2240  3C A0 80 53 */	lis r5, __vt__17CMenuBattleDamage@ha
+/* 80108C84 000D2244  38 63 F9 90 */	addi r3, r3, "__vt__18CTTask<9IUIBattle>"@l
 /* 80108C88 000D2248  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 80108C8C 000D224C  3D 00 80 51 */	lis r8, __ptmf_null@ha
-/* 80108C90 000D2250  38 A5 FA 00 */	addi r5, r5, __vt__CMenuBattleDamage@l
+/* 80108C90 000D2250  38 A5 FA 00 */	addi r5, r5, __vt__17CMenuBattleDamage@l
 /* 80108C94 000D2254  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 80108C98 000D2258  38 85 00 24 */	addi r4, r5, 0x24
 /* 80108C9C 000D225C  3B C0 00 00 */	li r30, 0
@@ -2447,8 +2447,8 @@
 
 .balign 8
 
-.obj __vt__CMenuBattleDamage, global
-	.4byte __RTTI__CMenuBattleDamage
+.obj __vt__17CMenuBattleDamage, global
+	.4byte __RTTI__17CMenuBattleDamage
 	.4byte 0
 	.4byte __dt__CMenuBattleDamage
 	.4byte CChildListNode_Reset
@@ -2457,7 +2457,7 @@
 	.4byte func_80109160
 	.4byte func_80108BE8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuBattleDamage
+	.4byte __RTTI__17CMenuBattleDamage
 	.4byte 0xFFFFFFA8
 	.4byte func_8010A67C
 	.4byte IWorkEvent_WorkEvent1
@@ -2491,27 +2491,27 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CMenuBattleDamage
+	.4byte __RTTI__17CMenuBattleDamage
 	.4byte 0xFFFFFFA4
 	.4byte func_8010A68C
 	.4byte func_8010A684
 	.4byte func_80109444
-.endobj __vt__CMenuBattleDamage
+.endobj __vt__17CMenuBattleDamage
 
 .obj CMenuBattleDamage_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x0000005C
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x00000058
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUIBattle
+	.4byte "__RTTI__18CTTask<9IUIBattle>"
 	.4byte 0
-	.4byte __RTTI__IUIBattle
+	.4byte __RTTI__9IUIBattle
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -2521,10 +2521,10 @@
 
 .balign 8
 
-.obj __RTTI__CMenuBattleDamage, global
+.obj __RTTI__17CMenuBattleDamage, global
 	.4byte CMenuBattleDamage_typestr
 	.4byte CMenuBattleDamage_hierarchy
-.endobj __RTTI__CMenuBattleDamage
+.endobj __RTTI__17CMenuBattleDamage
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

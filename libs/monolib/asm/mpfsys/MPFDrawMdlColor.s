@@ -6,9 +6,9 @@
 /* 8047986C 00442E2C  88 0D BF F0 */	lbz r0, lbl_80668170@sda21(r13)
 /* 80479870 00442E30  7C 00 07 75 */	extsb. r0, r0
 /* 80479874 00442E34  40 82 00 18 */	bne .L_8047988C
-/* 80479878 00442E38  3C 60 80 57 */	lis r3, __vt__mpfsys_MPFDrawMdlColor@ha
+/* 80479878 00442E38  3C 60 80 57 */	lis r3, __vt__Q26mpfsys15MPFDrawMdlColor@ha
 /* 8047987C 00442E3C  38 00 00 01 */	li r0, 1
-/* 80479880 00442E40  38 63 14 08 */	addi r3, r3, __vt__mpfsys_MPFDrawMdlColor@l
+/* 80479880 00442E40  38 63 14 08 */	addi r3, r3, __vt__Q26mpfsys15MPFDrawMdlColor@l
 /* 80479884 00442E44  90 6D BF F4 */	stw r3, lbl_80668174@sda21(r13)
 /* 80479888 00442E48  98 0D BF F0 */	stb r0, lbl_80668170@sda21(r13)
 .L_8047988C:
@@ -516,76 +516,76 @@
 
 .balign 8
 
-.obj __vt__mpfsys_MPFDrawMdlColor, global
-	.4byte __RTTI__mpfsys_MPFDrawMdlColor
+.obj __vt__Q26mpfsys15MPFDrawMdlColor, global
+	.4byte __RTTI__Q26mpfsys15MPFDrawMdlColor
 	.4byte 0
 	.4byte func_80479BA0
 	.4byte func_80479D40
-.endobj __vt__mpfsys_MPFDrawMdlColor
+.endobj __vt__Q26mpfsys15MPFDrawMdlColor
 
 .obj mpfsys_MPFDrawMdlColor_hierarchy, global
-	.4byte __RTTI__mpfsys_MPFDraw
+	.4byte __RTTI__Q26mpfsys7MPFDraw
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj mpfsys_MPFDrawMdlColor_hierarchy
 
 
-.obj __vt__mpfsys_MPFDrawMdlNoColor, global
-	.4byte __RTTI__mpfsys_MPFDrawMdlNoColor
+.obj __vt__Q26mpfsys17MPFDrawMdlNoColor, global
+	.4byte __RTTI__Q26mpfsys17MPFDrawMdlNoColor
 	.4byte 0
 	.4byte func_80479894
 	.4byte func_80479A1C
-.endobj __vt__mpfsys_MPFDrawMdlNoColor
+.endobj __vt__Q26mpfsys17MPFDrawMdlNoColor
 
 .obj mpfsys_MPFDrawMdlNoColor_hierarchy, global
-	.4byte __RTTI__mpfsys_MPFDraw
+	.4byte __RTTI__Q26mpfsys7MPFDraw
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj mpfsys_MPFDrawMdlNoColor_hierarchy
 
-.obj __vt__mpfsys_MPFDrawBillLayTex, global
-	.4byte __RTTI__mpfsys_MPFDrawBillLayTex
+.obj __vt__Q26mpfsys17MPFDrawBillLayTex, global
+	.4byte __RTTI__Q26mpfsys17MPFDrawBillLayTex
 	.4byte 0
 	.4byte func_8047B85C
 	.4byte func_8047B9DC
-.endobj __vt__mpfsys_MPFDrawBillLayTex
+.endobj __vt__Q26mpfsys17MPFDrawBillLayTex
 
 .obj mpfsys_MPFDrawBillLayTex_hierarchy, global
-	.4byte __RTTI__mpfsys_MPFDraw
+	.4byte __RTTI__Q26mpfsys7MPFDraw
 	.4byte 0
-	.4byte __RTTI__mpfsys_MPFDrawBillboard
+	.4byte __RTTI__Q26mpfsys16MPFDrawBillboard
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj mpfsys_MPFDrawBillLayTex_hierarchy
 
 
-.obj __vt__mpfsys_MPFDrawCross, global
-	.4byte __RTTI__mpfsys_MPFDrawCross
+.obj __vt__Q26mpfsys12MPFDrawCross, global
+	.4byte __RTTI__Q26mpfsys12MPFDrawCross
 	.4byte 0
 	.4byte func_8047B1E8
 	.4byte func_8047B528
-.endobj __vt__mpfsys_MPFDrawCross
+.endobj __vt__Q26mpfsys12MPFDrawCross
 
 .obj mpfsys_MPFDrawCross_hierarchy, global
-	.4byte __RTTI__mpfsys_MPFDraw
+	.4byte __RTTI__Q26mpfsys7MPFDraw
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj mpfsys_MPFDrawCross_hierarchy
 
 
-.obj __vt__mpfsys_MPFDrawBillboard, global
-	.4byte __RTTI__mpfsys_MPFDrawBillboard
+.obj __vt__Q26mpfsys16MPFDrawBillboard, global
+	.4byte __RTTI__Q26mpfsys16MPFDrawBillboard
 	.4byte 0
 	.4byte func_8047A7B0
 	.4byte func_8047A86C
-.endobj __vt__mpfsys_MPFDrawBillboard
+.endobj __vt__Q26mpfsys16MPFDrawBillboard
 
 .obj mpfsys_MPFDrawBillboard_hierarchy, global
-	.4byte __RTTI__mpfsys_MPFDraw
+	.4byte __RTTI__Q26mpfsys7MPFDraw
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -595,30 +595,30 @@
 
 .balign 8
 
-.obj __RTTI__mpfsys_MPFDrawMdlColor, global
+.obj __RTTI__Q26mpfsys15MPFDrawMdlColor, global
 	.4byte mpfsys_MPFDrawMdlColor_typestr
 	.4byte mpfsys_MPFDrawMdlColor_hierarchy
-.endobj __RTTI__mpfsys_MPFDrawMdlColor
+.endobj __RTTI__Q26mpfsys15MPFDrawMdlColor
 
-.obj __RTTI__mpfsys_MPFDrawMdlNoColor, global
+.obj __RTTI__Q26mpfsys17MPFDrawMdlNoColor, global
 	.4byte mpfsys_MPFDrawMdlNoColor_typestr
 	.4byte mpfsys_MPFDrawMdlNoColor_hierarchy
-.endobj __RTTI__mpfsys_MPFDrawMdlNoColor
+.endobj __RTTI__Q26mpfsys17MPFDrawMdlNoColor
 
-.obj __RTTI__mpfsys_MPFDrawBillLayTex, global
+.obj __RTTI__Q26mpfsys17MPFDrawBillLayTex, global
 	.4byte mpfsys_MPFDrawBillLayTex_typestr
 	.4byte mpfsys_MPFDrawBillLayTex_hierarchy
-.endobj __RTTI__mpfsys_MPFDrawBillLayTex
+.endobj __RTTI__Q26mpfsys17MPFDrawBillLayTex
 
-.obj __RTTI__mpfsys_MPFDrawCross, global
+.obj __RTTI__Q26mpfsys12MPFDrawCross, global
 	.4byte mpfsys_MPFDrawCross_typestr
 	.4byte mpfsys_MPFDrawCross_hierarchy
-.endobj __RTTI__mpfsys_MPFDrawCross
+.endobj __RTTI__Q26mpfsys12MPFDrawCross
 
-.obj __RTTI__mpfsys_MPFDrawBillboard, global
+.obj __RTTI__Q26mpfsys16MPFDrawBillboard, global
 	.4byte mpfsys_MPFDrawBillboard_typestr
 	.4byte mpfsys_MPFDrawBillboard_hierarchy
-.endobj __RTTI__mpfsys_MPFDrawBillboard
+.endobj __RTTI__Q26mpfsys16MPFDrawBillboard
 
 
 .obj float_806661C0, global

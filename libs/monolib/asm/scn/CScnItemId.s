@@ -12,8 +12,8 @@
 /* 804820AC 0044B66C  93 C1 00 08 */	stw r30, 8(r1)
 /* 804820B0 0044B670  7C 7E 1B 78 */	mr r30, r3
 /* 804820B4 0044B674  41 82 00 28 */	beq .L_804820DC
-/* 804820B8 0044B678  3C 80 80 57 */	lis r4, __vt__CScnItemId@ha
-/* 804820BC 0044B67C  38 84 15 20 */	addi r4, r4, __vt__CScnItemId@l
+/* 804820B8 0044B678  3C 80 80 57 */	lis r4, __vt__10CScnItemId@ha
+/* 804820BC 0044B67C  38 84 15 20 */	addi r4, r4, __vt__10CScnItemId@l
 /* 804820C0 0044B680  90 83 00 00 */	stw r4, 0(r3)
 /* 804820C4 0044B684  48 03 A9 29 */	bl func_804BC9EC
 /* 804820C8 0044B688  48 03 AB 55 */	bl func_804BCC1C
@@ -83,10 +83,10 @@
 /* 804821A8 0044B768  4B FB 2E D1 */	bl func_80435078__2mlFPQ22ml9UnkStructPCc
 /* 804821AC 0044B76C  93 9E 00 04 */	stw r28, 4(r30)
 /* 804821B0 0044B770  38 00 00 05 */	li r0, 5
-/* 804821B4 0044B774  3C 80 80 57 */	lis r4, __vt__CScnItemId@ha
+/* 804821B4 0044B774  3C 80 80 57 */	lis r4, __vt__10CScnItemId@ha
 /* 804821B8 0044B778  3B E1 00 08 */	addi r31, r1, 8
 /* 804821BC 0044B77C  B0 1E 00 08 */	sth r0, 8(r30)
-/* 804821C0 0044B780  38 84 15 20 */	addi r4, r4, __vt__CScnItemId@l
+/* 804821C0 0044B780  38 84 15 20 */	addi r4, r4, __vt__10CScnItemId@l
 /* 804821C4 0044B784  7F E3 FB 78 */	mr r3, r31
 /* 804821C8 0044B788  90 9E 00 00 */	stw r4, 0(r30)
 /* 804821CC 0044B78C  4B E3 73 ED */	bl strlen
@@ -110,9 +110,9 @@
 /* 80482210 0044B7D0  41 82 00 44 */	beq .L_80482254
 /* 80482214 0044B7D4  93 83 00 04 */	stw r28, 4(r3)
 /* 80482218 0044B7D8  38 00 00 05 */	li r0, 5
-/* 8048221C 0044B7DC  3C 80 80 57 */	lis r4, __vt__CScnItemId@ha
+/* 8048221C 0044B7DC  3C 80 80 57 */	lis r4, __vt__10CScnItemId@ha
 /* 80482220 0044B7E0  B0 03 00 08 */	sth r0, 8(r3)
-/* 80482224 0044B7E4  38 84 15 20 */	addi r4, r4, __vt__CScnItemId@l
+/* 80482224 0044B7E4  38 84 15 20 */	addi r4, r4, __vt__10CScnItemId@l
 /* 80482228 0044B7E8  90 83 00 00 */	stw r4, 0(r3)
 /* 8048222C 0044B7EC  38 60 00 00 */	li r3, 0
 /* 80482230 0044B7F0  4B E3 73 89 */	bl strlen
@@ -174,8 +174,8 @@
 
 .balign 8
 
-.obj __vt__CScnItemId, global
-	.4byte __RTTI__CScnItemId
+.obj __vt__10CScnItemId, global
+	.4byte __RTTI__10CScnItemId
 	.4byte 0
 	.4byte __dt__CScnItemId
 	.4byte func_8048228C
@@ -183,10 +183,10 @@
 	.4byte func_80482288
 	.4byte func_80482290
 	.4byte func_80482298
-.endobj __vt__CScnItemId
+.endobj __vt__10CScnItemId
 
 .obj CScnItemId_hierarchy, global
-	.4byte __RTTI__CScnItem
+	.4byte __RTTI__4CScnItem
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -197,10 +197,10 @@
 
 .balign 8
 
-.obj __RTTI__CScnItemId, global
+.obj __RTTI__10CScnItemId, global
 	.4byte CScnItemId_typestr
 	.4byte CScnItemId_hierarchy
-.endobj __RTTI__CScnItemId
+.endobj __RTTI__10CScnItemId
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

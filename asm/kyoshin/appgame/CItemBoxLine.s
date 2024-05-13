@@ -1223,9 +1223,9 @@
 /* 801ECB90 001B6150  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801ECB94 001B6154  7C 7F 1B 78 */	mr r31, r3
 /* 801ECB98 001B6158  4B FE 54 29 */	bl __ct__CBaseCur
-/* 801ECB9C 001B615C  3C 80 80 54 */	lis r4, __vt__CIBLTabCur@ha
+/* 801ECB9C 001B615C  3C 80 80 54 */	lis r4, __vt__10CIBLTabCur@ha
 /* 801ECBA0 001B6160  7F E3 FB 78 */	mr r3, r31
-/* 801ECBA4 001B6164  38 84 85 38 */	addi r4, r4, __vt__CIBLTabCur@l
+/* 801ECBA4 001B6164  38 84 85 38 */	addi r4, r4, __vt__10CIBLTabCur@l
 /* 801ECBA8 001B6168  90 9F 00 00 */	stw r4, 0(r31)
 /* 801ECBAC 001B616C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 801ECBB0 001B6170  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -1302,9 +1302,9 @@
 /* 801ECC9C 001B625C  90 01 04 24 */	stw r0, 0x424(r1)
 /* 801ECCA0 001B6260  39 61 04 20 */	addi r11, r1, 0x420
 /* 801ECCA4 001B6264  48 0C D4 B1 */	bl _savegpr_27
-/* 801ECCA8 001B6268  3C C0 80 54 */	lis r6, __vt__CItemBoxLine@ha
+/* 801ECCA8 001B6268  3C C0 80 54 */	lis r6, __vt__12CItemBoxLine@ha
 /* 801ECCAC 001B626C  7C 7F 1B 78 */	mr r31, r3
-/* 801ECCB0 001B6270  38 C6 84 A0 */	addi r6, r6, __vt__CItemBoxLine@l
+/* 801ECCB0 001B6270  38 C6 84 A0 */	addi r6, r6, __vt__12CItemBoxLine@l
 /* 801ECCB4 001B6274  90 C3 00 00 */	stw r6, 0(r3)
 /* 801ECCB8 001B6278  7C 9B 23 78 */	mr r27, r4
 /* 801ECCBC 001B627C  7C BC 2B 78 */	mr r28, r5
@@ -8929,8 +8929,8 @@
 
 .balign 8
 
-.obj __vt__CItemBoxLine, global
-	.4byte __RTTI__CItemBoxLine
+.obj __vt__12CItemBoxLine, global
+	.4byte __RTTI__12CItemBoxLine
 	.4byte 0
 	.4byte __dt__CItemBoxLine
 	.4byte IWorkEvent_WorkEvent1
@@ -8964,27 +8964,27 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CItemBoxLine
+.endobj __vt__12CItemBoxLine
 
 .obj CItemBoxLine_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj CItemBoxLine_hierarchy
 
 
-.obj __vt__CIBLTabCur, global
-	.4byte __RTTI__CIBLTabCur
+.obj __vt__10CIBLTabCur, global
+	.4byte __RTTI__10CIBLTabCur
 	.4byte 0
 	.4byte func_801ECC10
 	.4byte func_801D20DC
 	.4byte func_801D2144
 	.4byte func_801D2180
-.endobj __vt__CIBLTabCur
+.endobj __vt__10CIBLTabCur
 
 .obj CIBLTabCur_hierarchy, global
-	.4byte __RTTI__CBaseCur
+	.4byte __RTTI__8CBaseCur
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -8994,15 +8994,15 @@
 
 .balign 8
 
-.obj __RTTI__CItemBoxLine, global
+.obj __RTTI__12CItemBoxLine, global
 	.4byte CItemBoxLine_typestr
 	.4byte CItemBoxLine_hierarchy
-.endobj __RTTI__CItemBoxLine
+.endobj __RTTI__12CItemBoxLine
 
-.obj __RTTI__CIBLTabCur, global
+.obj __RTTI__10CIBLTabCur, global
 	.4byte CIBLTabCur_typestr
 	.4byte CIBLTabCur_hierarchy
-.endobj __RTTI__CIBLTabCur
+.endobj __RTTI__10CIBLTabCur
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

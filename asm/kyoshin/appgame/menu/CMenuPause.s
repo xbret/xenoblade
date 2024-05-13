@@ -450,14 +450,14 @@
 /* 8025245C 0021BA1C  7C 7E 1B 78 */	mr r30, r3
 /* 80252460 0021BA20  41 82 00 8C */	beq .L_802524EC
 /* 80252464 0021BA24  48 1F 25 B5 */	bl __ct__8CProcessFv
-/* 80252468 0021BA28  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
+/* 80252468 0021BA28  3C 60 80 53 */	lis r3, "__vt__14CTTask<5IUICf>"@ha
 /* 8025246C 0021BA2C  3D 00 80 51 */	lis r8, __ptmf_null@ha
-/* 80252470 0021BA30  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
+/* 80252470 0021BA30  38 63 F7 40 */	addi r3, r3, "__vt__14CTTask<5IUICf>"@l
 /* 80252474 0021BA34  90 7E 00 10 */	stw r3, 0x10(r30)
 /* 80252478 0021BA38  39 08 CE 10 */	addi r8, r8, __ptmf_null@l
-/* 8025247C 0021BA3C  3C A0 80 54 */	lis r5, __vt__CMenuPause@ha
+/* 8025247C 0021BA3C  3C A0 80 54 */	lis r5, __vt__10CMenuPause@ha
 /* 80252480 0021BA40  80 C8 00 04 */	lwz r6, 4(r8)
-/* 80252484 0021BA44  38 A5 A9 58 */	addi r5, r5, __vt__CMenuPause@l
+/* 80252484 0021BA44  38 A5 A9 58 */	addi r5, r5, __vt__10CMenuPause@l
 /* 80252488 0021BA48  80 08 00 00 */	lwz r0, 0(r8)
 /* 8025248C 0021BA4C  3B E0 00 00 */	li r31, 0
 /* 80252490 0021BA50  90 1E 00 3C */	stw r0, 0x3c(r30)
@@ -628,8 +628,8 @@
 
 .balign 8
 
-.obj __vt__CMenuPause, global
-	.4byte __RTTI__CMenuPause
+.obj __vt__10CMenuPause, global
+	.4byte __RTTI__10CMenuPause
 	.4byte 0
 	.4byte __dt__CMenuPause
 	.4byte CChildListNode_Reset
@@ -638,7 +638,7 @@
 	.4byte func_8025228C
 	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuPause
+	.4byte __RTTI__10CMenuPause
 	.4byte 0xFFFFFFA8
 	.4byte func_80252628
 	.4byte IWorkEvent_WorkEvent1
@@ -672,27 +672,27 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CMenuPause
+	.4byte __RTTI__10CMenuPause
 	.4byte 0xFFFFFFA4
 	.4byte func_80252638
 	.4byte func_80252630
 	.4byte func_80252374
-.endobj __vt__CMenuPause
+.endobj __vt__10CMenuPause
 
 .obj CMenuPause_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x0000005C
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x00000058
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUICf
+	.4byte "__RTTI__14CTTask<5IUICf>"
 	.4byte 0
-	.4byte __RTTI__IUICf
+	.4byte __RTTI__5IUICf
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -702,10 +702,10 @@
 
 .balign 8
 
-.obj __RTTI__CMenuPause, global
+.obj __RTTI__10CMenuPause, global
 	.4byte CMenuPause_typestr
 	.4byte CMenuPause_hierarchy
-.endobj __RTTI__CMenuPause
+.endobj __RTTI__10CMenuPause
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

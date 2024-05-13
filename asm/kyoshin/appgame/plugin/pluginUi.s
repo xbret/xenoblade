@@ -48,8 +48,8 @@
 /* 80045920 0000EEE0  38 60 00 00 */	li r3, 0
 /* 80045924 0000EEE4  48 03 D4 31 */	bl func_80082D54
 /* 80045928 0000EEE8  38 80 00 00 */	li r4, 0
-/* 8004592C 0000EEEC  38 AD 81 20 */	addi r5, r13, __RTTI__cf_CfObjectPc@sda21
-/* 80045930 0000EEF0  38 CD 80 58 */	addi r6, r13, __RTTI__cf_CfObjectMove@sda21
+/* 8004592C 0000EEEC  38 AD 81 20 */	addi r5, r13, __RTTI__Q22cf10CfObjectPc@sda21
+/* 80045930 0000EEF0  38 CD 80 58 */	addi r6, r13, __RTTI__Q22cf12CfObjectMove@sda21
 /* 80045934 0000EEF4  38 E0 00 00 */	li r7, 0
 /* 80045938 0000EEF8  48 27 44 4D */	bl __dynamic_cast
 /* 8004593C 0000EEFC  38 1F FF F8 */	addi r0, r31, -8
@@ -83,8 +83,8 @@
 /* 8004599C 0000EF5C  38 60 00 00 */	li r3, 0
 /* 800459A0 0000EF60  48 03 D3 B5 */	bl func_80082D54
 /* 800459A4 0000EF64  38 80 00 00 */	li r4, 0
-/* 800459A8 0000EF68  38 AD 81 20 */	addi r5, r13, __RTTI__cf_CfObjectPc@sda21
-/* 800459AC 0000EF6C  38 CD 80 58 */	addi r6, r13, __RTTI__cf_CfObjectMove@sda21
+/* 800459A8 0000EF68  38 AD 81 20 */	addi r5, r13, __RTTI__Q22cf10CfObjectPc@sda21
+/* 800459AC 0000EF6C  38 CD 80 58 */	addi r6, r13, __RTTI__Q22cf12CfObjectMove@sda21
 /* 800459B0 0000EF70  38 E0 00 00 */	li r7, 0
 /* 800459B4 0000EF74  48 27 43 D1 */	bl __dynamic_cast
 /* 800459B8 0000EF78  80 63 3E D4 */	lwz r3, 0x3ed4(r3)
@@ -491,8 +491,8 @@
 /* 80045F1C 0000F4DC  48 0B 0F A5 */	bl func_800F6EC0
 /* 80045F20 0000F4E0  80 63 00 04 */	lwz r3, 4(r3)
 /* 80045F24 0000F4E4  38 80 00 00 */	li r4, 0
-/* 80045F28 0000F4E8  38 AD 80 58 */	addi r5, r13, __RTTI__cf_CfObjectMove@sda21
-/* 80045F2C 0000F4EC  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
+/* 80045F28 0000F4E8  38 AD 80 58 */	addi r5, r13, __RTTI__Q22cf12CfObjectMove@sda21
+/* 80045F2C 0000F4EC  38 CD 80 70 */	addi r6, r13, __RTTI__Q22cf8CfObject@sda21
 /* 80045F30 0000F4F0  38 E0 00 00 */	li r7, 0
 /* 80045F34 0000F4F4  48 27 3E 51 */	bl __dynamic_cast
 /* 80045F38 0000F4F8  7C 64 1B 78 */	mr r4, r3
@@ -522,8 +522,8 @@
 /* 80045F90 0000F550  48 0B 0F 31 */	bl func_800F6EC0
 /* 80045F94 0000F554  80 63 00 04 */	lwz r3, 4(r3)
 /* 80045F98 0000F558  38 80 00 00 */	li r4, 0
-/* 80045F9C 0000F55C  38 AD 80 58 */	addi r5, r13, __RTTI__cf_CfObjectMove@sda21
-/* 80045FA0 0000F560  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
+/* 80045F9C 0000F55C  38 AD 80 58 */	addi r5, r13, __RTTI__Q22cf12CfObjectMove@sda21
+/* 80045FA0 0000F560  38 CD 80 70 */	addi r6, r13, __RTTI__Q22cf8CfObject@sda21
 /* 80045FA4 0000F564  38 E0 00 00 */	li r7, 0
 /* 80045FA8 0000F568  48 27 3D DD */	bl __dynamic_cast
 /* 80045FAC 0000F56C  7C 64 1B 78 */	mr r4, r3
@@ -1461,27 +1461,27 @@
 .endobj lbl_805295C0
 
 .obj cf_CfObjectPc_hierarchy, global
-	.4byte __RTTI__cf_CObjectState
+	.4byte __RTTI__Q22cf12CObjectState
 	.4byte 0x00003E9C
-	.4byte __RTTI__cf_CObjectParam
+	.4byte __RTTI__Q22cf12CObjectParam
 	.4byte 0x00003E9C
-	.4byte __RTTI__cf_CfObject
+	.4byte __RTTI__Q22cf8CfObject
 	.4byte 0x00003E9C
-	.4byte __RTTI__cf_CfObjectModel
+	.4byte __RTTI__Q22cf13CfObjectModel
 	.4byte 0x00003E9C
-	.4byte __RTTI__cf_CfObjectMove
+	.4byte __RTTI__Q22cf12CfObjectMove
 	.4byte 0x00003E9C
-	.4byte __RTTI__cf_CAIAction
+	.4byte __RTTI__Q22cf9CAIAction
 	.4byte 0x00003380
-	.4byte __RTTI__cf_CDebugState
+	.4byte __RTTI__Q22cf11CDebugState
 	.4byte 0x000015DC
-	.4byte __RTTI__cf_CBattleState
+	.4byte __RTTI__Q22cf12CBattleState
 	.4byte 0x00000008
-	.4byte __RTTI__cf_CActorState
+	.4byte __RTTI__Q22cf11CActorState
 	.4byte 0
-	.4byte __RTTI__cf_CActorParam
+	.4byte __RTTI__Q22cf11CActorParam
 	.4byte 0
-	.4byte __RTTI__cf_CfObjectActor
+	.4byte __RTTI__Q22cf13CfObjectActor
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1491,10 +1491,10 @@
 
 .balign 8
 
-.obj __RTTI__cf_CfObjectPc, global
+.obj __RTTI__Q22cf10CfObjectPc, global
 	.4byte cf_CfObjectPc_typestr
 	.4byte cf_CfObjectPc_hierarchy
-.endobj __RTTI__cf_CfObjectPc
+.endobj __RTTI__Q22cf10CfObjectPc
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

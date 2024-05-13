@@ -3,9 +3,9 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .fn __ct__cf_CPcEffect07, global
-/* 801B18D0 0017AE90  3C E0 80 53 */	lis r7, __vt__cf_CPcEffect07@ha
+/* 801B18D0 0017AE90  3C E0 80 53 */	lis r7, __vt__Q22cf11CPcEffect07@ha
 /* 801B18D4 0017AE94  39 03 00 28 */	addi r8, r3, 0x28
-/* 801B18D8 0017AE98  38 E7 6E FC */	addi r7, r7, __vt__cf_CPcEffect07@l
+/* 801B18D8 0017AE98  38 E7 6E FC */	addi r7, r7, __vt__Q22cf11CPcEffect07@l
 /* 801B18DC 0017AE9C  38 A3 00 58 */	addi r5, r3, 0x58
 /* 801B18E0 0017AEA0  38 C0 00 00 */	li r6, 0
 /* 801B18E4 0017AEA4  90 E3 00 00 */	stw r7, 0(r3)
@@ -58,8 +58,8 @@
 /* 801B198C 0017AF4C  93 C1 00 08 */	stw r30, 8(r1)
 /* 801B1990 0017AF50  7C 7E 1B 78 */	mr r30, r3
 /* 801B1994 0017AF54  41 82 00 40 */	beq .L_801B19D4
-/* 801B1998 0017AF58  3C 80 80 53 */	lis r4, __vt__cf_CPcEffect07@ha
-/* 801B199C 0017AF5C  38 84 6E FC */	addi r4, r4, __vt__cf_CPcEffect07@l
+/* 801B1998 0017AF58  3C 80 80 53 */	lis r4, __vt__Q22cf11CPcEffect07@ha
+/* 801B199C 0017AF5C  38 84 6E FC */	addi r4, r4, __vt__Q22cf11CPcEffect07@l
 /* 801B19A0 0017AF60  90 83 00 00 */	stw r4, 0(r3)
 /* 801B19A4 0017AF64  38 04 00 10 */	addi r0, r4, 0x10
 /* 801B19A8 0017AF68  90 03 00 04 */	stw r0, 4(r3)
@@ -991,12 +991,12 @@
 .endobj lbl_80536EF0
 
 
-.obj __vt__cf_CPcEffect07, global
-	.4byte __RTTI__cf_CPcEffect07
+.obj __vt__Q22cf11CPcEffect07, global
+	.4byte __RTTI__Q22cf11CPcEffect07
 	.4byte 0
 	.4byte __dt__cf_CPcEffect07
 	.4byte func_801B218C
-	.4byte __RTTI__cf_CPcEffect07
+	.4byte __RTTI__Q22cf11CPcEffect07
 	.4byte 0xFFFFFFFC
 	.4byte func_801B255C
 	.4byte func_801B2554
@@ -1005,10 +1005,10 @@
 	.4byte func_801B20C8
 	.4byte func_801B21E0
 	.4byte func_801B2318
-.endobj __vt__cf_CPcEffect07
+.endobj __vt__Q22cf11CPcEffect07
 
 .obj cf_CPcEffect07_hierarchy, global
-	.4byte __RTTI__cf_IPcEffect
+	.4byte __RTTI__Q22cf9IPcEffect
 	.4byte 0x00000004
 	.4byte 0
 	.4byte 0
@@ -1018,15 +1018,15 @@
 
 .balign 8
 
-.obj __RTTI__cf_CPcEffect07, global
+.obj __RTTI__Q22cf11CPcEffect07, global
 	.4byte cf_CPcEffect07_typestr
 	.4byte cf_CPcEffect07_hierarchy
-.endobj __RTTI__cf_CPcEffect07
+.endobj __RTTI__Q22cf11CPcEffect07
 
-.obj __RTTI__cf_IPcEffect, global
+.obj __RTTI__Q22cf9IPcEffect, global
 	.4byte cf_IPcEffect_typestr
 	.4byte 0
-.endobj __RTTI__cf_IPcEffect
+.endobj __RTTI__Q22cf9IPcEffect
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

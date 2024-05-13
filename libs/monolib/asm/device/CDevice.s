@@ -24,8 +24,8 @@
 /* 8044D868 00416E28  7F A5 EB 78 */	mr r5, r29
 /* 8044D86C 00416E2C  38 C0 00 40 */	li r6, 0x40
 /* 8044D870 00416E30  4B FE 9D 4D */	bl __ct__CWorkThread
-/* 8044D874 00416E34  3C 60 80 57 */	lis r3, __vt___unnamed_CDevice_cpp_CDeviceException@ha
-/* 8044D878 00416E38  38 63 F8 40 */	addi r3, r3, __vt___unnamed_CDevice_cpp_CDeviceException@l
+/* 8044D874 00416E34  3C 60 80 57 */	lis r3, "__vt__Q221@unnamed@CDevice_cpp@16CDeviceException"@ha
+/* 8044D878 00416E38  38 63 F8 40 */	addi r3, r3, "__vt__Q221@unnamed@CDevice_cpp@16CDeviceException"@l
 /* 8044D87C 00416E3C  90 7E 00 00 */	stw r3, 0(r30)
 /* 8044D880 00416E40  93 CD BD B4 */	stw r30, lbl_80667F34@sda21(r13)
 .L_8044D884:
@@ -100,9 +100,9 @@
 /* 8044D974 00416F34  7F C5 F3 78 */	mr r5, r30
 /* 8044D978 00416F38  38 C0 00 20 */	li r6, 0x20
 /* 8044D97C 00416F3C  4B FE 9C 41 */	bl __ct__CWorkThread
-/* 8044D980 00416F40  3C 60 80 57 */	lis r3, __vt__CDevice@ha
+/* 8044D980 00416F40  3C 60 80 57 */	lis r3, __vt__7CDevice@ha
 /* 8044D984 00416F44  38 00 00 0A */	li r0, 0xa
-/* 8044D988 00416F48  38 63 F8 F8 */	addi r3, r3, __vt__CDevice@l
+/* 8044D988 00416F48  38 63 F8 F8 */	addi r3, r3, __vt__7CDevice@l
 /* 8044D98C 00416F4C  90 7D 00 00 */	stw r3, 0(r29)
 /* 8044D990 00416F50  93 AD BD B0 */	stw r29, lbl_80667F30@sda21(r13)
 /* 8044D994 00416F54  90 1D 00 50 */	stw r0, 0x50(r29)
@@ -272,8 +272,8 @@
 
 .balign 8
 
-.obj __vt___unnamed_CDevice_cpp_CDeviceException, global
-	.4byte __RTTI___unnamed_CDevice_cpp_CDeviceException
+.obj "__vt__Q221@unnamed@CDevice_cpp@16CDeviceException", global
+	.4byte "__RTTI__Q221@unnamed@CDevice_cpp@16CDeviceException"
 	.4byte 0
 	.4byte __dt___unnamed_CDevice_cpp_CDeviceException
 	.4byte IWorkEvent_WorkEvent1
@@ -313,20 +313,20 @@
 	.4byte CWorkThread_WorkThreadEvent4
 	.4byte CDeviceException_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-.endobj __vt___unnamed_CDevice_cpp_CDeviceException
+.endobj "__vt__Q221@unnamed@CDevice_cpp@16CDeviceException"
 
 .obj _unnamed_CDevice_cpp_CDeviceException_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj _unnamed_CDevice_cpp_CDeviceException_hierarchy
 
 
-.obj __vt__CDevice, global
-	.4byte __RTTI__CDevice
+.obj __vt__7CDevice, global
+	.4byte __RTTI__7CDevice
 	.4byte 0
 	.4byte __dt__CDevice
 	.4byte IWorkEvent_WorkEvent1
@@ -366,12 +366,12 @@
 	.4byte CDevice_WorkThreadEvent4
 	.4byte CDevice_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-.endobj __vt__CDevice
+.endobj __vt__7CDevice
 
 .obj CDevice_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -401,15 +401,15 @@
 	.4byte 0xFFFFFFFF
 .endobj lbl_80665FA4
 
-.obj __RTTI___unnamed_CDevice_cpp_CDeviceException, global
+.obj "__RTTI__Q221@unnamed@CDevice_cpp@16CDeviceException", global
 	.4byte _unnamed_CDevice_cpp_CDeviceException_typestr
 	.4byte _unnamed_CDevice_cpp_CDeviceException_hierarchy
-.endobj __RTTI___unnamed_CDevice_cpp_CDeviceException
+.endobj "__RTTI__Q221@unnamed@CDevice_cpp@16CDeviceException"
 
-.obj __RTTI__CDevice, global
+.obj __RTTI__7CDevice, global
 	.4byte CDevice_typestr
 	.4byte CDevice_hierarchy
-.endobj __RTTI__CDevice
+.endobj __RTTI__7CDevice
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

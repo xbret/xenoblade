@@ -12,12 +12,12 @@
 /* 80186F18 001504D8  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80186F1C 001504DC  7C 7D 1B 78 */	mr r29, r3
 /* 80186F20 001504E0  48 2B DA F9 */	bl __ct__8CProcessFv
-/* 80186F24 001504E4  3C 60 80 53 */	lis r3, __vt__CTTask_IUIBattle@ha
-/* 80186F28 001504E8  3C A0 80 53 */	lis r5, __vt__CMenuPTGauge@ha
-/* 80186F2C 001504EC  38 63 F9 90 */	addi r3, r3, __vt__CTTask_IUIBattle@l
+/* 80186F24 001504E4  3C 60 80 53 */	lis r3, "__vt__18CTTask<9IUIBattle>"@ha
+/* 80186F28 001504E8  3C A0 80 53 */	lis r5, __vt__12CMenuPTGauge@ha
+/* 80186F2C 001504EC  38 63 F9 90 */	addi r3, r3, "__vt__18CTTask<9IUIBattle>"@l
 /* 80186F30 001504F0  90 7D 00 10 */	stw r3, 0x10(r29)
 /* 80186F34 001504F4  3D 00 80 51 */	lis r8, __ptmf_null@ha
-/* 80186F38 001504F8  38 A5 5C 20 */	addi r5, r5, __vt__CMenuPTGauge@l
+/* 80186F38 001504F8  38 A5 5C 20 */	addi r5, r5, __vt__12CMenuPTGauge@l
 /* 80186F3C 001504FC  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 80186F40 00150500  38 85 00 24 */	addi r4, r5, 0x24
 /* 80186F44 00150504  3B E0 00 00 */	li r31, 0
@@ -1187,8 +1187,8 @@
 .endobj lbl_80535BF0
 
 
-.obj __vt__CMenuPTGauge, global
-	.4byte __RTTI__CMenuPTGauge
+.obj __vt__12CMenuPTGauge, global
+	.4byte __RTTI__12CMenuPTGauge
 	.4byte 0
 	.4byte __dt__CMenuPTGauge
 	.4byte CChildListNode_Reset
@@ -1197,7 +1197,7 @@
 	.4byte func_8018728C
 	.4byte func_80108BE8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuPTGauge
+	.4byte __RTTI__12CMenuPTGauge
 	.4byte 0xFFFFFFA8
 	.4byte func_80187EFC
 	.4byte IWorkEvent_WorkEvent1
@@ -1231,27 +1231,27 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CMenuPTGauge
+	.4byte __RTTI__12CMenuPTGauge
 	.4byte 0xFFFFFFA4
 	.4byte func_80187F0C
 	.4byte func_80187F04
 	.4byte func_801875E8
-.endobj __vt__CMenuPTGauge
+.endobj __vt__12CMenuPTGauge
 
 .obj CMenuPTGauge_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x0000005C
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x00000058
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUIBattle
+	.4byte "__RTTI__18CTTask<9IUIBattle>"
 	.4byte 0
-	.4byte __RTTI__IUIBattle
+	.4byte __RTTI__9IUIBattle
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1261,10 +1261,10 @@
 
 .balign 8
 
-.obj __RTTI__CMenuPTGauge, global
+.obj __RTTI__12CMenuPTGauge, global
 	.4byte CMenuPTGauge_typestr
 	.4byte CMenuPTGauge_hierarchy
-.endobj __RTTI__CMenuPTGauge
+.endobj __RTTI__12CMenuPTGauge
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

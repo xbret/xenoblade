@@ -5496,8 +5496,8 @@
 /* 80079E68 00043428  7C 7C 1B 78 */	mr r28, r3
 /* 80079E6C 0004342C  48 00 83 8D */	bl func_800821F8
 /* 80079E70 00043430  38 80 00 00 */	li r4, 0
-/* 80079E74 00043434  38 AD 82 78 */	addi r5, r13, __RTTI__cf_CfCamEvent@sda21
-/* 80079E78 00043438  38 CD 82 A8 */	addi r6, r13, __RTTI__cf_CfCam@sda21
+/* 80079E74 00043434  38 AD 82 78 */	addi r5, r13, __RTTI__Q22cf10CfCamEvent@sda21
+/* 80079E78 00043438  38 CD 82 A8 */	addi r6, r13, __RTTI__Q22cf5CfCam@sda21
 /* 80079E7C 0004343C  38 E0 00 00 */	li r7, 0
 /* 80079E80 00043440  48 23 FF 05 */	bl __dynamic_cast
 /* 80079E84 00043444  2C 03 00 00 */	cmpwi r3, 0
@@ -6593,8 +6593,8 @@
 .L_8007AF30:
 /* 8007AF30 000444F0  48 00 72 C9 */	bl func_800821F8
 /* 8007AF34 000444F4  38 80 00 00 */	li r4, 0
-/* 8007AF38 000444F8  38 AD 82 78 */	addi r5, r13, __RTTI__cf_CfCamEvent@sda21
-/* 8007AF3C 000444FC  38 CD 82 A8 */	addi r6, r13, __RTTI__cf_CfCam@sda21
+/* 8007AF38 000444F8  38 AD 82 78 */	addi r5, r13, __RTTI__Q22cf10CfCamEvent@sda21
+/* 8007AF3C 000444FC  38 CD 82 A8 */	addi r6, r13, __RTTI__Q22cf5CfCam@sda21
 /* 8007AF40 00044500  38 E0 00 00 */	li r7, 0
 /* 8007AF44 00044504  48 23 EE 41 */	bl __dynamic_cast
 /* 8007AF48 00044508  81 83 00 00 */	lwz r12, 0(r3)
@@ -6917,8 +6917,8 @@
 /* 8007B3CC 0004498C  54 18 0F FE */	srwi r24, r0, 0x1f
 /* 8007B3D0 00044990  48 00 6E 29 */	bl func_800821F8
 /* 8007B3D4 00044994  38 80 00 00 */	li r4, 0
-/* 8007B3D8 00044998  38 AD 82 78 */	addi r5, r13, __RTTI__cf_CfCamEvent@sda21
-/* 8007B3DC 0004499C  38 CD 82 A8 */	addi r6, r13, __RTTI__cf_CfCam@sda21
+/* 8007B3D8 00044998  38 AD 82 78 */	addi r5, r13, __RTTI__Q22cf10CfCamEvent@sda21
+/* 8007B3DC 0004499C  38 CD 82 A8 */	addi r6, r13, __RTTI__Q22cf5CfCam@sda21
 /* 8007B3E0 000449A0  38 E0 00 00 */	li r7, 0
 /* 8007B3E4 000449A4  48 23 E9 A1 */	bl __dynamic_cast
 /* 8007B3E8 000449A8  2C 03 00 00 */	cmpwi r3, 0

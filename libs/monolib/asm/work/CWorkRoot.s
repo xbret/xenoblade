@@ -24,9 +24,9 @@
 /* 80443B50 0040D110  38 A0 00 00 */	li r5, 0
 /* 80443B54 0040D114  38 C0 00 20 */	li r6, 0x20
 /* 80443B58 0040D118  4B FF 3A 65 */	bl __ct__CWorkThread
-/* 80443B5C 0040D11C  3C 80 80 57 */	lis r4, __vt___unnamed_CWorkRoot_cpp_CWorkRootThread@ha
+/* 80443B5C 0040D11C  3C 80 80 57 */	lis r4, "__vt__Q223@unnamed@CWorkRoot_cpp@15CWorkRootThread"@ha
 /* 80443B60 0040D120  38 7E 01 C4 */	addi r3, r30, 0x1c4
-/* 80443B64 0040D124  38 84 F1 B0 */	addi r4, r4, __vt___unnamed_CWorkRoot_cpp_CWorkRootThread@l
+/* 80443B64 0040D124  38 84 F1 B0 */	addi r4, r4, "__vt__Q223@unnamed@CWorkRoot_cpp@15CWorkRootThread"@l
 /* 80443B68 0040D128  90 9E 00 00 */	stw r4, 0(r30)
 /* 80443B6C 0040D12C  48 00 00 55 */	bl __ct__reslist_CWorkThread
 /* 80443B70 0040D130  38 7E 01 E4 */	addi r3, r30, 0x1e4
@@ -53,14 +53,14 @@
 .endfn __ct__CWorkRootThread
 
 .fn __ct__reslist_CWorkThread, global
-/* 80443BC0 0040D180  3C 80 80 57 */	lis r4, __vt___reslist_base_CWorkThread@ha
+/* 80443BC0 0040D180  3C 80 80 57 */	lis r4, "__vt__29_reslist_base<P11CWorkThread>"@ha
 /* 80443BC4 0040D184  38 00 00 00 */	li r0, 0
-/* 80443BC8 0040D188  38 84 EA 4C */	addi r4, r4, __vt___reslist_base_CWorkThread@l
+/* 80443BC8 0040D188  38 84 EA 4C */	addi r4, r4, "__vt__29_reslist_base<P11CWorkThread>"@l
 /* 80443BCC 0040D18C  90 83 00 00 */	stw r4, 0(r3)
 /* 80443BD0 0040D190  38 A3 00 08 */	addi r5, r3, 8
 /* 80443BD4 0040D194  90 03 00 14 */	stw r0, 0x14(r3)
-/* 80443BD8 0040D198  3C 80 80 57 */	lis r4, __vt__reslist_CWorkThread@ha
-/* 80443BDC 0040D19C  38 84 EA 34 */	addi r4, r4, __vt__reslist_CWorkThread@l
+/* 80443BD8 0040D198  3C 80 80 57 */	lis r4, "__vt__23reslist<P11CWorkThread>"@ha
+/* 80443BDC 0040D19C  38 84 EA 34 */	addi r4, r4, "__vt__23reslist<P11CWorkThread>"@l
 /* 80443BE0 0040D1A0  90 03 00 18 */	stw r0, 0x18(r3)
 /* 80443BE4 0040D1A4  98 03 00 1C */	stb r0, 0x1c(r3)
 /* 80443BE8 0040D1A8  90 A3 00 04 */	stw r5, 4(r3)
@@ -739,8 +739,8 @@
 
 .balign 8
 
-.obj __vt___unnamed_CWorkRoot_cpp_CWorkRootThread, global
-	.4byte __RTTI___unnamed_CWorkRoot_cpp_CWorkRootThread
+.obj "__vt__Q223@unnamed@CWorkRoot_cpp@15CWorkRootThread", global
+	.4byte "__RTTI__Q223@unnamed@CWorkRoot_cpp@15CWorkRootThread"
 	.4byte 0
 	.4byte __dt___unnamed_CWorkRoot_cpp_CWorkRootThread
 	.4byte IWorkEvent_WorkEvent1
@@ -780,12 +780,12 @@
 	.4byte CWorkThread_WorkThreadEvent4
 	.4byte CWorkRootThread_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-.endobj __vt___unnamed_CWorkRoot_cpp_CWorkRootThread
+.endobj "__vt__Q223@unnamed@CWorkRoot_cpp@15CWorkRootThread"
 
 .obj _unnamed_CWorkRoot_cpp_CWorkRootThread_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -795,10 +795,10 @@
 
 .balign 8
 
-.obj __RTTI___unnamed_CWorkRoot_cpp_CWorkRootThread, global
+.obj "__RTTI__Q223@unnamed@CWorkRoot_cpp@15CWorkRootThread", global
 	.4byte _unnamed_CWorkRoot_cpp_CWorkRootThread_typestr
 	.4byte _unnamed_CWorkRoot_cpp_CWorkRootThread_hierarchy
-.endobj __RTTI___unnamed_CWorkRoot_cpp_CWorkRootThread
+.endobj "__RTTI__Q223@unnamed@CWorkRoot_cpp@15CWorkRootThread"
 
 .section .bss, "wa"  # 0x80573C80 - 0x8066417B
 

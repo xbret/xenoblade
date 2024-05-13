@@ -11,9 +11,9 @@
 /* 801809CC 00149F8C  7C 7F 1B 78 */	mr r31, r3
 /* 801809D0 00149F90  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 801809D4 00149F94  4B FF 1C 11 */	bl __ct__CREvtModel
-/* 801809D8 00149F98  3C 60 80 53 */	lis r3, __vt__cf_CREvtModelMap@ha
+/* 801809D8 00149F98  3C 60 80 53 */	lis r3, __vt__Q22cf13CREvtModelMap@ha
 /* 801809DC 00149F9C  38 C0 00 00 */	li r6, 0
-/* 801809E0 00149FA0  38 63 55 50 */	addi r3, r3, __vt__cf_CREvtModelMap@l
+/* 801809E0 00149FA0  38 63 55 50 */	addi r3, r3, __vt__Q22cf13CREvtModelMap@l
 /* 801809E4 00149FA4  3B C0 00 01 */	li r30, 1
 /* 801809E8 00149FA8  38 E3 00 44 */	addi r7, r3, 0x44
 /* 801809EC 00149FAC  38 00 FF FF */	li r0, -1
@@ -102,8 +102,8 @@
 /* 80180B24 0014A0E4  7C 7C 1B 78 */	mr r28, r3
 /* 80180B28 0014A0E8  41 82 01 14 */	beq .L_80180C3C
 /* 80180B2C 0014A0EC  88 03 00 3D */	lbz r0, 0x3d(r3)
-/* 80180B30 0014A0F0  3C 80 80 53 */	lis r4, __vt__cf_CREvtModelMap@ha
-/* 80180B34 0014A0F4  38 84 55 50 */	addi r4, r4, __vt__cf_CREvtModelMap@l
+/* 80180B30 0014A0F0  3C 80 80 53 */	lis r4, __vt__Q22cf13CREvtModelMap@ha
+/* 80180B34 0014A0F4  38 84 55 50 */	addi r4, r4, __vt__Q22cf13CREvtModelMap@l
 /* 80180B38 0014A0F8  90 83 00 00 */	stw r4, 0(r3)
 /* 80180B3C 0014A0FC  2C 00 00 00 */	cmpwi r0, 0
 /* 80180B40 0014A100  38 04 00 44 */	addi r0, r4, 0x44
@@ -1262,8 +1262,8 @@
 .endobj lbl_80535544
 
 
-.obj __vt__cf_CREvtModelMap, global
-	.4byte __RTTI__cf_CREvtModelMap
+.obj __vt__Q22cf13CREvtModelMap, global
+	.4byte __RTTI__Q22cf13CREvtModelMap
 	.4byte 0
 	.4byte __ct__80180B00
 	.4byte func_801728F8
@@ -1280,7 +1280,7 @@
 	.4byte func_801815AC
 	.4byte func_80180CBC
 	.4byte func_80172768
-	.4byte __RTTI__cf_CREvtModelMap
+	.4byte __RTTI__Q22cf13CREvtModelMap
 	.4byte 0xFFFFFFC8
 	.4byte func_80181A54
 	.4byte IWorkEvent_WorkEvent1
@@ -1315,15 +1315,15 @@
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
 	.4byte func_80181988
-.endobj __vt__cf_CREvtModelMap
+.endobj __vt__Q22cf13CREvtModelMap
 
 .obj cf_CREvtModelMap_hierarchy, global
-	.4byte __RTTI__cf_CREvtObj
+	.4byte __RTTI__Q22cf8CREvtObj
 	.4byte 0
-	.4byte __RTTI__cf_CREvtModel
+	.4byte __RTTI__Q22cf10CREvtModel
 	.4byte 0
 	.4byte 0
-	.4byte __RTTI__cf_CREvtObj
+	.4byte __RTTI__Q22cf8CREvtObj
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1366,10 +1366,10 @@
 
 .balign 8
 
-.obj __RTTI__cf_CREvtModelMap, global
+.obj __RTTI__Q22cf13CREvtModelMap, global
 	.4byte cf_CREvtModelMap_typestr
 	.4byte cf_CREvtModelMap_hierarchy
-.endobj __RTTI__cf_CREvtModelMap
+.endobj __RTTI__Q22cf13CREvtModelMap
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

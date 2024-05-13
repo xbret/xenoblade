@@ -5,10 +5,10 @@
 .fn __ct__cf_CfMapEffectManager, global
 /* 8016ED50 00138310  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8016ED54 00138314  7C 08 02 A6 */	mflr r0
-/* 8016ED58 00138318  3C 80 80 53 */	lis r4, __vt__cf_CfMapEffectManager@ha
+/* 8016ED58 00138318  3C 80 80 53 */	lis r4, __vt__Q22cf18CfMapEffectManager@ha
 /* 8016ED5C 0013831C  38 A0 00 90 */	li r5, 0x90
 /* 8016ED60 00138320  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8016ED64 00138324  38 84 48 50 */	addi r4, r4, __vt__cf_CfMapEffectManager@l
+/* 8016ED64 00138324  38 84 48 50 */	addi r4, r4, __vt__Q22cf18CfMapEffectManager@l
 /* 8016ED68 00138328  38 00 00 0F */	li r0, 0xf
 /* 8016ED6C 0013832C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8016ED70 00138330  3B E0 FF FF */	li r31, -1
@@ -58,8 +58,8 @@
 /* 8016EE14 001383D4  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8016EE18 001383D8  7C 7D 1B 78 */	mr r29, r3
 /* 8016EE1C 001383DC  41 82 00 74 */	beq .L_8016EE90
-/* 8016EE20 001383E0  3C 80 80 53 */	lis r4, __vt__cf_CfMapEffectManager@ha
-/* 8016EE24 001383E4  38 84 48 50 */	addi r4, r4, __vt__cf_CfMapEffectManager@l
+/* 8016EE20 001383E0  3C 80 80 53 */	lis r4, __vt__Q22cf18CfMapEffectManager@ha
+/* 8016EE24 001383E4  38 84 48 50 */	addi r4, r4, __vt__Q22cf18CfMapEffectManager@l
 /* 8016EE28 001383E8  90 83 00 00 */	stw r4, 0(r3)
 /* 8016EE2C 001383EC  48 00 01 01 */	bl func_8016EF2C
 /* 8016EE30 001383F0  80 7D 01 34 */	lwz r3, 0x134(r29)
@@ -1273,12 +1273,12 @@
 
 .balign 8
 
-.obj __vt__cf_CfMapEffectManager, global
-	.4byte __RTTI__cf_CfMapEffectManager
+.obj __vt__Q22cf18CfMapEffectManager, global
+	.4byte __RTTI__Q22cf18CfMapEffectManager
 	.4byte 0
 	.4byte __dt__cf_CfMapEffectManager
 	.4byte func_8016FC98
-.endobj __vt__cf_CfMapEffectManager
+.endobj __vt__Q22cf18CfMapEffectManager
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
@@ -1293,10 +1293,10 @@
 	.4byte lbl_80669FC8
 .endobj lbl_80664CE4
 
-.obj __RTTI__cf_CfMapEffectManager, global
+.obj __RTTI__Q22cf18CfMapEffectManager, global
 	.4byte cf_CfMapEffectManager_typestr
 	.4byte 0
-.endobj __RTTI__cf_CfMapEffectManager
+.endobj __RTTI__Q22cf18CfMapEffectManager
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

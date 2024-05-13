@@ -79,9 +79,9 @@
 .endfn func_802A0818
 
 .fn __ct__cf_CChainEffect, global
-/* 802A08D8 00269E98  3C 80 80 54 */	lis r4, __vt__cf_CChainEffect@ha
+/* 802A08D8 00269E98  3C 80 80 54 */	lis r4, __vt__Q22cf12CChainEffect@ha
 /* 802A08DC 00269E9C  38 00 00 00 */	li r0, 0
-/* 802A08E0 00269EA0  38 84 D0 20 */	addi r4, r4, __vt__cf_CChainEffect@l
+/* 802A08E0 00269EA0  38 84 D0 20 */	addi r4, r4, __vt__Q22cf12CChainEffect@l
 /* 802A08E4 00269EA4  90 83 00 00 */	stw r4, 0(r3)
 /* 802A08E8 00269EA8  90 03 00 04 */	stw r0, 4(r3)
 /* 802A08EC 00269EAC  90 03 00 08 */	stw r0, 8(r3)
@@ -258,15 +258,15 @@
 
 .balign 8
 
-.obj __vt__cf_CChainEffect, global
-	.4byte __RTTI__cf_CChainEffect
+.obj __vt__Q22cf12CChainEffect, global
+	.4byte __RTTI__Q22cf12CChainEffect
 	.4byte 0
 	.4byte __dt__cf_CChainEffect
 	.4byte func_802A0AE0
-.endobj __vt__cf_CChainEffect
+.endobj __vt__Q22cf12CChainEffect
 
 .obj cf_CChainEffect_hierarchy, global
-	.4byte __RTTI__cf_IObjectInfo
+	.4byte __RTTI__Q22cf11IObjectInfo
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -276,10 +276,10 @@
 
 .balign 8
 
-.obj __RTTI__cf_CChainEffect, global
+.obj __RTTI__Q22cf12CChainEffect, global
 	.4byte cf_CChainEffect_typestr
 	.4byte cf_CChainEffect_hierarchy
-.endobj __RTTI__cf_CChainEffect
+.endobj __RTTI__Q22cf12CChainEffect
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

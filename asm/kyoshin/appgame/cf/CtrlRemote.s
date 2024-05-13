@@ -9,9 +9,9 @@
 /* 80098BF0 000621B0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80098BF4 000621B4  7C 7F 1B 78 */	mr r31, r3
 /* 80098BF8 000621B8  4B FF E4 0D */	bl __ct__cf_CtrlPc
-/* 80098BFC 000621BC  3C 60 80 53 */	lis r3, __vt__cf_CtrlRemote@ha
+/* 80098BFC 000621BC  3C 60 80 53 */	lis r3, __vt__Q22cf10CtrlRemote@ha
 /* 80098C00 000621C0  38 00 00 00 */	li r0, 0
-/* 80098C04 000621C4  38 63 B7 58 */	addi r3, r3, __vt__cf_CtrlRemote@l
+/* 80098C04 000621C4  38 63 B7 58 */	addi r3, r3, __vt__Q22cf10CtrlRemote@l
 /* 80098C08 000621C8  90 7F 00 00 */	stw r3, 0(r31)
 /* 80098C0C 000621CC  C0 02 8C 38 */	lfs f0, float_80668FB8@sda21(r2)
 /* 80098C10 000621D0  38 60 00 0A */	li r3, 0xa
@@ -5192,8 +5192,8 @@
 
 .balign 8
 
-.obj __vt__cf_CtrlRemote, global
-	.4byte __RTTI__cf_CtrlRemote
+.obj __vt__Q22cf10CtrlRemote, global
+	.4byte __RTTI__Q22cf10CtrlRemote
 	.4byte 0
 	.4byte __dt__cf_CtrlRemote
 	.4byte func_80098CB8
@@ -5241,7 +5241,7 @@
 	.4byte func_8009BD14
 	.4byte func_8009C1BC
 	.4byte func_80096F30
-.endobj __vt__cf_CtrlRemote
+.endobj __vt__Q22cf10CtrlRemote
 
 
 .obj lbl_8052B818, global

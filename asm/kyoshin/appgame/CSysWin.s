@@ -5,9 +5,9 @@
 .fn __ct__CSysWin, global
 /* 8022B618 001F4BD8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8022B61C 001F4BDC  7C 08 02 A6 */	mflr r0
-/* 8022B620 001F4BE0  3C A0 80 54 */	lis r5, __vt__CSysWin@ha
+/* 8022B620 001F4BE0  3C A0 80 54 */	lis r5, __vt__7CSysWin@ha
 /* 8022B624 001F4BE4  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8022B628 001F4BE8  38 A5 9C C8 */	addi r5, r5, __vt__CSysWin@l
+/* 8022B628 001F4BE8  38 A5 9C C8 */	addi r5, r5, __vt__7CSysWin@l
 /* 8022B62C 001F4BEC  BF C1 00 08 */	stmw r30, 8(r1)
 /* 8022B630 001F4BF0  7C 7E 1B 78 */	mr r30, r3
 /* 8022B634 001F4BF4  7C 9F 23 78 */	mr r31, r4
@@ -1209,8 +1209,8 @@
 
 .balign 8
 
-.obj __vt__CSysWin, global
-	.4byte __RTTI__CSysWin
+.obj __vt__7CSysWin, global
+	.4byte __RTTI__7CSysWin
 	.4byte 0
 	.4byte __dt__CSysWin
 	.4byte IWorkEvent_WorkEvent1
@@ -1245,10 +1245,10 @@
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
 	.4byte func_8022B6F4
-.endobj __vt__CSysWin
+.endobj __vt__7CSysWin
 
 .obj CSysWin_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 .endobj CSysWin_hierarchy
@@ -1257,10 +1257,10 @@
 
 .balign 8
 
-.obj __RTTI__CSysWin, global
+.obj __RTTI__7CSysWin, global
 	.4byte CSysWin_typestr
 	.4byte CSysWin_hierarchy
-.endobj __RTTI__CSysWin
+.endobj __RTTI__7CSysWin
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

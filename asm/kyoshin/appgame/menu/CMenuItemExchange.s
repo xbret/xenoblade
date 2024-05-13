@@ -12,12 +12,12 @@
 /* 801BDDBC 0018737C  7C 9D 23 78 */	mr r29, r4
 /* 801BDDC0 00187380  7C BE 2B 78 */	mr r30, r5
 /* 801BDDC4 00187384  48 28 6C 55 */	bl __ct__8CProcessFv
-/* 801BDDC8 00187388  3C 60 80 53 */	lis r3, __vt__CTTask_IUIWindow@ha
-/* 801BDDCC 0018738C  3C A0 80 53 */	lis r5, __vt__CMenuItemExchange@ha
-/* 801BDDD0 00187390  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
+/* 801BDDC8 00187388  3C 60 80 53 */	lis r3, "__vt__18CTTask<9IUIWindow>"@ha
+/* 801BDDCC 0018738C  3C A0 80 53 */	lis r5, __vt__17CMenuItemExchange@ha
+/* 801BDDD0 00187390  38 63 0A 08 */	addi r3, r3, "__vt__18CTTask<9IUIWindow>"@l
 /* 801BDDD4 00187394  90 7C 00 10 */	stw r3, 0x10(r28)
 /* 801BDDD8 00187398  3D 40 80 51 */	lis r10, __ptmf_null@ha
-/* 801BDDDC 0018739C  38 A5 73 78 */	addi r5, r5, __vt__CMenuItemExchange@l
+/* 801BDDDC 0018739C  38 A5 73 78 */	addi r5, r5, __vt__17CMenuItemExchange@l
 /* 801BDDE0 001873A0  84 8A CE 10 */	lwzu r4, __ptmf_null@l(r10)
 /* 801BDDE4 001873A4  38 05 00 24 */	addi r0, r5, 0x24
 /* 801BDDE8 001873A8  3B E0 00 00 */	li r31, 0
@@ -1830,8 +1830,8 @@
 
 .balign 8
 
-.obj __vt__CMenuItemExchange, global
-	.4byte __RTTI__CMenuItemExchange
+.obj __vt__17CMenuItemExchange, global
+	.4byte __RTTI__17CMenuItemExchange
 	.4byte 0
 	.4byte __dt__CMenuItemExchange
 	.4byte CChildListNode_Reset
@@ -1840,25 +1840,25 @@
 	.4byte func_801BEC3C
 	.4byte func_80124584
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuItemExchange
+	.4byte __RTTI__17CMenuItemExchange
 	.4byte 0xFFFFFF94
 	.4byte func_801BF764
 	.4byte func_801BF75C
 	.4byte func_801BED30
-.endobj __vt__CMenuItemExchange
+.endobj __vt__17CMenuItemExchange
 
 .obj CMenuItemExchange_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x0000006C
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUIWindow
+	.4byte "__RTTI__18CTTask<9IUIWindow>"
 	.4byte 0
-	.4byte __RTTI__IUIWindow
+	.4byte __RTTI__9IUIWindow
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1868,10 +1868,10 @@
 
 .balign 8
 
-.obj __RTTI__CMenuItemExchange, global
+.obj __RTTI__17CMenuItemExchange, global
 	.4byte CMenuItemExchange_typestr
 	.4byte CMenuItemExchange_hierarchy
-.endobj __RTTI__CMenuItemExchange
+.endobj __RTTI__17CMenuItemExchange
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

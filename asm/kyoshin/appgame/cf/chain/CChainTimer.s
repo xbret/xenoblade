@@ -5,11 +5,11 @@
 .fn __ct__8027D0E8, global
 /* 8027D0E8 002466A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027D0EC 002466AC  7C 08 02 A6 */	mflr r0
-/* 8027D0F0 002466B0  3C 80 80 54 */	lis r4, __vt__cf_Flusher_cf_CfObjectActor@ha
-/* 8027D0F4 002466B4  3C C0 80 54 */	lis r6, __vt__cf_CChainTemp@ha
+/* 8027D0F0 002466B0  3C 80 80 54 */	lis r4, "__vt__Q22cf29Flusher<Q22cf13CfObjectActor>"@ha
+/* 8027D0F4 002466B4  3C C0 80 54 */	lis r6, __vt__Q22cf10CChainTemp@ha
 /* 8027D0F8 002466B8  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8027D0FC 002466BC  38 84 BB 00 */	addi r4, r4, __vt__cf_Flusher_cf_CfObjectActor@l
-/* 8027D100 002466C0  38 C6 BA F0 */	addi r6, r6, __vt__cf_CChainTemp@l
+/* 8027D0FC 002466BC  38 84 BB 00 */	addi r4, r4, "__vt__Q22cf29Flusher<Q22cf13CfObjectActor>"@l
+/* 8027D100 002466C0  38 C6 BA F0 */	addi r6, r6, __vt__Q22cf10CChainTemp@l
 /* 8027D104 002466C4  38 A0 00 60 */	li r5, 0x60
 /* 8027D108 002466C8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8027D10C 002466CC  3B E0 00 00 */	li r31, 0
@@ -24,9 +24,9 @@
 /* 8027D130 002466F0  9B FE 00 7C */	stb r31, 0x7c(r30)
 /* 8027D134 002466F4  38 7E 00 84 */	addi r3, r30, 0x84
 /* 8027D138 002466F8  4B FF FC 9D */	bl __ct__cf_CChainTime
-/* 8027D13C 002466FC  3C 60 80 54 */	lis r3, __vt__cf_CChainTimer@ha
+/* 8027D13C 002466FC  3C 60 80 54 */	lis r3, __vt__Q22cf11CChainTimer@ha
 /* 8027D140 00246700  2C 1F 00 00 */	cmpwi r31, 0
-/* 8027D144 00246704  38 63 BA 30 */	addi r3, r3, __vt__cf_CChainTimer@l
+/* 8027D144 00246704  38 63 BA 30 */	addi r3, r3, __vt__Q22cf11CChainTimer@l
 /* 8027D148 00246708  90 7E 00 A0 */	stw r3, 0xa0(r30)
 /* 8027D14C 0024670C  B3 FE 00 9C */	sth r31, 0x9c(r30)
 /* 8027D150 00246710  B3 FE 00 00 */	sth r31, 0(r30)

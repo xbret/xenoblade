@@ -10,9 +10,9 @@
 /* 80447B60 00411120  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80447B64 00411124  7C 7F 1B 78 */	mr r31, r3
 /* 80447B68 00411128  4B FE FA 55 */	bl __ct__CWorkThread
-/* 80447B6C 0041112C  3C 60 80 57 */	lis r3, __vt__CDeviceSC@ha
+/* 80447B6C 0041112C  3C 60 80 57 */	lis r3, __vt__9CDeviceSC@ha
 /* 80447B70 00411130  38 80 00 00 */	li r4, 0
-/* 80447B74 00411134  38 63 F5 B0 */	addi r3, r3, __vt__CDeviceSC@l
+/* 80447B74 00411134  38 63 F5 B0 */	addi r3, r3, __vt__9CDeviceSC@l
 /* 80447B78 00411138  38 00 00 01 */	li r0, 1
 /* 80447B7C 0041113C  90 9F 01 C4 */	stw r4, 0x1c4(r31)
 /* 80447B80 00411140  90 7F 00 00 */	stw r3, 0(r31)
@@ -218,8 +218,8 @@
 
 .balign 8
 
-.obj __vt__CDeviceSC, global
-	.4byte __RTTI__CDeviceSC
+.obj __vt__9CDeviceSC, global
+	.4byte __RTTI__9CDeviceSC
 	.4byte 0
 	.4byte __dt__CDeviceSC
 	.4byte IWorkEvent_WorkEvent1
@@ -259,14 +259,14 @@
 	.4byte CDeviceSC_WorkThreadEvent4
 	.4byte CDeviceSC_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-.endobj __vt__CDeviceSC
+.endobj __vt__9CDeviceSC
 
 .obj CDeviceSC_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
-	.4byte __RTTI__CDeviceBase
+	.4byte __RTTI__11CDeviceBase
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -276,10 +276,10 @@
 
 .balign 8
 
-.obj __RTTI__CDeviceSC, global
+.obj __RTTI__9CDeviceSC, global
 	.4byte CDeviceSC_typestr
 	.4byte CDeviceSC_hierarchy
-.endobj __RTTI__CDeviceSC
+.endobj __RTTI__9CDeviceSC
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

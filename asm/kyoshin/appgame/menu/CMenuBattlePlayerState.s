@@ -11,12 +11,12 @@
 /* 8010ADB8 000D4378  7C 7B 1B 78 */	mr r27, r3
 /* 8010ADBC 000D437C  7C 95 23 78 */	mr r21, r4
 /* 8010ADC0 000D4380  48 33 9C 59 */	bl __ct__8CProcessFv
-/* 8010ADC4 000D4384  3C 60 80 53 */	lis r3, __vt__CTTask_IUIBattle@ha
-/* 8010ADC8 000D4388  3C A0 80 53 */	lis r5, __vt__CMenuBattlePlayerState@ha
-/* 8010ADCC 000D438C  38 63 F9 90 */	addi r3, r3, __vt__CTTask_IUIBattle@l
+/* 8010ADC4 000D4384  3C 60 80 53 */	lis r3, "__vt__18CTTask<9IUIBattle>"@ha
+/* 8010ADC8 000D4388  3C A0 80 53 */	lis r5, __vt__22CMenuBattlePlayerState@ha
+/* 8010ADCC 000D438C  38 63 F9 90 */	addi r3, r3, "__vt__18CTTask<9IUIBattle>"@l
 /* 8010ADD0 000D4390  90 7B 00 10 */	stw r3, 0x10(r27)
 /* 8010ADD4 000D4394  3D 00 80 51 */	lis r8, __ptmf_null@ha
-/* 8010ADD8 000D4398  38 A5 FB 00 */	addi r5, r5, __vt__CMenuBattlePlayerState@l
+/* 8010ADD8 000D4398  38 A5 FB 00 */	addi r5, r5, __vt__22CMenuBattlePlayerState@l
 /* 8010ADDC 000D439C  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 8010ADE0 000D43A0  38 85 00 24 */	addi r4, r5, 0x24
 /* 8010ADE4 000D43A4  3B E0 00 00 */	li r31, 0
@@ -49,8 +49,8 @@
 /* 8010AE50 000D4410  38 E0 00 03 */	li r7, 3
 /* 8010AE54 000D4414  48 1A EC AD */	bl __construct_array
 /* 8010AE58 000D4418  C0 02 94 DC */	lfs f0, float_8066985C@sda21(r2)
-/* 8010AE5C 000D441C  3C 80 80 53 */	lis r4, __vt__CPcSelectCursor01@ha
-/* 8010AE60 000D4420  38 84 FB FC */	addi r4, r4, __vt__CPcSelectCursor01@l
+/* 8010AE5C 000D441C  3C 80 80 53 */	lis r4, __vt__17CPcSelectCursor01@ha
+/* 8010AE60 000D4420  38 84 FB FC */	addi r4, r4, __vt__17CPcSelectCursor01@l
 /* 8010AE64 000D4424  D0 1B 07 C4 */	stfs f0, 0x7c4(r27)
 /* 8010AE68 000D4428  38 7B 07 D0 */	addi r3, r27, 0x7d0
 /* 8010AE6C 000D442C  9B FB 07 C8 */	stb r31, 0x7c8(r27)
@@ -1102,9 +1102,9 @@
 /* 8010BE24 000D53E4  3A B5 00 01 */	addi r21, r21, 1
 /* 8010BE28 000D53E8  28 15 00 03 */	cmplwi r21, 3
 /* 8010BE2C 000D53EC  41 80 F7 B0 */	blt .L_8010B5DC
-/* 8010BE30 000D53F0  3C 80 80 53 */	lis r4, __vt__CPcSelectCursor01@ha
+/* 8010BE30 000D53F0  3C 80 80 53 */	lis r4, __vt__17CPcSelectCursor01@ha
 /* 8010BE34 000D53F4  38 61 00 44 */	addi r3, r1, 0x44
-/* 8010BE38 000D53F8  38 84 FB FC */	addi r4, r4, __vt__CPcSelectCursor01@l
+/* 8010BE38 000D53F8  38 84 FB FC */	addi r4, r4, __vt__17CPcSelectCursor01@l
 /* 8010BE3C 000D53FC  90 81 00 40 */	stw r4, 0x40(r1)
 /* 8010BE40 000D5400  48 35 37 25 */	bl __ct__UnkClass_8045F564
 /* 8010BE44 000D5404  3A 40 00 00 */	li r18, 0
@@ -4231,8 +4231,8 @@
 
 .balign 8
 
-.obj __vt__CMenuBattlePlayerState, global
-	.4byte __RTTI__CMenuBattlePlayerState
+.obj __vt__22CMenuBattlePlayerState, global
+	.4byte __RTTI__22CMenuBattlePlayerState
 	.4byte 0
 	.4byte __dt__CMenuBattlePlayerState
 	.4byte CChildListNode_Reset
@@ -4241,7 +4241,7 @@
 	.4byte func_8010C330
 	.4byte func_80108BE8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuBattlePlayerState
+	.4byte __RTTI__22CMenuBattlePlayerState
 	.4byte 0xFFFFFFA8
 	.4byte func_8010EA4C
 	.4byte IWorkEvent_WorkEvent1
@@ -4275,45 +4275,45 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CMenuBattlePlayerState
+	.4byte __RTTI__22CMenuBattlePlayerState
 	.4byte 0xFFFFFFA4
 	.4byte func_8010EA5C
 	.4byte func_8010EA54
 	.4byte func_8010CC18
-.endobj __vt__CMenuBattlePlayerState
+.endobj __vt__22CMenuBattlePlayerState
 
 .obj CMenuBattlePlayerState_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x0000005C
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x00000058
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUIBattle
+	.4byte "__RTTI__18CTTask<9IUIBattle>"
 	.4byte 0
-	.4byte __RTTI__IUIBattle
+	.4byte __RTTI__9IUIBattle
 	.4byte 0
 	.4byte 0
 .endobj CMenuBattlePlayerState_hierarchy
 
-.obj __vt__CPcSelectCursor01, global
-	.4byte __RTTI__CPcSelectCursor01
+.obj __vt__17CPcSelectCursor01, global
+	.4byte __RTTI__17CPcSelectCursor01
 	.4byte 0
 	.4byte __dt__CPcSelectCursor01
-.endobj __vt__CPcSelectCursor01
+.endobj __vt__17CPcSelectCursor01
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CMenuBattlePlayerState, global
+.obj __RTTI__22CMenuBattlePlayerState, global
 	.4byte CMenuBattlePlayerState_typestr
 	.4byte CMenuBattlePlayerState_hierarchy
-.endobj __RTTI__CMenuBattlePlayerState
+.endobj __RTTI__22CMenuBattlePlayerState
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

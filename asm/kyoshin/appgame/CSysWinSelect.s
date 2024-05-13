@@ -13,12 +13,12 @@
 /* 80124B9C 000EE15C  7C DE 33 78 */	mr r30, r6
 /* 80124BA0 000EE160  7C FF 3B 78 */	mr r31, r7
 /* 80124BA4 000EE164  48 31 FE 75 */	bl __ct__8CProcessFv
-/* 80124BA8 000EE168  3C 60 80 53 */	lis r3, __vt__CTTask_IUIWindow@ha
-/* 80124BAC 000EE16C  3C C0 80 53 */	lis r6, __vt__CSysWinSelect@ha
-/* 80124BB0 000EE170  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
+/* 80124BA8 000EE168  3C 60 80 53 */	lis r3, "__vt__18CTTask<9IUIWindow>"@ha
+/* 80124BAC 000EE16C  3C C0 80 53 */	lis r6, __vt__13CSysWinSelect@ha
+/* 80124BB0 000EE170  38 63 0A 08 */	addi r3, r3, "__vt__18CTTask<9IUIWindow>"@l
 /* 80124BB4 000EE174  90 7B 00 10 */	stw r3, 0x10(r27)
 /* 80124BB8 000EE178  3D 40 80 51 */	lis r10, __ptmf_null@ha
-/* 80124BBC 000EE17C  38 C6 0A 48 */	addi r6, r6, __vt__CSysWinSelect@l
+/* 80124BBC 000EE17C  38 C6 0A 48 */	addi r6, r6, __vt__13CSysWinSelect@l
 /* 80124BC0 000EE180  84 6A CE 10 */	lwzu r3, __ptmf_null@l(r10)
 /* 80124BC4 000EE184  38 A6 00 24 */	addi r5, r6, 0x24
 /* 80124BC8 000EE188  3B 20 00 00 */	li r25, 0

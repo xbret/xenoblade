@@ -5,11 +5,11 @@
 .fn __ct__cf_CBattleState, global
 /* 80145B1C 0010F0DC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80145B20 0010F0E0  7C 08 02 A6 */	mflr r0
-/* 80145B24 0010F0E4  3C 80 80 53 */	lis r4, __vt__cf_CBattleState@ha
+/* 80145B24 0010F0E4  3C 80 80 53 */	lis r4, __vt__Q22cf12CBattleState@ha
 /* 80145B28 0010F0E8  38 A0 15 20 */	li r5, 0x1520
 /* 80145B2C 0010F0EC  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80145B30 0010F0F0  38 00 00 00 */	li r0, 0
-/* 80145B34 0010F0F4  38 84 21 80 */	addi r4, r4, __vt__cf_CBattleState@l
+/* 80145B34 0010F0F4  38 84 21 80 */	addi r4, r4, __vt__Q22cf12CBattleState@l
 /* 80145B38 0010F0F8  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80145B3C 0010F0FC  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80145B40 0010F100  93 A1 00 14 */	stw r29, 0x14(r1)
@@ -4568,8 +4568,8 @@
 
 .balign 8
 
-.obj __vt__cf_CBattleState, global
-	.4byte __RTTI__cf_CBattleState
+.obj __vt__Q22cf12CBattleState, global
+	.4byte __RTTI__Q22cf12CBattleState
 	.4byte 0
 	.4byte func_80147784
 	.4byte func_80149778
@@ -4605,7 +4605,7 @@
 	.4byte func_80149600
 	.4byte func_80149610
 	.4byte 0
-.endobj __vt__cf_CBattleState
+.endobj __vt__Q22cf12CBattleState
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 

@@ -20,9 +20,9 @@
 /* 8046D014 004365D4  41 80 FF F4 */	blt .L_8046D008
 /* 8046D018 004365D8  38 00 00 00 */	li r0, 0
 /* 8046D01C 004365DC  90 03 00 CC */	stw r0, 0xcc(r3)
-/* 8046D020 004365E0  3C 80 80 57 */	lis r4, __vt__LOD_LODMemMan@ha
+/* 8046D020 004365E0  3C 80 80 57 */	lis r4, __vt__Q23LOD9LODMemMan@ha
 /* 8046D024 004365E4  90 03 00 D8 */	stw r0, 0xd8(r3)
-/* 8046D028 004365E8  38 84 13 50 */	addi r4, r4, __vt__LOD_LODMemMan@l
+/* 8046D028 004365E8  38 84 13 50 */	addi r4, r4, __vt__Q23LOD9LODMemMan@l
 /* 8046D02C 004365EC  90 03 00 E4 */	stw r0, 0xe4(r3)
 /* 8046D030 004365F0  90 03 00 F0 */	stw r0, 0xf0(r3)
 /* 8046D034 004365F4  90 03 00 FC */	stw r0, 0xfc(r3)
@@ -3207,9 +3207,9 @@
 /* 8046FC7C 0043923C  81 1B 00 5C */	lwz r8, 0x5c(r27)
 /* 8046FC80 00439240  38 80 00 00 */	li r4, 0
 /* 8046FC84 00439244  80 65 00 08 */	lwz r3, 8(r5)
-/* 8046FC88 00439248  38 AD 8C 38 */	addi r5, r13, __RTTI__CScnItemModelNw4r@sda21 #CScnItemModelNw4r
+/* 8046FC88 00439248  38 AD 8C 38 */	addi r5, r13, __RTTI__17CScnItemModelNw4r@sda21 #CScnItemModelNw4r
 /* 8046FC8C 0043924C  80 08 00 70 */	lwz r0, 0x70(r8)
-/* 8046FC90 00439250  38 CD 8C 50 */	addi r6, r13, __RTTI__CScnItem@sda21 #CScnItem
+/* 8046FC90 00439250  38 CD 8C 50 */	addi r6, r13, __RTTI__4CScnItem@sda21 #CScnItem
 /* 8046FC94 00439254  38 E0 00 00 */	li r7, 0
 /* 8046FC98 00439258  7C 08 02 14 */	add r0, r8, r0
 /* 8046FC9C 0043925C  90 01 00 18 */	stw r0, 0x18(r1)
@@ -9139,8 +9139,8 @@
 .endobj lbl_80571340
 
 
-.obj __vt__LOD_LODMemMan, global
-	.4byte __RTTI__LOD_LODMemMan
+.obj __vt__Q23LOD9LODMemMan, global
+	.4byte __RTTI__Q23LOD9LODMemMan
 	.4byte 0
 	.4byte __dt__LOD_LODMemMan
 	.4byte IWorkEvent_WorkEvent1
@@ -9174,10 +9174,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__LOD_LODMemMan
+.endobj __vt__Q23LOD9LODMemMan
 
 .obj LOD_LODMemMan_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -9219,10 +9219,10 @@
 	.4byte 0
 .endobj lbl_80666160
 
-.obj __RTTI__LOD_LODMemMan, global
+.obj __RTTI__Q23LOD9LODMemMan, global
 	.4byte LOD_LODMemMan_typestr
 	.4byte LOD_LODMemMan_hierarchy
-.endobj __RTTI__LOD_LODMemMan
+.endobj __RTTI__Q23LOD9LODMemMan
 
 
 .obj float_80666170, global

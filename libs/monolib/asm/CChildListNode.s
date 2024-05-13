@@ -9,12 +9,12 @@
 /* 804466EC 0040FCAC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804466F0 0040FCB0  7C 7F 1B 78 */	mr r31, r3
 /* 804466F4 0040FCB4  4B FF FE 85 */	bl __ct__15CDoubleListNodeFv
-/* 804466F8 0040FCB8  3C 60 80 57 */	lis r3, __vt__CChildListNode@ha
-/* 804466FC 0040FCBC  3C 80 80 57 */	lis r4, __vt__TChildListHeader_CChildListNode@ha
+/* 804466F8 0040FCB8  3C 60 80 57 */	lis r3, __vt__14CChildListNode@ha
+/* 804466FC 0040FCBC  3C 80 80 57 */	lis r4, "__vt__34TChildListHeader<14CChildListNode>"@ha
 /* 80446700 0040FCC0  38 00 00 00 */	li r0, 0
 /* 80446704 0040FCC4  90 1F 00 14 */	stw r0, 0x14(r31)
-/* 80446708 0040FCC8  38 63 F4 18 */	addi r3, r3, __vt__CChildListNode@l
-/* 8044670C 0040FCCC  38 84 F4 28 */	addi r4, r4, __vt__TChildListHeader_CChildListNode@l
+/* 80446708 0040FCC8  38 63 F4 18 */	addi r3, r3, __vt__14CChildListNode@l
+/* 8044670C 0040FCCC  38 84 F4 28 */	addi r4, r4, "__vt__34TChildListHeader<14CChildListNode>"@l
 /* 80446710 0040FCD0  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 80446714 0040FCD4  7F E3 FB 78 */	mr r3, r31
 /* 80446718 0040FCD8  90 9F 00 34 */	stw r4, 0x34(r31)
@@ -58,29 +58,29 @@
 
 .balign 8
 
-.obj __vt__CChildListNode, global
-	.4byte __RTTI__CChildListNode
+.obj __vt__14CChildListNode, global
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
 	.4byte __dt__CChildListNode
 	.4byte CChildListNode_Reset
-.endobj __vt__CChildListNode
+.endobj __vt__14CChildListNode
 
 
-.obj __vt__TChildListHeader_CChildListNode, global
-	.4byte __RTTI__TChildListHeader_CChildListNode
+.obj "__vt__34TChildListHeader<14CChildListNode>", global
+	.4byte "__RTTI__34TChildListHeader<14CChildListNode>"
 	.4byte 0
 	.4byte __dt__TChildListHeader_CChildListNode
 	.4byte 0
-.endobj __vt__TChildListHeader_CChildListNode
+.endobj "__vt__34TChildListHeader<14CChildListNode>"
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__TChildListHeader_CChildListNode, global
+.obj "__RTTI__34TChildListHeader<14CChildListNode>", global
 	.4byte TChildListHeader_CChildListNode_typestr
 	.4byte 0
-.endobj __RTTI__TChildListHeader_CChildListNode
+.endobj "__RTTI__34TChildListHeader<14CChildListNode>"
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

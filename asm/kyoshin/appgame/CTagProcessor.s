@@ -542,10 +542,10 @@
 /* 801259BC 000EEF7C  7C 7F 1B 78 */	mr r31, r3
 /* 801259C0 000EEF80  48 30 60 A9 */	bl "__ct__Q34nw4r2ut19TagProcessorBase<w>Fv"
 /* 801259C4 000EEF84  C0 02 97 38 */	lfs f0, float_80669AB8@sda21(r2)
-/* 801259C8 000EEF88  3C 80 80 53 */	lis r4, __vt__CTagProcessorBase@ha
+/* 801259C8 000EEF88  3C 80 80 53 */	lis r4, __vt__17CTagProcessorBase@ha
 /* 801259CC 000EEF8C  38 00 00 00 */	li r0, 0
 /* 801259D0 000EEF90  90 1F 08 04 */	stw r0, 0x804(r31)
-/* 801259D4 000EEF94  38 84 12 38 */	addi r4, r4, __vt__CTagProcessorBase@l
+/* 801259D4 000EEF94  38 84 12 38 */	addi r4, r4, __vt__17CTagProcessorBase@l
 /* 801259D8 000EEF98  38 7F 08 14 */	addi r3, r31, 0x814
 /* 801259DC 000EEF9C  90 9F 00 00 */	stw r4, 0(r31)
 /* 801259E0 000EEFA0  D0 1F 08 08 */	stfs f0, 0x808(r31)
@@ -1052,10 +1052,10 @@
 /* 80126094 000EF654  7C 7F 1B 78 */	mr r31, r3
 /* 80126098 000EF658  4B FF F9 15 */	bl __ct__CTagProcessorBase
 /* 8012609C 000EF65C  C0 02 97 38 */	lfs f0, float_80669AB8@sda21(r2)
-/* 801260A0 000EF660  3C 60 80 53 */	lis r3, __vt__CTagProcessor@ha
+/* 801260A0 000EF660  3C 60 80 53 */	lis r3, __vt__13CTagProcessor@ha
 /* 801260A4 000EF664  38 E0 00 00 */	li r7, 0
 /* 801260A8 000EF668  38 C0 FF FF */	li r6, -1
-/* 801260AC 000EF66C  38 63 12 08 */	addi r3, r3, __vt__CTagProcessor@l
+/* 801260AC 000EF66C  38 63 12 08 */	addi r3, r3, __vt__13CTagProcessor@l
 /* 801260B0 000EF670  38 00 00 0A */	li r0, 0xa
 /* 801260B4 000EF674  90 7F 00 00 */	stw r3, 0(r31)
 /* 801260B8 000EF678  38 7F 08 38 */	addi r3, r31, 0x838
@@ -3214,10 +3214,10 @@
 /* 80127F10 000F14D0  7C 7F 1B 78 */	mr r31, r3
 /* 80127F14 000F14D4  4B FF DA 99 */	bl __ct__CTagProcessorBase
 /* 80127F18 000F14D8  C0 02 97 38 */	lfs f0, float_80669AB8@sda21(r2)
-/* 80127F1C 000F14DC  3C 80 80 53 */	lis r4, __vt__CTagProcessorSE@ha
+/* 80127F1C 000F14DC  3C 80 80 53 */	lis r4, __vt__15CTagProcessorSE@ha
 /* 80127F20 000F14E0  38 00 00 00 */	li r0, 0
 /* 80127F24 000F14E4  B0 1F 08 20 */	sth r0, 0x820(r31)
-/* 80127F28 000F14E8  38 84 11 D8 */	addi r4, r4, __vt__CTagProcessorSE@l
+/* 80127F28 000F14E8  38 84 11 D8 */	addi r4, r4, __vt__15CTagProcessorSE@l
 /* 80127F2C 000F14EC  7F E3 FB 78 */	mr r3, r31
 /* 80127F30 000F14F0  90 9F 00 00 */	stw r4, 0(r31)
 /* 80127F34 000F14F4  D0 1F 08 24 */	stfs f0, 0x824(r31)
@@ -7484,162 +7484,162 @@
 .endfn sinit_8012BA00
 
 .fn __ct__CTagCodeCL, global
-/* 8012BAD4 000F5094  3C 80 80 53 */	lis r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeCL@ha
-/* 8012BAD8 000F5098  38 84 11 B0 */	addi r4, r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeCL@l
+/* 8012BAD4 000F5094  3C 80 80 53 */	lis r4, "__vt__Q227@unnamed@CTagProcessor_cpp@10CTagCodeCL"@ha
+/* 8012BAD8 000F5098  38 84 11 B0 */	addi r4, r4, "__vt__Q227@unnamed@CTagProcessor_cpp@10CTagCodeCL"@l
 /* 8012BADC 000F509C  90 83 00 00 */	stw r4, 0(r3)
 /* 8012BAE0 000F50A0  4E 80 00 20 */	blr 
 .endfn __ct__CTagCodeCL
 
 .fn __ct__CTagCodeCP, global
-/* 8012BAE4 000F50A4  3C 80 80 53 */	lis r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeCP@ha
-/* 8012BAE8 000F50A8  38 84 11 88 */	addi r4, r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeCP@l
+/* 8012BAE4 000F50A4  3C 80 80 53 */	lis r4, "__vt__Q227@unnamed@CTagProcessor_cpp@10CTagCodeCP"@ha
+/* 8012BAE8 000F50A8  38 84 11 88 */	addi r4, r4, "__vt__Q227@unnamed@CTagProcessor_cpp@10CTagCodeCP"@l
 /* 8012BAEC 000F50AC  90 83 00 00 */	stw r4, 0(r3)
 /* 8012BAF0 000F50B0  4E 80 00 20 */	blr 
 .endfn __ct__CTagCodeCP
 
 .fn __ct__CTagCodeWait, global
-/* 8012BAF4 000F50B4  3C 80 80 53 */	lis r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeWait@ha
-/* 8012BAF8 000F50B8  38 84 11 60 */	addi r4, r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeWait@l
+/* 8012BAF4 000F50B4  3C 80 80 53 */	lis r4, "__vt__Q227@unnamed@CTagProcessor_cpp@12CTagCodeWait"@ha
+/* 8012BAF8 000F50B8  38 84 11 60 */	addi r4, r4, "__vt__Q227@unnamed@CTagProcessor_cpp@12CTagCodeWait"@l
 /* 8012BAFC 000F50BC  90 83 00 00 */	stw r4, 0(r3)
 /* 8012BB00 000F50C0  4E 80 00 20 */	blr 
 .endfn __ct__CTagCodeWait
 
 .fn __ct__CTagCodeDel, global
-/* 8012BB04 000F50C4  3C 80 80 53 */	lis r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeDel@ha
-/* 8012BB08 000F50C8  38 84 11 38 */	addi r4, r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeDel@l
+/* 8012BB04 000F50C4  3C 80 80 53 */	lis r4, "__vt__Q227@unnamed@CTagProcessor_cpp@11CTagCodeDel"@ha
+/* 8012BB08 000F50C8  38 84 11 38 */	addi r4, r4, "__vt__Q227@unnamed@CTagProcessor_cpp@11CTagCodeDel"@l
 /* 8012BB0C 000F50CC  90 83 00 00 */	stw r4, 0(r3)
 /* 8012BB10 000F50D0  4E 80 00 20 */	blr 
 .endfn __ct__CTagCodeDel
 
 .fn __ct__CTagCodeRuby, global
-/* 8012BB14 000F50D4  3C 80 80 53 */	lis r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeRuby@ha
-/* 8012BB18 000F50D8  38 84 11 10 */	addi r4, r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeRuby@l
+/* 8012BB14 000F50D4  3C 80 80 53 */	lis r4, "__vt__Q227@unnamed@CTagProcessor_cpp@12CTagCodeRuby"@ha
+/* 8012BB18 000F50D8  38 84 11 10 */	addi r4, r4, "__vt__Q227@unnamed@CTagProcessor_cpp@12CTagCodeRuby"@l
 /* 8012BB1C 000F50DC  90 83 00 00 */	stw r4, 0(r3)
 /* 8012BB20 000F50E0  4E 80 00 20 */	blr 
 .endfn __ct__CTagCodeRuby
 
 .fn __ct__CTagCodeCol, global
-/* 8012BB24 000F50E4  3C 80 80 53 */	lis r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeCol@ha
-/* 8012BB28 000F50E8  38 84 10 E8 */	addi r4, r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeCol@l
+/* 8012BB24 000F50E4  3C 80 80 53 */	lis r4, "__vt__Q227@unnamed@CTagProcessor_cpp@11CTagCodeCol"@ha
+/* 8012BB28 000F50E8  38 84 10 E8 */	addi r4, r4, "__vt__Q227@unnamed@CTagProcessor_cpp@11CTagCodeCol"@l
 /* 8012BB2C 000F50EC  90 83 00 00 */	stw r4, 0(r3)
 /* 8012BB30 000F50F0  4E 80 00 20 */	blr 
 .endfn __ct__CTagCodeCol
 
 .fn __ct__CTagCodeTrust, global
-/* 8012BB34 000F50F4  3C 80 80 53 */	lis r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeTrust@ha
-/* 8012BB38 000F50F8  38 84 10 68 */	addi r4, r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeTrust@l
+/* 8012BB34 000F50F4  3C 80 80 53 */	lis r4, "__vt__Q227@unnamed@CTagProcessor_cpp@13CTagCodeTrust"@ha
+/* 8012BB38 000F50F8  38 84 10 68 */	addi r4, r4, "__vt__Q227@unnamed@CTagProcessor_cpp@13CTagCodeTrust"@l
 /* 8012BB3C 000F50FC  90 83 00 00 */	stw r4, 0(r3)
 /* 8012BB40 000F5100  4E 80 00 20 */	blr 
 .endfn __ct__CTagCodeTrust
 
 .fn __ct__CTagCodeType, global
-/* 8012BB44 000F5104  3C 80 80 53 */	lis r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeType@ha
-/* 8012BB48 000F5108  38 84 10 40 */	addi r4, r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeType@l
+/* 8012BB44 000F5104  3C 80 80 53 */	lis r4, "__vt__Q227@unnamed@CTagProcessor_cpp@12CTagCodeType"@ha
+/* 8012BB48 000F5108  38 84 10 40 */	addi r4, r4, "__vt__Q227@unnamed@CTagProcessor_cpp@12CTagCodeType"@l
 /* 8012BB4C 000F510C  90 83 00 00 */	stw r4, 0(r3)
 /* 8012BB50 000F5110  4E 80 00 20 */	blr 
 .endfn __ct__CTagCodeType
 
 .fn __ct__CTagCodePos, global
-/* 8012BB54 000F5114  3C 80 80 53 */	lis r4, __vt___unnamed_CTagProcessor_cpp_CTagCodePos@ha
-/* 8012BB58 000F5118  38 84 10 18 */	addi r4, r4, __vt___unnamed_CTagProcessor_cpp_CTagCodePos@l
+/* 8012BB54 000F5114  3C 80 80 53 */	lis r4, "__vt__Q227@unnamed@CTagProcessor_cpp@11CTagCodePos"@ha
+/* 8012BB58 000F5118  38 84 10 18 */	addi r4, r4, "__vt__Q227@unnamed@CTagProcessor_cpp@11CTagCodePos"@l
 /* 8012BB5C 000F511C  90 83 00 00 */	stw r4, 0(r3)
 /* 8012BB60 000F5120  4E 80 00 20 */	blr 
 .endfn __ct__CTagCodePos
 
 .fn __ct__CTagCodeMouth, global
-/* 8012BB64 000F5124  3C 80 80 53 */	lis r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeMouth@ha
-/* 8012BB68 000F5128  38 84 0F F0 */	addi r4, r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeMouth@l
+/* 8012BB64 000F5124  3C 80 80 53 */	lis r4, "__vt__Q227@unnamed@CTagProcessor_cpp@13CTagCodeMouth"@ha
+/* 8012BB68 000F5128  38 84 0F F0 */	addi r4, r4, "__vt__Q227@unnamed@CTagProcessor_cpp@13CTagCodeMouth"@l
 /* 8012BB6C 000F512C  90 83 00 00 */	stw r4, 0(r3)
 /* 8012BB70 000F5130  4E 80 00 20 */	blr 
 .endfn __ct__CTagCodeMouth
 
 .fn __ct__CTagCodeLine, global
-/* 8012BB74 000F5134  3C 80 80 53 */	lis r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeLine@ha
-/* 8012BB78 000F5138  38 84 0F C8 */	addi r4, r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeLine@l
+/* 8012BB74 000F5134  3C 80 80 53 */	lis r4, "__vt__Q227@unnamed@CTagProcessor_cpp@12CTagCodeLine"@ha
+/* 8012BB78 000F5138  38 84 0F C8 */	addi r4, r4, "__vt__Q227@unnamed@CTagProcessor_cpp@12CTagCodeLine"@l
 /* 8012BB7C 000F513C  90 83 00 00 */	stw r4, 0(r3)
 /* 8012BB80 000F5140  4E 80 00 20 */	blr 
 .endfn __ct__CTagCodeLine
 
 .fn __ct__CTagCodeSelect, global
-/* 8012BB84 000F5144  3C 80 80 53 */	lis r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeSelect@ha
-/* 8012BB88 000F5148  38 84 0F A0 */	addi r4, r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeSelect@l
+/* 8012BB84 000F5144  3C 80 80 53 */	lis r4, "__vt__Q227@unnamed@CTagProcessor_cpp@14CTagCodeSelect"@ha
+/* 8012BB88 000F5148  38 84 0F A0 */	addi r4, r4, "__vt__Q227@unnamed@CTagProcessor_cpp@14CTagCodeSelect"@l
 /* 8012BB8C 000F514C  90 83 00 00 */	stw r4, 0(r3)
 /* 8012BB90 000F5150  4E 80 00 20 */	blr 
 .endfn __ct__CTagCodeSelect
 
 .fn __ct__CTagCodeSelect2, global
-/* 8012BB94 000F5154  3C 80 80 53 */	lis r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeSelect2@ha
-/* 8012BB98 000F5158  38 84 0F 78 */	addi r4, r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeSelect2@l
+/* 8012BB94 000F5154  3C 80 80 53 */	lis r4, "__vt__Q227@unnamed@CTagProcessor_cpp@15CTagCodeSelect2"@ha
+/* 8012BB98 000F5158  38 84 0F 78 */	addi r4, r4, "__vt__Q227@unnamed@CTagProcessor_cpp@15CTagCodeSelect2"@l
 /* 8012BB9C 000F515C  90 83 00 00 */	stw r4, 0(r3)
 /* 8012BBA0 000F5160  4E 80 00 20 */	blr 
 .endfn __ct__CTagCodeSelect2
 
 .fn __ct__CTagCodeAct, global
-/* 8012BBA4 000F5164  3C 80 80 53 */	lis r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeAct@ha
-/* 8012BBA8 000F5168  38 84 0F 50 */	addi r4, r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeAct@l
+/* 8012BBA4 000F5164  3C 80 80 53 */	lis r4, "__vt__Q227@unnamed@CTagProcessor_cpp@11CTagCodeAct"@ha
+/* 8012BBA8 000F5168  38 84 0F 50 */	addi r4, r4, "__vt__Q227@unnamed@CTagProcessor_cpp@11CTagCodeAct"@l
 /* 8012BBAC 000F516C  90 83 00 00 */	stw r4, 0(r3)
 /* 8012BBB0 000F5170  4E 80 00 20 */	blr 
 .endfn __ct__CTagCodeAct
 
 .fn __ct__CTagCodeFade, global
-/* 8012BBB4 000F5174  3C 80 80 53 */	lis r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeFade@ha
-/* 8012BBB8 000F5178  38 84 0F 28 */	addi r4, r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeFade@l
+/* 8012BBB4 000F5174  3C 80 80 53 */	lis r4, "__vt__Q227@unnamed@CTagProcessor_cpp@12CTagCodeFade"@ha
+/* 8012BBB8 000F5178  38 84 0F 28 */	addi r4, r4, "__vt__Q227@unnamed@CTagProcessor_cpp@12CTagCodeFade"@l
 /* 8012BBBC 000F517C  90 83 00 00 */	stw r4, 0(r3)
 /* 8012BBC0 000F5180  4E 80 00 20 */	blr 
 .endfn __ct__CTagCodeFade
 
 .fn __ct__CTagCodeQuest, global
-/* 8012BBC4 000F5184  3C 80 80 53 */	lis r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeQuest@ha
-/* 8012BBC8 000F5188  38 84 0F 00 */	addi r4, r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeQuest@l
+/* 8012BBC4 000F5184  3C 80 80 53 */	lis r4, "__vt__Q227@unnamed@CTagProcessor_cpp@13CTagCodeQuest"@ha
+/* 8012BBC8 000F5188  38 84 0F 00 */	addi r4, r4, "__vt__Q227@unnamed@CTagProcessor_cpp@13CTagCodeQuest"@l
 /* 8012BBCC 000F518C  90 83 00 00 */	stw r4, 0(r3)
 /* 8012BBD0 000F5190  4E 80 00 20 */	blr 
 .endfn __ct__CTagCodeQuest
 
 .fn __ct__CTagCodeInvisible, global
-/* 8012BBD4 000F5194  3C 80 80 53 */	lis r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeInvisible@ha
-/* 8012BBD8 000F5198  38 84 0E D8 */	addi r4, r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeInvisible@l
+/* 8012BBD4 000F5194  3C 80 80 53 */	lis r4, "__vt__Q227@unnamed@CTagProcessor_cpp@17CTagCodeInvisible"@ha
+/* 8012BBD8 000F5198  38 84 0E D8 */	addi r4, r4, "__vt__Q227@unnamed@CTagProcessor_cpp@17CTagCodeInvisible"@l
 /* 8012BBDC 000F519C  90 83 00 00 */	stw r4, 0(r3)
 /* 8012BBE0 000F51A0  4E 80 00 20 */	blr 
 .endfn __ct__CTagCodeInvisible
 
 .fn __ct__CTagCodeQstStart, global
-/* 8012BBE4 000F51A4  3C 80 80 53 */	lis r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeQstStart@ha
-/* 8012BBE8 000F51A8  38 84 0E B0 */	addi r4, r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeQstStart@l
+/* 8012BBE4 000F51A4  3C 80 80 53 */	lis r4, "__vt__Q227@unnamed@CTagProcessor_cpp@16CTagCodeQstStart"@ha
+/* 8012BBE8 000F51A8  38 84 0E B0 */	addi r4, r4, "__vt__Q227@unnamed@CTagProcessor_cpp@16CTagCodeQstStart"@l
 /* 8012BBEC 000F51AC  90 83 00 00 */	stw r4, 0(r3)
 /* 8012BBF0 000F51B0  4E 80 00 20 */	blr 
 .endfn __ct__CTagCodeQstStart
 
 .fn __ct__CTagCodePresent, global
-/* 8012BBF4 000F51B4  3C 80 80 53 */	lis r4, __vt___unnamed_CTagProcessor_cpp_CTagCodePresent@ha
-/* 8012BBF8 000F51B8  38 84 0E 88 */	addi r4, r4, __vt___unnamed_CTagProcessor_cpp_CTagCodePresent@l
+/* 8012BBF4 000F51B4  3C 80 80 53 */	lis r4, "__vt__Q227@unnamed@CTagProcessor_cpp@15CTagCodePresent"@ha
+/* 8012BBF8 000F51B8  38 84 0E 88 */	addi r4, r4, "__vt__Q227@unnamed@CTagProcessor_cpp@15CTagCodePresent"@l
 /* 8012BBFC 000F51BC  90 83 00 00 */	stw r4, 0(r3)
 /* 8012BC00 000F51C0  4E 80 00 20 */	blr 
 .endfn __ct__CTagCodePresent
 
 .fn __ct__CTagCodeTailOff, global
-/* 8012BC04 000F51C4  3C 80 80 53 */	lis r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeTailOff@ha
-/* 8012BC08 000F51C8  38 84 0E 60 */	addi r4, r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeTailOff@l
+/* 8012BC04 000F51C4  3C 80 80 53 */	lis r4, "__vt__Q227@unnamed@CTagProcessor_cpp@15CTagCodeTailOff"@ha
+/* 8012BC08 000F51C8  38 84 0E 60 */	addi r4, r4, "__vt__Q227@unnamed@CTagProcessor_cpp@15CTagCodeTailOff"@l
 /* 8012BC0C 000F51CC  90 83 00 00 */	stw r4, 0(r3)
 /* 8012BC10 000F51D0  4E 80 00 20 */	blr 
 .endfn __ct__CTagCodeTailOff
 
 .fn __ct__CTagCodeExchange, global
-/* 8012BC14 000F51D4  3C 80 80 53 */	lis r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeExchange@ha
-/* 8012BC18 000F51D8  38 84 0E 38 */	addi r4, r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeExchange@l
+/* 8012BC14 000F51D4  3C 80 80 53 */	lis r4, "__vt__Q227@unnamed@CTagProcessor_cpp@16CTagCodeExchange"@ha
+/* 8012BC18 000F51D8  38 84 0E 38 */	addi r4, r4, "__vt__Q227@unnamed@CTagProcessor_cpp@16CTagCodeExchange"@l
 /* 8012BC1C 000F51DC  90 83 00 00 */	stw r4, 0(r3)
 /* 8012BC20 000F51E0  4E 80 00 20 */	blr 
 .endfn __ct__CTagCodeExchange
 
 .fn __ct__CTagCodeShop, global
-/* 8012BC24 000F51E4  3C 80 80 53 */	lis r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeShop@ha
-/* 8012BC28 000F51E8  38 84 0E 10 */	addi r4, r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeShop@l
+/* 8012BC24 000F51E4  3C 80 80 53 */	lis r4, "__vt__Q227@unnamed@CTagProcessor_cpp@12CTagCodeShop"@ha
+/* 8012BC28 000F51E8  38 84 0E 10 */	addi r4, r4, "__vt__Q227@unnamed@CTagProcessor_cpp@12CTagCodeShop"@l
 /* 8012BC2C 000F51EC  90 83 00 00 */	stw r4, 0(r3)
 /* 8012BC30 000F51F0  4E 80 00 20 */	blr 
 .endfn __ct__CTagCodeShop
 
 .fn __ct__CTagCodeMakeCrystal, global
-/* 8012BC34 000F51F4  3C 80 80 53 */	lis r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal@ha
-/* 8012BC38 000F51F8  38 84 0D E8 */	addi r4, r4, __vt___unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal@l
+/* 8012BC34 000F51F4  3C 80 80 53 */	lis r4, "__vt__Q227@unnamed@CTagProcessor_cpp@19CTagCodeMakeCrystal"@ha
+/* 8012BC38 000F51F8  38 84 0D E8 */	addi r4, r4, "__vt__Q227@unnamed@CTagProcessor_cpp@19CTagCodeMakeCrystal"@l
 /* 8012BC3C 000F51FC  90 83 00 00 */	stw r4, 0(r3)
 /* 8012BC40 000F5200  4E 80 00 20 */	blr 
 .endfn __ct__CTagCodeMakeCrystal
@@ -8976,14 +8976,14 @@
 
 .balign 8
 
-.obj __vt___unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal, global
-	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal
+.obj "__vt__Q227@unnamed@CTagProcessor_cpp@19CTagCodeMakeCrystal", global
+	.4byte "__RTTI__Q227@unnamed@CTagProcessor_cpp@19CTagCodeMakeCrystal"
 	.4byte 0
 	.4byte __dt___unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal
 	.4byte func_80125B00
 	.4byte func_80125B50
 	.4byte func_801289B4
-.endobj __vt___unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal
+.endobj "__vt__Q227@unnamed@CTagProcessor_cpp@19CTagCodeMakeCrystal"
 
 .obj _unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal_hierarchy, global
 	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
@@ -8993,14 +8993,14 @@
 .endobj _unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal_hierarchy
 
 
-.obj __vt___unnamed_CTagProcessor_cpp_CTagCodeShop, global
-	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeShop
+.obj "__vt__Q227@unnamed@CTagProcessor_cpp@12CTagCodeShop", global
+	.4byte "__RTTI__Q227@unnamed@CTagProcessor_cpp@12CTagCodeShop"
 	.4byte 0
 	.4byte __dt___unnamed_CTagProcessor_cpp_CTagCodeShop
 	.4byte func_80125B00
 	.4byte func_80125B50
 	.4byte func_801289FC
-.endobj __vt___unnamed_CTagProcessor_cpp_CTagCodeShop
+.endobj "__vt__Q227@unnamed@CTagProcessor_cpp@12CTagCodeShop"
 
 .obj _unnamed_CTagProcessor_cpp_CTagCodeShop_hierarchy, global
 	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
@@ -9010,14 +9010,14 @@
 .endobj _unnamed_CTagProcessor_cpp_CTagCodeShop_hierarchy
 
 
-.obj __vt___unnamed_CTagProcessor_cpp_CTagCodeExchange, global
-	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeExchange
+.obj "__vt__Q227@unnamed@CTagProcessor_cpp@16CTagCodeExchange", global
+	.4byte "__RTTI__Q227@unnamed@CTagProcessor_cpp@16CTagCodeExchange"
 	.4byte 0
 	.4byte __dt___unnamed_CTagProcessor_cpp_CTagCodeExchange
 	.4byte func_80125B00
 	.4byte func_80125B50
 	.4byte func_80128A70
-.endobj __vt___unnamed_CTagProcessor_cpp_CTagCodeExchange
+.endobj "__vt__Q227@unnamed@CTagProcessor_cpp@16CTagCodeExchange"
 
 .obj _unnamed_CTagProcessor_cpp_CTagCodeExchange_hierarchy, global
 	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
@@ -9027,14 +9027,14 @@
 .endobj _unnamed_CTagProcessor_cpp_CTagCodeExchange_hierarchy
 
 
-.obj __vt___unnamed_CTagProcessor_cpp_CTagCodeTailOff, global
-	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeTailOff
+.obj "__vt__Q227@unnamed@CTagProcessor_cpp@15CTagCodeTailOff", global
+	.4byte "__RTTI__Q227@unnamed@CTagProcessor_cpp@15CTagCodeTailOff"
 	.4byte 0
 	.4byte __dt___unnamed_CTagProcessor_cpp_CTagCodeTailOff
 	.4byte func_80125B00
 	.4byte func_80125B50
 	.4byte func_80128AB8
-.endobj __vt___unnamed_CTagProcessor_cpp_CTagCodeTailOff
+.endobj "__vt__Q227@unnamed@CTagProcessor_cpp@15CTagCodeTailOff"
 
 .obj _unnamed_CTagProcessor_cpp_CTagCodeTailOff_hierarchy, global
 	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
@@ -9044,14 +9044,14 @@
 .endobj _unnamed_CTagProcessor_cpp_CTagCodeTailOff_hierarchy
 
 
-.obj __vt___unnamed_CTagProcessor_cpp_CTagCodePresent, global
-	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodePresent
+.obj "__vt__Q227@unnamed@CTagProcessor_cpp@15CTagCodePresent", global
+	.4byte "__RTTI__Q227@unnamed@CTagProcessor_cpp@15CTagCodePresent"
 	.4byte 0
 	.4byte __dt___unnamed_CTagProcessor_cpp_CTagCodePresent
 	.4byte func_80125B00
 	.4byte func_80125B50
 	.4byte func_80128B0C
-.endobj __vt___unnamed_CTagProcessor_cpp_CTagCodePresent
+.endobj "__vt__Q227@unnamed@CTagProcessor_cpp@15CTagCodePresent"
 
 .obj _unnamed_CTagProcessor_cpp_CTagCodePresent_hierarchy, global
 	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
@@ -9061,14 +9061,14 @@
 .endobj _unnamed_CTagProcessor_cpp_CTagCodePresent_hierarchy
 
 
-.obj __vt___unnamed_CTagProcessor_cpp_CTagCodeQstStart, global
-	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeQstStart
+.obj "__vt__Q227@unnamed@CTagProcessor_cpp@16CTagCodeQstStart", global
+	.4byte "__RTTI__Q227@unnamed@CTagProcessor_cpp@16CTagCodeQstStart"
 	.4byte 0
 	.4byte __dt___unnamed_CTagProcessor_cpp_CTagCodeQstStart
 	.4byte func_80125B00
 	.4byte func_80125B50
 	.4byte func_80128B80
-.endobj __vt___unnamed_CTagProcessor_cpp_CTagCodeQstStart
+.endobj "__vt__Q227@unnamed@CTagProcessor_cpp@16CTagCodeQstStart"
 
 .obj _unnamed_CTagProcessor_cpp_CTagCodeQstStart_hierarchy, global
 	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
@@ -9078,14 +9078,14 @@
 .endobj _unnamed_CTagProcessor_cpp_CTagCodeQstStart_hierarchy
 
 
-.obj __vt___unnamed_CTagProcessor_cpp_CTagCodeInvisible, global
-	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeInvisible
+.obj "__vt__Q227@unnamed@CTagProcessor_cpp@17CTagCodeInvisible", global
+	.4byte "__RTTI__Q227@unnamed@CTagProcessor_cpp@17CTagCodeInvisible"
 	.4byte 0
 	.4byte __dt___unnamed_CTagProcessor_cpp_CTagCodeInvisible
 	.4byte func_80125B00
 	.4byte func_80125B50
 	.4byte func_80128BB0
-.endobj __vt___unnamed_CTagProcessor_cpp_CTagCodeInvisible
+.endobj "__vt__Q227@unnamed@CTagProcessor_cpp@17CTagCodeInvisible"
 
 .obj _unnamed_CTagProcessor_cpp_CTagCodeInvisible_hierarchy, global
 	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
@@ -9095,14 +9095,14 @@
 .endobj _unnamed_CTagProcessor_cpp_CTagCodeInvisible_hierarchy
 
 
-.obj __vt___unnamed_CTagProcessor_cpp_CTagCodeQuest, global
-	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeQuest
+.obj "__vt__Q227@unnamed@CTagProcessor_cpp@13CTagCodeQuest", global
+	.4byte "__RTTI__Q227@unnamed@CTagProcessor_cpp@13CTagCodeQuest"
 	.4byte 0
 	.4byte __dt___unnamed_CTagProcessor_cpp_CTagCodeQuest
 	.4byte func_80125B00
 	.4byte func_80125B50
 	.4byte func_80128BF8
-.endobj __vt___unnamed_CTagProcessor_cpp_CTagCodeQuest
+.endobj "__vt__Q227@unnamed@CTagProcessor_cpp@13CTagCodeQuest"
 
 .obj _unnamed_CTagProcessor_cpp_CTagCodeQuest_hierarchy, global
 	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
@@ -9112,14 +9112,14 @@
 .endobj _unnamed_CTagProcessor_cpp_CTagCodeQuest_hierarchy
 
 
-.obj __vt___unnamed_CTagProcessor_cpp_CTagCodeFade, global
-	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeFade
+.obj "__vt__Q227@unnamed@CTagProcessor_cpp@12CTagCodeFade", global
+	.4byte "__RTTI__Q227@unnamed@CTagProcessor_cpp@12CTagCodeFade"
 	.4byte 0
 	.4byte __dt___unnamed_CTagProcessor_cpp_CTagCodeFade
 	.4byte func_80125B00
 	.4byte func_80125B50
 	.4byte func_80128C6C
-.endobj __vt___unnamed_CTagProcessor_cpp_CTagCodeFade
+.endobj "__vt__Q227@unnamed@CTagProcessor_cpp@12CTagCodeFade"
 
 .obj _unnamed_CTagProcessor_cpp_CTagCodeFade_hierarchy, global
 	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
@@ -9129,14 +9129,14 @@
 .endobj _unnamed_CTagProcessor_cpp_CTagCodeFade_hierarchy
 
 
-.obj __vt___unnamed_CTagProcessor_cpp_CTagCodeAct, global
-	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeAct
+.obj "__vt__Q227@unnamed@CTagProcessor_cpp@11CTagCodeAct", global
+	.4byte "__RTTI__Q227@unnamed@CTagProcessor_cpp@11CTagCodeAct"
 	.4byte 0
 	.4byte __dt___unnamed_CTagProcessor_cpp_CTagCodeAct
 	.4byte func_80125B00
 	.4byte func_80125B50
 	.4byte func_80128DA0
-.endobj __vt___unnamed_CTagProcessor_cpp_CTagCodeAct
+.endobj "__vt__Q227@unnamed@CTagProcessor_cpp@11CTagCodeAct"
 
 .obj _unnamed_CTagProcessor_cpp_CTagCodeAct_hierarchy, global
 	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
@@ -9146,14 +9146,14 @@
 .endobj _unnamed_CTagProcessor_cpp_CTagCodeAct_hierarchy
 
 
-.obj __vt___unnamed_CTagProcessor_cpp_CTagCodeSelect2, global
-	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeSelect2
+.obj "__vt__Q227@unnamed@CTagProcessor_cpp@15CTagCodeSelect2", global
+	.4byte "__RTTI__Q227@unnamed@CTagProcessor_cpp@15CTagCodeSelect2"
 	.4byte 0
 	.4byte __dt___unnamed_CTagProcessor_cpp_CTagCodeSelect2
 	.4byte func_80125B00
 	.4byte func_80125B50
 	.4byte func_80128EF8
-.endobj __vt___unnamed_CTagProcessor_cpp_CTagCodeSelect2
+.endobj "__vt__Q227@unnamed@CTagProcessor_cpp@15CTagCodeSelect2"
 
 .obj _unnamed_CTagProcessor_cpp_CTagCodeSelect2_hierarchy, global
 	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
@@ -9163,14 +9163,14 @@
 .endobj _unnamed_CTagProcessor_cpp_CTagCodeSelect2_hierarchy
 
 
-.obj __vt___unnamed_CTagProcessor_cpp_CTagCodeSelect, global
-	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeSelect
+.obj "__vt__Q227@unnamed@CTagProcessor_cpp@14CTagCodeSelect", global
+	.4byte "__RTTI__Q227@unnamed@CTagProcessor_cpp@14CTagCodeSelect"
 	.4byte 0
 	.4byte __dt___unnamed_CTagProcessor_cpp_CTagCodeSelect
 	.4byte func_80125B00
 	.4byte func_80125B50
 	.4byte func_80129008
-.endobj __vt___unnamed_CTagProcessor_cpp_CTagCodeSelect
+.endobj "__vt__Q227@unnamed@CTagProcessor_cpp@14CTagCodeSelect"
 
 .obj _unnamed_CTagProcessor_cpp_CTagCodeSelect_hierarchy, global
 	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
@@ -9180,14 +9180,14 @@
 .endobj _unnamed_CTagProcessor_cpp_CTagCodeSelect_hierarchy
 
 
-.obj __vt___unnamed_CTagProcessor_cpp_CTagCodeLine, global
-	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeLine
+.obj "__vt__Q227@unnamed@CTagProcessor_cpp@12CTagCodeLine", global
+	.4byte "__RTTI__Q227@unnamed@CTagProcessor_cpp@12CTagCodeLine"
 	.4byte 0
 	.4byte __dt___unnamed_CTagProcessor_cpp_CTagCodeLine
 	.4byte func_8012968C
 	.4byte func_80129128
 	.4byte func_80129118
-.endobj __vt___unnamed_CTagProcessor_cpp_CTagCodeLine
+.endobj "__vt__Q227@unnamed@CTagProcessor_cpp@12CTagCodeLine"
 
 .obj _unnamed_CTagProcessor_cpp_CTagCodeLine_hierarchy, global
 	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
@@ -9197,14 +9197,14 @@
 .endobj _unnamed_CTagProcessor_cpp_CTagCodeLine_hierarchy
 
 
-.obj __vt___unnamed_CTagProcessor_cpp_CTagCodeMouth, global
-	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeMouth
+.obj "__vt__Q227@unnamed@CTagProcessor_cpp@13CTagCodeMouth", global
+	.4byte "__RTTI__Q227@unnamed@CTagProcessor_cpp@13CTagCodeMouth"
 	.4byte 0
 	.4byte __dt___unnamed_CTagProcessor_cpp_CTagCodeMouth
 	.4byte func_80125B00
 	.4byte func_80125B50
 	.4byte func_8012A1A4
-.endobj __vt___unnamed_CTagProcessor_cpp_CTagCodeMouth
+.endobj "__vt__Q227@unnamed@CTagProcessor_cpp@13CTagCodeMouth"
 
 .obj _unnamed_CTagProcessor_cpp_CTagCodeMouth_hierarchy, global
 	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
@@ -9214,14 +9214,14 @@
 .endobj _unnamed_CTagProcessor_cpp_CTagCodeMouth_hierarchy
 
 
-.obj __vt___unnamed_CTagProcessor_cpp_CTagCodePos, global
-	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodePos
+.obj "__vt__Q227@unnamed@CTagProcessor_cpp@11CTagCodePos", global
+	.4byte "__RTTI__Q227@unnamed@CTagProcessor_cpp@11CTagCodePos"
 	.4byte 0
 	.4byte __dt___unnamed_CTagProcessor_cpp_CTagCodePos
 	.4byte func_80125B00
 	.4byte func_80125B50
 	.4byte func_8012A224
-.endobj __vt___unnamed_CTagProcessor_cpp_CTagCodePos
+.endobj "__vt__Q227@unnamed@CTagProcessor_cpp@11CTagCodePos"
 
 .obj _unnamed_CTagProcessor_cpp_CTagCodePos_hierarchy, global
 	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
@@ -9231,14 +9231,14 @@
 .endobj _unnamed_CTagProcessor_cpp_CTagCodePos_hierarchy
 
 
-.obj __vt___unnamed_CTagProcessor_cpp_CTagCodeType, global
-	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeType
+.obj "__vt__Q227@unnamed@CTagProcessor_cpp@12CTagCodeType", global
+	.4byte "__RTTI__Q227@unnamed@CTagProcessor_cpp@12CTagCodeType"
 	.4byte 0
 	.4byte __dt___unnamed_CTagProcessor_cpp_CTagCodeType
 	.4byte func_80125B00
 	.4byte func_80125B50
 	.4byte func_8012A388
-.endobj __vt___unnamed_CTagProcessor_cpp_CTagCodeType
+.endobj "__vt__Q227@unnamed@CTagProcessor_cpp@12CTagCodeType"
 
 .obj _unnamed_CTagProcessor_cpp_CTagCodeType_hierarchy, global
 	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
@@ -9248,14 +9248,14 @@
 .endobj _unnamed_CTagProcessor_cpp_CTagCodeType_hierarchy
 
 
-.obj __vt___unnamed_CTagProcessor_cpp_CTagCodeTrust, global
-	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeTrust
+.obj "__vt__Q227@unnamed@CTagProcessor_cpp@13CTagCodeTrust", global
+	.4byte "__RTTI__Q227@unnamed@CTagProcessor_cpp@13CTagCodeTrust"
 	.4byte 0
 	.4byte __dt___unnamed_CTagProcessor_cpp_CTagCodeTrust
 	.4byte func_80125B00
 	.4byte func_80125B50
 	.4byte func_8012A460
-.endobj __vt___unnamed_CTagProcessor_cpp_CTagCodeTrust
+.endobj "__vt__Q227@unnamed@CTagProcessor_cpp@13CTagCodeTrust"
 
 .obj _unnamed_CTagProcessor_cpp_CTagCodeTrust_hierarchy, global
 	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
@@ -9290,14 +9290,14 @@
 
 .balign 8
 
-.obj __vt___unnamed_CTagProcessor_cpp_CTagCodeCol, global
-	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeCol
+.obj "__vt__Q227@unnamed@CTagProcessor_cpp@11CTagCodeCol", global
+	.4byte "__RTTI__Q227@unnamed@CTagProcessor_cpp@11CTagCodeCol"
 	.4byte 0
 	.4byte __dt___unnamed_CTagProcessor_cpp_CTagCodeCol
 	.4byte func_8012AD40
 	.4byte func_8012AD2C
 	.4byte func_8012AAA4
-.endobj __vt___unnamed_CTagProcessor_cpp_CTagCodeCol
+.endobj "__vt__Q227@unnamed@CTagProcessor_cpp@11CTagCodeCol"
 
 .obj _unnamed_CTagProcessor_cpp_CTagCodeCol_hierarchy, global
 	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
@@ -9307,14 +9307,14 @@
 .endobj _unnamed_CTagProcessor_cpp_CTagCodeCol_hierarchy
 
 
-.obj __vt___unnamed_CTagProcessor_cpp_CTagCodeRuby, global
-	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeRuby
+.obj "__vt__Q227@unnamed@CTagProcessor_cpp@12CTagCodeRuby", global
+	.4byte "__RTTI__Q227@unnamed@CTagProcessor_cpp@12CTagCodeRuby"
 	.4byte 0
 	.4byte __dt___unnamed_CTagProcessor_cpp_CTagCodeRuby
 	.4byte func_8012B440
 	.4byte func_8012B070
 	.4byte func_8012AF90
-.endobj __vt___unnamed_CTagProcessor_cpp_CTagCodeRuby
+.endobj "__vt__Q227@unnamed@CTagProcessor_cpp@12CTagCodeRuby"
 
 .obj _unnamed_CTagProcessor_cpp_CTagCodeRuby_hierarchy, global
 	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
@@ -9324,14 +9324,14 @@
 .endobj _unnamed_CTagProcessor_cpp_CTagCodeRuby_hierarchy
 
 
-.obj __vt___unnamed_CTagProcessor_cpp_CTagCodeDel, global
-	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeDel
+.obj "__vt__Q227@unnamed@CTagProcessor_cpp@11CTagCodeDel", global
+	.4byte "__RTTI__Q227@unnamed@CTagProcessor_cpp@11CTagCodeDel"
 	.4byte 0
 	.4byte __dt___unnamed_CTagProcessor_cpp_CTagCodeDel
 	.4byte func_80125B00
 	.4byte func_80125B50
 	.4byte func_8012B8C4
-.endobj __vt___unnamed_CTagProcessor_cpp_CTagCodeDel
+.endobj "__vt__Q227@unnamed@CTagProcessor_cpp@11CTagCodeDel"
 
 .obj _unnamed_CTagProcessor_cpp_CTagCodeDel_hierarchy, global
 	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
@@ -9341,14 +9341,14 @@
 .endobj _unnamed_CTagProcessor_cpp_CTagCodeDel_hierarchy
 
 
-.obj __vt___unnamed_CTagProcessor_cpp_CTagCodeWait, global
-	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeWait
+.obj "__vt__Q227@unnamed@CTagProcessor_cpp@12CTagCodeWait", global
+	.4byte "__RTTI__Q227@unnamed@CTagProcessor_cpp@12CTagCodeWait"
 	.4byte 0
 	.4byte __dt___unnamed_CTagProcessor_cpp_CTagCodeWait
 	.4byte func_80125B00
 	.4byte func_80125B50
 	.4byte func_8012B944
-.endobj __vt___unnamed_CTagProcessor_cpp_CTagCodeWait
+.endobj "__vt__Q227@unnamed@CTagProcessor_cpp@12CTagCodeWait"
 
 .obj _unnamed_CTagProcessor_cpp_CTagCodeWait_hierarchy, global
 	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
@@ -9358,14 +9358,14 @@
 .endobj _unnamed_CTagProcessor_cpp_CTagCodeWait_hierarchy
 
 
-.obj __vt___unnamed_CTagProcessor_cpp_CTagCodeCP, global
-	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeCP
+.obj "__vt__Q227@unnamed@CTagProcessor_cpp@10CTagCodeCP", global
+	.4byte "__RTTI__Q227@unnamed@CTagProcessor_cpp@10CTagCodeCP"
 	.4byte 0
 	.4byte __dt___unnamed_CTagProcessor_cpp_CTagCodeCP
 	.4byte func_80125B00
 	.4byte func_80125B50
 	.4byte func_8012B9E0
-.endobj __vt___unnamed_CTagProcessor_cpp_CTagCodeCP
+.endobj "__vt__Q227@unnamed@CTagProcessor_cpp@10CTagCodeCP"
 
 .obj _unnamed_CTagProcessor_cpp_CTagCodeCP_hierarchy, global
 	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
@@ -9375,14 +9375,14 @@
 .endobj _unnamed_CTagProcessor_cpp_CTagCodeCP_hierarchy
 
 
-.obj __vt___unnamed_CTagProcessor_cpp_CTagCodeCL, global
-	.4byte __RTTI___unnamed_CTagProcessor_cpp_CTagCodeCL
+.obj "__vt__Q227@unnamed@CTagProcessor_cpp@10CTagCodeCL", global
+	.4byte "__RTTI__Q227@unnamed@CTagProcessor_cpp@10CTagCodeCL"
 	.4byte 0
 	.4byte __dt___unnamed_CTagProcessor_cpp_CTagCodeCL
 	.4byte func_80125B00
 	.4byte func_80125B50
 	.4byte func_8012B9F0
-.endobj __vt___unnamed_CTagProcessor_cpp_CTagCodeCL
+.endobj "__vt__Q227@unnamed@CTagProcessor_cpp@10CTagCodeCL"
 
 .obj _unnamed_CTagProcessor_cpp_CTagCodeCL_hierarchy, global
 	.4byte __RTTI___unnamed_CTagProcessor_cpp_ITagCode
@@ -9392,55 +9392,55 @@
 .endobj _unnamed_CTagProcessor_cpp_CTagCodeCL_hierarchy
 
 
-.obj __vt__CTagProcessorSE, global
-	.4byte __RTTI__CTagProcessorSE
+.obj __vt__15CTagProcessorSE, global
+	.4byte __RTTI__15CTagProcessorSE
 	.4byte 0
 	.4byte __dt__CTagProcessorSE
 	.4byte func_80125AB8
 	.4byte func_80125B08
 	.4byte func_80125B58
-.endobj __vt__CTagProcessorSE
+.endobj __vt__15CTagProcessorSE
 
 .obj CTagProcessorSE_hierarchy, global
-	.4byte __RTTI__nw4r_ut_TagProcessorBase_wchar_t
+	.4byte "__RTTI__Q34nw4r2ut19TagProcessorBase<w>"
 	.4byte 0
-	.4byte __RTTI__CTagProcessorBase
+	.4byte __RTTI__17CTagProcessorBase
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj CTagProcessorSE_hierarchy
 
 
-.obj __vt__CTagProcessor, global
-	.4byte __RTTI__CTagProcessor
+.obj __vt__13CTagProcessor, global
+	.4byte __RTTI__13CTagProcessor
 	.4byte 0
 	.4byte __dt__CTagProcessor
 	.4byte func_80125AB8
 	.4byte func_80125B08
 	.4byte func_80125B58
-.endobj __vt__CTagProcessor
+.endobj __vt__13CTagProcessor
 
 .obj CTagProcessor_hierarchy, global
-	.4byte __RTTI__nw4r_ut_TagProcessorBase_wchar_t
+	.4byte "__RTTI__Q34nw4r2ut19TagProcessorBase<w>"
 	.4byte 0
-	.4byte __RTTI__CTagProcessorBase
+	.4byte __RTTI__17CTagProcessorBase
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj CTagProcessor_hierarchy
 
 
-.obj __vt__CTagProcessorBase, global
-	.4byte __RTTI__CTagProcessorBase
+.obj __vt__17CTagProcessorBase, global
+	.4byte __RTTI__17CTagProcessorBase
 	.4byte 0
 	.4byte __dt__CTagProcessorBase
 	.4byte func_80125AB8
 	.4byte func_80125B08
 	.4byte func_80125B58
-.endobj __vt__CTagProcessorBase
+.endobj __vt__17CTagProcessorBase
 
 .obj CTagProcessorBase_hierarchy, global
-	.4byte __RTTI__nw4r_ut_TagProcessorBase_wchar_t
+	.4byte "__RTTI__Q34nw4r2ut19TagProcessorBase<w>"
 	.4byte 0
 	.4byte 0
 .endobj CTagProcessorBase_hierarchy
@@ -9666,145 +9666,145 @@
 
 .balign 8
 
-.obj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal, global
+.obj "__RTTI__Q227@unnamed@CTagProcessor_cpp@19CTagCodeMakeCrystal", global
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal_typestr
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal_hierarchy
-.endobj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeMakeCrystal
+.endobj "__RTTI__Q227@unnamed@CTagProcessor_cpp@19CTagCodeMakeCrystal"
 
-.obj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeShop, global
+.obj "__RTTI__Q227@unnamed@CTagProcessor_cpp@12CTagCodeShop", global
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeShop_typestr
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeShop_hierarchy
-.endobj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeShop
+.endobj "__RTTI__Q227@unnamed@CTagProcessor_cpp@12CTagCodeShop"
 
-.obj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeExchange, global
+.obj "__RTTI__Q227@unnamed@CTagProcessor_cpp@16CTagCodeExchange", global
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeExchange_typestr
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeExchange_hierarchy
-.endobj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeExchange
+.endobj "__RTTI__Q227@unnamed@CTagProcessor_cpp@16CTagCodeExchange"
 
-.obj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeTailOff, global
+.obj "__RTTI__Q227@unnamed@CTagProcessor_cpp@15CTagCodeTailOff", global
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeTailOff_typestr
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeTailOff_hierarchy
-.endobj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeTailOff
+.endobj "__RTTI__Q227@unnamed@CTagProcessor_cpp@15CTagCodeTailOff"
 
-.obj __RTTI___unnamed_CTagProcessor_cpp_CTagCodePresent, global
+.obj "__RTTI__Q227@unnamed@CTagProcessor_cpp@15CTagCodePresent", global
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodePresent_typestr
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodePresent_hierarchy
-.endobj __RTTI___unnamed_CTagProcessor_cpp_CTagCodePresent
+.endobj "__RTTI__Q227@unnamed@CTagProcessor_cpp@15CTagCodePresent"
 
-.obj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeQstStart, global
+.obj "__RTTI__Q227@unnamed@CTagProcessor_cpp@16CTagCodeQstStart", global
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeQstStart_typestr
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeQstStart_hierarchy
-.endobj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeQstStart
+.endobj "__RTTI__Q227@unnamed@CTagProcessor_cpp@16CTagCodeQstStart"
 
-.obj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeInvisible, global
+.obj "__RTTI__Q227@unnamed@CTagProcessor_cpp@17CTagCodeInvisible", global
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeInvisible_typestr
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeInvisible_hierarchy
-.endobj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeInvisible
+.endobj "__RTTI__Q227@unnamed@CTagProcessor_cpp@17CTagCodeInvisible"
 
-.obj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeQuest, global
+.obj "__RTTI__Q227@unnamed@CTagProcessor_cpp@13CTagCodeQuest", global
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeQuest_typestr
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeQuest_hierarchy
-.endobj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeQuest
+.endobj "__RTTI__Q227@unnamed@CTagProcessor_cpp@13CTagCodeQuest"
 
-.obj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeFade, global
+.obj "__RTTI__Q227@unnamed@CTagProcessor_cpp@12CTagCodeFade", global
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeFade_typestr
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeFade_hierarchy
-.endobj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeFade
+.endobj "__RTTI__Q227@unnamed@CTagProcessor_cpp@12CTagCodeFade"
 
-.obj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeAct, global
+.obj "__RTTI__Q227@unnamed@CTagProcessor_cpp@11CTagCodeAct", global
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeAct_typestr
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeAct_hierarchy
-.endobj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeAct
+.endobj "__RTTI__Q227@unnamed@CTagProcessor_cpp@11CTagCodeAct"
 
-.obj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeSelect2, global
+.obj "__RTTI__Q227@unnamed@CTagProcessor_cpp@15CTagCodeSelect2", global
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeSelect2_typestr
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeSelect2_hierarchy
-.endobj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeSelect2
+.endobj "__RTTI__Q227@unnamed@CTagProcessor_cpp@15CTagCodeSelect2"
 
-.obj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeSelect, global
+.obj "__RTTI__Q227@unnamed@CTagProcessor_cpp@14CTagCodeSelect", global
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeSelect_typestr
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeSelect_hierarchy
-.endobj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeSelect
+.endobj "__RTTI__Q227@unnamed@CTagProcessor_cpp@14CTagCodeSelect"
 
-.obj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeLine, global
+.obj "__RTTI__Q227@unnamed@CTagProcessor_cpp@12CTagCodeLine", global
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeLine_typestr
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeLine_hierarchy
-.endobj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeLine
+.endobj "__RTTI__Q227@unnamed@CTagProcessor_cpp@12CTagCodeLine"
 
-.obj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeMouth, global
+.obj "__RTTI__Q227@unnamed@CTagProcessor_cpp@13CTagCodeMouth", global
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeMouth_typestr
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeMouth_hierarchy
-.endobj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeMouth
+.endobj "__RTTI__Q227@unnamed@CTagProcessor_cpp@13CTagCodeMouth"
 
-.obj __RTTI___unnamed_CTagProcessor_cpp_CTagCodePos, global
+.obj "__RTTI__Q227@unnamed@CTagProcessor_cpp@11CTagCodePos", global
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodePos_typestr
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodePos_hierarchy
-.endobj __RTTI___unnamed_CTagProcessor_cpp_CTagCodePos
+.endobj "__RTTI__Q227@unnamed@CTagProcessor_cpp@11CTagCodePos"
 
-.obj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeType, global
+.obj "__RTTI__Q227@unnamed@CTagProcessor_cpp@12CTagCodeType", global
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeType_typestr
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeType_hierarchy
-.endobj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeType
+.endobj "__RTTI__Q227@unnamed@CTagProcessor_cpp@12CTagCodeType"
 
-.obj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeTrust, global
+.obj "__RTTI__Q227@unnamed@CTagProcessor_cpp@13CTagCodeTrust", global
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeTrust_typestr
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeTrust_hierarchy
-.endobj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeTrust
+.endobj "__RTTI__Q227@unnamed@CTagProcessor_cpp@13CTagCodeTrust"
 
-.obj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeCol, global
+.obj "__RTTI__Q227@unnamed@CTagProcessor_cpp@11CTagCodeCol", global
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeCol_typestr
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeCol_hierarchy
-.endobj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeCol
+.endobj "__RTTI__Q227@unnamed@CTagProcessor_cpp@11CTagCodeCol"
 
-.obj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeRuby, global
+.obj "__RTTI__Q227@unnamed@CTagProcessor_cpp@12CTagCodeRuby", global
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeRuby_typestr
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeRuby_hierarchy
-.endobj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeRuby
+.endobj "__RTTI__Q227@unnamed@CTagProcessor_cpp@12CTagCodeRuby"
 
-.obj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeDel, global
+.obj "__RTTI__Q227@unnamed@CTagProcessor_cpp@11CTagCodeDel", global
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeDel_typestr
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeDel_hierarchy
-.endobj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeDel
+.endobj "__RTTI__Q227@unnamed@CTagProcessor_cpp@11CTagCodeDel"
 
-.obj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeWait, global
+.obj "__RTTI__Q227@unnamed@CTagProcessor_cpp@12CTagCodeWait", global
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeWait_typestr
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeWait_hierarchy
-.endobj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeWait
+.endobj "__RTTI__Q227@unnamed@CTagProcessor_cpp@12CTagCodeWait"
 
-.obj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeCP, global
+.obj "__RTTI__Q227@unnamed@CTagProcessor_cpp@10CTagCodeCP", global
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeCP_typestr
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeCP_hierarchy
-.endobj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeCP
+.endobj "__RTTI__Q227@unnamed@CTagProcessor_cpp@10CTagCodeCP"
 
-.obj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeCL, global
+.obj "__RTTI__Q227@unnamed@CTagProcessor_cpp@10CTagCodeCL", global
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeCL_typestr
 	.4byte _unnamed_CTagProcessor_cpp_CTagCodeCL_hierarchy
-.endobj __RTTI___unnamed_CTagProcessor_cpp_CTagCodeCL
+.endobj "__RTTI__Q227@unnamed@CTagProcessor_cpp@10CTagCodeCL"
 
 .obj __RTTI___unnamed_CTagProcessor_cpp_ITagCode, global
 	.4byte _unnamed_CTagProcessor_cpp_ITagCode_typestr
 	.4byte 0
 .endobj __RTTI___unnamed_CTagProcessor_cpp_ITagCode
 
-.obj __RTTI__CTagProcessorSE, global
+.obj __RTTI__15CTagProcessorSE, global
 	.4byte CTagProcessorSE_typestr
 	.4byte CTagProcessorSE_hierarchy
-.endobj __RTTI__CTagProcessorSE
+.endobj __RTTI__15CTagProcessorSE
 
-.obj __RTTI__CTagProcessor, global
+.obj __RTTI__13CTagProcessor, global
 	.4byte CTagProcessor_typestr
 	.4byte CTagProcessor_hierarchy
-.endobj __RTTI__CTagProcessor
+.endobj __RTTI__13CTagProcessor
 
-.obj __RTTI__CTagProcessorBase, global
+.obj __RTTI__17CTagProcessorBase, global
 	.4byte CTagProcessorBase_typestr
 	.4byte CTagProcessorBase_hierarchy
-.endobj __RTTI__CTagProcessorBase
+.endobj __RTTI__17CTagProcessorBase
 
-.obj __RTTI__nw4r_ut_TagProcessorBase_wchar_t, global
+.obj "__RTTI__Q34nw4r2ut19TagProcessorBase<w>", global
 	.4byte nw4r_ut_TagProcessorBase_wchar_t_typestr
 	.4byte 0
-.endobj __RTTI__nw4r_ut_TagProcessorBase_wchar_t
+.endobj "__RTTI__Q34nw4r2ut19TagProcessorBase<w>"
 
 
 .obj lbl_806648C0, global

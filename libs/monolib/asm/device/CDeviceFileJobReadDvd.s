@@ -9,9 +9,9 @@
 /* 80451F2C 0041B4EC  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80451F30 0041B4F0  7C 7F 1B 78 */	mr r31, r3
 /* 80451F34 0041B4F4  4B FF FF 1D */	bl __ct__CDeviceFileJob
-/* 80451F38 0041B4F8  3C 60 80 57 */	lis r3, __vt__CDeviceFileJobReadDvd@ha
+/* 80451F38 0041B4F8  3C 60 80 57 */	lis r3, __vt__21CDeviceFileJobReadDvd@ha
 /* 80451F3C 0041B4FC  38 00 00 44 */	li r0, 0x44
-/* 80451F40 0041B500  38 63 FD E0 */	addi r3, r3, __vt__CDeviceFileJobReadDvd@l
+/* 80451F40 0041B500  38 63 FD E0 */	addi r3, r3, __vt__21CDeviceFileJobReadDvd@l
 /* 80451F44 0041B504  90 7F 00 00 */	stw r3, 0(r31)
 /* 80451F48 0041B508  7F E3 FB 78 */	mr r3, r31
 /* 80451F4C 0041B50C  90 1F 00 50 */	stw r0, 0x50(r31)
@@ -287,8 +287,8 @@
 
 .balign 8
 
-.obj __vt__CDeviceFileJobReadDvd, global
-	.4byte __RTTI__CDeviceFileJobReadDvd
+.obj __vt__21CDeviceFileJobReadDvd, global
+	.4byte __RTTI__21CDeviceFileJobReadDvd
 	.4byte 0
 	.4byte __dt__CDeviceFileJobReadDvd
 	.4byte IWorkEvent_WorkEvent1
@@ -331,14 +331,14 @@
 	.4byte func_80451EC0
 	.4byte func_80451FC0
 	.4byte func_80452054
-.endobj __vt__CDeviceFileJobReadDvd
+.endobj __vt__21CDeviceFileJobReadDvd
 
 .obj CDeviceFileJobReadDvd_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
-	.4byte __RTTI__CDeviceFileJob
+	.4byte __RTTI__14CDeviceFileJob
 	.4byte 0
 	.4byte 0
 .endobj CDeviceFileJobReadDvd_hierarchy
@@ -348,10 +348,10 @@
 
 .balign 8
 
-.obj __RTTI__CDeviceFileJobReadDvd, global
+.obj __RTTI__21CDeviceFileJobReadDvd, global
 	.4byte CDeviceFileJobReadDvd_typestr
 	.4byte CDeviceFileJobReadDvd_hierarchy
-.endobj __RTTI__CDeviceFileJobReadDvd
+.endobj __RTTI__21CDeviceFileJobReadDvd
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

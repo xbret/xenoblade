@@ -4,10 +4,10 @@
 
 .fn __ct__cf_CREvtMem, global
 /* 80167C40 00131200  C0 02 9B 90 */	lfs f0, float_80669F10@sda21(r2)
-/* 80167C44 00131204  3C 80 80 53 */	lis r4, __vt__cf_CREvtMem@ha
+/* 80167C44 00131204  3C 80 80 53 */	lis r4, __vt__Q22cf8CREvtMem@ha
 /* 80167C48 00131208  38 00 00 00 */	li r0, 0
 /* 80167C4C 0013120C  90 03 00 04 */	stw r0, 4(r3)
-/* 80167C50 00131210  38 84 42 00 */	addi r4, r4, __vt__cf_CREvtMem@l
+/* 80167C50 00131210  38 84 42 00 */	addi r4, r4, __vt__Q22cf8CREvtMem@l
 /* 80167C54 00131214  90 83 00 00 */	stw r4, 0(r3)
 /* 80167C58 00131218  90 03 00 08 */	stw r0, 8(r3)
 /* 80167C5C 0013121C  90 03 00 0C */	stw r0, 0xc(r3)
@@ -32,8 +32,8 @@
 /* 80167C9C 0013125C  93 C1 00 08 */	stw r30, 8(r1)
 /* 80167CA0 00131260  7C 7E 1B 78 */	mr r30, r3
 /* 80167CA4 00131264  41 82 00 80 */	beq .L_80167D24
-/* 80167CA8 00131268  3C 80 80 53 */	lis r4, __vt__cf_CREvtMem@ha
-/* 80167CAC 0013126C  38 84 42 00 */	addi r4, r4, __vt__cf_CREvtMem@l
+/* 80167CA8 00131268  3C 80 80 53 */	lis r4, __vt__Q22cf8CREvtMem@ha
+/* 80167CAC 0013126C  38 84 42 00 */	addi r4, r4, __vt__Q22cf8CREvtMem@l
 /* 80167CB0 00131270  90 83 00 00 */	stw r4, 0(r3)
 /* 80167CB4 00131274  80 6D A9 D0 */	lwz r3, lbl_80666B50@sda21(r13)
 /* 80167CB8 00131278  80 03 00 04 */	lwz r0, 4(r3)
@@ -313,22 +313,22 @@
 
 .balign 8
 
-.obj __vt__cf_CREvtMem, global
-	.4byte __RTTI__cf_CREvtMem
+.obj __vt__Q22cf8CREvtMem, global
+	.4byte __RTTI__Q22cf8CREvtMem
 	.4byte 0
 	.4byte __dt__cf_CREvtMem
 	.4byte 0
-.endobj __vt__cf_CREvtMem
+.endobj __vt__Q22cf8CREvtMem
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__cf_CREvtMem, global
+.obj __RTTI__Q22cf8CREvtMem, global
 	.4byte cf_CREvtMem_typestr
 	.4byte 0
-.endobj __RTTI__cf_CREvtMem
+.endobj __RTTI__Q22cf8CREvtMem
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

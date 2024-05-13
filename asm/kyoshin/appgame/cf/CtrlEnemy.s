@@ -11,9 +11,9 @@
 /* 800875BC 00050B7C  93 C1 00 08 */	stw r30, 8(r1)
 /* 800875C0 00050B80  7C 7E 1B 78 */	mr r30, r3
 /* 800875C4 00050B84  48 04 9B 19 */	bl __ct__800D10DC
-/* 800875C8 00050B88  3C 60 80 53 */	lis r3, __vt__cf_CtrlEnemy@ha
+/* 800875C8 00050B88  3C 60 80 53 */	lis r3, __vt__Q22cf9CtrlEnemy@ha
 /* 800875CC 00050B8C  7F C4 F3 78 */	mr r4, r30
-/* 800875D0 00050B90  38 63 AF 08 */	addi r3, r3, __vt__cf_CtrlEnemy@l
+/* 800875D0 00050B90  38 63 AF 08 */	addi r3, r3, __vt__Q22cf9CtrlEnemy@l
 /* 800875D4 00050B94  90 7E 00 00 */	stw r3, 0(r30)
 /* 800875D8 00050B98  38 7E 00 84 */	addi r3, r30, 0x84
 /* 800875DC 00050B9C  48 00 2B 29 */	bl __ct__8008A104
@@ -99,8 +99,8 @@
 /* 800876E0 00050CA0  93 C1 00 08 */	stw r30, 8(r1)
 /* 800876E4 00050CA4  7C 7E 1B 78 */	mr r30, r3
 /* 800876E8 00050CA8  41 82 00 28 */	beq .L_80087710
-/* 800876EC 00050CAC  3C 80 80 53 */	lis r4, __vt__cf_CtrlEnemy@ha
-/* 800876F0 00050CB0  38 84 AF 08 */	addi r4, r4, __vt__cf_CtrlEnemy@l
+/* 800876EC 00050CAC  3C 80 80 53 */	lis r4, __vt__Q22cf9CtrlEnemy@ha
+/* 800876F0 00050CB0  38 84 AF 08 */	addi r4, r4, __vt__Q22cf9CtrlEnemy@l
 /* 800876F4 00050CB4  90 83 00 00 */	stw r4, 0(r3)
 /* 800876F8 00050CB8  38 63 00 84 */	addi r3, r3, 0x84
 /* 800876FC 00050CBC  48 00 42 35 */	bl func_8008B930
@@ -1506,15 +1506,15 @@
 .balign 8
 
 .obj cf_CfObjectImpl_hierarchy, global
-	.4byte __RTTI__IActParamEvent
+	.4byte __RTTI__14IActParamEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj cf_CfObjectImpl_hierarchy
 
 
-.obj __vt__cf_CtrlEnemy, global
-	.4byte __RTTI__cf_CtrlEnemy
+.obj __vt__Q22cf9CtrlEnemy, global
+	.4byte __RTTI__Q22cf9CtrlEnemy
 	.4byte 0
 	.4byte __dt__cf_CtrlEnemy
 	.4byte func_8008772C
@@ -1550,28 +1550,28 @@
 	.4byte func_800888F0
 	.4byte func_800D34D4
 	.4byte func_800877A8
-.endobj __vt__cf_CtrlEnemy
+.endobj __vt__Q22cf9CtrlEnemy
 
 .obj cf_CtrlEnemy_hierarchy, global
-	.4byte __RTTI__CActInput
+	.4byte __RTTI__9CActInput
 	.4byte 0
-	.4byte __RTTI__cf_CtrlBase
+	.4byte __RTTI__Q22cf8CtrlBase
 	.4byte 0
-	.4byte __RTTI__cf_CtrlAct
+	.4byte __RTTI__Q22cf7CtrlAct
 	.4byte 0
 	.4byte 0
 .endobj cf_CtrlEnemy_hierarchy
 
 .obj cf_CtrlAct_hierarchy, global
-	.4byte __RTTI__CActInput
+	.4byte __RTTI__9CActInput
 	.4byte 0
-	.4byte __RTTI__cf_CtrlBase
+	.4byte __RTTI__Q22cf8CtrlBase
 	.4byte 0
 	.4byte 0
 .endobj cf_CtrlAct_hierarchy
 
 .obj cf_CtrlBase_hierarchy, global
-	.4byte __RTTI__CActInput
+	.4byte __RTTI__9CActInput
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1582,43 +1582,43 @@
 
 .balign 8
 
-.obj __RTTI__cf_IObjectInfo, global
+.obj __RTTI__Q22cf11IObjectInfo, global
 	.4byte cf_IObjectInfo_typestr
 	.4byte 0
-.endobj __RTTI__cf_IObjectInfo
+.endobj __RTTI__Q22cf11IObjectInfo
 
 
-.obj __RTTI__cf_CfObjectImpl, global
+.obj __RTTI__Q22cf8CfObjectImpl, global
 	.4byte cf_CfObjectImpl_typestr
 	.4byte cf_CfObjectImpl_hierarchy
-.endobj __RTTI__cf_CfObjectImpl
+.endobj __RTTI__Q22cf8CfObjectImpl
 
-.obj __RTTI__IActParamEvent, global
+.obj __RTTI__14IActParamEvent, global
 	.4byte IActParamEvent_typestr
 	.4byte 0
-.endobj __RTTI__IActParamEvent
+.endobj __RTTI__14IActParamEvent
 
-.obj __RTTI__cf_CtrlEnemy, global
+.obj __RTTI__Q22cf9CtrlEnemy, global
 	.4byte cf_CtrlEnemy_typestr
 	.4byte cf_CtrlEnemy_hierarchy
-.endobj __RTTI__cf_CtrlEnemy
+.endobj __RTTI__Q22cf9CtrlEnemy
 
-.obj __RTTI__cf_CtrlAct, global
+.obj __RTTI__Q22cf7CtrlAct, global
 	.4byte cf_CtrlAct_typestr
 	.4byte cf_CtrlAct_hierarchy
-.endobj __RTTI__cf_CtrlAct
+.endobj __RTTI__Q22cf7CtrlAct
 
 
-.obj __RTTI__cf_CtrlBase, global
+.obj __RTTI__Q22cf8CtrlBase, global
 	.4byte cf_CtrlBase_typestr
 	.4byte cf_CtrlBase_hierarchy
-.endobj __RTTI__cf_CtrlBase
+.endobj __RTTI__Q22cf8CtrlBase
 
 
-.obj __RTTI__CActInput, global
+.obj __RTTI__9CActInput, global
 	.4byte CActInput_typestr
 	.4byte 0
-.endobj __RTTI__CActInput
+.endobj __RTTI__9CActInput
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

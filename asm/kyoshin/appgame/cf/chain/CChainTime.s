@@ -5,9 +5,9 @@
 .fn __ct__cf_CChainTime, global
 /* 8027CDD4 00246394  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8027CDD8 00246398  7C 08 02 A6 */	mflr r0
-/* 8027CDDC 0024639C  3C 80 80 53 */	lis r4, __vt__cf_CChainTime@ha
+/* 8027CDDC 0024639C  3C 80 80 53 */	lis r4, __vt__Q22cf10CChainTime@ha
 /* 8027CDE0 002463A0  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8027CDE4 002463A4  38 84 F5 44 */	addi r4, r4, __vt__cf_CChainTime@l
+/* 8027CDE4 002463A4  38 84 F5 44 */	addi r4, r4, __vt__Q22cf10CChainTime@l
 /* 8027CDE8 002463A8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8027CDEC 002463AC  7C 7F 1B 78 */	mr r31, r3
 /* 8027CDF0 002463B0  90 83 00 14 */	stw r4, 0x14(r3)

@@ -5,10 +5,10 @@
 .fn __ct__CScnCameraMan, global
 /* 8049ACBC 0046427C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 8049ACC0 00464280  7C 08 02 A6 */	mflr r0
-/* 8049ACC4 00464284  3C C0 80 57 */	lis r6, __vt__CScnCameraMan@ha
+/* 8049ACC4 00464284  3C C0 80 57 */	lis r6, __vt__13CScnCameraMan@ha
 /* 8049ACC8 00464288  38 A0 00 00 */	li r5, 0
 /* 8049ACCC 0046428C  90 01 00 24 */	stw r0, 0x24(r1)
-/* 8049ACD0 00464290  38 C6 22 88 */	addi r6, r6, __vt__CScnCameraMan@l
+/* 8049ACD0 00464290  38 C6 22 88 */	addi r6, r6, __vt__13CScnCameraMan@l
 /* 8049ACD4 00464294  BF 41 00 08 */	stmw r26, 8(r1)
 /* 8049ACD8 00464298  3B 65 00 01 */	addi r27, r5, 1
 /* 8049ACDC 0046429C  3B BB 00 01 */	addi r29, r27, 1
@@ -103,9 +103,9 @@
 /* 8049AE30 004643F0  93 81 00 10 */	stw r28, 0x10(r1)
 /* 8049AE34 004643F4  7C 7C 1B 78 */	mr r28, r3
 /* 8049AE38 004643F8  41 82 00 78 */	beq .L_8049AEB0
-/* 8049AE3C 004643FC  3C 80 80 57 */	lis r4, __vt__CScnCameraMan@ha
+/* 8049AE3C 004643FC  3C 80 80 57 */	lis r4, __vt__13CScnCameraMan@ha
 /* 8049AE40 00464400  3B C0 00 00 */	li r30, 0
-/* 8049AE44 00464404  38 84 22 88 */	addi r4, r4, __vt__CScnCameraMan@l
+/* 8049AE44 00464404  38 84 22 88 */	addi r4, r4, __vt__13CScnCameraMan@l
 /* 8049AE48 00464408  90 83 00 00 */	stw r4, 0(r3)
 /* 8049AE4C 0046440C  3B E0 00 00 */	li r31, 0
 /* 8049AE50 00464410  48 00 00 40 */	b .L_8049AE90
@@ -956,8 +956,8 @@
 
 .balign 8
 
-.obj __vt__CScnCameraMan, global
-	.4byte __RTTI__CScnCameraMan
+.obj __vt__13CScnCameraMan, global
+	.4byte __RTTI__13CScnCameraMan
 	.4byte 0
 	.4byte __dt__CScnCameraMan
 	.4byte func_8049B410
@@ -991,10 +991,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CScnCameraMan
+.endobj __vt__13CScnCameraMan
 
 .obj CScnCameraMan_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1014,10 +1014,10 @@
 	.4byte 0xFFFFFFFF
 .endobj lbl_8066632C
 
-.obj __RTTI__CScnCameraMan, global
+.obj __RTTI__13CScnCameraMan, global
 	.4byte CScnCameraMan_typestr
 	.4byte CScnCameraMan_hierarchy
-.endobj __RTTI__CScnCameraMan
+.endobj __RTTI__13CScnCameraMan
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

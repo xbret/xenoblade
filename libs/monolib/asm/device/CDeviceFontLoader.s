@@ -10,9 +10,9 @@
 /* 80454E90 0041E450  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80454E94 0041E454  7C 7F 1B 78 */	mr r31, r3
 /* 80454E98 0041E458  4B FE 27 25 */	bl __ct__CWorkThread
-/* 80454E9C 0041E45C  3C 60 80 57 */	lis r3, __vt__CDeviceFontLoader@ha
+/* 80454E9C 0041E45C  3C 60 80 57 */	lis r3, __vt__17CDeviceFontLoader@ha
 /* 80454EA0 0041E460  38 80 00 00 */	li r4, 0
-/* 80454EA4 0041E464  38 63 00 F0 */	addi r3, r3, __vt__CDeviceFontLoader@l
+/* 80454EA4 0041E464  38 63 00 F0 */	addi r3, r3, __vt__17CDeviceFontLoader@l
 /* 80454EA8 0041E468  38 00 00 40 */	li r0, 0x40
 /* 80454EAC 0041E46C  90 7F 00 00 */	stw r3, 0(r31)
 /* 80454EB0 0041E470  7F E3 FB 78 */	mr r3, r31
@@ -198,8 +198,8 @@
 
 .balign 8
 
-.obj __vt__CDeviceFontLoader, global
-	.4byte __RTTI__CDeviceFontLoader
+.obj __vt__17CDeviceFontLoader, global
+	.4byte __RTTI__17CDeviceFontLoader
 	.4byte 0
 	.4byte __dt__CDeviceFontLoader
 	.4byte IWorkEvent_WorkEvent1
@@ -239,12 +239,12 @@
 	.4byte CDeviceFontLoader_WorkThreadEvent4
 	.4byte CDeviceFontLoader_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-.endobj __vt__CDeviceFontLoader
+.endobj __vt__17CDeviceFontLoader
 
 .obj CDeviceFontLoader_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -254,10 +254,10 @@
 
 .balign 8
 
-.obj __RTTI__CDeviceFontLoader, global
+.obj __RTTI__17CDeviceFontLoader, global
 	.4byte CDeviceFontLoader_typestr
 	.4byte CDeviceFontLoader_hierarchy
-.endobj __RTTI__CDeviceFontLoader
+.endobj __RTTI__17CDeviceFontLoader
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

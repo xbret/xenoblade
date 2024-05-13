@@ -10,18 +10,18 @@
 /* 80447DE4 004113A4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80447DE8 004113A8  7C 7F 1B 78 */	mr r31, r3
 /* 80447DEC 004113AC  4B FE F7 D1 */	bl __ct__CWorkThread
-/* 80447DF0 004113B0  3C 60 80 57 */	lis r3, __vt__CDeviceVI@ha
+/* 80447DF0 004113B0  3C 60 80 57 */	lis r3, __vt__9CDeviceVI@ha
 /* 80447DF4 004113B4  39 20 00 00 */	li r9, 0
-/* 80447DF8 004113B8  38 63 F6 B0 */	addi r3, r3, __vt__CDeviceVI@l
-/* 80447DFC 004113BC  3D 00 80 57 */	lis r8, __vt___reslist_base_CDeviceVICb@ha
+/* 80447DF8 004113B8  38 63 F6 B0 */	addi r3, r3, __vt__9CDeviceVI@l
+/* 80447DFC 004113BC  3D 00 80 57 */	lis r8, "__vt__29_reslist_base<P11CDeviceVICb>"@ha
 /* 80447E00 004113C0  38 03 00 A0 */	addi r0, r3, 0xa0
 /* 80447E04 004113C4  90 7F 00 00 */	stw r3, 0(r31)
 /* 80447E08 004113C8  38 FF 01 D8 */	addi r7, r31, 0x1d8
-/* 80447E0C 004113CC  39 08 F7 98 */	addi r8, r8, __vt___reslist_base_CDeviceVICb@l
+/* 80447E0C 004113CC  39 08 F7 98 */	addi r8, r8, "__vt__29_reslist_base<P11CDeviceVICb>"@l
 /* 80447E10 004113D0  90 1F 01 C8 */	stw r0, 0x1c8(r31)
-/* 80447E14 004113D4  3C C0 80 57 */	lis r6, __vt__reslist_CDeviceVICb@ha
+/* 80447E14 004113D4  3C C0 80 57 */	lis r6, "__vt__23reslist<P11CDeviceVICb>"@ha
 /* 80447E18 004113D8  C0 02 C7 E0 */	lfs f0, float_8066CB60@sda21(r2)
-/* 80447E1C 004113DC  38 C6 F7 80 */	addi r6, r6, __vt__reslist_CDeviceVICb@l
+/* 80447E1C 004113DC  38 C6 F7 80 */	addi r6, r6, "__vt__23reslist<P11CDeviceVICb>"@l
 /* 80447E20 004113E0  91 3F 01 C4 */	stw r9, 0x1c4(r31)
 /* 80447E24 004113E4  38 A0 00 09 */	li r5, 9
 /* 80447E28 004113E8  38 80 00 02 */	li r4, 2
@@ -168,9 +168,9 @@
 /* 80448034 004115F4  93 C1 00 08 */	stw r30, 8(r1)
 /* 80448038 004115F8  7C 7E 1B 78 */	mr r30, r3
 /* 8044803C 004115FC  41 82 00 78 */	beq .L_804480B4
-/* 80448040 00411600  3C A0 80 57 */	lis r5, __vt___reslist_base_CDeviceVICb@ha
+/* 80448040 00411600  3C A0 80 57 */	lis r5, "__vt__29_reslist_base<P11CDeviceVICb>"@ha
 /* 80448044 00411604  80 83 00 04 */	lwz r4, 4(r3)
-/* 80448048 00411608  38 A5 F7 98 */	addi r5, r5, __vt___reslist_base_CDeviceVICb@l
+/* 80448048 00411608  38 A5 F7 98 */	addi r5, r5, "__vt__29_reslist_base<P11CDeviceVICb>"@l
 /* 8044804C 0041160C  90 A3 00 00 */	stw r5, 0(r3)
 /* 80448050 00411610  38 00 00 00 */	li r0, 0
 /* 80448054 00411614  80 A4 00 00 */	lwz r5, 0(r4)
@@ -221,9 +221,9 @@
 /* 804480EC 004116AC  7C 7E 1B 78 */	mr r30, r3
 /* 804480F0 004116B0  41 82 00 7C */	beq .L_8044816C
 /* 804480F4 004116B4  41 82 00 68 */	beq .L_8044815C
-/* 804480F8 004116B8  3C A0 80 57 */	lis r5, __vt___reslist_base_CDeviceVICb@ha
+/* 804480F8 004116B8  3C A0 80 57 */	lis r5, "__vt__29_reslist_base<P11CDeviceVICb>"@ha
 /* 804480FC 004116BC  80 83 00 04 */	lwz r4, 4(r3)
-/* 80448100 004116C0  38 A5 F7 98 */	addi r5, r5, __vt___reslist_base_CDeviceVICb@l
+/* 80448100 004116C0  38 A5 F7 98 */	addi r5, r5, "__vt__29_reslist_base<P11CDeviceVICb>"@l
 /* 80448104 004116C4  90 A3 00 00 */	stw r5, 0(r3)
 /* 80448108 004116C8  38 00 00 00 */	li r0, 0
 /* 8044810C 004116CC  80 84 00 00 */	lwz r4, 0(r4)
@@ -274,9 +274,9 @@
 /* 804481A4 00411764  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 804481A8 00411768  7C 7D 1B 78 */	mr r29, r3
 /* 804481AC 0041176C  41 82 00 DC */	beq .L_80448288
-/* 804481B0 00411770  3C 80 80 57 */	lis r4, __vt__CDeviceVI@ha
+/* 804481B0 00411770  3C 80 80 57 */	lis r4, __vt__9CDeviceVI@ha
 /* 804481B4 00411774  7F A5 EB 78 */	mr r5, r29
-/* 804481B8 00411778  38 84 F6 B0 */	addi r4, r4, __vt__CDeviceVI@l
+/* 804481B8 00411778  38 84 F6 B0 */	addi r4, r4, __vt__9CDeviceVI@l
 /* 804481BC 0041177C  90 83 00 00 */	stw r4, 0(r3)
 /* 804481C0 00411780  38 04 00 A0 */	addi r0, r4, 0xa0
 /* 804481C4 00411784  90 03 01 C8 */	stw r0, 0x1c8(r3)
@@ -297,9 +297,9 @@
 /* 804481F8 004117B8  90 0D BD A8 */	stw r0, lbl_80667F28@sda21(r13)
 /* 804481FC 004117BC  41 82 00 68 */	beq .L_80448264
 /* 80448200 004117C0  41 82 00 64 */	beq .L_80448264
-/* 80448204 004117C4  3C 80 80 57 */	lis r4, __vt___reslist_base_CDeviceVICb@ha
+/* 80448204 004117C4  3C 80 80 57 */	lis r4, "__vt__29_reslist_base<P11CDeviceVICb>"@ha
 /* 80448208 004117C8  80 7F 00 04 */	lwz r3, 4(r31)
-/* 8044820C 004117CC  38 84 F7 98 */	addi r4, r4, __vt___reslist_base_CDeviceVICb@l
+/* 8044820C 004117CC  38 84 F7 98 */	addi r4, r4, "__vt__29_reslist_base<P11CDeviceVICb>"@l
 /* 80448210 004117D0  90 9F 00 00 */	stw r4, 0(r31)
 /* 80448214 004117D4  80 83 00 00 */	lwz r4, 0(r3)
 /* 80448218 004117D8  48 00 00 10 */	b .L_80448228
@@ -1417,8 +1417,8 @@
 .endobj lbl_8056F670
 
 
-.obj __vt__CDeviceVI, global
-	.4byte __RTTI__CDeviceVI
+.obj __vt__9CDeviceVI, global
+	.4byte __RTTI__9CDeviceVI
 	.4byte 0
 	.4byte __dt__CDeviceVI
 	.4byte IWorkEvent_WorkEvent1
@@ -1458,62 +1458,62 @@
 	.4byte CDeviceVI_WorkThreadEvent4
 	.4byte CDeviceVI_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-	.4byte __RTTI__CDeviceVI
+	.4byte __RTTI__9CDeviceVI
 	.4byte 0xFFFFFE38
 	.4byte func_80448F38
 	.4byte func_80448F30
 	.4byte func_80448E88
-.endobj __vt__CDeviceVI
+.endobj __vt__9CDeviceVI
 
 .obj CDeviceVI_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
-	.4byte __RTTI__CDeviceBase
+	.4byte __RTTI__11CDeviceBase
 	.4byte 0
 	.4byte 0
 .endobj CDeviceVI_hierarchy
 
 
-.obj __vt__reslist_CDeviceVICb, global
-	.4byte __RTTI__reslist_CDeviceVICb
+.obj "__vt__23reslist<P11CDeviceVICb>", global
+	.4byte "__RTTI__23reslist<P11CDeviceVICb>"
 	.4byte 0
 	.4byte __dt__reslist_CDeviceVICb
-.endobj __vt__reslist_CDeviceVICb
+.endobj "__vt__23reslist<P11CDeviceVICb>"
 
 .obj reslist_CDeviceVICb_hierarchy, global
-	.4byte __RTTI___reslist_base_CDeviceVICb
+	.4byte "__RTTI__29_reslist_base<P11CDeviceVICb>"
 	.4byte 0
 	.4byte 0
 .endobj reslist_CDeviceVICb_hierarchy
 
 
-.obj __vt___reslist_base_CDeviceVICb, global
-	.4byte __RTTI___reslist_base_CDeviceVICb
+.obj "__vt__29_reslist_base<P11CDeviceVICb>", global
+	.4byte "__RTTI__29_reslist_base<P11CDeviceVICb>"
 	.4byte 0
 	.4byte __dt___reslist_base_CDeviceVICb
 	.4byte 0
-.endobj __vt___reslist_base_CDeviceVICb
+.endobj "__vt__29_reslist_base<P11CDeviceVICb>"
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CDeviceVI, global
+.obj __RTTI__9CDeviceVI, global
 	.4byte CDeviceVI_typestr
 	.4byte CDeviceVI_hierarchy
-.endobj __RTTI__CDeviceVI
+.endobj __RTTI__9CDeviceVI
 
-.obj __RTTI__reslist_CDeviceVICb, global
+.obj "__RTTI__23reslist<P11CDeviceVICb>", global
 	.4byte reslist_CDeviceVICb_typestr
 	.4byte reslist_CDeviceVICb_hierarchy
-.endobj __RTTI__reslist_CDeviceVICb
+.endobj "__RTTI__23reslist<P11CDeviceVICb>"
 
-.obj __RTTI___reslist_base_CDeviceVICb, global
+.obj "__RTTI__29_reslist_base<P11CDeviceVICb>", global
 	.4byte _reslist_base_CDeviceVICb_typestr
 	.4byte 0
-.endobj __RTTI___reslist_base_CDeviceVICb
+.endobj "__RTTI__29_reslist_base<P11CDeviceVICb>"
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

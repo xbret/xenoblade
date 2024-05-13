@@ -15,9 +15,9 @@
 /* 804900E0 004596A0  93 81 00 10 */	stw r28, 0x10(r1)
 /* 804900E4 004596A4  7C 7C 1B 78 */	mr r28, r3
 /* 804900E8 004596A8  4B FB 8E 59 */	bl __ct__CDeviceVICb
-/* 804900EC 004596AC  3C 60 80 57 */	lis r3, __vt__CScnTexWorkMan@ha
+/* 804900EC 004596AC  3C 60 80 57 */	lis r3, __vt__14CScnTexWorkMan@ha
 /* 804900F0 004596B0  93 BC 00 04 */	stw r29, 4(r28)
-/* 804900F4 004596B4  38 63 20 18 */	addi r3, r3, __vt__CScnTexWorkMan@l
+/* 804900F4 004596B4  38 63 20 18 */	addi r3, r3, __vt__14CScnTexWorkMan@l
 /* 804900F8 004596B8  90 7C 00 00 */	stw r3, 0(r28)
 /* 804900FC 004596BC  80 6D A1 48 */	lwz r3, lbl_806662C8@sda21(r13)
 /* 80490100 004596C0  80 8D C0 40 */	lwz r4, lbl_806681C0@sda21(r13)
@@ -63,8 +63,8 @@
 /* 80490190 00459750  93 C1 00 08 */	stw r30, 8(r1)
 /* 80490194 00459754  7C 7E 1B 78 */	mr r30, r3
 /* 80490198 00459758  41 82 00 54 */	beq .L_804901EC
-/* 8049019C 0045975C  3C 80 80 57 */	lis r4, __vt__CScnTexWorkMan@ha
-/* 804901A0 00459760  38 84 20 18 */	addi r4, r4, __vt__CScnTexWorkMan@l
+/* 8049019C 0045975C  3C 80 80 57 */	lis r4, __vt__14CScnTexWorkMan@ha
+/* 804901A0 00459760  38 84 20 18 */	addi r4, r4, __vt__14CScnTexWorkMan@l
 /* 804901A4 00459764  90 83 00 00 */	stw r4, 0(r3)
 /* 804901A8 00459768  80 6D C0 40 */	lwz r3, lbl_806681C0@sda21(r13)
 /* 804901AC 0045976C  34 03 FF FF */	addic. r0, r3, -1
@@ -2127,17 +2127,17 @@
 
 .balign 8
 
-.obj __vt__CScnTexWorkMan, global
-	.4byte __RTTI__CScnTexWorkMan
+.obj __vt__14CScnTexWorkMan, global
+	.4byte __RTTI__14CScnTexWorkMan
 	.4byte 0
 	.4byte __dt__CScnTexWorkMan
 	.4byte func_80166630
 	.4byte func_80490310
 	.4byte func_80448A40
-.endobj __vt__CScnTexWorkMan
+.endobj __vt__14CScnTexWorkMan
 
 .obj CScnTexWorkMan_hierarchy, global
-	.4byte __RTTI__CDeviceVICb
+	.4byte __RTTI__11CDeviceVICb
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -2182,10 +2182,10 @@
 	.4byte 0xFFFFFFFF
 .endobj lbl_806662CC
 
-.obj __RTTI__CScnTexWorkMan, global
+.obj __RTTI__14CScnTexWorkMan, global
 	.4byte CScnTexWorkMan_typestr
 	.4byte CScnTexWorkMan_hierarchy
-.endobj __RTTI__CScnTexWorkMan
+.endobj __RTTI__14CScnTexWorkMan
 
 
 .obj lbl_806662D8, global

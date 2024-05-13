@@ -9,9 +9,9 @@
 /* 80494684 0045DC44  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80494688 0045DC48  7C 7F 1B 78 */	mr r31, r3
 /* 8049468C 0045DC4C  48 00 01 0D */	bl __ct__CVirtualLightObj
-/* 80494690 0045DC50  3C 60 80 57 */	lis r3, __vt__CVirtualLightAmb@ha
+/* 80494690 0045DC50  3C 60 80 57 */	lis r3, __vt__16CVirtualLightAmb@ha
 /* 80494694 0045DC54  38 00 00 01 */	li r0, 1
-/* 80494698 0045DC58  38 63 20 C0 */	addi r3, r3, __vt__CVirtualLightAmb@l
+/* 80494698 0045DC58  38 63 20 C0 */	addi r3, r3, __vt__16CVirtualLightAmb@l
 /* 8049469C 0045DC5C  90 7F 00 00 */	stw r3, 0(r31)
 /* 804946A0 0045DC60  7F E3 FB 78 */	mr r3, r31
 /* 804946A4 0045DC64  90 1F 00 2C */	stw r0, 0x2c(r31)
@@ -66,16 +66,16 @@
 
 .balign 8
 
-.obj __vt__CVirtualLightAmb, global
-	.4byte __RTTI__CVirtualLightAmb
+.obj __vt__16CVirtualLightAmb, global
+	.4byte __RTTI__16CVirtualLightAmb
 	.4byte 0
 	.4byte __dt__CVirtualLightAmb
 	.4byte func_804947EC
 	.4byte func_8049488C
-.endobj __vt__CVirtualLightAmb
+.endobj __vt__16CVirtualLightAmb
 
 .obj CVirtualLightAmb_hierarchy, global
-	.4byte __RTTI__CVirtualLightObj
+	.4byte __RTTI__16CVirtualLightObj
 	.4byte 0
 	.4byte 0
 .endobj CVirtualLightAmb_hierarchy
@@ -85,10 +85,10 @@
 
 .balign 8
 
-.obj __RTTI__CVirtualLightAmb, global
+.obj __RTTI__16CVirtualLightAmb, global
 	.4byte CVirtualLightAmb_typestr
 	.4byte CVirtualLightAmb_hierarchy
-.endobj __RTTI__CVirtualLightAmb
+.endobj __RTTI__16CVirtualLightAmb
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

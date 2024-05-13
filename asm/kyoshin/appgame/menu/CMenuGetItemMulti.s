@@ -17,12 +17,12 @@
 /* 801B2590 0017BB50  7D 3D 4B 78 */	mr r29, r9
 /* 801B2594 0017BB54  7D 5E 53 78 */	mr r30, r10
 /* 801B2598 0017BB58  48 29 24 81 */	bl __ct__8CProcessFv
-/* 801B259C 0017BB5C  3C 60 80 53 */	lis r3, __vt__CTTask_IUIWindow@ha
-/* 801B25A0 0017BB60  3C A0 80 53 */	lis r5, __vt__CMenuGetItemMulti@ha
-/* 801B25A4 0017BB64  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
+/* 801B259C 0017BB5C  3C 60 80 53 */	lis r3, "__vt__18CTTask<9IUIWindow>"@ha
+/* 801B25A0 0017BB60  3C A0 80 53 */	lis r5, __vt__17CMenuGetItemMulti@ha
+/* 801B25A4 0017BB64  38 63 0A 08 */	addi r3, r3, "__vt__18CTTask<9IUIWindow>"@l
 /* 801B25A8 0017BB68  90 77 00 10 */	stw r3, 0x10(r23)
 /* 801B25AC 0017BB6C  3D 40 80 51 */	lis r10, __ptmf_null@ha
-/* 801B25B0 0017BB70  38 A5 70 74 */	addi r5, r5, __vt__CMenuGetItemMulti@l
+/* 801B25B0 0017BB70  38 A5 70 74 */	addi r5, r5, __vt__17CMenuGetItemMulti@l
 /* 801B25B4 0017BB74  84 6A CE 10 */	lwzu r3, __ptmf_null@l(r10)
 /* 801B25B8 0017BB78  38 85 00 24 */	addi r4, r5, 0x24
 /* 801B25BC 0017BB7C  3A C0 00 00 */	li r22, 0
@@ -160,12 +160,12 @@
 /* 801B27A8 0017BD68  7C 9B 23 78 */	mr r27, r4
 /* 801B27AC 0017BD6C  7C BC 2B 78 */	mr r28, r5
 /* 801B27B0 0017BD70  48 29 22 69 */	bl __ct__8CProcessFv
-/* 801B27B4 0017BD74  3C 60 80 53 */	lis r3, __vt__CTTask_IUIWindow@ha
-/* 801B27B8 0017BD78  3C A0 80 53 */	lis r5, __vt__CMenuGetItemMulti@ha
-/* 801B27BC 0017BD7C  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
+/* 801B27B4 0017BD74  3C 60 80 53 */	lis r3, "__vt__18CTTask<9IUIWindow>"@ha
+/* 801B27B8 0017BD78  3C A0 80 53 */	lis r5, __vt__17CMenuGetItemMulti@ha
+/* 801B27BC 0017BD7C  38 63 0A 08 */	addi r3, r3, "__vt__18CTTask<9IUIWindow>"@l
 /* 801B27C0 0017BD80  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 801B27C4 0017BD84  3D 20 80 51 */	lis r9, __ptmf_null@ha
-/* 801B27C8 0017BD88  38 A5 70 74 */	addi r5, r5, __vt__CMenuGetItemMulti@l
+/* 801B27C8 0017BD88  38 A5 70 74 */	addi r5, r5, __vt__17CMenuGetItemMulti@l
 /* 801B27CC 0017BD8C  84 69 CE 10 */	lwzu r3, __ptmf_null@l(r9)
 /* 801B27D0 0017BD90  38 85 00 24 */	addi r4, r5, 0x24
 /* 801B27D4 0017BD94  3B A0 00 00 */	li r29, 0
@@ -8759,8 +8759,8 @@
 .endobj jumptable_80537050
 
 
-.obj __vt__CMenuGetItemMulti, global
-	.4byte __RTTI__CMenuGetItemMulti
+.obj __vt__17CMenuGetItemMulti, global
+	.4byte __RTTI__17CMenuGetItemMulti
 	.4byte 0
 	.4byte __dt__CMenuGetItemMulti
 	.4byte CChildListNode_Reset
@@ -8769,7 +8769,7 @@
 	.4byte func_801B40C4
 	.4byte func_80124584
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuGetItemMulti
+	.4byte __RTTI__17CMenuGetItemMulti
 	.4byte 0xFFFFFF94
 	.4byte func_801BA134
 	.4byte IWorkEvent_WorkEvent1
@@ -8803,28 +8803,28 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CMenuGetItemMulti
+	.4byte __RTTI__17CMenuGetItemMulti
 	.4byte 0xFFFFFF90
 	.4byte func_801BA144
 	.4byte func_801BA13C
 	.4byte func_801B4638
 	.4byte func_801B45A0
-.endobj __vt__CMenuGetItemMulti
+.endobj __vt__17CMenuGetItemMulti
 
 .obj CMenuGetItemMulti_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000070
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x0000006C
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUIWindow
+	.4byte "__RTTI__18CTTask<9IUIWindow>"
 	.4byte 0
-	.4byte __RTTI__IUIWindow
+	.4byte __RTTI__9IUIWindow
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -8834,10 +8834,10 @@
 
 .balign 8
 
-.obj __RTTI__CMenuGetItemMulti, global
+.obj __RTTI__17CMenuGetItemMulti, global
 	.4byte CMenuGetItemMulti_typestr
 	.4byte CMenuGetItemMulti_hierarchy
-.endobj __RTTI__CMenuGetItemMulti
+.endobj __RTTI__17CMenuGetItemMulti
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

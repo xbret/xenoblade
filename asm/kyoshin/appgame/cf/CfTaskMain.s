@@ -97,15 +97,15 @@
 /* 8006981C 00032DDC  7C 7F 1B 78 */	mr r31, r3
 /* 80069820 00032DE0  41 82 00 64 */	beq .L_80069884
 /* 80069824 00032DE4  48 3D B1 F5 */	bl __ct__8CProcessFv
-/* 80069828 00032DE8  3C 60 80 53 */	lis r3, __vt__CTTask_cf_CfTaskMain@ha
+/* 80069828 00032DE8  3C 60 80 53 */	lis r3, "__vt__25CTTask<Q22cf10CfTaskMain>"@ha
 /* 8006982C 00032DEC  3C C0 80 51 */	lis r6, __ptmf_null@ha
-/* 80069830 00032DF0  38 63 A7 28 */	addi r3, r3, __vt__CTTask_cf_CfTaskMain@l
+/* 80069830 00032DF0  38 63 A7 28 */	addi r3, r3, "__vt__25CTTask<Q22cf10CfTaskMain>"@l
 /* 80069834 00032DF4  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 80069838 00032DF8  38 C6 CE 10 */	addi r6, r6, __ptmf_null@l
 /* 8006983C 00032DFC  80 86 00 04 */	lwz r4, 4(r6)
-/* 80069840 00032E00  3C 60 80 53 */	lis r3, __vt__cf_CfTaskMain@ha
+/* 80069840 00032E00  3C 60 80 53 */	lis r3, __vt__Q22cf10CfTaskMain@ha
 /* 80069844 00032E04  80 A6 00 00 */	lwz r5, 0(r6)
-/* 80069848 00032E08  38 63 A6 50 */	addi r3, r3, __vt__cf_CfTaskMain@l
+/* 80069848 00032E08  38 63 A6 50 */	addi r3, r3, __vt__Q22cf10CfTaskMain@l
 /* 8006984C 00032E0C  90 BF 00 3C */	stw r5, 0x3c(r31)
 /* 80069850 00032E10  38 03 00 24 */	addi r0, r3, 0x24
 /* 80069854 00032E14  90 9F 00 40 */	stw r4, 0x40(r31)
@@ -202,8 +202,8 @@
 
 .balign 8
 
-.obj __vt__cf_CfTaskMain, global
-	.4byte __RTTI__cf_CfTaskMain
+.obj __vt__Q22cf10CfTaskMain, global
+	.4byte __RTTI__Q22cf10CfTaskMain
 	.4byte 0
 	.4byte __dt__cf_CfTaskMain
 	.4byte CChildListNode_Reset
@@ -212,7 +212,7 @@
 	.4byte func_800697CC
 	.4byte func_800697E0
 	.4byte func_800697E4
-	.4byte __RTTI__cf_CfTaskMain
+	.4byte __RTTI__Q22cf10CfTaskMain
 	.4byte 0xFFFFFFAC
 	.4byte func_80069944
 	.4byte IWorkEvent_WorkEvent1
@@ -246,25 +246,25 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__cf_CfTaskMain
+.endobj __vt__Q22cf10CfTaskMain
 
 .obj cf_CfTaskMain_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x00000054
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_cf_CfTaskMain
+	.4byte "__RTTI__25CTTask<Q22cf10CfTaskMain>"
 	.4byte 0
 	.4byte 0
 .endobj cf_CfTaskMain_hierarchy
 
 
-.obj __vt__CTTask_cf_CfTaskMain, global
-	.4byte __RTTI__CTTask_cf_CfTaskMain
+.obj "__vt__25CTTask<Q22cf10CfTaskMain>", global
+	.4byte "__RTTI__25CTTask<Q22cf10CfTaskMain>"
 	.4byte 0
 	.4byte __dt__CTTask_cf_CfTaskMain
 	.4byte CChildListNode_Reset
@@ -273,14 +273,14 @@
 	.4byte func_800698B4
 	.4byte func_800698FC
 	.4byte CProcess_func_80043F20
-.endobj __vt__CTTask_cf_CfTaskMain
+.endobj "__vt__25CTTask<Q22cf10CfTaskMain>"
 
 .obj CTTask_cf_CfTaskMain_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
 	.4byte 0
 .endobj CTTask_cf_CfTaskMain_hierarchy
@@ -290,15 +290,15 @@
 
 .balign 8
 
-.obj __RTTI__cf_CfTaskMain, global
+.obj __RTTI__Q22cf10CfTaskMain, global
 	.4byte cf_CfTaskMain_typestr
 	.4byte cf_CfTaskMain_hierarchy
-.endobj __RTTI__cf_CfTaskMain
+.endobj __RTTI__Q22cf10CfTaskMain
 
-.obj __RTTI__CTTask_cf_CfTaskMain, global
+.obj "__RTTI__25CTTask<Q22cf10CfTaskMain>", global
 	.4byte CTTask_cf_CfTaskMain_typestr
 	.4byte CTTask_cf_CfTaskMain_hierarchy
-.endobj __RTTI__CTTask_cf_CfTaskMain
+.endobj "__RTTI__25CTTask<Q22cf10CfTaskMain>"
 
 
 

@@ -176,8 +176,8 @@
 
 .balign 8
 
-.obj __vt__cf_CfObjectImplObj, global
-	.4byte __RTTI__cf_CfObjectImplObj
+.obj __vt__Q22cf15CfObjectImplObj, global
+	.4byte __RTTI__Q22cf15CfObjectImplObj
 	.4byte 0
 	.4byte __dt__cf_CfObjectImplObj
 	.4byte func_80054A20
@@ -222,11 +222,11 @@
 	.4byte func_800C596C
 	.4byte func_800CAA44
 	.4byte func_800CA540
-	.4byte __RTTI__cf_CfObjectImplObj
+	.4byte __RTTI__Q22cf15CfObjectImplObj
 	.4byte 0xFFFFFFF4
 	.4byte func_800CA6D4
 	.4byte func_800CA6CC
-	.4byte __RTTI__cf_CfObjectImplObj
+	.4byte __RTTI__Q22cf15CfObjectImplObj
 	.4byte 0xFFFFFFF0
 	.4byte func_800CA6DC
 	.4byte func_800C5988
@@ -237,16 +237,16 @@
 	.4byte func_800CA538
 	.4byte func_800CEE28
 	.4byte func_800CFFA0
-.endobj __vt__cf_CfObjectImplObj
+.endobj __vt__Q22cf15CfObjectImplObj
 
 .obj cf_CfObjectImplObj_hierarchy, global
-	.4byte __RTTI__cf_IObjectInfo
+	.4byte __RTTI__Q22cf11IObjectInfo
 	.4byte 0x00000010
-	.4byte __RTTI__IActParamEvent
+	.4byte __RTTI__14IActParamEvent
 	.4byte 0
-	.4byte __RTTI__cf_CfObjectImpl
+	.4byte __RTTI__Q22cf8CfObjectImpl
 	.4byte 0
-	.4byte __RTTI__cf_CfObjectImplMove
+	.4byte __RTTI__Q22cf16CfObjectImplMove
 	.4byte 0
 	.4byte 0
 	.4byte 0

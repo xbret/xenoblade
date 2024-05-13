@@ -11,9 +11,9 @@
 /* 804991EC 004627AC  48 00 04 FD */	bl func_804996E8
 /* 804991F0 004627B0  38 7F 00 48 */	addi r3, r31, 0x48
 /* 804991F4 004627B4  48 00 36 05 */	bl __ct__CScnFilter
-/* 804991F8 004627B8  3C 80 80 57 */	lis r4, __vt__CScnBloom@ha
+/* 804991F8 004627B8  3C 80 80 57 */	lis r4, __vt__9CScnBloom@ha
 /* 804991FC 004627BC  7F E3 FB 78 */	mr r3, r31
-/* 80499200 004627C0  38 84 22 50 */	addi r4, r4, __vt__CScnBloom@l
+/* 80499200 004627C0  38 84 22 50 */	addi r4, r4, __vt__9CScnBloom@l
 /* 80499204 004627C4  90 9F 00 80 */	stw r4, 0x80(r31)
 /* 80499208 004627C8  38 04 00 08 */	addi r0, r4, 8
 /* 8049920C 004627CC  90 1F 00 48 */	stw r0, 0x48(r31)
@@ -1856,22 +1856,22 @@
 
 .balign 8
 
-.obj __vt__CScnBloom, global
-	.4byte __RTTI__CScnBloom
+.obj __vt__9CScnBloom, global
+	.4byte __RTTI__9CScnBloom
 	.4byte 0
-	.4byte __RTTI__CScnBloom
+	.4byte __RTTI__9CScnBloom
 	.4byte 0xFFFFFFB8
 	.4byte func_804996E0
 	.4byte func_8049C868
 	.4byte func_804996D8
 	.4byte __dt__80499224
 	.4byte func_8049928C
-.endobj __vt__CScnBloom
+.endobj __vt__9CScnBloom
 
 .obj CScnBloom_hierarchy, global
-	.4byte __RTTI__CScnFilter
+	.4byte __RTTI__10CScnFilter
 	.4byte 0x00000048
-	.4byte __RTTI__CScnBloomBase
+	.4byte __RTTI__9CScnBloomBase
 	.4byte 0
 	.4byte 0
 .endobj CScnBloom_hierarchy
@@ -1881,15 +1881,15 @@
 
 .balign 8
 
-.obj __RTTI__CScnBloom, global
+.obj __RTTI__9CScnBloom, global
 	.4byte CScnBloom_typestr
 	.4byte CScnBloom_hierarchy
-.endobj __RTTI__CScnBloom
+.endobj __RTTI__9CScnBloom
 
-.obj __RTTI__CScnBloomBase, global
+.obj __RTTI__9CScnBloomBase, global
 	.4byte CScnBloomBase_typestr
 	.4byte 0
-.endobj __RTTI__CScnBloomBase
+.endobj __RTTI__9CScnBloomBase
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

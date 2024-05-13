@@ -5113,19 +5113,19 @@
 /* 800659FC 0002EFBC  7C 7F 1B 78 */	mr r31, r3
 /* 80065A00 0002EFC0  41 82 01 18 */	beq .L_80065B18
 /* 80065A04 0002EFC4  48 3D F0 15 */	bl __ct__8CProcessFv
-/* 80065A08 0002EFC8  3C 60 80 53 */	lis r3, __vt__CTTask_cf_CfResTask@ha
+/* 80065A08 0002EFC8  3C 60 80 53 */	lis r3, "__vt__23CTTask<Q22cf9CfResTask>"@ha
 /* 80065A0C 0002EFCC  3C E0 80 51 */	lis r7, __ptmf_null@ha
-/* 80065A10 0002EFD0  38 63 A0 1C */	addi r3, r3, __vt__CTTask_cf_CfResTask@l
+/* 80065A10 0002EFD0  38 63 A0 1C */	addi r3, r3, "__vt__23CTTask<Q22cf9CfResTask>"@l
 /* 80065A14 0002EFD4  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 80065A18 0002EFD8  38 E7 CE 10 */	addi r7, r7, __ptmf_null@l
-/* 80065A1C 0002EFDC  3C A0 80 53 */	lis r5, __vt__cf_CfResTask@ha
+/* 80065A1C 0002EFDC  3C A0 80 53 */	lis r5, __vt__Q22cf9CfResTask@ha
 /* 80065A20 0002EFE0  80 07 00 04 */	lwz r0, 4(r7)
-/* 80065A24 0002EFE4  3C 80 80 53 */	lis r4, __vt__cf_CfRes@ha
+/* 80065A24 0002EFE4  3C 80 80 53 */	lis r4, __vt__Q22cf5CfRes@ha
 /* 80065A28 0002EFE8  80 67 00 00 */	lwz r3, 0(r7)
-/* 80065A2C 0002EFEC  38 A5 9F D4 */	addi r5, r5, __vt__cf_CfResTask@l
+/* 80065A2C 0002EFEC  38 A5 9F D4 */	addi r5, r5, __vt__Q22cf9CfResTask@l
 /* 80065A30 0002EFF0  90 7F 00 3C */	stw r3, 0x3c(r31)
 /* 80065A34 0002EFF4  3B DF 00 54 */	addi r30, r31, 0x54
-/* 80065A38 0002EFF8  38 84 A0 60 */	addi r4, r4, __vt__cf_CfRes@l
+/* 80065A38 0002EFF8  38 84 A0 60 */	addi r4, r4, __vt__Q22cf5CfRes@l
 /* 80065A3C 0002EFFC  90 1F 00 40 */	stw r0, 0x40(r31)
 /* 80065A40 0002F000  38 7E 00 04 */	addi r3, r30, 4
 /* 80065A44 0002F004  80 07 00 08 */	lwz r0, 8(r7)
@@ -5623,8 +5623,8 @@
 	.4byte .L_80064544
 .endobj jumptable_80529F78
 
-.obj __vt__cf_CfResTask, global
-	.4byte __RTTI__cf_CfResTask
+.obj __vt__Q22cf9CfResTask, global
+	.4byte __RTTI__Q22cf9CfResTask
 	.4byte 0
 	.4byte __dt__cf_CfResTask
 	.4byte CChildListNode_Reset
@@ -5633,23 +5633,23 @@
 	.4byte func_800659C0
 	.4byte func_80065B50
 	.4byte CProcess_func_80043F20
-.endobj __vt__cf_CfResTask
+.endobj __vt__Q22cf9CfResTask
 
 .obj cf_CfResTask_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_cf_CfResTask
+	.4byte "__RTTI__23CTTask<Q22cf9CfResTask>"
 	.4byte 0
 	.4byte 0
 .endobj cf_CfResTask_hierarchy
 
 
-.obj __vt__CTTask_cf_CfResTask, global
-	.4byte __RTTI__CTTask_cf_CfResTask
+.obj "__vt__23CTTask<Q22cf9CfResTask>", global
+	.4byte "__RTTI__23CTTask<Q22cf9CfResTask>"
 	.4byte 0
 	.4byte __dt__CTTask_cf_CfResTask
 	.4byte CChildListNode_Reset
@@ -5658,22 +5658,22 @@
 	.4byte func_80065B54
 	.4byte func_80065B9C
 	.4byte CProcess_func_80043F20
-.endobj __vt__CTTask_cf_CfResTask
+.endobj "__vt__23CTTask<Q22cf9CfResTask>"
 
 .obj CTTask_cf_CfResTask_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj CTTask_cf_CfResTask_hierarchy
 
 
-.obj __vt__cf_CfRes, global
-	.4byte __RTTI__cf_CfRes
+.obj __vt__Q22cf5CfRes, global
+	.4byte __RTTI__Q22cf5CfRes
 	.4byte 0
 	.4byte __dt__cf_CfRes
 	.4byte IWorkEvent_WorkEvent1
@@ -5707,10 +5707,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__cf_CfRes
+.endobj __vt__Q22cf5CfRes
 
 .obj cf_CfRes_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -5761,20 +5761,20 @@
 	.4byte lbl_80668A7C
 .endobj lbl_80664324
 
-.obj __RTTI__cf_CfResTask, global
+.obj __RTTI__Q22cf9CfResTask, global
 	.4byte cf_CfResTask_typestr
 	.4byte cf_CfResTask_hierarchy
-.endobj __RTTI__cf_CfResTask
+.endobj __RTTI__Q22cf9CfResTask
 
-.obj __RTTI__CTTask_cf_CfResTask, global
+.obj "__RTTI__23CTTask<Q22cf9CfResTask>", global
 	.4byte CTTask_cf_CfResTask_typestr
 	.4byte CTTask_cf_CfResTask_hierarchy
-.endobj __RTTI__CTTask_cf_CfResTask
+.endobj "__RTTI__23CTTask<Q22cf9CfResTask>"
 
-.obj __RTTI__cf_CfRes, global
+.obj __RTTI__Q22cf5CfRes, global
 	.4byte cf_CfRes_typestr
 	.4byte cf_CfRes_hierarchy
-.endobj __RTTI__cf_CfRes
+.endobj __RTTI__Q22cf5CfRes
 
 .obj lbl_80664340, global
 	.4byte 0x2E000000

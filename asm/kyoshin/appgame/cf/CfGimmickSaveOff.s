@@ -12,9 +12,9 @@
 /* 802ABB58 00275118  93 A1 00 24 */	stw r29, 0x24(r1)
 /* 802ABB5C 0027511C  7C 7D 1B 78 */	mr r29, r3
 /* 802ABB60 00275120  4B F5 CD 81 */	bl __ct__cf_CfGimmick
-/* 802ABB64 00275124  3C 60 80 54 */	lis r3, __vt__cf_CfGimmickSaveOff@ha
+/* 802ABB64 00275124  3C 60 80 54 */	lis r3, __vt__Q22cf16CfGimmickSaveOff@ha
 /* 802ABB68 00275128  38 00 00 08 */	li r0, 8
-/* 802ABB6C 0027512C  38 63 D9 70 */	addi r3, r3, __vt__cf_CfGimmickSaveOff@l
+/* 802ABB6C 0027512C  38 63 D9 70 */	addi r3, r3, __vt__Q22cf16CfGimmickSaveOff@l
 /* 802ABB70 00275130  90 7D 00 00 */	stw r3, 0(r29)
 /* 802ABB74 00275134  B0 1D 00 82 */	sth r0, 0x82(r29)
 /* 802ABB78 00275138  4B D8 EE BD */	bl func_8003AA34
@@ -193,8 +193,8 @@
 
 .balign 8
 
-.obj __vt__cf_CfGimmickSaveOff, global
-	.4byte __RTTI__cf_CfGimmickSaveOff
+.obj __vt__Q22cf16CfGimmickSaveOff, global
+	.4byte __RTTI__Q22cf16CfGimmickSaveOff
 	.4byte 0
 	.4byte __dt__cf_CfGimmickSaveOff
 	.4byte func_8020896C
@@ -203,12 +203,12 @@
 	.4byte func_801F4BF8
 	.4byte func_801F4C8C
 	.4byte func_80208988
-.endobj __vt__cf_CfGimmickSaveOff
+.endobj __vt__Q22cf16CfGimmickSaveOff
 
 .obj cf_CfGimmickSaveOff_hierarchy, global
-	.4byte __RTTI__cf_IObjectInfo
+	.4byte __RTTI__Q22cf11IObjectInfo
 	.4byte 0
-	.4byte __RTTI__cf_CfGimmick
+	.4byte __RTTI__Q22cf9CfGimmick
 	.4byte 0
 	.4byte 0
 .endobj cf_CfGimmickSaveOff_hierarchy
@@ -217,10 +217,10 @@
 
 .balign 8
 
-.obj __RTTI__cf_CfGimmickSaveOff, global
+.obj __RTTI__Q22cf16CfGimmickSaveOff, global
 	.4byte cf_CfGimmickSaveOff_typestr
 	.4byte cf_CfGimmickSaveOff_hierarchy
-.endobj __RTTI__cf_CfGimmickSaveOff
+.endobj __RTTI__Q22cf16CfGimmickSaveOff
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

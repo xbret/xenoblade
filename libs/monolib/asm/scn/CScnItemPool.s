@@ -17,9 +17,9 @@
 /* 8048BDC0 00455380  4B CB 69 7D */	bl __ct__IWorkEvent
 /* 8048BDC4 00455384  38 79 00 04 */	addi r3, r25, 4
 /* 8048BDC8 00455388  4B FB D1 79 */	bl __ct__CDeviceVICb
-/* 8048BDCC 0045538C  3C 80 80 57 */	lis r4, __vt__CScnItemPool@ha
+/* 8048BDCC 0045538C  3C 80 80 57 */	lis r4, __vt__12CScnItemPool@ha
 /* 8048BDD0 00455390  93 59 00 08 */	stw r26, 8(r25)
-/* 8048BDD4 00455394  38 84 1C D0 */	addi r4, r4, __vt__CScnItemPool@l
+/* 8048BDD4 00455394  38 84 1C D0 */	addi r4, r4, __vt__12CScnItemPool@l
 /* 8048BDD8 00455398  38 79 00 0C */	addi r3, r25, 0xc
 /* 8048BDDC 0045539C  38 04 00 88 */	addi r0, r4, 0x88
 /* 8048BDE0 004553A0  90 99 00 00 */	stw r4, 0(r25)
@@ -114,14 +114,14 @@
 .endfn __ct__CScnItemPool
 
 .fn __ct__reslist_CScnItem, global
-/* 8048BF44 00455504  3C 80 80 57 */	lis r4, __vt___reslist_base_CScnItem@ha
+/* 8048BF44 00455504  3C 80 80 57 */	lis r4, "__vt__25_reslist_base<P8CScnItem>"@ha
 /* 8048BF48 00455508  38 00 00 00 */	li r0, 0
-/* 8048BF4C 0045550C  38 84 1D A0 */	addi r4, r4, __vt___reslist_base_CScnItem@l
+/* 8048BF4C 0045550C  38 84 1D A0 */	addi r4, r4, "__vt__25_reslist_base<P8CScnItem>"@l
 /* 8048BF50 00455510  90 83 00 00 */	stw r4, 0(r3)
 /* 8048BF54 00455514  38 A3 00 08 */	addi r5, r3, 8
 /* 8048BF58 00455518  90 03 00 14 */	stw r0, 0x14(r3)
-/* 8048BF5C 0045551C  3C 80 80 57 */	lis r4, __vt__reslist_CScnItem@ha
-/* 8048BF60 00455520  38 84 1D 88 */	addi r4, r4, __vt__reslist_CScnItem@l
+/* 8048BF5C 0045551C  3C 80 80 57 */	lis r4, "__vt__19reslist<P8CScnItem>"@ha
+/* 8048BF60 00455520  38 84 1D 88 */	addi r4, r4, "__vt__19reslist<P8CScnItem>"@l
 /* 8048BF64 00455524  90 03 00 18 */	stw r0, 0x18(r3)
 /* 8048BF68 00455528  98 03 00 1C */	stb r0, 0x1c(r3)
 /* 8048BF6C 0045552C  90 A3 00 04 */	stw r5, 4(r3)
@@ -141,9 +141,9 @@
 /* 8048BF98 00455558  93 C1 00 08 */	stw r30, 8(r1)
 /* 8048BF9C 0045555C  7C 7E 1B 78 */	mr r30, r3
 /* 8048BFA0 00455560  41 82 00 78 */	beq .L_8048C018
-/* 8048BFA4 00455564  3C A0 80 57 */	lis r5, __vt___reslist_base_CScnItem@ha
+/* 8048BFA4 00455564  3C A0 80 57 */	lis r5, "__vt__25_reslist_base<P8CScnItem>"@ha
 /* 8048BFA8 00455568  80 83 00 04 */	lwz r4, 4(r3)
-/* 8048BFAC 0045556C  38 A5 1D A0 */	addi r5, r5, __vt___reslist_base_CScnItem@l
+/* 8048BFAC 0045556C  38 A5 1D A0 */	addi r5, r5, "__vt__25_reslist_base<P8CScnItem>"@l
 /* 8048BFB0 00455570  90 A3 00 00 */	stw r5, 0(r3)
 /* 8048BFB4 00455574  38 00 00 00 */	li r0, 0
 /* 8048BFB8 00455578  80 A4 00 00 */	lwz r5, 0(r4)
@@ -194,9 +194,9 @@
 /* 8048C050 00455610  7C 7E 1B 78 */	mr r30, r3
 /* 8048C054 00455614  41 82 00 7C */	beq .L_8048C0D0
 /* 8048C058 00455618  41 82 00 68 */	beq .L_8048C0C0
-/* 8048C05C 0045561C  3C A0 80 57 */	lis r5, __vt___reslist_base_CScnItem@ha
+/* 8048C05C 0045561C  3C A0 80 57 */	lis r5, "__vt__25_reslist_base<P8CScnItem>"@ha
 /* 8048C060 00455620  80 83 00 04 */	lwz r4, 4(r3)
-/* 8048C064 00455624  38 A5 1D A0 */	addi r5, r5, __vt___reslist_base_CScnItem@l
+/* 8048C064 00455624  38 A5 1D A0 */	addi r5, r5, "__vt__25_reslist_base<P8CScnItem>"@l
 /* 8048C068 00455628  90 A3 00 00 */	stw r5, 0(r3)
 /* 8048C06C 0045562C  38 00 00 00 */	li r0, 0
 /* 8048C070 00455630  80 84 00 00 */	lwz r4, 0(r4)
@@ -329,8 +329,8 @@
 /* 8048C230 004557F0  93 C1 00 08 */	stw r30, 8(r1)
 /* 8048C234 004557F4  7C 7E 1B 78 */	mr r30, r3
 /* 8048C238 004557F8  41 82 01 24 */	beq .L_8048C35C
-/* 8048C23C 004557FC  3C 80 80 57 */	lis r4, __vt__CScnItemPool@ha
-/* 8048C240 00455800  38 84 1C D0 */	addi r4, r4, __vt__CScnItemPool@l
+/* 8048C23C 004557FC  3C 80 80 57 */	lis r4, __vt__12CScnItemPool@ha
+/* 8048C240 00455800  38 84 1C D0 */	addi r4, r4, __vt__12CScnItemPool@l
 /* 8048C244 00455804  90 83 00 00 */	stw r4, 0(r3)
 /* 8048C248 00455808  38 04 00 88 */	addi r0, r4, 0x88
 /* 8048C24C 0045580C  90 03 00 04 */	stw r0, 4(r3)
@@ -1428,8 +1428,8 @@
 
 .balign 8
 
-.obj __vt__CScnItemPool, global
-	.4byte __RTTI__CScnItemPool
+.obj __vt__12CScnItemPool, global
+	.4byte __RTTI__12CScnItemPool
 	.4byte 0
 	.4byte __dt__CScnItemPool
 	.4byte IWorkEvent_WorkEvent1
@@ -1463,63 +1463,63 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CScnItemPool
+	.4byte __RTTI__12CScnItemPool
 	.4byte 0xFFFFFFFC
 	.4byte func_8048D01C
 	.4byte func_80166630
 	.4byte func_8048D014
 	.4byte func_80448A40
 	.4byte func_8048CF58
-.endobj __vt__CScnItemPool
+.endobj __vt__12CScnItemPool
 
 .obj CScnItemPool_hierarchy, global
-	.4byte __RTTI__CDeviceVICb
+	.4byte __RTTI__11CDeviceVICb
 	.4byte 0x00000004
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 .endobj CScnItemPool_hierarchy
 
 
-.obj __vt__reslist_CScnItem, global
-	.4byte __RTTI__reslist_CScnItem
+.obj "__vt__19reslist<P8CScnItem>", global
+	.4byte "__RTTI__19reslist<P8CScnItem>"
 	.4byte 0
 	.4byte __dt__reslist_CScnItem
-.endobj __vt__reslist_CScnItem
+.endobj "__vt__19reslist<P8CScnItem>"
 
 .obj reslist_CScnItem_hierarchy, global
-	.4byte __RTTI___reslist_base_CScnItem
+	.4byte "__RTTI__25_reslist_base<P8CScnItem>"
 	.4byte 0
 	.4byte 0
 .endobj reslist_CScnItem_hierarchy
 
 
-.obj __vt___reslist_base_CScnItem, global
-	.4byte __RTTI___reslist_base_CScnItem
+.obj "__vt__25_reslist_base<P8CScnItem>", global
+	.4byte "__RTTI__25_reslist_base<P8CScnItem>"
 	.4byte 0
 	.4byte __dt___reslist_base_CScnItem
 	.4byte 0
-.endobj __vt___reslist_base_CScnItem
+.endobj "__vt__25_reslist_base<P8CScnItem>"
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CScnItemPool, global
+.obj __RTTI__12CScnItemPool, global
 	.4byte CScnItemPool_typestr
 	.4byte CScnItemPool_hierarchy
-.endobj __RTTI__CScnItemPool
+.endobj __RTTI__12CScnItemPool
 
-.obj __RTTI__reslist_CScnItem, global
+.obj "__RTTI__19reslist<P8CScnItem>", global
 	.4byte reslist_CScnItem_typestr
 	.4byte reslist_CScnItem_hierarchy
-.endobj __RTTI__reslist_CScnItem
+.endobj "__RTTI__19reslist<P8CScnItem>"
 
-.obj __RTTI___reslist_base_CScnItem, global
+.obj "__RTTI__25_reslist_base<P8CScnItem>", global
 	.4byte _reslist_base_CScnItem_typestr
 	.4byte 0
-.endobj __RTTI___reslist_base_CScnItem
+.endobj "__RTTI__25_reslist_base<P8CScnItem>"
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

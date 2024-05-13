@@ -3,9 +3,9 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .fn __ct__CMCCrystalSupport, global
-/* 8022E888 001F7E48  3C C0 80 54 */	lis r6, __vt__CMCCrystalSupport@ha
+/* 8022E888 001F7E48  3C C0 80 54 */	lis r6, __vt__17CMCCrystalSupport@ha
 /* 8022E88C 001F7E4C  38 A0 00 00 */	li r5, 0
-/* 8022E890 001F7E50  38 C6 9F 28 */	addi r6, r6, __vt__CMCCrystalSupport@l
+/* 8022E890 001F7E50  38 C6 9F 28 */	addi r6, r6, __vt__17CMCCrystalSupport@l
 /* 8022E894 001F7E54  38 00 00 01 */	li r0, 1
 /* 8022E898 001F7E58  90 C3 00 00 */	stw r6, 0(r3)
 /* 8022E89C 001F7E5C  90 83 00 04 */	stw r4, 4(r3)
@@ -825,8 +825,8 @@
 
 .balign 8
 
-.obj __vt__CMCCrystalSupport, global
-	.4byte __RTTI__CMCCrystalSupport
+.obj __vt__17CMCCrystalSupport, global
+	.4byte __RTTI__17CMCCrystalSupport
 	.4byte 0
 	.4byte __dt__CMCCrystalSupport
 	.4byte IWorkEvent_WorkEvent1
@@ -860,10 +860,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CMCCrystalSupport
+.endobj __vt__17CMCCrystalSupport
 
 .obj CMCCrystalSupport_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -873,10 +873,10 @@
 
 .balign 8
 
-.obj __RTTI__CMCCrystalSupport, global
+.obj __RTTI__17CMCCrystalSupport, global
 	.4byte CMCCrystalSupport_typestr
 	.4byte CMCCrystalSupport_hierarchy
-.endobj __RTTI__CMCCrystalSupport
+.endobj __RTTI__17CMCCrystalSupport
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

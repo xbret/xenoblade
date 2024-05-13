@@ -3,11 +3,11 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .fn __ct__COccCulling, global
-/* 801A04A4 00169A64  3C A0 80 53 */	lis r5, __vt__COccCulling@ha
+/* 801A04A4 00169A64  3C A0 80 53 */	lis r5, __vt__11COccCulling@ha
 /* 801A04A8 00169A68  38 80 00 00 */	li r4, 0
 /* 801A04AC 00169A6C  38 00 FF FF */	li r0, -1
 /* 801A04B0 00169A70  90 83 00 04 */	stw r4, 4(r3)
-/* 801A04B4 00169A74  38 A5 66 88 */	addi r5, r5, __vt__COccCulling@l
+/* 801A04B4 00169A74  38 A5 66 88 */	addi r5, r5, __vt__11COccCulling@l
 /* 801A04B8 00169A78  90 A3 00 00 */	stw r5, 0(r3)
 /* 801A04BC 00169A7C  90 83 00 08 */	stw r4, 8(r3)
 /* 801A04C0 00169A80  90 03 00 10 */	stw r0, 0x10(r3)
@@ -76,8 +76,8 @@
 /* 801A059C 00169B5C  7C 7E 1B 78 */	mr r30, r3
 /* 801A05A0 00169B60  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 801A05A4 00169B64  41 82 01 34 */	beq .L_801A06D8
-/* 801A05A8 00169B68  3C 80 80 53 */	lis r4, __vt__COccCulling@ha
-/* 801A05AC 00169B6C  38 84 66 88 */	addi r4, r4, __vt__COccCulling@l
+/* 801A05A8 00169B68  3C 80 80 53 */	lis r4, __vt__11COccCulling@ha
+/* 801A05AC 00169B6C  38 84 66 88 */	addi r4, r4, __vt__11COccCulling@l
 /* 801A05B0 00169B70  90 83 00 00 */	stw r4, 0(r3)
 /* 801A05B4 00169B74  48 00 01 E1 */	bl func_801A0794
 /* 801A05B8 00169B78  80 7E 00 10 */	lwz r3, 0x10(r30)
@@ -1397,21 +1397,21 @@
 
 .balign 8
 
-.obj __vt__COccCulling, global
-	.4byte __RTTI__COccCulling
+.obj __vt__11COccCulling, global
+	.4byte __RTTI__11COccCulling
 	.4byte 0
 	.4byte __dt__COccCulling
 	.4byte 0
-.endobj __vt__COccCulling
+.endobj __vt__11COccCulling
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__COccCulling, global
+.obj __RTTI__11COccCulling, global
 	.4byte COccCulling_typestr
 	.4byte 0
-.endobj __RTTI__COccCulling
+.endobj __RTTI__11COccCulling
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

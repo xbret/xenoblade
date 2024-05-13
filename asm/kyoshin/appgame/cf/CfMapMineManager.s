@@ -5,16 +5,16 @@
 .fn __ct__reslist_cf_CfMapMineManager_MinePoint, global
 /* 80205A7C 001CF03C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80205A80 001CF040  7C 08 02 A6 */	mflr r0
-/* 80205A84 001CF044  3C 80 80 54 */	lis r4, __vt___reslist_base_cf_CfMapMineManager_MinePoint@ha
-/* 80205A88 001CF048  3C A0 80 54 */	lis r5, __vt__reslist_cf_CfMapMineManager_MinePoint@ha
+/* 80205A84 001CF044  3C 80 80 54 */	lis r4, "__vt__48_reslist_base<Q32cf16CfMapMineManager9MinePoint>"@ha
+/* 80205A88 001CF048  3C A0 80 54 */	lis r5, "__vt__42reslist<Q32cf16CfMapMineManager9MinePoint>"@ha
 /* 80205A8C 001CF04C  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80205A90 001CF050  38 E0 00 00 */	li r7, 0
 /* 80205A94 001CF054  C0 02 A7 F0 */	lfs f0, float_8066AB70@sda21(r2)
-/* 80205A98 001CF058  38 84 8E FC */	addi r4, r4, __vt___reslist_base_cf_CfMapMineManager_MinePoint@l
+/* 80205A98 001CF058  38 84 8E FC */	addi r4, r4, "__vt__48_reslist_base<Q32cf16CfMapMineManager9MinePoint>"@l
 /* 80205A9C 001CF05C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80205AA0 001CF060  38 C3 00 0C */	addi r6, r3, 0xc
 /* 80205AA4 001CF064  39 03 00 6C */	addi r8, r3, 0x6c
-/* 80205AA8 001CF068  38 A5 8E E4 */	addi r5, r5, __vt__reslist_cf_CfMapMineManager_MinePoint@l
+/* 80205AA8 001CF068  38 A5 8E E4 */	addi r5, r5, "__vt__42reslist<Q32cf16CfMapMineManager9MinePoint>"@l
 /* 80205AAC 001CF06C  80 03 00 34 */	lwz r0, 0x34(r3)
 /* 80205AB0 001CF070  7C 7F 1B 78 */	mr r31, r3
 /* 80205AB4 001CF074  90 83 00 04 */	stw r4, 4(r3)
@@ -368,9 +368,9 @@
 /* 80205FC0 001CF580  93 C1 00 08 */	stw r30, 8(r1)
 /* 80205FC4 001CF584  7C 7E 1B 78 */	mr r30, r3
 /* 80205FC8 001CF588  41 82 00 80 */	beq .L_80206048
-/* 80205FCC 001CF58C  3C A0 80 54 */	lis r5, __vt___reslist_base_cf_CfMapMineManager_MinePoint@ha
+/* 80205FCC 001CF58C  3C A0 80 54 */	lis r5, "__vt__48_reslist_base<Q32cf16CfMapMineManager9MinePoint>"@ha
 /* 80205FD0 001CF590  80 83 00 04 */	lwz r4, 4(r3)
-/* 80205FD4 001CF594  38 A5 8E FC */	addi r5, r5, __vt___reslist_base_cf_CfMapMineManager_MinePoint@l
+/* 80205FD4 001CF594  38 A5 8E FC */	addi r5, r5, "__vt__48_reslist_base<Q32cf16CfMapMineManager9MinePoint>"@l
 /* 80205FD8 001CF598  90 A3 00 00 */	stw r5, 0(r3)
 /* 80205FDC 001CF59C  38 00 00 00 */	li r0, 0
 /* 80205FE0 001CF5A0  80 A4 00 00 */	lwz r5, 0(r4)
@@ -424,9 +424,9 @@
 /* 80206080 001CF640  7C 7E 1B 78 */	mr r30, r3
 /* 80206084 001CF644  41 82 00 84 */	beq .L_80206108
 /* 80206088 001CF648  41 82 00 70 */	beq .L_802060F8
-/* 8020608C 001CF64C  3C A0 80 54 */	lis r5, __vt___reslist_base_cf_CfMapMineManager_MinePoint@ha
+/* 8020608C 001CF64C  3C A0 80 54 */	lis r5, "__vt__48_reslist_base<Q32cf16CfMapMineManager9MinePoint>"@ha
 /* 80206090 001CF650  80 83 00 04 */	lwz r4, 4(r3)
-/* 80206094 001CF654  38 A5 8E FC */	addi r5, r5, __vt___reslist_base_cf_CfMapMineManager_MinePoint@l
+/* 80206094 001CF654  38 A5 8E FC */	addi r5, r5, "__vt__48_reslist_base<Q32cf16CfMapMineManager9MinePoint>"@l
 /* 80206098 001CF658  90 A3 00 00 */	stw r5, 0(r3)
 /* 8020609C 001CF65C  38 00 00 00 */	li r0, 0
 /* 802060A0 001CF660  80 84 00 00 */	lwz r4, 0(r4)
@@ -542,9 +542,9 @@
 /* 80206214 001CF7D4  37 BE 00 04 */	addic. r29, r30, 4
 /* 80206218 001CF7D8  41 82 00 74 */	beq .L_8020628C
 /* 8020621C 001CF7DC  41 82 00 70 */	beq .L_8020628C
-/* 80206220 001CF7E0  3C 80 80 54 */	lis r4, __vt___reslist_base_cf_CfMapMineManager_MinePoint@ha
+/* 80206220 001CF7E0  3C 80 80 54 */	lis r4, "__vt__48_reslist_base<Q32cf16CfMapMineManager9MinePoint>"@ha
 /* 80206224 001CF7E4  80 7D 00 04 */	lwz r3, 4(r29)
-/* 80206228 001CF7E8  38 84 8E FC */	addi r4, r4, __vt___reslist_base_cf_CfMapMineManager_MinePoint@l
+/* 80206228 001CF7E8  38 84 8E FC */	addi r4, r4, "__vt__48_reslist_base<Q32cf16CfMapMineManager9MinePoint>"@l
 /* 8020622C 001CF7EC  90 9D 00 00 */	stw r4, 0(r29)
 /* 80206230 001CF7F0  38 00 00 00 */	li r0, 0
 /* 80206234 001CF7F4  80 83 00 00 */	lwz r4, 0(r3)
@@ -2629,24 +2629,24 @@
 .endobj lbl_80538ED8
 
 
-.obj __vt__reslist_cf_CfMapMineManager_MinePoint, global
-	.4byte __RTTI__reslist_cf_CfMapMineManager_MinePoint
+.obj "__vt__42reslist<Q32cf16CfMapMineManager9MinePoint>", global
+	.4byte "__RTTI__42reslist<Q32cf16CfMapMineManager9MinePoint>"
 	.4byte 0
 	.4byte __dt__reslist_cf_CfMapMineManager_MinePoint
-.endobj __vt__reslist_cf_CfMapMineManager_MinePoint
+.endobj "__vt__42reslist<Q32cf16CfMapMineManager9MinePoint>"
 
 .obj reslist_cf_CfMapMineManager_MinePoint_hierarchy, global
-	.4byte __RTTI___reslist_base_cf_CfMapMineManager_MinePoint
+	.4byte "__RTTI__48_reslist_base<Q32cf16CfMapMineManager9MinePoint>"
 	.4byte 0
 	.4byte 0
 .endobj reslist_cf_CfMapMineManager_MinePoint_hierarchy
 
 
-.obj __vt___reslist_base_cf_CfMapMineManager_MinePoint, global
-	.4byte __RTTI___reslist_base_cf_CfMapMineManager_MinePoint
+.obj "__vt__48_reslist_base<Q32cf16CfMapMineManager9MinePoint>", global
+	.4byte "__RTTI__48_reslist_base<Q32cf16CfMapMineManager9MinePoint>"
 	.4byte 0
 	.4byte __dt___reslist_base_cf_CfMapMineManager_MinePoint
-.endobj __vt___reslist_base_cf_CfMapMineManager_MinePoint
+.endobj "__vt__48_reslist_base<Q32cf16CfMapMineManager9MinePoint>"
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
@@ -2669,15 +2669,15 @@
 	.4byte 0x0000000A
 .endobj lbl_80665058
 
-.obj __RTTI__reslist_cf_CfMapMineManager_MinePoint, global
+.obj "__RTTI__42reslist<Q32cf16CfMapMineManager9MinePoint>", global
 	.4byte reslist_cf_CfMapMineManager_MinePoint_typestr
 	.4byte reslist_cf_CfMapMineManager_MinePoint_hierarchy
-.endobj __RTTI__reslist_cf_CfMapMineManager_MinePoint
+.endobj "__RTTI__42reslist<Q32cf16CfMapMineManager9MinePoint>"
 
-.obj __RTTI___reslist_base_cf_CfMapMineManager_MinePoint, global
+.obj "__RTTI__48_reslist_base<Q32cf16CfMapMineManager9MinePoint>", global
 	.4byte _reslist_base_cf_CfMapMineManager_MinePoint_typestr
 	.4byte 0
-.endobj __RTTI___reslist_base_cf_CfMapMineManager_MinePoint
+.endobj "__RTTI__48_reslist_base<Q32cf16CfMapMineManager9MinePoint>"
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

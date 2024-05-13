@@ -2899,16 +2899,16 @@
 /* 804B5830 0047EDF0  7C 7F 1B 78 */	mr r31, r3
 /* 804B5834 0047EDF4  41 82 00 94 */	beq .L_804B58C8
 /* 804B5838 0047EDF8  4B F8 F1 E1 */	bl __ct__8CProcessFv
-/* 804B583C 0047EDFC  3C 60 80 57 */	lis r3, __vt__CTTask_CTaskColiManager@ha
+/* 804B583C 0047EDFC  3C 60 80 57 */	lis r3, "__vt__26CTTask<16CTaskColiManager>"@ha
 /* 804B5840 0047EE00  3C C0 80 51 */	lis r6, __ptmf_null@ha
-/* 804B5844 0047EE04  38 63 2C F8 */	addi r3, r3, __vt__CTTask_CTaskColiManager@l
+/* 804B5844 0047EE04  38 63 2C F8 */	addi r3, r3, "__vt__26CTTask<16CTaskColiManager>"@l
 /* 804B5848 0047EE08  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 804B584C 0047EE0C  38 C6 CE 10 */	addi r6, r6, __ptmf_null@l
 /* 804B5850 0047EE10  38 00 00 00 */	li r0, 0
 /* 804B5854 0047EE14  80 86 00 04 */	lwz r4, 4(r6)
-/* 804B5858 0047EE18  3C 60 80 57 */	lis r3, __vt__CTaskColiManager@ha
+/* 804B5858 0047EE18  3C 60 80 57 */	lis r3, __vt__16CTaskColiManager@ha
 /* 804B585C 0047EE1C  80 A6 00 00 */	lwz r5, 0(r6)
-/* 804B5860 0047EE20  38 63 2C B0 */	addi r3, r3, __vt__CTaskColiManager@l
+/* 804B5860 0047EE20  38 63 2C B0 */	addi r3, r3, __vt__16CTaskColiManager@l
 /* 804B5864 0047EE24  90 BF 00 3C */	stw r5, 0x3c(r31)
 /* 804B5868 0047EE28  90 9F 00 40 */	stw r4, 0x40(r31)
 /* 804B586C 0047EE2C  80 86 00 08 */	lwz r4, 8(r6)
@@ -3002,8 +3002,8 @@
 /* 804B599C 0047EF5C  3F E0 80 66 */	lis r31, lbl_8065F9F8@ha
 /* 804B59A0 0047EF60  38 7F F9 F8 */	addi r3, r31, lbl_8065F9F8@l
 /* 804B59A4 0047EF64  4B FF CB D5 */	bl __ct__CColiProc
-/* 804B59A8 0047EF68  3C 60 80 57 */	lis r3, __vt__CColiManCall@ha
-/* 804B59AC 0047EF6C  38 63 2D 38 */	addi r3, r3, __vt__CColiManCall@l
+/* 804B59A8 0047EF68  3C 60 80 57 */	lis r3, __vt__12CColiManCall@ha
+/* 804B59AC 0047EF6C  38 63 2D 38 */	addi r3, r3, __vt__12CColiManCall@l
 /* 804B59B0 0047EF70  90 7F F9 F8 */	stw r3, lbl_8065F9F8@l(r31)
 /* 804B59B4 0047EF74  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 804B59B8 0047EF78  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -3043,8 +3043,8 @@
 
 .balign 8
 
-.obj __vt__CTaskColiManager, global
-	.4byte __RTTI__CTaskColiManager
+.obj __vt__16CTaskColiManager, global
+	.4byte __RTTI__16CTaskColiManager
 	.4byte 0
 	.4byte __dt__CTaskColiManager
 	.4byte CChildListNode_Reset
@@ -3053,23 +3053,23 @@
 	.4byte func_804B4D58
 	.4byte func_804B4E0C
 	.4byte CProcess_func_80043F20
-.endobj __vt__CTaskColiManager
+.endobj __vt__16CTaskColiManager
 
 .obj CTaskColiManager_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_CTaskColiManager
+	.4byte "__RTTI__26CTTask<16CTaskColiManager>"
 	.4byte 0
 	.4byte 0
 .endobj CTaskColiManager_hierarchy
 
 
-.obj __vt__CTTask_CTaskColiManager, global
-	.4byte __RTTI__CTTask_CTaskColiManager
+.obj "__vt__26CTTask<16CTaskColiManager>", global
+	.4byte "__RTTI__26CTTask<16CTaskColiManager>"
 	.4byte 0
 	.4byte __dt__CTTask_CTaskColiManager
 	.4byte CChildListNode_Reset
@@ -3078,28 +3078,28 @@
 	.4byte func_804B58FC
 	.4byte func_804B5944
 	.4byte CProcess_func_80043F20
-.endobj __vt__CTTask_CTaskColiManager
+.endobj "__vt__26CTTask<16CTaskColiManager>"
 
 .obj CTTask_CTaskColiManager_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
 	.4byte 0
 .endobj CTTask_CTaskColiManager_hierarchy
 
 
-.obj __vt__CColiManCall, global
-	.4byte __RTTI__CColiManCall
+.obj __vt__12CColiManCall, global
+	.4byte __RTTI__12CColiManCall
 	.4byte 0
 	.4byte func_804B59C8
 	
-.endobj __vt__CColiManCall
+.endobj __vt__12CColiManCall
 
 .obj CColiManCall_hierarchy, global
-	.4byte __RTTI__CColiProc
+	.4byte __RTTI__9CColiProc
 	.4byte 0
 	.4byte 0
 .endobj CColiManCall_hierarchy
@@ -3113,20 +3113,20 @@
 	.4byte 0
 .endobj lbl_806663C8
 
-.obj __RTTI__CTaskColiManager, global
+.obj __RTTI__16CTaskColiManager, global
 	.4byte CTaskColiManager_typestr
 	.4byte CTaskColiManager_hierarchy
-.endobj __RTTI__CTaskColiManager
+.endobj __RTTI__16CTaskColiManager
 
-.obj __RTTI__CTTask_CTaskColiManager, global
+.obj "__RTTI__26CTTask<16CTaskColiManager>", global
 	.4byte CTTask_CTaskColiManager_typestr
 	.4byte CTTask_CTaskColiManager_hierarchy
-.endobj __RTTI__CTTask_CTaskColiManager
+.endobj "__RTTI__26CTTask<16CTaskColiManager>"
 
-.obj __RTTI__CColiManCall, global
+.obj __RTTI__12CColiManCall, global
 	.4byte CColiManCall_typestr
 	.4byte CColiManCall_hierarchy
-.endobj __RTTI__CColiManCall
+.endobj __RTTI__12CColiManCall
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

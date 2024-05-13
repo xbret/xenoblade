@@ -433,9 +433,9 @@
 /* 8006BC4C 0003520C  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8006BC50 00035210  7C 7D 1B 78 */	mr r29, r3
 /* 8006BC54 00035214  48 00 02 11 */	bl __ct__cf_CfCam
-/* 8006BC58 00035218  3C 80 80 53 */	lis r4, __vt__cf_CfCamFollow@ha
+/* 8006BC58 00035218  3C 80 80 53 */	lis r4, __vt__Q22cf11CfCamFollow@ha
 /* 8006BC5C 0003521C  38 7D 00 1C */	addi r3, r29, 0x1c
-/* 8006BC60 00035220  38 84 AA 30 */	addi r4, r4, __vt__cf_CfCamFollow@l
+/* 8006BC60 00035220  38 84 AA 30 */	addi r4, r4, __vt__Q22cf11CfCamFollow@l
 /* 8006BC64 00035224  90 9D 00 00 */	stw r4, 0(r29)
 /* 8006BC68 00035228  4B FD F4 49 */	bl func_8004B0B0
 /* 8006BC6C 0003522C  C0 22 87 E4 */	lfs f1, float_80668B64@sda21(r2)
@@ -567,9 +567,9 @@
 .endfn __ct__cf_CfCamFollow
 
 .fn __ct__cf_CfCam, global
-/* 8006BE64 00035424  3C A0 80 53 */	lis r5, __vt__cf_CfCam@ha
+/* 8006BE64 00035424  3C A0 80 53 */	lis r5, __vt__Q22cf5CfCam@ha
 /* 8006BE68 00035428  38 00 00 00 */	li r0, 0
-/* 8006BE6C 0003542C  38 A5 AA B8 */	addi r5, r5, __vt__cf_CfCam@l
+/* 8006BE6C 0003542C  38 A5 AA B8 */	addi r5, r5, __vt__Q22cf5CfCam@l
 /* 8006BE70 00035430  90 A3 00 00 */	stw r5, 0(r3)
 /* 8006BE74 00035434  90 03 00 04 */	stw r0, 4(r3)
 /* 8006BE78 00035438  90 83 00 0C */	stw r4, 0xc(r3)
@@ -654,8 +654,8 @@
 /* 8006BF38 000354F8  93 C1 00 08 */	stw r30, 8(r1)
 /* 8006BF3C 000354FC  7C 7E 1B 78 */	mr r30, r3
 /* 8006BF40 00035500  41 82 00 60 */	beq .L_8006BFA0
-/* 8006BF44 00035504  3C 80 80 53 */	lis r4, __vt__cf_CfCamFollow@ha
-/* 8006BF48 00035508  38 84 AA 30 */	addi r4, r4, __vt__cf_CfCamFollow@l
+/* 8006BF44 00035504  3C 80 80 53 */	lis r4, __vt__Q22cf11CfCamFollow@ha
+/* 8006BF48 00035508  38 84 AA 30 */	addi r4, r4, __vt__Q22cf11CfCamFollow@l
 /* 8006BF4C 0003550C  90 83 00 00 */	stw r4, 0(r3)
 /* 8006BF50 00035510  48 00 00 6D */	bl func_8006BFBC
 /* 8006BF54 00035514  28 03 00 01 */	cmplwi r3, 1
@@ -9611,8 +9611,8 @@
 .fn func_80073DDC, global
 /* 80073DDC 0003D39C  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80073DE0 0003D3A0  7C 08 02 A6 */	mflr r0
-/* 80073DE4 0003D3A4  38 AD 82 A0 */	addi r5, r13, __RTTI__cf_CfCamFollow@sda21
-/* 80073DE8 0003D3A8  38 CD 82 A8 */	addi r6, r13, __RTTI__cf_CfCam@sda21
+/* 80073DE4 0003D3A4  38 AD 82 A0 */	addi r5, r13, __RTTI__Q22cf11CfCamFollow@sda21
+/* 80073DE8 0003D3A8  38 CD 82 A8 */	addi r6, r13, __RTTI__Q22cf5CfCam@sda21
 /* 80073DEC 0003D3AC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80073DF0 0003D3B0  38 E0 00 00 */	li r7, 0
 /* 80073DF4 0003D3B4  93 E1 00 0C */	stw r31, 0xc(r1)
@@ -10989,8 +10989,8 @@
 .endobj lbl_8052AA14
 
 
-.obj __vt__cf_CfCamFollow, global
-	.4byte __RTTI__cf_CfCamFollow
+.obj __vt__Q22cf11CfCamFollow, global
+	.4byte __RTTI__Q22cf11CfCamFollow
 	.4byte 0
 	.4byte __dt__cf_CfCamFollow
 	.4byte func_8006CC68
@@ -11020,15 +11020,15 @@
 	.4byte func_80060B84
 	.4byte func_80074A3C
 	.4byte func_80074AA4
-	.4byte __RTTI__cf_CfCam
+	.4byte __RTTI__Q22cf5CfCam
 	.4byte 0
 	.4byte 0
 	.4byte 0
-.endobj __vt__cf_CfCamFollow
+.endobj __vt__Q22cf11CfCamFollow
 
 
-.obj __vt__cf_CfCam, global
-	.4byte __RTTI__cf_CfCam
+.obj __vt__Q22cf5CfCam, global
+	.4byte __RTTI__Q22cf5CfCam
 	.4byte 0
 	.4byte __dt__cf_CfCam
 	.4byte 0
@@ -11066,16 +11066,16 @@
 	.asciz "arithmetic.h"
 	.balign 4
 	.4byte 0
-.endobj __vt__cf_CfCam
+.endobj __vt__Q22cf5CfCam
 	
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__cf_CfCam, global
+.obj __RTTI__Q22cf5CfCam, global
 	.4byte cf_CfCam_typestr
 	.4byte 0
-.endobj __RTTI__cf_CfCam
+.endobj __RTTI__Q22cf5CfCam
 
 
 .obj float_80664430, global

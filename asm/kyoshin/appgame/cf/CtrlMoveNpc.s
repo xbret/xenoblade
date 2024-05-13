@@ -9,9 +9,9 @@
 /* 8019F69C 00168C5C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8019F6A0 00168C60  7C 7F 1B 78 */	mr r31, r3
 /* 8019F6A4 00168C64  4B EE 92 61 */	bl __ct__80088904
-/* 8019F6A8 00168C68  3C 60 80 53 */	lis r3, __vt__cf_CtrlMoveNpc@ha
+/* 8019F6A8 00168C68  3C 60 80 53 */	lis r3, __vt__Q22cf11CtrlMoveNpc@ha
 /* 8019F6AC 00168C6C  3C A0 80 51 */	lis r5, __ptmf_null@ha
-/* 8019F6B0 00168C70  38 63 65 6C */	addi r3, r3, __vt__cf_CtrlMoveNpc@l
+/* 8019F6B0 00168C70  38 63 65 6C */	addi r3, r3, __vt__Q22cf11CtrlMoveNpc@l
 /* 8019F6B4 00168C74  90 7F 00 48 */	stw r3, 0x48(r31)
 /* 8019F6B8 00168C78  7F E3 FB 78 */	mr r3, r31
 /* 8019F6BC 00168C7C  84 85 CE 10 */	lwzu r4, __ptmf_null@l(r5)
@@ -580,14 +580,14 @@
 .endobj lbl_80536560
 
 
-.obj __vt__cf_CtrlMoveNpc, global
-	.4byte __RTTI__cf_CtrlMoveNpc
+.obj __vt__Q22cf11CtrlMoveNpc, global
+	.4byte __RTTI__Q22cf11CtrlMoveNpc
 	.4byte 0
 	.4byte func_80089628
-.endobj __vt__cf_CtrlMoveNpc
+.endobj __vt__Q22cf11CtrlMoveNpc
 
 .obj cf_CtrlMoveNpc_hierarchy, global
-	.4byte __RTTI__cf_CtrlMoveBase
+	.4byte __RTTI__Q22cf12CtrlMoveBase
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -597,10 +597,10 @@
 
 .balign 8
 
-.obj __RTTI__cf_CtrlMoveNpc, global
+.obj __RTTI__Q22cf11CtrlMoveNpc, global
 	.4byte cf_CtrlMoveNpc_typestr
 	.4byte cf_CtrlMoveNpc_hierarchy
-.endobj __RTTI__cf_CtrlMoveNpc
+.endobj __RTTI__Q22cf11CtrlMoveNpc
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

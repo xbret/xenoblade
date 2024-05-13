@@ -10,9 +10,9 @@
 /* 8045EF94 00428554  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8045EF98 00428558  7C 7F 1B 78 */	mr r31, r3
 /* 8045EF9C 0042855C  4B FD 86 21 */	bl __ct__CWorkThread
-/* 8045EFA0 00428560  3C 60 80 57 */	lis r3, __vt__CLibLayout@ha
+/* 8045EFA0 00428560  3C 60 80 57 */	lis r3, __vt__10CLibLayout@ha
 /* 8045EFA4 00428564  38 80 00 00 */	li r4, 0
-/* 8045EFA8 00428568  38 63 0B 98 */	addi r3, r3, __vt__CLibLayout@l
+/* 8045EFA8 00428568  38 63 0B 98 */	addi r3, r3, __vt__10CLibLayout@l
 /* 8045EFAC 0042856C  38 BF 01 E0 */	addi r5, r31, 0x1e0
 /* 8045EFB0 00428570  38 E0 FF FF */	li r7, -1
 /* 8045EFB4 00428574  38 C0 00 10 */	li r6, 0x10
@@ -756,8 +756,8 @@
 
 .balign 8
 
-.obj __vt__CLibLayout, global
-	.4byte __RTTI__CLibLayout
+.obj __vt__10CLibLayout, global
+	.4byte __RTTI__10CLibLayout
 	.4byte 0
 	.4byte __dt__CLibLayout_1
 	.4byte IWorkEvent_WorkEvent1
@@ -797,12 +797,12 @@
 	.4byte CLibLayout_WorkThreadEvent4
 	.4byte CLibLayout_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-.endobj __vt__CLibLayout
+.endobj __vt__10CLibLayout
 
 .obj CLibLayout_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -812,10 +812,10 @@
 
 .balign 8
 
-.obj __RTTI__CLibLayout, global
+.obj __RTTI__10CLibLayout, global
 	.4byte CLibLayout_typestr
 	.4byte CLibLayout_hierarchy
-.endobj __RTTI__CLibLayout
+.endobj __RTTI__10CLibLayout
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

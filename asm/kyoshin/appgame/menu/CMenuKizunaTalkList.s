@@ -10,12 +10,12 @@
 /* 80271DE4 0023B3A4  7C 7D 1B 78 */	mr r29, r3
 /* 80271DE8 0023B3A8  7C 9E 23 78 */	mr r30, r4
 /* 80271DEC 0023B3AC  48 1D 2C 2D */	bl __ct__8CProcessFv
-/* 80271DF0 0023B3B0  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
-/* 80271DF4 0023B3B4  3C A0 80 54 */	lis r5, __vt__CMenuKizunaTalkList@ha
-/* 80271DF8 0023B3B8  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
+/* 80271DF0 0023B3B0  3C 60 80 53 */	lis r3, "__vt__14CTTask<5IUICf>"@ha
+/* 80271DF4 0023B3B4  3C A0 80 54 */	lis r5, __vt__19CMenuKizunaTalkList@ha
+/* 80271DF8 0023B3B8  38 63 F7 40 */	addi r3, r3, "__vt__14CTTask<5IUICf>"@l
 /* 80271DFC 0023B3BC  90 7D 00 10 */	stw r3, 0x10(r29)
 /* 80271E00 0023B3C0  3D 00 80 51 */	lis r8, __ptmf_null@ha
-/* 80271E04 0023B3C4  38 A5 B4 70 */	addi r5, r5, __vt__CMenuKizunaTalkList@l
+/* 80271E04 0023B3C4  38 A5 B4 70 */	addi r5, r5, __vt__19CMenuKizunaTalkList@l
 /* 80271E08 0023B3C8  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 80271E0C 0023B3CC  38 05 00 24 */	addi r0, r5, 0x24
 /* 80271E10 0023B3D0  3B E0 00 00 */	li r31, 0
@@ -677,8 +677,8 @@
 
 .balign 8
 
-.obj __vt__CMenuKizunaTalkList, global
-	.4byte __RTTI__CMenuKizunaTalkList
+.obj __vt__19CMenuKizunaTalkList, global
+	.4byte __RTTI__19CMenuKizunaTalkList
 	.4byte 0
 	.4byte __dt__CMenuKizunaTalkList
 	.4byte CChildListNode_Reset
@@ -687,25 +687,25 @@
 	.4byte func_80272260
 	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuKizunaTalkList
+	.4byte __RTTI__19CMenuKizunaTalkList
 	.4byte 0xFFFFFFA8
 	.4byte func_802726EC
 	.4byte func_802726E4
 	.4byte func_80272370
-.endobj __vt__CMenuKizunaTalkList
+.endobj __vt__19CMenuKizunaTalkList
 
 .obj CMenuKizunaTalkList_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000058
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUICf
+	.4byte "__RTTI__14CTTask<5IUICf>"
 	.4byte 0
-	.4byte __RTTI__IUICf
+	.4byte __RTTI__5IUICf
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -715,10 +715,10 @@
 
 .balign 8
 
-.obj __RTTI__CMenuKizunaTalkList, global
+.obj __RTTI__19CMenuKizunaTalkList, global
 	.4byte CMenuKizunaTalkList_typestr
 	.4byte CMenuKizunaTalkList_hierarchy
-.endobj __RTTI__CMenuKizunaTalkList
+.endobj __RTTI__19CMenuKizunaTalkList
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

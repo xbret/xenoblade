@@ -567,16 +567,16 @@
 .L_80244F94:
 /* 80244F94 0020E554  2C 00 00 00 */	cmpwi r0, 0
 .L_80244F98:
-/* 80244F98 0020E558  3D 00 80 54 */	lis r8, __vt__CFloorCur@ha
-/* 80244F9C 0020E55C  3C E0 80 54 */	lis r7, __vt__CFloorMarker@ha
+/* 80244F98 0020E558  3D 00 80 54 */	lis r8, __vt__9CFloorCur@ha
+/* 80244F9C 0020E55C  3C E0 80 54 */	lis r7, __vt__12CFloorMarker@ha
 /* 80244FA0 0020E560  39 20 00 00 */	li r9, 0
 /* 80244FA4 0020E564  38 00 00 01 */	li r0, 1
-/* 80244FA8 0020E568  3C C0 80 54 */	lis r6, __vt__CLandCur@ha
-/* 80244FAC 0020E56C  3C A0 80 54 */	lis r5, __vt__CTargetCur@ha
-/* 80244FB0 0020E570  39 08 A8 BC */	addi r8, r8, __vt__CFloorCur@l
-/* 80244FB4 0020E574  38 E7 A8 A4 */	addi r7, r7, __vt__CFloorMarker@l
-/* 80244FB8 0020E578  38 C6 A8 8C */	addi r6, r6, __vt__CLandCur@l
-/* 80244FBC 0020E57C  38 A5 A8 74 */	addi r5, r5, __vt__CTargetCur@l
+/* 80244FA8 0020E568  3C C0 80 54 */	lis r6, __vt__8CLandCur@ha
+/* 80244FAC 0020E56C  3C A0 80 54 */	lis r5, __vt__10CTargetCur@ha
+/* 80244FB0 0020E570  39 08 A8 BC */	addi r8, r8, __vt__9CFloorCur@l
+/* 80244FB4 0020E574  38 E7 A8 A4 */	addi r7, r7, __vt__12CFloorMarker@l
+/* 80244FB8 0020E578  38 C6 A8 8C */	addi r6, r6, __vt__8CLandCur@l
+/* 80244FBC 0020E57C  38 A5 A8 74 */	addi r5, r5, __vt__10CTargetCur@l
 /* 80244FC0 0020E580  99 23 30 D0 */	stb r9, 0x30d0(r3)
 /* 80244FC4 0020E584  91 03 30 D4 */	stw r8, 0x30d4(r3)
 /* 80244FC8 0020E588  91 23 30 D8 */	stw r9, 0x30d8(r3)
@@ -704,9 +704,9 @@
 /* 80245194 0020E754  7D 89 03 A6 */	mtctr r12
 /* 80245198 0020E758  4E 80 04 21 */	bctrl 
 /* 8024519C 0020E75C  80 1F 00 04 */	lwz r0, 4(r31)
-/* 802451A0 0020E760  3C 80 80 54 */	lis r4, __vt__CFloorMarker@ha
+/* 802451A0 0020E760  3C 80 80 54 */	lis r4, __vt__12CFloorMarker@ha
 /* 802451A4 0020E764  93 BF 30 F0 */	stw r29, 0x30f0(r31)
-/* 802451A8 0020E768  38 84 A8 A4 */	addi r4, r4, __vt__CFloorMarker@l
+/* 802451A8 0020E768  38 84 A8 A4 */	addi r4, r4, __vt__12CFloorMarker@l
 /* 802451AC 0020E76C  38 7F 30 EC */	addi r3, r31, 0x30ec
 /* 802451B0 0020E770  90 1F 30 F4 */	stw r0, 0x30f4(r31)
 /* 802451B4 0020E774  93 BF 30 F8 */	stw r29, 0x30f8(r31)
@@ -725,9 +725,9 @@
 /* 802451E8 0020E7A8  7D 89 03 A6 */	mtctr r12
 /* 802451EC 0020E7AC  4E 80 04 21 */	bctrl 
 /* 802451F0 0020E7B0  80 1F 00 04 */	lwz r0, 4(r31)
-/* 802451F4 0020E7B4  3C 80 80 54 */	lis r4, __vt__CLandCur@ha
+/* 802451F4 0020E7B4  3C 80 80 54 */	lis r4, __vt__8CLandCur@ha
 /* 802451F8 0020E7B8  93 BF 31 08 */	stw r29, 0x3108(r31)
-/* 802451FC 0020E7BC  38 84 A8 8C */	addi r4, r4, __vt__CLandCur@l
+/* 802451FC 0020E7BC  38 84 A8 8C */	addi r4, r4, __vt__8CLandCur@l
 /* 80245200 0020E7C0  38 7F 31 04 */	addi r3, r31, 0x3104
 /* 80245204 0020E7C4  90 1F 31 0C */	stw r0, 0x310c(r31)
 /* 80245208 0020E7C8  93 BF 31 10 */	stw r29, 0x3110(r31)
@@ -746,9 +746,9 @@
 /* 8024523C 0020E7FC  7D 89 03 A6 */	mtctr r12
 /* 80245240 0020E800  4E 80 04 21 */	bctrl 
 /* 80245244 0020E804  80 1F 00 04 */	lwz r0, 4(r31)
-/* 80245248 0020E808  3C 80 80 54 */	lis r4, __vt__CTargetCur@ha
+/* 80245248 0020E808  3C 80 80 54 */	lis r4, __vt__10CTargetCur@ha
 /* 8024524C 0020E80C  93 BF 31 20 */	stw r29, 0x3120(r31)
-/* 80245250 0020E810  38 84 A8 74 */	addi r4, r4, __vt__CTargetCur@l
+/* 80245250 0020E810  38 84 A8 74 */	addi r4, r4, __vt__10CTargetCur@l
 /* 80245254 0020E814  38 7F 31 1C */	addi r3, r31, 0x311c
 /* 80245258 0020E818  90 1F 31 24 */	stw r0, 0x3124(r31)
 /* 8024525C 0020E81C  93 BF 31 28 */	stw r29, 0x3128(r31)
@@ -7837,9 +7837,9 @@
 .fn __ct__CFloorMap, global
 /* 8024B8D4 00214E94  94 21 FF 30 */	stwu r1, -0xd0(r1)
 /* 8024B8D8 00214E98  7C 08 02 A6 */	mflr r0
-/* 8024B8DC 00214E9C  3C 80 80 54 */	lis r4, __vt__CFloorMap@ha
+/* 8024B8DC 00214E9C  3C 80 80 54 */	lis r4, __vt__9CFloorMap@ha
 /* 8024B8E0 00214EA0  90 01 00 D4 */	stw r0, 0xd4(r1)
-/* 8024B8E4 00214EA4  38 84 A7 E0 */	addi r4, r4, __vt__CFloorMap@l
+/* 8024B8E4 00214EA4  38 84 A7 E0 */	addi r4, r4, __vt__9CFloorMap@l
 /* 8024B8E8 00214EA8  93 E1 00 CC */	stw r31, 0xcc(r1)
 /* 8024B8EC 00214EAC  7C 7F 1B 78 */	mr r31, r3
 /* 8024B8F0 00214EB0  93 C1 00 C8 */	stw r30, 0xc8(r1)
@@ -14442,8 +14442,8 @@
 
 .balign 8
 
-.obj __vt__CFloorMap, global
-	.4byte __RTTI__CFloorMap
+.obj __vt__9CFloorMap, global
+	.4byte __RTTI__9CFloorMap
 	.4byte 0
 	.4byte __dt__CFloorMap
 	.4byte IWorkEvent_WorkEvent1
@@ -14477,59 +14477,59 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CFloorMap
+.endobj __vt__9CFloorMap
 
 .obj CFloorMap_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 .endobj CFloorMap_hierarchy
 
 
-.obj __vt__CTargetCur, global
-	.4byte __RTTI__CTargetCur
+.obj __vt__10CTargetCur, global
+	.4byte __RTTI__10CTargetCur
 	.4byte 0
 	.4byte func_80244DD8
-.endobj __vt__CTargetCur
+.endobj __vt__10CTargetCur
 
 .obj CTargetCur_hierarchy, global
-	.4byte __RTTI__CFloorCur
+	.4byte __RTTI__9CFloorCur
 	.4byte 0
 	.4byte 0
 .endobj CTargetCur_hierarchy
 
 
-.obj __vt__CLandCur, global
-	.4byte __RTTI__CLandCur
+.obj __vt__8CLandCur, global
+	.4byte __RTTI__8CLandCur
 	.4byte 0
 	.4byte func_80244C60
-.endobj __vt__CLandCur
+.endobj __vt__8CLandCur
 
 .obj CLandCur_hierarchy, global
-	.4byte __RTTI__CFloorCur
+	.4byte __RTTI__9CFloorCur
 	.4byte 0
 	.4byte 0
 .endobj CLandCur_hierarchy
 
 
-.obj __vt__CFloorMarker, global
-	.4byte __RTTI__CFloorMarker
+.obj __vt__12CFloorMarker, global
+	.4byte __RTTI__12CFloorMarker
 	.4byte 0
 	.4byte func_80244AE8
-.endobj __vt__CFloorMarker
+.endobj __vt__12CFloorMarker
 
 .obj CFloorMarker_hierarchy, global
-	.4byte __RTTI__CFloorCur
+	.4byte __RTTI__9CFloorCur
 	.4byte 0
 	.4byte 0
 .endobj CFloorMarker_hierarchy
 
 
-.obj __vt__CFloorCur, global
-	.4byte __RTTI__CFloorCur
+.obj __vt__9CFloorCur, global
+	.4byte __RTTI__9CFloorCur
 	.4byte 0
 	.4byte func_80244944
-.endobj __vt__CFloorCur
+.endobj __vt__9CFloorCur
 
 
 
@@ -14537,30 +14537,30 @@
 
 .balign 8
 
-.obj __RTTI__CFloorMap, global
+.obj __RTTI__9CFloorMap, global
 	.4byte CFloorMap_typestr
 	.4byte CFloorMap_hierarchy
-.endobj __RTTI__CFloorMap
+.endobj __RTTI__9CFloorMap
 
-.obj __RTTI__CTargetCur, global
+.obj __RTTI__10CTargetCur, global
 	.4byte CTargetCur_typestr
 	.4byte CTargetCur_hierarchy
-.endobj __RTTI__CTargetCur
+.endobj __RTTI__10CTargetCur
 
-.obj __RTTI__CLandCur, global
+.obj __RTTI__8CLandCur, global
 	.4byte CLandCur_typestr
 	.4byte CLandCur_hierarchy
-.endobj __RTTI__CLandCur
+.endobj __RTTI__8CLandCur
 
-.obj __RTTI__CFloorMarker, global
+.obj __RTTI__12CFloorMarker, global
 	.4byte CFloorMarker_typestr
 	.4byte CFloorMarker_hierarchy
-.endobj __RTTI__CFloorMarker
+.endobj __RTTI__12CFloorMarker
 
-.obj __RTTI__CFloorCur, global
+.obj __RTTI__9CFloorCur, global
 	.4byte CFloorCur_typestr
 	.4byte 0
-.endobj __RTTI__CFloorCur
+.endobj __RTTI__9CFloorCur
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

@@ -3,9 +3,9 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .fn __ct__CMcaFile, global
-/* 80058414 000219D4  3C A0 80 53 */	lis r5, __vt__CMcaFile@ha
+/* 80058414 000219D4  3C A0 80 53 */	lis r5, __vt__8CMcaFile@ha
 /* 80058418 000219D8  38 00 00 00 */	li r0, 0
-/* 8005841C 000219DC  38 A5 9B 78 */	addi r5, r5, __vt__CMcaFile@l
+/* 8005841C 000219DC  38 A5 9B 78 */	addi r5, r5, __vt__8CMcaFile@l
 /* 80058420 000219E0  90 A3 00 00 */	stw r5, 0(r3)
 /* 80058424 000219E4  98 03 00 04 */	stb r0, 4(r3)
 /* 80058428 000219E8  90 83 00 08 */	stw r4, 8(r3)
@@ -110,11 +110,11 @@
 
 .balign 8
 
-.obj __vt__CMcaFile, global
-	.4byte __RTTI__CMcaFile
+.obj __vt__8CMcaFile, global
+	.4byte __RTTI__8CMcaFile
 	.4byte 0
 	.4byte __dt__CMcaFile
-.endobj __vt__CMcaFile
+.endobj __vt__8CMcaFile
 
 
 #These are referenced by Scn classes (should be in a separate base class file?)
@@ -144,10 +144,10 @@
 
 .balign 8
 
-.obj __RTTI__CMcaFile, global
+.obj __RTTI__8CMcaFile, global
 	.4byte CMcaFile_typestr
 	.4byte 0
-.endobj __RTTI__CMcaFile
+.endobj __RTTI__8CMcaFile
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

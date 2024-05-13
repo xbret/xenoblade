@@ -74,8 +74,8 @@
 /* 804DB420 004A49E0  38 6D C1 58 */	addi r3, r13, lbl_806682D8@sda21
 /* 804DB424 004A49E4  48 00 00 04 */	b .L_804DB428
 .L_804DB428:
-/* 804DB428 004A49E8  3C 80 80 57 */	lis r4, __vt__CNReqtaskCheck@ha
-/* 804DB42C 004A49EC  38 84 36 30 */	addi r4, r4, __vt__CNReqtaskCheck@l
+/* 804DB428 004A49E8  3C 80 80 57 */	lis r4, __vt__14CNReqtaskCheck@ha
+/* 804DB42C 004A49EC  38 84 36 30 */	addi r4, r4, __vt__14CNReqtaskCheck@l
 /* 804DB430 004A49F0  90 83 00 00 */	stw r4, 0(r3)
 /* 804DB434 004A49F4  4E 80 00 20 */	blr 
 .endfn sinit_804DB420
@@ -100,15 +100,15 @@
 
 .balign 8
 
-.obj __vt__CNReqtaskCheck, global
-	.4byte __RTTI__CNReqtaskCheck
+.obj __vt__14CNReqtaskCheck, global
+	.4byte __RTTI__14CNReqtaskCheck
 	.4byte 0
 	.4byte func_804DB364
 	.4byte func_804DA4CC
-.endobj __vt__CNReqtaskCheck
+.endobj __vt__14CNReqtaskCheck
 
 .obj CNReqtaskCheck_hierarchy, global
-	.4byte __RTTI__CNReqtask
+	.4byte __RTTI__9CNReqtask
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -118,10 +118,10 @@
 
 .balign 8
 
-.obj __RTTI__CNReqtaskCheck, global
+.obj __RTTI__14CNReqtaskCheck, global
 	.4byte CNReqtaskCheck_typestr
 	.4byte CNReqtaskCheck_hierarchy
-.endobj __RTTI__CNReqtaskCheck
+.endobj __RTTI__14CNReqtaskCheck
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

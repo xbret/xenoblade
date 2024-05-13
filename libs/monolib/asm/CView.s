@@ -14,32 +14,32 @@
 /* 8043C2E4 004058A4  4B FF B2 D9 */	bl __ct__CWorkThread
 /* 8043C2E8 004058A8  38 7E 01 C4 */	addi r3, r30, 0x1c4
 /* 8043C2EC 004058AC  48 00 CC F1 */	bl __ct__CFontLayer
-/* 8043C2F0 004058B0  3C 80 80 57 */	lis r4, __vt__CView@ha
+/* 8043C2F0 004058B0  3C 80 80 57 */	lis r4, __vt__5CView@ha
 /* 8043C2F4 004058B4  38 7E 01 C8 */	addi r3, r30, 0x1c8
-/* 8043C2F8 004058B8  38 84 EE 58 */	addi r4, r4, __vt__CView@l
+/* 8043C2F8 004058B8  38 84 EE 58 */	addi r4, r4, __vt__5CView@l
 /* 8043C2FC 004058BC  90 9E 00 00 */	stw r4, 0(r30)
 /* 8043C300 004058C0  38 04 00 A0 */	addi r0, r4, 0xa0
 /* 8043C304 004058C4  90 1E 01 C4 */	stw r0, 0x1c4(r30)
 /* 8043C308 004058C8  48 01 CF 69 */	bl func_80459270
 /* 8043C30C 004058CC  38 7E 01 DC */	addi r3, r30, 0x1dc
 /* 8043C310 004058D0  48 00 38 BD */	bl __ct__CViewFrame
-/* 8043C314 004058D4  3C 60 80 57 */	lis r3, __vt___reslist_base_unsigned_long@ha
+/* 8043C314 004058D4  3C 60 80 57 */	lis r3, "__vt__17_reslist_base<Ul>"@ha
 /* 8043C318 004058D8  3B E0 00 00 */	li r31, 0
-/* 8043C31C 004058DC  38 63 EB 10 */	addi r3, r3, __vt___reslist_base_unsigned_long@l
+/* 8043C31C 004058DC  38 63 EB 10 */	addi r3, r3, "__vt__17_reslist_base<Ul>"@l
 /* 8043C320 004058E0  90 7E 02 38 */	stw r3, 0x238(r30)
 /* 8043C324 004058E4  39 3E 02 40 */	addi r9, r30, 0x240
-/* 8043C328 004058E8  3D 00 80 57 */	lis r8, __vt__reslist_unsigned_long@ha
+/* 8043C328 004058E8  3D 00 80 57 */	lis r8, "__vt__11reslist<Ul>"@ha
 /* 8043C32C 004058EC  93 FE 02 4C */	stw r31, 0x24c(r30)
-/* 8043C330 004058F0  3C E0 80 57 */	lis r7, __vt___reslist_base_IWorkEvent@ha
-/* 8043C334 004058F4  3C A0 80 57 */	lis r5, __vt__reslist_IWorkEvent@ha
-/* 8043C338 004058F8  3C 80 80 57 */	lis r4, __vt__CMsgParam_10@ha
+/* 8043C330 004058F0  3C E0 80 57 */	lis r7, "__vt__28_reslist_base<P10IWorkEvent>"@ha
+/* 8043C334 004058F4  3C A0 80 57 */	lis r5, "__vt__22reslist<P10IWorkEvent>"@ha
+/* 8043C338 004058F8  3C 80 80 57 */	lis r4, "__vt__13CMsgParam<10>"@ha
 /* 8043C33C 004058FC  93 FE 02 50 */	stw r31, 0x250(r30)
-/* 8043C340 00405900  39 08 EA F8 */	addi r8, r8, __vt__reslist_unsigned_long@l
-/* 8043C344 00405904  38 E7 EF 68 */	addi r7, r7, __vt___reslist_base_IWorkEvent@l
+/* 8043C340 00405900  39 08 EA F8 */	addi r8, r8, "__vt__11reslist<Ul>"@l
+/* 8043C344 00405904  38 E7 EF 68 */	addi r7, r7, "__vt__28_reslist_base<P10IWorkEvent>"@l
 /* 8043C348 00405908  38 DE 02 60 */	addi r6, r30, 0x260
 /* 8043C34C 0040590C  9B FE 02 54 */	stb r31, 0x254(r30)
-/* 8043C350 00405910  38 A5 EF 50 */	addi r5, r5, __vt__reslist_IWorkEvent@l
-/* 8043C354 00405914  38 84 EF 44 */	addi r4, r4, __vt__CMsgParam_10@l
+/* 8043C350 00405910  38 A5 EF 50 */	addi r5, r5, "__vt__22reslist<P10IWorkEvent>"@l
+/* 8043C354 00405914  38 84 EF 44 */	addi r4, r4, "__vt__13CMsgParam<10>"@l
 /* 8043C358 00405918  38 1E 02 84 */	addi r0, r30, 0x284
 /* 8043C35C 0040591C  91 3E 02 3C */	stw r9, 0x23c(r30)
 /* 8043C360 00405920  38 60 00 0A */	li r3, 0xa
@@ -237,9 +237,9 @@
 /* 8043C634 00405BF4  93 C1 00 08 */	stw r30, 8(r1)
 /* 8043C638 00405BF8  7C 7E 1B 78 */	mr r30, r3
 /* 8043C63C 00405BFC  41 82 00 78 */	beq .L_8043C6B4
-/* 8043C640 00405C00  3C A0 80 57 */	lis r5, __vt___reslist_base_IWorkEvent@ha
+/* 8043C640 00405C00  3C A0 80 57 */	lis r5, "__vt__28_reslist_base<P10IWorkEvent>"@ha
 /* 8043C644 00405C04  80 83 00 04 */	lwz r4, 4(r3)
-/* 8043C648 00405C08  38 A5 EF 68 */	addi r5, r5, __vt___reslist_base_IWorkEvent@l
+/* 8043C648 00405C08  38 A5 EF 68 */	addi r5, r5, "__vt__28_reslist_base<P10IWorkEvent>"@l
 /* 8043C64C 00405C0C  90 A3 00 00 */	stw r5, 0(r3)
 /* 8043C650 00405C10  38 00 00 00 */	li r0, 0
 /* 8043C654 00405C14  80 A4 00 00 */	lwz r5, 0(r4)
@@ -290,9 +290,9 @@
 /* 8043C6EC 00405CAC  7C 7E 1B 78 */	mr r30, r3
 /* 8043C6F0 00405CB0  41 82 00 7C */	beq .L_8043C76C
 /* 8043C6F4 00405CB4  41 82 00 68 */	beq .L_8043C75C
-/* 8043C6F8 00405CB8  3C A0 80 57 */	lis r5, __vt___reslist_base_IWorkEvent@ha
+/* 8043C6F8 00405CB8  3C A0 80 57 */	lis r5, "__vt__28_reslist_base<P10IWorkEvent>"@ha
 /* 8043C6FC 00405CBC  80 83 00 04 */	lwz r4, 4(r3)
-/* 8043C700 00405CC0  38 A5 EF 68 */	addi r5, r5, __vt___reslist_base_IWorkEvent@l
+/* 8043C700 00405CC0  38 A5 EF 68 */	addi r5, r5, "__vt__28_reslist_base<P10IWorkEvent>"@l
 /* 8043C704 00405CC4  90 A3 00 00 */	stw r5, 0(r3)
 /* 8043C708 00405CC8  38 00 00 00 */	li r0, 0
 /* 8043C70C 00405CCC  80 84 00 00 */	lwz r4, 0(r4)
@@ -370,9 +370,9 @@
 /* 8043C7FC 00405DBC  7C 7E 1B 78 */	mr r30, r3
 /* 8043C800 00405DC0  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8043C804 00405DC4  41 82 01 6C */	beq .L_8043C970
-/* 8043C808 00405DC8  3C 80 80 57 */	lis r4, __vt__CView@ha
+/* 8043C808 00405DC8  3C 80 80 57 */	lis r4, __vt__5CView@ha
 /* 8043C80C 00405DCC  80 A3 02 3C */	lwz r5, 0x23c(r3)
-/* 8043C810 00405DD0  38 84 EE 58 */	addi r4, r4, __vt__CView@l
+/* 8043C810 00405DD0  38 84 EE 58 */	addi r4, r4, __vt__5CView@l
 /* 8043C814 00405DD4  90 83 00 00 */	stw r4, 0(r3)
 /* 8043C818 00405DD8  38 04 00 A0 */	addi r0, r4, 0xa0
 /* 8043C81C 00405DDC  90 03 01 C4 */	stw r0, 0x1c4(r3)
@@ -402,9 +402,9 @@
 /* 8043C868 00405E28  37 A3 02 58 */	addic. r29, r3, 0x258
 /* 8043C86C 00405E2C  41 82 00 6C */	beq .L_8043C8D8
 /* 8043C870 00405E30  41 82 00 68 */	beq .L_8043C8D8
-/* 8043C874 00405E34  3C 80 80 57 */	lis r4, __vt___reslist_base_IWorkEvent@ha
+/* 8043C874 00405E34  3C 80 80 57 */	lis r4, "__vt__28_reslist_base<P10IWorkEvent>"@ha
 /* 8043C878 00405E38  80 7D 00 04 */	lwz r3, 4(r29)
-/* 8043C87C 00405E3C  38 84 EF 68 */	addi r4, r4, __vt___reslist_base_IWorkEvent@l
+/* 8043C87C 00405E3C  38 84 EF 68 */	addi r4, r4, "__vt__28_reslist_base<P10IWorkEvent>"@l
 /* 8043C880 00405E40  90 9D 00 00 */	stw r4, 0(r29)
 /* 8043C884 00405E44  38 00 00 00 */	li r0, 0
 /* 8043C888 00405E48  80 83 00 00 */	lwz r4, 0(r3)
@@ -433,9 +433,9 @@
 /* 8043C8D8 00405E98  37 BE 02 38 */	addic. r29, r30, 0x238
 /* 8043C8DC 00405E9C  41 82 00 6C */	beq .L_8043C948
 /* 8043C8E0 00405EA0  41 82 00 68 */	beq .L_8043C948
-/* 8043C8E4 00405EA4  3C 80 80 57 */	lis r4, __vt___reslist_base_unsigned_long@ha
+/* 8043C8E4 00405EA4  3C 80 80 57 */	lis r4, "__vt__17_reslist_base<Ul>"@ha
 /* 8043C8E8 00405EA8  80 7D 00 04 */	lwz r3, 4(r29)
-/* 8043C8EC 00405EAC  38 84 EB 10 */	addi r4, r4, __vt___reslist_base_unsigned_long@l
+/* 8043C8EC 00405EAC  38 84 EB 10 */	addi r4, r4, "__vt__17_reslist_base<Ul>"@l
 /* 8043C8F0 00405EB0  90 9D 00 00 */	stw r4, 0(r29)
 /* 8043C8F4 00405EB4  38 00 00 00 */	li r0, 0
 /* 8043C8F8 00405EB8  80 83 00 00 */	lwz r4, 0(r3)
@@ -4241,8 +4241,8 @@
 .endobj jumptable_8056EE38
 
 
-.obj __vt__CView, global
-	.4byte __RTTI__CView
+.obj __vt__5CView, global
+	.4byte __RTTI__5CView
 	.4byte 0
 	.4byte __dt__CView
 	.4byte IWorkEvent_WorkEvent1
@@ -4282,7 +4282,7 @@
 	.4byte CView_WorkThreadEvent4
 	.4byte CView_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-	.4byte __RTTI__CView
+	.4byte __RTTI__5CView
 	.4byte 0xFFFFFE3C
 	.4byte func_8043FBC4
 	.4byte func_8043FB68
@@ -4294,75 +4294,75 @@
 	.4byte func_8043C9B8
 	.4byte func_8043EAD0
 	.4byte func_8043EAC8
-.endobj __vt__CView
+.endobj __vt__5CView
 
 .obj CView_hierarchy, global
-	.4byte __RTTI__CFontLayer
+	.4byte __RTTI__10CFontLayer
 	.4byte 0x000001C4
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
 	.4byte 0
 .endobj CView_hierarchy
 
 
-.obj __vt__CMsgParam_10, global
-	.4byte __RTTI__CMsgParam_10
+.obj "__vt__13CMsgParam<10>", global
+	.4byte "__RTTI__13CMsgParam<10>"
 	.4byte 0
 	.4byte __dt__CMsgParam_10
-.endobj __vt__CMsgParam_10
+.endobj "__vt__13CMsgParam<10>"
 
 
-.obj __vt__reslist_IWorkEvent, global
-	.4byte __RTTI__reslist_IWorkEvent
+.obj "__vt__22reslist<P10IWorkEvent>", global
+	.4byte "__RTTI__22reslist<P10IWorkEvent>"
 	.4byte 0
 	.4byte __dt__reslist_IWorkEvent
-.endobj __vt__reslist_IWorkEvent
+.endobj "__vt__22reslist<P10IWorkEvent>"
 
 .obj reslist_IWorkEvent_hierarchy, global
-	.4byte __RTTI___reslist_base_IWorkEvent
+	.4byte "__RTTI__28_reslist_base<P10IWorkEvent>"
 	.4byte 0
 	.4byte 0
 .endobj reslist_IWorkEvent_hierarchy
 
 
-.obj __vt___reslist_base_IWorkEvent, global
-	.4byte __RTTI___reslist_base_IWorkEvent
+.obj "__vt__28_reslist_base<P10IWorkEvent>", global
+	.4byte "__RTTI__28_reslist_base<P10IWorkEvent>"
 	.4byte 0
 	.4byte __dt___reslist_base_IWorkEvent
 	.4byte 0
-.endobj __vt___reslist_base_IWorkEvent
+.endobj "__vt__28_reslist_base<P10IWorkEvent>"
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CView, global
+.obj __RTTI__5CView, global
 	.4byte CView_typestr
 	.4byte CView_hierarchy
-.endobj __RTTI__CView
+.endobj __RTTI__5CView
 
-.obj __RTTI__CMsgParam_10, global
+.obj "__RTTI__13CMsgParam<10>", global
 	.4byte CMsgParam_10_typestr
 	.4byte 0
-.endobj __RTTI__CMsgParam_10
+.endobj "__RTTI__13CMsgParam<10>"
 
-.obj __RTTI__reslist_IWorkEvent, global
+.obj "__RTTI__22reslist<P10IWorkEvent>", global
 	.4byte reslist_IWorkEvent_typestr
 	.4byte reslist_IWorkEvent_hierarchy
-.endobj __RTTI__reslist_IWorkEvent
+.endobj "__RTTI__22reslist<P10IWorkEvent>"
 
-.obj __RTTI___reslist_base_IWorkEvent, global
+.obj "__RTTI__28_reslist_base<P10IWorkEvent>", global
 	.4byte _reslist_base_IWorkEvent_typestr
 	.4byte 0
-.endobj __RTTI___reslist_base_IWorkEvent
+.endobj "__RTTI__28_reslist_base<P10IWorkEvent>"
 
-.obj __RTTI__CFontLayer, global
+.obj __RTTI__10CFontLayer, global
 	.4byte CFontLayer_typestr
 	.4byte 0
-.endobj __RTTI__CFontLayer
+.endobj __RTTI__10CFontLayer
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

@@ -10,9 +10,9 @@
 /* 80450B64 0041A124  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80450B68 0041A128  7C 7F 1B 78 */	mr r31, r3
 /* 80450B6C 0041A12C  4B FE 6A 51 */	bl __ct__CWorkThread
-/* 80450B70 0041A130  3C 60 80 57 */	lis r3, __vt__CDeviceFileDvd@ha
+/* 80450B70 0041A130  3C 60 80 57 */	lis r3, __vt__14CDeviceFileDvd@ha
 /* 80450B74 0041A134  38 80 00 00 */	li r4, 0
-/* 80450B78 0041A138  38 63 FC 68 */	addi r3, r3, __vt__CDeviceFileDvd@l
+/* 80450B78 0041A138  38 63 FC 68 */	addi r3, r3, __vt__14CDeviceFileDvd@l
 /* 80450B7C 0041A13C  38 00 FF FF */	li r0, -1
 /* 80450B80 0041A140  90 7F 00 00 */	stw r3, 0(r31)
 /* 80450B84 0041A144  7F E3 FB 78 */	mr r3, r31
@@ -1486,8 +1486,8 @@
 
 .balign 8
 
-.obj __vt__CDeviceFileDvd, global
-	.4byte __RTTI__CDeviceFileDvd
+.obj __vt__14CDeviceFileDvd, global
+	.4byte __RTTI__14CDeviceFileDvd
 	.4byte 0
 	.4byte __dt__CDeviceFileDvd
 	.4byte IWorkEvent_WorkEvent1
@@ -1527,12 +1527,12 @@
 	.4byte CDeviceFileDvd_WorkThreadEvent4
 	.4byte CDeviceFileDvd_WorkThreadEvent5
 	.4byte CDeviceFileDvd_WorkThreadEvent6
-.endobj __vt__CDeviceFileDvd
+.endobj __vt__14CDeviceFileDvd
 
 .obj CDeviceFileDvd_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1542,10 +1542,10 @@
 
 .balign 8
 
-.obj __RTTI__CDeviceFileDvd, global
+.obj __RTTI__14CDeviceFileDvd, global
 	.4byte CDeviceFileDvd_typestr
 	.4byte CDeviceFileDvd_hierarchy
-.endobj __RTTI__CDeviceFileDvd
+.endobj __RTTI__14CDeviceFileDvd
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

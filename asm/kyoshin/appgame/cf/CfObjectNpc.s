@@ -11,9 +11,9 @@
 /* 800BF354 00088914  93 C1 00 08 */	stw r30, 8(r1)
 /* 800BF358 00088918  7C 7E 1B 78 */	mr r30, r3
 /* 800BF35C 0008891C  4B FF C8 F1 */	bl __ct__cf_CfObjectMove
-/* 800BF360 00088920  3C 60 80 53 */	lis r3, __vt__cf_CfObjectNpc@ha
+/* 800BF360 00088920  3C 60 80 53 */	lis r3, __vt__Q22cf11CfObjectNpc@ha
 /* 800BF364 00088924  2C 1F 00 00 */	cmpwi r31, 0
-/* 800BF368 00088928  38 63 D0 88 */	addi r3, r3, __vt__cf_CfObjectNpc@l
+/* 800BF368 00088928  38 63 D0 88 */	addi r3, r3, __vt__Q22cf11CfObjectNpc@l
 /* 800BF36C 0008892C  90 7E 00 00 */	stw r3, 0(r30)
 /* 800BF370 00088930  41 82 00 2C */	beq .L_800BF39C
 /* 800BF374 00088934  4B FA 2C 89 */	bl func_80061FFC
@@ -65,8 +65,8 @@
 /* 800BF410 000889D0  93 C1 00 08 */	stw r30, 8(r1)
 /* 800BF414 000889D4  7C 7E 1B 78 */	mr r30, r3
 /* 800BF418 000889D8  41 82 00 38 */	beq .L_800BF450
-/* 800BF41C 000889DC  3D 80 80 53 */	lis r12, __vt__cf_CfObjectNpc@ha
-/* 800BF420 000889E0  39 8C D0 88 */	addi r12, r12, __vt__cf_CfObjectNpc@l
+/* 800BF41C 000889DC  3D 80 80 53 */	lis r12, __vt__Q22cf11CfObjectNpc@ha
+/* 800BF420 000889E0  39 8C D0 88 */	addi r12, r12, __vt__Q22cf11CfObjectNpc@l
 /* 800BF424 000889E4  91 83 00 00 */	stw r12, 0(r3)
 /* 800BF428 000889E8  81 8C 00 68 */	lwz r12, 0x68(r12)
 /* 800BF42C 000889EC  7D 89 03 A6 */	mtctr r12
@@ -466,8 +466,8 @@
 
 .balign 8
 
-.obj __vt__cf_CfObjectNpc, global
-	.4byte __RTTI__cf_CfObjectNpc
+.obj __vt__Q22cf11CfObjectNpc, global
+	.4byte __RTTI__Q22cf11CfObjectNpc
 	.4byte 0
 	.4byte CObjectState_func_8003DC64
 	.4byte CObjectState_func_8003CB58
@@ -607,18 +607,18 @@
 	.4byte func_800BF8CC
 	.4byte func_800BF984
 	.4byte func_800BF920
-.endobj __vt__cf_CfObjectNpc
+.endobj __vt__Q22cf11CfObjectNpc
 
 .obj cf_CfObjectNpc_hierarchy, global
-	.4byte __RTTI__cf_CObjectState
+	.4byte __RTTI__Q22cf12CObjectState
 	.4byte 0
-	.4byte __RTTI__cf_CObjectParam
+	.4byte __RTTI__Q22cf12CObjectParam
 	.4byte 0
-	.4byte __RTTI__cf_CfObject
+	.4byte __RTTI__Q22cf8CfObject
 	.4byte 0
-	.4byte __RTTI__cf_CfObjectModel
+	.4byte __RTTI__Q22cf13CfObjectModel
 	.4byte 0
-	.4byte __RTTI__cf_CfObjectMove
+	.4byte __RTTI__Q22cf12CfObjectMove
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -628,10 +628,10 @@
 
 .balign 8
 
-.obj __RTTI__cf_CfObjectNpc, global
+.obj __RTTI__Q22cf11CfObjectNpc, global
 	.4byte cf_CfObjectNpc_typestr
 	.4byte cf_CfObjectNpc_hierarchy
-.endobj __RTTI__cf_CfObjectNpc
+.endobj __RTTI__Q22cf11CfObjectNpc
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

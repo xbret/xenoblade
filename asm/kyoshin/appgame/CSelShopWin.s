@@ -5,9 +5,9 @@
 .fn __ct__CSelShopWin, global
 /* 8022C6B4 001F5C74  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8022C6B8 001F5C78  7C 08 02 A6 */	mflr r0
-/* 8022C6BC 001F5C7C  3C 80 80 54 */	lis r4, __vt__CSelShopWin@ha
+/* 8022C6BC 001F5C7C  3C 80 80 54 */	lis r4, __vt__11CSelShopWin@ha
 /* 8022C6C0 001F5C80  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8022C6C4 001F5C84  38 84 9D 60 */	addi r4, r4, __vt__CSelShopWin@l
+/* 8022C6C4 001F5C84  38 84 9D 60 */	addi r4, r4, __vt__11CSelShopWin@l
 /* 8022C6C8 001F5C88  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8022C6CC 001F5C8C  7C 7F 1B 78 */	mr r31, r3
 /* 8022C6D0 001F5C90  90 83 00 00 */	stw r4, 0(r3)
@@ -598,8 +598,8 @@
 
 .balign 8
 
-.obj __vt__CSelShopWin, global
-	.4byte __RTTI__CSelShopWin
+.obj __vt__11CSelShopWin, global
+	.4byte __RTTI__11CSelShopWin
 	.4byte 0
 	.4byte __dt__CSelShopWin
 	.4byte IWorkEvent_WorkEvent1
@@ -633,10 +633,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CSelShopWin
+.endobj __vt__11CSelShopWin
 
 .obj CSelShopWin_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -646,10 +646,10 @@
 
 .balign 8
 
-.obj __RTTI__CSelShopWin, global
+.obj __RTTI__11CSelShopWin, global
 	.4byte CSelShopWin_typestr
 	.4byte CSelShopWin_hierarchy
-.endobj __RTTI__CSelShopWin
+.endobj __RTTI__11CSelShopWin
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

@@ -296,8 +296,8 @@
 /* 804F5140 004BE700  38 6D C1 E8 */	addi r3, r13, lbl_80668368@sda21
 /* 804F5144 004BE704  48 00 00 04 */	b .L_804F5148
 .L_804F5148:
-/* 804F5148 004BE708  3C 80 80 57 */	lis r4, __vt__CNReqtaskSaveBanner@ha
-/* 804F514C 004BE70C  38 84 3B A0 */	addi r4, r4, __vt__CNReqtaskSaveBanner@l
+/* 804F5148 004BE708  3C 80 80 57 */	lis r4, __vt__19CNReqtaskSaveBanner@ha
+/* 804F514C 004BE70C  38 84 3B A0 */	addi r4, r4, __vt__19CNReqtaskSaveBanner@l
 /* 804F5150 004BE710  90 83 00 00 */	stw r4, 0(r3)
 /* 804F5154 004BE714  4E 80 00 20 */	blr
 .endfn sinit_804F5140
@@ -347,15 +347,15 @@
 .endobj jumptable_80573B70
 
 
-.obj __vt__CNReqtaskSaveBanner, global
-	.4byte __RTTI__CNReqtaskSaveBanner
+.obj __vt__19CNReqtaskSaveBanner, global
+	.4byte __RTTI__19CNReqtaskSaveBanner
 	.4byte 0
 	.4byte func_804F4D90
 	.4byte func_804F5080
-.endobj __vt__CNReqtaskSaveBanner
+.endobj __vt__19CNReqtaskSaveBanner
 
 .obj CNReqtaskSaveBanner_hierarchy, global
-	.4byte __RTTI__CNReqtask
+	.4byte __RTTI__9CNReqtask
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -375,10 +375,10 @@
 	.4byte lbl_80528190
 .endobj lbl_806665EC
 
-.obj __RTTI__CNReqtaskSaveBanner, global
+.obj __RTTI__19CNReqtaskSaveBanner, global
 	.4byte CNReqtaskSaveBanner_typestr
 	.4byte CNReqtaskSaveBanner_hierarchy
-.endobj __RTTI__CNReqtaskSaveBanner
+.endobj __RTTI__19CNReqtaskSaveBanner
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

@@ -11,28 +11,28 @@
 /* 80044ACC 0000E08C  7C 7E 1B 78 */	mr r30, r3
 /* 80044AD0 0000E090  7C 9F 23 78 */	mr r31, r4
 /* 80044AD4 0000E094  48 3F FF 45 */	bl __ct__8CProcessFv
-/* 80044AD8 0000E098  3C 60 80 53 */	lis r3, __vt__CTTask_CTaskGameEff@ha
-/* 80044ADC 0000E09C  3D 60 80 53 */	lis r11, __vt__CTaskGameEff@ha
-/* 80044AE0 0000E0A0  38 63 95 04 */	addi r3, r3, __vt__CTTask_CTaskGameEff@l
+/* 80044AD8 0000E098  3C 60 80 53 */	lis r3, "__vt__22CTTask<12CTaskGameEff>"@ha
+/* 80044ADC 0000E09C  3D 60 80 53 */	lis r11, __vt__12CTaskGameEff@ha
+/* 80044AE0 0000E0A0  38 63 95 04 */	addi r3, r3, "__vt__22CTTask<12CTaskGameEff>"@l
 /* 80044AE4 0000E0A4  90 7E 00 10 */	stw r3, 0x10(r30)
-/* 80044AE8 0000E0A8  39 6B 94 54 */	addi r11, r11, __vt__CTaskGameEff@l
+/* 80044AE8 0000E0A8  39 6B 94 54 */	addi r11, r11, __vt__12CTaskGameEff@l
 /* 80044AEC 0000E0AC  3F 80 80 51 */	lis r28, __ptmf_null@ha
 /* 80044AF0 0000E0B0  84 7C CE 10 */	lwzu r3, __ptmf_null@l(r28)
-/* 80044AF4 0000E0B4  3C E0 80 53 */	lis r7, __vt__CTaskGameEff_CEffRenderHighPrio@ha
-/* 80044AF8 0000E0B8  3C C0 80 53 */	lis r6, __vt___reslist_base_CScn@ha
-/* 80044AFC 0000E0BC  3C 80 80 53 */	lis r4, __vt__reslist_CScn@ha
+/* 80044AF4 0000E0B4  3C E0 80 53 */	lis r7, __vt__Q212CTaskGameEff18CEffRenderHighPrio@ha
+/* 80044AF8 0000E0B8  3C C0 80 53 */	lis r6, "__vt__21_reslist_base<P4CScn>"@ha
+/* 80044AFC 0000E0BC  3C 80 80 53 */	lis r4, "__vt__15reslist<P4CScn>"@ha
 /* 80044B00 0000E0C0  80 1C 00 04 */	lwz r0, 4(r28)
 /* 80044B04 0000E0C4  39 4B 00 24 */	addi r10, r11, 0x24
 /* 80044B08 0000E0C8  90 1E 00 40 */	stw r0, 0x40(r30)
 /* 80044B0C 0000E0CC  39 2B 00 34 */	addi r9, r11, 0x34
 /* 80044B10 0000E0D0  C0 02 82 A8 */	lfs f0, float_80668628@sda21(r2)
-/* 80044B14 0000E0D4  38 E7 94 E8 */	addi r7, r7, __vt__CTaskGameEff_CEffRenderHighPrio@l
+/* 80044B14 0000E0D4  38 E7 94 E8 */	addi r7, r7, __vt__Q212CTaskGameEff18CEffRenderHighPrio@l
 /* 80044B18 0000E0D8  90 7E 00 3C */	stw r3, 0x3c(r30)
-/* 80044B1C 0000E0DC  38 C6 94 DC */	addi r6, r6, __vt___reslist_base_CScn@l
+/* 80044B1C 0000E0DC  38 C6 94 DC */	addi r6, r6, "__vt__21_reslist_base<P4CScn>"@l
 /* 80044B20 0000E0E0  39 00 00 00 */	li r8, 0
 /* 80044B24 0000E0E4  38 BE 00 7C */	addi r5, r30, 0x7c
 /* 80044B28 0000E0E8  80 1C 00 08 */	lwz r0, 8(r28)
-/* 80044B2C 0000E0EC  38 84 94 C4 */	addi r4, r4, __vt__reslist_CScn@l
+/* 80044B2C 0000E0EC  38 84 94 C4 */	addi r4, r4, "__vt__15reslist<P4CScn>"@l
 /* 80044B30 0000E0F0  90 1E 00 44 */	stw r0, 0x44(r30)
 /* 80044B34 0000E0F4  38 00 00 01 */	li r0, 1
 /* 80044B38 0000E0F8  7F C3 F3 78 */	mr r3, r30
@@ -140,9 +140,9 @@
 /* 80044C94 0000E254  7C 7E 1B 78 */	mr r30, r3
 /* 80044C98 0000E258  7C 9F 23 78 */	mr r31, r4
 /* 80044C9C 0000E25C  41 82 00 78 */	beq .L_80044D14
-/* 80044CA0 0000E260  3C A0 80 53 */	lis r5, __vt___reslist_base_CScn@ha
+/* 80044CA0 0000E260  3C A0 80 53 */	lis r5, "__vt__21_reslist_base<P4CScn>"@ha
 /* 80044CA4 0000E264  80 83 00 04 */	lwz r4, 4(r3)
-/* 80044CA8 0000E268  38 A5 94 DC */	addi r5, r5, __vt___reslist_base_CScn@l
+/* 80044CA8 0000E268  38 A5 94 DC */	addi r5, r5, "__vt__21_reslist_base<P4CScn>"@l
 /* 80044CAC 0000E26C  90 A3 00 00 */	stw r5, 0(r3)
 /* 80044CB0 0000E270  38 00 00 00 */	li r0, 0
 /* 80044CB4 0000E274  80 A4 00 00 */	lwz r5, 0(r4)
@@ -560,8 +560,8 @@
 /* 80045218 0000E7D8  7F E3 FB 78 */	mr r3, r31
 /* 8004521C 0000E7DC  48 03 C6 61 */	bl func_8008187C
 /* 80045220 0000E7E0  38 80 00 00 */	li r4, 0
-/* 80045224 0000E7E4  38 AD 80 F0 */	addi r5, r13, __RTTI__cf_CfObjectEff@sda21
-/* 80045228 0000E7E8  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
+/* 80045224 0000E7E4  38 AD 80 F0 */	addi r5, r13, __RTTI__Q22cf11CfObjectEff@sda21
+/* 80045228 0000E7E8  38 CD 80 70 */	addi r6, r13, __RTTI__Q22cf8CfObject@sda21
 /* 8004522C 0000E7EC  38 E0 00 00 */	li r7, 0
 /* 80045230 0000E7F0  48 27 4B 55 */	bl __dynamic_cast
 /* 80045234 0000E7F4  2C 03 00 00 */	cmpwi r3, 0
@@ -856,18 +856,18 @@
 .balign 8
 
 .obj cf_CfObjectEff_hierarchy, global
-	.4byte __RTTI__cf_CObjectState
+	.4byte __RTTI__Q22cf12CObjectState
 	.4byte 0
-	.4byte __RTTI__cf_CObjectParam
+	.4byte __RTTI__Q22cf12CObjectParam
 	.4byte 0
-	.4byte __RTTI__cf_CfObject
+	.4byte __RTTI__Q22cf8CfObject
 	.4byte 0
 	.4byte 0
 .endobj cf_CfObjectEff_hierarchy
 
 
-.obj __vt__CTaskGameEff, global
-	.4byte __RTTI__CTaskGameEff
+.obj __vt__12CTaskGameEff, global
+	.4byte __RTTI__12CTaskGameEff
 	.4byte 0
 	.4byte __dt__CTaskGameEff
 	.4byte CChildListNode_Reset
@@ -876,67 +876,67 @@
 	.4byte func_80044F8C
 	.4byte func_800454AC
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CTaskGameEff
+	.4byte __RTTI__12CTaskGameEff
 	.4byte 0xFFFFFFAC
 	.4byte func_80045548
 	.4byte func_80045540
-	.4byte __RTTI__CTaskGameEff
+	.4byte __RTTI__12CTaskGameEff
 	.4byte 0xFFFFFFA8
 	.4byte func_80045558
 	.4byte func_80045550
 	.4byte func_80045038
 	.4byte func_80045044
-.endobj __vt__CTaskGameEff
+.endobj __vt__12CTaskGameEff
 
 .obj CTaskGameEff_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_CTaskGameEff
+	.4byte "__RTTI__22CTTask<12CTaskGameEff>"
 	.4byte 0
 	.4byte 0
 .endobj CTaskGameEff_hierarchy
 
 
-.obj __vt__reslist_CScn, global
-	.4byte __RTTI__reslist_CScn
+.obj "__vt__15reslist<P4CScn>", global
+	.4byte "__RTTI__15reslist<P4CScn>"
 	.4byte 0
 	.4byte __dt__reslist_CScn
-.endobj __vt__reslist_CScn
+.endobj "__vt__15reslist<P4CScn>"
 
 .obj reslist_CScn_hierarchy, global
-	.4byte __RTTI___reslist_base_CScn
+	.4byte "__RTTI__21_reslist_base<P4CScn>"
 	.4byte 0
 	.4byte 0
 .endobj reslist_CScn_hierarchy
 
 
-.obj __vt___reslist_base_CScn, global
-	.4byte __RTTI___reslist_base_CScn
+.obj "__vt__21_reslist_base<P4CScn>", global
+	.4byte "__RTTI__21_reslist_base<P4CScn>"
 	.4byte 0
 	.4byte __dt___reslist_base_CScn
-.endobj __vt___reslist_base_CScn
+.endobj "__vt__21_reslist_base<P4CScn>"
 
 
-.obj __vt__CTaskGameEff_CEffRenderHighPrio, global
-	.4byte __RTTI__CTaskGameEff_CEffRenderHighPrio
+.obj __vt__Q212CTaskGameEff18CEffRenderHighPrio, global
+	.4byte __RTTI__Q212CTaskGameEff18CEffRenderHighPrio
 	.4byte 0
 	.4byte __dt__CTaskGameEff_CEffRenderHighPrio
 	.4byte func_80045284
-.endobj __vt__CTaskGameEff_CEffRenderHighPrio
+.endobj __vt__Q212CTaskGameEff18CEffRenderHighPrio
 
 .obj CTaskGameEff_CEffRenderHighPrio_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0
 	.4byte 0
 .endobj CTaskGameEff_CEffRenderHighPrio_hierarchy
 
 
-.obj __vt__CTTask_CTaskGameEff, global
-	.4byte __RTTI__CTTask_CTaskGameEff
+.obj "__vt__22CTTask<12CTaskGameEff>", global
+	.4byte "__RTTI__22CTTask<12CTaskGameEff>"
 	.4byte 0
 	.4byte __dt__CTTask_CTaskGameEff
 	.4byte CChildListNode_Reset
@@ -945,14 +945,14 @@
 	.4byte func_800454B0
 	.4byte func_800454F8
 	.4byte CProcess_func_80043F20
-.endobj __vt__CTTask_CTaskGameEff
+.endobj "__vt__22CTTask<12CTaskGameEff>"
 
 .obj CTTask_CTaskGameEff_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -963,35 +963,35 @@
 
 .balign 8
 
-.obj __RTTI__cf_CfObjectEff, global
+.obj __RTTI__Q22cf11CfObjectEff, global
 	.4byte cf_CfObjectEff_typestr
 	.4byte cf_CfObjectEff_hierarchy
-.endobj __RTTI__cf_CfObjectEff
+.endobj __RTTI__Q22cf11CfObjectEff
 
-.obj __RTTI__CTaskGameEff, global
+.obj __RTTI__12CTaskGameEff, global
 	.4byte CTaskGameEff_typestr
 	.4byte CTaskGameEff_hierarchy
-.endobj __RTTI__CTaskGameEff
+.endobj __RTTI__12CTaskGameEff
 
-.obj __RTTI__reslist_CScn, global
+.obj "__RTTI__15reslist<P4CScn>", global
 	.4byte reslist_CScn_typestr
 	.4byte reslist_CScn_hierarchy
-.endobj __RTTI__reslist_CScn
+.endobj "__RTTI__15reslist<P4CScn>"
 
-.obj __RTTI___reslist_base_CScn, global
+.obj "__RTTI__21_reslist_base<P4CScn>", global
 	.4byte _reslist_base_CScn_typestr
 	.4byte 0
-.endobj __RTTI___reslist_base_CScn
+.endobj "__RTTI__21_reslist_base<P4CScn>"
 
-.obj __RTTI__CTaskGameEff_CEffRenderHighPrio, global
+.obj __RTTI__Q212CTaskGameEff18CEffRenderHighPrio, global
 	.4byte CTaskGameEff_CEffRenderHighPrio_typestr
 	.4byte CTaskGameEff_CEffRenderHighPrio_hierarchy
-.endobj __RTTI__CTaskGameEff_CEffRenderHighPrio
+.endobj __RTTI__Q212CTaskGameEff18CEffRenderHighPrio
 
-.obj __RTTI__CTTask_CTaskGameEff, global
+.obj "__RTTI__22CTTask<12CTaskGameEff>", global
 	.4byte CTTask_CTaskGameEff_typestr
 	.4byte CTTask_CTaskGameEff_hierarchy
-.endobj __RTTI__CTTask_CTaskGameEff
+.endobj "__RTTI__22CTTask<12CTaskGameEff>"
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

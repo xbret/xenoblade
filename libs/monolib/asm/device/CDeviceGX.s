@@ -11,16 +11,16 @@
 /* 804550F8 0041E6B8  93 C1 00 08 */	stw r30, 8(r1)
 /* 804550FC 0041E6BC  7C 7E 1B 78 */	mr r30, r3
 /* 80455100 0041E6C0  4B FE 24 BD */	bl __ct__CWorkThread
-/* 80455104 0041E6C4  3C 60 80 57 */	lis r3, __vt__CDeviceBase@ha
+/* 80455104 0041E6C4  3C 60 80 57 */	lis r3, __vt__11CDeviceBase@ha
 /* 80455108 0041E6C8  3B E0 00 00 */	li r31, 0
-/* 8045510C 0041E6CC  38 63 F4 F8 */	addi r3, r3, __vt__CDeviceBase@l
+/* 8045510C 0041E6CC  38 63 F4 F8 */	addi r3, r3, __vt__11CDeviceBase@l
 /* 80455110 0041E6D0  90 7E 00 00 */	stw r3, 0(r30)
 /* 80455114 0041E6D4  38 7E 01 C8 */	addi r3, r30, 0x1c8
 /* 80455118 0041E6D8  93 FE 01 C4 */	stw r31, 0x1c4(r30)
 /* 8045511C 0041E6DC  4B FF 3E 25 */	bl __ct__CDeviceVICb
-/* 80455120 0041E6E0  3C 60 80 57 */	lis r3, __vt__CDeviceGX@ha
+/* 80455120 0041E6E0  3C 60 80 57 */	lis r3, __vt__9CDeviceGX@ha
 /* 80455124 0041E6E4  C0 02 C8 70 */	lfs f0, float_8066CBF0@sda21(r2)
-/* 80455128 0041E6E8  38 63 01 A8 */	addi r3, r3, __vt__CDeviceGX@l
+/* 80455128 0041E6E8  38 63 01 A8 */	addi r3, r3, __vt__9CDeviceGX@l
 /* 8045512C 0041E6EC  38 00 00 01 */	li r0, 1
 /* 80455130 0041E6F0  38 83 00 A0 */	addi r4, r3, 0xa0
 /* 80455134 0041E6F4  90 7E 00 00 */	stw r3, 0(r30)
@@ -87,8 +87,8 @@
 /* 80455214 0041E7D4  7C 7E 1B 78 */	mr r30, r3
 /* 80455218 0041E7D8  41 82 00 78 */	beq .L_80455290
 /* 8045521C 0041E7DC  80 A3 02 50 */	lwz r5, 0x250(r3)
-/* 80455220 0041E7E0  3C 80 80 57 */	lis r4, __vt__CDeviceGX@ha
-/* 80455224 0041E7E4  38 84 01 A8 */	addi r4, r4, __vt__CDeviceGX@l
+/* 80455220 0041E7E0  3C 80 80 57 */	lis r4, __vt__9CDeviceGX@ha
+/* 80455224 0041E7E4  38 84 01 A8 */	addi r4, r4, __vt__9CDeviceGX@l
 /* 80455228 0041E7E8  90 83 00 00 */	stw r4, 0(r3)
 /* 8045522C 0041E7EC  2C 05 00 00 */	cmpwi r5, 0
 /* 80455230 0041E7F0  38 04 00 A0 */	addi r0, r4, 0xa0
@@ -679,8 +679,8 @@
 
 .balign 8
 
-.obj __vt__CDeviceGX, global
-	.4byte __RTTI__CDeviceGX
+.obj __vt__9CDeviceGX, global
+	.4byte __RTTI__9CDeviceGX
 	.4byte 0
 	.4byte __dt__CDeviceGX
 	.4byte IWorkEvent_WorkEvent1
@@ -720,7 +720,7 @@
 	.4byte CDeviceGX_WorkThreadEvent4
 	.4byte CDeviceGX_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-	.4byte __RTTI__CDeviceGX
+	.4byte __RTTI__9CDeviceGX
 	.4byte 0xFFFFFE38
 	.4byte func_804559C4
 	.4byte func_80166630
@@ -728,16 +728,16 @@
 	.4byte func_804559B4
 	.4byte func_80455498
 	.4byte func_80455544
-.endobj __vt__CDeviceGX
+.endobj __vt__9CDeviceGX
 
 .obj CDeviceGX_hierarchy, global
-	.4byte __RTTI__CDeviceVICb
+	.4byte __RTTI__11CDeviceVICb
 	.4byte 0x000001C8
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
-	.4byte __RTTI__CDeviceBase
+	.4byte __RTTI__11CDeviceBase
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -757,10 +757,10 @@
 	.4byte lbl_8066CBE8
 .endobj lbl_8066607C
 
-.obj __RTTI__CDeviceGX, global
+.obj __RTTI__9CDeviceGX, global
 	.4byte CDeviceGX_typestr
 	.4byte CDeviceGX_hierarchy
-.endobj __RTTI__CDeviceGX
+.endobj __RTTI__9CDeviceGX
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

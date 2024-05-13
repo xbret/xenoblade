@@ -11,17 +11,17 @@
 /* 8044E15C 0041771C  93 C1 00 08 */	stw r30, 8(r1)
 /* 8044E160 00417720  7C 7E 1B 78 */	mr r30, r3
 /* 8044E164 00417724  4B FE 94 59 */	bl __ct__CWorkThread
-/* 8044E168 00417728  3C 60 80 57 */	lis r3, __vt__CDeviceFile@ha
-/* 8044E16C 0041772C  3C A0 80 57 */	lis r5, __vt___reslist_base_CFileHandle@ha
+/* 8044E168 00417728  3C 60 80 57 */	lis r3, __vt__11CDeviceFile@ha
+/* 8044E16C 0041772C  3C A0 80 57 */	lis r5, "__vt__29_reslist_base<P11CFileHandle>"@ha
 /* 8044E170 00417730  3B E0 00 00 */	li r31, 0
 /* 8044E174 00417734  93 FE 01 C4 */	stw r31, 0x1c4(r30)
 /* 8044E178 00417738  38 9E 01 D4 */	addi r4, r30, 0x1d4
-/* 8044E17C 0041773C  38 63 FA 90 */	addi r3, r3, __vt__CDeviceFile@l
-/* 8044E180 00417740  38 A5 FB 64 */	addi r5, r5, __vt___reslist_base_CFileHandle@l
+/* 8044E17C 0041773C  38 63 FA 90 */	addi r3, r3, __vt__11CDeviceFile@l
+/* 8044E180 00417740  38 A5 FB 64 */	addi r5, r5, "__vt__29_reslist_base<P11CFileHandle>"@l
 /* 8044E184 00417744  90 7E 00 00 */	stw r3, 0(r30)
-/* 8044E188 00417748  3C 60 80 57 */	lis r3, __vt__reslist_CFileHandle@ha
+/* 8044E188 00417748  3C 60 80 57 */	lis r3, "__vt__23reslist<P11CFileHandle>"@ha
 /* 8044E18C 0041774C  93 FE 01 C8 */	stw r31, 0x1c8(r30)
-/* 8044E190 00417750  38 63 FB 4C */	addi r3, r3, __vt__reslist_CFileHandle@l
+/* 8044E190 00417750  38 63 FB 4C */	addi r3, r3, "__vt__23reslist<P11CFileHandle>"@l
 /* 8044E194 00417754  90 BE 01 CC */	stw r5, 0x1cc(r30)
 /* 8044E198 00417758  93 FE 01 E0 */	stw r31, 0x1e0(r30)
 /* 8044E19C 0041775C  93 FE 01 E4 */	stw r31, 0x1e4(r30)
@@ -110,9 +110,9 @@
 /* 8044E2D8 00417898  93 C1 00 08 */	stw r30, 8(r1)
 /* 8044E2DC 0041789C  7C 7E 1B 78 */	mr r30, r3
 /* 8044E2E0 004178A0  41 82 00 78 */	beq .L_8044E358
-/* 8044E2E4 004178A4  3C A0 80 57 */	lis r5, __vt___reslist_base_CFileHandle@ha
+/* 8044E2E4 004178A4  3C A0 80 57 */	lis r5, "__vt__29_reslist_base<P11CFileHandle>"@ha
 /* 8044E2E8 004178A8  80 83 00 04 */	lwz r4, 4(r3)
-/* 8044E2EC 004178AC  38 A5 FB 64 */	addi r5, r5, __vt___reslist_base_CFileHandle@l
+/* 8044E2EC 004178AC  38 A5 FB 64 */	addi r5, r5, "__vt__29_reslist_base<P11CFileHandle>"@l
 /* 8044E2F0 004178B0  90 A3 00 00 */	stw r5, 0(r3)
 /* 8044E2F4 004178B4  38 00 00 00 */	li r0, 0
 /* 8044E2F8 004178B8  80 A4 00 00 */	lwz r5, 0(r4)
@@ -163,9 +163,9 @@
 /* 8044E390 00417950  7C 7E 1B 78 */	mr r30, r3
 /* 8044E394 00417954  41 82 00 7C */	beq .L_8044E410
 /* 8044E398 00417958  41 82 00 68 */	beq .L_8044E400
-/* 8044E39C 0041795C  3C A0 80 57 */	lis r5, __vt___reslist_base_CFileHandle@ha
+/* 8044E39C 0041795C  3C A0 80 57 */	lis r5, "__vt__29_reslist_base<P11CFileHandle>"@ha
 /* 8044E3A0 00417960  80 83 00 04 */	lwz r4, 4(r3)
-/* 8044E3A4 00417964  38 A5 FB 64 */	addi r5, r5, __vt___reslist_base_CFileHandle@l
+/* 8044E3A4 00417964  38 A5 FB 64 */	addi r5, r5, "__vt__29_reslist_base<P11CFileHandle>"@l
 /* 8044E3A8 00417968  90 A3 00 00 */	stw r5, 0(r3)
 /* 8044E3AC 0041796C  38 00 00 00 */	li r0, 0
 /* 8044E3B0 00417970  80 84 00 00 */	lwz r4, 0(r4)
@@ -221,9 +221,9 @@
 /* 8044E45C 00417A1C  90 0D BD C0 */	stw r0, lbl_80667F40@sda21(r13)
 /* 8044E460 00417A20  41 82 00 68 */	beq .L_8044E4C8
 /* 8044E464 00417A24  41 82 00 64 */	beq .L_8044E4C8
-/* 8044E468 00417A28  3C 80 80 57 */	lis r4, __vt___reslist_base_CFileHandle@ha
+/* 8044E468 00417A28  3C 80 80 57 */	lis r4, "__vt__29_reslist_base<P11CFileHandle>"@ha
 /* 8044E46C 00417A2C  80 7F 00 04 */	lwz r3, 4(r31)
-/* 8044E470 00417A30  38 84 FB 64 */	addi r4, r4, __vt___reslist_base_CFileHandle@l
+/* 8044E470 00417A30  38 84 FB 64 */	addi r4, r4, "__vt__29_reslist_base<P11CFileHandle>"@l
 /* 8044E474 00417A34  90 9F 00 00 */	stw r4, 0(r31)
 /* 8044E478 00417A38  80 83 00 00 */	lwz r4, 0(r3)
 /* 8044E47C 00417A3C  48 00 00 10 */	b .L_8044E48C
@@ -1580,8 +1580,8 @@
 
 .balign 8
 
-.obj __vt__CDeviceFile, global
-	.4byte __RTTI__CDeviceFile
+.obj __vt__11CDeviceFile, global
+	.4byte __RTTI__11CDeviceFile
 	.4byte 0
 	.4byte __dt__CDeviceFile
 	.4byte IWorkEvent_WorkEvent1
@@ -1621,37 +1621,37 @@
 	.4byte CDeviceFile_WorkThreadEvent4
 	.4byte CDeviceFile_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-.endobj __vt__CDeviceFile
+.endobj __vt__11CDeviceFile
 
 .obj CDeviceFile_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
-	.4byte __RTTI__CDeviceBase
+	.4byte __RTTI__11CDeviceBase
 	.4byte 0
 	.4byte 0
 .endobj CDeviceFile_hierarchy
 
 
-.obj __vt__reslist_CFileHandle, global
-	.4byte __RTTI__reslist_CFileHandle
+.obj "__vt__23reslist<P11CFileHandle>", global
+	.4byte "__RTTI__23reslist<P11CFileHandle>"
 	.4byte 0
 	.4byte __dt__reslist_CFileHandle
-.endobj __vt__reslist_CFileHandle
+.endobj "__vt__23reslist<P11CFileHandle>"
 
 .obj reslist_CFileHandle_hierarchy, global
-	.4byte __RTTI___reslist_base_CFileHandle
+	.4byte "__RTTI__29_reslist_base<P11CFileHandle>"
 	.4byte 0
 	.4byte 0
 .endobj reslist_CFileHandle_hierarchy
 
 
-.obj __vt___reslist_base_CFileHandle, global
-	.4byte __RTTI___reslist_base_CFileHandle
+.obj "__vt__29_reslist_base<P11CFileHandle>", global
+	.4byte "__RTTI__29_reslist_base<P11CFileHandle>"
 	.4byte 0
 	.4byte __dt___reslist_base_CFileHandle
-.endobj __vt___reslist_base_CFileHandle
+.endobj "__vt__29_reslist_base<P11CFileHandle>"
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -1664,20 +1664,20 @@
 	.4byte 0
 .endobj lbl_80665FD0
 
-.obj __RTTI__CDeviceFile, global
+.obj __RTTI__11CDeviceFile, global
 	.4byte CDeviceFile_typestr
 	.4byte CDeviceFile_hierarchy
-.endobj __RTTI__CDeviceFile
+.endobj __RTTI__11CDeviceFile
 
-.obj __RTTI__reslist_CFileHandle, global
+.obj "__RTTI__23reslist<P11CFileHandle>", global
 	.4byte reslist_CFileHandle_typestr
 	.4byte reslist_CFileHandle_hierarchy
-.endobj __RTTI__reslist_CFileHandle
+.endobj "__RTTI__23reslist<P11CFileHandle>"
 
-.obj __RTTI___reslist_base_CFileHandle, global
+.obj "__RTTI__29_reslist_base<P11CFileHandle>", global
 	.4byte _reslist_base_CFileHandle_typestr
 	.4byte 0
-.endobj __RTTI___reslist_base_CFileHandle
+.endobj "__RTTI__29_reslist_base<P11CFileHandle>"
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

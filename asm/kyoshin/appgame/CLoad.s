@@ -5,9 +5,9 @@
 .fn __ct__CLoad, global
 /* 802AE43C 002779FC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802AE440 00277A00  7C 08 02 A6 */	mflr r0
-/* 802AE444 00277A04  3C A0 80 54 */	lis r5, __vt__CLoad@ha
+/* 802AE444 00277A04  3C A0 80 54 */	lis r5, __vt__5CLoad@ha
 /* 802AE448 00277A08  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802AE44C 00277A0C  38 A5 DA D0 */	addi r5, r5, __vt__CLoad@l
+/* 802AE44C 00277A0C  38 A5 DA D0 */	addi r5, r5, __vt__5CLoad@l
 /* 802AE450 00277A10  BF C1 00 08 */	stmw r30, 8(r1)
 /* 802AE454 00277A14  7C 7E 1B 78 */	mr r30, r3
 /* 802AE458 00277A18  7C 9F 23 78 */	mr r31, r4
@@ -1189,8 +1189,8 @@
 
 .balign 8
 
-.obj __vt__CLoad, global
-	.4byte __RTTI__CLoad
+.obj __vt__5CLoad, global
+	.4byte __RTTI__5CLoad
 	.4byte 0
 	.4byte __dt__CLoad
 	.4byte IWorkEvent_WorkEvent1
@@ -1224,10 +1224,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CLoad
+.endobj __vt__5CLoad
 
 .obj CLoad_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1263,10 +1263,10 @@
 
 .balign 8
 
-.obj __RTTI__CLoad, global
+.obj __RTTI__5CLoad, global
 	.4byte CLoad_typestr
 	.4byte CLoad_hierarchy
-.endobj __RTTI__CLoad
+.endobj __RTTI__5CLoad
 
 
 .obj lbl_806656F8, global

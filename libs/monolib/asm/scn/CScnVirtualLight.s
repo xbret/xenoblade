@@ -5,10 +5,10 @@
 .fn __ct__CScnVirtualLight, global
 /* 80491E74 0045B434  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 80491E78 0045B438  7C 08 02 A6 */	mflr r0
-/* 80491E7C 0045B43C  3C A0 80 57 */	lis r5, __vt__CScnVirtualLight@ha
+/* 80491E7C 0045B43C  3C A0 80 57 */	lis r5, __vt__16CScnVirtualLight@ha
 /* 80491E80 0045B440  90 01 00 24 */	stw r0, 0x24(r1)
 /* 80491E84 0045B444  38 00 FF FF */	li r0, -1
-/* 80491E88 0045B448  38 A5 20 B0 */	addi r5, r5, __vt__CScnVirtualLight@l
+/* 80491E88 0045B448  38 A5 20 B0 */	addi r5, r5, __vt__16CScnVirtualLight@l
 /* 80491E8C 0045B44C  93 E1 00 1C */	stw r31, 0x1c(r1)
 /* 80491E90 0045B450  93 C1 00 18 */	stw r30, 0x18(r1)
 /* 80491E94 0045B454  93 A1 00 14 */	stw r29, 0x14(r1)
@@ -148,9 +148,9 @@
 /* 80492080 0045B640  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80492084 0045B644  7C 7F 1B 78 */	mr r31, r3
 /* 80492088 0045B648  48 00 00 29 */	bl __ct__804920B0
-/* 8049208C 0045B64C  3C 80 80 53 */	lis r4, __vt__reslist_CVirtualLightObj@ha
+/* 8049208C 0045B64C  3C 80 80 53 */	lis r4, "__vt__28reslist<P16CVirtualLightObj>"@ha
 /* 80492090 0045B650  7F E3 FB 78 */	mr r3, r31
-/* 80492094 0045B654  38 84 9C 60 */	addi r4, r4, __vt__reslist_CVirtualLightObj@l
+/* 80492094 0045B654  38 84 9C 60 */	addi r4, r4, "__vt__28reslist<P16CVirtualLightObj>"@l
 /* 80492098 0045B658  90 9F 00 00 */	stw r4, 0(r31)
 /* 8049209C 0045B65C  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 804920A0 0045B660  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -161,8 +161,8 @@
 
 .fn __ct__804920B0, global
 /* 804920B0 0045B670  38 00 00 00 */	li r0, 0
-/* 804920B4 0045B674  3C 80 80 53 */	lis r4, __vt___reslist_base_CVirtualLightObj@ha
-/* 804920B8 0045B678  38 84 9C 78 */	addi r4, r4, __vt___reslist_base_CVirtualLightObj@l
+/* 804920B4 0045B674  3C 80 80 53 */	lis r4, "__vt__34_reslist_base<P16CVirtualLightObj>"@ha
+/* 804920B8 0045B678  38 84 9C 78 */	addi r4, r4, "__vt__34_reslist_base<P16CVirtualLightObj>"@l
 /* 804920BC 0045B67C  90 83 00 00 */	stw r4, 0(r3)
 /* 804920C0 0045B680  38 83 00 08 */	addi r4, r3, 8
 /* 804920C4 0045B684  90 03 00 14 */	stw r0, 0x14(r3)
@@ -316,9 +316,9 @@
 /* 804922B0 0045B870  93 C1 00 08 */	stw r30, 8(r1)
 /* 804922B4 0045B874  7C 7E 1B 78 */	mr r30, r3
 /* 804922B8 0045B878  41 82 00 C8 */	beq .L_80492380
-/* 804922BC 0045B87C  3C A0 80 57 */	lis r5, __vt__CScnVirtualLight@ha
+/* 804922BC 0045B87C  3C A0 80 57 */	lis r5, __vt__16CScnVirtualLight@ha
 /* 804922C0 0045B880  38 80 00 00 */	li r4, 0
-/* 804922C4 0045B884  38 A5 20 B0 */	addi r5, r5, __vt__CScnVirtualLight@l
+/* 804922C4 0045B884  38 A5 20 B0 */	addi r5, r5, __vt__16CScnVirtualLight@l
 /* 804922C8 0045B888  90 A3 00 00 */	stw r5, 0(r3)
 /* 804922CC 0045B88C  48 00 01 2D */	bl func_804923F8
 /* 804922D0 0045B890  38 7E 00 0C */	addi r3, r30, 0xc
@@ -2736,21 +2736,21 @@
 
 .balign 8
 
-.obj __vt__CScnVirtualLight, global
-	.4byte __RTTI__CScnVirtualLight
+.obj __vt__16CScnVirtualLight, global
+	.4byte __RTTI__16CScnVirtualLight
 	.4byte 0
 	.4byte __dt__CScnVirtualLight
 	.4byte 0
-.endobj __vt__CScnVirtualLight
+.endobj __vt__16CScnVirtualLight
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CScnVirtualLight, global
+.obj __RTTI__16CScnVirtualLight, global
 	.4byte CScnVirtualLight_typestr
 	.4byte 0
-.endobj __RTTI__CScnVirtualLight
+.endobj __RTTI__16CScnVirtualLight
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

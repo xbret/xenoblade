@@ -11,9 +11,9 @@
 /* 802B81AC 0028176C  93 C1 00 08 */	stw r30, 8(r1)
 /* 802B81B0 00281770  7C 7E 1B 78 */	mr r30, r3
 /* 802B81B4 00281774  4B FF FA 21 */	bl __ct__cf_CHelp
-/* 802B81B8 00281778  3C 60 80 54 */	lis r3, __vt__cf_CHelp_LandMark@ha
+/* 802B81B8 00281778  3C 60 80 54 */	lis r3, __vt__Q22cf5CHelp_LandMark@ha
 /* 802B81BC 0028177C  38 00 00 00 */	li r0, 0
-/* 802B81C0 00281780  38 63 ED 10 */	addi r3, r3, __vt__cf_CHelp_LandMark@l
+/* 802B81C0 00281780  38 63 ED 10 */	addi r3, r3, __vt__Q22cf5CHelp_LandMark@l
 /* 802B81C4 00281784  2C 1E 00 00 */	cmpwi r30, 0
 /* 802B81C8 00281788  38 83 00 1C */	addi r4, r3, 0x1c
 /* 802B81CC 0028178C  90 7E 00 08 */	stw r3, 8(r30)
@@ -44,9 +44,9 @@
 /* 802B8220 002817E0  93 C1 00 08 */	stw r30, 8(r1)
 /* 802B8224 002817E4  7C 7E 1B 78 */	mr r30, r3
 /* 802B8228 002817E8  41 82 00 3C */	beq .L_802B8264
-/* 802B822C 002817EC  3C 80 80 54 */	lis r4, __vt__cf_CHelp_LandMark@ha
+/* 802B822C 002817EC  3C 80 80 54 */	lis r4, __vt__Q22cf5CHelp_LandMark@ha
 /* 802B8230 002817F0  7F C5 F3 78 */	mr r5, r30
-/* 802B8234 002817F4  38 84 ED 10 */	addi r4, r4, __vt__cf_CHelp_LandMark@l
+/* 802B8234 002817F4  38 84 ED 10 */	addi r4, r4, __vt__Q22cf5CHelp_LandMark@l
 /* 802B8238 002817F8  90 83 00 08 */	stw r4, 8(r3)
 /* 802B823C 002817FC  38 04 00 1C */	addi r0, r4, 0x1c
 /* 802B8240 00281800  90 03 00 0C */	stw r0, 0xc(r3)

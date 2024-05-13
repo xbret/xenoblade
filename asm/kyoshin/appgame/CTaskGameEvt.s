@@ -10,11 +10,11 @@
 /* 80295574 0025EB34  7C 7E 1B 78 */	mr r30, r3
 /* 80295578 0025EB38  7C 9F 23 78 */	mr r31, r4
 /* 8029557C 0025EB3C  48 1A F4 9D */	bl __ct__8CProcessFv
-/* 80295580 0025EB40  3C 60 80 54 */	lis r3, __vt__CTTask_CTaskGameEvt@ha
-/* 80295584 0025EB44  3C C0 80 54 */	lis r6, __vt__CTaskGameEvt@ha
-/* 80295588 0025EB48  38 63 C4 A0 */	addi r3, r3, __vt__CTTask_CTaskGameEvt@l
+/* 80295580 0025EB40  3C 60 80 54 */	lis r3, "__vt__22CTTask<12CTaskGameEvt>"@ha
+/* 80295584 0025EB44  3C C0 80 54 */	lis r6, __vt__12CTaskGameEvt@ha
+/* 80295588 0025EB48  38 63 C4 A0 */	addi r3, r3, "__vt__22CTTask<12CTaskGameEvt>"@l
 /* 8029558C 0025EB4C  90 7E 00 10 */	stw r3, 0x10(r30)
-/* 80295590 0025EB50  38 C6 C3 B8 */	addi r6, r6, __vt__CTaskGameEvt@l
+/* 80295590 0025EB50  38 C6 C3 B8 */	addi r6, r6, __vt__12CTaskGameEvt@l
 /* 80295594 0025EB54  3D 20 80 51 */	lis r9, __ptmf_null@ha
 /* 80295598 0025EB58  84 E9 CE 10 */	lwzu r7, __ptmf_null@l(r9)
 /* 8029559C 0025EB5C  38 A6 00 24 */	addi r5, r6, 0x24
@@ -285,8 +285,8 @@
 
 .balign 8
 
-.obj __vt__CTaskGameEvt, global
-	.4byte __RTTI__CTaskGameEvt
+.obj __vt__12CTaskGameEvt, global
+	.4byte __RTTI__12CTaskGameEvt
 	.4byte 0
 	.4byte __dt__CTaskGameEvt
 	.4byte CChildListNode_Reset
@@ -295,7 +295,7 @@
 	.4byte func_802956E4
 	.4byte func_802957D4
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CTaskGameEvt
+	.4byte __RTTI__12CTaskGameEvt
 	.4byte 0xFFFFFFAC
 	.4byte func_80295870
 	.4byte IWorkEvent_WorkEvent1
@@ -329,29 +329,29 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CTaskGameEvt
+	.4byte __RTTI__12CTaskGameEvt
 	.4byte 0xFFFFFFA8
 	.4byte func_80295880
 	.4byte func_80295878
 	.4byte func_80295760
 	.4byte func_80295764
-.endobj __vt__CTaskGameEvt
+.endobj __vt__12CTaskGameEvt
 
 .obj CTaskGameEvt_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_CTaskGameEvt
+	.4byte "__RTTI__22CTTask<12CTaskGameEvt>"
 	.4byte 0
 	.4byte 0
 .endobj CTaskGameEvt_hierarchy
 
 
-.obj __vt__CTTask_CTaskGameEvt, global
-	.4byte __RTTI__CTTask_CTaskGameEvt
+.obj "__vt__22CTTask<12CTaskGameEvt>", global
+	.4byte "__RTTI__22CTTask<12CTaskGameEvt>"
 	.4byte 0
 	.4byte __dt__CTTask_CTaskGameEvt
 	.4byte CChildListNode_Reset
@@ -360,14 +360,14 @@
 	.4byte func_802957D8
 	.4byte func_80295820
 	.4byte CProcess_func_80043F20
-.endobj __vt__CTTask_CTaskGameEvt
+.endobj "__vt__22CTTask<12CTaskGameEvt>"
 
 .obj CTTask_CTaskGameEvt_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
 	.4byte 0
 .endobj CTTask_CTaskGameEvt_hierarchy
@@ -376,15 +376,15 @@
 
 .balign 8
 
-.obj __RTTI__CTaskGameEvt, global
+.obj __RTTI__12CTaskGameEvt, global
 	.4byte CTaskGameEvt_typestr
 	.4byte CTaskGameEvt_hierarchy
-.endobj __RTTI__CTaskGameEvt
+.endobj __RTTI__12CTaskGameEvt
 
-.obj __RTTI__CTTask_CTaskGameEvt, global
+.obj "__RTTI__22CTTask<12CTaskGameEvt>", global
 	.4byte CTTask_CTaskGameEvt_typestr
 	.4byte CTTask_CTaskGameEvt_hierarchy
-.endobj __RTTI__CTTask_CTaskGameEvt
+.endobj "__RTTI__22CTTask<12CTaskGameEvt>"
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

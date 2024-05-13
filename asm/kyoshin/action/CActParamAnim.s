@@ -5,10 +5,10 @@
 .fn __ct__CActParamAnim, global
 /* 8004B028 000145E8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8004B02C 000145EC  7C 08 02 A6 */	mflr r0
-/* 8004B030 000145F0  3C 80 80 53 */	lis r4, __vt__CActParamAnim@ha
+/* 8004B030 000145F0  3C 80 80 53 */	lis r4, __vt__13CActParamAnim@ha
 /* 8004B034 000145F4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8004B038 000145F8  38 00 00 00 */	li r0, 0
-/* 8004B03C 000145FC  38 84 99 F8 */	addi r4, r4, __vt__CActParamAnim@l
+/* 8004B03C 000145FC  38 84 99 F8 */	addi r4, r4, __vt__13CActParamAnim@l
 /* 8004B040 00014600  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8004B044 00014604  7C 7F 1B 78 */	mr r31, r3
 /* 8004B048 00014608  90 83 00 00 */	stw r4, 0(r3)
@@ -10070,8 +10070,8 @@
 
 .balign 8
 
-.obj __vt__CActParamAnim, global
-	.4byte __RTTI__CActParamAnim
+.obj __vt__13CActParamAnim, global
+	.4byte __RTTI__13CActParamAnim
 	.4byte 0
 	.4byte __dt__CActParamAnim
 	.4byte func_8004B854
@@ -10132,10 +10132,10 @@
 	.4byte func_80053164
 	.4byte func_8004FFBC
 	.4byte 0
-.endobj __vt__CActParamAnim
+.endobj __vt__13CActParamAnim
 
 .obj CActParamAnim_hierarchy, global
-	.4byte __RTTI__IActParamShift
+	.4byte __RTTI__14IActParamShift
 	.4byte 0
 	.4byte 0
 .endobj CActParamAnim_hierarchy
@@ -10190,15 +10190,15 @@
 
 .balign 8
 
-.obj __RTTI__CActParamAnim, global
+.obj __RTTI__13CActParamAnim, global
 	.4byte CActParamAnim_typestr
 	.4byte CActParamAnim_hierarchy
-.endobj __RTTI__CActParamAnim
+.endobj __RTTI__13CActParamAnim
 
-.obj __RTTI__IActParamShift, global
+.obj __RTTI__14IActParamShift, global
 	.4byte IActParamShift_typestr
 	.4byte 0
-.endobj __RTTI__IActParamShift
+.endobj __RTTI__14IActParamShift
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

@@ -3,9 +3,9 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .fn __ct__CMdlAnmUV, global
-/* 804E6C14 004B01D4  3C 80 80 57 */	lis r4, __vt__CMdlAnmUV@ha
+/* 804E6C14 004B01D4  3C 80 80 57 */	lis r4, __vt__9CMdlAnmUV@ha
 /* 804E6C18 004B01D8  38 00 00 00 */	li r0, 0
-/* 804E6C1C 004B01DC  38 84 3A 08 */	addi r4, r4, __vt__CMdlAnmUV@l
+/* 804E6C1C 004B01DC  38 84 3A 08 */	addi r4, r4, __vt__9CMdlAnmUV@l
 /* 804E6C20 004B01E0  90 83 00 00 */	stw r4, 0(r3)
 /* 804E6C24 004B01E4  90 03 00 04 */	stw r0, 4(r3)
 /* 804E6C28 004B01E8  90 03 00 38 */	stw r0, 0x38(r3)
@@ -668,12 +668,12 @@
 
 .balign 8
 
-.obj __vt__CMdlAnmUV, global
-	.4byte __RTTI__CMdlAnmUV
+.obj __vt__9CMdlAnmUV, global
+	.4byte __RTTI__9CMdlAnmUV
 	.4byte 0
 	.4byte __dt__CMdlAnmUV
 	.4byte 0
-.endobj __vt__CMdlAnmUV
+.endobj __vt__9CMdlAnmUV
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -689,10 +689,10 @@
 	.4byte lbl_8066DAF0
 .endobj lbl_8066658C
 
-.obj __RTTI__CMdlAnmUV, global
+.obj __RTTI__9CMdlAnmUV, global
 	.4byte CMdlAnmUV_typestr
 	.4byte 0
-.endobj __RTTI__CMdlAnmUV
+.endobj __RTTI__9CMdlAnmUV
 
 
 .obj lbl_80666598, global

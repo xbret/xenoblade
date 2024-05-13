@@ -426,23 +426,23 @@
 /* 8027718C 0024074C  7C 7D 1B 78 */	mr r29, r3
 /* 80277190 00240750  38 63 00 18 */	addi r3, r3, 0x18
 /* 80277194 00240754  48 00 38 BD */	bl __ct__cf_CChainActorList
-/* 80277198 00240758  3C 80 80 54 */	lis r4, __vt__cf_CChainMember@ha
+/* 80277198 00240758  3C 80 80 54 */	lis r4, __vt__Q22cf12CChainMember@ha
 /* 8027719C 0024075C  38 7D 1D C8 */	addi r3, r29, 0x1dc8
-/* 802771A0 00240760  38 84 BA 3C */	addi r4, r4, __vt__cf_CChainMember@l
+/* 802771A0 00240760  38 84 BA 3C */	addi r4, r4, __vt__Q22cf12CChainMember@l
 /* 802771A4 00240764  90 9D 1E B0 */	stw r4, 0x1eb0(r29)
 /* 802771A8 00240768  48 00 52 B5 */	bl func_8027C45C
-/* 802771AC 0024076C  3F C0 80 54 */	lis r30, __vt__cf_CChainTimer@ha
+/* 802771AC 0024076C  3F C0 80 54 */	lis r30, __vt__Q22cf11CChainTimer@ha
 /* 802771B0 00240770  3B E0 00 00 */	li r31, 0
-/* 802771B4 00240774  3B DE BA 30 */	addi r30, r30, __vt__cf_CChainTimer@l
+/* 802771B4 00240774  3B DE BA 30 */	addi r30, r30, __vt__Q22cf11CChainTimer@l
 /* 802771B8 00240778  93 DD 1E B8 */	stw r30, 0x1eb8(r29)
 /* 802771BC 0024077C  38 7D 1E C4 */	addi r3, r29, 0x1ec4
 /* 802771C0 00240780  B3 FD 1E B4 */	sth r31, 0x1eb4(r29)
 /* 802771C4 00240784  93 DD 1E C0 */	stw r30, 0x1ec0(r29)
 /* 802771C8 00240788  B3 FD 1E BC */	sth r31, 0x1ebc(r29)
 /* 802771CC 0024078C  48 00 5C 09 */	bl __ct__cf_CChainTime
-/* 802771D0 00240790  3C 60 80 54 */	lis r3, __vt__cf_CChainChance@ha
+/* 802771D0 00240790  3C 60 80 54 */	lis r3, __vt__Q22cf12CChainChance@ha
 /* 802771D4 00240794  93 DD 1E E0 */	stw r30, 0x1ee0(r29)
-/* 802771D8 00240798  38 63 BA 24 */	addi r3, r3, __vt__cf_CChainChance@l
+/* 802771D8 00240798  38 63 BA 24 */	addi r3, r3, __vt__Q22cf12CChainChance@l
 /* 802771DC 0024079C  90 7D 1E EC */	stw r3, 0x1eec(r29)
 /* 802771E0 002407A0  38 7D 1E F4 */	addi r3, r29, 0x1ef4
 /* 802771E4 002407A4  B3 FD 1E DC */	sth r31, 0x1edc(r29)
@@ -4671,29 +4671,29 @@
 .endobj jumptable_8053B9B8
 
 
-.obj __vt__cf_CChainChance, global
-	.4byte __RTTI__cf_CChainChance
+.obj __vt__Q22cf12CChainChance, global
+	.4byte __RTTI__Q22cf12CChainChance
 	.4byte 0
 	.4byte __dt__cf_CChainChance
-.endobj __vt__cf_CChainChance
+.endobj __vt__Q22cf12CChainChance
 
 
-.obj __vt__cf_CChainTimer, global
-	.4byte __RTTI__cf_CChainTimer
+.obj __vt__Q22cf11CChainTimer, global
+	.4byte __RTTI__Q22cf11CChainTimer
 	.4byte 0
 	.4byte __dt__cf_CChainTimer
-.endobj __vt__cf_CChainTimer
+.endobj __vt__Q22cf11CChainTimer
 
 
-.obj __vt__cf_CChainMember, global
-	.4byte __RTTI__cf_CChainMember
+.obj __vt__Q22cf12CChainMember, global
+	.4byte __RTTI__Q22cf12CChainMember
 	.4byte 0
 	.4byte __dt__cf_CChainMember
-.endobj __vt__cf_CChainMember
+.endobj __vt__Q22cf12CChainMember
 
 
-.obj __vt__cf_CChainActor, global
-	.4byte __RTTI__cf_CChainActor
+.obj __vt__Q22cf11CChainActor, global
+	.4byte __RTTI__Q22cf11CChainActor
 	.4byte 0
 	.4byte __dt__cf_CChainActor
 	.4byte func_80279B24
@@ -4723,7 +4723,7 @@
 	.4byte func_80278F5C
 	.4byte func_8027A324
 	.4byte func_8027A9D0
-.endobj __vt__cf_CChainActor
+.endobj __vt__Q22cf11CChainActor
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
@@ -4756,25 +4756,25 @@
 	.4byte 0x000007E0
 .endobj lbl_80665330
 
-.obj __RTTI__cf_CChainChance, global
+.obj __RTTI__Q22cf12CChainChance, global
 	.4byte cf_CChainChance_typestr
 	.4byte 0
-.endobj __RTTI__cf_CChainChance
+.endobj __RTTI__Q22cf12CChainChance
 
-.obj __RTTI__cf_CChainTimer, global
+.obj __RTTI__Q22cf11CChainTimer, global
 	.4byte cf_CChainTimer_typestr
 	.4byte 0
-.endobj __RTTI__cf_CChainTimer
+.endobj __RTTI__Q22cf11CChainTimer
 
-.obj __RTTI__cf_CChainMember, global
+.obj __RTTI__Q22cf12CChainMember, global
 	.4byte cf_CChainMember_typestr
 	.4byte 0
-.endobj __RTTI__cf_CChainMember
+.endobj __RTTI__Q22cf12CChainMember
 
-.obj __RTTI__cf_CChainActor, global
+.obj __RTTI__Q22cf11CChainActor, global
 	.4byte cf_CChainActor_typestr
 	.4byte 0
-.endobj __RTTI__cf_CChainActor
+.endobj __RTTI__Q22cf11CChainActor
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

@@ -5,10 +5,10 @@
 .fn __ct__800AC62C, global
 /* 800AC62C 00075BEC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 800AC630 00075BF0  7C 08 02 A6 */	mflr r0
-/* 800AC634 00075BF4  3D 80 80 53 */	lis r12, __vt__cf_CfObject@ha
+/* 800AC634 00075BF4  3D 80 80 53 */	lis r12, __vt__Q22cf8CfObject@ha
 /* 800AC638 00075BF8  C0 22 8E A0 */	lfs f1, float_80669220@sda21(r2)
 /* 800AC63C 00075BFC  90 01 00 14 */	stw r0, 0x14(r1)
-/* 800AC640 00075C00  39 8C CC B0 */	addi r12, r12, __vt__cf_CfObject@l
+/* 800AC640 00075C00  39 8C CC B0 */	addi r12, r12, __vt__Q22cf8CfObject@l
 /* 800AC644 00075C04  C0 02 8E A4 */	lfs f0, float_80669224@sda21(r2)
 /* 800AC648 00075C08  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 800AC64C 00075C0C  3B E0 00 00 */	li r31, 0
@@ -44,8 +44,8 @@
 /* 800AC6C4 00075C84  7D 89 03 A6 */	mtctr r12
 /* 800AC6C8 00075C88  4E 80 04 21 */	bctrl 
 /* 800AC6CC 00075C8C  80 7E 00 68 */	lwz r3, 0x68(r30)
-/* 800AC6D0 00075C90  3C 80 80 53 */	lis r4, __vt__cf_CfObjectEff@ha
-/* 800AC6D4 00075C94  38 84 C0 40 */	addi r4, r4, __vt__cf_CfObjectEff@l
+/* 800AC6D0 00075C90  3C 80 80 53 */	lis r4, __vt__Q22cf11CfObjectEff@ha
+/* 800AC6D4 00075C94  38 84 C0 40 */	addi r4, r4, __vt__Q22cf11CfObjectEff@l
 /* 800AC6D8 00075C98  38 00 00 01 */	li r0, 1
 /* 800AC6DC 00075C9C  64 63 00 10 */	oris r3, r3, 0x10
 /* 800AC6E0 00075CA0  90 7E 00 68 */	stw r3, 0x68(r30)
@@ -97,8 +97,8 @@
 /* 800AC778 00075D38  93 C1 00 08 */	stw r30, 8(r1)
 /* 800AC77C 00075D3C  7C 7E 1B 78 */	mr r30, r3
 /* 800AC780 00075D40  41 82 00 2C */	beq .L_800AC7AC
-/* 800AC784 00075D44  3D 80 80 53 */	lis r12, __vt__cf_CfObject@ha
-/* 800AC788 00075D48  39 8C CC B0 */	addi r12, r12, __vt__cf_CfObject@l
+/* 800AC784 00075D44  3D 80 80 53 */	lis r12, __vt__Q22cf8CfObject@ha
+/* 800AC788 00075D48  39 8C CC B0 */	addi r12, r12, __vt__Q22cf8CfObject@l
 /* 800AC78C 00075D4C  91 83 00 00 */	stw r12, 0(r3)
 /* 800AC790 00075D50  81 8C 00 68 */	lwz r12, 0x68(r12)
 /* 800AC794 00075D54  7D 89 03 A6 */	mtctr r12
@@ -1136,8 +1136,8 @@
 /* 800AD4E8 00076AA8  83 BE 00 00 */	lwz r29, 0(r30)
 /* 800AD4EC 00076AAC  38 80 00 00 */	li r4, 0
 /* 800AD4F0 00076AB0  80 7E 00 08 */	lwz r3, 8(r30)
-/* 800AD4F4 00076AB4  38 AD 80 F0 */	addi r5, r13, __RTTI__cf_CfObjectEff@sda21
-/* 800AD4F8 00076AB8  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
+/* 800AD4F4 00076AB4  38 AD 80 F0 */	addi r5, r13, __RTTI__Q22cf11CfObjectEff@sda21
+/* 800AD4F8 00076AB8  38 CD 80 70 */	addi r6, r13, __RTTI__Q22cf8CfObject@sda21
 /* 800AD4FC 00076ABC  38 E0 00 00 */	li r7, 0
 /* 800AD500 00076AC0  48 20 C8 85 */	bl __dynamic_cast
 /* 800AD504 00076AC4  81 83 00 00 */	lwz r12, 0(r3)
@@ -1336,8 +1336,8 @@
 /* 800AD798 00076D58  93 C1 00 08 */	stw r30, 8(r1)
 /* 800AD79C 00076D5C  7C 7E 1B 78 */	mr r30, r3
 /* 800AD7A0 00076D60  41 82 00 5C */	beq .L_800AD7FC
-/* 800AD7A4 00076D64  3D 80 80 53 */	lis r12, __vt__cf_CfObjectEff@ha
-/* 800AD7A8 00076D68  39 8C C0 40 */	addi r12, r12, __vt__cf_CfObjectEff@l
+/* 800AD7A4 00076D64  3D 80 80 53 */	lis r12, __vt__Q22cf11CfObjectEff@ha
+/* 800AD7A8 00076D68  39 8C C0 40 */	addi r12, r12, __vt__Q22cf11CfObjectEff@l
 /* 800AD7AC 00076D6C  91 83 00 00 */	stw r12, 0(r3)
 /* 800AD7B0 00076D70  38 0C 01 78 */	addi r0, r12, 0x178
 /* 800AD7B4 00076D74  90 03 00 90 */	stw r0, 0x90(r3)
@@ -1346,9 +1346,9 @@
 /* 800AD7C0 00076D80  4E 80 04 21 */	bctrl 
 /* 800AD7C4 00076D84  2C 1E 00 00 */	cmpwi r30, 0
 /* 800AD7C8 00076D88  41 82 00 24 */	beq .L_800AD7EC
-/* 800AD7CC 00076D8C  3C 80 80 53 */	lis r4, __vt__cf_CfObject@ha
+/* 800AD7CC 00076D8C  3C 80 80 53 */	lis r4, __vt__Q22cf8CfObject@ha
 /* 800AD7D0 00076D90  7F C3 F3 78 */	mr r3, r30
-/* 800AD7D4 00076D94  38 84 CC B0 */	addi r4, r4, __vt__cf_CfObject@l
+/* 800AD7D4 00076D94  38 84 CC B0 */	addi r4, r4, __vt__Q22cf8CfObject@l
 /* 800AD7D8 00076D98  90 9E 00 00 */	stw r4, 0(r30)
 /* 800AD7DC 00076D9C  81 9E 00 00 */	lwz r12, 0(r30)
 /* 800AD7E0 00076DA0  81 8C 00 68 */	lwz r12, 0x68(r12)
@@ -1431,8 +1431,8 @@
 .endobj lbl_8052C028
 
 
-.obj __vt__cf_CfObjectEff, global
-	.4byte __RTTI__cf_CfObjectEff
+.obj __vt__Q22cf11CfObjectEff, global
+	.4byte __RTTI__Q22cf11CfObjectEff
 	.4byte 0
 	.4byte CObjectState_func_8003DC64
 	.4byte CObjectState_func_8003CB58
@@ -1526,7 +1526,7 @@
 	.4byte CfObject_func_800AC4BC
 	.4byte CfObject_func_800AC4B8
 	.4byte CfObject_func_800AC4B0
-	.4byte __RTTI__cf_CfObjectEff
+	.4byte __RTTI__Q22cf11CfObjectEff
 	.4byte 0xFFFFFF70
 	.4byte func_800AD858
 	.4byte func_800AD850
@@ -1538,7 +1538,7 @@
 	.4byte func_800ACA58
 	.4byte func_800ACBCC
 	.4byte func_800AD818
-.endobj __vt__cf_CfObjectEff
+.endobj __vt__Q22cf11CfObjectEff
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

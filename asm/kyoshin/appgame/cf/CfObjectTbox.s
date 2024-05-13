@@ -10,8 +10,8 @@
 /* 801F8CC4 001C2284  7C 7F 1B 78 */	mr r31, r3
 /* 801F8CC8 001C2288  4B EC 6C C5 */	bl __ct__cf_CfObjectObj
 /* 801F8CCC 001C228C  80 7F 00 B0 */	lwz r3, 0xb0(r31)
-/* 801F8CD0 001C2290  3C 80 80 54 */	lis r4, __vt__cf_CfObjectTbox@ha
-/* 801F8CD4 001C2294  38 84 87 70 */	addi r4, r4, __vt__cf_CfObjectTbox@l
+/* 801F8CD0 001C2290  3C 80 80 54 */	lis r4, __vt__Q22cf12CfObjectTbox@ha
+/* 801F8CD4 001C2294  38 84 87 70 */	addi r4, r4, __vt__Q22cf12CfObjectTbox@l
 /* 801F8CD8 001C2298  38 00 00 00 */	li r0, 0
 /* 801F8CDC 001C229C  2C 03 00 00 */	cmpwi r3, 0
 /* 801F8CE0 001C22A0  90 9F 00 00 */	stw r4, 0(r31)
@@ -60,8 +60,8 @@
 /* 801F8D74 001C2334  93 C1 00 08 */	stw r30, 8(r1)
 /* 801F8D78 001C2338  7C 7E 1B 78 */	mr r30, r3
 /* 801F8D7C 001C233C  41 82 00 38 */	beq .L_801F8DB4
-/* 801F8D80 001C2340  3D 80 80 54 */	lis r12, __vt__cf_CfObjectTbox@ha
-/* 801F8D84 001C2344  39 8C 87 70 */	addi r12, r12, __vt__cf_CfObjectTbox@l
+/* 801F8D80 001C2340  3D 80 80 54 */	lis r12, __vt__Q22cf12CfObjectTbox@ha
+/* 801F8D84 001C2344  39 8C 87 70 */	addi r12, r12, __vt__Q22cf12CfObjectTbox@l
 /* 801F8D88 001C2348  91 83 00 00 */	stw r12, 0(r3)
 /* 801F8D8C 001C234C  81 8C 00 68 */	lwz r12, 0x68(r12)
 /* 801F8D90 001C2350  7D 89 03 A6 */	mtctr r12
@@ -118,8 +118,8 @@
 
 .balign 8
 
-.obj __vt__cf_CfObjectTbox, global
-	.4byte __RTTI__cf_CfObjectTbox
+.obj __vt__Q22cf12CfObjectTbox, global
+	.4byte __RTTI__Q22cf12CfObjectTbox
 	.4byte 0
 	.4byte CObjectState_func_8003DC64
 	.4byte CObjectState_func_8003CB58
@@ -257,7 +257,7 @@
 	.4byte func_800BE65C
 	.4byte func_800BE858
 	.4byte 0
-.endobj __vt__cf_CfObjectTbox
+.endobj __vt__Q22cf12CfObjectTbox
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

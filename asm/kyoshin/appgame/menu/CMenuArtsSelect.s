@@ -12,11 +12,11 @@
 /* 80102038 000CB5F8  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8010203C 000CB5FC  7C 9D 23 78 */	mr r29, r4
 /* 80102040 000CB600  48 34 29 D9 */	bl __ct__8CProcessFv
-/* 80102044 000CB604  3C 60 80 53 */	lis r3, __vt__CTTask_IUIBattle@ha
-/* 80102048 000CB608  3C C0 80 53 */	lis r6, __vt__CMenuArtsSelect@ha
-/* 8010204C 000CB60C  38 63 F9 90 */	addi r3, r3, __vt__CTTask_IUIBattle@l
+/* 80102044 000CB604  3C 60 80 53 */	lis r3, "__vt__18CTTask<9IUIBattle>"@ha
+/* 80102048 000CB608  3C C0 80 53 */	lis r6, __vt__15CMenuArtsSelect@ha
+/* 8010204C 000CB60C  38 63 F9 90 */	addi r3, r3, "__vt__18CTTask<9IUIBattle>"@l
 /* 80102050 000CB610  90 7E 00 10 */	stw r3, 0x10(r30)
-/* 80102054 000CB614  38 C6 F8 54 */	addi r6, r6, __vt__CMenuArtsSelect@l
+/* 80102054 000CB614  38 C6 F8 54 */	addi r6, r6, __vt__15CMenuArtsSelect@l
 /* 80102058 000CB618  3D 20 80 51 */	lis r9, __ptmf_null@ha
 /* 8010205C 000CB61C  84 69 CE 10 */	lwzu r3, __ptmf_null@l(r9)
 /* 80102060 000CB620  38 A6 00 24 */	addi r5, r6, 0x24
@@ -7824,8 +7824,8 @@
 .endobj jumptable_8052F820
 
 
-.obj __vt__CMenuArtsSelect, global
-	.4byte __RTTI__CMenuArtsSelect
+.obj __vt__15CMenuArtsSelect, global
+	.4byte __RTTI__15CMenuArtsSelect
 	.4byte 0
 	.4byte __dt__CMenuArtsSelect
 	.4byte CChildListNode_Reset
@@ -7834,7 +7834,7 @@
 	.4byte func_80103280
 	.4byte func_80108BE8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuArtsSelect
+	.4byte __RTTI__15CMenuArtsSelect
 	.4byte 0xFFFFFFA8
 	.4byte func_80108C30
 	.4byte IWorkEvent_WorkEvent1
@@ -7868,54 +7868,54 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CMenuArtsSelect
+	.4byte __RTTI__15CMenuArtsSelect
 	.4byte 0xFFFFFFA4
 	.4byte func_80108C40
 	.4byte func_80108C38
-	.4byte __RTTI__CMenuArtsSelect
+	.4byte __RTTI__15CMenuArtsSelect
 	.4byte 0xFFFFFFA0
 	.4byte func_80108C50
 	.4byte func_80108C48
 	.4byte func_80103E34
 	.4byte func_801041F4
-.endobj __vt__CMenuArtsSelect
+.endobj __vt__15CMenuArtsSelect
 
 .obj CMenuArtsSelect_hierarchy, global
-	.4byte __RTTI__cf_IObjectInfo
+	.4byte __RTTI__Q22cf11IObjectInfo
 	.4byte 0x00000060
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x0000005C
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x00000058
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUIBattle
+	.4byte "__RTTI__18CTTask<9IUIBattle>"
 	.4byte 0
-	.4byte __RTTI__IUIBattle
+	.4byte __RTTI__9IUIBattle
 	.4byte 0
 	.4byte 0
 .endobj CMenuArtsSelect_hierarchy
 
 
 .obj IUIBattle_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUIBattle
+	.4byte "__RTTI__18CTTask<9IUIBattle>"
 	.4byte 0
 	.4byte 0
 .endobj IUIBattle_hierarchy
 
 
-.obj __vt__CTTask_IUIBattle, global
-	.4byte __RTTI__CTTask_IUIBattle
+.obj "__vt__18CTTask<9IUIBattle>", global
+	.4byte "__RTTI__18CTTask<9IUIBattle>"
 	.4byte 0
 	.4byte __dt__CTTask_IUIBattle
 	.4byte CChildListNode_Reset
@@ -7924,14 +7924,14 @@
 	.4byte func_80108BA0
 	.4byte func_80108BE8
 	.4byte CProcess_func_80043F20
-.endobj __vt__CTTask_IUIBattle
+.endobj "__vt__18CTTask<9IUIBattle>"
 
 .obj CTTask_IUIBattle_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
 	.4byte 0
 .endobj CTTask_IUIBattle_hierarchy
@@ -7940,20 +7940,20 @@
 
 .balign 8
 
-.obj __RTTI__CMenuArtsSelect, global
+.obj __RTTI__15CMenuArtsSelect, global
 	.4byte CMenuArtsSelect_typestr
 	.4byte CMenuArtsSelect_hierarchy
-.endobj __RTTI__CMenuArtsSelect
+.endobj __RTTI__15CMenuArtsSelect
 
-.obj __RTTI__IUIBattle, global
+.obj __RTTI__9IUIBattle, global
 	.4byte IUIBattle_typestr
 	.4byte IUIBattle_hierarchy
-.endobj __RTTI__IUIBattle
+.endobj __RTTI__9IUIBattle
 
-.obj __RTTI__CTTask_IUIBattle, global
+.obj "__RTTI__18CTTask<9IUIBattle>", global
 	.4byte CTTask_IUIBattle_typestr
 	.4byte CTTask_IUIBattle_hierarchy
-.endobj __RTTI__CTTask_IUIBattle
+.endobj "__RTTI__18CTTask<9IUIBattle>"
 
 
 .obj lbl_80664700, global

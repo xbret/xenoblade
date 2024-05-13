@@ -11,9 +11,9 @@
 /* 8005A410 000239D0  93 C1 00 08 */	stw r30, 8(r1)
 /* 8005A414 000239D4  7C 7E 1B 78 */	mr r30, r3
 /* 8005A418 000239D8  4B FF 0C 11 */	bl __ct__CActParamAnim
-/* 8005A41C 000239DC  3C 60 80 53 */	lis r3, __vt__cf_CActParamAnimGame@ha
+/* 8005A41C 000239DC  3C 60 80 53 */	lis r3, __vt__Q22cf17CActParamAnimGame@ha
 /* 8005A420 000239E0  38 00 00 00 */	li r0, 0
-/* 8005A424 000239E4  38 63 9C 88 */	addi r3, r3, __vt__cf_CActParamAnimGame@l
+/* 8005A424 000239E4  38 63 9C 88 */	addi r3, r3, __vt__Q22cf17CActParamAnimGame@l
 /* 8005A428 000239E8  90 7E 00 00 */	stw r3, 0(r30)
 /* 8005A42C 000239EC  7F C3 F3 78 */	mr r3, r30
 /* 8005A430 000239F0  90 1E 04 EC */	stw r0, 0x4ec(r30)
@@ -40,9 +40,9 @@
 /* 8005A478 00023A38  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8005A47C 00023A3C  7C 7F 1B 78 */	mr r31, r3
 /* 8005A480 00023A40  4B FF 0B A9 */	bl __ct__CActParamAnim
-/* 8005A484 00023A44  3C 60 80 53 */	lis r3, __vt__cf_CActParamAnimGame@ha
+/* 8005A484 00023A44  3C 60 80 53 */	lis r3, __vt__Q22cf17CActParamAnimGame@ha
 /* 8005A488 00023A48  38 00 00 00 */	li r0, 0
-/* 8005A48C 00023A4C  38 63 9C 88 */	addi r3, r3, __vt__cf_CActParamAnimGame@l
+/* 8005A48C 00023A4C  38 63 9C 88 */	addi r3, r3, __vt__Q22cf17CActParamAnimGame@l
 /* 8005A490 00023A50  90 7F 00 00 */	stw r3, 0(r31)
 /* 8005A494 00023A54  7F E3 FB 78 */	mr r3, r31
 /* 8005A498 00023A58  90 1F 04 EC */	stw r0, 0x4ec(r31)
@@ -6491,8 +6491,8 @@
 
 .balign 8
 
-.obj __vt__cf_CActParamAnimGame, global
-	.4byte __RTTI__cf_CActParamAnimGame
+.obj __vt__Q22cf17CActParamAnimGame, global
+	.4byte __RTTI__Q22cf17CActParamAnimGame
 	.4byte 0
 	.4byte __dt__cf_CActParamAnimGame
 	.4byte func_8004B854
@@ -6553,12 +6553,12 @@
 	.4byte func_8005EEB4
 	.4byte func_8005DCA8
 	.4byte func_80060268
-.endobj __vt__cf_CActParamAnimGame
+.endobj __vt__Q22cf17CActParamAnimGame
 
 .obj cf_CActParamAnimGame_hierarchy, global
-	.4byte __RTTI__IActParamShift
+	.4byte __RTTI__14IActParamShift
 	.4byte 0
-	.4byte __RTTI__CActParamAnim
+	.4byte __RTTI__13CActParamAnim
 	.4byte 0
 	.4byte 0
 .endobj cf_CActParamAnimGame_hierarchy
@@ -6593,10 +6593,10 @@
 	.4byte 0
 .endobj float_80664300
 
-.obj __RTTI__cf_CActParamAnimGame, global
+.obj __RTTI__Q22cf17CActParamAnimGame, global
 	.4byte cf_CActParamAnimGame_typestr
 	.4byte cf_CActParamAnimGame_hierarchy
-.endobj __RTTI__cf_CActParamAnimGame
+.endobj __RTTI__Q22cf17CActParamAnimGame
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

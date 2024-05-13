@@ -12,9 +12,9 @@
 /* 8029488C 0025DE4C  93 C1 00 08 */	stw r30, 8(r1)
 /* 80294890 0025DE50  7C 7E 1B 78 */	mr r30, r3
 /* 80294894 0025DE54  4B EF 0D FD */	bl __ct__cf_CREvtObj
-/* 80294898 0025DE58  3C 60 80 54 */	lis r3, __vt__cf_CREvtMovie@ha
+/* 80294898 0025DE58  3C 60 80 54 */	lis r3, __vt__Q22cf10CREvtMovie@ha
 /* 8029489C 0025DE5C  38 00 00 00 */	li r0, 0
-/* 802948A0 0025DE60  38 63 C2 58 */	addi r3, r3, __vt__cf_CREvtMovie@l
+/* 802948A0 0025DE60  38 63 C2 58 */	addi r3, r3, __vt__Q22cf10CREvtMovie@l
 /* 802948A4 0025DE64  90 7E 00 00 */	stw r3, 0(r30)
 /* 802948A8 0025DE68  7F C3 F3 78 */	mr r3, r30
 /* 802948AC 0025DE6C  93 FE 00 14 */	stw r31, 0x14(r30)
@@ -38,8 +38,8 @@
 /* 802948E8 0025DEA8  93 C1 00 08 */	stw r30, 8(r1)
 /* 802948EC 0025DEAC  7C 7E 1B 78 */	mr r30, r3
 /* 802948F0 0025DEB0  41 82 00 30 */	beq .L_80294920
-/* 802948F4 0025DEB4  3C 80 80 54 */	lis r4, __vt__cf_CREvtMovie@ha
-/* 802948F8 0025DEB8  38 84 C2 58 */	addi r4, r4, __vt__cf_CREvtMovie@l
+/* 802948F4 0025DEB4  3C 80 80 54 */	lis r4, __vt__Q22cf10CREvtMovie@ha
+/* 802948F8 0025DEB8  38 84 C2 58 */	addi r4, r4, __vt__Q22cf10CREvtMovie@l
 /* 802948FC 0025DEBC  90 83 00 00 */	stw r4, 0(r3)
 /* 80294900 0025DEC0  4B ED 06 6D */	bl func_80164F6C
 /* 80294904 0025DEC4  7F C3 F3 78 */	mr r3, r30
@@ -323,8 +323,8 @@
 
 .balign 8
 
-.obj __vt__cf_CREvtMovie, global
-	.4byte __RTTI__cf_CREvtMovie
+.obj __vt__Q22cf10CREvtMovie, global
+	.4byte __RTTI__Q22cf10CREvtMovie
 	.4byte 0
 	.4byte __ct__802948D0
 	.4byte func_80294CB0
@@ -334,10 +334,10 @@
 	.4byte func_801809A8
 	.4byte func_801696C4
 	.4byte func_80294A70
-.endobj __vt__cf_CREvtMovie
+.endobj __vt__Q22cf10CREvtMovie
 
 .obj cf_CREvtMovie_hierarchy, global
-	.4byte __RTTI__cf_CREvtObj
+	.4byte __RTTI__Q22cf8CREvtObj
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -348,10 +348,10 @@
 
 .balign 8
 
-.obj __RTTI__cf_CREvtMovie, global
+.obj __RTTI__Q22cf10CREvtMovie, global
 	.4byte cf_CREvtMovie_typestr
 	.4byte cf_CREvtMovie_hierarchy
-.endobj __RTTI__cf_CREvtMovie
+.endobj __RTTI__Q22cf10CREvtMovie
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

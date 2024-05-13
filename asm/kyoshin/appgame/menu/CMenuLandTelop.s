@@ -13,12 +13,12 @@
 /* 801445C4 0010DB84  7C BE 2B 78 */	mr r30, r5
 /* 801445C8 0010DB88  7C DF 33 78 */	mr r31, r6
 /* 801445CC 0010DB8C  48 30 04 4D */	bl __ct__8CProcessFv
-/* 801445D0 0010DB90  3C 60 80 53 */	lis r3, __vt__CTTask_IUIWindow@ha
-/* 801445D4 0010DB94  3C A0 80 53 */	lis r5, __vt__CMenuLandTelop@ha
-/* 801445D8 0010DB98  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
+/* 801445D0 0010DB90  3C 60 80 53 */	lis r3, "__vt__18CTTask<9IUIWindow>"@ha
+/* 801445D4 0010DB94  3C A0 80 53 */	lis r5, __vt__14CMenuLandTelop@ha
+/* 801445D8 0010DB98  38 63 0A 08 */	addi r3, r3, "__vt__18CTTask<9IUIWindow>"@l
 /* 801445DC 0010DB9C  90 7C 00 10 */	stw r3, 0x10(r28)
 /* 801445E0 0010DBA0  3D 40 80 51 */	lis r10, __ptmf_null@ha
-/* 801445E4 0010DBA4  38 A5 20 80 */	addi r5, r5, __vt__CMenuLandTelop@l
+/* 801445E4 0010DBA4  38 A5 20 80 */	addi r5, r5, __vt__14CMenuLandTelop@l
 /* 801445E8 0010DBA8  84 6A CE 10 */	lwzu r3, __ptmf_null@l(r10)
 /* 801445EC 0010DBAC  38 85 00 24 */	addi r4, r5, 0x24
 /* 801445F0 0010DBB0  3B 60 00 00 */	li r27, 0
@@ -1573,8 +1573,8 @@
 
 .balign 8
 
-.obj __vt__CMenuLandTelop, global
-	.4byte __RTTI__CMenuLandTelop
+.obj __vt__14CMenuLandTelop, global
+	.4byte __RTTI__14CMenuLandTelop
 	.4byte 0
 	.4byte __dt__CMenuLandTelop
 	.4byte CChildListNode_Reset
@@ -1583,7 +1583,7 @@
 	.4byte func_801448E0
 	.4byte func_80124584
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuLandTelop
+	.4byte __RTTI__14CMenuLandTelop
 	.4byte 0xFFFFFF94
 	.4byte func_80145A90
 	.4byte IWorkEvent_WorkEvent1
@@ -1617,27 +1617,27 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CMenuLandTelop
+	.4byte __RTTI__14CMenuLandTelop
 	.4byte 0xFFFFFF90
 	.4byte func_80145AA0
 	.4byte func_80145A98
 	.4byte func_80144E2C
-.endobj __vt__CMenuLandTelop
+.endobj __vt__14CMenuLandTelop
 
 .obj CMenuLandTelop_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000070
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x0000006C
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUIWindow
+	.4byte "__RTTI__18CTTask<9IUIWindow>"
 	.4byte 0
-	.4byte __RTTI__IUIWindow
+	.4byte __RTTI__9IUIWindow
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1647,10 +1647,10 @@
 
 .balign 8
 
-.obj __RTTI__CMenuLandTelop, global
+.obj __RTTI__14CMenuLandTelop, global
 	.4byte CMenuLandTelop_typestr
 	.4byte CMenuLandTelop_hierarchy
-.endobj __RTTI__CMenuLandTelop
+.endobj __RTTI__14CMenuLandTelop
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

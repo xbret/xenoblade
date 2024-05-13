@@ -2585,8 +2585,8 @@
 /* 800C7F38 000914F8  40 82 01 68 */	bne .L_800C80A0
 /* 800C7F3C 000914FC  80 7D 00 18 */	lwz r3, 0x18(r29)
 /* 800C7F40 00091500  38 80 00 00 */	li r4, 0
-/* 800C7F44 00091504  38 AD 83 D8 */	addi r5, r13, __RTTI__cf_CfObjectImplPc@sda21
-/* 800C7F48 00091508  38 CD 83 60 */	addi r6, r13, __RTTI__cf_CfObjectImpl@sda21
+/* 800C7F44 00091504  38 AD 83 D8 */	addi r5, r13, __RTTI__Q22cf14CfObjectImplPc@sda21
+/* 800C7F48 00091508  38 CD 83 60 */	addi r6, r13, __RTTI__Q22cf8CfObjectImpl@sda21
 /* 800C7F4C 0009150C  80 63 3E D4 */	lwz r3, 0x3ed4(r3)
 /* 800C7F50 00091510  38 E0 00 00 */	li r7, 0
 /* 800C7F54 00091514  48 1F 1E 31 */	bl __dynamic_cast
@@ -5286,8 +5286,8 @@
 
 .balign 8
 
-.obj __vt__cf_CfObjectImplPc, global
-	.4byte __RTTI__cf_CfObjectImplPc
+.obj __vt__Q22cf14CfObjectImplPc, global
+	.4byte __RTTI__Q22cf14CfObjectImplPc
 	.4byte 0
 	.4byte __dt__cf_CfObjectImplPc
 	.4byte func_800C6F30
@@ -5332,11 +5332,11 @@
 	.4byte func_800C596C
 	.4byte func_800C5AA0
 	.4byte func_800CAB00
-	.4byte __RTTI__cf_CfObjectImplPc
+	.4byte __RTTI__Q22cf14CfObjectImplPc
 	.4byte 0xFFFFFFF4
 	.4byte func_800CA4DC
 	.4byte func_800C5978
-	.4byte __RTTI__cf_CfObjectImplPc
+	.4byte __RTTI__Q22cf14CfObjectImplPc
 	.4byte 0xFFFFFFF0
 	.4byte func_800CA4E4
 	.4byte func_800C5988
@@ -5351,7 +5351,7 @@
 	.4byte func_8009C6B4
 	.4byte func_8009868C
 	.4byte func_800C5970
-.endobj __vt__cf_CfObjectImplPc
+.endobj __vt__Q22cf14CfObjectImplPc
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

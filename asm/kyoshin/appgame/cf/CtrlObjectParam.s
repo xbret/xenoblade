@@ -33,10 +33,10 @@
 /* 8009D66C 00066C2C  7F A3 EB 78 */	mr r3, r29
 /* 8009D670 00066C30  48 00 11 59 */	bl func_8009E7C8
 /* 8009D674 00066C34  3C 7B 00 04 */	addis r3, r27, 4
-/* 8009D678 00066C38  3F C0 80 53 */	lis r30, __vt__cf_CObjectParam@ha
+/* 8009D678 00066C38  3F C0 80 53 */	lis r30, __vt__Q22cf12CObjectParam@ha
 /* 8009D67C 00066C3C  3B 5B 41 F0 */	addi r26, r27, 0x41f0
 /* 8009D680 00066C40  3B A0 FF FF */	li r29, -1
-/* 8009D684 00066C44  3B DE B8 B8 */	addi r30, r30, __vt__cf_CObjectParam@l
+/* 8009D684 00066C44  3B DE B8 B8 */	addi r30, r30, __vt__Q22cf12CObjectParam@l
 /* 8009D688 00066C48  3B E3 A3 88 */	addi r31, r3, -23672
 .L_8009D68C:
 /* 8009D68C 00066C4C  B3 BA 00 1C */	sth r29, 0x1c(r26)
@@ -1746,10 +1746,10 @@
 /* 8009ED60 00068320  7F C3 F3 78 */	mr r3, r30
 /* 8009ED64 00068324  48 00 1A FD */	bl func_800A0860
 /* 8009ED68 00068328  57 E0 04 3E */	clrlwi r0, r31, 0x10
-/* 8009ED6C 0006832C  3C 60 80 53 */	lis r3, __vt__cf_CBattleState@ha
+/* 8009ED6C 0006832C  3C 60 80 53 */	lis r3, __vt__Q22cf12CBattleState@ha
 /* 8009ED70 00068330  1C 80 3D D4 */	mulli r4, r0, 0x3dd4
 /* 8009ED74 00068334  80 AD A6 08 */	lwz r5, lbl_80666788@sda21(r13)
-/* 8009ED78 00068338  38 63 21 80 */	addi r3, r3, __vt__cf_CBattleState@l
+/* 8009ED78 00068338  38 63 21 80 */	addi r3, r3, __vt__Q22cf12CBattleState@l
 /* 8009ED7C 0006833C  90 61 00 0C */	stw r3, 0xc(r1)
 /* 8009ED80 00068340  38 00 02 A4 */	li r0, 0x2a4
 /* 8009ED84 00068344  7F E5 22 14 */	add r31, r5, r4
@@ -2551,9 +2551,9 @@
 /* 8009F914 00068ED4  7C 7C 1B 78 */	mr r28, r3
 /* 8009F918 00068ED8  38 61 00 B0 */	addi r3, r1, 0xb0
 /* 8009F91C 00068EDC  48 0B 42 D1 */	bl __ct__cf__sArtsSet
-/* 8009F920 00068EE0  3C 60 80 53 */	lis r3, __vt__cf_CArtsSet@ha
+/* 8009F920 00068EE0  3C 60 80 53 */	lis r3, __vt__Q22cf8CArtsSet@ha
 /* 8009F924 00068EE4  3B 21 00 E8 */	addi r25, r1, 0xe8
-/* 8009F928 00068EE8  38 63 2D 90 */	addi r3, r3, __vt__cf_CArtsSet@l
+/* 8009F928 00068EE8  38 63 2D 90 */	addi r3, r3, __vt__Q22cf8CArtsSet@l
 /* 8009F92C 00068EEC  90 61 00 E4 */	stw r3, 0xe4(r1)
 /* 8009F930 00068EF0  3A E1 0E 08 */	addi r23, r1, 0xe08
 .L_8009F934:
@@ -7380,8 +7380,8 @@
 
 .balign 8
 
-.obj __vt__cf_CObjectParam, global
-	.4byte __RTTI__cf_CObjectParam
+.obj __vt__Q22cf12CObjectParam, global
+	.4byte __RTTI__Q22cf12CObjectParam
 	.4byte 0
 	.4byte CObjectState_func_8003DC64
 	.4byte CObjectState_func_8003CB58
@@ -7402,10 +7402,10 @@
 	.4byte CObjectParam_func_80080640
 	.4byte CObjectParam_func_8003E664
 	.4byte CObjectParam_func_8003DC74
-.endobj __vt__cf_CObjectParam
+.endobj __vt__Q22cf12CObjectParam
 
-.obj __vt__cf_CObjectState, global
-	.4byte __RTTI__cf_CObjectState
+.obj __vt__Q22cf12CObjectState, global
+	.4byte __RTTI__Q22cf12CObjectState
 	.4byte 0
 	.4byte CObjectState_func_8003DC64
 	.4byte CObjectState_func_8003CB58
@@ -7420,7 +7420,7 @@
 	.4byte CObjectState_func_8003D7B0
 	.4byte CObjectState_func_800A3494
 	.4byte CObjectState_func_800A3488
-.endobj __vt__cf_CObjectState
+.endobj __vt__Q22cf12CObjectState
 
 
 .obj lbl_8052B948, global

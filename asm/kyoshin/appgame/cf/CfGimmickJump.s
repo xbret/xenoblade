@@ -16,9 +16,9 @@
 /* 8020EF30 001D84F0  90 01 00 40 */	stw r0, 0x40(r1)
 /* 8020EF34 001D84F4  90 01 00 48 */	stw r0, 0x48(r1)
 /* 8020EF38 001D84F8  4B FF 99 A9 */	bl __ct__cf_CfGimmick
-/* 8020EF3C 001D84FC  3C 60 80 54 */	lis r3, __vt__cf_CfGimmickJump@ha
+/* 8020EF3C 001D84FC  3C 60 80 54 */	lis r3, __vt__Q22cf13CfGimmickJump@ha
 /* 8020EF40 001D8500  38 00 00 05 */	li r0, 5
-/* 8020EF44 001D8504  38 63 91 D0 */	addi r3, r3, __vt__cf_CfGimmickJump@l
+/* 8020EF44 001D8504  38 63 91 D0 */	addi r3, r3, __vt__Q22cf13CfGimmickJump@l
 /* 8020EF48 001D8508  90 7E 00 00 */	stw r3, 0(r30)
 /* 8020EF4C 001D850C  B0 1E 00 82 */	sth r0, 0x82(r30)
 /* 8020EF50 001D8510  4B E2 BA E5 */	bl func_8003AA34
@@ -282,8 +282,8 @@
 /* 8020F330 001D88F0  93 C1 00 08 */	stw r30, 8(r1)
 /* 8020F334 001D88F4  7C 7E 1B 78 */	mr r30, r3
 /* 8020F338 001D88F8  41 82 00 38 */	beq .L_8020F370
-/* 8020F33C 001D88FC  3C 80 80 54 */	lis r4, __vt__cf_CfGimmickJump@ha
-/* 8020F340 001D8900  38 84 91 D0 */	addi r4, r4, __vt__cf_CfGimmickJump@l
+/* 8020F33C 001D88FC  3C 80 80 54 */	lis r4, __vt__Q22cf13CfGimmickJump@ha
+/* 8020F340 001D8900  38 84 91 D0 */	addi r4, r4, __vt__Q22cf13CfGimmickJump@l
 /* 8020F344 001D8904  90 83 00 00 */	stw r4, 0(r3)
 /* 8020F348 001D8908  4B FF 9B 9D */	bl func_80208EE4
 /* 8020F34C 001D890C  38 7E 00 7C */	addi r3, r30, 0x7c
@@ -1401,8 +1401,8 @@
 .endobj lbl_805391A0
 
 
-.obj __vt__cf_CfGimmickJump, global
-	.4byte __RTTI__cf_CfGimmickJump
+.obj __vt__Q22cf13CfGimmickJump, global
+	.4byte __RTTI__Q22cf13CfGimmickJump
 	.4byte 0
 	.4byte __dt__cf_CfGimmickJump
 	.4byte func_8020896C
@@ -1411,12 +1411,12 @@
 	.4byte func_801F4BF8
 	.4byte func_801F4C8C
 	.4byte func_8020F38C
-.endobj __vt__cf_CfGimmickJump
+.endobj __vt__Q22cf13CfGimmickJump
 
 .obj cf_CfGimmickJump_hierarchy, global
-	.4byte __RTTI__cf_IObjectInfo
+	.4byte __RTTI__Q22cf11IObjectInfo
 	.4byte 0
-	.4byte __RTTI__cf_CfGimmick
+	.4byte __RTTI__Q22cf9CfGimmick
 	.4byte 0
 	.4byte 0
 .endobj cf_CfGimmickJump_hierarchy
@@ -1425,10 +1425,10 @@
 
 .balign 8
 
-.obj __RTTI__cf_CfGimmickJump, global
+.obj __RTTI__Q22cf13CfGimmickJump, global
 	.4byte cf_CfGimmickJump_typestr
 	.4byte cf_CfGimmickJump_hierarchy
-.endobj __RTTI__cf_CfGimmickJump
+.endobj __RTTI__Q22cf13CfGimmickJump
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

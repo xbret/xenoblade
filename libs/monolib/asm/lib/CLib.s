@@ -328,9 +328,9 @@
 /* 804597DC 00422D9C  7F C5 F3 78 */	mr r5, r30
 /* 804597E0 00422DA0  38 C0 00 08 */	li r6, 8
 /* 804597E4 00422DA4  4B FD DD D9 */	bl __ct__CWorkThread
-/* 804597E8 00422DA8  3C 60 80 57 */	lis r3, __vt__CLib@ha
+/* 804597E8 00422DA8  3C 60 80 57 */	lis r3, __vt__4CLib@ha
 /* 804597EC 00422DAC  38 00 00 0B */	li r0, 0xb
-/* 804597F0 00422DB0  38 63 05 E8 */	addi r3, r3, __vt__CLib@l
+/* 804597F0 00422DB0  38 63 05 E8 */	addi r3, r3, __vt__4CLib@l
 /* 804597F4 00422DB4  90 7D 00 00 */	stw r3, 0(r29)
 /* 804597F8 00422DB8  93 AD BE 28 */	stw r29, lbl_80667FA8@sda21(r13)
 /* 804597FC 00422DBC  90 1D 00 50 */	stw r0, 0x50(r29)
@@ -371,8 +371,8 @@
 
 .balign 8
 
-.obj __vt__CLib, global
-	.4byte __RTTI__CLib
+.obj __vt__4CLib, global
+	.4byte __RTTI__4CLib
 	.4byte 0
 	.4byte __dt__CLib
 	.4byte IWorkEvent_WorkEvent1
@@ -412,12 +412,12 @@
 	.4byte CLib_WorkThreadEvent4
 	.4byte CLib_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-.endobj __vt__CLib
+.endobj __vt__4CLib
 
 .obj CLib_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -428,10 +428,10 @@
 
 .balign 8
 
-.obj __RTTI__CLib, global
+.obj __RTTI__4CLib, global
 	.4byte CLib_typestr
 	.4byte CLib_hierarchy
-.endobj __RTTI__CLib
+.endobj __RTTI__4CLib
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

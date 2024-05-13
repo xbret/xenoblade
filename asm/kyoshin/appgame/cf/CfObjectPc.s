@@ -9,8 +9,8 @@
 /* 800BFC9C 0008925C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 800BFCA0 00089260  7C 7F 1B 78 */	mr r31, r3
 /* 800BFCA4 00089264  48 0B 01 C5 */	bl __ct__cf_CfObjectActor
-/* 800BFCA8 00089268  3C A0 80 53 */	lis r5, __vt__cf_CfObjectPc@ha
-/* 800BFCAC 0008926C  38 A5 D5 70 */	addi r5, r5, __vt__cf_CfObjectPc@l
+/* 800BFCA8 00089268  3C A0 80 53 */	lis r5, __vt__Q22cf10CfObjectPc@ha
+/* 800BFCAC 0008926C  38 A5 D5 70 */	addi r5, r5, __vt__Q22cf10CfObjectPc@l
 /* 800BFCB0 00089270  90 BF 00 00 */	stw r5, 0(r31)
 /* 800BFCB4 00089274  38 85 00 0C */	addi r4, r5, 0xc
 /* 800BFCB8 00089278  38 65 03 6C */	addi r3, r5, 0x36c
@@ -55,8 +55,8 @@
 /* 800BFD40 00089300  93 C1 00 08 */	stw r30, 8(r1)
 /* 800BFD44 00089304  7C 7E 1B 78 */	mr r30, r3
 /* 800BFD48 00089308  41 82 00 7C */	beq .L_800BFDC4
-/* 800BFD4C 0008930C  3D 80 80 53 */	lis r12, __vt__cf_CfObjectPc@ha
-/* 800BFD50 00089310  39 8C D5 70 */	addi r12, r12, __vt__cf_CfObjectPc@l
+/* 800BFD4C 0008930C  3D 80 80 53 */	lis r12, __vt__Q22cf10CfObjectPc@ha
+/* 800BFD50 00089310  39 8C D5 70 */	addi r12, r12, __vt__Q22cf10CfObjectPc@l
 /* 800BFD54 00089314  91 83 00 00 */	stw r12, 0(r3)
 /* 800BFD58 00089318  38 AC 00 0C */	addi r5, r12, 0xc
 /* 800BFD5C 0008931C  38 8C 03 6C */	addi r4, r12, 0x36c
@@ -1607,11 +1607,11 @@
 
 .balign 8
 
-.obj __vt__cf_CfObjectPc, global
-	.4byte __RTTI__cf_CfObjectPc
+.obj __vt__Q22cf10CfObjectPc, global
+	.4byte __RTTI__Q22cf10CfObjectPc
 	.4byte 0
 	.4byte func_800AFB04
-	.4byte __RTTI__cf_CfObjectPc
+	.4byte __RTTI__Q22cf10CfObjectPc
 	.4byte 0xFFFFFFF8
 	.4byte func_800B064C
 	.4byte func_800B0654
@@ -1827,11 +1827,11 @@
 	.4byte func_801715A8
 	.4byte func_801716B8
 	.4byte func_800AFBA0
-	.4byte __RTTI__cf_CfObjectPc
+	.4byte __RTTI__Q22cf10CfObjectPc
 	.4byte 0xFFFFCC80
 	.4byte func_8014AA18
 	.4byte func_8014AB28
-	.4byte __RTTI__cf_CfObjectPc
+	.4byte __RTTI__Q22cf10CfObjectPc
 	.4byte 0xFFFFC164
 	.4byte CObjectState_func_8003DC64
 	.4byte CObjectState_func_8003CB58
@@ -1996,7 +1996,7 @@
 	.4byte func_800C0514
 	.4byte func_800C11CC
 	.4byte 0
-.endobj __vt__cf_CfObjectPc
+.endobj __vt__Q22cf10CfObjectPc
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

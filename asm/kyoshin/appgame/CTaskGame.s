@@ -13,11 +13,11 @@
 /* 80040160 00009720  7C BE 2B 78 */	mr r30, r5
 /* 80040164 00009724  7C DF 33 78 */	mr r31, r6
 /* 80040168 00009728  48 40 48 B1 */	bl __ct__8CProcessFv
-/* 8004016C 0000972C  3C 60 80 53 */	lis r3, __vt__CTTask_CTaskGame@ha
-/* 80040170 00009730  3E C0 80 53 */	lis r22, __vt__CTaskGame@ha
-/* 80040174 00009734  38 63 91 E4 */	addi r3, r3, __vt__CTTask_CTaskGame@l
+/* 8004016C 0000972C  3C 60 80 53 */	lis r3, "__vt__18CTTask<9CTaskGame>"@ha
+/* 80040170 00009730  3E C0 80 53 */	lis r22, __vt__9CTaskGame@ha
+/* 80040174 00009734  38 63 91 E4 */	addi r3, r3, "__vt__18CTTask<9CTaskGame>"@l
 /* 80040178 00009738  90 7C 00 10 */	stw r3, 0x10(r28)
-/* 8004017C 0000973C  3A D6 90 C0 */	addi r22, r22, __vt__CTaskGame@l
+/* 8004017C 0000973C  3A D6 90 C0 */	addi r22, r22, __vt__9CTaskGame@l
 /* 80040180 00009740  3D 00 80 51 */	lis r8, __ptmf_null@ha
 /* 80040184 00009744  84 68 CE 10 */	lwzu r3, __ptmf_null@l(r8)
 /* 80040188 00009748  3B 60 00 00 */	li r27, 0
@@ -614,9 +614,9 @@
 /* 800409A0 00009F60  7C 7E 1B 78 */	mr r30, r3
 /* 800409A4 00009F64  7C 9F 23 78 */	mr r31, r4
 /* 800409A8 00009F68  41 82 00 78 */	beq .L_80040A20
-/* 800409AC 00009F6C  3C A0 80 53 */	lis r5, __vt___reslist_base_cf_CfObject@ha
+/* 800409AC 00009F6C  3C A0 80 53 */	lis r5, "__vt__30_reslist_base<PQ22cf8CfObject>"@ha
 /* 800409B0 00009F70  80 83 00 04 */	lwz r4, 4(r3)
-/* 800409B4 00009F74  38 A5 90 B4 */	addi r5, r5, __vt___reslist_base_cf_CfObject@l
+/* 800409B4 00009F74  38 A5 90 B4 */	addi r5, r5, "__vt__30_reslist_base<PQ22cf8CfObject>"@l
 /* 800409B8 00009F78  90 A3 00 00 */	stw r5, 0(r3)
 /* 800409BC 00009F7C  38 00 00 00 */	li r0, 0
 /* 800409C0 00009F80  80 A4 00 00 */	lwz r5, 0(r4)
@@ -4804,55 +4804,55 @@
 	.4byte 0
 .endobj lbl_80664208
 
-.obj __RTTI___reslist_base_cf_CfObject, global
+.obj "__RTTI__30_reslist_base<PQ22cf8CfObject>", global
 	.4byte _reslist_base_cf_CfObject_typestr
 	.4byte 0
-.endobj __RTTI___reslist_base_cf_CfObject
+.endobj "__RTTI__30_reslist_base<PQ22cf8CfObject>"
 
-.obj __RTTI__CTaskGame, global
+.obj __RTTI__9CTaskGame, global
 	.4byte CTaskGame_typestr
 	.4byte CTaskGame_hierarchy
-.endobj __RTTI__CTaskGame
+.endobj __RTTI__9CTaskGame
 
-.obj __RTTI__CTTask_CTaskGame, global
+.obj "__RTTI__18CTTask<9CTaskGame>", global
 	.4byte CTTask_CTaskGame_typestr
 	.4byte CTTask_CTaskGame_hierarchy
-.endobj __RTTI__CTTask_CTaskGame
+.endobj "__RTTI__18CTTask<9CTaskGame>"
 
-.obj __RTTI__IErrMesWinSel, global
+.obj __RTTI__13IErrMesWinSel, global
 	.4byte IErrMesWinSel_typestr
 	.4byte 0
-.endobj __RTTI__IErrMesWinSel
+.endobj __RTTI__13IErrMesWinSel
 
-.obj __RTTI__ITitleMenu, global
+.obj __RTTI__10ITitleMenu, global
 	.4byte ITitleMenu_typestr
 	.4byte 0
-.endobj __RTTI__ITitleMenu
+.endobj __RTTI__10ITitleMenu
 
-.obj __RTTI__IGameException, global
+.obj __RTTI__14IGameException, global
 	.4byte IGameException_typestr
 	.4byte 0
-.endobj __RTTI__IGameException
+.endobj __RTTI__14IGameException
 
-.obj __RTTI__IScnRender, global
+.obj __RTTI__10IScnRender, global
 	.4byte IScnRender_typestr
 	.4byte 0
-.endobj __RTTI__IScnRender
+.endobj __RTTI__10IScnRender
 
-.obj __RTTI__CProcess, global
+.obj __RTTI__8CProcess, global
 	.4byte CProcess_typestr
 	.4byte CProcess_hierarchy
-.endobj __RTTI__CProcess
+.endobj __RTTI__8CProcess
 
-.obj __RTTI__CChildListNode, global
+.obj __RTTI__14CChildListNode, global
 	.4byte CChildListNode_typestr
 	.4byte CChildListNode_hierarchy
-.endobj __RTTI__CChildListNode
+.endobj __RTTI__14CChildListNode
 
-.obj __RTTI__CDoubleListNode, global
+.obj __RTTI__15CDoubleListNode, global
 	.4byte CDoubleListNode_typestr
 	.4byte 0
-.endobj __RTTI__CDoubleListNode
+.endobj __RTTI__15CDoubleListNode
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

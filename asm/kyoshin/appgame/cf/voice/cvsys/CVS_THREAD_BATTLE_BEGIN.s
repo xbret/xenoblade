@@ -85,9 +85,9 @@
 /* 802AFBA0 00279160  41 82 00 68 */	beq .L_802AFC08
 /* 802AFBA4 00279164  90 3F 00 1C */	stw r1, 0x1c(r31)
 /* 802AFBA8 00279168  4B FF 3E D9 */	bl __ct__cf_CVS_THREAD
-/* 802AFBAC 0027916C  3C 80 80 54 */	lis r4, __vt__cf_CVS_THREAD_BATTLE_BEGIN@ha
+/* 802AFBAC 0027916C  3C 80 80 54 */	lis r4, __vt__Q22cf23CVS_THREAD_BATTLE_BEGIN@ha
 /* 802AFBB0 00279170  38 7D 00 28 */	addi r3, r29, 0x28
-/* 802AFBB4 00279174  38 84 E3 D0 */	addi r4, r4, __vt__cf_CVS_THREAD_BATTLE_BEGIN@l
+/* 802AFBB4 00279174  38 84 E3 D0 */	addi r4, r4, __vt__Q22cf23CVS_THREAD_BATTLE_BEGIN@l
 /* 802AFBB8 00279178  90 9D 00 1C */	stw r4, 0x1c(r29)
 /* 802AFBBC 0027917C  38 80 00 00 */	li r4, 0
 /* 802AFBC0 00279180  38 A0 00 0C */	li r5, 0xc
@@ -866,8 +866,8 @@
 .endobj lbl_8053E3C4
 
 
-.obj __vt__cf_CVS_THREAD_BATTLE_BEGIN, global
-	.4byte __RTTI__cf_CVS_THREAD_BATTLE_BEGIN
+.obj __vt__Q22cf23CVS_THREAD_BATTLE_BEGIN, global
+	.4byte __RTTI__Q22cf23CVS_THREAD_BATTLE_BEGIN
 	.4byte 0
 	.4byte func_802A3B50
 	.4byte func_802B01B0
@@ -875,21 +875,21 @@
 	.4byte func_802A1EA0
 	.4byte func_802A3740
 	.4byte 0
-.endobj __vt__cf_CVS_THREAD_BATTLE_BEGIN
+.endobj __vt__Q22cf23CVS_THREAD_BATTLE_BEGIN
 
 .obj cf_CVS_THREAD_BATTLE_BEGIN_hierarchy, global
-	.4byte __RTTI__cf_CVS_THREAD
+	.4byte __RTTI__Q22cf10CVS_THREAD
 	.4byte 0
-	.4byte __RTTI__cf_EVS_THREAD_LIB
+	.4byte __RTTI__Q22cf14EVS_THREAD_LIB
 	.4byte 0x80000021
 	.4byte 0x00000001
-	.4byte __RTTI__cf_CVS_THREAD_LIB
+	.4byte __RTTI__Q22cf10CVS_THREAD_LIB
 	.4byte 0x00000021
 	.4byte 0
 .endobj cf_CVS_THREAD_BATTLE_BEGIN_hierarchy
 
 .obj cf_EVS_THREAD_LIB_hierarchy, global
-	.4byte __RTTI__cf_CVS_THREAD_LIB
+	.4byte __RTTI__Q22cf10CVS_THREAD_LIB
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -899,20 +899,20 @@
 
 .balign 8
 
-.obj __RTTI__cf_CVS_THREAD_BATTLE_BEGIN, global
+.obj __RTTI__Q22cf23CVS_THREAD_BATTLE_BEGIN, global
 	.4byte cf_CVS_THREAD_BATTLE_BEGIN_typestr
 	.4byte cf_CVS_THREAD_BATTLE_BEGIN_hierarchy
-.endobj __RTTI__cf_CVS_THREAD_BATTLE_BEGIN
+.endobj __RTTI__Q22cf23CVS_THREAD_BATTLE_BEGIN
 
-.obj __RTTI__cf_EVS_THREAD_LIB, global
+.obj __RTTI__Q22cf14EVS_THREAD_LIB, global
 	.4byte cf_EVS_THREAD_LIB_typestr
 	.4byte cf_EVS_THREAD_LIB_hierarchy
-.endobj __RTTI__cf_EVS_THREAD_LIB
+.endobj __RTTI__Q22cf14EVS_THREAD_LIB
 
-.obj __RTTI__cf_CVS_THREAD_LIB, global
+.obj __RTTI__Q22cf10CVS_THREAD_LIB, global
 	.4byte cf_CVS_THREAD_LIB_typestr
 	.4byte 0
-.endobj __RTTI__cf_CVS_THREAD_LIB
+.endobj __RTTI__Q22cf10CVS_THREAD_LIB
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

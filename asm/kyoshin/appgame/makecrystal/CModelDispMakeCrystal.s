@@ -8,9 +8,9 @@
 /* 8021BC78 001E5238  90 01 06 24 */	stw r0, 0x624(r1)
 /* 8021BC7C 001E523C  39 61 06 20 */	addi r11, r1, 0x620
 /* 8021BC80 001E5240  48 09 E4 C1 */	bl _savegpr_22
-/* 8021BC84 001E5244  3C C0 80 54 */	lis r6, __vt__CModelDispMakeCrystal@ha
+/* 8021BC84 001E5244  3C C0 80 54 */	lis r6, __vt__21CModelDispMakeCrystal@ha
 /* 8021BC88 001E5248  3A E0 00 00 */	li r23, 0
-/* 8021BC8C 001E524C  38 C6 96 28 */	addi r6, r6, __vt__CModelDispMakeCrystal@l
+/* 8021BC8C 001E524C  38 C6 96 28 */	addi r6, r6, __vt__21CModelDispMakeCrystal@l
 /* 8021BC90 001E5250  90 C3 00 00 */	stw r6, 0(r3)
 /* 8021BC94 001E5254  38 A6 00 88 */	addi r5, r6, 0x88
 /* 8021BC98 001E5258  7C 7B 1B 78 */	mr r27, r3
@@ -7037,8 +7037,8 @@
 
 .balign 8
 
-.obj __vt__CModelDispMakeCrystal, global
-	.4byte __RTTI__CModelDispMakeCrystal
+.obj __vt__21CModelDispMakeCrystal, global
+	.4byte __RTTI__21CModelDispMakeCrystal
 	.4byte 0
 	.4byte __dt__CModelDispMakeCrystal
 	.4byte IWorkEvent_WorkEvent1
@@ -7072,7 +7072,7 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CModelDispMakeCrystal
+	.4byte __RTTI__21CModelDispMakeCrystal
 	.4byte 0xFFFFFFFC
 	.4byte func_80221E54
 	.4byte func_80054A20
@@ -7083,15 +7083,15 @@
 	.4byte func_800554D8
 	.4byte func_800554D0
 	.4byte func_800554D4
-	.4byte __RTTI__CModelDispMakeCrystal
+	.4byte __RTTI__21CModelDispMakeCrystal
 	.4byte 0xFFFFFFF8
 	.4byte func_80221E64
 	.4byte func_80221E5C
 	.4byte func_80221D58
-.endobj __vt__CModelDispMakeCrystal
+.endobj __vt__21CModelDispMakeCrystal
 
 .obj CModelDispMakeCrystal_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -7101,10 +7101,10 @@
 
 .balign 8
 
-.obj __RTTI__CModelDispMakeCrystal, global
+.obj __RTTI__21CModelDispMakeCrystal, global
 	.4byte CModelDispMakeCrystal_typestr
 	.4byte CModelDispMakeCrystal_hierarchy
-.endobj __RTTI__CModelDispMakeCrystal
+.endobj __RTTI__21CModelDispMakeCrystal
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

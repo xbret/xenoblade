@@ -166,19 +166,19 @@
 .fn __ct__CWorkThread, global
 /* 804375BC 00400B7C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 804375C0 00400B80  7C 08 02 A6 */	mflr r0
-/* 804375C4 00400B84  3C E0 80 57 */	lis r7, __vt__CWorkThread@ha
-/* 804375C8 00400B88  3D 60 80 57 */	lis r11, __vt___reslist_base_CWorkThread@ha
+/* 804375C4 00400B84  3C E0 80 57 */	lis r7, __vt__11CWorkThread@ha
+/* 804375C8 00400B88  3D 60 80 57 */	lis r11, "__vt__29_reslist_base<P11CWorkThread>"@ha
 /* 804375CC 00400B8C  90 01 00 24 */	stw r0, 0x24(r1)
-/* 804375D0 00400B90  3D 20 80 57 */	lis r9, __vt__reslist_CWorkThread@ha
-/* 804375D4 00400B94  3D 00 80 57 */	lis r8, __vt__CMsgParam_8@ha
+/* 804375D0 00400B90  3D 20 80 57 */	lis r9, "__vt__23reslist<P11CWorkThread>"@ha
+/* 804375D4 00400B94  3D 00 80 57 */	lis r8, "__vt__12CMsgParam<8>"@ha
 /* 804375D8 00400B98  39 80 FF FF */	li r12, -1
 /* 804375DC 00400B9C  BF 61 00 0C */	stmw r27, 0xc(r1)
 /* 804375E0 00400BA0  3B 80 00 00 */	li r28, 0
 /* 804375E4 00400BA4  39 43 00 64 */	addi r10, r3, 0x64
-/* 804375E8 00400BA8  38 E7 E9 88 */	addi r7, r7, __vt__CWorkThread@l
-/* 804375EC 00400BAC  39 6B EA 4C */	addi r11, r11, __vt___reslist_base_CWorkThread@l
-/* 804375F0 00400BB0  39 29 EA 34 */	addi r9, r9, __vt__reslist_CWorkThread@l
-/* 804375F4 00400BB4  39 08 EA 28 */	addi r8, r8, __vt__CMsgParam_8@l
+/* 804375E8 00400BA8  38 E7 E9 88 */	addi r7, r7, __vt__11CWorkThread@l
+/* 804375EC 00400BAC  39 6B EA 4C */	addi r11, r11, "__vt__29_reslist_base<P11CWorkThread>"@l
+/* 804375F0 00400BB0  39 29 EA 34 */	addi r9, r9, "__vt__23reslist<P11CWorkThread>"@l
+/* 804375F4 00400BB4  39 08 EA 28 */	addi r8, r8, "__vt__12CMsgParam<8>"@l
 /* 804375F8 00400BB8  38 03 00 84 */	addi r0, r3, 0x84
 /* 804375FC 00400BBC  7C 9B 23 78 */	mr r27, r4
 /* 80437600 00400BC0  7C 7D 1B 78 */	mr r29, r3
@@ -405,9 +405,9 @@
 /* 8043791C 00400EDC  93 C1 00 08 */	stw r30, 8(r1)
 /* 80437920 00400EE0  7C 7E 1B 78 */	mr r30, r3
 /* 80437924 00400EE4  41 82 00 78 */	beq .L_8043799C
-/* 80437928 00400EE8  3C A0 80 57 */	lis r5, __vt___reslist_base_CWorkThread@ha
+/* 80437928 00400EE8  3C A0 80 57 */	lis r5, "__vt__29_reslist_base<P11CWorkThread>"@ha
 /* 8043792C 00400EEC  80 83 00 04 */	lwz r4, 4(r3)
-/* 80437930 00400EF0  38 A5 EA 4C */	addi r5, r5, __vt___reslist_base_CWorkThread@l
+/* 80437930 00400EF0  38 A5 EA 4C */	addi r5, r5, "__vt__29_reslist_base<P11CWorkThread>"@l
 /* 80437934 00400EF4  90 A3 00 00 */	stw r5, 0(r3)
 /* 80437938 00400EF8  38 00 00 00 */	li r0, 0
 /* 8043793C 00400EFC  80 A4 00 00 */	lwz r5, 0(r4)
@@ -458,9 +458,9 @@
 /* 804379D4 00400F94  7C 7E 1B 78 */	mr r30, r3
 /* 804379D8 00400F98  41 82 00 7C */	beq .L_80437A54
 /* 804379DC 00400F9C  41 82 00 68 */	beq .L_80437A44
-/* 804379E0 00400FA0  3C A0 80 57 */	lis r5, __vt___reslist_base_CWorkThread@ha
+/* 804379E0 00400FA0  3C A0 80 57 */	lis r5, "__vt__29_reslist_base<P11CWorkThread>"@ha
 /* 804379E4 00400FA4  80 83 00 04 */	lwz r4, 4(r3)
-/* 804379E8 00400FA8  38 A5 EA 4C */	addi r5, r5, __vt___reslist_base_CWorkThread@l
+/* 804379E8 00400FA8  38 A5 EA 4C */	addi r5, r5, "__vt__29_reslist_base<P11CWorkThread>"@l
 /* 804379EC 00400FAC  90 A3 00 00 */	stw r5, 0(r3)
 /* 804379F0 00400FB0  38 00 00 00 */	li r0, 0
 /* 804379F4 00400FB4  80 84 00 00 */	lwz r4, 0(r4)
@@ -538,9 +538,9 @@
 /* 80437AE4 004010A4  7C 7E 1B 78 */	mr r30, r3
 /* 80437AE8 004010A8  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 80437AEC 004010AC  41 82 01 04 */	beq .L_80437BF0
-/* 80437AF0 004010B0  3C 80 80 57 */	lis r4, __vt__CWorkThread@ha
+/* 80437AF0 004010B0  3C 80 80 57 */	lis r4, __vt__11CWorkThread@ha
 /* 80437AF4 004010B4  80 A3 00 60 */	lwz r5, 0x60(r3)
-/* 80437AF8 004010B8  38 84 E9 88 */	addi r4, r4, __vt__CWorkThread@l
+/* 80437AF8 004010B8  38 84 E9 88 */	addi r4, r4, __vt__11CWorkThread@l
 /* 80437AFC 004010BC  90 83 00 00 */	stw r4, 0(r3)
 /* 80437B00 004010C0  80 05 00 00 */	lwz r0, 0(r5)
 /* 80437B04 004010C4  7C 00 28 40 */	cmplw r0, r5
@@ -577,9 +577,9 @@
 /* 80437B70 00401130  37 A3 00 5C */	addic. r29, r3, 0x5c
 /* 80437B74 00401134  41 82 00 6C */	beq .L_80437BE0
 /* 80437B78 00401138  41 82 00 68 */	beq .L_80437BE0
-/* 80437B7C 0040113C  3C 80 80 57 */	lis r4, __vt___reslist_base_CWorkThread@ha
+/* 80437B7C 0040113C  3C 80 80 57 */	lis r4, "__vt__29_reslist_base<P11CWorkThread>"@ha
 /* 80437B80 00401140  80 7D 00 04 */	lwz r3, 4(r29)
-/* 80437B84 00401144  38 84 EA 4C */	addi r4, r4, __vt___reslist_base_CWorkThread@l
+/* 80437B84 00401144  38 84 EA 4C */	addi r4, r4, "__vt__29_reslist_base<P11CWorkThread>"@l
 /* 80437B88 00401148  90 9D 00 00 */	stw r4, 0(r29)
 /* 80437B8C 0040114C  38 00 00 00 */	li r0, 0
 /* 80437B90 00401150  80 83 00 00 */	lwz r4, 0(r3)
@@ -1887,8 +1887,8 @@
 	.4byte .L_80438730
 .endobj jumptable_8056E958
 
-.obj __vt__CWorkThread, global
-	.4byte __RTTI__CWorkThread
+.obj __vt__11CWorkThread, global
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
 	.4byte __dt__CWorkThread
 	.4byte IWorkEvent_WorkEvent1
@@ -1928,33 +1928,33 @@
 	.4byte CWorkThread_WorkThreadEvent4
 	.4byte CWorkThread_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-.endobj __vt__CWorkThread
+.endobj __vt__11CWorkThread
 
-.obj __vt__CMsgParam_8, global
-	.4byte __RTTI__CMsgParam_8
+.obj "__vt__12CMsgParam<8>", global
+	.4byte "__RTTI__12CMsgParam<8>"
 	.4byte 0
 	.4byte __dt__CMsgParam_8
-.endobj __vt__CMsgParam_8
+.endobj "__vt__12CMsgParam<8>"
 
 
-.obj __vt__reslist_CWorkThread, global
-	.4byte __RTTI__reslist_CWorkThread
+.obj "__vt__23reslist<P11CWorkThread>", global
+	.4byte "__RTTI__23reslist<P11CWorkThread>"
 	.4byte 0
 	.4byte __dt__reslist_CWorkThread
-.endobj __vt__reslist_CWorkThread
+.endobj "__vt__23reslist<P11CWorkThread>"
 
 .obj reslist_CWorkThread_hierarchy, global
-	.4byte __RTTI___reslist_base_CWorkThread
+	.4byte "__RTTI__29_reslist_base<P11CWorkThread>"
 	.4byte 0
 	.4byte 0
 .endobj reslist_CWorkThread_hierarchy
 
 
-.obj __vt___reslist_base_CWorkThread, global
-	.4byte __RTTI___reslist_base_CWorkThread
+.obj "__vt__29_reslist_base<P11CWorkThread>", global
+	.4byte "__RTTI__29_reslist_base<P11CWorkThread>"
 	.4byte 0
 	.4byte __dt___reslist_base_CWorkThread
-.endobj __vt___reslist_base_CWorkThread
+.endobj "__vt__29_reslist_base<P11CWorkThread>"
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
@@ -1970,20 +1970,20 @@
 	.4byte 0xFFFFFFFF
 .endobj lbl_80665E44
 
-.obj __RTTI__CMsgParam_8, global
+.obj "__RTTI__12CMsgParam<8>", global
 	.4byte CMsgParam_8_typestr
 	.4byte 0
-.endobj __RTTI__CMsgParam_8
+.endobj "__RTTI__12CMsgParam<8>"
 
-.obj __RTTI__reslist_CWorkThread, global
+.obj "__RTTI__23reslist<P11CWorkThread>", global
 	.4byte reslist_CWorkThread_typestr
 	.4byte reslist_CWorkThread_hierarchy
-.endobj __RTTI__reslist_CWorkThread
+.endobj "__RTTI__23reslist<P11CWorkThread>"
 
-.obj __RTTI___reslist_base_CWorkThread, global
+.obj "__RTTI__29_reslist_base<P11CWorkThread>", global
 	.4byte _reslist_base_CWorkThread_typestr
 	.4byte 0
-.endobj __RTTI___reslist_base_CWorkThread
+.endobj "__RTTI__29_reslist_base<P11CWorkThread>"
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

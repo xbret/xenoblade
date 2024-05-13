@@ -386,14 +386,14 @@
 /* 80294524 0025DAE4  7C 7C 1B 78 */	mr r28, r3
 /* 80294528 0025DAE8  41 82 00 C4 */	beq .L_802945EC
 /* 8029452C 0025DAEC  48 1B 04 ED */	bl __ct__8CProcessFv
-/* 80294530 0025DAF0  3C 60 80 53 */	lis r3, __vt__CTTask_IUIWindow@ha
+/* 80294530 0025DAF0  3C 60 80 53 */	lis r3, "__vt__18CTTask<9IUIWindow>"@ha
 /* 80294534 0025DAF4  3D 40 80 51 */	lis r10, __ptmf_null@ha
-/* 80294538 0025DAF8  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
+/* 80294538 0025DAF8  38 63 0A 08 */	addi r3, r3, "__vt__18CTTask<9IUIWindow>"@l
 /* 8029453C 0025DAFC  90 7C 00 10 */	stw r3, 0x10(r28)
 /* 80294540 0025DB00  39 4A CE 10 */	addi r10, r10, __ptmf_null@l
-/* 80294544 0025DB04  3C A0 80 54 */	lis r5, __vt__CSysWinSave@ha
+/* 80294544 0025DB04  3C A0 80 54 */	lis r5, __vt__11CSysWinSave@ha
 /* 80294548 0025DB08  80 0A 00 04 */	lwz r0, 4(r10)
-/* 8029454C 0025DB0C  38 A5 C1 58 */	addi r5, r5, __vt__CSysWinSave@l
+/* 8029454C 0025DB0C  38 A5 C1 58 */	addi r5, r5, __vt__11CSysWinSave@l
 /* 80294550 0025DB10  80 6A 00 00 */	lwz r3, 0(r10)
 /* 80294554 0025DB14  3B A0 00 00 */	li r29, 0
 /* 80294558 0025DB18  90 7C 00 3C */	stw r3, 0x3c(r28)
@@ -650,8 +650,8 @@
 
 .balign 8
 
-.obj __vt__CSysWinSave, global
-	.4byte __RTTI__CSysWinSave
+.obj __vt__11CSysWinSave, global
+	.4byte __RTTI__11CSysWinSave
 	.4byte 0
 	.4byte __dt__CSysWinSave
 	.4byte CChildListNode_Reset
@@ -660,7 +660,7 @@
 	.4byte func_80294274
 	.4byte func_80124584
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CSysWinSave
+	.4byte __RTTI__11CSysWinSave
 	.4byte 0xFFFFFF94
 	.4byte func_8029480C
 	.4byte IWorkEvent_WorkEvent1
@@ -694,27 +694,27 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CSysWinSave
+	.4byte __RTTI__11CSysWinSave
 	.4byte 0xFFFFFF90
 	.4byte func_8029481C
 	.4byte func_80294814
 	.4byte func_80294440
-.endobj __vt__CSysWinSave
+.endobj __vt__11CSysWinSave
 
 .obj CSysWinSave_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000070
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x0000006C
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUIWindow
+	.4byte "__RTTI__18CTTask<9IUIWindow>"
 	.4byte 0
-	.4byte __RTTI__IUIWindow
+	.4byte __RTTI__9IUIWindow
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -724,10 +724,10 @@
 
 .balign 8
 
-.obj __RTTI__CSysWinSave, global
+.obj __RTTI__11CSysWinSave, global
 	.4byte CSysWinSave_typestr
 	.4byte CSysWinSave_hierarchy
-.endobj __RTTI__CSysWinSave
+.endobj __RTTI__11CSysWinSave
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

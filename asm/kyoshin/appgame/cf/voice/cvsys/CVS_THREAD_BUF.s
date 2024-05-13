@@ -61,9 +61,9 @@
 /* 802A4F10 0026E4D0  41 82 00 54 */	beq .L_802A4F64
 /* 802A4F14 0026E4D4  90 3F 00 4C */	stw r1, 0x4c(r31)
 /* 802A4F18 0026E4D8  4B FF EB 69 */	bl __ct__cf_CVS_THREAD
-/* 802A4F1C 0026E4DC  3C 60 80 54 */	lis r3, __vt__cf_CVS_THREAD_BUF@ha
+/* 802A4F1C 0026E4DC  3C 60 80 54 */	lis r3, __vt__Q22cf14CVS_THREAD_BUF@ha
 /* 802A4F20 0026E4E0  7F 64 DB 78 */	mr r4, r27
-/* 802A4F24 0026E4E4  38 63 D1 94 */	addi r3, r3, __vt__cf_CVS_THREAD_BUF@l
+/* 802A4F24 0026E4E4  38 63 D1 94 */	addi r3, r3, __vt__Q22cf14CVS_THREAD_BUF@l
 /* 802A4F28 0026E4E8  90 7A 00 1C */	stw r3, 0x1c(r26)
 /* 802A4F2C 0026E4EC  38 7A 00 20 */	addi r3, r26, 0x20
 /* 802A4F30 0026E4F0  38 A0 00 0C */	li r5, 0xc
@@ -737,18 +737,18 @@
 .endobj lbl_8053D188
 
 
-.obj __vt__cf_CVS_THREAD_BUF, global
-	.4byte __RTTI__cf_CVS_THREAD_BUF
+.obj __vt__Q22cf14CVS_THREAD_BUF, global
+	.4byte __RTTI__Q22cf14CVS_THREAD_BUF
 	.4byte 0
 	.4byte func_802A3B50
 	.4byte func_802A50E0
 	.4byte func_802A5828
 	.4byte func_802A1EA0
 	.4byte func_802A3740
-.endobj __vt__cf_CVS_THREAD_BUF
+.endobj __vt__Q22cf14CVS_THREAD_BUF
 
 .obj cf_CVS_THREAD_BUF_hierarchy, global
-	.4byte __RTTI__cf_CVS_THREAD
+	.4byte __RTTI__Q22cf10CVS_THREAD
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -758,10 +758,10 @@
 
 .balign 8
 
-.obj __RTTI__cf_CVS_THREAD_BUF, global
+.obj __RTTI__Q22cf14CVS_THREAD_BUF, global
 	.4byte cf_CVS_THREAD_BUF_typestr
 	.4byte cf_CVS_THREAD_BUF_hierarchy
-.endobj __RTTI__cf_CVS_THREAD_BUF
+.endobj __RTTI__Q22cf14CVS_THREAD_BUF
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

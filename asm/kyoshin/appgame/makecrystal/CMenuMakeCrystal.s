@@ -10,12 +10,12 @@
 /* 80210C30 001DA1F0  7C 7D 1B 78 */	mr r29, r3
 /* 80210C34 001DA1F4  7C 9E 23 78 */	mr r30, r4
 /* 80210C38 001DA1F8  48 23 3D E1 */	bl __ct__8CProcessFv
-/* 80210C3C 001DA1FC  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
-/* 80210C40 001DA200  3C A0 80 54 */	lis r5, __vt__CMenuMakeCrystal@ha
-/* 80210C44 001DA204  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
+/* 80210C3C 001DA1FC  3C 60 80 53 */	lis r3, "__vt__14CTTask<5IUICf>"@ha
+/* 80210C40 001DA200  3C A0 80 54 */	lis r5, __vt__16CMenuMakeCrystal@ha
+/* 80210C44 001DA204  38 63 F7 40 */	addi r3, r3, "__vt__14CTTask<5IUICf>"@l
 /* 80210C48 001DA208  90 7D 00 10 */	stw r3, 0x10(r29)
 /* 80210C4C 001DA20C  3D 00 80 51 */	lis r8, __ptmf_null@ha
-/* 80210C50 001DA210  38 A5 92 88 */	addi r5, r5, __vt__CMenuMakeCrystal@l
+/* 80210C50 001DA210  38 A5 92 88 */	addi r5, r5, __vt__16CMenuMakeCrystal@l
 /* 80210C54 001DA214  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 80210C58 001DA218  38 05 00 24 */	addi r0, r5, 0x24
 /* 80210C5C 001DA21C  3B E0 00 00 */	li r31, 0
@@ -1703,8 +1703,8 @@
 
 .balign 8
 
-.obj __vt__CMenuMakeCrystal, global
-	.4byte __RTTI__CMenuMakeCrystal
+.obj __vt__16CMenuMakeCrystal, global
+	.4byte __RTTI__16CMenuMakeCrystal
 	.4byte 0
 	.4byte __dt__CMenuMakeCrystal
 	.4byte CChildListNode_Reset
@@ -1713,25 +1713,25 @@
 	.4byte func_80212260
 	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuMakeCrystal
+	.4byte __RTTI__16CMenuMakeCrystal
 	.4byte 0xFFFFFFA8
 	.4byte func_802124FC
 	.4byte func_802124F4
 	.4byte func_80212380
-.endobj __vt__CMenuMakeCrystal
+.endobj __vt__16CMenuMakeCrystal
 
 .obj CMenuMakeCrystal_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000058
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUICf
+	.4byte "__RTTI__14CTTask<5IUICf>"
 	.4byte 0
-	.4byte __RTTI__IUICf
+	.4byte __RTTI__5IUICf
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1741,10 +1741,10 @@
 
 .balign 8
 
-.obj __RTTI__CMenuMakeCrystal, global
+.obj __RTTI__16CMenuMakeCrystal, global
 	.4byte CMenuMakeCrystal_typestr
 	.4byte CMenuMakeCrystal_hierarchy
-.endobj __RTTI__CMenuMakeCrystal
+.endobj __RTTI__16CMenuMakeCrystal
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

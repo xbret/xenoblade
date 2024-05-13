@@ -11,9 +11,9 @@
 /* 8026E184 00237744  7C 7D 1B 78 */	mr r29, r3
 /* 8026E188 00237748  7C 9E 23 78 */	mr r30, r4
 /* 8026E18C 0023774C  4B F9 A7 55 */	bl __ct__cf_CfGimmick
-/* 8026E190 00237750  3C 60 80 54 */	lis r3, __vt__cf_CfGimmickEne@ha
+/* 8026E190 00237750  3C 60 80 54 */	lis r3, __vt__Q22cf12CfGimmickEne@ha
 /* 8026E194 00237754  38 00 00 07 */	li r0, 7
-/* 8026E198 00237758  38 63 B2 30 */	addi r3, r3, __vt__cf_CfGimmickEne@l
+/* 8026E198 00237758  38 63 B2 30 */	addi r3, r3, __vt__Q22cf12CfGimmickEne@l
 /* 8026E19C 0023775C  90 7D 00 00 */	stw r3, 0(r29)
 /* 8026E1A0 00237760  B0 1D 00 82 */	sth r0, 0x82(r29)
 /* 8026E1A4 00237764  4B DC C8 91 */	bl func_8003AA34
@@ -235,8 +235,8 @@
 /* 8026E4DC 00237A9C  93 C1 00 08 */	stw r30, 8(r1)
 /* 8026E4E0 00237AA0  7C 7E 1B 78 */	mr r30, r3
 /* 8026E4E4 00237AA4  41 82 00 84 */	beq .L_8026E568
-/* 8026E4E8 00237AA8  3C 80 80 54 */	lis r4, __vt__cf_CfGimmickEne@ha
-/* 8026E4EC 00237AAC  38 84 B2 30 */	addi r4, r4, __vt__cf_CfGimmickEne@l
+/* 8026E4E8 00237AA8  3C 80 80 54 */	lis r4, __vt__Q22cf12CfGimmickEne@ha
+/* 8026E4EC 00237AAC  38 84 B2 30 */	addi r4, r4, __vt__Q22cf12CfGimmickEne@l
 /* 8026E4F0 00237AB0  90 83 00 00 */	stw r4, 0(r3)
 /* 8026E4F4 00237AB4  4B F9 A9 F1 */	bl func_80208EE4
 /* 8026E4F8 00237AB8  80 1E 00 BC */	lwz r0, 0xbc(r30)
@@ -1337,8 +1337,8 @@
 .endobj lbl_8053B220
 
 
-.obj __vt__cf_CfGimmickEne, global
-	.4byte __RTTI__cf_CfGimmickEne
+.obj __vt__Q22cf12CfGimmickEne, global
+	.4byte __RTTI__Q22cf12CfGimmickEne
 	.4byte 0
 	.4byte __dt__cf_CfGimmickEne
 	.4byte func_8020896C
@@ -1347,12 +1347,12 @@
 	.4byte func_801F4BF8
 	.4byte func_801F4C8C
 	.4byte func_8026E5BC
-.endobj __vt__cf_CfGimmickEne
+.endobj __vt__Q22cf12CfGimmickEne
 
 .obj cf_CfGimmickEne_hierarchy, global
-	.4byte __RTTI__cf_IObjectInfo
+	.4byte __RTTI__Q22cf11IObjectInfo
 	.4byte 0
-	.4byte __RTTI__cf_CfGimmick
+	.4byte __RTTI__Q22cf9CfGimmick
 	.4byte 0
 	.4byte 0
 .endobj cf_CfGimmickEne_hierarchy
@@ -1366,10 +1366,10 @@
 	.4byte 0
 .endobj lbl_806652A8
 
-.obj __RTTI__cf_CfGimmickEne, global
+.obj __RTTI__Q22cf12CfGimmickEne, global
 	.4byte cf_CfGimmickEne_typestr
 	.4byte cf_CfGimmickEne_hierarchy
-.endobj __RTTI__cf_CfGimmickEne
+.endobj __RTTI__Q22cf12CfGimmickEne
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

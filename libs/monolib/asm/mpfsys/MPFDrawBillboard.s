@@ -6,9 +6,9 @@
 /* 80479EDC 0044349C  88 0D BF F8 */	lbz r0, lbl_80668178@sda21(r13)
 /* 80479EE0 004434A0  7C 00 07 75 */	extsb. r0, r0
 /* 80479EE4 004434A4  40 82 00 18 */	bne .L_80479EFC
-/* 80479EE8 004434A8  3C 60 80 57 */	lis r3, __vt__mpfsys_MPFDrawBillboard@ha
+/* 80479EE8 004434A8  3C 60 80 57 */	lis r3, __vt__Q26mpfsys16MPFDrawBillboard@ha
 /* 80479EEC 004434AC  38 00 00 01 */	li r0, 1
-/* 80479EF0 004434B0  38 63 14 90 */	addi r3, r3, __vt__mpfsys_MPFDrawBillboard@l
+/* 80479EF0 004434B0  38 63 14 90 */	addi r3, r3, __vt__Q26mpfsys16MPFDrawBillboard@l
 /* 80479EF4 004434B4  90 6D BF FC */	stw r3, lbl_8066817C@sda21(r13)
 /* 80479EF8 004434B8  98 0D BF F8 */	stb r0, lbl_80668178@sda21(r13)
 .L_80479EFC:

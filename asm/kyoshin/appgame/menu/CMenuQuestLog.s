@@ -11,12 +11,12 @@
 /* 8011C460 000E5A20  7C 9D 23 78 */	mr r29, r4
 /* 8011C464 000E5A24  7C BE 2B 78 */	mr r30, r5
 /* 8011C468 000E5A28  48 32 85 B1 */	bl __ct__8CProcessFv
-/* 8011C46C 000E5A2C  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
-/* 8011C470 000E5A30  3C A0 80 53 */	lis r5, __vt__CMenuQuestLog@ha
-/* 8011C474 000E5A34  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
+/* 8011C46C 000E5A2C  3C 60 80 53 */	lis r3, "__vt__14CTTask<5IUICf>"@ha
+/* 8011C470 000E5A30  3C A0 80 53 */	lis r5, __vt__13CMenuQuestLog@ha
+/* 8011C474 000E5A34  38 63 F7 40 */	addi r3, r3, "__vt__14CTTask<5IUICf>"@l
 /* 8011C478 000E5A38  90 7C 00 10 */	stw r3, 0x10(r28)
 /* 8011C47C 000E5A3C  3D 00 80 51 */	lis r8, __ptmf_null@ha
-/* 8011C480 000E5A40  38 A5 04 08 */	addi r5, r5, __vt__CMenuQuestLog@l
+/* 8011C480 000E5A40  38 A5 04 08 */	addi r5, r5, __vt__13CMenuQuestLog@l
 /* 8011C484 000E5A44  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 8011C488 000E5A48  38 05 00 24 */	addi r0, r5, 0x24
 /* 8011C48C 000E5A4C  3B E0 00 00 */	li r31, 0
@@ -1112,8 +1112,8 @@
 .endobj jumptable_805303E0
 
 
-.obj __vt__CMenuQuestLog, global
-	.4byte __RTTI__CMenuQuestLog
+.obj __vt__13CMenuQuestLog, global
+	.4byte __RTTI__13CMenuQuestLog
 	.4byte 0
 	.4byte __dt__CMenuQuestLog
 	.4byte CChildListNode_Reset
@@ -1122,25 +1122,25 @@
 	.4byte func_8011CAD4
 	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuQuestLog
+	.4byte __RTTI__13CMenuQuestLog
 	.4byte 0xFFFFFFA8
 	.4byte func_8011D2F0
 	.4byte func_8011D2E8
 	.4byte func_8011CC30
-.endobj __vt__CMenuQuestLog
+.endobj __vt__13CMenuQuestLog
 
 .obj CMenuQuestLog_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000058
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUICf
+	.4byte "__RTTI__14CTTask<5IUICf>"
 	.4byte 0
-	.4byte __RTTI__IUICf
+	.4byte __RTTI__5IUICf
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1150,10 +1150,10 @@
 
 .balign 8
 
-.obj __RTTI__CMenuQuestLog, global
+.obj __RTTI__13CMenuQuestLog, global
 	.4byte CMenuQuestLog_typestr
 	.4byte CMenuQuestLog_hierarchy
-.endobj __RTTI__CMenuQuestLog
+.endobj __RTTI__13CMenuQuestLog
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

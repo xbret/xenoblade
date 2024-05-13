@@ -12,12 +12,12 @@
 /* 8027E4C8 00247A88  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8027E4CC 00247A8C  7C 7D 1B 78 */	mr r29, r3
 /* 8027E4D0 00247A90  48 1C 65 49 */	bl __ct__8CProcessFv
-/* 8027E4D4 00247A94  3C 60 80 53 */	lis r3, __vt__CTTask_IUIWindow@ha
-/* 8027E4D8 00247A98  3C A0 80 54 */	lis r5, __vt__CSysWinScenarioLog@ha
-/* 8027E4DC 00247A9C  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
+/* 8027E4D4 00247A94  3C 60 80 53 */	lis r3, "__vt__18CTTask<9IUIWindow>"@ha
+/* 8027E4D8 00247A98  3C A0 80 54 */	lis r5, __vt__18CSysWinScenarioLog@ha
+/* 8027E4DC 00247A9C  38 63 0A 08 */	addi r3, r3, "__vt__18CTTask<9IUIWindow>"@l
 /* 8027E4E0 00247AA0  90 7D 00 10 */	stw r3, 0x10(r29)
 /* 8027E4E4 00247AA4  3D 40 80 51 */	lis r10, __ptmf_null@ha
-/* 8027E4E8 00247AA8  38 A5 BB 10 */	addi r5, r5, __vt__CSysWinScenarioLog@l
+/* 8027E4E8 00247AA8  38 A5 BB 10 */	addi r5, r5, __vt__18CSysWinScenarioLog@l
 /* 8027E4EC 00247AAC  84 6A CE 10 */	lwzu r3, __ptmf_null@l(r10)
 /* 8027E4F0 00247AB0  38 85 00 24 */	addi r4, r5, 0x24
 /* 8027E4F4 00247AB4  3B E0 00 00 */	li r31, 0
@@ -3417,8 +3417,8 @@
 
 .balign 8
 
-.obj __vt__CSysWinScenarioLog, global
-	.4byte __RTTI__CSysWinScenarioLog
+.obj __vt__18CSysWinScenarioLog, global
+	.4byte __RTTI__18CSysWinScenarioLog
 	.4byte 0
 	.4byte __dt__CSysWinScenarioLog
 	.4byte CChildListNode_Reset
@@ -3427,7 +3427,7 @@
 	.4byte func_8027E7D0
 	.4byte func_80124584
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CSysWinScenarioLog
+	.4byte __RTTI__18CSysWinScenarioLog
 	.4byte 0xFFFFFF94
 	.4byte func_8027EE70
 	.4byte IWorkEvent_WorkEvent1
@@ -3461,28 +3461,28 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CSysWinScenarioLog
+	.4byte __RTTI__18CSysWinScenarioLog
 	.4byte 0xFFFFFF90
 	.4byte func_8027EE80
 	.4byte func_8027EE78
 	.4byte func_8027E93C
 	.4byte func_8027EC80
-.endobj __vt__CSysWinScenarioLog
+.endobj __vt__18CSysWinScenarioLog
 
 .obj CSysWinScenarioLog_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000070
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x0000006C
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUIWindow
+	.4byte "__RTTI__18CTTask<9IUIWindow>"
 	.4byte 0
-	.4byte __RTTI__IUIWindow
+	.4byte __RTTI__9IUIWindow
 	.4byte 0
 	.4byte 0
 .endobj CSysWinScenarioLog_hierarchy
@@ -3492,10 +3492,10 @@
 
 .balign 8
 
-.obj __RTTI__CSysWinScenarioLog, global
+.obj __RTTI__18CSysWinScenarioLog, global
 	.4byte CSysWinScenarioLog_typestr
 	.4byte CSysWinScenarioLog_hierarchy
-.endobj __RTTI__CSysWinScenarioLog
+.endobj __RTTI__18CSysWinScenarioLog
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

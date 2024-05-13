@@ -9,11 +9,11 @@
 
 .fn __ct__CViewFrame, global
 /* 8043FBCC 0040918C  C0 A2 C7 68 */	lfs f5, float_8066CAE8@sda21(r2)
-/* 8043FBD0 00409190  3C C0 80 57 */	lis r6, __vt__CViewFrame@ha
+/* 8043FBD0 00409190  3C C0 80 57 */	lis r6, __vt__10CViewFrame@ha
 /* 8043FBD4 00409194  38 A0 00 00 */	li r5, 0
 /* 8043FBD8 00409198  C0 82 C7 6C */	lfs f4, float_8066CAEC@sda21(r2)
 /* 8043FBDC 0040919C  C0 62 C7 70 */	lfs f3, float_8066CAF0@sda21(r2)
-/* 8043FBE0 004091A0  38 C6 EF 78 */	addi r6, r6, __vt__CViewFrame@l
+/* 8043FBE0 004091A0  38 C6 EF 78 */	addi r6, r6, __vt__10CViewFrame@l
 /* 8043FBE4 004091A4  C0 42 C7 74 */	lfs f2, float_8066CAF4@sda21(r2)
 /* 8043FBE8 004091A8  38 80 00 08 */	li r4, 8
 /* 8043FBEC 004091AC  C0 22 C7 78 */	lfs f1, float_8066CAF8@sda21(r2)
@@ -2580,9 +2580,9 @@
 /* 80442100 0040B6C0  90 0D BD 30 */	stw r0, lbl_80667EB0@sda21(r13)
 /* 80442104 0040B6C4  41 82 00 68 */	beq .L_8044216C
 /* 80442108 0040B6C8  41 82 00 64 */	beq .L_8044216C
-/* 8044210C 0040B6CC  3C 80 80 57 */	lis r4, __vt___reslist_base_unsigned_long@ha
+/* 8044210C 0040B6CC  3C 80 80 57 */	lis r4, "__vt__17_reslist_base<Ul>"@ha
 /* 80442110 0040B6D0  80 7D 00 04 */	lwz r3, 4(r29)
-/* 80442114 0040B6D4  38 84 EB 10 */	addi r4, r4, __vt___reslist_base_unsigned_long@l
+/* 80442114 0040B6D4  38 84 EB 10 */	addi r4, r4, "__vt__17_reslist_base<Ul>"@l
 /* 80442118 0040B6D8  90 9D 00 00 */	stw r4, 0(r29)
 /* 8044211C 0040B6DC  80 83 00 00 */	lwz r4, 0(r3)
 /* 80442120 0040B6E0  48 00 00 10 */	b .L_80442130
@@ -3801,22 +3801,22 @@
 
 .balign 8
 
-.obj __vt__CViewFrame, global
-	.4byte __RTTI__CViewFrame
+.obj __vt__10CViewFrame, global
+	.4byte __RTTI__10CViewFrame
 	.4byte 0
 	.4byte __dt__CViewFrame
 	.4byte 0
-.endobj __vt__CViewFrame
+.endobj __vt__10CViewFrame
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CViewFrame, global
+.obj __RTTI__10CViewFrame, global
 	.4byte CViewFrame_typestr
 	.4byte 0
-.endobj __RTTI__CViewFrame
+.endobj __RTTI__10CViewFrame
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

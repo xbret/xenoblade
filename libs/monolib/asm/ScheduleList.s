@@ -12,9 +12,9 @@
 /* 804E434C 004AD90C  93 C1 00 08 */	stw r30, 8(r1)
 /* 804E4350 004AD910  7C 7E 1B 78 */	mr r30, r3
 /* 804E4354 004AD914  41 82 00 78 */	beq .L_804E43CC
-/* 804E4358 004AD918  3C A0 80 57 */	lis r5, __vt___reslist_base_CSchedule@ha
+/* 804E4358 004AD918  3C A0 80 57 */	lis r5, "__vt__26_reslist_base<P9CSchedule>"@ha
 /* 804E435C 004AD91C  80 83 00 04 */	lwz r4, 4(r3)
-/* 804E4360 004AD920  38 A5 39 14 */	addi r5, r5, __vt___reslist_base_CSchedule@l
+/* 804E4360 004AD920  38 A5 39 14 */	addi r5, r5, "__vt__26_reslist_base<P9CSchedule>"@l
 /* 804E4364 004AD924  90 A3 00 00 */	stw r5, 0(r3)
 /* 804E4368 004AD928  38 00 00 00 */	li r0, 0
 /* 804E436C 004AD92C  80 A4 00 00 */	lwz r5, 0(r4)
@@ -65,9 +65,9 @@
 /* 804E4404 004AD9C4  7C 7E 1B 78 */	mr r30, r3
 /* 804E4408 004AD9C8  41 82 00 7C */	beq .L_804E4484
 /* 804E440C 004AD9CC  41 82 00 68 */	beq .L_804E4474
-/* 804E4410 004AD9D0  3C A0 80 57 */	lis r5, __vt___reslist_base_CSchedule@ha
+/* 804E4410 004AD9D0  3C A0 80 57 */	lis r5, "__vt__26_reslist_base<P9CSchedule>"@ha
 /* 804E4414 004AD9D4  80 83 00 04 */	lwz r4, 4(r3)
-/* 804E4418 004AD9D8  38 A5 39 14 */	addi r5, r5, __vt___reslist_base_CSchedule@l
+/* 804E4418 004AD9D8  38 A5 39 14 */	addi r5, r5, "__vt__26_reslist_base<P9CSchedule>"@l
 /* 804E441C 004AD9DC  90 A3 00 00 */	stw r5, 0(r3)
 /* 804E4420 004AD9E0  38 00 00 00 */	li r0, 0
 /* 804E4424 004AD9E4  80 84 00 00 */	lwz r4, 0(r4)
@@ -119,9 +119,9 @@
 /* 804E44C0 004ADA80  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 804E44C4 004ADA84  93 81 00 10 */	stw r28, 0x10(r1)
 /* 804E44C8 004ADA88  41 82 01 08 */	beq .L_804E45D0
-/* 804E44CC 004ADA8C  3C A0 80 57 */	lis r5, __vt__ScheduleList@ha
+/* 804E44CC 004ADA8C  3C A0 80 57 */	lis r5, __vt__12ScheduleList@ha
 /* 804E44D0 004ADA90  80 83 00 08 */	lwz r4, 8(r3)
-/* 804E44D4 004ADA94  38 A5 38 C0 */	addi r5, r5, __vt__ScheduleList@l
+/* 804E44D4 004ADA94  38 A5 38 C0 */	addi r5, r5, __vt__12ScheduleList@l
 /* 804E44D8 004ADA98  90 A3 00 00 */	stw r5, 0(r3)
 /* 804E44DC 004ADA9C  3B A0 00 00 */	li r29, 0
 /* 804E44E0 004ADAA0  83 84 00 00 */	lwz r28, 0(r4)
@@ -161,9 +161,9 @@
 /* 804E4550 004ADB10  90 63 00 04 */	stw r3, 4(r3)
 /* 804E4554 004ADB14  41 82 00 6C */	beq .L_804E45C0
 /* 804E4558 004ADB18  41 82 00 68 */	beq .L_804E45C0
-/* 804E455C 004ADB1C  3C 80 80 57 */	lis r4, __vt___reslist_base_CSchedule@ha
+/* 804E455C 004ADB1C  3C 80 80 57 */	lis r4, "__vt__26_reslist_base<P9CSchedule>"@ha
 /* 804E4560 004ADB20  80 7D 00 04 */	lwz r3, 4(r29)
-/* 804E4564 004ADB24  38 84 39 14 */	addi r4, r4, __vt___reslist_base_CSchedule@l
+/* 804E4564 004ADB24  38 84 39 14 */	addi r4, r4, "__vt__26_reslist_base<P9CSchedule>"@l
 /* 804E4568 004ADB28  90 9D 00 00 */	stw r4, 0(r29)
 /* 804E456C 004ADB2C  38 00 00 00 */	li r0, 0
 /* 804E4570 004ADB30  80 83 00 00 */	lwz r4, 0(r3)
@@ -655,17 +655,17 @@
 /* 804E4BA8 004AE168  2C 03 00 00 */	cmpwi r3, 0
 /* 804E4BAC 004AE16C  7C 7E 1B 78 */	mr r30, r3
 /* 804E4BB0 004AE170  41 82 01 70 */	beq .L_804E4D20
-/* 804E4BB4 004AE174  3C 80 80 57 */	lis r4, __vt__ScheduleList@ha
-/* 804E4BB8 004AE178  3C A0 80 57 */	lis r5, __vt___reslist_base_CSchedule@ha
-/* 804E4BBC 004AE17C  38 84 38 C0 */	addi r4, r4, __vt__ScheduleList@l
+/* 804E4BB4 004AE174  3C 80 80 57 */	lis r4, __vt__12ScheduleList@ha
+/* 804E4BB8 004AE178  3C A0 80 57 */	lis r5, "__vt__26_reslist_base<P9CSchedule>"@ha
+/* 804E4BBC 004AE17C  38 84 38 C0 */	addi r4, r4, __vt__12ScheduleList@l
 /* 804E4BC0 004AE180  90 83 00 00 */	stw r4, 0(r3)
-/* 804E4BC4 004AE184  38 A5 39 14 */	addi r5, r5, __vt___reslist_base_CSchedule@l
+/* 804E4BC4 004AE184  38 A5 39 14 */	addi r5, r5, "__vt__26_reslist_base<P9CSchedule>"@l
 /* 804E4BC8 004AE188  3B E0 00 00 */	li r31, 0
 /* 804E4BCC 004AE18C  90 A3 00 04 */	stw r5, 4(r3)
-/* 804E4BD0 004AE190  3C 80 80 57 */	lis r4, __vt__reslist_CSchedule@ha
+/* 804E4BD0 004AE190  3C 80 80 57 */	lis r4, "__vt__20reslist<P9CSchedule>"@ha
 /* 804E4BD4 004AE194  38 A3 00 0C */	addi r5, r3, 0xc
 /* 804E4BD8 004AE198  93 E3 00 18 */	stw r31, 0x18(r3)
-/* 804E4BDC 004AE19C  38 84 38 FC */	addi r4, r4, __vt__reslist_CSchedule@l
+/* 804E4BDC 004AE19C  38 84 38 FC */	addi r4, r4, "__vt__20reslist<P9CSchedule>"@l
 /* 804E4BE0 004AE1A0  93 E3 00 1C */	stw r31, 0x1c(r3)
 /* 804E4BE4 004AE1A4  9B E3 00 20 */	stb r31, 0x20(r3)
 /* 804E4BE8 004AE1A8  90 A3 00 08 */	stw r5, 8(r3)
@@ -974,17 +974,17 @@
 /* 804E5004 004AE5C4  2C 03 00 00 */	cmpwi r3, 0
 /* 804E5008 004AE5C8  7C 7E 1B 78 */	mr r30, r3
 /* 804E500C 004AE5CC  41 82 01 70 */	beq .L_804E517C
-/* 804E5010 004AE5D0  3C 80 80 57 */	lis r4, __vt__ScheduleList@ha
-/* 804E5014 004AE5D4  3C A0 80 57 */	lis r5, __vt___reslist_base_CSchedule@ha
-/* 804E5018 004AE5D8  38 84 38 C0 */	addi r4, r4, __vt__ScheduleList@l
+/* 804E5010 004AE5D0  3C 80 80 57 */	lis r4, __vt__12ScheduleList@ha
+/* 804E5014 004AE5D4  3C A0 80 57 */	lis r5, "__vt__26_reslist_base<P9CSchedule>"@ha
+/* 804E5018 004AE5D8  38 84 38 C0 */	addi r4, r4, __vt__12ScheduleList@l
 /* 804E501C 004AE5DC  90 83 00 00 */	stw r4, 0(r3)
-/* 804E5020 004AE5E0  38 A5 39 14 */	addi r5, r5, __vt___reslist_base_CSchedule@l
+/* 804E5020 004AE5E0  38 A5 39 14 */	addi r5, r5, "__vt__26_reslist_base<P9CSchedule>"@l
 /* 804E5024 004AE5E4  3B E0 00 00 */	li r31, 0
 /* 804E5028 004AE5E8  90 A3 00 04 */	stw r5, 4(r3)
-/* 804E502C 004AE5EC  3C 80 80 57 */	lis r4, __vt__reslist_CSchedule@ha
+/* 804E502C 004AE5EC  3C 80 80 57 */	lis r4, "__vt__20reslist<P9CSchedule>"@ha
 /* 804E5030 004AE5F0  38 A3 00 0C */	addi r5, r3, 0xc
 /* 804E5034 004AE5F4  93 E3 00 18 */	stw r31, 0x18(r3)
-/* 804E5038 004AE5F8  38 84 38 FC */	addi r4, r4, __vt__reslist_CSchedule@l
+/* 804E5038 004AE5F8  38 84 38 FC */	addi r4, r4, "__vt__20reslist<P9CSchedule>"@l
 /* 804E503C 004AE5FC  93 E3 00 1C */	stw r31, 0x1c(r3)
 /* 804E5040 004AE600  9B E3 00 20 */	stb r31, 0x20(r3)
 /* 804E5044 004AE604  90 A3 00 08 */	stw r5, 8(r3)
@@ -1097,17 +1097,17 @@
 /* 804E51D4 004AE794  2C 03 00 00 */	cmpwi r3, 0
 /* 804E51D8 004AE798  7C 7E 1B 78 */	mr r30, r3
 /* 804E51DC 004AE79C  41 82 01 70 */	beq .L_804E534C
-/* 804E51E0 004AE7A0  3C 80 80 57 */	lis r4, __vt__ScheduleList@ha
-/* 804E51E4 004AE7A4  3C A0 80 57 */	lis r5, __vt___reslist_base_CSchedule@ha
-/* 804E51E8 004AE7A8  38 84 38 C0 */	addi r4, r4, __vt__ScheduleList@l
+/* 804E51E0 004AE7A0  3C 80 80 57 */	lis r4, __vt__12ScheduleList@ha
+/* 804E51E4 004AE7A4  3C A0 80 57 */	lis r5, "__vt__26_reslist_base<P9CSchedule>"@ha
+/* 804E51E8 004AE7A8  38 84 38 C0 */	addi r4, r4, __vt__12ScheduleList@l
 /* 804E51EC 004AE7AC  90 83 00 00 */	stw r4, 0(r3)
-/* 804E51F0 004AE7B0  38 A5 39 14 */	addi r5, r5, __vt___reslist_base_CSchedule@l
+/* 804E51F0 004AE7B0  38 A5 39 14 */	addi r5, r5, "__vt__26_reslist_base<P9CSchedule>"@l
 /* 804E51F4 004AE7B4  3B E0 00 00 */	li r31, 0
 /* 804E51F8 004AE7B8  90 A3 00 04 */	stw r5, 4(r3)
-/* 804E51FC 004AE7BC  3C 80 80 57 */	lis r4, __vt__reslist_CSchedule@ha
+/* 804E51FC 004AE7BC  3C 80 80 57 */	lis r4, "__vt__20reslist<P9CSchedule>"@ha
 /* 804E5200 004AE7C0  38 A3 00 0C */	addi r5, r3, 0xc
 /* 804E5204 004AE7C4  93 E3 00 18 */	stw r31, 0x18(r3)
-/* 804E5208 004AE7C8  38 84 38 FC */	addi r4, r4, __vt__reslist_CSchedule@l
+/* 804E5208 004AE7C8  38 84 38 FC */	addi r4, r4, "__vt__20reslist<P9CSchedule>"@l
 /* 804E520C 004AE7CC  93 E3 00 1C */	stw r31, 0x1c(r3)
 /* 804E5210 004AE7D0  9B E3 00 20 */	stb r31, 0x20(r3)
 /* 804E5214 004AE7D4  90 A3 00 08 */	stw r5, 8(r3)
@@ -1297,8 +1297,8 @@
 
 .balign 8
 
-.obj __vt__ScheduleList, global
-	.4byte __RTTI__ScheduleList
+.obj __vt__12ScheduleList, global
+	.4byte __RTTI__12ScheduleList
 	.4byte 0
 	.4byte __dt__ScheduleList
 	.4byte func_804E45F4
@@ -1310,58 +1310,58 @@
 	.4byte func_804E4AD4
 	.4byte func_804E4B24
 	.4byte func_804E4B48
-.endobj __vt__ScheduleList
+.endobj __vt__12ScheduleList
 
 .obj ScheduleList_hierarchy, global
-	.4byte __RTTI__IScheduleContainer
+	.4byte __RTTI__18IScheduleContainer
 	.4byte 0
 	.4byte 0
 .endobj ScheduleList_hierarchy
 
 
-.obj __vt__reslist_CSchedule, global
-	.4byte __RTTI__reslist_CSchedule
+.obj "__vt__20reslist<P9CSchedule>", global
+	.4byte "__RTTI__20reslist<P9CSchedule>"
 	.4byte 0
 	.4byte __dt__reslist_CSchedule
-.endobj __vt__reslist_CSchedule
+.endobj "__vt__20reslist<P9CSchedule>"
 
 .obj reslist_CSchedule_hierarchy, global
-	.4byte __RTTI___reslist_base_CSchedule
+	.4byte "__RTTI__26_reslist_base<P9CSchedule>"
 	.4byte 0
 	.4byte 0
 .endobj reslist_CSchedule_hierarchy
 
 
-.obj __vt___reslist_base_CSchedule, global
-	.4byte __RTTI___reslist_base_CSchedule
+.obj "__vt__26_reslist_base<P9CSchedule>", global
+	.4byte "__RTTI__26_reslist_base<P9CSchedule>"
 	.4byte 0
 	.4byte __dt___reslist_base_CSchedule
-.endobj __vt___reslist_base_CSchedule
+.endobj "__vt__26_reslist_base<P9CSchedule>"
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__ScheduleList, global
+.obj __RTTI__12ScheduleList, global
 	.4byte ScheduleList_typestr
 	.4byte ScheduleList_hierarchy
-.endobj __RTTI__ScheduleList
+.endobj __RTTI__12ScheduleList
 
-.obj __RTTI__reslist_CSchedule, global
+.obj "__RTTI__20reslist<P9CSchedule>", global
 	.4byte reslist_CSchedule_typestr
 	.4byte reslist_CSchedule_hierarchy
-.endobj __RTTI__reslist_CSchedule
+.endobj "__RTTI__20reslist<P9CSchedule>"
 
-.obj __RTTI___reslist_base_CSchedule, global
+.obj "__RTTI__26_reslist_base<P9CSchedule>", global
 	.4byte _reslist_base_CSchedule_typestr
 	.4byte 0
-.endobj __RTTI___reslist_base_CSchedule
+.endobj "__RTTI__26_reslist_base<P9CSchedule>"
 
-.obj __RTTI__IScheduleContainer, global
+.obj __RTTI__18IScheduleContainer, global
 	.4byte IScheduleContainer_typestr
 	.4byte 0
-.endobj __RTTI__IScheduleContainer
+.endobj __RTTI__18IScheduleContainer
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

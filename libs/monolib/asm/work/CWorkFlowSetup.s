@@ -10,9 +10,9 @@
 /* 804439DC 0040CF9C  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804439E0 0040CFA0  7C 7F 1B 78 */	mr r31, r3
 /* 804439E4 0040CFA4  4B FF 3B D9 */	bl __ct__CWorkThread
-/* 804439E8 0040CFA8  3C 60 80 57 */	lis r3, __vt__CWorkFlowSetup@ha
+/* 804439E8 0040CFA8  3C 60 80 57 */	lis r3, __vt__14CWorkFlowSetup@ha
 /* 804439EC 0040CFAC  38 00 00 00 */	li r0, 0
-/* 804439F0 0040CFB0  38 63 F0 F8 */	addi r3, r3, __vt__CWorkFlowSetup@l
+/* 804439F0 0040CFB0  38 63 F0 F8 */	addi r3, r3, __vt__14CWorkFlowSetup@l
 /* 804439F4 0040CFB4  90 7F 00 00 */	stw r3, 0(r31)
 /* 804439F8 0040CFB8  7F E3 FB 78 */	mr r3, r31
 /* 804439FC 0040CFBC  90 1F 01 C4 */	stw r0, 0x1c4(r31)
@@ -127,8 +127,8 @@
 
 .balign 8
 
-.obj __vt__CWorkFlowSetup, global
-	.4byte __RTTI__CWorkFlowSetup
+.obj __vt__14CWorkFlowSetup, global
+	.4byte __RTTI__14CWorkFlowSetup
 	.4byte 0
 	.4byte __dt__CWorkFlowSetup
 	.4byte IWorkEvent_WorkEvent1
@@ -168,12 +168,12 @@
 	.4byte CWorkFlowSetup_WorkThreadEvent4
 	.4byte CWorkFlowSetup_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-.endobj __vt__CWorkFlowSetup
+.endobj __vt__14CWorkFlowSetup
 
 .obj CWorkFlowSetup_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -183,10 +183,10 @@
 
 .balign 8
 
-.obj __RTTI__CWorkFlowSetup, global
+.obj __RTTI__14CWorkFlowSetup, global
 	.4byte CWorkFlowSetup_typestr
 	.4byte CWorkFlowSetup_hierarchy
-.endobj __RTTI__CWorkFlowSetup
+.endobj __RTTI__14CWorkFlowSetup
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

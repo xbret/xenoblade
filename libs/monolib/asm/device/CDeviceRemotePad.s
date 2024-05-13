@@ -1271,9 +1271,9 @@
 /* 804478A0 00410E60  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 804478A4 00410E64  7C 7F 1B 78 */	mr r31, r3
 /* 804478A8 00410E68  4B FE FD 15 */	bl __ct__CWorkThread
-/* 804478AC 00410E6C  3C 80 80 57 */	lis r4, __vt__CDeviceRemotePad@ha
+/* 804478AC 00410E6C  3C 80 80 57 */	lis r4, __vt__16CDeviceRemotePad@ha
 /* 804478B0 00410E70  38 00 00 00 */	li r0, 0
-/* 804478B4 00410E74  38 84 F4 38 */	addi r4, r4, __vt__CDeviceRemotePad@l
+/* 804478B4 00410E74  38 84 F4 38 */	addi r4, r4, __vt__16CDeviceRemotePad@l
 /* 804478B8 00410E78  90 1F 01 C4 */	stw r0, 0x1c4(r31)
 /* 804478BC 00410E7C  7F E3 FB 78 */	mr r3, r31
 /* 804478C0 00410E80  90 9F 00 00 */	stw r4, 0(r31)
@@ -1379,8 +1379,8 @@
 
 .balign 8
 
-.obj __vt__CDeviceRemotePad, global
-	.4byte __RTTI__CDeviceRemotePad
+.obj __vt__16CDeviceRemotePad, global
+	.4byte __RTTI__16CDeviceRemotePad
 	.4byte 0
 	.4byte __dt__CDeviceRemotePad
 	.4byte IWorkEvent_WorkEvent1
@@ -1420,14 +1420,14 @@
 	.4byte CDeviceRemotePad_WorkThreadEvent4
 	.4byte CDeviceRemotePad_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-.endobj __vt__CDeviceRemotePad
+.endobj __vt__16CDeviceRemotePad
 
 .obj CDeviceRemotePad_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
-	.4byte __RTTI__CDeviceBase
+	.4byte __RTTI__11CDeviceBase
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1437,10 +1437,10 @@
 
 .balign 8
 
-.obj __RTTI__CDeviceRemotePad, global
+.obj __RTTI__16CDeviceRemotePad, global
 	.4byte CDeviceRemotePad_typestr
 	.4byte CDeviceRemotePad_hierarchy
-.endobj __RTTI__CDeviceRemotePad
+.endobj __RTTI__16CDeviceRemotePad
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

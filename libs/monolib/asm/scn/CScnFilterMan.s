@@ -11,9 +11,9 @@
 /* 8049C95C 00465F1C  93 C1 00 08 */	stw r30, 8(r1)
 /* 8049C960 00465F20  7C 7E 1B 78 */	mr r30, r3
 /* 8049C964 00465F24  4B CA 5E 01 */	bl __ct__IScnRender
-/* 8049C968 00465F28  3C 80 80 57 */	lis r4, __vt__CScnFilterMan@ha
+/* 8049C968 00465F28  3C 80 80 57 */	lis r4, __vt__13CScnFilterMan@ha
 /* 8049C96C 00465F2C  93 FE 00 04 */	stw r31, 4(r30)
-/* 8049C970 00465F30  38 84 23 C0 */	addi r4, r4, __vt__CScnFilterMan@l
+/* 8049C970 00465F30  38 84 23 C0 */	addi r4, r4, __vt__13CScnFilterMan@l
 /* 8049C974 00465F34  38 7E 00 08 */	addi r3, r30, 8
 /* 8049C978 00465F38  90 9E 00 00 */	stw r4, 0(r30)
 /* 8049C97C 00465F3C  48 00 00 89 */	bl __ct__reslist_CScnFilter
@@ -62,9 +62,9 @@
 /* 8049CA10 00465FD0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8049CA14 00465FD4  7C 7F 1B 78 */	mr r31, r3
 /* 8049CA18 00465FD8  48 00 00 29 */	bl __ct___reslist_base_CScnFilter
-/* 8049CA1C 00465FDC  3C 80 80 57 */	lis r4, __vt__reslist_CScnFilter@ha
+/* 8049CA1C 00465FDC  3C 80 80 57 */	lis r4, "__vt__22reslist<P10CScnFilter>"@ha
 /* 8049CA20 00465FE0  7F E3 FB 78 */	mr r3, r31
-/* 8049CA24 00465FE4  38 84 23 F4 */	addi r4, r4, __vt__reslist_CScnFilter@l
+/* 8049CA24 00465FE4  38 84 23 F4 */	addi r4, r4, "__vt__22reslist<P10CScnFilter>"@l
 /* 8049CA28 00465FE8  90 9F 00 00 */	stw r4, 0(r31)
 /* 8049CA2C 00465FEC  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8049CA30 00465FF0  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -75,8 +75,8 @@
 
 .fn __ct___reslist_base_CScnFilter, global
 /* 8049CA40 00466000  38 00 00 00 */	li r0, 0
-/* 8049CA44 00466004  3C 80 80 57 */	lis r4, __vt___reslist_base_CScnFilter@ha
-/* 8049CA48 00466008  38 84 24 0C */	addi r4, r4, __vt___reslist_base_CScnFilter@l
+/* 8049CA44 00466004  3C 80 80 57 */	lis r4, "__vt__28_reslist_base<P10CScnFilter>"@ha
+/* 8049CA48 00466008  38 84 24 0C */	addi r4, r4, "__vt__28_reslist_base<P10CScnFilter>"@l
 /* 8049CA4C 0046600C  90 83 00 00 */	stw r4, 0(r3)
 /* 8049CA50 00466010  38 83 00 08 */	addi r4, r3, 8
 /* 8049CA54 00466014  90 03 00 14 */	stw r0, 0x14(r3)
@@ -98,8 +98,8 @@
 /* 8049CA88 00466048  93 C1 00 08 */	stw r30, 8(r1)
 /* 8049CA8C 0046604C  7C 7E 1B 78 */	mr r30, r3
 /* 8049CA90 00466050  41 82 00 48 */	beq .L_8049CAD8
-/* 8049CA94 00466054  3C 80 80 57 */	lis r4, __vt___reslist_base_CScnFilter@ha
-/* 8049CA98 00466058  38 84 24 0C */	addi r4, r4, __vt___reslist_base_CScnFilter@l
+/* 8049CA94 00466054  3C 80 80 57 */	lis r4, "__vt__28_reslist_base<P10CScnFilter>"@ha
+/* 8049CA98 00466058  38 84 24 0C */	addi r4, r4, "__vt__28_reslist_base<P10CScnFilter>"@l
 /* 8049CA9C 0046605C  90 83 00 00 */	stw r4, 0(r3)
 /* 8049CAA0 00466060  48 00 00 55 */	bl func_8049CAF4
 /* 8049CAA4 00466064  88 1E 00 1C */	lbz r0, 0x1c(r30)
@@ -204,9 +204,9 @@
 /* 8049CBE0 004661A0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8049CBE4 004661A4  7C 7F 1B 78 */	mr r31, r3
 /* 8049CBE8 004661A8  48 00 00 29 */	bl __ct__8049CC10
-/* 8049CBEC 004661AC  3C 80 80 57 */	lis r4, __vt__reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter@ha
+/* 8049CBEC 004661AC  3C 80 80 57 */	lis r4, "__vt__73reslist<62_reslist_iterator<P10CScnFilter,RP10CScnFilter,PP10CScnFilter>>"@ha
 /* 8049CBF0 004661B0  7F E3 FB 78 */	mr r3, r31
-/* 8049CBF4 004661B4  38 84 23 D0 */	addi r4, r4, __vt__reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter@l
+/* 8049CBF4 004661B4  38 84 23 D0 */	addi r4, r4, "__vt__73reslist<62_reslist_iterator<P10CScnFilter,RP10CScnFilter,PP10CScnFilter>>"@l
 /* 8049CBF8 004661B8  90 9F 00 00 */	stw r4, 0(r31)
 /* 8049CBFC 004661BC  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 8049CC00 004661C0  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -218,9 +218,9 @@
 .fn __ct__8049CC10, global
 /* 8049CC10 004661D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8049CC14 004661D4  7C 08 02 A6 */	mflr r0
-/* 8049CC18 004661D8  3C 80 80 57 */	lis r4, __vt___reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter@ha
+/* 8049CC18 004661D8  3C 80 80 57 */	lis r4, "__vt__79_reslist_base<62_reslist_iterator<P10CScnFilter,RP10CScnFilter,PP10CScnFilter>>"@ha
 /* 8049CC1C 004661DC  90 01 00 14 */	stw r0, 0x14(r1)
-/* 8049CC20 004661E0  38 84 23 E8 */	addi r4, r4, __vt___reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter@l
+/* 8049CC20 004661E0  38 84 23 E8 */	addi r4, r4, "__vt__79_reslist_base<62_reslist_iterator<P10CScnFilter,RP10CScnFilter,PP10CScnFilter>>"@l
 /* 8049CC24 004661E4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8049CC28 004661E8  7C 7F 1B 78 */	mr r31, r3
 /* 8049CC2C 004661EC  90 83 00 00 */	stw r4, 0(r3)
@@ -272,8 +272,8 @@
 /* 8049CCC0 00466280  93 C1 00 08 */	stw r30, 8(r1)
 /* 8049CCC4 00466284  7C 7E 1B 78 */	mr r30, r3
 /* 8049CCC8 00466288  41 82 00 50 */	beq .L_8049CD18
-/* 8049CCCC 0046628C  3C 80 80 57 */	lis r4, __vt___reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter@ha
-/* 8049CCD0 00466290  38 84 23 E8 */	addi r4, r4, __vt___reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter@l
+/* 8049CCCC 0046628C  3C 80 80 57 */	lis r4, "__vt__79_reslist_base<62_reslist_iterator<P10CScnFilter,RP10CScnFilter,PP10CScnFilter>>"@ha
+/* 8049CCD0 00466290  38 84 23 E8 */	addi r4, r4, "__vt__79_reslist_base<62_reslist_iterator<P10CScnFilter,RP10CScnFilter,PP10CScnFilter>>"@l
 /* 8049CCD4 00466294  90 83 00 00 */	stw r4, 0(r3)
 /* 8049CCD8 00466298  48 00 00 5D */	bl func_8049CD34
 /* 8049CCDC 0046629C  88 1E 00 1C */	lbz r0, 0x1c(r30)
@@ -565,9 +565,9 @@
 /* 8049D0A8 00466668  93 C1 00 08 */	stw r30, 8(r1)
 /* 8049D0AC 0046666C  7C 7E 1B 78 */	mr r30, r3
 /* 8049D0B0 00466670  41 82 00 60 */	beq .L_8049D110
-/* 8049D0B4 00466674  3C A0 80 57 */	lis r5, __vt__CScnFilterMan@ha
+/* 8049D0B4 00466674  3C A0 80 57 */	lis r5, __vt__13CScnFilterMan@ha
 /* 8049D0B8 00466678  7F C4 F3 78 */	mr r4, r30
-/* 8049D0BC 0046667C  38 A5 23 C0 */	addi r5, r5, __vt__CScnFilterMan@l
+/* 8049D0BC 0046667C  38 A5 23 C0 */	addi r5, r5, __vt__13CScnFilterMan@l
 /* 8049D0C0 00466680  90 A3 00 00 */	stw r5, 0(r3)
 /* 8049D0C4 00466684  80 63 00 04 */	lwz r3, 4(r3)
 /* 8049D0C8 00466688  4B FF 8E 89 */	bl func_80495F50
@@ -1609,82 +1609,82 @@
 
 .balign 8
 
-.obj __vt__CScnFilterMan, global
-	.4byte __RTTI__CScnFilterMan
+.obj __vt__13CScnFilterMan, global
+	.4byte __RTTI__13CScnFilterMan
 	.4byte 0
 	.4byte __dt__CScnFilterMan
 	.4byte func_8049DD60
-.endobj __vt__CScnFilterMan
+.endobj __vt__13CScnFilterMan
 
 
-.obj __vt__reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter, global
-	.4byte __RTTI__reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
+.obj "__vt__73reslist<62_reslist_iterator<P10CScnFilter,RP10CScnFilter,PP10CScnFilter>>", global
+	.4byte "__RTTI__73reslist<62_reslist_iterator<P10CScnFilter,RP10CScnFilter,PP10CScnFilter>>"
 	.4byte 0
 	.4byte __dt__reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
-.endobj __vt__reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
+.endobj "__vt__73reslist<62_reslist_iterator<P10CScnFilter,RP10CScnFilter,PP10CScnFilter>>"
 
 .obj reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_hierarchy, global
-	.4byte __RTTI___reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
+	.4byte "__RTTI__79_reslist_base<62_reslist_iterator<P10CScnFilter,RP10CScnFilter,PP10CScnFilter>>"
 	.4byte 0
 	.4byte 0
 .endobj reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_hierarchy
 
 
-.obj __vt___reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter, global
-	.4byte __RTTI___reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
+.obj "__vt__79_reslist_base<62_reslist_iterator<P10CScnFilter,RP10CScnFilter,PP10CScnFilter>>", global
+	.4byte "__RTTI__79_reslist_base<62_reslist_iterator<P10CScnFilter,RP10CScnFilter,PP10CScnFilter>>"
 	.4byte 0
 	.4byte __dt___reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
-.endobj __vt___reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
+.endobj "__vt__79_reslist_base<62_reslist_iterator<P10CScnFilter,RP10CScnFilter,PP10CScnFilter>>"
 
 
-.obj __vt__reslist_CScnFilter, global
-	.4byte __RTTI__reslist_CScnFilter
+.obj "__vt__22reslist<P10CScnFilter>", global
+	.4byte "__RTTI__22reslist<P10CScnFilter>"
 	.4byte 0
 	.4byte __dt__reslist_CScnFilter
-.endobj __vt__reslist_CScnFilter
+.endobj "__vt__22reslist<P10CScnFilter>"
 
 .obj reslist_CScnFilter_hierarchy, global
-	.4byte __RTTI___reslist_base_CScnFilter
+	.4byte "__RTTI__28_reslist_base<P10CScnFilter>"
 	.4byte 0
 	.4byte 0
 .endobj reslist_CScnFilter_hierarchy
 
 
-.obj __vt___reslist_base_CScnFilter, global
-	.4byte __RTTI___reslist_base_CScnFilter
+.obj "__vt__28_reslist_base<P10CScnFilter>", global
+	.4byte "__RTTI__28_reslist_base<P10CScnFilter>"
 	.4byte 0
 	.4byte __dt___reslist_base_CScnFilter
-.endobj __vt___reslist_base_CScnFilter
+.endobj "__vt__28_reslist_base<P10CScnFilter>"
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CScnFilterMan, global
+.obj __RTTI__13CScnFilterMan, global
 	.4byte CScnFilterMan_typestr
 	.4byte 0
-.endobj __RTTI__CScnFilterMan
+.endobj __RTTI__13CScnFilterMan
 
-.obj __RTTI__reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter, global
+.obj "__RTTI__73reslist<62_reslist_iterator<P10CScnFilter,RP10CScnFilter,PP10CScnFilter>>", global
 	.4byte reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_typestr
 	.4byte reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_hierarchy
-.endobj __RTTI__reslist__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
+.endobj "__RTTI__73reslist<62_reslist_iterator<P10CScnFilter,RP10CScnFilter,PP10CScnFilter>>"
 
-.obj __RTTI___reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter, global
+.obj "__RTTI__79_reslist_base<62_reslist_iterator<P10CScnFilter,RP10CScnFilter,PP10CScnFilter>>", global
 	.4byte _reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter_typestr
 	.4byte 0
-.endobj __RTTI___reslist_base__reslist_iterator_CScnFilter_CScnFilter_CScnFilter
+.endobj "__RTTI__79_reslist_base<62_reslist_iterator<P10CScnFilter,RP10CScnFilter,PP10CScnFilter>>"
 
-.obj __RTTI__reslist_CScnFilter, global
+.obj "__RTTI__22reslist<P10CScnFilter>", global
 	.4byte reslist_CScnFilter_typestr
 	.4byte reslist_CScnFilter_hierarchy
-.endobj __RTTI__reslist_CScnFilter
+.endobj "__RTTI__22reslist<P10CScnFilter>"
 
-.obj __RTTI___reslist_base_CScnFilter, global
+.obj "__RTTI__28_reslist_base<P10CScnFilter>", global
 	.4byte _reslist_base_CScnFilter_typestr
 	.4byte 0
-.endobj __RTTI___reslist_base_CScnFilter
+.endobj "__RTTI__28_reslist_base<P10CScnFilter>"
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

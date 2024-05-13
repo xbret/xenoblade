@@ -14,12 +14,12 @@
 /* 801497A0 00112D60  93 81 00 10 */	stw r28, 0x10(r1)
 /* 801497A4 00112D64  7C 7C 1B 78 */	mr r28, r3
 /* 801497A8 00112D68  48 2F B2 71 */	bl __ct__8CProcessFv
-/* 801497AC 00112D6C  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
-/* 801497B0 00112D70  3C A0 80 53 */	lis r5, __vt__CMenuGetItem@ha
-/* 801497B4 00112D74  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
+/* 801497AC 00112D6C  3C 60 80 53 */	lis r3, "__vt__14CTTask<5IUICf>"@ha
+/* 801497B0 00112D70  3C A0 80 53 */	lis r5, __vt__12CMenuGetItem@ha
+/* 801497B4 00112D74  38 63 F7 40 */	addi r3, r3, "__vt__14CTTask<5IUICf>"@l
 /* 801497B8 00112D78  90 7C 00 10 */	stw r3, 0x10(r28)
 /* 801497BC 00112D7C  3D 00 80 51 */	lis r8, __ptmf_null@ha
-/* 801497C0 00112D80  38 A5 22 10 */	addi r5, r5, __vt__CMenuGetItem@l
+/* 801497C0 00112D80  38 A5 22 10 */	addi r5, r5, __vt__12CMenuGetItem@l
 /* 801497C4 00112D84  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 801497C8 00112D88  38 85 00 24 */	addi r4, r5, 0x24
 /* 801497CC 00112D8C  3B E0 00 00 */	li r31, 0
@@ -79,12 +79,12 @@
 /* 80149898 00112E58  93 81 00 10 */	stw r28, 0x10(r1)
 /* 8014989C 00112E5C  7C 7C 1B 78 */	mr r28, r3
 /* 801498A0 00112E60  48 2F B1 79 */	bl __ct__8CProcessFv
-/* 801498A4 00112E64  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
-/* 801498A8 00112E68  3C A0 80 53 */	lis r5, __vt__CMenuGetItem@ha
-/* 801498AC 00112E6C  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
+/* 801498A4 00112E64  3C 60 80 53 */	lis r3, "__vt__14CTTask<5IUICf>"@ha
+/* 801498A8 00112E68  3C A0 80 53 */	lis r5, __vt__12CMenuGetItem@ha
+/* 801498AC 00112E6C  38 63 F7 40 */	addi r3, r3, "__vt__14CTTask<5IUICf>"@l
 /* 801498B0 00112E70  90 7C 00 10 */	stw r3, 0x10(r28)
 /* 801498B4 00112E74  3D 00 80 51 */	lis r8, __ptmf_null@ha
-/* 801498B8 00112E78  38 A5 22 10 */	addi r5, r5, __vt__CMenuGetItem@l
+/* 801498B8 00112E78  38 A5 22 10 */	addi r5, r5, __vt__12CMenuGetItem@l
 /* 801498BC 00112E7C  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 801498C0 00112E80  38 85 00 24 */	addi r4, r5, 0x24
 /* 801498C4 00112E84  3B E0 00 00 */	li r31, 0
@@ -143,12 +143,12 @@
 /* 8014998C 00112F4C  7C BD 2B 78 */	mr r29, r5
 /* 80149990 00112F50  7C DE 33 78 */	mr r30, r6
 /* 80149994 00112F54  48 2F B0 85 */	bl __ct__8CProcessFv
-/* 80149998 00112F58  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
-/* 8014999C 00112F5C  3C A0 80 53 */	lis r5, __vt__CMenuGetItem@ha
-/* 801499A0 00112F60  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
+/* 80149998 00112F58  3C 60 80 53 */	lis r3, "__vt__14CTTask<5IUICf>"@ha
+/* 8014999C 00112F5C  3C A0 80 53 */	lis r5, __vt__12CMenuGetItem@ha
+/* 801499A0 00112F60  38 63 F7 40 */	addi r3, r3, "__vt__14CTTask<5IUICf>"@l
 /* 801499A4 00112F64  90 7B 00 10 */	stw r3, 0x10(r27)
 /* 801499A8 00112F68  3D 00 80 51 */	lis r8, __ptmf_null@ha
-/* 801499AC 00112F6C  38 A5 22 10 */	addi r5, r5, __vt__CMenuGetItem@l
+/* 801499AC 00112F6C  38 A5 22 10 */	addi r5, r5, __vt__12CMenuGetItem@l
 /* 801499B0 00112F70  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 801499B4 00112F74  38 85 00 24 */	addi r4, r5, 0x24
 /* 801499B8 00112F78  3B E0 00 00 */	li r31, 0
@@ -1252,8 +1252,8 @@
 
 .balign 8
 
-.obj __vt__CMenuGetItem, global
-	.4byte __RTTI__CMenuGetItem
+.obj __vt__12CMenuGetItem, global
+	.4byte __RTTI__12CMenuGetItem
 	.4byte 0
 	.4byte __dt__CMenuGetItem
 	.4byte CChildListNode_Reset
@@ -1262,7 +1262,7 @@
 	.4byte func_80149E50
 	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuGetItem
+	.4byte __RTTI__12CMenuGetItem
 	.4byte 0xFFFFFFA8
 	.4byte func_8014A854
 	.4byte IWorkEvent_WorkEvent1
@@ -1296,27 +1296,27 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CMenuGetItem
+	.4byte __RTTI__12CMenuGetItem
 	.4byte 0xFFFFFFA4
 	.4byte func_8014A864
 	.4byte func_8014A85C
 	.4byte func_80149FB8
-.endobj __vt__CMenuGetItem
+.endobj __vt__12CMenuGetItem
 
 .obj CMenuGetItem_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x0000005C
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x00000058
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUICf
+	.4byte "__RTTI__14CTTask<5IUICf>"
 	.4byte 0
-	.4byte __RTTI__IUICf
+	.4byte __RTTI__5IUICf
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1326,10 +1326,10 @@
 
 .balign 8
 
-.obj __RTTI__CMenuGetItem, global
+.obj __RTTI__12CMenuGetItem, global
 	.4byte CMenuGetItem_typestr
 	.4byte CMenuGetItem_hierarchy
-.endobj __RTTI__CMenuGetItem
+.endobj __RTTI__12CMenuGetItem
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

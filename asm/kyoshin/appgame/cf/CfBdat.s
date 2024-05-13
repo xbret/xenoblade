@@ -1170,9 +1170,9 @@
 .endfn CfBdat_OnFileEvent
 
 .fn sinit_80142544, local
-/* 80142544 0010BB04  3C 60 80 53 */	lis r3, __vt__cf_CfBdat@ha
+/* 80142544 0010BB04  3C 60 80 53 */	lis r3, __vt__Q22cf6CfBdat@ha
 /* 80142548 0010BB08  38 0D A9 04 */	addi r0, r13, lbl_80666A84@sda21
-/* 8014254C 0010BB0C  38 63 1E E8 */	addi r3, r3, __vt__cf_CfBdat@l
+/* 8014254C 0010BB0C  38 63 1E E8 */	addi r3, r3, __vt__Q22cf6CfBdat@l
 /* 80142550 0010BB10  90 6D A9 04 */	stw r3, lbl_80666A84@sda21(r13)
 /* 80142554 0010BB14  90 0D A9 00 */	stw r0, lbl_80666A80@sda21(r13)
 /* 80142558 0010BB18  4E 80 00 20 */	blr 
@@ -1460,8 +1460,8 @@
 .endobj lbl_80531EC0
 
 
-.obj __vt__cf_CfBdat, global
-	.4byte __RTTI__cf_CfBdat
+.obj __vt__Q22cf6CfBdat, global
+	.4byte __RTTI__Q22cf6CfBdat
 	.4byte 0
 	.4byte __dt__cf_CfBdat
 	.4byte IWorkEvent_WorkEvent1
@@ -1495,10 +1495,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__cf_CfBdat
+.endobj __vt__Q22cf6CfBdat
 
 .obj cf_CfBdat_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1514,10 +1514,10 @@
 
 .balign 8
 
-.obj __RTTI__cf_CfBdat, global
+.obj __RTTI__Q22cf6CfBdat, global
 	.4byte cf_CfBdat_typestr
 	.4byte cf_CfBdat_hierarchy
-.endobj __RTTI__cf_CfBdat
+.endobj __RTTI__Q22cf6CfBdat
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

@@ -30,8 +30,8 @@
 /* 802B8A94 00282054  41 82 00 30 */	beq .L_802B8AC4
 /* 802B8A98 00282058  90 3F 00 1C */	stw r1, 0x1c(r31)
 /* 802B8A9C 0028205C  4B FE AF E5 */	bl __ct__cf_CVS_THREAD
-/* 802B8AA0 00282060  3C 60 80 54 */	lis r3, __vt__cf_CVS_THREAD_ORDER@ha
-/* 802B8AA4 00282064  38 63 EF 30 */	addi r3, r3, __vt__cf_CVS_THREAD_ORDER@l
+/* 802B8AA0 00282060  3C 60 80 54 */	lis r3, __vt__Q22cf10CVS_THREAD_ORDER@ha
+/* 802B8AA4 00282064  38 63 EF 30 */	addi r3, r3, __vt__Q22cf10CVS_THREAD_ORDER@l
 /* 802B8AA8 00282068  90 7E 00 1C */	stw r3, 0x1c(r30)
 /* 802B8AAC 0028206C  93 BE 00 20 */	stw r29, 0x20(r30)
 /* 802B8AB0 00282070  48 00 00 14 */	b .L_802B8AC4
@@ -624,18 +624,18 @@
 .endobj lbl_8053EF24
 
 
-.obj __vt__cf_CVS_THREAD_ORDER, global
-	.4byte __RTTI__cf_CVS_THREAD_ORDER
+.obj __vt__Q22cf10CVS_THREAD_ORDER, global
+	.4byte __RTTI__Q22cf10CVS_THREAD_ORDER
 	.4byte 0
 	.4byte func_802A3B50
 	.4byte func_802A3BEC
 	.4byte func_802B8D44
 	.4byte func_802A1EA0
 	.4byte func_802A3740
-.endobj __vt__cf_CVS_THREAD_ORDER
+.endobj __vt__Q22cf10CVS_THREAD_ORDER
 
 .obj cf_CVS_THREAD_ORDER_hierarchy, global
-	.4byte __RTTI__cf_CVS_THREAD
+	.4byte __RTTI__Q22cf10CVS_THREAD
 	.4byte 0
 	.4byte 0
 .endobj cf_CVS_THREAD_ORDER_hierarchy
@@ -672,10 +672,10 @@
 
 .balign 8
 
-.obj __RTTI__cf_CVS_THREAD_ORDER, global
+.obj __RTTI__Q22cf10CVS_THREAD_ORDER, global
 	.4byte cf_CVS_THREAD_ORDER_typestr
 	.4byte cf_CVS_THREAD_ORDER_hierarchy
-.endobj __RTTI__cf_CVS_THREAD_ORDER
+.endobj __RTTI__Q22cf10CVS_THREAD_ORDER
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

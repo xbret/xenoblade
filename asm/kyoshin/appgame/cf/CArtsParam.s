@@ -5,10 +5,10 @@
 .fn __ct__CAttackParam, global
 /* 80153F00 0011D4C0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80153F04 0011D4C4  7C 08 02 A6 */	mflr r0
-/* 80153F08 0011D4C8  3D 80 80 53 */	lis r12, __vt__cf_CAttackParam@ha
+/* 80153F08 0011D4C8  3D 80 80 53 */	lis r12, __vt__Q22cf12CAttackParam@ha
 /* 80153F0C 0011D4CC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80153F10 0011D4D0  38 00 00 00 */	li r0, 0
-/* 80153F14 0011D4D4  39 8C 2D E0 */	addi r12, r12, __vt__cf_CAttackParam@l
+/* 80153F14 0011D4D4  39 8C 2D E0 */	addi r12, r12, __vt__Q22cf12CAttackParam@l
 /* 80153F18 0011D4D8  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80153F1C 0011D4DC  7C 7F 1B 78 */	mr r31, r3
 /* 80153F20 0011D4E0  91 83 00 84 */	stw r12, 0x84(r3)
@@ -1561,10 +1561,10 @@
 .fn __ct__8015550C, global
 /* 8015550C 0011EACC  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80155510 0011EAD0  7C 08 02 A6 */	mflr r0
-/* 80155514 0011EAD4  3D 80 80 53 */	lis r12, __vt__cf_CAttackParam@ha
+/* 80155514 0011EAD4  3D 80 80 53 */	lis r12, __vt__Q22cf12CAttackParam@ha
 /* 80155518 0011EAD8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8015551C 0011EADC  38 00 00 00 */	li r0, 0
-/* 80155520 0011EAE0  39 8C 2D E0 */	addi r12, r12, __vt__cf_CAttackParam@l
+/* 80155520 0011EAE0  39 8C 2D E0 */	addi r12, r12, __vt__Q22cf12CAttackParam@l
 /* 80155524 0011EAE4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80155528 0011EAE8  7C 7F 1B 78 */	mr r31, r3
 /* 8015552C 0011EAEC  91 83 00 84 */	stw r12, 0x84(r3)
@@ -1574,9 +1574,9 @@
 /* 8015553C 0011EAFC  81 8C 00 08 */	lwz r12, 8(r12)
 /* 80155540 0011EB00  7D 89 03 A6 */	mtctr r12
 /* 80155544 0011EB04  4E 80 04 21 */	bctrl 
-/* 80155548 0011EB08  3C 80 80 53 */	lis r4, __vt__cf_CArtsParam@ha
+/* 80155548 0011EB08  3C 80 80 53 */	lis r4, __vt__Q22cf10CArtsParam@ha
 /* 8015554C 0011EB0C  7F E3 FB 78 */	mr r3, r31
-/* 80155550 0011EB10  38 84 2D B8 */	addi r4, r4, __vt__cf_CArtsParam@l
+/* 80155550 0011EB10  38 84 2D B8 */	addi r4, r4, __vt__Q22cf10CArtsParam@l
 /* 80155554 0011EB14  90 9F 00 84 */	stw r4, 0x84(r31)
 /* 80155558 0011EB18  81 9F 00 84 */	lwz r12, 0x84(r31)
 /* 8015555C 0011EB1C  81 8C 00 08 */	lwz r12, 8(r12)
@@ -1628,11 +1628,11 @@
 .fn sinit_801555E4, local
 /* 801555E4 0011EBA4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801555E8 0011EBA8  7C 08 02 A6 */	mflr r0
-/* 801555EC 0011EBAC  3C 60 80 53 */	lis r3, __vt__cf_CAttackParam@ha
+/* 801555EC 0011EBAC  3C 60 80 53 */	lis r3, __vt__Q22cf12CAttackParam@ha
 /* 801555F0 0011EBB0  3C 80 80 57 */	lis r4, lbl_80577580@ha
 /* 801555F4 0011EBB4  90 01 00 14 */	stw r0, 0x14(r1)
 /* 801555F8 0011EBB8  38 00 00 00 */	li r0, 0
-/* 801555FC 0011EBBC  38 63 2D E0 */	addi r3, r3, __vt__cf_CAttackParam@l
+/* 801555FC 0011EBBC  38 63 2D E0 */	addi r3, r3, __vt__Q22cf12CAttackParam@l
 /* 80155600 0011EBC0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80155604 0011EBC4  3B E4 75 80 */	addi r31, r4, lbl_80577580@l
 /* 80155608 0011EBC8  90 7F 00 84 */	stw r3, 0x84(r31)
@@ -1644,9 +1644,9 @@
 /* 80155620 0011EBE0  81 8C 00 08 */	lwz r12, 8(r12)
 /* 80155624 0011EBE4  7D 89 03 A6 */	mtctr r12
 /* 80155628 0011EBE8  4E 80 04 21 */	bctrl 
-/* 8015562C 0011EBEC  3C 80 80 53 */	lis r4, __vt__cf_CArtsParam@ha
+/* 8015562C 0011EBEC  3C 80 80 53 */	lis r4, __vt__Q22cf10CArtsParam@ha
 /* 80155630 0011EBF0  7F E3 FB 78 */	mr r3, r31
-/* 80155634 0011EBF4  38 84 2D B8 */	addi r4, r4, __vt__cf_CArtsParam@l
+/* 80155634 0011EBF4  38 84 2D B8 */	addi r4, r4, __vt__Q22cf10CArtsParam@l
 /* 80155638 0011EBF8  90 9F 00 84 */	stw r4, 0x84(r31)
 /* 8015563C 0011EBFC  81 9F 00 84 */	lwz r12, 0x84(r31)
 /* 80155640 0011EC00  81 8C 00 08 */	lwz r12, 8(r12)
@@ -1669,44 +1669,44 @@
 
 .balign 8
 
-.obj __vt__cf_CArtsParam, global
-	.4byte __RTTI__cf_CArtsParam
+.obj __vt__Q22cf10CArtsParam, global
+	.4byte __RTTI__Q22cf10CArtsParam
 	.4byte 0
 	.4byte func_80155580
 	.4byte func_801555C8
 	.4byte func_801555B4
 	.4byte func_800D29E4
-.endobj __vt__cf_CArtsParam
+.endobj __vt__Q22cf10CArtsParam
 
 .obj cf_CArtsParam_hierarchy, global
-	.4byte __RTTI__cf_CAttackParam
+	.4byte __RTTI__Q22cf12CAttackParam
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj cf_CArtsParam_hierarchy
 
-.obj __vt__cf_CAttackParam, global
-	.4byte __RTTI__cf_CAttackParam
+.obj __vt__Q22cf12CAttackParam, global
+	.4byte __RTTI__Q22cf12CAttackParam
 	.4byte 0
 	.4byte func_80153F54
 	.4byte func_800989FC
 	.4byte func_800989F4
 	.4byte func_800D29E4
-.endobj __vt__cf_CAttackParam
+.endobj __vt__Q22cf12CAttackParam
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__cf_CArtsParam, global
+.obj __RTTI__Q22cf10CArtsParam, global
 	.4byte cf_CArtsParam_typestr
 	.4byte cf_CArtsParam_hierarchy
-.endobj __RTTI__cf_CArtsParam
+.endobj __RTTI__Q22cf10CArtsParam
 
-.obj __RTTI__cf_CAttackParam, global
+.obj __RTTI__Q22cf12CAttackParam, global
 	.4byte cf_CAttackParam_typestr
 	.4byte 0
-.endobj __RTTI__cf_CAttackParam
+.endobj __RTTI__Q22cf12CAttackParam
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

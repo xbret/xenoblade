@@ -5,9 +5,9 @@
 .fn __ct__CScrollBar, global
 /* 801F3410 001BC9D0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 801F3414 001BC9D4  7C 08 02 A6 */	mflr r0
-/* 801F3418 001BC9D8  3C A0 80 54 */	lis r5, __vt__CScrollBar@ha
+/* 801F3418 001BC9D8  3C A0 80 54 */	lis r5, __vt__10CScrollBar@ha
 /* 801F341C 001BC9DC  90 01 00 14 */	stw r0, 0x14(r1)
-/* 801F3420 001BC9E0  38 A5 85 90 */	addi r5, r5, __vt__CScrollBar@l
+/* 801F3420 001BC9E0  38 A5 85 90 */	addi r5, r5, __vt__10CScrollBar@l
 /* 801F3424 001BC9E4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 801F3428 001BC9E8  7C 9F 23 78 */	mr r31, r4
 /* 801F342C 001BC9EC  93 C1 00 08 */	stw r30, 8(r1)
@@ -674,8 +674,8 @@
 .endobj lbl_80538578
 
 
-.obj __vt__CScrollBar, global
-	.4byte __RTTI__CScrollBar
+.obj __vt__10CScrollBar, global
+	.4byte __RTTI__10CScrollBar
 	.4byte 0
 	.4byte __dt__CScrollBar
 	.4byte IWorkEvent_WorkEvent1
@@ -709,10 +709,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CScrollBar
+.endobj __vt__10CScrollBar
 
 .obj CScrollBar_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -722,10 +722,10 @@
 
 .balign 8
 
-.obj __RTTI__CScrollBar, global
+.obj __RTTI__10CScrollBar, global
 	.4byte CScrollBar_typestr
 	.4byte CScrollBar_hierarchy
-.endobj __RTTI__CScrollBar
+.endobj __RTTI__10CScrollBar
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

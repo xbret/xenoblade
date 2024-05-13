@@ -5,11 +5,11 @@
 .fn __ct__cf_CPartsChange, global
 /* 80192DE8 0015C3A8  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80192DEC 0015C3AC  7C 08 02 A6 */	mflr r0
-/* 80192DF0 0015C3B0  3C 80 80 53 */	lis r4, __vt__cf_CPartsChange@ha
+/* 80192DF0 0015C3B0  3C 80 80 53 */	lis r4, __vt__Q22cf12CPartsChange@ha
 /* 80192DF4 0015C3B4  38 A0 00 20 */	li r5, 0x20
 /* 80192DF8 0015C3B8  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80192DFC 0015C3BC  38 00 00 00 */	li r0, 0
-/* 80192E00 0015C3C0  38 84 62 60 */	addi r4, r4, __vt__cf_CPartsChange@l
+/* 80192E00 0015C3C0  38 84 62 60 */	addi r4, r4, __vt__Q22cf12CPartsChange@l
 /* 80192E04 0015C3C4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80192E08 0015C3C8  7C 7F 1B 78 */	mr r31, r3
 /* 80192E0C 0015C3CC  90 83 00 00 */	stw r4, 0(r3)
@@ -336,15 +336,15 @@
 /* 80193270 0015C830  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80193274 0015C834  7C 08 02 A6 */	mflr r0
 /* 80193278 0015C838  3D 23 00 01 */	addis r9, r3, 1
-/* 8019327C 0015C83C  3C 80 80 53 */	lis r4, __vt___reslist_base_cf_CfPartyInfo@ha
+/* 8019327C 0015C83C  3C 80 80 53 */	lis r4, "__vt__34_reslist_base<PQ22cf11CfPartyInfo>"@ha
 /* 80193280 0015C840  90 01 00 14 */	stw r0, 0x14(r1)
-/* 80193284 0015C844  3C E0 80 53 */	lis r7, __vt__reslist_cf_CfPartyInfo@ha
-/* 80193288 0015C848  38 84 62 9C */	addi r4, r4, __vt___reslist_base_cf_CfPartyInfo@l
+/* 80193284 0015C844  3C E0 80 53 */	lis r7, "__vt__28reslist<PQ22cf11CfPartyInfo>"@ha
+/* 80193288 0015C848  38 84 62 9C */	addi r4, r4, "__vt__34_reslist_base<PQ22cf11CfPartyInfo>"@l
 /* 8019328C 0015C84C  39 09 A8 10 */	addi r8, r9, -22512
 /* 80193290 0015C850  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80193294 0015C854  3B E0 00 00 */	li r31, 0
 /* 80193298 0015C858  C0 02 A0 10 */	lfs f0, float_8066A390@sda21(r2)
-/* 8019329C 0015C85C  38 E7 62 84 */	addi r7, r7, __vt__reslist_cf_CfPartyInfo@l
+/* 8019329C 0015C85C  38 E7 62 84 */	addi r7, r7, "__vt__28reslist<PQ22cf11CfPartyInfo>"@l
 /* 801932A0 0015C860  93 C1 00 08 */	stw r30, 8(r1)
 /* 801932A4 0015C864  38 C0 00 01 */	li r6, 1
 /* 801932A8 0015C868  38 00 00 0F */	li r0, 0xf
@@ -432,9 +432,9 @@
 /* 801933E4 0015C9A4  93 C1 00 08 */	stw r30, 8(r1)
 /* 801933E8 0015C9A8  7C 7E 1B 78 */	mr r30, r3
 /* 801933EC 0015C9AC  41 82 00 78 */	beq .L_80193464
-/* 801933F0 0015C9B0  3C A0 80 53 */	lis r5, __vt___reslist_base_cf_CfPartyInfo@ha
+/* 801933F0 0015C9B0  3C A0 80 53 */	lis r5, "__vt__34_reslist_base<PQ22cf11CfPartyInfo>"@ha
 /* 801933F4 0015C9B4  80 83 00 04 */	lwz r4, 4(r3)
-/* 801933F8 0015C9B8  38 A5 62 9C */	addi r5, r5, __vt___reslist_base_cf_CfPartyInfo@l
+/* 801933F8 0015C9B8  38 A5 62 9C */	addi r5, r5, "__vt__34_reslist_base<PQ22cf11CfPartyInfo>"@l
 /* 801933FC 0015C9BC  90 A3 00 00 */	stw r5, 0(r3)
 /* 80193400 0015C9C0  38 00 00 00 */	li r0, 0
 /* 80193404 0015C9C4  80 A4 00 00 */	lwz r5, 0(r4)
@@ -485,9 +485,9 @@
 /* 8019349C 0015CA5C  7C 7E 1B 78 */	mr r30, r3
 /* 801934A0 0015CA60  41 82 00 7C */	beq .L_8019351C
 /* 801934A4 0015CA64  41 82 00 68 */	beq .L_8019350C
-/* 801934A8 0015CA68  3C A0 80 53 */	lis r5, __vt___reslist_base_cf_CfPartyInfo@ha
+/* 801934A8 0015CA68  3C A0 80 53 */	lis r5, "__vt__34_reslist_base<PQ22cf11CfPartyInfo>"@ha
 /* 801934AC 0015CA6C  80 83 00 04 */	lwz r4, 4(r3)
-/* 801934B0 0015CA70  38 A5 62 9C */	addi r5, r5, __vt___reslist_base_cf_CfPartyInfo@l
+/* 801934B0 0015CA70  38 A5 62 9C */	addi r5, r5, "__vt__34_reslist_base<PQ22cf11CfPartyInfo>"@l
 /* 801934B4 0015CA74  90 A3 00 00 */	stw r5, 0(r3)
 /* 801934B8 0015CA78  38 00 00 00 */	li r0, 0
 /* 801934BC 0015CA7C  80 84 00 00 */	lwz r4, 0(r4)
@@ -573,9 +573,9 @@
 /* 801935D4 0015CB94  90 03 A8 20 */	stw r0, -0x57e0(r3)
 /* 801935D8 0015CB98  41 82 00 68 */	beq .L_80193640
 /* 801935DC 0015CB9C  41 82 00 64 */	beq .L_80193640
-/* 801935E0 0015CBA0  3C 80 80 53 */	lis r4, __vt___reslist_base_cf_CfPartyInfo@ha
+/* 801935E0 0015CBA0  3C 80 80 53 */	lis r4, "__vt__34_reslist_base<PQ22cf11CfPartyInfo>"@ha
 /* 801935E4 0015CBA4  80 7D 00 04 */	lwz r3, 4(r29)
-/* 801935E8 0015CBA8  38 84 62 9C */	addi r4, r4, __vt___reslist_base_cf_CfPartyInfo@l
+/* 801935E8 0015CBA8  38 84 62 9C */	addi r4, r4, "__vt__34_reslist_base<PQ22cf11CfPartyInfo>"@l
 /* 801935EC 0015CBAC  90 9D 00 00 */	stw r4, 0(r29)
 /* 801935F0 0015CBB0  80 83 00 00 */	lwz r4, 0(r3)
 /* 801935F4 0015CBB4  48 00 00 10 */	b .L_80193604
@@ -7395,12 +7395,12 @@
 
 .balign 8
 
-.obj __vt__cf_CPartsChange, global
-	.4byte __RTTI__cf_CPartsChange
+.obj __vt__Q22cf12CPartsChange, global
+	.4byte __RTTI__Q22cf12CPartsChange
 	.4byte 0
 	.4byte __dt__cf_CPartsChange
 	.4byte 0
-.endobj __vt__cf_CPartsChange
+.endobj __vt__Q22cf12CPartsChange
 
 
 .obj lbl_80536270, global
@@ -7412,24 +7412,24 @@
 .endobj lbl_80536270
 
 
-.obj __vt__reslist_cf_CfPartyInfo, global
-	.4byte __RTTI__reslist_cf_CfPartyInfo
+.obj "__vt__28reslist<PQ22cf11CfPartyInfo>", global
+	.4byte "__RTTI__28reslist<PQ22cf11CfPartyInfo>"
 	.4byte 0
 	.4byte __dt__reslist_cf_CfPartyInfo
-.endobj __vt__reslist_cf_CfPartyInfo
+.endobj "__vt__28reslist<PQ22cf11CfPartyInfo>"
 
 .obj reslist_cf_CfPartyInfo_hierarchy, global
-	.4byte __RTTI___reslist_base_cf_CfPartyInfo
+	.4byte "__RTTI__34_reslist_base<PQ22cf11CfPartyInfo>"
 	.4byte 0
 	.4byte 0
 .endobj reslist_cf_CfPartyInfo_hierarchy
 
 
-.obj __vt___reslist_base_cf_CfPartyInfo, global
-	.4byte __RTTI___reslist_base_cf_CfPartyInfo
+.obj "__vt__34_reslist_base<PQ22cf11CfPartyInfo>", global
+	.4byte "__RTTI__34_reslist_base<PQ22cf11CfPartyInfo>"
 	.4byte 0
 	.4byte __dt___reslist_base_cf_CfPartyInfo
-.endobj __vt___reslist_base_cf_CfPartyInfo
+.endobj "__vt__34_reslist_base<PQ22cf11CfPartyInfo>"
 
 
 .obj lbl_805362A8, global
@@ -7473,10 +7473,10 @@
 	.4byte 0
 .endobj lbl_80664DE0
 
-.obj __RTTI__cf_CPartsChange, global
+.obj __RTTI__Q22cf12CPartsChange, global
 	.4byte cf_CPartsChange_typestr
 	.4byte 0
-.endobj __RTTI__cf_CPartsChange
+.endobj __RTTI__Q22cf12CPartsChange
 
 
 .obj lbl_80664DF0, global
@@ -7526,15 +7526,15 @@
 	.4byte 0x01CD01CE
 .endobj lbl_80664E20
 
-.obj __RTTI__reslist_cf_CfPartyInfo, global
+.obj "__RTTI__28reslist<PQ22cf11CfPartyInfo>", global
 	.4byte reslist_cf_CfPartyInfo_typestr
 	.4byte reslist_cf_CfPartyInfo_hierarchy
-.endobj __RTTI__reslist_cf_CfPartyInfo
+.endobj "__RTTI__28reslist<PQ22cf11CfPartyInfo>"
 
-.obj __RTTI___reslist_base_cf_CfPartyInfo, global
+.obj "__RTTI__34_reslist_base<PQ22cf11CfPartyInfo>", global
 	.4byte _reslist_base_cf_CfPartyInfo_typestr
 	.4byte 0
-.endobj __RTTI___reslist_base_cf_CfPartyInfo
+.endobj "__RTTI__34_reslist_base<PQ22cf11CfPartyInfo>"
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

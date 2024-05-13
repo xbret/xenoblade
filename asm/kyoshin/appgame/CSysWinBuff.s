@@ -342,14 +342,14 @@
 /* 8027498C 0023DF4C  7C 7F 1B 78 */	mr r31, r3
 /* 80274990 0023DF50  41 82 00 C0 */	beq .L_80274A50
 /* 80274994 0023DF54  48 1D 00 85 */	bl __ct__8CProcessFv
-/* 80274998 0023DF58  3C 60 80 53 */	lis r3, __vt__CTTask_IUIWindow@ha
+/* 80274998 0023DF58  3C 60 80 53 */	lis r3, "__vt__18CTTask<9IUIWindow>"@ha
 /* 8027499C 0023DF5C  3D 60 80 51 */	lis r11, __ptmf_null@ha
-/* 802749A0 0023DF60  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
+/* 802749A0 0023DF60  38 63 0A 08 */	addi r3, r3, "__vt__18CTTask<9IUIWindow>"@l
 /* 802749A4 0023DF64  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 802749A8 0023DF68  39 6B CE 10 */	addi r11, r11, __ptmf_null@l
-/* 802749AC 0023DF6C  3C C0 80 54 */	lis r6, __vt__CSysWinBuff@ha
+/* 802749AC 0023DF6C  3C C0 80 54 */	lis r6, __vt__11CSysWinBuff@ha
 /* 802749B0 0023DF70  80 0B 00 04 */	lwz r0, 4(r11)
-/* 802749B4 0023DF74  38 C6 B5 78 */	addi r6, r6, __vt__CSysWinBuff@l
+/* 802749B4 0023DF74  38 C6 B5 78 */	addi r6, r6, __vt__11CSysWinBuff@l
 /* 802749B8 0023DF78  80 6B 00 00 */	lwz r3, 0(r11)
 /* 802749BC 0023DF7C  3B 60 00 00 */	li r27, 0
 /* 802749C0 0023DF80  90 7F 00 3C */	stw r3, 0x3c(r31)
@@ -493,8 +493,8 @@
 
 .balign 8
 
-.obj __vt__CSysWinBuff, global
-	.4byte __RTTI__CSysWinBuff
+.obj __vt__11CSysWinBuff, global
+	.4byte __RTTI__11CSysWinBuff
 	.4byte 0
 	.4byte __dt__CSysWinBuff
 	.4byte CChildListNode_Reset
@@ -503,7 +503,7 @@
 	.4byte func_80274704
 	.4byte func_80124584
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CSysWinBuff
+	.4byte __RTTI__11CSysWinBuff
 	.4byte 0xFFFFFF94
 	.4byte func_80274B08
 	.4byte IWorkEvent_WorkEvent1
@@ -537,28 +537,28 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CSysWinBuff
+	.4byte __RTTI__11CSysWinBuff
 	.4byte 0xFFFFFF90
 	.4byte func_80274B18
 	.4byte func_80274B10
 	.4byte func_802748B0
 	.4byte func_80274A84
-.endobj __vt__CSysWinBuff
+.endobj __vt__11CSysWinBuff
 
 .obj CSysWinBuff_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000070
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x0000006C
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUIWindow
+	.4byte "__RTTI__18CTTask<9IUIWindow>"
 	.4byte 0
-	.4byte __RTTI__IUIWindow
+	.4byte __RTTI__9IUIWindow
 	.4byte 0
 	.4byte 0
 .endobj CSysWinBuff_hierarchy
@@ -567,10 +567,10 @@
 
 .balign 8
 
-.obj __RTTI__CSysWinBuff, global
+.obj __RTTI__11CSysWinBuff, global
 	.4byte CSysWinBuff_typestr
 	.4byte CSysWinBuff_hierarchy
-.endobj __RTTI__CSysWinBuff
+.endobj __RTTI__11CSysWinBuff
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

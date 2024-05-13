@@ -10,12 +10,12 @@
 /* 8029E7F4 00267DB4  7C 7D 1B 78 */	mr r29, r3
 /* 8029E7F8 00267DB8  7C 9E 23 78 */	mr r30, r4
 /* 8029E7FC 00267DBC  48 1A 62 1D */	bl __ct__8CProcessFv
-/* 8029E800 00267DC0  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
-/* 8029E804 00267DC4  3C A0 80 54 */	lis r5, __vt__CMenuSkipTimer@ha
-/* 8029E808 00267DC8  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
+/* 8029E800 00267DC0  3C 60 80 53 */	lis r3, "__vt__14CTTask<5IUICf>"@ha
+/* 8029E804 00267DC4  3C A0 80 54 */	lis r5, __vt__14CMenuSkipTimer@ha
+/* 8029E808 00267DC8  38 63 F7 40 */	addi r3, r3, "__vt__14CTTask<5IUICf>"@l
 /* 8029E80C 00267DCC  90 7D 00 10 */	stw r3, 0x10(r29)
 /* 8029E810 00267DD0  3D 00 80 51 */	lis r8, __ptmf_null@ha
-/* 8029E814 00267DD4  38 A5 CF 10 */	addi r5, r5, __vt__CMenuSkipTimer@l
+/* 8029E814 00267DD4  38 A5 CF 10 */	addi r5, r5, __vt__14CMenuSkipTimer@l
 /* 8029E818 00267DD8  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 8029E81C 00267DDC  38 05 00 24 */	addi r0, r5, 0x24
 /* 8029E820 00267DE0  3B E0 00 00 */	li r31, 0
@@ -654,8 +654,8 @@
 
 .balign 8
 
-.obj __vt__CMenuSkipTimer, global
-	.4byte __RTTI__CMenuSkipTimer
+.obj __vt__14CMenuSkipTimer, global
+	.4byte __RTTI__14CMenuSkipTimer
 	.4byte 0
 	.4byte __dt__CMenuSkipTimer
 	.4byte CChildListNode_Reset
@@ -664,25 +664,25 @@
 	.4byte func_8029EC20
 	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuSkipTimer
+	.4byte __RTTI__14CMenuSkipTimer
 	.4byte 0xFFFFFFA8
 	.4byte func_8029F0A0
 	.4byte func_8029F098
 	.4byte func_8029ED40
-.endobj __vt__CMenuSkipTimer
+.endobj __vt__14CMenuSkipTimer
 
 .obj CMenuSkipTimer_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000058
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUICf
+	.4byte "__RTTI__14CTTask<5IUICf>"
 	.4byte 0
-	.4byte __RTTI__IUICf
+	.4byte __RTTI__5IUICf
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -692,10 +692,10 @@
 
 .balign 8
 
-.obj __RTTI__CMenuSkipTimer, global
+.obj __RTTI__14CMenuSkipTimer, global
 	.4byte CMenuSkipTimer_typestr
 	.4byte CMenuSkipTimer_hierarchy
-.endobj __RTTI__CMenuSkipTimer
+.endobj __RTTI__14CMenuSkipTimer
 
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F

@@ -11,12 +11,12 @@
 /* 80250D38 0021A2F8  7C 7D 1B 78 */	mr r29, r3
 /* 80250D3C 0021A2FC  7C 9E 23 78 */	mr r30, r4
 /* 80250D40 0021A300  48 1F 3C D9 */	bl __ct__8CProcessFv
-/* 80250D44 0021A304  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
-/* 80250D48 0021A308  3C C0 80 54 */	lis r6, __vt__CMenuMapSelectSC@ha
-/* 80250D4C 0021A30C  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
+/* 80250D44 0021A304  3C 60 80 53 */	lis r3, "__vt__14CTTask<5IUICf>"@ha
+/* 80250D48 0021A308  3C C0 80 54 */	lis r6, __vt__16CMenuMapSelectSC@ha
+/* 80250D4C 0021A30C  38 63 F7 40 */	addi r3, r3, "__vt__14CTTask<5IUICf>"@l
 /* 80250D50 0021A310  90 7D 00 10 */	stw r3, 0x10(r29)
 /* 80250D54 0021A314  3D 20 80 51 */	lis r9, __ptmf_null@ha
-/* 80250D58 0021A318  38 C6 A8 E8 */	addi r6, r6, __vt__CMenuMapSelectSC@l
+/* 80250D58 0021A318  38 C6 A8 E8 */	addi r6, r6, __vt__16CMenuMapSelectSC@l
 /* 80250D5C 0021A31C  84 A9 CE 10 */	lwzu r5, __ptmf_null@l(r9)
 /* 80250D60 0021A320  38 06 00 24 */	addi r0, r6, 0x24
 /* 80250D64 0021A324  3B E0 00 00 */	li r31, 0
@@ -1237,8 +1237,8 @@
 .endobj jumptable_8053A8C8
 
 
-.obj __vt__CMenuMapSelectSC, global
-	.4byte __RTTI__CMenuMapSelectSC
+.obj __vt__16CMenuMapSelectSC, global
+	.4byte __RTTI__16CMenuMapSelectSC
 	.4byte 0
 	.4byte __dt__CMenuMapSelectSC
 	.4byte CChildListNode_Reset
@@ -1247,25 +1247,25 @@
 	.4byte func_80251340
 	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuMapSelectSC
+	.4byte __RTTI__16CMenuMapSelectSC
 	.4byte 0xFFFFFFA8
 	.4byte func_80251DF0
 	.4byte func_80251DE8
 	.4byte func_80251430
-.endobj __vt__CMenuMapSelectSC
+.endobj __vt__16CMenuMapSelectSC
 
 .obj CMenuMapSelectSC_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000058
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUICf
+	.4byte "__RTTI__14CTTask<5IUICf>"
 	.4byte 0
-	.4byte __RTTI__IUICf
+	.4byte __RTTI__5IUICf
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1275,10 +1275,10 @@
 
 .balign 8
 
-.obj __RTTI__CMenuMapSelectSC, global
+.obj __RTTI__16CMenuMapSelectSC, global
 	.4byte CMenuMapSelectSC_typestr
 	.4byte CMenuMapSelectSC_hierarchy
-.endobj __RTTI__CMenuMapSelectSC
+.endobj __RTTI__16CMenuMapSelectSC
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

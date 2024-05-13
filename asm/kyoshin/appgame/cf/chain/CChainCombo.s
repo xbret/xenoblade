@@ -182,7 +182,7 @@
 
 
 .obj __vt__Q22cf11CChainCombo, global
-	.4byte __RTTI__cf_CChainCombo
+	.4byte __RTTI__Q22cf11CChainCombo
 	.4byte 0
 	.4byte __dt__Q22cf11CChainComboFv
 .endobj __vt__Q22cf11CChainCombo
@@ -191,10 +191,10 @@
 
 .balign 8
 
-.obj __RTTI__cf_CChainCombo, global
+.obj __RTTI__Q22cf11CChainCombo, global
 	.4byte cf_CChainCombo_typestr
 	.4byte 0
-.endobj __RTTI__cf_CChainCombo
+.endobj __RTTI__Q22cf11CChainCombo
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

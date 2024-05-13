@@ -12,9 +12,9 @@
 /* 8045987C 00422E3C  4B FD DD 41 */	bl __ct__CWorkThread
 /* 80459880 00422E40  38 7F 01 C4 */	addi r3, r31, 0x1c4
 /* 80459884 00422E44  4B FE F6 BD */	bl __ct__CDeviceVICb
-/* 80459888 00422E48  3C 80 80 57 */	lis r4, __vt__CLibCri@ha
+/* 80459888 00422E48  3C 80 80 57 */	lis r4, __vt__7CLibCri@ha
 /* 8045988C 00422E4C  2C 1F 00 00 */	cmpwi r31, 0
-/* 80459890 00422E50  38 84 06 A0 */	addi r4, r4, __vt__CLibCri@l
+/* 80459890 00422E50  38 84 06 A0 */	addi r4, r4, __vt__7CLibCri@l
 /* 80459894 00422E54  90 9F 00 00 */	stw r4, 0(r31)
 /* 80459898 00422E58  38 64 00 A0 */	addi r3, r4, 0xa0
 /* 8045989C 00422E5C  38 00 00 0F */	li r0, 0xf
@@ -46,9 +46,9 @@
 /* 804598F4 00422EB4  93 C1 00 08 */	stw r30, 8(r1)
 /* 804598F8 00422EB8  7C 7E 1B 78 */	mr r30, r3
 /* 804598FC 00422EBC  41 82 00 64 */	beq .L_80459960
-/* 80459900 00422EC0  3C A0 80 57 */	lis r5, __vt__CLibCri@ha
+/* 80459900 00422EC0  3C A0 80 57 */	lis r5, __vt__7CLibCri@ha
 /* 80459904 00422EC4  7F C6 F3 78 */	mr r6, r30
-/* 80459908 00422EC8  38 A5 06 A0 */	addi r5, r5, __vt__CLibCri@l
+/* 80459908 00422EC8  38 A5 06 A0 */	addi r5, r5, __vt__7CLibCri@l
 /* 8045990C 00422ECC  90 A3 00 00 */	stw r5, 0(r3)
 /* 80459910 00422ED0  38 85 00 A0 */	addi r4, r5, 0xa0
 /* 80459914 00422ED4  38 05 00 B8 */	addi r0, r5, 0xb8
@@ -404,8 +404,8 @@
 
 .balign 8
 
-.obj __vt__CLibCri, global
-	.4byte __RTTI__CLibCri
+.obj __vt__7CLibCri, global
+	.4byte __RTTI__7CLibCri
 	.4byte 0
 	.4byte __dt__CLibCri
 	.4byte IWorkEvent_WorkEvent1
@@ -445,26 +445,26 @@
 	.4byte CLibCri_WorkThreadEvent4
 	.4byte CLibCri_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-	.4byte __RTTI__CLibCri
+	.4byte __RTTI__7CLibCri
 	.4byte 0xFFFFFE3C
 	.4byte func_80459C80
 	.4byte func_80459C78
 	.4byte func_8016662C
 	.4byte func_80448A40
-	.4byte __RTTI__CLibCri
+	.4byte __RTTI__7CLibCri
 	.4byte 0xFFFFFE38
 	.4byte func_80459C90
 	.4byte func_80459C88
 	.4byte func_80459AD8
 	.4byte func_80459C74
-.endobj __vt__CLibCri
+.endobj __vt__7CLibCri
 
 .obj CLibCri_hierarchy, global
-	.4byte __RTTI__CDeviceVICb
+	.4byte __RTTI__11CDeviceVICb
 	.4byte 0x000001C4
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -475,10 +475,10 @@
 
 .balign 8
 
-.obj __RTTI__CLibCri, global
+.obj __RTTI__7CLibCri, global
 	.4byte CLibCri_typestr
 	.4byte CLibCri_hierarchy
-.endobj __RTTI__CLibCri
+.endobj __RTTI__7CLibCri
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

@@ -13,12 +13,12 @@
 /* 8028DCC8 00257288  7C DD 33 78 */	mr r29, r6
 /* 8028DCCC 0025728C  7C FE 3B 78 */	mr r30, r7
 /* 8028DCD0 00257290  48 1B 6D 49 */	bl __ct__8CProcessFv
-/* 8028DCD4 00257294  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
-/* 8028DCD8 00257298  3C A0 80 54 */	lis r5, __vt__CMenuSave@ha
-/* 8028DCDC 0025729C  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
+/* 8028DCD4 00257294  3C 60 80 53 */	lis r3, "__vt__14CTTask<5IUICf>"@ha
+/* 8028DCD8 00257298  3C A0 80 54 */	lis r5, __vt__9CMenuSave@ha
+/* 8028DCDC 0025729C  38 63 F7 40 */	addi r3, r3, "__vt__14CTTask<5IUICf>"@l
 /* 8028DCE0 002572A0  90 7A 00 10 */	stw r3, 0x10(r26)
 /* 8028DCE4 002572A4  3D 00 80 51 */	lis r8, __ptmf_null@ha
-/* 8028DCE8 002572A8  38 A5 BE C8 */	addi r5, r5, __vt__CMenuSave@l
+/* 8028DCE8 002572A8  38 A5 BE C8 */	addi r5, r5, __vt__9CMenuSave@l
 /* 8028DCEC 002572AC  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 8028DCF0 002572B0  38 05 00 24 */	addi r0, r5, 0x24
 /* 8028DCF4 002572B4  3B E0 00 00 */	li r31, 0
@@ -815,8 +815,8 @@
 
 .balign 8
 
-.obj __vt__CMenuSave, global
-	.4byte __RTTI__CMenuSave
+.obj __vt__9CMenuSave, global
+	.4byte __RTTI__9CMenuSave
 	.4byte 0
 	.4byte __dt__CMenuSave
 	.4byte CChildListNode_Reset
@@ -825,25 +825,25 @@
 	.4byte func_8028E25C
 	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuSave
+	.4byte __RTTI__9CMenuSave
 	.4byte 0xFFFFFFA8
 	.4byte func_8028E7C0
 	.4byte func_8028E7B8
 	.4byte func_8028E310
-.endobj __vt__CMenuSave
+.endobj __vt__9CMenuSave
 
 .obj CMenuSave_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000058
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUICf
+	.4byte "__RTTI__14CTTask<5IUICf>"
 	.4byte 0
-	.4byte __RTTI__IUICf
+	.4byte __RTTI__5IUICf
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -854,10 +854,10 @@
 
 .balign 8
 
-.obj __RTTI__CMenuSave, global
+.obj __RTTI__9CMenuSave, global
 	.4byte CMenuSave_typestr
 	.4byte CMenuSave_hierarchy
-.endobj __RTTI__CMenuSave
+.endobj __RTTI__9CMenuSave
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

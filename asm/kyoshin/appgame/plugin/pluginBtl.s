@@ -160,8 +160,8 @@
 /* 80185A18 0014EFD8  7F A3 EB 78 */	mr r3, r29
 /* 80185A1C 0014EFDC  4B EF D3 39 */	bl func_80082D54
 /* 80185A20 0014EFE0  38 80 00 00 */	li r4, 0
-/* 80185A24 0014EFE4  38 AD 81 20 */	addi r5, r13, __RTTI__cf_CfObjectPc@sda21
-/* 80185A28 0014EFE8  38 CD 80 58 */	addi r6, r13, __RTTI__cf_CfObjectMove@sda21
+/* 80185A24 0014EFE4  38 AD 81 20 */	addi r5, r13, __RTTI__Q22cf10CfObjectPc@sda21
+/* 80185A28 0014EFE8  38 CD 80 58 */	addi r6, r13, __RTTI__Q22cf12CfObjectMove@sda21
 /* 80185A2C 0014EFEC  38 E0 00 00 */	li r7, 0
 /* 80185A30 0014EFF0  48 13 43 55 */	bl __dynamic_cast
 /* 80185A34 0014EFF4  2C 03 00 00 */	cmpwi r3, 0

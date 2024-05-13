@@ -9,9 +9,9 @@
 /* 80481E78 0044B438  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80481E7C 0044B43C  7C 7F 1B 78 */	mr r31, r3
 /* 80481E80 0044B440  48 01 CA 45 */	bl __ct__CScnItemCamera
-/* 80481E84 0044B444  3C 80 80 57 */	lis r4, __vt__CScnItemCameraNw4r@ha
+/* 80481E84 0044B444  3C 80 80 57 */	lis r4, __vt__18CScnItemCameraNw4r@ha
 /* 80481E88 0044B448  7F E3 FB 78 */	mr r3, r31
-/* 80481E8C 0044B44C  38 84 14 D8 */	addi r4, r4, __vt__CScnItemCameraNw4r@l
+/* 80481E8C 0044B44C  38 84 14 D8 */	addi r4, r4, __vt__18CScnItemCameraNw4r@l
 /* 80481E90 0044B450  90 9F 00 00 */	stw r4, 0(r31)
 /* 80481E94 0044B454  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80481E98 0044B458  80 01 00 14 */	lwz r0, 0x14(r1)
@@ -189,8 +189,8 @@
 
 .balign 8
 
-.obj __vt__CScnItemCameraNw4r, global
-	.4byte __RTTI__CScnItemCameraNw4r
+.obj __vt__18CScnItemCameraNw4r, global
+	.4byte __RTTI__18CScnItemCameraNw4r
 	.4byte 0
 	.4byte __dt__CScnItemCameraNw4r
 	.4byte func_8049F9A4
@@ -200,18 +200,18 @@
 	.4byte func_80482040
 	.4byte func_80482038
 	.4byte func_80481F00
-.endobj __vt__CScnItemCameraNw4r
+.endobj __vt__18CScnItemCameraNw4r
 
 .obj CScnItemCameraNw4r_hierarchy, global
-	.4byte __RTTI__CScnItem
+	.4byte __RTTI__4CScnItem
 	.4byte 0
-	.4byte __RTTI__CScnItemCamera
+	.4byte __RTTI__14CScnItemCamera
 	.4byte 0
 	.4byte 0
 .endobj CScnItemCameraNw4r_hierarchy
 
 .obj CScnItemCamera_hierarchy, global
-	.4byte __RTTI__CScnItem
+	.4byte __RTTI__4CScnItem
 	.4byte 0
 	.4byte 0
 .endobj CScnItemCamera_hierarchy
@@ -221,15 +221,15 @@
 
 .balign 8
 
-.obj __RTTI__CScnItemCameraNw4r, global
+.obj __RTTI__18CScnItemCameraNw4r, global
 	.4byte CScnItemCameraNw4r_typestr
 	.4byte CScnItemCameraNw4r_hierarchy
-.endobj __RTTI__CScnItemCameraNw4r
+.endobj __RTTI__18CScnItemCameraNw4r
 
-.obj __RTTI__CScnItemCamera, global
+.obj __RTTI__14CScnItemCamera, global
 	.4byte CScnItemCamera_typestr
 	.4byte CScnItemCamera_hierarchy
-.endobj __RTTI__CScnItemCamera
+.endobj __RTTI__14CScnItemCamera
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

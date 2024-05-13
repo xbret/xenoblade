@@ -10,9 +10,9 @@
 /* 800BBC5C 0008521C  93 C1 00 08 */	stw r30, 8(r1)
 /* 800BBC60 00085220  7C 7E 1B 78 */	mr r30, r3
 /* 800BBC64 00085224  4B FF EB 85 */	bl __ct__800BA7E8
-/* 800BBC68 00085228  3C 60 80 53 */	lis r3, __vt__cf_CfObjectMove@ha
+/* 800BBC68 00085228  3C 60 80 53 */	lis r3, __vt__Q22cf12CfObjectMove@ha
 /* 800BBC6C 0008522C  3B E0 00 00 */	li r31, 0
-/* 800BBC70 00085230  38 63 CE 60 */	addi r3, r3, __vt__cf_CfObjectMove@l
+/* 800BBC70 00085230  38 63 CE 60 */	addi r3, r3, __vt__Q22cf12CfObjectMove@l
 /* 800BBC74 00085234  90 7E 00 00 */	stw r3, 0(r30)
 /* 800BBC78 00085238  38 7E 00 D0 */	addi r3, r30, 0xd0
 /* 800BBC7C 0008523C  93 FE 00 C4 */	stw r31, 0xc4(r30)
@@ -87,8 +87,8 @@
 /* 800BBD84 00085344  93 C1 00 08 */	stw r30, 8(r1)
 /* 800BBD88 00085348  7C 7E 1B 78 */	mr r30, r3
 /* 800BBD8C 0008534C  41 82 00 64 */	beq .L_800BBDF0
-/* 800BBD90 00085350  3D 80 80 53 */	lis r12, __vt__cf_CfObjectMove@ha
-/* 800BBD94 00085354  39 8C CE 60 */	addi r12, r12, __vt__cf_CfObjectMove@l
+/* 800BBD90 00085350  3D 80 80 53 */	lis r12, __vt__Q22cf12CfObjectMove@ha
+/* 800BBD94 00085354  39 8C CE 60 */	addi r12, r12, __vt__Q22cf12CfObjectMove@l
 /* 800BBD98 00085358  91 83 00 00 */	stw r12, 0(r3)
 /* 800BBD9C 0008535C  81 8C 00 68 */	lwz r12, 0x68(r12)
 /* 800BBDA0 00085360  7D 89 03 A6 */	mtctr r12
@@ -4121,8 +4121,8 @@
 
 .balign 8
 
-.obj __vt__cf_CfObjectMove, global
-	.4byte __RTTI__cf_CfObjectMove
+.obj __vt__Q22cf12CfObjectMove, global
+	.4byte __RTTI__Q22cf12CfObjectMove
 	.4byte 0
 	.4byte CObjectState_func_8003DC64
 	.4byte CObjectState_func_8003CB58
@@ -4260,7 +4260,7 @@
 	.4byte func_800BE65C
 	.4byte func_800BE858
 	.4byte 0
-.endobj __vt__cf_CfObjectMove
+.endobj __vt__Q22cf12CfObjectMove
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

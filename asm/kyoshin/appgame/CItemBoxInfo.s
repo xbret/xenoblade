@@ -192,9 +192,9 @@
 .fn __ct__CItemBoxInfo, global
 /* 801D3F08 0019D4C8  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801D3F0C 0019D4CC  7C 08 02 A6 */	mflr r0
-/* 801D3F10 0019D4D0  3C C0 80 54 */	lis r6, __vt__CItemBoxInfo@ha
+/* 801D3F10 0019D4D0  3C C0 80 54 */	lis r6, __vt__12CItemBoxInfo@ha
 /* 801D3F14 0019D4D4  90 01 00 24 */	stw r0, 0x24(r1)
-/* 801D3F18 0019D4D8  38 C6 82 E0 */	addi r6, r6, __vt__CItemBoxInfo@l
+/* 801D3F18 0019D4D8  38 C6 82 E0 */	addi r6, r6, __vt__12CItemBoxInfo@l
 /* 801D3F1C 0019D4DC  BF A1 00 14 */	stmw r29, 0x14(r1)
 /* 801D3F20 0019D4E0  7C 7D 1B 78 */	mr r29, r3
 /* 801D3F24 0019D4E4  7C 9E 23 78 */	mr r30, r4
@@ -14513,9 +14513,9 @@
 .fn __ct__CItemBoxInfo2, global
 /* 801E119C 001AA75C  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 801E11A0 001AA760  7C 08 02 A6 */	mflr r0
-/* 801E11A4 001AA764  3C C0 80 54 */	lis r6, __vt__CItemBoxInfo2@ha
+/* 801E11A4 001AA764  3C C0 80 54 */	lis r6, __vt__13CItemBoxInfo2@ha
 /* 801E11A8 001AA768  90 01 00 24 */	stw r0, 0x24(r1)
-/* 801E11AC 001AA76C  38 C6 82 48 */	addi r6, r6, __vt__CItemBoxInfo2@l
+/* 801E11AC 001AA76C  38 C6 82 48 */	addi r6, r6, __vt__13CItemBoxInfo2@l
 /* 801E11B0 001AA770  BF A1 00 14 */	stmw r29, 0x14(r1)
 /* 801E11B4 001AA774  7C 7D 1B 78 */	mr r29, r3
 /* 801E11B8 001AA778  7C 9E 23 78 */	mr r30, r4
@@ -25418,8 +25418,8 @@
 
 .balign 8
 
-.obj __vt__CItemBoxInfo2, global
-	.4byte __RTTI__CItemBoxInfo2
+.obj __vt__13CItemBoxInfo2, global
+	.4byte __RTTI__13CItemBoxInfo2
 	.4byte 0
 	.4byte __dt__CItemBoxInfo2
 	.4byte IWorkEvent_WorkEvent1
@@ -25453,18 +25453,18 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CItemBoxInfo2
+.endobj __vt__13CItemBoxInfo2
 
 .obj CItemBoxInfo2_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj CItemBoxInfo2_hierarchy
 
 
-.obj __vt__CItemBoxInfo, global
-	.4byte __RTTI__CItemBoxInfo
+.obj __vt__12CItemBoxInfo, global
+	.4byte __RTTI__12CItemBoxInfo
 	.4byte 0
 	.4byte __dt__CItemBoxInfo
 	.4byte IWorkEvent_WorkEvent1
@@ -25498,10 +25498,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CItemBoxInfo
+.endobj __vt__12CItemBoxInfo
 
 .obj CItemBoxInfo_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -25513,15 +25513,15 @@
 .balign 8
 
 
-.obj __RTTI__CItemBoxInfo2, global
+.obj __RTTI__13CItemBoxInfo2, global
 	.4byte CItemBoxInfo2_typestr
 	.4byte CItemBoxInfo2_hierarchy
-.endobj __RTTI__CItemBoxInfo2
+.endobj __RTTI__13CItemBoxInfo2
 
-.obj __RTTI__CItemBoxInfo, global
+.obj __RTTI__12CItemBoxInfo, global
 	.4byte CItemBoxInfo_typestr
 	.4byte CItemBoxInfo_hierarchy
-.endobj __RTTI__CItemBoxInfo
+.endobj __RTTI__12CItemBoxInfo
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

@@ -5,9 +5,9 @@
 .fn __ct__CFade, global
 /* 802442E0 0020D8A0  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 802442E4 0020D8A4  7C 08 02 A6 */	mflr r0
-/* 802442E8 0020D8A8  3C 80 80 54 */	lis r4, __vt__CFade@ha
+/* 802442E8 0020D8A8  3C 80 80 54 */	lis r4, __vt__5CFade@ha
 /* 802442EC 0020D8AC  90 01 00 14 */	stw r0, 0x14(r1)
-/* 802442F0 0020D8B0  38 84 A6 60 */	addi r4, r4, __vt__CFade@l
+/* 802442F0 0020D8B0  38 84 A6 60 */	addi r4, r4, __vt__5CFade@l
 /* 802442F4 0020D8B4  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 802442F8 0020D8B8  7C 7F 1B 78 */	mr r31, r3
 /* 802442FC 0020D8BC  90 83 00 00 */	stw r4, 0(r3)
@@ -347,8 +347,8 @@
 
 .balign 8
 
-.obj __vt__CFade, global
-	.4byte __RTTI__CFade
+.obj __vt__5CFade, global
+	.4byte __RTTI__5CFade
 	.4byte 0
 	.4byte __dt__CFade
 	.4byte IWorkEvent_WorkEvent1
@@ -382,10 +382,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CFade
+.endobj __vt__5CFade
 
 .obj CFade_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -395,10 +395,10 @@
 
 .balign 8
 
-.obj __RTTI__CFade, global
+.obj __RTTI__5CFade, global
 	.4byte CFade_typestr
 	.4byte CFade_hierarchy
-.endobj __RTTI__CFade
+.endobj __RTTI__5CFade
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

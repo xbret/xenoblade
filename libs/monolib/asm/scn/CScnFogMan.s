@@ -4,13 +4,13 @@
 
 .fn __ct__CScnFogMan, global
 /* 8049DD8C 0046734C  C0 62 CF E4 */	lfs f3, float_8066D364@sda21(r2)
-/* 8049DD90 00467350  3C C0 80 57 */	lis r6, __vt__CScnFogMan@ha
+/* 8049DD90 00467350  3C C0 80 57 */	lis r6, __vt__10CScnFogMan@ha
 /* 8049DD94 00467354  C0 02 CF F0 */	lfs f0, float_8066D370@sda21(r2)
 /* 8049DD98 00467358  38 A0 00 00 */	li r5, 0
 /* 8049DD9C 0046735C  C0 82 CF E0 */	lfs f4, float_8066D360@sda21(r2)
 /* 8049DDA0 00467360  38 00 00 02 */	li r0, 2
 /* 8049DDA4 00467364  C0 42 CF E8 */	lfs f2, float_8066D368@sda21(r2)
-/* 8049DDA8 00467368  38 C6 24 18 */	addi r6, r6, __vt__CScnFogMan@l
+/* 8049DDA8 00467368  38 C6 24 18 */	addi r6, r6, __vt__10CScnFogMan@l
 /* 8049DDAC 0046736C  C0 22 CF EC */	lfs f1, float_8066D36C@sda21(r2)
 /* 8049DDB0 00467370  90 C3 00 00 */	stw r6, 0(r3)
 /* 8049DDB4 00467374  90 83 00 04 */	stw r4, 4(r3)
@@ -445,12 +445,12 @@
 
 .balign 8
 
-.obj __vt__CScnFogMan, global
-	.4byte __RTTI__CScnFogMan
+.obj __vt__10CScnFogMan, global
+	.4byte __RTTI__10CScnFogMan
 	.4byte 0
 	.4byte __dt__CScnFogMan
 	.4byte 0
-.endobj __vt__CScnFogMan
+.endobj __vt__10CScnFogMan
 
 
 .obj lbl_80572428, global
@@ -492,10 +492,10 @@
 
 .balign 8
 
-.obj __RTTI__CScnFogMan, global
+.obj __RTTI__10CScnFogMan, global
 	.4byte CScnFogMan_typestr
 	.4byte 0
-.endobj __RTTI__CScnFogMan
+.endobj __RTTI__10CScnFogMan
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

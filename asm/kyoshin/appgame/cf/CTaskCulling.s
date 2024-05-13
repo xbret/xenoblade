@@ -11,11 +11,11 @@
 /* 801A29E0 0016BFA0  93 C1 00 08 */	stw r30, 8(r1)
 /* 801A29E4 0016BFA4  7C 7E 1B 78 */	mr r30, r3
 /* 801A29E8 0016BFA8  48 2A 20 31 */	bl __ct__8CProcessFv
-/* 801A29EC 0016BFAC  3C 60 80 53 */	lis r3, __vt__CTTask_cf_CTaskCulling@ha
-/* 801A29F0 0016BFB0  3C C0 80 53 */	lis r6, __vt__cf_CTaskCulling@ha
-/* 801A29F4 0016BFB4  38 63 68 A0 */	addi r3, r3, __vt__CTTask_cf_CTaskCulling@l
+/* 801A29EC 0016BFAC  3C 60 80 53 */	lis r3, "__vt__27CTTask<Q22cf12CTaskCulling>"@ha
+/* 801A29F0 0016BFB0  3C C0 80 53 */	lis r6, __vt__Q22cf12CTaskCulling@ha
+/* 801A29F4 0016BFB4  38 63 68 A0 */	addi r3, r3, "__vt__27CTTask<Q22cf12CTaskCulling>"@l
 /* 801A29F8 0016BFB8  90 7E 00 10 */	stw r3, 0x10(r30)
-/* 801A29FC 0016BFBC  38 C6 67 98 */	addi r6, r6, __vt__cf_CTaskCulling@l
+/* 801A29FC 0016BFBC  38 C6 67 98 */	addi r6, r6, __vt__Q22cf12CTaskCulling@l
 /* 801A2A00 0016BFC0  3D 20 80 51 */	lis r9, __ptmf_null@ha
 /* 801A2A04 0016BFC4  84 E9 CE 10 */	lwzu r7, __ptmf_null@l(r9)
 /* 801A2A08 0016BFC8  38 A6 00 24 */	addi r5, r6, 0x24
@@ -598,8 +598,8 @@
 
 .balign 8
 
-.obj __vt__cf_CTaskCulling, global
-	.4byte __RTTI__cf_CTaskCulling
+.obj __vt__Q22cf12CTaskCulling, global
+	.4byte __RTTI__Q22cf12CTaskCulling
 	.4byte 0
 	.4byte __dt__cf_CTaskCulling
 	.4byte CChildListNode_Reset
@@ -608,7 +608,7 @@
 	.4byte func_801A2F24
 	.4byte func_801A2F28
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__cf_CTaskCulling
+	.4byte __RTTI__Q22cf12CTaskCulling
 	.4byte 0xFFFFFFAC
 	.4byte func_801A30A0
 	.4byte IWorkEvent_WorkEvent1
@@ -642,11 +642,11 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__cf_CTaskCulling
+	.4byte __RTTI__Q22cf12CTaskCulling
 	.4byte 0xFFFFFFA8
 	.4byte func_801A30B0
 	.4byte func_801A30A8
-	.4byte __RTTI__cf_CTaskCulling
+	.4byte __RTTI__Q22cf12CTaskCulling
 	.4byte 0xFFFFFFA4
 	.4byte func_801A30D0
 	.4byte func_801A30C8
@@ -656,23 +656,23 @@
 	.4byte func_801A2C40
 	.4byte func_801A2C74
 	.4byte func_801A2F2C
-.endobj __vt__cf_CTaskCulling
+.endobj __vt__Q22cf12CTaskCulling
 
 .obj cf_CTaskCulling_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_cf_CTaskCulling
+	.4byte "__RTTI__27CTTask<Q22cf12CTaskCulling>"
 	.4byte 0
 	.4byte 0
 .endobj cf_CTaskCulling_hierarchy
 
 
-.obj __vt__CTTask_cf_CTaskCulling, global
-	.4byte __RTTI__CTTask_cf_CTaskCulling
+.obj "__vt__27CTTask<Q22cf12CTaskCulling>", global
+	.4byte "__RTTI__27CTTask<Q22cf12CTaskCulling>"
 	.4byte 0
 	.4byte __dt__CTTask_cf_CTaskCulling
 	.4byte CChildListNode_Reset
@@ -681,14 +681,14 @@
 	.4byte func_801A2FA8
 	.4byte func_801A2FF0
 	.4byte CProcess_func_80043F20
-.endobj __vt__CTTask_cf_CTaskCulling
+.endobj "__vt__27CTTask<Q22cf12CTaskCulling>"
 
 .obj CTTask_cf_CTaskCulling_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
 	.4byte 0
 .endobj CTTask_cf_CTaskCulling_hierarchy
@@ -697,15 +697,15 @@
 
 .balign 8
 
-.obj __RTTI__cf_CTaskCulling, global
+.obj __RTTI__Q22cf12CTaskCulling, global
 	.4byte cf_CTaskCulling_typestr
 	.4byte cf_CTaskCulling_hierarchy
-.endobj __RTTI__cf_CTaskCulling
+.endobj __RTTI__Q22cf12CTaskCulling
 
-.obj __RTTI__CTTask_cf_CTaskCulling, global
+.obj "__RTTI__27CTTask<Q22cf12CTaskCulling>", global
 	.4byte CTTask_cf_CTaskCulling_typestr
 	.4byte CTTask_cf_CTaskCulling_hierarchy
-.endobj __RTTI__CTTask_cf_CTaskCulling
+.endobj "__RTTI__27CTTask<Q22cf12CTaskCulling>"
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

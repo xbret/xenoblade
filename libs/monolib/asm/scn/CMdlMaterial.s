@@ -3,9 +3,9 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .fn __ct__CMdlMaterial, global
-/* 804E5444 004AEA04  3C A0 80 57 */	lis r5, __vt__CMdlMaterial@ha
+/* 804E5444 004AEA04  3C A0 80 57 */	lis r5, __vt__12CMdlMaterial@ha
 /* 804E5448 004AEA08  38 80 00 00 */	li r4, 0
-/* 804E544C 004AEA0C  38 A5 39 20 */	addi r5, r5, __vt__CMdlMaterial@l
+/* 804E544C 004AEA0C  38 A5 39 20 */	addi r5, r5, __vt__12CMdlMaterial@l
 /* 804E5450 004AEA10  38 00 FF FF */	li r0, -1
 /* 804E5454 004AEA14  90 A3 00 00 */	stw r5, 0(r3)
 /* 804E5458 004AEA18  90 83 00 04 */	stw r4, 4(r3)
@@ -1235,11 +1235,11 @@
 
 .balign 8
 
-.obj __vt__CMdlMaterial, global
-	.4byte __RTTI__CMdlMaterial
+.obj __vt__12CMdlMaterial, global
+	.4byte __RTTI__12CMdlMaterial
 	.4byte 0
 	.4byte __dt__CMdlMaterial
-.endobj __vt__CMdlMaterial
+.endobj __vt__12CMdlMaterial
 
 .obj lbl_8057392C, global
 	.asciz "%s::%s: Object not valid."
@@ -1290,10 +1290,10 @@
 	.4byte lbl_8066DAA8
 .endobj lbl_8066654C
 
-.obj __RTTI__CMdlMaterial, global
+.obj __RTTI__12CMdlMaterial, global
 	.4byte CMdlMaterial_typestr
 	.4byte 0
-.endobj __RTTI__CMdlMaterial
+.endobj __RTTI__12CMdlMaterial
 
 
 .obj lbl_80666558, global

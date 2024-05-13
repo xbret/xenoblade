@@ -12,12 +12,12 @@
 /* 80168054 00131614  7C 7E 1B 78 */	mr r30, r3
 /* 80168058 00131618  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 8016805C 0013161C  48 2D C9 BD */	bl __ct__8CProcessFv
-/* 80168060 00131620  3C 60 80 53 */	lis r3, __vt__CTTask_cf_CTaskREvtSequence@ha
-/* 80168064 00131624  3C A0 80 53 */	lis r5, __vt__cf_CTaskREvtSequence@ha
-/* 80168068 00131628  38 63 43 C4 */	addi r3, r3, __vt__CTTask_cf_CTaskREvtSequence@l
+/* 80168060 00131620  3C 60 80 53 */	lis r3, "__vt__32CTTask<Q22cf17CTaskREvtSequence>"@ha
+/* 80168064 00131624  3C A0 80 53 */	lis r5, __vt__Q22cf17CTaskREvtSequence@ha
+/* 80168068 00131628  38 63 43 C4 */	addi r3, r3, "__vt__32CTTask<Q22cf17CTaskREvtSequence>"@l
 /* 8016806C 0013162C  90 7E 00 10 */	stw r3, 0x10(r30)
 /* 80168070 00131630  3D 00 80 51 */	lis r8, __ptmf_null@ha
-/* 80168074 00131634  38 A5 42 DC */	addi r5, r5, __vt__cf_CTaskREvtSequence@l
+/* 80168074 00131634  38 A5 42 DC */	addi r5, r5, __vt__Q22cf17CTaskREvtSequence@l
 /* 80168078 00131638  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 8016807C 0013163C  38 85 00 24 */	addi r4, r5, 0x24
 /* 80168080 00131640  3B A0 00 00 */	li r29, 0
@@ -5442,8 +5442,8 @@
 .endobj lbl_805342C4
 
 
-.obj __vt__cf_CTaskREvtSequence, global
-	.4byte __RTTI__cf_CTaskREvtSequence
+.obj __vt__Q22cf17CTaskREvtSequence, global
+	.4byte __RTTI__Q22cf17CTaskREvtSequence
 	.4byte 0
 	.4byte __dt__cf_CTaskREvtSequence
 	.4byte CChildListNode_Reset
@@ -5452,7 +5452,7 @@
 	.4byte func_8016C740
 	.4byte func_8016ABA4
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__cf_CTaskREvtSequence
+	.4byte __RTTI__Q22cf17CTaskREvtSequence
 	.4byte 0xFFFFFFAC
 	.4byte func_8016C7D8
 	.4byte IWorkEvent_WorkEvent1
@@ -5486,29 +5486,29 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__cf_CTaskREvtSequence
+	.4byte __RTTI__Q22cf17CTaskREvtSequence
 	.4byte 0xFFFFFFA8
 	.4byte func_8016C7E8
 	.4byte func_8016C7E0
 	.4byte func_8016ABA8
 	.4byte func_8016C2B4
-.endobj __vt__cf_CTaskREvtSequence
+.endobj __vt__Q22cf17CTaskREvtSequence
 
 .obj cf_CTaskREvtSequence_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_cf_CTaskREvtSequence
+	.4byte "__RTTI__32CTTask<Q22cf17CTaskREvtSequence>"
 	.4byte 0
 	.4byte 0
 .endobj cf_CTaskREvtSequence_hierarchy
 
 
-.obj __vt__CTTask_cf_CTaskREvtSequence, global
-	.4byte __RTTI__CTTask_cf_CTaskREvtSequence
+.obj "__vt__32CTTask<Q22cf17CTaskREvtSequence>", global
+	.4byte "__RTTI__32CTTask<Q22cf17CTaskREvtSequence>"
 	.4byte 0
 	.4byte __dt__CTTask_cf_CTaskREvtSequence
 	.4byte CChildListNode_Reset
@@ -5517,16 +5517,14 @@
 	.4byte func_8016C740
 	.4byte func_8016C788
 	.4byte CProcess_func_80043F20
-.endobj __vt__CTTask_cf_CTaskREvtSequence
+.endobj "__vt__32CTTask<Q22cf17CTaskREvtSequence>"
 
 .obj CTTask_cf_CTaskREvtSequence_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
-	.4byte 0
-	.4byte 0
+	.4byte __RTTI__8CProcess
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -5566,12 +5564,14 @@
 	.4byte 0
 	.4byte 0
 	.4byte 0
-	.4byte __RTTI__CDoubleListNode
-	.4byte 0
-	.4byte __RTTI__CChildListNode
 	.4byte 0
 	.4byte 0
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
+	.4byte 0
+	.4byte __RTTI__14CChildListNode
+	.4byte 0
+	.4byte 0
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
 	.4byte 0
 .endobj CTTask_cf_CTaskREvtSequence_hierarchy
@@ -5580,15 +5580,15 @@
 
 .balign 8
 
-.obj __RTTI__cf_CTaskREvtSequence, global
+.obj __RTTI__Q22cf17CTaskREvtSequence, global
 	.4byte cf_CTaskREvtSequence_typestr
 	.4byte cf_CTaskREvtSequence_hierarchy
-.endobj __RTTI__cf_CTaskREvtSequence
+.endobj __RTTI__Q22cf17CTaskREvtSequence
 
-.obj __RTTI__CTTask_cf_CTaskREvtSequence, global
+.obj "__RTTI__32CTTask<Q22cf17CTaskREvtSequence>", global
 	.4byte CTTask_cf_CTaskREvtSequence_typestr
 	.4byte CTTask_cf_CTaskREvtSequence_hierarchy
-.endobj __RTTI__CTTask_cf_CTaskREvtSequence
+.endobj "__RTTI__32CTTask<Q22cf17CTaskREvtSequence>"
 
 
 .obj lbl_80664CB8, global

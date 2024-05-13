@@ -164,8 +164,8 @@
 /* 800C21A0 0008B760  7D 89 03 A6 */	mtctr r12
 /* 800C21A4 0008B764  4E 80 04 21 */	bctrl 
 /* 800C21A8 0008B768  38 80 00 00 */	li r4, 0
-/* 800C21AC 0008B76C  38 AD 83 80 */	addi r5, r13, __RTTI__cf_CtrlBase@sda21
-/* 800C21B0 0008B770  38 CD 83 88 */	addi r6, r13, __RTTI__CActInput@sda21
+/* 800C21AC 0008B76C  38 AD 83 80 */	addi r5, r13, __RTTI__Q22cf8CtrlBase@sda21
+/* 800C21B0 0008B770  38 CD 83 88 */	addi r6, r13, __RTTI__9CActInput@sda21
 /* 800C21B4 0008B774  38 E0 00 00 */	li r7, 0
 /* 800C21B8 0008B778  48 1F 7B CD */	bl __dynamic_cast
 /* 800C21BC 0008B77C  2C 03 00 00 */	cmpwi r3, 0
@@ -926,8 +926,8 @@
 /* 800C2CB8 0008C278  7D 89 03 A6 */	mtctr r12
 /* 800C2CBC 0008C27C  4E 80 04 21 */	bctrl 
 /* 800C2CC0 0008C280  38 80 00 00 */	li r4, 0
-/* 800C2CC4 0008C284  38 AD 83 80 */	addi r5, r13, __RTTI__cf_CtrlBase@sda21
-/* 800C2CC8 0008C288  38 CD 83 88 */	addi r6, r13, __RTTI__CActInput@sda21
+/* 800C2CC4 0008C284  38 AD 83 80 */	addi r5, r13, __RTTI__Q22cf8CtrlBase@sda21
+/* 800C2CC8 0008C288  38 CD 83 88 */	addi r6, r13, __RTTI__9CActInput@sda21
 /* 800C2CCC 0008C28C  38 E0 00 00 */	li r7, 0
 /* 800C2CD0 0008C290  48 1F 70 B5 */	bl __dynamic_cast #cast from CActInput to CtrlBase
 /* 800C2CD4 0008C294  7C 7F 1B 78 */	mr r31, r3
@@ -2306,8 +2306,8 @@
 .L_800C40B8:
 /* 800C40B8 0008D678  7F E3 FB 78 */	mr r3, r31
 /* 800C40BC 0008D67C  38 80 00 00 */	li r4, 0
-/* 800C40C0 0008D680  38 AD 84 28 */	addi r5, r13, __RTTI__cf_CfObjectPoint@sda21
-/* 800C40C4 0008D684  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
+/* 800C40C0 0008D680  38 AD 84 28 */	addi r5, r13, __RTTI__Q22cf13CfObjectPoint@sda21
+/* 800C40C4 0008D684  38 CD 80 70 */	addi r6, r13, __RTTI__Q22cf8CfObject@sda21
 /* 800C40C8 0008D688  38 E0 00 00 */	li r7, 0
 /* 800C40CC 0008D68C  48 1F 5C B9 */	bl __dynamic_cast
 /* 800C40D0 0008D690  88 03 00 91 */	lbz r0, 0x91(r3)
@@ -4103,8 +4103,8 @@
 
 .balign 8
 
-.obj __vt__cf_CfObjectImplWalker, global
-	.4byte __RTTI__cf_CfObjectImplWalker
+.obj __vt__Q22cf18CfObjectImplWalker, global
+	.4byte __RTTI__Q22cf18CfObjectImplWalker
 	.4byte 0
 	.4byte __dt__cf_CfObjectImplWalker
 	.4byte func_800C6F30
@@ -4149,11 +4149,11 @@
 	.4byte func_800C596C
 	.4byte func_800C5AA0
 	.4byte func_800CAB00
-	.4byte __RTTI__cf_CfObjectImplWalker
+	.4byte __RTTI__Q22cf18CfObjectImplWalker
 	.4byte 0xFFFFFFF4
 	.4byte func_800C5980
 	.4byte func_800C5978
-	.4byte __RTTI__cf_CfObjectImplWalker
+	.4byte __RTTI__Q22cf18CfObjectImplWalker
 	.4byte 0xFFFFFFF0
 	.4byte func_800C5990
 	.4byte func_800C5988
@@ -4170,18 +4170,18 @@
 	.4byte func_800C5970
 	.4byte func_800C4888
 	.4byte func_800C50F4
-.endobj __vt__cf_CfObjectImplWalker
+.endobj __vt__Q22cf18CfObjectImplWalker
 
 .obj cf_CfObjectImplWalker_hierarchy, global
-	.4byte __RTTI__cf_IObjectInfo
+	.4byte __RTTI__Q22cf11IObjectInfo
 	.4byte 0x00000010
-	.4byte __RTTI__IActParamEvent
+	.4byte __RTTI__14IActParamEvent
 	.4byte 0
-	.4byte __RTTI__cf_CfObjectImpl
+	.4byte __RTTI__Q22cf8CfObjectImpl
 	.4byte 0
-	.4byte __RTTI__cf_CfObjectImplMove
+	.4byte __RTTI__Q22cf16CfObjectImplMove
 	.4byte 0
-	.4byte __RTTI__cf_CfObjectImplPc
+	.4byte __RTTI__Q22cf14CfObjectImplPc
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -4192,10 +4192,10 @@
 
 .balign 8
 
-.obj __RTTI__cf_CfObjectImplWalker, global
+.obj __RTTI__Q22cf18CfObjectImplWalker, global
 	.4byte cf_CfObjectImplWalker_typestr
 	.4byte cf_CfObjectImplWalker_hierarchy
-.endobj __RTTI__cf_CfObjectImplWalker
+.endobj __RTTI__Q22cf18CfObjectImplWalker
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

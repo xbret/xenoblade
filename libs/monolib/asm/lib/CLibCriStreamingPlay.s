@@ -11,9 +11,9 @@
 /* 8045B400 004249C0  93 C1 00 08 */	stw r30, 8(r1)
 /* 8045B404 004249C4  7C 7E 1B 78 */	mr r30, r3
 /* 8045B408 004249C8  4B FD C1 B5 */	bl __ct__CWorkThread
-/* 8045B40C 004249CC  3C A0 80 57 */	lis r5, __vt__CLibCriStreamingPlay@ha
+/* 8045B40C 004249CC  3C A0 80 57 */	lis r5, __vt__20CLibCriStreamingPlay@ha
 /* 8045B410 004249D0  38 DE 02 5C */	addi r6, r30, 0x25c
-/* 8045B414 004249D4  38 A5 08 70 */	addi r5, r5, __vt__CLibCriStreamingPlay@l
+/* 8045B414 004249D4  38 A5 08 70 */	addi r5, r5, __vt__20CLibCriStreamingPlay@l
 /* 8045B418 004249D8  38 7E 04 AC */	addi r3, r30, 0x4ac
 /* 8045B41C 004249DC  38 05 00 A0 */	addi r0, r5, 0xa0
 /* 8045B420 004249E0  38 80 00 00 */	li r4, 0
@@ -89,9 +89,9 @@
 /* 8045B520 00424AE0  93 C1 00 08 */	stw r30, 8(r1)
 /* 8045B524 00424AE4  7C 7E 1B 78 */	mr r30, r3
 /* 8045B528 00424AE8  41 82 00 68 */	beq .L_8045B590
-/* 8045B52C 00424AEC  3C 80 80 57 */	lis r4, __vt__CLibCriStreamingPlay@ha
+/* 8045B52C 00424AEC  3C 80 80 57 */	lis r4, __vt__20CLibCriStreamingPlay@ha
 /* 8045B530 00424AF0  7F C5 F3 78 */	mr r5, r30
-/* 8045B534 00424AF4  38 84 08 70 */	addi r4, r4, __vt__CLibCriStreamingPlay@l
+/* 8045B534 00424AF4  38 84 08 70 */	addi r4, r4, __vt__20CLibCriStreamingPlay@l
 /* 8045B538 00424AF8  90 83 00 00 */	stw r4, 0(r3)
 /* 8045B53C 00424AFC  38 04 00 A0 */	addi r0, r4, 0xa0
 /* 8045B540 00424B00  90 03 01 C4 */	stw r0, 0x1c4(r3)
@@ -2249,8 +2249,8 @@
 
 .balign 8
 
-.obj __vt__CLibCriStreamingPlay, global
-	.4byte __RTTI__CLibCriStreamingPlay
+.obj __vt__20CLibCriStreamingPlay, global
+	.4byte __RTTI__20CLibCriStreamingPlay
 	.4byte 0
 	.4byte __dt__CLibCriStreamingPlay
 	.4byte IWorkEvent_WorkEvent1
@@ -2290,17 +2290,17 @@
 	.4byte CLibCriStreamingPlay_WorkThreadEvent4
 	.4byte CLibCriStreamingPlay_WorkThreadEvent5
 	.4byte CWorkThread_WorkThreadEvent6
-	.4byte __RTTI__CLibCriStreamingPlay
+	.4byte __RTTI__20CLibCriStreamingPlay
 	.4byte 0xFFFFFE3C
 	.4byte func_8045D148
 	.4byte func_8045D140
 	.4byte func_8045CF30
-.endobj __vt__CLibCriStreamingPlay
+.endobj __vt__20CLibCriStreamingPlay
 
 .obj CLibCriStreamingPlay_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
-	.4byte __RTTI__CWorkThread
+	.4byte __RTTI__11CWorkThread
 	.4byte 0
 	.4byte 0
 .endobj CLibCriStreamingPlay_hierarchy
@@ -2318,10 +2318,10 @@
 	.4byte lbl_8066CCC0
 .endobj lbl_806660CC
 
-.obj __RTTI__CLibCriStreamingPlay, global
+.obj __RTTI__20CLibCriStreamingPlay, global
 	.4byte CLibCriStreamingPlay_typestr
 	.4byte CLibCriStreamingPlay_hierarchy
-.endobj __RTTI__CLibCriStreamingPlay
+.endobj __RTTI__20CLibCriStreamingPlay
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

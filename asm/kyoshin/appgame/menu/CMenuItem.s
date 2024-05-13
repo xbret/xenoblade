@@ -25,16 +25,16 @@
 /* 80167938 00130EF8  7C 7E 1B 78 */	mr r30, r3
 /* 8016793C 00130EFC  41 82 00 B0 */	beq .L_801679EC
 /* 80167940 00130F00  48 2D D0 D9 */	bl __ct__8CProcessFv
-/* 80167944 00130F04  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
+/* 80167944 00130F04  3C 60 80 53 */	lis r3, "__vt__14CTTask<5IUICf>"@ha
 /* 80167948 00130F08  3D 00 80 51 */	lis r8, __ptmf_null@ha
-/* 8016794C 00130F0C  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
+/* 8016794C 00130F0C  38 63 F7 40 */	addi r3, r3, "__vt__14CTTask<5IUICf>"@l
 /* 80167950 00130F10  90 7E 00 10 */	stw r3, 0x10(r30)
 /* 80167954 00130F14  39 08 CE 10 */	addi r8, r8, __ptmf_null@l
-/* 80167958 00130F18  3C A0 80 53 */	lis r5, __vt__CMenuItem@ha
+/* 80167958 00130F18  3C A0 80 53 */	lis r5, __vt__9CMenuItem@ha
 /* 8016795C 00130F1C  80 C8 00 04 */	lwz r6, 4(r8)
 /* 80167960 00130F20  3B E0 00 00 */	li r31, 0
 /* 80167964 00130F24  80 08 00 00 */	lwz r0, 0(r8)
-/* 80167968 00130F28  38 A5 41 90 */	addi r5, r5, __vt__CMenuItem@l
+/* 80167968 00130F28  38 A5 41 90 */	addi r5, r5, __vt__9CMenuItem@l
 /* 8016796C 00130F2C  90 1E 00 3C */	stw r0, 0x3c(r30)
 /* 80167970 00130F30  38 05 00 24 */	addi r0, r5, 0x24
 /* 80167974 00130F34  38 7E 00 60 */	addi r3, r30, 0x60
@@ -265,8 +265,8 @@
 
 .balign 8
 
-.obj __vt__CMenuItem, global
-	.4byte __RTTI__CMenuItem
+.obj __vt__9CMenuItem, global
+	.4byte __RTTI__9CMenuItem
 	.4byte 0
 	.4byte __dt__CMenuItem
 	.4byte CChildListNode_Reset
@@ -275,25 +275,25 @@
 	.4byte func_8016769C
 	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuItem
+	.4byte __RTTI__9CMenuItem
 	.4byte 0xFFFFFFA8
 	.4byte func_80167C38
 	.4byte func_80167C30
 	.4byte func_8016784C
-.endobj __vt__CMenuItem
+.endobj __vt__9CMenuItem
 
 .obj CMenuItem_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000058
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUICf
+	.4byte "__RTTI__14CTTask<5IUICf>"
 	.4byte 0
-	.4byte __RTTI__IUICf
+	.4byte __RTTI__5IUICf
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -303,10 +303,10 @@
 
 .balign 8
 
-.obj __RTTI__CMenuItem, global
+.obj __RTTI__9CMenuItem, global
 	.4byte CMenuItem_typestr
 	.4byte CMenuItem_hierarchy
-.endobj __RTTI__CMenuItem
+.endobj __RTTI__9CMenuItem
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

@@ -12,12 +12,12 @@
 /* 8018B6D0 00154C90  7C 9D 23 78 */	mr r29, r4
 /* 8018B6D4 00154C94  7C BE 2B 78 */	mr r30, r5
 /* 8018B6D8 00154C98  48 2B 93 41 */	bl __ct__8CProcessFv
-/* 8018B6DC 00154C9C  3C 60 80 53 */	lis r3, __vt__CTTask_IUICf@ha
-/* 8018B6E0 00154CA0  3C A0 80 53 */	lis r5, __vt__CMenuShopBuy@ha
-/* 8018B6E4 00154CA4  38 63 F7 40 */	addi r3, r3, __vt__CTTask_IUICf@l
+/* 8018B6DC 00154C9C  3C 60 80 53 */	lis r3, "__vt__14CTTask<5IUICf>"@ha
+/* 8018B6E0 00154CA0  3C A0 80 53 */	lis r5, __vt__12CMenuShopBuy@ha
+/* 8018B6E4 00154CA4  38 63 F7 40 */	addi r3, r3, "__vt__14CTTask<5IUICf>"@l
 /* 8018B6E8 00154CA8  90 7C 00 10 */	stw r3, 0x10(r28)
 /* 8018B6EC 00154CAC  3D 00 80 51 */	lis r8, __ptmf_null@ha
-/* 8018B6F0 00154CB0  38 A5 5E 90 */	addi r5, r5, __vt__CMenuShopBuy@l
+/* 8018B6F0 00154CB0  38 A5 5E 90 */	addi r5, r5, __vt__12CMenuShopBuy@l
 /* 8018B6F4 00154CB4  84 C8 CE 10 */	lwzu r6, __ptmf_null@l(r8)
 /* 8018B6F8 00154CB8  38 05 00 24 */	addi r0, r5, 0x24
 /* 8018B6FC 00154CBC  3B E0 00 00 */	li r31, 0
@@ -1093,8 +1093,8 @@
 
 .balign 8
 
-.obj __vt__CMenuShopBuy, global
-	.4byte __RTTI__CMenuShopBuy
+.obj __vt__12CMenuShopBuy, global
+	.4byte __RTTI__12CMenuShopBuy
 	.4byte 0
 	.4byte __dt__CMenuShopBuy
 	.4byte CChildListNode_Reset
@@ -1103,25 +1103,25 @@
 	.4byte func_8018BFAC
 	.4byte CTTask_IUICf_func_80101FB8
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuShopBuy
+	.4byte __RTTI__12CMenuShopBuy
 	.4byte 0xFFFFFFA8
 	.4byte func_8018C5F4
 	.4byte func_8018C5EC
 	.4byte func_8018C060
-.endobj __vt__CMenuShopBuy
+.endobj __vt__12CMenuShopBuy
 
 .obj CMenuShopBuy_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000058
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUICf
+	.4byte "__RTTI__14CTTask<5IUICf>"
 	.4byte 0
-	.4byte __RTTI__IUICf
+	.4byte __RTTI__5IUICf
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1131,10 +1131,10 @@
 
 .balign 8
 
-.obj __RTTI__CMenuShopBuy, global
+.obj __RTTI__12CMenuShopBuy, global
 	.4byte CMenuShopBuy_typestr
 	.4byte CMenuShopBuy_hierarchy
-.endobj __RTTI__CMenuShopBuy
+.endobj __RTTI__12CMenuShopBuy
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

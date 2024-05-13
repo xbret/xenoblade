@@ -5,10 +5,10 @@
 .fn __ct__CArcItem, global
 /* 804DEB14 004A80D4  94 21 FF A0 */	stwu r1, -0x60(r1)
 /* 804DEB18 004A80D8  7C 08 02 A6 */	mflr r0
-/* 804DEB1C 004A80DC  3C A0 80 57 */	lis r5, __vt__CArcItem@ha
+/* 804DEB1C 004A80DC  3C A0 80 57 */	lis r5, __vt__8CArcItem@ha
 /* 804DEB20 004A80E0  90 01 00 64 */	stw r0, 0x64(r1)
 /* 804DEB24 004A80E4  38 00 00 00 */	li r0, 0
-/* 804DEB28 004A80E8  38 A5 38 28 */	addi r5, r5, __vt__CArcItem@l
+/* 804DEB28 004A80E8  38 A5 38 28 */	addi r5, r5, __vt__8CArcItem@l
 /* 804DEB2C 004A80EC  BF C1 00 58 */	stmw r30, 0x58(r1)
 /* 804DEB30 004A80F0  7C 7E 1B 78 */	mr r30, r3
 /* 804DEB34 004A80F4  7C 9F 23 78 */	mr r31, r4
@@ -54,8 +54,8 @@
 /* 804DEBC8 004A8188  7C 9F 23 78 */	mr r31, r4
 /* 804DEBCC 004A818C  41 82 00 4C */	beq .L_804DEC18
 /* 804DEBD0 004A8190  80 03 00 28 */	lwz r0, 0x28(r3)
-/* 804DEBD4 004A8194  3C 80 80 57 */	lis r4, __vt__CArcItem@ha
-/* 804DEBD8 004A8198  38 84 38 28 */	addi r4, r4, __vt__CArcItem@l
+/* 804DEBD4 004A8194  3C 80 80 57 */	lis r4, __vt__8CArcItem@ha
+/* 804DEBD8 004A8198  38 84 38 28 */	addi r4, r4, __vt__8CArcItem@l
 /* 804DEBDC 004A819C  90 83 00 00 */	stw r4, 0(r3)
 /* 804DEBE0 004A81A0  2C 00 00 00 */	cmpwi r0, 0
 /* 804DEBE4 004A81A4  41 82 00 0C */	beq .L_804DEBF0
@@ -218,8 +218,8 @@
 
 .balign 8
 
-.obj __vt__CArcItem, global
-	.4byte __RTTI__CArcItem
+.obj __vt__8CArcItem, global
+	.4byte __RTTI__8CArcItem
 	.4byte 0
 	.4byte __dt__CArcItem
 	.4byte IWorkEvent_WorkEvent1
@@ -253,16 +253,16 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CArcItem
+.endobj __vt__8CArcItem
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__CArcItem, global
+.obj __RTTI__8CArcItem, global
 	.4byte CArcItem_typestr
 	.4byte 0
-.endobj __RTTI__CArcItem
+.endobj __RTTI__8CArcItem
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

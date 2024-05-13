@@ -11,12 +11,12 @@
 /* 80189DFC 001533BC  7C 9D 23 78 */	mr r29, r4
 /* 80189E00 001533C0  7C BE 2B 78 */	mr r30, r5
 /* 80189E04 001533C4  48 2B AC 15 */	bl __ct__8CProcessFv
-/* 80189E08 001533C8  3C 60 80 53 */	lis r3, __vt__CTTask_IUIWindow@ha
-/* 80189E0C 001533CC  3C A0 80 53 */	lis r5, __vt__CMenuSelectShop@ha
-/* 80189E10 001533D0  38 63 0A 08 */	addi r3, r3, __vt__CTTask_IUIWindow@l
+/* 80189E08 001533C8  3C 60 80 53 */	lis r3, "__vt__18CTTask<9IUIWindow>"@ha
+/* 80189E0C 001533CC  3C A0 80 53 */	lis r5, __vt__15CMenuSelectShop@ha
+/* 80189E10 001533D0  38 63 0A 08 */	addi r3, r3, "__vt__18CTTask<9IUIWindow>"@l
 /* 80189E14 001533D4  90 7C 00 10 */	stw r3, 0x10(r28)
 /* 80189E18 001533D8  3D 40 80 51 */	lis r10, __ptmf_null@ha
-/* 80189E1C 001533DC  38 A5 5D 20 */	addi r5, r5, __vt__CMenuSelectShop@l
+/* 80189E1C 001533DC  38 A5 5D 20 */	addi r5, r5, __vt__15CMenuSelectShop@l
 /* 80189E20 001533E0  84 6A CE 10 */	lwzu r3, __ptmf_null@l(r10)
 /* 80189E24 001533E4  38 85 00 24 */	addi r4, r5, 0x24
 /* 80189E28 001533E8  3B E0 00 00 */	li r31, 0
@@ -623,8 +623,8 @@
 
 .balign 8
 
-.obj __vt__CMenuSelectShop, global
-	.4byte __RTTI__CMenuSelectShop
+.obj __vt__15CMenuSelectShop, global
+	.4byte __RTTI__15CMenuSelectShop
 	.4byte 0
 	.4byte __dt__CMenuSelectShop
 	.4byte CChildListNode_Reset
@@ -633,7 +633,7 @@
 	.4byte func_8018A12C
 	.4byte func_80124584
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__CMenuSelectShop
+	.4byte __RTTI__15CMenuSelectShop
 	.4byte 0xFFFFFF94
 	.4byte func_8018A610
 	.4byte IWorkEvent_WorkEvent1
@@ -667,27 +667,27 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-	.4byte __RTTI__CMenuSelectShop
+	.4byte __RTTI__15CMenuSelectShop
 	.4byte 0xFFFFFF90
 	.4byte func_8018A620
 	.4byte func_8018A618
 	.4byte func_8018A4E8
-.endobj __vt__CMenuSelectShop
+.endobj __vt__15CMenuSelectShop
 
 .obj CMenuSelectShop_hierarchy, global
-	.4byte __RTTI__IScnRender
+	.4byte __RTTI__10IScnRender
 	.4byte 0x00000070
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0x0000006C
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_IUIWindow
+	.4byte "__RTTI__18CTTask<9IUIWindow>"
 	.4byte 0
-	.4byte __RTTI__IUIWindow
+	.4byte __RTTI__9IUIWindow
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -697,10 +697,10 @@
 
 .balign 8
 
-.obj __RTTI__CMenuSelectShop, global
+.obj __RTTI__15CMenuSelectShop, global
 	.4byte CMenuSelectShop_typestr
 	.4byte CMenuSelectShop_hierarchy
-.endobj __RTTI__CMenuSelectShop
+.endobj __RTTI__15CMenuSelectShop
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 

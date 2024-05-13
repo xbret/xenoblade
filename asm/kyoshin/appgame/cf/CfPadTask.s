@@ -114,9 +114,9 @@
 /* 801C1A08 0018AFC8  93 C1 00 08 */	stw r30, 8(r1)
 /* 801C1A0C 0018AFCC  7C 7E 1B 78 */	mr r30, r3
 /* 801C1A10 0018AFD0  41 82 00 64 */	beq .L_801C1A74
-/* 801C1A14 0018AFD4  3C 80 80 53 */	lis r4, __vt__cf_CfPadTask@ha
+/* 801C1A14 0018AFD4  3C 80 80 53 */	lis r4, __vt__Q22cf9CfPadTask@ha
 /* 801C1A18 0018AFD8  38 00 00 00 */	li r0, 0
-/* 801C1A1C 0018AFDC  38 84 74 48 */	addi r4, r4, __vt__cf_CfPadTask@l
+/* 801C1A1C 0018AFDC  38 84 74 48 */	addi r4, r4, __vt__Q22cf9CfPadTask@l
 /* 801C1A20 0018AFE0  90 83 00 10 */	stw r4, 0x10(r3)
 /* 801C1A24 0018AFE4  38 A4 00 24 */	addi r5, r4, 0x24
 /* 801C1A28 0018AFE8  7F C6 F3 78 */	mr r6, r30
@@ -1181,14 +1181,14 @@
 /* 801C28F0 0018BEB0  7C 7F 1B 78 */	mr r31, r3
 /* 801C28F4 0018BEB4  41 82 00 90 */	beq .L_801C2984
 /* 801C28F8 0018BEB8  48 28 21 21 */	bl __ct__8CProcessFv
-/* 801C28FC 0018BEBC  3C 60 80 53 */	lis r3, __vt__CTTask_cf_CfPadTask@ha
+/* 801C28FC 0018BEBC  3C 60 80 53 */	lis r3, "__vt__23CTTask<Q22cf9CfPadTask>"@ha
 /* 801C2900 0018BEC0  3D 20 80 51 */	lis r9, __ptmf_null@ha
-/* 801C2904 0018BEC4  38 63 74 C0 */	addi r3, r3, __vt__CTTask_cf_CfPadTask@l
+/* 801C2904 0018BEC4  38 63 74 C0 */	addi r3, r3, "__vt__23CTTask<Q22cf9CfPadTask>"@l
 /* 801C2908 0018BEC8  90 7F 00 10 */	stw r3, 0x10(r31)
 /* 801C290C 0018BECC  39 29 CE 10 */	addi r9, r9, __ptmf_null@l
-/* 801C2910 0018BED0  3C C0 80 53 */	lis r6, __vt__cf_CfPadTask@ha
+/* 801C2910 0018BED0  3C C0 80 53 */	lis r6, __vt__Q22cf9CfPadTask@ha
 /* 801C2914 0018BED4  80 69 00 04 */	lwz r3, 4(r9)
-/* 801C2918 0018BED8  38 C6 74 48 */	addi r6, r6, __vt__cf_CfPadTask@l
+/* 801C2918 0018BED8  38 C6 74 48 */	addi r6, r6, __vt__Q22cf9CfPadTask@l
 /* 801C291C 0018BEDC  80 09 00 00 */	lwz r0, 0(r9)
 /* 801C2920 0018BEE0  38 A6 00 24 */	addi r5, r6, 0x24
 /* 801C2924 0018BEE4  90 1F 00 3C */	stw r0, 0x3c(r31)
@@ -1453,8 +1453,8 @@
 
 .balign 8
 
-.obj __vt__cf_CfPadTask, global
-	.4byte __RTTI__cf_CfPadTask
+.obj __vt__Q22cf9CfPadTask, global
+	.4byte __RTTI__Q22cf9CfPadTask
 	.4byte 0
 	.4byte __dt__cf_CfPadTask
 	.4byte CChildListNode_Reset
@@ -1463,11 +1463,11 @@
 	.4byte func_801C1F68
 	.4byte func_801C2BA4
 	.4byte CProcess_func_80043F20
-	.4byte __RTTI__cf_CfPadTask
+	.4byte __RTTI__Q22cf9CfPadTask
 	.4byte 0xFFFFFFAC
 	.4byte func_801C2BF4
 	.4byte func_801C2BEC
-	.4byte __RTTI__cf_CfPadTask
+	.4byte __RTTI__Q22cf9CfPadTask
 	.4byte 0xFFFFFFA8
 	.4byte func_801C2C0C
 	.4byte func_801C2C04
@@ -1475,23 +1475,23 @@
 	.4byte func_801C29B0
 	.4byte func_801C2ACC
 	.4byte func_801C2AFC
-.endobj __vt__cf_CfPadTask
+.endobj __vt__Q22cf9CfPadTask
 
 .obj cf_CfPadTask_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
-	.4byte __RTTI__CTTask_cf_CfPadTask
+	.4byte "__RTTI__23CTTask<Q22cf9CfPadTask>"
 	.4byte 0
 	.4byte 0
 .endobj cf_CfPadTask_hierarchy
 
 
-.obj __vt__CTTask_cf_CfPadTask, global
-	.4byte __RTTI__CTTask_cf_CfPadTask
+.obj "__vt__23CTTask<Q22cf9CfPadTask>", global
+	.4byte "__RTTI__23CTTask<Q22cf9CfPadTask>"
 	.4byte 0
 	.4byte __dt__CTTask_cf_CfPadTask
 	.4byte CChildListNode_Reset
@@ -1500,14 +1500,14 @@
 	.4byte func_801C2B5C
 	.4byte func_801C2BA4
 	.4byte CProcess_func_80043F20
-.endobj __vt__CTTask_cf_CfPadTask
+.endobj "__vt__23CTTask<Q22cf9CfPadTask>"
 
 .obj CTTask_cf_CfPadTask_hierarchy, global
-	.4byte __RTTI__CDoubleListNode
+	.4byte __RTTI__15CDoubleListNode
 	.4byte 0
-	.4byte __RTTI__CChildListNode
+	.4byte __RTTI__14CChildListNode
 	.4byte 0
-	.4byte __RTTI__CProcess
+	.4byte __RTTI__8CProcess
 	.4byte 0
 	.4byte 0
 .endobj CTTask_cf_CfPadTask_hierarchy
@@ -1521,15 +1521,15 @@
 	.4byte 0
 .endobj lbl_80664F28
 
-.obj __RTTI__cf_CfPadTask, global
+.obj __RTTI__Q22cf9CfPadTask, global
 	.4byte cf_CfPadTask_typestr
 	.4byte cf_CfPadTask_hierarchy
-.endobj __RTTI__cf_CfPadTask
+.endobj __RTTI__Q22cf9CfPadTask
 
-.obj __RTTI__CTTask_cf_CfPadTask, global
+.obj "__RTTI__23CTTask<Q22cf9CfPadTask>", global
 	.4byte CTTask_cf_CfPadTask_typestr
 	.4byte CTTask_cf_CfPadTask_hierarchy
-.endobj __RTTI__CTTask_cf_CfPadTask
+.endobj "__RTTI__23CTTask<Q22cf9CfPadTask>"
 
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0

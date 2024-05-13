@@ -5,12 +5,12 @@
 .fn __ct__cf_CfResReloadImpl, global
 /* 8016CDC0 00136380  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 8016CDC4 00136384  7C 08 02 A6 */	mflr r0
-/* 8016CDC8 00136388  3C C0 80 53 */	lis r6, __vt__cf_CfResReloadImpl@ha
+/* 8016CDC8 00136388  3C C0 80 53 */	lis r6, __vt__Q22cf15CfResReloadImpl@ha
 /* 8016CDCC 0013638C  C0 02 9B D8 */	lfs f0, float_80669F58@sda21(r2)
 /* 8016CDD0 00136390  90 01 00 14 */	stw r0, 0x14(r1)
 /* 8016CDD4 00136394  39 00 00 00 */	li r8, 0
 /* 8016CDD8 00136398  38 E0 FF FF */	li r7, -1
-/* 8016CDDC 0013639C  38 C6 47 C0 */	addi r6, r6, __vt__cf_CfResReloadImpl@l
+/* 8016CDDC 0013639C  38 C6 47 C0 */	addi r6, r6, __vt__Q22cf15CfResReloadImpl@l
 /* 8016CDE0 001363A0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8016CDE4 001363A4  38 00 00 03 */	li r0, 3
 /* 8016CDE8 001363A8  7C 7F 1B 78 */	mr r31, r3
@@ -2371,8 +2371,8 @@
 .endobj lbl_80534790
 
 
-.obj __vt__cf_CfResReloadImpl, global
-	.4byte __RTTI__cf_CfResReloadImpl
+.obj __vt__Q22cf15CfResReloadImpl, global
+	.4byte __RTTI__Q22cf15CfResReloadImpl
 	.4byte 0
 	.4byte __dt__cf_CfResReloadImpl
 	.4byte func_8016DE8C
@@ -2398,10 +2398,10 @@
 	.4byte func_8016D1D8
 	.4byte func_8016DECC
 	.4byte func_8016CF24
-.endobj __vt__cf_CfResReloadImpl
+.endobj __vt__Q22cf15CfResReloadImpl
 
 .obj cf_CfResReloadImpl_hierarchy, global
-	.4byte __RTTI__cf_CfResImpl
+	.4byte __RTTI__Q22cf5CfResImpl
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -2421,10 +2421,10 @@
 
 .balign 8
 
-.obj __RTTI__cf_CfResReloadImpl, global
+.obj __RTTI__Q22cf15CfResReloadImpl, global
 	.4byte cf_CfResReloadImpl_typestr
 	.4byte cf_CfResReloadImpl_hierarchy
-.endobj __RTTI__cf_CfResReloadImpl
+.endobj __RTTI__Q22cf15CfResReloadImpl
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

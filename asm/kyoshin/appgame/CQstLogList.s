@@ -5,9 +5,9 @@
 .fn __ct__CQstLogList, global
 /* 8022774C 001F0D0C  94 21 DE 80 */	stwu r1, -0x2180(r1)
 /* 80227750 001F0D10  7C 08 02 A6 */	mflr r0
-/* 80227754 001F0D14  3C A0 80 54 */	lis r5, __vt__CQstLogList@ha
+/* 80227754 001F0D14  3C A0 80 54 */	lis r5, __vt__11CQstLogList@ha
 /* 80227758 001F0D18  90 01 21 84 */	stw r0, 0x2184(r1)
-/* 8022775C 001F0D1C  38 A5 9A 40 */	addi r5, r5, __vt__CQstLogList@l
+/* 8022775C 001F0D1C  38 A5 9A 40 */	addi r5, r5, __vt__11CQstLogList@l
 /* 80227760 001F0D20  BF 41 21 68 */	stmw r26, 0x2168(r1)
 /* 80227764 001F0D24  7C 7F 1B 78 */	mr r31, r3
 /* 80227768 001F0D28  7C 9A 23 78 */	mr r26, r4
@@ -2117,8 +2117,8 @@
 
 .balign 8
 
-.obj __vt__CQstLogList, global
-	.4byte __RTTI__CQstLogList
+.obj __vt__11CQstLogList, global
+	.4byte __RTTI__11CQstLogList
 	.4byte 0
 	.4byte __dt__CQstLogList
 	.4byte IWorkEvent_WorkEvent1
@@ -2152,10 +2152,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CQstLogList
+.endobj __vt__11CQstLogList
 
 .obj CQstLogList_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -2171,10 +2171,10 @@
 	.4byte 0
 .endobj lbl_80665158
 
-.obj __RTTI__CQstLogList, global
+.obj __RTTI__11CQstLogList, global
 	.4byte CQstLogList_typestr
 	.4byte CQstLogList_hierarchy
-.endobj __RTTI__CQstLogList
+.endobj __RTTI__11CQstLogList
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

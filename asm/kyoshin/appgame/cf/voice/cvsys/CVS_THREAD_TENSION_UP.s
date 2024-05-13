@@ -43,8 +43,8 @@
 /* 802A8E6C 0027242C  41 82 00 34 */	beq .L_802A8EA0
 /* 802A8E70 00272430  90 3F 00 1C */	stw r1, 0x1c(r31)
 /* 802A8E74 00272434  4B FF AC 0D */	bl __ct__cf_CVS_THREAD
-/* 802A8E78 00272438  3C 60 80 54 */	lis r3, __vt__cf_CVS_THREAD_TENSION_UP@ha
-/* 802A8E7C 0027243C  38 63 D4 D4 */	addi r3, r3, __vt__cf_CVS_THREAD_TENSION_UP@l
+/* 802A8E78 00272438  3C 60 80 54 */	lis r3, __vt__Q22cf21CVS_THREAD_TENSION_UP@ha
+/* 802A8E7C 0027243C  38 63 D4 D4 */	addi r3, r3, __vt__Q22cf21CVS_THREAD_TENSION_UP@l
 /* 802A8E80 00272440  90 7E 00 1C */	stw r3, 0x1c(r30)
 /* 802A8E84 00272444  93 9E 00 20 */	stw r28, 0x20(r30)
 /* 802A8E88 00272448  93 BE 00 24 */	stw r29, 0x24(r30)
@@ -401,18 +401,18 @@
 .endobj lbl_8053D4C8
 
 
-.obj __vt__cf_CVS_THREAD_TENSION_UP, global
-	.4byte __RTTI__cf_CVS_THREAD_TENSION_UP
+.obj __vt__Q22cf21CVS_THREAD_TENSION_UP, global
+	.4byte __RTTI__Q22cf21CVS_THREAD_TENSION_UP
 	.4byte 0
 	.4byte func_802A3B50
 	.4byte func_802A9278
 	.4byte func_802A92D0
 	.4byte func_802A1EA0
 	.4byte func_802A3740
-.endobj __vt__cf_CVS_THREAD_TENSION_UP
+.endobj __vt__Q22cf21CVS_THREAD_TENSION_UP
 
 .obj cf_CVS_THREAD_TENSION_UP_hierarchy, global
-	.4byte __RTTI__cf_CVS_THREAD
+	.4byte __RTTI__Q22cf10CVS_THREAD
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -422,10 +422,10 @@
 
 .balign 8
 
-.obj __RTTI__cf_CVS_THREAD_TENSION_UP, global
+.obj __RTTI__Q22cf21CVS_THREAD_TENSION_UP, global
 	.4byte cf_CVS_THREAD_TENSION_UP_typestr
 	.4byte cf_CVS_THREAD_TENSION_UP_hierarchy
-.endobj __RTTI__cf_CVS_THREAD_TENSION_UP
+.endobj __RTTI__Q22cf21CVS_THREAD_TENSION_UP
 
 .section extab, "a" # 0x800066E0 - 0x80021020
 

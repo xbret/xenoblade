@@ -777,27 +777,27 @@
 .fn __ct__cf_CBattleManager, global
 /* 800D84FC 000A1ABC  94 21 FF E0 */	stwu r1, -0x20(r1)
 /* 800D8500 000A1AC0  7C 08 02 A6 */	mflr r0
-/* 800D8504 000A1AC4  3C 80 80 53 */	lis r4, __vt__cf_CBattleManager@ha
-/* 800D8508 000A1AC8  3D 60 80 53 */	lis r11, __vt___reslist_base_cf_CfObjectActor@ha
+/* 800D8504 000A1AC4  3C 80 80 53 */	lis r4, __vt__Q22cf14CBattleManager@ha
+/* 800D8508 000A1AC8  3D 60 80 53 */	lis r11, "__vt__36_reslist_base<PQ22cf13CfObjectActor>"@ha
 /* 800D850C 000A1ACC  90 01 00 24 */	stw r0, 0x24(r1)
-/* 800D8510 000A1AD0  3D 20 80 53 */	lis r9, __vt__reslist_cf_CfObjectActor@ha
-/* 800D8514 000A1AD4  3C C0 80 53 */	lis r6, __vt___reslist_base_cf_IBattleEvent@ha
+/* 800D8510 000A1AD0  3D 20 80 53 */	lis r9, "__vt__30reslist<PQ22cf13CfObjectActor>"@ha
+/* 800D8514 000A1AD4  3C C0 80 53 */	lis r6, "__vt__35_reslist_base<PQ22cf12IBattleEvent>"@ha
 /* 800D8518 000A1AD8  38 00 00 00 */	li r0, 0
 /* 800D851C 000A1ADC  93 E1 00 1C */	stw r31, 0x1c(r1)
-/* 800D8520 000A1AE0  38 84 F4 B0 */	addi r4, r4, __vt__cf_CBattleManager@l
-/* 800D8524 000A1AE4  39 6B F5 38 */	addi r11, r11, __vt___reslist_base_cf_CfObjectActor@l
+/* 800D8520 000A1AE0  38 84 F4 B0 */	addi r4, r4, __vt__Q22cf14CBattleManager@l
+/* 800D8524 000A1AE4  39 6B F5 38 */	addi r11, r11, "__vt__36_reslist_base<PQ22cf13CfObjectActor>"@l
 /* 800D8528 000A1AE8  39 43 00 0C */	addi r10, r3, 0xc
 /* 800D852C 000A1AEC  93 C1 00 18 */	stw r30, 0x18(r1)
-/* 800D8530 000A1AF0  39 29 F5 20 */	addi r9, r9, __vt__reslist_cf_CfObjectActor@l
+/* 800D8530 000A1AF0  39 29 F5 20 */	addi r9, r9, "__vt__30reslist<PQ22cf13CfObjectActor>"@l
 /* 800D8534 000A1AF4  39 03 00 2C */	addi r8, r3, 0x2c
 /* 800D8538 000A1AF8  38 E3 00 4C */	addi r7, r3, 0x4c
 /* 800D853C 000A1AFC  93 A1 00 14 */	stw r29, 0x14(r1)
-/* 800D8540 000A1B00  38 C6 F5 14 */	addi r6, r6, __vt___reslist_base_cf_IBattleEvent@l
+/* 800D8540 000A1B00  38 C6 F5 14 */	addi r6, r6, "__vt__35_reslist_base<PQ22cf12IBattleEvent>"@l
 /* 800D8544 000A1B04  38 A3 00 6C */	addi r5, r3, 0x6c
 /* 800D8548 000A1B08  7C 7D 1B 78 */	mr r29, r3
 /* 800D854C 000A1B0C  90 83 00 00 */	stw r4, 0(r3)
-/* 800D8550 000A1B10  3C 80 80 53 */	lis r4, __vt__reslist_cf_IBattleEvent@ha
-/* 800D8554 000A1B14  38 84 F4 FC */	addi r4, r4, __vt__reslist_cf_IBattleEvent@l
+/* 800D8550 000A1B10  3C 80 80 53 */	lis r4, "__vt__29reslist<PQ22cf12IBattleEvent>"@ha
+/* 800D8554 000A1B14  38 84 F4 FC */	addi r4, r4, "__vt__29reslist<PQ22cf12IBattleEvent>"@l
 /* 800D8558 000A1B18  3B C3 00 94 */	addi r30, r3, 0x94
 /* 800D855C 000A1B1C  90 03 00 18 */	stw r0, 0x18(r3)
 /* 800D8560 000A1B20  3B E3 01 94 */	addi r31, r3, 0x194
@@ -1036,9 +1036,9 @@
 /* 800D88DC 000A1E9C  93 C1 00 08 */	stw r30, 8(r1)
 /* 800D88E0 000A1EA0  7C 7E 1B 78 */	mr r30, r3
 /* 800D88E4 000A1EA4  41 82 00 78 */	beq .L_800D895C
-/* 800D88E8 000A1EA8  3C A0 80 53 */	lis r5, __vt___reslist_base_cf_CfObjectActor@ha
+/* 800D88E8 000A1EA8  3C A0 80 53 */	lis r5, "__vt__36_reslist_base<PQ22cf13CfObjectActor>"@ha
 /* 800D88EC 000A1EAC  80 83 00 04 */	lwz r4, 4(r3)
-/* 800D88F0 000A1EB0  38 A5 F5 38 */	addi r5, r5, __vt___reslist_base_cf_CfObjectActor@l
+/* 800D88F0 000A1EB0  38 A5 F5 38 */	addi r5, r5, "__vt__36_reslist_base<PQ22cf13CfObjectActor>"@l
 /* 800D88F4 000A1EB4  90 A3 00 00 */	stw r5, 0(r3)
 /* 800D88F8 000A1EB8  38 00 00 00 */	li r0, 0
 /* 800D88FC 000A1EBC  80 A4 00 00 */	lwz r5, 0(r4)
@@ -1089,9 +1089,9 @@
 /* 800D8994 000A1F54  7C 7E 1B 78 */	mr r30, r3
 /* 800D8998 000A1F58  41 82 00 7C */	beq .L_800D8A14
 /* 800D899C 000A1F5C  41 82 00 68 */	beq .L_800D8A04
-/* 800D89A0 000A1F60  3C A0 80 53 */	lis r5, __vt___reslist_base_cf_CfObjectActor@ha
+/* 800D89A0 000A1F60  3C A0 80 53 */	lis r5, "__vt__36_reslist_base<PQ22cf13CfObjectActor>"@ha
 /* 800D89A4 000A1F64  80 83 00 04 */	lwz r4, 4(r3)
-/* 800D89A8 000A1F68  38 A5 F5 38 */	addi r5, r5, __vt___reslist_base_cf_CfObjectActor@l
+/* 800D89A8 000A1F68  38 A5 F5 38 */	addi r5, r5, "__vt__36_reslist_base<PQ22cf13CfObjectActor>"@l
 /* 800D89AC 000A1F6C  90 A3 00 00 */	stw r5, 0(r3)
 /* 800D89B0 000A1F70  38 00 00 00 */	li r0, 0
 /* 800D89B4 000A1F74  80 84 00 00 */	lwz r4, 0(r4)
@@ -1141,9 +1141,9 @@
 /* 800D8A48 000A2008  93 C1 00 08 */	stw r30, 8(r1)
 /* 800D8A4C 000A200C  7C 7E 1B 78 */	mr r30, r3
 /* 800D8A50 000A2010  41 82 00 78 */	beq .L_800D8AC8
-/* 800D8A54 000A2014  3C A0 80 53 */	lis r5, __vt___reslist_base_cf_IBattleEvent@ha
+/* 800D8A54 000A2014  3C A0 80 53 */	lis r5, "__vt__35_reslist_base<PQ22cf12IBattleEvent>"@ha
 /* 800D8A58 000A2018  80 83 00 04 */	lwz r4, 4(r3)
-/* 800D8A5C 000A201C  38 A5 F5 14 */	addi r5, r5, __vt___reslist_base_cf_IBattleEvent@l
+/* 800D8A5C 000A201C  38 A5 F5 14 */	addi r5, r5, "__vt__35_reslist_base<PQ22cf12IBattleEvent>"@l
 /* 800D8A60 000A2020  90 A3 00 00 */	stw r5, 0(r3)
 /* 800D8A64 000A2024  38 00 00 00 */	li r0, 0
 /* 800D8A68 000A2028  80 A4 00 00 */	lwz r5, 0(r4)
@@ -1194,9 +1194,9 @@
 /* 800D8B00 000A20C0  7C 7E 1B 78 */	mr r30, r3
 /* 800D8B04 000A20C4  41 82 00 7C */	beq .L_800D8B80
 /* 800D8B08 000A20C8  41 82 00 68 */	beq .L_800D8B70
-/* 800D8B0C 000A20CC  3C A0 80 53 */	lis r5, __vt___reslist_base_cf_IBattleEvent@ha
+/* 800D8B0C 000A20CC  3C A0 80 53 */	lis r5, "__vt__35_reslist_base<PQ22cf12IBattleEvent>"@ha
 /* 800D8B10 000A20D0  80 83 00 04 */	lwz r4, 4(r3)
-/* 800D8B14 000A20D4  38 A5 F5 14 */	addi r5, r5, __vt___reslist_base_cf_IBattleEvent@l
+/* 800D8B14 000A20D4  38 A5 F5 14 */	addi r5, r5, "__vt__35_reslist_base<PQ22cf12IBattleEvent>"@l
 /* 800D8B18 000A20D8  90 A3 00 00 */	stw r5, 0(r3)
 /* 800D8B1C 000A20DC  38 00 00 00 */	li r0, 0
 /* 800D8B20 000A20E0  80 84 00 00 */	lwz r4, 0(r4)
@@ -1249,9 +1249,9 @@
 /* 800D8BC0 000A2180  41 82 00 3C */	beq .L_800D8BFC
 /* 800D8BC4 000A2184  37 E3 1E C4 */	addic. r31, r3, 0x1ec4
 /* 800D8BC8 000A2188  41 82 00 18 */	beq .L_800D8BE0
-/* 800D8BCC 000A218C  3C 80 80 53 */	lis r4, __vt__cf_CChainTime@ha
+/* 800D8BCC 000A218C  3C 80 80 53 */	lis r4, __vt__Q22cf10CChainTime@ha
 /* 800D8BD0 000A2190  7F E3 FB 78 */	mr r3, r31
-/* 800D8BD4 000A2194  38 84 F5 44 */	addi r4, r4, __vt__cf_CChainTime@l
+/* 800D8BD4 000A2194  38 84 F5 44 */	addi r4, r4, __vt__Q22cf10CChainTime@l
 /* 800D8BD8 000A2198  90 9F 00 14 */	stw r4, 0x14(r31)
 /* 800D8BDC 000A219C  48 1A 42 55 */	bl func_8027CE30
 .L_800D8BE0:
@@ -1343,8 +1343,8 @@
 /* 800D8CF4 000A22B4  93 C1 00 08 */	stw r30, 8(r1)
 /* 800D8CF8 000A22B8  7C 7E 1B 78 */	mr r30, r3
 /* 800D8CFC 000A22BC  41 82 00 24 */	beq .L_800D8D20
-/* 800D8D00 000A22C0  3C 80 80 53 */	lis r4, __vt__cf_CChainTime@ha
-/* 800D8D04 000A22C4  38 84 F5 44 */	addi r4, r4, __vt__cf_CChainTime@l
+/* 800D8D00 000A22C0  3C 80 80 53 */	lis r4, __vt__Q22cf10CChainTime@ha
+/* 800D8D04 000A22C4  38 84 F5 44 */	addi r4, r4, __vt__Q22cf10CChainTime@l
 /* 800D8D08 000A22C8  90 83 00 14 */	stw r4, 0x14(r3)
 /* 800D8D0C 000A22CC  48 1A 41 25 */	bl func_8027CE30
 /* 800D8D10 000A22D0  2C 1F 00 00 */	cmpwi r31, 0
@@ -1414,9 +1414,9 @@
 /* 800D8DE0 000A23A0  41 82 00 30 */	beq .L_800D8E10
 /* 800D8DE4 000A23A4  37 E3 00 84 */	addic. r31, r3, 0x84
 /* 800D8DE8 000A23A8  41 82 00 18 */	beq .L_800D8E00
-/* 800D8DEC 000A23AC  3C 80 80 53 */	lis r4, __vt__cf_CChainTime@ha
+/* 800D8DEC 000A23AC  3C 80 80 53 */	lis r4, __vt__Q22cf10CChainTime@ha
 /* 800D8DF0 000A23B0  7F E3 FB 78 */	mr r3, r31
-/* 800D8DF4 000A23B4  38 84 F5 44 */	addi r4, r4, __vt__cf_CChainTime@l
+/* 800D8DF4 000A23B4  38 84 F5 44 */	addi r4, r4, __vt__Q22cf10CChainTime@l
 /* 800D8DF8 000A23B8  90 9F 00 14 */	stw r4, 0x14(r31)
 /* 800D8DFC 000A23BC  48 1A 40 35 */	bl func_8027CE30
 .L_800D8E00:
@@ -1507,8 +1507,8 @@
 /* 800D8F10 000A24D0  93 A1 00 14 */	stw r29, 0x14(r1)
 /* 800D8F14 000A24D4  93 81 00 10 */	stw r28, 0x10(r1)
 /* 800D8F18 000A24D8  41 82 02 4C */	beq .L_800D9164
-/* 800D8F1C 000A24DC  3C 80 80 53 */	lis r4, __vt__cf_CBattleManager@ha
-/* 800D8F20 000A24E0  38 84 F4 B0 */	addi r4, r4, __vt__cf_CBattleManager@l
+/* 800D8F1C 000A24DC  3C 80 80 53 */	lis r4, __vt__Q22cf14CBattleManager@ha
+/* 800D8F20 000A24E0  38 84 F4 B0 */	addi r4, r4, __vt__Q22cf14CBattleManager@l
 /* 800D8F24 000A24E4  90 83 00 00 */	stw r4, 0(r3)
 /* 800D8F28 000A24E8  4B FD 78 C1 */	bl func_800B07E8
 /* 800D8F2C 000A24EC  7F C4 F3 78 */	mr r4, r30
@@ -1520,9 +1520,9 @@
 /* 800D8F44 000A2504  41 82 00 20 */	beq .L_800D8F64
 /* 800D8F48 000A2508  37 9D 00 84 */	addic. r28, r29, 0x84
 /* 800D8F4C 000A250C  41 82 00 18 */	beq .L_800D8F64
-/* 800D8F50 000A2510  3C 80 80 53 */	lis r4, __vt__cf_CChainTime@ha
+/* 800D8F50 000A2510  3C 80 80 53 */	lis r4, __vt__Q22cf10CChainTime@ha
 /* 800D8F54 000A2514  7F 83 E3 78 */	mr r3, r28
-/* 800D8F58 000A2518  38 84 F5 44 */	addi r4, r4, __vt__cf_CChainTime@l
+/* 800D8F58 000A2518  38 84 F5 44 */	addi r4, r4, __vt__Q22cf10CChainTime@l
 /* 800D8F5C 000A251C  90 9C 00 14 */	stw r4, 0x14(r28)
 /* 800D8F60 000A2520  48 1A 3E D1 */	bl func_8027CE30
 .L_800D8F64:
@@ -1530,9 +1530,9 @@
 /* 800D8F68 000A2528  41 82 00 2C */	beq .L_800D8F94
 /* 800D8F6C 000A252C  37 BC 1E C4 */	addic. r29, r28, 0x1ec4
 /* 800D8F70 000A2530  41 82 00 18 */	beq .L_800D8F88
-/* 800D8F74 000A2534  3C 80 80 53 */	lis r4, __vt__cf_CChainTime@ha
+/* 800D8F74 000A2534  3C 80 80 53 */	lis r4, __vt__Q22cf10CChainTime@ha
 /* 800D8F78 000A2538  7F A3 EB 78 */	mr r3, r29
-/* 800D8F7C 000A253C  38 84 F5 44 */	addi r4, r4, __vt__cf_CChainTime@l
+/* 800D8F7C 000A253C  38 84 F5 44 */	addi r4, r4, __vt__Q22cf10CChainTime@l
 /* 800D8F80 000A2540  90 9D 00 14 */	stw r4, 0x14(r29)
 /* 800D8F84 000A2544  48 1A 3E AD */	bl func_8027CE30
 .L_800D8F88:
@@ -1543,9 +1543,9 @@
 /* 800D8F94 000A2554  37 9E 00 64 */	addic. r28, r30, 0x64
 /* 800D8F98 000A2558  41 82 00 6C */	beq .L_800D9004
 /* 800D8F9C 000A255C  41 82 00 68 */	beq .L_800D9004
-/* 800D8FA0 000A2560  3C 80 80 53 */	lis r4, __vt___reslist_base_cf_IBattleEvent@ha
+/* 800D8FA0 000A2560  3C 80 80 53 */	lis r4, "__vt__35_reslist_base<PQ22cf12IBattleEvent>"@ha
 /* 800D8FA4 000A2564  80 7C 00 04 */	lwz r3, 4(r28)
-/* 800D8FA8 000A2568  38 84 F5 14 */	addi r4, r4, __vt___reslist_base_cf_IBattleEvent@l
+/* 800D8FA8 000A2568  38 84 F5 14 */	addi r4, r4, "__vt__35_reslist_base<PQ22cf12IBattleEvent>"@l
 /* 800D8FAC 000A256C  90 9C 00 00 */	stw r4, 0(r28)
 /* 800D8FB0 000A2570  38 00 00 00 */	li r0, 0
 /* 800D8FB4 000A2574  80 83 00 00 */	lwz r4, 0(r3)
@@ -1574,9 +1574,9 @@
 /* 800D9004 000A25C4  37 9E 00 44 */	addic. r28, r30, 0x44
 /* 800D9008 000A25C8  41 82 00 6C */	beq .L_800D9074
 /* 800D900C 000A25CC  41 82 00 68 */	beq .L_800D9074
-/* 800D9010 000A25D0  3C 80 80 53 */	lis r4, __vt___reslist_base_cf_CfObjectActor@ha
+/* 800D9010 000A25D0  3C 80 80 53 */	lis r4, "__vt__36_reslist_base<PQ22cf13CfObjectActor>"@ha
 /* 800D9014 000A25D4  80 7C 00 04 */	lwz r3, 4(r28)
-/* 800D9018 000A25D8  38 84 F5 38 */	addi r4, r4, __vt___reslist_base_cf_CfObjectActor@l
+/* 800D9018 000A25D8  38 84 F5 38 */	addi r4, r4, "__vt__36_reslist_base<PQ22cf13CfObjectActor>"@l
 /* 800D901C 000A25DC  90 9C 00 00 */	stw r4, 0(r28)
 /* 800D9020 000A25E0  38 00 00 00 */	li r0, 0
 /* 800D9024 000A25E4  80 83 00 00 */	lwz r4, 0(r3)
@@ -1605,9 +1605,9 @@
 /* 800D9074 000A2634  37 9E 00 24 */	addic. r28, r30, 0x24
 /* 800D9078 000A2638  41 82 00 6C */	beq .L_800D90E4
 /* 800D907C 000A263C  41 82 00 68 */	beq .L_800D90E4
-/* 800D9080 000A2640  3C 80 80 53 */	lis r4, __vt___reslist_base_cf_CfObjectActor@ha
+/* 800D9080 000A2640  3C 80 80 53 */	lis r4, "__vt__36_reslist_base<PQ22cf13CfObjectActor>"@ha
 /* 800D9084 000A2644  80 7C 00 04 */	lwz r3, 4(r28)
-/* 800D9088 000A2648  38 84 F5 38 */	addi r4, r4, __vt___reslist_base_cf_CfObjectActor@l
+/* 800D9088 000A2648  38 84 F5 38 */	addi r4, r4, "__vt__36_reslist_base<PQ22cf13CfObjectActor>"@l
 /* 800D908C 000A264C  90 9C 00 00 */	stw r4, 0(r28)
 /* 800D9090 000A2650  38 00 00 00 */	li r0, 0
 /* 800D9094 000A2654  80 83 00 00 */	lwz r4, 0(r3)
@@ -1636,9 +1636,9 @@
 /* 800D90E4 000A26A4  37 9E 00 04 */	addic. r28, r30, 4
 /* 800D90E8 000A26A8  41 82 00 6C */	beq .L_800D9154
 /* 800D90EC 000A26AC  41 82 00 68 */	beq .L_800D9154
-/* 800D90F0 000A26B0  3C 80 80 53 */	lis r4, __vt___reslist_base_cf_CfObjectActor@ha
+/* 800D90F0 000A26B0  3C 80 80 53 */	lis r4, "__vt__36_reslist_base<PQ22cf13CfObjectActor>"@ha
 /* 800D90F4 000A26B4  80 7C 00 04 */	lwz r3, 4(r28)
-/* 800D90F8 000A26B8  38 84 F5 38 */	addi r4, r4, __vt___reslist_base_cf_CfObjectActor@l
+/* 800D90F8 000A26B8  38 84 F5 38 */	addi r4, r4, "__vt__36_reslist_base<PQ22cf13CfObjectActor>"@l
 /* 800D90FC 000A26BC  90 9C 00 00 */	stw r4, 0(r28)
 /* 800D9100 000A26C0  38 00 00 00 */	li r0, 0
 /* 800D9104 000A26C4  80 83 00 00 */	lwz r4, 0(r3)
@@ -2045,8 +2045,8 @@
 /* 800D9660 000A2C20  41 82 00 38 */	beq .L_800D9698
 /* 800D9664 000A2C24  7C 83 23 78 */	mr r3, r4
 /* 800D9668 000A2C28  38 80 00 00 */	li r4, 0
-/* 800D966C 000A2C2C  38 AD 80 F0 */	addi r5, r13, __RTTI__cf_CfObjectEff@sda21
-/* 800D9670 000A2C30  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
+/* 800D966C 000A2C2C  38 AD 80 F0 */	addi r5, r13, __RTTI__Q22cf11CfObjectEff@sda21
+/* 800D9670 000A2C30  38 CD 80 70 */	addi r6, r13, __RTTI__Q22cf8CfObject@sda21
 /* 800D9674 000A2C34  38 E0 00 00 */	li r7, 0
 /* 800D9678 000A2C38  48 1E 07 0D */	bl __dynamic_cast
 /* 800D967C 000A2C3C  81 9E 00 00 */	lwz r12, 0(r30)
@@ -20850,8 +20850,8 @@
 /* 800EA4F0 000B3AB0  7F A4 EB 78 */	mr r4, r29
 /* 800EA4F4 000B3AB4  48 00 C9 B9 */	bl func_800F6EAC
 /* 800EA4F8 000B3AB8  38 80 00 00 */	li r4, 0
-/* 800EA4FC 000B3ABC  38 AD 80 68 */	addi r5, r13, __RTTI__cf_CfObjectModel@sda21
-/* 800EA500 000B3AC0  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
+/* 800EA4FC 000B3ABC  38 AD 80 68 */	addi r5, r13, __RTTI__Q22cf13CfObjectModel@sda21
+/* 800EA500 000B3AC0  38 CD 80 70 */	addi r6, r13, __RTTI__Q22cf8CfObject@sda21
 /* 800EA504 000B3AC4  38 E0 00 00 */	li r7, 0
 /* 800EA508 000B3AC8  48 1C F8 7D */	bl __dynamic_cast
 /* 800EA50C 000B3ACC  81 83 00 00 */	lwz r12, 0(r3)
@@ -20888,8 +20888,8 @@
 /* 800EA57C 000B3B3C  7F A4 EB 78 */	mr r4, r29
 /* 800EA580 000B3B40  48 00 C9 2D */	bl func_800F6EAC
 /* 800EA584 000B3B44  38 80 00 00 */	li r4, 0
-/* 800EA588 000B3B48  38 AD 80 68 */	addi r5, r13, __RTTI__cf_CfObjectModel@sda21
-/* 800EA58C 000B3B4C  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
+/* 800EA588 000B3B48  38 AD 80 68 */	addi r5, r13, __RTTI__Q22cf13CfObjectModel@sda21
+/* 800EA58C 000B3B4C  38 CD 80 70 */	addi r6, r13, __RTTI__Q22cf8CfObject@sda21
 /* 800EA590 000B3B50  38 E0 00 00 */	li r7, 0
 /* 800EA594 000B3B54  48 1C F7 F1 */	bl __dynamic_cast
 /* 800EA598 000B3B58  81 83 00 00 */	lwz r12, 0(r3)
@@ -20906,8 +20906,8 @@
 /* 800EA5C0 000B3B80  7F 64 DB 78 */	mr r4, r27
 /* 800EA5C4 000B3B84  48 00 C8 E9 */	bl func_800F6EAC
 /* 800EA5C8 000B3B88  38 80 00 00 */	li r4, 0
-/* 800EA5CC 000B3B8C  38 AD 80 F0 */	addi r5, r13, __RTTI__cf_CfObjectEff@sda21
-/* 800EA5D0 000B3B90  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
+/* 800EA5CC 000B3B8C  38 AD 80 F0 */	addi r5, r13, __RTTI__Q22cf11CfObjectEff@sda21
+/* 800EA5D0 000B3B90  38 CD 80 70 */	addi r6, r13, __RTTI__Q22cf8CfObject@sda21
 /* 800EA5D4 000B3B94  38 E0 00 00 */	li r7, 0
 /* 800EA5D8 000B3B98  48 1C F7 AD */	bl __dynamic_cast
 /* 800EA5DC 000B3B9C  80 03 00 9C */	lwz r0, 0x9c(r3)
@@ -20979,8 +20979,8 @@
 /* 800EA6C4 000B3C84  7F 44 D3 78 */	mr r4, r26
 /* 800EA6C8 000B3C88  48 00 C7 E5 */	bl func_800F6EAC
 /* 800EA6CC 000B3C8C  38 80 00 00 */	li r4, 0
-/* 800EA6D0 000B3C90  38 AD 80 F0 */	addi r5, r13, __RTTI__cf_CfObjectEff@sda21
-/* 800EA6D4 000B3C94  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
+/* 800EA6D0 000B3C90  38 AD 80 F0 */	addi r5, r13, __RTTI__Q22cf11CfObjectEff@sda21
+/* 800EA6D4 000B3C94  38 CD 80 70 */	addi r6, r13, __RTTI__Q22cf8CfObject@sda21
 /* 800EA6D8 000B3C98  38 E0 00 00 */	li r7, 0
 /* 800EA6DC 000B3C9C  48 1C F6 A9 */	bl __dynamic_cast
 /* 800EA6E0 000B3CA0  A0 03 00 8C */	lhz r0, 0x8c(r3)
@@ -21036,8 +21036,8 @@
 /* 800EA788 000B3D48  7F 44 D3 78 */	mr r4, r26
 /* 800EA78C 000B3D4C  48 00 C7 21 */	bl func_800F6EAC
 /* 800EA790 000B3D50  38 80 00 00 */	li r4, 0
-/* 800EA794 000B3D54  38 AD 80 F0 */	addi r5, r13, __RTTI__cf_CfObjectEff@sda21
-/* 800EA798 000B3D58  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
+/* 800EA794 000B3D54  38 AD 80 F0 */	addi r5, r13, __RTTI__Q22cf11CfObjectEff@sda21
+/* 800EA798 000B3D58  38 CD 80 70 */	addi r6, r13, __RTTI__Q22cf8CfObject@sda21
 /* 800EA79C 000B3D5C  38 E0 00 00 */	li r7, 0
 /* 800EA7A0 000B3D60  48 1C F5 E5 */	bl __dynamic_cast
 /* 800EA7A4 000B3D64  A0 83 00 8C */	lhz r4, 0x8c(r3)
@@ -21111,8 +21111,8 @@
 /* 800EA898 000B3E58  7F 84 E3 78 */	mr r4, r28
 /* 800EA89C 000B3E5C  48 00 C6 11 */	bl func_800F6EAC
 /* 800EA8A0 000B3E60  38 80 00 00 */	li r4, 0
-/* 800EA8A4 000B3E64  38 AD 80 F0 */	addi r5, r13, __RTTI__cf_CfObjectEff@sda21
-/* 800EA8A8 000B3E68  38 CD 80 70 */	addi r6, r13, __RTTI__cf_CfObject@sda21
+/* 800EA8A4 000B3E64  38 AD 80 F0 */	addi r5, r13, __RTTI__Q22cf11CfObjectEff@sda21
+/* 800EA8A8 000B3E68  38 CD 80 70 */	addi r6, r13, __RTTI__Q22cf8CfObject@sda21
 /* 800EA8AC 000B3E6C  38 E0 00 00 */	li r7, 0
 /* 800EA8B0 000B3E70  48 1C F4 D5 */	bl __dynamic_cast
 /* 800EA8B4 000B3E74  2C 1A 00 00 */	cmpwi r26, 0
@@ -33049,8 +33049,8 @@
 
 .balign 8
 
-.obj __vt__cf_CBattleManager, global
-	.4byte __RTTI__cf_CBattleManager
+.obj __vt__Q22cf14CBattleManager, global
+	.4byte __RTTI__Q22cf14CBattleManager
 	.4byte 0
 	.4byte __dt__cf_CBattleManager
 	.4byte IFactoryEvent_FactoryEvent1
@@ -33066,100 +33066,100 @@
 	.4byte func_800EA460
 	.4byte func_800EA470
 	.4byte func_800EA998
-.endobj __vt__cf_CBattleManager
+.endobj __vt__Q22cf14CBattleManager
 
 .obj cf_CBattleManager_hierarchy, global
-	.4byte __RTTI__cf_IFactoryEvent
+	.4byte __RTTI__Q22cf13IFactoryEvent
 	.4byte 0
 	.4byte 0
 .endobj cf_CBattleManager_hierarchy
 
 
-.obj __vt__reslist_cf_IBattleEvent, global
-	.4byte __RTTI__reslist_cf_IBattleEvent
+.obj "__vt__29reslist<PQ22cf12IBattleEvent>", global
+	.4byte "__RTTI__29reslist<PQ22cf12IBattleEvent>"
 	.4byte 0
 	.4byte __dt__reslist_cf_IBattleEvent
-.endobj __vt__reslist_cf_IBattleEvent
+.endobj "__vt__29reslist<PQ22cf12IBattleEvent>"
 
 .obj reslist_cf_IBattleEvent_hierarchy, global
-	.4byte __RTTI___reslist_base_cf_IBattleEvent
+	.4byte "__RTTI__35_reslist_base<PQ22cf12IBattleEvent>"
 	.4byte 0
 	.4byte 0
 .endobj reslist_cf_IBattleEvent_hierarchy
 
 
-.obj __vt___reslist_base_cf_IBattleEvent, global
-	.4byte __RTTI___reslist_base_cf_IBattleEvent
+.obj "__vt__35_reslist_base<PQ22cf12IBattleEvent>", global
+	.4byte "__RTTI__35_reslist_base<PQ22cf12IBattleEvent>"
 	.4byte 0
 	.4byte __dt___reslist_base_cf_IBattleEvent
-.endobj __vt___reslist_base_cf_IBattleEvent
+.endobj "__vt__35_reslist_base<PQ22cf12IBattleEvent>"
 
 
-.obj __vt__reslist_cf_CfObjectActor, global
-	.4byte __RTTI__reslist_cf_CfObjectActor
+.obj "__vt__30reslist<PQ22cf13CfObjectActor>", global
+	.4byte "__RTTI__30reslist<PQ22cf13CfObjectActor>"
 	.4byte 0
 	.4byte __dt__reslist_cf_CfObjectActor
-.endobj __vt__reslist_cf_CfObjectActor
+.endobj "__vt__30reslist<PQ22cf13CfObjectActor>"
 
 .obj reslist_cf_CfObjectActor_hierarchy, global
-	.4byte __RTTI___reslist_base_cf_CfObjectActor
+	.4byte "__RTTI__36_reslist_base<PQ22cf13CfObjectActor>"
 	.4byte 0
 	.4byte 0
 .endobj reslist_cf_CfObjectActor_hierarchy
 
 
-.obj __vt___reslist_base_cf_CfObjectActor, global
-	.4byte __RTTI___reslist_base_cf_CfObjectActor
+.obj "__vt__36_reslist_base<PQ22cf13CfObjectActor>", global
+	.4byte "__RTTI__36_reslist_base<PQ22cf13CfObjectActor>"
 	.4byte 0
 	.4byte __dt___reslist_base_cf_CfObjectActor
-.endobj __vt___reslist_base_cf_CfObjectActor
+.endobj "__vt__36_reslist_base<PQ22cf13CfObjectActor>"
 
 
-.obj __vt__cf_CChainTime, global
-	.4byte __RTTI__cf_CChainTime
+.obj __vt__Q22cf10CChainTime, global
+	.4byte __RTTI__Q22cf10CChainTime
 	.4byte 0
 	.4byte __dt__cf_CChainTime
-.endobj __vt__cf_CChainTime
+.endobj __vt__Q22cf10CChainTime
 
 
 .section .sdata, "wa"  # 0x80664180 - 0x80666600
 
 .balign 8
 
-.obj __RTTI__cf_CBattleManager, global
+.obj __RTTI__Q22cf14CBattleManager, global
 	.4byte cf_CBattleManager_typestr
 	.4byte cf_CBattleManager_hierarchy
-.endobj __RTTI__cf_CBattleManager
+.endobj __RTTI__Q22cf14CBattleManager
 
-.obj __RTTI__reslist_cf_IBattleEvent, global
+.obj "__RTTI__29reslist<PQ22cf12IBattleEvent>", global
 	.4byte reslist_cf_IBattleEvent_typestr
 	.4byte reslist_cf_IBattleEvent_hierarchy
-.endobj __RTTI__reslist_cf_IBattleEvent
+.endobj "__RTTI__29reslist<PQ22cf12IBattleEvent>"
 
-.obj __RTTI___reslist_base_cf_IBattleEvent, global
+.obj "__RTTI__35_reslist_base<PQ22cf12IBattleEvent>", global
 	.4byte _reslist_base_cf_IBattleEvent_typestr
 	.4byte 0
-.endobj __RTTI___reslist_base_cf_IBattleEvent
+.endobj "__RTTI__35_reslist_base<PQ22cf12IBattleEvent>"
 
-.obj __RTTI__reslist_cf_CfObjectActor, global
+.obj "__RTTI__30reslist<PQ22cf13CfObjectActor>", global
 	.4byte reslist_cf_CfObjectActor_typestr
 	.4byte reslist_cf_CfObjectActor_hierarchy
-.endobj __RTTI__reslist_cf_CfObjectActor
+.endobj "__RTTI__30reslist<PQ22cf13CfObjectActor>"
 
-.obj __RTTI___reslist_base_cf_CfObjectActor, global
+.obj "__RTTI__36_reslist_base<PQ22cf13CfObjectActor>", global
 	.4byte _reslist_base_cf_CfObjectActor_typestr
 	.4byte 0
-.endobj __RTTI___reslist_base_cf_CfObjectActor
+.endobj "__RTTI__36_reslist_base<PQ22cf13CfObjectActor>"
 
-.obj __RTTI__cf_CChainTime, global
+.obj __RTTI__Q22cf10CChainTime, global
 	.4byte cf_CChainTime_typestr
 	.4byte 0
-.endobj __RTTI__cf_CChainTime
+.endobj __RTTI__Q22cf10CChainTime
 
-.obj __RTTI__cf_IFactoryEvent, global
+.obj __RTTI__Q22cf13IFactoryEvent, global
 	.4byte cf_IFactoryEvent_typestr
 	.4byte 0
-.endobj __RTTI__cf_IFactoryEvent
+.endobj __RTTI__Q22cf13IFactoryEvent
 
 
 

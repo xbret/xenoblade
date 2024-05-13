@@ -3,9 +3,9 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 .fn __ct__CItemBoxGridSubMenu, global
-/* 80207F40 001D1500  3C A0 80 54 */	lis r5, __vt__CItemBoxGridSubMenu@ha
+/* 80207F40 001D1500  3C A0 80 54 */	lis r5, __vt__19CItemBoxGridSubMenu@ha
 /* 80207F44 001D1504  38 80 00 00 */	li r4, 0
-/* 80207F48 001D1508  38 A5 8F 08 */	addi r5, r5, __vt__CItemBoxGridSubMenu@l
+/* 80207F48 001D1508  38 A5 8F 08 */	addi r5, r5, __vt__19CItemBoxGridSubMenu@l
 /* 80207F4C 001D150C  38 00 00 01 */	li r0, 1
 /* 80207F50 001D1510  90 A3 00 00 */	stw r5, 0(r3)
 /* 80207F54 001D1514  90 83 00 04 */	stw r4, 4(r3)
@@ -742,8 +742,8 @@
 
 .balign 8
 
-.obj __vt__CItemBoxGridSubMenu, global
-	.4byte __RTTI__CItemBoxGridSubMenu
+.obj __vt__19CItemBoxGridSubMenu, global
+	.4byte __RTTI__19CItemBoxGridSubMenu
 	.4byte 0
 	.4byte __dt__CItemBoxGridSubMenu
 	.4byte IWorkEvent_WorkEvent1
@@ -777,10 +777,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__CItemBoxGridSubMenu
+.endobj __vt__19CItemBoxGridSubMenu
 
 .obj CItemBoxGridSubMenu_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -790,10 +790,10 @@
 
 .balign 8
 
-.obj __RTTI__CItemBoxGridSubMenu, global
+.obj __RTTI__19CItemBoxGridSubMenu, global
 	.4byte CItemBoxGridSubMenu_typestr
 	.4byte CItemBoxGridSubMenu_hierarchy
-.endobj __RTTI__CItemBoxGridSubMenu
+.endobj __RTTI__19CItemBoxGridSubMenu
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

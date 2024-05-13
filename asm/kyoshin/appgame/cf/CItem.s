@@ -345,72 +345,72 @@
 /* 80155B08 0011F0C8  88 0D A9 2C */	lbz r0, lbl_80666AAC@sda21(r13)
 /* 80155B0C 0011F0CC  7C 00 07 75 */	extsb. r0, r0
 /* 80155B10 0011F0D0  40 82 00 18 */	bne .L_80155B28
-/* 80155B14 0011F0D4  3C 80 80 53 */	lis r4, __vt__cf_ItemDummyImpl@ha
+/* 80155B14 0011F0D4  3C 80 80 53 */	lis r4, __vt__Q22cf13ItemDummyImpl@ha
 /* 80155B18 0011F0D8  38 00 00 01 */	li r0, 1
-/* 80155B1C 0011F0DC  38 84 34 28 */	addi r4, r4, __vt__cf_ItemDummyImpl@l
+/* 80155B1C 0011F0DC  38 84 34 28 */	addi r4, r4, __vt__Q22cf13ItemDummyImpl@l
 /* 80155B20 0011F0E0  90 8D A9 30 */	stw r4, lbl_80666AB0@sda21(r13)
 /* 80155B24 0011F0E4  98 0D A9 2C */	stb r0, lbl_80666AAC@sda21(r13)
 .L_80155B28:
 /* 80155B28 0011F0E8  88 0D A9 34 */	lbz r0, lbl_80666AB4@sda21(r13)
 /* 80155B2C 0011F0EC  7C 00 07 75 */	extsb. r0, r0
 /* 80155B30 0011F0F0  40 82 00 18 */	bne .L_80155B48
-/* 80155B34 0011F0F4  3C 80 80 53 */	lis r4, __vt__cf_ItemConsImpl@ha
+/* 80155B34 0011F0F4  3C 80 80 53 */	lis r4, __vt__Q22cf12ItemConsImpl@ha
 /* 80155B38 0011F0F8  38 00 00 01 */	li r0, 1
-/* 80155B3C 0011F0FC  38 84 33 78 */	addi r4, r4, __vt__cf_ItemConsImpl@l
+/* 80155B3C 0011F0FC  38 84 33 78 */	addi r4, r4, __vt__Q22cf12ItemConsImpl@l
 /* 80155B40 0011F100  90 8D A9 38 */	stw r4, lbl_80666AB8@sda21(r13)
 /* 80155B44 0011F104  98 0D A9 34 */	stb r0, lbl_80666AB4@sda21(r13)
 .L_80155B48:
 /* 80155B48 0011F108  88 0D A9 3C */	lbz r0, lbl_80666ABC@sda21(r13)
 /* 80155B4C 0011F10C  7C 00 07 75 */	extsb. r0, r0
 /* 80155B50 0011F110  40 82 00 18 */	bne .L_80155B68
-/* 80155B54 0011F114  3C 80 80 53 */	lis r4, __vt__cf_ItemEquipImpl@ha
+/* 80155B54 0011F114  3C 80 80 53 */	lis r4, __vt__Q22cf13ItemEquipImpl@ha
 /* 80155B58 0011F118  38 00 00 01 */	li r0, 1
-/* 80155B5C 0011F11C  38 84 32 C8 */	addi r4, r4, __vt__cf_ItemEquipImpl@l
+/* 80155B5C 0011F11C  38 84 32 C8 */	addi r4, r4, __vt__Q22cf13ItemEquipImpl@l
 /* 80155B60 0011F120  90 8D A9 40 */	stw r4, lbl_80666AC0@sda21(r13)
 /* 80155B64 0011F124  98 0D A9 3C */	stb r0, lbl_80666ABC@sda21(r13)
 .L_80155B68:
 /* 80155B68 0011F128  88 0D A9 44 */	lbz r0, lbl_80666AC4@sda21(r13)
 /* 80155B6C 0011F12C  7C 00 07 75 */	extsb. r0, r0
 /* 80155B70 0011F130  40 82 00 18 */	bne .L_80155B88
-/* 80155B74 0011F134  3C 80 80 53 */	lis r4, __vt__cf_ItemCrystalImpl@ha
+/* 80155B74 0011F134  3C 80 80 53 */	lis r4, __vt__Q22cf15ItemCrystalImpl@ha
 /* 80155B78 0011F138  38 00 00 01 */	li r0, 1
-/* 80155B7C 0011F13C  38 84 32 18 */	addi r4, r4, __vt__cf_ItemCrystalImpl@l
+/* 80155B7C 0011F13C  38 84 32 18 */	addi r4, r4, __vt__Q22cf15ItemCrystalImpl@l
 /* 80155B80 0011F140  90 8D A9 48 */	stw r4, lbl_80666AC8@sda21(r13)
 /* 80155B84 0011F144  98 0D A9 44 */	stb r0, lbl_80666AC4@sda21(r13)
 .L_80155B88:
 /* 80155B88 0011F148  88 0D A9 4C */	lbz r0, lbl_80666ACC@sda21(r13)
 /* 80155B8C 0011F14C  7C 00 07 75 */	extsb. r0, r0
 /* 80155B90 0011F150  40 82 00 18 */	bne .L_80155BA8
-/* 80155B94 0011F154  3C 80 80 53 */	lis r4, __vt__cf_ItemDropCrystalImpl@ha
+/* 80155B94 0011F154  3C 80 80 53 */	lis r4, __vt__Q22cf19ItemDropCrystalImpl@ha
 /* 80155B98 0011F158  38 00 00 01 */	li r0, 1
-/* 80155B9C 0011F15C  38 84 31 60 */	addi r4, r4, __vt__cf_ItemDropCrystalImpl@l
+/* 80155B9C 0011F15C  38 84 31 60 */	addi r4, r4, __vt__Q22cf19ItemDropCrystalImpl@l
 /* 80155BA0 0011F160  90 8D A9 50 */	stw r4, lbl_80666AD0@sda21(r13)
 /* 80155BA4 0011F164  98 0D A9 4C */	stb r0, lbl_80666ACC@sda21(r13)
 .L_80155BA8:
 /* 80155BA8 0011F168  88 0D A9 54 */	lbz r0, lbl_80666AD4@sda21(r13)
 /* 80155BAC 0011F16C  7C 00 07 75 */	extsb. r0, r0
 /* 80155BB0 0011F170  40 82 00 18 */	bne .L_80155BC8
-/* 80155BB4 0011F174  3C 80 80 53 */	lis r4, __vt__cf_ItemPurifyCrystalImpl@ha
+/* 80155BB4 0011F174  3C 80 80 53 */	lis r4, __vt__Q22cf21ItemPurifyCrystalImpl@ha
 /* 80155BB8 0011F178  38 00 00 01 */	li r0, 1
-/* 80155BBC 0011F17C  38 84 30 A8 */	addi r4, r4, __vt__cf_ItemPurifyCrystalImpl@l
+/* 80155BBC 0011F17C  38 84 30 A8 */	addi r4, r4, __vt__Q22cf21ItemPurifyCrystalImpl@l
 /* 80155BC0 0011F180  90 8D A9 58 */	stw r4, lbl_80666AD8@sda21(r13)
 /* 80155BC4 0011F184  98 0D A9 54 */	stb r0, lbl_80666AD4@sda21(r13)
 .L_80155BC8:
 /* 80155BC8 0011F188  88 0D A9 5C */	lbz r0, lbl_80666ADC@sda21(r13)
 /* 80155BCC 0011F18C  7C 00 07 75 */	extsb. r0, r0
 /* 80155BD0 0011F190  40 82 00 18 */	bne .L_80155BE8
-/* 80155BD4 0011F194  3C 80 80 53 */	lis r4, __vt__cf_ItemKessyouImpl@ha
+/* 80155BD4 0011F194  3C 80 80 53 */	lis r4, __vt__Q22cf15ItemKessyouImpl@ha
 /* 80155BD8 0011F198  38 00 00 01 */	li r0, 1
-/* 80155BDC 0011F19C  38 84 2F F8 */	addi r4, r4, __vt__cf_ItemKessyouImpl@l
+/* 80155BDC 0011F19C  38 84 2F F8 */	addi r4, r4, __vt__Q22cf15ItemKessyouImpl@l
 /* 80155BE0 0011F1A0  90 8D A9 60 */	stw r4, lbl_80666AE0@sda21(r13)
 /* 80155BE4 0011F1A4  98 0D A9 5C */	stb r0, lbl_80666ADC@sda21(r13)
 .L_80155BE8:
 /* 80155BE8 0011F1A8  88 0D A9 64 */	lbz r0, lbl_80666AE4@sda21(r13)
 /* 80155BEC 0011F1AC  7C 00 07 75 */	extsb. r0, r0
 /* 80155BF0 0011F1B0  40 82 00 18 */	bne .L_80155C08
-/* 80155BF4 0011F1B4  3C 80 80 53 */	lis r4, __vt__cf_ItemPurifyKessyouImpl@ha
+/* 80155BF4 0011F1B4  3C 80 80 53 */	lis r4, __vt__Q22cf21ItemPurifyKessyouImpl@ha
 /* 80155BF8 0011F1B8  38 00 00 01 */	li r0, 1
-/* 80155BFC 0011F1BC  38 84 2F 40 */	addi r4, r4, __vt__cf_ItemPurifyKessyouImpl@l
+/* 80155BFC 0011F1BC  38 84 2F 40 */	addi r4, r4, __vt__Q22cf21ItemPurifyKessyouImpl@l
 /* 80155C00 0011F1C0  90 8D A9 68 */	stw r4, lbl_80666AE8@sda21(r13)
 /* 80155C04 0011F1C4  98 0D A9 64 */	stb r0, lbl_80666AE4@sda21(r13)
 .L_80155C08:
@@ -7770,8 +7770,8 @@
 
 .balign 8
 
-.obj __vt__cf_ItemPurifyKessyouImpl, global
-	.4byte __RTTI__cf_ItemPurifyKessyouImpl
+.obj __vt__Q22cf21ItemPurifyKessyouImpl, global
+	.4byte __RTTI__Q22cf21ItemPurifyKessyouImpl
 	.4byte 0
 	.4byte func_8015B4BC
 	.4byte func_80156F0C
@@ -7811,20 +7811,20 @@
 	.4byte func_8015B420
 	.4byte func_8015B414
 	.4byte func_8015B404
-.endobj __vt__cf_ItemPurifyKessyouImpl
+.endobj __vt__Q22cf21ItemPurifyKessyouImpl
 
 .obj cf_ItemPurifyKessyouImpl_hierarchy, global
-	.4byte __RTTI__cf_ItemImpl
+	.4byte __RTTI__Q22cf8ItemImpl
 	.4byte 0
-	.4byte __RTTI__cf_ItemKessyouImpl
+	.4byte __RTTI__Q22cf15ItemKessyouImpl
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj cf_ItemPurifyKessyouImpl_hierarchy
 
 
-.obj __vt__cf_ItemKessyouImpl, global
-	.4byte __RTTI__cf_ItemKessyouImpl
+.obj __vt__Q22cf15ItemKessyouImpl, global
+	.4byte __RTTI__Q22cf15ItemKessyouImpl
 	.4byte 0
 	.4byte func_8015B4BC
 	.4byte func_80155CC0
@@ -7864,18 +7864,18 @@
 	.4byte func_8015B420
 	.4byte func_8015B414
 	.4byte func_8015B404
-.endobj __vt__cf_ItemKessyouImpl
+.endobj __vt__Q22cf15ItemKessyouImpl
 
 .obj cf_ItemKessyouImpl_hierarchy, global
-	.4byte __RTTI__cf_ItemImpl
+	.4byte __RTTI__Q22cf8ItemImpl
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj cf_ItemKessyouImpl_hierarchy
 
 
-.obj __vt__cf_ItemPurifyCrystalImpl, global
-	.4byte __RTTI__cf_ItemPurifyCrystalImpl
+.obj __vt__Q22cf21ItemPurifyCrystalImpl, global
+	.4byte __RTTI__Q22cf21ItemPurifyCrystalImpl
 	.4byte 0
 	.4byte func_80155CB4
 	.4byte func_80155CC0
@@ -7915,20 +7915,20 @@
 	.4byte func_801586D0
 	.4byte func_8015B53C
 	.4byte func_8015B538
-.endobj __vt__cf_ItemPurifyCrystalImpl
+.endobj __vt__Q22cf21ItemPurifyCrystalImpl
 
 .obj cf_ItemPurifyCrystalImpl_hierarchy, global
-	.4byte __RTTI__cf_ItemImpl
+	.4byte __RTTI__Q22cf8ItemImpl
 	.4byte 0
-	.4byte __RTTI__cf_ItemCrystalImpl
+	.4byte __RTTI__Q22cf15ItemCrystalImpl
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj cf_ItemPurifyCrystalImpl_hierarchy
 
 
-.obj __vt__cf_ItemDropCrystalImpl, global
-	.4byte __RTTI__cf_ItemDropCrystalImpl
+.obj __vt__Q22cf19ItemDropCrystalImpl, global
+	.4byte __RTTI__Q22cf19ItemDropCrystalImpl
 	.4byte 0
 	.4byte func_80155CB4
 	.4byte func_80155CC0
@@ -7968,20 +7968,20 @@
 	.4byte func_801586D0
 	.4byte func_8015B53C
 	.4byte func_8015B538
-.endobj __vt__cf_ItemDropCrystalImpl
+.endobj __vt__Q22cf19ItemDropCrystalImpl
 
 .obj cf_ItemDropCrystalImpl_hierarchy, global
-	.4byte __RTTI__cf_ItemImpl
+	.4byte __RTTI__Q22cf8ItemImpl
 	.4byte 0
-	.4byte __RTTI__cf_ItemCrystalImpl
+	.4byte __RTTI__Q22cf15ItemCrystalImpl
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj cf_ItemDropCrystalImpl_hierarchy
 
 
-.obj __vt__cf_ItemCrystalImpl, global
-	.4byte __RTTI__cf_ItemCrystalImpl
+.obj __vt__Q22cf15ItemCrystalImpl, global
+	.4byte __RTTI__Q22cf15ItemCrystalImpl
 	.4byte 0
 	.4byte func_80155CB4
 	.4byte func_80155CC0
@@ -8021,18 +8021,18 @@
 	.4byte func_801586D0
 	.4byte func_8015B53C
 	.4byte func_8015B538
-.endobj __vt__cf_ItemCrystalImpl
+.endobj __vt__Q22cf15ItemCrystalImpl
 
 .obj cf_ItemCrystalImpl_hierarchy, global
-	.4byte __RTTI__cf_ItemImpl
+	.4byte __RTTI__Q22cf8ItemImpl
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj cf_ItemCrystalImpl_hierarchy
 
 
-.obj __vt__cf_ItemEquipImpl, global
-	.4byte __RTTI__cf_ItemEquipImpl
+.obj __vt__Q22cf13ItemEquipImpl, global
+	.4byte __RTTI__Q22cf13ItemEquipImpl
 	.4byte 0
 	.4byte func_80155CB4
 	.4byte func_80155CC0
@@ -8072,18 +8072,18 @@
 	.4byte func_801586D0
 	.4byte func_8015B53C
 	.4byte func_8015B538
-.endobj __vt__cf_ItemEquipImpl
+.endobj __vt__Q22cf13ItemEquipImpl
 
 .obj cf_ItemEquipImpl_hierarchy, global
-	.4byte __RTTI__cf_ItemImpl
+	.4byte __RTTI__Q22cf8ItemImpl
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj cf_ItemEquipImpl_hierarchy
 
 
-.obj __vt__cf_ItemConsImpl, global
-	.4byte __RTTI__cf_ItemConsImpl
+.obj __vt__Q22cf12ItemConsImpl, global
+	.4byte __RTTI__Q22cf12ItemConsImpl
 	.4byte 0
 	.4byte func_80155CB4
 	.4byte func_80155CC0
@@ -8123,18 +8123,18 @@
 	.4byte func_801586D0
 	.4byte func_8015B53C
 	.4byte func_8015B538
-.endobj __vt__cf_ItemConsImpl
+.endobj __vt__Q22cf12ItemConsImpl
 
 .obj cf_ItemConsImpl_hierarchy, global
-	.4byte __RTTI__cf_ItemImpl
+	.4byte __RTTI__Q22cf8ItemImpl
 	.4byte 0
 	.4byte 0
 	.4byte 0
 .endobj cf_ItemConsImpl_hierarchy
 
 
-.obj __vt__cf_ItemDummyImpl, global
-	.4byte __RTTI__cf_ItemDummyImpl
+.obj __vt__Q22cf13ItemDummyImpl, global
+	.4byte __RTTI__Q22cf13ItemDummyImpl
 	.4byte 0
 	.4byte func_80155CB4
 	.4byte func_80155CC0
@@ -8174,10 +8174,10 @@
 	.4byte func_801586D0
 	.4byte func_8015B53C
 	.4byte func_8015B538
-.endobj __vt__cf_ItemDummyImpl
+.endobj __vt__Q22cf13ItemDummyImpl
 
 .obj cf_ItemDummyImpl_hierarchy, global
-	.4byte __RTTI__cf_ItemImpl
+	.4byte __RTTI__Q22cf8ItemImpl
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -8299,50 +8299,50 @@
 .endobj lbl_80664BD8
 
 
-.obj __RTTI__cf_ItemPurifyKessyouImpl, global
+.obj __RTTI__Q22cf21ItemPurifyKessyouImpl, global
 	.4byte cf_ItemPurifyKessyouImpl_typestr
 	.4byte cf_ItemPurifyKessyouImpl_hierarchy
-.endobj __RTTI__cf_ItemPurifyKessyouImpl
+.endobj __RTTI__Q22cf21ItemPurifyKessyouImpl
 
-.obj __RTTI__cf_ItemKessyouImpl, global
+.obj __RTTI__Q22cf15ItemKessyouImpl, global
 	.4byte cf_ItemKessyouImpl_typestr
 	.4byte cf_ItemKessyouImpl_hierarchy
-.endobj __RTTI__cf_ItemKessyouImpl
+.endobj __RTTI__Q22cf15ItemKessyouImpl
 
-.obj __RTTI__cf_ItemPurifyCrystalImpl, global
+.obj __RTTI__Q22cf21ItemPurifyCrystalImpl, global
 	.4byte cf_ItemPurifyCrystalImpl_typestr
 	.4byte cf_ItemPurifyCrystalImpl_hierarchy
-.endobj __RTTI__cf_ItemPurifyCrystalImpl
+.endobj __RTTI__Q22cf21ItemPurifyCrystalImpl
 
-.obj __RTTI__cf_ItemDropCrystalImpl, global
+.obj __RTTI__Q22cf19ItemDropCrystalImpl, global
 	.4byte cf_ItemDropCrystalImpl_typestr
 	.4byte cf_ItemDropCrystalImpl_hierarchy
-.endobj __RTTI__cf_ItemDropCrystalImpl
+.endobj __RTTI__Q22cf19ItemDropCrystalImpl
 
-.obj __RTTI__cf_ItemCrystalImpl, global
+.obj __RTTI__Q22cf15ItemCrystalImpl, global
 	.4byte cf_ItemCrystalImpl_typestr
 	.4byte cf_ItemCrystalImpl_hierarchy
-.endobj __RTTI__cf_ItemCrystalImpl
+.endobj __RTTI__Q22cf15ItemCrystalImpl
 
-.obj __RTTI__cf_ItemEquipImpl, global
+.obj __RTTI__Q22cf13ItemEquipImpl, global
 	.4byte cf_ItemEquipImpl_typestr
 	.4byte cf_ItemEquipImpl_hierarchy
-.endobj __RTTI__cf_ItemEquipImpl
+.endobj __RTTI__Q22cf13ItemEquipImpl
 
-.obj __RTTI__cf_ItemConsImpl, global
+.obj __RTTI__Q22cf12ItemConsImpl, global
 	.4byte cf_ItemConsImpl_typestr
 	.4byte cf_ItemConsImpl_hierarchy
-.endobj __RTTI__cf_ItemConsImpl
+.endobj __RTTI__Q22cf12ItemConsImpl
 
-.obj __RTTI__cf_ItemDummyImpl, global
+.obj __RTTI__Q22cf13ItemDummyImpl, global
 	.4byte cf_ItemDummyImpl_typestr
 	.4byte cf_ItemDummyImpl_hierarchy
-.endobj __RTTI__cf_ItemDummyImpl
+.endobj __RTTI__Q22cf13ItemDummyImpl
 
-.obj __RTTI__cf_ItemImpl, global
+.obj __RTTI__Q22cf8ItemImpl, global
 	.4byte cf_ItemImpl_typestr
 	.4byte 0
-.endobj __RTTI__cf_ItemImpl
+.endobj __RTTI__Q22cf8ItemImpl
 
 .section .sdata2, "a"  # 0x80668380 - 0x8066DCE0
 

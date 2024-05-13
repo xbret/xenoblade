@@ -9,9 +9,9 @@
 /* 8008A110 000536D0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 8008A114 000536D4  7C 7F 1B 78 */	mr r31, r3
 /* 8008A118 000536D8  4B FF E7 ED */	bl __ct__80088904
-/* 8008A11C 000536DC  3C 60 80 53 */	lis r3, __vt__cf_CtrlMoveEne@ha
+/* 8008A11C 000536DC  3C 60 80 53 */	lis r3, __vt__Q22cf11CtrlMoveEne@ha
 /* 8008A120 000536E0  3C C0 80 51 */	lis r6, __ptmf_null@ha
-/* 8008A124 000536E4  38 63 B1 CC */	addi r3, r3, __vt__cf_CtrlMoveEne@l
+/* 8008A124 000536E4  38 63 B1 CC */	addi r3, r3, __vt__Q22cf11CtrlMoveEne@l
 /* 8008A128 000536E8  90 7F 00 48 */	stw r3, 0x48(r31)
 /* 8008A12C 000536EC  C0 22 8A C8 */	lfs f1, float_80668E48@sda21(r2)
 /* 8008A130 000536F0  38 00 00 00 */	li r0, 0
@@ -10439,14 +10439,14 @@
 .endobj lbl_8052B1C0
 
 
-.obj __vt__cf_CtrlMoveEne, global
-	.4byte __RTTI__cf_CtrlMoveEne
+.obj __vt__Q22cf11CtrlMoveEne, global
+	.4byte __RTTI__Q22cf11CtrlMoveEne
 	.4byte 0
 	.4byte func_8008E760
-.endobj __vt__cf_CtrlMoveEne
+.endobj __vt__Q22cf11CtrlMoveEne
 
 .obj cf_CtrlMoveEne_hierarchy, global
-	.4byte __RTTI__cf_CtrlMoveBase
+	.4byte __RTTI__Q22cf12CtrlMoveBase
 	.4byte 0
 	.4byte 0
 .endobj cf_CtrlMoveEne_hierarchy
@@ -10467,10 +10467,10 @@
 	.4byte 0
 .endobj float_80664528
 
-.obj __RTTI__cf_CtrlMoveEne, global
+.obj __RTTI__Q22cf11CtrlMoveEne, global
 	.4byte cf_CtrlMoveEne_typestr
 	.4byte cf_CtrlMoveEne_hierarchy
-.endobj __RTTI__cf_CtrlMoveEne
+.endobj __RTTI__Q22cf11CtrlMoveEne
 
 
 

@@ -741,9 +741,9 @@
 .endfn func_80069330
 
 .fn __ct__cf_CfScript, global
-/* 800693A0 00032960  3C 80 80 53 */	lis r4, __vt__cf_CfScript@ha
+/* 800693A0 00032960  3C 80 80 53 */	lis r4, __vt__Q22cf8CfScript@ha
 /* 800693A4 00032964  38 00 00 00 */	li r0, 0
-/* 800693A8 00032968  38 84 A5 B8 */	addi r4, r4, __vt__cf_CfScript@l
+/* 800693A8 00032968  38 84 A5 B8 */	addi r4, r4, __vt__Q22cf8CfScript@l
 /* 800693AC 0003296C  90 83 00 00 */	stw r4, 0(r3)
 /* 800693B0 00032970  98 03 00 04 */	stb r0, 4(r3)
 /* 800693B4 00032974  90 03 00 44 */	stw r0, 0x44(r3)
@@ -1015,8 +1015,8 @@
 .endobj lbl_8052A5A0
 
 
-.obj __vt__cf_CfScript, global
-	.4byte __RTTI__cf_CfScript
+.obj __vt__Q22cf8CfScript, global
+	.4byte __RTTI__Q22cf8CfScript
 	.4byte 0
 	.4byte __dt__cf_CfScript
 	.4byte IWorkEvent_WorkEvent1
@@ -1050,10 +1050,10 @@
 	.4byte IWorkEvent_WorkEvent29
 	.4byte IWorkEvent_WorkEvent30
 	.4byte IWorkEvent_WorkEvent31
-.endobj __vt__cf_CfScript
+.endobj __vt__Q22cf8CfScript
 
 .obj cf_CfScript_hierarchy, global
-	.4byte __RTTI__IWorkEvent
+	.4byte __RTTI__10IWorkEvent
 	.4byte 0
 	.4byte 0
 	.4byte 0
@@ -1093,10 +1093,10 @@
 	.4byte 0
 .endobj lbl_806643B8
 
-.obj __RTTI__cf_CfScript, global
+.obj __RTTI__Q22cf8CfScript, global
 	.4byte cf_CfScript_typestr
 	.4byte cf_CfScript_hierarchy
-.endobj __RTTI__cf_CfScript
+.endobj __RTTI__Q22cf8CfScript
 
 
 .obj lbl_806643C8, global

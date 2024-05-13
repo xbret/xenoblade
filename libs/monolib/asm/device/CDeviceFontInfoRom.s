@@ -13,8 +13,8 @@
 /* 80453678 0041CC38  7C 7E 1B 78 */	mr r30, r3
 /* 8045367C 0041CC3C  41 82 00 44 */	beq .L_804536C0
 /* 80453680 0041CC40  80 03 00 08 */	lwz r0, 8(r3)
-/* 80453684 0041CC44  3C 80 80 57 */	lis r4, __vt__CDeviceFontInfoRom@ha
-/* 80453688 0041CC48  38 84 FF D0 */	addi r4, r4, __vt__CDeviceFontInfoRom@l
+/* 80453684 0041CC44  3C 80 80 57 */	lis r4, __vt__18CDeviceFontInfoRom@ha
+/* 80453688 0041CC48  38 84 FF D0 */	addi r4, r4, __vt__18CDeviceFontInfoRom@l
 /* 8045368C 0041CC4C  90 83 00 00 */	stw r4, 0(r3)
 /* 80453690 0041CC50  2C 00 00 00 */	cmpwi r0, 0
 /* 80453694 0041CC54  41 82 00 14 */	beq .L_804536A8
@@ -61,9 +61,9 @@
 /* 80453718 0041CCD8  2C 03 00 00 */	cmpwi r3, 0
 /* 8045371C 0041CCDC  7C 7F 1B 78 */	mr r31, r3
 /* 80453720 0041CCE0  41 82 00 54 */	beq .L_80453774
-/* 80453724 0041CCE4  3C 80 80 57 */	lis r4, __vt__CDeviceFontInfoRom@ha
+/* 80453724 0041CCE4  3C 80 80 57 */	lis r4, __vt__18CDeviceFontInfoRom@ha
 /* 80453728 0041CCE8  38 00 00 00 */	li r0, 0
-/* 8045372C 0041CCEC  38 84 FF D0 */	addi r4, r4, __vt__CDeviceFontInfoRom@l
+/* 8045372C 0041CCEC  38 84 FF D0 */	addi r4, r4, __vt__18CDeviceFontInfoRom@l
 /* 80453730 0041CCF0  90 83 00 00 */	stw r4, 0(r3)
 /* 80453734 0041CCF4  90 03 00 04 */	stw r0, 4(r3)
 /* 80453738 0041CCF8  90 03 00 08 */	stw r0, 8(r3)
@@ -182,8 +182,8 @@
 
 .balign 8
 
-.obj __vt__CDeviceFontInfoRom, global
-	.4byte __RTTI__CDeviceFontInfoRom
+.obj __vt__18CDeviceFontInfoRom, global
+	.4byte __RTTI__18CDeviceFontInfoRom
 	.4byte 0
 	.4byte __dt__CDeviceFontInfoRom
 	.4byte func_80453830
@@ -198,11 +198,11 @@
 	.4byte func_804537A8
 	.4byte func_804537C0
 	.4byte func_804537D4
-.endobj __vt__CDeviceFontInfoRom
+.endobj __vt__18CDeviceFontInfoRom
 
 
 .obj CDeviceFontInfoRom_hierarchy, global
-	.4byte __RTTI__IDeviceFontInfo
+	.4byte __RTTI__15IDeviceFontInfo
 	.4byte 0
 	.4byte 0
 .endobj CDeviceFontInfoRom_hierarchy
@@ -212,10 +212,10 @@
 
 .balign 8
 
-.obj __RTTI__CDeviceFontInfoRom, global
+.obj __RTTI__18CDeviceFontInfoRom, global
 	.4byte CDeviceFontInfoRom_typestr
 	.4byte CDeviceFontInfoRom_hierarchy
-.endobj __RTTI__CDeviceFontInfoRom
+.endobj __RTTI__18CDeviceFontInfoRom
 
 .section .sbss, "wa"  # 0x80666600 - 0x8066836F
 
