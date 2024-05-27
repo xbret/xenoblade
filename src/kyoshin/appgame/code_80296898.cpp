@@ -1,26 +1,14 @@
 #include "kyoshin/appgame/code_80296898.hpp"
 #include <string.h>
 
-class UnkClass {
-	public:
-	u8 unk0[64];
-	
-	UnkClass() {
-		init();
-	}
-	
-	void init();
-	static UnkClass* getInstance();
-};
+static Class_80296898 lbl_8057A9C8;
 
-static UnkClass lbl_8057A9C8;
-
-UnkClass* func_80296A04(UnkClass* obj) {
+Class_80296898* func_80296A04(Class_80296898* obj) {
 	obj->init();
 	return obj;
 }
 
-void UnkClass::init() {
+void Class_80296898::init() {
 	memset(unk0, 0, 64);
 	
 	int r4 = 0, r3 = 3, r7 = 1, r5 = 0xA, r6 = 2, r0 = 5;
@@ -50,7 +38,7 @@ void UnkClass::init() {
 	unk0[0x3A] = r0;
 }
 
-UnkClass* UnkClass::getInstance(void) {
+Class_80296898* Class_80296898::getInstance(void) {
 	return &lbl_8057A9C8;
 }
 
