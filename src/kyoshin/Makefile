@@ -248,7 +248,7 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTaskGamePic.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTaskGameEvt.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/cf/CHelpManager.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/code_80296898.o\
+	$(BUILD_DIR)/src/kyoshin/appgame/code_80296898.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/makecrystal/CMCGetItemBox.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/menu/CMenuTutorial.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/CTutorial.o\
