@@ -3,22 +3,22 @@
 .section .text, "ax"  # 0x80039220 - 0x804F5900
 
 
-.fn func_80296A04__FPUc, global
+.fn func_80296A04__FP8UnkClass, global
 /* 80296A04 0025FFC4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80296A08 0025FFC8  7C 08 02 A6 */	mflr r0
 /* 80296A0C 0025FFCC  90 01 00 14 */	stw r0, 0x14(r1)
 /* 80296A10 0025FFD0  93 E1 00 0C */	stw r31, 0xc(r1)
 /* 80296A14 0025FFD4  7C 7F 1B 78 */	mr r31, r3
-/* 80296A18 0025FFD8  48 00 00 1D */	bl func_80296A34__FPUc
+/* 80296A18 0025FFD8  48 00 00 1D */	bl init__8UnkClassFv
 /* 80296A1C 0025FFDC  7F E3 FB 78 */	mr r3, r31
 /* 80296A20 0025FFE0  83 E1 00 0C */	lwz r31, 0xc(r1)
 /* 80296A24 0025FFE4  80 01 00 14 */	lwz r0, 0x14(r1)
 /* 80296A28 0025FFE8  7C 08 03 A6 */	mtlr r0
 /* 80296A2C 0025FFEC  38 21 00 10 */	addi r1, r1, 0x10
 /* 80296A30 0025FFF0  4E 80 00 20 */	blr 
-.endfn func_80296A04__FPUc
+.endfn func_80296A04__FP8UnkClass
 
-.fn func_80296A34__FPUc, global
+.fn init__8UnkClassFv, global
 /* 80296A34 0025FFF4  94 21 FF F0 */	stwu r1, -0x10(r1)
 /* 80296A38 0025FFF8  7C 08 02 A6 */	mflr r0
 /* 80296A3C 0025FFFC  38 80 00 00 */	li r4, 0
@@ -61,13 +61,13 @@
 /* 80296AD0 00260090  7C 08 03 A6 */	mtlr r0
 /* 80296AD4 00260094  38 21 00 10 */	addi r1, r1, 0x10
 /* 80296AD8 00260098  4E 80 00 20 */	blr 
-.endfn func_80296A34__FPUc
+.endfn init__8UnkClassFv
 
-.fn func_80296ADC__Fv, global
+.fn getInstance__8UnkClassFv, global
 /* 80296ADC 0026009C  3C 60 80 58 */	lis r3, lbl_8057A9C8@ha
 /* 80296AE0 002600A0  38 63 A9 C8 */	addi r3, r3, lbl_8057A9C8@l
 /* 80296AE4 002600A4  4E 80 00 20 */	blr 
-.endfn func_80296ADC__Fv
+.endfn getInstance__8UnkClassFv
 
 .fn func_80296AE8__FPUc, global
 /* 80296AE8 002600A8  94 21 FF F0 */	stwu r1, -0x10(r1)
@@ -93,11 +93,11 @@
 /* 80296B34 002600F4  4E 80 00 20 */	blr
 .endfn func_80296AE8__FPUc
 
-.fn sinit_80296B38__Fv, local
+.fn __sinit_\code_80296898_cpp, local
 /* 80296B38 002600F8  3C 60 80 58 */	lis r3, lbl_8057A9C8@ha
 /* 80296B3C 002600FC  38 63 A9 C8 */	addi r3, r3, lbl_8057A9C8@l
-/* 80296B40 00260100  4B FF FE F4 */	b func_80296A34__FPUc
-.endfn sinit_80296B38__Fv
+/* 80296B40 00260100  4B FF FE F4 */	b init__8UnkClassFv
+.endfn __sinit_\code_80296898_cpp
 
 .section .ctors, "wa"  # 0x804F5900 - 0x804F5B00
 
@@ -142,21 +142,21 @@
 
 .obj "@eti_80031E98", local
 .hidden "@eti_80031E98"
-	.4byte func_80296A04
+	.4byte func_80296A04__FP8UnkClass
 	.4byte 0x00000030
 	.4byte "@etb_80019C08"
 .endobj "@eti_80031E98"
 
 .obj "@eti_80031EA4", local
 .hidden "@eti_80031EA4"
-	.4byte func_80296A34
+	.4byte init__8UnkClassFv
 	.4byte 0x000000A8
 	.4byte "@etb_80019C10"
 .endobj "@eti_80031EA4"
 
 .obj "@eti_80031EB0", local
 .hidden "@eti_80031EB0"
-	.4byte func_80296AE8
+	.4byte func_80296AE8__FPUc
 	.4byte 0x00000050
 	.4byte "@etb_80019C18"
 .endobj "@eti_80031EB0"
