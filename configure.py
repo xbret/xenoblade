@@ -256,7 +256,7 @@ LIBS = [
             ["kyoshin/appgame/CTaskGamePic", False],
             ["kyoshin/appgame/CTaskGameEvt", False],
             ["kyoshin/appgame/cf/CHelpManager", False],
-            ["kyoshin/appgame/code_80296898", False],
+            ["kyoshin/appgame/code_80296898", True],
             ["kyoshin/appgame/makecrystal/CMCGetItemBox", False],
             ["kyoshin/appgame/menu/CMenuTutorial", False],
             ["kyoshin/appgame/CTutorial", False],
