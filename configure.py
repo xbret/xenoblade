@@ -326,8 +326,8 @@ LIBS = [
             ["kyoshin/appgame/plugin/pluginVoice", False],
             [
 				"kyoshin/appgame/CBattery", 
-				False,
-				{"cflags": "$cflags_base -ipa file -str pool,readonly,reuse -RTTI on -enc SJIS -O4,s"},
+				True,
+				{"cflags": "$cflags_base -ipa file -str pool,readonly,reuse -RTTI on -enc SJIS -O4,s -func_align 4"},
 			],
         ],
     },

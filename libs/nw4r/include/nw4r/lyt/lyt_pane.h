@@ -97,7 +97,7 @@ namespace nw4r
             inline void InsertChild(ut::LinkList<lyt::Pane, 4>::Iterator iter, lyt::Pane *pChild)
             {
                 mChildren.Insert(iter, pChild);
-                pChild->mParent = this;
+            	pChild->mParent = this;
             }
 
             Pane(const res::Pane *);

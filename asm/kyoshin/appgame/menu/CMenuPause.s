@@ -642,7 +642,7 @@
 	.4byte 0xFFFFFFA8
 	.4byte func_80252628
 	.4byte WorkEvent1__10IWorkEventFv
-	.4byte OnFileEvent__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFP10CEventFile
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
 	.4byte WorkEvent5__10IWorkEventFv

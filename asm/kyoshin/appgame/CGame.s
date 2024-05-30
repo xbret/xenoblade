@@ -970,10 +970,10 @@
 /* 80039E1C 000033DC  4E 80 00 20 */	blr 
 .endfn WorkEvent3__10IWorkEventFv
 
-.fn OnFileEvent__10IWorkEventFv, weak
+.fn OnFileEvent__10IWorkEventFP10CEventFile, weak
 /* 80039E20 000033E0  38 60 00 00 */	li r3, 0
 /* 80039E24 000033E4  4E 80 00 20 */	blr 
-.endfn OnFileEvent__10IWorkEventFv
+.endfn OnFileEvent__10IWorkEventFP10CEventFile
 
 .fn WorkEvent1__10IWorkEventFv, weak
 /* 80039E28 000033E8  38 60 00 00 */	li r3, 0
@@ -1102,7 +1102,7 @@
 	.4byte 0
 	.4byte __dt___unnamed_CGame_cpp_CGameRestart
 	.4byte WorkEvent1__10IWorkEventFv
-	.4byte OnFileEvent__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFP10CEventFile
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
 	.4byte WorkEvent5__10IWorkEventFv
@@ -1158,7 +1158,7 @@
 	.4byte 0
 	.4byte __dt__5CGameFv
 	.4byte WorkEvent1__10IWorkEventFv
-	.4byte OnFileEvent__10IWorkEventFv
+	.4byte OnFileEvent__10IWorkEventFP10CEventFile
 	.4byte WorkEvent3__10IWorkEventFv
 	.4byte WorkEvent4__10IWorkEventFv
 	.4byte CGame_WorkEvent5

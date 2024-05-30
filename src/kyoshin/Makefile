@@ -316,11 +316,11 @@ GAME_FILES :=\
 	$(BUILD_DIR)/asm/kyoshin/appgame/help/CHelp_Talk.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/help/CHelp_Target.o\
 	$(BUILD_DIR)/asm/kyoshin/appgame/plugin/pluginVoice.o\
-	$(BUILD_DIR)/asm/kyoshin/appgame/CBattery.o\
+	$(BUILD_DIR)/src/kyoshin/appgame/CBattery.o\
 
 #$(GAME_FILES): INCLUDES += -i src/ -i libs/monolib/include/ -i libs/mm/include/ -i libs/nw4r/include/
 $(GAME_FILES): CFLAGS += -ipa file -inline deferred -str pool,readonly,reuse -RTTI on -enc SJIS
-$(BUILD_DIR)/src/kyoshin/appgame/CBattery.o: CFLAGS += -O4,s #wont match otherwise
+$(BUILD_DIR)/src/kyoshin/appgame/CBattery.o: CFLAGS += -O4,s -func_align 4 #wont match otherwise
 
 DEPENDS += $(GAME_FILES:.o=.d)
 
